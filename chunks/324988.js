@@ -1,34 +1,33 @@
-"use strict";
-var r = n(344815),
-    i = n(339626),
-    s = n(647055),
-    a = n(380744)("toStringTag"),
-    o = Object,
-    l =
+var n = e(344815),
+    o = e(339626),
+    a = e(647055),
+    i = e(380744)("toStringTag"),
+    p = Object,
+    u =
         "Arguments" ===
-        s(
+        a(
             (function () {
                 return arguments;
             })(),
         ),
-    u = function (e, t) {
+    y = function (r, t) {
         try {
-            return e[t];
-        } catch (e) {}
+            return r[t];
+        } catch (r) {}
     };
-e.exports = r
-    ? s
-    : function (e) {
-          var t, n, r;
-          return void 0 === e
+r.exports = n
+    ? a
+    : function (r) {
+          var t, e, n;
+          return void 0 === r
               ? "Undefined"
-              : null === e
+              : null === r
                 ? "Null"
-                : "string" == typeof (n = u((t = o(e)), a))
-                  ? n
-                  : l
-                    ? s(t)
-                    : "Object" === (r = s(t)) && i(t.callee)
+                : "string" == typeof (e = y((t = p(r)), i))
+                  ? e
+                  : u
+                    ? a(t)
+                    : "Object" === (n = a(t)) && o(t.callee)
                       ? "Arguments"
-                      : r;
+                      : n;
       };

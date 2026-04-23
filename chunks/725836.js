@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { bx: () => u, ck: () => o, e0: () => l });
+n.d(t, { bx: () => d, ck: () => l, e0: () => s });
 var r = n(627968),
-    i = n(64700),
-    s = n(340287);
-let [a, o] = (0, n(786300).A)(),
-    l = (e) => {
+    a = n(64700),
+    i = n(340287);
+let [o, l] = (0, n(786300).A)(),
+    s = (e) => {
         let { children: t } = e,
-            [n, s] = i.useState(null),
-            [o, l] = i.useState({}),
-            u = i.useMemo(
+            [n, i] = a.useState(null),
+            [l, s] = a.useState({}),
+            d = a.useMemo(
                 () => ({
-                    setCheckoutFooterContentNode: s,
+                    setCheckoutFooterContentNode: i,
                     checkoutFooterContentNode: n,
-                    checkoutHeaderConfigs: o,
-                    setCheckoutHeaderConfigs: l,
+                    checkoutHeaderConfigs: l,
+                    setCheckoutHeaderConfigs: s,
                 }),
-                [n, s, o, l],
+                [n, i, l, s],
             );
-        return (0, r.jsx)(a.Provider, { value: u, children: t });
+        return (0, r.jsx)(o.Provider, { value: d, children: t });
     };
-function u(e) {
+function d(e) {
     let { children: t } = e,
-        { checkoutFooterContentNode: n } = o();
-    return null == n ? null : s.createPortal(t, n);
+        { checkoutFooterContentNode: n } = l();
+    return null == n ? null : i.createPortal(t, n);
 }

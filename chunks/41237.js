@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => f }), n(321073);
-var r = n(810531),
-    i = n(7584),
-    s = n(548965),
-    a = n(942269),
-    o = n(71393),
-    l = n(842086);
-function u(e) {
+n.d(t, { A: () => E }), n(321073);
+var i = n(810531),
+    r = n(7584),
+    l = n(548965),
+    a = n(137903),
+    s = n(71393),
+    o = n(194004);
+function d(e) {
     return {
         id: e.id,
         tags: e.tags,
@@ -18,15 +17,15 @@ function u(e) {
         available: e.available,
         version: e.version,
         user_id: e.user_id,
-        [r.L]: "GuildSticker",
+        [i.L]: "GuildSticker",
     };
 }
-function c(e) {
+function u(e) {
     let t = {};
-    for (let n of e) t[n.id] = u(n);
+    for (let n of e) t[n.id] = d(n);
     return t;
 }
-class d extends a.yW {
+class c extends a.yW {
     static displayName = "GuildStickersStore";
     database = this.addKKVDatabase("guildStickers");
     stickerByIdIndex = this.database.addSecondaryKVIndex("id");
@@ -38,30 +37,30 @@ class d extends a.yW {
     getStickerMetadataMap = this.database.memoized((e) => {
         let t = new Map();
         for (let n in e)
-            for (let [r, s] of Object.entries(e[n].root))
+            for (let [i, l] of Object.entries(e[n].root))
                 t.set(
-                    r,
+                    i,
                     (function (e, t) {
                         let n = [],
-                            { tags: r } = t,
-                            s = { type: l.cG.STICKER_NAME, value: t.name.trim().toLocaleLowerCase() };
-                        if ((n.push(s), null != r)) {
-                            let t = { type: l.cG.TAG, value: r.trim().toLocaleLowerCase() };
+                            { tags: i } = t,
+                            l = { type: o.cG.STICKER_NAME, value: t.name.trim().toLocaleLowerCase() };
+                        if ((n.push(l), null != i)) {
+                            let t = { type: o.cG.TAG, value: i.trim().toLocaleLowerCase() };
                             n.push(t);
-                            let s = o.A.getGuild(e);
-                            if (null != s) {
-                                let e = s.name.trim().toLocaleLowerCase();
-                                null != e && "" !== e && n.push({ type: l.cG.GUILD_NAME, value: e });
+                            let l = s.A.getGuild(e);
+                            if (null != l) {
+                                let e = l.name.trim().toLocaleLowerCase();
+                                null != e && "" !== e && n.push({ type: o.cG.GUILD_NAME, value: e });
                             }
-                            let a = i.Ay.getByName(r);
+                            let a = r.Ay.getByName(i);
                             null != a &&
-                                (n.push({ type: l.cG.CORRELATED_EMOJI, value: a.surrogates }),
+                                (n.push({ type: o.cG.CORRELATED_EMOJI, value: a.surrogates }),
                                 a.forEachDiversity((e) =>
-                                    n.push({ type: l.cG.CORRELATED_EMOJI, value: e.surrogates }),
+                                    n.push({ type: o.cG.CORRELATED_EMOJI, value: e.surrogates }),
                                 ));
                         }
                         return n;
-                    })(n, s),
+                    })(n, l),
                 );
         return t;
     });
@@ -73,61 +72,61 @@ class d extends a.yW {
         return this.database;
     }
 }
-function _(e, t, n) {
-    if ("full_sync" === t.op) n.setPartition(e, c(t.items));
+function h(e, t, n) {
+    if ("full_sync" === t.op) n.setPartition(e, u(t.items));
     else {
-        let r = n.getNullablePartition(e);
-        if (null == r) n.setPartition(e, c(t.writes));
+        let i = n.getNullablePartition(e);
+        if (null == i) n.setPartition(e, u(t.writes));
         else if (t.writes.length > 0 || t.deletes.length > 0) {
-            let i = { ...r };
-            for (let e of t.deletes) delete i[e];
-            for (let e of t.writes) i[e.id] = u(e);
-            n.setPartition(e, i);
+            let r = { ...i };
+            for (let e of t.deletes) delete r[e];
+            for (let e of t.writes) r[e.id] = d(e);
+            n.setPartition(e, r);
         }
     }
 }
-let f = new d(
+let E = new c(
     {
         LOGOUT: (e, t) => t.clear(),
         BACKGROUND_SYNC: (e, t) => t.clear(),
         RESET_SOCKET: (e, t) => t.clear(),
         CONNECTION_OPEN: (e, t) => {
-            let { guilds: n, unavailableGuilds: r } = e,
-                i = new Set(n.map((e) => e.id));
-            for (let e of r) i.add(e);
-            for (let e of t.getPartitionKeys()) i.has(e) || t.removePartition(e);
-            for (let e of n) _(e.id, e.stickers, t);
+            let { guilds: n, unavailableGuilds: i } = e,
+                r = new Set(n.map((e) => e.id));
+            for (let e of i) r.add(e);
+            for (let e of t.getPartitionKeys()) r.has(e) || t.removePartition(e);
+            for (let e of n) h(e.id, e.stickers, t);
         },
         GUILD_CREATE: (e, t) => {
             if (null == e.guild.joined_at) return !1;
-            _(e.guild.id, e.guild.stickers, t);
+            h(e.guild.id, e.guild.stickers, t);
         },
         GUILD_DELETE: (e, t) => {
             t.removePartition(e.guild.id);
         },
         GUILD_STICKERS_CREATE_SUCCESS: (e, t) => {
-            t.setRecord(e.guildId, e.sticker.id, u(e.sticker));
+            t.setRecord(e.guildId, e.sticker.id, d(e.sticker));
         },
         GUILD_STICKER_FETCH_SUCCESS: (e, t) => {
-            t.setRecord(e.sticker.guild_id, e.sticker.id, u(e.sticker));
+            t.setRecord(e.sticker.guild_id, e.sticker.id, d(e.sticker));
         },
         GUILD_STICKERS_UPDATE: (e, t) => {
             let n = t.getPartition(e.guildId),
-                r = c(e.stickers);
+                i = u(e.stickers);
             if (null != n)
-                for (let e in r) {
-                    let t = r[e],
-                        i = n[e];
-                    null != i && null == t.user_id && null != i.user_id && (r[e] = { ...t, user_id: i.user_id });
+                for (let e in i) {
+                    let t = i[e],
+                        r = n[e];
+                    null != r && null == t.user_id && null != r.user_id && (i[e] = { ...t, user_id: r.user_id });
                 }
-            t.setPartition(e.guildId, r);
+            t.setPartition(e.guildId, i);
         },
         CACHED_STICKERS_LOADED: (e, t) => {
-            for (let [n, r] of e.stickers) t.setPartition(n, c(r));
+            for (let [n, i] of e.stickers) t.setPartition(n, u(i));
         },
         GUILD_STICKERS_FETCH_SUCCESS: (e, t) => {
-            t.setPartition(e.guildId, c(e.stickers));
+            t.setPartition(e.guildId, u(e.stickers));
         },
     },
-    s.P4.getCachedBridgedStoreMode(),
+    l.P4.getCachedBridgedStoreMode(),
 );

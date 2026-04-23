@@ -2,36 +2,36 @@ n.d(t, { default: () => f, j: () => S });
 var i = n(627968),
     l = n(64700);
 if (21552 == n.j) var s = n(189213);
-var r = n(311907);
+var r = n(17928);
 if (21552 == n.j) var a = n(834730);
 if (21552 == n.j) var o = n(451394);
-var d = n(702805),
-    h = n(198982),
+var h = n(702805),
+    d = n(845584),
     u = n(155718),
     c = n(47167),
-    g = n(845202),
+    g = n(517622),
     p = n(86944),
     m = n(734057),
-    A = n(71393),
-    E = n(488926),
-    C = n(233993),
-    I = n(737045),
+    E = n(71393),
+    C = n(488926),
+    A = n(233993),
+    I = n(719366),
     b = n(985018),
     N = n(380174);
 function S(e, t) {
-    return { id: e, type: t, deny: E.x3, allow: C.QY };
+    return { id: e, type: t, deny: C.x3, allow: A.QY };
 }
 function f(e) {
-    let { channelId: t, onClose: n, ...E } = e,
+    let { channelId: t, onClose: n, ...C } = e,
         f = (0, r.bG)([m.A], () => m.A.getChannel(t)),
-        O = (0, r.bG)([A.A], () => A.A.getGuild(f?.getGuildId())),
+        O = (0, r.bG)([E.A], () => E.A.getGuild(f?.getGuildId())),
         x = (0, c.Ay)(f),
         [_, T] = l.useState(""),
         [v, G] = l.useState({}),
         [L, U] = l.useState(!1),
         [R, M] = l.useState(null),
         y = l.useRef(null),
-        { roles: j, members: D, getRichTag: P } = (0, p.K)(O, f, C.QY, _),
+        { roles: j, members: D, getRichTag: P } = (0, p.K)(O, f, A.QY, _),
         w = g.A.useSections({ roles: j, members: D });
     if (null == f || null == O) return null;
     let H = async () => {
@@ -47,10 +47,10 @@ function f(e) {
                     let { row: t } = e;
                     return t.rowType === I.T6.ROLE ? S(t.id, u.r2.ROLE) : S(t.id, u.r2.MEMBER);
                 })),
-            (0, d.R$)(f.id, e, !0)),
+            (0, h.R$)(f.id, e, !0)),
                 n();
         } catch (t) {
-            let e = new h.LG(t);
+            let e = new d.LG(t);
             U(!1), M(e);
         }
     };
@@ -64,7 +64,7 @@ function f(e) {
         members: D,
         getRichTag: P,
         children: (0, i.jsx)(s.Modal, {
-            ...E,
+            ...C,
             title: b.intl.string(b.t.dMJ3Y6),
             onClose: n,
             input: (0, i.jsxs)("div", {

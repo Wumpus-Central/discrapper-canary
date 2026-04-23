@@ -1,27 +1,26 @@
-"use strict";
-let r, i, s, a, o, l;
-n.d(t, { BV: () => O, Fy: () => C, Pf: () => S, Pg: () => N, R0: () => I, sv: () => R });
-var u = n(214958),
-    c = n.n(u);
+let i, r, a, s, _, l;
+n.d(t, { BV: () => h, Fy: () => D, Pf: () => C, Pg: () => m, R0: () => R, sv: () => g });
+var o = n(214958),
+    E = n.n(o);
 n(689953);
 var d = n(70298),
-    _ = n(175259),
-    f = n(506774),
-    p = n(362474),
-    h = n(71931),
-    E = n(368849);
-let m = "deviceProperties",
-    g = "referralProperties",
-    A = window.DiscordNative;
-if (null != A) {
+    c = n(175259),
+    u = n(506774),
+    I = n(362474),
+    A = n(71931),
+    T = n(368849);
+let S = "deviceProperties",
+    N = "referralProperties",
+    O = window.DiscordNative;
+if (null != O) {
     let e,
-        t = A.app.getVersion(),
-        n = A.process.platform,
-        i = A.os.release,
-        s = A.os.arch,
-        a = A.os.appArch,
-        o = A.app.getReleaseChannel(),
-        l = (0, _.c)();
+        t = O.app.getVersion(),
+        n = O.process.platform,
+        r = O.os.release,
+        a = O.os.arch,
+        s = O.os.appArch,
+        _ = O.app.getReleaseChannel(),
+        l = (0, c.c)();
     switch (n) {
         case "win32":
             e = "Windows";
@@ -36,31 +35,31 @@ if (null != A) {
             e = n;
     }
     if (
-        ((r = {
+        ((i = {
             os: e,
             browser: "Discord Client",
-            release_channel: o || "unknown",
+            release_channel: _ || "unknown",
             client_version: t,
-            os_version: i,
-            os_arch: s,
-            app_arch: a,
+            os_version: r,
+            os_arch: a,
+            app_arch: s,
             system_locale: l,
             has_client_mods: (0, d.b)(),
-            client_launch_id: h.C,
+            client_launch_id: A.C,
         }),
-        c().name?.toLocaleLowerCase() === "electron" &&
-            ((r.browser_user_agent = c().ua || ""), (r.browser_version = c().version || "")),
+        E().name?.toLocaleLowerCase() === "electron" &&
+            ((i.browser_user_agent = E().ua || ""), (i.browser_version = E().version || "")),
         "linux" === n)
     ) {
-        let e = A.crashReporter.getMetadata();
-        (r.window_manager = e.wm),
-            (r.distro = e.distro),
-            (r.runtime_environment = e.runtime_environment),
-            (r.display_server = e.display_server);
+        let e = O.crashReporter.getMetadata();
+        (i.window_manager = e.wm),
+            (i.distro = e.distro),
+            (i.runtime_environment = e.runtime_environment),
+            (i.display_server = e.display_server);
     } else
-        "darwin" === n ? (r.os_sdk_version = i?.split(".")[0]) : "win32" === n && (r.os_sdk_version = i?.split(".")[2]);
+        "darwin" === n ? (i.os_sdk_version = r?.split(".")[0]) : "win32" === n && (i.os_sdk_version = r?.split(".")[2]);
 }
-function I() {
+function R() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "Windows Mobile" : "Windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "iOS";
@@ -71,13 +70,13 @@ function I() {
     else if (/Linux/i.test(e)) return "Linux";
     else return "";
 }
-function T(e, t) {
+function f(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let n = RegExp(`[\\?&]${t}=([^&#]*)`).exec(e);
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
-function S() {
+function C() {
     let { userAgent: e } = window.navigator;
     if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
     if (/Windows Phone/i.test(e)) return "Windows Phone";
@@ -86,18 +85,18 @@ function S() {
     if (/iPad/.test(e)) return "iPad";
     else return "";
 }
-let y = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function N(e) {
+let p = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function m(e) {
     let t = {};
     return (
-        y.forEach((n) => {
-            let r = T(e, n);
-            r.length > 0 && (t[n] = r);
+        p.forEach((n) => {
+            let i = f(e, n);
+            i.length > 0 && (t[n] = i);
         }),
         t
     );
 }
-function v() {
+function L() {
     let e,
         t = {};
     return (
@@ -105,12 +104,12 @@ function v() {
         (t.referring_domain = (e = document.referrer.split("/")).length >= 3 ? e[2] : ""),
         (t = {
             ...t,
-            ...N(window.location.href),
+            ...m(window.location.href),
             ...(function () {
                 let e,
                     t = {},
                     n = document.referrer,
-                    r =
+                    i =
                         0 === (e = document.referrer).search("https?://(.*)google.([^/?]*)")
                             ? "google"
                             : 0 === e.search("https?://(.*)bing.com")
@@ -120,9 +119,9 @@ function v() {
                                 : 0 === e.search("https?://(.*)duckduckgo.com")
                                   ? "duckduckgo"
                                   : null;
-                if (null != r) {
-                    t.search_engine = r;
-                    let e = T(n, "yahoo" !== r ? "q" : "p");
+                if (null != i) {
+                    t.search_engine = i;
+                    let e = f(n, "yahoo" !== i ? "q" : "p");
                     e.length > 0 && (t.mp_keyword = e);
                 }
                 return t;
@@ -130,13 +129,13 @@ function v() {
         })
     );
 }
-if (null == r)
+if (null == i)
     try {
-        r = (function () {
-            let e = f.w.get(m);
+        i = (function () {
+            let e = u.w.get(S);
             if (null == e) {
                 let t;
-                ((t = {}).os = I()),
+                ((t = {}).os = R()),
                     (t.browser = (function () {
                         let { userAgent: e, vendor: t = "" } = window.navigator,
                             { opera: n } = window;
@@ -158,56 +157,56 @@ if (null == r)
                         else if (/Gecko/.test(e)) return "Mozilla";
                         else return "";
                     })()),
-                    (t.device = S()),
-                    (t.system_locale = (0, _.c)()),
+                    (t.device = C()),
+                    (t.system_locale = (0, c.c)()),
                     (t.has_client_mods = (0, d.b)()),
                     (e = t),
-                    f.w.set(m, e);
+                    u.w.set(S, e);
             }
-            let t = f.w.get(g);
-            null == t && ((t = v()), f.w.set(g, t));
-            let n = p.u.get(g);
+            let t = u.w.get(N);
+            null == t && ((t = L()), u.w.set(N, t));
+            let n = I.u.get(N);
             if (null == n) {
-                var r;
+                var i;
                 let e;
-                (r = v()), (e = {}), Object.keys(r).map((t) => (e[`${t}_current`] = r[t])), (n = e), p.u.set(g, n);
+                (i = L()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), I.u.set(N, n);
             }
             return {
                 ...e,
                 ...{
-                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: c().version || "" },
-                    os_version: c()?.os?.version ?? "",
+                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: E().version || "" },
+                    os_version: E()?.os?.version ?? "",
                 },
                 ...t,
                 ...n,
             };
         })();
     } catch (e) {
-        r = {};
+        i = {};
     }
-function C(e) {
-    (r = { ...r, ...e }), (i = (0, E.q)(r));
+function D(e) {
+    (i = { ...i, ...e }), (r = (0, T.q)(i));
 }
-function O() {
-    return r;
-}
-function R() {
+function h() {
     return i;
 }
-C(
-    ((s = {}),
-    (a = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
-        (null == s.release_channel || "" === s.release_channel) &&
-        (s.release_channel = a.split("-")[0]),
-    isNaN((o = parseInt("534149", 10))) || (s.client_build_number = o),
-    null == (l = A?.app.getBuildNumber()) || isNaN(l) || (s.native_build_number = l),
-    (s.client_event_source = (function () {
+function g() {
+    return r;
+}
+D(
+    ((a = {}),
+    (s = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
+        (null == a.release_channel || "" === a.release_channel) &&
+        (a.release_channel = s.split("-")[0]),
+    isNaN((_ = parseInt("534155", 10))) || (a.client_build_number = _),
+    null == (l = O?.app.getBuildNumber()) || isNaN(l) || (a.native_build_number = l),
+    (a.client_event_source = (function () {
         try {
             if (__OVERLAY__) return "OVERLAY";
         } catch (e) {}
         return null;
     })()),
-    (s.has_client_mods = (0, d.b)()),
-    (s.client_launch_id = h.C),
-    s),
+    (a.has_client_mods = (0, d.b)()),
+    (a.client_launch_id = A.C),
+    a),
 );

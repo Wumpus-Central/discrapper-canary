@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => c });
-var r = n(73153),
-    i = n(439372),
+n.d(t, { A: () => _ });
+var i = n(228366),
+    r = n(439372),
     s = n(927813),
     a = n(966597),
     o = n(85109);
 let l = null;
-class u extends i.A {
+class d extends r.A {
     actions = {
         SAVED_MESSAGES_UPDATE: () => this.handleUpdates(),
         SAVED_MESSAGE_CREATE: () => this.handleUpdates(),
@@ -22,17 +22,17 @@ class u extends i.A {
                 l = null;
                 return;
             }
-            let i = Date.now() + s.A.Millis.WEEK;
-            n.saveData.dueAt.getTime() > i ||
+            let r = Date.now() + s.A.Millis.WEEK;
+            n.saveData.dueAt.getTime() > r ||
                 (l = setTimeout(
                     () =>
                         (function (t) {
                             let { enabled: n } = a.A.getConfig({ location: "MessageRemindersNotificationManager" });
-                            n && (r.h.dispatch({ type: "MESSAGE_REMINDER_DUE", savedMessage: t }), e());
+                            n && (i.h.dispatch({ type: "MESSAGE_REMINDER_DUE", savedMessage: t }), e());
                         })(n),
                     n.saveData.dueAt.getTime() - Date.now(),
                 ));
         })();
     };
 }
-let c = new u();
+let _ = new d();

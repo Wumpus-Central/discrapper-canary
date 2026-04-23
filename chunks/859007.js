@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { y: () => a });
-var r = n(587895),
-    i = n(625180),
-    s = n(207371);
-function a(e) {
+n.d(t, { y: () => l });
+var i = n(587895),
+    r = n(625180),
+    a = n(375802);
+function l(e) {
     let { applicationId: t } = e,
-        n = r.A.getApplication(t);
-    return !!(null != n && (0, s.x)(n)) && (i.A.launchFrame({ applicationId: t }), !0);
+        n = i.A.getApplication(t);
+    return !!(null != n && (0, a.x)(n)) && (r.A.launchFrame({ applicationId: t }), !0);
 }

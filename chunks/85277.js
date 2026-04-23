@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { z: () => i });
-var r = n(652215);
-function i(e, t) {
+n.d(t, { z: () => r });
+var i = n(652215);
+function r(e, t) {
     let n = new Date();
     switch (e) {
-        case r.HAw.GUILD_VIEWED_CLICKSTREAM:
+        case i.HAw.GUILD_VIEWED_CLICKSTREAM:
             return {
                 time_minus: t.map((e) => n.getTime() - e.timestamp.getTime()),
                 rtc_states: t.map((e) => e.rtc_state),
                 guild_ids: t.map((e) => e.guild_id),
             };
-        case r.HAw.FRIENDS_LIST_VIEWED_CLICKSTREAM:
+        case i.HAw.FRIENDS_LIST_VIEWED_CLICKSTREAM:
             return {
                 time_minus: t.map((e) => n.getTime() - e.timestamp.getTime()),
                 rtc_states: t.map((e) => e.rtc_state),
@@ -19,14 +18,14 @@ function i(e, t) {
                 now_playing_visible: t.map((e) => e.now_playing_visible),
                 now_playing_num_cards: t.map((e) => e.now_playing_num_cards),
             };
-        case r.HAw.CHANNEL_OPENED_CLICKSTREAM:
+        case i.HAw.CHANNEL_OPENED_CLICKSTREAM:
             return {
                 time_minus: t.map((e) => n.getTime() - e.timestamp.getTime()),
                 rtc_states: t.map((e) => e.rtc_state),
                 channel_ids: t.map((e) => e.channel_id),
                 channel_types: t.map((e) => e.channel_type),
             };
-        case r.HAw.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM:
+        case i.HAw.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM:
             return {
                 time_minus: t.map((e) => n.getTime() - e.timestamp.getTime()),
                 rtc_states: t.map((e) => e.rtc_state),

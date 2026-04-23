@@ -1,42 +1,42 @@
 "use strict";
-n.d(t, { Bs: () => I, HB: () => m, K2: () => y, ME: () => A, N5: () => S, OI: () => E, wz: () => T });
-var r = n(64700),
-    i = n(311907),
+n.d(t, { Bs: () => I, HB: () => g, K2: () => N, ME: () => A, N5: () => S, OI: () => f, wz: () => T });
+var i = n(64700),
+    r = n(17928),
     s = n(929921),
-    a = n(961350),
+    a = n(495544),
     o = n(71393),
-    l = n(383501),
-    u = n(287809),
-    c = n(954571),
-    d = n(652215),
-    _ = n(753070),
-    f = n(788868),
-    p = n(731854),
-    h = n(985018);
-function E(e) {
+    l = n(763827),
+    d = n(287809),
+    _ = n(954571),
+    u = n(652215),
+    c = n(753070),
+    E = n(788868),
+    h = n(731854),
+    m = n(985018);
+function f(e) {
     if (null == e) return;
-    let t = e.maxResolution.type === p.ei.SOURCE ? _.on.RESOLUTION_SOURCE : e.maxResolution.height,
-        n = (0, _.F0)(t);
+    let t = e.maxResolution.type === h.ei.SOURCE ? c.on.RESOLUTION_SOURCE : e.maxResolution.height,
+        n = (0, c.F0)(t);
     return (
-        (0, _.AC)(e.maxFrameRate) !== _.kn.FPS_5 &&
-        null == _.ZV.find((e) => e.resolution === n && e.fps !== _.kn.FPS_5 && !g(e))
+        (0, c.AC)(e.maxFrameRate) !== c.kn.FPS_5 &&
+        null == c.ZV.find((e) => e.resolution === n && e.fps !== c.kn.FPS_5 && !p(e))
     );
 }
-function m(e) {
-    if (null == e) return;
-    let t = (0, _.AC)(e.maxFrameRate);
-    return null == _.ZV.find((e) => e.fps === t && !g(e));
-}
 function g(e) {
+    if (null == e) return;
+    let t = (0, c.AC)(e.maxFrameRate);
+    return null == c.ZV.find((e) => e.fps === t && !p(e));
+}
+function p(e) {
     return null != e.quality || null != e.guildPremiumTier;
 }
 function A(e) {
-    return e.type === p.ei.SOURCE
-        ? h.intl.string(h.t.XjXqzh)
-        : h.intl.formatToPlainString(h.t.TEOC0I, { resolution: e.height });
+    return e.type === h.ei.SOURCE
+        ? m.intl.string(m.t.XjXqzh)
+        : m.intl.formatToPlainString(m.t.TEOC0I, { resolution: e.height });
 }
 function I(e) {
-    return h.intl.formatToPlainString(h.t.Qb44XH, { fps: e });
+    return m.intl.formatToPlainString(m.t.Qb44XH, { fps: e });
 }
 function T(e) {
     return null == e.maxResolution || null == e.maxFrameRate
@@ -44,9 +44,9 @@ function T(e) {
         : { maxFrameRate: e.maxFrameRate, maxResolution: e.maxResolution };
 }
 function S(e) {
-    let t = (0, i.cf)([s.A], () => s.A.getState()),
-        n = (0, i.bG)([a.default], () => a.default.getId());
-    return r.useMemo(
+    let t = (0, r.cf)([s.A], () => s.A.getState()),
+        n = (0, r.bG)([a.default], () => a.default.getId());
+    return i.useMemo(
         () =>
             n === e.user.id
                 ? {
@@ -54,23 +54,23 @@ function S(e) {
                       maxResolution: {
                           height: t.resolution,
                           width: 0,
-                          type: 0 === t.resolution ? p.ei.SOURCE : p.ei.FIXED,
+                          type: 0 === t.resolution ? h.ei.SOURCE : h.ei.FIXED,
                       },
                   }
                 : T(e),
         [n, e, t],
     );
 }
-function y(e, t, n) {
-    let r = _.ZV.find((r) => (null == r.preset || r.preset === e) && r.resolution === t && r.fps === n),
-        i = u.default.getCurrentUser(),
+function N(e, t, n) {
+    let i = c.ZV.find((i) => (null == i.preset || i.preset === e) && i.resolution === t && i.fps === n),
+        r = d.default.getCurrentUser(),
         s = l.A.getGuildId(),
         a = null != s ? o.A.getGuild(s) : null;
-    c.default.track(d.HAw.STREAM_SETTINGS_UPDATE, {
-        user_premium_tier: i?.premiumType,
+    _.default.track(u.HAw.STREAM_SETTINGS_UPDATE, {
+        user_premium_tier: r?.premiumType,
         guild_premium_tier: a?.premiumTier,
-        stream_quality_user_premium_tier: r?.quality != null ? f.Kq[r.quality] : null,
-        stream_quality_guild_premium_tier: r?.guildPremiumTier,
+        stream_quality_user_premium_tier: i?.quality != null ? E.Kq[i.quality] : null,
+        stream_quality_guild_premium_tier: i?.guildPremiumTier,
         stream_quality_preset: e,
         stream_quality_resolution: t,
         stream_quality_frame_rate: n,

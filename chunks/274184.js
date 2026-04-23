@@ -1,109 +1,108 @@
-"use strict";
-n.d(t, { Ay: () => M, bh: () => y });
-var r,
-    i = n(989349),
-    s = n.n(i),
-    a = n(136722),
-    o = n(311907),
+n.d(t, { Ay: () => y, bh: () => p });
+var i,
+    r = n(989349),
+    a = n.n(r),
+    s = n(136722),
+    _ = n(17928),
     l = n(506774),
-    u = n(73153),
-    c = n(246605),
+    o = n(228366),
+    E = n(246605),
     d = n(927813),
-    _ = n(498642),
-    f = n(71393),
-    p = n(576705),
-    h = n(967198),
-    E = n(287809),
-    m = n(652215);
-let g = { hiddenSurveys: {}, surveyOverride: null, lastFetched: null, lastSeen: null, lastActionTriggered: null },
-    A = g,
-    I = {},
-    T = null,
-    S = !1,
-    y = d.A.Millis.DAY,
-    N = 10 * d.A.Millis.HOUR;
-var v =
-    (((r = v || {}).IS_OWNER = "is_owner"),
-    (r.IS_ADMIN = "is_admin"),
-    (r.IS_COMMUNITY = "is_community"),
-    (r.GUILD_SIZE = "guild_size"),
-    (r.IS_HUB = "is_hub"),
-    (r.IS_VIEWING = "is_viewing"),
-    (r.GUILD_PERMISSIONS = "guild_permissions"),
-    (r.GUILD_SIZE_ALL = "guild_size_all"),
-    r);
-let C = new Set(Object.values(v));
-function O() {
-    return null == A.lastFetched || Date.now() - A.lastFetched >= y;
+    c = n(498642),
+    u = n(71393),
+    I = n(576705),
+    A = n(967198),
+    T = n(287809),
+    S = n(652215);
+let N = { hiddenSurveys: {}, surveyOverride: null, lastFetched: null, lastSeen: null, lastActionTriggered: null },
+    O = N,
+    R = {},
+    f = null,
+    C = !1,
+    p = d.A.Millis.DAY,
+    m = 10 * d.A.Millis.HOUR;
+var L =
+    (((i = L || {}).IS_OWNER = "is_owner"),
+    (i.IS_ADMIN = "is_admin"),
+    (i.IS_COMMUNITY = "is_community"),
+    (i.GUILD_SIZE = "guild_size"),
+    (i.IS_HUB = "is_hub"),
+    (i.IS_VIEWING = "is_viewing"),
+    (i.GUILD_PERMISSIONS = "guild_permissions"),
+    (i.GUILD_SIZE_ALL = "guild_size_all"),
+    i);
+let D = new Set(Object.values(L));
+function h() {
+    return null == O.lastFetched || Date.now() - O.lastFetched >= p;
 }
-function R() {
-    !S && (O() || null != A.surveyOverride) && ((S = !0), (0, c.BC)(A.surveyOverride, !0));
+function g() {
+    !C && (h() || null != O.surveyOverride) && ((C = !0), (0, E.BC)(O.surveyOverride, !0));
 }
 function b(e) {
     return (function (e) {
-        let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
+        let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: i = [] } = e;
         if (0 === t.length) return !0;
-        for (let e of t) if (!C.has(e)) return !1;
-        let i = t.includes("guild_size_all"),
-            s = !0;
-        for (let o of f.A.getGuildsArray()) {
-            if (i || t.includes("guild_size")) {
-                let e = _.A.getMemberCount(o.id);
+        for (let e of t) if (!D.has(e)) return !1;
+        let r = t.includes("guild_size_all"),
+            a = !0;
+        for (let _ of u.A.getGuildsArray()) {
+            if (r || t.includes("guild_size")) {
+                let e = c.A.getMemberCount(_.id);
                 if (null == e || (null != n[0] && e < n[0]) || (null != n[1] && e > n[1])) {
-                    s = !1;
+                    a = !1;
                     continue;
                 }
             }
             if (
-                (t.includes("is_community") && !o.features.has(m.GuildFeatures.COMMUNITY)) ||
-                (t.includes("is_hub") && !o.features.has(m.GuildFeatures.HUB))
+                (t.includes("is_community") && !_.features.has(S.GuildFeatures.COMMUNITY)) ||
+                (t.includes("is_hub") && !_.features.has(S.GuildFeatures.HUB))
             )
                 continue;
             if (t.includes("guild_permissions")) {
-                if (0 === r.length) continue;
+                if (0 === i.length) continue;
                 let e = !1;
-                for (let t of r)
+                for (let t of i)
                     try {
-                        let n = a.iu(t);
-                        if (p.A.can(n, o)) {
+                        let n = s.iu(t);
+                        if (I.A.can(n, _)) {
                             e = !0;
                             break;
                         }
                     } catch (e) {}
                 if (!e) continue;
             }
-            let l = E.default.getCurrentUser(),
-                u = l?.id === o.ownerId,
-                c = p.A.can(m.xBc.ADMINISTRATOR, o);
-            if ((t.includes("is_owner") && !u) || (t.includes("is_admin") && !c)) continue;
-            null == (I = I ?? {})[e.key] && (I[e.key] = e);
-            let d = h.A.getGuildId(),
-                f = null != d && d === o.id;
-            if ((!t.includes("is_viewing") || f) && !i) return !0;
+            let l = T.default.getCurrentUser(),
+                o = l?.id === _.ownerId,
+                E = I.A.can(S.xBc.ADMINISTRATOR, _);
+            if ((t.includes("is_owner") && !o) || (t.includes("is_admin") && !E)) continue;
+            null == (R = R ?? {})[e.key] && (R[e.key] = e);
+            let d = A.A.getGuildId(),
+                u = null != d && d === _.id;
+            if ((!t.includes("is_viewing") || u) && !r) return !0;
         }
-        return !!i && !!s;
+        return !!r && !!a;
     })(e);
 }
-function D(e) {
+function U(e) {
     let t,
-        { survey: n, isActionTriggered: r } = e;
-    (S = !1),
-        (A.lastFetched = Date.now()),
-        r && (A.lastActionTriggered = Date.now()),
-        null == A.hiddenSurveys && (A.hiddenSurveys = {});
-    let i = null != n,
-        a = i && null == A.hiddenSurveys[n.key],
-        o = i && b(n);
-    null == (t = l.w.get(m.gT8)) || s()().diff(t, "day"), (T = a && o && 1 ? n : null);
+        { survey: n, isActionTriggered: i } = e;
+    (C = !1),
+        (O.lastFetched = Date.now()),
+        i && (O.lastActionTriggered = Date.now()),
+        null == O.hiddenSurveys && (O.hiddenSurveys = {});
+    let r = null != n,
+        s = r && null == O.hiddenSurveys[n.key],
+        _ = r && b(n);
+    null == (t = l.w.get(S.gT8)) || a()().diff(t, "day"), (f = s && _ && 1 ? n : null);
 }
-function L() {
+function P() {
     let e;
-    if (null != T && (b(T) || ((T = null), 0))) return !1;
-    null != (e = Object.values((I = I ?? {}))[0]) && b(e)
-        ? D({ type: "SURVEY_FETCHED", survey: e })
-        : null == T || (T = null);
+    if (null != f && (b(f) || ((f = null), 0))) return !1;
+    null != (e = Object.values((R = R ?? {}))[0]) && b(e)
+        ? U({ type: "SURVEY_FETCHED", survey: e })
+        : null == f || (f = null);
 }
-class w extends o.Ay.PersistedStore {
+class M extends _.Ay.PersistedStore {
     static displayName = "SurveyStore";
     static persistKey = "SurveyStore";
     static migrations = [
@@ -122,42 +121,42 @@ class w extends o.Ay.PersistedStore {
         (e) => ({ ...e, hiddenSurveys: e.hiddenSurveys ?? {} }),
     ];
     initialize(e) {
-        this.waitFor(_.A, f.A, p.A, h.A, E.default), (A = e ?? g), this.syncWith([h.A], L);
+        this.waitFor(c.A, u.A, I.A, A.A, T.default), (O = e ?? N), this.syncWith([A.A], P);
     }
     getState() {
-        return A;
+        return O;
     }
     getCurrentSurvey() {
-        return O() ? null : T;
+        return h() ? null : f;
     }
     getSurveyOverride() {
-        return A.surveyOverride;
+        return O.surveyOverride;
     }
     getLastSeenTimestamp() {
-        return A.lastSeen;
+        return O.lastSeen;
     }
     shouldAllowSurveyAction() {
-        return Date.now() - (A.lastActionTriggered ?? 0) >= N;
+        return Date.now() - (O.lastActionTriggered ?? 0) >= m;
     }
 }
-let M = new w(u.h, {
-    CONNECTION_OPEN: R,
-    CONNECTION_RESUMED: R,
-    SURVEY_FETCHED: D,
+let y = new M(o.h, {
+    CONNECTION_OPEN: g,
+    CONNECTION_RESUMED: g,
+    SURVEY_FETCHED: U,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;
-        (A.hiddenSurveys[t] = !0), (T = null), (I = I ?? {}), delete I[t];
+        (O.hiddenSurveys[t] = !0), (f = null), (R = R ?? {}), delete R[t];
     },
     SURVEY_OVERRIDE: function (e) {
         let { id: t } = e;
-        (A.surveyOverride = t), null != t && delete A.hiddenSurveys[t], (0, c.BC)(A.surveyOverride, !0);
+        (O.surveyOverride = t), null != t && delete O.hiddenSurveys[t], (0, E.BC)(O.surveyOverride, !0);
     },
     PUSH_NOTIFICATION_CLICK: function () {},
     DISPLAYED_INVITE_SHOW: function () {},
     LOGOUT: function () {
-        A.hiddenSurveys = {};
+        O.hiddenSurveys = {};
     },
     SURVEY_SEEN: function () {
-        A.lastSeen = Date.now();
+        O.lastSeen = Date.now();
     },
 });

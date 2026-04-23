@@ -1,68 +1,67 @@
-"use strict";
-n.d(t, { A: () => p }), n(323874), n(14289), n(35956);
-var r = n(110259),
-    i = n(562465),
-    s = n(73153),
-    a = n(370480),
-    o = n(626584),
-    l = n(962173),
-    u = n(954571),
-    c = n(499785),
+n.d(t, { A: () => I }), n(323874), n(14289), n(35956);
+var i = n(110259),
+    r = n(636537),
+    a = n(228366),
+    s = n(370480),
+    _ = n(626584),
+    l = n(30370),
+    o = n(954571),
+    E = n(499785),
     d = n(652215);
-let _ = new o.A("ConnectedAccounts");
-function f(e, t) {
+let c = new _.A("ConnectedAccounts");
+function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return i.Bo.post({
+    return r.Bo.post({
         url: d.Rsh.CONNECTIONS_CALLBACK(e),
         body: { ...t, insecure: n, friend_sync: d.txh.has(e) },
         oldFormErrors: !0,
         rejectWithError: !1,
     });
 }
-let p = {
+let I = {
     fetch: () =>
-        i.Bo.get({ url: d.Rsh.CONNECTIONS, oldFormErrors: !0, rejectWithError: !0 }).then(
-            (e) => s.h.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: !0, accounts: e.body }),
-            () => s.h.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: !0, accounts: [] }),
+        r.Bo.get({ url: d.Rsh.CONNECTIONS, oldFormErrors: !0, rejectWithError: !0 }).then(
+            (e) => a.h.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: !0, accounts: e.body }),
+            () => a.h.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: !0, accounts: [] }),
         ),
     async authorize(e) {
         let {
             location: t,
             twoWayLinkType: n,
-            userCode: r,
-            twoWayLink: s,
-            successRedirect: o,
-            handle: c,
+            userCode: i,
+            twoWayLink: a,
+            successRedirect: _,
+            handle: E,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        u.default.track(d.HAw.CONNECTED_ACCOUNT_INITIATED, { platform_type: e, location: t });
-        let _ = d.Rsh.CONNECTIONS_AUTHORIZE(e),
-            f = new URLSearchParams();
-        null != r && f.append("two_way_user_code", r),
-            null != o && f.append("success_redirect", o),
+        o.default.track(d.HAw.CONNECTED_ACCOUNT_INITIATED, { platform_type: e, location: t });
+        let c = d.Rsh.CONNECTIONS_AUTHORIZE(e),
+            u = new URLSearchParams();
+        null != i && u.append("two_way_user_code", i),
+            null != _ && u.append("success_redirect", _),
             null != n
-                ? (f.append("two_way_link_type", n), f.append("two_way_link", "true"))
-                : null != s && f.append("two_way_link", String(s)),
-            null != c && f.append("handle", c),
-            (_ = _ + "?" + f.toString());
-        let p = await i.Bo.get({ url: _, oldFormErrors: !0, rejectWithError: !1 }),
-            { state: h } = (0, a.vA)(p.body.url ?? "");
-        return null != h && l.A.addPendingAuthorizedState(h), p;
+                ? (u.append("two_way_link_type", n), u.append("two_way_link", "true"))
+                : null != a && u.append("two_way_link", String(a)),
+            null != E && u.append("handle", E),
+            (c = c + "?" + u.toString());
+        let I = await r.Bo.get({ url: c, oldFormErrors: !0, rejectWithError: !1 }),
+            { state: A } = (0, s.vA)(I.body.url ?? "");
+        return null != A && l.A.addPendingAuthorizedState(A), I;
     },
-    callback: f,
-    connect: (e, t, n, i, s) =>
-        c.A.put({
+    callback: u,
+    connect: (e, t, n, r, a) =>
+        E.A.put({
             url: d.Rsh.CONNECTION(e, t),
-            body: { name: n, friend_sync: s?.friend_sync ?? d.txh.has(e) },
-            context: { location: i },
+            body: { name: n, friend_sync: a?.friend_sync ?? d.txh.has(e) },
+            context: { location: r },
             oldFormErrors: !0,
             trackedActionData: {
-                event: r.NetworkActionNames.USER_CONNECTIONS_UPDATE,
+                event: i.NetworkActionNames.USER_CONNECTIONS_UPDATE,
                 properties: { name: n, friend_sync: d.txh.has(e) },
             },
             rejectWithError: !1,
         }),
-    disconnect: (e, t) => i.Bo.del({ url: d.Rsh.CONNECTION(e, t), oldFormErrors: !0, rejectWithError: !1 }),
-    refresh: (e, t) => i.Bo.post({ url: d.Rsh.CONNECTION_REFRESH(e, t), oldFormErrors: !0, rejectWithError: !1 }),
+    disconnect: (e, t) => r.Bo.del({ url: d.Rsh.CONNECTION(e, t), oldFormErrors: !0, rejectWithError: !1 }),
+    refresh: (e, t) => r.Bo.post({ url: d.Rsh.CONNECTION_REFRESH(e, t), oldFormErrors: !0, rejectWithError: !1 }),
     setVisibility(e, t, n) {
         return this.update(e, t, { visibility: 1 === n });
     },
@@ -76,19 +75,19 @@ let p = {
         return this.update(e, t, { show_activity: n });
     },
     update: (e, t, n) =>
-        c.A.patch({
+        E.A.patch({
             url: d.Rsh.CONNECTION(e, t),
             body: n,
             oldFormErrors: !0,
-            trackedActionData: { event: r.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: { ...n } },
+            trackedActionData: { event: i.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: { ...n } },
             rejectWithError: !1,
         }),
     joinServer(e, t) {
-        s.h.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: e, joining: !0 }),
-            i.Bo.post({ url: d.Rsh.INTEGRATION_JOIN(e), oldFormErrors: !0, rejectWithError: !1 }, (n) => {
-                s.h.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: e, joining: !1 }),
+        a.h.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: e, joining: !0 }),
+            r.Bo.post({ url: d.Rsh.INTEGRATION_JOIN(e), oldFormErrors: !0, rejectWithError: !1 }, (n) => {
+                a.h.dispatch({ type: "USER_CONNECTIONS_INTEGRATION_JOINING", integrationId: e, joining: !1 }),
                     n.ok ||
-                        (s.h.dispatch({
+                        (a.h.dispatch({
                             type: "USER_CONNECTIONS_INTEGRATION_JOINING_ERROR",
                             integrationId: e,
                             error: n.hasErr ? void 0 : n.body.message,
@@ -100,34 +99,34 @@ let p = {
         try {
             let {
                 body: { access_token: n },
-            } = await i.Bo.get({ url: d.Rsh.CONNECTION_ACCESS_TOKEN(e, t), oldFormErrors: !0, rejectWithError: !1 });
-            return s.h.dispatch({ type: "USER_CONNECTION_UPDATE", platformType: e, id: t, accessToken: n }), n;
+            } = await r.Bo.get({ url: d.Rsh.CONNECTION_ACCESS_TOKEN(e, t), oldFormErrors: !0, rejectWithError: !1 });
+            return a.h.dispatch({ type: "USER_CONNECTION_UPDATE", platformType: e, id: t, accessToken: n }), n;
         } catch (n) {
             throw (
                 (n.body.code === d.t02.CONNECTION_REVOKED &&
-                    s.h.dispatch({ type: "USER_CONNECTION_UPDATE", platformType: e, id: t, revoked: !0 }),
+                    a.h.dispatch({ type: "USER_CONNECTION_UPDATE", platformType: e, id: t, revoked: !0 }),
                 n)
             );
         }
     },
     linkDispatchAuthCallback: (e, t) =>
-        i.Bo.post({
+        r.Bo.post({
             url: d.Rsh.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(e),
             body: { ...t },
             oldFormErrors: !0,
             rejectWithError: !1,
         }),
-    async completeTwoWayLink(e, t, n, r, i) {
-        if (null == t) return void _.error("Two-way link: missing authorize location");
-        let { code: s, error: o, errorDescription: l } = (0, a.vA)(t);
-        return null != o
-            ? void _.error("Two-way link: missing authorize code", { error: o, errorDescription: l })
-            : await f(e, { code: n, state: r, two_way_link_code: s, token_redirect_uri: i });
+    async completeTwoWayLink(e, t, n, i, r) {
+        if (null == t) return void c.error("Two-way link: missing authorize location");
+        let { code: a, error: _, errorDescription: l } = (0, s.vA)(t);
+        return null != _
+            ? void c.error("Two-way link: missing authorize code", { error: _, errorDescription: l })
+            : await u(e, { code: n, state: i, two_way_link_code: a, token_redirect_uri: r });
     },
-    sessionHandoff: function (e, t, n, r, s) {
-        return i.Bo.post({
+    sessionHandoff: function (e, t, n, i, a) {
+        return r.Bo.post({
             url: d.Rsh.CONNECTIONS_SESSION_HANDOFF(e),
-            body: { state: t, code: n, openid_params: r, iss: s },
+            body: { state: t, code: n, openid_params: i, iss: a },
             oldFormErrors: !0,
             rejectWithError: !1,
         });
@@ -135,7 +134,7 @@ let p = {
     getHandoffStatus: function (e, t) {
         let n = new URLSearchParams();
         n.append("state", t);
-        let r = `${d.Rsh.CONNECTIONS_SESSION_HANDOFF(e)}?${n.toString()}`;
-        return i.Bo.get({ url: r, body: { state: t }, rejectWithError: !0 });
+        let i = `${d.Rsh.CONNECTIONS_SESSION_HANDOFF(e)}?${n.toString()}`;
+        return r.Bo.get({ url: i, body: { state: t }, rejectWithError: !0 });
     },
 };

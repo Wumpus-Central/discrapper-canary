@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { WW: () => c, Xn: () => d, jN: () => u });
-var r = n(311907),
-    i = n(71393),
-    s = n(576705),
-    a = n(543465),
-    o = n(287809),
+n.d(t, { WW: () => E, Xn: () => d, jN: () => o });
+var i = n(17928),
+    r = n(71393),
+    a = n(576705),
+    s = n(543465),
+    _ = n(287809),
     l = n(652215);
-function u(e) {
-    return (0, r.bG)([a.Ay, i.A, o.default], () => {
-        let t = a.Ay.isOptInEnabled(e),
-            n = i.A.getGuild(e)?.features.has(l.GuildFeatures.COMMUNITY) ?? !1,
-            r = o.default.getCurrentUser()?.isStaff() ?? !1;
-        return t && (n || r);
+function o(e) {
+    return (0, i.bG)([s.Ay, r.A, _.default], () => {
+        let t = s.Ay.isOptInEnabled(e),
+            n = r.A.getGuild(e)?.features.has(l.GuildFeatures.COMMUNITY) ?? !1,
+            i = _.default.getCurrentUser()?.isStaff() ?? !1;
+        return t && (n || i);
     });
 }
-function c(e) {
-    let t = i.A.getGuild(e),
-        n = o.default.getCurrentUser();
+function E(e) {
+    let t = r.A.getGuild(e),
+        n = _.default.getCurrentUser();
     return (
         null != e &&
         null != t &&
         null != n &&
         (t.features.has(l.GuildFeatures.COMMUNITY) || n.isStaff()) &&
-        a.Ay.isOptInEnabled(e)
+        s.Ay.isOptInEnabled(e)
     );
 }
 function d(e) {
-    return (0, r.bG)([i.A, s.A], () => {
-        let t = i.A.getGuild(e),
-            n = s.A.can(l.xBc.MANAGE_GUILD, t),
-            r = s.A.can(l.xBc.MANAGE_ROLES, t),
-            a = t?.features.has(l.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED) ?? !1;
-        return null != t && n && r && !a;
+    return (0, i.bG)([r.A, a.A], () => {
+        let t = r.A.getGuild(e),
+            n = a.A.can(l.xBc.MANAGE_GUILD, t),
+            i = a.A.can(l.xBc.MANAGE_ROLES, t),
+            s = t?.features.has(l.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED) ?? !1;
+        return null != t && n && i && !s;
     });
 }

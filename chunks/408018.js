@@ -1,16 +1,15 @@
-"use strict";
-function r() {
+function i() {
     return { textValue: "", richValue: [{ type: "line", children: [{ text: "" }] }] };
 }
-function i(e) {
+function r(e) {
     return { textValue: e, richValue: a(e) };
 }
-n.d(t, { N3: () => r, QR: () => o, ur: () => i, x7: () => a });
-let s = Object.freeze([Object.freeze({ type: "line", children: Object.freeze([Object.freeze({ text: "" })]) })]);
+n.d(t, { N3: () => i, QR: () => s, ur: () => r, x7: () => a });
+let l = Object.freeze([Object.freeze({ type: "line", children: Object.freeze([Object.freeze({ text: "" })]) })]);
 function a(e) {
-    return "" !== e ? e.split("\n").map((e) => ({ type: "line", children: [{ text: e }] })) : s;
+    return "" !== e ? e.split("\n").map((e) => ({ type: "line", children: [{ text: e }] })) : l;
 }
-function o(e) {
+function s(e) {
     switch (e.type) {
         case "userMention":
             return { type: "userMention", userId: e.userId };

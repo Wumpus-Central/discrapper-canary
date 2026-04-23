@@ -1,4 +1,4 @@
-t.d(e, { b: () => E });
+t.d(e, { b: () => v });
 var n = t(627968),
     r = t(64700),
     s = t(284009),
@@ -9,7 +9,7 @@ var n = t(627968),
     d = t(534514),
     m = t(821609),
     x = t(811893),
-    u = t(73153),
+    u = t(228366),
     N = t(370480),
     h = t(738104),
     p = t(235986),
@@ -17,17 +17,17 @@ var n = t(627968),
     C = t(141241),
     g = t(985018),
     b = t(974651);
-let v = new j.A("TwoWayLink");
-function E(a) {
+let E = new j.A("TwoWayLink");
+function v(a) {
     let {
             platformType: e,
             isWaitingForConnection: t,
             onWaitingForConnection: s,
             expectedCallbackState: j,
-            onAuthToken: E,
+            onAuthToken: v,
             onError: k,
-            onClose: A,
-            img: f,
+            onClose: f,
+            img: A,
             title: w,
             body: D,
             redirectDestination: _,
@@ -38,7 +38,7 @@ function E(a) {
                 if (((a = await (0, h.d)(e, { twoWayLinkType: l.I.DESKTOP })), null == a))
                     throw Error("missing authorizeURL");
             } catch (a) {
-                v.error("Error opening provider authorize page", a), k();
+                E.error("Error opening provider authorize page", a), k();
                 return;
             }
             let { state: t } = (0, N.vA)(a);
@@ -48,10 +48,10 @@ function E(a) {
             (a) => {
                 let { callbackCode: t, callbackState: n } = a;
                 n !== j
-                    ? v.warn(`${e} link: received mismatching callback state!`)
-                    : E({ callbackCode: t, callbackState: n });
+                    ? E.warn(`${e} link: received mismatching callback state!`)
+                    : v({ callbackCode: t, callbackState: n });
             },
-            [e, j, E],
+            [e, j, v],
         );
     return (
         r.useEffect(
@@ -77,9 +77,9 @@ function E(a) {
                             color: "text-default",
                             children: g.intl.format(g.t.fHz6eR, { number: 1, total: 2 }),
                         }),
-                        (0, n.jsxs)("div", { className: b.bm, children: [f, " "] }),
+                        (0, n.jsxs)("div", { className: b.bm, children: [A, " "] }),
                         (0, n.jsx)(d.D, { className: b.DD, variant: "heading-xl/extrabold", children: w }),
-                        null != A && (0, n.jsx)(c.s_, { className: b.b, onClick: A }),
+                        null != f && (0, n.jsx)(c.s_, { className: b.b, onClick: f }),
                     ],
                 }),
                 (0, n.jsxs)(c.$m, {

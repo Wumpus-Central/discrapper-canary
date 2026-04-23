@@ -1,90 +1,90 @@
 "use strict";
-n.d(t, { Bv: () => I, ar: () => h, f9: () => A, g5: () => g, k0: () => T, k5: () => E, nf: () => m });
-var r = n(64700),
-    i = n(989349),
-    s = n.n(i),
-    a = n(311907),
+n.d(t, { Bv: () => I, ar: () => m, f9: () => A, g5: () => p, k0: () => T, k5: () => f, nf: () => g });
+var i = n(64700),
+    r = n(989349),
+    s = n.n(r),
+    a = n(17928),
     o = n(155718),
     l = n(166403),
-    u = n(89366),
-    c = n(881489),
-    d = n(694080),
-    _ = n(422936),
-    f = n(234419),
-    p = n(788868);
-function h() {
-    let e = (0, f.V)(),
-        t = (0, u.QQ)(),
-        n = (0, _.O)(),
-        r = E();
-    return null != e || t || null != n || r;
+    d = n(89366),
+    _ = n(881489),
+    u = n(694080),
+    c = n(422936),
+    E = n(234419),
+    h = n(788868);
+function m() {
+    let e = (0, E.V)(),
+        t = (0, d.QQ)(),
+        n = (0, c.O)(),
+        i = f();
+    return null != e || t || null != n || i;
 }
-let E = () => {
+let f = () => {
         let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = e?.metadata?.active_discount_expires_at;
         return null != t && s()(Date.now()) <= s()(t);
     },
-    m = () => {
+    g = () => {
         let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = e?.metadata?.active_discount_id;
         switch (t) {
-            case p.q:
-            case p.lj:
+            case h.q:
+            case h.lj:
                 return { duration: 1, percentage: 30, discountId: t };
-            case p.EG:
-            case p.TU:
-            case p.KG:
+            case h.EG:
+            case h.TU:
+            case h.KG:
                 return { duration: 3, percentage: 30, discountId: t };
-            case p.HF:
+            case h.HF:
                 return { duration: 1, percentage: 40, discountId: t };
-            case p.BR:
+            case h.BR:
                 return { duration: 1, percentage: 20, discountId: t };
-            case p.CW:
+            case h.CW:
                 return { duration: 1, percentage: 25, discountId: t };
             default:
                 return;
         }
     },
-    g = (e) => {
-        let [t, n] = r.useState(!1),
-            [i, s] = r.useState(!1),
-            [a, o] = r.useState(null);
-        if (e) return { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: i };
+    p = (e) => {
+        let [t, n] = i.useState(!1),
+            [r, s] = i.useState(!1),
+            [a, o] = i.useState(null);
+        if (e) return { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: r };
         let l = () => {
             n(!0), s(!1);
         };
         return (
-            i ||
+            r ||
                 t ||
                 (s(!0),
-                (0, d.qz)()
+                (0, u.qz)()
                     .then((e) => {
                         o(e), l();
                     })
                     .catch((e) => {
                         l();
                     })),
-            { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: i }
+            { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: r }
         );
     },
     A = () => {
         let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
-            t = E(),
+            t = f(),
             n = null !== e && e.hasPremiumNitroMonthly,
-            r = !!e?.hasActiveTrial;
-        return n && !r && !t;
+            i = !!e?.hasActiveTrial;
+        return n && !i && !t;
     },
     I = (e) => {
         for (let t of e.invoiceItems) {
             let e = t.discounts.find((e) => e.type === o.iS.SUBSCRIPTION_PLAN);
             if (null != e)
                 switch (e.discount_id) {
-                    case p.q:
+                    case h.q:
                         return { duration: 1, percentage: e.percentage_amount, discountId: e.discount_id };
-                    case p.EG:
+                    case h.EG:
                         return { duration: 3, percentage: e.percentage_amount, discountId: e.discount_id };
                 }
         }
         return null;
     },
-    T = () => (0, c.ds)();
+    T = () => (0, _.ds)();

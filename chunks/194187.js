@@ -1,46 +1,45 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(935154),
-    o = n(652215),
+var r = n(503698),
+    a = n.n(r),
+    s = n(133171),
+    _ = n(652215),
     l = n(47167),
-    u = n(10862),
-    c = n(200041),
+    o = n(10862),
+    E = n(200041),
     d = n(985018),
-    _ = n(124704);
-function f(e) {
+    c = n(124704);
+function u(e) {
     let {
             channel: t,
             textVariant: n,
-            textClassName: i,
-            iconClassName: f,
-            hideText: p = !1,
-            hideTooltip: h = !1,
-            canTruncate: E = !0,
-            showChannelName: m = !1,
+            textClassName: r,
+            iconClassName: u,
+            hideText: I = !1,
+            hideTooltip: A = !1,
+            canTruncate: T = !0,
+            showChannelName: S = !1,
         } = e,
-        g = (0, a.S3)(o.clD.ONLINE),
-        A = (0, l.Ay)(t),
-        I =
+        N = (0, s.S3)(_.clD.ONLINE),
+        O = (0, l.Ay)(t),
+        R =
             t.isDM() || t.isGroupDM()
                 ? d.intl.string(d.t["9FaEzi"])
                 : t.isGuildStageVoice()
                   ? d.intl.string(d.t.QygGCN)
                   : d.intl.string(d.t.msxteM),
-        T = null != A ? `${I} (${A})` : I,
-        S = m ? T : I;
-    return (0, r.jsx)(c.A, {
-        icon: (0, r.jsx)(u.A, { size: "custom", color: g, channel: t, className: s()(_.Kk, f) }),
-        text: S,
-        tooltipText: h ? void 0 : T,
+        f = null != O ? `${R} (${O})` : R,
+        C = S ? f : R;
+    return (0, i.jsx)(E.A, {
+        icon: (0, i.jsx)(o.A, { size: "custom", color: N, channel: t, className: a()(c.Kk, u) }),
+        text: C,
+        tooltipText: A ? void 0 : f,
         textVariant: n,
-        textClassName: i,
-        hideTooltip: h,
-        canTruncate: E,
-        "aria-label": T,
-        hideText: p,
+        textClassName: r,
+        hideTooltip: A,
+        canTruncate: T,
+        "aria-label": f,
+        hideText: I,
     });
 }

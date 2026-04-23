@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { W: () => u, h: () => l });
-var r = n(311907),
-    i = n(71393),
-    s = n(576705),
-    a = n(709977),
-    o = n(652215);
+n.d(t, { W: () => o, h: () => l });
+var i = n(17928),
+    r = n(71393),
+    a = n(576705),
+    s = n(709977),
+    _ = n(652215);
 function l(e) {
-    let t = i.A.getGuild(e);
+    let t = r.A.getGuild(e);
     return (
         null != t &&
-        t.features.has(o.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
-        s.A.can(o.xBc.KICK_MEMBERS, t)
+        t.features.has(_.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+        a.A.can(_.xBc.KICK_MEMBERS, t)
     );
 }
-function u(e) {
-    let t = (0, r.bG)([i.A], () => i.A.getGuild(e)),
-        n = s.A.can(o.xBc.KICK_MEMBERS, t) || s.A.can(o.xBc.MANAGE_GUILD, t);
-    return null != t && t.features.has(o.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) && n && (0, a.Qd)(t);
+function o(e) {
+    let t = (0, i.bG)([r.A], () => r.A.getGuild(e)),
+        n = a.A.can(_.xBc.KICK_MEMBERS, t) || a.A.can(_.xBc.MANAGE_GUILD, t);
+    return null != t && t.features.has(_.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) && n && (0, s.Qd)(t);
 }

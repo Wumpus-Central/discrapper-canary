@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     UP: "eyebrow__2b1f5",
     E3: "base__2b1f5 eyebrow__2b1f5",

@@ -1,31 +1,31 @@
-n.d(t, { A: () => r });
-var i = n(64700),
-    l = n(311907),
-    a = n(429913),
-    s = n(832163);
-function r(e) {
+a.d(t, { A: () => s });
+var i = a(64700),
+    n = a(17928),
+    r = a(429913),
+    l = a(832163);
+function s(e) {
     var t;
-    let n,
-        r,
+    let a,
+        s,
         o,
-        c =
+        _ =
             ((t = i.useMemo(() => (null != e ? [e] : []), [e])),
-            (n = (0, l.bG)([s.A], () => s.A.getConfig())),
-            (r = i.useMemo(() => {
-                if (null == n || 0 === t.length) return [];
+            (a = (0, n.bG)([l.A], () => l.A.getConfig())),
+            (s = i.useMemo(() => {
+                if (null == a || 0 === t.length) return [];
                 let e = new Set(t);
                 return Array.from(
                     new Set(
-                        n.storefronts
+                        a.storefronts
                             .filter((t) => e.has(t.applicationId) || e.has(t.gameId))
                             .map((e) => e.applicationId),
                     ),
                 );
-            }, [n, t])),
-            (o = (0, a.A)(r)),
+            }, [a, t])),
+            (o = (0, r.A)(s)),
             i.useMemo(() => o.reduce((e, t) => (null == t || (e[t.id] = t), e), {}), [o]));
     return i.useMemo(() => {
-        let e = Object.values(c);
+        let e = Object.values(_);
         return 0 === e.length ? null : e[0];
-    }, [c]);
+    }, [_]);
 }

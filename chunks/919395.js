@@ -1,128 +1,127 @@
-"use strict";
 n.d(t, {
-    Ac: () => T,
-    B0: () => _,
-    CP: () => E,
-    EI: () => c,
-    N2: () => p,
-    Tu: () => g,
-    WU: () => S,
-    Xf: () => h,
-    a4: () => f,
-    lw: () => A,
-    nZ: () => m,
+    Ac: () => f,
+    B0: () => c,
+    CP: () => T,
+    EI: () => E,
+    N2: () => I,
+    Tu: () => N,
+    WU: () => C,
+    Xf: () => A,
+    a4: () => u,
+    lw: () => O,
+    nZ: () => S,
     rv: () => d,
-    z5: () => I,
+    z5: () => R,
 }),
     n(321073);
-var r = n(64700),
-    i = n(311907),
-    s = n(765178),
-    a = n(836602),
-    o = n(622543),
+var i = n(64700),
+    r = n(17928),
+    a = n(765178),
+    s = n(836602),
+    _ = n(841595),
     l = n(696451),
-    u = n(985018);
-function c(e) {
-    return r.useMemo(() => {
+    o = n(985018);
+function E(e) {
+    return i.useMemo(() => {
         let t = l.Ay.getMutableAllGuildsAndMembers(),
             n = {};
-        for (let r in t) {
-            let i = t[r],
-                s = i[e]?.avatar;
-            null != s && (null == n[s] && (n[s] = []), n[s].push(r));
+        for (let i in t) {
+            let r = t[i],
+                a = r[e]?.avatar;
+            null != a && (null == n[a] && (n[a] = []), n[a].push(i));
         }
         return null != n ? Object.entries(n).map((e) => e[1][0]) : [];
     }, [e]);
 }
 function d(e, t) {
-    let n = (0, i.bG)([l.Ay], () => (void 0 === t ? null : l.Ay.getMember(t, e.id))),
-        { pendingNameplate: r, pendingErrors: s } = (0, i.cf)([a.A], () => ({
-            pendingNameplate: a.A.getPendingChanges(t).pendingNameplate,
-            pendingErrors: a.A.getErrors(t).nameplate,
+    let n = (0, r.bG)([l.Ay], () => (void 0 === t ? null : l.Ay.getMember(t, e.id))),
+        { pendingNameplate: i, pendingErrors: a } = (0, r.cf)([s.A], () => ({
+            pendingNameplate: s.A.getPendingChanges(t).pendingNameplate,
+            pendingErrors: s.A.getErrors(t).nameplate,
         }));
     return {
         userNameplate: e.nameplate,
         guildNameplate: n?.collectibles?.nameplate,
-        pendingNameplate: r,
-        pendingErrors: s,
+        pendingNameplate: i,
+        pendingErrors: a,
     };
 }
-function _(e, t) {
-    let n = (0, i.bG)([l.Ay], () => (void 0 === t || null == e ? null : l.Ay.getMember(t, e.id))),
+function c(e, t) {
+    let n = (0, r.bG)([l.Ay], () => (void 0 === t || null == e ? null : l.Ay.getMember(t, e.id))),
         {
-            pendingDisplayNameStyles: r,
-            tryItOutDisplayNameStyles: s,
-            pendingErrors: o,
-        } = (0, i.cf)([a.A], () => ({
-            pendingDisplayNameStyles: a.A.getPendingChanges(t).pendingDisplayNameStyles,
-            tryItOutDisplayNameStyles: a.A.getTryItOutChanges().tryItOutDisplayNameStyles,
-            pendingErrors: a.A.getErrors(t).displayNameStyles,
+            pendingDisplayNameStyles: i,
+            tryItOutDisplayNameStyles: a,
+            pendingErrors: _,
+        } = (0, r.cf)([s.A], () => ({
+            pendingDisplayNameStyles: s.A.getPendingChanges(t).pendingDisplayNameStyles,
+            tryItOutDisplayNameStyles: s.A.getTryItOutChanges().tryItOutDisplayNameStyles,
+            pendingErrors: s.A.getErrors(t).displayNameStyles,
         }));
     return {
         userDisplayNameStyles: e?.displayNameStyles,
         guildDisplayNameStyles: n?.displayNameStyles,
-        pendingDisplayNameStyles: r,
-        tryItOutDisplayNameStyles: s,
-        pendingErrors: o,
+        pendingDisplayNameStyles: i,
+        tryItOutDisplayNameStyles: a,
+        pendingErrors: _,
     };
 }
-function f(e) {
+function u(e) {
     let { user: t, guildId: n } = e,
-        r = (0, i.bG)([l.Ay], () => (null != n ? l.Ay.getMember(n, t.id) : null));
-    return null != n ? r?.avatarDecoration : t.avatarDecoration;
+        i = (0, r.bG)([l.Ay], () => (null != n ? l.Ay.getMember(n, t.id) : null));
+    return null != n ? i?.avatarDecoration : t.avatarDecoration;
 }
-function p(e) {
+function I(e) {
     let { user: t, guildId: n } = e;
-    return (0, i.bG)([o.A], () =>
-        null == n ? o.A.getUserProfile(t.id)?.profileEffect : o.A.getGuildMemberProfile(t.id, n)?.profileEffect,
+    return (0, r.bG)([_.A], () =>
+        null == n ? _.A.getUserProfile(t.id)?.profileEffect : _.A.getGuildMemberProfile(t.id, n)?.profileEffect,
     );
-}
-function h(e) {
-    let { user: t, guildId: n } = e;
-    return (0, i.bG)([o.A], () =>
-        null == n ? o.A.getUserProfile(t.id)?.profileFrame : o.A.getGuildMemberProfile(t.id, n)?.profileFrame,
-    );
-}
-function E(e) {
-    return (0, i.cf)([a.A], () => ({
-        pendingAvatarDecoration: a.A.getPendingChanges(e).pendingAvatarDecoration,
-        errors: a.A.getErrors(e).avatarDecoration,
-    }));
-}
-function m(e) {
-    return (0, i.cf)([a.A], () => ({
-        pendingProfileEffect: a.A.getPendingChanges(e).pendingProfileEffect,
-        errors: a.A.getErrors(e).profileEffect,
-    }));
-}
-function g(e) {
-    return (0, i.cf)([a.A], () => ({
-        pendingProfileFrame: a.A.getPendingChanges(e).pendingProfileFrame,
-        errors: a.A.getErrors(e).profileFrame,
-    }));
 }
 function A(e) {
-    let { userValue: t, guildValue: n, pendingValue: r, guildId: i } = e;
-    return "" === r || null === r
-        ? null != i
+    let { user: t, guildId: n } = e;
+    return (0, r.bG)([_.A], () =>
+        null == n ? _.A.getUserProfile(t.id)?.profileFrame : _.A.getGuildMemberProfile(t.id, n)?.profileFrame,
+    );
+}
+function T(e) {
+    return (0, r.cf)([s.A], () => ({
+        pendingAvatarDecoration: s.A.getPendingChanges(e).pendingAvatarDecoration,
+        errors: s.A.getErrors(e).avatarDecoration,
+    }));
+}
+function S(e) {
+    return (0, r.cf)([s.A], () => ({
+        pendingProfileEffect: s.A.getPendingChanges(e).pendingProfileEffect,
+        errors: s.A.getErrors(e).profileEffect,
+    }));
+}
+function N(e) {
+    return (0, r.cf)([s.A], () => ({
+        pendingProfileFrame: s.A.getPendingChanges(e).pendingProfileFrame,
+        errors: s.A.getErrors(e).profileFrame,
+    }));
+}
+function O(e) {
+    let { userValue: t, guildValue: n, pendingValue: i, guildId: r } = e;
+    return "" === i || null === i
+        ? null != r
             ? t
             : null
-        : "" !== r && null != r
-          ? r
-          : null != i && "" !== n && null != n
+        : "" !== i && null != i
+          ? i
+          : null != r && "" !== n && null != n
             ? n
             : t;
 }
-function I(e, t) {
+function R(e, t) {
     return void 0 === e ? null != t : null != e;
 }
-function T(e, t) {
+function f(e, t) {
     return void 0 === e ? null != t : null != e;
 }
-function S(e) {
+function C(e) {
     "set" === e
-        ? s.O.announce(u.intl.string(u.t.NstziV))
+        ? a.O.announce(o.intl.string(o.t.NstziV))
         : "remove" === e
-          ? s.O.announce(u.intl.string(u.t["f1+oNk"]))
-          : s.O.announce(u.intl.string(u.t["/b5nqj"]));
+          ? a.O.announce(o.intl.string(o.t["f1+oNk"]))
+          : a.O.announce(o.intl.string(o.t["/b5nqj"]));
 }

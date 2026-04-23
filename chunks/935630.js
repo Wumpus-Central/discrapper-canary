@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => i });
+n.d(t, { A: () => a });
 var r = n(64700);
-function i() {
+function a() {
     let [e, t] = r.useState(null),
         n = r.useRef(null);
     return (

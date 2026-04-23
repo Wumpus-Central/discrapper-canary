@@ -1,15 +1,14 @@
-"use strict";
 n.d(t, { K: () => c });
 var i = n(64700),
-    s = n(311907),
-    r = n(73153),
-    l = n(287809),
-    a = n(429707),
+    s = n(17928),
+    l = n(228366),
+    a = n(287809),
+    r = n(429707),
     o = n(274303);
 function c() {
-    let e = (0, s.cf)([o.A, l.default], () => {
+    let e = (0, s.cf)([o.A, a.default], () => {
         let e = o.A.getUsers(),
-            t = l.default.getCurrentUser();
+            t = a.default.getCurrentUser();
         return null == t ||
             e.some((e) => {
                 let { id: n } = e;
@@ -33,8 +32,8 @@ function c() {
     });
     return (
         i.useEffect(() => {
-            r.h.wait(() => {
-                a.F6();
+            l.h.wait(() => {
+                r.F6();
             });
         }, []),
         e

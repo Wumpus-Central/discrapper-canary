@@ -1,33 +1,34 @@
-var n = t(693655),
-    o = t(410323),
-    a = t(304880),
-    i = t(627),
-    s = URLSearchParams,
-    u = s.prototype,
-    l = o(u.append),
-    d = o(u.delete),
-    c = o(u.forEach),
-    f = o([].push),
-    h = new s("a=1&a=2&b=3");
-h.delete("a", 1),
-    h.delete("b", void 0),
-    h + "" != "a=2" &&
+"use strict";
+var n = e(693655),
+    o = e(410323),
+    i = e(304880),
+    a = e(627),
+    c = URLSearchParams,
+    u = c.prototype,
+    s = o(u.append),
+    h = o(u.delete),
+    f = o(u.forEach),
+    l = o([].push),
+    p = new c("a=1&a=2&b=3");
+p.delete("a", 1),
+    p.delete("b", void 0),
+    p + "" != "a=2" &&
         n(
             u,
             "delete",
-            function (r) {
-                var e,
-                    t = arguments.length,
-                    n = t < 2 ? void 0 : arguments[1];
-                if (t && void 0 === n) return d(this, r);
+            function (t) {
+                var r,
+                    e = arguments.length,
+                    n = e < 2 ? void 0 : arguments[1];
+                if (e && void 0 === n) return h(this, t);
                 var o = [];
-                c(this, function (r, e) {
-                    f(o, { key: e, value: r });
+                f(this, function (t, r) {
+                    l(o, { key: r, value: t });
                 }),
-                    i(t, 1);
-                for (var s = a(r), u = a(n), h = 0, p = 0, m = !1, v = o.length; h < v; )
-                    (e = o[h++]), m || e.key === s ? ((m = !0), d(this, e.key)) : p++;
-                for (; p < v; ) ((e = o[p++]).key !== s || e.value !== u) && l(this, e.key, e.value);
+                    a(e, 1);
+                for (var c = i(t), u = i(n), p = 0, y = 0, v = !1, d = o.length; p < d; )
+                    (r = o[p++]), v || r.key === c ? ((v = !0), h(this, r.key)) : y++;
+                for (; y < d; ) ((r = o[y++]).key !== c || r.value !== u) && s(this, r.key, r.value);
             },
             { enumerable: !0, unsafe: !0 },
         );

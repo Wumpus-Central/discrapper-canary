@@ -1,9 +1,61 @@
-t.d(r, { lA: () => i });
-var a,
-    o = t(577718);
-o.Im.width, o.Im.height;
-var i =
-    (((a = {})[(a.CROP_ANIMATED_IMAGE_START = 0)] = "CROP_ANIMATED_IMAGE_START"),
-    (a[(a.CROP_ANIMATED_IMAGE_COMPLETE = 1)] = "CROP_ANIMATED_IMAGE_COMPLETE"),
-    (a[(a.CROP_ANIMATED_IMAGE_ERROR = 2)] = "CROP_ANIMATED_IMAGE_ERROR"),
-    a);
+"use strict";
+n.d(t, {
+    AB: () => g,
+    CK: () => h,
+    G9: () => C,
+    HL: () => a,
+    Ip: () => o,
+    Jz: () => T,
+    PS: () => m,
+    PU: () => c,
+    Uw: () => p,
+    Wz: () => E,
+    Xb: () => _,
+    cN: () => u,
+    eJ: () => N,
+    lA: () => O,
+    nI: () => l,
+    ny: () => A,
+    pj: () => I,
+    pr: () => S,
+    wL: () => f,
+    yZ: () => d,
+    yi: () => R,
+});
+var i,
+    r,
+    s = n(577718),
+    a =
+        (((i = {}).AVATAR = "AVATAR"),
+        (i.BANNER = "BANNER"),
+        (i.GUILD_BANNER = "GUILD_BANNER"),
+        (i.VIDEO_BACKGROUND = "VIDEO_BACKGROUND"),
+        (i.SCHEDULED_EVENT_IMAGE = "SCHEDULED_EVENT_IMAGE"),
+        (i.HOME_HEADER = "HOME_HEADER"),
+        (i.AVATAR_DECORATION = "AVATAR_DECORATION"),
+        (i.GUILD_ICON = "GUILD_ICON"),
+        i);
+let o = 432,
+    l = 2400,
+    d = 848,
+    _ = 2400,
+    u = 1350,
+    c = 2400,
+    E = 960,
+    h = 2400,
+    m = 600,
+    f = 17 / 6,
+    g = 16 / 9,
+    p = 2.5,
+    A = 4,
+    I = 432 / (17 / 6),
+    T = 432 / (16 / 9),
+    S = 172.8,
+    N = 108,
+    C = s.Im.width / s.Im.height,
+    R = o / C;
+var O =
+    (((r = {})[(r.CROP_ANIMATED_IMAGE_START = 0)] = "CROP_ANIMATED_IMAGE_START"),
+    (r[(r.CROP_ANIMATED_IMAGE_COMPLETE = 1)] = "CROP_ANIMATED_IMAGE_COMPLETE"),
+    (r[(r.CROP_ANIMATED_IMAGE_ERROR = 2)] = "CROP_ANIMATED_IMAGE_ERROR"),
+    r);

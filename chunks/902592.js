@@ -4,7 +4,7 @@ var n = a(627968),
     i = a(503698),
     s = a.n(i),
     r = a(110259),
-    o = a(311907),
+    o = a(17928),
     d = a(811893),
     c = a(789645),
     u = a(306471),
@@ -12,18 +12,18 @@ var n = a(627968),
     h = a(761929),
     p = a(139286),
     x = a(58736),
-    g = a(923917),
+    g = a(979186),
     v = a(574172),
     b = a(147925),
     _ = a(538064),
     f = a(265059),
     j = a(867041),
-    A = a(641616),
-    y = a(231643),
-    C = a(652215),
-    E = a(985018),
-    S = a(503539),
-    N = a(505206);
+    y = a(550708),
+    C = a(231643),
+    E = a(652215),
+    S = a(985018),
+    N = a(503539),
+    A = a(505206);
 function k(e) {
     let { resizableNode: t, onResize: a, onResizeEnd: l } = e,
         i = (0, h.A)({
@@ -33,14 +33,14 @@ function k(e) {
             onElementResizeEnd: l,
             orientation: h.R.HORIZONTAL_LEFT,
         });
-    return (0, n.jsx)("div", { onMouseDown: i, className: S.Di });
+    return (0, n.jsx)("div", { onMouseDown: i, className: N.Di });
 }
 function I() {
     (0, v.open)(
-        C.MLl.DEVTOOLS_POPOUT,
+        E.MLl.DEVTOOLS_POPOUT,
         () =>
             (0, n.jsx)(g.A, {
-                windowKey: C.MLl.DEVTOOLS_POPOUT,
+                windowKey: E.MLl.DEVTOOLS_POPOUT,
                 title: "DevTools",
                 withTitleBar: !0,
                 children: (0, n.jsx)(O, { mobile: !1, isPopout: !0 }),
@@ -48,14 +48,14 @@ function I() {
         { width: 800, height: 600 },
     );
 }
-function D(e) {
+function T(e) {
     let { isPopout: t = !1 } = e,
-        a = (0, A.x)(),
+        a = (0, y.x)(),
         {
             TabBar: l,
             renderSelectedTab: i,
             selectedTabId: s,
-        } = (0, y.Ay)(
+        } = (0, C.Ay)(
             {
                 tabs: a,
                 initialSelectedTabId: f.A.lastOpenTabId ?? void 0,
@@ -74,7 +74,7 @@ function D(e) {
         (0, n.jsxs)(j.xG, {
             children: [
                 (0, n.jsxs)(x.Ay, {
-                    className: N.jr,
+                    className: A.jr,
                     toolbar: t
                         ? null
                         : (0, n.jsxs)(n.Fragment, {
@@ -82,7 +82,7 @@ function D(e) {
                                   (0, n.jsx)(x.Ay.Icon, { icon: d.t, tooltip: "Pop Out", onClick: I }),
                                   (0, n.jsx)(x.Ay.Icon, {
                                       icon: c.P,
-                                      tooltip: E.intl.string(E.t.cpT0Cq),
+                                      tooltip: S.intl.string(S.t.cpT0Cq),
                                       onClick: _.pf,
                                   }),
                               ],
@@ -94,12 +94,12 @@ function D(e) {
                 }),
                 (0, n.jsx)(l, {}),
                 i(),
-                (0, n.jsx)(j.jY, { className: S.n7 }),
+                (0, n.jsx)(j.jY, { className: N.n7 }),
             ],
         })
     );
 }
-function T() {
+function D() {
     let e = l.useRef(null),
         t = (0, o.bG)([f.A], () => f.A.sidebarWidth),
         [a, i] = l.useState(null),
@@ -111,27 +111,27 @@ function T() {
         ? null
         : (0, n.jsxs)("div", {
               ref: e,
-              className: S.kL,
+              className: N.kL,
               style: { minWidth: f.q, width: a },
               "data-app-right-panel": !0,
               children: [
                   (0, n.jsx)(k, { resizableNode: e, onResize: i, onResizeEnd: s }),
-                  (0, n.jsx)("div", { className: S.wp, children: (0, n.jsx)(D, {}) }),
+                  (0, n.jsx)("div", { className: N.wp, children: (0, n.jsx)(T, {}) }),
               ],
           });
 }
 function w() {
     return (0, o.bG)([f.A], () => f.A.displayTools)
         ? (0, n.jsx)("div", {
-              className: s()(S.kL, S.PQ),
-              children: (0, n.jsx)("div", { className: S.wp, children: (0, n.jsx)(D, {}) }),
+              className: s()(N.kL, N.PQ),
+              children: (0, n.jsx)("div", { className: N.wp, children: (0, n.jsx)(T, {}) }),
           })
         : (0, n.jsx)("div", {
-              className: S.kL,
+              className: N.kL,
               children: (0, n.jsx)(m.D, {
                   onClick: _.pf,
                   children: (0, n.jsxs)(x.Ay, {
-                      className: s()(N.jr, S.J$),
+                      className: s()(A.jr, N.J$),
                       toolbar: (0, n.jsx)(b.A, { direction: b.A.Directions.UP }),
                       children: [
                           (0, n.jsx)(x.Ay.Icon, { icon: u.V, tooltip: "DevTools" }),
@@ -146,6 +146,6 @@ function O(e) {
     return t
         ? (0, n.jsx)(w, {})
         : a
-          ? (0, n.jsx)("div", { className: S.jC, children: (0, n.jsx)(D, { isPopout: !0 }) })
-          : (0, n.jsx)(T, {});
+          ? (0, n.jsx)("div", { className: N.jC, children: (0, n.jsx)(T, { isPopout: !0 }) })
+          : (0, n.jsx)(D, {});
 }

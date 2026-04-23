@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nw: "outerContainer__310be",
     kL: "container__310be",

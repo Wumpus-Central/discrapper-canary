@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { A: () => a, M: () => o });
+n.d(t, { A: () => l, M: () => o });
 var r = n(64700),
-    i = n(311907),
-    s = n(775602);
-function a(e) {
+    i = n(17928),
+    a = n(775602);
+function l(e) {
     let [t, n] = r.useState(!1),
-        [a, o] = r.useState(!1),
-        l = (0, i.bG)([s.A], () => s.A.keyboardModeEnabled);
+        [l, o] = r.useState(!1),
+        s = (0, i.bG)([a.A], () => a.A.keyboardModeEnabled);
     r.useEffect(() => {
         let t = e.current;
         if (null == t) return;
         n(!1), o(!1);
         let r = () => n(!0),
             i = () => n(!1),
-            s = () => o(!0),
-            a = (e) => {
+            a = () => o(!0),
+            l = (e) => {
                 t.contains(e.relatedTarget) || o(!1);
             };
         return (
             t.addEventListener("mouseenter", r),
             t.addEventListener("mouseleave", i),
-            t.addEventListener("focusin", s),
-            t.addEventListener("focusout", a),
+            t.addEventListener("focusin", a),
+            t.addEventListener("focusout", l),
             () => {
                 t.removeEventListener("mouseenter", r),
                     t.removeEventListener("mouseleave", i),
-                    t.removeEventListener("focusin", s),
-                    t.removeEventListener("focusout", a);
+                    t.removeEventListener("focusin", a),
+                    t.removeEventListener("focusout", l);
             }
         );
     }, [e]);
-    let u = l && a;
+    let u = s && l;
     return { isHovering: t, isFocusing: u, isHoveringOrFocusing: t || u };
 }
 function o(e) {

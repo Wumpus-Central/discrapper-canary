@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => u });
-var r = n(311907),
-    i = n(73153),
+n.d(t, { A: () => d });
+var i = n(17928),
+    r = n(228366),
     s = n(652215);
 let a = {},
     o = null;
-class l extends r.Ay.Store {
+class l extends i.Ay.Store {
     static displayName = "LibraryApplicationStatisticsStore";
     get applicationStatistics() {
         return a;
@@ -32,7 +32,7 @@ class l extends r.Ay.Store {
             n = 0;
         if (null != t) {
             let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / 864e5),
-                r = Math.floor((1e3 * t.total_duration) / 36e5);
+                i = Math.floor((1e3 * t.total_duration) / 36e5);
             0 === e
                 ? (n += 50)
                 : e >= 1 && e < 2
@@ -42,20 +42,20 @@ class l extends r.Ay.Store {
                     : e >= 4 && e < 7
                       ? (n += 20)
                       : e >= 7 && (n += 10),
-                0 === r
+                0 === i
                     ? (n += 0)
-                    : r >= 1 && r < 12
+                    : i >= 1 && i < 12
                       ? (n += 10)
-                      : r >= 12 && r < 168
+                      : i >= 12 && i < 168
                         ? (n += 20)
-                        : r >= 168 && r < 720
+                        : i >= 168 && i < 720
                           ? (n += 40)
-                          : r >= 720 && (n += 50);
+                          : i >= 720 && (n += 50);
         }
         return n;
     }
 }
-let u = new l(i.h, {
+let d = new l(r.h, {
     USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: function (e) {
         let { statistics: t } = e;
         t.forEach((e) => {
@@ -64,15 +64,15 @@ let u = new l(i.h, {
             (o = Date.now());
     },
     ACTIVITY_UPDATE_START: function (e) {
-        let { duration: t, applicationId: n, distributor: r } = e,
-            i = a[n],
+        let { duration: t, applicationId: n, distributor: i } = e,
+            r = a[n],
             o = new Date().toISOString(),
             l = 0,
-            u = 0;
-        null != i && ((l = i.total_duration), (u = i.total_discord_sku_duration ?? 0)),
+            d = 0;
+        null != r && ((l = r.total_duration), (d = r.total_discord_sku_duration ?? 0)),
             (l += t),
-            r === s.d3x.DISCORD && (u += t),
-            (a[n] = { application_id: n, total_duration: l, last_played_at: o, total_discord_sku_duration: u });
+            i === s.d3x.DISCORD && (d += t),
+            (a[n] = { application_id: n, total_duration: l, last_played_at: o, total_discord_sku_duration: d });
     },
     LOGOUT: function () {
         (a = {}), (o = null);

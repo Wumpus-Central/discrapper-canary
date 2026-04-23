@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { j: () => o });
-var r = n(64700),
-    i = n(311907),
-    s = n(267102),
+n.d(t, { j: () => s });
+var i = n(64700),
+    r = n(17928),
+    l = n(267102),
     a = n(531685);
-function o() {
-    let { windowId: e } = r.useContext(s.Ay);
-    return (0, i.bG)([a.A], () => a.A.isFocused(e), [e]);
+function s() {
+    let { windowId: e } = i.useContext(l.Ay);
+    return (0, r.bG)([a.A], () => a.A.isFocused(e), [e]);
 }

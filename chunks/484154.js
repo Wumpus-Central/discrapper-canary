@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     lm: "notice_c5cd6a",
     x6: "button_c5cd6a",

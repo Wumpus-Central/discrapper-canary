@@ -1,59 +1,59 @@
 "use strict";
-n.d(t, { A: () => h });
-var r = n(141931),
-    i = n(205693),
+n.d(t, { A: () => m });
+var i = n(141931),
+    r = n(205693),
     s = n(439372),
-    a = n(961350),
-    o = n(837921),
+    a = n(495544),
+    o = n(19575),
     l = n(652215);
-let u = new Set();
-function c(e) {
+let d = new Set();
+function _(e) {
     switch (e) {
-        case i.x.DEFAULT:
-            return r.du.VideoMediaSessionId;
-        case i.x.STREAM:
-            return r.du.StreamMediaSessionId;
+        case r.x.DEFAULT:
+            return i.du.VideoMediaSessionId;
+        case r.x.STREAM:
+            return i.du.StreamMediaSessionId;
     }
 }
-function d(e) {
-    o.Ay.setCrashInformation(c(e.context), e.mediaSessionId ?? null);
+function u(e) {
+    o.Ay.setCrashInformation(_(e.context), e.mediaSessionId ?? null);
 }
-function _(e) {
+function c(e) {
     let t = (e.channelId ?? "unknown") + e.context;
     switch (e.state) {
         case l.S7L.RTC_CONNECTED:
-            u.add(t), o.Ay.setCrashInformation(r.du.HasRTCConnection, 1);
+            d.add(t), o.Ay.setCrashInformation(i.du.HasRTCConnection, 1);
             break;
         case l.S7L.DISCONNECTED:
-            o.Ay.setCrashInformation(c(e.context), null),
-                u.delete(t),
-                0 === u.size &&
+            o.Ay.setCrashInformation(_(e.context), null),
+                d.delete(t),
+                0 === d.size &&
                     (function () {
                         for (let e of [
-                            r.du.HasRTCConnection,
-                            r.du.IsSendingVideo,
-                            r.du.IsSendingStream,
-                            r.du.IsReceivingVideo,
-                            r.du.IsReceivingStream,
+                            i.du.HasRTCConnection,
+                            i.du.IsSendingVideo,
+                            i.du.IsSendingStream,
+                            i.du.IsReceivingVideo,
+                            i.du.IsReceivingStream,
                         ])
                             o.Ay.setCrashInformation(e, 0);
                     })();
     }
 }
-function f(e) {
+function E(e) {
     let t = e.userId === a.default.getId(),
         n = null != e.streamId,
         s = null;
     switch (e.context) {
-        case i.x.DEFAULT:
-            s = t ? r.du.IsSendingVideo : r.du.IsReceivingVideo;
+        case r.x.DEFAULT:
+            s = t ? i.du.IsSendingVideo : i.du.IsReceivingVideo;
             break;
-        case i.x.STREAM:
-            s = t ? r.du.IsSendingStream : r.du.IsReceivingStream;
+        case r.x.STREAM:
+            s = t ? i.du.IsSendingStream : i.du.IsReceivingStream;
     }
     o.Ay.setCrashInformation(s, +!!n);
 }
-class p extends s.A {
-    actions = { RTC_CONNECTION_STATE: _, RTC_CONNECTION_VIDEO: f, MEDIA_SESSION_JOINED: d };
+class h extends s.A {
+    actions = { RTC_CONNECTION_STATE: c, RTC_CONNECTION_VIDEO: E, MEDIA_SESSION_JOINED: u };
 }
-let h = new p();
+let m = new h();

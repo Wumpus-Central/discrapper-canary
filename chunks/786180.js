@@ -1,5 +1,5 @@
 l.d(t, { H: () => a });
-var n = l(311907),
+var n = l(17928),
     i = l(844944);
 function a(e) {
     let { guildId: t } = e;

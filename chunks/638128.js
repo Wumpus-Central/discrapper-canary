@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { A: () => f });
-var r = n(311907),
-    i = n(506774),
-    s = n(73153),
-    a = n(11057),
+n.d(t, { A: () => E });
+var i = n(17928),
+    r = n(506774),
+    s = n(228366),
+    a = n(724066),
     o = n(454235);
 let l = "SpellcheckStore",
-    u = !0,
-    c = new Set();
-function d() {
-    i.w.set(l, { enabled: u, learnedWords: c });
+    d = !0,
+    _ = new Set();
+function u() {
+    r.w.set(l, { enabled: d, learnedWords: _ });
 }
-class _ extends r.Ay.Store {
+class c extends i.Ay.Store {
     static displayName = "SpellcheckStore";
     initialize() {
-        let e = i.w.get(l);
-        null != e && ((u = e.enabled), (c = new Set(e.learnedWords)), (0, o.kv)(u), (0, o.d1)(c)), (0, a.I)(o.Av);
+        let e = r.w.get(l);
+        null != e && ((d = e.enabled), (_ = new Set(e.learnedWords)), (0, o.kv)(d), (0, o.d1)(_)), (0, a.I)(o.Av);
     }
     isEnabled() {
-        return u;
+        return d;
     }
     hasLearnedWord(e) {
-        return c.has(e.toLocaleLowerCase());
+        return _.has(e.toLocaleLowerCase());
     }
 }
-let f = new _(s.h, {
+let E = new c(s.h, {
     SPELLCHECK_TOGGLE() {
-        (u = !u), (0, o.kv)(u), d();
+        (d = !d), (0, o.kv)(d), u();
     },
     SPELLCHECK_LEARN_WORD(e) {
         let { word: t } = e;
-        c.add(t.toLocaleLowerCase()), (0, o.d1)(c), d();
+        _.add(t.toLocaleLowerCase()), (0, o.d1)(_), u();
     },
     SPELLCHECK_UNLEARN_WORD(e) {
         let { word: t } = e;
-        c.delete(t.toLocaleLowerCase()), (0, o.d1)(c), d();
+        _.delete(t.toLocaleLowerCase()), (0, o.d1)(_), u();
     },
 });

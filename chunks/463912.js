@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     k_: "contained_ee4d7e",
     wx: "header_ee4d7e",

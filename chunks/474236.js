@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__9dbc9",
     $R: "serverSection__9dbc9",

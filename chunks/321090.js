@@ -1,76 +1,76 @@
 "use strict";
 n.d(t, { A: () => I });
-var r = n(311907),
-    i = n(73153),
+var i = n(17928),
+    r = n(228366),
     s = n(77729),
     a = n(626584),
-    o = n(837921),
+    o = n(19575),
     l = n(206885),
-    u = n(41984),
-    c = n(680243);
-let d = new a.A("OverlayV3NativeGPUBoostManager"),
-    _ = new Set(),
-    f = !1,
-    p = !1;
-function h(e, t) {
-    t ? _.add(e) : _.delete(e), m();
+    d = n(41984),
+    _ = n(680243);
+let u = new a.A("OverlayV3NativeGPUBoostManager"),
+    c = new Set(),
+    E = !1,
+    h = !1;
+function m(e, t) {
+    t ? c.add(e) : c.delete(e), g();
 }
-function E() {
-    _.clear(), m();
+function f() {
+    c.clear(), g();
 }
-async function m() {
+async function g() {
     try {
-        let e = !p && _.size > 0;
-        if (f === e || !l.O) return;
+        let e = !h && c.size > 0;
+        if (E === e || !l.O) return;
         let t = await s.A?.processUtils?.getGpuProcessId?.();
         if (null == t) return;
-        o.Ay.SetGPUBoostEnabledByPid(t, e) && (f = e), A.emitChange();
+        o.Ay.SetGPUBoostEnabledByPid(t, e) && (E = e), A.emitChange();
     } catch (e) {
-        e.message?.includes("IPC method called after context was released") && E(),
-            d.error("Error during GPU boost request flush:", e);
+        e.message?.includes("IPC method called after context was released") && f(),
+            u.error("Error during GPU boost request flush:", e);
     }
 }
-class g extends r.Ay.Store {
+class p extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-GPU-Boost-Store";
     initialize() {
-        this.waitFor(c.A);
+        this.waitFor(_.A);
     }
     getGPUBoostRequests() {
-        return _;
+        return c;
     }
     isGPUBoosted() {
-        return f;
+        return E;
     }
     getIsDisabledGPUBoost() {
-        return p;
+        return h;
     }
 }
-let A = new g(
-        i.h,
+let A = new p(
+        r.h,
         __OVERLAY__ || !l.O
             ? {}
             : {
                   OVERLAY_SET_GPU_BOOST_REQUESTED: function (e) {
-                      h(e.reason, e.enabled);
+                      m(e.reason, e.enabled);
                   },
                   OVERLAY_RENDER_DEBUG_MODE: function (e) {
                       let { enabled: t, mode: n } = e;
-                      n === u.x7.DisabledGPUBoost && ((p = t), m()),
-                          n === u.x7.ForceGPUBoost && h(u.y7.DEV_FORCED_GPU_BOOST, t);
+                      n === d.x7.DisabledGPUBoost && ((h = t), g()),
+                          n === d.x7.ForceGPUBoost && m(d.y7.DEV_FORCED_GPU_BOOST, t);
                   },
                   OVERLAY_CRASHED: function () {
-                      E();
+                      f();
                   },
                   OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: function () {
                       o.Ay.IsHardwareAcceleratedGPUSchedulingEnabled() &&
-                          h(u.y7.HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED, !0),
-                          h(u.y7.OVERLAY_RENDERING, !0);
+                          m(d.y7.HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED, !0),
+                          m(d.y7.OVERLAY_RENDERING, !0);
                   },
                   OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: function () {
-                      E();
+                      f();
                   },
                   OVERLAY_SET_INPUT_LOCKED: function (e) {
-                      h(u.y7.OVERLAY_UNLOCKED, !e.locked);
+                      m(d.y7.OVERLAY_UNLOCKED, !e.locked);
                   },
               },
     ),

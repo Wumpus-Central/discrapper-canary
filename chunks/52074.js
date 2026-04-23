@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, { U: () => r });
-var a = n(73153),
-    i = n(142120);
+var i = n(228366),
+    a = n(366853);
 function r(e) {
-    a.h.dispatch({ type: "FETCH_CHANNEL_INFO", guildId: e }),
-        i.A.getSocket().requestChannelInfo(e, ["status", "voice_start_time"]);
+    i.h.dispatch({ type: "FETCH_CHANNEL_INFO", guildId: e }),
+        a.A.getSocket().requestChannelInfo(e, ["status", "voice_start_time"]);
 }

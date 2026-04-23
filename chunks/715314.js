@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(311907),
-    i = n(73153);
-let s = {},
+n.d(t, { A: () => c });
+var i = n(17928),
+    r = n(228366);
+let l = {},
     a = null,
-    o = null;
-function l(e, t) {
-    null == t ? e in s && delete s[e] : null != e && (s[e] = t);
+    s = null;
+function o(e, t) {
+    null == t ? e in l && delete l[e] : null != e && (l[e] = t);
 }
-function u(e) {
+function d(e) {
     let { user: t } = e;
-    o = t.id;
+    s = t.id;
 }
-class c extends r.Ay.PersistedStore {
+class u extends i.Ay.PersistedStore {
     static displayName = "LoginRequiredActionStore";
     static persistKey = "LoginRequiredActionStore";
     initialize(e) {
-        null != e && (s = e);
+        null != e && (l = e);
     }
     requiredActions(e) {
-        return s[e] ?? null;
+        return l[e] ?? null;
     }
     requiredActionsIncludes(e, t) {
         let n = this.requiredActions(e);
@@ -29,26 +28,26 @@ class c extends r.Ay.PersistedStore {
         return a === e;
     }
     getState() {
-        return s;
+        return l;
     }
 }
-let d = new c(i.h, {
+let c = new u(r.h, {
     LOGIN_ATTEMPTED: function (e) {
         let { required_actions: t, user_id: n } = e;
-        l((a = n), t);
+        o((a = n), t);
     },
-    CONNECTION_OPEN: u,
-    CURRENT_USER_UPDATE: u,
+    CONNECTION_OPEN: d,
+    CURRENT_USER_UPDATE: d,
     LOGOUT: function (e) {
         let { isSwitchingAccount: t } = e;
-        t || null == o || l(o, null);
+        t || null == s || o(s, null);
     },
     PASSWORD_UPDATED: function (e) {
         let { userId: t } = e;
-        l(t, null);
+        o(t, null);
     },
     MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
         let { userId: t } = e;
-        l(t, null);
+        o(t, null);
     },
 });

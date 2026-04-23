@@ -1,7 +1,7 @@
 l.d(t, { A: () => p });
 var n = l(627968),
     i = l(64700),
-    a = l(311907),
+    a = l(17928),
     s = l(834730),
     r = l(781696),
     u = l(997590),
@@ -12,7 +12,7 @@ var n = l(627968),
     g = l(534400),
     h = l(773669),
     x = l(299091),
-    j = l(661191),
+    j = l(935208),
     A = l(652215),
     E = l(985018),
     _ = l(963120);
@@ -21,8 +21,8 @@ function p(e) {
         S = l.approximate_presence_count ?? 0,
         C = l.approximate_member_count ?? 0,
         I = (0, a.bG)([h.default], () => h.default.locale),
-        L = (0, o.P)(j.default.extractTimestamp(t.id), I),
-        y = (0, a.bG)([u.A], () =>
+        y = (0, o.P)(j.default.extractTimestamp(t.id), I),
+        L = (0, a.bG)([u.A], () =>
             p?.primary_category_id != null ? u.A.getCategoryName(p.primary_category_id) : null,
         ),
         T = t.premiumTier ?? A.TVA.NONE,
@@ -35,7 +35,7 @@ function p(e) {
         }, [O]),
         F = ["en-US", "en-GB"].includes(O ?? ""),
         M = null != O && "" !== O && !(f && F),
-        P = null != y,
+        P = null != L,
         D = M || P || R,
         k = P || R,
         U = (0, a.bG)([x.A], () => x.A.getInvite(l.code));
@@ -75,14 +75,14 @@ function p(e) {
             (0, n.jsxs)("div", {
                 className: _.ov,
                 children: [
-                    null != L &&
+                    null != y &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)(s.E, {
                                     tag: "span",
                                     variant: "text-sm/normal",
                                     color: G,
-                                    children: E.intl.format(E.t.zb2Q56, { createdAtDate: L }),
+                                    children: E.intl.format(E.t.zb2Q56, { createdAtDate: y }),
                                 }),
                                 D && (0, n.jsx)("span", { className: _.LO, "aria-hidden": !0 }),
                             ],
@@ -97,7 +97,7 @@ function p(e) {
                     P &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, n.jsx)(s.E, { tag: "span", variant: "text-sm/normal", color: G, children: y }),
+                                (0, n.jsx)(s.E, { tag: "span", variant: "text-sm/normal", color: G, children: L }),
                                 R && (0, n.jsx)("span", { className: _.LO, "aria-hidden": !0 }),
                             ],
                         }),

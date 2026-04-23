@@ -1,11 +1,11 @@
-n.d(t, { default: () => R });
+n.d(t, { default: () => M });
 var a = n(627968),
     i = n(64700),
     l = n(189213),
-    s = n(311907),
-    r = n(562465),
+    r = n(17928),
+    s = n(636537),
     o = n(123292),
-    c = n(843472),
+    c = n(720149),
     d = n(608299),
     u = n(425059),
     m = n(390248),
@@ -13,27 +13,27 @@ var a = n(627968),
     h = n(734057),
     p = n(31717),
     g = n(71393),
-    f = n(320501),
+    f = n(232835),
     A = n(453771),
-    b = n(661191),
+    b = n(935208),
     T = n(292348),
     I = n(518960),
-    C = n(382287),
-    S = n(853742),
-    E = n(835369),
+    E = n(382287),
+    C = n(853742),
+    S = n(350527),
     y = n(218152),
     x = n(652215),
     v = n(818348),
-    w = n(985018),
-    M = n(158482);
-async function j(e) {
+    O = n(985018),
+    N = n(158482);
+async function w(e) {
     let t,
-        { thread: n, attachments: a, setIsUploading: i, guild: l, onClose: s } = e,
+        { thread: n, attachments: a, setIsUploading: i, guild: l, onClose: r } = e,
         o = b.default.castChannelIdAsMessageId(n.id),
         _ = new u.A();
     _.on("progress", (e) => {
         let t = (0, A.o2)(l.id);
-        e.currentSize > t && (_.cancel(), i(!1), s(), (0, I.V)(n, (0, C.LJ)(a)));
+        e.currentSize > t && (_.cancel(), i(!1), r(), (0, I.V)(n, (0, E.LJ)(a)));
     });
     let h = f.A.getMessage(n.id, o),
         g = null != h ? h.attachments : [];
@@ -44,15 +44,15 @@ async function j(e) {
         i(!1);
         return;
     }
-    let S = [...g, ...(t.map((e, t) => (0, T.OW)(e, t)) ?? [])];
+    let C = [...g, ...(t.map((e, t) => (0, T.OW)(e, t)) ?? [])];
     try {
-        await r.Bo.patch({ url: x.Rsh.MESSAGE(n.id, o), body: { attachments: S }, rejectWithError: !1 }),
-            s(),
+        await s.Bo.patch({ url: x.Rsh.MESSAGE(n.id, o), body: { attachments: C }, rejectWithError: !1 }),
+            r(),
             d.A.clearAll(n.id, p.C.ChannelMessage);
     } catch (e) {
         i(!1),
             e.body?.code === x.t02.EXPLICIT_CONTENT &&
-                (s(),
+                (r(),
                 c.A.sendExplicitMediaClydeError(
                     n.id,
                     e.body?.attachments,
@@ -61,11 +61,11 @@ async function j(e) {
                 d.A.clearAll(n.id, p.C.ChannelMessage));
     }
 }
-function R(e) {
-    let { threadId: t, attachments: n, sendMessage: r, transitionState: c, onClose: d } = e,
-        u = (0, s.bG)([h.A], () => h.A.getChannel(t), [t]),
-        m = (0, s.bG)([g.A], () => g.A.getGuild(u?.getGuildId()), [u]),
-        p = (0, s.bG)([h.A], () => h.A.getChannel(u?.parent_id), [u]),
+function M(e) {
+    let { threadId: t, attachments: n, sendMessage: s, transitionState: c, onClose: d } = e,
+        u = (0, r.bG)([h.A], () => h.A.getChannel(t), [t]),
+        m = (0, r.bG)([g.A], () => g.A.getGuild(u?.getGuildId()), [u]),
+        p = (0, r.bG)([h.A], () => h.A.getChannel(u?.parent_id), [u]),
         f = n[0]?.item,
         [A, b] = i.useState(null);
     i.useEffect(() => {
@@ -73,37 +73,37 @@ function R(e) {
     }, [f]);
     let T =
             null != f && null != A
-                ? { src: A, width: E.T5, height: E.Co, spoiler: n[0].spoiler, alt: n[0].description }
+                ? { src: A, width: S.T5, height: S.Co, spoiler: n[0].spoiler, alt: n[0].description }
                 : null,
-        [I, C] = i.useState(!1),
+        [I, E] = i.useState(!1),
         x = i.useCallback(() => {
-            (0, S.jh)({ added: !1 }), r(), d();
-        }, [r, d]),
-        R = i.useCallback(() => {
+            (0, C.jh)({ added: !1 }), s(), d();
+        }, [s, d]),
+        M = i.useCallback(() => {
             null != u &&
                 null != m &&
-                ((0, S.jh)({ added: !0 }), j({ thread: u, attachments: n, setIsUploading: C, guild: m, onClose: d }));
-        }, [u, n, C, m, d]);
+                ((0, C.jh)({ added: !0 }), w({ thread: u, attachments: n, setIsUploading: E, guild: m, onClose: d }));
+        }, [u, n, E, m, d]);
     return null == p
         ? null
         : (0, a.jsx)(l.Modal, {
-              title: w.intl.string(w.t["+SZF6S"]),
-              subtitle: w.intl.string(w.t["0Ycgw5"]),
+              title: O.intl.string(O.t["+SZF6S"]),
+              subtitle: O.intl.string(O.t["0Ycgw5"]),
               transitionState: c,
               onClose: d,
               actionBarInput: (0, a.jsx)(o.Q, {
                   variant: "secondary",
                   disabled: I,
                   onClick: d,
-                  text: w.intl.string(w.t["ETE/oC"]),
+                  text: O.intl.string(O.t["ETE/oC"]),
               }),
               actions: [
-                  { variant: "secondary", text: w.intl.string(w.t["8rKVHL"]), disabled: I, onClick: x },
-                  { variant: "primary", text: w.intl.string(w.t.d611xH), loading: I, onClick: R, autoFocus: !0 },
+                  { variant: "secondary", text: O.intl.string(O.t["8rKVHL"]), disabled: I, onClick: x },
+                  { variant: "primary", text: O.intl.string(O.t.d611xH), loading: I, onClick: M, autoFocus: !0 },
               ],
               children: (0, a.jsx)(y.Cp, {
                   channel: p,
-                  children: (0, a.jsx)(E.Ay, { threadId: t, goToThread: v.tE, overrideMedia: T, className: M.u }),
+                  children: (0, a.jsx)(S.Ay, { threadId: t, goToThread: v.tE, overrideMedia: T, className: N.u }),
               }),
           });
 }

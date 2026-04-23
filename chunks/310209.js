@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, { A: () => l, j: () => o });
-var r,
-    i = n(315069),
-    s = n(260811),
-    a = n(611010),
-    o = (((r = {}).WISHLIST = "WISHLIST"), (r.RECOMMENDATION = "RECOMMENDATION"), r);
-class l extends i.A {
+var i,
+    r = n(315069),
+    s = n(32731),
+    a = n(395671),
+    o = (((i = {}).WISHLIST = "WISHLIST"), (i.RECOMMENDATION = "RECOMMENDATION"), i);
+class l extends r.A {
     skus;
     skusToUserAndReason;
     applications;

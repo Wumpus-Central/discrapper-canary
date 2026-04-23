@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { x: () => r });
-let r = (e, t) =>
-    function (n, r, i) {
-        return new Promise((s) => {
+n.d(t, { x: () => i });
+let i = (e, t) =>
+    function (n, i, r) {
+        return new Promise((a) => {
             e.dispatch({
                 type: t,
                 event: n,
-                properties: r,
-                flush: i?.flush ?? !1,
-                fingerprint: i?.fingerprint,
-                resolve: s,
+                properties: i,
+                flush: r?.flush ?? !1,
+                fingerprint: r?.fingerprint,
+                resolve: a,
             });
         });
     };

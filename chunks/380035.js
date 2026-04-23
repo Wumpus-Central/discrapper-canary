@@ -2,14 +2,14 @@ i.d(n, { default: () => b });
 var t = i(627968),
     a = i(64700),
     l = i(189213),
-    r = i(311907),
+    r = i(17928),
     o = i(834730),
     c = i(287809),
     d = i(975571),
     s = i(735321),
-    _ = i(463259),
-    u = i(606758),
-    p = i(518477),
+    _ = i(751162),
+    p = i(606758),
+    u = i(518477),
     g = i(985018),
     v = i(708584);
 function m(e) {
@@ -22,7 +22,7 @@ function b(e) {
             (0, s.qA)(i),
                 C({ action: "WIDGET_REMOVED", ...i.getProfileEditAnalyticsOptions() }),
                 b(),
-                (0, u.XA)(p.jM.WIDGET_REMOVED);
+                (0, p.XA)(u.jM.WIDGET_REMOVED);
         }, [i, b, C]),
         f = (0, r.bG)([c.default], () => c.default.getUser(_));
     return null == f

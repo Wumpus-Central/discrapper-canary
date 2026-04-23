@@ -1,61 +1,60 @@
-"use strict";
-let r;
-n.d(t, { A: () => f });
-var i = n(311907),
-    s = n(73153);
-let a = [],
-    o = a,
+let i;
+n.d(t, { A: () => u });
+var r = n(17928),
+    a = n(228366);
+let s = [],
+    _ = s,
     l = null,
-    u = {},
-    c = new Set(),
+    o = {},
+    E = new Set(),
     d = {};
-class _ extends i.Ay.Store {
+class c extends r.Ay.Store {
     static displayName = "CollectiblesShopStore";
     get analyticsLocations() {
-        return o;
+        return _;
     }
     get analyticsSource() {
         return l;
     }
     get initialProductSkuId() {
-        return r;
+        return i;
     }
     getAnalytics() {
-        return { analyticsLocations: o, analyticsSource: l };
+        return { analyticsLocations: _, analyticsSource: l };
     }
     getLayout(e) {
-        return null == e ? null : (u[e] ?? null);
+        return null == e ? null : (o[e] ?? null);
     }
     isFetchingLayout(e) {
-        return null != e && c.has(e);
+        return null != e && E.has(e);
     }
     getLayoutFetchError(e) {
         return null == e ? null : (d[e] ?? null);
     }
 }
-let f = new _(s.h, {
+let u = new c(a.h, {
     COLLECTIBLES_SHOP_OPEN: (e) => {
-        (o = e.analyticsLocations ?? a), (l = e.analyticsSource ?? null), (r = e.initialProductSkuId);
+        (_ = e.analyticsLocations ?? s), (l = e.analyticsSource ?? null), (i = e.initialProductSkuId);
     },
     COLLECTIBLES_SHOP_CLOSE: (e) => {
-        (o = a), (l = null), (r = void 0);
+        (_ = s), (l = null), (i = void 0);
     },
     COLLECTIBLES_PRODUCT_DETAILS_OPEN: (e) => {
-        e.skuId === r && (r = void 0);
+        e.skuId === i && (i = void 0);
     },
     COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH: (e) => {
         let { tab: t } = e;
-        c.add(t);
+        E.add(t);
     },
     COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS: (e) => {
         let { tab: t, layoutId: n } = e;
-        (u[t] = n), delete d[t], c.delete(t);
+        (o[t] = n), delete d[t], E.delete(t);
     },
     COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE: (e) => {
         let { tab: t, apiError: n } = e;
-        (d[t] = n), c.delete(t);
+        (d[t] = n), E.delete(t);
     },
     LOGOUT: (e) => {
-        (o = a), (l = null), (r = void 0), (u = {}), (c = new Set()), (d = {});
+        (_ = s), (l = null), (i = void 0), (o = {}), (E = new Set()), (d = {});
     },
 });

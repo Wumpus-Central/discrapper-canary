@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => E }), n(321073);
-var r = n(439372),
-    i = n(967347),
+n.d(t, { A: () => f }), n(321073);
+var i = n(439372),
+    r = n(967347),
     s = n(954571),
     a = n(927813),
     o = n(723702),
     l = n(321034),
-    u = n(837921),
-    c = n(652215);
-let d = 5 * a.A.Millis.MINUTE;
-function _() {
+    d = n(19575),
+    _ = n(652215);
+let u = 5 * a.A.Millis.MINUTE;
+function c() {
     return o.isPlatformEmbedded;
 }
-async function f() {
+async function E() {
     let e = l.A.getMemoryUsageElectronProcessTypeDetails();
     if (null == e) return null;
     let t = {
@@ -41,7 +41,7 @@ async function f() {
                 e.utility?.proc_count ?? 0,
             ],
         },
-        n = await (0, i.w)();
+        n = await (0, r.w)();
     return (
         null != n &&
             (null != n.cpu_memory && (t.system_memory_total = n.cpu_memory / 1024),
@@ -49,14 +49,14 @@ async function f() {
         t
     );
 }
-async function p() {
+async function h() {
     let e,
         t = { gpu_dedicated_memory: [], gpu_renderer_used_memory: [] };
     if (!o.isPlatformEmbedded || !(0, o.isWindows)()) return t;
     try {
         if (
-            (await u.Ay.ensureModule("discord_media"),
-            (e = u.Ay.requireModule("discord_media")),
+            (await d.Ay.ensureModule("discord_media"),
+            (e = d.Ay.requireModule("discord_media")),
             e?.getMemoryUsageBlob == null)
         )
             return t;
@@ -64,39 +64,39 @@ async function p() {
         return t;
     }
     let n = [],
-        r = [],
-        i = await e.getMemoryUsageBlob(),
+        i = [],
+        r = await e.getMemoryUsageBlob(),
         s = new Set();
-    for (let e of i?.[0]?.data?.gpus ?? [])
+    for (let e of r?.[0]?.data?.gpus ?? [])
         if (!(!e.luid || 0 === e.luid || s.has(e.luid)))
             if ((s.add(e.luid), null != e.memory ? n.push(e.memory / 1024) : n.push(-1), null != e.memory_usage)) {
                 let t = 0;
                 for (let n of e.memory_usage) n.memory_usage && (t += n.memory_usage / 1024);
-                r.push(t);
-            } else r.push(-1);
-    return { gpu_dedicated_memory: n, gpu_renderer_used_memory: r };
+                i.push(t);
+            } else i.push(-1);
+    return { gpu_dedicated_memory: n, gpu_renderer_used_memory: i };
 }
-class h extends r.A {
+class m extends i.A {
     _heartbeatAnalyticsInterval = null;
     actions = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() };
     _initialize() {}
     _terminate() {
-        _() && (clearInterval(this._heartbeatAnalyticsInterval), (this._heartbeatAnalyticsInterval = null));
+        c() && (clearInterval(this._heartbeatAnalyticsInterval), (this._heartbeatAnalyticsInterval = null));
     }
     handlePostConnectionOpen() {
-        _() &&
+        c() &&
             (clearInterval(this._heartbeatAnalyticsInterval),
             (this._heartbeatAnalyticsInterval = setInterval(async () => {
                 await this.trackPerfAnalytics();
-            }, d)));
+            }, u)));
     }
     async trackPerfAnalytics() {
         let e,
             t,
             n,
-            r,
-            i = await f();
-        if (null == i) return;
+            i,
+            r = await E();
+        if (null == r) return;
         let a =
                 ((e = l.A.getMemoryHeapStats()),
                 (t = l.A.getBlinkMemoryInfo()),
@@ -112,12 +112,12 @@ class h extends r.A {
                         e.mallocedMemory,
                         e.peakMallocedMemory,
                     ]),
-                (r = null),
-                null != t && (r = [t.allocated, t.total]),
-                { v8_heap_stats: n, blink_memory_stats: r }),
-            o = await p(),
-            u = { ...i, ...a, ...o };
-        s.default.track(c.HAw.DESKTOP_PERF_HEARTBEAT, u);
+                (i = null),
+                null != t && (i = [t.allocated, t.total]),
+                { v8_heap_stats: n, blink_memory_stats: i }),
+            o = await h(),
+            d = { ...r, ...a, ...o };
+        s.default.track(_.HAw.DESKTOP_PERF_HEARTBEAT, d);
     }
 }
-let E = new h();
+let f = new m();

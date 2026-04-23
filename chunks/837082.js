@@ -1,14 +1,13 @@
-"use strict";
-var r = n(230606),
-    i = n(339626),
-    s = n(524152),
-    a = n(633895),
-    o = Object;
-e.exports = a
-    ? function (e) {
-          return "symbol" == typeof e;
+var n = e(230606),
+    o = e(339626),
+    i = e(524152),
+    u = e(633895),
+    a = Object;
+r.exports = u
+    ? function (r) {
+          return "symbol" == typeof r;
       }
-    : function (e) {
-          var t = r("Symbol");
-          return i(t) && s(t.prototype, o(e));
+    : function (r) {
+          var t = n("Symbol");
+          return o(t) && i(t.prototype, a(r));
       };

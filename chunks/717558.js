@@ -1,30 +1,30 @@
 "use strict";
-n.d(t, { A: () => l, R: () => u });
-var r = n(311907),
-    i = n(209932),
+n.d(t, { A: () => l, R: () => d });
+var i = n(17928),
+    r = n(209932),
     s = n(309010),
     a = n(485296),
     o = n(977997);
 function l(e) {
-    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: l = !0, checkIsMuted: u = !1, context: c } = e,
-        d = (0, r.bG)([o.A, s.A], () => {
+    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: l = !0, checkIsMuted: d = !1, context: _ } = e,
+        u = (0, i.bG)([o.A, s.A], () => {
             let e = s.A.getVoiceChannelId();
             return null != e ? o.A.getVoiceStateForChannel(e, t) : null;
         }),
-        _ = u && (d?.mute || d?.selfMute),
-        f = (0, r.bG)([a.A], () => a.A.isSpeaking(t, c) && !_),
-        p = (0, r.bG)([a.A], () => a.A.isSoundSharing(t) && n),
-        h = (0, r.bG)([i.A], () => i.A.isUserPlayingSounds(t) && l);
-    return f || h || p;
+        c = d && (u?.mute || u?.selfMute),
+        E = (0, i.bG)([a.A], () => a.A.isSpeaking(t, _) && !c),
+        h = (0, i.bG)([a.A], () => a.A.isSoundSharing(t) && n),
+        m = (0, i.bG)([r.A], () => r.A.isUserPlayingSounds(t) && l);
+    return E || m || h;
 }
-function u(e) {
-    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: r = !0, checkIsMuted: l = !1, context: u } = e,
-        [c, d, _, f] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.A, s.A, a.A, i.A],
-        p = d.getVoiceChannelId(),
-        h = null != p ? c.getVoiceStateForChannel(p, t) : null,
-        E = l && (h?.mute || h?.selfMute),
-        m = _.isSpeaking(t, u) && !E,
-        g = _.isSoundSharing(t) && n,
-        A = f.isUserPlayingSounds(t) && r;
-    return m || A || g;
+function d(e) {
+    let { userId: t, checkSoundSharing: n = !1, checkSoundboardSounds: i = !0, checkIsMuted: l = !1, context: d } = e,
+        [_, u, c, E] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.A, s.A, a.A, r.A],
+        h = u.getVoiceChannelId(),
+        m = null != h ? _.getVoiceStateForChannel(h, t) : null,
+        f = l && (m?.mute || m?.selfMute),
+        g = c.isSpeaking(t, d) && !f,
+        p = c.isSoundSharing(t) && n,
+        A = E.isUserPlayingSounds(t) && i;
+    return g || A || p;
 }

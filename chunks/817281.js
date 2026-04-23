@@ -1,54 +1,54 @@
 "use strict";
-n.d(t, { Ay: () => A, u_: () => g, um: () => h });
-var r = n(873298),
-    i = n(406935),
+n.d(t, { Ay: () => A, u_: () => p, um: () => m });
+var i = n(873298),
+    r = n(406935),
     s = n(462887),
-    a = n(73153),
+    a = n(228366),
     o = n(47671),
     l = n(284016),
-    u = n(973654),
-    c = n(544028),
-    d = n(253932),
-    _ = n(594061),
-    f = n(652215),
-    p = n(185928);
-function h(e) {
-    return _.wc.updateAsync(
+    d = n(973654),
+    _ = n(363195),
+    u = n(253932),
+    c = n(594061),
+    E = n(652215),
+    h = n(185928);
+function m(e) {
+    return c.wc.updateAsync(
         "guildFolders",
         (t) => {
             t.folders = e.map((e) => {
-                let t = r.ak.create({ guildIds: e.guildIds });
+                let t = i.ak.create({ guildIds: e.guildIds });
                 return (
-                    null != e.folderId && (t.id = i.j1.create({ value: String(e.folderId) })),
-                    null != e.folderColor && (t.color = i.ol.create({ value: String(e.folderColor) })),
+                    null != e.folderId && (t.id = r.j1.create({ value: String(e.folderId) })),
+                    null != e.folderColor && (t.color = r.ol.create({ value: String(e.folderColor) })),
                     null != e.folderName &&
                         "" !== e.folderName &&
-                        (t.name = i.hU.create({ value: String(e.folderName) })),
+                        (t.name = r.hU.create({ value: String(e.folderName) })),
                     t
                 );
             });
         },
-        _.Sb.FREQUENT_USER_ACTION,
+        c.Sb.FREQUENT_USER_ACTION,
     );
 }
-function E(e) {
+function f(e) {
     switch (e) {
-        case f.NJ8.DARK:
-            return r.Sx.DARK;
-        case f.NJ8.LIGHT:
-            return r.Sx.LIGHT;
-        case f.NJ8.DARKER:
-            return r.Sx.DARKER;
-        case f.NJ8.MIDNIGHT:
-            return r.Sx.MIDNIGHT;
+        case E.NJ8.DARK:
+            return i.Sx.DARK;
+        case E.NJ8.LIGHT:
+            return i.Sx.LIGHT;
+        case E.NJ8.DARKER:
+            return i.Sx.DARKER;
+        case E.NJ8.MIDNIGHT:
+            return i.Sx.MIDNIGHT;
         default:
-            return r.Sx.DARK;
+            return i.Sx.DARK;
     }
 }
-function m(e) {
+function g(e) {
     return {
         backgroundGradientPresetId:
-            null != e.backgroundGradientPresetId ? i.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
+            null != e.backgroundGradientPresetId ? r.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
         customUserThemeSettings:
             null != e.customUserThemeSettings
                 ? {
@@ -60,31 +60,31 @@ function m(e) {
                 : void 0,
     };
 }
-function g(e) {
-    let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: r, useSystemTheme: i } = e,
-        o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Sb.INFREQUENT_USER_ACTION,
-        c = "system" === r ? p.Q_.ON : p.Q_.OFF;
+function p(e) {
+    let { backgroundGradientPresetId: t, customUserThemeSettings: n, theme: i, useSystemTheme: r } = e,
+        o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Sb.INFREQUENT_USER_ACTION,
+        _ = "system" === i ? h.Q_.ON : h.Q_.OFF;
     if (
-        (a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: null != i ? i : c } }),
-        null == t && "system" !== r && (0, s.M)(r) && (0, u.NA)({ [p.Fc.DARK]: r }),
+        (a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { useSystemTheme: null != r ? r : _ } }),
+        null == t && "system" !== i && (0, s.M)(i) && (0, d.NA)({ [h.Fc.DARK]: i }),
         a.h.dispatch({
             type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
             changes: {
                 appearance: {
                     settings: {
                         clientThemeSettings: { backgroundGradientPresetId: t, customUserThemeSettings: n },
-                        theme: "system" === r ? void 0 : r,
+                        theme: "system" === i ? void 0 : i,
                     },
                 },
             },
         }),
         l.A.shouldSync("appearance"))
     )
-        return _.wc.updateAsync(
+        return c.wc.updateAsync(
             "appearance",
             (e) => {
-                (e.theme = E(r)),
-                    (e.clientThemeSettings = m({ backgroundGradientPresetId: t, customUserThemeSettings: n }));
+                (e.theme = f(i)),
+                    (e.clientThemeSettings = g({ backgroundGradientPresetId: t, customUserThemeSettings: n }));
             },
             o,
         );
@@ -105,13 +105,13 @@ let A = {
                     settings: e
                         ? {}
                         : {
-                              inlineAttachmentMedia: d.X6.getSetting(),
-                              inlineEmbedMedia: d.hD.getSetting(),
-                              renderEmbeds: d.rs.getSetting(),
-                              renderReactions: d.jW.getSetting(),
-                              animateEmoji: d.Sf.getSetting(),
-                              animateStickers: d.S0.getSetting(),
-                              gifAutoPlay: d.kt.getSetting(),
+                              inlineAttachmentMedia: u.X6.getSetting(),
+                              inlineEmbedMedia: u.hD.getSetting(),
+                              renderEmbeds: u.rs.getSetting(),
+                              renderReactions: u.jW.getSetting(),
+                              animateEmoji: u.Sf.getSetting(),
+                              animateStickers: u.S0.getSetting(),
+                              gifAutoPlay: u.kt.getSetting(),
                           },
                 },
             },
@@ -120,16 +120,16 @@ let A = {
     async setShouldSyncAppearanceSettings(e) {
         if (e)
             try {
-                await _.wc.updateAsync(
+                await c.wc.updateAsync(
                     "appearance",
                     (e) => {
-                        (e.theme = E(c.A.theme)),
-                            (e.clientThemeSettings = m({
+                        (e.theme = f(_.A.theme)),
+                            (e.clientThemeSettings = g({
                                 backgroundGradientPresetId: o.A.gradientPreset?.id,
-                                customUserThemeSettings: d.eh.getSetting()?.customUserThemeSettings,
+                                customUserThemeSettings: u.eh.getSetting()?.customUserThemeSettings,
                             }));
                     },
-                    _.Sb.INFREQUENT_USER_ACTION,
+                    c.Sb.INFREQUENT_USER_ACTION,
                 );
             } catch {
                 return;
@@ -142,9 +142,9 @@ let A = {
                     settings: e
                         ? {}
                         : {
-                              theme: c.A.theme,
+                              theme: _.A.theme,
                               clientThemeSettings: { backgroundGradientPresetId: o.A.gradientPreset?.id },
-                              developerMode: d.Q_.getSetting(),
+                              developerMode: u.Q_.getSetting(),
                           },
                 },
             },
@@ -158,12 +158,12 @@ let A = {
         a.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: t });
     },
     updateLocale: (e) =>
-        _.wc.updateAsync(
+        c.wc.updateAsync(
             "localization",
             (t) => {
-                t.locale = i.hU.create({ value: e });
+                t.locale = r.hU.create({ value: e });
             },
-            _.Sb.INFREQUENT_USER_ACTION,
+            c.Sb.INFREQUENT_USER_ACTION,
         ),
     updateTheme(e) {
         a.h.dispatch({
@@ -171,12 +171,12 @@ let A = {
             changes: { appearance: { settings: { theme: e } } },
         }),
             l.A.shouldSync("appearance") &&
-                _.wc.updateAsync(
+                c.wc.updateAsync(
                     "appearance",
                     (t) => {
-                        t.theme = E(e);
+                        t.theme = f(e);
                     },
-                    _.Sb.INFREQUENT_USER_ACTION,
+                    c.Sb.INFREQUENT_USER_ACTION,
                 );
     },
 };

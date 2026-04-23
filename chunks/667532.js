@@ -1,9 +1,10 @@
-var n = t(557939),
-    o = t(250594),
-    a = t(503199),
-    i = t(496538),
-    s = t(762503),
-    u = t(732376);
+"use strict";
+var n = r(557939),
+    a = r(250594),
+    s = r(503199),
+    i = r(496538),
+    o = r(762503),
+    l = r(732376);
 n(
     {
         target: "Array",
@@ -14,25 +15,25 @@ n(
             !(function () {
                 try {
                     Object.defineProperty([], "length", { writable: !1 }).unshift();
-                } catch (r) {
-                    return r instanceof TypeError;
+                } catch (e) {
+                    return e instanceof TypeError;
                 }
             })(),
     },
     {
-        unshift: function (r) {
-            var e = o(this),
-                t = a(e),
+        unshift: function (e) {
+            var t = a(this),
+                r = s(t),
                 n = arguments.length;
             if (n) {
-                u(t + n);
-                for (var l = t; l--; ) {
-                    var d = l + n;
-                    l in e ? (e[d] = e[l]) : s(e, d);
+                l(r + n);
+                for (var u = r; u--; ) {
+                    var c = u + n;
+                    u in t ? (t[c] = t[u]) : o(t, c);
                 }
-                for (var c = 0; c < n; c++) e[c] = arguments[c];
+                for (var d = 0; d < n; d++) t[d] = arguments[d];
             }
-            return i(e, t + n);
+            return i(t, r + n);
         },
     },
 );

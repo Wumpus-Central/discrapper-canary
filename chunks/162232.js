@@ -1,44 +1,44 @@
-n.d(t, { A: () => c });
-var i = n(627968);
+n.d(t, { A: () => d });
+var l = n(627968);
 n(64700);
-var l = n(97808),
-    s = n(778712),
-    a = n(854627),
-    r = n(837921),
+var a = n(97808),
+    i = n(778712),
+    r = n(854627),
+    s = n(19575),
     o = n(985018);
-let d = r.Ay.getEnableHardwareAcceleration() ? l.Js : l.eu,
-    c = (e) => {
+let c = s.Ay.getEnableHardwareAcceleration() ? a.Js : a.eu,
+    d = (e) => {
         let {
                 user: t,
                 guildId: n,
-                avatarDecorationOverride: l,
-                status: r,
-                avatarSize: c = s._3.SIZE_120,
+                avatarDecorationOverride: a,
+                status: s,
+                avatarSize: d = i._3.SIZE_120,
                 "aria-hidden": u = !1,
-                className: h,
-                animateOnHover: A = !1,
-                questPreviewRewardAssetUrl: _ = null,
+                className: m,
+                animateOnHover: h = !1,
+                questPreviewRewardAssetUrl: f = null,
             } = e,
             {
-                avatarDecorationSrc: m,
+                avatarDecorationSrc: _,
                 avatarSrc: g,
                 eventHandlers: p,
-            } = (0, a.A)({
+            } = (0, r.A)({
                 userId: t.id,
                 guildId: n,
-                size: c,
+                size: d,
                 showPending: !0,
-                avatarDecorationOverride: l,
-                animateOnHover: A,
+                avatarDecorationOverride: a,
+                animateOnHover: h,
             });
-        return (0, i.jsx)(d, {
-            avatarDecoration: m ?? _,
+        return (0, l.jsx)(c, {
+            avatarDecoration: _ ?? f,
             src: g,
-            size: c,
-            status: r,
+            size: d,
+            status: s,
             "aria-label": u ? void 0 : o.intl.string(o.t.lqaIxI),
             "aria-hidden": u,
-            className: h,
+            className: m,
             ...p,
         });
     };

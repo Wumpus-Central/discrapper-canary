@@ -1,38 +1,38 @@
 "use strict";
 n.r(t),
     n.d(t, {
-        getOrParseBioAST: () => m,
-        parseBioReact: () => h,
-        parseBioReactWithCachedAST: () => g,
+        getOrParseBioAST: () => g,
+        parseBioReact: () => m,
+        parseBioReactWithCachedAST: () => p,
         parseBioReactWithoutScrolling: () => A,
     });
-var r = n(735438),
-    i = n.n(r),
+var i = n(735438),
+    r = n.n(i),
     s = n(635377),
     a = n.n(s),
     o = n(791332),
     l = n.n(o),
-    u = n(436857),
-    c = n(999443),
-    d = n(542664);
+    d = n(436857),
+    _ = n(365347),
+    u = n(29814);
 n(46054);
-var _ = n(551965);
-let f = (0, _.A)([d.A.PROFILE_BIO_RULES, (0, c.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
-    p = new (a())({ max: 2e3 }),
-    h = u.aV(f),
-    E;
-function m(e) {
-    let t = p.get(e);
-    return null != t || ((t = E(e, !0)), p.set(e, t)), t;
-}
+var c = n(551965);
+let E = (0, c.A)([u.A.PROFILE_BIO_RULES, (0, _.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
+    h = new (a())({ max: 2e3 }),
+    m = d.aV(E),
+    f;
 function g(e) {
-    if (0 === e.trim().length) return null;
-    let t = m(e);
-    return l().reactFor(l().ruleOutput(f, "react"))(t);
+    let t = h.get(e);
+    return null != t || ((t = f(e, !0)), h.set(e, t)), t;
 }
-let A = u.aV(
-    (0, _.A)([
-        i().omit(f, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
+function p(e) {
+    if (0 === e.trim().length) return null;
+    let t = g(e);
+    return l().reactFor(l().ruleOutput(E, "react"))(t);
+}
+let A = d.aV(
+    (0, c.A)([
+        r().omit(E, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
         { emoji: { react: () => null } },
     ]),
 );

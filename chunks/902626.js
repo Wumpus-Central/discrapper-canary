@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     wx: "header__7c901",
     VA: "subtitle__7c901",

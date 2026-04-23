@@ -4,7 +4,7 @@ var i = n(627968),
     l = n(284009),
     r = n.n(l),
     s = n(189213),
-    d = n(311907),
+    d = n(17928),
     o = n(192308),
     u = n(834730),
     c = n(876696),
@@ -19,7 +19,7 @@ let k = function (t) {
         x = a.useCallback(() => {
             e?.(),
                 (0, o.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([n.e("89129"), n.e("10692")]).then(n.bind(n, 354096));
+                    let { default: t } = await Promise.all([n.e("76660"), n.e("10692")]).then(n.bind(n, 121343));
                     return (e) => (0, i.jsx)(t, { ...e });
                 });
         }, [e]),

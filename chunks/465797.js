@@ -1,57 +1,57 @@
 "use strict";
-let r, i, s;
-n.d(t, { A: () => E });
-var a = n(311907),
-    o = n(73153),
+let i, r, s;
+n.d(t, { A: () => f });
+var a = n(17928),
+    o = n(228366),
     l = n(54827),
-    u = n(15285),
-    c = n(189081),
-    d = n(674378),
-    _ = n(723702),
-    f = n(986120),
-    p = n(652215);
-class h extends a.Ay.Store {
+    d = n(328153),
+    _ = n(189081),
+    u = n(674378),
+    c = n(723702),
+    E = n(986120),
+    h = n(652215);
+class m extends a.Ay.Store {
     static displayName = "CloudSyncStore";
     initialize() {
-        this.waitFor(c.A, u.Ay), _.isPlatformEmbedded && f.T(), (r = {}), (i = new Set()), (s = []);
+        this.waitFor(_.A, d.Ay), c.isPlatformEmbedded && E.T(), (i = {}), (r = new Set()), (s = []);
     }
     getState(e, t) {
-        return r[(0, d.gW)(e, t)];
+        return i[(0, u.gW)(e, t)];
     }
     isSyncing(e, t) {
-        let n = (0, d.gW)(e, t);
-        return i.has(n);
+        let n = (0, u.gW)(e, t);
+        return r.has(n);
     }
 }
-let E = new h(o.h, {
+let f = new m(o.h, {
     GAME_CLOUD_SYNC_START: function (e) {
         let { applicationId: t, branchId: n } = e,
-            r = (0, d.gW)(t, n);
-        i.add(r);
+            i = (0, u.gW)(t, n);
+        r.add(i);
     },
     GAME_CLOUD_SYNC_UPDATE: function (e) {
         let { state: t } = e;
-        for (let e of Object.keys(t)) r[e] = t[e];
+        for (let e of Object.keys(t)) i[e] = t[e];
     },
     GAME_CLOUD_SYNC_COMPLETE: function (e) {
         let { applicationId: t, branchId: n } = e,
-            s = (0, d.gW)(t, n);
-        return i.delete(s), (r[s] = { type: p.VX0.DONE, timestamp: Date.now() }), !0;
+            s = (0, u.gW)(t, n);
+        return r.delete(s), (i[s] = { type: h.VX0.DONE, timestamp: Date.now() }), !0;
     },
     GAME_CLOUD_SYNC_CONFLICT: function (e) {
         let { applicationId: t, branchId: n, next: s, remote: a } = e,
-            o = (0, d.gW)(t, n);
-        (r[o] = { type: p.VX0.CONFLICT, next: s, remote: a }), i.delete(o);
+            o = (0, u.gW)(t, n);
+        (i[o] = { type: h.VX0.CONFLICT, next: s, remote: a }), r.delete(o);
     },
     GAME_CLOUD_SYNC_ERROR: function (e) {
         let { applicationId: t, branchId: n } = e,
-            s = (0, d.gW)(t, n);
-        (r[s] = { type: p.VX0.ERROR }), i.delete(s);
+            s = (0, u.gW)(t, n);
+        (i[s] = { type: h.VX0.ERROR }), r.delete(s);
     },
     RUNNING_GAMES_CHANGE: function () {
-        let e = u.Ay.getRunningDiscordApplicationIds();
+        let e = d.Ay.getRunningDiscordApplicationIds();
         for (let t of s.filter((t) => !e.includes(t))) {
-            let e = c.A.getActiveLibraryApplication(t);
+            let e = _.A.getActiveLibraryApplication(t);
             null != e &&
                 o.h.wait(() => {
                     try {

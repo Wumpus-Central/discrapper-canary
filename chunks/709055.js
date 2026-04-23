@@ -1,10 +1,9 @@
-"use strict";
 n.d(t, { A: () => a });
-var r = n(723702),
-    i = n(837921),
-    s = n(87001);
+var i = n(723702),
+    r = n(19575),
+    l = n(567249);
 function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = s.A.getWindow(e);
-    null == n || n.closed || (r.isPlatformEmbedded ? i.Ay.focus(e, t) : n.focus());
+        n = l.A.getWindow(e);
+    null == n || n.closed || (i.isPlatformEmbedded ? r.Ay.focus(e, t) : n.focus());
 }

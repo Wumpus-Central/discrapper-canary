@@ -1,9 +1,0 @@
-s.d(e, { f: () => o, r: () => n });
-var r = s(690094);
-let i = "_sentrySpan";
-function n(t, e) {
-    e ? (0, r.my)(t, i, e) : delete t[i];
-}
-function o(t) {
-    return t[i];
-}

@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { p: () => a, w: () => s });
-var r,
-    i,
-    s = (((r = {})[(r.SPAM = 1)] = "SPAM"), (r[(r.IGNORED = 2)] = "IGNORED"), r),
-    a =
-        (((i = {}).GOTO_IGNORE = "GOTO_IGNORE"),
-        (i.GOTO_BLOCK = "GOTO_BLOCK"),
-        (i.EXPLORE_FEATURE_GUILD = "EXPLORE_FEATURE_GUILD"),
-        (i.DISMISS_IGNORE = "DISMISS_IGNORE"),
-        (i.DISMISS_BLOCK = "DISMISS_BLOCK"),
-        (i.CANCEL_IGNORE = "CANCEL_IGNORE"),
-        (i.CANCEL_BLOCK = "CANCEL_BLOCK"),
-        i);
+n.d(t, { p: () => s, w: () => a });
+var i,
+    r,
+    a = (((i = {})[(i.SPAM = 1)] = "SPAM"), (i[(i.IGNORED = 2)] = "IGNORED"), i),
+    s =
+        (((r = {}).GOTO_IGNORE = "GOTO_IGNORE"),
+        (r.GOTO_BLOCK = "GOTO_BLOCK"),
+        (r.EXPLORE_FEATURE_GUILD = "EXPLORE_FEATURE_GUILD"),
+        (r.DISMISS_IGNORE = "DISMISS_IGNORE"),
+        (r.DISMISS_BLOCK = "DISMISS_BLOCK"),
+        (r.CANCEL_IGNORE = "CANCEL_IGNORE"),
+        (r.CANCEL_BLOCK = "CANCEL_BLOCK"),
+        r);

@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { P: () => u });
-var r = n(417597),
-    i = n(554146),
-    s = n(826673),
-    a = n(440293),
-    o = n(576705),
+n.d(t, { P: () => o });
+var i = n(702841),
+    r = n(554146),
+    a = n(826673),
+    s = n(440293),
+    _ = n(576705),
     l = n(652215);
-function u(e) {
-    let t = (0, s.JZ)(i.M.SERVER_SHOP_PHANTOM_PREVIEW),
-        n = (0, r.bG)([o.A], () => null != e && o.A.can(l.xBc.ADMINISTRATOR, e)),
-        u = e?.features.has(l.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) ?? !1,
-        c = (0, a.w)(e?.id),
+function o(e) {
+    let t = (0, a.JZ)(r.M.SERVER_SHOP_PHANTOM_PREVIEW),
+        n = (0, i.bG)([_.A], () => null != e && _.A.can(l.xBc.ADMINISTRATOR, e)),
+        o = e?.features.has(l.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) ?? !1,
+        E = (0, s.w)(e?.id),
         d = [
             l.GuildFeatures.CREATOR_MONETIZABLE,
             l.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL,
             l.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED,
         ].some((t) => e?.features.has(t));
-    return null != e && n && !u && d && c && !t;
+    return null != e && n && !o && d && E && !t;
 }

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     M0: "bar_c38106",
     bN: "systemBar_c38106",

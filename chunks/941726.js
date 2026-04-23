@@ -1,138 +1,138 @@
-"use strict";
-n.d(t, { Ay: () => y, T2: () => N, r$: () => T });
-var r = n(627968),
-    i = n(64700),
-    s = n(681154),
-    a = n(311907),
-    o = n(975460),
+n.d(t, { Ay: () => p, T2: () => m, r$: () => f });
+var i = n(627968),
+    r = n(64700),
+    a = n(681154),
+    s = n(17928),
+    _ = n(975460),
     l = n(587895),
-    u = n(429913),
-    c = n(201718),
+    o = n(429913),
+    E = n(201718),
     d = n(339580),
-    _ = n(207803),
-    f = n(633075),
-    p = n(622543),
-    h = n(576622),
-    E = n(403362),
-    m = n(369374),
-    g = n(850046),
-    A = n(385771);
-let I = i.createContext({ markAsVisible: () => {}, useInjectEntriesWithPreviewData: (e) => e });
-function T(e) {
-    let { enabled: t } = m.A.useConfig({ location: "ContentInventoryApplicationWidgetPreviewDataProvider" });
-    return t ? e.children : (0, r.jsx)(S, { children: e.children });
+    c = n(207803),
+    u = n(633075),
+    I = n(841595),
+    A = n(576622),
+    T = n(403362),
+    S = n(369374),
+    N = n(850046),
+    O = n(385771);
+let R = r.createContext({ markAsVisible: () => {}, useInjectEntriesWithPreviewData: (e) => e });
+function f(e) {
+    let { enabled: t } = S.A.useConfig({ location: "ContentInventoryApplicationWidgetPreviewDataProvider" });
+    return t ? e.children : (0, i.jsx)(C, { children: e.children });
 }
-function S(e) {
-    let [t, n] = i.useState(new Set()),
-        m = i.useCallback((e) => {
+function C(e) {
+    let [t, n] = r.useState(new Set()),
+        S = r.useCallback((e) => {
             n((t) => (t.has(e) ? t : new Set(t).add(e)));
         }, []);
-    return (0, r.jsx)(I.Provider, {
+    return (0, i.jsx)(R.Provider, {
         value: {
-            markAsVisible: m,
+            markAsVisible: S,
             useInjectEntriesWithPreviewData: (e) =>
                 (function (e, t) {
-                    let n = (0, A.A)(),
-                        { data: r, isLoading: m } = (0, _.FY)(),
-                        I = i.useMemo(() => new Set(r?.map((e) => e.applicationId) ?? []), [r]),
-                        T = i.useMemo(
+                    let n = (0, O.A)(),
+                        { data: i, isLoading: S } = (0, c.FY)(),
+                        R = r.useMemo(() => new Set(i?.map((e) => e.applicationId) ?? []), [i]),
+                        f = r.useMemo(
                             () =>
                                 e
-                                    ?.filter((e) => e.content_type === s.ContentInventoryEntryType.PLAYED_GAME)
+                                    ?.filter((e) => e.content_type === a.ContentInventoryEntryType.PLAYED_GAME)
                                     .filter((e) => t.has(e.id)) ?? [],
                             [e, t],
                         ),
-                        S = i.useMemo(() => [...new Set(T.map((e) => e.extra.application_id))], [T]),
-                        y = (0, a.bG)(
+                        C = r.useMemo(() => [...new Set(f.map((e) => e.extra.application_id))], [f]),
+                        p = (0, s.bG)(
                             [l.A],
                             () =>
-                                S.length > 0 &&
-                                S.some(
+                                C.length > 0 &&
+                                C.some(
                                     (e) =>
                                         l.A.isFetchingApplication(e) ||
                                         (null == l.A.getApplication(e) && !l.A.didFetchingApplicationFail(e)),
                                 ),
                         ),
-                        N = (0, u.A)(S),
-                        v = i.useMemo(
+                        m = (0, o.A)(C),
+                        L = r.useMemo(
                             () =>
                                 Object.fromEntries(
-                                    N.filter(E.Vq)
-                                        .map((e) => [e.id, (0, o.t)(e)])
-                                        .filter(E.QE)
+                                    m
+                                        .filter(T.Vq)
+                                        .map((e) => [e.id, (0, _.t)(e)])
+                                        .filter(T.QE)
                                         .filter((e) => {
                                             let [t, n] = e;
-                                            return I.has(n.id);
+                                            return R.has(n.id);
                                         }),
                                 ),
-                            [I, N],
+                            [R, m],
                         ),
-                        C = i.useMemo(
-                            () => [...new Set(T.filter((e) => e.extra.application_id in v).map((e) => e.author_id))],
-                            [T, v],
+                        D = r.useMemo(
+                            () => [...new Set(f.filter((e) => e.extra.application_id in L).map((e) => e.author_id))],
+                            [f, L],
                         ),
-                        O = (0, a.cf)([d.A], () =>
-                            Object.fromEntries(C.map((e) => [e, d.A.getUserIdentities(e)]).filter(E.QE)),
+                        h = (0, s.cf)([d.A], () =>
+                            Object.fromEntries(D.map((e) => [e, d.A.getUserIdentities(e)]).filter(T.QE)),
                         ),
-                        R = (0, a.yK)([d.A], () => C.filter((e) => d.A.getFetchState(e) === d.e.NOT_FETCHED)),
-                        b = (0, a.bG)([d.A], () => C.some((e) => d.A.isFetchingUser(e)));
-                    i.useEffect(() => {
-                        if (R.length > 0) for (let e of R) c.A.fetchUserApplicationIdentitiesWithProfiles(e);
-                    }, [R]);
-                    let D = (0, a.cf)([p.A], () =>
-                            Object.fromEntries(C.map((e) => [e, p.A.getUserProfile(e) ?? null]).filter(E.QE)),
+                        g = (0, s.yK)([d.A], () => D.filter((e) => d.A.getFetchState(e) === d.e.NOT_FETCHED)),
+                        b = (0, s.bG)([d.A], () => D.some((e) => d.A.isFetchingUser(e)));
+                    r.useEffect(() => {
+                        if (g.length > 0) for (let e of g) E.A.fetchUserApplicationIdentitiesWithProfiles(e);
+                    }, [g]);
+                    let U = (0, s.cf)([I.A], () =>
+                            Object.fromEntries(D.map((e) => [e, I.A.getUserProfile(e) ?? null]).filter(T.QE)),
                         ),
-                        L = (0, a.yK)([p.A], () =>
-                            C.filter((e) => null == p.A.getUserProfile(e) && !p.A.isFetchingProfile(e)),
+                        P = (0, s.yK)([I.A], () =>
+                            D.filter((e) => null == I.A.getUserProfile(e) && !I.A.isFetchingProfile(e)),
                         ),
-                        w = (0, a.bG)([p.A], () => C.some((e) => p.A.isFetchingProfile(e)));
-                    i.useEffect(() => {
-                        if (L.length > 0) for (let e of L) (0, h.A)(e);
-                    }, [L]);
-                    let M = i.useMemo(
-                            () => (null != r ? Object.fromEntries(r.map((e) => [e.applicationId, e])) : null),
-                            [r],
+                        M = (0, s.bG)([I.A], () => D.some((e) => I.A.isFetchingProfile(e)));
+                    r.useEffect(() => {
+                        if (P.length > 0) for (let e of P) (0, A.A)(e);
+                    }, [P]);
+                    let y = r.useMemo(
+                            () => (null != i ? Object.fromEntries(i.map((e) => [e.applicationId, e])) : null),
+                            [i],
                         ),
-                        P = m || y || R.length > 0 || b || L.length > 0 || w,
-                        x = i.useMemo(() => {
-                            if (!P && void 0 !== e)
+                        G = S || p || g.length > 0 || b || P.length > 0 || M,
+                        v = r.useMemo(() => {
+                            if (!G && void 0 !== e)
                                 return e.map((e) => {
-                                    if (e.content_type !== s.ContentInventoryEntryType.PLAYED_GAME || null == M)
+                                    if (e.content_type !== a.ContentInventoryEntryType.PLAYED_GAME || null == y)
                                         return e;
-                                    let t = e.extra.application_id in v ? v[e.extra.application_id] : null;
+                                    let t = e.extra.application_id in L ? L[e.extra.application_id] : null;
                                     if (null == t) return e;
-                                    let r = t.id in M ? M[t.id] : null;
-                                    if (null == r) return e;
-                                    let i =
-                                        e.author_id in O
-                                            ? O[e.author_id]?.find((e) => e.application_id === t.id)
+                                    let i = t.id in y ? y[t.id] : null;
+                                    if (null == i) return e;
+                                    let r =
+                                        e.author_id in h
+                                            ? h[e.author_id]?.find((e) => e.application_id === t.id)
                                             : null;
-                                    if (null == i || null == i.profile) return e;
-                                    let a = (0, g.M)(r, t, i.profile, n);
-                                    if (null == a) return e;
-                                    let o =
-                                        D[e.author_id]?.widgets?.some(
-                                            (e) => e instanceof f.R && e.applicationId === t.id,
+                                    if (null == r || null == r.profile) return e;
+                                    let s = (0, N.M)(i, t, r.profile, n);
+                                    if (null == s) return e;
+                                    let _ =
+                                        U[e.author_id]?.widgets?.some(
+                                            (e) => e instanceof u.R && e.applicationId === t.id,
                                         ) ?? !1;
-                                    return { ...e, applicationWidgetPreview: { previewData: a, hasWidget: o } };
+                                    return { ...e, applicationWidgetPreview: { previewData: s, hasWidget: _ } };
                                 });
-                        }, [P, e, v, M, O, D, n]),
-                        [k, U] = i.useState(x);
+                        }, [G, e, L, y, h, U, n]),
+                        [B, w] = r.useState(v);
                     return (
-                        i.useEffect(() => {
-                            P || U(x);
-                        }, [P, x, k]),
-                        k
+                        r.useEffect(() => {
+                            G || w(v);
+                        }, [G, v, B]),
+                        B
                     );
                 })(e, t),
         },
         children: e.children,
     });
 }
-function y(e) {
-    return i.useContext(I).useInjectEntriesWithPreviewData(e);
+function p(e) {
+    return r.useContext(R).useInjectEntriesWithPreviewData(e);
 }
-function N(e) {
-    let { markAsVisible: t } = i.useContext(I);
-    i.useEffect(() => t(e), [t, e]);
+function m(e) {
+    let { markAsVisible: t } = r.useContext(R);
+    r.useEffect(() => t(e), [t, e]);
 }

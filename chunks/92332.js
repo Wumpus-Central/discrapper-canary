@@ -1,0 +1,23 @@
+"use strict";
+n.d(t, {
+    E1: () => d,
+    JD: () => a,
+    Le: () => u,
+    Sn: () => l,
+    fs: () => s,
+    i_: () => r,
+    jG: () => p,
+    sy: () => i,
+    uT: () => o,
+    xc: () => c,
+});
+let r = "sentry.source",
+    i = "sentry.sample_rate",
+    o = "sentry.op",
+    a = "sentry.origin",
+    s = "sentry.idle_span_finish_reason",
+    l = "sentry.measurement_unit",
+    c = "sentry.measurement_value",
+    u = "sentry.custom_span_name",
+    d = "sentry.profile_id",
+    p = "sentry.exclusive_time";

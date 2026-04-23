@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Kk: "icon__99ff4",
     Ow: "voiceIcon__99ff4",

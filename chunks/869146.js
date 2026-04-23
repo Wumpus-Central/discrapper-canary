@@ -1,3 +1,2 @@
-"use strict";
-n.d(t, { A: () => r.A });
-var r = n(87001);
+n.d(t, { A: () => i.A });
+var i = n(567249);

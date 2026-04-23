@@ -1,26 +1,26 @@
 "use strict";
-var r = n(110259),
-    i = n(167789),
-    s = n(73153),
+var i = n(110259),
+    r = n(167789),
+    s = n(228366),
     a = n(861638),
     o = n(954571),
-    l = n(961350),
-    u = n(652215);
-(0, r.analyticsTrackingStoreMaker)({
+    l = n(495544),
+    d = n(652215);
+(0, i.analyticsTrackingStoreMaker)({
     dispatcher: s.h,
     actionHandler: {
-        CONNECTION_OPEN: (e) => r.AnalyticsActionHandlers.handleConnectionOpen(e),
-        OVERLAY_INITIALIZE: (e) => r.AnalyticsActionHandlers.handleConnectionOpen(e),
-        CURRENT_USER_UPDATE: (e) => r.AnalyticsActionHandlers.handleConnectionOpen(e),
-        CONNECTION_CLOSED: () => r.AnalyticsActionHandlers.handleConnectionClosed(),
-        FINGERPRINT: () => r.AnalyticsActionHandlers.handleFingerprint(),
-        TRACK: (e) => r.AnalyticsActionHandlers.handleTrack(e),
-        SET_ANALYTICS_TOKEN: (e) => r.AnalyticsActionHandlers.handleSetAnalyticsToken(e),
+        CONNECTION_OPEN: (e) => i.AnalyticsActionHandlers.handleConnectionOpen(e),
+        OVERLAY_INITIALIZE: (e) => i.AnalyticsActionHandlers.handleConnectionOpen(e),
+        CURRENT_USER_UPDATE: (e) => i.AnalyticsActionHandlers.handleConnectionOpen(e),
+        CONNECTION_CLOSED: () => i.AnalyticsActionHandlers.handleConnectionClosed(),
+        FINGERPRINT: () => i.AnalyticsActionHandlers.handleFingerprint(),
+        TRACK: (e) => i.AnalyticsActionHandlers.handleTrack(e),
+        SET_ANALYTICS_TOKEN: (e) => i.AnalyticsActionHandlers.handleSetAnalyticsToken(e),
     },
-    TRACKING_URL: u.Rsh.TRACK,
+    TRACKING_URL: d.Rsh.TRACK,
     waitFor: [l.default],
     getFingerprint: l.default.getFingerprint,
     getSessionId: () => (0, a.Ht)().then((e) => ({ sessionId: e?.uuid })),
     getLaunchSignature: () => o.launchSignature,
-    scheduleWhenIdle: i.O,
+    scheduleWhenIdle: r.O,
 });

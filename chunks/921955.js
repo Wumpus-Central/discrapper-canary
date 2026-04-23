@@ -1,9 +1,9 @@
 let n;
-l.d(t, { A: () => D }), l(321073);
-var r = l(311907),
-    a = l(73153),
+l.d(t, { A: () => N }), l(321073);
+var r = l(17928),
+    a = l(228366),
     s = l(308368),
-    i = l(629357),
+    i = l(115718),
     u = l(47167),
     c = l(734057),
     o = l(71393),
@@ -11,7 +11,7 @@ var r = l(311907),
     h = l(290863),
     x = l(994500),
     f = l(287809),
-    y = l(645959),
+    y = l(567761),
     p = l(652215);
 let g = [i.rD.TEXT_CHANNEL, i.rD.GROUP_DM, i.rD.USER],
     A = null,
@@ -19,7 +19,7 @@ let g = [i.rD.TEXT_CHANNEL, i.rD.GROUP_DM, i.rD.USER],
     _ = [],
     I = [];
 function v(e) {
-    (_ = [..._, e]), (I = I.map((e) => ({ ...e, sent: _.includes(e.data.record.id) }))), w.emitChange();
+    (_ = [..._, e]), (I = I.map((e) => ({ ...e, sent: _.includes(e.data.record.id) }))), D.emitChange();
 }
 function E() {
     (A = null), null != n && (n.destroy(), (n = null)), null != m && m();
@@ -43,7 +43,7 @@ class C extends r.Ay.Store {
         return I;
     }
 }
-let w = new C(a.h, {
+let D = new C(a.h, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
             (A = e.activity),
                 (m = e.resolve),
@@ -101,7 +101,7 @@ let w = new C(a.h, {
                                     }
                                 })
                                 .filter((e) => null != e)),
-                                w.emitChange();
+                                D.emitChange();
                         },
                         g,
                         100,
@@ -139,4 +139,4 @@ let w = new C(a.h, {
         LOCAL_ACTIVITY_UPDATE: M,
         RPC_APP_DISCONNECTED: M,
     }),
-    D = 21552 == l.j ? w : null;
+    N = 21552 == l.j ? D : null;

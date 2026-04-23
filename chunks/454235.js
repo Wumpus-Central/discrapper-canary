@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { Av: () => p, Os: () => _, PS: () => d, TT: () => o, d1: () => c, kv: () => u, nL: () => h, rK: () => f });
-var r = n(77729),
-    i = n(9858),
-    s = n(723702);
-function a() {
-    return r.A?.spellCheck != null;
+n.d(t, { Av: () => I, Os: () => c, PS: () => d, TT: () => _, d1: () => E, kv: () => o, nL: () => A, rK: () => u });
+var i = n(77729),
+    r = n(710285),
+    a = n(723702);
+function s() {
+    return i.A?.spellCheck != null;
 }
-function o() {
-    return (0, s.isDesktop)() && a();
+function _() {
+    return (0, a.isDesktop)() && s();
 }
-let l = o() ? (0, i.J)() : null;
-async function u(e) {
+let l = _() ? (0, r.J)() : null;
+async function o(e) {
     let t = await l;
     null != t && (t.enabled = e);
 }
-async function c(e) {
+async function E(e) {
     let t = await l;
     null != t && t.setLearnedWords(e);
 }
@@ -23,20 +22,20 @@ async function d(e) {
         n = await l;
     return null != n && n.isMisspelled(e, t);
 }
-async function _(e) {
+async function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
-        r = await l;
-    return null == r ? [] : r.getCorrectionsForMisspelling(e, t).slice(0, n);
+        i = await l;
+    return null == i ? [] : i.getCorrectionsForMisspelling(e, t).slice(0, n);
 }
-async function f(e) {
+async function u(e) {
     let t = await l;
     null != t && t.replaceMisspelling(e);
 }
-async function p(e) {
+async function I(e) {
     let t = await l;
     null != t && t.setAppLocale(e);
 }
-function h(e) {
-    return a() ? (r.A.spellCheck.on("spellcheck-result", e) ?? (() => {})) : () => {};
+function A(e) {
+    return s() ? (i.A.spellCheck.on("spellcheck-result", e) ?? (() => {})) : () => {};
 }

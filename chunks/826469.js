@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => i }), n(938796);
+n.d(t, { A: () => a }), n(938796);
 var r = n(202613);
-class i {
+class a {
     source;
     enabled;
     allowedCurrencies;
@@ -46,7 +45,7 @@ class i {
             username: e.username,
             bank: e.bank,
         };
-        return new i(r.Ay.createFromServer(t), e.enabled, e.allowed_currencies ?? [], {
+        return new a(r.Ay.createFromServer(t), e.enabled, e.allowed_currencies ?? [], {
             country: e.relocation_info?.country ?? null,
             currencyCode: e.relocation_info?.currency ?? null,
             willForfeitGiftCardBalance: e.relocation_info?.will_forfeit_gift_card_balance ?? !1,

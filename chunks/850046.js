@@ -1,70 +1,69 @@
-"use strict";
-n.d(t, { A: () => h, M: () => p });
-var r = n(64700),
-    i = n(205338),
-    s = n(87075),
-    a = n(429913),
-    o = n(201718),
+n.d(t, { A: () => A, M: () => I });
+var i = n(64700),
+    r = n(205338),
+    a = n(87075),
+    s = n(429913),
+    _ = n(201718),
     l = n(207803),
-    u = n(403362),
-    c = n(789069),
+    o = n(403362),
+    E = n(789069),
     d = n(385771);
-let _ = {
-    [i.A.MARVEL_RIVALS]: (e) => {
+let c = {
+    [r.A.MARVEL_RIVALS]: (e) => {
         let t = e.data?.primary?.season,
             n = e.data?.primary?.rank_name,
-            r = (0, c.a)(e.data?.primary?.rank_image),
-            i = (0, c.a)(e.data?.primary?.featured_played_character_image);
-        return null == t || null == n || null == i
+            i = (0, E.a)(e.data?.primary?.rank_image),
+            r = (0, E.a)(e.data?.primary?.featured_played_character_image);
+        return null == t || null == n || null == r
             ? null
-            : { previewText: `${t}: ${n}`, previewTextShort: n, previewIcon: r, previewImage: i };
+            : { previewText: `${t}: ${n}`, previewTextShort: n, previewIcon: i, previewImage: r };
     },
-    [i.A.WUTHERING_WAVES]: (e, t) => {
+    [r.A.WUTHERING_WAVES]: (e, t) => {
         var n;
-        let r,
-            i = e.username,
-            a =
-                ((n = s.f.NUMBER),
-                null == (r = e.data?.dynamic?.find((e) => "union_level" === e.name)) || r.type !== n ? null : r.value),
-            o = (0, c.a)(e.data?.primary?.featured_played_character_image);
-        return null == i || null == a || null == o
+        let i,
+            r = e.username,
+            s =
+                ((n = a.f.NUMBER),
+                null == (i = e.data?.dynamic?.find((e) => "union_level" === e.name)) || i.type !== n ? null : i.value),
+            _ = (0, E.a)(e.data?.primary?.featured_played_character_image);
+        return null == r || null == s || null == _
             ? null
             : {
-                  previewText: `${i}: Level ${t.format(a)}`,
-                  previewTextShort: `Level ${t.format(a)}`,
+                  previewText: `${r}: Level ${t.format(s)}`,
+                  previewTextShort: `Level ${t.format(s)}`,
                   previewIcon: null,
-                  previewImage: o,
+                  previewImage: _,
               };
     },
 };
-function f(e, t, n, r) {
-    let i = t.getIconURL(16);
-    if (null == i) return null;
-    let s = _[e.widgetTemplateId](n, r);
-    return null == s ? null : { application: { id: t.id, name: t.name, icon: i }, ...s };
+function u(e, t, n, i) {
+    let r = t.getIconURL(16);
+    if (null == r) return null;
+    let a = c[e.widgetTemplateId](n, i);
+    return null == a ? null : { application: { id: t.id, name: t.name, icon: r }, ...a };
 }
-function p(e, t, n, r) {
-    return f(e, t, n, r);
+function I(e, t, n, i) {
+    return u(e, t, n, i);
 }
-function h(e, t) {
-    let n = (0, a.A)(t),
-        { data: i } = (0, l.FY)(),
-        { data: s } = (0, o.P)(e),
-        c = (0, d.A)();
-    return r.useMemo(
+function A(e, t) {
+    let n = (0, s.A)(t),
+        { data: r } = (0, l.FY)(),
+        { data: a } = (0, _.P)(e),
+        E = (0, d.A)();
+    return i.useMemo(
         () =>
             Object.fromEntries(
                 t
                     .map((e) => {
-                        let t = i?.find((t) => t.applicationId === e),
-                            r = n.find((t) => t?.id === e),
-                            a = s?.find((t) => t.application_id === e)?.profile;
-                        if (null == t || null == r || null == a) return null;
-                        let o = f(t, r, a, c);
-                        return null == o ? null : [e, o];
+                        let t = r?.find((t) => t.applicationId === e),
+                            i = n.find((t) => t?.id === e),
+                            s = a?.find((t) => t.application_id === e)?.profile;
+                        if (null == t || null == i || null == s) return null;
+                        let _ = u(t, i, s, E);
+                        return null == _ ? null : [e, _];
                     })
-                    .filter(u.Vq),
+                    .filter(o.Vq),
             ),
-        [n, i, s, c, t],
+        [n, r, a, E, t],
     );
 }

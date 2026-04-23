@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { FO: () => s, fL: () => r, u5: () => i }), n(724214);
+n.d(t, { FO: () => a, fL: () => r, u5: () => i }), n(724214);
 try {
     null == Date.now && (Date.now = () => new Date().valueOf());
 } catch (e) {}
@@ -23,4 +22,4 @@ if (null == n.g.performance.timeOrigin)
     try {
         n.g.performance.timeOrigin = i;
     } catch (e) {}
-let s = n.g.performance;
+let a = n.g.performance;

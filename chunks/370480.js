@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { An: () => T, N8: () => A, RP: () => g, _g: () => I, iC: () => h, jO: () => E, vA: () => m }),
+n.d(t, { An: () => f, N8: () => O, RP: () => N, _g: () => R, iC: () => A, jO: () => T, vA: () => S }),
     n(323874),
     n(14289),
     n(35956);
-var r,
-    i = n(284009),
-    s = n.n(i),
-    a = n(735438),
-    o = n.n(a);
-n(311907), n(554146);
+var i,
+    r = n(284009),
+    a = n.n(r),
+    s = n(735438),
+    _ = n.n(s);
+n(17928), n(554146);
 var l = n(920268);
 n(826673);
-var u = n(317525),
-    c = n(71393);
+var o = n(317525),
+    E = n(71393);
 n(576705);
 var d = n(998218),
-    _ = n(783419),
-    f = n(652215),
-    p = n(985018);
-let h = [
+    c = n(783419),
+    u = n(652215),
+    I = n(985018);
+let A = [
     "426537812993638400",
     "1042836142560645130",
     "296023718839451649",
@@ -26,195 +25,195 @@ let h = [
     "1031611223235637258",
     "512333785338216465",
 ];
-var E = (((r = {})[(r.AND = 0)] = "AND"), (r[(r.OR = 1)] = "OR"), r);
-function m(e) {
+var T = (((i = {})[(i.AND = 0)] = "AND"), (i[(i.OR = 1)] = "OR"), i);
+function S(e) {
     let { searchParams: t } = d.A.toURLSafe(e) ?? { searchParams: new URLSearchParams() },
-        { code: n, state: r, error: i, error_description: a } = Object.fromEntries(t);
+        { code: n, state: i, error: r, error_description: s } = Object.fromEntries(t);
     return (
-        s()(!Array.isArray(n), "Received multiple query param values for code"),
-        s()(!Array.isArray(r), "Received multiple query param values for state"),
-        s()(!Array.isArray(i), "Received multiple query param values for error"),
-        s()(!Array.isArray(a), "Received multiple query param values for error_description"),
-        { code: n, state: r, error: i, errorDescription: a }
+        a()(!Array.isArray(n), "Received multiple query param values for code"),
+        a()(!Array.isArray(i), "Received multiple query param values for state"),
+        a()(!Array.isArray(r), "Received multiple query param values for error"),
+        a()(!Array.isArray(s), "Received multiple query param values for error_description"),
+        { code: n, state: i, error: r, errorDescription: s }
     );
 }
-function g(e) {
-    let { connectionType: t, connectionMetadataField: n, operator: r, operatorText: i, value: s } = e,
-        a = null,
-        o = Math.round(Number(s));
-    switch (r) {
-        case _.so.EQUAL:
-            (a = p.t.H97H4S), t === f.fg2.PAYPAL && n === _.pK.PAYPAL_VERIFIED && (a = p.t["N95b+f"]);
+function N(e) {
+    let { connectionType: t, connectionMetadataField: n, operator: i, operatorText: r, value: a } = e,
+        s = null,
+        _ = Math.round(Number(a));
+    switch (i) {
+        case c.so.EQUAL:
+            (s = I.t.H97H4S), t === u.fg2.PAYPAL && n === c.pK.PAYPAL_VERIFIED && (s = I.t["N95b+f"]);
             break;
-        case _.so.NOT_EQUAL:
-            a = p.t["D9B/q2"];
+        case c.so.NOT_EQUAL:
+            s = I.t["D9B/q2"];
             break;
-        case _.so.LESS_THAN:
-            (a = p.t["3ru8/N"]), (o = Math.max(0, o - 1));
+        case c.so.LESS_THAN:
+            (s = I.t["3ru8/N"]), (_ = Math.max(0, _ - 1));
             break;
-        case _.so.GREATER_THAN:
-            (a = p.t.wCVDHn), (o = Math.max(0, o + 1));
+        case c.so.GREATER_THAN:
+            (s = I.t.wCVDHn), (_ = Math.max(0, _ + 1));
             break;
         case void 0:
         case null:
             return null;
     }
-    if ((null != i && (a = i), null != a && null != r))
+    if ((null != r && (s = r), null != s && null != i))
         switch (t) {
-            case f.fg2.REDDIT:
+            case u.fg2.REDDIT:
                 switch (n) {
-                    case _.pK.CREATED_AT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                    case c.pK.CREATED_AT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.TPbtEu, { days: _ }),
                         });
                         break;
-                    case _.pK.REDDIT_TOTAL_KARMA:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.P2JAEc, { karma: o }),
+                    case c.pK.REDDIT_TOTAL_KARMA:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.P2JAEc, { karma: _ }),
                         });
                         break;
-                    case _.pK.REDDIT_GOLD:
-                        a = p.intl.format(a, { platformQuantityHook: () => p.intl.string(p.t["+/5TCx"]) });
+                    case c.pK.REDDIT_GOLD:
+                        s = I.intl.format(s, { platformQuantityHook: () => I.intl.string(I.t["+/5TCx"]) });
                         break;
-                    case _.pK.REDDIT_MOD:
-                        a = p.intl.format(a, { platformQuantityHook: () => p.intl.string(p.t["9rPbEs"]) });
+                    case c.pK.REDDIT_MOD:
+                        s = I.intl.format(s, { platformQuantityHook: () => I.intl.string(I.t["9rPbEs"]) });
                         break;
                     default:
                         return null;
                 }
                 break;
-            case f.fg2.STEAM:
+            case u.fg2.STEAM:
                 switch (n) {
-                    case _.pK.CREATED_AT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                    case c.pK.CREATED_AT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.TPbtEu, { days: _ }),
                         });
                         break;
-                    case _.pK.STEAM_GAME_COUNT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.H9eLoe, { count: o }),
+                    case c.pK.STEAM_GAME_COUNT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.H9eLoe, { count: _ }),
                         });
                         break;
-                    case _.pK.STEAM_ITEM_COUNT_TF2:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.MceZJ6, { count: o }),
+                    case c.pK.STEAM_ITEM_COUNT_TF2:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.MceZJ6, { count: _ }),
                         });
                         break;
-                    case _.pK.STEAM_ITEM_COUNT_DOTA2:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.dMnRar, { count: o }),
-                        });
-                        break;
-                    default:
-                        return null;
-                }
-                break;
-            case f.fg2.BLUESKY:
-                switch (n) {
-                    case _.pK.CREATED_AT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
-                        });
-                        break;
-                    case _.pK.BLUESKY_FOLLOWERS_COUNT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.xIdKU8, { count: o }),
-                        });
-                        break;
-                    case _.pK.BLUESKY_STATUSES_COUNT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t["dy3+NR"], { count: o }),
+                    case c.pK.STEAM_ITEM_COUNT_DOTA2:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.dMnRar, { count: _ }),
                         });
                         break;
                     default:
                         return null;
                 }
                 break;
-            case f.fg2.TWITTER:
+            case u.fg2.BLUESKY:
                 switch (n) {
-                    case _.pK.CREATED_AT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                    case c.pK.CREATED_AT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.TPbtEu, { days: _ }),
                         });
                         break;
-                    case _.pK.TWITTER_VERIFIED:
-                        a = p.intl.format(a, { platformQuantityHook: () => p.intl.string(p.t.xRygZL) });
-                        break;
-                    case _.pK.TWITTER_FOLLOWERS_COUNT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.bkajar, { count: o }),
+                    case c.pK.BLUESKY_FOLLOWERS_COUNT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.xIdKU8, { count: _ }),
                         });
                         break;
-                    case _.pK.TWITTER_STATUSES_COUNT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.MI7NKi, { count: o }),
+                    case c.pK.BLUESKY_STATUSES_COUNT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t["dy3+NR"], { count: _ }),
                         });
                         break;
                     default:
                         return null;
                 }
                 break;
-            case f.fg2.PAYPAL:
+            case u.fg2.TWITTER:
                 switch (n) {
-                    case _.pK.CREATED_AT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                    case c.pK.CREATED_AT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.TPbtEu, { days: _ }),
                         });
                         break;
-                    case _.pK.PAYPAL_VERIFIED:
-                        a = p.intl.format(a, { platformQuantityHook: () => p.intl.string(p.t.slSQuB) });
+                    case c.pK.TWITTER_VERIFIED:
+                        s = I.intl.format(s, { platformQuantityHook: () => I.intl.string(I.t.xRygZL) });
                         break;
-                    default:
-                        return null;
-                }
-                break;
-            case f.fg2.EBAY:
-                switch (n) {
-                    case _.pK.CREATED_AT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.TPbtEu, { days: o }),
+                    case c.pK.TWITTER_FOLLOWERS_COUNT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.bkajar, { count: _ }),
                         });
                         break;
-                    case _.pK.EBAY_TOP_RATED_SELLER:
-                        a = p.intl.format(a, { platformQuantityHook: () => p.intl.string(p.t.TEEYwa) });
-                        break;
-                    case _.pK.EBAY_POSITIVE_FEEDBACK_PERCENTAGE:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.rl9Vgy, { value: o }),
-                        });
-                        break;
-                    case _.pK.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.QP5W1R, { count: o }),
-                        });
-                        break;
-                    case _.pK.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t["6ZFYdK"], { count: o }),
+                    case c.pK.TWITTER_STATUSES_COUNT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.MI7NKi, { count: _ }),
                         });
                         break;
                     default:
                         return null;
                 }
                 break;
-            case f.fg2.TIKTOK:
+            case u.fg2.PAYPAL:
                 switch (n) {
-                    case _.pK.TIKTOK_VERIFIED:
-                        a = p.intl.format(a, { platformQuantityHook: () => p.intl.string(p.t.uv7ety) });
-                        break;
-                    case _.pK.TIKTOK_FOLLOWER_COUNT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.qIPDRy, { count: o }),
+                    case c.pK.CREATED_AT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.TPbtEu, { days: _ }),
                         });
                         break;
-                    case _.pK.TIKTOK_FOLLOWING_COUNT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t.zRta4X, { count: o }),
+                    case c.pK.PAYPAL_VERIFIED:
+                        s = I.intl.format(s, { platformQuantityHook: () => I.intl.string(I.t.slSQuB) });
+                        break;
+                    default:
+                        return null;
+                }
+                break;
+            case u.fg2.EBAY:
+                switch (n) {
+                    case c.pK.CREATED_AT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.TPbtEu, { days: _ }),
                         });
                         break;
-                    case _.pK.TIKTOK_LIKES_COUNT:
-                        a = p.intl.format(a, {
-                            platformQuantityHook: () => p.intl.formatToPlainString(p.t["ar0WW+"], { count: o }),
+                    case c.pK.EBAY_TOP_RATED_SELLER:
+                        s = I.intl.format(s, { platformQuantityHook: () => I.intl.string(I.t.TEEYwa) });
+                        break;
+                    case c.pK.EBAY_POSITIVE_FEEDBACK_PERCENTAGE:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.rl9Vgy, { value: _ }),
+                        });
+                        break;
+                    case c.pK.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.QP5W1R, { count: _ }),
+                        });
+                        break;
+                    case c.pK.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t["6ZFYdK"], { count: _ }),
+                        });
+                        break;
+                    default:
+                        return null;
+                }
+                break;
+            case u.fg2.TIKTOK:
+                switch (n) {
+                    case c.pK.TIKTOK_VERIFIED:
+                        s = I.intl.format(s, { platformQuantityHook: () => I.intl.string(I.t.uv7ety) });
+                        break;
+                    case c.pK.TIKTOK_FOLLOWER_COUNT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.qIPDRy, { count: _ }),
+                        });
+                        break;
+                    case c.pK.TIKTOK_FOLLOWING_COUNT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t.zRta4X, { count: _ }),
+                        });
+                        break;
+                    case c.pK.TIKTOK_LIKES_COUNT:
+                        s = I.intl.format(s, {
+                            platformQuantityHook: () => I.intl.formatToPlainString(I.t["ar0WW+"], { count: _ }),
                         });
                         break;
                     default:
@@ -224,21 +223,21 @@ function g(e) {
             default:
                 return null;
         }
-    return a;
+    return s;
 }
-function A(e) {
+function O(e) {
     return e.some((e) => null === e.tags.guild_connections);
 }
-function I(e) {
-    let { guildMember: t, guild: n, sortedGuildRoles: r, channel: i, onlyChannelConnectionRoles: s = !1 } = e;
-    if (null == t || (null == n && null != i && (n = c.A.getGuild(i.getGuildId())), null == n)) return null;
-    let { id: a } = n;
-    null == r && (r = u.A.getSortedRoles(a));
-    let d = r.filter((e) => null === e.tags.guild_connections && t.roles.includes(e.id)),
-        _ = o().intersection(d, (0, l.A)(i));
-    return _.length > 0 ? (_[0] ?? null) : s ? null : (d[0] ?? null);
+function R(e) {
+    let { guildMember: t, guild: n, sortedGuildRoles: i, channel: r, onlyChannelConnectionRoles: a = !1 } = e;
+    if (null == t || (null == n && null != r && (n = E.A.getGuild(r.getGuildId())), null == n)) return null;
+    let { id: s } = n;
+    null == i && (i = o.A.getSortedRoles(s));
+    let d = i.filter((e) => null === e.tags.guild_connections && t.roles.includes(e.id)),
+        c = _().intersection(d, (0, l.A)(r));
+    return c.length > 0 ? (c[0] ?? null) : a ? null : (d[0] ?? null);
 }
-function T(e, t) {
+function f(e, t) {
     if (null == e || "" === e) return null;
     let n = new Date(e);
     return !(n instanceof Date) || isNaN(n.getTime())

@@ -1,110 +1,110 @@
 "use strict";
 n.d(t, { A: () => I });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    r = n(64700),
     s = n(607399),
-    a = n(311907),
+    a = n(17928),
     o = n(442433),
     l = n(793574),
-    u = n(688810),
-    c = n(9588),
-    d = n(332173),
-    _ = n(342296),
-    f = n(734057),
-    p = n(696451),
-    h = n(994500),
-    E = n(287809),
-    m = n(562153),
-    g = n(427262);
+    d = n(688810),
+    _ = n(9588),
+    u = n(332173),
+    c = n(342296),
+    E = n(734057),
+    h = n(696451),
+    m = n(994500),
+    f = n(287809),
+    g = n(562153),
+    p = n(427262);
 function A(e) {
     let { userId: t, className: s, children: a } = e,
-        l = i.useCallback(() => {
-            (0, c.K)({ kind: "user" });
+        l = r.useCallback(() => {
+            (0, _.K)({ kind: "user" });
         }, []),
-        u = i.useCallback(
+        d = r.useCallback(
             (e) => {
                 null != t &&
                     (0, o.L3)(e, async () => {
                         let { default: e } = await n.e("60829").then(n.bind(n, 446828));
-                        return (n) => (0, r.jsx)(e, { ...n, userId: t });
+                        return (n) => (0, i.jsx)(e, { ...n, userId: t });
                     });
             },
             [t],
         );
-    return (0, r.jsx)(d.A, { className: s, onClick: l, onContextMenu: u, children: a });
+    return (0, i.jsx)(u.A, { className: s, onClick: l, onContextMenu: d, children: a });
 }
 function I(e) {
     let {
             className: t,
-            userId: c,
+            userId: _,
             channelId: I,
             parsedUserId: T,
             content: S,
-            inlinePreview: y = !1,
-            viewingChannelId: N,
+            inlinePreview: N = !1,
+            viewingChannelId: C,
         } = e,
-        v = i.useRef(null),
-        { analyticsLocations: C } = (0, u.Ay)(l.A.USER_MENTION),
-        O = (0, a.bG)([E.default], () => E.default.getUser(c)),
-        R = (0, a.bG)([f.A], () => f.A.getChannel(I)),
-        b = null != R ? R.getGuildId() : null,
-        D =
-            y || null == O || null == I || null == R
+        R = r.useRef(null),
+        { analyticsLocations: O } = (0, d.Ay)(l.A.USER_MENTION),
+        y = (0, a.bG)([f.default], () => f.default.getUser(_)),
+        v = (0, a.bG)([E.A], () => E.A.getChannel(I)),
+        D = null != v ? v.getGuildId() : null,
+        L =
+            N || null == y || null == I || null == v
                 ? void 0
                 : (e) => {
-                      null != b
+                      null != D
                           ? (0, o.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("41927"),
+                                    n.e("62731"),
                                     n.e("97262"),
                                     n.e("93103"),
-                                    n.e("92493"),
-                                    n.e("42128"),
+                                    n.e("24170"),
                                     n.e("97278"),
+                                    n.e("84442"),
                                     n.e("35313"),
-                                    n.e("74372"),
+                                    n.e("52338"),
                                     n.e("84841"),
-                                    n.e("15690"),
+                                    n.e("6058"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
-                                    (0, r.jsx)(e, { ...t, viewingChannelId: N, user: O, channel: R, guildId: b });
+                                    (0, i.jsx)(e, { ...t, viewingChannelId: C, user: y, channel: v, guildId: D });
                             })
-                          : R.isDM() &&
+                          : v.isDM() &&
                             (0, o.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("41927"),
+                                    n.e("62731"),
                                     n.e("97262"),
                                     n.e("93103"),
-                                    n.e("92493"),
+                                    n.e("24170"),
                                     n.e("53635"),
-                                    n.e("42128"),
                                     n.e("97278"),
+                                    n.e("84442"),
                                     n.e("35313"),
-                                    n.e("95834"),
+                                    n.e("43768"),
                                     n.e("99011"),
-                                    n.e("74372"),
+                                    n.e("52338"),
                                     n.e("39778"),
-                                    n.e("58369"),
+                                    n.e("26310"),
                                 ]).then(n.bind(n, 385913));
-                                return (t) => (0, r.jsx)(e, { ...t, user: O, channel: R, targetIsUser: !0 });
+                                return (t) => (0, i.jsx)(e, { ...t, user: y, channel: v, targetIsUser: !0 });
                             });
                   },
-        L = g.Ay.useName(O),
-        w = (0, a.bG)([f.A, p.Ay, h.A], () => m.Ay.getNickname(b, I, O));
-    if (null == O) return (0, r.jsx)(A, { userId: T, className: t, children: S });
-    let M = (e) => (0, r.jsx)(d.A, { ref: v, className: t, onContextMenu: D, ...e, children: `@${w ?? L}` });
-    return y
-        ? (0, r.jsx)(u.f5, { value: C, children: M() })
-        : (0, r.jsx)(u.f5, {
-              value: C,
-              children: (0, r.jsx)(_.A, {
-                  targetElementRef: v,
-                  user: O,
-                  guildId: b ?? void 0,
+        b = p.Ay.useName(y),
+        w = (0, a.bG)([E.A, h.Ay, m.A], () => g.Ay.getNickname(D, I, y));
+    if (null == y) return (0, i.jsx)(A, { userId: T, className: t, children: S });
+    let P = (e) => (0, i.jsx)(u.A, { ref: R, className: t, onContextMenu: L, ...e, children: `@${w ?? b}` });
+    return N
+        ? (0, i.jsx)(d.f5, { value: O, children: P() })
+        : (0, i.jsx)(d.f5, {
+              value: O,
+              children: (0, i.jsx)(c.A, {
+                  targetElementRef: R,
+                  user: y,
+                  guildId: D ?? void 0,
                   channelId: I,
                   position: s.Fr ? "top" : "right",
                   clickTrap: !0,
-                  children: (e) => M(e),
+                  children: (e) => P(e),
               }),
           });
 }

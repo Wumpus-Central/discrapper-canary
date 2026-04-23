@@ -1,5 +1,4 @@
-"use strict";
-function r(e, t) {
+n.d(t, { A: () => i });
+function i(e, t) {
     return `<sound:${e}:${t}>`;
 }
-n.d(t, { A: () => r });

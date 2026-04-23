@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => c, P: () => d });
-var r = n(311907),
-    i = n(562465),
-    s = n(73153),
-    a = n(728458),
+n.d(t, { A: () => _, P: () => u });
+var i = n(17928),
+    r = n(636537),
+    s = n(228366),
+    a = n(38405),
     o = n(339580),
     l = n(652215);
-let u = {
+let d = {
         async fetchUserApplicationIdentitiesWithProfiles(e, t) {
             s.h.dispatch({ type: "USER_APPLICATION_IDENTITY_FETCH_USER_START", userId: e });
             try {
-                let n = await i.Bo.get({
+                let n = await r.Bo.get({
                     url: l.Rsh.USER_APPLICATION_IDENTITIES(e),
                     query: { with_profiles: !0 },
                     rejectWithError: !0,
@@ -30,12 +30,12 @@ let u = {
             }
         },
         async updateApplicationIdentityConfig(e, t, n) {
-            await i.Bo.patch({ url: l.Rsh.SELF_APPLICATION_IDENTITY_CONFIG(e, t), body: n, rejectWithError: !0 });
+            await r.Bo.patch({ url: l.Rsh.SELF_APPLICATION_IDENTITY_CONFIG(e, t), body: n, rejectWithError: !0 });
         },
     },
-    c = u,
-    d = (0, r.UT)(o.A, {
+    _ = d,
+    u = (0, i.UT)(o.A, {
         getQueryId: l.fic.USER_APPLICATION_IDENTITIES,
         get: (e) => o.A.getUserIdentities(e),
-        load: (e) => u.fetchUserApplicationIdentitiesWithProfiles(e),
+        load: (e) => d.fetchUserApplicationIdentitiesWithProfiles(e),
     });

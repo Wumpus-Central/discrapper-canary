@@ -1,23 +1,23 @@
 "use strict";
-n.d(t, { Ay: () => c, uM: () => d });
-var r = n(562465),
-    i = n(73153),
-    s = n(895944),
+n.d(t, { Ay: () => _, uM: () => u });
+var i = n(636537),
+    r = n(228366),
+    s = n(532309),
     a = n(26508),
     o = n(673608),
     l = n(652215);
-async function u() {
-    i.h.dispatch({ type: "PROGRAM_REWARDS_FETCH" });
+async function d() {
+    r.h.dispatch({ type: "PROGRAM_REWARDS_FETCH" });
     try {
-        let e = (await r.Bo.get({ url: l.Rsh.PROGRAM_REWARDS, rejectWithError: !0 })).body.rewards ?? [];
-        i.h.dispatch({ type: "PROGRAM_REWARDS_FETCH_SUCCESS", programRewards: e });
+        let e = (await i.Bo.get({ url: l.Rsh.PROGRAM_REWARDS, rejectWithError: !0 })).body.rewards ?? [];
+        r.h.dispatch({ type: "PROGRAM_REWARDS_FETCH_SUCCESS", programRewards: e });
     } catch (e) {
-        i.h.dispatch({ type: "PROGRAM_REWARDS_FETCH_FAILURE" });
+        r.h.dispatch({ type: "PROGRAM_REWARDS_FETCH_FAILURE" });
     }
 }
-async function c() {
-    (0, o.q)() && (await u());
+async function _() {
+    (0, o.q)() && (await d());
 }
-async function d() {
-    !(0, a.g_)("ProgramRewardsActionCreators") || !(0, a.mY)() || s.A.isFetching() || (await u());
+async function u() {
+    !(0, a.g_)("ProgramRewardsActionCreators") || !(0, a.mY)() || s.A.isFetching() || (await d());
 }

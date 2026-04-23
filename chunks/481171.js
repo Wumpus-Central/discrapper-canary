@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     AB: "privateChannels_ee924e",
     ON: "searchBar_ee924e",

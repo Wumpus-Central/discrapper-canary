@@ -16,7 +16,7 @@ function s(e) {
     (0, i.pp)(t.channel_id, t.id, s),
         (0, a.openModalLazy)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([n.e("96758"), n.e("54289")]).then(n.bind(n, 911269));
+                let { ForwardModal: e } = await Promise.all([n.e("96758"), n.e("922")]).then(n.bind(n, 953832));
                 return (n) =>
                     (0, l.jsx)(e, {
                         ...n,

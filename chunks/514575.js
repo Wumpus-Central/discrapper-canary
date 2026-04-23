@@ -1,8 +1,7 @@
-"use strict";
-var r = n(339626),
-    i = n(406208),
-    s = TypeError;
-e.exports = function (e) {
-    if (r(e)) return e;
-    throw new s(i(e) + " is not a function");
+var n = e(339626),
+    o = e(406208),
+    i = TypeError;
+r.exports = function (r) {
+    if (n(r)) return r;
+    throw new i(o(r) + " is not a function");
 };

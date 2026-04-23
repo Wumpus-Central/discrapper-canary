@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper__88a53",
     MQ: "operation__88a53",

@@ -1,74 +1,73 @@
-"use strict";
-n.d(t, { Uq: () => f, Z5: () => E, _9: () => h, ack: () => d, d_: () => g, fb: () => p, hK: () => m, hS: () => _ }),
+n.d(t, { Uq: () => u, Z5: () => T, _9: () => A, ack: () => d, d_: () => N, fb: () => I, hK: () => S, hS: () => c }),
     n(321073);
-var r = n(73153),
-    i = n(863005),
-    s = n(95701),
-    a = n(734057),
-    o = n(769765),
+var i = n(228366),
+    r = n(695633),
+    a = n(95701),
+    s = n(734057),
+    _ = n(769765),
     l = n(287809),
-    u = n(661191),
-    c = n(652215);
+    o = n(935208),
+    E = n(652215);
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        s = arguments.length > 4 ? arguments[4] : void 0;
-    r.h.dispatch({
+        r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        a = arguments.length > 4 ? arguments[4] : void 0;
+    i.h.dispatch({
         type: "CHANNEL_ACK",
         channelId: e,
-        messageId: s,
+        messageId: a,
         immediate: n,
-        force: i,
-        context: c.QCW,
+        force: r,
+        context: E.QCW,
         location: t,
     });
 }
-function _(e, t) {
+function c(e, t) {
     e.isCategory()
         ? (function (e, t) {
               let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                  r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                  l = a.A.getChannel(e);
+                  i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                  l = s.A.getChannel(e);
               if (null == l || null == l.guild_id) return;
-              let u = o.A.getCategories(l.guild_id);
-              if (null == u[e]) return;
-              let c = u[e].filter((e) => {
+              let o = _.A.getCategories(l.guild_id);
+              if (null == o[e]) return;
+              let E = o[e].filter((e) => {
                       let { channel: t } = e;
-                      return (0, s.Z_)(t.type);
+                      return (0, a.Z_)(t.type);
                   }),
-                  _ = c.map((e) => {
+                  c = E.map((e) => {
                       let { channel: t } = e;
                       return t.id;
                   });
-              for (let e of (c.forEach((e) => {
+              for (let e of (E.forEach((e) => {
                   let { channel: t } = e,
                       n = t.guild_id ?? l.guild_id,
-                      r = i.A.getActiveJoinedThreadsForParent(n, t.id);
-                  for (let e in r) _.push(e);
+                      i = r.A.getActiveJoinedThreadsForParent(n, t.id);
+                  for (let e in i) c.push(e);
               }),
-              _))
-                  d(e, t, n, r);
+              c))
+                  d(e, t, n, i);
           })(e.id, t, !0, !0)
         : e.isForumLikeChannel()
-          ? d(e.id, t, !0, !0, u.default.fromTimestamp(Date.now()))
+          ? d(e.id, t, !0, !0, o.default.fromTimestamp(Date.now()))
           : d(e.id, t, !0, !0);
 }
-function f(e, t) {
-    r.h.dispatch({ type: "BULK_ACK", channels: e, context: c.QCW, onFinished: t });
+function u(e, t) {
+    i.h.dispatch({ type: "BULK_ACK", channels: e, context: E.QCW, onFinished: t });
 }
-function p(e) {
-    r.h.dispatch({ type: "CHANNEL_LOCAL_ACK", channelId: e });
+function I(e) {
+    i.h.dispatch({ type: "CHANNEL_LOCAL_ACK", channelId: e });
 }
-function h(e, t) {
-    r.h.dispatch({ type: "ENABLE_AUTOMATIC_ACK", channelId: e, windowId: t });
+function A(e, t) {
+    i.h.dispatch({ type: "ENABLE_AUTOMATIC_ACK", channelId: e, windowId: t });
 }
-function E(e, t) {
-    r.h.dispatch({ type: "DISABLE_AUTOMATIC_ACK", channelId: e, windowId: t });
+function T(e, t) {
+    i.h.dispatch({ type: "DISABLE_AUTOMATIC_ACK", channelId: e, windowId: t });
 }
-function m(e, t, n) {
-    r.h.dispatch({ type: "GUILD_FEATURE_ACK", id: e, ackType: t, ackedId: n, local: !1 });
+function S(e, t, n) {
+    i.h.dispatch({ type: "GUILD_FEATURE_ACK", id: e, ackType: t, ackedId: n, local: !1 });
 }
-function g(e, t) {
+function N(e, t) {
     null != l.default.getCurrentUser()?.id &&
-        r.h.dispatch({ type: "USER_NON_CHANNEL_ACK", ackType: e, ackedId: t, local: !1 });
+        i.h.dispatch({ type: "USER_NON_CHANNEL_ACK", ackType: e, ackedId: t, local: !1 });
 }

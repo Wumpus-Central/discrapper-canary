@@ -3,7 +3,7 @@ var r = n(627968);
 n(64700);
 var i = n(477782),
     l = n(192308),
-    a = n(861672),
+    a = n(550079),
     d = n(442433),
     u = n(847767),
     s = n(358367),
@@ -13,7 +13,7 @@ var i = n(477782),
     E = n(995102),
     f = n(50268),
     g = n(73028),
-    v = n(961350),
+    v = n(495544),
     h = n(914853),
     I = n(708653),
     N = n(297460),
@@ -36,8 +36,8 @@ let S = (0, s.A)(
                           label: M.intl.string(M.t.ngRFjZ),
                           action: () =>
                               (0, l.openModalLazy)(async () => {
-                                  let { default: e } = await Promise.all([n.e("951"), n.e("48574")]).then(
-                                      n.bind(n, 830541),
+                                  let { default: e } = await Promise.all([n.e("40333"), n.e("32305")]).then(
+                                      n.bind(n, 409352),
                                   );
                                   return (n) => (0, r.jsx)(e, { channelId: t.id, ...n });
                               }),

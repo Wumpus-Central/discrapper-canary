@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { gf: () => i, u8: () => a, wR: () => s });
-var r = n(247775);
-function i() {
-    return r.getToken();
+n.d(t, { gf: () => r, u8: () => l, wR: () => a });
+var i = n(247775);
+function r() {
+    return i.getToken();
 }
-function s() {
-    return null != i();
+function a() {
+    return null != r();
 }
-let a = (e) => (null != e && /^\/developers/.test(e) ? n(844564) : null);
+let l = (e) => (null != e && /^\/developers/.test(e) ? n(844564) : null);

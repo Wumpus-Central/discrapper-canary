@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { Ir: () => p, ZC: () => f, l_: () => _, ou: () => h, pn: () => d, zT: () => E });
+n.d(t, { Ir: () => C, ZC: () => p, l_: () => _, ou: () => h, pn: () => c, zT: () => E });
 var r,
-    i = n(64700),
-    s = n(198982),
-    a = n(626584),
-    o = n(739508),
-    l = n(566980),
-    u = n(985018);
-let c = new a.A("PaymentSteps");
-var d =
+    a = n(64700),
+    i = n(845584),
+    o = n(626584),
+    l = n(739508),
+    s = n(566980),
+    d = n(985018);
+let u = new o.A("PaymentSteps");
+var c =
     (((r = {}).PAYMENT_TYPE = "payment_type"),
     (r.PAYMENT_ELEMENT = "payment_element"),
     (r.CREDIT_CARD_INFORMATION = "credit_card_information"),
@@ -49,7 +48,7 @@ let _ = new Set([
         "awaiting_browser_checkout_google_pay",
         "awaiting_browser_checkout_apple_pay",
     ]),
-    f = new Set([
+    p = new Set([
         "credit_card_information",
         "payment_request_information",
         "paypal_information",
@@ -61,47 +60,47 @@ let _ = new Set([
         "premium_upsell",
         "przelewy24_information",
     ]);
-function p(e) {
+function C(e) {
     switch (e) {
         case "plan_select":
-            return u.intl.string(u.t["r+SebU"]);
+            return d.intl.string(d.t["r+SebU"]);
         case "payment_type":
         case "add_payment_steps":
-            return u.intl.string(u.t.Sb6wI1);
+            return d.intl.string(d.t.Sb6wI1);
         case "awaiting_purchase_token_auth":
         case "review":
-            return u.intl.string(u.t.QBnNHq);
+            return d.intl.string(d.t.QBnNHq);
         case "shop":
-            return u.intl.string(u.t.xj9ooX);
+            return d.intl.string(d.t.xj9ooX);
         case "payment_request_information":
-            return u.intl.string(u.t.DDPRXs);
+            return d.intl.string(d.t.DDPRXs);
         case "credit_card_information":
-            return u.intl.string(u.t.yMPCXL);
+            return d.intl.string(d.t.yMPCXL);
         case "address":
-            return u.intl.string(u.t["50Auo2"]);
+            return d.intl.string(d.t["50Auo2"]);
         case "paypal_information":
-            return u.intl.string(u.t.RVHDnH);
+            return d.intl.string(d.t.RVHDnH);
         case "venmo_information":
-            return u.intl.string(u.t.bzQdwW);
+            return d.intl.string(d.t.bzQdwW);
         case "przelewy24_information":
-            return u.intl.string(u.t.BW0R4v);
+            return d.intl.string(d.t.BW0R4v);
         case "cash_app_information":
-            return u.intl.string(u.t.Gz1fyE);
+            return d.intl.string(d.t.Gz1fyE);
         case "gift_customization":
-            return u.intl.string(u.t.R0vK0N);
+            return d.intl.string(d.t.R0vK0N);
     }
     throw Error(`Unexpected step: ${e}`);
 }
 function h(e) {
     if (null != e) {
-        if (!(e instanceof s.Ey)) throw (c.error(e), (0, o.pM)(e), Error("Unexpected error type"));
+        if (!(e instanceof i.Ey)) throw (u.error(e), (0, l.pM)(e), Error("Unexpected error type"));
         if (e.hasCardError()) return "credit_card_information";
         if (e.hasAddressError()) return "address";
     }
     return null;
 }
 function E(e, t, n) {
-    i.useEffect(() => {
-        null != e && "review" !== e && t !== l.h.WAITING && t !== l.h.COMPLETED && n(l.h.WAITING);
+    a.useEffect(() => {
+        null != e && "review" !== e && t !== s.h.WAITING && t !== s.h.COMPLETED && n(s.h.WAITING);
     }, [e, t, n]);
 }

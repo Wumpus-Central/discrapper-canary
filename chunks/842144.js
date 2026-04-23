@@ -1,13 +1,12 @@
-"use strict";
 n.d(t, { A: () => d });
-var r = n(311907),
-    i = n(873298),
-    s = n(73153),
-    a = n(761821);
-let o = !1,
+var i = n(17928),
+    r = n(873298),
+    a = n(228366),
+    s = n(761821);
+let _ = !1,
     l = {},
-    u = {};
-class c extends r.Ay.Store {
+    o = {};
+class E extends i.Ay.Store {
     static displayName = "FamilyCenterControlledSettingsStore";
     getSettings(e) {
         return l[e];
@@ -19,35 +18,35 @@ class c extends r.Ay.Store {
         return null != l[e];
     }
     getConsents(e) {
-        return u[e];
+        return o[e];
     }
     hasConsented(e, t) {
         if (null == e) return !1;
-        let n = u[e];
+        let n = o[e];
         return null != n && null != n[t] && n[t].consented;
     }
     get isLoading() {
-        return o;
+        return _;
     }
 }
-let d = new c(s.h, {
+let d = new E(a.h, {
     FAMILY_CENTER_TEEN_SETTINGS_FETCH_START: function () {
-        o = !0;
+        _ = !0;
     },
     FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS: function (e) {
-        let { userId: t, settings: n, consents: r } = e;
-        null != n && (l[t] = (0, a.Gd)(n)), null != r && (u[t] = r), (o = !1);
+        let { userId: t, settings: n, consents: i } = e;
+        null != n && (l[t] = (0, s.Gd)(n)), null != i && (o[t] = i), (_ = !1);
     },
     FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS: function (e) {
         let { userId: t, consents: n } = e;
-        u[t] = n;
+        o[t] = n;
     },
     FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS: function (e) {
         let { userId: t, settings: n } = e,
-            r = (0, a.Gd)(n);
-        l[t] = (0, a.RK)(i.nT, l[t], r);
+            i = (0, s.Gd)(n);
+        l[t] = (0, s.RK)(r.nT, l[t], i);
     },
     LOGOUT: function () {
-        (l = {}), (u = {}), (o = !1);
+        (l = {}), (o = {}), (_ = !1);
     },
 });

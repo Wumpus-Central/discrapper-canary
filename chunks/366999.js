@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { Ay: () => c, Vb: () => u, yE: () => l });
-var r,
-    i = n(496431),
-    s = n(405269),
-    a = n(728458),
+n.d(t, { Ay: () => _, Vb: () => d, yE: () => l });
+var i,
+    r = n(496431),
+    s = n(58703),
+    a = n(38405),
     o = n(985018),
     l =
-        (((r = {})[(r.SHORT_TIME_LEFT = 0)] = "SHORT_TIME_LEFT"),
-        (r[(r.LONG_TIME_LEFT = 1)] = "LONG_TIME_LEFT"),
-        (r[(r.ENDS_IN = 2)] = "ENDS_IN"),
-        (r[(r.SHORT_TIME = 3)] = "SHORT_TIME"),
-        (r[(r.CREDITS_ENDS_IN = 4)] = "CREDITS_ENDS_IN"),
-        r);
-function u(e) {
+        (((i = {})[(i.SHORT_TIME_LEFT = 0)] = "SHORT_TIME_LEFT"),
+        (i[(i.LONG_TIME_LEFT = 1)] = "LONG_TIME_LEFT"),
+        (i[(i.ENDS_IN = 2)] = "ENDS_IN"),
+        (i[(i.SHORT_TIME = 3)] = "SHORT_TIME"),
+        (i[(i.CREDITS_ENDS_IN = 4)] = "CREDITS_ENDS_IN"),
+        i);
+function d(e) {
     let t = { ...e };
     if (
         (t.seconds > 0 && ((t.minutes = t.minutes + 1), (t.seconds = 0)),
@@ -32,7 +32,7 @@ function u(e) {
     }
     return t.seconds > 0 ? { days: 0, hours: 0, minutes: 1, seconds: 0 } : t;
 }
-function c(e, t) {
+function _(e, t) {
     let n;
     switch (t) {
         case 0:
@@ -53,10 +53,10 @@ function c(e, t) {
         default:
             throw Error(`Unknown messageType (${t}) when rendering time left`);
     }
-    let r = u((0, i.A)(e.toDate(), 6e4)),
+    let i = d((0, r.A)(e.toDate(), 6e4)),
         l = "";
     try {
-        l = (0, s.uN)(r, n);
+        l = (0, s.uN)(i, n);
     } catch {
         a.A.captureMessage("Error trying to format string for fractional nitro duration pill");
     }

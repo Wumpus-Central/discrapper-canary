@@ -1,7 +1,7 @@
 n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
-var l = n(311907),
+var l = n(17928),
     r = n(477782),
     a = n(241541),
     s = n(192308),
@@ -34,8 +34,8 @@ let g = (e, t, l) => {
             leadingAccessory: e === o.PE1.GUILD_HEADER ? { type: "icon", icon: a.D } : void 0,
             action: () =>
                 (0, s.openModalLazy)(async () => {
-                    let { default: r } = await Promise.all([n.e("28136"), n.e("43600"), n.e("85905")]).then(
-                        n.bind(n, 234355),
+                    let { default: r } = await Promise.all([n.e("28136"), n.e("22547"), n.e("85905")]).then(
+                        n.bind(n, 1310),
                     );
                     return (n) => (0, i.jsx)(r, { ...n, guild: t, channel: l, source: e });
                 }),

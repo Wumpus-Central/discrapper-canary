@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { A: () => _ });
-var r = n(562465),
-    i = n(73153),
+n.d(t, { A: () => c });
+var i = n(636537),
+    r = n(228366),
     s = n(58149),
     a = n(451909),
     o = n(734057),
     l = n(308528),
-    u = n(843472),
-    c = n(652215),
-    d = n(381941);
-let _ = {
+    d = n(720149),
+    _ = n(652215),
+    u = n(381941);
+let c = {
     updateActivity(e) {
         let {
             applicationId: t,
@@ -18,14 +18,14 @@ let _ = {
             token: a = null,
             duration: o = 0,
             closed: l = !1,
-            exePath: u = null,
-            voiceChannelId: d = null,
-            sessionId: _ = null,
-            mediaSessionId: f = null,
+            exePath: d = null,
+            voiceChannelId: u = null,
+            sessionId: c = null,
+            mediaSessionId: E = null,
         } = e;
-        i.h.wait(() => i.h.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId: t, duration: o, distributor: n })),
-            r.Bo.post({
-                url: c.Rsh.ACTIVITIES,
+        r.h.wait(() => r.h.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId: t, duration: o, distributor: n })),
+            i.Bo.post({
+                url: _.Rsh.ACTIVITIES,
                 body: {
                     application_id: t,
                     token: a,
@@ -33,10 +33,10 @@ let _ = {
                     share_activity: s,
                     distributor: n,
                     closed: l,
-                    exePath: u,
-                    voice_channel_id: d,
-                    session_id: _,
-                    media_session_id: f,
+                    exePath: d,
+                    voice_channel_id: u,
+                    session_id: c,
+                    media_session_id: E,
                 },
                 retries: 1,
                 oldFormErrors: !0,
@@ -44,66 +44,66 @@ let _ = {
             })
                 .then((e) => {
                     let {
-                        body: { token: r },
+                        body: { token: i },
                     } = e;
-                    i.h.dispatch({
+                    r.h.dispatch({
                         type: "ACTIVITY_UPDATE_SUCCESS",
                         applicationId: t,
-                        token: r,
+                        token: i,
                         duration: o,
                         distributor: n,
                     });
                 })
                 .catch(() => {
-                    i.h.dispatch({ type: "ACTIVITY_UPDATE_FAIL", applicationId: t });
+                    r.h.dispatch({ type: "ACTIVITY_UPDATE_FAIL", applicationId: t });
                 });
     },
     sendActivityInvite(e) {
-        let { channelId: t, type: n, activity: r, content: i, targetUserId: l, location: _ } = e,
-            f = o.A.getChannel(t);
-        if (null == f) return Promise.resolve(null);
-        let p = a.Ay.parse(f, i ?? "");
-        return u.A.sendMessage(f.id, p, !1, {
-            activityAction: { type: n, activity: r, targetUserId: l },
-            location: d.Hx.ACTIVITY_SHARE,
+        let { channelId: t, type: n, activity: i, content: r, targetUserId: l, location: c } = e,
+            E = o.A.getChannel(t);
+        if (null == E) return Promise.resolve(null);
+        let h = a.Ay.parse(E, r ?? "");
+        return d.A.sendMessage(E.id, h, !1, {
+            activityAction: { type: n, activity: i, targetUserId: l },
+            location: u.Hx.ACTIVITY_SHARE,
         }).then(
             (e) => (
-                s.Ay.trackWithMetadata(c.HAw.INVITE_SENT, {
-                    location: _,
-                    invite_type: r.type === c.$pd.LISTENING ? c.G2g.SPOTIFY : c.G2g.APPLICATION,
-                    application_id: r.application_id,
-                    guild_id: f.getGuildId(),
-                    channel_id: f.id,
+                s.Ay.trackWithMetadata(_.HAw.INVITE_SENT, {
+                    location: c,
+                    invite_type: i.type === _.$pd.LISTENING ? _.G2g.SPOTIFY : _.G2g.APPLICATION,
+                    application_id: i.application_id,
+                    guild_id: E.getGuildId(),
+                    channel_id: E.id,
                     message_id: null != e ? e.body.id : null,
                 }),
-                Promise.resolve(f)
+                Promise.resolve(E)
             ),
             (e) => Promise.reject(e),
         );
     },
     sendActivityInviteUser(e) {
-        let { userId: t, type: n, activity: r, content: i, location: s } = e;
+        let { userId: t, type: n, activity: i, content: r, location: s } = e;
         return l.A.ensurePrivateChannel(t).then((e) =>
-            this.sendActivityInvite({ channelId: e, type: n, activity: r, content: i, location: s }),
+            this.sendActivityInvite({ channelId: e, type: n, activity: i, content: r, location: s }),
         );
     },
-    async getJoinSecret(e, t, n, i, s) {
+    async getJoinSecret(e, t, n, r, s) {
         let a = {};
         return (
-            null != i && (a.channel_id = i),
+            null != r && (a.channel_id = r),
             null != s && (a.message_id = s),
-            (await r.Bo.get({ url: c.Rsh.USER_ACTIVITY_JOIN(e, t, n), retries: 3, query: a, rejectWithError: !1 })).body
+            (await i.Bo.get({ url: _.Rsh.USER_ACTIVITY_JOIN(e, t, n), retries: 3, query: a, rejectWithError: !1 })).body
                 .secret
         );
     },
     async subscribeActivities(e) {
         let t = e.map((e) => {
-            let { userId: t, applicationId: n, partyId: r, messageId: i, channelId: s } = e;
-            return { user_id: t, application_id: n, party_id: r, message_id: i, channel_id: s };
+            let { userId: t, applicationId: n, partyId: i, messageId: r, channelId: s } = e;
+            return { user_id: t, application_id: n, party_id: i, message_id: r, channel_id: s };
         });
         return (
-            await r.Bo.post({
-                url: c.Rsh.USER_ACTIVITY_SUBSCRIBE,
+            await i.Bo.post({
+                url: _.Rsh.USER_ACTIVITY_SUBSCRIBE,
                 body: { subscriptions: t },
                 retries: 1,
                 rejectWithError: !1,

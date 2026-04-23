@@ -1,5 +1,4 @@
-"use strict";
-e.exports = !n(503628)(function () {
-    function e() {}
-    return (e.prototype.constructor = null), Object.getPrototypeOf(new e()) !== e.prototype;
+r.exports = !e(503628)(function () {
+    function r() {}
+    return (r.prototype.constructor = null), Object.getPrototypeOf(new r()) !== r.prototype;
 });

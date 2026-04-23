@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__4e338",
     Gt: "gameIcon__4e338",

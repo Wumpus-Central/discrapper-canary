@@ -1,8 +1,7 @@
-"use strict";
-var r = n(257943),
-    i = n(503628);
-e.exports =
-    r &&
-    i(function () {
+var n = e(257943),
+    o = e(503628);
+r.exports =
+    n &&
+    o(function () {
         return 42 !== Object.defineProperty(function () {}, "prototype", { value: 42, writable: !1 }).prototype;
     });

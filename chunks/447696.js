@@ -1,6 +1,6 @@
-n.d(t, { Fy: () => a, Vv: () => c, Xx: () => o, i4: () => d, oZ: () => u, ry: () => E });
-var l = n(562465),
-    i = n(73153),
+n.d(t, { Fy: () => a, Vv: () => c, Xx: () => o, i4: () => s, oZ: () => u, ry: () => E });
+var l = n(636537),
+    i = n(228366),
     r = n(652215);
 let E = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -24,7 +24,7 @@ let E = function (e) {
     o = (e) => {
         i.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings: e });
     },
-    d = async (e, t) => {
+    s = async (e, t) => {
         i.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
         try {
             let n = await l.Bo.patch({

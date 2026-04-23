@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Uu: "flex_abf706",
     CT: "alignStart_abf706",

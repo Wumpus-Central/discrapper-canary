@@ -1,76 +1,76 @@
 "use strict";
-n.d(t, { A: () => R, F: () => v });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => v, F: () => R });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(485584),
+    o = n(435428),
     l = n(598748),
-    u = n(311907),
-    c = n(834730),
-    d = n(939249),
-    _ = n(554830),
-    f = n(975460),
-    p = n(369374),
-    h = n(531913),
-    E = n(850046),
-    m = n(619517),
-    g = n(633075),
-    A = n(622543),
+    d = n(17928),
+    _ = n(834730),
+    u = n(939249),
+    c = n(554830),
+    E = n(975460),
+    h = n(369374),
+    m = n(531913),
+    f = n(850046),
+    g = n(619517),
+    p = n(633075),
+    A = n(841595),
     I = n(576622),
     T = n(985018),
     S = n(532786);
-function y(e, t) {
-    let n = (0, u.bG)([A.A], () => A.A.getUserProfile(e));
+function N(e, t) {
+    let n = (0, d.bG)([A.A], () => A.A.getUserProfile(e));
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             let t = new AbortController();
             return (0, I.A)(e, void 0, { abortSignal: t.signal }), () => t.abort();
         }, [e]),
-        i.useMemo(
+        r.useMemo(
             () => ({
                 hasWidget:
                     null != n &&
                     null != n.widgets &&
-                    n.widgets.some((e) => e instanceof g.R && e.applicationId === t?.id),
+                    n.widgets.some((e) => e instanceof p.R && e.applicationId === t?.id),
                 isLoadingProfile: null == n,
             }),
             [n, t],
         )
     );
 }
-function N(e) {
-    let t = (0, f.g)(e.activityApplication),
+function C(e) {
+    let t = (0, E.g)(e.activityApplication),
         n = (function (e, t) {
-            let n = (0, E.A)(
+            let n = (0, f.A)(
                     e,
-                    i.useMemo(() => (null != t ? [t.id] : []), [t]),
+                    r.useMemo(() => (null != t ? [t.id] : []), [t]),
                 ),
-                { hasWidget: r, isLoadingProfile: s } = y(e, t);
-            return null == t || null == n[t.id] || s ? null : { previewData: n[t.id], hasWidget: r };
+                { hasWidget: i, isLoadingProfile: s } = N(e, t);
+            return null == t || null == n[t.id] || s ? null : { previewData: n[t.id], hasWidget: i };
         })(e.userId, t);
-    return null == n ? null : (0, r.jsx)(v, { ...e, ...n });
+    return null == n ? null : (0, i.jsx)(R, { ...e, ...n });
 }
-function v(e) {
+function R(e) {
     let {
         previewData: { previewIcon: t, previewText: n },
-        hasWidget: i,
+        hasWidget: r,
     } = e;
-    return (0, r.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: a()(S.kL, e.className),
         children: [
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: S.Qs,
-                children: (0, r.jsxs)(c.E, {
+                children: (0, i.jsxs)(_.E, {
                     variant: "text-xs/semibold",
                     lineClamp: 1,
                     children: [
                         null != t &&
-                            (0, r.jsxs)(r.Fragment, {
+                            (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, r.jsx)("div", {
+                                    (0, i.jsx)("div", {
                                         className: S.Kk,
-                                        children: (0, r.jsx)(m.Ay, {
+                                        children: (0, i.jsx)(g.Ay, {
                                             src: t.proxyUrl,
                                             width: t.width,
                                             height: t.height,
@@ -84,46 +84,46 @@ function v(e) {
                     ],
                 }),
             }),
-            i &&
-                (0, r.jsx)(d.D, {
+            r &&
+                (0, i.jsx)(u.D, {
                     "aria-label": T.intl.string(T.t["OBCR+p"]),
                     className: S.NO,
                     onClick: (t) => {
                         e.onClickViewMore(t);
                     },
-                    children: (0, r.jsx)(_.K, { size: "xxs" }),
+                    children: (0, i.jsx)(c.K, { size: "xxs" }),
                 }),
         ],
     });
 }
-function C(e) {
-    let t = (0, f.g)(e.activityApplication);
-    return null == t ? null : (0, r.jsx)(O, { ...e, widgetApplication: t });
-}
 function O(e) {
-    let t = (0, h.A)(e.userId, e.widgetApplication.id),
+    let t = (0, E.g)(e.activityApplication);
+    return null == t ? null : (0, i.jsx)(y, { ...e, widgetApplication: t });
+}
+function y(e) {
+    let t = (0, m.A)(e.userId, e.widgetApplication.id),
         n = t.surfaceConfigs[l.m.ACTIVITY_ACCESSORY],
-        { hasWidget: i, isLoadingProfile: s } = y(e.userId, e.widgetApplication);
+        { hasWidget: r, isLoadingProfile: s } = N(e.userId, e.widgetApplication);
     return null == n || s
         ? null
-        : (0, r.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               className: a()(S.kL, e.className),
               children: [
-                  (0, r.jsx)("div", {
+                  (0, i.jsx)("div", {
                       className: S.Qs,
-                      children: (0, r.jsx)(o.kH, { ...t, surface: l.m.ACTIVITY_ACCESSORY, surfaceConfig: n }),
+                      children: (0, i.jsx)(o.kH, { ...t, surface: l.m.ACTIVITY_ACCESSORY, surfaceConfig: n }),
                   }),
-                  i &&
-                      (0, r.jsx)(d.D, {
+                  r &&
+                      (0, i.jsx)(u.D, {
                           "aria-label": T.intl.string(T.t["OBCR+p"]),
                           className: S.NO,
                           onClick: e.onClickViewMore,
-                          children: (0, r.jsx)(_.K, { size: "xxs" }),
+                          children: (0, i.jsx)(c.K, { size: "xxs" }),
                       }),
               ],
           });
 }
-function R(e) {
-    let { enabled: t } = p.A.useConfig({ location: "ActivityApplicationWidgetPreview" });
-    return t ? (0, r.jsx)(C, { ...e }) : (0, r.jsx)(N, { ...e });
+function v(e) {
+    let { enabled: t } = h.A.useConfig({ location: "ActivityApplicationWidgetPreview" });
+    return t ? (0, i.jsx)(O, { ...e }) : (0, i.jsx)(C, { ...e });
 }

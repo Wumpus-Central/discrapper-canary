@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     eQ: "phoneFieldPopout__61a01",
     Dm: "phoneFieldScroller__61a01",

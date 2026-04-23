@@ -1,143 +1,142 @@
-"use strict";
-n.d(t, { Ay: () => y, DN: () => E, mt: () => m }), n(321073);
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(950305),
-    l = n(939249),
-    u = n(983851),
-    c = n(573435),
-    d = n(342296),
-    _ = n(427157),
-    f = n(287809),
-    p = n(820883),
-    h = n(227568);
-let E = { SIZE_16: 16, SIZE_24: 24, SIZE_32: 32, SIZE_56: 56 },
-    m = "user-icon";
+n.d(t, { Ay: () => O, DN: () => A, mt: () => f }), n(321073);
+var i = n(627968),
+    r = n(64700),
+    l = n(503698),
+    a = n.n(l),
+    s = n(950305),
+    o = n(939249),
+    d = n(983851),
+    u = n(573435),
+    c = n(342296),
+    h = n(889227),
+    E = n(287809),
+    _ = n(3451),
+    p = n(227568);
+let A = { SIZE_16: 16, SIZE_24: 24, SIZE_32: 32, SIZE_56: 56 },
+    f = "user-icon";
 function g(e, t) {
-    if (e === m) return `user-icon-${t}`;
-    let n = e instanceof _.A ? e : null != e ? e.user : null;
+    if (e === f) return `user-icon-${t}`;
+    let n = e instanceof h.A ? e : null != e ? e.user : null;
     return null != n ? n.id : `user-${t}`;
 }
-function A(e) {
-    return (0, r.jsx)("div", { className: h.In, children: e });
-}
 function I(e) {
-    return (0, r.jsx)("div", { className: a()(h.In, h.iq), children: e });
+    return (0, i.jsx)("div", { className: p.In, children: e });
 }
-function T() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.SIZE_24;
+function T(e) {
+    return (0, i.jsx)("div", { className: a()(p.In, p.iq), children: e });
+}
+function S() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : A.SIZE_24;
     switch (e) {
-        case E.SIZE_16:
-            return h.nc;
-        case E.SIZE_24:
-            return h.q1;
-        case E.SIZE_32:
-            return h.Hb;
-        case E.SIZE_56:
-            return h.dl;
+        case A.SIZE_16:
+            return p.nc;
+        case A.SIZE_24:
+            return p.q1;
+        case A.SIZE_32:
+            return p.Hb;
+        case A.SIZE_56:
+            return p.dl;
         default:
-            return h.q1;
+            return p.q1;
     }
 }
-class S extends i.PureComponent {
+class m extends r.PureComponent {
     static defaultProps = {
         max: 10,
-        renderMoreUsers: A,
+        renderMoreUsers: I,
         renderIcon: !1,
         showDefaultAvatarsForNullUsers: !1,
-        size: E.SIZE_24,
+        size: A.SIZE_24,
     };
     state = { popoutUserId: null };
-    _ref = i.createRef();
+    _ref = r.createRef();
     defaultRenderUser = (e, t, n) => {
-        let i,
-            { showUserPopout: s, guildId: u, size: c, dimEmptyUsers: d } = this.props;
+        let r,
+            { showUserPopout: l, guildId: d, size: u, dimEmptyUsers: c } = this.props;
         if (null == e)
             if (!this.props.showDefaultAvatarsForNullUsers)
-                return (0, r.jsx)("div", { className: a()(h.F2, { [h.F_]: d }) });
+                return (0, i.jsx)("div", { className: a()(p.F2, { [p.F_]: c }) });
             else {
-                let e = (n ?? 0) % p.A.DEFAULT_AVATARS.length,
-                    t = p.A.DEFAULT_AVATARS[e];
-                return (0, r.jsx)("img", { src: t, alt: "", className: h.my });
+                let e = (n ?? 0) % _.A.DEFAULT_AVATARS.length,
+                    t = _.A.DEFAULT_AVATARS[e];
+                return (0, i.jsx)("img", { src: t, alt: "", className: p.my });
             }
-        if (e === m) {
+        if (e === f) {
             let e = (function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.SIZE_24;
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : A.SIZE_24;
                 switch (e) {
-                    case E.SIZE_16:
+                    case A.SIZE_16:
                         return 10;
-                    case E.SIZE_24:
+                    case A.SIZE_24:
                         return 15;
-                    case E.SIZE_32:
+                    case A.SIZE_32:
                         return 20;
-                    case E.SIZE_56:
+                    case A.SIZE_56:
                         return 35;
                     default:
                         return 10;
                 }
-            })(c);
-            i = (0, r.jsx)(o.n, { size: "custom", color: "currentColor", width: e, height: e });
-        } else i = (0, r.jsx)("img", { src: e.getAvatarURL(u, c), alt: e.username, className: h.my });
-        let _ = (0, r.jsx)("div", { className: h.WK, children: i }, g(e, n));
-        return s && e !== m
-            ? (0, r.jsx)(
-                  l.D,
+            })(u);
+            r = (0, i.jsx)(s.n, { size: "custom", color: "currentColor", width: e, height: e });
+        } else r = (0, i.jsx)("img", { src: e.getAvatarURL(d, u), alt: e.username, className: p.my });
+        let h = (0, i.jsx)("div", { className: p.WK, children: r }, g(e, n));
+        return l && e !== f
+            ? (0, i.jsx)(
+                  o.D,
                   {
-                      className: h.UC,
+                      className: p.UC,
                       onClick: () => {
                           null != this._ref.current && null != e && this.setState({ popoutUserId: e.id });
                       },
                       tabIndex: -1,
-                      children: _,
+                      children: h,
                   },
                   g(e, n),
               )
-            : _;
+            : h;
     };
     renderUsers() {
-        let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: i, extraDetail: s } = this.props,
+        let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: r, extraDetail: l } = this.props,
             a = [],
-            o = e.length === t ? e.length : t - 1,
-            l = this.renderMoreUsers(o),
-            u = 0;
-        for (; u < o && u < e.length; ) {
-            let t = null == l && null == s && u === e.length - 1,
-                o = n(e[u], t, u);
+            s = e.length === t ? e.length : t - 1,
+            o = this.renderMoreUsers(s),
+            d = 0;
+        for (; d < s && d < e.length; ) {
+            let t = null == o && null == l && d === e.length - 1,
+                s = n(e[d], t, d);
             a.push(
                 t
-                    ? (0, r.jsx)("div", { className: h.H, children: o }, g(e[u] ?? null, u))
-                    : (0, r.jsx)(
-                          c.Ay,
+                    ? (0, i.jsx)("div", { className: p.H, children: s }, g(e[d] ?? null, d))
+                    : (0, i.jsx)(
+                          u.Ay,
                           {
-                              className: h.aV,
-                              height: i,
-                              width: i,
-                              mask: c.Ay.Masks.VOICE_USER_SUMMARY_ITEM,
-                              children: o,
+                              className: p.aV,
+                              height: r,
+                              width: r,
+                              mask: u.Ay.Masks.VOICE_USER_SUMMARY_ITEM,
+                              children: s,
                           },
-                          g(e[u], u),
+                          g(e[d], d),
                       ),
             ),
-                u++;
+                d++;
         }
-        return null != s ? a.push(s) : null != l && a.push(l), a;
+        return null != l ? a.push(l) : null != o && a.push(o), a;
     }
     renderMoreUsers(e) {
-        let { max: t, count: n, hideMoreUsers: s, renderMoreUsers: a, users: o, dimEmptyUsers: l } = this.props,
-            u = Math.min(e, o.length),
-            c = l ? I : a;
-        if (!s) {
+        let { max: t, count: n, hideMoreUsers: l, renderMoreUsers: a, users: s, dimEmptyUsers: o } = this.props,
+            d = Math.min(e, s.length),
+            u = o ? T : a;
+        if (!l) {
             if (null != n) {
-                if (n >= t) return (0, r.jsx)(i.Fragment, { children: c(`${t}+`, t) }, "more-users");
-                else if (n > o.length) {
-                    let e = n - o.length;
-                    return (0, r.jsx)(i.Fragment, { children: c(`+${e}`, e) }, "more-users");
+                if (n >= t) return (0, i.jsx)(r.Fragment, { children: u(`${t}+`, t) }, "more-users");
+                else if (n > s.length) {
+                    let e = n - s.length;
+                    return (0, i.jsx)(r.Fragment, { children: u(`+${e}`, e) }, "more-users");
                 }
-            } else if (u < o.length) {
-                let e = Math.min(o.length - u, 99);
-                return (0, r.jsx)(i.Fragment, { children: c(`+${e}`, e) }, "more-users");
+            } else if (d < s.length) {
+                let e = Math.min(s.length - d, 99);
+                return (0, i.jsx)(r.Fragment, { children: u(`+${e}`, e) }, "more-users");
             }
         }
     }
@@ -145,12 +144,12 @@ class S extends i.PureComponent {
         let { renderLeadingIcon: e, renderIcon: t } = this.props;
         return t
             ? null != e
-                ? e(h.Kk)
-                : (0, r.jsx)(u.H, {
+                ? e(p.Kk)
+                : (0, i.jsx)(d.H, {
                       size: "md",
                       color: "currentColor",
-                      colorClass: h.__invalid_foreground,
-                      className: h.Kk,
+                      colorClass: p.__invalid_foreground,
+                      className: p.Kk,
                   })
             : null;
     }
@@ -159,30 +158,30 @@ class S extends i.PureComponent {
                 className: e,
                 size: t,
                 users: n,
-                guildId: i,
-                showUserPopout: s,
-                useFallbackUserForPopout: o,
+                guildId: r,
+                showUserPopout: l,
+                useFallbackUserForPopout: s,
             } = this.props,
-            { popoutUserId: l } = this.state;
-        if (null == l)
-            return (0, r.jsxs)("div", {
-                className: a()(e, h.kL, T(t)),
+            { popoutUserId: o } = this.state;
+        if (null == o)
+            return (0, i.jsxs)("div", {
+                className: a()(e, p.kL, S(t)),
                 children: [this.renderIcon(), this.renderUsers()],
             });
-        let u = n.find((e) => e instanceof _.A && e.id === l),
-            c = o && null == f.default.getUser(l);
-        return (0, r.jsx)(d.A, {
+        let d = n.find((e) => e instanceof h.A && e.id === o),
+            u = s && null == E.default.getUser(o);
+        return (0, i.jsx)(c.A, {
             targetElementRef: this._ref,
-            userId: l,
-            user: c && null != u ? u : void 0,
-            guildId: i,
+            userId: o,
+            user: u && null != d ? d : void 0,
+            guildId: r,
             fixed: !0,
-            shouldShow: !0 === s && null != l,
+            shouldShow: !0 === l && null != o,
             onRequestClose: () => this.setState({ popoutUserId: null }),
             clickTrap: !0,
             children: (n) =>
-                (0, r.jsxs)("div", {
-                    className: a()(e, h.kL, T(t)),
+                (0, i.jsxs)("div", {
+                    className: a()(e, p.kL, S(t)),
                     ref: this._ref,
                     ...n,
                     children: [this.renderIcon(), this.renderUsers()],
@@ -190,4 +189,4 @@ class S extends i.PureComponent {
         });
     }
 }
-let y = S;
+let O = m;

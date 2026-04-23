@@ -1,13 +1,13 @@
-n.d(e, { p: () => u });
+n.d(e, { p: () => p });
 var i = n(64700),
     a = n(575593),
     l = n(631670),
-    r = n(587600),
+    r = n(56348),
     d = n(207803),
     s = n(442759),
     o = n(985018);
-let u = (t) => {
-    let { product: e, onSuccess: u, onError: p } = t,
+let p = (t) => {
+    let { product: e, onSuccess: p, onError: u } = t,
         [_, E] = i.useState(!1),
         { firstAvatarDecoration: c, firstProfileEffect: S, firstNameplate: h, firstProfileFrame: R } = (0, s.f5)(e),
         A = ((t) => {
@@ -42,16 +42,16 @@ let u = (t) => {
                         createToast: i,
                         popToast: a,
                         showToast: l,
-                    } = await n.e("77260").then(n.bind(n, 397927));
+                    } = await n.e("88017").then(n.bind(n, 844616));
                     a(), l(i(A, e.MESSAGE, { duration: 6e3, position: t.TOP }));
                 }
-                u?.();
+                p?.();
             } catch (t) {
-                p?.(t);
+                u?.(t);
             } finally {
                 E(!1);
             }
-        }, [c, S, h, R, u, A, p]),
+        }, [c, S, h, R, p, A, u]),
         isApplying: _,
     };
 };

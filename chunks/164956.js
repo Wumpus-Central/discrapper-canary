@@ -1,141 +1,141 @@
 "use strict";
-n.d(t, { A: () => h }), n(938796);
-var r = n(665260),
-    i = n(311907),
-    s = n(73153),
+n.d(t, { A: () => m }), n(938796);
+var i = n(665260),
+    r = n(17928),
+    s = n(228366),
     a = n(317525),
     o = n(71393),
     l = n(583613),
-    u = n(661191),
-    c = n(209700),
-    d = n(652215),
-    _ = n(355097);
-let f = {};
-class p extends i.Ay.Store {
+    d = n(935208),
+    _ = n(209700),
+    u = n(652215),
+    c = n(355097);
+let E = {};
+class h extends r.Ay.Store {
     static displayName = "ImpersonateStore";
     initialize() {
         this.waitFor(o.A, a.A);
     }
     hasViewingRoles() {
-        return !(0, l.DJ)(f);
+        return !(0, l.DJ)(E);
     }
     isViewingRoles(e) {
-        return null != e && null != f[e];
+        return null != e && null != E[e];
     }
     getViewingRoles(e) {
-        return f[e]?.roles;
+        return E[e]?.roles;
     }
     getViewingRolesTimestamp(e) {
-        return null != e ? f[e]?.timestamp : null;
+        return null != e ? E[e]?.timestamp : null;
     }
     getData(e) {
-        return f[e];
+        return E[e];
     }
     isFullServerPreview(e) {
-        return f[e]?.type === c._.NEW_MEMBER;
+        return E[e]?.type === _._.NEW_MEMBER;
     }
     isOptInEnabled(e) {
-        let t = f[e];
-        return null != t && t.type === c._.NEW_MEMBER && t.optInEnabled;
+        let t = E[e];
+        return null != t && t.type === _._.NEW_MEMBER && t.optInEnabled;
     }
     isOnboardingEnabled(e) {
-        let t = f[e];
-        return null != t && t.type === c._.NEW_MEMBER && t.onboardingEnabled;
+        let t = E[e];
+        return null != t && t.type === _._.NEW_MEMBER && t.onboardingEnabled;
     }
     getViewingChannels(e) {
-        let t = f[e];
-        return null == t || t.type !== c._.NEW_MEMBER ? null : t.optInChannels;
+        let t = E[e];
+        return null == t || t.type !== _._.NEW_MEMBER ? null : t.optInChannels;
     }
     getOnboardingResponses(e) {
-        let t = f[e];
-        return null == t || t.type !== c._.NEW_MEMBER ? null : t.onboardingResponses;
+        let t = E[e];
+        return null == t || t.type !== _._.NEW_MEMBER ? null : t.onboardingResponses;
     }
     getMemberOptions(e) {
-        let t = f[e];
-        return null == t || t.type !== c._.NEW_MEMBER ? null : t.memberOptions;
+        let t = E[e];
+        return null == t || t.type !== _._.NEW_MEMBER ? null : t.memberOptions;
     }
     isChannelOptedIn(e, t) {
         let n = this.getViewingChannels(e);
         return null != n && n.has(t);
     }
     isViewingServerShop(e) {
-        return null != e && f[e]?.type === c._.SERVER_SHOP;
+        return null != e && E[e]?.type === _._.SERVER_SHOP;
     }
     getImpersonateType(e) {
         if (null == e) return null;
-        let t = f[e];
+        let t = E[e];
         return null == t ? null : t.type;
     }
     getBackNavigationSection(e) {
-        if (null == e) return d.BEX.ROLES;
-        let t = f[e];
-        if (null == t) return d.BEX.ROLES;
+        if (null == e) return u.BEX.ROLES;
+        let t = E[e];
+        if (null == t) return u.BEX.ROLES;
         switch (t.type) {
-            case c._.ROLES:
-            case c._.SERVER_SHOP:
+            case _._.ROLES:
+            case _._.SERVER_SHOP:
                 return t.returnToSection;
-            case c._.NEW_MEMBER:
-                return d.BEX.ONBOARDING;
+            case _._.NEW_MEMBER:
+                return u.BEX.ONBOARDING;
             default:
-                return d.BEX.ROLES;
+                return u.BEX.ROLES;
         }
     }
 }
-let h = new p(s.h, {
+let m = new h(s.h, {
     IMPERSONATE_UPDATE: function (e) {
         let { guildId: t, data: n } = e;
-        delete n.roles[u.default.castGuildIdAsEveryoneGuildRoleId(t)], (f[t] = { ...n, timestamp: Date.now() });
+        delete n.roles[d.default.castGuildIdAsEveryoneGuildRoleId(t)], (E[t] = { ...n, timestamp: Date.now() });
     },
     IMPERSONATE_STOP: function (e) {
         let { guildId: t } = e;
-        if (null == f[t]) return !1;
-        delete f[t];
+        if (null == E[t]) return !1;
+        delete E[t];
     },
     GUILD_ROLE_DELETE: function (e) {
         let { guildId: t, roleId: n } = e;
-        if (null == f[t]) return !1;
-        delete f[t].roles[n];
+        if (null == E[t]) return !1;
+        delete E[t].roles[n];
     },
     USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: function (e) {
         let { guildId: t, overrides: n } = e;
-        if (null == t || null == f[t]) return !1;
-        let i = f[t];
-        if (null == i || i.type !== c._.NEW_MEMBER) return !1;
-        let s = i.optInChannels ?? new Set();
+        if (null == t || null == E[t]) return !1;
+        let r = E[t];
+        if (null == r || r.type !== _._.NEW_MEMBER) return !1;
+        let s = r.optInChannels ?? new Set();
         return (
-            u.default.keys(n).forEach((e) => {
+            d.default.keys(n).forEach((e) => {
                 let t = n[e];
-                r.Lt(t.flags ?? 0, _.vv.OPT_IN_ENABLED) ? s.add(e) : s.delete(e);
+                i.Lt(t.flags ?? 0, c.vv.OPT_IN_ENABLED) ? s.add(e) : s.delete(e);
             }),
-            (i.optInChannels = s),
+            (r.optInChannels = s),
             !0
         );
     },
     GUILD_ONBOARDING_SELECT_OPTION: function (e) {
-        let { guildId: t, optionId: n, selected: r, removedOptionIds: i } = e;
-        if (null == t || null == f[t]) return !1;
-        let s = f[t];
-        if (null == s || s.type !== c._.NEW_MEMBER) return !1;
+        let { guildId: t, optionId: n, selected: i, removedOptionIds: r } = e;
+        if (null == t || null == E[t]) return !1;
+        let s = E[t];
+        if (null == s || s.type !== _._.NEW_MEMBER) return !1;
         let a = s.onboardingResponses ?? new Set();
         return (
-            null != i && i.length > 0 && i.forEach((e) => a.delete(e)),
-            r ? a.add(n) : a.delete(n),
+            null != r && r.length > 0 && r.forEach((e) => a.delete(e)),
+            i ? a.add(n) : a.delete(n),
             (s.onboardingResponses = a),
             !0
         );
     },
     GUILD_MEMBER_UPDATE_LOCAL: function (e) {
-        let { guildId: t, roles: n, flags: r } = e;
+        let { guildId: t, roles: n, flags: i } = e;
         if (null == t) return !1;
-        let i = f[t];
+        let r = E[t];
         return (
-            null != i &&
+            null != r &&
             (null != n &&
-                (i.roles = n.reduce((e, n) => {
-                    let r = a.A.getRole(t, n);
-                    return null != r && (e[n] = r), e;
+                (r.roles = n.reduce((e, n) => {
+                    let i = a.A.getRole(t, n);
+                    return null != i && (e[n] = i), e;
                 }, {})),
-            null != r && i.type === c._.NEW_MEMBER && (i.memberOptions.flags = r),
+            null != i && r.type === _._.NEW_MEMBER && (r.memberOptions.flags = i),
             !0)
         );
     },

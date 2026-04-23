@@ -1,32 +1,31 @@
-"use strict";
 n.r(t),
     n.d(t, {
-        GLOBAL_DISCOVERY_DEFAULT_TAB: () => _,
-        GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: () => f,
-        GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: () => p,
-        GLOBAL_DISCOVERY_TABS: () => u,
-        GlobalDiscoveryAnalyticsLocations: () => m,
-        GlobalDiscoveryRoutes: () => E,
-        GlobalDiscoverySearchBarState: () => h,
+        GLOBAL_DISCOVERY_DEFAULT_TAB: () => c,
+        GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: () => u,
+        GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: () => I,
+        GLOBAL_DISCOVERY_TABS: () => o,
+        GlobalDiscoveryAnalyticsLocations: () => S,
+        GlobalDiscoveryRoutes: () => T,
+        GlobalDiscoverySearchBarState: () => A,
         GlobalDiscoverySharedTabId: () => d,
         GlobalDiscoveryTab: () => l,
-        MOBILE_GLOBAL_DISCOVERY_TABS: () => c,
+        MOBILE_GLOBAL_DISCOVERY_TABS: () => E,
     });
-var r,
-    i,
-    s,
+var i,
+    r,
     a,
-    o,
-    l = (((r = {}).SERVERS = "servers"), (r.QUESTS = "quests"), (r.APPS = "apps"), r);
-let u = ["apps", "servers", "quests"],
-    c = ["servers", "quests"];
-var d = (((i = {}).MORE = "More"), i);
-let _ = "servers",
-    f = 24,
-    p = 240;
-var h = (((s = {}).DEFAULT = "default"), (s.FLOATING = "floating"), (s.COLLAPSED = "collapsed"), s),
-    E = (((a = {}).ROOT = "root"), (a.SERVERS_CATEGORY = "server_tab"), (a.SERVERS_SEARCH = "server_search"), a),
-    m =
-        (((o = {}).GUILDS_BAR_ICON = "guilds_bar_icon"),
-        (o.VIRTUAL_CURRENCY_REHEAT_COACHMARK = "virtual_currency_reheat_coachmark"),
-        o);
+    s,
+    _,
+    l = (((i = {}).SERVERS = "servers"), (i.QUESTS = "quests"), (i.APPS = "apps"), i);
+let o = ["apps", "servers", "quests"],
+    E = ["servers", "quests"];
+var d = (((r = {}).MORE = "More"), r);
+let c = "servers",
+    u = 24,
+    I = 240;
+var A = (((a = {}).DEFAULT = "default"), (a.FLOATING = "floating"), (a.COLLAPSED = "collapsed"), a),
+    T = (((s = {}).ROOT = "root"), (s.SERVERS_CATEGORY = "server_tab"), (s.SERVERS_SEARCH = "server_search"), s),
+    S =
+        (((_ = {}).GUILDS_BAR_ICON = "guilds_bar_icon"),
+        (_.VIRTUAL_CURRENCY_REHEAT_COACHMARK = "virtual_currency_reheat_coachmark"),
+        _);

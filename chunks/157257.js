@@ -1,29 +1,28 @@
-"use strict";
-let r;
-n.d(t, { A: () => u });
-var i = n(311907),
-    s = n(73153),
-    a = n(15285),
-    o = n(760751);
-class l extends i.Ay.Store {
+let i;
+n.d(t, { A: () => o });
+var r = n(17928),
+    a = n(228366),
+    s = n(328153),
+    _ = n(760751);
+class l extends r.Ay.Store {
     initialize() {
-        this.waitFor(o.A, a.Ay);
+        this.waitFor(_.A, s.Ay);
     }
     static displayName = "OverlayRunningGameStore";
     getGameForPID(e) {
         if (__OVERLAY__ || null == e) return null;
-        let t = a.Ay.getGameOrTransformedSubgameForPID(e);
-        return null != t ? o.A.findGame(t) : null;
+        let t = s.Ay.getGameOrTransformedSubgameForPID(e);
+        return null != t ? _.A.findGame(t) : null;
     }
     getGame() {
-        return r;
+        return i;
     }
 }
-let u = new l(s.h, {
+let o = new l(a.h, {
     OVERLAY_INITIALIZE: function (e) {
-        r = e.currentGame;
+        i = e.currentGame;
     },
     OVERLAY_SET_ASSOCIATED_GAME: function (e) {
-        r = e.associatedGame;
+        i = e.associatedGame;
     },
 });

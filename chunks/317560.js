@@ -1,45 +1,44 @@
-"use strict";
-n.d(t, { R: () => a, j: () => o });
-var r = n(627968),
-    i = n(192308);
-let s = "social-layer-storefront-product-details-modal",
+n.d(t, { R: () => a, j: () => s });
+var i = n(627968),
+    l = n(192308);
+let r = "social-layer-storefront-product-details-modal",
     a = (e) => {
         let {
             skuId: t,
             applicationId: a,
-            isStorefront: o,
-            giftRecipient: l,
-            giftingOrigin: u,
+            isStorefront: s,
+            giftRecipient: u,
+            giftingOrigin: o,
             analyticsLocations: c,
             analyticsContext: d,
-            onClose: _,
+            onClose: E,
         } = e;
-        (0, i.openModalLazy)(
+        (0, l.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("25412"), n.e("40396"), n.e("21044")]).then(
-                    n.bind(n, 108105),
+                let { default: e } = await Promise.all([n.e("44575"), n.e("34268"), n.e("25641")]).then(
+                    n.bind(n, 138266),
                 );
                 return (n) =>
-                    (0, r.jsx)(e, {
+                    (0, i.jsx)(e, {
                         ...n,
                         skuId: t,
                         applicationId: a,
-                        isStorefront: o,
+                        isStorefront: s,
                         analyticsLocations: c,
                         analyticsContext: d,
-                        giftRecipient: l,
-                        giftingOrigin: u,
+                        giftRecipient: u,
+                        giftingOrigin: o,
                     });
             },
             {
-                modalKey: s,
-                allowsNavigation: o,
+                modalKey: r,
+                allowsNavigation: s,
                 onCloseCallback: () => {
-                    _?.();
+                    E?.();
                 },
             },
         );
     };
-function o() {
-    (0, i.hasModalOpen)(s) && (0, i.closeModal)(s);
+function s() {
+    (0, l.hasModalOpen)(r) && (0, l.closeModal)(r);
 }

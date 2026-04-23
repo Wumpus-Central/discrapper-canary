@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { q: () => i });
-var r = n(264572).Buffer;
-function i(e) {
+n.d(t, { q: () => r });
+var i = n(264572).Buffer;
+function r(e) {
     try {
-        return r.from(JSON.stringify(e)).toString("base64");
+        return i.from(JSON.stringify(e)).toString("base64");
     } catch (e) {
         return null;
     }

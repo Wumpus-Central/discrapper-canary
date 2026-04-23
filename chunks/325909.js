@@ -1,58 +1,57 @@
-"use strict";
-n.d(t, { lQ: () => A, oP: () => m, pW: () => g });
-var r = n(311907),
-    i = n(890615),
-    s = n(721592),
+n.d(t, { lQ: () => I, oP: () => f, pW: () => g });
+var i = n(17928),
+    r = n(890615),
+    l = n(721592),
     a = n(164891),
-    o = n(961350),
-    l = n(470710),
-    u = n(734057),
-    c = n(696451),
-    d = n(834942),
-    _ = n(576705),
-    f = n(290863),
-    p = n(994500),
-    h = n(977997),
-    E = n(652215);
-function m(e) {
+    s = n(495544),
+    o = n(470710),
+    d = n(734057),
+    u = n(696451),
+    c = n(834942),
+    h = n(576705),
+    E = n(290863),
+    _ = n(994500),
+    p = n(977997),
+    A = n(652215);
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useCanRing",
         n = arguments.length > 2 ? arguments[2] : void 0,
-        i = (0, r.bG)([u.A], () => u.A.getChannel(n)),
-        s = (0, r.bG)([o.default], () => o.default.getId() === e.id),
-        a = (0, r.bG)([p.A], () => p.A.isFriend(e.id)),
-        l = (0, r.bG)([f.A], () => f.A.getStatus(e.id) === E.clD.DND && i?.guild_id != null),
-        c = i?.type,
-        d = null != c && E.kvI.CALLABLE.has(c),
-        _ = A(e, t, i);
-    return a && !l && !s && !e.bot && !e.system && !e.isProvisional && (_ || d);
+        r = (0, i.bG)([d.A], () => d.A.getChannel(n)),
+        l = (0, i.bG)([s.default], () => s.default.getId() === e.id),
+        a = (0, i.bG)([_.A], () => _.A.isFriend(e.id)),
+        o = (0, i.bG)([E.A], () => E.A.getStatus(e.id) === A.clD.DND && r?.guild_id != null),
+        u = r?.type,
+        c = null != u && A.kvI.CALLABLE.has(u),
+        h = I(e, t, r);
+    return a && !o && !l && !e.bot && !e.system && !e.isProvisional && (h || c);
 }
 function g(e) {
-    let t = E.kvI.CALLABLE.has(e.type),
-        n = e.type === E.rbe.GUILD_VOICE;
+    let t = A.kvI.CALLABLE.has(e.type),
+        n = e.type === A.rbe.GUILD_VOICE;
     if (t) {
-        let t = l.A.getCall(e.id);
-        return null != t && null != t.messageId && !l.A.isCallUnavailable(e.id);
+        let t = o.A.getCall(e.id);
+        return null != t && null != t.messageId && !o.A.isCallUnavailable(e.id);
     }
     if (n) {
         let { enabled: t } = a.A.getCurrentConfig({ guildId: e.guild_id, location: "ring" }),
-            n = h.A.getVoiceState(e.guild_id, o.default.getId());
+            n = p.A.getVoiceState(e.guild_id, s.default.getId());
         return t && null != n && n.channelId === e.id;
     }
     return !1;
 }
-function A(e) {
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useCanRingToGuildVoiceChannel",
         n = arguments.length > 2 ? arguments[2] : void 0,
-        o = (0, r.bG)([_.A], () => null != n && (0, i.A)(n, _.A)),
-        l = (0, r.bG)([c.Ay, d.A], () => {
+        s = (0, i.bG)([h.A], () => null != n && (0, r.A)(n, h.A)),
+        o = (0, i.bG)([u.Ay, c.A], () => {
             let t = n?.guild_id;
             if (null == t) return !1;
-            let r = null != c.Ay.getMember(t, e.id),
-                i = d.A.getCheck(t).canChat;
-            return r && i;
+            let i = null != u.Ay.getMember(t, e.id),
+                r = c.A.getCheck(t).canChat;
+            return i && r;
         }),
-        { needSubscriptionToAccess: u } = (0, s.A)(n?.id),
-        { enabled: f } = a.A.useExperiment({ guildId: n?.guild_id, location: t }),
-        p = n?.type === E.rbe.GUILD_VOICE;
-    return f && p && l && o && !u;
+        { needSubscriptionToAccess: d } = (0, l.A)(n?.id),
+        { enabled: E } = a.A.useExperiment({ guildId: n?.guild_id, location: t }),
+        _ = n?.type === A.rbe.GUILD_VOICE;
+    return E && _ && o && s && !d;
 }

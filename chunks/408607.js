@@ -1,13 +1,13 @@
-t.d(l, { A: () => r });
-var n = t(64700),
-    s = t(311907),
-    i = t(686956),
-    a = t(287809);
+n.d(l, { A: () => r });
+var s = n(64700),
+    i = n(17928),
+    t = n(686956),
+    a = n(287809);
 function r(e) {
-    let l = (0, s.bG)([a.default], () => a.default.getUser(e?.creator_id), [e]);
+    let l = (0, i.bG)([a.default], () => a.default.getUser(e?.creator_id), [e]);
     return (
-        n.useEffect(() => {
-            null == l && e?.creator_id != null && i.A.requestMembersById(e.guild_id, e.creator_id);
+        s.useEffect(() => {
+            null == l && e?.creator_id != null && t.A.requestMembersById(e.guild_id, e.creator_id);
         }, [e, l]),
         l
     );

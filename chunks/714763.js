@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => u }), n(321073);
-var r = n(311907),
-    i = n(73153);
+n.d(t, { A: () => d }), n(321073);
+var i = n(17928),
+    r = n(228366);
 let s = [],
     a = !1,
     o = s;
-class l extends r.Ay.PersistedStore {
+class l extends i.Ay.PersistedStore {
     static displayName = "SecureFramesPersistedStore";
     static persistKey = "SecureFramesPersistedStore";
     initialize(e) {
@@ -21,7 +21,7 @@ class l extends r.Ay.PersistedStore {
         return o;
     }
 }
-let u = new l(i.h, {
+let d = new l(r.h, {
     SECURE_FRAMES_SETTINGS_UPDATE: function (e) {
         a = e.persistentCodesEnabled;
     },

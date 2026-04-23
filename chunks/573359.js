@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(311907),
-    i = n(73153);
-let s = { isDisplayingWowMomentConfirmation: !1, isAnimated: !1 };
-class a extends r.Ay.Store {
+n.d(t, { A: () => l });
+var r = n(17928),
+    a = n(228366);
+let i = { isDisplayingWowMomentConfirmation: !1, isAnimated: !1 };
+class o extends r.Ay.Store {
     static displayName = "WowMomentConfirmationStore";
     getState() {
-        return s;
+        return i;
     }
     get isDisplayingWowMomentConfirmation() {
-        return s.isDisplayingWowMomentConfirmation;
+        return i.isDisplayingWowMomentConfirmation;
     }
     get isAnimated() {
-        return s.isAnimated;
+        return i.isAnimated;
     }
 }
-let o = new a(i.h, {
+let l = new o(a.h, {
     LOGOUT: function () {
-        s = { isDisplayingWowMomentConfirmation: !1, isAnimated: !1 };
+        i = { isDisplayingWowMomentConfirmation: !1, isAnimated: !1 };
     },
     WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION: function (e) {
         let { value: t, isAnimated: n } = e;
-        (s.isDisplayingWowMomentConfirmation = t), (s.isAnimated = n);
+        (i.isDisplayingWowMomentConfirmation = t), (i.isAnimated = n);
     },
 });

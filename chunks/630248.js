@@ -1,67 +1,67 @@
 "use strict";
-n.d(t, { A: () => g }), n(321073);
-var r = n(735438),
-    i = n.n(r),
-    s = n(311907),
-    a = n(73153),
+n.d(t, { A: () => p }), n(321073);
+var i = n(735438),
+    r = n.n(i),
+    s = n(17928),
+    a = n(228366),
     o = n(155718),
     l = n(283047),
-    u = n(933958),
-    c = n(617617);
+    d = n(933958),
+    _ = n(617617);
 n(705751);
-var d = n(355097);
-let _ = [o.kc.CHAT, o.kc.PRIMARY_ENTRY_POINT],
-    f = { pendingUsages: [] },
-    p = new l.A({ computeBonus: () => 100, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
-function h(e) {
-    f.pendingUsages.push({ key: e, timestamp: Date.now() }), p.track(e), p.compute();
+var u = n(355097);
+let c = [o.kc.CHAT, o.kc.PRIMARY_ENTRY_POINT],
+    E = { pendingUsages: [] },
+    h = new l.A({ computeBonus: () => 100, lookupKey: (e) => e, afterCompute: () => {}, numFrequentlyItems: 100 });
+function m(e) {
+    E.pendingUsages.push({ key: e, timestamp: Date.now() }), h.track(e), h.compute();
 }
-function E() {
-    let e = c.A.frecencyWithoutFetchingLatest,
+function f() {
+    let e = _.A.frecencyWithoutFetchingLatest,
         t = e.applicationFrecency?.applications ?? {};
-    p.overwriteHistory(
-        i().mapValues(t, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
-        f.pendingUsages,
+    h.overwriteHistory(
+        r().mapValues(t, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        E.pendingUsages,
     );
 }
-class m extends s.Ay.PersistedStore {
+class g extends s.Ay.PersistedStore {
     static displayName = "ApplicationFrecencyStore";
     static persistKey = "ApplicationFrecency";
     initialize(e) {
-        null != e && (f = e), this.waitFor(u.Ay, c.A), this.syncWith([c.A], E);
+        null != e && (E = e), this.waitFor(d.Ay, _.A), this.syncWith([_.A], f);
     }
     getState() {
-        return f;
+        return E;
     }
     hasPendingUsage() {
-        return f.pendingUsages.length > 0;
+        return E.pendingUsages.length > 0;
     }
     getApplicationFrecencyWithoutLoadingLatest() {
-        return p;
+        return h;
     }
     getScoreWithoutLoadingLatest(e) {
-        return p.getScore(e) ?? 0;
+        return h.getScore(e) ?? 0;
     }
     getTopApplicationsWithoutLoadingLatest() {
-        return p.frequently;
+        return h.frequently;
     }
 }
-let g = new m(a.h, {
+let p = new g(a.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t } = e;
-        if (!_.includes(t.type) || u.Ay.getLaunchState(t.applicationId)?.isLaunching) return !1;
-        h(t.applicationId);
+        if (!c.includes(t.type) || d.Ay.getLaunchState(t.applicationId)?.isLaunching) return !1;
+        m(t.applicationId);
     },
     EMBEDDED_ACTIVITY_OPEN: function (e) {
         let { applicationId: t } = e;
-        h(t);
+        m(t);
     },
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         let {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        if (t !== d.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-        f.pendingUsages = [];
+        if (t !== u.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+        E.pendingUsages = [];
     },
 });

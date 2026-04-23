@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, { u: () => o });
-var r = n(311907),
-    i = n(287809),
+var i = n(17928),
+    r = n(287809),
     s = n(20805),
     a = n(327098);
 function o(e) {
-    let t = (0, r.bG)([i.default], () => i.default.getUser(e.author_id)),
+    let t = (0, i.bG)([r.default], () => r.default.getUser(e.author_id)),
         { activity: n, embeddedActivity: o } = (0, a.A)(e);
     if (null == n)
         return {
@@ -19,19 +19,19 @@ function o(e) {
             party: void 0,
         };
     let l = n.assets?.large_image != null || n.assets?.small_image != null,
-        u = n.assets?.large_text != null || n.assets?.small_text != null,
-        c = n.name ?? ("game_name" in e.extra ? e.extra.game_name : void 0),
-        d = n.details,
-        _ = n.state,
-        f = n.party;
+        d = n.assets?.large_text != null || n.assets?.small_text != null,
+        _ = n.name ?? ("game_name" in e.extra ? e.extra.game_name : void 0),
+        u = n.details,
+        c = n.state,
+        E = n.party;
     return {
-        isRich: l || u || null != d || null != _ || null != f,
+        isRich: l || d || null != u || null != c || null != E,
         user: t,
         activity: n,
-        state: _,
-        details: d,
-        party: f,
-        appName: c,
+        state: c,
+        details: u,
+        party: E,
+        appName: _,
         embeddedActivity: o,
     };
 }

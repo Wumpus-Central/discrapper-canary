@@ -1,22 +1,22 @@
-d.d(c, { default: () => A });
-var t = d(627968);
+d.d(e, { default: () => o });
+var a = d(627968);
 d(64700);
-var a = d(87719),
-    s = d(377108),
+var t = d(87719),
+    s = d(81456),
     b = d(831318),
     n = d(985018);
-function A(e) {
-    let { premiumUpsellType: c, title: d, body: A, onClose: o, onSecondaryClick: p, ...f } = e,
-        r = (0, s.A)(c);
-    return (0, t.jsx)(b.A, {
+function o(c) {
+    let { premiumUpsellType: e, title: d, body: o, onClose: p, onSecondaryClick: f, ...r } = c,
+        A = (0, s.A)(e);
+    return (0, a.jsx)(b.A, {
         title: d,
-        subtitle: A,
-        graphic: r,
+        subtitle: o,
+        graphic: A,
         onSecondaryClick: () => {
-            p(), (0, a.x)(o);
+            f(), (0, t.x)(p);
         },
         secondaryCTA: n.intl.string(n.t.PcTCB7),
-        onClose: o,
-        ...f,
+        onClose: p,
+        ...r,
     });
 }

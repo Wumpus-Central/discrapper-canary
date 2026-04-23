@@ -1,92 +1,92 @@
-t.d(n, { A: () => S });
-var i = t(627968);
-t(64700);
-var l = t(311907),
-    d = t(314116),
-    r = t(192308),
-    s = t(442433),
-    a = t(686956),
-    c = t(202384),
-    o = t(51758),
-    u = t(931991),
-    _ = t(976860),
-    g = t(323443),
-    h = t(808728),
-    f = t(71393),
-    v = t(576705),
-    x = t(954571),
-    m = t(957565),
-    p = t(496092),
-    A = t(485394),
-    I = t(722260),
-    j = t(530209),
-    b = t(974930),
-    N = t(625142),
-    C = t(666394),
-    E = t(988794),
-    y = t(652215),
-    k = t(985018);
+n.d(t, { A: () => S });
+var l = n(627968);
+n(64700);
+var i = n(17928),
+    r = n(314116),
+    a = n(192308),
+    s = n(442433),
+    d = n(686956),
+    c = n(202384),
+    o = n(51758),
+    u = n(931991),
+    _ = n(976860),
+    g = n(790535),
+    h = n(808728),
+    f = n(71393),
+    x = n(576705),
+    v = n(954571),
+    m = n(957565),
+    p = n(496092),
+    A = n(485394),
+    I = n(722260),
+    E = n(530209),
+    j = n(974930),
+    b = n(625142),
+    N = n(666394),
+    C = n(988794),
+    y = n(652215),
+    k = n(985018);
 function S(e) {
-    let { guild: n, channel: S, guildScheduledEvent: L, isActive: T, recurrenceId: D, onActionTaken: R } = e,
-        { scheduled_start_time: w, id: G, entity_type: P, guild_id: M } = L,
-        { canManageGuildEvent: B } = (0, u.nr)(S ?? n),
-        U = B(L),
-        V = (0, A.Ay)(L),
-        O = (0, j.e)(S?.id, L.id),
-        { withinStartWindow: K } = (0, b.CC)(w),
-        H = (0, l.bG)([v.A], () => !S?.isGuildVocal() || v.A.can(y.xBc.CONNECT, S), [S]),
-        F = (0, o.H)(M),
-        z = (0, I.A)(D, G);
-    function J(e) {
-        e.stopPropagation(), (0, C.A)(G, D, M);
+    let { guild: t, channel: S, guildScheduledEvent: T, isActive: L, recurrenceId: D, onActionTaken: R } = e,
+        { scheduled_start_time: w, id: P, entity_type: G, guild_id: M } = T,
+        { canManageGuildEvent: B } = (0, u.nr)(S ?? t),
+        K = B(T),
+        V = (0, A.Ay)(T),
+        O = (0, E.e)(S?.id, T.id),
+        { withinStartWindow: U } = (0, j.CC)(w),
+        H = (0, i.bG)([x.A], () => !S?.isGuildVocal() || x.A.can(y.xBc.CONNECT, S), [S]),
+        X = (0, o.H)(M),
+        z = (0, I.A)(D, P);
+    function Y(e) {
+        e.stopPropagation(), (0, N.A)(P, D, M);
     }
-    async function W(e) {
+    async function F(e) {
         e.stopPropagation(),
-            await a.A.joinGuild(M),
+            await d.A.joinGuild(M),
             f.A.addConditionalChangeListener(() => {
-                let n;
+                let t;
                 return (
                     null == f.A.getGuild(M) ||
-                    (T || J(e),
+                    (L || Y(e),
                     e.stopPropagation(),
-                    (n = h.Ay.getDefaultChannel(M)),
-                    (0, r.closeAllModals)(),
-                    (0, _.uh)(M, n?.id),
+                    (t = h.Ay.getDefaultChannel(M)),
+                    (0, a.closeAllModals)(),
+                    (0, _.uh)(M, t?.id),
                     !1)
                 );
             });
     }
     return {
-        onDeleteClick: U
+        onDeleteClick: K
             ? function (e) {
                   e.stopPropagation(),
-                      U &&
-                          !T &&
-                          (0, d.A)({
+                      K &&
+                          !L &&
+                          (0, r.A)({
                               title: k.intl.string(k.t.R5bpin),
                               subtitle: k.intl.string(k.t.v2GWNQ),
                               confirmText: k.intl.string(k.t.oyYWHE),
-                              onConfirm: () => p.A.deleteGuildEvent(G, M),
+                              onConfirm: () => p.A.deleteGuildEvent(P, M),
                           });
               }
             : void 0,
         onContextMenu: function (e) {
             e.stopPropagation(),
-                null != n &&
+                null != t &&
                     (0, s.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            t.e("77371"),
-                            t.e("93103"),
-                            t.e("92493"),
-                            t.e("32054"),
-                        ]).then(t.bind(t, 406406));
-                        return (t) => (0, i.jsx)(e, { guildEventId: G, recurrenceId: D, channel: S, guild: n, ...t });
+                            n.e("77371"),
+                            n.e("93103"),
+                            n.e("24170"),
+                            n.e("15637"),
+                        ]).then(n.bind(n, 399893));
+                        return (n) => (0, l.jsx)(e, { guildEventId: P, recurrenceId: D, channel: S, guild: t, ...n });
                     });
         },
         onJoinClick:
-            H || F
+            H || X
                 ? function (e) {
-                      if ((e.stopPropagation(), F)) {
+                      if ((e.stopPropagation(), X)) {
                           R?.(), (0, c.Ze)(M);
                           return;
                       }
@@ -95,60 +95,60 @@ function S(e) {
                           : S?.isGuildVoice() && (p.A.joinVoiceEvent(S.guild_id, S.id), R?.());
                   }
                 : void 0,
-        onRsvpClick: J,
+        onRsvpClick: Y,
         onStartClick:
-            U && K && !z?.is_canceled
+            K && U && !z?.is_canceled
                 ? function (e) {
                       e.stopPropagation(),
-                          (0, r.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([t.e("92493"), t.e("77223"), t.e("28520")]).then(
-                                  t.bind(t, 199226),
+                          (0, a.openModalLazy)(async () => {
+                              let { default: e } = await Promise.all([n.e("24170"), n.e("69772"), n.e("28520")]).then(
+                                  n.bind(n, 914119),
                               );
-                              return (n) => (0, i.jsx)(e, { ...n, event: L, onSuccess: R });
+                              return (t) => (0, l.jsx)(e, { ...t, event: T, onSuccess: R });
                           });
                   }
                 : void 0,
         onInviteClick: function (e) {
-            if ((e.stopPropagation(), null != n)) {
-                if (!(0, N.y)(V, O, S)) {
-                    let e = (0, N.d)({ guildId: M, guildEventId: G });
+            if ((e.stopPropagation(), null != t)) {
+                if (!(0, b.y)(V, O, S)) {
+                    let e = (0, b.d)({ guildId: M, guildEventId: P });
                     (0, m.C)(e),
-                        x.default.track(y.HAw.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
+                        v.default.track(y.HAw.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
                             guild_id: M,
-                            guild_scheduled_event_id: G,
+                            guild_scheduled_event_id: P,
                         });
                     return;
                 }
-                (0, r.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([t.e("28136"), t.e("43600"), t.e("82095")]).then(
-                        t.bind(t, 234355),
+                (0, a.openModalLazy)(async () => {
+                    let { default: e } = await Promise.all([n.e("28136"), n.e("22547"), n.e("82095")]).then(
+                        n.bind(n, 1310),
                     );
-                    return (t) =>
-                        (0, i.jsx)(e, {
-                            ...t,
-                            guild: n,
+                    return (n) =>
+                        (0, l.jsx)(e, {
+                            ...n,
+                            guild: t,
                             channel: S,
-                            guildScheduledEvent: L,
+                            guildScheduledEvent: T,
                             source: y.PE1.GUILD_EVENTS,
                         });
                 });
             }
         },
         onEndClick:
-            U && P === E.Ps.EXTERNAL && T
+            K && G === C.Ps.EXTERNAL && L
                 ? function (e) {
                       e.stopPropagation(),
-                          U &&
-                              (0, d.A)({
+                          K &&
+                              (0, r.A)({
                                   title: k.intl.string(k.t.qaYzPA),
                                   subtitle: k.intl.string(k.t.bnDQ7E),
                                   confirmText: k.intl.string(k.t.mjB9pd),
                                   onConfirm: () => {
-                                      p.A.endEvent(G, M), (0, r.closeAllModals)();
+                                      p.A.endEvent(P, M), (0, a.closeAllModals)();
                                   },
                               });
                   }
                 : void 0,
-        onJoinGuildClick: W,
+        onJoinGuildClick: F,
     };
 }

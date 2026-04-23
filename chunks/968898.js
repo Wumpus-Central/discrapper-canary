@@ -1,10 +1,10 @@
-n.d(t, { CS: () => O, GQ: () => k, O0: () => D, Pl: () => j, RE: () => w, X1: () => y, we: () => M });
+n.d(t, { CS: () => O, GQ: () => k, O0: () => D, Pl: () => y, RE: () => w, X1: () => j, we: () => M });
 var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(311907),
-    o = n(827734),
+    a = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    s = n(17928),
+    o = n(661531),
     d = n(990078),
     c = n(834730),
     u = n(939249),
@@ -14,42 +14,42 @@ var i = n(627968),
     g = n(391973),
     f = n(684013),
     _ = n(964486),
-    x = n(555528),
+    x = n(38502),
     A = n(810412),
     E = n(302614),
-    S = n(395011),
+    S = n(489277),
     I = n(119191),
     v = n(581730),
     b = n(481484),
     C = n(985018),
     T = n(882387);
-function j(e) {
+function y(e) {
     let { children: t } = e;
     return (0, i.jsx)("div", {
         className: T.oB,
         children: (0, i.jsx)(c.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
     });
 }
-let y = 7e3;
+let j = 7e3;
 function w(e, t) {
     return N(
-        (0, l.bG)([x.A], () => x.A.getWidget(e), [e]),
+        (0, s.bG)([x.A], () => x.A.getWidget(e), [e]),
         t,
     );
 }
 function N(e, t) {
-    let n = r.useRef(e?.showExtrasHintTimestamp),
-        [i, a] = r.useState(!1),
-        s = (0, b.A)(),
-        l = r.useRef(void 0);
+    let n = a.useRef(e?.showExtrasHintTimestamp),
+        [i, r] = a.useState(!1),
+        l = (0, b.A)(),
+        s = a.useRef(void 0);
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             let i = e?.showExtrasHintTimestamp;
             i !== n.current &&
                 ((n.current = i),
-                a(!0),
-                (l.current = setTimeout(() => {
-                    a(!1);
+                r(!0),
+                (s.current = setTimeout(() => {
+                    r(!1);
                 }, t)));
         }, [t, e?.showExtrasHintTimestamp]),
         (0, _.Ay)(() => {
@@ -57,23 +57,23 @@ function N(e, t) {
             return (
                 null != n &&
                     Date.now() - n < t &&
-                    (a(!0),
-                    (l.current = setTimeout(() => {
-                        a(!1);
+                    (r(!0),
+                    (s.current = setTimeout(() => {
+                        r(!1);
                     }, t))),
                 () => {
-                    null != l.current && clearTimeout(l.current);
+                    null != s.current && clearTimeout(s.current);
                 }
             );
         }),
-        i && s
+        i && l
     );
 }
 let R = 8e3;
 function M(e) {
     let { children: t, widgetId: n } = e,
-        r = (0, l.bG)([x.A], () => x.A.getWidget(n), [n]);
-    return N(r, R)
+        a = (0, s.bG)([x.A], () => x.A.getWidget(n), [n]);
+    return N(a, R)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(E.A, {
@@ -81,9 +81,9 @@ function M(e) {
                       children: (0, i.jsx)(u.D, {
                           className: T.SM,
                           onClick: () => {
-                              null != r &&
+                              null != a &&
                                   (f.A.setInputLocked(!1, S.A.getTargetPID()),
-                                  (0, A.YX)(r.type, { type: A.Z5.KEYBIND_HINT, value: A.IP.OVERLAY_UNLOCKED }));
+                                  (0, A.YX)(a.type, { type: A.Z5.KEYBIND_HINT, value: A.IP.OVERLAY_UNLOCKED }));
                           },
                           children: (0, i.jsx)(c.E, {
                               variant: "text-xs/semibold",
@@ -120,14 +120,14 @@ function O(e) {
 }
 function k(e) {
     let { widgetId: t, showAllStreams: n } = e,
-        r = n ? C.intl.string(C.t.q2B3rh) : C.intl.string(C.t.JKGi6o);
+        a = n ? C.intl.string(C.t.q2B3rh) : C.intl.string(C.t.JKGi6o);
     return (0, b.A)()
         ? null
         : (0, i.jsx)(d.m, {
-              text: r,
-              "aria-label": r,
+              text: a,
+              "aria-label": a,
               children: (0, i.jsx)(u.D, {
-                  className: s()(T.x6, n && T.vu),
+                  className: l()(T.x6, n && T.vu),
                   onClick: () => {
                       (0, g.cC)(t, { showAllStreams: !n });
                   },
@@ -140,16 +140,16 @@ function k(e) {
 }
 function D(e) {
     let { id: t, pinned: n } = e,
-        r = n ? C.intl.string(C.t.cSu80j) : C.intl.string(C.t.cM8Vnm),
-        a = (0, b.A)();
+        a = n ? C.intl.string(C.t.cSu80j) : C.intl.string(C.t.cM8Vnm),
+        r = (0, b.A)();
     return (0, i.jsx)(d.m, {
-        text: r,
-        "aria-label": r,
+        text: a,
+        "aria-label": a,
         asContainer: !0,
         children: (0, i.jsx)(u.D, {
-            className: s()(T.x6, n && T.vu),
+            className: l()(T.x6, n && T.vu),
             onClick: () => {
-                a || (0, g.v0)(t);
+                r || (0, g.v0)(t);
             },
             children: (0, i.jsx)(p.q, {
                 size: "xxs",

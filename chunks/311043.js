@@ -1,62 +1,62 @@
 "use strict";
-n.d(t, { A: () => _ });
-var r = n(311907),
-    i = n(73153),
+n.d(t, { A: () => c });
+var i = n(17928),
+    r = n(228366),
     s = n(998218),
     a = n(997013);
 let o = new Map(),
     l = new Set(),
-    u = new Set(),
-    c = new Set();
-class d extends r.Ay.Store {
+    d = new Set(),
+    _ = new Set();
+class u extends i.Ay.Store {
     static displayName = "NewGameStore";
     isFetching(e) {
         return l.has(e);
     }
     didFetchingFail(e) {
-        return u.has(e);
+        return d.has(e);
     }
     getGame(e) {
         return o.get(e);
     }
     hasNoData(e) {
-        return c.has(e);
+        return _.has(e);
     }
     getCoverImageUrl(e, t) {
         let n = o.get(e)?.getCoverURL();
         if (null == n) return null;
         if (null == t) return n;
-        let r = s.A.toURLSafe(n);
-        return null == r ? n : (r.searchParams.set("size", t.size.toString()), r.toString());
+        let i = s.A.toURLSafe(n);
+        return null == i ? n : (i.searchParams.set("size", t.size.toString()), i.toString());
     }
 }
-let _ = new d(i.h, {
+let c = new u(r.h, {
     LOGOUT: function () {
-        (o = new Map()), (l = new Set()), (u = new Set()), (c = new Set());
+        (o = new Map()), (l = new Set()), (d = new Set()), (_ = new Set());
     },
     GAME_FETCH: function (e) {
         let { gameIds: t } = e;
         t.forEach((e) => {
-            l.add(e), u.delete(e);
+            l.add(e), d.delete(e);
         });
     },
     GAME_FETCH_SUCCESS: function (e) {
         let { gameIds: t, games: n } = e,
-            r = new Set(t);
+            i = new Set(t);
         t.forEach((e) => {
-            l.delete(e), u.delete(e);
+            l.delete(e), d.delete(e);
         }),
             n.forEach((e) => {
-                r.delete(e.id), o.set(e.id, new a.A(e));
+                i.delete(e.id), o.set(e.id, new a.A(e));
             }),
-            r.forEach((e) => {
-                o.has(e) || c.add(e);
+            i.forEach((e) => {
+                o.has(e) || _.add(e);
             });
     },
     GAME_FETCH_FAILURE: function (e) {
         let { gameIds: t } = e;
         t.forEach((e) => {
-            l.delete(e), u.add(e);
+            l.delete(e), d.add(e);
         });
     },
 });

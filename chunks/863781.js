@@ -1,15 +1,14 @@
-"use strict";
-var r = n(446474),
-    i = n(339626),
-    s = n(598349),
-    a = TypeError;
-e.exports = function (e, t) {
-    var n, o;
+var n = e(446474),
+    o = e(339626),
+    i = e(598349),
+    u = TypeError;
+r.exports = function (r, t) {
+    var e, a;
     if (
-        ("string" === t && i((n = e.toString)) && !s((o = r(n, e)))) ||
-        (i((n = e.valueOf)) && !s((o = r(n, e)))) ||
-        ("string" !== t && i((n = e.toString)) && !s((o = r(n, e))))
+        ("string" === t && o((e = r.toString)) && !i((a = n(e, r)))) ||
+        (o((e = r.valueOf)) && !i((a = n(e, r)))) ||
+        ("string" !== t && o((e = r.toString)) && !i((a = n(e, r))))
     )
-        return o;
-    throw new a("Can't convert object to primitive value");
+        return a;
+    throw new u("Can't convert object to primitive value");
 };

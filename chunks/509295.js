@@ -1,5 +1,5 @@
 n.d(t, { k: () => r });
-var l = n(73153),
+var l = n(228366),
     i = n(576420);
 async function r(e) {
     let { tab: t, targetId: n, isFavorite: r } = e;

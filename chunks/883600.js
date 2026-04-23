@@ -1,68 +1,67 @@
-"use strict";
-n.d(t, { A: () => T });
-var r = n(311907),
-    i = n(506774),
-    s = n(73153),
+n.d(t, { A: () => S });
+var i = n(17928),
+    r = n(506774),
+    l = n(228366),
     a = n(773669),
-    o = n(253932),
-    l = n(617617),
-    u = n(559868);
-let c = {},
-    d = {},
-    _ = null,
-    f = null,
-    p = null,
-    h = "lastChangeLogDate",
+    s = n(253932),
+    o = n(617617),
+    d = n(559868);
+let u = {},
+    c = {},
+    h = null,
     E = null,
-    m = null,
+    _ = null,
+    p = "lastChangeLogDate",
+    A = null,
+    f = null,
     g = new Set();
-function A() {
-    E = o.pK.getSetting();
+function I() {
+    A = s.pK.getSetting();
 }
-class I extends r.Ay.Store {
+class T extends i.Ay.Store {
     static displayName = "ChangelogStore";
     initialize() {
-        this.waitFor(a.default, l.A), this.syncWith([a.default], () => !0), this.syncWith([l.A], A);
-        let e = i.w.get(h);
+        this.waitFor(a.default, o.A), this.syncWith([a.default], () => !0), this.syncWith([o.A], I);
+        let e = r.w.get(p);
         if (null != e)
             try {
-                m = new Date(e);
+                f = new Date(e);
             } catch {
-                i.w.remove(h);
+                r.w.remove(p);
             }
     }
     getChangelog(e, t) {
-        return c[e]?.[t] ?? null;
+        return u[e]?.[t] ?? null;
     }
     latestChangelogId() {
-        return _;
+        return h;
     }
     getChangelogLoadStatus(e, t) {
-        return d[e]?.[t] ?? u._f.NOT_LOADED;
+        return c[e]?.[t] ?? d._f.NOT_LOADED;
     }
     hasLoadedConfig() {
-        return null != p;
+        return null != _;
     }
     getConfig() {
-        return p;
+        return _;
     }
     overrideId() {
-        return f;
-    }
-    lastSeenChangelogId() {
         return E;
     }
+    lastSeenChangelogId() {
+        return A;
+    }
     lastSeenChangelogDate() {
-        return m;
+        return f;
     }
     getStateForDebugging() {
-        return { changelogConfig: p, loadedChangelogs: d, lastSeenChangelogId: E, lastSeenChangelogDate: m };
+        return { changelogConfig: _, loadedChangelogs: c, lastSeenChangelogId: A, lastSeenChangelogDate: f };
     }
     isLocked() {
         return g.size > 0;
     }
 }
-let T = new I(s.h, {
+let S = new T(l.h, {
     CHANGE_LOG_LOCK: function (e) {
         let { key: t } = e;
         if (g.has(t)) return !1;
@@ -75,33 +74,33 @@ let T = new I(s.h, {
     },
     CHANGE_LOG_SET_CONFIG: function (e) {
         let { config: t, latestChangelogId: n } = e;
-        (_ = n), (p = t);
+        (h = n), (_ = t);
     },
     CHANGE_LOG_FETCH_SUCCESS: function (e) {
         let { id: t, changelog: n } = e;
-        null == c[t] && (c[t] = {}),
-            (c[t][n.locale] = {
+        null == u[t] && (u[t] = {}),
+            (u[t][n.locale] = {
                 id: t,
                 date: n.date,
                 body: n.content,
                 revision: 1,
                 locale: n.locale,
-                [n.asset_type === u.PW.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset,
+                [n.asset_type === d.PW.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset,
             }),
-            null == d[t] && (d[t] = {}),
-            (d[t][n.locale] = u._f.LOADED_SUCCESS);
+            null == c[t] && (c[t] = {}),
+            (c[t][n.locale] = d._f.LOADED_SUCCESS);
     },
     CHANGE_LOG_FETCH_FAILED: function (e) {
         let { id: t, locale: n } = e;
-        if (null != c[t] && null != c[t][n]) return !1;
-        null == d[t] && (d[t] = {}), (d[t][n] = u._f.LOADED_FAILURE);
+        if (null != u[t] && null != u[t][n]) return !1;
+        null == c[t] && (c[t] = {}), (c[t][n] = d._f.LOADED_FAILURE);
     },
     CHANGE_LOG_SET_OVERRIDE: function (e) {
         let { id: t } = e;
-        f = t;
+        E = t;
     },
     CHANGE_LOG_MARK_SEEN: function (e) {
         let { changelogDate: t } = e;
-        (m = new Date(t)), i.w.set(h, t);
+        (f = new Date(t)), r.w.set(p, t);
     },
 });

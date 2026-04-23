@@ -1,13 +1,12 @@
-"use strict";
-var r = n(257943),
-    i = n(503628),
-    s = n(447280);
-e.exports =
-    !r &&
-    !i(function () {
+var n = e(257943),
+    o = e(503628),
+    i = e(447280);
+r.exports =
+    !n &&
+    !o(function () {
         return (
             7 !==
-            Object.defineProperty(s("div"), "a", {
+            Object.defineProperty(i("div"), "a", {
                 get: function () {
                     return 7;
                 },

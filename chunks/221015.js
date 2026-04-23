@@ -1,17 +1,16 @@
-"use strict";
-var r = n(517737),
-    i = n(514575),
-    s = n(630017),
-    a = r(r.bind);
-e.exports = function (e, t) {
+var n = e(517737),
+    o = e(514575),
+    a = e(630017),
+    i = n(n.bind);
+r.exports = function (r, t) {
     return (
-        i(e),
+        o(r),
         void 0 === t
-            ? e
-            : s
-              ? a(e, t)
+            ? r
+            : a
+              ? i(r, t)
               : function () {
-                    return e.apply(t, arguments);
+                    return r.apply(t, arguments);
                 }
     );
 };

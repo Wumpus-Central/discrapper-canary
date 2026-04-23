@@ -1,75 +1,74 @@
-"use strict";
 n.d(t, {
-    $: () => i,
+    $: () => r,
     Ae: () =>
         function e(t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { limit: 200, hasBailedAst: !1 };
             if (Array.isArray(t)) {
-                let i = t.length;
-                for (let s = 0; s < i; s++) {
-                    let { ast: i } = e(t[s], n);
-                    if (i === r) {
-                        (n.hasBailedAst = !0), (t.length = s);
+                let r = t.length;
+                for (let a = 0; a < r; a++) {
+                    let { ast: r } = e(t[a], n);
+                    if (r === i) {
+                        (n.hasBailedAst = !0), (t.length = a);
                         break;
                     }
-                    t[s] = i;
+                    t[a] = r;
                 }
             } else if ("text" !== t.type) {
-                if (((n.limit -= 1), n.limit <= 0)) return (n.hasBailedAst = !0), { ast: r, hasBailedAst: !0 };
+                if (((n.limit -= 1), n.limit <= 0)) return (n.hasBailedAst = !0), { ast: i, hasBailedAst: !0 };
                 if (Array.isArray(t.content)) {
-                    let { ast: r } = e(t.content, n);
-                    t.content = r;
+                    let { ast: i } = e(t.content, n);
+                    t.content = i;
                 }
                 "list" === t.type &&
                     (t.items = t.items.map((t) => {
-                        let { ast: r } = e(t, n);
-                        return r;
+                        let { ast: i } = e(t, n);
+                        return i;
                     }));
             }
             return { ast: t, hasBailedAst: n.hasBailedAst };
         },
     rI: () =>
         function e(t, n) {
-            let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+            let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
             if (Array.isArray(n)) {
-                let i = n.length,
-                    s = [];
-                for (let a = 0; a < i; a++)
+                let r = n.length,
+                    a = [];
+                for (let l = 0; l < r; l++)
                     !(function (e, t) {
                         if (Array.isArray(t)) {
                             let { length: n } = t;
-                            for (let r = 0; r < n; r++) e.push(t[r]);
+                            for (let i = 0; i < n; i++) e.push(t[i]);
                             return;
                         }
                         e.push(t);
-                    })(s, e(t, n[a], r));
+                    })(a, e(t, n[l], i));
                 return (
                     t.isSlate ||
                         (function (e) {
                             let t = null;
                             for (let n = 0; n < e.length; n++) {
-                                let r = e[n];
-                                if (null == t || "text" != t.type || t.type != r.type) {
-                                    t = r;
+                                let i = e[n];
+                                if (null == t || "text" != t.type || t.type != i.type) {
+                                    t = i;
                                     continue;
                                 }
-                                (t.content += r.content), e.splice(n, 1), n--;
+                                (t.content += i.content), e.splice(n, 1), n--;
                             }
-                        })(s),
-                    s
+                        })(a),
+                    a
                 );
             }
             return (null != n.content && (n.content = e(t, n.content, n)),
             "inlineCode" === n.type && delete n.validationChildContent,
             "list" === n.type && (n.items = n.items.map((n) => (Array.isArray(n) ? e(t, n, null) : n))),
-            null != r && n.type === r.type)
+            null != i && n.type === i.type)
                 ? n.content
                 : n;
         },
 }),
     n(321073);
-let r = {};
-function i(e) {
+let i = {};
+function r(e) {
     return (function e(t) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
         return (

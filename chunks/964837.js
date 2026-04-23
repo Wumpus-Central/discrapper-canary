@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     uv: "titleBar__421ed",
     Tg: "withFrame__421ed titleBar__421ed",

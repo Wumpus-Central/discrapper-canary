@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { A: () => l });
-var r = n(311907),
-    i = n(73153);
+var i = n(17928),
+    r = n(228366);
 let s = !1,
     a = !1;
-class o extends r.Ay.DeviceSettingsStore {
+class o extends i.Ay.DeviceSettingsStore {
     static displayName = "StageMusicStore";
     static persistKey = "StageMusicStore";
     initialize(e) {
@@ -20,7 +20,7 @@ class o extends r.Ay.DeviceSettingsStore {
         return s;
     }
 }
-let l = new o(i.h, {
+let l = new o(r.h, {
     STAGE_MUSIC_MUTE: function (e) {
         let { muted: t } = e;
         (s = t), (a = !1);

@@ -1,7 +1,6 @@
-"use strict";
-var r = n(647055);
-e.exports =
+var n = e(647055);
+r.exports =
     Array.isArray ||
-    function (e) {
-        return "Array" === r(e);
+    function (r) {
+        return "Array" === n(r);
     };

@@ -4,7 +4,7 @@ var n = i(627968),
     s = i(503698),
     a = i.n(s),
     r = i(419354),
-    d = i(311907),
+    d = i(17928),
     o = i(866323),
     c = i(765178),
     u = i(834730),
@@ -13,8 +13,8 @@ var n = i(627968),
     h = i(775602),
     x = i(159001),
     p = i(933725),
-    A = i(203982),
-    f = i(587600),
+    A = i(625494),
+    f = i(56348),
     j = i(207803),
     I = i(183555),
     v = i(289173),
@@ -36,8 +36,8 @@ function k(e) {
         [_, M] = l.useState(!1),
         {
             widgetsToSave: P,
-            changedWidgets: U,
-            removedWidgets: D,
+            changedWidgets: D,
+            removedWidgets: U,
             hasUnsavedWidgets: F,
             canSaveWidgets: W,
         } = (function () {
@@ -121,7 +121,7 @@ function k(e) {
                 }
             if (F)
                 try {
-                    for (let e of (await E.A.savePendingWidgets(P), U)) {
+                    for (let e of (await E.A.savePendingWidgets(P), D)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                         (0, v.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.applicationId)),
@@ -129,12 +129,12 @@ function k(e) {
                             (t.numCharactersCommentary = e.games.reduce((e, t) => e + (t.comment?.length ?? 0), 0))),
                             s(t);
                     }
-                    for (let e of D) s({ widgetEdited: e.type, isWidgetRemoved: !0 });
+                    for (let e of U) s({ widgetEdited: e.type, isWidgetRemoved: !0 });
                 } catch {
                     e = !1;
                 }
             e ? (0, m.x8)() : (0, b.XA)(N.jM.PROFILE_SAVE_GENERIC_FAILURE), M(!1);
-        }, [B, F, P, U, D, s, i]);
+        }, [B, F, P, D, U, s, i]);
     return (
         l.useEffect(() => {
             let e = null;

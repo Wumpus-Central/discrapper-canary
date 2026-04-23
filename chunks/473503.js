@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { OA: () => E, kB: () => g });
-var r = n(735438),
-    i = n.n(r),
-    s = n(311907),
-    a = n(562465),
-    o = n(73153),
+n.d(t, { OA: () => f, kB: () => p });
+var i = n(735438),
+    r = n.n(i),
+    s = n(17928),
+    a = n(636537),
+    o = n(228366),
     l = n(734057),
-    u = n(661191),
-    c = n(207777),
-    d = n(969043);
+    d = n(935208),
+    _ = n(207777),
+    u = n(969043);
 n(246943);
-var _ = n(652215);
-class f {
+var c = n(652215);
+class E {
     _set;
     _defaultValueFunc;
     constructor(e) {
@@ -24,16 +24,16 @@ class f {
         delete this._set[e];
     }
     hasNext() {
-        return !i().isEmpty(this._set);
+        return !r().isEmpty(this._set);
     }
     next() {
-        return u.default.keys(this._set)[0];
+        return d.default.keys(this._set)[0];
     }
 }
-let p = new (class {
+let h = new (class {
         requested;
         constructor() {
-            this.requested = new f(() => new Set());
+            this.requested = new E(() => new Set());
         }
         request(e, t) {
             this.requested.get(e).add(t);
@@ -43,7 +43,7 @@ let p = new (class {
         }
         finishRequesting(e, t) {
             let n = this.requested.get(e);
-            t.forEach((e) => n.delete(e)), p.compact(e);
+            t.forEach((e) => n.delete(e)), h.compact(e);
         }
         getRequested(e) {
             return this.requested.get(e);
@@ -61,54 +61,54 @@ let p = new (class {
             0 === this.requested.get(e).size && this.requested.delete(e);
         }
     })(),
-    h = null;
-function E(e) {
-    let { loaded: t, firstMessage: n } = (0, s.cf)([d.A], () => d.A.getMessage(e.id)),
-        r = (0, s.bG)([l.A], () => l.A.getChannel(e.parent_id));
+    m = null;
+function f(e) {
+    let { loaded: t, firstMessage: n } = (0, s.cf)([u.A], () => u.A.getMessage(e.id)),
+        i = (0, s.bG)([l.A], () => l.A.getChannel(e.parent_id));
     return (
-        null == r ||
+        null == i ||
             t ||
             null != n ||
             (function (e, t) {
-                if (p.hasRequested(e.id, t)) return;
-                let n = (0, c.S)(e.id),
-                    r = n.findIndex((e) => e === t),
-                    i = n.slice(r, r + 5).filter((t) => !p.hasRequested(e.id, t));
-                m(e, i);
-            })(r, e.id),
+                if (h.hasRequested(e.id, t)) return;
+                let n = (0, _.S)(e.id),
+                    i = n.findIndex((e) => e === t),
+                    r = n.slice(i, i + 5).filter((t) => !h.hasRequested(e.id, t));
+                g(e, r);
+            })(i, e.id),
         { loaded: t, firstMessage: n }
     );
 }
-function m(e, t) {
+function g(e, t) {
     let n = !1;
     t.forEach((t) => {
-        let { loaded: r, firstMessage: i } = d.A.getMessage(t);
-        r || null != i || (p.request(e.id, t), (n = !0));
+        let { loaded: i, firstMessage: r } = u.A.getMessage(t);
+        i || null != r || (h.request(e.id, t), (n = !0));
     }),
-        n && null == h && (h = setTimeout(A, 0));
+        n && null == m && (m = setTimeout(A, 0));
 }
-function g(e) {
-    m(e, (0, c.S)(e.id).slice(0, 10));
+function p(e) {
+    g(e, (0, _.S)(e.id).slice(0, 10));
 }
 async function A() {
     try {
-        for (; p.hasNext(); ) await I(p.next());
+        for (; h.hasNext(); ) await I(h.next());
     } finally {
-        h = null;
+        m = null;
     }
 }
 async function I(e) {
-    let t = p.getNextBatch(e, 10);
+    let t = h.getNextBatch(e, 10);
     try {
         if (0 === t.length) return;
         let n = l.A.getChannel(e)?.guild_id;
         if (null == n) return;
         let {
-            body: { threads: r },
-        } = await a.Bo.post({ url: _.Rsh.FORUM_POSTS(e), body: { thread_ids: t }, rejectWithError: !0 });
-        o.h.dispatch({ type: "LOAD_FORUM_POSTS", guildId: n, threads: r });
+            body: { threads: i },
+        } = await a.Bo.post({ url: c.Rsh.FORUM_POSTS(e), body: { thread_ids: t }, rejectWithError: !0 });
+        o.h.dispatch({ type: "LOAD_FORUM_POSTS", guildId: n, threads: i });
     } catch (e) {
     } finally {
-        p.finishRequesting(e, t);
+        h.finishRequesting(e, t);
     }
 }

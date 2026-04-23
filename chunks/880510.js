@@ -1,24 +1,24 @@
-n.d(t, { default: () => E });
+n.d(t, { default: () => R });
 var i = n(627968),
     s = n(64700),
-    l = n(311907),
+    l = n(17928),
     o = n(189213),
     a = n(243721),
     r = n(106236),
     d = n(452027),
     h = n(331322),
-    u = n(954197),
+    u = n(144228),
     c = n(827343),
-    p = n(117178),
-    g = n(848222),
-    m = n(430452),
+    p = n(635242),
+    g = n(625841),
+    m = n(969341),
     _ = n(824744),
     v = n(319437),
     C = n(652215),
     b = n(731854),
     f = n(985018),
-    A = n(818050);
-class x extends s.PureComponent {
+    x = n(818050);
+class A extends s.PureComponent {
     handleAutoThresholdChange = (e) => {
         let { onThresholdChange: t, threshold: n } = this.props;
         t?.(n, e);
@@ -51,7 +51,7 @@ class x extends s.PureComponent {
     }
     render() {
         return (0, i.jsx)("div", {
-            className: A.SX,
+            className: x.SX,
             children: (0, i.jsxs)(d.D, {
                 label: f.intl.string(f.t["sqUm+k"]),
                 role: "group",
@@ -67,10 +67,10 @@ function D(e) {
             inputVolume: o,
             outputVolume: a,
             inputMode: v,
-            shortcut: A,
+            shortcut: x,
             vadThreshold: D,
-            vadAutoThreshold: E,
-            delay: R,
+            vadAutoThreshold: R,
+            delay: E,
         } = (0, l.cf)([m.Ay], () => ({
             inputVolume: m.Ay.getInputVolume(),
             outputVolume: m.Ay.getOutputVolume(),
@@ -93,24 +93,24 @@ function D(e) {
                           (0, i.jsx)(d.D, {
                               label: f.intl.string(f.t.YkDjVM),
                               children: (0, i.jsx)(p.A, {
-                                  defaultValue: A,
+                                  defaultValue: x,
                                   onChange: (e) => c.A.setMode(v, { shortcut: e }, n),
                               }),
                           }),
                           (0, i.jsx)(r.A, {
                               label: f.intl.string(f.t.y0ShVt),
-                              initialValue: R,
+                              initialValue: E,
                               onValueChange: (e) => c.A.setMode(v, { delay: e }, n),
                               onValueRender: (e) => (e >= 1e3 ? ((e /= 1e3), `${e.toFixed(2)}s`) : `${e.toFixed(0)}ms`),
                               maxValue: C.IjB,
                           }),
                       ],
                   })
-                : (0, i.jsx)(x, {
+                : (0, i.jsx)(A, {
                       speaking: s,
                       inputMode: v,
                       threshold: D,
-                      autoThreshold: E,
+                      autoThreshold: R,
                       onThresholdChange: (e, t) => c.A.setMode(v, { threshold: e, autoThreshold: t }, n),
                   })),
         (0, i.jsxs)(h.B, {
@@ -148,7 +148,7 @@ function D(e) {
         })
     );
 }
-function E(e) {
+function R(e) {
     return (
         (0, v.A)(() => {
             null != C.QCW && e.onClose();

@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(64700),
-    i = n(139675);
-let s = ["embedded_cover", "embedded_background"];
-function a(e) {
-    let { applicationId: t, size: n, names: a = s, format: o = "png" } = e,
-        [l, u] = r.useState(null),
-        [c, d] = r.useState(!0),
-        _ = (0, i.uD)(t, l, n, o),
-        f = r.useRef(a);
+n.d(t, { A: () => l });
+var i = n(64700),
+    r = n(970928);
+let a = ["embedded_cover", "embedded_background"];
+function l(e) {
+    let { applicationId: t, size: n, names: l = a, format: s = "png" } = e,
+        [o, u] = i.useState(null),
+        [_, E] = i.useState(!0),
+        A = (0, r.uD)(t, o, n, s),
+        c = i.useRef(l);
     return (
-        r.useEffect(() => {
-            f.current = a;
+        i.useEffect(() => {
+            c.current = l;
         }),
-        r.useEffect(() => {
-            let { current: e } = f;
+        i.useEffect(() => {
+            let { current: e } = c;
             null != t &&
-                (0, i.Y)(t).then((t) => {
-                    for (let [n, r] of (d(!1), Object.entries(t)))
-                        if (null != r && "" !== r.id && e.includes(r.name)) return void u(r.id);
+                (0, r.Y)(t).then((t) => {
+                    for (let [n, i] of (E(!1), Object.entries(t)))
+                        if (null != i && "" !== i.id && e.includes(i.name)) return void u(i.id);
                 });
         }, [t]),
-        { url: _, state: c ? "loading" : null != _ ? "fetched" : "not-found" }
+        { url: A, state: _ ? "loading" : null != A ? "fetched" : "not-found" }
     );
 }

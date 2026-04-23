@@ -1,23 +1,23 @@
 t.d(s, { A: () => S });
 var i = t(627968),
     l = t(64700),
-    n = t(311907),
+    n = t(17928),
     a = t(590180),
     r = t(139146),
-    u = t(841e3),
-    d = t(574499),
+    u = t(113265),
+    d = t(152472),
     o = t(274681),
     c = t(471505),
-    m = t(961350),
+    m = t(495544),
     h = t(661492),
-    f = t(810809),
+    f = t(33190),
     g = t(652215),
     I = t(985018),
-    A = t(948277);
+    v = t(948277);
 function p(e) {
     return { top: e.iconInset, insetInlineEnd: e.iconInset };
 }
-function v(e) {
+function x(e) {
     let { spec: s, sku: t, location: l, onError: a, ...u } = e,
         d = (0, n.bG)([m.default], () => m.default.getId()),
         {
@@ -28,7 +28,7 @@ function v(e) {
         } = (0, c.G)({ userId: d, sku: t, location: l, onError: a }),
         I = b();
     return (0, i.jsx)("div", {
-        className: A.U,
+        className: v.U,
         style: p(s),
         children: (0, i.jsx)(r._, {
             skuId: t.id,
@@ -43,7 +43,7 @@ function v(e) {
         }),
     });
 }
-function x(e) {
+function A(e) {
     let { spec: s, sku: t, location: l, onError: a, ...u } = e,
         c = (0, n.bG)([m.default], () => m.default.getId()),
         {
@@ -52,9 +52,9 @@ function x(e) {
             isFirstTimeWishlister: g,
             handleToggle: I,
         } = (0, d.c)({ userId: c, skuId: t.id, location: l, onError: a, onAddSuccess: o.w }),
-        v = b();
+        x = b();
     return (0, i.jsx)("div", {
-        className: A.U,
+        className: v.U,
         style: p(s),
         children: (0, i.jsx)(r._, {
             skuId: t.id,
@@ -64,7 +64,7 @@ function x(e) {
             isBusy: f,
             isFirstTimeWishlister: g,
             onClick: I,
-            tooltipConfig: v,
+            tooltipConfig: x,
             ...u,
         }),
     });
@@ -76,26 +76,26 @@ function j(e) {
             isWishlisted: c,
             isBusy: f,
             isFirstTimeWishlister: g,
-            handleToggle: v,
-            specificProductOrVariant: x,
+            handleToggle: x,
+            specificProductOrVariant: A,
             isPurchased: j,
         } = (0, u.z)({ userId: o, product: t, location: l, onError: a }),
-        E = (0, h.qq)(x),
+        E = (0, h.qq)(A),
         N = j && !c,
         S = !E || N,
         _ = b(E && N ? I.intl.string(I.t.nKA6v8) : void 0);
     return (0, i.jsx)("div", {
-        className: A.U,
+        className: v.U,
         style: p(s),
         children: (0, i.jsx)(r._, {
-            skuId: x.skuId,
-            productName: x.name,
+            skuId: A.skuId,
+            productName: A.name,
             size: s.wishlistButtonSize,
             disabled: S,
             isWishlisted: c,
             isBusy: f,
             isFirstTimeWishlister: g,
-            onClick: v,
+            onClick: x,
             tooltipConfig: _,
             ...d,
         }),
@@ -111,11 +111,11 @@ function N(e) {
     if (!t) return l;
     switch (s.productLine) {
         case g.EZt.SOCIAL_LAYER_GAME_ITEM:
-            return (0, i.jsx)(v, { sku: s, ...n });
+            return (0, i.jsx)(x, { sku: s, ...n });
         case g.EZt.COLLECTIBLES:
             return (0, i.jsx)(E, { sku: s, replacedElement: l, ...n });
         case g.EZt.PREMIUM:
-            return (0, i.jsx)(x, { sku: s, ...n });
+            return (0, i.jsx)(A, { sku: s, ...n });
         default:
             return l;
     }

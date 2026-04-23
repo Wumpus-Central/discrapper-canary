@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nM: "row__5adc3",
     km: "havenWrapper__5adc3",

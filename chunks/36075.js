@@ -1,46 +1,46 @@
 "use strict";
-n.d(t, { CR: () => h, RM: () => p, Wq: () => _, v5: () => f }), n(321073);
-var r = n(627968),
-    i = n(64700),
+n.d(t, { CR: () => m, RM: () => h, Wq: () => c, v5: () => E }), n(321073);
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(308050),
-    l = n(311907),
-    u = n(775602),
-    c = n(652215),
-    d = n(979282);
-function _(e) {
-    let { colorStrings: t, useReducedMotion: n, roleStyle: r, includeConvenienceGlow: i, animateGradient: s } = e,
-        o = "username" === r,
-        l = o && i,
-        u = t?.primaryColor ?? c.TpD,
-        _ = {
-            "--custom-gradient-color-1": u,
-            "--custom-gradient-color-2": t?.secondaryColor ?? u,
-            "--custom-gradient-color-3": t?.tertiaryColor ?? u,
+    l = n(17928),
+    d = n(775602),
+    _ = n(652215),
+    u = n(979282);
+function c(e) {
+    let { colorStrings: t, useReducedMotion: n, roleStyle: i, includeConvenienceGlow: r, animateGradient: s } = e,
+        o = "username" === i,
+        l = o && r,
+        d = t?.primaryColor ?? _.TpD,
+        c = {
+            "--custom-gradient-color-1": d,
+            "--custom-gradient-color-2": t?.secondaryColor ?? d,
+            "--custom-gradient-color-3": t?.tertiaryColor ?? d,
         },
-        f = t?.tertiaryColor != null ? d.a7 : d.oD;
+        E = t?.tertiaryColor != null ? u.a7 : u.oD;
     return {
-        gradientStyle: _,
-        gradientClassname: a()(f, { [d.lC]: o, [d.FQ]: l, [d.Xy]: l && s, [d.yJ]: !n && "dot" === r, [d.q]: s && o }),
-        gradientGlowClassname: a()(f, d.uk, { [d.lC]: o, [d.q]: s && o, [d.yb]: o && s }),
+        gradientStyle: c,
+        gradientClassname: a()(E, { [u.lC]: o, [u.FQ]: l, [u.Xy]: l && s, [u.yJ]: !n && "dot" === i, [u.q]: s && o }),
+        gradientGlowClassname: a()(E, u.uk, { [u.lC]: o, [u.q]: s && o, [u.yb]: o && s }),
     };
 }
-function f(e) {
-    let { colorStrings: t, roleStyle: n, includeConvenienceGlow: r, animateGradient: s } = e,
-        a = (0, l.bG)([u.A], () => u.A.useReducedMotion);
-    return i.useMemo(
-        () => _({ colorStrings: t, useReducedMotion: a, roleStyle: n, includeConvenienceGlow: r, animateGradient: s }),
-        [t, n, r, a, s],
+function E(e) {
+    let { colorStrings: t, roleStyle: n, includeConvenienceGlow: i, animateGradient: s } = e,
+        a = (0, l.bG)([d.A], () => d.A.useReducedMotion);
+    return r.useMemo(
+        () => c({ colorStrings: t, useReducedMotion: a, roleStyle: n, includeConvenienceGlow: i, animateGradient: s }),
+        [t, n, i, a, s],
     );
 }
-function p(e, t, n) {
-    return i.useMemo(() => {
-        let i = [e, t, n].filter((e) => null != e),
-            s = i.length >= 2,
-            a = i.length > 1 ? 100 / (i.length - 1) : 0,
-            o = i.map((e, t) => (0, r.jsx)("stop", { offset: `${t * a}%`, style: { stopColor: e } }, t)),
-            l = i.join("");
+function h(e, t, n) {
+    return r.useMemo(() => {
+        let r = [e, t, n].filter((e) => null != e),
+            s = r.length >= 2,
+            a = r.length > 1 ? 100 / (r.length - 1) : 0,
+            o = r.map((e, t) => (0, i.jsx)("stop", { offset: `${t * a}%`, style: { stopColor: e } }, t)),
+            l = r.join("");
         return {
             hasGradient: s,
             stops: o,
@@ -49,17 +49,17 @@ function p(e, t, n) {
         };
     }, [e, t, n]);
 }
-function h(e, t) {
-    return i.useMemo(() => {
+function m(e, t) {
+    return r.useMemo(() => {
         let n;
         if (null == e) return e;
-        let i = (0, o.A)(),
+        let r = (0, o.A)(),
             s = [],
             l = 0;
-        for (; null !== (n = i.exec(e)); )
+        for (; null !== (n = r.exec(e)); )
             n.index > l && s.push(e.slice(l, n.index)),
-                s.push((0, r.jsx)("span", { className: a()(d.Zg, t), children: n[0] }, `emoji${n.index}`)),
-                (l = i.lastIndex);
+                s.push((0, i.jsx)("span", { className: a()(u.Zg, t), children: n[0] }, `emoji${n.index}`)),
+                (l = r.lastIndex);
         return l < e.length && s.push(e.slice(l)), s;
     }, [e, t]);
 }

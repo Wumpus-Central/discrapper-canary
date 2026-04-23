@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { A: () => a, a: () => r }), n(134528), n(947204);
-let r = "NativeAppStartup";
-function i(e, t, n, r, i) {
-    return `${e}:${t}:${n}:${r}:${i}`;
+n.d(t, { A: () => a, a: () => i }), n(134528), n(947204);
+let i = "NativeAppStartup";
+function r(e, t, n, i, r) {
+    return `${e}:${t}:${n}:${i}:${r}`;
 }
-class s {
+class l {
     channelsFetchStarted = new Set();
     channelsFetchedWithLocalMessages = new Set();
     channelsFetchedNetwork = new Set();
     fetchLogs = new Map();
-    recordChannelFetchStart(e, t, n, r, s) {
+    recordChannelFetchStart(e, t, n, i, l) {
         this.channelsFetchStarted.add(e),
-            this.fetchLogs.set(i(e, t, n ?? null, r ?? null, s), {
+            this.fetchLogs.set(r(e, t, n ?? null, i ?? null, l), {
                 channelId: e,
                 before: n ?? null,
-                after: r ?? null,
-                limit: s,
+                after: i ?? null,
+                limit: l,
                 startTime: Date.now(),
             });
     }
-    recordChannelFetchedLocal(e, t, n, r, s, a) {
+    recordChannelFetchedLocal(e, t, n, i, l, a) {
         this.channelsFetchedWithLocalMessages.add(e);
-        let o = this.fetchLogs.get(i(e, t, n ?? null, r ?? null, s));
-        null != o && (o.localMessageDetails = { loadTime: Date.now(), count: a.length, lastMessageId: a.at(-1)?.id });
+        let s = this.fetchLogs.get(r(e, t, n ?? null, i ?? null, l));
+        null != s && (s.localMessageDetails = { loadTime: Date.now(), count: a.length, lastMessageId: a.at(-1)?.id });
     }
-    recordChannelFetchedNetwork(e, t, n, r, s, a) {
+    recordChannelFetchedNetwork(e, t, n, i, l, a) {
         this.channelsFetchedNetwork.add(e);
-        let o = this.fetchLogs.get(i(e, t, n ?? null, r ?? null, s));
-        null != o && (o.networkMessageDetails = { loadTime: Date.now(), count: a.length, lastMessageId: a.at(-1)?.id });
+        let s = this.fetchLogs.get(r(e, t, n ?? null, i ?? null, l));
+        null != s && (s.networkMessageDetails = { loadTime: Date.now(), count: a.length, lastMessageId: a.at(-1)?.id });
     }
 }
-let a = new s();
+let a = new l();
