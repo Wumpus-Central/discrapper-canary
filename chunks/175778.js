@@ -1,3 +1,3 @@
-e.exports = JSON.parse(
-    '{"sD3eKQ":["sD3eKQ"],"bVwQhX":["bVwQhX"],"Z2Ipu/":["Z2Ipu/"],"0mQ2U6":["0mQ2U6"],"EL3rU4":["EL3rU4"],"0vY+ie":["0vY+ie"],"CubeLC":["CubeLC"],"Plwzgf":["Plwzgf"],"UVL9tD":["UVL9tD"],"620Iwi":["620Iwi"],"2iX+XV":["2iX+XV"]}',
+s.exports = JSON.parse(
+    '{"sD3eKQ":["キャンセル"],"bVwQhX":["削除"],"Z2Ipu/":["削除"],"0mQ2U6":["Xbox Game Pass"],"EL3rU4":["無料で入手"],"0vY+ie":["Nitro をゲット"],"CubeLC":["見に行く"],"Plwzgf":["管理"],"UVL9tD":["Xbox Game Pass"],"620Iwi":["Nitro をゲット"],"2iX+XV":["アップグレード"]}',
 );

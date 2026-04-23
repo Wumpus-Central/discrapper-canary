@@ -1,3 +1,3 @@
-e.exports = JSON.parse(
-    '{"sD3eKQ":["sD3eKQ"],"bVwQhX":["bVwQhX"],"Z2Ipu/":["Z2Ipu/"],"0mQ2U6":["0mQ2U6"],"EL3rU4":["EL3rU4"],"0vY+ie":["0vY+ie"],"CubeLC":["CubeLC"],"Plwzgf":["Plwzgf"],"UVL9tD":["UVL9tD"],"620Iwi":["620Iwi"],"2iX+XV":["2iX+XV"]}',
+a.exports = JSON.parse(
+    '{"sD3eKQ":["Avbryt"],"bVwQhX":["Ta bort"],"Z2Ipu/":["Ta bort"],"0mQ2U6":["Xbox Game Pass"],"EL3rU4":["H\xe4mta gratis"],"0vY+ie":["Skaffa Nitro"],"CubeLC":["Jag vill g\xe5 dit"],"Plwzgf":["Hantera"],"UVL9tD":["Xbox Game Pass"],"620Iwi":["Skaffa Nitro"],"2iX+XV":["Uppgradera"]}',
 );

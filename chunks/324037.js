@@ -1,3 +1,3 @@
-e.exports = JSON.parse(
-    '{"sD3eKQ":["sD3eKQ"],"bVwQhX":["bVwQhX"],"Z2Ipu/":["Z2Ipu/"],"0mQ2U6":["0mQ2U6"],"EL3rU4":["EL3rU4"],"0vY+ie":["0vY+ie"],"CubeLC":["CubeLC"],"Plwzgf":["Plwzgf"],"UVL9tD":["UVL9tD"],"620Iwi":["620Iwi"],"2iX+XV":["2iX+XV"]}',
+s.exports = JSON.parse(
+    '{"sD3eKQ":["취소"],"bVwQhX":["제거하기"],"Z2Ipu/":["제거하기"],"0mQ2U6":["Xbox Game Pass"],"EL3rU4":["무료로 받기"],"0vY+ie":["Nitro 구독하기"],"CubeLC":["거기로 갈래요"],"Plwzgf":["관리"],"UVL9tD":["Xbox Game Pass"],"620Iwi":["Nitro 구독하기"],"2iX+XV":["업그레이드"]}',
 );

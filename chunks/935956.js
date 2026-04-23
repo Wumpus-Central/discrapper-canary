@@ -1,43 +1,43 @@
-n.d(t, { A: () => d, u: () => T });
+n.d(t, { A: () => R, u: () => N });
 var i = n(627968);
 n(64700);
 var l = n(503698),
     r = n.n(l),
     s = n(534514),
-    a = n(715547),
-    E = n(744064),
-    o = n(254748),
-    c = n(256358),
-    _ = n(985018),
-    A = n(367791),
-    u = n(102338),
-    I = n(672193);
-let T = "croissant";
-function d(e) {
+    a = n(31502),
+    E = n(256599),
+    o = n(385337),
+    c = n(744064),
+    _ = n(254748),
+    A = n(256358),
+    u = n(985018),
+    I = n(367791),
+    T = n(102338),
+    d = n(672193);
+let N = "croissant";
+function R(e) {
     let { glowingSectionId: t } = e,
         n = (0, a.l)("premium_subscriber_home_rewards"),
-        { logitechCard: l, steelseriesCard: d } = (0, c.A)();
+        { logitechCard: l, steelseriesCard: R } = (0, A.A)();
     if (!n) return null;
-    let [N, R] = [null, null];
-    if (null == N || null == R) return null;
-    let O = null != l || null != d;
-    return (0, i.jsx)(o.A, {
-        id: T,
-        sectionClassName: r()(u.uW, u.Uv, u.qr),
+    let O = null != l || null != R;
+    return (0, i.jsx)(_.A, {
+        id: N,
+        sectionClassName: r()(T.uW, T.Uv, T.qr),
         heading: (0, i.jsx)(s.D, {
             variant: "display-sm",
-            className: r()(I.R_, A.U6),
-            children: _.intl.string(_.t.NG1e6l),
+            className: r()(d.R_, I.U6),
+            children: u.intl.string(u.t.NG1e6l),
         }),
-        beforeGrid: (0, i.jsx)("div", { className: A.JE, children: (0, i.jsx)(N, { glowing: t === T }) }),
+        beforeGrid: (0, i.jsx)("div", { className: I.JE, children: (0, i.jsx)(E.A, { glowing: t === N }) }),
         grid: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(R, { containerClassName: I.Nr }),
+                (0, i.jsx)(o.A, { containerClassName: d.Nr }),
                 O
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              null != l && (0, i.jsx)(E.S, { ...l, containerClassName: I.Nr }),
-                              null != d && (0, i.jsx)(E.S, { ...d, containerClassName: I.Nr }),
+                              null != l && (0, i.jsx)(c.S, { ...l, containerClassName: d.Nr }),
+                              null != R && (0, i.jsx)(c.S, { ...R, containerClassName: d.Nr }),
                           ],
                       })
                     : null,

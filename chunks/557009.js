@@ -1,24 +1,12 @@
 "use strict";
-n.d(t, { A: () => _ });
-var i,
-    r =
-        (((i = {})[(i.UNKNOWN = 0)] = "UNKNOWN"),
-        (i[(i.FULFILLMENT_NOT_NEEDED = 1)] = "FULFILLMENT_NOT_NEEDED"),
-        (i[(i.FULFILLMENT_NEEDED = 2)] = "FULFILLMENT_NEEDED"),
-        (i[(i.FULFILLED = 3)] = "FULFILLED"),
-        (i[(i.FULFILLMENT_FAILED = 4)] = "FULFILLMENT_FAILED"),
-        (i[(i.UNFULFILLMENT_NEEDED = 5)] = "UNFULFILLMENT_NEEDED"),
-        (i[(i.UNFULFILLED = 6)] = "UNFULFILLED"),
-        (i[(i.UNFULFILLMENT_FAILED = 7)] = "UNFULFILLMENT_FAILED"),
-        (i[(i.UNFULFILLMENT_NEEDED_MANUAL = 8)] = "UNFULFILLMENT_NEEDED_MANUAL"),
-        (i[(i.INITIAL_FULFILLMENT_NEEDED = 9)] = "INITIAL_FULFILLMENT_NEEDED"),
-        i),
-    s = n(315069),
-    a = n(32731),
-    o = n(927578),
-    l = n(889227),
-    d = n(652215);
-class _ extends s.A {
+n.d(t, { A: () => d });
+var i = n(913290),
+    r = n(315069),
+    s = n(32731),
+    a = n(927578),
+    o = n(889227),
+    l = n(652215);
+class d extends r.A {
     id;
     skuId;
     applicationId;
@@ -40,11 +28,11 @@ class _ extends s.A {
     sourceType;
     fulfillmentStatus;
     static createFromServer(e) {
-        return new _({
+        return new d({
             id: e.id,
             skuId: e.sku_id,
             applicationId: e.application_id,
-            user: null != e.user ? new l.A(e.user) : null,
+            user: null != e.user ? new o.A(e.user) : null,
             userId: e.user_id,
             gifterId: e.gifter_user_id,
             type: e.type,
@@ -59,13 +47,13 @@ class _ extends s.A {
             giftStyle: e.gift_style,
             guildId: e.guild_id,
             deleted: e.deleted,
-            sku: null != e.sku ? a.A.createFromServer(e.sku) : null,
+            sku: null != e.sku ? s.A.createFromServer(e.sku) : null,
             sourceType: e.source_type ?? null,
             fulfillmentStatus: e.fulfillment_status ?? null,
         });
     }
     get isGiftable() {
-        return this.type === d.zF_.USER_GIFT && null == this.gifterId;
+        return this.type === l.zF_.USER_GIFT && null == this.gifterId;
     }
     constructor(e) {
         super(),
@@ -93,9 +81,9 @@ class _ extends s.A {
     isValid(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         if (this.isGiftable || this.deleted) return !1;
-        if (this.type === d.zF_.PREMIUM_SUBSCRIPTION) {
+        if (this.type === l.zF_.PREMIUM_SUBSCRIPTION) {
             let n = t.get(this.skuId);
-            if ((null != n && !n.premium) || !o.Ay.canInstallPremiumApplications(e)) return !1;
+            if ((null != n && !n.premium) || !a.Ay.canInstallPremiumApplications(e)) return !1;
         }
         let i = new Date();
         if ((null != this.startsAt && i < this.startsAt) || (null != this.endsAt && i >= this.endsAt)) return !1;
@@ -107,6 +95,6 @@ class _ extends s.A {
         return !0;
     }
     isFulfilled() {
-        return this.fulfillmentStatus === r.FULFILLED;
+        return this.fulfillmentStatus === i.w.FULFILLED;
     }
 }
