@@ -1,16 +1,17 @@
 "use strict";
-n.d(t, { A: () => f });
-var r = n(143236),
-    i = n(735438),
-    a = n.n(i),
-    s = n(626584),
-    o = n(509929),
-    l = n(900482),
-    u = n(972711),
-    c = n(652215),
-    d = n(381941);
-let _ = new s.A("UploaderBase.tsx");
-class f extends r.EventEmitter {
+n.d(t, { A: () => h });
+var i = n(143236),
+    r = n(735438),
+    s = n.n(r),
+    a = n(626584),
+    o = n(550642),
+    l = n(509929),
+    d = n(787458),
+    _ = n(972711),
+    u = n(652215),
+    c = n(381941);
+let E = new a.A("UploaderBase.tsx");
+class h extends i.EventEmitter {
     id;
     _file;
     _aborted = !1;
@@ -23,7 +24,7 @@ class f extends r.EventEmitter {
     _cancel;
     constructor() {
         super(),
-            (this.id = a().uniqueId("Uploader")),
+            (this.id = s().uniqueId("Uploader")),
             (this._file = {
                 id: this.id,
                 currentSize: 0,
@@ -41,23 +42,24 @@ class f extends r.EventEmitter {
         return this.files.reduce((e, t) => (e += t.currentSize ?? 0), 0);
     }
     async compressAndCheckFileSize() {
-        let e = (0, l.B)(this.files[0]?.item?.target);
+        let e = (0, d.B)(this.files[0]?.item?.target);
         return this.files.length > e.getMaxAttachmentsCount()
-            ? (_.log(`Too many attachments for ${this.id}`),
-              this._handleError({ code: c.t02.TOO_MANY_ATTACHMENTS }),
+            ? (E.log(`Too many attachments for ${this.id}`),
+              this._handleError({ code: u.t02.TOO_MANY_ATTACHMENTS }),
               !1)
-            : !(this._fileSize() > e.getMaxTotalAttachmentSize()) ||
+            : ((0, o.R8)({ location: "UploaderBase.compressAndCheckFileSize" }),
+              !(this._fileSize() > e.getMaxTotalAttachmentSize()) ||
                   (this._handleError({
-                      code: c.t02.ENTITY_TOO_LARGE,
-                      reason: { type: d.ty.POSTCOMPRESSION_SUM_TOO_LARGE },
+                      code: u.t02.ENTITY_TOO_LARGE,
+                      reason: { type: c.ty.POSTCOMPRESSION_SUM_TOO_LARGE },
                   }),
-                  !1);
+                  !1));
     }
     setUploadingTextForUI() {
         let e = this.files.some((e) => e.isImage),
             t = this.files.some((e) => e.isVideo),
             n = this._fileSize();
-        _.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
+        E.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
             (this._file = {
                 ...this._file,
                 totalPostCompressionSize: n,
@@ -81,50 +83,50 @@ class f extends r.EventEmitter {
         let e = {};
         return (
             this.files.forEach((t) => {
-                e[t.id] = (0, u.YL)(t.loaded, t.currentSize);
+                e[t.id] = (0, _.YL)(t.loaded, t.currentSize);
             }),
             e
         );
     }
     _addAttachmentsToPayload(e, t, n) {
-        let r = { ...e },
-            i = [...a().get(r, t, []), ...n];
-        return a().set(r, t, i);
+        let i = { ...e },
+            r = [...s().get(i, t, []), ...n];
+        return s().set(i, t, r);
     }
     _handleStart = (e) => {
         (this._cancel = e), this.alreadyStarted || this.emit("start", this._file), (this.alreadyStarted = !0);
     };
     _handleProgress = (e, t, n) => {
-        let r = Date.now(),
-            i = (0, u.YL)(e, t),
-            a = Math.floor((e - this._loaded) / ((r - this._lastUpdate) / 1e3));
+        let i = Date.now(),
+            r = (0, _.YL)(e, t),
+            s = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
         null != n &&
             this._file.items?.forEach((e) => {
                 e.item.progress = n[e.id];
             }),
-            (this._lastUpdate = r),
+            (this._lastUpdate = i),
             (this._loaded = e),
-            (this._file = { ...this._file, currentSize: t, progress: i, rate: a }),
+            (this._file = { ...this._file, currentSize: t, progress: r, rate: s }),
             this.emit("progress", this._file);
     };
     _handleException = (e) => {
-        this._handleError({ reason: { type: d.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
+        this._handleError({ reason: { type: c.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
     };
     _handleAborted = () => {
         this.clearProcessingMessageInterval();
     };
     _handleError = (e) => {
-        let { code: t, reason: n, body: r } = e;
+        let { code: t, reason: n, body: i } = e;
         this.clearProcessingMessageInterval(),
             this._aborted ||
                 ((this._errored = !0),
-                _.log(`_handleError: ${t} (${JSON.stringify(n)}) for ${this.id}`),
-                this.emit("error", this._file, t, r, n),
+                E.log(`_handleError: ${t} (${JSON.stringify(n)}) for ${this.id}`),
+                this.emit("error", this._file, t, i, n),
                 this.removeAllListeners());
     };
     _handleComplete = (e) => {
         this.clearProcessingMessageInterval(),
-            _.log(`_handleComplete for ${this.id}`),
+            E.log(`_handleComplete for ${this.id}`),
             this.emit("complete", this._file, e),
             this.removeAllListeners();
     };
@@ -133,18 +135,18 @@ class f extends r.EventEmitter {
             (clearInterval(this.processingMessageChangeInterval), (this.processingMessageChangeInterval = void 0));
     }
     cancel() {
-        _.log(`cancel() for ${this.id}`),
+        E.log(`cancel() for ${this.id}`),
             this._aborted ||
                 ((this._aborted = !0), this._cancel?.(), this.files.forEach((e) => e.cancel()), this._handleComplete());
     }
     async cancelItem(e) {
-        _.log(`Cancel called for ${this.id} for item ${e}`);
+        E.log(`Cancel called for ${this.id} for item ${e}`);
         let t = this.files.find((t) => t.id === e);
         if (null == t || t.isCancelled()) return;
         let n = this.files.indexOf(t);
         (this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
             (this._file = { ...this._file, items: this.files }),
-            await (0, o.sm)(t),
+            await (0, l.sm)(t),
             t.cancel(),
             this.emit("cancel-upload-item", this._file),
             0 === this.files.length && this.cancel();

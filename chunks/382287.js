@@ -1,20 +1,27 @@
-n.d(t, { LJ: () => d, WQ: () => o, fJ: () => c }), n(321073);
+n.d(t, { LJ: () => u, WQ: () => c, fJ: () => d }), n(321073);
 var a = n(565150),
-    i = n(453771),
-    l = n(927578),
+    i = n(550642),
+    l = n(453771),
+    r = n(927578),
     s = n(788868),
-    r = n(985018);
-function o(e, t) {
-    let n = i.Hb(i.o2(t));
-    return l.Ay.isPremium(e, s.PremiumTypes.TIER_2)
-        ? r.intl.formatToPlainString(r.t.fxEKdS, { maxSize: n })
-        : l.Ay.isPremium(e, s.PremiumTypes.TIER_1)
-          ? r.intl.formatToPlainString(r.t["Nr+LsZ"], { maxSize: n })
-          : r.intl.formatToPlainString(r.t.fxEKdS, { maxSize: n });
-}
+    o = n(985018);
 function c(e, t) {
-    return i.SH(e, t) || i.Aw(e);
+    let n = l.Hb(l.o2(t));
+    return r.Ay.isPremium(e, s.PremiumTypes.TIER_2)
+        ? o.intl.formatToPlainString(o.t.fxEKdS, { maxSize: n })
+        : r.Ay.isPremium(e, s.PremiumTypes.TIER_1)
+          ? o.intl.formatToPlainString(o.t["Nr+LsZ"], { maxSize: n })
+          : o.intl.formatToPlainString(o.t.fxEKdS, { maxSize: n });
 }
-function d(e) {
+function d(e, t) {
+    let n = (0, i.R8)({ location: "web.filesExceedUploadLimits" });
+    if (n.enabled) {
+        let a = l.o2(t),
+            r = (0, i.Jy)(n, a);
+        return Array.from(e).some((e) => e.size > r) || l.Aw(e);
+    }
+    return l.SH(e, t) || l.Aw(e);
+}
+function u(e) {
     return e.reduce((e, t) => (t.item.platform === a.xz.WEB && e.push(t.item.file), e), []);
 }
