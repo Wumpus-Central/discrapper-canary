@@ -27,8 +27,8 @@ var n,
     T = l(9448),
     R = l(974930),
     D = l(70456),
-    k = l(105253),
-    _ = l(692026),
+    _ = l(105253),
+    k = l(692026),
     G = l(816647),
     L = l(300153),
     M = l(505966),
@@ -43,7 +43,7 @@ var B =
     (n[(n.PREVIEW = 2)] = "PREVIEW"),
     (n[(n.SUCCESS = 3)] = "SUCCESS"),
     n);
-function X(e) {
+function O(e) {
     let { modal: t } = e,
         { createMultipleConfetti: l } = s.useContext(v.x);
     return (
@@ -77,7 +77,7 @@ function X(e) {
         null
     );
 }
-function O(e) {
+function X(e) {
     let {
             guildId: t,
             guildEvent: l,
@@ -117,7 +117,7 @@ function O(e) {
         M = (0, f.Fd)(l),
         P = (e) => Math.max(0, Math.min(e, R - 1)),
         [U, F] = s.useState(+!!M),
-        [w, O] = s.useState(!1),
+        [w, X] = s.useState(!1),
         H = s.useMemo(
             () =>
                 T.slice(0, U + 1)
@@ -130,21 +130,21 @@ function O(e) {
     (0, D.N)((e) => e.onUpdateCanCloseModal)(q);
     let Q = (0, r.bG)([g.A], () => g.A.useReducedMotion),
         W = s.useRef(null),
-        Z = (e) => {
-            O(!1), F(P(e));
+        $ = (e) => {
+            X(!1), F(P(e));
         },
-        J = s.useRef(Z);
+        Z = s.useRef($);
     s.useEffect(() => {
-        J.current = Z;
+        Z.current = $;
     }),
         s.useEffect(() => {
-            y?.id != null && J.current(3);
+            y?.id != null && Z.current(3);
         }, [y?.id]);
-    let $ = () => {
-            H && (2 === Y ? N() : q ? C() : Z(U + 1));
+    let J = () => {
+            H && (2 === Y ? N() : q ? C() : $(U + 1));
         },
         K = () => {
-            Z(U - 1);
+            $(U - 1);
         },
         ee = z.intl.string(z.t.PDTjLN);
     return (
@@ -156,7 +156,7 @@ function O(e) {
             parentComponent: "ScheduleEventModal",
             "data-migration-pending": !0,
             children: [
-                !Q && q ? (0, i.jsx)(X, { modal: W.current }) : null,
+                !Q && q ? (0, i.jsx)(O, { modal: W.current }) : null,
                 (0, i.jsxs)(d.$m, {
                     className: V.Qs,
                     scrollerRef: W,
@@ -164,22 +164,22 @@ function O(e) {
                     children: [
                         !q &&
                             (0, i.jsx)(j.A, {
-                                steps: T.map((e) => e.label),
+                                steps: T.map((e, t) => ({ label: e.label, disabled: t > U && !H })),
                                 stepIndex: U,
                                 onClick: (e) => {
-                                    e < U ? K() : e > U && $();
+                                    e < U ? K() : e > U && J();
                                 },
                             }),
                         (0, i.jsxs)(o.t, {
                             activeSlide: Y,
                             width: 440,
                             onSlideReady: (e) => {
-                                O(e === Y);
+                                X(e === Y);
                             },
                             children: [
                                 (0, i.jsx)(o.q, {
                                     id: 0,
-                                    children: (0, i.jsx)(k.A, {
+                                    children: (0, i.jsx)(_.A, {
                                         guildId: t,
                                         guildEvent: l,
                                         validationErrorMessage: h.entity,
@@ -201,7 +201,7 @@ function O(e) {
                                 }),
                                 (0, i.jsx)(o.q, {
                                     id: 2,
-                                    children: (0, i.jsx)(_.A, { guildId: t, guildEvent: l, guildEventId: n, error: E }),
+                                    children: (0, i.jsx)(k.A, { guildId: t, guildEvent: l, guildEventId: n, error: E }),
                                 }),
                                 (0, i.jsx)(o.q, { id: 3, children: (0, i.jsx)(L.A, { onClose: C, event: y }) }),
                             ],
@@ -237,7 +237,7 @@ function O(e) {
                                         children: (0, i.jsx)(u.$, {
                                             variant: "primary",
                                             text: ee,
-                                            onClick: $,
+                                            onClick: J,
                                             disabled: !H,
                                             loading: v,
                                         }),
@@ -259,7 +259,7 @@ function H(e) {
         [g, v] = s.useState(u),
         [j] = s.useState((0, I.lc)(o)),
         [A, N] = s.useState(null),
-        [D, { loading: k, error: _ }] = (0, C.A)(async () => {
+        [D, { loading: _, error: k }] = (0, C.A)(async () => {
             var e;
             let l, i;
             if (null != A) return;
@@ -275,15 +275,15 @@ function H(e) {
             );
         }),
         G = s.useMemo(() => (0, M.A)(g, j), [g, j]);
-    return (0, i.jsx)(O, {
+    return (0, i.jsx)(X, {
         guildId: t,
         guildEvent: g,
         guildEventId: n,
         isEdit: j,
         formErrors: G,
         transitionState: a,
-        loading: k,
-        error: _,
+        loading: _,
+        error: k,
         onChange: (e) => {
             if (null != e.entityType) {
                 let l = (0, T.dy)(e.entityType),

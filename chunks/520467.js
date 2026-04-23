@@ -22,18 +22,19 @@ function c(e) {
                     className: o._h,
                     role: "tab",
                     "aria-selected": u,
-                    "aria-label": `${c.STEP_INDICATOR(a + 1, t.length)}: ${e}`,
+                    "aria-label": `${c.STEP_INDICATOR(a + 1, t.length)}: ${e.label}`,
                     "aria-current": u ? "step" : void 0,
+                    "aria-disabled": !0 === e.disabled || void 0,
                     children: [
                         (0, n.jsx)("div", { className: s()(o.hr, { [o.YD]: u }) }),
                         (0, n.jsx)(d.E, {
                             color: u ? "text-brand" : "text-muted",
                             variant: "text-xs/normal",
-                            children: e,
+                            children: e.label,
                         }),
                     ],
                 },
-                e,
+                e.label,
             );
         }),
     });
