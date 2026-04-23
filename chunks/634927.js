@@ -224,12 +224,14 @@ class G {
     body;
     mobileBackgroundImage;
     mobileForegroundImage;
+    desktopBackgroundImage;
     constructor(e) {
         (this.type = D.g.FRAMES_BANNER),
             (this.title = e.title),
             (this.body = e.body),
             (this.mobileBackgroundImage = e.mobile_background_image),
-            (this.mobileForegroundImage = e.mobile_foreground_image);
+            (this.mobileForegroundImage = e.mobile_foreground_image),
+            (this.desktopBackgroundImage = e.desktop_background_image);
     }
     static fromServer(e) {
         return new G(e);
@@ -398,38 +400,7 @@ class k {
         return new k(e);
     }
 }
-class x {
-    title;
-    body;
-    categoryStoreListingId;
-    bannerTextColor;
-    disableCta;
-    bannerURL;
-    bannerAnimatedURL;
-    logoURL;
-    ctaText;
-    ctaRoute;
-    isDismissible;
-    dismissibleContentVersion;
-    constructor(e) {
-        (this.type = D.g.WIDE_BANNER),
-            (this.title = e.title),
-            (this.body = e.body),
-            (this.categoryStoreListingId = e.category_store_listing_id),
-            (this.bannerTextColor = e.banner_text_color),
-            (this.disableCta = e.disable_cta),
-            (this.bannerURL = e.wide_banner_url),
-            (this.bannerAnimatedURL = e.wide_banner_animated_url),
-            (this.logoURL = e.logo_url),
-            (this.ctaText = e.cta_text),
-            (this.ctaRoute = e.cta_route),
-            (this.isDismissible = e.is_dismissible),
-            (this.dismissibleContentVersion = e.dismissible_content_version);
-    }
-    static fromServer(e) {
-        return new x(e);
-    }
-}
+var x = n(893998);
 class W {
     shopBlocks;
     categories;
@@ -445,7 +416,7 @@ class W {
                     case D.g.FEED:
                         return y.fromServer(e);
                     case D.g.WIDE_BANNER:
-                        return x.fromServer(e);
+                        return x.y.fromServer(e);
                     case D.g.SHELF:
                         return H.fromServer(e);
                     case D.g.COUNTDOWN_TIMER:
