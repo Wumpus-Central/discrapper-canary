@@ -1,2 +1,3 @@
-t.d(r, { S8: () => n.S8 });
-var n = t(23339);
+"use strict";
+r.d(t, { S8: () => n.S8, sS: () => n.sS });
+var n = r(23339);

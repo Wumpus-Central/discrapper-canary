@@ -1,49 +1,50 @@
-n.d(i, { A: () => o });
-var l = n(627968),
-    r = n(64700),
-    t = n(477782),
-    d = n(669550);
-function o(e, i) {
-    let { node: n } = (0, d.Ay)(e, ""),
-        [o, a] = r.useState(n);
-    return o.layout.map((e) => {
-        var n, r;
-        let d;
+"use strict";
+i.d(t, { A: () => s });
+var n = i(627968),
+    r = i(64700),
+    a = i(477782),
+    o = i(669550);
+function s(e, t) {
+    let { node: i } = (0, o.Ay)(e, ""),
+        [s, l] = r.useState(i);
+    return s.layout.map((e) => {
+        var i, r;
+        let o;
         return (
-            (n = e),
-            (r = i),
-            (d = n.useTitle?.()),
-            (0, l.jsx)(
-                t.rX,
+            (i = e),
+            (r = t),
+            (o = i.useTitle?.()),
+            (0, n.jsx)(
+                a.rX,
                 {
-                    label: d,
-                    children: n.layout.map((e) => {
-                        var i, n;
-                        let d, o, a, s;
+                    label: o,
+                    children: i.layout.map((e) => {
+                        var t, i;
+                        let o, s, l, d;
                         return (
-                            (i = e),
-                            (n = r),
-                            (d = i.useTitle?.()),
-                            (o = i.useMenu?.()),
-                            (a = "destructive" === i.variant ? "danger" : void 0),
-                            (s = i.onClick ?? (() => n(i.key))),
-                            (0, l.jsx)(
-                                t.Dr,
+                            (t = e),
+                            (i = r),
+                            (o = t.useTitle?.()),
+                            (s = t.useMenu?.()),
+                            (l = "destructive" === t.variant ? "danger" : void 0),
+                            (d = t.onClick ?? (() => i(t.key))),
+                            (0, n.jsx)(
+                                a.Dr,
                                 {
-                                    label: d,
-                                    id: i.key,
-                                    leadingAccessory: { type: "icon", icon: i.icon },
-                                    iconLeft: i.icon,
-                                    color: a,
-                                    action: s,
-                                    children: o,
+                                    label: o,
+                                    id: t.key,
+                                    leadingAccessory: { type: "icon", icon: t.icon },
+                                    iconLeft: t.icon,
+                                    color: l,
+                                    action: d,
+                                    children: s,
                                 },
-                                i.key,
+                                t.key,
                             )
                         );
                     }),
                 },
-                n.key,
+                i.key,
             )
         );
     });
