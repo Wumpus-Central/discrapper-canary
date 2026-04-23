@@ -25,14 +25,14 @@ function b(e) {
         { trackUserProfileWishlistAction: T } = (0, g.NJ)(),
         y = (0, l.useId)();
     (0, A.T)({ location: "user_profile_sidebar_wishlist_breadcrumb" });
-    let R = (0, l.useCallback)(
+    let j = (0, l.useCallback)(
             (e) => {
                 let { wishlistId: t, action: n, productLines: i } = e;
                 null != t && T({ wishlistId: t, action: n, productLines: i });
             },
             [T],
         ),
-        j = (0, l.useMemo)(() => {
+        R = (0, l.useMemo)(() => {
             let e = [];
             for (let n = 0; n < t.length && e.length < 3; n++) {
                 let i = t[n];
@@ -40,30 +40,28 @@ function b(e) {
             }
             return e;
         }, [t]),
-        L = (0, l.useMemo)(() => new Set(j.map((e) => e.skuProductLine)), [j]),
-        O = (0, p.A)({ wishlistId: N ?? null, onAction: R, productLines: L }),
+        L = (0, l.useMemo)(() => new Set(R.map((e) => e.skuProductLine)), [R]),
+        O = (0, p.A)({ wishlistId: N ?? null, onAction: j, productLines: L }),
         G = (0, l.useMemo)(
             () =>
-                j
-                    .map((e, l) =>
-                        null == e.sku
-                            ? null
-                            : (0, i.jsx)(
-                                  _.A,
-                                  {
-                                      sku: e.sku,
-                                      index: l,
-                                      wishlistOwner: n,
-                                      wishlistId: N,
-                                      analyticsLocations: v,
-                                      onViewWishlist: b,
-                                      isSingleCard: 1 === t.length,
-                                  },
-                                  e.skuId,
-                              ),
-                    )
-                    .filter(m.Vq),
-            [v, b, n, t.length, j, N],
+                R.map((e, l) =>
+                    null == e.sku
+                        ? null
+                        : (0, i.jsx)(
+                              _.A,
+                              {
+                                  sku: e.sku,
+                                  index: l,
+                                  wishlistOwner: n,
+                                  wishlistId: N,
+                                  analyticsLocations: v,
+                                  onViewWishlist: b,
+                                  isSingleCard: 1 === t.length,
+                              },
+                              e.skuId,
+                          ),
+                ).filter(m.Vq),
+            [v, b, n, t.length, R, N],
         ),
         [D, M] = (0, u.RF)(
             s.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL,
