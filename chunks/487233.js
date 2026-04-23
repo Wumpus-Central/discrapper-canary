@@ -44,7 +44,8 @@ function g(e) {
     let M = k
         ? {
               onClick: () => {
-                  (0, p.p)({ guildId: l ?? void 0, avatar: null }), (0, s.WU)(R ? "reset" : "remove");
+                  (0, d.rM)(null, j, (e) => (0, p.p)({ guildId: l ?? void 0, avatar: e })),
+                      (0, s.WU)(R ? "reset" : "remove");
               },
               type: R ? "reset" : "remove",
               accessibleLabel: y.intl.string(R ? y.t.Y0mxy1 : y.t.twB3fz),
