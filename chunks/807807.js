@@ -221,6 +221,7 @@ function ef(e) {
                         onClick: n,
                         className: y()(e_.AS, { [e_.vu]: i }),
                         ...e,
+                        "aria-current": i ? "page" : void 0,
                         children: [u, null != a && !i && (0, r.jsx)(ei, { badge: a })],
                     },
                     o,
@@ -483,6 +484,7 @@ function eb(e) {
             (0, r.jsxs)(O.D, {
                 ...u,
                 className: y()(em.AS, { [em.vu]: a, [em.RD]: "destructive" === m }),
+                "aria-current": a ? "page" : void 0,
                 onClick: n,
                 children: [
                     null != f
@@ -863,7 +865,7 @@ var ek = n(495544),
     eD = n(287809),
     eO = n(152056),
     eL = n(780964),
-    eB = n(533163),
+    eB = n(166151),
     eU = n(550079),
     eF = n(477782),
     eP = n(349288),
@@ -883,8 +885,8 @@ var ek = n(495544),
 function eJ() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "534155",
-        i = "1b403b4f4bffbbc8fc15861878618cd7c2479e24".substring(0, 7),
+        n = "534472",
+        i = "52593f200c6bff87d4e9f15cac52972b5aba7150".substring(0, 7),
         a = ez.A?.app.getVersion(),
         l = ez.A?.app.getBuildNumber(),
         o = ez.A?.app.getAppArch(),
@@ -1053,9 +1055,9 @@ function e6() {
     });
 }
 var e5 = n(175665),
-    e3 = n(178241),
-    e9 = n(779733),
-    e2 = n(298859);
+    e9 = n(178241),
+    e2 = n(779733),
+    e3 = n(298859);
 let e7 = new Set([eL.X.PROFILE_PANEL, eL.X.SUBSCRIPTIONS_PANEL, eL.X.FAMILY_CENTER_PANEL, eL.X.POGGERMODE_PANEL]),
     e4 = new Map([
         [eL.X.CONNECTIONS_PANEL, a.ImpressionNames.USER_SETTINGS_CONNECTIONS],
@@ -1070,7 +1072,7 @@ function e8(e) {
         [f, h] = i.useState(!1);
     return (i.useLayoutEffect(() => {
         let e = () => {
-            null == eD.default.getCurrentUser() && (h(!0), (0, e9.default)());
+            null == eD.default.getCurrentUser() && (h(!0), (0, e2.default)());
         };
         return (
             ek.default.addChangeListener(e),
@@ -1087,7 +1089,7 @@ function e8(e) {
               emptyState: tt,
               sidebarFooter: e6,
               onViewChange: (e) => {
-                  e7.has(e) || (0, e3._)(e);
+                  e7.has(e) || (0, e9._)(e);
                   let t = e4.get(e);
                   null != t &&
                       (0, c.x)({
@@ -1126,14 +1128,14 @@ function te() {
             [],
         ),
         (0, r.jsx)("div", {
-            className: e2.P,
+            className: e3.P,
             children: (0, r.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: a, onChange: t, onClear: s }),
         })
     );
 }
 function tt() {
     return (0, r.jsxs)("div", {
-        className: e2.t,
+        className: e3.t,
         children: [
             (0, r.jsx)(s.E, { variant: "text-sm/semibold", color: "text-strong", children: G.intl.string(G.t.zihbmv) }),
             (0, r.jsx)(s.E, { variant: "text-sm/normal", color: "text-subtle", children: G.intl.string(G.t.XclvsB) }),
