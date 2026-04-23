@@ -41,6 +41,9 @@ class _ extends l.PureComponent {
     handleRemove = () => {
         this.props.onChange(null);
     };
+    handleActivateUpload = () => {
+        this.inputRef.current?.activateUploadDialogue();
+    };
     render() {
         let e,
             t,
@@ -111,14 +114,24 @@ class _ extends l.PureComponent {
                                     (0, i.jsx)("span", { "aria-hidden": !0, children: n }),
                                     null != R
                                         ? (0, i.jsx)(g.D, { className: b.c4, "aria-label": D, onClick: R })
-                                        : (0, i.jsx)(x.Ay, {
-                                              ref: this.inputRef,
-                                              onChange: j,
-                                              className: b.c4,
-                                              "aria-label": D,
-                                              tabIndex: 0,
-                                              maxFileSizeBytes: k,
-                                              onFileSizeError: L,
+                                        : (0, i.jsxs)(i.Fragment, {
+                                              children: [
+                                                  (0, i.jsx)(x.Ay, {
+                                                      ref: this.inputRef,
+                                                      onChange: j,
+                                                      className: b.c4,
+                                                      "aria-label": D,
+                                                      tabIndex: -1,
+                                                      "aria-hidden": !0,
+                                                      maxFileSizeBytes: k,
+                                                      onFileSizeError: L,
+                                                  }),
+                                                  (0, i.jsx)(g.D, {
+                                                      className: b.c4,
+                                                      "aria-label": D,
+                                                      onClick: this.handleActivateUpload,
+                                                  }),
+                                              ],
                                           }),
                                 ],
                             }),
