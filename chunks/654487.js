@@ -1,19 +1,19 @@
 n.d(t, {
     A6: () => m,
-    B3: () => F,
-    BQ: () => Y,
+    B3: () => H,
+    BQ: () => K,
     CI: () => g,
     Fw: () => y,
     GD: () => h,
-    J6: () => w,
-    K3: () => k,
+    J6: () => V,
+    K3: () => W,
     Ko: () => C,
     Li: () => c.L,
-    Ls: () => V,
-    Pc: () => W,
+    Ls: () => k,
+    Pc: () => j,
     TY: () => S.T,
     Tz: () => O,
-    WQ: () => j,
+    WQ: () => $,
     ZV: () => f,
     aA: () => p,
     aJ: () => G,
@@ -23,12 +23,14 @@ n.d(t, {
     fP: () => b,
     gB: () => v,
     hK: () => B,
-    kL: () => x,
+    kL: () => Y,
     mg: () => P,
-    pc: () => $,
+    pc: () => q,
     rE: () => N,
     tZ: () => R,
-    zO: () => H,
+    uz: () => F,
+    yr: () => w,
+    zO: () => x,
 });
 var i,
     r,
@@ -126,21 +128,9 @@ let y = "1333839522189938740",
     G = "1410358070831480904",
     v = "1420556874629251124",
     B = "1402418703554842694",
-    w = new Set([T.yW.DESKTOP_ACCOUNT_PANEL_AREA, T.yW.MOBILE_HOME_DOCK_AREA, T.yW.QUEST_HOME_BANNER_DESKTOP]),
-    F = new Set([
-        d.n.STREAM_ON_DESKTOP,
-        d.n.PLAY_ON_DESKTOP,
-        d.n.PLAY_ON_XBOX,
-        d.n.PLAY_ON_PLAYSTATION,
-        d.n.PLAY_ACTIVITY,
-    ]),
-    V = new Set([
-        d.n.STREAM_ON_DESKTOP,
-        d.n.PLAY_ON_DESKTOP,
-        d.n.PLAY_ON_XBOX,
-        d.n.PLAY_ON_PLAYSTATION,
-        d.n.PLAY_ACTIVITY,
-    ]),
+    w = "1496993616537587813",
+    F = "1496993616537587812",
+    V = new Set([T.yW.DESKTOP_ACCOUNT_PANEL_AREA, T.yW.MOBILE_HOME_DOCK_AREA, T.yW.QUEST_HOME_BANNER_DESKTOP]),
     H = new Set([
         d.n.STREAM_ON_DESKTOP,
         d.n.PLAY_ON_DESKTOP,
@@ -148,28 +138,42 @@ let y = "1333839522189938740",
         d.n.PLAY_ON_PLAYSTATION,
         d.n.PLAY_ACTIVITY,
     ]),
-    k = { is_targeted: !1 };
-var x =
+    k = new Set([
+        d.n.STREAM_ON_DESKTOP,
+        d.n.PLAY_ON_DESKTOP,
+        d.n.PLAY_ON_XBOX,
+        d.n.PLAY_ON_PLAYSTATION,
+        d.n.PLAY_ACTIVITY,
+    ]),
+    x = new Set([
+        d.n.STREAM_ON_DESKTOP,
+        d.n.PLAY_ON_DESKTOP,
+        d.n.PLAY_ON_XBOX,
+        d.n.PLAY_ON_PLAYSTATION,
+        d.n.PLAY_ACTIVITY,
+    ]),
+    W = { is_targeted: !1 };
+var Y =
         (((_ = {}).SUGGESTED = "suggested"),
         (_.MOST_RECENT = "most_recent"),
         (_.EXPIRING_SOON = "expiring_soon"),
         (_.RECENTLY_ENROLLED = "recently_enrolled"),
         _),
-    W = (((l = {}).VIDEO = "task_video"), (l.PLAY = "task_play"), l),
-    Y =
+    j = (((l = {}).VIDEO = "task_video"), (l.PLAY = "task_play"), l),
+    K =
         (((o = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
         (o.COLLECTIBLE = "reward_collectible"),
         (o.IN_GAME = "reward_in_game"),
         o);
-function j(e) {
-    return Object.values(W).includes(e)
+function $(e) {
+    return Object.values(j).includes(e)
         ? { group: "task", filter: e }
-        : Object.values(Y).includes(e)
+        : Object.values(K).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
-let K = ["reward", "task"],
-    $ = Object.entries(
+let Q = ["reward", "task"],
+    q = Object.entries(
         (0, E.groupBy)(
             [
                 { group: "task", filter: "task_play" },
@@ -181,8 +185,8 @@ let K = ["reward", "task"],
             "group",
         ),
     ).sort((e, t) => {
-        let n = K.indexOf(e[0]),
-            i = K.indexOf(t[0]);
+        let n = Q.indexOf(e[0]),
+            i = Q.indexOf(t[0]);
         return n < i ? -1 : +(i < n);
     });
 Object.entries(
