@@ -59,17 +59,26 @@ class u extends l.PureComponent {
         e({ title: a.intl.string(a.t["0egKg3"]), help: a.intl.string(a.t["7PnXqu"]) });
     };
     render() {
-        let { multiple: e, disabled: t, className: n, tabIndex: l, "aria-label": r, filters: a } = this.props;
-        return (0, i.jsx)(s.A, {
-            ref: this._ref,
-            onClick: this.props.onClick,
-            onChange: this.handleFileChange,
-            filters: a ?? o(),
+        let {
             multiple: e,
             disabled: t,
             className: n,
             tabIndex: l,
             "aria-label": r,
+            "aria-hidden": a,
+            filters: c,
+        } = this.props;
+        return (0, i.jsx)(s.A, {
+            ref: this._ref,
+            onClick: this.props.onClick,
+            onChange: this.handleFileChange,
+            filters: c ?? o(),
+            multiple: e,
+            disabled: t,
+            className: n,
+            tabIndex: l,
+            "aria-label": r,
+            "aria-hidden": a,
         });
     }
 }
