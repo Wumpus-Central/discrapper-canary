@@ -71,6 +71,7 @@ function O(e, t) {
                 suppress: t.suppress,
                 userId: t.userId,
                 discoverable: t.discoverable,
+                connectedAt: t.connectedAt,
             };
             return null != e ? e.merge(n) : new _.A(n);
         }

@@ -2415,6 +2415,7 @@ function t2(e) {
                 requestToSpeakTimestamp: n.request_to_speak_timestamp ?? null,
                 discoverable: n.discoverable ?? !0,
                 oldChannelId: tk.A.getUserVoiceChannelId(n.guild_id, n.user_id),
+                connectedAt: n.connected_at,
             });
     t3({ type: "VOICE_STATE_UPDATES", voiceStates: t });
 }
@@ -2558,6 +2559,7 @@ t1(
                             selfStream: e.self_stream || !1,
                             requestToSpeakTimestamp: e.request_to_speak_timestamp ?? null,
                             discoverable: e.discoverable ?? !0,
+                            connectedAt: e.connected_at,
                         })),
                     }),
                     tz.log(`Dispatched INITIAL_GUILD ${e.id}`));
@@ -2614,6 +2616,7 @@ t1(
                             selfStream: t.self_stream || !1,
                             requestToSpeakTimestamp: t.request_to_speak_timestamp ?? null,
                             discoverable: t.discoverable ?? !0,
+                            connectedAt: t.connected_at,
                         });
                     });
                 }),
@@ -2982,6 +2985,7 @@ t1(
                             selfStream: e.self_stream || !1,
                             requestToSpeakTimestamp: e.request_to_speak_timestamp ?? null,
                             discoverable: e.discoverable ?? !0,
+                            connectedAt: e.connected_at,
                         })),
                     });
             }
@@ -3214,6 +3218,7 @@ t1(
                     selfStream: e.self_stream || !1,
                     requestToSpeakTimestamp: e.request_to_speak_timestamp ?? null,
                     discoverable: e.discoverable ?? !0,
+                    connectedAt: e.connected_at,
                 })),
             });
     }),
@@ -3735,6 +3740,7 @@ t1(
                     suppress: e.suppress,
                     userId: e.user_id,
                     discoverable: e.discoverable ?? !0,
+                    connectedAt: e.connected_at,
                 })),
                 removedVoiceStateUsers: e.removed_voice_states,
             });
