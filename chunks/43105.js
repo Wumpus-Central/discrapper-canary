@@ -1,75 +1,74 @@
-"use strict";
-n.d(t, { A: () => m, h: () => h });
-var a = n(627968),
-    r = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    s = n(353795),
-    o = n(312640),
-    c = n(208756),
-    d = n(798618),
-    u = n(916845),
-    _ = n(627330),
-    p = n(824078);
+a.d(t, { A: () => m, h: () => f });
+var n = a(627968),
+    r = a(64700),
+    l = a(503698),
+    i = a.n(l),
+    s = a(353795),
+    o = a(312640),
+    c = a(208756),
+    d = a(798618),
+    u = a(916845),
+    h = a(627330),
+    p = a(824078);
 function m(e) {
     let {
             title: t,
-            body: n,
-            badge: i,
+            body: a,
+            badge: l,
             graphic: m,
-            size: h = "md",
-            actions: f,
-            textLink: g,
-            gradientColor: b,
-            onRequestClose: v,
-            popoverRef: A,
-            position: x,
+            size: f = "md",
+            actions: b,
+            textLink: _,
+            gradientColor: g,
+            onRequestClose: x,
+            popoverRef: v,
+            position: A,
             caretConfig: E,
-            scrollBehavior: T,
-            ...S
+            scrollBehavior: y,
+            ...I
         } = e,
-        C = r.useCallback(
+        S = r.useCallback(
             (e, t) => {
-                v?.(t);
+                x?.(t);
             },
-            [v],
+            [x],
         ),
-        I = r.useCallback(() => {
-            v?.("user:explicit");
-        }, [v]),
-        y = {
-            targetElementRef: S.targetElementRef,
-            shouldShow: S.shouldShow,
-            hasVideo: S.hasVideo,
-            position: x,
+        j = r.useCallback(() => {
+            x?.("user:explicit");
+        }, [x]),
+        C = {
+            targetElementRef: I.targetElementRef,
+            shouldShow: I.shouldShow,
+            hasVideo: I.hasVideo,
+            position: A,
             caretConfig: E,
-            onRequestClose: C,
-            gradientColor: b,
-            scrollBehavior: T,
-            ...("edge" === S.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: S.align }
+            onRequestClose: S,
+            gradientColor: g,
+            scrollBehavior: y,
+            ...("edge" === I.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: I.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, a.jsx)(o.x, {
-        ...y,
-        children: (0, a.jsxs)("div", {
-            ref: A,
+    return (0, n.jsx)(o.x, {
+        ...C,
+        children: (0, n.jsxs)("div", {
+            ref: v,
             "data-mana-component": "popover",
             children: [
-                (0, a.jsx)(u.q, { onClick: I, variant: null != b ? "color-mix" : void 0 }),
+                (0, n.jsx)(u.q, { onClick: j, variant: null != g ? "color-mix" : void 0 }),
                 null != m &&
-                    (0, a.jsx)("div", {
-                        className: l()(p.graphic, { [p[`graphic--${h}`]]: null != h }),
-                        children: (0, a.jsx)(s.v, {
+                    (0, n.jsx)("div", {
+                        className: i()(p.graphic, { [p[`graphic--${f}`]]: null != f }),
+                        children: (0, n.jsx)(s.v, {
                             ...m,
-                            aspectRatio: m.aspectRatio ?? ("sm" === h ? "2/1" : "16/9"),
+                            aspectRatio: m.aspectRatio ?? ("sm" === f ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, a.jsx)(_.D, { title: t, body: n, badge: i, textLink: g }),
-                null != f && f.length > 0 ? (0, a.jsx)(c.Z, { actions: f }) : null,
-                (0, a.jsx)(d.F, {}),
+                (0, n.jsx)(h.D, { title: t, body: a, badge: l, textLink: _ }),
+                null != b && b.length > 0 ? (0, n.jsx)(c.Z, { actions: b }) : null,
+                (0, n.jsx)(d.F, {}),
             ],
         }),
     });
 }
-let h = 21552 == n.j ? m : null;
+let f = 21552 == a.j ? m : null;

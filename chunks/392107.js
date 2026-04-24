@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { E: () => r });
-var a,
+a.d(t, { E: () => r });
+var n,
     r =
-        (((a = {}).NEW_ASSET = "NEW_ASSET"),
-        (a.EDITED_ARCHIVED_ASSET = "EDITED_ARCHIVED_ASSET"),
-        (a.ARCHIVED_ASSET = "ARCHIVED_ASSET"),
-        a);
+        (((n = {}).NEW_ASSET = "NEW_ASSET"),
+        (n.EDITED_ARCHIVED_ASSET = "EDITED_ARCHIVED_ASSET"),
+        (n.ARCHIVED_ASSET = "ARCHIVED_ASSET"),
+        n);

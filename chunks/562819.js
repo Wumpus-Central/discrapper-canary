@@ -1,27 +1,26 @@
-"use strict";
-n.d(t, { L: () => o, Te: () => s });
-var a = n(627968);
-n(64700);
-var r = n(778712),
-    i = n(192308);
-n(515718);
-var l = n(190460);
+a.d(t, { L: () => o, Te: () => s });
+var n = a(627968);
+a(64700);
+var r = a(778712),
+    l = a(192308);
+a(515718);
+var i = a(190460);
 function s(e) {
-    return "number" != typeof e ? (0, r.FT)(e) * l.Xq : e * l.Xq;
+    return "number" != typeof e ? (0, r.FT)(e) * i.Xq : e * i.Xq;
 }
 let o = (e) => {
-    let { analyticsLocations: t, initialSelectedDecoration: r, guild: l, onClose: s, stackingBehavior: o } = e;
-    (0, i.openModalLazy)(
+    let { analyticsLocations: t, initialSelectedDecoration: r, guild: i, onClose: s, stackingBehavior: o } = e;
+    (0, l.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("80527"), n.e("31825"), n.e("35059")]).then(n.bind(n, 40344));
-            return (n) =>
-                (0, a.jsx)(e, {
-                    ...n,
-                    onCloseModal: n.onClose,
+            let { default: e } = await Promise.all([a.e("80527"), a.e("31825"), a.e("35059")]).then(a.bind(a, 40344));
+            return (a) =>
+                (0, n.jsx)(e, {
+                    ...a,
+                    onCloseModal: a.onClose,
                     onClose: s,
                     analyticsLocations: t,
                     initialSelectedDecoration: r,
-                    guild: l,
+                    guild: i,
                 });
         },
         { stackingBehavior: o },

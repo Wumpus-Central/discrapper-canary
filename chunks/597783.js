@@ -1,50 +1,50 @@
-r.d(t, { Z: () => k });
-var i = r(64700),
-    n = r(17928),
+r.d(t, { Z: () => p });
+var n = r(64700),
+    i = r(17928),
     l = r(954571),
     s = r(927578),
     a = r(440938),
     u = r(590180),
-    c = r(993408),
-    o = r(331884),
+    o = r(993408),
+    c = r(331884),
     d = r(652215);
-function k(e, t) {
+function p(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
-        k = (0, a.uM)(),
-        p = (0, n.bG)([u.A], () => u.A.getProduct(e)),
-        C = (0, o.i)(),
-        m = s.Ay.canUseCollectibles(C),
-        x = i.useRef(null),
-        I = i.useCallback(() => {
-            let i = null != p ? (0, c.Br)(p, m, !1) : null,
-                n = null != p ? (0, c.c7)(p, m, !1) : void 0;
+        p = (0, a.uM)(),
+        k = (0, i.bG)([u.A], () => u.A.getProduct(e)),
+        C = (0, c.i)(),
+        m = s.Ay.canUseShopDiscounts(C),
+        x = n.useRef(null),
+        h = n.useCallback(() => {
+            let n = null != k ? (0, o.Br)(k, m, !1) : null,
+                i = null != k ? (0, o.c7)(k, m, !1) : void 0;
             l.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
-                collectibles_shop_session_id: k?.sessionId,
+                collectibles_shop_session_id: p?.sessionId,
                 sku_id: e,
-                display_price: i?.amount,
-                display_price_currency: i?.currency.toString(),
-                display_price_strikethrough: n,
-                position: k?.tilePosition,
+                display_price: n?.amount,
+                display_price_currency: n?.currency.toString(),
+                display_price_strikethrough: i,
+                position: p?.tilePosition,
                 page_type: t,
-                page_category: k?.pageCategory,
-                page_section: k?.pageSection,
+                page_category: p?.pageCategory,
+                page_section: p?.pageSection,
                 type: r,
-                category_position: k?.categoryPosition,
+                category_position: p?.categoryPosition,
             });
-        }, [k?.sessionId, k?.categoryPosition, k?.pageCategory, k?.pageSection, k?.tilePosition, m, t, p, e, r]),
-        g = i.useCallback(
+        }, [p?.sessionId, p?.categoryPosition, p?.pageCategory, p?.pageSection, p?.tilePosition, m, t, k, e, r]),
+        g = n.useCallback(
             (e) => {
                 e
                     ? null === x.current &&
                       (x.current = setTimeout(() => {
-                          I(), (x.current = null);
+                          h(), (x.current = null);
                       }, 1e3))
                     : null !== x.current && (clearTimeout(x.current), (x.current = null));
             },
-            [I],
+            [h],
         );
     return (
-        i.useEffect(
+        n.useEffect(
             () => () => {
                 null !== x.current && (clearTimeout(x.current), (x.current = null));
             },

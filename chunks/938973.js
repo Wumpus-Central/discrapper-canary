@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { B: () => i });
-var a = n(403581),
-    r = n(245383);
-let i = (e) => {
-    let { iconOverride: t, variantOverride: n, ...i } = e,
-        { buttonText: l, disabled: s } = (0, r.A)(i);
-    return { subscribeButtonProps: { text: l, disabled: s, icon: t ?? a.t, variant: n ?? "expressive" } };
+a.d(t, { B: () => l });
+var n = a(403581),
+    r = a(245383);
+let l = (e) => {
+    let { iconOverride: t, variantOverride: a, ...l } = e,
+        { buttonText: i, disabled: s } = (0, r.A)(l);
+    return { subscribeButtonProps: { text: i, disabled: s, icon: t ?? n.t, variant: a ?? "expressive" } };
 };

@@ -1,119 +1,132 @@
 n.d(t, {
-    $W: () => G,
-    $b: () => x,
-    Br: () => O,
-    Bs: () => Z,
-    CE: () => ee,
-    G0: () => S,
-    HF: () => Y,
-    MG: () => H,
-    P_: () => g,
-    R8: () => R,
-    V6: () => z,
-    WD: () => D,
-    WU: () => W,
-    Wj: () => w,
-    Zu: () => X,
-    aT: () => j,
-    aw: () => K,
-    bf: () => J,
-    c7: () => q,
-    f6: () => P,
-    fT: () => L,
-    gA: () => N,
-    hU: () => k,
-    l8: () => f,
-    oj: () => $,
-    pA: () => Q,
-    ps: () => y,
-    rr: () => m,
-    sz: () => V,
-    tt: () => h,
-    wo: () => F,
-    x9: () => M,
-    yt: () => p,
-    zd: () => v,
+    $W: () => H,
+    $b: () => Q,
+    Br: () => L,
+    Bs: () => er,
+    CE: () => e_,
+    D0: () => f,
+    G0: () => p,
+    HF: () => X,
+    MG: () => j,
+    P_: () => y,
+    R8: () => m,
+    V6: () => ei,
+    WD: () => M,
+    WU: () => q,
+    Wj: () => Y,
+    Zu: () => en,
+    aT: () => Z,
+    aw: () => z,
+    bf: () => ea,
+    c7: () => et,
+    f6: () => w,
+    fT: () => P,
+    gA: () => D,
+    hU: () => $,
+    l8: () => h,
+    oj: () => J,
+    pA: () => ee,
+    ps: () => V,
+    rr: () => b,
+    sz: () => K,
+    tt: () => G,
+    wo: () => x,
+    x9: () => F,
+    xM: () => C,
+    yt: () => U,
+    zd: () => k,
 }),
     n(321073);
-var i = n(735438),
+var i,
+    a = n(735438),
     r = n(575593),
-    a = n(79387),
-    s = n(723702),
-    _ = n(580630),
-    l = n(898461),
-    o = n(837015),
-    E = n(203632),
-    d = n(892118),
-    c = n(719986),
-    u = n(623373),
-    I = n(758836),
-    A = n(652215),
-    T = n(818348);
-let S = (e) => e?.premiumType != null,
-    N = (e) => e?.purchaseType === A.zF_.PREMIUM_PURCHASE,
-    O = (e, t, n) =>
-        p(e, n ? (t ? A.lid.MOBILE_PREMIUM_TIER_2 : A.lid.MOBILE) : t ? A.lid.PREMIUM_TIER_2 : A.lid.DEFAULT),
-    R = (e, t, n) => {
-        let i = O(e, t, n);
-        return null == i ? "" : (0, _.$g)(i?.amount, i?.currency);
+    _ = n(441574),
+    s = n(349871),
+    l = n(79387),
+    o = n(723702),
+    E = n(927578),
+    d = n(580630),
+    c = n(898461),
+    u = n(837015),
+    I = n(203632),
+    T = n(892118),
+    A = n(719986),
+    S = n(623373),
+    N = n(758836),
+    O = n(652215),
+    R = n(818348),
+    f = (((i = {}).NITRO = "nitro"), (i.THIRDPARTY = "thirdparty"), i);
+function C(e) {
+    if (!E.Ay.canUseShopDiscounts(e)) return null;
+    if (E.Ay.canUseCollectibles(e)) return "nitro";
+    let t = (0, s.kQ)(e?.perks, _.bb.SHOP_DISCOUNTS);
+    return t?.includes(_.g$.SOURCE_NITRO) ? "nitro" : null;
+}
+let p = (e) => e?.premiumType != null,
+    D = (e) => e?.purchaseType === O.zF_.PREMIUM_PURCHASE,
+    L = (e, t, n) =>
+        U(e, n ? (t ? O.lid.MOBILE_PREMIUM_TIER_2 : O.lid.MOBILE) : t ? O.lid.PREMIUM_TIER_2 : O.lid.DEFAULT),
+    m = (e, t, n) => {
+        let i = L(e, t, n);
+        return null == i ? "" : (0, d.$g)(i?.amount, i?.currency);
     },
-    f = (e) =>
-        (0, s.isAndroid)() || (0, s.isIOS)()
+    h = (e) =>
+        (0, o.isAndroid)() || (0, o.isIOS)()
             ? e
-                ? A.lid.MOBILE_PREMIUM_TIER_2
-                : A.lid.MOBILE
+                ? O.lid.MOBILE_PREMIUM_TIER_2
+                : O.lid.MOBILE
             : e
-              ? A.lid.PREMIUM_TIER_2
-              : A.lid.DEFAULT,
-    C = (e) => {
+              ? O.lid.PREMIUM_TIER_2
+              : O.lid.DEFAULT,
+    g = (e) => {
         let t = e.bundledProducts;
         if (null == t) return 0;
-        let n = f(!1);
+        let n = h(!1);
         return t.reduce((e, t) => {
-            let i = p(t, n);
+            let i = U(t, n);
             return e + (i?.amount ?? 0);
         }, 0);
     },
-    p = (e, t) => {
+    U = (e, t) => {
         let n = e.prices[t] ?? null;
         return null != n ? n.countryPrices?.prices?.[0] : null;
     },
-    m = { original: -1, discountPercentage: -1 },
-    L = (e, t) => {
-        if (null == e) return m;
-        let n = C(e);
-        if (n <= 0) return m;
-        let i = p(e, f(t));
-        return null == i ? m : { original: n, discountPercentage: Math.round(((n - i.amount) / n) * 100) };
+    b = { original: -1, discountPercentage: -1 },
+    P = (e, t) => {
+        if (null == e) return b;
+        let n = g(e);
+        if (n <= 0) return b;
+        let i = U(e, h(t));
+        return null == i ? b : { original: n, discountPercentage: Math.round(((n - i.amount) / n) * 100) };
     },
-    D = (e, t) => {
-        let { isPremiumUser: n, discount: i } = t,
-            r = p(e, A.lid.DEFAULT);
-        if (null == r) return null;
-        if (r.amount <= 0) return { defaultPrice: r, showDefaultPriceOnly: !0 };
-        let a = p(e, A.lid.PREMIUM_TIER_2),
-            s = K(e) && n ? { ...r, amount: i.original } : r,
-            _ = n && null != a,
-            l = _ ? a : s;
+    M = (e, t) => {
+        let { hasShopDiscount: n, discount: i } = t,
+            a = U(e, O.lid.DEFAULT);
+        if (null == a) return null;
+        if (a.amount <= 0) return { defaultPrice: a, showDefaultPriceOnly: !0 };
+        let r = U(e, O.lid.PREMIUM_TIER_2),
+            _ = z(e) && n ? { ...a, amount: i.original } : a,
+            s = n && null != r,
+            l = s ? r : _;
         return {
-            defaultPrice: r,
-            originalPrice: s,
-            premiumPrice: a,
+            defaultPrice: a,
+            originalPrice: _,
+            premiumPrice: r,
             finalPrice: l,
-            showNitroPrice: _,
-            finalPriceIsDifferent: l.amount !== s.amount,
+            showDiscountPrice: s,
+            finalPriceIsDifferent: l.amount !== _.amount,
             showDefaultPriceOnly: !1,
         };
     },
-    h = (e) => p(e, A.lid.DEFAULT)?.amount === 0,
-    g = (e, t) => {
-        let n = (0, i.flatMap)([...e.values()], "products");
-        return (0, i.uniqBy)(
+    G = (e) => U(e, O.lid.DEFAULT)?.amount === 0,
+    y = (e, t) => {
+        let n = (0, a.flatMap)([...e.values()], "products");
+        return (0, a.uniqBy)(
             t
                 ? n.reduce(
                       (e, t) =>
                           null != t && t.type === r.R.VARIANTS_GROUP && null != t.variants
-                              ? (0, i.concat)(
+                              ? (0, a.concat)(
                                     e,
                                     t.variants.map((e) => ({
                                         ...e,
@@ -128,106 +141,106 @@ let S = (e) => e?.premiumType != null,
             "storeListingId",
         );
     },
-    b = (e, t) => {
+    v = (e, t) => {
         if (t === r.R.AVATAR_DECORATION) {
-            let t = (0, i.flatMap)([...e.values()], "items").filter(l.T);
-            return (0, i.uniqBy)(t, "skuId");
+            let t = (0, a.flatMap)([...e.values()], "items").filter(c.T);
+            return (0, a.uniqBy)(t, "skuId");
         }
         if (t === r.R.NAMEPLATE) {
-            let t = (0, i.flatMap)([...e.values()], "items").filter(o.F);
-            return (0, i.uniqBy)(t, "skuId");
+            let t = (0, a.flatMap)([...e.values()], "items").filter(u.F);
+            return (0, a.uniqBy)(t, "skuId");
         }
         if (t === r.R.PROFILE_EFFECT) {
-            let t = (0, i.flatMap)([...e.values()], "items").filter(E.C3);
-            return (0, i.uniqBy)(t, "skuId");
+            let t = (0, a.flatMap)([...e.values()], "items").filter(I.C3);
+            return (0, a.uniqBy)(t, "skuId");
         }
         if (t === r.R.PROFILE_FRAME) {
-            let t = (0, i.flatMap)([...e.values()], "items").filter(d.s);
-            return (0, i.uniqBy)(t, "skuId");
+            let t = (0, a.flatMap)([...e.values()], "items").filter(T.s);
+            return (0, a.uniqBy)(t, "skuId");
         }
         return [];
     },
-    U = (e, t) => {
-        let n = g(e, !0);
+    B = (e, t) => {
+        let n = y(e, !0);
         if (t === r.R.AVATAR_DECORATION) {
-            let e = (0, i.flatMap)(n, "items").filter(l.T);
-            return (0, i.uniqBy)(e, "skuId");
+            let e = (0, a.flatMap)(n, "items").filter(c.T);
+            return (0, a.uniqBy)(e, "skuId");
         }
         if (t === r.R.NAMEPLATE) {
-            let e = (0, i.flatMap)(n, "items").filter(o.F);
-            return (0, i.uniqBy)(e, "skuId");
+            let e = (0, a.flatMap)(n, "items").filter(u.F);
+            return (0, a.uniqBy)(e, "skuId");
         }
         if (t === r.R.PROFILE_EFFECT) {
-            let e = (0, i.flatMap)(n, "items").filter(E.C3);
-            return (0, i.uniqBy)(e, "skuId");
+            let e = (0, a.flatMap)(n, "items").filter(I.C3);
+            return (0, a.uniqBy)(e, "skuId");
         }
         if (t === r.R.PROFILE_FRAME) {
-            let e = (0, i.flatMap)(n, "items").filter(d.s);
-            return (0, i.uniqBy)(e, "skuId");
+            let e = (0, a.flatMap)(n, "items").filter(T.s);
+            return (0, a.uniqBy)(e, "skuId");
         }
         return [];
     },
-    P = (e) => (null != e ? c.M.fromServer(e) : void 0),
-    M = (e) => b(e, r.R.AVATAR_DECORATION),
-    y = (e, t) => (0, i.uniqBy)([...M(e), ...U(t, r.R.AVATAR_DECORATION)], "skuId"),
-    G = (e) => b(e, r.R.NAMEPLATE),
-    v = (e, t) => (0, i.uniqBy)([...G(e), ...U(t, r.R.NAMEPLATE)], "skuId"),
-    B = (e) => b(e, r.R.PROFILE_EFFECT),
-    w = (e) => U(e, r.R.PROFILE_EFFECT),
-    F = (e, t) => (0, i.uniqBy)([...B(e), ...w(t)], "skuId"),
-    V = (e, t) => {
-        let n = B(t),
-            i = w(e).filter((e) => {
+    w = (e) => (null != e ? A.M.fromServer(e) : void 0),
+    F = (e) => v(e, r.R.AVATAR_DECORATION),
+    V = (e, t) => (0, a.uniqBy)([...F(e), ...B(t, r.R.AVATAR_DECORATION)], "skuId"),
+    H = (e) => v(e, r.R.NAMEPLATE),
+    k = (e, t) => (0, a.uniqBy)([...H(e), ...B(t, r.R.NAMEPLATE)], "skuId"),
+    W = (e) => v(e, r.R.PROFILE_EFFECT),
+    Y = (e) => B(e, r.R.PROFILE_EFFECT),
+    x = (e, t) => (0, a.uniqBy)([...W(e), ...Y(t)], "skuId"),
+    K = (e, t) => {
+        let n = W(t),
+            i = Y(e).filter((e) => {
                 let { skuId: t } = e;
                 return !n.some((e) => e.skuId === t);
             });
         return { purchased: n, shopPreviews: i };
     },
-    H = (e, t) => (0, i.uniqBy)([...b(e, r.R.PROFILE_FRAME), ...U(t, r.R.PROFILE_FRAME)], "skuId"),
-    k = (e) => e.applicationId === A.FYj,
-    x = (e) => 3.8 * e,
-    W = (e) => {
+    j = (e, t) => (0, a.uniqBy)([...v(e, r.R.PROFILE_FRAME), ...B(t, r.R.PROFILE_FRAME)], "skuId"),
+    $ = (e) => e.applicationId === O.FYj,
+    Q = (e) => 3.8 * e,
+    q = (e) => {
         let t = new Date(),
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
         return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 864e5);
     },
-    Y = (e) => null != e && W(e) <= I.x3,
-    j = (e) => {
-        let t = I.Tq[e];
+    X = (e) => null != e && q(e) <= N.x3,
+    Z = (e) => {
+        let t = N.Tq[e];
         return null != t && new Date().getTime() < t;
     },
-    K = (e) => e?.type === r.R.BUNDLE,
-    $ = (e) => {
+    z = (e) => e?.type === r.R.BUNDLE,
+    J = (e) => {
         if (null != e) return e.type === r.R.BUNDLE ? r.R.BUNDLE : e.items?.[0]?.type;
     },
-    Q = (e) => {
+    ee = (e) => {
         let {
                 selectedSkuPricePreview: t,
                 paymentSourceId: n,
                 selectedSkuId: i,
-                skuPricePreviewsById: r,
-                skusById: s,
+                skuPricePreviewsById: a,
+                skusById: r,
             } = e,
-            _ = t ?? (null != n && null != i ? r[i]?.[a.B] : null),
-            l = _?.invoice_items?.[0]?.unit_price,
-            o = null != l ? { amount: l.amount, currency: l.currency } : void 0;
+            _ = t ?? (null != n && null != i ? a[i]?.[l.B] : null),
+            s = _?.invoice_items?.[0]?.unit_price,
+            o = null != s ? { amount: s.amount, currency: s.currency } : void 0;
         if (null == o && null != i) {
-            let e = s[i];
+            let e = r[i];
             e?.price != null && (o = { amount: e.price.amount, currency: e.price.currency });
         }
         return o;
     };
-T.Yr.KZT, T.Yr.NGN, T.Yr.EGP;
-let q = (e, t, n) => {
-        if (K(e)) return C(e);
-        let i = p(e, t ? (n ? A.lid.MOBILE : A.lid.DEFAULT) : n ? A.lid.MOBILE_PREMIUM_TIER_2 : A.lid.PREMIUM_TIER_2);
+R.Yr.KZT, R.Yr.NGN, R.Yr.EGP;
+let et = (e, t, n) => {
+        if (z(e)) return g(e);
+        let i = U(e, t ? (n ? O.lid.MOBILE : O.lid.DEFAULT) : n ? O.lid.MOBILE_PREMIUM_TIER_2 : O.lid.PREMIUM_TIER_2);
         return i?.amount;
     },
-    X = (e) => {
+    en = (e) => {
         let { product: t, isPartiallyOwnedBundle: n, isPurchased: i } = e;
-        return !n && !(I.Dp.ORB_PROFILE_BADGE === t?.skuId && i);
+        return !n && !(N.Dp.ORB_PROFILE_BADGE === t?.skuId && i);
     },
-    z = (e, t) => {
+    ei = (e, t) => {
         switch (e) {
             case r.R.AVATAR_DECORATION:
                 return "avatar decoration";
@@ -238,8 +251,8 @@ let q = (e, t, n) => {
             case r.R.BUNDLE:
                 return "bundle";
             case r.R.EXTERNAL_SKU:
-                if (t === I.Dp.FRACTIONAL_PREMIUM) return "3-day nitro credit";
-                if (t === I.Dp.ORB_PROFILE_BADGE) return "orb profile badge";
+                if (t === N.Dp.FRACTIONAL_PREMIUM) return "3-day nitro credit";
+                if (t === N.Dp.ORB_PROFILE_BADGE) return "orb profile badge";
                 return "unknown";
             case r.R.VARIANTS_GROUP:
                 return "variants group";
@@ -247,13 +260,13 @@ let q = (e, t, n) => {
                 return "unknown";
         }
     },
-    J = (e, t, n) =>
+    ea = (e, t, n) =>
         e.sort((e, i) => {
-            let r = n ? (0, u.CW)({ product: e, isPremiumUser: t }) : O(e, t, !1),
-                a = n ? (0, u.CW)({ product: i, isPremiumUser: t }) : O(i, t, !1);
-            return (r?.amount ?? 0) - (a?.amount ?? 0);
+            let a = n ? (0, S.CW)({ product: e, hasShopDiscount: t }) : L(e, t, !1),
+                r = n ? (0, S.CW)({ product: i, hasShopDiscount: t }) : L(i, t, !1);
+            return (a?.amount ?? 0) - (r?.amount ?? 0);
         }),
-    Z = (e, t) => {
+    er = (e, t) => {
         if (0 === t.length || 0 === e.length) return e;
         let n = t.map((e) => e.discountId);
         return e.sort((e, t) => {
@@ -261,4 +274,4 @@ let q = (e, t, n) => {
             return (t.eligibleOffers?.some((e) => n.includes(e)) ?? !1) - i;
         });
     },
-    ee = (e) => e.filter((e) => !e.isCategoryReward);
+    e_ = (e) => e.filter((e) => !e.isCategoryReward);

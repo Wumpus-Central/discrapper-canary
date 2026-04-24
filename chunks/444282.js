@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Gt: "gameIcon_b52e4f",
     Xc: "intersectionContainer_b52e4f",
