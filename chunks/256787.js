@@ -7,8 +7,8 @@ n.d(t, {
     XQ: () => f,
     Zm: () => E,
     ef: () => m,
-    ki: () => _,
-    vf: () => p,
+    ki: () => d,
+    vf: () => I,
     zd: () => A,
 });
 var i = n(554146);
@@ -70,6 +70,7 @@ let r = [
         i.M.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET,
         i.M.GIFTING_PROMOTION_REMINDER,
         i.M.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR,
+        i.M.GAME_SERVER_NEW_GAMES_COACHMARK,
     ],
     o = [i.M.GAME_SHOP_NEW_BADGE, i.M.GAME_SHOP_NEW_DROP_POPOVER],
     l = [
@@ -81,8 +82,8 @@ let r = [
         i.M.FIRST_BOOSTER_UPSELL,
         i.M.MOBILE_ACCOUNT_LINKING_BANNER,
     ],
-    d = [i.M.BOOST_TO_UNLOCK_COACHMARK, i.M.EXPIRING_POWERUP_COACHMARK];
-function _(e) {
+    _ = [i.M.BOOST_TO_UNLOCK_COACHMARK, i.M.EXPIRING_POWERUP_COACHMARK];
+function d(e) {
     return s.includes(e);
 }
 function u(e) {
@@ -92,7 +93,7 @@ function c(e) {
     return a.includes(e);
 }
 function E(e) {
-    return _(e) || u(e) || c(e);
+    return d(e) || u(e) || c(e);
 }
 function h(e) {
     return !E(e);
@@ -101,12 +102,12 @@ function m(e) {
     return l.includes(e);
 }
 function f(e) {
-    return d.includes(e);
+    return _.includes(e);
 }
 function g(e) {
     return o.includes(e);
 }
-function p(e) {
+function I(e) {
     return m(e) || f(e) || g(e);
 }
 let A = Object.keys(i.M)

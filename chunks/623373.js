@@ -2,7 +2,7 @@ n.d(t, { $K: () => _, Ab: () => o, B1: () => d, CW: () => r, YW: () => I, ex: ()
 var i = n(575593),
     a = n(652215);
 let r = (e) => {
-        let { product: t, isPremiumUser: n } = e;
+        let { product: t, hasShopDiscount: n } = e;
         return (
             (t.prices[n ? a.lid.PREMIUM_TIER_2 : a.lid.DEFAULT]?.countryPrices?.prices?.slice(0, 2) ?? []).find(
                 (e) => e.currency === a.Yri.DISCORD_ORB,
@@ -10,15 +10,15 @@ let r = (e) => {
         );
     },
     _ = (e) => {
-        let { product: t, isPremiumUser: n } = e;
+        let { product: t, hasShopDiscount: n } = e;
         return (
             (t.prices[n ? a.lid.PREMIUM_TIER_2 : a.lid.DEFAULT]?.countryPrices?.prices?.slice(0, 2) ?? []).find(
                 (e) => e.currency !== a.Yri.DISCORD_ORB,
             ) ?? null
         );
     },
-    s = (e) => null != r({ product: e, isPremiumUser: !1 }),
-    l = (e) => null != _({ product: e, isPremiumUser: !1 }),
+    s = (e) => null != r({ product: e, hasShopDiscount: !1 }),
+    l = (e) => null != _({ product: e, hasShopDiscount: !1 }),
     o = (e) => {
         if (null == e) return !1;
         let t = s(e),

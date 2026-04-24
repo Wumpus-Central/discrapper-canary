@@ -7,12 +7,12 @@ var i = n(855104),
     o = n(561769),
     d = n(652215);
 let c = (e) => {
-        let { product: t, isPremiumUser: n } = e,
+        let { product: t, hasShopDiscount: n } = e,
             { enabled: i } = (0, l.m)({ location: "getShopBasePricingData" }),
-            a = i ? (0, r.CW)({ product: t, isPremiumUser: n }) : void 0;
+            a = i ? (0, r.CW)({ product: t, hasShopDiscount: n }) : void 0;
         return {
             orbPrice: a,
-            fiatPrice: (0, r.$K)({ product: t, isPremiumUser: n }) ?? void 0,
+            fiatPrice: (0, r.$K)({ product: t, hasShopDiscount: n }) ?? void 0,
             isOrbExclusive: (0, r.Ab)(t),
         };
     },
@@ -46,7 +46,7 @@ let c = (e) => {
                 orbPrice: o,
                 fiatPrice: d,
                 isOrbExclusive: h,
-            } = c({ product: t, isPremiumUser: s.Ay.canUseCollectibles(r) }),
+            } = c({ product: t, hasShopDiscount: s.Ay.canUseShopDiscounts(r) }),
             _ = null != o && null != l && l >= o.amount,
             { shouldCheckoutWithOrbs: m } = u({
                 orbPrice: o,
@@ -58,8 +58,8 @@ let c = (e) => {
         return m;
     };
 function _(e) {
-    let { product: t, isPremiumUser: n, prioritizedCurrency: l, hasDiscountOffer: a = !1 } = e,
-        { orbPrice: s, fiatPrice: r, isOrbExclusive: o } = c({ product: t, isPremiumUser: n }),
+    let { product: t, hasShopDiscount: n, prioritizedCurrency: l, hasDiscountOffer: a = !1 } = e,
+        { orbPrice: s, fiatPrice: r, isOrbExclusive: o } = c({ product: t, hasShopDiscount: n }),
         d = (0, i.kj)(null != s ? s.amount : null);
     return u({
         orbPrice: s,
