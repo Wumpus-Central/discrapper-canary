@@ -72,12 +72,13 @@ class c {
     trackTTI() {
         if (window.__TTI_COMPLETED) return;
         window.__TTI_COMPLETED = !0;
-        let e = window.location?.pathname?.split("/")?.[1];
+        let e = window.location?.pathname,
+            t = e?.startsWith("/channels/@me") ? "channels/@me" : e?.split("/")?.[1];
         requestIdleCallback(() => {
-            let t = d();
+            let e = d();
             a.A.firstRenderAfterReadyPayload.record();
-            let n = a.A.serializeWebPerfStartupMetrics(t);
-            l.default.track(o.HAw.APP_WEB_PERF_STARTUP_METRICS, { load_id: this.loadId, url_root_path: e, ...n });
+            let n = a.A.serializeWebPerfStartupMetrics(e);
+            l.default.track(o.HAw.APP_WEB_PERF_STARTUP_METRICS, { load_id: this.loadId, url_root_path: t, ...n });
             try {
                 r.Ay.appFirstRenderAfterReadyPayload();
             } catch (e) {}
