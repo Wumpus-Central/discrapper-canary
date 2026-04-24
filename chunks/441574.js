@@ -899,6 +899,7 @@ class P extends T.G {
                 repeat: 1,
                 T: () => ["discord_protos.safety_common.v1.ClassificationType", C],
             },
+            { no: 3, name: "banned_at", kind: "message", T: () => N.D },
         ]);
     }
     create(e) {
@@ -923,6 +924,9 @@ class P extends T.G {
                         for (let t = e.int32() + e.pos; e.pos < t; ) r.classificationTypes.push(e.int32());
                     else r.classificationTypes.push(e.int32());
                     break;
+                case 3:
+                    r.bannedAt = N.D.internalBinaryRead(e, e.uint32(), n, r.bannedAt);
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -942,6 +946,7 @@ class P extends T.G {
             for (let n = 0; n < e.classificationTypes.length; n++) t.int32(e.classificationTypes[n]);
             t.join();
         }
+        e.bannedAt && N.D.internalBinaryWrite(e.bannedAt, t.tag(3, p.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? p.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -957,6 +962,7 @@ class M extends T.G {
                 repeat: 1,
                 T: () => ["discord_protos.safety_common.v1.ClassificationType", C],
             },
+            { no: 2, name: "banned_at", kind: "message", T: () => N.D },
         ]);
     }
     create(e) {
@@ -972,16 +978,21 @@ class M extends T.G {
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
-            if (1 === t)
-                if (i === p.O0.LengthDelimited)
-                    for (let t = e.int32() + e.pos; e.pos < t; ) r.classificationTypes.push(e.int32());
-                else r.classificationTypes.push(e.int32());
-            else {
-                let s = n.readUnknownField;
-                if ("throw" === s)
-                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
-                let a = e.skip(i);
-                !1 !== s && (!0 === s ? p.f$.onRead : s)(this.typeName, r, t, i, a);
+            switch (t) {
+                case 1:
+                    if (i === p.O0.LengthDelimited)
+                        for (let t = e.int32() + e.pos; e.pos < t; ) r.classificationTypes.push(e.int32());
+                    else r.classificationTypes.push(e.int32());
+                    break;
+                case 2:
+                    r.bannedAt = N.D.internalBinaryRead(e, e.uint32(), n, r.bannedAt);
+                    break;
+                default:
+                    let s = n.readUnknownField;
+                    if ("throw" === s)
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let a = e.skip(i);
+                    !1 !== s && (!0 === s ? p.f$.onRead : s)(this.typeName, r, t, i, a);
             }
         }
         return r;
@@ -992,6 +1003,7 @@ class M extends T.G {
             for (let n = 0; n < e.classificationTypes.length; n++) t.int32(e.classificationTypes[n]);
             t.join();
         }
+        e.bannedAt && N.D.internalBinaryWrite(e.bannedAt, t.tag(2, p.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? p.f$.onWrite : i)(this.typeName, e, t), t;
     }
