@@ -612,49 +612,52 @@ ${s}`);
     }
 }
 let ev = new Set(["libdiscore", "typescript-libdiscore-dual-read"]);
-new ey(
-    __OVERLAY__
-        ? (eC.verbose("Not enabling rust implementation because we're in the legacy overlay"), [])
-        : eR.filter((e) => ev.has(e.getMode())),
-),
+if (
+    (new ey(
+        __OVERLAY__
+            ? (eC.verbose("Not enabling rust implementation because we're in the legacy overlay"), [])
+            : eR.filter((e) => ev.has(e.getMode())),
+    ),
     (n.p = (window.GLOBAL_ENV.STATIC_ENDPOINT ?? "") + window.GLOBAL_ENV.PUBLIC_PATH),
     !0 === window.__METICULOUS_ENABLED &&
         n
             .e("3321")
             .then(n.bind(n, 342400))
             .then((e) => e.init()),
-    window.Meticulous?.isRunningAsTest === !0 &&
+    window.Meticulous?.isRunningAsTest === !0)
+) {
+    let { initWasmTracking: e } = n(474570);
+    e(),
         n
             .e("60649")
             .then(n.bind(n, 38896))
-            .then((e) => e.init()),
-    (0, k.Zs)(function (e) {
-        return (
-            (e.paragraph = {
-                ...e.paragraph,
-                react: function (e, t, n) {
-                    return (0, x.jsx)("p", { children: t(e.content, n) }, n.key);
-                },
-            }),
-            (e.link = {
-                ...e.link,
-                react: function (e, t, n) {
-                    let i = {};
-                    if (null != e.context) {
-                        let t = e.context[e.target];
-                        t && t.onClick
-                            ? ((i.onClick = t.onClick), (i.onContextMenu = t.onContextMenu))
-                            : (i.onClick = t);
-                    }
-                    return (
-                        null == i.onClick && (i.href = V().sanitizeUrl(e.target)),
-                        (0, x.jsx)(F.Anchor, { title: e.title, ...i, children: t(e.content, n) }, n.key)
-                    );
-                },
-            }),
-            e
-        );
-    }),
+            .then((e) => e.init());
+}
+(0, k.Zs)(function (e) {
+    return (
+        (e.paragraph = {
+            ...e.paragraph,
+            react: function (e, t, n) {
+                return (0, x.jsx)("p", { children: t(e.content, n) }, n.key);
+            },
+        }),
+        (e.link = {
+            ...e.link,
+            react: function (e, t, n) {
+                let i = {};
+                if (null != e.context) {
+                    let t = e.context[e.target];
+                    t && t.onClick ? ((i.onClick = t.onClick), (i.onContextMenu = t.onContextMenu)) : (i.onClick = t);
+                }
+                return (
+                    null == i.onClick && (i.href = V().sanitizeUrl(e.target)),
+                    (0, x.jsx)(F.Anchor, { title: e.title, ...i, children: t(e.content, n) }, n.key)
+                );
+            },
+        }),
+        e
+    );
+}),
     (function (e, t) {
         if (null != t && "0.0.0" === t.app.getVersion()) return;
         let n = new v();
@@ -693,7 +696,7 @@ new ey(
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let eD = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eh.A().log(
-    `[BUILD INFO] Release Channel: ${eD}, Build Number: 534155, Version Hash: 1b403b4f4bffbbc8fc15861878618cd7c2479e24`,
+    `[BUILD INFO] Release Channel: ${eD}, Build Number: 534558, Version Hash: 3680e364ce15ba327c79f75cc0360e50254745b6`,
 ),
     o.A.setTags({ appContext: E.QCW }),
     H.A.initBasic(),

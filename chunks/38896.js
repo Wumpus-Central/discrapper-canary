@@ -1,4 +1,4 @@
-i.d(t, { init: () => g });
+i.d(t, { init: () => I });
 var r = i(626584);
 i(321073);
 var s = i(228366),
@@ -110,8 +110,8 @@ class p {
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "534155",
-            built_at: "1776968096744",
+            build_number: "534558",
+            built_at: "1776990054414",
             release_channel: n.y ?? "unknown",
             tags: this.getTags(),
             metrics: {
@@ -209,8 +209,9 @@ class p {
         }
     }
 }
-let S = +l.A.Millis.MINUTE;
-class f {
+var S = i(474570);
+let f = +l.A.Millis.MINUTE;
+class _ {
     mode = null;
     sampleIntervalId = null;
     sessionStartTime = 0;
@@ -222,7 +223,7 @@ class f {
             this.sampleAndSend(),
             (this.sampleIntervalId = window.setInterval(() => {
                 this.sampleAndSend();
-            }, S));
+            }, f));
     }
     stop() {
         null != this.sampleIntervalId && (clearInterval(this.sampleIntervalId), (this.sampleIntervalId = null)),
@@ -252,8 +253,8 @@ class f {
                 branch_name: this.mode.branchName,
                 commit_date: this.mode.commitDate,
                 timestamp: new Date().toISOString(),
-                build_number: "534155",
-                built_at: "1776968096744",
+                build_number: "534558",
+                built_at: "1776990054414",
                 release_channel: n.y ?? "unknown",
                 tags: i,
                 metrics: {
@@ -264,18 +265,19 @@ class f {
                     delta_from_baseline:
                         null != this.mode.baselineUsedMemory ? e.usedJSHeapSize - this.mode.baselineUsedMemory : void 0,
                     baseline_memory: this.mode.baselineUsedMemory,
+                    ...(0, S.collectNonHeapMetrics)(),
                     timing: { collected_at: this.mode.performanceNow() },
                 },
             };
         this.mode.sendToIngest(r);
     }
 }
-let _ = new r.A("MeticulousPerformanceReporter");
-class y {
+let y = new r.A("MeticulousPerformanceReporter");
+class b {
     mode = null;
     boundBeforeUnload = null;
     actionTracker = new p();
-    heapSampler = new f();
+    heapSampler = new _();
     get isInitialized() {
         return null != this.mode;
     }
@@ -319,8 +321,8 @@ class y {
                     sendToIngest: async (e) => {
                         let t = JSON.stringify(e),
                             { metrics: i, ...r } = e;
-                        _.log("QP payload metadata", JSON.stringify(r, null, 2)),
-                            _.log("QP payload metrics", JSON.stringify(i, null, 2));
+                        y.log("QP payload metadata", JSON.stringify(r, null, 2)),
+                            y.log("QP payload metrics", JSON.stringify(i, null, 2));
                         try {
                             let e = await fetch("https://meticulous-ingest.discord.tools/webhook", {
                                 method: "POST",
@@ -329,15 +331,15 @@ class y {
                                 keepalive: !0,
                             });
                             if (!e.ok)
-                                return _.warn(`Failed to send performance data: ${e.status} ${e.statusText}`), !1;
+                                return y.warn(`Failed to send performance data: ${e.status} ${e.statusText}`), !1;
                             return !0;
                         } catch (e) {
-                            return _.warn("Error sending performance data:", e), !1;
+                            return y.warn("Error sending performance data:", e), !1;
                         }
                     },
                 })),
             this.start(),
-            _.log(`Performance reporter initialized [${this.mode.name}]`),
+            y.log(`Performance reporter initialized [${this.mode.name}]`),
             !0)
         );
     }
@@ -363,11 +365,11 @@ class y {
                         };
                 },
                 sendToIngest: async (e) => (
-                    _.log("\uD83D\uDCE4 [DEV] Ingest payload:", JSON.stringify(e, null, 2)), await Promise.resolve(!0)
+                    y.log("\uD83D\uDCE4 [DEV] Ingest payload:", JSON.stringify(e, null, 2)), await Promise.resolve(!0)
                 ),
             }),
             this.start(),
-            _.log(`🔧 Performance reporter initialized [${this.mode.name}] - entries will be logged to console`),
+            y.log(`🔧 Performance reporter initialized [${this.mode.name}] - entries will be logged to console`),
             !0)
         );
     }
@@ -387,11 +389,11 @@ class y {
             await this.actionTracker.flush(),
             this.actionTracker.stop(),
             this.heapSampler.stop(),
-            _.log("Performance reporter terminated"),
+            y.log("Performance reporter terminated"),
             (this.mode = null));
     }
 }
-let b = new y();
-function g() {
-    return b.init();
+let g = new b();
+function I() {
+    return g.init();
 }
