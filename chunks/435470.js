@@ -44,8 +44,8 @@ var r = n(64700),
     y = n(71393),
     I = n(576705),
     S = n(222823),
-    R = n(287809),
-    b = n(403362),
+    b = n(287809),
+    R = n(403362),
     p = n(935208),
     G = n(919577),
     U = n(207777),
@@ -55,9 +55,9 @@ var r = n(64700),
     O = n(768953),
     F = n(767581),
     j = n(253913),
-    x = n(652215),
-    D = n(746080),
-    v = n(37411);
+    D = n(652215),
+    v = n(746080),
+    x = n(37411);
 function L(e, t, n, u) {
     let i = (0, a.bG)([m.A], () => m.A.hasLoaded(e.guild_id));
     r.useEffect(() => {
@@ -75,7 +75,7 @@ function H(e) {
     return (0, a.bG)([m.A, T.A], () => {
         let t = i()(m.A.getThreadsForParent(e.guild_id, e.parent_id))
             .keys()
-            .filter((e) => T.A.getChannel(e)?.hasFlag(D.lx.PINNED) === !0)
+            .filter((e) => T.A.getChannel(e)?.hasFlag(v.lx.PINNED) === !0)
             .head();
         return T.A.getChannel(t);
     });
@@ -90,12 +90,12 @@ function P(e) {
                 return (e?.availableTags ?? []).reduce((e, t) => ({ ...e, [t.id]: t }), {});
             }, [t]));
     return r.useMemo(() => {
-        let t = e?.appliedTags?.map((e) => n[e])?.filter(b.Vq) ?? K;
+        let t = e?.appliedTags?.map((e) => n[e])?.filter(R.Vq) ?? K;
         return e?.isModeratorReportChannel() ? (0, g.Yj)(t) : t;
     }, [n, e]);
 }
 function B(e, t) {
-    let n = (0, a.yK)([R.default], () => t.map((e) => R.default.getUser(e)).filter(b.Vq));
+    let n = (0, a.yK)([b.default], () => t.map((e) => b.default.getUser(e)).filter(R.Vq));
     return (
         (0, s.Ay)(() => {
             n.forEach((t) => {
@@ -113,7 +113,11 @@ function Y(e, t) {
     return r.useMemo(() => (t === l.T.CREATION_DATE ? (0, M.aK)(u, a) : (0, M.aK)(i, a)), [i, t, u, a]);
 }
 function q(e) {
-    return r.useMemo(() => i().maxBy(e?.reactions ?? [], (e) => Math.max(e.burst_count, e.count)), [e?.reactions]);
+    return r.useMemo(() => {
+        let t = e?.reactions ?? [];
+        if (0 !== t.length)
+            return i().orderBy(t, [(e) => e.count + e.burst_count, (e) => e.burst_count], ["desc", "desc"])[0];
+    }, [e?.reactions]);
 }
 function z(e) {
     let t = e?.defaultReactionEmoji,
@@ -136,13 +140,13 @@ function Q(e) {
             if (null == n || !(n > 0)) return "1+";
             {
                 let e = Math.min(n, t);
-                return e >= v.oR ? `${v.oR}+` : e;
+                return e >= x.oR ? `${x.oR}+` : e;
             }
         });
     return { messageCount: t, isMaxMessageCount: null != t && `${t}` !== n, messageCountText: n, unreadCount: u };
 }
 function V(e) {
-    let t = (0, a.bG)([R.default], () => R.default.getUser(e.ownerId)),
+    let t = (0, a.bG)([b.default], () => b.default.getUser(e.ownerId)),
         n = (0, a.bG)([w.A], () => w.A.getMessage(e.id)?.firstMessage),
         u = (0, f.d8)(n?.author ?? t, e);
     return (
@@ -153,7 +157,7 @@ function V(e) {
     );
 }
 function J(e) {
-    let t = R.default.getUser(e.ownerId),
+    let t = b.default.getUser(e.ownerId),
         n = w.A.getMessage(e.id)?.firstMessage,
         r = (0, f.FT)(n?.author ?? t, e);
     return { user: t, author: r };
@@ -179,12 +183,12 @@ function $(e) {
     return { hasSpoilerEmbeds: a, content: d, firstMedia: o, firstMediaIsEmbed: s };
 }
 function X(e) {
-    return (0, a.bG)([I.A], () => I.A.can(x.xBc.MANAGE_CHANNELS, e));
+    return (0, a.bG)([I.A], () => I.A.can(D.xBc.MANAGE_CHANNELS, e));
 }
 let Z = { isNew: !1, hasUnreads: !1 };
 function W(e) {
     return (0, a.cf)([y.A, S.Ay], () => {
-        let t = y.A.getGuild(e.getGuildId() ?? x.dJq);
+        let t = y.A.getGuild(e.getGuildId() ?? D.dJq);
         return null == t ? Z : (0, F.U1)(e, t, [S.Ay]);
     });
 }
@@ -192,7 +196,7 @@ function ee(e) {
     return r.useMemo(() => (null == e || null == e.template ? "" : e.template.trim()), [e]);
 }
 function et(e) {
-    let t = (0, a.bG)([I.A], () => I.A.can(x.xBc.MANAGE_THREADS, e));
+    let t = (0, a.bG)([I.A], () => I.A.can(D.xBc.MANAGE_THREADS, e));
     return r.useMemo(() => {
         let n = [...(e?.availableTags ?? [])];
         return t || (n = n.filter((e) => !e.moderated)), n;
@@ -206,10 +210,10 @@ function en(e, t) {
     }, [t, n, e]);
 }
 function er(e) {
-    return (0, a.bG)([I.A], () => I.A.can(x.xBc.READ_MESSAGE_HISTORY, e));
+    return (0, a.bG)([I.A], () => I.A.can(D.xBc.READ_MESSAGE_HISTORY, e));
 }
 function eu(e) {
-    return (0, a.bG)([I.A], () => I.A.can(x.xBc.READ_MESSAGE_HISTORY, e));
+    return (0, a.bG)([I.A], () => I.A.can(D.xBc.READ_MESSAGE_HISTORY, e));
 }
 function ei(e) {
     let { channelId: t } = e;
@@ -273,8 +277,8 @@ function ed(e) {
         r.useEffect(() => {
             A &&
                 (0, o.hS)(t, {
-                    object: x.ZSU.ACK_FORUM_ACTIVE_THREADS,
-                    objectType: x.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                    object: D.ZSU.ACK_FORUM_ACTIVE_THREADS,
+                    objectType: D.AnalyticsObjectTypes.ACK_AUTOMATIC,
                 });
         }, [t, A]),
         d

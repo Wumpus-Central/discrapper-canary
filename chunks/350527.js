@@ -373,7 +373,7 @@ function eb(e) {
                   isLurking: i,
                   isPendingMember: r,
                   useChatFontScaling: !1,
-                  type: l.burst_count >= l.count ? F.v.BURST : F.v.NORMAL,
+                  type: l.burst_count > 0 ? F.v.BURST : F.v.NORMAL,
                   emojiSize: "reaction",
                   emojiSizeTooltip: "reaction",
                   ...l,
