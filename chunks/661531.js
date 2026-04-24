@@ -7678,6 +7678,14 @@ let { Themes: _ } = d.zv,
                         return 16;
                     },
                 },
+                HEADER_ICON_BUTTON_VARIANT: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return "secondary";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "icon-only";
+                        return "secondary";
+                    },
+                },
                 HEADER_TITLE_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
