@@ -1,23 +1,24 @@
-a.d(t, { e: () => c });
-var l = a(627968);
-a(64700);
-var r = a(503698),
-    n = a.n(r),
-    s = a(935462),
-    i = a(985018),
-    d = a(76488),
-    o = a(889277);
-let c = (e) => {
-    let { children: t, footer: a, className: r } = e;
-    return (0, l.jsx)("div", {
-        className: n()(o.zr, o.Gg, o.EX, o.vl, d.yl, r),
-        "aria-label": i.intl.string(i.t.eQ2bLp),
-        children: (0, l.jsxs)("form", {
-            className: d.Zd,
+"use strict";
+n.d(t, { e: () => u });
+var r = n(627968);
+n(64700);
+var i = n(503698),
+    a = n.n(i),
+    l = n(935462),
+    s = n(985018),
+    o = n(76488),
+    c = n(889277);
+let u = (e) => {
+    let { children: t, footer: n, className: i } = e;
+    return (0, r.jsx)("div", {
+        className: a()(c.zr, c.Gg, c.EX, c.vl, o.yl, i),
+        "aria-label": s.intl.string(s.t.eQ2bLp),
+        children: (0, r.jsxs)("form", {
+            className: o.Zd,
             onSubmit: (e) => {
                 e.preventDefault();
             },
-            children: [(0, l.jsx)(s.$m, { "data-migration-pending": !0, className: d.gT, children: t }), a],
+            children: [(0, r.jsx)(l.$m, { "data-migration-pending": !0, className: o.gT, children: t }), n],
         }),
     });
 };

@@ -1,48 +1,49 @@
-n.d(t, { A: () => h });
-var l = n(64700),
-    i = n(960027),
-    r = n(978940),
-    E = n(17928),
-    a = n(661531),
-    u = n(387755),
-    c = n(313961),
-    o = n(325909),
-    s = n(290863),
-    d = n(994500),
-    _ = n(806931),
-    S = n(818348),
-    C = n(985018);
-function h(e) {
-    let { user: t, channel: n, location: h } = e,
-        A = (0, o.oP)(t, h, n.id),
-        I = (0, o.lQ)(t, h, n),
-        N = t.bot || t.system || t.isProvisional,
-        g = (0, E.bG)([c.A], () => c.A.getParticipant(n.id, t.id)),
-        R = null == g,
-        L = null != g && g.type === _.lp.USER && g.ringing,
-        f = (0, E.bG)([d.A], () => d.A.isFriend(t.id)),
-        M = (0, E.bG)([s.A], () => s.A.getStatus(t.id) === S.cl.DND && n?.guild_id != null),
-        p = !A && (!I || N),
-        O = (0, l.useCallback)(() => {
-            if (A) {
-                if (R) return void u.A.ring(n.id, [t.id], h);
-                L && u.A.stopRinging(n.id, [t.id]);
+"use strict";
+l.d(t, { A: () => x });
+var n = l(64700),
+    i = l(960027),
+    s = l(978940),
+    a = l(17928),
+    r = l(661531),
+    o = l(387755),
+    d = l(313961),
+    c = l(325909),
+    u = l(290863),
+    h = l(994500),
+    g = l(806931),
+    m = l(818348),
+    p = l(985018);
+function x(e) {
+    let { user: t, channel: l, location: x } = e,
+        _ = (0, c.oP)(t, x, l.id),
+        A = (0, c.lQ)(t, x, l),
+        f = t.bot || t.system || t.isProvisional,
+        b = (0, a.bG)([d.A], () => d.A.getParticipant(l.id, t.id)),
+        C = null == b,
+        S = null != b && b.type === g.lp.USER && b.ringing,
+        v = (0, a.bG)([h.A], () => h.A.isFriend(t.id)),
+        N = (0, a.bG)([u.A], () => u.A.getStatus(t.id) === m.cl.DND && l?.guild_id != null),
+        j = !_ && (!A || f),
+        E = (0, n.useCallback)(() => {
+            if (_) {
+                if (C) return void o.A.ring(l.id, [t.id], x);
+                S && o.A.stopRinging(l.id, [t.id]);
             }
-        }, [R, L, A, h, n.id, t.id]);
+        }, [C, S, _, x, l.id, t.id]);
     return {
-        iconColor: L ? a.A.colors.ICON_FEEDBACK_CRITICAL : void 0,
-        icon: L ? i.z : r._,
-        tooltipText: f
-            ? M
-                ? C.intl.string(C.t.jaNpQH)
-                : R
-                  ? C.intl.string(C.t["3Hv9qQ"])
-                  : L
-                    ? C.intl.string(C.t.ygslb0)
+        iconColor: S ? r.A.colors.ICON_FEEDBACK_CRITICAL : void 0,
+        icon: S ? i.z : s._,
+        tooltipText: v
+            ? N
+                ? p.intl.string(p.t.jaNpQH)
+                : C
+                  ? p.intl.string(p.t["3Hv9qQ"])
+                  : S
+                    ? p.intl.string(p.t.ygslb0)
                     : null
-            : C.intl.string(C.t.TGqF9g),
-        disabled: !A,
-        shouldHideButton: p,
-        onClick: O,
+            : p.intl.string(p.t.TGqF9g),
+        disabled: !_,
+        shouldHideButton: j,
+        onClick: E,
     };
 }

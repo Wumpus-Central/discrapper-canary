@@ -1,80 +1,81 @@
-a.d(t, { g: () => b }), a(321073);
-var n = a(627968);
-a(64700);
-var r = a(231723),
-    l = a(192308),
-    i = a(820739),
-    s = a(73825),
-    o = a(323082),
-    c = a(287809),
-    d = a(178368),
-    u = a(97352),
-    h = a(473145),
-    p = a(212637),
-    m = a(652215);
-let f = "apply-guild-boost-modal";
-async function b(e) {
+"use strict";
+n.d(t, { g: () => f }), n(321073);
+var a = n(627968);
+n(64700);
+var r = n(231723),
+    i = n(192308),
+    l = n(820739),
+    s = n(73825),
+    o = n(323082),
+    c = n(287809),
+    d = n(178368),
+    u = n(97352),
+    _ = n(473145),
+    p = n(212637),
+    m = n(652215);
+let h = "apply-guild-boost-modal";
+async function f(e) {
     let {
             analyticsLocations: t,
-            analyticsLocation: b,
-            analyticsSourceLocation: _,
-            numberOfBoostsToAdd: g,
-            onClose: x,
-            onLoading: v,
-            closeLayer: A,
+            analyticsLocation: f,
+            analyticsSourceLocation: g,
+            numberOfBoostsToAdd: b,
+            onClose: v,
+            onLoading: A,
+            closeLayer: x,
             onSubscriptionConfirmation: E,
-            onSubscribeComplete: y,
-            guild: I,
-            handleSubscribeModalClose: S,
-            disablePremiumUpsell: j,
-            inPopout: C,
-            applicationId: T,
+            onSubscribeComplete: T,
+            guild: S,
+            handleSubscribeModalClose: C,
+            disablePremiumUpsell: I,
+            inPopout: y,
+            applicationId: N,
             intent: R,
         } = e,
-        w = C ? r.KX : r.SY,
-        k = c.default.getCurrentUser();
-    if (null == k) return;
-    if (!k.verified)
-        return void (0, l.openModalLazy)(
+        j = y ? r.KX : r.SY,
+        L = c.default.getCurrentUser();
+    if (null == L) return;
+    if (!L.verified)
+        return void (0, i.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([a.e("12206"), a.e("90406")]).then(a.bind(a, 661925));
+                let { default: e } = await Promise.all([n.e("12206"), n.e("90406")]).then(n.bind(n, 661925));
                 return (t) => {
-                    let { onClose: a, ...r } = t;
-                    return (0, n.jsx)(e, { ...r, onClose: a });
+                    let { onClose: n, ...r } = t;
+                    return (0, a.jsx)(e, { ...r, onClose: n });
                 };
             },
-            { contextKey: w },
+            { contextKey: j },
         );
-    let L = [];
-    u.A.isLoadedForPremiumSKUs() || L.push((0, s.zS)()),
-        d.A.hasFetched || (L.push(o.hP()), L.push((0, i.CD)())),
-        L.length > 0 && (v?.(!0), await Promise.allSettled(L), v?.(!1));
-    let N = (0, h.D$)(d.A.boostSlots),
-        O = N.length,
-        P = (e) => {
-            x?.(), S?.(e);
+    let w = [];
+    u.A.isLoadedForPremiumSKUs() || w.push((0, s.zS)()),
+        d.A.hasFetched || (w.push(o.hP()), w.push((0, l.CD)())),
+        w.length > 0 && (A?.(!0), await Promise.allSettled(w), A?.(!1));
+    let O = (0, _.D$)(d.A.boostSlots),
+        D = O.length,
+        M = (e) => {
+            v?.(), C?.(e);
         };
-    if (O > 0 && (null == g || O >= g)) {
+    if (D > 0 && (null == b || D >= b)) {
         let e;
-        1 === O ? (e = N.slice(0, 1)) : null != g && (e = N.slice(0, g)),
-            await (0, l.openModalLazy)(
+        1 === D ? (e = O.slice(0, 1)) : null != b && (e = O.slice(0, b)),
+            await (0, i.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
-                        a.e("45174"),
-                        a.e("85519"),
-                        a.e("62175"),
-                        a.e("96817"),
-                        a.e("38249"),
-                        a.e("95024"),
-                    ]).then(a.bind(a, 724624));
-                    return (a) => {
-                        let { onClose: r, ...l } = a;
-                        return (0, n.jsx)(t, {
-                            ...l,
+                        n.e("45174"),
+                        n.e("85519"),
+                        n.e("62175"),
+                        n.e("96817"),
+                        n.e("38249"),
+                        n.e("95024"),
+                    ]).then(n.bind(n, 724624));
+                    return (n) => {
+                        let { onClose: r, ...i } = n;
+                        return (0, a.jsx)(t, {
+                            ...i,
                             onClose: (e) => {
-                                r(), P(e);
+                                r(), M(e);
                             },
-                            selectedGuild: I,
+                            selectedGuild: S,
                             locationSection: m.liQ.PREMIUM_GUILD_USER_MODAL,
                             guildBoostSlots: e,
                             intent: R,
@@ -82,29 +83,29 @@ async function b(e) {
                     };
                 },
                 {
-                    modalKey: f,
+                    modalKey: h,
                     onCloseRequest: () => {
-                        (0, l.closeModal)(f), P(!1);
+                        (0, i.closeModal)(h), M(!1);
                     },
-                    contextKey: w,
+                    contextKey: j,
                 },
             );
     } else
         (0, p.A)({
             analyticsLocations: t,
-            analyticsLocation: b,
-            analyticsSourceLocation: _,
-            guildId: I.id,
+            analyticsLocation: f,
+            analyticsSourceLocation: g,
+            guildId: S.id,
             closeLayer: () => {
-                x?.(), A?.();
+                v?.(), x?.();
             },
-            totalNumberOfSlotsToAssign: g ?? 1,
-            onCloseModal: P,
-            disablePremiumUpsell: j,
+            totalNumberOfSlotsToAssign: b ?? 1,
+            onCloseModal: M,
+            disablePremiumUpsell: I,
             onSubscriptionConfirmation: E,
-            onSubscribeComplete: y,
-            inPopout: C,
-            applicationId: T,
+            onSubscribeComplete: T,
+            inPopout: y,
+            applicationId: N,
             intent: R,
         });
 }

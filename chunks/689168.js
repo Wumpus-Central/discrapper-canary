@@ -1,36 +1,37 @@
-n.d(t, { A: () => T });
-var i = n(17928),
+"use strict";
+n.d(t, { A: () => f });
+var a = n(17928),
     r = n(451988),
-    a = n(228366),
-    s = n(375492),
-    _ = n(461213),
-    l = n(652215);
-let o = {},
-    E = {};
-function d(e, t, n) {
-    null != E[e] && E[e].stop();
-    let i = new r.Ep();
-    i.start(n, () => a.h.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId: e, activityType: t })), (E[e] = i);
+    i = n(228366),
+    l = n(375492),
+    s = n(461213),
+    o = n(652215);
+let c = {},
+    d = {};
+function u(e, t, n) {
+    null != d[e] && d[e].stop();
+    let a = new r.Ep();
+    a.start(n, () => i.h.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId: e, activityType: t })), (d[e] = a);
 }
-function c(e, t, n) {
-    let { applicationId: i, remotePartyId: r } = n;
-    if (e === l.eAD.COMPLETE) {
-        delete o[i]?.[t], null != E[i] && (E[i].stop(), delete E[i]);
+function _(e, t, n) {
+    let { applicationId: a, remotePartyId: r } = n;
+    if (e === o.eAD.COMPLETE) {
+        delete c[a]?.[t], null != d[a] && (d[a].stop(), delete d[a]);
         return;
     }
-    let a = o[i] ?? {};
-    (a[t] = { state: e, remotePartyId: r }),
-        (o[i] = a),
-        __OVERLAY__ || e !== l.eAD.FAILED ? e === l.eAD.LOADING && null != r && d(i, t, 15e3) : d(i, t, 12e4);
+    let i = c[a] ?? {};
+    (i[t] = { state: e, remotePartyId: r }),
+        (c[a] = i),
+        __OVERLAY__ || e !== o.eAD.FAILED ? e === o.eAD.LOADING && null != r && u(a, t, 15e3) : u(a, t, 12e4);
 }
-function u(e) {
-    return c(l.eAD.COMPLETE, l.xL.JOIN, e);
+function p(e) {
+    return _(o.eAD.COMPLETE, o.xL.JOIN, e);
 }
-function I() {
-    let e = Object.entries(o)
+function m() {
+    let e = Object.entries(c)
             .map((e) => {
                 let [t, n] = e;
-                return { applicationId: t, remotePartyId: n[l.xL.JOIN]?.remotePartyId };
+                return { applicationId: t, remotePartyId: n[o.xL.JOIN]?.remotePartyId };
             })
             .filter((e) => {
                 let { remotePartyId: t } = e;
@@ -39,41 +40,41 @@ function I() {
         t = !1;
     return (
         e.forEach((e) => {
-            let { applicationId: n, remotePartyId: i } = e,
-                r = s.A.getApplicationActivity(n),
-                a = _.A.getApplicationActivity(n);
-            (r?.party?.id === i || a?.party?.id === i) &&
-                (c(l.eAD.COMPLETE, l.xL.JOIN, { applicationId: n, remotePartyId: i }), (t = !0));
+            let { applicationId: n, remotePartyId: a } = e,
+                r = l.A.getApplicationActivity(n),
+                i = s.A.getApplicationActivity(n);
+            (r?.party?.id === a || i?.party?.id === a) &&
+                (_(o.eAD.COMPLETE, o.xL.JOIN, { applicationId: n, remotePartyId: a }), (t = !0));
         }),
         t
     );
 }
-class A extends i.Ay.Store {
+class h extends a.Ay.Store {
     static displayName = "ActivityLauncherStore";
     initialize() {
-        this.syncWith([s.A, _.A], I);
+        this.syncWith([l.A, s.A], m);
     }
     getState(e, t) {
-        let n = o[e];
+        let n = c[e];
         return n?.[t]?.state;
     }
     getStates() {
-        return o;
+        return c;
     }
 }
-let T = new A(a.h, {
+let f = new h(i.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { activityLauncherStates: t } = e;
-        o = { ...t };
+        c = { ...t };
     },
-    ACTIVITY_JOIN_LOADING: (e) => c(l.eAD.LOADING, l.xL.JOIN, e),
-    ACTIVITY_JOIN_FAILED: (e) => c(l.eAD.FAILED, l.xL.JOIN, e),
-    ACTIVITY_JOIN: u,
-    EMBEDDED_ACTIVITY_CLOSE: u,
+    ACTIVITY_JOIN_LOADING: (e) => _(o.eAD.LOADING, o.xL.JOIN, e),
+    ACTIVITY_JOIN_FAILED: (e) => _(o.eAD.FAILED, o.xL.JOIN, e),
+    ACTIVITY_JOIN: p,
+    EMBEDDED_ACTIVITY_CLOSE: p,
     ACTIVITY_LAUNCH_FAIL: function (e) {
         let { applicationId: t, activityType: n } = e,
-            i = o[t];
-        if (null == i) return !1;
-        delete i[n];
+            a = c[t];
+        if (null == a) return !1;
+        delete a[n];
     },
 });

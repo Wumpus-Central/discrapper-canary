@@ -1,38 +1,39 @@
-n.d(t, { A: () => d });
-var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(195462);
-let o = l.forwardRef((e, t) => {
+"use strict";
+n.d(t, { A: () => c });
+var r = n(627968),
+    i = n(64700),
+    a = n(503698),
+    l = n.n(a),
+    s = n(195462);
+let o = i.forwardRef((e, t) => {
     let {
         muted: n = !1,
-        highlighted: l = !1,
-        avatar: s,
+        highlighted: i = !1,
+        avatar: a,
         decorators: o,
-        name: d,
-        subText: c,
-        avatarClassName: u,
-        innerClassName: h,
-        withDisplayNameStyles: A = !1,
+        name: c,
+        subText: u,
+        avatarClassName: d,
+        innerClassName: _,
+        withDisplayNameStyles: p = !1,
     } = e;
-    return (0, i.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         ref: t,
-        className: a()(r.Zp, h, { [r.SU]: n, [r.mr]: l }),
+        className: l()(s.Zp, _, { [s.SU]: n, [s.mr]: i }),
         children: [
-            (0, i.jsx)("div", { className: a()(r.my, u), children: s }),
-            (0, i.jsxs)("div", {
-                className: a()(r.Qs, { [r.e8]: A }),
+            (0, r.jsx)("div", { className: l()(s.my, d), children: a }),
+            (0, r.jsxs)("div", {
+                className: l()(s.Qs, { [s.e8]: p }),
                 children: [
-                    (0, i.jsxs)("div", {
-                        className: r.BG,
-                        children: [(0, i.jsx)("div", { className: r.UU, children: d }), o],
+                    (0, r.jsxs)("div", {
+                        className: s.BG,
+                        children: [(0, r.jsx)("div", { className: s.UU, children: c }), o],
                     }),
-                    null != c ? (0, i.jsx)("div", { className: r.Sv, children: c }) : null,
+                    null != u ? (0, r.jsx)("div", { className: s.Sv, children: u }) : null,
                 ],
             }),
         ],
     });
 });
 o.displayName = "AvatarWithText";
-let d = o;
+let c = o;
