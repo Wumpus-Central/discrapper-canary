@@ -219,24 +219,7 @@ class y {
         return new y(e);
     }
 }
-class G {
-    title;
-    body;
-    mobileBackgroundImage;
-    mobileForegroundImage;
-    desktopBackgroundImage;
-    constructor(e) {
-        (this.type = D.g.FRAMES_BANNER),
-            (this.title = e.title),
-            (this.body = e.body),
-            (this.mobileBackgroundImage = e.mobile_background_image),
-            (this.mobileForegroundImage = e.mobile_foreground_image),
-            (this.desktopBackgroundImage = e.desktop_background_image);
-    }
-    static fromServer(e) {
-        return new G(e);
-    }
-}
+var G = n(325595);
 class v {
     framesInHero;
     categorySkuId;
@@ -428,7 +411,7 @@ class W {
                     case D.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER:
                         return k.fromServer(e);
                     case D.g.FRAMES_BANNER:
-                        return G.fromServer(e);
+                        return G.p.fromServer(e);
                     case D.g.FRAMES_EXPERIENCE:
                         return v.fromServer(e);
                     default:

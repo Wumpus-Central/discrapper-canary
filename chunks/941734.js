@@ -27,6 +27,7 @@ e.exports = {
     bC: "heroHeaderContainer__08415",
     Hw: "heroHeaderBadgeLogoSummaryContainer__08415",
     Wq: "heroLogoNameContainer__08415",
+    _I: "heroBadgeSlot__08415",
     rm: "heroHeaderLogo__08415",
     lD: "popularPicksSection__08415",
     $6: "blockHeader__08415",
