@@ -1,0 +1,14 @@
+.modalRoot__6db38 {
+    overflow: hidden;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.modalContent__6db38 {
+    align-items: center;
+    display: flex;
+    height: 520px;
+    justify-content: center;
+    padding: 0;
+    width: 715px
+}

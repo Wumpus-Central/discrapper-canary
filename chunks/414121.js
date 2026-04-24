@@ -1,40 +1,39 @@
-"use strict";
-n.d(t, { Ay: () => g, Lx: () => m, Zs: () => d });
-var i,
-    s = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    o = n(366490),
-    c = n(101096),
-    d = (((i = {}).SIZE_40 = "SIZE_40"), (i.SIZE_60 = "SIZE_60"), i);
-let u = Object.freeze({ SIZE_40: "size-40", SIZE_60: "size-60" }),
+n.d(t, { Ay: () => g, Lx: () => m, Zs: () => c });
+var r,
+    l = n(627968),
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    o = n(386689),
+    u = n(395688),
+    c = (((r = {}).SIZE_40 = "SIZE_40"), (r.SIZE_60 = "SIZE_60"), r);
+let d = Object.freeze({ SIZE_40: "size-40", SIZE_60: "size-60" }),
     _ = n(906118);
-class h extends r.PureComponent {
+class h extends i.PureComponent {
     static defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
     render() {
-        let { className: e, text: t, ariaLabel: n, ...i } = this.props;
-        return (0, s.jsx)("div", {
+        let { className: e, text: t, ariaLabel: n, ...r } = this.props;
+        return (0, l.jsx)("div", {
             role: null != n ? "img" : void 0,
             "aria-label": n,
-            style: { width: i.size, height: i.size, backgroundColor: i.bgColor },
-            className: a()(c.qrCodeContainer, e),
-            children: (0, s.jsx)(o.default, { value: t, level: "M", ...i }),
+            style: { width: r.size, height: r.size, backgroundColor: r.bgColor },
+            className: s()(u.qrCodeContainer, e),
+            children: (0, l.jsx)(o.default, { value: t, level: "M", ...r }),
         });
     }
 }
-class m extends r.PureComponent {
+class m extends i.PureComponent {
     static defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
     render() {
         let { overlaySize: e } = this.props,
-            t = u[e ?? "SIZE_40"];
-        return (0, s.jsxs)("div", {
-            className: c.qrCodeOverlayContainer,
+            t = d[e ?? "SIZE_40"];
+        return (0, l.jsxs)("div", {
+            className: u.qrCodeOverlayContainer,
             children: [
-                (0, s.jsx)(h, { ...this.props }),
-                (0, s.jsx)("div", {
-                    className: c.qrCodeOverlay,
-                    children: (0, s.jsx)("img", { className: c[t], src: _, alt: "" }),
+                (0, l.jsx)(h, { ...this.props }),
+                (0, l.jsx)("div", {
+                    className: u.qrCodeOverlay,
+                    children: (0, l.jsx)("img", { className: u[t], src: _, alt: "" }),
                 }),
             ],
         });

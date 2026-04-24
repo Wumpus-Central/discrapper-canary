@@ -1,0 +1,50 @@
+.chooseServerTitle__2ac03 {
+    align-items: center;
+    display: flex;
+    gap: 2px;
+    margin-bottom: var(--space-4)
+}
+
+.infoIcon__2ac03 {
+    color: var(--text-muted);
+    margin-inline-start: var(--space-4)
+}
+
+.guildList__2ac03 {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px
+}
+
+.guildRow__2ac03 {
+    align-items: center;
+    border-radius: var(--space-16);
+    cursor: pointer;
+    display: flex;
+    padding: var(--space-8);
+    transition: background-color .2s
+}
+
+.guildRow__2ac03:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.guildIcon__2ac03 {
+    flex-shrink: 0;
+    margin-inline-end: var(--space-12)
+}
+
+.guildInfo__2ac03 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    min-width: 0
+}
+
+.guildName__2ac03 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}

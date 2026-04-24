@@ -1,3 +1,4 @@
-i.d(t, { a: () => l });
-var n,
-    l = (((n = {}).MP4 = "video/mp4"), (n.WEBM = "video/webm"), n);
+"use strict";
+n.d(t, { a: () => i });
+var l,
+    i = (((l = {}).MP4 = "video/mp4"), (l.WEBM = "video/webm"), l);

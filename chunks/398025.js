@@ -1,7 +1,8 @@
-function a(e) {
+"use strict";
+function l(e) {
     return e;
 }
-function n(e) {
+function i(e) {
     return e;
 }
-r.d(t, { Q: () => n, a: () => a });
+n.d(t, { Q: () => i, a: () => l });

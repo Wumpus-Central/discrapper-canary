@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(64700),
-    a = n(172218);
-function s(e) {
-    let { onVisible: t, threshold: n, minTimeVisibleMs: s } = e,
-        l = i.useRef(!1),
-        r = i.useRef(null);
+    l = n(172218);
+function a(e) {
+    let { onVisible: t, threshold: n, minTimeVisibleMs: a } = e,
+        r = i.useRef(!1),
+        s = i.useRef(null);
     return (
         i.useEffect(
             () => () => {
-                null != r.current && (clearTimeout(r.current), (r.current = null));
+                null != s.current && (clearTimeout(s.current), (s.current = null));
             },
             [],
         ),
-        (0, a.K)((e) => {
+        (0, l.K)((e) => {
             if (
-                (null == r.current || e || !1 !== l.current || (clearTimeout(r.current), (r.current = null)),
-                !e || !0 === l.current)
+                (null == s.current || e || !1 !== r.current || (clearTimeout(s.current), (s.current = null)),
+                !e || !0 === r.current)
             )
                 return;
             let n = () => {
-                t(), (l.current = !0), (r.current = null);
+                t(), (r.current = !0), (s.current = null);
             };
-            null != s ? (r.current = setTimeout(n, s)) : n();
+            null != a ? (s.current = setTimeout(n, a)) : n();
         }, n)
     );
 }

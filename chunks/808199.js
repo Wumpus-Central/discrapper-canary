@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Qs: "content__57f77",
     Lq: "loading__57f77",

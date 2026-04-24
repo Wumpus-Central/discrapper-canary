@@ -1,0 +1,18 @@
+e.exports = {
+    fi: "column__535e0",
+    nM: "row__535e0",
+    rQ: "gap__535e0",
+    X2: "chatFlow__535e0",
+    R: "hidden__535e0",
+    TE: "chat__535e0",
+    b6: "history__535e0",
+    N7: "idle__535e0",
+    iU: "message__535e0",
+    Tf: "noAnimate__535e0",
+    v6: "messageIn__535e0",
+    FD: "out__535e0",
+    Qs: "content__535e0",
+    oh: "attachment__535e0",
+    CQ: "outerInput__535e0",
+    hF: "input__535e0",
+};

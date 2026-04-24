@@ -1,0 +1,13 @@
+.heading_b12e66 {
+    margin-bottom: 16px
+}
+
+.cannon_b12e66 {
+    height: 130vh;
+    inset-inline-start: 0;
+    pointer-events: none;
+    position: absolute;
+    top: -30vh;
+    width: 100vw;
+    z-index: 1
+}

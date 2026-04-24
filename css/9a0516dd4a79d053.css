@@ -1,0 +1,133 @@
+.unsupportedBrowser__9ec6a {
+    background: #1b242b;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    text-align: center
+}
+
+.unsupportedBrowser__9ec6a,
+.wrap__9ec6a {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.wrap__9ec6a {
+    flex-direction: column;
+    height: 100%;
+    min-width: 320px;
+    overflow: auto
+}
+
+.title__9ec6a {
+    color: var(--white);
+    flex-shrink: 0;
+    font-size: 22px;
+    font-weight: var(--font-weight-bold);
+    margin: 50px 0 10px;
+    text-transform: uppercase
+}
+
+.message__9ec6a {
+    color: #949494;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 18px;
+    margin: 0 auto 30px;
+    max-width: 420px;
+    padding: 0 20px
+}
+
+.browserList__9ec6a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px
+}
+
+.browserItem__9ec6a {
+    border: 2px solid #282f36;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--white);
+    margin: 10px;
+    padding: 20px;
+    transition: .1s;
+    width: 188px
+}
+
+.browserItem__9ec6a:hover {
+    border-color: var(--brand-500);
+    transform: scale(1.04)
+}
+
+.browserItem__9ec6a:hover .browser__9ec6a {
+    background-position-y: 100px
+}
+
+.browserItem__9ec6a:hover .btn__9ec6a {
+    background-color: var(--brand-500);
+    border-color: var(--brand-500);
+    color: var(--white)
+}
+
+.browserItemText__9ec6a {
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5em;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.browser__9ec6a {
+    background: url(/assets/e840fd5a85524a8b.png);
+    background-size: 400px 200px;
+    display: inline-block;
+    height: 100px;
+    margin-bottom: 28px;
+    width: 100px
+}
+
+.browserDiscord__9ec6a {
+    background-position-x: 0
+}
+
+.browserOpera__9ec6a {
+    background-position-x: 100px
+}
+
+.browserFirefox__9ec6a {
+    background-position-x: 200px
+}
+
+.browserChrome__9ec6a {
+    background-position-x: 300px
+}
+
+.btn__9ec6a {
+    border: 1px solid #282f36;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--white);
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    margin-top: 28px;
+    padding: 10px;
+    text-decoration: none;
+    transition: border .1s, background-color .1s;
+    width: 100%
+}
+
+.btn__9ec6a:active {
+    position: relative;
+    top: 1px
+}
+
+.btn__9ec6a {
+    background: transparent
+}

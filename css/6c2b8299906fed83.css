@@ -1,0 +1,62 @@
+.timeSelectRow__3a865 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.timeSelect__3a865 {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden
+}
+
+.daysRow__3a865 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8)
+}
+
+.dayButton__3a865 {
+    align-items: center;
+    background: var(--control-secondary-background-default);
+    border: 1px solid var(--control-secondary-border-default);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--control-secondary-text-default);
+    cursor: pointer;
+    display: flex;
+    flex: 1 0 0;
+    height: 40px;
+    justify-content: center;
+    min-width: 44px
+}
+
+.dayButton__3a865:hover {
+    background-color: var(--control-secondary-background-hover)
+}
+
+.dayButton__3a865:active {
+    background-color: var(--control-secondary-background-active)
+}
+
+.dayButton__3a865.selected__3a865 {
+    background: var(--color-opacity-blurple-16, rgba(88, 101, 242, .16));
+    border-color: var(--border-focus);
+    color: var(--control-secondary-text-default)
+}
+
+.full-motion .dayButton__3a865 {
+    transition: background-color .2s ease
+}
+
+.durationHint__3a865 {
+    color: var(--text-subtle)
+}
+
+.overlapWarningContent__3a865 {
+    margin-top: var(--space-16)
+}
+
+[data-mana-component=select-input-field] .durationHint__3a865 {
+    display: none
+}

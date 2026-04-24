@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jC: "popoutContainer_e2f0c6",
     yt: "streamPreviewWrapper_e2f0c6",

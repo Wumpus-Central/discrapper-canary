@@ -1,0 +1,62 @@
+.channelName__7169d {
+    align-items: center;
+    display: flex;
+    justify-self: center;
+    margin-bottom: var(--space-8)
+}
+
+.channelIcon__7169d {
+    padding-inline-end: var(--space-4)
+}
+
+.description__7169d {
+    margin-bottom: var(--space-12)
+}
+
+.subtext__7169d {
+    margin-top: var(--space-4)
+}
+
+.description__62141 {
+    margin-bottom: var(--space-8)
+}
+
+.emojiButton__62141 {
+    border-radius: 0;
+    padding-inline-end: 12px
+}
+
+.icon__62141 {
+    margin-inline-end: 12px;
+    opacity: .6;
+    fill: var(--primary-300)
+}
+
+.searchHelpText__62141 {
+    margin: var(--space-4) 0
+}
+
+.channelTypeDescription__62141,
+.storeChannelOptionSelector__62141 {
+    margin-bottom: 20px
+}
+
+.addMemberError__62141 {
+    padding-inline: 8px
+}
+
+.createError__62141 {
+    margin: 16px
+}
+
+.newBadge__62141 {
+    display: inline-block;
+    margin-inline-start: 4px;
+    vertical-align: middle
+}
+
+.createChannelContent__62141 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}

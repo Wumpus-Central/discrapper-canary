@@ -1,5 +1,4 @@
-"use strict";
-t.exports = {
+e.exports = {
     c: "buttonWithProgress__61462",
     qB: "progress__61462",
     Yr: "disabledButtonWrapper__61462",

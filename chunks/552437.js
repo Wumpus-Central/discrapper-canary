@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     FN: "notFoundPlaceholder_a3c1e1",
     fadeIn: "fadeIn_a3c1e1",

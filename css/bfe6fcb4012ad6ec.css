@@ -1,0 +1,43 @@
+.icon_bdbb1b {
+    align-self: flex-start;
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px
+}
+
+.wandIcon_bdbb1b {
+    color: var(--status-positive)
+}
+
+.robotIcon_bdbb1b {
+    color: var(--text-link)
+}
+
+.smileIcon_bdbb1b {
+    color: var(--text-feedback-warning)
+}
+
+.listContainer_bdbb1b {
+    background-color: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 8px 16px;
+    width: 100%
+}
+
+.listItem_bdbb1b {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin: 8px 0
+}
+
+.divider_bdbb1b {
+    background-color: var(--border-muted);
+    opacity: .5
+}

@@ -1,38 +1,39 @@
-l.d(t, { K: () => c });
-var r = l(64700),
-    a = l(17928),
-    s = l(775602),
-    n = l(723702),
-    i = l(746002),
-    o = l(901139);
+"use strict";
+n.d(t, { K: () => c });
+var l = n(64700),
+    i = n(17928),
+    s = n(775602),
+    a = n(723702),
+    r = n(746002),
+    o = n(901139);
 function c(e) {
     let { getImgCache: t } = (0, o.TW)(),
-        l = (0, a.bG)([s.A], () => s.A.useReducedMotion);
-    return r.useMemo(() => {
+        n = (0, i.bG)([s.A], () => s.A.useReducedMotion);
+    return l.useMemo(() => {
         if (null != e.previewToolKey && "" !== e.previewToolKey) {
-            let l = t(e.previewToolKey);
-            return { staticImageUrl: l?.staticUrl, animatedImageUrl: l?.animatedUrl };
+            let n = t(e.previewToolKey);
+            return { staticImageUrl: n?.staticUrl, animatedImageUrl: n?.animatedUrl };
         }
-        let r = (platform.name ?? "unknown").toLowerCase(),
-            a = l || (0, n.isLinux)() || "safari" === r;
+        let l = (platform.name ?? "unknown").toLowerCase(),
+            i = n || (0, a.isLinux)() || "safari" === l;
         return {
-            staticImageUrl: (0, i.getCollectiblesItemAssetUrl)({
+            staticImageUrl: (0, r.getCollectiblesItemAssetUrl)({
                 skuId: e.skuId,
-                assetFormat: i.CollectiblesItemAssetFormat.STATIC,
+                assetFormat: r.CollectiblesItemAssetFormat.STATIC,
             }),
-            ...(a
+            ...(i
                 ? {
-                      animatedImageUrl: (0, i.getCollectiblesItemAssetUrl)({
+                      animatedImageUrl: (0, r.getCollectiblesItemAssetUrl)({
                           skuId: e.skuId,
-                          assetFormat: i.CollectiblesItemAssetFormat.ANIMATED,
+                          assetFormat: r.CollectiblesItemAssetFormat.ANIMATED,
                       }),
                   }
                 : {
-                      videoUrl: (0, i.getCollectiblesItemAssetUrl)({
+                      videoUrl: (0, r.getCollectiblesItemAssetUrl)({
                           skuId: e.skuId,
-                          assetFormat: i.CollectiblesItemAssetFormat.VIDEO,
+                          assetFormat: r.CollectiblesItemAssetFormat.VIDEO,
                       }),
                   }),
         };
-    }, [e, t, l]);
+    }, [e, t, n]);
 }

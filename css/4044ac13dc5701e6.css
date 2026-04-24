@@ -1,0 +1,32 @@
+.imageContainer_a1bfef {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.image_a1bfef {
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.gameServerHostingImage_a1bfef {
+    transform: scale(1.1)
+}
+
+.levelImage_a1bfef {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.animatedImage_a1bfef {
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    pointer-events: auto;
+    width: 100%
+}

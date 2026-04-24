@@ -1,15 +1,16 @@
-l.d(t, { A: () => s });
-var n = l(627968);
-l(64700);
-var i = l(953727);
+"use strict";
+n.d(t, { A: () => s });
+var l = n(627968);
+n(64700);
+var i = n(953727);
 function s(e) {
-    let { width: t = 18, height: l = 18, color: s = "currentColor", foreground: a, ...r } = e;
-    return (0, n.jsx)("svg", {
+    let { width: t = 18, height: n = 18, color: s = "currentColor", foreground: a, ...r } = e;
+    return (0, l.jsx)("svg", {
         ...(0, i.A)(r),
         width: t,
-        height: l,
+        height: n,
         viewBox: "0 0 18 18",
-        children: (0, n.jsx)("path", {
+        children: (0, l.jsx)("path", {
             className: a,
             fillRule: "evenodd",
             clipRule: "evenodd",

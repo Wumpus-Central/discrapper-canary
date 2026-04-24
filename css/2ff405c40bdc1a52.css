@@ -1,0 +1,51 @@
+.feedback__4c857 {
+    align-items: center;
+    flex-direction: column
+}
+
+.buttonsContainer__4c857,
+.feedback__4c857 {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.toast__4c857 {
+    gap: var(--space-8)
+}
+
+.buttonsBackground__4c857 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-round);
+    display: flex;
+    padding: 6px
+}
+
+.buttonsBackground__4c857 svg {
+    height: 15px;
+    width: 15px;
+    fill: var(--interactive-text-default)
+}
+
+.buttonsBackground__4c857.disabled__4c857 {
+    cursor: default
+}
+
+.buttonsBackgroundActive__4c857 {
+    background: hsl(var(--brand-500-hsl)/.15);
+    border: 1px solid var(--brand-500)
+}
+
+.buttonsBackgroundActive__4c857 svg {
+    fill: var(--interactive-text-active)
+}
+
+.buttonsBackgroundInactive__4c857:hover {
+    border: 1px solid var(--interactive-background-hover);
+    cursor: pointer
+}
+
+.buttonsBackgroundInactive__4c857:hover svg {
+    fill: var(--interactive-text-hover)
+}

@@ -1,0 +1,73 @@
+.content__2ff9f {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    overflow: hidden
+}
+
+.infoBox__2ff9f {
+    border: 1px solid var(--role-sky-blue);
+    border-radius: var(--radius-sm);
+    margin: 0 var(--space-32)
+}
+
+.stepsContainer__2ff9f {
+    flex: 1;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 0 var(--space-32)
+}
+
+.step__2ff9f,
+.stepsContainer__2ff9f {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.step__2ff9f {
+    align-items: center;
+    background-color: var(--background-mod-muted);
+    border-radius: var(--radius-sm);
+    flex-direction: row;
+    padding-inline-end: var(--space-8);
+    padding-inline-start: var(--space-8)
+}
+
+.stepNumber__2ff9f {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: .02em;
+    padding: 6px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.serverIpContainer__2ff9f {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    padding: 0 var(--space-32);
+    padding-bottom: var(--space-32)
+}
+
+.serverIpInput__2ff9f {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    flex: 1;
+    font-family: var(--font-code);
+    padding: var(--space-12) var(--space-16)
+}
+
+.serverIpInput__2ff9f.animate__2ff9f {
+    border-color: var(--status-positive)
+}
+
+.full-motion .serverIpInput__2ff9f.animate__2ff9f {
+    transition: border-color .5s ease
+}

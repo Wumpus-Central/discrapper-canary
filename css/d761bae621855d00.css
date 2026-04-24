@@ -1,0 +1,424 @@
+.popoutWrapper__9ac28 {
+    display: flex;
+    inset-inline-start: -30px;
+    max-height: 40vh;
+    position: relative;
+    width: 200px
+}
+
+.scroller__9ac28 {
+    background-color: var(--background-surface-high);
+    border-radius: 4px;
+    padding: 8px 16px
+}
+
+.avatars__9ac28 {
+    align-items: center;
+    display: flex;
+    flex-grow: 0;
+    position: relative
+}
+
+.avatar__9ac28 {
+    -webkit-mask: url(/assets/38fe464a6fea7d0e.svg);
+    mask: url(/assets/38fe464a6fea7d0e.svg);
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    mask-type: alpha
+}
+
+.avatar__9ac28.size16__9ac28 {
+    margin-inline-end: -3px
+}
+
+.avatar__9ac28.size20__9ac28 {
+    margin-inline-end: -5px
+}
+
+.avatar__9ac28.size24__9ac28 {
+    margin-inline-end: -6px
+}
+
+.avatar__9ac28.isLast__9ac28 {
+    margin-inline-end: 0;
+    -webkit-mask: none;
+    mask: none
+}
+
+.overflow__9ac28 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: auto
+}
+
+.overflow__9ac28.size16__9ac28 {
+    height: 16px;
+    min-width: 16px;
+    padding: 0 4px
+}
+
+.overflow__9ac28.size20__9ac28 {
+    height: 20px;
+    min-width: 20px;
+    padding: 0 6px
+}
+
+.overflow__9ac28.size24__9ac28 {
+    height: 24px;
+    min-width: 24px;
+    padding: 0 8px
+}
+
+.button__9ac28 {
+    cursor: pointer
+}
+
+.richTooltipContent_a89985 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    gap: var(--space-8);
+    max-width: 272px;
+    padding: var(--space-8) var(--space-12)
+}
+
+.richTooltipContentLg_a89985 {
+    gap: var(--space-16);
+    max-width: 372px;
+    padding: var(--space-16)
+}
+
+.assetContainer_a89985 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center
+}
+
+.assetContainer_a89985>* {
+    height: auto;
+    max-width: 100%
+}
+
+.textContent_a89985 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.noAsset_a89985 .textContent_a89985 {
+    text-align: center
+}
+
+.wishlistButton__979b1 {
+    align-items: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: var(--control-overlay-secondary-background-default);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    transition: background-color 50ms ease-in
+}
+
+.wishlistButton__979b1.disabled__979b1 {
+    cursor: not-allowed;
+    filter: brightness(110%)
+}
+
+.wishlistButton__979b1:not(.disabled__979b1):hover {
+    background: var(--control-overlay-secondary-background-hover);
+    transition: background-color .15s ease-out
+}
+
+.wishlistButton__979b1:not(.disabled__979b1):active {
+    background: var(--control-overlay-secondary-background-active);
+    transition: background-color .15s ease-out
+}
+
+.xs__979b1 {
+    border-radius: 6px;
+    height: 24px;
+    width: 24px
+}
+
+.sm__979b1 {
+    height: 32px;
+    width: 32px
+}
+
+.md__979b1 {
+    height: 40px;
+    width: 40px
+}
+
+.theme-light .wishlistButton__979b1.variantDefault__979b1 {
+    background: hsl(var(--primary-100-hsl)/.66);
+    border: 1px solid var(--border-subtle)
+}
+
+.theme-light .wishlistButton__979b1.variantDefault__979b1:not(.disabled__979b1):hover {
+    background: hsl(var(--primary-100-hsl)/1)
+}
+
+.theme-light .wishlistButton__979b1.variantDefault__979b1:not(.disabled__979b1):active {
+    background: hsl(var(--primary-100-hsl)/.52)
+}
+
+.theme-dark .wishlistButton__979b1.variantDefault__979b1 {
+    background: var(--control-overlay-secondary-background-default);
+    border: 1px solid var(--border-muted)
+}
+
+.theme-dark .wishlistButton__979b1.variantDefault__979b1:not(.disabled__979b1):hover {
+    background: var(--control-overlay-secondary-background-hover)
+}
+
+.theme-dark .wishlistButton__979b1.variantDefault__979b1:not(.disabled__979b1):active {
+    background: var(--control-overlay-secondary-background-active)
+}
+
+.wishlistButton__979b1.variantSecondary__979b1 {
+    background: var(--control-secondary-background-default);
+    border: 1px solid var(--control-secondary-border-default)
+}
+
+.wishlistButton__979b1.variantSecondary__979b1:not(.disabled__979b1):hover {
+    background: var(--control-secondary-background-hover)
+}
+
+.wishlistButton__979b1.variantSecondary__979b1:not(.disabled__979b1):active {
+    background: var(--control-secondary-background-active)
+}
+
+.normalIconColor__979b1 {
+    fill: var(--icon-strong);
+    transition: fill 50ms ease-in
+}
+
+.variantSecondaryOverlay__979b1 .normalIconColor__979b1 {
+    fill: var(--white)
+}
+
+.normalIconColor__979b1.wishlistedOrAnimating__979b1 {
+    fill: #ec1060;
+    transition: fill .15s ease-out
+}
+
+.disabled__979b1 .normalIconColor__979b1 {
+    opacity: .5;
+    fill: var(--icon-subtle)
+}
+
+.toastIcon__979b1 {
+    flex-shrink: 0;
+    margin-inline-end: 4px
+}
+
+.iconContainer__979b1,
+.toastIcon__979b1 {
+    align-items: center;
+    display: flex
+}
+
+.iconContainer__979b1 {
+    justify-content: center;
+    position: relative
+}
+
+.iconWrapper__979b1 {
+    display: flex
+}
+
+.animationOverlay__979b1 {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: center
+}
+
+.animationOverlay__979b1 path {
+    fill: var(--white)
+}
+
+.full-motion .wishlistButton__979b1:active .canAnimate__979b1 .animationOverlay__979b1 {
+    animation: holdScale__979b1 .1s cubic-bezier(.67, 0, .26, 1) forwards;
+    animation-delay: 50ms
+}
+
+.full-motion .clickAnimation__979b1 {
+    animation: clickScale__979b1 .4s cubic-bezier(.67, 0, .26, 1) forwards
+}
+
+.full-motion .clickAnimation__979b1 path {
+    animation: clickColor__979b1 .4s cubic-bezier(.67, 0, .26, 1) forwards
+}
+
+.full-motion .wishlistButton__979b1:focus-visible .canHover__979b1,
+.full-motion .wishlistButton__979b1:hover .canHover__979b1 {
+    animation: hoverPulse__979b1 1.25s cubic-bezier(.23, 0, .58, 1) infinite
+}
+
+@keyframes holdScale__979b1 {
+    0% {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(.25)
+    }
+}
+
+@keyframes clickScale__979b1 {
+    0% {
+        transform: scale(0)
+    }
+
+    62.5% {
+        transform: scale(1.35)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes clickColor__979b1 {
+
+    0%,
+    20% {
+        fill: var(--white)
+    }
+
+    70%,
+    to {
+        fill: #ec1060
+    }
+}
+
+@keyframes hoverPulse__979b1 {
+    0% {
+        transform: scale(1)
+    }
+
+    20% {
+        transform: scale(1.1)
+    }
+
+    60% {
+        transform: scale(.9)
+    }
+
+    80%,
+    to {
+        transform: scale(1)
+    }
+}
+
+.toast__810c3 {
+    border: none;
+    border-radius: 32px;
+    padding: 10px 16px
+}
+
+.icon__810c3 {
+    height: 20px;
+    margin-inline-end: 8px;
+    width: 20px
+}
+
+:where(.gameIcon_b52e4f) {
+    filter: saturate(var(--saturation-factor, 1));
+    -webkit-user-drag: none;
+    background-size: 100%;
+    border-radius: var(--custom-game-icon-border-radius, var(--radius-sm));
+    color: var(--text-strong);
+    height: var(--custom-game-icon-size);
+    width: var(--custom-game-icon-size)
+}
+
+.intersectionContainer_b52e4f,
+.intersectionRef_b52e4f {
+    position: absolute
+}
+
+.intersectionRef_b52e4f {
+    background: transparent;
+    height: 1px;
+    inset-inline-start: 0;
+    top: 0;
+    width: 1px
+}
+
+.large_b52e4f,
+.medium_b52e4f,
+.small_b52e4f {
+    flex-shrink: 0
+}
+
+.xxsmall_b52e4f {
+    --custom-game-icon-size: 16px;
+    --custom-game-icon-border-radius: var(--radius-xs)
+}
+
+.xsmall_b52e4f {
+    --custom-game-icon-size: 24px;
+    --custom-game-icon-border-radius: var(--radius-sm)
+}
+
+.small_b52e4f {
+    --custom-game-icon-size: 30px;
+    --custom-game-icon-border-radius: var(--radius-sm)
+}
+
+.medium_b52e4f {
+    --custom-game-icon-size: 40px;
+    --custom-game-icon-border-radius: var(--radius-md)
+}
+
+.mediumLarge_b52e4f {
+    --custom-game-icon-size: 48px;
+    --custom-game-icon-border-radius: var(--radius-md)
+}
+
+.large_b52e4f {
+    --custom-game-icon-size: 60px;
+    --custom-game-icon-border-radius: var(--radius-lg)
+}
+
+.xlarge_b52e4f {
+    --custom-game-icon-size: 80px;
+    --custom-game-icon-border-radius: var(--radius-lg)
+}
+
+@keyframes placeholderPulse_b52e4f {
+    0% {
+        opacity: .8
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: .8
+    }
+}
+
+.gameIconLoading_b52e4f {
+    animation: placeholderPulse_b52e4f 1.3s ease-in-out infinite;
+    background-color: var(--background-mod-normal)
+}

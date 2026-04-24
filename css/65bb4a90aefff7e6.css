@@ -1,0 +1,32 @@
+.options__47458 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.optionContainer__47458 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    padding: var(--space-12)
+}
+
+.optionContainerOther__47458 {
+    align-items: flex-start;
+    flex-direction: column
+}
+
+.optionText__47458 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12);
+    width: 100%
+}
+
+.textboxContainer__47458 {
+    box-sizing: border-box;
+    margin-top: var(--space-8);
+    padding-inline-start: var(--space-32);
+    width: 100%
+}

@@ -1,0 +1,26 @@
+.wrapper__123e1 {
+    align-items: center;
+    background-color: var(--background-base-low);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.textContainer__123e1 {
+    box-sizing: border-box;
+    margin-inline: auto;
+    max-width: 800px;
+    width: 100%;
+    z-index: 1
+}
+
+.heading__123e1 {
+    text-wrap: balance
+}
+
+.heading__123e1,
+.text__123e1 {
+    text-align: center
+}

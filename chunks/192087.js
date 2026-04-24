@@ -1,0 +1,22 @@
+n.d(t, { w: () => i });
+var l = n(652215),
+    a = n(985018);
+let i = {
+    [l.hes.CARD]: () => a.intl.string(a.t["ei5/p8"]),
+    [l.hes.PAYPAL]: () => a.intl.string(a.t["2dgEq+"]),
+    [l.hes.SOFORT]: () => a.intl.string(a.t["edKX/1"]),
+    [l.hes.GIROPAY]: () => a.intl.string(a.t["y+0MQZ"]),
+    [l.hes.PRZELEWY24]: () => a.intl.string(a.t.u25uL0),
+    [l.hes.PAYSAFE_CARD]: () => a.intl.string(a.t.boznHN),
+    [l.hes.GCASH]: () => a.intl.string(a.t.PjehcF),
+    [l.hes.GRABPAY_MY]: () => a.intl.string(a.t.T5davE),
+    [l.hes.MOMO_WALLET]: () => a.intl.string(a.t.J0A1Vk),
+    [l.hes.VENMO]: () => a.intl.string(a.t.jYOezc),
+    [l.hes.KAKAOPAY]: () => a.intl.string(a.t.CSVexi),
+    [l.hes.GOPAY_WALLET]: () => a.intl.string(a.t["43J8JK"]),
+    [l.hes.BANCONTACT]: () => a.intl.string(a.t["1ITkfq"]),
+    [l.hes.EPS]: () => a.intl.string(a.t["5BSDU6"]),
+    [l.hes.IDEAL]: () => a.intl.string(a.t.nSbwqC),
+    [l.hes.CASH_APP]: () => a.intl.string(a.t["+rbTmL"]),
+    [l.hes.APPLE]: () => a.intl.string(a.t.RFi12i),
+};

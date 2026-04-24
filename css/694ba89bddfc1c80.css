@@ -1,0 +1,142 @@
+.modalContent__23488 {
+    display: flex;
+    flex: 1 1 50%;
+    flex-direction: column;
+    max-height: 500px;
+    padding-bottom: 16px;
+    padding-top: 16px
+}
+
+.modalCloseButton__23488 {
+    inset-inline-end: 0;
+    margin: 8px;
+    position: absolute;
+    top: 0
+}
+
+.section__23488+.section__23488 {
+    margin-top: 16px
+}
+
+.list__23488 {
+    border-radius: 4px
+}
+
+.list__23488+.list__23488 {
+    margin-top: 8px
+}
+
+.row__23488 {
+    align-items: flex-start;
+    background-color: var(--background-mod-normal);
+    color: var(--interactive-text-default);
+    display: flex;
+    padding: 16px;
+    position: relative
+}
+
+.row__23488:not(.disabled__23488) {
+    cursor: pointer
+}
+
+.row__23488:not(.disabled__23488):hover {
+    background-color: var(--background-base-lowest)
+}
+
+.row__23488+.row__23488:before {
+    background-color: var(--border-subtle);
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: -.5px;
+    inset-inline: 0;
+    margin-inline-start: calc(32px + var(--custom-import-benefits-modal-icon-size))
+}
+
+.rowIconWrapper__23488 {
+    flex: 0 0 auto;
+    margin-inline-end: 16px
+}
+
+.rowIcon__23488 {
+    height: var(--custom-import-benefits-modal-icon-size);
+    width: var(--custom-import-benefits-modal-icon-size)
+}
+
+.rowText__23488 {
+    align-self: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column
+}
+
+.rowCheckbox__23488 {
+    flex: 0 0 auto;
+    margin-inline-start: 16px;
+    position: relative
+}
+
+.checkboxInput__23488 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 100%;
+    inset-inline-start: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.checkboxDisplay__23488 {
+    align-items: center;
+    border: 2px solid var(--interactive-text-default);
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    margin: 2px;
+    width: 20px
+}
+
+.checkboxIcon__23488 {
+    color: var(--white);
+    display: none
+}
+
+.checked__23488 .checkboxDisplay__23488,
+.disabled__23488 .checkboxDisplay__23488 {
+    background-color: var(--brand-500);
+    border-color: var(--brand-500)
+}
+
+.checked__23488 .checkboxIcon__23488,
+.disabled__23488 .checkboxIcon__23488 {
+    display: initial
+}
+
+.disabled__23488 .checkboxInput__23488 {
+    display: none
+}
+
+.disabled__23488 .checkboxDisplay__23488 {
+    opacity: .2
+}
+
+.roleRow__23488 {
+    align-items: center
+}
+
+.roleRowIconDefault__23488 {
+    height: var(--custom-import-benefits-modal-role-icon-size);
+    width: var(--custom-import-benefits-modal-role-icon-size)
+}
+
+.slideForm__23488 {
+    display: flex;
+    flex-direction: column
+}

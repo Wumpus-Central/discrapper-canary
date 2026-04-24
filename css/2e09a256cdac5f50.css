@@ -1,0 +1,15 @@
+.guildContainer_c9e6eb {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: var(--space-16)
+}
+
+.guildInfo_c9e6eb {
+    align-items: center;
+    display: flex
+}
+
+.guildName_c9e6eb {
+    margin-inline-start: var(--space-12)
+}

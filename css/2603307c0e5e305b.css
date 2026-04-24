@@ -1,0 +1,86 @@
+.icon_ef2eb4 {
+    transform: translateY(3px)
+}
+
+.header_ef2eb4 {
+    margin-bottom: 8px;
+    margin-top: 20px
+}
+
+.updatedForm_ef2eb4 {
+    margin-top: 24px
+}
+
+.checklistIcon_ef2eb4 {
+    margin-top: 1px
+}
+
+.checklistDescription_ef2eb4 {
+    padding-inline-start: calc(var(--icon-size-sm) + var(--space-8))
+}
+
+.roleRow_ef2eb4 {
+    align-items: center;
+    background: var(--interactive-background-selected);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: 4px;
+    padding-block: 4px;
+    padding-inline: 5px 6px
+}
+
+.roleDot_ef2eb4 {
+    margin-inline-end: 4px
+}
+
+.roleName_ef2eb4 {
+    align-self: baseline
+}
+
+.table_ef2eb4 {
+    gap: 8px;
+    margin-top: 24px
+}
+
+.table_ef2eb4,
+.tableContainer_ef2eb4 {
+    display: flex;
+    flex-direction: column
+}
+
+.tableContainer_ef2eb4 {
+    background-color: var(--background-base-lower);
+    border-radius: 4px;
+    padding: 16px 20px
+}
+
+.tableHeader_ef2eb4 {
+    text-transform: uppercase
+}
+
+.permissionsTable_ef2eb4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+    margin-top: 8px;
+    row-gap: 8px
+}
+
+.permissionRow_ef2eb4 {
+    display: flex
+}
+
+.bullet_ef2eb4 {
+    align-self: center;
+    background-color: var(--background-mod-muted);
+    border-radius: 50%;
+    height: 6px;
+    margin-inline-end: 8px;
+    width: 6px
+}
+
+.bulletWarning_ef2eb4 {
+    background-color: var(--status-warning);
+    box-shadow: 0 0 4px rgba(250, 166, 26, .4)
+}

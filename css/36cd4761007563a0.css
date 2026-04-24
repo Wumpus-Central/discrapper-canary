@@ -1,0 +1,235 @@
+.actionButton_f8fa06 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 50%;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    width: 36px
+}
+
+.actionButton_f8fa06.highlight_f8fa06 {
+    background-color: var(--background-base-lowest)
+}
+
+.actionButton_f8fa06:first-child {
+    margin-inline-start: 0
+}
+
+.actionButton_f8fa06:hover {
+    color: var(--interactive-text-hover)
+}
+
+.actionButton_f8fa06:active {
+    background-color: var(--interactive-background-active);
+    color: var(--interactive-text-active)
+}
+
+.actionButton_f8fa06.disabled_f8fa06 {
+    cursor: default;
+    opacity: .3;
+    pointer-events: none
+}
+
+.actionButton_f8fa06.actionAccept_f8fa06:hover {
+    color: var(--icon-feedback-positive)
+}
+
+.actionButton_f8fa06.actionDeny_f8fa06:hover {
+    color: var(--icon-feedback-critical)
+}
+
+.icon_f8fa06 {
+    height: 20px;
+    width: 20px
+}
+
+.enable-forced-colors .actionButton_f8fa06 {
+    background-color: ButtonFace;
+    border: 1px solid ButtonFace;
+    color: ButtonText;
+    forced-color-adjust: none
+}
+
+.enable-forced-colors .actionButton_f8fa06:hover {
+    border-color: ButtonText;
+    color: ButtonText
+}
+
+.enable-forced-colors .actionButton_f8fa06:active {
+    background-color: HighlightText;
+    border-color: Highlight;
+    color: Highlight
+}
+
+.enable-forced-colors .actionButton_f8fa06.disabled_f8fa06 {
+    background-color: Canvas;
+    border-color: GrayText;
+    color: GrayText;
+    opacity: 1
+}
+
+.peopleListItem_cc6179 {
+    border-radius: 8px;
+    border-width: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 20px;
+    margin-inline: 14px 10px;
+    overflow: hidden;
+    padding: 16px 10px
+}
+
+.peopleListItem_cc6179.active_cc6179+.divider_cc6179,
+.peopleListItem_cc6179:hover+.divider_cc6179 {
+    background-color: transparent
+}
+
+.peopleListItem_cc6179.active_cc6179,
+.peopleListItem_cc6179:hover {
+    background: var(--interactive-background-hover);
+    border-color: transparent;
+    box-shadow: none
+}
+
+.peopleListItem_cc6179:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.peopleListItem_cc6179.active_cc6179 {
+    background-color: var(--background-mod-normal)
+}
+
+.full-motion .peopleListItem_cc6179 {
+    transition: background-color .2s ease
+}
+
+.divider_cc6179 {
+    background-color: var(--border-subtle);
+    display: flex;
+    flex: 1;
+    height: 1px;
+    margin-inline: 30px 20px
+}
+
+.divider_cc6179.activeDivider_cc6179 {
+    background-color: transparent
+}
+
+.userInfo__0a06e {
+    display: flex;
+    overflow: hidden
+}
+
+.avatar__0a06e {
+    flex-shrink: 0;
+    margin-block: 0;
+    margin-inline: 0 12px
+}
+
+.text__0a06e {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.account__0a06e {
+    display: flex;
+    flex-direction: row
+}
+
+.accountIdentifier__0a06e {
+    margin-inline-start: 8px
+}
+
+.subtext__0a06e {
+    color: var(--text-muted);
+    font-size: 12px
+}
+
+.discordTag__0a06e {
+    align-items: flex-end;
+    flex-grow: 1;
+    overflow: hidden
+}
+
+.botTag__0a06e,
+.discordTag__0a06e {
+    display: flex
+}
+
+.username__0a06e {
+    color: var(--text-strong);
+    font-weight: var(--font-weight-semibold);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.discriminator__0a06e {
+    color: var(--text-default);
+    font-size: 14px;
+    line-height: 16px;
+    visibility: hidden
+}
+
+.hovered__0a06e .discriminator__0a06e {
+    visibility: visible
+}
+
+.alignUniqueUsername__0a06e {
+    align-items: center
+}
+
+.modalContent__2bb83 {
+    padding-bottom: var(--space-24)
+}
+
+.spamRequest__2bb83:not(:nth-last-of-type(2)) {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.spamRequest__2bb83:not(:nth-last-of-type(2)):hover {
+    border-color: transparent
+}
+
+.spamRequest__2bb83:not(:nth-last-of-type(2)):has(+.spamRequest__2bb83:hover) {
+    border-color: transparent
+}
+
+.listItem__2bb83 {
+    border-top: 0
+}
+
+.listItem__2bb83,
+.listItem__2bb83.active__2bb83,
+.listItem__2bb83:hover {
+    margin: 0;
+    padding: 0
+}
+
+.listItemContents__2bb83 {
+    padding: 0 var(--space-8);
+    width: 100%
+}
+
+.listItemContents__2bb83,
+.userInfo__2bb83 {
+    align-items: center;
+    display: flex
+}
+
+.userInfo__2bb83 {
+    justify-content: space-between
+}
+
+.actions__2bb83 {
+    display: flex;
+    margin-inline-start: auto
+}

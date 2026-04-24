@@ -1,0 +1,11 @@
+.checkboxContainer__657c0 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.checkbox__657c0 {
+    background: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px
+}

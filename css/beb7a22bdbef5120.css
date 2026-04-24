@@ -1,0 +1,15 @@
+.content__444a0 {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    overflow: hidden;
+    padding: 0 0 16px;
+    white-space: pre-wrap
+}
+
+.content__444a0 a {
+    color: var(--text-link)
+}
+
+.content__444a0 a:hover {
+    text-decoration: underline
+}

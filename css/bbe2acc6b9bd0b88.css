@@ -1,0 +1,65 @@
+.header_b917ac {
+    overflow: hidden;
+    padding: 24px 24px 0
+}
+
+.closeButton_b917ac {
+    inset-inline-end: 14px;
+    position: absolute;
+    top: 12px
+}
+
+.title_b917ac {
+    font-weight: var(--font-weight-bold);
+    text-align: center
+}
+
+.footer_b917ac {
+    align-items: center;
+    justify-content: space-between
+}
+
+.subtitle_b917ac {
+    margin-top: 8px;
+    text-align: center
+}
+
+.createGuild_b917ac {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    gap: var(--space-16);
+    margin: 16px 0
+}
+
+.uploadIcon_b917ac {
+    color: var(--interactive-text-default);
+    display: flex;
+    justify-content: center;
+    padding-top: 4px
+}
+
+.nameInput_b917ac {
+    margin-top: 24px
+}
+
+.descriptionInput_b917ac {
+    margin-top: 16px
+}
+
+.guidelines_b917ac {
+    margin-top: 8px;
+    padding-bottom: 4px
+}
+
+.creationIntentCheckbox_b917ac {
+    margin-top: 18px
+}
+
+.creationIntentText_b917ac {
+    color: var(--interactive-text-default)
+}
+
+.formItemSpaced_b917ac {
+    margin-top: 16px
+}

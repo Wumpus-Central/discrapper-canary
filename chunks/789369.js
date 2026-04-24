@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     mG: "noDrag_e9ca56",
     kL: "container_e9ca56",

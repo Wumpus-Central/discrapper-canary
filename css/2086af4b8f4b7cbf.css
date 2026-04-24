@@ -1,0 +1,133 @@
+:where(.gameIcon_b52e4f) {
+    filter: saturate(var(--saturation-factor, 1));
+    -webkit-user-drag: none;
+    background-size: 100%;
+    border-radius: var(--custom-game-icon-border-radius, var(--radius-sm));
+    color: var(--text-strong);
+    height: var(--custom-game-icon-size);
+    width: var(--custom-game-icon-size)
+}
+
+.intersectionContainer_b52e4f,
+.intersectionRef_b52e4f {
+    position: absolute
+}
+
+.intersectionRef_b52e4f {
+    background: transparent;
+    height: 1px;
+    inset-inline-start: 0;
+    top: 0;
+    width: 1px
+}
+
+.large_b52e4f,
+.medium_b52e4f,
+.small_b52e4f {
+    flex-shrink: 0
+}
+
+.xxsmall_b52e4f {
+    --custom-game-icon-size: 16px;
+    --custom-game-icon-border-radius: var(--radius-xs)
+}
+
+.xsmall_b52e4f {
+    --custom-game-icon-size: 24px;
+    --custom-game-icon-border-radius: var(--radius-sm)
+}
+
+.small_b52e4f {
+    --custom-game-icon-size: 30px;
+    --custom-game-icon-border-radius: var(--radius-sm)
+}
+
+.medium_b52e4f {
+    --custom-game-icon-size: 40px;
+    --custom-game-icon-border-radius: var(--radius-md)
+}
+
+.mediumLarge_b52e4f {
+    --custom-game-icon-size: 48px;
+    --custom-game-icon-border-radius: var(--radius-md)
+}
+
+.large_b52e4f {
+    --custom-game-icon-size: 60px;
+    --custom-game-icon-border-radius: var(--radius-lg)
+}
+
+.xlarge_b52e4f {
+    --custom-game-icon-size: 80px;
+    --custom-game-icon-border-radius: var(--radius-lg)
+}
+
+@keyframes placeholderPulse_b52e4f {
+    0% {
+        opacity: .8
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: .8
+    }
+}
+
+.gameIconLoading_b52e4f {
+    animation: placeholderPulse_b52e4f 1.3s ease-in-out infinite;
+    background-color: var(--background-mod-normal)
+}
+
+.headerIcons_f5cf99 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.headerIconsIncentivizedAccountLinking_f5cf99 {
+    gap: 6px
+}
+
+.ellipseGroup_f5cf99 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8px
+}
+
+.ellipseGroupIncentivizedAccountLinking_f5cf99 {
+    align-items: center;
+    gap: 1px;
+    margin: 0
+}
+
+.ellipse_f5cf99 {
+    background-color: var(--channel-icon);
+    border-radius: 50%;
+    height: 4px;
+    margin: 0 2px;
+    opacity: .3;
+    width: 4px
+}
+
+.ellipseIncentivizedAccountLinking_f5cf99 {
+    margin: 0
+}
+
+.avatar_f5cf99 {
+    border: 1px solid var(--border-muted);
+    height: 48px;
+    width: 48px
+}
+
+.orbAssetContainer_f5cf99 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.orbAssetBackdropVideo_f5cf99 {
+    height: 38px
+}

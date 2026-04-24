@@ -1,0 +1,112 @@
+.confettiCanvas__8fcbd {
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.close__8fcbd {
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    top: var(--space-16)
+}
+
+.modal__8fcbd {
+    margin: 0;
+    overflow: hidden;
+    width: 440px
+}
+
+.modalContentContainer__8fcbd {
+    margin: 0;
+    overflow: hidden;
+    padding: 0 !important
+}
+
+.container__8fcbd,
+.contentContainer__8fcbd {
+    display: flex;
+    flex-direction: column
+}
+
+.contentContainer__8fcbd {
+    align-items: center;
+    padding: var(--space-24) var(--space-48);
+    text-align: center
+}
+
+.description__8fcbd {
+    margin-top: var(--space-8)
+}
+
+.button__8fcbd {
+    margin-top: var(--space-16)
+}
+
+.image__8fcbd {
+    height: 228px
+}
+
+.secondaryButton__652ee {
+    min-width: 0;
+    width: auto
+}
+
+.buttonInner__652ee {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.buttonWrapper__652ee {
+    flex-grow: 1
+}
+
+.noGrow__652ee {
+    flex: 0 0 auto
+}
+
+.dot__652ee {
+    margin: 0 3px
+}
+
+.boostIcon__652ee {
+    margin-top: 1px;
+    margin-inline-end: -3px;
+    vertical-align: top
+}
+
+.container__6f9f7 {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.tooltipContainer__6f9f7 {
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+
+.primaryButton__6f9f7 {
+    flex-grow: 1
+}
+
+.secondaryButton__6f9f7 {
+    min-width: 0;
+    width: auto
+}
+
+.dot__6f9f7 {
+    margin: 0 6px;
+    margin-inline-end: 4px
+}
+
+.boost__6f9f7 {
+    align-self: center;
+    justify-self: center
+}
+
+.riveHoverTarget__438ba {
+    height: 100%;
+    pointer-events: auto;
+    width: 100%
+}

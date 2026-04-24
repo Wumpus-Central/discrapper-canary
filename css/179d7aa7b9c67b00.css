@@ -1,0 +1,35 @@
+.bugReporterSubmitModalRoot__341b5 {
+    background-color: transparent !important;
+    background-image: url(/assets/2f537bacfaadd7c3.png) !important;
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    border: none;
+    box-shadow: none !important;
+    height: auto;
+    width: 720px
+}
+
+.modalContent__341b5 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0
+}
+
+.closeButton__341b5 {
+    box-sizing: content-box;
+    inset-inline-end: 4px;
+    position: absolute;
+    top: 12px
+}
+
+.submitText__341b5 {
+    color: #74664b;
+    font-family: Arial Rounded MT Bold;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 20px;
+    max-width: 360px;
+    text-align: center
+}

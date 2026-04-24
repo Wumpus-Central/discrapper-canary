@@ -1,0 +1,25 @@
+.seperator__6bf29 {
+    border-bottom: 1px solid var(--border-subtle);
+    margin: 0 16px;
+    width: calc(100% - 32px)
+}
+
+.checklistRow__6bf29 {
+    cursor: pointer;
+    padding: 16px
+}
+
+.checklistRow__6bf29:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.checklistLabel__6bf29 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-inline-start: 8px
+}
+
+.selectAllCheckbox__6bf29 {
+    background-color: var(--background-mod-normal)
+}

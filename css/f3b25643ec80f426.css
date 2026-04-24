@@ -1,0 +1,274 @@
+.container_fa0751 {
+    background-color: var(--background-base-lower);
+    display: flex;
+    flex-direction: column;
+    padding-block: 40px 24px;
+    padding-inline: 24px 28px;
+    width: 279px
+}
+
+.content_fa0751 {
+    flex: 1;
+    margin-bottom: 24px
+}
+
+.listingInfoRow_fa0751 {
+    align-items: start;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 16px
+}
+
+.avatar_fa0751 {
+    border-radius: 2px;
+    height: 44px;
+    width: 44px
+}
+
+.tierName_fa0751 {
+    margin-bottom: 2px
+}
+
+.listingRoleRow_fa0751 {
+    align-items: center;
+    border: 1px solid var(--interactive-text-active);
+    border-radius: 4px;
+    display: inline-flex;
+    flex-direction: row;
+    padding: 4px
+}
+
+.roleColor_fa0751 {
+    border-radius: 50%;
+    height: 12px;
+    width: 12px
+}
+
+.roleIcon_fa0751 {
+    border-radius: 2px;
+    height: 16px;
+    margin-inline: 8px 4px;
+    width: 16px
+}
+
+.tierDescription_fa0751 {
+    color: var(--text-muted);
+    margin-top: 16px
+}
+
+.divider_fa0751 {
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 16px;
+    margin-top: 16px
+}
+
+.perksHeader_fa0751 {
+    margin-bottom: 4px
+}
+
+.benefitTypeHeader_fa0751 {
+    color: var(--text-muted);
+    padding-bottom: 14px;
+    padding-top: 12px
+}
+
+.channelBenefitRow_fa0751 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+    padding-inline-start: 8px
+}
+
+.channelBenefitIcon_fa0751 {
+    color: var(--interactive-text-default);
+    height: 16px;
+    width: 16px
+}
+
+.channelBenefitText_fa0751 {
+    flex: 1;
+    margin-inline: 14px 6px
+}
+
+.channelBenefitTagline_fa0751 {
+    color: var(--text-muted)
+}
+
+.intangibleBenefitRow_fa0751 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+    padding-inline-start: 8px
+}
+
+.intangibleBenefitIcon_fa0751 {
+    background-color: var(--interactive-background-selected);
+    border-radius: 50%;
+    height: 12px;
+    margin-inline-end: 14px;
+    width: 12px
+}
+
+.container_afa88e {
+    background-color: var(--background-base-lower);
+    display: flex;
+    flex-direction: column;
+    max-width: 279px;
+    padding-block: 40px 24px;
+    padding-inline: 24px 28px
+}
+
+.content_afa88e {
+    flex: 1
+}
+
+.bodyText_afa88e {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    margin-top: 12px
+}
+
+.priceRow_afa88e {
+    align-items: center;
+    border: 1px solid var(--border-muted);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    margin-bottom: 12px;
+    padding-inline: 14px
+}
+
+.selected_afa88e {
+    background-color: var(--background-mod-subtle)
+}
+
+.circle_afa88e {
+    stroke: var(--border-muted);
+    stroke-width: 1;
+    fill: none
+}
+
+.priceRowText_afa88e {
+    margin-inline-start: 12px
+}
+
+.modalRoot__6f8c0 {
+    border-radius: 12px
+}
+
+.closeButton__6f8c0 {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    inset-inline-end: 24px;
+    position: absolute;
+    top: 24px;
+    z-index: 1
+}
+
+.modalContent__6f8c0 {
+    background-color: var(--background-base-low);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    padding: 0
+}
+
+.no-webkit-scrollbar .modalContent__6f8c0 {
+    scrollbar-width: none
+}
+
+.modalContent__6f8c0::-webkit-scrollbar {
+    height: 0;
+    width: 0
+}
+
+.templatesContainer__6f8c0 {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    max-width: 508px;
+    padding-top: 40px;
+    padding-inline: 40px 124px;
+    padding-bottom: 24px;
+    position: relative
+}
+
+.templatesContainerBody__6f8c0 {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 640px;
+    margin-bottom: 24px
+}
+
+.templatesContentContainer__6f8c0 {
+    align-self: stretch;
+    justify-content: center;
+    padding-top: 24px
+}
+
+.modalBodyText__6f8c0 {
+    margin-top: 8px
+}
+
+.creatorPortalText__6f8c0,
+.modalBodyText__6f8c0 {
+    color: var(--text-default);
+    margin-bottom: 8px
+}
+
+.templateCardList__6f8c0 {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.templateCard__6f8c0 {
+    border-radius: 8px;
+    line-height: 0px;
+    overflow: hidden
+}
+
+.templateNameRow__6f8c0 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    display: flex;
+    flex-direction: row;
+    height: 24px;
+    justify-content: space-between;
+    padding: 14px 16px
+}
+
+.unselectedTemplateName__6f8c0 {
+    color: var(--text-muted)
+}
+
+.templateCardImage__6f8c0 {
+    max-width: 100%
+}
+
+.createFromStratchButton__6f8c0 {
+    border-radius: 4px;
+    margin-top: 16px
+}
+
+.createFromStratchButtonInner__6f8c0 {
+    align-items: center;
+    display: flex
+}
+
+.editIcon__6f8c0 {
+    margin-inline-end: 8px
+}
+
+.blackoutOverlay__6f8c0 {
+    background-color: var(--opacity-black-80);
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    z-index: 100
+}

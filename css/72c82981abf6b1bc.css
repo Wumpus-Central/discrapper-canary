@@ -1,0 +1,61 @@
+.gradient__7dbcf {
+    border-radius: inherit;
+    margin: calc(var(--custom-modal-padding-top)*-1) 0 calc(var(--custom-modal-padding-bottom)*-1)
+}
+
+.closeButtonContainer__7dbcf {
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    top: var(--space-8);
+    z-index: 5
+}
+
+.artContainer__7dbcf {
+    display: flex;
+    justify-content: center;
+    margin: -20px;
+    position: relative;
+    z-index: 1
+}
+
+.followupArtContainer__7dbcf {
+    margin-bottom: -20px;
+    margin-top: -40px
+}
+
+.content__7dbcf {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    padding: var(--space-24) 44px 48px;
+    word-break: break-word
+}
+
+.header__7dbcf {
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: -.64px;
+    line-height: 100%;
+    text-transform: uppercase
+}
+
+.body__7dbcf,
+.header__7dbcf {
+    text-align: center
+}
+
+.body__7dbcf {
+    max-width: 400px
+}
+
+.buttonRow__7dbcf {
+    display: flex;
+    gap: var(--space-8);
+    justify-content: center;
+    width: 100%
+}
+
+.buttonRow__7dbcf>* {
+    flex: 1
+}

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     hK: "staticCelebration__0de46",
     j: "videoContainer__0de46",

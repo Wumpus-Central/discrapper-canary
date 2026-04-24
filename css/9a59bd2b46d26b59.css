@@ -1,0 +1,106 @@
+.modal__66bb2 {
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: calc(var(--custom-modal-padding-bottom, var(--space-16))*-1);
+    margin-top: calc(var(--custom-modal-padding-top, var(--space-24))*-1);
+    overflow: hidden
+}
+
+.rewardSide__66bb2 {
+    background: radial-gradient(181.07% 122.33% at -20.89% -23.8%, rgba(5, 75, 22, .4) 0, transparent 100%), var(--background-base-lower);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: space-between;
+    padding: var(--space-24);
+    width: 321px
+}
+
+.logo__66bb2 {
+    height: 20px;
+    width: 160px
+}
+
+.rewardMetadata__66bb2,
+.rewardTextContent__66bb2 {
+    display: flex;
+    flex-direction: column
+}
+
+.rewardTextContent__66bb2 {
+    gap: var(--space-4);
+    margin-bottom: var(--space-24)
+}
+
+.thirdPartySide__66bb2 {
+    background-color: var(--background-base-lowest);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative
+}
+
+.artImage__66bb2 {
+    height: 320px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.artOverlay__66bb2 {
+    background: linear-gradient(180deg, transparent 40.935%, var(--background-base-lowest) 50%);
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.closeButton__66bb2 {
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    top: var(--space-16);
+    z-index: 1
+}
+
+.rewardItemList__66bb2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-8);
+    justify-content: center;
+    padding: var(--space-20);
+    position: relative;
+    z-index: 1
+}
+
+.rewardItem__66bb2 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    padding: var(--space-12)
+}
+
+.rewardItem__66bb2 svg {
+    flex-shrink: 0;
+    margin-inline-end: 6px;
+    opacity: .8
+}
+
+.tooltipWrapper__66bb2 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    margin-inline-start: var(--space-4)
+}
+
+.disclaimer__66bb2 {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-8)
+}

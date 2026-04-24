@@ -1,0 +1,52 @@
+.container_a88956 {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.backgroundSvg_a88956 {
+    -webkit-backdrop-filter: blur(var(--custom-backdrop-blur-amount));
+    backdrop-filter: blur(var(--custom-backdrop-blur-amount));
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0
+}
+
+.backgroundSvg_a88956,
+.svg_a88956 {
+    height: 100%;
+    width: 100%
+}
+
+.svg_a88956 {
+    position: relative;
+    z-index: 1
+}
+
+.overlay_a88956 {
+    align-items: center;
+    display: flex;
+    inset-inline-start: 50%;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2
+}
+
+.badgeImageContainer__9953c {
+    position: relative
+}
+
+.badgeImage__9953c {
+    display: block;
+    height: 90px
+}
+
+.progressCircleContainer__9953c {
+    bottom: 0;
+    height: 34px;
+    inset-inline-end: -6px;
+    position: absolute;
+    width: 34px
+}

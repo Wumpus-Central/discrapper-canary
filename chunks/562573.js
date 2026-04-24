@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jD: "breadcrumbs__75013",
     hj: "breadcrumbWrapper__75013",

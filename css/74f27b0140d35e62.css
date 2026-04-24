@@ -1,0 +1,209 @@
+.imagePreviewContainer__7b848 {
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-xs);
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color var(--custom-button-transition-duration) ease
+}
+
+.imagePreviewContainer__7b848:hover {
+    background-color: var(--input-background-default)
+}
+
+.imagePreviewContainer__7b848:focus-within .altBadge__7b848,
+.imagePreviewContainer__7b848:hover .altBadge__7b848 {
+    opacity: 0
+}
+
+.imagePreviewContainer__7b848:focus-within .altTextPreview__7b848,
+.imagePreviewContainer__7b848:hover .altTextPreview__7b848 {
+    opacity: 1
+}
+
+.altBadge__7b848 {
+    border-radius: var(--radius-xs);
+    bottom: 5px;
+    inset-inline-start: 5px;
+    padding: 4px;
+    text-transform: uppercase;
+    transition: opacity var(--custom-button-transition-duration) ease
+}
+
+.altBadge__7b848,
+.altTextPreview__7b848 {
+    background: var(--background-surface-high);
+    position: absolute
+}
+
+.altTextPreview__7b848 {
+    bottom: 0;
+    box-sizing: border-box;
+    color: var(--primary-360);
+    inset-inline-start: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 6px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%
+}
+
+.full-motion .altTextPreview__7b848 {
+    transition: all var(--custom-button-transition-duration) ease
+}
+
+.altTextPreview__7b848:hover {
+    color: var(--primary-230)
+}
+
+.expressionPickerButton__7b848 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.expressionPickerButton__7b848 .media__7b848 {
+    transition: opacity var(--custom-button-transition-duration) ease
+}
+
+.expressionPickerButton__7b848:hover .media__7b848 {
+    opacity: .6
+}
+
+.expressionPickerButton__7b848 .editIcon__7b848 {
+    color: var(--interactive-text-default);
+    height: 16px;
+    inset-inline-start: 14px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity var(--custom-button-transition-duration) ease;
+    width: 16px
+}
+
+.expressionPickerButton__7b848.canEditMedia__7b848:focus .media__7b848,
+.expressionPickerButton__7b848.canEditMedia__7b848:hover .media__7b848 {
+    opacity: .15
+}
+
+.expressionPickerButton__7b848.canEditMedia__7b848:focus .editIcon__7b848,
+.expressionPickerButton__7b848.canEditMedia__7b848:hover .editIcon__7b848 {
+    opacity: 1
+}
+
+.expressionPickerButtonDefault__7b848 {
+    width: 38px
+}
+
+.expressionPickerIconDefault__7b848 {
+    color: var(--interactive-text-default);
+    margin-inline-start: 6px
+}
+
+.expressionPickerIconDefault__7b848:hover {
+    color: var(--interactive-text-active)
+}
+
+.emojiPicker__7b848 {
+    box-shadow: none
+}
+
+.emojiDefault__7b848 {
+    height: 22px;
+    margin-inline-start: 6px;
+    width: 22px
+}
+
+.gif__7b848 {
+    transition: opacity var(--custom-button-transition-duration) ease
+}
+
+.gifDefault__7b848 {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 48px
+}
+
+.spinnerWrapper__7b848 {
+    align-items: center;
+    cursor: default;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    width: 48px
+}
+
+.spinnerWrapperDefault__7b848 {
+    height: 48px;
+    width: 48px
+}
+
+.menuContainer__7b848 {
+    margin-block: -16px 0;
+    margin-inline: 6px 0
+}
+
+.content_d97f89 {
+    display: flex;
+    flex-direction: column
+}
+
+.addAnswerButton_d97f89 {
+    align-self: flex-end
+}
+
+.addAnswerButtonDefault_d97f89 {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    gap: 8px;
+    justify-content: flex-start;
+    padding-block: 0;
+    padding-inline: 9px 20px
+}
+
+.addAnswerButtonDefault_d97f89.canRemoveMoreAnswers_d97f89 {
+    margin-inline-end: 36px
+}
+
+.addAnswerButtonDefault_d97f89:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.addAnswerIconDefault_d97f89 {
+    color: var(--text-muted);
+    height: 28px;
+    width: 28px
+}
+
+.addAnswerButtonLabel_d97f89 {
+    padding: 13px 0
+}
+
+.duration_d97f89 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 14px
+}
+
+.durationSelect_d97f89 {
+    font-weight: 400;
+    gap: 4px;
+    min-width: 6rem;
+    padding: 13px;
+    width: 150px
+}
+
+.checkbox_d97f89 {
+    align-self: center
+}
+
+.apiErrorBlock_d97f89 {
+    margin-bottom: 24px
+}

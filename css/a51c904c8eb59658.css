@@ -1,0 +1,38 @@
+.categorySubGroup_b6c1c0 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.categorySubGroup_b6c1c0:empty {
+    display: none
+}
+
+.container_fe18a9 {
+    gap: var(--space-16)
+}
+
+.container_fe18a9,
+.header_fe18a9 {
+    display: flex;
+    flex-direction: column
+}
+
+.header_fe18a9 {
+    gap: var(--space-4)
+}
+
+.description_fe18a9.disabled_fe18a9,
+.title_fe18a9.disabled_fe18a9 {
+    cursor: not-allowed;
+    opacity: .6
+}
+
+.enable-forced-colors .title_fe18a9.disabled_fe18a9 {
+    opacity: 1
+}
+
+.enable-forced-colors .description_fe18a9.disabled_fe18a9 {
+    color: GrayText;
+    opacity: 1
+}

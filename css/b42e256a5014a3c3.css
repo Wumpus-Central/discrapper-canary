@@ -1,0 +1,112 @@
+.banner__24934 {
+    background: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    isolation: isolate;
+    overflow: hidden;
+    position: relative;
+    width: auto
+}
+
+.banner__24934:before {
+    background: radial-gradient(ellipse 120% 230% at 10% -80%, var(--color-scoped-expressive-background-nitro-1-start, rgba(179, 38, 156, .7)), transparent 70%), radial-gradient(ellipse 120% 255% at 95% -95%, var(--color-scoped-expressive-background-nitro-1-end, rgba(20, 20, 203, .8)), transparent 70%);
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .15s ease;
+    z-index: -1
+}
+
+.banner__24934:hover:before {
+    opacity: 1
+}
+
+.body__24934 {
+    flex: 1
+}
+
+.actions__24934,
+.avatarPile__24934 {
+    flex-shrink: 0
+}
+
+.modalContent__19a29 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: calc(var(--custom-modal-padding-bottom)*-1);
+    max-height: 712px;
+    overflow: hidden
+}
+
+.tabBarWrapper__19a29 {
+    flex-shrink: 0;
+    padding: var(--space-16) var(--space-24) 0
+}
+
+.scroller__19a29 {
+    flex: 1;
+    min-height: 0
+}
+
+.content__19a29 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32);
+    padding: var(--space-32) 18px var(--space-24)
+}
+
+.contentNonDm__19a29 {
+    padding-top: var(--space-12)
+}
+
+.sectionAnchor__19a29 {
+    scroll-margin-top: var(--space-8)
+}
+
+.cardsRow__19a29 {
+    align-items: stretch;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--space-16)
+}
+
+.cardsRow__19a29>* {
+    display: flex;
+    flex: 1;
+    min-width: 300px
+}
+
+.cardsRow__19a29>*>* {
+    flex: 1
+}
+
+.cardsRow__19a29>*>*,
+.wishlistSection__19a29 {
+    display: flex;
+    flex-direction: column
+}
+
+.wishlistSection__19a29 {
+    flex-shrink: 0;
+    gap: var(--space-16)
+}
+
+.wishlistHeader__19a29 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16);
+    justify-content: space-between
+}
+
+.wishlistTitle__19a29 {
+    text-align: start
+}
+
+.wishlistGrid__19a29 {
+    display: grid;
+    gap: var(--space-12);
+    grid-template-columns: repeat(4, 150px)
+}

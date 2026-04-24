@@ -1,0 +1,12 @@
+.scroller__06800 {
+    background-color: var(--background-surface-higher);
+    border-radius: var(--radius-sm);
+    padding: var(--space-8) var(--space-16)
+}
+
+.popoutWrapper__06800 {
+    display: flex;
+    max-height: 40vh;
+    position: relative;
+    width: 200px
+}

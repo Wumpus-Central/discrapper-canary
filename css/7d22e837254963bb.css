@@ -1,0 +1,27 @@
+.modalHeader__5a555 {
+    align-items: center;
+    justify-content: space-between
+}
+
+.modalContent__5a555 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32);
+    padding-bottom: var(--space-16)
+}
+
+.guildSelection__5a555 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.guildSelectorContainer__5a555 {
+    flex: 1
+}
+
+.createGuildButton__5a555 {
+    width: -moz-fit-content;
+    width: fit-content
+}

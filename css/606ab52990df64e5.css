@@ -1,0 +1,88 @@
+.bottomMargin__5ca14 {
+    margin-bottom: 16px
+}
+
+.topMargin__5ca14 {
+    margin-top: 8px
+}
+
+.body__5ca14 {
+    flex-direction: column;
+    text-align: center
+}
+
+.body__5ca14,
+.header__5ca14 {
+    align-items: center;
+    display: flex
+}
+
+.header__5ca14 {
+    background-color: var(--background-base-lowest);
+    background-size: cover;
+    border-start-end-radius: 4px;
+    border-start-start-radius: 4px;
+    justify-content: center
+}
+
+.formMargin__5ca14 {
+    margin-bottom: 24px
+}
+
+.noScroll__5ca14 {
+    overflow: visible !important
+}
+
+.content__5ca14 {
+    padding-top: 32px;
+    z-index: 2
+}
+
+.content__5ca14,
+.guildOption__5ca14 {
+    font-weight: var(--font-weight-medium)
+}
+
+.guildOption__5ca14 {
+    align-items: center;
+    display: flex
+}
+
+.icon__5ca14 {
+    display: block
+}
+
+.channelContainer__5ca14 {
+    background-color: var(--background-base-lower);
+    border-radius: 4px;
+    margin-inline-start: 16px;
+    max-width: 320px;
+    overflow: hidden
+}
+
+.channel__5ca14 {
+    align-items: center;
+    background-color: var(--interactive-background-selected);
+    display: flex;
+    padding: 8px
+}
+
+.channelName__5ca14 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.channelIcon__5ca14 {
+    color: var(--text-muted);
+    margin-inline: 2px 8px;
+    min-width: 16px
+}
+
+.images-light .header__5ca14 {
+    background-image: url(/assets/9b2c01218d4ab2ff.svg)
+}
+
+.images-dark .header__5ca14 {
+    background-image: url(/assets/ef95e909088f721c.svg)
+}

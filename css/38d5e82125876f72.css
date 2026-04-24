@@ -1,0 +1,143 @@
+.modal__3bee4 {
+    width: 408px
+}
+
+.container__3bee4 {
+    display: flex;
+    flex-direction: column;
+    max-height: 720px
+}
+
+.header__3bee4 {
+    flex-grow: 0;
+    overflow: hidden;
+    padding: 24px 16px 0
+}
+
+.stepHeader__3bee4 {
+    margin-bottom: 16px;
+    text-transform: uppercase
+}
+
+.title__3bee4 {
+    text-align: center
+}
+
+.closeButton__3bee4 {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 12px;
+    z-index: 1000
+}
+
+.illustration__3bee4 {
+    margin-bottom: 16px
+}
+
+.consentContent__3bee4 {
+    padding-bottom: 16px
+}
+
+.consentHeader__3bee4 {
+    padding: 32px 0
+}
+
+.body__3bee4 {
+    padding-bottom: 16px;
+    text-align: center
+}
+
+.body__3bee4 p {
+    margin: 8px 0
+}
+
+.footer__3bee4 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    flex-direction: column
+}
+
+.footerButton__3bee4 {
+    align-self: stretch
+}
+
+.launchIcon__3bee4 {
+    translate: 0 -1px;
+    vertical-align: middle
+}
+
+.valueProps__3bee4 {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    margin-top: 24px
+}
+
+.valueProp__3bee4 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    text-align: start
+}
+
+.valuePropIconContainer__3bee4 {
+    color: var(--interactive-text-default);
+    display: flex;
+    justify-content: center;
+    margin-inline-end: 12px;
+    padding: 4px
+}
+
+.valuePropText__3bee4 {
+    display: flex;
+    flex-direction: column
+}
+
+.valuePropDivider__3bee4 {
+    background-color: var(--border-subtle);
+    flex: 1;
+    height: 1px;
+    margin-inline: 56px 12px
+}
+
+.slideContainer__3bee4 {
+    display: flex;
+    flex-direction: column;
+    max-height: clamp(200px, calc(100vh - 80px), 720px)
+}
+
+.getCrunchyollApp__2ec0f {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    margin-top: 24px;
+    padding: 16px
+}
+
+.getCrunchyollAppBody__2ec0f {
+    text-align: start
+}
+
+.getCrunchyollAppHeading__2ec0f {
+    display: flex
+}
+
+.getCrunchyollAppQR__2ec0f {
+    margin-inline-start: 16px
+}
+
+.crunchyollLogoBox__2ec0f {
+    align-items: center;
+    border-radius: var(--radius-xs);
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    margin-inline-end: 10px;
+    width: 24px
+}
+
+.crunchyollLogoBox__2ec0f img {
+    height: 20px;
+    width: 20px
+}

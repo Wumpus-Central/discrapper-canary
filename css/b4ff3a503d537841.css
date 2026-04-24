@@ -1,0 +1,70 @@
+.container__1ce5d {
+    position: relative
+}
+
+.circularImage__1ce5d {
+    border-radius: 50%
+}
+
+.dots__1ce5d {
+    margin-top: .2px
+}
+
+.icon__2894c {
+    display: block;
+    flex: 0 0 auto;
+    height: 20px;
+    width: 20px
+}
+
+.iconWithGuildIcon__2894c {
+    background: var(--background-mod-strong);
+    border-radius: var(--radius-round);
+    color: var(--text-subtle);
+    height: 12px;
+    margin-inline-start: 12px;
+    margin-top: -15px;
+    overflow: visible;
+    padding: 4px;
+    position: relative;
+    width: 12px
+}
+
+.channelGuildIcon__2894c {
+    border-radius: var(--radius-sm)
+}
+
+.acronym__2894c {
+    align-items: center;
+    background-color: var(--background-mod-strong);
+    color: var(--text-default);
+    display: flex;
+    font-weight: var(--font-weight-medium);
+    justify-content: center;
+    line-height: 1.2em;
+    white-space: nowrap
+}
+
+.footer_c3ef83 {
+    align-items: center;
+    justify-content: space-between
+}
+
+.failedDestinations_c3ef83 {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 8px 16px
+}
+
+.failedRow_c3ef83 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    height: 48px
+}
+
+.label_c3ef83 {
+    color: var(--text-strong)
+}

@@ -1,0 +1,34 @@
+.legacyInputCommandHeader__38272 {
+    display: flex;
+    justify-content: space-between
+}
+
+.noAutocompleteResults__3b122 {
+    height: 200px
+}
+
+.secondarySection_ed47e5 {
+    padding-top: 0
+}
+
+.divider_ed47e5 {
+    padding-bottom: 0 !important
+}
+
+.spinner__13d18 {
+    padding-top: 8px
+}
+
+.horizontalAutocompletes__13d18 {
+    margin-bottom: -4px;
+    overflow-x: auto;
+    padding: 0 8px
+}
+
+.no-webkit-scrollbar .horizontalAutocompletes__13d18 {
+    scrollbar-width: thin
+}
+
+.horizontalAutocomplete__13d18 {
+    margin-bottom: 4px
+}

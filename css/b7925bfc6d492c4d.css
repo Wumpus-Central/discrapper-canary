@@ -1,0 +1,67 @@
+.header__6c75d {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    padding-top: 24px
+}
+
+.modalCloseButton__6c75d {
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 16px
+}
+
+.content__6c75d {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 8px
+}
+
+.icon__6c75d {
+    margin-inline-end: 16px
+}
+
+.input__6c75d {
+    margin-top: 8px
+}
+
+.settings__6c75d {
+    margin-top: 32px
+}
+
+.credentialList__6c75d,
+.description__6c75d {
+    margin-bottom: 8px
+}
+
+.credentialList__6c75d {
+    background-color: var(--background-base-lower);
+    border-radius: 4px
+}
+
+.credentialItem__6c75d {
+    align-items: center;
+    border-top: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 8px;
+    padding-inline-start: 32px;
+    width: 100%
+}
+
+.credentialItem__6c75d:not(:last-child) {
+    margin-bottom: 4px
+}
+
+.credentialOptions__6c75d {
+    height: 24px
+}
+
+.footer__6c75d {
+    justify-content: space-between
+}

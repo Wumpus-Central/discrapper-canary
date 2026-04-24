@@ -1,0 +1,62 @@
+.pill__4f4b6 {
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0
+}
+
+.notificationsIcon__4f4b6 {
+    display: block
+}
+
+.full-motion .badgeTransition__4f4b6 {
+    transition: all .2s cubic-bezier(0, 0, .2, 1.1)
+}
+
+.grayBadge__4f4b6 {
+    background-color: var(--background-mod-strong) !important;
+    color: var(--white);
+    font-size: 10px
+}
+
+.grayBadge__4f4b6.selected__4f4b6 {
+    background-color: var(--interactive-text-active) !important;
+    color: var(--background-base-lowest)
+}
+
+.container_fc71d3 {
+    border: 1px solid var(--background-base-low);
+    box-shadow: var(--shadow-high);
+    container-type: inline-size;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    height: calc(100vh - var(--custom-app-top-bar-height) - var(--custom-app-panels-height) - 1rem);
+    max-height: 640px;
+    min-height: 0;
+    min-width: 320px;
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 10px)
+}
+
+.backgroundContainer_fc71d3,
+.container_fc71d3 {
+    border-radius: var(--radius-md);
+    overflow: hidden
+}
+
+.backgroundContainer_fc71d3 {
+    border: 1px solid var(--app-frame-border);
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.background_fc71d3 {
+    background: var(--background-gradient-highest, var(--background-base-low));
+    border-radius: var(--radius-md);
+    height: 100vh;
+    inset-inline-start: calc(var(--custom-guild-list-width)*-1);
+    position: absolute;
+    top: calc(var(--custom-app-top-bar-height)*-1);
+    width: 100vw
+}

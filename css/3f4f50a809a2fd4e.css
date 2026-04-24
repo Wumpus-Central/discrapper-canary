@@ -1,0 +1,105 @@
+.headerGuildName__949ab {
+    color: var(--text-strong)
+}
+
+.headerGuildBadge__949ab {
+    display: inline-block;
+    margin-block: 0;
+    margin-inline: 2px 4px
+}
+
+.flowerStar__949ab {
+    display: block
+}
+
+.modalContent__949ab {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.guildIcon__949ab {
+    margin-bottom: 16px;
+    margin-top: 16px
+}
+
+.header__949ab {
+    color: var(--text-default);
+    text-align: center
+}
+
+.guildDescription__949ab {
+    margin-top: 8px;
+    padding: 0 8px;
+    text-align: center
+}
+
+.choiceHeader__949ab {
+    align-self: flex-start;
+    margin-top: 32px
+}
+
+.options__949ab {
+    margin-top: 8px;
+    width: 100%
+}
+
+.optionContainer__949ab {
+    align-items: center;
+    background: var(--background-base-lower);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    padding: 12px
+}
+
+.optionContainer__949ab:hover {
+    background: var(--background-mod-normal);
+    cursor: pointer
+}
+
+.optionTextContainer__949ab {
+    flex: 1;
+    margin-inline: 12px 16px
+}
+
+.optionArrow__949ab {
+    color: var(--text-default)
+}
+
+.channelIcon__949ab,
+.optionEmoji__949ab {
+    height: 24px;
+    width: 24px
+}
+
+.channelIcon__949ab {
+    color: var(--channel-icon)
+}
+
+.channelTitleIcon__949ab {
+    color: var(--text-default);
+    margin-inline-end: 2px;
+    vertical-align: middle
+}
+
+.channelDescription__949ab {
+    color: var(--interactive-text-active)
+}
+
+.skip__949ab {
+    margin-top: 8px
+}
+
+.skipColor__949ab {
+    color: var(--interactive-text-default)
+}
+
+.skipColor__949ab:hover {
+    color: var(--interactive-text-hover)
+}
+
+.skipColor__949ab:active {
+    color: var(--interactive-text-active)
+}

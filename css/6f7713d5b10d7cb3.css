@@ -1,0 +1,12 @@
+.highlight-mana-components [data-mana-component] {
+    box-shadow: 0 0 6px 2px var(--pink-51), 0 0 8px 4px var(--opacity-blurple-80)
+}
+
+.highlight-mana-components [data-mana-component=text-area],
+.highlight-mana-components [data-mana-component=text-input] {
+    box-shadow: 0 0 6px 2px var(--pink-51), 0 0 8px 4px var(--opacity-blurple-80)
+}
+
+.highlight-mana-buttons [data-mana-component=button] {
+    box-shadow: 0 0 6px 2px var(--pink-51), 0 0 8px 4px var(--opacity-blurple-80)
+}

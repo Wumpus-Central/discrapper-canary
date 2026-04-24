@@ -1,0 +1,141 @@
+.content__44563 {
+    align-content: center;
+    background-color: #000;
+    color: var(--text-default);
+    inset: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: opacity .5s linear
+}
+
+.theme-light .content__44563 {
+    background-color: #eeeff1
+}
+
+.content__44563.loaded__44563 {
+    opacity: 1
+}
+
+.spinner__44563 {
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .5s linear
+}
+
+.video__44563 {
+    margin-top: -60px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    pointer-events: none;
+    position: relative;
+    width: 100%
+}
+
+.textContainer__44563 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: calc(50% + 70px)
+}
+
+.badgeText__44563,
+.textContainer__44563 {
+    position: absolute;
+    width: 100%
+}
+
+.badgeText__44563 {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    top: 20px;
+    transform-origin: bottom
+}
+
+@keyframes oldBadgeText__44563 {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes newBadgeText__44563 {
+    0% {
+        opacity: 0;
+        transform: scale(2)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+.badgeText__44563.old__44563 {
+    background-image: var(--custom-old-badge-color)
+}
+
+.started__44563 .badgeText__44563.old__44563 {
+    animation: oldBadgeText__44563 .5s linear .5s forwards
+}
+
+.badgeText__44563.new__44563 {
+    background-image: var(--custom-new-badge-color);
+    opacity: 0
+}
+
+.started__44563 .badgeText__44563.new__44563 {
+    animation: newBadgeText__44563 .15s linear 1.5s forwards
+}
+
+@keyframes reveal__44563 {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.subscribedText__44563 {
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 63px;
+    width: 100%
+}
+
+.started__44563 .subscribedText__44563 {
+    animation: reveal__44563 1s linear 3s forwards
+}
+
+.actionButtons__44563 {
+    align-items: center;
+    display: none;
+    gap: 8px;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    top: 85px;
+    width: 100%
+}
+
+.started__44563 .actionButtons__44563 {
+    animation: reveal__44563 .5s linear forwards
+}
+
+.ended__44563 .actionButtons__44563 {
+    display: flex
+}

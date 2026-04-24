@@ -1,0 +1,16 @@
+e.exports = {
+    zr: "root__4ad81",
+    Qw: "art__4ad81",
+    R_: "heading__4ad81",
+    HI: "checkboxContainer__4ad81",
+    b: "closeButton__4ad81",
+    cG: "closeButtonContainer__4ad81",
+    Di: "activitiesContainer__4ad81",
+    qy: "activitiesContainerSmol__4ad81",
+    KU: "activitySuggestion__4ad81",
+    F1: "clickableTile__4ad81",
+    zc: "iconContainer__4ad81",
+    lg: "shelfButtonCloseButton__4ad81",
+    yP: "closeButtonIcon__4ad81",
+    co: "singleUserRoot__4ad81",
+};

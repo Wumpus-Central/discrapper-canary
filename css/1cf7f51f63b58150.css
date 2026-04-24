@@ -1,0 +1,96 @@
+.marker__9d896 {
+    margin-inline-start: 4px
+}
+
+.separator_e45886 {
+    background: var(--border-subtle);
+    height: 1px;
+    margin: 24px 0
+}
+
+.formGroup_e45886 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.splitGroup_e45886 {
+    display: flex;
+    justify-content: space-between
+}
+
+.channelIcon_e45886 {
+    margin-top: 2px
+}
+
+.welcomeMessageTextInput_e45886 {
+    min-height: 200px
+}
+
+.uploadImage_e45886 {
+    background: var(--background-mod-normal);
+    background-size: 72px 72px;
+    border: 1px solid var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    height: 72px;
+    width: 72px
+}
+
+.uploader_e45886:hover .uploadImageIcon_e45886 {
+    background: var(--background-surface-high)
+}
+
+.uploader_e45886 .uploadImageIcon_e45886 {
+    background: var(--background-mod-normal);
+    background-image: none;
+    border-radius: 0;
+    color: var(--interactive-text-default);
+    height: 24px;
+    inset-inline-start: 24px;
+    pointer-events: none;
+    top: 24px;
+    width: 24px
+}
+
+.iconUploadContainer_e45886 {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    position: relative
+}
+
+.iconUploadContainer_e45886:hover .imageOverlay_e45886 {
+    display: block
+}
+
+.iconUpload_e45886 {
+    background-color: var(--background-mod-normal);
+    border: 1px solid var(--background-base-lowest);
+    border-radius: var(--radius-sm);
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    padding: 8px
+}
+
+.iconUpload_e45886:hover {
+    color: var(--interactive-text-hover)
+}
+
+.iconUpload_e45886:active {
+    color: var(--interactive-text-active)
+}
+
+.uploadMenuItem_e45886 {
+    position: relative
+}
+
+.imageOverlay_e45886 {
+    background-color: #00000080;
+    border-radius: var(--radius-sm);
+    display: none;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    padding: 8px
+}

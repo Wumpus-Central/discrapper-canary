@@ -1,0 +1,92 @@
+.textButton__7a01b {
+    background: initial;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: medium;
+    font-weight: 400;
+    gap: var(--space-4);
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    text-align: start;
+    text-decoration: none;
+    width: -moz-min-content;
+    width: min-content
+}
+
+.textButton__7a01b:disabled {
+    opacity: .5
+}
+
+.textButton__7a01b:hover:not(:disabled) .text__7a01b,
+:where(.decorate-links) .text__7a01b {
+    text-decoration: underline
+}
+
+.primary__7a01b {
+    color: var(--text-brand)
+}
+
+.secondary__7a01b {
+    color: var(--text-strong)
+}
+
+.always-white__7a01b {
+    color: var(--white)
+}
+
+.critical__7a01b {
+    color: var(--text-feedback-critical)
+}
+
+.highlight-mana-buttons .button__7a01b {
+    box-shadow: 0 0 2px 2px var(--opacity-white-60)
+}
+
+.root__10a0c {
+    min-width: -moz-fit-content;
+    min-width: fit-content
+}
+
+.content__10a0c {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 16px 20px
+}
+
+.fullbleed__10a0c {
+    padding: 0
+}
+
+.fullbleedContent__10a0c {
+    overflow: hidden
+}
+
+.iframe__10a0c {
+    height: 700px;
+    width: 700px
+}
+
+.cancelButton__10a0c {
+    align-self: flex-end
+}
+
+.cancelButton__10a0c,
+.footer__10a0c {
+    color: var(--interactive-text-default)
+}
+
+.footer__10a0c {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.footerButton__10a0c {
+    padding: var(--space-12) var(--space-16)
+}

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     cc: "messagePopoutContent_c00127",
     jC: "popoutContainer_c00127",

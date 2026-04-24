@@ -1,0 +1,7 @@
+.item__81f73 {
+    display: flex;
+    flex-direction: row;
+    margin-inline-end: 8px;
+    padding-block: 6px;
+    padding-inline: var(--custom-add-permissions-modal-focus-ring-width) 0
+}

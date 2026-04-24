@@ -1,0 +1,24 @@
+.confirmationContainer_f473af {
+    margin-top: 56px
+}
+
+.confirmationHeader_f473af {
+    color: var(--text-default);
+    margin-bottom: 8px;
+    text-align: center
+}
+
+.confirmationHeader_f473af strong {
+    color: var(--text-strong)
+}
+
+.confirmationSubtitle_f473af {
+    text-align: center
+}
+
+.buttonContainer_f473af {
+    display: grid;
+    gap: 8px;
+    padding-top: 24px;
+    width: 100%
+}

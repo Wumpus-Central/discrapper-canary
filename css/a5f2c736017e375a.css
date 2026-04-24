@@ -1,0 +1,190 @@
+.container__33d66 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.pill__33d66 {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-round);
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 8px 12px
+}
+
+.pill__33d66:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.pill__33d66.disabled__33d66 {
+    cursor: not-allowed;
+    opacity: .8
+}
+
+.dragging_f7c056 {
+    opacity: .6
+}
+
+.draggableInputContainer_f7c056 {
+    align-items: center;
+    display: flex;
+    position: relative
+}
+
+.inputWrapper_f7c056 {
+    flex: 1;
+    flex-direction: row-reverse;
+    position: relative
+}
+
+.inputWrapper_f7c056:hover .clearButton_f7c056 {
+    opacity: 1
+}
+
+.rulesContainer_f7c056 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0
+}
+
+.rulesTextAreaInput_f7c056 {
+    background-color: var(--input-background-default);
+    border-radius: var(--radius-sm);
+    padding-inline: 12px 16px;
+    white-space: pre-wrap
+}
+
+.clearButton_f7c056 {
+    color: var(--interactive-text-default);
+    inset-inline-end: 8px;
+    opacity: 0;
+    position: absolute;
+    top: 14px;
+    transition: opacity .2s ease-in-out;
+    z-index: 2
+}
+
+.clearButton_f7c056:focus,
+.clearButton_f7c056:hover {
+    opacity: 1
+}
+
+.clearIcon_f7c056 {
+    height: 16px;
+    width: 16px
+}
+
+.dragContainer_f7c056 {
+    cursor: move;
+    inset-inline-start: 4px;
+    position: absolute;
+    top: 14px;
+    transition: opacity .2s ease-in-out
+}
+
+.dragIcon_f7c056 {
+    color: var(--icon-muted)
+}
+
+.exampleRulesTitle_f7c056 {
+    margin-bottom: 8px;
+    margin-top: 24px;
+    text-transform: uppercase
+}
+
+.pill_f7c056 {
+    background-color: var(--background-base-lowest)
+}
+
+.dragContainer_f7c056 {
+    top: 20px
+}
+
+.addItemContainer__0651b {
+    cursor: pointer;
+    display: flex;
+    margin-top: 8px
+}
+
+.addItemButton__0651b {
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.dragging__0651b {
+    opacity: .6
+}
+
+.draggableInputContainer__0651b {
+    align-items: center;
+    display: flex;
+    margin-inline-end: -8px;
+    position: relative
+}
+
+.inputWrapper__0651b {
+    flex: 1;
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+    position: relative
+}
+
+.inputWrapper__0651b:hover .clearButton__0651b {
+    opacity: 1
+}
+
+.clearButton__0651b {
+    color: var(--interactive-text-default);
+    inset-inline-end: 8px;
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    transition: opacity .2s ease-in-out;
+    z-index: 2
+}
+
+.clearButton__0651b:focus,
+.clearButton__0651b:hover {
+    opacity: 1
+}
+
+.dragContainer__0651b {
+    align-items: center;
+    cursor: move;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+    width: 32px
+}
+
+.dragIcon__0651b {
+    color: var(--interactive-text-default)
+}
+
+.divider__0651b {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: 24px 0
+}
+
+.errorText__0651b {
+    margin-top: 8px
+}
+
+.spacedItem__0651b {
+    margin-bottom: 16px
+}
+
+.radioIconEmptyContainer__0651b {
+    display: flex;
+    margin-bottom: 12px;
+    padding-inline-end: 10px
+}
+
+.radioIconEmpty__0651b {
+    color: var(--interactive-text-default)
+}

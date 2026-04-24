@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     D2: "discriminator__78c91",
     Xh: "username__78c91",

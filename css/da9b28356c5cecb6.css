@@ -1,0 +1,249 @@
+.noScroll_b071d4 {
+    overflow-y: visible !important;
+    padding: 0
+}
+
+.container_b071d4 {
+    display: flex;
+    flex-direction: row;
+    width: 680px;
+    height: auto
+}
+
+.sequencer_b071d4 {
+    padding: 24px 12px
+}
+
+.innerSequencer_b071d4,
+.sequencer_b071d4 {
+    overflow: unset;
+    overflow-y: visible
+}
+
+.modal_b071d4 {
+    overflow-x: hidden;
+    width: 100%
+}
+
+.modal_b071d4,
+.overviewSidebar_b071d4 {
+    display: flex;
+    flex-direction: column
+}
+
+.overviewSidebar_b071d4 {
+    background: linear-gradient(180deg, hsl(254, calc(var(--saturation-factor, 1)*92%), 53%) 6.65%, hsl(246, calc(var(--saturation-factor, 1)*82%), 62%) 69.44%, hsl(239, calc(var(--saturation-factor, 1)*77%), 66%) 106.24%);
+    border-radius: 4px 0 0 4px;
+    flex-basis: 192px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    margin-block: -1px 0;
+    margin-inline: -1px 1px;
+    overflow: hidden;
+    padding: 24px
+}
+
+.header_b071d4 {
+    color: var(--white)
+}
+
+.closeButton_b071d4 {
+    inset-inline-end: 0;
+    position: absolute;
+    top: 12px;
+    z-index: 2
+}
+
+.footer_b071d4 {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row-reverse;
+    justify-content: space-between
+}
+
+.overviewSteps_b071d4 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.overviewStep_b071d4 {
+    align-items: center;
+    display: flex;
+    margin-bottom: 16px
+}
+
+.stepIndex_b071d4,
+.stepTitle_b071d4 {
+    color: var(--white)
+}
+
+.stepIndex_b071d4 {
+    align-items: center;
+    background-color: var(--opacity-white-16);
+    border-radius: 50%;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    margin-inline-end: 8px;
+    width: 24px
+}
+
+.selected_b071d4 .stepTitle_b071d4 {
+    color: var(--white);
+    font-weight: var(--font-weight-bold)
+}
+
+.selected_b071d4 .stepIndex_b071d4 {
+    background-color: var(--white);
+    color: var(--brand-500)
+}
+
+.container__50e4e {
+    min-height: 500px
+}
+
+.content__50e4e {
+    text-align: center
+}
+
+.headerCaption__50e4e {
+    color: var(--text-default)
+}
+
+.form__50e4e {
+    margin-top: 24px
+}
+
+.description__50e4e {
+    margin-bottom: 12px
+}
+
+.icon__50e4e {
+    transform: translateY(3px)
+}
+
+.header__50e4e {
+    margin-bottom: 8px;
+    margin-top: 20px
+}
+
+.closeButton__50e4e {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 16px
+}
+
+.footer__50e4e {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between
+}
+
+.checkboxOption__50e4e {
+    margin-top: 16px;
+    white-space: pre-line
+}
+
+.disabled__50e4e:active {
+    pointer-events: none
+}
+
+.footerImage__50e4e {
+    filter: saturate(var(--saturation-factor, 1));
+    transform: translate(60px, 20px)
+}
+
+.updatedHeader__50e4e {
+    margin-top: 12px
+}
+
+.updatedForm__50e4e {
+    margin-top: 24px
+}
+
+.formTitle__50e4e {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 8px
+}
+
+.checklistRow__50e4e {
+    align-items: center;
+    display: flex;
+    margin-top: 8px
+}
+
+.checklistIcon__50e4e {
+    margin-inline-end: 8px;
+    width: 18px
+}
+
+.roleRow__50e4e {
+    align-items: center;
+    background: var(--interactive-background-selected);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: 4px;
+    padding-block: 4px;
+    padding-inline: 5px 6px
+}
+
+.roleDot__50e4e {
+    margin-inline-end: 4px
+}
+
+.roleName__50e4e {
+    align-self: baseline
+}
+
+.table__50e4e {
+    gap: 4px;
+    margin-top: 12px
+}
+
+.table__50e4e,
+.tableContainer__50e4e {
+    display: flex;
+    flex-direction: column
+}
+
+.tableContainer__50e4e {
+    background-color: var(--background-base-lower);
+    border-radius: 4px;
+    padding: 16px 20px
+}
+
+.tableHeader__50e4e {
+    text-transform: uppercase
+}
+
+.permissionsTable__50e4e {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+    margin-top: 8px;
+    row-gap: 8px
+}
+
+.permissionRow__50e4e {
+    display: flex
+}
+
+.bullet__50e4e {
+    align-self: center;
+    background-color: var(--background-mod-muted);
+    border-radius: 50%;
+    height: 6px;
+    margin-inline-end: 8px;
+    width: 6px
+}
+
+.bulletWarning__50e4e {
+    background-color: var(--status-warning);
+    box-shadow: 0 0 4px rgba(250, 166, 26, .4)
+}
+
+.acceptText__50e4e {
+    margin-inline-start: 16px
+}

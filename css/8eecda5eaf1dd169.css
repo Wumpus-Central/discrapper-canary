@@ -1,0 +1,105 @@
+.facepile_aaa08b {
+    display: flex
+}
+
+.facepileItemContainer_aaa08b>foreignObject {
+    background-color: var(--background-surface-high);
+    padding: 2.5px
+}
+
+.facepileItemContainer_aaa08b:not(:first-child) {
+    margin-inline-start: -4px
+}
+
+.facepileItemContainer_aaa08b:not(:last-child) {
+    margin-inline-end: -4px
+}
+
+.textItem_aaa08b {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.guildIconList_aaa08b {
+    flex-direction: column
+}
+
+.guildIconItem_aaa08b,
+.guildIconList_aaa08b {
+    display: flex;
+    gap: 8px
+}
+
+.guildIconItemText_aaa08b {
+    padding-top: 2px
+}
+
+.card_c3d27e {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--space-12);
+    padding: var(--space-16)
+}
+
+.cardInfo_c3d27e {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 0
+}
+
+.statusRow_c3d27e {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.statusLabel_c3d27e {
+    flex-shrink: 0
+}
+
+.guildSummary_c3d27e {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.clickable_c3d27e {
+    cursor: pointer
+}
+
+.trailingIcons_c3d27e {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--space-4)
+}
+
+.chevronButton__5ae61 {
+    cursor: pointer;
+    padding: 0;
+    width: 100%
+}
+
+.chevronButton__5ae61,
+.chevronButtonContent__5ae61 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.chevronButtonContent__5ae61 {
+    flex: 1;
+    height: 20px
+}
+
+.customizeLink__5ae61 {
+    cursor: pointer
+}

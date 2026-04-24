@@ -1,0 +1,48 @@
+.forwardPreview_f4b524 {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    justify-content: space-between;
+    margin-inline-end: 16px;
+    padding-inline-start: 16px;
+    position: relative;
+    width: calc(100% - 16px)
+}
+
+.forwardPreview_f4b524:before {
+    background-color: var(--border-subtle);
+    border-radius: 2px;
+    content: "";
+    flex-shrink: 0;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 4px
+}
+
+.linkContainer_f4b524 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0
+}
+
+.linkIcon_f4b524 {
+    color: var(--text-muted)
+}
+
+.applicationInfo_f4b524 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.cardImage_f4b524 {
+    max-height: 68px;
+    max-width: 68px;
+    min-height: 68px;
+    min-width: 68px
+}

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     G3: "bodyText__945b8",
     hA: "planSelectText__945b8",

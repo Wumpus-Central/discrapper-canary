@@ -1,0 +1,59 @@
+.inputWrapper_ba2c2e {
+    display: block;
+    width: 100%
+}
+
+.inputWrapper_ba2c2e input[data-mana-component=text-input] {
+    background-color: var(--input-background-default);
+    height: 48px
+}
+
+.inputWrapper_ba2c2e [data-error]>:last-child {
+    background: transparent
+}
+
+.confirmCountryContainer_ba2c2e {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    width: 100%
+}
+
+.confirmCountryContainer_ba2c2e input[data-mana-component=text-input] {
+    background-color: var(--input-background-default)
+}
+
+.headerFlag_ba2c2e {
+    height: 18px
+}
+
+.giftCardStatusIcons_ba2c2e {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    padding: 0
+}
+
+.giftCardStatusIcons_ba2c2e svg {
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px
+}
+
+.statusFlag_ba2c2e {
+    height: 20px
+}
+
+.giftCodeInputWrapper_ba2c2e {
+    display: block;
+    max-width: 432px
+}
+
+.giftCodeInputWrapper_ba2c2e input[data-mana-component=text-input] {
+    background-color: var(--input-background-default);
+    height: 48px
+}
+
+.giftCodeInputWrapper_ba2c2e [data-error]>:last-child {
+    background: transparent
+}

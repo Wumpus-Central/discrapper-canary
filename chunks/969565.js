@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     qS: "badge__86331",
     f7: "badgeVerifiedIcon__86331",

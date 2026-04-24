@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_e21ed7",
     Ke: "dropping_e21ed7",

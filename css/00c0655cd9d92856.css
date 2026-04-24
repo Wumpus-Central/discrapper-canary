@@ -1,0 +1,88 @@
+.container_cd2100 {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border: 1px solid var(--background-base-lowest);
+    border-radius: 4px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    position: relative;
+    width: 40px
+}
+
+.container_cd2100 .removeButton_cd2100 {
+    height: 16px;
+    width: 16px
+}
+
+.removeButton_cd2100 {
+    background-size: 12px;
+    inset-inline-end: -4px;
+    position: absolute;
+    top: -4px
+}
+
+.container_d03e0c {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.nameContainer_d03e0c,
+.nameHeader_d03e0c {
+    margin-bottom: 12px
+}
+
+.nameContainer_d03e0c {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    display: flex;
+    margin-top: 8px;
+    padding: 0 4px
+}
+
+.divider_d03e0c {
+    margin: 16px 0
+}
+
+.rolesHeader_d03e0c {
+    margin-bottom: 12px
+}
+
+.emojiQuestionContainer_d03e0c {
+    display: flex;
+    justify-content: space-between
+}
+
+.emojiContainer_d03e0c {
+    align-items: center;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex
+}
+
+.rolesInputHelp_d03e0c {
+    margin-bottom: 16px
+}
+
+.notice_d03e0c {
+    background-color: hsl(var(--yellow-300-hsl)/.1);
+    border: 1px solid var(--status-warning-background);
+    border-radius: var(--radius-xs);
+    margin: 8px 0;
+    padding: 8px
+}
+
+.noticeMessage_d03e0c {
+    align-items: center;
+    display: flex
+}
+
+.noticeIcon_d03e0c {
+    color: var(--status-warning-background);
+    flex-shrink: 0;
+    height: 16px;
+    margin-inline-end: 8px;
+    width: 16px
+}

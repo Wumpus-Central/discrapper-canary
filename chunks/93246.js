@@ -1,65 +1,64 @@
-"use strict";
-n.d(t, { Y: () => b, T: () => x });
+n.d(t, { Y: () => E, T: () => _ });
 var i = n(627968),
-    r = n(64700),
-    l = n(834730),
+    l = n(64700),
+    s = n(834730),
     a = n(359778),
-    s = n(534514),
+    r = n(534514),
     o = n(695366),
     c = n(102876),
     d = n(975571),
     u = n(17928),
-    _ = n(429913),
-    p = n(800828),
-    f = n(652215),
-    m = n(985018),
-    g = n(463151);
-function h(e) {
+    h = n(429913),
+    m = n(800828),
+    p = n(652215),
+    g = n(985018),
+    A = n(463151);
+function f(e) {
     return (0, i.jsx)(c.A, { application: e }, e.id);
 }
-function x(e) {
-    let { userId: t, variant: n = "text-xs/normal", color: a = "text-default", ...s } = e,
+function _(e) {
+    let { userId: t, variant: n = "text-xs/normal", color: a = "text-default", ...r } = e,
         o = (function (e) {
             let t,
                 { userId: n, renderApplicationName: i } = e,
-                l =
-                    ((t = (0, u.bG)([p.A], () => {
-                        let e = p.A.getGameRelationshipsForUser(n);
+                s =
+                    ((t = (0, u.bG)([m.A], () => {
+                        let e = m.A.getGameRelationshipsForUser(n);
                         if (0 !== e.length) return e[0].applicationId;
                     })),
-                    (0, _.h)(t));
-            return r.useMemo(
+                    (0, h.h)(t));
+            return l.useMemo(
                 () =>
-                    null != l
-                        ? m.intl.format(m.t.rSUACb, {
-                              helpdeskArticle: d.A.getArticleURL(f.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
-                              applicationName: () => i(l),
+                    null != s
+                        ? g.intl.format(g.t.rSUACb, {
+                              helpdeskArticle: d.A.getArticleURL(p.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
+                              applicationName: () => i(s),
                           })
-                        : m.intl.format(m.t["q+N8L6"], {
-                              helpdeskArticle: d.A.getArticleURL(f.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
+                        : g.intl.format(g.t["q+N8L6"], {
+                              helpdeskArticle: d.A.getArticleURL(p.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
                           }),
-                [l, i],
+                [s, i],
             );
-        })({ userId: t, renderApplicationName: h });
-    return (0, i.jsx)(l.E, { variant: n, color: a, ...s, children: o });
+        })({ userId: t, renderApplicationName: f });
+    return (0, i.jsx)(s.E, { variant: n, color: a, ...r, children: o });
 }
-function b(e) {
+function E(e) {
     let { userId: t } = e;
     return (0, i.jsxs)(a.Z, {
-        className: g.ZO,
+        className: A.ZO,
         children: [
             (0, i.jsxs)("div", {
-                className: g.wx,
+                className: A.wx,
                 children: [
-                    (0, i.jsx)(s.D, {
+                    (0, i.jsx)(r.D, {
                         variant: "text-md/semibold",
                         color: "text-default",
-                        children: m.intl.string(m.t.Iyka0U),
+                        children: g.intl.string(g.t.Iyka0U),
                     }),
-                    (0, i.jsx)(o.E, { size: "xs", className: g.Kk }),
+                    (0, i.jsx)(o.E, { size: "xs", className: A.Kk }),
                 ],
             }),
-            (0, i.jsx)(x, { userId: t, variant: "text-md/normal" }),
+            (0, i.jsx)(_, { userId: t, variant: "text-md/normal" }),
         ],
     });
 }

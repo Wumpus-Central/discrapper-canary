@@ -1,0 +1,89 @@
+.akaBadge__5149c {
+    background-color: var(--background-base-lower);
+    color: var(--text-default);
+    display: inline-block;
+    vertical-align: middle
+}
+
+.header__5149c {
+    margin: 0 auto
+}
+
+.subHeader__5149c {
+    text-align: center
+}
+
+.miniAvatar__5149c {
+    margin-inline-start: 4px
+}
+
+.miniAvatar__5149c,
+.miniGuildIcon__5149c {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.miniGuildIcon__5149c {
+    margin-inline-start: 2px
+}
+
+.akaTransfer__5149c,
+.guildTransfer__5149c {
+    display: inline-block
+}
+
+.guildName__5149c,
+.nickname__5149c {
+    display: inline-block;
+    margin-inline-start: 4px
+}
+
+.spacing__5149c {
+    margin-bottom: 20px
+}
+
+.fromToWrapper__5149c {
+    background: no-repeat 50% 0;
+    margin-top: 24px;
+    padding-top: 24px
+}
+
+.from__5149c,
+.to__5149c {
+    border-radius: 50%
+}
+
+.from__5149c {
+    margin-inline-end: -27px;
+    opacity: .3
+}
+
+.to__5149c {
+    background-color: var(--background-base-lower);
+    position: relative;
+    z-index: 1
+}
+
+.theme-dark .to__5149c {
+    box-shadow: 0 0 0 4px var(--primary-600)
+}
+
+.theme-light .to__5149c {
+    box-shadow: 0 0 0 4px var(--white)
+}
+
+.protectedText__5149c {
+    margin-bottom: 20px
+}
+
+.roleSubscriptionText__5149c {
+    margin-bottom: 16px
+}
+
+.images-light .fromToWrapper__5149c {
+    background-image: url(/assets/9e6b1daa9504d89c.svg)
+}
+
+.images-dark .fromToWrapper__5149c {
+    background-image: url(/assets/8b0b7b6309375fb9.svg)
+}

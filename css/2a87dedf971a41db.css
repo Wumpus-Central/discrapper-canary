@@ -1,0 +1,28 @@
+.root__312e8 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-top: var(--space-8);
+    max-width: 360px;
+    padding: var(--space-12);
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.root__312e8[data-has-story=true] {
+    min-width: 160px;
+    width: auto
+}
+
+.root__312e8 div[role=button] {
+    margin-inline-start: 0
+}
+
+.header__312e8 {
+    align-items: center;
+    display: grid
+}

@@ -1,0 +1,40 @@
+.modal__24ff5 {
+    width: 450px
+}
+
+.modalSection__24ff5 {
+    display: flex;
+    flex-direction: column
+}
+
+.modalInner__24ff5 {
+    padding-bottom: 20px
+}
+
+.header__24ff5 img {
+    vertical-align: bottom
+}
+
+.divider__24ff5 {
+    margin-top: 20px
+}
+
+.divider__24ff5,
+.sectionBody__24ff5 {
+    margin-bottom: 20px
+}
+
+.phoneNumber__24ff5 {
+    font-weight: var(--font-weight-semibold);
+    padding-inline-end: 4px
+}
+
+.linkButton__24ff5 {
+    font-size: 16px;
+    padding-inline-start: 0
+}
+
+.sectionBody__24ff5,
+.subHeader__24ff5 {
+    color: var(--text-muted)
+}

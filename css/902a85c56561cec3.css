@@ -1,0 +1,31 @@
+.row_f0aa37 {
+    color: var(--interactive-text-default);
+    line-height: 18px;
+    margin: 16px 0
+}
+
+.switchGroup_f0aa37 {
+    margin-bottom: 4px
+}
+
+.error_f0aa37 {
+    color: var(--text-feedback-critical);
+    text-align: center
+}
+
+.roleSelector_f0aa37 {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--background-base-lowest)
+}
+
+.roleCircle_f0aa37 {
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    padding: 0;
+    width: 8px
+}
+
+.button_f0aa37 {
+    margin-inline-start: 8px
+}

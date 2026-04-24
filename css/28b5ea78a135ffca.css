@@ -1,0 +1,75 @@
+:where(.card__73069) {
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    --__card-background-color: transparent;
+    --__card-border-color: transparent;
+    --__card-color: var(--text-default);
+    background-color: var(--__card-background-color);
+    border-color: var(--__card-border-color);
+    border-radius: var(--radius-sm);
+    color: var(--__card-color)
+}
+
+:where(.card__73069) a:hover {
+    text-decoration: underline
+}
+
+.cardBrand__73069 a,
+.cardDanger__73069 a,
+.cardSuccess__73069 a,
+.cardWarning__73069 a {
+    font-weight: var(--font-weight-bold)
+}
+
+.cardDanger__73069 {
+    --__card-background-color: var(--background-feedback-critical);
+    --__card-color: var(--text-feedback-critical);
+    --__card-border-color: var(--border-feedback-critical)
+}
+
+.cardWarning__73069 {
+    --__card-background-color: var(--background-feedback-warning);
+    --__card-color: var(--text-feedback-warning);
+    --__card-border-color: var(--background-feedback-warning)
+}
+
+.cardSuccess__73069 {
+    --__card-background-color: var(--background-feedback-positive);
+    --__card-color: var(--text-feedback-positive);
+    --__card-border-color: var(--background-feedback-positive)
+}
+
+.cardBrand__73069 {
+    --__card-background-color: var(--background-brand);
+    --__card-color: var(--text-overlay-dark);
+    --__card-border-color: var(--background-brand)
+}
+
+.cardOutline__73069 {
+    --__card-background-color: transparent
+}
+
+.cardBrand__73069 a,
+.cardDanger__73069 a,
+.cardSuccess__73069 a,
+.cardWarning__73069 a {
+    color: var(--white)
+}
+
+.cardPrimary__73069 {
+    --__card-background-color: var(--card-background-default);
+    --__card-border-color: var(--border-subtle);
+    --__card-color: var(--text-default)
+}
+
+.card_d07961 {
+    line-height: 20px;
+    margin-bottom: 20px;
+    padding: 10px
+}
+
+.nickError_d07961,
+.reset_d07961 {
+    margin-top: 8px
+}

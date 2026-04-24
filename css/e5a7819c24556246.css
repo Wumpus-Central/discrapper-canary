@@ -1,0 +1,107 @@
+.perkCard_a1e8da {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-8);
+    width: 220px
+}
+
+.perkCard_a1e8da:hover:not(.disabled_a1e8da) {
+    background: var(--interactive-background-hover);
+    border-radius: calc(var(--radius-sm) + var(--space-8));
+    cursor: pointer
+}
+
+.perkCard_a1e8da.disabled_a1e8da:hover {
+    cursor: not-allowed
+}
+
+.activeCard_a1e8da:hover {
+    cursor: default
+}
+
+.perkCardImage_a1e8da {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    display: flex;
+    height: 140px;
+    justify-content: center;
+    margin-bottom: var(--space-8);
+    padding: var(--space-16);
+    width: 204px
+}
+
+.perkCardImage_a1e8da.active_a1e8da {
+    background: var(--background-mod-subtle);
+    border-color: hsla(var(--green-360-hsl)/.35)
+}
+
+.toggleButton_a1e8da {
+    pointer-events: none;
+    visibility: hidden
+}
+
+.perkCard_a1e8da:hover .toggleButton_a1e8da {
+    pointer-events: auto;
+    visibility: visible
+}
+
+.perkCard_a1e8da:hover:not(.disabled_a1e8da) .perkCardImage_a1e8da:not(.active_a1e8da) {
+    background: var(--interactive-background-hover);
+    border-color: var(--border-normal)
+}
+
+.perkCard_a1e8da.disabled_a1e8da .perkCardImage_a1e8da img {
+    opacity: .3
+}
+
+.theme-light .perkCardImage_a1e8da.active_a1e8da {
+    border-color: hsla(var(--green-400-hsl)/.35)
+}
+
+.footerContainer_a1e8da {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.footerDetails_a1e8da {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%
+}
+
+.statusContainer_a1e8da {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    justify-content: flex-start
+}
+
+.perkCardImageContainer_a1e8da {
+    position: relative
+}
+
+.badge_a1e8da {
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    top: var(--space-8)
+}
+
+.perkCardsContainer__7ee2f {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+    margin-inline: calc(var(--space-8)*-1)
+}
+
+.footerInfoContainer__7ee2f {
+    max-width: 220px
+}
