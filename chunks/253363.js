@@ -464,8 +464,8 @@ function e9(e) {
 var e2 = n(633965),
     e6 = n(857071),
     e3 = n(851109),
-    e5 = n(72314),
-    e8 = n(543897),
+    e8 = n(72314),
+    e5 = n(543897),
     e7 = n(696451),
     e4 = n(71393),
     te = n(711014),
@@ -1003,8 +1003,8 @@ var t0 = n(245604),
     t2 = n(772366),
     t6 = n(728321),
     t3 = n(260509),
-    t5 = n(284009),
-    t8 = n.n(t5),
+    t8 = n(284009),
+    t5 = n.n(t8),
     t7 = n(295868),
     t4 = n(686956),
     ne = n(954571),
@@ -1027,7 +1027,7 @@ function ni(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return (
-        t8()(t.type !== ti.PJ.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
+        t5()(t.type !== ti.PJ.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
         {
             accept: e,
             canDrop: (e) =>
@@ -1439,8 +1439,8 @@ function n6() {
           });
 }
 var n3 = n(312742),
-    n5 = n(317097),
-    n8 = n(319060),
+    n8 = n(317097),
+    n5 = n(319060),
     n7 = n(866323),
     n4 = n(817281),
     ie = n(534409),
@@ -1574,7 +1574,7 @@ function ih(e) {
 }
 var ip = n(114329),
     ig = n(620370);
-let im = (0, it.xI)(n8.A.FOLDER_ITEM_ANIMATION_DURATION),
+let im = (0, it.xI)(n5.A.FOLDER_ITEM_ANIMATION_DURATION),
     iA = (0, tS.animated)(E.B),
     iE = s.memo(function (e) {
         var t;
@@ -1685,7 +1685,7 @@ let im = (0, it.xI)(n8.A.FOLDER_ITEM_ANIMATION_DURATION),
                 ],
             }),
             Z = null != o.color ? o.color : ip.DO,
-            ee = Z === ip.DO ? void 0 : (0, n5.Hl)(Z);
+            ee = Z === ip.DO ? void 0 : (0, n8.Hl)(Z);
         return (0, l.jsxs)("div", {
             ref: X,
             className: a()(ia.qc, { [ia.Av]: _, [ia.Lg]: U }),
@@ -2276,7 +2276,7 @@ function i9(e, t) {
             n.e("21453"),
             n.e("54436"),
             n.e("98954"),
-            n.e("421"),
+            n.e("6698"),
             n.e("227"),
             n.e("90184"),
             n.e("62718"),
@@ -2317,7 +2317,7 @@ function i9(e, t) {
             n.e("13337"),
             n.e("65338"),
             n.e("49036"),
-            n.e("77473"),
+            n.e("36467"),
         ]).then(n.bind(n, 860417));
         return (n) => (0, l.jsx)(e, { ...n, guild: t });
     });
@@ -2577,8 +2577,8 @@ let i3 = s.memo(function (e) {
         guildJoinRequestStatus: a,
     });
 });
-var i5 = n(922016),
-    i8 = n(534514),
+var i8 = n(922016),
+    i5 = n(534514),
     i7 = n(821609),
     i4 = n(339350),
     le = n(475743),
@@ -2633,7 +2633,7 @@ function lo(e) {
         (0, l.jsxs)("div", {
             className: la.kL,
             children: [
-                (0, l.jsx)(i5.Y, {
+                (0, l.jsx)(i8.Y, {
                     ref: d,
                     targetElementRef: i,
                     shouldShow: r,
@@ -2647,7 +2647,7 @@ function lo(e) {
                                         (0, l.jsxs)("div", {
                                             className: la.q3,
                                             children: [
-                                                (0, l.jsx)(i8.D, {
+                                                (0, l.jsx)(i5.D, {
                                                     variant: "heading-md/medium",
                                                     children: eW.intl.string(eW.t["0YV0YE"]),
                                                 }),
@@ -2904,7 +2904,7 @@ function lA(e) {
             return [e, e.version];
         }),
         o = a.getRoots(),
-        d = (0, h.yK)([e8.A], () => e8.A.getGeoRestrictedGuilds()).map((e) =>
+        d = (0, h.yK)([e5.A], () => e5.A.getGeoRestrictedGuilds()).map((e) =>
             (0, l.jsx)(ng, { id: e.id, name: e.name, icon: e.icon }, e.id),
         );
     return (0, l.jsxs)(l.Fragment, {
@@ -2990,7 +2990,7 @@ function lf(e) {
     (0, N.u5)(() => {
         if (!T.current && 0 !== d.size) {
             if (!z) {
-                let { scrollTop: e } = e5.A.getGuildListDimensions();
+                let { scrollTop: e } = e8.A.getGuildListDimensions();
                 K.scrollTo({ to: e, animate: !1 });
             }
             return (T.current = !0), () => j.stop();

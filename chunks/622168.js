@@ -1636,7 +1636,7 @@ class il extends l.PureComponent {
                     n.e("31538"),
                     n.e("21453"),
                     n.e("54436"),
-                    n.e("421"),
+                    n.e("6698"),
                     n.e("227"),
                     n.e("90184"),
                     n.e("62718"),
@@ -1673,7 +1673,7 @@ class il extends l.PureComponent {
                     n.e("13337"),
                     n.e("65338"),
                     n.e("49036"),
-                    n.e("22028"),
+                    n.e("73125"),
                 ]).then(n.bind(n, 860417));
                 return (n) => (0, r.jsx)(e, { ...n, guild: t });
             });

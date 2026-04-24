@@ -1,7 +1,7 @@
 n.d(t, { Y0: () => h, iB: () => d });
 var l = n(64700),
     a = n(702841),
-    i = n(94420),
+    i = n(666646),
     r = n(202613),
     s = n(459357),
     o = n(176095),
@@ -70,11 +70,11 @@ function h(e) {
                 null != C ? C : m({ giftCardWallet: null, dropdownPaymentSources: h, subscriptionPaymentSourceId: o }),
             [h, o, C],
         ),
-        f = l.useMemo(() => (E ? y : (n ?? null)), [y, E, n]),
-        P = l.useRef(!1);
+        P = l.useMemo(() => (E ? y : (n ?? null)), [y, E, n]),
+        f = l.useRef(!1);
     l.useEffect(() => {
-        if (!r || 0 === t.length || P.current) return;
-        P.current = !0;
+        if (!r || 0 === t.length || f.current) return;
+        f.current = !0;
         let e = m({
             giftCardWallet: A,
             dropdownPaymentSources: h,
@@ -87,7 +87,7 @@ function h(e) {
             r &&
                 0 !== t.length &&
                 null != n &&
-                P.current &&
+                f.current &&
                 (t.some((e) =>
                     ((e) => {
                         let { paymentSource: t, paymentSourceId: n, giftCardsEnabled: l } = e;
@@ -134,7 +134,7 @@ function h(e) {
     return {
         giftCardsEnabled: d,
         dropdownPaymentSources: h,
-        dropdownPaymentSourceId: f,
+        dropdownPaymentSourceId: P,
         giftCardWallet: A,
         isGiftCardCreditsChecked: E,
         handleGiftCardCreditsToggle: T,

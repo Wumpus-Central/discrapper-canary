@@ -467,7 +467,7 @@ var eX = n(851109),
     e1 = n(222823),
     e2 = n(371911),
     e5 = n(790782);
-function e3(e) {
+function e6(e) {
     let { onOpen: t, onClose: n, "data-jump-section": a } = e,
         l = (0, s.bG)([J.default], () => J.default.getCurrentUser()),
         o = r.useRef(null),
@@ -497,10 +497,10 @@ function e3(e) {
             }),
     });
 }
-var e6 = n(966597),
+var e3 = n(966597),
     e4 = n(97469),
-    e7 = n(253932),
-    e8 = n(430363);
+    e8 = n(253932),
+    e7 = n(430363);
 function e9() {
     return null;
 }
@@ -547,7 +547,7 @@ let ts = (0, ta.Fe)({
                 n.e("21453"),
                 n.e("54436"),
                 n.e("98954"),
-                n.e("421"),
+                n.e("6698"),
                 n.e("227"),
                 n.e("90184"),
                 n.e("62718"),
@@ -609,7 +609,7 @@ let ts = (0, ta.Fe)({
                 n.e("21453"),
                 n.e("54436"),
                 n.e("98954"),
-                n.e("421"),
+                n.e("6698"),
                 n.e("227"),
                 n.e("90184"),
                 n.e("62718"),
@@ -646,7 +646,7 @@ let ts = (0, ta.Fe)({
                 n.e("44935"),
                 n.e("62175"),
                 n.e("41706"),
-                n.e("92630"),
+                n.e("29059"),
                 n.e("72822"),
                 n.e("52803"),
                 n.e("53275"),
@@ -681,11 +681,11 @@ let ts = (0, ta.Fe)({
                 n.e("83438"),
                 n.e("4787"),
                 n.e("81161"),
-                n.e("12942"),
+                n.e("44395"),
                 n.e("81250"),
                 n.e("24805"),
                 n.e("21595"),
-                n.e("76706"),
+                n.e("88729"),
                 n.e("8878"),
             ]).then(n.bind(n, 540177)),
         webpackId: 540177,
@@ -700,18 +700,18 @@ let ts = (0, ta.Fe)({
         let { notificationCenterVariant: e, entrypoint: t } = (0, eX.X8)({ location: "AppTitleBar" }),
             { hasBugReporterAccess: n } = m.useConfig({ location: "HeaderBar" }),
             a = (0, s.bG)([te.A], () => te.A.isDeveloper),
-            c = (0, e8.Uk)("VoiceDareTitleBarButton"),
+            c = (0, e7.Uk)("VoiceDareTitleBarButton"),
             u = (0, s.bG)(
                 [tt.A, E.A],
                 () =>
-                    e7.Q_.getSetting() &&
+                    e8.Q_.getSetting() &&
                     null != tt.A.testModeApplicationId &&
                     null != E.A.getApplication(tt.A.testModeApplicationId) &&
                     (0, p.A)(E.A.getApplication(tt.A.testModeApplicationId)),
             ),
             _ = null !== e && t === eX.RK.TITLE_BAR_LEFT,
             A = null === e,
-            { enabled: I, inInbox: g } = e6.A.useConfig({ location: "AppTitleBar" });
+            { enabled: I, inInbox: g } = e3.A.useConfig({ location: "AppTitleBar" });
         r.useLayoutEffect(() => {
             ti.Ay.setMinimumSize(800, 500);
         }, []);
@@ -759,7 +759,7 @@ let ts = (0, ta.Fe)({
                                           !1,
                                           (0, i.jsx)(M, { canShowReminder: !0 }),
                                           I && !g && (0, i.jsx)(ts, {}),
-                                          A && (0, i.jsx)(e3, { ...("RECENTS" === N ? e : {}) }),
+                                          A && (0, i.jsx)(e6, { ...("RECENTS" === N ? e : {}) }),
                                           n
                                               ? (0, i.jsx)(eA, { focusSectionProps: "HELP" === N ? e : void 0 })
                                               : (0, i.jsx)(er, { focusSectionProps: "HELP" === N ? e : void 0 }),

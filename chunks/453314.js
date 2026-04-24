@@ -283,7 +283,7 @@ class Z extends l.PureComponent {
                         n.e("21453"),
                         n.e("54436"),
                         n.e("98954"),
-                        n.e("421"),
+                        n.e("6698"),
                         n.e("227"),
                         n.e("90184"),
                         n.e("62718"),
@@ -324,7 +324,7 @@ class Z extends l.PureComponent {
                         n.e("13337"),
                         n.e("65338"),
                         n.e("49036"),
-                        n.e("77473"),
+                        n.e("36467"),
                     ]).then(n.bind(n, 860417));
                     return (n) => (0, i.jsx)(e, { ...n, guild: t.record, onSelect: o.jD, hideSettings: !0 });
                 });

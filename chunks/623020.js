@@ -1,4 +1,4 @@
-n.d(t, { _: () => Y });
+n.d(t, { _: () => F });
 var l = n(627968),
     a = n(64700),
     i = n(284009),
@@ -8,160 +8,157 @@ var l = n(627968),
     u = n(546605),
     c = n(606267),
     d = n(742810),
-    p = n(558620),
-    m = n(427675),
-    h = n(94420),
-    A = n(810498),
-    C = n(367921),
-    _ = n(209030),
-    E = n(427858),
-    y = n(45938),
+    p = n(666646),
+    m = n(558620),
+    h = n(427675),
+    A = n(94420),
+    C = n(810498),
+    _ = n(367921),
+    E = n(209030),
+    y = n(427858),
+    P = n(45938),
     f = n(927578),
-    P = n(937008),
-    S = n(156312),
-    T = n(166532),
-    x = n(615310),
-    N = n(50956),
-    g = n(921925),
-    I = n(520796),
-    v = n(800471),
-    b = n(367160),
-    M = n(971875),
-    L = n(216641),
-    R = n(69494),
-    j = n(871084),
-    O = n(482132),
-    D = n(788868),
-    w = n(818348),
-    U = n(985018);
-let k = (e) => {
+    S = n(937008),
+    T = n(156312),
+    x = n(166532),
+    N = n(615310),
+    g = n(50956),
+    I = n(921925),
+    v = n(520796),
+    b = n(800471),
+    M = n(367160),
+    L = n(971875),
+    R = n(216641),
+    j = n(69494),
+    O = n(871084),
+    D = n(482132),
+    w = n(788868),
+    U = n(818348),
+    k = n(985018);
+let Y = (e) => {
     let {
             isUnifiedCheckoutUIEnabled: t,
             openInvoiceId: n,
             onPaymentSourceAdd: i,
-            invoiceError: s,
-            onInvoiceError: o,
-            onCurrencyChange: u,
-            handleClose: c,
-            planGroup: d,
-            hasLegalTermsFlash: m,
-            legalTermsNodeRef: A,
-            handlePaymentSourceAdd: C,
-            trialFooterMessageOverride: y,
-            reviewWarningMessage: f,
-            referralTrialOfferId: T,
-            verifiedTrialId: x,
-            originalTrialId: N,
+            onCurrencyChange: s,
+            handleClose: o,
+            planGroup: u,
+            hasLegalTermsFlash: c,
+            legalTermsNodeRef: d,
+            handlePaymentSourceAdd: p,
+            trialFooterMessageOverride: h,
+            reviewWarningMessage: C,
+            referralTrialOfferId: _,
+            verifiedTrialId: P,
+            originalTrialId: f,
         } = e,
-        g = (0, p.A)(),
-        { selectedPlanId: I, selectedSkuId: v } = (0, h.t4)((e) => ({
+        x = (0, m.A)(),
+        { selectedPlanId: N, selectedSkuId: g } = (0, A.t4)((e) => ({
             selectedPlanId: e.selectedPlanId,
             selectedSkuId: e.selectedSkuId,
         })),
-        { isGift: M } = (0, P.Pv)(),
+        { isGift: I } = (0, S.Pv)(),
         {
-            hasFetchedSubscriptionPlans: L,
-            unifiedCheckoutFlow: R,
-            activeSubscription: j,
-            currencies: O,
-            paymentSources: D,
-            priceOptions: w,
-            purchaseState: U,
-            setHasAcceptedTerms: k,
-            discountOffer: Y,
-            isEligibleForDiscount: F,
-            isEligibleForTrial: G,
-        } = (0, S.P5)();
-    r()(null != g, "Expected plan to be selected: flow=%s, planId=%s, hasFetchedPlans=%s, skuId=%s", R, I, L, v);
-    let B = a.useMemo(() => {
-            let e = Y?.discount?.plan_ids;
-            return F && null != Y && null != e && null != g && e.includes(g.id);
-        }, [F, Y, g]),
-        W = a.useMemo(() => G || (null != N && null != y), [G, N, y]),
-        H = {
-            paymentSources: D,
-            priceOptions: w,
-            planGroup: d,
-            currencies: O,
-            onCurrencyChange: u,
-            setHasAcceptedTerms: k,
-            legalTermsNodeRef: A,
-            hasLegalTermsFlash: m,
-            handleClose: c,
+            hasFetchedSubscriptionPlans: v,
+            unifiedCheckoutFlow: b,
+            activeSubscription: L,
+            currencies: R,
+            paymentSources: j,
+            priceOptions: O,
+            purchaseState: D,
+            setHasAcceptedTerms: w,
+            discountOffer: U,
+            isEligibleForDiscount: k,
+            isEligibleForTrial: Y,
+        } = (0, T.P5)();
+    r()(null != x, "Expected plan to be selected: flow=%s, planId=%s, hasFetchedPlans=%s, skuId=%s", b, N, v, g);
+    let F = a.useMemo(() => {
+            let e = U?.discount?.plan_ids;
+            return k && null != U && null != e && null != x && e.includes(x.id);
+        }, [k, U, x]),
+        G = a.useMemo(() => Y || (null != f && null != h), [Y, f, h]),
+        B = {
+            paymentSources: j,
+            priceOptions: O,
+            planGroup: u,
+            currencies: R,
+            onCurrencyChange: s,
+            setHasAcceptedTerms: w,
+            legalTermsNodeRef: d,
+            hasLegalTermsFlash: c,
+            handleClose: o,
         },
-        V = g.id;
-    if (null == j || M) {
+        W = x.id;
+    if (null == L || I) {
         let e = {
-            ...H,
-            selectedPlanId: V,
-            handlePaymentSourceAdd: C,
-            trialId: x,
-            trialFooterMessageOverride: y,
-            reviewWarningMessage: f,
-            referralTrialOfferId: T,
-            isTrial: W,
-            isDiscount: B,
+            ...B,
+            selectedPlanId: W,
+            handlePaymentSourceAdd: p,
+            trialId: P,
+            trialFooterMessageOverride: h,
+            reviewWarningMessage: C,
+            referralTrialOfferId: _,
+            isTrial: G,
+            isDiscount: F,
         };
-        return t ? (0, l.jsx)(b._, { ...e }) : (0, l.jsx)(_.A, { ...e });
+        return t ? (0, l.jsx)(M._, { ...e }) : (0, l.jsx)(E.A, { ...e });
     }
     {
         let e = {
-            ...H,
-            purchaseState: U,
-            premiumSubscription: j,
+            ...B,
+            purchaseState: D,
+            premiumSubscription: L,
             onPaymentSourceAdd: i,
-            planId: V,
-            onInvoiceError: o,
-            invoiceError: s,
+            planId: W,
             hasOpenInvoice: null != n,
         };
-        return (0, l.jsx)(E.A, { ...e, shouldUseUnifiedCheckoutUI: t });
+        return (0, l.jsx)(y.A, { ...e, shouldUseUnifiedCheckoutUI: t });
     }
 };
-function Y(e) {
+function F(e) {
     let t,
         {
             handleStepChange: n,
             trialId: i,
-            trialFooterMessageOverride: _,
-            reviewWarningMessage: E,
-            planGroup: b,
-            openInvoiceId: Y,
-            analyticsData: F,
-            analyticsLocation: G,
-            referralTrialOfferId: B,
-            initialPlanId: W,
-            subscriptionTier: H,
-            handleClose: V,
+            trialFooterMessageOverride: E,
+            reviewWarningMessage: y,
+            planGroup: M,
+            openInvoiceId: F,
+            analyticsData: G,
+            analyticsLocation: B,
+            referralTrialOfferId: W,
+            initialPlanId: H,
+            subscriptionTier: V,
+            handleClose: K,
         } = e,
-        K = (0, d.D7)({ location: "payment_modal_review_step" }),
-        { selectedSkuId: Z, setEntitlementsGranted: q } = (0, h.t4)((e) => ({
+        Z = (0, d.D7)({ location: "payment_modal_review_step" }),
+        { selectedSkuId: q, setEntitlementsGranted: z } = (0, A.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setEntitlementsGranted: e.setEntitlementsGranted,
         })),
         {
-            activeSubscription: z,
-            setUpdatedSubscription: $,
-            contextMetadata: X,
-            purchaseError: J,
-            setCurrency: Q,
-            setPurchaseState: ee,
-            isPremium: et,
-            purchaseType: en,
-            setAppliedUserDiscounts: el,
-            startedPaymentFlowWithPaymentSourcesRef: ea,
-            disablePurchasesForStorybook: ei,
-            isPremiumGroupPurchase: er,
-            isEligibleForTrial: es,
-            userTrialOffer: eo,
-        } = (0, S.P5)(),
-        eu = (0, p.A)(),
-        ec = (0, x.bB)(),
-        { isGift: ed, giftMessage: ep, giftRecipient: em, claimableRewards: eh } = (0, P.Pv)();
-    r()(null != ec, "Step should be set");
-    let eA = a.useRef(null),
-        [eC, e_] = (0, o.A)(!1, 500),
-        { planGroup: eE, disablePurchase: ey } = (function () {
+            activeSubscription: $,
+            setUpdatedSubscription: X,
+            contextMetadata: J,
+            purchaseError: Q,
+            setCurrency: ee,
+            setPurchaseState: et,
+            isPremium: en,
+            purchaseType: el,
+            setAppliedUserDiscounts: ea,
+            startedPaymentFlowWithPaymentSourcesRef: ei,
+            disablePurchasesForStorybook: er,
+            isPremiumGroupPurchase: es,
+            isEligibleForTrial: eo,
+            userTrialOffer: eu,
+        } = (0, T.P5)(),
+        ec = (0, m.A)(),
+        ed = (0, N.bB)(),
+        { isGift: ep, giftMessage: em, giftRecipient: eh, claimableRewards: eA } = (0, S.Pv)();
+    r()(null != ed, "Step should be set");
+    let eC = a.useRef(null),
+        [e_, eE] = (0, o.A)(!1, 500),
+        { planGroup: ey, disablePurchase: eP } = (function () {
             let {
                     activeSubscription: e,
                     hasPaymentSources: t,
@@ -173,12 +170,12 @@ function Y(e) {
                     isEligibleForTrial: o,
                     checkoutPaymentSources: d,
                     hasCheckoutContextLoaded: A,
-                } = (0, S.P5)(),
-                _ = (0, h.sw)(),
-                E = (0, p.A)(),
-                y = (0, m.Hf)(),
-                { isGift: T } = (0, P.Pv)(),
-                x = (0, L.W)(l, n),
+                } = (0, T.P5)(),
+                C = (0, p.sw)(),
+                E = (0, m.A)(),
+                y = (0, h.Hf)(),
+                { isGift: P } = (0, S.Pv)(),
+                x = (0, R.W)(l, n),
                 N = a.useMemo(() => {
                     if (null == n) return !1;
                     if (!A) return !0;
@@ -188,152 +185,150 @@ function Y(e) {
                 g = (0, c.iB)({ checkoutPaymentSources: d, paymentSourceId: n, location: "PaymentModalReviewStep" }),
                 I = a.useMemo(() => {
                     if (null != E) {
-                        if ((0, f.xq)(E.id)) return D.LE;
-                        if ((0, f.z4)(E.id)) return D.DA;
+                        if ((0, f.xq)(E.id)) return w.LE;
+                        if ((0, f.z4)(E.id)) return w.DA;
                     }
                     return [];
                 }, [E]),
                 v = a.useMemo(
                     () =>
                         !!g ||
-                        (s === w.VV.ONE_TIME
+                        (s === U.VV.ONE_TIME
                             ? null == n || N || null == y || null != r
-                            : null == _ || (!T && null != x && s === w.VV.SUBSCRIPTION && o && !x.canRedeemTrial())),
-                    [g, s, y, n, r, _, T, x, o, N],
+                            : null == C || (!P && null != x && s === U.VV.SUBSCRIPTION && o && !x.canRedeemTrial())),
+                    [g, s, y, n, r, C, P, x, o, N],
                 ),
                 b = (0, f.J$)(i.paymentSourceId),
                 M = (0, u.vg)("PaymentModalReviewStep"),
-                R = null != n ? d.find((e) => e.id === n) : null,
+                L = null != n ? d.find((e) => e.id === n) : null,
                 j =
-                    s === w.VV.SUBSCRIPTION && null == E
-                        ? U.intl.string(U.t.YScQSF)
-                        : (0, C.Ro)({
+                    s === U.VV.SUBSCRIPTION && null == E
+                        ? k.intl.string(k.t.YScQSF)
+                        : (0, _.Ro)({
                               purchaseType: s,
                               plan: E,
                               premiumSubscription: e,
-                              isGift: T,
+                              isGift: P,
                               planGroup: I,
                               isPrepaidPaymentSource: b,
                               paymentSourceId: n,
                               hasPaymentSources: t,
-                              willRelocateStoreCountry: M && R?.relocationCountry != null,
+                              willRelocateStoreCountry: M && L?.relocationCountry != null,
                           });
             return { paymentSource: x, planGroup: I, disablePurchase: v, buttonText: j };
         })(),
-        ef = b ?? eE,
-        { verifiedTrialId: eP, originalTrialId: eS } = ((e) => {
+        ef = M ?? ey,
+        { verifiedTrialId: eS, originalTrialId: eT } = ((e) => {
             let { trialId: t, referralTrialOfferId: n, isPremium: l, selectedSkuId: a } = e,
                 i = t ?? n ?? null;
-            return { verifiedTrialId: null != i && (!l || D.TP[i].skus.includes(a)) ? i : null, originalTrialId: t };
-        })({ trialId: i, referralTrialOfferId: B, isPremium: et, selectedSkuId: Z }),
-        eT = { user_trial_offer_id: eo?.id };
+            return { verifiedTrialId: null != i && (!l || w.TP[i].skus.includes(a)) ? i : null, originalTrialId: t };
+        })({ trialId: i, referralTrialOfferId: W, isPremium: en, selectedSkuId: q }),
+        ex = { user_trial_offer_id: eu?.id };
     a.useEffect(() => {
-        null != J && null != eA.current && eA.current.scrollIntoView({ behavior: "smooth" });
-    }, [J]);
-    let ex = a.useCallback(
+        null != Q && null != eC.current && eC.current.scrollIntoView({ behavior: "smooth" });
+    }, [Q]);
+    let eN = a.useCallback(
             (e, t, l) => {
-                $(e),
-                    null != t && q(t),
-                    null != l && el(l),
-                    n(T.pn.CONFIRM, { fulfillment: { subscription: e, entitlements: t } });
+                X(e),
+                    null != t && z(t),
+                    null != l && ea(l),
+                    n(x.pn.CONFIRM, { fulfillment: { subscription: e, entitlements: t } });
             },
-            [n, $, q, el],
+            [n, X, z, ea],
         ),
-        eN = a.useRef(null),
-        [eg, eI] = a.useState(null),
-        ev = ed && (0, y.Ik)(em),
-        eb = null == W && null == H && en === w.VV.SUBSCRIPTION,
-        eM = (0, v.vT)({ isTrial: es, isGift: ed, selectedSkuId: Z, startedPaymentFlowWithPaymentSources: ea.current }),
-        eL = ed && en === w.VV.ONE_TIME,
-        eR = eL || (eM ? eb && et : et),
-        ej = (0, A.px)(eu, ed, eh),
+        eg = a.useRef(null),
+        eI = (0, p.mx)(),
+        ev = ep && (0, P.Ik)(eh),
+        eb = null == H && null == V && el === U.VV.SUBSCRIPTION,
+        eM = (0, b.vT)({ isTrial: eo, isGift: ep, selectedSkuId: q, startedPaymentFlowWithPaymentSources: ei.current }),
+        eL = ep && el === U.VV.ONE_TIME,
+        eR = eL || (eM ? eb && en : en),
+        ej = (0, C.px)(ec, ep, eA),
         eO = a.useCallback(
             () =>
-                (Q(void 0), eM)
-                    ? void n(T.pn.SKU_SELECT)
-                    : er
-                      ? void n(T.pn.ADD_PAYMENT_STEPS)
+                (ee(void 0), eM)
+                    ? void n(x.pn.SKU_SELECT)
+                    : es
+                      ? void n(x.pn.ADD_PAYMENT_STEPS)
                       : ej
-                        ? void n(T.pn.SELECT_FREE_SKU)
+                        ? void n(x.pn.SELECT_FREE_SKU)
                         : eL
-                          ? n(T.pn.GIFT_CUSTOMIZATION)
-                          : n(T.pn.PLAN_SELECT),
-            [Q, n, eM, eL, ej, er],
+                          ? n(x.pn.GIFT_CUSTOMIZATION)
+                          : n(x.pn.PLAN_SELECT),
+            [ee, n, eM, eL, ej, es],
         ),
         eD = () => {
-            n(T.pn.ADD_PAYMENT_STEPS);
+            n(x.pn.ADD_PAYMENT_STEPS);
         },
-        ew = ey;
-    ei && (ew = !0);
+        ew = eP;
+    er && (ew = !0);
     let eU = a.useCallback(() => {
-        n(T.pn.ADD_PAYMENT_STEPS);
+        n(x.pn.ADD_PAYMENT_STEPS);
     }, [n]);
     t =
-        en === w.VV.ONE_TIME
-            ? (0, l.jsx)(M.Ay, { hasLegalTermsFlash: eC, legalTermsNodeRef: eN, handlePaymentSourceAdd: eU })
-            : (0, l.jsx)(k, {
-                  isUnifiedCheckoutUIEnabled: K,
-                  onCurrencyChange: (e) => Q(e),
+        el === U.VV.ONE_TIME
+            ? (0, l.jsx)(L.Ay, { hasLegalTermsFlash: e_, legalTermsNodeRef: eg, handlePaymentSourceAdd: eU })
+            : (0, l.jsx)(Y, {
+                  isUnifiedCheckoutUIEnabled: Z,
+                  onCurrencyChange: (e) => ee(e),
                   onPaymentSourceAdd: eD,
-                  onInvoiceError: eI,
-                  invoiceError: eg,
                   handlePaymentSourceAdd: eU,
-                  handleClose: V,
-                  openInvoiceId: Y,
-                  trialFooterMessageOverride: _,
-                  reviewWarningMessage: E,
-                  referralTrialOfferId: B,
+                  handleClose: K,
+                  openInvoiceId: F,
+                  trialFooterMessageOverride: E,
+                  reviewWarningMessage: y,
+                  referralTrialOfferId: W,
                   planGroup: ef,
-                  originalTrialId: eS,
-                  verifiedTrialId: eP,
-                  hasLegalTermsFlash: eC,
-                  legalTermsNodeRef: eN,
+                  originalTrialId: eT,
+                  verifiedTrialId: eS,
+                  hasLegalTermsFlash: e_,
+                  legalTermsNodeRef: eg,
               });
-    let ek = (0, l.jsx)(j.A, {
-            premiumSubscription: z ?? null,
-            setPurchaseState: ee,
-            invoiceError: eg,
+    let ek = (0, l.jsx)(O.A, {
+            invoiceError: eI,
+            premiumSubscription: $ ?? null,
+            setPurchaseState: et,
             onBack: eO,
-            onNext: ex,
-            legalTermsNodeRef: eN,
-            flashLegalTerms: () => e_(!0),
-            analyticsLocation: G,
-            baseAnalyticsData: F,
-            openInvoiceId: Y,
-            flowStartTime: X.startTime,
-            isTrial: es,
-            trialId: eP,
+            onNext: eN,
+            legalTermsNodeRef: eg,
+            flashLegalTerms: () => eE(!0),
+            analyticsLocation: B,
+            baseAnalyticsData: G,
+            openInvoiceId: F,
+            flowStartTime: J.startTime,
+            isTrial: eo,
+            trialId: eS,
             planGroup: ef,
             backButtonEligible: eR,
-            metadata: eT,
+            metadata: ex,
             disablePurchase: ew,
             onPaymentSourceAdd: eD,
         }),
         eY = a.useMemo(
             () =>
-                K
+                Z
                     ? null
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(N.Z, { giftMessage: ep }),
-                              !ev && (0, l.jsx)(R.A, { isEligibleForTrial: es }),
+                              (0, l.jsx)(g.Z, { giftMessage: em }),
+                              !ev && (0, l.jsx)(j.A, { isEligibleForTrial: eo }),
                           ],
                       }),
-            [ep, ev, es, K],
+            [em, ev, eo, Z],
         ),
         eF = a.useMemo(
             () =>
-                K
+                Z
                     ? null
                     : (0, l.jsxs)(s.B, {
                           direction: "vertical",
                           gap: 8,
                           padding: { bottom: 8 },
-                          children: [(0, l.jsx)(g.A, {}), (0, l.jsx)(I.A, {})],
+                          children: [(0, l.jsx)(I.A, {}), (0, l.jsx)(v.A, {})],
                       }),
-            [K],
+            [Z],
         );
     return (0, l.jsxs)(l.Fragment, {
-        children: [eY, (0, l.jsxs)(O.dZ, { children: [eF, t] }), (0, l.jsx)(O.UX, { children: ek })],
+        children: [eY, (0, l.jsxs)(D.dZ, { children: [eF, t] }), (0, l.jsx)(D.UX, { children: ek })],
     });
 }

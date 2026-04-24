@@ -456,11 +456,11 @@ let eh = (0, er.Fe)({
                 n.e("46454"),
                 n.e("31302"),
                 n.e("21738"),
-            ]).then(n.bind(n, 893152)),
-        webpackId: 893152,
+            ]).then(n.bind(n, 826323)),
+        webpackId: 826323,
         name: "ViewsWithMainInterface",
         memo: !0,
-        id: 893152,
+        id: 826323,
     }),
     ew = (0, er.Fe)({
         createPromise: () =>
@@ -596,7 +596,7 @@ let eh = (0, er.Fe)({
                 n.e("21453"),
                 n.e("54436"),
                 n.e("98954"),
-                n.e("421"),
+                n.e("6698"),
                 n.e("20735"),
                 n.e("227"),
                 n.e("90184"),
