@@ -7,12 +7,12 @@ var r = n(627968),
     s = n(834730),
     o = n(252452),
     c = n(139286),
-    u = n(200921),
-    d = n(507553),
+    d = n(200921),
+    u = n(507553),
     _ = n(89381),
     f = n(17928),
-    h = n(521489),
-    p = n(568602),
+    p = n(521489),
+    h = n(568602),
     m = n(775602),
     g = n(531685),
     b = n(625494),
@@ -202,16 +202,16 @@ var ea = n(284009),
     es = n(419354),
     eo = n(935399),
     ec = n(319354),
-    eu = n(717421),
-    ed = n(253932),
+    ed = n(717421),
+    eu = n(253932),
     e_ = n(429566);
 function ef(e) {
     let { category: t, onClick: n, active: i, dismissibleBadge: a } = e,
         { useTitle: l, useSubnavLabel: s, key: o } = t,
         c = l?.(),
-        u = s?.() ?? c;
+        d = s?.() ?? c;
     return (
-        el()(null != u, "[SettingsSubnavigationCategory] Category must have a title"),
+        el()(null != d, "[SettingsSubnavigationCategory] Category must have a title"),
         (0, r.jsx)(Q.tG, {
             id: o,
             children: (e) =>
@@ -222,25 +222,25 @@ function ef(e) {
                         className: y()(e_.AS, { [e_.vu]: i }),
                         ...e,
                         "aria-current": i ? "page" : void 0,
-                        children: [u, null != a && !i && (0, r.jsx)(ei, { badge: a })],
+                        children: [d, null != a && !i && (0, r.jsx)(ei, { badge: a })],
                     },
                     o,
                 ),
         })
     );
 }
-function eh(e) {
+function ep(e) {
     let t,
         n,
         a,
         l,
-        { active: s, isTopLevelPanelVisible: o, visibleCategories: c, visibleContent: u, dismissibleBadges: d } = e,
+        { active: s, isTopLevelPanelVisible: o, visibleCategories: c, visibleContent: d, dismissibleBadges: u } = e,
         _ = w.A.useField("currentCategoryKey"),
-        [f, h] = i.useState(s);
+        [f, p] = i.useState(s);
     i.useLayoutEffect(() => {
-        s && h(!0);
+        s && p(!0);
     }, [s]);
-    let p = i.useMemo(() => c.findIndex((e) => e.key === _), [c, _]);
+    let h = i.useMemo(() => c.findIndex((e) => e.key === _), [c, _]);
     i.useEffect(() => {
         if (!s) {
             let e = m.current;
@@ -249,7 +249,7 @@ function eh(e) {
                 window.getComputedStyle(e).height,
                 (e.style.height = "0"),
                 Promise.allSettled(e.getAnimations().map((e) => e.finished)).then(() => {
-                    h(!1);
+                    p(!1);
                 }));
         }
     }, [s]);
@@ -275,11 +275,11 @@ function eh(e) {
                 null != t && l.has(t) && s.push(e);
             });
             let c = new Map(),
-                u = [];
+                d = [];
             return (
                 s.forEach((e) => {
                     let t = e.getAttribute("data-settings-category-key");
-                    null != t && (c.set(e, t), u.push(t));
+                    null != t && (c.set(e, t), d.push(t));
                 }),
                 (t.current = new IntersectionObserver(
                     (t) => {
@@ -299,7 +299,7 @@ function eh(e) {
                             return;
                         let r = [];
                         if (
-                            (u.forEach((e) => {
+                            (d.forEach((e) => {
                                 n.current.has(e) && r.push(e);
                             }),
                             0 === r.length)
@@ -326,12 +326,12 @@ function eh(e) {
             ref: m,
             children:
                 f &&
-                (0, r.jsx)(ep, {
-                    index: p,
+                (0, r.jsx)(eh, {
+                    index: h,
                     activeKey: _,
                     categories: c,
-                    visibleContent: u,
-                    dismissibleBadges: d,
+                    visibleContent: d,
+                    dismissibleBadges: u,
                     onMount: function () {
                         let e = m.current;
                         null != e &&
@@ -347,34 +347,34 @@ function eh(e) {
         })
     );
 }
-function ep(e) {
+function eh(e) {
     let { index: t, activeKey: n, categories: a, visibleContent: l, dismissibleBadges: s, onMount: o } = e,
         {
             thumbRef: c,
-            trackRef: u,
-            thumbAnchorRef: d,
+            trackRef: d,
+            thumbAnchorRef: u,
             springs: _,
         } = (function (e) {
-            let t = ed.Xi.useSetting(),
+            let t = eu.Xi.useSetting(),
                 n = i.useRef(null),
                 r = i.useRef(null),
                 a = i.useRef(null),
                 l = i.useRef(!0),
                 s = i.useRef(t),
                 o = i.useRef(e),
-                [c, u] = (0, eu.z)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
+                [c, d] = (0, ed.z)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
             return (
                 i.useLayoutEffect(() => {
                     let i = s.current !== t,
-                        d = () => {
+                        u = () => {
                             if (null == n.current || null == r.current || null == a.current) return;
-                            let [d, _] = [n.current.getBoundingClientRect(), a.current.getBoundingClientRect()],
-                                f = d.width / 2,
-                                h = (_.y - d.y) / f,
-                                p = _.height / f;
+                            let [u, _] = [n.current.getBoundingClientRect(), a.current.getBoundingClientRect()],
+                                f = u.width / 2,
+                                p = (_.y - u.y) / f,
+                                h = _.height / f;
                             l.current || i || m.A.useReducedMotion || -1 === o.current
-                                ? (c.y.set(h), c.height.set(p))
-                                : u({ y: h, height: p }),
+                                ? (c.y.set(p), c.height.set(h))
+                                : d({ y: p, height: h }),
                                 (l.current = !1),
                                 (s.current = t),
                                 (o.current = e);
@@ -383,14 +383,14 @@ function ep(e) {
                     return (
                         i
                             ? (_ = requestAnimationFrame(() => {
-                                  (_ = null), d();
+                                  (_ = null), u();
                               }))
-                            : d(),
+                            : u(),
                         () => {
                             null != _ && cancelAnimationFrame(_);
                         }
                     );
-                }, [e, u, c.y, c.height, t]),
+                }, [e, d, c.y, c.height, t]),
                 { thumbRef: r, trackRef: n, thumbAnchorRef: a, springs: c }
             );
         })(t);
@@ -409,14 +409,14 @@ function ep(e) {
                 (0, r.jsx)("div", {
                     className: e_.u4,
                     "aria-hidden": "true",
-                    ref: u,
+                    ref: d,
                     children: (0, r.jsx)(es.animated.div, {
                         className: y()(e_.FF, { [e_.R]: null == n }),
                         style: _,
                         ref: c,
                     }),
                 }),
-                (0, r.jsx)("div", { className: e_.gu, "aria-hidden": "true", ref: d }),
+                (0, r.jsx)("div", { className: e_.gu, "aria-hidden": "true", ref: u }),
                 a.map((e) => {
                     let t = en(e.key, l, s);
                     return (0, r.jsx)(
@@ -440,66 +440,77 @@ function ep(e) {
 var em = n(585635);
 let eg = "refresh_sm";
 function eb(e) {
-    let { tag: t, onClick: n, active: a, node: l, dismissibleBadge: o, panelKey: c, listItemProps: u, children: d } = e,
+    let {
+            tag: t,
+            onClick: n,
+            active: a,
+            "aria-expanded": l,
+            node: o,
+            dismissibleBadge: c,
+            panelKey: d,
+            listItemProps: u,
+            children: _,
+        } = e,
         {
-            icon: _,
-            StronglyDiscouragedCustomComponent: f,
+            icon: f,
+            StronglyDiscouragedCustomComponent: p,
             usePersistentBadge: h,
-            useTitle: p,
-            variant: m = "default",
-        } = l,
-        g = p?.(),
-        b = (function (e) {
+            useTitle: m,
+            variant: g = "default",
+        } = o,
+        b = m?.(),
+        v = (function (e) {
             switch (e) {
                 case "default":
                     return "currentColor";
                 case "destructive":
                     return "text-feedback-critical";
             }
-        })(m),
-        v = (function (e) {
+        })(g),
+        E = (function (e) {
             switch (e) {
                 case "default":
                     return "currentColor";
                 case "destructive":
                     return er.A.colors.ICON_FEEDBACK_CRITICAL;
             }
-        })(m),
-        E = h?.(a),
-        x = i.useMemo(
+        })(g),
+        x = h?.(a),
+        S = i.useMemo(
             () =>
-                null != o
+                null != c
                     ? a
                         ? null
-                        : (0, r.jsx)(ei, { badge: o })
-                    : null != E
-                      ? (0, r.jsx)(M, { badge: E })
+                        : (0, r.jsx)(ei, { badge: c })
+                    : null != x
+                      ? (0, r.jsx)(M, { badge: x })
                       : void 0,
-            [a, o, E],
+            [a, c, x],
         );
     return (0, r.jsxs)(t, {
-        "data-settings-sidebar-item": c,
+        "data-settings-sidebar-item": d,
         className: em.DB,
         children: [
             (0, r.jsxs)(O.D, {
                 ...u,
-                className: y()(em.AS, { [em.vu]: a, [em.RD]: "destructive" === m }),
+                "aria-expanded": l,
+                className: y()(em.AS, { [em.vu]: a, [em.RD]: "destructive" === g }),
                 "aria-current": a ? "page" : void 0,
                 onClick: n,
                 children: [
-                    null != f
-                        ? (0, r.jsx)(f, {})
+                    null != p
+                        ? (0, r.jsx)(p, {})
                         : (0, r.jsxs)("div", {
                               className: em.Ly,
                               children: [
-                                  (0, r.jsx)(_, { color: v, size: eg, className: em.Kk }),
-                                  (0, r.jsx)(s.E, { variant: "text-md/medium", color: b, children: g }),
+                                  (0, r.jsx)(f, { color: E, size: eg, className: em.Kk }),
+                                  (0, r.jsx)(s.E, { variant: "text-md/medium", color: v, children: b }),
                               ],
                           }),
-                    x,
+                    S,
                 ],
             }),
-            d,
+            _,
         ],
     });
 }
@@ -508,8 +519,8 @@ function ev(e) {
         s = i.useMemo(() => t.layout[0], [t]),
         o = w.A.useField("currentPanelKey"),
         { accessibleDirectory: c } = (0, ee._)(),
-        u = s?.key === o,
-        d = i.useMemo(() => {
+        d = s?.key === o,
+        u = i.useMemo(() => {
             if (null == o) return !1;
             let e = c.entry(o);
             return e?.parentSidebarItemKey === t.key;
@@ -526,24 +537,33 @@ function ev(e) {
                       k.A.navigate(e, { animateSidebarScroll: !0, showNavigationMobile: !1 });
                   }
                 : t.onClick,
-        h = null != o,
-        p = i.useMemo(
+        p = null != o,
+        h = i.useMemo(
             () =>
-                null != _ && h
-                    ? (0, r.jsx)(eh, {
-                          active: d,
-                          isTopLevelPanelVisible: u,
+                null != _ && p
+                    ? (0, r.jsx)(ep, {
+                          active: u,
+                          isTopLevelPanelVisible: d,
                           visibleCategories: _,
                           visibleContent: n,
                           dismissibleBadges: a,
                       })
                     : null,
-            [_, h, d, u, n, a],
+            [_, p, u, d, n, a],
         ),
         m = l ? "li" : "div",
         g = i.useMemo(() => en(t.key, n, a), [t.key, n, a]);
     return l
-        ? (0, r.jsx)(eb, { tag: m, panelKey: s?.key, onClick: f, active: d, node: t, dismissibleBadge: g, children: p })
+        ? (0, r.jsx)(eb, {
+              tag: m,
+              panelKey: s?.key,
+              onClick: f,
+              active: u,
+              "aria-expanded": null != _ ? u : void 0,
+              node: t,
+              dismissibleBadge: g,
+              children: h,
+          })
         : (0, r.jsx)(Q.tG, {
               id: t.key,
               children: (e) =>
@@ -551,11 +571,12 @@ function ev(e) {
                       tag: m,
                       panelKey: s?.key,
                       onClick: f,
-                      active: d,
+                      active: u,
+                      "aria-expanded": null != _ ? u : void 0,
                       node: t,
                       dismissibleBadge: g,
                       listItemProps: e,
-                      children: p,
+                      children: h,
                   }),
           });
 }
@@ -566,8 +587,8 @@ function eS(e) {
     let { root: t, onClose: n, footer: a, emptyState: l, searchBar: s } = e,
         o = w.A.useField("showNavigationMobile"),
         c = i.useRef(null),
-        [u] = i.useState(t),
-        { accessibleDirectory: d } = (0, ee._)(),
+        [d] = i.useState(t),
+        { accessibleDirectory: u } = (0, ee._)(),
         _ = i.useMemo(() => {
             let e, t, n, r;
             return (
@@ -577,15 +598,15 @@ function eS(e) {
                 (r = new Map()),
                 !(function e(t, n) {
                     if ((n(t), (0, R.nW)(t))) for (let r of t.layout) e(r, n);
-                })(u, (i) => {
+                })(d, (i) => {
                     if (!("getDismissibleBadges" in i)) return;
                     let a = i.getDismissibleBadges?.();
                     if (null == a) return;
-                    let l = d.entry(i.key);
+                    let l = u.entry(i.key);
                     if (l?.parentSidebarItemKey == null) return;
                     let s = null;
                     if (null != l.parentCategoryKey) {
-                        let e = d.get(l.parentCategoryKey);
+                        let e = u.get(l.parentCategoryKey);
                         e?.type === R.Z6.CATEGORY && (0, R.bJ)(e) && (s = l.parentCategoryKey);
                     }
                     let o = { sidebarItemKey: l.parentSidebarItemKey, categoryKey: s };
@@ -608,7 +629,7 @@ function eS(e) {
                     dismissibleContentToBadge: r,
                 }
             );
-        }, [u, d]),
+        }, [d, u]),
         [f] = (0, J.kn)(_.allDismissibleContents);
     !(function (e) {
         let { visibleContent: t, dismissibleBadges: n, accessibleDirectory: r } = e,
@@ -641,8 +662,8 @@ function eS(e) {
                 i(), s.current && n();
             };
         }, [t, a, r, l]);
-    })({ visibleContent: f, dismissibleBadges: _, accessibleDirectory: d });
-    let [h, p] = i.useMemo(() => {
+    })({ visibleContent: f, dismissibleBadges: _, accessibleDirectory: u });
+    let [p, h] = i.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -675,7 +696,7 @@ function eS(e) {
                                     }),
                                 }),
                             (0, r.jsx)("div", {
-                                children: h.map((e) =>
+                                children: p.map((e) =>
                                     (0, r.jsx)(
                                         eA,
                                         { section: e, visibleContent: f, dismissibleBadges: _, hoisted: !0 },
@@ -684,7 +705,7 @@ function eS(e) {
                                 ),
                             }),
                             null != s && (0, r.jsx)(s, {}),
-                            null != l && 0 === p.length && (0, r.jsx)(l, {}),
+                            null != l && 0 === h.length && (0, r.jsx)(l, {}),
                         ],
                     }),
                     (0, r.jsx)(Q.hD, {
@@ -704,7 +725,7 @@ function eS(e) {
                                     children: [
                                         (0, r.jsx)("nav", {
                                             className: ex.C$,
-                                            children: p.map((e) =>
+                                            children: h.map((e) =>
                                                 (0, r.jsx)(
                                                     eA,
                                                     { section: e, visibleContent: f, dismissibleBadges: _ },
@@ -757,13 +778,13 @@ function eT(e) {
             sidebarFooter: s,
             searchBar: o,
             onViewChange: c,
-            emptyState: u,
-            searchQuery: d,
+            emptyState: d,
+            searchQuery: u,
             clearSearchQuery: _,
         } = e,
         f = w.A.useField("currentPanelKey"),
-        { node: h, visibleDirectory: p, accessibleDirectory: m } = (0, eN.Ay)(t, d ?? ""),
-        g = null != n && p.entry(n)?.parentPanelKey != null ? n : a,
+        { node: p, visibleDirectory: h, accessibleDirectory: m } = (0, eN.Ay)(t, u ?? ""),
+        g = null != n && h.entry(n)?.parentPanelKey != null ? n : a,
         b = i.useMemo(() => {
             let e = m.entry(f ?? g)?.parentPanelKey;
             if (null != e) return m.getPanelOrThrow(e);
@@ -775,11 +796,11 @@ function eT(e) {
             accessibleDirectory: m,
             onViewChange: c,
             navigateWithValidation: (e, t) => {
-                null == p.entry(e) && _?.(), E(t);
+                null == h.entry(e) && _?.(), E(t);
             },
             closeWithValidation: y,
         });
-    }, [m, E, c, _, p, y]);
+    }, [m, E, c, _, h, y]);
     let [x, S] = i.useState(!0);
     (0, v.Ay)(
         () => (
@@ -790,14 +811,14 @@ function eT(e) {
             }
         ),
     );
-    let A = i.useMemo(() => ({ visibleDirectory: p, accessibleDirectory: m }), [p, m]),
-        C = null != f ? p.get(f) : void 0;
+    let A = i.useMemo(() => ({ visibleDirectory: h, accessibleDirectory: m }), [h, m]),
+        C = null != f ? h.get(f) : void 0;
     return (0, r.jsx)(ee.x.Provider, {
         value: A,
         children: (0, r.jsxs)("div", {
             className: eI.k,
             children: [
-                (0, r.jsx)(eS, { root: h, onClose: y, footer: s, emptyState: u, searchBar: o }),
+                (0, r.jsx)(eS, { root: p, onClose: y, footer: s, emptyState: d, searchBar: o }),
                 (0, r.jsx)(q, { onClose: y, setting: x ? void 0 : (C ?? b) }),
             ],
         }),
@@ -816,8 +837,8 @@ function ew(e) {
             sidebarFooter: s,
             emptyState: o,
             searchQuery: c,
-            clearSearchQuery: u,
-            searchBar: d,
+            clearSearchQuery: d,
+            searchBar: u,
             ..._
         } = e,
         [v, E] = i.useState(!1),
@@ -840,10 +861,10 @@ function ew(e) {
                 }
             );
         }, [A, C]),
-        (0, r.jsx)(p.b, {
+        (0, r.jsx)(h.b, {
             isShaking: v,
             intensity: y,
-            children: (0, r.jsx)(h.N, {
+            children: (0, r.jsx)(p.N, {
                 ..._,
                 children: (0, r.jsx)(ej, {
                     onClose: _.onClose,
@@ -854,8 +875,8 @@ function ew(e) {
                     emptyState: o,
                     sidebarFooter: s,
                     searchQuery: c,
-                    clearSearchQuery: u,
-                    searchBar: d,
+                    clearSearchQuery: d,
+                    searchBar: u,
                 }),
             }),
         })
@@ -885,13 +906,13 @@ var ek = n(495544),
 function eJ() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "534472",
-        i = "52593f200c6bff87d4e9f15cac52972b5aba7150".substring(0, 7),
+        n = "534715",
+        i = "ef2c1dfb02e2e1f46deaae287bf305de7d901d4e".substring(0, 7),
         a = ez.A?.app.getVersion(),
         l = ez.A?.app.getBuildNumber(),
         o = ez.A?.app.getAppArch(),
         c = eq.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = (function () {
+        d = (function () {
             let e = eW()?.os?.toString();
             if (null == e || null == ez.A) return null;
             let t = ez.A.os.release,
@@ -902,21 +923,21 @@ function eJ() {
                 `${e} (${t})`
             );
         })(),
-        d = [t, n, `(${i})`];
+        u = [t, n, `(${i})`];
     return (
-        null != a && (d.push(`Host ${a}`), null != o && d.push(o.toLowerCase()), null != l && d.push(`(${l})`)),
-        d.push(`Build Override: ${null != c ? c.id : "N/A"}`),
-        null != u && d.push(u),
+        null != a && (u.push(`Host ${a}`), null != o && u.push(o.toLowerCase()), null != l && u.push(`(${l})`)),
+        u.push(`Build Override: ${null != c ? c.id : "N/A"}`),
+        null != d && u.push(d),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(e$.A, {
-                    copyValue: d.join(" "),
+                    copyValue: u.join(" "),
                     text: G.intl.string(G.t["9Al4Qd"]),
                     "aria-label": !1,
                     dataMeticulousIgnore: "true",
-                    children: (u) =>
+                    children: (d) =>
                         (0, r.jsxs)(O.D, {
-                            ...u,
+                            ...d,
                             "aria-describedby": e,
                             className: y()(eY.vk, eY.oE),
                             children: [
@@ -1069,15 +1090,15 @@ function e8(e) {
         s = i.useCallback(() => {
             eO.A.setState({ query: "" }), _.A.terminate();
         }, []),
-        [f, h] = i.useState(!1);
+        [f, p] = i.useState(!1);
     return (i.useLayoutEffect(() => {
         let e = () => {
-            null == eD.default.getCurrentUser() && (h(!0), (0, e2.default)());
+            null == eD.default.getCurrentUser() && (p(!0), (0, e2.default)());
         };
         return (
             ek.default.addChangeListener(e),
             () => {
-                ek.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), o.A.close(), (0, u.ZQ)();
+                ek.default.removeChangeListener(e), e5.A.resetState(), u.A.resetState(), o.A.close(), (0, d.ZQ)();
             }
         );
     }, []),
