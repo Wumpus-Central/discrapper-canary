@@ -1,4 +1,5 @@
-t.exports = {
+"use strict";
+e.exports = {
     kL: "container__49668",
     Qs: "content__49668",
     hQ: "contentContainer__49668",

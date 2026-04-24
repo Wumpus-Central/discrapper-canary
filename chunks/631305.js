@@ -1,29 +1,28 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(627968);
-n(64700);
-var i = n(231723),
-    s = n(192308),
-    a = n(869146),
-    o = n(709055),
-    l = n(954571),
-    u = n(652215);
-function c(e, t) {
-    let c = t ?? `${u.JJy.PREMIUM_GUILD_UPSELL_MODAL}`;
-    null != e.targetBoostedGuildTier && (c += ` - Tier ${e.targetBoostedGuildTier}`),
-        l.default.track(u.HAw.OPEN_MODAL, { type: c, location: e.analyticsSourceLocation });
-    let { openInPopoutEnabled: d, ..._ } = e,
-        f = a.A.getWindowOpen(u.MLl.CHANNEL_CALL_POPOUT) && null != d && d;
-    f && (0, o.A)(u.MLl.CHANNEL_CALL_POPOUT);
-    let p = f ? i.KX : i.SY;
+i.d(t, { A: () => d });
+var n = i(627968);
+i(64700);
+var r = i(231723),
+    s = i(192308),
+    l = i(869146),
+    a = i(709055),
+    o = i(954571),
+    c = i(652215);
+function d(e, t) {
+    let d = t ?? `${c.JJy.PREMIUM_GUILD_UPSELL_MODAL}`;
+    null != e.targetBoostedGuildTier && (d += ` - Tier ${e.targetBoostedGuildTier}`),
+        o.default.track(c.HAw.OPEN_MODAL, { type: d, location: e.analyticsSourceLocation });
+    let { openInPopoutEnabled: _, ...u } = e,
+        h = l.A.getWindowOpen(c.MLl.CHANNEL_CALL_POPOUT) && null != _ && _;
+    h && (0, a.A)(c.MLl.CHANNEL_CALL_POPOUT);
+    let p = h ? r.KX : r.SY;
     (0, s.openModalLazy)(
         async () => {
-            let { default: e } = await n.e("45210").then(n.bind(n, 553998));
-            return (t) => (0, r.jsx)(e, { ..._, ...t });
+            let { default: e } = await Promise.all([i.e("55057"), i.e("34071")]).then(i.bind(i, 553998));
+            return (t) => (0, n.jsx)(e, { ...u, ...t });
         },
         {
             onCloseCallback: () => {
-                l.default.track(u.HAw.MODAL_DISMISSED, { type: c, location: e.analyticsSourceLocation });
+                o.default.track(c.HAw.MODAL_DISMISSED, { type: d, location: e.analyticsSourceLocation });
             },
             contextKey: p,
         },

@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { Sw: () => o, VG: () => a, s7: () => l });
-var r = n(575593),
-    i = n(623373),
-    s = n(985018);
-let a = (e) => {
+r.d(t, { Sw: () => i, VG: () => s, s7: () => o });
+var a = r(575593),
+    n = r(623373),
+    l = r(985018);
+let s = (e) => {
         if (null == e) return "";
-        let t = s.intl.string(s.t.z7y5vF);
+        let t = l.intl.string(l.t.z7y5vF);
         return "baseVariantName" in e && null != e.baseVariantName && e.variantLabel !== t
-            ? s.intl.formatToPlainString(s.t.BZN5k2, {
+            ? l.intl.formatToPlainString(l.t.BZN5k2, {
+                  baseVariantName: e.baseVariantName,
+                  variantLabel: e.variantLabel,
+              })
+            : e.name;
+    },
+    i = (e) => {
+        if (null == e) return "";
+        let t = l.intl.string(l.t.z7y5vF);
+        return null != e.baseVariantName && e.variantLabel !== t
+            ? l.intl.formatToPlainString(l.t.BZN5k2, {
                   baseVariantName: e.baseVariantName,
                   variantLabel: e.variantLabel,
               })
             : e.name;
     },
     o = (e) => {
-        if (null == e) return "";
-        let t = s.intl.string(s.t.z7y5vF);
-        return null != e.baseVariantName && e.variantLabel !== t
-            ? s.intl.formatToPlainString(s.t.BZN5k2, {
-                  baseVariantName: e.baseVariantName,
-                  variantLabel: e.variantLabel,
-              })
-            : e.name;
-    },
-    l = (e) => {
-        let t = a(e);
-        switch ((0, i.YW)(e)) {
-            case r.R.AVATAR_DECORATION:
-                return s.intl.formatToPlainString(s.t.lvBzLi, { product: t });
-            case r.R.PROFILE_EFFECT:
-                return s.intl.formatToPlainString(s.t.eR7moP, { product: t });
-            case r.R.NAMEPLATE:
-                return s.intl.formatToPlainString(s.t.YFOwHj, { product: t });
-            case r.R.PROFILE_FRAME:
-                return s.intl.formatToPlainString(s.t.vov8LX, { product: t });
+        let t = s(e);
+        switch ((0, n.YW)(e)) {
+            case a.R.AVATAR_DECORATION:
+                return l.intl.formatToPlainString(l.t.lvBzLi, { product: t });
+            case a.R.PROFILE_EFFECT:
+                return l.intl.formatToPlainString(l.t.eR7moP, { product: t });
+            case a.R.NAMEPLATE:
+                return l.intl.formatToPlainString(l.t.YFOwHj, { product: t });
+            case a.R.PROFILE_FRAME:
+                return l.intl.formatToPlainString(l.t.vov8LX, { product: t });
             default:
                 return t;
         }

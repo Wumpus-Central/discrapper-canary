@@ -1,7 +1,8 @@
-n.d(t, { Ar: () => d, Ay: () => u, fU: () => c });
+"use strict";
+n.d(t, { Ar: () => u, Ay: () => d, fU: () => c });
 var r = n(64700),
-    a = n(451988),
-    i = n(583846),
+    i = n(451988),
+    a = n(583846),
     l = n(927813);
 let s = (e) => {
         let t = Math.floor(e) % l.A.Seconds.MINUTE,
@@ -13,16 +14,16 @@ let s = (e) => {
         let { hours: t, minutes: n, seconds: r } = s(e);
         return 0 === t ? `${o(n)}:${o(r)}` : `${o(t)}:${o(n)}:${o(r)}`;
     },
-    d = (e) => {
+    u = (e) => {
         let { hours: t, minutes: n, seconds: r } = s(e);
-        return (0, i.XK)({ hours: t, minutes: n, seconds: r });
+        return (0, a.XK)({ hours: t, minutes: n, seconds: r });
     };
-function u(e) {
+function d(e) {
     let { start: t, end: n } = e,
-        [i] = (0, r.useState)(new a.IX()),
+        [a] = (0, r.useState)(new i.IX()),
         [s, o] = (0, r.useState)(() => Date.now());
-    (0, r.useEffect)(() => (i.start(l.A.Millis.HALF_SECOND, () => o(Date.now())), () => i.stop()), [i]);
+    (0, r.useEffect)(() => (a.start(l.A.Millis.HALF_SECOND, () => o(Date.now())), () => a.stop()), [a]);
     let c = (n - t) / l.A.Millis.SECOND,
-        d = Math.max(Math.min((s - t) / l.A.Millis.SECOND, c), 0);
-    return { elapsed: d, duration: c, percentage: Math.max(Math.min(d / c, 1), 0) };
+        u = Math.max(Math.min((s - t) / l.A.Millis.SECOND, c), 0);
+    return { elapsed: u, duration: c, percentage: Math.max(Math.min(u / c, 1), 0) };
 }

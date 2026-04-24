@@ -1,74 +1,73 @@
-"use strict";
-n.d(t, { uK: () => T, oO: () => S, kb: () => N });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(661531),
-    o = n(20742),
-    l = n(462887),
-    d = n(534514),
-    _ = n(834730),
-    u = n(430993),
-    c = n(359778),
-    E = n(695366),
-    h = n(736653),
-    m = n(975571),
-    f = n(86379),
-    g = n(652215),
-    p = n(985018),
-    A = n(351818);
-function I(e) {
+s.d(t, { uK: () => p, oO: () => x, kb: () => P });
+var n = s(627968);
+s(64700);
+var i = s(503698),
+    r = s.n(i),
+    l = s(661531),
+    a = s(20742),
+    o = s(462887),
+    d = s(534514),
+    c = s(834730),
+    u = s(430993),
+    A = s(359778),
+    h = s(695366),
+    f = s(736653),
+    _ = s(975571),
+    E = s(86379),
+    R = s(652215),
+    O = s(985018),
+    g = s(351818);
+function m(e) {
     let { className: t } = e,
-        n = (0, h.Ay)(),
-        r = (0, l.M)(n) ? "/assets/74570649d239edc8.svg" : "/assets/72378d7e29e72358.svg";
-    return (0, i.jsxs)("div", {
-        className: s()(A.kL, t),
+        s = (0, f.Ay)(),
+        i = (0, o.M)(s) ? "/assets/74570649d239edc8.svg" : "/assets/72378d7e29e72358.svg";
+    return (0, n.jsxs)("div", {
+        className: r()(g.kL, t),
         children: [
-            (0, i.jsx)(d.D, { className: A.wx, variant: "heading-xl/semibold", children: p.intl.string(p.t.vwMEHS) }),
-            (0, i.jsxs)(_.E, {
-                className: A.h_,
+            (0, n.jsx)(d.D, { className: g.wx, variant: "heading-xl/semibold", children: O.intl.string(O.t.vwMEHS) }),
+            (0, n.jsxs)(c.E, {
+                className: g.h_,
                 variant: "text-md/normal",
                 color: "text-default",
                 children: [
-                    (0, i.jsx)("p", { children: p.intl.string(p.t.fev8MQ) }),
-                    (0, i.jsx)("p", {
-                        children: p.intl.format(p.t.IHxEJU, {
-                            helpdeskArticle: m.A.getArticleURL(g.MVz.BLOCKED_PAYMENTS),
+                    (0, n.jsx)("p", { children: O.intl.string(O.t.fev8MQ) }),
+                    (0, n.jsx)("p", {
+                        children: O.intl.format(O.t.IHxEJU, {
+                            helpdeskArticle: _.A.getArticleURL(R.MVz.BLOCKED_PAYMENTS),
                         }),
                     }),
                 ],
             }),
-            (0, i.jsx)("img", { src: r, className: A.j0, alt: "Blocked Payments" }),
+            (0, n.jsx)("img", { src: i, className: g.j0, alt: "Blocked Payments" }),
         ],
     });
 }
-function T() {
-    return (0, i.jsx)(I, { className: A.W0 });
+function p() {
+    return (0, n.jsx)(m, { className: g.W0 });
 }
-function S() {
-    return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(o.rQ, {}), (0, i.jsx)(u.c, { children: (0, i.jsx)(I, { className: A.yl }) })],
+function x() {
+    return (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(a.rQ, {}), (0, n.jsx)(u.c, { children: (0, n.jsx)(m, { className: g.yl }) })],
     });
 }
-function N(e) {
+function P(e) {
     let { className: t } = e;
-    return (0, f.Hp)()
-        ? (0, i.jsxs)(c.Z, {
-              className: s()(A.ek, t),
-              type: c.Z.Types.CUSTOM,
+    return (0, E.Hp)()
+        ? (0, n.jsxs)(A.Z, {
+              className: r()(g.ek, t),
+              type: A.Z.Types.CUSTOM,
               children: [
-                  (0, i.jsx)(E.E, {
+                  (0, n.jsx)(h.E, {
                       size: "custom",
                       width: 20,
                       height: 20,
-                      className: A.XJ,
-                      color: a.A.unsafe_rawColors.YELLOW_300.css,
+                      className: g.XJ,
+                      color: l.A.unsafe_rawColors.YELLOW_300.css,
                   }),
-                  (0, i.jsx)(_.E, {
+                  (0, n.jsx)(c.E, {
                       variant: "text-sm/normal",
-                      children: p.intl.format(p.t.NYkcCh, {
-                          helpdeskArticle: m.A.getArticleURL(g.MVz.BLOCKED_PAYMENTS),
+                      children: O.intl.format(O.t.NYkcCh, {
+                          helpdeskArticle: _.A.getArticleURL(R.MVz.BLOCKED_PAYMENTS),
                       }),
                   }),
               ],

@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { c: () => o });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(607157);
-function o(e) {
-    let { className: t, gap: n } = e;
-    return (0, r.jsx)("div", { className: s()(a.y, t), style: { marginTop: n, marginBottom: n } });
+l.d(t, { c: () => s });
+var n = l(627968);
+l(64700);
+var a = l(503698),
+    r = l.n(a),
+    i = l(607157);
+function s(e) {
+    let { className: t, gap: l } = e;
+    return (0, n.jsx)("div", { className: r()(i.y, t), style: { marginTop: l, marginBottom: l } });
 }

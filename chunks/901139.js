@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { Ay: () => r, DE: () => s, TW: () => l });
-let i = (0, n(353640).v)(() => ({ imgCache: {}, toolsCache: {} })),
-    l = () => ({
+l.d(t, { Ay: () => n, DE: () => s, TW: () => a });
+let r = (0, l(353640).v)(() => ({ imgCache: {}, toolsCache: {} })),
+    a = () => ({
         getImgCache: (e) => {
-            if (null != e) return i.getState().imgCache[e];
+            if (null != e) return r.getState().imgCache[e];
         },
-        setImgCache: (e, t, n) => {
-            i.setState((i) => ({ imgCache: { ...i.imgCache, [e]: { animatedUrl: t, staticUrl: n } } }));
+        setImgCache: (e, t, l) => {
+            r.setState((r) => ({ imgCache: { ...r.imgCache, [e]: { animatedUrl: t, staticUrl: l } } }));
         },
     }),
     s = () => ({
-        toolsCache: i.getState().toolsCache,
-        setToolsCache: (e, t, n) => {
+        toolsCache: r.getState().toolsCache,
+        setToolsCache: (e, t, l) => {
             null != e &&
                 null != t &&
-                i.setState((i) => ({ toolsCache: { ...i.toolsCache, [e]: { url: t, palette: n } } }));
+                r.setState((r) => ({ toolsCache: { ...r.toolsCache, [e]: { url: t, palette: l } } }));
         },
         removeToolsCache: (e) => {
-            i.setState((t) => {
+            r.setState((t) => {
                 let {
-                    toolsCache: { [e]: n, ...i },
+                    toolsCache: { [e]: l, ...r },
                 } = t;
-                return { imgCache: t.imgCache, toolsCache: i };
+                return { imgCache: t.imgCache, toolsCache: r };
             });
         },
     }),
-    r = i;
+    n = r;

@@ -31,9 +31,9 @@ var n = s(627968),
     y = s(607470),
     k = s(421838),
     M = s(891540),
-    w = s(738011),
-    L = s(954571),
-    P = s(486020),
+    P = s(738011),
+    w = s(954571),
+    L = s(486020),
     V = s(935208),
     B = s(498559),
     R = s(577718),
@@ -94,7 +94,7 @@ function Z(e) {
         !i || null == t)
     )
         return (0, n.jsx)("div", { className: z.PQ, style: { backgroundImage: `url(${s})` } });
-    let r = (0, P.Bo)({ userId: t.user_id, assetId: t.id, assetHash: t.asset, size: 720, canAnimate: !1 });
+    let r = (0, L.Bo)({ userId: t.user_id, assetId: t.id, assetHash: t.asset, size: 720, canAnimate: !1 });
     return (0, n.jsx)("img", {
         onMouseMove: () => o(!0),
         onMouseLeave: () => o(!1),
@@ -117,7 +117,7 @@ function $(e) {
         { analyticsLocations: g } = (0, U.Ay)(S.A.VIDEO_BACKGROUND_IMAGE_OPTION),
         h = (0, i.bG)([M.A], () => null != m && M.A.hasHotspot(m)),
         v = l.useCallback((e) => {
-            if (!(0, w.u)(e)) throw e;
+            if (!(0, P.u)(e)) throw e;
         }, []),
         j = u
             ? (0, n.jsx)(y.A, { className: z.PQ, src: a, loop: !0, playOnHover: !0, muted: !0, onPlayError: v })
@@ -126,7 +126,7 @@ function $(e) {
         null != m &&
             h &&
             (k.sF(m),
-            L.default.track(G.HAw.PREMIUM_UPSELL_VIEWED, {
+            w.default.track(G.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: F.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
                 location: p.location,
                 location_stack: g,
@@ -201,7 +201,7 @@ function q(e) {
         { analyticsLocations: l } = (0, U.Ay)(S.A.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
         (0, T.Ay)(() => {
-            L.default.track(G.HAw.PREMIUM_UPSELL_VIEWED, {
+            w.default.track(G.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: F.e.VIDEO_BACKGROUNDS_INLINE,
                 location: s.location,
                 location_stack: l,
@@ -220,9 +220,12 @@ function X(e) {
         onClick: function () {
             (0, a.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([s.e("79149"), s.e("60987"), s.e("79354")]).then(
-                        s.bind(s, 902550),
-                    );
+                    let { default: e } = await Promise.all([
+                        s.e("20861"),
+                        s.e("79149"),
+                        s.e("60987"),
+                        s.e("27880"),
+                    ]).then(s.bind(s, 902550));
                     return (s) =>
                         (0, n.jsx)(e, {
                             maxFileSizeBytes: R.G9,
@@ -286,7 +289,7 @@ function ee(e) {
                 }),
                 t ? (0, n.jsx)(X, { onAddBackgroundImage: r, disabled: d }) : (0, n.jsx)(q, { onClick: o }),
                 c.map((e) => {
-                    let t = (0, P.Bo)({ userId: e.user_id, assetId: e.id, assetHash: e.asset, size: 720 });
+                    let t = (0, L.Bo)({ userId: e.user_id, assetId: e.id, assetHash: e.asset, size: 720 });
                     return null == t
                         ? null
                         : (0, n.jsx)(
@@ -301,8 +304,8 @@ function ee(e) {
                                           source: t,
                                           selected: (0, x.d1)(i) && i.id === e.id,
                                           onSelectOption: a,
-                                          isVideo: (0, P.q6)(e.asset),
-                                          isAnimatedImage: (0, P.VI)(e.asset),
+                                          isVideo: (0, L.q6)(e.asset),
+                                          isAnimatedImage: (0, L.VI)(e.asset),
                                       },
                                       e.id,
                                   ),
@@ -387,7 +390,9 @@ function es(e) {
                       onSelectOption: S,
                       onUpsellClick: () => {
                           (0, a.openModalLazy)(async () => {
-                              let { default: e } = await s.e("85312").then(s.bind(s, 629959));
+                              let { default: e } = await Promise.all([s.e("80527"), s.e("14138"), s.e("78259")]).then(
+                                  s.bind(s, 629959),
+                              );
                               return (s) =>
                                   (0, n.jsx)(e, {
                                       ...s,

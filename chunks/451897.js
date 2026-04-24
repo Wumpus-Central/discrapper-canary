@@ -1,10 +1,10 @@
-n.d(t, { default: () => O });
+n.d(t, { default: () => m });
 var l = n(627968);
 n(64700);
 var a = n(17928),
     e = n(550079),
-    d = n(477782),
-    r = n(442433),
+    r = n(477782),
+    d = n(442433),
     c = n(587895),
     s = n(646938),
     A = n(189081),
@@ -33,8 +33,8 @@ function G(i) {
     let c,
         s,
         G,
-        O,
         m,
+        O,
         v,
         M,
         V,
@@ -42,8 +42,8 @@ function G(i) {
         { application: H, libraryApplication: R, analyticsContext: U, onSelect: X } = i,
         w = { ...(null != U ? U.location : null), object: y.ZSU.CONTEXT_MENU },
         Z =
-            ((O = (0, a.bG)([L.Ay], () => L.Ay.getRunningVerifiedApplicationIds().includes(R.id), [R.id])),
-            (m = (0, a.bG)(
+            ((m = (0, a.bG)([L.Ay], () => L.Ay.getRunningVerifiedApplicationIds().includes(R.id), [R.id])),
+            (O = (0, a.bG)(
                 [A.A, E.A, p.A, D.A],
                 () =>
                     (0, _.A)({
@@ -56,9 +56,9 @@ function G(i) {
                     }),
                 [R.branchId, R.id],
             )),
-            O || !m
+            m || !O
                 ? null
-                : (0, l.jsx)(d.Dr, {
+                : (0, l.jsx)(r.Dr, {
                       id: "launch",
                       label: b.intl.string(b.t.XKUw8m),
                       action: () => f.playApplication(R.id, R, { analyticsParams: { location: w } }),
@@ -70,7 +70,7 @@ function G(i) {
                     i.id,
                 ]);
             return n && !t && e
-                ? (0, l.jsx)(d.Dr, {
+                ? (0, l.jsx)(r.Dr, {
                       id: "repair",
                       label: b.intl.string(b.t.CKCcdz),
                       action: () =>
@@ -86,14 +86,14 @@ function G(i) {
             s
                 ? c
                     ? null
-                    : (0, l.jsx)(d.Dr, {
+                    : (0, l.jsx)(r.Dr, {
                           id: "uninstall",
                           label: b.intl.string(b.t.DwgfOM),
                           action: () => (0, P.z)(t.id, t.branchId, y.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
                       })
                 : null == G
                   ? null
-                  : (0, l.jsx)(d.Dr, {
+                  : (0, l.jsx)(r.Dr, {
                         id: "install",
                         label: b.intl.string(b.t["N+XVnt"]),
                         action: () =>
@@ -102,7 +102,7 @@ function G(i) {
         B =
             null == R
                 ? null
-                : (0, l.jsx)(d.sL, {
+                : (0, l.jsx)(r.sL, {
                       id: "private",
                       label: b.intl.string(b.t.fHDNJv),
                       action: function () {
@@ -119,7 +119,7 @@ function G(i) {
         z =
             null == R
                 ? null
-                : (0, l.jsx)(d.sL, {
+                : (0, l.jsx)(r.sL, {
                       id: "on-overlay",
                       label: b.intl.string(b.t.rgZKg2),
                       action: function () {
@@ -140,7 +140,7 @@ function G(i) {
                     let i = p.A.getState(R.id, R.branchId);
                     return i?.installPath;
                 }, [R.branchId, R.id])) && (0, T.isDesktop)()
-                ? (0, l.jsx)(d.Dr, {
+                ? (0, l.jsx)(r.Dr, {
                       id: "create-shortcut",
                       label: b.intl.string(b.t.T4tecH),
                       action: () => g.A.createShortcuts(!0, !1, v, R.id, M),
@@ -150,7 +150,7 @@ function G(i) {
             let n = (0, a.bG)([p.A], () => p.A.isInstalled(i.id, i.branchId), [i.branchId, i.id]),
                 e = (0, a.bG)([A.A], () => !A.A.hasRemovedLibraryApplicationThisSession);
             if (n && !i.isHidden()) return null;
-            function r() {
+            function d() {
                 let t = (0, x.PQ)(i.getFlags(), y.hM6.HIDDEN);
                 C.V(i.id, i.branchId, t),
                     N.default.track(y.HAw.APPLICATION_SETTINGS_UPDATED, {
@@ -158,20 +158,20 @@ function G(i) {
                         ...i.getAnalyticsData(),
                     });
             }
-            return (0, l.jsx)(d.Dr, {
+            return (0, l.jsx)(r.Dr, {
                 id: "in-library",
                 label: i.isHidden() ? b.intl.string(b.t["0dnEUJ"]) : b.intl.string(b.t.TuJXLx),
                 action: function () {
                     null != i &&
                         null != t &&
                         (i.isHidden() || !e
-                            ? r()
+                            ? d()
                             : (0, S.A)({
                                   title: b.intl.string(b.t.oB7isi),
                                   subtitle: b.intl.format(b.t.HXfjKt, { name: t.name }),
                                   variant: "primary",
                                   confirmText: b.intl.string(b.t.OWjIiV),
-                                  onConfirm: () => r(),
+                                  onConfirm: () => d(),
                               }));
                 },
             });
@@ -180,25 +180,25 @@ function G(i) {
             ((V = H.primarySkuId),
             (k = o.Q_.useSetting()),
             !__OVERLAY__ && k && u.p5
-                ? (0, l.jsxs)(d.Dr, {
+                ? (0, l.jsxs)(r.Dr, {
                       id: "application-dev",
                       label: b.intl.string(b.t.OpuAlK),
                       action: () => (0, u.C)(H.id),
                       children: [
-                          (0, l.jsx)(d.Dr, {
+                          (0, l.jsx)(r.Dr, {
                               id: "app-id",
                               label: b.intl.string(b.t.qSHshq),
                               action: () => (0, u.C)(H.id),
                           }),
                           null != R
-                              ? (0, l.jsx)(d.Dr, {
+                              ? (0, l.jsx)(r.Dr, {
                                     id: "branch-id",
                                     label: b.intl.string(b.t.g7oyyo),
                                     action: () => (0, u.C)(R.branchId),
                                 })
                               : null,
                           null != V
-                              ? (0, l.jsx)(d.Dr, {
+                              ? (0, l.jsx)(r.Dr, {
                                     id: "sku-id",
                                     label: b.intl.string(b.t.hReUdL),
                                     action: () => (0, u.C)(V),
@@ -208,12 +208,12 @@ function G(i) {
                   })
                 : null),
         J = (0, a.bG)([I.Ay], () => I.Ay.hasContext(H.id), [H.id])
-            ? (0, l.jsx)(d.Dr, {
+            ? (0, l.jsx)(r.Dr, {
                   id: "ingame-voice",
                   label: b.intl.string(b.t["pOul5/"]),
                   action: () =>
                       (0, h.openModalLazy)(async () => {
-                          let { default: i } = await n.e("18912").then(n.bind(n, 880510));
+                          let { default: i } = await Promise.all([n.e("28367"), n.e("58847")]).then(n.bind(n, 880510));
                           return (t) => (0, l.jsx)(i, { ...t, mediaEngineContext: H.id, subtitle: H.name });
                       }),
               })
@@ -221,20 +221,20 @@ function G(i) {
     return (0, l.jsxs)(e.W, {
         "data-menu-migrated": !0,
         navId: "game-context",
-        onClose: r.Z_,
+        onClose: d.Z_,
         "aria-label": b.intl.string(b.t.tKobzb),
         onSelect: X,
-        children: [Z, K, F, B, z, Q, Y, (0, l.jsx)(d.rX, { children: q }), (0, l.jsx)(d.rX, { children: J })],
+        children: [Z, K, F, B, z, Q, Y, (0, l.jsx)(r.rX, { children: q }), (0, l.jsx)(r.rX, { children: J })],
     });
 }
-function O(i) {
+function m(i) {
     let { applicationId: t, branchId: n } = i,
         e = (0, a.bG)([c.A], () => c.A.getApplication(t), [t]),
-        d = (0, a.bG)([A.A], () => (null != n ? A.A.getLibraryApplication(t, n) : A.A.getActiveLibraryApplication(t)), [
+        r = (0, a.bG)([A.A], () => (null != n ? A.A.getLibraryApplication(t, n) : A.A.getActiveLibraryApplication(t)), [
             t,
             n,
         ]);
-    return null == e || null == d
+    return null == e || null == r
         ? (0, l.jsx)(s.default, { ...i, id: t, label: b.intl.string(b.t["FfCL+6"]) })
-        : (0, l.jsx)(G, { ...i, application: e, libraryApplication: d });
+        : (0, l.jsx)(G, { ...i, application: e, libraryApplication: r });
 }

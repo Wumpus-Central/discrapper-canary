@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     RK: "tooltipWordmark_d4ff11",
     jc: "orbBadgeAsset_d4ff11",

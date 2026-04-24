@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     hd: "sectionContainer__5a4b6",
     yF: "divider__5a4b6",

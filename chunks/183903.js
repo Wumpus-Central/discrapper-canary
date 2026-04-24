@@ -1,243 +1,245 @@
-n.d(t, { default: () => G });
+n.d(t, { default: () => Z });
 var i = n(627968);
 n(64700);
 var a = n(17928),
     r = n(192308),
     l = n(691540),
-    o = n(857250),
-    s = n(97483),
-    u = n(550079),
-    c = n(477782),
+    s = n(857250),
+    o = n(97483),
+    c = n(550079),
+    u = n(477782),
     d = n(663341),
     f = n(405433),
-    p = n(505930),
+    h = n(505930),
     g = n(7807),
-    h = n(624479),
+    p = n(624479),
     y = n(32880),
     m = n(807072),
-    b = n(241326),
-    w = n(442433),
+    w = n(241326),
+    b = n(442433),
     A = n(77729),
     _ = n(688810),
     x = n(931991),
-    E = n(983069),
-    C = n(734057),
-    v = n(71393),
-    S = n(576705),
-    D = n(711014),
+    v = n(983069),
+    E = n(734057),
+    C = n(71393),
+    D = n(576705),
+    S = n(711014),
     R = n(287809),
-    F = n(549685),
-    j = n(741394),
+    j = n(549685),
+    F = n(741394),
     M = n(274372),
-    P = n(372684),
+    T = n(372684),
     B = n(439818),
-    k = n(399925),
-    H = n(74847),
-    O = n(602902),
-    T = n(696016);
+    N = n(399925),
+    P = n(74847),
+    H = n(602902),
+    O = n(696016);
 n(980504);
-var N = n(16590),
-    Z = n(985018),
+var k = n(16590),
+    L = n(985018),
     U = n(264572).Buffer;
-function G(e) {
+function Z(e) {
     let {
             clips: t,
-            channelId: G,
-            onShare: L,
-            onEdit: q,
-            onBeforeDelete: $,
-            onAfterDelete: z,
-            actionsDisabled: I = !1,
-            showShareAndEdit: K = !1,
+            channelId: Z,
+            onShare: G,
+            onEdit: I,
+            onBeforeDelete: q,
+            onAfterDelete: V,
+            actionsDisabled: $ = !1,
+            showShareAndEdit: z = !1,
         } = e,
-        W = t[0],
-        V = t.length > 1,
-        { analyticsLocations: X } = (0, _.Ay)(),
-        Q = (0, a.bG)([D.Ay, S.A, R.default, v.A], () =>
-            D.Ay.getFlattenedGuildIds().some((e) => {
-                let t = v.A.getGuild(e);
-                return null != t && (0, x.ie)(t, S.A, R.default).canCreateExpressions;
+        K = t[0],
+        W = t.length > 1,
+        { analyticsLocations: J } = (0, _.Ay)(),
+        X = (0, a.bG)([S.Ay, D.A, R.default, C.A], () =>
+            S.Ay.getFlattenedGuildIds().some((e) => {
+                let t = C.A.getGuild(e);
+                return null != t && (0, x.ie)(t, D.A, R.default).canCreateExpressions;
             }),
         ),
-        Y = (0, a.bG)([M.A], () => t.some((e) => M.A.isClipExporting(e.id)));
-    async function J() {
-        (0, w.Z_)();
-        let e = C.A.getChannel(G);
-        (0, k.H1)([W.id]);
+        Q = (0, a.bG)([M.A], () => t.some((e) => M.A.isClipExporting(e.id)));
+    async function Y() {
+        (0, b.Z_)();
+        let e = E.A.getChannel(Z);
+        (0, N.H1)([K.id]);
         try {
-            let t = await (0, k.VO)(W);
+            let t = await (0, N.VO)(K);
             (0, r.openModalLazy)(
                 async () => {
-                    let { default: a } = await Promise.all([n.e("12811"), n.e("34681")]).then(n.bind(n, 191110)),
-                        r = e?.guild_id != null ? v.A.getGuild(e.guild_id) : null,
-                        l = null != r && (0, x.ie)(r, S.A, R.default).canCreateExpressions,
-                        o = null == W.name || "" === W.name ? (0, T.cM)(W.createdAt) : W.name,
-                        s = o.slice(0, 32);
+                    let { default: a } = await Promise.all([n.e("8555"), n.e("12811"), n.e("6355")]).then(
+                            n.bind(n, 191110),
+                        ),
+                        r = e?.guild_id != null ? C.A.getGuild(e.guild_id) : null,
+                        l = null != r && (0, x.ie)(r, D.A, R.default).canCreateExpressions,
+                        s = null == K.name || "" === K.name ? (0, O.cM)(K.createdAt) : K.name,
+                        o = s.slice(0, 32);
                     return (n) =>
                         (0, i.jsx)(a, {
                             ...n,
                             showGuildPicker: !0,
                             guildId: l ? e?.guild_id : void 0,
-                            sourceFile: { file: new File([t], `${o}.mp4`, { type: "video/mp4" }), name: s },
+                            sourceFile: { file: new File([t], `${s}.mp4`, { type: "video/mp4" }), name: o },
                         });
                 },
                 { stackingBehavior: "stack" },
             );
         } catch (e) {
         } finally {
-            (0, k.H1)(null);
+            (0, N.H1)(null);
         }
     }
     async function ee() {
-        (0, w.Z_)(), (0, k.H1)([W.id]);
+        (0, b.Z_)(), (0, N.H1)([K.id]);
         try {
-            let e = await (0, k.VO)(W),
+            let e = await (0, N.VO)(K),
                 t = await e.arrayBuffer(),
-                n = (0, B.A)((0, j.uk)(W.filepath));
+                n = (0, B.A)((0, F.uk)(K.filepath));
             await A.A.fileManager.saveWithDialog(U.from(t), n);
         } catch (e) {
-            T.nx.error("Error exporting clip to file", e);
+            O.nx.error("Error exporting clip to file", e);
         } finally {
-            (0, k.H1)(null);
+            (0, N.H1)(null);
         }
     }
     async function et() {
-        (0, w.Z_)();
-        let e = (0, H.t)(G);
-        (0, k.H1)(t.map((e) => e.id));
+        (0, b.Z_)();
+        let e = (0, P.t)(Z);
+        (0, N.H1)(t.map((e) => e.id));
         try {
-            await (0, O.K)(t, { channelId: e ? G : void 0, analyticsLocations: X });
+            await (0, H.K)(t, { channelId: e ? Z : void 0, analyticsLocations: J });
         } catch (e) {
         } finally {
-            (0, k.H1)(null);
+            (0, N.H1)(null);
         }
-        L?.();
+        G?.();
     }
     function en() {
-        (0, w.Z_)(), t.forEach((e) => (0, k.XK)(e));
+        (0, b.Z_)(), t.forEach((e) => (0, N.XK)(e));
     }
     async function ei() {
-        (0, w.Z_)(), (0, k.H1)([W.id]);
+        (0, b.Z_)(), (0, N.H1)([K.id]);
         try {
-            let e = await (0, k.VO)(W),
-                t = await (0, E.R_)(e),
+            let e = await (0, N.VO)(K),
+                t = await (0, v.R_)(e),
                 n = await t.arrayBuffer(),
-                i = (0, B.A)((0, j.kh)(W.filepath)) + ".ogg";
+                i = (0, B.A)((0, F.kh)(K.filepath)) + ".ogg";
             await A.A.fileManager.saveWithDialog(U.from(n), i);
         } catch (e) {
-            T.nx.error("Error exporting clip to sound file", e);
+            O.nx.error("Error exporting clip to sound file", e);
         } finally {
-            (0, k.H1)(null);
+            (0, N.H1)(null);
         }
     }
-    return (0, i.jsxs)(u.W, {
+    return (0, i.jsxs)(c.W, {
         "data-menu-migrated-auto": !0,
         navId: "clips-more-options",
-        "aria-label": Z.intl.string(Z.t.PdRCRg),
-        onClose: w.Z_,
-        onSelect: w.Z_,
+        "aria-label": L.intl.string(L.t.PdRCRg),
+        onClose: b.Z_,
+        onSelect: b.Z_,
         children: [
             t.some((e) => !0 === e.isTemporary) &&
-                (0, i.jsx)(c.Dr, {
+                (0, i.jsx)(u.Dr, {
                     id: "add-to-library",
-                    label: Z.intl.string(Z.t["BfLmm+"]),
+                    label: L.intl.string(L.t["BfLmm+"]),
                     leadingAccessory: { type: "icon", icon: d.p },
-                    disabled: I,
+                    disabled: $,
                     action: function () {
-                        (0, w.Z_)(), t.forEach((e) => (0, k.w7)(e.id));
+                        (0, b.Z_)(), t.forEach((e) => (0, N.w7)(e.id));
                     },
                 }),
-            K &&
+            z &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(c.Dr, {
+                        (0, i.jsx)(u.Dr, {
                             id: "share",
-                            label: Z.intl.string(Z.t.RDE0Sc),
+                            label: L.intl.string(L.t.RDE0Sc),
                             leadingAccessory: { type: "icon", icon: f.l },
-                            disabled: I && !Y,
+                            disabled: $ && !Q,
                             action: et,
                         }),
-                        !V &&
-                            (0, i.jsx)(c.Dr, {
+                        !W &&
+                            (0, i.jsx)(u.Dr, {
                                 id: "edit",
-                                label: Z.intl.string(Z.t.bt75uw),
-                                leadingAccessory: { type: "icon", icon: F.A },
-                                disabled: I || V,
+                                label: L.intl.string(L.t.bt75uw),
+                                leadingAccessory: { type: "icon", icon: j.A },
+                                disabled: $ || W,
                                 action: function () {
-                                    (0, w.Z_)(), V || q?.();
+                                    (0, b.Z_)(), W || I?.();
                                 },
                             }),
-                        (0, i.jsx)(c.bX, {}),
+                        (0, i.jsx)(u.bX, {}),
                     ],
                 }),
-            !W.isFavorite &&
-                (0, i.jsx)(c.Dr, {
+            !K.isFavorite &&
+                (0, i.jsx)(u.Dr, {
                     id: "favorite",
-                    label: Z.intl.string(Z.t.nPywqO),
-                    leadingAccessory: { type: "icon", icon: p.y },
-                    disabled: I,
+                    label: L.intl.string(L.t.nPywqO),
+                    leadingAccessory: { type: "icon", icon: h.y },
+                    disabled: $,
                     action: en,
                 }),
-            !V && Q && W.type !== P.nQ.SCREENSHOT
-                ? (0, i.jsx)(c.Dr, {
+            !W && X && K.type !== T.nQ.SCREENSHOT
+                ? (0, i.jsx)(u.Dr, {
                       leadingAccessory: { type: "icon", icon: g.J },
                       id: "clips-export-soundboard",
-                      label: Z.intl.string(N.default.HH4Tjj),
-                      action: J,
+                      label: L.intl.string(k.default.HH4Tjj),
+                      action: Y,
                   })
                 : null,
-            !V &&
+            !W &&
                 null != A.A.clipboard.copyFile &&
-                (0, i.jsx)(c.Dr, {
-                    leadingAccessory: { type: "icon", icon: h.T },
+                (0, i.jsx)(u.Dr, {
+                    leadingAccessory: { type: "icon", icon: p.T },
                     id: "clips-copy-video",
-                    label: Z.intl.string(N.default.tv7emB),
+                    label: L.intl.string(k.default.tv7emB),
                     action: function () {
-                        (0, w.Z_)(),
-                            A.A.clipboard.copyFile(W.filepath),
-                            (0, l.P0)((0, o.o)(Z.intl.string(Z.t.mGZ66D), s.Ck.SUCCESS));
+                        (0, b.Z_)(),
+                            A.A.clipboard.copyFile(K.filepath),
+                            (0, l.P0)((0, s.o)(L.intl.string(L.t.mGZ66D), o.Ck.SUCCESS));
                     },
                 }),
-            !V &&
-                (0, i.jsxs)(c.Dr, {
+            !W &&
+                (0, i.jsxs)(u.Dr, {
                     id: "clips-export-group",
                     leadingAccessory: { type: "icon", icon: y.s },
-                    label: Z.intl.string(Z.t["WH/V85"]),
+                    label: L.intl.string(L.t["WH/V85"]),
                     children: [
-                        (0, i.jsx)(c.Dr, {
+                        (0, i.jsx)(u.Dr, {
                             leadingAccessory: { type: "icon", icon: y.s },
                             id: "clips-export-file",
-                            label: W.type === P.nQ.SCREENSHOT ? Z.intl.string(Z.t.y5FgMk) : Z.intl.string(Z.t.sFgmNy),
+                            label: K.type === T.nQ.SCREENSHOT ? L.intl.string(L.t.y5FgMk) : L.intl.string(L.t.sFgmNy),
                             action: ee,
                         }),
-                        W.type !== P.nQ.SCREENSHOT &&
-                            (0, i.jsx)(c.Dr, {
+                        K.type !== T.nQ.SCREENSHOT &&
+                            (0, i.jsx)(u.Dr, {
                                 leadingAccessory: { type: "icon", icon: y.s },
                                 id: "clips-export-sound-file",
-                                label: Z.intl.string(Z.t.db0NKG),
+                                label: L.intl.string(L.t.db0NKG),
                                 action: ei,
                             }),
                     ],
                 }),
-            (0, i.jsx)(c.bX, {}),
-            !0 === W.isFavorite &&
-                (0, i.jsx)(c.Dr, {
+            (0, i.jsx)(u.bX, {}),
+            !0 === K.isFavorite &&
+                (0, i.jsx)(u.Dr, {
                     leadingAccessory: { type: "icon", icon: m.U },
                     id: "unfavorite",
-                    label: Z.intl.string(N.default.IZsalP),
+                    label: L.intl.string(k.default.IZsalP),
                     color: "danger",
-                    disabled: I,
+                    disabled: $,
                     action: en,
                 }),
-            (0, i.jsx)(c.Dr, {
-                leadingAccessory: { type: "icon", icon: b.u },
+            (0, i.jsx)(u.Dr, {
+                leadingAccessory: { type: "icon", icon: w.u },
                 id: "clips-delete",
-                label: Z.intl.string(Z.t.oyYWHE),
+                label: L.intl.string(L.t.oyYWHE),
                 color: "danger",
-                disabled: I,
+                disabled: $,
                 action: function (e) {
-                    if (((0, w.Z_)(), e?.shiftKey)) {
-                        $?.(), t.forEach((e) => (0, k.oH)(e.filepath, e.id)), z?.();
+                    if (((0, b.Z_)(), e?.shiftKey)) {
+                        q?.(), t.forEach((e) => (0, N.oH)(e.filepath, e.id)), V?.();
                         return;
                     }
                     (0, r.openModalLazy)(
@@ -247,9 +249,9 @@ function G(e) {
                                 (0, i.jsx)(e, {
                                     clips: t,
                                     ...n,
-                                    onBeforeDelete: $,
+                                    onBeforeDelete: q,
                                     onAfterDelete: async () => {
-                                        await n.onClose(), z?.();
+                                        await n.onClose(), V?.();
                                     },
                                 });
                         },

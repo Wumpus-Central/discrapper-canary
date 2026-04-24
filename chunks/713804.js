@@ -1,38 +1,37 @@
-"use strict";
-n.r(t),
-    n.d(t, {
-        getOrParseBioAST: () => g,
-        parseBioReact: () => m,
-        parseBioReactWithCachedAST: () => p,
-        parseBioReactWithoutScrolling: () => A,
+a.r(t),
+    a.d(t, {
+        getOrParseBioAST: () => _,
+        parseBioReact: () => f,
+        parseBioReactWithCachedAST: () => g,
+        parseBioReactWithoutScrolling: () => x,
     });
-var i = n(735438),
-    r = n.n(i),
-    s = n(635377),
-    a = n.n(s),
-    o = n(791332),
-    l = n.n(o),
-    d = n(436857),
-    _ = n(365347),
-    u = n(29814);
-n(46054);
-var c = n(551965);
-let E = (0, c.A)([u.A.PROFILE_BIO_RULES, (0, _.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
-    h = new (a())({ max: 2e3 }),
-    m = d.aV(E),
-    f;
+var n = a(735438),
+    r = a.n(n),
+    l = a(635377),
+    i = a.n(l),
+    s = a(791332),
+    o = a.n(s),
+    c = a(436857),
+    d = a(365347),
+    u = a(29814);
+a(46054);
+var h = a(551965);
+let p = (0, h.A)([u.A.PROFILE_BIO_RULES, (0, d.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
+    m = new (i())({ max: 2e3 }),
+    f = c.aV(p),
+    b;
+function _(e) {
+    let t = m.get(e);
+    return null != t || ((t = b(e, !0)), m.set(e, t)), t;
+}
 function g(e) {
-    let t = h.get(e);
-    return null != t || ((t = f(e, !0)), h.set(e, t)), t;
-}
-function p(e) {
     if (0 === e.trim().length) return null;
-    let t = g(e);
-    return l().reactFor(l().ruleOutput(E, "react"))(t);
+    let t = _(e);
+    return o().reactFor(o().ruleOutput(p, "react"))(t);
 }
-let A = d.aV(
-    (0, c.A)([
-        r().omit(E, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
+let x = c.aV(
+    (0, h.A)([
+        r().omit(p, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
         { emoji: { react: () => null } },
     ]),
 );

@@ -1,39 +1,40 @@
-a.d(t, { p: () => o });
-var n = a(64700),
-    i = a(488995),
-    l = a(295890);
-let s = 20 + i.GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX - i.GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX,
-    r = 20 + i.GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX + i.GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX;
+"use strict";
+n.d(t, { p: () => o });
+var i = n(64700),
+    a = n(488995),
+    s = n(295890);
+let l = 20 + a.GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX - a.GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX,
+    r = 20 + a.GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX + a.GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX;
 function o(e) {
-    let { isSearchBarVisible: t, isSearchBarEmpty: a, searchBarState: o, setSearchBarState: c } = e,
-        d = n.useCallback(
+    let { isSearchBarVisible: t, isSearchBarEmpty: n, searchBarState: o, setSearchBarState: c } = e,
+        d = i.useCallback(
             (e) => {
                 if (!t) return;
-                let n = Math.round(e);
+                let i = Math.round(e);
                 switch (o) {
-                    case i.GlobalDiscoverySearchBarState.DEFAULT:
-                        n < 20 &&
-                            c(a ? i.GlobalDiscoverySearchBarState.COLLAPSED : i.GlobalDiscoverySearchBarState.FLOATING);
+                    case a.GlobalDiscoverySearchBarState.DEFAULT:
+                        i < 20 &&
+                            c(n ? a.GlobalDiscoverySearchBarState.COLLAPSED : a.GlobalDiscoverySearchBarState.FLOATING);
                         break;
-                    case i.GlobalDiscoverySearchBarState.COLLAPSED:
-                        n > s && c(i.GlobalDiscoverySearchBarState.DEFAULT);
+                    case a.GlobalDiscoverySearchBarState.COLLAPSED:
+                        i > l && c(a.GlobalDiscoverySearchBarState.DEFAULT);
                         break;
-                    case i.GlobalDiscoverySearchBarState.FLOATING:
-                        n > r && c(i.GlobalDiscoverySearchBarState.DEFAULT);
+                    case a.GlobalDiscoverySearchBarState.FLOATING:
+                        i > r && c(a.GlobalDiscoverySearchBarState.DEFAULT);
                 }
             },
-            [a, t, o, c],
+            [n, t, o, c],
         ),
-        u = n.useCallback(() => {
-            c(i.GlobalDiscoverySearchBarState.FLOATING);
+        u = i.useCallback(() => {
+            c(a.GlobalDiscoverySearchBarState.FLOATING);
         }, [c]),
-        m = n.useCallback(() => {
-            o === i.GlobalDiscoverySearchBarState.FLOATING && a && c(i.GlobalDiscoverySearchBarState.COLLAPSED);
-        }, [a, o, c]);
+        h = i.useCallback(() => {
+            o === a.GlobalDiscoverySearchBarState.FLOATING && n && c(a.GlobalDiscoverySearchBarState.COLLAPSED);
+        }, [n, o, c]);
     return {
         onTabsAvailableWidthChange: d,
-        tabsClassName: o === i.GlobalDiscoverySearchBarState.FLOATING ? l.b6 : void 0,
+        tabsClassName: o === a.GlobalDiscoverySearchBarState.FLOATING ? s.b6 : void 0,
         onCollapsedSearchBarClick: u,
-        onSearchBarBlur: m,
+        onSearchBarBlur: h,
     };
 }

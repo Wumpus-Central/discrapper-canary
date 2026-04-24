@@ -1,72 +1,73 @@
-n.d(t, { Ay: () => A, PS: () => m, S0: () => g });
-var l = n(627968),
-    i = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    o = n(27867),
-    s = n(17928),
+"use strict";
+n.d(t, { Ay: () => I, PS: () => A, S0: () => E });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    l = n(27867),
+    o = n(17928),
     c = n(863610),
-    u = n(695366),
-    d = n(834730),
-    E = n(814890),
+    d = n(695366),
+    u = n(834730),
+    _ = n(814890),
     p = n(436283),
-    _ = n(296043),
+    f = n(296043),
     h = n(652215),
-    T = n(985018),
-    I = n(304033);
-function f(e) {
-    return { text: e, icon: (0, l.jsx)(c.n, { className: I.Kk, dotRadius: 3.5, themed: !0 }) };
+    m = n(985018),
+    g = n(304033);
+function b(e) {
+    return { text: e, icon: (0, i.jsx)(c.n, { className: g.Kk, dotRadius: 3.5, themed: !0 }) };
 }
-function m(e) {
+function A(e) {
     return {
-        text: e ?? T.intl.string(T.t.VCsUJu),
+        text: e ?? m.intl.string(m.t.VCsUJu),
         color: "text-feedback-critical",
-        icon: (0, l.jsx)(u.E, { size: "xs", color: "currentColor", className: a()(I.Kk, I.ik) }),
+        icon: (0, i.jsx)(d.E, { size: "xs", color: "currentColor", className: s()(g.Kk, g.ik) }),
     };
 }
-function g(e) {
-    let { className: t, icon: n, text: i, color: r } = e;
-    return (0, l.jsxs)("div", {
-        className: a()(I.iE, t),
+function E(e) {
+    let { className: t, icon: n, text: r, color: a } = e;
+    return (0, i.jsxs)("div", {
+        className: s()(g.iE, t),
         children: [
             n,
-            (0, l.jsx)(d.E, { variant: "text-md/normal", color: r, scaleFontToUserSetting: !0, children: i }),
+            (0, i.jsx)(u.E, { variant: "text-md/normal", color: a, scaleFontToUserSetting: !0, children: r }),
         ],
     });
 }
-let A = i.memo(function (e) {
-    let { message: t, className: n, component: r } = e,
-        a = (0, o.A)(),
-        c = (0, s.bG)([p.Ay], () => p.Ay.getInteraction(t), [t]);
-    i.useEffect(() => {
+let I = r.memo(function (e) {
+    let { message: t, className: n, component: a } = e,
+        s = (0, l.A)(),
+        c = (0, o.bG)([p.Ay], () => p.Ay.getInteraction(t), [t]);
+    r.useEffect(() => {
         let e = null;
         if (t.hasFlag(h.pr7.LOADING) && null != c) {
-            let n = (0, _.I5)(t.id) - Date.now();
-            n > 0 && (e = setTimeout(() => a(), 1e3 + n));
+            let n = (0, f.I5)(t.id) - Date.now();
+            n > 0 && (e = setTimeout(() => s(), 1e3 + n));
         }
         return () => {
             clearTimeout(e);
         };
-    }, [a, c, t]);
-    let u = null;
-    if (null == r)
-        u = (function (e, t) {
-            switch ((0, _.fK)(t, e)) {
-                case _.h0.SENDING:
-                    return f(T.intl.string(T.t.RiLfBY));
-                case _.h0.CREATED:
-                    return f(T.intl.formatToPlainString(T.t["7ePV4t"], { applicationName: t.author.username }));
-                case _.h0.TIMED_OUT:
-                    return m(T.intl.string(T.t.h8hzPd));
-                case _.h0.FAILED:
-                    return m(t.interactionError);
+    }, [s, c, t]);
+    let d = null;
+    if (null == a)
+        d = (function (e, t) {
+            switch ((0, f.fK)(t, e)) {
+                case f.h0.SENDING:
+                    return b(m.intl.string(m.t.RiLfBY));
+                case f.h0.CREATED:
+                    return b(m.intl.formatToPlainString(m.t["7ePV4t"], { applicationName: t.author.username }));
+                case f.h0.TIMED_OUT:
+                    return A(m.intl.string(m.t.h8hzPd));
+                case f.h0.FAILED:
+                    return A(t.interactionError);
             }
         })(c, t);
     else {
-        let e = (0, E.zv)(c, t, r);
-        null != e && (u = m(e));
+        let e = (0, _.zv)(c, t, a);
+        null != e && (d = A(e));
     }
-    if (null == u) return null;
-    let { text: d, icon: I, color: A } = u;
-    return (0, l.jsx)(g, { icon: I, text: d, className: n, color: A });
+    if (null == d) return null;
+    let { text: u, icon: g, color: I } = d;
+    return (0, i.jsx)(E, { icon: g, text: u, className: n, color: I });
 });

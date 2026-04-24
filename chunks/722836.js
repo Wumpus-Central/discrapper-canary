@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper__124c8",
     lS: "titleRegion__124c8",

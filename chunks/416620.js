@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_b7e1cb",
     jj: "gifFavoriteButton_b7e1cb",

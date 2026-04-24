@@ -1,11 +1,11 @@
 "use strict";
-var a = t(828066);
+var a = t(50447);
 t(697509)(r, "__esModule", { value: !0 }), (r.default = void 0);
 var l = a(t(747562)),
     o = a(t(272496)),
     s = a(t(739266)),
-    n = a(t(863525)),
-    i = a(t(409885)),
+    i = a(t(863525)),
+    n = a(t(409885)),
     u = a(t(741116)),
     d = a(t(138753)),
     c = a(t(54742)),
@@ -17,8 +17,8 @@ var l = a(t(747562)),
 r.default = new l.default([
     ["command", o.default],
     ["composite", s.default],
-    ["input", n.default],
-    ["landmark", i.default],
+    ["input", i.default],
+    ["landmark", n.default],
     ["range", u.default],
     ["roletype", d.default],
     ["section", c.default],

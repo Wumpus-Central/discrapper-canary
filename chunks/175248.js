@@ -1,66 +1,65 @@
-"use strict";
-n.d(t, { E: () => p, QuestRewardModalUnverified: () => g });
-var i = n(627968),
-    r = n(64700),
-    s = n(772707),
-    a = n(17928),
-    o = n(289873),
-    l = n(885574),
-    d = n(834730),
-    _ = n(192308),
-    u = n(830215),
-    c = n(287809),
-    E = n(710969),
-    h = n(985018),
-    m = n(105247),
-    f = n(37229);
-function g(e) {
+n.d(t, { E: () => T, QuestRewardModalUnverified: () => A });
+var r = n(627968),
+    s = n(64700),
+    l = n(772707),
+    i = n(17928),
+    u = n(289873),
+    a = n(885574),
+    o = n(834730),
+    c = n(192308),
+    d = n(830215),
+    f = n(287809),
+    C = n(710969),
+    E = n(985018),
+    v = n(105247),
+    g = n(37229);
+function A(e) {
     let { transitionState: t, onClose: n } = e,
-        _ = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.email),
-        [g, p] = r.useState({ status: "unknown" });
-    r.useEffect(() => {
-        p({ status: "loading" }),
-            u.A.verifyResend().then(
-                () => p({ status: "success" }),
+        c = (0, i.bG)([f.default], () => f.default.getCurrentUser()?.email),
+        [A, T] = s.useState({ status: "unknown" });
+    s.useEffect(() => {
+        T({ status: "loading" }),
+            d.A.verifyResend().then(
+                () => T({ status: "success" }),
                 (e) => {
-                    p({ status: "error" }), (0, E.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } });
+                    T({ status: "error" }), (0, C.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } });
                 },
             );
     }, []);
-    let A =
-        "error" === g.status
-            ? h.intl.string(h.t.vjying)
-            : "success" === g.status
-              ? h.intl.format(h.t.qP5xYc, { emailAddress: _, emailAddressLink: `mailto:${_}` })
+    let m =
+        "error" === A.status
+            ? E.intl.string(E.t.vjying)
+            : "success" === A.status
+              ? E.intl.format(E.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
               : void 0;
-    return (0, i.jsxs)(s.k, {
+    return (0, r.jsxs)(l.k, {
         transitionState: t,
         onClose: n,
-        graphic: "loading" === g.status ? void 0 : { type: "image", src: f },
-        title: "loading" === g.status ? void 0 : h.intl.string(h.t.c8eASM),
-        subtitle: A,
+        graphic: "loading" === A.status ? void 0 : { type: "image", src: g },
+        title: "loading" === A.status ? void 0 : E.intl.string(E.t.c8eASM),
+        subtitle: m,
         actions:
-            "loading" === g.status ? void 0 : [{ variant: "secondary", text: h.intl.string(h.t.cpT0Cq), onClick: n }],
+            "loading" === A.status ? void 0 : [{ variant: "secondary", text: E.intl.string(E.t.cpT0Cq), onClick: n }],
         children: [
-            "loading" === g.status && (0, i.jsx)(o.y, {}),
-            "success" === g.status &&
-                (0, i.jsxs)("div", {
-                    className: m.d,
+            "loading" === A.status && (0, r.jsx)(u.y, {}),
+            "success" === A.status &&
+                (0, r.jsxs)("div", {
+                    className: v.d,
                     children: [
-                        (0, i.jsx)(l.m, { size: "xs", color: "currentColor", className: m.q }),
-                        (0, i.jsx)(d.E, {
+                        (0, r.jsx)(a.m, { size: "xs", color: "currentColor", className: v.q }),
+                        (0, r.jsx)(o.E, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            children: h.intl.string(h.t.yb7itQ),
+                            children: E.intl.string(E.t.yb7itQ),
                         }),
                     ],
                 }),
         ],
     });
 }
-function p() {
-    (0, _.openModalLazy)(async () => {
+function T() {
+    (0, c.openModalLazy)(async () => {
         let { QuestRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 175248));
-        return (t) => (0, i.jsx)(e, { ...t });
+        return (t) => (0, r.jsx)(e, { ...t });
     });
 }

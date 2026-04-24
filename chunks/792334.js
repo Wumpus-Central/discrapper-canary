@@ -1,5 +1,6 @@
-n.d(t, { B: () => a });
-var r = n(64700);
-function a(e) {
-    return r.useMemo(() => e?.items.filter((e) => !0 !== e.isOwned) ?? [], [e]);
+"use strict";
+l.d(e, { B: () => n });
+var i = l(64700);
+function n(t) {
+    return i.useMemo(() => t?.items.filter((t) => !0 !== t.isOwned) ?? [], [t]);
 }

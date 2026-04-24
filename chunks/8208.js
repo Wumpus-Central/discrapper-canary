@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     y5: "compactBarContainer__8e688",
     nI: "compactBarBackground__8e688",

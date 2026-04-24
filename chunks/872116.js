@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     zr: "root__24502",
     El: "headerInner__24502",
@@ -6,5 +7,5 @@ e.exports = {
     pg: "messageIconButton__24502",
     Fd: "fetchError__24502",
     rf: "body__24502",
-    Xh: "username__24502",
+    eF: "userInfo__24502",
 };

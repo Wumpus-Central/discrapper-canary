@@ -1,16 +1,17 @@
-n.d(t, { n: () => c });
+"use strict";
+n.d(t, { n: () => d });
 var a = n(627968),
-    l = n(64700),
-    i = n(192308),
+    i = n(64700),
+    l = n(192308),
     r = n(477782),
     s = n(695366),
-    o = n(409626),
-    d = n(985018);
-function c(e, t) {
-    let c = l.useCallback(() => {
+    c = n(409626),
+    o = n(985018);
+function d(e, t) {
+    let d = i.useCallback(() => {
         null != e &&
-            (t?.(o.Ws.Feedback),
-            (0, i.openModalLazy)(async () => {
+            (t?.(c.Ws.Feedback),
+            (0, l.openModalLazy)(async () => {
                 let { default: t } = await n.e("49876").then(n.bind(n, 651930));
                 return (n) => (0, a.jsx)(t, { ...n, detectedActivity: { application_id: e, name: "" } });
             }));
@@ -19,8 +20,8 @@ function c(e, t) {
         ? null
         : (0, a.jsx)(r.Dr, {
               id: "game-profile-something-wrong",
-              label: d.intl.string(d.t.qP2cXd),
-              action: c,
+              label: o.intl.string(o.t.qP2cXd),
+              action: d,
               color: "danger",
               leadingAccessory: { type: "icon", icon: s.E },
           });

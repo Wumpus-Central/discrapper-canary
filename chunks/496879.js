@@ -1,225 +1,231 @@
-a.r(n), a.d(n, { default: () => R });
+a.r(n), a.d(n, { default: () => y });
 var t = a(627968),
     r = a(64700),
     l = a(17928),
     i = a(214947),
-    o = a(228366),
-    _ = a(189252),
-    c = a(994500),
-    d = a(922016),
-    s = a(149741),
+    s = a(228366),
+    c = a(189252),
+    o = a(994500),
+    _ = a(922016),
+    d = a(149741),
     u = a(308368),
-    I = a(308528),
-    f = a(442433),
-    p = a(780907),
-    h = a(49229),
-    C = a(956793),
-    E = a(428249),
-    N = a(67103),
-    g = a(975732),
-    T = a(734057),
-    m = a(652215),
-    y = a(381941),
-    A = a(985018),
-    S = a(383614);
-function v(e) {
-    let { onOpen: n, onClose: l, children: i, popoutPosition: o, popoutAlign: _ } = e,
-        [c, v] = r.useState(!1),
-        R = r.useRef(null),
-        x = r.useCallback(() => {
-            v(!1), l?.();
+    f = a(308528),
+    h = a(442433),
+    I = a(780907),
+    g = a(49229),
+    m = a(956793),
+    p = a(428249),
+    A = a(67103),
+    C = a(975732),
+    E = a(734057),
+    N = a(652215),
+    v = a(381941),
+    b = a(985018),
+    T = a(383614);
+function x(e) {
+    let { onOpen: n, onClose: l, children: i, popoutPosition: s, popoutAlign: c } = e,
+        [o, x] = r.useState(!1),
+        y = r.useRef(null),
+        k = r.useCallback(() => {
+            x(!1), l?.();
         }, [l]),
-        { handlePrimaryAction: b, handleContextMenu: k } = {
+        { handlePrimaryAction: R, handleContextMenu: S } = {
             handlePrimaryAction: r.useCallback(
                 (e) => {
                     switch (e.type) {
-                        case N.c.OPEN_DIRECT_MESSAGE:
+                        case A.c.OPEN_DIRECT_MESSAGE:
                             if (null == e.userId) return;
                             (async () => {
                                 try {
-                                    let n = await I.A.getOrEnsurePrivateChannel(e.userId);
-                                    C.default.selectPrivateChannel(n);
+                                    let n = await f.A.getOrEnsurePrivateChannel(e.userId);
+                                    m.default.selectPrivateChannel(n);
                                 } catch {}
                             })();
                             break;
-                        case N.c.OPEN_TEXT_CHAT_CHANNEL:
+                        case A.c.OPEN_TEXT_CHAT_CHANNEL:
                             if (null == e.channelId) return;
                             null != e.guildId
-                                ? C.default.selectChannel({ guildId: e.guildId, channelId: e.channelId })
-                                : C.default.selectPrivateChannel(e.channelId);
+                                ? m.default.selectChannel({ guildId: e.guildId, channelId: e.channelId })
+                                : m.default.selectPrivateChannel(e.channelId);
                             break;
-                        case N.c.CONNECT_VOICE_CHANNEL:
+                        case A.c.CONNECT_VOICE_CHANNEL:
                             if (null == e.channelId) return;
-                            C.default.selectVoiceChannel(e.channelId);
+                            m.default.selectVoiceChannel(e.channelId);
                             break;
-                        case N.c.DISCONNECT_VOICE_CHANNEL:
-                            C.default.disconnect();
+                        case A.c.DISCONNECT_VOICE_CHANNEL:
+                            m.default.disconnect();
                             break;
-                        case N.c.ACCEPT_FRIEND_REQUEST:
+                        case A.c.ACCEPT_FRIEND_REQUEST:
                             if (null == e.userId) return;
-                            h.A.addRelationship({ userId: e.userId, context: { location: "friends-popout" } });
+                            g.A.addRelationship({ userId: e.userId, context: { location: "friends-popout" } });
                             break;
-                        case N.c.DECLINE_FRIEND_REQUEST:
+                        case A.c.DECLINE_FRIEND_REQUEST:
                             if (null == e.userId) return;
-                            h.A.removeRelationship(e.userId, { location: "friends-popout" });
+                            g.A.removeRelationship(e.userId, { location: "friends-popout" });
                             break;
-                        case N.c.CANCEL_FRIEND_REQUEST:
+                        case A.c.CANCEL_FRIEND_REQUEST:
                             if (null == e.userId) return;
-                            h.A.cancelFriendRequest(e.userId, { location: "friends-popout" });
+                            g.A.cancelFriendRequest(e.userId, { location: "friends-popout" });
                             break;
-                        case N.c.SEND_FRIEND_REQUEST:
+                        case A.c.SEND_FRIEND_REQUEST:
                             if (null == e.userId) return;
-                            h.A.addRelationship({ userId: e.userId, context: { location: "friends-popout" } });
+                            g.A.addRelationship({ userId: e.userId, context: { location: "friends-popout" } });
                             break;
-                        case N.c.OPEN_FRIEND_MODAL:
+                        case A.c.OPEN_FRIEND_MODAL:
                             if (null == e.userId) return;
-                            (0, g.openUserProfileModal)({
+                            (0, C.openUserProfileModal)({
                                 userId: e.userId,
                                 guildId: e.guildId ?? void 0,
                                 channelId: e.channelId,
-                                appContext: m.BRT.APP,
+                                appContext: N.BRT.APP,
                             }),
-                                x();
+                                k();
                             break;
-                        case N.c.SEND_ACTIVITY_INVITE:
+                        case A.c.SEND_ACTIVITY_INVITE:
                             if (null == e.userId || null == e.activity) return;
                             u.A.sendActivityInviteUser({
-                                type: m.xL.JOIN,
+                                type: N.xL.JOIN,
                                 userId: e.userId,
                                 activity: e.activity,
-                                location: m.ThZ.USER_ACTIVITY_ACTIONS,
+                                location: N.ThZ.USER_ACTIVITY_ACTIONS,
                             });
                             break;
-                        case N.c.JOIN:
+                        case A.c.JOIN:
                             if (null == e.userId || null == e.activity) return;
-                            p.Ay.join({
+                            I.Ay.join({
                                 userId: e.userId,
                                 sessionId: e.activity.session_id,
                                 applicationId: e.activity.application_id,
                                 channelId: null,
                                 messageId: null,
-                                source: m.ThZ.USER_ACTIVITY_ACTIONS,
+                                source: N.ThZ.USER_ACTIVITY_ACTIONS,
                             });
                             break;
-                        case N.c.ASK_TO_JOIN:
+                        case A.c.ASK_TO_JOIN:
                             if (null == e.userId || null == e.activity) return;
                             u.A.sendActivityInviteUser({
-                                type: m.xL.JOIN_REQUEST,
+                                type: N.xL.JOIN_REQUEST,
                                 userId: e.userId,
                                 activity: e.activity,
-                                location: m.ThZ.USER_ACTIVITY_ACTIONS,
+                                location: N.ThZ.USER_ACTIVITY_ACTIONS,
                             });
                             break;
-                        case N.c.SEND_GAME_INVITE_MESSAGE: {
+                        case A.c.SEND_GAME_INVITE_MESSAGE: {
                             if (null == e.userId || null == e.gameEntry) return;
                             let n = e.gameEntry,
                                 a = e.userId;
                             (async () => {
                                 try {
-                                    let e = await I.A.getOrEnsurePrivateChannel(a);
-                                    C.default.selectPrivateChannel(e);
-                                    let t = T.A.getChannel(e);
+                                    let e = await f.A.getOrEnsurePrivateChannel(a);
+                                    m.default.selectPrivateChannel(e);
+                                    let t = E.A.getChannel(e);
                                     if (null == t) return;
                                     !0 === n.extra.fake_inventory_item
-                                        ? await (0, E.J)({
+                                        ? await (0, p.J)({
                                               channel: t,
-                                              content: A.intl.formatToPlainString(A.t.UVBA9g, {
+                                              content: b.intl.formatToPlainString(b.t.UVBA9g, {
                                                   gameName: n.extra.game_name,
                                               }),
                                               whenReady: !0,
                                               doNotNotifyOnError: !1,
-                                              location: y.Hx.CONTENT_INVENTORY_MEMBERLIST,
+                                              location: v.Hx.CONTENT_INVENTORY_MEMBERLIST,
                                           })
-                                        : await (0, E.d)({
+                                        : await (0, p.d)({
                                               channel: t,
-                                              content: A.intl.string(A.t.DwAcMz),
+                                              content: b.intl.string(b.t.DwAcMz),
                                               entry: n,
                                               whenReady: !0,
                                               doNotNotifyOnError: !1,
-                                              location: y.Hx.CONTENT_INVENTORY_MEMBERLIST,
+                                              location: v.Hx.CONTENT_INVENTORY_MEMBERLIST,
                                           });
                                 } catch {}
                             })();
                             break;
                         }
-                        case N.c.SEARCH_FRIENDS:
-                        case N.c.USER_CONTEXT_MENU:
-                        case N.c.OPEN_SETTINGS_MODAL:
-                        case N.c.TAB_CHANGE:
+                        case A.c.SEARCH_FRIENDS:
+                        case A.c.USER_CONTEXT_MENU:
+                        case A.c.OPEN_SETTINGS_MODAL:
+                        case A.c.TAB_CHANGE:
                             break;
                         default:
                             e.type;
                     }
                 },
-                [x],
+                [k],
             ),
             handleContextMenu: r.useCallback((e) => {
                 switch (e.type) {
-                    case N.K.FRIEND_ROW:
+                    case A.K.FRIEND_ROW:
                         if (null == e.user) return;
-                        (0, f.L3)(
+                        (0, h.L3)(
                             e.event,
                             async () => {
-                                let { default: n } = await Promise.all([a.e("97262"), a.e("32418"), a.e("22880")]).then(
+                                let { default: n } = await Promise.all([a.e("97262"), a.e("32418"), a.e("61657")]).then(
                                     a.bind(a, 668569),
                                 );
-                                return (a) => (0, t.jsx)(n, { ...a, user: e.user, appContext: m.BRT.APP });
+                                return (a) => (0, t.jsx)(n, { ...a, user: e.user, appContext: N.BRT.APP });
                             },
-                            { context: m.BRT.APP },
+                            { context: N.BRT.APP },
                         );
                         break;
-                    case N.K.FRIEND_GROUP:
+                    case A.K.FRIEND_GROUP:
                         if (null == e.groupId || null == e.groupName) return;
-                        (0, f.L3)(e.event, async () => {
+                        (0, h.L3)(e.event, async () => {
                             let { default: n } = await a.e("97717").then(a.bind(a, 607956));
                             return (a) => (0, t.jsx)(n, { ...a, groupId: e.groupId, groupName: e.groupName });
                         });
                         break;
-                    case N.K.DM_CHANNEL:
+                    case A.K.DM_CHANNEL:
                         if (null == e.channel || null == e.user) return;
-                        (0, f.L3)(e.event, async () => {
+                        (0, h.L3)(e.event, async () => {
                             let { default: n } = await Promise.all([
                                 a.e("97262"),
+                                a.e("93103"),
+                                a.e("88342"),
+                                a.e("35313"),
                                 a.e("84442"),
                                 a.e("39778"),
-                                a.e("36857"),
+                                a.e("95375"),
                             ]).then(a.bind(a, 385913));
                             return (a) => (0, t.jsx)(n, { ...a, user: e.user, channel: e.channel, showModalItems: !1 });
                         });
                         break;
-                    case N.K.GROUP_DM_CHANNEL:
+                    case A.K.GROUP_DM_CHANNEL:
                         if (null == e.channel) return;
-                        (0, f.L3)(e.event, async () => {
-                            let { default: n } = await Promise.all([a.e("97262"), a.e("60200")]).then(a.bind(a, 4027));
+                        (0, h.L3)(e.event, async () => {
+                            let { default: n } = await Promise.all([a.e("97262"), a.e("60200"), a.e("68530")]).then(
+                                a.bind(a, 4027),
+                            );
                             return (a) => (0, t.jsx)(n, { ...a, channel: e.channel, selected: !1 });
                         });
                         break;
-                    case N.K.GUILD_TEXT_CHANNEL:
+                    case A.K.GUILD_TEXT_CHANNEL:
                         if (null == e.channel || null == e.guild) return;
-                        (0, f.L3)(e.event, async () => {
-                            let { default: n } = await Promise.all([a.e("97262"), a.e("38727"), a.e("85298")]).then(
+                        (0, h.L3)(e.event, async () => {
+                            let { default: n } = await Promise.all([a.e("97262"), a.e("79359"), a.e("26934")]).then(
                                 a.bind(a, 468916),
                             );
                             return (a) => (0, t.jsx)(n, { ...a, channel: e.channel, guild: e.guild });
                         });
                         break;
-                    case N.K.VOICE_CHANNEL:
+                    case A.K.VOICE_CHANNEL:
                         if (null == e.channel || null == e.guild) return;
-                        (0, f.L3)(e.event, async () => {
+                        (0, h.L3)(e.event, async () => {
                             let { default: n } = await Promise.all([
                                 a.e("97262"),
-                                a.e("38727"),
+                                a.e("93103"),
+                                a.e("79359"),
                                 a.e("99854"),
-                                a.e("53378"),
+                                a.e("48909"),
                             ]).then(a.bind(a, 119357));
                             return (a) => (0, t.jsx)(n, { ...a, channel: e.channel, guild: e.guild });
                         });
                         break;
-                    case N.K.VOICE_USER: {
+                    case A.K.VOICE_USER: {
                         if (null == e.user || null == e.channelId) return;
                         let n = e.guild?.id ?? null;
-                        (0, f.L3)(e.event, async () => {
-                            let { default: r } = await Promise.all([a.e("97262"), a.e("32418"), a.e("22880")]).then(
+                        (0, h.L3)(e.event, async () => {
+                            let { default: r } = await Promise.all([a.e("97262"), a.e("32418"), a.e("61657")]).then(
                                 a.bind(a, 668569),
                             );
                             return (a) =>
@@ -228,7 +234,7 @@ function v(e) {
                                     user: e.user,
                                     guildId: n ?? void 0,
                                     channelId: e.channelId,
-                                    appContext: m.BRT.APP,
+                                    appContext: N.BRT.APP,
                                 });
                         });
                         break;
@@ -238,8 +244,8 @@ function v(e) {
                 }
             }, []),
         },
-        P = r.useCallback(() => {
-            v((e) => {
+        w = r.useCallback(() => {
+            x((e) => {
                 let a = !e;
                 return a ? n?.() : l?.(), a;
             });
@@ -247,44 +253,44 @@ function v(e) {
         O = r.useCallback(
             () =>
                 (0, t.jsx)("div", {
-                    className: S.k,
-                    children: (0, t.jsx)(s.$, { onPrimaryAction: b, onContextMenu: k }),
+                    className: T.k,
+                    children: (0, t.jsx)(d.$, { onPrimaryAction: R, onContextMenu: S }),
                 }),
-            [k, b],
+            [S, R],
         );
-    return (0, t.jsx)(d.Y, {
-        targetElementRef: R,
-        animation: d.Y.Animation.NONE,
-        position: o,
-        align: _,
+    return (0, t.jsx)(_.Y, {
+        targetElementRef: y,
+        animation: _.Y.Animation.NONE,
+        position: s,
+        align: c,
         autoInvert: !1,
-        shouldShow: c,
-        onRequestClose: x,
+        shouldShow: o,
+        onRequestClose: k,
         renderPopout: O,
         ignoreModalClicks: !0,
         clickTrap: !0,
         children: (e, n) => {
             let { isShown: a } = n;
-            return i(P, a, e, R);
+            return i(w, a, e, y);
         },
     });
 }
-function R() {
-    let e = (0, l.bG)([c.A], () => c.A.getPendingCount() > 0);
+function y() {
+    let e = (0, l.bG)([o.A], () => o.A.getPendingCount() > 0);
     return (
         r.useEffect(() => {
-            o.h.dispatch({ type: "FRIENDS_LIST_POPOUT_MOUNTED" });
+            s.h.dispatch({ type: "FRIENDS_LIST_POPOUT_MOUNTED" });
         }, []),
-        (0, t.jsx)(v, {
+        (0, t.jsx)(x, {
             popoutPosition: "bottom",
             popoutAlign: "left",
             children: (n, a, r, l) =>
-                (0, t.jsx)(_.A, {
+                (0, t.jsx)(c.A, {
                     ...r,
                     ref: l,
                     onClick: n,
                     icon: i.$,
-                    tooltip: A.intl.string(A.t.TdEu5X),
+                    tooltip: b.intl.string(b.t.TdEu5X),
                     showBadge: e,
                     selected: a,
                 }),

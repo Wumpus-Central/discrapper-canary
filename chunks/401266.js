@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { AI: () => s, IL: () => i });
-let r = (0, n(353640).v)(() => ({ hasFiredFromMessage: new Set() }));
-function i(e) {
-    let { hasFiredFromMessage: t } = r.getState();
-    t.add(e), r.setState({ hasFiredFromMessage: t });
-}
+n.d(t, { AI: () => a, IL: () => s });
+let i = (0, n(353640).v)(() => ({ hasFiredFromMessage: new Set() }));
 function s(e) {
-    let { hasFiredFromMessage: t } = r.getState();
+    let { hasFiredFromMessage: t } = i.getState();
+    t.add(e), i.setState({ hasFiredFromMessage: t });
+}
+function a(e) {
+    let { hasFiredFromMessage: t } = i.getState();
     return t.has(e);
 }

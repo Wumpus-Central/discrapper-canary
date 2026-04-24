@@ -1,17 +1,18 @@
-n.d(t, { A: () => l });
-var a = n(64700),
-    s = n(933725),
-    i = n(849841);
-function l(e, t) {
-    let [n, l] = a.useState(!1),
-        r = a.useCallback(async () => {
-            null != e && (l(!0), await (0, s.m)(e, !0), l(!1)), t?.();
+"use strict";
+n.d(t, { A: () => s });
+var r = n(64700),
+    i = n(933725),
+    a = n(849841);
+function s(e, t) {
+    let [n, s] = r.useState(!1),
+        l = r.useCallback(async () => {
+            null != e && (s(!0), await (0, i.m)(e, !0), s(!1)), t?.();
         }, [e, t]),
-        o = (0, i.A)(e);
+        o = (0, a.A)(e);
     return {
         isAdopting: n,
-        onAdoptTag: r,
-        onEditProfile: a.useCallback(() => {
+        onAdoptTag: l,
+        onEditProfile: r.useCallback(() => {
             t?.(), o();
         }, [o, t]),
     };

@@ -1,11 +1,12 @@
-t.d(e, { A: () => n });
-var a = t(64700);
-let n = () => {
-    let [A, e] = (0, a.useState)(null);
+"use strict";
+n.d(t, { A: () => a });
+var i = n(64700);
+let a = () => {
+    let [e, t] = (0, i.useState)(null);
     return (
-        (0, a.useEffect)(() => {
-            window?.EyeDropper != null && e(new window.EyeDropper());
+        (0, i.useEffect)(() => {
+            window?.EyeDropper != null && t(new window.EyeDropper());
         }, []),
-        A
+        e
     );
 };

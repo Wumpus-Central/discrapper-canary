@@ -1,18 +1,19 @@
-n.d(t, { v: () => c });
-var i = n(284009),
-    s = n.n(i),
-    r = n(97352),
-    a = n(927578),
-    l = n(788868),
-    o = n(652215);
+"use strict";
+i.d(t, { v: () => c });
+var r = i(284009),
+    n = i.n(r),
+    s = i(97352),
+    l = i(927578),
+    a = i(788868),
+    o = i(652215);
 function c(e, t) {
-    let n = r.A.get(e.planId);
-    s()(null != n, "missing premium subscription plan");
-    let i = r.A.getForSkuAndInterval((0, a.mH)(l.pe.GUILD), n.interval, n.intervalCount);
-    s()(null != i, "missing premium guild plan");
+    let i = s.A.get(e.planId);
+    n()(null != i, "missing premium subscription plan");
+    let r = s.A.getForSkuAndInterval((0, l.mH)(a.pe.GUILD), i.interval, i.intervalCount);
+    n()(null != r, "missing premium guild plan");
     let c = null != e.renewalMutations ? e.renewalMutations.additionalPlans : e.additionalPlans,
-        d = (e.status === o.Dmq.CANCELED ? 0 : (0, a.bx)(c)) + t,
-        u = c.filter((e) => e.planId !== i.id);
-    if (d < 0) throw Error("Invalid adjustment");
-    return 0 === d ? u : [...u, { planId: i.id, quantity: d }];
+        u = (e.status === o.Dmq.CANCELED ? 0 : (0, l.bx)(c)) + t,
+        d = c.filter((e) => e.planId !== r.id);
+    if (u < 0) throw Error("Invalid adjustment");
+    return 0 === u ? d : [...d, { planId: r.id, quantity: u }];
 }

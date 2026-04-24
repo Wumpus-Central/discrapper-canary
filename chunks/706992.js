@@ -1,7 +1,8 @@
-r.d(t, { A: () => a });
+"use strict";
+r.d(t, { A: () => n });
 var l = r(627968),
-    n = r(699041);
-let a = (e) => {
+    s = r(699041);
+let n = (e) => {
     let { padding: t = 32, children: r } = e;
-    return (0, l.jsx)("div", { className: n.H, style: { paddingInline: Math.max(0, t) }, children: r });
+    return (0, l.jsx)("div", { className: s.H, style: { paddingInline: Math.max(0, t) }, children: r });
 };

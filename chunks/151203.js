@@ -44,9 +44,14 @@ function w(e) {
                         guildId: t,
                         onContextMenu: (e) => {
                             (0, o.L3)(e, async () => {
-                                let { default: e } = await Promise.all([r.e("97262"), r.e("91042"), r.e("499")]).then(
-                                    r.bind(r, 365689),
-                                );
+                                let { default: e } = await Promise.all([
+                                    r.e("97262"),
+                                    r.e("93103"),
+                                    r.e("88342"),
+                                    r.e("35313"),
+                                    r.e("91042"),
+                                    r.e("42547"),
+                                ]).then(r.bind(r, 365689));
                                 return (r) => (0, i.jsx)(e, { ...r, user: u, guildId: t, showMediaItems: !0 });
                             });
                         },

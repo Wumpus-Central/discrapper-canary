@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Nr: "card_c59071",
     MY: "cardHeader_c59071",

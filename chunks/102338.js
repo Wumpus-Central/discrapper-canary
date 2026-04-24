@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     uW: "section__3af27",
     R_: "heading__3af27",

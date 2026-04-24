@@ -1,13 +1,14 @@
-a.d(t, { A: () => i });
-var n = a(315069),
-    r = a(112589);
-class i extends n.A {
+"use strict";
+n.d(t, { A: () => s });
+var i = n(315069),
+    a = n(112589);
+class s extends i.A {
     subscriptions;
     otps;
     static createFromServer(e) {
-        return new i({
-            subscriptions: e.subscriptions.map((e) => r.A.createFromServer(i.convertStoreListing(e))),
-            otps: e.otps.map((e) => r.A.createFromServer(i.convertStoreListing(e))),
+        return new s({
+            subscriptions: e.subscriptions.map((e) => a.A.createFromServer(s.convertStoreListing(e))),
+            otps: e.otps.map((e) => a.A.createFromServer(s.convertStoreListing(e))),
         });
     }
     static convertStoreListing(e) {

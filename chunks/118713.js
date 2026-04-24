@@ -1,88 +1,89 @@
-t.d(r, { A: () => u });
-var d = t(627968),
-    l = t(64700),
-    c = t(503698),
-    o = t.n(c),
-    a = t(713517),
-    n = t(949317);
-let s = (e) => {
-        let { position: r, children: t } = e;
-        return (0, d.jsx)("div", { className: o()(n.child, n[r]), children: t });
+"use strict";
+r.d(t, { A: () => d });
+var l = r(627968),
+    s = r(64700),
+    n = r(503698),
+    a = r.n(n),
+    i = r(713517),
+    c = r(482284);
+let u = (e) => {
+        let { position: t, children: r } = e;
+        return (0, l.jsx)("div", { className: a()(c.child, c[t]), children: r });
     },
-    u = (e) => {
-        let { children: r, paused: t = !1, slideDuration: c = 5e3 } = e,
-            [o, u] = l.useState(0),
-            i = l.useRef(null),
-            h = (0, a.M)(i),
-            k = l.useRef(void 0),
-            p = l.useMemo(
+    d = (e) => {
+        let { children: t, paused: r = !1, slideDuration: n = 5e3 } = e,
+            [a, d] = s.useState(0),
+            o = s.useRef(null),
+            h = (0, i.M)(o),
+            m = s.useRef(void 0),
+            p = s.useMemo(
                 () =>
-                    l.Children.map(r, (e) =>
-                        l.isValidElement(e)
+                    s.Children.map(t, (e) =>
+                        s.isValidElement(e)
                             ? null != e && "object" == typeof e && e.$$typeof === Symbol.for("react.portal")
                                 ? e
-                                : l.cloneElement(e, { tabIndex: -1 })
+                                : s.cloneElement(e, { tabIndex: -1 })
                             : e,
                     ),
-                [r],
+                [t],
             );
-        l.useEffect(() => {
-            Array.isArray(p) ? u(o >= p?.length ? Math.max(p?.length - 1, 0) : o) : u(0);
-        }, [p, o]);
-        let b = t || h;
-        return (l.useEffect(() => {
-            if (b) {
-                null != k.current && (window.clearTimeout(k.current), (k.current = void 0));
+        s.useEffect(() => {
+            Array.isArray(p) ? d(a >= p?.length ? Math.max(p?.length - 1, 0) : a) : d(0);
+        }, [p, a]);
+        let g = r || h;
+        return (s.useEffect(() => {
+            if (g) {
+                null != m.current && (window.clearTimeout(m.current), (m.current = void 0));
                 return;
             }
             let e = () => {
-                u((e) => {
-                    let r = e + 1;
-                    return r >= (p?.length ?? 1) ? 0 : r;
+                d((e) => {
+                    let t = e + 1;
+                    return t >= (p?.length ?? 1) ? 0 : t;
                 }),
-                    (k.current = window.setTimeout(e, c));
+                    (m.current = window.setTimeout(e, n));
             };
-            window.clearTimeout(k.current), (k.current = window.setTimeout(e, c));
-        }, [b, c, p]),
-        l.useEffect(
+            window.clearTimeout(m.current), (m.current = window.setTimeout(e, n));
+        }, [g, n, p]),
+        s.useEffect(
             () => () => {
-                window.clearTimeout(k.current);
+                window.clearTimeout(m.current);
             },
             [],
         ),
         null == p)
             ? null
             : Array.isArray(p)
-              ? (0, d.jsx)("div", {
-                    ref: i,
-                    className: n.carousel,
-                    children: (0, d.jsx)("div", {
-                        className: n.children,
-                        children: p?.map((e, r) => {
-                            var t, l, c;
-                            let a =
-                                ((t = r),
-                                (l = o),
-                                (c = p.length),
-                                t === l
+              ? (0, l.jsx)("div", {
+                    ref: o,
+                    className: c.carousel,
+                    children: (0, l.jsx)("div", {
+                        className: c.children,
+                        children: p?.map((e, t) => {
+                            var r, s, n;
+                            let i =
+                                ((r = t),
+                                (s = a),
+                                (n = p.length),
+                                r === s
                                     ? "center"
-                                    : t < l
-                                      ? l === c - 1 && 0 === t
+                                    : r < s
+                                      ? s === n - 1 && 0 === r
                                           ? "right"
                                           : "left"
-                                      : 0 === l && t === c - 1
+                                      : 0 === s && r === n - 1
                                         ? "left"
                                         : "right");
-                            return (0, d.jsx)(s, { position: a, children: e }, r);
+                            return (0, l.jsx)(u, { position: i, children: e }, t);
                         }),
                     }),
                 })
-              : (0, d.jsx)("div", {
-                    ref: i,
-                    className: n.carousel,
-                    children: (0, d.jsx)("div", {
-                        className: n.children,
-                        children: (0, d.jsx)(s, { position: "center", children: r }),
+              : (0, l.jsx)("div", {
+                    ref: o,
+                    className: c.carousel,
+                    children: (0, l.jsx)("div", {
+                        className: c.children,
+                        children: (0, l.jsx)(u, { position: "center", children: t }),
                     }),
                 });
     };

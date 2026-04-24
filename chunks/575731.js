@@ -1,7 +1,8 @@
+"use strict";
 n.d(t, { A: () => c });
 var r = n(17928),
-    a = n(427358),
-    i = n(153488),
+    i = n(427358),
+    a = n(153488),
     l = n(287809),
     s = n(607567),
     o = n(652215);
@@ -15,8 +16,8 @@ function c(e) {
                 }),
             [e.id, e.guild_id],
         ),
-        n = (0, r.bG)([a.A], () => a.A.getUserAffinitiesMap()),
-        c = (0, r.bG)([i.A], () => i.A.hasConsented(o.YAq.PERSONALIZATION));
+        n = (0, r.bG)([i.A], () => i.A.getUserAffinitiesMap()),
+        c = (0, r.bG)([a.A], () => a.A.hasConsented(o.YAq.PERSONALIZATION));
     return (0, r.yK)(
         [l.default],
         () =>

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper_a4e118",
     Sl: "image_a4e118",

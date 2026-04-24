@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     l4: "overviewContainer_c4b47c",
     mA: "descriptionClamp_c4b47c",

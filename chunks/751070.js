@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__8a8e7",
     id: "discount__8a8e7",

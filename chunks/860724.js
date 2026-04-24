@@ -1,52 +1,53 @@
-n.d(t, { u: () => c }), n(321073);
-var r = n(64700),
-    a = n(627968),
-    i = n(546605),
-    o = n(364995),
-    l = n(900730),
-    s = n(156312),
-    d = n(921925),
-    u = n(520796);
-let c = () => {
-    let { errorMessage: e } = (0, d.e)({}),
-        t = (0, u.P)(),
-        n = (function () {
-            let e = (0, i.vg)("StatefulCheckoutStoreRelocationNotice"),
-                { paymentSourceId: t } = (0, s.P5)(),
-                { paymentSourceRecords: n } = (0, o.Fy)(),
+"use strict";
+r.d(t, { u: () => u }), r(321073);
+var i = r(64700),
+    a = r(627968),
+    n = r(546605),
+    s = r(364995),
+    l = r(900730),
+    o = r(156312),
+    c = r(921925),
+    d = r(520796);
+let u = () => {
+    let { errorMessage: e } = (0, c.e)({}),
+        t = (0, d.P)(),
+        r = (function () {
+            let e = (0, n.vg)("StatefulCheckoutStoreRelocationNotice"),
+                { paymentSourceId: t } = (0, o.P5)(),
+                { paymentSourceRecords: r } = (0, s.Fy)(),
                 {
-                    relocationCountry: d,
-                    relocationCurrencyCode: u,
-                    willForfeitGiftCardBalance: c,
-                } = r.useMemo(() => {
-                    let e = null != t ? n.find((e) => e.id === t) : null;
+                    relocationCountry: c,
+                    relocationCurrencyCode: d,
+                    willForfeitGiftCardBalance: u,
+                } = i.useMemo(() => {
+                    let e = null != t ? r.find((e) => e.id === t) : null;
                     return {
                         relocationCountry: e?.relocationCountry ?? null,
                         relocationCurrencyCode: e?.relocationCurrencyCode ?? null,
                         willForfeitGiftCardBalance: e?.willForfeitGiftCardBalance ?? !1,
                     };
-                }, [n, t]);
-            return r.useMemo(
+                }, [r, t]);
+            return i.useMemo(
                 () =>
-                    e && null != d
+                    e && null != c
                         ? {
                               directContent: (0, a.jsx)(l.c, {
-                                  relocationCountry: d,
-                                  relocationCurrencyCode: u,
-                                  willForfeitGiftCardBalance: c,
+                                  relocationCountry: c,
+                                  relocationCurrencyCode: d,
+                                  willForfeitGiftCardBalance: u,
                               }),
                               key: "store-relocation-notice",
                           }
                         : null,
-                [e, d, u, c],
+                [e, c, d, u],
             );
         })();
     return {
         errorMessage: e,
         warningMessage: t,
-        richNotices: r.useMemo(() => {
+        richNotices: i.useMemo(() => {
             let e = [];
-            return null != n && e.push(n), e;
-        }, [n]),
+            return null != r && e.push(r), e;
+        }, [r]),
     };
 };

@@ -1,0 +1,19 @@
+"use strict";
+e.exports = {
+    qS: "badge__86331",
+    f7: "badgeVerifiedIcon__86331",
+    S3: "roleName__86331",
+    SW: "popout__86331",
+    jf: "popoutChecks__86331",
+    sV: "popoutChecksGroup__86331",
+    ei: "popoutCheckGroupName__86331",
+    j$: "popoutCheckGroupPlatformIcon__86331",
+    wL: "popoutCheck__86331",
+    D$: "popoutCheckIcon__86331",
+    oT: "popoutHeaderContainer__86331",
+    Io: "popoutHeaderText__86331",
+    UD: "buttonContainer__86331",
+    wz: "getRolesButton__86331",
+    lQ: "viewConnectionsButton__86331",
+    AO: "botTag__86331",
+};

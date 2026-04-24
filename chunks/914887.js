@@ -1,53 +1,54 @@
+"use strict";
 n.d(t, { a: () => r });
-var i = n(64700),
-    l = n(954571),
-    a = n(652215);
+var a = n(64700),
+    i = n(954571),
+    l = n(652215);
 function r(e, t, n, r) {
-    let s = i.useRef(null),
-        o = i.useRef(t),
-        d = i.useRef({ positionInSection: n, analyticsLocations: r });
-    i.useEffect(() => {
-        o.current = t;
+    let s = a.useRef(null),
+        c = a.useRef(t),
+        o = a.useRef({ positionInSection: n, analyticsLocations: r });
+    a.useEffect(() => {
+        c.current = t;
     }, [t]);
-    let c = i.useCallback(() => {
+    let d = a.useCallback(() => {
             let {
                     sessionId: t,
                     guildId: n,
-                    pageIndex: i,
+                    pageIndex: a,
                     pageTitle: r,
                     pageSection: s,
-                    pageSectionTitle: c,
+                    pageSectionTitle: d,
                     isUserGuildMember: u,
                     pageHasLeaderboard: m,
-                } = o.current,
-                { positionInSection: _, analyticsLocations: h } = d.current;
-            l.default.track(a.HAw.SLAYER_STOREFRONT_CARD_IMPRESSION, {
+                } = c.current,
+                { positionInSection: f, analyticsLocations: h } = o.current;
+            i.default.track(l.HAw.SLAYER_STOREFRONT_CARD_IMPRESSION, {
                 slayer_storefront_session_id: t,
                 sku_id: e,
                 guild_id: n,
-                page_index: i,
+                page_index: a,
                 page_title: r,
                 page_section: s,
-                page_section_title: c,
-                position_in_section: _,
+                page_section_title: d,
+                position_in_section: f,
                 is_user_guild_member: u,
                 page_has_leaderboard: m,
                 location_stack: h,
             });
         }, [e]),
-        u = i.useCallback(
+        u = a.useCallback(
             (e) => {
                 e
                     ? null === s.current &&
                       (s.current = window.setTimeout(() => {
-                          c(), (s.current = null);
+                          d(), (s.current = null);
                       }, 1e3))
                     : null !== s.current && (clearTimeout(s.current), (s.current = null));
             },
-            [c],
+            [d],
         );
     return (
-        i.useEffect(
+        a.useEffect(
             () => () => {
                 null !== s.current && (clearTimeout(s.current), (s.current = null));
             },

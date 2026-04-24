@@ -1,15 +1,16 @@
-l.d(t, { d: () => r });
-var n = l(627968),
-    a = l(192308),
-    i = l(294454);
+"use strict";
+n.d(t, { d: () => r });
+var a = n(627968),
+    i = n(192308),
+    l = n(294454);
 let r = (e) => {
-    let { sku: t, guildId: r, source: s, analyticsLocations: o, analyticsContext: d } = e;
-    (0, a.openModalLazy)(
+    let { sku: t, guildId: r, source: s, analyticsLocations: c, analyticsContext: o } = e;
+    (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([l.e("96758"), l.e("922"), l.e("10404")]).then(l.bind(l, 763375));
-            return (l) =>
-                (0, n.jsx)(e, { ...l, sku: t, guildId: r, source: s, analyticsLocations: o, analyticsContext: d });
+            let { default: e } = await Promise.all([n.e("96758"), n.e("922"), n.e("10404")]).then(n.bind(n, 763375));
+            return (n) =>
+                (0, a.jsx)(e, { ...n, sku: t, guildId: r, source: s, analyticsLocations: c, analyticsContext: o });
         },
-        { stackingBehavior: "stack", modalKey: i.aU },
+        { stackingBehavior: "stack", modalKey: l.aU },
     );
 };

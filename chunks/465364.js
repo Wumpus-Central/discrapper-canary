@@ -1,95 +1,96 @@
-n.d(t, { Ay: () => m, Le: () => u, Tz: () => h, jp: () => _, ko: () => d }), n(380610);
-var a = n(833291);
+"use strict";
+n.d(t, { Ay: () => _, Le: () => d, Tz: () => f, jp: () => p, ko: () => u }), n(380610);
+var r = n(833291);
 n(100392);
 var i = n(46054),
-    l = n(659674),
-    r = n(38405),
+    a = n(659674),
+    l = n(38405),
     s = n(652215);
 let o = new Set([s.Auw.IMAGE, s.Auw.GIFV]),
     c = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
-function d(e, t) {
-    let n = u({ channelId: e.channel_id, messageId: e.id, renderOptions: t }),
-        a = null != e.webhookId;
+function u(e, t) {
+    let n = d({ channelId: e.channel_id, messageId: e.id, renderOptions: t }),
+        r = null != e.webhookId;
     return {
         ...n,
-        allowLinks: a || n.allowLinks,
-        allowEmojiLinks: a,
+        allowLinks: r || n.allowLinks,
+        allowEmojiLinks: r,
         mentionChannels: e.mentionChannels,
         soundboardSounds: e.soundboardSounds ?? [],
     };
 }
-function u(e) {
-    let { channelId: t, messageId: n, renderOptions: a } = e;
+function d(e) {
+    let { channelId: t, messageId: n, renderOptions: r } = e;
     return {
         channelId: t,
         messageId: n,
-        allowLinks: !!a.allowLinks,
-        allowDevLinks: !!a.allowDevLinks,
-        allowTimeMentionInput: !!a.allowTimeMentionInput,
-        formatInline: !!a.formatInline,
-        noStyleAndInteraction: !!a.noStyleAndInteraction,
-        allowHeading: !!a.allowHeading,
-        allowList: !!a.allowList,
-        previewLinkTarget: !!a.previewLinkTarget,
-        disableAnimatedEmoji: !!a.disableAnimatedEmoji,
+        allowLinks: !!r.allowLinks,
+        allowDevLinks: !!r.allowDevLinks,
+        allowTimeMentionInput: !!r.allowTimeMentionInput,
+        formatInline: !!r.formatInline,
+        noStyleAndInteraction: !!r.noStyleAndInteraction,
+        allowHeading: !!r.allowHeading,
+        allowList: !!r.allowList,
+        previewLinkTarget: !!r.previewLinkTarget,
+        disableAnimatedEmoji: !!r.disableAnimatedEmoji,
         allowEmojiLinks: !1,
         disableAutoBlockNewlines: !0,
         mentionChannels: [],
         soundboardSounds: [],
         muted: !1,
         unknownUserMentionPlaceholder: !0,
-        viewingChannelId: a.viewingChannelId,
-        forceWhite: !!a.forceWhite,
-        textColor: a.textColor,
+        viewingChannelId: r.viewingChannelId,
+        forceWhite: !!r.forceWhite,
+        textColor: r.textColor,
     };
 }
-function m(e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return (function (e, t, n) {
         let {
                 toAST: i = !1,
                 hideSimpleEmbedContent: s = !0,
-                formatInline: u = !1,
-                postProcessor: m,
-                contentMessage: _,
+                formatInline: d = !1,
+                postProcessor: _,
+                contentMessage: p,
             } = n,
-            h = !1,
-            g = !1,
-            A = (_ ?? t).content,
-            b = e(A, !0, d(t, n), (e, n, i) => {
-                var d, b, T;
-                let I;
+            f = !1,
+            m = !1,
+            b = (p ?? t).content,
+            A = e(b, !0, u(t, n), (e, n, i) => {
+                var u, A, E;
+                let v;
                 return (
-                    (g = i ?? !1),
+                    (m = i ?? !1),
                     Array.isArray(e) || (e = [e]),
-                    g && (e = [{ type: "text", content: A, originalMatch: { index: 0, 0: A } }]),
+                    m && (e = [{ type: "text", content: b, originalMatch: { index: 0, 0: b } }]),
                     s &&
                         (e = (function (e, t) {
                             if (1 !== e.length || 1 !== t.length) return e;
                             let n = e[0],
-                                a = t[0];
-                            return ("link" === n.type || "attachmentLink" === n.type) && o.has(a.type) && (0, l.NV)(a)
+                                r = t[0];
+                            return ("link" === n.type || "attachmentLink" === n.type) && o.has(r.type) && (0, a.NV)(r)
                                 ? []
                                 : e;
-                        })(e, (_ ?? t).embeds)),
-                    u ||
-                        ((d = e),
+                        })(e, (p ?? t).embeds)),
+                    d ||
+                        ((u = e),
                         (e = n
-                            ? p(d)
-                            : ("paragraph" === d[0].type &&
-                                  d[0].content instanceof Array &&
-                                  (d[0].content = p(d[0].content)),
-                              d))),
-                    (I = (b = e).some((e) => "link" !== e.type)),
-                    (e = b.filter((e) => {
+                            ? h(u)
+                            : ("paragraph" === u[0].type &&
+                                  u[0].content instanceof Array &&
+                                  (u[0].content = h(u[0].content)),
+                              u))),
+                    (v = (A = e).some((e) => "link" !== e.type)),
+                    (e = A.filter((e) => {
                         let t = "link" === e.type,
-                            n = null != e.target ? (0, a.ts)(e.target) : null;
-                        return !(t && null != n && !I);
+                            n = null != e.target ? (0, r.ts)(e.target) : null;
+                        return !(t && null != n && !v);
                     })),
                     t.embeds.length > 0 &&
-                        ((T = e),
-                        (h = n ? f(T) : "paragraph" === T[0].type && T[0].content instanceof Array && f(T[0].content))),
-                    u &&
+                        ((E = e),
+                        (f = n ? g(E) : "paragraph" === E[0].type && E[0].content instanceof Array && g(E[0].content))),
+                    d &&
                         (e = (function e(t) {
                             return (
                                 t.forEach((t) => {
@@ -99,25 +100,25 @@ function m(e) {
                                             ? e(t.content)
                                             : "string" == typeof t.content
                                               ? (t.content = t.content.replace(/\n/g, " "))
-                                              : r.A.captureMessage(
+                                              : l.A.captureMessage(
                                                     `AST node type:${t.type} with content typeof ${typeof t.content}. Keys ${Object.keys(t)}`,
                                                 ));
                                 }),
                                 t
                             );
                         })(e)),
-                    null != m && (e = m(e, n)),
+                    null != _ && (e = _(e, n)),
                     e
                 );
             });
-        return { hasSpoilerEmbeds: h, hasBailedAst: g, content: b };
+        return { hasSpoilerEmbeds: f, hasBailedAst: m, content: A };
     })(t.formatInline ? i.A.parseInlineReply : i.A.parse, e, t);
 }
-function _(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return (function (e, t) {
         arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        let { content: n, guildId: a, channelId: i } = t;
+        let { content: n, guildId: r, channelId: i } = t;
         return e(
             n,
             !0,
@@ -134,7 +135,7 @@ function _(e, t) {
                 disableAutoBlockNewlines: !0,
                 previewLinkTarget: !1,
                 disableAnimatedEmoji: !0,
-                guildId: a,
+                guildId: r,
                 channelId: i,
                 muted: !1,
                 disablePressableChannelMention: !0,
@@ -143,7 +144,7 @@ function _(e, t) {
         );
     })(e, t, n);
 }
-function h(e, t, n) {
+function f(e, t, n) {
     return (0, i.A.parseAutoModerationSystemMessage)(
         e,
         !0,
@@ -166,7 +167,7 @@ function h(e, t, n) {
         (e) => (Array.isArray(e) || (e = [e]), e),
     );
 }
-function p(e) {
+function h(e) {
     if (
         e.some(
             (e) =>
@@ -190,17 +191,17 @@ function p(e) {
         e
     );
 }
-function g(e, t) {
-    if (e instanceof Array) return e.some((e) => g(e, t));
+function m(e, t) {
+    if (e instanceof Array) return e.some((e) => m(e, t));
     let n = t(e);
     return null != n
         ? n
         : e.content instanceof Array
-          ? g(e.content, t)
-          : e.items instanceof Array && e.items.some((e) => g(e, t));
+          ? m(e.content, t)
+          : e.items instanceof Array && e.items.some((e) => m(e, t));
 }
-function f(e) {
-    return g(e, (e) =>
-        "spoiler" === e.type ? g(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
+function g(e) {
+    return m(e, (e) =>
+        "spoiler" === e.type ? m(e, (e) => "link" === e.type || "attachmentLink" === e.type || null) : null,
     );
 }

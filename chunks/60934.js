@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Y: "headerIcons_f5cf99",
     VT: "headerIconsIncentivizedAccountLinking_f5cf99",

@@ -1,102 +1,102 @@
-s.d(t, { A: () => z });
-var l = s(627968),
-    n = s(64700),
-    a = s(17928),
-    r = s(939249),
-    i = s(534514),
-    o = s(442433),
-    d = s(964486),
-    c = s(104171),
-    u = s(47167),
-    h = s(734057),
-    g = s(860071),
-    m = s(287809),
-    x = s(802958),
-    A = s(834730),
-    f = s(778712),
-    j = s(463930),
-    v = s(163328),
-    S = s(730134),
-    T = s(80682),
-    w = s(713654),
-    N = s(465364),
-    p = s(763754),
-    E = s(805964),
-    y = s(967144),
-    b = s(696451),
-    I = s(222823),
-    C = s(994500),
-    _ = s(935208),
-    k = s(427262),
-    M = s(456874),
-    R = s(707539),
-    F = s(838541),
-    G = s(985018),
-    H = s(992092);
+a.d(t, { A: () => H });
+var l = a(627968),
+    s = a(64700),
+    n = a(17928),
+    r = a(939249),
+    i = a(534514),
+    d = a(442433),
+    o = a(964486),
+    u = a(104171),
+    c = a(47167),
+    g = a(734057),
+    h = a(860071),
+    A = a(287809),
+    m = a(802958),
+    f = a(834730),
+    x = a(778712),
+    v = a(463930),
+    j = a(163328),
+    S = a(730134),
+    w = a(80682),
+    I = a(713654),
+    p = a(465364),
+    M = a(763754),
+    y = a(805964),
+    E = a(967144),
+    _ = a(696451),
+    N = a(222823),
+    b = a(994500),
+    F = a(935208),
+    R = a(427262),
+    C = a(456874),
+    G = a(707539),
+    T = a(838541),
+    k = a(985018),
+    K = a(992092);
 function B(e) {
     let { channel: t } = e,
-        s = (0, a.bG)([M.A], () => M.A.getMostRecentMessage(t.id));
-    return null == s ? (0, l.jsx)(D, { channel: t }) : (0, l.jsx)(K, { channel: t, message: s });
+        a = (0, n.bG)([C.A], () => C.A.getMostRecentMessage(t.id));
+    return null == a ? (0, l.jsx)(L, { channel: t }) : (0, l.jsx)(W, { channel: t, message: a });
 }
-function D(e) {
+function L(e) {
     let { channel: t } = e,
-        s = (0, R.JO)(t);
-    return (0, l.jsxs)(A.E, {
-        className: H.W$,
+        a = (0, G.JO)(t);
+    return (0, l.jsxs)(f.E, {
+        className: K.W$,
         variant: "text-sm/normal",
         color: "text-default",
-        children: [G.intl.string(G.t.Jmh6n9), "\xa0 • \xa0", (0, R.aK)(s)],
+        children: [k.intl.string(k.t.Jmh6n9), "\xa0 • \xa0", (0, G.aK)(a)],
     });
 }
-function K(e) {
-    let { channel: t, message: s } = e;
-    (0, T.Eq)({ [t.guild_id]: [s.author.id] }, "ThreadBrowserRowSubtext");
-    let r = (0, a.bG)([m.default], () => m.default.getUser(s.author.id) ?? s.author),
-        { nick: i, colorString: o, colorStrings: d } = (0, p.Ay)(s),
-        c = (0, y.gn)(t.guild_id, r.id, d),
-        { isBlocked: u, isIgnored: h } = (0, a.cf)(
-            [C.A],
-            () => ({ isBlocked: C.A.isBlockedForMessage(s), isIgnored: C.A.isIgnoredForMessage(s) }),
-            [s],
+function W(e) {
+    let { channel: t, message: a } = e;
+    (0, w.Eq)({ [t.guild_id]: [a.author.id] }, "ThreadBrowserRowSubtext");
+    let r = (0, n.bG)([A.default], () => A.default.getUser(a.author.id) ?? a.author),
+        { nick: i, colorString: d, colorStrings: o } = (0, M.Ay)(a),
+        u = (0, E.gn)(t.guild_id, r.id, o),
+        { isBlocked: c, isIgnored: g } = (0, n.cf)(
+            [b.A],
+            () => ({ isBlocked: b.A.isBlockedForMessage(a), isIgnored: b.A.isIgnoredForMessage(a) }),
+            [a],
         ),
-        g = n.useMemo(() => {
-            let e = null != s.content && "" !== s.content ? (0, N.Ay)(s, { formatInline: !0 }).content : null,
+        h = s.useMemo(() => {
+            let e = null != a.content && "" !== a.content ? (0, p.Ay)(a, { formatInline: !0 }).content : null,
                 {
                     contentPlaceholder: t,
-                    renderedContent: n,
-                    trailingIcon: a,
+                    renderedContent: s,
+                    trailingIcon: n,
                     leadingIcon: r,
-                } = (0, E.o)(s, e, u, h, H.BK, { trailingIconClass: H.sl, leadingIconClass: H.aG, iconSize: F.eJ });
-            return (0, l.jsxs)(l.Fragment, { children: [r, n ?? (0, l.jsx)("span", { children: t }), a] });
-        }, [s, u, h]);
-    return (0, l.jsxs)(A.E, {
-        className: H.W$,
+                } = (0, y.o)(a, e, c, g, K.BK, { trailingIconClass: K.sl, leadingIconClass: K.aG, iconSize: T.eJ });
+            return (0, l.jsxs)(l.Fragment, { children: [r, s ?? (0, l.jsx)("span", { children: t }), n] });
+        }, [a, c, g]);
+    return (0, l.jsxs)(f.E, {
+        className: K.W$,
         variant: "text-sm/normal",
         color: "text-default",
         children: [
-            (0, l.jsx)(S.A, { className: H.my, user: r, size: f._3.SIZE_16 }),
-            (0, l.jsx)(j.g, { name: i, colorString: o, colorStrings: c, className: H.fh }),
+            (0, l.jsx)(S.A, { className: K.my, user: r, size: x._3.SIZE_16 }),
+            (0, l.jsx)(v.g, { name: i, colorString: d, colorStrings: u, className: K.fh }),
             ":\xa0",
-            g,
+            h,
             "\xa0 • \xa0",
-            (0, R.aK)(_.default.extractTimestamp(s.id)),
+            (0, G.aK)(F.default.extractTimestamp(a.id)),
         ],
     });
 }
-function O(e) {
+function D(e) {
     let { channel: t } = e,
-        s = (0, a.bG)([I.Ay], () => I.Ay.lastMessageId(t.id)),
-        n =
-            null == s
+        a = (0, n.bG)([N.Ay], () => N.Ay.lastMessageId(t.id)),
+        s =
+            null == a
                 ? new Date(t.threadMetadata?.archiveTimestamp ?? Date.now()).getTime()
-                : _.default.extractTimestamp(s);
-    (0, T.Eq)({ [t.guild_id]: [t.ownerId] }, "ThreadBrowserRowSubtext");
-    let r = (0, a.bG)([m.default], () => m.default.getUser(t.ownerId)),
-        i = (0, a.bG)([b.Ay], () => b.Ay.getMember(t.guild_id, t.ownerId)),
-        o = (0, y.gn)(t.guild_id, r?.id, i?.colorStrings ?? null),
-        d = (0, w.gU)(t) ?? v.y;
-    return (0, l.jsx)(A.E, {
-        className: H.W$,
+                : F.default.extractTimestamp(a);
+    (0, w.Eq)({ [t.guild_id]: [t.ownerId] }, "ThreadBrowserRowSubtext");
+    let r = (0, n.bG)([A.default], () => A.default.getUser(t.ownerId)),
+        i = (0, n.bG)([_.Ay], () => _.Ay.getMember(t.guild_id, t.ownerId)),
+        d = (0, E.gn)(t.guild_id, r?.id, i?.colorStrings ?? null),
+        o = (0, I.gU)(t) ?? j.y;
+    return (0, l.jsx)(f.E, {
+        className: K.W$,
         variant: "text-sm/normal",
         color: "text-default",
         children:
@@ -104,88 +104,88 @@ function O(e) {
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)("div", {
-                              className: H.A2,
-                              children: (0, l.jsx)(d, { width: 10, height: 10, size: "custom", color: "currentColor" }),
+                              className: K.A2,
+                              children: (0, l.jsx)(o, { width: 10, height: 10, size: "custom", color: "currentColor" }),
                           }),
-                          G.intl.format(G.t["5Wk9+o"], { time: (0, R.aK)(n) }),
+                          k.intl.format(k.t["5Wk9+o"], { time: (0, G.aK)(s) }),
                       ],
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(S.A, { className: H.my, user: r, size: f._3.SIZE_16 }),
-                          G.intl.format(G.t["GFDmd/"], {
+                          (0, l.jsx)(S.A, { className: K.my, user: r, size: x._3.SIZE_16 }),
+                          k.intl.format(k.t["GFDmd/"], {
                               authorHook: (e, t) =>
                                   (0, l.jsx)(
-                                      j.g,
+                                      v.g,
                                       {
-                                          className: H.eS,
+                                          className: K.eS,
                                           colorString: i?.colorString ?? null,
-                                          colorStrings: o,
-                                          name: i?.nick ?? k.Ay.getName(r),
+                                          colorStrings: d,
+                                          name: i?.nick ?? R.Ay.getName(r),
                                       },
                                       t,
                                   ),
                           }),
-                          (0, l.jsx)("span", { className: H.xE, children: "•" }),
-                          G.intl.format(G.t["5Wk9+o"], { time: (0, R.aK)(n) }),
+                          (0, l.jsx)("span", { className: K.xE, children: "•" }),
+                          k.intl.format(k.t["5Wk9+o"], { time: (0, G.aK)(s) }),
                       ],
                   }),
     });
 }
-var L = s(37411);
-let z = n.memo(function (e) {
-    let { threadId: t, goToThread: n, showChannelName: d } = e,
-        c = (0, a.bG)([h.A], () => h.A.getChannel(t)),
-        g = (0, a.bG)([h.A], () => h.A.getChannel(c.parent_id)),
-        m = (0, u.Ay)(c),
-        x = (0, u.Ay)(g, !0);
+var O = a(37411);
+let H = s.memo(function (e) {
+    let { threadId: t, goToThread: s, showChannelName: o } = e,
+        u = (0, n.bG)([g.A], () => g.A.getChannel(t)),
+        h = (0, n.bG)([g.A], () => g.A.getChannel(u.parent_id)),
+        A = (0, c.Ay)(u),
+        m = (0, c.Ay)(h, !0);
     return (0, l.jsxs)(r.D, {
-        className: H.kL,
-        onClick: (e) => n(c, e.shiftKey),
+        className: K.kL,
+        onClick: (e) => s(u, e.shiftKey),
         onContextMenu: (e) =>
-            (0, o.L3)(e, async () => {
-                let { default: e } = await Promise.all([s.e("43768"), s.e("99011"), s.e("94989"), s.e("74085")]).then(
-                    s.bind(s, 612826),
+            (0, d.L3)(e, async () => {
+                let { default: e } = await Promise.all([a.e("35327"), a.e("99011"), a.e("94989"), a.e("1394")]).then(
+                    a.bind(a, 612826),
                 );
-                return (t) => (0, l.jsx)(e, { ...t, channel: c });
+                return (t) => (0, l.jsx)(e, { ...t, channel: u });
             }),
         children: [
             (0, l.jsxs)("div", {
-                className: H.kb,
+                className: K.kb,
                 children: [
                     (0, l.jsxs)(i.D, {
-                        className: H.OG,
+                        className: K.OG,
                         variant: "heading-md/semibold",
                         children: [
-                            (0, l.jsx)("span", { className: H.CB, children: m }),
-                            d && null != g ? (0, l.jsx)("span", { className: H.Ot, children: x }) : null,
+                            (0, l.jsx)("span", { className: K.CB, children: A }),
+                            o && null != h ? (0, l.jsx)("span", { className: K.Ot, children: m }) : null,
                         ],
                     }),
-                    c.isActiveThread() ? (0, l.jsx)(B, { channel: c }) : (0, l.jsx)(O, { channel: c }),
+                    u.isActiveThread() ? (0, l.jsx)(B, { channel: u }) : (0, l.jsx)(D, { channel: u }),
                 ],
             }),
-            (0, l.jsx)(W, { channel: c }),
+            (0, l.jsx)(U, { channel: u }),
         ],
     });
 });
-function W(e) {
+function U(e) {
     let { channel: t } = e,
-        s = (0, a.bG)([x.A], () => x.A.getMemberIdsPreview(t.id) ?? []),
-        n = (0, a.bG)([x.A], () => x.A.getMemberCount(t.id) ?? 0),
-        r = (0, a.yK)([m.default], () => s.map((e) => m.default.getUser(e)));
-    return ((0, d.Ay)(() => {
-        s.filter((e, t) => null == r[t]).forEach((e) => {
-            g.A.requestMember(t.guild_id, e);
+        a = (0, n.bG)([m.A], () => m.A.getMemberIdsPreview(t.id) ?? []),
+        s = (0, n.bG)([m.A], () => m.A.getMemberCount(t.id) ?? 0),
+        r = (0, n.yK)([A.default], () => a.map((e) => A.default.getUser(e)));
+    return ((0, o.Ay)(() => {
+        a.filter((e, t) => null == r[t]).forEach((e) => {
+            h.A.requestMember(t.guild_id, e);
         });
     }),
-    0 === s.length)
+    0 === a.length)
         ? null
-        : (0, l.jsx)(c.Ay, {
-              className: H.WM,
+        : (0, l.jsx)(u.Ay, {
+              className: K.WM,
               showDefaultAvatarsForNullUsers: !0,
               guildId: t.guild_id,
               users: r,
-              count: n,
-              max: L.Td,
+              count: s,
+              max: O.Td,
           });
 }

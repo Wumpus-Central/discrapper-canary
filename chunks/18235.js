@@ -1,9 +1,10 @@
-r.d(t, { A: () => l });
-var n = r(827343),
-    a = r(579872),
-    c = r(985018);
+"use strict";
+n.d(t, { A: () => l });
+var r = n(827343),
+    i = n(579872),
+    a = n(985018);
 function l(e, t) {
     e
-        ? a.A.show({ title: c.intl.string(c.t.QZ7WSS), body: c.intl.string(c.t.Tl9JpL) })
-        : n.A.toggleSelfDeaf({ location: t });
+        ? i.A.show({ title: a.intl.string(a.t.QZ7WSS), body: a.intl.string(a.t.Tl9JpL) })
+        : r.A.toggleSelfDeaf({ location: t });
 }

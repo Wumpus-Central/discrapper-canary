@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     zr: "root_fdf9c0",
     Tp: "background_fdf9c0",

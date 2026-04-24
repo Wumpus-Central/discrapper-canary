@@ -1,29 +1,28 @@
-"use strict";
-r.d(t, { T: () => u });
-var n = r(321733),
-    o = r(212246),
-    i = r(162551),
-    a = r(848575),
-    c = r(201672),
-    s = r(498969);
-function p(e, t, r) {
+n.d(t, { T: () => _ });
+var i = n(321733),
+    s = n(212246),
+    r = n(162551),
+    l = n(848575),
+    a = n(201672),
+    o = n(498969);
+function d(e, t, n) {
     return (
-        t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
+        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var d = ["canDrop", "hover", "drop"],
-    h = (function () {
+var u = ["canDrop", "hover", "drop"],
+    c = (function () {
         var e;
-        function t(e, r, n) {
+        function t(e, n, i) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            p(this, "props", null),
-                p(this, "spec", void 0),
-                p(this, "monitor", void 0),
-                p(this, "ref", void 0),
+            d(this, "props", null),
+                d(this, "spec", void 0),
+                d(this, "monitor", void 0),
+                d(this, "ref", void 0),
                 (this.spec = e),
-                (this.monitor = r),
-                (this.ref = n);
+                (this.monitor = n),
+                (this.ref = i);
         }
         return (
             (e = [
@@ -48,7 +47,7 @@ var d = ["canDrop", "hover", "drop"],
                 {
                     key: "hover",
                     value: function () {
-                        this.spec.hover && this.props && this.spec.hover(this.props, this.monitor, (0, c.PQ)(this.ref));
+                        this.spec.hover && this.props && this.spec.hover(this.props, this.monitor, (0, a.PQ)(this.ref));
                     },
                 },
                 {
@@ -59,44 +58,44 @@ var d = ["canDrop", "hover", "drop"],
                 },
             ]),
             (function (e, t) {
-                for (var r = 0; r < t.length; r++) {
-                    var n = t[r];
-                    (n.enumerable = n.enumerable || !1),
-                        (n.configurable = !0),
-                        "value" in n && (n.writable = !0),
-                        Object.defineProperty(e, n.key, n);
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    (i.enumerable = i.enumerable || !1),
+                        (i.configurable = !0),
+                        "value" in i && (i.writable = !0),
+                        Object.defineProperty(e, i.key, i);
                 }
             })(t.prototype, e),
             t
         );
     })();
-function u(e, t, r) {
-    var p = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    (0, c.cl)("DropTarget", "type, spec, collect[, options]", e, t, r, p);
-    var u = e;
+function _(e, t, n) {
+    var d = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    (0, a.cl)("DropTarget", "type, spec, collect[, options]", e, t, n, d);
+    var _ = e;
     "function" != typeof e &&
-        ((0, n.V)(
-            (0, c.NE)(e, !0),
+        ((0, i.V)(
+            (0, a.NE)(e, !0),
             'Expected "type" provided as the first argument to DropTarget to be a string, an array of strings, or a function that returns either given the current props. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target',
             e,
         ),
-        (u = function () {
+        (_ = function () {
             return e;
         })),
-        (0, n.V)(
-            (0, c.Qd)(t),
+        (0, i.V)(
+            (0, a.Qd)(t),
             'Expected "spec" provided as the second argument to DropTarget to be a plain object. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target',
             t,
         );
-    var l =
+    var h =
         (Object.keys(t).forEach(function (e) {
-            (0, n.V)(
-                d.indexOf(e) > -1,
+            (0, i.V)(
+                u.indexOf(e) > -1,
                 'Expected the drop target specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target',
-                d.join(", "),
+                u.join(", "),
                 e,
             ),
-                (0, n.V)(
+                (0, i.V)(
                     "function" == typeof t[e],
                     "Expected %s in the drop target specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target",
                     e,
@@ -104,35 +103,35 @@ function u(e, t, r) {
                     t[e],
                 );
         }),
-        function (e, r) {
-            return new h(t, e, r);
+        function (e, n) {
+            return new c(t, e, n);
         });
     return (
-        (0, n.V)(
-            "function" == typeof r,
+        (0, i.V)(
+            "function" == typeof n,
             'Expected "collect" provided as the third argument to DropTarget to be a function that returns a plain object of props to inject. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target',
-            r,
+            n,
         ),
-        (0, n.V)(
-            (0, c.Qd)(p),
+        (0, i.V)(
+            (0, a.Qd)(d),
             'Expected "options" provided as the fourth argument to DropTarget to be a plain object when specified. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target',
-            r,
+            n,
         ),
         function (e) {
-            return (0, s.A)({
+            return (0, o.A)({
                 containerDisplayName: "DropTarget",
-                createHandler: l,
-                registerHandler: o.l,
+                createHandler: h,
+                registerHandler: s.l,
                 createMonitor: function (e) {
-                    return new i.b(e);
+                    return new r.b(e);
                 },
                 createConnector: function (e) {
-                    return new a.P(e);
+                    return new l.P(e);
                 },
                 DecoratedComponent: e,
-                getType: u,
-                collect: r,
-                options: p,
+                getType: _,
+                collect: n,
+                options: d,
             });
         }
     );

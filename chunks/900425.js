@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wH: "selected_dcc822",
     wZ: "siblingSelected_dcc822",

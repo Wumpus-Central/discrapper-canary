@@ -1,15 +1,16 @@
-n.d(t, { O: () => r });
-var l = n(627968);
-n(64700);
-var i = n(192308);
-function r(e, t) {
+"use strict";
+l.d(t, { O: () => s });
+var n = l(627968);
+l(64700);
+var i = l(192308);
+function s(e, t) {
     return (0, i.openModalLazy)(async () => {
-        let { default: i } = await n.e("86743").then(n.bind(n, 572874));
-        return (n) =>
-            (0, l.jsx)(i, {
-                ...n,
+        let { default: i } = await l.e("86743").then(l.bind(l, 572874));
+        return (l) =>
+            (0, n.jsx)(i, {
+                ...l,
                 onConfirm: () => {
-                    n.onClose(), t();
+                    l.onClose(), t();
                 },
                 channel: e,
             });

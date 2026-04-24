@@ -1,6 +1,7 @@
-n.d(t, { A: () => l });
+"use strict";
+n.d(t, { A: () => i });
 var a = n(64700);
-function l() {
+function i() {
     arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     let [e, t] = a.useState(
         (function () {

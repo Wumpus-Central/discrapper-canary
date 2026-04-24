@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     cs: "outgoing-call-pulse_f910d0",
     It: "incoming-call-pulse_f910d0",

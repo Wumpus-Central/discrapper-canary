@@ -1,75 +1,74 @@
-"use strict";
-n.d(t, { Ay: () => c, Bf: () => E, Mv: () => u, Wg: () => d, b5: () => _ });
-var i = n(64700),
-    r = n(702841),
-    s = n(736056),
-    a = n(29292),
-    o = n(4227),
-    l = n(315949);
-function d() {
+l.d(t, { Ay: () => m, Bf: () => A, Mv: () => d, Wg: () => c, b5: () => u });
+var r = l(64700),
+    a = l(702841),
+    s = l(736056),
+    n = l(29292),
+    i = l(4227),
+    o = l(315949);
+function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        t = (0, r.bG)([s.A], () => s.A.hasLoadedExperiments),
-        [n, l, d, _, u, c] = (0, r.yK)([o.A], () => [
-            o.A.isFetching,
-            o.A.isClaiming,
-            o.A.fetchError,
-            o.A.claimError,
-            o.A.purchases,
-            o.A.hasPreviouslyFetched,
+        t = (0, a.bG)([s.A], () => s.A.hasLoadedExperiments),
+        [l, o, c, u, d, m] = (0, a.yK)([i.A], () => [
+            i.A.isFetching,
+            i.A.isClaiming,
+            i.A.fetchError,
+            i.A.claimError,
+            i.A.purchases,
+            i.A.hasPreviouslyFetched,
         ]),
-        E = (0, i.useRef)(o.A.hasPreviouslyFetched);
-    (0, i.useEffect)(() => {
-        E.current = c;
+        A = (0, r.useRef)(i.A.hasPreviouslyFetched);
+    (0, r.useEffect)(() => {
+        A.current = m;
+    }, [m]);
+    let p = (0, r.useRef)(i.A.fetchError);
+    (0, r.useEffect)(() => {
+        p.current = c;
     }, [c]);
-    let h = (0, i.useRef)(o.A.fetchError);
-    (0, i.useEffect)(() => {
-        h.current = d;
-    }, [d]);
-    let m = (0, i.useRef)(o.A.isFetching);
+    let h = (0, r.useRef)(i.A.isFetching);
     return (
-        (0, i.useEffect)(() => {
-            m.current = n;
-        }, [n]),
-        (0, i.useEffect)(() => {
-            !t || m.current || (!0 === e && E.current && null == h.current) || (0, a.gB)();
+        (0, r.useEffect)(() => {
+            h.current = l;
+        }, [l]),
+        (0, r.useEffect)(() => {
+            !t || h.current || (!0 === e && A.current && null == p.current) || (0, n.gB)();
         }, [e, t]),
-        { isClaiming: l, fetchPurchasesError: d, claimError: _, isFetching: n, purchases: u, hasPreviouslyFetched: c }
+        { isClaiming: o, fetchPurchasesError: c, claimError: u, isFetching: l, purchases: d, hasPreviouslyFetched: m }
     );
 }
-let _ = () => d(!0),
-    u = function (e) {
+let u = () => c(!0),
+    d = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            { purchases: n } = d(t);
-        return null != e ? n.get(e) : void 0;
+            { purchases: l } = c(t);
+        return null != e ? l.get(e) : void 0;
     };
-function c(e, t) {
-    let n = e?.paymentGateway,
+function m(e, t) {
+    let l = e?.paymentGateway,
         {
-            isFetching: i,
-            categories: r,
+            isFetching: r,
+            categories: a,
             fetchCategoriesError: s,
-            refreshCategories: a,
-        } = (0, l.A)({ paymentGateway: n, noOp: e?.noOp, logPerf: e?.logPerf, countryCode: e?.countryCode }, t),
+            refreshCategories: n,
+        } = (0, o.A)({ paymentGateway: l, noOp: e?.noOp, logPerf: e?.logPerf, countryCode: e?.countryCode }, t),
         {
-            isClaiming: o,
-            fetchPurchasesError: _,
-            claimError: u,
-            isFetching: c,
-            purchases: E,
-            hasPreviouslyFetched: h,
-        } = d(e?.stalePurchasesOK);
+            isClaiming: i,
+            fetchPurchasesError: u,
+            claimError: d,
+            isFetching: m,
+            purchases: A,
+            hasPreviouslyFetched: p,
+        } = c(e?.stalePurchasesOK);
     return {
-        isFetching: i || c,
-        isFetchingCategories: i,
-        isFetchingPurchases: c,
-        isClaiming: o,
-        categories: r,
-        purchases: E,
+        isFetching: r || m,
+        isFetchingCategories: r,
+        isFetchingPurchases: m,
+        isClaiming: i,
+        categories: a,
+        purchases: A,
         fetchCategoriesError: s,
-        fetchPurchasesError: _,
-        claimError: u,
-        refreshCategories: a,
-        hasPreviouslyFetched: h,
+        fetchPurchasesError: u,
+        claimError: d,
+        refreshCategories: n,
+        hasPreviouslyFetched: p,
     };
 }
-let E = (e) => c({ ...(e ?? {}), stalePurchasesOK: !0 });
+let A = (e) => m({ ...(e ?? {}), stalePurchasesOK: !0 });

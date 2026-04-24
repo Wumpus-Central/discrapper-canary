@@ -1,9 +1,10 @@
-n.d(t, { Jq: () => o, Ng: () => d, ST: () => c, bB: () => r });
+"use strict";
+n.d(t, { Jq: () => c, Ng: () => o, ST: () => d, bB: () => s });
 var a,
-    l,
     i,
-    s,
-    r =
+    l,
+    r,
+    s =
         (((a = {}).CARD = "card"),
         (a.BUY_BUTTON = "buy_button"),
         (a.GIFT_BUTTON = "gift_button"),
@@ -11,18 +12,18 @@ var a,
         (a.FORWARD_BUTTON = "forward_button"),
         (a.VIEW_DETAILS_BUTTON = "view_details_button"),
         a),
-    o =
-        (((l = {}).BUY_BUTTON = "buy_button"),
-        (l.GIFT_BUTTON = "gift_button"),
-        (l.WISHLIST_BUTTON = "wishlist_button"),
-        (l.COPY_LINK_BUTTON = "copy_link_button"),
-        (l.VISIT_SHOP = "visit_shop"),
-        (l.CAROUSEL_ITEM = "carousel_item"),
-        (l.CAROUSEL_NEXT = "carousel_next"),
-        (l.CAROUSEL_PREV = "carousel_prev"),
-        (l.MUTE_BUTTON = "mute_button"),
-        (l.FORWARD_BUTTON = "forward_button"),
-        (l.BUY_WITH_ORBS_BUTTON = "buy_with_orbs_button"),
-        l),
-    d = (((i = {}).COPY_LINK_BUTTON = "copy_link_button"), i),
-    c = 21552 == n.j ? (((s = {}).LEARN_MORE = "learn_more"), s) : null;
+    c =
+        (((i = {}).BUY_BUTTON = "buy_button"),
+        (i.GIFT_BUTTON = "gift_button"),
+        (i.WISHLIST_BUTTON = "wishlist_button"),
+        (i.COPY_LINK_BUTTON = "copy_link_button"),
+        (i.VISIT_SHOP = "visit_shop"),
+        (i.CAROUSEL_ITEM = "carousel_item"),
+        (i.CAROUSEL_NEXT = "carousel_next"),
+        (i.CAROUSEL_PREV = "carousel_prev"),
+        (i.MUTE_BUTTON = "mute_button"),
+        (i.FORWARD_BUTTON = "forward_button"),
+        (i.BUY_WITH_ORBS_BUTTON = "buy_with_orbs_button"),
+        i),
+    o = (((l = {}).COPY_LINK_BUTTON = "copy_link_button"), l),
+    d = 21552 == n.j ? (((r = {}).LEARN_MORE = "learn_more"), r) : null;

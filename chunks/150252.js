@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     bR: "churnFooterContainer__64988",
     v0: "churnFooterGlow__64988",

@@ -1,3 +1,4 @@
+"use strict";
 n.d(t, { x: () => i });
-var l,
-    i = (((l = {}).FRIENDS = "friends"), (l.MESSAGES = "messages"), (l.VOICE = "voice"), l);
+var r,
+    i = (((r = {}).FRIENDS = "friends"), (r.MESSAGES = "messages"), (r.VOICE = "voice"), r);

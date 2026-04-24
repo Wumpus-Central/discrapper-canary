@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_f37514",
     vU: "appContainer_f37514",

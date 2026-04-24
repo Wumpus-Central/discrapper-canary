@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     zr: "root__00dfb",
     Cf: "carouselContainer__00dfb",

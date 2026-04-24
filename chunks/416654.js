@@ -1,18 +1,19 @@
-r.d(a, { v: () => n });
-var t = r(17928),
-    i = r(439174),
-    l = r(841595);
-function n(e) {
-    return (0, t.bG)([l.A], () => {
-        let a,
-            r = null != e ? l.A.getUserProfile(e) : null,
-            t = r?.premiumSince;
-        return null == r || null == t
+"use strict";
+r.d(t, { v: () => s });
+var i = r(17928),
+    a = r(439174),
+    n = r(841595);
+function s(e) {
+    return (0, i.bG)([n.A], () => {
+        let t,
+            r = null != e ? n.A.getUserProfile(e) : null,
+            i = r?.premiumSince;
+        return null == r || null == i
             ? null
             : (r?.badges?.forEach((e) => {
-                  let r = (0, i.cZ)(e.id);
-                  null != r && (a = r);
+                  let r = (0, a.cZ)(e.id);
+                  null != r && (t = r);
               }),
-              a);
+              t);
     });
 }

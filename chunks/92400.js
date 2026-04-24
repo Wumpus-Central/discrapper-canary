@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_f215b9",
     Nr: "card_f215b9",

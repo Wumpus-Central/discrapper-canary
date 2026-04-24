@@ -1,6 +1,7 @@
+"use strict";
 n.d(t, { Z: () => i });
-var l = n(17928),
-    a = n(287809);
+var a = n(17928),
+    r = n(287809);
 function i() {
-    return !1 === (0, l.bG)([a.default], () => a.default.getCurrentUser()?.nsfwAllowed);
+    return !1 === (0, a.bG)([r.default], () => r.default.getCurrentUser()?.nsfwAllowed);
 }

@@ -1,21 +1,22 @@
-t.d(i, { T: () => _ });
-var r = t(64700),
-    a = t(17928),
-    n = t(841595),
-    o = t(576622),
-    s = t(495544),
-    l = t(33190),
-    c = t(594832);
-function _(e) {
-    let { location: i, source: t } = e,
-        _ = (0, l.H)(i),
-        { currentUserId: u, wishlistId: d } = (0, a.cf)([s.default, n.A], () => {
-            let e = s.default.getId(),
-                i = n.A.getFirstWishlistId(e);
-            return { currentUserId: e, wishlistId: i };
+"use strict";
+r.d(t, { T: () => u });
+var i = r(64700),
+    n = r(17928),
+    a = r(841595),
+    s = r(576622),
+    l = r(495544),
+    c = r(33190),
+    o = r(594832);
+function u(e) {
+    let { location: t, source: r } = e,
+        u = (0, c.H)(t),
+        { currentUserId: d, wishlistId: _ } = (0, n.cf)([l.default, a.A], () => {
+            let e = l.default.getId(),
+                t = a.A.getFirstWishlistId(e);
+            return { currentUserId: e, wishlistId: t };
         });
-    r.useEffect(() => {
-        _ && null == d && (0, o.A)(u);
-    }, [u, _, d]),
-        (0, c.fw)({ wishlistId: _ ? d : null, userId: u, source: t });
+    i.useEffect(() => {
+        u && null == _ && (0, s.A)(d);
+    }, [d, u, _]),
+        (0, o.fw)({ wishlistId: u ? _ : null, userId: d, source: r });
 }

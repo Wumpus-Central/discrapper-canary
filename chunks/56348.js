@@ -1,8 +1,9 @@
-n.d(t, { yX: () => s, Sk: () => o, C5: () => d, yg: () => c }), n(321073);
-var l = n(575593),
-    a = n(392107),
+"use strict";
+n.d(t, { yX: () => s, Sk: () => o, C5: () => c, yg: () => d }), n(321073);
+var a = n(575593),
+    r = n(392107),
     i = n(287809),
-    r = n(841595);
+    l = n(841595);
 function s(e, t) {
     let n = {};
     void 0 !== e.pendingBanner && (n.banner = e.pendingBanner),
@@ -10,39 +11,39 @@ function s(e, t) {
         null != e.pendingPronouns && (n.pronouns = e.pendingPronouns),
         void 0 !== e.pendingAccentColor && (n.accent_color = e.pendingAccentColor),
         void 0 !== e.pendingThemeColors && (n.theme_colors = e.pendingThemeColors);
-    let a = (function (e, t) {
+    let r = (function (e, t) {
         let n,
-            { pendingProfileEffect: a, pendingProfileFrame: s } = e;
-        if (void 0 === a && void 0 === s) return {};
+            { pendingProfileEffect: r, pendingProfileFrame: s } = e;
+        if (void 0 === r && void 0 === s) return {};
         let o =
                 null == (n = i.default.getCurrentUser())
                     ? null
                     : null != t
-                      ? r.A.getGuildMemberProfile(n.id, t)
-                      : r.A.getUserProfile(n.id),
-            d = [...(o?.collectibles ?? [])];
+                      ? l.A.getGuildMemberProfile(n.id, t)
+                      : l.A.getUserProfile(n.id),
+            c = [...(o?.collectibles ?? [])];
         return (
-            void 0 !== a &&
-                ((d = d.filter((e) => {
+            void 0 !== r &&
+                ((c = c.filter((e) => {
                     let { type: t } = e;
-                    return t !== l.R.PROFILE_EFFECT;
+                    return t !== a.R.PROFILE_EFFECT;
                 })),
-                null !== a && d.push({ skuId: a.skuId, type: l.R.PROFILE_EFFECT })),
+                null !== r && c.push({ skuId: r.skuId, type: a.R.PROFILE_EFFECT })),
             void 0 !== s &&
-                ((d = d.filter((e) => {
+                ((c = c.filter((e) => {
                     let { type: t } = e;
-                    return t !== l.R.PROFILE_FRAME;
+                    return t !== a.R.PROFILE_FRAME;
                 })),
-                null !== s && d.push(s)),
+                null !== s && c.push(s)),
             {
-                collectibles_sku_ids: d.map((e) => {
+                collectibles_sku_ids: c.map((e) => {
                     let { skuId: t } = e;
                     return t;
                 }),
             }
         );
     })(e, t);
-    return void 0 !== a.collectibles_sku_ids && (n.collectibles_sku_ids = a.collectibles_sku_ids), n;
+    return void 0 !== r.collectibles_sku_ids && (n.collectibles_sku_ids = r.collectibles_sku_ids), n;
 }
 function o(e) {
     let t = {};
@@ -54,7 +55,7 @@ function o(e) {
         let { pendingAvatar: n } = e;
         null === n
             ? (t.avatar = null)
-            : n.assetOrigin === a.E.ARCHIVED_ASSET
+            : n.assetOrigin === r.E.ARCHIVED_ASSET
               ? (t.avatarId = n.originalAsset.id)
               : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }
@@ -64,13 +65,13 @@ function o(e) {
         t
     );
 }
-function d(e) {
+function c(e) {
     let t = {};
     if (void 0 !== e.pendingAvatar) {
         let { pendingAvatar: n } = e;
         null === n
             ? (t.avatar = null)
-            : n.assetOrigin === a.E.ARCHIVED_ASSET
+            : n.assetOrigin === r.E.ARCHIVED_ASSET
               ? (t.avatarId = n.originalAsset.id)
               : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }
@@ -82,7 +83,7 @@ function d(e) {
         t
     );
 }
-function c(e) {
+function d(e) {
     let t = {};
     return void 0 !== e.pendingPrimaryGuildId && (t.primaryGuildId = e.pendingPrimaryGuildId), t;
 }

@@ -1,8 +1,7 @@
-"use strict";
 a.d(t, { A: () => s });
-var r = a(627968),
-    l = a(821609),
-    n = a(783420),
+var n = a(627968),
+    r = a(821609),
+    l = a(783420),
     i = a(938973);
 let s = function (e) {
     let {
@@ -10,33 +9,33 @@ let s = function (e) {
             onClick: a,
             postSuccessGuild: s,
             onSubscribeModalClose: o,
-            premiumModalAnalyticsLocation: d,
-            applicationId: c,
+            premiumModalAnalyticsLocation: c,
+            applicationId: d,
             confirmationFooter: u,
             buttonTextOverride: h,
             defaultTextOverride: p,
-            iconOverride: _,
-            variantOverride: m,
+            iconOverride: m,
+            variantOverride: f,
             ...b
         } = e,
-        { subscribeButtonProps: g } = (0, i.B)({
+        { subscribeButtonProps: _ } = (0, i.B)({
             subscriptionTier: t,
             buttonTextOverride: h,
             defaultTextOverride: p,
-            iconOverride: _,
-            variantOverride: m,
+            iconOverride: m,
+            variantOverride: f,
         });
-    return (0, r.jsx)(n.A, {
+    return (0, n.jsx)(l.A, {
         onClick: a,
         subscriptionTier: t,
         postSuccessGuild: s,
         onSubscribeModalClose: o,
-        premiumModalAnalyticsLocation: d,
-        applicationId: c,
+        premiumModalAnalyticsLocation: c,
+        applicationId: d,
         confirmationFooter: u,
         children: (e) => {
             let { onClick: t } = e;
-            return (0, r.jsx)(l.$, { onClick: t, ...g, ...b });
+            return (0, n.jsx)(r.$, { onClick: t, ..._, ...b });
         },
     });
 };

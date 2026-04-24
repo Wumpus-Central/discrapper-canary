@@ -1,42 +1,43 @@
-let i;
-n.d(t, { A: () => u }), n(321073);
-var r = n(17928),
-    a = n(228366);
-let l = { guildNoticeDismissed: [] },
-    s = new Map(),
+"use strict";
+let n;
+l.d(t, { A: () => c }), l(321073);
+var i = l(17928),
+    s = l(228366);
+let a = { guildNoticeDismissed: [] },
+    r = new Map(),
     o = new Set();
-class d extends r.Ay.PersistedStore {
+class d extends i.Ay.PersistedStore {
     static displayName = "CommandsMigrationStore";
     static persistKey = "CommandsMigrationStore";
     initialize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
-        i = e;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
+        n = e;
     }
     getState() {
-        return i;
+        return n;
     }
     shouldShowChannelNotice(e) {
-        return !i.guildNoticeDismissed.includes(e) && (s.get(e)?.size ?? 0) > 0;
+        return !n.guildNoticeDismissed.includes(e) && (r.get(e)?.size ?? 0) > 0;
     }
     canShowOverviewTooltip(e, t) {
-        return s.get(e)?.has(t) === !0;
+        return r.get(e)?.has(t) === !0;
     }
     canShowToggleTooltip(e) {
         return o.has(e);
     }
 }
-let u = new d(a.h, {
+let c = new d(s.h, {
     COMMANDS_MIGRATION_UPDATE_SUCCESS: function (e) {
-        let { guildId: t, integrationIdsWithAppCommands: n } = e;
-        return s.set(t, new Set(n)), !0;
+        let { guildId: t, integrationIdsWithAppCommands: l } = e;
+        return r.set(t, new Set(l)), !0;
     },
     COMMANDS_MIGRATION_NOTICE_DISMISSED: function (e) {
         let { guildId: t } = e;
-        i.guildNoticeDismissed.push(t);
+        n.guildNoticeDismissed.push(t);
     },
     COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED: function (e) {
-        let { guildId: t, integrationId: n } = e;
-        s.get(t)?.clear(), o.add(n);
+        let { guildId: t, integrationId: l } = e;
+        r.get(t)?.clear(), o.add(l);
     },
     COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function (e) {
         let { integrationId: t } = e;

@@ -1,12 +1,13 @@
-t.d(e, { Ar: () => o, dB: () => c });
-var s = t(627968),
-    n = t(64700);
-let r = n.createContext(null);
-function o() {
-    return n.useContext(r);
+"use strict";
+r.d(t, { Ar: () => s, dB: () => l });
+var i = r(627968),
+    n = r(64700);
+let a = n.createContext(null);
+function s() {
+    return n.useContext(a);
 }
-function c(i) {
-    let { newValue: e, children: t } = i,
-        n = { ...o(), ...e };
-    return (0, s.jsx)(r.Provider, { value: n, children: t });
+function l(e) {
+    let { newValue: t, children: r } = e,
+        n = { ...s(), ...t };
+    return (0, i.jsx)(a.Provider, { value: n, children: r });
 }

@@ -1,84 +1,85 @@
-r.d(e, { default: () => g });
-var s = r(627968),
-    n = r(64700),
-    i = r(991660),
-    a = r(224640),
-    o = r(20742),
-    l = r(364840),
-    c = r(17928),
-    u = r(408278),
-    _ = r(173936),
-    d = r(691540),
-    S = r(857250),
-    p = r(97483),
-    E = r(834730),
-    T = r(627363),
-    h = r(587895),
-    A = r(575926),
-    C = r(957565),
-    I = r(997997),
-    b = r(123791),
-    f = r(925435),
-    O = r(816709),
-    L = r(652215),
-    R = r(435220),
-    m = r(985018),
-    y = r(617114),
-    N = r(967744);
-function g(t) {
-    let { onClose: e, transitionState: r, appId: g, guildId: P } = t,
-        v = (0, c.bG)([h.A], () => h.A.getApplication(g), [g]),
-        [x, F] = n.useState(() => (h.A.isFetchingApplication(g) ? { status: 1 } : { status: 0 }));
-    n.useEffect(() => {
-        0 === x.status &&
-            (F({ status: 1 }),
-            T.Ay.fetchApplication(g)
+"use strict";
+n.d(t, { default: () => P });
+var i = n(627968),
+    s = n(64700),
+    r = n(991660),
+    a = n(224640),
+    l = n(20742),
+    c = n(364840),
+    u = n(17928),
+    o = n(408278),
+    d = n(173936),
+    p = n(691540),
+    f = n(857250),
+    _ = n(97483),
+    S = n(834730),
+    h = n(627363),
+    I = n(587895),
+    E = n(575926),
+    b = n(957565),
+    m = n(997997),
+    A = n(123791),
+    g = n(925435),
+    T = n(816709),
+    C = n(652215),
+    R = n(435220),
+    L = n(985018),
+    y = n(617114),
+    N = n(967744);
+function P(e) {
+    let { onClose: t, transitionState: n, appId: P, guildId: v } = e,
+        O = (0, u.bG)([I.A], () => I.A.getApplication(P), [P]),
+        [F, U] = s.useState(() => (I.A.isFetchingApplication(P) ? { status: 1 } : { status: 0 }));
+    s.useEffect(() => {
+        0 === F.status &&
+            (U({ status: 1 }),
+            h.Ay.fetchApplication(P)
                 .then(() => {
-                    F({ status: 2 });
+                    U({ status: 2 });
                 })
-                .catch((t) => {
-                    F({ status: 3, error: t.message });
+                .catch((e) => {
+                    U({ status: 3, error: e.message });
                 }));
-    }, [g, x.status]);
-    let { subscriptions: U, otps: D } = (0, b.C)(g);
-    if (null == v) return null;
-    let j = m.intl.formatToPlainString(m.t.XDRjs5, { appName: v.name }),
-        H = (0, s.jsx)("div", { className: y.K, children: (0, s.jsx)(A.h, {}) }),
-        G = C.p5
-            ? (0, s.jsx)(u.K, {
-                  "aria-label": m.intl.string(m.t.WqhZss),
-                  icon: () => (0, s.jsx)(_.q, { size: "sm" }),
+    }, [P, F.status]);
+    let { subscriptions: x, otps: D } = (0, A.C)(P);
+    if (null == O) return null;
+    let M = L.intl.formatToPlainString(L.t.XDRjs5, { appName: O.name }),
+        k = (0, i.jsx)("div", { className: y.K, children: (0, i.jsx)(E.h, {}) }),
+        w = b.p5
+            ? (0, i.jsx)(o.K, {
+                  "aria-label": L.intl.string(L.t.WqhZss),
+                  icon: () => (0, i.jsx)(d.q, { size: "sm" }),
                   onClick: () => {
-                      let t = `${location.protocol}//${location.host}${L.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(g, R.GlobalDiscoveryAppsSections.STORE)}`;
-                      (0, C.C)(t, () => (0, d.P0)((0, S.o)(m.intl.string(m.t["L/PwZf"]), p.Ck.SUCCESS))),
-                          (0, I.K)(g, I.C.STORE_MODAL);
+                      let e = `${location.protocol}//${location.host}${C.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(P, R.GlobalDiscoveryAppsSections.STORE)}`;
+                      (0, b.C)(e, () => (0, p.P0)((0, f.o)(L.intl.string(L.t["L/PwZf"]), _.Ck.SUCCESS))),
+                          (0, m.K)(P, m.C.STORE_MODAL);
                   },
                   variant: "icon-only",
               })
             : void 0;
-    return (0, s.jsxs)(a.d, {
-        transitionState: r,
-        "aria-label": j,
-        onClose: e,
+    return (0, i.jsxs)(a.d, {
+        transitionState: n,
+        "aria-label": M,
+        onClose: t,
         size: "xxl",
         children: [
-            (0, s.jsx)(o.rQ, { leading: H, title: j, trailing: G }),
-            (0, s.jsx)(i.A, {
-                children: (0, s.jsx)("main", {
+            (0, i.jsx)(l.rQ, { leading: k, title: M, trailing: w }),
+            (0, i.jsx)(r.A, {
+                children: (0, i.jsx)("main", {
                     className: N.bodyInner,
-                    children: (0, s.jsx)(f.Mp, { app: v, guildId: P, subscriptions: U, otps: D }),
+                    children: (0, i.jsx)(g.Mp, { app: O, guildId: v, subscriptions: x, otps: D }),
                 }),
             }),
-            (0, s.jsx)(l.j, {
-                children: (0, s.jsx)(E.E, {
+            (0, i.jsx)(c.j, {
+                children: (0, i.jsx)(S.E, {
                     variant: "text-md/normal",
                     children:
-                        null != v.termsOfServiceUrl || null != v.privacyPolicyUrl
-                            ? (0, s.jsx)(O.A, {
-                                  termsOfServiceUrl: v.termsOfServiceUrl,
-                                  privacyPolicyUrl: v.privacyPolicyUrl,
+                        null != O.termsOfServiceUrl || null != O.privacyPolicyUrl
+                            ? (0, i.jsx)(T.A, {
+                                  termsOfServiceUrl: O.termsOfServiceUrl,
+                                  privacyPolicyUrl: O.privacyPolicyUrl,
                               })
-                            : m.intl.string(m.t["3ZY+0D"]),
+                            : L.intl.string(L.t["3ZY+0D"]),
                 }),
             }),
         ],

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     pz: "sidebar__6b102",
     WH: "innerContainer__6b102",

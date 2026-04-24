@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     N1: "headerContainer__8dd9e",
     wm: "logo__8dd9e",

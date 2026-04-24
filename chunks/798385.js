@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     nM: "detailContainer__871ff",
     hQ: "contentContainer__871ff",

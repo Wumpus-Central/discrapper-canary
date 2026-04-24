@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Bz: "modalOverrideSliderBody__34eac",
     Lb: "confettiCanvas__34eac",

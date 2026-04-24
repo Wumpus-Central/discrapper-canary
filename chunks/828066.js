@@ -1,5 +1,1 @@
-(e.exports = function (e) {
-    return e && e.__esModule ? e : { default: e };
-}),
-    (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+e.exports = { Vg: "peopleListItem_cc6179", vu: "active_cc6179", yF: "divider_cc6179", _: "activeDivider_cc6179" };

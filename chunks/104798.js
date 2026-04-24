@@ -1,16 +1,17 @@
-n.d(t, { A: () => l });
-var i = n(835245),
-    r = n(562465),
-    a = n(652215);
-let l = {
+"use strict";
+n.d(t, { A: () => r });
+var a = n(132500),
+    i = n(636537),
+    l = n(652215);
+let r = {
     generateNonce: function () {
-        return (0, i.A)();
+        return (0, a.A)();
     },
     createHandoffToken: async function (e) {
         let {
             body: { handoff_token: t },
-        } = await r.Bo.post({
-            url: a.Rsh.HANDOFF,
+        } = await i.Bo.post({
+            url: l.Rsh.HANDOFF,
             body: { key: e },
             oldFormErrors: !0,
             retries: 1,

@@ -1,53 +1,54 @@
-a.d(t, { A: () => _ });
-var n = a(627968),
-    l = a(64700),
-    i = a(534514),
-    s = a(834730),
-    r = a(821609),
-    o = a(975807),
-    c = a(975571),
-    d = a(500049),
-    u = a(902527),
-    h = a(652215),
-    m = a(985018),
-    p = a(834951);
+"use strict";
+n.d(t, { A: () => _ });
+var i = n(627968),
+    a = n(64700),
+    s = n(534514),
+    l = n(834730),
+    r = n(821609),
+    o = n(975807),
+    c = n(975571),
+    d = n(500049),
+    u = n(902527),
+    h = n(652215),
+    p = n(985018),
+    m = n(834951);
 function _(e) {
     let { padding: t = !1 } = e,
-        a = l.useCallback(() => {
+        n = a.useCallback(() => {
             (0, o.A)(c.A.getAppsSupportURL(h.MVz.APPS_LEARN_MORE));
         }, []),
         { trackSectionImpressionRef: _ } = (0, u.A)({ sectionName: d.yK.NEW_TO_APPS, numItems: 1, numVisibleItems: 1 });
-    return (0, n.jsx)("div", {
-        className: t ? p.pK : void 0,
-        children: (0, n.jsxs)("div", {
+    return (0, i.jsx)("div", {
+        className: t ? m.pK : void 0,
+        children: (0, i.jsxs)("div", {
             ref: (e) => {
                 _.current = e;
             },
-            className: p.kL,
+            className: m.kL,
             children: [
-                (0, n.jsxs)("div", {
-                    className: p.rf,
+                (0, i.jsxs)("div", {
+                    className: m.rf,
                     children: [
-                        (0, n.jsx)(i.D, {
+                        (0, i.jsx)(s.D, {
                             variant: "heading-lg/bold",
                             color: "text-strong",
-                            children: m.intl.string(m.t["kw8/Ec"]),
+                            children: p.intl.string(p.t["kw8/Ec"]),
                         }),
-                        (0, n.jsx)(s.E, {
+                        (0, i.jsx)(l.E, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: m.intl.string(m.t.GZoV1O),
+                            children: p.intl.string(p.t.GZoV1O),
                         }),
                     ],
                 }),
-                (0, n.jsx)(r.$, {
+                (0, i.jsx)(r.$, {
                     variant: "primary",
-                    text: m.intl.string(m.t.Ye51oT),
-                    "aria-label": m.intl.formatToPlainString(m.t.xx5Sug, {
-                        sectionTitle: m.intl.string(m.t["kw8/Ec"]),
-                        sectionBody: m.intl.string(m.t.GZoV1O),
+                    text: p.intl.string(p.t.Ye51oT),
+                    "aria-label": p.intl.formatToPlainString(p.t.xx5Sug, {
+                        sectionTitle: p.intl.string(p.t["kw8/Ec"]),
+                        sectionBody: p.intl.string(p.t.GZoV1O),
                     }),
-                    onClick: a,
+                    onClick: n,
                 }),
             ],
         }),

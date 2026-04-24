@@ -1,24 +1,25 @@
-l.d(t, { i: () => c });
-var n = l(64700),
-    s = l(17928),
-    r = l(287809),
-    a = l(403362),
-    i = l(427262),
-    u = l(985018);
-function c(e) {
-    let t = (0, s.yK)([r.default], () =>
+"use strict";
+n.d(t, { i: () => o });
+var i = n(64700),
+    a = n(17928),
+    r = n(287809),
+    s = n(403362),
+    l = n(427262),
+    c = n(985018);
+function o(e) {
+    let t = (0, a.yK)([r.default], () =>
         e.recipients
             .map((e) => r.default.getUser(e))
-            .filter(a.Vq)
-            .map((e) => i.Ay.getName(e)),
+            .filter(s.Vq)
+            .map((e) => l.Ay.getName(e)),
     );
-    return n.useMemo(() => {
+    return i.useMemo(() => {
         if ("" === e.name) return null;
         if (0 === t.length) return null;
-        if (1 === t.length) return u.intl.formatToPlainString(u.t["J+Wpst"], { first: t[0] });
-        if (2 === t.length) return u.intl.formatToPlainString(u.t.gwRP0Y, { first: t[0], second: t[1] });
-        if (3 === t.length) return u.intl.formatToPlainString(u.t.QDB5et, { first: t[0], second: t[1], third: t[2] });
-        let l = t.length - 3;
-        return u.intl.formatToPlainString(u.t.VYfueb, { first: t[0], second: t[1], third: t[2], count: l });
+        if (1 === t.length) return c.intl.formatToPlainString(c.t["J+Wpst"], { first: t[0] });
+        if (2 === t.length) return c.intl.formatToPlainString(c.t.gwRP0Y, { first: t[0], second: t[1] });
+        if (3 === t.length) return c.intl.formatToPlainString(c.t.QDB5et, { first: t[0], second: t[1], third: t[2] });
+        let n = t.length - 3;
+        return c.intl.formatToPlainString(c.t.VYfueb, { first: t[0], second: t[1], third: t[2], count: n });
     }, [e, t]);
 }

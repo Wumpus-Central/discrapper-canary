@@ -1,10 +1,11 @@
-l.d(t, { A: () => s });
-var a = l(627968);
-l(64700);
-var n = l(503698),
-    r = l.n(n),
-    i = l(813287);
-function s(e) {
-    let { children: t, tag: l, className: n } = e;
-    return (l = null != l ? l : "h3"), (0, a.jsx)(l, { className: r()(i.D, n), children: t });
+"use strict";
+n.d(t, { A: () => r });
+var i = n(627968);
+n(64700);
+var a = n(503698),
+    s = n.n(a),
+    l = n(402203);
+function r(e) {
+    let { children: t, tag: n, className: a } = e;
+    return (n = null != n ? n : "h3"), (0, i.jsx)(n, { className: s()(l.D, a), children: t });
 }

@@ -1,61 +1,62 @@
-n.d(t, { A: () => p });
-var i = n(64700),
-    r = n(702841),
-    a = n(636537),
-    l = n(228366),
-    s = n(58149),
-    o = n(71393),
-    d = n(576705),
-    u = n(954571),
-    c = n(927813),
-    _ = n(381616),
-    A = n(652215);
-let h = +c.A.Millis.DAY,
-    E = new Map(),
-    p = {
+"use strict";
+l.d(t, { A: () => x });
+var n = l(64700),
+    i = l(702841),
+    s = l(636537),
+    a = l(228366),
+    r = l(58149),
+    o = l(71393),
+    d = l(576705),
+    c = l(954571),
+    u = l(927813),
+    h = l(381616),
+    g = l(652215);
+let m = +u.A.Millis.DAY,
+    p = new Map(),
+    x = {
         useShouldShowChannelNotice(e) {
-            let t = (0, r.bG)([o.A, d.A], () => {
+            let t = (0, i.bG)([o.A, d.A], () => {
                 let t = o.A.getGuild(e);
-                return null != t && d.A.can(A.xBc.ADMINISTRATOR, t);
+                return null != t && d.A.can(g.xBc.ADMINISTRATOR, t);
             });
-            i.useEffect(() => {
-                let n, i;
+            n.useEffect(() => {
+                let l, n;
                 t &&
-                    ((n = Date.now()),
-                    n < (i = E.get(e) ?? 0) + h ||
-                        (E.set(e, n),
-                        a.Bo.post({ url: A.Rsh.GUILD_MIGRATE_COMMAND_SCOPE(e), rejectWithError: !0 }).then(
+                    ((l = Date.now()),
+                    l < (n = p.get(e) ?? 0) + m ||
+                        (p.set(e, l),
+                        s.Bo.post({ url: g.Rsh.GUILD_MIGRATE_COMMAND_SCOPE(e), rejectWithError: !0 }).then(
                             (t) => {
-                                l.h.dispatch({
+                                a.h.dispatch({
                                     type: "COMMANDS_MIGRATION_UPDATE_SUCCESS",
                                     guildId: e,
                                     integrationIdsWithAppCommands: t.body?.integration_ids_with_app_commands ?? [],
                                 });
                             },
                             () => {
-                                E.set(e, i);
+                                p.set(e, n);
                             },
                         )));
             }, [e, t]);
-            let n = (0, r.bG)([_.A], () => _.A.shouldShowChannelNotice(e));
-            return t && n;
+            let l = (0, i.bG)([h.A], () => h.A.shouldShowChannelNotice(e));
+            return t && l;
         },
         dismissNotice(e) {
-            l.h.dispatch({ type: "COMMANDS_MIGRATION_NOTICE_DISMISSED", guildId: e });
+            a.h.dispatch({ type: "COMMANDS_MIGRATION_NOTICE_DISMISSED", guildId: e });
         },
         dismissOverviewTooltip(e, t) {
-            l.h.dispatch({ type: "COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED", guildId: e, integrationId: t.id }),
-                u.default.track(A.HAw.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
-                    ...(0, s.H$)(e),
+            a.h.dispatch({ type: "COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED", guildId: e, integrationId: t.id }),
+                c.default.track(g.HAw.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
+                    ...(0, r.H$)(e),
                     application_id: t.application?.id,
                     location: "overview",
                 });
         },
         dismissToggleTooltip(e, t) {
             void 0 !== t &&
-                (l.h.dispatch({ type: "COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED", integrationId: t.id }),
-                u.default.track(A.HAw.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
-                    ...(0, s.H$)(e),
+                (a.h.dispatch({ type: "COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED", integrationId: t.id }),
+                c.default.track(g.HAw.COMMANDS_MIGRATION_TOOLTIP_DISMISSED, {
+                    ...(0, r.H$)(e),
                     application_id: t.application?.id,
                     location: "toggle",
                 }));

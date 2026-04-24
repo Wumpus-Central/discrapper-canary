@@ -35,7 +35,7 @@ var n = a(627968),
 let k = () => ({ isFetching: !1, lastFetchedAt: null, error: null }),
     U = [],
     D = k();
-class O extends i.Ay.Store {
+class P extends i.Ay.Store {
     static displayName = "RecentAvatarsStore";
     get isFetching() {
         return D.isFetching;
@@ -50,7 +50,7 @@ class O extends i.Ay.Store {
         return U;
     }
 }
-let P = new O(w.h, {
+let O = new P(w.h, {
     RECENT_AVATARS_FETCH_START: function () {
         (D.isFetching = !0), (D.error = null);
     },
@@ -76,7 +76,7 @@ let P = new O(w.h, {
 var G = a(652215),
     V = a(985018);
 async function z() {
-    if (P.shouldFetch) {
+    if (O.shouldFetch) {
         w.h.dispatch({ type: "RECENT_AVATARS_FETCH_START" });
         try {
             let e = await S.Bo.get({ url: G.Rsh.RECENT_AVATARS, rejectWithError: !0 });
@@ -194,9 +194,15 @@ function Q(e) {
                         { filename: o, type: u } = (0, L.yM)(l, r);
                     (0, p.openModalLazy)(
                         async () => {
-                            let { default: t } = await Promise.all([a.e("2956"), a.e("74571"), a.e("43474")]).then(
-                                a.bind(a, 142630),
-                            );
+                            let { default: t } = await Promise.all([
+                                a.e("24199"),
+                                a.e("58710"),
+                                a.e("1040"),
+                                a.e("45723"),
+                                a.e("2956"),
+                                a.e("74571"),
+                                a.e("77455"),
+                            ]).then(a.bind(a, 142630));
                             return (a) =>
                                 (0, n.jsx)(t, {
                                     imageUri: i,
@@ -311,7 +317,7 @@ function ee(e) {
             avatars: s,
             loading: c,
             error: o,
-        } = (0, i.cf)([P], () => ({ avatars: P.getAvatars(), loading: P.isFetching, error: P.fetchError })),
+        } = (0, i.cf)([O], () => ({ avatars: O.getAvatars(), loading: O.isFetching, error: O.fetchError })),
         [u, d] = l.useState(null),
         A = u ?? o?.message;
     return (
@@ -520,9 +526,15 @@ function ep(e) {
                 if (t.type === eo.a.MP4) return k({ imageUri: e, file: t });
                 (0, p.openModalLazy)(
                     async () => {
-                        let { default: l } = await Promise.all([a.e("2956"), a.e("74571"), a.e("43474")]).then(
-                            a.bind(a, 142630),
-                        );
+                        let { default: l } = await Promise.all([
+                            a.e("24199"),
+                            a.e("58710"),
+                            a.e("1040"),
+                            a.e("45723"),
+                            a.e("2956"),
+                            a.e("74571"),
+                            a.e("77455"),
+                        ]).then(a.bind(a, 142630));
                         return (a) =>
                             (0, n.jsx)(l, {
                                 imageUri: e,
@@ -542,10 +554,18 @@ function ep(e) {
         D = l.useCallback(() => {
             (0, ec.A)(d);
         }, [d]),
-        O = l.useCallback(() => {
+        P = l.useCallback(() => {
             (0, p.openModalLazy)(
                 async () => {
-                    let { default: e } = await a.e("75104").then(a.bind(a, 672547));
+                    let { default: e } = await Promise.all([
+                        a.e("24199"),
+                        a.e("58710"),
+                        a.e("31825"),
+                        a.e("8971"),
+                        a.e("1040"),
+                        a.e("45723"),
+                        a.e("23945"),
+                    ]).then(a.bind(a, 672547));
                     return (t) =>
                         (0, n.jsx)(e, {
                             uploadType: c,
@@ -574,7 +594,7 @@ function ep(e) {
                 upload_type: c,
             });
     }, [w, f, M, c]);
-    let P = A && I,
+    let O = A && I,
         z = b && c === K.HL.AVATAR;
     return (0, n.jsx)(o.Modal, {
         transitionState: t,
@@ -604,7 +624,7 @@ function ep(e) {
                                     }),
                                 }),
                                 (0, n.jsx)("li", {
-                                    children: (0, n.jsx)(ex, { uploadType: c, guild: L, handleOpenGIFPickerModal: O }),
+                                    children: (0, n.jsx)(ex, { uploadType: c, guild: L, handleOpenGIFPickerModal: P }),
                                 }),
                             ],
                         }),
@@ -619,7 +639,7 @@ function ep(e) {
                     ],
                 }),
                 z && (0, n.jsx)(ee, { onComplete: k }),
-                P && (0, n.jsx)(R.A, { uploadType: c, showUpsell: !0, position: "inline", className: eu.Lu }),
+                O && (0, n.jsx)(R.A, { uploadType: c, showUpsell: !0, position: "inline", className: eu.Lu }),
             ],
         }),
     });

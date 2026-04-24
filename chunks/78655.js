@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     PD: "sideContainer_de3a16",
     UT: "gridContainer_de3a16",

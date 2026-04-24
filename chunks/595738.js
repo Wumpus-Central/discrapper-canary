@@ -1,46 +1,47 @@
-a.d(t, { A: () => h });
-var n = a(627968);
-a(64700);
-var l = a(503698),
-    i = a.n(l),
-    s = a(534514),
-    r = a(933832),
-    o = a(834730),
-    c = a(789645),
-    d = a(376092),
-    u = a(808469);
+"use strict";
+n.d(t, { A: () => h });
+var i = n(627968);
+n(64700);
+var a = n(503698),
+    s = n.n(a),
+    l = n(534514),
+    r = n(933832),
+    o = n(834730),
+    c = n(789645),
+    d = n(376092),
+    u = n(808469);
 function h(e) {
     let {
         grantedPermissions: t,
-        disabledPermissions: a,
-        grantedPermissionsHeader: l,
+        disabledPermissions: n,
+        grantedPermissionsHeader: a,
         disabledPermissionsHeader: h,
-        className: m,
+        className: p,
     } = e;
-    return (0, n.jsxs)("div", {
-        className: i()(u.p_, m),
+    return (0, i.jsxs)("div", {
+        className: s()(u.p_, p),
         children: [
             null != t && t.length > 0
-                ? (0, n.jsxs)(n.Fragment, {
+                ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != l
-                              ? (0, n.jsx)(s.D, {
+                          null != a
+                              ? (0, i.jsx)(l.D, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
                                     className: u.wx,
-                                    children: l,
+                                    children: a,
                                 })
                               : null,
-                          (0, n.jsx)("div", {
+                          (0, i.jsx)("div", {
                               className: u.kL,
                               children: t.map((e) =>
-                                  (0, n.jsxs)(
+                                  (0, i.jsxs)(
                                       "div",
                                       {
                                           className: u.EK,
                                           children: [
-                                              (0, n.jsx)(r.A, { size: "xs", color: "currentColor", className: u.z6 }),
-                                              (0, n.jsx)(o.E, { variant: "text-sm/normal", children: (0, d.hx)(e) }),
+                                              (0, i.jsx)(r.A, { size: "xs", color: "currentColor", className: u.z6 }),
+                                              (0, i.jsx)(o.E, { variant: "text-sm/normal", children: (0, d.hx)(e) }),
                                           ],
                                       },
                                       e.toString(),
@@ -50,27 +51,27 @@ function h(e) {
                       ],
                   })
                 : null,
-            null != a && a.length > 0
-                ? (0, n.jsxs)(n.Fragment, {
+            null != n && n.length > 0
+                ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != h
-                              ? (0, n.jsx)(s.D, {
+                              ? (0, i.jsx)(l.D, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
                                     className: u.wx,
                                     children: h,
                                 })
                               : null,
-                          (0, n.jsx)("div", {
+                          (0, i.jsx)("div", {
                               className: u.kL,
-                              children: a.map((e) =>
-                                  (0, n.jsxs)(
+                              children: n.map((e) =>
+                                  (0, i.jsxs)(
                                       "div",
                                       {
                                           className: u.EK,
                                           children: [
-                                              (0, n.jsx)(c.P, { size: "xs", color: "currentColor", className: u.$A }),
-                                              (0, n.jsx)(o.E, { variant: "text-sm/normal", children: (0, d.hx)(e) }),
+                                              (0, i.jsx)(c.P, { size: "xs", color: "currentColor", className: u.$A }),
+                                              (0, i.jsx)(o.E, { variant: "text-sm/normal", children: (0, d.hx)(e) }),
                                           ],
                                       },
                                       e.toString(),

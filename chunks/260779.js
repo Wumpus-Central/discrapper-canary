@@ -1,34 +1,35 @@
-r.d(t, { A: () => c });
+"use strict";
+r.d(t, { A: () => i });
 var l = r(627968),
-    n = r(219561),
-    a = r(190503),
-    s = r(149154);
-let c = (e) => {
-    let { bannerSrc: t, logoSrc: r, backgroundColor: c, href: i, children: d } = e;
+    s = r(219561),
+    n = r(190503),
+    a = r(149154);
+let i = (e) => {
+    let { bannerSrc: t, logoSrc: r, backgroundColor: i, href: c, children: u } = e;
     return (0, l.jsxs)("div", {
-        className: s.ZK,
+        className: a.ZK,
         children: [
             (0, l.jsx)("div", {
-                className: s.vK,
-                style: null != c ? { background: c } : void 0,
-                children: (0, l.jsx)(a.A, { src: t }),
+                className: a.vK,
+                style: null != i ? { background: i } : void 0,
+                children: (0, l.jsx)(n.A, { src: t }),
             }),
             (0, l.jsxs)("div", {
-                className: s.Qs,
+                className: a.Qs,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: s.wx,
+                        className: a.wx,
                         children: [
-                            null != r && (0, l.jsx)("div", { className: s.wm, children: (0, l.jsx)(a.A, { src: r }) }),
-                            null != i &&
-                                (0, l.jsx)(n.ar, {
+                            null != r && (0, l.jsx)("div", { className: a.wm, children: (0, l.jsx)(n.A, { src: r }) }),
+                            null != c &&
+                                (0, l.jsx)(s.ar, {
                                     variant: "overlay-primary",
-                                    href: i,
+                                    href: c,
                                     ctaText: "COLLECTIBLES_SHOP_THE_COLLECTION",
                                 }),
                         ],
                     }),
-                    null != d && (0, l.jsx)("div", { className: s.Y_, children: d }),
+                    null != u && (0, l.jsx)("div", { className: a.Y_, children: u }),
                 ],
             }),
         ],

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nf: "link__4364d",
     Wh: "flexRow__4364d",

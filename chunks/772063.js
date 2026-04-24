@@ -35,7 +35,7 @@ let g = function (e) {
                             color: "danger",
                             action: () =>
                                 (0, l.openModalLazy)(async () => {
-                                    let { default: e } = await a.e("57742").then(a.bind(a, 333179));
+                                    let { default: e } = await a.e("2504").then(a.bind(a, 333179));
                                     return (n) => (0, i.jsx)(e, { ...n, guildId: x, user: g });
                                 }),
                         },

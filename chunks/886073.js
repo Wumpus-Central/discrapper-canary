@@ -1,4 +1,5 @@
-t.exports = {
+"use strict";
+e.exports = {
     kL: "container_d804ff",
     wx: "header_d804ff",
     vR: "tabs_d804ff",

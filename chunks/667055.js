@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper__5c108",
     Td: "cardHeaderImg__5c108",

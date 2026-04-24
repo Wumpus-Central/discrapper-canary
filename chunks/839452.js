@@ -1,70 +1,71 @@
-r.d(a, { A: () => m });
-var t = r(627968);
+"use strict";
+r.d(t, { A: () => p });
+var i = r(627968);
 r(64700);
-var i = r(462887),
-    l = r(862482),
-    n = r(834730),
-    o = r(930861),
-    _ = r(403581),
-    s = r(821609),
+var a = r(462887),
+    n = r(862482),
+    s = r(834730),
+    l = r(930861),
+    o = r(403581),
+    c = r(821609),
     d = r(736653),
     u = r(985018),
-    c = r(150252);
-let m = function (e) {
-    let { churnUserDiscountOffer: a, onDiscountClaim: r, onContinue: m } = e,
-        p = (0, d.Ay)(),
-        f = (0, i.M)(p) ? "/assets/ff07ae06c15adc58.svg" : "/assets/dd0f35fb103d174b.svg";
-    return null == a
+    _ = r(150252);
+let p = function (e) {
+    let { churnUserDiscountOffer: t, onDiscountClaim: r, onContinue: p } = e,
+        f = (0, d.Ay)(),
+        m = (0, a.M)(f) ? "/assets/ff07ae06c15adc58.svg" : "/assets/dd0f35fb103d174b.svg";
+    return null == t
         ? null
-        : (0, t.jsxs)("div", {
-              className: c.bR,
+        : (0, i.jsxs)("div", {
+              className: _.bR,
               children: [
-                  (0, t.jsx)("div", { className: c.v0 }),
-                  (0, t.jsx)("div", { className: c.X2 }),
-                  (0, t.jsx)("div", {
-                      className: c.Dg,
-                      children: (0, t.jsxs)("div", {
-                          className: c.xt,
+                  (0, i.jsx)("div", { className: _.v0 }),
+                  (0, i.jsx)("div", { className: _.X2 }),
+                  (0, i.jsx)("div", {
+                      className: _.Dg,
+                      children: (0, i.jsxs)("div", {
+                          className: _.xt,
                           children: [
-                              (0, t.jsx)("img", { alt: "", src: f, className: c.lR }),
-                              (0, t.jsxs)("div", {
-                                  className: c.t2,
+                              (0, i.jsx)("img", { alt: "", src: m, className: _.lR }),
+                              (0, i.jsxs)("div", {
+                                  className: _.t2,
                                   children: [
-                                      (0, t.jsx)(n.E, {
+                                      (0, i.jsx)(s.E, {
                                           variant: "text-md/medium",
-                                          className: c.PU,
+                                          className: _.PU,
                                           children: u.intl.format(u.t["2gem05"], {
-                                              percent: a.discount.amount,
-                                              numMonths: a.discount.user_usage_limit,
+                                              percent: t.discount.amount,
+                                              numMonths: t.discount.user_usage_limit,
                                           }),
                                       }),
-                                      (0, t.jsxs)("div", {
-                                          className: c.$t,
+                                      (0, i.jsxs)("div", {
+                                          className: _.$t,
                                           children: [
-                                              (0, t.jsxs)(o.wL, {
+                                              (0, i.jsxs)(l.wL, {
                                                   "data-migration-pending": !0,
-                                                  className: c.Oy,
-                                                  innerClassName: c.iO,
-                                                  look: l.pR.OUTLINED,
-                                                  color: l.XD.CUSTOM,
+                                                  className: _.Oy,
+                                                  innerClassName: _.iO,
+                                                  look: n.pR.OUTLINED,
+                                                  color: n.XD.CUSTOM,
                                                   onClick: () => r?.(),
                                                   children: [
-                                                      (0, t.jsx)(_.t, {
+                                                      (0, i.jsx)(o.t, {
                                                           size: "xs",
                                                           color: "currentColor",
-                                                          className: c.Fl,
+                                                          className: _.Fl,
                                                       }),
-                                                      (0, t.jsx)(n.E, {
+                                                      (0, i.jsx)(s.E, {
                                                           variant: "text-sm/semibold",
-                                                          className: c.H0,
+                                                          className: _.H0,
                                                           children: u.intl.string(u.t.zrCzVB),
                                                       }),
                                                   ],
                                               }),
-                                              (0, t.jsx)(s.$, {
+                                              (0, i.jsx)(c.$, {
                                                   variant: "primary",
                                                   text: u.intl.string(u.t["3PatSz"]),
-                                                  onClick: () => m?.(),
+                                                  onClick: () => p?.(),
                                               }),
                                           ],
                                       }),

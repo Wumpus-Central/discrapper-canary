@@ -1,8 +1,9 @@
-l.d(t, { A: () => a });
-var r = l(627968);
-l(64700);
-var n = l(331322);
-let a = (e) => {
-    let { gap: t = 24, ...l } = e;
-    return (0, r.jsx)(n.B, { ...l, gap: t });
+"use strict";
+r.d(t, { A: () => n });
+var l = r(627968);
+r(64700);
+var s = r(331322);
+let n = (e) => {
+    let { gap: t = 24, ...r } = e;
+    return (0, l.jsx)(s.B, { ...r, gap: t });
 };

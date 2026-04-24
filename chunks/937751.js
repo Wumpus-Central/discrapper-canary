@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Hu: "alignCenter__31873",
     Vl: "alignLeft__31873",

@@ -1,51 +1,52 @@
-a.d(t, { A: () => m });
-var n = a(627968),
-    l = a(64700),
-    i = a(503698),
-    s = a.n(i),
-    r = a(939249),
-    o = a(7689),
-    c = a(827734),
-    d = a(892547),
-    u = a(488995),
-    h = a(206293);
-function m(e) {
+"use strict";
+n.d(t, { A: () => p });
+var i = n(627968),
+    a = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    r = n(939249),
+    o = n(7689),
+    c = n(661531),
+    d = n(892547),
+    u = n(488995),
+    h = n(206293);
+function p(e) {
     let {
             state: t,
-            query: a,
-            placeholder: i,
-            onTextChange: m,
-            onCollapsedClick: p,
+            query: n,
+            placeholder: s,
+            onTextChange: p,
+            onCollapsedClick: m,
             onClear: _,
             onBlur: g,
             onSubmit: x,
         } = e,
-        A = l.useRef(null),
-        f = l.useCallback(
+        f = a.useRef(null),
+        A = a.useCallback(
             (e) => {
                 "Enter" === e.key && x();
             },
             [x],
         ),
-        C = l.useCallback(() => {
-            p(), setTimeout(() => A.current?.focus());
-        }, [p]);
+        C = a.useCallback(() => {
+            m(), setTimeout(() => f.current?.focus());
+        }, [m]);
     return t === u.GlobalDiscoverySearchBarState.COLLAPSED
-        ? (0, n.jsx)(r.D, {
+        ? (0, i.jsx)(r.D, {
               className: h.qc,
               onClick: C,
-              children: (0, n.jsx)(o.$, { size: "sm", color: c.A.colors.ICON_STRONG }),
+              children: (0, i.jsx)(o.$, { size: "sm", color: c.A.colors.ICON_STRONG }),
           })
-        : (0, n.jsx)("div", {
-              className: s()(h.ON, { [h.Nz]: t === u.GlobalDiscoverySearchBarState.FLOATING }),
-              children: (0, n.jsx)(d.I, {
+        : (0, i.jsx)("div", {
+              className: l()(h.ON, { [h.Nz]: t === u.GlobalDiscoverySearchBarState.FLOATING }),
+              children: (0, i.jsx)(d.I, {
                   size: "sm",
-                  ref: A,
-                  query: a,
-                  placeholder: i,
-                  onChange: m,
+                  ref: f,
+                  query: n,
+                  placeholder: s,
+                  onChange: p,
                   onClear: _,
-                  onKeyDown: f,
+                  onKeyDown: A,
                   onBlur: g,
               }),
           });

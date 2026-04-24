@@ -1,27 +1,26 @@
-"use strict";
-s.d(t, { Wb: () => i, uh: () => a });
-var n = s(993408),
-    r = s(442759);
-function l(e) {
-    var t;
-    let s;
+i.d(e, { Wb: () => r, uh: () => o });
+var l = i(993408),
+    n = i(442759);
+function a(t) {
+    var e;
+    let i;
     return (
-        (t = e.items),
+        (e = t.items),
         {
-            firstProfileEffect: (s = new r.Ym(t)).firstProfileEffect,
-            firstAvatarDecoration: s.firstAvatarDecoration,
-            firstNameplate: s.firstNameplate,
+            firstProfileEffect: (i = new n.Ym(e)).firstProfileEffect,
+            firstAvatarDecoration: i.firstAvatarDecoration,
+            firstNameplate: i.firstNameplate,
         }
     );
 }
-function a(e) {
-    return (function (e) {
-        let { firstAvatarDecoration: t, firstProfileEffect: s, firstNameplate: n } = e;
-        return (null != t && null != s && null == n) || (null != t && null != s && null != n);
-    })(l(e));
+function o(t) {
+    return (function (t) {
+        let { firstAvatarDecoration: e, firstProfileEffect: i, firstNameplate: l } = t;
+        return (null != e && null != i && null == l) || (null != e && null != i && null != l);
+    })(a(t));
 }
-function i(e) {
-    if (!(0, n.aw)(e)) return !1;
-    let { firstNameplate: t } = l(e);
-    return null != t;
+function r(t) {
+    if (!(0, l.aw)(t)) return !1;
+    let { firstNameplate: e } = a(t);
+    return null != e;
 }

@@ -1,7 +1,8 @@
-r.d(t, { I: () => s });
-var n = r(627968),
-    a = r(64700),
-    c = r(744682);
+"use strict";
+n.d(t, { I: () => s });
+var r = n(627968),
+    i = n(64700),
+    a = n(744682);
 let l = {
         deafen: { name: "deafen", start: 0, duration: 70 },
         undeafen: { name: "undeafen", start: 110, duration: 70 },
@@ -9,30 +10,30 @@ let l = {
         hover_deafened: { name: "hover_deafened", start: 300, duration: 70 },
     },
     s = (e) => {
-        let t = a.useRef(null),
-            s = a.useRef(e);
+        let t = i.useRef(null),
+            s = i.useRef(e);
         s.current = e;
-        let u = a.useMemo(
+        let o = i.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e],
             ),
-            i = a.useCallback(() => {
+            d = i.useCallback(() => {
                 if (null == t.current) return;
-                let r = "deafen" === e ? "hover_undeafened" : "hover_deafened";
-                t.current.play(r);
+                let n = "deafen" === e ? "hover_undeafened" : "hover_deafened";
+                t.current.play(n);
             }, [e]),
-            o = a.useCallback(() => {
+            c = i.useCallback(() => {
                 if (null == t.current) return;
-                let r = "deafen" === e ? "hover_undeafened" : "hover_deafened";
-                t.current.stopIfPlaying(r);
+                let n = "deafen" === e ? "hover_undeafened" : "hover_deafened";
+                t.current.stopIfPlaying(n);
             }, [e]),
-            d = a.useCallback(
+            u = i.useCallback(
                 (e) =>
-                    (0, n.jsx)(c.P, {
+                    (0, r.jsx)(a.P, {
                         ...e,
-                        src: () => r.e("93768").then(r.t.bind(r, 894619, 19)),
+                        src: () => n.e("93768").then(n.t.bind(n, 894619, 19)),
                         ref: t,
                         initialAnimation: s.current,
                         markers: l,
@@ -40,10 +41,10 @@ let l = {
                 [],
             );
         return {
-            events: { onClick: u, onMouseEnter: i, onMouseLeave: o },
-            play: u,
-            getDuration: a.useCallback(() => t.current?.getDuration(), []),
-            getCurrentFrame: a.useCallback(() => t.current?.getCurrentFrame() ?? null, []),
-            Component: d,
+            events: { onClick: o, onMouseEnter: d, onMouseLeave: c },
+            play: o,
+            getDuration: i.useCallback(() => t.current?.getDuration(), []),
+            getCurrentFrame: i.useCallback(() => t.current?.getCurrentFrame() ?? null, []),
+            Component: u,
         };
     };

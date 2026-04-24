@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_f391e3",
     AS: "item_f391e3",

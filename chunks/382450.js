@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     nw: "outerContainer_e44912",
     yl: "modal_e44912",

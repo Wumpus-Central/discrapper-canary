@@ -444,8 +444,8 @@ function ek(e) {
                           v(eS.Ps.STAGE_INSTANCE),
                               (0, x.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      l.e("42282"),
                                       l.e("8018"),
+                                      l.e("42282"),
                                       l.e("9431"),
                                       l.e("13270"),
                                   ]).then(l.bind(l, 113194));
@@ -608,7 +608,7 @@ function e$(e) {
                           l.e("79149"),
                           l.e("2956"),
                           l.e("74571"),
-                          l.e("43746"),
+                          l.e("34075"),
                       ]).then(l.bind(l, 142630));
                       return (l) =>
                           (0, i.jsx)(n, {
@@ -770,8 +770,8 @@ var eK = l(789645),
     e2 = l(747007),
     e8 = l(710358),
     e4 = l(958590),
-    e6 = l(954571),
-    e7 = l(957565),
+    e7 = l(954571),
+    e6 = l(957565),
     e5 = l(118888);
 let { INVITE_OPTIONS_7_DAYS: e3, INVITE_OPTIONS_UNLIMITED: te } = I.Ay;
 function tt(e) {
@@ -831,9 +831,9 @@ function tt(e) {
                         autoFocus: !1,
                         onCopy: (e) => {
                             if (m) return;
-                            (0, e7.C)(e);
+                            (0, e6.C)(e);
                             let t = (0, P.dy)(l.entity_type);
-                            e6.default.track(eo.HAw.COPY_INSTANT_INVITE, {
+                            e7.default.track(eo.HAw.COPY_INSTANT_INVITE, {
                                 server: l.guild_id,
                                 channel: d,
                                 channel_type: t,

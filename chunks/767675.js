@@ -1,84 +1,85 @@
-r.r(t), r.d(t, { default: () => eP });
-var n = r(627968),
-    i = r(64700),
-    a = r(979186);
-r(321073), r(667532);
-var o = r(735438),
-    s = r.n(o),
-    l = r(17928),
-    d = r(97808),
-    c = r(778712),
-    u = r(534514),
-    m = r(233545),
-    p = r(83257),
-    h = r(361739),
-    y = r(47167),
-    b = r(235986),
-    g = r(97469),
-    f = r(363195),
-    C = r(734057),
-    A = r(696451),
-    F = r(763827),
-    x = r(412780),
-    _ = r(994500),
-    v = r(287809),
-    D = r(427262),
-    E = r(289873),
-    S = r(331322),
-    R = r(503698),
-    j = r.n(R),
-    B = r(23339),
-    I = r(691885),
-    N = r(761508),
-    k = r(684339),
-    P = r(51092),
-    w = r(969341);
-r(134528), r(947204);
-var T = r(796873),
-    L = r.n(T),
-    G = r(229659),
-    M = r(661531),
-    U = r(707554),
-    H = r(404778),
-    O = r(603349),
-    W = r(41604);
-let q = ["firCount", "nackCount"];
-class $ extends i.PureComponent {
+"use strict";
+n.r(t), n.d(t, { default: () => ek });
+var i = n(627968),
+    r = n(64700),
+    a = n(979186);
+n(321073), n(667532);
+var s = n(735438),
+    l = n.n(s),
+    o = n(17928),
+    d = n(97808),
+    c = n(778712),
+    u = n(534514),
+    m = n(233545),
+    p = n(83257),
+    _ = n(361739),
+    h = n(47167),
+    g = n(235986),
+    b = n(97469),
+    y = n(363195),
+    f = n(734057),
+    A = n(696451),
+    S = n(763827),
+    E = n(412780),
+    x = n(994500),
+    C = n(287809),
+    v = n(427262),
+    N = n(289873),
+    D = n(331322),
+    I = n(503698),
+    L = n.n(I),
+    F = n(23339),
+    R = n(691885),
+    j = n(761508),
+    T = n(684339),
+    k = n(51092),
+    M = n(969341);
+n(134528), n(947204);
+var O = n(796873),
+    G = n.n(O),
+    w = n(229659),
+    B = n(661531),
+    P = n(707554),
+    U = n(404778),
+    H = n(603349),
+    W = n(41604);
+let V = ["firCount", "nackCount"];
+class q extends r.PureComponent {
     renderValueIcon() {
         let { label: e } = this.props;
-        return q.includes(e) ? (0, n.jsx)(O.A, { color: M.A.unsafe_rawColors.YELLOW_300.css, className: W.nm }) : null;
+        return V.includes(e) ? (0, i.jsx)(H.A, { color: B.A.unsafe_rawColors.YELLOW_300.css, className: W.nm }) : null;
     }
     render() {
-        let { children: e, className: t, valueRendered: r, section: i, label: a, renderGraph: o } = this.props;
-        return (0, n.jsxs)(b.A, {
-            className: j()(W.AS, t),
-            direction: b.A.Direction.VERTICAL,
+        let { children: e, className: t, valueRendered: n, section: r, label: a, renderGraph: s } = this.props;
+        return (0, i.jsxs)(g.A, {
+            className: L()(W.AS, t),
+            direction: g.A.Direction.VERTICAL,
             basis: "50%",
             children: [
-                (0, n.jsxs)(b.A, {
+                (0, i.jsxs)(g.A, {
                     className: W.l5,
-                    align: b.A.Align.START,
+                    align: g.A.Align.START,
                     children: [
-                        (0, n.jsx)(b.A.Child, { children: (0, n.jsx)(U.H, { className: W.DD, children: e }) }),
-                        Array.isArray(r)
-                            ? (0, n.jsx)(b.A.Child, { grow: 1, children: r })
-                            : (0, n.jsxs)(b.A.Child, {
+                        (0, i.jsx)(g.A.Child, { children: (0, i.jsx)(P.H, { className: W.DD, children: e }) }),
+                        Array.isArray(n)
+                            ? (0, i.jsx)(g.A.Child, { grow: 1, children: n })
+                            : (0, i.jsxs)(g.A.Child, {
                                   grow: 0,
                                   shrink: 0,
                                   children: [
                                       this.renderValueIcon(),
-                                      (0, n.jsx)("span", { className: W.R$, title: r, children: r }),
+                                      (0, i.jsx)("span", { className: W.R$, title: n, children: n }),
                                   ],
                               }),
                     ],
                 }),
-                null !== o && (0, n.jsx)(b.A.Child, { className: W.JB, children: o }, null != i ? `${i}-${a}` : a),
-                (0, n.jsx)(H.c, { className: W.yF }),
+                null !== s && (0, i.jsx)(g.A.Child, { className: W.JB, children: s }, null != r ? `${r}-${a}` : a),
+                (0, i.jsx)(U.c, { className: W.yF }),
             ],
         });
     }
 }
-let V = {
+let $ = {
     accelerateRate: "Accelerate Rate",
     audioDetected: "Audio Detected",
     audioLevel: "Audio Level",
@@ -208,25 +209,25 @@ let V = {
     videohookBackend: "Videohook Backend",
     videohookFrames: "Videohook Frames",
 };
-function z(e) {
+function Q(e) {
     return `${(e / 1e3).toFixed(2)} Kbps`;
 }
-function K(e) {
-    return L().filesize(e);
+function z(e) {
+    return G().filesize(e);
 }
-function J(e) {
+function K(e) {
     return e;
 }
-function Q(e) {
+function Y(e) {
     return `${e} ms`;
 }
-function X(e) {
+function J(e) {
     return `${e.toFixed(0)}%`;
 }
 function Z(e) {
     return e ? "Yes" : "No";
 }
-function Y(e) {
+function X(e) {
     return 20 * Math.log(e);
 }
 function ee(e) {
@@ -236,7 +237,7 @@ function ee(e) {
 function et(e) {
     return e.toFixed(2);
 }
-let er = {
+let en = {
         audioJitterBuffer: !0,
         audioJitterBufferSamples: !0,
         audioJitterDelay: !0,
@@ -272,256 +273,256 @@ let er = {
         voiceActivityDetectorProcessTime: !0,
         consecutiveStaticColorFrames: !0,
     },
-    en = {
-        accelerateRate: X,
+    ei = {
+        accelerateRate: J,
         audioDetected: Z,
         audioLevel: function (e) {
-            return e <= 0 ? "-∞ dB" : `${Y(e).toFixed(2)} dB`;
+            return e <= 0 ? "-∞ dB" : `${X(e).toFixed(2)} dB`;
         },
-        availableOutgoingBitrate: z,
-        averageDecodeTime: Q,
-        averageEncodeTime: Q,
+        availableOutgoingBitrate: Q,
+        averageDecodeTime: Y,
+        averageEncodeTime: Y,
         bandwidthLimitedFrameRate: Z,
         bandwidthLimitedResolution: Z,
-        bitrate: z,
-        bitrateTarget: z,
-        bytesReceived: K,
-        bytesSent: K,
+        bitrate: Q,
+        bitrateTarget: Q,
+        bytesReceived: z,
+        bytesSent: z,
         codec: function (e) {
-            let { id: t, name: r } = e;
-            return (r = (r = "" === r ? "unknown" : r) ?? "unknown"), `${r[0].toUpperCase()}${r.slice(1)} (${t})`;
+            let { id: t, name: n } = e;
+            return (n = (n = "" === n ? "unknown" : n) ?? "unknown"), `${n[0].toUpperCase()}${n.slice(1)} (${t})`;
         },
         cpuLimitedResolution: Z,
-        currentDelay: Q,
+        currentDelay: Y,
         currentSampleRate: function (e) {
             return e % 100 == 0 ? `${e / 1e3} kHz` : `${e} Hz`;
         },
-        decoderImplementationName: J,
-        delayEstimate: Q,
-        encoderImplementationName: J,
+        decoderImplementationName: K,
+        delayEstimate: Y,
+        encoderImplementationName: K,
         encoderQualityPsnr: function (e) {
             return `${Math.max(e, 0).toFixed(2)} dB`;
         },
         encoderQualityVmaf: et,
-        encodeUsage: X,
-        expandRate: X,
-        filter: J,
-        fractionLost: X,
-        inboundBitrateEstimate: z,
-        jitter: Q,
-        jitterBuffer: Q,
-        jitterBufferPreferred: Q,
-        keyFrameInterval: Q,
-        minPlayoutDelay: Q,
-        outboundBitrateEstimate: z,
-        pacerDelay: Q,
-        ping: Q,
+        encodeUsage: J,
+        expandRate: J,
+        filter: K,
+        fractionLost: J,
+        inboundBitrateEstimate: Q,
+        jitter: Y,
+        jitterBuffer: Y,
+        jitterBufferPreferred: Y,
+        keyFrameInterval: Y,
+        minPlayoutDelay: Y,
+        outboundBitrateEstimate: Q,
+        pacerDelay: Y,
+        ping: Y,
         powerEfficientDecoder: Z,
         powerEfficientEncoder: Z,
-        preemptiveExpandRate: X,
-        receiverBitrateEstimate: z,
+        preemptiveExpandRate: J,
+        receiverBitrateEstimate: Q,
         relativePlayoutDelay: ee,
         relativeReceptionDelay: ee,
-        renderDelay: Q,
+        renderDelay: Y,
         resolution: (e) => {
-            let { width: t, height: r } = e;
-            return `${t}x${r}`;
+            let { width: t, height: n } = e;
+            return `${t}x${n}`;
         },
-        sampleRateMismatchPercent: X,
+        sampleRateMismatchPercent: J,
         screenshareCapturedFps: et,
         screenshareCapturedFpsUnique: et,
-        secondaryDecodedRate: X,
+        secondaryDecodedRate: J,
         secureFramesProtocolVersion: function (e) {
             return e > 0 ? `Version ${e}` : "Disabled";
         },
-        speechExpandRate: X,
-        targetDelay: Q,
+        speechExpandRate: J,
+        targetDelay: Y,
         videoEntropy: et,
         videohookBackend: function (e) {
             let t = ["N/A", "Direct3D 9", "Direct3D 10", "Direct3D 11", "Direct3D 12", "OpenGL", "Vulkan"];
             return e < t.length ? t[e] : "Unknown";
         },
     },
-    ei = {
+    er = {
         audioLevel: function (e) {
-            return Math.max(Y(e), -100) + 100;
+            return Math.max(X(e), -100) + 100;
         },
     },
     ea = (e) => e,
-    eo = (e) => {
-        let [t] = i.useState([]);
+    es = (e) => {
+        let [t] = r.useState([]);
         return (
             t.push({ value: e.value, time: Date.now() }),
             t.length > 600 && t.shift(),
-            (0, n.jsx)(G.A, { converter: e.converter, dataPoints: t, width: e.width, height: e.height })
+            (0, i.jsx)(w.A, { converter: e.converter, dataPoints: t, width: e.width, height: e.height })
         );
     };
-function es(e) {
-    let { label: t, value: r, section: i } = e,
-        a = en[t] ?? ea,
-        o = ei[t],
-        s =
-            x.iA[t] &&
-            (Array.isArray(r) && r.length > 0 && "number" == typeof r[0].value
-                ? (0, n.jsx)(G.A, { converter: o, dataPoints: r, width: 300, height: 100 })
-                : "number" == typeof r
-                  ? (0, n.jsx)(eo, { converter: o, value: r, width: 300, height: 100 })
+function el(e) {
+    let { label: t, value: n, section: r } = e,
+        a = ei[t] ?? ea,
+        s = er[t],
+        l =
+            E.iA[t] &&
+            (Array.isArray(n) && n.length > 0 && "number" == typeof n[0].value
+                ? (0, i.jsx)(w.A, { converter: s, dataPoints: n, width: 300, height: 100 })
+                : "number" == typeof n
+                  ? (0, i.jsx)(es, { converter: s, value: n, width: 300, height: 100 })
                   : void 0),
-        l = Array.isArray(r) ? r.at(-1)?.value : r;
-    return (0, n.jsx)($, { label: t, valueRendered: a(l), section: i, renderGraph: s, children: V[t] ?? t });
+        o = Array.isArray(n) ? n.at(-1)?.value : n;
+    return (0, i.jsx)(q, { label: t, valueRendered: a(o), section: r, renderGraph: l, children: $[t] ?? t });
 }
-var el = r(731854),
-    ed = r(818050);
-let ec = { [el.r8.NO_OVERRIDE]: "None", [el.r8.LOW]: "Low Quality Stream", [el.r8.HIGH]: "High Quality Stream" };
+var eo = n(731854),
+    ed = n(818050);
+let ec = { [eo.r8.NO_OVERRIDE]: "None", [eo.r8.LOW]: "Low Quality Stream", [eo.r8.HIGH]: "High Quality Stream" };
 function eu(e) {
     let t = [],
-        r = 0;
-    for (e.length % 2 != 0 && e.push((0, n.jsx)(b.A, { basis: "50%", grow: 0 }, r++)); e.length > 0; )
-        t.push((0, n.jsx)(b.A, { basis: "50%", grow: 0, children: e.splice(0, 2) }, r++));
+        n = 0;
+    for (e.length % 2 != 0 && e.push((0, i.jsx)(g.A, { basis: "50%", grow: 0 }, n++)); e.length > 0; )
+        t.push((0, i.jsx)(g.A, { basis: "50%", grow: 0, children: e.splice(0, 2) }, n++));
     return t;
 }
 let em = { ssrc: 1, codec: 2 };
 function ep(e) {
     let {
             streams: t,
-            context: r,
+            context: n,
             mediaEngineConnectionId: a,
-            userId: o,
-            videoStreams: s,
+            userId: s,
+            videoStreams: l,
             title: d,
             showUserInfo: c = !1,
             showSimulcastOverride: p = !1,
         } = e,
-        [h, y] = i.useState("0"),
-        g = (0, l.bG)([F.A], () => (c ? F.A.getGuildId() : null)),
-        f = (0, l.bG)([v.default], () => (c && null != o ? v.default.getUser(o) : null)),
-        C = (0, l.bG)([A.Ay], () => (c && null != g && null != o ? A.Ay.getNick(g, o) : null));
-    if (null == t || (c && null == o) || 0 === t.length) return (0, n.jsx)(E.y, { type: E.y.Type.SPINNING_CIRCLE });
-    let _ = d;
-    c && null != f && (_ = `${d} — ${C ?? D.Ay.getName(f)}`);
-    let R = t.map((e, t) => {
-            let r, i;
-            return (0, n.jsx)(
-                N.V.Item,
+        [_, h] = r.useState("0"),
+        b = (0, o.bG)([S.A], () => (c ? S.A.getGuildId() : null)),
+        y = (0, o.bG)([C.default], () => (c && null != s ? C.default.getUser(s) : null)),
+        f = (0, o.bG)([A.Ay], () => (c && null != b && null != s ? A.Ay.getNick(b, s) : null));
+    if (null == t || (c && null == s) || 0 === t.length) return (0, i.jsx)(N.y, { type: N.y.Type.SPINNING_CIRCLE });
+    let x = d;
+    c && null != y && (x = `${d} — ${f ?? v.Ay.getName(y)}`);
+    let I = t.map((e, t) => {
+            let n, r;
+            return (0, i.jsx)(
+                j.V.Item,
                 {
                     id: t.toString(),
                     children:
-                        ((r = (0, B.$G)(e.type)),
-                        (i = ""),
+                        ((n = (0, F.$G)(e.type)),
+                        (r = ""),
                         "resolution" in e &&
                             null != e.resolution &&
                             0 !== e.resolution.width &&
                             0 !== e.resolution.height &&
-                            (i = ` (${e.resolution.width}x${e.resolution.height})`),
-                        r + i),
+                            (r = ` (${e.resolution.width}x${e.resolution.height})`),
+                        n + r),
                 },
                 t.toString(),
             );
         }),
-        T = Math.min(parseInt(h, 10), t.length - 1),
-        L = t[T],
-        G = (function (e, t, r, i) {
+        O = Math.min(parseInt(_, 10), t.length - 1),
+        G = t[O],
+        w = (function (e, t, n, r) {
             let a,
-                o = [];
+                s = [];
             for (let t of Object.keys(e).sort((e, t) => {
-                let r = em[e],
-                    n = em[t];
-                return r !== n
-                    ? void 0 === r
+                let n = em[e],
+                    i = em[t];
+                return n !== i
+                    ? void 0 === n
                         ? 1
-                        : void 0 === n
+                        : void 0 === i
                           ? -1
-                          : r - n
-                    : x.iA[e] !== x.iA[t]
-                      ? x.iA[e]
+                          : n - i
+                    : E.iA[e] !== E.iA[t]
+                      ? E.iA[e]
                           ? 1
                           : -1
                       : e > t
                         ? 1
                         : -1;
             })) {
-                let i = e[t];
-                er[t] || void 0 === i || o.push((0, n.jsx)(es, { section: r, label: t, value: i }, t));
+                let r = e[t];
+                en[t] || void 0 === r || s.push((0, i.jsx)(el, { section: n, label: t, value: r }, t));
             }
-            return (0, n.jsxs)(
+            return (0, i.jsxs)(
                 "div",
                 {
                     className: ed.C2,
                     children: [
                         "video" === e.type &&
                             null != t &&
+                            null != n &&
                             null != r &&
-                            null != i &&
-                            (null != (a = i.get(t, r, e.ssrc))
-                                ? (0, n.jsx)("div", {
-                                      className: j()(W.tN, ed.C2),
-                                      children: (0, n.jsx)(P.A, {
+                            (null != (a = r.get(t, n, e.ssrc))
+                                ? (0, i.jsx)("div", {
+                                      className: L()(W.tN, ed.C2),
+                                      children: (0, i.jsx)(k.A, {
                                           streamId: a,
-                                          videoComponent: w.Ay.getMediaEngine().Video,
+                                          videoComponent: M.Ay.getMediaEngine().Video,
                                           paused: !1,
-                                          videoSpinnerContext: k.u.REPLAY_VIDEO_STREAM,
-                                          userId: r,
+                                          videoSpinnerContext: T.u.REPLAY_VIDEO_STREAM,
+                                          userId: n,
                                       }),
                                   })
                                 : null),
-                        eu(o),
+                        eu(s),
                     ],
                 },
                 `${e.type} + ${e.ssrc}`,
             );
-        })(L, a, o, s),
-        M =
+        })(G, a, s, l),
+        B =
             p &&
-            "video" === L.type &&
+            "video" === G.type &&
             null != a &&
-            null != o &&
             null != s &&
-            r === el.x.DEFAULT &&
-            (0, n.jsx)(b.A, {
+            null != l &&
+            n === eo.x.DEFAULT &&
+            (0, i.jsx)(g.A, {
                 className: ed.SX,
-                children: (0, n.jsx)(b.A.Child, {
+                children: (0, i.jsx)(g.A.Child, {
                     basis: "100%",
-                    children: (0, n.jsx)(I.l, {
+                    children: (0, i.jsx)(R.l, {
                         label: "Simulcast Override",
-                        value: x.Ay.getSimulcastDebugOverride(o, r),
+                        value: E.Ay.getSimulcastDebugOverride(s, n),
                         onSelectionChange: (e) => {
-                            m.z0(o, r, e);
+                            m.z0(s, n, e);
                         },
-                        options: Object.values(el.r8).map((e) => ({ id: e, value: e, label: ec[e] })),
+                        options: Object.values(eo.r8).map((e) => ({ id: e, value: e, label: ec[e] })),
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
                 }),
             });
-    return (0, n.jsxs)(S.B, {
+    return (0, i.jsxs)(D.B, {
         gap: 16,
         children: [
-            (0, n.jsx)(u.D, { variant: "heading-md/medium", children: _ }),
-            (0, n.jsx)(N.V, {
+            (0, i.jsx)(u.D, { variant: "heading-md/medium", children: x }),
+            (0, i.jsx)(j.V, {
                 type: "top",
                 look: "brand",
-                selectedItem: h,
-                onItemSelect: y,
+                selectedItem: _,
+                onItemSelect: h,
                 className: W.$H,
-                children: R,
+                children: I,
             }),
-            G,
-            M,
+            w,
+            B,
         ],
     });
 }
-var eh = r(985018);
-function ey(e) {
+var e_ = n(985018);
+function eh(e) {
     let { camera: t } = e;
-    if (null == t) return (0, n.jsx)(E.y, { type: E.y.Type.SPINNING_CIRCLE });
-    let r = s().map(t, (e, t) => {
-        if (!(er[t] || void 0 === e)) return (0, n.jsx)(es, { label: t, value: e }, t);
+    if (null == t) return (0, i.jsx)(N.y, { type: N.y.Type.SPINNING_CIRCLE });
+    let n = l().map(t, (e, t) => {
+        if (!(en[t] || void 0 === e)) return (0, i.jsx)(el, { label: t, value: e }, t);
     });
-    return (0, n.jsxs)(S.B, {
-        children: [(0, n.jsx)(u.D, { variant: "heading-md/medium", children: eh.intl.string(eh.t["2AGBWH"]) }), eu(r)],
+    return (0, i.jsxs)(D.B, {
+        children: [(0, i.jsx)(u.D, { variant: "heading-md/medium", children: e_.intl.string(e_.t["2AGBWH"]) }), eu(n)],
     });
 }
-let eb = {
+let eg = {
     userId: 1,
     dataType: 2,
     savedKB: 3,
@@ -533,42 +534,42 @@ let eb = {
     audioChannels: 9,
     sampleRate: 10,
 };
-function eg(e) {
+function eb(e) {
     let { clips: t } = e;
-    if (null == t) return (0, n.jsx)(E.y, { type: E.y.Type.SPINNING_CIRCLE });
-    let r = s().map(t, (e, t) => {
-        if (void 0 !== e && "buffers" !== t) return (0, n.jsx)(es, { label: t, value: e }, t);
+    if (null == t) return (0, i.jsx)(N.y, { type: N.y.Type.SPINNING_CIRCLE });
+    let n = l().map(t, (e, t) => {
+        if (void 0 !== e && "buffers" !== t) return (0, i.jsx)(el, { label: t, value: e }, t);
     });
     return (
-        r.push(
-            (0, n.jsx)(
-                es,
+        n.push(
+            (0, i.jsx)(
+                el,
                 { label: "Frames Per Second", value: t.recentEncodedFrames / (t.recentDurationMs / 1e3) },
                 "framerate",
             ),
         ),
-        (0, n.jsxs)(S.B, {
+        (0, i.jsxs)(D.B, {
             children: [
-                (0, n.jsx)(u.D, { variant: "heading-md/medium", children: eh.intl.string(eh.t.MKrFKE) }),
-                eu(r),
+                (0, i.jsx)(u.D, { variant: "heading-md/medium", children: e_.intl.string(e_.t.MKrFKE) }),
+                eu(n),
                 (function (e) {
                     if (null != e.buffers)
                         return e.buffers.map((e) => {
                             let t = [];
-                            for (let r of Object.keys(e).sort((e, t) => {
-                                let r = eb[e],
-                                    n = eb[t];
-                                return r !== n ? (void 0 === r ? 1 : void 0 === n ? -1 : r - n) : e > t ? 1 : -1;
+                            for (let n of Object.keys(e).sort((e, t) => {
+                                let n = eg[e],
+                                    i = eg[t];
+                                return n !== i ? (void 0 === n ? 1 : void 0 === i ? -1 : n - i) : e > t ? 1 : -1;
                             })) {
-                                let i = e[r];
-                                null !== i && "key" !== r && t.push((0, n.jsx)(es, { label: r, value: i }, r));
+                                let r = e[n];
+                                null !== r && "key" !== n && t.push((0, i.jsx)(el, { label: n, value: r }, n));
                             }
-                            return (0, n.jsxs)(
+                            return (0, i.jsxs)(
                                 "div",
                                 {
                                     className: ed.C2,
                                     children: [
-                                        (0, n.jsx)(u.D, { variant: "heading-md/medium", children: `Buffer: ${e.key}` }),
+                                        (0, i.jsx)(u.D, { variant: "heading-md/medium", children: `Buffer: ${e.key}` }),
                                         eu(t),
                                     ],
                                 },
@@ -580,40 +581,40 @@ function eg(e) {
         })
     );
 }
-let ef = l.Ay.connectStores([x.Ay], (e) => {
-        let { context: t, index: r, videoStreams: n } = e,
-            i = x.Ay.getAllStats(t)[r],
-            { section: a } = (0, x.Bz)(x.Ay.getSection());
+let ey = o.Ay.connectStores([E.Ay], (e) => {
+        let { context: t, index: n, videoStreams: i } = e,
+            r = E.Ay.getAllStats(t)[n],
+            { section: a } = (0, E.Bz)(E.Ay.getSection());
         if (null == a) throw Error("Unrecognized section format");
-        let o = null;
+        let s = null;
         return (
-            null != i && null != i.rtp.inbound && (o = i.rtp.inbound[a] ?? []),
-            { mediaEngineConnectionId: i?.mediaEngineConnectionId, userId: a, streams: o, videoStreams: n }
+            null != r && null != r.rtp.inbound && (s = r.rtp.inbound[a] ?? []),
+            { mediaEngineConnectionId: r?.mediaEngineConnectionId, userId: a, streams: s, videoStreams: i }
         );
     })(function (e) {
-        let { streams: t, context: r, index: i, userId: a, mediaEngineConnectionId: o, videoStreams: s } = e;
-        return (0, n.jsx)(ep, {
+        let { streams: t, context: n, index: r, userId: a, mediaEngineConnectionId: s, videoStreams: l } = e;
+        return (0, i.jsx)(ep, {
             streams: t,
-            context: r,
-            index: i,
-            mediaEngineConnectionId: o,
+            context: n,
+            index: r,
+            mediaEngineConnectionId: s,
             userId: a,
-            videoStreams: s,
-            title: eh.intl.string(eh.t.SJmZaq),
+            videoStreams: l,
+            title: e_.intl.string(e_.t.SJmZaq),
             showUserInfo: !0,
         });
     }),
-    eC = l.Ay.connectStores([x.Ay], (e) => {
-        let { context: t, index: r } = e,
-            n = x.Ay.getAllStats(t)[r];
-        return { outbound: null != n ? n.rtp.outbound : null };
+    ef = o.Ay.connectStores([E.Ay], (e) => {
+        let { context: t, index: n } = e,
+            i = E.Ay.getAllStats(t)[n];
+        return { outbound: null != i ? i.rtp.outbound : null };
     })(function (e) {
-        let { outbound: t, context: r, index: i } = e;
-        return (0, n.jsx)(ep, {
+        let { outbound: t, context: n, index: r } = e;
+        return (0, i.jsx)(ep, {
             streams: t,
-            context: r,
-            index: i,
-            title: eh.intl.string(eh.t["3u0gII"]),
+            context: n,
+            index: r,
+            title: e_.intl.string(e_.t["3u0gII"]),
             showUserInfo: !1,
             showSimulcastOverride: !1,
         });
@@ -626,7 +627,7 @@ let ef = l.Ay.connectStores([x.Ay], (e) => {
         hybridGraphicsCaptureFrames: { key: "hybridGraphicsCaptureFramesUnique", suffix: "Unique" },
         hybridVideohookFrames: { key: "hybridVideohookFramesUnique", suffix: "Unique" },
     },
-    eF = [
+    eS = [
         "hdrFrames",
         "hybridCaptureMethodSwitches",
         "hybridDxgiFrames",
@@ -643,288 +644,288 @@ let ef = l.Ay.connectStores([x.Ay], (e) => {
         "screenshareCapturedFps",
         "screenshareCapturedFpsUnique",
     ],
-    ex = new Set([...eF, ...Object.values(eA).map((e) => e.key)]);
-class e_ extends i.PureComponent {
+    eE = new Set([...eS, ...Object.values(eA).map((e) => e.key)]);
+class ex extends r.PureComponent {
     render() {
         let { screenshare: e } = this.props;
         return null == e
-            ? (0, n.jsx)(E.y, { type: E.y.Type.SPINNING_CIRCLE })
-            : (0, n.jsxs)(S.B, {
+            ? (0, i.jsx)(N.y, { type: N.y.Type.SPINNING_CIRCLE })
+            : (0, i.jsxs)(D.B, {
                   children: [
-                      (0, n.jsx)(u.D, { variant: "heading-md/medium", children: eh.intl.string(eh.t["gWbr/U"]) }),
+                      (0, i.jsx)(u.D, { variant: "heading-md/medium", children: e_.intl.string(e_.t["gWbr/U"]) }),
                       eu(
                           (function (e) {
                               let t = null != e.hybridGdiBitBltFrames && null != e.hybridGdiPrintWindowFrames,
-                                  r = [];
-                              for (let i of eF) {
-                                  if ("hybridGdiFrames" === i && t) continue;
-                                  let a = e[i];
+                                  n = [];
+                              for (let r of eS) {
+                                  if ("hybridGdiFrames" === r && t) continue;
+                                  let a = e[r];
                                   if (void 0 === a) continue;
-                                  let o = eA[i],
-                                      s = null != o ? e[o.key] : void 0;
-                                  null != o && void 0 !== s
-                                      ? r.push(
-                                            (0, n.jsx)(
-                                                $,
+                                  let s = eA[r],
+                                      l = null != s ? e[s.key] : void 0;
+                                  null != s && void 0 !== l
+                                      ? n.push(
+                                            (0, i.jsx)(
+                                                q,
                                                 {
-                                                    label: i,
-                                                    valueRendered: `${a} (${s})`,
+                                                    label: r,
+                                                    valueRendered: `${a} (${l})`,
                                                     renderGraph: null,
-                                                    children: `${V[i] ?? i} (${o.suffix})`,
+                                                    children: `${$[r] ?? r} (${s.suffix})`,
                                                 },
-                                                i,
+                                                r,
                                             ),
                                         )
-                                      : r.push((0, n.jsx)(es, { label: i, value: a }, i));
+                                      : n.push((0, i.jsx)(el, { label: r, value: a }, r));
                               }
-                              for (let [t, i] of Object.entries(e))
-                                  ex.has(t) ||
-                                      er[t] ||
-                                      void 0 === i ||
-                                      r.push((0, n.jsx)(es, { label: t, value: i }, t));
-                              return r;
+                              for (let [t, r] of Object.entries(e))
+                                  eE.has(t) ||
+                                      en[t] ||
+                                      void 0 === r ||
+                                      n.push((0, i.jsx)(el, { label: t, value: r }, t));
+                              return n;
                           })(e),
                       ),
                   ],
               });
     }
 }
-var ev = r(967198),
-    eD = r(116956),
-    eE = r(351906),
-    eS = r(562153),
-    eR = r(917592);
-class ej extends i.PureComponent {
+var eC = n(967198),
+    ev = n(116956),
+    eN = n(351906),
+    eD = n(562153),
+    eI = n(917592);
+class eL extends r.PureComponent {
     render() {
-        let { transport: e, mediaSessionId: t, hidePersonalInformation: r, hostname: i } = this.props;
-        if (null == e) return (0, n.jsx)(E.y, { type: E.y.Type.SPINNING_CIRCLE });
-        let a = { ...e, hostname: i },
-            o = s().map(a, (e, t) => {
-                if ("receiverReports" !== t && (!r || "localAddress" !== t))
-                    return (0, n.jsx)(es, { label: t, value: e }, t);
+        let { transport: e, mediaSessionId: t, hidePersonalInformation: n, hostname: r } = this.props;
+        if (null == e) return (0, i.jsx)(N.y, { type: N.y.Type.SPINNING_CIRCLE });
+        let a = { ...e, hostname: r },
+            s = l().map(a, (e, t) => {
+                if ("receiverReports" !== t && (!n || "localAddress" !== t))
+                    return (0, i.jsx)(el, { label: t, value: e }, t);
             }),
-            l = s().map(a.receiverReports, (e) => {
+            o = l().map(a.receiverReports, (e) => {
                 let t = Array.isArray(e.bitrate) ? e.bitrate.at(-1)?.value : e.bitrate,
-                    r = v.default.getUser(e.id);
-                var n = eS.Ay.getNickname(ev.A.getGuildId(), void 0, r);
+                    n = C.default.getUser(e.id);
+                var i = eD.Ay.getNickname(eC.A.getGuildId(), void 0, n);
                 return (
-                    null == n && (n = null != r ? r.username : e.id),
-                    { displayName: n, bitrate: t / 1e3, lost: (100 * e.fractionLost) / 256 }
+                    null == i && (i = null != n ? n.username : e.id),
+                    { displayName: i, bitrate: t / 1e3, lost: (100 * e.fractionLost) / 256 }
                 );
             }),
-            d = s().sortBy(l, (e) => e.displayName),
-            c = s().map(d, (e) => {
-                var t, r, i;
-                let a, o;
+            d = l().sortBy(o, (e) => e.displayName),
+            c = l().map(d, (e) => {
+                var t, n, r;
+                let a, s;
                 return (
                     (t = e.displayName),
-                    (r = e.bitrate),
-                    (i = e.lost),
-                    (a = (0, n.jsxs)(b.A, {
+                    (n = e.bitrate),
+                    (r = e.lost),
+                    (a = (0, i.jsxs)(g.A, {
                         id: `bitrate-${t}`,
-                        justify: b.A.Justify.BETWEEN,
+                        justify: g.A.Justify.BETWEEN,
                         children: [
-                            (0, n.jsx)("span", { children: "Bitrate:" }),
-                            (0, n.jsxs)("span", { children: [r.toFixed(2), " Kbps"] }),
+                            (0, i.jsx)("span", { children: "Bitrate:" }),
+                            (0, i.jsxs)("span", { children: [n.toFixed(2), " Kbps"] }),
                         ],
                     })),
-                    (o = (0, n.jsxs)(b.A, {
+                    (s = (0, i.jsxs)(g.A, {
                         id: `lost-${t}`,
-                        justify: b.A.Justify.BETWEEN,
+                        justify: g.A.Justify.BETWEEN,
                         children: [
-                            (0, n.jsx)("span", { children: "Packet Loss:" }),
-                            (0, n.jsxs)("span", { children: [i.toFixed(0), "%"] }),
+                            (0, i.jsx)("span", { children: "Packet Loss:" }),
+                            (0, i.jsxs)("span", { children: [r.toFixed(0), "%"] }),
                         ],
                     })),
-                    (0, n.jsx)($, { label: t, valueRendered: [a, o], children: t }, t)
+                    (0, i.jsx)(q, { label: t, valueRendered: [a, s], children: t }, t)
                 );
             });
-        return (0, n.jsxs)(S.B, {
+        return (0, i.jsxs)(D.B, {
             className: W._8,
             children: [
-                (0, n.jsx)(u.D, {
+                (0, i.jsx)(u.D, {
                     variant: "heading-md/medium",
-                    children: eh.intl.string(eh.t.wU9IN2) + (null != t ? " - " + t : ""),
+                    children: e_.intl.string(e_.t.wU9IN2) + (null != t ? " - " + t : ""),
                 }),
-                eu(o),
-                0 === c.length ? null : (0, n.jsx)(H.c, { className: ed.SX }),
+                eu(s),
+                0 === c.length ? null : (0, i.jsx)(U.c, { className: ed.SX }),
                 eu(c),
             ],
         });
     }
 }
-let eB = l.Ay.connectStores([x.Ay, F.A, eE.A, eD.A], (e) => {
-    let { context: t, index: r } = e,
-        n = x.Ay.getAllStats(t)[r],
-        i =
-            t === el.x.STREAM
-                ? Object.values(eD.A.getRTCConnections()).find(
-                      (e) => e.getMediaEngineConnectionId() === n.mediaEngineConnectionId,
+let eF = o.Ay.connectStores([E.Ay, S.A, eN.A, ev.A], (e) => {
+    let { context: t, index: n } = e,
+        i = E.Ay.getAllStats(t)[n],
+        r =
+            t === eo.x.STREAM
+                ? Object.values(ev.A.getRTCConnections()).find(
+                      (e) => e.getMediaEngineConnectionId() === i.mediaEngineConnectionId,
                   )
                 : null,
-        a = i?.hostname ?? "";
+        a = r?.hostname ?? "";
     return {
-        hidePersonalInformation: eE.A.hidePersonalInformation,
-        transport: null != n ? n.transport : null,
-        mediaSessionId: F.A.getMediaSessionId(),
-        hostname: eR.A.getShortHostname(a),
+        hidePersonalInformation: eN.A.hidePersonalInformation,
+        transport: null != i ? i.transport : null,
+        mediaSessionId: S.A.getMediaSessionId(),
+        hostname: eI.A.getShortHostname(a),
     };
-})(ej);
-var eI = r(652215);
-function eN(e, t, r, i, a) {
-    let o = [];
-    if (null == t) return o;
+})(eL);
+var eR = n(652215);
+function ej(e, t, n, r, a) {
+    let s = [];
+    if (null == t) return s;
     let {
-        transport: l,
+        transport: o,
         rtp: { inbound: u, outbound: p },
-        camera: y,
+        camera: h,
     } = t;
     if (
-        (o.push({ section: h.Fq.HEADER, label: eh.intl.formatToPlainString(eh.t.PK5fOC, { context: e }) }),
-        null != l &&
-            o.push({
-                section: (0, x.Xi)(e, eI.zWA.TRANSPORT, r),
-                label: eh.intl.string(eh.t.wU9IN2),
-                element: eB,
-                elementProps: { context: e, index: r },
+        (s.push({ section: _.Fq.HEADER, label: e_.intl.formatToPlainString(e_.t.PK5fOC, { context: e }) }),
+        null != o &&
+            s.push({
+                section: (0, E.Xi)(e, eR.zWA.TRANSPORT, n),
+                label: e_.intl.string(e_.t.wU9IN2),
+                element: eF,
+                elementProps: { context: e, index: n },
             }),
         null == p ||
-            s().isEmpty(p) ||
-            o.push({
-                section: (0, x.Xi)(e, eI.zWA.OUTBOUND, r),
-                label: eh.intl.string(eh.t["3u0gII"]),
-                element: eC,
-                elementProps: { context: e, index: r },
+            l().isEmpty(p) ||
+            s.push({
+                section: (0, E.Xi)(e, eR.zWA.OUTBOUND, n),
+                label: e_.intl.string(e_.t["3u0gII"]),
+                element: ef,
+                elementProps: { context: e, index: n },
             }),
-        null != y &&
-            o.push({
-                section: (0, x.Xi)(e, eI.zWA.CAMERA, r),
-                label: eh.intl.string(eh.t["2AGBWH"]),
-                element: ey,
-                elementProps: { context: e, index: r, camera: y },
+        null != h &&
+            s.push({
+                section: (0, E.Xi)(e, eR.zWA.CAMERA, n),
+                label: e_.intl.string(e_.t["2AGBWH"]),
+                element: eh,
+                elementProps: { context: e, index: n, camera: h },
             }),
-        null != u && !s().isEmpty(u))
+        null != u && !l().isEmpty(u))
     ) {
         let t = [];
-        Object.keys(u).forEach((o) => {
-            let s,
-                l = v.default.getUser(o),
-                p = A.Ay.getNick(a, o),
-                h = (0, x.Xi)(e, o, r);
-            null != u[o] &&
-                u[o].length > 0 &&
+        Object.keys(u).forEach((s) => {
+            let l,
+                o = C.default.getUser(s),
+                p = A.Ay.getNick(a, s),
+                _ = (0, E.Xi)(e, s, n);
+            null != u[s] &&
+                u[s].length > 0 &&
                 t.push({
-                    section: h,
+                    section: _,
                     label:
-                        null != l
-                            ? (0, n.jsx)(b.A, {
-                                  align: b.A.Align.CENTER,
-                                  children: (0, n.jsx)(b.A.Child, {
-                                      children: (0, n.jsxs)(b.A, {
-                                          align: b.A.Align.CENTER,
+                        null != o
+                            ? (0, i.jsx)(g.A, {
+                                  align: g.A.Align.CENTER,
+                                  children: (0, i.jsx)(g.A.Child, {
+                                      children: (0, i.jsxs)(g.A, {
+                                          align: g.A.Align.CENTER,
                                           children: [
-                                              (0, n.jsx)(d.eu, {
+                                              (0, i.jsx)(d.eu, {
                                                   size: c._3.SIZE_24,
-                                                  src: l.getAvatarURL(a, 24),
-                                                  "aria-label": l.username,
+                                                  src: o.getAvatarURL(a, 24),
+                                                  "aria-label": o.username,
                                                   className: W.my,
                                               }),
-                                              (0, n.jsx)("span", { className: W.Xh, children: p ?? D.Ay.getName(l) }),
+                                              (0, i.jsx)("span", { className: W.Xh, children: p ?? v.Ay.getName(o) }),
                                           ],
                                       }),
                                   }),
                               })
-                            : ((s = p ?? o),
-                              (0, n.jsx)(b.A, {
-                                  align: b.A.Align.CENTER,
-                                  children: (0, n.jsx)(b.A.Child, {
-                                      children: (0, n.jsx)(b.A, {
-                                          align: b.A.Align.CENTER,
-                                          children: (0, n.jsx)("span", { className: W.Xh, children: s }),
+                            : ((l = p ?? s),
+                              (0, i.jsx)(g.A, {
+                                  align: g.A.Align.CENTER,
+                                  children: (0, i.jsx)(g.A.Child, {
+                                      children: (0, i.jsx)(g.A, {
+                                          align: g.A.Align.CENTER,
+                                          children: (0, i.jsx)("span", { className: W.Xh, children: l }),
                                       }),
                                   }),
                               })),
-                    ariaLabel: null != l ? l.tag : o,
+                    ariaLabel: null != o ? o.tag : s,
                     onClick: () => {
-                        m.c4(h);
+                        m.c4(_);
                     },
-                    element: ef,
-                    elementProps: { context: e, index: r, videoStreams: i },
+                    element: ey,
+                    elementProps: { context: e, index: n, videoStreams: r },
                 });
         }),
-            t.length > 0 && (o.push({ section: h.Fq.HEADER, label: eh.intl.string(eh.t.SJmZaq) }), o.push(...t));
+            t.length > 0 && (s.push({ section: _.Fq.HEADER, label: e_.intl.string(e_.t.SJmZaq) }), s.push(...t));
     }
-    return o;
+    return s;
 }
-function ek() {
-    let { defaultStats: e, streamStats: t } = (0, l.bG)(
-            [x.Ay],
-            () => ({ defaultStats: x.Ay.getAllStats(el.x.DEFAULT), streamStats: x.Ay.getAllStats(el.x.STREAM) }),
+function eT() {
+    let { defaultStats: e, streamStats: t } = (0, o.bG)(
+            [E.Ay],
+            () => ({ defaultStats: E.Ay.getAllStats(eo.x.DEFAULT), streamStats: E.Ay.getAllStats(eo.x.STREAM) }),
             [],
-            l.My,
+            o.My,
         ),
-        r = (0, l.bG)([F.A, C.A], () => C.A.getChannel(F.A.getChannelId())),
+        n = (0, o.bG)([S.A, f.A], () => f.A.getChannel(S.A.getChannelId())),
         a = e.concat(t).find((e) => null != e.screenshare)?.screenshare,
-        o = t.find((e) => null != e.clips)?.clips,
-        s = (0, l.bG)([f.A], () => f.A.theme),
-        d = (0, g.NC)(),
-        c = (0, l.bG)([x.Ay], () => x.Ay.getSection()),
-        b = (function (e) {
+        s = t.find((e) => null != e.clips)?.clips,
+        l = (0, o.bG)([y.A], () => y.A.theme),
+        d = (0, b.NC)(),
+        c = (0, o.bG)([E.Ay], () => E.Ay.getSection()),
+        g = (function (e) {
             let {
                     defaultStats: t,
-                    streamStats: r,
-                    videoStreams: i,
+                    streamStats: n,
+                    videoStreams: r,
                     screenshare: a,
-                    clips: o,
-                    channel: s,
-                    connectionState: l,
+                    clips: s,
+                    channel: l,
+                    connectionState: o,
                 } = e,
-                d = t.flatMap((e, t) => eN(el.x.DEFAULT, e, t, i, s?.getGuildId())),
-                c = r.flatMap((e, t) => eN(el.x.STREAM, e, t, i, s?.getGuildId())),
+                d = t.flatMap((e, t) => ej(eo.x.DEFAULT, e, t, r, l?.getGuildId())),
+                c = n.flatMap((e, t) => ej(eo.x.STREAM, e, t, r, l?.getGuildId())),
                 m = [],
                 p = [],
-                b = { section: h.Fq.DIVIDER };
+                g = { section: _.Fq.DIVIDER };
             return (
                 null != a &&
-                    (m.push(b),
+                    (m.push(g),
                     m.push({
-                        section: eI.zWA.SCREENSHARE,
-                        label: eh.intl.string(eh.t["gWbr/U"]),
-                        element: e_,
+                        section: eR.zWA.SCREENSHARE,
+                        label: e_.intl.string(e_.t["gWbr/U"]),
+                        element: ex,
                         elementProps: { screenshare: a },
                     })),
-                null != o &&
-                    (p.push(b),
+                null != s &&
+                    (p.push(g),
                     p.push({
-                        section: eI.zWA.CLIPS,
-                        label: eh.intl.string(eh.t.MKrFKE),
-                        element: eg,
-                        elementProps: { clips: o },
+                        section: eR.zWA.CLIPS,
+                        label: e_.intl.string(e_.t.MKrFKE),
+                        element: eb,
+                        elementProps: { clips: s },
                     })),
-                c.length > 0 && c.unshift(b),
+                c.length > 0 && c.unshift(g),
                 [
-                    ...(null != s
+                    ...(null != l
                         ? [
                               {
-                                  section: h.Fq.CUSTOM,
+                                  section: _.Fq.CUSTOM,
                                   label: "Channel Name",
                                   element: () =>
-                                      (0, n.jsx)(u.D, {
+                                      (0, i.jsx)(u.D, {
                                           className: W.HA,
                                           variant: "heading-lg/semibold",
-                                          children: (0, y.m1)(s, v.default, _.A),
+                                          children: (0, h.m1)(l, C.default, x.A),
                                       }),
                               },
                           ]
                         : []),
                     {
-                        section: h.Fq.CUSTOM,
+                        section: _.Fq.CUSTOM,
                         label: "Connection State",
                         element: () =>
-                            (0, n.jsx)(u.D, {
+                            (0, i.jsx)(u.D, {
                                 className: W.HA,
                                 variant: "heading-md/normal",
-                                children: l === eI.S7L.RTC_CONNECTED ? "Connected" : "Disconnected",
+                                children: o === eR.S7L.RTC_CONNECTED ? "Connected" : "Disconnected",
                             }),
                     },
                     ...d,
@@ -936,31 +937,31 @@ function ek() {
         })({
             defaultStats: e,
             streamStats: t,
-            videoStreams: (0, l.bG)([x.Ay], () => x.Ay.getVideoStreams()),
+            videoStreams: (0, o.bG)([E.Ay], () => E.Ay.getVideoStreams()),
             screenshare: a,
-            clips: o,
-            channel: r,
-            connectionState: (0, l.bG)([F.A], () => F.A.getState()),
+            clips: s,
+            channel: n,
+            connectionState: (0, o.bG)([S.A], () => S.A.getState()),
         });
     return (
-        i.useEffect(
+        r.useEffect(
             () => () => {
                 m.VN();
             },
             [],
         ),
-        i.useEffect(() => {
-            b.some((e) => e.section === c) || c === x.EM || m.c4(x.EM);
-        }, [b, c]),
-        (0, n.jsx)(p.Ay, { theme: s, sidebarTheme: d, section: c, onSetSection: m.c4, sections: b })
+        r.useEffect(() => {
+            g.some((e) => e.section === c) || c === E.EM || m.c4(E.EM);
+        }, [g, c]),
+        (0, i.jsx)(p.Ay, { theme: l, sidebarTheme: d, section: c, onSetSection: m.c4, sections: g })
     );
 }
-function eP(e) {
+function ek(e) {
     let { windowKey: t } = e;
-    return (0, n.jsx)(a.A, {
+    return (0, i.jsx)(a.A, {
         withTitleBar: !0,
         windowKey: t,
-        title: eh.intl.string(eh.t["5I/1fl"]),
-        children: (0, n.jsx)(ek, {}),
+        title: e_.intl.string(e_.t["5I/1fl"]),
+        children: (0, i.jsx)(eT, {}),
     });
 }

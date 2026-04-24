@@ -1,12 +1,13 @@
-n.d(t, { L: () => r });
+"use strict";
+n.d(t, { L: () => s });
 var i = n(17928),
-    l = n(287809),
-    s = n(474090),
-    a = n(788868);
-function r() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.PremiumTypes.TIER_2;
-    return (0, i.bG)([l.default], () => {
-        let t = l.default.getCurrentUser();
-        return (0, s.YE)(t, e);
+    a = n(287809),
+    r = n(474090),
+    l = n(788868);
+function s() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.PremiumTypes.TIER_2;
+    return (0, i.bG)([a.default], () => {
+        let t = a.default.getCurrentUser();
+        return (0, r.YE)(t, e);
     });
 }

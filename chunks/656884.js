@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     BK: "themeContainer__5be3e",
     wx: "header__5be3e",

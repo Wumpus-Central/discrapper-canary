@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_b66356",
     N1: "headerContainer_b66356",

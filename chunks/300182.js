@@ -1,21 +1,22 @@
-n.d(e, { A: () => u });
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => c });
+var a = n(627968);
 n(64700);
-var s = n(990078),
-    i = n(408278),
-    l = n(597770),
-    a = n(985018);
-let u = (t) => {
-    let { onGift: e, tooltipDelay: n = 250 } = t;
-    return (0, r.jsx)(s.m, {
-        text: a.intl.string(a.t["JCFN/y"]),
+var i = n(990078),
+    l = n(408278),
+    r = n(597770),
+    s = n(985018);
+let c = (e) => {
+    let { onGift: t, tooltipDelay: n = 250 } = e;
+    return (0, a.jsx)(i.m, {
+        text: s.intl.string(s.t["JCFN/y"]),
         delay: n,
-        children: (0, r.jsx)(i.K, {
-            "aria-label": a.intl.string(a.t["JCFN/y"]),
+        children: (0, a.jsx)(l.K, {
+            "aria-label": s.intl.string(s.t["JCFN/y"]),
             variant: "primary",
-            icon: l.o,
+            icon: r.o,
             size: "md",
-            onClick: e,
+            onClick: t,
         }),
     });
 };

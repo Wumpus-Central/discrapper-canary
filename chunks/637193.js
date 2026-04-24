@@ -1,13 +1,13 @@
-n.d(t, { p: () => l });
+n.d(t, { p: () => s });
 var i = n(627968);
 n(64700);
-var s = n(192308);
-let l = (e) => {
-    let { analyticsLocations: t, guildId: l, initialSelectedNameplate: a, stackingBehavior: r } = e;
-    (0, s.openModalLazy)(
+var l = n(192308);
+let s = (e) => {
+    let { analyticsLocations: t, guildId: s, initialSelectedNameplate: a, stackingBehavior: r } = e;
+    (0, l.openModalLazy)(
         async () => {
-            let { default: e } = await n.e("42491").then(n.bind(n, 303318));
-            return (n) => (0, i.jsx)(e, { ...n, guildId: l, analyticsLocations: t, initialSelectedNameplate: a });
+            let { default: e } = await Promise.all([n.e("80527"), n.e("23353"), n.e("26706")]).then(n.bind(n, 818743));
+            return (n) => (0, i.jsx)(e, { ...n, guildId: s, analyticsLocations: t, initialSelectedNameplate: a });
         },
         { stackingBehavior: r },
     );

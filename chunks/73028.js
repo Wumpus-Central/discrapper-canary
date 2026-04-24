@@ -1,36 +1,37 @@
+"use strict";
 n.d(t, { U: () => o });
-var i = n(627968);
+var r = n(627968);
 n(64700);
-var l = n(192308),
-    s = n(157559),
-    a = n(818348),
-    r = n(985018);
+var i = n(192308),
+    a = n(157559),
+    s = n(818348),
+    l = n(985018);
 let o = (e, t) => {
     let o = `group-dm-edit-modal-${e}`,
-        d = !1,
-        c = (e) => {
-            d = e;
+        c = !1,
+        d = (e) => {
+            c = e;
         },
         u = () => {
-            d
-                ? s.A.show({
-                      title: r.intl.string(r.t.pvRCSu),
-                      body: r.intl.string(r.t.DRi46S),
-                      confirmText: r.intl.string(r.t["6GQDFu"]),
+            c
+                ? a.A.show({
+                      title: l.intl.string(l.t.pvRCSu),
+                      body: l.intl.string(l.t.DRi46S),
+                      confirmText: l.intl.string(l.t["6GQDFu"]),
                       confirmVariant: "critical-primary",
-                      cancelText: r.intl.string(r.t.DmDzZB),
-                      onConfirm: () => (0, l.closeModal)(o),
-                      onCancel: a.tE,
+                      cancelText: l.intl.string(l.t.DmDzZB),
+                      onConfirm: () => (0, i.closeModal)(o),
+                      onCancel: s.tE,
                   })
-                : (0, l.closeModal)(o);
+                : (0, i.closeModal)(o);
         };
-    (0, l.openModalLazy)(
+    (0, i.openModalLazy)(
         async () => {
-            let { default: l } = await n.e("42455").then(n.bind(n, 66442));
+            let { default: i } = await n.e("42455").then(n.bind(n, 66442));
             return (n) =>
-                (0, i.jsx)(l, {
+                (0, r.jsx)(i, {
                     closeOrShowDiscardChangesAlert: u,
-                    setHasPendingChanges: c,
+                    setHasPendingChanges: d,
                     channelId: e,
                     location: t,
                     ...n,

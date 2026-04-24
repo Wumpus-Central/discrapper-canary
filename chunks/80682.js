@@ -1,26 +1,27 @@
-n.d(t, { Eq: () => u, JM: () => o }), n(627968);
-var s = n(64700),
-    i = n(735438),
-    l = n.n(i);
+"use strict";
+n.d(t, { Eq: () => d, JM: () => o }), n(627968);
+var i = n(64700),
+    r = n(735438),
+    l = n.n(r);
 n(52133);
-var r = n(361610),
-    a = n(38405);
+var a = n(361610),
+    s = n(38405);
 let o = 50,
-    d = !1;
-function u(e, t) {
-    s.useEffect(
+    c = !1;
+function d(e, t) {
+    i.useEffect(
         () => (
             l().forEach(e, (e, n) => {
-                !d &&
+                !c &&
                     e.length > o &&
-                    ((d = !0),
-                    a.A.captureMessage("SubscribeGuildMembers called with more than 50 userIds.", {
+                    ((c = !0),
+                    s.A.captureMessage("SubscribeGuildMembers called with more than 50 userIds.", {
                         extra: { count: e.length, guildId: n, reason: t },
                     })),
-                    (0, r.un)(n, e);
+                    (0, a.un)(n, e);
             }),
             () => {
-                l().forEach(e, (e, t) => (0, r.NE)(t, e));
+                l().forEach(e, (e, t) => (0, a.NE)(t, e));
             }
         ),
         [e, t],

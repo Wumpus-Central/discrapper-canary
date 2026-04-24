@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     K$: "displayNameRow__26b1f",
     lg: "lg__26b1f",

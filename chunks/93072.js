@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     zc: "iconContainer__45eb7",
     Qs: "content__45eb7",

@@ -1,85 +1,86 @@
-a.d(l, { f: () => g });
-var t = a(627968),
-    n = a(64700),
-    o = a(503698),
-    i = a.n(o),
-    r = a(452027),
-    s = a(862301),
-    d = a(187322),
-    u = a(15626),
-    c = a(504345),
-    b = a(823607),
-    p = a(511274),
-    m = a(189812),
-    h = a(264451),
-    x = a(429128);
+"use strict";
+n.d(t, { f: () => g });
+var r = n(627968),
+    i = n(64700),
+    a = n(503698),
+    l = n.n(a),
+    s = n(452027),
+    o = n(862301),
+    c = n(187322),
+    u = n(15626),
+    d = n(504345),
+    _ = n(823607),
+    p = n(511274),
+    f = n(189812),
+    h = n(264451),
+    m = n(429128);
 function g(e) {
     let {
-            value: l,
-            placeholder: a = "",
-            autoFocus: o = !1,
+            value: t,
+            placeholder: n = "",
+            autoFocus: a = !1,
             autosize: u = !1,
-            minLength: c,
-            maxLength: m,
+            minLength: d,
+            maxLength: f,
             error: g,
-            defaultDirty: v,
-            showCharacterCount: y,
-            showRemainingCharacterCount: _ = !0,
-            rows: C = 3,
-            inputRef: j,
-            ...V
+            defaultDirty: A,
+            showCharacterCount: E,
+            showRemainingCharacterCount: v = !0,
+            rows: y = 3,
+            inputRef: I,
+            ...S
         } = e,
-        { fieldProps: k, props: S } = (0, r.n)(V),
-        { disabled: w } = k,
-        M = (0, p.Y)({ validateOn: "change", error: g, value: l, minLength: c, maxLength: m, defaultDirty: v }),
-        T = n.useMemo(() => {
-            if (null == m) return 10;
-            let e = `${m}`.length;
-            return 7.23 * (e += `${m} / `.length) + 10;
-        }, [m]),
-        A = y ? (0, t.jsx)(b.n, { value: l, maxLength: _ && null != m ? m : void 0 }) : null;
-    return (0, t.jsx)(r.D, {
-        ...k,
-        trailingAuxiliaryContent: A,
-        errorMessage: M.hasError ? (M.errorMessage ?? void 0) : void 0,
-        children: (0, t.jsx)(s.F, {
-            validation: M,
-            disabled: w,
-            children: (0, t.jsx)(d.vN, {
-                children: (0, t.jsx)(f, {
+        { fieldProps: T, props: C } = (0, s.n)(S),
+        { disabled: x } = T,
+        R = (0, p.Y)({ validateOn: "change", error: g, value: t, minLength: d, maxLength: f, defaultDirty: A }),
+        N = i.useMemo(() => {
+            if (null == f) return 10;
+            let e = `${f}`.length;
+            return 7.23 * (e += `${f} / `.length) + 10;
+        }, [f]),
+        L = E ? (0, r.jsx)(_.n, { value: t, maxLength: v && null != f ? f : void 0 }) : null;
+    return (0, r.jsx)(s.D, {
+        ...T,
+        trailingAuxiliaryContent: L,
+        errorMessage: R.hasError ? (R.errorMessage ?? void 0) : void 0,
+        children: (0, r.jsx)(o.F, {
+            validation: R,
+            disabled: x,
+            children: (0, r.jsx)(c.vN, {
+                children: (0, r.jsx)(b, {
                     autosize: u,
-                    className: i()(h.Tg, x.qD),
-                    style: { paddingRight: T },
-                    placeholder: a,
-                    value: l,
-                    autoFocus: o,
-                    minLength: c,
-                    maxLength: m,
-                    rows: C,
-                    disabled: w,
+                    className: l()(h.Tg, m.qD),
+                    style: { paddingRight: N },
+                    placeholder: n,
+                    value: t,
+                    autoFocus: a,
+                    minLength: d,
+                    maxLength: f,
+                    rows: y,
+                    disabled: x,
                     "data-mana-component": "text-area",
-                    ...S,
+                    ...C,
                     onChange: (e) => {
-                        let { onChange: l } = S;
-                        l?.(e.currentTarget.value), M.setShouldValidate(!0);
+                        let { onChange: t } = C;
+                        t?.(e.currentTarget.value), R.setShouldValidate(!0);
                     },
-                    ref: j,
+                    ref: I,
                 }),
             }),
         }),
     });
 }
-function f(e) {
-    let { "aria-labelledby": l, autosize: a, ...o } = e,
-        i = (0, c.xW)(),
-        r = n.useContext(u._),
-        s = a ? m.d : "textarea";
-    return (0, t.jsx)(s, {
-        ...o,
-        id: r?.controlId,
-        "aria-labelledby": l ?? i.titleId,
-        "aria-describedby": r?.describedById,
-        "aria-errormessage": r?.errorMessageId,
-        "aria-invalid": r?.errorMessageId != null,
+function b(e) {
+    let { "aria-labelledby": t, autosize: n, ...a } = e,
+        l = (0, d.xW)(),
+        s = i.useContext(u._),
+        o = n ? f.d : "textarea";
+    return (0, r.jsx)(o, {
+        ...a,
+        id: s?.controlId,
+        "aria-labelledby": t ?? l.titleId,
+        "aria-describedby": s?.describedById,
+        "aria-errormessage": s?.errorMessageId,
+        "aria-invalid": s?.errorMessageId != null,
     });
 }

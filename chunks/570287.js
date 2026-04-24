@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { A: () => u, q: () => _ });
+n.d(t, { A: () => u, q: () => d });
 var i = n(17928),
     r = n(800828),
-    s = n(857071),
-    a = n(253932),
+    a = n(857071),
+    l = n(253932),
     o = n(495544),
-    l = n(696451),
-    d = n(994500);
-let _ = (e, t) => {
+    s = n(696451),
+    c = n(994500);
+let d = (e, t) => {
     let n = o.default.getId() === e,
-        i = null != t && s.A.isLurking(t),
-        _ = a.$s.getSetting(),
-        u = d.A.isFriend(e);
+        i = null != t && a.A.isLurking(t),
+        d = l.$s.getSetting(),
+        u = c.A.isFriend(e);
     return (
-        (!n && !i && (u || null != l.Ay.memberOf(e).find((e) => !_.includes(e)))) ||
-        (r.A.getGameFriendsForUser(e).length > 0 && a.Zk.getSetting())
+        (!n && !i && (u || null != s.Ay.memberOf(e).find((e) => !d.includes(e)))) ||
+        (r.A.getGameFriendsForUser(e).length > 0 && l.Zk.getSetting())
     );
 };
 function u(e, t) {
     let n = (0, i.bG)([o.default], () => o.default.getId() === e),
-        _ = (0, i.bG)([s.A], () => null != t && s.A.isLurking(t)),
-        u = a.$s.useSetting();
+        d = (0, i.bG)([a.A], () => null != t && a.A.isLurking(t)),
+        u = l.$s.useSetting();
     return (0, i.bG)(
-        [d.A, l.Ay, r.A],
+        [c.A, s.Ay, r.A],
         () =>
-            (!n && !_ && (d.A.isFriend(e) || null != l.Ay.memberOf(e).find((e) => !u.includes(e)))) ||
-            (r.A.getGameFriendsForUser(e).length > 0 && a.Zk.getSetting()),
+            (!n && !d && (c.A.isFriend(e) || null != s.Ay.memberOf(e).find((e) => !u.includes(e)))) ||
+            (r.A.getGameFriendsForUser(e).length > 0 && l.Zk.getSetting()),
     );
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     yz: "friends_b37a75",
     p$: "emptyState_b37a75 friends_b37a75",

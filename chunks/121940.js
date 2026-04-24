@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     PI: "messagePreviewContainer_f96002",
     kL: "container_f96002",

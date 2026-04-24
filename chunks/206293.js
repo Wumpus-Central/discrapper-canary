@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     $P: "search__1ac1c",
     ON: "searchBar__1ac1c search__1ac1c",

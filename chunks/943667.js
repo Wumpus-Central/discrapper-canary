@@ -1,11 +1,12 @@
-n.d(t, { A: () => l }), n(938796);
+"use strict";
+n.d(t, { A: () => i }), n(938796);
 var a = n(665260),
-    i = n(652215);
-function l(e) {
+    r = n(652215);
+function i(e) {
     return (
-        e.type === i.lAJ.DEFAULT &&
-        (0, a.Lt)(e.flags, i.pr7.IS_CROSSPOST) &&
+        e.type === r.lAJ.DEFAULT &&
+        (0, a.Lt)(e.flags, r.pr7.IS_CROSSPOST) &&
         null != e.messageReference &&
-        e.messageReference.type !== i.SH7.FORWARD
+        e.messageReference.type !== r.SH7.FORWARD
     );
 }

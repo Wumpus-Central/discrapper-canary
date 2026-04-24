@@ -1,40 +1,27 @@
-n.d(t, { Fy: () => a, Vv: () => c, Xx: () => o, i4: () => s, oZ: () => u, ry: () => E });
-var l = n(636537),
-    i = n(228366),
-    r = n(652215);
-let E = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        i.h.dispatch({ type: "WELCOME_SCREEN_VIEW", guildId: e, isLurking: t });
-    },
-    a = async (e) => {
-        i.h.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
-        try {
-            let t = await l.Bo.get({ url: r.Rsh.GUILD_WELCOME_SCREEN(e), oldFormErrors: !0, rejectWithError: !0 });
-            return i.h.dispatch({ type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: e, welcomeScreen: t.body }), t.body;
-        } catch (e) {
-            i.h.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
-        }
-    },
-    u = () => {
-        i.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
-    },
-    c = () => {
-        i.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
-    },
-    o = (e) => {
-        i.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings: e });
-    },
-    s = async (e, t) => {
-        i.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
-        try {
-            let n = await l.Bo.patch({
-                url: r.Rsh.GUILD_WELCOME_SCREEN(e),
-                body: { description: t.description, welcome_channels: t.channels, enabled: t.enabled },
-                oldFormErrors: !0,
-                rejectWithError: !0,
-            });
-            i.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_SUCCESS", guildId: e, welcomeScreen: n.body });
-        } catch (e) {
-            i.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
-        }
-    };
+r.d(t, { default: () => s });
+var o = r(627968);
+r(64700);
+var a = r(612479),
+    n = r(521732),
+    i = r(670455),
+    l = r(985018);
+let d = [n.tk.OTHER];
+function s(e) {
+    let { transitionState: t, startRating: r, onClose: s, onSubmit: u } = e;
+    return (0, o.jsx)(a.A, {
+        modalType: "summary",
+        header: l.intl.string(l.t.hghcMh),
+        body: l.intl.string(l.t.QFU785),
+        problemTitle: l.intl.string(l.t.CtiHPm),
+        onSubmit: u,
+        onClose: s,
+        ratingOptions: [i.P0.GOOD, i.P0.BAD],
+        ratingEmojiKind: "thumb",
+        transitionState: t,
+        problems: (0, n.j0)(),
+        freeformNeededProblems: d,
+        otherKey: n.tk.OTHER,
+        startRating: r,
+        hideDontShowAgainCheckbox: !0,
+    });
+}

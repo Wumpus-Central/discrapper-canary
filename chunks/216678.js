@@ -1,70 +1,71 @@
-i.d(e, { A: () => d });
+"use strict";
+i.d(t, { A: () => C });
 var n = i(627968);
 i(64700);
-var l = i(835245),
-    s = i(192308),
-    a = i(391048),
-    r = i(636099),
-    o = i(742810),
-    u = i(954571),
-    c = i(652215);
-function d(t) {
+var a = i(132500),
+    l = i(192308),
+    o = i(391048),
+    s = i(636099),
+    r = i(742810),
+    c = i(954571),
+    d = i(652215);
+function C(e) {
     let {
-            applicationId: e,
-            skuId: d,
-            onClose: p,
-            onComplete: S,
-            analyticsLocations: I,
-            analyticsLocationObject: A,
-            contextKey: _,
-            isGift: T = !1,
-            checkoutFlow: h,
-        } = t,
-        E = !1,
-        C = (0, l.A)();
-    (0, s.openModalLazy)(
+            applicationId: t,
+            skuId: C,
+            onClose: u,
+            onComplete: f,
+            analyticsLocations: _,
+            analyticsLocationObject: p,
+            contextKey: h,
+            isGift: L = !1,
+            checkoutFlow: I,
+        } = e,
+        g = !1,
+        b = (0, a.A)();
+    (0, l.openModalLazy)(
         async () => {
-            let { default: t } = await i.e("53068").then(i.bind(i, 226151));
+            let { default: e } = await i.e("28424").then(i.bind(i, 519259));
             return (i) => {
-                let { onClose: l, ...s } = i;
-                return (0, n.jsx)(t, {
-                    ...s,
-                    loadId: C,
-                    applicationId: e,
-                    skuId: d,
-                    analyticsLocations: I,
-                    analyticsLocationObject: A,
-                    isGift: T,
-                    onClose: (t) => {
-                        l(), p?.(t);
+                let { onClose: a, ...l } = i;
+                return (0, n.jsx)(e, {
+                    ...l,
+                    loadId: b,
+                    applicationId: t,
+                    skuId: C,
+                    analyticsLocations: _,
+                    analyticsLocationObject: p,
+                    isGift: L,
+                    onClose: (e) => {
+                        a(), u?.(e);
                     },
-                    onComplete: (t) => {
-                        (E = !0), S?.(t);
+                    onComplete: (e) => {
+                        (g = !0), f?.(e);
                     },
-                    checkoutFlow: h,
+                    checkoutFlow: I,
                 });
             };
         },
         {
-            contextKey: _,
+            contextKey: h,
             onCloseCallback: () => {
-                if (!E) {
-                    let t = (0, o.q1)({ location: "StandardOneTimePaymentModal", unifiedCheckoutFlow: h });
-                    u.default.track(c.HAw.PAYMENT_FLOW_CANCELED, {
-                        load_id: C,
-                        payment_type: c.frM[c.VVm.ONE_TIME],
-                        location: A,
-                        is_gift: T,
-                        sku_id: d,
-                        application_id: e,
-                        location_stack: I,
-                        checkout_design: t ? o.rS.UNIFIED : o.rS.LEGACY,
-                        checkout_flow: h,
+                if (!g) {
+                    let e = (0, r.q1)({ location: "StandardOneTimePaymentModal", unifiedCheckoutFlow: I });
+                    c.default.track(d.HAw.PAYMENT_FLOW_CANCELED, {
+                        load_id: b,
+                        payment_type: d.frM[d.VVm.ONE_TIME],
+                        location: p,
+                        is_gift: L,
+                        sku_id: C,
+                        application_id: t,
+                        location_stack: _,
+                        checkout_design: e ? r.rS.UNIFIED : r.rS.LEGACY,
+                        checkout_flow: I,
                     });
                 }
-                (0, a.ET)(), (0, r.z)(), p?.(E);
+                (0, o.ET)(), (0, s.z)(), u?.(g);
             },
-            onCloseRequest: c.tEg,
+            onCloseRequest: d.tEg,
         },
     );
 }

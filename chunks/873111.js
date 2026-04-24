@@ -6,4 +6,5 @@ e.exports = {
     jD: "hide_ea5470",
     XD: "caughtUpContent_ea5470",
     vi: "caughtUpText_ea5470",
+    aY: "headerButton_ea5470",
 };

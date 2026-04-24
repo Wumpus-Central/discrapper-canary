@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { Z: () => d, s: () => o });
-var i = n(627968),
-    s = n(64700),
-    r = n(503698),
-    l = n.n(r),
-    a = n(634373);
-let o = { PRIMARY: a.Xc, DANGER: a.Wg, WARNING: a.vH, SUCCESS: a.CN, BRAND: a.cX, CUSTOM: a.Nr },
-    c = s.forwardRef((e, t) => {
-        let { children: n, outline: s = !1, editable: r, type: c = o.PRIMARY, className: d, ...u } = e;
-        return (0, i.jsx)("div", { ref: t, className: l()(d, a.Nr, c, { [a.VR]: s }), ...u, children: n });
+a.d(t, { Z: () => d, s: () => o });
+var n = a(627968),
+    r = a(64700),
+    l = a(503698),
+    i = a.n(l),
+    s = a(306821);
+let o = { PRIMARY: s.Xc, DANGER: s.Wg, WARNING: s.vH, SUCCESS: s.CN, BRAND: s.cX, CUSTOM: s.Nr },
+    c = r.forwardRef((e, t) => {
+        let { children: a, outline: r = !1, editable: l, type: c = o.PRIMARY, className: d, ...u } = e;
+        return (0, n.jsx)("div", { ref: t, className: i()(d, s.Nr, c, { [s.VR]: r }), ...u, children: a });
     });
 (c.displayName = "Card"), (c.Types = o);
 let d = c;

@@ -1,8 +1,9 @@
-n.d(t, { uo: () => r, _x: () => l._, DB: () => i.D });
-var i = n(243826);
+"use strict";
+n.d(t, { uo: () => l, _x: () => i._, DB: () => r.D });
+var r = n(243826);
 n(510036);
-var l = n(601557),
+var i = n(601557),
     a = n(85526);
-function r(e) {
+function l(e) {
     return a.fromByteArray(e);
 }

@@ -1,39 +1,40 @@
-r.d(n, { A: () => p });
-var t = r(627968);
-r(64700);
-var _ = r(17928),
-    o = r(935462),
-    a = r(775602),
-    i = r(235986),
-    l = r(899343),
-    s = r(796012),
-    c = r(72483);
-function p(e) {
-    let { purchaseState: n, currentStep: r, onClose: p } = e,
-        [b, d] = (0, l.f)({
-            purchaseState: n,
-            currentStep: r,
-            initialScene: s.V1.Scenes.ENTRY,
-            purchaseScene: s.V1.Scenes.STARS,
-            errorScene: s.V1.Scenes.ERROR,
-            successScene: s.V1.Scenes.SUCCESS,
+"use strict";
+i.d(t, { A: () => d });
+var r = i(627968);
+i(64700);
+var n = i(17928),
+    s = i(935462),
+    l = i(775602),
+    a = i(235986),
+    o = i(899343),
+    c = i(997330),
+    u = i(72483);
+function d(e) {
+    let { purchaseState: t, currentStep: i, onClose: d } = e,
+        [p, h] = (0, o.f)({
+            purchaseState: t,
+            currentStep: i,
+            initialScene: c.V1.Scenes.ENTRY,
+            purchaseScene: c.V1.Scenes.STARS,
+            errorScene: c.V1.Scenes.ERROR,
+            successScene: c.V1.Scenes.SUCCESS,
         }),
-        u = (0, _.bG)([a.A], () => a.A.useReducedMotion);
-    return (0, t.jsxs)(o.rQ, {
+        _ = (0, n.bG)([l.A], () => l.A.useReducedMotion);
+    return (0, r.jsxs)(s.rQ, {
         "data-migration-pending": !0,
-        align: i.A.Align.START,
-        className: c.wx,
+        align: a.A.Align.START,
+        className: u.wx,
         separator: !1,
         children: [
-            (0, t.jsx)(s.V1, {
-                className: c.lY,
-                nextScene: b,
-                onScenePlay: (e) => d(s.V1.getNextScene(e)),
+            (0, r.jsx)(c.V1, {
+                className: u.lY,
+                nextScene: p,
+                onScenePlay: (e) => h(c.V1.getNextScene(e)),
                 pauseWhileUnfocused: !1,
-                pause: u,
+                pause: _,
             }),
-            (0, t.jsx)("div", { className: c.qd }),
-            (0, t.jsx)(o.s_, { "data-migration-pending": !0, onClick: p, className: c.b }),
+            (0, r.jsx)("div", { className: u.qd }),
+            (0, r.jsx)(s.s_, { "data-migration-pending": !0, onClick: d, className: u.b }),
         ],
     });
 }

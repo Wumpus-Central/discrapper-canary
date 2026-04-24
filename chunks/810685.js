@@ -1,15 +1,16 @@
-n.d(t, { M: () => a });
-var i = n(627968);
+"use strict";
+n.d(t, { M: () => i });
+var a = n(627968);
 n(64700);
-var l = n(700129);
-function a(e) {
-    let { alt: t, ariaLabel: n, ariaHidden: a, role: s, width: r = 288, height: o = 162 } = e;
-    return (0, i.jsx)("img", {
-        style: { width: r, height: o },
-        src: l.A,
+var r = n(700129);
+function i(e) {
+    let { alt: t, ariaLabel: n, ariaHidden: i, role: l, width: s = 288, height: o = 162 } = e;
+    return (0, a.jsx)("img", {
+        style: { width: s, height: o },
+        src: r.A,
         alt: t,
         "aria-label": n,
-        "aria-hidden": a,
-        role: s ?? "img",
+        "aria-hidden": i,
+        role: l ?? "img",
     });
 }

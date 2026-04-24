@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__26669",
     Kk: "measurements__26669",

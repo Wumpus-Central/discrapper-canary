@@ -1,27 +1,28 @@
-t.r(n), t.d(n, { default: () => s });
-var l = t(627968);
-t(64700);
-var i = t(284009),
-    a = t.n(i),
-    r = t(702841),
-    u = t(164617),
-    d = t(47167),
-    p = t(386467),
-    c = t(979186),
-    h = t(734057),
-    o = t(67319);
-function s(e) {
-    let { windowKey: n, channelId: t } = e,
-        i = (0, r.bG)([h.A], () => h.A.getChannel(t));
-    a()(null != i, "channel cannot be null for popout");
-    let s = (0, d.Ay)(i);
-    return (0, l.jsx)(c.A, {
+"use strict";
+n.r(t), n.d(t, { default: () => g });
+var i = n(627968);
+n(64700);
+var a = n(284009),
+    r = n.n(a),
+    s = n(702841),
+    l = n(164617),
+    o = n(47167),
+    c = n(386467),
+    d = n(979186),
+    u = n(734057),
+    _ = n(67319);
+function g(e) {
+    let { windowKey: t, channelId: n } = e,
+        a = (0, s.bG)([u.A], () => u.A.getChannel(n));
+    r()(null != a, "channel cannot be null for popout");
+    let g = (0, o.Ay)(a);
+    return (0, i.jsx)(d.A, {
         withTitleBar: !0,
-        windowKey: n,
-        title: s ?? "",
-        children: (0, l.jsx)(p.A.Provider, {
-            value: i.guild_id,
-            children: (0, l.jsx)(o.default, { channel: i, popoutType: u.N.VOICE_UI }),
+        windowKey: t,
+        title: g ?? "",
+        children: (0, i.jsx)(c.A.Provider, {
+            value: a.guild_id,
+            children: (0, i.jsx)(_.default, { channel: a, popoutType: l.N.VOICE_UI }),
         }),
     });
 }

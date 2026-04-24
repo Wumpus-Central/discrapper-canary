@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__0e308",
     P: "breadcrumbContainer__0e308",

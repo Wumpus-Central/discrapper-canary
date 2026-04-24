@@ -1,17 +1,16 @@
-"use strict";
-s.d(t, { A: () => d });
-var n = s(627968);
-s(64700);
-var l = s(503698),
-    r = s.n(l),
-    a = s(777666),
-    i = s(993408),
-    o = s(985018),
-    c = s(616459);
-let d = (e) => {
-    let { category: t, daysRemainingText: s = o.t.Io7ozn, className: l } = e;
-    if (!(0, i.HF)(t.unpublishedAt)) return null;
-    let d = (0, i.WU)(t.unpublishedAt),
-        u = d > 1 ? o.intl.formatToPlainString(s, { days: d }) : o.intl.string(o.t.Bc13HF);
-    return (0, n.jsx)(a.Lp, { disableColor: !0, text: u, className: r()(c.q, l) });
+i.d(e, { A: () => s });
+var l = i(627968);
+i(64700);
+var n = i(503698),
+    a = i.n(n),
+    o = i(777666),
+    r = i(993408),
+    u = i(985018),
+    d = i(616459);
+let s = (t) => {
+    let { category: e, daysRemainingText: i = u.t.Io7ozn, className: n } = t;
+    if (!(0, r.HF)(e.unpublishedAt)) return null;
+    let s = (0, r.WU)(e.unpublishedAt),
+        c = s > 1 ? u.intl.formatToPlainString(i, { days: s }) : u.intl.string(u.t.Bc13HF);
+    return (0, l.jsx)(o.Lp, { disableColor: !0, text: c, className: a()(d.q, n) });
 };

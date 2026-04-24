@@ -1,127 +1,126 @@
-"use strict";
-n.d(t, { RD: () => f, U9: () => p }), n(321073);
-var i = n(64700),
-    r = n(868714),
-    s = n(975807),
-    a = n(289919),
-    o = n(954571),
-    l = n(76843),
-    d = n(975460),
-    _ = n(704824);
+a.d(t, { RD: () => b, U9: () => g }), a(321073);
+var n = a(64700),
+    r = a(868714),
+    l = a(975807),
+    i = a(289919),
+    s = a(954571),
+    o = a(76843),
+    c = a(975460),
+    d = a(704824);
 let u = Symbol();
-var c = n(942370),
-    E = n(652215);
-let h = "AUTHORIZE_REQUEST",
-    m = [c._.RPC, c._.WEB];
-function f(e) {
-    var t, n;
+var h = a(942370),
+    p = a(652215);
+let m = "AUTHORIZE_REQUEST",
+    f = [h._.RPC, h._.WEB];
+function b(e) {
+    var t, a;
     let r,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { debug: a = !1 } = s,
-        o = (0, d.g)(e),
-        l =
-            ((t = o),
-            (n = s),
-            (r = p(
-                i.useMemo(() => (null != t ? [t] : []), [t]),
-                n,
+        l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { debug: i = !1 } = l,
+        s = (0, c.g)(e),
+        o =
+            ((t = s),
+            (a = l),
+            (r = g(
+                n.useMemo(() => (null != t ? [t] : []), [t]),
+                a,
             )).length > 0
                 ? r[0]
                 : null),
-        u = l?.preferredFlow,
-        c = null != u,
-        { token: E, fetched: h } = (0, _.U)(o?.parentId ?? o?.id, { disableFetch: s.disableFetch });
+        u = o?.preferredFlow,
+        h = null != u,
+        { token: p, fetched: m } = (0, d.U)(s?.parentId ?? s?.id, { disableFetch: l.disableFetch });
     return {
-        fetched: h,
-        hasAlreadyLinked: h && null != E,
-        canStartAuthorization: c,
-        startAuthorization: i.useCallback((e) => (null == u ? null : (u.initiate(e), u.type)), [u]),
-        connectionApp: o,
+        fetched: m,
+        hasAlreadyLinked: m && null != p,
+        canStartAuthorization: h,
+        startAuthorization: n.useCallback((e) => (null == u ? null : (u.initiate(e), u.type)), [u]),
+        connectionApp: s,
         chosenFlow: u?.type ?? null,
-        token: E,
-        debug: a
+        token: p,
+        debug: i
             ? {
-                  isSubscribedToAuthorizeRequest: l?.context?.isSubscribedToAuthorizeRequest ?? !1,
-                  oauth2Token: E,
-                  hasConnectionEntrypointUrl: o?.connectionEntrypointUrl != null,
-                  validFlows: l?.availableFlows?.map((e) => e.type) ?? [],
+                  isSubscribedToAuthorizeRequest: o?.context?.isSubscribedToAuthorizeRequest ?? !1,
+                  oauth2Token: p,
+                  hasConnectionEntrypointUrl: s?.connectionEntrypointUrl != null,
+                  validFlows: o?.availableFlows?.map((e) => e.type) ?? [],
               }
             : void 0,
     };
 }
-function g(e) {
-    return a.A.listenIsSubscribed(e);
+function _(e) {
+    return i.A.listenIsSubscribed(e);
 }
-function p(e, t) {
-    var n;
-    let d,
-        _,
-        f = (0, r.A)(t?.allowedFlows ?? m),
-        p =
-            ((n = i.useCallback(
-                () => e.map((e) => ({ application: e, isSubscribedToAuthorizeRequest: a.A.isSubscribed(e.id, h) })),
+function g(e, t) {
+    var a;
+    let c,
+        d,
+        b = (0, r.A)(t?.allowedFlows ?? f),
+        g =
+            ((a = n.useCallback(
+                () => e.map((e) => ({ application: e, isSubscribedToAuthorizeRequest: i.A.isSubscribed(e.id, m) })),
                 [e],
             )),
-            (d = i.useRef(u)),
-            (_ = i.useRef(n)),
-            i.useSyncExternalStore(
-                i.useCallback(
+            (c = n.useRef(u)),
+            (d = n.useRef(a)),
+            n.useSyncExternalStore(
+                n.useCallback(
                     (e) =>
-                        g(() => {
-                            (d.current = u), e();
+                        _(() => {
+                            (c.current = u), e();
                         }),
-                    [g],
+                    [_],
                 ),
-                i.useCallback(
+                n.useCallback(
                     () => (
-                        _.current !== n && ((_.current = n), (d.current = u)),
-                        d.current === u && (d.current = n()),
-                        d.current
+                        d.current !== a && ((d.current = a), (c.current = u)),
+                        c.current === u && (c.current = a()),
+                        c.current
                     ),
-                    [n],
+                    [a],
                 ),
             ));
-    return i.useMemo(
+    return n.useMemo(
         () =>
-            p.map((e) => {
+            g.map((e) => {
                 let t = [];
                 if (
-                    (f.includes(c._.RPC) &&
+                    (b.includes(h._.RPC) &&
                         e.isSubscribedToAuthorizeRequest &&
                         t.push({
-                            type: c._.RPC,
+                            type: h._.RPC,
                             initiate(t) {
-                                a.A.dispatchToSubscriptions(h, (t) => t.socket.application.id === e.application.id, {}),
+                                i.A.dispatchToSubscriptions(m, (t) => t.socket.application.id === e.application.id, {}),
                                     t.onConfirm?.(),
-                                    o.default.track(E.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
+                                    s.default.track(p.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
                                         location_stack: t.analyticsLocations,
                                         application_id: e.application.id,
-                                        flow_type: c._.RPC,
+                                        flow_type: h._.RPC,
                                     });
                             },
                         }),
-                    f.includes(c._.WEB) && null != e.application.connectionEntrypointUrl)
+                    b.includes(h._.WEB) && null != e.application.connectionEntrypointUrl)
                 ) {
-                    let n = e.application.connectionEntrypointUrl;
+                    let a = e.application.connectionEntrypointUrl;
                     t.push({
-                        type: c._.WEB,
+                        type: h._.WEB,
                         initiate(t) {
-                            (0, l.h)({
-                                href: n,
+                            (0, o.h)({
+                                href: a,
                                 onConfirm: () => {
-                                    (0, s.A)(n), t?.onConfirm?.();
+                                    (0, l.A)(a), t?.onConfirm?.();
                                 },
                             }),
-                                o.default.track(E.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
+                                s.default.track(p.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
                                     location_stack: t.analyticsLocations,
                                     application_id: e.application.id,
-                                    flow_type: c._.WEB,
+                                    flow_type: h._.WEB,
                                 });
                         },
                     });
                 }
                 return { context: e, availableFlows: t, preferredFlow: t.length > 0 ? t[0] : null };
             }),
-        [p, f],
+        [g, b],
     );
 }

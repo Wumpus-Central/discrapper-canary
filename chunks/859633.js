@@ -1,4 +1,3 @@
-"use strict";
 a.r(
     (e.exports = {
         wishlistButton: "wishlistButton__979b1",

@@ -32,9 +32,10 @@ function u(e) {
                           action: () =>
                               (0, a.openModalLazy)(async () => {
                                   let { default: t } = await Promise.all([
+                                      i.e("8018"),
                                       i.e("42282"),
                                       i.e("9431"),
-                                      i.e("36126"),
+                                      i.e("43735"),
                                   ]).then(i.bind(i, 113194));
                                   return (i) => (0, n.jsx)(t, { ...i, channelType: o.rbe.GUILD_TEXT, guildId: e.id });
                               }),
@@ -49,9 +50,10 @@ function u(e) {
                           action: () =>
                               (0, a.openModalLazy)(async () => {
                                   let { default: t } = await Promise.all([
+                                      i.e("8018"),
                                       i.e("42282"),
                                       i.e("9431"),
-                                      i.e("36126"),
+                                      i.e("43735"),
                                   ]).then(i.bind(i, 113194));
                                   return (i) =>
                                       (0, n.jsx)(t, { ...i, channelType: o.rbe.GUILD_CATEGORY, guildId: e.id });

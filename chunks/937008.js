@@ -1,107 +1,106 @@
-"use strict";
-n.d(t, { Mq: () => S, Pv: () => g, dX: () => I });
-var r = n(627968),
-    i = n(64700),
-    s = n(94420),
-    a = n(242874),
-    o = n(810498),
-    l = n(287809),
-    u = n(954571),
-    c = n(786300),
-    d = n(45938),
+n.d(t, { Mq: () => v, Pv: () => h, dX: () => A });
+var i = n(627968),
+    r = n(64700),
+    a = n(94420),
+    l = n(242874),
+    s = n(810498),
+    d = n(287809),
+    o = n(954571),
+    u = n(786300),
+    c = n(45938),
     _ = n(652215),
     f = n(788868),
-    p = n(985018);
-let h = f.o2.STANDARD_BOX,
-    E,
-    [m, g, A] = (0, c.A)();
-function I(e) {
+    m = n(985018);
+let g = f.o2.STANDARD_BOX,
+    p,
+    [b, h, x] = (0, u.A)();
+function A(e) {
     let {
             isGift: t = !1,
             giftRecipient: n,
-            giftMessage: c,
+            giftMessage: u,
             giftStyle: f,
-            giftingOrigin: g,
-            children: A,
-            additionalUserIds: I,
+            giftingOrigin: h,
+            children: x,
+            additionalUserIds: A,
         } = e,
-        T = (0, s.t4)((e) => e.selectedSkuId),
-        [S, y] = i.useState(n),
-        [N, v] = i.useState(),
-        [C, O] = i.useState(!1),
-        R = (0, d.Ik)(S),
-        b = E;
-    R && (b = null != f ? f : h);
-    let [D, L] = i.useState(b),
-        w = (0, o.JW)(),
-        M = null != w && w.length > 0,
-        [P, x] = i.useState(),
-        [k, U] = i.useState(
-            t && (0, d.lo)(S) === d.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == c ? p.intl.string(p.t.ZkOo1U) : c,
+        C = (0, a.t4)((e) => e.selectedSkuId),
+        [v, S] = r.useState(n),
+        [I, E] = r.useState(),
+        [N, y] = r.useState(!1),
+        M = (0, c.Ik)(v),
+        j = p;
+    M && (j = null != f ? f : g);
+    let [T, P] = r.useState(j),
+        R = (0, s.JW)(),
+        L = null != R && R.length > 0,
+        [k, U] = r.useState(),
+        [O, D] = r.useState(
+            t && (0, c.lo)(v) === c.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? m.intl.string(m.t.ZkOo1U) : u,
         ),
-        [G, F] = i.useState(void 0),
-        [V, B] = i.useState(void 0),
-        H = (0, d.Vt)(T, t),
-        [j, Y] = i.useState(!1),
-        [W, K] = i.useState(!1),
-        [$, z] = i.useState(),
-        q = i.useCallback(
+        [G, w] = r.useState(void 0),
+        [B, F] = r.useState(void 0),
+        W = (0, c.Vt)(C, t),
+        [z, H] = r.useState(!1),
+        [K, $] = r.useState(!1),
+        [Z, q] = r.useState(),
+        X = r.useCallback(
             (e) => {
                 let { onSubscriptionConfirmation: t } = e;
                 return (
-                    K(!0),
-                    (0, a.UN)(S, H)
+                    $(!0),
+                    (0, l.UN)(v, W)
                         .then(() => {
-                            K(!1), t?.(), Y(!0);
+                            $(!1), t?.(), H(!0);
                         })
                         .catch((e) => {
-                            K(!1), z(e), Y(!0);
+                            $(!1), q(e), H(!0);
                         })
                 );
             },
-            [S, H, K, Y, z],
+            [v, W, $, H, q],
         );
     return (
-        i.useEffect(() => {
-            if (M) {
-                let e = l.default.getCurrentUser();
-                u.default.track(_.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: e?.id, reward_sku_id: P });
+        r.useEffect(() => {
+            if (L) {
+                let e = d.default.getCurrentUser();
+                o.default.track(_.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: e?.id, reward_sku_id: k });
             }
-        }, [P, M]),
-        (0, r.jsx)(m.Provider, {
+        }, [k, L]),
+        (0, i.jsx)(b.Provider, {
             value: {
                 isGift: t,
-                giftCode: H,
-                giftMessage: c,
-                giftRecipient: S,
-                setGiftRecipient: y,
-                giftRecipientError: N,
-                setGiftRecipientError: v,
-                validatingGiftRecipient: C,
-                setValidatingGiftRecipient: O,
+                giftCode: W,
+                giftMessage: u,
+                giftRecipient: v,
+                setGiftRecipient: S,
+                giftRecipientError: I,
+                setGiftRecipientError: E,
+                validatingGiftRecipient: N,
+                setValidatingGiftRecipient: y,
                 soundEffect: G,
-                setSoundEffect: F,
-                emojiConfetti: V,
-                setEmojiConfetti: B,
-                customGiftMessage: k,
-                setCustomGiftMessage: U,
-                selectedGiftStyle: D,
-                setSelectedGiftStyle: L,
-                sendGiftMessage: q,
-                hasSentMessage: j,
-                isSendingMessage: W,
-                giftMessageError: $,
-                giftingOrigin: g,
-                claimableRewards: w,
-                selectedGiftingPromotionReward: P,
-                setSelectedGiftingPromotionReward: x,
-                additionalUserIds: I,
+                setSoundEffect: w,
+                emojiConfetti: B,
+                setEmojiConfetti: F,
+                customGiftMessage: O,
+                setCustomGiftMessage: D,
+                selectedGiftStyle: T,
+                setSelectedGiftStyle: P,
+                sendGiftMessage: X,
+                hasSentMessage: z,
+                isSendingMessage: K,
+                giftMessageError: Z,
+                giftingOrigin: h,
+                claimableRewards: R,
+                selectedGiftingPromotionReward: k,
+                setSelectedGiftingPromotionReward: U,
+                additionalUserIds: A,
             },
-            children: A,
+            children: x,
         })
     );
 }
-let T = {
+let C = {
         isGift: !1,
         setGiftRecipient: _.tEg,
         setGiftRecipientError: _.tEg,
@@ -116,7 +115,7 @@ let T = {
         claimableRewards: void 0,
         setSelectedGiftingPromotionReward: _.tEg,
     },
-    S = (e) => {
+    v = (e) => {
         let { children: t } = e;
-        return (0, r.jsx)(m.Provider, { value: T, children: t });
+        return (0, i.jsx)(b.Provider, { value: C, children: t });
     };

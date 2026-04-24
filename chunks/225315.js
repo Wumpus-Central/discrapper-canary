@@ -1,27 +1,40 @@
-r.d(t, { default: () => s });
-var o = r(627968);
-r(64700);
-var a = r(612479),
-    n = r(521732),
-    i = r(670455),
-    l = r(985018);
-let d = [n.tk.OTHER];
-function s(e) {
-    let { transitionState: t, startRating: r, onClose: s, onSubmit: u } = e;
-    return (0, o.jsx)(a.A, {
-        modalType: "summary",
-        header: l.intl.string(l.t.hghcMh),
-        body: l.intl.string(l.t.QFU785),
-        problemTitle: l.intl.string(l.t.CtiHPm),
-        onSubmit: u,
-        onClose: s,
-        ratingOptions: [i.P0.GOOD, i.P0.BAD],
-        ratingEmojiKind: "thumb",
-        transitionState: t,
-        problems: (0, n.j0)(),
-        freeformNeededProblems: d,
-        otherKey: n.tk.OTHER,
-        startRating: r,
-        hideDontShowAgainCheckbox: !0,
-    });
-}
+n.d(t, { Fy: () => a, Vv: () => d, Xx: () => c, i4: () => u, oZ: () => o, ry: () => r });
+var i = n(636537),
+    l = n(228366),
+    s = n(652215);
+let r = function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        l.h.dispatch({ type: "WELCOME_SCREEN_VIEW", guildId: e, isLurking: t });
+    },
+    a = async (e) => {
+        l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
+        try {
+            let t = await i.Bo.get({ url: s.Rsh.GUILD_WELCOME_SCREEN(e), oldFormErrors: !0, rejectWithError: !0 });
+            return l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: e, welcomeScreen: t.body }), t.body;
+        } catch (e) {
+            l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
+        }
+    },
+    o = () => {
+        l.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
+    },
+    d = () => {
+        l.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
+    },
+    c = (e) => {
+        l.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings: e });
+    },
+    u = async (e, t) => {
+        l.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
+        try {
+            let n = await i.Bo.patch({
+                url: s.Rsh.GUILD_WELCOME_SCREEN(e),
+                body: { description: t.description, welcome_channels: t.channels, enabled: t.enabled },
+                oldFormErrors: !0,
+                rejectWithError: !0,
+            });
+            l.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_SUCCESS", guildId: e, welcomeScreen: n.body });
+        } catch (e) {
+            l.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
+        }
+    };

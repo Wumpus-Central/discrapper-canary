@@ -1,10 +1,11 @@
-let t;
-a.d(l, { d: () => u });
-var n = a(627968),
-    o = a(64700),
-    i = a(745262),
-    r = a(187322);
-let s = `
+"use strict";
+let r;
+n.d(t, { d: () => u });
+var i = n(627968),
+    a = n(64700),
+    l = n(745262),
+    s = n(187322);
+let o = `
   visibility:hidden;
   overflow:hidden;
   position:absolute;
@@ -12,7 +13,7 @@ let s = `
   top:0;
   right:0;
 `,
-    d = [
+    c = [
         "letter-spacing",
         "line-height",
         "padding-top",
@@ -27,75 +28,75 @@ let s = `
         "border-width",
         "box-sizing",
     ],
-    u = o.forwardRef(function (e, l) {
-        let { style: a, autoFocus: t = !1, disabled: i = !1, autoCorrect: s = "off", ...d } = e,
-            u = o.useRef(null),
-            [b, p] = o.useState(() => c(u.current, d.rows, d.value));
+    u = a.forwardRef(function (e, t) {
+        let { style: n, autoFocus: r = !1, disabled: l = !1, autoCorrect: o = "off", ...c } = e,
+            u = a.useRef(null),
+            [_, p] = a.useState(() => d(u.current, c.rows, c.value));
         return (
-            o.useLayoutEffect(() => {
-                p(c(u.current, d.rows, d.value));
-            }, [d.rows, d.value]),
-            (0, n.jsx)(r.vN, {
-                children: (0, n.jsx)("textarea", {
-                    ...d,
+            a.useLayoutEffect(() => {
+                p(d(u.current, c.rows, c.value));
+            }, [c.rows, c.value]),
+            (0, i.jsx)(s.vN, {
+                children: (0, i.jsx)("textarea", {
+                    ...c,
                     ref: (e) => {
-                        (u.current = e), "function" == typeof l ? l(u.current) : null != l && (l.current = e);
+                        (u.current = e), "function" == typeof t ? t(u.current) : null != t && (t.current = e);
                     },
-                    style: { ...a, height: b },
-                    autoFocus: t,
-                    disabled: i,
-                    autoCorrect: s,
+                    style: { ...n, height: _ },
+                    autoFocus: r,
+                    disabled: l,
+                    autoCorrect: o,
                 }),
             })
         );
     });
-function c(e, l, a) {
-    var n, o, r, u, c;
-    let b, p, m, h, x, g;
+function d(e, t, n) {
+    var i, a, s, u, d;
+    let _, p, f, h, m, g;
     if (null == e) return;
-    (a = a ?? e.value),
-        null == t && null != document.body && ((t = document.createElement("textarea")), document.body.appendChild(t));
+    (n = n ?? e.value),
+        null == r && null != document.body && ((r = document.createElement("textarea")), document.body.appendChild(r));
     let {
-            paddingSize: f,
-            borderSize: v,
-            boxSizing: y,
-            sizingStyle: _,
-        } = ((n = e),
-        (b = window.getComputedStyle(n)),
-        (p = (0, i.G)(
-            b.getPropertyValue("box-sizing"),
-            b.getPropertyValue("-moz-box-sizing"),
-            b.getPropertyValue("-webkit-box-sizing"),
+            paddingSize: b,
+            borderSize: A,
+            boxSizing: E,
+            sizingStyle: v,
+        } = ((i = e),
+        (_ = window.getComputedStyle(i)),
+        (p = (0, l.G)(
+            _.getPropertyValue("box-sizing"),
+            _.getPropertyValue("-moz-box-sizing"),
+            _.getPropertyValue("-webkit-box-sizing"),
         )),
-        (m = parseFloat(b.getPropertyValue("padding-bottom")) + parseFloat(b.getPropertyValue("padding-top"))),
+        (f = parseFloat(_.getPropertyValue("padding-bottom")) + parseFloat(_.getPropertyValue("padding-top"))),
         (h =
-            parseFloat(b.getPropertyValue("border-bottom-width")) + parseFloat(b.getPropertyValue("border-top-width"))),
+            parseFloat(_.getPropertyValue("border-bottom-width")) + parseFloat(_.getPropertyValue("border-top-width"))),
         {
-            sizingStyle: d.map((e) => `${e}:${b.getPropertyValue(e)}`).join(";"),
-            paddingSize: m,
+            sizingStyle: c.map((e) => `${e}:${_.getPropertyValue(e)}`).join(";"),
+            paddingSize: f,
             borderSize: h,
             boxSizing: p,
         }),
-        { minHeight: C, maxHeight: j } =
-            ((o = _),
-            (r = f),
-            (u = v),
-            (c = y),
-            null == t &&
+        { minHeight: y, maxHeight: I } =
+            ((a = v),
+            (s = b),
+            (u = A),
+            (d = E),
+            null == r &&
                 null != document.body &&
-                ((t = document.createElement("textarea")), document.body.appendChild(t)),
-            t.setAttribute("style", o + ";" + s),
-            t.setAttribute("rows", "1"),
-            (t.value = ""),
-            (x = t.scrollHeight),
-            t.setAttribute("rows", "15"),
-            (t.value = ""),
-            (g = t.scrollHeight),
-            "border-box" === c ? ((x += u), (g += u)) : "content-box" === c && ((x -= r), (g -= r)),
-            { minHeight: x, maxHeight: g });
-    t.setAttribute("style", _ + ";" + s),
-        (t.value = a),
-        null != l ? t.setAttribute("rows", `${l}`) : t.removeAttribute("rows");
-    let V = Math.ceil(t.scrollHeight + 1);
-    return "border-box" === y ? (V += v) : "content-box" === y && (V -= f), (V = Math.max(C, Math.min(V, j)));
+                ((r = document.createElement("textarea")), document.body.appendChild(r)),
+            r.setAttribute("style", a + ";" + o),
+            r.setAttribute("rows", "1"),
+            (r.value = ""),
+            (m = r.scrollHeight),
+            r.setAttribute("rows", "15"),
+            (r.value = ""),
+            (g = r.scrollHeight),
+            "border-box" === d ? ((m += u), (g += u)) : "content-box" === d && ((m -= s), (g -= s)),
+            { minHeight: m, maxHeight: g });
+    r.setAttribute("style", v + ";" + o),
+        (r.value = n),
+        null != t ? r.setAttribute("rows", `${t}`) : r.removeAttribute("rows");
+    let S = Math.ceil(r.scrollHeight + 1);
+    return "border-box" === E ? (S += A) : "content-box" === E && (S -= b), (S = Math.max(y, Math.min(S, I)));
 }

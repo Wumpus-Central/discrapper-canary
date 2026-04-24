@@ -1,4 +1,6 @@
+"use strict";
 e.exports = {
+    Xn: "shaker_e4d803",
     wx: "header_e4d803",
     Du: "stepBody_e4d803",
     G3: "bodyText_e4d803",
@@ -7,6 +9,8 @@ e.exports = {
     LC: "paymentSourceWrapper_e4d803",
     QN: "paymentSourceOptionalWarning_e4d803",
     p2: "currencyWrapper_e4d803",
+    wG: "loader_e4d803",
+    FG: "contentWrapper_e4d803",
     Je: "reviewWarningMessageContainer_e4d803",
     CJ: "reviewWarningMessage_e4d803",
     W3: "trialPriceLine_e4d803",

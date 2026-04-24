@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Ie: "empty__9d78f",
     Dw: "emptyIcon__9d78f",

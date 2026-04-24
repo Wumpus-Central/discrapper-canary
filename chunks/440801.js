@@ -41,8 +41,8 @@ function g(e) {
                     lang: n,
                     className: s()(x.kw, "hljs"),
                     children: (0, l.jsx)(u.c2, {
-                        createPromise: () => Promise.resolve().then(t.bind(t, 752238)),
-                        webpackId: 752238,
+                        createPromise: () => Promise.all([t.e("57036"), t.e("75134")]).then(t.bind(t, 981776)),
+                        webpackId: 981776,
                         renderFallback: a,
                         render: (e) => {
                             if (!(null != n && e.hasLanguage(n))) return a();

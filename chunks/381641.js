@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_cc030b",
     QN: "heroContainerTopSpacing_cc030b",

@@ -6,10 +6,10 @@ var i = n(132500),
     r = n(19575),
     a = n(464578),
     o = n(652215);
-function d() {
+function c() {
     return window.GLOBAL_ENV.HTML_TIMESTAMP;
 }
-class c {
+class d {
     loadId = (0, i.A)();
     appUIViewed = !1;
     trackEvent(e) {
@@ -64,7 +64,7 @@ class c {
                 n ? i : {}),
                 load_id: this.loadId,
                 screen_name: e,
-                duration_ms_since_app_opened: t - d(),
+                duration_ms_since_app_opened: t - c(),
                 app_hardware_acceleration_enabled: r.Ay.getEnableHardwareAcceleration(),
             });
         });
@@ -75,7 +75,7 @@ class c {
         let e = window.location?.pathname,
             t = e?.startsWith("/channels/@me") ? "channels/@me" : e?.split("/")?.[1];
         requestIdleCallback(() => {
-            let e = d();
+            let e = c();
             a.A.firstRenderAfterReadyPayload.record();
             let n = a.A.serializeWebPerfStartupMetrics(e);
             l.default.track(o.HAw.APP_WEB_PERF_STARTUP_METRICS, { load_id: this.loadId, url_root_path: t, ...n });
@@ -86,7 +86,7 @@ class c {
     }
     trackAppUIViewed(e) {
         if (!this.appUIViewed) {
-            this.trackEvent(e);
+            performance.mark(`trackAppUIViewed-${e}`), this.trackEvent(e);
             try {
                 r.Ay.appViewed();
             } catch (e) {}
@@ -94,7 +94,7 @@ class c {
         }
     }
 }
-let u = new c();
+let u = new d();
 function _(e) {
     u.trackAppUIViewed(e);
 }

@@ -1,39 +1,40 @@
-n.d(t, { A: () => A });
+"use strict";
+n.d(t, { A: () => _ });
 var i = n(627968),
-    l = n(503698),
-    a = n.n(l),
+    r = n(503698),
+    a = n.n(r),
     s = n(318254),
-    r = n(834730),
+    l = n(834730),
     o = n(657718),
-    c = n(807072),
-    d = n(262427),
+    d = n(807072),
+    c = n(262427),
     u = n(945942),
-    h = n(985018),
-    m = n(931048);
-function A(e) {
-    let { location: t, onDismiss: n, className: l } = e,
-        { shouldRender: A, limitedOfferTimeLeft: g } = (0, u.A)({ location: t });
-    return A
-        ? (0, i.jsxs)(d.A, {
+    m = n(985018),
+    p = n(931048);
+function _(e) {
+    let { location: t, onDismiss: n, className: r } = e,
+        { shouldRender: _, limitedOfferTimeLeft: h } = (0, u.A)({ location: t });
+    return _
+        ? (0, i.jsxs)(c.A, {
               Icon: s.C,
-              className: a()(m.U, l),
+              className: a()(p.U, r),
               children: [
-                  (0, i.jsx)(r.E, {
+                  (0, i.jsx)(l.E, {
                       variant: "text-xs/medium",
                       color: "currentColor",
-                      children: h.intl.format(h.t["/bHQ84"], {
-                          numDays: Math.max(g, 1),
-                          applicationName: h.intl.string(h.t.Uu8hke),
+                      children: m.intl.format(m.t["/bHQ84"], {
+                          numDays: Math.max(h, 1),
+                          applicationName: m.intl.string(m.t.Uu8hke),
                       }),
                   }),
                   null != n &&
                       (0, i.jsx)("div", {
-                          className: m.c,
+                          className: p.c,
                           children: (0, i.jsx)(o.S, {
                               size: "xs",
                               variant: "icon-only",
-                              icon: c.U,
-                              "aria-label": h.intl.string(h.t.cpT0Cq),
+                              icon: d.U,
+                              "aria-label": m.intl.string(m.t.cpT0Cq),
                               onClick: n,
                           }),
                       }),

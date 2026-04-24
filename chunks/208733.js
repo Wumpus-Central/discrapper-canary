@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     EL: "confirmation__9baa5",
     RS: "confirmationHeader__9baa5",

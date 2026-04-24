@@ -9086,7 +9086,7 @@ let dd = new dr(de.h, {
         (dl = !0), (di = !1);
     },
 });
-var dc = n(447696);
+var dc = n(225315);
 let du = () => {
     let { guild: e } = (0, L.bG)([G.A], () => G.A.getProps()),
         { submitting: t, welcomeSettings: n } = (0, L.bG)([dd], () => dd.getSettingsProps());
@@ -12647,11 +12647,10 @@ function uX(e) {
               onContextMenu: (e) => {
                   (0, nw.L3)(e, async () => {
                       let { default: e } = await Promise.all([
-                          n.e("43768"),
+                          n.e("35327"),
                           n.e("99011"),
-                          n.e("21420"),
                           n.e("18733"),
-                          n.e("15920"),
+                          n.e("96970"),
                       ]).then(n.bind(n, 71132));
                       return (n) => (0, j.jsx)(e, { ...n, channel: i, guild: t });
                   });
@@ -12749,23 +12748,21 @@ let uZ = R.memo(function () {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
                                           n.e("93103"),
-                                          n.e("43768"),
+                                          n.e("35327"),
                                           n.e("99011"),
-                                          n.e("21420"),
-                                          n.e("38727"),
+                                          n.e("79359"),
                                           n.e("99854"),
-                                          n.e("10046"),
+                                          n.e("96891"),
                                       ]).then(n.bind(n, 119357));
                                       return (t) => (0, j.jsx)(e, { ...t, channel: c, guild: m });
                                   })
                                 : (0, nw.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
-                                          n.e("43768"),
+                                          n.e("35327"),
                                           n.e("99011"),
-                                          n.e("21420"),
-                                          n.e("38727"),
-                                          n.e("43117"),
+                                          n.e("79359"),
+                                          n.e("12477"),
                                       ]).then(n.bind(n, 468916));
                                       return (t) => (0, j.jsx)(e, { ...t, channel: c, guild: m });
                                   });
@@ -17886,10 +17883,9 @@ function h9(e) {
                 let { default: e } = await Promise.all([
                     n.e("97262"),
                     n.e("93103"),
-                    n.e("53635"),
                     n.e("35313"),
                     n.e("91042"),
-                    n.e("41515"),
+                    n.e("57430"),
                 ]).then(n.bind(n, 365689));
                 return (t) => (0, j.jsx)(e, { ...t, user: l, guildId: i, showChatItems: !1 });
             });

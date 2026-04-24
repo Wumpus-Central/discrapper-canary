@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     qL: "bodyColumnMiddle_bf1b4a",
     uh: "sendTo_bf1b4a",

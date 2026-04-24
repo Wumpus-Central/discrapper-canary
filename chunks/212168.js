@@ -1,26 +1,27 @@
-a.d(t, { A: () => _, i: () => d });
+"use strict";
+n.d(t, { A: () => d, i: () => c });
 var r,
-    n = a(627968),
-    i = a(64700),
-    l = a(503698),
-    o = a.n(l),
-    s = a(636113),
-    d = (((r = {}).PREMIUM = "premium"), (r.LIMITED = "limited"), r);
-let c = { premium: { border: s.wU, background: s.gI }, limited: { border: s.rY, background: s.pm } },
-    _ = i.forwardRef(function (e, t) {
+    i = n(627968),
+    a = n(64700),
+    l = n(503698),
+    s = n.n(l),
+    o = n(636113),
+    c = (((r = {}).PREMIUM = "premium"), (r.LIMITED = "limited"), r);
+let u = { premium: { border: o.wU, background: o.gI }, limited: { border: o.rY, background: o.pm } },
+    d = a.forwardRef(function (e, t) {
         let {
-            children: a,
+            children: n,
             type: r = "premium",
-            isShown: i,
+            isShown: a,
             hasBackground: l = !1,
-            className: d,
-            backgroundClassName: _,
+            className: c,
+            backgroundClassName: d,
         } = e;
-        if (!i) return a;
-        let { border: u, background: f } = c[r];
-        return (0, n.jsx)("div", {
+        if (!a) return n;
+        let { border: _, background: p } = u[r];
+        return (0, i.jsx)("div", {
             ref: t,
-            className: o()(u, d),
-            children: (0, n.jsx)("div", { className: o()(l ? f : s.Tp, _), children: a }),
+            className: s()(_, c),
+            children: (0, i.jsx)("div", { className: s()(l ? p : o.Tp, d), children: n }),
         });
     });

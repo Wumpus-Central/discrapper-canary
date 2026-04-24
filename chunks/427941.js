@@ -1,36 +1,37 @@
-r.d(t, { A: () => c });
+"use strict";
+r.d(t, { A: () => i });
 var l = r(627968);
 r(64700);
-var n = r(607470),
-    a = r(506456),
-    s = r(401721);
-let c = (e) => {
+var s = r(607470),
+    n = r(506456),
+    a = r(211736);
+let i = (e) => {
     let {
             backgroundImage: t,
             backgroundSize: r = "cover",
-            backgroundPosition: c = "center",
-            backgroundRepeat: i = "no-repeat",
-            backgroundColor: d,
-            padding: o = 16,
-            children: u,
+            backgroundPosition: i = "center",
+            backgroundRepeat: c = "no-repeat",
+            backgroundColor: u,
+            padding: d = 16,
+            children: o,
         } = e,
-        m = (0, a.A)(t),
-        h = (0, a.c)(m?.mimeType);
+        h = (0, n.A)(t),
+        m = (0, n.c)(h?.mimeType);
     return (0, l.jsxs)("div", {
-        className: s.k,
+        className: a.k,
         style: {
-            ...(!h && null != m ? { backgroundImage: `url(${m.src})` } : {}),
+            ...(!m && null != h ? { backgroundImage: `url(${h.src})` } : {}),
             backgroundSize: r,
-            backgroundPosition: c,
-            backgroundRepeat: i,
-            backgroundColor: d,
-            padding: o,
+            backgroundPosition: i,
+            backgroundRepeat: c,
+            backgroundColor: u,
+            padding: d,
         },
         children: [
-            h &&
-                null != m &&
-                (0, l.jsx)(n.A, { className: s.O, src: m.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 }),
-            u,
+            m &&
+                null != h &&
+                (0, l.jsx)(s.A, { className: a.O, src: h.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 }),
+            o,
         ],
     });
 };

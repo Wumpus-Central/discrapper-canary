@@ -1,19 +1,20 @@
-n.d(t, { A: () => m });
-var l = n(627968);
+"use strict";
+n.d(t, { A: () => g });
+var r = n(627968);
 n(64700);
 var i = n(989349),
-    s = n.n(i),
+    l = n.n(i),
     a = n(17928),
-    r = n(477782),
-    o = n(832712),
+    o = n(477782),
+    s = n(832712),
     c = n(995102),
-    d = n(145408),
+    _ = n(145408),
     u = n(543465),
-    h = n(477427),
-    g = n(985018);
-function m(e, t) {
+    d = n(477427),
+    f = n(985018);
+function g(e, t) {
     let n = e?.id,
-        { muted: i, muteConfig: m } = (0, a.cf)(
+        { muted: i, muteConfig: g } = (0, a.cf)(
             [u.Ay],
             () => ({
                 muted: null != n ? u.Ay.isMuted(n) : void 0,
@@ -21,35 +22,35 @@ function m(e, t) {
             }),
             [n],
         ),
-        A = (0, d.M)(m);
+        m = (0, _.M)(g);
     return null == n
         ? null
         : i
-          ? (0, l.jsx)(r.Dr, {
+          ? (0, r.jsx)(o.Dr, {
                 id: "unmute-guild",
-                label: g.intl.string(g.t.De0BTC),
-                subtext: A,
-                action: () => o.A.updateGuildNotificationSettings(n, { muted: !1 }, h.fd.Unmuted),
+                label: f.intl.string(f.t.De0BTC),
+                subtext: m,
+                action: () => s.A.updateGuildNotificationSettings(n, { muted: !1 }, d.fd.Unmuted),
             })
-          : (0, l.jsx)(r.Dr, {
+          : (0, r.jsx)(o.Dr, {
                 id: "mute-guild",
-                label: g.intl.string(g.t.vRzp7P),
-                action: () => o.A.updateGuildNotificationSettings(n, { muted: !0 }, h.fd.Muted),
+                label: f.intl.string(f.t.vRzp7P),
+                action: () => s.A.updateGuildNotificationSettings(n, { muted: !0 }, d.fd.Muted),
                 children: (0, c.g)().map((e) => {
                     let { value: i, label: a } = e;
-                    return (0, l.jsx)(
-                        r.Dr,
+                    return (0, r.jsx)(
+                        o.Dr,
                         {
                             id: `${i}`,
                             label: a,
                             action: () =>
                                 (function (e) {
                                     if (null == n) return;
-                                    let l = e > 0 ? s()().add(e, "second").toISOString() : null;
-                                    o.A.updateGuildNotificationSettings(
+                                    let r = e > 0 ? l()().add(e, "second").toISOString() : null;
+                                    s.A.updateGuildNotificationSettings(
                                         n,
-                                        { muted: !0, mute_config: { selected_time_window: e, end_time: l } },
-                                        h.fd.Muted,
+                                        { muted: !0, mute_config: { selected_time_window: e, end_time: r } },
+                                        d.fd.Muted,
                                         t,
                                     );
                                 })(i),

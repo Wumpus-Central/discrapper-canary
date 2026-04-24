@@ -1,7 +1,8 @@
-n.d(t, { w: () => a });
-var i = n(554146),
-    l = n(826673),
-    r = n(49999);
-function a() {
-    (0, l.Dr)(i.M.PREMIUM_WISHLIST_COACHMARK, { dismissAction: r.i.INDIRECT_ACTION, forceTrack: !0 });
+"use strict";
+l.d(e, { w: () => u });
+var i = l(554146),
+    n = l(826673),
+    r = l(49999);
+function u() {
+    (0, n.Dr)(i.M.PREMIUM_WISHLIST_COACHMARK, { dismissAction: r.i.INDIRECT_ACTION, forceTrack: !0 });
 }

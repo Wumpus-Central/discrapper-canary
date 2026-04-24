@@ -1,6 +1,7 @@
-n.d(t, { XA: () => i, fu: () => a });
-let l = (0, n(353640).v)((e) => ({ toastType: null, showToast: (t) => e({ toastType: t }) })),
-    a = () => l((e) => e.toastType),
+"use strict";
+n.d(t, { XA: () => i, fu: () => r });
+let a = (0, n(353640).v)((e) => ({ toastType: null, showToast: (t) => e({ toastType: t }) })),
+    r = () => a((e) => e.toastType),
     i = (e) => {
-        l.getState().showToast(e);
+        a.getState().showToast(e);
     };

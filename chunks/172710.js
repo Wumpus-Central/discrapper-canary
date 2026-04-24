@@ -1,46 +1,45 @@
-"use strict";
-n.d(t, { Mp: () => u, Pt: () => l, QX: () => c, mN: () => d });
-var r = n(723702),
-    i = n(210528),
-    a = n(981616),
-    s = n(272984);
-function o(e, t, n) {
-    let o;
-    (0, r.isDesktop)() || (o = window.open("", "_blank")),
-        (0, a.LI)(e, t)
-            .then((e) => n(e))
-            .then((e) => {
-                let { resourceType: t, resourceId: n } = e,
-                    r = i.A.isProtocolRegistered() ? s.RQ.PLAYER_OPEN(t, n) : s.RQ.WEB_OPEN(t, n);
-                null != o ? (o.location.href = r) : window.open(r);
+i.d(n, { Mp: () => u, Pt: () => s, QX: () => c, mN: () => d });
+var e = i(723702),
+    r = i(210528),
+    o = i(981616),
+    l = i(272984);
+function a(t, n, i) {
+    let a;
+    (0, e.isDesktop)() || (a = window.open("", "_blank")),
+        (0, o.LI)(t, n)
+            .then((t) => i(t))
+            .then((t) => {
+                let { resourceType: n, resourceId: i } = t,
+                    e = r.A.isProtocolRegistered() ? l.RQ.PLAYER_OPEN(n, i) : l.RQ.WEB_OPEN(n, i);
+                null != a ? (a.location.href = e) : window.open(e);
             })
             .catch(() => {
-                null != o && o.close();
+                null != a && a.close();
             });
 }
-function l() {
-    window.open(s.RQ.PREMIUM_SITE);
+function s() {
+    window.open(l.RQ.PREMIUM_SITE);
 }
-function u(e) {
-    let { sync_id: t, metadata: n } = e;
-    if (null == t) return;
-    let r = (0, s.NJ)(n?.type ?? s.M0.TRACK);
-    if (null == r) return;
-    let a = i.A.isProtocolRegistered() ? s.RQ.PLAYER_OPEN(r, t) : s.RQ.WEB_OPEN(r, t);
-    window.open(a);
+function u(t) {
+    let { sync_id: n, metadata: i } = t;
+    if (null == n) return;
+    let e = (0, l.NJ)(i?.type ?? l.M0.TRACK);
+    if (null == e) return;
+    let o = r.A.isProtocolRegistered() ? l.RQ.PLAYER_OPEN(e, n) : l.RQ.WEB_OPEN(e, n);
+    window.open(o);
 }
-function c(e, t) {
-    o(e, t, (t) => {
-        let { album_id: n } = t;
-        return { resourceType: (0, s.NJ)(e.metadata?.type) === s.M0.EPISODE ? s.M0.SHOW : s.M0.ALBUM, resourceId: n };
+function c(t, n) {
+    a(t, n, (n) => {
+        let { album_id: i } = n;
+        return { resourceType: (0, l.NJ)(t.metadata?.type) === l.M0.EPISODE ? l.M0.SHOW : l.M0.ALBUM, resourceId: i };
     });
 }
-function d(e, t, n) {
-    o(e, t, (e) => {
-        let { artist_ids: t } = e;
-        if (null == t) throw Error("no artist ids in metadata");
-        let r = t[n];
-        if (null == r) throw Error("invalid artist index");
-        return { resourceType: s.M0.ARTIST, resourceId: r };
+function d(t, n, i) {
+    a(t, n, (t) => {
+        let { artist_ids: n } = t;
+        if (null == n) throw Error("no artist ids in metadata");
+        let e = n[i];
+        if (null == e) throw Error("invalid artist index");
+        return { resourceType: l.M0.ARTIST, resourceId: e };
     });
 }

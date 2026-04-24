@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Xd: "errorPageContainer__5a176",
     lr: "errorPageContent__5a176",

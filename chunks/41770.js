@@ -1,6 +1,7 @@
-t.d(l, { C8: () => r, Ej: () => a, Ot: () => o, oP: () => i, uG: () => n });
-let r = "dummy-tenant",
-    n = {
+"use strict";
+r.d(t, { C8: () => l, Ej: () => i, Ot: () => n, oP: () => a, uG: () => s });
+let l = "dummy-tenant",
+    s = {
         id: "dummy-shop-home",
         children: [
             {
@@ -64,7 +65,7 @@ let r = "dummy-tenant",
             { block: "SubTemplate", tenantId: "dummy-tenant", templateId: "dummy-popular-picks" },
         ],
     },
-    o = {
+    n = {
         id: "dummy-popular-picks",
         children: [
             {
@@ -125,7 +126,7 @@ let r = "dummy-tenant",
             },
         ],
     },
-    i = {
+    a = {
         id: "dummy-orb-shelf",
         children: [
             {
@@ -167,7 +168,7 @@ let r = "dummy-tenant",
             },
         ],
     },
-    a = {
+    i = {
         id: "dummy-sku-list",
         children: [
             {

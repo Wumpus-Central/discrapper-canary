@@ -4156,7 +4156,7 @@ let l_ = r.memo(function (e) {
                         (0, lc.L3)(
                             e.event,
                             async () => {
-                                let { default: e } = await Promise.all([n.e("97262"), n.e("53635"), n.e("55463")]).then(
+                                let { default: e } = await Promise.all([n.e("97262"), n.e("478"), n.e("3926")]).then(
                                     n.bind(n, 341354),
                                 );
                                 return (n) =>
@@ -4203,9 +4203,13 @@ let l_ = r.memo(function (e) {
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("97262"),
-                                    n.e("53635"),
+                                    n.e("93103"),
+                                    n.e("88342"),
+                                    n.e("35313"),
                                     n.e("84442"),
-                                    n.e("71259"),
+                                    n.e("478"),
+                                    n.e("95049"),
+                                    n.e("62274"),
                                 ]).then(n.bind(n, 92016));
                                 return (n) =>
                                     (0, i.jsx)(e, {
@@ -4226,7 +4230,9 @@ let l_ = r.memo(function (e) {
                             secondaryValue: "group-dm",
                         }),
                             (0, lc.L3)(e.event, async () => {
-                                let { default: t } = await n.e("77927").then(n.bind(n, 320442));
+                                let { default: t } = await Promise.all([n.e("77927"), n.e("81846")]).then(
+                                    n.bind(n, 320442),
+                                );
                                 return (n) =>
                                     (0, i.jsx)(t, {
                                         ...n,
@@ -4246,13 +4252,17 @@ let l_ = r.memo(function (e) {
                         }),
                             t.isModeratorReportChannel?.()
                                 ? (0, lc.L3)(e.event, async () => {
-                                      let { default: e } = await n.e("56985").then(n.bind(n, 95616));
+                                      let { default: e } = await Promise.all([n.e("56985"), n.e("41728")]).then(
+                                          n.bind(n, 95616),
+                                      );
                                       return (n) => (0, i.jsx)(e, { ...n, channel: t, widgetType: ez.uss.FRIENDS });
                                   })
                                 : (0, lc.L3)(e.event, async () => {
-                                      let { default: e } = await Promise.all([n.e("97262"), n.e("54036")]).then(
-                                          n.bind(n, 813407),
-                                      );
+                                      let { default: e } = await Promise.all([
+                                          n.e("97262"),
+                                          n.e("54036"),
+                                          n.e("74585"),
+                                      ]).then(n.bind(n, 813407));
                                       return (n) =>
                                           (0, i.jsx)(e, { ...n, channel: t, guild: l, widgetType: ez.uss.FRIENDS });
                                   });
@@ -4267,7 +4277,9 @@ let l_ = r.memo(function (e) {
                             secondaryValue: "guild-voice-channel",
                         }),
                             (0, lc.L3)(e.event, async () => {
-                                let { default: e } = await n.e("21905").then(n.bind(n, 769192));
+                                let { default: e } = await Promise.all([n.e("93103"), n.e("21905"), n.e("33297")]).then(
+                                    n.bind(n, 769192),
+                                );
                                 return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l, widgetType: ez.uss.FRIENDS });
                             });
                         break;
@@ -4282,7 +4294,7 @@ let l_ = r.memo(function (e) {
                             secondaryValue: "guild-voice-user",
                         }),
                             (0, lc.L3)(e.event, async () => {
-                                let { default: l } = await Promise.all([n.e("97262"), n.e("58980")]).then(
+                                let { default: l } = await Promise.all([n.e("97262"), n.e("58980"), n.e("68046")]).then(
                                     n.bind(n, 535503),
                                 );
                                 return (n) =>
