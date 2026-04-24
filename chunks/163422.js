@@ -1,4 +1,4 @@
-a.r(t), a.d(t, { videoQuestCollection: () => K, playgroundConfig: () => Z });
+a.r(t), a.d(t, { videoQuestCollection: () => Y, playgroundConfig: () => X });
 var n = a(782134),
     o = a(627968),
     r = a(64700),
@@ -9,8 +9,8 @@ var n = a(782134),
     c = a(664111),
     u = a(831056),
     p = a(784018);
-let b = "https://cdn.discordapp.com/assets/og_img_discord_home.png";
-function m(e) {
+let m = "https://cdn.discordapp.com/assets/og_img_discord_home.png";
+function b(e) {
     let { orientation: t, thumbnailUrl: a, onReplay: n } = e;
     return (0, o.jsxs)(o.Fragment, {
         children: [
@@ -42,8 +42,8 @@ function _(e) {
             showEndScreen: d,
             active: u,
             autoHideVolumeSlider: _,
-            sizing: g,
-            persistPlayhead: h,
+            sizing: h,
+            persistPlayhead: g,
         } = e,
         [x, v] = r.useState(0),
         f = r.useMemo(() => {
@@ -69,7 +69,7 @@ function _(e) {
             }),
             (0, o.jsx)("div", {
                 style:
-                    "video" === g
+                    "video" === h
                         ? {
                               width: "landscape" === t ? "640px" : "360px",
                               height: "landscape" === t ? "360px" : "640px",
@@ -96,7 +96,7 @@ function _(e) {
                         orientation: t,
                         maxSeekableTimeSec: n > 0 ? n : void 0,
                         autoHideVolumeSlider: _,
-                        persistPlayhead: h,
+                        persistPlayhead: g,
                         parentTransitionState: l.ip.ENTERED,
                         onProgressUpdate: () => {},
                         onEnded: () => {},
@@ -105,7 +105,7 @@ function _(e) {
                         renderEndScreen: d
                             ? (e) => {
                                   let { replay: a } = e;
-                                  return (0, o.jsx)(m, { orientation: t, thumbnailUrl: b, onReplay: a });
+                                  return (0, o.jsx)(b, { orientation: t, thumbnailUrl: m, onReplay: a });
                               }
                             : void 0,
                     },
@@ -115,7 +115,7 @@ function _(e) {
         ],
     });
 }
-let g = {
+let h = {
         orientation: {
             label: "Orientation",
             type: "select",
@@ -128,7 +128,7 @@ let g = {
         autoplay: { label: "Autoplay", type: "boolean", defaultValue: !1 },
         maxSeekableTimeSec: { label: "Max Seekable Time (sec, 0 = unrestricted)", type: "number", defaultValue: 0 },
         videoUrl: { label: "Video URL", type: "text", defaultValue: p.kz },
-        poster: { label: "Poster URL", type: "text", defaultValue: b },
+        poster: { label: "Poster URL", type: "text", defaultValue: m },
         showEndScreen: { label: "Show End Screen", type: "boolean", defaultValue: !0 },
         active: { label: "Active", type: "boolean", defaultValue: !0 },
         autoHideVolumeSlider: { label: "Auto-hide Volume Slider", type: "boolean", defaultValue: !1 },
@@ -143,26 +143,26 @@ let g = {
             defaultValue: "modal",
         },
     },
-    h = {
+    g = {
         name: "Landscape",
         id: "landscape-video-generic",
         component: _,
-        controls: { ...g, orientation: { ...g.orientation, defaultValue: "landscape" } },
+        controls: { ...h, orientation: { ...h.orientation, defaultValue: "landscape" } },
     },
     x = {
         name: "Portrait",
         id: "portrait-video-generic",
         component: _,
-        controls: { ...g, orientation: { ...g.orientation, defaultValue: "portrait" } },
+        controls: { ...h, orientation: { ...h.orientation, defaultValue: "portrait" } },
     },
     v = {
         name: "HLS",
         id: "hls-video-generic",
         component: _,
         controls: {
-            ...g,
-            orientation: { ...g.orientation, defaultValue: "landscape" },
-            videoUrl: { ...g.videoUrl, defaultValue: p.Im },
+            ...h,
+            orientation: { ...h.orientation, defaultValue: "landscape" },
+            videoUrl: { ...h.videoUrl, defaultValue: p.Im },
         },
     },
     f = { tension: 500, friction: 30, clamp: !0 },
@@ -171,7 +171,7 @@ let g = {
         id: "timeline-indicators-generic",
         component: function (e) {
             let { orientation: t, autoplay: a, maxSeekableTimeSec: n, videoUrl: u, indicatorTimeSec: p } = e,
-                b = (function (e) {
+                m = (function (e) {
                     let [t, a] = r.useState(null),
                         [n, l] = r.useState(null),
                         c = r.useRef(null),
@@ -182,13 +182,13 @@ let g = {
                                 null == c.current && l(null);
                             },
                         })),
-                        b = r.useCallback(
+                        m = r.useCallback(
                             (e) => {
                                 (c.current = e), null != e ? (l(e), p({ expansion: 4 })) : p({ expansion: 0 }), a(e);
                             },
                             [p],
                         ),
-                        m = r.useMemo(() => [{ index: 0, timeSec: e, widthPx: 32, gapPx: 4 }], [e]),
+                        b = r.useMemo(() => [{ index: 0, timeSec: e, widthPx: 32, gapPx: 4 }], [e]),
                         _ = r.useCallback(
                             (e, t) => {
                                 let a = n === e.index;
@@ -196,8 +196,8 @@ let g = {
                                     i.animated.div,
                                     {
                                         "data-testid": "timeline-indicator",
-                                        onMouseEnter: () => b(e.index),
-                                        onMouseLeave: () => b(null),
+                                        onMouseEnter: () => m(e.index),
+                                        onMouseLeave: () => m(null),
                                         style: {
                                             position: "absolute",
                                             left: a ? u.to((t) => e.leftPx - t) : e.leftPx,
@@ -224,10 +224,10 @@ let g = {
                                     `indicator-${e.index}`,
                                 );
                             },
-                            [b, n, u],
+                            [m, n, u],
                         );
                     return {
-                        indicators: m,
+                        indicators: b,
                         animatingIndex: n,
                         expansionSpring: u,
                         hoverExpansionPx: 4,
@@ -246,15 +246,15 @@ let g = {
                     orientation: t,
                     maxSeekableTimeSec: n > 0 ? n : void 0,
                     parentTransitionState: l.ip.ENTERED,
-                    timelineIndicatorConfig: b,
+                    timelineIndicatorConfig: m,
                 }),
             });
         },
         controls: {
-            orientation: g.orientation,
-            autoplay: g.autoplay,
-            maxSeekableTimeSec: g.maxSeekableTimeSec,
-            videoUrl: g.videoUrl,
+            orientation: h.orientation,
+            autoplay: h.autoplay,
+            maxSeekableTimeSec: h.maxSeekableTimeSec,
+            videoUrl: h.videoUrl,
             indicatorTimeSec: { label: "Indicator Time (sec)", type: "number", defaultValue: 15 },
         },
     };
@@ -270,7 +270,7 @@ var S = a(405670),
     A = a(795068),
     L = a(654487),
     k = a(652215);
-function O(e) {
+function j(e) {
     let {
         url: t,
         width: a = 640,
@@ -286,7 +286,7 @@ function O(e) {
         messages: { videoTitle: r },
     };
 }
-function j() {
+function O() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: a = null, enrolledAt: n = null, claimedAt: o = null } = e;
     return {
@@ -303,7 +303,7 @@ function j() {
     };
 }
 let M = `playground-video-quest-${Date.now()}`;
-function B(e) {
+function U(e) {
     return {
         id: M,
         preview: !0,
@@ -346,11 +346,11 @@ function B(e) {
             sharePolicy: E.i.SHAREABLE_EVERYWHERE,
             ctaConfig: { link: "https://discord.com/", buttonLabel: "Learn More" },
         },
-        userStatus: j({ enrolledAt: new Date().toISOString() }),
+        userStatus: O({ enrolledAt: new Date().toISOString() }),
         targetedContent: [I.uF.QUEST_HOME_DESKTOP],
     };
 }
-function D(e) {
+function B(e) {
     let {
             quest: t,
             isPortrait: a,
@@ -369,7 +369,7 @@ function D(e) {
                 isFullscreenEnabled: i,
                 setIsFullscreenEnabled: s,
                 useNewProgressBarStyling: l,
-                progressSec: 0,
+                maxProgressSec: 0,
                 targetSec: 0,
             }),
             [t, a, i, s, l],
@@ -383,7 +383,7 @@ function D(e) {
             (0, o.jsx)(A.l.Provider, { value: c, children: (0, o.jsx)(A.a.Provider, { value: d, children: n }) }),
     });
 }
-function U(e) {
+function D(e) {
     let {
             orientation: t,
             autoplay: a,
@@ -394,8 +394,8 @@ function U(e) {
             videoUrl: c,
         } = e,
         u = "portrait" === t,
-        [p, b] = r.useState(!1),
-        m = O({
+        [p, m] = r.useState(!1),
+        b = j({
             url: c,
             width: u ? 360 : 640,
             height: u ? 640 : 360,
@@ -403,17 +403,17 @@ function U(e) {
             videoTitle: u ? "Test Portrait Video" : "Test Landscape Video",
             transcript: "transcript.txt",
         }),
-        _ = B(m),
-        g = r.useRef(!1);
-    g.current || ((g.current = !0), S.Kr.getState().clearState()),
+        _ = U(b),
+        h = r.useRef(!1);
+    h.current || ((h.current = !0), S.Kr.getState().clearState()),
         i && (_.config.features = [L.Li.FULL_EPISODE_VIDEO_QUEST]);
-    let h = n
+    let g = n
         ? {
               ..._,
-              userStatus: j({
+              userStatus: O({
                   enrolledAt: _.userStatus?.enrolledAt ?? null,
                   completedAt: _.userStatus?.enrolledAt ?? null,
-                  streamProgressSeconds: m.target,
+                  streamProgressSeconds: b.target,
               }),
           }
         : _;
@@ -429,14 +429,14 @@ function U(e) {
             overflow: "hidden",
             "--custom-footer-horizontal-padding": "20px",
         },
-        children: (0, o.jsx)(D, {
-            quest: h,
+        children: (0, o.jsx)(B, {
+            quest: g,
             isPortrait: u,
             isFullscreenEnabled: p,
-            setIsFullscreenEnabled: b,
+            setIsFullscreenEnabled: m,
             useNewStyling: d,
             children: (0, o.jsx)(R.A, {
-                targetTimeSec: m.target,
+                targetTimeSec: b.target,
                 parentTransitionState: l.ip.ENTERED,
                 onOptimisticProgressUpdate: k.tEg,
                 autoplay: a,
@@ -467,16 +467,27 @@ let F = {
     z = {
         name: "Landscape",
         id: "landscape-video",
-        component: U,
+        component: D,
         controls: { ...F, orientation: { ...F.orientation, defaultValue: "landscape" } },
     },
     H = {
         name: "Portrait",
         id: "portrait-video",
-        component: U,
+        component: D,
         controls: { ...F, orientation: { ...F.orientation, defaultValue: "portrait" } },
+    },
+    N =
+        'Quest completion is server-driven. In the playground, crossing the reward indicator won\'t flip to the completed state — toggle "Quest Completed" to preview that UI.',
+    W = {
+        marginTop: "12px",
+        padding: "8px 12px",
+        fontSize: "12px",
+        lineHeight: 1.4,
+        color: "var(--text-muted)",
+        border: "1px solid var(--border-subtle)",
+        borderRadius: "6px",
     };
-function N(e, t) {
+function q(e, t) {
     return "video" === e
         ? { width: t ? "360px" : "640px", height: t ? "640px" : "360px", margin: "0 auto" }
         : {
@@ -490,7 +501,7 @@ function N(e, t) {
               overflow: "hidden",
           };
 }
-function W(e) {
+function Q(e) {
     let {
             orientation: t,
             autoplay: a,
@@ -501,7 +512,7 @@ function W(e) {
             sizing: c,
         } = e,
         u = "portrait" === t,
-        p = O({
+        p = j({
             url: d,
             width: u ? 360 : 640,
             height: u ? 640 : 360,
@@ -509,9 +520,9 @@ function W(e) {
             videoTitle: u ? "Test Portrait Video" : "Test Landscape Video",
             transcript: "transcript.txt",
         }),
-        b = B(p),
-        m = r.useRef(!1);
-    m.current || ((m.current = !0), S.Kr.getState().clearState()),
+        m = U(p),
+        b = r.useRef(!1);
+    b.current || ((b.current = !0), S.Kr.getState().clearState()),
         r.useEffect(() => {
             let e = document.querySelector('[data-testid="discord-web-video-player-video"]');
             if (null == e) return;
@@ -525,38 +536,43 @@ function W(e) {
                 );
             t();
         }, []),
-        i && (b.config.features = [L.Li.FULL_EPISODE_VIDEO_QUEST]);
+        i && (m.config.features = [L.Li.FULL_EPISODE_VIDEO_QUEST]);
     let _ = n
         ? {
-              ...b,
-              userStatus: j({
-                  enrolledAt: b.userStatus?.enrolledAt ?? null,
-                  completedAt: b.userStatus?.enrolledAt ?? null,
+              ...m,
+              userStatus: O({
+                  enrolledAt: m.userStatus?.enrolledAt ?? null,
+                  completedAt: m.userStatus?.enrolledAt ?? null,
                   streamProgressSeconds: p.target,
               }),
           }
-        : b;
-    return (0, o.jsx)("div", {
-        style: N(c, u),
-        children: (0, o.jsx)(D, {
-            quest: _,
-            isPortrait: u,
-            children: (0, o.jsx)(C.A, {
-                targetTimeSec: p.target,
-                parentTransitionState: l.ip.ENTERED,
-                onOptimisticProgressUpdate: k.tEg,
-                autoplay: a,
-                autoFocus: !1,
-                openedAtMs: 0,
-                orientation: t,
-                videoUrlOverride: d,
+        : m;
+    return (0, o.jsxs)("div", {
+        children: [
+            (0, o.jsx)("div", {
+                style: q(c, u),
+                children: (0, o.jsx)(B, {
+                    quest: _,
+                    isPortrait: u,
+                    children: (0, o.jsx)(C.A, {
+                        targetTimeSec: p.target,
+                        parentTransitionState: l.ip.ENTERED,
+                        onOptimisticProgressUpdate: k.tEg,
+                        autoplay: a,
+                        autoFocus: !1,
+                        openedAtMs: 0,
+                        orientation: t,
+                        videoUrlOverride: d,
+                    }),
+                }),
             }),
-        }),
+            i && !n && (0, o.jsx)("div", { style: W, children: N }),
+        ],
     });
 }
-let { useNewStyling: q, ...Q } = F,
-    G = { label: "Full Episode (shows reward indicator)", type: "boolean", defaultValue: !1 },
-    $ = {
+let { useNewStyling: G, ...$ } = F,
+    K = { label: "Full Episode (shows reward indicator)", type: "boolean", defaultValue: !1 },
+    Z = {
         label: "Container sizing",
         type: "select",
         options: [
@@ -565,46 +581,46 @@ let { useNewStyling: q, ...Q } = F,
         ],
         defaultValue: "modal",
     },
-    K = {
+    Y = {
         id: "video-quest",
         name: "Video Player",
         groups: [
-            { title: "Discord Video Player (Generic)", stories: [h, x, v, y] },
+            { title: "Discord Video Player (Generic)", stories: [g, x, v, y] },
             {
                 title: "Composed Quest Player",
                 stories: [
                     {
                         name: "Landscape",
                         id: "landscape-video-composed",
-                        component: W,
+                        component: Q,
                         controls: {
-                            ...Q,
+                            ...$,
                             orientation: { ...F.orientation, defaultValue: "landscape" },
-                            fullEpisode: G,
-                            sizing: $,
+                            fullEpisode: K,
+                            sizing: Z,
                         },
                     },
                     {
                         name: "Portrait",
                         id: "portrait-video-composed",
-                        component: W,
+                        component: Q,
                         controls: {
-                            ...Q,
+                            ...$,
                             orientation: { ...F.orientation, defaultValue: "portrait" },
-                            fullEpisode: G,
-                            sizing: $,
+                            fullEpisode: K,
+                            sizing: Z,
                         },
                     },
                     {
                         name: "Landscape — Autoplay",
                         id: "landscape-video-composed-autoplay",
-                        component: W,
+                        component: Q,
                         controls: {
-                            ...Q,
+                            ...$,
                             orientation: { ...F.orientation, defaultValue: "landscape" },
                             autoplay: { label: "Autoplay", type: "boolean", defaultValue: !0 },
-                            fullEpisode: G,
-                            sizing: $,
+                            fullEpisode: K,
+                            sizing: Z,
                         },
                     },
                     {
@@ -621,7 +637,7 @@ let { useNewStyling: q, ...Q } = F,
                                     sizing: d,
                                 } = e,
                                 c = "portrait" === t,
-                                u = O({
+                                u = j({
                                     url: s,
                                     width: c ? 360 : 640,
                                     height: c ? 640 : 360,
@@ -629,41 +645,46 @@ let { useNewStyling: q, ...Q } = F,
                                     videoTitle: c ? "Test Portrait Video" : "Test Landscape Video",
                                     transcript: "transcript.txt",
                                 }),
-                                p = B(u);
+                                p = U(u);
                             r && (p.config.features = [L.Li.FULL_EPISODE_VIDEO_QUEST]);
-                            let b = n
+                            let m = n
                                 ? {
                                       ...p,
-                                      userStatus: j({
+                                      userStatus: O({
                                           enrolledAt: p.userStatus?.enrolledAt ?? null,
                                           completedAt: p.userStatus?.enrolledAt ?? null,
                                           streamProgressSeconds: u.target,
                                       }),
                                   }
                                 : p;
-                            return (0, o.jsx)("div", {
-                                style: N(d, !1),
-                                children: (0, o.jsx)(D, {
-                                    quest: b,
-                                    isPortrait: !1,
-                                    children: (0, o.jsx)(C.A, {
-                                        targetTimeSec: u.target,
-                                        parentTransitionState: l.ip.ENTERED,
-                                        onOptimisticProgressUpdate: k.tEg,
-                                        autoplay: a,
-                                        autoFocus: !1,
-                                        openedAtMs: 0,
-                                        orientation: t,
-                                        videoUrlOverride: s,
+                            return (0, o.jsxs)("div", {
+                                children: [
+                                    (0, o.jsx)("div", {
+                                        style: q(d, !1),
+                                        children: (0, o.jsx)(B, {
+                                            quest: m,
+                                            isPortrait: !1,
+                                            children: (0, o.jsx)(C.A, {
+                                                targetTimeSec: u.target,
+                                                parentTransitionState: l.ip.ENTERED,
+                                                onOptimisticProgressUpdate: k.tEg,
+                                                autoplay: a,
+                                                autoFocus: !1,
+                                                openedAtMs: 0,
+                                                orientation: t,
+                                                videoUrlOverride: s,
+                                            }),
+                                        }),
                                     }),
-                                }),
+                                    r && !n && (0, o.jsx)("div", { style: W, children: N }),
+                                ],
                             });
                         },
                         controls: {
-                            ...Q,
+                            ...$,
                             orientation: { ...F.orientation, defaultValue: "landscape" },
-                            fullEpisode: G,
-                            sizing: $,
+                            fullEpisode: K,
+                            sizing: Z,
                         },
                     },
                 ],
@@ -673,4 +694,4 @@ let { useNewStyling: q, ...Q } = F,
         tags: ["Video Player", "Quests"],
         IconComponent: n.u,
     },
-    Z = { playgroundBaseUrl: "video-quest", collections: [K] };
+    X = { playgroundBaseUrl: "video-quest", collections: [Y] };

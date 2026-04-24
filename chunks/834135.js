@@ -29,7 +29,7 @@ var n = s(627968),
     y = s(821609),
     P = s(590202),
     b = s(651892);
-function V(e) {
+function k(e) {
     let { handlePrimaryCtaClick: t } = e,
         { quest: s } = l.useContext(T.a);
     return (0, n.jsx)(y.$, {
@@ -39,10 +39,10 @@ function V(e) {
         text: (0, b.wr)(s),
     });
 }
-var k = s(713081);
+var V = s(713081);
 function I() {
     let { quest: e, sourceQuestContent: t, onClose: s } = l.useContext(T.a);
-    return (0, n.jsx)(k.A, { quest: e, questContent: A.uF.QUEST_HOME_DESKTOP, sourceQuestContent: t, onClose: s });
+    return (0, n.jsx)(V.A, { quest: e, questContent: A.uF.QUEST_HOME_DESKTOP, sourceQuestContent: t, onClose: s });
 }
 var L = s(990078),
     R = s(939249),
@@ -133,7 +133,7 @@ var K = s(604121),
     ee = s(693086);
 let et = async () => await s.e("40119").then(s.t.bind(s, 718698, 19));
 function es() {
-    let { quest: e, sourceQuestContent: t, onClose: s, progressSec: i, targetSec: a } = l.useContext(T.a),
+    let { quest: e, sourceQuestContent: t, onClose: s, maxProgressSec: i, targetSec: a } = l.useContext(T.a),
         [o, r] = l.useState(!1),
         u = (0, c.bG)([Y.A], () => Y.A.useReducedMotion),
         d = (0, c.bG)([z.default], () => z.default.locale),
@@ -208,10 +208,15 @@ function el(e) {
         E = (0, N.Yh)(i),
         y = (0, f.LS)(i),
         P = (0, j.go)(),
-        { progressSec: b, trackProgress: k } = (function (e) {
+        { maxProgressSec: b, trackProgress: V } = (function (e) {
             let { initialProgressSec: t, targetSec: s, completedAt: n } = e,
                 [i, a] = (0, l.useState)(t);
-            return { progressSec: null != n ? s : i, trackProgress: a };
+            return {
+                maxProgressSec: null != n ? s : i,
+                trackProgress: (0, l.useCallback)((e) => {
+                    a((t) => (e > t ? e : t));
+                }, []),
+            };
         })({
             initialProgressSec: E.progressSeconds,
             targetSec: E.targetSeconds,
@@ -242,7 +247,7 @@ function el(e) {
                 isFullscreenEnabled: q,
                 useNewProgressBarStyling: J,
                 setIsFullscreenEnabled: Q,
-                progressSec: b,
+                maxProgressSec: b,
                 targetSec: E.targetSeconds,
             }),
             [i, A, c, K, s, q, J, Q, b, E.targetSeconds],
@@ -285,7 +290,7 @@ function el(e) {
                                         ? (0, n.jsx)(_.A, {
                                               targetTimeSec: G.target,
                                               parentTransitionState: t,
-                                              onOptimisticProgressUpdate: k,
+                                              onOptimisticProgressUpdate: V,
                                               autoplay: o,
                                               openedAtMs: S,
                                               orientation: w,
@@ -293,7 +298,7 @@ function el(e) {
                                         : (0, n.jsx)(M.A, {
                                               targetTimeSec: G.target,
                                               parentTransitionState: t,
-                                              onOptimisticProgressUpdate: k,
+                                              onOptimisticProgressUpdate: V,
                                               autoplay: o,
                                               openedAtMs: S,
                                               orientation: w,
@@ -317,7 +322,7 @@ function el(e) {
                                                                   children: (0, n.jsx)(I, {}),
                                                               }),
                                                           }),
-                                                          (0, n.jsx)(V, { handlePrimaryCtaClick: Z }),
+                                                          (0, n.jsx)(k, { handlePrimaryCtaClick: Z }),
                                                       ],
                                                   }),
                                               ],
@@ -333,7 +338,7 @@ function el(e) {
                                                       className: H.NY,
                                                       children: [
                                                           (0, n.jsx)(I, {}),
-                                                          (0, n.jsx)(V, { handlePrimaryCtaClick: Z }),
+                                                          (0, n.jsx)(k, { handlePrimaryCtaClick: Z }),
                                                       ],
                                                   }),
                                               ],

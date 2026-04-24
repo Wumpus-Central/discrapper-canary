@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { Ay: () => f, K2: () => d, Kr: () => _, Lx: () => c, yc: () => u });
-var r,
-    i,
+n.d(t, { Ay: () => E, K2: () => _, Kr: () => c, Lx: () => u, yc: () => d });
+var i,
+    r,
     s = n(499867),
     a = n(265690),
     o = n(121894);
 n(876230);
 var l = n(932607);
-let u = { timestampSec: 0, duration: 10, maxTimestampSec: 0 };
-var d =
-        (((r = {}).UNKNOWN = "UNKNOWN"),
-        (r.NOT_STARTED = "NOT_STARTED"),
-        (r.IN_PROGRESS = "IN_PROGRESS"),
-        (r.COMPLETED = "COMPLETED"),
-        r),
-    c = (((i = {}).NONE = "NONE"), (i.FETCHING = "FETCHING"), (i.SUCCESS = "SUCCESS"), (i.FAILURE = "FAILURE"), i);
-let _ = (0, a.h)()(
+let d = { timestampSec: 0, duration: 10, maxTimestampSec: 0 };
+var _ =
+        (((i = {}).UNKNOWN = "UNKNOWN"),
+        (i.NOT_STARTED = "NOT_STARTED"),
+        (i.IN_PROGRESS = "IN_PROGRESS"),
+        (i.COMPLETED = "COMPLETED"),
+        i),
+    u = (((r = {}).NONE = "NONE"), (r.FETCHING = "FETCHING"), (r.SUCCESS = "SUCCESS"), (r.FAILURE = "FAILURE"), r);
+let c = (0, a.h)()(
         (0, s.Zr)(
             (e, t) => ({
                 volume: 0.3,
@@ -30,13 +30,13 @@ let _ = (0, a.h)()(
                 setMuted: (t) => {
                     (0, o.r)(() => e({ muted: t }));
                 },
-                setVideoProgress: (n, r, i) => {
-                    let s = Math.max(t().videoProgress[n]?.maxTimestampSec ?? 0, Math.floor(r));
+                setVideoProgress: (n, i, r) => {
+                    let s = Math.max(t().videoProgress[n]?.maxTimestampSec ?? 0, i);
                     (0, o.r)(() =>
                         e({
                             videoProgress: {
                                 ...t().videoProgress,
-                                [n]: { timestampSec: r, duration: i, maxTimestampSec: s },
+                                [n]: { timestampSec: i, duration: r, maxTimestampSec: s },
                             },
                         }),
                     );
@@ -60,8 +60,8 @@ let _ = (0, a.h)()(
                 },
                 resetQuest: (n) => {
                     (0, o.r)(() => {
-                        let { [n]: r, ...i } = t().videoProgress;
-                        e({ videoProgress: i });
+                        let { [n]: i, ...r } = t().videoProgress;
+                        e({ videoProgress: r });
                     });
                 },
                 clearState: () => {
@@ -83,4 +83,4 @@ let _ = (0, a.h)()(
             },
         ),
     ),
-    f = _;
+    E = c;

@@ -1,4 +1,4 @@
-n.d(t, { a: () => s, l: () => i });
+n.d(t, { a: () => s, l: () => a });
 var r = n(64700);
 let s = r.createContext({
         quest: null,
@@ -9,7 +9,7 @@ let s = r.createContext({
         useNewProgressBarStyling: !1,
         onClose: () => {},
         setIsFullscreenEnabled: () => {},
-        progressSec: 0,
+        maxProgressSec: 0,
         targetSec: 0,
     }),
-    i = r.createContext({ questConfig: null });
+    a = r.createContext({ questConfig: null });
