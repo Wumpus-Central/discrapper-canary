@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { q: () => d });
-var r = n(64700),
-    i = n(575593),
-    s = n(417597),
+n.d(t, { q: () => _ });
+var i = n(64700),
+    r = n(575593),
+    s = n(702841),
     a = n(67480),
-    o = n(979286),
+    o = n(29292),
     l = n(590180),
-    u = n(652215);
-function d(e, t) {
+    d = n(652215);
+function _(e, t) {
     let n = (0, s.bG)([a.A], () => (null != e ? a.A.get(e) : null)),
-        d = null != n && n.productLine !== u.EZt.COLLECTIBLES,
-        [c, _, f, E] = (0, s.yK)([l.A], () => [
+        _ = null != n && n.productLine !== d.EZt.COLLECTIBLES,
+        [u, c, E, h] = (0, s.yK)([l.A], () => [
             l.A.isFetchingProduct(e),
             l.A.getProduct(e),
             l.A.getProductFetchError(e),
             l.A.getProductFetchErrorTimestamp(e),
         ]),
-        h = null != f && null != E && Date.now() - E < 36e5,
-        p = !0 === t && _?.type === i.R.BUNDLE && 0 === _.items.length;
+        m = null != E && null != h && Date.now() - h < 36e5,
+        f = !0 === t && c?.type === r.R.BUNDLE && 0 === c.items.length;
     return (
-        (0, r.useEffect)(() => {
-            null == e || (null != _ && !p) || d || c || h || (0, o.Jp)(e, { includeBundles: t });
-        }, [e, _, d, c, h, t, p]),
-        { product: _, isFetching: c }
+        (0, i.useEffect)(() => {
+            null == e || (null != c && !f) || _ || u || m || (0, o.Jp)(e, { includeBundles: t });
+        }, [e, c, _, u, m, t, f]),
+        { product: c, isFetching: u }
     );
 }

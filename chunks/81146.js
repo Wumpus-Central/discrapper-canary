@@ -21,8 +21,8 @@ var r = n(627968),
     x = n(318254),
     S = n(825484),
     C = n(534514),
-    R = n(247928),
-    T = n(331322),
+    T = n(247928),
+    R = n(331322),
     N = n(97808),
     b = n(778712),
     y = n(652215),
@@ -54,7 +54,7 @@ var r = n(627968),
     et = n(975571),
     en = n(927578),
     er = n(580630),
-    ei = n(803375),
+    ei = n(29292),
     ea = n(440938),
     el = n(4227),
     es = n(298072),
@@ -124,7 +124,7 @@ var ep = n(740076),
     ex = n(536572),
     eS = n(885574),
     eC = n(401231);
-let eR = (e) => {
+let eT = (e) => {
     let { className: t, isPartiallyPurchased: n } = e;
     return n
         ? (0, r.jsx)(m.m, {
@@ -144,7 +144,7 @@ let eR = (e) => {
           })
         : (0, r.jsx)(g.E, { variant: "text-md/semibold", className: t, children: eu.intl.string(eu.t["6cfuDj"]) });
 };
-var eT = n(691540),
+var eR = n(691540),
     eN = n(857250),
     eb = n(97483),
     ey = n(173936),
@@ -155,7 +155,7 @@ function eO(e) {
         l = i.useCallback(() => {
             ee.default.track(y.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }), a?.(eP.sH.COPY_LINK);
             let e = `${location.protocol}//${location.host}${y.BVt.COLLECTIBLES_SHOP}${((0, eP.cw))(n) ? `?tab=${n}` : ""}#itemSkuId=${t}`;
-            (0, ej.C)(e, () => (0, eT.P0)((0, eN.o)(eu.intl.string(eu.t["L/PwZf"]), eb.Ck.SUCCESS)));
+            (0, ej.C)(e, () => (0, eR.P0)((0, eN.o)(eu.intl.string(eu.t["L/PwZf"]), eb.Ck.SUCCESS)));
         }, [t, n, a]);
     return (0, r.jsx)(E.K, {
         "aria-label": eu.intl.string(eu.t.WqhZss),
@@ -304,8 +304,8 @@ let e1 = (e) => {
         fullWidth: !0,
     });
 };
-var e5 = n(478016),
-    e2 = n(661531),
+var e2 = n(478016),
+    e5 = n(661531),
     e6 = n(224016),
     e7 = n(913521);
 let e9 = () => {
@@ -327,7 +327,7 @@ let e9 = () => {
                         {
                             className: e7.UJ,
                             children: [
-                                (0, r.jsx)(e5.U, { color: e2.A.colors.WHITE }),
+                                (0, r.jsx)(e2.U, { color: e5.A.colors.WHITE }),
                                 (0, r.jsx)(g.E, {
                                     variant: "text-sm/medium",
                                     color: "always-white",
@@ -580,7 +580,7 @@ let tg = (e) => {
             ev = i.useMemo(() => (0, eo.fT)(F, U), [F, U]),
             eS = (0, ex.VG)(t),
             eC = (0, tp.X)(F),
-            { enabled: eT } = (0, J.Z)({ location: "collectibles_shop_product_details_modal" }),
+            { enabled: eR } = (0, J.Z)({ location: "collectibles_shop_product_details_modal" }),
             eN = em(F, !1),
             eb = (0, t_.V_)(t),
             ey = null != eb,
@@ -622,14 +622,14 @@ let tg = (e) => {
                                     (0, r.jsx)(g.E, { variant: "text-sm/normal", children: eN }),
                                     (0, r.jsx)(tx, { skuId: F.skuId }),
                                     H.isPurchased || H.isPartiallyOwnedBundle
-                                        ? (0, r.jsx)(eR, { className: tA.On, isPartiallyPurchased: z })
+                                        ? (0, r.jsx)(eT, { className: tA.On, isPartiallyPurchased: z })
                                         : e_
                                           ? (0, r.jsx)(g.E, {
                                                 variant: "text-md/semibold",
                                                 className: tA.On,
                                                 children: eu.intl.string(eu.t.rt69oo),
                                             })
-                                          : eT
+                                          : eR
                                             ? (0, r.jsx)(to, {
                                                   prices: eU,
                                                   product: F,
@@ -662,7 +662,7 @@ let tg = (e) => {
                                 ],
                             }),
                             (0, eI.B1)(t) &&
-                                (0, r.jsx)(R.M, {
+                                (0, r.jsx)(T.M, {
                                     children: (0, r.jsxs)("div", {
                                         className: l()(tA.Oj, { [tA.OJ]: ej }),
                                         children: [
@@ -688,7 +688,7 @@ let tg = (e) => {
                                     }),
                                 }),
                             null !== Z && (0, r.jsx)(g.E, { variant: "text-xs/normal", className: tA.H$, children: Z }),
-                            (0, r.jsx)(T.B, {
+                            (0, r.jsx)(R.B, {
                                 direction: "vertical",
                                 gap: 8,
                                 children: (() => {
@@ -838,7 +838,7 @@ let tg = (e) => {
                                                                 ? (n = eu.intl.formatToPlainString(eu.t["5U5RB5"], {
                                                                       discountOfferAmount: eb,
                                                                   }))
-                                                                : eT &&
+                                                                : eR &&
                                                                   (n = eu.intl.formatToPlainString(eu.t["cNSL/j"], {
                                                                       price: (0, er.$g)(e.amount, e.currency),
                                                                   })),
@@ -906,14 +906,14 @@ let tg = (e) => {
             }),
         });
     },
-    tR = (e) => {
+    tT = (e) => {
         let { user: t, nameplate: n, avatarDecoration: i } = e,
             a = (0, eE.Ov)();
         return (0, r.jsx)("div", {
             className: tA.nJ,
             role: "img",
             "aria-label": eu.intl.string(eu.t.SZeUdR),
-            children: (0, r.jsxs)(R.M, {
+            children: (0, r.jsxs)(T.M, {
                 children: [
                     (0, r.jsx)(tC, { user: a.mallow, innerClassName: tA.ab }),
                     (0, r.jsxs)(g.E, {
@@ -947,7 +947,7 @@ let tg = (e) => {
             }),
         });
     },
-    tT = (e) => {
+    tR = (e) => {
         let { product: t, user: n, activeBundleSlide: i, isTransitioning: a } = e,
             s = (0, _.bG)([L.A], () => L.A.useReducedMotion),
             o = en.Ay.canUsePremiumProfileCustomization(n),
@@ -977,7 +977,7 @@ let tg = (e) => {
                         p && (0, r.jsx)(tN, { user: n }),
                     ],
                 }),
-            v = (e) => (0, r.jsx)(tR, { user: n, nameplate: e, avatarDecoration: h });
+            v = (e) => (0, r.jsx)(tT, { user: n, nameplate: e, avatarDecoration: h });
         if (t.type === d.R.BUNDLE) {
             if (!(0, ev.Wb)(t))
                 return (0, r.jsx)("div", {
@@ -1011,7 +1011,7 @@ let tg = (e) => {
         return (0, r.jsx)("div", {
             role: "img",
             "aria-label": eu.intl.string(eu.t["TN+ZvB"]),
-            children: (0, r.jsx)(R.M, {
+            children: (0, r.jsx)(T.M, {
                 children: (0, r.jsxs)(j.Z, {
                     className: tA.f7,
                     outline: !0,
@@ -1044,9 +1044,9 @@ let tg = (e) => {
                 giftRecipient: S,
                 giftingOrigin: C,
             } = e,
-            R = (0, _.bG)([X.default], () => X.default.getCurrentUser()),
-            T = (0, tf.f)(a),
-            { previewingVariantIndex: N } = T,
+            T = (0, _.bG)([X.default], () => X.default.getCurrentUser()),
+            R = (0, tf.f)(a),
+            { previewingVariantIndex: N } = R,
             b = (0, es.Q)(a),
             j = tu(a, N),
             P = (0, eI.rb)(a, b);
@@ -1055,8 +1055,8 @@ let tg = (e) => {
         (0, eL.Yr)(P.skuId);
         let k = (0, tm.U1)(s);
         i.useEffect(() => {
-            null != R && (0, Z.A)(R.id, R.getAvatarURL(void 0, 80));
-        }, [R]);
+            null != T && (0, Z.A)(T.id, T.getAvatarURL(void 0, 80));
+        }, [T]);
         let L = i.useMemo(() => (0, eo.V6)(a.type, a.skuId), [a.type, a.skuId]);
         i.useEffect(() => {
             ee.default.track(y.HAw.OPEN_MODAL, {
@@ -1131,7 +1131,7 @@ let tg = (e) => {
                     { activeSlide: r, isTransitioning: l }
                 );
             })({ slideCount: i.useMemo(() => ((0, eo.aw)(P) ? P.items.length : 0), [P]), intervalMs: 5e3 });
-        return null == R
+        return null == T
             ? null
             : (0, r.jsx)(w.f5, {
                   value: O,
@@ -1149,17 +1149,17 @@ let tg = (e) => {
                               className: tA.jE,
                               children: [
                                   (0, r.jsx)(tS, {
-                                      user: R,
+                                      user: T,
                                       product: a,
                                       category: s,
                                       onClose: n,
-                                      previewingVariantIndexProps: T,
+                                      previewingVariantIndexProps: R,
                                       selectedVariantIndex: b,
                                       shouldCheckoutWithOrbs: v,
                                       tab: x,
                                       activeBundleSlide: q,
-                                      giftRecipient: S?.id !== R.id ? S : void 0,
-                                      giftingOrigin: S?.id !== R.id ? C : void 0,
+                                      giftRecipient: S?.id !== T.id ? S : void 0,
+                                      giftingOrigin: S?.id !== T.id ? C : void 0,
                                       onTrackClick: H,
                                   }),
                                   (0, r.jsxs)("div", {
@@ -1177,12 +1177,12 @@ let tg = (e) => {
                                               ? a.skuId === eP.Dp.ORB_PROFILE_BADGE
                                                   ? V || W
                                                       ? null
-                                                      : (0, r.jsx)(te, { user: R })
+                                                      : (0, r.jsx)(te, { user: T })
                                                   : a.skuId === u.j.PREMIUM_TIER_2_3_DAY
                                                     ? (0, r.jsx)(e9, {})
                                                     : (0, r.jsx)(ti.B, { product: a, className: tA.Ms })
-                                              : (0, r.jsx)(tT, {
-                                                    user: R,
+                                              : (0, r.jsx)(tR, {
+                                                    user: T,
                                                     product: j ?? P,
                                                     activeBundleSlide: q,
                                                     isTransitioning: Q,

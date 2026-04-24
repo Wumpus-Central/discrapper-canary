@@ -222,7 +222,7 @@ function eK(e) {
 var eX = t(982985),
     eq = t(700174),
     e$ = t(34188),
-    eJ = t(803375),
+    eJ = t(29292),
     eZ = t(207803),
     eQ = t(485745);
 function e0(e) {
@@ -256,8 +256,8 @@ function e1(e) {
         ...t,
     });
 }
-var e8 = t(573355),
-    e2 = t(102951);
+var e2 = t(573355),
+    e8 = t(102951);
 function e5(e) {
     let {
             user: n,
@@ -276,7 +276,7 @@ function e5(e) {
             gameFriends: m,
             hasOutgoingPendingGameFriends: f,
             hasIncomingPendingGameFriends: p,
-        } = (0, e2.J)({ userId: n.id }),
+        } = (0, e8.J)({ userId: n.id }),
         x = m.length > 0 || f || p;
     return o === eY.eA$.BLOCKED
         ? null
@@ -315,7 +315,7 @@ function e5(e) {
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(eX.e, { userId: n.id, onClose: ew.A.popAll, autoFocus: !0 }),
-                          (0, l.jsx)(e8.Ef, { user: n, relationshipType: o, analyticsLocation: c }),
+                          (0, l.jsx)(e2.Ef, { user: n, relationshipType: o, analyticsLocation: c }),
                           (0, l.jsx)(eK, { user: n }),
                           (0, l.jsx)(eq.Zt, { user: n, guildId: i, viewProfileItem: g }),
                       ],
@@ -324,7 +324,7 @@ function e5(e) {
                   ? (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)(eX.e, { userId: n.id, onClose: ew.A.popAll, autoFocus: !0 }),
-                            (0, l.jsx)(e8.ES, {
+                            (0, l.jsx)(e2.ES, {
                                 user: n,
                                 analyticsLocation: c,
                                 gameFriends: m,
@@ -339,7 +339,7 @@ function e5(e) {
                     })
                   : (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, l.jsx)(e8.cO, {
+                            (0, l.jsx)(e2.cO, {
                                 variant: "primary",
                                 userId: n.id,
                                 analyticsLocation: c,
@@ -800,15 +800,15 @@ function n0(e) {
     });
 }
 var n1 = t(809467);
-let n8 = "profile-modal-editing-panel",
-    n2 = "profile-modal-editing-panel-heading";
+let n2 = "profile-modal-editing-panel",
+    n8 = "profile-modal-editing-panel-heading";
 function n5(e) {
     let { onClick: n, className: t, innerRef: i } = e;
     return (0, l.jsx)(eN.D, {
         innerRef: i,
         "aria-label": ek.intl.string(ek.t.N8XQDE),
         "aria-expanded": !1,
-        "aria-controls": n8,
+        "aria-controls": n2,
         className: a()(n1.eg, t),
         onClick: n,
         focusProps: { offset: { right: 6 } },
@@ -823,7 +823,7 @@ function n9(e) {
             buttonRef: i,
             "aria-label": ek.intl.string(ek.t.N8XQDE),
             "aria-expanded": !1,
-            "aria-controls": n8,
+            "aria-controls": n2,
             icon: nc.N,
             onClick: n,
             variant: "secondary",
@@ -838,7 +838,7 @@ function n7(e) {
         className: n1.cS,
         "aria-label": ek.intl.string(ek.t.X6NklS),
         onClick: n,
-        "aria-controls": n8,
+        "aria-controls": n2,
         "aria-expanded": !0,
         children: [
             (0, l.jsx)(nm._, { size: "md", color: "currentColor" }),
@@ -860,12 +860,12 @@ function n3(e) {
         g = null != t,
         p = np.Ay.canUsePremiumProfileCustomization(n);
     return (0, l.jsxs)("aside", {
-        id: n8,
-        "aria-labelledby": n2,
+        id: n2,
+        "aria-labelledby": n8,
         className: a()(n1.nd, o),
         "aria-busy": r,
         children: [
-            (0, l.jsx)(m.A, { children: (0, l.jsx)(f.H, { id: n2, children: ek.intl.string(ek.t["L+ch00"]) }) }),
+            (0, l.jsx)(m.A, { children: (0, l.jsx)(f.H, { id: n8, children: ek.intl.string(ek.t["L+ch00"]) }) }),
             (0, l.jsxs)("div", {
                 className: n1.wx,
                 children: [

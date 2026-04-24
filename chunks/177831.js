@@ -9,7 +9,7 @@ var i = n(627968),
     d = n(464792),
     _ = n(793574),
     u = n(688810),
-    c = n(803375),
+    c = n(29292),
     E = n(459192);
 function h(e) {
     let { targetElementRef: t, delay: n, forceOpen: r, badgeDescription: s, children: a } = e;

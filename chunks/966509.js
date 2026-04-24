@@ -679,8 +679,8 @@ let tY = (0, t_.Fe)({
                 n.e("9073"),
                 n.e("49287"),
                 n.e("59275"),
-            ]).then(n.bind(n, 568417)),
-        webpackId: 568417,
+            ]).then(n.bind(n, 703571)),
+        webpackId: 703571,
     }),
     tW = (0, t_.Fe)({
         createPromise: () =>
@@ -3707,7 +3707,7 @@ let sB = "isHideDevBanner",
                     className: ti()(sH.Wz, sH.mr),
                     children: [
                         (0, p.jsx)(sV.A, { className: sH.Kk }),
-                        k.intl.format(k.t.uyrfYF, { buildNumber: "534403" }),
+                        k.intl.format(k.t.uyrfYF, { buildNumber: "534838" }),
                         (0, p.jsx)(r, {}),
                     ],
                 })
@@ -3716,7 +3716,7 @@ let sB = "isHideDevBanner",
 var sY = n(820284),
     sK = n(757780),
     sW = n(216894),
-    sz = n(240309),
+    sz = n(985668),
     sq = n(504337),
     s$ = n(655116),
     sX = n(629016),
@@ -6289,8 +6289,8 @@ let ch = (0, t_.Fe)({
                 n.e("9073"),
                 n.e("49287"),
                 n.e("59275"),
-            ]).then(n.bind(n, 568417)),
-        webpackId: 568417,
+            ]).then(n.bind(n, 703571)),
+        webpackId: 703571,
         name: "CollectiblesShop",
     }),
     cm = (0, t_.Fe)({
@@ -6551,7 +6551,7 @@ let cy = m.memo(function () {
     );
 });
 var cb = n(148803),
-    cv = n(803375);
+    cv = n(29292);
 {
     let e = n(154323).A;
     i = () => e.get("shop_include_unpublished");

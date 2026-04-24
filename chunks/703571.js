@@ -2121,7 +2121,7 @@ var nm = n(189213),
     nE = n(825484),
     nx = n(713517),
     nC = n(914410),
-    nS = n(433283),
+    nS = n(29292),
     nb = n(61750);
 function nA(e, t) {
     let n = d.useMemo(() => e?.products.filter((e) => e.skuId !== t).map((e) => e.skuId) ?? [], [e?.products, t]),

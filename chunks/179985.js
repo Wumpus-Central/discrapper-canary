@@ -536,15 +536,15 @@ var e0 = n(621466),
     e8 = n(46054),
     e6 = n(58703),
     e3 = n(60465),
-    e4 = n(284009),
-    e9 = n.n(e4),
+    e9 = n(284009),
+    e4 = n.n(e9),
     e7 = n(376728),
     te = n(976860),
     tt = n(71393),
     tn = n(449054);
 async function tl(e) {
     let { invite: t, guildId: n, channelId: l, messageId: a, analyticsLocationStack: i } = e;
-    e9()(i.length > 0, "analyticsLocationStack must have at least one location");
+    e4()(i.length > 0, "analyticsLocationStack must have at least one location");
     let r = i[i.length - 1],
         s = null;
     if ((null != t && ((n = t.guild?.id), (s = new Set(t.guild?.features))), null == n)) return;
@@ -1213,7 +1213,7 @@ function t3(e) {
         children: (0, a.jsx)(ep.A, { game: t, className: t0.xe, size: ep.w.LARGE }),
     });
 }
-let t4 = function (e) {
+let t9 = function (e) {
     let { game: t, onSetCompactBarScrollThreshold: n, showCompactBar: l } = e,
         { isTwoColumn: r } = ew(),
         o = i.useRef(null),
@@ -1252,7 +1252,7 @@ let t4 = function (e) {
         ],
     });
 };
-var t9 = n(141628),
+var t4 = n(141628),
     t7 = n(289363),
     ne = n(448682);
 function nt(e) {
@@ -1306,7 +1306,7 @@ function nt(e) {
                             }),
                             (0, a.jsx)(v.$, {
                                 variant: "secondary",
-                                icon: t9.A,
+                                icon: t4.A,
                                 text: eJ.intl.string(eJ.t.jynBQ5),
                                 onClick: m,
                                 fullWidth: !0,
@@ -2379,7 +2379,7 @@ let nJ = function (e) {
           })
         : null;
 };
-var n$ = n(803375),
+var n$ = n(29292),
     nq = n(674658),
     nQ = n(491438),
     n0 = n(561769),
@@ -2453,8 +2453,8 @@ function n6(e) {
           });
 }
 var n3 = n(735438),
-    n4 = n.n(n3),
-    n9 = n(192308),
+    n9 = n.n(n3),
+    n4 = n(192308),
     n7 = n(311043),
     le = n(192389);
 let lt = (e) => {
@@ -2466,7 +2466,7 @@ let lt = (e) => {
             className: le.fS,
             onClick: async () => {
                 l(B.Ws.ClickSimilarGame, t.id),
-                    (0, n9.openModalLazy)(() =>
+                    (0, n4.openModalLazy)(() =>
                         Promise.resolve((e) => (0, a.jsx)(lD, { gameId: t.id, source: B.Ob.SimilarGames, ...e })),
                     ),
                     await new Promise((e) => setTimeout(e, 10)),
@@ -2496,7 +2496,7 @@ function ln(e) {
                   (0, a.jsx)("div", { className: s()(le.vM, tL.bV) }),
                   (0, a.jsx)("div", {
                       className: s()(tL.nM, tL.iH),
-                      children: n4()
+                      children: n9()
                           .range(0, 5)
                           .map((e) => (0, a.jsx)("div", { className: le.nn }, e)),
                   }),
@@ -2710,7 +2710,7 @@ let lE = function (e) {
         onClick: () =>
             (function (e) {
                 let { game: t, websiteButtons: l, trackAction: i } = e;
-                (0, n9.openModalLazy)(async () => {
+                (0, n4.openModalLazy)(async () => {
                     let { default: e } = await n.e("76758").then(n.bind(n, 459477));
                     return (n) => (0, a.jsx)(e, { game: t, websiteButtons: l, trackAction: i, ...n });
                 });
@@ -3339,7 +3339,7 @@ function lP(e) {
                                   ref: q,
                                   onScroll: es,
                                   children: [
-                                      (0, a.jsx)(t4, {
+                                      (0, a.jsx)(t9, {
                                           game: S,
                                           onSetCompactBarScrollThreshold: ei,
                                           showCompactBar: en,
