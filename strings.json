@@ -5018,6 +5018,7 @@
   "8W9OXU": "Must have at least $[]({{platformQuantityHook}})",
   "Ef35xs": "Must have at most $[]({{platformQuantityHook}})",
   "otcpTN": "Must not be $[]({{platformQuantityHook}})",
+  "Rzz1Xs": "Linked Roles for !!{platformName}!! are being deprecated",
   "cEts68": "This platform is disabled",
   "UB3hKo": "Requirements not met",
   "najNdz": "Role granted!",
