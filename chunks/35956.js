@@ -1,1 +1,21 @@
-var n=t(257943),o=t(410323),a=t(485155),i=URLSearchParams.prototype,s=o(i.forEach);!n||"size"in i||a(i,"size",{get:function(){var r=0;return s(this,function(){r++}),r},configurable:!0,enumerable:!0})umerable:!0})
+"use strict";
+var n = e(257943),
+    o = e(410323),
+    i = e(485155),
+    a = URLSearchParams.prototype,
+    c = o(a.forEach);
+!n ||
+    "size" in a ||
+    i(a, "size", {
+        get: function () {
+            var t = 0;
+            return (
+                c(this, function () {
+                    t++;
+                }),
+                t
+            );
+        },
+        configurable: !0,
+        enumerable: !0,
+    });

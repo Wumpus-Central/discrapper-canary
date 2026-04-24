@@ -1,4 +1,4 @@
-l.d(t, { Ay: () => v, JZ: () => f, Mm: () => m, Wk: () => A, hi: () => p });
+l.d(t, { Ay: () => E, JZ: () => f, Mm: () => m, Wk: () => v, hi: () => p, oP: () => A });
 var r = l(627968),
     n = l(64700),
     a = l(503698),
@@ -93,8 +93,11 @@ let m = 6,
         });
     },
     g = n.createContext(void 0),
-    f = () => n.useContext(g),
-    A = (e, t, l) => {
+    f = () => n.useContext(g);
+function A(e, t, l, r) {
+    return null == t || null == l ? e : r ? e.slice(0, l) : e.slice(l * t, l * (t + 1));
+}
+let v = (e, t, l) => {
         let {
                 paginationStrategy: r = d.o.PAGINATE,
                 perPage: a,
@@ -129,7 +132,7 @@ let m = 6,
             }
         );
     },
-    v = (e) => {
+    E = (e) => {
         let { columns: t = 3, paginationOptions: l, children: a } = e,
             i = Math.max(1, Math.min(m, Math.floor(t))),
             c = n.Children.count(a),
@@ -138,29 +141,25 @@ let m = 6,
                 page: o,
                 pages: h,
                 paginate: f,
-                showPagination: v,
-                paginationPosition: E,
-                truncate: x,
-                perPage: y,
-                setPage: C,
-            } = A(c, l, d),
-            S = n.useMemo(() => {
-                if (!f) return a;
-                let e = n.Children.toArray(a);
-                return x ? e.slice(0, y) : e.slice(y * o, y * (o + 1));
-            }, [o, y, a, f, x]);
+                showPagination: E,
+                paginationPosition: x,
+                truncate: y,
+                perPage: C,
+                setPage: S,
+            } = v(c, l, d),
+            T = n.useMemo(() => A(n.Children.toArray(a), f ? o : void 0, C, y), [o, C, a, f, y]);
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                v && "top" === E && (0, r.jsx)(p, { page: o, pages: h, setPage: C }),
+                E && "top" === x && (0, r.jsx)(p, { page: o, pages: h, setPage: S }),
                 (0, r.jsx)(g.Provider, {
                     value: l,
                     children: (0, r.jsx)("div", {
                         ref: d,
                         className: u.gridContainer,
-                        children: (0, r.jsx)("div", { className: s()(u.grid, u[`columns${i}`]), children: S }),
+                        children: (0, r.jsx)("div", { className: s()(u.grid, u[`columns${i}`]), children: T }),
                     }),
                 }),
-                v && "bottom" === E && (0, r.jsx)(p, { page: o, pages: h, setPage: C }),
+                E && "bottom" === x && (0, r.jsx)(p, { page: o, pages: h, setPage: S }),
             ],
         });
     };
