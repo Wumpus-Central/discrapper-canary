@@ -19,7 +19,7 @@ let h = Object.assign(
                 pendingThemeColors: p,
                 themeOverride: f,
                 children: m,
-                privateBanner: A,
+                isPrivate: A = !1,
                 forceShowPremium: g = !1,
                 forceUserTheme: b = !1,
             } = e,
@@ -37,20 +37,20 @@ let h = Object.assign(
             }),
             T = (0, s.VI)(r?.banner);
         return (0, i.jsx)("div", {
-            className: l()(_.A7, I, h, null != A && _.Gw, T && "has-animated-banner"),
+            className: l()(_.A7, I, h, A && _.Gw, T && "has-animated-banner"),
             style: S,
             ref: t,
             children: (0, i.jsx)("div", {
                 className: _.vW,
                 children: (0, i.jsx)(o.w, {
                     theme: f ?? y,
-                    children: (0, i.jsxs)(u.U, {
+                    children: (0, i.jsx)(u.U, {
                         themeType: a,
                         theme: f ?? y,
                         primaryColor: E,
                         secondaryColor: v,
                         userId: n.id,
-                        children: [A, m],
+                        children: m,
                     }),
                 }),
             }),

@@ -4517,8 +4517,9 @@ function rE(e) {
                     displayProfile: r,
                     themeType: a6.d.SIDEBAR,
                     themeOverride: d,
-                    privateBanner: r?.private === !0 ? (0, l.jsx)(sA.A, {}) : void 0,
+                    isPrivate: r?.private === !0,
                     children: [
+                        r?.private === !0 && (0, l.jsx)(sA.A, {}),
                         null != A.interactionType && (0, l.jsx)(sd.animated.div, { style: x, className: se.tB }),
                         (0, l.jsxs)(no.d_, {
                             className: null != o ? se.It : void 0,

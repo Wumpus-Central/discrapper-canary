@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     JC: "role_af3987",
     m4: "roleDot_af3987",
