@@ -13180,9 +13180,14 @@ function Al(e) {
             a((e) => !e);
         }, []),
         u = (0, O.bG)([u1.default], () => u1.default.getId()),
-        c = (0, h6.iN)(t, u),
-        g = (0, h6.Fm)(t, u),
-        _ = (0, O.yK)([h9.A], () =>
+        c = (0, O.bG)([u1.default], () => {
+            let e = u1.default.getInstallationForTracking();
+            return null == e ? null : (0, h0.v)(e);
+        }),
+        g = "installation" === t.kind && null != c ? c : u,
+        _ = (0, h6.iN)(t, g),
+        m = (0, h6.Fm)(t, g),
+        h = (0, O.yK)([h9.A], () =>
             eR()
                 .sortBy(h9.A.getRecentExposures(An.Vh.USER, n), (e) => {
                     let [t, n] = e;
@@ -13193,7 +13198,7 @@ function Al(e) {
                     return `${new Date(n).toLocaleString()} (${t})`;
                 }),
         ),
-        m = x.useCallback(
+        A = x.useCallback(
             (e) => {
                 (0, u8.C)((0, h3.yA)(n), () => {
                     (0, h1.P0)({
@@ -13207,7 +13212,7 @@ function Al(e) {
             },
             [n],
         ),
-        h = (0, S.jsx)(eB.s, {
+        p = (0, S.jsx)(eB.s, {
             "aria-label": "Toggle visibility",
             onClick: d,
             children: (0, S.jsxs)(k.E, {
@@ -13224,33 +13229,36 @@ function Al(e) {
                                     t.title,
                                     " ",
                                     u8.p5 &&
-                                        (0, S.jsx)(U.D, { onClick: m, children: (0, S.jsx)(hd.q, { size: "xs" }) }),
+                                        (0, S.jsx)(U.D, { onClick: A, children: (0, S.jsx)(hd.q, { size: "xs" }) }),
                                 ],
                             }),
                             (0, S.jsx)(k.E, { color: "text-muted", variant: "text-sm/normal", children: n }),
                         ],
                     }),
-                    (0, S.jsx)("span", { className: Ai.km, children: "User" }),
+                    (0, S.jsx)("span", {
+                        className: Ai.km,
+                        children: "installation" === t.kind ? "Installation" : "User",
+                    }),
                 ],
             }),
         });
-    if (!s) return (0, S.jsx)("div", { className: Ai.Os, children: h });
-    let A = "";
+    if (!s) return (0, S.jsx)("div", { className: Ai.Os, children: p });
+    let E = "";
     return (
-        (A =
+        (E =
             t.system === h4.l5.LEGACY
-                ? `Currently assigned to bucket ${c ?? An.RE.NOT_ELIGIBLE}`
-                : null != c
-                  ? `Currently assigned to variant ${c}`
+                ? `Currently assigned to bucket ${_ ?? An.RE.NOT_ELIGIBLE}`
+                : null != _
+                  ? `Currently assigned to variant ${_}`
                   : "Currently unassigned"),
         (0, S.jsxs)("div", {
             className: Ai.Os,
             children: [
-                h,
+                p,
                 (0, S.jsx)("div", {
                     children: (0, S.jsx)(h8.g, {
                         label: t.system === h4.l5.LEGACY ? "Bucket Override" : "Variant Override",
-                        description: A,
+                        description: E,
                         experiment: t,
                         experimentId: n,
                         overrideInfo: i,
@@ -13259,7 +13267,7 @@ function Al(e) {
                 (0, S.jsx)("div", {
                     className: Ai.h_,
                     children:
-                        null == g
+                        null == m
                             ? (0, S.jsx)(k.E, {
                                   variant: "text-sm/normal",
                                   color: "text-subtle",
@@ -13279,7 +13287,7 @@ function Al(e) {
                               (0, S.jsx)(k.E, {
                                   variant: "code",
                                   className: Ai.AS,
-                                  children: null == g ? "None" : JSON.stringify(g, void 0, 2),
+                                  children: null == m ? "None" : JSON.stringify(m, void 0, 2),
                               }),
                               (0, S.jsx)(k.E, {
                                   variant: "text-lg/medium",
@@ -13302,7 +13310,7 @@ function Al(e) {
                               (0, S.jsx)(k.E, {
                                   variant: "code",
                                   className: Ai.AS,
-                                  children: 0 === _.length ? "None" : _.join("\n"),
+                                  children: 0 === h.length ? "None" : h.join("\n"),
                               }),
                           ],
                       })

@@ -20,7 +20,7 @@ function _() {
                     for (let [t, i] of Object.entries(e))
                         n[t] = {
                             system: a.l5.APEX,
-                            kind: i.unitType === d.ni.User ? "user" : "guild",
+                            kind: d.ag[i.unitType],
                             name: i.name,
                             title: i.title,
                             variants: i.variants.map((e) => ({
