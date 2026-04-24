@@ -1,3 +1,4 @@
+"use strict";
 n.r(
     (e.exports = {
         caret: "caret__6ec79",

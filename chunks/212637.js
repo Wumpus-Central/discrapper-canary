@@ -1,48 +1,49 @@
+"use strict";
 n.d(t, { A: () => h });
 var a = n(627968);
 n(64700);
-var i = n(231723),
-    l = n(192308),
-    r = n(157559),
-    o = n(73825),
-    s = n(323082),
+var r = n(231723),
+    i = n(192308),
+    l = n(157559),
+    s = n(73825),
+    o = n(323082),
     c = n(166403),
     d = n(954571),
     u = n(927578),
     _ = n(652215),
     p = n(985018);
-let f = "guild-boost-purchase-modal";
+let m = "guild-boost-purchase-modal";
 async function h(e) {
     let {
             analyticsLocations: t,
             analyticsLocation: h,
-            analyticsSourceLocation: m,
+            analyticsSourceLocation: f,
             guildId: g,
             closeLayer: b,
-            onCloseModal: A,
-            totalNumberOfSlotsToAssign: E = 1,
-            disablePremiumUpsell: v,
-            onSubscribeComplete: I,
-            onSubscriptionConfirmation: y,
+            onCloseModal: v,
+            totalNumberOfSlotsToAssign: A = 1,
+            disablePremiumUpsell: x,
+            onSubscribeComplete: E,
+            onSubscriptionConfirmation: T,
             inPopout: S,
             applicationId: C,
-            intent: T,
+            intent: I,
         } = e,
-        x = S ? i.KX : i.SY,
-        R = c.A.getPremiumTypeSubscription();
-    if (null != R && R.isPurchasedExternally && null != R.paymentGateway) {
+        y = S ? r.KX : r.SY,
+        N = c.A.getPremiumTypeSubscription();
+    if (null != N && N.isPurchasedExternally && null != N.paymentGateway) {
         null != b && b(),
-            r.A.show({
-                title: p.intl.formatToPlainString(p.t["rTk9v/"], { paymentGatewayName: _.qmC[R.paymentGateway] }),
+            l.A.show({
+                title: p.intl.formatToPlainString(p.t["rTk9v/"], { paymentGatewayName: _.qmC[N.paymentGateway] }),
                 body: p.intl.format(p.t.NY03WF, {
-                    paymentGatewayName: _.qmC[R.paymentGateway],
-                    subscriptionManagementLink: (0, u.tW)(R.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
+                    paymentGatewayName: _.qmC[N.paymentGateway],
+                    subscriptionManagementLink: (0, u.tW)(N.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
                 }),
             });
         return;
     }
-    Promise.all([(0, s.$o)(), (0, o.zS)()]),
-        await (0, l.openModalLazy)(
+    Promise.all([(0, o.$o)(), (0, s.zS)()]),
+        await (0, i.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("32292"),
@@ -100,35 +101,35 @@ async function h(e) {
                     n.e("49600"),
                 ]).then(n.bind(n, 532299));
                 return (n) => {
-                    let { transitionState: i, onClose: l } = n;
+                    let { transitionState: r, onClose: i } = n;
                     return (0, a.jsx)(e, {
-                        transitionState: i,
+                        transitionState: r,
                         onClose: (e) => {
-                            l(), A?.(e);
+                            i(), v?.(e);
                         },
                         analyticsLocations: t,
                         analyticsLocation: h,
-                        analyticsSourceLocation: m ?? h,
+                        analyticsSourceLocation: f ?? h,
                         guildId: g,
-                        totalNumberOfSlotsToAssign: E,
+                        totalNumberOfSlotsToAssign: A,
                         closeGuildPerksModal: b,
-                        disablePremiumUpsell: v,
-                        onSubscriptionConfirmation: y,
-                        onSubscribeComplete: I,
+                        disablePremiumUpsell: x,
+                        onSubscriptionConfirmation: T,
+                        onSubscribeComplete: E,
                         applicationId: C,
-                        intent: T,
+                        intent: I,
                     });
                 };
             },
             {
-                modalKey: f,
+                modalKey: m,
                 onCloseCallback: () => {
                     d.default.track(_.HAw.MODAL_DISMISSED, { type: _.JJy.PREMIUM_GUILD_PURCHASE_MODAL, location: h });
                 },
                 onCloseRequest: () => {
-                    (0, l.closeModal)(f), A?.(!1);
+                    (0, i.closeModal)(m), v?.(!1);
                 },
-                contextKey: x,
+                contextKey: y,
             },
         );
 }

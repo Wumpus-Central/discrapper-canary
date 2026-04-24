@@ -1,39 +1,40 @@
-n.d(t, { A: () => b, n: () => f });
+"use strict";
+n.d(t, { A: () => b, n: () => m });
 var a = n(627968);
 n(64700);
-var i = n(192308),
-    l = n(228366),
-    r = n(272355),
-    o = n(267102),
-    s = n(287809),
+var r = n(192308),
+    i = n(228366),
+    l = n(272355),
+    s = n(267102),
+    o = n(287809),
     c = n(207803),
     d = n(958805),
     u = n(485745),
     _ = n(652215);
 let p = new Set();
-function f(e, t) {
+function m(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
 async function h(e) {
     let {
             userId: t,
-            tabSection: l,
-            scrollTarget: r,
+            tabSection: i,
+            scrollTarget: l,
             guildId: h,
-            originGuildId: m,
+            originGuildId: f,
             channelId: g,
             appContext: b,
-            customStatusPrompt: A,
-            ...E
+            customStatusPrompt: v,
+            ...A
         } = e,
-        v = s.default.getUser(t);
-    if (null == v) return;
-    let I = s.default.getCurrentUser();
-    if (null == I) return;
+        x = o.default.getUser(t);
+    if (null == x) return;
+    let E = o.default.getCurrentUser();
+    if (null == E) return;
     (0, c.XQ)();
-    let y = f(t, h);
+    let T = m(t, h);
     p.add(
-        await (0, i.openModalLazy)(
+        await (0, r.openModalLazy)(
             async () => {
                 let e = (
                     await Promise.all([
@@ -80,42 +81,42 @@ async function h(e) {
                 ).default;
                 return (t) =>
                     (0, a.jsx)(e, {
-                        user: v,
-                        currentUser: I,
+                        user: x,
+                        currentUser: E,
                         guildId: h,
-                        originGuildId: m ?? h,
-                        initialTabSection: l,
-                        initialScrollTarget: r,
+                        originGuildId: f ?? h,
+                        initialTabSection: i,
+                        initialScrollTarget: l,
                         channelId: g,
-                        customStatusPrompt: A,
+                        customStatusPrompt: v,
                         ...t,
-                        ...E,
+                        ...A,
                     });
             },
             {
-                modalKey: y,
-                contextKey: (0, i.modalContextFromAppContext)(b ?? (0, o.zd)() ?? _.BRT.APP),
+                modalKey: T,
+                contextKey: (0, r.modalContextFromAppContext)(b ?? (0, s.zd)() ?? _.BRT.APP),
                 onCloseRequest: () => {
-                    t === I.id && (0, u.b)()
+                    t === E.id && (0, u.b)()
                         ? (0, c.VQ)()
-                        : ((0, i.closeModal)(y), p.delete(y), d.A.clearPendingWidgets(), (0, c.XQ)());
+                        : ((0, r.closeModal)(T), p.delete(T), d.A.clearPendingWidgets(), (0, c.XQ)());
                 },
             },
         ),
     );
 }
-function m() {
+function f() {
     if (0 !== p.size) {
-        for (let e of p) (0, i.closeModal)(e);
+        for (let e of p) (0, r.closeModal)(e);
         p.clear(), d.A.clearPendingWidgets(), (0, c.XQ)();
     }
 }
-class g extends r.A {
+class g extends l.A {
     _initialize() {
-        l.h.subscribe("USER_PROFILE_MODAL_OPEN", h), l.h.subscribe("USER_PROFILE_MODAL_CLOSE", m);
+        i.h.subscribe("USER_PROFILE_MODAL_OPEN", h), i.h.subscribe("USER_PROFILE_MODAL_CLOSE", f);
     }
     _terminate() {
-        l.h.unsubscribe("USER_PROFILE_MODAL_OPEN", h), l.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", m);
+        i.h.unsubscribe("USER_PROFILE_MODAL_OPEN", h), i.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", f);
     }
 }
 let b = new g();

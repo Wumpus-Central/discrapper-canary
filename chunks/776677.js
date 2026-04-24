@@ -1,78 +1,79 @@
-n.d(t, { A: () => m, o: () => h });
+"use strict";
+n.d(t, { A: () => f, o: () => h });
 var a,
-    i = n(723702),
-    l = n(170148),
-    r = n(454292),
-    o = n(550151),
-    s = n(206589),
+    r = n(723702),
+    i = n(170148),
+    l = n(454292),
+    s = n(550151),
+    o = n(206589),
     c = n(125017),
     d = n(833349),
     u = n(287613),
     _ = n(874546),
     p = n(702631),
-    f = n(652215),
+    m = n(652215),
     h = (((a = {}).CAN_JOIN = "can_join"), (a.CANNOT_JOIN = "cannot_join"), (a.JOINED = "joined"), a);
-function m(e) {
+function f(e) {
     let t,
         n,
         {
             user: a,
             activity: h,
-            application: m,
+            application: f,
             channelId: g,
             currentUser: b,
-            isEmbedded: A,
-            ChannelStore: E,
-            GuildStore: v,
-            GuildMemberCountStore: I,
-            RelationshipStore: y,
+            isEmbedded: v,
+            ChannelStore: A,
+            GuildStore: x,
+            GuildMemberCountStore: E,
+            RelationshipStore: T,
             SelectedChannelStore: S,
             VoiceStateStore: C,
-            PermissionStore: T,
-            LocalActivityStore: x,
-            SelfPresenceStore: R,
-            EmbeddedActivitiesStore: L,
+            PermissionStore: I,
+            LocalActivityStore: y,
+            SelfPresenceStore: N,
+            EmbeddedActivitiesStore: R,
         } = e;
     if (
-        (!A && null != (t = (0, r.A)(x, R, h?.application_id)) && (0, s.w)(t, h)) ||
-        (A && null != (n = L.getCurrentEmbeddedActivity()) && n.applicationId === h?.application_id)
+        (!v && null != (t = (0, l.A)(y, N, h?.application_id)) && (0, o.w)(t, h)) ||
+        (v && null != (n = R.getCurrentEmbeddedActivity()) && n.applicationId === h?.application_id)
     )
         return "joined";
     if (null == a) return "cannot_join";
-    if (A && null != g)
-        return (0, o.Ay)({
+    if (v && null != g)
+        return (0, s.Ay)({
             userId: a.id,
             activity: h,
             channelId: g,
             currentUser: b,
-            application: m,
-            isActivitiesEnabledForCurrentPlatform: (0, l.A)(),
-            ChannelStore: E,
+            application: f,
+            isActivitiesEnabledForCurrentPlatform: (0, i.A)(),
+            ChannelStore: A,
             VoiceStateStore: C,
-            PermissionStore: T,
-            GuildStore: v,
-        }) === o.Gy.CAN_JOIN
+            PermissionStore: I,
+            GuildStore: x,
+        }) === s.Gy.CAN_JOIN
             ? "can_join"
             : "cannot_join";
     if (
-        (A && null == g && !(0, d.A)(h, f.jUm.CONTEXTLESS)) ||
-        (!A && (!(0, _.Ay)(h) || !(0, i.platformSupportsActivityJoin)()))
+        (v && null == g && !(0, d.A)(h, m.jUm.CONTEXTLESS)) ||
+        (!v && (!(0, _.Ay)(h) || !(0, r.platformSupportsActivityJoin)()))
     )
         return "cannot_join";
-    let N = (0, c._)(h);
-    if (!(0, u.A)(N) || (0, p.U)(N)) return "cannot_join";
-    if ((0, d.A)(h, f.jUm.PARTY_PRIVACY_FRIENDS) && y.isFriend(a.id)) return "can_join";
-    if ((0, d.A)(h, f.jUm.PARTY_PRIVACY_VOICE_CHANNEL)) {
-        let e = E.getChannel(S.getVoiceChannelId());
+    let j = (0, c._)(h);
+    if (!(0, u.A)(j) || (0, p.U)(j)) return "cannot_join";
+    if ((0, d.A)(h, m.jUm.PARTY_PRIVACY_FRIENDS) && T.isFriend(a.id)) return "can_join";
+    if ((0, d.A)(h, m.jUm.PARTY_PRIVACY_VOICE_CHANNEL)) {
+        let e = A.getChannel(S.getVoiceChannelId());
         if (null == e || !C.isInChannel(e.id, a.id)) return "cannot_join";
         switch (e.type) {
-            case f.rbe.DM:
-            case f.rbe.GROUP_DM:
+            case m.rbe.DM:
+            case m.rbe.GROUP_DM:
                 return "can_join";
         }
-        let t = v.getGuild(e.getGuildId());
-        if (null == t || t.features.has(f.GuildFeatures.COMMUNITY)) return "cannot_join";
-        let n = I.getMemberCount(t.id);
+        let t = x.getGuild(e.getGuildId());
+        if (null == t || t.features.has(m.GuildFeatures.COMMUNITY)) return "cannot_join";
+        let n = E.getMemberCount(t.id);
         if (null != n && n < 100) return "can_join";
     }
     return "cannot_join";

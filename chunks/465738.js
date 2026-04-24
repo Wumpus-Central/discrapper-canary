@@ -1,75 +1,76 @@
-n.d(t, { A: () => v });
-var a = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => I });
+var i = n(627968),
+    s = n(64700),
     l = n(503698),
     r = n.n(l),
-    o = n(91871),
-    s = n.n(o),
+    a = n(91871),
+    o = n.n(a),
     c = n(735438),
     d = n.n(c),
     u = n(44482),
     _ = n(17928),
-    p = n(545442),
-    f = n(305866),
-    h = n(732771),
-    m = n(676608),
-    g = n(317525),
-    b = n(652215),
-    A = n(985018),
-    E = n(673753);
-let v = function (e) {
-    let { className: t, guild: n, roleStyle: l, roleFilter: o, onSelect: c, onClose: v } = e,
-        I = (0, _.bG)([g.A], () => g.A.getSortedRoles(n.id)),
-        y = (0, m.Ay)(n.id, null),
-        S = i.useMemo(
+    h = n(545442),
+    p = n(305866),
+    m = n(732771),
+    g = n(676608),
+    A = n(317525),
+    f = n(652215),
+    E = n(985018),
+    x = n(673753);
+let I = function (e) {
+    let { className: t, guild: n, roleStyle: l, roleFilter: a, onSelect: c, onClose: I } = e,
+        v = (0, _.bG)([A.A], () => A.A.getSortedRoles(n.id)),
+        N = (0, g.Ay)(n.id, null),
+        C = s.useMemo(
             () =>
-                d()(I)
-                    .filter(o)
+                d()(v)
+                    .filter(a)
                     .map((e) => ({
                         id: e.id,
                         value: e.id,
                         label: e.name,
                         leading:
                             "dot" === l
-                                ? (0, a.jsx)(p.W, {
-                                      className: E.b8,
-                                      color: e.colorString ?? b.TpD,
-                                      colors: y ? e.colorStrings : null,
+                                ? (0, i.jsx)(h.W, {
+                                      className: x.b8,
+                                      color: e.colorString ?? f.TpD,
+                                      colors: N ? e.colorStrings : null,
                                       background: !1,
                                       tooltip: !1,
                                   })
-                                : (0, a.jsx)(p.R, {
-                                      className: E.kb,
-                                      color: e.colorString ?? b.TpD,
-                                      colors: y ? e.colorStrings : null,
+                                : (0, i.jsx)(h.R, {
+                                      className: x.kb,
+                                      color: e.colorString ?? f.TpD,
+                                      colors: N ? e.colorStrings : null,
                                   }),
                     }))
                     .value(),
-            [I, o, l, y],
+            [v, a, l, N],
         ),
-        C = i.useCallback(
-            (e, t) => ("" === t.trim() ? e : e.filter((e) => s()(t.toLowerCase(), e.label.toLowerCase()))),
+        S = s.useCallback(
+            (e, t) => ("" === t.trim() ? e : e.filter((e) => o()(t.toLowerCase(), e.label.toLowerCase()))),
             [],
         );
-    return (0, a.jsx)(f.l, {
-        className: r()(E.kL, t),
-        "aria-label": A.intl.string(A.t.ljnBlo),
-        children: (0, a.jsxs)(h.iS, {
+    return (0, i.jsx)(p.l, {
+        className: r()(x.kL, t),
+        "aria-label": E.intl.string(E.t.ljnBlo),
+        children: (0, i.jsxs)(m.iS, {
             selectionMode: "single",
             value: void 0,
             onSelectionChange: (e) => {
-                null != e && (c(e), v());
+                null != e && (c(e), I());
             },
-            options: S,
-            customMatchSorter: C,
+            options: C,
+            customMatchSorter: S,
             children: [
-                (0, a.jsx)(h.a3, {
-                    label: A.intl.string(A.t.ljnBlo),
+                (0, i.jsx)(m.a3, {
+                    label: E.intl.string(E.t.ljnBlo),
                     hideLabel: !0,
-                    placeholder: A.intl.string(A.t.XPGZXP),
+                    placeholder: E.intl.string(E.t.XPGZXP),
                     autoFocus: !0,
                 }),
-                (0, a.jsx)(h.X2, { renderListItem: (e) => (0, a.jsx)(u.c, { ...e }) }),
+                (0, i.jsx)(m.X2, { renderListItem: (e) => (0, i.jsx)(u.c, { ...e }) }),
             ],
         }),
     });

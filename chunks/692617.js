@@ -1,11 +1,12 @@
+"use strict";
 n.d(t, { A: () => p });
 var a = n(627968);
 n(64700);
-var i = n(503698),
-    l = n.n(i),
-    r = n(735438),
-    o = n.n(r),
-    s = n(990078),
+var r = n(503698),
+    i = n.n(r),
+    l = n(735438),
+    s = n.n(l),
+    o = n(990078),
     c = n(862482),
     d = n(834730),
     u = n(548118),
@@ -14,12 +15,12 @@ function p(e) {
     let {
             className: t,
             maxGuilds: n,
-            guilds: i,
-            onFocus: r,
+            guilds: r,
+            onFocus: l,
             onClick: p,
-            size: f = u.Ay.Sizes.SMALLER,
+            size: m = u.Ay.Sizes.SMALLER,
             hideOverflowCount: h = !1,
-            disableGuildNameTooltip: m = !1,
+            disableGuildNameTooltip: f = !1,
         } = e,
         g = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Ay.Sizes.SMALLER;
@@ -32,32 +33,32 @@ function p(e) {
                 default:
                     return _.q1;
             }
-        })(f);
-    return i.length <= 0
+        })(m);
+    return r.length <= 0
         ? null
         : (0, a.jsx)("div", {
-              className: l()(t, _.HD),
+              className: i()(t, _.HD),
               children: (function () {
-                  let e = i.length - n,
+                  let e = r.length - n,
                       t = e + 1,
                       b = e > 0 && !h,
-                      A = Math.min(i.length, n) - 1,
-                      E = o()(i)
+                      v = Math.min(r.length, n) - 1,
+                      A = s()(r)
                           .take(n)
                           .map((e, t) => {
                               let n = e.name,
-                                  i = l()(_.my, g, t === A && !b && _.NE);
-                              return m
+                                  r = i()(_.my, g, t === v && !b && _.NE);
+                              return f
                                   ? (0, a.jsx)("div", {
-                                        className: i,
-                                        children: (0, a.jsx)(u.Ay, { guild: e, onClick: p, size: f, showTooltip: !1 }),
+                                        className: r,
+                                        children: (0, a.jsx)(u.Ay, { guild: e, onClick: p, size: m, showTooltip: !1 }),
                                     })
                                   : (0, a.jsx)(
-                                        s.m,
+                                        o.m,
                                         {
                                             asContainer: !0,
                                             text: n,
-                                            children: (0, a.jsx)(u.Ay, { guild: e, onClick: p, size: f }),
+                                            children: (0, a.jsx)(u.Ay, { guild: e, onClick: p, size: m }),
                                         },
                                         e.id,
                                     );
@@ -74,17 +75,17 @@ function p(e) {
                               default:
                                   return "text-xs/medium";
                           }
-                      })(f);
-                      E[E.length - 1] = (0, a.jsx)(c.$n, {
-                          className: l()(_.ju, g),
-                          onFocus: r,
+                      })(m);
+                      A[A.length - 1] = (0, a.jsx)(c.$n, {
+                          className: i()(_.ju, g),
+                          onFocus: l,
                           onClick: (e) => p?.(e),
                           look: c.$n.Looks.BLANK,
                           size: c.$n.Sizes.NONE,
                           children: (0, a.jsx)(d.E, { variant: e, children: t > 99 ? ">99" : `+${t}` }),
                       });
                   }
-                  return E;
+                  return A;
               })(),
           });
 }

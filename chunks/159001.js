@@ -1,37 +1,38 @@
-n.d(t, { GL: () => r, IM: () => u, JJ: () => o, RE: () => d, V2: () => s, go: () => c, x8: () => _ });
-var a = n(636537),
+"use strict";
+n.d(t, { GL: () => l, IM: () => d, JJ: () => s, RE: () => u, V2: () => o, go: () => c, x8: () => _ });
+var r = n(636537),
     i = n(228366),
-    l = n(652215);
-async function r(e, t) {
+    a = n(652215);
+async function l(e, t) {
     let {
         nick: n,
-        avatar: r,
-        avatarDescription: o,
-        avatarId: s,
+        avatar: l,
+        avatarDescription: s,
+        avatarId: o,
         avatarDecoration: c,
-        nameplate: d,
-        displayNameStyles: u,
+        nameplate: u,
+        displayNameStyles: d,
     } = t;
     if (null == e) throw Error("Need guildId");
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT", guildId: e });
     let _ = {
         nick: n,
-        avatar: r,
-        avatar_description: o,
-        avatar_id: s,
+        avatar: l,
+        avatar_description: s,
+        avatar_id: o,
         avatar_decoration_sku_id: void 0 !== c ? (c?.skuId ?? null) : void 0,
-        collectibles: void 0 !== d ? { nameplate: null === d ? null : { sku_id: d.skuId } } : void 0,
-        display_name_font_id: void 0 !== u ? (null !== u ? u.fontId : null) : void 0,
-        display_name_effect_id: void 0 !== u ? (null !== u ? u.effectId : null) : void 0,
-        display_name_colors: void 0 !== u ? (null !== u ? u.colors : null) : void 0,
+        collectibles: void 0 !== u ? { nameplate: null === u ? null : { sku_id: u.skuId } } : void 0,
+        display_name_font_id: void 0 !== d ? (null !== d ? d.fontId : null) : void 0,
+        display_name_effect_id: void 0 !== d ? (null !== d ? d.effectId : null) : void 0,
+        display_name_colors: void 0 !== d ? (null !== d ? d.colors : null) : void 0,
     };
     try {
-        let t = await a.Bo.patch({ url: l.Rsh.SET_GUILD_MEMBER(e), body: _, oldFormErrors: !0, rejectWithError: !1 }),
+        let t = await r.Bo.patch({ url: a.Rsh.SET_GUILD_MEMBER(e), body: _, oldFormErrors: !0, rejectWithError: !1 }),
             n = t.body;
         return (
             i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS", guildId: e }),
             i.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildMember: n, guildId: e }),
-            (null != r || null != s) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+            (null != l || null != o) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
             t
         );
     } catch (n) {
@@ -43,19 +44,19 @@ async function r(e, t) {
         );
     }
 }
-function o(e) {
+function s(e) {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_GUILD", guildId: e });
 }
-function s(e) {
+function o(e) {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_INIT", guildId: e });
 }
 function c() {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 }
-function d() {
+function u() {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 }
-function u() {
+function d() {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 }
 function _() {

@@ -1,32 +1,33 @@
-n.d(t, { c: () => o });
+"use strict";
+n.d(t, { c: () => s });
 var a = n(627968);
 n(64700);
-var i = n(661531),
-    l = n(996682),
-    r = n(27989);
-let o = (e) => {
+var r = n(661531),
+    i = n(996682),
+    l = n(27989);
+let s = (e) => {
     let {
             size: t = "md",
             width: n,
-            height: o,
-            secondaryColor: s = "transparent",
+            height: s,
+            secondaryColor: o = "transparent",
             secondaryColorClass: c = "",
-            color: d = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+            color: d = r.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: u = "",
             ..._
         } = e,
-        p = (0, r.J)(t),
-        f = p?.width ?? n,
-        h = p?.height ?? o;
+        p = (0, l.J)(t),
+        m = p?.width ?? n,
+        h = p?.height ?? s;
     return (0, a.jsxs)("svg", {
-        ...(0, l.A)(_),
+        ...(0, i.A)(_),
         xmlns: "http://www.w3.org/2000/svg",
-        width: f,
+        width: m,
         height: h,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, a.jsx)("circle", { cx: "12", cy: "12", r: "10", fill: "string" == typeof s ? s : s.css, className: c }),
+            (0, a.jsx)("circle", { cx: "12", cy: "12", r: "10", fill: "string" == typeof o ? o : o.css, className: c }),
             (0, a.jsx)("path", {
                 fill: "string" == typeof d ? d : d.css,
                 fillRule: "evenodd",

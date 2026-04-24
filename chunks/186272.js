@@ -1,6 +1,7 @@
-n.d(t, { A: () => i });
+"use strict";
+n.d(t, { A: () => r });
 var a = n(985018);
-function i(e) {
+function r(e) {
     return void 0 === e
         ? a.intl.string(a.t["4lTDZq"])
         : 0 === e

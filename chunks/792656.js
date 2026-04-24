@@ -1,28 +1,29 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => l });
 var a = n(627968),
-    i = n(465794),
-    l = n(204413);
-function r(e) {
+    r = n(465794),
+    i = n(204413);
+function l(e) {
     let {
             subscriptionTier: t,
             hasActivePromotion: n,
-            useShorterCTA: r,
-            isPersistentCTA: o,
-            buttonTextOverride: s,
+            useShorterCTA: l,
+            isPersistentCTA: s,
+            buttonTextOverride: o,
             defaultTextOverride: c,
             iconOverride: d,
             variantOverride: u,
             ..._
         } = e,
-        { subscribeButtonProps: p, subscriptionTier: f } = (0, l.$)({
+        { subscribeButtonProps: p, subscriptionTier: m } = (0, i.$)({
             subscriptionTier: t,
             hasActivePromotion: n,
-            useShorterCTA: r,
-            isPersistentCTA: o,
-            buttonTextOverride: s,
+            useShorterCTA: l,
+            isPersistentCTA: s,
+            buttonTextOverride: o,
             defaultTextOverride: c,
             iconOverride: d,
             variantOverride: u,
         });
-    return (0, a.jsx)(i.A, { ..._, ...p, subscriptionTier: f });
+    return (0, a.jsx)(r.A, { ..._, ...p, subscriptionTier: m });
 }

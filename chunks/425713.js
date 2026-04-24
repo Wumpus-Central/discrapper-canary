@@ -1,9 +1,10 @@
-n.d(t, { N: () => r, I: () => o });
+"use strict";
+n.d(t, { N: () => l, I: () => s });
 var a = n(788868),
-    i = n(714206);
-let l = {
+    r = n(714206);
+let i = {
         [a.Ac.PREMIUM_TENURE_1_MONTH]: {
-            standard: i,
+            standard: r,
             ambient:
                 "https://cdn.discordapp.com/assets/content/a0837200c383ca7b9e9b2e91358f6871ce8c7f3dd5ba98bbbb86305a205ac6ac.png",
             ambientLarge:
@@ -59,7 +60,7 @@ let l = {
                 "https://cdn.discordapp.com/assets/content/7fbfa17e5011425252d9ff6c1f286f41560c8acc58cb543b3c895031ffda5289.png",
         },
     },
-    r = (e) => (null != e ? l[e] : null);
-function o(e) {
-    return l[e];
+    l = (e) => (null != e ? i[e] : null);
+function s(e) {
+    return i[e];
 }
