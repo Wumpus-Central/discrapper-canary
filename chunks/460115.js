@@ -45,7 +45,7 @@ async function L(e) {
                     }))
                 );
             case m.VV.GAME_SHOP:
-                return (0, T.jz)(L ?? { id: t });
+                return (0, T.jz)(L ?? { id: t, type: "id-only" });
             case m.VV.GUILD_SHOP:
                 return (0, r.K)(L, D);
             case m.VV.MEMBER_APPLICATIONS:

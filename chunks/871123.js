@@ -69,7 +69,11 @@ function p() {
     return null != e && e.features.has(A.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : I.Kf;
 }
 function m(e) {
-    return !!u.A.getStorefrontGuildIds().has(e.id) || (e.features?.has(A.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
+    if (u.A.getStorefrontGuildIds().has(e.id)) return !0;
+    if ("type" in e) return !1;
+    let t = e.gameApplicationIds?.length === 1 ? e.gameApplicationIds[0] : void 0,
+        n = u.A.getStorefrontApplicationIds();
+    return !!(null != t && n.has(t)) || (e.features?.has(A.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
 function L(e) {
     return { logoAssetId: e.logo_asset_id ?? null, lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null };
