@@ -130,14 +130,18 @@ function W(e, t) {
                           if (o.length > 0)
                               for (let e of (r.push((0, d.jF)(v.intl.string(v.t["4B63jZ"]))), o))
                                   s.add(e.channelId), r.push(e.record);
-                          let l = T.Ay.getMentionChannelIds()
-                              .filter((e) => e !== i && !s.has(e))
-                              .map((e) => H(e))
-                              .filter(O.Vq)
-                              .reverse();
-                          if (l.length > 0)
-                              for (let e of (r.push((0, d.jF)(v.intl.string(v.t["61Df13"]))), l))
-                                  s.add(e.record.id), r.push(e);
+                          let l = T.Ay.getMentionChannelIds().filter((e) => e !== i && !s.has(e)),
+                              _ = [];
+                          for (let e = l.length - 1; e >= 0; e--) {
+                              let t = l[e];
+                              if (null == t) continue;
+                              let n = H(t);
+                              null != n && _.push({ channelId: t, result: n });
+                          }
+                          if (_.length > 0)
+                              for (let { channelId: e, result: t } of (r.push((0, d.jF)(v.intl.string(v.t["61Df13"]))),
+                              _))
+                                  s.add(t.record.id), s.add(e), r.push(t);
                           if (null != n) {
                               let e = g.Ay.getSelectableChannelIds(n)
                                   .filter((e) => {
@@ -162,9 +166,9 @@ function W(e, t) {
                               }),
                                   e.length > 0 && (r.push((0, d.jF)(v.intl.string(v.t.ieCAhD))), (r = r.concat(e)));
                           }
-                          let _ = r.length > 0 ? 3 : 7;
+                          let E = r.length > 0 ? 3 : 7;
                           return (
-                              a.length > _ && a.splice(_),
+                              a.length > E && a.splice(E),
                               a.length > 0 && (r = [(0, d.jF)(v.intl.string(v.t["80lOZ1"])), ...a, ...r]),
                               r
                           );
