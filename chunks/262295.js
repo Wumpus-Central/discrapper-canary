@@ -1,34 +1,35 @@
-a.d(t, { A: () => c });
-var n = a(627968),
-    r = a(64700),
-    l = a(503698),
-    i = a.n(l),
-    s = a(195462);
-let o = r.forwardRef((e, t) => {
+"use strict";
+n.d(t, { A: () => c });
+var r = n(627968),
+    i = n(64700),
+    a = n(503698),
+    l = n.n(a),
+    s = n(195462);
+let o = i.forwardRef((e, t) => {
     let {
-        muted: a = !1,
-        highlighted: r = !1,
-        avatar: l,
+        muted: n = !1,
+        highlighted: i = !1,
+        avatar: a,
         decorators: o,
         name: c,
-        subText: d,
-        avatarClassName: u,
-        innerClassName: h,
+        subText: u,
+        avatarClassName: d,
+        innerClassName: _,
         withDisplayNameStyles: p = !1,
     } = e;
-    return (0, n.jsxs)("div", {
+    return (0, r.jsxs)("div", {
         ref: t,
-        className: i()(s.Zp, h, { [s.SU]: a, [s.mr]: r }),
+        className: l()(s.Zp, _, { [s.SU]: n, [s.mr]: i }),
         children: [
-            (0, n.jsx)("div", { className: i()(s.my, u), children: l }),
-            (0, n.jsxs)("div", {
-                className: i()(s.Qs, { [s.e8]: p }),
+            (0, r.jsx)("div", { className: l()(s.my, d), children: a }),
+            (0, r.jsxs)("div", {
+                className: l()(s.Qs, { [s.e8]: p }),
                 children: [
-                    (0, n.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         className: s.BG,
-                        children: [(0, n.jsx)("div", { className: s.UU, children: c }), o],
+                        children: [(0, r.jsx)("div", { className: s.UU, children: c }), o],
                     }),
-                    null != d ? (0, n.jsx)("div", { className: s.Sv, children: d }) : null,
+                    null != u ? (0, r.jsx)("div", { className: s.Sv, children: u }) : null,
                 ],
             }),
         ],
