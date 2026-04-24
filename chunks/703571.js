@@ -1922,7 +1922,7 @@ let ni = (e) => (0, c.jsx)("div", { className: tY.hm, children: (0, c.jsx)(nc, {
                       (0, nt.navigateToQuestHome)({ fromContent: ne.u.ORBS_SHOP_HERO_CTA }))
                     : (n({
                           sourceButton: "shop latest category hero",
-                          categorySkuId: M ? f.categorySkuId : void 0,
+                          categorySkuId: f.categorySkuId,
                           isInternalShopDeeplink: !0,
                           isOrbsExclusive: M,
                       }),
