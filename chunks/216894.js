@@ -1,4 +1,4 @@
-n.d(t, { g: () => i3, A: () => i4 }), n(321073);
+n.d(t, { g: () => i3, A: () => i5 }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -357,15 +357,15 @@ var eQ = n(480335),
     e2 = n(736653),
     e3 = n(439174),
     e9 = n(927578),
-    e5 = n(112848),
-    e4 = n(788868);
+    e4 = n(112848),
+    e5 = n(788868);
 function e6() {
-    let e = (0, e5.Xb)(),
+    let e = (0, e4.Xb)(),
         t = (0, e9.nK)();
     if (null == e || !t) return null;
     let n = new Date().getTime();
-    for (let t = e4.sp.length - 1; t >= 0; t--) {
-        let i = e4.VD[e4.sp[t]],
+    for (let t = e5.sp.length - 1; t >= 0; t--) {
+        let i = e5.VD[e5.sp[t]],
             s = new Date(e);
         if ((s.setMonth(e.getMonth() + i.tenureReqNumMonths), s.setHours(s.getHours() + 30), n > s.getTime()))
             if (n - s.getTime() < 6048e5) return i.id;
@@ -374,45 +374,45 @@ function e6() {
     return null;
 }
 let e8 = {
-        [e4.Ac.PREMIUM_TENURE_1_MONTH]: { dark: " #D76C1F, #F79C53", light: " #8E2A0B, #D4681C" },
-        [e4.Ac.PREMIUM_TENURE_3_MONTH]: { dark: " #8F9E9E, #C0CBD1", light: " #53555F, #697979" },
-        [e4.Ac.PREMIUM_TENURE_6_MONTH]: { dark: " #ED8200, #FFCE46", light: " #744400, #CC7000" },
-        [e4.Ac.PREMIUM_TENURE_12_MONTH]: { dark: " #36AAFF, #7BE7CB", light: " #006394, #0089EB" },
-        [e4.Ac.PREMIUM_TENURE_24_MONTH]: { dark: " #8670FF, #C2BDFF", light: " #5423CC, #8670FF" },
-        [e4.Ac.PREMIUM_TENURE_36_MONTH]: { dark: " #009423, #67FF33", light: " #005C15, #009E25" },
-        [e4.Ac.PREMIUM_TENURE_60_MONTH]: { dark: " #E83068, #FF8F70", light: " #881141, #DD1852" },
-        [e4.Ac.PREMIUM_TENURE_72_MONTH]: { dark: " #829AE8, #DDB4FF, #A2D6FF", light: " #6881D4, #956CB8, #5491A0" },
+        [e5.Ac.PREMIUM_TENURE_1_MONTH]: { dark: " #D76C1F, #F79C53", light: " #8E2A0B, #D4681C" },
+        [e5.Ac.PREMIUM_TENURE_3_MONTH]: { dark: " #8F9E9E, #C0CBD1", light: " #53555F, #697979" },
+        [e5.Ac.PREMIUM_TENURE_6_MONTH]: { dark: " #ED8200, #FFCE46", light: " #744400, #CC7000" },
+        [e5.Ac.PREMIUM_TENURE_12_MONTH]: { dark: " #36AAFF, #7BE7CB", light: " #006394, #0089EB" },
+        [e5.Ac.PREMIUM_TENURE_24_MONTH]: { dark: " #8670FF, #C2BDFF", light: " #5423CC, #8670FF" },
+        [e5.Ac.PREMIUM_TENURE_36_MONTH]: { dark: " #009423, #67FF33", light: " #005C15, #009E25" },
+        [e5.Ac.PREMIUM_TENURE_60_MONTH]: { dark: " #E83068, #FF8F70", light: " #881141, #DD1852" },
+        [e5.Ac.PREMIUM_TENURE_72_MONTH]: { dark: " #829AE8, #DDB4FF, #A2D6FF", light: " #6881D4, #956CB8, #5491A0" },
     },
     e7 = {
-        [e4.Ac.PREMIUM_TENURE_1_MONTH]: {
+        [e5.Ac.PREMIUM_TENURE_1_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/76b6239d8631db63ae8ddfae2959791fe02bcc550c376cb35d77ef9df1a62ee5.webm",
             light: "https://cdn.discordapp.com/assets/content/f09f5aa678c2d463109f0ca84a572646c1b6b21974865e84ac92f3c3a3f50b87.webm",
         },
-        [e4.Ac.PREMIUM_TENURE_3_MONTH]: {
+        [e5.Ac.PREMIUM_TENURE_3_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/333650072ffe3aa581594ad0a78d525ce57e9e34bd236acb81db8b75aa25df7c.webm",
             light: "https://cdn.discordapp.com/assets/content/adb6e9b17112ca46167a49c50860b17c3aae5f0e56be9c82baa62ffdd664ad24.webm",
         },
-        [e4.Ac.PREMIUM_TENURE_6_MONTH]: {
+        [e5.Ac.PREMIUM_TENURE_6_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/279e3118d1cfcc6cfa8decab76b4153e4c3c1eff8a2e77888ae51b96c7292888.webm",
             light: "https://cdn.discordapp.com/assets/content/e2d18cff69e5718d2836557c0089cf5056f5e833e25e28b6e98bdbc1503d726f.webm",
         },
-        [e4.Ac.PREMIUM_TENURE_12_MONTH]: {
+        [e5.Ac.PREMIUM_TENURE_12_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/74b1267eebcf0dcd18ac9fb16c89d231604489cfa3d0eebcd71a4c24962e3538.webm",
             light: "https://cdn.discordapp.com/assets/content/20265cc95d50db21c86b4a217c967c535561fcb6bfa733df6ba1d0393ca5f980.webm",
         },
-        [e4.Ac.PREMIUM_TENURE_24_MONTH]: {
+        [e5.Ac.PREMIUM_TENURE_24_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/68ae410145a1ab508c52f2431e5f808b4cd60d89d74d41f07d6a85ce75106a2a.webm",
             light: "https://cdn.discordapp.com/assets/content/7aba50f994ce9e66bacabe14aafb881e43997136887f81054f1f025f032f7aea.webm",
         },
-        [e4.Ac.PREMIUM_TENURE_36_MONTH]: {
+        [e5.Ac.PREMIUM_TENURE_36_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/03f8fb27edf5fc0c15d71326623a871339eab9fc36316afab2fcce955049d726.webm",
             light: "https://cdn.discordapp.com/assets/content/566f4db88f64218ac2df0ac3af6bbc975dcd25044e5fdceb0ee8889b2b13c86c.webm",
         },
-        [e4.Ac.PREMIUM_TENURE_60_MONTH]: {
+        [e5.Ac.PREMIUM_TENURE_60_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/d2e0f57d4f0054e58fa2b13a28e2ccef6168ffd752760b84feff4da9b076912a.webm",
             light: "https://cdn.discordapp.com/assets/content/2bbcfd689cc2c402457c21c93b81c98537936d7e54ac6ac46d6a3133519b0101.webm",
         },
-        [e4.Ac.PREMIUM_TENURE_72_MONTH]: {
+        [e5.Ac.PREMIUM_TENURE_72_MONTH]: {
             dark: "https://cdn.discordapp.com/assets/content/2d56eadb5dd14d8bc5d74a55d04cef85bfc2d083b6b0ea53f389c9f34993237a.webm",
             light: "https://cdn.discordapp.com/assets/content/c5e4aed8b111912db02d0aa12a73d162720f27aaf432000378344e94cde1ec65.webm",
         },
@@ -433,9 +433,9 @@ function tn() {
                     currentBadgeTextGradient: t ? n?.dark : n?.light,
                     levelUpVideoSrc: t ? i?.dark : i?.light,
                 },
-                l = e4.sp.indexOf(e);
+                l = e5.sp.indexOf(e);
             if (l > 0) {
-                let e = e4.sp[l - 1],
+                let e = e5.sp[l - 1],
                     n = e8[e];
                 (s.prevBadge = (0, e3.e0)(e)), (s.prevBadgeTextGradient = t ? n?.dark : n?.light);
             }
@@ -661,7 +661,7 @@ function t1(e) {
 var t2 = n(461213),
     t3 = n(818348),
     t9 = n(466573);
-function t5() {
+function t4() {
     let e = (0, u.bG)([t2.A], () => t2.A.getStatus()),
         t = (0, tE.MU)(e) ?? "",
         n = e === t3.cl.INVISIBLE || e === t3.cl.OFFLINE;
@@ -683,7 +683,7 @@ function t5() {
         ],
     });
 }
-var t4 = n(841595);
+var t5 = n(841595);
 let t6 = (0, n(945810).mj)({
     name: "2025-12-social-layer-storefront-wishlist-user-account-popout",
     kind: "user",
@@ -795,7 +795,7 @@ function nu(e) {
                     return t6.useConfig({ location: t }).enabled;
                 })({ location: t }),
                 i = (0, u.bG)([tP.default], () => tP.default.getCurrentUser()),
-                l = (0, u.bG)([t4.A], () => (null != i ? t4.A.getFirstWishlistId(i.id) : null)),
+                l = (0, u.bG)([t5.A], () => (null != i ? t5.A.getFirstWishlistId(i.id) : null)),
                 a = (0, t7.i)((e) => e.recommendationApplicationIds),
                 o = (0, t8.rY)(),
                 c = (0, t8.qx)();
@@ -1216,7 +1216,7 @@ function nE(e) {
                                                                 }),
                                                                 (0, i.jsx)(eL, {
                                                                     action: "PRESS_SET_STATUS",
-                                                                    label: (0, i.jsx)(t5, {}),
+                                                                    label: (0, i.jsx)(t4, {}),
                                                                     sublabel: null != P && P,
                                                                     icon: () =>
                                                                         (0, i.jsx)(eb.nW, { status: k, size: 12 }),
@@ -1430,8 +1430,8 @@ function n1(e) {
 var n2 = n(932001),
     n3 = n(45780),
     n9 = n(696451),
-    n5 = n(71393),
-    n4 = n(685073),
+    n4 = n(71393),
+    n5 = n(685073),
     n6 = n(228366);
 let n8 = { lastSeenInfos: {} },
     n7 = n8;
@@ -1461,7 +1461,7 @@ var ii = n(116833),
     is = n(514661);
 let il = new nY.A("GuildTagAvailableCoachmark");
 function ia(e) {
-    let t = (0, u.bG)([n5.A], () => n5.A.getGuild(e.guildId));
+    let t = (0, u.bG)([n4.A], () => n4.A.getGuild(e.guildId));
     function n(n) {
         t?.profile?.tag != null &&
             n6.h.dispatch({
@@ -1472,7 +1472,7 @@ function ia(e) {
             e.onDismiss?.(n);
     }
     let { isAdopting: s, onAdoptTag: l, onEditProfile: a } = (0, is.A)(t?.id ?? null, () => n(ep.i.TAKE_ACTION));
-    if (null == t || !(0, n4.q0)(t))
+    if (null == t || !(0, n5.q0)(t))
         return il.error("GuildTagChangedCoachmark rendered without guildId for a guild with tags."), e.children;
     let r = [
         { text: eh.intl.string(eh.t.jwEaiX), loading: s, onClick: l, variant: "primary" },
@@ -1500,12 +1500,12 @@ function ia(e) {
     });
 }
 function ir(e) {
-    let t = (0, u.bG)([n5.A], () => n5.A.getGuild(e.guildId));
+    let t = (0, u.bG)([n4.A], () => n4.A.getGuild(e.guildId));
     function n(t) {
         e.onDismiss?.(t);
     }
     let { isAdopting: s, onAdoptTag: l, onEditProfile: a } = (0, is.A)(t?.id ?? null, () => n(ep.i.TAKE_ACTION));
-    if (null == t || !(0, n4.q0)(t))
+    if (null == t || !(0, n5.q0)(t))
         return il.error("GuildTagAvailableCoachmark rendered without guildId for a guild with tags."), e.children;
     let r = [
         { text: eh.intl.string(eh.t.jwEaiX), loading: s, onClick: l, variant: "primary" },
@@ -1560,8 +1560,8 @@ function id(e) {
 }
 function ip(e) {
     let { recentlyLeveledTenureBadge: t, markAsDismissed: n, targetElementRef: l, shouldShow: a } = e,
-        r = e4.sp.indexOf(t),
-        o = (0, iu.I)(e4.sp[r > 0 ? r - 1 : r]).ambient,
+        r = e5.sp.indexOf(t),
+        o = (0, iu.I)(e5.sp[r > 0 ? r - 1 : r]).ambient,
         c = (0, s.useCallback)(() => {
             n(ep.i.TAKE_ACTION),
                 e0.A.setState({ shouldRenderTenureLevelUp: !0 }),
@@ -1570,7 +1570,7 @@ function ip(e) {
         u = (0, s.useCallback)(() => {
             n(ep.i.USER_DISMISS);
         }, [n]),
-        d = e4.VD[t],
+        d = e5.VD[t],
         p = eh.intl.formatToPlainString(eh.t.ewkaVR, {
             timeMilestone: (0, ic.T)(d.id, d.tenureReqNumMonths)?.toLocaleLowerCase(),
         }),
@@ -1594,10 +1594,10 @@ function ih(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 { shouldShow: n = !0 } = t,
                 i = (0, n3.G$)(d.V.ADOPT_CLAN_IDENTITY_NOTICE, e ?? tG.dJq),
-                s = (0, u.bG)([n5.A, tP.default, n9.Ay], () => {
+                s = (0, u.bG)([n4.A, tP.default, n9.Ay], () => {
                     if (null === e) return !1;
-                    let t = n5.A.getGuild(e);
-                    if (void 0 === t || !(0, n4.Rg)(t) || null == t.profile || null === t.profile.tag) return !1;
+                    let t = n4.A.getGuild(e);
+                    if (void 0 === t || !(0, n5.Rg)(t) || null == t.profile || null === t.profile.tag) return !1;
                     let n = tP.default.getCurrentUser();
                     if (
                         void 0 === n ||
@@ -1615,7 +1615,7 @@ function ih(e) {
                 i = e?.primaryGuild,
                 s = i?.identityGuildId ?? null,
                 l = (0, u.bG)([it], () => (null === s ? null : it.getGuildLastSeenInfo(s))),
-                a = (0, u.bG)([n5.A], () => n5.A.getGuild(s)?.profile?.tag),
+                a = (0, u.bG)([n4.A], () => n4.A.getGuild(s)?.profile?.tag),
                 r = null != a && i?.identityGuildId === s && i?.tag === null,
                 o = null != s && l?.tag === a,
                 c = null !== s && r && !o;
@@ -2331,14 +2331,14 @@ class i3 extends s.PureComponent {
                     n.e("40114"),
                     n.e("83518"),
                     n.e("67646"),
-                    n.e("61555"),
-                    n.e("82707"),
+                    n.e("51050"),
+                    n.e("76477"),
                     n.e("23536"),
                     n.e("39967"),
                     n.e("38249"),
                     n.e("40976"),
                     n.e("85216"),
-                    n.e("52753"),
+                    n.e("9842"),
                     n.e("24639"),
                     n.e("61395"),
                 ]).then(n.bind(n, 410681));
@@ -2692,7 +2692,7 @@ function i9(e) {
         ],
     });
 }
-function i5(e) {
+function i4(e) {
     let t = (0, u.bG)([nN.A], () => null != nN.A.getChannelId()),
         n = (0, eg.Py)(e),
         i = s.useRef(new p.Ep()),
@@ -2715,7 +2715,7 @@ function i5(e) {
         { shouldShowTooltip: l, dismissTooltip: r }
     );
 }
-function i4() {
+function i5() {
     let e = (0, u.bG)([tP.default], () => tP.default.getCurrentUser()),
         t = (0, u.bG)([tZ.default], () => tZ.default.getId()),
         {
@@ -2776,8 +2776,8 @@ function i4() {
         H = { avatar: [], settings: [] },
         q = (0, nS.lX)("AccountCoachmark");
     !y && (H.avatar.push(d.M.DISPLAY_NAME_STYLES_COACHMARK), q && H.settings.push(d.M.PRIVATE_PROFILE_COACHMARK));
-    let { shouldShowTooltip: z, dismissTooltip: K } = i5(nO.oh.AUDIO_INPUT),
-        { shouldShowTooltip: $, dismissTooltip: Y } = i5(nO.oh.AUDIO_OUTPUT),
+    let { shouldShowTooltip: z, dismissTooltip: K } = i4(nO.oh.AUDIO_INPUT),
+        { shouldShowTooltip: $, dismissTooltip: Y } = i4(nO.oh.AUDIO_OUTPUT),
         { shouldShowTooltip: Z, dismissTooltip: J } = (function () {
             let [e, t] = s.useState(!1),
                 n = (0, u.bG)([nR.Ay], () => nR.Ay.getMode() === nO.TB.PUSH_TO_TALK),

@@ -1,4 +1,4 @@
-t.r(l), t.d(l, { SectionDivider: () => d5, default: () => d6 });
+t.r(l), t.d(l, { SectionDivider: () => d6, default: () => d7 });
 var a,
     s,
     i = {};
@@ -8433,26 +8433,46 @@ var o9 = t(920050),
     rh = t(881373),
     rc = t(612669),
     rn = t(603488),
-    ro = t(282077),
-    rr = t(84483),
-    rd = t(105390),
-    rv = t(961773);
-let rg = (e) => {
+    ro = t(303816);
+function rr(e) {
+    let { componentId: l, badgeCopy: t, acknowledgedBadgeCopy: a, isDismissed: s } = e;
+    return ((0, B.A)({
+        type: d.ImpressionTypes.VIEW,
+        name: d.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: { component_type: oF.C.PREMIUM_TAB, component_id: l },
+    }),
+    s)
+        ? (0, h.jsxs)("div", {
+              className: o()(ro.BE, ro.ZA),
+              children: [
+                  (0, h.jsx)(lq.O, { size: "custom", width: 10, height: 10, color: "currentColor", className: ro.P0 }),
+                  (0, h.jsx)(nO.E, { variant: "eyebrow", color: "text-subtle", children: a }),
+              ],
+          })
+        : (0, h.jsx)("div", {
+              className: o()(ro.BE, ro.CU),
+              children: (0, h.jsx)(nO.E, { variant: "eyebrow", className: ro.lI, children: t }),
+          });
+}
+var rd = t(84483),
+    rv = t(105390),
+    rg = t(961773);
+let rp = (e) => {
     let { isSelected: l, discountOffer: t } = e,
         [a, s] = (0, nU.kn)([m.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], void 0, !0);
     return (c.useEffect(() => {
         l && a === m.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE && s(n0.i.TAKE_ACTION);
     }, [l, s, a]),
     a === m.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE)
-        ? (0, h.jsx)(rd.MA, {
+        ? (0, h.jsx)(rv.MA, {
               badgeCopy: nz.intl.format(nz.t.AYcXGW, { discountOfferAmount: t.discount.amount }).toString(),
               isTabSelected: l,
               offerExpiresAt: null,
           })
         : (0, h.jsxs)("div", {
-              className: o()(rv.bv, rv.Hf),
+              className: o()(rg.bv, rg.Hf),
               children: [
-                  (0, h.jsx)(lq.O, { size: "custom", width: 14, height: 14, color: "currentColor", className: rv.aW }),
+                  (0, h.jsx)(lq.O, { size: "custom", width: 14, height: 14, color: "currentColor", className: rg.aW }),
                   (0, h.jsx)(nO.E, {
                       variant: "eyebrow",
                       color: "text-subtle",
@@ -8461,19 +8481,19 @@ let rg = (e) => {
               ],
           });
 };
-var rp = t(112848);
-let rm = () => {
-    let e = (0, rp.bu)(),
+var rm = t(112848);
+let rw = () => {
+    let e = (0, rm.bu)(),
         [l, t] = (0, nU.kn)(null != e ? [m.M.WHATS_NEW_TENURE_BADGE_REWARD] : [], void 0, !0);
     return l === m.M.WHATS_NEW_TENURE_BADGE_REWARD
         ? [nz.intl.string(nz.t["jyYgZ+"]).toLocaleUpperCase(), t]
         : [null, t];
 };
-var rw = t(989349),
-    rf = t.n(rw),
-    rx = t(983060),
-    rA = t(237146);
-function ru(e) {
+var rf = t(989349),
+    rx = t.n(rf),
+    rA = t(983060),
+    ru = t(237146);
+function rI(e) {
     let { targetElementRef: l, dismissPopover: t, children: a } = e;
     return (0, h.jsxs)(h.Fragment, {
         children: [
@@ -8487,8 +8507,8 @@ function ru(e) {
                 targetElementRef: l,
                 onRequestClose: () => t(n0.i.USER_DISMISS),
                 badge: { type: "new", variant: "expressive" },
-                title: nz.intl.string(rA.default.pdaUSE),
-                body: nz.intl.format(rA.default.bsMVNi, { termsLink: (0, rx.W)() }),
+                title: nz.intl.string(ru.default.pdaUSE),
+                body: nz.intl.format(ru.default.bsMVNi, { termsLink: (0, rA.W)() }),
                 graphic: {
                     type: "image",
                     src: "https://cdn.discordapp.com/assets/content/a626e89f21174d458db77a7934048a601ec3147f0d79fbe3d0f33b76d066c155.png",
@@ -8508,38 +8528,38 @@ function ru(e) {
         ],
     });
 }
-var rI = t(673589);
-function rM(e) {
+var rM = t(673589);
+function rZ(e) {
     let { children: l } = e;
     return (0, h.jsx)(u.u, {
         asset: (0, h.jsx)("img", {
-            className: rI.L,
+            className: rM.L,
             src: "https://cdn.discordapp.com/assets/content/750de711fd51af6562910d0c2eb3eb39083f784590dcea2ccfc9a20c785721a6.png",
             alt: "",
             width: 80,
             height: 80,
         }),
         assetSize: 80,
-        title: nz.intl.string(rA.default.wqhsP3),
-        body: nz.intl.string(rA.default.HCJKFl),
+        title: nz.intl.string(ru.default.wqhsP3),
+        body: nz.intl.string(ru.default.HCJKFl),
         padding: "lg",
         position: "right",
         asContainer: !0,
         children: l,
     });
 }
-var rZ = t(890687);
-let r_ =
+var r_ = t(890687);
+let rE =
         "https://cdn.discordapp.com/assets/content/9ffdc24b65b49158f09308dca984b0e678d50f2710807fbd2b1a14cb7a6457d6.svg",
-    rE = (e) => {
+    rT = (e) => {
         let { children: l, multiplier: t } = e,
-            a = (0, rZ.Oq)()
+            a = (0, r_.Oq)()
                 ? nz.intl.format(nz.t.NpUfej, { bonusOrbMultiplier: t })
                 : nz.intl.format(nz.t["G5k+lZ"], { bonusOrbMultiplier: t });
         return (0, h.jsx)(u.u, {
             title: nz.intl.string(nz.t.F2MShO),
             body: a,
-            asset: (0, h.jsx)("img", { src: r_, alt: "", "aria-hidden": !0 }),
+            asset: (0, h.jsx)("img", { src: rE, alt: "", "aria-hidden": !0 }),
             assetSize: 80,
             position: "right",
             align: "center",
@@ -8547,14 +8567,14 @@ let r_ =
             children: l,
         });
     };
-var rT = t(962995),
-    rN = t(208556);
-function rj(e) {
+var rN = t(962995),
+    rj = t(208556);
+function rC(e) {
     let { children: l } = e;
     return (0, h.jsx)(u.u, {
-        body: nz.intl.format(rT.default.zinfZi, { discountPercent: rh.aW }),
-        title: nz.intl.string(rT.default.OlObRa),
-        asset: (0, h.jsx)("img", { src: rN.A, alt: "", "aria-hidden": !0, style: { borderRadius: 8 } }),
+        body: nz.intl.format(rN.default.zinfZi, { discountPercent: rh.aW }),
+        title: nz.intl.string(rN.default.OlObRa),
+        asset: (0, h.jsx)("img", { src: rj.A, alt: "", "aria-hidden": !0, style: { borderRadius: 8 } }),
         assetSize: 80,
         padding: "lg",
         position: "right",
@@ -8562,23 +8582,23 @@ function rj(e) {
         children: l,
     });
 }
-var rC = t(312640),
-    rR = t(208756),
-    rV = t(798618),
-    ry = t(916845),
-    rO = t(627330),
-    rH = t(532794),
-    rL = t(146218);
-function rB(e) {
+var rR = t(312640),
+    rV = t(208756),
+    ry = t(798618),
+    rO = t(916845),
+    rH = t(627330),
+    rL = t(532794),
+    rB = t(146218);
+function rS(e) {
     let { targetElementRef: l, dismissPopover: t, children: a } = e,
         { analyticsLocations: s } = (0, nF.Ay)(),
         i = c.useCallback(() => {
-            t(n0.i.TAKE_ACTION), (0, rH.A)({ subscriptionTier: oV.pe.TIER_2, analyticsLocations: s });
+            t(n0.i.TAKE_ACTION), (0, rL.A)({ subscriptionTier: oV.pe.TIER_2, analyticsLocations: s });
         }, [t, s]);
     return (0, h.jsxs)(h.Fragment, {
         children: [
             (0, h.jsx)("div", { children: a }),
-            (0, h.jsx)(rC.x, {
+            (0, h.jsx)(rR.x, {
                 targetElementRef: l,
                 onRequestClose: () => t(n0.i.USER_DISMISS),
                 alignmentStrategy: "edge",
@@ -8589,22 +8609,22 @@ function rB(e) {
                 children: (0, h.jsxs)("div", {
                     "data-mana-component": "popover",
                     children: [
-                        (0, h.jsx)(ry.q, { onClick: () => t(n0.i.USER_DISMISS), variant: "color-mix" }),
+                        (0, h.jsx)(rO.q, { onClick: () => t(n0.i.USER_DISMISS), variant: "color-mix" }),
                         (0, h.jsx)("div", {
-                            className: rL.h,
+                            className: rB.h,
                             children: (0, h.jsx)("img", {
                                 src: "https://cdn.discordapp.com/assets/content/3a2af2dbdf5126902e05051c880579b0b2a4d66577c261a83aa20d3e3fc5c084.svg",
                                 alt: "",
                                 "aria-hidden": !0,
-                                className: rL.S,
+                                className: rB.S,
                             }),
                         }),
-                        (0, h.jsx)(rO.D, {
-                            title: nz.intl.string(rT.default.OlObRa),
-                            body: nz.intl.format(rT.default["A+56/R"], { discountPercent: rh.aW }),
+                        (0, h.jsx)(rH.D, {
+                            title: nz.intl.string(rN.default.OlObRa),
+                            body: nz.intl.format(rN.default["A+56/R"], { discountPercent: rh.aW }),
                             badge: { type: "beta", variant: "expressive" },
                         }),
-                        (0, h.jsx)(rR.Z, {
+                        (0, h.jsx)(rV.Z, {
                             actions: [
                                 {
                                     text: nz.intl.string(nz.t.pj0XBN),
@@ -8615,31 +8635,31 @@ function rB(e) {
                                 },
                             ],
                         }),
-                        (0, h.jsx)(rV.F, {}),
+                        (0, h.jsx)(ry.F, {}),
                     ],
                 }),
             }),
         ],
     });
 }
-var rS = t(88001),
-    rF = t(466919),
-    rU = t(438705);
-let rb = (e) => {
+var rF = t(88001),
+    rU = t(466919),
+    rb = t(438705);
+let rP = (e) => {
     let { targetElementRef: l, dismissPopover: a, children: s } = e,
         i = o1({ location: "nitro_tab_popover" }),
         { analyticsLocations: c } = (0, nF.Ay)(),
         n = i
-            ? nz.intl.string(rF.default.oOSj1l)
-            : nz.intl.format(rF.default["c+NBSl"], { premiumGroupProductName: (0, rS.DP)() }),
+            ? nz.intl.string(rU.default.oOSj1l)
+            : nz.intl.format(rU.default["c+NBSl"], { premiumGroupProductName: (0, rF.DP)() }),
         o = i
-            ? nz.intl.string(rF.default.nCLJQn)
-            : nz.intl.format(rF.default.MuUV5u, { premiumGroupProductName: (0, rS.DP)(), totalSeats: rS.aw }),
+            ? nz.intl.string(rU.default.nCLJQn)
+            : nz.intl.format(rU.default.MuUV5u, { premiumGroupProductName: (0, rF.DP)(), totalSeats: rF.aw }),
         r = (0, h.jsx)(nG.A, {
             targetElementRef: l,
             title: n,
             body: o,
-            graphic: { type: "image", src: rU },
+            graphic: { type: "image", src: rb },
             badge: { type: "beta", variant: "expressive" },
             gradientColor: "nitro-pink",
             size: "md",
@@ -8649,13 +8669,13 @@ let rb = (e) => {
             actions: [
                 {
                     text: i
-                        ? nz.intl.format(rF.default.LwdrNi, { premiumGroupProductName: (0, rS.DP)() })
-                        : nz.intl.string(rF.default["IO+nlU"]),
+                        ? nz.intl.format(rU.default.LwdrNi, { premiumGroupProductName: (0, rF.DP)() })
+                        : nz.intl.string(rU.default["IO+nlU"]),
                     variant: i ? "expressive" : "primary",
                     onClick: () => {
                         a(n0.i.TAKE_ACTION),
                             i
-                                ? (0, rH.A)({
+                                ? (0, rL.A)({
                                       subscriptionTier: oV.pe.TIER_2,
                                       initialPlanId: oV.gD.PREMIUM_GROUP_MONTH,
                                       analyticsLocations: c,
@@ -8672,126 +8692,126 @@ let rb = (e) => {
         });
     return (0, h.jsxs)(h.Fragment, { children: [(0, h.jsx)("div", { children: s }), r] });
 };
-var rP = t(421438);
-function rD(e) {
+var rD = t(421438);
+function rk(e) {
     let { targetElementRef: l, children: t } = e;
     return (0, h.jsx)(u.u, {
         targetElementRef: l,
-        asset: (0, h.jsx)("img", { src: rP, alt: "" }),
-        title: nz.intl.string(rF.default.aFBQ3d),
-        body: nz.intl.string(rF.default.HXu14O),
+        asset: (0, h.jsx)("img", { src: rD, alt: "" }),
+        title: nz.intl.string(rU.default.aFBQ3d),
+        body: nz.intl.string(rU.default.HXu14O),
         padding: "lg",
         caretConfig: { align: "center", position: "left" },
         position: "right",
         children: t,
     });
 }
-var rk = t(567341),
-    rJ = t(549384),
-    rG = t(490285);
-function rW(e) {
+var rJ = t(567341),
+    rG = t(549384),
+    rW = t(490285);
+function rq(e) {
     let { targetElementRef: l, dismissPopover: t, children: a } = e,
         s = c.useCallback(() => {
-            t(n0.i.TAKE_ACTION), (0, nW.pX)(`${nq.BVt.NITRO_HOME}?section=${rJ.L}`);
+            t(n0.i.TAKE_ACTION), (0, nW.pX)(`${nq.BVt.NITRO_HOME}?section=${rG.L}`);
         }, [t]),
         i = (0, h.jsx)(nG.A, {
             targetElementRef: l,
             onRequestClose: () => t(n0.i.USER_DISMISS),
-            graphic: { type: "rive", rive: rk.Z },
+            graphic: { type: "rive", rive: rJ.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: nz.intl.string(rG.default.UPOlxO),
-            body: nz.intl.string(rG.default.e6r8OX),
+            title: nz.intl.string(rW.default.UPOlxO),
+            body: nz.intl.string(rW.default.e6r8OX),
             actions: [{ text: nz.intl.string(nz.t.RzWDqY), icon: sC.t, onClick: s }],
             gradientColor: "nitro-pink",
         });
     return (0, h.jsxs)(h.Fragment, { children: [(0, h.jsx)("div", { children: a }), i] });
 }
-var rq = t(31502);
-function rz(e) {
+var rz = t(31502);
+function rK(e) {
     let { targetElementRef: l, dismissPopover: t, lastGrantedRewardAmount: a, children: s } = e,
         i = c.useCallback(() => {
             t(n0.i.TAKE_ACTION);
-            let e = (0, rq.Q)("PremiumOrbRewardsOrbDropPopover")
+            let e = (0, rz.Q)("PremiumOrbRewardsOrbDropPopover")
                 ? `${nq.BVt.NITRO_HOME}?perk=${o9.NITRO_ORBS_REWARDS_CARD_ID}`
-                : `${nq.BVt.NITRO_HOME}?section=${rJ.L}`;
+                : `${nq.BVt.NITRO_HOME}?section=${rG.L}`;
             (0, nW.pX)(e);
         }, [t]),
         n = (0, h.jsx)(nG.A, {
             targetElementRef: l,
             onRequestClose: () => t(n0.i.USER_DISMISS),
-            graphic: { type: "rive", rive: rk.Z },
+            graphic: { type: "rive", rive: rJ.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: nz.intl.string(rG.default["78+gLr"]),
-            body: nz.intl.formatToPlainString(rG.default.Ry1TXC, { orbsCount: a }),
+            title: nz.intl.string(rW.default["78+gLr"]),
+            body: nz.intl.formatToPlainString(rW.default.Ry1TXC, { orbsCount: a }),
             actions: [{ text: nz.intl.string(nz.t.RzWDqY), icon: sC.t, onClick: i }],
             gradientColor: "nitro-pink",
         });
     return (0, h.jsxs)(h.Fragment, { children: [(0, h.jsx)("div", { children: s }), n] });
 }
-function rK(e) {
+function rQ(e) {
     let { targetElementRef: l, dismissPopover: t, children: a } = e,
         s = c.useCallback(() => {
-            t(n0.i.TAKE_ACTION), (0, nW.pX)(`${nq.BVt.NITRO_HOME}?section=${rJ.L}`);
+            t(n0.i.TAKE_ACTION), (0, nW.pX)(`${nq.BVt.NITRO_HOME}?section=${rG.L}`);
         }, [t]),
         i = (0, h.jsx)(nG.A, {
             targetElementRef: l,
             onRequestClose: () => t(n0.i.USER_DISMISS),
-            graphic: { type: "rive", rive: rk.Z },
+            graphic: { type: "rive", rive: rJ.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: nz.intl.string(rG.default["3BI7j6"]),
-            body: nz.intl.string(rG.default.XNHr3C),
+            title: nz.intl.string(rW.default["3BI7j6"]),
+            body: nz.intl.string(rW.default.XNHr3C),
             actions: [{ text: nz.intl.string(nz.t.hvVgAZ), onClick: s }],
             gradientColor: "nitro-pink",
         });
     return (0, h.jsxs)(h.Fragment, { children: [(0, h.jsx)("div", { children: a }), i] });
 }
-function rQ(e) {
+function rX(e) {
     let { alt: l, ariaLabel: t, ariaHidden: a, role: s, width: i = 144, height: c = 144 } = e;
     return (0, h.jsx)("img", {
         style: { width: i, height: c },
-        src: r_,
+        src: rE,
         alt: l,
         "aria-label": t,
         "aria-hidden": a,
         role: s ?? "img",
     });
 }
-var rX = t(912293);
-function rY(e) {
+var rY = t(912293);
+function r$(e) {
     let { orbsCount: l } = e;
     return (0, h.jsxs)("div", {
-        className: rX.kL,
+        className: rY.kL,
         children: [
             (0, h.jsx)("div", {
-                className: rX.dy,
-                children: (0, h.jsx)(rQ, { alt: "", "aria-hidden": !0, width: 36, height: 36 }),
+                className: rY.dy,
+                children: (0, h.jsx)(rX, { alt: "", "aria-hidden": !0, width: 36, height: 36 }),
             }),
-            (0, h.jsx)(nO.E, { variant: "display-lg", color: "text-strong", className: rX.Uq, children: l }),
+            (0, h.jsx)(nO.E, { variant: "display-lg", color: "text-strong", className: rY.Uq, children: l }),
         ],
     });
 }
-var r$ = t(664184);
-function r1(e) {
+var r1 = t(664184);
+function r0(e) {
     let { targetElementRef: l, dismissPopover: t, children: a, numOrbs: s } = e,
         { analyticsLocations: i } = (0, nF.Ay)(nS.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION),
         n = c.useCallback(() => {
             t(n0.i.TAKE_ACTION),
-                (0, rH.A)({
+                (0, rL.A)({
                     subscriptionTier: oV.pe.TIER_2,
                     analyticsLocations: i,
                     analyticsObject: { object: nq.ZSU.BUTTON_CTA, objectType: nq.AnalyticsObjectTypes.TIER_2 },
@@ -8800,7 +8820,7 @@ function r1(e) {
     return (0, h.jsxs)(h.Fragment, {
         children: [
             (0, h.jsx)("div", { children: a }),
-            (0, h.jsx)(rC.x, {
+            (0, h.jsx)(rR.x, {
                 targetElementRef: l,
                 onRequestClose: () => t(n0.i.USER_DISMISS),
                 alignmentStrategy: "edge",
@@ -8811,33 +8831,33 @@ function r1(e) {
                 children: (0, h.jsxs)("div", {
                     "data-mana-component": "popover",
                     children: [
-                        (0, h.jsx)(ry.q, { onClick: () => t(n0.i.USER_DISMISS), variant: "color-mix" }),
-                        (0, h.jsx)("div", { className: r$.O, children: (0, h.jsx)(rY, { orbsCount: s }) }),
-                        (0, h.jsx)(rO.D, {
-                            title: nz.intl.string(rG.default.hx5AFp),
-                            body: nz.intl.formatToPlainString(rG.default.otQEii, { orbsCount: s }),
+                        (0, h.jsx)(rO.q, { onClick: () => t(n0.i.USER_DISMISS), variant: "color-mix" }),
+                        (0, h.jsx)("div", { className: r1.O, children: (0, h.jsx)(r$, { orbsCount: s }) }),
+                        (0, h.jsx)(rH.D, {
+                            title: nz.intl.string(rW.default.hx5AFp),
+                            body: nz.intl.formatToPlainString(rW.default.otQEii, { orbsCount: s }),
                             badge: { type: "beta", variant: "expressive" },
-                            className: r$.Q,
+                            className: r1.Q,
                         }),
-                        (0, h.jsx)(rR.Z, {
+                        (0, h.jsx)(rV.Z, {
                             actions: [
                                 { text: nz.intl.string(nz.t.pj0XBN), variant: "primary", icon: sC.t, onClick: n },
                             ],
                         }),
-                        (0, h.jsx)(rV.F, {}),
+                        (0, h.jsx)(ry.F, {}),
                     ],
                 }),
             }),
         ],
     });
 }
-var r0 = t(511484),
-    r2 = t(473702),
-    r3 = t(398932);
-let r4 = (e) => {
+var r2 = t(511484),
+    r3 = t(473702),
+    r4 = t(398932);
+let r5 = (e) => {
     let { targetElementRef: l, discountOffer: a, premiumSubscription: s, dismissCoachmark: i, children: c } = e,
         { analyticsLocations: n } = (0, nF.Ay)(nS.A.CHURN_DISCOUNT_POPOVER),
-        o = (0, r0.iU)(oV.gD.PREMIUM_MONTH_TIER_2, a, s),
+        o = (0, r2.iU)(oV.gD.PREMIUM_MONTH_TIER_2, a, s),
         r = (0, h.jsx)(nG.h, {
             targetElementRef: l,
             position: "right",
@@ -8850,7 +8870,7 @@ let r4 = (e) => {
                 billingPeriod: (0, oM.Ke)(a.discount.user_usage_limit_interval),
                 numMonths: a.discount.user_usage_limit,
             }),
-            graphic: { type: "image", src: r3.A },
+            graphic: { type: "image", src: r4.A },
             gradientColor: "nitro-pink",
             actions: [
                 {
@@ -8877,7 +8897,7 @@ let r4 = (e) => {
                                         ...l,
                                         premiumSubscription: s,
                                         analyticsLocations: n,
-                                        initialStep: r2.g.CONFIRM_DISCOUNT,
+                                        initialStep: r3.g.CONFIRM_DISCOUNT,
                                     });
                             });
                     },
@@ -8890,17 +8910,17 @@ let r4 = (e) => {
         });
     return (0, h.jsxs)(h.Fragment, { children: [(0, h.jsx)("div", { children: c }), r] });
 };
-var r5 = t(498470),
-    r6 = t(807098),
-    r7 = t(637706);
-function r8(e) {
+var r6 = t(498470),
+    r7 = t(807098),
+    r8 = t(637706);
+function r9(e) {
     let { children: l, targetElementRef: t, dismissPopover: a } = e,
         s = (0, ri.c)(oF.C.PREMIUM_TAB_POPOVER),
         i =
             null != s && "premiumTabPopover" === s.properties.properties.oneofKind
                 ? s.properties.properties.premiumTabPopover
                 : null,
-        c = (0, r6.T)(i?.asset);
+        c = (0, r7.T)(i?.asset);
     if (null == i) return l;
     let n =
             i.button?.copy != null
@@ -8908,7 +8928,7 @@ function r8(e) {
                       {
                           text: i.button.copy,
                           variant: "expressive",
-                          onClick: (0, r5.h)({
+                          onClick: (0, r6.h)({
                               buttonAction: i.button.buttonAction,
                               deeplinkSection: i.button.deeplinkSection,
                               onClose: () => a(n0.i.USER_DISMISS),
@@ -8917,7 +8937,7 @@ function r8(e) {
                       },
                   ]
                 : void 0,
-        o = (0, r7.C)(i.helpArticle, i.helpArticleId);
+        o = (0, r8.C)(i.helpArticle, i.helpArticleId);
     return (0, h.jsxs)(h.Fragment, {
         children: [
             (0, h.jsx)("div", { children: l }),
@@ -8939,32 +8959,32 @@ function r8(e) {
         ],
     });
 }
-var r9 = t(990078),
-    de = t(534514),
-    dl = t(306125);
-function dt(e) {
+var de = t(990078),
+    dl = t(534514),
+    dt = t(306125);
+function da(e) {
     let { children: l } = e,
         t = (0, ri.c)(oF.C.PREMIUM_TAB_TOOLTIP),
         a =
             null != t && "premiumTabTooltip" === t.properties.properties.oneofKind
                 ? t.properties.properties.premiumTabTooltip
                 : null,
-        s = (0, r6.T)(a?.asset);
+        s = (0, r7.T)(a?.asset);
     if (null == a) return l;
     let i = (0, h.jsxs)("div", {
-        className: dl.$e,
+        className: dt.$e,
         children: [
-            null != s && (0, h.jsx)("img", { className: dl.NC, src: s, alt: "" }),
+            null != s && (0, h.jsx)("img", { className: dt.NC, src: s, alt: "" }),
             (0, h.jsxs)("div", {
-                className: dl.Vm,
+                className: dt.Vm,
                 children: [
-                    (0, h.jsx)(de.D, { variant: "heading-md/bold", color: "text-strong", children: a.header }),
+                    (0, h.jsx)(dl.D, { variant: "heading-md/bold", color: "text-strong", children: a.header }),
                     (0, h.jsx)(nO.E, { variant: "text-sm/normal", color: "text-subtle", children: a.body }),
                 ],
             }),
         ],
     });
-    return (0, h.jsx)(r9.m, {
+    return (0, h.jsx)(de.m, {
         __unsupportedReactNodeAsText: i,
         position: "right",
         "aria-label": a.header,
@@ -8972,7 +8992,7 @@ function dt(e) {
         children: (0, h.jsx)("div", { children: l }),
     });
 }
-function da(e) {
+function ds(e) {
     let { alt: l, ariaLabel: t, ariaHidden: a, role: s, width: i = 144, height: c = 144 } = e;
     return (0, h.jsx)("img", {
         style: { width: i, height: c },
@@ -8983,25 +9003,25 @@ function da(e) {
         role: s ?? "img",
     });
 }
-var ds = t(580630);
-function di(e) {
+var di = t(580630);
+function dh(e) {
     let { children: l, endsAt: t, variant: a = "initial" } = e,
         s = (0, oX.Zb)(t),
-        i = (0, ds.$g)(0, (0, oM.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+        i = (0, di.$g)(0, (0, oM.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
         c = "followup" === a,
         n = c ? nz.intl.string(nz.t.gzhz8w) : nz.intl.string(nz.t.aopiS6),
         o = c ? nz.intl.format(nz.t["3iUE+U"], { price: i }) : nz.intl.format(nz.t.AQd9tZ, { days: s });
     return (0, h.jsx)(u.u, {
         title: o,
         body: n,
-        asset: (0, h.jsx)(da, { alt: "", width: 48, height: 48 }),
+        asset: (0, h.jsx)(ds, { alt: "", width: 48, height: 48 }),
         assetSize: 48,
         position: "right",
         asContainer: !0,
         children: (0, h.jsx)("div", { children: l }),
     });
 }
-var dh =
+var dc =
     (((s = {}).NONE = "none"),
     (s.CHURN_DISCOUNT = "churn_discount"),
     (s.PREMIUM_GROUP = "premium_group"),
@@ -9018,7 +9038,7 @@ var dh =
     (s.CROISSANT_REHEAT_MOMENT = "croissant_reheat_moment"),
     (s.CROISSANT_REHEAT_TOOLTIP = "croissant_reheat_tooltip"),
     s);
-function dc(e) {
+function dn(e) {
     let {
         children: l,
         popoverType: t,
@@ -9039,7 +9059,7 @@ function dc(e) {
     switch (t) {
         case "churn_discount":
             if (null != s && null != i)
-                return (0, h.jsx)(r4, {
+                return (0, h.jsx)(r5, {
                     targetElementRef: a,
                     discountOffer: s,
                     premiumSubscription: i,
@@ -9048,17 +9068,17 @@ function dc(e) {
                 });
             break;
         case "premium_group":
-            return (0, h.jsx)(rb, { targetElementRef: a, dismissPopover: r, children: l });
+            return (0, h.jsx)(rP, { targetElementRef: a, dismissPopover: r, children: l });
         case "premium_group_tooltip":
-            return (0, h.jsx)(rD, { targetElementRef: a, children: l });
+            return (0, h.jsx)(rk, { targetElementRef: a, children: l });
         case "orbs_upsell":
-            if (c) return (0, h.jsx)(r1, { targetElementRef: a, dismissPopover: r, numOrbs: n, children: l });
-            return (0, h.jsx)(rK, { targetElementRef: a, dismissPopover: r, children: l });
+            if (c) return (0, h.jsx)(r0, { targetElementRef: a, dismissPopover: r, numOrbs: n, children: l });
+            return (0, h.jsx)(rQ, { targetElementRef: a, dismissPopover: r, children: l });
         case "orbs_intro":
-            return (0, h.jsx)(rW, { targetElementRef: a, dismissPopover: r, children: l });
+            return (0, h.jsx)(rq, { targetElementRef: a, dismissPopover: r, children: l });
         case "orbs_drop":
             if (null != o)
-                return (0, h.jsx)(rz, {
+                return (0, h.jsx)(rK, {
                     targetElementRef: a,
                     dismissPopover: d,
                     lastGrantedRewardAmount: o,
@@ -9067,28 +9087,28 @@ function dc(e) {
             break;
         case "reverse_trial": {
             let e = m?.trial_id === oV.Tt,
-                t = p ?? (m?.expires_at != null ? rf()(m?.expires_at) : null);
-            if (null != t) return (0, h.jsx)(di, { endsAt: t, variant: e ? "followup" : "initial", children: l });
+                t = p ?? (m?.expires_at != null ? rx()(m?.expires_at) : null);
+            if (null != t) return (0, h.jsx)(dh, { endsAt: t, variant: e ? "followup" : "initial", children: l });
             break;
         }
         case "tooltip":
-            return (0, h.jsx)(dt, { children: l });
+            return (0, h.jsx)(da, { children: l });
         case "marketing_moment_popover":
-            return (0, h.jsx)(r8, { targetElementRef: a, dismissPopover: v, children: l });
+            return (0, h.jsx)(r9, { targetElementRef: a, dismissPopover: v, children: l });
         case "l_premium_sub_tooltip":
-            return (0, h.jsx)(rj, { children: l });
+            return (0, h.jsx)(rC, { children: l });
         case "l_upsell":
-            return (0, h.jsx)(rB, { targetElementRef: a, dismissPopover: r, children: l });
+            return (0, h.jsx)(rS, { targetElementRef: a, dismissPopover: r, children: l });
         case "orbs_multiplier":
-            return (0, h.jsx)(rE, { multiplier: g, children: l });
+            return (0, h.jsx)(rT, { multiplier: g, children: l });
         case "croissant_reheat_moment":
-            return (0, h.jsx)(ru, { targetElementRef: a, dismissPopover: r, children: l });
+            return (0, h.jsx)(rI, { targetElementRef: a, dismissPopover: r, children: l });
         case "croissant_reheat_tooltip":
-            return (0, h.jsx)(rM, { children: l });
+            return (0, h.jsx)(rZ, { children: l });
     }
     return l;
 }
-function dn(e) {
+function dr(e) {
     return (0, h.jsxs)("svg", {
         width: "14",
         height: "14",
@@ -9123,45 +9143,45 @@ function dn(e) {
         ],
     });
 }
-var dr = t(946332);
-function dd(e) {
+var dd = t(946332);
+function dv(e) {
     let { copy: l, showStars: t = !0, className: a } = e;
     return (0, h.jsxs)("div", {
-        className: o()(dr.fC, a),
+        className: o()(dd.fC, a),
         children: [
             t &&
                 (0, h.jsxs)(h.Fragment, {
                     children: [
                         (0, h.jsx)("span", {
-                            className: o()(dr.d4, dr.Cm),
-                            children: (0, h.jsx)(dn, { width: "10", height: "10" }),
+                            className: o()(dd.d4, dd.Cm),
+                            children: (0, h.jsx)(dr, { width: "10", height: "10" }),
                         }),
                         (0, h.jsx)("span", {
-                            className: o()(dr.d4, dr.nv),
-                            children: (0, h.jsx)(dn, { width: "14", height: "14" }),
+                            className: o()(dd.d4, dd.nv),
+                            children: (0, h.jsx)(dr, { width: "14", height: "14" }),
                         }),
                     ],
                 }),
-            (0, h.jsx)(nO.E, { variant: "eyebrow", className: dr.Ad, children: l }),
+            (0, h.jsx)(nO.E, { variant: "eyebrow", className: dd.Ad, children: l }),
         ],
     });
 }
-let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
-    dg = (e) => {
+let dg = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
+    dp = (e) => {
         let { selected: l } = e,
             t = (0, p.bG)([oI.default], () => oI.default.getCurrentUser()),
             a = (0, p.bG)([oz.A], () => oz.A.getPremiumTypeSubscription()),
             s = (0, rs.V)(),
             i = (0, ra.O)(),
             h = (0, oQ.cg)(),
-            [c] = rm(),
+            [c] = rw(),
             n = (0, oM.Of)(t, a),
             o = (0, p.bG)([oK.A], () => oK.A.getCreatedAtOverride()),
             r = l || null != s || null != i || h || null != c || n,
             d = null != o ? o : t?.createdAt;
         return r || (null != t && null != d && Date.now() - d.getTime() > 12096e5);
     },
-    dp = (e) => {
+    dm = (e) => {
         let l,
             t,
             a,
@@ -9178,7 +9198,7 @@ let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             T = (0, oQ.cg)(),
             N = (0, oO.NF)({ trialOffer: M }),
             j = (0, rc.bf)(),
-            [C, R] = rm(),
+            [C, R] = rw(),
             {
                 shouldShowBonusOrbsUX: y,
                 dismissOrbMultiplierTabTooltip: O,
@@ -9201,7 +9221,7 @@ let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             B = (0, p.bG)([om.A], () => om.A.getReminderStateId()),
             S = oR(),
             { programReward: F, isEligible: U } = (0, oW.F)({ location: "NitroTabButton" }),
-            { receivesUpdatedUpsellPopover: b, orbsRewardAmount: P } = (0, rr.uX)("NitroTabButton"),
+            { receivesUpdatedUpsellPopover: b, orbsRewardAmount: P } = (0, rd.uX)("NitroTabButton"),
             D = o1({ location: "nitro_tab_popover" }),
             k = (function (e) {
                 let { location: l } = e;
@@ -9293,14 +9313,14 @@ let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             (c.useEffect(() => {
                 !0 === s &&
                     (null != ep && em(n0.i.AUTO_DISMISS),
-                    null == ew || dv.has(ew) || ef(n0.i.AUTO_DISMISS),
+                    null == ew || dg.has(ew) || ef(n0.i.AUTO_DISMISS),
                     null != eI && eM(n0.i.AUTO_DISMISS),
                     null != eE && eT(n0.i.AUTO_DISMISS),
                     null != eZ && e_(n0.i.AUTO_DISMISS),
                     y && O(n0.i.AUTO_DISMISS),
                     null != C && R(n0.i.AUTO_DISMISS));
             }, [em, s, ep, ef, ew, eI, eM, eE, eT, eZ, e_, y, O, C, R]),
-            !dg({ selected: s }))
+            !dp({ selected: s }))
         )
             return null;
         let eR = () => {
@@ -9337,7 +9357,7 @@ let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
         else if (ey) (l = (0, h.jsx)(nV.E, { type: "new", variant: "expressive" })), (t = 10);
         else if (null != ex && "premiumTab" === ex.properties.properties.oneofKind) {
             let e = (0, o_.u$)(m.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, ex?.promotionId ?? "").isDismissed;
-            (l = (0, h.jsx)(ro.A, {
+            (l = (0, h.jsx)(rr, {
                 componentId: ex.id,
                 badgeCopy: ex.properties.properties.premiumTab.badgeLabel,
                 acknowledgedBadgeCopy: ex.properties.properties.premiumTab.acknowledgedBadgeLabel,
@@ -9349,7 +9369,7 @@ let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
         } else if (T) (l = (0, h.jsx)(rn.A, {})), (t = 0);
         else if (N) {
             let e = (0, oO.ZR)();
-            (l = (0, h.jsx)(rd.MA, {
+            (l = (0, h.jsx)(rv.MA, {
                 isTabSelected: s,
                 badgeCopy: nz.intl.string(nz.t.OS9KPu),
                 offerExpiresAt: !0 === e ? M?.expires_at : null,
@@ -9367,12 +9387,12 @@ let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
                   ? ((l = (0, h.jsx)(nV.E, { type: { text: nz.intl.string(nz.t.raP9dM) }, variant: "expressive" })),
                     (t = 4))
                   : null != C
-                    ? ((l = (0, h.jsx)(dd, { copy: C, showStars: !1 })), (t = 1))
+                    ? ((l = (0, h.jsx)(dv, { copy: C, showStars: !1 })), (t = 1))
                     : null != Z
-                      ? ((l = (0, h.jsx)(rd.fY, { userDiscount: Z, isTabSelected: s, includesAmountOff: !1 })), (t = 3))
+                      ? ((l = (0, h.jsx)(rv.fY, { userDiscount: Z, isTabSelected: s, includesAmountOff: !1 })), (t = 3))
                       : null == M || ed
                         ? X
-                            ? ((l = (0, h.jsx)(rg, { isSelected: s, discountOffer: _ })), (t = 8))
+                            ? ((l = (0, h.jsx)(rp, { isSelected: s, discountOffer: _ })), (t = 8))
                             : (G && ew === m.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
                                 (Q && ew === m.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
                                 (K && eE === m.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
@@ -9388,37 +9408,37 @@ let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
                                       : es &&
                                         ew === m.M.CROISSANT_REHEAT_MOMENT &&
                                         ((l = (0, h.jsx)(nV.E, { type: "new", variant: "expressive" })), (t = 2))
-                        : ((l = (0, h.jsx)(rd.Ag, { trialOffer: M, isTabSelected: s })), (t = 4));
-        let eO = dh.NONE;
+                        : ((l = (0, h.jsx)(rv.Ag, { trialOffer: M, isTabSelected: s })), (t = 4));
+        let eO = dc.NONE;
         eZ === m.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
-            ? (eO = dh.MARKETING_MOMENT_POPOVER)
+            ? (eO = dc.MARKETING_MOMENT_POPOVER)
             : X && ew === m.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === t
-              ? (eO = dh.CHURN_DISCOUNT)
+              ? (eO = dc.CHURN_DISCOUNT)
               : ey && !k
-                ? (eO = dh.PREMIUM_GROUP)
+                ? (eO = dc.PREMIUM_GROUP)
                 : ey && k
-                  ? ((eO = dh.PREMIUM_GROUP_TOOLTIP), (r = !0))
+                  ? ((eO = dc.PREMIUM_GROUP_TOOLTIP), (r = !0))
                   : G && ew === m.M.PREMIUM_ORBS_UPSELL_POPOVER
-                    ? (eO = dh.ORBS_UPSELL)
+                    ? (eO = dc.ORBS_UPSELL)
                     : Q && ew === m.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER
-                      ? (eO = dh.ORBS_INTRO)
+                      ? (eO = dc.ORBS_INTRO)
                       : K && eE === m.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER
-                        ? (eO = dh.ORBS_DROP)
+                        ? (eO = dc.ORBS_DROP)
                         : eN
-                          ? (eO = dh.TOOLTIP)
+                          ? (eO = dc.TOOLTIP)
                           : ej
-                            ? (eO = dh.L_PREMIUM_SUB_TOOLTIP)
+                            ? (eO = dc.L_PREMIUM_SUB_TOOLTIP)
                             : eC
-                              ? (eO = dh.L_UPSELL)
+                              ? (eO = dc.L_UPSELL)
                               : E || M?.trial_id === oV.Tt
-                                ? (eO = dh.REVERSE_TRIAL)
+                                ? (eO = dc.REVERSE_TRIAL)
                                 : y
-                                  ? (eO = dh.ORBS_MULTIPLIER)
+                                  ? (eO = dc.ORBS_MULTIPLIER)
                                   : ea === ok.POPOVER && ew === m.M.CROISSANT_REHEAT_MOMENT
-                                    ? (eO = dh.CROISSANT_REHEAT_MOMENT)
+                                    ? (eO = dc.CROISSANT_REHEAT_MOMENT)
                                     : ea === ok.TOOLTIP &&
                                       ew === m.M.CROISSANT_REHEAT_MOMENT &&
-                                      ((r = !0), (eO = dh.CROISSANT_REHEAT_TOOLTIP));
+                                      ((r = !0), (eO = dc.CROISSANT_REHEAT_TOOLTIP));
         let eH = (0, h.jsx)(V.z9, {
             listItemRef: i,
             selected: s,
@@ -9429,7 +9449,7 @@ let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             text: (0, h.jsx)(A.A, { children: u ? nz.intl.string(nz.t["4gwVVn"]) : nz.intl.string(nz.t.Ipxkog) }),
             locationState: o,
             onClick: () => {
-                if (eO === dh.CROISSANT_REHEAT_TOOLTIP) {
+                if (eO === dc.CROISSANT_REHEAT_TOOLTIP) {
                     let e = new URL(n, window.location.origin);
                     e.searchParams.set(rl.x6, re.u), (0, nW.pX)(`${e.pathname}?${e.searchParams.toString()}`);
                 } else if (ej) {
@@ -9446,7 +9466,7 @@ let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             ...I,
             children: l,
         });
-        return (0, h.jsx)(dc, {
+        return (0, h.jsx)(dn, {
             popoverType: eO,
             targetElementRef: i,
             churnDiscountOffer: _,
@@ -9463,11 +9483,11 @@ let dv = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             children: eH,
         });
     };
-var dm = t(106778);
-let dw = [t(426560)],
-    df = ["#FFFFFF"],
-    dx = 1e3 / 60,
-    dA = {
+var dw = t(106778);
+let df = [t(426560)],
+    dx = ["#FFFFFF"],
+    dA = 1e3 / 60,
+    du = {
         velocity: { type: "static-random", minValue: { x: 0, y: 1 }, maxValue: { x: 3, y: 3 } },
         rotation: {
             type: "linear-random",
@@ -9480,18 +9500,18 @@ let dw = [t(426560)],
         dragCoefficient: { type: "static", value: 830 },
         opacity: { type: "static", value: 0.3 },
     };
-function du(e) {
-    let { className: l, firing: t = !0, wind: a = 2, sprites: s = dw, spriteColors: i = df, confettiConfig: n } = e,
+function dI(e) {
+    let { className: l, firing: t = !0, wind: a = 2, sprites: s = df, spriteColors: i = dx, confettiConfig: n } = e,
         [o, r] = c.useState(null),
         [d, v] = c.useState(null),
-        g = (0, dm.f9)(d, o),
-        p = c.useMemo(() => new dm.OH({ wind: a }), [a]),
+        g = (0, dw.f9)(d, o),
+        p = c.useMemo(() => new dw.OH({ wind: a }), [a]),
         m = c.useCallback(() => {
             let e = d?.getCanvas();
             if (null == e) return;
             let l = e.getBoundingClientRect();
             g.createConfetti({
-                ...dA,
+                ...du,
                 ...n,
                 position: {
                     type: "static-random",
@@ -9502,26 +9522,26 @@ function du(e) {
         }, [g, d, n]);
     return (
         c.useEffect(() => {
-            let e = t ? setInterval(m, dx) : null;
+            let e = t ? setInterval(m, dA) : null;
             return () => clearInterval(e);
         }, [t, m]),
         (0, h.jsxs)(h.Fragment, {
             children: [
-                (0, h.jsx)(dm.Fk, { ref: v, className: l, environment: p }),
-                (0, h.jsx)(dm.K_, { ref: r, colors: i, sprites: s, spriteWidth: 6, spriteHeight: 6 }),
+                (0, h.jsx)(dw.Fk, { ref: v, className: l, environment: p }),
+                (0, h.jsx)(dw.K_, { ref: r, colors: i, sprites: s, spriteWidth: 6, spriteHeight: 6 }),
             ],
         })
     );
 }
-var dI = t(419354),
-    dM = t(717421),
-    dZ = t(770178),
-    d_ = t(859703),
-    dE = t(87549),
-    dT = t(18437),
-    dN = t(194526),
-    dj = t(78701);
-function dC(e) {
+var dM = t(419354),
+    dZ = t(717421),
+    d_ = t(770178),
+    dE = t(859703),
+    dT = t(87549),
+    dN = t(18437),
+    dj = t(194526),
+    dC = t(78701);
+function dR(e) {
     let { onNavigateToQuestHome: l, onRender: t, onRequestClose: a, targetElementRef: s } = e,
         i = c.useCallback(() => {
             l(), (0, nW.pX)(nq.BVt.QUEST_HOME);
@@ -9537,7 +9557,7 @@ function dC(e) {
             body: nz.intl.string(nz.t.o4NGXc),
             caretConfig: { align: "start" },
             gradientColor: "purple",
-            graphic: { type: "image", src: dj.A },
+            graphic: { type: "image", src: dC.A },
             onRequestClose: a,
             position: "right",
             size: "lg",
@@ -9546,11 +9566,11 @@ function dC(e) {
         })
     );
 }
-var dR = t(398025),
-    dV = t(301958);
-let dy = Math.ceil(Math.sqrt(115200)),
-    dO = (dy - 240) / 2,
-    dH = function (e) {
+var dV = t(398025),
+    dy = t(301958);
+let dO = Math.ceil(Math.sqrt(115200)),
+    dH = (dO - 240) / 2,
+    dL = function (e) {
         let { selected: l } = e,
             t = (0, v.rm)("quests"),
             a = c.useRef(null),
@@ -9560,7 +9580,7 @@ let dy = Math.ceil(Math.sqrt(115200)),
                 dismissOnboardingContent: n,
             } = (function () {
                 let e = (0, x.useHasAnyModalOpen)(),
-                    l = (0, p.bG)([d_.A], () => d_.A.quests.size > 0),
+                    l = (0, p.bG)([dE.A], () => dE.A.quests.size > 0),
                     t = (0, p.bG)([oI.default], () => oI.default.getCurrentUser()),
                     [a, s] = (0, nU.kn)(
                         !e && l && null != t ? [m.M.QUEST_HOME_ENTRYPOINT_ONBOARDING] : [],
@@ -9574,19 +9594,19 @@ let dy = Math.ceil(Math.sqrt(115200)),
                     n = (0, o_.JZ)(m.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
                 return { shouldShowPopover: h, shouldShowGradientAndBadge: l && !n, dismissOnboardingContent: i };
             })(),
-            { shouldShowQuestHomeHeroContent: r, dismissQuestHomeHeroContent: d, questHomeHero: g } = (0, dN.I)(),
+            { shouldShowQuestHomeHeroContent: r, dismissQuestHomeHeroContent: d, questHomeHero: g } = (0, dj.I)(),
             f = c.useCallback(() => {
-                dE.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }), r && d();
+                dT.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }), r && d();
             }, [r, d]),
-            [{ glowSpring: A }, I] = (0, dM.z)(() => ({
+            [{ glowSpring: A }, I] = (0, dZ.z)(() => ({
                 from: { glowSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 240, friction: 12 },
             })),
-            [{ shineSpring: M }, _] = (0, dM.z)(() => ({
+            [{ shineSpring: M }, _] = (0, dZ.z)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
-            E = (0, dT.cR)({ questHomeHero: g, shouldShowQuestHomeHeroContent: r }),
+            E = (0, dN.cR)({ questHomeHero: g, shouldShowQuestHomeHeroContent: r }),
             T = c.useCallback(() => {
                 _({ shineSpring: 1 }), I({ glowSpring: 1, delay: 200 }), E.handleMouseEnter();
             }, [_, I, E]),
@@ -9600,12 +9620,12 @@ let dy = Math.ceil(Math.sqrt(115200)),
             y = c.useCallback((e) => {
                 R(e.contentRect.width);
             }, []),
-            O = (0, dZ.w)(y, [], { fireOnMount: !0 }),
+            O = (0, d_.w)(y, [], { fireOnMount: !0 }),
             H = !r && i,
             L = !r && s,
             B = r && g?.questHomeEntrypoint?.tooltipTitle != null,
             { inlineCssProperties: S, shouldShowQuestHomeHeroGradient: F } = c.useMemo(() => {
-                let e = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${dO}px` },
+                let e = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${dH}px` },
                     l = g?.questHomeEntrypoint?.linearGradient?.start,
                     t = g?.questHomeEntrypoint?.linearGradient?.end,
                     a = g?.questHomeEntrypoint?.radialGradient?.start,
@@ -9624,7 +9644,7 @@ let dy = Math.ceil(Math.sqrt(115200)),
                 return { inlineCssProperties: e, shouldShowQuestHomeHeroGradient: r && (i || h) };
             }, [r, g]),
             U = (0, h.jsx)("div", {
-                className: dV.iE,
+                className: dy.iE,
                 onMouseEnter: T,
                 onMouseLeave: N,
                 onFocus: T,
@@ -9633,7 +9653,7 @@ let dy = Math.ceil(Math.sqrt(115200)),
                 style: S,
                 children: (0, h.jsxs)(V.z9, {
                     showHoverGradient: !1,
-                    className: o()({ [dV.VU]: H || F, [dV.jR]: H, [dV.XO]: r }),
+                    className: o()({ [dy.VU]: H || F, [dy.jR]: H, [dy.XO]: r }),
                     icon: iG.r,
                     listItemRef: a,
                     onClick: f,
@@ -9646,7 +9666,7 @@ let dy = Math.ceil(Math.sqrt(115200)),
                             (0, h.jsxs)(h.Fragment, {
                                 children: [
                                     (0, h.jsx)("div", {
-                                        className: dV.qS,
+                                        className: dy.qS,
                                         children: (0, h.jsx)(nV.E, {
                                             type: { text: nz.intl.string(nz.t.y2b7CA) },
                                             variant: "expressive",
@@ -9655,7 +9675,7 @@ let dy = Math.ceil(Math.sqrt(115200)),
                                     g?.questHomeEntrypoint?.image != null &&
                                         (0, h.jsx)("img", {
                                             src: g?.questHomeEntrypoint?.image,
-                                            className: dV.Nd,
+                                            className: dy.Nd,
                                             alt: "",
                                         }),
                                 ],
@@ -9663,21 +9683,21 @@ let dy = Math.ceil(Math.sqrt(115200)),
                         H &&
                             (0, h.jsxs)(h.Fragment, {
                                 children: [
-                                    (0, h.jsx)(dI.animated.div, {
-                                        className: dV.q2,
+                                    (0, h.jsx)(dM.animated.div, {
+                                        className: dy.q2,
                                         style: {
                                             transform: M.to(
                                                 (e) =>
-                                                    `translateX(calc(${e * C}px + ${e * dy}px)) translateY(-50%) rotate(45deg)`,
+                                                    `translateX(calc(${e * C}px + ${e * dO}px)) translateY(-50%) rotate(45deg)`,
                                             ),
                                         },
                                     }),
-                                    (0, h.jsx)(dI.animated.div, {
-                                        className: dV.ys,
-                                        style: { opacity: (0, dR.a)(A.to({ range: [0, 1], output: [0, 0.5] })) },
+                                    (0, h.jsx)(dM.animated.div, {
+                                        className: dy.ys,
+                                        style: { opacity: (0, dV.a)(A.to({ range: [0, 1], output: [0, 0.5] })) },
                                     }),
                                     (0, h.jsx)(Z.Lp, {
-                                        className: dV.qS,
+                                        className: dy.qS,
                                         text: nz.intl.string(nz.t.y2b7CA),
                                         color: w.A.colors.BACKGROUND_BRAND.css,
                                     }),
@@ -9697,7 +9717,7 @@ let dy = Math.ceil(Math.sqrt(115200)),
                                   ? (0, h.jsx)("img", {
                                         src: g.questHomeEntrypoint.tooltipImage,
                                         alt: "",
-                                        className: dV.ut,
+                                        className: dy.ut,
                                     })
                                   : void 0,
                           assetSize: 48,
@@ -9707,31 +9727,31 @@ let dy = Math.ceil(Math.sqrt(115200)),
                           children: U,
                       })
                     : U,
-                L && (0, h.jsx)(dC, { targetElementRef: a, onNavigateToQuestHome: f, onRender: j, onRequestClose: n }),
+                L && (0, h.jsx)(dR, { targetElementRef: a, onNavigateToQuestHome: f, onRender: j, onRequestClose: n }),
             ],
         });
     };
-var dL = t(793322),
-    dB = t(366811),
-    dS = t(728321),
-    dF = t(363195),
-    dU = t(253932),
-    db = t(189081),
-    dP = t(839067),
-    dD = t(67480),
-    dk = t(619921),
-    dJ = t(595623),
-    dG = t(541830),
-    dW = t(851110),
-    dq = t(602339),
-    dz = t(925004);
-let dK = (e) => {
+var dB = t(793322),
+    dS = t(366811),
+    dF = t(728321),
+    dU = t(363195),
+    db = t(253932),
+    dP = t(189081),
+    dD = t(839067),
+    dk = t(67480),
+    dJ = t(619921),
+    dG = t(595623),
+    dW = t(541830),
+    dq = t(851110),
+    dz = t(602339),
+    dK = t(925004);
+let dQ = (e) => {
         let { selected: l, ...t } = e,
             a = (0, oi.c)("PrivateChannels.ICYMIButton"),
             s = (0, v.rm)("icymi");
         return a
             ? (0, h.jsx)("div", {
-                  className: dz.F2,
+                  className: dK.F2,
                   children: (0, h.jsx)(V.z9, {
                       selected: l,
                       route: nq.BVt.ICYMI,
@@ -9739,7 +9759,7 @@ let dK = (e) => {
                       text: (0, h.jsxs)(h.Fragment, {
                           children: [
                               nz.intl.string(nz.t["jnXV/V"]),
-                              (0, h.jsx)("span", { className: dz.HH, children: nz.intl.string(nz.t.Ac2OZA) }),
+                              (0, h.jsx)("span", { className: dK.HH, children: nz.intl.string(nz.t.Ac2OZA) }),
                           ],
                       }),
                       ...t,
@@ -9748,7 +9768,7 @@ let dK = (e) => {
               })
             : null;
     },
-    dQ = (e) => {
+    dX = (e) => {
         let { selected: l, ...t } = e,
             a = (0, v.rm)("friends"),
             s = (0, op.kX)(),
@@ -9774,7 +9794,7 @@ let dK = (e) => {
                       (e = nq.m3P.ALL),
                       R.A.setSection(nq.m3P.ALL),
                       g(n0.i.TAKE_ACTION))
-                    : (e = dJ.Ay.getState().section),
+                    : (e = dG.Ay.getState().section),
                     (0, L.A)({ tab_opened: e });
             },
             [A, I] = c.useState(!1),
@@ -9788,7 +9808,7 @@ let dK = (e) => {
                 (0, h.jsx)(V.z9, {
                     showHoverGradient: !1,
                     onClick: x,
-                    interactiveClassName: w ? dz.hc : void 0,
+                    interactiveClassName: w ? dK.hc : void 0,
                     selected: l,
                     route: nq.BVt.FRIENDS,
                     icon: M.$,
@@ -9800,7 +9820,7 @@ let dK = (e) => {
                     children: s > 0 ? (0, h.jsx)(Z.hV, { count: s }) : null,
                 });
         return (0, h.jsx)("div", {
-            className: dz.F2,
+            className: dK.F2,
             children: w
                 ? (0, h.jsxs)(h.Fragment, {
                       children: [
@@ -9812,11 +9832,11 @@ let dK = (e) => {
                               children: T(),
                           }),
                           !n &&
-                              (0, h.jsx)(du, {
-                                  className: dz.t_,
+                              (0, h.jsx)(dI, {
+                                  className: dK.t_,
                                   wind: 0,
-                                  sprites: dW.uI,
-                                  spriteColors: dW._t,
+                                  sprites: dq.uI,
+                                  spriteColors: dq._t,
                                   firing: A,
                                   confettiConfig: {
                                       opacity: { type: "static", value: 1 },
@@ -9828,7 +9848,7 @@ let dK = (e) => {
                 : T(),
         });
     },
-    dX = (e) => {
+    dY = (e) => {
         let { selected: l, hideGameUpdateProgressIndicator: t, ...a } = e,
             s = (0, v.rm)("library");
         return (0, h.jsx)(V.z9, {
@@ -9838,14 +9858,14 @@ let dK = (e) => {
             text: nz.intl.string(nz.t.cw57ar),
             ...a,
             ...s,
-            children: (0, h.jsx)(O.A, { className: o()(dz.Qw, { [dz.QI]: t }) }),
+            children: (0, h.jsx)(O.A, { className: o()(dK.Qw, { [dK.QI]: t }) }),
         });
     },
-    dY = () => {
+    d$ = () => {
         let e = (0, oc.W)();
         return e > 0 ? (0, h.jsx)(Z.hV, { count: e }) : null;
     },
-    d$ = (e) => {
+    d1 = (e) => {
         let { selected: l } = e,
             t = (0, v.rm)("messageRequests"),
             { channelId: a } = (0, oh.N)();
@@ -9858,12 +9878,12 @@ let dK = (e) => {
             text: nz.intl.string(nz.t.e7GWjQ),
             onClick: s,
             ...t,
-            children: (0, h.jsx)(dY, {}),
+            children: (0, h.jsx)(d$, {}),
         });
     },
-    d1 = (e) => {
+    d0 = (e) => {
         let { selected: l } = e,
-            t = nz.intl.string(dq.default.Rkdixs),
+            t = nz.intl.string(dz.default.Rkdixs),
             a = (0, v.rm)("family-center"),
             [s, i] = c.useState(!0);
         return (0, h.jsx)(V.z9, {
@@ -9877,17 +9897,17 @@ let dK = (e) => {
             onMouseLeave: () => {
                 i(!1);
             },
-            interactiveClassName: dz.M1,
+            interactiveClassName: dK.M1,
             ...a,
-            children: (0, h.jsx)(d0, { isParentHovered: s }),
+            children: (0, h.jsx)(d2, { isParentHovered: s }),
         });
     },
-    d0 = (e) => {
+    d2 = (e) => {
         let { isParentHovered: l } = e,
             a = (0, og.VT)();
         return l
             ? (0, h.jsx)("div", {
-                  className: dz.lL,
+                  className: dK.lL,
                   children: (0, h.jsx)(V.w_, {
                       onClick: () => {
                           (0, x.openModalLazy)(async () => {
@@ -9900,9 +9920,9 @@ let dK = (e) => {
                   }),
               })
             : a > 0
-              ? (0, h.jsx)("div", { className: o()(dz.lL, dz.iL), children: (0, h.jsx)(Z.hV, { count: a }) })
+              ? (0, h.jsx)("div", { className: o()(dK.lL, dK.iL), children: (0, h.jsx)(Z.hV, { count: a }) })
               : (0, h.jsx)("div", {
-                    className: dz.lL,
+                    className: dK.lL,
                     children: (0, h.jsx)(os.Ay, {
                         contentTypes: [m.M.FAMILY_CENTER_NEW_BADGE],
                         children: (e) => {
@@ -9917,8 +9937,8 @@ let dK = (e) => {
                     }),
                 });
     },
-    d2 = () => (0, dL.WU)("DM_SEARCH");
-function d3(e) {
+    d3 = () => (0, dB.WU)("DM_SEARCH");
+function d4(e) {
     switch (e) {
         case nq.BVt.APPLICATION_LIBRARY:
             return nq.liQ.LIBRARY;
@@ -9935,7 +9955,7 @@ function d3(e) {
               : nq.liQ.STORE_LISTING
         : nq.liQ.DM_CHANNEL;
 }
-let d4 = c.memo(function (e) {
+let d5 = c.memo(function (e) {
     let {
             showLibrary: l,
             hasLibraryApplication: t,
@@ -9958,22 +9978,22 @@ let d4 = c.memo(function (e) {
     return (
         n ? (M = (0, h.jsx)(oS, { targetElementRef: u })) : r && (M = (0, h.jsx)(oy, { targetElementRef: u })),
         (0, h.jsxs)("nav", {
-            className: dz.AB,
+            className: dK.AB,
             "aria-label": nz.intl.string(nz.t.ZH9aP4),
             children: [
-                (0, h.jsx)(dS.A, {
+                (0, h.jsx)(dF.A, {
                     childRef: w,
                     tutorialId: "direct-messages",
                     position: "right",
                     offsetX: -52,
                     children: (0, h.jsx)("div", {
                         ref: w,
-                        className: o()(dz.ON, { [dz.jD]: g.Fr }),
+                        className: o()(dK.ON, { [dK.jD]: g.Fr }),
                         children: (0, h.jsx)(j.$, {
                             fullWidth: !0,
                             variant: "secondary",
                             size: "sm",
-                            onClick: d2,
+                            onClick: d3,
                             text: nz.intl.format(nz.t.fH9FBy, {
                                 tooltipHook: (e, l) => (0, h.jsx)(A.A, { children: e }, l),
                             }),
@@ -9987,16 +10007,16 @@ let d4 = c.memo(function (e) {
                     listScrollerRef: x,
                     children: [
                         (0, h.jsx)(
-                            dQ,
+                            dX,
                             { selected: null != m ? m === nq.BVt.FRIENDS : a === nq.BVt.FRIENDS },
                             "friends",
                         ),
                         I
-                            ? (0, h.jsx)(dK, { selected: null != m ? m === nq.BVt.ICYMI : a === nq.BVt.ICYMI }, "icymi")
+                            ? (0, h.jsx)(dQ, { selected: null != m ? m === nq.BVt.ICYMI : a === nq.BVt.ICYMI }, "icymi")
                             : null,
                         t && l
                             ? (0, h.jsx)(
-                                  dX,
+                                  dY,
                                   {
                                       selected:
                                           null == m
@@ -10009,7 +10029,7 @@ let d4 = c.memo(function (e) {
                             : null,
                         d
                             ? (0, h.jsx)(
-                                  d$,
+                                  d1,
                                   {
                                       selected:
                                           null == m
@@ -10024,13 +10044,13 @@ let d4 = c.memo(function (e) {
                                   "div",
                                   {
                                       children: [
-                                          (0, h.jsx)(dp, {
+                                          (0, h.jsx)(dm, {
                                               nitroTabButtonRef: u,
                                               selected: null == m ? s : m.startsWith(nq.BVt.APPLICATION_STORE),
                                               route: nq.BVt.APPLICATION_STORE,
                                               locationState: {
                                                   analyticsSource: {
-                                                      page: d3(a),
+                                                      page: d4(a),
                                                       section: nq.JJy.NAVIGATION,
                                                       object: nq.ZSU.NAVIGATION_LINK,
                                                   },
@@ -10049,7 +10069,7 @@ let d4 = c.memo(function (e) {
                                 listItemRef: f,
                                 locationState: {
                                     analyticsSource: {
-                                        page: d3(a),
+                                        page: d4(a),
                                         section: nq.JJy.NAVIGATION,
                                         object: nq.ZSU.NAVIGATION_LINK,
                                     },
@@ -10059,7 +10079,7 @@ let d4 = c.memo(function (e) {
                         ),
                         v
                             ? (0, h.jsx)(
-                                  d1,
+                                  d0,
                                   {
                                       selected:
                                           (null != a && a.startsWith(nq.BVt.FAMILY_CENTER)) ||
@@ -10069,41 +10089,41 @@ let d4 = c.memo(function (e) {
                               )
                             : null,
                         (0, h.jsx)(
-                            dH,
+                            dL,
                             {
                                 selected:
                                     null == m ? null != a && a.startsWith(nq.BVt.QUEST_HOME) : m === nq.BVt.QUEST_HOME,
                             },
                             "quests",
                         ),
-                        (0, h.jsx)(d5, {}, "section-divider-top"),
+                        (0, h.jsx)(d6, {}, "section-divider-top"),
                     ],
                 }),
             ],
         })
     );
 });
-function d5() {
-    return (0, h.jsx)("div", { className: dz.ts });
-}
 function d6() {
+    return (0, h.jsx)("div", { className: dK.ts });
+}
+function d7() {
     let e,
         l,
-        t = (0, p.bG)([dk.A], () => dk.A.getHomeLink()),
-        a = (0, p.bG)([dD.A], () => {
+        t = (0, p.bG)([dJ.A], () => dJ.A.getHomeLink()),
+        a = (0, p.bG)([dk.A], () => {
             if (t === nq.BVt.APPLICATION_STORE) return !0;
-            let e = (0, dG.qt)(t);
-            return null != e && (dD.A.get(e)?.premium ?? !1);
+            let e = (0, dW.qt)(t);
+            return null != e && (dk.A.get(e)?.premium ?? !1);
         }, [t]),
-        s = !dU.l_.useSetting(),
-        { theme: i } = (0, p.cf)([dF.A], () => ({ theme: dF.A.theme })),
-        c = (0, p.bG)([db.A], () => db.A.hasLibraryApplication()),
-        n = (0, p.bG)([dP.A], () => dP.A.getCurrentPath()),
-        [o, d] = (0, dB.A)((e) => {
+        s = !db.l_.useSetting(),
+        { theme: i } = (0, p.cf)([dU.A], () => ({ theme: dU.A.theme })),
+        c = (0, p.bG)([dP.A], () => dP.A.hasLibraryApplication()),
+        n = (0, p.bG)([dD.A], () => dD.A.getCurrentPath()),
+        [o, d] = (0, dS.A)((e) => {
             let { channelId: l, path: t } = e;
             return [l, t];
         }, r.x),
-        v = dg({ selected: null == d ? a : d.startsWith(nq.BVt.APPLICATION_STORE) }),
+        v = dp({ selected: null == d ? a : d.startsWith(nq.BVt.APPLICATION_STORE) }),
         g = (0, oO.Tp)(),
         w = (0, p.bG)([om.A], () => om.A.getReminderStateId()),
         f = oR(),
@@ -10115,8 +10135,8 @@ function d6() {
         Z = null == u && I === m.M.RECURRING_3P_PROMOTION_POPOVER,
         _ = A ? u === m.M.REFERRAL_PROGRAM_POPOVER_V2 : I === m.M.REFERRAL_PROGRAM_POPOVER,
         E = od(),
-        T = ((e = dU.dm.useSetting()), (l = (0, ov.A)()), !0 === e && !0 === l);
-    return (0, h.jsx)(d4, {
+        T = ((e = db.dm.useSetting()), (l = (0, ov.A)()), !0 === e && !0 === l);
+    return (0, h.jsx)(d5, {
         theme: i,
         showLibrary: s,
         hasLibraryApplication: c,
