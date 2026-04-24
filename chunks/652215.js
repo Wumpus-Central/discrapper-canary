@@ -4111,6 +4111,7 @@ var rb =
         (ev.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED = "quest_video_enrollment_retry_attempted"),
         (ev.ATT_PROMPT_RESULT = "att_prompt_result"),
         (ev.AD_VIDEO_MODAL_CLOSED = "ad_video_modal_closed"),
+        (ev.BOUNTY_CAROUSEL_SCROLL = "bounty_carousel_scroll"),
         (ev.USER_SETTINGS_KEYBIND_UPDATED = "user_settings_keybind_updated"),
         (ev.USER_ATTRIBUTION_RECEIVED = "user_attribution_received"),
         (ev.USER_AVATAR_UPDATED = "user_avatar_updated"),
