@@ -1,3 +1,3 @@
-e.exports = JSON.parse(
-    '{"ihBfyA":["Favorilerine ekle"],"PACPOV":["Oyun"],"snNYS+":["Klip Se\xe7enekleri"],"xkY5xS":["Başka bir şey aramayı dene"],"+M2iLf":["Hi\xe7 Klip bulunamadı"],"JbyR1U":["Filtreler: ",[1,"count"]],"IZsalP":["Favorilerden \xe7ıkar"]}',
+a.exports = JSON.parse(
+    '{"ihBfyA":["Favorilerine ekle"],"PACPOV":["Oyun"],"snNYS+":["Klip Se\xe7enekleri"],"GPfOas":["Kısayolunu değiştir"],"DLzdl7":["Kliplerini buradan istediğin zaman d\xfczenle ve paylaş."],"4K56sP":["Discord Klipler herhangi bir PC oyunuyla \xe7alışır."],"BIwQis":["Oyun oynarken bir klip yakalamak i\xe7in ",[1,"keybind"]," tuşuna bas."],"HOUDUm":["Oyun oynarken klip yakalamak i\xe7in bir kısayol ayarla."],"m2GEpP":["T\xfcm oyun anların tek bir yerde"],"xkY5xS":["Başka bir şey aramayı dene"],"+M2iLf":["Hi\xe7 Klip bulunamadı"],"JbyR1U":["Filtreler: ",[1,"count"]],"IZsalP":["Favorilerden \xe7ıkar"]}',
 );

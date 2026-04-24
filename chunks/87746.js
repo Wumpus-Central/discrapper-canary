@@ -1,3 +1,3 @@
 t.exports = JSON.parse(
-    '{"ihBfyA":["L\xe4gg till i Favoriter"],"PACPOV":["Spel"],"snNYS+":["Klippalternativ"],"xkY5xS":["Testa att s\xf6ka efter n\xe5got annat"],"+M2iLf":["Inga klipp hittades"],"JbyR1U":["Filter: ",[1,"count"]],"IZsalP":["Ta bort fr\xe5n Favoriter"]}',
+    '{"ihBfyA":["L\xe4gg till i Favoriter"],"PACPOV":["Spel"],"snNYS+":["Klippalternativ"],"GPfOas":["\xc4ndra ditt kortkommando"],"DLzdl7":["\xc4ndra och dela dina klipp n\xe4r som helst h\xe4rifr\xe5n."],"4K56sP":["Discord Klipp fungerar med alla PC-spel."],"BIwQis":["Tryck p\xe5 ",[1,"keybind"]," f\xf6r att spela in ett klipp medan du spelar."],"HOUDUm":["Ange ett kortkommando f\xf6r att spela in ett klipp medan du spelar."],"m2GEpP":["Alla dina gamingstunder p\xe5 ett st\xe4lle"],"xkY5xS":["Testa att s\xf6ka efter n\xe5got annat"],"+M2iLf":["Inga klipp hittades"],"JbyR1U":["Filter: ",[1,"count"]],"IZsalP":["Ta bort fr\xe5n Favoriter"]}',
 );

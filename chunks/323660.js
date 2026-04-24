@@ -1,3 +1,3 @@
 i.exports = JSON.parse(
-    '{"ihBfyA":["Dodaj do ulubionych"],"PACPOV":["Gra"],"snNYS+":["Opcje klip\xf3w"],"xkY5xS":["Spr\xf3buj wyszukać czegoś innego"],"+M2iLf":["Nie znaleziono żadnych klip\xf3w"],"JbyR1U":["Filtry: ",[1,"count"]],"IZsalP":["Usuń z ulubionych"]}',
+    '{"ihBfyA":["Dodaj do ulubionych"],"PACPOV":["Gra"],"snNYS+":["Opcje klip\xf3w"],"GPfOas":["Zmień sw\xf3j skr\xf3t"],"DLzdl7":["Edytuj i udostępniaj swoje klipy w dowolnym momencie z tego poziomu."],"4K56sP":["Klipy Discord działają z każdą grą na PC."],"BIwQis":["Naciśnij ",[1,"keybind"],", aby nagrać klip podczas grania."],"HOUDUm":["Ustaw skr\xf3t do nagrywania klip\xf3w podczas grania."],"m2GEpP":["Wszystkie Twoje gamingowe momenty w jednym miejscu"],"xkY5xS":["Spr\xf3buj wyszukać czegoś innego"],"+M2iLf":["Nie znaleziono żadnych klip\xf3w"],"JbyR1U":["Filtry: ",[1,"count"]],"IZsalP":["Usuń z ulubionych"]}',
 );

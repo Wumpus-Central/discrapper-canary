@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"ihBfyA":["F\xf8j til Favoritter"],"PACPOV":["Spil"],"snNYS+":["Valgmuligheder for klip"],"xkY5xS":["Pr\xf8v at s\xf8ge efter noget andet"],"+M2iLf":["Ingen klip fundet"],"JbyR1U":["Filtre: ",[1,"count"]],"IZsalP":["Fjern fra favoritter"]}',
+    '{"ihBfyA":["F\xf8j til Favoritter"],"PACPOV":["Spil"],"snNYS+":["Valgmuligheder for klip"],"GPfOas":["Skift din genvej"],"DLzdl7":["Rediger og del dine klip n\xe5r som helst herfra."],"4K56sP":["Du kan bruge Discord Clips sammen med ethvert pc-spil."],"BIwQis":["Tryk p\xe5 ",[1,"keybind"]," for at optage et klip, mens du spiller."],"HOUDUm":["Opret en genvej til at optage et klip, mens du spiller."],"m2GEpP":["Alle dine spil\xf8jeblikke samlet p\xe5 \xe9t sted"],"xkY5xS":["Pr\xf8v at s\xf8ge efter noget andet"],"+M2iLf":["Ingen klip fundet"],"JbyR1U":["Filtre: ",[1,"count"]],"IZsalP":["Fjern fra favoritter"]}',
 );

@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"ihBfyA":["Toevoegen aan favorieten"],"PACPOV":["Game"],"snNYS+":["Clip-opties"],"xkY5xS":["Zoek eens iets anders"],"+M2iLf":["Geen clips gevonden"],"JbyR1U":["Filters: ",[1,"count"]],"IZsalP":["Verwijderen uit favorieten"]}',
+    '{"ihBfyA":["Toevoegen aan favorieten"],"PACPOV":["Game"],"snNYS+":["Clip-opties"],"GPfOas":["Wijzig je snelkoppeling"],"DLzdl7":["Hier kun je altijd je clips bewerken en delen."],"4K56sP":["Discord Clips is geschikt voor alle pc-games."],"BIwQis":["Druk op ",[1,"keybind"]," om een clip op te nemen tijdens het gamen."],"HOUDUm":["Maak een snelkoppeling om een clip op te nemen tijdens het gamen."],"m2GEpP":["Al je gamemomenten op \xe9\xe9n plek"],"xkY5xS":["Zoek eens iets anders"],"+M2iLf":["Geen clips gevonden"],"JbyR1U":["Filters: ",[1,"count"]],"IZsalP":["Verwijderen uit favorieten"]}',
 );

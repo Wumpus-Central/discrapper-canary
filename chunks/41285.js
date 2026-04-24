@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"ihBfyA":["A\xf1adir a favoritos"],"PACPOV":["Juego"],"snNYS+":["Opciones de clip"],"xkY5xS":["Prueba a buscar otra cosa"],"+M2iLf":["No se han encontrado clips"],"JbyR1U":["Filtros: ",[1,"count"]],"IZsalP":["Quitar de Favoritos"]}',
+a.exports = JSON.parse(
+    '{"ihBfyA":["A\xf1adir a favoritos"],"PACPOV":["Juego"],"snNYS+":["Opciones de clip"],"GPfOas":["Cambia tu acceso directo"],"DLzdl7":["Edita y comparte tus clips en cualquier momento desde aqu\xed."],"4K56sP":["Discord Clips funciona con cualquier juego de PC."],"BIwQis":["Pulsa ",[1,"keybind"]," para capturar un clip mientras juegas."],"HOUDUm":["Configura un atajo para capturar un clip mientras juegas."],"m2GEpP":["Todos tus momentos de juego en un solo lugar"],"xkY5xS":["Prueba a buscar otra cosa"],"+M2iLf":["No se han encontrado clips"],"JbyR1U":["Filtros: ",[1,"count"]],"IZsalP":["Quitar de Favoritos"]}',
 );
