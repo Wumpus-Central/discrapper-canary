@@ -1,40 +1,41 @@
-a.d(t, { A: () => u });
-var n = a(599026),
-    r = a(440594),
-    l = a(541806),
-    i = a(765379),
-    s = a(90644),
-    o = a(82149),
-    c = a(652215),
-    d = a(985018);
+"use strict";
+n.d(t, { A: () => u });
+var a = n(599026),
+    r = n(440594),
+    i = n(541806),
+    l = n(765379),
+    s = n(90644),
+    o = n(82149),
+    c = n(652215),
+    d = n(985018);
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        a = e?.name === "" ? null : e?.name,
+        n = e?.name === "" ? null : e?.name,
         u = e?.details === "" ? null : e?.details,
-        h = e?.state === "" ? null : e?.state,
-        p = e?.type === c.$pd.STREAMING ? (u ?? a) : a;
+        _ = e?.state === "" ? null : e?.state,
+        p = e?.type === c.$pd.STREAMING ? (u ?? n) : n;
     if (
-        (e?.status_display_type === n.A.NAME && null != a
-            ? (p = a)
-            : e?.status_display_type === n.A.STATE && null != h
-              ? (p = h)
-              : e?.status_display_type === n.A.DETAILS && null != u && (p = u),
-        (0, i.A)(e))
+        (e?.status_display_type === a.A.NAME && null != n
+            ? (p = n)
+            : e?.status_display_type === a.A.STATE && null != _
+              ? (p = _)
+              : e?.status_display_type === a.A.DETAILS && null != u && (p = u),
+        (0, l.A)(e))
     ) {
-        let e = (0, r.A)(a);
+        let e = (0, r.A)(n);
         return { text: e, tooltip: e };
     }
     if (e?.type === c.$pd.PLAYING && null != p)
         return { text: p, tooltip: d.intl.formatToPlainString(d.t.lFApmz, { game: p }) };
-    if ((0, s.A)(e) && t && null != h) {
-        let e = h.split("; ")?.join(", ");
+    if ((0, s.A)(e) && t && null != _) {
+        let e = _.split("; ")?.join(", ");
         return { text: e, tooltip: d.intl.formatToPlainString(d.t.Vnuxue, { name: e }) };
     }
-    return (0, o.Cy)(e) && null != a
-        ? { text: a, tooltip: d.intl.formatToPlainString(d.t.pW3Ip3, { name: a }) }
+    return (0, o.Cy)(e) && null != n
+        ? { text: n, tooltip: d.intl.formatToPlainString(d.t.pW3Ip3, { name: n }) }
         : e?.type === c.$pd.LISTENING && null != p
           ? { text: p, tooltip: d.intl.formatToPlainString(d.t.Vnuxue, { name: p }) }
-          : (0, l.A)(e) && t && null != u
+          : (0, i.A)(e) && t && null != u
             ? { text: u, tooltip: d.intl.formatToPlainString(d.t.pW3Ip3, { name: u }) }
             : e?.type === c.$pd.WATCHING && null != p
               ? { text: p, tooltip: d.intl.formatToPlainString(d.t.pW3Ip3, { name: p }) }

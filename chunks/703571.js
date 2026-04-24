@@ -156,7 +156,7 @@ var ed = n(172218),
     ep = n(466459);
 let ef = () => {
     let e = (0, h.bG)([v.default], () => v.default.getCurrentUser()),
-        t = y.Ay.canUseShopDiscounts(e);
+        t = null != e && y.Ay.canUseCollectibles(e);
     return (0, d.useCallback)(
         (e) =>
             null == e || 0 === e.length
@@ -165,7 +165,7 @@ let ef = () => {
                       let { isPurchased: n } = (0, ep.o)(J.A, e);
                       if (!(0, e_.aw)(e) || (0, e_.tt)(e) || n) return !0;
                       if (!(0, em.uh)(e)) return !1;
-                      if ((0, eh.Ab)(e)) return null != (0, eh.CW)({ product: e, hasShopDiscount: t });
+                      if ((0, eh.Ab)(e)) return null != (0, eh.CW)({ product: e, isPremiumUser: t });
                       let s = (0, e_.l8)(t),
                           a = (0, e_.yt)(e, s);
                       if (null == a || 0 === a.amount) return !0;
@@ -1538,7 +1538,7 @@ let t7 = (e) => {
             orbsSupportedOnly: o,
         } = e,
         u = (0, N.bG)([v.default], () => v.default.getCurrentUser()),
-        _ = y.Ay.canUseShopDiscounts(u),
+        _ = y.Ay.canUseCollectibles(u),
         h = (0, eg.W)("FeedBlock"),
         m = (0, eK.yB)("FeedBlock"),
         {
@@ -1549,7 +1549,7 @@ let t7 = (e) => {
             shuffleProducts: b,
             showRecommendationOption: S,
         } = (function (e) {
-            let { sortedSkuIds: t, hasShopDiscount: n, prioritizeUserDiscounts: s, orbsSupportedOnly: a } = e,
+            let { sortedSkuIds: t, isPremiumUser: n, prioritizeUserDiscounts: s, orbsSupportedOnly: a } = e,
                 l = (0, N.bG)([t5.A], () => t5.A.hasConsented(B.YAq.PERSONALIZATION)),
                 r = d.useMemo(() => t?.[t9.RECOMMENDED] ?? [], [t]),
                 i = d.useMemo(() => t?.[t9.POPULAR] ?? [], [t]),
@@ -1597,7 +1597,7 @@ let t7 = (e) => {
                 showRecommendationOption: o,
                 shuffleProducts: x,
             };
-        })({ sortedSkuIds: s, hasShopDiscount: _, prioritizeUserDiscounts: l, orbsSupportedOnly: o }),
+        })({ sortedSkuIds: s, isPremiumUser: _, prioritizeUserDiscounts: l, orbsSupportedOnly: o }),
         A = (0, N.bG)([Y.A], () => Y.A.useReducedMotion),
         T = (0, N.bG)([ev.A], () => ev.A.isFocused()),
         k = !A && T,

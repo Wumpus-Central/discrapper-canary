@@ -5,19 +5,19 @@ var n = r(64700),
     s = r(927578),
     a = r(440938),
     u = r(590180),
-    o = r(993408),
-    c = r(331884),
+    c = r(993408),
+    o = r(331884),
     d = r(652215);
 function p(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
         p = (0, a.uM)(),
-        k = (0, i.bG)([u.A], () => u.A.getProduct(e)),
-        C = (0, c.i)(),
-        m = s.Ay.canUseShopDiscounts(C),
+        C = (0, i.bG)([u.A], () => u.A.getProduct(e)),
+        k = (0, o.i)(),
+        m = s.Ay.canUseCollectibles(k),
         x = n.useRef(null),
-        h = n.useCallback(() => {
-            let n = null != k ? (0, o.Br)(k, m, !1) : null,
-                i = null != k ? (0, o.c7)(k, m, !1) : void 0;
+        g = n.useCallback(() => {
+            let n = null != C ? (0, c.Br)(C, m, !1) : null,
+                i = null != C ? (0, c.c7)(C, m, !1) : void 0;
             l.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: p?.sessionId,
                 sku_id: e,
@@ -31,17 +31,17 @@ function p(e, t) {
                 type: r,
                 category_position: p?.categoryPosition,
             });
-        }, [p?.sessionId, p?.categoryPosition, p?.pageCategory, p?.pageSection, p?.tilePosition, m, t, k, e, r]),
-        g = n.useCallback(
+        }, [p?.sessionId, p?.categoryPosition, p?.pageCategory, p?.pageSection, p?.tilePosition, m, t, C, e, r]),
+        I = n.useCallback(
             (e) => {
                 e
                     ? null === x.current &&
                       (x.current = setTimeout(() => {
-                          h(), (x.current = null);
+                          g(), (x.current = null);
                       }, 1e3))
                     : null !== x.current && (clearTimeout(x.current), (x.current = null));
             },
-            [h],
+            [g],
         );
     return (
         n.useEffect(
@@ -50,6 +50,6 @@ function p(e, t) {
             },
             [],
         ),
-        { handleCardVisibilityChange: g }
+        { handleCardVisibilityChange: I }
     );
 }
