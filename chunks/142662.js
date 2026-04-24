@@ -28,8 +28,8 @@ var m = n(990078),
     T = n(47167),
     v = n(713654),
     y = n(863439),
-    k = n(465364),
-    j = n(81437),
+    j = n(465364),
+    k = n(81437),
     b = n(976860),
     _ = n(378570),
     I = n(302031),
@@ -204,7 +204,13 @@ function ee(e) {
     let s = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l, { className: Y.gQ, size: "xxs", color: "currentColor" }),
-            (0, r.jsx)(E.E, { className: Y.yK, variant: "text-xs/medium", color: "text-default", children: a }),
+            (0, r.jsx)(E.E, {
+                className: Y.yK,
+                variant: "text-xs/medium",
+                color: "text-default",
+                lineClamp: 1,
+                children: a,
+            }),
         ],
     });
     return null != t && (0, M.Z_)(t.type)
@@ -241,9 +247,9 @@ function et(e) {
         N = null != t ? (0, T.m1)(t, L.default, G.A, !1) : "???",
         A = t?.parent_id != null ? R.A.getChannel(t.parent_id) : null,
         P = null != A ? (0, T.m1)(A, L.default, G.A) : null,
-        j = (0, v.gU)(t) ?? C.N,
+        k = (0, v.gU)(t) ?? C.N,
         b = w.A.can(Z.xBc.MANAGE_MESSAGES, t),
-        { content: M } = (0, k.Ay)({ content: N, embeds: [] }, { postProcessor: a }),
+        { content: M } = (0, j.Ay)({ content: N, embeds: [] }, { postProcessor: a }),
         X = l.useRef(null),
         [$, B] = l.useState(!1);
     l.useEffect(() => {
@@ -263,12 +269,15 @@ function et(e) {
                     children: (0, r.jsxs)("div", {
                         className: Y.aT,
                         children: [
-                            (0, r.jsx)(j, { className: Y.er, size: "xs", color: "currentColor" }),
-                            (0, r.jsx)(m.m, {
-                                asContainer: !0,
-                                text: N,
-                                shouldShow: $,
-                                children: (0, r.jsx)("span", { ref: X, className: Y.Kw, children: M }),
+                            (0, r.jsx)(k, { className: Y.er, size: "xs", color: "currentColor" }),
+                            (0, r.jsx)("div", {
+                                className: Y.rm,
+                                children: (0, r.jsx)(m.m, {
+                                    asContainer: !0,
+                                    text: N,
+                                    shouldShow: $,
+                                    children: (0, r.jsx)("span", { ref: X, className: Y.Kw, children: M }),
+                                }),
                             }),
                             (0, r.jsx)(ee, { parentChannel: A, onSelectChannel: E }),
                         ],
@@ -313,7 +322,7 @@ let en = l.memo(function (e) {
             paginationTotalCount: T,
             renderPageWrapper: v,
             onBlockedResultsClick: y,
-            searchRequestAnalyticsId: k,
+            searchRequestAnalyticsId: j,
             searchResultsQuery: _,
         } = e,
         { offset: I, totalResults: S, isSearching: D, showBlockedResults: M } = t,
@@ -323,12 +332,12 @@ let en = l.memo(function (e) {
                 let n = () => {
                     let t = R.A.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    N.A.trackJump(e.channel_id, e.id, "Search Results", { search_id: k }),
+                    N.A.trackJump(e.channel_id, e.id, "Search Results", { search_id: j }),
                         (0, b.pX)(Z.BVt.CHANNEL(n, e.channel_id, e.id));
                 };
-                (0, j.A)(e, n) && n();
+                (0, k.A)(e, n) && n();
             },
-            [C, k],
+            [C, j],
         ),
         U = l.useMemo(() => {
             let e,
@@ -424,15 +433,15 @@ let en = l.memo(function (e) {
                     l.useEffect(() => {
                         v.current = C;
                     }, [C]);
-                    let [y, k] = l.useState(!1),
-                        [j] = l.useState(
+                    let [y, j] = l.useState(!1),
+                        [k] = l.useState(
                             () =>
                                 new c.Lp((e) => () => {
                                     let t = null != T.current && "string" == typeof e ? T.current(e) : e;
                                     "number" != typeof t || t < 0 || m({ type: o.SET_FOCUSED_INDEX, index: t });
                                 }),
                         );
-                    l.useEffect(() => () => j.clean(), [j]);
+                    l.useEffect(() => () => k.clean(), [k]);
                     let b = l.useCallback(
                             (e, t) => {
                                 v.current && s(e, t);
@@ -495,7 +504,7 @@ let en = l.memo(function (e) {
                             [N, t, m, a, S, r],
                         ),
                         M = l.useCallback(() => {
-                            y || k(!0);
+                            y || j(!0);
                         }, [y]),
                         R = l.useCallback(() => {
                             y || (p ? b(N(t, a), a) : S(!0));
@@ -504,7 +513,7 @@ let en = l.memo(function (e) {
                             (e) => {
                                 e.currentTarget.contains(e.relatedTarget) ||
                                     requestAnimationFrame(() => {
-                                        null == g(h(N, t, a)) ? b(t) : k(!1);
+                                        null == g(h(N, t, a)) ? b(t) : j(!1);
                                     });
                             },
                             [N, t, a, b],
@@ -537,10 +546,10 @@ let en = l.memo(function (e) {
                                     "aria-posinset": x ? n + 1 : void 0,
                                     id: N(t, n),
                                     tabIndex: p && n === a ? 0 : -1,
-                                    onFocus: j.get(null != T.current ? N(t, n) : n),
+                                    onFocus: k.get(null != T.current ? N(t, n) : n),
                                 };
                             },
-                            [N, t, a, p, j, x],
+                            [N, t, a, p, k, x],
                         );
                     return l.useMemo(() => ({ dispatch: m, getContainerProps: U, getItemProps: L }), [m, U, L]);
                 })({

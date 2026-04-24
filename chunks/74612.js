@@ -6835,7 +6835,7 @@ let ut = x.memo(function (e) {
                                   showLabels: !1,
                                   showPaymentSourceIcon: !0,
                               })
-                            : (0, S.jsx)(k.E, { variant: "text-sm/medium", children: g.intl.string(g.t["6EEgNt"]) }),
+                            : (0, S.jsx)(k.E, { variant: "text-sm/medium", children: g.intl.string(g.t.wkFAZf) }),
                         (0, S.jsxs)("div", {
                             className: d6.zy,
                             children: [

@@ -1,6 +1,7 @@
 e.exports = {
     JT: "searchResultGroup_a7e67f",
     aT: "channelNameContainer_a7e67f",
+    rm: "channelNameTextWrapper_a7e67f",
     Kw: "channelNameText_a7e67f",
     rg: "parentChannelName_a7e67f",
     fj: "parentChannelNameClickable_a7e67f",
