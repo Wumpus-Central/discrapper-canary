@@ -1,10 +1,11 @@
-n.d(t, { A: () => l });
-var r = n(503698),
-    i = n.n(r),
-    a = n(77157);
-function l(e) {
-    let t = (0, a.A)(e);
-    return i()({
+"use strict";
+n.d(t, { A: () => a });
+var i = n(503698),
+    r = n.n(i),
+    l = n(77157);
+function a(e) {
+    let t = (0, l.A)(e);
+    return r()({
         "custom-profile-frame": !!e,
         "custom-profile-frame-bottom": t?.layers.some((e) => {
             let { type: t, anchor: n } = e;
