@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { _: () => d });
-var a = n(627968),
-    i = n(503698),
-    l = n.n(i),
-    r = n(778712),
-    s = n(97808),
-    c = n(652215),
-    o = n(124882);
+a.d(t, { _: () => d });
+var r = a(627968),
+    n = a(503698),
+    l = a.n(n),
+    i = a(778712),
+    s = a(97808),
+    o = a(652215),
+    c = a(124882);
 let d = (e) => {
-    let { showStatus: t, width: n, opacity: i, size: d = "default" } = e,
-        u = "small" === d ? r._3.SIZE_24 : r._3.SIZE_32;
-    return (0, a.jsxs)("div", {
-        className: l()(o.Os, { [o.i]: "small" === d }),
-        style: { opacity: i },
+    let { showStatus: t, width: a, opacity: n, size: d = "default" } = e,
+        u = "small" === d ? i._3.SIZE_24 : i._3.SIZE_32;
+    return (0, r.jsxs)("div", {
+        className: l()(c.Os, { [c.i]: "small" === d }),
+        style: { opacity: n },
         children: [
-            (0, a.jsx)(s.eu, {
+            (0, r.jsx)(s.eu, {
                 src: null,
                 size: u,
-                status: t ? c.clD.ONLINE : void 0,
+                status: t ? o.clD.ONLINE : void 0,
                 statusColor: "var(--border-subtle)",
                 "aria-hidden": !0,
-                imageClassName: o.yf,
+                imageClassName: c.yf,
             }),
-            (0, a.jsx)("div", {
-                className: l()(o.aA, { [o.vX]: "small" === d }),
-                style: { maxWidth: null != n ? n : "100px" },
+            (0, r.jsx)("div", {
+                className: l()(c.aA, { [c.vX]: "small" === d }),
+                style: { maxWidth: null != a ? a : "100px" },
             }),
         ],
     });

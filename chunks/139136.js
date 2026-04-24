@@ -1,29 +1,28 @@
-"use strict";
-n.d(t, { A: () => u });
-var a = n(627968),
-    i = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    s = n(203632);
-n(881106);
-var c = n(480335),
-    o = n(621395),
-    d = n(778765);
+a.d(t, { A: () => u });
+var r = a(627968),
+    n = a(64700),
+    l = a(503698),
+    i = a.n(l),
+    s = a(203632);
+a(881106);
+var o = a(480335),
+    c = a(621395),
+    d = a(778765);
 let u = (e) => {
     let {
             skuId: t,
-            isHighlighted: n,
+            isHighlighted: a,
             removeSetHeight: l = !1,
             withScaleAnimation: u = !1,
-            delayProfileEffectIntro: m = !1,
-            hideBackground: f = !1,
+            delayProfileEffectIntro: h = !1,
+            hideBackground: p = !1,
         } = e,
-        [h, _] = i.useState(!0);
-    return (i.useEffect(() => {
-        if (!0 !== u) _(!1);
+        [m, f] = n.useState(!0);
+    return (n.useEffect(() => {
+        if (!0 !== u) f(!1);
         else {
             let e = setTimeout(() => {
-                _(!1);
+                f(!1);
             }, 500);
             return () => {
                 clearTimeout(e);
@@ -32,20 +31,20 @@ let u = (e) => {
     }, [u]),
     null == t)
         ? null
-        : (0, a.jsxs)("div", {
-              className: r()(o.i1, { [o.qy]: u, [o.pE]: !l, [o.JQ]: f }),
+        : (0, r.jsxs)("div", {
+              className: i()(c.i1, { [c.qy]: u, [c.pE]: !l, [c.JQ]: p }),
               children: [
-                  (0, a.jsx)("img", { src: d.A, alt: "", className: o.VH, "aria-hidden": !0, draggable: !1 }),
-                  !h &&
-                      (0, a.jsx)(c.A, {
+                  (0, r.jsx)("img", { src: d.A, alt: "", className: c.VH, "aria-hidden": !0, draggable: !1 }),
+                  !m &&
+                      (0, r.jsx)(o.A, {
                           skuId: t,
                           useThumbnail: !0,
                           autoPlay: u,
                           restartMethod: s.HL.FromStart,
                           resetOnHover: !0,
-                          isHovering: n,
+                          isHovering: a,
                           useOpacityOnHover: !1,
-                          delayIntro: m,
+                          delayIntro: h,
                           shopPreview: !0,
                       }),
               ],

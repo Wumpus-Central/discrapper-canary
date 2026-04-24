@@ -1370,7 +1370,7 @@ let tY = R.memo(function (e) {
         })
     );
 });
-var tK = n(504458);
+var tK = n(282077);
 function tX(e) {
     let { step: t, header: n, children: i } = e;
     return (0, j.jsxs)("div", {
@@ -17502,61 +17502,64 @@ function hY(e) {
 }
 function hK(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: s } = e,
-        a = hS(el.intl.string(el.t.Mi9Kbe)),
-        r = (0, o_.Ay)(),
-        o = (0, rh.qE)(n, t),
-        d = { dark: { src: hH, name: t.name }, light: { src: hV, name: t.name } };
-    function c() {
+        a = (e) => l || (s && [gF.y.HOLOGRAPHIC, gF.y.GRADIENT].includes(e)),
+        r = hS(el.intl.string(el.t.Mi9Kbe)),
+        o = (0, o_.Ay)(),
+        d = (0, rh.qE)(n, t),
+        c = { dark: { src: hH, name: t.name }, light: { src: hV, name: t.name } };
+    function u() {
         (0, hj.A)(n, rF.A.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT), (0, S.jH)();
     }
     return (0, j.jsx)(h_.Ay, {
         contentTypes: [A.M.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE],
         children: (e) => {
-            let { visibleContent: u } = e;
+            let { visibleContent: l } = e;
             return (0, j.jsxs)(iw.D, {
                 label: el.intl.string(el.t["9wVJRB"]),
-                badge: u === A.M.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE ? "new" : void 0,
+                badge: l === A.M.GUILD_SETTINGS_ROLE_STYLES_NEW_BADGE ? "new" : void 0,
                 children: [
                     (0, j.jsx)("div", {
                         className: hF.p6,
                         children: hw.wE.map((e) => {
-                            let { id: c, colors: u, labelString: m } = e;
-                            return (0, j.jsxs)(
-                                "button",
+                            let { id: l, colors: s, labelString: u } = e;
+                            return (0, j.jsx)(
+                                sC.vN,
                                 {
-                                    className: k()(hF.ZQ, {
-                                        [hF.wH]: i === c,
-                                        [hF.r9]: l || (s && [gF.y.HOLOGRAPHIC, gF.y.GRADIENT].includes(c)),
-                                    }),
-                                    onClick: () => {
-                                        (0, gV.C5)(t.id, c);
-                                    },
-                                    children: [
-                                        (0, j.jsx)(re.M, {
-                                            children: (0, j.jsx)("div", {
-                                                className: hF.Al,
-                                                children: (0, j.jsx)(hp.A, {
-                                                    author: {
-                                                        nick: a.author.username,
-                                                        guildId: n,
-                                                        authorId: a.author.id,
-                                                        colorRoleId: t.id,
-                                                        colorStrings: (0, hE.K3)(u),
-                                                        colorString: (0, rn.Hl)(u.primary_color),
-                                                    },
-                                                    message: a,
-                                                    preview: !0,
-                                                    roleIcon: o ?? ((0, ox.q)(r) ? d.light : d.dark),
-                                                    isGroupStart: !0,
-                                                    disableInteraction: !0,
-                                                    previewGuildId: n,
+                                    offset: -2,
+                                    children: (0, j.jsxs)("button", {
+                                        type: "button",
+                                        className: k()(hF.ZQ, { [hF.wH]: i === l, [hF.r9]: a(l) }),
+                                        disabled: a(l),
+                                        onClick: () => {
+                                            (0, gV.C5)(t.id, l);
+                                        },
+                                        children: [
+                                            (0, j.jsx)(re.M, {
+                                                children: (0, j.jsx)("div", {
+                                                    className: hF.Al,
+                                                    children: (0, j.jsx)(hp.A, {
+                                                        author: {
+                                                            nick: r.author.username,
+                                                            guildId: n,
+                                                            authorId: r.author.id,
+                                                            colorRoleId: t.id,
+                                                            colorStrings: (0, hE.K3)(s),
+                                                            colorString: (0, rn.Hl)(s.primary_color),
+                                                        },
+                                                        message: r,
+                                                        preview: !0,
+                                                        roleIcon: d ?? ((0, ox.q)(o) ? c.light : c.dark),
+                                                        isGroupStart: !0,
+                                                        disableInteraction: !0,
+                                                        previewGuildId: n,
+                                                    }),
                                                 }),
                                             }),
-                                        }),
-                                        (0, j.jsx)("div", { className: hF.C2, children: el.intl.string(m) }),
-                                    ],
+                                            (0, j.jsx)("div", { className: hF.C2, children: el.intl.string(u) }),
+                                        ],
+                                    }),
                                 },
-                                c,
+                                l,
                             );
                         }),
                     }),
@@ -17582,7 +17585,7 @@ function hK(e) {
                                     ],
                                 }),
                                 (0, j.jsx)(eg.$, {
-                                    onClick: c,
+                                    onClick: u,
                                     variant: "expressive",
                                     icon: mO._,
                                     text: el.intl.string(el.t["+7XY31"]),

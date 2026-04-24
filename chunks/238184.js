@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => r });
-var a = n(492462),
-    i = n(873263),
-    l = n(758836);
-let r = () => {
-    let e = (0, i.zy)(),
-        { tab: t } = (0, a.parse)(e.search);
+a.d(t, { A: () => i });
+var r = a(492462),
+    n = a(873263),
+    l = a(758836);
+let i = () => {
+    let e = (0, n.zy)(),
+        { tab: t } = (0, r.parse)(e.search);
     if (Object.values(l.G2).includes(t)) return t;
 };
