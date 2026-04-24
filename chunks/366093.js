@@ -84,23 +84,38 @@ null == window.TextEncoder && n(283346), n(890245);
 var o = n(38405);
 n(618714), n(547830), n(323874), n(14289), n(35956), n(321073), n(333405);
 var l = n(636537),
-    d = n(110259),
-    _ = n(861638),
+    _ = n(110259),
+    d = n(861638),
     u = n(183636),
     c = n(53943),
     E = n(652215),
-    h = n(30076),
-    m = n(209489),
-    f = n(723702),
-    g = n(998218),
+    h = n(954571);
+let m = (0, n(945810).mj)({
+    kind: "user",
+    name: "2026-04-http-request-sample",
+    defaultConfig: { sampleRate: 0 },
+    variations: { 1: { sampleRate: 1e-4 } },
+});
+var f = n(30076),
+    g = n(209489),
+    I = n(723702),
+    A = n(998218),
     p = n(187207),
-    A = n(472229);
-let I = [
+    T = n(472229);
+let S = [
         "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
         "https://cdn.discordapp.com/bad-domains/hashes.json",
     ],
-    T = new p.n(),
-    S = /\/api(\/v\d+)?\/science/;
+    N = new p.n(),
+    O = /\/api(\/v\d+)?\/science/;
+function R(e) {
+    try {
+        let t = new URL(e).pathname;
+        return O.test(t);
+    } catch {
+        return O.test(e);
+    }
+}
 (0, l.IA)({
     prepareRequest(e) {
         let { default: t } = n(495544),
@@ -108,23 +123,24 @@ let I = [
             { default: r } = n(773669),
             { default: s } = n(287809),
             { default: a } = n(954571),
-            { isPlatformEmbedded: E } = n(723702);
+            { isPlatformEmbedded: f } = n(723702),
+            g = performance.now();
         if ("/" === e.url[0]) {
-            let n, o, c, h, m;
+            let n, o, c, E, h;
             (e.url = (0, l.TP)() + e.url),
                 "Authorization" in e.header || "authorization" in e.header || e.set("Authorization", t.getToken()),
-                (n = (0, _.Vc)()),
-                (o = (0, d.getSuperProperties)()),
+                (n = (0, d.Vc)()),
+                (o = (0, _.getSuperProperties)()),
                 (c = {}),
-                (h = n?.uuid) !== o?.client_heartbeat_session_id && (c.client_heartbeat_session_id = h),
-                (m = u.A.getState()) !== o?.client_app_state && (c.client_app_state = m),
-                Object.keys(c).length > 0 && (0, d.extendSuperProperties)(c);
-            let f = a.getSuperPropertiesBase64();
-            null != f && e.set("X-Super-Properties", f);
-            let p = t.getFingerprint();
-            null != p && "" !== p && e.set("X-Fingerprint", p);
+                (E = n?.uuid) !== o?.client_heartbeat_session_id && (c.client_heartbeat_session_id = E),
+                (h = u.A.getState()) !== o?.client_app_state && (c.client_app_state = h),
+                Object.keys(c).length > 0 && (0, _.extendSuperProperties)(c);
+            let m = a.getSuperPropertiesBase64();
+            null != m && e.set("X-Super-Properties", m);
+            let g = t.getFingerprint();
+            null != g && "" !== g && e.set("X-Fingerprint", g);
             let I = t.getInstallationForTracking();
-            if ((null != I && "" !== I && e.set("X-Installation-ID", I), E)) {
+            if ((null != I && "" !== I && e.set("X-Installation-ID", I), f)) {
                 let t,
                     n = [];
                 null != navigator && (n = [...navigator.languages] ?? []);
@@ -139,31 +155,22 @@ let I = [
                 e.set("Accept-Language", i);
             }
             e.set("X-Discord-Locale", r.locale);
-            let N = (0, A.A)();
-            null != N && e.set("X-Discord-Timezone", N);
-            let C = i.getDebugOptionsHeaderValue();
-            if ((null != C && "" !== C && e.set("X-Debug-Options", C), i.isTracingRequests)) {
+            let p = (0, T.A)();
+            null != p && e.set("X-Discord-Timezone", p);
+            let S = i.getDebugOptionsHeaderValue();
+            if ((null != S && "" !== S && e.set("X-Debug-Options", S), i.isTracingRequests)) {
                 let t = s.getCurrentUser(),
-                    n = T.generate(t?.id ?? "0");
+                    n = N.generate(t?.id ?? "0");
                 e.set("x-client-trace-id", n);
                 try {
                     let t = new URL(e.url).pathname;
-                    if (
-                        !(function (e) {
-                            try {
-                                let t = new URL(e).pathname;
-                                return S.test(t);
-                            } catch {
-                                return S.test(e);
-                            }
-                        })(t)
-                    ) {
+                    if (!R(t)) {
                         let i,
                             r,
                             s =
                                 ((i = new URLSearchParams()).append("query", `@http.x_client_trace_id:"${n}"`),
                                 i.append("showAllSpans", "true"),
-                                (r = g.A.toURLSafe(`traces?${i.toString()}`, "https://datadog.discord.tools/apm/")),
+                                (r = A.A.toURLSafe(`traces?${i.toString()}`, "https://datadog.discord.tools/apm/")),
                                 null == r ? null : r.toString());
                         null !== s && console.debug("%c[tracing]%c %s %s\n%s", "font-weight: bold", "", e.method, t, s);
                     }
@@ -172,13 +179,33 @@ let I = [
                 }
             }
         }
-        e.url,
-            e.method,
-            c.z8("Network", `Sending ${e.method} to ${e.url}`),
+        let I = !R(e.url);
+        function p(t) {
+            if (I) {
+                var n, i;
+                let r;
+                (r = {
+                    ...(n = {
+                        url: e.url,
+                        method: e.method,
+                        status_code: t?.status,
+                        duration_ms: Math.round(performance.now() - g),
+                    }),
+                    url: null == (i = n.url) ? i : i.split(/[?#]/)[0].replace(/\d+/g, "#"),
+                }),
+                    Math.random() <
+                        (function () {
+                            let { sampleRate: e } = m.getConfig({ location: "track_http_request" });
+                            return e;
+                        })() && h.default.track(E.HAw.HTTP_REQUEST, { ...r, source: "sample" }),
+                    (I = !1);
+            }
+        }
+        c.z8("Network", `Sending ${e.method} to ${e.url}`),
             e.on("response", (t) => {
                 let n = null != t && t.status >= 400 ? t.text : null,
                     i = null == n ? "" : `and body: ${n}`;
-                c.z8("Network", `Completed ${e.method} to ${e.url} with status: ${t?.status} ${i}`);
+                c.z8("Network", `Completed ${e.method} to ${e.url} with status: ${t?.status} ${i}`), p(t);
             }),
             e.on("error", (t, n) => {
                 if (
@@ -186,13 +213,14 @@ let I = [
                     null != t && "parse" in t && t.parse)
                 ) {
                     let n = "[FILTERED]";
-                    I.includes(e.url) && (n = e.xhr?.responseText?.slice(0, 1e3)),
+                    S.includes(e.url) && (n = e.xhr?.responseText?.slice(0, 1e3)),
                         o.A.addBreadcrumb({
                             category: "superagent",
                             message: "Failed to parse HTTP response.",
                             data: { method: e.method, url: e.url, responseText: n, status: t.status },
                         });
                 }
+                p(n);
             });
     },
     interceptResponse(e, t, i) {
@@ -219,7 +247,7 @@ let I = [
                     })
                     .catch(i),
                 !0)
-              : (0, h.O)(e.statusCode, e.body?.code)
+              : (0, f.O)(e.statusCode, e.body?.code)
                 ? (Promise.resolve()
                       .then(n.bind(n, 700241))
                       .then((e) => {
@@ -253,23 +281,23 @@ let I = [
 }),
     (0, l.Cu)(async (e) => {
         c.z8("Network", `Request to ${e} failed, will retry.`),
-            m.A.isOnline() || (await m.A.awaitOnline(), c.z8("Network", `Network detected online, retrying ${e}`));
+            g.A.isOnline() || (await g.A.awaitOnline(), c.z8("Network", `Network detected online, retrying ${e}`));
     });
-var N = n(495544);
+var C = n(495544);
 n(736056), n(930839);
-var C = n(247775),
-    R = n(143236),
-    O = (((i = O || {}).VERTICAL = "vertical"), (i.HORIZONTAL = "horizontal"), i);
-let y = { open: !1, orientation: null };
-class v extends R.EventEmitter {
+var y = n(247775),
+    D = n(143236),
+    L = (((i = L || {}).VERTICAL = "vertical"), (i.HORIZONTAL = "horizontal"), i);
+let v = { open: !1, orientation: null };
+class w extends D.EventEmitter {
     constructor() {
         super(), setInterval(() => this.check(), 500);
     }
     get orientations() {
-        return Object.values(O);
+        return Object.values(L);
     }
     get state() {
-        return y;
+        return v;
     }
     check() {
         let e =
@@ -290,70 +318,69 @@ class v extends R.EventEmitter {
                 })() > 160,
             n = e ? "vertical" : "horizontal";
         if (!(t && e) && (e || t)) {
-            let e = y.open;
-            (y = { open: !0, orientation: n }), (e && y.orientation === n) || this.emit("changed", y);
-        } else y.open && ((y.open = !1), this.emit("changed", y));
+            let e = v.open;
+            (v = { open: !0, orientation: n }), (e && v.orientation === n) || this.emit("changed", v);
+        } else v.open && ((v.open = !1), this.emit("changed", v));
     }
 }
-var D = n(607399),
-    L = n(855522);
-function b() {
+var P = n(607399),
+    b = n(855522);
+function k() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-    if (null != L.A.Messages.SELF_XSS_HEADER)
+    if (null != b.A.Messages.SELF_XSS_HEADER)
         if (
             (console.log(
-                `%c${L.A.Messages.SELF_XSS_HEADER}`,
+                `%c${b.A.Messages.SELF_XSS_HEADER}`,
                 "color: #5865f2; -webkit-text-stroke: 2px black; font-size: 72px; font-weight: bold;",
             ),
-            console.log(`%c${L.A.Messages.SELF_XSS_LINE_1}`, "font-size: 16px;"),
-            console.log(`%c${L.A.Messages.SELF_XSS_LINE_2}`, "font-size: 18px; font-weight: bold; color: red;"),
+            console.log(`%c${b.A.Messages.SELF_XSS_LINE_1}`, "font-size: 16px;"),
+            console.log(`%c${b.A.Messages.SELF_XSS_LINE_2}`, "font-size: 18px; font-weight: bold; color: red;"),
             e >= 4)
         ) {
-            console.log(`%c${L.A.Messages.SELF_XSS_LINE_3}`, "font-size: 16px;");
-            let e = L.A.Messages.SELF_XSS_LINE_4.format({
+            console.log(`%c${b.A.Messages.SELF_XSS_LINE_3}`, "font-size: 16px;");
+            let e = b.A.Messages.SELF_XSS_LINE_4.format({
                 url: `${location.protocol}${window.GLOBAL_ENV.MARKETING_ENDPOINT}/jobs`,
             });
             console.log(`%c${e}`, "font-size: 16px;");
-        } else setTimeout(() => b(e + 1), 1e3);
+        } else setTimeout(() => k(e + 1), 1e3);
 }
-var w = n(121894),
-    P = n(17928),
-    k = n(413323),
-    M = n(187322),
-    U = n(775602),
-    x = n(627968);
+var U = n(121894),
+    M = n(17928),
+    G = n(413323),
+    x = n(187322),
+    V = n(775602),
+    F = n(627968);
 n(64700);
-var G = n(791332),
-    V = n.n(G),
-    F = n(349288),
-    B = n(77729),
-    H = n(502229),
+var B = n(791332),
+    H = n.n(B),
+    Y = n(349288),
+    W = n(77729),
+    K = n(502229),
     j = n(873298),
-    W = n(97469),
-    Y = n(363195),
-    K = n(253932),
-    z = n(617617),
-    $ = n(954571),
-    q = n(53298);
-let X = q.O.NONE,
+    $ = n(97469),
+    z = n(363195),
+    q = n(253932),
+    X = n(617617),
+    Q = n(53298);
+let J = Q.O.NONE,
     Z = window.matchMedia("(prefers-color-scheme: dark)"),
-    Q = window.matchMedia("(prefers-color-scheme: light)"),
-    J = window.matchMedia("(inverted-colors: inverted)"),
-    ee = window.matchMedia("(prefers-contrast: more)"),
-    et = window.matchMedia("(forced-colors: active)");
-function en(e, t) {
-    t ? (X |= e) : (X &= ~e);
+    ee = window.matchMedia("(prefers-color-scheme: light)"),
+    et = window.matchMedia("(inverted-colors: inverted)"),
+    en = window.matchMedia("(prefers-contrast: more)"),
+    ei = window.matchMedia("(forced-colors: active)");
+function er(e, t) {
+    t ? (J |= e) : (J &= ~e);
 }
 n(937982);
-var ei = n(141931),
-    er = n(506774),
-    es = n(969341),
-    ea = n(287809),
-    eo = n(19575),
-    el = n(77138);
-let ed = window.DiscordNative,
-    e_ = `${E.HAw.APP_NATIVE_CRASH}Storage`;
-function eu(e, t) {
+var es = n(141931),
+    ea = n(506774),
+    eo = n(969341),
+    el = n(287809),
+    e_ = n(19575),
+    ed = n(77138);
+let eu = window.DiscordNative,
+    ec = `${E.HAw.APP_NATIVE_CRASH}Storage`;
+function eE(e, t) {
     let n = {
         did_crash: !0,
         electron_crash_reporter_did_crash: !0,
@@ -361,18 +388,18 @@ function eu(e, t) {
         child_process_crash_reason: t.reason ?? null,
         child_process_crash_exit_code: t.exitCode ?? null,
     };
-    $.default.track(E.HAw.APP_NATIVE_CRASH, n);
+    h.default.track(E.HAw.APP_NATIVE_CRASH, n);
 }
-async function ec() {
+async function eh() {
     var e, t;
     let n, i;
     if (__OVERLAY__) return;
-    let r = ed?.processUtils?.getLastCrash;
-    if (((0, f.isDesktop)() && eo.Ay.on("CRASH_REPORTER_NEW_CRASH", eu), null == r))
+    let r = eu?.processUtils?.getLastCrash;
+    if (((0, I.isDesktop)() && e_.Ay.on("CRASH_REPORTER_NEW_CRASH", eE), null == r))
         return void console.log("AppCrashedFatalReport: getLastCrash not supported.");
     let s = await r(),
         { didCrashReporterSeeCrash: a, didCrashOrUncleanExit: o } =
-            ((e = er.w.get(e_, {})),
+            ((e = ea.w.get(ec, {})),
             (t = s),
             (n = e?.lastId !== t?.id && t?.id != null),
             (i = t?.rendererCrashExitCode ?? null),
@@ -391,14 +418,14 @@ async function ec() {
                     child_process_crash_type: null,
                     child_process_crash_reason: null,
                     child_process_crash_exit_code: null,
-                    had_rtc_connection: i(ei.du.HasRTCConnection),
-                    was_sending_video: i(ei.du.IsSendingVideo),
-                    was_sending_stream: i(ei.du.IsSendingStream),
-                    was_receiving_video: i(ei.du.IsReceivingVideo),
-                    was_receiving_stream: i(ei.du.IsReceivingStream),
-                    video_media_session_id: r(ei.du.VideoMediaSessionId),
-                    stream_media_session_id: r(ei.du.StreamMediaSessionId),
-                    intentional_crash_reason: r(ei.du.IntentionalCrashReason),
+                    had_rtc_connection: i(es.du.HasRTCConnection),
+                    was_sending_video: i(es.du.IsSendingVideo),
+                    was_sending_stream: i(es.du.IsSendingStream),
+                    was_receiving_video: i(es.du.IsReceivingVideo),
+                    was_receiving_stream: i(es.du.IsReceivingStream),
+                    video_media_session_id: r(es.du.VideoMediaSessionId),
+                    stream_media_session_id: r(es.du.StreamMediaSessionId),
+                    intentional_crash_reason: r(es.du.IntentionalCrashReason),
                     last_memory_usage_kb: n?.lastMemoryInformation?.memoryUsageKB ?? null,
                     last_used_js_heap_size_kb: n?.lastMemoryInformation?.usedJSHeapSizeKB ?? null,
                     last_memory_usage_uptime: n?.lastMemoryInformation?.uptimeSeconds ?? null,
@@ -418,45 +445,45 @@ async function ec() {
                 ...s,
             };
         })(a, o, s);
-    $.default.track(E.HAw.APP_NATIVE_CRASH, l),
-        er.w.set(e_, { lastId: s?.id }),
-        o && setTimeout(async () => await eE(), 1e4);
+    h.default.track(E.HAw.APP_NATIVE_CRASH, l),
+        ea.w.set(ec, { lastId: s?.id }),
+        o && setTimeout(async () => await em(), 1e4);
 }
-async function eE() {
-    if (ea.default.getCurrentUser()?.isStaff())
+async function em() {
+    if (el.default.getCurrentUser()?.isStaff())
         try {
-            await es.Ay.getMediaEngine().writeAudioDebugState(),
-                await (0, el.a)(E.Umv.RTC),
+            await eo.Ay.getMediaEngine().writeAudioDebugState(),
+                await (0, ed.a)(E.Umv.RTC),
                 console.log("Successfully uploaded debug files");
         } catch (e) {
             console.log("Failed to upload debug files");
         }
 }
-var eh = n(626584),
-    em = n(228366),
-    ef = n(865116),
-    eg = n(608960),
+var ef = n(626584),
+    eg = n(228366),
+    eI = n(865116),
+    eA = n(608960),
     ep = n(41237),
-    eA = n(279263),
-    eI = n(317525),
-    eT = n(71393),
-    eS = n(157016),
-    eN = n(548965);
-let eC = new eh.A("DispatcherBridge"),
-    eR = [eA.A, eT.A, eI.A, eg.A, ep.A],
-    eO = {
-        GUILD_MEMBER_ADD: (e) => ({ ...e, currentUserId: N.default.getId() }),
+    eT = n(279263),
+    eS = n(317525),
+    eN = n(71393),
+    eO = n(157016),
+    eR = n(548965);
+let eC = new ef.A("DispatcherBridge"),
+    ey = [eT.A, eN.A, eS.A, eA.A, ep.A],
+    eD = {
+        GUILD_MEMBER_ADD: (e) => ({ ...e, currentUserId: C.default.getId() }),
         CONNECTION_OPEN: (e) => ({ guilds: e.guilds, unavailableGuilds: e.unavailableGuilds }),
         CACHE_LOADED: (e) => ({ guilds: e.guilds }),
         CACHE_LOADED_LAZY: (e) => ({ guilds: e.guilds }),
         BACKGROUND_SYNC: (e) => ({ guilds: e.guilds }),
     };
-class ey {
+class eL {
     tokenToStore = new Map();
     disabledFromFatalError = !1;
     constructor(e) {
         if (0 === e.length) return;
-        const t = eS.V;
+        const t = eO.V;
         if (null == t) return void eC.info("Not initializing DispatcherBridge, because kvStoreApi is unavailable.");
         try {
             const n = [];
@@ -471,17 +498,17 @@ class ey {
             const r = (e) => {
                 let n;
                 if (this.disabledFromFatalError) return;
-                let i = eO[e.type],
+                let i = eD[e.type],
                     r = performance.now();
                 n = null != i ? JSON.stringify({ type: e.type, ...i(e) }) : JSON.stringify(e);
                 let s = { kind: "json_stringify_action", durationMillis: performance.now() - r },
-                    a = eN.pd.shouldCollectMetrics(),
+                    a = eR.pd.shouldCollectMetrics(),
                     o = t.dispatchAction(n, a);
                 if (!o.ok) return void this.handleFatalError(o.error, e.type);
                 let l = performance.now() - r,
-                    { metrics: d, storeResults: _ } = o.value,
+                    { metrics: _, storeResults: d } = o.value,
                     u = [];
-                for (let t of _) null != t.error ? this.handleStoreError(t, e.type) : u.push(t);
+                for (let t of d) null != t.error ? this.handleStoreError(t, e.type) : u.push(t);
                 for (let t of u)
                     this.withStoreToken(t.storeToken, e.type, (e) => {
                         e.applyChanges(t.databaseChanges);
@@ -490,16 +517,16 @@ class ey {
                     this.withStoreToken(t.storeToken, e.type, (t) => {
                         t.doEmitChanges(e);
                     });
-                if (null != d && a) {
-                    let t = [s, ...d.timings];
-                    if (ef.Ay.get("libdiscore_verbose_telemetry_logging")) {
+                if (null != _ && a) {
+                    let t = [s, ..._.timings];
+                    if (eI.Ay.get("libdiscore_verbose_telemetry_logging")) {
                         let n = t
                                 .map((e) => {
                                     let { kind: t, durationMillis: n } = e;
                                     return ` - ${t}: ${n}ms`;
                                 })
                                 .join("\n"),
-                            i = d.mutations
+                            i = _.mutations
                                 .map((e) => {
                                     let { recordType: t, metrics: n } = e,
                                         i = Object.entries(n)
@@ -516,7 +543,7 @@ class ey {
 ${i}`;
                                 })
                                 .join("\n"),
-                            r = d.memory
+                            r = _.memory
                                 .map((e) => {
                                     let { recordType: t, statistics: n } = e,
                                         i = Object.entries(n)
@@ -547,21 +574,21 @@ ${n}`;
                         eC.info(`Handling action ${e.type} took ${l}ms
 ${s}`);
                     }
-                    $.default.track(E.HAw.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, {
+                    h.default.track(E.HAw.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, {
                         action_type: e.type,
                         total_duration_millis: l,
                         timings: JSON.stringify(t),
-                        mutations: JSON.stringify(d.mutations),
-                        memory_usage: JSON.stringify(d.memory),
+                        mutations: JSON.stringify(_.mutations),
+                        memory_usage: JSON.stringify(_.memory),
                     }),
-                        eN.pd.didEmit();
+                        eR.pd.didEmit();
                 }
             };
-            em.h.register(
+            eg.h.register(
                 "LibDiscoreDispatcherBridge",
                 Object.fromEntries(i.map((e) => [e, r])),
                 () => {},
-                em.A.Database,
+                eg.A.Database,
             );
         } catch (e) {
             eC.error("Failed to initialize the dispatcher bridge", e);
@@ -578,7 +605,7 @@ ${s}`);
             }),
             i)
         )
-            throw ((0, eN.pX)(), n);
+            throw ((0, eR.pX)(), n);
         for (let e of (eC.warn("Disabling DispatcherBridge until restart"),
         (this.disabledFromFatalError = !0),
         this.tokenToStore.values()))
@@ -599,7 +626,7 @@ ${s}`);
         )
             eC.warn(`Store: ${i} had unexpected error in Rust implementation, disabling moving forward`),
                 n?.disableDualReadValidation();
-        else if ("libdiscore" === r) throw ((0, eN.pX)(), s);
+        else if ("libdiscore" === r) throw ((0, eR.pX)(), s);
         else throw Error(`unexpected storeMode '${r}' for store ${i}`);
     }
     withStoreToken(e, t, n) {
@@ -613,10 +640,10 @@ ${s}`);
 }
 let ev = new Set(["libdiscore", "typescript-libdiscore-dual-read"]);
 if (
-    (new ey(
+    (new eL(
         __OVERLAY__
             ? (eC.verbose("Not enabling rust implementation because we're in the legacy overlay"), [])
-            : eR.filter((e) => ev.has(e.getMode())),
+            : ey.filter((e) => ev.has(e.getMode())),
     ),
     (n.p = (window.GLOBAL_ENV.STATIC_ENDPOINT ?? "") + window.GLOBAL_ENV.PUBLIC_PATH),
     !0 === window.__METICULOUS_ENABLED &&
@@ -633,12 +660,12 @@ if (
             .then(n.bind(n, 38896))
             .then((e) => e.init());
 }
-(0, k.Zs)(function (e) {
+(0, G.Zs)(function (e) {
     return (
         (e.paragraph = {
             ...e.paragraph,
             react: function (e, t, n) {
-                return (0, x.jsx)("p", { children: t(e.content, n) }, n.key);
+                return (0, F.jsx)("p", { children: t(e.content, n) }, n.key);
             },
         }),
         (e.link = {
@@ -650,8 +677,8 @@ if (
                     t && t.onClick ? ((i.onClick = t.onClick), (i.onContextMenu = t.onContextMenu)) : (i.onClick = t);
                 }
                 return (
-                    null == i.onClick && (i.href = V().sanitizeUrl(e.target)),
-                    (0, x.jsx)(F.Anchor, { title: e.title, ...i, children: t(e.content, n) }, n.key)
+                    null == i.onClick && (i.href = H().sanitizeUrl(e.target)),
+                    (0, F.jsx)(Y.Anchor, { title: e.title, ...i, children: t(e.content, n) }, n.key)
                 );
             },
         }),
@@ -660,12 +687,12 @@ if (
 }),
     (function (e, t) {
         if (null != t && "0.0.0" === t.app.getVersion()) return;
-        let n = new v();
+        let n = new w();
         if (null != t)
             if (null != t.window.setDevtoolsCallbacks)
                 t.window.setDevtoolsCallbacks(
                     () => {
-                        e.hideToken(), b();
+                        e.hideToken(), k();
                     },
                     () => {
                         e.showToken();
@@ -675,92 +702,92 @@ if (
                 let n = t.window.webContents;
                 n.removeAllListeners("devtools-opened"),
                     n.on("devtools-opened", () => {
-                        e.hideToken(), b();
+                        e.hideToken(), k();
                     }),
                     n.on("devtools-closed", e.showToken);
             }
         else
-            D.Fr ||
-                D.v1 ||
+            P.Fr ||
+                P.v1 ||
                 n.on("changed", (t) => {
                     let { open: n } = t;
-                    n ? (e.hideToken(), b()) : e.showToken();
+                    n ? (e.hideToken(), k()) : e.showToken();
                 });
         window.addEventListener("beforeunload", (t) => {
             t.isTrusted && e.showToken();
         });
-    })(C, B.A),
-    P.Ay.Emitter.injectBatchEmitChanges(w.r),
-    (P.Ay.PersistedStore.disableWrites = __OVERLAY__),
-    P.Ay.initialize(),
+    })(y, W.A),
+    M.Ay.Emitter.injectBatchEmitChanges(U.r),
+    (M.Ay.PersistedStore.disableWrites = __OVERLAY__),
+    M.Ay.initialize(),
     n.e("94459").then(n.t.bind(n, 868086, 19));
-let eD = window.GLOBAL_ENV.RELEASE_CHANNEL;
-new eh.A().log(
-    `[BUILD INFO] Release Channel: ${eD}, Build Number: 534558, Version Hash: 3680e364ce15ba327c79f75cc0360e50254745b6`,
+let ew = window.GLOBAL_ENV.RELEASE_CHANNEL;
+new ef.A().log(
+    `[BUILD INFO] Release Channel: ${ew}, Build Number: 535247, Version Hash: 8a58f961a5218604dd508130698fd25a3b3dc6b5`,
 ),
     o.A.setTags({ appContext: E.QCW }),
-    H.A.initBasic(),
+    K.A.initBasic(),
     {
         init() {
-            U.A.addChangeListener(this.handleAccessibilityStoreChanged),
-                Y.A.addChangeListener(this.handleAccessibilityStoreChanged),
-                z.A.addChangeListener(this.handleUiDensityChanged),
+            V.A.addChangeListener(this.handleAccessibilityStoreChanged),
+                z.A.addChangeListener(this.handleAccessibilityStoreChanged),
+                X.A.addChangeListener(this.handleUiDensityChanged),
                 Z.addListener(this.handlePrefersColorSchemeDarkChanged),
                 this.handlePrefersColorSchemeDarkChanged(Z),
-                Q.addListener(this.handlePrefersColorSchemeLightChanged),
-                this.handlePrefersColorSchemeLightChanged(Q),
-                ee.addListener(this.handlePrefersMoreContrastChanged),
-                this.handlePrefersMoreContrastChanged(ee),
-                et.addListener(this.handlePrefersForcedColorsChanged),
-                this.handlePrefersForcedColorsChanged(et),
-                J.addListener(this.handleInvertColorsChanged),
-                this.handleInvertColorsChanged(J),
-                $.default.setSystemAccessibilityFeatures(this.getActiveFeatures);
+                ee.addListener(this.handlePrefersColorSchemeLightChanged),
+                this.handlePrefersColorSchemeLightChanged(ee),
+                en.addListener(this.handlePrefersMoreContrastChanged),
+                this.handlePrefersMoreContrastChanged(en),
+                ei.addListener(this.handlePrefersForcedColorsChanged),
+                this.handlePrefersForcedColorsChanged(ei),
+                et.addListener(this.handleInvertColorsChanged),
+                this.handleInvertColorsChanged(et),
+                h.default.setSystemAccessibilityFeatures(this.getActiveFeatures);
         },
-        getActiveFeatures: () => X,
+        getActiveFeatures: () => J,
         handlePrefersColorSchemeDarkChanged(e) {
-            en(q.O.PREFERS_COLOR_SCHEME_DARK, e.matches);
+            er(Q.O.PREFERS_COLOR_SCHEME_DARK, e.matches);
         },
         handlePrefersColorSchemeLightChanged(e) {
-            en(q.O.PREFERS_COLOR_SCHEME_LIGHT, e.matches);
+            er(Q.O.PREFERS_COLOR_SCHEME_LIGHT, e.matches);
         },
         handlePrefersMoreContrastChanged(e) {
-            en(q.O.HIGH_CONTRAST, e.matches);
+            er(Q.O.HIGH_CONTRAST, e.matches);
         },
         handlePrefersForcedColorsChanged(e) {
-            en(q.O.FORCED_COLORS, e.matches);
+            er(Q.O.FORCED_COLORS, e.matches);
         },
         handleInvertColorsChanged(e) {
-            en(q.O.INVERT_COLORS, e.matches);
+            er(Q.O.INVERT_COLORS, e.matches);
         },
         handleUiDensityChanged() {
-            let e = K.Xi.getSetting();
-            en(q.O.UI_DENSITY_COMPACT, e === j.NS.COMPACT), en(q.O.UI_DENSITY_SPACIOUS, e === j.NS.COZY);
+            let e = q.Xi.getSetting();
+            er(Q.O.UI_DENSITY_COMPACT, e === j.NS.COMPACT), er(Q.O.UI_DENSITY_SPACIOUS, e === j.NS.COZY);
         },
         handleAccessibilityStoreChanged() {
-            en(q.O.REDUCED_MOTION, U.A.useReducedMotion),
-                en(q.O.REDUCED_MOTION_FROM_USER_SETTINGS, "auto" !== U.A.rawPrefersReducedMotion),
-                en(q.O.FORCED_COLORS_FROM_USER_SETTINGS, U.A.syncForcedColors),
-                en(q.O.CHAT_FONT_SCALE_DECREASED, U.A.isFontScaledDown),
-                en(q.O.CHAT_FONT_SCALE_INCREASED, U.A.isFontScaledUp),
-                en(q.O.ZOOM_LEVEL_DECREASED, U.A.isZoomedOut),
-                en(q.O.ZOOM_LEVEL_INCREASED, U.A.isZoomedIn),
-                en(q.O.MESSAGE_GROUP_SPACING_DECREASED, U.A.isMessageGroupSpacingDecreased),
-                en(q.O.MESSAGE_GROUP_SPACING_INCREASED, U.A.isMessageGroupSpacingIncreased),
-                en(q.O.DARK_SIDEBAR, (0, W.$i)()),
-                en(q.O.SATURATION_LEVEL_DECREASED, U.A.saturation < 1),
-                en(q.O.ROLE_STYLE_ADJUSTED, "username" !== U.A.roleStyle),
-                en(q.O.SYNC_PROFILE_THEME_WITH_USER_THEME, U.A.syncProfileThemeWithUserTheme),
-                en(q.O.CONTRAST_LEVEL_INCREASED, U.A.isHighContrastModeEnabled);
+            er(Q.O.REDUCED_MOTION, V.A.useReducedMotion),
+                er(Q.O.REDUCED_MOTION_FROM_USER_SETTINGS, "auto" !== V.A.rawPrefersReducedMotion),
+                er(Q.O.FORCED_COLORS_FROM_USER_SETTINGS, V.A.syncForcedColors),
+                er(Q.O.CHAT_FONT_SCALE_DECREASED, V.A.isFontScaledDown),
+                er(Q.O.CHAT_FONT_SCALE_INCREASED, V.A.isFontScaledUp),
+                er(Q.O.ZOOM_LEVEL_DECREASED, V.A.isZoomedOut),
+                er(Q.O.ZOOM_LEVEL_INCREASED, V.A.isZoomedIn),
+                er(Q.O.MESSAGE_GROUP_SPACING_DECREASED, V.A.isMessageGroupSpacingDecreased),
+                er(Q.O.MESSAGE_GROUP_SPACING_INCREASED, V.A.isMessageGroupSpacingIncreased),
+                er(Q.O.DARK_SIDEBAR, (0, $.$i)()),
+                er(Q.O.SATURATION_LEVEL_DECREASED, V.A.saturation < 1),
+                er(Q.O.ROLE_STYLE_ADJUSTED, "username" !== V.A.roleStyle),
+                er(Q.O.SYNC_PROFILE_THEME_WITH_USER_THEME, V.A.syncProfileThemeWithUserTheme),
+                er(Q.O.CONTRAST_LEVEL_INCREASED, V.A.isHighContrastModeEnabled);
         },
     }.init(),
     {
         init() {
-            U.A.addChangeListener(() => {
-                U.A.keyboardModeEnabled
-                    ? (M.oP.setRingsEnabled(!0), M.oP.enableAnimationTracking())
-                    : (M.oP.setRingsEnabled(!1), M.oP.disableAnimationTracking());
+            V.A.addChangeListener(() => {
+                V.A.keyboardModeEnabled
+                    ? (x.oP.setRingsEnabled(!0), x.oP.enableAnimationTracking())
+                    : (x.oP.setRingsEnabled(!1), x.oP.disableAnimationTracking());
             });
         },
     }.init(),
-    ec();
+    eh();
