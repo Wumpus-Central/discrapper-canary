@@ -23,7 +23,8 @@ let o = new r.A("SignalHelpers.web"),
     d = window.PublicKeyCredential;
 async function _(e, t, n) {
     if (!s.d4) return null;
-    if (i.Av && (0, i.cX)() && window.DiscordNative?.webAuthn?.[e] != null) return t;
+    if (i.Av && (0, i.cX)() && window.DiscordNative?.webAuthn?.[e] != null)
+        return await window.DiscordNative.nativeModules.ensureModule("discord_webauthn"), t;
     let r = await PublicKeyCredential.getClientCapabilities?.();
     return void 0 !== r && r[e] ? n : null;
 }
