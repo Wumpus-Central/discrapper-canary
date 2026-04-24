@@ -1,5 +1,5 @@
 e.exports = {
-    hH: "profileFrame__7d80f",
+    uF: "profileFrameContainer__7d80f",
     S_: "profileFrameLayer__7d80f",
     qG: "fadeIn__7d80f",
     Wm: "front__7d80f",

@@ -7,6 +7,7 @@ a.r(
         isAnimating: "isAnimating__9c3be",
         editingPanelExpanded: "editingPanelExpanded__9c3be",
         profileContentContainer: "profileContentContainer__9c3be",
+        profileCard: "profileCard__9c3be",
         editingPanelSlideIn: "editingPanelSlideIn__9c3be",
         editingPanelBorderRadiusExpand: "editingPanelBorderRadiusExpand__9c3be",
         editingPanel: "editingPanel__9c3be",

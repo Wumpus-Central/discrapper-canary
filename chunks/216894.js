@@ -1333,10 +1333,10 @@ function nE(e) {
                                             }),
                                         ],
                                     }),
-                                    null != H && (0, i.jsx)(eq.A, { frame: H, layout: "ACCOUNT_POPOUT" }),
                                     v?.profileEffect != null &&
                                         !z.current &&
                                         (0, i.jsx)(eQ.A, { skuId: v.profileEffect.skuId, isHovering: M }),
+                                    null != H && (0, i.jsx)(eq.A, { frame: H, layout: "ACCOUNT_POPOUT" }),
                                 ],
                             }),
                             en && ei ? (0, i.jsx)(t1, { targetElementRef: Q, onClose: A }) : null,
@@ -2275,7 +2275,7 @@ class i3 extends s.PureComponent {
                     n.e("38249"),
                     n.e("40976"),
                     n.e("85216"),
-                    n.e("25525"),
+                    n.e("58900"),
                     n.e("88109"),
                     n.e("86657"),
                 ]).then(n.bind(n, 410681));
