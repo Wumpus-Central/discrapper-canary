@@ -1,17 +1,18 @@
-a.d(t, { u: () => o });
-var r = a(636537),
-    n = a(228366),
-    l = a(153488),
-    i = a(427358),
-    s = a(652215);
+"use strict";
+n.d(t, { u: () => o });
+var r = n(636537),
+    i = n(228366),
+    a = n(153488),
+    l = n(427358),
+    s = n(652215);
 function o() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return i.A.shouldFetch() && l.A.hasConsented(s.YAq.PERSONALIZATION)
-        ? (n.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2" }),
+    return l.A.shouldFetch() && a.A.hasConsented(s.YAq.PERSONALIZATION)
+        ? (i.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2" }),
           r.Bo.get({ url: s.Rsh.USER_AFFINITIES_V2, retries: 3 * !!e, oldFormErrors: !0, rejectWithError: !1 }).then(
               (e) => {
                   let { body: t } = e;
-                  n.h.dispatch({
+                  i.h.dispatch({
                       type: "LOAD_USER_AFFINITIES_V2_SUCCESS",
                       affineUsers: t.user_affinities.map((e) => ({
                           otherUserId: e.other_user_id,
@@ -30,7 +31,7 @@ function o() {
                   });
               },
               () => {
-                  n.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
+                  i.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
               },
           ))
         : Promise.resolve();

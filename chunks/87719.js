@@ -1,4 +1,4 @@
-n.d(t, { e: () => s, x: () => o });
+n.d(t, { e: () => s, x: () => E });
 var i = n(398590),
     r = n(976860),
     a = n(780964),
@@ -9,6 +9,11 @@ let s = () => {
             e(a.X.NITRO_PANEL);
         }
     },
-    o = (e) => {
-        e?.(), (0, i.jH)(), (0, r.pX)(l.BVt.APPLICATION_STORE);
+    E = (e) => {
+        e?.(), (0, i.jH)();
+        {
+            let { default: e } = n(779733);
+            e();
+        }
+        (0, r.pX)(l.BVt.APPLICATION_STORE);
     };
