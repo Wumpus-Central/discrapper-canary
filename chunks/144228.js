@@ -34,6 +34,8 @@ function m(e) {
 }
 function f() {
     return (0, i.jsxs)("svg", {
+        "aria-hidden": "true",
+        focusable: "false",
         className: h.radioIndicator,
         width: 20,
         height: 20,
