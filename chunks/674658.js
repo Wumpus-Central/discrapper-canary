@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { q: () => _ });
+n.d(t, { q: () => d });
 var i = n(64700),
     r = n(575593),
     s = n(702841),
     a = n(67480),
-    o = n(29292),
+    o = n(693477),
     l = n(590180),
-    d = n(652215);
-function _(e, t) {
+    _ = n(652215);
+function d(e, t) {
     let n = (0, s.bG)([a.A], () => (null != e ? a.A.get(e) : null)),
-        _ = null != n && n.productLine !== d.EZt.COLLECTIBLES,
+        d = null != n && n.productLine !== _.EZt.COLLECTIBLES,
         [u, c, E, h] = (0, s.yK)([l.A], () => [
             l.A.isFetchingProduct(e),
             l.A.getProduct(e),
@@ -20,8 +20,8 @@ function _(e, t) {
         f = !0 === t && c?.type === r.R.BUNDLE && 0 === c.items.length;
     return (
         (0, i.useEffect)(() => {
-            null == e || (null != c && !f) || _ || u || m || (0, o.Jp)(e, { includeBundles: t });
-        }, [e, c, _, u, m, t, f]),
+            null == e || (null != c && !f) || d || u || m || (0, o.Jp)(e, { includeBundles: t });
+        }, [e, c, d, u, m, t, f]),
         { product: c, isFetching: u }
     );
 }

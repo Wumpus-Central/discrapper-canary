@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { T: () => a }), n(321073);
-var i = n(627968);
+n.d(t, { T: () => o }), n(321073);
+var a = n(627968);
 n(64700);
-var s = n(2110),
+var i = n(2110),
     l = n(192308),
     r = n(369053);
-async function a(e, t, a) {
+async function o(e, t, o) {
     let {
-            onSubmit: o,
+            onSubmit: s,
             onClose: c,
             isEligibleForFeedback: d = !0,
             isAuthenticated: u = !0,
             emailToken: _,
-            appContext: h,
-        } = a,
-        p = (0, l.getInteractingModalContext)();
+            appContext: p,
+        } = o,
+        f = (0, l.getInteractingModalContext)();
     try {
-        let a,
-            m = u
-                ? s.x.REPORT_TO_MOD.has(e.name)
+        let o,
+            h = u
+                ? i.x.REPORT_TO_MOD.has(e.name)
                     ? await (0, r.Op)(e, t)
                     : await (0, r.m9)(e, t)
                 : await (0, r.IM)(e, t),
-            g = [],
-            A = (e) => {
-                g.push(e);
+            m = [],
+            g = (e) => {
+                m.push(e);
             },
-            f = (e) => {
-                (a = e), o?.();
+            b = (e) => {
+                (o = e), s?.();
             };
         (0, l.openModalLazy)(
             async () => {
@@ -100,21 +99,21 @@ async function a(e, t, a) {
                     n.e("47252"),
                 ]).then(n.bind(n, 685961));
                 return (n) =>
-                    (0, i.jsx)(t, {
-                        menu: m,
+                    (0, a.jsx)(t, {
+                        menu: h,
                         reportType: e,
                         modalProps: n,
-                        onNavigate: A,
-                        onSubmit: f,
+                        onNavigate: g,
+                        onSubmit: b,
                         isAuthenticated: u,
                         emailToken: _,
                     });
             },
             {
                 onCloseCallback: () => {
-                    (0, r.Hl)(e, g, a), c?.(), d && (0, r.Zv)(e, a ?? null);
+                    (0, r.Hl)(e, m, o), c?.(), d && (0, r.Zv)(e, o ?? null);
                 },
-                contextKey: null != h ? (0, l.modalContextFromAppContext)(h) : p,
+                contextKey: null != p ? (0, l.modalContextFromAppContext)(p) : f,
                 dismissable: u,
             },
         );

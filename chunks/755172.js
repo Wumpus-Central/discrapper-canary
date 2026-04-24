@@ -1,55 +1,55 @@
-l.d(t, { y: () => g });
-var a = l(64700),
-    r = l(635358),
-    n = l(17928),
-    s = l(736056),
-    o = l(29292),
-    i = l(590180),
-    d = l(295811),
-    c = l(651162),
-    h = l(652215);
-function g(e, t, l) {
+a.d(t, { y: () => g });
+var l = a(64700),
+    r = a(635358),
+    n = a(17928),
+    s = a(736056),
+    o = a(693477),
+    i = a(590180),
+    h = a(295811),
+    d = a(651162),
+    c = a(652215);
+function g(e, t, a) {
     let g = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         u = (0, n.bG)([s.A], () => s.A.hasLoadedExperiments),
         A = (0, n.bG)([i.A], () => i.A.skipNumCategories),
-        [R, T, m, v, N, _, B, p] = (0, n.yK)([d.A], () => [
-            d.A.getShopBlocks(e),
-            d.A.getLastSuccessfulFetch(e) ?? 0,
-            d.A.getLastErrorTimestamp(e) ?? 0,
-            d.A.getLastFetchOptions(e),
-            d.A.getFetchShopHomeError(e),
-            d.A.getIsFetchingShopHome(e),
-            d.A.getHasKnownStaleData(e),
-            d.A.getShopHomeConfigOverride(),
+        [R, v, T, m, N, _, p, B] = (0, n.yK)([h.A], () => [
+            h.A.getShopBlocks(e),
+            h.A.getLastSuccessfulFetch(e) ?? 0,
+            h.A.getLastErrorTimestamp(e) ?? 0,
+            h.A.getLastFetchOptions(e),
+            h.A.getFetchShopHomeError(e),
+            h.A.getIsFetchingShopHome(e),
+            h.A.getHasKnownStaleData(e),
+            h.A.getShopHomeConfigOverride(),
         ]),
-        b = (0, a.useMemo)(
+        b = (0, l.useMemo)(
             () => ({
                 ...t,
                 variantsReturnStyle: r.g.VARIANTS_GROUP,
                 includeBundles: !0,
                 includeDynamicBlocks: !0,
-                shopHomeConfig: p,
+                shopHomeConfig: B,
                 skipNumCategories: A,
             }),
-            [t, p, A],
+            [t, B, A],
         ),
-        E = (0, a.useMemo)(() => !(0, o.gn)(v, b), [v, b]),
-        O = ((e, t, l) => {
-            let [r, n] = (0, a.useState)(!1);
+        E = (0, l.useMemo)(() => !(0, o.gn)(m, b), [m, b]),
+        O = ((e, t, a) => {
+            let [r, n] = (0, l.useState)(!1);
             return (
-                (0, a.useEffect)(() => {
-                    let a,
+                (0, l.useEffect)(() => {
+                    let l,
                         r =
-                            ((a = null),
+                            ((l = null),
                             e.forEach((e) => {
                                 let t = null;
-                                e.type === c.g.IMMERSIVE_BANNER
+                                e.type === d.g.IMMERSIVE_BANNER
                                     ? (t = null != e.endTime ? e.endTime.getTime() : null)
-                                    : e.type === c.g.COUNTDOWN_TIMER && (t = e.endTime.getTime()),
-                                    (null == a || (null != t && t < a)) && (a = t);
+                                    : e.type === d.g.COUNTDOWN_TIMER && (t = e.endTime.getTime()),
+                                    (null == l || (null != t && t < l)) && (l = t);
                             }),
-                            a);
-                    if (t || l || null == r) return void n(!1);
+                            l);
+                    if (t || a || null == r) return void n(!1);
                     let s = r - Date.now();
                     if (s <= 0) return void n(!0);
                     n(!1);
@@ -57,27 +57,27 @@ function g(e, t, l) {
                         () => {
                             n(!0);
                         },
-                        Math.min(h.mnr, s),
+                        Math.min(c.mnr, s),
                     );
                     return () => clearTimeout(o);
-                }, [t, l, e]),
+                }, [t, a, e]),
                 r
             );
         })(R, _ ?? !1, g),
-        f = (0, a.useMemo)(() => !O && Date.now() - T < 6e5, [T, O]);
+        f = (0, l.useMemo)(() => !O && Date.now() - v < 6e5, [v, O]);
     return (
-        (0, a.useEffect)(() => {
+        (0, l.useEffect)(() => {
             if (!u || _) return;
-            let t = Date.now() - m < 6e5;
-            (null != N && t) || ((E || !f || B) && (0, o.h$)(e, b, l));
-        }, [u, _, N, m, f, B, E, b, e, l]),
+            let t = Date.now() - T < 6e5;
+            (null != N && t) || ((E || !f || p) && (0, o.h$)(e, b, a));
+        }, [u, _, N, T, f, p, E, b, e, a]),
         {
             isFetchingShopHome: _,
             fetchShopHomeError: N,
             shopBlocks: R,
-            refreshShopHome: (0, a.useCallback)(() => {
-                (0, o.h$)(e, b, l);
-            }, [e, b, l]),
+            refreshShopHome: (0, l.useCallback)(() => {
+                (0, o.h$)(e, b, a);
+            }, [e, b, a]),
         }
     );
 }

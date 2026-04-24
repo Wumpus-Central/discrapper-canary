@@ -1,12 +1,11 @@
-"use strict";
 n.d(t, { A: () => p });
 var a = n(627968);
 n(64700);
-var r = n(403581),
-    i = n(772707),
-    l = n(927578),
-    s = n(422936),
-    o = n(234419),
+var i = n(403581),
+    l = n(772707),
+    r = n(927578),
+    o = n(422936),
+    s = n(234419),
     c = n(783420),
     d = n(511484),
     u = n(788868),
@@ -16,53 +15,53 @@ let p = function (e) {
             transitionState: t,
             title: n,
             subtitle: p,
-            graphic: m,
+            graphic: f,
             guildBoostProps: h,
-            onClose: f,
+            onClose: m,
             onSecondaryClick: g,
             secondaryCTA: b,
-            badgeType: v = null,
-            subscriptionTier: A = u.pe.TIER_2,
-            hidePremiumOfferUpsell: x,
-            children: E,
+            badgeType: A = null,
+            subscriptionTier: E = u.pe.TIER_2,
+            hidePremiumOfferUpsell: v,
+            children: I,
         } = e,
-        T = (0, o.V)(),
-        S = (0, s.O)(),
-        C = !x && (T?.subscription_trial?.sku_id === A || (0, d.U9)(S, A)) && null == h,
-        I = _.intl.string(_.t.pj0XBN);
+        y = (0, s.V)(),
+        S = (0, o.O)(),
+        C = !v && (y?.subscription_trial?.sku_id === E || (0, d.U9)(S, E)) && null == h,
+        T = _.intl.string(_.t.pj0XBN);
     C &&
-        (null != T
-            ? (I = (0, l.FY)({
-                  intervalType: T?.subscription_trial?.interval,
-                  intervalCount: T?.subscription_trial?.interval_count,
+        (null != y
+            ? (T = (0, r.FY)({
+                  intervalType: y?.subscription_trial?.interval,
+                  intervalCount: y?.subscription_trial?.interval_count,
               }))
-            : null != S && (I = _.intl.formatToPlainString(_.t.bkQ4bH, { percent: S.discount.amount })));
-    let y = null != T ? "free_trial" : v;
+            : null != S && (T = _.intl.formatToPlainString(_.t.bkQ4bH, { percent: S.discount.amount })));
+    let x = null != y ? "free_trial" : A;
     return (0, a.jsx)(c.A, {
-        subscriptionTier: A,
+        subscriptionTier: E,
         children: (e) => {
-            let { onClick: l } = e;
-            return (0, a.jsx)(i.k, {
+            let { onClick: r } = e;
+            return (0, a.jsx)(l.k, {
                 title: n,
                 subtitle: p,
-                graphic: m,
+                graphic: f,
                 gradientColor: "nitro-pink",
                 transitionState: t,
-                onClose: async () => await f(),
+                onClose: async () => await m(),
                 actions: [
                     { text: b, variant: "secondary", size: "md", onClick: g },
                     {
-                        text: I,
+                        text: T,
                         variant: "expressive",
                         size: "md",
                         onClick: async (e) => {
-                            await f(), l(e);
+                            await m(), r(e);
                         },
-                        icon: r.t,
+                        icon: i.t,
                     },
                 ],
-                ...(null !== y && { badge: { type: y, variant: "expressive" } }),
-                children: E,
+                ...(null !== x && { badge: { type: x, variant: "expressive" } }),
+                children: I,
             });
         },
     });

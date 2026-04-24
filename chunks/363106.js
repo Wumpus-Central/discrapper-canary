@@ -1,88 +1,88 @@
-s.d(t, { default: () => Y });
-var l,
-    r = s(627968),
-    n = s(64700),
-    i = s(17928),
-    a = s(821609),
-    o = s(935462),
-    c = s(534514),
-    d = s(289873),
-    u = s(793574),
-    m = s(688810),
-    p = s(571827),
-    h = s(725807),
-    g = s(919395),
-    A = s(84540),
-    _ = s(287809),
-    x = s(954571),
-    E = s(927578),
-    I = s(29292),
-    f = s(993408),
-    C = s(821701),
-    j = s(841702),
-    y = s(503698),
-    v = s.n(y),
-    P = s(575593),
-    k = s(939249),
-    R = s(834730),
-    L = s(428678),
-    N = s(34188),
-    M = s(92008),
-    T = s(892118),
-    O = s(483968);
-s(321073);
-var S = s(702841),
-    b = s(590180),
-    F = s(4227),
-    U = s(985018),
-    w = (((l = {}).PURCHASE = "purchase"), (l.PREMIUM_PURCHASE = "premium_purchase"), (l.PREVIEW = "preview"), l);
+n.d(t, { default: () => q });
+var r,
+    l = n(627968),
+    i = n(64700),
+    a = n(17928),
+    s = n(821609),
+    o = n(935462),
+    c = n(534514),
+    d = n(289873),
+    u = n(793574),
+    p = n(688810),
+    m = n(571827),
+    g = n(725807),
+    h = n(919395),
+    A = n(84540),
+    f = n(287809),
+    _ = n(954571),
+    v = n(927578),
+    E = n(693477),
+    x = n(993408),
+    I = n(821701),
+    C = n(841702),
+    y = n(503698),
+    P = n.n(y),
+    N = n(575593),
+    k = n(939249),
+    b = n(834730),
+    R = n(428678),
+    j = n(34188),
+    F = n(92008),
+    S = n(892118),
+    T = n(483968);
+n(321073);
+var L = n(702841),
+    M = n(590180),
+    O = n(4227),
+    U = n(985018),
+    w = (((r = {}).PURCHASE = "purchase"), (r.PREMIUM_PURCHASE = "premium_purchase"), (r.PREVIEW = "preview"), r);
 let D = { skuId: "None" },
     G = { skuId: "Shop" };
-var H = s(900183);
-let z = () => 80,
+var B = n(900183);
+let H = () => 80,
     K = (e) => {
-        let { children: t, className: s, isSelected: l, ...n } = e;
-        return (0, r.jsx)(k.D, {
-            "aria-pressed": l,
-            className: v()(H.X5, s, { [H.wH]: l }),
-            ...n,
-            onClick: n.onSelect,
+        let { children: t, className: n, isSelected: r, ...i } = e;
+        return (0, l.jsx)(k.D, {
+            "aria-pressed": r,
+            className: P()(B.X5, n, { [B.wH]: r }),
+            ...i,
+            onClick: i.onSelect,
             children: t,
         });
     },
-    X = (e) => {
-        let { skuId: t, label: s, innerRef: l, section: i, isSelected: a, canUsePremiumCollectibles: o, ...c } = e,
-            d = n.useRef(null);
-        return (0, r.jsxs)(K, {
-            innerRef: l ?? d,
-            isSelected: a,
+    z = (e) => {
+        let { skuId: t, label: n, innerRef: r, section: a, isSelected: s, canUsePremiumCollectibles: o, ...c } = e,
+            d = i.useRef(null);
+        return (0, l.jsxs)(K, {
+            innerRef: r ?? d,
+            isSelected: s,
             ...c,
             children: [
-                (0, r.jsx)(R.E, { variant: "text-xs/normal", color: "text-strong", children: s }),
-                (0, r.jsx)(O.A, {
+                (0, l.jsx)(b.E, { variant: "text-xs/normal", color: "text-strong", children: n }),
+                (0, l.jsx)(T.A, {
                     skuId: t,
                     canUsePremiumCollectibles: o,
-                    isPurchaseSection: i === w.PURCHASE,
-                    isPremiumSection: i === w.PREMIUM_PURCHASE,
+                    isPurchaseSection: a === w.PURCHASE,
+                    isPremiumSection: a === w.PREMIUM_PURCHASE,
                 }),
             ],
         });
     },
-    B = (e) => {
-        let { user: t, guild: s, pendingProfileFrame: l, selectedProfileFrameRef: i, onSelect: a, onOpenShop: o } = e,
+    V = (e) => {
+        let { user: t, guild: n, pendingProfileFrame: r, selectedProfileFrameRef: a, onSelect: s, onOpenShop: o } = e,
             d = (() => {
-                let e = (0, S.bG)([F.A], () => F.A.purchases),
-                    [t, s] = (0, S.yK)([b.A], () => [b.A.categories, b.A.products]);
-                return (0, n.useMemo)(() => {
-                    let l = (0, f.MG)(e, t).reduce(
-                        (t, l) => {
-                            let r = e.get(l.skuId);
+                let e = (0, L.bG)([O.A], () => O.A.purchases),
+                    [t, n] = (0, L.yK)([M.A], () => [M.A.categories, M.A.products]);
+                return (0, i.useMemo)(() => {
+                    let r = (0, x.MG)(e, t).reduce(
+                        (t, r) => {
+                            let l = e.get(r.skuId);
                             return (
-                                (null != r ? (0, f.gA)(r) : (0, f.G0)(s.get(l.skuId)))
-                                    ? t.premium_purchase.push(l)
-                                    : null != r
-                                      ? t.purchase.push(l)
-                                      : t.preview.push(l),
+                                (null != l ? (0, x.gA)(l) : (0, x.G0)(n.get(r.skuId)))
+                                    ? t.premium_purchase.push(r)
+                                    : null != l
+                                      ? t.purchase.push(r)
+                                      : t.preview.push(r),
                                 t
                             );
                         },
@@ -91,75 +91,75 @@ let z = () => 80,
                     return [
                         {
                             section: "purchase",
-                            items: [D, G, ...l.purchase],
+                            items: [D, G, ...r.purchase],
                             height: 12,
                             header: U.intl.string(U.t["9eZ4aO"]),
                         },
                         {
                             section: "premium_purchase",
-                            items: l.premium_purchase,
+                            items: r.premium_purchase,
                             height: 12,
                             header: U.intl.string(U.t.TiLCgw),
                         },
-                        { section: "preview", items: l.preview, height: 12, header: U.intl.string(U.t["1vbbee"]) },
+                        { section: "preview", items: r.preview, height: 12, header: U.intl.string(U.t["1vbbee"]) },
                     ].filter((e) => {
                         let { items: t } = e;
                         return t.length > 0;
                     });
-                }, [t, s, e]);
+                }, [t, n, e]);
             })(),
-            u = null != l,
-            m = E.Ay.canUseCollectibles(t);
-        return (0, r.jsx)("section", {
-            className: H.uW,
-            children: (0, r.jsx)(M.f, {
+            u = null != r,
+            p = v.Ay.canUseCollectibles(t);
+        return (0, l.jsx)("section", {
+            className: B.uW,
+            children: (0, l.jsx)(F.f, {
                 fade: !0,
                 itemGutter: 12,
                 sectionGutter: 16,
                 paddingVertical: 0,
                 paddingHorizontal: 12,
-                className: H.p_,
+                className: B.p_,
                 columns: 3,
                 sections: d.map((e) => {
                     let { items: t } = e;
                     return t.length;
                 }),
-                renderItem: (e, t, n, c) => {
-                    let { section: p, items: h } = d[e],
-                        g = h[t];
-                    if (g === D)
-                        return (0, r.jsxs)(
+                renderItem: (e, t, i, c) => {
+                    let { section: m, items: g } = d[e],
+                        h = g[t];
+                    if (h === D)
+                        return (0, l.jsxs)(
                             K,
                             {
-                                style: { ...n },
+                                style: { ...i },
                                 isSelected: !u,
-                                onSelect: () => a(null),
+                                onSelect: () => s(null),
                                 children: [
-                                    (0, r.jsx)(L.K, { size: "md", color: "currentColor", className: H.vo }),
-                                    (0, r.jsx)(R.E, {
+                                    (0, l.jsx)(R.K, { size: "md", color: "currentColor", className: B.vo }),
+                                    (0, l.jsx)(b.E, {
                                         variant: "text-xs/normal",
                                         color: "text-strong",
-                                        children: null != s ? U.intl.string(U.t.CHf9iJ) : U.intl.string(U.t.PoWNfe),
+                                        children: null != n ? U.intl.string(U.t.CHf9iJ) : U.intl.string(U.t.PoWNfe),
                                     }),
                                 ],
                             },
                             c,
                         );
-                    if (g === G)
-                        return (0, r.jsxs)(
+                    if (h === G)
+                        return (0, l.jsxs)(
                             K,
                             {
-                                style: n,
+                                style: i,
                                 onSelect: o,
                                 children: [
-                                    (0, r.jsx)(N.U, {
+                                    (0, l.jsx)(j.U, {
                                         size: "custom",
                                         width: 23,
                                         height: 23,
                                         color: "currentColor",
-                                        className: H.sV,
+                                        className: B.sV,
                                     }),
-                                    (0, r.jsx)(R.E, {
+                                    (0, l.jsx)(b.E, {
                                         variant: "text-xs/normal",
                                         color: "text-strong",
                                         children: U.intl.string(U.t.pWG4ze),
@@ -168,19 +168,19 @@ let z = () => 80,
                             },
                             c,
                         );
-                    if ((0, T.s)(g)) {
-                        let e = l?.skuId === g.skuId;
-                        return (0, r.jsx)(
-                            X,
+                    if ((0, S.s)(h)) {
+                        let e = r?.skuId === h.skuId;
+                        return (0, l.jsx)(
+                            z,
                             {
-                                style: { ...n },
-                                skuId: g.skuId,
-                                label: g.label,
-                                section: p,
-                                innerRef: e ? i : void 0,
+                                style: { ...i },
+                                skuId: h.skuId,
+                                label: h.label,
+                                section: m,
+                                innerRef: e ? a : void 0,
                                 isSelected: e,
-                                canUsePremiumCollectibles: m,
-                                onSelect: () => a({ skuId: g.skuId, type: P.R.PROFILE_FRAME }),
+                                canUsePremiumCollectibles: p,
+                                onSelect: () => s({ skuId: h.skuId, type: N.R.PROFILE_FRAME }),
                             },
                             c,
                         );
@@ -188,62 +188,62 @@ let z = () => 80,
                     return null;
                 },
                 renderSection: (e, t) => {
-                    let { header: s } = d[e];
-                    return (0, r.jsx)("div", {
+                    let { header: n } = d[e];
+                    return (0, l.jsx)("div", {
                         style: { ...t, height: "16px", position: "absolute" },
-                        children: (0, r.jsx)(c.D, { variant: "heading-md/medium", children: s }),
+                        children: (0, l.jsx)(c.D, { variant: "heading-md/medium", children: n }),
                     });
                 },
                 getSectionHeight: () => 16,
                 getItemKey: (e, t) => d[e].items[t].skuId,
-                getItemHeight: z,
+                getItemHeight: H,
                 removeEdgeItemGutters: !0,
             }),
         });
     };
-var J = s(652215),
-    V = s(788868),
-    W = s(12960);
-function Z(e) {
+var Z = n(652215),
+    X = n(788868),
+    J = n(12960);
+function W(e) {
     let {
             user: t,
-            product: s,
-            purchase: l,
-            onApply: n,
-            onClose: i,
+            product: n,
+            purchase: r,
+            onApply: i,
+            onClose: a,
             onOpenShop: c,
             disableApplyButton: d,
             canUsePremiumCollectibles: u,
-            selectedProfileFrame: m,
+            selectedProfileFrame: p,
         } = e,
-        g = null != l ? (0, f.gA)(l) : (0, f.G0)(s);
-    return (0, r.jsx)(r.Fragment, {
-        children: (0, r.jsxs)(o.jl, {
+        h = null != r ? (0, x.gA)(r) : (0, x.G0)(n);
+    return (0, l.jsx)(l.Fragment, {
+        children: (0, l.jsxs)(o.jl, {
             "data-migration-pending": !0,
-            className: W.Hx,
+            className: J.Hx,
             children: [
-                (null != l && (u || !g)) || null === m
-                    ? (0, r.jsx)(a.$, { variant: "primary", text: U.intl.string(U.t.Jh8fJz), onClick: n, disabled: d })
-                    : null == l && (u || !g)
-                      ? (0, r.jsx)(a.$, {
+                (null != r && (u || !h)) || null === p
+                    ? (0, l.jsx)(s.$, { variant: "primary", text: U.intl.string(U.t.Jh8fJz), onClick: i, disabled: d })
+                    : null == r && (u || !h)
+                      ? (0, l.jsx)(s.$, {
                             variant: "primary",
                             text: U.intl.string(U.t.fYfGgK),
-                            onClick: () => c(m?.skuId),
+                            onClick: () => c(p?.skuId),
                         })
-                      : (0, r.jsx)(h.A, {
-                            subscriptionTier: V.pe.TIER_2,
+                      : (0, l.jsx)(g.A, {
+                            subscriptionTier: X.pe.TIER_2,
                             showGradient: !u,
                             textOptions: {
-                                textOverride: E.Ay.isPremium(t)
+                                textOverride: v.Ay.isPremium(t)
                                     ? U.intl.string(U.t.KXLX7l)
                                     : u
                                       ? U.intl.string(U.t.mr4K7D)
                                       : U.intl.string(U.t.pj0XBN),
                             },
                         }),
-                !u && g
-                    ? (0, r.jsx)(p.A, { itemType: l?.type ?? s?.type, onClose: i })
-                    : (0, r.jsx)(a.$, { variant: "secondary", text: U.intl.string(U.t["ETE/oC"]), onClick: i }),
+                !u && h
+                    ? (0, l.jsx)(m.A, { itemType: r?.type ?? n?.type, onClose: a })
+                    : (0, l.jsx)(s.$, { variant: "secondary", text: U.intl.string(U.t["ETE/oC"]), onClick: a }),
             ],
         }),
     });
@@ -251,113 +251,113 @@ function Z(e) {
 function $(e) {
     let {
             user: t,
-            guild: s,
-            categories: l,
-            purchases: i,
-            currentSavedFrame: a,
+            guild: n,
+            categories: r,
+            purchases: a,
+            currentSavedFrame: s,
             analyticsLocations: d,
-            initialSelectedProfileFrame: m,
-            onClose: p,
+            initialSelectedProfileFrame: p,
+            onClose: m,
         } = e,
-        { pendingProfileFrame: h } = (0, g.Tu)(s?.id),
-        _ = n.useMemo(() => (0, f.MG)(i, l), [l, i]),
-        [x, j] = n.useState(() => (null != m ? m : void 0 !== h ? h : (a ?? null))),
-        y = n.useMemo(
+        { pendingProfileFrame: g } = (0, h.Tu)(n?.id),
+        f = i.useMemo(() => (0, x.MG)(a, r), [r, a]),
+        [_, C] = i.useState(() => (null != p ? p : void 0 !== g ? g : (s ?? null))),
+        y = i.useMemo(
             () =>
-                _.find((e) => {
+                f.find((e) => {
                     let { skuId: t } = e;
-                    return t === x?.skuId;
+                    return t === _?.skuId;
                 }) ?? null,
-            [x, _],
+            [_, f],
         ),
-        { product: v, purchase: P } = (0, C.A)(y?.skuId),
-        k = n.useRef(null),
-        R = E.Ay.canUseCollectibles(t),
-        L = void 0 === h ? x?.skuId === a?.skuId : x?.skuId === h?.skuId,
-        N = n.useCallback(
+        { product: P, purchase: N } = (0, I.A)(y?.skuId),
+        k = i.useRef(null),
+        b = v.Ay.canUseCollectibles(t),
+        R = void 0 === g ? _?.skuId === s?.skuId : _?.skuId === g?.skuId,
+        j = i.useCallback(
             (e) => {
-                j(e);
+                C(e);
             },
-            [j],
+            [C],
         ),
-        M = n.useCallback(
+        F = i.useCallback(
             (e) => {
-                p(),
-                    (0, I.Cz)({
+                m(),
+                    (0, E.Cz)({
                         analyticsLocations: d,
                         analyticsSource: u.A.EDIT_PROFILE_FRAME_MODAL,
                         initialProductSkuId: e,
                     });
             },
-            [d, p],
+            [d, m],
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, r.jsxs)(o.rQ, {
+            (0, l.jsxs)(o.rQ, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: W.Hc,
+                className: J.Hc,
                 children: [
-                    (0, r.jsx)(c.D, { variant: "heading-lg/semibold", children: U.intl.string(U.t["oTSa/q"]) }),
-                    (0, r.jsx)(o.s_, { "data-migration-pending": !0, className: W.iT, onClick: p }),
+                    (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: U.intl.string(U.t["oTSa/q"]) }),
+                    (0, l.jsx)(o.s_, { "data-migration-pending": !0, className: J.iT, onClick: m }),
                 ],
             }),
-            (0, r.jsx)(o.$m, {
+            (0, l.jsx)(o.$m, {
                 "data-migration-pending": !0,
-                className: W.jE,
-                children: (0, r.jsx)(B, {
+                className: J.jE,
+                children: (0, l.jsx)(V, {
                     user: t,
-                    guild: s,
-                    pendingProfileFrame: x,
+                    guild: n,
+                    pendingProfileFrame: _,
                     selectedProfileFrameRef: k,
-                    onSelect: N,
-                    onOpenShop: M,
+                    onSelect: j,
+                    onOpenShop: F,
                 }),
             }),
-            (0, r.jsx)(Z, {
+            (0, l.jsx)(W, {
                 user: t,
                 onApply: () => {
-                    (0, A.p)({ guildId: s?.id, profileFrame: x ?? null }), p();
+                    (0, A.p)({ guildId: n?.id, profileFrame: _ ?? null }), m();
                 },
-                onClose: p,
-                onOpenShop: M,
-                product: v,
-                purchase: P,
-                canUsePremiumCollectibles: R,
-                selectedProfileFrame: x,
-                disableApplyButton: L,
+                onClose: m,
+                onOpenShop: F,
+                product: P,
+                purchase: N,
+                canUsePremiumCollectibles: b,
+                selectedProfileFrame: _,
+                disableApplyButton: R,
             }),
         ],
     });
 }
-function Y(e) {
-    let { transitionState: t, analyticsLocations: s, guild: l, onClose: a, initialSelectedProfileFrame: c } = e,
-        { isFetching: p, categories: h, purchases: A } = (0, j.Ay)(),
-        E = (0, i.bG)([_.default], () => _.default.getCurrentUser()),
-        { analyticsLocations: I } = (0, m.Ay)(s, u.A.EDIT_PROFILE_FRAME_MODAL),
-        f = (0, g.Xf)({ user: E, guildId: l?.id });
+function q(e) {
+    let { transitionState: t, analyticsLocations: n, guild: r, onClose: s, initialSelectedProfileFrame: c } = e,
+        { isFetching: m, categories: g, purchases: A } = (0, C.Ay)(),
+        v = (0, a.bG)([f.default], () => f.default.getCurrentUser()),
+        { analyticsLocations: E } = (0, p.Ay)(n, u.A.EDIT_PROFILE_FRAME_MODAL),
+        x = (0, h.Xf)({ user: v, guildId: r?.id });
     return (
-        n.useEffect(() => {
-            x.default.track(J.HAw.OPEN_MODAL, { type: J.JJy.PROFILE_FRAME_CUSTOMIZATION, location_stack: I });
-        }, [I]),
-        (0, r.jsx)(m.f5, {
-            value: I,
-            children: (0, r.jsx)(o.EO, {
+        i.useEffect(() => {
+            _.default.track(Z.HAw.OPEN_MODAL, { type: Z.JJy.PROFILE_FRAME_CUSTOMIZATION, location_stack: E });
+        }, [E]),
+        (0, l.jsx)(p.f5, {
+            value: E,
+            children: (0, l.jsx)(o.EO, {
                 transitionState: t,
-                className: W.yl,
-                size: p ? o.rI.DYNAMIC : o.rI.MEDIUM,
+                className: J.yl,
+                size: m ? o.rI.DYNAMIC : o.rI.MEDIUM,
                 parentComponent: "ProfileFrameModal",
                 "data-migration-pending": !0,
-                children: p
-                    ? (0, r.jsx)(d.y, { className: W.u1, type: d.y.Type.SPINNING_CIRCLE })
-                    : (0, r.jsx)($, {
-                          user: E,
-                          guild: l,
-                          categories: h,
+                children: m
+                    ? (0, l.jsx)(d.y, { className: J.u1, type: d.y.Type.SPINNING_CIRCLE })
+                    : (0, l.jsx)($, {
+                          user: v,
+                          guild: r,
+                          categories: g,
                           purchases: A,
-                          currentSavedFrame: f,
-                          onClose: a,
-                          analyticsLocations: I,
+                          currentSavedFrame: x,
+                          onClose: s,
+                          analyticsLocations: E,
                           initialSelectedProfileFrame: c,
                       }),
             }),

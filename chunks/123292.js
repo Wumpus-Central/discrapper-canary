@@ -1,41 +1,40 @@
-"use strict";
 n.d(t, { Q: () => c });
-var r = n(627968);
+var a = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    l = n(187322),
-    s = n(834730),
-    o = n(197943);
+    l = n.n(i),
+    r = n(187322),
+    o = n(834730),
+    s = n(197943);
 function c(e) {
     let {
         focusProps: t,
         lineClamp: n = 1,
         role: i = "button",
         text: c,
-        textVariant: u = "text-md/medium",
-        type: d = "button",
+        textVariant: d = "text-md/medium",
+        type: u = "button",
         variant: _ = "primary",
         buttonRef: p,
         className: f,
         style: h,
         ...m
     } = e;
-    return (0, r.jsx)(l.vN, {
+    return (0, a.jsx)(r.vN, {
         ...t,
-        children: (0, r.jsx)("button", {
-            className: a()(o.textButton, o[_]),
+        children: (0, a.jsx)("button", {
+            className: l()(s.textButton, s[_]),
             "data-mana-component": "text-button",
             role: i,
-            type: d,
+            type: u,
             ref: p,
             ...m,
-            children: (0, r.jsx)(s.E, {
+            children: (0, a.jsx)(o.E, {
                 tag: "span",
-                variant: u,
+                variant: d,
                 color: "none",
                 lineClamp: n,
-                className: o.text,
+                className: s.text,
                 children: c,
             }),
         }),

@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => o });
 var a = n(627968),
-    r = n(821609),
-    i = n(783420),
-    l = n(938973);
-let s = function (e) {
+    i = n(821609),
+    l = n(783420),
+    r = n(938973);
+let o = function (e) {
     let {
             subscriptionTier: t,
             onClick: n,
-            postSuccessGuild: s,
-            onSubscribeModalClose: o,
+            postSuccessGuild: o,
+            onSubscribeModalClose: s,
             premiumModalAnalyticsLocation: c,
             applicationId: d,
             confirmationFooter: u,
             buttonTextOverride: _,
             defaultTextOverride: p,
-            iconOverride: m,
+            iconOverride: f,
             variantOverride: h,
-            ...f
+            ...m
         } = e,
-        { subscribeButtonProps: g } = (0, l.B)({
+        { subscribeButtonProps: g } = (0, r.B)({
             subscriptionTier: t,
             buttonTextOverride: _,
             defaultTextOverride: p,
-            iconOverride: m,
+            iconOverride: f,
             variantOverride: h,
         });
-    return (0, a.jsx)(i.A, {
+    return (0, a.jsx)(l.A, {
         onClick: n,
         subscriptionTier: t,
-        postSuccessGuild: s,
-        onSubscribeModalClose: o,
+        postSuccessGuild: o,
+        onSubscribeModalClose: s,
         premiumModalAnalyticsLocation: c,
         applicationId: d,
         confirmationFooter: u,
         children: (e) => {
             let { onClick: t } = e;
-            return (0, a.jsx)(r.$, { onClick: t, ...g, ...f });
+            return (0, a.jsx)(i.$, { onClick: t, ...g, ...m });
         },
     });
 };

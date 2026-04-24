@@ -1,11 +1,10 @@
-"use strict";
 n.d(t, { L: () => c });
 var a = n(64700),
-    r = n(132500),
-    i = n(313271);
-let l = (0, r.A)(),
-    s = new Map(),
-    o = new Map();
+    i = n(132500),
+    l = n(313271);
+let r = (0, i.A)(),
+    o = new Map(),
+    s = new Map();
 class c extends a.Component {
     elementId;
     isVisible = !1;
@@ -19,9 +18,9 @@ class c extends a.Component {
     constructor(e) {
         super(e);
         const { root: t, rootMargin: n, threshold: a } = e;
-        t ? (s.has(t) ? (this.elementId = s.get(t) || "") : s.set(t, (0, r.A)())) : (this.elementId = l);
+        t ? (o.has(t) ? (this.elementId = o.get(t) || "") : o.set(t, (0, i.A)())) : (this.elementId = r);
         const c = this.getVisibilityObserverId();
-        o.has(c) || o.set(c, new i.j({ root: t, rootMargin: n, threshold: a }));
+        s.has(c) || s.set(c, new l.j({ root: t, rootMargin: n, threshold: a }));
     }
     componentDidMount() {
         if (this.props.active) {
@@ -49,7 +48,7 @@ class c extends a.Component {
     }
     getVisibilityObserver() {
         let e = this.getVisibilityObserverId(),
-            t = o.get(e);
+            t = s.get(e);
         if (!t) throw Error(`Visibility sensor with id ${e} not found.`);
         return t;
     }

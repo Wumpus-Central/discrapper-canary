@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(52133),
+n.d(t, { A: () => l });
+var a = n(52133),
     i = n(510373);
-function a(e) {
-    return (0, i.A)(() => e, e, r.v);
+function l(e) {
+    return (0, i.A)(() => e, e, a.v);
 }

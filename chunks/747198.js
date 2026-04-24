@@ -1,40 +1,39 @@
-"use strict";
 n.d(t, { i: () => c });
 var a = n(64700),
-    r = n(635358),
-    i = n(17928),
-    l = n(736056),
-    s = n(29292),
-    o = n(590180);
+    i = n(635358),
+    l = n(17928),
+    r = n(736056),
+    o = n(693477),
+    s = n(590180);
 function c(e, t, n) {
-    let c = (0, i.bG)([l.A], () => l.A.hasLoadedExperiments),
-        [d, u, _, p, m, h, f] = (0, i.yK)([o.A], () => [
-            o.A.isFetchingCategories,
-            o.A.lastFetchOptions,
-            o.A.error,
-            o.A.lastErrorTimestamp ?? 0,
-            o.A.lastSuccessfulFetch ?? 0,
-            o.A.categories,
-            o.A.skipNumCategories,
+    let c = (0, l.bG)([r.A], () => r.A.hasLoadedExperiments),
+        [d, u, _, p, f, h, m] = (0, l.yK)([s.A], () => [
+            s.A.isFetchingCategories,
+            s.A.lastFetchOptions,
+            s.A.error,
+            s.A.lastErrorTimestamp ?? 0,
+            s.A.lastSuccessfulFetch ?? 0,
+            s.A.categories,
+            s.A.skipNumCategories,
         ]);
     return (
         (0, a.useEffect)(() => {
-            if (!c || o.A.isFetchingCategories) return;
+            if (!c || s.A.isFetchingCategories) return;
             let a = Date.now() - p < 6e5;
             if (_ && a) return;
-            let i = { ...e, variantsReturnStyle: r.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: f },
-                l = !(0, s.gn)(u, i),
-                d = Date.now() - m < 6e5;
-            (l || !d) && (0, s.CK)(i, t, n);
-        }, [c, u, m, e, _, p, t, n, f]),
+            let l = { ...e, variantsReturnStyle: i.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: m },
+                r = !(0, o.gn)(u, l),
+                d = Date.now() - f < 6e5;
+            (r || !d) && (0, o.CK)(l, t, n);
+        }, [c, u, f, e, _, p, t, n, m]),
         {
             isFetching: d,
             categories: h,
             fetchCategoriesError: _,
             refreshCategories: (0, a.useCallback)(() => {
-                let t = { ...e, variantsReturnStyle: r.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: f };
-                (0, s.CK)(t, void 0, n);
-            }, [e, n, f]),
+                let t = { ...e, variantsReturnStyle: i.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: m };
+                (0, o.CK)(t, void 0, n);
+            }, [e, n, m]),
         }
     );
 }

@@ -1,14 +1,13 @@
-"use strict";
 n.d(t, { A: () => P });
-var r = n(627968),
+var a = n(627968),
     i = n(64700),
-    a = n(503698),
-    l = n.n(a),
-    s = n(3203),
-    o = n(192308),
+    l = n(503698),
+    r = n.n(l),
+    o = n(3203),
+    s = n(192308),
     c = n(408278),
-    u = n(308528),
-    d = n(688810),
+    d = n(308528),
+    u = n(688810),
     _ = n(355622),
     p = n(408018),
     f = n(201349),
@@ -19,23 +18,23 @@ var r = n(627968),
     A = n(562153),
     E = n(183555),
     v = n(448613),
-    y = n(597770),
-    I = n(751188),
+    I = n(597770),
+    y = n(751188),
     S = n(17928),
-    T = n(451988),
-    C = n(775602),
+    C = n(451988),
+    T = n(775602),
     x = n(21161),
     R = n(652215),
-    N = n(985018);
-function L(e) {
-    let { user: t, analyticsLocations: n, confettiEnabled: a = !0, onClose: l } = e,
-        { giftButtonRef: s, handleMouseEnter: o } = (function (e) {
+    L = n(985018);
+function N(e) {
+    let { user: t, analyticsLocations: n, confettiEnabled: l = !0, onClose: r } = e,
+        { giftButtonRef: o, handleMouseEnter: s } = (function (e) {
             let { enabled: t } = e,
-                n = (0, S.bG)([C.A], () => C.A.useReducedMotion),
-                r = i.useRef(null),
-                a = i.useRef(0),
-                { createMultipleConfettiAt: l } = i.useContext(x.x),
-                s = i.useMemo(
+                n = (0, S.bG)([T.A], () => T.A.useReducedMotion),
+                a = i.useRef(null),
+                l = i.useRef(0),
+                { createMultipleConfettiAt: r } = i.useContext(x.x),
+                o = i.useMemo(
                     () => ({
                         size: { type: "static-random", minValue: 2, maxValue: 6 },
                         velocity: { type: "static-random", minValue: { x: -10, y: -25 }, maxValue: { x: 10, y: -5 } },
@@ -43,26 +42,26 @@ function L(e) {
                     }),
                     [],
                 ),
-                o = i.useCallback(() => {
+                s = i.useCallback(() => {
                     if (n) return;
-                    let e = r.current?.getBoundingClientRect();
-                    null != e && l(e.left + e.width / 2, e.top + e.height / 2, s, 30);
-                }, [l, n, s]);
+                    let e = a.current?.getBoundingClientRect();
+                    null != e && r(e.left + e.width / 2, e.top + e.height / 2, o, 30);
+                }, [r, n, o]);
             return (
                 i.useEffect(() => {
                     if (!t || n) return;
-                    let e = new T.J_(1e3, o);
+                    let e = new C.J_(1e3, s);
                     return e.delay(), () => e.cancel();
-                }, [t, n, o]),
+                }, [t, n, s]),
                 {
-                    giftButtonRef: r,
+                    giftButtonRef: a,
                     handleMouseEnter: i.useCallback(() => {
-                        t && ((a.current += 1), a.current % 4 == 0 && o());
-                    }, [t, o]),
+                        t && ((l.current += 1), l.current % 4 == 0 && s());
+                    }, [t, s]),
                 }
             );
-        })({ enabled: a }),
-        { openGiftModal: u } = (0, I.$)({
+        })({ enabled: l }),
+        { openGiftModal: d } = (0, y.$)({
             giftRecipient: t,
             analyticsLocations: n,
             analyticsObject: {
@@ -73,18 +72,18 @@ function L(e) {
             },
             location: "gift-button-with-confetti",
         }),
-        d = i.useCallback(() => {
-            u(), l?.();
-        }, [u, l]);
-    return (0, r.jsx)("div", {
-        ref: s,
-        onMouseEnter: o,
-        children: (0, r.jsx)(c.K, {
+        u = i.useCallback(() => {
+            d(), r?.();
+        }, [d, r]);
+    return (0, a.jsx)("div", {
+        ref: o,
+        onMouseEnter: s,
+        children: (0, a.jsx)(c.K, {
             size: "sm",
             variant: "icon-only",
-            icon: y.o,
-            "aria-label": N.intl.string(N.t.PEjaCx),
-            onClick: d,
+            icon: I.o,
+            "aria-label": L.intl.string(L.t.PEjaCx),
+            onClick: u,
         }),
     });
 }
@@ -92,80 +91,80 @@ var w = n(788868),
     O = n(831111);
 let D = (0, b.createChannelRecord)({ id: "1", type: R.rbe.DM });
 function P(e) {
-    let { user: t, guildId: a, channelId: b, onClose: y, disableAutoFocus: I = !1, upsell: S = !1 } = e,
-        { newestAnalyticsLocation: T, analyticsLocations: C } = (0, d.Ay)(),
+    let { user: t, guildId: l, channelId: b, onClose: I, disableAutoFocus: y = !1, upsell: S = !1 } = e,
+        { newestAnalyticsLocation: C, analyticsLocations: T } = (0, u.Ay)(),
         { trackUserProfileAction: x } = (0, E.NJ)(),
         R = (0, g.j)("UserProfilePopoutDirectMessageSection"),
-        [P, M] = i.useState(""),
-        [k, j] = i.useState((0, p.x7)(P)),
-        U = i.useRef(!1),
+        [P, j] = i.useState(""),
+        [U, M] = i.useState((0, p.x7)(P)),
+        k = i.useRef(!1),
         F = i.useRef(null),
-        B = i.useRef(null),
-        { Component: G } = (0, s.V)(),
-        H = i.useMemo(() => ({ ..._.oU.USER_PROFILE, disableAutoFocus: I }), [I]),
+        G = i.useRef(null),
+        { Component: H } = (0, o.V)(),
+        B = i.useMemo(() => ({ ..._.oU.USER_PROFILE, disableAutoFocus: y }), [y]),
         V = i.useCallback(async () => {
             (0, m.xs)(t.id),
-                await u.A.openPrivateChannel({ recipientIds: [t.id] }),
-                (0, o.openModalLazy)(async () => {
+                await d.A.openPrivateChannel({ recipientIds: [t.id] }),
+                (0, s.openModalLazy)(async () => {
                     let { default: e } = await n.e("95501").then(n.bind(n, 367516));
                     return (t) =>
-                        (0, r.jsx)(e, { ...t, giftIntentType: w.np.FRIEND_ANNIVERSARY, analyticsLocationHistory: C });
+                        (0, a.jsx)(e, { ...t, giftIntentType: w.np.FRIEND_ANNIVERSARY, analyticsLocationHistory: T });
                 });
-        }, [t.id, C]),
+        }, [t.id, T]),
         W = i.useCallback(
             () =>
-                (0, r.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     className: O.Uo,
                     children: [
-                        (0, r.jsx)(c.K, {
+                        (0, a.jsx)(c.K, {
                             size: "sm",
                             variant: "icon-only",
-                            icon: G,
-                            "aria-label": N.intl.string(N.t.I61IsE),
+                            icon: H,
+                            "aria-label": L.intl.string(L.t.I61IsE),
                             onClick: V,
                         }),
-                        (0, r.jsx)(L, { user: t, analyticsLocations: C, onClose: y, confettiEnabled: S }),
+                        (0, a.jsx)(N, { user: t, analyticsLocations: T, onClose: I, confettiEnabled: S }),
                     ],
                 }),
-            [G, V, t, C, y, S],
+            [H, V, t, T, I, S],
         );
-    return (0, r.jsx)(f.Ay, {
-        className: l()(O.kL, { [O.UX]: S }),
+    return (0, a.jsx)(f.Ay, {
+        className: r()(O.kL, { [O.UX]: S }),
         editorClassName: O.EN,
-        type: H,
-        placeholder: N.intl.formatToPlainString(N.t["0ZQw/X"], { name: A.Ay.getName(a, b, t) }),
+        type: B,
+        placeholder: L.intl.formatToPlainString(L.t["0ZQw/X"], { name: A.Ay.getName(l, b, t) }),
         channel: D,
         textValue: P,
-        richValue: k,
+        richValue: U,
         onChange: (e, t, n) => {
-            t !== P && (M(t), j(n));
+            t !== P && (j(t), M(n));
         },
-        focused: U.current,
+        focused: k.current,
         onFocus: () => {
-            U.current = !0;
+            k.current = !0;
         },
         onBlur: () => {
-            U.current = !1;
+            k.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e,
-                r = n.trim();
-            if ("" === r) return { shouldClear: !1, shouldRefocus: !0 };
-            (F.current !== r || null == B.current) && ((F.current = r), (B.current = (0, h.m)()));
+                a = n.trim();
+            if ("" === a) return { shouldClear: !1, shouldRefocus: !0 };
+            (F.current !== a || null == G.current) && ((F.current = a), (G.current = (0, h.m)()));
             try {
                 return (
                     x({ action: "SEND_DIRECT_MESSAGE" }),
                     await (0, v.p)({
                         userId: t.id,
-                        content: r,
+                        content: a,
                         openChannel: !0,
                         whenReady: !0,
-                        location: T,
-                        nonce: B.current ?? void 0,
+                        location: C,
+                        nonce: G.current ?? void 0,
                     }),
                     (F.current = null),
-                    (B.current = null),
-                    y?.(),
+                    (G.current = null),
+                    I?.(),
                     { shouldClear: !0, shouldRefocus: !1 }
                 );
             } catch {

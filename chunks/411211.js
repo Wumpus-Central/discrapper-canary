@@ -1,20 +1,19 @@
-"use strict";
 n.d(t, { Y: () => b });
 var a = n(842830),
-    r = n(469322),
-    i = n(518375),
-    l = n(97626),
-    s = n(243399),
-    o = n(29685),
+    i = n(469322),
+    l = n(518375),
+    r = n(97626),
+    o = n(243399),
+    s = n(29685),
     c = n(641277),
     d = n(439489),
     u = n(369364),
     _ = n(727504),
     p = n(501974),
-    m = n(225441),
+    f = n(225441),
     h = n(762437);
 n(632459);
-let f = [
+let m = [
         "locale",
         "style",
         "years",
@@ -117,40 +116,40 @@ class b {
         if (!(this && this instanceof b ? this.constructor : void 0))
             throw TypeError("Intl.DurationFormat must be called with 'new'");
         const n = (0, a.N)(e),
-            s = Object.create(null),
-            o = void 0 === t ? Object.create(null) : (0, r.BT)(t),
-            u = (0, i.W)(o, "localeMatcher", "string", ["best fit", "lookup"], "best fit"),
-            _ = (0, i.W)(o, "numberingSystem", "string", void 0, void 0);
-        if (void 0 !== _ && 0 > m.P.indexOf(_)) throw RangeError(`Invalid numberingSystems: ${_}`);
-        (s.nu = _), (s.localeMatcher = u);
-        const { localeData: h, availableLocales: f } = b,
-            v = (0, c.B)(f, n, s, ["nu"], h, b.getDefaultLocale),
-            A = v.locale,
-            x = (0, p.n)(this);
-        (x.initializedDurationFormat = !0), (x.locale = A), (x.numberingSystem = v.nu);
-        const E = (0, i.W)(o, "style", "string", ["long", "short", "narrow", "digital"], "short");
-        (x.style = E), (x.dataLocale = v.dataLocale);
-        let T = "";
+            o = Object.create(null),
+            s = void 0 === t ? Object.create(null) : (0, i.BT)(t),
+            u = (0, l.W)(s, "localeMatcher", "string", ["best fit", "lookup"], "best fit"),
+            _ = (0, l.W)(s, "numberingSystem", "string", void 0, void 0);
+        if (void 0 !== _ && 0 > f.P.indexOf(_)) throw RangeError(`Invalid numberingSystems: ${_}`);
+        (o.nu = _), (o.localeMatcher = u);
+        const { localeData: h, availableLocales: m } = b,
+            A = (0, c.B)(m, n, o, ["nu"], h, b.getDefaultLocale),
+            E = A.locale,
+            v = (0, p.n)(this);
+        (v.initializedDurationFormat = !0), (v.locale = E), (v.numberingSystem = A.nu);
+        const I = (0, l.W)(s, "style", "string", ["long", "short", "narrow", "digital"], "short");
+        (v.style = I), (v.dataLocale = A.dataLocale);
+        let y = "";
         g.forEach((e) => {
-            let { styleSlot: t, displaySlot: n, unit: a, values: r, digitalDefault: i } = e,
-                l = (0, d.$)(a, o, E, r, i, T);
-            (x[t] = l.style),
-                (x[n] = l.display),
+            let { styleSlot: t, displaySlot: n, unit: a, values: i, digitalDefault: l } = e,
+                r = (0, d.$)(a, s, I, i, l, y);
+            (v[t] = r.style),
+                (v[n] = r.display),
                 ("hours" === a || "minutes" === a || "seconds" === a || "milliseconds" === a || "microseconds" === a) &&
-                    (T = l.style);
+                    (y = r.style);
         }),
-            (x.fractionalDigits = (0, l.z)(o, "fractionalDigits", 0, 9, void 0));
+            (v.fractionalDigits = (0, r.z)(s, "fractionalDigits", 0, 9, void 0));
     }
     resolvedOptions() {
-        if ("object" != typeof this || !(0, r.Wt)(b, this))
+        if ("object" != typeof this || !(0, i.Wt)(b, this))
             throw TypeError("Method Intl.DurationFormat.prototype.resolvedOptions called on incompatible receiver");
         let e = (0, p.n)(this),
             t = {};
-        for (let n of f) {
+        for (let n of m) {
             let a = e[n];
             "fractionalDigits" === n
                 ? void 0 !== a && (a = Number(a))
-                : (0, s.V1)(void 0 !== a, `Missing internal slot ${n}`),
+                : (0, o.V1)(void 0 !== a, `Missing internal slot ${n}`),
                 (t[n] = a);
         }
         return t;
@@ -160,8 +159,8 @@ class b {
         let t = (0, _.H)(e),
             n = (0, u.m)(this, t),
             a = [];
-        for (let { type: e, unit: t, value: r } of n) {
-            let n = { type: e, value: r };
+        for (let { type: e, unit: t, value: i } of n) {
+            let n = { type: e, value: i };
             t && (n.unit = t), a.push(n);
         }
         return a;
@@ -175,7 +174,7 @@ class b {
         return a;
     }
     static supportedLocalesOf(e, t) {
-        return (0, o.U)(b.availableLocales, (0, a.N)(e), t);
+        return (0, s.U)(b.availableLocales, (0, a.N)(e), t);
     }
     static __defaultLocale = "en";
     static availableLocales = new Set();
