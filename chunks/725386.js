@@ -10,23 +10,23 @@ var i = n(64700),
     u = n(287809),
     g = n(403362),
     _ = n(633075),
-    m = n(289173),
-    f = n(667049),
+    f = n(289173),
+    m = n(667049),
     p = n(229231);
 function x(e) {
     let { enabled: t } = o.A.useConfig({ location: e.location }),
         n = d.Q_.useSetting(),
         x = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
-        h = (0, f.A)(x?.id),
-        I = (0, c.w$)(e),
+        I = (0, m.A)(x?.id),
+        h = (0, c.w$)(e),
         A = (0, l.bG)([s.A], () => s.A.getAllConfigsByApplication());
     return (
         i.useEffect(() => {
             t && ((0, r.Wq)(), n && (0, r.i$)());
         }, [t, n]),
         i.useMemo(() => {
-            let e = new Set(h.filter((e) => e instanceof _.R).map((e) => e.applicationId)),
-                n = new Set(h.map((e) => e.type));
+            let e = new Set(I.filter((e) => e instanceof _.R).map((e) => e.applicationId)),
+                n = new Set(I.map((e) => e.type));
             return p.Zc.flatMap((i) =>
                 i === a.x.APPLICATION
                     ? t
@@ -35,17 +35,17 @@ function x(e) {
                               .filter(g.Vq)
                               .filter((t) => !e.has(t.application_id))
                               .map((e) => new _.R({ applicationId: e.application_id }))
-                        : null == I
+                        : null == h
                           ? []
-                          : I.filter((t) => !e.has(t.applicationId)).map(
-                                (e) => new _.R({ applicationId: e.applicationId }),
-                            )
-                    : (0, m.hL)(i)
+                          : h
+                                .filter((t) => !e.has(t.applicationId))
+                                .map((e) => new _.R({ applicationId: e.applicationId }))
+                    : (0, f.hL)(i)
                       ? n.has(i)
                           ? []
-                          : new m.Yy({ type: i, games: [] })
+                          : new f.Yy({ type: i, games: [] })
                       : void (0, g.xb)(i),
             );
-        }, [t, A, I, h])
+        }, [t, A, h, I])
     );
 }
