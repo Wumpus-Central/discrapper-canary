@@ -57,7 +57,7 @@ function E(e) {
                   children: (0, i.jsx)(o.a, { size: n, color: "currentColor" }),
               }),
           })
-        : (0, i.jsx)("span", {});
+        : (0, i.jsx)("span", { "aria-hidden": !0 });
 }
 function h(e) {
     let { show: t, isOpen: n, onClick: r } = e;
