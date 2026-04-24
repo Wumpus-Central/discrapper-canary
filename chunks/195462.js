@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     SU: "muted__20a53",
     my: "avatar__20a53",
