@@ -3,8 +3,8 @@ var i = n(627968);
 n(64700);
 var l = n(192308),
     s = n(440938),
-    r = n(4227),
-    a = n(466459);
+    a = n(4227),
+    r = n(466459);
 let o = "collectibles shop product details modal",
     d = (e) => {
         let {
@@ -14,15 +14,15 @@ let o = "collectibles shop product details modal",
             analyticsSource: u,
             analyticsLocations: h,
             returnRef: A,
-            tab: _,
-            giftRecipient: g,
+            tab: g,
+            giftRecipient: _,
             giftingOrigin: m,
             cardId: p,
             sessionId: f,
             tilePosition: E,
         } = e;
         if (t.isCategoryReward) {
-            let { isPurchased: e } = (0, a.o)(r.A, t);
+            let { isPurchased: e } = (0, r.o)(a.A, t);
             if (!e) return;
         }
         (0, l.openModalLazy)(
@@ -47,13 +47,13 @@ let o = "collectibles shop product details modal",
                     n.e("23297"),
                     n.e("95752"),
                     n.e("92754"),
-                    n.e("51440"),
+                    n.e("16903"),
                     n.e("49319"),
                     n.e("35614"),
                     n.e("61763"),
                     n.e("92630"),
-                    n.e("82504"),
-                ]).then(n.bind(n, 81146));
+                    n.e("8485"),
+                ]).then(n.bind(n, 172878));
                 return (n) =>
                     (0, i.jsx)(s.R9, {
                         newValue: { cardId: p, sessionId: f, tilePosition: E },
@@ -65,8 +65,8 @@ let o = "collectibles shop product details modal",
                             analyticsSource: u,
                             analyticsLocations: h,
                             returnRef: A,
-                            tab: _,
-                            giftRecipient: g,
+                            tab: g,
+                            giftRecipient: _,
                             giftingOrigin: m,
                         }),
                     });

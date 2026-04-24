@@ -15,6 +15,7 @@ e.exports = {
     VG: "pdpControls_c50f62",
     h1: "avatarPreviewContainer_c50f62",
     sm: "pfxPreviewContainer_c50f62",
+    ob: "profileFramePreviewContainer_c50f62",
     g4: "bundlePreviewContainer_c50f62",
     Kg: "bundlePreviewSlide_c50f62",
     X2: "bundleAvatarPreviewContainer_c50f62",
