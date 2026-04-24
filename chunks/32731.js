@@ -140,7 +140,6 @@ class h extends a.A {
                                         title: e.title,
                                         description: e.description,
                                     })),
-                                    label: e.label,
                                     expiresAt: null != e.expires_at ? new Date(e.expires_at) : void 0,
                                     cardImageAssetId: e.card_image_asset_id,
                                     cardBackgroundImageAssetId: e.card_background_image_asset_id,

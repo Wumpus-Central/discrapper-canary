@@ -1,7 +1,6 @@
-"use strict";
-s.d(e, { b: () => a });
-var n = s(17928),
-    r = s(287809);
-function a() {
-    return (0, n.bG)([r.default], () => r.default.getCurrentUser()?.isStaff() ?? !1);
+n.d(t, { b: () => i });
+var r = n(17928),
+    l = n(287809);
+function i() {
+    return (0, r.bG)([l.default], () => l.default.getCurrentUser()?.isStaff() ?? !1);
 }
