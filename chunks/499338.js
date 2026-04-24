@@ -62,7 +62,7 @@ let v = (e) => {
                     }),
                     (0, l.jsx)("div", {
                         style: { marginTop: 24 },
-                        children: (0, l.jsxs)(o.A, {
+                        children: (0, l.jsxs)(o.Ay, {
                             columns: t,
                             paginationOptions: { paginationStrategy: a, perPage: r, paginationPosition: s },
                             children: [
@@ -366,7 +366,7 @@ let P = {
                         (0, l.jsx)(c.A, {
                             backgroundImage: { src: t },
                             children: (0, l.jsx)(d.A, {
-                                children: (0, l.jsx)(o.A, {
+                                children: (0, l.jsx)(o.Ay, {
                                     columns: 2,
                                     children: (0, l.jsxs)(i.Kp, {
                                         direction: "vertical",
@@ -394,7 +394,7 @@ let P = {
                         (0, l.jsx)(c.A, {
                             backgroundImage: { src: a },
                             children: (0, l.jsx)(d.A, {
-                                children: (0, l.jsx)(o.A, {
+                                children: (0, l.jsx)(o.Ay, {
                                     columns: 2,
                                     children: (0, l.jsxs)(i.Kp, {
                                         direction: "vertical",
@@ -693,7 +693,7 @@ let P = {
                                 "Here we have a Grid with three Skeleton children that are wrapping three ShopProductCard to simulate a shop loading state",
                         }),
                         (0, l.jsx)(d.A, {
-                            children: (0, l.jsxs)(o.A, {
+                            children: (0, l.jsxs)(o.Ay, {
                                 columns: 3,
                                 children: [
                                     (0, l.jsx)(N.A, { children: (0, l.jsx)(V.A, { skuId: "1458472704192811088" }) }),
@@ -708,7 +708,7 @@ let P = {
                                 "Here we have a Grid with two Skeleton children that are wrapping two FeaturedCollection to simulate a shop loading state",
                         }),
                         (0, l.jsx)(d.A, {
-                            children: (0, l.jsxs)(o.A, {
+                            children: (0, l.jsxs)(o.Ay, {
                                 columns: 2,
                                 children: [
                                     (0, l.jsx)(N.A, {
@@ -1408,7 +1408,7 @@ let eg = {
                                     "This will be useful when wanting to get a dynamic list of sku ids from the server (like popular picks) and push them into a product grid",
                             }),
                             (0, l.jsx)("br", {}),
-                            (0, l.jsx)(o.A, {
+                            (0, l.jsx)(o.Ay, {
                                 columns: 3,
                                 children: (0, l.jsx)(ep.A, {
                                     skuIds: t?.split(","),
@@ -1910,7 +1910,7 @@ let eC = {
                                     (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsx)(n.E, { variant: "text-lg/semibold", children: "Grid (3):" }),
-                                            (0, l.jsxs)(o.A, {
+                                            (0, l.jsxs)(o.Ay, {
                                                 columns: 3,
                                                 children: [
                                                     (0, l.jsx)(D.A, { ...r }),
@@ -1984,7 +1984,7 @@ let eC = {
                                                 variant: "text-lg/semibold",
                                                 children: ["Grid (", t, "):"],
                                             }),
-                                            (0, l.jsxs)(o.A, {
+                                            (0, l.jsxs)(o.Ay, {
                                                 columns: t,
                                                 children: [(0, l.jsx)(m.A, { ...h }), (0, l.jsx)(m.A, { ...h })],
                                             }),
@@ -2044,7 +2044,7 @@ let eC = {
                                     (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsx)(n.E, { variant: "text-lg/semibold", children: "Grid (3):" }),
-                                            (0, l.jsxs)(o.A, {
+                                            (0, l.jsxs)(o.Ay, {
                                                 columns: 3,
                                                 children: [
                                                     (0, l.jsx)(H, { ...r }),

@@ -1,12 +1,12 @@
-t.d(r, { A: () => o });
-var d = t(627968),
-    l = t(261225),
-    c = t(266341);
-let o = (e) => {
-    let { children: r, columns: t = 1, rows: o = 1 } = e,
-        a = Math.max(1, Math.min(l.M, Math.floor(t))),
-        n = Math.max(1, Math.min(l.M, Math.floor(o))),
-        s = c[`gridItemColumns${a}`],
-        u = c[`gridItemRows${n}`];
-    return (0, d.jsx)("div", { className: `${c.gridItem} ${s} ${u}`, children: r });
+l.d(t, { A: () => s });
+var r = l(627968),
+    n = l(261225),
+    a = l(882724);
+let s = (e) => {
+    let { children: t, columns: l = 1, rows: s = 1 } = e,
+        i = Math.max(1, Math.min(n.Mm, Math.floor(l))),
+        c = Math.max(1, Math.min(n.Mm, Math.floor(s))),
+        d = a[`gridItemColumns${i}`],
+        o = a[`gridItemRows${c}`];
+    return (0, r.jsx)("div", { className: `${a.gridItem} ${d} ${o}`, children: t });
 };
