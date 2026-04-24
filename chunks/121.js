@@ -8,19 +8,19 @@ var s,
     d = a(403581),
     l = a(793574),
     p = a(688810),
-    b = a(793943),
-    m = a(31502),
+    m = a(793943),
+    b = a(31502),
     u = a(259065),
     f = a(532794),
-    g = a(206835),
-    h = a(245853),
+    h = a(206835),
+    g = a(245853),
     R = a(976860),
     v = a(591179),
     E = a(462463),
     U = a(780964),
-    x = a(858897),
-    M = a(676279),
-    P = a(975571),
+    M = a(858897),
+    P = a(676279),
+    x = a(975571),
     A = a(852218),
     S = a(382259),
     O = a(503698),
@@ -44,8 +44,8 @@ let y = o.forwardRef((e, t) => {
     );
 });
 y.displayName = "PremiumRewardsBentoBoxAsset";
-var C = a(636592),
-    w = a(26508),
+var w = a(636592),
+    C = a(26508),
     N = a(398523),
     L = a(881373),
     j = a(612669),
@@ -94,20 +94,20 @@ let ei = function () {
         { analyticsLocations: t } = (0, p.Ay)(l.A.PREMIUM_MARKETING_BENTO_BOX),
         s = (0, v.X)("useBentoBoxes"),
         r = (0, E.A)({ analyticsLocations: t }),
-        n = (0, g.A)({ scrollPosition: G._F.TRY_IT_OUT, analyticsLocations: t }),
+        n = (0, h.A)({ scrollPosition: G._F.TRY_IT_OUT, analyticsLocations: t }),
         O = (0, o.useCallback)(() => {
-            (0, x.openUserSettings)(U.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
+            (0, M.openUserSettings)(U.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
                 (0, u.L)({ analyticsLocations: t }),
             );
         }, [t]),
         I = (0, o.useCallback)(() => {
             (0, f.A)({ subscriptionTier: B.pe.TIER_2, initialPlanId: B.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
         }, [t]),
-        T = (0, M.TM)(),
-        _ = P.A.getArticleURL(V.MVz.REFERRAL_PROGRAM),
-        { shouldShowBonusOrbsUX: es, multiplier: er } = (0, h.Dl)(Y.rE.NITRO_HOME_MARKETING),
+        T = (0, P.TM)(),
+        _ = x.A.getArticleURL(V.MVz.REFERRAL_PROGRAM),
+        { shouldShowBonusOrbsUX: es, multiplier: er } = (0, g.Dl)(Y.rE.NITRO_HOME_MARKETING),
         ei = o.useRef(null),
-        eo = (0, m.l)("bento_box"),
+        eo = (0, b.l)("bento_box"),
         ec = {
             premiumGroup: { thumbnail: K, assetUrl: K },
             serverProfiles: {
@@ -193,7 +193,7 @@ let ei = function () {
                 descriptionCta: F.intl.string(F.t.jVcuVY),
                 previewImage: ec.customThemes.thumbnail,
                 onClick: () => {
-                    (0, b.nf)(b.HP.CUSTOM_THEME);
+                    (0, m.nf)(m.HP.CUSTOM_THEME);
                 },
                 videoUrl: ec.customThemes.assetUrl,
             },
@@ -204,7 +204,6 @@ let ei = function () {
                 descriptionCta: F.intl.string(F.t.jVcuVY),
                 previewImage: ec.displayNameStyles.thumbnail,
                 onClick: s ? r : O,
-                badgeText: F.intl.string(F.t.y2b7CA).toLocaleUpperCase(),
                 videoUrl: ec.displayNameStyles.assetUrl,
             },
             premiumGroup: {
@@ -283,7 +282,7 @@ let ei = function () {
                 previewImage: ec.threePPromotions.thumbnail,
                 videoUrl: ec.threePPromotions.assetUrl,
                 onClick: () => (0, S.u)({ analyticsLocations: t, partnerIds: [A.KS, A.Cs, A.XY] }),
-                badgeText: F.intl.string(F.t.y2b7CA).toLocaleUpperCase(),
+                badgeText: eo ? void 0 : F.intl.string(F.t.y2b7CA).toLocaleUpperCase(),
                 badgeVariant: "expressive",
                 mediaRef: eo ? ei : void 0,
             },
@@ -293,12 +292,12 @@ let ei = function () {
                 description: F.intl.string(W.default.wMi514),
                 descriptionCta: F.intl.string(F.t.hvVgAZ),
                 onClick: () => {
-                    window.open(P.A.getArticleURL(V.MVz.ORBS_REWARDS_FAQ), "_blank");
+                    window.open(x.A.getArticleURL(V.MVz.ORBS_REWARDS_FAQ), "_blank");
                 },
                 previewImage: ec.orbRewards.thumbnail,
                 previewImageStyle: "overlay",
                 backgroundVideoUrl: ec.orbRewards.assetUrl,
-                badgeText: F.intl.string(F.t.oW0eUd).toLocaleUpperCase(),
+                badgeText: eo ? void 0 : F.intl.string(F.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
             },
             orbMultiplier: {
@@ -307,7 +306,7 @@ let ei = function () {
                 description: F.intl.format(F.t["G5k+lZ"], { bonusOrbMultiplier: er }),
                 descriptionCta: F.intl.string(F.t.jVcuVY),
                 onClick: () => (0, R.pX)(V.BVt.QUEST_HOME),
-                badgeText: F.intl.string(F.t.oW0eUd).toLocaleUpperCase(),
+                badgeText: eo ? void 0 : F.intl.string(F.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
                 previewImage: ec.orbMultiplier.thumbnail,
                 videoUrl: ec.orbMultiplier.assetUrl,
@@ -318,7 +317,7 @@ let ei = function () {
                 description: F.intl.format(F.t.djzJx6, { bonusOrbMultiplier: er }),
                 descriptionCta: F.intl.string(F.t.RzWDqY),
                 onClick: () => (0, R.pX)(V.BVt.QUEST_HOME),
-                badgeText: F.intl.string(F.t.oW0eUd).toLocaleUpperCase(),
+                badgeText: eo ? void 0 : F.intl.string(F.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
                 previewImage: ec.combinedOrbs.thumbnail,
                 videoUrl: ec.combinedOrbs.assetUrl,
@@ -333,7 +332,7 @@ let ei = function () {
             let t = (0, L.YS)({ location: "bento_box" }).functionalityEnabled,
                 { enabled: a } = N.Ay.useConfig({ location: "bento_box" }),
                 s = (0, j.O9)(),
-                r = (0, w.DK)(C.W.NITRO, "useBentoBoxes"),
+                r = (0, C.DK)(w.W.NITRO, "useBentoBoxes"),
                 n = r && e;
             return [
                 ...(t || a ? [en.THREE_P_PROMOTIONS] : []),
@@ -347,14 +346,14 @@ let ei = function () {
                 en.REFERRAL_PROGRAM,
             ];
         })(es),
-        eb = [],
-        em = e ? null : ep[0],
+        em = [],
+        eb = e ? null : ep[0],
         eu = ep.slice(+!e, e ? 2 : 3);
     return (
-        null != em && eb.push([el(em)]),
-        1 === eu.length ? eb.push([el(eu[0])]) : 2 === eu.length && eb.push([el(eu[0]), el(eu[1])]),
+        null != eb && em.push([el(eb)]),
+        1 === eu.length ? em.push([el(eu[0])]) : 2 === eu.length && em.push([el(eu[0]), el(eu[1])]),
         {
-            whatsNewBoxes: [...eb],
+            whatsNewBoxes: [...em],
             bestOfBoxes: [[el("showYourStyle")], [el("yourSpace")], [el("emojis"), el("noLimits")]],
         }
     );
