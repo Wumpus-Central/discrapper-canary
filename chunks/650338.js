@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Bs: () => I, HB: () => g, K2: () => N, ME: () => A, N5: () => S, OI: () => f, wz: () => T });
+n.d(t, { Bs: () => p, HB: () => g, K2: () => N, ME: () => A, N5: () => S, OI: () => f, wz: () => T });
 var i = n(64700),
     r = n(17928),
     s = n(929921),
     a = n(495544),
     o = n(71393),
     l = n(763827),
-    d = n(287809),
-    _ = n(954571),
+    _ = n(287809),
+    d = n(954571),
     u = n(652215),
     c = n(753070),
     E = n(788868),
@@ -19,15 +19,15 @@ function f(e) {
         n = (0, c.F0)(t);
     return (
         (0, c.AC)(e.maxFrameRate) !== c.kn.FPS_5 &&
-        null == c.ZV.find((e) => e.resolution === n && e.fps !== c.kn.FPS_5 && !p(e))
+        null == c.ZV.find((e) => e.resolution === n && e.fps !== c.kn.FPS_5 && !I(e))
     );
 }
 function g(e) {
     if (null == e) return;
     let t = (0, c.AC)(e.maxFrameRate);
-    return null == c.ZV.find((e) => e.fps === t && !p(e));
+    return null == c.ZV.find((e) => e.fps === t && !I(e));
 }
-function p(e) {
+function I(e) {
     return null != e.quality || null != e.guildPremiumTier;
 }
 function A(e) {
@@ -35,7 +35,7 @@ function A(e) {
         ? m.intl.string(m.t.XjXqzh)
         : m.intl.formatToPlainString(m.t.TEOC0I, { resolution: e.height });
 }
-function I(e) {
+function p(e) {
     return m.intl.formatToPlainString(m.t.Qb44XH, { fps: e });
 }
 function T(e) {
@@ -61,18 +61,19 @@ function S(e) {
         [n, e, t],
     );
 }
-function N(e, t, n) {
-    let i = c.ZV.find((i) => (null == i.preset || i.preset === e) && i.resolution === t && i.fps === n),
-        r = d.default.getCurrentUser(),
-        s = l.A.getGuildId(),
-        a = null != s ? o.A.getGuild(s) : null;
-    _.default.track(u.HAw.STREAM_SETTINGS_UPDATE, {
-        user_premium_tier: r?.premiumType,
-        guild_premium_tier: a?.premiumTier,
-        stream_quality_user_premium_tier: i?.quality != null ? E.Kq[i.quality] : null,
-        stream_quality_guild_premium_tier: i?.guildPremiumTier,
+function N(e, t, n, i) {
+    let r = c.ZV.find((i) => (null == i.preset || i.preset === e) && i.resolution === t && i.fps === n),
+        s = _.default.getCurrentUser(),
+        a = l.A.getGuildId(),
+        h = null != a ? o.A.getGuild(a) : null;
+    d.default.track(u.HAw.STREAM_SETTINGS_UPDATE, {
+        user_premium_tier: s?.premiumType,
+        guild_premium_tier: h?.premiumTier,
+        stream_quality_user_premium_tier: r?.quality != null ? E.Kq[r.quality] : null,
+        stream_quality_guild_premium_tier: r?.guildPremiumTier,
         stream_quality_preset: e,
         stream_quality_resolution: t,
         stream_quality_frame_rate: n,
+        soundshare_enabled: i,
     });
 }
