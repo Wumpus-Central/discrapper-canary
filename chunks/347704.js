@@ -1,108 +1,107 @@
-"use strict";
-n.d(t, { n: () => h, t: () => p });
-var i = n(627968),
-    s = n(64700),
-    l = n(123292),
-    r = n(460890),
-    a = n(224640),
-    o = n(696208),
-    d = n(430993),
-    c = n(20742),
-    u = n(655053);
-let _ = s.createContext(null);
-function h() {
-    let e = s.useContext(_);
+a.d(l, { n: () => p, t: () => m });
+var t = a(627968),
+    n = a(64700),
+    i = a(123292),
+    o = a(460890),
+    r = a(224640),
+    s = a(696208),
+    d = a(430993),
+    u = a(20742),
+    c = a(655053);
+let b = n.createContext(null);
+function p() {
+    let e = n.useContext(b);
     if (null == e) throw Error("useMultiStepModalContext must be used within a MultiStepModal");
     return e;
 }
-function p(e) {
-    let t,
-        { steps: n, currentStepKey: h, numberedSteps: p, onStepChange: m, onComplete: g, ...x } = e,
-        { i18n: f } = (0, r.G9)(),
-        A = x.onClose,
-        [E, I] = s.useState(!1),
-        [v, j] = s.useState(null),
-        C = n.find((e) => e.stepKey === h);
-    if (null == C) throw Error(`Step with key ${h} not found`);
-    let N = n.findIndex((e) => e.stepKey === h),
-        T = N === n.length - 1,
-        S = 0 === N,
-        [y, b] = s.useState(!1),
-        O = C.nextEnabled ?? !0,
-        R = s.useCallback(
+function m(e) {
+    let l,
+        { steps: a, currentStepKey: p, numberedSteps: m, onStepChange: h, onComplete: x, ...g } = e,
+        { i18n: f } = (0, o.G9)(),
+        v = g.onClose,
+        [y, _] = n.useState(!1),
+        [C, j] = n.useState(null),
+        V = a.find((e) => e.stepKey === p);
+    if (null == V) throw Error(`Step with key ${p} not found`);
+    let k = a.findIndex((e) => e.stepKey === p),
+        S = k === a.length - 1,
+        w = 0 === k,
+        [T, M] = n.useState(!1),
+        N = V.nextEnabled ?? !0,
+        E = n.useCallback(
             (e) => {
-                j(null), m?.(e, h);
+                j(null), h?.(e, p);
             },
-            [m, h],
+            [h, p],
         ),
-        L = s.useCallback(async () => {
-            await g?.(), b(!0), A();
-        }, [g, A]),
-        D = s.useCallback(async () => {
-            I(!0), j(null);
+        D = n.useCallback(async () => {
+            await x?.(), M(!0), v();
+        }, [x, v]),
+        I = n.useCallback(async () => {
+            _(!0), j(null);
             try {
-                if (null != C.onNext && !(await C.onNext())) return void I(!1);
-                T ? await L() : R(n[N + 1].stepKey);
+                if (null != V.onNext && !(await V.onNext())) return void _(!1);
+                S ? await D() : E(a[k + 1].stepKey);
             } catch {
                 j(f.INLINE_NOTICE_GENERIC_ERROR);
             } finally {
-                I(!1);
+                _(!1);
             }
-        }, [R, N, n, T, L, C, f]),
-        G = s.useCallback(() => {
-            S || R(n[N - 1].stepKey);
-        }, [R, N, n, S]),
-        k = s.useMemo(
-            () => ({ currentStepKey: h, goToStep: R, goToNextStep: D, goToPreviousStep: G, complete: L }),
-            [h, R, D, G, L],
+        }, [E, k, a, S, D, V, f]),
+        A = n.useCallback(() => {
+            w || E(a[k - 1].stepKey);
+        }, [E, k, a, w]),
+        L = n.useMemo(
+            () => ({ currentStepKey: p, goToStep: E, goToNextStep: I, goToPreviousStep: A, complete: D }),
+            [p, E, I, A, D],
         ),
-        P = { variant: "secondary", text: f.BACK },
-        B = {
+        R = { variant: "secondary", text: f.BACK },
+        P = {
             variant: "primary",
-            text: T ? f.SUBMIT : f.NEXT,
-            disabled: !O,
-            loading: E,
+            text: S ? f.SUBMIT : f.NEXT,
+            disabled: !N,
+            loading: y,
             onClick: () => {
-                O && !E && D();
+                N && !y && I();
             },
         },
-        V = { text: f.CANCEL, variant: "secondary", onClick: A },
-        w = null != C.secondaryActionButtonProps ? { variant: "secondary", ...C.secondaryActionButtonProps } : null,
-        M = C.hideBackButton || S ? void 0 : (0, i.jsx)(l.Q, { ...P, ...C.backButtonProps, onClick: G }),
-        U = C.modalProps,
-        F = "graphic" in U ? U : null,
-        W = null != p && p.length > 0 && p.includes(h),
-        H = W && !y ? p.indexOf(h) + 1 : void 0;
+        O = { text: f.CANCEL, variant: "secondary", onClick: v },
+        B = null != V.secondaryActionButtonProps ? { variant: "secondary", ...V.secondaryActionButtonProps } : null,
+        F = V.hideBackButton || w ? void 0 : (0, t.jsx)(i.Q, { ...R, ...V.backButtonProps, onClick: A }),
+        z = V.modalProps,
+        $ = "graphic" in z ? z : null,
+        H = null != m && m.length > 0 && m.includes(p),
+        G = H && !T ? m.indexOf(p) + 1 : void 0;
     return (
-        W && (t = y ? { percent: 100 } : { stepCount: p.length, stepNumber: H }),
-        (0, i.jsx)(_.Provider, {
-            value: k,
-            children: (0, i.jsxs)(a.d, {
-                ...x,
-                paddingSize: null != F ? "lg" : "sm",
+        H && (l = T ? { percent: 100 } : { stepCount: m.length, stepNumber: G }),
+        (0, t.jsx)(b.Provider, {
+            value: L,
+            children: (0, t.jsxs)(r.d, {
+                ...g,
+                paddingSize: null != $ ? "lg" : "sm",
                 children: [
-                    null != F
-                        ? (0, i.jsx)(c.V6, { ...F })
-                        : (0, i.jsx)(c.rQ, { title: U.title, subtitle: U.subtitle, progressBarProps: t }),
-                    (0, i.jsx)(
-                        u.i,
+                    null != $
+                        ? (0, t.jsx)(u.V6, { ...$ })
+                        : (0, t.jsx)(u.rQ, { title: z.title, subtitle: z.subtitle, progressBarProps: l }),
+                    (0, t.jsx)(
+                        c.i,
                         {
-                            message: v ?? ("notice" in U ? U.notice?.message : void 0),
-                            type: null != v ? "critical" : "notice" in U ? U.notice?.type : void 0,
+                            message: C ?? ("notice" in z ? z.notice?.message : void 0),
+                            type: null != C ? "critical" : "notice" in z ? z.notice?.type : void 0,
                         },
-                        h,
+                        p,
                     ),
-                    n.map((e) => {
-                        let t = "graphic" in e.modalProps ? null : e.modalProps;
+                    a.map((e) => {
+                        let l = "graphic" in e.modalProps ? null : e.modalProps;
                         return (
-                            (null != e.body || t?.input != null || t?.listProps != null) &&
-                            (0, i.jsx)(
+                            (null != e.body || l?.input != null || l?.listProps != null) &&
+                            (0, t.jsx)(
                                 "div",
                                 {
-                                    style: { display: e.stepKey === h ? "contents" : "none" },
-                                    children: (0, i.jsx)(d.c, {
-                                        controls: t?.input,
-                                        listProps: t?.listProps,
+                                    style: { display: e.stepKey === p ? "contents" : "none" },
+                                    children: (0, t.jsx)(d.c, {
+                                        controls: l?.input,
+                                        listProps: l?.listProps,
                                         children: e.body,
                                     }),
                                 },
@@ -110,10 +109,10 @@ function p(e) {
                             )
                         );
                     }),
-                    (0, i.jsx)(o.H, {
-                        leading: M,
-                        actionsFullWidth: S,
-                        actions: [...(S ? [V] : []), ...(null != w ? [w] : []), { ...B, ...C.nextButtonProps }],
+                    (0, t.jsx)(s.H, {
+                        leading: F,
+                        actionsFullWidth: w,
+                        actions: [...(w ? [O] : []), ...(null != B ? [B] : []), { ...P, ...V.nextButtonProps }],
                     }),
                 ],
             }),

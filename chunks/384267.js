@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Lt: "select_a16aea",
     iE: "wrapper_a16aea",
