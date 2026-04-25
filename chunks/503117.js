@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     h4: "imageWrapper_af017a",
     w8: "clickableWrapper_af017a",
