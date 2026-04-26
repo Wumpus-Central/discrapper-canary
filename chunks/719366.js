@@ -536,7 +536,7 @@ function U(t, e, i) {
         },
         [I.xBc.SET_VOICE_CHANNEL_STATUS.toString()]: {
             title: s.intl.string(s.t.VBwkUf),
-            description: s.t.C6BzXx,
+            description: i?.enableHangoutWindow ? s.t.CYcJ6H : s.t.C6BzXx,
             flag: I.xBc.SET_VOICE_CHANNEL_STATUS,
         },
     };
