@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jk: "richTooltipContent_a89985",
     Sx: "richTooltipContentLg_a89985",

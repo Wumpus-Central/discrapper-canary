@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Nr: "card__73069",
     cX: "cardBrand__73069",

@@ -1,133 +1,132 @@
-"use strict";
-r.d(t, { A: () => m });
-var n = r(627968);
-r(64700);
-var i = r(231723),
-    a = r(192308),
-    s = r(157559),
-    l = r(73825),
-    o = r(323082),
-    c = r(166403),
-    d = r(954571),
-    u = r(927578),
-    _ = r(652215),
-    p = r(985018);
-let f = "guild-boost-purchase-modal";
-async function m(e) {
+a.d(t, { A: () => f });
+var r = a(627968);
+a(64700);
+var n = a(231723),
+    l = a(192308),
+    i = a(157559),
+    s = a(73825),
+    o = a(323082),
+    c = a(166403),
+    d = a(954571),
+    u = a(927578),
+    h = a(652215),
+    p = a(985018);
+let m = "guild-boost-purchase-modal";
+async function f(e) {
     let {
             analyticsLocations: t,
-            analyticsLocation: m,
-            analyticsSourceLocation: h,
-            guildId: g,
-            closeLayer: b,
-            onCloseModal: A,
-            totalNumberOfSlotsToAssign: E = 1,
-            disablePremiumUpsell: v,
+            analyticsLocation: f,
+            analyticsSourceLocation: b,
+            guildId: _,
+            closeLayer: g,
+            onCloseModal: x,
+            totalNumberOfSlotsToAssign: v = 1,
+            disablePremiumUpsell: A,
             onSubscribeComplete: y,
-            onSubscriptionConfirmation: I,
-            inPopout: S,
-            applicationId: x,
-            intent: T,
+            onSubscriptionConfirmation: E,
+            inPopout: I,
+            applicationId: j,
+            intent: S,
         } = e,
-        C = S ? i.KX : i.SY,
-        R = c.A.getPremiumTypeSubscription();
-    if (null != R && R.isPurchasedExternally && null != R.paymentGateway) {
-        null != b && b(),
-            s.A.show({
-                title: p.intl.formatToPlainString(p.t["rTk9v/"], { paymentGatewayName: _.qmC[R.paymentGateway] }),
+        C = I ? n.KX : n.SY,
+        T = c.A.getPremiumTypeSubscription();
+    if (null != T && T.isPurchasedExternally && null != T.paymentGateway) {
+        null != g && g(),
+            i.A.show({
+                title: p.intl.formatToPlainString(p.t["rTk9v/"], { paymentGatewayName: h.qmC[T.paymentGateway] }),
                 body: p.intl.format(p.t.NY03WF, {
-                    paymentGatewayName: _.qmC[R.paymentGateway],
-                    subscriptionManagementLink: (0, u.tW)(R.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
+                    paymentGatewayName: h.qmC[T.paymentGateway],
+                    subscriptionManagementLink: (0, u.tW)(T.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
                 }),
             });
         return;
     }
-    Promise.all([(0, o.$o)(), (0, l.zS)()]),
-        await (0, a.openModalLazy)(
+    Promise.all([(0, o.$o)(), (0, s.zS)()]),
+        await (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    r.e("32292"),
-                    r.e("24199"),
-                    r.e("57036"),
-                    r.e("88394"),
-                    r.e("28367"),
-                    r.e("45174"),
-                    r.e("85519"),
-                    r.e("11871"),
-                    r.e("37266"),
-                    r.e("55057"),
-                    r.e("34717"),
-                    r.e("63229"),
-                    r.e("31988"),
-                    r.e("55343"),
-                    r.e("80527"),
-                    r.e("58710"),
-                    r.e("31825"),
-                    r.e("23353"),
-                    r.e("7175"),
-                    r.e("37249"),
-                    r.e("14138"),
-                    r.e("8971"),
-                    r.e("85071"),
-                    r.e("88017"),
-                    r.e("1040"),
-                    r.e("64615"),
-                    r.e("17239"),
-                    r.e("66950"),
-                    r.e("58164"),
-                    r.e("38229"),
-                    r.e("20861"),
-                    r.e("36682"),
-                    r.e("45723"),
-                    r.e("56871"),
-                    r.e("69601"),
-                    r.e("47511"),
-                    r.e("51444"),
-                    r.e("62290"),
-                    r.e("48900"),
-                    r.e("80973"),
-                    r.e("82731"),
-                    r.e("20735"),
-                    r.e("27846"),
-                    r.e("8306"),
-                    r.e("10567"),
-                    r.e("12542"),
-                    r.e("84317"),
-                    r.e("93858"),
-                    r.e("62175"),
-                    r.e("96817"),
-                    r.e("67646"),
-                    r.e("67443"),
-                    r.e("49600"),
-                ]).then(r.bind(r, 532299));
-                return (r) => {
-                    let { transitionState: i, onClose: a } = r;
-                    return (0, n.jsx)(e, {
-                        transitionState: i,
+                    a.e("32292"),
+                    a.e("24199"),
+                    a.e("57036"),
+                    a.e("88394"),
+                    a.e("28367"),
+                    a.e("45174"),
+                    a.e("85519"),
+                    a.e("11871"),
+                    a.e("37266"),
+                    a.e("55057"),
+                    a.e("14976"),
+                    a.e("63229"),
+                    a.e("31988"),
+                    a.e("55343"),
+                    a.e("80527"),
+                    a.e("58710"),
+                    a.e("31825"),
+                    a.e("23353"),
+                    a.e("7175"),
+                    a.e("37249"),
+                    a.e("14138"),
+                    a.e("8971"),
+                    a.e("85071"),
+                    a.e("88017"),
+                    a.e("1040"),
+                    a.e("64615"),
+                    a.e("17239"),
+                    a.e("66950"),
+                    a.e("58164"),
+                    a.e("38229"),
+                    a.e("20861"),
+                    a.e("36682"),
+                    a.e("45723"),
+                    a.e("56871"),
+                    a.e("69601"),
+                    a.e("47511"),
+                    a.e("51444"),
+                    a.e("62290"),
+                    a.e("48900"),
+                    a.e("80973"),
+                    a.e("82731"),
+                    a.e("20735"),
+                    a.e("27846"),
+                    a.e("8306"),
+                    a.e("10567"),
+                    a.e("12542"),
+                    a.e("84317"),
+                    a.e("93858"),
+                    a.e("62175"),
+                    a.e("96817"),
+                    a.e("67646"),
+                    a.e("67443"),
+                    a.e("49600"),
+                ]).then(a.bind(a, 532299));
+                return (a) => {
+                    let { transitionState: n, onClose: l } = a;
+                    return (0, r.jsx)(e, {
+                        transitionState: n,
                         onClose: (e) => {
-                            a(), A?.(e);
+                            l(), x?.(e);
                         },
                         analyticsLocations: t,
-                        analyticsLocation: m,
-                        analyticsSourceLocation: h ?? m,
-                        guildId: g,
-                        totalNumberOfSlotsToAssign: E,
-                        closeGuildPerksModal: b,
-                        disablePremiumUpsell: v,
-                        onSubscriptionConfirmation: I,
+                        analyticsLocation: f,
+                        analyticsSourceLocation: b ?? f,
+                        guildId: _,
+                        totalNumberOfSlotsToAssign: v,
+                        closeGuildPerksModal: g,
+                        disablePremiumUpsell: A,
+                        onSubscriptionConfirmation: E,
                         onSubscribeComplete: y,
-                        applicationId: x,
-                        intent: T,
+                        applicationId: j,
+                        intent: S,
                     });
                 };
             },
             {
-                modalKey: f,
+                modalKey: m,
                 onCloseCallback: () => {
-                    d.default.track(_.HAw.MODAL_DISMISSED, { type: _.JJy.PREMIUM_GUILD_PURCHASE_MODAL, location: m });
+                    d.default.track(h.HAw.MODAL_DISMISSED, { type: h.JJy.PREMIUM_GUILD_PURCHASE_MODAL, location: f });
                 },
                 onCloseRequest: () => {
-                    (0, a.closeModal)(f), A?.(!1);
+                    (0, l.closeModal)(m), x?.(!1);
                 },
                 contextKey: C,
             },

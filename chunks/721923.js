@@ -1,129 +1,128 @@
-"use strict";
-r.d(t, { A: () => C });
-var n = r(627968),
-    i = r(64700),
-    a = r(503698),
-    s = r.n(a),
-    l = r(17928),
-    o = r(502572),
-    c = r(990078),
-    d = r(862482),
-    u = r(194261),
-    _ = r(821609),
-    p = r(930861),
-    f = r(104510),
-    m = r(820739),
-    h = r(688810),
-    g = r(531260),
-    b = r(267102),
-    A = r(178368),
-    E = r(166403),
-    v = r(473145),
-    y = r(987144),
-    I = r(652215),
-    S = r(788868),
-    x = r(985018),
-    T = r(703870);
+a.d(t, { A: () => C });
+var r = a(627968),
+    n = a(64700),
+    l = a(503698),
+    i = a.n(l),
+    s = a(17928),
+    o = a(502572),
+    c = a(990078),
+    d = a(862482),
+    u = a(194261),
+    h = a(821609),
+    p = a(930861),
+    m = a(104510),
+    f = a(820739),
+    b = a(688810),
+    _ = a(531260),
+    g = a(267102),
+    x = a(178368),
+    v = a(166403),
+    A = a(473145),
+    y = a(987144),
+    E = a(652215),
+    I = a(788868),
+    j = a(985018),
+    S = a(703870);
 let C = (e) => {
     let {
             analyticsLocation: t,
-            analyticsSourceLocation: r,
-            guild: a,
+            analyticsSourceLocation: a,
+            guild: l,
             buttonText: C,
-            targetBoostedGuildTier: R,
-            onClose: N = () => {},
-            closeLayer: L = () => {},
-            pauseAnimation: w = !1,
-            applicationId: P,
-            handleSubscribeModalClose: O,
-            withHighlight: D = !1,
-            icon: M,
-            intent: k,
-            useExpressiveButton: j = !1,
+            targetBoostedGuildTier: T,
+            onClose: R = () => {},
+            closeLayer: w = () => {},
+            pauseAnimation: k = !1,
+            applicationId: L,
+            handleSubscribeModalClose: N,
+            withHighlight: O = !1,
+            icon: P,
+            intent: D,
+            useExpressiveButton: M = !1,
             ...U
         } = e,
-        { analyticsLocations: F } = (0, h.Ay)(),
-        B = (0, b.Us)() === I.BRT.POPOUT,
-        [G, H] = i.useState(!1),
-        { fractionalState: V } = (0, g.A)(),
-        W = (0, l.bG)([A.A], () => A.A.hasFetched);
-    i.useEffect(() => {
-        W || (0, m.CD)();
+        { analyticsLocations: F } = (0, b.Ay)(),
+        V = (0, g.Us)() === E.BRT.POPOUT,
+        [B, G] = n.useState(!1),
+        { fractionalState: H } = (0, _.A)(),
+        W = (0, s.bG)([x.A], () => x.A.hasFetched);
+    n.useEffect(() => {
+        W || (0, f.CD)();
     }, [W]);
-    let z = (0, v.D$)(A.A.boostSlots),
-        Y = null != R ? Math.max((0, v.Os)(a, R), 1) : 1,
-        Z = (0, v.Nc)({ fractionalState: V }),
-        q = async () => {
-            H(!0),
+    let z = (0, A.D$)(x.A.boostSlots),
+        Z = null != T ? Math.max((0, A.Os)(l, T), 1) : 1,
+        Y = (0, A.Nc)({ fractionalState: H }),
+        K = async () => {
+            G(!0),
                 await (0, y.g)({
                     analyticsLocations: F,
                     analyticsLocation: t,
-                    analyticsSourceLocation: r,
-                    guild: a,
-                    numberOfBoostsToAdd: Y,
-                    onClose: N,
-                    closeLayer: L,
-                    inPopout: B,
-                    applicationId: P,
-                    handleSubscribeModalClose: O,
-                    intent: k,
+                    analyticsSourceLocation: a,
+                    guild: l,
+                    numberOfBoostsToAdd: Z,
+                    onClose: R,
+                    closeLayer: w,
+                    inPopout: V,
+                    applicationId: L,
+                    handleSubscribeModalClose: N,
+                    intent: D,
                 }),
-                H(!1);
+                G(!1);
         },
-        X = E.A.getPremiumTypeSubscription(),
-        $ = (0, n.jsxs)("div", { className: T.x6, children: [M, C ?? x.intl.string(x.t.gKmQ1G)] }),
-        K = !1;
-    return ((K = null !== X && !(z.length > 0) && X?.isPausedOrPausePending && V === S.xc.NONE) &&
-        (($ = (0, n.jsxs)("div", {
-            className: T.x6,
-            children: [(0, n.jsx)(u.X, { size: "xs", className: T.iA }), " ", $],
+        X = v.A.getPremiumTypeSubscription(),
+        $ = (0, r.jsxs)("div", { className: S.x6, children: [P, C ?? j.intl.string(j.t.gKmQ1G)] }),
+        J = !1;
+    return ((J = null !== X && !(z.length > 0) && X?.isPausedOrPausePending && H === I.xc.NONE) &&
+        (($ = (0, r.jsxs)("div", {
+            className: S.x6,
+            children: [(0, r.jsx)(u.X, { size: "xs", className: S.iA }), " ", $],
         })),
         (U.disabled = !0)),
-    null != Z)
-        ? j
-            ? (0, n.jsx)(c.m, {
-                  text: Z,
-                  children: (0, n.jsx)(_.$, {
+    null != Y)
+        ? M
+            ? (0, r.jsx)(c.m, {
+                  text: Y,
+                  children: (0, r.jsx)(h.$, {
                       variant: "expressive",
                       icon: u.X,
                       iconPosition: "start",
                       disabled: !0,
                       fullWidth: U.fullWidth,
-                      text: C ?? x.intl.string(x.t.gKmQ1G),
+                      text: C ?? j.intl.string(j.t.gKmQ1G),
                   }),
               })
-            : (0, n.jsx)(o.A, {
-                  text: Z,
+            : (0, r.jsx)(o.A, {
+                  text: Y,
                   "aria-label": !1,
                   children: (e) =>
-                      (0, n.jsx)(p.wL, {
+                      (0, r.jsx)(p.wL, {
                           "data-migration-pending": !0,
                           ...e,
                           disabled: !0,
                           size: d.$n.Sizes.SMALL,
-                          pauseAnimation: w,
+                          pauseAnimation: k,
                           ...U,
                           children: $,
                       }),
               })
-        : j
-          ? (0, n.jsx)(_.$, {
+        : M
+          ? (0, r.jsx)(h.$, {
                 variant: "expressive",
-                icon: f._,
-                disabled: K,
-                loading: G,
+                icon: m._,
+                disabled: J,
+                loading: B,
                 fullWidth: U.fullWidth,
-                text: C ?? x.intl.string(x.t.gKmQ1G),
-                onClick: q,
+                text: C ?? j.intl.string(j.t.gKmQ1G),
+                onClick: K,
             })
-          : (0, n.jsx)(p.wL, {
+          : (0, r.jsx)(p.wL, {
                 "data-migration-pending": !0,
                 size: d.$n.Sizes.SMALL,
                 ...U,
-                className: s()(U.className, { [T.yj]: D }),
-                submitting: G,
-                onClick: q,
-                pauseAnimation: w,
+                className: i()(U.className, { [S.yj]: O }),
+                submitting: B,
+                onClick: K,
+                pauseAnimation: k,
                 children: $,
             });
 };

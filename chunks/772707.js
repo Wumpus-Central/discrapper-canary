@@ -1,32 +1,31 @@
-"use strict";
-r.d(t, { k: () => o });
-var n = r(627968);
-r(64700);
-var i = r(224640),
-    a = r(696208),
-    s = r(430993),
-    l = r(20742);
+a.d(t, { k: () => o });
+var r = a(627968);
+a(64700);
+var n = a(224640),
+    l = a(696208),
+    i = a(430993),
+    s = a(20742);
 function o(e) {
     let {
         size: t = "md",
-        gradientColor: r = "purple",
+        gradientColor: a = "purple",
         graphic: o,
         badge: c,
         title: d,
         subtitle: u,
-        actionBarInput: _,
+        actionBarInput: h,
         actions: p,
-        children: f,
-        ...m
+        children: m,
+        ...f
     } = e;
-    return (0, n.jsxs)(i.d, {
-        ...m,
+    return (0, r.jsxs)(n.d, {
+        ...f,
         size: t,
         paddingSize: "lg",
         children: [
-            (0, n.jsx)(l.V6, { gradientColor: r, graphic: o, badge: c, title: d, subtitle: u }),
-            (0, n.jsx)(s.c, { children: f }),
-            (0, n.jsx)(a.H, { leading: _, actions: p, actionsFullWidth: null == _ }),
+            (0, r.jsx)(s.V6, { gradientColor: a, graphic: o, badge: c, title: d, subtitle: u }),
+            (0, r.jsx)(i.c, { children: m }),
+            (0, r.jsx)(l.H, { leading: h, actions: p, actionsFullWidth: null == h }),
         ],
     });
 }

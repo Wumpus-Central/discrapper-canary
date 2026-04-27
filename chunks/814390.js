@@ -1,11 +1,10 @@
-"use strict";
-r.d(t, { A: () => i, h: () => a });
-var n = r(253932);
-function i() {
-    let e = n.D_.useSetting(),
-        t = n.SI.useSetting();
+a.d(t, { A: () => n, h: () => l });
+var r = a(253932);
+function n() {
+    let e = r.D_.useSetting(),
+        t = r.SI.useSetting();
     return e || !t;
 }
-function a() {
-    return n.D_.getSetting() || !n.SI.getSetting();
+function l() {
+    return r.D_.getSetting() || !r.SI.getSetting();
 }

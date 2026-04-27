@@ -1,5 +1,4 @@
-"use strict";
-function n(e) {
+a.d(t, { N: () => r });
+function r(e) {
     return { tag: e.tag };
 }
-r.d(t, { N: () => n });

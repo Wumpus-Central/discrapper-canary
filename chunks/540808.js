@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Do: "placeholderPulse_c8ffbb",
     kL: "container_c8ffbb",
