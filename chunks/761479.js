@@ -1,1 +1,2 @@
-i.exports = { vK: "banner__24934", rf: "body__24934", o1: "actions__24934", Gc: "avatarPile__24934" };
+"use strict";
+e.exports = { vK: "banner__24934", rf: "body__24934", o1: "actions__24934", Gc: "avatarPile__24934" };
