@@ -64,6 +64,7 @@ function R() {
     return (0, n.jsxs)(I.Z, {
         className: P.kL,
         outline: !1,
+        type: I.s.CUSTOM,
         children: [
             (0, n.jsx)("div", { className: P.ME, children: (0, n.jsx)(p, { user: e, size: A._3.SIZE_80 }) }),
             (0, n.jsxs)("div", {
@@ -137,9 +138,9 @@ function R() {
 }
 var L = s(503698),
     b = s.n(L),
-    k = s(939249),
-    M = s(738188),
-    U = s(661531),
+    M = s(939249),
+    U = s(738188),
+    k = s(661531),
     K = s(369606),
     G = s(192308),
     V = s(761508),
@@ -153,15 +154,15 @@ var L = s(503698),
     W = s(86789);
 let X = (t) => {
         let { status: e, onClick: s, opened: i, count: r } = t;
-        return (0, n.jsxs)(k.D, {
+        return (0, n.jsxs)(M.D, {
             className: W.wx,
             onClick: s,
             children: [
                 (0, n.jsx)("div", {
                     className: W.Y5,
-                    children: (0, n.jsx)(M.i, {
+                    children: (0, n.jsx)(U.i, {
                         size: "md",
-                        color: "active" === e ? U.A.colors.INTERACTIVE_TEXT_ACTIVE : U.A.colors.ICON_MUTED,
+                        color: "active" === e ? k.A.colors.INTERACTIVE_TEXT_ACTIVE : k.A.colors.ICON_MUTED,
                     }),
                 }),
                 (0, n.jsxs)("div", {
@@ -246,7 +247,7 @@ let X = (t) => {
                     : S.intl.format(S.t.QY4g5t, t);
             }, [e, l]);
         return (0, n.jsx)(
-            k.D,
+            M.D,
             {
                 onClick: () => {
                     (0, G.openModalLazy)(async () => {
