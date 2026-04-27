@@ -35,7 +35,8 @@ function m(e) {
                     t ? (0, i.jsx)("circle", { cx: "12", cy: "12", r: "5", className: h.he }) : null,
                 ],
             }),
-            null != r && (0, i.jsx)(r, { className: h.Kk, size: "md", color: "currentColor" }),
+            null != r &&
+                (0, i.jsx)(r, { className: h.Kk, size: "md", color: "currentColor", "aria-hidden": !0, focusable: !1 }),
         ],
     });
 }
