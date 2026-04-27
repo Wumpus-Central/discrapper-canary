@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => l, k: () => i });
-var a,
-    r,
-    i = (((a = {}).DEFAULT = "DEFAULT"), (a.HIGHLIGHTED = "HIGHLIGHTED"), (a.SELECTED = "SELECTED"), a),
-    l = (((r = {}).ORB_PROFILE_BADGE = "orb_profile_badge"), r);
+a.d(t, { A: () => i, k: () => l });
+var r,
+    n,
+    l = (((r = {}).DEFAULT = "DEFAULT"), (r.HIGHLIGHTED = "HIGHLIGHTED"), (r.SELECTED = "SELECTED"), r),
+    i = (((n = {}).ORB_PROFILE_BADGE = "orb_profile_badge"), n);

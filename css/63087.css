@@ -4063,305 +4063,6 @@ h3.improved__1689b:after {
     background: var(--background-base-lower)
 }
 
-.outerContainer_fbc6f7 {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 16px;
-    overflow: hidden;
-    padding: 16px;
-    position: relative
-}
-
-.outerContainerSm_fbc6f7 {
-    flex-wrap: wrap;
-    gap: 12px;
-    max-height: none
-}
-
-.outerContainerXs_fbc6f7 {
-    gap: 6px;
-    max-height: none;
-    position: relative
-}
-
-.questRewardEmbed_fbc6f7 {
-    height: 80px;
-    width: 80px
-}
-
-.questRewardEmbedSm_fbc6f7 {
-    height: 70px;
-    width: 70px
-}
-
-.questRewardEmbedXs_fbc6f7 {
-    bottom: 0;
-    height: 50px;
-    position: absolute;
-    width: 50px
-}
-
-.taskDetails_fbc6f7 {
-    flex: 1 1 180px;
-    min-width: 180px
-}
-
-.instructionsRow_fbc6f7 {
-    align-items: center;
-    -moz-column-gap: 8px;
-    column-gap: 8px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 4px;
-    row-gap: 4px
-}
-
-.taskInstructions_fbc6f7 {
-    margin-bottom: 0
-}
-
-.questEnrollmentBlockedButton_fbc6f7 {
-    flex: 1 0 auto
-}
-
-.outerContainerXs_fbc6f7 .questEnrollmentBlockedButton_fbc6f7 {
-    width: 100%
-}
-
-.learnMoreLink_fbc6f7 {
-    cursor: pointer
-}
-
-.ctaTooltipText_fbc6f7 {
-    text-align: center
-}
-
-.root_fbc6f7 {
-    background-color: var(--background-surface-high)
-}
-
-.rewardTileWrapper_fbc6f7 {
-    position: relative
-}
-
-.rewardTileExpired_fbc6f7 {
-    align-items: center;
-    background: rgba(0, 0, 0, .5);
-    bottom: 0;
-    display: flex;
-    inset-inline: 0;
-    justify-content: center;
-    position: absolute;
-    top: 0
-}
-
-.rewardTileExpirationTooltip_fbc6f7 {
-    text-align: center
-}
-
-.removeStackWidth_fbc6f7 {
-    width: auto
-}
-
-.heroAsset_c93f8c {
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    transition: opacity .7s;
-    width: auto
-}
-
-.heroAssetCont_c93f8c {
-    align-items: center;
-    background-color: var(--background-base-low);
-    display: flex;
-    justify-content: center;
-    overflow: hidden
-}
-
-.heroAssetCont_c93f8c,
-.heroAssetVideo_c93f8c {
-    inset-inline-start: 0;
-    position: absolute;
-    top: 0;
-    width: 100%
-}
-
-.heroAssetVideo_c93f8c {
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    transition: opacity .4s
-}
-
-.outerContainer__74dc6 {
-    display: flex;
-    flex-direction: column;
-    max-height: 185px;
-    overflow: hidden;
-    position: relative
-}
-
-.outerContainerEmbed__74dc6 {
-    min-height: 138px
-}
-
-.questSplashContainer__74dc6 {
-    height: 185px
-}
-
-.questSplashImage__74dc6 {
-    max-width: 660px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    position: absolute;
-    width: 100%
-}
-
-.header__74dc6 {
-    box-sizing: border-box;
-    flex: 1 1 auto;
-    height: 100%;
-    position: relative;
-    width: 100%;
-    z-index: 1
-}
-
-.outerContainerEmbed__74dc6.outerContainerXs__74dc6 .header__74dc6 {
-    padding-bottom: 40px
-}
-
-.headerContent__74dc6 {
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%
-}
-
-.headerContentEmbed__74dc6 {
-    position: static
-}
-
-.headerExpandedContent__74dc6 {
-    align-items: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 16px
-}
-
-.headerExpandedWrapper__74dc6 {
-    width: 100%
-}
-
-.iconLogotypeContainer__74dc6 {
-    align-items: center;
-    display: flex;
-    flex-direction: row
-}
-
-.partnerBranding__74dc6 {
-    margin-inline-end: 16px
-}
-
-.partnerBrandingLogotypes__74dc6 {
-    max-width: 92px
-}
-
-.outerContainerXs__74dc6 .partnerBrandingLogotypes__74dc6 {
-    max-width: 60px
-}
-
-.questInfo__74dc6 {
-    margin-top: 4px;
-    overflow: hidden
-}
-
-.heading__74dc6 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-.outerContainer__74dc6:after {
-    background: linear-gradient(180deg, transparent, 25%, rgba(0, 0, 0, .9));
-    content: "";
-    height: 100%;
-    inset-inline-start: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    width: 100%
-}
-
-.iconsContainer__74dc6 {
-    flex-direction: row;
-    gap: 8px;
-    inset-inline-end: 16px;
-    position: absolute
-}
-
-.iconWrapper__74dc6,
-.iconsContainer__74dc6 {
-    align-items: center;
-    display: flex
-}
-
-.iconWrapper__74dc6 {
-    align-self: flex-start;
-    background-color: rgba(0, 0, 0, .4);
-    border-radius: 16px;
-    cursor: pointer;
-    height: 32px;
-    justify-content: center;
-    line-height: 32px;
-    opacity: .9;
-    transition: background-color .125s, opacity .125s;
-    width: 32px
-}
-
-.iconWrapper__74dc6:focus,
-.iconWrapper__74dc6:hover {
-    background-color: rgba(0, 0, 0, .5)
-}
-
-.iconWrapper__74dc6:active {
-    opacity: .7
-}
-
-.submenuIcon__74dc6 {
-    color: var(--white);
-    height: 24px;
-    inset-inline-start: 4px;
-    position: absolute;
-    top: 4px;
-    width: 24px
-}
-
-.shareButton__74dc6 {
-    margin-top: 8px
-}
-
-.questsCard__12e16 {
-    border-radius: 8px;
-    box-shadow: var(--shadow-low);
-    max-width: 660px;
-    min-width: 280px;
-    overflow: hidden;
-    width: 100%
-}
-
-.questsCard__12e16+.questsCard__12e16 {
-    margin-top: 16px
-}
-
 .container__960ef {
     border-top: 1px solid var(--border-subtle);
     box-sizing: border-box;
@@ -4578,6 +4279,38 @@ h3.improved__1689b:after {
     pointer-events: none;
     position: absolute;
     top: 0
+}
+
+.heroAsset_c93f8c {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    transition: opacity .7s;
+    width: auto
+}
+
+.heroAssetCont_c93f8c {
+    align-items: center;
+    background-color: var(--background-base-low);
+    display: flex;
+    justify-content: center;
+    overflow: hidden
+}
+
+.heroAssetCont_c93f8c,
+.heroAssetVideo_c93f8c {
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.heroAssetVideo_c93f8c {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: opacity .4s
 }
 
 .container_b5b7aa {

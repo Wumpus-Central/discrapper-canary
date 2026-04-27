@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { wT: () => M, gj: () => P, mU: () => O, tH: () => D, NA: () => V, XR: () => G, VX: () => U });
+n.d(t, { gj: () => O, mU: () => M, tH: () => P, NA: () => U, XR: () => V, VX: () => D });
 var l = n(64700),
     i = n(17928);
 n(166352);
@@ -57,35 +57,7 @@ function L(e) {
 function k(e) {
     return e ? E.t.GFdaUK : E.t.NIimTt;
 }
-function M(e, t, n, l) {
-    let { targetMinutes: i } = (0, b.fc)(e),
-        s = (0, b.I3)(e),
-        a = (0, b.BL)({ quest: e, questContent: n, sourceQuestContent: l }),
-        r = (0, y.ui)(e);
-    if ((0, A.g5)(e) && !(0, A.t)({ quest: e }))
-        return E.intl.format(E.t["l4S+cQ"], { minutes: i, onClick: a, gameTitle: e.config.messages.gameTitle });
-    if ((0, A.g5)(e))
-        return r
-            ? E.intl.format(E.t.gbtCpW, { onClick: a, minutes: i })
-            : E.intl.format(E.t.Ajlcd7, { minutes: i, onClick: a, gameTitle: e.config.messages.gameTitle });
-    if (r) return E.intl.format(E.t.Hu8SKW, { targetMinutes: i });
-    if ((0, A.vv)(e)) {
-        let t = (0, A.Xi)(e.config),
-            n = t?.messages.videoTitle;
-        return null == n ? E.intl.string(E.t["o+e9yh"]) : E.intl.formatToPlainString(E.t["9m9Mna"], { videoTitle: n });
-    }
-    if (null != s) return s.title;
-    if ((0, A.vl)(e))
-        if ((0, y._e)(e)) return E.intl.format(E.t["1NaRSs"], { minutes: i });
-        else return E.intl.format(E.t.xHXCyf, { minutes: i, activityName: e.config.messages.gameTitle });
-    let o = E.t["6zWtV8"];
-    return (
-        (0, A.t)({ quest: e }) &&
-            (o = e.config.features.includes(C.Li.NON_GAMING_PLAY_QUEST) ? E.t.fe7Xec : E.t["wmOh/q"]),
-        E.intl.format(o, { minutes: i, gameTitle: e.config.messages.gameTitle })
-    );
-}
-function O(e) {
+function M(e) {
     let { quest: t, gameProfileSource: n } = e,
         l = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
         r = (0, b.I3)(t),
@@ -471,10 +443,10 @@ function O(e) {
               });
     })({ ...e, currentUser: l, withoutMarkdown: !1, thirdPartyTaskDetails: r ?? void 0, onGameTitleClick: x });
 }
-function P(e, t, n, l) {
+function O(e, t, n, l) {
     let i = (0, b.fc)(e),
         s = (0, A.JC)(e),
-        a = O({
+        a = M({
             quest: e,
             taskDetails: i,
             location: C.rE.QUEST_HOME_DESKTOP,
@@ -493,7 +465,7 @@ function P(e, t, n, l) {
             ? a
             : null;
 }
-function D(e) {
+function P(e) {
     let {
             quest: t,
             isExpanded: n,
@@ -511,7 +483,7 @@ function D(e) {
         f = t.userStatus?.enrolledAt != null,
         g = d.percentComplete > 0,
         _ = (0, b.Vn)(t),
-        x = O({
+        x = M({
             quest: t,
             location: C.rE.QUESTS_BAR,
             questContent: h.uF.QUEST_BAR_V2,
@@ -537,7 +509,7 @@ function D(e) {
         else return (0, I.YT)({ quest: t, taskDetails: d, thirdPartyTaskDetails: m ?? void 0 });
     return E.intl.string(E.t.S6UUc5);
 }
-function U(e) {
+function D(e) {
     let t = (0, i.bG)([r.default], () => r.default.locale),
         n = (0, b.fc)(e),
         [l] = (0, b.Qo)(e, n),
@@ -555,7 +527,7 @@ function U(e) {
           ? E.intl.string(E.t.mOrpXG)
           : E.intl.string(E.t["7e5k7L"]);
 }
-function V(e) {
+function U(e) {
     let { quest: t, application: n, shortText: i = !1, mobileExternalLinkVariant: s } = e,
         a = l.useMemo(
             () =>
@@ -584,7 +556,7 @@ function V(e) {
             return (0, y.vA)(t) && 1 ? E.intl.string(i ? E.t.CkUzLd : E.t["hRIVy+"]) : E.intl.string(E.t.l7E81v);
     }
 }
-function G(e) {
+function V(e) {
     let { quest: t, rewardCode: n } = e,
         l = (0, v.kr)({ quest: t }),
         i = n?.platform ?? h.pY.CROSS_PLATFORM,

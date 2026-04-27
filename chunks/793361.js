@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     NV: "optionContainer__14160",
     d: "clickableRow__14160",

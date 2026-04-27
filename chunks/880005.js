@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Iu: "partnerBranding__83420",
     _Y: "partnerBrandingGameTile__83420",

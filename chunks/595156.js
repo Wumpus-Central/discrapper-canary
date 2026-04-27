@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     xd: "settingsWrapper_c9e42f",
     x6: "button_c9e42f",

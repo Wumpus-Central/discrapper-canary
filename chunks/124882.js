@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Os: "nameplatePlaceholderUserRow__257fb",
     yf: "nameplatePlaceholderAvatar__257fb",
