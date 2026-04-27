@@ -10784,12 +10784,12 @@ strong {
     padding: 8px
 }
 
-.clickable__13533[aria-disabled=false]>.base__13533 {
+.clickable__13533[role=option]>.base__13533 {
     cursor: pointer
 }
 
-.clickable__13533[aria-disabled=false]>.base__13533:hover,
-.clickable__13533[aria-selected=true]>.base__13533 {
+.clickable__13533[aria-selected=true]>.base__13533,
+.clickable__13533[role=option]>.base__13533:hover {
     background-color: var(--interactive-background-hover)
 }
 

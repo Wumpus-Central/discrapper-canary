@@ -1,23 +1,24 @@
-a.d(t, { Ym: () => i, f5: () => s, yW: () => o }), a(321073);
-var r = a(64700),
-    n = a(575593),
-    l = a(985018);
-class i {
+"use strict";
+r.d(t, { Ym: () => s, f5: () => l, yW: () => o }), r(321073);
+var n = r(64700),
+    i = r(575593),
+    a = r(985018);
+class s {
     itemsByTypes;
     constructor(e) {
         this.itemsByTypes = this.sortByTypes(e);
     }
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(n.R.AVATAR_DECORATION);
+        return this.getFirstItemByType(i.R.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(n.R.PROFILE_EFFECT);
+        return this.getFirstItemByType(i.R.PROFILE_EFFECT);
     }
     get firstNameplate() {
-        return this.getFirstItemByType(n.R.NAMEPLATE);
+        return this.getFirstItemByType(i.R.NAMEPLATE);
     }
     get firstProfileFrame() {
-        return this.getFirstItemByType(n.R.PROFILE_FRAME);
+        return this.getFirstItemByType(i.R.PROFILE_FRAME);
     }
     getFirstItemByType(e) {
         let t = (this.itemsByTypes.get(e) ?? [])[0];
@@ -25,14 +26,14 @@ class i {
     }
     sortByTypes(e) {
         return e.reduce((e, t) => {
-            let a = e.get(t.type);
-            return null != a ? a.push(t) : e.set(t.type, [t]), e;
+            let r = e.get(t.type);
+            return null != r ? r.push(t) : e.set(t.type, [t]), e;
         }, new Map());
     }
 }
-let s = (e) =>
-        r.useMemo(() => {
-            let t = new i(e.items);
+let l = (e) =>
+        n.useMemo(() => {
+            let t = new s(e.items);
             return {
                 firstProfileEffect: t.firstProfileEffect,
                 firstAvatarDecoration: t.firstAvatarDecoration,
@@ -41,14 +42,14 @@ let s = (e) =>
             };
         }, [e]),
     o = (e) => {
-        let t = l.intl.string(l.t["7v0T9P"]),
-            a = l.intl.string(l.t.wR5wOo),
-            r = l.intl.string(l.t.x5CoXR);
+        let t = a.intl.string(a.t["7v0T9P"]),
+            r = a.intl.string(a.t.wR5wOo),
+            n = a.intl.string(a.t.x5CoXR);
         return (
             null != e.bundledProducts &&
                 (e.bundledProducts.length > 0 && (t = e.bundledProducts[0]?.name),
-                e.bundledProducts.length > 1 && (a = e.bundledProducts[1]?.name),
-                e.bundledProducts.length > 2 && (r = e.bundledProducts[2]?.name)),
-            { itemOneName: t, itemTwoName: a, itemThreeName: r }
+                e.bundledProducts.length > 1 && (r = e.bundledProducts[1]?.name),
+                e.bundledProducts.length > 2 && (n = e.bundledProducts[2]?.name)),
+            { itemOneName: t, itemTwoName: r, itemThreeName: n }
         );
     };

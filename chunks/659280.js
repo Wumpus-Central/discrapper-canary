@@ -277,26 +277,29 @@ class ed extends i.PureComponent {
     }
     renderClickable(e) {
         let {
-                layoutClass: t,
-                props: { className: n, index: i, selected: s },
-            } = this,
-            r = this.isSelectable();
-        return (0, l.jsx)(u.D, {
-            ...e,
-            className: a()(v.vk, n, t),
-            id: eo(i) ?? void 0,
-            onClick: r ? this.handleClick : void 0,
-            onMouseMove: r
-                ? () => {
+            layoutClass: t,
+            props: { className: n, index: i, selected: s },
+        } = this;
+        return this.isSelectable()
+            ? (0, l.jsx)(u.D, {
+                  ...e,
+                  className: a()(v.vk, n, t),
+                  id: eo(i) ?? void 0,
+                  onClick: this.handleClick,
+                  onMouseMove: () => {
                       this.setState({ hovered: !0 }), this.handleMouseEnter();
-                  }
-                : void 0,
-            onMouseLeave: r ? () => this.setState({ hovered: !1 }) : void 0,
-            role: "option",
-            "aria-disabled": !r,
-            "aria-selected": r && s,
-            children: (0, l.jsx)("div", { className: v.E3, children: this.renderContent() }),
-        });
+                  },
+                  onMouseLeave: () => this.setState({ hovered: !1 }),
+                  role: "option",
+                  "aria-selected": s,
+                  children: (0, l.jsx)("div", { className: v.E3, children: this.renderContent() }),
+              })
+            : (0, l.jsx)("div", {
+                  className: a()(v.vk, n, t),
+                  id: eo(i) ?? void 0,
+                  role: "none",
+                  children: (0, l.jsx)("div", { className: v.E3, children: this.renderContent() }),
+              });
     }
     render() {
         let { index: e } = this.props;
