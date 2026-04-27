@@ -1,3 +1,3 @@
 i.exports = JSON.parse(
-    '{"ihBfyA":["Pridėti į mėgstamiausius"],"PACPOV":["Žaidimas"],"snNYS+":["Klipo nustatymai"],"xkY5xS":["Pabandyk ieškoti ko nors kito"],"+M2iLf":["Klipų nerasta"],"JbyR1U":["Filtrų: ",[1,"count"]],"IZsalP":["Pašalinti iš mėgstamiausių"]}',
+    '{"ihBfyA":["Pridėti į mėgstamiausius"],"PACPOV":["Žaidimas"],"snNYS+":["Klipo nustatymai"],"GPfOas":["Pakeisk spartųjį klavišą"],"DLzdl7":["Čia bet kada redaguok ir bendrink klipus."],"4K56sP":["Discord klipai veikia su visais kompiuteriniais žaidimais."],"BIwQis":["Paspausk ",[1,"keybind"],", kad žaisdamas (-a) užfiksuotum klipą."],"HOUDUm":["Nustatyk spartųjį klavišą, kad žaisdamas (-a) užfiksuotum klipą."],"m2GEpP":["Visos žaidimų akimirkos vienoje vietoje"],"xkY5xS":["Pabandyk ieškoti ko nors kito"],"+M2iLf":["Klipų nerasta"],"JbyR1U":["Filtrų: ",[1,"count"]],"IZsalP":["Pašalinti iš mėgstamiausių"]}',
 );

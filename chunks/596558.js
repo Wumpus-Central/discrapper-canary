@@ -1,3 +1,3 @@
 s.exports = JSON.parse(
-    '{"ihBfyA":["Přidat do obl\xedben\xfdch"],"PACPOV":["Hra"],"snNYS+":["Možnosti klipu"],"xkY5xS":["Zkus se pod\xedvat po něčem jin\xe9m"],"+M2iLf":["Nebyly nalezeny ž\xe1dn\xe9 klipy"],"JbyR1U":["Filtry: ",[1,"count"]],"IZsalP":["Odebrat z\xa0obl\xedben\xfdch"]}',
+    '{"ihBfyA":["Přidat do obl\xedben\xfdch"],"PACPOV":["Hra"],"snNYS+":["Možnosti klipu"],"GPfOas":["Změň si svou zkratku"],"DLzdl7":["Odtud můžeš kdykoli upravovat a\xa0sd\xedlet sv\xe9 klipy."],"4K56sP":["Klipy Discord funguj\xed s\xa0jakoukoli hrou na PC."],"BIwQis":["Klip poř\xedd\xedš jednoduše stiskem kl\xe1vesov\xe9 zkratky ",[1,"keybind"]," během hran\xed."],"HOUDUm":["Nastav si zkratku pro zachycen\xed klipu během hran\xed."],"m2GEpP":["Všechny tvoje momenty z\xa0hran\xed na jednom m\xedstě"],"xkY5xS":["Zkus se pod\xedvat po něčem jin\xe9m"],"+M2iLf":["Nebyly nalezeny ž\xe1dn\xe9 klipy"],"JbyR1U":["Filtry: ",[1,"count"]],"IZsalP":["Odebrat z\xa0obl\xedben\xfdch"]}',
 );

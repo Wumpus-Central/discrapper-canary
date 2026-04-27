@@ -1,3 +1,3 @@
 i.exports = JSON.parse(
-    '{"ihBfyA":["Dodaj u favorite"],"PACPOV":["Igra"],"snNYS+":["Opcije za isječke"],"xkY5xS":["Pokušaj tražiti nešto drugo"],"+M2iLf":["Nema pronađenih isječaka"],"JbyR1U":["Filtri: ",[1,"count"]],"IZsalP":["Ukloni iz favorita"]}',
+    '{"ihBfyA":["Dodaj u favorite"],"PACPOV":["Igra"],"snNYS+":["Opcije za isječke"],"GPfOas":["Promijeni svoj prečac"],"DLzdl7":["Ovdje možeš u svakom trenutku urediti i podijeliti svoje isječke."],"4K56sP":["Discord isječci rade s bilo kojom PC igrom."],"BIwQis":["Pritisni ",[1,"keybind"]," za snimanje isječka dok igraš igru."],"HOUDUm":["Postavi prečac za snimanje isječka tijekom igranja."],"m2GEpP":["Svi tvoji trenuci iz igara na jednom mjestu"],"xkY5xS":["Pokušaj tražiti nešto drugo"],"+M2iLf":["Nema pronađenih isječaka"],"JbyR1U":["Filtri: ",[1,"count"]],"IZsalP":["Ukloni iz favorita"]}',
 );

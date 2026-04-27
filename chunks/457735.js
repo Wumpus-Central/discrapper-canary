@@ -1,3 +1,3 @@
 i.exports = JSON.parse(
-    '{"ihBfyA":["Adaugă la favorite"],"PACPOV":["Joc"],"snNYS+":["Opțiuni pentru clipuri"],"xkY5xS":["\xcencearcă să cauți altceva"],"+M2iLf":["Nu s-au găsit clipuri"],"JbyR1U":["Filtre: ",[1,"count"]],"IZsalP":["Elimină din favorite"]}',
+    '{"ihBfyA":["Adaugă la favorite"],"PACPOV":["Joc"],"snNYS+":["Opțiuni pentru clipuri"],"GPfOas":["Schimbă scurtătura"],"DLzdl7":["Editează și partajează clipurile oric\xe2nd de aici."],"4K56sP":["Clipurile Discord funcționează cu orice joc pentru PC."],"BIwQis":["Apasă ",[1,"keybind"]," pentru a \xeenregistra un clip \xeen timp ce joci."],"HOUDUm":["Configurează o scurtătură pentru a \xeenregistra un clip \xeen timp ce joci."],"m2GEpP":["Toate momentele tale de gaming \xeentr-un singur loc"],"xkY5xS":["\xcencearcă să cauți altceva"],"+M2iLf":["Nu s-au găsit clipuri"],"JbyR1U":["Filtre: ",[1,"count"]],"IZsalP":["Elimină din favorite"]}',
 );

@@ -1,3 +1,3 @@
 i.exports = JSON.parse(
-    '{"ihBfyA":["Lis\xe4\xe4 suosikkeihin"],"PACPOV":["Peli"],"snNYS+":["Leikevalinnat"],"xkY5xS":["Yrit\xe4 etsi\xe4 jotakin muuta"],"+M2iLf":["Leikkeit\xe4 ei l\xf6ytynyt"],"JbyR1U":["Suodattimia: ",[1,"count"]],"IZsalP":["Poista suosikeista"]}',
+    '{"ihBfyA":["Lis\xe4\xe4 suosikkeihin"],"PACPOV":["Peli"],"snNYS+":["Leikevalinnat"],"GPfOas":["Vaihda n\xe4pp\xe4inkomento"],"DLzdl7":["T\xe4\xe4ll\xe4 voit muokata ja jakaa leikkeit\xe4si aina halutessasi."],"4K56sP":["Discord-leikkeet toimivat kaikkien PC-pelien kanssa."],"BIwQis":["Voit tallentaa leikkeen pelaamisen aikana painamalla ",[1,"keybind"],"."],"HOUDUm":["M\xe4\xe4rit\xe4 n\xe4pp\xe4inkomento leikkeen tallentamiselle pelaamisen aikana."],"m2GEpP":["Kaikki pelihetkesi yhdess\xe4 paikassa"],"xkY5xS":["Yrit\xe4 etsi\xe4 jotakin muuta"],"+M2iLf":["Leikkeit\xe4 ei l\xf6ytynyt"],"JbyR1U":["Suodattimia: ",[1,"count"]],"IZsalP":["Poista suosikeista"]}',
 );
