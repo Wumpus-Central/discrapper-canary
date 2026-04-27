@@ -1,4 +1,4 @@
-t.r(l), t.d(l, { SectionDivider: () => d7, default: () => d8 });
+t.r(l), t.d(l, { SectionDivider: () => d8, default: () => d7 });
 var a,
     s,
     i = {};
@@ -80,8 +80,8 @@ t.r(i),
         CalendarPlusIcon: () => e4.U,
         CalendarRetryIcon: () => e5,
         CalendarXIcon: () => e6,
-        CameraIcon: () => e7.x,
-        CameraSwapIcon: () => e8,
+        CameraIcon: () => e8.x,
+        CameraSwapIcon: () => e7,
         CandyIcon: () => e9,
         CarIcon: () => le.A,
         ChannelListIcon: () => ll.$,
@@ -144,8 +144,8 @@ t.r(i),
         ConnectionAverageIcon: () => l4.j,
         ConnectionBadIcon: () => l5.R,
         ConnectionFineIcon: () => l6.Q,
-        ConnectionUnknownIcon: () => l7.e,
-        ContactsIcon: () => l8,
+        ConnectionUnknownIcon: () => l8.e,
+        ContactsIcon: () => l7,
         CopyIcon: () => l9.T,
         CreditCardIcon: () => te.B,
         CropIcon: () => tl,
@@ -211,8 +211,8 @@ t.r(i),
         GifIcon: () => t4.O,
         GiftIcon: () => t5.o,
         GlobeEarthIcon: () => t6.L,
-        GridHorizontalIcon: () => t7,
-        GridSquareIcon: () => t8,
+        GridHorizontalIcon: () => t8,
+        GridSquareIcon: () => t7,
         GridVerticalIcon: () => t9,
         GroupArrowDownIcon: () => ae.U,
         GroupArrowRightIcon: () => al.M,
@@ -277,8 +277,8 @@ t.r(i),
         MagicWandIcon: () => a4.D,
         MagnifyingGlassIcon: () => a5.$,
         MagnifyingGlassMinusIcon: () => a6.V,
-        MagnifyingGlassPlusIcon: () => a7.r,
-        ManaIcon: () => a8,
+        MagnifyingGlassPlusIcon: () => a8.r,
+        ManaIcon: () => a7,
         MastodonBrandIcon: () => a9,
         MastodonNeutralIcon: () => se,
         MaximizeIcon: () => sl._,
@@ -319,7 +319,7 @@ t.r(i),
         PaintbrushThickMinusIcon: () => sL,
         PaintbrushThickPlusIcon: () => sB,
         PaintbrushThickRetryIcon: () => sS,
-        PaintbrushThinIcon: () => sF,
+        PaintbrushThinIcon: () => sF.V,
         PaintbrushThinMinusIcon: () => sU,
         PaintbrushThinPlusIcon: () => sb,
         PaintbrushThinRetryIcon: () => sP,
@@ -341,8 +341,8 @@ t.r(i),
         PaymentTypeDinersClubIcon: () => s4,
         PaymentTypeDiscoverIcon: () => s5,
         PaymentTypeEloCardBrIcon: () => s6,
-        PaymentTypeEpsUberweisungIcon: () => s7,
-        PaymentTypeGCashIcon: () => s8,
+        PaymentTypeEpsUberweisungIcon: () => s8,
+        PaymentTypeGCashIcon: () => s7,
         PaymentTypeGiftCardIcon: () => s9._,
         PaymentTypeGiropayIcon: () => ie,
         PaymentTypeGoPayIcon: () => it,
@@ -403,8 +403,8 @@ t.r(i),
         RemoveReactionIcon: () => i4.F,
         RetryIcon: () => i5.m,
         RibbonIcon: () => i6.q,
-        RiotGamesBrandIcon: () => i7,
-        RiotGamesNeutralIcon: () => i8.A,
+        RiotGamesBrandIcon: () => i8,
+        RiotGamesNeutralIcon: () => i7.A,
         RobloxBrandDarkIcon: () => i9,
         RobloxNeutralIcon: () => ce.H,
         RobotIcon: () => cl.C,
@@ -467,8 +467,8 @@ t.r(i),
         SteamBrandDarkIcon: () => c4,
         SteamBrandLightIcon: () => c5,
         SteamNeutralIcon: () => c6.N,
-        StickerDeadIcon: () => c7,
-        StickerIcon: () => c8.t,
+        StickerDeadIcon: () => c8,
+        StickerIcon: () => c7.t,
         StickerMinusIcon: () => c9,
         StickerPlusIcon: () => he,
         StickerRetryIcon: () => hl,
@@ -531,8 +531,8 @@ t.r(i),
         UserPlusIcon: () => h4.R,
         UserRetryIcon: () => h5,
         UserSquareIcon: () => h6.c,
-        UserStatusIcon: () => h7,
-        UserWarningIcon: () => h8,
+        UserStatusIcon: () => h8,
+        UserWarningIcon: () => h7,
         VeinIcon: () => h9.E,
         VideoIcon: () => ne.n,
         VideoLockIcon: () => nl.k,
@@ -1399,8 +1399,8 @@ let e5 = (e) => {
             ],
         });
     };
-var e7 = t(332461);
-let e8 = (e) => {
+var e8 = t(332461);
+let e7 = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -1981,8 +1981,8 @@ var l3 = t(836480),
     l4 = t(526701),
     l5 = t(522937),
     l6 = t(200192),
-    l7 = t(653766);
-let l8 = (e) => {
+    l8 = t(653766);
+let l7 = (e) => {
     let {
             size: l = "md",
             width: t,
@@ -2669,7 +2669,7 @@ var t1 = t(781481),
     t4 = t(391242),
     t5 = t(597770),
     t6 = t(998445);
-let t7 = (e) => {
+let t8 = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -2695,7 +2695,7 @@ let t7 = (e) => {
             }),
         });
     },
-    t8 = (e) => {
+    t7 = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -3260,8 +3260,8 @@ var a$ = t(115723),
     a4 = t(152367),
     a5 = t(7689),
     a6 = t(92259),
-    a7 = t(218429);
-let a8 = (e) => {
+    a8 = t(218429);
+let a7 = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -3837,34 +3837,9 @@ let sL = (e) => {
                 }),
             ],
         });
-    },
-    sF = (e) => {
-        let {
-                size: l = "md",
-                width: t,
-                height: a,
-                color: s = w.A.colors.INTERACTIVE_ICON_DEFAULT,
-                colorClass: i = "",
-                ...h
-            } = e,
-            n = (0, b.J)(l),
-            o = n?.width ?? t,
-            r = n?.height ?? a;
-        return (0, c.jsx)("svg", {
-            ...(0, U.A)(h),
-            xmlns: "http://www.w3.org/2000/svg",
-            width: o,
-            height: r,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: (0, c.jsx)("path", {
-                fill: "string" == typeof s ? s : s.css,
-                d: "m9.17 12.67 2.16 2.16a1 1 0 0 0 .99.25l2.57-.75A3 3 0 0 0 16.6 13l4.91-8.05a1.8 1.8 0 0 0-2.47-2.47L11 7.39a3 3 0 0 0-1.32 1.72l-.75 2.57a1 1 0 0 0 .25.99ZM8.03 13.14c.27.07.51.23.7.43l1.7 1.7c.2.19.36.43.43.7A4 4 0 0 1 7 21H2a1 1 0 1 1 0-2c.68 0 1.13-.77 1.04-1.44a4 4 0 0 1 5-4.42Z",
-                className: i,
-            }),
-        });
-    },
-    sU = (e) => {
+    };
+var sF = t(193885);
+let sU = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -4651,7 +4626,7 @@ let sK = (e) => {
             ],
         });
     },
-    s7 = (e) => {
+    s8 = (e) => {
         let { size: l = "md", width: t, height: a, ...s } = e,
             i = (0, b.J)(l),
             h = i?.width ?? t,
@@ -4708,7 +4683,7 @@ let sK = (e) => {
             ],
         });
     },
-    s8 = (e) => {
+    s7 = (e) => {
         let { size: l = "md", width: t, height: a, ...s } = e,
             i = (0, b.J)(l),
             h = i?.width ?? t,
@@ -6159,7 +6134,7 @@ let i3 = (e) => {
 var i4 = t(769297),
     i5 = t(417270),
     i6 = t(877784);
-let i7 = (e) => {
+let i8 = (e) => {
     let { size: l = "md", width: t, height: a, color: s = "#D22A36", colorClass: i = "", ...h } = e,
         n = (0, b.J)(l),
         o = n?.width ?? t,
@@ -6178,7 +6153,7 @@ let i7 = (e) => {
         }),
     });
 };
-var i8 = t(505200);
+var i7 = t(505200);
 let i9 = (e) => {
     let { size: l = "md", width: t, height: a, color: s = "#000", colorClass: i = "", ...h } = e,
         n = (0, b.J)(l),
@@ -6922,7 +6897,7 @@ let c4 = (e) => {
         });
     };
 var c6 = t(49381);
-let c7 = (e) => {
+let c8 = (e) => {
     let {
             size: l = "md",
             width: t,
@@ -6957,7 +6932,7 @@ let c7 = (e) => {
         ],
     });
 };
-var c8 = t(797285);
+var c7 = t(797285);
 let c9 = (e) => {
         let {
                 size: l = "md",
@@ -7542,7 +7517,7 @@ let h5 = (e) => {
     });
 };
 var h6 = t(861004);
-let h7 = (e) => {
+let h8 = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -7575,7 +7550,7 @@ let h7 = (e) => {
             ],
         });
     },
-    h8 = (e) => {
+    h7 = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -8071,7 +8046,7 @@ var n2 = t(870308),
     n4 = t(158216),
     n5 = t(49999),
     n6 = t(563337);
-let n7 = (e) => {
+let n8 = (e) => {
         let { badgeIcon: l, badgeText: t } = e,
             a = null != l && "" !== l ? i[l] : void 0;
         return (0, c.jsx)("div", {
@@ -8083,7 +8058,7 @@ let n7 = (e) => {
             }),
         });
     },
-    n8 = () => {
+    n7 = () => {
         let { noCache: e, includeUnpublished: l } = (0, n3.A)();
         return (0, nz.y)(n1.G2.HOME, { noCache: e, includeUnpublished: l }, void 0, !0), null;
     },
@@ -8116,7 +8091,7 @@ let n7 = (e) => {
             Z = nX.BVt.COLLECTIBLES_SHOP;
         return (0, c.jsxs)(c.Fragment, {
             children: [
-                u && (0, c.jsx)(n8, {}),
+                u && (0, c.jsx)(n7, {}),
                 (0, c.jsx)(V.z9, {
                     showHoverGradient: d ?? !1,
                     selected: l,
@@ -8137,7 +8112,7 @@ let n7 = (e) => {
             ],
         });
     },
-    oe = (e) => (0, c.jsx)(n9, { ...e, children: (0, c.jsx)(n7, {}) }),
+    oe = (e) => (0, c.jsx)(n9, { ...e, children: (0, c.jsx)(n8, {}) }),
     ol = (e) => {
         if (null == e.current || null == e.current.parentElement) return !1;
         let l = e.current.parentElement.offsetWidth;
@@ -8206,7 +8181,7 @@ let n7 = (e) => {
                                     "aria-hidden": !0,
                                 }),
                         }),
-                        (0, c.jsx)(n7, { badgeIcon: a.badgeIcon, badgeText: a.badgeText }),
+                        (0, c.jsx)(n8, { badgeIcon: a.badgeIcon, badgeText: a.badgeText }),
                     ],
                 }),
             })
@@ -8234,7 +8209,7 @@ let n7 = (e) => {
                 (0, c.jsx)(n9, {
                     ...t,
                     ...e,
-                    children: (0, c.jsx)(n7, { badgeIcon: l.badgeIcon, badgeText: l.badgeText }),
+                    children: (0, c.jsx)(n8, { badgeIcon: l.badgeIcon, badgeText: l.badgeText }),
                 }),
         });
     },
@@ -8284,7 +8259,7 @@ let n7 = (e) => {
                                         "aria-hidden": !0,
                                     }),
                             }),
-                            (0, c.jsx)(n7, { badgeIcon: l.badgeIcon, badgeText: l.badgeText }),
+                            (0, c.jsx)(n8, { badgeIcon: l.badgeIcon, badgeText: l.badgeText }),
                         ],
                     }),
                     (0, c.jsx)(n$, {
@@ -8504,8 +8479,8 @@ function o4(e) {
 }
 var o5 = t(160761),
     o6 = t(953727),
-    o7 = t(774774),
-    o8 = t(626736);
+    o8 = t(774774),
+    o7 = t(626736);
 let o9 = "premium_tier_gradient",
     re = "smaller_sparkle_gradient";
 function rl(e) {
@@ -8564,22 +8539,22 @@ function rt(e) {
         ? null
         : (i && (r = r.toUpperCase()),
           (0, c.jsxs)("div", {
-              className: o()(l, o8.Iv),
+              className: o()(l, o7.Iv),
               children: [
                   h
                       ? (0, c.jsxs)(c.Fragment, {
                             children: [
-                                (0, c.jsx)(rl, { foreground: o8.QX, color: `url(#${re})` }),
-                                (0, c.jsx)(rl, { foreground: o8.J0, color: `url(#${o9})` }),
+                                (0, c.jsx)(rl, { foreground: o7.QX, color: `url(#${re})` }),
+                                (0, c.jsx)(rl, { foreground: o7.J0, color: `url(#${o9})` }),
                             ],
                         })
                       : null,
-                  (0, c.jsx)(o7.e4, {
+                  (0, c.jsx)(o8.e4, {
                       text: r,
                       colorOptions:
                           n === m.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL
-                              ? o7.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL
-                              : o7.at.PREMIUM_TIER_2_GREY_FILL,
+                              ? o8.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+                              : o8.at.PREMIUM_TIER_2_GREY_FILL,
                   }),
               ],
           }));
@@ -9013,8 +8988,8 @@ function r5(e) {
     });
 }
 var r6 = t(511484),
-    r7 = t(473702),
-    r8 = t(398932);
+    r8 = t(473702),
+    r7 = t(398932);
 let r9 = (e) => {
     let { targetElementRef: l, discountOffer: a, premiumSubscription: s, dismissCoachmark: i, children: h } = e,
         { analyticsLocations: n } = (0, nD.Ay)(nP.A.CHURN_DISCOUNT_POPOVER),
@@ -9031,7 +9006,7 @@ let r9 = (e) => {
                 billingPeriod: (0, oN.Ke)(a.discount.user_usage_limit_interval),
                 numMonths: a.discount.user_usage_limit,
             }),
-            graphic: { type: "image", src: r8.A },
+            graphic: { type: "image", src: r7.A },
             gradientColor: "nitro-pink",
             actions: [
                 {
@@ -9058,7 +9033,7 @@ let r9 = (e) => {
                                         ...l,
                                         premiumSubscription: s,
                                         analyticsLocations: n,
-                                        initialStep: r7.g.CONFIRM_DISCOUNT,
+                                        initialStep: r8.g.CONFIRM_DISCOUNT,
                                     });
                             });
                     },
@@ -10245,17 +10220,17 @@ let d6 = h.memo(function (e) {
                             },
                             "quests",
                         ),
-                        (0, c.jsx)(d7, {}, "section-divider-top"),
+                        (0, c.jsx)(d8, {}, "section-divider-top"),
                     ],
                 }),
             ],
         })
     );
 });
-function d7() {
+function d8() {
     return (0, c.jsx)("div", { className: dQ.ts });
 }
-function d8() {
+function d7() {
     let e,
         l,
         t = (0, p.bG)([dG.A], () => dG.A.getHomeLink()),

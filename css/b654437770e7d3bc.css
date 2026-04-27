@@ -682,6 +682,76 @@
     width: 20px
 }
 
+.container__32139 {
+    --custom-preview-inline-padding: 6px;
+    margin-inline: calc((var(--custom-preview-inline-padding) + 2px)*-1);
+    position: relative
+}
+
+@keyframes fadeIn__32139 {
+    0% {
+        opacity: 0
+    }
+}
+
+.fadeIn__32139 {
+    animation: fadeIn__32139 .25s ease-out
+}
+
+.preview__32139 {
+    align-items: stretch;
+    display: flex;
+    min-height: var(--control-input-height-md)
+}
+
+.editable__32139 {
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    padding: 0 var(--custom-preview-inline-padding);
+    transition: background-color 50ms ease-in, border-color 50ms ease-in
+}
+
+.editable__32139:hover,
+.keyboard-mode .editable__32139:has(:focus) {
+    background-color: var(--input-background-default);
+    border-color: var(--border-strong);
+    transition: border-color .15s ease-out, background-color .15s ease-out
+}
+
+.placeholder__32139 {
+    font-style: italic
+}
+
+.previewTrailingAccessory__32139 {
+    align-self: stretch;
+    display: flex;
+    margin-inline-end: var(--space-4);
+    margin-inline-start: var(--space-12);
+    opacity: 0;
+    transition: opacity 50ms ease-in
+}
+
+.editable__32139:hover .previewTrailingAccessory__32139,
+.keyboard-mode .editable__32139:has(:focus) .previewTrailingAccessory__32139 {
+    opacity: 1;
+    transition: opacity .15s ease-out
+}
+
+.trailingAccessoryButton__32139 {
+    --control-icon-only-background-hover: var(--control-secondary-background-default);
+    --control-icon-only-border-hover: var(--control-secondary-border-default);
+    margin-block: 2px;
+    margin-inline-end: calc((var(--custom-preview-inline-padding) + 2px)*-1)
+}
+
+.displayNameContent_b51b39 {
+    min-width: 80px
+}
+
 .container__47fbb:before {
     border-radius: var(--radius-round);
     content: "";
