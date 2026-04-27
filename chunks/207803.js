@@ -1,115 +1,114 @@
-"use strict";
-n.d(t, {
-    EW: () => N,
-    FY: () => L,
-    Go: () => C,
-    Gr: () => x,
-    RE: () => E,
-    VQ: () => b,
-    XQ: () => T,
-    a: () => y,
-    e$: () => S,
-    gi: () => A,
+a.d(t, {
+    EW: () => T,
+    FY: () => k,
+    Go: () => j,
+    Gr: () => A,
+    RE: () => y,
+    VQ: () => g,
+    XQ: () => E,
+    a: () => C,
+    e$: () => I,
+    gi: () => v,
     w5: () => R,
-    xe: () => I,
+    xe: () => S,
 });
-var a = n(17928),
-    r = n(636537),
-    i = n(765178),
-    l = n(228366),
-    s = n(845584),
-    o = n(451909),
-    c = n(287809),
-    d = n(954571),
-    u = n(625494),
-    _ = n(38405),
-    p = n(841595),
-    m = n(814390),
-    h = n(652215),
-    f = n(788868),
-    g = n(985018);
-function b() {
-    u._.dispatch(h.jej.SHAKE_PROFILE_MODAL),
-        u._.dispatch(h.jej.EMPHASIZE_NOTICE),
-        i.O.announce(`${g.intl.string(g.t.GP7JLE)} ${g.intl.string(g.t.gKoO1D)}`);
+var r = a(17928),
+    n = a(636537),
+    l = a(765178),
+    i = a(228366),
+    s = a(845584),
+    o = a(451909),
+    c = a(287809),
+    d = a(954571),
+    u = a(625494),
+    h = a(38405),
+    p = a(841595),
+    m = a(814390),
+    f = a(652215),
+    b = a(788868),
+    _ = a(985018);
+function g() {
+    u._.dispatch(f.jej.SHAKE_PROFILE_MODAL),
+        u._.dispatch(f.jej.EMPHASIZE_NOTICE),
+        l.O.announce(`${_.intl.string(_.t.GP7JLE)} ${_.intl.string(_.t.gKoO1D)}`);
 }
-function v(e) {
-    d.default.track(h.HAw.PREMIUM_FEATURE_TRY_OUT, { feature_name: e, feature_tier: f.tz.PREMIUM_STANDARD });
+function x(e) {
+    d.default.track(f.HAw.PREMIUM_FEATURE_TRY_OUT, { feature_name: e, feature_tier: b.tz.PREMIUM_STANDARD });
 }
-async function A(e, t) {
-    let n = c.default.getCurrentUser()?.id;
-    if (null == n) return;
-    let a = (0, m.h)();
-    null != e.bio && a && (e.bio = o.Ay.parse(void 0, e.bio).content);
+async function v(e, t) {
+    let a = c.default.getCurrentUser()?.id;
+    if (null == a) return;
+    let r = (0, m.h)();
+    null != e.bio && r && (e.bio = o.Ay.parse(void 0, e.bio).content);
     try {
-        l.h.dispatch({ type: "USER_PROFILE_UPDATE_START", userId: n, guildId: t });
-        let a = await r.Bo.patch({
-            url: null != t ? h.Rsh.USER_GUILD_PROFILE(t, h.ME) : h.Rsh.USER_PROFILE(h.ME),
+        i.h.dispatch({ type: "USER_PROFILE_UPDATE_START", userId: a, guildId: t });
+        let r = await n.Bo.patch({
+            url: null != t ? f.Rsh.USER_GUILD_PROFILE(t, f.ME) : f.Rsh.USER_PROFILE(f.ME),
             body: e,
             rejectWithError: !1,
         });
-        if (a.ok) l.h.dispatch({ type: "USER_PROFILE_UPDATE_SUCCESS", userId: n, guildId: t, ...a.body });
+        if (r.ok) i.h.dispatch({ type: "USER_PROFILE_UPDATE_SUCCESS", userId: a, guildId: t, ...r.body });
         else {
-            let e = new s.LG(a);
-            l.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: a.body, apiError: e });
+            let e = new s.LG(r);
+            i.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: r.body, apiError: e });
         }
-        return a;
-    } catch (n) {
-        let e = new s.LG(n);
-        return l.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: {}, apiError: e }), n;
+        return r;
+    } catch (a) {
+        let e = new s.LG(a);
+        return i.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: {}, apiError: e }), a;
     }
 }
-function x(e, t) {
-    let n = c.default.getCurrentUser()?.id;
-    null != n && l.h.dispatch({ type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: e, ttlInSeconds: t, userId: n });
+function A(e, t) {
+    let a = c.default.getCurrentUser()?.id;
+    null != a && i.h.dispatch({ type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: e, ttlInSeconds: t, userId: a });
+}
+function y() {
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 }
 function E() {
-    l.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
-}
-function T() {
-    l.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
-}
-function S(e) {
-    l.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: e }), v(f.Ae.ANIMATED_AVATAR);
-}
-function C(e) {
-    l.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration: e }),
-        v(f.Ae.AVATAR_DECORATION);
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 }
 function I(e) {
-    l.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: e }), v(f.Ae.PROFILE_BANNER);
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: e }), x(b.Ae.ANIMATED_AVATAR);
 }
-function y(e) {
-    l.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors: e }),
-        v(f.Ae.PROFILE_THEME_COLOR);
+function j(e) {
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration: e }),
+        x(b.Ae.AVATAR_DECORATION);
 }
-function N(e) {
-    l.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles: e }),
-        v(f.Ae.DISPLAY_NAME_STYLES);
+function S(e) {
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: e }), x(b.Ae.PROFILE_BANNER);
+}
+function C(e) {
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors: e }),
+        x(b.Ae.PROFILE_THEME_COLOR);
+}
+function T(e) {
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles: e }),
+        x(b.Ae.DISPLAY_NAME_STYLES);
 }
 function R(e) {
-    l.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET", ...e }), v(f.Ae.PRESET);
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET", ...e }), x(b.Ae.PRESET);
 }
-async function j() {
+async function w() {
     if (null == p.A.applicationWidgetConfigs || !(p.A.applicationWidgetConfigs.length > 0)) {
-        l.h.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_START" });
+        i.h.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_START" });
         try {
-            let e = await r.Bo.get({ url: h.Rsh.USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS, rejectWithError: !0 });
-            l.h.dispatch({
+            let e = await n.Bo.get({ url: f.Rsh.USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS, rejectWithError: !0 });
+            i.h.dispatch({
                 type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_SUCCESS",
                 applicationConfigs: e.body.application_configs,
             });
         } catch (e) {
             throw (
-                (l.h.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_FAILURE" }),
-                _.A.captureException(e),
+                (i.h.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_FAILURE" }),
+                h.A.captureException(e),
                 e)
             );
         }
     }
 }
-let L = (0, a.UT)(p.A, {
-    getQueryId: h.fic.APPLICATION_WIDGET_APPLICATION_CONFIGS,
+let k = (0, r.UT)(p.A, {
+    getQueryId: f.fic.APPLICATION_WIDGET_APPLICATION_CONFIGS,
     get: () => p.A.applicationWidgetConfigs,
-    load: () => j(),
+    load: () => w(),
 });
