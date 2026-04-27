@@ -3995,7 +3995,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                     ]);
                                     return (l) =>
                                         (0, s.jsx)(e, {
-                                            onLearnMore: () => {},
+                                            onUpsellClicked: () => {},
                                             onClose: l.onClose,
                                             channel: null,
                                             emojiDescriptor: void 0,

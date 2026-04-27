@@ -15,36 +15,44 @@ var i = n(793574),
     p = n(985018);
 let f = (e) => {
     let t,
-        { onClose: n, channel: f, emojiDescriptor: g, pickerIntention: _, analyticsLocation: x } = e,
-        C = (0, a.RQ)((e) => e.searchQuery),
-        { analyticsLocations: A } = (0, s.Ay)(i.A.EMOJI_PICKER);
+        {
+            onClose: n,
+            onUpsellClicked: f,
+            channel: g,
+            emojiDescriptor: _,
+            pickerIntention: x,
+            analyticsLocation: C,
+        } = e,
+        A = (0, a.RQ)((e) => e.searchQuery),
+        { analyticsLocations: E } = (0, s.Ay)(i.A.EMOJI_PICKER);
     t =
-        _ === h.EmojiIntention.REACTION
+        x === h.EmojiIntention.REACTION
             ? m.e.EMOJI_PICKER_REACTION_EMOJI_CLICKED
-            : null == g
+            : null == _
               ? m.e.EMOJI_PICKER_FLOATING_UPSELL
-              : g.subCategory === u.tm.TOP_GUILD_EMOJI
+              : _.subCategory === u.tm.TOP_GUILD_EMOJI
                 ? m.e.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED
-                : g.subCategory === u.tm.NEWLY_ADDED_EMOJI
+                : _.subCategory === u.tm.NEWLY_ADDED_EMOJI
                   ? m.e.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED
                   : m.e.EMOJI_PICKER_EMOJI_CLICKED;
-    let E = null != g ? g.emoji : void 0,
-        I = null != E && E.animated,
-        v = null != E && !o.Ay.isInternalEmojiForGuildId(E, f?.getGuildId()),
-        y = null != E ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
+    let I = null != _ ? _.emoji : void 0,
+        v = null != I && I.animated,
+        y = null != I && !o.Ay.isInternalEmojiForGuildId(I, g?.getGuildId()),
+        b = null != I ? d.ZSU.EMOJI : d.ZSU.EMOJI_PICKER_FLOATING_UPSELL;
     return (0, l.jsx)(r.A, {
         title: p.intl.string(p.t["0+11FF"]),
         description: p.intl.string(p.t.dURIzS),
         analyticsLocationSection: d.JJy.EMOJI_UPSELL_POPOUT,
         onClose: n,
+        onUpsellClicked: f,
         upsellViewedTrackingData: {
             type: t,
-            is_external: v,
-            location: { ...x, object: y },
-            location_stack: A,
+            is_external: y,
+            location: { ...C, object: b },
+            location_stack: E,
             sku_id: (0, c.mH)(c.Ay.getSkuIdForPremiumType(m.PremiumTypes.TIER_2)),
-            has_search_query: null != C && "" !== C,
-            is_animated: I,
+            has_search_query: null != A && "" !== A,
+            is_animated: v,
         },
         isEmojiPickerOverlay: !0,
     });

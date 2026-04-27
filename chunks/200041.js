@@ -1,60 +1,61 @@
-a.d(t, { A: () => d });
-var r = a(627968),
-    n = a(64700),
-    l = a(503698),
-    i = a.n(l),
-    s = a(459192),
-    o = a(834730);
-a(851883);
-var c = a(124704);
+"use strict";
+n.d(t, { A: () => d });
+var a = n(627968),
+    r = n(64700),
+    i = n(503698),
+    l = n.n(i),
+    s = n(459192),
+    o = n(834730);
+n(851883);
+var c = n(124704);
 function d(e) {
     let {
             text: t,
-            tooltipText: a,
-            textVariant: l = "text-xs/medium",
+            tooltipText: n,
+            textVariant: i = "text-xs/medium",
             textClassName: d,
             "aria-label": u,
-            icon: h,
+            icon: _,
             canTruncate: p = !0,
             hideTooltip: m = !1,
-            hideText: f = !1,
+            hideText: h = !1,
         } = e,
-        b = n.useRef(null),
-        [_, g] = n.useState(!1),
-        x = { variant: l, color: "none", className: i()(p && c.ps, d) },
-        v = null != t && null == a && p,
-        A = !m && (null != a || v || f),
-        y = a ?? t ?? "",
-        E = l?.startsWith("text-sm") ? c.WV : c.Dk,
-        I = n.useCallback(() => {
-            if (v) {
-                let { current: e } = b;
-                g((null != e && e.offsetWidth < e.scrollWidth) || null != a || f);
-            } else g(!0);
-        }, [v, a, f]),
-        j = n.useCallback(() => {
-            g(!1);
+        f = r.useRef(null),
+        [g, b] = r.useState(!1),
+        v = { variant: i, color: "none", className: l()(p && c.ps, d) },
+        A = null != t && null == n && p,
+        x = !m && (null != n || A || h),
+        E = n ?? t ?? "",
+        T = i?.startsWith("text-sm") ? c.WV : c.Dk,
+        S = r.useCallback(() => {
+            if (A) {
+                let { current: e } = f;
+                b((null != e && e.offsetWidth < e.scrollWidth) || null != n || h);
+            } else b(!0);
+        }, [A, n, h]),
+        C = r.useCallback(() => {
+            b(!1);
         }, []);
-    return null == h && f
+    return null == _ && h
         ? null
-        : A
-          ? (0, r.jsx)(s.u, {
-                body: y,
-                asset: h,
+        : x
+          ? (0, a.jsx)(s.u, {
+                body: E,
+                asset: _,
                 assetSize: 16,
                 delay: 150,
-                shouldShow: _,
+                shouldShow: g,
                 asContainer: !0,
-                children: (0, r.jsxs)("div", {
-                    className: i()(c.kL, c.O1, E),
+                children: (0, a.jsxs)("div", {
+                    className: l()(c.kL, c.O1, T),
                     "aria-label": u,
-                    onMouseEnter: I,
-                    onMouseLeave: j,
-                    children: [h, !f && (0, r.jsx)(o.E, { ref: b, ...x, children: t })],
+                    onMouseEnter: S,
+                    onMouseLeave: C,
+                    children: [_, !h && (0, a.jsx)(o.E, { ref: f, ...v, children: t })],
                 }),
             })
-          : (0, r.jsxs)("div", {
-                className: i()(c.kL, c.O1, E),
-                children: [h, !f && (0, r.jsx)(o.E, { ...x, children: t })],
+          : (0, a.jsxs)("div", {
+                className: l()(c.kL, c.O1, T),
+                children: [_, !h && (0, a.jsx)(o.E, { ...v, children: t })],
             });
 }

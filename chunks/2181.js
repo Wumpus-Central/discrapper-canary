@@ -39,7 +39,7 @@ function k(e) {
             upsellViewedTrackingData: M,
             onClose: O,
             onDisplay: P,
-            onLearnMore: D,
+            onUpsellClicked: D,
             isEmojiPickerOverlay: U = !1,
         } = e;
     i.useEffect(() => {
@@ -125,7 +125,7 @@ function k(e) {
                                         premiumModalAnalyticsLocation: { section: k, object: j.ZSU.BUTTON_CTA },
                                         subscriptionTier: N.pe.TIER_2,
                                         onClick: () => {
-                                            O();
+                                            O(), D?.();
                                         },
                                         defaultTextOverride: G(),
                                         fullWidth: !0,

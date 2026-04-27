@@ -1,121 +1,122 @@
-a.d(t, { A: () => g, n: () => m });
-var r = a(627968);
-a(64700);
-var n = a(192308),
-    l = a(228366),
-    i = a(272355),
-    s = a(267102),
-    o = a(287809),
-    c = a(207803),
-    d = a(958805),
-    u = a(485745),
-    h = a(652215);
+"use strict";
+n.d(t, { A: () => b, n: () => m });
+var a = n(627968);
+n(64700);
+var r = n(192308),
+    i = n(228366),
+    l = n(272355),
+    s = n(267102),
+    o = n(287809),
+    c = n(207803),
+    d = n(958805),
+    u = n(485745),
+    _ = n(652215);
 let p = new Set();
 function m(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
-async function f(e) {
+async function h(e) {
     let {
             userId: t,
-            tabSection: l,
-            scrollTarget: i,
-            guildId: f,
-            originGuildId: b,
-            channelId: _,
-            appContext: g,
-            customStatusPrompt: x,
-            ...v
+            tabSection: i,
+            scrollTarget: l,
+            guildId: h,
+            originGuildId: f,
+            channelId: g,
+            appContext: b,
+            customStatusPrompt: v,
+            ...A
         } = e,
-        A = o.default.getUser(t);
-    if (null == A) return;
-    let y = o.default.getCurrentUser();
-    if (null == y) return;
+        x = o.default.getUser(t);
+    if (null == x) return;
+    let E = o.default.getCurrentUser();
+    if (null == E) return;
     (0, c.XQ)();
-    let E = m(t, f);
+    let T = m(t, h);
     p.add(
-        await (0, n.openModalLazy)(
+        await (0, r.openModalLazy)(
             async () => {
                 let e = (
                     await Promise.all([
-                        a.e("32292"),
-                        a.e("34786"),
-                        a.e("28367"),
-                        a.e("45174"),
-                        a.e("85519"),
-                        a.e("87963"),
-                        a.e("37266"),
-                        a.e("55057"),
-                        a.e("34717"),
-                        a.e("63229"),
-                        a.e("31988"),
-                        a.e("55343"),
-                        a.e("93103"),
-                        a.e("98765"),
-                        a.e("48900"),
-                        a.e("10567"),
-                        a.e("43436"),
-                        a.e("84317"),
-                        a.e("54865"),
-                        a.e("82486"),
-                        a.e("40393"),
-                        a.e("33773"),
-                        a.e("27752"),
-                        a.e("7679"),
-                        a.e("91749"),
-                        a.e("98352"),
-                        a.e("4986"),
-                        a.e("77058"),
-                        a.e("55811"),
-                        a.e("2059"),
-                        a.e("49914"),
-                        a.e("19119"),
-                        a.e("48612"),
-                        a.e("11848"),
-                        a.e("5536"),
-                        a.e("44395"),
-                        a.e("76062"),
-                        a.e("49282"),
-                        a.e("58260"),
-                    ]).then(a.bind(a, 438857))
+                        n.e("32292"),
+                        n.e("34786"),
+                        n.e("28367"),
+                        n.e("45174"),
+                        n.e("85519"),
+                        n.e("87963"),
+                        n.e("37266"),
+                        n.e("55057"),
+                        n.e("34717"),
+                        n.e("63229"),
+                        n.e("31988"),
+                        n.e("55343"),
+                        n.e("93103"),
+                        n.e("98765"),
+                        n.e("48900"),
+                        n.e("10567"),
+                        n.e("43436"),
+                        n.e("84317"),
+                        n.e("54865"),
+                        n.e("82486"),
+                        n.e("40393"),
+                        n.e("33773"),
+                        n.e("27752"),
+                        n.e("7679"),
+                        n.e("91749"),
+                        n.e("98352"),
+                        n.e("4986"),
+                        n.e("77058"),
+                        n.e("55811"),
+                        n.e("2059"),
+                        n.e("49914"),
+                        n.e("19119"),
+                        n.e("48612"),
+                        n.e("11848"),
+                        n.e("5536"),
+                        n.e("44395"),
+                        n.e("76062"),
+                        n.e("49282"),
+                        n.e("58260"),
+                    ]).then(n.bind(n, 438857))
                 ).default;
                 return (t) =>
-                    (0, r.jsx)(e, {
-                        user: A,
-                        currentUser: y,
-                        guildId: f,
-                        originGuildId: b ?? f,
-                        initialTabSection: l,
-                        initialScrollTarget: i,
-                        channelId: _,
-                        customStatusPrompt: x,
+                    (0, a.jsx)(e, {
+                        user: x,
+                        currentUser: E,
+                        guildId: h,
+                        originGuildId: f ?? h,
+                        initialTabSection: i,
+                        initialScrollTarget: l,
+                        channelId: g,
+                        customStatusPrompt: v,
                         ...t,
-                        ...v,
+                        ...A,
                     });
             },
             {
-                modalKey: E,
-                contextKey: (0, n.modalContextFromAppContext)(g ?? (0, s.zd)() ?? h.BRT.APP),
+                modalKey: T,
+                contextKey: (0, r.modalContextFromAppContext)(b ?? (0, s.zd)() ?? _.BRT.APP),
                 onCloseRequest: () => {
-                    t === y.id && (0, u.b)()
+                    t === E.id && (0, u.b)()
                         ? (0, c.VQ)()
-                        : ((0, n.closeModal)(E), p.delete(E), d.A.clearPendingWidgets(), (0, c.XQ)());
+                        : ((0, r.closeModal)(T), p.delete(T), d.A.clearPendingWidgets(), (0, c.XQ)());
                 },
             },
         ),
     );
 }
-function b() {
+function f() {
     if (0 !== p.size) {
-        for (let e of p) (0, n.closeModal)(e);
+        for (let e of p) (0, r.closeModal)(e);
         p.clear(), d.A.clearPendingWidgets(), (0, c.XQ)();
     }
 }
-class _ extends i.A {
+class g extends l.A {
     _initialize() {
-        l.h.subscribe("USER_PROFILE_MODAL_OPEN", f), l.h.subscribe("USER_PROFILE_MODAL_CLOSE", b);
+        i.h.subscribe("USER_PROFILE_MODAL_OPEN", h), i.h.subscribe("USER_PROFILE_MODAL_CLOSE", f);
     }
     _terminate() {
-        l.h.unsubscribe("USER_PROFILE_MODAL_OPEN", f), l.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", b);
+        i.h.unsubscribe("USER_PROFILE_MODAL_OPEN", h), i.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", f);
     }
 }
-let g = new _();
+let b = new g();

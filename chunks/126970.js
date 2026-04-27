@@ -1300,7 +1300,7 @@ function ta(e) {
                               sku_id: M.Ay.getSkuIdForPremiumType(eI.PremiumTypes.TIER_2),
                           },
                           onClose: () => G(null),
-                          onLearnMore: o,
+                          onUpsellClicked: o,
                           onDisplay: tm,
                       })
                     : void 0,

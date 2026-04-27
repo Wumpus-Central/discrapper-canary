@@ -2532,7 +2532,7 @@ let nY = (0, ec.xI)(p.A.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTA
                 ts = null != eW;
             ed?.type === e3.PREMIUM
                 ? (l = (0, s.jsx)(nJ.default, {
-                      onLearnMore: e5,
+                      onUpsellClicked: e5,
                       emojiDescriptor: ed.emojiDescriptor,
                       pickerIntention: i,
                       analyticsLocation: eP,
