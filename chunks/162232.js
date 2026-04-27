@@ -1,45 +1,44 @@
-"use strict";
-r.d(t, { A: () => d });
-var n = r(627968);
-r(64700);
-var i = r(97808),
-    a = r(778712),
-    s = r(854627),
-    l = r(19575),
-    o = r(985018);
-let c = l.Ay.getEnableHardwareAcceleration() ? i.Js : i.eu,
+a.d(t, { A: () => d });
+var r = a(627968);
+a(64700);
+var n = a(97808),
+    l = a(778712),
+    i = a(854627),
+    s = a(19575),
+    o = a(985018);
+let c = s.Ay.getEnableHardwareAcceleration() ? n.Js : n.eu,
     d = (e) => {
         let {
                 user: t,
-                guildId: r,
-                avatarDecorationOverride: i,
-                status: l,
-                avatarSize: d = a._3.SIZE_120,
+                guildId: a,
+                avatarDecorationOverride: n,
+                status: s,
+                avatarSize: d = l._3.SIZE_120,
                 "aria-hidden": u = !1,
-                className: _,
+                className: h,
                 animateOnHover: p = !1,
-                questPreviewRewardAssetUrl: f = null,
+                questPreviewRewardAssetUrl: m = null,
             } = e,
             {
-                avatarDecorationSrc: m,
-                avatarSrc: h,
-                eventHandlers: g,
-            } = (0, s.A)({
+                avatarDecorationSrc: f,
+                avatarSrc: b,
+                eventHandlers: _,
+            } = (0, i.A)({
                 userId: t.id,
-                guildId: r,
+                guildId: a,
                 size: d,
                 showPending: !0,
-                avatarDecorationOverride: i,
+                avatarDecorationOverride: n,
                 animateOnHover: p,
             });
-        return (0, n.jsx)(c, {
-            avatarDecoration: m ?? f,
-            src: h,
+        return (0, r.jsx)(c, {
+            avatarDecoration: f ?? m,
+            src: b,
             size: d,
-            status: l,
+            status: s,
             "aria-label": u ? void 0 : o.intl.string(o.t.lqaIxI),
             "aria-hidden": u,
-            className: _,
-            ...g,
+            className: h,
+            ..._,
         });
     };
