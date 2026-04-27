@@ -26,8 +26,8 @@ var p = r(44724),
     h = r(318346),
     g = r(270051),
     S = r(70926),
-    x = r(287809),
-    E = r(954571),
+    E = r(287809),
+    x = r(954571),
     L = r(440938),
     I = r(23161),
     A = r(503698),
@@ -73,6 +73,7 @@ let P = [
         [k.q.AVATAR_DECORATION]: M.G2.AVATAR_DECORATIONS,
         [k.q.PROFILE_EFFECT]: M.G2.PROFILE_EFFECTS,
         [k.q.NAMEPLATE]: M.G2.NAMEPLATES,
+        [k.q.PROFILE_FRAME]: M.G2.PROFILE_FRAMES,
         [k.q.BUNDLE]: M.G2.BUNDLES,
     };
 function G(e, t) {
@@ -80,7 +81,7 @@ function G(e, t) {
     let r = t.values().next().value;
     return null == r ? e : (N[r] ?? e);
 }
-function B(e) {
+function F(e) {
     let { handleTransition: t, onClose: r, selectedTab: s, itemTypeFilters: o } = e,
         l = (0, O.yB)("CollectiblesIndexPageContextMenu"),
         a = G(s, o);
@@ -113,7 +114,7 @@ function B(e) {
         }),
     });
 }
-var F = r(7689),
+var B = r(7689),
     H = r(892547),
     V = r(773669),
     D = r(652215),
@@ -146,7 +147,7 @@ function q(e) {
         ),
         S = s.useCallback(
             (e) => {
-                E.default.track(D.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                x.default.track(D.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: f?.sessionId,
                     page_section: f?.pageSection,
                     page_category: f?.pageCategory,
@@ -158,7 +159,7 @@ function q(e) {
             },
             [r, f],
         ),
-        x = s.useCallback(() => {
+        E = s.useCallback(() => {
             r !== M.G2.CATALOG && t(M.G2.CATALOG), S(M.uY.SEARCH_ICON), h(!0), setTimeout(() => p.current?.focus());
         }, [r, t, S]),
         A = s.useCallback(() => {
@@ -173,8 +174,8 @@ function q(e) {
         O = o && !m,
         w = (0, n.jsx)(i.D, {
             className: $.qc,
-            onClick: x,
-            children: (0, n.jsx)(F.$, { size: "sm", color: u.A.colors.INTERACTIVE_ICON_DEFAULT }),
+            onClick: E,
+            children: (0, n.jsx)(B.$, { size: "sm", color: u.A.colors.INTERACTIVE_ICON_DEFAULT }),
         }),
         k = (0, n.jsx)(H.I, {
             size: "sm",
@@ -512,7 +513,7 @@ var ec = r(188275),
     eu = r(773743);
 function e_(e) {
     let { selectedTab: t, handleTransition: r } = e,
-        A = (0, l.bG)([x.default], () => x.default.getCurrentUser()),
+        A = (0, l.bG)([E.default], () => E.default.getCurrentUser()),
         { enabled: v } = (0, g.Z)({ location: "collectibles_shop_header_bar" }),
         T = (function (e) {
             let { location: t } = e,
@@ -525,7 +526,7 @@ function e_(e) {
             return r && n;
         })({ location: "collectibles_shop_header_bar" }),
         k = (0, L.uM)(),
-        { searchQuery: N, itemTypeFilters: F } = (0, I.v)(),
+        { searchQuery: N, itemTypeFilters: B } = (0, I.v)(),
         H = s.useRef(null),
         [V, $] = s.useState(!1);
     (0, _.g)(
@@ -535,7 +536,7 @@ function e_(e) {
         }, []),
     );
     let U = s.useCallback(() => {
-            E.default.track(D.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            x.default.track(D.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: k?.sessionId,
                 page_type: M.G2.RIVALS,
                 page_category: k?.pageCategory,
@@ -559,7 +560,7 @@ function e_(e) {
                     label: R.intl.string(R.t.Ah5sJo),
                     renderSubmenu: (e) => {
                         let { onClose: s } = e;
-                        return (0, n.jsx)(B, { handleTransition: r, onClose: s, selectedTab: t, itemTypeFilters: F });
+                        return (0, n.jsx)(F, { handleTransition: r, onClose: s, selectedTab: t, itemTypeFilters: B });
                     },
                     renderOverflowContent: (e) => {
                         let { onClose: s } = e;
@@ -583,7 +584,7 @@ function e_(e) {
                                     t,
                                 );
                             });
-                        })({ selectedTab: t, itemTypeFilters: F, onTabSelect: r, onClose: s });
+                        })({ selectedTab: t, itemTypeFilters: B, onTabSelect: r, onClose: s });
                     },
                 },
             ];
@@ -623,7 +624,7 @@ function e_(e) {
                       }),
                 e
             );
-        }, [v, T, W, r, z, t, F]),
+        }, [v, T, W, r, z, t, B]),
         Y = t === M.G2.ORBS ? D.liQ.SHOP_ORBS_TAB : D.liQ.COLLECTIBLES_SHOP,
         Z = s.useCallback(() => {
             (0, h.Y)({ pageType: Y, sectionType: D.JJy.ORBS_BALANCE_MENU, ctaObject: D.ZSU.CTA_TO_QUEST_HOME }),
