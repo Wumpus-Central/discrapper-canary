@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Dz: "nameplatePreviewContainer_f7b5db",
     ur: "nameplatePreviewList_f7b5db",
