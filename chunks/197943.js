@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+a.r(
     (e.exports = {
         textButton: "textButton__7a01b",
         text: "text__7a01b",
