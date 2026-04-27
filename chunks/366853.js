@@ -6,8 +6,8 @@ var i,
     a,
     o,
     l = n(735438),
-    d = n.n(l),
-    _ = n(17928),
+    _ = n.n(l),
+    d = n(17928),
     u = n(506774),
     c = n(228366),
     E = n(956793),
@@ -15,47 +15,47 @@ var i,
     m = n(652896),
     f = n(796774),
     g = n(617617),
-    p = n(495544),
+    I = n(495544),
     A = n(470710),
-    I = n(734057),
+    p = n(734057),
     T = n(969341),
     S = n(763827),
     N = n(873985),
-    C = n(309010),
+    O = n(309010),
     R = n(461213),
-    O = n(116956),
+    C = n(116956),
     y = n(723702),
-    v =
-        (((i = v || {}).CLOSED = "CLOSED"),
+    D =
+        (((i = D || {}).CLOSED = "CLOSED"),
         (i.WILL_RECONNECT = "WILL_RECONNECT"),
         (i.CONNECTING = "CONNECTING"),
         (i.IDENTIFYING = "IDENTIFYING"),
         (i.RESUMING = "RESUMING"),
         (i.SESSION_ESTABLISHED = "SESSION_ESTABLISHED"),
         i),
-    D = n(77729),
-    L = n(183636),
-    b = n(954571),
-    w = n(209489);
+    L = n(77729),
+    v = n(183636),
+    w = n(954571),
+    P = n(209489);
 n(323874), n(14289), n(35956), n(321073), n(142703);
-var P = n(284009),
-    k = n.n(P),
-    M = n(777915),
-    U = n(61090),
-    x = n(158390),
-    G = n(731738),
+var b = n(284009),
+    k = n.n(b),
+    U = n(777915),
+    M = n(61090),
+    G = n(158390),
+    x = n(731738),
     V = n(70298),
     F = n(636537),
     B = n(71393),
     H = n(403362),
-    j = n(723176);
+    Y = n(723176);
 let W = new h.A("GuildVersions");
-class Y {
+class K {
     pending = new Map();
     committed = new Map();
     async getCommittedVersions() {
         try {
-            let e = j.A.guildVersions();
+            let e = Y.A.guildVersions();
             if (null == e) return {};
             let t = (await e.getMany()).map((e) => [e.id, e.version]);
             return Object.fromEntries(t ?? []);
@@ -90,7 +90,7 @@ class Y {
     handleConnectionOpen(e, t) {
         this.reset();
         let n = [...e.guilds.map((e) => e.id), ...e.unavailableGuilds];
-        for (let i of (j.A.guildVersionsTransaction(t).deleteAllExcept(n), e.guilds)) this.updateWith(i.id, [i]);
+        for (let i of (Y.A.guildVersionsTransaction(t).deleteAllExcept(n), e.guilds)) this.updateWith(i.id, [i]);
         this.commit(t);
     }
     handleGuildCreate(e, t) {
@@ -169,7 +169,7 @@ class Y {
     }
     commit(e) {
         if (this.pending.size > 0) {
-            let t = j.A.guildVersionsTransaction(e);
+            let t = Y.A.guildVersionsTransaction(e);
             for (let [e, n] of this.pending)
                 null != n
                     ? (t.put({ id: e, version: n }), this.committed.set(e, n))
@@ -178,14 +178,14 @@ class Y {
         }
     }
 }
-let K = new Y();
-var z = n(314732),
-    $ = n(214771),
+let j = new K();
+var $ = n(314732),
+    z = n(214771),
     q = n(937724),
     X = n(831062),
-    Z = n(464578),
-    Q = n(111162),
-    J = n(353835),
+    Q = n(464578),
+    J = n(111162),
+    Z = n(353835),
     ee = n(927813),
     et = n(38405);
 n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
@@ -214,7 +214,7 @@ function es() {
 let { NativeModules: ea } = {},
     eo = {},
     el = [];
-class ed {
+class e_ {
     _onDataReady;
     _gatewayEncoding;
     static canUse() {
@@ -230,7 +230,7 @@ class ed {
     }
 }
 el.push(
-    class extends ed {
+    class extends e_ {
         _decoder = null;
         _stream;
         static canUse() {
@@ -265,7 +265,7 @@ el.push(
     },
 ),
     el.push(
-        class extends ed {
+        class extends e_ {
             _inflate;
             _pako = n(777915);
             _usesZstd = !1;
@@ -328,7 +328,7 @@ el.push(
         },
     ),
     el.push(
-        class extends ed {
+        class extends e_ {
             _pako = n(777915);
             static canUse() {
                 return !0;
@@ -354,7 +354,7 @@ el.push(
         },
     ),
     el.push(
-        class extends ed {
+        class extends e_ {
             _socketId;
             static canUse() {
                 return !1;
@@ -393,7 +393,7 @@ el.push(
             }
         },
     );
-class e_ extends ed {
+class ed extends e_ {
     static canUse() {
         return !0;
     }
@@ -410,11 +410,11 @@ class e_ extends ed {
     close() {}
 }
 function eu(e) {
-    if (en.P.isDiscordGatewayPlaintextSet()) return new e_(e);
+    if (en.P.isDiscordGatewayPlaintextSet()) return new ed(e);
     for (var t of el) if (t.canUse()) return new t(e);
-    return new e_(e);
+    return new ed(e);
 }
-el.push(e_);
+el.push(ed);
 let ec = (function () {
     if (y.isPlatformEmbedded) {
         let e;
@@ -479,7 +479,7 @@ let em = eh;
 n(423034);
 var ef = n(287809),
     eg = n(652215);
-function ep(e) {
+function eI(e) {
     try {
         var t;
         let n =
@@ -512,11 +512,11 @@ function eA(e) {
     };
 }
 n(667532);
-class eI {
+class ep {
     socket;
     static batchers = [];
     static flush(e, t) {
-        for (let n of eI.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
+        for (let n of ep.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
     }
     action = null;
     add;
@@ -527,7 +527,7 @@ class eI {
             (this.add = (e) => {
                 this.action = t(this.action, e);
             }),
-            eI.batchers.push(this);
+            ep.batchers.push(this);
     }
     flush() {
         let { action: e } = this;
@@ -549,7 +549,7 @@ var eT = n(365971),
         (s.TIME_OVER_DEADLINE = "time_over_deadline"),
         (s.DEADLINE_INITIAL_TIME_REMAINING = "initial_time_of_deadline"),
         s),
-    eC =
+    eO =
         (((a = {}).COUNT_DISPATCHES_LEFT_AFTER_YIELD = "count_dispatches_left_after_yield"),
         (a.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = "count_flush_before_queue_empty"),
         (a.COUNT_INITIAL_DISPATCHS_LENGTH = "count_initial_dispatches_length"),
@@ -560,7 +560,7 @@ let eR = Object.freeze({
         time_over_deadline: null,
         initial_time_of_deadline: null,
     }),
-    eO = Object.freeze({
+    eC = Object.freeze({
         time_to_fire_idle_callback: [0, 0],
         time_to_flush_all_work: [0, 0],
         time_over_deadline: [0, 0],
@@ -571,23 +571,23 @@ let eR = Object.freeze({
         count_dispatches_left_after_yield: [0, 0],
         count_initial_dispatches_length: [0, 0],
     }),
-    ev = Object.freeze({
+    eD = Object.freeze({
         longer_dispatch: 0,
         exceeded_max_consecutive_flushes: 0,
         fired_due_to_max_timeout: 0,
         skip_idle_callback_due_to_backgrounded: 0,
     });
-class eD {
+class eL {
     _timeTracking = (0, l.cloneDeep)(eR);
-    _timingStats = (0, l.cloneDeep)(eO);
+    _timingStats = (0, l.cloneDeep)(eC);
     _measurements = (0, l.cloneDeep)(ey);
-    _eventCounts = (0, l.cloneDeep)(ev);
+    _eventCounts = (0, l.cloneDeep)(eD);
     _enabled = !1;
     reset() {
         (this._timeTracking = (0, l.cloneDeep)(eR)),
-            (this._timingStats = (0, l.cloneDeep)(eO)),
+            (this._timingStats = (0, l.cloneDeep)(eC)),
             (this._measurements = (0, l.cloneDeep)(ey)),
-            (this._eventCounts = (0, l.cloneDeep)(ev));
+            (this._eventCounts = (0, l.cloneDeep)(eD));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -642,17 +642,17 @@ class eD {
         };
     }
 }
-let eL = (1e3 / 60) * 3,
-    eb = (1e3 / 60) * 3,
-    ew = 1e3 / 60 / 8,
-    eP = (1e3 / 60) * 12;
+let ev = (1e3 / 60) * 3,
+    ew = (1e3 / 60) * 3,
+    eP = 1e3 / 60 / 8,
+    eb = (1e3 / 60) * 12;
 class ek {
     _browserDeadlineMs;
     _deadlineMs;
     _startMs;
     _firedDueToMaxTimeout;
     constructor(e, t = !1) {
-        (this._deadlineMs = Math.max(ew, e)),
+        (this._deadlineMs = Math.max(eP, e)),
             (this._browserDeadlineMs = e),
             (this._firedDueToMaxTimeout = t),
             (this._startMs = performance.now());
@@ -669,24 +669,24 @@ class ek {
     }
     generateDeadlineMetrics() {
         return {
-            isDeadlineNotIdeal: this._browserDeadlineMs < ew,
+            isDeadlineNotIdeal: this._browserDeadlineMs < eP,
             deadlineMs: this._deadlineMs.toFixed(2),
             timeSinceStartMs: (performance.now() - this._startMs).toFixed(2),
         };
     }
 }
-let eM = new h.A("DispatcherWorkScheduler");
-class eU {
+let eU = new h.A("DispatcherWorkScheduler");
+class eM {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
-    _nextDispatchTimeout = eL;
+    _nextDispatchTimeout = ev;
     _workCallbackFn = null;
     _consecutiveFlushesBeforeQueueEmpty = 0;
     _isBackgrounded = !1;
     _enableRequestIdleCallback = !0;
     _criticalWorkScheduled = !1;
-    telemetry = new eD();
-    _logger = eM;
+    telemetry = new eL();
+    _logger = eU;
     _trackAppBackgrounded(e) {
         this._isBackgrounded === e ||
             ((this._isBackgrounded = e),
@@ -706,24 +706,24 @@ class eU {
     _processWorkCallback(e) {
         if (null == this._workCallbackFn) return;
         if (this._hasExceededMaxConsecutiveFlushes) {
-            eM.log("Unable to fully flush work queue after max retries, skipping future deadline."),
+            eU.log("Unable to fully flush work queue after max retries, skipping future deadline."),
                 this._workCallbackFn(),
                 this.clearWorkTimeout(),
-                this.telemetry.measure(eC.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
+                this.telemetry.measure(eO.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
                 this.telemetry.track(eS.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
                 (this._consecutiveFlushesBeforeQueueEmpty = 0),
-                (this._nextDispatchTimeout = eP);
+                (this._nextDispatchTimeout = eb);
             return;
         }
         let t = performance.now(),
             n = this._workCallbackFn(e),
             i = performance.now();
         this.clearWorkTimeout(),
-            i - t > eb ? (this._nextDispatchTimeout = eP) : (this._nextDispatchTimeout = eL),
+            i - t > ew ? (this._nextDispatchTimeout = eb) : (this._nextDispatchTimeout = ev),
             n
                 ? (this._consecutiveFlushesBeforeQueueEmpty > 0 &&
                       this.telemetry.measure(
-                          eC.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
+                          eO.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
                           parseInt(`${this._consecutiveFlushesBeforeQueueEmpty}`),
                       ),
                   (this._consecutiveFlushesBeforeQueueEmpty = 0),
@@ -751,7 +751,7 @@ class eU {
         null != this._flushTimeoutHandler &&
             (clearTimeout(this._flushTimeoutHandler), (this._flushTimeoutHandler = null)),
             this._clearIdleCallback(),
-            (this._nextDispatchTimeout = eL),
+            (this._nextDispatchTimeout = ev),
             (this._workCallbackFn = null);
     }
     requestWorkTimeout(e) {
@@ -759,7 +759,7 @@ class eU {
         if (((this._workCallbackFn = e), !this.hasWorkScheduled)) {
             if (
                 (this.telemetry.time(eN.TIME_TO_QUEUE_EMPTY),
-                this._nextDispatchTimeout === eP && this.telemetry.track(eS.LONGER_DISPATCH),
+                this._nextDispatchTimeout === eb && this.telemetry.track(eS.LONGER_DISPATCH),
                 t)
             )
                 return void this._queueIdleCallback();
@@ -771,7 +771,7 @@ class eU {
         }
     }
 }
-let ex =
+let eG =
         window.requestIdleCallback ??
         ((e) => {
             let t = Date.now();
@@ -779,11 +779,11 @@ let ex =
                 e({ didTimeout: !1, timeRemaining: () => Math.max(0, 50 - (Date.now() - t)) });
             }, 1);
         }),
-    eG = window.cancelIdleCallback ?? clearTimeout;
+    ex = window.cancelIdleCallback ?? clearTimeout;
 function eV(e) {
-    return null == e ? new ek(ew, !0) : new ek(e.timeRemaining(), e.didTimeout);
+    return null == e ? new ek(eP, !0) : new ek(e.timeRemaining(), e.didTimeout);
 }
-class eF extends eU {
+class eF extends eM {
     _flushIdleMaxTimeoutHandler = null;
     constructor() {
         super(),
@@ -803,7 +803,7 @@ class eF extends eU {
                             this._processWorkCallback();
                         return;
                     }
-                    if ((this.telemetry.timeEnd(eN.TIME_TO_FIRE_IDLE_CALLBACK), (e?.timeRemaining() ?? ew) < ew))
+                    if ((this.telemetry.timeEnd(eN.TIME_TO_FIRE_IDLE_CALLBACK), (e?.timeRemaining() ?? eP) < eP))
                         this.telemetry.time(eN.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._scheduleRequestIdleCallback(
                                 (e) => {
@@ -827,7 +827,7 @@ class eF extends eU {
             );
     }
     _scheduleRequestIdleCallback(e, t) {
-        (this._flushIdleHandler = ex((t) => {
+        (this._flushIdleHandler = eG((t) => {
             this._clearIdleCallback(), e(t);
         })),
             t?.timeout != null && this._scheduleMaxIdleCallback(t.timeout);
@@ -839,16 +839,16 @@ class eF extends eU {
             }, e));
     }
     _clearIdleCallback() {
-        null != this._flushIdleHandler && (eG(this._flushIdleHandler), (this._flushIdleHandler = null)),
+        null != this._flushIdleHandler && (ex(this._flushIdleHandler), (this._flushIdleHandler = null)),
             null != this._flushIdleMaxTimeoutHandler &&
                 (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
     }
 }
 let eB = new h.A("GatewaySocket"),
     eH = new Set(["INITIAL_GUILD", "READY"]),
-    ej = new Set(["READY", "INITIAL_GUILD"]),
+    eY = new Set(["READY", "INITIAL_GUILD"]),
     eW = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
-    eY = new Set([
+    eK = new Set([
         "READY",
         "INITIAL_GUILD",
         "READY_SUPPLEMENTAL",
@@ -868,8 +868,8 @@ let eB = new h.A("GatewaySocket"),
         "STREAM_DELETE",
         "STREAM_UPDATE",
     ]),
-    eK = {};
-class ez {
+    ej = {};
+class e$ {
     socket;
     scheduler = new eF();
     queue = [];
@@ -915,10 +915,10 @@ class ez {
     }
     scheduleFlush(e) {
         !this.paused &&
-            (ej.has(e)
+            (eY.has(e)
                 ? (this.scheduler.clearWorkTimeout(), this.flush())
                 : this.scheduler.hasWorkScheduled || this.scheduler.requestWorkTimeout(this.flush),
-            eY.has(e) && this.scheduler.markCriticalWorkScheduled());
+            eK.has(e) && this.scheduler.markCriticalWorkScheduled());
     }
     flush = (e) => {
         if (this.paused) return !0;
@@ -930,10 +930,10 @@ class ez {
             r = this.dispatchMultiple(i, e);
         r && this.scheduler.telemetry.timeEnd(eN.TIME_TO_QUEUE_EMPTY);
         let s = performance.now() - t;
-        return s > eb && !r && eB.log(`Dispatched ${i.length} messages in ${s}ms`), r;
+        return s > ew && !r && eB.log(`Dispatched ${i.length} messages in ${s}ms`), r;
     };
     getDispatchTimings() {
-        return eK;
+        return ej;
     }
     getSchedulerTelemetry() {
         return this.scheduler.telemetry;
@@ -951,13 +951,13 @@ class ez {
         if (0 === e.length) return !0;
         let n = "none",
             i = !1;
-        this.scheduler.telemetry.measure(eC.COUNT_INITIAL_DISPATCHS_LENGTH, e.length);
+        this.scheduler.telemetry.measure(eO.COUNT_INITIAL_DISPATCHS_LENGTH, e.length);
         try {
             let r = [];
-            this.socket.connectionState === v.RESUMING && _.Ay.Emitter.pause(150);
+            this.socket.connectionState === D.RESUMING && d.Ay.Emitter.pause(150);
             let s = 0;
             if (
-                (_.Ay.Emitter.batched(() => {
+                (d.Ay.Emitter.batched(() => {
                     for (let a = 0; a < e.length; a++) {
                         let o = e[a];
                         (n = o.type), (i = i || eW.has(o.type));
@@ -966,8 +966,8 @@ class ez {
                             (this.dispatchOne(o),
                             (s = performance.now() - l),
                             !(function (e, t) {
-                                let [n, i] = eK[e] ?? [0, 0];
-                                eK[e] = [(n * i + t) / (i + 1), i + 1];
+                                let [n, i] = ej[e] ?? [0, 0];
+                                ej[e] = [(n * i + t) / (i + 1), i + 1];
                             })(o.type, s),
                             (function (e, t, n) {
                                 if (null == n) return !1;
@@ -987,13 +987,13 @@ class ez {
                             break;
                         }
                     }
-                    eI.flush();
+                    ep.flush();
                 }),
-                i && _.Ay.Emitter.resume(),
+                i && d.Ay.Emitter.resume(),
                 r.length > 0)
             )
                 return (
-                    this.scheduler.telemetry.measure(eC.COUNT_DISPATCHES_LEFT_AFTER_YIELD, r.length),
+                    this.scheduler.telemetry.measure(eO.COUNT_DISPATCHES_LEFT_AFTER_YIELD, r.length),
                     this.queue.unshift(...r),
                     this.scheduler.requestWorkTimeout(this.flush, !0),
                     !1
@@ -1007,7 +1007,7 @@ class ez {
         var t, n;
         let { data: i, type: r, compressionAnalytics: s, preloadedData: a } = e,
             o = performance.now();
-        if (this.socket.connectionState === v.RESUMING) {
+        if (this.socket.connectionState === D.RESUMING) {
             let e = o - this.resumeAnalytics.lastUpdateTime;
             0 === this.resumeAnalytics.numEvents
                 ? (this.resumeAnalytics.initialWaitTime = e)
@@ -1016,7 +1016,7 @@ class ez {
                 (this.resumeAnalytics.lastUpdateTime = o),
                 (this.resumeAnalytics.numEvents += 1);
         }
-        if ((eI.flush(r, i), "READY" === r)) {
+        if ((ep.flush(r, i), "READY" === r)) {
             let e,
                 n,
                 l = (function (e) {
@@ -1029,8 +1029,8 @@ class ez {
                             private_channels: a,
                             user_guild_settings: o,
                             user_settings: l,
-                            user_settings_proto: d,
-                            experiments: _,
+                            user_settings_proto: _,
+                            experiments: d,
                             guild_experiments: u,
                             relationships: c,
                             users: E,
@@ -1039,9 +1039,9 @@ class ez {
                         m = [],
                         f = [],
                         g = [],
-                        p = [],
-                        A = [],
                         I = [],
+                        A = [],
+                        p = [],
                         T = [],
                         S = [];
                     return (
@@ -1052,9 +1052,9 @@ class ez {
                             m.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels),
                                 f.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles),
                                 g.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
-                                p.push(i),
+                                I.push(i),
                                 A.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
-                                I.push(t),
+                                p.push(t),
                                 T.push(r),
                                 S.push(s, n);
                         }),
@@ -1063,8 +1063,8 @@ class ez {
                             users_size: JSON.stringify(E).length,
                             read_states_size: JSON.stringify(s).length,
                             private_channels_size: JSON.stringify(a).length,
-                            user_settings_size: JSON.stringify(l ?? "").length + (d ?? "").length,
-                            experiments_size: JSON.stringify(_ ?? []).length + JSON.stringify(u ?? []).length,
+                            user_settings_size: JSON.stringify(l ?? "").length + (_ ?? "").length,
+                            experiments_size: JSON.stringify(d ?? []).length + JSON.stringify(u ?? []).length,
                             user_guild_settings_size: JSON.stringify(o).length,
                             relationships_size: JSON.stringify(c).length,
                             remaining_data_size: JSON.stringify(h ?? {}).length,
@@ -1073,10 +1073,10 @@ class ez {
                             guild_presences_size: JSON.stringify(i?.guilds ?? []).length,
                             guild_roles_size: JSON.stringify(f).length,
                             guild_emojis_size: JSON.stringify(g).length,
-                            guild_threads_size: JSON.stringify(p).length,
+                            guild_threads_size: JSON.stringify(I).length,
                             guild_stickers_size: JSON.stringify(A).length,
                             guild_events_size: JSON.stringify(T).length,
-                            guild_features_size: JSON.stringify(I).length,
+                            guild_features_size: JSON.stringify(p).length,
                             guild_remaining_data_size: JSON.stringify(S).length,
                             size_metrics_duration_ms: Date.now() - t,
                         }
@@ -1108,8 +1108,8 @@ class ez {
                     } catch (e) {}
                     return n;
                 })(i)),
-                null != s && U.A.addDetail("payload_size(kb)", Math.round(s.uncompressed_byte_size / 1024)),
-                U.A.addDetail("server_time(ms)", e.identify_total_server_duration_ms ?? 0),
+                null != s && M.A.addDetail("payload_size(kb)", Math.round(s.uncompressed_byte_size / 1024)),
+                M.A.addDetail("server_time(ms)", e.identify_total_server_duration_ms ?? 0),
                 (n = {
                     ...s,
                     ...e,
@@ -1142,14 +1142,14 @@ class ez {
                     had_cache_at_startup: t.analytics.hadCacheAtStartup ?? !1,
                     used_cache_at_startup: t.analytics.usedCacheAtStartup ?? !1,
                 }),
-                Z.A.attachReadyPayloadProperties(n),
-                b.default.track(eg.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
+                Q.A.attachReadyPayloadProperties(n),
+                w.default.track(eg.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
         } else
             "RESUMED" === r
                 ? (this.getDispatchHandler(r)?.dispatch(i, r, a),
                   (n = this.resumeAnalytics),
                   (!ef.default.getCurrentUser()?.isStaff() && 0.5 > Math.random()) ||
-                      b.default.track(
+                      w.default.track(
                           eg.HAw.CONNECTION_RESUMED,
                           {
                               connect_time_ms: n.connectTime,
@@ -1165,14 +1165,14 @@ class ez {
                   this.socket.handleResumeDispatched(),
                   (this.resumeAnalytics = eA()))
                 : this.getDispatchHandler(r)?.dispatch(i, r, a);
-        this.socket.connectionState === v.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - o);
+        this.socket.connectionState === D.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - o);
     }
     clear() {
         (this.paused = !1), (this.queue.length = 0);
     }
 }
 n(938796);
-var e$ = n(143236),
+var ez = n(143236),
     eq = n(935208),
     eX =
         (((o = {})[(o.DISPATCH = 0)] = "DISPATCH"),
@@ -1208,7 +1208,7 @@ var e$ = n(143236),
         (o[(o.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (o[(o.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         o);
-class eZ extends e$.EventEmitter {
+class eQ extends ez.EventEmitter {
     presenceUpdate(e, t, n, i) {
         this.send(eX.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
     }
@@ -1222,12 +1222,12 @@ class eZ extends e$.EventEmitter {
                 preferredRegion: a = null,
                 preferredRegions: o = null,
                 videoStreamParameters: l = null,
-                flags: d = 0,
+                flags: _ = 0,
             } = e,
-            _ = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: s, flags: d };
-        null != n && N.A.shouldIncludePreferredRegion() && ((_.preferred_region = a), (_.preferred_regions = o)),
-            null != l && (_.tracks = l?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
-            this.send(eX.VOICE_STATE_UPDATE, _);
+            d = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: s, flags: _ };
+        null != n && N.A.shouldIncludePreferredRegion() && ((d.preferred_region = a), (d.preferred_regions = o)),
+            null != l && (d.tracks = l?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
+            this.send(eX.VOICE_STATE_UPDATE, d);
     }
     voiceServerPing() {
         this.send(eX.VOICE_SERVER_PING, null);
@@ -1306,8 +1306,8 @@ class eZ extends e$.EventEmitter {
         this.send(eX.REMOTE_COMMAND, { target_session_id: e, payload: t });
     }
 }
-let eQ = !1;
-var eJ = n(981133),
+let eJ = !1;
+var eZ = n(981133),
     e0 = n(751124);
 let e1 = new h.A("GatewaySocket"),
     e2 = new em();
@@ -1319,10 +1319,10 @@ function e5(e) {
     return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength;
 }
 let e8 = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class e9 extends eZ {
+class e9 extends eQ {
     gatewayBackoff;
     handleIdentify;
-    dispatchExceptionBackoff = new x.A(1e3, e7);
+    dispatchExceptionBackoff = new G.A(1e3, e7);
     dispatchSuccessTimer = 0;
     connectionState_;
     webSocket;
@@ -1360,9 +1360,9 @@ class e9 extends eZ {
     }
     constructor() {
         super(),
-            (this.dispatcher = new ez(this)),
-            (this.gatewayBackoff = new x.A(1e3, 6e4)),
-            (this.connectionState_ = v.CLOSED),
+            (this.dispatcher = new e$(this)),
+            (this.gatewayBackoff = new G.A(1e3, 6e4)),
+            (this.connectionState_ = D.CLOSED),
             (this.webSocket = null),
             (this.seq = 0),
             (this.sessionId = null),
@@ -1403,7 +1403,7 @@ class e9 extends eZ {
             (this.heartbeatQOSState.upcomingState = e);
     }
     handleUpdateTimeSpentSessionId(e, t, n) {
-        this.connectionState_ === v.SESSION_ESTABLISHED &&
+        this.connectionState_ === D.SESSION_ESTABLISHED &&
             (this.send(eX.UPDATE_TIME_SPENT_SESSION_ID, {
                 initialization_timestamp: e,
                 session_id: t,
@@ -1415,13 +1415,13 @@ class e9 extends eZ {
         var e, t, n;
         let i, r;
         if (!this.willReconnect()) return void e1.verbose("Skipping _connect because willReconnect is false");
-        if (eQ) return void e1.info("Skipping _connect because socket is paused");
-        (this.connectionState = v.CONNECTING), (this.nextReconnectIsImmediate = !1);
+        if (eJ) return void e1.info("Skipping _connect because socket is paused");
+        (this.connectionState = D.CONNECTING), (this.nextReconnectIsImmediate = !1);
         let s = this.compressionHandler.getAlgorithm(),
             a = e2.getName(),
             o = this._getGatewayUrl(),
             l = window.GLOBAL_ENV.API_VERSION;
-        U.A.mark("\uD83C\uDF10", "Socket._connect"),
+        M.A.mark("\uD83C\uDF10", "Socket._connect"),
             e1.info(`[CONNECT] ${o}, encoding: ${a}, version: ${l}, compression: ${s ?? "none"}`),
             null !== this.webSocket &&
                 (e1.error("_connect called with already existing websocket"), this._cleanup((e) => e.close(4e3))),
@@ -1431,17 +1431,17 @@ class e9 extends eZ {
                 this._handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`),
                     this.setResumeUrl(null);
             }, e6));
-        let d = new URL(o);
-        d.searchParams.append("encoding", a),
-            d.searchParams.append("v", l.toString()),
-            null != s && d.searchParams.append("compress", s),
+        let _ = new URL(o);
+        _.searchParams.append("encoding", a),
+            _.searchParams.append("v", l.toString()),
+            null != s && _.searchParams.append("compress", s),
             !(function (e) {
                 let t,
                     { gatewayURL: n, newCallback: i, onOpen: r, onMessage: s, onError: a, onClose: o } = e;
                 e1.enableNativeLogger(!0);
                 let l = window._ws,
-                    d = !1,
                     _ = !1,
+                    d = !1,
                     u = null,
                     c = null;
                 if (((window._ws = null), null != l))
@@ -1461,28 +1461,28 @@ class e9 extends eZ {
                                 ...e,
                                 messages: e.messages?.length,
                             }),
-                            (d = l.state.open),
-                            (_ = l.state.identify),
+                            (_ = l.state.open),
+                            (d = l.state.identify),
                             (u = l.state.messages),
                             (c = l.state.clientState);
                     }
                 null == t && ((t = (0, e0.A)(n)).binaryType = "arraybuffer"),
                     i(t),
-                    d && r(_, c),
+                    _ && r(d, c),
                     null != u && u.forEach(s),
-                    (t.onopen = () => r(_, c)),
+                    (t.onopen = () => r(d, c)),
                     (t.onmessage = s),
                     (t.onclose = o),
                     (t.onerror = a);
             })({
-                gatewayURL: d.toString(),
+                gatewayURL: _.toString(),
                 newCallback: (e) => {
                     (this.webSocket = e), this.compressionHandler.bindWebSocket(e);
                 },
                 onOpen: (e) => {
-                    U.A.mark(`🌐`, `GatewaySocket.onOpen ${e}`);
+                    M.A.mark(`🌐`, `GatewaySocket.onOpen ${e}`);
                     let t = Date.now() - this.connectionStartTime;
-                    e1.info(`[CONNECTED] ${d.toString()} in ${t} ms`),
+                    e1.info(`[CONNECTED] ${_.toString()} in ${t} ms`),
                         (this.isFastConnect = e),
                         e ? this._doFastConnectIdentify() : this._doResumeOrIdentify();
                 },
@@ -1493,8 +1493,8 @@ class e9 extends eZ {
                         let n = Date.now(),
                             { op: i, s: r, t: s, d: a } = e2.unpack(e);
                         if (
-                            (i !== eX.DISPATCH && U.A.mark(`🌐`, `GatewaySocket.onMessage ${i} ${eX[i]}`),
-                            Q.default.isLoggingGatewayEvents)
+                            (i !== eX.DISPATCH && M.A.mark(`🌐`, `GatewaySocket.onMessage ${i} ${eX[i]}`),
+                            J.default.isLoggingGatewayEvents)
                         ) {
                             let e = [i];
                             i === eX.DISPATCH && e.push(s), e.push(a), e1.verboseDangerously("<~", ...e);
@@ -1502,10 +1502,10 @@ class e9 extends eZ {
                         let o = Date.now() - n;
                         switch (
                             ("READY" === s
-                                ? Z.A.parseReady.set(n, o)
+                                ? Q.A.parseReady.set(n, o)
                                 : "READY_SUPPLEMENTAL" === s
-                                  ? Z.A.parseReadySupplemental.set(n, o)
-                                  : o > 10 && U.A.mark("\uD83C\uDF10", "Parse " + s, o),
+                                  ? Q.A.parseReadySupplemental.set(n, o)
+                                  : o > 10 && M.A.mark("\uD83C\uDF10", "Parse " + s, o),
                             null != r && (this.seq = r),
                             i)
                         ) {
@@ -1564,7 +1564,7 @@ class e9 extends eZ {
                     }),
                 onError: () => {
                     this.setResumeUrl(null),
-                        J.A.flushDNSCache(),
+                        Z.A.flushDNSCache(),
                         this._handleClose(!1, 0, "An error with the websocket occurred");
                 },
                 onClose: (e) => {
@@ -1576,12 +1576,12 @@ class e9 extends eZ {
     _handleHello(e) {
         let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now() - this.connectionStartTime;
-        e1.verbose(`[HELLO] via ${ep(e)}, heartbeat interval: ${t}, took ${n} ms`), this._startHeartbeater();
+        e1.verbose(`[HELLO] via ${eI(e)}, heartbeat interval: ${t}, took ${n} ms`), this._startHeartbeater();
     }
     _handleReconnect() {
         e1.verbose("[RECONNECT] gateway requested I reconnect."),
             this._cleanup((e) => e.close(4e3)),
-            (this.connectionState = v.WILL_RECONNECT),
+            (this.connectionState = D.WILL_RECONNECT),
             this._connect();
     }
     _handleInvalidSession(e) {
@@ -1592,23 +1592,23 @@ class e9 extends eZ {
         if ("READY" === t) {
             let t = e.session_id;
             this.sessionId = t;
-            let n = ep(e);
-            U.A.setServerTrace(n),
+            let n = eI(e);
+            M.A.setServerTrace(n),
                 e1.info(`[READY] took ${i}ms, as ${t}`),
                 e1.verbose(`${n}`),
-                (this.connectionState = v.SESSION_ESTABLISHED),
+                (this.connectionState = D.SESSION_ESTABLISHED),
                 this.gatewayBackoff.succeed(),
                 (this.iosGoingAwayEventCount = 0),
                 this.setResumeUrl(e.resume_gateway_url);
         } else
             "READY_SUPPLEMENTAL" === t
                 ? (e1.info(`[READY_SUPPLEMENTAL] took ${i}ms`),
-                  (this.connectionState = v.SESSION_ESTABLISHED),
+                  (this.connectionState = D.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0))
                 : "RESUMED" === t &&
-                  (e1.verbose(ep(e)),
-                  (this.connectionState = v.SESSION_ESTABLISHED),
+                  (e1.verbose(eI(e)),
+                  (this.connectionState = D.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0));
         this.dispatcher.receiveDispatch(e, t, n);
@@ -1641,20 +1641,20 @@ class e9 extends eZ {
                 e1.verbose("Expedited heartbeat succeeded"));
     }
     _handleHeartbeatTimeout() {
-        this._cleanup((e) => e.close(4e3)), (this.connectionState = v.WILL_RECONNECT);
+        this._cleanup((e) => e.close(4e3)), (this.connectionState = D.WILL_RECONNECT);
         let e = this.gatewayBackoff.fail(() => this._connect());
         e1.warn(`[ACK TIMEOUT] reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
     }
     _handleClose(e, t, n) {
         if (((e = e || !1), this._cleanup(), this.emit("close", { code: t, reason: n }), 4004 === t))
             return (
-                (this.connectionState = v.CLOSED),
+                (this.connectionState = D.CLOSED),
                 e1.warn("[WS CLOSED] because of authentication failure, marking as closed."),
                 this._reset(e, t, n)
             );
         if (
             (this._tryDetectInvalidIOSToken(t, n, e),
-            (this.connectionState = v.WILL_RECONNECT),
+            (this.connectionState = D.WILL_RECONNECT),
             this.nextReconnectIsImmediate)
         )
             e1.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying immediately.`), this._connect();
@@ -1674,15 +1674,15 @@ class e9 extends eZ {
                 F.Bo.get({ url: eg.Rsh.ME, headers: { authorization: this.token }, rejectWithError: !1 }).then(
                     (e) => {
                         let { status: t } = e;
-                        b.default.track(eg.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                        w.default.track(eg.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                     (e) => {
                         let { status: t } = e;
                         401 === t &&
-                            ((this.connectionState = v.CLOSED),
+                            ((this.connectionState = D.CLOSED),
                             e1.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
                             this._reset(n, 4004, "invalid token manually detected")),
-                            b.default.track(eg.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            w.default.track(eg.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                 ));
     }
@@ -1728,7 +1728,7 @@ class e9 extends eZ {
         null != this.helloTimeout && (clearTimeout(this.helloTimeout), (this.helloTimeout = null));
     }
     _cleanup(e) {
-        _.Ay.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
+        d.Ay.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
         let t = this.webSocket;
         (this.webSocket = null),
             null != t && ((t.onopen = e3), (t.onmessage = e3), (t.onerror = e3), (t.onclose = e3), e?.(t)),
@@ -1737,7 +1737,7 @@ class e9 extends eZ {
             (this.compressionHandler = eu(e2));
     }
     _doResume() {
-        (this.connectionState = v.RESUMING),
+        (this.connectionState = D.RESUMING),
             (this.dispatcher.resumeAnalytics = eA(Date.now() - this.connectionStartTime)),
             e1.info(`[RESUME] resuming session ${this.sessionId ?? ""}, seq: ${this.seq}`),
             this.send(eX.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1);
@@ -1746,13 +1746,13 @@ class e9 extends eZ {
         (this.seq = 0), (this.sessionId = null);
         let e = this.handleIdentify();
         if (null === e) return void this._handleClose(!0, 4004, "No connection info provided");
-        this.connectionState = v.IDENTIFYING;
+        this.connectionState = D.IDENTIFYING;
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, i, r] = await Promise.all([
-                (0, q.O)() ? K.getCommittedVersions() : {},
-                (0, q.O)() ? $.A.getCommittedVersions() : {},
-                !!(0, q.O)() && z.A.canUseGuildVersions(),
+                (0, q.O)() ? j.getCommittedVersions() : {},
+                (0, q.O)() ? z.A.getCommittedVersions() : {},
+                !!(0, q.O)() && $.A.canUseGuildVersions(),
             ]),
             s = r
                 ? {
@@ -1766,27 +1766,27 @@ class e9 extends eZ {
                       initial_guild_id: i.initial_guild_id,
                   }
                 : { guild_versions: {} };
-        if (this.connectionState !== v.IDENTIFYING || this.identifyStartTime !== t)
+        if (this.connectionState !== D.IDENTIFYING || this.identifyStartTime !== t)
             return void e1.warn("Skipping identify because connectionState or identifyStartTime has changed");
         let { token: a, properties: o = {}, presence: l } = e;
         (this.token = a), e1.verbose("[IDENTIFY]");
-        let d = {
+        let _ = {
                 token: a,
                 capabilities: (function (e) {
                     let { useChannelObfuscation: t } = e;
                     return t ? 1767421 : 1734653;
-                })({ useChannelObfuscation: (0, eJ.RK)("GatewaySocket") }),
+                })({ useChannelObfuscation: (0, eZ.RK)("GatewaySocket") }),
                 properties: o,
                 presence: l,
                 compress: this.compressionHandler.usesLegacyCompression(),
                 client_state: s,
             },
-            _ = JSON.stringify(d);
-        (this.identifyUncompressedByteSize = _.length),
-            (this.identifyCompressedByteSize = M.deflate(_).length),
+            d = JSON.stringify(_);
+        (this.identifyUncompressedByteSize = d.length),
+            (this.identifyCompressedByteSize = U.deflate(d).length),
             (this.identifyCount += 1),
-            this.send(eX.IDENTIFY, d, !1),
-            b.default.track(eg.HAw.SESSION_START_CLIENT, {});
+            this.send(eX.IDENTIFY, _, !1),
+            w.default.track(eg.HAw.SESSION_START_CLIENT, {});
     }
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
@@ -1794,7 +1794,7 @@ class e9 extends eZ {
         if (null === e) return void this._handleClose(!0, 4004, "No connection info provided");
         let { token: t } = e;
         (this.token = t),
-            (this.connectionState = v.IDENTIFYING),
+            (this.connectionState = D.IDENTIFYING),
             (this.identifyStartTime = Date.now()),
             (this.identifyCount += 1),
             e1.verbose("[IDENTIFY, fast-connect]"),
@@ -1827,25 +1827,25 @@ class e9 extends eZ {
         return e1;
     }
     willReconnect() {
-        return this.connectionState === v.WILL_RECONNECT;
+        return this.connectionState === D.WILL_RECONNECT;
     }
     isClosed() {
-        return this.connectionState === v.CLOSED;
+        return this.connectionState === D.CLOSED;
     }
     isSessionEstablished() {
-        return this.connectionState === v.SESSION_ESTABLISHED || this.connectionState === v.RESUMING;
+        return this.connectionState === D.SESSION_ESTABLISHED || this.connectionState === D.RESUMING;
     }
     isConnected() {
         return (
-            this.connectionState === v.IDENTIFYING ||
-            this.connectionState === v.RESUMING ||
-            this.connectionState === v.SESSION_ESTABLISHED
+            this.connectionState === D.IDENTIFYING ||
+            this.connectionState === D.RESUMING ||
+            this.connectionState === D.SESSION_ESTABLISHED
         );
     }
     connect() {
         return this.isClosed()
             ? (e1.verbose(".connect() called, new state is WILL_RECONNECT"),
-              (this.connectionState = v.WILL_RECONNECT),
+              (this.connectionState = D.WILL_RECONNECT),
               this._connect(),
               !0)
             : (e1.error("Cannot start a new connection, connection state is not closed"), !1);
@@ -1854,9 +1854,9 @@ class e9 extends eZ {
         let { action: t, error: n, metricAction: i } = e;
         e1.error(`resetSocketAndClearCacheOnError during ${t}: ${n.message}`, n.stack);
         let r = (0, V.b)();
-        X.A.increment({ name: G.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
+        X.A.increment({ name: x.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
             !1 !== e.sentry && et.A.captureException(n, { tags: { socketCrashedAction: t } }),
-            b.default.track(eg.HAw.GATEWAY_SOCKET_RESET, {
+            w.default.track(eg.HAw.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 has_client_mods: r,
@@ -1865,7 +1865,7 @@ class e9 extends eZ {
             this._cleanup((e) => e.close()),
             this._reset(!0, 1e3, "Resetting socket due to error."),
             this.dispatcher.clear(),
-            (this.connectionState = v.WILL_RECONNECT),
+            (this.connectionState = D.WILL_RECONNECT),
             this.dispatchExceptionBackoff.cancel(),
             0 === this.dispatchExceptionBackoff._fails
                 ? (e1.verbose("Triggering fast reconnect"),
@@ -1888,7 +1888,7 @@ class e9 extends eZ {
         e1.info(`Closing connection, current state is ${this.connectionState}`);
         let t = e ? 4e3 : void 0;
         this._cleanup((e) => e.close(t)),
-            (this.connectionState = v.CLOSED),
+            (this.connectionState = D.CLOSED),
             e ||
                 ((this.sessionId = null),
                 (this.token = null),
@@ -1932,10 +1932,10 @@ class e9 extends eZ {
             (this.nextReconnectIsImmediate = !0),
             this.willReconnect()
                 ? this._connect()
-                : t && this.connectionState !== v.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
+                : t && this.connectionState !== D.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
     }
     send = (e, t, n) => {
-        Q.default.isLoggingGatewayEvents && e1.verboseDangerously("~>", e, eX[e], t);
+        J.default.isLoggingGatewayEvents && e1.verboseDangerously("~>", e, eX[e], t);
         let i = e2.pack({ op: e, d: t });
         if (!n || this.isSessionEstablished())
             try {
@@ -2024,8 +2024,8 @@ var tr = n(665260),
     ta = n(328153),
     to = n(253932),
     tl = n(616356),
-    td = n(469177);
-let t_ = new h.A("ConnectionStore"),
+    t_ = n(469177);
+let td = new h.A("ConnectionStore"),
     tu = new e9(),
     tc = new ti(tu),
     tE = new (class extends tn {
@@ -2090,9 +2090,9 @@ let t_ = new h.A("ConnectionStore"),
                 preferredRegion: a,
                 preferredRegions: o,
                 videoStreamParameters: l,
-                flags: d = 0,
+                flags: _ = 0,
             } = e;
-            s && I.A.getChannel(n)?.type === eg.rbe.GUILD_STAGE_VOICE
+            s && p.A.getChannel(n)?.type === eg.rbe.GUILD_STAGE_VOICE
                 ? this.socket.voiceStateUpdate({
                       guildId: t,
                       channelId: n,
@@ -2102,7 +2102,7 @@ let t_ = new h.A("ConnectionStore"),
                       preferredRegion: a,
                       preferredRegions: o,
                       videoStreamParameters: l,
-                      flags: d,
+                      flags: _,
                   })
                 : this.socket.voiceStateUpdate({
                       guildId: t,
@@ -2112,35 +2112,35 @@ let t_ = new h.A("ConnectionStore"),
                       selfVideo: s,
                       preferredRegion: a,
                       preferredRegions: o,
-                      flags: d,
+                      flags: _,
                   });
         }
     })(tu);
 (tu.handleIdentify = () => {
-    let e = p.default.getToken();
-    if ((t_.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
-    let t = L.A.getState(),
-        n = p.default.getInstallationForTracking();
+    let e = I.default.getToken();
+    if ((td.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
+    let t = v.A.getState(),
+        n = I.default.getInstallationForTracking();
     return {
         token: e,
         properties: {
-            ...b.default.getSuperProperties(),
+            ...w.default.getSuperProperties(),
             client_app_state: t,
             is_fast_connect: !1,
-            gateway_connect_reasons: td.L7(),
+            gateway_connect_reasons: t_.L7(),
             ...(null != n ? { installation_id: n } : {}),
         },
         presence: tc.getInitialState(),
     };
 }),
     (0, y.isDesktop)() &&
-        D.A.powerMonitor.on("resume", () => {
+        L.A.powerMonitor.on("resume", () => {
             tu.expeditedHeartbeat(5e3, "power monitor resumed");
         }),
-    w.A.addOfflineCallback(() => {
+    P.A.addOfflineCallback(() => {
         tu.networkStateChange(15e3, "network detected offline.", !1);
     }),
-    w.A.addOnlineCallback(() => {
+    P.A.addOnlineCallback(() => {
         tu.networkStateChange(5e3, "network detected online.");
     }),
     tu.on("disconnect", (e) => {
@@ -2156,32 +2156,32 @@ var th = n(73825),
     tm = n(803306),
     tf = n(821956),
     tg = n(628856),
-    tp = n(945096),
+    tI = n(945096),
     tA = n(692744),
-    tI = n(814890),
+    tp = n(814890),
     tT = n(505527),
     tS = n(853811),
     tN = n(381438);
-let tC = (0, n(945810).mj)({
+let tO = (0, n(945810).mj)({
     kind: "user",
     name: "2026-02-content-classification-presence-filter",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
 var tR = n(756377),
-    tO = n(736130),
+    tC = n(736130),
     ty = n(761821),
-    tv = n(95701),
-    tD = n(545934),
-    tL = n(889227),
-    tb = n(696451),
-    tw = n(186111),
-    tP = n(628965),
+    tD = n(95701),
+    tL = n(545934),
+    tv = n(889227),
+    tw = n(696451),
+    tP = n(186111),
+    tb = n(628965),
     tk = n(977997),
-    tM = n(97352),
-    tU = n(166403),
-    tx = n(107351),
-    tG = n(531743),
+    tU = n(97352),
+    tM = n(166403),
+    tG = n(107351),
+    tx = n(531743),
     tV = n(45773);
 let tF = null,
     tB = {};
@@ -2190,7 +2190,7 @@ function tH(e, t, n) {
         ? null
         : n(tF.guild);
 }
-function tj(e, t) {
+function tY(e, t) {
     let n = [];
     return (
         t?.forEach((t) => {
@@ -2220,9 +2220,9 @@ function tW(e) {
               roles: { op: "full_sync", items: e.roles },
               stage_instances: e.stage_instances,
               stickers: { op: "full_sync", items: e.stickers },
-              threads: e.threads?.map((t) => (0, tv.UE)(t, e.id)) ?? [],
-              threadMessages: tK(e.threads),
-              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, tv.UE)(t, e.id))) },
+              threads: e.threads?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
+              threadMessages: tj(e.threads),
+              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, tD.UE)(t, e.id))) },
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           }
@@ -2231,7 +2231,7 @@ function tW(e) {
               dataMode: e.data_mode,
               channels: {
                   op: "update",
-                  writes: e.partial_updates.channels?.map((t) => (0, tv.UE)(t, e.id)) ?? [],
+                  writes: e.partial_updates.channels?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
                   deletes: e.partial_updates.deleted_channel_ids ?? [],
               },
               channelTimestampUpdates: e.channel_updates,
@@ -2260,13 +2260,13 @@ function tW(e) {
                   deletes: e.partial_updates.deleted_sticker_ids ?? [],
               },
               unableToSyncDeletes: e.unable_to_sync_deletes,
-              threads: e.threads?.map((t) => (0, tv.UE)(t, e.id)) ?? [],
-              threadMessages: tK(e.threads),
+              threads: e.threads?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
+              threadMessages: tj(e.threads),
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           };
 }
-function tY(e) {
+function tK(e) {
     return "partial" !== e.data_mode
         ? {
               id: e.id,
@@ -2280,8 +2280,8 @@ function tY(e) {
               properties: e.properties,
               roles: { op: "full_sync", items: e.roles },
               stage_instances: e.stage_instances,
-              threads: e.threads?.map((t) => (0, tv.UE)(t, e.id)) ?? [],
-              threadMessages: tK(e.threads),
+              threads: e.threads?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
+              threadMessages: tj(e.threads),
               presences: e.presences,
               activity_instances: e.activity_instances,
               voice_states: e.voice_states,
@@ -2289,13 +2289,13 @@ function tY(e) {
               hasThreadsSubscription: e.has_threads_subscription,
               emojis: { op: "full_sync", items: e.emojis },
               stickers: { op: "full_sync", items: e.stickers },
-              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, tv.UE)(t, e.id))) },
+              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, tD.UE)(t, e.id))) },
           }
         : {
               id: e.id,
               channels: {
                   op: "update",
-                  writes: e.partial_updates.channels?.map((t) => (0, tv.UE)(t, e.id)) ?? [],
+                  writes: e.partial_updates.channels?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
                   deletes: e.partial_updates.deleted_channel_ids ?? [],
               },
               channelTimestampUpdates: e.channel_updates,
@@ -2326,20 +2326,20 @@ function tY(e) {
                   deletes: e.partial_updates.deleted_sticker_ids ?? [],
               },
               unableToSyncDeletes: e.unable_to_sync_deletes,
-              threads: e.threads?.map((t) => (0, tv.UE)(t, e.id)) ?? [],
-              threadMessages: tK(e.threads),
+              threads: e.threads?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
+              threadMessages: tj(e.threads),
               voice_states: e.voice_states,
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           };
 }
-function tK(e) {
+function tj(e) {
     let t = [];
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
     return t;
 }
-let tz = new h.A("ConnectionStore");
-function t$(e) {
+let t$ = new h.A("ConnectionStore");
+function tz(e) {
     return e.map((e) => {
         let t = e.timestamps?.end,
             n = e.created_at;
@@ -2348,18 +2348,18 @@ function t$(e) {
             : e;
     });
 }
-let tq = new eI(
+let tq = new ep(
         tu,
         (e, t) => {
             e = e ?? { type: "CHANNEL_UPDATES", channels: [] };
-            let n = (0, tv.UE)(t),
-                i = I.A.getChannel(t.id),
+            let n = (0, tD.UE)(t),
+                i = p.A.getChannel(t.id),
                 r = i?.merge({ ...n, recipients: i.recipients, bitrate: n.bitrate ?? i.bitrate });
             return e.channels.push(r ?? n), e;
         },
         (e) => "CHANNEL_UPDATE" !== e,
     ),
-    tX = new eI(
+    tX = new ep(
         tu,
         (e, t) => (
             (e = null == e ? { type: "SOUNDBOARD_SOUNDS_RECEIVED", updates: [] } : e).updates.push({
@@ -2379,22 +2379,22 @@ let tq = new eI(
         ),
         (e) => "SOUNDBOARD_SOUNDS" !== e,
     ),
-    tZ = new eI(
+    tQ = new ep(
         tu,
         (e, t) => ((e = e ?? { type: "GUILD_MEMBERS_CHUNK_BATCH", chunks: [] }).chunks.push(t), e),
         (e) => "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    tQ = new eI(
+    tJ = new ep(
         tu,
         (e, t) => ((e = null == e ? { type: "PRESENCE_UPDATES", updates: [] } : e).updates.push(t), e),
         (e) => "PRESENCE_UPDATE" !== e && "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    tJ = {};
+    tZ = {};
 function t0(e, t) {
-    for (let n of e) tJ[n] = { preload: () => null, dispatch: t };
+    for (let n of e) tZ[n] = { preload: () => null, dispatch: t };
 }
 function t1(e, t, n) {
-    for (let i of e) tJ[i] = { preload: t, dispatch: n };
+    for (let i of e) tZ[i] = { preload: t, dispatch: n };
 }
 function t2(e) {
     let t = [];
@@ -2421,7 +2421,7 @@ function t2(e) {
 }
 function t3(e) {
     c.h.dispatch(e).catch((t) => {
-        tz.error(`dispatchOrResetSocket error during ${e.type}:`, t),
+        t$.error(`dispatchOrResetSocket error during ${e.type}:`, t),
             tu.resetSocketOnDispatchError({ error: t, action: e.type });
     });
 }
@@ -2433,29 +2433,29 @@ function t6(e, t, n) {
             avatar_decoration_data: a,
             flags: o,
             premium_since: l,
-            pending: _,
+            pending: d,
             joined_at: u,
             communication_disabled_until: c,
             unusual_dm_activity_until: E,
             collectibles: h,
             display_name_styles: m,
         } = n,
-        f = tb.Ay.getMember(e, t.id),
+        f = tw.Ay.getMember(e, t.id),
         g = (0, tg.t)(h),
-        p = (0, tp.mT)(m);
+        I = (0, tI.mT)(m);
     (null != f &&
         f.nick === r &&
         f.avatar === s &&
-        d().isEqual(f.roles, i) &&
+        _().isEqual(f.roles, i) &&
         (0, tf.kn)(f.avatarDecoration ?? null, a ?? null) &&
         f.premiumSince === l &&
-        f.isPending === _ &&
+        f.isPending === d &&
         f.joinedAt === u &&
         f.communicationDisabledUntil === c &&
         f.flags === o &&
         (f.unusualDMActivityUntil ?? null) === (E ?? null) &&
-        d().isEqual(f.collectibles ?? null, g ?? null) &&
-        d().isEqual(f.displayNameStyles ?? null, p ?? null)) ||
+        _().isEqual(f.collectibles ?? null, g ?? null) &&
+        _().isEqual(f.displayNameStyles ?? null, I ?? null)) ||
         t3({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -2465,13 +2465,13 @@ function t6(e, t, n) {
             avatar: s,
             avatarDecoration: a,
             premiumSince: l,
-            isPending: _,
+            isPending: d,
             joinedAt: u,
             communicationDisabledUntil: c,
             unusualDMActivityUntil: E,
             flags: o,
             collectibles: g,
-            displayNameStyles: p,
+            displayNameStyles: I,
         });
 }
 function t4(e) {
@@ -2490,7 +2490,7 @@ function t7(e) {
         sessionId: e.session_id,
         lastModified: e.last_modified,
         status: e.status,
-        activities: t$(e.activities ?? []),
+        activities: tz(e.activities ?? []),
         hiddenActivities: e.hidden_activities ?? [],
         active: !!e.active,
         clientInfo: e.client_info,
@@ -2501,7 +2501,7 @@ function t5(e, t) {
 }
 function t8(e, t) {
     let n = (function (e, t) {
-        let { enabled: n } = tC.getConfig({ location: "presence_filtering" });
+        let { enabled: n } = tO.getConfig({ location: "presence_filtering" });
         if (!n) return { activities: e, hiddenActivities: t };
         let i = [],
             r = [];
@@ -2523,24 +2523,24 @@ function t8(e, t) {
         user: e.user,
         status: e.status,
         clientStatus: e.client_status,
-        activities: t$(n.activities),
+        activities: tz(n.activities),
         hiddenActivities: n.hiddenActivities,
         guildId: t,
         processedAtTimestamp: e.processed_at_timestamp,
     };
 }
 function t9(e) {
-    tQ.add(e);
+    tJ.add(e);
 }
 t1(
     ["INITIAL_GUILD"],
-    (e) => ("full" === e.data_mode ? null : I.D.loadGuildIds([e.id])),
+    (e) => ("full" === e.data_mode ? null : p.D.loadGuildIds([e.id])),
     (e) => {
-        Z.A.initialGuild.measure(() => {
-            _.Ay.Emitter.batched(() => {
+        Q.A.initialGuild.measure(() => {
+            d.Ay.Emitter.batched(() => {
                 var t;
                 let n,
-                    i = ((t = tu.identifyStartTime), (n = tY(e)), (tF = { guild: e, identifyTime: t }), n);
+                    i = ((t = tu.identifyStartTime), (n = tK(e)), (tF = { guild: e, identifyTime: t }), n);
                 null != ef.default.getCurrentUser() &&
                     (t3({ type: "GUILD_CREATE", guild: i }),
                     t3({
@@ -2562,22 +2562,22 @@ t1(
                             connectedAt: e.connected_at,
                         })),
                     }),
-                    tz.log(`Dispatched INITIAL_GUILD ${e.id}`));
+                    t$.log(`Dispatched INITIAL_GUILD ${e.id}`));
             });
         });
     },
 ),
     t0(["READY_SUPPLEMENTAL"], (e) => {
-        Z.A.readySupplemental.measure(() => {
-            _.Ay.Emitter.batched(() => {
-                let t = (e = Z.A.hydrateReadySupplemental.measure(() =>
+        Q.A.readySupplemental.measure(() => {
+            d.Ay.Emitter.batched(() => {
+                let t = (e = Q.A.hydrateReadySupplemental.measure(() =>
                     (function (e, t) {
                         let { guilds: n, merged_members: i, merged_presences: r, ...s } = e,
-                            a = tj(tB, r?.friends),
+                            a = tY(tB, r?.friends),
                             o =
                                 n?.map((e, t) => {
-                                    let n = tj(tB, r?.guilds[t]),
-                                        s = tj(tB, i?.[t]);
+                                    let n = tY(tB, r?.guilds[t]),
+                                        s = tY(tB, i?.[t]);
                                     return { ...e, unavailable: void 0 === e.voice_states, presences: n, members: s };
                                 }) ?? [],
                             l = tH(t, n, (e) => ({
@@ -2595,8 +2595,8 @@ t1(
                     e.presences = t5(e.presences || [], e.id);
                 });
                 let n = t5(e.presences ?? [], void 0),
-                    i = (e.lazy_private_channels ?? []).map((e) => (0, tv.UE)(e));
-                Z.A.dispatchReadySupplemental.measure(() => {
+                    i = (e.lazy_private_channels ?? []).map((e) => (0, tD.UE)(e));
+                Q.A.dispatchReadySupplemental.measure(() => {
                     t3({ type: "CONNECTION_OPEN_SUPPLEMENTAL", guilds: t, presences: n, lazyPrivateChannels: i });
                 });
                 let r = [];
@@ -2632,12 +2632,12 @@ t1(
             let t,
                 n,
                 i =
-                    ((t = j.A.database()),
-                    (n = (0, q.O)() ? K.getCommittedVersions() : Promise.resolve({})),
+                    ((t = Y.A.database()),
+                    (n = (0, q.O)() ? j.getCommittedVersions() : Promise.resolve({})),
                     Promise.all([
                         n,
-                        (0, q.O)() ? tG.A.getGuildIds() : Promise.resolve(new Set()),
-                        null != t ? z.A.okAsync(t) : Promise.resolve(!1),
+                        (0, q.O)() ? tx.A.getGuildIds() : Promise.resolve(new Set()),
+                        null != t ? $.A.okAsync(t) : Promise.resolve(!1),
                     ]).then((e) => {
                         let [t, n, i] = e;
                         return { guildVersions: t, guildChannels: n, databaseOk: i };
@@ -2652,7 +2652,7 @@ t1(
                                 void 0),
                     )
                     .map((e) => e.id);
-            return Promise.all([i, I.D.loadGuildIds(r) ?? Promise.resolve()]).then((e) => {
+            return Promise.all([i, p.D.loadGuildIds(r) ?? Promise.resolve()]).then((e) => {
                 let [t] = e;
                 return t;
             });
@@ -2660,15 +2660,15 @@ t1(
         (e, t, n) => {
             e.user.bot
                 ? t3({ type: "LOGOUT" })
-                : Z.A.ready.measure(() => {
-                      _.Ay.Emitter.batched(() => {
-                          let t = (e = Z.A.hydrateReady.measure(() =>
+                : Q.A.ready.measure(() => {
+                      d.Ay.Emitter.batched(() => {
+                          let t = (e = Q.A.hydrateReady.measure(() =>
                                   (function (e, t, n) {
                                       let { users: i, private_channels: r, merged_members: s, guilds: a, ...o } = e;
-                                      null != j.A.database() &&
+                                      null != Y.A.database() &&
                                           !1 === n.databaseOk &&
                                           tV.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
-                                          (tB = d().keyBy(i, (e) => e.id)),
+                                          (tB = _().keyBy(i, (e) => e.id)),
                                           r?.forEach((e) => {
                                               let t = e.recipient_ids;
                                               null != t &&
@@ -2685,22 +2685,22 @@ t1(
                                           });
                                       let l =
                                               a?.map((e, t) =>
-                                                  !0 === e.unavailable ? e : ((e.members = tj(tB, s?.[t])), tW(e)),
+                                                  !0 === e.unavailable ? e : ((e.members = tY(tB, s?.[t])), tW(e)),
                                               ) ?? [],
-                                          _ = tH(t, a, (e) => tW(e));
+                                          d = tH(t, a, (e) => tW(e));
                                       return (
-                                          null != _ && l.push(_),
+                                          null != d && l.push(d),
                                           { ...o, users: i, presences: [], guilds: l, private_channels: r ?? [] }
                                       );
                                   })(e, tu.identifyStartTime, n),
-                              )).private_channels.map((e) => (0, tv.UE)(e)),
+                              )).private_channels.map((e) => (0, tD.UE)(e)),
                               i = e.guilds
                                   .filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted)
                                   .map((e) => e.id),
                               r = e.guilds.filter((e) => !0 !== e.unavailable),
                               s = e.guilds.filter((e) => !0 === e.geo_restricted),
                               a = null == e.user_settings_proto ? void 0 : (0, ty.Gd)(e.user_settings_proto);
-                          Z.A.dispatchReady.measure(() => {
+                          Q.A.dispatchReady.measure(() => {
                               t3({
                                   type: "CONNECTION_OPEN",
                                   sessionId: e.session_id,
@@ -2793,7 +2793,7 @@ t1(
     }),
     t1(
         ["MESSAGE_CREATE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             t4(e),
                 null != e.author &&
@@ -2809,28 +2809,28 @@ t1(
     ),
     t1(
         ["MESSAGE_UPDATE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             t4(e), t3({ type: "MESSAGE_UPDATE", guildId: e.guild_id, message: e });
         },
     ),
     t1(
         ["MESSAGE_DELETE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             t3({ type: "MESSAGE_DELETE", guildId: e.guild_id, id: e.id, channelId: e.channel_id });
         },
     ),
     t1(
         ["MESSAGE_DELETE_BULK"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             t3({ type: "MESSAGE_DELETE_BULK", guildId: e.guild_id, ids: e.ids, channelId: e.channel_id });
         },
     ),
     t1(
         ["MESSAGE_ACK"],
-        (e) => I.D.loadGuildFromChannelId(e.channel_id),
+        (e) => p.D.loadGuildFromChannelId(e.channel_id),
         (e) => {
             t3({
                 type: "MESSAGE_ACK",
@@ -2850,23 +2850,23 @@ t1(
     }),
     t1(
         ["CHANNEL_PINS_ACK"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             t3({ type: "CHANNEL_PINS_ACK", channelId: e.channel_id, timestamp: e.timestamp, version: e.version });
         },
     ),
     t1(
         ["CHANNEL_PINS_UPDATE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             t3({ type: "CHANNEL_PINS_UPDATE", channelId: e.channel_id, lastPinTimestamp: e.last_pin_timestamp });
         },
     ),
     t1(
         ["CHANNEL_CREATE", "CHANNEL_DELETE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e, t) => {
-            t3({ type: t, channel: (0, tv.UE)(e) });
+            t3({ type: t, channel: (0, tD.UE)(e) });
         },
     ),
     t0(["VOICE_CHANNEL_STATUS_UPDATE"], (e, t) => {
@@ -2887,32 +2887,32 @@ t1(
     }),
     t1(
         ["CHANNEL_UPDATE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             tq.add(e);
         },
     ),
     t1(
         ["THREAD_CREATE", "THREAD_UPDATE", "THREAD_DELETE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n, ...i } = e;
-            t3({ type: t, isNewlyCreated: n, channel: (0, tv.UE)(i) });
+            t3({ type: t, isNewlyCreated: n, channel: (0, tD.UE)(i) });
         },
     ),
     t1(
         ["THREAD_LIST_SYNC"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             t3({
                 type: "THREAD_LIST_SYNC",
                 guildId: e.guild_id,
                 threads: e.threads.map((e) => {
-                    let t = I.A.getChannel(e.parent_id);
-                    return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, tv.UE)(e);
+                    let t = p.A.getChannel(e.parent_id);
+                    return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, tD.UE)(e);
                 }),
                 mostRecentMessages: e.most_recent_messages,
-                members: e.members ? d().map(e.members, tO.A) : void 0,
+                members: e.members ? _().map(e.members, tC.A) : void 0,
                 channelIds: e.channel_ids,
             });
         },
@@ -2958,16 +2958,16 @@ t1(
         tX.add(e);
     }),
     t0(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
-        let n = I.A.getBasicChannel(e.channel_id);
+        let n = p.A.getBasicChannel(e.channel_id);
         t3({ type: t, channelId: e.channel_id, user: e.user, nick: e.nick, isMember: null != n });
     }),
     t1(
         ["GUILD_CREATE"],
-        (e) => ("full" === e.data_mode ? null : I.D.loadGuildIds([e.id])),
+        (e) => ("full" === e.data_mode ? null : p.D.loadGuildIds([e.id])),
         (e) => {
             if (e.unavailable) t3({ type: "GUILD_UNAVAILABLE", guildId: e.id });
             else {
-                let t = tY(e);
+                let t = tK(e);
                 t3({ type: "GUILD_CREATE", guild: t }),
                     t3({
                         type: "VOICE_STATE_UPDATES",
@@ -3021,17 +3021,17 @@ t1(
                 : e.unavailable && t3({ type: "GUILD_UNAVAILABLE", guildId: e.id });
     }),
     t0(["GUILD_MEMBERS_CHUNK"], (e) => {
-        _.Ay.Emitter.batched(() => {
-            tZ.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
+        d.Ay.Emitter.batched(() => {
+            tQ.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
                 null != e.presences && t5(e.presences, e.guild_id).forEach(t9),
-                eI.flush("GUILD_MEMBERS_CHUNK");
+                ep.flush("GUILD_MEMBERS_CHUNK");
         });
     }),
     t0(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
-        _.Ay.Emitter.batched(() => {
+        d.Ay.Emitter.batched(() => {
             t3({ type: "THREAD_MEMBER_LIST_UPDATE", guildId: e.guild_id, threadId: e.thread_id, members: e.members }),
                 null != e.presences && t5(e.presences, e.guild_id).forEach(t9),
-                eI.flush();
+                ep.flush();
         });
     }),
     t0(
@@ -3052,20 +3052,20 @@ t1(
                 unusualDMActivityUntil: e.unusual_dm_activity_until,
                 flags: e.flags,
                 collectibles: (0, tg.t)(e.collectibles),
-                displayNameStyles: (0, tp.mT)(e.display_name_styles),
+                displayNameStyles: (0, tI.mT)(e.display_name_styles),
             });
         },
     ),
     t1(
         ["GUILD_ROLE_CREATE", "GUILD_ROLE_UPDATE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e, t) => {
             t3({ type: t, guildId: e.guild_id, role: e.role });
         },
     ),
     t1(
         ["GUILD_ROLE_DELETE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             t3({ type: "GUILD_ROLE_DELETE", guildId: e.guild_id, roleId: e.role_id, version: e.version });
         },
@@ -3312,24 +3312,27 @@ t1(
         t3({ type: t, entitlement: e });
     }),
     t0(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        (tw.A.hasLayers() || null != tP.A.getSection()) && (n(323082).$o(), th.jv(tM.A.getFetchedSKUIDs()));
+        (tP.A.hasLayers() || null != tb.A.getSection()) && (n(323082).$o(), th.jv(tU.A.getFetchedSKUIDs()));
     }),
     t0(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-        tm.rQ(), (tw.A.hasLayers() || null != tP.A.getSection()) && n(323082).hP();
+        tm.rQ(), (tP.A.hasLayers() || null != tb.A.getSection()) && n(323082).hP();
     }),
     t0(["WISHLIST_ITEM_PURCHASED"], (e) => {
         t3({ type: "WISHLIST_ITEM_PURCHASED", recipientId: e.recipient_id, skuId: e.sku_id });
     }),
+    t0(["USER_BADGE_STATE_UPDATE"], (e) => {
+        n(682618).o(e.badge_id);
+    }),
     t0(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (e) => {
         t3({
             type: "GUILD_BOOST_SLOT_CREATE",
-            guildBoostSlot: tD.A.createFromServer(e, tU.A.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: tL.A.createFromServer(e, tM.A.getSubscriptionById(e.subscription_id)),
         });
     }),
     t0(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], (e) => {
         t3({
             type: "GUILD_BOOST_SLOT_UPDATE",
-            guildBoostSlot: tD.A.createFromServer(e, tU.A.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: tL.A.createFromServer(e, tM.A.getSubscriptionById(e.subscription_id)),
         });
     }),
     t0(["BILLING_POPUP_BRIDGE_CALLBACK"], (e) => {
@@ -3350,13 +3353,13 @@ t1(
         });
     }),
     t0(["USER_PAYMENT_CLIENT_ADD"], (e) => {
-        (0, tx.D)().then((t) => {
+        (0, tG.D)().then((t) => {
             let n = e.purchase_token_hash;
             n === t && t3({ type: "USER_PAYMENT_CLIENT_ADD", purchaseTokenHash: n, expiresAt: e.expires_at });
         });
     }),
     t0(["GUILD_MEMBER_LIST_UPDATE"], (e) => {
-        _.Ay.Emitter.batched(() => {
+        d.Ay.Emitter.batched(() => {
             let t = (t) => {
                 if (null == t.member) return;
                 let { member: n } = t;
@@ -3375,7 +3378,7 @@ t1(
                         t(r);
                 }
             }),
-                eI.flush(),
+                ep.flush(),
                 t3({
                     type: "GUILD_MEMBER_LIST_UPDATE",
                     guildId: e.guild_id,
@@ -3502,7 +3505,7 @@ t1(
             customId: e.custom_id,
             application: e.application,
             title: e.title,
-            components: (0, tI.ZV)(e.components),
+            components: (0, tp.ZV)(e.components),
             nonce: e.nonce,
             resolved: e.resolved,
         });
@@ -3615,7 +3618,7 @@ t1(
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new tL.A(e.user),
+                user: new tv.A(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -3631,7 +3634,7 @@ t1(
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new tL.A(e.user),
+                user: new tv.A(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -3661,7 +3664,7 @@ t1(
     }),
     t1(
         ["EMBEDDED_ACTIVITY_UPDATE_V2"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             t3({
                 type: "EMBEDDED_ACTIVITY_UPDATE_V2",
@@ -3698,7 +3701,7 @@ t1(
     }),
     t1(
         ["CHANNEL_SYNC"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             e.channels.forEach((e) => {
                 tq.add(e);
@@ -3716,7 +3719,7 @@ t1(
     }),
     t1(
         ["PASSIVE_UPDATE_V2"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
             t3({
                 type: "PASSIVE_UPDATE_V2",
@@ -3847,7 +3850,7 @@ t1(
 var ne = n(355097);
 let nt = window.DiscordNative;
 tu.dispatcher.getDispatchHandler = function (e) {
-    return tJ[e];
+    return tZ[e];
 };
 let nn = new h.A("ConnectionStore"),
     ni = 0,
@@ -3858,7 +3861,7 @@ let nn = new h.A("ConnectionStore"),
 async function nl(e) {
     (ni = Date.now()), (nr = e.sessionId), tc.handleConnectionOpen();
     let t = {},
-        n = C.A.getVoiceChannelId();
+        n = O.A.getVoiceChannelId();
     if (null != n) {
         let e = u.w.get("discord_watchdog_restart_timestamp"),
             i = null != e && Date.now() - parseInt(e, 10) < 6e4;
@@ -3869,16 +3872,16 @@ async function nl(e) {
                 (await nt?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
                 !ns)
         ) {
-            let e = I.A.getChannel(n);
+            let e = p.A.getChannel(n);
             null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, f.CX)(n));
         } else S.A.setLastSessionVoiceChannelId(null != n ? n : null), E.default.selectVoiceChannel(null);
     }
     tE.update(t, !0), (ns = !1), (no = null);
 }
-function nd() {
+function n_() {
     tE.update();
 }
-function n_() {
+function nd() {
     return tE.update(), !1;
 }
 function nu() {
@@ -3887,11 +3890,11 @@ function nu() {
 function nc(e) {
     tu.isSessionEstablished() && tu.streamDelete(e);
 }
-class nE extends _.Ay.Store {
+class nE extends d.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        this.waitFor(p.default, A.A, I.A, T.Ay, S.A, N.A, C.A, R.A, O.A, g.A),
-            this.syncWith([T.Ay], n_),
+        this.waitFor(I.default, A.A, p.A, T.Ay, S.A, N.A, O.A, R.A, C.A, g.A),
+            this.syncWith([T.Ay], nd),
             this.syncWith([R.A], nu);
     }
     getSocket() {
@@ -3947,14 +3950,14 @@ let nh = new nE(c.h, {
             (no = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
             (0, y.isIOS)() &&
                 na === eg.g6G.BACKGROUND &&
-                (null == e.channelId ? tu.close(!0) : tu.isClosed() && ((eQ = !1), tu.connect())),
+                (null == e.channelId ? tu.close(!0) : tu.isClosed() && ((eJ = !1), tu.connect())),
             !1
         );
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return t.reduce((e, t) => {
-            if (p.default.getId() !== t.userId) return e;
+            if (I.default.getId() !== t.userId) return e;
             if (t.sessionId === nr) {
                 if (null != no)
                     return nn.verbose("Ignoring voice state for own session due to VSU lock on channel:", no), e;
@@ -3983,16 +3986,16 @@ let nh = new nE(c.h, {
     APP_STATE_UPDATE: function (e) {
         return (
             (0, y.isIOS)()
-                ? (p.default.isAuthenticated() &&
+                ? (I.default.isAuthenticated() &&
                       (na === eg.g6G.INACTIVE && e.state === eg.g6G.BACKGROUND && null == tE.channelId
                           ? tu.close(!0)
                           : na === eg.g6G.BACKGROUND &&
                             e.state === eg.g6G.ACTIVE &&
                             tu.isClosed() &&
-                            ((eQ = !1), tu.connect())),
+                            ((eJ = !1), tu.connect())),
                   (na = e.state))
                 : e.state === eg.g6G.ACTIVE &&
-                  ((eQ = !1), p.default.isAuthenticated() && tu.resetBackoff("App state is active")),
+                  ((eJ = !1), I.default.isAuthenticated() && tu.resetBackoff("App state is active")),
             !1
         );
     },
@@ -4000,7 +4003,7 @@ let nh = new nE(c.h, {
         return (
             tu.isSessionEstablished() &&
                 ("userIds" in e
-                    ? d()(e.userIds)
+                    ? _()(e.userIds)
                           .chunk(100)
                           .forEach((t) => {
                               tu.requestGuildMembers(e.guildIds, { userIds: t, presences: !!e.presences });
@@ -4031,11 +4034,11 @@ let nh = new nE(c.h, {
             !1
         );
     },
-    STREAM_CREATE: nd,
+    STREAM_CREATE: n_,
     STREAM_START: function (e) {
         let { streamType: t, guildId: n, channelId: i } = e;
         if (tu.isSessionEstablished()) {
-            let e = null != n ? I.A.getChannel(i)?.rtcRegion : A.A.getCall(i)?.region;
+            let e = null != n ? p.A.getChannel(i)?.rtcRegion : A.A.getCall(i)?.region;
             tu.streamCreate(t, n, i, e ?? N.A.getPreferredRegion());
         }
         return !1;
@@ -4046,8 +4049,8 @@ let nh = new nE(c.h, {
             if (n);
             else {
                 let e;
-                (e = O.A.getAllActiveStreamKeys().find((e) => (0, m.Iy)(e).ownerId === p.default.getId())),
-                    O.A.getAllActiveStreamKeys()
+                (e = C.A.getAllActiveStreamKeys().find((e) => (0, m.Iy)(e).ownerId === I.default.getId())),
+                    C.A.getAllActiveStreamKeys()
                         .filter((t) => t !== e)
                         .forEach((e) => nc(e));
             }
@@ -4057,7 +4060,7 @@ let nh = new nE(c.h, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return nc(t), nd(), !1;
+        return nc(t), n_(), !1;
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;
@@ -4079,13 +4082,13 @@ let nh = new nE(c.h, {
         return tu.isSessionEstablished() && tu.remoteCommand(t, n), !1;
     },
     RESET_SOCKET: function (e) {
-        tu.connectionState !== v.WILL_RECONNECT && tu.resetSocketAndClearCacheOnError(e.args);
+        tu.connectionState !== D.WILL_RECONNECT && tu.resetSocketAndClearCacheOnError(e.args);
     },
-    CLIPS_SETTINGS_UPDATE: nd,
-    RUNNING_GAMES_CHANGE: nd,
+    CLIPS_SETTINGS_UPDATE: n_,
+    RUNNING_GAMES_CHANGE: n_,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         e.settings.type === ne.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
-            nd();
+            n_();
     },
 });
