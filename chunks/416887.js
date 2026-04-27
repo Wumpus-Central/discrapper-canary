@@ -1,26 +1,27 @@
-a.d(t, { L: () => c });
-var r = a(64700),
-    n = a(132500),
-    l = a(313271);
-let i = (0, n.A)(),
-    s = new Map(),
+"use strict";
+r.d(t, { L: () => c });
+var n = r(64700),
+    i = r(132500),
+    a = r(313271);
+let s = (0, i.A)(),
+    l = new Map(),
     o = new Map();
-class c extends r.Component {
+class c extends n.Component {
     elementId;
     isVisible = !1;
     static defaultProps = {
         active: !0,
-        children: r.createElement("span"),
+        children: n.createElement("span"),
         root: null,
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, 5e-324],
     };
     constructor(e) {
         super(e);
-        const { root: t, rootMargin: a, threshold: r } = e;
-        t ? (s.has(t) ? (this.elementId = s.get(t) || "") : s.set(t, (0, n.A)())) : (this.elementId = i);
+        const { root: t, rootMargin: r, threshold: n } = e;
+        t ? (l.has(t) ? (this.elementId = l.get(t) || "") : l.set(t, (0, i.A)())) : (this.elementId = s);
         const c = this.getVisibilityObserverId();
-        o.has(c) || o.set(c, new l.j({ root: t, rootMargin: a, threshold: r }));
+        o.has(c) || o.set(c, new a.j({ root: t, rootMargin: r, threshold: n }));
     }
     componentDidMount() {
         if (this.props.active) {
@@ -32,12 +33,12 @@ class c extends r.Component {
     }
     componentDidUpdate(e) {
         let t = this.getVisibilityObserver(),
-            a = t.isVisible(this);
-        this.props.active && a !== this.isVisible && this.props.onChange(a),
+            r = t.isVisible(this);
+        this.props.active && r !== this.isVisible && this.props.onChange(r),
             !e.active && this.props.active
                 ? t.observe(this, this.props.innerRef)
                 : e.active && !this.props.active && t.unobserve(this),
-            (this.isVisible = a);
+            (this.isVisible = r);
     }
     componentWillUnmount() {
         this.getVisibilityObserver().unobserve(this);
@@ -53,6 +54,6 @@ class c extends r.Component {
         return t;
     }
     render() {
-        return r.Children.only(this.props.children);
+        return n.Children.only(this.props.children);
     }
 }

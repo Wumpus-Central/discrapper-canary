@@ -1,4 +1,5 @@
-a.r(
+"use strict";
+r.r(
     (e.exports = {
         caret: "caret__6ec79",
         "caret--bottom": "caret--bottom__6ec79",
