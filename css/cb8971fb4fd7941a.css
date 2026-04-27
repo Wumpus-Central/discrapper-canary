@@ -4774,8 +4774,8 @@ screen and (max-width:485px) {
 }
 
 .card_ac86f6.giftSelectionModalContext_ac86f6 .cardTitle_ac86f6 {
-    font-size: 30px;
-    line-height: 25px
+    font-size: 1.875rem;
+    line-height: 1.5625rem
 }
 
 .card_ac86f6.borderGradient_ac86f6 {
@@ -4990,9 +4990,9 @@ screen and (max-width:485px) {
 }
 
 .cardTitle_ac86f6 {
-    font-size: 32px;
+    font-size: 2rem;
     font-style: italic;
-    line-height: 27px;
+    line-height: 1.6875rem;
     text-transform: uppercase
 }
 

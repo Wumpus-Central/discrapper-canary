@@ -5965,6 +5965,12 @@ h3.improved__1689b:after {
     margin-top: 2px
 }
 
+.bottomLine__9271d>:first-child {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden
+}
+
 .timestamp__9271d {
     color: var(--text-muted);
     flex-shrink: 0;
