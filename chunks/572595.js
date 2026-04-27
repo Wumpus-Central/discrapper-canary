@@ -1,32 +1,31 @@
-"use strict";
-n.d(t, { M: () => d, t: () => c });
-var a = n(627968);
+n.d(t, { M: () => c, t: () => d });
+var i = n(627968);
 n(64700);
-var r = n(192308),
-    i = n(440938),
-    l = n(4227),
-    s = n(466459);
+var l = n(192308),
+    a = n(440938),
+    s = n(4227),
+    r = n(466459);
 let o = "collectibles shop product details modal",
-    c = (e) => {
+    d = (e) => {
         let {
             product: t,
-            category: c,
-            shouldCheckoutWithOrbs: d,
+            category: d,
+            shouldCheckoutWithOrbs: c,
             analyticsSource: u,
-            analyticsLocations: _,
-            returnRef: p,
+            analyticsLocations: h,
+            returnRef: _,
             tab: m,
-            giftRecipient: h,
-            giftingOrigin: f,
-            cardId: g,
-            sessionId: b,
-            tilePosition: v,
+            giftRecipient: g,
+            giftingOrigin: p,
+            cardId: A,
+            sessionId: x,
+            tilePosition: f,
         } = e;
         if (t.isCategoryReward) {
-            let { isPurchased: e } = (0, s.o)(l.A, t);
+            let { isPurchased: e } = (0, r.o)(s.A, t);
             if (!e) return;
         }
-        (0, r.openModalLazy)(
+        (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("8555"),
@@ -60,25 +59,25 @@ let o = "collectibles shop product details modal",
                     n.e("79892"),
                 ]).then(n.bind(n, 81146));
                 return (n) =>
-                    (0, a.jsx)(i.R9, {
-                        newValue: { cardId: g, sessionId: b, tilePosition: v },
-                        children: (0, a.jsx)(e, {
+                    (0, i.jsx)(a.R9, {
+                        newValue: { cardId: A, sessionId: x, tilePosition: f },
+                        children: (0, i.jsx)(e, {
                             ...n,
                             product: t,
-                            category: c,
-                            shouldCheckoutWithOrbs: d,
+                            category: d,
+                            shouldCheckoutWithOrbs: c,
                             analyticsSource: u,
-                            analyticsLocations: _,
-                            returnRef: p,
+                            analyticsLocations: h,
+                            returnRef: _,
                             tab: m,
-                            giftRecipient: h,
-                            giftingOrigin: f,
+                            giftRecipient: g,
+                            giftingOrigin: p,
                         }),
                     });
             },
             { modalKey: o },
         );
     },
-    d = () => {
-        (0, r.closeModal)(o);
+    c = () => {
+        (0, l.closeModal)(o);
     };
