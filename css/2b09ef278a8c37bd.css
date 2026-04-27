@@ -1337,6 +1337,55 @@
     overflow-y: auto
 }
 
+.container__422b8 {
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative
+}
+
+.backgroundImage__422b8 {
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 0
+}
+
+.content__422b8 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    padding: var(--space-24);
+    position: relative;
+    z-index: 1
+}
+
+.header__422b8 {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-16);
+    justify-content: space-between
+}
+
+.titleColumn__422b8 {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-8);
+    min-width: 0
+}
+
 .bannerVideoBackground_aff7d9 {
     height: 100%;
     -o-object-fit: cover;
