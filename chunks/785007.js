@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { $d: () => T, Gx: () => A, _u: () => p, nG: () => m });
+n.d(t, { $d: () => T, Gx: () => A, _u: () => I, nG: () => m });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(52724),
     l = n(939249),
-    d = n(452027),
-    _ = n(15626),
+    _ = n(452027),
+    d = n(15626),
     u = n(834730),
     c = n(818348),
     E = n(650583),
@@ -46,15 +46,15 @@ function f(e) {
             option: r,
             size: s,
             onClick: o,
-            infoClassName: d,
-            titleClassName: _,
+            infoClassName: _,
+            titleClassName: d,
             radioItemClassName: c,
             radioItemIconClassName: E,
             radioBarClassName: f,
             hasSelection: g,
-            radioPosition: p = "left",
+            radioPosition: I = "left",
             icon: A,
-            withTransparentBackground: I,
+            withTransparentBackground: p,
         } = e,
         T = r.color ?? "",
         S = n || !g,
@@ -63,24 +63,25 @@ function f(e) {
         "data-toggleable-component": "radiogroup",
         role: "radio",
         "aria-checked": n,
+        "aria-label": "string" == typeof r.name ? r.name : void 0,
         onClick: t ? void 0 : o,
         tabIndex: !t && S ? 0 : -1,
-        className: a()(h.AS, { [h.r9]: t, [h.EO]: !I }, c),
+        className: a()(h.AS, { [h.r9]: t, [h.EO]: !p }, c),
         children: (0, i.jsxs)("div", {
             style: { "--radio-bar-accent-color": T, padding: s },
-            className: a()(h.tG, { [h.go]: "left" === p, [h.Xe]: "right" === p }, f),
+            className: a()(h.tG, { [h.go]: "left" === I, [h.Xe]: "right" === I }, f),
             children: [
-                "left" === p ? N : null,
+                "left" === I ? N : null,
                 (0, i.jsxs)("div", {
-                    className: a()(h.pq, d),
+                    className: a()(h.pq, _),
                     children: [
-                        (0, i.jsx)(u.E, { variant: "text-md/medium", className: _, color: "none", children: r.name }),
+                        (0, i.jsx)(u.E, { variant: "text-md/medium", className: d, color: "none", children: r.name }),
                         null != r.desc && "" !== r.desc
                             ? (0, i.jsx)(u.E, { color: "none", variant: "text-sm/normal", children: r.desc })
                             : null,
                     ],
                 }),
-                "right" === p ? N : null,
+                "right" === I ? N : null,
             ],
         }),
     });
@@ -93,8 +94,8 @@ function g(e) {
             size: a,
             infoClassName: o,
             hasSelection: l,
-            titleClassName: d,
-            radioItemClassName: _,
+            titleClassName: _,
+            radioItemClassName: d,
             radioItemIconClassName: u,
             radioBarClassName: c,
             withTransparentBackground: E = !1,
@@ -102,18 +103,18 @@ function g(e) {
             onClick: m,
         } = e,
         g = r.useCallback((e) => (e.preventDefault(), m?.(s)), [m, s]),
-        p = n || s.disabled,
+        I = n || s.disabled,
         { icon: A } = s;
     return (0, i.jsx)(f, {
-        disabled: !!p,
+        disabled: !!I,
         checked: t,
         hasSelection: l,
         option: s,
         onClick: g,
         size: a,
         infoClassName: o,
-        titleClassName: d,
-        radioItemClassName: _,
+        titleClassName: _,
+        radioItemClassName: d,
         radioItemIconClassName: u,
         radioBarClassName: c,
         radioPosition: h,
@@ -121,7 +122,7 @@ function g(e) {
         withTransparentBackground: E,
     });
 }
-function p() {
+function I() {
     let {
             orientation: e = "vertical",
             isDisabled: t = !1,
@@ -171,29 +172,29 @@ function A(e) {
     let { isSelected: t, label: n } = e;
     return { role: "radio", tabIndex: t ? 0 : -1, "aria-label": n, "aria-checked": t };
 }
-function I(e) {
+function p(e) {
     let {
             itemInfoClassName: t,
             itemTitleClassName: n,
             radioItemClassName: s,
             collapsibleClassName: o,
             className: l,
-            value: d = null,
+            value: _ = null,
             size: u = "10px",
             radioPosition: E = "left",
             onChange: m = c.tE,
             disabled: f = !1,
             options: A = [],
-            "aria-labelledby": I,
+            "aria-labelledby": p,
             orientation: T,
             withTransparentBackground: S,
         } = e,
-        N = r.useContext(_._),
-        { ref: C, ...R } = p({ labelledBy: I ?? N?.labelId, orientation: T, isDisabled: f }),
-        O = A.some((e) => e.value === d);
+        N = r.useContext(d._),
+        { ref: O, ...R } = I({ labelledBy: p ?? N?.labelId, orientation: T, isDisabled: f }),
+        C = A.some((e) => e.value === _);
     return (0, i.jsx)("div", {
         ...R,
-        ref: C,
+        ref: O,
         className: a()(h.kL, l),
         id: N?.controlId,
         "aria-describedby": N?.describedById,
@@ -203,9 +204,9 @@ function I(e) {
             (0, i.jsx)(
                 g,
                 {
-                    hasSelection: O,
+                    hasSelection: C,
                     disabled: f,
-                    checked: d === e.value,
+                    checked: _ === e.value,
                     option: e,
                     onClick: m,
                     radioPosition: E,
@@ -225,11 +226,11 @@ function I(e) {
 }
 function T(e) {
     let { label: t, description: n, required: r, errorMessage: s, ...a } = e;
-    return (0, i.jsx)(d.D, {
+    return (0, i.jsx)(_.D, {
         label: t,
         description: n,
         required: r,
         errorMessage: s,
-        children: (0, i.jsx)(I, { ...a }),
+        children: (0, i.jsx)(p, { ...a }),
     });
 }
