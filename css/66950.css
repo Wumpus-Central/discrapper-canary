@@ -1379,7 +1379,7 @@
 .statsOverlay__1219f {
     background-color: var(--opacity-black-72);
     border-radius: 8px;
-    color: var(--text-default);
+    color: var(--white);
     display: flex;
     flex-direction: column;
     font-size: 14px;
@@ -1417,11 +1417,12 @@
 .copyButton__1219f {
     align-items: center;
     border-radius: 4px;
-    color: var(--interactive-text-default);
+    color: var(--white);
     cursor: pointer;
     display: flex;
     height: 24px;
     justify-content: center;
+    opacity: .6;
     width: 24px
 }
 
@@ -1433,7 +1434,7 @@
 .closeButton__1219f:hover,
 .copyButton__1219f:hover {
     background-color: var(--custom-opacity-white-10);
-    color: var(--interactive-text-hover)
+    opacity: 1
 }
 
 .full-motion .closeButton__1219f:active,
