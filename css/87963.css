@@ -335,6 +335,44 @@
     transform: rotateY(180deg)
 }
 
+.previewContainer_c9a5b2 {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    --custom-profile-frame-preview-scale: calc(100%/(var(--custom-profile-frame-popout-width) + var(--custom-profile-frame-overflow-horizontal)*2));
+    padding-inline: calc(var(--custom-profile-frame-overflow-horizontal)*var(--custom-profile-frame-preview-scale));
+    padding-bottom: calc(var(--custom-profile-frame-popout-overflow-bottom)*var(--custom-profile-frame-preview-scale));
+    padding-top: calc(var(--custom-profile-frame-popout-overflow-top)*var(--custom-profile-frame-preview-scale))
+}
+
+.previewContainer_c9a5b2.noBottomStaple_c9a5b2 {
+    padding-bottom: 0
+}
+
+.profileContainer_c9a5b2 {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.sampleProfile_c9a5b2 {
+    background-color: var(--background-surface-higher);
+    border-radius: var(--radius-sm);
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    width: 100%
+}
+
+.sampleProfile_c9a5b2.isMini_c9a5b2 {
+    border-radius: var(--radius-xs)
+}
+
 .externalProductWrapper__320c6 {
     align-items: center;
     display: flex;

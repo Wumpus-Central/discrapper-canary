@@ -34,8 +34,8 @@ let R = { sliderBodyClassName: y.Bz },
             ],
         });
     };
-var b = n(284009),
-    P = n.n(b),
+var P = n(284009),
+    b = n.n(P),
     L = n(702841),
     v = n(775602),
     U = n(427675),
@@ -63,9 +63,9 @@ function Y(e) {
         d = (0, U.gU)(),
         c = (0, L.bG)([j.A], () => j.A.getProduct(l)),
         p = C.useRef(!1);
-    P()(null != l, "Expected selectedSkuId"), P()(null != i, "Expected application");
+    b()(null != l, "Expected selectedSkuId"), b()(null != i, "Expected application");
     let m = d[l];
-    P()(null != m, "Expected sku");
+    b()(null != m, "Expected sku");
     let h = null != a || null != s || null != o,
         _ =
             u.length > 0
@@ -184,7 +184,7 @@ let eE = (e) => {
         S = (0, eh.V_)(c);
     if (null == c) return null;
     let [I] = c.items;
-    P()(null != I, "Product item should not be empty");
+    b()(null != I, "Product item should not be empty");
     let x = null != p && p.id !== h?.id && c.type !== X.R.BUNDLE && I.type !== X.R.NAMEPLATE && !d;
     return (0, r.jsxs)("div", {
         className: o,
@@ -240,7 +240,7 @@ let eE = (e) => {
                     (0, r.jsxs)("div", {
                         className: e_.Ug,
                         children: [
-                            (0, r.jsx)(ep.O, { product: c, fallbackLabel: null }),
+                            (0, r.jsx)(ep.O, { product: c }),
                             (0, r.jsxs)("div", {
                                 className: e_.JZ,
                                 children: [
@@ -255,6 +255,8 @@ let eE = (e) => {
                                                     return K.intl.string(K.t["7v0T9P"]);
                                                 case X.R.PROFILE_EFFECT:
                                                     return K.intl.string(K.t.wR5wOo);
+                                                case X.R.PROFILE_FRAME:
+                                                    return K.intl.string(K.t.GWrZOd);
                                                 case X.R.NAMEPLATE:
                                                     return K.intl.string(K.t.x5CoXR);
                                                 default:
@@ -313,16 +315,16 @@ function eR(e) {
     });
 }
 var eN = n(818348);
-let eb = (0, C.createContext)({
+let eP = (0, C.createContext)({
         setCustomConfettiVisible: () => {},
         confettiCanvas: null,
         hideConfirmStepConfetti: !1,
         skuIDs: [],
         analyticsLocations: [],
     }),
-    eP = () => (0, C.useContext)(eb),
+    eb = () => (0, C.useContext)(eP),
     eL = (e) => {
-        let { analyticsLocations: t, hideConfirmStepConfetti: n, confettiCanvas: l } = eP();
+        let { analyticsLocations: t, hideConfirmStepConfetti: n, confettiCanvas: l } = eb();
         return (0, r.jsx)(W, { analyticsLocations: t, hideConfetti: n, confettiCanvas: l, ...e });
     },
     ev = (0, h.Mz)(),
@@ -398,7 +400,7 @@ let eb = (0, C.createContext)({
                         activeSubscription: null,
                         purchaseType: eN.VV.ONE_TIME,
                         excludeSubscriptionPlansBySKU: !0,
-                        children: (0, r.jsx)(eb.Provider, { value: A, children: l }),
+                        children: (0, r.jsx)(eP.Provider, { value: A, children: l }),
                     }),
                 ],
             });
@@ -415,7 +417,7 @@ let eb = (0, C.createContext)({
                     children: u,
                 } = e,
                 d = i.onClose,
-                { skuIDs: c, setCustomConfettiVisible: p, analyticsLocations: m } = eP(),
+                { skuIDs: c, setCustomConfettiVisible: p, analyticsLocations: m } = eb(),
                 {
                     paymentModalSkuId: h,
                     paymentModalOnClose: _,
@@ -631,9 +633,9 @@ function ez(e) {
         { application: a } = (0, E.P5)(),
         s = (0, U.gU)(),
         { isGift: o, giftRecipient: u } = (0, _.Pv)();
-    P()(null != l, "Expected selectedSkuId"), P()(null != a, "Expected application");
+    b()(null != l, "Expected selectedSkuId"), b()(null != a, "Expected application");
     let d = s[l];
-    P()(null != d, "Expected sku");
+    b()(null != d, "Expected sku");
     let c = i.find((e) => e.sku_id === l),
         p = c?.metadata?.orbs_reward;
     if (
@@ -893,7 +895,7 @@ let ta = (0, h.Mz)(),
                                 }),
                                 R = (0, e7.fq)(x),
                                 N = (0, e7.xf)(x),
-                                b = (function (e) {
+                                P = (function (e) {
                                     let { shouldFetchIfMissing: t } =
                                             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                                         n = (0, e7.bF)(e),
@@ -912,7 +914,7 @@ let ta = (0, h.Mz)(),
                                         n ? a : null
                                     );
                                 })(x, { shouldFetchIfMissing: !0 }),
-                                P = async (e, t) => {},
+                                b = async (e, t) => {},
                                 L = (e) => {
                                     null != h && h(null == e ? void 0 : e);
                                 },
@@ -950,7 +952,7 @@ let ta = (0, h.Mz)(),
                                                 ? (0, r.jsx)(eS.Z, { giftRecipient: d })
                                                 : (0, r.jsx)(eA.A, {
                                                       selectedSkuId: f,
-                                                      validateSelectedGift: P,
+                                                      validateSelectedGift: b,
                                                       recipients: I,
                                                   }),
                                             (0, r.jsx)(ef.A, {
@@ -1014,9 +1016,9 @@ let ta = (0, h.Mz)(),
                                                     Icon: eB.C,
                                                     text: K.intl.format(K.t["ZV+aS9"], { orbCount: e }),
                                                 }),
-                                            null != b &&
+                                            null != P &&
                                                 null != x &&
-                                                (0, r.jsx)(ti, { handleClose: s, sku: x, guild: b }),
+                                                (0, r.jsx)(ti, { handleClose: s, sku: x, guild: P }),
                                         ],
                                     });
                                 };
@@ -1085,7 +1087,7 @@ let tN = (e) => {
             PriceIcon: eB.C,
         });
     },
-    tb = (e) => {
+    tP = (e) => {
         let { skuId: t, orbPriceAmount: n } = e;
         (0, tI.A)({
             applicationId: (0, d.P)(t),
@@ -1099,7 +1101,7 @@ let tN = (e) => {
             ? (0, r.jsx)(tf.y, { type: tf.y.Type.PULSING_ELLIPSIS })
             : (0, r.jsx)(tN, { sku: l, orbPriceAmount: n });
     },
-    tP = (e) => {
+    tb = (e) => {
         let { orbBalance: t } = e;
         return (0, r.jsx)(td.vW, { label: K.intl.string(K.t.y0WGqP), value: null != t ? `${t}` : "", Icon: eB.C });
     },
@@ -1381,8 +1383,8 @@ let tU = (0, h.Mz)(),
                                     }
                                     return null;
                                 }, [x, I, h]),
-                                purchaseItemContent: (0, r.jsx)(tb, { skuId: t, orbPriceAmount: d }),
-                                paymentSelectContent: (0, r.jsx)(tP, { orbBalance: c }),
+                                purchaseItemContent: (0, r.jsx)(tP, { skuId: t, orbPriceAmount: d }),
+                                paymentSelectContent: (0, r.jsx)(tb, { orbBalance: c }),
                                 legalContent: (0, r.jsx)(tv, {}),
                                 primaryButtonProps: S,
                                 invoiceSummaryContent: null,

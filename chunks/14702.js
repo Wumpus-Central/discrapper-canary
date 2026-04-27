@@ -1,4 +1,4 @@
-n.d(t, { O: () => N, a: () => T });
+n.d(t, { O: () => R, a: () => C });
 var a = n(627968),
     r = n(64700),
     l = n(503698),
@@ -15,98 +15,99 @@ var a = n(627968),
     f = n(780898),
     g = n(174755),
     h = n(942426),
-    x = n(181774),
-    v = n(132198),
-    A = n(929283),
-    y = n(38357),
+    x = n(395744),
+    v = n(181774),
+    A = n(132198),
+    y = n(929283),
+    j = n(38357),
     I = n(180171),
-    j = n(989099),
-    E = n(370184);
-let P = (e) => {
+    E = n(989099),
+    P = n(370184);
+let S = (e) => {
         let { avatarDecoration: t, avatarSize: n } = e,
             r = (0, u.Ay)(),
             l = (0, c.q)(r);
-        return (0, a.jsx)(A.i, {
+        return (0, a.jsx)(y.i, {
             item: t,
             avatarSize: n,
             isHighlighted: !1,
-            avatarPlaceholderSrc: l ? j : I,
-            className: y.M,
+            avatarPlaceholderSrc: l ? E : I,
+            className: j.M,
         });
     },
-    S = (e) => {
-        let { item: t, fallbackLabel: n } = e,
-            l = (0, h.A)(t.skuId),
-            { accessibilityLabel: i, thumbnailPreviewSrc: s, title: o } = l ?? {},
-            c = r.useMemo(() => (0, x.Rc)(s), [s]);
-        return null == l
-            ? n
+    k = (e) => {
+        let { item: t } = e,
+            n = (0, h.A)(t.skuId),
+            { accessibilityLabel: l, thumbnailPreviewSrc: i, title: s } = n ?? {},
+            o = r.useMemo(() => (0, v.Rc)(i), [i]);
+        return null == n
+            ? null
             : (0, a.jsxs)("div", {
-                  className: y.YS,
+                  className: j.ti,
                   children: [
-                      (0, a.jsx)("img", { src: E.A, alt: i, className: y.Zp }),
-                      (0, a.jsx)("img", { className: y.Hm, src: c, alt: o }),
+                      (0, a.jsx)("img", { src: P.A, alt: l, className: j.Zp }),
+                      (0, a.jsx)("img", { className: j.Hm, src: o, alt: s }),
                   ],
               });
     },
-    k = (e) => {
-        let { nameplate: t, fallbackLabel: n } = e,
-            [l, i] = r.useState(!1),
-            s = r.useCallback(() => i(!0), []),
-            o = r.useCallback(() => i(!1), []);
-        return null == t
-            ? n
-            : (0, a.jsx)("div", {
-                  className: y.rz,
-                  onMouseEnter: s,
-                  onMouseLeave: o,
-                  children: (0, a.jsx)(g.A, { nameplate: (0, f.WK)(t), hovered: l, placement: b.u.MINI_PREVIEW }),
-              });
+    N = (e) => {
+        let { item: t } = e;
+        return (0, a.jsx)("div", { className: j.ti, children: (0, a.jsx)(x.A, { profileFrame: t, isMini: !0 }) });
     },
     T = (e) => {
-        let { product: t, fallbackLabel: n, staticPreviewClassName: r } = e,
-            { firstAvatarDecoration: l, firstProfileEffect: s, firstNameplate: o } = (0, m.f5)(t),
-            { enabled: c } = (0, _.P)("BundleMiniPreview"),
-            u = t.previewAssets?.fgStatic;
-        return c && null != u
-            ? (0, a.jsx)("img", { src: u, alt: t.name, className: i()(y.C0, r) })
-            : null == l && null == s && null == o
-              ? n
+        let { nameplate: t } = e,
+            [n, l] = r.useState(!1),
+            i = r.useCallback(() => l(!0), []),
+            s = r.useCallback(() => l(!1), []);
+        return null == t
+            ? null
+            : (0, a.jsx)("div", {
+                  className: j.rz,
+                  onMouseEnter: i,
+                  onMouseLeave: s,
+                  children: (0, a.jsx)(g.A, { nameplate: (0, f.WK)(t), hovered: n, placement: b.u.MINI_PREVIEW }),
+              });
+    },
+    C = (e) => {
+        let { product: t, staticPreviewClassName: n } = e,
+            { firstAvatarDecoration: r, firstProfileEffect: l, firstNameplate: s } = (0, m.f5)(t),
+            { enabled: o } = (0, _.P)("BundleMiniPreview"),
+            c = t.previewAssets?.fgStatic;
+        return o && null != c
+            ? (0, a.jsx)("img", { src: c, alt: t.name, className: i()(j.C0, n) })
+            : null == r && null == l && null == s
+              ? null
               : (0, a.jsxs)("div", {
-                    className: y.WJ,
+                    className: j.WJ,
                     children: [
-                        null != s &&
+                        null != l && (0, a.jsx)("div", { className: j.zh, children: (0, a.jsx)(k, { item: l }) }),
+                        null != s && (0, a.jsx)("div", { className: j.sY, children: (0, a.jsx)(T, { nameplate: s }) }),
+                        null != r &&
                             (0, a.jsx)("div", {
-                                className: y.zh,
-                                children: (0, a.jsx)(S, { item: s, fallbackLabel: null }),
-                            }),
-                        null != o &&
-                            (0, a.jsx)("div", {
-                                className: y.sY,
-                                children: (0, a.jsx)(k, { nameplate: o, fallbackLabel: null }),
-                            }),
-                        null != l &&
-                            (0, a.jsx)("div", {
-                                className: y.kf,
-                                children: (0, a.jsx)(P, { avatarDecoration: l, avatarSize: d._3.SIZE_24 }),
+                                className: j.kf,
+                                children: (0, a.jsx)(S, { avatarDecoration: r, avatarSize: d._3.SIZE_24 }),
                             }),
                     ],
                 });
     },
-    N = (e) => {
-        let { product: t, sku: n, fallbackLabel: r } = e,
-            l = n?.id,
-            i = (0, o.bG)([p.A], () => p.A.getProduct(n?.id)),
-            c = t ?? i;
-        if (c?.type === s.R.BUNDLE) return (0, a.jsx)(T, { product: c, fallbackLabel: r });
-        let [u] = c?.items ?? [];
-        return void 0 !== l && l in v.m
-            ? v.m[l].render({ animationState: "on_hover", className: y.Vr })
-            : u?.type === s.R.AVATAR_DECORATION
-              ? (0, a.jsx)(P, { avatarDecoration: u, avatarSize: d._3.SIZE_40 })
-              : u?.type === s.R.PROFILE_EFFECT
-                ? (0, a.jsx)(S, { item: u, fallbackLabel: r })
-                : u?.type === s.R.NAMEPLATE
-                  ? (0, a.jsx)(k, { nameplate: u, fallbackLabel: r })
-                  : r;
+    R = (e) => {
+        let { product: t, sku: n } = e,
+            r = n?.id,
+            l = (0, o.bG)([p.A], () => p.A.getProduct(n?.id)),
+            i = t ?? l;
+        if (i?.type === s.R.BUNDLE) return (0, a.jsx)(C, { product: i });
+        let [c] = i?.items ?? [];
+        if (void 0 !== r && r in A.m) return A.m[r].render({ animationState: "on_hover", className: j.Vr });
+        switch (c?.type) {
+            case s.R.AVATAR_DECORATION:
+                return (0, a.jsx)(S, { avatarDecoration: c, avatarSize: d._3.SIZE_40 });
+            case s.R.PROFILE_EFFECT:
+                return (0, a.jsx)(k, { item: c });
+            case s.R.PROFILE_FRAME:
+                return (0, a.jsx)(N, { item: c });
+            case s.R.NAMEPLATE:
+                return (0, a.jsx)(T, { nameplate: c });
+            default:
+                return null;
+        }
     };

@@ -20,7 +20,7 @@ let m = (e) => {
         let { sku: t, slayerProductPreviewClassName: r } = e,
             n = (0, l.bG)([c.A], () => c.A.getProduct(t.id));
         return null != n && t.productLine === C.EZt.COLLECTIBLES && n.type !== _.R.BUNDLE
-            ? (0, i.jsx)(u.O, { sku: t, fallbackLabel: null })
+            ? (0, i.jsx)(u.O, { sku: t })
             : t.productLine === C.EZt.SOCIAL_LAYER_GAME_ITEM
               ? (0, i.jsx)(d.e, { containerClassName: a()(p.oC, r), sku: t, shape: "square" })
               : null;

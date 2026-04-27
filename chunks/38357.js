@@ -1,6 +1,6 @@
 "use strict";
 e.exports = {
-    YS: "profileEffectContainer__0b5ea",
+    ti: "profilePreviewContainer__0b5ea",
     Hm: "profileEffect__0b5ea",
     Zp: "profileEffectBackground__0b5ea",
     M: "avatarDecoration__0b5ea",
