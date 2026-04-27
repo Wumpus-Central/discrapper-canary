@@ -1,40 +1,39 @@
-"use strict";
-l.d(t, { A: () => g, F: () => u });
-var n,
-    i = l(308528),
-    s = l(720149),
-    a = l(626584),
-    r = l(734057),
-    o = l(927813),
-    d = l(513391);
-let c = +o.A.Millis.SECOND + 10;
-var u = (((n = {})[(n.GROUP_DM = 0)] = "GROUP_DM"), (n[(n.USER = 1)] = "USER"), (n[(n.CHANNEL = 2)] = "CHANNEL"), n);
+n.d(t, { A: () => p, F: () => u });
+var i,
+    l = n(308528),
+    s = n(720149),
+    a = n(626584),
+    o = n(734057),
+    r = n(927813),
+    d = n(513391);
+let c = +r.A.Millis.SECOND + 10;
+var u = (((i = {})[(i.GROUP_DM = 0)] = "GROUP_DM"), (i[(i.USER = 1)] = "USER"), (i[(i.CHANNEL = 2)] = "CHANNEL"), i);
 class h extends d.A {
     constructor() {
         super(new a.A("InviteQueue"), c);
     }
-    _sendInvite(e, t, l, n, i) {
-        s.A.sendInvite(e.id, t, l, n).then(
-            () => i(null, !0),
-            () => i(null, !1),
+    _sendInvite(e, t, n, i, l) {
+        s.A.sendInvite(e.id, t, n, i).then(
+            () => l(null, !0),
+            () => l(null, !1),
         );
     }
     drain(e, t) {
-        let { location: l, inviteAnalyticsMetadata: n } = e;
+        let { location: n, inviteAnalyticsMetadata: i } = e;
         switch (e.type) {
             case 0:
             case 2:
-                this._sendInvite(e.channel, e.inviteKey, l, n, t);
+                this._sendInvite(e.channel, e.inviteKey, n, i, t);
                 break;
             case 1:
-                i.A.ensurePrivateChannel(e.user.id).then(
-                    (i) => {
-                        let s = r.A.getChannel(i);
-                        null != s && this._sendInvite(s, e.inviteKey, l, n, t);
+                l.A.ensurePrivateChannel(e.user.id).then(
+                    (l) => {
+                        let s = o.A.getChannel(l);
+                        null != s && this._sendInvite(s, e.inviteKey, n, i, t);
                     },
                     () => t(null, !1),
                 );
         }
     }
 }
-let g = new h();
+let p = new h();

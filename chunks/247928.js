@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { M: () => l });
-var r = n(627968),
-    i = n(64700);
-let a = 0;
-function l(e) {
-    let { children: t, className: n, enabled: l = !0 } = e,
-        s = i.useRef(null);
+a.d(t, { M: () => i });
+var r = a(627968),
+    n = a(64700);
+let l = 0;
+function i(e) {
+    let { children: t, className: a, enabled: i = !0 } = e,
+        s = n.useRef(null);
     return (
         !(function (e, t) {
-            let [n] = i.useState(() => a++),
-                r = `data-focus-blocked-${n}`,
-                l = i.useCallback(
+            let [a] = n.useState(() => l++),
+                r = `data-focus-blocked-${a}`,
+                i = n.useCallback(
                     (e) => {
                         let t = document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
                                 acceptNode: (e) =>
                                     e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP,
                             }),
-                            n = t.currentNode;
-                        for (; null != n; ) {
-                            let e = n;
-                            e.setAttribute(r, String(e.tabIndex)), (e.tabIndex = -1), (n = t.nextNode());
+                            a = t.currentNode;
+                        for (; null != a; ) {
+                            let e = a;
+                            e.setAttribute(r, String(e.tabIndex)), (e.tabIndex = -1), (a = t.nextNode());
                         }
                     },
                     [r],
                 ),
-                s = i.useCallback(
+                s = n.useCallback(
                     (e) => {
                         e.querySelectorAll(`[${r}]`).forEach((e) => {
                             let t = e.getAttribute(r);
@@ -33,22 +32,22 @@ function l(e) {
                     },
                     [r],
                 );
-            i.useLayoutEffect(() => {
+            n.useLayoutEffect(() => {
                 if (t) {
                     let t = e.current;
-                    if (null != t) return l(t), () => s(t);
+                    if (null != t) return i(t), () => s(t);
                 }
-            }, [t, e, l, s]),
-                i.useEffect(() => {
+            }, [t, e, i, s]),
+                n.useEffect(() => {
                     if (!t) return;
-                    let n = e.current;
-                    if (null == n) return;
+                    let a = e.current;
+                    if (null == a) return;
                     let r = new MutationObserver((e) => {
-                        e.some((e) => e.addedNodes.length > 0) && l(n);
+                        e.some((e) => e.addedNodes.length > 0) && i(a);
                     });
-                    return r.observe(n, { childList: !0, subtree: !0 }), () => r.disconnect();
-                }, [t, e, l]);
-        })(s, l),
-        (0, r.jsx)("div", { ref: s, className: n, children: t })
+                    return r.observe(a, { childList: !0, subtree: !0 }), () => r.disconnect();
+                }, [t, e, i]);
+        })(s, i),
+        (0, r.jsx)("div", { ref: s, className: a, children: t })
     );
 }

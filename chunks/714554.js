@@ -1,16 +1,28 @@
-s.d(l, { SyntaxHighlight: () => f });
-var t = s(627968),
-    r = s(64700),
-    n = s(635377),
-    c = s.n(n),
-    a = s(181370),
-    o = s.n(a),
-    p = s(819400);
-let i = /^[a-z0-9_+\-.#]+$/,
-    h = Promise.resolve(null),
-    m = new Map(),
-    u = new (c())({ max: 256 }),
-    j = {
+let t;
+l.d(s, { SyntaxHighlight: () => k });
+var r = l(627968),
+    n = l(64700),
+    c = l(974287),
+    a = l(199131),
+    o = l(635377),
+    i = l.n(o),
+    p = l(181370),
+    h = l.n(p),
+    m = l(52133);
+async function u(e) {
+    let s = a.p[e];
+    return (await (null == t && (t = (0, c.A)()), t)).loadGrammar(s);
+}
+let j = /^[a-z0-9_+\-.#]+$/,
+    f = Promise.resolve(null),
+    b = new Map(),
+    d = new (i())({ max: 256 });
+function x(e) {
+    if (null == e || !(e in a.p)) return f;
+    let s = b.get(e);
+    return null == s && ((s = u(e)), b.set(e, s)), s;
+}
+let g = {
         h: "cpp",
         hpp: "cpp",
         cc: "cpp",
@@ -20,6 +32,7 @@ let i = /^[a-z0-9_+\-.#]+$/,
         "h++": "cpp",
         hh: "cpp",
         arduino: "cpp",
+        js: "javascript",
         coffee: "javascript",
         coffeescript: "javascript",
         livescript: "javascript",
@@ -27,6 +40,13 @@ let i = /^[a-z0-9_+\-.#]+$/,
         mjs: "javascript",
         cjs: "javascript",
         jsx: "javascript",
+        ts: "typescript",
+        rs: "rust",
+        cs: "c-sharp",
+        csharp: "c-sharp",
+        "c#": "c-sharp",
+        yml: "yaml",
+        docker: "dockerfile",
         gql: "graphql",
         hbs: "html",
         htm: "html",
@@ -67,6 +87,8 @@ let i = /^[a-z0-9_+\-.#]+$/,
         mak: "bash",
         make: "bash",
         makefile: "bash",
+        sh: "bash",
+        shell: "bash",
         console: "bash",
         shellsession: "bash",
         ex: "elixir",
@@ -74,6 +96,7 @@ let i = /^[a-z0-9_+\-.#]+$/,
         erl: "erlang",
         hs: "haskell",
         fs: "fsharp",
+        "f#": "fsharp",
         ml: "ocaml",
         mli: "ocaml",
         sml: "ocaml",
@@ -83,6 +106,7 @@ let i = /^[a-z0-9_+\-.#]+$/,
         rkt: "scheme",
         clj: "clojure",
         edn: "clojure",
+        rb: "ruby",
         cr: "ruby",
         crystal: "ruby",
         gemspec: "ruby",
@@ -129,6 +153,7 @@ let i = /^[a-z0-9_+\-.#]+$/,
         md: "markdown",
         mkdown: "markdown",
         mkd: "markdown",
+        py: "python",
         gyp: "python",
         ipython: "python",
         cson: "json",
@@ -141,83 +166,112 @@ let i = /^[a-z0-9_+\-.#]+$/,
         "julia-repl": "julia",
         jldoctest: "julia",
     },
-    b = new Set((0, p.hK)());
-b.add("ansi");
-let d = null;
-function f(e) {
-    let { code: l, lang: s, ...n } = e,
-        c = r.useMemo(
+    v = new Set(Object.keys(a.p));
+v.add("ansi");
+let y = null;
+function k(e) {
+    let { code: s, lang: l, ...t } = e,
+        c = n.useMemo(
             () =>
                 (function (e) {
                     if (null == e) return;
-                    let l = e.toLowerCase();
-                    if (!i.test(l)) return;
-                    if (b.has(l)) return l;
-                    let s = (0, p.Op)(l);
-                    if (b.has(s)) return s;
-                    let t = j[l];
-                    if (null != t && b.has(t)) return t;
-                })(s),
-            [s],
+                    let s = e.toLowerCase();
+                    if (!j.test(s)) return;
+                    if (v.has(s)) return s;
+                    let l = g[s];
+                    if (null != l && v.has(l)) return l;
+                })(l),
+            [l],
         );
     return null == c
-        ? (0, t.jsx)(x, { code: l, ...n })
-        : (0, t.jsx)(r.Suspense, {
-              fallback: (0, t.jsx)(x, { code: l, ...n }),
-              children: "ansi" === c ? (0, t.jsx)(g, { code: l, ...n }) : (0, t.jsx)(v, { code: l, lang: c, ...n }),
+        ? (0, r.jsx)(w, { code: s, ...t })
+        : (0, r.jsx)(n.Suspense, {
+              fallback: (0, r.jsx)(w, { code: s, ...t }),
+              children: "ansi" === c ? (0, r.jsx)(S, { code: s, ...t }) : (0, r.jsx)(q, { code: s, lang: c, ...t }),
           });
 }
-function x(e) {
-    let { code: l, ...s } = e;
-    return (0, t.jsx)("code", { ...s, children: l });
+function w(e) {
+    let { code: s, ...l } = e;
+    return (0, r.jsx)("code", { ...l, children: s });
 }
-function v(e) {
-    let { code: l, lang: s, ...n } = e,
-        c = (function (e, l) {
-            let s = r.use(
-                    (function (e) {
-                        if (null == e) return h;
-                        let l = m.get(e);
-                        return null == l && ((l = (0, p.oS)(e)), m.set(e, l)), l;
-                    })(e),
+function q(e) {
+    let { code: s, lang: l, ...t } = e,
+        c = (function (e, s) {
+            let l = n.use(x(e)),
+                t = n.useMemo(() => h()(`${e}\0${s}`), [e, s]),
+                r = n.useCallback(
+                    function () {
+                        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                        if (!e) {
+                            let e = d.get(t);
+                            if (null != e) return e;
+                        }
+                        if (
+                            !(function (e) {
+                                for (let s of e.split("\n")) if (s.length > 1e3) return !1;
+                                return !0;
+                            })(s) ||
+                            null == l
+                        )
+                            return;
+                        let r = (function (e, s) {
+                            let l = e.endsWith("\n")
+                                    ? e
+                                    : `${e}
+`,
+                                t = s.createSession();
+                            try {
+                                return t.setText(l), t.highlightToHtml();
+                            } finally {
+                                t.free();
+                            }
+                        })(s, l);
+                        if (null != r) return d.set(t, r), r;
+                    },
+                    [t, s, l],
                 ),
-                t = r.useMemo(() => {
-                    if (
-                        !(function (e) {
-                            for (let l of e.split("\n")) if (l.length > 1e3) return !1;
-                            return !0;
-                        })(l) ||
-                        null == s
-                    )
-                        return null;
-                    let t = o()(`${e}\0${l}`),
-                        r = u.get(t);
-                    if (null != r) return r;
-                    let n = l.endsWith("\n") ? l : l + "\n",
-                        c = s.highlight(n);
-                    return "string" == typeof c && u.set(t, c), c;
-                }, [s, l, e]);
-            if ("string" == typeof t || null == t) return t;
-            let n = r.use(t);
-            if (null != n) {
-                let s = o()(`${e}\0${l}`);
-                u.set(s, n);
-            }
-            return n;
-        })(s, l);
-    return null == c ? (0, t.jsx)(x, { code: l, ...n }) : (0, t.jsx)(k, { html: c, ...n });
+                [c, a] = n.useState(r);
+            return (
+                n.useEffect(() => {
+                    a(r());
+                }, [r]),
+                n.useEffect(() => {
+                    let e = c?.missingInjections;
+                    if (null == e || 0 === e.length) return;
+                    let s = !1;
+                    for (let l of e)
+                        x(l).then(() => {
+                            s ||
+                                a((e) => {
+                                    let s = r(!0);
+                                    return null == s ||
+                                        (null != e &&
+                                            e.html === s.html &&
+                                            (0, m.v)(e.missingInjections, s.missingInjections))
+                                        ? e
+                                        : s;
+                                });
+                        });
+                    return () => {
+                        s = !0;
+                    };
+                }, [t, r, c?.missingInjections]),
+                c?.html ?? null
+            );
+        })(l, s);
+    return null == c ? (0, r.jsx)(w, { code: s, ...t }) : (0, r.jsx)(M, { html: c, ...t });
 }
-function g(e) {
-    let { code: l, ...n } = e,
+function S(e) {
+    let { code: s, ...t } = e,
         c = (function (e) {
-            d ??= s.e("1180").then(s.t.bind(s, 628759, 23));
-            let { default: l } = r.use(d),
-                [t] = r.useState(() => new l({ escapeXML: !0 }));
-            return r.useMemo(() => t.toHtml(e), [t, e]);
-        })(l);
-    return (0, t.jsx)(k, { html: c, ...n });
+            y ??= l.e("1180").then(l.t.bind(l, 628759, 23));
+            let { default: s } = n.use(y),
+                [t] = n.useState(() => new s({ escapeXML: !0 }));
+            return n.useMemo(() => t.toHtml(e), [t, e]);
+        })(s);
+    return (0, r.jsx)(M, { html: c, ...t });
 }
-function k(e) {
-    let { html: l, ...s } = e;
-    return (0, t.jsx)("code", { ...s, dangerouslySetInnerHTML: { __html: l } });
+function M(e) {
+    let { html: s, ...l } = e;
+    return (0, r.jsx)("code", { ...l, dangerouslySetInnerHTML: { __html: s } });
 }
