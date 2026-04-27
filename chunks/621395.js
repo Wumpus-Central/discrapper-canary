@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     i1: "previewContainer_ebb2cf",
     JQ: "hideBackground_ebb2cf",
