@@ -1,31 +1,32 @@
-n.d(t, { M: () => c, t: () => d });
-var i = n(627968);
+"use strict";
+n.d(t, { M: () => d, t: () => c });
+var a = n(627968);
 n(64700);
-var l = n(192308),
-    a = n(440938),
-    s = n(4227),
-    r = n(466459);
+var r = n(192308),
+    i = n(440938),
+    l = n(4227),
+    s = n(466459);
 let o = "collectibles shop product details modal",
-    d = (e) => {
+    c = (e) => {
         let {
             product: t,
-            category: d,
-            shouldCheckoutWithOrbs: c,
+            category: c,
+            shouldCheckoutWithOrbs: d,
             analyticsSource: u,
-            analyticsLocations: h,
-            returnRef: _,
+            analyticsLocations: _,
+            returnRef: p,
             tab: m,
-            giftRecipient: g,
-            giftingOrigin: p,
-            cardId: A,
-            sessionId: x,
-            tilePosition: f,
+            giftRecipient: h,
+            giftingOrigin: f,
+            cardId: g,
+            sessionId: b,
+            tilePosition: v,
         } = e;
         if (t.isCategoryReward) {
-            let { isPurchased: e } = (0, r.o)(s.A, t);
+            let { isPurchased: e } = (0, s.o)(l.A, t);
             if (!e) return;
         }
-        (0, l.openModalLazy)(
+        (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("8555"),
@@ -54,30 +55,30 @@ let o = "collectibles shop product details modal",
                     n.e("99789"),
                     n.e("26663"),
                     n.e("29491"),
-                    n.e("29059"),
+                    n.e("43368"),
                     n.e("54350"),
-                    n.e("92407"),
+                    n.e("79892"),
                 ]).then(n.bind(n, 81146));
                 return (n) =>
-                    (0, i.jsx)(a.R9, {
-                        newValue: { cardId: A, sessionId: x, tilePosition: f },
-                        children: (0, i.jsx)(e, {
+                    (0, a.jsx)(i.R9, {
+                        newValue: { cardId: g, sessionId: b, tilePosition: v },
+                        children: (0, a.jsx)(e, {
                             ...n,
                             product: t,
-                            category: d,
-                            shouldCheckoutWithOrbs: c,
+                            category: c,
+                            shouldCheckoutWithOrbs: d,
                             analyticsSource: u,
-                            analyticsLocations: h,
-                            returnRef: _,
+                            analyticsLocations: _,
+                            returnRef: p,
                             tab: m,
-                            giftRecipient: g,
-                            giftingOrigin: p,
+                            giftRecipient: h,
+                            giftingOrigin: f,
                         }),
                     });
             },
             { modalKey: o },
         );
     },
-    c = () => {
-        (0, l.closeModal)(o);
+    d = () => {
+        (0, r.closeModal)(o);
     };

@@ -1385,31 +1385,6 @@
     text-align: center
 }
 
-.premiumTabTooltipContainer__83ef9 {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 12px
-}
-
-[data-mana-component=tooltip]:has(.premiumTabTooltipContainer__83ef9) {
-    max-width: none
-}
-
-.premiumTabTooltipImage__83ef9 {
-    flex-shrink: 0;
-    height: 60px;
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: 60px
-}
-
-.premiumTabTooltipContent__83ef9 {
-    display: flex;
-    flex: 1;
-    flex-direction: column
-}
-
 .badgeContainer__98c7b {
     display: flex;
     flex-direction: row;

@@ -1,4 +1,4 @@
-t.r(l), t.d(l, { SectionDivider: () => ve, default: () => vl });
+t.r(l), t.d(l, { SectionDivider: () => d7, default: () => d8 });
 var a,
     s,
     i = {};
@@ -7,8 +7,8 @@ t.r(i),
         AIcon: () => k,
         AccessibilityIcon: () => S.c,
         AchievementsIcon: () => F.K,
-        ActivitiesIcon: () => D,
-        ActivitiesPlusIcon: () => P.d,
+        ActivitiesIcon: () => P,
+        ActivitiesPlusIcon: () => D.d,
         AirplayIcon: () => J,
         AnalyticsIcon: () => G.U,
         AngleBracketsIcon: () => W.G,
@@ -60,8 +60,8 @@ t.r(i),
         BookmarkIcon: () => eF.c,
         BookmarkOutlineIcon: () => eU.c,
         BoostGemIcon: () => eb._,
-        BoostGemOutlineIcon: () => eD.Q,
-        BoostGemSlashIcon: () => eP.x,
+        BoostGemOutlineIcon: () => eP.Q,
+        BoostGemSlashIcon: () => eD.x,
         BoostTier1Icon: () => ek,
         BoostTier1SimpleIcon: () => eJ.E,
         BoostTier2Icon: () => eG.d,
@@ -124,8 +124,8 @@ t.r(i),
         CircleMinusIcon: () => lF,
         CirclePlayIcon: () => lU.S,
         CirclePlusIcon: () => lb.U,
-        CircleQuestionIcon: () => lD.c,
-        CircleXIcon: () => lP.a,
+        CircleQuestionIcon: () => lP.c,
+        CircleXIcon: () => lD.a,
         ClapperboardIcon: () => lk,
         ClipboardCheckIcon: () => lJ.O,
         ClipboardListIcon: () => lG.s,
@@ -189,8 +189,8 @@ t.r(i),
         FileUpIcon: () => tF.H,
         FileWarningIcon: () => tU.m,
         FiltersHorizontalIcon: () => tb.R,
-        FireIcon: () => tD.Y,
-        FlagIcon: () => tP.i,
+        FireIcon: () => tP.Y,
+        FlagIcon: () => tD.i,
         FlagMinusIcon: () => tk,
         FlagPlusIcon: () => tJ,
         FlagRetryIcon: () => tG,
@@ -257,8 +257,8 @@ t.r(i),
         JoystickIcon: () => aF._,
         KeyIcon: () => ab.R,
         KeyboardIcon: () => aU.F,
-        LanguageIcon: () => aD.U,
-        LaptopPhoneIcon: () => aP.W,
+        LanguageIcon: () => aP.U,
+        LaptopPhoneIcon: () => aD.W,
         LeagueOfLegendsBrandIcon: () => ak,
         LettersIcon: () => aJ,
         LightbulbIcon: () => aG.x,
@@ -314,7 +314,7 @@ t.r(i),
         NitroWheelIcon: () => sV.t,
         ObjectIcon: () => sy.D,
         OrbsIcon: () => sH.C,
-        PaintPaletteIcon: () => sP.B,
+        PaintPaletteIcon: () => sD.B,
         PaintbrushThickIcon: () => sO.N,
         PaintbrushThickMinusIcon: () => sL,
         PaintbrushThickPlusIcon: () => sB,
@@ -322,7 +322,7 @@ t.r(i),
         PaintbrushThinIcon: () => sF,
         PaintbrushThinMinusIcon: () => sU,
         PaintbrushThinPlusIcon: () => sb,
-        PaintbrushThinRetryIcon: () => sD,
+        PaintbrushThinRetryIcon: () => sP,
         PaperClockIcon: () => sk,
         PaperIcon: () => sJ.u,
         PaperLockIcon: () => sG,
@@ -383,8 +383,8 @@ t.r(i),
         PlusSmallIcon: () => iF.j,
         PollsIcon: () => iU.Y,
         PotionIcon: () => ib.H,
-        PrivacyAndSafetyIcon: () => iD,
-        PuzzlePieceIcon: () => iP,
+        PrivacyAndSafetyIcon: () => iP,
+        PuzzlePieceIcon: () => iD,
         PuzzlePieceMinusIcon: () => ik,
         PuzzlePiecePlusIcon: () => iJ,
         PuzzlePieceRetryIcon: () => iG,
@@ -447,8 +447,8 @@ t.r(i),
         SoundboardSlashIcon: () => cF,
         SparklesIcon: () => cU.B,
         SpeedometerIcon: () => cb.$,
-        SpoilerIcon: () => cD,
-        SpotifyBrandIcon: () => cP,
+        SpoilerIcon: () => cP,
+        SpotifyBrandIcon: () => cD,
         SpotifyNeutralIcon: () => ck.L,
         StaffBadgeIcon: () => cJ.V,
         StageIcon: () => cG.q,
@@ -511,8 +511,8 @@ t.r(i),
         TrashIcon: () => hF.u,
         TreehouseIcon: () => hU.c,
         TrophyIcon: () => hb.O,
-        TvIcon: () => hD.U,
-        TwitchNeutralIcon: () => hP.a,
+        TvIcon: () => hP.U,
+        TwitchNeutralIcon: () => hD.a,
         TwitterNeutralIcon: () => hk,
         UnderlineIcon: () => hJ,
         UndoIcon: () => hG.e,
@@ -617,7 +617,7 @@ var x = t(192308),
     F = t(433492),
     U = t(996682),
     b = t(27989);
-let D = (e) => {
+let P = (e) => {
     let {
             size: l = "md",
             width: t,
@@ -652,7 +652,7 @@ let D = (e) => {
         ],
     });
 };
-var P = t(768451);
+var D = t(768451);
 let k = (e) => {
         let {
                 size: l = "md",
@@ -1155,8 +1155,8 @@ var eL = t(635739),
     eF = t(606096),
     eU = t(997146),
     eb = t(104510),
-    eD = t(532804),
-    eP = t(492349);
+    eP = t(532804),
+    eD = t(492349);
 let ek = (e) => {
     let {
             size: l = "md",
@@ -1811,8 +1811,8 @@ let lF = (e) => {
 };
 var lU = t(65154),
     lb = t(245604),
-    lD = t(290136),
-    lP = t(285796);
+    lP = t(290136),
+    lD = t(285796);
 let lk = (e) => {
     let {
             size: l = "md",
@@ -2496,8 +2496,8 @@ var tV = t(714385),
     tF = t(81369),
     tU = t(860430),
     tb = t(783977),
-    tD = t(825860),
-    tP = t(138134);
+    tP = t(825860),
+    tD = t(138134);
 let tk = (e) => {
         let {
                 size: l = "md",
@@ -3113,8 +3113,8 @@ var aO = t(87221),
     aF = t(785866),
     aU = t(410767),
     ab = t(530557),
-    aD = t(37646),
-    aP = t(766928);
+    aP = t(37646),
+    aD = t(766928);
 let ak = (e) => {
         let { size: l = "md", width: t, height: a, color: s = "#CEA146", colorClass: i = "", ...h } = e,
             n = (0, b.J)(l),
@@ -3916,7 +3916,7 @@ let sL = (e) => {
             }),
         });
     },
-    sD = (e) => {
+    sP = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -3942,7 +3942,7 @@ let sL = (e) => {
             }),
         });
     };
-var sP = t(650809);
+var sD = t(650809);
 let sk = (e) => {
     let {
             size: l = "md",
@@ -5909,7 +5909,7 @@ var iO = t(782134),
     iF = t(307301),
     iU = t(642846),
     ib = t(659421);
-let iD = (e) => {
+let iP = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -5937,7 +5937,7 @@ let iD = (e) => {
             }),
         });
     },
-    iP = (e) => {
+    iD = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -6572,7 +6572,7 @@ let cF = (e) => {
 };
 var cU = t(175841),
     cb = t(268791);
-let cD = (e) => {
+let cP = (e) => {
         let {
                 size: l = "md",
                 width: t,
@@ -6607,7 +6607,7 @@ let cD = (e) => {
             ],
         });
     },
-    cP = (e) => {
+    cD = (e) => {
         let { size: l = "md", width: t, height: a, color: s = "#1ED760", colorClass: i = "", ...h } = e,
             n = (0, b.J)(l),
             o = n?.width ?? t,
@@ -7406,8 +7406,8 @@ let hB = (e) => {
 var hF = t(241326),
     hU = t(796140),
     hb = t(369606),
-    hD = t(526181),
-    hP = t(454346);
+    hP = t(526181),
+    hD = t(454346);
 let hk = (e) => {
         let {
                 size: l = "md",
@@ -7971,8 +7971,8 @@ var nO = t(80500),
     nF = t(781696),
     nU = t(565645),
     nb = t(736653),
-    nD = t(793574),
-    nP = t(688810),
+    nP = t(793574),
+    nD = t(688810),
     nk = t(932001),
     nJ = t(7584),
     nG = t(486164),
@@ -7985,7 +7985,7 @@ var nO = t(80500),
     nY = t(985018);
 let n$ = (e) => {
     let { displayOptions: l, targetElementRef: t, onRequestClose: a, onClick: s } = e,
-        { analyticsLocations: i } = (0, nP.Ay)(nD.A.HOME_PAGE_SHOP_TAB),
+        { analyticsLocations: i } = (0, nD.Ay)(nP.A.HOME_PAGE_SHOP_TAB),
         n = (0, nb.Ay)(),
         o = (0, nB.M)(n) ? l.assetDark : l.assetLight,
         r = h.useRef(a);
@@ -8013,7 +8013,7 @@ let n$ = (e) => {
                     onClick: () => {
                         s?.(),
                             (0, nQ.pX)(nX.BVt.COLLECTIBLES_SHOP),
-                            (0, nq.Cz)({ analyticsLocations: i, analyticsSource: nD.A.HOME_PAGE_SHOP_TAB });
+                            (0, nq.Cz)({ analyticsLocations: i, analyticsSource: nP.A.HOME_PAGE_SHOP_TAB });
                     },
                 },
             ],
@@ -8024,7 +8024,7 @@ let n$ = (e) => {
 var n1 = t(758836);
 let n0 = (e) => {
     let { targetElementRef: l, onRequestClose: t, onClick: a } = e,
-        { analyticsLocations: s } = (0, nP.Ay)(nD.A.HOME_PAGE_SHOP_TAB),
+        { analyticsLocations: s } = (0, nD.Ay)(nP.A.HOME_PAGE_SHOP_TAB),
         i = h.useRef(t);
     return (
         (i.current = t),
@@ -8056,7 +8056,7 @@ let n0 = (e) => {
                         a?.(),
                             (0, nq.Cz)({
                                 analyticsLocations: s,
-                                analyticsSource: nD.A.HOME_PAGE_SHOP_TAB,
+                                analyticsSource: nP.A.HOME_PAGE_SHOP_TAB,
                                 tab: n1.G2.HOME,
                             });
                     },
@@ -8104,8 +8104,8 @@ let n7 = (e) => {
                 ...w
             } = e,
             f = (0, v.rm)("shop"),
-            x = nD.A.HOME_PAGE_SHOP_TAB,
-            { analyticsLocations: A } = (0, nP.Ay)(x),
+            x = nP.A.HOME_PAGE_SHOP_TAB,
+            { analyticsLocations: A } = (0, nD.Ay)(x),
             [u, I] = h.useState(!1),
             M = h.useCallback(() => {
                 void 0 !== s && s(),
@@ -8412,7 +8412,7 @@ let oB = (e) => {
             {
                 text: nY.intl.string(nY.t["CDdYB/"]),
                 onClick: () => {
-                    (0, o_.A)(nX.BVt.NITRO_HOME), (0, oT.u)({ analyticsLocations: [nD.A.HOME_PAGE_PREMIUM_TAB] }), oH();
+                    (0, o_.A)(nX.BVt.NITRO_HOME), (0, oT.u)({ analyticsLocations: [nP.A.HOME_PAGE_PREMIUM_TAB] }), oH();
                 },
             },
         ],
@@ -8423,7 +8423,7 @@ var oS = t(727949),
     oF = t(617617),
     oU = t(954571),
     ob = t(954457);
-let oD = (e) => {
+let oP = (e) => {
     let { targetElementRef: l } = e,
         a = (0, oS.Tp)(),
         s = (0, p.bG)([oA.A], () => oA.A.getReminderStateId()),
@@ -8451,7 +8451,7 @@ let oD = (e) => {
                 text: nY.intl.string(nY.t.t2N81y),
                 onClick: () => {
                     oU.default.track(nX.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
-                        location_stack: [nD.A.HOME_PAGE_PREMIUM_TAB],
+                        location_stack: [nP.A.HOME_PAGE_PREMIUM_TAB],
                         times_dismissed: null != s ? h + 1 : null,
                         referrals_remaining: i,
                     }),
@@ -8467,7 +8467,7 @@ let oD = (e) => {
     });
 };
 t(323874), t(14289), t(35956);
-var oP = t(877624),
+var oD = t(877624),
     ok = t(366999),
     oJ = t(531260);
 let oG = (0, oR.mj)({
@@ -8600,7 +8600,7 @@ function rp(e) {
     return ((0, B.A)({
         type: d.ImpressionTypes.VIEW,
         name: d.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: oP.C.PREMIUM_TAB, component_id: l },
+        properties: { component_type: oD.C.PREMIUM_TAB, component_id: l },
     }),
     s)
         ? (0, c.jsxs)("div", {
@@ -8750,9 +8750,9 @@ var rO = t(312640),
     rF = t(627330),
     rU = t(532794),
     rb = t(146218);
-function rD(e) {
+function rP(e) {
     let { targetElementRef: l, dismissPopover: t, children: a } = e,
-        { analyticsLocations: s } = (0, nP.Ay)(),
+        { analyticsLocations: s } = (0, nD.Ay)(),
         i = h.useCallback(() => {
             t(n5.i.TAKE_ACTION), (0, rU.A)({ subscriptionTier: oL.pe.TIER_2, analyticsLocations: s });
         }, [t, s]);
@@ -8803,19 +8803,19 @@ function rD(e) {
         ],
     });
 }
-var rP = t(88001),
+var rD = t(88001),
     rk = t(466919),
     rJ = t(438705);
 let rG = (e) => {
     let { targetElementRef: l, dismissPopover: a, children: s } = e,
         i = o4({ location: "nitro_tab_popover" }),
-        { analyticsLocations: h } = (0, nP.Ay)(),
+        { analyticsLocations: h } = (0, nD.Ay)(),
         n = i
             ? nY.intl.string(rk.default.oOSj1l)
-            : nY.intl.format(rk.default["c+NBSl"], { premiumGroupProductName: (0, rP.DP)() }),
+            : nY.intl.format(rk.default["c+NBSl"], { premiumGroupProductName: (0, rD.DP)() }),
         o = i
             ? nY.intl.string(rk.default.nCLJQn)
-            : nY.intl.format(rk.default.MuUV5u, { premiumGroupProductName: (0, rP.DP)(), totalSeats: rP.aw }),
+            : nY.intl.format(rk.default.MuUV5u, { premiumGroupProductName: (0, rD.DP)(), totalSeats: rD.aw }),
         r = (0, c.jsx)(nK.A, {
             targetElementRef: l,
             title: n,
@@ -8830,7 +8830,7 @@ let rG = (e) => {
             actions: [
                 {
                     text: i
-                        ? nY.intl.format(rk.default.LwdrNi, { premiumGroupProductName: (0, rP.DP)() })
+                        ? nY.intl.format(rk.default.LwdrNi, { premiumGroupProductName: (0, rD.DP)() })
                         : nY.intl.string(rk.default["IO+nlU"]),
                     variant: i ? "expressive" : "primary",
                     onClick: () => {
@@ -8969,7 +8969,7 @@ function r3(e) {
 var r4 = t(664184);
 function r5(e) {
     let { targetElementRef: l, dismissPopover: t, children: a, numOrbs: s } = e,
-        { analyticsLocations: i } = (0, nP.Ay)(nD.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION),
+        { analyticsLocations: i } = (0, nD.Ay)(nP.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION),
         n = h.useCallback(() => {
             t(n5.i.TAKE_ACTION),
                 (0, rU.A)({
@@ -9017,7 +9017,7 @@ var r6 = t(511484),
     r8 = t(398932);
 let r9 = (e) => {
     let { targetElementRef: l, discountOffer: a, premiumSubscription: s, dismissCoachmark: i, children: h } = e,
-        { analyticsLocations: n } = (0, nP.Ay)(nD.A.CHURN_DISCOUNT_POPOVER),
+        { analyticsLocations: n } = (0, nD.Ay)(nP.A.CHURN_DISCOUNT_POPOVER),
         o = (0, r6.iU)(oL.gD.PREMIUM_MONTH_TIER_2, a, s),
         r = (0, c.jsx)(nK.h, {
             targetElementRef: l,
@@ -9076,7 +9076,7 @@ var de = t(498470),
     dt = t(637706);
 function da(e) {
     let { children: l, targetElementRef: t, dismissPopover: a } = e,
-        s = (0, ro.c)(oP.C.PREMIUM_TAB_POPOVER),
+        s = (0, ro.c)(oD.C.PREMIUM_TAB_POPOVER),
         i =
             null != s && "premiumTabPopover" === s.properties.properties.oneofKind
                 ? s.properties.properties.premiumTabPopover
@@ -9120,40 +9120,28 @@ function da(e) {
         ],
     });
 }
-var ds = t(990078),
-    di = t(534514),
-    dc = t(306125);
-function dh(e) {
+function ds(e) {
     let { children: l } = e,
-        t = (0, ro.c)(oP.C.PREMIUM_TAB_TOOLTIP),
+        t = (0, ro.c)(oD.C.PREMIUM_TAB_TOOLTIP),
         a =
             null != t && "premiumTabTooltip" === t.properties.properties.oneofKind
                 ? t.properties.properties.premiumTabTooltip
                 : null,
         s = (0, dl.T)(a?.asset);
-    if (null == a) return l;
-    let i = (0, c.jsxs)("div", {
-        className: dc.$e,
-        children: [
-            null != s && (0, c.jsx)("img", { className: dc.NC, src: s, alt: "" }),
-            (0, c.jsxs)("div", {
-                className: dc.Vm,
-                children: [
-                    (0, c.jsx)(di.D, { variant: "heading-md/bold", color: "text-strong", children: a.header }),
-                    (0, c.jsx)(nS.E, { variant: "text-sm/normal", color: "text-subtle", children: a.body }),
-                ],
-            }),
-        ],
-    });
-    return (0, c.jsx)(ds.m, {
-        __unsupportedReactNodeAsText: i,
-        position: "right",
-        "aria-label": a.header,
-        asContainer: !0,
-        children: (0, c.jsx)("div", { children: l }),
-    });
+    return null == a
+        ? l
+        : (0, c.jsx)(u.u, {
+              title: a.header,
+              body: a.body,
+              asset: null != s ? (0, c.jsx)("img", { src: s, alt: "" }) : void 0,
+              assetSize: 80,
+              padding: "lg",
+              position: "right",
+              asContainer: !0,
+              children: (0, c.jsx)("div", { children: l }),
+          });
 }
-function dn(e) {
+function di(e) {
     let { alt: l, ariaLabel: t, ariaHidden: a, role: s, width: i = 144, height: h = 144 } = e;
     return (0, c.jsx)("img", {
         style: { width: i, height: h },
@@ -9164,25 +9152,25 @@ function dn(e) {
         role: s ?? "img",
     });
 }
-var dr = t(580630);
-function dd(e) {
+var dc = t(580630);
+function dh(e) {
     let { children: l, endsAt: t, variant: a = "initial" } = e,
         s = (0, o0.Zb)(t),
-        i = (0, dr.$g)(0, (0, oN.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+        i = (0, dc.$g)(0, (0, oN.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
         h = "followup" === a,
         n = h ? nY.intl.string(nY.t.gzhz8w) : nY.intl.string(nY.t.aopiS6),
         o = h ? nY.intl.format(nY.t["3iUE+U"], { price: i }) : nY.intl.format(nY.t.AQd9tZ, { days: s });
     return (0, c.jsx)(u.u, {
         title: o,
         body: n,
-        asset: (0, c.jsx)(dn, { alt: "", width: 48, height: 48 }),
+        asset: (0, c.jsx)(di, { alt: "", width: 48, height: 48 }),
         assetSize: 48,
         position: "right",
         asContainer: !0,
         children: (0, c.jsx)("div", { children: l }),
     });
 }
-var dv =
+var dn =
     (((s = {}).NONE = "none"),
     (s.CHURN_DISCOUNT = "churn_discount"),
     (s.PREMIUM_GROUP = "premium_group"),
@@ -9199,7 +9187,7 @@ var dv =
     (s.CROISSANT_REHEAT_MOMENT = "croissant_reheat_moment"),
     (s.CROISSANT_REHEAT_TOOLTIP = "croissant_reheat_tooltip"),
     s);
-function dg(e) {
+function dr(e) {
     let {
         children: l,
         popoverType: t,
@@ -9249,17 +9237,17 @@ function dg(e) {
         case "reverse_trial": {
             let e = m?.trial_id === oL.Tt,
                 t = p ?? (m?.expires_at != null ? rM()(m?.expires_at) : null);
-            if (null != t) return (0, c.jsx)(dd, { endsAt: t, variant: e ? "followup" : "initial", children: l });
+            if (null != t) return (0, c.jsx)(dh, { endsAt: t, variant: e ? "followup" : "initial", children: l });
             break;
         }
         case "tooltip":
-            return (0, c.jsx)(dh, { children: l });
+            return (0, c.jsx)(ds, { children: l });
         case "marketing_moment_popover":
             return (0, c.jsx)(da, { targetElementRef: a, dismissPopover: v, children: l });
         case "l_premium_sub_tooltip":
             return (0, c.jsx)(rH, { children: l });
         case "l_upsell":
-            return (0, c.jsx)(rD, { targetElementRef: a, dismissPopover: r, children: l });
+            return (0, c.jsx)(rP, { targetElementRef: a, dismissPopover: r, children: l });
         case "orbs_multiplier":
             return (0, c.jsx)(rC, { multiplier: g, children: l });
         case "croissant_reheat_moment":
@@ -9269,7 +9257,7 @@ function dg(e) {
     }
     return l;
 }
-function dp(e) {
+function dd(e) {
     return (0, c.jsxs)("svg", {
         width: "14",
         height: "14",
@@ -9304,31 +9292,31 @@ function dp(e) {
         ],
     });
 }
-var dm = t(946332);
-function dw(e) {
+var dv = t(946332);
+function dg(e) {
     let { copy: l, showStars: t = !0, className: a } = e;
     return (0, c.jsxs)("div", {
-        className: o()(dm.fC, a),
+        className: o()(dv.fC, a),
         children: [
             t &&
                 (0, c.jsxs)(c.Fragment, {
                     children: [
                         (0, c.jsx)("span", {
-                            className: o()(dm.d4, dm.Cm),
-                            children: (0, c.jsx)(dp, { width: "10", height: "10" }),
+                            className: o()(dv.d4, dv.Cm),
+                            children: (0, c.jsx)(dd, { width: "10", height: "10" }),
                         }),
                         (0, c.jsx)("span", {
-                            className: o()(dm.d4, dm.nv),
-                            children: (0, c.jsx)(dp, { width: "14", height: "14" }),
+                            className: o()(dv.d4, dv.nv),
+                            children: (0, c.jsx)(dd, { width: "14", height: "14" }),
                         }),
                     ],
                 }),
-            (0, c.jsx)(nS.E, { variant: "eyebrow", className: dm.Ad, children: l }),
+            (0, c.jsx)(nS.E, { variant: "eyebrow", className: dv.Ad, children: l }),
         ],
     });
 }
-let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
-    dx = (e) => {
+let dp = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
+    dm = (e) => {
         let { selected: l } = e,
             t = (0, p.bG)([oE.default], () => oE.default.getCurrentUser()),
             a = (0, p.bG)([oY.A], () => oY.A.getPremiumTypeSubscription()),
@@ -9342,7 +9330,7 @@ let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             d = null != o ? o : t?.createdAt;
         return r || (null != t && null != d && Date.now() - d.getTime() > 12096e5);
     },
-    dA = (e) => {
+    dw = (e) => {
         let l,
             t,
             a,
@@ -9382,8 +9370,8 @@ let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             B = (0, p.bG)([oA.A], () => oA.A.getReminderStateId()),
             S = oO(),
             { programReward: F, isEligible: U } = (0, oQ.F)({ location: "NitroTabButton" }),
-            { receivesUpdatedUpsellPopover: b, orbsRewardAmount: D } = (0, rm.uX)("NitroTabButton"),
-            P = o4({ location: "nitro_tab_popover" }),
+            { receivesUpdatedUpsellPopover: b, orbsRewardAmount: P } = (0, rm.uX)("NitroTabButton"),
+            D = o4({ location: "nitro_tab_popover" }),
             k = (function (e) {
                 let { location: l } = e;
                 return o2.useConfig({ location: l });
@@ -9436,7 +9424,7 @@ let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
         (0, oh.Tc)() && (S && ev.push(m.M.RECURRING_3P_PROMOTION_POPOVER), N && ev.push(m.M.BOGO_2025_NITRO_TAB_BADGE));
         let [ep, em] = (0, nk.kn)(ev, void 0, !0);
         X && eg.push(m.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK),
-            j && (P || k ? eg.push(m.M.PREMIUM_GROUP_POPOVER_UPSELL_V2) : eg.push(m.M.PREMIUM_GROUP_POPOVER)),
+            j && (D || k ? eg.push(m.M.PREMIUM_GROUP_POPOVER_UPSELL_V2) : eg.push(m.M.PREMIUM_GROUP_POPOVER)),
             G && eg.push(m.M.PREMIUM_ORBS_UPSELL_POPOVER),
             Q && eg.push(m.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER),
             el && eg.push(m.M.L_3PP_NITRO_TOOLTIP),
@@ -9444,9 +9432,9 @@ let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             Y && eg.push(m.M.PREMIUM_WISHLIST_COACHMARK),
             es && eg.push(m.M.CROISSANT_REHEAT_MOMENT);
         let [ew, ef] = (0, nk.kn)(eg, void 0, !0),
-            ex = (0, ro.c)(oP.C.PREMIUM_TAB),
-            eA = (0, ro.c)(oP.C.PREMIUM_TAB_TOOLTIP),
-            eu = (0, ro.c)(oP.C.PREMIUM_TAB_POPOVER),
+            ex = (0, ro.c)(oD.C.PREMIUM_TAB),
+            eA = (0, ro.c)(oD.C.PREMIUM_TAB_TOOLTIP),
+            eu = (0, ro.c)(oD.C.PREMIUM_TAB_POPOVER),
             [eI, eM] = (0, nk.Cc)(
                 null != ex && "premiumTab" === ex.properties.properties.oneofKind
                     ? m.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE
@@ -9474,14 +9462,14 @@ let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             (h.useEffect(() => {
                 !0 === s &&
                     (null != ep && em(n5.i.AUTO_DISMISS),
-                    null == ew || df.has(ew) || ef(n5.i.AUTO_DISMISS),
+                    null == ew || dp.has(ew) || ef(n5.i.AUTO_DISMISS),
                     null != eI && eM(n5.i.AUTO_DISMISS),
                     null != eE && eN(n5.i.AUTO_DISMISS),
                     null != eZ && e_(n5.i.AUTO_DISMISS),
                     y && H(n5.i.AUTO_DISMISS),
                     null != R && C(n5.i.AUTO_DISMISS));
             }, [em, s, ep, ef, ew, eI, eM, eE, eN, eZ, e_, y, H, R, C]),
-            !dx({ selected: s }))
+            !dm({ selected: s }))
         )
             return null;
         let eC = () => {
@@ -9548,7 +9536,7 @@ let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
                   ? ((l = (0, c.jsx)(nL.E, { type: { text: nY.intl.string(nY.t.raP9dM) }, variant: "expressive" })),
                     (t = 4))
                   : null != R
-                    ? ((l = (0, c.jsx)(dw, { copy: R, showStars: !1 })), (t = 1))
+                    ? ((l = (0, c.jsx)(dg, { copy: R, showStars: !1 })), (t = 1))
                     : null != Z
                       ? ((l = (0, c.jsx)(rw.fY, { userDiscount: Z, isTabSelected: s, includesAmountOff: !1 })), (t = 3))
                       : null == M || ed
@@ -9570,36 +9558,36 @@ let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
                                         ew === m.M.CROISSANT_REHEAT_MOMENT &&
                                         ((l = (0, c.jsx)(nL.E, { type: "new", variant: "expressive" })), (t = 2))
                         : ((l = (0, c.jsx)(rw.Ag, { trialOffer: M, isTabSelected: s })), (t = 4));
-        let eH = dv.NONE;
+        let eH = dn.NONE;
         eZ === m.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
-            ? (eH = dv.MARKETING_MOMENT_POPOVER)
+            ? (eH = dn.MARKETING_MOMENT_POPOVER)
             : X && ew === m.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === t
-              ? (eH = dv.CHURN_DISCOUNT)
+              ? (eH = dn.CHURN_DISCOUNT)
               : ey && !k
-                ? (eH = dv.PREMIUM_GROUP)
+                ? (eH = dn.PREMIUM_GROUP)
                 : ey && k
-                  ? ((eH = dv.PREMIUM_GROUP_TOOLTIP), (r = !0))
+                  ? ((eH = dn.PREMIUM_GROUP_TOOLTIP), (r = !0))
                   : G && ew === m.M.PREMIUM_ORBS_UPSELL_POPOVER
-                    ? (eH = dv.ORBS_UPSELL)
+                    ? (eH = dn.ORBS_UPSELL)
                     : Q && ew === m.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER
-                      ? (eH = dv.ORBS_INTRO)
+                      ? (eH = dn.ORBS_INTRO)
                       : K && eE === m.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER
-                        ? (eH = dv.ORBS_DROP)
+                        ? (eH = dn.ORBS_DROP)
                         : eT
-                          ? (eH = dv.TOOLTIP)
+                          ? (eH = dn.TOOLTIP)
                           : ej
-                            ? (eH = dv.L_PREMIUM_SUB_TOOLTIP)
+                            ? (eH = dn.L_PREMIUM_SUB_TOOLTIP)
                             : eR
-                              ? (eH = dv.L_UPSELL)
+                              ? (eH = dn.L_UPSELL)
                               : E || M?.trial_id === oL.Tt
-                                ? (eH = dv.REVERSE_TRIAL)
+                                ? (eH = dn.REVERSE_TRIAL)
                                 : y
-                                  ? (eH = dv.ORBS_MULTIPLIER)
+                                  ? (eH = dn.ORBS_MULTIPLIER)
                                   : ea === oq.POPOVER && ew === m.M.CROISSANT_REHEAT_MOMENT
-                                    ? (eH = dv.CROISSANT_REHEAT_MOMENT)
+                                    ? (eH = dn.CROISSANT_REHEAT_MOMENT)
                                     : ea === oq.TOOLTIP &&
                                       ew === m.M.CROISSANT_REHEAT_MOMENT &&
-                                      ((r = !0), (eH = dv.CROISSANT_REHEAT_TOOLTIP));
+                                      ((r = !0), (eH = dn.CROISSANT_REHEAT_TOOLTIP));
         let eO = (0, c.jsx)(V.z9, {
             listItemRef: i,
             selected: s,
@@ -9610,7 +9598,7 @@ let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             text: (0, c.jsx)(A.A, { children: u ? nY.intl.string(nY.t["4gwVVn"]) : nY.intl.string(nY.t.Ipxkog) }),
             locationState: o,
             onClick: () => {
-                if (eH === dv.CROISSANT_REHEAT_TOOLTIP) {
+                if (eH === dn.CROISSANT_REHEAT_TOOLTIP) {
                     let e = new URL(n, window.location.origin);
                     e.searchParams.set(ri.x6, rs.u), (0, nQ.pX)(`${e.pathname}?${e.searchParams.toString()}`);
                 } else if (ej) {
@@ -9627,13 +9615,13 @@ let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             ...I,
             children: l,
         });
-        return (0, c.jsx)(dg, {
+        return (0, c.jsx)(dr, {
             popoverType: eH,
             targetElementRef: i,
             churnDiscountOffer: _,
             premiumSubscription: w,
             receivesUpdatedUpsellPopover: b,
-            orbsRewardAmount: D,
+            orbsRewardAmount: P,
             orbMultiplier: O,
             lastGrantedRewardAmount: q,
             dismissCoachMark: ef,
@@ -9644,11 +9632,11 @@ let df = new Set([m.M.PREMIUM_WISHLIST_COACHMARK]),
             children: eO,
         });
     };
-var du = t(106778);
-let dI = [t(426560)],
-    dM = ["#FFFFFF"],
-    dZ = 1e3 / 60,
-    d_ = {
+var df = t(106778);
+let dx = [t(426560)],
+    dA = ["#FFFFFF"],
+    du = 1e3 / 60,
+    dI = {
         velocity: { type: "static-random", minValue: { x: 0, y: 1 }, maxValue: { x: 3, y: 3 } },
         rotation: {
             type: "linear-random",
@@ -9661,18 +9649,18 @@ let dI = [t(426560)],
         dragCoefficient: { type: "static", value: 830 },
         opacity: { type: "static", value: 0.3 },
     };
-function dE(e) {
-    let { className: l, firing: t = !0, wind: a = 2, sprites: s = dI, spriteColors: i = dM, confettiConfig: n } = e,
+function dM(e) {
+    let { className: l, firing: t = !0, wind: a = 2, sprites: s = dx, spriteColors: i = dA, confettiConfig: n } = e,
         [o, r] = h.useState(null),
         [d, v] = h.useState(null),
-        g = (0, du.f9)(d, o),
-        p = h.useMemo(() => new du.OH({ wind: a }), [a]),
+        g = (0, df.f9)(d, o),
+        p = h.useMemo(() => new df.OH({ wind: a }), [a]),
         m = h.useCallback(() => {
             let e = d?.getCanvas();
             if (null == e) return;
             let l = e.getBoundingClientRect();
             g.createConfetti({
-                ...d_,
+                ...dI,
                 ...n,
                 position: {
                     type: "static-random",
@@ -9683,26 +9671,26 @@ function dE(e) {
         }, [g, d, n]);
     return (
         h.useEffect(() => {
-            let e = t ? setInterval(m, dZ) : null;
+            let e = t ? setInterval(m, du) : null;
             return () => clearInterval(e);
         }, [t, m]),
         (0, c.jsxs)(c.Fragment, {
             children: [
-                (0, c.jsx)(du.Fk, { ref: v, className: l, environment: p }),
-                (0, c.jsx)(du.K_, { ref: r, colors: i, sprites: s, spriteWidth: 6, spriteHeight: 6 }),
+                (0, c.jsx)(df.Fk, { ref: v, className: l, environment: p }),
+                (0, c.jsx)(df.K_, { ref: r, colors: i, sprites: s, spriteWidth: 6, spriteHeight: 6 }),
             ],
         })
     );
 }
-var dN = t(419354),
-    dT = t(717421),
-    dj = t(770178),
-    dR = t(859703),
-    dC = t(87549),
-    dV = t(18437),
-    dy = t(194526),
-    dH = t(78701);
-function dO(e) {
+var dZ = t(487514),
+    d_ = t(717421),
+    dE = t(770178),
+    dN = t(859703),
+    dT = t(87549),
+    dj = t(18437),
+    dR = t(194526),
+    dC = t(78701);
+function dV(e) {
     let { onNavigateToQuestHome: l, onRender: t, onRequestClose: a, targetElementRef: s } = e,
         i = h.useCallback(() => {
             l(), (0, nQ.pX)(nX.BVt.QUEST_HOME);
@@ -9718,7 +9706,7 @@ function dO(e) {
             body: nY.intl.string(nY.t.o4NGXc),
             caretConfig: { align: "start" },
             gradientColor: "purple",
-            graphic: { type: "image", src: dH.A },
+            graphic: { type: "image", src: dC.A },
             onRequestClose: a,
             position: "right",
             size: "lg",
@@ -9727,11 +9715,11 @@ function dO(e) {
         })
     );
 }
-var dL = t(398025),
-    dB = t(301958);
-let dS = Math.ceil(Math.sqrt(115200)),
-    dF = (dS - 240) / 2,
-    dU = function (e) {
+var dy = t(398025),
+    dH = t(301958);
+let dO = Math.ceil(Math.sqrt(115200)),
+    dL = (dO - 240) / 2,
+    dB = function (e) {
         let { selected: l } = e,
             t = (0, v.rm)("quests"),
             a = h.useRef(null),
@@ -9741,7 +9729,7 @@ let dS = Math.ceil(Math.sqrt(115200)),
                 dismissOnboardingContent: n,
             } = (function () {
                 let e = (0, x.useHasAnyModalOpen)(),
-                    l = (0, p.bG)([dR.A], () => dR.A.quests.size > 0),
+                    l = (0, p.bG)([dN.A], () => dN.A.quests.size > 0),
                     t = (0, p.bG)([oE.default], () => oE.default.getCurrentUser()),
                     [a, s] = (0, nk.kn)(
                         !e && l && null != t ? [m.M.QUEST_HOME_ENTRYPOINT_ONBOARDING] : [],
@@ -9755,19 +9743,19 @@ let dS = Math.ceil(Math.sqrt(115200)),
                     n = (0, oj.JZ)(m.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
                 return { shouldShowPopover: c, shouldShowGradientAndBadge: l && !n, dismissOnboardingContent: i };
             })(),
-            { shouldShowQuestHomeHeroContent: r, dismissQuestHomeHeroContent: d, questHomeHero: g } = (0, dy.I)(),
+            { shouldShowQuestHomeHeroContent: r, dismissQuestHomeHeroContent: d, questHomeHero: g } = (0, dR.I)(),
             f = h.useCallback(() => {
-                dC.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }), r && d();
+                dT.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }), r && d();
             }, [r, d]),
-            [{ glowSpring: A }, I] = (0, dT.z)(() => ({
+            [{ glowSpring: A }, I] = (0, d_.z)(() => ({
                 from: { glowSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 240, friction: 12 },
             })),
-            [{ shineSpring: M }, _] = (0, dT.z)(() => ({
+            [{ shineSpring: M }, _] = (0, d_.z)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
-            E = (0, dV.cR)({ questHomeHero: g, shouldShowQuestHomeHeroContent: r }),
+            E = (0, dj.cR)({ questHomeHero: g, shouldShowQuestHomeHeroContent: r }),
             N = h.useCallback(() => {
                 _({ shineSpring: 1 }), I({ glowSpring: 1, delay: 200 }), E.handleMouseEnter();
             }, [_, I, E]),
@@ -9781,12 +9769,12 @@ let dS = Math.ceil(Math.sqrt(115200)),
             y = h.useCallback((e) => {
                 C(e.contentRect.width);
             }, []),
-            H = (0, dj.w)(y, [], { fireOnMount: !0 }),
+            H = (0, dE.w)(y, [], { fireOnMount: !0 }),
             O = !r && i,
             L = !r && s,
             B = r && g?.questHomeEntrypoint?.tooltipTitle != null,
             { inlineCssProperties: S, shouldShowQuestHomeHeroGradient: F } = h.useMemo(() => {
-                let e = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${dF}px` },
+                let e = { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${dL}px` },
                     l = g?.questHomeEntrypoint?.linearGradient?.start,
                     t = g?.questHomeEntrypoint?.linearGradient?.end,
                     a = g?.questHomeEntrypoint?.radialGradient?.start,
@@ -9805,7 +9793,7 @@ let dS = Math.ceil(Math.sqrt(115200)),
                 return { inlineCssProperties: e, shouldShowQuestHomeHeroGradient: r && (i || c) };
             }, [r, g]),
             U = (0, c.jsx)("div", {
-                className: dB.iE,
+                className: dH.iE,
                 onMouseEnter: N,
                 onMouseLeave: T,
                 onFocus: N,
@@ -9814,7 +9802,7 @@ let dS = Math.ceil(Math.sqrt(115200)),
                 style: S,
                 children: (0, c.jsxs)(V.z9, {
                     showHoverGradient: !1,
-                    className: o()({ [dB.VU]: O || F, [dB.jR]: O, [dB.XO]: r }),
+                    className: o()({ [dH.VU]: O || F, [dH.jR]: O, [dH.XO]: r }),
                     icon: iq.r,
                     listItemRef: a,
                     onClick: f,
@@ -9827,7 +9815,7 @@ let dS = Math.ceil(Math.sqrt(115200)),
                             (0, c.jsxs)(c.Fragment, {
                                 children: [
                                     (0, c.jsx)("div", {
-                                        className: dB.qS,
+                                        className: dH.qS,
                                         children: (0, c.jsx)(nL.E, {
                                             type: { text: nY.intl.string(nY.t.y2b7CA) },
                                             variant: "expressive",
@@ -9836,7 +9824,7 @@ let dS = Math.ceil(Math.sqrt(115200)),
                                     g?.questHomeEntrypoint?.image != null &&
                                         (0, c.jsx)("img", {
                                             src: g?.questHomeEntrypoint?.image,
-                                            className: dB.Nd,
+                                            className: dH.Nd,
                                             alt: "",
                                         }),
                                 ],
@@ -9844,21 +9832,21 @@ let dS = Math.ceil(Math.sqrt(115200)),
                         O &&
                             (0, c.jsxs)(c.Fragment, {
                                 children: [
-                                    (0, c.jsx)(dN.animated.div, {
-                                        className: dB.q2,
+                                    (0, c.jsx)(dZ.animated.div, {
+                                        className: dH.q2,
                                         style: {
                                             transform: M.to(
                                                 (e) =>
-                                                    `translateX(calc(${e * R}px + ${e * dS}px)) translateY(-50%) rotate(45deg)`,
+                                                    `translateX(calc(${e * R}px + ${e * dO}px)) translateY(-50%) rotate(45deg)`,
                                             ),
                                         },
                                     }),
-                                    (0, c.jsx)(dN.animated.div, {
-                                        className: dB.ys,
-                                        style: { opacity: (0, dL.a)(A.to({ range: [0, 1], output: [0, 0.5] })) },
+                                    (0, c.jsx)(dZ.animated.div, {
+                                        className: dH.ys,
+                                        style: { opacity: (0, dy.a)(A.to({ range: [0, 1], output: [0, 0.5] })) },
                                     }),
                                     (0, c.jsx)(Z.Lp, {
-                                        className: dB.qS,
+                                        className: dH.qS,
                                         text: nY.intl.string(nY.t.y2b7CA),
                                         color: w.A.colors.BACKGROUND_BRAND.css,
                                     }),
@@ -9878,7 +9866,7 @@ let dS = Math.ceil(Math.sqrt(115200)),
                                   ? (0, c.jsx)("img", {
                                         src: g.questHomeEntrypoint.tooltipImage,
                                         alt: "",
-                                        className: dB.ut,
+                                        className: dH.ut,
                                     })
                                   : void 0,
                           assetSize: 48,
@@ -9888,31 +9876,31 @@ let dS = Math.ceil(Math.sqrt(115200)),
                           children: U,
                       })
                     : U,
-                L && (0, c.jsx)(dO, { targetElementRef: a, onNavigateToQuestHome: f, onRender: j, onRequestClose: n }),
+                L && (0, c.jsx)(dV, { targetElementRef: a, onNavigateToQuestHome: f, onRender: j, onRequestClose: n }),
             ],
         });
     };
-var db = t(793322),
-    dD = t(366811),
-    dP = t(728321),
-    dk = t(363195),
-    dJ = t(253932),
-    dG = t(189081),
-    dW = t(839067),
-    dq = t(67480),
-    dz = t(619921),
-    dK = t(595623),
-    dQ = t(541830),
-    dX = t(851110),
-    dY = t(602339),
-    d$ = t(925004);
-let d1 = (e) => {
+var dS = t(793322),
+    dF = t(366811),
+    dU = t(728321),
+    db = t(363195),
+    dP = t(253932),
+    dD = t(189081),
+    dk = t(839067),
+    dJ = t(67480),
+    dG = t(619921),
+    dW = t(595623),
+    dq = t(541830),
+    dz = t(851110),
+    dK = t(602339),
+    dQ = t(925004);
+let dX = (e) => {
         let { selected: l, ...t } = e,
             a = (0, oo.c)("PrivateChannels.ICYMIButton"),
             s = (0, v.rm)("icymi");
         return a
             ? (0, c.jsx)("div", {
-                  className: d$.F2,
+                  className: dQ.F2,
                   children: (0, c.jsx)(V.z9, {
                       selected: l,
                       route: nX.BVt.ICYMI,
@@ -9920,7 +9908,7 @@ let d1 = (e) => {
                       text: (0, c.jsxs)(c.Fragment, {
                           children: [
                               nY.intl.string(nY.t["jnXV/V"]),
-                              (0, c.jsx)("span", { className: d$.HH, children: nY.intl.string(nY.t.Ac2OZA) }),
+                              (0, c.jsx)("span", { className: dQ.HH, children: nY.intl.string(nY.t.Ac2OZA) }),
                           ],
                       }),
                       ...t,
@@ -9929,7 +9917,7 @@ let d1 = (e) => {
               })
             : null;
     },
-    d0 = (e) => {
+    dY = (e) => {
         let { selected: l, ...t } = e,
             a = (0, v.rm)("friends"),
             s = (0, ox.kX)(),
@@ -9955,7 +9943,7 @@ let d1 = (e) => {
                       (e = nX.m3P.ALL),
                       C.A.setSection(nX.m3P.ALL),
                       g(n5.i.TAKE_ACTION))
-                    : (e = dK.Ay.getState().section),
+                    : (e = dW.Ay.getState().section),
                     (0, L.A)({ tab_opened: e });
             },
             [A, I] = h.useState(!1),
@@ -9969,7 +9957,7 @@ let d1 = (e) => {
                 (0, c.jsx)(V.z9, {
                     showHoverGradient: !1,
                     onClick: x,
-                    interactiveClassName: w ? d$.hc : void 0,
+                    interactiveClassName: w ? dQ.hc : void 0,
                     selected: l,
                     route: nX.BVt.FRIENDS,
                     icon: M.$,
@@ -9981,7 +9969,7 @@ let d1 = (e) => {
                     children: s > 0 ? (0, c.jsx)(Z.hV, { count: s }) : null,
                 });
         return (0, c.jsx)("div", {
-            className: d$.F2,
+            className: dQ.F2,
             children: w
                 ? (0, c.jsxs)(c.Fragment, {
                       children: [
@@ -9993,11 +9981,11 @@ let d1 = (e) => {
                               children: N(),
                           }),
                           !n &&
-                              (0, c.jsx)(dE, {
-                                  className: d$.t_,
+                              (0, c.jsx)(dM, {
+                                  className: dQ.t_,
                                   wind: 0,
-                                  sprites: dX.uI,
-                                  spriteColors: dX._t,
+                                  sprites: dz.uI,
+                                  spriteColors: dz._t,
                                   firing: A,
                                   confettiConfig: {
                                       opacity: { type: "static", value: 1 },
@@ -10009,7 +9997,7 @@ let d1 = (e) => {
                 : N(),
         });
     },
-    d2 = (e) => {
+    d$ = (e) => {
         let { selected: l, hideGameUpdateProgressIndicator: t, ...a } = e,
             s = (0, v.rm)("library");
         return (0, c.jsx)(V.z9, {
@@ -10019,14 +10007,14 @@ let d1 = (e) => {
             text: nY.intl.string(nY.t.cw57ar),
             ...a,
             ...s,
-            children: (0, c.jsx)(H.A, { className: o()(d$.Qw, { [d$.QI]: t }) }),
+            children: (0, c.jsx)(H.A, { className: o()(dQ.Qw, { [dQ.QI]: t }) }),
         });
     },
-    d3 = () => {
+    d1 = () => {
         let e = (0, od.W)();
         return e > 0 ? (0, c.jsx)(Z.hV, { count: e }) : null;
     },
-    d4 = (e) => {
+    d0 = (e) => {
         let { selected: l } = e,
             t = (0, v.rm)("messageRequests"),
             { channelId: a } = (0, or.N)();
@@ -10039,12 +10027,12 @@ let d1 = (e) => {
             text: nY.intl.string(nY.t.e7GWjQ),
             onClick: s,
             ...t,
-            children: (0, c.jsx)(d3, {}),
+            children: (0, c.jsx)(d1, {}),
         });
     },
-    d5 = (e) => {
+    d2 = (e) => {
         let { selected: l } = e,
-            t = nY.intl.string(dY.default.Rkdixs),
+            t = nY.intl.string(dK.default.Rkdixs),
             a = (0, v.rm)("family-center"),
             [s, i] = h.useState(!0);
         return (0, c.jsx)(V.z9, {
@@ -10058,17 +10046,17 @@ let d1 = (e) => {
             onMouseLeave: () => {
                 i(!1);
             },
-            interactiveClassName: d$.M1,
+            interactiveClassName: dQ.M1,
             ...a,
-            children: (0, c.jsx)(d6, { isParentHovered: s }),
+            children: (0, c.jsx)(d3, { isParentHovered: s }),
         });
     },
-    d6 = (e) => {
+    d3 = (e) => {
         let { isParentHovered: l } = e,
             a = (0, of.VT)();
         return l
             ? (0, c.jsx)("div", {
-                  className: d$.lL,
+                  className: dQ.lL,
                   children: (0, c.jsx)(V.w_, {
                       onClick: () => {
                           (0, x.openModalLazy)(async () => {
@@ -10081,9 +10069,9 @@ let d1 = (e) => {
                   }),
               })
             : a > 0
-              ? (0, c.jsx)("div", { className: o()(d$.lL, d$.iL), children: (0, c.jsx)(Z.hV, { count: a }) })
+              ? (0, c.jsx)("div", { className: o()(dQ.lL, dQ.iL), children: (0, c.jsx)(Z.hV, { count: a }) })
               : (0, c.jsx)("div", {
-                    className: d$.lL,
+                    className: dQ.lL,
                     children: (0, c.jsx)(on.Ay, {
                         contentTypes: [m.M.FAMILY_CENTER_NEW_BADGE],
                         children: (e) => {
@@ -10098,8 +10086,8 @@ let d1 = (e) => {
                     }),
                 });
     },
-    d7 = () => (0, db.WU)("DM_SEARCH");
-function d8(e) {
+    d4 = () => (0, dS.WU)("DM_SEARCH");
+function d5(e) {
     switch (e) {
         case nX.BVt.APPLICATION_LIBRARY:
             return nX.liQ.LIBRARY;
@@ -10116,7 +10104,7 @@ function d8(e) {
               : nX.liQ.STORE_LISTING
         : nX.liQ.DM_CHANNEL;
 }
-let d9 = h.memo(function (e) {
+let d6 = h.memo(function (e) {
     let {
             showLibrary: l,
             hasLibraryApplication: t,
@@ -10137,24 +10125,24 @@ let d9 = h.memo(function (e) {
         I = (0, oo.c)("PrivateChannels"),
         M = null;
     return (
-        n ? (M = (0, c.jsx)(oD, { targetElementRef: u })) : r && (M = (0, c.jsx)(oB, { targetElementRef: u })),
+        n ? (M = (0, c.jsx)(oP, { targetElementRef: u })) : r && (M = (0, c.jsx)(oB, { targetElementRef: u })),
         (0, c.jsxs)("nav", {
-            className: d$.AB,
+            className: dQ.AB,
             "aria-label": nY.intl.string(nY.t.ZH9aP4),
             children: [
-                (0, c.jsx)(dP.A, {
+                (0, c.jsx)(dU.A, {
                     childRef: w,
                     tutorialId: "direct-messages",
                     position: "right",
                     offsetX: -52,
                     children: (0, c.jsx)("div", {
                         ref: w,
-                        className: o()(d$.ON, { [d$.jD]: g.Fr }),
+                        className: o()(dQ.ON, { [dQ.jD]: g.Fr }),
                         children: (0, c.jsx)(j.$, {
                             fullWidth: !0,
                             variant: "secondary",
                             size: "sm",
-                            onClick: d7,
+                            onClick: d4,
                             text: nY.intl.format(nY.t.fH9FBy, {
                                 tooltipHook: (e, l) => (0, c.jsx)(A.A, { children: e }, l),
                             }),
@@ -10168,16 +10156,16 @@ let d9 = h.memo(function (e) {
                     listScrollerRef: x,
                     children: [
                         (0, c.jsx)(
-                            d0,
+                            dY,
                             { selected: null != m ? m === nX.BVt.FRIENDS : a === nX.BVt.FRIENDS },
                             "friends",
                         ),
                         I
-                            ? (0, c.jsx)(d1, { selected: null != m ? m === nX.BVt.ICYMI : a === nX.BVt.ICYMI }, "icymi")
+                            ? (0, c.jsx)(dX, { selected: null != m ? m === nX.BVt.ICYMI : a === nX.BVt.ICYMI }, "icymi")
                             : null,
                         t && l
                             ? (0, c.jsx)(
-                                  d2,
+                                  d$,
                                   {
                                       selected:
                                           null == m
@@ -10190,7 +10178,7 @@ let d9 = h.memo(function (e) {
                             : null,
                         d
                             ? (0, c.jsx)(
-                                  d4,
+                                  d0,
                                   {
                                       selected:
                                           null == m
@@ -10205,13 +10193,13 @@ let d9 = h.memo(function (e) {
                                   "div",
                                   {
                                       children: [
-                                          (0, c.jsx)(dA, {
+                                          (0, c.jsx)(dw, {
                                               nitroTabButtonRef: u,
                                               selected: null == m ? s : m.startsWith(nX.BVt.APPLICATION_STORE),
                                               route: nX.BVt.APPLICATION_STORE,
                                               locationState: {
                                                   analyticsSource: {
-                                                      page: d8(a),
+                                                      page: d5(a),
                                                       section: nX.JJy.NAVIGATION,
                                                       object: nX.ZSU.NAVIGATION_LINK,
                                                   },
@@ -10230,7 +10218,7 @@ let d9 = h.memo(function (e) {
                                 listItemRef: f,
                                 locationState: {
                                     analyticsSource: {
-                                        page: d8(a),
+                                        page: d5(a),
                                         section: nX.JJy.NAVIGATION,
                                         object: nX.ZSU.NAVIGATION_LINK,
                                     },
@@ -10240,7 +10228,7 @@ let d9 = h.memo(function (e) {
                         ),
                         v
                             ? (0, c.jsx)(
-                                  d5,
+                                  d2,
                                   {
                                       selected:
                                           (null != a && a.startsWith(nX.BVt.FAMILY_CENTER)) ||
@@ -10250,41 +10238,41 @@ let d9 = h.memo(function (e) {
                               )
                             : null,
                         (0, c.jsx)(
-                            dU,
+                            dB,
                             {
                                 selected:
                                     null == m ? null != a && a.startsWith(nX.BVt.QUEST_HOME) : m === nX.BVt.QUEST_HOME,
                             },
                             "quests",
                         ),
-                        (0, c.jsx)(ve, {}, "section-divider-top"),
+                        (0, c.jsx)(d7, {}, "section-divider-top"),
                     ],
                 }),
             ],
         })
     );
 });
-function ve() {
-    return (0, c.jsx)("div", { className: d$.ts });
+function d7() {
+    return (0, c.jsx)("div", { className: dQ.ts });
 }
-function vl() {
+function d8() {
     let e,
         l,
-        t = (0, p.bG)([dz.A], () => dz.A.getHomeLink()),
-        a = (0, p.bG)([dq.A], () => {
+        t = (0, p.bG)([dG.A], () => dG.A.getHomeLink()),
+        a = (0, p.bG)([dJ.A], () => {
             if (t === nX.BVt.APPLICATION_STORE) return !0;
-            let e = (0, dQ.qt)(t);
-            return null != e && (dq.A.get(e)?.premium ?? !1);
+            let e = (0, dq.qt)(t);
+            return null != e && (dJ.A.get(e)?.premium ?? !1);
         }, [t]),
-        s = !dJ.l_.useSetting(),
-        { theme: i } = (0, p.cf)([dk.A], () => ({ theme: dk.A.theme })),
-        h = (0, p.bG)([dG.A], () => dG.A.hasLibraryApplication()),
-        n = (0, p.bG)([dW.A], () => dW.A.getCurrentPath()),
-        [o, d] = (0, dD.A)((e) => {
+        s = !dP.l_.useSetting(),
+        { theme: i } = (0, p.cf)([db.A], () => ({ theme: db.A.theme })),
+        h = (0, p.bG)([dD.A], () => dD.A.hasLibraryApplication()),
+        n = (0, p.bG)([dk.A], () => dk.A.getCurrentPath()),
+        [o, d] = (0, dF.A)((e) => {
             let { channelId: l, path: t } = e;
             return [l, t];
         }, r.x),
-        v = dx({ selected: null == d ? a : d.startsWith(nX.BVt.APPLICATION_STORE) }),
+        v = dm({ selected: null == d ? a : d.startsWith(nX.BVt.APPLICATION_STORE) }),
         g = (0, oS.Tp)(),
         w = (0, p.bG)([oA.A], () => oA.A.getReminderStateId()),
         f = oO(),
@@ -10296,8 +10284,8 @@ function vl() {
         Z = null == u && I === m.M.RECURRING_3P_PROMOTION_POPOVER,
         _ = A ? u === m.M.REFERRAL_PROGRAM_POPOVER_V2 : I === m.M.REFERRAL_PROGRAM_POPOVER,
         E = om(),
-        N = ((e = dJ.dm.useSetting()), (l = (0, ow.A)()), !0 === e && !0 === l);
-    return (0, c.jsx)(d9, {
+        N = ((e = dP.dm.useSetting()), (l = (0, ow.A)()), !0 === e && !0 === l);
+    return (0, c.jsx)(d6, {
         theme: i,
         showLibrary: s,
         hasLibraryApplication: h,
