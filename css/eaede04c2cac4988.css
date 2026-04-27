@@ -862,6 +862,7 @@ screen and (max-width:485px) {
 }
 
 .profileFrameLayer__7d80f {
+    inset-inline: 0;
     position: absolute;
     width: 100%
 }

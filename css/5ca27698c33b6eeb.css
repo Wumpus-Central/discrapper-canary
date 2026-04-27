@@ -585,6 +585,7 @@ img.messageBadge__10651 {
 }
 
 .profileFrameLayer__7d80f {
+    inset-inline: 0;
     position: absolute;
     width: 100%
 }
