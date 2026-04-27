@@ -1699,11 +1699,19 @@
     min-width: var(--custom-product-card-min-width, 246px);
     overflow: hidden;
     overflow-anchor: none;
+    position: relative;
     width: 100%
 }
 
 .full-motion .productCardContainer_fcbddd {
     transition: border-color .2s
+}
+
+.productCardContainer_fcbddd>[role=button]:first-child {
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    width: 100%
 }
 
 .productCardContentContainer_fcbddd {
