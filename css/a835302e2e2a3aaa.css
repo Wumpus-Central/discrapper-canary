@@ -3105,6 +3105,14 @@ screen and (max-width:485px) {
     width: auto
 }
 
+.giftCardCreditsCheckboxAbove_b90acf {
+    margin-bottom: var(--space-8)
+}
+
+.giftCardCreditsCheckboxBelow_b90acf {
+    margin-top: var(--space-8)
+}
+
 .content_d60bcd ul {
     list-style: disc;
     margin: var(--space-4) 0 0;
@@ -4908,8 +4916,8 @@ screen and (max-width:485px) {
 }
 
 .card_ac86f6.giftSelectionModalContext_ac86f6 .cardTitle_ac86f6 {
-    font-size: 1.875rem;
-    line-height: 1.5625rem
+    font-size: 30px;
+    line-height: 25px
 }
 
 .card_ac86f6.borderGradient_ac86f6 {
@@ -5124,9 +5132,9 @@ screen and (max-width:485px) {
 }
 
 .cardTitle_ac86f6 {
-    font-size: 2rem;
+    font-size: 32px;
     font-style: italic;
-    line-height: 1.6875rem;
+    line-height: 27px;
     text-transform: uppercase
 }
 

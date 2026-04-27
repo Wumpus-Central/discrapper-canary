@@ -390,6 +390,14 @@
     width: auto
 }
 
+.giftCardCreditsCheckboxAbove_b90acf {
+    margin-bottom: var(--space-8)
+}
+
+.giftCardCreditsCheckboxBelow_b90acf {
+    margin-top: var(--space-8)
+}
+
 .content_d60bcd ul {
     list-style: disc;
     margin: var(--space-4) 0 0;
