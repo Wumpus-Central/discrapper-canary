@@ -1,140 +1,147 @@
-a.d(e, { default: () => w });
-var s = a(627968),
-    i = a(64700),
-    l = a(224640),
-    r = a(821609),
-    n = a(408278),
-    c = a(314116),
-    d = a(990078),
-    o = a(704333),
-    b = a(414499),
-    m = a(597770),
-    u = a(500060),
-    x = a(534514),
-    p = a(834730),
-    f = a(885574),
-    g = a(972213),
-    _ = a(276666),
-    h = a(777376),
-    j = a(983060),
-    v = a(758209),
-    N = a(915418),
-    C = a(674567),
-    k = a(237146),
-    O = a(985018),
-    E = a(691539);
-let I = [
-    { icon: o.B, message: k.default.bpksos },
-    { icon: b.h, message: k.default["5rbQbD"] },
-    { icon: m.o, message: k.default.b1X5Jf, tooltip: k.default.AyECej },
-    { icon: u.o, message: k.default.xZiyZj },
+s.d(e, { default: () => y });
+var a = s(627968),
+    i = s(64700),
+    l = s(224640),
+    r = s(821609),
+    c = s(408278),
+    n = s(314116),
+    d = s(990078),
+    o = s(704333),
+    h = s(414499),
+    m = s(597770),
+    u = s(500060),
+    b = s(534514),
+    x = s(834730),
+    v = s(885574),
+    f = s(972213),
+    g = s(954571),
+    p = s(276666),
+    _ = s(985603),
+    j = s(777376),
+    N = s(983060),
+    C = s(758209),
+    w = s(915418),
+    A = s(674567),
+    E = s(652215),
+    I = s(237146),
+    O = s(985018),
+    k = s(691539);
+let T = [
+    { icon: o.B, message: I.default.bpksos },
+    { icon: h.h, message: I.default["5rbQbD"] },
+    { icon: m.o, message: I.default.b1X5Jf, tooltip: I.default.AyECej },
+    { icon: u.o, message: I.default.xZiyZj },
 ];
-function w(t) {
-    let { transitionState: e, onClose: a } = t,
-        o = (0, C.V)(),
-        { status: b, redirect: m, requestInProgress: u } = (0, N.r)(),
-        w = (0, v.A)(m),
-        y = i.useCallback(() => {
-            (0, c.A)({
-                title: O.intl.string(k.default["/GObQk"]),
-                subtitle: O.intl.string(k.default["r/jeXi"]),
-                confirmText: O.intl.string(k.default.bVwQhX),
+function y(t) {
+    let { transitionState: e, onClose: s } = t,
+        o = (0, A.V)(),
+        { status: h, redirect: m, requestInProgress: u } = (0, w.r)(),
+        y = (0, C.A)(m),
+        Z = i.useCallback(() => {
+            (0, n.A)({
+                title: O.intl.string(I.default["/GObQk"]),
+                subtitle: O.intl.string(I.default["r/jeXi"]),
+                confirmText: O.intl.string(I.default.bVwQhX),
                 variant: "critical",
-                onConfirm: () => (0, _.RB)(h.n9.XGPP),
+                onConfirm: () => (0, p.RB)(j.n9.XGPP),
             });
         }, []),
-        D = o === C.s.NONE || o === C.s.NON_NITRO;
+        D = o === A.s.NONE || o === A.s.NON_NITRO;
+    i.useEffect(() => {
+        D && s();
+    }, [D, s]);
+    let L = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            D && a();
-        }, [D, a]),
+            D || L.current || ((L.current = !0), g.default.track(E.HAw.OPEN_MODAL, { type: _.$ }));
+        }, [D]),
         D)
     )
         return null;
-    let L = (function (t) {
-        let { claimStatus: e, handleActivationClick: a, cancelCroissant: s, requestInProgress: i } = t;
+    let R = (function (t) {
+        let { claimStatus: e, handleActivationClick: s, cancelCroissant: a, requestInProgress: i } = t;
         switch (e) {
-            case h.p1.NOT_CLAIMED:
-            case h.p1.CLAIM_IN_PROGRESS:
+            case j.p1.NOT_CLAIMED:
+            case j.p1.CLAIM_IN_PROGRESS:
                 return {
-                    ctaText: O.intl.string(k.default.EL3rU4),
+                    ctaText: O.intl.string(I.default.EL3rU4),
                     ctaVariant: "primary",
-                    ctaOnClick: a,
-                    processing: i,
-                    disclaimer: e === h.p1.CLAIM_IN_PROGRESS ? O.intl.string(k.default.Fs74z9) : void 0,
-                };
-            case h.p1.CLAIMED:
-                return {
-                    ctaText: O.intl.string(k.default["Z2Ipu/"]),
-                    ctaVariant: "critical-secondary",
                     ctaOnClick: s,
                     processing: i,
-                    disclaimer: O.intl.string(k.default.hjlZZf),
+                    disclaimer: e === j.p1.CLAIM_IN_PROGRESS ? O.intl.string(I.default.Fs74z9) : void 0,
                 };
-            case h.p1.CANCELLATION_IN_PROGRESS:
+            case j.p1.CLAIMED:
                 return {
-                    ctaText: O.intl.string(k.default.wBz9aO),
+                    ctaText: O.intl.string(I.default["Z2Ipu/"]),
+                    ctaVariant: "critical-secondary",
+                    ctaOnClick: a,
+                    processing: i,
+                    disclaimer: O.intl.string(I.default.hjlZZf),
+                };
+            case j.p1.CANCELLATION_IN_PROGRESS:
+                return {
+                    ctaText: O.intl.string(I.default.wBz9aO),
                     ctaVariant: "critical-secondary",
                     ctaDisabled: !0,
-                    disclaimer: O.intl.string(k.default.hjlZZf),
+                    disclaimer: O.intl.string(I.default.hjlZZf),
                 };
         }
-    })({ claimStatus: b, handleActivationClick: w, cancelCroissant: y, requestInProgress: u });
-    return (0, s.jsx)(l.d, {
+    })({ claimStatus: h, handleActivationClick: y, cancelCroissant: Z, requestInProgress: u });
+    return (0, a.jsx)(l.d, {
         transitionState: e,
-        onClose: a,
+        onClose: s,
         size: "xl",
-        "aria-label": O.intl.string(k.default.ukvxpp),
-        children: (0, s.jsxs)("div", {
-            className: E.yl,
+        "aria-label": O.intl.string(I.default.ukvxpp),
+        children: (0, a.jsxs)("div", {
+            className: k.yl,
             children: [
-                (0, s.jsxs)("div", {
-                    className: E.XN,
+                (0, a.jsxs)("div", {
+                    className: k.XN,
                     children: [
-                        (0, s.jsx)("img", {
-                            className: E.wm,
+                        (0, a.jsx)("img", {
+                            className: k.wm,
                             src: "https://cdn.discordapp.com/assets/content/7ade8acce1774614eee4dbeb37b20b44fe7cb2a2b70b5107413ed7ee724e1344.png",
                             alt: "Xbox Game Pass",
                         }),
-                        (0, s.jsxs)("div", {
-                            className: E.FD,
+                        (0, a.jsxs)("div", {
+                            className: k.FD,
                             children: [
-                                (0, s.jsxs)("div", {
-                                    className: E.gY,
+                                (0, a.jsxs)("div", {
+                                    className: k.gY,
                                     children: [
-                                        (0, s.jsx)(x.D, {
+                                        (0, a.jsx)(b.D, {
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
-                                            children: O.intl.string(k.default.ukvxpp),
+                                            children: O.intl.string(I.default.ukvxpp),
                                         }),
-                                        (0, s.jsx)(p.E, {
+                                        (0, a.jsx)(x.E, {
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
-                                            children: O.intl.format(k.default.FO4faL, { termsLink: (0, j.W)() }),
+                                            children: O.intl.format(I.default.FO4faL, { termsLink: (0, N.W)() }),
                                         }),
                                     ],
                                 }),
-                                null != L &&
-                                    (0, s.jsxs)(s.Fragment, {
+                                null != R &&
+                                    (0, a.jsxs)(a.Fragment, {
                                         children: [
-                                            (0, s.jsx)(r.$, {
+                                            (0, a.jsx)(r.$, {
                                                 fullWidth: !0,
-                                                variant: L.ctaVariant,
+                                                variant: R.ctaVariant,
                                                 size: "md",
-                                                text: L.ctaText,
-                                                onClick: L.ctaOnClick,
-                                                disabled: L.ctaDisabled,
-                                                loading: L.processing,
+                                                text: R.ctaText,
+                                                onClick: R.ctaOnClick,
+                                                disabled: R.ctaDisabled,
+                                                loading: R.processing,
                                             }),
-                                            null != L.disclaimer &&
-                                                (0, s.jsxs)("div", {
-                                                    className: E.ed,
+                                            null != R.disclaimer &&
+                                                (0, a.jsxs)("div", {
+                                                    className: k.ed,
                                                     children: [
-                                                        (0, s.jsx)(f.m, { size: "xs", color: "var(--text-subtle)" }),
-                                                        (0, s.jsx)(p.E, {
+                                                        (0, a.jsx)(v.m, { size: "xs", color: "var(--text-subtle)" }),
+                                                        (0, a.jsx)(x.E, {
                                                             variant: "text-xs/medium",
                                                             color: "text-subtle",
-                                                            children: L.disclaimer,
+                                                            children: R.disclaimer,
                                                         }),
                                                     ],
                                                 }),
@@ -144,47 +151,47 @@ function w(t) {
                         }),
                     ],
                 }),
-                (0, s.jsxs)("div", {
-                    className: E.Hh,
+                (0, a.jsxs)("div", {
+                    className: k.Hh,
                     children: [
-                        (0, s.jsx)("img", {
+                        (0, a.jsx)("img", {
                             src: "https://cdn.discordapp.com/assets/content/b565e9fbc877550c994314613b3d30af48001372642b027b45bd577f71a86442.png",
-                            className: E.d3,
+                            className: k.d3,
                             alt: "",
                         }),
-                        (0, s.jsx)("div", { className: E.gm }),
-                        (0, s.jsx)("div", {
-                            className: E.b,
-                            children: (0, s.jsx)(n.K, {
+                        (0, a.jsx)("div", { className: k.gm }),
+                        (0, a.jsx)("div", {
+                            className: k.b,
+                            children: (0, a.jsx)(c.K, {
                                 "aria-label": O.intl.string(O.t.cpT0Cq),
-                                onClick: a,
-                                icon: g.d,
+                                onClick: s,
+                                icon: f.d,
                                 variant: "overlay-secondary",
                                 size: "sm",
                             }),
                         }),
-                        (0, s.jsx)("div", {
-                            className: E.Jo,
-                            children: I.map((t, e) => {
-                                let { icon: a, message: i, tooltip: l } = t;
-                                return (0, s.jsxs)(
+                        (0, a.jsx)("div", {
+                            className: k.Jo,
+                            children: T.map((t, e) => {
+                                let { icon: s, message: i, tooltip: l } = t;
+                                return (0, a.jsxs)(
                                     "div",
                                     {
-                                        className: E.vD,
+                                        className: k.vD,
                                         children: [
-                                            (0, s.jsx)(a, { size: "sm", color: "var(--icon-strong)" }),
-                                            (0, s.jsx)(p.E, {
+                                            (0, a.jsx)(s, { size: "sm", color: "var(--icon-strong)" }),
+                                            (0, a.jsx)(x.E, {
                                                 variant: "text-md/medium",
                                                 color: "text-default",
                                                 children: O.intl.string(i),
                                             }),
                                             null != l &&
-                                                (0, s.jsx)("div", {
-                                                    className: E.Jn,
-                                                    children: (0, s.jsx)(d.m, {
+                                                (0, a.jsx)("div", {
+                                                    className: k.Jn,
+                                                    children: (0, a.jsx)(d.m, {
                                                         text: O.intl.string(l),
                                                         position: "top",
-                                                        children: (0, s.jsx)(f.m, {
+                                                        children: (0, a.jsx)(v.m, {
                                                             size: "xs",
                                                             color: "var(--icon-default)",
                                                         }),

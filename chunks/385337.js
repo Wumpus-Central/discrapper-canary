@@ -1,16 +1,17 @@
 n.d(t, { A: () => o });
 var a = n(627968);
 n(64700);
-var i = n(920050),
-    r = n(744064),
-    s = n(185797),
+var r = n(920050),
+    i = n(744064);
+n(985603);
+var s = n(185797),
     l = n(237146),
     c = n(985018);
 function o(e) {
     let { className: t, containerClassName: n } = e,
         o = (0, s.F)();
-    return (0, a.jsx)(r.S, {
-        id: i.CROISSANT_PREMIUM_PERK_CARD_COMPACT_ID,
+    return (0, a.jsx)(i.S, {
+        id: r.XBOX_PREMIUM_PERK_CARD_ID,
         title: c.intl.string(l.default.UVL9tD),
         description: c.intl.string(l.default["I+IXr0"]),
         ctaText: o.text,
@@ -30,5 +31,6 @@ function o(e) {
             alt: "Xbox Game Pass",
         }),
         blurTint: "#054B16",
+        analyticsOptions: { thirdPartyPartner: "xbox" },
     });
 }

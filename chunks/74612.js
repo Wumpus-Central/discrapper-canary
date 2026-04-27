@@ -18249,14 +18249,15 @@ function fh() {
             (l = null != (i = (0, O.bG)([fd.A], () => fd.A.getAccount(null, q.fg2.XBOX))) && !i.revoked),
             e === fc.s.NONE || (e === fc.s.NON_NITRO && 0)
                 ? { variant: fc.s.NONE, showFooter: !1 }
-                : { variant: e, showFooter: t && e === fc.s.NON_NITRO && !l });
+                : { variant: e, showFooter: t && e === fc.s.NON_NITRO && !l }),
+        { analyticsLocations: r } = (0, iM.Ay)(eU.A.XBOX_CONNECTED_ACCOUNTS_BANNER);
     if (s === fc.s.NONE) return null;
-    let r = "",
-        o = null;
+    let o = "",
+        d = null;
     return (
         s === fc.s.NITRO
-            ? ((r = g.intl.string(fg.default["+QAvQz"])),
-              (o = (0, S.jsx)(eh.$, {
+            ? ((o = g.intl.string(fg.default["+QAvQz"])),
+              (d = (0, S.jsx)(eh.$, {
                   variant: "secondary",
                   size: "sm",
                   text: g.intl.string(fg.default.CubeLC),
@@ -18268,15 +18269,16 @@ function fh() {
                   },
               })))
             : s === fc.s.NON_NITRO &&
-              ((r = g.intl.string(fg.default.NwkRTZ)),
-              (o = (0, S.jsx)(lA.A, {
+              ((o = g.intl.string(fg.default.NwkRTZ)),
+              (d = (0, S.jsx)(lA.A, {
                   fullWidth: !0,
                   defaultTextOverride: g.intl.string(fg.default["0vY+ie"]),
                   variantOverride: "overlay-primary",
                   size: "sm",
                   subscriptionTier: lf.pe.TIER_2,
               }))),
-        (0, S.jsxs)(S.Fragment, {
+        (0, S.jsxs)(iM.f5, {
+            value: r,
             children: [
                 (0, S.jsxs)("div", {
                     className: fm.bV,
@@ -18315,9 +18317,9 @@ function fh() {
                                                 variant: "text-sm/semibold",
                                                 color: "text-strong",
                                                 className: fm.DD,
-                                                children: r,
+                                                children: o,
                                             }),
-                                            (0, S.jsx)("div", { className: fm.lO, children: o }),
+                                            (0, S.jsx)("div", { className: fm.lO, children: d }),
                                         ],
                                     }),
                                     a &&

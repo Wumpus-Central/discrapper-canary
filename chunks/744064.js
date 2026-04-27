@@ -1,4 +1,4 @@
-s.d(t, { S: () => y });
+s.d(t, { S: () => I });
 var n = s(627968),
     a = s(64700),
     r = s(503698),
@@ -8,8 +8,8 @@ var n = s(627968),
     o = s(43990),
     c = s(821609),
     u = s(462887),
-    m = s(602853),
-    h = s(661531),
+    h = s(602853),
+    m = s(661531),
     x = s(359778),
     C = s(834730),
     p = s(403581),
@@ -18,28 +18,28 @@ var n = s(627968),
     f = s(139286),
     b = s(531260),
     R = s(914410),
-    v = s(954571),
-    j = s(872725),
-    E = s(465794),
-    A = s(788868),
-    N = s(652215),
+    E = s(954571),
+    v = s(872725),
+    j = s(465794),
+    N = s(788868),
+    A = s(652215),
     P = s(985018),
-    I = s(555599);
-let y = (e) => {
+    y = s(555599);
+let I = (e) => {
     let {
             id: t,
             title: s,
             description: r,
-            caption: y,
+            caption: I,
             pillText: S,
             primaryAsset: w,
             primaryAssetClassName: O,
             backgroundAssetUrl: T,
             progress: M,
             ctaIcon: L,
-            ctaIconPosition: k,
-            ctaText: B,
-            ctaVariant: U,
+            ctaIconPosition: B,
+            ctaText: U,
+            ctaVariant: k,
             ctaDisabled: F,
             ctaLoading: G,
             onCtaClick: H,
@@ -52,50 +52,49 @@ let y = (e) => {
             tabIndex: $ = 0,
             blurTint: X,
             footerContent: q,
+            analyticsOptions: J,
         } = e,
-        J = (0, g.DP)(),
-        { fractionalState: Q } = (0, b.A)();
-    (0, f.A)({
-        type: d.ImpressionTypes.VIEW,
-        name: d.ImpressionNames.PERK_DISCOVERABILITY_CARD,
-        properties: { name: t },
-    });
-    let ee = a.useMemo(
+        Q = (0, g.DP)(),
+        { fractionalState: ee } = (0, b.A)(),
+        et = { name: t };
+    J?.thirdPartyPartner != null && (et.third_party_partner = J.thirdPartyPartner),
+        (0, f.A)({ type: d.ImpressionTypes.VIEW, name: d.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: et });
+    let es = a.useMemo(
             () =>
                 (0, i.debounce)(() => {
-                    v.default.track(N.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
+                    E.default.track(A.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                         card_type: (0, i.snakeCase)(s),
                     });
                 }, 800),
             [s],
         ),
-        et = a.useCallback(() => {
+        en = a.useCallback(() => {
             null != H &&
                 (H(),
-                v.default.track(N.HAw.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
+                E.default.track(A.HAw.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
                     card_type: (0, i.snakeCase)(s),
                     function_name: (0, i.snakeCase)(H.name),
                 }));
         }, [H, s]),
-        es = W && Q === A.xc.FP_ONLY,
-        en = !(0, i.isEmpty)(T),
-        ea = en && (0, u.q)(J),
-        er = (0, m.r)(h.A.colors.BACKGROUND_BASE_LOW).hex(),
-        el = es || !(0, i.isEmpty)(B);
+        ea = W && ee === N.xc.FP_ONLY,
+        er = !(0, i.isEmpty)(T),
+        el = er && (0, u.q)(Q),
+        ei = (0, h.r)(m.A.colors.BACKGROUND_BASE_LOW).hex(),
+        ed = ea || !(0, i.isEmpty)(U);
     return (0, n.jsx)(o.N, {
-        theme: ea ? N.NJ8.DARKER : void 0,
+        theme: el ? A.NJ8.DARKER : void 0,
         children: (e) =>
-            (0, n.jsxs)(j.A, {
+            (0, n.jsxs)(v.A, {
                 id: t,
                 tabIndex: $,
-                onMouseEnter: ee,
+                onMouseEnter: es,
                 cardType: x.s.PRIMARY,
                 glowing: V,
                 hueRotate: 25,
-                glowAmount: (0, u.M)(J) ? 2 : 8,
+                glowAmount: (0, u.M)(Q) ? 2 : 8,
                 blurAmount: 10,
-                className: l()(I.Ui, z, { [I.Tn]: en }),
-                cardClassName: l()(I.Nr, e, Y, { [I.j8]: Z }),
+                className: l()(y.Ui, z, { [y.Tn]: er }),
+                cardClassName: l()(y.Nr, e, Y, { [y.j8]: Z }),
                 cardStyle: {
                     backgroundImage: null != T ? `url(${T})` : void 0,
                     backgroundSize: "cover",
@@ -108,15 +107,15 @@ let y = (e) => {
                         (0, n.jsx)(C.E, {
                             variant: "text-xs/bold",
                             color: "badge-expressive-text-default",
-                            className: I.Io,
+                            className: y.Io,
                             children: S,
                         }),
                     (0, n.jsxs)("div", {
-                        className: I.qh,
+                        className: y.qh,
                         children: [
                             Z &&
                                 (0, n.jsx)("div", {
-                                    className: I.gW,
+                                    className: y.gW,
                                     "aria-hidden": "true",
                                     children: (0, n.jsx)(D, { asset: w, className: O }),
                                 }),
@@ -124,21 +123,21 @@ let y = (e) => {
                         ],
                     }),
                     (0, n.jsxs)("div", {
-                        className: I.hQ,
+                        className: y.hQ,
                         children: [
                             (0, n.jsx)("div", {
-                                className: I.u_,
-                                style: { "--custom-tint-color": X ?? er },
+                                className: y.u_,
+                                style: { "--custom-tint-color": X ?? ei },
                                 "aria-hidden": !0,
                             }),
                             (0, n.jsxs)("div", {
-                                className: I.P_,
+                                className: y.P_,
                                 children: [
-                                    es &&
+                                    ea &&
                                         (0, n.jsxs)("div", {
-                                            className: I.d_,
+                                            className: y.d_,
                                             children: [
-                                                (0, n.jsx)(p.t, { size: "sm", color: h.A.colors.ICON_MUTED }),
+                                                (0, n.jsx)(p.t, { size: "sm", color: m.A.colors.ICON_MUTED }),
                                                 (0, n.jsx)(C.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
@@ -146,33 +145,33 @@ let y = (e) => {
                                                 }),
                                             ],
                                         }),
-                                    !(0, i.isEmpty)(y) &&
+                                    !(0, i.isEmpty)(I) &&
                                         (0, n.jsx)("div", {
-                                            className: I.OU,
+                                            className: y.OU,
                                             children:
-                                                "string" == typeof y
+                                                "string" == typeof I
                                                     ? (0, n.jsx)(C.E, {
                                                           variant: "text-sm/normal",
                                                           color: "text-muted",
-                                                          children: y,
+                                                          children: I,
                                                       })
-                                                    : y,
+                                                    : I,
                                         }),
                                     (0, n.jsx)(_.D, { variant: "heading-lg/semibold", children: s }),
                                     !(0, i.isEmpty)(r) &&
                                         (0, n.jsxs)("div", {
-                                            className: I.Wi,
+                                            className: y.Wi,
                                             children: [
                                                 (0, n.jsx)(C.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-default",
-                                                    className: I.h_,
+                                                    className: y.h_,
                                                     children: r,
                                                 }),
                                                 (0, n.jsx)(C.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-default",
-                                                    className: I.XV,
+                                                    className: y.XV,
                                                     inert: !0,
                                                     children: r,
                                                 }),
@@ -180,7 +179,7 @@ let y = (e) => {
                                         }),
                                     null != M &&
                                         (0, n.jsx)("div", {
-                                            className: I.oU,
+                                            className: y.oU,
                                             children: (0, n.jsx)(R.Ay, {
                                                 variant: R.qP.BLUE,
                                                 progress: (0, i.clamp)(M, 0, 1),
@@ -188,26 +187,26 @@ let y = (e) => {
                                                 glowing: K,
                                             }),
                                         }),
-                                    null != q && (0, n.jsx)("div", { className: I.Gv, children: q }),
-                                    el && (0, n.jsx)("div", { className: I.Cj }),
+                                    null != q && (0, n.jsx)("div", { className: y.Gv, children: q }),
+                                    ed && (0, n.jsx)("div", { className: y.Cj }),
                                 ],
                             }),
-                            el &&
+                            ed &&
                                 (0, n.jsxs)("div", {
-                                    className: I.yk,
+                                    className: y.yk,
                                     children: [
-                                        es &&
-                                            (0, n.jsx)(E.A, {
+                                        ea &&
+                                            (0, n.jsx)(j.A, {
                                                 fullWidth: !0,
                                                 defaultTextOverride: P.intl.string(P.t.sEAnVH),
                                             }),
-                                        !es &&
+                                        !ea &&
                                             (0, n.jsx)(c.$, {
                                                 icon: L,
-                                                iconPosition: k,
-                                                text: B,
-                                                variant: U ?? (!en && (0, u.q)(J) ? "primary" : "overlay-primary"),
-                                                onClick: et,
+                                                iconPosition: B,
+                                                text: U,
+                                                variant: k ?? (!er && (0, u.q)(Q) ? "primary" : "overlay-primary"),
+                                                onClick: en,
                                                 disabled: F,
                                                 loading: G,
                                             }),
@@ -224,6 +223,6 @@ function D(e) {
     return null == t || "" === t
         ? null
         : "string" == typeof t
-          ? (0, n.jsx)("img", { src: t, alt: "", className: l()(I.eq, s), draggable: "false" })
+          ? (0, n.jsx)("img", { src: t, alt: "", className: l()(y.eq, s), draggable: "false" })
           : t;
 }
