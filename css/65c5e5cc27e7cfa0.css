@@ -77,6 +77,10 @@
     transition: background 0s ease-in-out
 }
 
+.baseSettingWrapper__32428 {
+    min-height: 48px
+}
+
 .baseControlItem_dbfbe0 {
     border-radius: var(--radius-lg);
     display: flex;
