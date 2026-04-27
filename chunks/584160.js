@@ -1,32 +1,37 @@
-n.d(t, { M: () => o, u: () => u });
-var i = n(997101),
-    r = n(278416),
-    a = n(166532),
-    l = n(788868),
-    s = n(327105),
-    d = n(985018);
-let o = [a.pn.PLAN_SELECT, a.pn.REVIEW, a.pn.ADD_PAYMENT_STEPS],
+a.d(t, { M: () => c, u: () => u });
+var n = a(997101),
+    r = a(278416),
+    i = a(166532),
+    s = a(788868),
+    l = a(327105),
+    o = a(985018);
+let c = [i.pn.PLAN_SELECT, i.pn.REVIEW, i.pn.ADD_PAYMENT_STEPS],
+    d = (e, t) => {
+        if (t && null != e) return null != n.d[e] ? e : void 0;
+    },
     u = (e) => {
         let {
                 skuId: t,
-                step: n,
-                showTrialBadge: o,
-                showPromoBadge: u,
-                storeCountryFromCheckoutContext: c,
+                step: a,
+                showTrialBadge: n,
+                showPromoBadge: c,
+                storeCountryFromCheckoutContext: u,
                 isStoreCountryEnabled: _,
+                relocationCountry: p,
             } = e,
-            f = d.intl.string(d.t.q9EGps);
-        n === a.pn.ADD_PAYMENT_STEPS && (f = d.intl.string(d.t.CpOiEO));
-        let m = { headerBadgeText: void 0, headerBadgeIcon: void 0 };
-        o
-            ? ((m.headerBadgeText = d.intl.string(s.default["mWL08+"])), (m.headerBadgeIcon = r.g))
-            : u && (m.headerBadgeText = d.intl.string(s.default.Fjpyfj));
-        let g = _ && null != c && null != i.d[c] ? c : void 0;
+            m = o.intl.string(o.t.q9EGps);
+        a === i.pn.ADD_PAYMENT_STEPS && (m = o.intl.string(o.t.CpOiEO));
+        let b = { headerBadgeText: void 0, headerBadgeIcon: void 0 };
+        n
+            ? ((b.headerBadgeText = o.intl.string(l.default["mWL08+"])), (b.headerBadgeIcon = r.g))
+            : c && (b.headerBadgeText = o.intl.string(l.default.Fjpyfj));
+        let f = d(u, _),
+            x = d(p, _);
         return null == t
-            ? { title: f, gradientColor: void 0, countryCode: g, ...m }
-            : t === l.pe.TIER_0 || t === l.pe.TIER_1
-              ? { title: f, gradientColor: "nitro-green", countryCode: g, ...m }
-              : t === l.pe.TIER_2
-                ? { title: f, gradientColor: "nitro-pink", countryCode: g, ...m }
-                : { title: f, countryCode: g, ...m };
+            ? { title: m, gradientColor: void 0, countryCode: f, relocationCountryCode: x, ...b }
+            : t === s.pe.TIER_0 || t === s.pe.TIER_1
+              ? { title: m, gradientColor: "nitro-green", countryCode: f, relocationCountryCode: x, ...b }
+              : t === s.pe.TIER_2
+                ? { title: m, gradientColor: "nitro-pink", countryCode: f, relocationCountryCode: x, ...b }
+                : { title: m, countryCode: f, relocationCountryCode: x, ...b };
     };

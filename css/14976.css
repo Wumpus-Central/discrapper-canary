@@ -274,6 +274,18 @@
     padding-bottom: 0
 }
 
+.countryTransition_ebbc17 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    padding: 0 var(--custom-modal-padding) var(--space-8)
+}
+
+.countryTransitionArrow_ebbc17 {
+    margin: 0 2px
+}
+
 .primaryIcon__962c6 {
     height: 16px;
     margin-inline-end: 4px;
