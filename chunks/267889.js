@@ -626,7 +626,7 @@ let th = (e) => {
         ],
     });
 };
-var tm = n(419354),
+var tm = n(487514),
     tp = n(459192),
     tf = n(717421),
     tg = n(343032),
@@ -638,36 +638,37 @@ function tE(e) {
     let { checked: t, onClick: n } = e,
         l = (0, h.bG)([eA.A], () => eA.A.useReducedMotion),
         i = ea.default.getCurrentUser(),
-        r = null == i || (0, tx.TW)(i) ? [m.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [c, u] = (0, t_.kn)(r),
-        [d, p] = a.useState(!1),
-        [f, g] = (0, tf.z)(() => ({})),
-        _ = (0, tm.animated)(tg.i);
+        r = null != i && !(0, tx.TW)(i),
+        c = r ? [] : [m.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP],
+        [u, d] = (0, t_.kn)(c),
+        [p, f] = a.useState(!1),
+        [g, _] = (0, tf.z)(() => ({})),
+        x = (0, tm.animated)(tg.i);
     a.useEffect(() => {
-        let e = c === m.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (u(tu.i.DISMISS), setTimeout(() => p(e), 200));
-    }, [c, u]);
-    let x = d ? ee.intl.string(ee.t["Osi/uy"]) : t ? ee.intl.string(ee.t["5cRA/b"]) : ee.intl.string(ee.t.buV4av),
-        C = d ? ee.intl.string(ee.t.ORK94p) : void 0;
+        let e = u === m.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        e && (d(tu.i.DISMISS), setTimeout(() => f(e), 200));
+    }, [u, d]);
+    let C = p ? ee.intl.string(ee.t["Osi/uy"]) : t && !r ? ee.intl.string(ee.t["5cRA/b"]) : ee.intl.string(ee.t.buV4av),
+        A = p ? ee.intl.string(ee.t.ORK94p) : void 0;
     return (0, s.jsx)(tp.u, {
         position: "top",
-        title: C,
-        body: x,
+        title: A,
+        body: C,
         asset: (0, s.jsx)(eC.t, { size: "md", color: "currentColor" }),
         assetSize: 20,
-        forceOpen: d,
+        forceOpen: p,
         children: (0, s.jsx)(F.D, {
-            "aria-label": x,
+            "aria-label": C,
             "aria-pressed": t,
             onClick: function () {
-                g({ from: { rotate: t ? "360deg" : "0deg" }, to: { rotate: t ? "0deg" : "360deg" }, config: tA }),
+                _({ from: { rotate: t ? "360deg" : "0deg" }, to: { rotate: t ? "0deg" : "360deg" }, config: tA }),
                     n?.(),
-                    p(!1);
+                    f(!1);
             },
             focusProps: { enabled: !1 },
             className: o()(tC.Pf, { [tC.wM]: t }),
-            children: (0, s.jsx)(_, {
-                style: l ? void 0 : f,
+            children: (0, s.jsx)(x, {
+                style: l ? void 0 : g,
                 size: "custom",
                 width: 20,
                 height: 20,
