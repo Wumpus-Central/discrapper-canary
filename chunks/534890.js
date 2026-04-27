@@ -1,25 +1,26 @@
-a.d(t, { o: () => s });
-var r = a(627968);
-a(64700);
-var n = a(661531),
-    l = a(996682),
-    i = a(27989);
+"use strict";
+n.d(t, { o: () => s });
+var r = n(627968);
+n(64700);
+var i = n(661531),
+    a = n(996682),
+    l = n(27989);
 let s = (e) => {
     let {
             size: t = "md",
-            width: a,
+            width: n,
             height: s,
-            color: o = n.A.colors.INTERACTIVE_ICON_DEFAULT,
+            color: o = i.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: c = "",
-            ...d
+            ...u
         } = e,
-        u = (0, i.J)(t),
-        h = u?.width ?? a,
-        p = u?.height ?? s;
+        d = (0, l.J)(t),
+        _ = d?.width ?? n,
+        p = d?.height ?? s;
     return (0, r.jsx)("svg", {
-        ...(0, l.A)(d),
+        ...(0, a.A)(u),
         xmlns: "http://www.w3.org/2000/svg",
-        width: h,
+        width: _,
         height: p,
         fill: "none",
         viewBox: "0 0 24 24",
