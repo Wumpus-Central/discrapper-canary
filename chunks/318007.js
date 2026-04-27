@@ -9,21 +9,21 @@ var l = n(627968),
     c = n(650588),
     d = n(45938),
     p = n(242874),
-    m = n(75825),
+    m = n(165191),
     h = n(238017),
-    A = n(985018),
-    C = n(92814);
+    C = n(985018),
+    A = n(92814);
 let _ = (e) => {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
             selectedGiftStyle: i,
             emojiConfetti: _,
-            soundEffect: E,
-            setEmojiConfetti: y,
-            setSoundEffect: f,
+            soundEffect: y,
+            setEmojiConfetti: E,
+            setSoundEffect: P,
         } = (0, u.Pv)(),
-        [P] = a.useState(!1),
+        [f] = a.useState(!1),
         S = a.useRef(null),
         { ref: T, ...x } = (0, s._u)({ orientation: "horizontal" }),
         N = (0, d.lo)(n, t),
@@ -33,7 +33,7 @@ let _ = (e) => {
         children: [
             I &&
                 (0, l.jsxs)("div", {
-                    className: C.Os,
+                    className: A.Os,
                     children: [
                         null != i
                             ? (0, l.jsx)(m.A, {
@@ -41,35 +41,35 @@ let _ = (e) => {
                                   defaultAnimationState: p.oA.ACTION,
                                   idleAnimationState: p.oA.LOOP,
                                   shouldAnimate: !0,
-                                  className: C.lY,
+                                  className: A.lY,
                               })
-                            : (0, l.jsx)(o.y, { className: C.u1 }),
+                            : (0, l.jsx)(o.y, { className: A.u1 }),
                         g &&
                             (0, l.jsxs)("div", {
-                                className: r()(C.b7, C.Ow),
+                                className: r()(A.b7, A.Ow),
                                 children: [
                                     (0, l.jsx)(c.A, {
-                                        sound: E,
+                                        sound: y,
                                         onSelect: (e) => {
-                                            null != f && f(null == e ? void 0 : e);
+                                            null != P && P(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, l.jsx)(h.A, { setEmojiConfetti: y, emojiConfetti: null == _ ? void 0 : _ }),
+                                    (0, l.jsx)(h.A, { setEmojiConfetti: E, emojiConfetti: null == _ ? void 0 : _ }),
                                 ],
                             }),
                     ],
                 }),
             (0, l.jsx)("div", {
-                tabIndex: null != i || P ? void 0 : 0,
+                tabIndex: null != i || f ? void 0 : 0,
                 onFocus: (e) => {
                     e.target === e.currentTarget && S.current?.focus();
                 },
-                className: C.Qh,
-                "aria-label": A.intl.string(A.t.v54NrN),
+                className: A.Qh,
+                "aria-label": C.intl.string(C.t.v54NrN),
                 ref: T,
                 ...x,
             }),
-            (0, l.jsx)("div", { className: C.__invalid_selectPlanDivider }),
+            (0, l.jsx)("div", { className: A.__invalid_selectPlanDivider }),
         ],
     });
 };

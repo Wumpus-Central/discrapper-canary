@@ -1,10 +1,16 @@
-n.d(t, { z: () => i });
-var l = n(242874),
-    a = n(788868);
-let i = (e, t) => {
+"use strict";
+n.d(t, { A: () => u });
+var i = n(627968),
+    s = n(64700),
+    l = n(17928),
+    r = n(604121),
+    a = n(775602),
+    o = n(242874),
+    c = n(788868);
+let d = (e, t) => {
     let i;
     switch (e) {
-        case a.o2.SNOWGLOBE:
+        case c.o2.SNOWGLOBE:
             i = () =>
                 n
                     .e("66960")
@@ -14,7 +20,7 @@ let i = (e, t) => {
                         return t;
                     });
             break;
-        case a.o2.BOX:
+        case c.o2.BOX:
             i = () =>
                 n
                     .e("22525")
@@ -24,7 +30,7 @@ let i = (e, t) => {
                         return t;
                     });
             break;
-        case a.o2.CUP:
+        case c.o2.CUP:
             i = () =>
                 n
                     .e("56071")
@@ -34,9 +40,9 @@ let i = (e, t) => {
                         return t;
                     });
             break;
-        case a.o2.STANDARD_BOX:
+        case c.o2.STANDARD_BOX:
             switch (t) {
-                case l.oA.IDLE:
+                case o.oA.IDLE:
                     i = () =>
                         n
                             .e("76464")
@@ -46,7 +52,7 @@ let i = (e, t) => {
                                 return fetch(t).then((e) => e.json());
                             });
                     break;
-                case l.oA.LOOP:
+                case o.oA.LOOP:
                     i = () =>
                         n
                             .e("15240")
@@ -67,9 +73,9 @@ let i = (e, t) => {
                             });
             }
             break;
-        case a.o2.CAKE:
+        case c.o2.CAKE:
             switch (t) {
-                case l.oA.IDLE:
+                case o.oA.IDLE:
                     i = () =>
                         n
                             .e("70625")
@@ -79,7 +85,7 @@ let i = (e, t) => {
                                 return t;
                             });
                     break;
-                case l.oA.LOOP:
+                case o.oA.LOOP:
                     i = () =>
                         n
                             .e("33449")
@@ -100,9 +106,9 @@ let i = (e, t) => {
                             });
             }
             break;
-        case a.o2.CHEST:
+        case c.o2.CHEST:
             switch (t) {
-                case l.oA.IDLE:
+                case o.oA.IDLE:
                     i = () =>
                         n
                             .e("28115")
@@ -112,7 +118,7 @@ let i = (e, t) => {
                                 return t;
                             });
                     break;
-                case l.oA.LOOP:
+                case o.oA.LOOP:
                     i = () =>
                         n
                             .e("8891")
@@ -133,9 +139,9 @@ let i = (e, t) => {
                             });
             }
             break;
-        case a.o2.COFFEE:
+        case c.o2.COFFEE:
             switch (t) {
-                case l.oA.IDLE:
+                case o.oA.IDLE:
                     i = () =>
                         n
                             .e("2897")
@@ -145,7 +151,7 @@ let i = (e, t) => {
                                 return t;
                             });
                     break;
-                case l.oA.LOOP:
+                case o.oA.LOOP:
                     i = () =>
                         n
                             .e("52793")
@@ -166,9 +172,9 @@ let i = (e, t) => {
                             });
             }
             break;
-        case a.o2.SEASONAL_STANDARD_BOX:
+        case c.o2.SEASONAL_STANDARD_BOX:
             switch (t) {
-                case l.oA.IDLE:
+                case o.oA.IDLE:
                     i = () =>
                         n
                             .e("12250")
@@ -178,7 +184,7 @@ let i = (e, t) => {
                                 return t;
                             });
                     break;
-                case l.oA.LOOP:
+                case o.oA.LOOP:
                     i = () =>
                         n
                             .e("58526")
@@ -199,9 +205,9 @@ let i = (e, t) => {
                             });
             }
             break;
-        case a.o2.SEASONAL_CAKE:
+        case c.o2.SEASONAL_CAKE:
             switch (t) {
-                case l.oA.IDLE:
+                case o.oA.IDLE:
                     i = () =>
                         n
                             .e("30800")
@@ -211,7 +217,7 @@ let i = (e, t) => {
                                 return t;
                             });
                     break;
-                case l.oA.LOOP:
+                case o.oA.LOOP:
                     i = () =>
                         n
                             .e("52436")
@@ -232,9 +238,9 @@ let i = (e, t) => {
                             });
             }
             break;
-        case a.o2.SEASONAL_CHEST:
+        case c.o2.SEASONAL_CHEST:
             switch (t) {
-                case l.oA.IDLE:
+                case o.oA.IDLE:
                     i = () =>
                         n
                             .e("37690")
@@ -244,7 +250,7 @@ let i = (e, t) => {
                                 return t;
                             });
                     break;
-                case l.oA.LOOP:
+                case o.oA.LOOP:
                     i = () =>
                         n
                             .e("82078")
@@ -265,9 +271,9 @@ let i = (e, t) => {
                             });
             }
             break;
-        case a.o2.SEASONAL_COFFEE:
+        case c.o2.SEASONAL_COFFEE:
             switch (t) {
-                case l.oA.IDLE:
+                case o.oA.IDLE:
                     i = () =>
                         n
                             .e("64400")
@@ -277,7 +283,7 @@ let i = (e, t) => {
                                 return t;
                             });
                     break;
-                case l.oA.LOOP:
+                case o.oA.LOOP:
                     i = () =>
                         n
                             .e("39476")
@@ -298,9 +304,9 @@ let i = (e, t) => {
                             });
             }
             break;
-        case a.o2.NITROWEEN_STANDARD:
+        case c.o2.NITROWEEN_STANDARD:
             switch (t) {
-                case l.oA.IDLE:
+                case o.oA.IDLE:
                     i = () =>
                         n
                             .e("99166")
@@ -310,7 +316,7 @@ let i = (e, t) => {
                                 return t;
                             });
                     break;
-                case l.oA.LOOP:
+                case o.oA.LOOP:
                     i = () =>
                         n
                             .e("99166")
@@ -336,3 +342,59 @@ let i = (e, t) => {
     }
     return i;
 };
+function u(e) {
+    let { giftStyle: t, className: n, shouldAnimate: o = !0, defaultAnimationState: u, idleAnimationState: _ } = e,
+        h = (0, l.bG)([a.A], () => a.A.useReducedMotion),
+        [p, m] = s.useState(u),
+        g = s.useRef(d(t, p)),
+        [A, f] = s.useState(null == _),
+        [E, x] = s.useState(!1),
+        [I, v] = s.useState(-1);
+    s.useEffect(() => {
+        null == _ && m(u);
+    }, [_, u]);
+    let N = {
+            applyAnimation: () => {
+                (g.current = d(t, p)), v((e) => e + 1);
+            },
+            idleAnimationState: _,
+            isChanging: E,
+            resetAnimation: () => {
+                f(!1), x(!0), v(-1), m(u);
+            },
+            versionKey: I,
+        },
+        C = s.useRef(N);
+    if (
+        (s.useEffect(() => {
+            C.current = N;
+        }),
+        s.useEffect(() => {
+            let { resetAnimation: e, versionKey: t, applyAnimation: n } = C.current;
+            null != _ && t >= 0 ? e() : n();
+        }, [t, _]),
+        s.useEffect(() => {
+            let { applyAnimation: e, isChanging: t, idleAnimationState: n } = C.current;
+            (t && null != n) || e();
+        }, [p]),
+        s.useEffect(() => {
+            let { applyAnimation: e, idleAnimationState: t } = C.current;
+            E && (f(null == t), x(!1), e());
+        }, [E]),
+        !c.o2.hasOwnProperty(t))
+    )
+        throw Error(`Unexpected giftStyle ${t}`);
+    return (0, i.jsx)(r.a, {
+        importData: g.current,
+        shouldAnimate: !h && o,
+        className: n,
+        versionKey: I,
+        onComplete:
+            null != _
+                ? () => {
+                      null != _ && (m(_), f(!0));
+                  }
+                : void 0,
+        loop: A,
+    });
+}

@@ -1,7 +1,7 @@
 n(323874), n(14289), n(35956), n(142703);
 var i,
     a = n(627968);
-n(486107);
+n(366093);
 var r = n(64700),
     _ = n(507240),
     s = n(284009),
@@ -26,7 +26,7 @@ var r = n(64700),
     m = n(85563),
     h = n(908031),
     g = n(953727);
-function b(e) {
+function U(e) {
     let { width: t = 12, height: n = 12, color: i = "currentColor", foreground: r, ..._ } = e;
     return (0, a.jsx)("svg", {
         ...(0, g.A)(_),
@@ -41,7 +41,7 @@ function b(e) {
         }),
     });
 }
-var U = n(155545),
+var b = n(155545),
     P = n(797820),
     M = n(561155),
     G = n(803102),
@@ -66,7 +66,7 @@ let F = (e, t) => {
                 onClick: (e) => F(n, e),
                 "aria-label": B.intl.string(B.t.G1u0hK),
                 tabIndex: -1,
-                children: (0, a.jsx)(U.A, {}),
+                children: (0, a.jsx)(b.A, {}),
             }),
             l = (0, a.jsx)(R.D, {
                 className: w.T0,
@@ -105,7 +105,7 @@ let F = (e, t) => {
                                           onClick: () => v.Ay.close(n),
                                           "aria-label": B.intl.string(B.t.ZdNUj2),
                                           tabIndex: -1,
-                                          children: (0, a.jsx)(b, { color: "#4c0000" }),
+                                          children: (0, a.jsx)(U, { color: "#4c0000" }),
                                       }),
                                       (0, a.jsx)(R.D, {
                                           className: w.wv,
@@ -342,12 +342,12 @@ let eh = (0, er.Fe)({
         webpackId: 987482,
         name: "DownloadApps",
     }),
-    eb = (0, er.Fe)({
+    eU = (0, er.Fe)({
         createPromise: () => n.e("84809").then(n.bind(n, 312625)),
         webpackId: 312625,
         name: "InviteProxy",
     }),
-    eU = (0, er.Fe)({
+    eb = (0, er.Fe)({
         createPromise: () => Promise.all([n.e("34917"), n.e("46391")]).then(n.bind(n, 29599)),
         webpackId: 29599,
         name: "VerifyConnectedAccount",
@@ -373,7 +373,7 @@ let eh = (0, er.Fe)({
         name: "LinkAuthorize",
     }),
     ev = (0, er.Fe)({
-        createPromise: () => Promise.all([n.e("53242"), n.e("16864")]).then(n.bind(n, 627318)),
+        createPromise: () => Promise.all([n.e("95908"), n.e("16864")]).then(n.bind(n, 627318)),
         webpackId: 627318,
         name: "ActivateDevice",
     }),
@@ -468,7 +468,7 @@ let eh = (0, er.Fe)({
                 n.e("24199"),
                 n.e("57036"),
                 n.e("88394"),
-                n.e("53242"),
+                n.e("95908"),
                 n.e("28367"),
                 n.e("93103"),
                 n.e("80527"),
@@ -506,7 +506,7 @@ let eh = (0, er.Fe)({
                 n.e("37446"),
                 n.e("73076"),
                 n.e("37619"),
-                n.e("47886"),
+                n.e("25505"),
                 n.e("23224"),
                 n.e("37402"),
                 n.e("86142"),
@@ -547,7 +547,7 @@ let eh = (0, er.Fe)({
                 n.e("87963"),
                 n.e("37266"),
                 n.e("55057"),
-                n.e("76021"),
+                n.e("34717"),
                 n.e("63229"),
                 n.e("31988"),
                 n.e("55343"),
@@ -595,8 +595,8 @@ let eh = (0, er.Fe)({
                 n.e("31538"),
                 n.e("21453"),
                 n.e("54436"),
-                n.e("98954"),
                 n.e("6698"),
+                n.e("98954"),
                 n.e("20735"),
                 n.e("227"),
                 n.e("90184"),
@@ -765,7 +765,7 @@ class eZ extends r.Component {
                                         ),
                                         component: ew,
                                     }),
-                                    (0, a.jsx)(ea.A, { path: K.BVt.INVITE_PROXY(eO.pv.channelId()), component: eb }),
+                                    (0, a.jsx)(ea.A, { path: K.BVt.INVITE_PROXY(eO.pv.channelId()), component: eU }),
                                     (0, a.jsx)(q.rd, { from: K.BVt.INVITE(""), to: K.BVt.LOGIN }),
                                     (0, a.jsx)(q.rd, { from: K.BVt.GIFT_CODE(""), to: K.BVt.LOGIN }),
                                     (0, a.jsx)(q.qh, { render: eQ }),
@@ -821,7 +821,7 @@ class eZ extends r.Component {
                                               component: ew,
                                           }),
                                     (0, a.jsx)(q.rd, { from: K.BVt.INVITE(""), to: K.BVt.LOGIN }),
-                                    (0, a.jsx)(ea.A, { path: K.BVt.INVITE_PROXY(eO.pv.channelId()), component: eb }),
+                                    (0, a.jsx)(ea.A, { path: K.BVt.INVITE_PROXY(eO.pv.channelId()), component: eU }),
                                     (0, a.jsx)(q.rd, { from: K.BVt.GIFT_CODE(""), to: K.BVt.LOGIN }),
                                     (0, a.jsx)(ea.A, {
                                         path: K.BVt.QUESTS(":questId"),
@@ -847,7 +847,7 @@ class eZ extends r.Component {
                                     }),
                                     (0, a.jsx)(ea.A, { path: K.BVt.CONNECTIONS_SUCCESS(":type"), component: eP }),
                                     (0, a.jsx)(ea.A, { path: K.BVt.CONNECTIONS_ERROR(":type"), component: eM }),
-                                    (0, a.jsx)(ea.A, { path: K.BVt.CONNECTIONS(":type"), component: eU }),
+                                    (0, a.jsx)(ea.A, { path: K.BVt.CONNECTIONS(":type"), component: eb }),
                                     (0, a.jsx)(ea.A, {
                                         path: K.BVt.DOWNLOAD_QR_CODE_REDIRECT,
                                         render: () => {
@@ -1292,11 +1292,11 @@ var tD = n(200330),
     tm = n(346142),
     th = n(451988),
     tg = n(664932),
-    tb = n(320989);
-function tU(e) {
+    tU = n(320989);
+function tb(e) {
     let { children: t } = e;
     return (
-        r.useEffect(() => (tb.A.initialize(), () => tb.A.cleanup()), []),
+        r.useEffect(() => (tU.A.initialize(), () => tU.A.cleanup()), []),
         (0, a.jsx)(c.vd, {
             children: (0, a.jsx)(q.Ix, { history: (0, tt.JK)(), children: (0, a.jsx)(tg.Kl, { children: t }) }),
         })
@@ -1389,7 +1389,7 @@ let tq = (0, _.createRoot)(tQ),
             return null != t && ((0, tj.N)({ token: t }), !0);
         },
     },
-    tZ = (e) => tq.render((0, a.jsx)(tP.e, { children: (0, a.jsx)(tU, { children: (0, a.jsx)(e, {}) }) }));
+    tZ = (e) => tq.render((0, a.jsx)(tP.e, { children: (0, a.jsx)(tb, { children: (0, a.jsx)(e, {}) }) }));
 if (null != p.A) {
     p.A.setUncaughtExceptionHandler?.((e, t) => {
         setImmediate(() => {
