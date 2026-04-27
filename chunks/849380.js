@@ -1539,7 +1539,7 @@ let nV = s.memo(function (e) {
             [t.id, i, S, b, N, A],
         ),
         G = s.useMemo(() => {
-            if (null == m) return;
+            if (null == m || "guild-application-announcement" !== m.type) return;
             let e = null != m.assetId ? nP.A.toURLSafe((0, nD.YE)(m.applicationId, m.assetId, 128, "webp")) : void 0,
                 t =
                     null != m.backgroundImageAssetId
@@ -1547,22 +1547,27 @@ let nV = s.memo(function (e) {
                         : void 0;
             if (null != e) return { imageUrl: e, backgroundImageUrl: t };
         }, [m]),
-        L = s.useCallback(
-            () =>
-                E
-                    ? (0, a.jsx)(nR.A, {
-                          onActionClick: b,
-                          onActionMouseDown: S,
-                          onRender: v,
-                          onRequestClose: I,
-                          targetElementRef: r,
-                          skuImageDetails: G,
-                          title: W.intl.string(W.t["7PvvS9"]),
-                          body: W.intl.formatToPlainString(W.t["9J4h1a"], { applicationName: m.applicationName }),
-                      })
-                    : null,
-            [E, m, b, S, v, I, G],
-        );
+        L = s.useCallback(() => {
+            if (!E || null == m) return null;
+            let e = { onActionClick: b, onActionMouseDown: S, onRender: v, onRequestClose: I, targetElementRef: r };
+            switch (m.type) {
+                case "guild-application-announcement":
+                    return (0, a.jsx)(nR.A, {
+                        ...e,
+                        graphicSource: null != G ? { type: "sku", ...G } : void 0,
+                        title: W.intl.string(W.t["7PvvS9"]),
+                        body: W.intl.formatToPlainString(W.t["9J4h1a"], { applicationName: m.applicationName }),
+                    });
+                case "guild-discord-announcement":
+                    return (0, a.jsx)(nR.A, {
+                        ...e,
+                        graphicSource: { type: "asset", src: m.assetFullyQualifiedURL },
+                        title: m.popoverTitle,
+                        body: m.popoverBody,
+                        actionLabel: m.popoverCta,
+                    });
+            }
+        }, [E, m, b, S, v, I, G]);
     return (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)(nw, { ref: l, children: y }), !o && !d && !c && L()] });
 });
 var nH = n(740426),
