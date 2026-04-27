@@ -15,45 +15,48 @@ var s = t(627968),
     x = t(888697),
     b = t(636537),
     C = t(844045),
-    _ = t(985018);
-function j(e) {
-    if (!(e instanceof b.oh)) return _.intl.string(C.default.CqBvCr);
-    switch (e.status) {
-        case 429:
-            return _.intl.string(C.default.yHHcCH);
-        case 403:
-            return _.intl.string(C.default["Dfnp+b"]);
-        case 413:
-            return _.intl.string(C.default.sw6JQB);
-        case 400:
-            return _.intl.string(C.default.HHJFhr);
+    j = t(985018);
+function p(e) {
+    if (!(e instanceof b.oh)) return j.intl.string(C.default.CqBvCr);
+    if (429 === e.status) return j.intl.string(C.default.yHHcCH);
+    if (403 === e.status) return j.intl.string(C.default["Dfnp+b"]);
+    switch (e.body?.code) {
+        case 575001:
+            return j.intl.string(C.default.sw6JQB);
+        case 575002:
+            return j.intl.string(C.default.repluE);
+        case 575003:
+            return j.intl.string(C.default.XDjFpR);
+        case 575004:
+        case 55e4:
+            return j.intl.string(C.default.HHJFhr);
         default:
-            return _.intl.string(C.default.CqBvCr);
+            return j.intl.string(C.default.CqBvCr);
     }
 }
-var p = t(522435),
+var _ = t(522435),
     y = t(493819),
     k = t(503698),
     I = t.n(k),
     N = t(17928),
-    v = t(890856),
-    E = t(477155),
+    E = t(890856),
+    v = t(477155),
     S = t(892547),
     A = t(497685),
     G = t(291147),
     R = t(703244),
-    H = t(285961),
-    U = t(821102),
-    D = t(803805),
+    D = t(285961),
+    H = t(821102),
+    U = t(803805),
     L = t(661531),
-    P = t(92008),
-    w = t(25277),
-    F = t(327143),
+    F = t(92008),
+    P = t(25277),
+    w = t(327143),
     T = t(131955),
     O = t(652215),
     M = t(573436);
 let q = T.xP.map(function (e) {
-    return { type: O.dD.TRENDING_CATEGORY, name: e.name, src: e.previewUrl, format: D.TL.IMAGE };
+    return { type: O.dD.TRENDING_CATEGORY, name: e.name, src: e.previewUrl, format: U.TL.IMAGE };
 });
 function z(e) {
     let { name: l } = e;
@@ -66,7 +69,7 @@ function z(e) {
 }
 function B(e) {
     let { onSelectCategory: l } = e,
-        { imagePool: t, videoPool: r } = (0, H.d5)(),
+        { imagePool: t, videoPool: r } = (0, D.d5)(),
         a = n.useRef(null),
         [i, c] = n.useState(null),
         u = n.useCallback((e) => {
@@ -95,7 +98,7 @@ function B(e) {
                 return null == u
                     ? null
                     : (0, s.jsx)(
-                          H.uG,
+                          D.uG,
                           {
                               format: u.format,
                               color: L.A.colors.BACKGROUND_BASE_LOWEST.css,
@@ -116,7 +119,7 @@ function B(e) {
         ),
         h = n.useCallback(
             (e) =>
-                (0, s.jsx)(P.f, {
+                (0, s.jsx)(F.f, {
                     ref: a,
                     fade: !0,
                     className: M.jR,
@@ -132,12 +135,12 @@ function B(e) {
         ),
         f = n.useCallback(() => (null != a.current ? a.current.getItemGrid() : []), []),
         x = n.useCallback(() => (null != a.current ? a.current.getCoordsMap() : {}), []);
-    return (0, s.jsx)(w.A, {
+    return (0, s.jsx)(P.A, {
         getItemGrid: f,
         getCoordsMap: x,
         onFocus: u,
         onSelect: o,
-        children: (0, s.jsx)(F.A, { desiredItemWidth: 200, maxColumns: 6, children: h }),
+        children: (0, s.jsx)(w.A, { desiredItemWidth: 200, maxColumns: 6, children: h }),
     });
 }
 var K = t(650583);
@@ -149,11 +152,11 @@ function W(e) {
             resultQuery: a,
             resultItems: i,
             suggestions: u,
-        } = (0, N.cf)([U.A], () => ({
-            query: U.A.getQuery(),
-            resultQuery: U.A.getResultQuery(),
-            resultItems: U.A.getResultItems(),
-            suggestions: U.A.getSuggestions(),
+        } = (0, N.cf)([H.A], () => ({
+            query: H.A.getQuery(),
+            resultQuery: H.A.getResultQuery(),
+            resultItems: H.A.getResultItems(),
+            suggestions: H.A.getSuggestions(),
         })),
         [o, d] = n.useState(null),
         g = n.useRef(null),
@@ -197,32 +200,32 @@ function W(e) {
             },
             [m],
         ),
-        j = (0, G.w)((0, R.cf)()),
-        p = null != o;
-    return (0, s.jsxs)(v.s, {
+        p = (0, G.w)((0, R.cf)()),
+        _ = null != o;
+    return (0, s.jsxs)(E.s, {
         className: I()(M.kL, l),
         onClick: Q,
-        "aria-label": _.intl.string(C.default.yP0hhq),
+        "aria-label": j.intl.string(C.default.yP0hhq),
         children: [
             (0, s.jsx)("div", {
                 className: M.wx,
                 children: (0, s.jsxs)("div", {
                     className: M.U1,
                     children: [
-                        p
+                        _
                             ? (0, s.jsx)(c.D, {
                                   onClick: h,
                                   className: M.Gv,
-                                  "aria-label": _.intl.string(_.t["13/7kX"]),
-                                  children: (0, s.jsx)(E.r, { size: "md", color: "currentColor" }),
+                                  "aria-label": j.intl.string(j.t["13/7kX"]),
+                                  children: (0, s.jsx)(v.r, { size: "md", color: "currentColor" }),
                               })
                             : null,
                         (0, s.jsx)(S.I, {
                             query: r,
                             onChange: f,
                             onClear: h,
-                            placeholder: j,
-                            "aria-label": j,
+                            placeholder: p,
+                            "aria-label": p,
                             ref: g,
                             autoFocus: !0,
                         }),
@@ -234,7 +237,7 @@ function W(e) {
                 children:
                     null == o
                         ? (0, s.jsx)(B, { onSelectCategory: b })
-                        : (0, s.jsx)(H.Ay, {
+                        : (0, s.jsx)(D.Ay, {
                               data: i,
                               onSelectGIF: t,
                               resultType: o,
@@ -337,7 +340,7 @@ function ee(e) {
         ),
         o = n.useCallback(
             (e) =>
-                (0, s.jsx)(P.f, {
+                (0, s.jsx)(F.f, {
                     fade: !0,
                     className: Y.q4,
                     columns: e,
@@ -356,7 +359,7 @@ function ee(e) {
           ? null
           : (0, s.jsx)("div", {
                 className: Y.HU,
-                children: (0, s.jsx)(F.A, { desiredItemWidth: 150, maxColumns: 3, children: o }),
+                children: (0, s.jsx)(w.A, { desiredItemWidth: 150, maxColumns: 3, children: o }),
             });
 }
 let el = (0, t(839214).D)((e, l) => ({
@@ -422,7 +425,7 @@ function en(e) {
                             (0, s.jsx)(o.E, {
                                 variant: "text-sm/semibold",
                                 color: "currentColor",
-                                children: _.intl.string(C.default.zetfRy),
+                                children: j.intl.string(C.default.zetfRy),
                             }),
                         ],
                     }),
@@ -443,7 +446,7 @@ function en(e) {
                                 (0, s.jsx)(o.E, {
                                     variant: "text-sm/semibold",
                                     color: "currentColor",
-                                    children: _.intl.string(C.default.HkszWk),
+                                    children: j.intl.string(C.default.HkszWk),
                                 }),
                             ],
                         }),
@@ -457,12 +460,12 @@ function er(e) {
     let { onSelect: l } = e;
     return (0, s.jsxs)("div", {
         children: [
-            (0, s.jsx)(o.E, { variant: "text-sm/semibold", children: _.intl.string(C.default.SQb1dl) }),
+            (0, s.jsx)(o.E, { variant: "text-sm/semibold", children: j.intl.string(C.default.SQb1dl) }),
             (0, s.jsx)(o.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 className: Y.u2,
-                children: _.intl.string(C.default["2THN2i"]),
+                children: j.intl.string(C.default["2THN2i"]),
             }),
             (0, s.jsx)("div", {
                 className: Y.si,
@@ -488,7 +491,7 @@ function er(e) {
 }
 function ea(e) {
     let { guildId: l, hash: t, onSelect: r } = e,
-        a = n.useMemo(() => (0, p.Sq)({ guildId: l, bannerHash: t }), [l, t]),
+        a = n.useMemo(() => (0, _.Sq)({ guildId: l, bannerHash: t }), [l, t]),
         i = (0, h.S)(a?.imageUrl ?? ""),
         u = n.useCallback(() => r(t), [t, r]);
     return null == a
@@ -504,7 +507,7 @@ function ei(e) {
     let { guildId: l, hashes: t, onSelect: n } = e;
     return (0, s.jsxs)("div", {
         children: [
-            (0, s.jsx)(o.E, { variant: "text-sm/semibold", children: _.intl.string(C.default.dDID2M) }),
+            (0, s.jsx)(o.E, { variant: "text-sm/semibold", children: j.intl.string(C.default.dDID2M) }),
             (0, s.jsx)("div", {
                 className: Y.si,
                 children: t.slice(0, 9).map((e) => (0, s.jsx)(ea, { guildId: l, hash: e, onSelect: n }, e)),
@@ -518,7 +521,7 @@ function ec(e) {
         c,
         { transitionState: u, onClose: o, channel: d } = e,
         [h, f] = n.useState("HOME"),
-        [b, p] = n.useState(null),
+        [b, _] = n.useState(null),
         { recentImageHashes: y, isLoading: k } =
             ((l = d.guild_id),
             (t = el.useField("isLoading")),
@@ -527,44 +530,44 @@ function ec(e) {
             { recentImageHashes: c, isLoading: t }),
         I = n.useCallback(
             async (e) => {
-                p(null);
+                _(null);
                 try {
                     await (0, x.Hd)(d.id, e), o();
                 } catch (e) {
-                    p(j(e));
+                    _(p(e));
                 }
             },
             [d.id, o],
         ),
         N = n.useCallback(
             async (e) => {
-                p(null);
+                _(null);
                 try {
                     await (0, x.B$)(d.id, e), o();
                 } catch (e) {
-                    p(j(e));
+                    _(p(e));
                 }
             },
             [d.id, o],
         ),
-        v = n.useCallback(
+        E = n.useCallback(
             (e) => {
                 let l = e.gifSrc ?? e.src ?? e.url;
                 null != l && I(l);
             },
             [I],
         ),
-        E = n.useCallback(() => (p(null), f("HOME"), Promise.resolve()), []),
+        v = n.useCallback(() => (_(null), f("HOME"), Promise.resolve()), []),
         S = null != b ? (0, s.jsx)(g.w, { type: "critical", children: b }) : null;
     return "RECENT_UPLOADS" === h
         ? (0, s.jsxs)(r.d, {
               transitionState: u,
-              onClose: E,
+              onClose: v,
               size: "md",
               children: [
                   (0, s.jsx)(a.rQ, {
-                      title: _.intl.string(C.default.aBnIyR),
-                      subtitle: _.intl.string(C.default["5VL9Ju"]),
+                      title: j.intl.string(C.default.aBnIyR),
+                      subtitle: j.intl.string(C.default["5VL9Ju"]),
                   }),
                   (0, s.jsxs)("div", {
                       className: Y.n3,
@@ -575,17 +578,17 @@ function ec(e) {
         : "GIF_PICKER" === h
           ? (0, s.jsxs)(r.d, {
                 transitionState: u,
-                onClose: E,
+                onClose: v,
                 size: "md",
                 children: [
-                    (0, s.jsx)(a.rQ, { title: _.intl.string(C.default.HkszWk) }),
+                    (0, s.jsx)(a.rQ, { title: j.intl.string(C.default.HkszWk) }),
                     (0, s.jsxs)("div", {
                         className: Y.n3,
                         children: [
                             S,
                             (0, s.jsx)("div", {
                                 className: Y.SD,
-                                children: (0, s.jsx)(W, { className: Y.XC, onSelectGIF: v }),
+                                children: (0, s.jsx)(W, { className: Y.XC, onSelectGIF: E }),
                             }),
                         ],
                     }),
@@ -595,8 +598,8 @@ function ec(e) {
                 transitionState: u,
                 onClose: o,
                 size: "md",
-                title: _.intl.string(C.default.yyPbqI),
-                subtitle: _.intl.string(C.default["+y6KsI"]),
+                title: j.intl.string(C.default.yyPbqI),
+                subtitle: j.intl.string(C.default["+y6KsI"]),
                 notice: null != b ? { message: b, type: "critical" } : void 0,
                 actions: [],
                 children: (0, s.jsxs)("div", {
@@ -604,10 +607,10 @@ function ec(e) {
                     children: [
                         (0, s.jsx)(en, {
                             onOpenGIFPicker: () => {
-                                p(null), f("GIF_PICKER");
+                                _(null), f("GIF_PICKER");
                             },
                             onOpenRecentUploads: () => {
-                                p(null), f("RECENT_UPLOADS");
+                                _(null), f("RECENT_UPLOADS");
                             },
                         }),
                         k
