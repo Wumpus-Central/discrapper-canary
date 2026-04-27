@@ -1,9 +1,9 @@
 r.d(t, { jP: () => i, gB: () => d, yB: () => u });
 var n = r(64700),
     s = r(17928),
-    l = r(775602),
-    a = r(652525);
-let o = "custom-cursors-styles",
+    o = r(775602),
+    l = r(652525);
+let a = "custom-cursors-styles",
     i = "custom-cursors",
     c = `
   :root {
@@ -26,6 +26,7 @@ let o = "custom-cursors-styles",
   .${i} [role='menuitem'],
   .${i} [role='option'],
   .${i} [role='listitem'],
+  .${i} [role='tab'],
   .${i} [role='radio'],
   .${i} [role='checkbox'],
   .${i} input[type='checkbox'],
@@ -65,9 +66,9 @@ function d() {
     let e = u("useCustomCursorsCSS");
     n.useLayoutEffect(() => {
         if (!e) return;
-        let t = document.getElementById(o);
+        let t = document.getElementById(a);
         return (
-            null == t && (((t = document.createElement("style")).id = o), document.head.appendChild(t)),
+            null == t && (((t = document.createElement("style")).id = a), document.head.appendChild(t)),
             (t.textContent = c),
             () => {
                 t.textContent = "";
@@ -76,7 +77,7 @@ function d() {
     }, [e]);
 }
 function u(e) {
-    let t = (0, a.t)(e),
-        r = (0, s.bG)([l.A], () => l.A.enableCustomCursor ?? !0);
+    let t = (0, l.t)(e),
+        r = (0, s.bG)([o.A], () => o.A.enableCustomCursor ?? !0);
     return t && r;
 }

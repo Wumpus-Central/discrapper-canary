@@ -1857,7 +1857,7 @@ screen and (max-width:485px) {
 .tabs__354ec {
     align-items: center;
     display: flex;
-    gap: 24px
+    gap: 32px
 }
 
 .tabs__354ec {
@@ -1866,21 +1866,17 @@ screen and (max-width:485px) {
     height: 100%
 }
 
-.tabWrapper__354ec {
-    justify-content: center
-}
-
-.tab__354ec,
-.tabWrapper__354ec {
-    align-items: center;
-    display: flex;
-    height: 100%
+.container__354ec .tabs__354ec {
+    border-bottom: none
 }
 
 .tab__354ec {
+    align-items: center;
     box-sizing: border-box;
     cursor: pointer;
-    margin-top: 0
+    display: flex;
+    height: 100%;
+    white-space: nowrap
 }
 
 .tab__354ec:hover {
@@ -1888,31 +1884,28 @@ screen and (max-width:485px) {
     margin-bottom: -2px
 }
 
-.tab__354ec.selected__354ec {
+.tab__354ec[aria-selected=true] {
     border-bottom: 2px solid var(--icon-strong);
     margin-bottom: -2px
 }
 
-.tabWithMenuContainer__354ec {
-    align-items: center;
-    display: flex;
+.tabContent__354ec {
     height: 100%
 }
 
+.tabContent__354ec,
 .tabWithChevron__354ec {
     align-items: center;
-    display: flex;
+    display: flex
+}
+
+.tabWithChevron__354ec {
     gap: 4px
 }
 
 .more__354ec {
     cursor: pointer;
     display: flex
-}
-
-.more__354ec.selected__354ec {
-    border-bottom: 2px solid var(--icon-strong);
-    margin-bottom: -2px
 }
 
 .floatingSearchTabsMask__354ec {
