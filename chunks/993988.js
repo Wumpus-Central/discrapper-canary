@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"IraH2Q":["IraH2Q"]}');
+s.exports = JSON.parse('{"IraH2Q":["Знижка ",[1,"discountOfferAmount"],"%"]}');

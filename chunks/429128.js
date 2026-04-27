@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     lq: "scrollbar__506b3",
     qD: "scrollbarDefault__506b3 scrollbar__506b3",
