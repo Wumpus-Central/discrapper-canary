@@ -2,13 +2,13 @@
 n.d(t, { L: () => o });
 var i = n(627968);
 n(64700);
-var r = n(192308),
-    l = n(954571),
+var l = n(192308),
+    r = n(954571),
     a = n(652215);
 let s = "display-name-styles-modal",
     o = (e) => {
         let { analyticsLocations: t, guildId: o, stackingBehavior: c, returnRef: d } = e;
-        (0, r.openModalLazy)(
+        (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("32292"),
@@ -17,10 +17,10 @@ let s = "display-name-styles-modal",
                     n.e("28367"),
                     n.e("45174"),
                     n.e("85519"),
-                    n.e("87963"),
+                    n.e("11871"),
                     n.e("37266"),
                     n.e("55057"),
-                    n.e("34717"),
+                    n.e("14976"),
                     n.e("63229"),
                     n.e("31988"),
                     n.e("55343"),
@@ -55,7 +55,7 @@ let s = "display-name-styles-modal",
                     n.e("72401"),
                     n.e("47417"),
                     n.e("19558"),
-                    n.e("53142"),
+                    n.e("58946"),
                     n.e("51444"),
                     n.e("62290"),
                     n.e("76390"),
@@ -64,7 +64,7 @@ let s = "display-name-styles-modal",
                     n.e("67339"),
                     n.e("48900"),
                     n.e("31538"),
-                    n.e("21453"),
+                    n.e("63087"),
                     n.e("80973"),
                     n.e("98954"),
                     n.e("82731"),
@@ -73,16 +73,17 @@ let s = "display-name-styles-modal",
                     n.e("27846"),
                     n.e("8306"),
                     n.e("10567"),
-                    n.e("43436"),
+                    n.e("12542"),
                     n.e("84317"),
-                    n.e("54865"),
-                    n.e("44575"),
+                    n.e("93858"),
+                    n.e("46506"),
+                    n.e("20382"),
                     n.e("34268"),
-                    n.e("28953"),
-                    n.e("99789"),
+                    n.e("96963"),
+                    n.e("72474"),
                     n.e("26663"),
                     n.e("29491"),
-                    n.e("70786"),
+                    n.e("60739"),
                 ]).then(n.bind(n, 36794));
                 return (n) => (0, i.jsx)(e, { ...n, guildId: o, analyticsLocations: t, returnRef: d });
             },
@@ -90,7 +91,7 @@ let s = "display-name-styles-modal",
                 modalKey: s,
                 stackingBehavior: c,
                 onCloseRequest: () => {
-                    l.default.track(a.HAw.DISPLAY_NAME_STYLES_CLOSED), (0, r.closeModal)(s);
+                    r.default.track(a.HAw.DISPLAY_NAME_STYLES_CLOSED), (0, l.closeModal)(s);
                 },
             },
         );

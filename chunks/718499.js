@@ -1,38 +1,39 @@
-n.d(t, { Ay: () => o, Bu: () => u, OJ: () => s, XY: () => i });
+n.d(t, { Ay: () => c, Bu: () => o, OJ: () => s, XY: () => u });
 var r = n(64700),
     l = n(771253),
-    a = n(876230);
-let i = 8e5,
+    a = n(876230),
+    i = n(614269);
+let u = 8e5,
     s = 20,
-    u = 30;
-function o(e, t) {
-    let { src: n, initialTimeSec: o = 0, onError: c, onHlsInstance: d, crossOrigin: m = "anonymous" } = t,
-        f = r.useRef(null),
-        h = r.useRef(o);
-    h.current = o;
-    let p = r.useRef(c),
-        E = r.useRef(d),
-        v = r.useRef(m);
-    (v.current = m),
-        r.useEffect(() => {
-            p.current = c;
-        }, [c]),
+    o = 30;
+function c(e, t) {
+    let { src: n, initialTimeSec: c = 0, onError: d, onHlsInstance: m, crossOrigin: f = "anonymous" } = t,
+        h = r.useRef(null),
+        p = r.useRef(c);
+    p.current = c;
+    let E = r.useRef(d),
+        v = r.useRef(m),
+        x = r.useRef(f);
+    (x.current = f),
         r.useEffect(() => {
             E.current = d;
-        }, [d]);
-    let x = null != n && n.split("?")[0].endsWith(".m3u8") && l.Ay.isSupported();
+        }, [d]),
+        r.useEffect(() => {
+            v.current = m;
+        }, [m]);
+    let b = i.u.isHlsUrl(n) && l.Ay.isSupported();
     return (
         r.useEffect(() => {
-            if (!x || null == n || null == e.current) return;
+            if (!b || null == n || null == e.current) return;
             let t = e.current,
                 r = new l.Ay({
                     backBufferLength: s,
-                    maxBufferLength: u,
-                    startPosition: h.current,
+                    maxBufferLength: o,
+                    startPosition: p.current,
                     startFragPrefetch: !0,
                     startLevel: -1,
                     xhrSetup: (e) => {
-                        e.withCredentials = "use-credentials" === v.current;
+                        e.withCredentials = "use-credentials" === x.current;
                     },
                     fetchSetup: (e, t) => (
                         (t.credentials = (function (e) {
@@ -43,12 +44,12 @@ function o(e, t) {
                                 case null:
                                     return "same-origin";
                             }
-                        })(v.current)),
+                        })(x.current)),
                         new Request(e.url, t)
                     ),
                 });
-            (f.current = r), E.current?.(r);
-            let o = 0,
+            (h.current = r), v.current?.(r);
+            let i = 0,
                 c = () => {
                     r.mainForwardBufferInfo?.len === 0 &&
                         r.trigger(l.Ay.Events.BUFFER_FLUSHING, {
@@ -59,11 +60,11 @@ function o(e, t) {
                 };
             return (
                 r.on(l.Ay.Events.FRAG_LOADING, () => {
-                    r.config.minAutoBitrate !== i && (r.config.minAutoBitrate = i);
+                    r.config.minAutoBitrate !== u && (r.config.minAutoBitrate = u);
                 }),
                 r.on(l.Ay.Events.ERROR, (e, t) => {
                     if (
-                        (p.current?.(
+                        (E.current?.(
                             (function (e) {
                                 switch (e) {
                                     case l.Ay.ErrorTypes.NETWORK_ERROR:
@@ -82,11 +83,11 @@ function o(e, t) {
                         ),
                         t.fatal)
                     ) {
-                        if (o >= 3) {
-                            r.destroy(), (f.current = null), E.current?.(null);
+                        if (i >= 3) {
+                            r.destroy(), (h.current = null), v.current?.(null);
                             return;
                         }
-                        switch ((o++, t.type)) {
+                        switch ((i++, t.type)) {
                             case l.Ay.ErrorTypes.NETWORK_ERROR:
                                 r.startLoad();
                                 break;
@@ -94,7 +95,7 @@ function o(e, t) {
                                 r.recoverMediaError();
                                 break;
                             default:
-                                r.destroy(), (f.current = null), E.current?.(null);
+                                r.destroy(), (h.current = null), v.current?.(null);
                         }
                     }
                 }),
@@ -103,12 +104,12 @@ function o(e, t) {
                 r.attachMedia(t),
                 () => {
                     t.removeEventListener("seeking", c),
-                        f.current === r && (r.destroy(), (f.current = null), E.current?.(null)),
+                        h.current === r && (r.destroy(), (h.current = null), v.current?.(null)),
                         t.removeAttribute("src"),
                         t.load();
                 }
             );
-        }, [x, n, e]),
-        { isHlsActive: x, hlsRef: f }
+        }, [b, n, e]),
+        { isHlsActive: b, hlsRef: h }
     );
 }

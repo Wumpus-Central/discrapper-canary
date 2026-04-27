@@ -1,44 +1,44 @@
-n.d(t, { R: () => a, j: () => s });
-var i = n(627968),
-    l = n(192308);
+a.d(t, { R: () => l, j: () => d });
+var i = a(627968),
+    n = a(192308);
 let r = "social-layer-storefront-product-details-modal",
-    a = (e) => {
+    l = (e) => {
         let {
             skuId: t,
-            applicationId: a,
-            isStorefront: s,
-            giftRecipient: u,
+            applicationId: l,
+            isStorefront: d,
+            giftRecipient: s,
             giftingOrigin: o,
-            analyticsLocations: c,
-            analyticsContext: d,
-            onClose: E,
+            analyticsLocations: _,
+            analyticsContext: c,
+            onClose: b,
         } = e;
-        (0, l.openModalLazy)(
+        (0, n.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("44575"), n.e("34268"), n.e("25641")]).then(
-                    n.bind(n, 138266),
+                let { default: e } = await Promise.all([a.e("46506"), a.e("20382"), a.e("34268"), a.e("98837")]).then(
+                    a.bind(a, 138266),
                 );
-                return (n) =>
+                return (a) =>
                     (0, i.jsx)(e, {
-                        ...n,
+                        ...a,
                         skuId: t,
-                        applicationId: a,
-                        isStorefront: s,
-                        analyticsLocations: c,
-                        analyticsContext: d,
-                        giftRecipient: u,
+                        applicationId: l,
+                        isStorefront: d,
+                        analyticsLocations: _,
+                        analyticsContext: c,
+                        giftRecipient: s,
                         giftingOrigin: o,
                     });
             },
             {
                 modalKey: r,
-                allowsNavigation: s,
+                allowsNavigation: d,
                 onCloseCallback: () => {
-                    E?.();
+                    b?.();
                 },
             },
         );
     };
-function s() {
-    (0, l.hasModalOpen)(r) && (0, l.closeModal)(r);
+function d() {
+    (0, n.hasModalOpen)(r) && (0, n.closeModal)(r);
 }
