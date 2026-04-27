@@ -1,58 +1,60 @@
-n.d(t, { J: () => A });
-var i = n(627968),
-    l = n(64700),
-    a = n(452027),
-    s = n(862301),
-    r = n(939538),
-    o = n(305866),
-    c = n(265872),
-    d = n(939249),
-    u = n(834730),
-    h = n(81466),
-    m = n(780781);
-function A(e) {
-    let { value: t, onSelect: n, dateFormat: A = "ll", minDate: g, maxDate: p, disabled: _ = !1, ...f } = e,
-        E = l.useRef(null);
-    return (0, i.jsx)(c.Y, {
-        targetElementRef: E,
+a.d(l, { J: () => m });
+var t = a(627968),
+    i = a(64700),
+    n = a(452027),
+    o = a(862301),
+    r = a(939538),
+    s = a(305866),
+    d = a(922016),
+    u = a(939249),
+    c = a(834730),
+    b = a(81466),
+    p = a(780781);
+function m(e) {
+    let { value: l, onSelect: a, dateFormat: m = "ll", minDate: h, maxDate: x, disabled: g = !1, ...f } = e,
+        { required: v } = f,
+        y = i.useRef(null);
+    return (0, t.jsx)(d.Y, {
+        targetElementRef: y,
         renderPopout: function (e) {
-            let { closePopout: l } = e;
-            return (0, i.jsx)(o.l, {
-                children: (0, i.jsx)(r.CalendarPicker, {
-                    minDate: g,
-                    maxDate: p,
-                    value: t,
+            let { closePopout: i } = e;
+            return (0, t.jsx)(s.l, {
+                children: (0, t.jsx)(r.CalendarPicker, {
+                    minDate: h,
+                    maxDate: x,
+                    value: l,
                     onSelect: (e) => {
-                        n(e), l();
+                        a(e), i();
                     },
-                    calendarClassName: m.a,
-                    onClickOutside: l,
+                    calendarClassName: p.a,
+                    onClickOutside: i,
                     autoFocus: !0,
                 }),
             });
         },
         position: "bottom",
         children: (e) => {
-            let { onClick: n, ...l } = e;
-            return (0, i.jsx)(a.D, {
+            let { onClick: a, ...i } = e;
+            return (0, t.jsx)(n.D, {
                 ...f,
                 children: (e) =>
-                    (0, i.jsxs)(s.F, {
-                        as: d.D,
+                    (0, t.jsxs)(o.F, {
+                        as: u.D,
                         tag: "div",
-                        innerRef: E,
-                        disabled: _,
-                        "aria-disabled": _,
-                        ...l,
+                        innerRef: y,
+                        disabled: g,
+                        "aria-disabled": g,
+                        ...i,
                         id: e?.controlId,
                         "aria-describedby": e?.describedById,
                         "aria-errormessage": e?.errorMessageId,
                         "aria-invalid": e?.errorMessageId != null,
-                        className: m.k,
-                        onClick: _ ? void 0 : n,
+                        "aria-required": v,
+                        className: p.k,
+                        onClick: g ? void 0 : a,
                         children: [
-                            (0, i.jsx)(u.E, { variant: "text-md/normal", children: t?.format(A) }),
-                            (0, i.jsx)(h.C, { size: "sm" }),
+                            (0, t.jsx)(c.E, { variant: "text-md/normal", children: l?.format(m) }),
+                            (0, t.jsx)(b.C, { size: "sm" }),
                         ],
                     }),
             });
