@@ -1,113 +1,3 @@
-.premiumTrialBadge_e4ef22 {
-    align-items: center;
-    border-radius: var(--radius-md);
-    display: flex;
-    margin-inline-start: auto;
-    padding: 0 6px;
-    pointer-events: all;
-    text-transform: uppercase
-}
-
-.backgroundGradient_e4ef22 {
-    background: linear-gradient(90deg, #db00a4, #5968f0)
-}
-
-.premiumTrialAcknowledgedBadge_e4ef22 {
-    background-color: var(--background-mod-strong)
-}
-
-.BogoBadgeClockIcon_e4ef22 {
-    color: var(--icon-subtle);
-    height: 14px;
-    margin-inline-end: 4px;
-    width: 14px
-}
-
-.premiumTrialBadge__4c1e4 {
-    align-items: center;
-    border-radius: var(--radius-md);
-    color: var(--text-strong);
-    display: flex;
-    gap: 4px;
-    margin-inline-start: auto;
-    padding: 1px 6px;
-    pointer-events: all;
-    text-transform: uppercase
-}
-
-.premiumOfferUnackedBadge__4c1e4 {
-    background: linear-gradient(90deg, #db00a4, #5968f0)
-}
-
-.premiumTrialBadge__4c1e4.premiumOfferUnackedBadge__4c1e4 .premiumTrialBadgeIcon__4c1e4,
-.premiumTrialBadge__4c1e4.premiumOfferWithTimerAcknowledgedBadge__4c1e4 .premiumTrialBadgeIcon__4c1e4 {
-    height: 10px;
-    width: 10px
-}
-
-.premiumOfferWithTimerUnacknowledgedBadge__4c1e4 {
-    background-image: linear-gradient(to right, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-pink-for-gradients))
-}
-
-.premiumOfferWithTimerAcknowledgedBadge__4c1e4 {
-    background-color: var(--background-mod-strong)
-}
-
-.premiumTrialBadgeSelected__4c1e4 {
-    background-color: var(--background-base-lower)
-}
-
-.premiumOfferBadgeCopy__4c1e4 {
-    color: var(--white)
-}
-
-.theme-light .premiumTrialBadge__4c1e4 {
-    background-color: var(--background-base-lowest)
-}
-
-.theme-light .premiumTrialBadgeSelected__4c1e4 {
-    background-color: var(--background-base-lower)
-}
-
-.premiumLabel__7bebb {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-    position: relative;
-    z-index: 3
-}
-
-.selected__7bebb {
-    color: var(--white)
-}
-
-.background__7bebb {
-    border-radius: var(--radius-xs);
-    height: 100%;
-    inset-inline-start: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1
-}
-
-.selectedBackground__7bebb {
-    background-color: var(--brand-500)
-}
-
-.enable-forced-colors .selected__7bebb {
-    color: Highlight
-}
-
-.enable-forced-colors .selectedIcon__7bebb {
-    fill: Highlight
-}
-
-.enable-forced-colors .selectedBackground__7bebb {
-    background-color: HighlightText
-}
-
 .slider__4e371 {
     inset-inline: 0;
     bottom: 0;
@@ -346,12 +236,6 @@
     margin-top: var(--custom-app-top-bar-height)
 }
 
-.tabBarItemContainer_c7e907 {
-    align-items: center;
-    display: flex;
-    justify-content: space-between
-}
-
 .flex_aa3ffd {
     display: flex
 }
@@ -473,9 +357,9 @@
     border-radius: 3px;
     color: var(--white);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-bold);
-    line-height: 29px;
+    line-height: 1.8125rem;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase
@@ -1753,6 +1637,122 @@ span.clanTag__07f91.isOverlay__07f91 {
 .card_b846e5:focus-within:before,
 .card_b846e5:hover:before {
     opacity: 1
+}
+
+.premiumTrialBadge_e4ef22 {
+    align-items: center;
+    border-radius: var(--radius-md);
+    display: flex;
+    margin-inline-start: auto;
+    padding: 0 6px;
+    pointer-events: all;
+    text-transform: uppercase
+}
+
+.backgroundGradient_e4ef22 {
+    background: linear-gradient(90deg, #db00a4, #5968f0)
+}
+
+.premiumTrialAcknowledgedBadge_e4ef22 {
+    background-color: var(--background-mod-strong)
+}
+
+.BogoBadgeClockIcon_e4ef22 {
+    color: var(--icon-subtle);
+    height: 14px;
+    margin-inline-end: 4px;
+    width: 14px
+}
+
+.premiumTrialBadge__4c1e4 {
+    align-items: center;
+    border-radius: var(--radius-md);
+    color: var(--text-strong);
+    display: flex;
+    gap: 4px;
+    margin-inline-start: auto;
+    padding: 1px 6px;
+    pointer-events: all;
+    text-transform: uppercase
+}
+
+.premiumOfferUnackedBadge__4c1e4 {
+    background: linear-gradient(90deg, #db00a4, #5968f0)
+}
+
+.premiumTrialBadge__4c1e4.premiumOfferUnackedBadge__4c1e4 .premiumTrialBadgeIcon__4c1e4,
+.premiumTrialBadge__4c1e4.premiumOfferWithTimerAcknowledgedBadge__4c1e4 .premiumTrialBadgeIcon__4c1e4 {
+    height: 10px;
+    width: 10px
+}
+
+.premiumOfferWithTimerUnacknowledgedBadge__4c1e4 {
+    background-image: linear-gradient(to right, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-pink-for-gradients))
+}
+
+.premiumOfferWithTimerAcknowledgedBadge__4c1e4 {
+    background-color: var(--background-mod-strong)
+}
+
+.premiumTrialBadgeSelected__4c1e4 {
+    background-color: var(--background-base-lower)
+}
+
+.premiumOfferBadgeCopy__4c1e4 {
+    color: var(--white)
+}
+
+.theme-light .premiumTrialBadge__4c1e4 {
+    background-color: var(--background-base-lowest)
+}
+
+.theme-light .premiumTrialBadgeSelected__4c1e4 {
+    background-color: var(--background-base-lower)
+}
+
+.premiumLabel__7bebb {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    position: relative;
+    z-index: 3
+}
+
+.selected__7bebb {
+    color: var(--white)
+}
+
+.background__7bebb {
+    border-radius: var(--radius-xs);
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.selectedBackground__7bebb {
+    background-color: var(--brand-500)
+}
+
+.enable-forced-colors .selected__7bebb {
+    color: Highlight
+}
+
+.enable-forced-colors .selectedIcon__7bebb {
+    fill: Highlight
+}
+
+.enable-forced-colors .selectedBackground__7bebb {
+    background-color: HighlightText
+}
+
+.tabBarItemContainer_c7e907 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
 }
 
 .right__89d2b {
