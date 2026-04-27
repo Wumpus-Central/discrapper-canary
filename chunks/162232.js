@@ -1,44 +1,45 @@
-a.d(t, { A: () => d });
-var r = a(627968);
-a(64700);
-var n = a(97808),
-    l = a(778712),
-    i = a(854627),
-    s = a(19575),
-    o = a(985018);
-let c = s.Ay.getEnableHardwareAcceleration() ? n.Js : n.eu,
-    d = (e) => {
+"use strict";
+r.d(t, { A: () => u });
+var n = r(627968);
+r(64700);
+var i = r(97808),
+    a = r(778712),
+    l = r(854627),
+    s = r(19575),
+    o = r(985018);
+let c = s.Ay.getEnableHardwareAcceleration() ? i.Js : i.eu,
+    u = (e) => {
         let {
                 user: t,
-                guildId: a,
-                avatarDecorationOverride: n,
+                guildId: r,
+                avatarDecorationOverride: i,
                 status: s,
-                avatarSize: d = l._3.SIZE_120,
-                "aria-hidden": u = !1,
-                className: h,
+                avatarSize: u = a._3.SIZE_120,
+                "aria-hidden": d = !1,
+                className: _,
                 animateOnHover: p = !1,
-                questPreviewRewardAssetUrl: m = null,
+                questPreviewRewardAssetUrl: f = null,
             } = e,
             {
-                avatarDecorationSrc: f,
-                avatarSrc: b,
-                eventHandlers: _,
-            } = (0, i.A)({
+                avatarDecorationSrc: m,
+                avatarSrc: h,
+                eventHandlers: g,
+            } = (0, l.A)({
                 userId: t.id,
-                guildId: a,
-                size: d,
+                guildId: r,
+                size: u,
                 showPending: !0,
-                avatarDecorationOverride: n,
+                avatarDecorationOverride: i,
                 animateOnHover: p,
             });
-        return (0, r.jsx)(c, {
-            avatarDecoration: f ?? m,
-            src: b,
-            size: d,
+        return (0, n.jsx)(c, {
+            avatarDecoration: m ?? f,
+            src: h,
+            size: u,
             status: s,
-            "aria-label": u ? void 0 : o.intl.string(o.t.lqaIxI),
-            "aria-hidden": u,
-            className: h,
-            ..._,
+            "aria-label": d ? void 0 : o.intl.string(o.t.lqaIxI),
+            "aria-hidden": d,
+            className: _,
+            ...g,
         });
     };

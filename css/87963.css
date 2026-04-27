@@ -360,7 +360,9 @@
 
 .sampleProfile_c9a5b2 {
     background-color: var(--background-surface-higher);
+    border: 2px solid var(--border-muted);
     border-radius: var(--radius-sm);
+    box-sizing: border-box;
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
@@ -370,7 +372,8 @@
 }
 
 .sampleProfile_c9a5b2.isMini_c9a5b2 {
-    border-radius: var(--radius-xs)
+    border-radius: var(--radius-xs);
+    border-width: 1px
 }
 
 .externalProductWrapper__320c6 {
