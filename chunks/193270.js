@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wT: "svgContentRight__7b484",
     $U: "svgContentLeft__7b484",

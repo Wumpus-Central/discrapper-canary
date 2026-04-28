@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Zj: "upsellContainer__0b69f",
     Me: "withGradientBg__0b69f",

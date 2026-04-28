@@ -87,7 +87,7 @@ let er = (0, b.Fe)({
             n.e("1040"),
             n.e("64615"),
             n.e("17239"),
-            n.e("7454"),
+            n.e("67849"),
             n.e("64492"),
             n.e("20861"),
             n.e("36682"),
@@ -388,7 +388,7 @@ function eo(e) {
             [eA, ec, eT, eD?.application, eY, eS, I, eX, A, S, N, L, U, b, eZ, eV, ev, ex, ew, e0],
         ),
         e5 = a.useRef(!1),
-        e4 = a.useCallback(async () => {
+        e8 = a.useCallback(async () => {
             if (!w.default.isAuthenticated()) return void (0, k.Vh)(eC, "oauth2_error_not_authenticated");
             if (!eJ.current && !e5.current) {
                 e5.current = !0;
@@ -419,7 +419,7 @@ function eo(e) {
                 }
             }
         }, [eC, ef, I, eX, A, S, N, L, U, b, ex, P, e6, e2]),
-        e8 = a.useMemo(
+        e4 = a.useMemo(
             () =>
                 null != e$ && ej
                     ? Object.entries(e$.integrationTypesConfig ?? {})
@@ -452,11 +452,11 @@ function eo(e) {
                 ep &&
                 (null != ef
                     ? (eK(ef.integration_type ?? d.b.GUILD_INSTALL), eh("AUTHORIZE_SCOPES"))
-                    : e8.length > 1
+                    : e4.length > 1
                       ? eh("SELECT_INSTALL_TYPE")
-                      : (1 === e8.length ? eK(e8[0]) : null != eo ? eK(eo) : eK(d.b.GUILD_INSTALL),
+                      : (1 === e4.length ? eK(e4[0]) : null != eo ? eK(eo) : eK(d.b.GUILD_INSTALL),
                         eh("AUTHORIZE_SCOPES")));
-        }, [ef, e8, e$, ej, eo, em, ep]),
+        }, [ef, e4, e$, ej, eo, em, ep]),
         a.useEffect(() => {
             if (null == ex || null != eD || null != eg) return;
             ex === d.b.USER_INSTALL && (eB(null), eF(null));
@@ -467,8 +467,8 @@ function eo(e) {
                   ? eU(Error(`Invalid scope: ${e[0]}`))
                   : (0, Y.F7)(eZ)
                     ? eU(Error("Invalid permission(s) provided."))
-                    : e4();
-        }, [e2, e4, eX, eZ, ex, eD, eg]);
+                    : e8();
+        }, [e2, e8, eX, eZ, ex, eD, eg]);
     let e9 = a.useCallback((e) => {
             e && eG(!0);
         }, []),
@@ -556,7 +556,7 @@ function eo(e) {
                 ],
             })),
                 eX.includes(c.F.BOT) && !u.aI(eZ, F.x3) && (r = "AUTHORIZE_BOT_PERMISSIONS"),
-                e8.length > 1 && (n = "SELECT_INSTALL_TYPE"),
+                e4.length > 1 && (n = "SELECT_INSTALL_TYPE"),
                 (tn = (tE && null == eY) || (to && null == ew)),
                 (tt = !0);
             break;

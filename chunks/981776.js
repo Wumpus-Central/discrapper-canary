@@ -1,68 +1,69 @@
-n.r(t), n.d(t, { default: () => b });
-var a = n(79719),
-    l = n(735438),
-    r = n.n(l);
+"use strict";
+n.r(t), n.d(t, { default: () => x });
+var l = n(79719),
+    i = n(735438),
+    s = n.n(i);
 n(321073);
-let s = { 1: "bold", 4: "underline" },
-    i = { 30: "black", 31: "red", 32: "green", 33: "yellow", 34: "blue", 35: "magenta", 36: "cyan", 37: "white" },
-    u = { 40: "black", 41: "red", 42: "green", 43: "yellow", 44: "blue", 45: "magenta", 46: "cyan", 47: "white" },
-    o = /\x1B\[(\d+(?:[:;]\d+)*)m/,
-    g = RegExp(`(?=${o.source})`);
-function c(e, t, n, a) {
-    let l = ["0", ...n];
+let a = { 1: "bold", 4: "underline" },
+    r = { 30: "black", 31: "red", 32: "green", 33: "yellow", 34: "blue", 35: "magenta", 36: "cyan", 37: "white" },
+    o = { 40: "black", 41: "red", 42: "green", 43: "yellow", 44: "blue", 45: "magenta", 46: "cyan", 47: "white" },
+    c = /\x1B\[(\d+(?:[:;]\d+)*)m/,
+    u = RegExp(`(?=${c.source})`);
+function d(e, t, n, l) {
+    let i = ["0", ...n];
     return (
-        a && l.push(...Object.keys(t)),
+        l && i.push(...Object.keys(t)),
         Object.entries(t).map((t) => {
-            let [n, a] = t;
+            let [n, l] = t;
             return {
-                className: `ansi-${e}-${a}`,
+                className: `ansi-${e}-${l}`,
                 endsParent: !0,
-                begin: g,
+                begin: u,
                 "on:begin": (e, t) => {
-                    let a = e[1].split(";");
-                    for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), a))
-                        e === n ? (t.data.isOn = !0) : l.includes(e) && (t.data.isOn = !1);
+                    let l = e[1].split(";");
+                    for (let e of (void 0 === t.data.isOn && (t.data.isOn = !1), l))
+                        e === n ? (t.data.isOn = !0) : i.includes(e) && (t.data.isOn = !1);
                     t.data.isOn || t.ignoreMatch();
                 },
             };
         })
     );
 }
-a.A.registerLanguage("ansi", function () {
+l.A.registerLanguage("ansi", function () {
     let e = [
-        ...c("foreground", i, ["38", "39"], !0),
-        ...c("background", u, ["48", "49"], !0),
-        ...c("style", s, [], !1),
-        { className: "ansi-control-sequence", begin: o, starts: { end: g, endsParent: !0 } },
+        ...d("foreground", r, ["38", "39"], !0),
+        ...d("background", o, ["48", "49"], !0),
+        ...d("style", a, [], !1),
+        { className: "ansi-control-sequence", begin: c, starts: { end: u, endsParent: !0 } },
     ];
     return (
         (function (e) {
             for (let t = 0; t < e.length; t++) e[t].contains = e.slice(t + 1);
         })(e),
-        { contains: [{ begin: g, contains: e }] }
+        { contains: [{ begin: u, contains: e }] }
     );
 });
 let h = /(<script\/?\\?>)|(html\\?`)/g,
-    f = new Set(["html", "xml", "javascript", "typescript", "handlebars"]),
-    d = /^[a-z0-9_+\-.#]+$/,
-    p = a.A.listLanguages(),
-    m = new Map();
-for (let e of p) {
+    m = new Set(["html", "xml", "javascript", "typescript", "handlebars"]),
+    p = /^[a-z0-9_+\-.#]+$/,
+    f = l.A.listLanguages(),
+    g = new Map();
+for (let e of f) {
     e = e.toLowerCase();
-    let t = a.A.getLanguage(e);
+    let t = l.A.getLanguage(e);
     if (null == t) continue;
     let n = t.aliases;
-    if ((m.set(e, e), null != n)) for (let t of n) m.set(t.toLowerCase(), e);
+    if ((g.set(e, e), null != n)) for (let t of n) g.set(t.toLowerCase(), e);
 }
-for (let [e, t] of m) if (null == e.match(d)) throw Error(`Language name does not match regex: ${e}`);
-function w(e) {
-    return m.get(e.toLowerCase());
+for (let [e, t] of g) if (null == e.match(p)) throw Error(`Language name does not match regex: ${e}`);
+function _(e) {
+    return g.get(e.toLowerCase());
 }
-let b = {
+let x = {
         highlight(e, t, n) {
             if (
                 !(function (e, t) {
-                    if (e.indexOf(L) >= 0) return !1;
+                    if (e.indexOf(C) >= 0) return !1;
                     let n = 0;
                     for (let t of e.split("\n")) {
                         if (t.length > 1e3) return !1;
@@ -70,8 +71,8 @@ let b = {
                         let e = t.match(/[/]/g);
                         if (null != e && (n += e.length) > 30) return !1;
                     }
-                    let a = w(t);
-                    if (null != a && f.has(a)) {
+                    let l = _(t);
+                    if (null != l && m.has(l)) {
                         let t = e.replace(/\s*/g, "").match(h);
                         if ((t?.length ?? 0) > 10) return !1;
                     }
@@ -80,13 +81,13 @@ let b = {
             )
                 return null;
             Date.now();
-            let l = a.A.highlight(t, { ignoreIllegals: n, language: e });
+            let i = l.A.highlight(t, { ignoreIllegals: n, language: e });
             Date.now();
-            let r = l.value.match(/</g)?.length;
-            return null != r && r > 2e3 ? null : l;
+            let s = i.value.match(/</g)?.length;
+            return null != s && s > 2e3 ? null : i;
         },
-        hasLanguage: (e) => null != a.A.getLanguage(e),
-        isKnownLanguage: (e) => m.has(e.toLowerCase()),
-        resolveLanguageName: w,
+        hasLanguage: (e) => null != l.A.getLanguage(e),
+        isKnownLanguage: (e) => g.has(e.toLowerCase()),
+        resolveLanguageName: _,
     },
-    L = r().repeat("/", 15);
+    C = s().repeat("/", 15);

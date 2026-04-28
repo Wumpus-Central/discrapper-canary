@@ -373,7 +373,7 @@ let eh = (0, er.Fe)({
         name: "LinkAuthorize",
     }),
     ev = (0, er.Fe)({
-        createPromise: () => Promise.all([n.e("95908"), n.e("16864")]).then(n.bind(n, 627318)),
+        createPromise: () => Promise.all([n.e("29835"), n.e("16864")]).then(n.bind(n, 627318)),
         webpackId: 627318,
         name: "ActivateDevice",
     }),
@@ -401,7 +401,7 @@ let eh = (0, er.Fe)({
                 n.e("1040"),
                 n.e("64615"),
                 n.e("17239"),
-                n.e("7454"),
+                n.e("67849"),
                 n.e("64492"),
                 n.e("36682"),
                 n.e("56871"),
@@ -442,7 +442,7 @@ let eh = (0, er.Fe)({
                 n.e("76953"),
                 n.e("6044"),
                 n.e("18294"),
-                n.e("36423"),
+                n.e("18616"),
                 n.e("64919"),
                 n.e("5536"),
                 n.e("69026"),
@@ -467,7 +467,7 @@ let eh = (0, er.Fe)({
                 n.e("24199"),
                 n.e("57036"),
                 n.e("88394"),
-                n.e("95908"),
+                n.e("29835"),
                 n.e("28367"),
                 n.e("93103"),
                 n.e("80527"),
@@ -484,7 +484,7 @@ let eh = (0, er.Fe)({
                 n.e("1040"),
                 n.e("64615"),
                 n.e("17239"),
-                n.e("7454"),
+                n.e("67849"),
                 n.e("64492"),
                 n.e("20861"),
                 n.e("36682"),
@@ -565,7 +565,7 @@ let eh = (0, er.Fe)({
                 n.e("1040"),
                 n.e("64615"),
                 n.e("17239"),
-                n.e("7454"),
+                n.e("67849"),
                 n.e("64492"),
                 n.e("8555"),
                 n.e("36682"),
@@ -587,11 +587,11 @@ let eh = (0, er.Fe)({
                 n.e("76390"),
                 n.e("93312"),
                 n.e("95752"),
-                n.e("67339"),
+                n.e("87046"),
                 n.e("90161"),
                 n.e("48900"),
                 n.e("31538"),
-                n.e("73930"),
+                n.e("34828"),
                 n.e("99717"),
                 n.e("6698"),
                 n.e("98954"),
@@ -663,7 +663,7 @@ let eh = (0, er.Fe)({
                 n.e("6044"),
                 n.e("18294"),
                 n.e("83438"),
-                n.e("36423"),
+                n.e("18616"),
                 n.e("69026"),
                 n.e("37786"),
                 n.e("60744"),
@@ -1018,10 +1018,10 @@ function e5() {
         background_install_ms_total: 0,
     };
 }
-function e4(e) {
+function e8(e) {
     return "host" === e;
 }
-class e8 {
+class e4 {
     _installingModules = {};
     _downloadingModules = {};
     _report;
@@ -1029,7 +1029,7 @@ class e8 {
         this._report = e5();
     }
     handleDownloadingModule(e) {
-        if (!e4(e.name)) {
+        if (!e8(e.name)) {
             if (null != this._downloadingModules[e.name])
                 return void console.warn("Duplicate downloading-module event for module ", e.name);
             this._downloadingModules[e.name] = { startTime: BigInt(e.now), foreground: e.foreground };
@@ -1049,7 +1049,7 @@ class e8 {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (e4(e.name)) return;
+        if (e8(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t)
             return void console.warn("Downloaded complete without corresponding downloading event for module ", e.name);
@@ -1066,7 +1066,7 @@ class e8 {
             delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
-        if (!e4(e.name)) {
+        if (!e8(e.name)) {
             if (null != this._installingModules[e.name])
                 return void console.warn("Duplicate installing-module event for module ", e.name);
             this._installingModules[e.name] = {
@@ -1078,7 +1078,7 @@ class e8 {
         }
     }
     handleInstalledModule(e) {
-        if (e4(e.name)) return;
+        if (e8(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? "foreground" : "background",
@@ -1132,7 +1132,7 @@ class e8 {
     }
 }
 class e7 extends eA.A {
-    _tracker = new e8();
+    _tracker = new e4();
     _initialize() {
         y.isPlatformEmbedded &&
             (v.Ay.on("UPDATE_DOWNLOADED", () => this.processModuleEvents()),

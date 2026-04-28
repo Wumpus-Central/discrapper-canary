@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     fq: "ripple__43deb",
     z9: "bounce__43deb",

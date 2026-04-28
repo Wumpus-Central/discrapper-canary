@@ -104,7 +104,7 @@ function x(e) {
             n.e("1040"),
             n.e("64615"),
             n.e("17239"),
-            n.e("7454"),
+            n.e("67849"),
             n.e("64492"),
             n.e("20861"),
             n.e("36682"),
@@ -299,7 +299,7 @@ function en(e, t) {
 }
 function ei(e) {
     (0, s.openModalLazy)(async () => {
-        let { default: t } = await Promise.all([n.e("95908"), n.e("27818")]).then(n.bind(n, 518420));
+        let { default: t } = await Promise.all([n.e("29835"), n.e("27818")]).then(n.bind(n, 518420));
         return (n) => (0, i.jsx)(t, { ...n, questId: e.id });
     });
 }

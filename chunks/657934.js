@@ -1,27 +1,26 @@
-n.d(t, { JM: () => o, T8: () => l });
-var i = n(989441),
-    r = n(802516),
-    a = n(49381),
-    s = n(778591),
-    _ = n(985018);
-let l = {
-        [i.D.XBOX_GAME_PASS]: {
-            distributor: i.D.XBOX_GAME_PASS,
-            getLabel: () => _.intl.string(_.t["s7+3um"]),
-            getStoreName: () => _.intl.string(_.t["QpN/Iz"]),
-            icon: r.Y,
-            getStoreUrl: function (e) {
-                return `https://www.xbox.com/en-US/games/store/-/${encodeURIComponent(e)}`;
-            },
+n.d(t, { J: () => d, T: () => o });
+var r = n(989441),
+    i = n(802516),
+    l = n(49381),
+    a = n(778591),
+    s = n(853022),
+    u = n(985018);
+let o = {
+        [r.D.XBOX_GAME_PASS]: {
+            distributor: r.D.XBOX_GAME_PASS,
+            getLabel: () => u.intl.string(u.t["s7+3um"]),
+            getStoreName: () => u.intl.string(u.t["QpN/Iz"]),
+            icon: i.Y,
+            getStoreUrl: s.j,
             analyticsAction: "PRESS_PLAY_WITH_XBOX_GAME_PASS_BUTTON",
         },
-        [i.D.STEAM]: {
-            distributor: i.D.STEAM,
-            getLabel: () => _.intl.string(_.t.OlubC8),
-            getStoreName: () => _.intl.string(_.t.FsANs4),
-            icon: a.N,
-            getStoreUrl: s.Z,
+        [r.D.STEAM]: {
+            distributor: r.D.STEAM,
+            getLabel: () => u.intl.string(u.t.L1N2gh),
+            getStoreName: () => u.intl.string(u.t.FsANs4),
+            icon: l.N,
+            getStoreUrl: a.Z,
             analyticsAction: "PRESS_PLAY_ON_STEAM_BUTTON",
         },
     },
-    o = [i.D.XBOX_GAME_PASS, i.D.STEAM];
+    d = [r.D.XBOX_GAME_PASS, r.D.STEAM];
