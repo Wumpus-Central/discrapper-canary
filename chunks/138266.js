@@ -2,9 +2,9 @@ t.d(l, { L: () => e$, default: () => eV }), t(321073);
 var s = t(627968),
     n = t(64700),
     a = t(310784),
-    i = t.n(a),
-    r = t(503698),
-    o = t.n(r),
+    r = t.n(a),
+    i = t(503698),
+    o = t.n(i),
     c = t(17928),
     u = t(534514),
     d = t(192308),
@@ -80,7 +80,7 @@ var Z = t(44724),
     es = t(429635),
     en = t(533406),
     ea = t(964421);
-function ei(e) {
+function er(e) {
     let { mediaItems: l, labels: t, selectedIndex: n, onSelectIndex: a } = e;
     return l.length <= 1
         ? null
@@ -121,7 +121,7 @@ function ei(e) {
               ],
           });
 }
-var er = t(263911),
+var ei = t(263911),
     eo = t(971146),
     ec = t(775602),
     eu = t(175671),
@@ -131,13 +131,13 @@ var er = t(263911),
 let eh = (e) => (0, em.$o)({ ...e, className: ex.tN, mediaPlayerClassName: ex.yf }),
     eb = (e) => (0, s.jsx)(ed.Ay, { ...e });
 function ej(e) {
-    let { item: l, isMuted: t, className: a, alt: r = "" } = e,
+    let { item: l, isMuted: t, className: a, alt: i = "" } = e,
         o = (function (e) {
             let l = null != e ? ("videoThumbnailSrc" in e ? e.videoThumbnailSrc : e.src) : null,
                 [t] = (0, R.rh)(l, "#000000");
             return n.useMemo(() => {
                 if (null == l || "#000000" === t) return;
-                let e = i()(t).darken(1);
+                let e = r()(t).darken(1);
                 return `radial-gradient(circle, ${e.alpha(0.2).hex()} 0%, transparent 100%)`;
             }, [l, t]);
         })(l),
@@ -193,7 +193,7 @@ function ej(e) {
                   className: ex.h4,
                   style: j,
                   children: [
-                      (0, s.jsx)("img", { src: l.src, alt: r, className: ex.Sl }, l.src),
+                      (0, s.jsx)("img", { src: l.src, alt: i, className: ex.Sl }, l.src),
                       null != d && !u && (0, s.jsx)("img", { src: d, alt: "", className: ex.Ve, onAnimationEnd: b }, d),
                   ],
               }),
@@ -212,7 +212,7 @@ function eA(e) {
               className: ev.AX,
               children: [
                   (0, s.jsx)(u.D, { variant: "heading-lg/bold", color: "text-strong", children: l.name }),
-                  (0, s.jsx)(m.E, { variant: "text-sm/medium", color: "text-subtle", children: l.description }),
+                  (0, s.jsx)(m.E, { variant: "text-sm/normal", color: "text-subtle", children: l.description }),
               ],
           });
 }
@@ -220,7 +220,7 @@ function ek(e) {
     let { sku: l } = e,
         { normalPrice: t, discountedPrice: n, discountPercent: a } = (0, O.CD)({ sku: l });
     if (null == t) return null;
-    let i = null != l.orbsReward && l.orbsReward > 0;
+    let r = null != l.orbsReward && l.orbsReward > 0;
     return (0, s.jsxs)("div", {
         className: ev.sj,
         children: [
@@ -237,7 +237,7 @@ function ek(e) {
                               ],
                           })
                         : (0, s.jsx)(m.E, { variant: "text-md/semibold", color: "text-strong", children: t }),
-                    i &&
+                    r &&
                         (0, s.jsx)("div", {
                             className: ev.pt,
                             children: (0, s.jsx)(m.E, {
@@ -260,8 +260,8 @@ function e_(e) {
             sku: l,
             guildId: t,
             shouldShowShopLink: a,
-            giftRecipient: i,
-            giftingOrigin: r,
+            giftRecipient: r,
+            giftingOrigin: i,
             trackPDPClick: o,
             analyticsLocations: u,
         } = e,
@@ -293,10 +293,10 @@ function e_(e) {
             o(eC.Jq.GIFT_BUTTON),
                 (0, en.a)(
                     l,
-                    { isGift: !0, giftRecipient: i, giftingOrigin: r },
+                    { isGift: !0, giftRecipient: r, giftingOrigin: i },
                     { analyticsLocations: [...u, E.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON] },
                 );
-        }, [l, o, i, r, u]),
+        }, [l, o, r, i, u]),
         S = n.useCallback(() => {
             if (null == A || !p) return;
             o(eC.Jq.BUY_WITH_ORBS_BUTTON);
@@ -387,13 +387,13 @@ function eI(e) {
     return (0, s.jsx)(C.D, { onClick: l, className: ev.jU, "aria-label": n, role: "button", children: t });
 }
 function eS(e) {
-    let { selectedCarouselItem: l, title: t, description: n, applicationId: a, className: i } = e;
+    let { selectedCarouselItem: l, title: t, description: n, applicationId: a, className: r } = e;
     return (0, s.jsxs)("div", {
-        className: i,
+        className: r,
         children: [
-            null != t && (0, s.jsx)(u.D, { variant: "heading-lg/bold", color: "text-strong", children: t }),
+            null != t && (0, s.jsx)(u.D, { variant: "heading-md/semibold", color: "text-strong", children: t }),
             (0, s.jsx)(eN, { applicationId: a, selectedCarouselItem: l }),
-            null != n && (0, s.jsx)(m.E, { variant: "text-sm/medium", color: "text-subtle", children: n }),
+            null != n && (0, s.jsx)(m.E, { variant: "text-sm/normal", color: "text-subtle", children: n }),
         ],
     });
 }
@@ -402,8 +402,8 @@ function eE(e) {
             transitionState: l,
             returnRef: t,
             skuId: a,
-            applicationId: i,
-            isStorefront: r,
+            applicationId: r,
+            isStorefront: i,
             giftRecipient: u,
             giftingOrigin: d,
             analyticsLocations: m,
@@ -411,7 +411,7 @@ function eE(e) {
             onClose: h,
         } = e,
         { analyticsLocations: b } = (0, T.Ay)(m ?? []),
-        { guildId: j } = (0, H.nG)(i),
+        { guildId: j } = (0, H.nG)(r),
         g = (0, c.bG)([w.default], () => w.default.getId());
     n.useEffect(() => {
         null != j && null != a && (0, F.iR)(j, a);
@@ -423,7 +423,7 @@ function eE(e) {
         [R, O] = n.useState(!0),
         D = (0, U.A)({ skuId: a, location: "SocialLayerStorefrontProductDetailsModal" }),
         [M, G] = n.useState(0),
-        [J, W] = n.useMemo(() => e$(D?.tenantMetadata?.socialLayer?.carouselItems ?? [], i, N), [D, i, N]),
+        [J, W] = n.useMemo(() => e$(D?.tenantMetadata?.socialLayer?.carouselItems ?? [], r, N), [D, r, N]),
         [z, X] = n.useState(null),
         [V, Z] = n.useState(!1);
     n.useEffect(() => {
@@ -439,7 +439,7 @@ function eE(e) {
         ea = W.some((e) => "video" === e.type);
     (0, P.pE)(),
         (0, I.Ay)(() => {
-            B.default.track(ep.HAw.OPEN_MODAL, { location_stack: b, type: ef.Nh, sku_id: a, application_id: i }),
+            B.default.track(ep.HAw.OPEN_MODAL, { location_stack: b, type: ef.Nh, sku_id: a, application_id: r }),
                 (0, F.Xw)();
         });
     let eo = n.useCallback(
@@ -523,14 +523,14 @@ function eE(e) {
                                     className: ev.zD,
                                     children: [
                                         D.exclusive &&
-                                            (0, s.jsx)("div", { className: ev.K3, children: (0, s.jsx)(er.I, {}) }),
+                                            (0, s.jsx)("div", { className: ev.K3, children: (0, s.jsx)(ei.I, {}) }),
                                         en
                                             ? (0, s.jsxs)(s.Fragment, {
                                                   children: [
                                                       (0, s.jsx)(eA, { sku: D }),
                                                       (0, s.jsx)("div", {
                                                           className: ev._D,
-                                                          children: (0, s.jsx)(ei, {
+                                                          children: (0, s.jsx)(er, {
                                                               mediaItems: W,
                                                               labels: J.map((e) => e.label),
                                                               selectedIndex: el,
@@ -541,7 +541,7 @@ function eE(e) {
                                                           selectedCarouselItem: et,
                                                           title: et?.title,
                                                           description: et?.description,
-                                                          applicationId: i,
+                                                          applicationId: r,
                                                           className: ev.Jv,
                                                       }),
                                                   ],
@@ -550,7 +550,7 @@ function eE(e) {
                                                   selectedCarouselItem: et,
                                                   title: D.name,
                                                   description: D.description,
-                                                  applicationId: i,
+                                                  applicationId: r,
                                                   className: ev.cP,
                                               }),
                                     ],
@@ -562,7 +562,7 @@ function eE(e) {
                                         (0, s.jsx)(e_, {
                                             sku: D,
                                             guildId: j,
-                                            shouldShowShopLink: !r,
+                                            shouldShowShopLink: !i,
                                             giftRecipient: u?.id !== g ? u : void 0,
                                             giftingOrigin: u?.id !== g ? d : void 0,
                                             trackPDPClick: eo,
@@ -645,13 +645,13 @@ function eY(e) {
     let l = "videoThumbnailSrc" in e ? e.videoThumbnailSrc : e.src,
         [t, s] = (0, R.rh)(l, "#000000"),
         a = n.useMemo(() => {
-            let e = i()(t).darken(1);
+            let e = r()(t).darken(1);
             return `radial-gradient(circle, ${e.alpha(0.2).hex()} 0%, transparent 100%)`;
         }, [t]);
     return null != l && "#000000" !== t ? a : void 0;
 }
 function eB(e) {
-    let { item: l, onPlay: t, onEnded: n, onClick: a, playable: i, isMuted: r } = e,
+    let { item: l, onPlay: t, onEnded: n, onClick: a, playable: r, isMuted: i } = e,
         o = eY(l),
         c = (0, s.jsx)(
             eu.rr,
@@ -665,36 +665,36 @@ function eB(e) {
                 maxWidth: 747,
                 onPlay: t,
                 onEnded: n,
-                playable: i,
+                playable: r,
                 className: eM.Ki,
                 volume: 1,
-                autoMute: r,
-                autoPlay: i,
+                autoMute: i,
+                autoPlay: r,
                 renderVideoComponent: eP,
                 renderImageComponent: ew,
                 renderLinkComponent: em.bU,
             },
-            r ? "player-muted" : "player-unmuted",
+            i ? "player-muted" : "player-unmuted",
         ),
         u = { background: o };
-    return i
+    return r
         ? (0, s.jsx)("div", { className: eM.AU, style: u, children: c })
         : (0, s.jsx)(C.D, { className: eM.AU, onClick: a, style: u, children: c });
 }
 function eq(e) {
-    let { item: l, setHasInteracted: t, onSetItem: n, isCurrentItem: a, itemIndex: i } = e,
-        r = { background: eY(l) };
+    let { item: l, setHasInteracted: t, onSetItem: n, isCurrentItem: a, itemIndex: r } = e,
+        i = { background: eY(l) };
     return a
         ? (0, s.jsx)(C.D, {
               onClick: () => t(!0),
               className: eM.AU,
-              style: r,
+              style: i,
               children: (0, s.jsx)("img", { src: l.src, alt: "", className: eM.NP }),
           })
         : (0, s.jsx)(C.D, {
-              onClick: () => n(i),
+              onClick: () => n(r),
               className: eM.AU,
-              style: r,
+              style: i,
               children: (0, s.jsx)("img", { alt: "", className: eM.tv, src: l.src, draggable: !1 }),
           });
 }
@@ -703,8 +703,8 @@ let eH = (0, eR.A)((e) => {
             items: l,
             className: t,
             paused: a = !1,
-            autoplayInterval: i = 8e3,
-            onItemChange: r,
+            autoplayInterval: r = 8e3,
+            onItemChange: i,
             isMuted: c = !0,
             onTrackClick: u,
         } = e,
@@ -874,8 +874,8 @@ let eH = (0, eR.A)((e) => {
             g.current = l.length;
         }, [l]),
         (0, n.useEffect)(() => {
-            r?.(l[h], h);
-        }, [h, l, r]);
+            i?.(l[h], h);
+        }, [h, l, i]);
     let q = (0, n.useCallback)(
         (e) => {
             u?.(eC.Jq.CAROUSEL_ITEM), T(e);
@@ -885,7 +885,7 @@ let eH = (0, eR.A)((e) => {
     return (0, s.jsxs)(eL.A, {
         pauseOnHover: !0,
         onInterval: y,
-        interval: i,
+        interval: r,
         className: t,
         disable: p || A || a,
         children: [
@@ -965,8 +965,8 @@ function eJ(e) {
             sku: l,
             guildId: t,
             shouldShowShopLink: a,
-            giftRecipient: i,
-            giftingOrigin: r,
+            giftRecipient: r,
+            giftingOrigin: i,
             trackPDPClick: o,
             analyticsLocations: C,
         } = e,
@@ -1001,10 +1001,10 @@ function eJ(e) {
                 (o(eC.Jq.GIFT_BUTTON),
                 (0, en.a)(
                     l,
-                    { isGift: !0, giftRecipient: i, giftingOrigin: r },
+                    { isGift: !0, giftRecipient: r, giftingOrigin: i },
                     { analyticsLocations: [...C, E.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON] },
                 ));
-        }, [l, o, i, r, C]),
+        }, [l, o, r, i, C]),
         R = n.useCallback(() => {
             if (null == l || null == _ || !A) return;
             o(eC.Jq.BUY_WITH_ORBS_BUTTON);
@@ -1023,7 +1023,7 @@ function eJ(e) {
         : (0, s.jsxs)("div", {
               className: eF.wt,
               children: [
-                  l.exclusive && (0, s.jsx)("div", { className: eF.K3, children: (0, s.jsx)(er.I, {}) }),
+                  l.exclusive && (0, s.jsx)("div", { className: eF.K3, children: (0, s.jsx)(ei.I, {}) }),
                   (0, s.jsxs)("div", {
                       className: eF.AX,
                       children: [
@@ -1103,15 +1103,15 @@ function eJ(e) {
           });
 }
 function eW(e) {
-    let { sku: l, applicationId: t, assets: a, onSelectedCarouselItemChange: i, isMuted: r, trackPDPClick: o } = e,
+    let { sku: l, applicationId: t, assets: a, onSelectedCarouselItemChange: r, isMuted: i, trackPDPClick: o } = e,
         [c, u] = n.useState([]),
         [d, m] = n.useState([]),
         x = n.useCallback(
             (e) => {
                 let l = d.findIndex((l) => l === e);
-                i?.(c[l] ?? null);
+                r?.(c[l] ?? null);
             },
-            [i, c, d],
+            [r, c, d],
         );
     return (n.useEffect(() => {
         let [e, s] = e$(l?.tenantMetadata?.socialLayer?.carouselItems ?? [], t, a);
@@ -1119,7 +1119,7 @@ function eW(e) {
     }, [l, a, t]),
     0 === d.length)
         ? null
-        : (0, s.jsx)(eH, { className: eF.Dk, items: d, onItemChange: x, isMuted: r, onTrackClick: o });
+        : (0, s.jsx)(eH, { className: eF.Dk, items: d, onItemChange: x, isMuted: i, onTrackClick: o });
 }
 function ez(e) {
     let { selectedCarouselItem: l, applicationId: t } = e;
@@ -1150,7 +1150,7 @@ function eK(e) {
             transitionState: l,
             returnRef: t,
             skuId: a,
-            applicationId: r,
+            applicationId: i,
             isStorefront: u,
             giftRecipient: d,
             giftingOrigin: m,
@@ -1159,12 +1159,12 @@ function eK(e) {
             onClose: b,
         } = e,
         { analyticsLocations: j } = (0, T.Ay)(x ?? []),
-        { guildId: g } = (0, H.nG)(r),
+        { guildId: g } = (0, H.nG)(i),
         C = (0, c.bG)([w.default], () => w.default.getId());
     n.useEffect(() => {
         null != g && null != a && (0, F.iR)(g, a);
     }, [g, a]);
-    let N = (0, c.bG)([$.A], () => $.A.getStorefrontMetadata(r), [r]),
+    let N = (0, c.bG)([$.A], () => $.A.getStorefrontMetadata(i), [i]),
         E = (0, c.bG)([$.A], () => $.A.getSkuAssets()),
         y = (0, c.bG)([Y.A], () => Y.A.isFetchingForSKU(a)),
         O = (0, f.M)((0, S.Ay)()),
@@ -1174,15 +1174,15 @@ function eK(e) {
         z = (function (e, l) {
             let t = l?.labelIconAssetId != null ? (0, q.YE)(e, l?.labelIconAssetId) : null,
                 [s, a] = (0, R.rh)(t, "#000000"),
-                r = n.useMemo(() => {
-                    let e = i()(s).darken(1);
+                i = n.useMemo(() => {
+                    let e = r()(s).darken(1);
                     return `radial-gradient(181.07% 122.33% at -20.89% -23.8%, ${e.alpha(0.25).hex()} 0%, transparent 100%)`;
                 }, [s]);
-            return null != t && "#000000" !== s ? r : void 0;
-        })(r, J);
+            return null != t && "#000000" !== s ? i : void 0;
+        })(i, J);
     (0, P.pE)(),
         (0, I.Ay)(() => {
-            B.default.track(ep.HAw.OPEN_MODAL, { location_stack: j, type: ef.Nh, sku_id: a, application_id: r }),
+            B.default.track(ep.HAw.OPEN_MODAL, { location_stack: j, type: ef.Nh, sku_id: a, application_id: i }),
                 (0, F.Xw)();
         });
     let X = n.useCallback(
@@ -1219,8 +1219,8 @@ function eK(e) {
             M(!D), X(eC.Jq.MUTE_BUTTON);
         }, [D, X]);
     if (null == G?.tenantMetadata?.socialLayer) return y ? (0, s.jsx)(p.y, {}) : null;
-    let el = N?.logoAssetId != null ? (0, q.YE)(r, N.logoAssetId, 75) : null,
-        et = N?.lightThemeLogoAssetId != null ? (0, q.YE)(r, N.lightThemeLogoAssetId, 75) : null,
+    let el = N?.logoAssetId != null ? (0, q.YE)(i, N.logoAssetId, 75) : null,
+        et = N?.lightThemeLogoAssetId != null ? (0, q.YE)(i, N.lightThemeLogoAssetId, 75) : null,
         es = null;
     return (
         (es = O ? (el ?? et) : (et ?? el)),
@@ -1242,7 +1242,7 @@ function eK(e) {
                                 className: eF.r$,
                                 children: null != es ? (0, s.jsx)("img", { className: eF.wm, src: es, alt: "" }) : null,
                             }),
-                            (0, s.jsx)(ez, { applicationId: r, selectedCarouselItem: J }),
+                            (0, s.jsx)(ez, { applicationId: i, selectedCarouselItem: J }),
                             (0, s.jsx)(eJ, {
                                 sku: G,
                                 guildId: g,
@@ -1259,7 +1259,7 @@ function eK(e) {
                         children: [
                             (0, s.jsx)(eW, {
                                 sku: G,
-                                applicationId: r,
+                                applicationId: i,
                                 assets: E,
                                 onSelectedCarouselItemChange: W,
                                 isMuted: D,
