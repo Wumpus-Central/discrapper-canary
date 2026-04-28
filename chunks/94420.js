@@ -1,12 +1,13 @@
-n.d(t, { Ni: () => i, t4: () => l, y$: () => u });
-var o = n(942381),
+"use strict";
+n.d(t, { Ni: () => s, t4: () => o, y$: () => l });
+var i = n(942381),
     r = n(265690);
-let [i, a] = (0, n(786300).A)();
-function l(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.x;
+let [s, a] = (0, n(786300).A)();
+function o(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
     return a()(e, t);
 }
-function u() {
+function l() {
     return (0, r.h)(
         (e) => ({
             selectedSkuId: void 0,
@@ -29,7 +30,9 @@ function u() {
             invoiceOrderPreviewPaymentSourceId: null,
             entitlementsGranted: [],
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
+            hasAcceptedTerms: !1,
+            setHasAcceptedTerms: (t) => e({ hasAcceptedTerms: t }),
         }),
-        o.x,
+        i.x,
     );
 }

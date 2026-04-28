@@ -137,8 +137,8 @@ function v(t) {
 var N = n(775602),
     P = n(21161),
     _ = n(534479),
-    k = n(921925);
-function T(t) {
+    T = n(921925);
+function k(t) {
     let e,
         n,
         { showBenefits: a, handleClose: s, onSubscriptionConfirmation: o } = t,
@@ -146,7 +146,7 @@ function T(t) {
         S = (0, u.S3)(),
         j = (0, c.A)(I.Y),
         { createMultipleConfettiAt: v } = l.useContext(P.x),
-        T = S?.name ?? "",
+        k = S?.name ?? "",
         R = () => {
             s(), o?.();
         },
@@ -160,7 +160,7 @@ function T(t) {
         a
             ? j
                 ? (e = (0, i.jsx)(b, {
-                      title: h.intl.format(h.t.ea6tZr, { tierName: T }),
+                      title: h.intl.format(h.t.ea6tZr, { tierName: k }),
                       subtitle:
                           null != x && x.benefits.length > 0
                               ? h.intl.formatToPlainString(h.t.HNepft, { benefits: D })
@@ -174,11 +174,11 @@ function T(t) {
                                 icon: x.thumbnail,
                                 storeListingBenefits: x.benefits,
                                 application: g,
-                                title: h.intl.format(h.t["Q+qktS"], { tier: T }),
+                                title: h.intl.format(h.t["Q+qktS"], { tier: k }),
                                 subtitle: h.intl.string(h.t.ECKxXU),
                                 description: B
                                     ? h.intl.format(h.t["MAtQk/"], { applicationName: g?.name })
-                                    : h.intl.format(h.t.vHkMF4, { tier: T }),
+                                    : h.intl.format(h.t.vHkMF4, { tier: k }),
                             })
                           : (0, i.jsx)(_.A, {})),
                   (n = (0, i.jsx)(E.Ay, {
@@ -187,14 +187,14 @@ function T(t) {
                       primaryText: h.intl.string(h.t["JtWl+a"]),
                   })))
             : (e = j
-                  ? (0, i.jsx)(A, { tierName: T, onConfirm: R, subscription: m })
-                  : (0, i.jsx)(p.XG, { tierName: T, onConfirm: R, subscription: m })),
+                  ? (0, i.jsx)(A, { tierName: k, onConfirm: R, subscription: m })
+                  : (0, i.jsx)(p.XG, { tierName: k, onConfirm: R, subscription: m })),
         l.useEffect(() => {
             N.A.useReducedMotion && w && v(window.innerWidth / 2, window.innerHeight / 2);
         }, [v, w]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(y.dZ, { children: [(0, i.jsx)(k.A, {}), e] }),
+                (0, i.jsxs)(y.dZ, { children: [(0, i.jsx)(T.A, {}), e] }),
                 null != n && (0, i.jsx)(y.UX, { children: n }),
             ],
         })
@@ -206,7 +206,7 @@ var R = n(545075),
     D = n(927578),
     F = n(937008),
     U = n(615310);
-function L(t) {
+function H(t) {
     let { initialStep: e, initialPlanId: n, guildId: r, setAnalyticsData: a } = t,
         {
             selectedSkuId: s,
@@ -252,8 +252,8 @@ function L(t) {
           ? (0, i.jsx)(R.oO, {})
           : null;
 }
-var O = n(284009),
-    H = n.n(O),
+var L = n(284009),
+    O = n.n(L),
     M = n(304072),
     G = n(666646),
     Y = n(558620),
@@ -272,38 +272,38 @@ function V(t) {
             analyticsLocation: p,
             handleClose: m,
         } = t,
+        f = (0, w.t4)((t) => t.setHasAcceptedTerms),
         {
-            activeSubscription: f,
-            setUpdatedSubscription: x,
-            contextMetadata: g,
-            currencies: h,
-            paymentSources: S,
-            priceOptions: b,
-            purchaseError: A,
-            setCurrency: j,
-            setPurchaseState: E,
-            purchaseState: I,
-            subscriptionMetadataRequest: v,
-            setHasAcceptedTerms: N,
+            activeSubscription: x,
+            setUpdatedSubscription: g,
+            contextMetadata: h,
+            currencies: S,
+            paymentSources: b,
+            priceOptions: A,
+            purchaseError: j,
+            setCurrency: E,
+            setPurchaseState: I,
+            purchaseState: v,
+            subscriptionMetadataRequest: N,
         } = (0, C.P5)(),
         P = (0, Y.A)(),
-        k = (0, u.S3)();
-    H()(null != P, "Expected plan to be selected");
-    let T = l.useRef(null),
-        [R, w] = (0, M.A)(!1, 500),
-        B = (0, G.mx)(),
-        D = (0, d.bg)(k?.flags ?? 0);
+        T = (0, u.S3)();
+    O()(null != P, "Expected plan to be selected");
+    let k = l.useRef(null),
+        [R, B] = (0, M.A)(!1, 500),
+        D = (0, G.mx)(),
+        F = (0, d.bg)(T?.flags ?? 0);
     l.useEffect(() => {
-        null != A && null != T.current && T.current.scrollIntoView({ behavior: "smooth" });
-    }, [A]);
-    let F = l.useCallback(
+        null != j && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
+    }, [j]);
+    let U = l.useCallback(
             (t) => {
-                x(t), a(r.pn.CONFIRM);
+                g(t), a(r.pn.CONFIRM);
             },
-            [a, x],
+            [a, g],
         ),
-        U = l.useRef(null);
-    if (I === Q.h.PURCHASING) return (0, i.jsx)(_.A, {});
+        H = l.useRef(null);
+    if (v === Q.h.PURCHASING) return (0, i.jsx)(_.A, {});
     let L = () => {
         a(r.pn.ADD_PAYMENT_STEPS);
     };
@@ -311,52 +311,52 @@ function V(t) {
         children: [
             (0, i.jsx)(y.dZ, {
                 children:
-                    null == f
+                    null == x
                         ? (0, i.jsx)(X._, {
                               selectedPlanId: P.id,
                               planGroup: s,
-                              paymentSources: S,
-                              priceOptions: b,
-                              currencies: h,
-                              onCurrencyChange: (t) => j(t),
+                              paymentSources: b,
+                              priceOptions: A,
+                              currencies: S,
+                              onCurrencyChange: (t) => E(t),
                               handlePaymentSourceAdd: () => a(r.pn.ADD_PAYMENT_STEPS),
-                              metadata: D ? void 0 : v,
+                              metadata: F ? void 0 : N,
                           })
                         : (0, i.jsx)(W.A, {
-                              premiumSubscription: f,
-                              paymentSources: S,
-                              priceOptions: b,
+                              premiumSubscription: x,
+                              paymentSources: b,
+                              priceOptions: A,
                               onPaymentSourceAdd: L,
                               planId: P.id,
-                              setHasAcceptedTerms: N,
-                              legalTermsNodeRef: U,
+                              setHasAcceptedTerms: f,
+                              legalTermsNodeRef: H,
                               hasLegalTermsFlash: R,
                               planGroup: s,
-                              currencies: h,
-                              onCurrencyChange: (t) => j(t),
+                              currencies: S,
+                              onCurrencyChange: (t) => E(t),
                               hasOpenInvoice: null != o,
-                              purchaseState: I,
+                              purchaseState: v,
                               handleClose: m,
                               shouldUseUnifiedCheckoutUI: !0,
                           }),
             }),
             (0, i.jsx)(y.UX, {
                 children: (0, i.jsx)(Z.A, {
-                    premiumSubscription: f ?? null,
-                    setPurchaseState: E,
+                    premiumSubscription: x ?? null,
+                    setPurchaseState: I,
                     onBack: () => null != n && a(n),
-                    onNext: F,
-                    legalTermsNodeRef: U,
-                    flashLegalTerms: () => w(!0),
+                    onNext: U,
+                    legalTermsNodeRef: H,
+                    flashLegalTerms: () => B(!0),
                     analyticsLocation: p,
                     baseAnalyticsData: c,
-                    flowStartTime: g.startTime,
+                    flowStartTime: h.startTime,
                     planGroup: s,
                     openInvoiceId: o,
-                    metadata: D ? void 0 : v,
+                    metadata: F ? void 0 : N,
                     backButtonEligible: e,
-                    invoiceError: B,
-                    disablePurchase: v?.guild_id == null && !D,
+                    invoiceError: D,
+                    disablePurchase: N?.guild_id == null && !F,
                     onPaymentSourceAdd: L,
                 }),
             }),
@@ -368,7 +368,7 @@ function z(t) {
     return [
         {
             key: null,
-            renderStep: (t) => (0, i.jsx)(L, { initialStep: n ? r.pn.BENEFITS : r.pn.REVIEW, guildId: e, ...t }),
+            renderStep: (t) => (0, i.jsx)(H, { initialStep: n ? r.pn.BENEFITS : r.pn.REVIEW, guildId: e, ...t }),
         },
         {
             key: r.pn.BENEFITS,
@@ -388,6 +388,6 @@ function z(t) {
                 (0, i.jsx)(V, { backButtonEligible: !!n || void 0, prevStep: n ? r.pn.BENEFITS : void 0, ...t }),
             options: { renderHeader: !0, useBreadcrumbLabel: () => h.intl.string(h.t.QBnNHq) },
         },
-        { key: r.pn.CONFIRM, renderStep: (t) => (0, i.jsx)(T, { showBenefits: !n, ...t }) },
+        { key: r.pn.CONFIRM, renderStep: (t) => (0, i.jsx)(k, { showBenefits: !n, ...t }) },
     ];
 }

@@ -11,8 +11,8 @@ var l = n(627968),
     p = n(848584),
     m = n(241989),
     h = n(993408),
-    C = n(287809),
-    A = n(486020),
+    A = n(287809),
+    C = n(486020),
     _ = n(927578),
     y = n(580630),
     E = n(156312),
@@ -27,8 +27,8 @@ var l = n(627968),
     v = n(20015),
     b = n(666646),
     M = n(427675),
-    R = n(94420),
-    j = n(977445),
+    j = n(94420),
+    R = n(977445),
     L = n(778307),
     O = n(218075),
     D = n(570221),
@@ -135,7 +135,7 @@ let z = (e) => e.name,
                         let u = i
                                 ? {
                                       header: a.name,
-                                      headerIconSrc: A.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 16 }),
+                                      headerIconSrc: C.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 16 }),
                                   }
                                 : {},
                             c = (0, l.jsx)(m.WH, { sku: t, product: n }),
@@ -143,7 +143,7 @@ let z = (e) => e.name,
                         return (
                             null != n &&
                                 (d = ((e) => {
-                                    let t = C.default.getCurrentUser(),
+                                    let t = A.default.getCurrentUser(),
                                         n = _.Ay.canUseShopDiscounts(t),
                                         l = (0, h.xM)(t),
                                         a = (0, h.WD)(e, { hasShopDiscount: n, discount: (0, h.fT)(e, n) });
@@ -166,11 +166,11 @@ let z = (e) => e.name,
                     })({ sku: n, product: x, application: t, isSocialLayerGameItem: N, giftRecipient: P }),
                 [n, x, t, N, P],
             ),
-            [M, R] = a.useMemo(
+            [M, j] = a.useMemo(
                 () => [V.intl.string(q.default.Zxav97), null != i ? (0, y.$g)(i.amount, i.currency) : void 0],
                 [i],
             ),
-            j = a.useMemo(() => {
+            R = a.useMemo(() => {
                 let e = ((e, t) => {
                     let { isGift: n } = t;
                     if (null == e) return null;
@@ -185,19 +185,19 @@ let z = (e) => e.name,
             { setCheckoutHeaderConfigs: L, checkoutHeaderConfigs: O } = (0, u.ck)();
         return (
             a.useEffect(() => {
-                null != j && null == O.headerBadgeText && L({ ...O, headerBadgeText: V.intl.string(q.default.Fjpyfj) });
-            }, [j, L, O]),
+                null != R && null == O.headerBadgeText && L({ ...O, headerBadgeText: V.intl.string(q.default.Fjpyfj) });
+            }, [R, L, O]),
             (0, l.jsx)(c.T_, {
                 shouldShowGlobalNotices: !0,
                 purchaseItemContent: (0, l.jsx)(m.f7, { ...b, price: I }),
                 invoiceSummaryContent: v,
                 paymentSelectContent: o,
                 legalContent: d,
-                promotionalNoticeContent: j,
+                promotionalNoticeContent: R,
                 upperInlineNoticeProps: f,
                 footerInlineNoticeProps: S,
                 invoiceTotalDueLabel: M,
-                invoiceTotalDueValue: R,
+                invoiceTotalDueValue: j,
             })
         );
     };
@@ -210,60 +210,62 @@ function X(e) {
             isGift: p,
             hasCheckoutContextLoaded: m,
             checkoutPaymentSources: h,
-            eligiblePaymentGateways: C,
-            purchaseTermsAndLegalContent: A,
+            eligiblePaymentGateways: A,
+            purchaseTermsAndLegalContent: C,
             isStepLoading: _,
             giftRecipient: y,
             warningAndErrorMessages: P,
             disabled: T,
         } = ((e) => {
             let { hasLegalTermsFlash: t, legalTermsNodeRef: n } = e,
-                i = (0, R.t4)((e) => e.selectedSkuId),
+                { selectedSkuId: i, setHasAcceptedTerms: r } = (0, j.t4)((e) => ({
+                    selectedSkuId: e.selectedSkuId,
+                    setHasAcceptedTerms: e.setHasAcceptedTerms,
+                })),
                 {
-                    application: r,
-                    purchaseState: s,
-                    paymentSourceId: o,
-                    setHasAcceptedTerms: u,
+                    application: s,
+                    purchaseState: o,
+                    paymentSourceId: u,
                     isEmbeddedIAP: c,
                     purchaseType: d,
                     purchasePreviewError: p,
                     devShelfFetchState: m,
                     hasPaymentSources: h,
-                    checkoutPaymentSources: C,
-                    hasCheckoutContextLoaded: A,
+                    checkoutPaymentSources: A,
+                    hasCheckoutContextLoaded: C,
                 } = (0, E.P5)(),
                 _ = (0, M.gU)(),
                 y = (0, M.RR)(),
                 { isGift: P, giftRecipient: T } = (0, Y.Pv)(),
                 G = P && (0, k.Ik)(T),
-                { fetched: B, hasAlreadyLinked: Z } = (0, I.RD)(r);
+                { fetched: B, hasAlreadyLinked: Z } = (0, I.RD)(s);
             f()(null != i, "Expected selectedSkuId");
             let q = _[i],
                 z = q?.eligiblePaymentGateways,
                 $ = y[i],
-                J = o ?? U.B,
-                Q = C.length > 0,
+                J = u ?? U.B,
+                Q = A.length > 0,
                 X = null != $ ? ($[J] ?? (Q ? $[U.B] : null)) : null,
                 ee = a.useMemo(() => (null == X ? null : D.A.createFromOTPPreview(X)), [X]);
             (0, b.F0)(ee, p ?? null),
                 f()(null != q, "SKU must exist and be fetched."),
-                f()(null != r, "Application must exist.");
-            let et = (0, j.u)(r.id),
+                f()(null != s, "Application must exist.");
+            let et = (0, R.u)(s.id),
                 en = S.M.EEA_COUNTRIES.has(w.A.ipCountryCodeWithFallback),
-                el = s === F.h.PURCHASING || s === F.h.COMPLETED,
-                ea = C.find((e) => e.id === o) ?? null,
+                el = o === F.h.PURCHASING || o === F.h.COMPLETED,
+                ea = A.find((e) => e.id === u) ?? null,
                 ei = null != ea ? ea.type : null,
-                er = null != z && z.length > 0 && (o === U.B || null === ei) && h ? O.fU.SELECT_PAYMENT_METHOD : void 0,
+                er = null != z && z.length > 0 && (u === U.B || null === ei) && h ? O.fU.SELECT_PAYMENT_METHOD : void 0,
                 es = q.productLine === W.EZt.SOCIAL_LAYER_GAME_ITEM,
                 eo = G && !es,
                 eu = a.useMemo(
                     () => ({
                         testModeWarning: et ? V.intl.string(V.t.OvMyMd) : null,
                         devShelfError:
-                            (0, v.n)(r, W.gfo.EMBEDDED) && m === g.$.ERROR ? V.intl.string(V.t.tAmECt) : null,
+                            (0, v.n)(s, W.gfo.EMBEDDED) && m === g.$.ERROR ? V.intl.string(V.t.tAmECt) : null,
                         socialLayerGameItemDisclaimer: es && B && !Z && !P ? V.intl.string(V.t["3pLGHL"]) : null,
                     }),
-                    [et, r, m, es, B, Z, P],
+                    [et, s, m, es, B, Z, P],
                 ),
                 ec = a.useMemo(
                     () =>
@@ -273,7 +275,7 @@ function X(e) {
                                   isActive: t,
                                   ref: n,
                                   children: (0, l.jsx)(N.A, {
-                                      onChange: u,
+                                      onChange: r,
                                       forceShow: !0,
                                       showWithdrawalWaiver: en,
                                       disabled: el,
@@ -287,30 +289,30 @@ function X(e) {
                                           purchaseType: d,
                                           productLine: q.productLine,
                                           isGift: P,
-                                          applicationName: r.name,
+                                          applicationName: s.name,
                                           hasAlreadyLinked: !B || Z,
                                       }),
                                   }),
                               }),
-                    [t, n, u, en, el, d, P, ei, c, q.productLine, r.name, B, Z],
+                    [t, n, r, en, el, d, P, ei, c, q.productLine, s.name, B, Z],
                 );
             return {
                 sku: q,
-                application: r,
+                application: s,
                 giftRecipient: T,
                 isGift: P,
                 skuPricePreview: X,
                 isEmbeddedIAP: c,
                 shouldShowPurchaseReviewImage: eo,
                 paymentRestrictionBannerType: er,
-                hasCheckoutContextLoaded: A,
+                hasCheckoutContextLoaded: C,
                 devShelfFetchState: m,
-                isStepLoading: !A && null == p,
+                isStepLoading: !C && null == p,
                 purchasePreviewError: p,
                 warningAndErrorMessages: eu,
                 purchaseTermsAndLegalContent: ec,
                 eligiblePaymentGateways: z,
-                checkoutPaymentSources: C,
+                checkoutPaymentSources: A,
                 disabled: el,
             };
         })({ hasLegalTermsFlash: t, legalTermsNodeRef: n }),
@@ -325,7 +327,7 @@ function X(e) {
                 }),
             [q.currency, B, G, Z],
         ),
-        $ = a.useMemo(() => ({ paymentGatewayRestrictions: C, shouldUseUnifiedCheckoutUI: !0 }), [C]),
+        $ = a.useMemo(() => ({ paymentGatewayRestrictions: A, shouldUseUnifiedCheckoutUI: !0 }), [A]),
         J = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(o.N, {
@@ -371,7 +373,7 @@ function X(e) {
               sku: r,
               skuPricePreview: u,
               paymentSelectContent: J,
-              legalContent: A,
+              legalContent: C,
               upperInlineNoticeProps: X,
               footerInlineNoticeProps: ee,
           });
