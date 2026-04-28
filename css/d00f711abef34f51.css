@@ -1421,14 +1421,6 @@ screen and (max-width:485px) {
     gap: 40px
 }
 
-.products__6db1d {
-    display: grid;
-    grid-gap: 24px;
-    grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
-    margin-bottom: 40px;
-    overflow: visible
-}
-
 .categoriesWithPagination__6db1d {
     margin-bottom: 0
 }
@@ -1439,17 +1431,6 @@ screen and (max-width:485px) {
     justify-content: center;
     margin-bottom: 0;
     padding-top: 20px
-}
-
-.bannerContainer__6db1d {
-    background-position: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 1px solid var(--border-muted);
-    border-radius: var(--radius-lg);
-    margin-bottom: 24px;
-    margin-top: 24px;
-    padding: 32px
 }
 
 .container__58471 {

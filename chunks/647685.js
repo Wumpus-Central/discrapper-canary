@@ -11,7 +11,5 @@ e.exports = {
     oQ: "easterEggAnimation__6db1d",
     uA: "easterEggAnimationReverse__6db1d",
     LZ: "categories__6db1d",
-    ZE: "products__6db1d",
     Ej: "paginationContainer__6db1d",
-    cI: "bannerContainer__6db1d",
 };
