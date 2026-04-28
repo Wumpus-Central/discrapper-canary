@@ -4,8 +4,8 @@ var i = n(627968),
     c = n(64700),
     o = n(503698),
     s = n.n(o),
-    d = n(772707),
-    l = n(231723),
+    l = n(772707),
+    d = n(231723),
     p = n(289873),
     h = n(954571),
     u = n(625494),
@@ -272,13 +272,14 @@ let D = {
     invisible: { width: 0, height: 0, overflow: "hidden" },
 };
 function N(e) {
-    let { sitekey: t, theme: n, size: r, onLoad: o, onVerify: s, onError: d, onExpire: l } = e,
+    let { sitekey: t, theme: n, size: r, onLoad: o, onVerify: s, onError: l, onExpire: d } = e,
         p = c.useRef(null),
         h = c.useRef(null),
-        u = c.useRef({ onLoad: o, onVerify: s, onError: d, onExpire: l });
-    (u.current = { onLoad: o, onVerify: s, onError: d, onExpire: l }),
+        u = c.useRef({ onLoad: o, onVerify: s, onError: l, onExpire: d });
+    (u.current = { onLoad: o, onVerify: s, onError: l, onExpire: d }),
         c.useEffect(() => {
-            let e = !1;
+            let e = !1,
+                i = 0;
             return (
                 (function () {
                     if (null != window.turnstile) return T(), O;
@@ -316,12 +317,22 @@ function N(e) {
                             sitekey: t,
                             theme: n ?? "auto",
                             size: a,
+                            retry: "never",
                             callback: (e) => {
                                 u.current.onVerify(e);
                             },
-                            "error-callback": () => {
-                                u.current.onError?.();
-                            },
+                            "error-callback": () => (
+                                u.current.onError?.(),
+                                i >= 3 ||
+                                    (i++,
+                                    setTimeout(() => {
+                                        e ||
+                                            null == h.current ||
+                                            null == window.turnstile ||
+                                            window.turnstile.reset(h.current);
+                                    }, 3e3),
+                                    !0)
+                            ),
                             "expired-callback": () => {
                                 u.current.onExpire?.();
                             },
@@ -366,8 +377,8 @@ let K = new Set([
                 onRender: a,
                 onVerify: o,
                 onError: s,
-                onOpen: d,
-                onClose: l,
+                onOpen: l,
+                onClose: d,
                 onChalExpired: p,
                 size: u,
                 userflow: f,
@@ -424,11 +435,11 @@ let K = new Set([
                 A("render"), (0, m.emitCaptchaDistributionMetric)(f), a?.();
             }, [a, A, f]),
             j = c.useCallback(() => {
-                A("open"), g("open"), (0, m.emitCaptchaDistributionMetric)(f), d?.();
-            }, [g, d, A, f]),
+                A("open"), g("open"), (0, m.emitCaptchaDistributionMetric)(f), l?.();
+            }, [g, l, A, f]),
             P = c.useCallback(() => {
-                A("close"), g("cancel"), l?.(), R();
-            }, [l, A, g, R]),
+                A("close"), g("cancel"), d?.(), R();
+            }, [d, A, g, R]),
             T = c.useCallback(() => {
                 A("chal-expire"), g("chal-expire"), p?.();
             }, [p, A, g]);
@@ -464,7 +475,7 @@ let K = new Set([
     };
 var G = n(985018),
     U = n(846762);
-let B = new Set([l.ip.ENTERING, l.ip.ENTERED]);
+let B = new Set([d.ip.ENTERING, d.ip.ENTERED]);
 function $(e) {
     let {
             onClose: t,
@@ -472,7 +483,7 @@ function $(e) {
             onReject: r,
             transitionState: a,
             headerText: o,
-            bodyText: l,
+            bodyText: d,
             rqtoken: y,
             serveInvisible: E,
             ...C
@@ -522,14 +533,14 @@ function $(e) {
             }),
         ],
     });
-    return (0, i.jsx)(d.k, {
+    return (0, i.jsx)(l.k, {
         transitionState: a,
         onClose: t,
         size: "sm",
         gradientColor: "blue",
         graphic: { type: "image", src: "/assets/a1c385fb82c39bab.svg" },
         title: o ?? G.intl.string(G.t.FpoiHe),
-        subtitle: l ?? G.intl.string(G.t["/CidxO"]),
+        subtitle: d ?? G.intl.string(G.t["/CidxO"]),
         children: w,
     });
 }
