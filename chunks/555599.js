@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     Ui: "cardContainer__5b393",
     Nr: "card__5b393",
     Io: "pill__5b393",

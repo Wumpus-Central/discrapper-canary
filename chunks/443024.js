@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+_.r(
     (e.exports = {
         filenameContainer: "filenameContainer__41ea0",
         filename: "filename__41ea0",

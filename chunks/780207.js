@@ -1,19 +1,19 @@
-n.d(t, { A: () => a });
-var i = n(627968);
-n(64700);
-var l = n(192308),
-    s = n(652215);
-function a() {
-    (0, l.openModalLazy)(async () => {
-        let { default: e } = await n.e("3212").then(n.bind(n, 562011));
-        return (t) =>
-            (0, i.jsx)(e, {
-                ...t,
+t.d(a, { A: () => n });
+var s = t(627968);
+t(64700);
+var c = t(192308),
+    i = t(652215);
+function n() {
+    (0, c.openModalLazy)(async () => {
+        let { default: e } = await Promise.all([t.e("2125"), t.e("66901"), t.e("41704")]).then(t.bind(t, 562011));
+        return (a) =>
+            (0, s.jsx)(e, {
+                ...a,
                 source: {
-                    page: s.liQ.USER_SETTINGS,
-                    section: s.JJy.SETTINGS_CUSTOMIZE_PROFILE,
-                    object: s.ZSU.BUTTON_CTA,
-                    type: s.AnalyticsObjectTypes.BUY,
+                    page: i.liQ.USER_SETTINGS,
+                    section: i.JJy.SETTINGS_CUSTOMIZE_PROFILE,
+                    object: i.ZSU.BUTTON_CTA,
+                    type: i.AnalyticsObjectTypes.BUY,
                 },
             });
     });

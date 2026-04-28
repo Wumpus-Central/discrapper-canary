@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     uW: "section__07d82",
     X$: "sectionImage__07d82",
     f5: "sectionContent__07d82",

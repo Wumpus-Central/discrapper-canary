@@ -1,15 +1,15 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
 var l = n(17928),
-    a = n(192308),
-    r = n(821609),
-    s = n(529200),
+    s = n(192308),
+    a = n(821609),
+    r = n(529200),
     o = n(953727);
-function c(e) {
-    let { width: t = 40, height: n = 40, color: l = "currentColor", ...a } = e;
+function d(e) {
+    let { width: t = 40, height: n = 40, color: l = "currentColor", ...s } = e;
     return (0, i.jsxs)("svg", {
-        ...(0, o.A)(a),
+        ...(0, o.A)(s),
         width: t,
         height: n,
         style: { minWidth: t, minHeight: n },
@@ -30,64 +30,74 @@ function c(e) {
         ],
     });
 }
-var d = n(122906),
+var c = n(122906),
     u = n(401755),
-    _ = n(985018),
-    m = n(195580),
-    h = n(344900);
-function p(e) {
+    m = n(985018),
+    h = n(195580),
+    g = n(344900);
+function A(e) {
     let { code: t } = e,
-        o = (0, l.bG)([d.A], () => d.A.getGuildTemplate(t));
+        o = (0, l.bG)([c.A], () => c.A.getGuildTemplate(t));
     if (null == o || o.state === u.QB.RESOLVING)
-        return (0, i.jsxs)(s.A, {
+        return (0, i.jsxs)(r.A, {
             children: [
-                (0, i.jsx)(s.A.Header, { text: _.intl.string(_.t.Xj87Yf) }),
-                (0, i.jsx)(s.A.Body, { resolving: !0 }),
+                (0, i.jsx)(r.A.Header, { text: m.intl.string(m.t.Xj87Yf) }),
+                (0, i.jsx)(r.A.Body, { resolving: !0 }),
             ],
         });
     if (o.state === u.QB.EXPIRED)
-        return (0, i.jsxs)(s.A, {
+        return (0, i.jsxs)(r.A, {
             children: [
-                (0, i.jsx)(s.A.Header, { text: _.intl.string(_.t.C7ZRNw) }),
-                (0, i.jsxs)(s.A.Body, {
+                (0, i.jsx)(r.A.Header, { text: m.intl.string(m.t.C7ZRNw) }),
+                (0, i.jsxs)(r.A.Body, {
                     children: [
-                        (0, i.jsx)(s.A.Icon, { expired: !0 }),
-                        (0, i.jsx)(s.A.Info, { expired: !0, title: _.intl.string(_.t.A6MwXE) }),
+                        (0, i.jsx)(r.A.Icon, { expired: !0 }),
+                        (0, i.jsx)(r.A.Info, { expired: !0, title: m.intl.string(m.t.A6MwXE) }),
                     ],
                 }),
             ],
         });
-    let p = __OVERLAY__
-        ? (0, i.jsx)(r.$, { disabled: !0, variant: "secondary", text: _.intl.string(_.t.W7NTWm) })
-        : (0, i.jsx)(r.$, {
+    let A = __OVERLAY__
+        ? (0, i.jsx)(a.$, { disabled: !0, variant: "secondary", text: m.intl.string(m.t.W7NTWm) })
+        : (0, i.jsx)(a.$, {
               onClick: () => {
-                  (0, a.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e("82486"), n.e("16198"), n.e("20883")]).then(
-                          n.bind(n, 72715),
-                      );
+                  (0, s.openModalLazy)(async () => {
+                      let { default: e } = await Promise.all([
+                          n.e("73432"),
+                          n.e("80813"),
+                          n.e("47042"),
+                          n.e("99430"),
+                          n.e("72465"),
+                          n.e("83952"),
+                          n.e("82486"),
+                          n.e("19580"),
+                          n.e("26185"),
+                          n.e("35383"),
+                          n.e("92152"),
+                      ]).then(n.bind(n, 72715));
                       return (t) => (0, i.jsx)(e, { ...t, guildTemplate: o });
                   });
               },
               loading: o.state === u.QB.ACCEPTING,
               variant: "active",
-              text: _.intl.string(_.t["a3Gl+e"]),
+              text: m.intl.string(m.t["a3Gl+e"]),
           });
-    return (0, i.jsxs)(s.A, {
+    return (0, i.jsxs)(r.A, {
         children: [
-            (0, i.jsx)(s.A.Header, { text: _.intl.string(_.t.kAvFkO) }),
-            (0, i.jsxs)(s.A.Body, {
+            (0, i.jsx)(r.A.Header, { text: m.intl.string(m.t.kAvFkO) }),
+            (0, i.jsxs)(r.A.Body, {
                 children: [
                     (0, i.jsxs)("div", {
-                        className: h.iH,
+                        className: g.iH,
                         children: [
-                            (0, i.jsx)(c, { className: m.K }),
-                            (0, i.jsx)(s.A.Info, {
+                            (0, i.jsx)(d, { className: h.K }),
+                            (0, i.jsx)(r.A.Info, {
                                 title: o.name,
-                                children: _.intl.format(_.t.cGXXHL, { usageCount: String(o.usageCount ?? 0) }),
+                                children: m.intl.format(m.t.cGXXHL, { usageCount: String(o.usageCount ?? 0) }),
                             }),
                         ],
                     }),
-                    p,
+                    A,
                 ],
             }),
         ],

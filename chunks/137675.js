@@ -1,17 +1,17 @@
-n.d(t, { O: () => r, i: () => o });
-var i = n(627968),
-    s = n(192308),
-    l = n(834730),
-    a = n(985018);
-function r(e) {
-    let { body: t, ...a } = e;
-    (0, s.openModalLazy)(async () => {
-        let { VoidConfirmModal: e } = await n.e("77260").then(n.bind(n, 397927));
-        return (n) =>
-            (0, i.jsx)(e, { ...n, ...a, children: (0, i.jsx)(l.E, { variant: "text-md/normal", children: t }) });
+i.d(t, { O: () => n, i: () => _ });
+var l = i(627968),
+    r = i(192308),
+    s = i(834730),
+    d = i(985018);
+function n(e) {
+    let { body: t, ...d } = e;
+    (0, r.openModalLazy)(async () => {
+        let { VoidConfirmModal: e } = await Promise.all([i.e("4823"), i.e("10398")]).then(i.bind(i, 844616));
+        return (i) =>
+            (0, l.jsx)(e, { ...i, ...d, children: (0, l.jsx)(s.E, { variant: "text-md/normal", children: t }) });
     });
 }
-function o(e) {
+function _(e) {
     let { message: t } = e;
-    r({ header: a.intl.string(a.t.OjbtDm), confirmText: a.intl.string(a.t.BddRzS), body: t });
+    n({ header: d.intl.string(d.t.OjbtDm), confirmText: d.intl.string(d.t.BddRzS), body: t });
 }

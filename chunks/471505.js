@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { G: () => l });
-var r = n(64700),
-    i = n(152472),
-    a = n(486318);
-function l(e) {
-    let { userId: t, sku: n, location: l, trackButtonClick: s, onError: o } = e,
-        { handleToggle: c, ...u } = (0, i.c)({
-            userId: t,
-            skuId: n.id,
-            nuxGraphic: (0, a.N)(n),
-            location: l,
-            onError: o,
+s.d(c, { G: () => e });
+var i = s(64700),
+    u = s(152472),
+    d = s(486318);
+function e(a) {
+    let { userId: c, sku: s, location: e, trackButtonClick: n, onError: p } = a,
+        { handleToggle: t, ...h } = (0, u.c)({
+            userId: c,
+            skuId: s.id,
+            nuxGraphic: (0, d.N)(s),
+            location: e,
+            onError: p,
         }),
-        d = r.useCallback(async () => {
-            s?.(), await c();
-        }, [s, c]);
-    return { ...u, handleToggle: d };
+        r = i.useCallback(async () => {
+            n?.(), await t();
+        }, [n, t]);
+    return { ...h, handleToggle: r };
 }

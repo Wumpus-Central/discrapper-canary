@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(627968),
-    r = n(137177),
-    l = n(199199);
-function a(e) {
-    let { application: t, useComma: n = !1 } = e;
-    return (0, i.jsxs)("div", {
-        className: l.z,
+a.d(e, { A: () => r });
+var c = a(627968),
+    i = a(137177),
+    n = a(199199);
+function r(s) {
+    let { application: e, useComma: a = !1 } = s;
+    return (0, c.jsxs)("div", {
+        className: n.z,
         children: [
-            (0, i.jsx)(r.A, { className: l.I, game: t, size: r.M.XSMALL }),
-            (0, i.jsx)("strong", { children: `${t.name}${n ? ", " : ""}` }),
+            (0, c.jsx)(i.A, { className: n.I, game: e, size: i.M.XSMALL }),
+            (0, c.jsx)("strong", { children: `${e.name}${a ? ", " : ""}` }),
         ],
     });
 }

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Jr: "clipItemContainer_b77d08",
     PJ: "clipOverlay_b77d08",

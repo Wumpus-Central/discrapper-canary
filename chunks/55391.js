@@ -1,22 +1,21 @@
-"use strict";
-r.d(t, { A: () => c });
-var l = r(64700),
-    s = r(17928),
-    n = r(736056),
-    a = r(409013),
-    i = r(972441);
-let c = (e, t, r) => {
-    let c = (0, s.bG)([n.A], () => n.A.hasLoadedExperiments),
-        [u, d, o] = (0, s.yK)([i.A], () => [
-            i.A.getTemplateLayout(e, t, r),
-            i.A.isFetchingTemplate(e, t, r),
-            i.A.getTemplateFetchError(e, t, r),
+l.d(t, { A: () => c });
+var r = l(64700),
+    n = l(17928),
+    a = l(736056),
+    s = l(409013),
+    i = l(972441);
+let c = (e, t, l) => {
+    let c = (0, n.bG)([a.A], () => a.A.hasLoadedExperiments),
+        [d, o, u] = (0, n.yK)([i.A], () => [
+            i.A.getTemplateLayout(e, t, l),
+            i.A.isFetchingTemplate(e, t, l),
+            i.A.getTemplateFetchError(e, t, l),
         ]),
-        h = null == u && null != t && c && !d && null == o;
+        h = null == d && null != t && c && !o && null == u;
     return (
-        l.useEffect(() => {
-            h && (0, a.J)({ tenantId: e, templateId: t, requestParams: r }).catch(() => {});
-        }, [h, e, t, r]),
-        { layout: u, loading: d, error: o }
+        r.useEffect(() => {
+            h && (0, s.J)({ tenantId: e, templateId: t, requestParams: l }).catch(() => {});
+        }, [h, e, t, l]),
+        { layout: d, loading: o, error: u }
     );
 };

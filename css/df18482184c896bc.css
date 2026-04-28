@@ -1,0 +1,40 @@
+.pill__4f4b6 {
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0
+}
+
+.notificationsIcon__4f4b6 {
+    display: block
+}
+
+.full-motion .badgeTransition__4f4b6 {
+    transition: all .2s cubic-bezier(0, 0, .2, 1.1)
+}
+
+.grayBadge__4f4b6 {
+    background-color: var(--background-mod-strong) !important;
+    color: var(--white);
+    font-size: 10px
+}
+
+.grayBadge__4f4b6.selected__4f4b6 {
+    background-color: var(--interactive-text-active) !important;
+    color: var(--background-base-lowest)
+}
+
+.headerButton_c485a2 {
+    align-items: center;
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.headerButton_c485a2.enabled_c485a2,
+.headerButton_c485a2:hover {
+    background-color: var(--control-secondary-background-hover);
+    color: var(--text-strong)
+}

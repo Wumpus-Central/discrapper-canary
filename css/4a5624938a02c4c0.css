@@ -1,0 +1,48 @@
+.elevated__3f12a {
+    box-shadow: 0 2px 10px 0 hsl(var(--primary-900-hsl)/.2), 0 0 0 1px var(--primary-700)
+}
+
+.button__3f12a {
+    margin: 12px auto 20px;
+    width: 85%
+}
+
+.buttonTitle__3f12a {
+    margin: 20px 20px 0;
+    text-align: center
+}
+
+.text__3f12a {
+    text-align: start
+}
+
+.buttonLogin__3f12a {
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold)
+}
+
+.card__3f12a {
+    background: var(--primary-700);
+    border-color: var(--primary-700);
+    margin: 16px
+}
+
+.cardContents__3f12a {
+    margin: 0 auto;
+    max-width: 400px
+}
+
+.cardAccentLeft__3f12a {
+    inset-inline-start: 0
+}
+
+.cardAccentLeft__3f12a,
+.cardAccentRight__3f12a {
+    bottom: 0;
+    opacity: .3;
+    position: absolute
+}
+
+.cardAccentRight__3f12a {
+    inset-inline-end: 0
+}

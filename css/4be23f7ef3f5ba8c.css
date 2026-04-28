@@ -1,0 +1,140 @@
+.wishlistBannerContainer_b05cb4 {
+    border: 1px solid var(--border-subtle, var(--border-strong));
+    border-radius: var(--radius-sm);
+    overflow: hidden
+}
+
+.wishlistBanner_b05cb4 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-20);
+    position: relative
+}
+
+.wishlistBanner_b05cb4:before {
+    background: linear-gradient(to top, color-mix(in srgb, var(--profile-gradient-primary-color) 0%, transparent) 50%, color-mix(in srgb, var(--profile-gradient-primary-color) 4%, transparent) 100%);
+    content: "";
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 1
+}
+
+.theme-light .wishlistBanner_b05cb4:before {
+    background: linear-gradient(to top, color-mix(in srgb, var(--profile-gradient-primary-color) 0%, transparent) 50%, color-mix(in srgb, var(--profile-gradient-primary-color) 8%, transparent) 100%)
+}
+
+.wishlistBannerHeader_b05cb4 {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: var(--space-12);
+    position: relative;
+    width: 100%;
+    z-index: 2
+}
+
+.wishlistBannerViewAllButtonContainer_b05cb4 {
+    align-self: center
+}
+
+.wishlistBannerGrid_b05cb4 {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--space-16);
+    list-style: none;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+    z-index: 2
+}
+
+.wishlistBannerGrid_b05cb4.hasSquareItems_b05cb4 {
+    gap: var(--space-12)
+}
+
+.wishlistBannerTitleContainer_b05cb4 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.backgroundImage_b05cb4 {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    filter: saturate(.5);
+    -webkit-mask-image: linear-gradient(0deg, transparent 40%, rgba(0, 0, 0, .06));
+    mask-image: linear-gradient(0deg, transparent 40%, rgba(0, 0, 0, .06));
+    opacity: .3;
+    z-index: 0
+}
+
+.theme-light .backgroundImage_b05cb4 {
+    -webkit-mask-image: linear-gradient(0deg, transparent 40%, rgba(0, 0, 0, .3));
+    mask-image: linear-gradient(0deg, transparent 40%, rgba(0, 0, 0, .3));
+    opacity: .4
+}
+
+.wishlistBannerListItem_b05cb4 {
+    display: contents
+}
+
+.bundlePreviewBanner_b05cb4 {
+    height: 175px;
+    transform: scale(.5);
+    transform-origin: center;
+    width: 300px
+}
+
+.orbsRewardNoticeFooter_b05cb4 {
+    margin: var(--space-16) -20px -20px
+}
+
+.giftOptionContainer__39090 {
+    flex-direction: column
+}
+
+.cardsRow__39090,
+.giftOptionContainer__39090 {
+    display: flex;
+    gap: var(--space-16)
+}
+
+.cardsRow__39090 {
+    align-items: stretch
+}
+
+.cardsRow__39090>* {
+    display: flex;
+    flex: 1;
+    min-width: 368px
+}
+
+.cardsRow__39090>*>* {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.modalContainer__3cf67 {
+    max-width: 800px;
+    padding: 20px
+}
+
+.modalBody__3cf67 {
+    padding-top: 14px
+}
+
+.modalHeader__3cf67 {
+    padding: 0
+}

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     uK: "option_a19535",
     mG: "inline_a19535",

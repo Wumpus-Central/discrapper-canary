@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { A: () => u });
-var l = n(735438),
-    i = n.n(l),
-    s = n(17928),
-    a = n(228366),
-    r = n(71393);
-let o = null,
-    d = {};
-class c extends s.Ay.Store {
+l.d(t, { A: () => h });
+var n = l(735438),
+    i = l.n(n),
+    r = l(17928),
+    o = l(228366),
+    s = l(71393);
+let d = null,
+    g = {};
+class u extends r.Ay.Store {
     static displayName = "RegionStore";
     initialize() {
-        this.waitFor(r.A);
+        this.waitFor(s.A);
     }
     getOptimalRegion() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -38,15 +37,15 @@ class c extends s.Ay.Store {
         return null != t ? t.id : null;
     }
     getRegions(e) {
-        return null != e ? d[e] : o;
+        return null != e ? g[e] : d;
     }
 }
-let u = new c(a.h, {
+let h = new u(o.h, {
     LOAD_REGIONS: function (e) {
         let t = i().sortBy(e.regions, (e) => e.name);
-        null != e.guildId ? (d[e.guildId] = t) : (o = t);
+        null != e.guildId ? (g[e.guildId] = t) : (d = t);
     },
     GUILD_DELETE: function (e) {
-        delete d[e.guild.id];
+        delete g[e.guild.id];
     },
 });

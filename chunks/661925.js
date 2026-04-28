@@ -1,52 +1,62 @@
-n.d(e, { default: () => k });
-var i = n(627968),
-    a = n(64700),
+n.d(e, { default: () => C });
+var a = n(627968),
+    i = n(64700),
     l = n(284009),
     r = n.n(l),
     s = n(189213),
-    d = n(17928),
-    o = n(192308),
-    u = n(834730),
-    c = n(876696),
+    o = n(17928),
+    c = n(192308),
+    d = n(834730),
+    u = n(876696),
     m = n(287809),
-    f = n(985018),
-    g = n(696850);
-let k = function (t) {
+    k = n(985018),
+    p = n(696850);
+let C = function (t) {
     let { onClose: e, transitionState: l } = t,
-        k = (0, d.bG)([m.default], () => m.default.getCurrentUser()),
-        [b, p] = a.useState(!1),
-        C = a.useCallback(() => (e?.(), Promise.resolve()), [e]),
-        x = a.useCallback(() => {
+        C = (0, o.bG)([m.default], () => m.default.getCurrentUser()),
+        [b, f] = i.useState(!1),
+        g = i.useCallback(() => (e?.(), Promise.resolve()), [e]),
+        h = i.useCallback(() => {
             e?.(),
-                (0, o.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([n.e("76660"), n.e("10692")]).then(n.bind(n, 121343));
-                    return (e) => (0, i.jsx)(t, { ...e });
+                (0, c.openModalLazy)(async () => {
+                    let { default: t } = await Promise.all([
+                        n.e("28450"),
+                        n.e("77598"),
+                        n.e("88941"),
+                        n.e("62680"),
+                        n.e("85502"),
+                        n.e("27323"),
+                        n.e("20577"),
+                        n.e("53983"),
+                        n.e("76660"),
+                    ]).then(n.bind(n, 121343));
+                    return (e) => (0, a.jsx)(t, { ...e });
                 });
         }, [e]),
-        h = a.useCallback(() => {
+        x = i.useCallback(() => {
             e?.(),
-                r()(null != k, "ResendEmailVerificationButton: currentUser cannot be undefined"),
-                p(!0),
-                (0, c.S)(k).finally(() => p(!1));
-        }, [k, e]),
-        v = a.useMemo(
+                r()(null != C, "ResendEmailVerificationButton: currentUser cannot be undefined"),
+                f(!0),
+                (0, u.S)(C).finally(() => f(!1));
+        }, [C, e]),
+        v = i.useMemo(
             () =>
-                k?.email == null
-                    ? [{ text: f.intl.string(f.t.ydw5nX), onClick: x, variant: "primary" }]
+                C?.email == null
+                    ? [{ text: k.intl.string(k.t.ydw5nX), onClick: h, variant: "primary" }]
                     : [
-                          { text: f.intl.string(f.t.Vm8akB), onClick: x, variant: "secondary" },
-                          { text: f.intl.string(f.t.lm1UKt), onClick: h, variant: "primary", loading: b },
+                          { text: k.intl.string(k.t.Vm8akB), onClick: h, variant: "secondary" },
+                          { text: k.intl.string(k.t.lm1UKt), onClick: x, variant: "primary", loading: b },
                       ],
-            [k, x, h, b],
+            [C, h, x, b],
         );
-    return (0, i.jsxs)(s.Modal, {
-        title: f.intl.string(f.t.UZLrY1),
+    return (0, a.jsxs)(s.Modal, {
+        title: k.intl.string(k.t.UZLrY1),
         transitionState: l,
-        onClose: C,
+        onClose: g,
         actions: v,
         children: [
-            (0, i.jsx)("div", { className: g.p }),
-            (0, i.jsx)(u.E, { variant: "text-md/normal", className: g.i, children: f.intl.string(f.t["0LgOKH"]) }),
+            (0, a.jsx)("div", { className: p.p }),
+            (0, a.jsx)(d.E, { variant: "text-md/normal", className: p.i, children: k.intl.string(k.t["0LgOKH"]) }),
         ],
     });
 };

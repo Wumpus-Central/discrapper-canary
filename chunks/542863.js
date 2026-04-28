@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     g$: "premiumRetentionNotice_a606ef",
     lu: "premiumRetentionNoticeIcon_a606ef",

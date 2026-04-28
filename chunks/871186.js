@@ -1,14 +1,13 @@
-"use strict";
 n.d(t, {
     Cp: () => u,
-    Dp: () => S,
+    Dp: () => w,
     J0: () => x,
     J5: () => I,
     NA: () => _,
     Ol: () => E,
     Q: () => v,
     SA: () => k,
-    VN: () => w,
+    VN: () => S,
     Wt: () => g,
     bX: () => b,
     cx: () => f,
@@ -62,13 +61,13 @@ async function b(e) {
     let t = (0, i.KU)();
     return t ? t.flush(e) : (o.T && s.vF.warn("Cannot flush events. No client defined."), Promise.resolve(!1));
 }
-async function w(e) {
+async function S(e) {
     let t = (0, i.KU)();
     return t
         ? t.close(e)
         : (o.T && s.vF.warn("Cannot flush events and disable SDK. No client defined."), Promise.resolve(!1));
 }
-function S() {
+function w() {
     return !!(0, i.KU)();
 }
 function E() {

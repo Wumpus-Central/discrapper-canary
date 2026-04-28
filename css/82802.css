@@ -1,0 +1,37 @@
+.upsellFooter__5e07c {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    color: var(--text-default);
+    display: flex;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 16px;
+    padding: 8px
+}
+
+.upsellFooterIcon__5e07c {
+    flex-shrink: 0;
+    height: 24px;
+    margin-inline-end: 8px;
+    width: 24px
+}
+
+.reverseTrialUpsellContainer__5e07c {
+    border-radius: 4px;
+    box-shadow: 0 0 40px 0 rgba(229, 85, 211, .5);
+    position: relative
+}
+
+.unlockIcon__5e07c {
+    height: 46px;
+    inset-inline-start: 7px;
+    pointer-events: none;
+    position: absolute;
+    top: -14px;
+    width: 46px
+}
+
+.upsellText__5e07c {
+    padding-inline-start: 48px
+}

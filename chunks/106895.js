@@ -1,64 +1,64 @@
-a.d(e, { default: () => h });
-var i = a(627968),
-    n = a(64700),
-    s = a(189213),
-    l = a(192308),
-    r = a(834730),
-    d = a(47167),
-    c = a(769015),
-    o = a(514810),
-    x = a(985018),
-    m = a(748386);
-let h = (t) => {
-    let { channel: e, application: h, onClose: p, transitionState: u } = t,
-        j = (0, o.N)(e),
+i.d(a, { default: () => m });
+var e = i(627968),
+    n = i(64700),
+    s = i(189213),
+    l = i(192308),
+    r = i(834730),
+    c = i(47167),
+    d = i(137177),
+    o = i(514810),
+    x = i(985018),
+    h = i(748386);
+let m = (t) => {
+    let { channel: a, application: m, onClose: u, transitionState: p } = t,
+        j = (0, o.N)(a),
         v = n.useCallback(
             () => (
-                p(),
+                u(),
                 (0, l.openModalLazy)(async () => {
-                    let { default: t } = await a.e("93154").then(a.bind(a, 428185));
-                    return (a) => (0, i.jsx)(t, { ...a, channelId: e.id, application: h });
+                    let { default: t } = await Promise.all([i.e("21060"), i.e("93154")]).then(i.bind(i, 428185));
+                    return (i) => (0, e.jsx)(t, { ...i, channelId: a.id, application: m });
                 })
             ),
-            [h, e.id, p],
+            [m, a.id, u],
         ),
-        y = (0, d.Ay)(e, !0);
-    return (0, i.jsx)(s.Modal, {
-        transitionState: u,
+        k = (0, c.Ay)(a, !0);
+    return (0, e.jsx)(s.Modal, {
+        transitionState: p,
         "aria-label": x.intl.string(x.t.OJknhi),
-        onClose: p,
+        onClose: u,
         title: x.intl.string(x.t.OJknhi),
         actions: [
-            { text: x.intl.string(x.t["ETE/oC"]), onClick: p, variant: "secondary" },
+            { text: x.intl.string(x.t["ETE/oC"]), onClick: u, variant: "secondary" },
             { text: x.intl.string(x.t.LLWaxQ), onClick: v, variant: "critical-primary" },
         ],
-        children: (0, i.jsxs)("div", {
-            className: m.Qs,
+        children: (0, e.jsxs)("div", {
+            className: h.Qs,
             children: [
-                (0, i.jsx)(c.A, { game: h, size: c.M.XLARGE }),
-                (0, i.jsxs)("div", {
-                    className: m.yu,
+                (0, e.jsx)(d.A, { game: m, size: d.M.XLARGE }),
+                (0, e.jsxs)("div", {
+                    className: h.yu,
                     children: [
-                        (0, i.jsxs)("div", {
-                            className: m.py,
+                        (0, e.jsxs)("div", {
+                            className: h.py,
                             children: [
-                                (0, i.jsx)(r.E, {
+                                (0, e.jsx)(r.E, {
                                     variant: "text-md/semibold",
                                     color: "text-strong",
-                                    children: h.name,
+                                    children: m.name,
                                 }),
-                                (0, i.jsx)(r.E, {
+                                (0, e.jsx)(r.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: x.intl.format(x.t["0NJZAU"], { channelName: y }),
+                                    children: x.intl.format(x.t["0NJZAU"], { channelName: k }),
                                 }),
                             ],
                         }),
                         null != j &&
-                            (0, i.jsxs)(i.Fragment, {
+                            (0, e.jsxs)(e.Fragment, {
                                 children: [
-                                    (0, i.jsx)("div", { className: m.yF }),
-                                    (0, i.jsx)(r.E, { variant: "text-xs/normal", color: "text-muted", children: j }),
+                                    (0, e.jsx)("div", { className: h.yF }),
+                                    (0, e.jsx)(r.E, { variant: "text-xs/normal", color: "text-muted", children: j }),
                                 ],
                             }),
                     ],

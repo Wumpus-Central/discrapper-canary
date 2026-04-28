@@ -1,14 +1,13 @@
-"use strict";
-i.d(t, { B: () => c });
-var r = i(9588),
-    s = i(976860),
-    n = i(650048),
-    l = i(808728),
-    a = i(309010),
-    o = i(652215);
-function c(e, t) {
-    (0, r.K)({ kind: "channel" }),
-        a.A.getChannelId(e) === t
-            ? (0, s.bG)(o.BVt.CHANNEL(e, l.Ay.getDefaultChannel(e)?.id))
-            : (0, s.bG)(n.A.defaultRoute);
+e.d(n, { B: () => c });
+var s = e(9588),
+    a = e(976860),
+    i = e(650048),
+    l = e(808728),
+    u = e(309010),
+    r = e(652215);
+function c(t, n) {
+    (0, s.K)({ kind: "channel" }),
+        u.A.getChannelId(t) === n
+            ? (0, a.bG)(r.BVt.CHANNEL(t, l.Ay.getDefaultChannel(t)?.id))
+            : (0, a.bG)(i.A.defaultRoute);
 }

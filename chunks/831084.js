@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     tp: "table_ce03f4",
     e4: "headerCell_ce03f4",

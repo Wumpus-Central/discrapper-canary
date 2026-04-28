@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+i.r(
     (e.exports = {
         slider: "slider_a562c8",
         mini: "mini_a562c8",

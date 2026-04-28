@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(64700),
-    r = n(621466),
-    a = n(654108);
+a.d(t, { A: () => s });
+var n = a(64700),
+    l = a(621466),
+    p = a(654108);
 function s(e) {
-    let { onPasteFiles: t, onPasteBackgroundText: n } = e;
-    i.useEffect(() => {
+    let { onPasteFiles: t, onPasteBackgroundText: a } = e;
+    n.useEffect(() => {
         let e = (e) => {
-            let i = e.clipboardData?.files;
-            if (null != i && i.length > 0) null != t && (e.preventDefault(), e.stopPropagation(), t(i));
-            else if (null != n && !(0, a.A)((0, r.BF)(e))) {
+            let n = e.clipboardData?.files;
+            if (null != n && n.length > 0) null != t && (e.preventDefault(), e.stopPropagation(), t(n));
+            else if (null != a && !(0, p.A)((0, l.BF)(e))) {
                 let t = e.clipboardData?.getData("text");
-                null != t && (e.preventDefault(), e.stopPropagation(), n(t));
+                null != t && (e.preventDefault(), e.stopPropagation(), a(t));
             }
         };
         return (
@@ -20,5 +19,5 @@ function s(e) {
                 document.removeEventListener("paste", e, !0);
             }
         );
-    }, [t, n]);
+    }, [t, a]);
 }

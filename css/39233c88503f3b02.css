@@ -1,0 +1,26 @@
+.icon_d98031 {
+    align-items: center;
+    display: flex
+}
+
+.count_d98031 {
+    margin-inline-start: 4px
+}
+
+.icon_d98031:hover .count_d98031 {
+    color: var(--interactive-text-hover)
+}
+
+.browser_d98031 {
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    max-height: 80vh;
+    max-width: 600px;
+    min-height: 400px;
+    min-width: 480px;
+    overflow: hidden;
+    width: 35vw
+}
+
+.enable-forced-colors .browser_d98031 {
+    border: 2px solid CanvasText
+}

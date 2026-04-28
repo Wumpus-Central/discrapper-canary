@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     tp: "table__49035",
     xP: "gameUpdates__49035",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_b9f75c",
     gS: "clipIcon_b9f75c",

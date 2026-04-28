@@ -40,7 +40,7 @@ async function d(e, t) {
 }
 let h = (e) => {
         (0, s.openModalLazy)(async () => {
-            let { default: t } = await n.e("84981").then(n.bind(n, 940372));
+            let { default: t } = await Promise.all([n.e("80620"), n.e("84981")]).then(n.bind(n, 940372));
             return (n) => (0, l.jsx)(t, { errors: e, ...n });
         });
     },
@@ -54,18 +54,18 @@ let h = (e) => {
                 "aria-label": p,
                 filters: f,
                 setLoading: g,
-                title: _,
+                title: x,
             } = e,
-            x = i.useRef(null),
-            [C, A] = i.useState(!1);
+            C = i.useRef(null),
+            [A, E] = i.useState(!1);
         i.useEffect(() => {
-            C && E();
-        }, [C]);
-        let E = () => {
-                null !== x.current && ((0, s.closeModal)(x.current), (x.current = null));
+            A && I();
+        }, [A]);
+        let I = () => {
+                null !== C.current && ((0, s.closeModal)(C.current), (C.current = null));
             },
-            I = async (e) => {
-                g?.(!0), await d(e, o), A(!0), g?.(!1);
+            y = async (e) => {
+                g?.(!0), await d(e, o), E(!0), g?.(!1);
             },
             v = async (e) => {
                 if (
@@ -75,9 +75,9 @@ let h = (e) => {
                 )
                     return;
                 let t = e.currentTarget.files;
-                x.current = await (0, s.openModalLazy)(async () => {
-                    let { default: e } = await n.e("17259").then(n.bind(n, 897126));
-                    return (n) => (0, l.jsx)(e, { processFiles: () => I(t), ...n });
+                C.current = await (0, s.openModalLazy)(async () => {
+                    let { default: e } = await Promise.all([n.e("54368"), n.e("17259")]).then(n.bind(n, 897126));
+                    return (n) => (0, l.jsx)(e, { processFiles: () => y(t), ...n });
                 });
             };
         return (0, l.jsx)(a.A, {
@@ -89,7 +89,7 @@ let h = (e) => {
             className: h,
             tabIndex: m,
             "aria-label": p,
-            title: _,
+            title: x,
         });
     });
 m.displayName = "ImageInputWithModals";

@@ -1,0 +1,124 @@
+.container_f0c729 {
+    margin-bottom: var(--space-8)
+}
+
+.guildContainer_f0c729 {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.header_f0c729 {
+    color: var(--text-default);
+    text-transform: uppercase
+}
+
+.header_f0c729,
+.hubInfo_f0c729 {
+    margin-bottom: 8px
+}
+
+.hubInfo_f0c729 {
+    align-items: center;
+    display: flex
+}
+
+.hubIcon_f0c729 {
+    margin-inline-end: 8px
+}
+
+.container__14de9 {
+    margin-bottom: var(--space-8)
+}
+
+.guildContainer__14de9 {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.header__14de9 {
+    color: var(--text-default);
+    margin-bottom: 8px;
+    text-transform: uppercase
+}
+
+.guildInfo__14de9 {
+    align-items: center;
+    display: flex
+}
+
+.guildIconMask__14de9 {
+    margin-inline-end: 8px;
+    min-height: 32px;
+    min-width: 32px
+}
+
+.guildIcon__14de9 {
+    cursor: pointer;
+    height: 100%;
+    width: 100%
+}
+
+.container__7c626 {
+    margin-bottom: var(--space-24)
+}
+
+.guildContainer__7c626 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: var(--space-16)
+}
+
+.header__7c626 {
+    color: var(--text-default);
+    margin-bottom: var(--space-8)
+}
+
+.guildInfo__7c626 {
+    align-items: center;
+    display: flex
+}
+
+.guildIcon__7c626 {
+    margin-inline-end: var(--space-8)
+}
+
+.container__631c2 {
+    margin-bottom: var(--space-8)
+}
+
+.guildContainer__631c2 {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.header__631c2 {
+    color: var(--text-default);
+    margin-bottom: 8px
+}
+
+.guildInfo__631c2 {
+    align-items: center;
+    display: flex;
+    margin-bottom: 8px
+}
+
+.guildIcon__631c2 {
+    margin-inline-end: 8px
+}
+
+.headerContainer_bdedd9 {
+    padding: 0;
+    text-align: start
+}
+
+.subheader_bdedd9 {
+    margin-block-start: var(--space-8)
+}
+
+.infoBox_fbc3be {
+    font-weight: var(--font-weight-normal);
+    margin-top: 16px
+}

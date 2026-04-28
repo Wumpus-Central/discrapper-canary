@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     dK: "mask_ca5f52",
     Kk: "icon_ca5f52",

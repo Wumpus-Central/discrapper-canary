@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     AO: "botTag__82f07",
     px: "px__82f07",

@@ -1,62 +1,61 @@
-"use strict";
-r.r(t), r.d(t, { default: () => E });
-var n = r(627968);
-r(64700);
-var o = r(17928),
-    i = r(417098),
-    _ = r(834730),
-    s = r(512950),
-    a = r(976860),
-    l = r(495544),
-    c = r(207913),
-    d = r(855267),
-    u = r(239093),
-    f = r(652215),
-    m = r(985018),
-    p = r(280741);
-function b() {
+t.r(s), t.d(s, { default: () => j });
+var n = t(627968);
+t(64700);
+var r = t(17928),
+    i = t(417098),
+    a = t(834730),
+    l = t(512950),
+    c = t(976860),
+    d = t(495544),
+    u = t(207913),
+    h = t(855267),
+    o = t(239093),
+    p = t(652215),
+    N = t(985018),
+    E = t(280741);
+function R() {
     return (0, n.jsxs)(i.$T, {
         color: i.Hv.DANGER,
-        className: p.aL,
+        className: E.aL,
         children: [
-            (0, n.jsx)(_.E, {
+            (0, n.jsx)(a.E, {
                 tag: "span",
                 color: "always-white",
                 variant: "text-md/normal",
-                children: m.intl.string(m.t["MG+Bzb"]),
+                children: N.intl.string(N.t["MG+Bzb"]),
             }),
             (0, n.jsx)(i.eC, {
-                noticeType: f.kqX.SAFETY_SUSPENDED_USER_WARNING,
-                href: u.d$.WARNING_SYSTEM_HELPCENTER_LINK,
-                children: (0, n.jsx)(_.E, {
+                noticeType: p.kqX.SAFETY_SUSPENDED_USER_WARNING,
+                href: o.d$.WARNING_SYSTEM_HELPCENTER_LINK,
+                children: (0, n.jsx)(a.E, {
                     variant: "text-md/normal",
                     color: "always-white",
-                    children: m.intl.string(m.t["9JceHN"]),
+                    children: N.intl.string(N.t["9JceHN"]),
                 }),
             }),
         ],
     });
 }
-function N(e) {
+function g(e) {
     let {} = e,
-        t = (0, o.bG)([c.A], () => c.A.getAgeCheckStatus());
-    return t === u.qN.NONE
+        s = (0, r.bG)([u.A], () => u.A.getAgeCheckStatus());
+    return s === o.qN.NONE
         ? null
-        : t === u.qN.SUCCESS
-          ? (0, n.jsx)(s.p, { messageType: s.Y.POSITIVE, children: m.intl.format(m.t.maZDL6, { login: "/login" }) })
-          : t === u.qN.ERROR
-            ? (0, n.jsx)(s.p, { messageType: s.Y.ERROR, children: m.intl.string(m.t["4sILBU"]) })
-            : t === u.qN.FAILURE
-              ? (0, n.jsx)(s.p, { messageType: s.Y.ERROR, children: m.intl.string(m.t["40R63o"]) })
-              : (0, n.jsx)(s.p, { messageType: s.Y.INFO, children: m.intl.string(m.t["nhhy/R"]) });
+        : s === o.qN.SUCCESS
+          ? (0, n.jsx)(l.p, { messageType: l.Y.POSITIVE, children: N.intl.format(N.t.maZDL6, { login: "/login" }) })
+          : s === o.qN.ERROR
+            ? (0, n.jsx)(l.p, { messageType: l.Y.ERROR, children: N.intl.string(N.t["4sILBU"]) })
+            : s === o.qN.FAILURE
+              ? (0, n.jsx)(l.p, { messageType: l.Y.ERROR, children: N.intl.string(N.t["40R63o"]) })
+              : (0, n.jsx)(l.p, { messageType: l.Y.INFO, children: N.intl.string(N.t["nhhy/R"]) });
 }
 function x() {
-    return (0, n.jsxs)("div", { className: p.$$, children: [(0, n.jsx)(N, {}), (0, n.jsx)(d.A, {})] });
+    return (0, n.jsxs)("div", { className: E.$$, children: [(0, n.jsx)(g, {}), (0, n.jsx)(h.A, {})] });
 }
-function E() {
+function j() {
     return (
-        null == (0, o.bG)([l.default], () => l.default.getSuspendedUserToken()) &&
-            (0, a.pX)(f.BVt.LOGIN, { source: "suspended_user_safety_hub_page" }),
-        (0, n.jsxs)("div", { className: p.kL, children: [(0, n.jsx)(b, {}), (0, n.jsx)(x, {})] })
+        null == (0, r.bG)([d.default], () => d.default.getSuspendedUserToken()) &&
+            (0, c.pX)(p.BVt.LOGIN, { source: "suspended_user_safety_hub_page" }),
+        (0, n.jsxs)("div", { className: E.kL, children: [(0, n.jsx)(R, {}), (0, n.jsx)(x, {})] })
     );
 }

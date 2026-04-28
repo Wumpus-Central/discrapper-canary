@@ -1,15 +1,14 @@
-"use strict";
-r.d(t, { A: () => i });
-var l = r(627968),
-    s = r(607470),
-    n = r(506456),
-    a = r(241056);
+l.d(t, { A: () => i });
+var r = l(627968),
+    n = l(607470),
+    a = l(506456),
+    s = l(241056);
 let i = (e) => {
     let { src: t } = e,
-        r = (0, n.A)(t);
-    return null == r
+        l = (0, a.A)(t);
+    return null == l
         ? null
-        : (0, n.c)(r.mimeType)
-          ? (0, l.jsx)(s.A, { className: a.S, src: r.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 })
-          : (0, l.jsx)("img", { className: a.S, src: r.src, alt: r.alt ?? "" });
+        : (0, a.c)(l.mimeType)
+          ? (0, r.jsx)(n.A, { className: s.S, src: l.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 })
+          : (0, r.jsx)("img", { className: s.S, src: l.src, alt: l.alt ?? "" });
 };

@@ -1,0 +1,35 @@
+.container__530ce {
+    align-items: center;
+    display: flex
+}
+
+.mutuals__530ce {
+    -moz-column-gap: 6px;
+    column-gap: 6px;
+    flex-wrap: wrap;
+    row-gap: 2px
+}
+
+.mutuals__530ce,
+.section__530ce {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.section__530ce {
+    cursor: pointer;
+    gap: 4px
+}
+
+.section__530ce:focus-visible .text__530ce,
+.section__530ce:hover .text__530ce {
+    text-decoration: underline
+}
+
+.spacer__530ce {
+    background-color: var(--interactive-text-default);
+    border-radius: var(--radius-round);
+    height: 4px;
+    width: 4px
+}

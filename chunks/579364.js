@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+r.r(
     (e.exports = {
         emojiButton: "emojiButton__04eed",
         emojiButtonHovered: "emojiButtonHovered__04eed emojiButton__04eed",

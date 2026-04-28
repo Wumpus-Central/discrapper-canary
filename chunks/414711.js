@@ -1,61 +1,80 @@
-n.d(t, { A: () => p });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    r = n(615300),
-    o = n(837381),
-    c = n(187322),
-    d = n(442433),
-    u = n(688810),
-    m = n(595623),
-    A = n(22212);
-n(646363);
-var h = n(272828);
-class x extends s.PureComponent {
+s.d(t, { A: () => m });
+var i = s(627968),
+    n = s(64700),
+    a = s(503698),
+    l = s.n(a),
+    o = s(615300),
+    r = s(837381),
+    c = s(187322),
+    h = s(442433),
+    u = s(688810),
+    d = s(595623),
+    p = s(22212);
+s(646363);
+var v = s(828066);
+class A extends n.PureComponent {
     state = {
-        height: new r.A.Value(this.props.height ?? 61),
-        opacity: new r.A.Value(1),
+        height: new o.A.Value(this.props.height ?? 61),
+        opacity: new o.A.Value(1),
         hovered: !1,
         isContextMenuActive: !1,
     };
     componentWillLeave(e) {
-        r.A.parallel([
-            r.A.timing(this.state.opacity, { toValue: 0, duration: 200 }),
-            r.A.timing(this.state.height, { toValue: 0, duration: 200 }),
+        o.A.parallel([
+            o.A.timing(this.state.opacity, { toValue: 0, duration: 200 }),
+            o.A.timing(this.state.height, { toValue: 0, duration: 200 }),
         ]).start(e);
     }
     componentWillEnter(e) {
         this.state.opacity.setValue(0),
             this.state.height.setValue(0),
-            r.A.parallel([
-                r.A.timing(this.state.opacity, { toValue: 1, duration: 200 }),
-                r.A.timing(this.state.height, { toValue: this.props.height ?? 61, duration: 200 }),
+            o.A.parallel([
+                o.A.timing(this.state.opacity, { toValue: 1, duration: 200 }),
+                o.A.timing(this.state.height, { toValue: this.props.height ?? 61, duration: 200 }),
             ]).start(e);
     }
     handleMouseEnter = () => {
-        let { isFocused: e, isActive: t, onOtherHover: n } = this.props,
+        let { isFocused: e, isActive: t, onOtherHover: s } = this.props,
             { isContextMenuActive: i } = this.state;
-        this.setState({ hovered: e }), !e || t || i || n?.();
+        this.setState({ hovered: e }), !e || t || i || s?.();
     };
     handleMouseLeave = () => {
         this.setState({ hovered: !1 });
     };
     handleContextMenu = (e, t) => {
-        let { analyticsLocations: s } = this.props;
+        let { analyticsLocations: n } = this.props;
         this.setState({ isContextMenuActive: !0 }),
-            (0, d.L3)(
+            (0, h.L3)(
                 e,
                 async () => {
-                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("22880")]).then(
-                            n.bind(n, 668569),
-                        ),
-                        l = () => {
-                            (0, A.Jo)({ targetUserId: t.id, tab: m.Ay.getState().section });
+                    let { default: e } = await Promise.all([
+                            s.e("91388"),
+                            s.e("61748"),
+                            s.e("26132"),
+                            s.e("46652"),
+                            s.e("93190"),
+                            s.e("34552"),
+                            s.e("8757"),
+                            s.e("89673"),
+                            s.e("68403"),
+                            s.e("85968"),
+                            s.e("60195"),
+                            s.e("29787"),
+                            s.e("97558"),
+                            s.e("94000"),
+                            s.e("91994"),
+                            s.e("76665"),
+                            s.e("76273"),
+                            s.e("24198"),
+                            s.e("86169"),
+                            s.e("32418"),
+                        ]).then(s.bind(s, 668569)),
+                        a = () => {
+                            (0, p.Jo)({ targetUserId: t.id, tab: d.Ay.getState().section });
                         };
-                    return (n) => {
-                        let a = (0, i.jsx)(e, { ...n, user: t, onInteraction: l });
-                        return null == s ? a : (0, i.jsx)(u.f5, { value: s, children: a });
+                    return (s) => {
+                        let l = (0, i.jsx)(e, { ...s, user: t, onInteraction: a });
+                        return null == n ? l : (0, i.jsx)(u.f5, { value: n, children: l });
                     };
                 },
                 {
@@ -66,33 +85,33 @@ class x extends s.PureComponent {
             );
     };
     render() {
-        let { height: e, opacity: t, hovered: n, isContextMenuActive: s } = this.state,
+        let { height: e, opacity: t, hovered: s, isContextMenuActive: n } = this.state,
             {
-                children: l,
-                user: d,
+                children: a,
+                user: h,
                 onClick: u,
-                isActive: m,
-                className: A,
-                activeClassName: x,
-                noBorder: p,
+                isActive: d,
+                className: p,
+                activeClassName: A,
+                noBorder: m,
             } = this.props;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                p ? null : (0, i.jsx)("div", { className: a()(h.yF, { [h._]: m || s || n }) }),
-                (0, i.jsx)(o.tG, {
-                    id: d.id,
-                    children: (o) =>
+                m ? null : (0, i.jsx)("div", { className: l()(v.yF, { [v._]: d || n || s }) }),
+                (0, i.jsx)(r.tG, {
+                    id: h.id,
+                    children: (r) =>
                         (0, i.jsx)(c.vN, {
                             offset: { left: -8, right: -8 },
-                            children: (0, i.jsx)(r.A.div, {
-                                className: a()(A, h.Vg, null != x ? { [x]: m || s } : null, { [h.vu]: m || s }),
-                                onContextMenu: (e) => this.handleContextMenu(e, d),
+                            children: (0, i.jsx)(o.A.div, {
+                                className: l()(p, v.Vg, null != A ? { [A]: d || n } : null, { [v.vu]: d || n }),
+                                onContextMenu: (e) => this.handleContextMenu(e, h),
                                 onMouseEnter: this.handleMouseEnter,
                                 onMouseLeave: this.handleMouseLeave,
                                 onClick: u ?? void 0,
                                 style: { height: e, opacity: t },
-                                ...o,
-                                children: l(n || m || s),
+                                ...r,
+                                children: a(s || d || n),
                             }),
                         }),
                 }),
@@ -100,4 +119,4 @@ class x extends s.PureComponent {
         });
     }
 }
-let p = x;
+let m = A;

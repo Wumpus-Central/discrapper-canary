@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { XD: () => p, fm: () => f, sE: () => d, ux: () => h });
-var l = n(7584),
-    i = n(776231),
-    s = n(486020),
-    a = n(723702),
-    r = n(652215);
-let o = `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/role-icons`,
-    c = `${location.protocol}${window.GLOBAL_ENV.API_ENDPOINT}`,
-    u = (0, a.isAndroid)(),
-    d = (e, t) => {
-        if (null == e) return null;
-        let n = null != e.unicodeEmoji ? l.Ay.getByName(l.Ay.convertSurrogateToName(e.unicodeEmoji, !1)) : void 0;
-        return { customIconSrc: m(e, t), unicodeEmoji: n ?? void 0 };
+o.d(t, { XD: () => _, fm: () => N, sE: () => d, ux: () => $ });
+var s = o(7584),
+    e = o(776231),
+    r = o(486020),
+    l = o(723702),
+    n = o(652215);
+let u = `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/role-icons`,
+    a = `${location.protocol}${window.GLOBAL_ENV.API_ENDPOINT}`,
+    c = (0, l.isAndroid)(),
+    d = (i, t) => {
+        if (null == i) return null;
+        let o = null != i.unicodeEmoji ? s.Ay.getByName(s.Ay.convertSurrogateToName(i.unicodeEmoji, !1)) : void 0;
+        return { customIconSrc: p(i, t), unicodeEmoji: o ?? void 0 };
     },
-    h = (e, t) => e.replace(/size=[0-9]+/g, `size=${(0, i.kr)(t * (0, i.mZ)())}`),
-    m = (e, t) => {
-        let { id: n, icon: l } = e;
-        if (null == l) return;
-        if (l.startsWith("data:")) return l;
-        let a = s.QB ? "webp" : "png",
+    $ = (i, t) => i.replace(/size=[0-9]+/g, `size=${(0, e.kr)(t * (0, e.mZ)())}`),
+    p = (i, t) => {
+        let { id: o, icon: s } = i;
+        if (null == s) return;
+        if (s.startsWith("data:")) return s;
+        let l = r.QB ? "webp" : "png",
             d = "",
-            h = "quality=lossless";
-        return (null != t && ((d = "size=" + (0, i.kr)(t * (0, i.mZ)())), (h = u ? "" : "&" + h)),
+            $ = "quality=lossless";
+        return (null != t && ((d = "size=" + (0, e.kr)(t * (0, e.mZ)())), ($ = c ? "" : "&" + $)),
         null != window.GLOBAL_ENV.CDN_HOST)
-            ? `${o}/${n}/${l}.${a}?${d}${h}`
-            : `${c}${r.Rsh.ROLE_ICON(n, l)}?${d}`;
+            ? `${u}/${o}/${s}.${l}?${d}${$}`
+            : `${a}${n.Rsh.ROLE_ICON(o, s)}?${d}`;
     },
-    p = (e) => e.startsWith(o) || (e.startsWith(`${c}/roles`) && e.includes("/icons/")),
-    f = (e, t) => t?.tags?.subscription_listing_id != null || e.features.has(r.GuildFeatures.ROLE_ICONS);
+    _ = (i) => i.startsWith(u) || (i.startsWith(`${a}/roles`) && i.includes("/icons/")),
+    N = (i, t) => t?.tags?.subscription_listing_id != null || i.features.has(n.GuildFeatures.ROLE_ICONS);

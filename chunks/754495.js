@@ -2,8 +2,8 @@ e.d(n, { W: () => d, s: () => A });
 var i = e(627968);
 e(64700);
 var l = e(17928),
-    r = e(192308),
-    a = e(477782),
+    a = e(192308),
+    r = e(477782),
     s = e(20805),
     o = e(287809),
     c = e(301736),
@@ -22,13 +22,18 @@ function A(t) {
         p = (0, c.A)(),
         f = (0, l.bG)([o.default], () => o.default.getCurrentUser());
     return n.id === f?.id && "recent" === A && (0, s.$R)(u)
-        ? (0, i.jsx)(a.Dr, {
+        ? (0, i.jsx)(r.Dr, {
               id: "delete-entry-history",
               label: d(u),
               action: () => {
                   x?.({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }),
-                      (0, r.openModalLazy)(async () => {
-                          let { default: t } = await Promise.all([e.e("19119"), e.e("36946")]).then(e.bind(e, 839785));
+                      (0, a.openModalLazy)(async () => {
+                          let { default: t } = await Promise.all([
+                              e.e("77791"),
+                              e.e("28152"),
+                              e.e("19119"),
+                              e.e("14565"),
+                          ]).then(e.bind(e, 839785));
                           return (e) => (0, i.jsx)(t, { entry: u, user: n, onAction: x, onOpenGameSettings: p, ...e });
                       });
               },

@@ -1,0 +1,38 @@
+.nagBar__9d860 {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background: var(--background-brand);
+    cursor: pointer;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    padding: 8px 12px;
+    position: sticky;
+    top: var(--custom-channel-header-height);
+    z-index: 1
+}
+
+.content__9d860 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%
+}
+
+.message__9d860 {
+    flex: 1;
+    text-align: start
+}
+
+.pink__9d860 {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    background: linear-gradient(0deg, rgba(255, 110, 158, .6), rgba(255, 110, 158, .6)), radial-gradient(75.14% 567.03% at 2.74% 112.18%, rgba(241, 119, 185, .5) 0, rgba(241, 119, 185, 0) 100%);
+    box-shadow: 0 2px 10.4px 0 rgba(0, 0, 0, .15)
+}
+
+.pinkCountdown__9d860 {
+    --countdown-color: #4838a9 !important
+}

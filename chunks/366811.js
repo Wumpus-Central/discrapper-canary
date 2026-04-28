@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(265690),
-    a = n(121894),
-    i = n(463347),
-    l = n(334465),
-    s = n(652215);
-function o(e) {
-    let t = (0, l.B)(e ?? "", { path: s.BVt.CHANNEL(i.pv.guildId(), i.pv.channelId({ optional: !0 }), ":messageId?") });
-    if (null != t) {
-        let { guildId: e, channelId: n } = t.params;
-        return { guildId: e === s.ME ? null : e, channelId: n ?? null };
+a.d(n, { A: () => I });
+var d = a(265690),
+    t = a(121894),
+    u = a(463347),
+    e = a(334465),
+    h = a(652215);
+function p(l) {
+    let n = (0, e.B)(l ?? "", { path: h.BVt.CHANNEL(u.pv.guildId(), u.pv.channelId({ optional: !0 }), ":messageId?") });
+    if (null != n) {
+        let { guildId: l, channelId: a } = n.params;
+        return { guildId: l === h.ME ? null : l, channelId: a ?? null };
     }
-    let n = (0, l.B)(e ?? "", { path: s.BVt.GUILD_BOOSTING_MARKETING(i.pv.guildId()) });
-    return null != n ? { guildId: n.params.guildId, channelId: null } : { guildId: null, channelId: null };
+    let a = (0, e.B)(l ?? "", { path: h.BVt.GUILD_BOOSTING_MARKETING(u.pv.guildId()) });
+    return null != a ? { guildId: a.params.guildId, channelId: null } : { guildId: null, channelId: null };
 }
-let c = (0, r.h)((e) => ({
+let I = (0, d.h)((l) => ({
     path: null,
     basePath: "/",
     guildId: null,
     channelId: null,
-    updatePath(t) {
-        let { guildId: n, channelId: r } = o(t);
-        (0, a.r)(() => e({ path: t, guildId: n, channelId: r }));
+    updatePath(n) {
+        let { guildId: a, channelId: d } = p(n);
+        (0, t.r)(() => l({ path: n, guildId: a, channelId: d }));
     },
-    resetPath(t) {
-        let { guildId: n, channelId: r } = o(t);
-        (0, a.r)(() => e({ path: null, guildId: n, channelId: r, basePath: t }));
+    resetPath(n) {
+        let { guildId: a, channelId: d } = p(n);
+        (0, t.r)(() => l({ path: null, guildId: a, channelId: d, basePath: n }));
     },
 }));

@@ -1,6 +1,5 @@
-"use strict";
-s.r(
-    (e.exports = {
+r.r(
+    (o.exports = {
         footer: "footer__0c41a",
         footerPrimary: "footerPrimary__0c41a footer__0c41a",
         footerBackgroundPrimary: "footerBackgroundPrimary__0c41a",

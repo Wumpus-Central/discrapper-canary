@@ -1,17 +1,16 @@
-"use strict";
-i.d(t, { R: () => c, default: () => d });
-var r = i(627968),
-    s = i(64700),
-    n = i(284009),
-    l = i.n(n),
-    a = i(284683);
-let o = s.createContext(void 0);
-function c() {
-    let e = s.useContext(o);
-    return l()(null != e, "must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider"), e;
+n.d(e, { R: () => p, default: () => a });
+var u = n(627968),
+    o = n(64700),
+    i = n(284009),
+    r = n.n(i),
+    s = n(284683);
+let d = o.createContext(void 0);
+function p() {
+    let t = o.useContext(d);
+    return r()(null != t, "must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider"), t;
 }
-function d(e) {
-    let { children: t, defaultSortOption: i = a.p$.NEWEST_ARRIVALS } = e,
-        [n, l] = s.useState(i);
-    return (0, r.jsx)(o.Provider, { value: { sortOption: n, setSortOption: l, onReset: () => l(i) }, children: t });
+function a(t) {
+    let { children: e, defaultSortOption: n = s.p$.NEWEST_ARRIVALS } = t,
+        [i, r] = o.useState(n);
+    return (0, u.jsx)(d.Provider, { value: { sortOption: i, setSortOption: r, onReset: () => r(n) }, children: e });
 }

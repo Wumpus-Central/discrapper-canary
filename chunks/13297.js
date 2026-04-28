@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     x9: "outerWrapper_d1405b",
     iE: "wrapper_d1405b",

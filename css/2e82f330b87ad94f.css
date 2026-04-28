@@ -1,0 +1,115 @@
+.iconButton_aa66d3 {
+    background-color: transparent;
+    background-size: 100%;
+    cursor: pointer;
+    position: relative
+}
+
+.iconButton_aa66d3:disabled {
+    pointer-events: none
+}
+
+.iconButtonDefault_aa66d3 {
+    opacity: .6
+}
+
+.iconButtonDefault_aa66d3:hover {
+    opacity: 1
+}
+
+.iconButtonDefault_aa66d3:disabled {
+    opacity: .3
+}
+
+.iconButtonStatic_aa66d3 {
+    opacity: 1
+}
+
+.iconButtonStatic_aa66d3:disabled {
+    opacity: .6
+}
+
+.large_aa66d3 {
+    height: var(--custom-icon-button-icon-lg-size);
+    width: var(--custom-icon-button-icon-lg-size)
+}
+
+.medium_aa66d3 {
+    height: var(--custom-icon-button-icon-md-size);
+    width: var(--custom-icon-button-icon-md-size)
+}
+
+.small_aa66d3 {
+    height: var(--custom-icon-button-icon-sm-size);
+    width: var(--custom-icon-button-icon-sm-size)
+}
+
+.xsmall_aa66d3 {
+    height: var(--custom-icon-button-icon-xs-size);
+    width: var(--custom-icon-button-icon-xs-size)
+}
+
+.role_f07e3e {
+    height: 32px;
+    margin-bottom: 0 !important;
+    margin-top: 0
+}
+
+.role_f07e3e:focus-within .roleOverflow_f07e3e,
+.role_f07e3e:hover .roleOverflow_f07e3e {
+    visibility: visible
+}
+
+.roleContent_f07e3e {
+    align-items: center;
+    display: flex
+}
+
+.roleInner_f07e3e {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.roleOverflow_f07e3e {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 20px;
+    margin-inline-start: 8px;
+    visibility: hidden;
+    width: 20px
+}
+
+.roleOverflow_f07e3e.open_f07e3e {
+    visibility: visible
+}
+
+.roleDot_f07e3e {
+    margin-inline-end: 4px
+}
+
+.roleCircle_f07e3e {
+    margin-inline-end: 8px
+}
+
+.lock_f07e3e {
+    height: 18px;
+    margin-inline-end: 4px;
+    position: relative;
+    top: -1px;
+    width: 18px
+}
+
+.dragged_f07e3e {
+    background-size: 100% 100%;
+    height: 32px
+}
+
+.images-light .dragged_f07e3e {
+    background-image: url(/assets/9e832037368fddee.svg)
+}
+
+.images-dark .dragged_f07e3e {
+    background-image: url(/assets/e3f8c28855880b34.svg)
+}

@@ -1,77 +1,87 @@
-n.d(e, { default: () => S });
-var i = n(627968);
+n.d(t, { default: () => U });
+var l = n(627968);
 n(64700);
-var l = n(550079),
+var i = n(550079),
     a = n(477782),
-    d = n(442433),
-    r = n(847767),
-    u = n(358367),
-    s = n(793574),
-    c = n(398590),
-    o = n(997509),
-    D = n(652215),
-    A = n(985018),
-    _ = n(957316),
-    E = n(17928),
-    m = n(192308),
-    g = n(834409),
-    I = n(903093),
-    b = n(610136),
-    f = n(71393);
-let S = (0, u.A)(
-    (0, r.A)(
-        function (t) {
-            let e,
-                r,
-                u,
-                { guildId: s, context: S, onSelect: T } = t,
-                p =
-                    S === D.BRT.POPOUT
+    r = n(442433),
+    s = n(847767),
+    d = n(358367),
+    c = n(793574),
+    o = n(398590),
+    u = n(997509),
+    A = n(652215),
+    T = n(985018),
+    O = n(957316),
+    b = n(17928),
+    p = n(192308),
+    E = n(834409),
+    g = n(903093),
+    h = n(610136),
+    j = n(71393);
+let U = (0, d.A)(
+    (0, s.A)(
+        function (e) {
+            let t,
+                s,
+                d,
+                { guildId: c, context: U, onSelect: x } = e,
+                D =
+                    U === A.BRT.POPOUT
                         ? null
-                        : (0, i.jsx)(a.Dr, {
+                        : (0, l.jsx)(a.Dr, {
                               id: "report-raid",
-                              label: A.intl.string(A.t.cswId3),
+                              label: T.intl.string(T.t.cswId3),
                               action: () => {
-                                  (0, c.jH)(), (0, _.M)(s);
+                                  (0, o.jH)(), (0, O.M)(c);
                               },
                           }),
-                v =
-                    ((e = S === D.BRT.POPOUT),
-                    (r = (0, E.bG)([f.A], () => f.A.getGuild(s), [s])),
-                    (u = (0, E.bG)([b.A], () => (null != r ? b.A.getGuildIncident(r.id) : null))),
-                    e
+                I =
+                    ((t = U === A.BRT.POPOUT),
+                    (s = (0, b.bG)([j.A], () => j.A.getGuild(c), [c])),
+                    (d = (0, b.bG)([h.A], () => (null != s ? h.A.getGuildIncident(s.id) : null))),
+                    t
                         ? null
-                        : (0, i.jsx)(a.Dr, {
+                        : (0, l.jsx)(a.Dr, {
                               id: "nav-security-actions",
-                              label: A.intl.string(A.t.UgXhdn),
+                              label: T.intl.string(T.t.UgXhdn),
                               action: () => {
-                                  let t = { source: g.Eo.MESSAGE, alertType: (0, I.$5)(u) };
-                                  (0, m.openModalLazy)(async () => {
-                                      let { default: e } = await n.e("43233").then(n.bind(n, 671576));
-                                      return (n) => (0, i.jsx)(e, { ...n, guildId: s, analyticsData: t });
+                                  let e = { source: E.Eo.MESSAGE, alertType: (0, g.$5)(d) };
+                                  (0, p.openModalLazy)(async () => {
+                                      let { default: t } = await Promise.all([
+                                          n.e("43763"),
+                                          n.e("48486"),
+                                          n.e("8891"),
+                                          n.e("40258"),
+                                          n.e("73669"),
+                                          n.e("46313"),
+                                          n.e("43233"),
+                                          n.e("2098"),
+                                          n.e("97116"),
+                                      ]).then(n.bind(n, 671576));
+                                      return (n) => (0, l.jsx)(t, { ...n, guildId: c, analyticsData: e });
                                   });
                               },
                           })),
-                U =
-                    S === D.BRT.POPOUT
+                M =
+                    U === A.BRT.POPOUT
                         ? null
-                        : (0, i.jsx)(a.Dr, {
+                        : (0, l.jsx)(a.Dr, {
                               id: "nav-server-settings",
-                              label: A.intl.string(A.t["154/bL"]),
+                              label: T.intl.string(T.t["154/bL"]),
                               action: () => {
-                                  (0, c.jH)(), o.A.open(s, D.BEX.MODERATION);
+                                  (0, o.jH)(), u.A.open(c, A.BEX.MODERATION);
                               },
                           });
-            return (0, i.jsxs)(l.W, {
+            return (0, l.jsxs)(i.W, {
                 "data-menu-migrated-auto": !0,
                 navId: "moderation-raid-context",
-                onClose: d.Z_,
-                "aria-label": A.intl.string(A.t.liqwPJ),
-                onSelect: T,
-                children: [(0, i.jsx)(a.rX, { children: v }), (0, i.jsxs)(a.rX, { children: [U, p] })],
+                onClose: r.Z_,
+                "aria-label": T.intl.string(T.t.liqwPJ),
+                onSelect: x,
+                children: [(0, l.jsx)(a.rX, { children: I }), (0, l.jsxs)(a.rX, { children: [M, D] })],
             });
         },
-        { object: D.ZSU.CONTEXT_MENU },
+        { object: A.ZSU.CONTEXT_MENU },
     ),
-    [s.A.CONTEXT_MENU, s.A.GUILD_MODERATION_RAID_MENU],
+    [c.A.CONTEXT_MENU, c.A.GUILD_MODERATION_RAID_MENU],
 );

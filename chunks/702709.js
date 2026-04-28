@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     wx: "header__67a11",
     so: "headings__67a11",

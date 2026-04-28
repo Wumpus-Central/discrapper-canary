@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     ti: "profilePreviewContainer__0b5ea",
     Hm: "profileEffect__0b5ea",

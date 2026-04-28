@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__85015",
     UD: "buttonContainer__85015",

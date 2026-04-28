@@ -1,126 +1,126 @@
-n.d(t, { YC: () => V, zH: () => P, DD: () => M, RD: () => G, xb: () => k, vh: () => w }), n(667532);
-var i = n(64700),
-    l = n(91871),
-    s = n.n(l),
-    a = n(989349),
-    o = n.n(a),
-    r = n(17928),
-    d = n(554146),
-    c = n(334738),
-    u = n(999903),
-    h = n(47167),
-    p = n(826673),
-    _ = n(473529),
-    g = n(285114),
-    A = n(335871),
-    f = n(228366),
-    m = n(594061),
-    E = n(954571),
-    y = n(652215);
-async function S(e, t) {
-    await (0, m.TG)(
+t.d(n, { YC: () => x, zH: () => V, DD: () => y, RD: () => k, xb: () => B, vh: () => b }), t(667532);
+var l = t(64700),
+    i = t(91871),
+    a = t.n(i),
+    r = t(989349),
+    c = t.n(r),
+    o = t(17928),
+    u = t(554146),
+    s = t(334738),
+    h = t(999903),
+    d = t(47167),
+    _ = t(826673),
+    g = t(473529),
+    E = t(32603),
+    f = t(335871),
+    C = t(228366),
+    A = t(594061),
+    R = t(954571),
+    S = t(652215);
+async function I(e, n) {
+    await (0, A.TG)(
         e,
-        (e) => ((e.guildRecentsDismissedAt = A.D.fromDate(new Date())), !0),
-        m.Sb.INFREQUENT_USER_ACTION,
+        (e) => ((e.guildRecentsDismissedAt = f.D.fromDate(new Date())), !0),
+        A.Sb.INFREQUENT_USER_ACTION,
     ),
-        f.h.dispatch({ type: "BULK_CLEAR_RECENTS", guildId: e, channelIds: t }),
-        E.default.track(y.HAw.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
+        C.h.dispatch({ type: "BULK_CLEAR_RECENTS", guildId: e, channelIds: n }),
+        R.default.track(S.HAw.CHANNEL_LIST_UPDATED, { action_type: "recents_dismissed" });
 }
-var x = n(976860),
-    C = n(734057),
-    v = n(769765),
-    I = n(222823),
-    N = n(994500),
-    T = n(287809),
-    O = n(935208),
-    b = n(746080),
-    D = n(281405),
-    R = n(790782),
-    L = n(985018);
-function j(e, t) {
-    e.index = t;
+var L = t(976860),
+    N = t(734057),
+    D = t(769765),
+    p = t(222823),
+    U = t(994500),
+    w = t(287809),
+    m = t(935208),
+    T = t(746080),
+    G = t(281405),
+    H = t(790782),
+    M = t(985018);
+function O(e, n) {
+    e.index = n;
 }
-function w(e, t, n, l) {
-    l = l.toLowerCase();
-    let a = (0, _.d)(e),
-        o = i.useCallback(
-            (e, t) =>
-                !(a && e.channel.hasFlag(b.lx.IS_GUILD_RESOURCE_CHANNEL)) &&
-                e.channel.type !== y.rbe.GUILD_DIRECTORY &&
-                (0 === t.length ||
-                    s()(t, (0, h.m1)(e.channel, T.default, N.A).toLowerCase()) ||
-                    e.channel.topic.toLowerCase().includes(t)),
-            [a],
+function b(e, n, t, i) {
+    i = i.toLowerCase();
+    let r = (0, g.d)(e),
+        c = l.useCallback(
+            (e, n) =>
+                !(r && e.channel.hasFlag(T.lx.IS_GUILD_RESOURCE_CHANNEL)) &&
+                e.channel.type !== S.rbe.GUILD_DIRECTORY &&
+                (0 === n.length ||
+                    a()(n, (0, d.m1)(e.channel, w.default, U.A).toLowerCase()) ||
+                    e.channel.topic.toLowerCase().includes(n)),
+            [r],
         );
-    return i.useMemo(() => {
+    return l.useMemo(() => {
         let e = { null: [], _categories: [] };
         return (
-            n[y.rbe.GUILD_CATEGORY].forEach((n) => {
-                let { channel: i } = n;
-                "null" === i.id && (e.null = t.null.filter((e) => o(e, l))), (e[i.id] = t[i.id].filter((e) => o(e, l)));
+            t[S.rbe.GUILD_CATEGORY].forEach((t) => {
+                let { channel: l } = t;
+                "null" === l.id && (e.null = n.null.filter((e) => c(e, i))), (e[l.id] = n[l.id].filter((e) => c(e, i)));
             }),
-            (e._categories = t._categories.filter(
-                (t) => "null" === t.channel.id || 0 === l.length || e[t.channel.id].length > 0,
+            (e._categories = n._categories.filter(
+                (n) => "null" === n.channel.id || 0 === i.length || e[n.channel.id].length > 0,
             )),
-            (0, u.A)(e._categories, e).forEach(j),
+            (0, h.A)(e._categories, e).forEach(O),
             e
         );
-    }, [t, n, o, l]);
+    }, [n, t, c, i]);
 }
-function k(e) {
-    let t = e.getSections(!1);
-    if (t[g.PU] > 0)
+function B(e) {
+    let n = e.getSections(!1);
+    if (n[E.PU] > 0)
         switch (e.getGuildActionSection().getRow(0)) {
-            case D.n.GUILD_HOME:
-                return b.VV.GUILD_HOME;
-            case D.n.GUILD_ROLE_SUBSCRIPTIONS:
-                return b.VV.ROLE_SUBSCRIPTIONS;
-            case D.n.GUILD_MOD_DASH_MEMBER_SAFETY:
-                return b.VV.MEMBER_SAFETY;
+            case G.n.GUILD_HOME:
+                return T.VV.GUILD_HOME;
+            case G.n.GUILD_ROLE_SUBSCRIPTIONS:
+                return T.VV.ROLE_SUBSCRIPTIONS;
+            case G.n.GUILD_MOD_DASH_MEMBER_SAFETY:
+                return T.VV.MEMBER_SAFETY;
         }
-    for (let n = g.bK; n < e.voiceChannelsSectionNumber; n++)
-        if (t[n] > 0) {
-            let t = e.getChannelFromSectionRow(n, 0)?.channel;
-            if (null != t) return t.id;
+    for (let t = E.bK; t < e.voiceChannelsSectionNumber; t++)
+        if (n[t] > 0) {
+            let n = e.getChannelFromSectionRow(t, 0)?.channel;
+            if (null != n) return n.id;
         }
     return null;
 }
-function M(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    S(e, t),
-        (0, c.Uq)(t.map((e) => ({ channelId: e, readStateType: R.P.CHANNEL, messageId: I.Ay.lastMessageId(e) }))),
-        null != n && (0, x.pX)(y.BVt.CHANNEL(e, n));
+function y(e, n) {
+    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+    I(e, n),
+        (0, s.Uq)(n.map((e) => ({ channelId: e, readStateType: H.P.CHANNEL, messageId: p.Ay.lastMessageId(e) }))),
+        null != t && (0, L.pX)(S.BVt.CHANNEL(e, t));
 }
-function P(e, t, n, i) {
-    let l = (0, p.JZ)(d.M.CHANNEL_BROWSER_NUX),
-        s = (0, r.cf)([C.A], () => {
-            let t = {},
-                n = C.A.getMutableGuildChannelsForGuild(e);
-            for (let e in n) {
-                let { parent_id: i } = n[e];
-                null != i && (t[i] = (t[i] ?? 0) + 1);
+function V(e, n, t, l) {
+    let i = (0, _.JZ)(u.M.CHANNEL_BROWSER_NUX),
+        a = (0, o.cf)([N.A], () => {
+            let n = {},
+                t = N.A.getMutableGuildChannelsForGuild(e);
+            for (let e in t) {
+                let { parent_id: l } = t[e];
+                null != l && (n[l] = (n[l] ?? 0) + 1);
             }
-            return t;
+            return n;
         }, [e]),
-        a = t._categories.map((e) => {
-            let i = t[e.channel.id];
+        r = n._categories.map((e) => {
+            let l = n[e.channel.id];
             return {
-                rowCount: "null" !== e.channel.id && 0 === s[e.channel.id] ? 1 : i.length,
-                rowHeight: 0 === i.length ? 0 : n,
+                rowCount: "null" !== e.channel.id && 0 === a[e.channel.id] ? 1 : l.length,
+                rowHeight: 0 === l.length ? 0 : t,
             };
         });
-    return l || null == i || a.unshift({ rowCount: 1, rowHeight: i }), a;
+    return i || null == l || r.unshift({ rowCount: 1, rowHeight: l }), r;
 }
-function G(e) {
-    let t = (0, r.bG)([v.A], () => v.A.getCategories(e)),
-        n = t._categories.length,
-        i = t._categories[t._categories.length - 1];
-    if (null == i) return 0;
-    let l = t[i.channel?.id ?? "null"];
-    return null == l ? 0 : 0 === l.length ? i.index + 2 - n : l[l.length - 1].index + 2 - n;
+function k(e) {
+    let n = (0, o.bG)([D.A], () => D.A.getCategories(e)),
+        t = n._categories.length,
+        l = n._categories[n._categories.length - 1];
+    if (null == l) return 0;
+    let i = n[l.channel?.id ?? "null"];
+    return null == i ? 0 : 0 === i.length ? l.index + 2 - t : i[i.length - 1].index + 2 - t;
 }
-function V(e) {
-    return L.intl.formatToPlainString(L.t["8N0BHR"], {
-        timeAgo: o()(O.default.extractTimestamp(I.Ay.lastMessageId(e) ?? e)).fromNow(),
+function x(e) {
+    return M.intl.formatToPlainString(M.t["8N0BHR"], {
+        timeAgo: c()(m.default.extractTimestamp(p.Ay.lastMessageId(e) ?? e)).fromNow(),
     });
 }

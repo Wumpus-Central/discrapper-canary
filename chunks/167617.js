@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     up: "premiumPillWithSparkles__9f7e5",
     QX: "sparkleStar1__9f7e5",

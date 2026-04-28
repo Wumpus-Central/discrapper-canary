@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => u });
 var r = n(827343),
-    i = n(579872),
-    a = n(985018);
-function l(e, t) {
+    a = n(579872),
+    l = n(985018);
+function u(e, t) {
     e
-        ? i.A.show({ title: a.intl.string(a.t.QZ7WSS), body: a.intl.string(a.t.Tl9JpL) })
+        ? a.A.show({ title: l.intl.string(l.t.QZ7WSS), body: l.intl.string(l.t.Tl9JpL) })
         : r.A.toggleSelfDeaf({ location: t });
 }

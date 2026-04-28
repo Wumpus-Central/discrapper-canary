@@ -178,8 +178,7 @@ function H(e) {
             e?.preventDefault();
             let [t, i] = T.code.split("-");
             return (
-                n
-                    .e("49607")
+                Promise.all([n.e("21574"), n.e("49607")])
                     .then(n.bind(n, 811546))
                     .then((e) => {
                         let { openGuildProductLink: n } = e;

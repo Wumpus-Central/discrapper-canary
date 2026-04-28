@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => i });
-let i = (0, n(600975).C)({
+a.d(d, { A: () => i });
+let i = (0, a(600975).C)({
     kind: "user",
     id: "2025-11_tida_webform",
     label: "Tida Webform",

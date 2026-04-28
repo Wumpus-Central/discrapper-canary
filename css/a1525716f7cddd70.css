@@ -1,0 +1,10 @@
+.doubleInput__594ce {
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.doubleInput__594ce>div {
+    flex: 1 1 0;
+    width: 0
+}

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_c791b2",
     MY: "page_c791b2",

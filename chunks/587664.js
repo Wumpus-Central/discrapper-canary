@@ -1,8 +1,8 @@
-n.d(i, { default: () => ea });
+n.d(i, { default: () => et });
 var l = n(627968),
-    t = n(64700),
-    a = n(284009),
-    d = n.n(a),
+    a = n(64700),
+    t = n(284009),
+    d = n.n(t),
     s = n(17928),
     o = n(22231),
     r = n(192308),
@@ -13,27 +13,27 @@ var l = n(627968),
     p = n(231483),
     A = n(104510),
     b = n(555704),
-    h = n(245604),
-    x = n(234020),
-    f = n(782603),
-    j = n(952270),
-    v = n(686449),
+    x = n(245604),
+    h = n(234020),
+    j = n(782603),
+    f = n(952270),
+    D = n(686449),
     I = n(293260),
-    D = n(649308),
+    G = n(649308),
     m = n(735438),
-    G = n.n(m),
-    E = n(534890),
-    L = n(970278),
-    w = n(406704),
-    U = n(985018),
-    _ = n(323384),
+    L = n.n(m),
+    v = n(534890),
+    U = n(970278),
+    E = n(406704),
+    _ = n(985018),
+    C = n(323384),
     M = n(837057),
     T = n(310419),
-    C = n(488995),
-    H = n(346247),
-    N = n(810263),
-    P = n(214947);
-let k = (0, n(945810).mj)({
+    w = n(488995),
+    P = n(346247),
+    k = n(810263),
+    N = n(214947);
+let H = (0, n(945810).mj)({
     name: "2026-01-friends-in-server",
     kind: "user",
     defaultConfig: { guildFriendsEnabled: !1 },
@@ -41,17 +41,17 @@ let k = (0, n(945810).mj)({
 });
 var O = n(664967),
     S = n(531335),
-    W = n(957316),
-    X = n(974103),
+    X = n(957316),
+    B = n(974103),
     F = n(509536),
-    B = n(359047),
-    R = n(997509),
-    z = n(595818),
+    W = n(359047),
+    z = n(997509),
+    Y = n(595818),
     J = n(685073),
-    Y = n(534400),
-    V = n(857071),
-    Z = n(36942),
-    Q = n(260509),
+    R = n(534400),
+    Q = n(857071),
+    V = n(36942),
+    Z = n(260509),
     K = n(696451),
     $ = n(576705),
     q = n(543465),
@@ -59,14 +59,14 @@ var O = n(664967),
     ei = n(954571),
     en = n(652215),
     el = n(349828),
-    et = n(661023);
-let ea = t.memo(function (e) {
+    ea = n(661023);
+let et = a.memo(function (e) {
     let i,
-        a,
-        { guild: m, onClose: ea, onSelect: ed } = e,
+        t,
+        { guild: m, onClose: et, onSelect: ed } = e,
         es = (0, s.bG)([ee.default], () => ee.default.getCurrentUser());
     d()(null != es, "GuildHeaderPopout: user cannot be undefined"),
-        t.useEffect(() => {
+        a.useEffect(() => {
             ei.default.track(en.HAw.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: m.id });
         });
     let eo = (0, s.bG)([q.Ay], () => q.Ay.isGuildCollapsed(m.id), [m.id]),
@@ -84,76 +84,93 @@ let ea = t.memo(function (e) {
             }),
             [m],
         ),
-        eg = (0, X.ic)(m),
-        ey = (0, Q.bM)(m, es),
-        ep = (0, s.bG)([V.A], () => V.A.isLurking(m.id), [m.id]),
+        eg = (0, B.ic)(m),
+        ey = (0, Z.bM)(m, es),
+        ep = (0, s.bG)([Q.A], () => Q.A.isLurking(m.id), [m.id]),
         eA = (0, s.bG)([K.Ay], () => K.Ay.isCurrentUserGuest(m.id)),
-        eb = (0, B.A)(m.id, !0),
-        eh = (0, I.Ay)(m),
-        ex = (0, S.A)({ source: en.PE1.GUILD_HEADER, guild: m }),
-        ef = (0, H.A)({
+        eb = (0, W.A)(m.id, !0),
+        ex = (0, I.Ay)(m),
+        eh = (0, S.A)({ source: en.PE1.GUILD_HEADER, guild: m }),
+        ej = (0, P.A)({
             guildId: m.id,
             userId: es.id,
             analyticsLocation: { page: en.liQ.GUILD_CHANNEL, section: en.JJy.GUILD_DROPDOWN_MENU },
             icon: o.R,
         }),
-        ej = m.features.has(en.GuildFeatures.HUB),
-        ev = m.id === el.Vc,
+        ef = m.features.has(en.GuildFeatures.HUB),
+        eD = m.id === el.Vc,
         eI = m.id === en.gNP,
-        eD = (0, Z.A)(m.id, !0),
+        eG = (0, V.A)(m.id, !0),
         em =
-            ((i = (0, w.H_)(m)),
-            (a = (0, s.bG)([L.A], () => !G().isEmpty(L.A.getThreadsForGuild(m.id)))),
-            i && a
+            ((i = (0, E.H_)(m)),
+            (t = (0, s.bG)([U.A], () => !L().isEmpty(U.A.getThreadsForGuild(m.id)))),
+            i && t
                 ? (0, l.jsx)(u.Dr, {
                       id: "active-threads",
-                      label: U.intl.string(U.t.TM6err),
-                      icon: E.o,
-                      leadingAccessory: { type: "icon", icon: E.o },
+                      label: _.intl.string(_.t.TM6err),
+                      icon: v.o,
+                      leadingAccessory: { type: "icon", icon: v.o },
                       action: () => {
                           (0, r.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([n.e("65437"), n.e("51743"), n.e("28328")]).then(
-                                  n.bind(n, 400954),
-                              );
+                              let { default: e } = await Promise.all([
+                                  n.e("32245"),
+                                  n.e("47042"),
+                                  n.e("61748"),
+                                  n.e("73432"),
+                                  n.e("58337"),
+                                  n.e("26437"),
+                                  n.e("76602"),
+                                  n.e("28229"),
+                                  n.e("39970"),
+                                  n.e("8371"),
+                                  n.e("72789"),
+                                  n.e("12743"),
+                                  n.e("65437"),
+                                  n.e("90301"),
+                                  n.e("51743"),
+                                  n.e("92596"),
+                              ]).then(n.bind(n, 400954));
                               return (i) => (0, l.jsx)(e, { guildId: m.id, ...i });
                           });
                       },
                   })
                 : null),
-        eG = (0, l.jsx)(u.Dr, {
+        eL = (0, l.jsx)(u.Dr, {
             id: "application-directory",
-            label: U.intl.string(U.t.AKcFUj),
-            icon: _.k,
-            leadingAccessory: { type: "icon", icon: _.k },
+            label: _.intl.string(_.t.AKcFUj),
+            icon: C.k,
+            leadingAccessory: { type: "icon", icon: C.k },
             action: () => {
                 (0, M.transitionToGlobalDiscovery)({
-                    tab: C.GlobalDiscoveryTab.APPS,
+                    tab: w.GlobalDiscoveryTab.APPS,
                     newSessionState: { entrypoint: { name: T.sW.GUILD_HEADER_POPOUT }, guildId: m.id },
                 });
             },
         }),
-        eE = (0, O.A)(m, !0),
-        eL = (function (e) {
-            let { guildFriendsEnabled: i } = k.useConfig({ location: "useFriendsItem" });
+        ev = (0, O.A)(m, !0),
+        eU = (function (e) {
+            let { guildFriendsEnabled: i } = H.useConfig({ location: "useFriendsItem" });
             return i
                 ? (0, l.jsx)(u.Dr, {
                       id: "friends",
-                      label: U.intl.string(U.t.kYxEcH),
-                      icon: P.$,
-                      leadingAccessory: { type: "icon", icon: P.$ },
+                      label: _.intl.string(_.t.kYxEcH),
+                      icon: N.$,
+                      leadingAccessory: { type: "icon", icon: N.$ },
                       action: () => {
                           (0, r.openModalLazy)(async () => {
-                              let { default: i } = await n.e("42048").then(n.bind(n, 151203));
+                              let { default: i } = await Promise.all([n.e("23077"), n.e("42048")]).then(
+                                  n.bind(n, 151203),
+                              );
                               return (n) => (0, l.jsx)(i, { guild: e, ...n });
                           });
                       },
                   })
                 : null;
         })(m),
-        ew = (0, D.A)(),
-        eU = (0, N.A)(m, { showIcons: !0 }),
-        e_ = (0, J.Rg)(m) && (0, J.q0)(m),
-        eM = t.useCallback(() => {
+        eE = (0, G.A)(),
+        e_ = (0, k.A)(m, { showIcons: !0 }),
+        eC = (0, J.Rg)(m) && (0, J.q0)(m),
+        eM = a.useCallback(() => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await n.e("53485").then(n.bind(n, 20508));
                 return (i) => (0, l.jsx)(e, { ...i, guild: m });
@@ -165,70 +182,76 @@ let ea = t.memo(function (e) {
               onSelect: ed,
               navId: "guild-header-popout",
               variant: "fixed",
-              onClose: ea,
-              "aria-label": U.intl.string(U.t.HpQykc),
+              onClose: et,
+              "aria-label": _.intl.string(_.t.HpQykc),
               children: [
                   (0, l.jsx)(u.Dr, {
                       id: "leave-guild",
-                      label: U.intl.string(U.t.J2TBi3),
+                      label: _.intl.string(_.t.J2TBi3),
                       icon: g.o,
                       leadingAccessory: { type: "icon", icon: g.o },
                       action: () => {
-                          R.A.leaveGuild(m.id, !0);
+                          z.A.leaveGuild(m.id, !0);
                       },
                   }),
-                  (0, l.jsx)(u.rX, { children: eU }),
+                  (0, l.jsx)(u.rX, { children: e_ }),
               ],
           })
-        : ev
+        : eD
           ? (0, l.jsx)(c.W, {
                 "data-menu-migrated-auto": !0,
                 onSelect: ed,
                 navId: "favorites-header-popout",
                 variant: "fixed",
-                onClose: ea,
-                "aria-label": U.intl.string(U.t.HpQykc),
-                children: (0, l.jsx)(u.rX, { children: ew }),
+                onClose: et,
+                "aria-label": _.intl.string(_.t.HpQykc),
+                children: (0, l.jsx)(u.rX, { children: eE }),
             })
-          : ej
+          : ef
             ? (0, l.jsxs)(c.W, {
                   "data-menu-migrated": !0,
                   onSelect: ed,
                   navId: "guild-header-popout",
                   variant: "fixed",
-                  onClose: ea,
-                  "aria-label": U.intl.string(U.t.HpQykc),
+                  onClose: et,
+                  "aria-label": _.intl.string(_.t.HpQykc),
                   children: [
                       (0, l.jsxs)(u.rX, {
                           children: [
                               er
                                   ? (0, l.jsx)(u.Dr, {
                                         id: "settings",
-                                        label: U.intl.string(U.t["154/bL"]),
+                                        label: _.intl.string(_.t["154/bL"]),
                                         icon: y.Z,
                                         leadingAccessory: { type: "icon", icon: y.Z },
                                         action: () => {
-                                            R.A.open(m.id, (0, z.x)());
+                                            z.A.open(m.id, (0, Y.x)());
                                         },
                                     })
                                   : null,
-                              ex,
+                              eh,
                               (0, l.jsx)(u.Dr, {
                                   id: "privacy",
-                                  label: U.intl.string(U.t.BayiAo),
+                                  label: _.intl.string(_.t.BayiAo),
                                   icon: p.l,
                                   leadingAccessory: { type: "icon", icon: p.l },
                                   action: () =>
                                       (0, r.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
-                                              n.e("33098"),
+                                              n.e("87981"),
+                                              n.e("80813"),
+                                              n.e("43549"),
+                                              n.e("63497"),
+                                              n.e("54630"),
+                                              n.e("99053"),
+                                              n.e("17823"),
+                                              n.e("14093"),
                                               n.e("55595"),
-                                              n.e("14901"),
                                           ]).then(n.bind(n, 522566));
                                           return (i) => (0, l.jsx)(e, { ...i, guild: m });
                                       }),
                               }),
-                              ef,
+                              ej,
                           ],
                       }),
                       ey
@@ -236,7 +259,7 @@ let ea = t.memo(function (e) {
                           : (0, l.jsx)(u.rX, {
                                 children: (0, l.jsx)(u.Dr, {
                                     id: "leave",
-                                    label: U.intl.string(U.t.Dv8gFT),
+                                    label: _.intl.string(_.t.Dv8gFT),
                                     icon: g.o,
                                     leadingAccessory: { type: "icon", icon: g.o },
                                     color: "danger",
@@ -252,34 +275,34 @@ let ea = t.memo(function (e) {
                     onSelect: ed,
                     navId: "guild-header-popout",
                     variant: "fixed",
-                    onClose: ea,
-                    "aria-label": U.intl.string(U.t.HpQykc),
+                    onClose: et,
+                    "aria-label": _.intl.string(_.t.HpQykc),
                     children: [
                         (0, l.jsxs)(u.rX, {
                             children: [
                                 (0, l.jsx)(u.Dr, {
                                     id: "premium-subscribe",
-                                    label: U.intl.string(U.t.VJEVbu),
+                                    label: _.intl.string(_.t.VJEVbu),
                                     icon: A._,
                                     leadingAccessory: { type: "icon", icon: A._ },
                                     action: () => {
                                         (0, F.K4)({ guildId: m.id, location: { section: en.JJy.GUILD_HEADER_POPOUT } });
                                     },
                                 }),
-                                e_ &&
+                                eC &&
                                     (0, l.jsx)(u.Dr, {
                                         id: "guild-tag",
-                                        label: U.intl.string(et.default.mf2OwH),
+                                        label: _.intl.string(ea.default.mf2OwH),
                                         leadingAccessory: {
                                             type: "guildTag",
-                                            element: (0, l.jsx)(Y.o9, {
+                                            element: (0, l.jsx)(R.o9, {
                                                 guildId: m.id,
                                                 guildTag: m.profile.tag,
                                                 guildBadge: m.profile.badge ?? void 0,
                                                 inline: !1,
                                             }),
                                         },
-                                        icon: (0, l.jsx)(Y.o9, {
+                                        icon: (0, l.jsx)(R.o9, {
                                             guildId: m.id,
                                             guildBadge: m.profile.badge,
                                             guildTag: m.profile.tag,
@@ -291,8 +314,13 @@ let ea = t.memo(function (e) {
                                                 (e = m.id),
                                                 void (0, r.openModalLazy)(async () => {
                                                     let { default: i } = await Promise.all([
+                                                        n.e("73432"),
+                                                        n.e("94232"),
+                                                        n.e("61830"),
+                                                        n.e("75842"),
                                                         n.e("42749"),
-                                                        n.e("95407"),
+                                                        n.e("44790"),
+                                                        n.e("81785"),
                                                     ]).then(n.bind(n, 404128));
                                                     return (n) => (0, l.jsx)(i, { guildId: e, ...n });
                                                 })
@@ -303,25 +331,25 @@ let ea = t.memo(function (e) {
                         }),
                         (0, l.jsxs)(u.rX, {
                             children: [
-                                ex,
+                                eh,
                                 er
                                     ? (0, l.jsx)(u.Dr, {
                                           id: "settings",
-                                          label: U.intl.string(U.t["154/bL"]),
+                                          label: _.intl.string(_.t["154/bL"]),
                                           icon: y.Z,
                                           leadingAccessory: { type: "icon", icon: y.Z },
                                           action: () => {
-                                              R.A.open(m.id, (0, z.x)());
+                                              z.A.open(m.id, (0, Y.x)());
                                           },
                                       })
                                     : null,
                                 eu
                                     ? (0, l.jsx)(u.Dr, {
                                           id: "insights",
-                                          label: U.intl.string(U.t["0wWfUG"]),
+                                          label: _.intl.string(_.t["0wWfUG"]),
                                           icon: b.U,
                                           leadingAccessory: { type: "icon", icon: b.U },
-                                          action: () => R.A.open(m.id, en.BEX.ANALYTICS),
+                                          action: () => z.A.open(m.id, en.BEX.ANALYTICS),
                                       })
                                     : null,
                                 ec
@@ -329,16 +357,24 @@ let ea = t.memo(function (e) {
                                           children: [
                                               (0, l.jsx)(u.Dr, {
                                                   id: "create-channel",
-                                                  label: U.intl.string(U.t["fUYU+j"]),
-                                                  icon: h.U,
-                                                  leadingAccessory: { type: "icon", icon: h.U },
+                                                  label: _.intl.string(_.t["fUYU+j"]),
+                                                  icon: x.U,
+                                                  leadingAccessory: { type: "icon", icon: x.U },
                                                   action: () =>
                                                       (0, r.openModalLazy)(async () => {
                                                           let { default: e } = await Promise.all([
+                                                              n.e("77598"),
+                                                              n.e("11585"),
+                                                              n.e("3589"),
+                                                              n.e("89916"),
+                                                              n.e("60773"),
                                                               n.e("8018"),
-                                                              n.e("42282"),
+                                                              n.e("20379"),
+                                                              n.e("19193"),
+                                                              n.e("7775"),
+                                                              n.e("37038"),
+                                                              n.e("58608"),
                                                               n.e("9431"),
-                                                              n.e("43735"),
                                                           ]).then(n.bind(n, 113194));
                                                           return (i) =>
                                                               (0, l.jsx)(e, {
@@ -350,16 +386,24 @@ let ea = t.memo(function (e) {
                                               }),
                                               (0, l.jsx)(u.Dr, {
                                                   id: "create-category",
-                                                  label: U.intl.string(U.t["ISN+NM"]),
-                                                  icon: x.Y,
-                                                  leadingAccessory: { type: "icon", icon: x.Y },
+                                                  label: _.intl.string(_.t["ISN+NM"]),
+                                                  icon: h.Y,
+                                                  leadingAccessory: { type: "icon", icon: h.Y },
                                                   action: () =>
                                                       (0, r.openModalLazy)(async () => {
                                                           let { default: e } = await Promise.all([
+                                                              n.e("77598"),
+                                                              n.e("11585"),
+                                                              n.e("3589"),
+                                                              n.e("89916"),
+                                                              n.e("60773"),
                                                               n.e("8018"),
-                                                              n.e("42282"),
+                                                              n.e("20379"),
+                                                              n.e("19193"),
+                                                              n.e("7775"),
+                                                              n.e("37038"),
+                                                              n.e("58608"),
                                                               n.e("9431"),
-                                                              n.e("43735"),
                                                           ]).then(n.bind(n, 113194));
                                                           return (i) =>
                                                               (0, l.jsx)(e, {
@@ -374,41 +418,60 @@ let ea = t.memo(function (e) {
                                     : null,
                                 eb,
                                 em,
-                                eG,
-                                eh,
                                 eL,
+                                ex,
+                                eU,
                             ],
                         }),
                         (0, l.jsxs)(u.rX, {
                             children: [
-                                eD,
+                                eG,
                                 (0, l.jsx)(u.Dr, {
                                     id: "notifications",
-                                    label: U.intl.string(U.t.h850Ss),
-                                    icon: f.X,
-                                    leadingAccessory: { type: "icon", icon: f.X },
+                                    label: _.intl.string(_.t.h850Ss),
+                                    icon: j.X,
+                                    leadingAccessory: { type: "icon", icon: j.X },
                                     action: () =>
                                         (0, r.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
+                                                n.e("43763"),
+                                                n.e("80813"),
+                                                n.e("93855"),
+                                                n.e("73432"),
+                                                n.e("77598"),
+                                                n.e("20287"),
                                                 n.e("28367"),
+                                                n.e("20683"),
                                                 n.e("8555"),
+                                                n.e("35321"),
+                                                n.e("83952"),
+                                                n.e("38601"),
+                                                n.e("66580"),
+                                                n.e("94529"),
+                                                n.e("94832"),
+                                                n.e("56814"),
                                                 n.e("30282"),
-                                                n.e("41268"),
                                             ]).then(n.bind(n, 893605));
                                             return (i) => (0, l.jsx)(e, { ...i, guildId: m.id });
                                         }),
                                 }),
                                 (0, l.jsx)(u.Dr, {
                                     id: "privacy",
-                                    label: U.intl.string(U.t.BayiAo),
+                                    label: _.intl.string(_.t.BayiAo),
                                     icon: p.l,
                                     leadingAccessory: { type: "icon", icon: p.l },
                                     action: () =>
                                         (0, r.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                n.e("33098"),
+                                                n.e("87981"),
+                                                n.e("80813"),
+                                                n.e("43549"),
+                                                n.e("63497"),
+                                                n.e("54630"),
+                                                n.e("99053"),
+                                                n.e("17823"),
+                                                n.e("14093"),
                                                 n.e("55595"),
-                                                n.e("14901"),
                                             ]).then(n.bind(n, 522566));
                                             return (i) => (0, l.jsx)(e, { ...i, guild: m });
                                         }),
@@ -417,34 +480,34 @@ let ea = t.memo(function (e) {
                         }),
                         (0, l.jsxs)(u.rX, {
                             children: [
-                                ef,
+                                ej,
                                 (0, l.jsx)(u.sL, {
                                     id: "hide-muted-channels",
-                                    label: U.intl.string(U.t.UwOLJO),
-                                    leadingAccessory: { type: "icon", icon: j.G },
+                                    label: _.intl.string(_.t.UwOLJO),
+                                    leadingAccessory: { type: "icon", icon: f.G },
                                     checked: eo,
-                                    action: () => v.A.toggleCollapseGuild(m.id),
+                                    action: () => D.A.toggleCollapseGuild(m.id),
                                 }),
                             ],
                         }),
                         (0, l.jsxs)(u.rX, {
                             children: [
-                                eE,
+                                ev,
                                 eg && m.features.has(en.GuildFeatures.COMMUNITY)
                                     ? (0, l.jsx)(u.Dr, {
                                           id: "report-raid",
-                                          label: U.intl.string(U.t.cswId3),
+                                          label: _.intl.string(_.t.cswId3),
                                           icon: p.l,
                                           leadingAccessory: { type: "icon", icon: p.l },
                                           color: "danger",
-                                          action: () => (0, W.M)(m.id),
+                                          action: () => (0, X.M)(m.id),
                                       })
                                     : null,
                                 ey
                                     ? null
                                     : (0, l.jsx)(u.Dr, {
                                           id: "leave",
-                                          label: U.intl.string(U.t.J2TBi3),
+                                          label: _.intl.string(_.t.J2TBi3),
                                           icon: g.o,
                                           leadingAccessory: { type: "icon", icon: g.o },
                                           color: "danger",
@@ -452,7 +515,7 @@ let ea = t.memo(function (e) {
                                       }),
                             ],
                         }),
-                        (0, l.jsx)(u.rX, { children: eU }),
+                        (0, l.jsx)(u.rX, { children: e_ }),
                     ],
                 });
 });

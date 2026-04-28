@@ -1,123 +1,122 @@
-"use strict";
-n.d(t, { d: () => x });
-var l = n(627968);
-n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(123924),
-    r = n(717421),
-    o = n(834730),
-    c = n(315629),
-    u = n(565645);
-let d = (0, n(945810).mj)({
+t.d(i, { d: () => b });
+var n = t(627968);
+t(64700);
+var s = t(503698),
+    a = t.n(s),
+    r = t(123924),
+    l = t(717421),
+    o = t(834730),
+    d = t(315629),
+    m = t(565645);
+let c = (0, t(945810).mj)({
     name: "2026-03-soundboard-sound-preview",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var h = n(71393),
-    m = n(725807),
-    p = n(465794),
-    f = n(788868),
-    g = n(985018),
-    _ = n(379378);
-function x(e) {
+var u = t(71393),
+    x = t(725807),
+    j = t(465794),
+    v = t(788868),
+    p = t(985018),
+    h = t(379378);
+function b(e) {
     let {
-            showUpsell: t,
-            text: n,
-            textVariant: i,
-            button: c,
-            buttonAnalyticsObject: x,
-            className: A,
-            onSubscribeModalClose: E,
+            showUpsell: i,
+            text: t,
+            textVariant: s,
+            button: d,
+            buttonAnalyticsObject: b,
+            className: g,
+            onSubscribeModalClose: N,
             position: I = "floating",
-            useGradientBg: v = !1,
-            hoveredNitroLockedSound: y,
-            useUpdatedStyling: b = !1,
-            subscribeButtonVariantOverride: S,
-            useLegacyButton: N = !1,
-            leadingAction: j,
+            useGradientBg: k = !1,
+            hoveredNitroLockedSound: C,
+            useUpdatedStyling: w = !1,
+            subscribeButtonVariantOverride: y,
+            useLegacyButton: A = !1,
+            leadingAction: E,
         } = e,
-        { enabled: T } = d.useConfig({ location: "PremiumFloatingPickerUpsell" }),
-        w = (0, r.z)({
-            transform: t ? "translateY(0%)" : "translateY(120%)",
-            opacity: +!!t,
+        { enabled: M } = c.useConfig({ location: "PremiumFloatingPickerUpsell" }),
+        O = (0, l.z)({
+            transform: i ? "translateY(0%)" : "translateY(120%)",
+            opacity: +!!i,
             config: { tension: 120, friction: 14 },
         }),
-        R = T && null != y,
-        L = y?.emojiId != null || y?.emojiName != null,
-        k = n;
-    if (R) {
-        let e = h.A.getGuild(y.guildId);
-        k = g.intl.format(g.t.eku049, { serverName: e?.name ?? g.intl.string(g.t.DmIUGK) });
+        T = M && null != C,
+        Z = C?.emojiId != null || C?.emojiName != null,
+        _ = t;
+    if (T) {
+        let e = u.A.getGuild(C.guildId);
+        _ = p.intl.format(p.t.eku049, { serverName: e?.name ?? p.intl.string(p.t.DmIUGK) });
     }
-    return (0, l.jsx)(a.animated.div, {
-        style: { ...w },
-        className: s()(_.Zj, v && _.Me, b && _.ww, R && _.u8, { [_.tO]: "floating" === I, [_.Kx]: "inline" === I }, A),
-        children: (0, l.jsxs)(C, {
-            hasPreviewSound: R,
-            useGradientBg: v,
+    return (0, n.jsx)(r.animated.div, {
+        style: { ...O },
+        className: a()(h.Zj, k && h.Me, w && h.ww, T && h.u8, { [h.tO]: "floating" === I, [h.Kx]: "inline" === I }, g),
+        children: (0, n.jsxs)(f, {
+            hasPreviewSound: T,
+            useGradientBg: k,
             children: [
-                R &&
-                    (0, l.jsxs)("div", {
-                        className: _.Ed,
+                T &&
+                    (0, n.jsxs)("div", {
+                        className: h.Ed,
                         children: [
-                            (0, l.jsxs)("div", {
-                                className: _.vg,
+                            (0, n.jsxs)("div", {
+                                className: h.vg,
                                 children: [
-                                    L && (0, l.jsx)(u.A, { emojiId: y.emojiId, emojiName: y.emojiName }),
-                                    (0, l.jsx)(o.E, {
+                                    Z && (0, n.jsx)(m.A, { emojiId: C.emojiId, emojiName: C.emojiName }),
+                                    (0, n.jsx)(o.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
-                                        children: y.name,
+                                        children: C.name,
                                     }),
                                 ],
                             }),
-                            (0, l.jsx)(o.E, {
+                            (0, n.jsx)(o.E, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                className: _.Fr,
-                                children: k ?? n,
+                                className: h.Fr,
+                                children: _ ?? t,
                             }),
                         ],
                     }),
-                !R &&
-                    (0, l.jsx)(o.E, {
-                        variant: i ?? "text-sm/medium",
+                !T &&
+                    (0, n.jsx)(o.E, {
+                        variant: s ?? "text-sm/medium",
                         color: "text-strong",
-                        className: _.tD,
-                        children: n,
+                        className: h.tD,
+                        children: t,
                     }),
-                null != j && (0, l.jsx)("div", { className: _.Zv, children: j }),
-                "string" == typeof c
-                    ? N
-                        ? (0, l.jsx)(m.A, {
+                null != E && (0, n.jsx)("div", { className: h.Zv, children: E }),
+                "string" == typeof d
+                    ? A
+                        ? (0, n.jsx)(x.A, {
                               size: "m",
-                              className: _.Z3,
-                              shinyButtonClassName: _.Z3,
-                              subscriptionTier: f.pe.TIER_2,
-                              textOptions: { textOverride: c },
-                              premiumModalAnalyticsLocation: x,
-                              tabIndex: t ? 0 : -1,
-                              onSubscribeModalClose: E,
+                              className: h.Z3,
+                              shinyButtonClassName: h.Z3,
+                              subscriptionTier: v.pe.TIER_2,
+                              textOptions: { textOverride: d },
+                              premiumModalAnalyticsLocation: b,
+                              tabIndex: i ? 0 : -1,
+                              onSubscribeModalClose: N,
                           })
-                        : (0, l.jsx)(p.A, {
+                        : (0, n.jsx)(j.A, {
                               size: "sm",
-                              subscriptionTier: f.pe.TIER_2,
-                              buttonTextOverride: c,
-                              premiumModalAnalyticsLocation: x,
-                              tabIndex: t ? 0 : -1,
-                              onSubscribeModalClose: E,
-                              variantOverride: S,
+                              subscriptionTier: v.pe.TIER_2,
+                              buttonTextOverride: d,
+                              premiumModalAnalyticsLocation: b,
+                              tabIndex: i ? 0 : -1,
+                              onSubscribeModalClose: N,
+                              variantOverride: y,
                           })
-                    : c,
+                    : d,
             ],
         }),
     });
 }
-function C(e) {
-    let { hasPreviewSound: t, useGradientBg: n, children: i } = e;
-    return n
-        ? (0, l.jsx)(c.h, { color: "nitro-pink", offsetBottom: -3, className: s()(_.nC, { [_.u8]: t }), children: i })
-        : i;
+function f(e) {
+    let { hasPreviewSound: i, useGradientBg: t, children: s } = e;
+    return t
+        ? (0, n.jsx)(d.h, { color: "nitro-pink", offsetBottom: -3, className: a()(h.nC, { [h.u8]: i }), children: s })
+        : s;
 }

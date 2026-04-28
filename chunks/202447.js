@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     zc: "iconContainer_a1f71e",
     XM: "popoutWrapper_a1f71e",

@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     y5: "compactBarContainer__8e688",
     nI: "compactBarBackground__8e688",
     Jn: "compactBarScrollbarBackground__8e688",

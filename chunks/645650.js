@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     b9: "applicationEducation__526cc",
     a9: "sectionLabel__526cc",

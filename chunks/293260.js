@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { Ay: () => m, CB: () => _, c0: () => p });
-var a = n(627968);
-n(64700);
-var r = n(17928),
-    i = n(231723),
-    l = n(192308);
-if (21552 == n.j) var s = n(477782);
-if (21552 == n.j) var o = n(173936);
-var c = n(317525),
-    d = n(370480),
-    u = n(985018);
-let _ = "guild-connection-roles";
-function p(e) {
-    (0, l.openModalLazy)(
+i.d(n, { Ay: () => h, CB: () => p, c0: () => g });
+var o = i(627968);
+i(64700);
+var t = i(17928),
+    l = i(231723),
+    s = i(192308);
+if (21552 == i.j) var a = i(477782);
+if (21552 == i.j) var c = i(173936);
+var d = i(317525),
+    r = i(370480),
+    u = i(985018);
+let p = "guild-connection-roles";
+function g(e) {
+    (0, s.openModalLazy)(
         async () => {
-            let { default: t } = await n.e("92837").then(n.bind(n, 480900));
-            return (n) => (0, a.jsx)(t, { ...n, guildId: e });
+            let { default: n } = await Promise.all([i.e("57568"), i.e("92837")]).then(i.bind(i, 480900));
+            return (i) => (0, o.jsx)(n, { ...i, guildId: e });
         },
         {
-            modalKey: _,
-            contextKey: i.SY,
+            modalKey: p,
+            contextKey: l.SY,
             onCloseRequest: () => {
-                (0, l.closeModal)(_, i.SY);
+                (0, s.closeModal)(p, l.SY);
             },
         },
     );
 }
-function m(e) {
-    return (0, r.bG)([c.A], () => (0, d.N8)(c.A.getSortedRoles(e.id)), [e])
-        ? (0, a.jsx)(s.Dr, {
+function h(e) {
+    return (0, t.bG)([d.A], () => (0, r.N8)(d.A.getSortedRoles(e.id)), [e])
+        ? (0, o.jsx)(a.Dr, {
               id: "guild-connection-roles",
               label: u.intl.string(u.t.ghtnss),
-              icon: o.q,
-              leadingAccessory: { type: "icon", icon: o.q },
-              action: () => p(e.id),
+              icon: c.q,
+              leadingAccessory: { type: "icon", icon: c.q },
+              action: () => g(e.id),
           })
         : null;
 }

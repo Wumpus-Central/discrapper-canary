@@ -27,9 +27,17 @@ function h(e) {
     null != t &&
         (s === c.P0.BAD
             ? (0, r.openModalLazy)(async () => {
-                  let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("64945")]).then(
-                      n.bind(n, 447696),
-                  );
+                  let { default: e } = await Promise.all([
+                      n.e("48486"),
+                      n.e("56030"),
+                      n.e("8891"),
+                      n.e("18413"),
+                      n.e("22255"),
+                      n.e("55925"),
+                      n.e("85033"),
+                      n.e("26484"),
+                      n.e("352"),
+                  ]).then(n.bind(n, 447696));
                   return (n) => (0, l.jsx)(e, { ...n, onSubmit: (e) => d(t, i, e), startRating: s });
               })
             : d(t, i, { rating: s, problem: null, feedback: "", dontShowAgain: !1 }));

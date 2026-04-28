@@ -1,113 +1,112 @@
-"use strict";
-n.d(t, { u: () => g });
-var r = n(627968),
-    a = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    s = n(140735),
-    o = n(353795),
-    c = n(834730),
-    d = n(750506),
-    u = n(237140),
-    _ = n(112317),
-    p = n(348275),
-    f = n(505679),
-    m = n(521754),
-    h = n(600525);
-function g(e) {
+l.d(t, { u: () => f });
+var n = l(627968),
+    i = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    r = l(140735),
+    c = l(353795),
+    o = l(834730),
+    u = l(750506),
+    d = l(237140),
+    h = l(112317),
+    m = l(348275),
+    p = l(505679),
+    x = l(521754),
+    j = l(600525);
+function f(e) {
     let {
             children: t,
-            title: n,
-            body: i,
-            asset: g,
-            assetSize: b = 48,
-            padding: A = "default",
-            asContainer: E = !1,
-            element: v = "span",
-            position: I = "top",
-            align: y = "center",
-            spacing: x,
-            caretConfig: S,
-            layerContext: T,
-            targetElementRef: C,
+            title: l,
+            body: s,
+            asset: f,
+            assetSize: g = 48,
+            padding: E = "default",
+            asContainer: v = !1,
+            element: y = "span",
+            position: R = "top",
+            align: b = "center",
+            spacing: k,
+            caretConfig: C,
+            layerContext: w,
+            targetElementRef: S,
             anchorRef: N,
-            positionKey: R,
-            ariaHidden: w = !1,
-            ...L
+            positionKey: T,
+            ariaHidden: V = !1,
+            ..._
         } = e,
-        [M, O] = a.useState(null);
-    a.useLayoutEffect(() => {
-        null != N && O(N.current);
+        [K, P] = i.useState(null);
+    i.useLayoutEffect(() => {
+        null != N && P(N.current);
     }, [N]);
-    let D = a.useCallback(
+    let X = i.useCallback(
             (e) => {
-                null == N && O(e), (0, p.cZ)(C, e);
+                null == N && P(e), (0, m.cZ)(S, e);
             },
-            [C, N],
+            [S, N],
         ),
         {
-            tooltipId: P,
-            isVisible: j,
-            targetElementRef: k,
-            trigger: U,
-        } = (0, m.D)({ children: t, targetElementRef: D, asContainer: E, containerTag: v, ariaHidden: w, ...L }),
-        F = null != n && ("string" != typeof n || "" !== n),
-        B = null != g && !a.isValidElement(g),
-        G = a.useMemo(
+            tooltipId: $,
+            isVisible: A,
+            targetElementRef: B,
+            trigger: D,
+        } = (0, x.D)({ children: t, targetElementRef: X, asContainer: v, containerTag: y, ariaHidden: V, ..._ }),
+        F = null != l && ("string" != typeof l || "" !== l),
+        L = null != f && !i.isValidElement(f),
+        M = i.useMemo(
             () =>
-                (0, r.jsxs)("div", {
-                    className: l()(h.jk, { [h.eb]: null == g, [h.Sx]: "lg" === A }),
+                (0, n.jsxs)("div", {
+                    className: a()(j.jk, { [j.eb]: null == f, [j.Sx]: "lg" === E }),
                     children: [
-                        null != g &&
-                            (0, r.jsx)("div", {
-                                className: h.s,
-                                style: { width: b },
-                                children: B ? (0, r.jsx)(o.v, { ...g }) : g,
+                        null != f &&
+                            (0, n.jsx)("div", {
+                                className: j.s,
+                                style: { width: g },
+                                children: L ? (0, n.jsx)(c.v, { ...f }) : f,
                             }),
-                        (0, r.jsxs)("div", {
-                            className: h.P_,
+                        (0, n.jsxs)("div", {
+                            className: j.P_,
                             children: [
-                                F && (0, r.jsx)(c.E, { variant: "text-sm/medium", children: n }),
-                                (0, r.jsx)(c.E, {
+                                F && (0, n.jsx)(o.E, { variant: "text-sm/medium", children: l }),
+                                (0, n.jsx)(o.E, {
                                     variant: "text-sm/normal",
                                     color: F ? "text-subtle" : "text-default",
-                                    children: i,
+                                    children: s,
                                 }),
                             ],
                         }),
                     ],
                 }),
-            [g, b, A, n, i, F, B],
+            [f, g, E, l, s, F, L],
         ),
-        V = R ?? `${(0, p.Xj)(n ?? "")}|${(0, p.Xj)(i)}`,
-        H = (0, f.j)({ shouldShow: j });
-    if (!E && !a.isValidElement(t)) return null;
-    let W = H((e, t) =>
+        Y = T ?? `${(0, m.Xj)(l ?? "")}|${(0, m.Xj)(s)}`,
+        Z = (0, p.j)({ shouldShow: A });
+    if (!v && !i.isValidElement(t)) return null;
+    let q = Z((e, t) =>
         t
-            ? (0, r.jsx)(_.Bc, {
+            ? (0, n.jsx)(h.Bc, {
                   isRichTooltip: !0,
-                  richTooltipPadding: A,
-                  children: (0, r.jsx)(u.R, {
-                      isVisible: j,
+                  richTooltipPadding: E,
+                  children: (0, n.jsx)(d.R, {
+                      isVisible: A,
                       isRendered: !0,
-                      targetElementRef: k,
-                      targetElement: M,
+                      targetElementRef: B,
+                      targetElement: K,
                       anchorRef: N,
-                      id: P,
-                      content: G,
-                      position: I,
-                      align: y,
-                      spacing: x,
-                      caretConfig: S,
-                      layerContext: T ?? d.uY,
+                      id: $,
+                      content: M,
+                      position: R,
+                      align: b,
+                      spacing: k,
+                      caretConfig: C,
+                      layerContext: w ?? u.uY,
                       animationStyle: e,
-                      positionKey: V,
+                      positionKey: Y,
                       "data-mana-component": "rich-tooltip",
                   }),
               })
             : null,
     );
-    return (0, r.jsxs)(r.Fragment, {
-        children: [U, w || null == G ? null : (0, r.jsx)(s.A, { id: P, children: G }), W],
+    return (0, n.jsxs)(n.Fragment, {
+        children: [D, V || null == M ? null : (0, n.jsx)(r.A, { id: $, children: M }), q],
     });
 }

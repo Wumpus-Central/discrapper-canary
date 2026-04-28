@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C, MemberListContentSettingsMenu: () => x });
+n.d(t, { A: () => A, MemberListContentSettingsMenu: () => C });
 var l = n(627968),
     i = n(64700),
     s = n(17928),
@@ -14,8 +14,8 @@ var l = n(627968),
     p = n(180170),
     f = n(435738),
     g = n(652215),
-    _ = n(985018);
-let x = (e) => {
+    x = n(985018);
+let C = (e) => {
         let { closePopout: t } = e,
             i = (0, s.bG)([f.A], () => f.A.hidden);
         return (0, l.jsx)(a.W, {
@@ -23,17 +23,22 @@ let x = (e) => {
             onSelect: () => {},
             navId: "member-list-settings-menu",
             onClose: null != t ? t : g.tEg,
-            "aria-label": _.intl.string(_.t.w2jvOf),
+            "aria-label": x.intl.string(x.t.w2jvOf),
             children: (0, l.jsxs)(r.rX, {
                 children: [
                     (0, l.jsx)(r.Dr, {
                         id: "about",
-                        label: _.intl.string(_.t.pWLGnF),
+                        label: x.intl.string(x.t.pWLGnF),
                         leadingAccessory: { type: "icon", icon: o.m },
                         icon: o.m,
                         action: () => {
                             (0, c.openModalLazy)(async () => {
-                                let { default: e } = await n.e("90309").then(n.bind(n, 643460));
+                                let { default: e } = await Promise.all([
+                                    n.e("10434"),
+                                    n.e("29852"),
+                                    n.e("51778"),
+                                    n.e("90309"),
+                                ]).then(n.bind(n, 643460));
                                 return (t) => (0, l.jsx)(e, { ...t });
                             }),
                                 t?.();
@@ -41,7 +46,7 @@ let x = (e) => {
                     }),
                     (0, l.jsx)(r.sL, {
                         id: "hide",
-                        label: _.intl.string(_.t.AhNYuY),
+                        label: x.intl.string(x.t.AhNYuY),
                         checked: i,
                         leadingAccessory: { type: "icon", icon: u.G },
                         action: () => {
@@ -52,7 +57,7 @@ let x = (e) => {
             }),
         });
     },
-    C = () => {
+    A = () => {
         let e = i.useRef(null);
         return (0, l.jsx)(d.Y, {
             targetElementRef: e,
@@ -61,7 +66,7 @@ let x = (e) => {
             align: "right",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, l.jsx)(x, { closePopout: t });
+                return (0, l.jsx)(C, { closePopout: t });
             },
             children: (t) =>
                 (0, l.jsx)(h.D, {

@@ -1,118 +1,118 @@
-n.r(t), n.d(t, { default: () => ez });
-var a = n(627968),
-    s = n(64700),
-    i = n(687966),
-    l = n(17928),
-    r = n(777666),
-    d = n(834730),
-    c = n(289873),
-    o = n(364522),
-    u = n(780907),
-    _ = n(58736),
-    m = n(208039),
-    x = n(71393),
-    f = n(975571),
-    g = n(363487),
-    v = n(665171),
-    j = n(397400),
-    h = n(187549),
-    p = n(522055),
-    E = n(969117),
-    C = n(289704),
-    I = n(192308),
-    b = n(534514),
-    N = n(821609),
-    S = n(104510),
-    A = n(793574),
-    R = n(688810),
-    M = n(987144),
-    y = n(828162),
-    k = n(366010),
-    G = n(736653),
-    T = n(303136),
-    L = n(676279),
-    D = n(702730);
-function P(e) {
+s.r(t), s.d(t, { default: () => eK });
+var n = s(627968),
+    a = s(64700),
+    l = s(687966),
+    i = s(17928),
+    r = s(777666),
+    d = s(834730),
+    c = s(289873),
+    o = s(364522),
+    u = s(780907),
+    m = s(58736),
+    x = s(208039),
+    f = s(71393),
+    j = s(975571),
+    g = s(363487),
+    v = s(665171),
+    h = s(397400),
+    E = s(187549),
+    N = s(522055),
+    p = s(969117),
+    A = s(289704),
+    S = s(192308),
+    C = s(534514),
+    I = s(821609),
+    b = s(104510),
+    R = s(793574),
+    M = s(688810),
+    y = s(987144),
+    _ = s(828162),
+    T = s(366010),
+    G = s(736653),
+    k = s(303136),
+    P = s(676279),
+    D = s(702730);
+function L(e) {
     let { className: t } = e,
-        n = (0, G.Ay)(),
-        s = (0, k.q)(n),
-        i = (0, L.TM)()
-            ? s
+        s = (0, G.Ay)(),
+        a = (0, T.q)(s),
+        l = (0, P.TM)()
+            ? a
                 ? "https://cdn.discordapp.com/assets/content/69d4b14501d44f2aec986761083e10f965087103272626a5db7505f48986f1fd.mp4"
                 : "https://cdn.discordapp.com/assets/content/47dc147701661ba3fabce79f4ce1b2bd45760d8c7c9dc70082fca884101bdb1f.mp4"
-            : s
+            : a
               ? "https://cdn.discordapp.com/assets/content/c027e64cb04ec91b12b8af40e11aca80f00279bdb1418e54b7d8cd216e899a2f.webm"
               : "https://cdn.discordapp.com/assets/content/d6dd3399e1bd603866173dc35c95729620b6e6840ed3392941662e8dd188eb9d.webm";
-    return (0, a.jsxs)("div", {
+    return (0, n.jsxs)("div", {
         className: t,
         children: [
-            (0, a.jsx)("div", { className: D.YL }),
-            (0, a.jsx)(
-                T.A,
+            (0, n.jsx)("div", { className: D.YL }),
+            (0, n.jsx)(
+                k.A,
                 {
-                    fallbackImage: s
+                    fallbackImage: a
                         ? "https://cdn.discordapp.com/assets/content/d8e2decd311794ae583d9165897e2b70181ec10c3553511d03bbeb3876a3f0af.png"
                         : "https://cdn.discordapp.com/assets/content/da80e999bcef3fc647b6697e4b4cbe396505f1517f06fe6e47eb4e24c5538bc9.png",
-                    children: (0, a.jsx)("source", { src: i }),
+                    children: (0, n.jsx)("source", { src: l }),
                 },
-                i,
+                l,
             ),
         ],
     });
 }
-var O = n(423800);
+var O = s(423800);
 function F(e) {
-    let { children: t, actions: n } = e;
-    return (0, a.jsx)("div", {
+    let { children: t, actions: s } = e;
+    return (0, n.jsx)("div", {
         className: O.Nr,
-        children: (0, a.jsxs)("div", {
+        children: (0, n.jsxs)("div", {
             className: O.FG,
             children: [
                 t,
-                null != n &&
-                    (0, a.jsxs)(a.Fragment, {
+                null != s &&
+                    (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, a.jsx)("div", { className: O.yF }),
-                            (0, a.jsx)("div", { className: O.fH, children: n }),
+                            (0, n.jsx)("div", { className: O.yF }),
+                            (0, n.jsx)("div", { className: O.fH, children: s }),
                         ],
                     }),
             ],
         }),
     });
 }
-var U = n(604397);
-function B() {
-    let e = (0, a.jsx)("div", { className: U.Uy });
-    return (0, a.jsx)(F, {
+var U = s(604397);
+function V() {
+    let e = (0, n.jsx)("div", { className: U.Uy });
+    return (0, n.jsx)(F, {
         actions: e,
-        children: (0, a.jsx)("div", {
+        children: (0, n.jsx)("div", {
             className: U.nV,
-            children: (0, a.jsxs)("div", {
+            children: (0, n.jsxs)("div", {
                 className: U.dZ,
                 children: [
-                    (0, a.jsxs)("div", {
+                    (0, n.jsxs)("div", {
                         className: U.fA,
                         children: [
-                            (0, a.jsx)("div", { className: U.Su }),
-                            (0, a.jsxs)("div", {
+                            (0, n.jsx)("div", { className: U.Su }),
+                            (0, n.jsxs)("div", {
                                 className: U.CR,
                                 children: [
-                                    (0, a.jsx)("div", { className: U.Nl }),
-                                    (0, a.jsx)("div", { className: U.dj }),
+                                    (0, n.jsx)("div", { className: U.Nl }),
+                                    (0, n.jsx)("div", { className: U.dj }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, a.jsx)("div", {
+                    (0, n.jsx)("div", {
                         className: U.l8,
                         children: Array.from({ length: 4 }).map((e, t) =>
-                            (0, a.jsxs)(
+                            (0, n.jsxs)(
                                 "div",
                                 {
                                     className: U.TE,
                                     children: [
-                                        (0, a.jsx)("div", { className: U.D4 }),
-                                        (0, a.jsx)("div", { className: U._o }),
+                                        (0, n.jsx)("div", { className: U.D4 }),
+                                        (0, n.jsx)("div", { className: U._o }),
                                     ],
                                 },
                                 t,
@@ -124,85 +124,85 @@ function B() {
         }),
     });
 }
-var V = n(800007),
-    w = n(652215),
-    W = n(576709),
-    $ = n(985018);
-function z(e) {
+var $ = s(800007),
+    z = s(652215),
+    w = s(576709),
+    B = s(985018);
+function K(e) {
     let { guildId: t } = e,
-        i = (0, g.A)(t),
-        l = s.useRef(null),
-        { analyticsLocations: r } = (0, R.Ay)(A.A.GAME_SERVER_PAGE),
-        c = s.useCallback(() => {
-            let e = x.A.getGuild(t);
+        l = (0, g.A)(t),
+        i = a.useRef(null),
+        { analyticsLocations: r } = (0, M.Ay)(R.A.GAME_SERVER_PAGE),
+        c = a.useCallback(() => {
+            let e = f.A.getGuild(t);
             null != e &&
-                (0, M.g)({
-                    analyticsLocation: { page: w.liQ.GAME_SERVERS, section: w.JJy.GAME_SERVERS_EMPTY_STATE },
+                (0, y.g)({
+                    analyticsLocation: { page: z.liQ.GAME_SERVERS, section: z.JJy.GAME_SERVERS_EMPTY_STATE },
                     numberOfBoostsToAdd: 1,
                     analyticsLocations: r,
                     guild: e,
                 });
         }, [t, r]),
-        o = s.useCallback(() => {
-            (0, y.A)(t, A.A.GAME_SERVER_PAGE, V.W5);
+        o = a.useCallback(() => {
+            (0, _.A)(t, R.A.GAME_SERVER_PAGE, $.W5);
         }, [t]),
-        u = s.useCallback(() => {
-            (0, I.openModalLazy)(async () => {
-                let { default: e } = await n.e("2872").then(n.bind(n, 128459));
-                return (n) => (0, a.jsx)(e, { ...n, guildId: t });
+        u = a.useCallback(() => {
+            (0, S.openModalLazy)(async () => {
+                let { default: e } = await s.e("2872").then(s.bind(s, 128459));
+                return (s) => (0, n.jsx)(e, { ...s, guildId: t });
             });
         }, [t]);
-    return (0, a.jsxs)("div", {
+    return (0, n.jsxs)("div", {
         className: D.kL,
         children: [
-            (0, a.jsx)(P, { className: D.y2 }),
-            (0, a.jsxs)("div", {
+            (0, n.jsx)(L, { className: D.y2 }),
+            (0, n.jsxs)("div", {
                 className: D.Qs,
                 children: [
-                    (0, a.jsx)("div", {
-                        ref: l,
+                    (0, n.jsx)("div", {
+                        ref: i,
                         className: D._q,
-                        children: (0, a.jsx)(C.E, { eventTargetRef: l, fit: "contain", stateMachine: "SM_Main_Int" }),
+                        children: (0, n.jsx)(A.E, { eventTargetRef: i, fit: "contain", stateMachine: "SM_Main_Int" }),
                     }),
-                    (0, a.jsx)(b.D, {
+                    (0, n.jsx)(C.D, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",
-                        children: i ? $.intl.string(W.default.SbXvFG) : $.intl.string(W.default.ryqCyJ),
+                        children: l ? B.intl.string(w.default.SbXvFG) : B.intl.string(w.default.ryqCyJ),
                     }),
-                    (0, a.jsx)(d.E, {
+                    (0, n.jsx)(d.E, {
                         variant: "text-sm/normal",
                         color: "text-muted",
                         className: D.h_,
-                        children: i ? $.intl.string(W.default.D1YcNp) : $.intl.string(W.default.iSX4z8),
+                        children: l ? B.intl.string(w.default.D1YcNp) : B.intl.string(w.default.iSX4z8),
                     }),
-                    (0, a.jsx)("div", {
+                    (0, n.jsx)("div", {
                         className: D.Uo,
-                        children: i
-                            ? (0, a.jsxs)(a.Fragment, {
+                        children: l
+                            ? (0, n.jsxs)(n.Fragment, {
                                   children: [
-                                      (0, a.jsx)(N.$, {
+                                      (0, n.jsx)(I.$, {
                                           variant: "expressive",
-                                          text: $.intl.string($.t.LhlgY9),
+                                          text: B.intl.string(B.t.LhlgY9),
                                           onClick: o,
                                       }),
-                                      (0, a.jsx)(N.$, {
+                                      (0, n.jsx)(I.$, {
                                           variant: "secondary",
-                                          text: $.intl.string(W.default.fxIXv4),
+                                          text: B.intl.string(w.default.fxIXv4),
                                           onClick: u,
                                       }),
                                   ],
                               })
-                            : (0, a.jsxs)(a.Fragment, {
+                            : (0, n.jsxs)(n.Fragment, {
                                   children: [
-                                      (0, a.jsx)(N.$, {
+                                      (0, n.jsx)(I.$, {
                                           variant: "expressive",
-                                          icon: S._,
-                                          text: $.intl.string(W.default["968/QC"]),
+                                          icon: b._,
+                                          text: B.intl.string(w.default["968/QC"]),
                                           onClick: c,
                                       }),
-                                      (0, a.jsx)(N.$, {
+                                      (0, n.jsx)(I.$, {
                                           variant: "secondary",
-                                          text: $.intl.string(W.default.fxIXv4),
+                                          text: B.intl.string(w.default.fxIXv4),
                                           onClick: u,
                                       }),
                                   ],
@@ -210,87 +210,87 @@ function z(e) {
                     }),
                 ],
             }),
-            (0, a.jsx)("div", {
+            (0, n.jsx)("div", {
                 className: D.o2,
-                children: Array.from({ length: 4 }).map((e, t) => (0, a.jsx)(B, {}, t)),
+                children: Array.from({ length: 4 }).map((e, t) => (0, n.jsx)(V, {}, t)),
             }),
         ],
     });
 }
-var q = n(503698),
-    Y = n.n(q),
-    H = n(390544),
-    K = n(554146),
-    Z = n(990078),
-    X = n(509434),
-    Q = n(939249),
-    J = n(933832),
-    ee = n(624479),
-    et = n(290136),
-    en = n(932001),
-    ea = n(569926),
-    es = n(95035),
-    ei = n(403362),
-    el = n(76843),
-    er = n(165655),
-    ed = n(922016),
-    ec = n(550079),
-    eo = n(477782),
-    eu = n(534890),
-    e_ = n(625903),
-    em = n(365199),
-    ex = n(442433),
-    ef = n(281445);
+var W = s(503698),
+    Y = s.n(W),
+    Z = s(390544),
+    q = s(554146),
+    X = s(990078),
+    H = s(509434),
+    J = s(939249),
+    Q = s(933832),
+    ee = s(624479),
+    et = s(290136),
+    es = s(932001),
+    en = s(569926),
+    ea = s(95035),
+    el = s(403362),
+    ei = s(76843),
+    er = s(165655),
+    ed = s(922016),
+    ec = s(550079),
+    eo = s(477782),
+    eu = s(534890),
+    em = s(625903),
+    ex = s(365199),
+    ef = s(442433),
+    ej = s(281445);
 function eg(e, t) {
-    return null == e || e !== ef.X.SHOCKBYTE ? null : null != t ? `${t}/support` : null;
+    return null == e || e !== ej.X.SHOCKBYTE ? null : null != t ? `${t}/support` : null;
 }
-var ev = n(843095),
-    ej = n(484875);
-let eh = { steps: { [V.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
-function ep(e) {
-    let { guildId: t, instance: n } = e,
-        i = s.useRef(null),
-        l = eg(n.providerType, n.gameServerPanelUrl);
+var ev = s(843095),
+    eh = s(484875);
+let eE = { steps: { [$.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
+function eN(e) {
+    let { guildId: t, instance: s } = e,
+        l = a.useRef(null),
+        i = eg(s.providerType, s.gameServerPanelUrl);
     return (0, g.A)(t)
-        ? (0, a.jsx)(ed.Y, {
-              targetElementRef: i,
+        ? (0, n.jsx)(ed.Y, {
+              targetElementRef: l,
               align: "top",
               position: "right",
               animationPosition: "bottom",
               disablePointerEvents: !1,
               renderPopout: (e) => {
-                  let { closePopout: s } = e;
-                  return (0, a.jsx)(ec.W, {
+                  let { closePopout: a } = e;
+                  return (0, n.jsx)(ec.W, {
                       "data-menu-migrated": !0,
                       navId: "game_server-popout-context-menu",
                       onClose: () => {
-                          (0, ex.Z_)(), s();
+                          (0, ef.Z_)(), a();
                       },
-                      "aria-label": $.intl.string(W.default["yb+ork"]),
+                      "aria-label": B.intl.string(w.default["yb+ork"]),
                       onSelect: void 0,
-                      children: (0, a.jsxs)(eo.rX, {
+                      children: (0, n.jsxs)(eo.rX, {
                           children: [
-                              null != l &&
-                                  (0, a.jsx)(eo.Dr, {
+                              null != i &&
+                                  (0, n.jsx)(eo.Dr, {
                                       id: "get-support",
                                       icon: eu.o,
                                       leadingAccessory: { type: "icon", icon: eu.o },
-                                      label: $.intl.string(W.default.bBkeMs),
+                                      label: B.intl.string(w.default.bBkeMs),
                                       action: () => {
-                                          (0, el.h)({ href: l });
+                                          (0, ei.h)({ href: i });
                                       },
                                   }),
-                              (0, a.jsx)(eo.Dr, {
+                              (0, n.jsx)(eo.Dr, {
                                   id: "settings",
-                                  icon: e_.Z,
-                                  leadingAccessory: { type: "icon", icon: e_.Z },
-                                  label: $.intl.string(W.default["feUiM/"]),
+                                  icon: em.Z,
+                                  leadingAccessory: { type: "icon", icon: em.Z },
+                                  label: B.intl.string(w.default["feUiM/"]),
                                   action: () => {
                                       (0, ev.A)({
                                           guildId: t,
-                                          stepConfig: eh,
-                                          initialGameServerInstance: n,
-                                          analyticsLocation: A.A.GAME_SERVER_PAGE,
+                                          stepConfig: eE,
+                                          initialGameServerInstance: s,
+                                          analyticsLocation: R.A.GAME_SERVER_PAGE,
                                       });
                                   },
                               }),
@@ -299,323 +299,323 @@ function ep(e) {
                   });
               },
               children: (e) =>
-                  (0, a.jsx)(Q.D, {
-                      "aria-label": $.intl.string($.t["UKOtz+"]),
-                      className: ej.v,
+                  (0, n.jsx)(J.D, {
+                      "aria-label": B.intl.string(B.t["UKOtz+"]),
+                      className: eh.v,
                       ...e,
-                      innerRef: i,
-                      children: (0, a.jsx)(em.j, { color: "currentColor", size: "sm" }),
+                      innerRef: l,
+                      children: (0, n.jsx)(ex.j, { color: "currentColor", size: "sm" }),
                   }),
           })
         : null;
 }
-var eE = n(500897),
-    eC = n(225180),
-    eI = n(117265);
-function eb(e, t) {
-    return (0, I.openModalLazy)(async () => {
-        let { default: s } = await n.e("5490").then(n.bind(n, 826153));
-        return (n) => (0, a.jsx)(s, { ...n, guildId: e, instance: t });
+var ep = s(500897),
+    eA = s(225180),
+    eS = s(117265);
+function eC(e, t) {
+    return (0, S.openModalLazy)(async () => {
+        let { default: a } = await Promise.all([s.e("95333"), s.e("5490")]).then(s.bind(s, 826153));
+        return (s) => (0, n.jsx)(a, { ...s, guildId: e, instance: t });
     });
 }
-function eN(e) {
-    return (0, I.openModalLazy)(async () => {
-        let { default: t } = await n.e("49695").then(n.bind(n, 23874));
-        return (n) => (0, a.jsx)(t, { ...n, ...e });
+function eI(e) {
+    return (0, S.openModalLazy)(async () => {
+        let { default: t } = await s.e("49695").then(s.bind(s, 23874));
+        return (s) => (0, n.jsx)(t, { ...s, ...e });
     });
 }
-var eS = n(49999),
-    eA = n(615990);
-function eR(e) {
-    let { guildId: t, instance: n } = e,
-        [i, l] = s.useState(!1),
-        r = s.useCallback(() => {
-            l(!0),
-                (0, v.as)(t, n.id).finally(() => {
-                    l(!1);
+var eb = s(49999),
+    eR = s(615990);
+function eM(e) {
+    let { guildId: t, instance: s } = e,
+        [l, i] = a.useState(!1),
+        r = a.useCallback(() => {
+            i(!0),
+                (0, v.as)(t, s.id).finally(() => {
+                    i(!1);
                 });
-        }, [t, n.id]);
-    return (0, a.jsx)(N.$, {
+        }, [t, s.id]);
+    return (0, n.jsx)(I.$, {
         fullWidth: !0,
-        text: $.intl.string(W.default.TMzy7d),
+        text: B.intl.string(w.default.TMzy7d),
         variant: "secondary",
-        loading: i,
+        loading: l,
         onClick: r,
     });
 }
-function eM(e) {
-    return (0, a.jsx)(N.$, {
+function ey(e) {
+    return (0, n.jsx)(I.$, {
         fullWidth: !0,
-        text: $.intl.string(W.default.tkbVdf),
+        text: B.intl.string(w.default.tkbVdf),
         variant: "secondary",
-        icon: X.I,
+        icon: H.I,
         iconPosition: "end",
         ...e,
     });
 }
-function ey(e) {
-    return (0, a.jsx)(N.$, { fullWidth: !0, text: $.intl.string(W.default["fQCcM/"]), variant: "primary", ...e });
+function e_(e) {
+    return (0, n.jsx)(I.$, { fullWidth: !0, text: B.intl.string(w.default["fQCcM/"]), variant: "primary", ...e });
 }
-function ek(e) {
-    return (0, a.jsx)(N.$, {
+function eT(e) {
+    return (0, n.jsx)(I.$, {
         fullWidth: !0,
-        text: $.intl.string(W.default.gWMqnI),
+        text: B.intl.string(w.default.gWMqnI),
         variant: "primary",
-        icon: X.I,
+        icon: H.I,
         iconPosition: "end",
         ...e,
     });
 }
 function eG(e) {
     let { guildId: t } = e,
-        [n, i] = s.useState(!1),
-        l = s.useCallback(() => {
-            i(!0),
+        [s, l] = a.useState(!1),
+        i = a.useCallback(() => {
+            l(!0),
                 (0, v.cq)(t).finally(() => {
-                    i(!1);
+                    l(!1);
                 });
         }, [t]);
-    return (0, a.jsx)(N.$, {
+    return (0, n.jsx)(I.$, {
         fullWidth: !0,
-        text: $.intl.string(W.default.BLEx3k),
+        text: B.intl.string(w.default.BLEx3k),
         variant: "secondary",
-        loading: n,
-        onClick: l,
+        loading: s,
+        onClick: i,
     });
 }
-function eT(e) {
+function ek(e) {
     let { instance: t } = e,
-        n = eg(t.providerType, t.gameServerPanelUrl);
-    return (0, a.jsx)(N.$, {
+        s = eg(t.providerType, t.gameServerPanelUrl);
+    return (0, n.jsx)(I.$, {
         fullWidth: !0,
-        text: $.intl.string(W.default.bBkeMs),
+        text: B.intl.string(w.default.bBkeMs),
         variant: "secondary",
         onClick: () => {
-            null != n && (0, el.h)({ href: n });
+            null != s && (0, ei.h)({ href: s });
         },
     });
 }
-function eL(e) {
-    let { guildId: t, instance: n } = e,
-        i = (0, eI.A)(n),
-        [l, r] = (0, en.kn)([K.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        o = l !== K.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
-        { data: u } = (0, ea.I)(n.gameId),
-        _ = eg(n.providerType, n.gameServerPanelUrl),
-        m = s.useCallback(() => {
-            (0, j.Ai)(t, n.gameId, u?.name ?? "", n.id),
-                o || null == n.providerType
-                    ? eb(t, n)
-                    : eN({
-                          provider: n.providerType,
+function eP(e) {
+    let { guildId: t, instance: s } = e,
+        l = (0, eS.A)(s),
+        [i, r] = (0, es.kn)([q.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        o = i !== q.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        { data: u } = (0, en.I)(s.gameId),
+        m = eg(s.providerType, s.gameServerPanelUrl),
+        x = a.useCallback(() => {
+            (0, h.Ai)(t, s.gameId, u?.name ?? "", s.id),
+                o || null == s.providerType
+                    ? eC(t, s)
+                    : eI({
+                          provider: s.providerType,
                           onAccept: () => {
-                              r(eS.i.TAKE_ACTION), eb(t, n);
+                              r(eb.i.TAKE_ACTION), eC(t, s);
                           },
                       });
-        }, [n, o, r, t, u?.name]),
-        { handleCopyServerIp: x, animateCopyIcon: f } = (0, eE.A)(t, n.id, A.A.GAME_SERVER_GAME, i ?? ""),
-        v = (0, eC.A)(n.gameId, "cover"),
-        h = (0, g.A)(t),
-        p = s.useCallback(() => {
-            (0, j.f7)(t, n.id), (0, el.h)({ href: n.gameServerPanelUrl ?? "" });
-        }, [n.gameServerPanelUrl, t, n.id]),
-        E = s.useMemo(() => {
-            switch (n.status) {
-                case H.M.SLEEPING:
-                    return (0, a.jsxs)(a.Fragment, {
+        }, [s, o, r, t, u?.name]),
+        { handleCopyServerIp: f, animateCopyIcon: j } = (0, ep.A)(t, s.id, R.A.GAME_SERVER_GAME, l ?? ""),
+        v = (0, eA.A)(s.gameId, "cover"),
+        E = (0, g.A)(t),
+        N = a.useCallback(() => {
+            (0, h.f7)(t, s.id), (0, ei.h)({ href: s.gameServerPanelUrl ?? "" });
+        }, [s.gameServerPanelUrl, t, s.id]),
+        p = a.useMemo(() => {
+            switch (s.status) {
+                case Z.M.SLEEPING:
+                    return (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, a.jsx)(eR, { guildId: t, instance: n }),
-                            h && (0, a.jsx)(eM, { onClick: p, disabled: null == n.gameServerPanelUrl }),
+                            (0, n.jsx)(eM, { guildId: t, instance: s }),
+                            E && (0, n.jsx)(ey, { onClick: N, disabled: null == s.gameServerPanelUrl }),
                         ],
                     });
-                case H.M.OFFLINE:
-                case H.M.ONLINE:
-                case H.M.STARTING:
-                    return (0, a.jsxs)(a.Fragment, {
+                case Z.M.OFFLINE:
+                case Z.M.ONLINE:
+                case Z.M.STARTING:
+                    return (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, a.jsx)(ey, { onClick: m }),
-                            h && (0, a.jsx)(eM, { onClick: p, disabled: null == n.gameServerPanelUrl }),
+                            (0, n.jsx)(e_, { onClick: x }),
+                            E && (0, n.jsx)(ey, { onClick: N, disabled: null == s.gameServerPanelUrl }),
                         ],
                     });
-                case H.M.STARTUP_FAILED:
-                case H.M.MISSING_STOCK:
-                    return h ? (0, a.jsx)(ek, { onClick: p }) : (0, a.jsx)(ey, { onClick: m, disabled: !0 });
-                case H.M.DELETED:
-                    return h
-                        ? (0, a.jsx)(eM, { onClick: p, disabled: null == n.gameServerPanelUrl })
-                        : (0, a.jsx)(ey, { onClick: m, disabled: !0 });
-                case H.M.PROVIDER_ERRORED:
-                    return (0, a.jsxs)(a.Fragment, {
+                case Z.M.STARTUP_FAILED:
+                case Z.M.MISSING_STOCK:
+                    return E ? (0, n.jsx)(eT, { onClick: N }) : (0, n.jsx)(e_, { onClick: x, disabled: !0 });
+                case Z.M.DELETED:
+                    return E
+                        ? (0, n.jsx)(ey, { onClick: N, disabled: null == s.gameServerPanelUrl })
+                        : (0, n.jsx)(e_, { onClick: x, disabled: !0 });
+                case Z.M.PROVIDER_ERRORED:
+                    return (0, n.jsxs)(n.Fragment, {
                         children: [
-                            h && null != _
-                                ? (0, a.jsx)(eT, { guildId: t, instance: n })
-                                : (0, a.jsx)(ey, { onClick: m, disabled: !0 }),
-                            (0, a.jsx)(eG, { guildId: t, instance: n }),
+                            E && null != m
+                                ? (0, n.jsx)(ek, { guildId: t, instance: s })
+                                : (0, n.jsx)(e_, { onClick: x, disabled: !0 }),
+                            (0, n.jsx)(eG, { guildId: t, instance: s }),
                         ],
                     });
                 default:
                     return null;
             }
-        }, [n, m, h, p, t, _]),
-        C = s.useMemo(() => {
-            if (null == n.gameConfig) return null;
-            let e = [n.gameConfig.type, n.gameConfig.version].filter(ei.Vq).join(" ");
+        }, [s, x, E, N, t, m]),
+        A = a.useMemo(() => {
+            if (null == s.gameConfig) return null;
+            let e = [s.gameConfig.type, s.gameConfig.version].filter(el.Vq).join(" ");
             return "" === e ? null : e;
-        }, [n.gameConfig]),
-        I = s.useMemo(() => {
-            switch (n.status) {
-                case H.M.STARTING:
-                    if (null == n.gameServerPanelUrl) return $.intl.string(W.default["1A3US2"]);
+        }, [s.gameConfig]),
+        S = a.useMemo(() => {
+            switch (s.status) {
+                case Z.M.STARTING:
+                    if (null == s.gameServerPanelUrl) return B.intl.string(w.default["1A3US2"]);
                     return null;
-                case H.M.STARTUP_FAILED:
-                    return $.intl.string(h ? W.default.Mdoc98 : W.default.osZiRl);
-                case H.M.MISSING_STOCK:
-                    return $.intl.string(h ? W.default.YCakvM : W.default.osZiRl);
-                case H.M.PROVIDER_ERRORED:
-                    return $.intl.string(h ? W.default.NRyCeY : W.default.osZiRl);
+                case Z.M.STARTUP_FAILED:
+                    return B.intl.string(E ? w.default.Mdoc98 : w.default.osZiRl);
+                case Z.M.MISSING_STOCK:
+                    return B.intl.string(E ? w.default.YCakvM : w.default.osZiRl);
+                case Z.M.PROVIDER_ERRORED:
+                    return B.intl.string(E ? w.default.NRyCeY : w.default.osZiRl);
                 default:
                     return null;
             }
-        }, [n.status, n.gameServerPanelUrl, h]);
-    return (0, a.jsxs)(F, {
-        actions: E,
+        }, [s.status, s.gameServerPanelUrl, E]);
+    return (0, n.jsxs)(F, {
+        actions: p,
         children: [
-            (0, a.jsxs)("div", {
-                className: eA.serverDetailsContainer,
+            (0, n.jsxs)("div", {
+                className: eR.serverDetailsContainer,
                 children: [
-                    (0, a.jsxs)("div", {
-                        className: eA.serverHeader,
+                    (0, n.jsxs)("div", {
+                        className: eR.serverHeader,
                         children: [
-                            (0, a.jsx)("img", { src: v ?? "", alt: "", className: eA.gameImage }),
-                            (0, a.jsxs)("div", {
-                                className: eA.serverInfo,
+                            (0, n.jsx)("img", { src: v ?? "", alt: "", className: eR.gameImage }),
+                            (0, n.jsxs)("div", {
+                                className: eR.serverInfo,
                                 children: [
-                                    (0, a.jsx)(b.D, { variant: "heading-md/medium", children: n.name }),
-                                    (0, a.jsx)(d.E, {
+                                    (0, n.jsx)(C.D, { variant: "heading-md/medium", children: s.name }),
+                                    (0, n.jsx)(d.E, {
                                         variant: "text-sm/medium",
                                         color: "text-muted",
-                                        children: [u?.name, C].filter(ei.Vq).join(" • "),
+                                        children: [u?.name, A].filter(el.Vq).join(" • "),
                                     }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, a.jsx)("div", {
-                        children: (0, a.jsxs)("div", {
-                            className: eA.detailsGrid,
+                    (0, n.jsx)("div", {
+                        children: (0, n.jsxs)("div", {
+                            className: eR.detailsGrid,
                             children: [
-                                (0, a.jsxs)("div", {
-                                    className: eA.detailItem,
+                                (0, n.jsxs)("div", {
+                                    className: eR.detailItem,
                                     children: [
-                                        (0, a.jsx)(d.E, {
+                                        (0, n.jsx)(d.E, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: $.intl.string(W.default.bDdi7n),
+                                            children: B.intl.string(w.default.bDdi7n),
                                         }),
-                                        (0, a.jsx)(d.E, {
+                                        (0, n.jsx)(d.E, {
                                             variant: "text-sm/medium",
-                                            children: `${null != n.onlineConnectionsCount && n.onlineConnectionsCount >= 0 ? n.onlineConnectionsCount : "—"} / ${null != n.maxConnectionsCount && n.maxConnectionsCount >= 0 ? n.maxConnectionsCount : "—"}`,
+                                            children: `${null != s.onlineConnectionsCount && s.onlineConnectionsCount >= 0 ? s.onlineConnectionsCount : "—"} / ${null != s.maxConnectionsCount && s.maxConnectionsCount >= 0 ? s.maxConnectionsCount : "—"}`,
                                         }),
                                     ],
                                 }),
-                                (0, a.jsxs)("div", {
-                                    className: eA.detailItem,
+                                (0, n.jsxs)("div", {
+                                    className: eR.detailItem,
                                     children: [
-                                        (0, a.jsx)(d.E, {
+                                        (0, n.jsx)(d.E, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: $.intl.string(W.default["7phwMG"]),
+                                            children: B.intl.string(w.default["7phwMG"]),
                                         }),
-                                        (0, a.jsx)("div", {
-                                            className: eA.serverIpContainer,
+                                        (0, n.jsx)("div", {
+                                            className: eR.serverIpContainer,
                                             children:
-                                                null == i
-                                                    ? (0, a.jsx)(d.E, { variant: "text-sm/medium", children: "—" })
+                                                null == l
+                                                    ? (0, n.jsx)(d.E, { variant: "text-sm/medium", children: "—" })
                                                     : o
-                                                      ? (0, a.jsxs)(a.Fragment, {
+                                                      ? (0, n.jsxs)(n.Fragment, {
                                                             children: [
-                                                                (0, a.jsx)(d.E, {
+                                                                (0, n.jsx)(d.E, {
                                                                     variant: "text-sm/medium",
-                                                                    children: i,
+                                                                    children: l,
                                                                 }),
-                                                                (0, a.jsx)(Q.D, {
-                                                                    className: eA.copyButton,
-                                                                    "aria-label": $.intl.string($.t.OpuAlK),
-                                                                    onClick: x,
-                                                                    children: f
-                                                                        ? (0, a.jsx)(J.A, { size: "sm" })
-                                                                        : (0, a.jsx)(ee.T, { size: "sm" }),
+                                                                (0, n.jsx)(J.D, {
+                                                                    className: eR.copyButton,
+                                                                    "aria-label": B.intl.string(B.t.OpuAlK),
+                                                                    onClick: f,
+                                                                    children: j
+                                                                        ? (0, n.jsx)(Q.A, { size: "sm" })
+                                                                        : (0, n.jsx)(ee.T, { size: "sm" }),
                                                                 }),
                                                             ],
                                                         })
-                                                      : null != n.providerType &&
-                                                        (0, a.jsx)(es.A, {
+                                                      : null != s.providerType &&
+                                                        (0, n.jsx)(ea.A, {
                                                             onClick: () => {
-                                                                eN({
-                                                                    provider: n.providerType,
+                                                                eI({
+                                                                    provider: s.providerType,
                                                                     onAccept: () => {
-                                                                        r(eS.i.TAKE_ACTION), x();
+                                                                        r(eb.i.TAKE_ACTION), f();
                                                                     },
                                                                 });
                                                             },
-                                                            children: $.intl.string(W.default["f+F7H3"]),
+                                                            children: B.intl.string(w.default["f+F7H3"]),
                                                         }),
                                         }),
                                     ],
                                 }),
-                                (0, a.jsxs)("div", {
-                                    className: eA.detailItem,
+                                (0, n.jsxs)("div", {
+                                    className: eR.detailItem,
                                     children: [
-                                        (0, a.jsx)(d.E, {
+                                        (0, n.jsx)(d.E, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: $.intl.string(W.default["n+ZX7y"]),
+                                            children: B.intl.string(w.default["n+ZX7y"]),
                                         }),
-                                        (0, a.jsxs)("div", {
-                                            className: eA.statusContainer,
+                                        (0, n.jsxs)("div", {
+                                            className: eR.statusContainer,
                                             children: [
-                                                n.status === H.M.STARTING
-                                                    ? (0, a.jsx)(c.y, {
+                                                s.status === Z.M.STARTING
+                                                    ? (0, n.jsx)(c.y, {
                                                           type: c.t.SPINNING_CIRCLE_SIMPLE,
-                                                          className: eA.statusLoading,
+                                                          className: eR.statusLoading,
                                                       })
-                                                    : (0, a.jsx)("span", {
+                                                    : (0, n.jsx)("span", {
                                                           className: Y()(
-                                                              eA.statusIndicator,
-                                                              null != n.status && eA[n.status],
+                                                              eR.statusIndicator,
+                                                              null != s.status && eR[s.status],
                                                           ),
                                                       }),
-                                                (0, a.jsx)(d.E, {
+                                                (0, n.jsx)(d.E, {
                                                     variant: "text-sm/medium",
                                                     children: (function (e) {
                                                         switch (e) {
-                                                            case H.M.STARTING:
-                                                                return $.intl.string(W.default.SgjaXI);
-                                                            case H.M.STARTUP_FAILED:
-                                                                return $.intl.string(W.default["7C9Z3s"]);
-                                                            case H.M.OFFLINE:
-                                                                return $.intl.string(W.default["Ys/RrB"]);
-                                                            case H.M.ONLINE:
-                                                                return $.intl.string(W.default["60kAzo"]);
-                                                            case H.M.DELETED:
-                                                                return $.intl.string(W.default.Z1NZwX);
-                                                            case H.M.MISSING_STOCK:
-                                                                return $.intl.string(W.default["+a5G2l"]);
-                                                            case H.M.SLEEPING:
-                                                                return $.intl.string(W.default.y0z8ZO);
-                                                            case H.M.PROVIDER_ERRORED:
-                                                                return $.intl.string(W.default["6g/oji"]);
+                                                            case Z.M.STARTING:
+                                                                return B.intl.string(w.default.SgjaXI);
+                                                            case Z.M.STARTUP_FAILED:
+                                                                return B.intl.string(w.default["7C9Z3s"]);
+                                                            case Z.M.OFFLINE:
+                                                                return B.intl.string(w.default["Ys/RrB"]);
+                                                            case Z.M.ONLINE:
+                                                                return B.intl.string(w.default["60kAzo"]);
+                                                            case Z.M.DELETED:
+                                                                return B.intl.string(w.default.Z1NZwX);
+                                                            case Z.M.MISSING_STOCK:
+                                                                return B.intl.string(w.default["+a5G2l"]);
+                                                            case Z.M.SLEEPING:
+                                                                return B.intl.string(w.default.y0z8ZO);
+                                                            case Z.M.PROVIDER_ERRORED:
+                                                                return B.intl.string(w.default["6g/oji"]);
                                                             default:
                                                                 return "—";
                                                         }
-                                                    })(n.status),
+                                                    })(s.status),
                                                 }),
-                                                null != I &&
-                                                    (0, a.jsx)(Z.m, {
+                                                null != S &&
+                                                    (0, n.jsx)(X.m, {
                                                         position: "top",
-                                                        text: I,
-                                                        children: (0, a.jsx)(et.c, {
-                                                            className: eA.statusTooltipIcon,
+                                                        text: S,
+                                                        children: (0, n.jsx)(et.c, {
+                                                            className: eR.statusTooltipIcon,
                                                             size: "xs",
                                                         }),
                                                     }),
@@ -623,17 +623,17 @@ function eL(e) {
                                         }),
                                     ],
                                 }),
-                                (0, a.jsxs)("div", {
-                                    className: eA.detailItem,
+                                (0, n.jsxs)("div", {
+                                    className: eR.detailItem,
                                     children: [
-                                        (0, a.jsx)(d.E, {
+                                        (0, n.jsx)(d.E, {
                                             variant: "text-xs/semibold",
                                             color: "text-muted",
-                                            children: $.intl.string(W.default.mJlz3T),
+                                            children: B.intl.string(w.default.mJlz3T),
                                         }),
-                                        (0, a.jsx)(d.E, {
+                                        (0, n.jsx)(d.E, {
                                             variant: "text-sm/medium",
-                                            children: null != n.regionName ? n.regionName : "—",
+                                            children: null != s.regionName ? s.regionName : "—",
                                         }),
                                     ],
                                 }),
@@ -642,62 +642,62 @@ function eL(e) {
                     }),
                 ],
             }),
-            h &&
-                (0, a.jsx)("div", {
-                    className: eA.overflowMenu,
-                    children: (0, a.jsx)(ep, { guildId: t, instance: n }),
+            E &&
+                (0, n.jsx)("div", {
+                    className: eR.overflowMenu,
+                    children: (0, n.jsx)(eN, { guildId: t, instance: s }),
                 }),
-            (0, a.jsx)("div", { className: eA.imageBackground, children: (0, a.jsx)(er.T, { imageUrl: v ?? "" }) }),
+            (0, n.jsx)("div", { className: eR.imageBackground, children: (0, n.jsx)(er.T, { imageUrl: v ?? "" }) }),
         ],
     });
 }
-var eD = n(895770),
-    eP = n(18365),
-    eO = n(452123);
-let eF = { ...V.ZN, initialStep: V.HS.SERVER_SETTINGS };
+var eD = s(895770),
+    eL = s(18365),
+    eO = s(452123);
+let eF = { ...$.ZN, initialStep: $.HS.SERVER_SETTINGS };
 function eU(e) {
-    let { guildId: t, isAdmin: n } = e,
-        { state: i, shouldFetchCatalog: r } = (0, l.cf)([p.A], () => ({
-            state: p.A.getStateForGuild(t),
-            shouldFetchCatalog: p.A.shouldFetchCatalogForGuild(t),
+    let { guildId: t, isAdmin: s } = e,
+        { state: l, shouldFetchCatalog: r } = (0, i.cf)([N.A], () => ({
+            state: N.A.getStateForGuild(t),
+            shouldFetchCatalog: N.A.shouldFetchCatalogForGuild(t),
         }));
-    s.useEffect(() => {
+    a.useEffect(() => {
         r && (0, v.z9)(t);
     }, [t, r]);
-    let { catalog: d, instances: u } = s.useMemo(
-            () => ({ catalog: Object.values(i?.catalog ?? {}), instances: Object.values(i?.instances ?? {}) }),
-            [i?.catalog, i?.instances],
+    let { catalog: d, instances: u } = a.useMemo(
+            () => ({ catalog: Object.values(l?.catalog ?? {}), instances: Object.values(l?.instances ?? {}) }),
+            [l?.catalog, l?.instances],
         ),
-        _ = u.length >= V.ZI;
+        m = u.length >= $.ZI;
     return 0 === d.length
-        ? (0, a.jsx)("div", {
+        ? (0, n.jsx)("div", {
               className: eO.kL,
-              children: (0, a.jsx)(c.y, { type: c.t.SPINNING_CIRCLE, className: eO.u1 }),
+              children: (0, n.jsx)(c.y, { type: c.t.SPINNING_CIRCLE, className: eO.u1 }),
           })
-        : (0, a.jsxs)("div", {
+        : (0, n.jsxs)("div", {
               className: eO.kL,
               children: [
-                  (0, a.jsx)(b.D, {
+                  (0, n.jsx)(C.D, {
                       className: eO.R_,
                       variant: "heading-md/semibold",
-                      children: $.intl.string(n ? W.default["3vWDMz"] : W.default.Uvf9GK),
+                      children: B.intl.string(s ? w.default["3vWDMz"] : w.default.Uvf9GK),
                   }),
-                  n && _ && (0, a.jsx)("div", { className: eO.Bq, children: (0, a.jsx)(eP.k, {}) }),
-                  (0, a.jsx)(o.Ip, {
+                  s && m && (0, n.jsx)("div", { className: eO.Bq, children: (0, n.jsx)(eL.k, {}) }),
+                  (0, n.jsx)(o.Ip, {
                       className: eO.nd,
-                      children: (0, a.jsx)("div", {
+                      children: (0, n.jsx)("div", {
                           className: eO.Y_,
-                          children: d.map((e, s) =>
-                              n
-                                  ? (0, a.jsx)(
-                                        Z.m,
+                          children: d.map((e, a) =>
+                              s
+                                  ? (0, n.jsx)(
+                                        X.m,
                                         {
                                             asContainer: !0,
                                             text: e.disabled
-                                                ? $.intl.formatToPlainString(W.default.uVpJYf, { gameName: e.name })
+                                                ? B.intl.formatToPlainString(w.default.uVpJYf, { gameName: e.name })
                                                 : null,
                                             position: "top",
-                                            children: (0, a.jsx)(eD.A, {
+                                            children: (0, n.jsx)(eD.A, {
                                                 guildId: t,
                                                 game: e,
                                                 onClick: () =>
@@ -705,17 +705,17 @@ function eU(e) {
                                                         guildId: t,
                                                         stepConfig: eF,
                                                         initialGameServerGame: e,
-                                                        analyticsLocation: A.A.GAME_SERVER_PAGE_SIDEBAR,
+                                                        analyticsLocation: R.A.GAME_SERVER_PAGE_SIDEBAR,
                                                     }),
                                                 imageClassName: eO.Sl,
                                                 titleClassName: eO.DD,
-                                                variant: _ || e.disabled ? eD.e.DISABLED : eD.e.CLICKABLE,
-                                                location: A.A.GAME_SERVER_PAGE_SIDEBAR,
+                                                variant: m || e.disabled ? eD.e.DISABLED : eD.e.CLICKABLE,
+                                                location: R.A.GAME_SERVER_PAGE_SIDEBAR,
                                             }),
                                         },
-                                        `sidebar-game-${s}-${e.id}`,
+                                        `sidebar-game-${a}-${e.id}`,
                                     )
-                                  : (0, a.jsx)(
+                                  : (0, n.jsx)(
                                         eD.A,
                                         {
                                             guildId: t,
@@ -723,9 +723,9 @@ function eU(e) {
                                             variant: eD.e.VIEWABLE,
                                             imageClassName: eO.Sl,
                                             titleClassName: eO.DD,
-                                            location: A.A.GAME_SERVER_PAGE_SIDEBAR,
+                                            location: R.A.GAME_SERVER_PAGE_SIDEBAR,
                                         },
-                                        `sidebar-game-${s}-${e.id}`,
+                                        `sidebar-game-${a}-${e.id}`,
                                     ),
                           ),
                       }),
@@ -733,104 +733,104 @@ function eU(e) {
               ],
           });
 }
-var eB = n(927813),
-    eV = n(218394);
-let ew = 30 * eB.A.Millis.SECOND,
-    eW = 5 * eB.A.Millis.SECOND;
-var e$ = n(833503);
-function ez(e) {
+var eV = s(927813),
+    e$ = s(218394);
+let ez = 30 * eV.A.Millis.SECOND,
+    ew = 5 * eV.A.Millis.SECOND;
+var eB = s(833503);
+function eK(e) {
     var t;
-    let n,
-        { guildId: C } = e;
-    (0, j.tR)(C);
-    let I = (0, h.U)("GameServerPage"),
-        b = (0, l.bG)([x.A], () => x.A.getGuild(C)?.features.has(w.GuildFeatures.GAME_SERVERS) ?? !1);
-    (t = b ? C : null),
-        (n = (0, eV.j)()),
-        s.useEffect(() => {
+    let s,
+        { guildId: A } = e;
+    (0, h.tR)(A);
+    let S = (0, E.U)("GameServerPage"),
+        C = (0, i.bG)([f.A], () => f.A.getGuild(A)?.features.has(z.GuildFeatures.GAME_SERVERS) ?? !1);
+    (t = C ? A : null),
+        (s = (0, e$.j)()),
+        a.useEffect(() => {
             if (null == t) return;
             let e = !0,
-                a = null,
-                s = 0,
-                i = () =>
+                n = null,
+                a = 0,
+                l = () =>
                     setTimeout(
                         () => {
-                            n &&
-                                ((a = new AbortController()),
-                                (0, v.cq)(t, !1, a.signal)
-                                    .then(() => (s = 0))
-                                    .catch(() => (s = Math.min(s + 1, 4)))
+                            s &&
+                                ((n = new AbortController()),
+                                (0, v.cq)(t, !1, n.signal)
+                                    .then(() => (a = 0))
+                                    .catch(() => (a = Math.min(a + 1, 4)))
                                     .finally(() => {
-                                        e && (l = i());
+                                        e && (i = l());
                                     }));
                         },
-                        ew * Math.pow(2, s) + Math.random() * eW,
+                        ez * Math.pow(2, a) + Math.random() * ew,
                     ),
-                l = i();
+                i = l();
             return () => {
-                (e = !1), a?.abort(), clearTimeout(l);
+                (e = !1), n?.abort(), clearTimeout(i);
             };
-        }, [t, n]),
-        s.useEffect(() => {
-            b && ((0, v.cq)(C), u.Ay.getDetectableGames());
-        }, [C, b]);
-    let N = (0, g.A)(C),
-        S = (0, E.N)("GameServerPage"),
-        A = (0, l.bG)([p.A], () => p.A.getStateForGuild(C)),
-        R = s.useMemo(() => {
-            if (!A?.hasFetchedInstances) return;
-            let e = Object.values(A.instances ?? {});
+        }, [t, s]),
+        a.useEffect(() => {
+            C && ((0, v.cq)(A), u.Ay.getDetectableGames());
+        }, [A, C]);
+    let I = (0, g.A)(A),
+        b = (0, p.N)("GameServerPage"),
+        R = (0, i.bG)([N.A], () => N.A.getStateForGuild(A)),
+        M = a.useMemo(() => {
+            if (!R?.hasFetchedInstances) return;
+            let e = Object.values(R.instances ?? {});
             return 0 === e.length
                 ? null
-                : e.map((e, t) => (0, a.jsx)(eL, { guildId: C, instance: e }, `${e.gameId}-${t}`));
-        }, [A?.instances, A?.hasFetchedInstances, C]);
-    return (0, a.jsxs)("div", {
-        className: e$.kL,
+                : e.map((e, t) => (0, n.jsx)(eP, { guildId: A, instance: e }, `${e.gameId}-${t}`));
+        }, [R?.instances, R?.hasFetchedInstances, A]);
+    return (0, n.jsxs)("div", {
+        className: eB.kL,
         children: [
-            (0, a.jsxs)(_.Ay, {
-                className: e$.KE,
-                toolbar: (0, a.jsx)("div", {}),
+            (0, n.jsxs)(m.Ay, {
+                className: eB.KE,
+                toolbar: (0, n.jsx)("div", {}),
                 children: [
-                    (0, a.jsx)(_.Ay.Icon, { icon: i._, "aria-label": "" }),
-                    (0, a.jsx)(_.Ay.Title, { children: $.intl.string(W.default.vCzwM7) }),
-                    (0, a.jsx)(r.Lp, { disableColor: !0, text: $.intl.string($.t.oW0eUd), className: e$.qS }),
-                    (0, a.jsx)(_.Ay.Divider, { className: e$.yF }),
-                    (0, a.jsx)(d.E, {
+                    (0, n.jsx)(m.Ay.Icon, { icon: l._, "aria-label": "" }),
+                    (0, n.jsx)(m.Ay.Title, { children: B.intl.string(w.default.vCzwM7) }),
+                    (0, n.jsx)(r.Lp, { disableColor: !0, text: B.intl.string(B.t.oW0eUd), className: eB.qS }),
+                    (0, n.jsx)(m.Ay.Divider, { className: eB.yF }),
+                    (0, n.jsx)(d.E, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        children: $.intl.format(W.default.LiR4eN, {
-                            helpCenterUrl: f.A.getArticleURL(w.MVz.GAME_SERVER_HOSTING),
+                        children: B.intl.format(w.default.LiR4eN, {
+                            helpCenterUrl: j.A.getArticleURL(z.MVz.GAME_SERVER_HOSTING),
                         }),
                     }),
                 ],
             }),
-            (0, a.jsxs)("div", {
-                className: e$.hQ,
+            (0, n.jsxs)("div", {
+                className: eB.hQ,
                 children: [
-                    b && !A?.hasFetchedInstances
-                        ? (0, a.jsx)("div", {
-                              className: e$.dc,
-                              children: (0, a.jsx)(c.y, { type: c.t.SPINNING_CIRCLE }),
+                    C && !R?.hasFetchedInstances
+                        ? (0, n.jsx)("div", {
+                              className: eB.dc,
+                              children: (0, n.jsx)(c.y, { type: c.t.SPINNING_CIRCLE }),
                           })
-                        : null == R
-                          ? (0, a.jsx)(z, { guildId: C })
-                          : (0, a.jsxs)("div", {
-                                className: e$.nd,
+                        : null == M
+                          ? (0, n.jsx)(K, { guildId: A })
+                          : (0, n.jsxs)("div", {
+                                className: eB.nd,
                                 children: [
-                                    I &&
-                                        (0, a.jsx)("div", {
-                                            className: e$.MR,
-                                            children: (0, a.jsx)(m.A, {
-                                                look: m.k.WARNING,
-                                                children: $.intl.format(W.default.XzXjK2, {}),
+                                    S &&
+                                        (0, n.jsx)("div", {
+                                            className: eB.MR,
+                                            children: (0, n.jsx)(x.A, {
+                                                look: x.k.WARNING,
+                                                children: B.intl.format(w.default.XzXjK2, {}),
                                             }),
                                         }),
-                                    (0, a.jsx)(o.Ip, {
-                                        children: (0, a.jsx)("div", { className: e$.Y_, children: R }),
+                                    (0, n.jsx)(o.Ip, {
+                                        children: (0, n.jsx)("div", { className: eB.Y_, children: M }),
                                     }),
                                 ],
                             }),
-                    (N || S) && (0, a.jsx)(eU, { guildId: C, isAdmin: N ?? !1 }),
+                    (I || b) && (0, n.jsx)(eU, { guildId: A, isAdmin: I ?? !1 }),
                 ],
             }),
         ],

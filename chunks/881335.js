@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => s });
-var a = n(729937),
-    r = n(981616),
-    i = n(285933),
-    l = n(227005);
-async function s(e, t, n) {
-    let { hasSpotifyAccount: s, activity: o, user: c } = e;
-    (0, l.A)(s) && null != o && null != o.sync_id && (await (0, r.dM)(), a.ZH(o, c.id), (0, i.A)(t, c, o, n));
+r.d(n, { A: () => s });
+var i = r(729937),
+    a = r(981616),
+    e = r(285933),
+    l = r(227005);
+async function s(t, n, r) {
+    let { hasSpotifyAccount: s, activity: u, user: c } = t;
+    (0, l.A)(s) && null != u && null != u.sync_id && (await (0, a.dM)(), i.ZH(u, c.id), (0, e.A)(n, c, u, r));
 }

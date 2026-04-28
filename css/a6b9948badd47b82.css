@@ -1,0 +1,102 @@
+.container_a92dc5 {
+    align-items: center;
+    background: url(https://cdn.discordapp.com/assets/content/81bfa947015d852b2a9febacee3bd1cc7bf82feef59d8d2a4777aaacdc5c592f.png) no-repeat fixed 50%, linear-gradient(204.56deg, #251045 -7.15%, #301d42 20.93%, #24415c 60.11%, #1a1440 98.95%);
+    background-clip: padding-box;
+    background-size: cover;
+    border-radius: 4px;
+    display: flex;
+    max-width: 65vw;
+    min-width: 630px;
+    padding-bottom: 48px;
+    padding-top: 24px;
+    position: relative;
+    width: 100%
+}
+
+.closeButton_a92dc5 {
+    color: var(--interactive-text-active);
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 16px;
+    z-index: 100
+}
+
+.content_a92dc5 {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.header_a92dc5 {
+    margin-bottom: 16px;
+    max-width: 700px;
+    text-align: center
+}
+
+.subHeader_a92dc5 {
+    margin-bottom: 32px
+}
+
+.badge_a92dc5 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start
+}
+
+.badge_a92dc5>div {
+    min-width: 115px;
+    padding-inline-start: 0
+}
+
+.badgeImage_a92dc5 {
+    height: 75px;
+    margin-bottom: 8px;
+    pointer-events: none;
+    width: auto
+}
+
+.badgeText_a92dc5 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline-start: 0;
+    text-align: center
+}
+
+.badgeName_a92dc5 {
+    margin-bottom: 2px
+}
+
+.badgeList_a92dc5 {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    padding: 24px
+}
+
+.subscribeButton_a92dc5 {
+    margin-top: 24px
+}
+
+.learnMoreButton_a92dc5 {
+    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
+    color: var(--white);
+    margin-top: 24px
+}
+
+.earnedBadge_a92dc5 {
+    background-color: var(--background-mod-strong);
+    border: 1px solid var(--background-mod-strong);
+    border-radius: var(--radius-md);
+    margin: calc(var(--space-12)*-1);
+    padding: var(--space-12)
+}
+
+.earnedBadgeSubSince_a92dc5 {
+    margin-top: 2px;
+    max-width: 100px
+}

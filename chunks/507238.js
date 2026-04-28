@@ -1,61 +1,60 @@
-"use strict";
-n.d(t, { A: () => g });
-var r = n(627968);
-n(64700);
-var i = n(989349),
-    l = n.n(i),
-    a = n(17928),
-    o = n(477782),
-    s = n(832712),
-    c = n(995102),
-    _ = n(145408),
-    u = n(543465),
-    d = n(477427),
-    f = n(985018);
-function g(e, t) {
-    let n = e?.id,
-        { muted: i, muteConfig: g } = (0, a.cf)(
-            [u.Ay],
+e.d(i, { A: () => m });
+var n = e(627968);
+e(64700);
+var u = e(989349),
+    d = e.n(u),
+    l = e(17928),
+    a = e(477782),
+    o = e(832712),
+    s = e(995102),
+    c = e(145408),
+    r = e(543465),
+    f = e(477427),
+    g = e(985018);
+function m(t, i) {
+    let e = t?.id,
+        { muted: u, muteConfig: m } = (0, l.cf)(
+            [r.Ay],
             () => ({
-                muted: null != n ? u.Ay.isMuted(n) : void 0,
-                muteConfig: null != n ? u.Ay.getMuteConfig(n) : void 0,
+                muted: null != e ? r.Ay.isMuted(e) : void 0,
+                muteConfig: null != e ? r.Ay.getMuteConfig(e) : void 0,
             }),
-            [n],
+            [e],
         ),
-        m = (0, _.M)(g);
-    return null == n
+        p = (0, c.M)(m);
+    return null == e
         ? null
-        : i
-          ? (0, r.jsx)(o.Dr, {
+        : u
+          ? (0, n.jsx)(a.Dr, {
                 id: "unmute-guild",
-                label: f.intl.string(f.t.De0BTC),
-                subtext: m,
-                action: () => s.A.updateGuildNotificationSettings(n, { muted: !1 }, d.fd.Unmuted),
+                label: g.intl.string(g.t.De0BTC),
+                subtext: p,
+                action: () => o.A.updateGuildNotificationSettings(e, { muted: !1 }, f.fd.Unmuted),
             })
-          : (0, r.jsx)(o.Dr, {
+          : (0, n.jsx)(a.Dr, {
                 id: "mute-guild",
-                label: f.intl.string(f.t.vRzp7P),
-                action: () => s.A.updateGuildNotificationSettings(n, { muted: !0 }, d.fd.Muted),
-                children: (0, c.g)().map((e) => {
-                    let { value: i, label: a } = e;
-                    return (0, r.jsx)(
-                        o.Dr,
+                label: g.intl.string(g.t.vRzp7P),
+                action: () => o.A.updateGuildNotificationSettings(e, { muted: !0 }, f.fd.Muted),
+                children: (0, s.g)().map((t) => {
+                    let { value: u, label: l } = t;
+                    return (0, n.jsx)(
+                        a.Dr,
                         {
-                            id: `${i}`,
-                            label: a,
+                            id: `${u}`,
+                            label: l,
                             action: () =>
-                                (function (e) {
-                                    if (null == n) return;
-                                    let r = e > 0 ? l()().add(e, "second").toISOString() : null;
-                                    s.A.updateGuildNotificationSettings(
-                                        n,
-                                        { muted: !0, mute_config: { selected_time_window: e, end_time: r } },
-                                        d.fd.Muted,
-                                        t,
+                                (function (t) {
+                                    if (null == e) return;
+                                    let n = t > 0 ? d()().add(t, "second").toISOString() : null;
+                                    o.A.updateGuildNotificationSettings(
+                                        e,
+                                        { muted: !0, mute_config: { selected_time_window: t, end_time: n } },
+                                        f.fd.Muted,
+                                        i,
                                     );
-                                })(i),
+                                })(u),
                         },
-                        i,
+                        u,
                     );
                 }),
             });

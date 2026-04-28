@@ -1,76 +1,75 @@
-"use strict";
-n.d(t, { Z: () => d, o: () => c }), n(323874), n(14289), n(35956);
-var i = n(607399),
-    a = n(136722),
-    s = n(200330),
-    l = n(954571),
-    r = n(76843),
-    o = n(652215);
-function c(e) {
+l.d(i, { Z: () => _, o: () => u }), l(323874), l(14289), l(35956);
+var t = l(607399),
+    a = l(136722),
+    s = l(200330),
+    n = l(954571),
+    o = l(76843),
+    r = l(652215);
+function u(e) {
     let {
-        applicationId: t,
-        customInstallUrl: n,
-        installParams: c,
-        integrationTypesConfig: d,
-        guildId: u,
-        channelId: h,
-        disableGuildSelect: p,
+        applicationId: i,
+        customInstallUrl: l,
+        installParams: u,
+        integrationTypesConfig: _,
+        guildId: c,
+        channelId: p,
+        disableGuildSelect: d,
         source: m,
-        oauth2Callback: _,
+        oauth2Callback: h,
     } = e;
-    if (null != n) {
-        l.default.track(o.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
-            application_id: t,
-            guild_id: u,
+    if (null != l) {
+        n.default.track(r.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
+            application_id: i,
+            guild_id: c,
             auth_type: "custom_url",
             source: m,
-            device_platform: i.Fr ? "mobile_web" : "desktop_web",
+            device_platform: t.Fr ? "mobile_web" : "desktop_web",
         }),
-            (0, r.h)({ href: n });
+            (0, o.h)({ href: l });
         return;
     }
-    if (null != d && Object.values(d).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null)) {
-        l.default.track(o.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
-            application_id: t,
-            guild_id: u,
+    if (null != _ && Object.values(_).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null)) {
+        n.default.track(r.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
+            application_id: i,
+            guild_id: c,
             auth_type: "in_app",
             source: m,
-            device_platform: i.Fr ? "mobile_web" : "desktop_web",
+            device_platform: t.Fr ? "mobile_web" : "desktop_web",
         }),
-            (0, s.openOAuth2Modal)({ clientId: t, guildId: u, channelId: h, disableGuildSelect: p, callback: _ });
+            (0, s.openOAuth2Modal)({ clientId: i, guildId: c, channelId: p, disableGuildSelect: d, callback: h });
         return;
     }
-    null != c &&
-        (l.default.track(o.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
-            application_id: t,
-            guild_id: u,
+    null != u &&
+        (n.default.track(r.HAw.APPLICATION_ADD_TO_SERVER_CLICKED, {
+            application_id: i,
+            guild_id: c,
             auth_type: "in_app",
             source: m,
-            device_platform: i.Fr ? "mobile_web" : "desktop_web",
+            device_platform: t.Fr ? "mobile_web" : "desktop_web",
         }),
         (0, s.openOAuth2Modal)({
-            clientId: t,
-            guildId: u,
-            channelId: h,
-            disableGuildSelect: p,
-            scopes: c.scopes,
-            permissions: null != c.permissions ? a.iu(c.permissions) : void 0,
-            callback: _,
+            clientId: i,
+            guildId: c,
+            channelId: p,
+            disableGuildSelect: d,
+            scopes: u.scopes,
+            permissions: null != u.permissions ? a.iu(u.permissions) : void 0,
+            callback: h,
         }));
 }
-function d(e) {
-    let { applicationId: t, customInstallUrl: n, installParams: i, integrationTypesConfig: a } = e;
-    if (null != n) return null;
+function _(e) {
+    let { applicationId: i, customInstallUrl: l, installParams: t, integrationTypesConfig: a } = e;
+    if (null != l) return null;
     if (null != a && Object.values(a).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null)) {
-        let e = new URL(o.BVt.OAUTH2_AUTHORIZE, window.location.origin);
-        return e.searchParams.set("client_id", t), e.toString();
+        let e = new URL(r.BVt.OAUTH2_AUTHORIZE, window.location.origin);
+        return e.searchParams.set("client_id", i), e.toString();
     }
-    if (null != i) {
-        let e = new URL(o.BVt.OAUTH2_AUTHORIZE, window.location.origin);
+    if (null != t) {
+        let e = new URL(r.BVt.OAUTH2_AUTHORIZE, window.location.origin);
         return (
-            e.searchParams.set("client_id", t),
-            e.searchParams.set("scope", i.scopes.join(" ")),
-            null != i.permissions && e.searchParams.set("permissions", i.permissions),
+            e.searchParams.set("client_id", i),
+            e.searchParams.set("scope", t.scopes.join(" ")),
+            null != t.permissions && e.searchParams.set("permissions", t.permissions),
             e.toString()
         );
     }

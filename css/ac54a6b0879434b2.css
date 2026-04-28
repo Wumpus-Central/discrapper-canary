@@ -1,0 +1,19 @@
+.container__4db43 {
+    display: grid;
+    gap: var(--space-12);
+    grid-template-columns: 1fr 1fr
+}
+
+.perk__4db43 {
+    align-items: center;
+    display: flex
+}
+
+.icon__4db43 {
+    height: 20px;
+    width: 20px
+}
+
+.text__4db43 {
+    margin-inline-start: var(--space-4)
+}

@@ -1,81 +1,83 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => E });
 var i = n(284009),
     l = n.n(i),
-    a = n(702841),
-    r = n(71393),
-    s = n(250627),
+    s = n(702841),
+    a = n(71393),
+    r = n(250627),
     o = n(871109),
-    c = n(627968);
+    d = n(627968);
 n(64700);
-var d = n(132500),
+var c = n(132500),
     u = n(192308),
-    _ = n(391048),
-    m = n(636099),
-    h = n(120700),
-    p = n(742810),
-    g = n(954571),
-    f = n(652215),
-    x = n(179499),
-    A = n(985018);
-function C(e) {
-    let { guildId: t, guildProductListingId: i, sourceAnalyticsLocations: C } = e,
-        v = (0, a.bG)([o.A], () => o.A.getGuildProduct(i)),
-        I = (0, a.bG)([r.A], () => r.A.getGuild(t), [t]),
-        E = (0, x.A)({ guildId: t, productId: i });
-    return (l()(null != I, "guild cannot be null"), l()(null != v, "guildProductListing cannot be null"), (0, s.BB)(I))
-        ? { variant: "primary", text: A.intl.string(A.t.xUi3BL), disabled: !0 }
+    m = n(391048),
+    h = n(636099),
+    g = n(120700),
+    A = n(742810),
+    p = n(954571),
+    x = n(652215),
+    f = n(179499),
+    C = n(985018);
+function E(e) {
+    let { guildId: t, guildProductListingId: i, sourceAnalyticsLocations: E } = e,
+        v = (0, s.bG)([o.A], () => o.A.getGuildProduct(i)),
+        I = (0, s.bG)([a.A], () => a.A.getGuild(t), [t]),
+        _ = (0, f.A)({ guildId: t, productId: i });
+    return (l()(null != I, "guild cannot be null"), l()(null != v, "guildProductListing cannot be null"), (0, r.BB)(I))
+        ? { variant: "primary", text: C.intl.string(C.t.xUi3BL), disabled: !0 }
         : v.has_entitlement
           ? null != v.attachments
-              ? E
-              : { variant: "secondary", text: A.intl.string(A.t.RcTOGF), disabled: !0 }
+              ? _
+              : { variant: "secondary", text: C.intl.string(C.t.RcTOGF), disabled: !0 }
           : {
                 variant: "primary",
-                text: A.intl.string(A.t.xUi3BL),
+                text: C.intl.string(C.t.xUi3BL),
                 onClick: () =>
                     (function (e) {
                         let { guildProductListing: t, guildId: i, sourceAnalyticsLocations: l } = e,
-                            a = !1,
-                            r = (0, d.A)(),
-                            s = t.id,
+                            s = !1,
+                            a = (0, c.A)(),
+                            r = t.id,
                             o = () => {
-                                a = !0;
+                                s = !0;
                             };
                         (0, u.openModalLazy)(
                             async () => {
-                                let { default: e } = await n.e("53924").then(n.bind(n, 950959));
+                                let { default: e } = await Promise.all([n.e("34430"), n.e("16237"), n.e("53924")]).then(
+                                    n.bind(n, 950959),
+                                );
                                 return (n) =>
-                                    (0, c.jsx)(e, {
+                                    (0, d.jsx)(e, {
                                         ...n,
                                         applicationId: t.application_id,
-                                        skuId: s,
+                                        skuId: r,
                                         sourceAnalyticsLocations: l,
                                         guildProductContext: { guildProductListingId: t.id, guildId: i },
-                                        loadId: r,
+                                        loadId: a,
                                         onComplete: o,
                                     });
                             },
                             {
                                 onCloseCallback: () => {
-                                    if (!a) {
-                                        let e = (0, p.q1)({
+                                    if (!s) {
+                                        let e = (0, A.q1)({
                                             location: "GuildProductPurchaseModal",
-                                            unifiedCheckoutFlow: h.C.GUILD_PRODUCT_CHECKOUT,
+                                            unifiedCheckoutFlow: g.C.GUILD_PRODUCT_CHECKOUT,
                                         });
-                                        g.default.track(f.HAw.PAYMENT_FLOW_CANCELED, {
-                                            load_id: r,
-                                            payment_type: f.frM[f.VVm.ONE_TIME],
+                                        p.default.track(x.HAw.PAYMENT_FLOW_CANCELED, {
+                                            load_id: a,
+                                            payment_type: x.frM[x.VVm.ONE_TIME],
                                             is_gift: !1,
-                                            sku_id: s,
+                                            sku_id: r,
                                             location_stack: Array.isArray(l) ? l : [l],
-                                            checkout_design: e ? p.rS.UNIFIED : p.rS.LEGACY,
-                                            checkout_flow: h.C.GUILD_PRODUCT_CHECKOUT,
+                                            checkout_design: e ? A.rS.UNIFIED : A.rS.LEGACY,
+                                            checkout_flow: g.C.GUILD_PRODUCT_CHECKOUT,
                                         });
                                     }
-                                    (0, _.ET)(), (0, m.z)();
+                                    (0, m.ET)(), (0, h.z)();
                                 },
-                                onCloseRequest: f.tEg,
+                                onCloseRequest: x.tEg,
                             },
                         );
-                    })({ guildProductListing: v, guildId: I.id, sourceAnalyticsLocations: C }),
+                    })({ guildProductListing: v, guildId: I.id, sourceAnalyticsLocations: E }),
             };
 }

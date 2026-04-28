@@ -1,0 +1,387 @@
+.channelNameContainer__711d3,
+.label__711d3 {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.channelName__711d3 {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.recentChannelsMenu__711d3 {
+    background: #121214;
+    border: 1px solid hsla(240, 4%, 61%, .035);
+    border-radius: 16px;
+    box-shadow: var(--shadow-high);
+    max-height: 500px;
+    overflow: hidden;
+    padding: 8px;
+    width: 360px
+}
+
+.recentChannelsMenuHeader__711d3 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin-bottom: 2px;
+    padding: 0 12px
+}
+
+.channelMenuSubContainer__711d3 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.icon__711d3 {
+    width: auto
+}
+
+.guildIconWrapper__711d3 {
+    align-items: center;
+    background: var(--background-surface-highest);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.overflowCount__711d3 {
+    max-height: 22px;
+    max-width: 24px
+}
+
+.channelItemContainer__711d3 {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    height: 48px;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    min-width: 0;
+    overflow: hidden;
+    padding: 6px;
+    padding-inline-start: 0;
+    transition: border-color .1s ease-in-out;
+    width: calc(100% - 16px)
+}
+
+.channelItemContainer__711d3.channelItemHighlighted__711d3,
+.channelItemContainer__711d3:hover {
+    background-color: var(--background-mod-strong)
+}
+
+.searchBarContainer__711d3 {
+    padding-bottom: 16px
+}
+
+.emptyChannelItem__711d3 {
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center
+}
+
+.channelItemIcon__711d3,
+.emptyChannelItem__711d3 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.channelItemNameContainer__711d3 {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0;
+    min-width: 0
+}
+
+.channelItemName__711d3 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    max-width: 100%
+}
+
+.channelIcon__711d3 {
+    min-width: 16px
+}
+
+.channelItemNameText__711d3 {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.channelItemAvatars__711d3 {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    padding-inline-end: 4px
+}
+
+.channelList__711d3 {
+    max-height: 360px
+}
+
+.channelListWrapper__711d3 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.avatarWrapper__69074 {
+    height: 100%;
+    width: 100%
+}
+
+.root_df7f81 {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    overflow: visible;
+    position: relative
+}
+
+.mainGuildImage_df7f81,
+.mainIcon_df7f81 {
+    border-radius: var(--radius-sm)
+}
+
+.mainGuildImage_df7f81 {
+    display: block
+}
+
+.acronym_df7f81 {
+    background-color: rgba(19, 19, 24, .95);
+    color: var(--white);
+    font-weight: var(--font-weight-medium);
+    line-height: .8em;
+    white-space: nowrap
+}
+
+.acronym_df7f81,
+.guildIconContainer_df7f81 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.guildIconContainer_df7f81 {
+    bottom: 0;
+    inset-inline-end: 0;
+    overflow: visible;
+    position: absolute
+}
+
+.guildIcon40_df7f81 {
+    height: 20px;
+    width: 20px
+}
+
+.guildIcon32_df7f81 {
+    height: 16px;
+    width: 16px
+}
+
+.guildIcon24_df7f81 {
+    height: 12px;
+    width: 12px
+}
+
+.typingMaskWrapper_df7f81 {
+    overflow: visible;
+    position: relative
+}
+
+.typingMaskSvg_df7f81 {
+    inset: 0;
+    overflow: visible;
+    position: absolute
+}
+
+.typingIndicator_df7f81 {
+    pointer-events: none;
+    position: absolute
+}
+
+.channelTypingStatusFill_df7f81 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    line-height: 0;
+    width: 100%
+}
+
+.messagePreviewLine__7c4a2 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    overflow: hidden
+}
+
+.messageContent__7c4a2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.messageContent__7c4a2>strong {
+    font-weight: var(--font-weight-medium)
+}
+
+.messageContentTrailingIcon__7c4a2 {
+    flex-shrink: 0
+}
+
+.colorTextFeedbackPositive__7c4a2 {
+    color: var(--text-feedback-positive)
+}
+
+.expandedUsersContainer_e72588 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-inline-end: 12px;
+    padding-bottom: 8px;
+    padding-inline-start: 56px
+}
+
+.expandedUsersRow_e72588 {
+    border-radius: var(--radius-sm);
+    height: 24px;
+    padding: 4px
+}
+
+.expandedUsersRow_e72588:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.expandedUsersRow_e72588:active {
+    background-color: var(--interactive-background-active)
+}
+
+.facepileContainer_e72588 {
+    justify-content: center;
+    min-width: 24px;
+    position: relative
+}
+
+.expandedUserRow_e72588,
+.facepileContainer_e72588 {
+    align-items: center;
+    display: flex;
+    min-height: 24px
+}
+
+.expandedUserRow_e72588 {
+    gap: 6px
+}
+
+.expandedUserName_e72588 {
+    flex-shrink: 0
+}
+
+.expandedUserName_e72588,
+.expandedUserNameContainer_e72588 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.expandedUserNameContainer_e72588 {
+    flex: 1
+}
+
+.actionsRow_e72588,
+.expandedUserNameContainer_e72588 {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.actionsRow_e72588 {
+    flex-direction: row
+}
+
+.voiceIcons_e72588 {
+    align-items: center;
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: 4px
+}
+
+.voiceIcon_e72588 {
+    height: 14px;
+    width: 14px
+}
+
+.expandedUserGameIcon_e72588 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0
+}
+
+.gameActivitySecondaryText_e72588 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.gameControllerIcon_e72588 {
+    color: var(--green-360);
+    flex-shrink: 0
+}
+
+.container__50c27 {
+    background-color: #121214;
+    border: 1px solid hsla(240, 4%, 61%, .035);
+    border-radius: 12px;
+    box-shadow: var(--shadow-border) var(--shadow-high);
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 2
+}
+
+.content__50c27 {
+    display: flex
+}
+
+.content__50c27,
+.list__50c27 {
+    flex: 1 1 auto;
+    min-height: 0;
+    min-width: 0
+}
+
+.list__50c27 {
+    overflow: auto
+}

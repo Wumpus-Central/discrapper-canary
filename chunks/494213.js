@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     FV: "mainTableContainer__09a38",
     A0: "horizatonalScroller__09a38",

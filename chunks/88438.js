@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     qG: "fadeIn_eff18d",
     Uw: "fadeInContentFullMotion_eff18d",

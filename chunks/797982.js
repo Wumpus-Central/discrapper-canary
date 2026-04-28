@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+a.exports = {
     Zm: "childButton__3ed08",
     OH: "childContent__3ed08",
     ix: "childText__3ed08",

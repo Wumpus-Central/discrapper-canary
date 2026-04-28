@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     _A: "tags__3f6df",
     JE: "addTags__3f6df",
     r9: "disabled__3f6df",

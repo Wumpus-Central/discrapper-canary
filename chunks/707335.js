@@ -144,9 +144,30 @@ let H = s.memo(function (e) {
         onClick: (e) => s(u, e.shiftKey),
         onContextMenu: (e) =>
             (0, d.L3)(e, async () => {
-                let { default: e } = await Promise.all([a.e("35327"), a.e("99011"), a.e("94989"), a.e("1394")]).then(
-                    a.bind(a, 612826),
-                );
+                let { default: e } = await Promise.all([
+                    a.e("26132"),
+                    a.e("91763"),
+                    a.e("38730"),
+                    a.e("34971"),
+                    a.e("3998"),
+                    a.e("43266"),
+                    a.e("91671"),
+                    a.e("12255"),
+                    a.e("40959"),
+                    a.e("96804"),
+                    a.e("21060"),
+                    a.e("98725"),
+                    a.e("40175"),
+                    a.e("43746"),
+                    a.e("90554"),
+                    a.e("37588"),
+                    a.e("99011"),
+                    a.e("85802"),
+                    a.e("65200"),
+                    a.e("26250"),
+                    a.e("51212"),
+                    a.e("84615"),
+                ]).then(a.bind(a, 612826));
                 return (t) => (0, l.jsx)(e, { ...t, channel: u });
             }),
         children: [

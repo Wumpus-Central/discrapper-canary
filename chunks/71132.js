@@ -1,110 +1,118 @@
-t.d(e, { default: () => X });
+t.d(n, { default: () => R });
 var i = t(627968),
     l = t(64700),
     a = t(550079),
     r = t(477782),
-    d = t(442433),
-    s = t(358367),
+    s = t(442433),
+    d = t(358367),
     c = t(793574),
     o = t(50268),
-    A = t(313281),
-    u = t(17928),
-    g = t(192308),
-    _ = t(499373),
-    h = t(967198),
+    u = t(313281),
+    h = t(17928),
+    A = t(192308),
+    g = t(499373),
+    x = t(967198),
     b = t(652215),
-    y = t(335993),
+    j = t(335993),
     C = t(985018),
-    x = t(795144),
-    p = t(769591),
+    p = t(795144),
+    _ = t(769591),
     f = t(914430),
-    j = t(924985),
-    E = t(734057),
-    G = t(477190),
-    v = t(307623),
-    N = t(317910),
-    O = t(848977),
-    T = t(995102),
+    m = t(924985),
+    v = t(734057),
+    y = t(477190),
+    G = t(307623),
+    X = t(317910),
+    E = t(848977),
+    I = t(995102),
     L = t(288104),
-    M = t(661504),
-    m = t(969128),
-    I = t(422258);
-function U(n) {
-    let e,
-        s,
+    k = t(661504),
+    M = t(969128),
+    N = t(422258);
+function D(e) {
+    let n,
+        d,
         c,
-        { channel: A, onSelect: p } = n,
-        f = (0, O.A)(A),
-        j = (0, x.A)(A),
-        E =
-            ((e = (0, u.bG)([h.A], () => h.A.getGuildId())),
-            (s = A.type === b.rbe.GUILD_CATEGORY),
+        { channel: u, onSelect: _ } = e,
+        f = (0, E.A)(u),
+        m = (0, p.A)(u),
+        v =
+            ((n = (0, h.bG)([x.A], () => x.A.getGuildId())),
+            (d = u.type === b.rbe.GUILD_CATEGORY),
             (c = l.useCallback(() => {
-                (0, g.openModalLazy)(async () => {
-                    let { default: n } = await t.e("59839").then(t.bind(t, 889186));
-                    return (e) => (0, i.jsx)(n, { ...e, parentId: A.id, source: "favorites_add_to_category" });
+                (0, A.openModalLazy)(async () => {
+                    let { default: e } = await Promise.all([
+                        t.e("24092"),
+                        t.e("94494"),
+                        t.e("36946"),
+                        t.e("92639"),
+                        t.e("40963"),
+                        t.e("66031"),
+                        t.e("59839"),
+                    ]).then(t.bind(t, 889186));
+                    return (n) => (0, i.jsx)(e, { ...n, parentId: u.id, source: "favorites_add_to_category" });
                 });
-            }, [A.id])),
-            __OVERLAY__ || e !== b.YYv || !s
+            }, [u.id])),
+            __OVERLAY__ || n !== b.YYv || !d
                 ? null
                 : (0, i.jsx)(r.Dr, {
                       id: "add-channel-to-category",
-                      trailingIndicator: { type: "icon", icon: _.T },
-                      label: C.intl.string(y.default["1QJmIL"]),
+                      trailingIndicator: { type: "icon", icon: g.T },
+                      label: C.intl.string(j.default["1QJmIL"]),
                       action: c,
                   })),
-        G = (0, i.jsx)(r.Dr, {
+        y = (0, i.jsx)(r.Dr, {
             id: "delete-channel",
             label: C.intl.string(C.t.Jg0R7Q),
             subtext: C.intl.string(C.t["+mNKM9"]),
             color: "danger",
             action: () =>
-                (0, g.openModalLazy)(async () => {
-                    let { default: n } = await t.e("52210").then(t.bind(t, 862377));
-                    return (e) =>
-                        (0, i.jsx)(n, {
-                            ...e,
+                (0, A.openModalLazy)(async () => {
+                    let { default: e } = await t.e("52210").then(t.bind(t, 862377));
+                    return (n) =>
+                        (0, i.jsx)(e, {
+                            ...n,
                             onConfirm: () => {
-                                e.onClose(), (0, I.fv)(A.id);
+                                n.onClose(), (0, N.fv)(u.id);
                             },
-                            channel: A,
+                            channel: u,
                         });
                 }),
         }),
-        v = (0, o.A)({ id: A.id, label: C.intl.string(C.t["2visC6"]) });
+        G = (0, o.A)({ id: u.id, label: C.intl.string(C.t["2visC6"]) });
     return (0, i.jsxs)(a.W, {
         "data-menu-migrated": !0,
         navId: "channel-context",
-        onClose: d.Z_,
+        onClose: s.Z_,
         "aria-label": C.intl.string(C.t.Xm41aV),
-        onSelect: p,
+        onSelect: _,
         children: [
             (0, i.jsx)(r.rX, { children: f }),
-            (0, i.jsxs)(r.rX, { children: [E, j] }),
+            (0, i.jsxs)(r.rX, { children: [v, m] }),
+            (0, i.jsx)(r.rX, { children: y }),
             (0, i.jsx)(r.rX, { children: G }),
-            (0, i.jsx)(r.rX, { children: v }),
         ],
     });
 }
-function D(n) {
-    let e,
-        { channel: t, guild: l, onSelect: s } = n,
-        c = (0, O.A)(t),
-        A = (0, T.A)(t),
-        g = (0, L.A)(t),
-        _ =
-            ((e = (0, u.bG)([j.A], () => j.A.isCollapsed(t.id), [t.id])),
+function O(e) {
+    let n,
+        { channel: t, guild: l, onSelect: d } = e,
+        c = (0, E.A)(t),
+        u = (0, I.A)(t),
+        A = (0, L.A)(t),
+        g =
+            ((n = (0, h.bG)([m.A], () => m.A.isCollapsed(t.id), [t.id])),
             (0, i.jsx)(r.sL, {
                 id: "collapse-category",
                 label: C.intl.string(C.t.SvVRsj),
-                action: () => (e ? (0, f.fh)(t.id) : (0, f.Gv)(t.id)),
-                checked: e,
+                action: () => (n ? (0, f.fh)(t.id) : (0, f.Gv)(t.id)),
+                checked: n,
             })),
-        h = (0, u.bG)([j.A, E.A], () => {
-            let n = Object.values(E.A.getMutableBasicGuildChannelsForGuild(t.guild_id)).filter(
-                (n) => n.type === b.rbe.GUILD_CATEGORY,
+        x = (0, h.bG)([m.A, v.A], () => {
+            let e = Object.values(v.A.getMutableBasicGuildChannelsForGuild(t.guild_id)).filter(
+                (e) => e.type === b.rbe.GUILD_CATEGORY,
             );
-            return 0 === n.length || n.every((n) => j.A.isCollapsed(n.id));
+            return 0 === e.length || e.every((e) => m.A.isCollapsed(e.id));
         })
             ? null
             : (0, i.jsx)(r.Dr, {
@@ -112,32 +120,32 @@ function D(n) {
                   label: C.intl.string(C.t["9dqzUr"]),
                   action: () => (0, f.rZ)(t.guild_id),
               }),
-        y = (0, N.A)(t),
-        I = (0, x.A)(t),
-        U = (0, G.A)(t, l),
-        D = (0, v.A)(t),
-        X = (0, o.A)({ id: t.id, label: C.intl.string(C.t["2visC6"]) }),
-        R = (0, m.A)(t),
-        Y = (0, p.os)("ChannelCategoryNormalMenu"),
-        k = (0, M.Ay)(t);
+        j = (0, X.A)(t),
+        N = (0, p.A)(t),
+        D = (0, y.A)(t, l),
+        O = (0, G.A)(t),
+        R = (0, o.A)({ id: t.id, label: C.intl.string(C.t["2visC6"]) }),
+        T = (0, M.A)(t),
+        Y = (0, _.os)("ChannelCategoryNormalMenu"),
+        U = (0, k.Ay)(t);
     return (0, i.jsxs)(a.W, {
         "data-menu-migrated-auto": !0,
         navId: "channel-context",
-        onClose: d.Z_,
+        onClose: s.Z_,
         "aria-label": C.intl.string(C.t.Xm41aV),
-        onSelect: s,
+        onSelect: d,
         children: [
             (0, i.jsx)(r.rX, { children: c }, "mark-as-read"),
-            (0, i.jsxs)(r.rX, { children: [R, _, h] }, "channel-actions"),
-            (0, i.jsxs)(r.rX, { children: [A, Y ? k : g] }, "notifications"),
-            (0, i.jsxs)(r.rX, { children: [y, I, U, D] }, "admin-actions"),
-            (0, i.jsx)(r.rX, { children: X }, "developer-actions"),
+            (0, i.jsxs)(r.rX, { children: [T, g, x] }, "channel-actions"),
+            (0, i.jsxs)(r.rX, { children: [u, Y ? U : A] }, "notifications"),
+            (0, i.jsxs)(r.rX, { children: [j, N, D, O] }, "admin-actions"),
+            (0, i.jsx)(r.rX, { children: R }, "developer-actions"),
         ],
     });
 }
-let X = (0, s.A)(
-    function (n) {
-        return (0, A.DZ)() ? (0, i.jsx)(U, { ...n }) : (0, i.jsx)(D, { ...n });
+let R = (0, d.A)(
+    function (e) {
+        return (0, u.DZ)() ? (0, i.jsx)(D, { ...e }) : (0, i.jsx)(O, { ...e });
     },
     [c.A.CONTEXT_MENU, c.A.CHANNEL_CATEGORY_MENU],
 );

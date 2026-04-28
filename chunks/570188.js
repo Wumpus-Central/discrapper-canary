@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Gb: "directionDown__5fbe9",
     kL: "directionRight__5fbe9",

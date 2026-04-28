@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jC: "popoutContainer__4ad69",
     VB: "messagesScroller__4ad69",

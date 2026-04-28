@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iT: "thumbnailContainer__8bb30",
     Nr: "uploadThumbnailContainer__8bb30",

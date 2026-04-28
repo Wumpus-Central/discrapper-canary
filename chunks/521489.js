@@ -1,61 +1,60 @@
-"use strict";
-n.d(t, { N: () => x });
-var a = n(627968),
-    i = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    s = n(419354),
-    c = n(110259),
-    o = n(150591),
-    d = n(22856),
-    u = n(707554),
-    m = n(38021),
-    f = n(305866),
-    h = n(43990),
-    _ = n(97469),
-    g = n(382450),
-    p = n(967744);
-function x(e) {
+a.d(i, { N: () => N });
+var s = a(627968),
+    d = a(64700),
+    l = a(503698),
+    n = a.n(l),
+    r = a(123924),
+    c = a(110259),
+    h = a(150591),
+    o = a(22856),
+    t = a(707554),
+    m = a(38021),
+    p = a(305866),
+    u = a(43990),
+    j = a(97469),
+    v = a(382450),
+    x = a(967744);
+function N(e) {
     let {
-            transitionState: t,
-            animationVariant: n = "default",
+            transitionState: i,
+            animationVariant: a = "default",
             returnRef: l,
-            "aria-label": x,
+            "aria-label": N,
             onClose: b,
-            trackingProps: E,
-            children: v,
+            trackingProps: y,
+            children: k,
         } = e,
-        A = i.useId(),
-        I = i.useMemo(() => ({ id: A, headingId: `heading-${A}`, onClose: b, dismissable: !0 }), [A, b]),
-        N = (0, _.NC)(),
-        { theme: S } = (0, m.wR)(),
-        j = (0, o.kS)(t, n);
-    return (0, a.jsx)(d.V.Provider, {
-        value: I,
-        children: (0, a.jsx)(f.l, {
-            id: A,
+        f = d.useId(),
+        g = d.useMemo(() => ({ id: f, headingId: `heading-${f}`, onClose: b, dismissable: !0 }), [f, b]),
+        w = (0, j.NC)(),
+        { theme: I } = (0, m.wR)(),
+        C = (0, h.kS)(i, a);
+    return (0, s.jsx)(o.V.Provider, {
+        value: g,
+        children: (0, s.jsx)(p.l, {
+            id: f,
             role: "dialog",
-            "aria-label": x,
-            "aria-labelledby": null != x ? void 0 : I.headingId,
+            "aria-label": N,
+            "aria-labelledby": null != N ? void 0 : g.headingId,
             returnRef: l,
-            ...E,
-            impressionType: E?.impressionType ?? c.ImpressionTypes.MODAL,
-            children: (0, a.jsx)(u.F, {
+            ...y,
+            impressionType: y?.impressionType ?? c.ImpressionTypes.MODAL,
+            children: (0, s.jsx)(t.F, {
                 forceLevel: 1,
-                children: (0, a.jsx)("div", {
-                    className: g.nw,
-                    children: (0, a.jsx)(h.N, {
-                        theme: N,
+                children: (0, s.jsx)("div", {
+                    className: v.nw,
+                    children: (0, s.jsx)(u.N, {
+                        theme: w,
                         children: (e) =>
-                            (0, a.jsx)(s.animated.div, {
+                            (0, s.jsx)(r.animated.div, {
                                 "data-mana-component": "layer-modal",
-                                className: r()(p.container, g.yl, e),
-                                style: j,
-                                children: (0, a.jsx)("div", {
-                                    className: g.jE,
-                                    children: (0, a.jsx)(h.N, {
-                                        theme: S,
-                                        children: (e) => (0, a.jsx)("div", { className: r()(e, g.h_), children: v }),
+                                className: n()(x.container, v.yl, e),
+                                style: C,
+                                children: (0, s.jsx)("div", {
+                                    className: v.jE,
+                                    children: (0, s.jsx)(u.N, {
+                                        theme: I,
+                                        children: (e) => (0, s.jsx)("div", { className: n()(e, v.h_), children: k }),
                                     }),
                                 }),
                             }),

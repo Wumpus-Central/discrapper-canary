@@ -1,90 +1,109 @@
-l.d(t, { Ay: () => m, CG: () => L, J$: () => P });
-var i = l(627968);
-l(64700);
-var n = l(503698),
-    r = l.n(n),
-    s = l(192308),
-    a = l(187322),
-    u = l(22231),
-    c = l(573435),
-    o = l(946274),
-    d = l(145497),
-    I = l(179283),
-    A = l(123213),
-    _ = l(86376),
-    E = l(649640),
-    h = l(339984),
-    C = l(890653);
-function P(e) {
-    let { profile: t, className: l } = e,
-        n = (0, E._3)(t);
+i.d(l, { Ay: () => h, CG: () => x, J$: () => m });
+var t = i(627968);
+i(64700);
+var n = i(503698),
+    s = i.n(n),
+    a = i(192308),
+    r = i(187322),
+    u = i(22231),
+    c = i(573435),
+    o = i(946274),
+    d = i(145497),
+    I = i(179283),
+    A = i(123213),
+    C = i(86376),
+    E = i(649640),
+    _ = i(339984),
+    N = i(890653);
+function m(e) {
+    let { profile: l, className: i } = e,
+        n = (0, E._3)(l);
     return null != n
-        ? (0, i.jsx)("div", { className: r()(l, C.vK), style: { background: n } })
-        : (0, i.jsx)(g, { profile: t, className: l });
+        ? (0, t.jsx)("div", { className: s()(i, N.vK), style: { background: n } })
+        : (0, t.jsx)(g, { profile: l, className: i });
 }
 function g(e) {
-    let { profile: t, className: l } = e,
+    let { profile: l, className: i } = e,
         n = (0, E.b2)(),
-        s = (0, E.aG)({ profile: t, defaultColor: n.hex(), forceDefaultColor: null != t.brandColorPrimary }),
-        a = t.brandColorPrimary ?? s;
-    return (0, i.jsx)("div", { className: r()(l, C.vK), style: { background: (0, E.n6)(a) } });
+        a = (0, E.aG)({ profile: l, defaultColor: n.hex(), forceDefaultColor: null != l.brandColorPrimary }),
+        r = l.brandColorPrimary ?? a;
+    return (0, t.jsx)("div", { className: s()(i, N.vK), style: { background: (0, E.n6)(r) } });
 }
-function L(e) {
-    let { profile: t, onIconChange: n } = e;
+function x(e) {
+    let { profile: l, onIconChange: n } = e;
     return null == n
-        ? (0, i.jsx)("div", {
-              className: C.H,
-              children: (0, i.jsx)(c.Ay, {
+        ? (0, t.jsx)("div", {
+              className: N.H,
+              children: (0, t.jsx)(c.Ay, {
                   mask: c.hW.CLAN_ICON,
                   width: 70,
                   height: 70,
-                  children: (0, i.jsx)("div", {
-                      className: C.R3,
-                      children: (0, i.jsx)(d.j, { guildId: t.id, guildName: t.name, guildIcon: t.icon, iconSize: 64 }),
+                  children: (0, t.jsx)("div", {
+                      className: N.R3,
+                      children: (0, t.jsx)(d.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
                   }),
               }),
           })
-        : (0, i.jsx)("div", {
-              className: C.H,
-              children: (0, i.jsx)(a.vN, {
+        : (0, t.jsx)("div", {
+              className: N.H,
+              children: (0, t.jsx)(r.vN, {
                   within: !0,
-                  children: (0, i.jsx)(c.Ay, {
+                  children: (0, t.jsx)(c.Ay, {
                       mask: c.hW.CLAN_ICON,
                       width: 70,
                       height: 70,
-                      children: (0, i.jsxs)("div", {
-                          className: r()(C.R3, C.vk),
+                      children: (0, t.jsxs)("div", {
+                          className: s()(N.R3, N.vk),
                           children: [
-                              (0, i.jsx)(d.j, { guildId: t.id, guildName: t.name, guildIcon: t.icon, iconSize: 64 }),
-                              (0, i.jsx)("div", { className: C.Lw }),
-                              (0, i.jsx)(u.R, {
+                              (0, t.jsx)(d.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
+                              (0, t.jsx)("div", { className: N.Lw }),
+                              (0, t.jsx)(u.R, {
                                   size: "custom",
-                                  className: C.QY,
+                                  className: N.QY,
                                   width: 20,
                                   height: 20,
                                   color: "white",
                               }),
-                              (0, i.jsx)(o.Ay, {
+                              (0, t.jsx)(o.Ay, {
                                   tabIndex: 0,
-                                  onChange: function (e, t) {
+                                  onChange: function (e, l) {
                                       null != n &&
-                                          (0, s.openModalLazy)(async () => {
-                                              let { default: r } = await Promise.all([
-                                                  l.e("79149"),
-                                                  l.e("2956"),
-                                                  l.e("74571"),
-                                                  l.e("58176"),
-                                              ]).then(l.bind(l, 142630));
-                                              return (l) =>
-                                                  (0, i.jsx)(r, {
-                                                      uploadType: h.HL.GUILD_ICON,
+                                          (0, a.openModalLazy)(async () => {
+                                              let { default: s } = await Promise.all([
+                                                  i.e("77598"),
+                                                  i.e("48486"),
+                                                  i.e("8308"),
+                                                  i.e("43662"),
+                                                  i.e("40851"),
+                                                  i.e("88941"),
+                                                  i.e("62680"),
+                                                  i.e("48804"),
+                                                  i.e("33902"),
+                                                  i.e("54527"),
+                                                  i.e("76170"),
+                                                  i.e("99999"),
+                                                  i.e("33584"),
+                                                  i.e("50342"),
+                                                  i.e("63726"),
+                                                  i.e("93513"),
+                                                  i.e("79149"),
+                                                  i.e("7406"),
+                                                  i.e("55524"),
+                                                  i.e("90017"),
+                                                  i.e("89908"),
+                                                  i.e("74571"),
+                                                  i.e("50348"),
+                                              ]).then(i.bind(i, 142630));
+                                              return (i) =>
+                                                  (0, t.jsx)(s, {
+                                                      uploadType: _.HL.GUILD_ICON,
                                                       imageUri: e,
-                                                      file: t,
+                                                      file: l,
                                                       onCrop: (e) => {
-                                                          let { imageUri: t } = e;
-                                                          return n(t);
+                                                          let { imageUri: l } = e;
+                                                          return n(l);
                                                       },
-                                                      ...l,
+                                                      ...i,
                                                   });
                                           }, {});
                                   },
@@ -95,27 +114,27 @@ function L(e) {
               }),
           });
 }
-function m(e) {
+function h(e) {
     let {
-            profile: t,
-            onIconChange: l,
+            profile: l,
+            onIconChange: i,
             className: n,
-            disableCTA: s,
-            CTAOverride: a,
+            disableCTA: a,
+            CTAOverride: r,
             onClose: u,
             disableGuildNameClick: c,
         } = e,
         o = null;
     return (
-        null != a ? (o = a) : s || (o = (0, i.jsx)(A.A, { profile: t, onComplete: u })),
-        (0, i.jsxs)("div", {
-            className: r()(C.kL, n),
+        null != r ? (o = r) : a || (o = (0, t.jsx)(A.A, { profile: l, onComplete: u })),
+        (0, t.jsxs)("div", {
+            className: s()(N.kL, n),
             children: [
-                (0, i.jsx)(P, { profile: t }),
-                (0, i.jsx)(L, { onIconChange: l, profile: t }),
-                (0, i.jsx)(_.A, { profile: t, disableGuildNameClick: c }),
-                (0, i.jsx)(I.P, { profile: t }),
-                null != o && (0, i.jsx)("div", { className: C.UD, children: o }),
+                (0, t.jsx)(m, { profile: l }),
+                (0, t.jsx)(x, { onIconChange: i, profile: l }),
+                (0, t.jsx)(C.A, { profile: l, disableGuildNameClick: c }),
+                (0, t.jsx)(I.P, { profile: l }),
+                null != o && (0, t.jsx)("div", { className: N.UD, children: o }),
             ],
         })
     );

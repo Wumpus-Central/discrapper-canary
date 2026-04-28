@@ -17,7 +17,12 @@ function c(e, t) {
                 ((c = r.default.getCurrentUser()),
                 (null != u || o.Ay.canUseCustomCallSounds(c)) &&
                     (0, s.L3)(i, async () => {
-                        let { default: i } = await n.e("61440").then(n.bind(n, 710339));
+                        let { default: i } = await Promise.all([
+                            n.e("3376"),
+                            n.e("26132"),
+                            n.e("46652"),
+                            n.e("61440"),
+                        ]).then(n.bind(n, 710339));
                         return (n) => (0, l.jsx)(i, { ...n, soundGuild: u, activeCallGuildId: t, sound: e });
                     }));
         },

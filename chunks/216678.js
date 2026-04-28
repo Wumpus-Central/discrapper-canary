@@ -1,71 +1,70 @@
-"use strict";
-i.d(t, { A: () => C });
-var n = i(627968);
-i(64700);
-var a = i(132500),
-    l = i(192308),
-    o = i(391048),
-    s = i(636099),
-    r = i(742810),
-    c = i(954571),
-    d = i(652215);
-function C(e) {
+o.d(a, { A: () => p });
+var e = o(627968);
+o(64700);
+var i = o(132500),
+    n = o(192308),
+    l = o(391048),
+    c = o(636099),
+    s = o(742810),
+    d = o(954571),
+    u = o(652215);
+function p(t) {
     let {
-            applicationId: t,
-            skuId: C,
-            onClose: u,
-            onComplete: f,
+            applicationId: a,
+            skuId: p,
+            onClose: r,
+            onComplete: k,
             analyticsLocations: _,
-            analyticsLocationObject: p,
+            analyticsLocationObject: C,
             contextKey: h,
-            isGift: L = !1,
-            checkoutFlow: I,
-        } = e,
-        g = !1,
-        b = (0, a.A)();
-    (0, l.openModalLazy)(
+            isGift: f = !1,
+            checkoutFlow: E,
+        } = t,
+        w = !1,
+        y = (0, i.A)();
+    (0, n.openModalLazy)(
         async () => {
-            let { default: e } = await i.e("28424").then(i.bind(i, 519259));
-            return (i) => {
-                let { onClose: a, ...l } = i;
-                return (0, n.jsx)(e, {
-                    ...l,
-                    loadId: b,
-                    applicationId: t,
-                    skuId: C,
+            let { default: t } = await Promise.all([o.e("22509"), o.e("28424")]).then(o.bind(o, 519259));
+            return (o) => {
+                let { onClose: i, ...n } = o;
+                return (0, e.jsx)(t, {
+                    ...n,
+                    loadId: y,
+                    applicationId: a,
+                    skuId: p,
                     analyticsLocations: _,
-                    analyticsLocationObject: p,
-                    isGift: L,
-                    onClose: (e) => {
-                        a(), u?.(e);
+                    analyticsLocationObject: C,
+                    isGift: f,
+                    onClose: (t) => {
+                        i(), r?.(t);
                     },
-                    onComplete: (e) => {
-                        (g = !0), f?.(e);
+                    onComplete: (t) => {
+                        (w = !0), k?.(t);
                     },
-                    checkoutFlow: I,
+                    checkoutFlow: E,
                 });
             };
         },
         {
             contextKey: h,
             onCloseCallback: () => {
-                if (!g) {
-                    let e = (0, r.q1)({ location: "StandardOneTimePaymentModal", unifiedCheckoutFlow: I });
-                    c.default.track(d.HAw.PAYMENT_FLOW_CANCELED, {
-                        load_id: b,
-                        payment_type: d.frM[d.VVm.ONE_TIME],
-                        location: p,
-                        is_gift: L,
-                        sku_id: C,
-                        application_id: t,
+                if (!w) {
+                    let t = (0, s.q1)({ location: "StandardOneTimePaymentModal", unifiedCheckoutFlow: E });
+                    d.default.track(u.HAw.PAYMENT_FLOW_CANCELED, {
+                        load_id: y,
+                        payment_type: u.frM[u.VVm.ONE_TIME],
+                        location: C,
+                        is_gift: f,
+                        sku_id: p,
+                        application_id: a,
                         location_stack: _,
-                        checkout_design: e ? r.rS.UNIFIED : r.rS.LEGACY,
-                        checkout_flow: I,
+                        checkout_design: t ? s.rS.UNIFIED : s.rS.LEGACY,
+                        checkout_flow: E,
                     });
                 }
-                (0, o.ET)(), (0, s.z)(), u?.(g);
+                (0, l.ET)(), (0, c.z)(), r?.(w);
             },
-            onCloseRequest: d.tEg,
+            onCloseRequest: u.tEg,
         },
     );
 }

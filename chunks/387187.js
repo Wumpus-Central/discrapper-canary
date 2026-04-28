@@ -1,2 +1,1 @@
-"use strict";
-e.exports = { i: "wrapper__0d1ef" };
+_.exports = { i: "wrapper__0d1ef" };

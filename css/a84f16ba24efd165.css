@@ -1,0 +1,327 @@
+.previewButton__50a36 {
+    align-items: center;
+    color: var(--text-brand);
+    cursor: pointer;
+    display: inline-flex;
+    gap: 4px
+}
+
+.previewButton__50a36:hover {
+    text-decoration: underline
+}
+
+.applicationBody__864b0 {
+    margin: 8px 0
+}
+
+.form__864b0 {
+    margin: 24px 0
+}
+
+.twoColumnContainer__864b0 {
+    display: flex;
+    flex-direction: row;
+    gap: 32px
+}
+
+.column__864b0 {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    gap: 8px
+}
+
+.divider__864b0 {
+    background-color: var(--border-strong);
+    height: 1px;
+    margin: 32px 0;
+    width: 100%
+}
+
+.previewWrapper__864b0 {
+    height: 100px;
+    overflow: hidden;
+    position: relative
+}
+
+.preview__864b0 {
+    pointer-events: none
+}
+
+.gradient__864b0,
+.preview__864b0 {
+    bottom: 0;
+    inset-inline: 0;
+    position: absolute
+}
+
+.gradient__864b0 {
+    background: linear-gradient(180deg, var(--background-base-low) 0, transparent 70%);
+    display: block;
+    top: 0;
+    z-index: 2
+}
+
+.container__99871 {
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-medium);
+    overflow: hidden
+}
+
+.loaderContainer__99871 {
+    padding: 64px 0
+}
+
+.loadingText__99871 {
+    margin-bottom: 24px;
+    text-align: center
+}
+
+.header__99871 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    display: flex;
+    padding: 16px
+}
+
+.headerIcon__99871 {
+    margin-inline-end: 16px
+}
+
+.checklistItem__99871 {
+    display: flex;
+    padding: 16px
+}
+
+.separator__99871 {
+    background-color: var(--border-muted);
+    border: none;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0 16px;
+    position: relative
+}
+
+.checklistIcon__99871 {
+    flex: 0 0 20px;
+    margin-inline-end: 16px
+}
+
+.checklistText__99871 {
+    flex: 1 1 auto
+}
+
+.detailsButton__99871 {
+    font-weight: var(--font-weight-normal);
+    padding: 0
+}
+
+.doesNot__99871 {
+    color: var(--text-feedback-critical)
+}
+
+.healthPending__99871 {
+    color: var(--text-feedback-warning)
+}
+
+.healthFailingDescription__99871 {
+    margin-bottom: 8px
+}
+
+.indent__99871 {
+    margin-inline-start: 16px
+}
+
+@use "postcss-pxtorem";
+
+.card_f44397 {
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    height: var(--custom-discover-static-guild-card-card-height);
+    overflow: hidden;
+    position: relative;
+    width: 200px
+}
+
+.card_f44397,
+.iconMask_f44397 {
+    background-color: var(--background-surface-high)
+}
+
+.iconMask_f44397 {
+    padding: 4px
+}
+
+@keyframes placeholderPulse_f44397 {
+    0% {
+        opacity: .6
+    }
+
+    50% {
+        opacity: .8
+    }
+
+    to {
+        opacity: .6
+    }
+}
+
+.cardPlaceholder_f44397 {
+    animation: placeholderPulse_f44397 1.8s ease-in-out infinite
+}
+
+.cardHeader_f44397 {
+    display: block;
+    flex: 0 0 112px;
+    margin-bottom: 28px;
+    overflow: visible;
+    position: relative
+}
+
+.splash_f44397 {
+    display: block;
+    inset-inline-start: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: scale(1)
+}
+
+.splash_f44397,
+.splashImage_f44397 {
+    height: 100%;
+    width: 100%
+}
+
+.splashImage_f44397 {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.splashLoaded_f44397 .splash_f44397 {
+    opacity: 1
+}
+
+.guildIcon_f44397 {
+    bottom: -21px;
+    inset-inline-start: 12px;
+    position: absolute
+}
+
+.defaultIcon_f44397 {
+    align-items: center;
+    background-color: var(--brand-500);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.acronym_f44397 {
+    color: var(--white)
+}
+
+.avatar_f44397 {
+    height: 100%;
+    width: 100%
+}
+
+.guildInfo_f44397 {
+    align-content: stretch;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 0 12px 12px;
+    position: relative
+}
+
+.title_f44397 {
+    align-items: center;
+    display: flex;
+    font-weight: var(--font-weight-semibold);
+    width: 100%
+}
+
+.verifiedIcon_f44397 {
+    flex: 0 0 16px;
+    height: 16px;
+    margin-inline: -2px 4px;
+    width: 16px
+}
+
+.guildName_f44397 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.descriptionContainer_f44397 {
+    flex: 1 1 auto
+}
+
+.description_f44397 {
+    margin: 8px 0;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis
+}
+
+.memberInfo_f44397 {
+    display: flex;
+    flex: 0 0 auto;
+    justify-self: flex-end
+}
+
+.memberCount_f44397 {
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 16px;
+    margin-inline-end: 16px
+}
+
+.memberCount_f44397:last-child {
+    margin-inline-end: 0
+}
+
+.memberDot_f44397 {
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 8px;
+    margin-inline-end: 4px;
+    width: 8px
+}
+
+.dotOnline_f44397 {
+    background-color: var(--green-360)
+}
+
+.dotOffline_f44397 {
+    background-color: var(--text-muted)
+}
+
+.cardDisabled_f44397 {
+    opacity: .4;
+    pointer-events: none
+}
+
+.cardSmall_f44397 {
+    transform: scale(.8)
+}
+
+.theme-dark .card_f44397 {
+    box-shadow: var(--shadow-border), var(--shadow-high)
+}
+
+.theme-dark .iconMask_f44397 {
+    background-color: var(--background-mod-normal)
+}
+
+.theme-light .card_f44397 {
+    box-shadow: var(--legacy-elevation-border), var(--elevation-medium)
+}

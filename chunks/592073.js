@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     zt: "dnsFont__89a31",
     u_: "cherryBomb__89a31",

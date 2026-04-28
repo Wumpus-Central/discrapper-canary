@@ -1,0 +1,539 @@
+.link__4364d {
+    cursor: pointer
+}
+
+.link__4364d:hover {
+    text-decoration: underline
+}
+
+.flexRow__4364d {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.flexColumn__4364d {
+    display: flex;
+    flex-direction: column
+}
+
+.headerContainer__4364d {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-xs);
+    min-width: 0;
+    width: 100%
+}
+
+.detailsContainer__4364d {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0
+}
+
+.bodyTextSize__4364d {
+    font-size: 12px;
+    line-height: 16px
+}
+
+.ellipsisRow__4364d {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.bodyLinkMuted__4364d {
+    color: var(--text-muted)
+}
+
+.image__4364d {
+    border-radius: var(--radius-sm);
+    height: 32px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 32px
+}
+
+.timeBar__4364d {
+    margin-top: var(--space-8)
+}
+
+.activityClickable__4364d {
+    cursor: pointer
+}
+
+.activityClickable__4364d:hover .title__4364d {
+    text-decoration: underline
+}
+
+.ellipsis__2ef49 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.headerContainer__2ef49 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    min-width: 0;
+    width: 100%
+}
+
+.headerText__2ef49 {
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase
+}
+
+.headerText__2ef49+div {
+    margin-inline-start: 8px
+}
+
+.headerTextNormal__2ef49 {}
+
+.headerTextEmptyBody__2ef49 {}
+
+.body__2ef49 {
+    display: flex
+}
+
+.bodyAlignCenter__2ef49,
+.bodyNormal__2ef49 {
+    align-items: center
+}
+
+.openGameProfile__2ef49 {
+    cursor: pointer
+}
+
+.openGameProfile__2ef49:hover {
+    text-decoration: underline
+}
+
+.assets__2ef49 {
+    align-self: flex-start;
+    position: relative
+}
+
+.assetsUserActivityHover__2ef49 {
+    height: 32px;
+    width: 32px
+}
+
+.assetsLargeMaskStreamPreview__2ef49,
+.assetsLargeMaskVoiceChannel__2ef49 {
+    -webkit-mask: url(/assets/f86a4d3ee1fc9ef0.svg);
+    mask: url(/assets/f86a4d3ee1fc9ef0.svg);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%
+}
+
+.assetsLargeMaskActivityFeed__2ef49 {
+    -webkit-mask: url(/assets/892bf2036797f905.svg);
+    mask: url(/assets/892bf2036797f905.svg)
+}
+
+.assetsLargeImage__2ef49 {
+    -webkit-user-drag: none;
+    border-radius: 8px;
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.assetsLargeImageSpotify__2ef49 {
+    border-radius: 0
+}
+
+.activityVoiceChannelUserHover__2ef49 .assetsLargeImageSpotify__2ef49 {
+    border-radius: 8px
+}
+
+.assetsLargeImageStreamPreview__2ef49,
+.assetsLargeImageStreamPreviewXbox__2ef49 {
+    height: 60px;
+    width: 60px
+}
+
+.assetsLargeImageStreamPreview__2ef49,
+.assetsLargeImageStreamPreviewXbox__2ef49 {}
+
+.activityVoiceChannelUserHover__2ef49 .assetsLargeImageStreamPreview__2ef49 {
+    border-radius: 8px;
+    height: 32px;
+    width: 32px
+}
+
+.assetsLargeImageActivityFeed__2ef49,
+.assetsLargeImageActivityFeedXbox__2ef49 {
+    height: 90px;
+    width: 90px
+}
+
+.assetsLargeImageActivityFeed__2ef49,
+.assetsLargeImageActivityFeedXbox__2ef49 {}
+
+.assetsLargeImageVoiceChannel__2ef49 {
+    height: 64px;
+    width: 64px
+}
+
+.activityVoiceChannelUserHover__2ef49 .assetsLargeImageVoiceChannel__2ef49 {
+    border-radius: var(--radius-sm);
+    height: 32px;
+    width: 32px
+}
+
+.assetsLargeImageVoiceChannelXbox__2ef49 {}
+
+.assetsLargeImageActivityFeedTwitch__2ef49 {
+    border-radius: var(--radius-sm);
+    height: 260px;
+    -webkit-mask: linear-gradient(0deg, transparent 10%, #000 80%);
+    mask: linear-gradient(0deg, transparent 10%, #000 80%);
+    width: 100%
+}
+
+.assetsSmallImage__2ef49 {
+    -webkit-user-drag: none;
+    border-radius: 50%;
+    bottom: -4px;
+    inset-inline-end: -4px;
+    position: absolute
+}
+
+.assetsSmallImageStreamPreview__2ef49,
+.assetsSmallImageVoiceChannel__2ef49 {
+    height: 20px;
+    width: 20px
+}
+
+.assetsSmallImageStreamPreview__2ef49,
+.assetsSmallImageVoiceChannel__2ef49 {}
+
+.activityVoiceChannelUserHover__2ef49 .assetsSmallImageStreamPreview__2ef49,
+.activityVoiceChannelUserHover__2ef49 .assetsSmallImageVoiceChannel__2ef49 {
+    bottom: -2px;
+    height: 10px;
+    inset-inline-end: -2px;
+    width: 10px
+}
+
+.assetsSmallImageActivityFeed__2ef49 {
+    height: 30px;
+    width: 30px;
+}
+
+.assetsSmallImageActivityFeedWithoutLargeImage__2ef49,
+.assetsSmallImageStreamPreviewWithoutLargeImage__2ef49,
+.assetsSmallImageVoiceChannelWithoutLargeImage__2ef49 {
+    height: 40px;
+    width: 40px
+}
+
+.activityVoiceChannelUserHover__2ef49 .assetsSmallImageStreamPreviewWithoutLargeImage__2ef49,
+.activityVoiceChannelUserHover__2ef49 .assetsSmallImageVoiceChannelWithoutLargeImage__2ef49 {
+    border-radius: var(--radius-sm);
+    height: 32px;
+    width: 32px
+}
+
+.assetsSmallImageActivityFeedWithoutLargeImage__2ef49,
+.assetsSmallImageStreamPreviewWithoutLargeImage__2ef49,
+.assetsSmallImageVoiceChannelWithoutLargeImage__2ef49 {}
+
+.gameIcon__2ef49 {
+    flex: 0 0 auto
+}
+
+.activityVoiceChannelUserHover__2ef49 .gameIcon__2ef49 {
+    border-radius: var(--radius-sm);
+    height: 32px;
+    width: 32px
+}
+
+.screenshareIcon__2ef49 {
+    background-image: url(/assets/aa013155f3c2ecb0.svg);
+    height: 40px;
+    width: 40px
+}
+
+.content__2ef49 {
+    overflow: hidden
+}
+
+.contentImagesStreamPreview__2ef49,
+.contentImagesVoiceChannel__2ef49 {
+    margin-inline-start: 10px
+}
+
+.contentImagesStreamPreview__2ef49,
+.contentImagesVoiceChannel__2ef49 {}
+
+.contentImagesActivityFeed__2ef49 {
+    margin-inline-start: 10px;
+}
+
+.contentNoImagesStreamPreview__2ef49,
+.contentNoImagesVoiceChannel__2ef49 {}
+
+.contentNoImagesActivityFeed__2ef49 {
+    margin-bottom: -4px;
+}
+
+.contentGameImageStreamPreview__2ef49,
+.contentGameImageVoiceChannel__2ef49 {
+    margin-bottom: -1px;
+    margin-inline-start: 10px
+}
+
+.contentGameImageStreamPreview__2ef49,
+.contentGameImageVoiceChannel__2ef49 {}
+
+.textRow__2ef49 {
+    display: block;
+    font-size: 14px;
+    line-height: 18px
+}
+
+.clickableDetails__2ef49,
+.details__2ef49,
+.playTime__2ef49,
+.state__2ef49,
+.timestamp__2ef49 {}
+
+.clickableDetails__2ef49 {
+    cursor: pointer
+}
+
+.clickableDetails__2ef49:hover {
+    text-decoration: underline
+}
+
+.nameNormal__2ef49 {}
+
+.detailsWrap__2ef49 {}
+
+.guildIcon__2ef49 {
+    border-radius: var(--radius-xs)
+}
+
+.guildDetails__2ef49 {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    margin-top: 4px
+}
+
+.voiceChannelInfo__2ef49 {
+    align-items: center;
+    display: flex;
+    gap: 2px
+}
+
+.nameWrap__2ef49 {}
+
+.activityActivityFeed__2ef49 .name__2ef49 {
+    display: none
+}
+
+.activityActivityFeed__2ef49 .details__2ef49 {
+    font-weight: var(--font-weight-semibold)
+}
+
+.timeBarActivityFeed__2ef49 {
+    margin-top: 10px
+}
+
+.timeBarVoiceChannel__2ef49 {
+    margin-top: 4px
+}
+
+.activityNameUserActivityHover__2ef49 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 18px
+}
+
+.activityName__2ef49,
+.nameNormal__2ef49,
+.nameWrap__2ef49 {
+    color: var(--white)
+}
+
+.bodyLink__2ef49 {}
+
+.bodyLink__2ef49:hover {
+    text-decoration: underline
+}
+
+.twitchImageContainer__2ef49 {
+    background: var(--primary-800);
+    border-radius: var(--radius-sm);
+    position: relative
+}
+
+.twitchImageOverlay__2ef49 {
+    inset-inline: 0;
+    bottom: 0;
+    padding: 16px;
+    position: absolute
+}
+
+.twitchBackgroundImage__2ef49 {
+    display: inline-block;
+    min-height: 260px
+}
+
+.streamUsername__2ef49 {
+    color: var(--primary-200);
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.25
+}
+
+.streamName__2ef49 {
+    color: var(--primary-300);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    margin-top: 8px
+}
+
+.streamGame__2ef49 {
+    color: var(--primary-400);
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold);
+    margin-top: 8px;
+    text-transform: uppercase
+}
+
+.activityVoiceChannel__2ef49 .headerText__2ef49 {
+    color: var(--interactive-text-default)
+}
+
+.activityVoiceChannel__2ef49 .activityName__2ef49,
+.activityVoiceChannel__2ef49 .name__2ef49,
+.activityVoiceChannel__2ef49 .nameNormal__2ef49,
+.activityVoiceChannel__2ef49 .nameWrap__2ef49 {
+    color: var(--text-strong)
+}
+
+.activityVoiceChannel__2ef49 .content__2ef49,
+.activityVoiceChannel__2ef49 .details__2ef49,
+.activityVoiceChannel__2ef49 .playTime__2ef49,
+.activityVoiceChannel__2ef49 .state__2ef49,
+.activityVoiceChannel__2ef49 .timestamp__2ef49 {
+    color: var(--text-default)
+}
+
+.activityVoiceChannelUserHover__2ef49 .activityName__2ef49,
+.activityVoiceChannelUserHover__2ef49 .name__2ef49,
+.activityVoiceChannelUserHover__2ef49 .nameNormal__2ef49,
+.activityVoiceChannelUserHover__2ef49 .nameWrap__2ef49 {
+    color: var(--text-strong)
+}
+
+.activityVoiceChannelUserHover__2ef49 .content__2ef49,
+.activityVoiceChannelUserHover__2ef49 .details__2ef49,
+.activityVoiceChannelUserHover__2ef49 .playTime__2ef49,
+.activityVoiceChannelUserHover__2ef49 .state__2ef49,
+.activityVoiceChannelUserHover__2ef49 .timestamp__2ef49 {
+    color: var(--text-muted);
+    font-size: 12px
+}
+
+.platformIcon__2ef49 {
+    display: none
+}
+
+.icon__2ef49 {
+    color: var(--text-default);
+    display: block;
+    flex: 0 0 auto;
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.wrap__2ef49 {
+    flex-wrap: wrap
+}
+
+.activityDetails__2ef49 {
+    display: flex;
+    flex-direction: row;
+    width: 100%
+}
+
+.activityActivityFeed__2ef49 .content__2ef49,
+.activityActivityFeed__2ef49 .details__2ef49 {
+    color: var(--text-default)
+}
+
+.activityStreamPreview__2ef49 .activityName__2ef49,
+.activityStreamPreview__2ef49 .content__2ef49,
+.activityStreamPreview__2ef49 .details__2ef49,
+.activityStreamPreview__2ef49 .name__2ef49,
+.activityStreamPreview__2ef49 .nameNormal__2ef49 {
+    color: var(--text-strong)
+}
+
+.buttonsWrapper__65bb6 {
+    flex: 0 1 auto;
+    margin-top: 12px
+}
+
+.buttonsWrapper__65bb6:empty {
+    margin: 0
+}
+
+.horizontal__65bb6>:not(:first-child) {
+    margin-inline-start: 8px
+}
+
+.vertical__65bb6>:not(:first-child) {
+    margin-top: 8px
+}
+
+.actionsStreamPreview__34f7d {
+    margin-top: 10px
+}
+
+.actionsProfile__34f7d,
+.actionsProfileV2__34f7d {
+    flex: 1 1 auto;
+    margin-inline-start: 20px;
+    margin-top: 0
+}
+
+.actionsSimplifiedProfile__34f7d {
+    flex: 1 1 auto;
+    margin-inline-start: 10px;
+    margin-top: 0
+}
+
+.actionsActivityFeed__34f7d {
+    margin-top: 8px
+}
+
+.errorImage__34f7d {
+    height: 135px
+}
+
+.cannotLaunchImage__34f7d {}
+
+.actionsWrapper__34f7d {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%
+}
+
+.actionsWrapper__34f7d .actionsProfile__34f7d,
+.actionsWrapper__34f7d .actionsProfileV2__34f7d,
+.actionsWrapper__34f7d .actionsSimplifiedProfile__34f7d {
+    margin-inline-start: 0;
+    margin-top: 12px
+}

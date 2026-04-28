@@ -1,70 +1,69 @@
-"use strict";
-n.d(t, { R: () => p });
-var i = n(64700),
-    a = n(17928),
-    r = n(366853),
-    s = n(793322),
-    l = n(999886),
-    c = n(495544),
-    o = n(205761),
-    d = n(223863),
-    u = n(146793),
-    _ = n(507696);
-function m(e) {
-    let { query: t, queryMode: n } = (0, s.LV)(e),
-        i = _.D,
-        a = null;
-    return null != n && _.D.includes(n) && ((i = [n]), (a = n)), { query: t, queryMode: a, resultTypes: i };
+u.d(t, { R: () => p });
+var s = u(64700),
+    r = u(17928),
+    n = u(454219),
+    c = u(793322),
+    l = u(999886),
+    a = u(495544),
+    i = u(205761),
+    o = u(223863),
+    d = u(146793),
+    f = u(507696);
+function h(e) {
+    let { query: t, queryMode: u } = (0, c.LV)(e),
+        s = f.D,
+        r = null;
+    return null != u && f.D.includes(u) && ((s = [u]), (r = u)), { query: t, queryMode: r, resultTypes: s };
 }
 function p(e) {
     let {
             targetDestination: t,
-            selectedDestinations: n,
-            originDestination: s,
-            channelFilter: _,
+            selectedDestinations: u,
+            originDestination: c,
+            channelFilter: f,
             includeMissingDMs: p = !1,
         } = e,
-        f = (0, a.bG)([c.default], () => c.default.getId()),
-        g = i.useMemo(
-            () => ({ searchOptions: { blacklist: new Set([`user:${f}`]), frecencyBoosters: !0, userFilters: null } }),
-            [f],
+        b = (0, r.bG)([a.default], () => a.default.getId()),
+        k = s.useMemo(
+            () => ({ searchOptions: { blacklist: new Set([`user:${b}`]), frecencyBoosters: !0, userFilters: null } }),
+            [b],
         ),
-        { search: h, query: b, results: C } = (0, u.A)(g),
-        [I, T] = i.useState(m("")),
-        x = i.useCallback((e) => T(m(e)), [T]),
-        { queryMode: A } = I,
-        E = i.useRef(null),
-        S = i.useRef(n),
-        v = b !== E.current ? n : S.current;
-    i.useEffect(() => {
-        b !== E.current && (S.current = n), (E.current = b);
-    }, [b, n]),
-        i.useLayoutEffect(() => {
-            let { query: e, resultTypes: t } = I;
-            h({ query: e, resultTypes: t });
-        }, [h, I]),
+        { search: A, query: y, results: C } = (0, d.A)(k),
+        [g, w] = s.useState(h("")),
+        F = s.useCallback((e) => w(h(e)), [w]),
+        { queryMode: G } = g,
+        L = s.useRef(null),
+        M = s.useRef(u),
+        R = y !== L.current ? u : M.current;
+    s.useEffect(() => {
+        y !== L.current && (M.current = u), (L.current = y);
+    }, [y, u]),
+        s.useLayoutEffect(() => {
+            let { query: e, resultTypes: t } = g;
+            A({ query: e, resultTypes: t });
+        }, [A, g]),
         (0, l.k)();
-    let N = (0, a.bG)([o.A], () => o.A.getFrequentlyWithoutFetchingLatest()),
-        L = (0, a.bG)([r.A], () => r.A.isConnected()),
-        y = "" !== b;
+    let m = (0, r.bG)([i.A], () => i.A.getFrequentlyWithoutFetchingLatest()),
+        q = (0, r.bG)([n.A], () => n.A.isConnected()),
+        D = "" !== y;
     return {
-        results: i.useMemo(
+        results: s.useMemo(
             () =>
-                (0, d.Ay)({
+                (0, o.Ay)({
                     results: C,
-                    hasQuery: y,
-                    queryMode: A,
+                    hasQuery: D,
+                    queryMode: G,
                     targetDestination: t,
-                    frequentChannels: N,
-                    selectedDestinations: n,
-                    pinnedDestinations: v,
-                    originDestination: s,
-                    channelFilter: _,
+                    frequentChannels: m,
+                    selectedDestinations: u,
+                    pinnedDestinations: R,
+                    originDestination: c,
+                    channelFilter: f,
                     includeMissingDMs: p,
-                    isConnected: L,
+                    isConnected: q,
                 }),
-            [C, y, A, t, N, n, v, s, _, p, L],
+            [C, D, G, t, m, u, R, c, f, p, q],
         ),
-        updateSearchText: x,
+        updateSearchText: F,
     };
 }

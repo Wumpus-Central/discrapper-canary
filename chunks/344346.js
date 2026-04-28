@@ -1,140 +1,139 @@
-"use strict";
-n.d(t, { a: () => L, A: () => M });
-var r = n(627968),
-    a = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    s = n(17928),
-    o = n(462887),
-    c = n(778712),
-    d = n(652215),
-    u = n(247928),
-    _ = n(97808),
-    p = n(736653),
-    f = n(262295),
-    m = n(609425),
-    h = n(922301),
-    g = n(368919),
-    b = n(685073),
-    A = n(534400),
-    E = n(919395),
-    v = n(252732),
-    I = n(696451),
-    y = n(290863),
-    x = n(162232),
-    S = n(88686),
-    T = n(780898),
-    C = n(174755),
-    N = n(985018),
-    R = n(136958);
-let w = { xlarge: c._3.SIZE_48, large: c._3.SIZE_40, small: c._3.SIZE_24, xsmall: c._3.SIZE_20, default: c._3.SIZE_32 },
-    L = a.memo(function (e) {
+l.d(e, { a: () => w, A: () => G });
+var s = l(627968),
+    i = l(64700),
+    t = l(503698),
+    r = l.n(t),
+    d = l(17928),
+    n = l(462887),
+    u = l(778712),
+    c = l(652215),
+    o = l(247928),
+    m = l(97808),
+    p = l(736653),
+    x = l(262295),
+    g = l(609425),
+    h = l(922301),
+    N = l(368919),
+    v = l(685073),
+    A = l(534400),
+    I = l(919395),
+    y = l(252732),
+    _ = l(696451),
+    j = l(290863),
+    S = l(162232),
+    E = l(88686),
+    M = l(780898),
+    b = l(174755),
+    f = l(985018),
+    k = l(136958);
+let D = { xlarge: u._3.SIZE_48, large: u._3.SIZE_40, small: u._3.SIZE_24, xsmall: u._3.SIZE_20, default: u._3.SIZE_32 },
+    w = i.memo(function (a) {
         let {
-                user: t,
-                guildId: n,
-                nameplate: i,
-                nameplateData: c,
-                className: L,
-                innerClassName: M,
-                isHighlighted: O,
-                showStatus: D,
-                showPlaceholderUser: P,
-                pendingGlobalName: j,
-                pendingNickname: k,
-                pendingAvatarDecoration: U,
-                pendingDisplayNameStyles: F,
-                pendingPrimaryGuildId: B,
-                nameplatePreviewSize: G = "default",
-                skipEffectDisplayName: V = !1,
-                width: H,
-            } = e,
+                user: e,
+                guildId: l,
+                nameplate: t,
+                nameplateData: u,
+                className: w,
+                innerClassName: G,
+                isHighlighted: Z,
+                showStatus: C,
+                showPlaceholderUser: V,
+                pendingGlobalName: L,
+                pendingNickname: O,
+                pendingAvatarDecoration: P,
+                pendingDisplayNameStyles: R,
+                pendingPrimaryGuildId: T,
+                nameplatePreviewSize: z = "default",
+                skipEffectDisplayName: H = !1,
+                width: U,
+            } = a,
             W = (0, p.Ay)(),
-            Z = (0, o.M)(W),
-            z = (0, T.WK)(i) ?? c,
-            Y = (0, s.bG)([y.A], () => (null != t ? y.A.getStatus(t.id) : d.clD.ONLINE)),
-            X = a.useRef(null),
-            q = (0, s.bG)([I.Ay], () => (null != n && null != t ? I.Ay.getMember(n, t.id) : null)),
-            J = null != t ? (0, v.eh)({ pendingNickname: k, pendingGlobalName: j, user: t, guildMember: q }) : void 0,
-            $ = (0, E.lw)({
-                pendingValue: U,
-                userValue: t?.avatarDecoration,
-                guildValue: q?.avatarDecoration,
-                guildId: n,
+            F = (0, n.M)(W),
+            J = (0, M.WK)(t) ?? u,
+            K = (0, d.bG)([j.A], () => (null != e ? j.A.getStatus(e.id) : c.clD.ONLINE)),
+            Q = i.useRef(null),
+            X = (0, d.bG)([_.Ay], () => (null != l && null != e ? _.Ay.getMember(l, e.id) : null)),
+            Y = null != e ? (0, y.eh)({ pendingNickname: O, pendingGlobalName: L, user: e, guildMember: X }) : void 0,
+            $ = (0, I.lw)({
+                pendingValue: P,
+                userValue: e?.avatarDecoration,
+                guildValue: X?.avatarDecoration,
+                guildId: l,
             }),
-            K = a.useMemo(() => w[G], [G]),
-            Q = (0, m.A)({ userId: t?.id, guildId: n, pendingDisplayNameStyles: F }),
-            ee = (0, b.gS)(B),
-            et = a.useMemo(
+            q = i.useMemo(() => D[z], [z]),
+            B = (0, g.A)({ userId: e?.id, guildId: l, pendingDisplayNameStyles: R }),
+            aa = (0, v.gS)(T),
+            ae = i.useMemo(
                 () =>
-                    null != i
-                        ? N.intl.formatToPlainString(N.t.YJig7C, { a11y_text: i.label })
-                        : N.intl.string(N.t.SZeUdR),
-                [i],
+                    null != t
+                        ? f.intl.formatToPlainString(f.t.YJig7C, { a11y_text: t.label })
+                        : f.intl.string(f.t.SZeUdR),
+                [t],
             );
-        return (0, r.jsx)("div", {
+        return (0, s.jsx)("div", {
             role: "img",
-            "aria-label": et,
-            style: { color: Z ? "white" : "black", width: null != H ? `${H}px` : "100%" },
-            children: (0, r.jsxs)(u.M, {
-                className: l()(L, R.M4, {
-                    [R.s]: "xsmall" === G,
-                    [R.EX]: "small" === G,
-                    [R.as]: "large" === G,
-                    [R.AQ]: "xlarge" === G,
-                    [R.gf]: null != H,
+            "aria-label": ae,
+            style: { color: F ? "white" : "black", width: null != U ? `${U}px` : "100%" },
+            children: (0, s.jsxs)(o.M, {
+                className: r()(w, k.M4, {
+                    [k.s]: "xsmall" === z,
+                    [k.EX]: "small" === z,
+                    [k.as]: "large" === z,
+                    [k.AQ]: "xlarge" === z,
+                    [k.gf]: null != U,
                 }),
                 children: [
-                    null != z &&
-                        (0, r.jsx)(
-                            C.A,
-                            { nameplate: z, hovered: O, placement: S.u.PREVIEW, content: P ? void 0 : X },
-                            i?.skuId,
+                    null != J &&
+                        (0, s.jsx)(
+                            b.A,
+                            { nameplate: J, hovered: Z, placement: E.u.PREVIEW, content: V ? void 0 : Q },
+                            t?.skuId,
                         ),
-                    (0, r.jsxs)("div", {
-                        className: R.MU,
+                    (0, s.jsxs)("div", {
+                        className: k.MU,
                         children: [
-                            null != t
-                                ? (0, r.jsx)("div", {
-                                      className: l()(R.H, !P && R.Mk),
-                                      children: (0, r.jsx)(f.A, {
-                                          ref: X,
-                                          avatar: (0, r.jsx)(x.A, {
-                                              user: t,
-                                              guildId: n,
-                                              avatarSize: K,
-                                              status: D ? Y : void 0,
+                            null != e
+                                ? (0, s.jsx)("div", {
+                                      className: r()(k.H, !V && k.Mk),
+                                      children: (0, s.jsx)(x.A, {
+                                          ref: Q,
+                                          avatar: (0, s.jsx)(S.A, {
+                                              user: e,
+                                              guildId: l,
+                                              avatarSize: q,
+                                              status: C ? K : void 0,
                                               avatarDecorationOverride: $,
                                               "aria-hidden": !0,
                                           }),
-                                          decorators: (0, r.jsx)(A.Ay, {
-                                              primaryGuild: ee,
-                                              userId: t.id,
-                                              contextGuildId: n,
-                                              className: R.id,
+                                          decorators: (0, s.jsx)(A.Ay, {
+                                              primaryGuild: aa,
+                                              userId: e.id,
+                                              contextGuildId: l,
+                                              className: k.id,
                                           }),
-                                          name: (0, r.jsx)(g.A, {
-                                              userName: J,
-                                              displayNameStyles: Q,
-                                              effectDisplayType: V ? h.G.PLAIN : h.G.ANIMATED,
+                                          name: (0, s.jsx)(N.A, {
+                                              userName: Y,
+                                              displayNameStyles: B,
+                                              effectDisplayType: H ? h.G.PLAIN : h.G.ANIMATED,
                                               loop: !0,
                                           }),
-                                          innerClassName: M,
-                                          withDisplayNameStyles: null != Q,
+                                          innerClassName: G,
+                                          withDisplayNameStyles: null != B,
                                       }),
                                   })
                                 : null,
-                            (0, r.jsxs)("div", {
-                                className: l()(R.H, P && R.Mk),
+                            (0, s.jsxs)("div", {
+                                className: r()(k.H, V && k.Mk),
                                 children: [
-                                    (0, r.jsx)(_.eu, {
-                                        src: Z ? "/assets/2ca6b6f4a73913ed.png" : "/assets/9d8606c1376ca484.png",
-                                        size: K,
+                                    (0, s.jsx)(m.eu, {
+                                        src: F ? "/assets/2ca6b6f4a73913ed.png" : "/assets/9d8606c1376ca484.png",
+                                        size: q,
                                         "aria-hidden": !0,
-                                        status: d.clD.ONLINE,
-                                        statusColor: Z ? "#706F74" : "#aaaab2",
-                                        className: R.my,
+                                        status: c.clD.ONLINE,
+                                        statusColor: F ? "#706F74" : "#aaaab2",
+                                        className: k.my,
                                     }),
-                                    (0, r.jsx)("div", { className: R.gM }),
+                                    (0, s.jsx)("div", { className: k.gM }),
                                 ],
                             }),
                         ],
@@ -143,4 +142,4 @@ let w = { xlarge: c._3.SIZE_48, large: c._3.SIZE_40, small: c._3.SIZE_24, xsmall
             }),
         });
     }),
-    M = L;
+    G = w;

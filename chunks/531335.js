@@ -1,58 +1,67 @@
-n.d(t, { A: () => A });
-var i = n(627968);
-n(64700);
-var l = n(17928),
-    r = n(477782),
-    a = n(241541),
-    s = n(192308),
-    d = n(855687),
-    u = n(576705),
-    o = n(652215),
-    c = n(985018);
-function A(e) {
-    let { source: t, guild: n, channel: i, stageInstance: r } = e,
-        a = (0, l.bG)([u.A], () => (0, d.K)(u.A, n, i, r)),
-        s = g(t, n, i),
-        o = C(t, i);
-    return a ? s : o;
+t.d(n, { A: () => E });
+var i = t(627968);
+t(64700);
+var l = t(17928),
+    r = t(477782),
+    o = t(241541),
+    a = t(192308),
+    c = t(855687),
+    d = t(576705),
+    s = t(652215),
+    u = t(985018);
+function E(e) {
+    let { source: n, guild: t, channel: i, stageInstance: r } = e,
+        o = (0, l.bG)([d.A], () => (0, c.K)(d.A, t, i, r)),
+        a = p(n, t, i),
+        s = A(n, i);
+    return o ? a : s;
 }
-function E(e, t) {
-    return (null != t && [o.PE1.GUILD_HEADER, o.PE1.GUILD_CONTEXT_MENU].includes(t)) || null == e
-        ? c.intl.string(c.t.Sd8Ixw)
-        : e.type === o.rbe.GUILD_VOICE
-          ? c.intl.string(c.t["EE+P0H"])
-          : c.intl.string(c.t["0jeAXt"]);
+function D(e, n) {
+    return (null != n && [s.PE1.GUILD_HEADER, s.PE1.GUILD_CONTEXT_MENU].includes(n)) || null == e
+        ? u.intl.string(u.t.Sd8Ixw)
+        : e.type === s.rbe.GUILD_VOICE
+          ? u.intl.string(u.t["EE+P0H"])
+          : u.intl.string(u.t["0jeAXt"]);
 }
-let g = (e, t, l) => {
-        if (null == t) return null;
-        let d = E(l, e);
+let p = (e, n, l) => {
+        if (null == n) return null;
+        let c = D(l, e);
         return (0, i.jsx)(r.Dr, {
             id: "invite-people",
-            label: d,
+            label: c,
             color: "brand",
-            icon: e === o.PE1.GUILD_HEADER ? a.D : void 0,
-            leadingAccessory: e === o.PE1.GUILD_HEADER ? { type: "icon", icon: a.D } : void 0,
+            icon: e === s.PE1.GUILD_HEADER ? o.D : void 0,
+            leadingAccessory: e === s.PE1.GUILD_HEADER ? { type: "icon", icon: o.D } : void 0,
             action: () =>
-                (0, s.openModalLazy)(async () => {
-                    let { default: r } = await Promise.all([n.e("28136"), n.e("22547"), n.e("85905")]).then(
-                        n.bind(n, 1310),
-                    );
-                    return (n) => (0, i.jsx)(r, { ...n, guild: t, channel: l, source: e });
+                (0, a.openModalLazy)(async () => {
+                    let { default: r } = await Promise.all([
+                        t.e("80813"),
+                        t.e("83818"),
+                        t.e("93816"),
+                        t.e("58216"),
+                        t.e("59957"),
+                        t.e("28136"),
+                        t.e("16084"),
+                        t.e("97073"),
+                        t.e("87317"),
+                        t.e("22547"),
+                    ]).then(t.bind(t, 1310));
+                    return (t) => (0, i.jsx)(r, { ...t, guild: n, channel: l, source: e });
                 }),
         });
     },
-    C = (e, t) => {
-        let l = E(t, e);
+    A = (e, n) => {
+        let l = D(n, e);
         return (0, i.jsx)(r.Dr, {
             id: "invite-people",
             label: l,
             color: "brand",
-            icon: e === o.PE1.GUILD_HEADER ? a.D : void 0,
-            leadingAccessory: e === o.PE1.GUILD_HEADER ? { type: "icon", icon: a.D } : void 0,
+            icon: e === s.PE1.GUILD_HEADER ? o.D : void 0,
+            leadingAccessory: e === s.PE1.GUILD_HEADER ? { type: "icon", icon: o.D } : void 0,
             action: () =>
-                (0, s.openModalLazy)(async () => {
-                    let { default: e } = await n.e("62751").then(n.bind(n, 132610));
-                    return (t) => (0, i.jsx)(e, { ...t });
+                (0, a.openModalLazy)(async () => {
+                    let { default: e } = await t.e("62751").then(t.bind(t, 132610));
+                    return (n) => (0, i.jsx)(e, { ...n });
                 }),
         });
     };

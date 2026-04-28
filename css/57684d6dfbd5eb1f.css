@@ -1,0 +1,27 @@
+.container_bd5bb4 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px
+}
+
+.icons_bd5bb4 {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    justify-content: flex-end
+}
+
+.iconContainer_bd5bb4 {
+    cursor: pointer
+}
+
+.icon_bd5bb4 {
+    color: var(--interactive-text-default)
+}
+
+.icon_bd5bb4:hover {
+    color: var(--interactive-text-hover)
+}

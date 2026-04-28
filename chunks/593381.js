@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     kL: "container_db5301",
     rf: "body_db5301",
     qr: "footer_db5301",

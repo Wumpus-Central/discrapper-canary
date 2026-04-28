@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     JC: "role_f07e3e",
     X2: "roleOverflow_f07e3e",

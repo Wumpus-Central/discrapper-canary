@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+t.r(
     (e.exports = {
         container: "container__29209",
         content: "content__29209",

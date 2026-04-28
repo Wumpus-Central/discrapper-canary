@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { A: () => o }), n(321073);
-var a = n(64700),
-    r = n(17928),
-    i = n(366853),
-    l = n(71393),
-    s = n(680646);
-function o(e) {
-    let { application: t, showMutualGuilds: n = !0 } = e,
-        o = (0, r.bG)([s.A], () => s.A.getGuildIdsForApplication(t?.id), [t]),
-        c = (0, r.bG)([i.A], () => i.A.isConnected());
-    return a.useMemo(() => {
+u.d(t, { A: () => d }), u(321073);
+var i = u(64700),
+    l = u(17928),
+    n = u(454219),
+    r = u(71393),
+    s = u(680646);
+function d(e) {
+    let { application: t, showMutualGuilds: u = !0 } = e,
+        d = (0, l.bG)([s.A], () => s.A.getGuildIdsForApplication(t?.id), [t]),
+        p = (0, l.bG)([n.A], () => n.A.isConnected());
+    return i.useMemo(() => {
         let e = [];
-        if (!c || !n || null == o || null == t) return e;
-        for (let t of o) {
-            let n = l.A.getGuild(t);
-            null != n && e.push(n);
+        if (!p || !u || null == d || null == t) return e;
+        for (let t of d) {
+            let u = r.A.getGuild(t);
+            null != u && e.push(u);
         }
         return e;
-    }, [c, o, t, n]);
+    }, [p, d, t, u]);
 }

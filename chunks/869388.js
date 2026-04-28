@@ -1,14 +1,13 @@
-"use strict";
-s.d(e, { A: () => o });
-var n = s(17928),
-    r = s(228366);
-let a = { transforms: [] },
-    i = a;
-class l extends n.Ay.PersistedStore {
+n.d(e, { A: () => o });
+var a = n(17928),
+    r = n(228366);
+let l = { transforms: [] },
+    i = l;
+class s extends a.Ay.PersistedStore {
     static displayName = "CustomTextTransformStore";
     static persistKey = "CustomTextTransformStore";
     initialize(t) {
-        i = t ?? a;
+        i = t ?? l;
     }
     getTransforms() {
         return i.transforms;
@@ -17,7 +16,7 @@ class l extends n.Ay.PersistedStore {
         return i;
     }
 }
-let o = new l(r.h, {
+let o = new s(r.h, {
     CUSTOM_TEXT_TRANSFORM_ADD: function (t) {
         let { transform: e } = t;
         i = { ...i, transforms: [...i.transforms, e] };

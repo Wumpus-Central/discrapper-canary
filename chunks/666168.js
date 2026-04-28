@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     LZ: "categories__97499",
     L1: "category__97499",

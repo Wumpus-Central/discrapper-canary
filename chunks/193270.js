@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     wT: "svgContentRight__7b484",
     $U: "svgContentLeft__7b484",
     lk: "svgContentLines__7b484",

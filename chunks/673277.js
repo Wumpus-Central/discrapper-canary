@@ -1,11 +1,10 @@
-"use strict";
-r.d(t, { A: () => s });
-var l = r(627968);
-r(64700);
-let s = (e) => {
-    let { verticalMargin: t = 16, padding: r = 0, children: s } = e;
-    return (0, l.jsx)("section", {
-        style: { alignSelf: "start", width: "100%", marginTop: t, marginBottom: t, padding: r },
-        children: s,
+l.d(t, { A: () => n });
+var r = l(627968);
+l(64700);
+let n = (e) => {
+    let { verticalMargin: t = 16, padding: l = 0, children: n } = e;
+    return (0, r.jsx)("section", {
+        style: { alignSelf: "start", width: "100%", marginTop: t, marginBottom: t, padding: l },
+        children: n,
     });
 };

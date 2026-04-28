@@ -1,32 +1,39 @@
-t.d(n, { A: () => g });
-var l = t(627968),
-    i = t(64700),
-    a = t(192308),
-    r = t(477782),
-    s = t(328162),
-    o = t(194261),
-    d = t(585510),
-    c = t(834409),
-    u = t(903093),
-    v = t(652215),
-    A = t(985018);
-function g(e) {
+i.d(n, { A: () => v });
+var l = i(627968),
+    t = i(64700),
+    o = i(192308),
+    a = i(477782),
+    r = i(328162),
+    c = i(194261),
+    s = i(585510),
+    d = i(834409),
+    u = i(903093),
+    p = i(652215),
+    y = i(985018);
+function v(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { shouldShowIncidentActions: g, isUnderLockdown: h, incidentData: p } = (0, d.Li)(e.id),
-        y = i.useCallback(() => {
-            let n = { source: c.Eo.CONTEXT_MENU, alertType: (0, u.$5)(p) };
-            (0, a.openModalLazy)(async () => {
-                let { default: i } = await t.e("65614").then(t.bind(t, 671576));
-                return (t) => (0, l.jsx)(i, { ...t, guildId: e.id, analyticsData: n });
+        { shouldShowIncidentActions: v, isUnderLockdown: g, incidentData: b } = (0, s.Li)(e.id),
+        A = t.useCallback(() => {
+            let n = { source: d.Eo.CONTEXT_MENU, alertType: (0, u.$5)(b) };
+            (0, o.openModalLazy)(async () => {
+                let { default: t } = await Promise.all([
+                    i.e("43763"),
+                    i.e("48486"),
+                    i.e("40258"),
+                    i.e("73669"),
+                    i.e("46313"),
+                    i.e("43233"),
+                ]).then(i.bind(i, 671576));
+                return (i) => (0, l.jsx)(t, { ...i, guildId: e.id, analyticsData: n });
             });
-        }, [e.id, p]);
-    return e.features.has(v.GuildFeatures.COMMUNITY) && g
-        ? (0, l.jsx)(r.Dr, {
+        }, [e.id, b]);
+    return e.features.has(p.GuildFeatures.COMMUNITY) && v
+        ? (0, l.jsx)(a.Dr, {
               id: "server-lockdown",
-              label: h ? A.intl.string(A.t["+tSVi3"]) : A.intl.string(A.t.EPlEdu),
-              icon: n ? (h ? s.w : o.X) : void 0,
-              leadingAccessory: n ? { type: "icon", icon: h ? s.w : o.X } : void 0,
-              action: y,
+              label: g ? y.intl.string(y.t["+tSVi3"]) : y.intl.string(y.t.EPlEdu),
+              icon: n ? (g ? r.w : c.X) : void 0,
+              leadingAccessory: n ? { type: "icon", icon: g ? r.w : c.X } : void 0,
+              action: A,
               color: "danger",
           })
         : null;

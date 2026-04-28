@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     kL: "container_a8e786",
     uZ: "playIcon_a8e786",
     he: "playing_a8e786",

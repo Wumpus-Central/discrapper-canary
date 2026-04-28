@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Wu: "scopes__29337",
     bc: "noDivider__29337",

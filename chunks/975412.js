@@ -1,41 +1,80 @@
-"use strict";
-a.d(t, { A: () => h });
+a.d(t, { A: () => u });
 var n = a(627968);
 a(64700);
-var r = a(231723),
-    i = a(192308),
+var i = a(231723),
+    c = a(192308),
     s = a(709055),
-    l = a(222823),
-    o = a(954571),
-    d = a(211401),
-    c = a(500049),
-    _ = a(60809),
-    u = a(652215);
-function h(e) {
-    let { context: t, openInPopout: h, analyticsLocation: p = "open-activity-shelf", initialState: b } = e;
-    h && (0, s.A)(u.MLl.CHANNEL_CALL_POPOUT);
-    let g = h ? r.KX : r.SY;
-    (0, d.k)(c.Se.DISMISSED), (0, d.R)(c.s4.VOICE, void 0, b, "channel" === t.type ? t.channel.id : void 0);
-    let f = "contextless" !== t.type && (l.Ay.hasUnread(t.channel.id) || l.Ay.getMentionCount(t.channel.id) > 0);
+    d = a(222823),
+    l = a(954571),
+    o = a(211401),
+    h = a(500049),
+    r = a(60809),
+    p = a(652215);
+function u(e) {
+    let { context: t, openInPopout: u, analyticsLocation: A = "open-activity-shelf", initialState: _ } = e;
+    u && (0, s.A)(p.MLl.CHANNEL_CALL_POPOUT);
+    let y = u ? i.KX : i.SY;
+    (0, o.k)(h.Se.DISMISSED), (0, o.R)(h.s4.VOICE, void 0, _, "channel" === t.type ? t.channel.id : void 0);
+    let C = "contextless" !== t.type && (d.Ay.hasUnread(t.channel.id) || d.Ay.getMentionCount(t.channel.id) > 0);
     return (
-        o.default.track(u.HAw.VOICE_PANEL_TAB_OPENED, {
+        l.default.track(p.HAw.VOICE_PANEL_TAB_OPENED, {
             tab: "activities",
-            location: p,
-            source: c.s4.VOICE,
-            is_chat_badged: f,
+            location: A,
+            source: h.s4.VOICE,
+            is_chat_badged: C,
         }),
-        (0, i.openModalLazy)(
+        (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
+                    a.e("99796"),
+                    a.e("94232"),
+                    a.e("77598"),
+                    a.e("93816"),
+                    a.e("23491"),
+                    a.e("42430"),
+                    a.e("80813"),
+                    a.e("72771"),
+                    a.e("64548"),
+                    a.e("56224"),
+                    a.e("34552"),
+                    a.e("55411"),
                     a.e("93103"),
-                    a.e("97278"),
+                    a.e("91007"),
+                    a.e("88342"),
+                    a.e("42451"),
+                    a.e("54975"),
+                    a.e("98965"),
+                    a.e("49697"),
+                    a.e("71273"),
+                    a.e("71133"),
                     a.e("35313"),
-                    a.e("41529"),
+                    a.e("80854"),
+                    a.e("35395"),
+                    a.e("43780"),
+                    a.e("8362"),
+                    a.e("27773"),
+                    a.e("61268"),
+                    a.e("52229"),
+                    a.e("18024"),
+                    a.e("78195"),
+                    a.e("22261"),
+                    a.e("74021"),
+                    a.e("37977"),
+                    a.e("83518"),
+                    a.e("41701"),
+                    a.e("59848"),
+                    a.e("22094"),
+                    a.e("61764"),
+                    a.e("37065"),
+                    a.e("68974"),
+                    a.e("56385"),
+                    a.e("59132"),
+                    a.e("89203"),
                     a.e("12313"),
                 ]).then(a.bind(a, 126784));
                 return (a) => (0, n.jsx)(e, { context: t, ...a });
             },
-            { modalKey: _.gS, contextKey: g },
+            { modalKey: r.gS, contextKey: y },
         )
     );
 }

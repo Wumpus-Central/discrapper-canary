@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     YB: "centeredSection_b558e5",
     kL: "container_b558e5",

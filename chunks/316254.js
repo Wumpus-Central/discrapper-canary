@@ -1,99 +1,98 @@
-"use strict";
-s.d(e, { A: () => f });
-var n = s(627968),
-    r = s(64700),
-    a = s(621466),
-    i = s(17928),
-    l = s(477782),
-    o = s(228366),
-    c = s(638128),
-    u = s(975571),
-    p = s(454235),
-    d = s(652215),
-    g = s(985018);
-function f(t) {
-    let { text: e = "", target: s } = t,
-        f = (0, i.bG)([c.A], () => c.A.isEnabled()),
-        b = (0, i.bG)([c.A], () => c.A.hasLearnedWord(e), [e]),
-        x = r.useRef({ ...t, spellcheckEnabled: f });
-    x.current = { ...t, spellcheckEnabled: f };
-    let m = r.useRef(!1),
-        [S, h] = r.useState(!1),
-        [C, T] = r.useState([]),
-        y = r.useCallback(() => {
-            let { spellcheckEnabled: t, text: e, onHeightUpdate: s } = x.current;
-            t &&
-                (0, p.TT)() &&
-                Promise.all([(0, p.PS)(e, !0), (0, p.Os)(e, !0)]).then((t) => {
-                    let [e, n] = t;
-                    m.current && (h(e), T(n), s());
+l.d(t, { A: () => L });
+var n = l(627968),
+    r = l(64700),
+    i = l(621466),
+    a = l(17928),
+    s = l(477782),
+    c = l(228366),
+    u = l(638128),
+    o = l(975571),
+    d = l(454235),
+    p = l(652215),
+    E = l(985018);
+function L(e) {
+    let { text: t = "", target: l } = e,
+        L = (0, a.bG)([u.A], () => u.A.isEnabled()),
+        h = (0, a.bG)([u.A], () => u.A.hasLearnedWord(t), [t]),
+        b = r.useRef({ ...e, spellcheckEnabled: L });
+    b.current = { ...e, spellcheckEnabled: L };
+    let C = r.useRef(!1),
+        [f, A] = r.useState(!1),
+        [k, m] = r.useState([]),
+        H = r.useCallback(() => {
+            let { spellcheckEnabled: e, text: t, onHeightUpdate: l } = b.current;
+            e &&
+                (0, d.TT)() &&
+                Promise.all([(0, d.PS)(t, !0), (0, d.Os)(t, !0)]).then((e) => {
+                    let [t, n] = e;
+                    C.current && (A(t), m(n), l());
                 });
         }, []),
-        A = r.useCallback(() => {
-            if ((0, a.vq)(s, HTMLInputElement) || (0, a.vq)(s, HTMLTextAreaElement)) {
-                let { selectionStart: t, selectionEnd: e, value: n } = s;
-                (s.value = ""), (s.value = n), "email" !== s.type && ((s.selectionStart = t), (s.selectionEnd = e));
+        T = r.useCallback(() => {
+            if ((0, i.vq)(l, HTMLInputElement) || (0, i.vq)(l, HTMLTextAreaElement)) {
+                let { selectionStart: e, selectionEnd: t, value: n } = l;
+                (l.value = ""), (l.value = n), "email" !== l.type && ((l.selectionStart = e), (l.selectionEnd = t));
             }
-        }, [s]);
+        }, [l]);
     return (r.useEffect(() => {
-        let t = (0, p.nL)(y);
+        let e = (0, d.nL)(H);
         return (
-            (m.current = !0),
+            (C.current = !0),
             () => {
-                (m.current = !1), t();
+                (C.current = !1), e();
             }
         );
-    }, [y]),
+    }, [H]),
     r.useEffect(() => {
-        y();
-    }, [e, f, y]),
-    (0, p.TT)())
+        H();
+    }, [t, L, H]),
+    (0, d.TT)())
         ? [
-              C.map((t, e) =>
+              k.map((e, t) =>
                   (0, n.jsx)(
-                      l.Dr,
+                      s.Dr,
                       {
-                          id: `correction-${e}`,
-                          label: t,
+                          id: `correction-${t}`,
+                          label: e,
                           action: () => {
-                              (0, p.rK)(t), s.focus();
+                              (0, d.rK)(e), l.focus();
                           },
                       },
-                      `correction-${e}`,
+                      `correction-${t}`,
                   ),
               ),
               (0, n.jsxs)(n.Fragment, {
                   children: [
-                      S
-                          ? (0, n.jsx)(l.Dr, {
+                      f
+                          ? (0, n.jsx)(s.Dr, {
                                 id: "add-to-dictionary",
-                                label: g.intl.string(g.t.HJmG1G),
+                                label: E.intl.string(E.t.HJmG1G),
                                 action: () => {
-                                    o.h.dispatch({ type: "SPELLCHECK_LEARN_WORD", word: e }), A();
+                                    c.h.dispatch({ type: "SPELLCHECK_LEARN_WORD", word: t }), T();
                                 },
                             })
                           : null,
-                      b &&
-                          (0, n.jsx)(l.Dr, {
+                      h &&
+                          (0, n.jsx)(s.Dr, {
                               id: "remove-from-dictionary",
-                              label: g.intl.string(g.t.xXqIX0),
+                              label: E.intl.string(E.t.xXqIX0),
                               action: () => {
-                                  o.h.dispatch({ type: "SPELLCHECK_UNLEARN_WORD", word: e }), A();
+                                  c.h.dispatch({ type: "SPELLCHECK_UNLEARN_WORD", word: t }), T();
                               },
                           }),
-                      (0, n.jsx)(l.sL, {
+                      (0, n.jsx)(s.sL, {
                           id: "spellcheck",
-                          label: g.intl.string(g.t.TKkotf),
-                          checked: f,
+                          label: E.intl.string(E.t.TKkotf),
+                          checked: L,
                           action: () => {
-                              o.h.dispatch({ type: "SPELLCHECK_TOGGLE" }), A();
+                              c.h.dispatch({ type: "SPELLCHECK_TOGGLE" }), T();
                           },
                       }),
-                      f
-                          ? (0, n.jsx)(l.Dr, {
+                      L
+                          ? (0, n.jsx)(s.Dr, {
                                 id: "languages",
-                                label: g.intl.string(g.t.OlOHDH),
-                                action: () => window.open(u.A.getArticleURL(d.MVz.SPELLCHECK)),
+                                label: E.intl.string(E.t.OlOHDH),
+                                action: () => window.open(o.A.getArticleURL(p.MVz.SPELLCHECK)),
                             })
                           : null,
                   ],

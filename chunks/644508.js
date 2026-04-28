@@ -11,7 +11,17 @@ let c = async (e) => {
     s.default.track(o.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
         await (0, i.openModalLazy)(
             async () => {
-                let { EmojiStudioModal: e } = await Promise.all([n.e("2956"), n.e("90821")]).then(n.bind(n, 227780));
+                let { EmojiStudioModal: e } = await Promise.all([
+                    n.e("91766"),
+                    n.e("34936"),
+                    n.e("50342"),
+                    n.e("7406"),
+                    n.e("71167"),
+                    n.e("55524"),
+                    n.e("89908"),
+                    n.e("70876"),
+                    n.e("95903"),
+                ]).then(n.bind(n, 227780));
                 return (t) => (0, l.jsx)(e, { ...t, ...c });
             },
             {

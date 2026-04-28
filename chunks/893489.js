@@ -1,6 +1,5 @@
-"use strict";
 s.r(
-    (e.exports = {
+    (n.exports = {
         nagBar: "nagBar__9d860",
         content: "content__9d860",
         message: "message__9d860",

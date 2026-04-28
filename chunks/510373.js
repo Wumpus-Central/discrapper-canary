@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => a });
 var r = n(64700),
-    a = n(71526);
+    l = n(71526);
 let i = Symbol();
-function l(e, t, n) {
-    let l = (0, a.A)(e),
-        s = (0, r.useRef)(i);
-    return s.current === i ? (s.current = t) : n(s.current, t) || ((l.current = e()), (s.current = t)), l.current;
+function a(e, t, n) {
+    let a = (0, l.A)(e),
+        u = (0, r.useRef)(i);
+    return u.current === i ? (u.current = t) : n(u.current, t) || ((a.current = e()), (u.current = t)), a.current;
 }

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     DK: "cloudPlaySection__1692d",
     tJ: "cloudPlaySectionTextContainer__1692d",

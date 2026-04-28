@@ -1,0 +1,125 @@
+.container__354ec {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    margin-inline-start: 44px;
+    position: relative
+}
+
+.measurements__354ec {
+    inset-inline: 0;
+    bottom: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 60px;
+    visibility: hidden
+}
+
+.measurements__354ec,
+.tabs__354ec {
+    align-items: center;
+    display: flex;
+    gap: 32px
+}
+
+.tabs__354ec {
+    flex: 1;
+    flex-direction: row;
+    height: 100%
+}
+
+.container__354ec .tabs__354ec {
+    border-bottom: none
+}
+
+.tab__354ec {
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    white-space: nowrap
+}
+
+.tab__354ec:hover {
+    border-bottom: 2px solid var(--brand-500);
+    margin-bottom: -2px
+}
+
+.tab__354ec[aria-selected=true] {
+    border-bottom: 2px solid var(--icon-strong);
+    margin-bottom: -2px
+}
+
+.tabContent__354ec {
+    height: 100%
+}
+
+.tabContent__354ec,
+.tabWithChevron__354ec {
+    align-items: center;
+    display: flex
+}
+
+.tabWithChevron__354ec {
+    gap: 4px
+}
+
+.more__354ec {
+    cursor: pointer;
+    display: flex
+}
+
+.floatingSearchTabsMask__354ec {
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 340px), transparent calc(100% - 240px));
+    mask-image: linear-gradient(90deg, #000 calc(100% - 340px), transparent calc(100% - 240px))
+}
+
+.tabWithIcon__354ec {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.newBadge__354ec {
+    margin-inline-start: 4px
+}
+
+.headerBar__80679 {
+    background-color: var(--background-base-lower);
+    border-bottom: 1px solid var(--border-subtle);
+    height: var(--custom-channel-header-height);
+    padding-bottom: 0;
+    padding-inline-end: calc(var(--space-xs) + var(--space-4));
+    padding-top: 0;
+    position: sticky;
+    top: 0
+}
+
+.shopHomeLink__80679 {
+    height: 100%
+}
+
+.shopHomeLink__80679,
+.wishlistButton__80679 {
+    align-items: center;
+    cursor: pointer;
+    display: flex
+}
+
+.wishlistButton__80679 {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    height: 32px;
+    justify-content: center;
+    min-height: 32px;
+    min-width: 32px;
+    transition: background-color .1s ease;
+    width: 32px
+}
+
+.wishlistButton__80679:active,
+.wishlistButton__80679:hover {
+    background-color: var(--background-mod-normal)
+}

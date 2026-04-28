@@ -1,34 +1,42 @@
-i.d(a, { default: () => d });
+i.d(e, { default: () => o });
 var n = i(627968),
-    t = i(64700),
-    l = i(192308),
-    s = i(885377),
+    l = i(64700),
+    s = i(192308),
+    a = i(885377),
     r = i(985018);
-class c extends t.Component {
+class c extends l.Component {
     cancel = () => {
-        let { onClose: e } = this.props;
-        e?.();
+        let { onClose: t } = this.props;
+        t?.();
     };
     claimAccount = () => {
-        let { onClose: e } = this.props;
-        e?.(),
-            (0, l.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([i.e("78925"), i.e("27672")]).then(i.bind(i, 888363));
-                return (a) => (0, n.jsx)(e, { ...a });
+        let { onClose: t } = this.props;
+        t?.(),
+            (0, s.openModalLazy)(async () => {
+                let { default: t } = await Promise.all([
+                    i.e("77598"),
+                    i.e("40933"),
+                    i.e("88941"),
+                    i.e("62680"),
+                    i.e("27323"),
+                    i.e("19623"),
+                    i.e("21007"),
+                ]).then(i.bind(i, 888363));
+                return (e) => (0, n.jsx)(t, { ...e });
             });
     };
     render() {
-        let { transitionState: e } = this.props;
-        return (0, n.jsx)(s.A, {
-            transitionState: e,
+        let { transitionState: t } = this.props;
+        return (0, n.jsx)(a.A, {
+            transitionState: t,
             onClose: async () => await this.cancel(),
             "aria-label": r.intl.string(r.t.Nn0Px8),
             title: r.intl.string(r.t.Nn0Px8),
-            premiumModalType: s.A.Types.UNCLAIMED,
+            premiumModalType: a.A.Types.UNCLAIMED,
             primary: { onClick: this.claimAccount, label: r.intl.string(r.t.fiNVin) },
             secondary: { onClick: this.cancel, label: r.intl.string(r.t.oEAioF) },
             children: r.intl.string(r.t["7btfmI"]),
         });
     }
 }
-let d = c;
+let o = c;

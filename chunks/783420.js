@@ -7,8 +7,8 @@ var r = n(17928),
     a = n(688810),
     o = n(822123),
     l = n(532794),
-    d = n(976860),
-    _ = n(780964),
+    _ = n(976860),
+    d = n(780964),
     u = n(858897),
     c = n(287809),
     E = n(166403),
@@ -19,34 +19,37 @@ function g(e) {
     let {
             onClick: t,
             subscriptionTier: g,
-            postSuccessGuild: p,
+            postSuccessGuild: I,
             onSubscribeModalClose: A,
-            premiumModalAnalyticsLocation: I,
+            premiumModalAnalyticsLocation: p,
             applicationId: T,
             giftMessage: S,
             confirmationFooter: N,
-            isGift: C,
+            isGift: O,
             initialPlanId: R = null,
-            children: O,
+            children: C,
         } = e,
         y = (0, r.bG)([c.default], () => c.default.getCurrentUser()),
-        v = (0, r.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
-        { analyticsLocations: D } = (0, a.Ay)(),
-        L = (0, h.V)(),
-        b = !C && null != L && null != g && m.TP[L.trial_id].skus.includes(g);
-    return O({
+        D = (0, r.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
+        { analyticsLocations: L } = (0, a.Ay)(),
+        v = (0, h.V)(),
+        w = !O && null != v && null != g && m.TP[v.trial_id].skus.includes(g);
+    return C({
         onClick: (e) => {
             if ((e.preventDefault(), null == y))
-                return void (0, d.pX)(f.BVt.LOGIN, { source: "premium_subscribe_button" });
-            if ((t?.(e), v?.status === f.Dmq.ACCOUNT_HOLD)) {
-                (0, o.xf)(), (0, u.openUserSettings)(_.X.NITRO_PANEL), A?.(!1);
+                return void (0, _.pX)(f.BVt.LOGIN, { source: "premium_subscribe_button" });
+            if ((t?.(e), D?.status === f.Dmq.ACCOUNT_HOLD)) {
+                (0, o.xf)(), (0, u.openUserSettings)(d.X.NITRO_PANEL), A?.(!1);
                 return;
             }
             if (!y.isClaimed())
                 return void (0, s.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("12206"), n.e("24806"), n.e("58007")]).then(
-                        n.bind(n, 195759),
-                    );
+                    let { default: e } = await Promise.all([
+                        n.e("39868"),
+                        n.e("12206"),
+                        n.e("9998"),
+                        n.e("80388"),
+                    ]).then(n.bind(n, 195759));
                     return (t) => {
                         let { onClose: n, ...r } = t;
                         return (0, i.jsx)(e, { ...r, onClose: n });
@@ -54,23 +57,28 @@ function g(e) {
                 });
             if (!y.verified)
                 return void (0, s.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("12206"), n.e("90406")]).then(n.bind(n, 661925));
+                    let { default: e } = await Promise.all([
+                        n.e("54681"),
+                        n.e("14753"),
+                        n.e("12206"),
+                        n.e("90406"),
+                    ]).then(n.bind(n, 661925));
                     return (t) => {
                         let { onClose: n, ...r } = t;
                         return (0, i.jsx)(e, { ...r, onClose: n });
                     };
                 });
-            let r = b ? L.subscription_trial?.id : null,
+            let r = w ? v.subscription_trial?.id : null,
                 a = f.AnalyticsObjectTypes.BUY;
-            null != r ? (a = f.AnalyticsObjectTypes.TRIAL) : C && (a = f.AnalyticsObjectTypes.GIFT),
+            null != r ? (a = f.AnalyticsObjectTypes.TRIAL) : O && (a = f.AnalyticsObjectTypes.GIFT),
                 (0, l.A)({
-                    isGift: C,
+                    isGift: O,
                     initialPlanId: R,
                     subscriptionTier: g,
-                    analyticsLocations: D,
-                    analyticsObject: { object: f.ZSU.BUTTON_CTA, objectType: a, ...I },
+                    analyticsLocations: L,
+                    analyticsObject: { object: f.ZSU.BUTTON_CTA, objectType: a, ...p },
                     trialId: r,
-                    postSuccessGuild: p,
+                    postSuccessGuild: I,
                     onClose: A,
                     applicationId: T,
                     giftMessage: S,

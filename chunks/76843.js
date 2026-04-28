@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { h: () => W, m: () => j });
+n.d(t, { h: () => W, m: () => Y });
 var i = n(791332),
     r = n.n(i),
     s = n(157559),
@@ -10,15 +10,21 @@ function o(e) {
 function l(e) {
     a.h.dispatch({ type: "MASKED_LINK_ADD_TRUSTED_PROTOCOL", url: e });
 }
-var d = n(975807),
-    _ = n(627968);
+var _ = n(975807),
+    d = n(627968);
 n(64700);
 var u = n(192308);
 let c = {
     show(e) {
         (0, u.openModalLazy)(async () => {
-            let { default: t } = await n.e("18469").then(n.bind(n, 534340));
-            return (n) => (0, _.jsx)(t, { ...n, url: e });
+            let { default: t } = await Promise.all([
+                n.e("83307"),
+                n.e("20577"),
+                n.e("58062"),
+                n.e("46598"),
+                n.e("18469"),
+            ]).then(n.bind(n, 534340));
+            return (n) => (0, d.jsx)(t, { ...n, url: e });
         });
     },
 };
@@ -32,16 +38,18 @@ let f = class {
     }
 };
 var g = n(343328),
-    p = n(235393),
+    I = n(235393),
     A = n(527214);
-let I = {
+let p = {
         show(e) {
             let { url: t, trustUrl: i, onConfirm: r, onCancel: s, isProtocol: a, contextKey: o } = e;
             (0, u.openModalLazy)(
                 async () => {
-                    let { default: e } = await n.e("14782").then(n.bind(n, 885293));
+                    let { default: e } = await Promise.all([n.e("4407"), n.e("58062"), n.e("14782")]).then(
+                        n.bind(n, 885293),
+                    );
                     return (n) =>
-                        (0, _.jsx)(e, { ...n, url: t, isProtocol: a, trustUrl: i, onConfirm: r, onCancel: s });
+                        (0, d.jsx)(e, { ...n, url: t, isProtocol: a, trustUrl: i, onConfirm: r, onCancel: s });
                 },
                 { contextKey: o },
             );
@@ -63,19 +71,19 @@ let I = {
     ]);
 var S = n(788995),
     N = n(432e3),
-    C = n(734057),
+    O = n(734057),
     R = n(71393),
-    O = n(17928),
+    C = n(17928),
     y = n(506774),
-    v = n(998218),
-    D = n(155078),
-    L = n(272984);
-let b = "MaskedLinkStore",
-    w = new Set(),
+    D = n(998218),
+    L = n(155078),
+    v = n(272984);
+let w = "MaskedLinkStore",
     P = new Set(),
+    b = new Set(),
     k = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT?.replace("//", "");
-function M(e) {
-    let t = (0, D.E)(e);
+function U(e) {
+    let t = (0, L.E)(e);
     switch (t) {
         case window.GLOBAL_ENV.INVITE_HOST:
         case window.GLOBAL_ENV.GIFT_CODE_HOST:
@@ -84,56 +92,56 @@ function M(e) {
         case location.hostname:
             return !0;
         default:
-            return L.UN.includes(t) || v.A.isDiscordHostname(t) || w.has(t);
+            return v.UN.includes(t) || D.A.isDiscordHostname(t) || P.has(t);
     }
 }
-function U(e) {
-    let t = (0, D.J)(e);
-    return P.has(t);
+function M(e) {
+    let t = (0, L.J)(e);
+    return b.has(t);
 }
-class x extends O.Ay.Store {
+class G extends C.Ay.Store {
     static displayName = "MaskedLinkStore";
     initialize() {
-        let e = y.w.get(b) ?? {};
-        if (Array.isArray(e)) (w = new Set(null != e ? Array.from(e) : null)), (P = new Set());
+        let e = y.w.get(w) ?? {};
+        if (Array.isArray(e)) (P = new Set(null != e ? Array.from(e) : null)), (b = new Set());
         else {
             let { trustedDomains: t, trustedProtocols: n } = e;
-            (w = new Set(null != t ? Array.from(t) : null)), (P = new Set(null != n ? Array.from(n) : null));
+            (P = new Set(null != t ? Array.from(t) : null)), (b = new Set(null != n ? Array.from(n) : null));
         }
     }
     isTrustedDomain(e) {
-        return M(e);
-    }
-    isTrustedProtocol(e) {
         return U(e);
     }
+    isTrustedProtocol(e) {
+        return M(e);
+    }
 }
-let G = new x(a.h, {
+let x = new G(a.h, {
     MASKED_LINK_ADD_TRUSTED_DOMAIN: function (e) {
         let { url: t } = e;
-        if (M(t)) return !1;
-        w.add((0, D.E)(t)), y.w.set(b, { trustedDomains: w, trustedProtocols: P });
+        if (U(t)) return !1;
+        P.add((0, L.E)(t)), y.w.set(w, { trustedDomains: P, trustedProtocols: b });
     },
     MASKED_LINK_ADD_TRUSTED_PROTOCOL: function (e) {
         let { url: t } = e;
-        if (U(t)) return !1;
-        P.add((0, D.J)(t)), y.w.set(b, { trustedDomains: w, trustedProtocols: P });
+        if (M(t)) return !1;
+        b.add((0, L.J)(t)), y.w.set(w, { trustedDomains: P, trustedProtocols: b });
     },
 });
 var V = n(232835),
     F = n(994500),
     B = n(309010),
     H = n(985018);
-function j(e, t) {
-    let n = C.A.getChannel(B.A.getChannelId());
+function Y(e, t) {
+    let n = O.A.getChannel(B.A.getChannelId());
     return (null == n || n.type !== m.rbe.DM || !!F.A.isFriend(n.getRecipientId() ?? "")) && e === t;
 }
 function W(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         a = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: _, onClick: u, onConfirm: E, onCancel: O, shouldConfirm: y, messageId: v, channelId: L } = e,
-        b = r().sanitizeUrl(e.href);
-    if (null == b) {
+        { trusted: d, onClick: u, onConfirm: E, onCancel: C, shouldConfirm: y, messageId: D, channelId: v } = e,
+        w = r().sanitizeUrl(e.href);
+    if (null == w) {
         null != t && t.preventDefault(),
             s.A.show({
                 title: H.intl.string(H.t.x87gan),
@@ -143,93 +151,93 @@ function W(e, t) {
             });
         return;
     }
-    let w = b;
+    let P = w;
     try {
-        decodeURI(b);
+        decodeURI(w);
     } catch (e) {
-        w = encodeURI(b);
+        P = encodeURI(w);
     }
-    let P = null,
+    let b = null,
         k = !1,
+        U = D,
         M = v,
-        U = L,
-        x = null;
-    if (null != v && null != L) {
-        let e = V.A.getMessage(L, v),
-            t = C.A.getBasicChannel(L);
-        P = t?.guild_id ?? null;
-        let n = R.A.getGuild(P),
+        G = null;
+    if (null != D && null != v) {
+        let e = V.A.getMessage(v, D),
+            t = O.A.getBasicChannel(v);
+        b = t?.guild_id ?? null;
+        let n = R.A.getGuild(b),
             i =
                 e?.messageReference?.guild_id != null &&
                 e?.webhookId != null &&
                 e?.hasFlag(m.pr7.IS_CROSSPOST) &&
-                null != P;
+                null != b;
         i && e?.messageReference?.guild_id != null
-            ? ((M = e.messageReference.message_id),
-              (U = e.messageReference.channel_id),
-              (x = e.messageReference.guild_id))
-            : (x = P);
+            ? ((U = e.messageReference.message_id),
+              (M = e.messageReference.channel_id),
+              (G = e.messageReference.guild_id))
+            : (G = b);
         let r = t?.type === m.rbe.GUILD_ANNOUNCEMENT && n?.features.has(m.GuildFeatures.COMMUNITY) === !0,
             s = e?.hasFlag(m.pr7.EPHEMERAL) === !0;
         k = null != e && !s && (i || r);
     }
-    if (null != L) {
-        let e = C.A.getChannel(L),
+    if (null != v) {
+        let e = O.A.getChannel(v),
             t = R.A.getGuild(e?.getGuildId());
         null != e &&
             null != t &&
             t.features.has(m.GuildFeatures.DISCOVERABLE) &&
-            h.default.track(m.HAw.URL_CLICKED, { url_domain: (0, D.E)(w), guild_id: t.id, channel_id: e.id }),
-            (0, g.A)(L) && h.default.track(m.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "inline_link", target: w });
+            h.default.track(m.HAw.URL_CLICKED, { url_domain: (0, L.E)(P), guild_id: t.id, channel_id: e.id }),
+            (0, g.A)(v) && h.default.track(m.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "inline_link", target: P });
     }
-    if ((p.A.trackLinkClicked(w), null != u)) {
+    if ((I.A.trackLinkClicked(P), null != u)) {
         if (u(t)) return;
     } else {
         let { default: e } = n(464792),
-            r = e(w, { skipExtensionCheck: void 0, analyticsLocations: i, messageId: v });
+            r = e(P, { skipExtensionCheck: void 0, analyticsLocations: i, messageId: D });
         if (null != r && r(t)) return;
     }
     let F = () => {
             (k &&
-                p.A.trackAnnouncementMessageLinkClicked({
-                    messageId: M,
-                    channelId: L,
-                    guildId: P,
-                    sourceChannelId: U,
-                    sourceGuildId: x,
+                I.A.trackAnnouncementMessageLinkClicked({
+                    messageId: U,
+                    channelId: v,
+                    guildId: b,
+                    sourceChannelId: M,
+                    sourceGuildId: G,
                 }),
             null != E)
                 ? E()
-                : (0, d.A)(w);
+                : (0, _.A)(P);
         },
-        B = O ?? (() => {});
-    if (null !== f.isBlockedDomain(w)) {
-        t?.preventDefault(), c.show(w);
+        B = C ?? (() => {});
+    if (null !== f.isBlockedDomain(P)) {
+        t?.preventDefault(), c.show(P);
         return;
     }
-    if (null != (0, N.m)(w)) {
-        t?.preventDefault(), S.A.show(w);
+    if (null != (0, N.m)(P)) {
+        t?.preventDefault(), S.A.show(P);
         return;
     }
-    let j = ("function" == typeof _ ? _() : _) || T.has(w),
-        W = (0, D.J)(w),
-        Y = "http:" !== W && "https:" !== W;
-    if ((!Y && (j || G.isTrustedDomain(w))) || (Y && G.isTrustedProtocol(w)))
+    let Y = ("function" == typeof d ? d() : d) || T.has(P),
+        W = (0, L.J)(P),
+        K = "http:" !== W && "https:" !== W;
+    if ((!K && (Y || x.isTrustedDomain(P))) || (K && x.isTrustedProtocol(P)))
         return void (null == t || (null != y && y)
             ? F()
             : k &&
-              p.A.trackAnnouncementMessageLinkClicked({
-                  messageId: M,
-                  channelId: L,
-                  guildId: P,
-                  sourceChannelId: U,
-                  sourceGuildId: x,
+              I.A.trackAnnouncementMessageLinkClicked({
+                  messageId: U,
+                  channelId: v,
+                  guildId: b,
+                  sourceChannelId: M,
+                  sourceGuildId: G,
               }));
-    if ((null != t && t.preventDefault(), Y))
-        I.show({ url: w, trustUrl: l, onConfirm: F, onCancel: B, isProtocol: !0, contextKey: a });
+    if ((null != t && t.preventDefault(), K))
+        p.show({ url: P, trustUrl: l, onConfirm: F, onCancel: B, isProtocol: !0, contextKey: a });
     else {
-        let e = (0, A.W1)(w),
-            t = null != e ? e.displayTarget : w;
-        I.show({ url: t, trustUrl: o, onConfirm: F, onCancel: B, isProtocol: !1, contextKey: a });
+        let e = (0, A.W1)(P),
+            t = null != e ? e.displayTarget : P;
+        p.show({ url: t, trustUrl: o, onConfirm: F, onCancel: B, isProtocol: !1, contextKey: a });
     }
 }

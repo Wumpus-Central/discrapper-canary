@@ -1,13 +1,13 @@
-n.d(t, { A: () => a });
-var i = n(627968),
-    l = n(192308),
+n.d(t, { A: () => r });
+var l = n(627968),
+    i = n(192308),
     s = n(131955);
-function a(e) {
+function r(e) {
     let { channel: t } = e;
-    (0, l.openModalLazy)(
+    (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await n.e("85221").then(n.bind(n, 318532));
-            return (n) => (0, i.jsx)(e, { channel: t, ...n });
+            let { default: e } = await Promise.all([n.e("21889"), n.e("99150"), n.e("60394")]).then(n.bind(n, 706897));
+            return (n) => (0, l.jsx)(e, { channel: t, ...n });
         },
         { modalKey: s.e$ },
     );

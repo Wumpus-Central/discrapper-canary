@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+_.r(
     (e.exports = {
         caret: "caret__5bc6a",
         "caret--bottom": "caret--bottom__5bc6a",

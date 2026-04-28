@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+a.r(
     (e.exports = {
         container: "container_f369db",
         uploadArea: "uploadArea_f369db",

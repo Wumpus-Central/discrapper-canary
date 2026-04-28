@@ -1,0 +1,35 @@
+.selectorText__0907c {
+    color: var(--text-default)
+}
+
+.selectorTextSelected__0907c {
+    color: var(--white)
+}
+
+.selectorButton__0907c {
+    flex: 1 1 auto;
+    min-width: 36px;
+    padding: 6px 0
+}
+
+.selectorButton__0907c:first-child {
+    border-end-start-radius: var(--radius-sm);
+    border-start-start-radius: var(--radius-sm)
+}
+
+.selectorButton__0907c:last-child {
+    border-end-end-radius: var(--radius-sm);
+    border-start-end-radius: var(--radius-sm)
+}
+
+.theme-light .selectorButton__0907c {
+    border-color: var(--border-subtle)
+}
+
+.theme-dark .selectorButton__0907c {
+    border-color: var(--border-subtle)
+}
+
+.selectorButtonSelected__0907c {
+    background-color: var(--brand-500)
+}

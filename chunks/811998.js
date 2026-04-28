@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     EJ: "uploadInput__94439",
     T3: "uploadIcon__94439",

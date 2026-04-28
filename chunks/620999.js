@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { r: () => o, t: () => c });
-var a = n(627968),
-    i = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    s = n(900719);
-function c() {
-    let [e] = i.useState(() => Math.floor(1600 * Math.random()) / 1e3);
-    return (0, a.jsx)("div", { className: r()(s.Vl, s.Yf), style: { animationDelay: `${e}s` } });
+r.d(t, { r: () => o, t: () => s });
+var n = r(627968),
+    u = r(64700),
+    l = r(503698),
+    a = r.n(l),
+    i = r(900719);
+function s() {
+    let [e] = u.useState(() => Math.floor(1600 * Math.random()) / 1e3);
+    return (0, n.jsx)("div", { className: a()(i.Vl, i.Yf), style: { animationDelay: `${e}s` } });
 }
 function o() {
-    let [e] = i.useState(() => Math.floor(60 * Math.random()) + 20);
-    return (0, a.jsx)("div", { className: s.RC, style: { width: `${e}%` } });
+    let [e] = u.useState(() => Math.floor(60 * Math.random()) + 20);
+    return (0, n.jsx)("div", { className: i.RC, style: { width: `${e}%` } });
 }

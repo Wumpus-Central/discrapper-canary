@@ -1,0 +1,16 @@
+e.exports = {
+    xU: "paypalLogo_e27f12",
+    Hf: "sofortLogo_e27f12",
+    Bo: "paysafeCardLogo_e27f12",
+    Qq: "gcashLogo_e27f12",
+    kD: "grabPayLogo_e27f12",
+    ml: "momoLogo_e27f12",
+    pP: "kakaopayLogo_e27f12",
+    Q$: "goPayLogo_e27f12",
+    n9: "bancontactLogo_e27f12",
+    W3: "epsLogo_e27f12",
+    t6: "idealLogo_e27f12",
+    sC: "p24Logo_e27f12",
+    js: "giropayLogo_e27f12",
+    iU: "message_e27f12",
+};

@@ -1,63 +1,62 @@
-"use strict";
-l.d(t, { default: () => D });
-var a = l(627968),
-    n = l(64700),
-    r = l(189213),
-    s = l(450507),
+l.d(t, { default: () => G });
+var n = l(627968),
+    r = l(64700),
+    o = l(189213),
+    a = l(450507),
     i = l(192308),
-    o = l(256311),
-    d = l(954571),
-    c = l(702841),
-    u = l(773669),
-    _ = l(883600),
-    m = l(559868);
+    s = l(256311),
+    c = l(954571),
+    d = l(702841),
+    h = l(773669),
+    u = l(883600),
+    g = l(559868);
 function p(e, t) {
     let {
         changelog: l,
-        loadState: a,
-        defaultChangelog: r,
-        defaultLoadState: s,
-    } = (0, c.cf)([_.A], () => {
-        let l = null != e ? _.A.getChangelog(e, t) : null,
-            a = null != e ? _.A.getChangelog(e, "en-US") : null,
-            n = null != e && _.A.getChangelogLoadStatus(e, "en-US");
+        loadState: n,
+        defaultChangelog: o,
+        defaultLoadState: a,
+    } = (0, d.cf)([u.A], () => {
+        let l = null != e ? u.A.getChangelog(e, t) : null,
+            n = null != e ? u.A.getChangelog(e, "en-US") : null,
+            r = null != e && u.A.getChangelogLoadStatus(e, "en-US");
         return {
             changelog: l,
-            loadState: null != e && _.A.getChangelogLoadStatus(e, t),
-            defaultChangelog: a,
-            defaultLoadState: n,
+            loadState: null != e && u.A.getChangelogLoadStatus(e, t),
+            defaultChangelog: n,
+            defaultLoadState: r,
         };
     }, [e, t]);
-    return (n.useEffect(() => {
-        null != e && null == l && a === m._f.NOT_LOADED && o.A.fetchChangelog(e, t);
-    }, [e, l, a, t]),
+    return (r.useEffect(() => {
+        null != e && null == l && n === g._f.NOT_LOADED && s.A.fetchChangelog(e, t);
+    }, [e, l, n, t]),
     null == e)
         ? { id: e, changelog: null, loaded: !1 }
-        : null == l && a === m._f.LOADED_FAILURE
-          ? { id: e, changelog: r, loaded: s !== m._f.NOT_LOADED }
-          : { id: e, changelog: l, loaded: a !== m._f.NOT_LOADED };
+        : null == l && n === g._f.LOADED_FAILURE
+          ? { id: e, changelog: o, loaded: a !== g._f.NOT_LOADED }
+          : { id: e, changelog: l, loaded: n !== g._f.NOT_LOADED };
 }
-var h = l(989349),
-    g = l.n(h),
+var m = l(989349),
+    A = l.n(m),
     f = l(349288),
-    b = l(274997),
-    A = l(319745),
+    C = l(274997),
+    k = l(319745),
     x = l(488225),
-    v = l(834730),
-    C = l(175671),
-    y = l(259407),
-    E = l(607470),
-    k = l(472501),
-    w = l(46054),
-    I = l(34337),
-    L = l(550997),
-    R = l(652215),
-    N = l(985018),
-    j = l(614099);
-let T = w.A.reactParserFor(L.default.getDefaultRules(j)),
-    S = {};
-class O extends n.PureComponent {
-    scrollerRef = n.createRef();
+    _ = l(834730),
+    L = l(175671),
+    E = l(259407),
+    b = l(607470),
+    S = l(472501),
+    O = l(46054),
+    w = l(34337),
+    D = l(550997),
+    N = l(652215),
+    j = l(985018),
+    v = l(614099);
+let I = O.A.reactParserFor(D.default.getDefaultRules(v)),
+    P = {};
+class R extends r.PureComponent {
+    scrollerRef = r.createRef();
     handleScroll = () => {
         let { current: e } = this.scrollerRef;
         null != e && this.props.onScroll?.(e);
@@ -66,108 +65,108 @@ class O extends n.PureComponent {
         this.props.track(e, t, l);
     }
     trackLinkClick = (e) => {
-        this.props.track(R.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "inline_link", target: e }, !1);
+        this.props.track(N.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "inline_link", target: e }, !1);
     };
     renderFooter() {
-        return (0, a.jsxs)("div", {
-            className: j.footer,
+        return (0, n.jsxs)("div", {
+            className: v.footer,
             children: [
-                (0, a.jsx)(f.Anchor, {
-                    "aria-label": N.intl.string(N.t["/84uiD"]),
-                    className: j.socialLink,
-                    href: (0, k.A)(R.Pq7.TWITTER),
+                (0, n.jsx)(f.Anchor, {
+                    "aria-label": j.intl.string(j.t["/84uiD"]),
+                    className: v.socialLink,
+                    href: (0, S.A)(N.Pq7.TWITTER),
                     target: "blank",
-                    children: (0, a.jsx)(b.p, { size: "xs", color: "currentColor" }),
+                    children: (0, n.jsx)(C.p, { size: "xs", color: "currentColor" }),
                 }),
-                (0, a.jsx)(f.Anchor, {
-                    "aria-label": N.intl.string(N.t["h0or/l"]),
-                    className: j.socialLink,
-                    href: R.w7I.FACEBOOK_URL,
+                (0, n.jsx)(f.Anchor, {
+                    "aria-label": j.intl.string(j.t["h0or/l"]),
+                    className: v.socialLink,
+                    href: N.w7I.FACEBOOK_URL,
                     target: "blank",
-                    children: (0, a.jsx)(A.Z, { size: "xs", color: "currentColor" }),
+                    children: (0, n.jsx)(k.Z, { size: "xs", color: "currentColor" }),
                 }),
-                (0, a.jsx)(f.Anchor, {
-                    "aria-label": N.intl.string(N.t["5uVPyf"]),
-                    className: j.socialLink,
-                    href: R.w7I.INSTAGRAM_URL,
+                (0, n.jsx)(f.Anchor, {
+                    "aria-label": j.intl.string(j.t["5uVPyf"]),
+                    className: v.socialLink,
+                    href: N.w7I.INSTAGRAM_URL,
                     target: "blank",
-                    children: (0, a.jsx)(x.L, { size: "xs", color: "currentColor" }),
+                    children: (0, n.jsx)(x.L, { size: "xs", color: "currentColor" }),
                 }),
-                (0, a.jsx)(v.E, { variant: "text-xs/normal", children: N.intl.string(N.t.EjVVI7) }),
+                (0, n.jsx)(_.E, { variant: "text-xs/normal", children: j.intl.string(j.t.EjVVI7) }),
             ],
         });
     }
     renderVideo() {
         let { changeLog: e } = this.props,
             t = e.youtube_video_id,
-            n = e.video,
-            r = e.image;
+            r = e.video,
+            o = e.image;
         if (null != t && "" !== t)
-            return (0, a.jsx)(C.rr, {
-                className: j.video,
+            return (0, n.jsx)(L.rr, {
+                className: v.video,
                 allowFullScreen: !1,
                 href: `https://youtu.be/${t}`,
                 thumbnail: { url: `https://i.ytimg.com/vi/${t}/hqdefault.jpg`, width: 432, height: 240 },
                 video: {
-                    url: `https://www.youtube.com/embed/${t}?vq=large&rel=0&controls=0&showinfo=0&pageType=${R.NzX}`,
+                    url: `https://www.youtube.com/embed/${t}?vq=large&rel=0&controls=0&showinfo=0&pageType=${N.NzX}`,
                     width: 432,
                     height: 240,
                 },
-                provider: y.mt.YOUTUBE,
+                provider: E.mt.YOUTUBE,
                 maxWidth: 432,
                 maxHeight: 240,
-                renderVideoComponent: I.$o,
-                renderImageComponent: I.LL,
-                renderLinkComponent: I.bU,
+                renderVideoComponent: w.$o,
+                renderImageComponent: w.LL,
+                renderLinkComponent: w.bU,
                 onPlay: () => {
-                    this.track(R.HAw.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
+                    this.track(N.HAw.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
                 },
             });
-        if (null != n && "" !== n) {
-            let e = n.startsWith("https://") ? n : l(274516)(`./${n}`);
-            return (0, a.jsx)(E.A, {
+        if (null != r && "" !== r) {
+            let e = r.startsWith("https://") ? r : l(274516)(`./${r}`);
+            return (0, n.jsx)(b.A, {
                 src: e,
-                poster: r,
+                poster: o,
                 width: 432,
                 height: 240,
                 loop: !0,
                 muted: !0,
                 autoPlay: !0,
-                className: j.video,
+                className: v.video,
                 onPlay: () => {
-                    this.track(R.HAw.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
+                    this.track(N.HAw.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
                 },
             });
         }
-        if (null == r || "" === r) return null;
+        if (null == o || "" === o) return null;
         {
-            let e = r.startsWith("https://") ? r : l(274516)(`./${r}`);
-            return (0, a.jsx)("img", { className: j.image, alt: "", src: e, width: 432, height: 240 });
+            let e = o.startsWith("https://") ? o : l(274516)(`./${o}`);
+            return (0, n.jsx)("img", { className: v.image, alt: "", src: e, width: 432, height: 240 });
         }
     }
     render() {
-        let { changeLog: e, onScroll: t, track: l, ...n } = this.props;
-        return (0, a.jsx)(r.Modal, {
-            ...n,
-            title: N.intl.string(N.t.LRmNAl),
-            subtitle: N.intl.format(N.t.Fb8xx2, {
-                date: null != e.date && "" !== e.date ? g()(e.date).toDate() : new Date(),
+        let { changeLog: e, onScroll: t, track: l, ...r } = this.props;
+        return (0, n.jsx)(o.Modal, {
+            ...r,
+            title: j.intl.string(j.t.LRmNAl),
+            subtitle: j.intl.format(j.t.Fb8xx2, {
+                date: null != e.date && "" !== e.date ? A()(e.date).toDate() : new Date(),
             }),
             actions: [],
             actionBarInput: this.renderFooter(),
             onClose: () => Promise.resolve(this.props.onClose()),
             scrollerRef: this.scrollerRef,
             onScroll: this.handleScroll,
-            children: (0, a.jsxs)("div", {
+            children: (0, n.jsxs)("div", {
                 tabIndex: 0,
                 role: "region",
-                "aria-label": N.intl.string(N.t.HzBchE),
-                className: j.container,
+                "aria-label": j.intl.string(j.t.HzBchE),
+                className: v.container,
                 children: [
                     this.renderVideo(),
-                    T(e.body, !1, {
+                    I(e.body, !1, {
                         changeLog: this,
-                        interpolations: S,
+                        interpolations: P,
                         onLinkClick: this.trackLinkClick,
                         allowList: !0,
                     }),
@@ -176,39 +175,39 @@ class O extends n.PureComponent {
         });
     }
 }
-class M extends n.PureComponent {
+class T extends r.PureComponent {
     maxScrolledPercentage = 0;
     mountedAt = 0;
     componentDidMount() {
-        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(R.HAw.CHANGE_LOG_OPENED, {}, !0);
+        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(N.HAw.CHANGE_LOG_OPENED, {}, !0);
     }
-    close = () => ((0, i.closeModal)(m.lb), Promise.resolve());
+    close = () => ((0, i.closeModal)(g.lb), Promise.resolve());
     handleScroll = (e) => {
-        let { offsetHeight: t, scrollHeight: l, scrollTop: a } = e.getScrollerState();
-        this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, a / (l - t)), 1);
+        let { offsetHeight: t, scrollHeight: l, scrollTop: n } = e.getScrollerState();
+        this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, n / (l - t)), 1);
     };
     track = (() => {
         var e = this;
         return function (t) {
             let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                { changeLog: n } = e.props,
-                { date: r, revision: s } = n,
-                i = { change_log_id: `${r}:${s}`, ...l };
-            a ||
+                n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                { changeLog: r } = e.props,
+                { date: o, revision: a } = r,
+                i = { change_log_id: `${o}:${a}`, ...l };
+            n ||
                 (i = {
                     seconds_open: Math.round((Date.now() - e.mountedAt) / 1e3),
                     max_scrolled_percentage: 100 * parseInt(e.maxScrolledPercentage.toPrecision(4), 10),
                     ...i,
                 }),
-                d.default.track(t, i);
+                c.default.track(t, i);
         };
     })();
     componentWillUnmount() {
-        this.track(R.HAw.CHANGE_LOG_CLOSED);
+        this.track(N.HAw.CHANGE_LOG_CLOSED);
     }
     render() {
-        return (0, a.jsx)(O, {
+        return (0, n.jsx)(R, {
             ...this.props,
             changeLog: this.props.changeLog,
             onClose: this.close,
@@ -217,42 +216,42 @@ class M extends n.PureComponent {
         });
     }
 }
-function D(e) {
+function G(e) {
     let {
         changelog: t,
         loaded: l,
         clientTooOld: i,
     } = (function () {
-        let e = (0, c.bG)([u.default], () => u.default.locale),
-            t = (0, c.bG)([_.A], () => _.A.latestChangelogId()),
-            l = (0, c.bG)([_.A], () => _.A.getConfig()),
-            a = null != l && 0 === Object.keys(l).length,
-            n = null != l && Object.keys(l).length > 0 && null == t,
-            r = (0, c.bG)([_.A], () => _.A.overrideId()),
-            { changelog: s, loaded: i } = p(t, e),
-            { changelog: o, loaded: d } = p(r, e);
-        return null == r || (null == o && d)
-            ? { id: t, changelog: s, loaded: !!a || i, clientTooOld: n }
-            : { id: r, changelog: o, loaded: d, clientTooOld: !1 };
+        let e = (0, d.bG)([h.default], () => h.default.locale),
+            t = (0, d.bG)([u.A], () => u.A.latestChangelogId()),
+            l = (0, d.bG)([u.A], () => u.A.getConfig()),
+            n = null != l && 0 === Object.keys(l).length,
+            r = null != l && Object.keys(l).length > 0 && null == t,
+            o = (0, d.bG)([u.A], () => u.A.overrideId()),
+            { changelog: a, loaded: i } = p(t, e),
+            { changelog: s, loaded: c } = p(o, e);
+        return null == o || (null == s && c)
+            ? { id: t, changelog: a, loaded: !!n || i, clientTooOld: r }
+            : { id: o, changelog: s, loaded: c, clientTooOld: !1 };
     })();
     if (
-        (n.useEffect(() => {
-            if (l && null != t) return () => o.A.markChangelogAsSeen(t.id, t.date);
+        (r.useEffect(() => {
+            if (l && null != t) return () => s.A.markChangelogAsSeen(t.id, t.date);
         }, [l, t]),
         i)
     )
-        return (0, a.jsx)(r.Modal, {
-            title: N.intl.string(N.t.V9ospk),
-            actions: [{ text: N.intl.string(N.t.BddRzS), onClick: e.onClose }],
+        return (0, n.jsx)(o.Modal, {
+            title: j.intl.string(j.t.V9ospk),
+            actions: [{ text: j.intl.string(j.t.BddRzS), onClick: e.onClose }],
             ...e,
         });
     if (null == t)
         if (l)
-            return (0, a.jsx)(r.Modal, {
-                title: N.intl.string(N.t.O1iRT8),
-                actions: [{ text: N.intl.string(N.t.BddRzS), onClick: e.onClose }],
+            return (0, n.jsx)(o.Modal, {
+                title: j.intl.string(j.t.O1iRT8),
+                actions: [{ text: j.intl.string(j.t.BddRzS), onClick: e.onClose }],
                 ...e,
             });
-        else return (0, s.A)(e);
-    return (0, a.jsx)(M, { ...e, changeLog: t });
+        else return (0, a.A)(e);
+    return (0, n.jsx)(T, { ...e, changeLog: t });
 }

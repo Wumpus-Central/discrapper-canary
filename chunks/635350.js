@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(627968),
-    a = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(890856),
-    o = n(503469);
-let c = a.memo(function (e) {
-    let { onClick: t, onContextMenu: n, className: a, disabled: s, children: c, "aria-label": d, ref: u } = e;
-    return (0, i.jsx)(r.s, {
+l.d(t, { A: () => c });
+var s = l(627968),
+    i = l(64700),
+    a = l(503698),
+    n = l.n(a),
+    r = l(890856),
+    o = l(503469);
+let c = i.memo(function (e) {
+    let { onClick: t, onContextMenu: l, className: i, disabled: a, children: c, "aria-label": d, ref: u } = e;
+    return (0, s.jsx)(r.s, {
         ref: u,
-        className: l()(o.Nr, a, { [o.vk]: null != t, [o.r9]: s }),
-        onContextMenu: n,
-        onClick: s ? void 0 : t,
+        className: n()(o.Nr, i, { [o.vk]: null != t, [o.r9]: a }),
+        onContextMenu: l,
+        onClick: a ? void 0 : t,
         "aria-label": d,
         children: c,
     });

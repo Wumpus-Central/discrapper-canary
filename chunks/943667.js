@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => i }), n(938796);
-var a = n(665260),
-    r = n(652215);
-function i(e) {
+n.d(l, { A: () => t }), n(938796);
+var r = n(665260),
+    u = n(652215);
+function t(e) {
     return (
-        e.type === r.lAJ.DEFAULT &&
-        (0, a.Lt)(e.flags, r.pr7.IS_CROSSPOST) &&
+        e.type === u.lAJ.DEFAULT &&
+        (0, r.Lt)(e.flags, u.pr7.IS_CROSSPOST) &&
         null != e.messageReference &&
-        e.messageReference.type !== r.SH7.FORWARD
+        e.messageReference.type !== u.SH7.FORWARD
     );
 }

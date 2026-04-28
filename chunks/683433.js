@@ -1,17 +1,16 @@
-"use strict";
-r.d(t, { A: () => d, F: () => c });
-var i = r(627968);
-r(64700);
-var a = r(503698),
-    n = r.n(a),
-    s = r(349288),
-    l = r(985018),
-    o = r(39584);
-let c = (e) => {
-        let { className: t, onClick: r, children: a } = e;
-        return (0, i.jsx)(s.Anchor, { onClick: r, className: n()(o.n, t), children: a });
+e.d(n, { A: () => o, F: () => d });
+var l = e(627968);
+e(64700);
+var i = e(503698),
+    t = e.n(i),
+    s = e(349288),
+    a = e(985018),
+    c = e(39584);
+let d = (r) => {
+        let { className: n, onClick: e, children: i } = r;
+        return (0, l.jsx)(s.Anchor, { onClick: e, className: t()(c.n, n), children: i });
     },
-    d = (e) => {
-        let { className: t, onClick: r } = e;
-        return (0, i.jsx)(c, { className: t, onClick: r, children: l.intl.string(l.t["13/7kX"]) });
+    o = (r) => {
+        let { className: n, onClick: e } = r;
+        return (0, l.jsx)(d, { className: n, onClick: e, children: a.intl.string(a.t["13/7kX"]) });
     };

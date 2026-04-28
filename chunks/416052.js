@@ -1,49 +1,48 @@
-"use strict";
-l.d(t, { A: () => u });
-var n = l(627968),
-    i = l(64700),
-    s = l(451988),
-    a = l(862482),
-    r = l(109802),
-    o = l(957565),
-    d = l(985018);
-class c extends i.PureComponent {
+s.d(e, { A: () => u });
+var o = s(627968),
+    i = s(64700),
+    r = s(451988),
+    n = s(862482),
+    p = s(109802),
+    d = s(957565),
+    h = s(985018);
+class a extends i.PureComponent {
     _timeout;
     static defaultProps = { delay: 1e3 };
-    constructor(e) {
-        super(e),
-            (this.state = { mode: r.e.Modes.DEFAULT }),
-            (this._timeout = new s.Ep()),
+    constructor(t) {
+        super(t),
+            (this.state = { mode: p.e.Modes.DEFAULT }),
+            (this._timeout = new r.Ep()),
             (this.handleCopy = this.handleCopy.bind(this));
     }
     componentWillUnmount() {
         this._timeout.stop();
     }
     render() {
-        let { text: e } = this.props,
-            { mode: t } = this.state,
-            l = t === r.e.Modes.SUCCESS ? d.intl.string(d.t.t5VZ88) : e;
-        return (0, n.jsx)(r.e, { ...this.props, onCopy: this.handleCopy, mode: t, text: l, supportsCopy: o.p5 });
+        let { text: t } = this.props,
+            { mode: e } = this.state,
+            s = e === p.e.Modes.SUCCESS ? h.intl.string(h.t.t5VZ88) : t;
+        return (0, o.jsx)(p.e, { ...this.props, onCopy: this.handleCopy, mode: e, text: s, supportsCopy: d.p5 });
     }
-    handleCopy(e) {
-        let { onCopy: t, delay: l = 1e3 } = this.props;
-        (0, o.C)(
-            e,
-            () => this.setState({ mode: r.e.Modes.SUCCESS }),
-            () => this.setState({ mode: r.e.Modes.ERROR }),
+    handleCopy(t) {
+        let { onCopy: e, delay: s = 1e3 } = this.props;
+        (0, d.C)(
+            t,
+            () => this.setState({ mode: p.e.Modes.SUCCESS }),
+            () => this.setState({ mode: p.e.Modes.ERROR }),
         ),
-            this._timeout.start(l, () => this.setState({ mode: r.e.Modes.DEFAULT })),
-            t?.(e);
+            this._timeout.start(s, () => this.setState({ mode: p.e.Modes.DEFAULT })),
+            e?.(t);
     }
-    getVerticalButtonColor(e) {
-        switch (e) {
-            case r.e.Modes.SUCCESS:
-                return a.$n.Colors.GREEN;
-            case r.e.Modes.ERROR:
-                return a.$n.Colors.RED;
+    getVerticalButtonColor(t) {
+        switch (t) {
+            case p.e.Modes.SUCCESS:
+                return n.$n.Colors.GREEN;
+            case p.e.Modes.ERROR:
+                return n.$n.Colors.RED;
             default:
-                return a.$n.Colors.BRAND;
+                return n.$n.Colors.BRAND;
         }
     }
 }
-let u = c;
+let u = a;

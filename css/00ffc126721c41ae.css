@@ -1,0 +1,64 @@
+.container__394db {
+    align-items: center;
+    display: block;
+    flex: 1 1 auto;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap
+}
+
+.container__394db .chipletContainer__394db {
+    display: inline-block;
+    overflow: hidden
+}
+
+.container__394db .chipletParent__394db {
+    display: inline;
+    overflow: hidden;
+    padding-inline-start: 4px;
+    position: relative
+}
+
+.container__394db .usernameContainer__394db {
+    display: inline-block;
+    flex: 1;
+    margin-top: 2px;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.container__394db.isOverlayContainer__394db {
+    align-content: center;
+    background: var(--background-base-low);
+    border-radius: 4px;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    height: 20px
+}
+
+.container__394db.isOverlayContainer__394db .usernameContainer__394db {
+    margin-top: 0
+}
+
+.container__394db.isOverlayContainer__394db .chipletContainer__394db,
+.container__394db.isOverlayContainer__394db .chipletParent__394db {
+    align-content: center;
+    align-items: center;
+    display: flex
+}
+
+.container__394db.isOverlayContainer__394db .chipletContainer__394db {
+    margin: 0;
+    padding: 1.5px
+}
+
+.container__394db.isOverlayContainer__394db .chipletContainer__394db.noPadding__394db {
+    padding: 0
+}
+
+.isOverlayTag__394db {
+    margin: 0
+}

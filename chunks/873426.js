@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper_c0e32c",
     cB: "isBurstReactionPicker_c0e32c",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     KE: "toolbar_bba883",
     Uo: "buttons_bba883",

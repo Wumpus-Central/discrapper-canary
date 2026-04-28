@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     DV: "userListItem_ec58fe",
     YR: "popoutDisabled_ec58fe",

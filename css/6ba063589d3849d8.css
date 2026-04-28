@@ -1,0 +1,56 @@
+.formPriorityOption__2cf82 {
+    padding: 4px 12px
+}
+
+.formPriorityImageContainer__2cf82 {
+    display: flex;
+    flex-direction: column
+}
+
+.formPriorityTitleContainer__2cf82 {
+    align-items: center;
+    display: flex;
+    flex: 1
+}
+
+.formPriorityTitle__2cf82 {
+    margin-top: 10px;
+    margin-inline-start: 10px
+}
+
+.formPriorityDescription__2cf82 {
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+
+.formPriorityImage__2cf82 {
+    height: 20px;
+    width: 20px
+}
+
+.attachments__2cf82 {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 1fr 1fr
+}
+
+.attachment__2cf82 {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-8);
+    position: relative
+}
+
+.removeAttachment__2cf82 {
+    inset-inline-end: var(--space-4);
+    position: absolute;
+    top: var(--space-4)
+}
+
+.fileInput__2cf82 {
+    display: none
+}

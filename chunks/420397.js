@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     kL: "container__2d263",
     bk: "volumeButton__2d263",
     QS: "volumeButtonSlider__2d263",

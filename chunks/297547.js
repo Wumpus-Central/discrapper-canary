@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     xA: "emojiSpriteImage_d982c2",
     iD: "emojiLockIconContainer_d982c2",

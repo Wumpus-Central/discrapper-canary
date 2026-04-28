@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Nr: "card_abfd90",
     GW: "cardMedium_abfd90",

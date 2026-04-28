@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+_.r(
     (e.exports = {
         progress: "progress__45530",
         progressBar: "progressBar__45530",

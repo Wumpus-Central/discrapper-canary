@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__0919a",
     Nr: "card__0919a",

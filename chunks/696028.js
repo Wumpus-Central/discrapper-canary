@@ -1,48 +1,47 @@
-"use strict";
-n.d(t, { Z: () => r });
-var a = n(64700),
-    i = n(954571),
-    l = n(652215);
-function r(e, t, n, r) {
-    let s = a.useRef(!1),
-        c = a.useRef(t),
-        o = a.useRef({ positionInSection: n, analyticsLocations: r });
+r.d(t, { Z: () => a });
+var n = r(64700),
+    u = r(954571),
+    l = r(652215);
+function a(e, t, r, a) {
+    let i = n.useRef(!1),
+        s = n.useRef(t),
+        o = n.useRef({ positionInSection: r, analyticsLocations: a });
     return (
-        a.useEffect(() => {
-            c.current = t;
+        n.useEffect(() => {
+            s.current = t;
         }, [t]),
         {
-            handleCardHover: a.useCallback(() => {
-                if (!s.current) {
+            handleCardHover: n.useCallback(() => {
+                if (!i.current) {
                     let {
                             sessionId: t,
-                            guildId: n,
-                            pageIndex: a,
-                            pageTitle: r,
-                            pageSection: d,
-                            pageSectionTitle: u,
-                            isUserGuildMember: m,
+                            guildId: r,
+                            pageIndex: n,
+                            pageTitle: a,
+                            pageSection: c,
+                            pageSectionTitle: d,
+                            isUserGuildMember: _,
                             pageHasLeaderboard: f,
-                        } = c.current,
-                        { positionInSection: h, analyticsLocations: _ } = o.current;
-                    i.default.track(l.HAw.SLAYER_STOREFRONT_CARD_HOVERED, {
+                        } = s.current,
+                        { positionInSection: g, analyticsLocations: m } = o.current;
+                    u.default.track(l.HAw.SLAYER_STOREFRONT_CARD_HOVERED, {
                         slayer_storefront_session_id: t,
                         sku_id: e,
-                        guild_id: n,
-                        page_index: a,
-                        page_title: r,
-                        page_section: d,
-                        page_section_title: u,
-                        position_in_section: h,
-                        is_user_guild_member: m,
+                        guild_id: r,
+                        page_index: n,
+                        page_title: a,
+                        page_section: c,
+                        page_section_title: d,
+                        position_in_section: g,
+                        is_user_guild_member: _,
                         page_has_leaderboard: f,
-                        location_stack: _,
+                        location_stack: m,
                     }),
-                        (s.current = !0);
+                        (i.current = !0);
                 }
             }, [e]),
-            handleCardUnhover: a.useCallback(() => {
-                s.current = !1;
+            handleCardUnhover: n.useCallback(() => {
+                i.current = !1;
             }, []),
         }
     );

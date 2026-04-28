@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nw: "outerContainer_e1147e",
     Yz: "loggedOutContainer_e1147e",

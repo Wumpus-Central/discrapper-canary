@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper__14245",
     wx: "header__14245",

@@ -1,0 +1,121 @@
+.stepBody__7b8d0 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-32);
+    margin: var(--size-32) var(--size-16);
+    min-height: 400px
+}
+
+.bodyColumnLeft__7b8d0 {
+    align-items: center
+}
+
+.bodyColumnLeft__7b8d0,
+.bodyColumnRight__7b8d0 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--size-16)
+}
+
+.bodyColumnRight__7b8d0 {
+    justify-content: center;
+    min-width: 0
+}
+
+.skuCardImage__7b8d0 {
+    aspect-ratio: 1;
+    max-width: 352px;
+    width: 100%
+}
+
+.customGiftMessageWrapper__7b8d0 {
+    margin: 0
+}
+
+.customGiftMessage__7b8d0 {
+    background-color: var(--background-base-lower);
+    border-radius: var(--size-8);
+    padding: var(--size-12)
+}
+
+.giftEffectsContainer__7b8d0,
+.giftPreviewContainer__7b8d0 {
+    display: flex;
+    gap: var(--size-8)
+}
+
+.giftPreviewContainer__7b8d0 {
+    flex-direction: column
+}
+
+.giftPreviewTitle__7b8d0 {
+    margin: 0 !important
+}
+
+.giftPreviewContent__7b8d0 {
+    align-items: center;
+    background-color: color-mix(in srgb, var(--background-brand) 10%, transparent);
+    border: 1px solid var(--background-brand);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: 16px;
+    padding: 12px 16px
+}
+
+.giftPreviewImageContainer__7b8d0 {
+    flex-shrink: 0
+}
+
+.giftPreviewCardContainer__7b8d0 {
+    aspect-ratio: 1;
+    width: 48px
+}
+
+.giftPreviewImage__7b8d0 {
+    max-height: 100%;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.giftPreviewTextContainer__7b8d0 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.guildNameContainer__7b8d0 {
+    align-items: center;
+    display: flex;
+    gap: 6px
+}
+
+.recipientPickerSelectWrapper__7b8d0 {
+    background-color: var(--background-base-lower)
+}
+
+.footer__7b8d0 {
+    background-color: var(--background-base-low)
+}
+
+.viewItemButton__7b8d0 {
+    max-width: 100%;
+    width: 100%
+}
+
+.purchaseItemGraphic__2455b {
+    height: 64px;
+    width: 64px
+}
+
+.stepBody_a3d32e {
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px
+}
+
+.stepBody_a3d32e>* {
+    width: 50%
+}

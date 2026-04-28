@@ -1,0 +1,63 @@
+.header__0f7f7 {
+    padding: 8px 0
+}
+
+.gameSelectionOption__0f7f7 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 12px
+}
+
+.gameSelectionOptionText__0f7f7 {
+    width: 100%
+}
+
+.gameSelectionOptionChevron__0f7f7 {
+    justify-self: flex-end
+}
+
+.commentContainer__0f7f7 {
+    padding-top: 16px
+}
+
+.hr__0f7f7 {
+    background-color: var(--border-muted);
+    height: 1px;
+    width: 100%
+}
+
+.root__0f7f7 {
+    max-width: 520px
+}
+
+.modalContent__0f7f7 {
+    gap: 24px
+}
+
+.itemContainer__0f7f7,
+.modalContent__0f7f7 {
+    display: flex;
+    flex-direction: column
+}
+
+.itemContainer__0f7f7 {
+    gap: 8px
+}
+
+.buttons__0f7f7 {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-end;
+    padding: 24px
+}
+
+.closeButton__0f7f7 {
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 16px
+}

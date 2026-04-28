@@ -1,0 +1,34 @@
+.content__89631 {
+    gap: 24px;
+    justify-content: center;
+    max-width: 408px;
+    min-width: 408px;
+    padding: 24px;
+    text-align: center
+}
+
+.content__89631,
+.innerContent__89631 {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.innerContent__89631 {
+    gap: 8px
+}
+
+@media (max-width:485px) {
+    .content__89631 {
+        min-width: unset
+    }
+}
+
+.footerButton__89631 {
+    align-self: stretch
+}
+
+.artwork__89631 {
+    height: auto;
+    width: 80%
+}

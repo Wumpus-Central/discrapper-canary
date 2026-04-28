@@ -30,7 +30,7 @@ function T(t) {
         } = t,
         j = (0, r.bG)([f.A], () => (null != e ? f.A.getGuild(e) : null)),
         D = (0, r.bG)([U.default], () => U.default.locale),
-        G = (function (t) {
+        m = (function (t) {
             let [e, n] = a.useState(void 0);
             return (
                 a.useEffect(() => {
@@ -55,51 +55,51 @@ function T(t) {
                 e
             );
         })(D),
-        { analyticsLocations: h } = (0, p.Ay)(I, _.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
-        [m, x] = a.useState(!1),
+        { analyticsLocations: G } = (0, p.Ay)(I, _.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
+        [h, x] = a.useState(!1),
         C = a.useRef(!1),
         S = a.useRef(null),
-        v = a.useMemo(
+        P = a.useMemo(
             () => ({
                 ...(null != e ? { guild_id: e } : {}),
                 type: y.liQ.PREMIUM_GUILD_USER_MODAL,
-                location_stack: h,
+                location_stack: G,
                 location_section: g.section,
                 location_object: g.object,
                 video_placement: k,
             }),
-            [g.object, g.section, h, e, k],
+            [g.object, g.section, G, e, k],
         ),
-        N = a.useCallback(
+        v = a.useCallback(
             (t) => {
                 let e = t.currentTarget.duration;
                 C.current ||
                     ((C.current = !0),
                     L.default.track(y.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
-                        ...v,
+                        ...P,
                         ...(Number.isFinite(e) ? { video_duration_sec: e } : {}),
                     }));
             },
-            [v],
+            [P],
         ),
-        P = a.useCallback(
+        N = a.useCallback(
             (t) => {
                 let e = t.currentTarget.currentTime,
                     n = t.currentTarget.duration;
                 L.default.track(y.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
-                    ...v,
+                    ...P,
                     ...(Number.isFinite(e) ? { seconds_played: e } : {}),
                     ...(Number.isFinite(n) ? { video_duration_sec: n } : {}),
                 });
             },
-            [v],
+            [P],
         );
     async function w() {
         null != j &&
             (S.current?.pause(),
             x(!0),
             await (0, A.g)({
-                analyticsLocations: h,
+                analyticsLocations: G,
                 analyticsLocation: {
                     page: y.liQ.PREMIUM_GUILD_USER_MODAL,
                     section: y.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -114,7 +114,7 @@ function T(t) {
     async function B() {
         S.current?.pause(),
             await (0, u.openModalLazy)(async () => {
-                let { default: t } = await n.e("18710").then(n.bind(n, 770101));
+                let { default: t } = await Promise.all([n.e("77598"), n.e("18710")]).then(n.bind(n, 770101));
                 return (e) =>
                     (0, i.jsx)(t, {
                         ...e,
@@ -122,7 +122,7 @@ function T(t) {
                             e.onClose(),
                                 R(),
                                 (0, A.g)({
-                                    analyticsLocations: h,
+                                    analyticsLocations: G,
                                     analyticsLocation: {
                                         page: y.liQ.PREMIUM_GUILD_USER_MODAL,
                                         section: y.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -150,10 +150,10 @@ function T(t) {
                     controls: !0,
                     autoPlay: !0,
                     controlsList: "nodownload noremoteplayback noplaybackrate",
-                    onPlay: N,
-                    onEnded: P,
+                    onPlay: v,
+                    onEnded: N,
                     disablePictureInPicture: !0,
-                    children: null != G && (0, i.jsx)("track", { src: G, kind: "captions", srcLang: D, default: !0 }),
+                    children: null != m && (0, i.jsx)("track", { src: m, kind: "captions", srcLang: D, default: !0 }),
                 }),
             }),
             (0, i.jsx)(l.H, {
@@ -165,7 +165,7 @@ function T(t) {
                               icon: d._,
                               text: E.intl.string(E.t.gKmQ1G),
                               onClick: w,
-                              loading: m,
+                              loading: h,
                           }
                         : { variant: "primary", size: "md", text: E.intl.string(E.t.BMx1iy), onClick: B },
                 ],

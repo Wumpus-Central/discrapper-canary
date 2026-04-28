@@ -1,86 +1,87 @@
-"use strict";
-n.d(t, { A: () => h });
-var s = n(627968),
-    a = n(64700),
-    l = n(954571),
-    r = n(903369),
-    i = n(465364),
-    c = n(594808),
-    o = n(78377);
-let u = (0, n(945810).mj)({
+t.d(n, { A: () => f });
+var s = t(627968),
+    a = t(64700),
+    d = t(954571),
+    r = t(903369),
+    i = t(465364),
+    l = t(594808),
+    o = t(78377);
+let u = (0, t(945810).mj)({
     name: "2025-04-native-markdown",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var d = n(652215),
-    m = n(985018),
-    p = n(614099);
-let g = a.lazy(() => Promise.all([n.e("369"), n.e("72756")]).then(n.bind(n, 532255)));
-function h(e, t) {
+var c = t(652215),
+    h = t(985018),
+    p = t(614099);
+let m = a.lazy(() =>
+    Promise.all([t.e("981"), t.e("7603"), t.e("55896"), t.e("88379"), t.e("72756")]).then(t.bind(t, 532255)),
+);
+function f(e, n) {
     let {
-            hideSimpleEmbedContent: h,
-            formatInline: f = !1,
-            noStyleAndInteraction: A = !1,
-            allowHeading: E = !1,
-            allowList: x = !1,
-            allowLinks: R = !1,
-            allowDevLinks: C = !1,
-            previewLinkTarget: N = !1,
-            viewingChannelId: k,
-        } = t,
-        T = (function (e) {
-            let { location: t } = e;
-            return u.useConfig({ location: t });
+            hideSimpleEmbedContent: f,
+            formatInline: C = !1,
+            noStyleAndInteraction: b = !1,
+            allowHeading: g = !1,
+            allowList: A = !1,
+            allowLinks: k = !1,
+            allowDevLinks: v = !1,
+            previewLinkTarget: x = !1,
+            viewingChannelId: y,
+        } = n,
+        E = (function (e) {
+            let { location: n } = e;
+            return u.useConfig({ location: n });
         })({ location: "useMessageRenderedContent" }),
-        [b, I] = a.useState(!1),
-        y = a.useCallback((e) => {
-            e && I(!0);
+        [j, S] = a.useState(!1),
+        _ = a.useCallback((e) => {
+            e && S(!0);
         }, []);
     return (
         a.useEffect(() => {
-            I(!1);
+            S(!1);
         }, [e.content]),
         a.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
-            if (e.isUnsupported) return { content: m.intl.string(m.t.sWi5EU), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
-            if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(d.pr7.LOADING))
-                return { content: (0, s.jsx)(c.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
-            if (e.type === d.lAJ.CHANGELOG) {
-                let { renderChangelogMessageMarkup: t } = n(550997);
-                return t(e, p, {
-                    track: (e, t) => {
-                        l.default.track(e, t);
+            if (e.isUnsupported) return { content: h.intl.string(h.t.sWi5EU), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
+            if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(c.pr7.LOADING))
+                return { content: (0, s.jsx)(l.Ay, { message: e }), hasSpoilerEmbeds: !1, hasBailedAst: !1 };
+            if (e.type === c.lAJ.CHANGELOG) {
+                let { renderChangelogMessageMarkup: n } = t(550997);
+                return n(e, p, {
+                    track: (e, n) => {
+                        d.default.track(e, n);
                     },
                 });
             }
-            return T.enabled
+            return E.enabled
                 ? {
                       content: (0, s.jsx)(a.Suspense, {
                           children: (0, s.jsx)(o.O.Provider, {
                               value: {
                                   messageId: e.id,
                                   channelId: e.channel_id,
-                                  viewingChannelId: k,
+                                  viewingChannelId: y,
                                   guildId: (0, r.U)(e),
-                                  setHasSpoilerEmbeds: y,
+                                  setHasSpoilerEmbeds: _,
                               },
-                              children: (0, s.jsx)(g, { content: e.content }),
+                              children: (0, s.jsx)(m, { content: e.content }),
                           }),
                       }),
-                      hasSpoilerEmbeds: b,
+                      hasSpoilerEmbeds: j,
                       hasBailedAst: !1,
                   }
                 : (0, i.Ay)(e, {
-                      hideSimpleEmbedContent: h,
-                      formatInline: f,
-                      noStyleAndInteraction: A,
-                      allowHeading: E,
-                      allowList: x,
-                      allowLinks: R,
-                      allowDevLinks: C,
-                      previewLinkTarget: N,
-                      viewingChannelId: k,
+                      hideSimpleEmbedContent: f,
+                      formatInline: C,
+                      noStyleAndInteraction: b,
+                      allowHeading: g,
+                      allowList: A,
+                      allowLinks: k,
+                      allowDevLinks: v,
+                      previewLinkTarget: x,
+                      viewingChannelId: y,
                   });
         }, [
             e.content,
@@ -89,17 +90,17 @@ function h(e, t) {
             e.interaction,
             e.state,
             e.type,
-            h,
             f,
-            A,
-            E,
-            x,
-            R,
-            N,
             C,
-            k,
-            T.enabled,
             b,
+            g,
+            A,
+            k,
+            x,
+            v,
+            y,
+            E.enabled,
+            j,
         ])
     );
 }

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     UX: "upsell__98044",
     gm: "emojis__98044",

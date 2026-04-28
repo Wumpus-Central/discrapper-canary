@@ -1,39 +1,50 @@
-n.d(t, { A: () => E });
-var i = n(627968);
+n.d(t, { A: () => x });
+var l = n(627968);
 n(64700);
-var l = n(17928),
-    a = n(836480),
-    s = n(307301),
-    r = n(192308),
+var i = n(17928),
+    s = n(836480),
+    r = n(307301),
+    a = n(192308),
     o = n(241541),
     d = n(652793),
     c = n(855725),
     u = n(976860),
     h = n(309010),
-    _ = n(519480),
-    m = n(370876),
-    g = n(222823),
-    f = n(935208),
-    A = n(652215),
-    p = n(985018);
-let C = [
+    A = n(519480),
+    g = n(370876),
+    m = n(222823),
+    p = n(935208),
+    f = n(652215),
+    C = n(985018);
+let E = [
         {
             key: "JOIN_SERVERS",
-            renderIcon: (e) => (0, i.jsx)(a.Q, { size: "md", color: "currentColor", className: e }),
-            getName: () => p.intl.string(p.t.K50GHd),
+            renderIcon: (e) => (0, l.jsx)(s.Q, { size: "md", color: "currentColor", className: e }),
+            getName: () => C.intl.string(C.t.K50GHd),
             handler: (e, t) => (0, u.uh)(e.id, t.id),
         },
         {
             key: "ADD_SERVERS",
-            renderIcon: (e) => (0, i.jsx)(s.j, { size: "md", color: "currentColor", className: e }),
-            getName: () => p.intl.string(p.t.emRpdS),
+            renderIcon: (e) => (0, l.jsx)(r.j, { size: "md", color: "currentColor", className: e }),
+            getName: () => C.intl.string(C.t.emRpdS),
             handler: (e, t) =>
-                (0, r.openModalLazy)(async () => {
-                    let { default: l } = await Promise.all([n.e("93103"), n.e("96349"), n.e("22711")]).then(
-                        n.bind(n, 579735),
-                    );
+                (0, a.openModalLazy)(async () => {
+                    let { default: i } = await Promise.all([
+                        n.e("80813"),
+                        n.e("13754"),
+                        n.e("72891"),
+                        n.e("54046"),
+                        n.e("55411"),
+                        n.e("93103"),
+                        n.e("74610"),
+                        n.e("19580"),
+                        n.e("97804"),
+                        n.e("56856"),
+                        n.e("80782"),
+                        n.e("96349"),
+                    ]).then(n.bind(n, 579735));
                     return (n) =>
-                        (0, i.jsx)(l, {
+                        (0, l.jsx)(i, {
                             ...n,
                             directoryGuildName: e.name,
                             directoryGuildId: e.id,
@@ -43,45 +54,50 @@ let C = [
         },
         {
             key: "INVITE_MEMBERS",
-            renderIcon: (e) => (0, i.jsx)(o.D, { className: e }),
-            getName: () => p.intl.string(p.t.MJQOuJ),
+            renderIcon: (e) => (0, l.jsx)(o.D, { className: e }),
+            getName: () => C.intl.string(C.t.MJQOuJ),
             handler: (e, t) =>
-                (0, r.openModalLazy)(async () => {
-                    let { default: l } = await Promise.all([n.e("28136"), n.e("22547"), n.e("42738")]).then(
-                        n.bind(n, 1310),
-                    );
-                    return (n) => (0, i.jsx)(l, { ...n, guild: e, channel: t, source: A.PE1.HUB_SIDEBAR });
+                (0, a.openModalLazy)(async () => {
+                    let { default: i } = await Promise.all([
+                        n.e("80813"),
+                        n.e("83818"),
+                        n.e("59957"),
+                        n.e("28136"),
+                        n.e("16084"),
+                        n.e("22547"),
+                    ]).then(n.bind(n, 1310));
+                    return (n) => (0, l.jsx)(i, { ...n, guild: e, channel: t, source: f.PE1.HUB_SIDEBAR });
                 }),
         },
     ],
-    E = (e) => {
+    x = (e) => {
         let { guild: t, channel: n } = e,
-            a = (0, l.bG)([h.A], () => null != n && h.A.getChannelId() === n.id),
-            s = (0, l.bG)([_.A, g.Ay], () => {
+            s = (0, i.bG)([h.A], () => null != n && h.A.getChannelId() === n.id),
+            r = (0, i.bG)([A.A, m.Ay], () => {
                 if (null == n) return 0;
-                let e = g.Ay.ackMessageId(n.id);
+                let e = m.Ay.ackMessageId(n.id);
                 if (null == e) return 0;
-                let t = Object.values(_.A.getDirectoryEntries(n.id) ?? {}).filter(
-                    (t) => new Date(t.createdAt).getTime() > f.default.extractTimestamp(e),
+                let t = Object.values(A.A.getDirectoryEntries(n.id) ?? {}).filter(
+                    (t) => new Date(t.createdAt).getTime() > p.default.extractTimestamp(e),
                 );
-                return Math.min(m.zP, t.length);
+                return Math.min(g.zP, t.length);
             }, [n]);
-        return (0, i.jsx)(i.Fragment, {
-            children: C.map((e) => {
-                let { key: l, getName: r, handler: o, renderIcon: u } = e,
-                    h = a && "JOIN_SERVERS" === l,
-                    _ = `${l}-${t.id}`;
-                return (0, i.jsx)(
+        return (0, l.jsx)(l.Fragment, {
+            children: E.map((e) => {
+                let { key: i, getName: a, handler: o, renderIcon: u } = e,
+                    h = s && "JOIN_SERVERS" === i,
+                    A = `${i}-${t.id}`;
+                return (0, l.jsx)(
                     d.G,
                     {
-                        id: _,
+                        id: A,
                         renderIcon: u,
-                        text: r(),
+                        text: a(),
                         selected: h,
                         onClick: null != n ? () => o(t, n) : void 0,
-                        trailing: "JOIN_SERVERS" === l && s > 0 ? (0, c.w)(s) : null,
+                        trailing: "JOIN_SERVERS" === i && r > 0 ? (0, c.w)(r) : null,
                     },
-                    _,
+                    A,
                 );
             }),
         });

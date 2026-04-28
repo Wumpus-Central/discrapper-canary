@@ -1,4 +1,3 @@
-"use strict";
 function r(e, t = Date.now()) {
     let n = parseInt(`${e}`, 10);
     if (!isNaN(n)) return 1e3 * n;

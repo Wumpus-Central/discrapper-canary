@@ -1,0 +1,38 @@
+.premiumLabel__7bebb {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    position: relative;
+    z-index: 3
+}
+
+.selected__7bebb {
+    color: var(--white)
+}
+
+.background__7bebb {
+    border-radius: var(--radius-xs);
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.selectedBackground__7bebb {
+    background-color: var(--brand-500)
+}
+
+.enable-forced-colors .selected__7bebb {
+    color: Highlight
+}
+
+.enable-forced-colors .selectedIcon__7bebb {
+    fill: Highlight
+}
+
+.enable-forced-colors .selectedBackground__7bebb {
+    background-color: HighlightText
+}

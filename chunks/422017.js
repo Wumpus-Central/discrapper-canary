@@ -1,5 +1,4 @@
-"use strict";
-l.r(
+a.r(
     (e.exports = {
         pill: "pill_a2c9e8",
         clickable: "clickable_a2c9e8",

@@ -1,0 +1,106 @@
+.modal__4e29d {
+    max-height: 100%;
+    width: 600px
+}
+
+.modalHeader__4e29d {
+    padding: 32px 0 16px
+}
+
+.modalHeaderTitle__4e29d {
+    margin-bottom: 8px
+}
+
+.modalClose__4e29d {
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 16px;
+    z-index: 1
+}
+
+.formItem__4e29d {
+    margin-bottom: 16px
+}
+
+.formItemRow__4e29d {
+    display: flex
+}
+
+.formItemRow__4e29d .formItemRowChild__4e29d {
+    flex-basis: 100%;
+    flex-grow: 1
+}
+
+.formItemRow__4e29d .formItemRowChild__4e29d:first-child {
+    margin-inline-end: 16px
+}
+
+.preview__4e29d {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    display: flex;
+    height: 214px;
+    overflow: hidden
+}
+
+.previewDark__4e29d,
+.previewLight__4e29d {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    position: relative
+}
+
+.previewDark__4e29d {
+    background: var(--primary-600);
+    color: var(--primary-400)
+}
+
+.previewLight__4e29d {
+    background: var(--white);
+    color: var(--primary-400)
+}
+
+.infoIcon__4e29d {
+    margin-inline-start: 4px;
+    vertical-align: bottom
+}
+
+.emojiInputContainer__4e29d {
+    position: relative
+}
+
+.emojiButton__4e29d {
+    height: 100%;
+    inset-inline-start: 0;
+    margin: 0 var(--custom-guild-sticker-upload-modal-emoji-margin);
+    position: absolute;
+    top: 0
+}
+
+.emoji__4e29d {
+    height: var(--custom-guild-sticker-upload-modal-emoji-size);
+    width: var(--custom-guild-sticker-upload-modal-emoji-size)
+}
+
+.emojiText__4e29d {
+    cursor: pointer;
+    padding-inline-start: calc(var(--custom-guild-sticker-upload-modal-emoji-margin) + var(--custom-guild-sticker-upload-modal-emoji-size) + var(--custom-guild-sticker-upload-modal-emoji-margin))
+}
+
+.form__4e29d {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.modalContent__4e29d {
+    flex: 1;
+    min-height: 0
+}
+
+.modalFooter__4e29d {
+    flex: 0 0 auto;
+    min-height: 0
+}

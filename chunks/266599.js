@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     gM: "channelTextArea__74017",
     mr: "highlighted__74017",

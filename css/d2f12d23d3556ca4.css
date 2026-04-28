@@ -1,0 +1,7 @@
+.full-motion .skuPreview_d87184 {
+    transition: transform .2s ease
+}
+
+.collectiblesCardHover_d87184 {
+    transform: translateY(-14px)
+}

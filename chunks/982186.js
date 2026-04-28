@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     pz: "sidebar__6b102",
     WH: "innerContainer__6b102",
     Ui: "cardContainer__6b102",

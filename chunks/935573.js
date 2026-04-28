@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { j: () => a });
-var i,
-    a =
-        (((i = {})[(i.APPLICATION = 1)] = "APPLICATION"),
-        (i[(i.ACTIVITY_APPLICATION = 2)] = "ACTIVITY_APPLICATION"),
-        (i[(i.CONNECTION = 3)] = "CONNECTION"),
-        i);
+i.d(e, { j: () => n });
+var s,
+    n =
+        (((s = {})[(s.APPLICATION = 1)] = "APPLICATION"),
+        (s[(s.ACTIVITY_APPLICATION = 2)] = "ACTIVITY_APPLICATION"),
+        (s[(s.CONNECTION = 3)] = "CONNECTION"),
+        s);

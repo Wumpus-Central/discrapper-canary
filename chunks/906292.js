@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     XX: "appAsidePanelWrapper_a3002d",
     Xq: "mobileAppAsidePanelWrapper_a3002d",

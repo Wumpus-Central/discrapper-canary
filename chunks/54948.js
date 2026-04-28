@@ -1,360 +1,384 @@
-n.d(t, { PV: () => H, Td: () => D });
-var i = n(627968),
-    a = n(64700),
-    r = n(735438),
-    s = n(192308),
-    l = n(513461),
-    o = n(503698),
-    c = n.n(o),
-    d = n(312742),
-    u = n(295868),
-    x = n(834730),
-    h = n(661531),
-    m = n(916099),
-    j = n(673185),
-    v = n(565787),
-    f = n(622629),
-    p = n(772838),
-    g = n(939249),
-    w = n(22231),
-    E = n(241326),
-    y = n(828208),
-    A = n(985018),
-    T = n(637671);
-function M(e) {
-    let { type: t } = e,
-        n = a.useMemo(() => {
-            switch (t) {
-                case l.rX.MULTIPLE_CHOICE:
-                    return { icon: m.j, text: A.intl.string(A.t.ooKh3m) };
-                case l.rX.PARAGRAPH:
-                    return { icon: j.$, text: A.intl.string(A.t.gG0JBN) };
-                case l.rX.TEXT_INPUT:
-                    return { icon: (0, v.k)(y.A), text: A.intl.string(A.t.w6Q9wz) };
-                case l.rX.TERMS:
-                    return { icon: f.B, text: A.intl.string(A.t["3pz9t3"]) };
+t.d(n, { PV: () => _, Td: () => I });
+var i = t(627968),
+    l = t(64700),
+    r = t(735438),
+    a = t(192308),
+    s = t(513461),
+    o = t(503698),
+    c = t.n(o),
+    d = t(312742),
+    u = t(295868),
+    x = t(834730),
+    m = t(661531),
+    j = t(916099),
+    h = t(673185),
+    f = t(565787),
+    v = t(622629),
+    p = t(772838),
+    g = t(939249),
+    E = t(22231),
+    y = t(241326),
+    P = t(828208),
+    w = t(985018),
+    R = t(637671);
+function b(e) {
+    let { type: n } = e,
+        t = l.useMemo(() => {
+            switch (n) {
+                case s.rX.MULTIPLE_CHOICE:
+                    return { icon: j.j, text: w.intl.string(w.t.ooKh3m) };
+                case s.rX.PARAGRAPH:
+                    return { icon: h.$, text: w.intl.string(w.t.gG0JBN) };
+                case s.rX.TEXT_INPUT:
+                    return { icon: (0, f.k)(P.A), text: w.intl.string(w.t.w6Q9wz) };
+                case s.rX.TERMS:
+                    return { icon: v.B, text: w.intl.string(w.t["3pz9t3"]) };
                 default:
                     return null;
             }
-        }, [t]);
-    return null == n
+        }, [n]);
+    return null == t
         ? null
         : (0, i.jsxs)("div", {
-              className: T.L6,
+              className: R.L6,
               children: [
-                  (0, i.jsx)(n.icon, { size: "xs", color: "currentColor" }),
-                  (0, i.jsx)(x.E, { variant: "text-sm/medium", tag: "span", children: n.text }),
+                  (0, i.jsx)(t.icon, { size: "xs", color: "currentColor" }),
+                  (0, i.jsx)(x.E, { variant: "text-sm/medium", tag: "span", children: t.text }),
               ],
           });
 }
-function R(e) {
-    let { title: t, field: n } = e;
+function T(e) {
+    let { title: n, field: t } = e;
     return (0, i.jsx)("div", {
-        className: T._Q,
+        className: R._Q,
         children: (0, i.jsxs)("div", {
-            className: T.ds,
+            className: R.ds,
             children: [
-                (0, i.jsx)(x.E, { variant: "text-md/medium", className: T.ID, children: t }),
-                (0, i.jsx)(M, { type: n.field_type }),
+                (0, i.jsx)(x.E, { variant: "text-md/medium", className: R.ID, children: n }),
+                (0, i.jsx)(b, { type: t.field_type }),
             ],
         }),
     });
 }
-let b = "FORM_FIELD";
+let A = "FORM_FIELD";
 function C(e) {
-    let { index: t, field: n, isDropHovered: s, onDrop: l } = e,
-        o = (0, r.debounce)(async (e, t, n) => {
-            await l(e, t, n);
+    let { index: n, field: t, isDropHovered: a, onDrop: s } = e,
+        o = (0, r.debounce)(async (e, n, t) => {
+            await s(e, n, t);
         }),
-        x = a.useRef(null),
-        [, m] = (0, d.i)({
-            type: b,
-            item: { index: t, field: n },
-            end: (e, t) => {
-                null == e || t.didDrop() || o(e.field, null, !0);
+        x = l.useRef(null),
+        [, j] = (0, d.i)({
+            type: A,
+            item: { index: n, field: t },
+            end: (e, n) => {
+                null == e || n.didDrop() || o(e.field, null, !0);
             },
         }),
-        [, j] = (0, u.H)({
-            accept: b,
-            hover: (e, n) => {
+        [, h] = (0, u.H)({
+            accept: A,
+            hover: (e, t) => {
                 let { index: i } = e,
-                    a = x.current?.getBoundingClientRect(),
-                    r = n.getClientOffset();
-                if (null == a || null == r) return;
-                let s = (a.bottom - a.top) / 2,
-                    l = r.y - a.top;
-                (i < t && l < s) || (i > t && l < s) || i === t || o(e.field, t, !1);
+                    l = x.current?.getBoundingClientRect(),
+                    r = t.getClientOffset();
+                if (null == l || null == r) return;
+                let a = (l.bottom - l.top) / 2,
+                    s = r.y - l.top;
+                (i < n && s < a) || (i > n && s < a) || i === n || o(e.field, n, !1);
             },
             drop: (e) => {
-                o(e.field, t, !0);
+                o(e.field, n, !0);
             },
         });
     return (
-        a.useLayoutEffect(
+        l.useLayoutEffect(
             () => (
-                m(j(x)),
+                j(h(x)),
                 () => {
-                    j(null), m(null);
+                    h(null), j(null);
                 }
             ),
-            [m, j],
+            [j, h],
         ),
         (0, i.jsxs)("div", {
             ref: x,
-            "data-dnd-name": `field-${t}`,
-            className: c()(T.cK, { [T.TG]: s }),
+            "data-dnd-name": `field-${n}`,
+            className: c()(R.cK, { [R.TG]: a }),
             children: [
                 (0, i.jsx)("div", {
-                    className: c()(T.VU, T.oE),
+                    className: c()(R.VU, R.oE),
                     children: (0, i.jsx)(p.W, {
                         size: "xs",
-                        className: T.co,
-                        color: h.A.unsafe_rawColors.PRIMARY_400.css,
+                        className: R.co,
+                        color: m.A.unsafe_rawColors.PRIMARY_400.css,
                     }),
                 }),
-                (0, i.jsx)(R, { ...e }),
+                (0, i.jsx)(T, { ...e }),
             ],
         })
     );
 }
-function N(e) {
+function L(e) {
     return (0, i.jsxs)("div", {
-        className: c()(T.e4, T.oE),
+        className: c()(R.e4, R.oE),
         children: [
             (0, i.jsx)("div", {
-                className: T.Th,
-                children: e.isDragEnabled ? (0, i.jsx)(C, { ...e }) : (0, i.jsx)(R, { ...e }),
+                className: R.Th,
+                children: e.isDragEnabled ? (0, i.jsx)(C, { ...e }) : (0, i.jsx)(T, { ...e }),
             }),
             "side" === e.actionsLocation &&
                 (0, i.jsxs)("div", {
-                    className: c()(T.fc, T.oE, { [T.ZM]: e.canRemove }),
+                    className: c()(R.fc, R.oE, { [R.ZM]: e.canRemove }),
                     children: [
                         (0, i.jsx)(g.D, {
-                            className: T.hP,
+                            className: R.hP,
                             onClick: e.onEdit,
-                            "aria-label": A.intl.string(A.t.bt75uw),
-                            children: (0, i.jsx)(w.R, { size: "xs" }),
+                            "aria-label": w.intl.string(w.t.bt75uw),
+                            children: (0, i.jsx)(E.R, { size: "xs" }),
                         }),
                         e.canRemove &&
                             (0, i.jsx)(g.D, {
-                                className: T.hP,
+                                className: R.hP,
                                 onClick: e.onRemove,
-                                "aria-label": A.intl.string(A.t.N86XcP),
-                                children: (0, i.jsx)(E.u, { size: "xs" }),
+                                "aria-label": w.intl.string(w.t.N86XcP),
+                                children: (0, i.jsx)(y.u, { size: "xs" }),
                             }),
                     ],
                 }),
         ],
     });
 }
-let P = function (e) {
+let X = function (e) {
         let {
-            formField: t,
-            index: n,
-            isDragEnabled: a,
+            formField: n,
+            index: t,
+            isDragEnabled: l,
             isDropHovered: r,
-            onDrop: s,
-            onEdit: l,
+            onDrop: a,
+            onEdit: s,
             onRemove: o,
             canRemove: c,
             actionsLocation: d,
         } = e;
-        return (0, i.jsx)(N, {
-            field: t,
-            index: n,
-            isDragEnabled: a,
+        return (0, i.jsx)(L, {
+            field: n,
+            index: t,
+            isDragEnabled: l,
             isDropHovered: r,
-            onDrop: s,
-            onEdit: l,
+            onDrop: a,
+            onEdit: s,
             onRemove: o,
-            title: t.label,
+            title: n.label,
             canRemove: c,
             actionsLocation: d,
         });
     },
-    L = function (e) {
+    N = function (e) {
         let {
-            formField: t,
-            index: n,
-            isDragEnabled: a,
+            formField: n,
+            index: t,
+            isDragEnabled: l,
             isDropHovered: r,
-            onDrop: s,
-            onEdit: l,
+            onDrop: a,
+            onEdit: s,
             onRemove: o,
             canRemove: c,
             actionsLocation: d,
         } = e;
-        return (0, i.jsx)(N, {
-            field: t,
-            index: n,
-            isDragEnabled: a,
+        return (0, i.jsx)(L, {
+            field: n,
+            index: t,
+            isDragEnabled: l,
             isDropHovered: r,
-            onDrop: s,
-            onEdit: l,
+            onDrop: a,
+            onEdit: s,
             onRemove: o,
-            title: t.label,
+            title: n.label,
             canRemove: c,
             actionsLocation: d,
         });
     },
-    I = function (e) {
+    D = function (e) {
         let {
-            formField: t,
-            index: n,
-            isDragEnabled: a,
+            formField: n,
+            index: t,
+            isDragEnabled: l,
             isDropHovered: r,
-            onDrop: s,
-            onEdit: l,
+            onDrop: a,
+            onEdit: s,
             onRemove: o,
             canRemove: c,
             title: d,
             actionsLocation: u,
         } = e;
-        return (0, i.jsx)(N, {
-            field: t,
-            index: n,
-            isDragEnabled: a,
+        return (0, i.jsx)(L, {
+            field: n,
+            index: t,
+            isDragEnabled: l,
             isDropHovered: r,
-            onDrop: s,
-            onEdit: l,
+            onDrop: a,
+            onEdit: s,
             onRemove: o,
             title: d,
             canRemove: c,
             actionsLocation: u,
         });
     },
-    X = function (e) {
+    M = function (e) {
         let {
-            formField: t,
-            index: n,
-            isDragEnabled: a,
+            formField: n,
+            index: t,
+            isDragEnabled: l,
             isDropHovered: r,
-            onDrop: s,
-            onEdit: l,
+            onDrop: a,
+            onEdit: s,
             onRemove: o,
             canRemove: c,
             actionsLocation: d,
         } = e;
-        return (0, i.jsx)(N, {
-            field: t,
-            index: n,
-            isDragEnabled: a,
+        return (0, i.jsx)(L, {
+            field: n,
+            index: t,
+            isDragEnabled: l,
             isDropHovered: r,
-            onDrop: s,
-            onEdit: l,
+            onDrop: a,
+            onEdit: s,
             onRemove: o,
-            title: t.label,
+            title: n.label,
             canRemove: c,
             actionsLocation: d,
         });
     };
-function D(e) {
+function I(e) {
     let {
-            dropHoveredIndex: t,
-            formField: a,
+            dropHoveredIndex: n,
+            formField: l,
             guild: o,
             index: c,
             isDragEnabled: d,
             submittedGuildJoinRequestsCount: u,
             removeFormField: x,
-            updateFormField: h,
-            updateFormFieldOrder: m,
-            canRemove: j,
-            actionsLocation: v,
+            updateFormField: m,
+            updateFormFieldOrder: j,
+            canRemove: h,
+            actionsLocation: f,
         } = e,
-        f = async () => {
+        v = async () => {
             await x(c);
         },
         p = async (e) => {
-            await h(c, e);
+            await m(c, e);
         },
-        g = async (e, t, n) => {
-            await m(e, t, n);
+        g = async (e, n, t) => {
+            await j(e, n, t);
         },
-        w = (0, r.uniqueId)(),
-        E = t === c,
-        y = {
-            key: w,
+        E = (0, r.uniqueId)(),
+        y = n === c,
+        P = {
+            key: E,
             index: c,
             isDragEnabled: d,
-            isDropHovered: E,
+            isDropHovered: y,
             onEdit: () => {
                 0 === u
-                    ? _(a, p, o)
-                    : (0, s.openModalLazy)(async () => {
-                          let { default: e } = await n.e("81226").then(n.bind(n, 928529));
-                          return (t) =>
+                    ? z(l, p, o)
+                    : (0, a.openModalLazy)(async () => {
+                          let { default: e } = await Promise.all([t.e("9204"), t.e("81226")]).then(t.bind(t, 928529));
+                          return (n) =>
                               (0, i.jsx)(e, {
-                                  ...t,
+                                  ...n,
                                   guildId: o.id,
                                   submittedGuildJoinRequestsCount: u,
-                                  onConfirm: () => _(a, p, o),
+                                  onConfirm: () => z(l, p, o),
                               });
                       });
             },
-            onRemove: f,
+            onRemove: v,
             onDrop: g,
-            canRemove: j,
-            actionsLocation: v,
+            canRemove: h,
+            actionsLocation: f,
         };
-    switch (a.field_type) {
-        case l.rX.TERMS:
-            return (0, i.jsx)(I, { title: A.intl.string(A.t["55+gic"]), formField: a, ...y });
-        case l.rX.PARAGRAPH:
-            return (0, i.jsx)(L, { formField: a, ...y });
-        case l.rX.TEXT_INPUT:
-            return (0, i.jsx)(X, { formField: a, ...y });
-        case l.rX.MULTIPLE_CHOICE:
-            return (0, i.jsx)(P, { formField: a, ...y });
+    switch (l.field_type) {
+        case s.rX.TERMS:
+            return (0, i.jsx)(D, { title: w.intl.string(w.t["55+gic"]), formField: l, ...P });
+        case s.rX.PARAGRAPH:
+            return (0, i.jsx)(N, { formField: l, ...P });
+        case s.rX.TEXT_INPUT:
+            return (0, i.jsx)(M, { formField: l, ...P });
+        case s.rX.MULTIPLE_CHOICE:
+            return (0, i.jsx)(X, { formField: l, ...P });
         default:
             return null;
     }
 }
-function H(e, t, a) {
+function _(e, n, l) {
     switch (e) {
-        case l.rX.TERMS:
-            return (0, s.openModalLazy)(async () => {
-                let { default: e } = await n.e("32435").then(n.bind(n, 24094));
-                return (n) => (0, i.jsx)(e, { ...n, field: void 0, onSave: t, guild: a });
+        case s.rX.TERMS:
+            return (0, a.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([
+                    t.e("83818"),
+                    t.e("83013"),
+                    t.e("90152"),
+                    t.e("78618"),
+                    t.e("32435"),
+                ]).then(t.bind(t, 24094));
+                return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n, guild: l });
             });
-        case l.rX.PARAGRAPH:
-            return (0, s.openModalLazy)(async () => {
-                let { ParagraphFormFieldModal: e } = await n.e("26510").then(n.bind(n, 542717));
-                return (n) => (0, i.jsx)(e, { ...n, field: void 0, onSave: t });
+        case s.rX.PARAGRAPH:
+            return (0, a.openModalLazy)(async () => {
+                let { ParagraphFormFieldModal: e } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                    t.bind(t, 542717),
+                );
+                return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
             });
-        case l.rX.TEXT_INPUT:
-            return (0, s.openModalLazy)(async () => {
-                let { TextInputFormFieldModal: e } = await n.e("26510").then(n.bind(n, 542717));
-                return (n) => (0, i.jsx)(e, { ...n, field: void 0, onSave: t });
+        case s.rX.TEXT_INPUT:
+            return (0, a.openModalLazy)(async () => {
+                let { TextInputFormFieldModal: e } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                    t.bind(t, 542717),
+                );
+                return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
             });
-        case l.rX.MULTIPLE_CHOICE:
-            return (0, s.openModalLazy)(async () => {
-                let { default: e } = await n.e("52981").then(n.bind(n, 520660));
-                return (n) => (0, i.jsx)(e, { ...n, field: void 0, onSave: t });
+        case s.rX.MULTIPLE_CHOICE:
+            return (0, a.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([t.e("83013"), t.e("78618"), t.e("52981")]).then(
+                    t.bind(t, 520660),
+                );
+                return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
             });
     }
 }
-function _(e, t, a) {
+function z(e, n, l) {
     switch (e.field_type) {
-        case l.rX.TERMS:
-            return (0, s.openModalLazy)(async () => {
-                let { default: r } = await n.e("32435").then(n.bind(n, 24094));
-                return (n) => (0, i.jsx)(r, { ...n, field: e, onSave: t, guild: a });
+        case s.rX.TERMS:
+            return (0, a.openModalLazy)(async () => {
+                let { default: r } = await Promise.all([
+                    t.e("83818"),
+                    t.e("83013"),
+                    t.e("90152"),
+                    t.e("78618"),
+                    t.e("32435"),
+                ]).then(t.bind(t, 24094));
+                return (t) => (0, i.jsx)(r, { ...t, field: e, onSave: n, guild: l });
             });
-        case l.rX.PARAGRAPH:
-            return (0, s.openModalLazy)(async () => {
-                let { ParagraphFormFieldModal: a } = await n.e("26510").then(n.bind(n, 542717));
-                return (n) => (0, i.jsx)(a, { ...n, field: e, onSave: t });
+        case s.rX.PARAGRAPH:
+            return (0, a.openModalLazy)(async () => {
+                let { ParagraphFormFieldModal: l } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                    t.bind(t, 542717),
+                );
+                return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });
             });
-        case l.rX.TEXT_INPUT:
-            return (0, s.openModalLazy)(async () => {
-                let { TextInputFormFieldModal: a } = await n.e("26510").then(n.bind(n, 542717));
-                return (n) => (0, i.jsx)(a, { ...n, field: e, onSave: t });
+        case s.rX.TEXT_INPUT:
+            return (0, a.openModalLazy)(async () => {
+                let { TextInputFormFieldModal: l } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                    t.bind(t, 542717),
+                );
+                return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });
             });
-        case l.rX.MULTIPLE_CHOICE:
-            return (0, s.openModalLazy)(async () => {
-                let { default: a } = await n.e("52981").then(n.bind(n, 520660));
-                return (n) => (0, i.jsx)(a, { ...n, field: e, onSave: t });
+        case s.rX.MULTIPLE_CHOICE:
+            return (0, a.openModalLazy)(async () => {
+                let { default: l } = await Promise.all([t.e("83013"), t.e("78618"), t.e("52981")]).then(
+                    t.bind(t, 520660),
+                );
+                return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });
             });
     }
 }

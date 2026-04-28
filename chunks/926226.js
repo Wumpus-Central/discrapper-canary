@@ -1,0 +1,1 @@
+t.exports = Array.isArray;

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nx: "autocomplete__13533",
     Fv: "autocompleteInner__13533",

@@ -1,95 +1,95 @@
-n.d(t, { default: () => m });
-var l = n(627968);
-n(64700);
-var a = n(17928),
-    e = n(550079),
-    r = n(477782),
-    d = n(442433),
-    c = n(587895),
-    s = n(646938),
-    A = n(189081),
-    o = n(253932),
-    u = n(957565),
-    b = n(985018),
-    h = n(192308),
-    I = n(969341),
-    p = n(340829),
-    g = n(738533),
-    T = n(723702),
-    L = n(328153),
-    D = n(134861),
-    _ = n(144914),
-    f = n(715671),
-    E = n(651743),
-    y = n(652215),
-    x = n(665260),
-    S = n(314116),
-    C = n(59636),
-    N = n(954571),
-    P = n(258057),
-    j = n(568004);
+t.d(n, { default: () => O });
+var l = t(627968);
+t(64700);
+var a = t(17928),
+    e = t(550079),
+    r = t(477782),
+    d = t(442433),
+    c = t(587895),
+    s = t(646938),
+    A = t(189081),
+    o = t(253932),
+    u = t(957565),
+    b = t(985018),
+    h = t(192308),
+    p = t(969341),
+    I = t(340829),
+    g = t(738533),
+    T = t(723702),
+    L = t(328153),
+    D = t(134861),
+    _ = t(144914),
+    E = t(715671),
+    f = t(651743),
+    y = t(652215),
+    N = t(665260),
+    P = t(314116),
+    x = t(59636),
+    C = t(954571),
+    S = t(258057),
+    j = t(568004);
 function G(i) {
-    var t;
+    var n;
     let c,
         s,
         G,
-        m,
         O,
-        v,
+        m,
         M,
         V,
+        v,
         k,
         { application: H, libraryApplication: R, analyticsContext: U, onSelect: X } = i,
         w = { ...(null != U ? U.location : null), object: y.ZSU.CONTEXT_MENU },
-        Z =
-            ((m = (0, a.bG)([L.Ay], () => L.Ay.getRunningVerifiedApplicationIds().includes(R.id), [R.id])),
-            (O = (0, a.bG)(
-                [A.A, E.A, p.A, D.A],
+        K =
+            ((O = (0, a.bG)([L.Ay], () => L.Ay.getRunningVerifiedApplicationIds().includes(R.id), [R.id])),
+            (m = (0, a.bG)(
+                [A.A, f.A, I.A, D.A],
                 () =>
                     (0, _.A)({
                         LibraryApplicationStore: A.A,
-                        LaunchableGameStore: E.A,
-                        DispatchApplicationStore: p.A,
+                        LaunchableGameStore: f.A,
+                        DispatchApplicationStore: I.A,
                         ConnectedAppsStore: D.A,
                         applicationId: R.id,
                         branchId: R.branchId,
                     }),
                 [R.branchId, R.id],
             )),
-            m || !O
+            O || !m
                 ? null
                 : (0, l.jsx)(r.Dr, {
                       id: "launch",
                       label: b.intl.string(b.t.XKUw8m),
-                      action: () => f.playApplication(R.id, R, { analyticsParams: { location: w } }),
+                      action: () => E.playApplication(R.id, R, { analyticsParams: { location: w } }),
                   })),
-        K = (function (i) {
-            let t = (0, a.bG)([L.Ay], () => L.Ay.getRunningVerifiedApplicationIds().includes(i.id), [i.id]),
-                [n, e] = (0, a.yK)([p.A], () => [p.A.isUpToDate(i.id, i.branchId), p.A.shouldPatch(i.id, i.branchId)], [
+        F = (function (i) {
+            let n = (0, a.bG)([L.Ay], () => L.Ay.getRunningVerifiedApplicationIds().includes(i.id), [i.id]),
+                [t, e] = (0, a.yK)([I.A], () => [I.A.isUpToDate(i.id, i.branchId), I.A.shouldPatch(i.id, i.branchId)], [
                     i.branchId,
                     i.id,
                 ]);
-            return n && !t && e
+            return t && !n && e
                 ? (0, l.jsx)(r.Dr, {
                       id: "repair",
                       label: b.intl.string(b.t.CKCcdz),
                       action: () =>
-                          f.repairApplication(i.id, i.branchId, y.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
+                          E.repairApplication(i.id, i.branchId, y.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
                   })
                 : null;
         })(R),
-        F =
-            ((t = R),
-            (c = (0, a.bG)([L.Ay], () => L.Ay.getRunningVerifiedApplicationIds().includes(t.id), [t.id])),
-            (s = (0, a.bG)([p.A], () => p.A.isInstalled(t.id, t.branchId), [t.branchId, t.id])),
-            (G = (0, a.bG)([j.A], () => j.A.getTargetManifests(t.id, t.branchId), [t.branchId, t.id])),
+        Z =
+            ((n = R),
+            (c = (0, a.bG)([L.Ay], () => L.Ay.getRunningVerifiedApplicationIds().includes(n.id), [n.id])),
+            (s = (0, a.bG)([I.A], () => I.A.isInstalled(n.id, n.branchId), [n.branchId, n.id])),
+            (G = (0, a.bG)([j.A], () => j.A.getTargetManifests(n.id, n.branchId), [n.branchId, n.id])),
             s
                 ? c
                     ? null
                     : (0, l.jsx)(r.Dr, {
                           id: "uninstall",
                           label: b.intl.string(b.t.DwgfOM),
-                          action: () => (0, P.z)(t.id, t.branchId, y.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
+                          action: () => (0, S.z)(n.id, n.branchId, y.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
                       })
                 : null == G
                   ? null
@@ -97,7 +97,7 @@ function G(i) {
                         id: "install",
                         label: b.intl.string(b.t["N+XVnt"]),
                         action: () =>
-                            f.installApplication(t.id, t.branchId, y.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
+                            E.installApplication(n.id, n.branchId, y.ThZ.APPLICATION_CONTEXT_MENU_TOGGLE_INSTALL),
                     })),
         B =
             null == R
@@ -107,10 +107,10 @@ function G(i) {
                       label: b.intl.string(b.t.fHDNJv),
                       action: function () {
                           if (null == R) return;
-                          let i = (0, x.PQ)(R.getFlags(), y.hM6.PRIVATE);
-                          C.V(R.id, R.branchId, i),
-                              N.default.track(y.HAw.APPLICATION_SETTINGS_UPDATED, {
-                                  private_enabled: (0, x.Lt)(i, y.hM6.PRIVATE),
+                          let i = (0, N.PQ)(R.getFlags(), y.hM6.PRIVATE);
+                          x.V(R.id, R.branchId, i),
+                              C.default.track(y.HAw.APPLICATION_SETTINGS_UPDATED, {
+                                  private_enabled: (0, N.Lt)(i, y.hM6.PRIVATE),
                                   ...R.getAnalyticsData(),
                               });
                       },
@@ -124,37 +124,37 @@ function G(i) {
                       label: b.intl.string(b.t.rgZKg2),
                       action: function () {
                           if (null == R) return;
-                          let i = (0, x.PQ)(R.getFlags(), y.hM6.OVERLAY_DISABLED);
-                          C.V(R.id, R.branchId, i),
-                              N.default.track(y.HAw.APPLICATION_SETTINGS_UPDATED, {
-                                  overlay_disabled: (0, x.Lt)(i, y.hM6.OVERLAY_DISABLED),
+                          let i = (0, N.PQ)(R.getFlags(), y.hM6.OVERLAY_DISABLED);
+                          x.V(R.id, R.branchId, i),
+                              C.default.track(y.HAw.APPLICATION_SETTINGS_UPDATED, {
+                                  overlay_disabled: (0, N.Lt)(i, y.hM6.OVERLAY_DISABLED),
                                   ...R.getAnalyticsData(),
                               });
                       },
                       checked: R.hasFlag(y.hM6.OVERLAY_DISABLED),
                   }),
         Q =
-            ((v = R.getBranchedName(H)),
+            ((M = R.getBranchedName(H)),
             null !=
-                (M = (0, a.bG)([p.A], () => {
-                    let i = p.A.getState(R.id, R.branchId);
+                (V = (0, a.bG)([I.A], () => {
+                    let i = I.A.getState(R.id, R.branchId);
                     return i?.installPath;
                 }, [R.branchId, R.id])) && (0, T.isDesktop)()
                 ? (0, l.jsx)(r.Dr, {
                       id: "create-shortcut",
                       label: b.intl.string(b.t.T4tecH),
-                      action: () => g.A.createShortcuts(!0, !1, v, R.id, M),
+                      action: () => g.A.createShortcuts(!0, !1, M, R.id, V),
                   })
                 : null),
-        Y = (function (i, t) {
-            let n = (0, a.bG)([p.A], () => p.A.isInstalled(i.id, i.branchId), [i.branchId, i.id]),
+        Y = (function (i, n) {
+            let t = (0, a.bG)([I.A], () => I.A.isInstalled(i.id, i.branchId), [i.branchId, i.id]),
                 e = (0, a.bG)([A.A], () => !A.A.hasRemovedLibraryApplicationThisSession);
-            if (n && !i.isHidden()) return null;
+            if (t && !i.isHidden()) return null;
             function d() {
-                let t = (0, x.PQ)(i.getFlags(), y.hM6.HIDDEN);
-                C.V(i.id, i.branchId, t),
-                    N.default.track(y.HAw.APPLICATION_SETTINGS_UPDATED, {
-                        hidden_enabled: (0, x.Lt)(t, y.hM6.HIDDEN),
+                let n = (0, N.PQ)(i.getFlags(), y.hM6.HIDDEN);
+                x.V(i.id, i.branchId, n),
+                    C.default.track(y.HAw.APPLICATION_SETTINGS_UPDATED, {
+                        hidden_enabled: (0, N.Lt)(n, y.hM6.HIDDEN),
                         ...i.getAnalyticsData(),
                     });
             }
@@ -163,12 +163,12 @@ function G(i) {
                 label: i.isHidden() ? b.intl.string(b.t["0dnEUJ"]) : b.intl.string(b.t.TuJXLx),
                 action: function () {
                     null != i &&
-                        null != t &&
+                        null != n &&
                         (i.isHidden() || !e
                             ? d()
-                            : (0, S.A)({
+                            : (0, P.A)({
                                   title: b.intl.string(b.t.oB7isi),
-                                  subtitle: b.intl.format(b.t.HXfjKt, { name: t.name }),
+                                  subtitle: b.intl.format(b.t.HXfjKt, { name: n.name }),
                                   variant: "primary",
                                   confirmText: b.intl.string(b.t.OWjIiV),
                                   onConfirm: () => d(),
@@ -176,8 +176,8 @@ function G(i) {
                 },
             });
         })(R, H),
-        q =
-            ((V = H.primarySkuId),
+        J =
+            ((v = H.primarySkuId),
             (k = o.Q_.useSetting()),
             !__OVERLAY__ && k && u.p5
                 ? (0, l.jsxs)(r.Dr, {
@@ -197,24 +197,36 @@ function G(i) {
                                     action: () => (0, u.C)(R.branchId),
                                 })
                               : null,
-                          null != V
+                          null != v
                               ? (0, l.jsx)(r.Dr, {
                                     id: "sku-id",
                                     label: b.intl.string(b.t.hReUdL),
-                                    action: () => (0, u.C)(V),
+                                    action: () => (0, u.C)(v),
                                 })
                               : null,
                       ],
                   })
                 : null),
-        J = (0, a.bG)([I.Ay], () => I.Ay.hasContext(H.id), [H.id])
+        q = (0, a.bG)([p.Ay], () => p.Ay.hasContext(H.id), [H.id])
             ? (0, l.jsx)(r.Dr, {
                   id: "ingame-voice",
                   label: b.intl.string(b.t["pOul5/"]),
                   action: () =>
                       (0, h.openModalLazy)(async () => {
-                          let { default: i } = await Promise.all([n.e("28367"), n.e("58847")]).then(n.bind(n, 880510));
-                          return (t) => (0, l.jsx)(i, { ...t, mediaEngineContext: H.id, subtitle: H.name });
+                          let { default: i } = await Promise.all([
+                              t.e("78401"),
+                              t.e("80813"),
+                              t.e("77598"),
+                              t.e("20287"),
+                              t.e("28367"),
+                              t.e("58337"),
+                              t.e("25246"),
+                              t.e("27838"),
+                              t.e("97162"),
+                              t.e("46327"),
+                              t.e("96531"),
+                          ]).then(t.bind(t, 880510));
+                          return (n) => (0, l.jsx)(i, { ...n, mediaEngineContext: H.id, subtitle: H.name });
                       }),
               })
             : null;
@@ -224,17 +236,17 @@ function G(i) {
         onClose: d.Z_,
         "aria-label": b.intl.string(b.t.tKobzb),
         onSelect: X,
-        children: [Z, K, F, B, z, Q, Y, (0, l.jsx)(r.rX, { children: q }), (0, l.jsx)(r.rX, { children: J })],
+        children: [K, F, Z, B, z, Q, Y, (0, l.jsx)(r.rX, { children: J }), (0, l.jsx)(r.rX, { children: q })],
     });
 }
-function m(i) {
-    let { applicationId: t, branchId: n } = i,
-        e = (0, a.bG)([c.A], () => c.A.getApplication(t), [t]),
-        r = (0, a.bG)([A.A], () => (null != n ? A.A.getLibraryApplication(t, n) : A.A.getActiveLibraryApplication(t)), [
-            t,
+function O(i) {
+    let { applicationId: n, branchId: t } = i,
+        e = (0, a.bG)([c.A], () => c.A.getApplication(n), [n]),
+        r = (0, a.bG)([A.A], () => (null != t ? A.A.getLibraryApplication(n, t) : A.A.getActiveLibraryApplication(n)), [
             n,
+            t,
         ]);
     return null == e || null == r
-        ? (0, l.jsx)(s.default, { ...i, id: t, label: b.intl.string(b.t["FfCL+6"]) })
+        ? (0, l.jsx)(s.default, { ...i, id: n, label: b.intl.string(b.t["FfCL+6"]) })
         : (0, l.jsx)(G, { ...i, application: e, libraryApplication: r });
 }

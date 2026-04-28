@@ -1,0 +1,63 @@
+.root_ea9caa {
+    display: flex;
+    width: clamp(var(--custom-interaction-iframe-modal-modal-min-width), calc(100vw - var(--custom-interaction-iframe-modal-modal-margin)*2), min((100vh - var(--custom-interaction-iframe-modal-modal-header-height) - var(--custom-interaction-iframe-modal-modal-margin) * 2) * 16/9, var(--custom-interaction-iframe-modal-modal-max-width)))
+}
+
+.applicationIcon_ea9caa {
+    margin-inline-end: .5em
+}
+
+.submissionWarning_ea9caa {
+    margin-bottom: 16px
+}
+
+.modalRoot_ea9caa {
+    border-radius: var(--radius-md);
+    min-height: auto;
+    padding-bottom: 16px;
+    padding-top: 4px;
+    position: relative
+}
+
+.modalHeader_ea9caa {
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--background-base-low);
+    padding: 12px 16px
+}
+
+.closeButtonContainer_ea9caa {
+    margin-inline-start: auto
+}
+
+.closeButton_ea9caa {
+    display: flex
+}
+
+.closeIcon_ea9caa {
+    color: var(--interactive-text-default);
+    height: 24px;
+    width: 24px
+}
+
+.closeIcon_ea9caa:hover {
+    color: var(--interactive-text-hover)
+}
+
+.closeIcon_ea9caa:active {
+    color: var(--interactive-text-active)
+}
+
+.iframe_ea9caa {
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.botTag_ea9caa {
+    margin-inline-start: 4px
+}
+
+.flexRow_ea9caa {
+    display: flex;
+    flex-direction: row
+}

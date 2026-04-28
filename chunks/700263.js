@@ -1,19 +1,18 @@
-"use strict";
-r.d(t, { A: () => i });
-var l = r(627968),
-    s = r(64700),
-    n = r(789762);
-let a = () => (0, l.jsx)("div", { className: n.iM }),
+l.d(t, { A: () => i });
+var r = l(627968),
+    n = l(64700),
+    a = l(789762);
+let s = () => (0, r.jsx)("div", { className: a.iM }),
     i = (e) => {
         let { children: t } = e,
-            r = s.useMemo(
+            l = n.useMemo(
                 () =>
-                    s.Children.map(t, (e) =>
-                        (0, l.jsxs)(l.Fragment, {
-                            children: [(0, l.jsx)("div", { className: n.jf, children: e }), (0, l.jsx)(a, {})],
+                    n.Children.map(t, (e) =>
+                        (0, r.jsxs)(r.Fragment, {
+                            children: [(0, r.jsx)("div", { className: a.jf, children: e }), (0, r.jsx)(s, {})],
                         }),
                     ),
                 [t],
             );
-        return (0, l.jsx)("div", { className: n.qV, children: (0, l.jsx)("div", { className: n.Y_, children: r }) });
+        return (0, r.jsx)("div", { className: a.qV, children: (0, r.jsx)("div", { className: a.Y_, children: l }) });
     };

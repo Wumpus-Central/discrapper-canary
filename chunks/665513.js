@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Gt: "smallCarousel_cbfa93",
     Pj: "smallCarouselItem_cbfa93",

@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     nd: "panel__79a1f",
     Iv: "panelHeader__79a1f",
     SV: "panelContent__79a1f",

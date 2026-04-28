@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     qV: "inspector_aeaaeb",
     FZ: "graphicPrimary_aeaaeb",

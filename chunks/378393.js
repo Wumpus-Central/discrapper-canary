@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+c.exports = {
     Nr: "card__3988c",
     O: "cardText__3988c",
     RA: "cardRow__3988c",

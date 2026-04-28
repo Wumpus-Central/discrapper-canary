@@ -1,0 +1,12 @@
+.calendarContainer__9bb02 {
+    box-shadow: var(--legacy-elevation-border), var(--legacy-elevation-high)
+}
+
+.container__9bb02 {
+    cursor: pointer;
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 1fr auto;
+    min-height: var(--control-input-height-md);
+    padding: var(--space-8) var(--space-12)
+}

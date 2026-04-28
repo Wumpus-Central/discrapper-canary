@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     gg: "nitroTopDividerContainer_b3fb5f",
     d6: "nitroTopDividerUpper_b3fb5f",

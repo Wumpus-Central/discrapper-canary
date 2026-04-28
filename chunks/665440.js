@@ -7,22 +7,40 @@ var i = n(439372),
     o = n(617641),
     l = n(627968);
 n(64700);
-var d = n(192308),
-    _ = n(892491),
+var _ = n(192308),
+    d = n(892491),
     u = n(544231),
     c = n(665909);
 function E(e) {
     let { channelId: t, warningId: i, senderId: r, warningType: s } = e;
     (0, o.wv)({ location: "takeover-modal" }) &&
-        (0, d.openModalLazy)(
+        (0, _.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("93103"), n.e("45033"), n.e("99908")]).then(
-                    n.bind(n, 511144),
-                );
+                let { default: e } = await Promise.all([
+                    n.e("77598"),
+                    n.e("29389"),
+                    n.e("25028"),
+                    n.e("88941"),
+                    n.e("55411"),
+                    n.e("93103"),
+                    n.e("21435"),
+                    n.e("32823"),
+                    n.e("52229"),
+                    n.e("38056"),
+                    n.e("34546"),
+                    n.e("43549"),
+                    n.e("20577"),
+                    n.e("60816"),
+                    n.e("6627"),
+                    n.e("70940"),
+                    n.e("2033"),
+                    n.e("82911"),
+                    n.e("40817"),
+                ]).then(n.bind(n, 511144));
                 return (n) => (0, l.jsx)(e, { channelId: t, warningId: i, senderId: r, warningType: s, modalProps: n });
             },
             {
-                backdropStyle: _.F.BLUR,
+                backdropStyle: d.F.BLUR,
                 onCloseCallback: () => {
                     (0, u.xi)(t, [i]),
                         (0, c._$)({

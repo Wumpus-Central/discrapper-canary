@@ -1,0 +1,96 @@
+.root__00dfb {
+    position: relative
+}
+
+.carouselContainer__00dfb {
+    overflow: hidden
+}
+
+.carousel__00dfb {
+    height: 100%;
+    z-index: 0
+}
+
+.carouselItem__00dfb {
+    inset-inline: 0;
+    bottom: 0;
+    position: absolute;
+    top: 0
+}
+
+.pagination__00dfb {
+    height: 64px;
+    pointer-events: none
+}
+
+.themedPagination__00dfb {}
+
+.controls__00dfb {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.arrowHitbox__00dfb {
+    pointer-events: all
+}
+
+.arrowHitboxPadding__00dfb {
+    padding: 0 12px
+}
+
+.arrow__00dfb {
+    color: #fff;
+    opacity: .5;
+    position: relative;
+    transition: opacity .2s ease-in-out
+}
+
+.dots__00dfb {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0
+}
+
+.dot__00dfb+.dot__00dfb {
+    margin-inline-start: 8px
+}
+
+.dot__00dfb {
+    background-color: var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+    height: 8px;
+    padding: 0;
+    pointer-events: all;
+    transform: translateZ(0);
+    width: 8px
+}
+
+.dotNormal__00dfb {
+    opacity: .6
+}
+
+.dotNormal__00dfb:hover {
+    opacity: .8
+}
+
+.dotSelected__00dfb {
+    opacity: 1
+}
+
+.theme-dark .themedPagination__00dfb .arrow__00dfb {
+    color: var(--white)
+}
+
+.theme-dark .themedPagination__00dfb .dot__00dfb {
+    background-color: var(--white)
+}
+
+.theme-light .themedPagination__00dfb .arrow__00dfb {
+    color: var(--primary-500)
+}
+
+.theme-light .themedPagination__00dfb .dot__00dfb {
+    background-color: var(--primary-500)
+}

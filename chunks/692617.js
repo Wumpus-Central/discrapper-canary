@@ -1,91 +1,90 @@
-"use strict";
-n.d(t, { A: () => p });
-var a = n(627968);
-n(64700);
-var r = n(503698),
-    i = n.n(r),
-    l = n(735438),
-    s = n.n(l),
-    o = n(990078),
-    c = n(862482),
-    d = n(834730),
-    u = n(548118),
-    _ = n(758963);
-function p(e) {
+i.d(s, { A: () => A });
+var n = i(627968);
+i(64700);
+var t = i(503698),
+    l = i.n(t),
+    c = i(735438),
+    a = i.n(c),
+    r = i(990078),
+    u = i(862482),
+    o = i(834730),
+    d = i(548118),
+    h = i(758963);
+function A(e) {
     let {
-            className: t,
-            maxGuilds: n,
-            guilds: r,
-            onFocus: l,
-            onClick: p,
-            size: m = u.Ay.Sizes.SMALLER,
-            hideOverflowCount: h = !1,
-            disableGuildNameTooltip: f = !1,
+            className: s,
+            maxGuilds: i,
+            guilds: t,
+            onFocus: c,
+            onClick: A,
+            size: S = d.Ay.Sizes.SMALLER,
+            hideOverflowCount: L = !1,
+            disableGuildNameTooltip: x = !1,
         } = e,
-        g = (function () {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Ay.Sizes.SMALLER;
+        z = (function () {
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Ay.Sizes.SMALLER;
             switch (e) {
-                case u.Ay.Sizes.SMOL:
-                    return _.nc;
-                case u.Ay.Sizes.MINI:
-                    return _.qV;
-                case u.Ay.Sizes.SMALLER:
+                case d.Ay.Sizes.SMOL:
+                    return h.nc;
+                case d.Ay.Sizes.MINI:
+                    return h.qV;
+                case d.Ay.Sizes.SMALLER:
                 default:
-                    return _.q1;
+                    return h.q1;
             }
-        })(m);
-    return r.length <= 0
+        })(S);
+    return t.length <= 0
         ? null
-        : (0, a.jsx)("div", {
-              className: i()(t, _.HD),
+        : (0, n.jsx)("div", {
+              className: l()(s, h.HD),
               children: (function () {
-                  let e = r.length - n,
-                      t = e + 1,
-                      b = e > 0 && !h,
-                      v = Math.min(r.length, n) - 1,
-                      A = s()(r)
-                          .take(n)
-                          .map((e, t) => {
-                              let n = e.name,
-                                  r = i()(_.my, g, t === v && !b && _.NE);
-                              return f
-                                  ? (0, a.jsx)("div", {
-                                        className: r,
-                                        children: (0, a.jsx)(u.Ay, { guild: e, onClick: p, size: m, showTooltip: !1 }),
+                  let e = t.length - i,
+                      s = e + 1,
+                      y = e > 0 && !L,
+                      m = Math.min(t.length, i) - 1,
+                      k = a()(t)
+                          .take(i)
+                          .map((e, s) => {
+                              let i = e.name,
+                                  t = l()(h.my, z, s === m && !y && h.NE);
+                              return x
+                                  ? (0, n.jsx)("div", {
+                                        className: t,
+                                        children: (0, n.jsx)(d.Ay, { guild: e, onClick: A, size: S, showTooltip: !1 }),
                                     })
-                                  : (0, a.jsx)(
-                                        o.m,
+                                  : (0, n.jsx)(
+                                        r.m,
                                         {
                                             asContainer: !0,
-                                            text: n,
-                                            children: (0, a.jsx)(u.Ay, { guild: e, onClick: p, size: m }),
+                                            text: i,
+                                            children: (0, n.jsx)(d.Ay, { guild: e, onClick: A, size: S }),
                                         },
                                         e.id,
                                     );
                           })
                           .value();
-                  if (b) {
+                  if (y) {
                       let e = (function () {
-                          let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Ay.Sizes.SMALLER;
+                          let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Ay.Sizes.SMALLER;
                           switch (e) {
-                              case u.Ay.Sizes.SMOL:
-                              case u.Ay.Sizes.MINI:
+                              case d.Ay.Sizes.SMOL:
+                              case d.Ay.Sizes.MINI:
                                   return "text-xxs/semibold";
-                              case u.Ay.Sizes.SMALLER:
+                              case d.Ay.Sizes.SMALLER:
                               default:
                                   return "text-xs/medium";
                           }
-                      })(m);
-                      A[A.length - 1] = (0, a.jsx)(c.$n, {
-                          className: i()(_.ju, g),
-                          onFocus: l,
-                          onClick: (e) => p?.(e),
-                          look: c.$n.Looks.BLANK,
-                          size: c.$n.Sizes.NONE,
-                          children: (0, a.jsx)(d.E, { variant: e, children: t > 99 ? ">99" : `+${t}` }),
+                      })(S);
+                      k[k.length - 1] = (0, n.jsx)(u.$n, {
+                          className: l()(h.ju, z),
+                          onFocus: c,
+                          onClick: (e) => A?.(e),
+                          look: u.$n.Looks.BLANK,
+                          size: u.$n.Sizes.NONE,
+                          children: (0, n.jsx)(o.E, { variant: e, children: s > 99 ? ">99" : `+${s}` }),
                       });
                   }
-                  return A;
+                  return k;
               })(),
           });
 }

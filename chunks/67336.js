@@ -75,8 +75,10 @@ let i = new (l(626584).A)("MFAPlayground"),
                                                     (0, r.openModalLazy)(
                                                         async () => {
                                                             let { MFAModal: o } = await Promise.all([
+                                                                l.e("93816"),
+                                                                l.e("8979"),
+                                                                l.e("4736"),
                                                                 l.e("90966"),
-                                                                l.e("6082"),
                                                             ]).then(l.bind(l, 572469));
                                                             return (l) =>
                                                                 (0, t.jsx)(o, { ...l, finish: a, mfaChallenge: e });

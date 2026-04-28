@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__7e486",
     El: "coverImageContainer__7e486",

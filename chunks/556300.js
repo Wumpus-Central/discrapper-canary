@@ -26,7 +26,9 @@ function h(e) {
                         ? d.tEg
                         : (e) => {
                               (0, s.L3)(e, async () => {
-                                  let { default: e } = await n.e("4391").then(n.bind(n, 254106));
+                                  let { default: e } = await Promise.all([n.e("43266"), n.e("4391")]).then(
+                                      n.bind(n, 254106),
+                                  );
                                   return (n) =>
                                       (0, l.jsx)(e, {
                                           ...n,

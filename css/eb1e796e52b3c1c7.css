@@ -1,0 +1,59 @@
+.previewContainer_d74b94 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-block: 6.5px 0;
+    margin-inline: 2px 3px;
+    min-height: 560px;
+    padding-inline-start: 10px;
+    width: -moz-min-content;
+    width: min-content
+}
+
+.effectDescriptionBorder_d74b94 {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 20px var(--custom-user-profile-theme-padding);
+    width: 100%
+}
+
+.effectDescriptionBorderWithGradient_d74b94 {
+    background: linear-gradient(var(--background-base-low), var(--background-base-low)) padding-box, var(--custom-premium-colors-premium-gradient-tier-2-diagonal) border-box
+}
+
+.effectDescriptionNoGradient_d74b94 {
+    background: var(--interactive-background-active)
+}
+
+.effectDescriptionContainer_d74b94 {
+    background: var(--background-base-lower) padding-box;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-inline-end: 4px;
+    padding: var(--space-12);
+    position: relative
+}
+
+.replayButton_d74b94 {
+    display: flex;
+    height: 24px;
+    margin-block: 15px -8px;
+    margin-inline: 30px 0;
+    width: 149px
+}
+
+.replayButtonText_d74b94 {
+    font-family: gg sans;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center
+}
+
+.retryIcon_d74b94 {
+    color: var(--text-default);
+    margin-inline: 6px 3px
+}

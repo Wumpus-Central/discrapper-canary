@@ -12,15 +12,15 @@ var r = n(17928),
     h = n(985018);
 function E(e, t, E) {
     let _ = (0, d.AO)(e),
-        p = (0, r.bG)([u.default], () => u.default.getId());
+        A = (0, r.bG)([u.default], () => u.default.getId());
     if (null == e) return null;
-    let A = (0, o._z)(e),
-        f = c.A.getVideoStats(A) ?? {},
+    let p = (0, o._z)(e),
+        f = c.A.getVideoStats(p) ?? {},
         g = {
-            media_session_id: c.A.getMediaSessionId(A),
-            rtc_connection_id: c.A.getRtcConnectionId(A),
-            stream_region: c.A.getRegion(A),
-            max_viewers: c.A.getMaxViewers(A),
+            media_session_id: c.A.getMediaSessionId(p),
+            rtc_connection_id: c.A.getRtcConnectionId(p),
+            stream_region: c.A.getRegion(p),
+            max_viewers: c.A.getMaxViewers(p),
             ...f,
         };
     return (0, i.jsx)(a.Dr, {
@@ -31,12 +31,12 @@ function E(e, t, E) {
             E?.(),
                 null != e &&
                     (0, l.openModalLazy)(async () => {
-                        let { default: t } = await n.e("86889").then(n.bind(n, 292208));
+                        let { default: t } = await Promise.all([n.e("17171"), n.e("86889")]).then(n.bind(n, 292208));
                         return (n) =>
                             (0, i.jsx)(t, {
                                 stream: e,
                                 streamApplication: _,
-                                isStreamer: p === e?.ownerId,
+                                isStreamer: A === e?.ownerId,
                                 analyticsData: g,
                                 ...n,
                             });

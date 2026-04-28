@@ -1,0 +1,11 @@
+.row__23bf1 {
+    gap: var(--space-12);
+    padding: var(--space-12)
+}
+
+.icon__23bf1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-width: 32px
+}

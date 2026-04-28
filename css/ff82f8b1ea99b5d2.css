@@ -1,0 +1,113 @@
+.headerContainer__8dd9e {
+    background: var(--background-gradient-chat, var(--background-base-lowest));
+    padding-bottom: 0;
+    padding-inline-end: var(--space-12);
+    padding-top: 0;
+    position: sticky;
+    top: 0
+}
+
+.logo__8dd9e {
+    height: 32px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 75px
+}
+
+.titleContainer__8dd9e {
+    cursor: pointer;
+    gap: 6px
+}
+
+.titleContainer__8dd9e,
+.titles__8dd9e {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.titles__8dd9e {
+    gap: 24px;
+    height: 100%;
+    margin-inline-start: 44px
+}
+
+.titleWrapper__8dd9e {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center
+}
+
+.pageTitleContainer__8dd9e {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 100%
+}
+
+.pageTitleContainer__8dd9e:hover {
+    border-bottom: 2px solid var(--brand-500);
+    padding-top: 2px
+}
+
+.pageTitleContainer__8dd9e.selectedPageIndicator__8dd9e {
+    border-bottom: 2px solid var(--icon-strong);
+    padding-top: 2px
+}
+
+.alignedRightContent__8dd9e {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-inline-start: auto;
+    z-index: 1
+}
+
+.iconButton__8dd9e {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    transition: background-color .1s ease
+}
+
+.iconButton__8dd9e:active,
+.iconButton__8dd9e:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.wishlistButton__8dd9e {
+    width: 32px
+}
+
+.learnMoreButton__8dd9e {
+    padding: 0 var(--space-12)
+}
+
+@media (max-width:948px) {
+    .logo__8dd9e {
+        display: none
+    }
+}
+
+.noticeContainer_bdf28d {
+    align-items: center;
+    border-radius: 0;
+    border-top: 0;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-10);
+    height: 36px;
+    justify-content: center
+}
+
+.noticeTextContainer_bdf28d {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}

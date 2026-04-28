@@ -1,0 +1,21 @@
+.closeButton_e858dd {
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 16px
+}
+
+.applicationIcon_e858dd {
+    align-self: end;
+    margin-inline-start: 16px;
+    margin-bottom: 3px
+}
+
+.submissionWarning_e858dd {
+    margin-bottom: 16px
+}
+
+.components_e858dd {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24)
+}

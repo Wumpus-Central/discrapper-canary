@@ -1,38 +1,37 @@
-"use strict";
-n.r(t),
-    n.d(t, {
-        getOrParseBioAST: () => g,
-        parseBioReact: () => m,
-        parseBioReactWithCachedAST: () => b,
-        parseBioReactWithoutScrolling: () => A,
+r.r(t),
+    r.d(t, {
+        getOrParseBioAST: () => B,
+        parseBioReact: () => k,
+        parseBioReactWithCachedAST: () => O,
+        parseBioReactWithoutScrolling: () => R,
     });
-var r = n(735438),
-    a = n.n(r),
-    i = n(635377),
-    l = n.n(i),
-    s = n(791332),
-    o = n.n(s),
-    c = n(436857),
-    d = n(365347),
-    u = n(29814);
-n(46054);
-var _ = n(551965);
-let p = (0, _.A)([u.A.PROFILE_BIO_RULES, (0, d.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
-    f = new (l())({ max: 2e3 }),
-    m = c.aV(p),
-    h;
-function g(e) {
-    let t = f.get(e);
-    return null != t || ((t = h(e, !0)), f.set(e, t)), t;
+var i = r(735438),
+    n = r.n(i),
+    a = r(635377),
+    u = r.n(a),
+    l = r(791332),
+    o = r.n(l),
+    c = r(436857),
+    s = r(365347),
+    m = r(29814);
+r(46054);
+var p = r(551965);
+let d = (0, p.A)([m.A.PROFILE_BIO_RULES, (0, s.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
+    h = new (u())({ max: 2e3 }),
+    k = c.aV(d),
+    A;
+function B(e) {
+    let t = h.get(e);
+    return null != t || ((t = A(e, !0)), h.set(e, t)), t;
 }
-function b(e) {
+function O(e) {
     if (0 === e.trim().length) return null;
-    let t = g(e);
-    return o().reactFor(o().ruleOutput(p, "react"))(t);
+    let t = B(e);
+    return o().reactFor(o().ruleOutput(d, "react"))(t);
 }
-let A = c.aV(
-    (0, _.A)([
-        a().omit(p, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
+let R = c.aV(
+    (0, p.A)([
+        n().omit(d, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]),
         { emoji: { react: () => null } },
     ]),
 );

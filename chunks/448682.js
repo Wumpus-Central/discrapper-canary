@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+a.exports = {
     uW: "section__3ae56",
     Gf: "sectionTitle__3ae56",
     kL: "container__3ae56",

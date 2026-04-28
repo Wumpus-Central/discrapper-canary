@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { o: () => l }), n(64700);
-var i = n(621466),
-    r = n(644447),
-    a = n(836781),
-    s = n(256905);
-function l(e, t, n) {
-    let l = {},
-        o = {};
-    for (let [c, d] of e.entries()) {
-        let u = (0, r.E)({ proxyURL: d.proxyUrl, url: d.url });
-        (l[u] = (r) =>
-            (function (e, t, n) {
-                let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                    a = arguments.length > 4 ? arguments[4] : void 0;
+r.d(t, { o: () => u }), r(64700);
+var n = r(621466),
+    o = r(644447),
+    l = r(836781),
+    i = r(256905);
+function u(e, t, r) {
+    let u = {},
+        a = {};
+    for (let [d, p] of e.entries()) {
+        let c = (0, o.E)({ proxyURL: p.proxyUrl, url: p.url });
+        (u[c] = (o) =>
+            (function (e, t, r) {
+                let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                    l = arguments.length > 4 ? arguments[4] : void 0;
                 e.preventDefault(),
-                    (0, i.vq)(e.currentTarget) && e.currentTarget.blur(),
-                    (0, s.R)({ ...r, items: t, startingIndex: n, location: a ?? "zoomedMediaModalHelper" });
-            })(r, e, c, t, n)),
-            (o[u] = () => (0, a.Z)(d, e.length > 1));
+                    (0, n.vq)(e.currentTarget) && e.currentTarget.blur(),
+                    (0, i.R)({ ...o, items: t, startingIndex: r, location: l ?? "zoomedMediaModalHelper" });
+            })(o, e, d, t, r)),
+            (a[c] = () => (0, l.Z)(p, e.length > 1));
     }
-    return { srcToOnClickOverride: l, srcToHandlePreloadImage: o };
+    return { srcToOnClickOverride: u, srcToHandlePreloadImage: a };
 }

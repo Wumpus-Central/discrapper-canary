@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     ZO: "channelHeader__06fb5",
     Kk: "icon__06fb5",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__5a838",
     _A: "labelContainer__5a838",

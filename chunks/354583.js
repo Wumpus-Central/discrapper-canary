@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(17928),
-    a = n(734057),
-    r = n(309010);
-function s() {
-    return (0, i.bG)([r.A, a.A], () => {
+t.d(n, { A: () => l });
+var i = t(17928),
+    u = t(734057),
+    r = t(309010);
+function l() {
+    return (0, i.bG)([r.A, u.A], () => {
         let e = r.A.getVoiceChannelId();
         if (null != e) {
-            let t = a.A.getChannel(e);
-            if (t?.isGuildStageVoice()) return t;
+            let n = u.A.getChannel(e);
+            if (n?.isGuildStageVoice()) return n;
         }
         return null;
     });

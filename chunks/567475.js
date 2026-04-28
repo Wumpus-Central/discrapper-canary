@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { y: () => O });
 var r = n(555625),
     i = n(630449),
@@ -18,8 +17,8 @@ var r = n(555625),
     y = n(838596),
     v = n(689456),
     b = n(582102);
-let w = "Not capturing exception because it's already been captured.";
-class S {
+let S = "Not capturing exception because it's already been captured.";
+class w {
     constructor(e) {
         if (
             ((this._options = e),
@@ -49,7 +48,7 @@ class S {
     }
     captureException(e, t, n) {
         let r = (0, g.eJ)();
-        if ((0, g.GR)(e)) return o.T && m.vF.log(w), r;
+        if ((0, g.GR)(e)) return o.T && m.vF.log(S), r;
         let i = { event_id: r, ...t };
         return this._process(this.eventFromException(e, i).then((e) => this._captureEvent(e, i, n))), i.event_id;
     }
@@ -61,7 +60,7 @@ class S {
     }
     captureEvent(e, t, n) {
         let r = (0, g.eJ)();
-        if (t && t.originalException && (0, g.GR)(t.originalException)) return o.T && m.vF.log(w), r;
+        if (t && t.originalException && (0, g.GR)(t.originalException)) return o.T && m.vF.log(S), r;
         let i = { event_id: r, ...t },
             a = (e.sdkProcessingMetadata || {}).capturedSpanScope;
         return this._process(this._captureEvent(e, i, a || n)), i.event_id;
@@ -361,7 +360,7 @@ var x = n(588130),
     T = n(297458),
     I = n(804524),
     M = n(405589);
-class O extends S {
+class O extends w {
     constructor(e) {
         const t = { parentSpanIsAlwaysRootSpan: !0, ...e };
         !(function (e, t, n = [t], r = "npm") {

@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+i.r(
     (e.exports = {
         menu: "menu_c1e9c4",
         scroller: "scroller_c1e9c4",

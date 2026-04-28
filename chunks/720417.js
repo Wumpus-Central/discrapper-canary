@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Ti: "jumboContainer__5cc6a",
     UX: "jumboButton__5cc6a",

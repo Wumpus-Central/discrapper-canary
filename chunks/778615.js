@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kK: "cardGroup__02e50",
     Lh: "cardGroupWithHeadingSpacing__02e50",

@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { N: () => o });
-var r = n(627968);
-n(64700);
-var i = n(827734),
-    a = n(996682),
-    s = n(27989);
-let o = (e) => {
+h.d(a, { N: () => i });
+var t = h(627968);
+h(64700);
+var e = h(661531),
+    c = h(996682),
+    l = h(27989);
+let i = (s) => {
     let {
-            size: t = "md",
-            width: n,
-            height: o,
-            color: l = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
-        } = e,
-        d = (0, s.J)(t),
-        _ = d?.width ?? n,
-        f = d?.height ?? o;
-    return (0, r.jsx)("svg", {
-        ...(0, a.A)(c),
+            size: a = "md",
+            width: h,
+            height: i,
+            color: r = e.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: d = "",
+            ...n
+        } = s,
+        o = (0, l.J)(a),
+        w = o?.width ?? h,
+        v = o?.height ?? i;
+    return (0, t.jsx)("svg", {
+        ...(0, c.A)(n),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: f,
+        width: w,
+        height: v,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, r.jsx)("path", {
-            fill: "string" == typeof l ? l : l.css,
+        children: (0, t.jsx)("path", {
+            fill: "string" == typeof r ? r : r.css,
             d: "M12 10.1a2.92 2.92 0 0 1 2.31 1.14h.02l3.95 4.44a3.38 3.38 0 0 1-.1 4.71 3.4 3.4 0 0 1-3.65.75 9.4 9.4 0 0 0-2.49-.62h-.1c-.85.1-1.69.3-2.48.63a3.38 3.38 0 0 1-3.74-5.46v-.01l3.97-4.45h.01A2.93 2.93 0 0 1 12 10.1ZM1.82 8.32c1.08-.9 2.85-.54 3.95.8 1.1 1.32 1.1 3.12.03 4.01-1.08.9-2.85.54-3.95-.79-1.1-1.32-1.1-3.13-.03-4.02Zm16.41.8c1.1-1.34 2.86-1.69 3.95-.8 1.08.9 1.06 2.7-.03 4.03-1.1 1.32-2.87 1.68-3.95.79-1.08-.9-1.07-2.7.03-4.03ZM7.86 2.68c1.35-.37 2.81.69 3.26 2.35.44 1.67-.3 3.31-1.65 3.68-1.35.36-2.81-.7-3.26-2.36-.44-1.67.3-3.31 1.65-3.67Zm5.02 2.35c.45-1.66 1.9-2.72 3.26-2.35 1.36.36 2.1 2 1.65 3.67-.45 1.66-1.9 2.72-3.26 2.36-1.36-.37-2.1-2.01-1.65-3.68Z",
-            className: u,
+            className: d,
         }),
     });
 };

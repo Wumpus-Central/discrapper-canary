@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     o8: "subnav_e4d939",
     lK: "subnavContainer_e4d939",

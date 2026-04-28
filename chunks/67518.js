@@ -1,27 +1,37 @@
-"use strict";
-n.d(t, { n: () => d });
-var a = n(627968),
-    i = n(64700),
-    l = n(192308),
-    r = n(477782),
-    s = n(695366),
-    c = n(409626),
-    o = n(985018);
-function d(e, t) {
-    let d = i.useCallback(() => {
+a.d(n, { n: () => r });
+var i = a(627968),
+    t = a(64700),
+    l = a(192308),
+    c = a(477782),
+    s = a(695366),
+    d = a(409626),
+    o = a(985018);
+function r(e, n) {
+    let r = t.useCallback(() => {
         null != e &&
-            (t?.(c.Ws.Feedback),
+            (n?.(d.Ws.Feedback),
             (0, l.openModalLazy)(async () => {
-                let { default: t } = await n.e("49876").then(n.bind(n, 651930));
-                return (n) => (0, a.jsx)(t, { ...n, detectedActivity: { application_id: e, name: "" } });
+                let { default: n } = await Promise.all([
+                    a.e("48486"),
+                    a.e("77598"),
+                    a.e("61748"),
+                    a.e("56600"),
+                    a.e("34530"),
+                    a.e("8891"),
+                    a.e("55266"),
+                    a.e("33771"),
+                    a.e("46039"),
+                    a.e("27495"),
+                ]).then(a.bind(a, 651930));
+                return (a) => (0, i.jsx)(n, { ...a, detectedActivity: { application_id: e, name: "" } });
             }));
-    }, [e, t]);
+    }, [e, n]);
     return null == e
         ? null
-        : (0, a.jsx)(r.Dr, {
+        : (0, i.jsx)(c.Dr, {
               id: "game-profile-something-wrong",
               label: o.intl.string(o.t.qP2cXd),
-              action: d,
+              action: r,
               color: "danger",
               leadingAccessory: { type: "icon", icon: s.E },
           });

@@ -1,52 +1,52 @@
 l.d(t, { default: () => B });
 var n = l(627968),
-    a = l(64700),
-    s = l(503698),
-    i = l.n(s),
+    s = l(64700),
+    a = l(503698),
+    i = l.n(a),
     r = l(17928),
     d = l(192308),
     o = l(825484),
-    c = l(821609),
-    h = l(331322),
+    h = l(821609),
+    c = l(331322),
     u = l(783878),
     g = l(834730),
     m = l(534514),
     p = l(778492),
     x = l(935462),
-    _ = l(228366),
-    A = l(857182),
-    C = l(47167),
-    b = l(713654),
-    j = l(915089),
-    y = l(548118),
-    f = l(734057),
-    N = l(808728),
-    E = l(71393),
+    A = l(228366),
+    C = l(857182),
+    b = l(47167),
+    j = l(713654),
+    y = l(915089),
+    f = l(548118),
+    N = l(734057),
+    E = l(808728),
+    v = l(71393),
     S = l(576705),
-    v = l(994500),
-    w = l(309010),
-    I = l(287809),
-    M = l(954571),
-    k = l(935208),
-    F = l(652215),
-    O = l(985018),
-    L = l(199214);
-class D extends a.PureComponent {
+    w = l(994500),
+    F = l(309010),
+    k = l(287809),
+    I = l(954571),
+    O = l(935208),
+    M = l(652215),
+    L = l(985018),
+    _ = l(199214);
+class D extends s.PureComponent {
     constructor(e) {
         super(e);
         const { guilds: t, lastChannelFollowingDestination: l } = e,
-            { guildId: n, channelId: a } = l;
+            { guildId: n, channelId: s } = l;
         this.state = {
             selectedGuildId: n,
-            selectedChannelId: a,
+            selectedChannelId: s,
             channels: null != n && null != t[n] ? t[n].channels : [],
             errorMessage: null,
             submitting: !1,
-            headerId: (0, j.Ld)("modal"),
+            headerId: (0, y.Ld)("modal"),
         };
     }
     componentDidMount() {
-        M.default.track(F.HAw.OPEN_MODAL, {
+        I.default.track(M.HAw.OPEN_MODAL, {
             type: "Follow Channel Modal",
             num_guild_permissions: Object.keys(this.props.guilds).length,
             location: "Chat Input Blocker - Follow Channel",
@@ -55,7 +55,7 @@ class D extends a.PureComponent {
     getDefaultChannelId(e) {
         let t = e.find((e) => {
                 let { channel: t } = e;
-                return "general" === (0, C.m1)(t, I.default, v.A);
+                return "general" === (0, b.m1)(t, k.default, w.A);
             }),
             l = null != t ? t : e[0];
         return null != l ? l.channel.id : null;
@@ -64,59 +64,61 @@ class D extends a.PureComponent {
         let { guilds: t } = this.props,
             { selectedGuildId: l } = this.state,
             n = t[e].channels,
-            a = this.getDefaultChannelId(n);
-        l !== e && this.setState({ selectedGuildId: e, selectedChannelId: a, channels: n });
+            s = this.getDefaultChannelId(n);
+        l !== e && this.setState({ selectedGuildId: e, selectedChannelId: s, channels: n });
     };
     handleChannelSelect = (e) => {
         this.setState({ selectedChannelId: e });
     };
     handleFollow = () => {
         let { channel: e, onClose: t } = this.props,
-            { selectedChannelId: a, selectedGuildId: s } = this.state;
-        null != a &&
+            { selectedChannelId: s, selectedGuildId: a } = this.state;
+        null != s &&
             (this.setState({ submitting: !0 }),
-            A.A.createChannelFollower(a, e.id)
+            C.A.createChannelFollower(s, e.id)
                 .then(() => {
-                    _.h.dispatch({ type: "CHANNEL_FOLLOWER_CREATED", channelId: a, guildId: s }),
+                    A.h.dispatch({ type: "CHANNEL_FOLLOWER_CREATED", channelId: s, guildId: a }),
                         t(),
                         (0, d.openModalLazy)(async () => {
-                            let { default: e } = await l.e("28907").then(l.bind(l, 209674));
+                            let { default: e } = await Promise.all([l.e("27952"), l.e("28907")]).then(
+                                l.bind(l, 209674),
+                            );
                             return (t) => (0, n.jsx)(e, { ...t });
                         });
                 })
                 .catch((e) => {
-                    e.body.code === F.t02.TOO_MANY_WEBHOOKS
-                        ? this.setState({ errorMessage: O.intl.string(O.t["1eZ4aB"]), submitting: !1 })
-                        : this.setState({ errorMessage: O.intl.string(O.t.LgwhuN), submitting: !1 });
+                    e.body.code === M.t02.TOO_MANY_WEBHOOKS
+                        ? this.setState({ errorMessage: L.intl.string(L.t["1eZ4aB"]), submitting: !1 })
+                        : this.setState({ errorMessage: L.intl.string(L.t.LgwhuN), submitting: !1 });
                 }));
     };
     renderFooter() {
         let { selectedGuildId: e, selectedChannelId: t, submitting: l } = this.state,
-            { onClose: a } = this.props;
+            { onClose: s } = this.props;
         return (0, n.jsxs)(o.e, {
             direction: "horizontal-reverse",
             children: [
-                (0, n.jsx)(c.$, {
+                (0, n.jsx)(h.$, {
                     variant: "primary",
-                    text: O.intl.string(O.t["3aOv+h"]),
+                    text: L.intl.string(L.t["3aOv+h"]),
                     loading: l,
                     onClick: this.handleFollow,
                     disabled: null == e || null == t,
                 }),
-                (0, n.jsx)(c.$, { variant: "secondary", text: O.intl.string(O.t["ETE/oC"]), onClick: a }),
+                (0, n.jsx)(h.$, { variant: "secondary", text: L.intl.string(L.t["ETE/oC"]), onClick: s }),
             ],
         });
     }
     renderForm() {
         let { guilds: e } = this.props,
-            { channels: t, selectedGuildId: l, selectedChannelId: a, errorMessage: s } = this.state,
-            i = k.default.keys(e).map((t) => {
+            { channels: t, selectedGuildId: l, selectedChannelId: s, errorMessage: a } = this.state,
+            i = O.default.keys(e).map((t) => {
                 let { guild: l } = e[t];
                 return {
                     id: t,
                     value: t,
                     label: l.name,
-                    leading: null == l ? null : (0, n.jsx)(y.Ay, { guild: l, size: y.Ay.Sizes.MINI }),
+                    leading: null == l ? null : (0, n.jsx)(f.Ay, { guild: l, size: f.Ay.Sizes.MINI }),
                 };
             }),
             r = t.map((e) => {
@@ -124,22 +126,22 @@ class D extends a.PureComponent {
                 return {
                     id: t.id,
                     value: t.id,
-                    label: (0, C.m1)(t, I.default, v.A),
+                    label: (0, b.m1)(t, k.default, w.A),
                     leading: (function (e) {
                         if (null == e) return null;
-                        let t = (0, b.gU)(e);
-                        return null != t && (0, n.jsx)(t, { size: "xs", color: "currentColor", className: L.Kk });
+                        let t = (0, j.gU)(e);
+                        return null != t && (0, n.jsx)(t, { size: "xs", color: "currentColor", className: _.Kk });
                     })(t),
                 };
             }),
             d = 0 === i.length,
-            o = d ? O.intl.string(O.t["6b6QoF"]) : O.intl.string(O.t.Z0quyN);
-        return (0, n.jsxs)(h.B, {
+            o = d ? L.intl.string(L.t["6b6QoF"]) : L.intl.string(L.t.Z0quyN);
+        return (0, n.jsxs)(c.B, {
             gap: 16,
             children: [
                 (0, n.jsx)(u.Z, {
                     selectionMode: "single",
-                    label: O.intl.string(O.t.xFn72s),
+                    label: L.intl.string(L.t.xFn72s),
                     value: l,
                     options: i,
                     disabled: d,
@@ -147,17 +149,17 @@ class D extends a.PureComponent {
                 }),
                 (0, n.jsx)(u.Z, {
                     selectionMode: "single",
-                    label: O.intl.string(O.t.PDn2fR),
-                    value: a,
+                    label: L.intl.string(L.t.PDn2fR),
+                    value: s,
                     options: r,
                     disabled: 0 === r.length,
                     onSelectionChange: (e) => this.handleChannelSelect(e),
                 }),
                 (0, n.jsx)(g.E, {
                     variant: "text-sm/normal",
-                    color: d || null != s ? "text-feedback-critical" : "text-muted",
-                    className: L.ML,
-                    children: null != s ? s : o,
+                    color: d || null != a ? "text-feedback-critical" : "text-muted",
+                    className: _.ML,
+                    children: null != a ? a : o,
                 }),
             ],
         });
@@ -167,25 +169,25 @@ class D extends a.PureComponent {
             channel: { nsfw: e },
         } = this.props;
         return (0, n.jsxs)("div", {
-            className: L.rf,
+            className: _.rf,
             children: [
                 (0, n.jsx)(m.D, {
                     variant: "heading-lg/semibold",
                     id: this.state.headerId,
-                    children: O.intl.string(O.t.mvPFbA),
+                    children: L.intl.string(L.t.mvPFbA),
                 }),
                 (0, n.jsx)(g.E, {
                     color: "text-muted",
-                    className: i()(L.O1, { [L.lK]: !e }),
+                    className: i()(_.O1, { [_.lK]: !e }),
                     variant: "text-sm/normal",
-                    children: O.intl.string(O.t.kbpkxJ),
+                    children: L.intl.string(L.t.kbpkxJ),
                 }),
                 e
                     ? (0, n.jsx)(g.E, {
-                          className: i()(L.lK, L.O1),
+                          className: i()(_.lK, _.O1),
                           color: "text-feedback-critical",
                           variant: "text-sm/normal",
-                          children: O.intl.string(O.t["DrNm/5"]),
+                          children: L.intl.string(L.t["DrNm/5"]),
                       })
                     : null,
             ],
@@ -193,24 +195,24 @@ class D extends a.PureComponent {
     }
     renderHeader() {
         let { guildToFollow: e, channelNameToFollow: t, channel: l } = this.props,
-            a = (0, b.gU)(l) ?? p.k;
+            s = (0, j.gU)(l) ?? p.k;
         return (0, n.jsxs)(x.rQ, {
-            className: L.wx,
+            className: _.wx,
             children: [
-                (0, n.jsx)(y.Ay, { guild: e, size: y.Ay.Sizes.LARGE }),
+                (0, n.jsx)(f.Ay, { guild: e, size: f.Ay.Sizes.LARGE }),
                 (0, n.jsx)("div", {
-                    className: L.nU,
+                    className: _.nU,
                     children: (0, n.jsxs)("div", {
-                        className: L.Ix,
+                        className: _.Ix,
                         children: [
-                            (0, n.jsx)(a, {
+                            (0, n.jsx)(s, {
                                 size: "custom",
                                 color: "currentColor",
                                 width: 20,
                                 height: 20,
-                                className: L.p,
+                                className: _.p,
                             }),
-                            (0, n.jsx)(g.E, { variant: "text-md/medium", className: L.HA, children: t }),
+                            (0, n.jsx)(g.E, { variant: "text-md/medium", className: _.HA, children: t }),
                         ],
                     }),
                 }),
@@ -225,33 +227,33 @@ class D extends a.PureComponent {
             parentComponent: "FollowModal",
             children: [
                 this.renderHeader(),
-                (0, n.jsxs)(x.$m, { className: L.Qs, children: [this.renderBody(), this.renderForm()] }),
+                (0, n.jsxs)(x.$m, { className: _.Qs, children: [this.renderBody(), this.renderForm()] }),
                 (0, n.jsx)(x.jl, { children: this.renderFooter() }),
             ],
         });
     }
 }
 let B = r.Ay.connectStores(
-    [E.A, w.A, I.default, v.A, N.Ay, S.A, f.A],
+    [v.A, F.A, k.default, w.A, E.Ay, S.A, N.A],
     (e) => {
         let { channel: t } = e,
-            l = E.A.getGuild(t.guild_id),
-            n = E.A.getGuildsArray().reduce((e, t) => {
-                let l = N.Ay.getChannels(t.id)
+            l = v.A.getGuild(t.guild_id),
+            n = v.A.getGuildsArray().reduce((e, t) => {
+                let l = E.Ay.getChannels(t.id)
                     .SELECTABLE.map((e) => e.channel)
-                    .filter((e) => e.type === F.rbe.GUILD_TEXT && S.A.can(F.xBc.MANAGE_WEBHOOKS, e))
+                    .filter((e) => e.type === M.rbe.GUILD_TEXT && S.A.can(M.xBc.MANAGE_WEBHOOKS, e))
                     .map((e) => {
-                        let t = f.A.getChannel(e.parent_id);
-                        return { channel: e, category: null != t ? (0, C.m1)(t, I.default, v.A) : null };
+                        let t = N.A.getChannel(e.parent_id);
+                        return { channel: e, category: null != t ? (0, b.m1)(t, k.default, w.A) : null };
                     });
                 return l.length > 0 && (e[t.id] = { guild: t, channels: l }), e;
             }, {}),
-            a = w.A.getLastChannelFollowingDestination();
+            s = F.A.getLastChannelFollowingDestination();
         return {
             guildToFollow: l,
-            channelNameToFollow: (0, C.m1)(t, I.default, v.A),
+            channelNameToFollow: (0, b.m1)(t, k.default, w.A),
             guilds: n,
-            lastChannelFollowingDestination: a ?? {},
+            lastChannelFollowingDestination: s ?? {},
         };
     },
     { forwardRef: !0 },

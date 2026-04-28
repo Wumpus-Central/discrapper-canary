@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+a.exports = {
     D$: "similarGames_a02225",
     iu: "similarGameImageWrapper_a02225",
     fS: "similarGameImageClickable_a02225 similarGameImageWrapper_a02225",

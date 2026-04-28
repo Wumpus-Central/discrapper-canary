@@ -1,81 +1,108 @@
-n.d(t, { A: () => y });
-var i = n(627968),
-    l = n(64700),
-    a = n(17928),
-    s = n(778712),
-    r = n(97808),
-    o = n(939249),
-    d = n(133171),
-    c = n(442433),
-    u = n(297413),
-    h = n(714114),
-    _ = n(729551),
-    m = n(178418),
-    g = n(87664),
-    p = n(290863),
-    A = n(19575);
-let x = (0, n(945810).mj)({
+i.d(s, { A: () => _ });
+var t = i(627968),
+    a = i(64700),
+    n = i(17928),
+    l = i(778712),
+    r = i(97808),
+    o = i(939249),
+    d = i(133171),
+    u = i(442433),
+    c = i(297413),
+    f = i(714114),
+    A = i(729551),
+    h = i(178418),
+    m = i(87664),
+    v = i(290863),
+    x = i(19575);
+let g = (0, i(945810).mj)({
     name: "2026-04-consistent-profiles",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var f = n(854627),
-    b = n(939496),
-    I = n(652215),
-    C = n(996988),
-    E = n(921519);
-let j = s._3.SIZE_40,
-    v = A.Ay.getEnableHardwareAcceleration();
-function y(e) {
-    let { user: t, status: s, guildId: A, channelId: y, onSelect: S } = e,
-        { theme: T, themeType: N } = (0, b.E)(),
-        R = l.useMemo(() => t.isNonUserBot() || (0, m.c)(t, y), [t, y]),
-        { activities: O, isMobileOnline: L } = (0, a.cf)([p.A], () => ({
-            activities: p.A.getActivities(t.id),
-            isMobileOnline: p.A.isMobileOnline(t.id),
+var M = i(854627),
+    C = i(939496),
+    j = i(652215),
+    p = i(996988),
+    I = i(921519);
+let b = l._3.SIZE_40,
+    N = x.Ay.getEnableHardwareAcceleration();
+function _(e) {
+    let { user: s, status: l, guildId: x, channelId: _, onSelect: k } = e,
+        { theme: E, themeType: y } = (0, C.E)(),
+        F = a.useMemo(() => s.isNonUserBot() || (0, h.c)(s, _), [s, _]),
+        { activities: S, isMobileOnline: w } = (0, n.cf)([v.A], () => ({
+            activities: v.A.getActivities(s.id),
+            isMobileOnline: v.A.isMobileOnline(s.id),
         })),
-        M = (0, g.A)(t.id),
-        { voiceChannel: D } = (0, h.A)({ userId: t.id, guildId: A }),
-        P = (function (e) {
-            let { enabled: t } = x.useConfig({ location: e });
-            return t;
+        D = (0, m.A)(s.id),
+        { voiceChannel: L } = (0, f.A)({ userId: s.id, guildId: x }),
+        U = (function (e) {
+            let { enabled: s } = g.useConfig({ location: e });
+            return s;
         })("UserProfileMutualFriendRow"),
         {
-            avatarSrc: w,
-            avatarDecorationSrc: k,
-            eventHandlers: U,
-        } = (0, f.A)({ userId: t.id, guildId: A, size: j, animateOnHover: !0 }),
-        G = v && P ? r.Js : r.eu;
-    return (0, i.jsxs)(o.D, {
-        ...(P ? U : {}),
-        focusProps: N === C.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
-        className: E.nM,
-        onClick: S,
+            avatarSrc: P,
+            avatarDecorationSrc: z,
+            eventHandlers: R,
+        } = (0, M.A)({ userId: s.id, guildId: x, size: b, animateOnHover: !0 }),
+        H = N && U ? r.Js : r.eu;
+    return (0, t.jsxs)(o.D, {
+        ...(U ? R : {}),
+        focusProps: y === p.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+        className: I.nM,
+        onClick: k,
         onContextMenu: (e) => {
-            (0, c.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("24170"), n.e("32418"), n.e("93316")]).then(
-                    n.bind(n, 668569),
-                );
-                return (n) => (0, i.jsx)(e, { ...n, user: t });
+            (0, u.L3)(e, async () => {
+                let { default: e } = await Promise.all([
+                    i.e("91388"),
+                    i.e("61748"),
+                    i.e("26132"),
+                    i.e("46652"),
+                    i.e("93190"),
+                    i.e("34552"),
+                    i.e("8757"),
+                    i.e("89673"),
+                    i.e("68403"),
+                    i.e("85968"),
+                    i.e("60195"),
+                    i.e("29787"),
+                    i.e("97558"),
+                    i.e("94000"),
+                    i.e("91994"),
+                    i.e("76665"),
+                    i.e("76273"),
+                    i.e("24198"),
+                    i.e("86169"),
+                    i.e("19871"),
+                    i.e("24170"),
+                    i.e("94503"),
+                    i.e("72883"),
+                    i.e("49644"),
+                    i.e("42204"),
+                    i.e("83972"),
+                    i.e("72072"),
+                    i.e("32418"),
+                ]).then(i.bind(i, 668569));
+                return (i) => (0, t.jsx)(e, { ...i, user: s });
             });
         },
         children: [
-            (0, i.jsx)(G, {
-                src: w,
-                avatarDecoration: P ? k : void 0,
-                "aria-label": t.username,
-                size: j,
-                status: R ? I.clD.UNKNOWN : s,
-                statusBackdropColor: R ? void 0 : (0, d.C$)(T),
-                isMobile: L,
-                className: E.my,
+            (0, t.jsx)(H, {
+                src: P,
+                avatarDecoration: U ? z : void 0,
+                "aria-label": s.username,
+                size: b,
+                status: F ? j.clD.UNKNOWN : l,
+                statusBackdropColor: F ? void 0 : (0, d.C$)(E),
+                isMobile: w,
+                className: I.my,
             }),
-            (0, i.jsxs)("div", {
-                className: E.zH,
+            (0, t.jsxs)("div", {
+                className: I.zH,
                 children: [
-                    (0, i.jsx)(u.A, { user: t, className: E.Tc, discriminatorClass: E.D2 }),
-                    (0, i.jsx)(_.A, { user: t, activities: O, applicationStream: M, voiceChannel: D }),
+                    (0, t.jsx)(c.A, { user: s, className: I.Tc, discriminatorClass: I.D2 }),
+                    (0, t.jsx)(A.A, { user: s, activities: S, applicationStream: D, voiceChannel: L }),
                 ],
             }),
         ],

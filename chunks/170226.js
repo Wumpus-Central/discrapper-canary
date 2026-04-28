@@ -1,31 +1,30 @@
-"use strict";
-n.d(t, { A: () => m });
-var a = n(627968),
-    r = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    s = n(46054),
-    o = n(465364),
-    c = n(298236),
+n.d(t, { A: () => f });
+var r = n(627968),
+    i = n(64700),
+    a = n(503698),
+    l = n.n(a),
+    o = n(46054),
+    s = n(465364),
+    u = n(298236),
     d = n(647901);
-let u = { allowList: !0, allowHeading: !0, allowLinks: !0, previewLinkTarget: !0 };
-var _ = n(958517),
-    p = n(992595);
-function m(e) {
+let c = { allowList: !0, allowHeading: !0, allowLinks: !0, previewLinkTarget: !0 };
+var h = n(958517),
+    v = n(992595);
+function f(e) {
     let t,
-        { content: n, className: i } = e,
-        m =
-            ((t = (0, c.jc)()),
-            (0, r.useMemo)(() => {
+        { content: n, className: a } = e,
+        f =
+            ((t = (0, u.jc)()),
+            (0, i.useMemo)(() => {
                 let e;
                 return null === t
                     ? null
                     : ((e =
                           null != t.message
-                              ? (0, o.ko)(t.message, u)
-                              : (0, o.Le)({ channelId: t.channelId, renderOptions: u })),
-                      s.A.parse(n, !0, e));
+                              ? (0, s.ko)(t.message, c)
+                              : (0, s.Le)({ channelId: t.channelId, renderOptions: c })),
+                      o.A.parse(n, !0, e));
             }, [n, t])),
-        h = (0, d.X)();
-    return (0, a.jsx)("div", { className: l()(i, p.PT, _.T, h.className), children: m });
+        p = (0, d.X)();
+    return (0, r.jsx)("div", { className: l()(a, v.PT, h.T, p.className), children: f });
 }

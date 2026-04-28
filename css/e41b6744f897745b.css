@@ -1,0 +1,7 @@
+.layer__95d7b {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-high);
+    padding: var(--space-16)
+}

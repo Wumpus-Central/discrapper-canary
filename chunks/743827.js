@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     dm: "monitor__7eeec",
     MQ: "overflowContainer__7eeec",

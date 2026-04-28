@@ -1,172 +1,172 @@
-n.d(t, { Mm: () => S, RA: () => P, Ay: () => w, j5: () => k });
-var i = n(627968),
-    a = n(64700),
-    s = n(503698),
-    r = n.n(s),
-    l = n(883885),
-    o = n.n(l),
-    c = n(17928),
-    d = n(834730),
-    u = n(289873),
-    m = n(534514),
-    _ = n(964486),
-    p = n(775602),
-    f = n(58149),
-    h = n(260509),
-    x = n(954571),
-    g = n(486020),
-    v = n(515718),
-    A = n(591552),
-    j = n(713125),
-    b = n(739408),
-    N = n(113473),
-    E = n(694268),
-    I = n(896018),
-    C = n(652215),
-    O = n(985018),
-    D = n(974669);
-function y(e) {
-    let t = (0, c.bG)([p.A], () => p.A.useReducedMotion),
-        n = a.useRef(null);
+i.d(a, { Mm: () => S, RA: () => R, Ay: () => G, j5: () => k });
+var s = i(627968),
+    t = i(64700),
+    n = i(503698),
+    r = i.n(n),
+    l = i(883885),
+    c = i.n(l),
+    d = i(17928);
+if (21552 == i.j) var u = i(834730);
+if (21552 == i.j) var o = i(289873);
+if (21552 == i.j) var f = i(534514);
+var m = i(964486),
+    v = i(775602),
+    h = i(58149),
+    p = i(260509),
+    N = i(954571),
+    x = i(486020),
+    y = i(515718),
+    j = i(591552),
+    _ = i(713125),
+    A = i(739408),
+    g = i(113473),
+    D = i(694268),
+    E = i(896018),
+    O = i(652215),
+    b = i(985018),
+    w = i(974669);
+function I(e) {
+    let a = (0, d.bG)([v.A], () => v.A.useReducedMotion),
+        i = t.useRef(null);
     return (
-        a.useEffect(() => {
-            let i;
+        t.useEffect(() => {
+            let s;
             return (
-                null != n.current &&
-                    (i = o().loadAnimation({
-                        container: n.current,
+                null != i.current &&
+                    (s = c().loadAnimation({
+                        container: i.current,
                         renderer: "svg",
                         loop: !0,
-                        autoplay: !t,
+                        autoplay: !a,
                         animationData: JSON.parse(JSON.stringify(e)),
                     })),
                 () => {
-                    i?.destroy();
+                    s?.destroy();
                 }
             );
-        }, [n, t, e]),
-        n
+        }, [i, a, e]),
+        i
     );
 }
 function S() {
-    let e = y(N);
-    return (0, i.jsx)("div", { className: r()(D.vV, D.KP), children: (0, i.jsx)("div", { ref: e, className: D.yi }) });
+    let e = I(g);
+    return (0, s.jsx)("div", { className: r()(w.vV, w.KP), children: (0, s.jsx)("div", { ref: e, className: w.yi }) });
 }
-function P() {
-    let e = y(I);
-    return (0, i.jsx)("div", { className: r()(D.M8, D.KP), children: (0, i.jsx)("div", { ref: e, className: D.D8 }) });
+function R() {
+    let e = I(E);
+    return (0, s.jsx)("div", { className: r()(w.M8, w.KP), children: (0, s.jsx)("div", { ref: e, className: w.D8 }) });
 }
 function k(e) {
-    let { guild: t, mainIslandClassName: n, balloonDogClassName: s } = e,
-        l = (0, c.bG)([p.A], () => p.A.useReducedMotion),
-        d = a.useRef(null),
-        u = y(b),
-        m = g.Ay.getGuildIconURL({ id: t.id, icon: t.icon, size: 96 });
+    let { guild: a, mainIslandClassName: i, balloonDogClassName: n } = e,
+        l = (0, d.bG)([v.A], () => v.A.useReducedMotion),
+        u = t.useRef(null),
+        o = I(A),
+        f = x.Ay.getGuildIconURL({ id: a.id, icon: a.icon, size: 96 });
     return (
-        a.useEffect(() => {
+        t.useEffect(() => {
             let e;
             return (
-                null != d.current && null != m
-                    ? (0, v.S4)(m).then((t) => {
-                          var n, i;
-                          let a,
-                              s =
-                                  ((n = JSON.parse(JSON.stringify(E))),
-                                  (i = t[0]),
-                                  (n.assets[0].p = m),
-                                  (a = n.layers.findIndex((e) => "flag" === e.nm)),
-                                  n.layers[a].shapes[0].it.forEach((e, t) => {
-                                      "gr" === n.layers[a].shapes[0].it[t].ty &&
-                                          n.layers[a].shapes[0].it[t].it.findIndex((e) => "fl" === e.ty) >= 0 &&
-                                          (n.layers[a].shapes[0].it[t].it[1].c.k = [...i.map((e) => e / 256), 1]);
+                null != u.current && null != f
+                    ? (0, y.S4)(f).then((a) => {
+                          var i, s;
+                          let t,
+                              n =
+                                  ((i = JSON.parse(JSON.stringify(D))),
+                                  (s = a[0]),
+                                  (i.assets[0].p = f),
+                                  (t = i.layers.findIndex((e) => "flag" === e.nm)),
+                                  i.layers[t].shapes[0].it.forEach((e, a) => {
+                                      "gr" === i.layers[t].shapes[0].it[a].ty &&
+                                          i.layers[t].shapes[0].it[a].it.findIndex((e) => "fl" === e.ty) >= 0 &&
+                                          (i.layers[t].shapes[0].it[a].it[1].c.k = [...s.map((e) => e / 256), 1]);
                                   }),
-                                  n);
-                          e = o().loadAnimation({
-                              container: d.current,
+                                  i);
+                          e = c().loadAnimation({
+                              container: u.current,
                               renderer: "svg",
                               loop: !0,
                               autoplay: !l,
-                              animationData: s,
+                              animationData: n,
                           });
                       })
-                    : null != d.current &&
-                      (e = o().loadAnimation({
-                          container: d.current,
+                    : null != u.current &&
+                      (e = c().loadAnimation({
+                          container: u.current,
                           renderer: "svg",
                           loop: !0,
                           autoplay: !l,
-                          animationData: JSON.parse(JSON.stringify(E)),
+                          animationData: JSON.parse(JSON.stringify(D)),
                       })),
                 () => {
                     e?.destroy();
                 }
             );
-        }, [m, d, l]),
-        (0, i.jsxs)("div", {
-            className: r()(D.tu, D.fV),
+        }, [f, u, l]),
+        (0, s.jsxs)("div", {
+            className: r()(w.tu, w.fV),
             children: [
-                (0, i.jsx)("div", { className: r()(D.Sb, s), ref: u }),
-                (0, i.jsx)("div", { className: r()(D.$h, n), ref: d }),
+                (0, s.jsx)("div", { className: r()(w.Sb, n), ref: o }),
+                (0, s.jsx)("div", { className: r()(w.$h, i), ref: u }),
             ],
         })
     );
 }
-function w(e) {
-    let { guild: t, onStart: n, onboardingStatus: s, headerId: r, disableTracking: l } = e,
-        o = (0, c.bG)([A.A], () => A.A.isLoading()),
-        p = a.useRef(!1);
-    a.useEffect(() => {
+function G(e) {
+    let { guild: a, onStart: i, onboardingStatus: n, headerId: r, disableTracking: l } = e,
+        c = (0, d.bG)([j.A], () => j.A.isLoading()),
+        v = t.useRef(!1);
+    t.useEffect(() => {
         if (!l)
             return (
-                x.default.track(C.HAw.GUILD_ONBOARDING_STEP_VIEWED, { ...(0, f.H$)(t.id), step: -1, required: !0 }),
+                N.default.track(O.HAw.GUILD_ONBOARDING_STEP_VIEWED, { ...(0, h.H$)(a.id), step: -1, required: !0 }),
                 () => {
-                    x.default.track(C.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
-                        ...(0, f.H$)(t.id),
+                    N.default.track(O.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
+                        ...(0, h.H$)(a.id),
                         step: -1,
-                        skipped: !p.current,
+                        skipped: !v.current,
                         is_final_step: !1,
                         in_onboarding: !0,
                     });
                 }
             );
-    }, [t.id, p, l]);
-    let g = a.useMemo(() => (0, h.Iv)(t, 135, !1, !0), [t]);
+    }, [a.id, v, l]);
+    let x = t.useMemo(() => (0, p.Iv)(a, 135, !1, !0), [a]);
     return (
-        (0, _.Ay)(() => {
+        (0, m.Ay)(() => {
             setTimeout(() => {
-                (p.current = !0), n();
+                (v.current = !0), i();
             }, 3e3);
         }),
-        (0, i.jsx)("div", {
-            className: D.PY,
-            children: (0, i.jsxs)("div", {
-                className: D.Fo,
+        (0, s.jsx)("div", {
+            className: w.PY,
+            children: (0, s.jsxs)("div", {
+                className: w.Fo,
                 children: [
-                    (0, i.jsx)("div", { children: (0, i.jsx)("img", { className: D.D3, src: g, alt: "" }) }),
-                    (0, i.jsxs)("div", {
-                        className: D.rD,
+                    (0, s.jsx)("div", { children: (0, s.jsx)("img", { className: w.D3, src: x, alt: "" }) }),
+                    (0, s.jsxs)("div", {
+                        className: w.rD,
                         children: [
-                            (0, i.jsx)(d.E, {
-                                className: D.CH,
+                            (0, s.jsx)(u.E, {
+                                className: w.CH,
                                 variant: "text-lg/normal",
                                 color: "always-white",
                                 id: r,
-                                children: O.intl.format(O.t["j59F/c"], { guildName: t?.name }),
+                                children: b.intl.format(b.t["j59F/c"], { guildName: a?.name }),
                             }),
-                            o
-                                ? (0, i.jsx)(u.y, { className: D.__invalid_subtitle })
-                                : s === j.$o.NOT_APPLICABLE
-                                  ? (0, i.jsx)(m.D, {
-                                        className: D.__invalid_subtitle,
+                            c
+                                ? (0, s.jsx)(o.y, { className: w.__invalid_subtitle })
+                                : n === _.$o.NOT_APPLICABLE
+                                  ? (0, s.jsx)(f.D, {
+                                        className: w.__invalid_subtitle,
                                         variant: "heading-xxl/normal",
                                         color: "always-white",
-                                        children: O.intl.string(O.t.Q5ibtV),
+                                        children: b.intl.string(b.t.Q5ibtV),
                                     })
-                                  : (0, i.jsx)(m.D, {
-                                        className: D.__invalid_subtitle,
+                                  : (0, s.jsx)(f.D, {
+                                        className: w.__invalid_subtitle,
                                         variant: "heading-xxl/normal",
                                         color: "always-white",
-                                        children: O.intl.string(O.t["Alcl/e"]),
+                                        children: b.intl.string(b.t["Alcl/e"]),
                                     }),
                         ],
                     }),

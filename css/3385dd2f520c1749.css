@@ -1,0 +1,23 @@
+.channelOptionWrapper_f9ff5f {
+    align-items: center;
+    display: flex
+}
+
+.icon_f9ff5f {
+    height: 24px;
+    margin-inline-end: 8px;
+    width: 24px
+}
+
+.icon_f9ff5f,
+.inputPrefix_f9ff5f {
+    color: var(--interactive-text-default)
+}
+
+.inputPrefix_f9ff5f {
+    height: 20px;
+    inset-inline-start: 8px;
+    position: absolute;
+    top: 10px;
+    width: 20px
+}

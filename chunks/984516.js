@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { A: () => _ });
-var i = n(627968),
-    a = n(64700),
-    s = n(534514),
-    l = n(834730),
-    r = n(821609),
-    o = n(975807),
-    c = n(975571),
-    d = n(500049),
-    u = n(902527),
-    h = n(652215),
-    p = n(985018),
-    m = n(834951);
-function _(e) {
-    let { padding: t = !1 } = e,
-        n = a.useCallback(() => {
-            (0, o.A)(c.A.getAppsSupportURL(h.MVz.APPS_LEARN_MORE));
+i.d(e, { A: () => L });
+var s = i(627968),
+    n = i(64700),
+    r = i(534514),
+    A = i(834730),
+    a = i(821609),
+    l = i(975807),
+    o = i(975571),
+    I = i(500049),
+    N = i(902527),
+    c = i(652215),
+    _ = i(985018),
+    E = i(834951);
+function L(t) {
+    let { padding: e = !1 } = t,
+        i = n.useCallback(() => {
+            (0, l.A)(o.A.getAppsSupportURL(c.MVz.APPS_LEARN_MORE));
         }, []),
-        { trackSectionImpressionRef: _ } = (0, u.A)({ sectionName: d.yK.NEW_TO_APPS, numItems: 1, numVisibleItems: 1 });
-    return (0, i.jsx)("div", {
-        className: t ? m.pK : void 0,
-        children: (0, i.jsxs)("div", {
-            ref: (e) => {
-                _.current = e;
+        { trackSectionImpressionRef: L } = (0, N.A)({ sectionName: I.yK.NEW_TO_APPS, numItems: 1, numVisibleItems: 1 });
+    return (0, s.jsx)("div", {
+        className: e ? E.pK : void 0,
+        children: (0, s.jsxs)("div", {
+            ref: (t) => {
+                L.current = t;
             },
-            className: m.kL,
+            className: E.kL,
             children: [
-                (0, i.jsxs)("div", {
-                    className: m.rf,
+                (0, s.jsxs)("div", {
+                    className: E.rf,
                     children: [
-                        (0, i.jsx)(s.D, {
+                        (0, s.jsx)(r.D, {
                             variant: "heading-lg/bold",
                             color: "text-strong",
-                            children: p.intl.string(p.t["kw8/Ec"]),
+                            children: _.intl.string(_.t["kw8/Ec"]),
                         }),
-                        (0, i.jsx)(l.E, {
+                        (0, s.jsx)(A.E, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: p.intl.string(p.t.GZoV1O),
+                            children: _.intl.string(_.t.GZoV1O),
                         }),
                     ],
                 }),
-                (0, i.jsx)(r.$, {
+                (0, s.jsx)(a.$, {
                     variant: "primary",
-                    text: p.intl.string(p.t.Ye51oT),
-                    "aria-label": p.intl.formatToPlainString(p.t.xx5Sug, {
-                        sectionTitle: p.intl.string(p.t["kw8/Ec"]),
-                        sectionBody: p.intl.string(p.t.GZoV1O),
+                    text: _.intl.string(_.t.Ye51oT),
+                    "aria-label": _.intl.formatToPlainString(_.t.xx5Sug, {
+                        sectionTitle: _.intl.string(_.t["kw8/Ec"]),
+                        sectionBody: _.intl.string(_.t.GZoV1O),
                     }),
-                    onClick: n,
+                    onClick: i,
                 }),
             ],
         }),

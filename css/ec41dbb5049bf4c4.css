@@ -1,0 +1,130 @@
+.container_cc53de {
+    background-color: var(--background-surface-highest);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 25px auto 0;
+    padding: 8px;
+    width: 260px
+}
+
+.bannerImage_cc53de {
+    height: 33.75px;
+    width: 57.23px
+}
+
+.topContent_cc53de {
+    align-items: center;
+    display: flex;
+    gap: 12px
+}
+
+.textContent_cc53de {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px
+}
+
+.editorAnimate_cf6da1 {
+    animation: slidein_cf6da1 .5s ease-in 1s forwards;
+    margin-inline-end: calc((var(--custom-client-themes-editor-content-width) + (var(--custom-client-themes-editor-padding)*2))*-1)
+}
+
+@keyframes slidein_cf6da1 {
+    0% {
+        margin-inline-end: calc((var(--custom-client-themes-editor-content-width) + (var(--custom-client-themes-editor-padding)*2))*-1)
+    }
+
+    to {
+        margin-inline-end: 0
+    }
+}
+
+.themeEditor_cf6da1 {
+    background: var(--background-base-low);
+    border-inline-start: 6px solid var(--background-base-lower);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    height: 100%;
+    inset-inline-end: 0;
+    padding: var(--custom-client-themes-editor-padding) 0;
+    padding-inline: var(--space-12);
+    position: relative;
+    z-index: 1
+}
+
+.editorHeader_cf6da1 {
+    width: var(--custom-client-themes-editor-content-width)
+}
+
+.editorBody_cf6da1,
+.editorHeader_cf6da1 {
+    padding: 0 var(--custom-client-themes-editor-padding)
+}
+
+.selectionGroup_cf6da1 {
+    margin-top: 16px;
+    width: var(--custom-client-themes-editor-content-width)
+}
+
+.editorFooter_cf6da1 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+    max-width: 268px;
+    padding: 0 var(--custom-client-themes-editor-padding)
+}
+
+.closeCircleButton_cf6da1 {
+    cursor: pointer;
+    height: 20px;
+    inset-inline-end: 18px;
+    position: absolute;
+    top: 18px;
+    width: 20px;
+    z-index: 2
+}
+
+.closeCircle_cf6da1 {
+    color: var(--interactive-text-default);
+    height: 100%;
+    width: 100%
+}
+
+.closeCircle_cf6da1:focus,
+.closeCircle_cf6da1:hover {
+    color: var(--interactive-text-hover)
+}
+
+.footerUpsellRow_cf6da1 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.footerWishlistButton_cf6da1 {
+    background: var(--control-secondary-background-hover);
+    border: 1px solid var(--control-secondary-border-hover)
+}
+
+.bannerUpsell_cf6da1 {
+    align-items: center;
+    background-image: var(--custom-premium-colors-premium-gradient-tier-2);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 10px
+}
+
+.bannerUpsell_cf6da1 .premiumIcon_cf6da1 {
+    color: var(--white);
+    flex-shrink: 0;
+    margin-inline-end: 10px
+}

@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     lj: "elevated__3f12a",
     x6: "button__3f12a elevated__3f12a",
     p8: "buttonTitle__3f12a",

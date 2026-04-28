@@ -1,48 +1,47 @@
-"use strict";
-n.d(t, { A: () => d });
-var a = n(64700),
-    r = n(735438),
-    i = n(17928),
-    l = n(919796),
-    s = n(427358),
-    o = n(711014),
-    c = n(841595);
-function d(e) {
-    let [t, n, d, u, _] = (0, i.yK)([c.A], () => [
-            c.A.getMutualFriendsCount(e.id),
-            c.A.getMutualFriends(e.id),
-            c.A.getMutualGuilds(e.id),
-            c.A.isFetchingProfile(e.id),
-            c.A.isFetchingFriends(e.id),
+i.d(t, { A: () => c });
+var l = i(64700),
+    n = i(735438),
+    s = i(17928),
+    u = i(919796),
+    r = i(427358),
+    d = i(711014),
+    a = i(841595);
+function c(e) {
+    let [t, i, c, o, A] = (0, s.yK)([a.A], () => [
+            a.A.getMutualFriendsCount(e.id),
+            a.A.getMutualFriends(e.id),
+            a.A.getMutualGuilds(e.id),
+            a.A.isFetchingProfile(e.id),
+            a.A.isFetchingFriends(e.id),
         ]),
-        p = (0, i.bG)([s.A], () => s.A.getUserAffinitiesMap()),
-        m = (0, i.bG)([o.Ay], () => o.Ay.getFlattenedGuildIds()),
-        h = (0, a.useMemo)(
+        h = (0, s.bG)([r.A], () => r.A.getUserAffinitiesMap()),
+        m = (0, s.bG)([d.Ay], () => d.Ay.getFlattenedGuildIds()),
+        g = (0, l.useMemo)(
             () =>
-                null == n || n.length < 2
-                    ? n
-                    : (0, r.sortBy)(n, (e) => {
+                null == i || i.length < 2
+                    ? i
+                    : (0, n.sortBy)(i, (e) => {
                           let { user: t } = e;
-                          return -((p.get(t.id)?.communicationProbability ?? -1) * 1);
+                          return -((h.get(t.id)?.communicationProbability ?? -1) * 1);
                       }),
-            [n, p],
+            [i, h],
         ),
-        f = (0, a.useMemo)(() => {
-            if (null == d || d.length < 2) return d;
+        x = (0, l.useMemo)(() => {
+            if (null == c || c.length < 2) return c;
             let e = Object.fromEntries(m.map((e, t) => [e, t]));
-            return (0, r.sortBy)(d, (t) => {
-                let { guild: n } = t;
-                return e[n.id] ?? m.length;
+            return (0, n.sortBy)(c, (t) => {
+                let { guild: i } = t;
+                return e[i.id] ?? m.length;
             });
-        }, [d, m]),
-        g = (0, l.A)(t),
-        b = (0, l.A)(h),
-        v = (0, l.A)(f);
+        }, [c, m]),
+        b = (0, u.A)(t),
+        f = (0, u.A)(g),
+        p = (0, u.A)(x);
     return {
-        mutualFriendsCount: t ?? g,
-        mutualFriends: h ?? b,
-        mutualGuilds: f ?? v,
-        isFetching: u,
-        isFetchingFriends: _,
+        mutualFriendsCount: t ?? b,
+        mutualFriends: g ?? f,
+        mutualGuilds: x ?? p,
+        isFetching: o,
+        isFetchingFriends: A,
     };
 }

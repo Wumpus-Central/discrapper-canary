@@ -1,102 +1,101 @@
-"use strict";
-i.r(t), i.d(t, { default: () => er });
-var r,
-    s = i(627968),
-    n = i(64700),
-    a = i(607399),
-    l = i(17928),
-    o = i(565787),
-    _ = i(364522),
-    c = i(289873),
-    d = i(323082),
-    u = i(9113),
-    g = i(726249),
-    f = i(683271),
-    m = i(936555),
-    x = i(465932),
-    p = i(366853),
-    h = i(742589),
-    C = i(71393),
-    L = i(615405),
-    v = i(300233),
-    j = i(217976),
-    b = i(514179),
-    I = i(707554),
-    A = i(599941),
-    N = i(915869),
-    S = i(700206),
-    E = i(950344),
-    T = i(815332),
-    k = i(456540),
-    R = i(217530),
-    P = i(817649),
-    G = i(534514),
-    O = i(834730),
-    B = i(548118),
-    U = i(253932),
-    M = i(218394),
-    y = i(428558),
-    w = i(556545);
-function D(e) {
-    let { coverImageAsset: t, title: i, guild: r, description: n, children: a } = e,
-        l = U.kt.useSetting(),
-        o = (0, M.j)(),
-        [_, c] = (0, y.A)(t, o && l);
-    return (0, s.jsxs)("div", {
-        className: w.kL,
+e.r(s), e.d(s, { default: () => il });
+var l,
+    t = e(627968),
+    n = e(64700),
+    r = e(607399),
+    a = e(17928),
+    d = e(565787),
+    c = e(364522),
+    o = e(289873),
+    u = e(323082),
+    g = e(9113),
+    x = e(726249),
+    m = e(683271),
+    j = e(936555),
+    h = e(465932),
+    _ = e(454219),
+    v = e(742589),
+    N = e(71393),
+    A = e(615405),
+    I = e(300233),
+    p = e(217976),
+    L = e(514179),
+    E = e(707554),
+    b = e(599941),
+    T = e(915869),
+    S = e(700206),
+    G = e(950344),
+    f = e(815332),
+    O = e(456540),
+    R = e(217530),
+    B = e(817649),
+    k = e(534514),
+    C = e(834730),
+    F = e(548118),
+    U = e(253932),
+    y = e(218394),
+    D = e(428558),
+    M = e(556545);
+function P(i) {
+    let { coverImageAsset: s, title: e, guild: l, description: n, children: r } = i,
+        a = U.kt.useSetting(),
+        d = (0, y.j)(),
+        [c, o] = (0, D.A)(s, d && a);
+    return (0, t.jsxs)("div", {
+        className: M.kL,
         children: [
-            (0, s.jsx)("div", {
-                ref: _,
-                className: w.El,
-                children: null != c && (0, s.jsx)("img", { src: c, alt: "", className: w.N4 }),
+            (0, t.jsx)("div", {
+                ref: c,
+                className: M.El,
+                children: null != o && (0, t.jsx)("img", { src: o, alt: "", className: M.N4 }),
             }),
-            (0, s.jsx)("div", { className: w._C, children: (0, s.jsx)(B.Ay, { guild: r, size: B.Ay.Sizes.XLARGE }) }),
-            (0, s.jsx)(G.D, { variant: "heading-xl/semibold", className: w.H1, children: i }),
-            (0, s.jsx)(O.E, { className: w.jr, variant: "text-md/normal", color: "text-default", children: n }),
-            a,
+            (0, t.jsx)("div", { className: M._C, children: (0, t.jsx)(F.Ay, { guild: l, size: F.Ay.Sizes.XLARGE }) }),
+            (0, t.jsx)(k.D, { variant: "heading-xl/semibold", className: M.H1, children: e }),
+            (0, t.jsx)(C.E, { className: M.jr, variant: "text-md/normal", color: "text-default", children: n }),
+            r,
         ],
     });
 }
-var z = i(652215),
-    F = i(985018),
-    H = i(607876);
-let W = (e) => {
-    let { guild: t } = e,
-        i = (0, A.uk)(t.id)[0];
-    (0, E.A)({
-        guildId: t.id,
-        groupListingId: i?.id,
+var z = e(652215),
+    w = e(985018),
+    X = e(607876);
+let H = (i) => {
+    let { guild: s } = i,
+        e = (0, b.uk)(s.id)[0];
+    (0, G.A)({
+        guildId: s.id,
+        groupListingId: e?.id,
         location: z.ThZ.ROLE_SUBSCRIPTIONS_TAB,
-        relevantSubscriptionListingIds: i?.subscription_listings_ids,
+        relevantSubscriptionListingIds: e?.subscription_listings_ids,
     });
-    let { activeSubscription: r } = (0, S.A)(i?.id),
-        n = (0, A.Tq)(t.id),
-        a = n?.description,
-        { editStateIds: l } = N.d0(i?.id ?? null, t.id);
-    return (0, s.jsxs)(s.Fragment, {
+    let { activeSubscription: l } = (0, S.A)(e?.id),
+        n = (0, b.Tq)(s.id),
+        r = n?.description,
+        { editStateIds: a } = T.d0(e?.id ?? null, s.id);
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, s.jsxs)(D, {
-                title: F.intl.format(F.t["rm+ojA"], { serverName: t.name }),
-                description: a ?? null,
+            (0, t.jsxs)(P, {
+                title: w.intl.format(w.t["rm+ojA"], { serverName: s.name }),
+                description: r ?? null,
                 coverImageAsset: n?.cover_image_asset ?? null,
-                guild: t,
+                guild: s,
                 children: [
-                    null != i ? (0, s.jsx)(T.A, { className: H.Ds, groupListingId: i.id, subscription: r }) : null,
-                    (0, s.jsx)(k.A, { subscription: r }),
+                    null != e ? (0, t.jsx)(f.A, { className: X.Ds, groupListingId: e.id, subscription: l }) : null,
+                    (0, t.jsx)(O.A, { subscription: l }),
                 ],
             }),
-            (0, s.jsx)(I.F, {
-                children: (0, s.jsx)(R.A, {
-                    children: l.map((e) =>
-                        (0, s.jsx)(
-                            P.A,
+            (0, t.jsx)(E.F, {
+                children: (0, t.jsx)(R.A, {
+                    children: a.map((i) =>
+                        (0, t.jsx)(
+                            B.A,
                             {
-                                guildId: t.id,
-                                groupListingId: i?.id ?? "",
-                                listingId: e,
+                                guildId: s.id,
+                                groupListingId: e?.id ?? "",
+                                listingId: i,
                                 analyticsLocation: z.ThZ.ROLE_SUBSCRIPTIONS_TAB,
                             },
-                            e,
+                            i,
                         ),
                     ),
                 }),
@@ -104,120 +103,120 @@ let W = (e) => {
         ],
     });
 };
-var X = i(110259),
-    q = i(139286),
-    V = i(640509),
-    Q = (((r = {}).GUILD_NOT_ELIGIBLE = "guild_not_eligible"), (r.NOT_GUILD_MEMBER = "not_guild_member"), r);
-let Z = (e) => {
-    let { errorType: t } = e;
+var W = e(110259),
+    Z = e(139286),
+    K = e(640509),
+    Q = (((l = {}).GUILD_NOT_ELIGIBLE = "guild_not_eligible"), (l.NOT_GUILD_MEMBER = "not_guild_member"), l);
+let V = (i) => {
+    let { errorType: s } = i;
     return (
-        (0, q.A)({
-            type: X.ImpressionTypes.PAGE,
-            name: X.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
-            properties: { error_page_type: t },
+        (0, Z.A)({
+            type: W.ImpressionTypes.PAGE,
+            name: W.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_UPSELL_ERROR_PAGE,
+            properties: { error_page_type: s },
         }),
-        (0, s.jsx)("div", {
-            className: V.Xd,
-            children: (0, s.jsxs)("div", {
-                className: V.lr,
+        (0, t.jsx)("div", {
+            className: K.Xd,
+            children: (0, t.jsxs)("div", {
+                className: K.lr,
                 children: [
-                    (0, s.jsx)("img", { src: "/assets/6b450d698584e501.svg", alt: "", className: V.W9 }),
-                    (0, s.jsx)(G.D, {
+                    (0, t.jsx)("img", { src: "/assets/6b450d698584e501.svg", alt: "", className: K.W9 }),
+                    (0, t.jsx)(k.D, {
                         variant: "heading-xl/extrabold",
-                        className: V.mW,
-                        children: "guild_not_eligible" === t ? F.intl.string(F.t.atZQVZ) : F.intl.string(F.t.gAdWBl),
+                        className: K.mW,
+                        children: "guild_not_eligible" === s ? w.intl.string(w.t.atZQVZ) : w.intl.string(w.t.gAdWBl),
                     }),
-                    (0, s.jsx)(O.E, {
+                    (0, t.jsx)(C.E, {
                         variant: "text-md/normal",
-                        className: V.LS,
-                        children: "guild_not_eligible" === t ? F.intl.string(F.t.teWe5G) : F.intl.string(F.t["X/yMrK"]),
+                        className: K.LS,
+                        children: "guild_not_eligible" === s ? w.intl.string(w.t.teWe5G) : w.intl.string(w.t["X/yMrK"]),
                     }),
                 ],
             }),
         })
     );
 };
-var K = i(696986),
-    Y = i(109335),
-    J = i(330766);
+var q = e(696986),
+    J = e(109335),
+    Y = e(330766);
 function $() {
-    return (0, s.jsx)("div", {
-        className: Y.kL,
-        children: (0, s.jsxs)("div", {
-            className: Y.Qs,
+    return (0, t.jsx)("div", {
+        className: J.kL,
+        children: (0, t.jsxs)("div", {
+            className: J.Qs,
             children: [
-                (0, s.jsx)("img", { src: J, alt: F.intl.string(F.t.MvLOqp) }),
-                (0, s.jsx)(K.h, { size: 12 }),
-                (0, s.jsx)(G.D, {
-                    className: Y.wx,
+                (0, t.jsx)("img", { src: Y, alt: w.intl.string(w.t.MvLOqp) }),
+                (0, t.jsx)(q.h, { size: 12 }),
+                (0, t.jsx)(k.D, {
+                    className: J.wx,
                     variant: "heading-lg/semibold",
-                    children: F.intl.string(F.t.t18lFj),
+                    children: w.intl.string(w.t.t18lFj),
                 }),
-                (0, s.jsx)(K.h, { size: 8 }),
-                (0, s.jsx)(O.E, {
+                (0, t.jsx)(q.h, { size: 8 }),
+                (0, t.jsx)(C.E, {
                     color: "text-default",
                     variant: "text-sm/normal",
-                    children: F.intl.string(F.t.TvGJgk),
+                    children: w.intl.string(w.t.TvGJgk),
                 }),
             ],
         }),
     });
 }
-var ee = i(746080),
-    et = i(832933);
-function ei(e) {
-    let { guildId: t } = e,
-        i = (0, l.bG)([C.A], () => C.A.getGuild(t), [t]),
-        r = (0, l.bG)([p.A], () => p.A.isConnected()),
-        I = (0, m.A)(t),
-        A = (0, j.A)(t),
-        N = (0, l.bG)([L.A], () => L.A.isSubscriptionFetching),
-        S = (0, v.X)(),
-        { shouldHideGuildPurchaseEntryPoints: E, restrictionsLoading: T } = (0, x.MH)(t),
-        k = null == i || !S || N || T;
-    (0, g.HU)({ subsection: F.intl.string(F.t["KzCF/6"]), location: i?.name }),
-        (0, u.A)(a.Fr ? "role-subscriptions-overview" : void 0);
-    let R = r && (null == i || !(I || A) || (E && !T));
+var ii = e(746080),
+    is = e(832933);
+function ie(i) {
+    let { guildId: s } = i,
+        e = (0, a.bG)([N.A], () => N.A.getGuild(s), [s]),
+        l = (0, a.bG)([_.A], () => _.A.isConnected()),
+        E = (0, j.A)(s),
+        b = (0, p.A)(s),
+        T = (0, a.bG)([A.A], () => A.A.isSubscriptionFetching),
+        S = (0, I.X)(),
+        { shouldHideGuildPurchaseEntryPoints: G, restrictionsLoading: f } = (0, h.MH)(s),
+        O = null == e || !S || T || f;
+    (0, x.HU)({ subsection: w.intl.string(w.t["KzCF/6"]), location: e?.name }),
+        (0, g.A)(r.Fr ? "role-subscriptions-overview" : void 0);
+    let R = l && (null == e || !(E || b) || (G && !f));
     if (
         (n.useEffect(() => {
-            d.hP();
+            u.hP();
         }, []),
         n.useEffect(() => {
-            R && !a.Fr && (0, f.B)(t, ee.VV.ROLE_SUBSCRIPTIONS);
-        }, [t, R]),
-        a.Fr && R)
+            R && !r.Fr && (0, m.B)(s, ii.VV.ROLE_SUBSCRIPTIONS);
+        }, [s, R]),
+        r.Fr && R)
     ) {
-        let e = null == i ? Q.NOT_GUILD_MEMBER : Q.GUILD_NOT_ELIGIBLE;
-        return (0, s.jsx)(Z, { errorType: e });
+        let i = null == e ? Q.NOT_GUILD_MEMBER : Q.GUILD_NOT_ELIGIBLE;
+        return (0, t.jsx)(V, { errorType: i });
     }
-    return (0, s.jsxs)("div", {
-        className: et.kL,
+    return (0, t.jsxs)("div", {
+        className: is.kL,
         children: [
-            (0, s.jsxs)(h.A, {
-                toolbar: (0, s.jsx)(n.Fragment, {}),
-                className: et.jr,
+            (0, t.jsxs)(v.A, {
+                toolbar: (0, t.jsx)(n.Fragment, {}),
+                className: is.jr,
                 children: [
-                    (0, s.jsx)(h.A.Icon, { icon: (0, o.k)(b.A), "aria-hidden": !0 }),
-                    (0, s.jsx)(h.A.Title, { children: F.intl.string(F.t["KzCF/6"]) }),
+                    (0, t.jsx)(v.A.Icon, { icon: (0, d.k)(L.A), "aria-hidden": !0 }),
+                    (0, t.jsx)(v.A.Title, { children: w.intl.string(w.t["KzCF/6"]) }),
                 ],
             }),
-            (0, s.jsx)("div", { id: "guild-role-subscription-overview-notice" }),
-            (0, s.jsx)("div", {
-                className: et.Qs,
-                children: I
-                    ? (0, s.jsx)(_.d_, {
-                          className: et.XG,
-                          children: (0, s.jsx)("div", {
-                              className: et.gT,
-                              children: k ? (0, s.jsx)(c.y, {}) : (0, s.jsx)(W, { guild: i }),
+            (0, t.jsx)("div", { id: "guild-role-subscription-overview-notice" }),
+            (0, t.jsx)("div", {
+                className: is.Qs,
+                children: E
+                    ? (0, t.jsx)(c.d_, {
+                          className: is.XG,
+                          children: (0, t.jsx)("div", {
+                              className: is.gT,
+                              children: O ? (0, t.jsx)(o.y, {}) : (0, t.jsx)(H, { guild: e }),
                           }),
                       })
-                    : (0, s.jsx)($, {}),
+                    : (0, t.jsx)($, {}),
             }),
         ],
     });
 }
-function er(e) {
-    let { guildId: t } = e;
-    return (0, s.jsx)(v.H, { guildId: t, refetchOnMount: !0, children: (0, s.jsx)(ei, { guildId: t }) });
+function il(i) {
+    let { guildId: s } = i;
+    return (0, t.jsx)(I.H, { guildId: s, refetchOnMount: !0, children: (0, t.jsx)(ie, { guildId: s }) });
 }

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     DC: "mobileMenuItem__43cad",
     Fp: "mobileHeaderSubMenu__43cad",

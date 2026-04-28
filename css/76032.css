@@ -1,0 +1,118 @@
+.productCard__79d38 {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative
+}
+
+.solidBackground__79d38 {
+    background: var(--background-base-lower)
+}
+
+.theme-dark .opaqueBackground__79d38 {
+    background: rgba(48, 51, 56, .85)
+}
+
+.theme-light .opaqueBackground__79d38 {
+    background: var(--background-base-lower)
+}
+
+.productThumbnailContainer__79d38 {
+    position: relative
+}
+
+.productThumbnail__79d38 {
+    background: #2b2c31;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.purchaseToUnlockBadge__79d38 {
+    align-items: center;
+    background-color: rgba(43, 45, 49, .7);
+    border-radius: 30px;
+    color: var(--white);
+    display: flex;
+    gap: 6px;
+    inset-inline-start: 50%;
+    justify-content: center;
+    padding: 4px 12px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color .2s ease-in-out;
+    white-space: nowrap
+}
+
+.draftBadge__79d38 {
+    bottom: 10px;
+    inset-inline-end: 8px;
+    position: absolute
+}
+
+.productThumbnailContainer__79d38:hover .purchaseToUnlockBadge__79d38 {
+    background-color: rgba(43, 45, 49, .45)
+}
+
+.lockIcon__79d38 {
+    height: 16px;
+    width: 16px
+}
+
+.productName__79d38 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.productDetails__79d38 {
+    align-content: flex-start;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 16px 16px 0
+}
+
+.productDetailContent__79d38 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    margin-inline-end: 24px;
+    overflow: hidden
+}
+
+.purchaseDetails__79d38 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 16px
+}
+
+.productActionButton__79d38 {
+    grid-area: 1/2/3/3
+}
+
+.showMoreButton__79d38 {
+    align-items: center;
+    color: var(--interactive-text-hover);
+    display: flex;
+    gap: 4px;
+    padding-top: 2px
+}
+
+.arrowIcon__79d38 {
+    margin-bottom: -2px
+}
+
+.hasAction__79d38 {
+    color: var(--text-link);
+    cursor: pointer
+}
+
+.cardClickableContainer__79d38 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     VL: "upsellWrapper__8fe94",
     Hz: "unifyTrialUpsell__8fe94",

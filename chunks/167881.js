@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     cz: "hamburger__9293f",
     kL: "container__9293f",

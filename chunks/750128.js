@@ -1,66 +1,65 @@
-"use strict";
-let i, r, a, s, l;
-n.d(t, { A: () => A, Z: () => g });
-var o,
-    c = n(284009),
-    d = n.n(c),
-    u = n(17928),
-    _ = n(228366),
-    p = n(720149),
-    f = n(155718),
-    h = n(706727),
-    m = n(927813),
-    g =
-        (((o = {})[(o.IN_FLIGHT = 0)] = "IN_FLIGHT"),
-        (o[(o.ERRORED = 1)] = "ERRORED"),
-        (o[(o.SUCCEEDED = 2)] = "SUCCEEDED"),
-        o);
-class b extends u.Ay.Store {
+let e, u, E, i, r;
+t.d(n, { A: () => R, Z: () => O });
+var s,
+    a = t(284009),
+    c = t.n(a),
+    A = t(17928),
+    I = t(228366),
+    C = t(720149),
+    T = t(155718),
+    o = t(706727),
+    N = t(927813),
+    O =
+        (((s = {})[(s.IN_FLIGHT = 0)] = "IN_FLIGHT"),
+        (s[(s.ERRORED = 1)] = "ERRORED"),
+        (s[(s.SUCCEEDED = 2)] = "SUCCEEDED"),
+        s);
+class M extends A.Ay.Store {
     static displayName = "InteractionModalStore";
-    getModalState(e) {
-        return e !== i ? null : r;
+    getModalState(l) {
+        return l !== e ? null : u;
     }
 }
-let A = new b(_.h, {
+let R = new M(I.h, {
     LOGOUT: function () {
-        return (i = null), (r = null), (a = null), (s = null), (l = null), !0;
+        return (e = null), (u = null), (E = null), (i = null), (r = null), !0;
     },
-    INTERACTION_MODAL_CREATE: function (e) {
-        let { nonce: t } = e;
-        return t === l && (p.A.deleteMessage(s, a, !0), (a = null), (s = null), (l = null)), !1;
+    INTERACTION_MODAL_CREATE: function (l) {
+        let { nonce: n } = l;
+        return n === r && (C.A.deleteMessage(i, E, !0), (E = null), (i = null), (r = null)), !1;
     },
-    INTERACTION_IFRAME_MODAL_CREATE: function (e) {
-        let { nonce: t } = e;
-        return t === l && (p.A.deleteMessage(s, a, !0), (a = null), (s = null), (l = null)), !1;
+    INTERACTION_IFRAME_MODAL_CREATE: function (l) {
+        let { nonce: n } = l;
+        return n === r && (C.A.deleteMessage(i, E, !0), (E = null), (i = null), (r = null)), !1;
     },
-    INTERACTION_QUEUE: function (e) {
-        let { messageId: t, nonce: n, data: o, preflight: c } = e;
-        switch (o.interactionType) {
-            case f.G4.APPLICATION_COMMAND:
-                return (a = t), (s = o.channelId), (l = n), !1;
-            case f.G4.MODAL_SUBMIT:
-                d()(null == i || 1 === r || 2 === r, "cannot submit multiple modals at once"), (i = n), (r = 0);
-                let u = (e) => {
+    INTERACTION_QUEUE: function (l) {
+        let { messageId: n, nonce: t, data: s, preflight: a } = l;
+        switch (s.interactionType) {
+            case T.G4.APPLICATION_COMMAND:
+                return (E = n), (i = s.channelId), (r = t), !1;
+            case T.G4.MODAL_SUBMIT:
+                c()(null == e || 1 === u || 2 === u, "cannot submit multiple modals at once"), (e = t), (u = 0);
+                let A = (l) => {
                     setTimeout(() => {
-                        i === n && 0 === r && (0, h.C1)(n);
-                    }, e);
+                        e === t && 0 === u && (0, o.C1)(t);
+                    }, l);
                 };
                 return (
-                    null != c
-                        ? (u(2 * m.A.Millis.MINUTE), c.then(() => u(10 * m.A.Millis.SECOND)).catch(() => (0, h.C1)(n)))
-                        : u(10 * m.A.Millis.SECOND),
+                    null != a
+                        ? (A(2 * N.A.Millis.MINUTE), a.then(() => A(10 * N.A.Millis.SECOND)).catch(() => (0, o.C1)(t)))
+                        : A(10 * N.A.Millis.SECOND),
                     !0
                 );
             default:
                 return !1;
         }
     },
-    INTERACTION_SUCCESS: function (e) {
-        let { nonce: t } = e;
-        return null != t && t === i && ((r = 2), !0);
+    INTERACTION_SUCCESS: function (l) {
+        let { nonce: n } = l;
+        return null != n && n === e && ((u = 2), !0);
     },
-    INTERACTION_FAILURE: function (e) {
-        let { nonce: t } = e;
-        return null != t && t === i && ((r = 1), !0);
+    INTERACTION_FAILURE: function (l) {
+        let { nonce: n } = l;
+        return null != n && n === e && ((u = 1), !0);
     },
 });

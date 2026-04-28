@@ -319,7 +319,7 @@ function ee(e) {
         children: Z.t.map((e) => (0, s.jsx)(X, { guild: t, definition: e }, e.tier)),
     });
 }
-var et = i(419354),
+var et = i(123924),
     ei = i(172218),
     es = i(717421),
     el = i(289704),
@@ -627,7 +627,7 @@ function eL(e) {
     let { guild: t, analyticsLocation: a, videoPlacement: n, sourceAnalyticsLocations: c } = e,
         o = l.useCallback(() => {
             (0, eP.openModalLazy)(async () => {
-                let { default: e } = await i.e("85810").then(i.bind(i, 872233));
+                let { default: e } = await Promise.all([i.e("6836"), i.e("85810")]).then(i.bind(i, 872233));
                 return (i) =>
                     (0, s.jsx)(e, {
                         ...i,

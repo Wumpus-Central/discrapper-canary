@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper__920ab",
     Sl: "image__920ab",

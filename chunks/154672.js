@@ -1,68 +1,67 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(110259),
-    s = n(933681),
-    l = n(228366),
-    r = n(499785),
-    a = n(652215);
-let o = {
-    signup: (e, t) =>
-        r.A.post({
-            url: a.Rsh.HUB_WAITLIST_SIGNUP,
-            body: { email: e, school: t },
+r.d(e, { A: () => s });
+var i = r(110259),
+    a = r(933681),
+    o = r(228366),
+    _ = r(499785),
+    d = r(652215);
+let s = {
+    signup: (t, e) =>
+        _.A.post({
+            url: d.Rsh.HUB_WAITLIST_SIGNUP,
+            body: { email: t, school: e },
             trackedActionData: {
                 event: i.NetworkActionNames.HUB_WAITLIST_SIGNUP,
-                properties: (e) => {
-                    let t = !1,
-                        n = e?.body?.email_domain;
-                    return null != n && (t = -1 !== n.split(".").indexOf("edu")), (0, s.e0)({ is_edu_email: t });
+                properties: (t) => {
+                    let e = !1,
+                        r = t?.body?.email_domain;
+                    return null != r && (e = -1 !== r.split(".").indexOf("edu")), (0, a.e0)({ is_edu_email: e });
                 },
             },
             rejectWithError: !1,
         }),
-    sendVerificationEmail: async (e, t, n) =>
+    sendVerificationEmail: async (t, e, r) =>
         (
-            await r.A.post({
-                url: a.Rsh.HUB_EMAIL_VERIFY_SEND,
-                body: { email: e, guild_id: n, allow_multiple_guilds: t, use_verification_code: !0 },
+            await _.A.post({
+                url: d.Rsh.HUB_EMAIL_VERIFY_SEND,
+                body: { email: t, guild_id: r, allow_multiple_guilds: e, use_verification_code: !0 },
                 trackedActionData: {
                     event: i.NetworkActionNames.HUB_EMAIL_VERIFY_SEND,
-                    properties: (e) => {
-                        let t = e?.body?.has_matching_guild;
-                        return (0, s.e0)({ has_matching_guild: t });
+                    properties: (t) => {
+                        let e = t?.body?.has_matching_guild;
+                        return (0, a.e0)({ has_matching_guild: e });
                     },
                 },
                 rejectWithError: !1,
             })
         ).body,
-    async verify(e) {
-        if (null != e)
+    async verify(t) {
+        if (null != t)
             try {
-                let t = await r.A.post({
-                        url: a.Rsh.HUB_EMAIL_VERIFY,
-                        body: { token: e },
+                let e = await _.A.post({
+                        url: d.Rsh.HUB_EMAIL_VERIFY,
+                        body: { token: t },
                         trackedActionData: { event: i.NetworkActionNames.HUB_EMAIL_VERIFY },
                         rejectWithError: !1,
                     }),
-                    n = t.body.guild?.id;
-                l.h.dispatch({ type: "HUB_VERIFY_EMAIL_SUCCESS", guildId: n });
-            } catch (e) {
-                l.h.dispatch({ type: "HUB_VERIFY_EMAIL_FAILURE", errors: e.body });
+                    r = e.body.guild?.id;
+                o.h.dispatch({ type: "HUB_VERIFY_EMAIL_SUCCESS", guildId: r });
+            } catch (t) {
+                o.h.dispatch({ type: "HUB_VERIFY_EMAIL_FAILURE", errors: t.body });
             }
     },
-    async verifyCode(e, t, n) {
-        if (null != e)
+    async verifyCode(t, e, r) {
+        if (null != t)
             try {
-                let s = await r.A.post({
-                        url: a.Rsh.HUB_EMAIL_VERIFY_CODE,
-                        body: { code: e, guild_id: t, email: n },
+                let a = await _.A.post({
+                        url: d.Rsh.HUB_EMAIL_VERIFY_CODE,
+                        body: { code: t, guild_id: e, email: r },
                         trackedActionData: { event: i.NetworkActionNames.HUB_EMAIL_VERIFY },
                         rejectWithError: !1,
                     }),
-                    o = s.body.guild?.id;
-                return l.h.dispatch({ type: "HUB_VERIFY_EMAIL_SUCCESS", guildId: o }), s.body;
-            } catch (e) {
-                throw (l.h.dispatch({ type: "HUB_VERIFY_EMAIL_FAILURE", errors: e.body }), e);
+                    s = a.body.guild?.id;
+                return o.h.dispatch({ type: "HUB_VERIFY_EMAIL_SUCCESS", guildId: s }), a.body;
+            } catch (t) {
+                throw (o.h.dispatch({ type: "HUB_VERIFY_EMAIL_FAILURE", errors: t.body }), t);
             }
     },
 };

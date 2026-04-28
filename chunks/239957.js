@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     gP: "statsOverlay__1219f",
     wx: "header__1219f",
     DD: "title__1219f",

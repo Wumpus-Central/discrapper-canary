@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     pz: "sidebar__409aa",
     Hw: "mobile__409aa",

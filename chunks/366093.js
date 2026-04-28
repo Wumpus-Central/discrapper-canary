@@ -239,7 +239,7 @@ function R(e) {
                   .catch(i),
               !0)
             : 401 === e.statusCode && e.body?.code === E.t02.MFA_REQUIRED && e.body?.mfa
-              ? (Promise.all([n.e("90966"), n.e("60865")])
+              ? (Promise.all([n.e("93816"), n.e("8979"), n.e("4736"), n.e("90966"), n.e("65171")])
                     .then(n.bind(n, 522238))
                     .then((n) => {
                         let { openMFAModal: r } = n;
@@ -647,9 +647,8 @@ if (
     ),
     (n.p = (window.GLOBAL_ENV.STATIC_ENDPOINT ?? "") + window.GLOBAL_ENV.PUBLIC_PATH),
     !0 === window.__METICULOUS_ENABLED &&
-        n
-            .e("3321")
-            .then(n.bind(n, 342400))
+        Promise.all([n.e("64270"), n.e("92885")])
+            .then(n.bind(n, 534164))
             .then((e) => e.init()),
     window.Meticulous?.isRunningAsTest === !0)
 ) {
@@ -723,7 +722,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let ew = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new ef.A().log(
-    `[BUILD INFO] Release Channel: ${ew}, Build Number: 535247, Version Hash: 8a58f961a5218604dd508130698fd25a3b3dc6b5`,
+    `[BUILD INFO] Release Channel: ${ew}, Build Number: 536181, Version Hash: 45aa7ae3fe93013bb1b546eafd0af3c26aaef1f7`,
 ),
     o.A.setTags({ appContext: E.QCW }),
     K.A.initBasic(),

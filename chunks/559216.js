@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Qs: "content_c30e20",
     FY: "streamHidden_c30e20",

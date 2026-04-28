@@ -1,16 +1,16 @@
 n.d(t, {
     Am: () => O,
-    Ck: () => V,
-    G8: () => B,
+    Ck: () => B,
+    G8: () => V,
     Ge: () => R,
-    H9: () => j,
-    I: () => S,
+    H9: () => y,
+    I: () => b,
     Jo: () => L,
-    T0: () => N,
-    UY: () => M,
-    U_: () => F,
-    VL: () => P,
-    Yq: () => w,
+    T0: () => S,
+    UY: () => w,
+    U_: () => H,
+    VL: () => M,
+    Yq: () => P,
     m: () => T,
     r4: () => D,
     ri: () => U,
@@ -19,58 +19,58 @@ n.d(t, {
     n(938796);
 var i = n(627968),
     l = n(64700),
-    a = n(621466),
-    r = n(665260),
-    s = n(442433),
+    s = n(621466),
+    a = n(665260),
+    r = n(442433),
     o = n(720149),
-    c = n(414798),
-    d = n(267102),
+    d = n(414798),
+    c = n(267102),
     u = n(594061),
-    _ = n(734057),
-    m = n(580745),
-    h = n(232835),
-    p = n(287809),
-    g = n(954571),
-    f = n(625494),
-    x = n(723702),
-    A = n(427262),
-    C = n(841549),
+    m = n(734057),
+    h = n(580745),
+    g = n(232835),
+    A = n(287809),
+    p = n(954571),
+    x = n(625494),
+    f = n(723702),
+    C = n(427262),
+    E = n(841549),
     v = n(439147),
     I = n(81437),
-    E = n(652215);
-function b(e, t, n) {
+    _ = n(652215);
+function j(e, t, n) {
     return l.useCallback(() => {
         n({ [e]: !t });
     }, [e, n, t]);
 }
-function y(e, t, n) {
+function N(e, t, n) {
     return l.useCallback(
         (i) => {
-            let l = p.default.getUser(e);
+            let l = A.default.getUser(e);
             if (null == l) return;
             if ((i.preventDefault(), i.stopPropagation(), !i.shiftKey)) return void n();
-            let a = `@${A.Ay.getUserTag(l, { decoration: "never" })}`,
-                r = `<@${e}>`;
-            f._.dispatchToLastSubscribed(E.jej.INSERT_TEXT, { plainText: a, rawText: r }), c.A.startTyping(t);
+            let s = `@${C.Ay.getUserTag(l, { decoration: "never" })}`,
+                a = `<@${e}>`;
+            x._.dispatchToLastSubscribed(_.jej.INSERT_TEXT, { plainText: s, rawText: a }), d.A.startTyping(t);
         },
         [e, t, n],
     );
 }
 function T(e, t, n, i) {
-    let l = b("usernameProfile", n, i);
-    return y(e.author.id, t.id, l);
+    let l = j("usernameProfile", n, i);
+    return N(e.author.id, t.id, l);
 }
-function j(e, t, n, i) {
-    let l = b("referencedUsernameProfile", n, i);
-    return y(e?.author.id, t.id, l);
-}
-function N(e, t, n, i) {
-    let l = b("interactionUsernameProfile", n, i);
-    return y(e?.user.id, t.id, l);
+function y(e, t, n, i) {
+    let l = j("referencedUsernameProfile", n, i);
+    return N(e?.author.id, t.id, l);
 }
 function S(e, t, n, i) {
-    let l = b("referencedUsernameProfile", n, i);
-    return y(e, t.id, l);
+    let l = j("interactionUsernameProfile", n, i);
+    return N(e?.user.id, t.id, l);
+}
+function b(e, t, n, i) {
+    let l = j("referencedUsernameProfile", n, i);
+    return N(e, t.id, l);
 }
 function k(e) {
     return l.useCallback(
@@ -81,88 +81,191 @@ function k(e) {
     );
 }
 function L(e, t) {
-    return k(b("avatarProfile", e, t));
+    return k(j("avatarProfile", e, t));
 }
 function R(e, t) {
-    return k(b("referencedAvatarProfile", e, t));
+    return k(j("referencedAvatarProfile", e, t));
 }
-function w(e, t) {
-    return k(b("interactionAvatarProfile", e, t));
+function P(e, t) {
+    return k(j("interactionAvatarProfile", e, t));
 }
-function P(e, t, a, o) {
-    let { id: c } = t,
-        { id: u, flags: p } = e,
-        f = (0, r.Lt)(p, E.pr7.EPHEMERAL),
-        A = (0, d.Us)();
+function M(e, t, s, o) {
+    let { id: d } = t,
+        { id: u, flags: A } = e,
+        x = (0, a.Lt)(A, _.pr7.EPHEMERAL),
+        C = (0, c.Us)();
     return l.useCallback(
         (e, t) => {
-            if (f) return;
-            if (!x.isPlatformEmbedded) {
+            if (x) return;
+            if (!f.isPlatformEmbedded) {
                 let t = e.target;
                 if (("A" === t.tagName && "" !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
-            let l = _.A.getChannel(c),
-                r = h.A.getMessage(c, u),
-                d = m.A.isEditing(c, u);
+            let l = m.A.getChannel(d),
+                a = g.A.getMessage(d, u),
+                c = h.A.isEditing(d, u);
             null == l ||
-                null == r ||
-                d ||
-                (g.default.track(E.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                null == a ||
+                c ||
+                (p.default.track(_.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: u,
-                    channel: c,
+                    channel: d,
                     location: "right_click",
                 }),
-                a({ contextMenu: !0 }),
-                (0, s.L3)(
+                s({ contextMenu: !0 }),
+                (0, r.L3)(
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
+                            n.e("94232"),
+                            n.e("77598"),
+                            n.e("23491"),
+                            n.e("47042"),
+                            n.e("93816"),
+                            n.e("80813"),
+                            n.e("49937"),
+                            n.e("54146"),
+                            n.e("78029"),
+                            n.e("81788"),
+                            n.e("55498"),
+                            n.e("54531"),
+                            n.e("90765"),
+                            n.e("19364"),
+                            n.e("89206"),
+                            n.e("48486"),
+                            n.e("34552"),
+                            n.e("55411"),
                             n.e("93103"),
+                            n.e("13708"),
+                            n.e("91007"),
                             n.e("88342"),
+                            n.e("42451"),
+                            n.e("98965"),
                             n.e("35313"),
+                            n.e("60249"),
+                            n.e("36564"),
+                            n.e("10014"),
+                            n.e("84783"),
+                            n.e("33416"),
+                            n.e("61268"),
+                            n.e("37752"),
+                            n.e("3217"),
+                            n.e("47678"),
+                            n.e("5557"),
+                            n.e("52229"),
+                            n.e("19871"),
+                            n.e("95340"),
                             n.e("62718"),
                             n.e("24170"),
-                            n.e("29594"),
-                            n.e("7637"),
-                            n.e("44647"),
-                            n.e("25657"),
-                            n.e("62092"),
-                            n.e("98970"),
+                            n.e("93907"),
+                            n.e("3998"),
+                            n.e("15188"),
+                            n.e("91671"),
+                            n.e("58273"),
+                            n.e("92295"),
+                            n.e("94503"),
+                            n.e("20930"),
+                            n.e("44801"),
+                            n.e("26001"),
+                            n.e("14591"),
+                            n.e("52111"),
+                            n.e("57458"),
+                            n.e("42204"),
+                            n.e("76413"),
+                            n.e("78195"),
+                            n.e("3303"),
+                            n.e("80945"),
+                            n.e("18265"),
+                            n.e("96804"),
+                            n.e("95998"),
+                            n.e("36419"),
+                            n.e("28850"),
+                            n.e("74021"),
+                            n.e("20045"),
+                            n.e("967"),
+                            n.e("81189"),
+                            n.e("47018"),
+                            n.e("10520"),
+                            n.e("203"),
+                            n.e("4774"),
+                            n.e("49629"),
+                            n.e("78601"),
+                            n.e("80407"),
+                            n.e("47057"),
+                            n.e("31638"),
+                            n.e("64072"),
+                            n.e("6809"),
+                            n.e("2329"),
+                            n.e("49333"),
+                            n.e("65065"),
+                            n.e("84820"),
+                            n.e("49490"),
+                            n.e("10142"),
+                            n.e("44912"),
+                            n.e("18792"),
+                            n.e("36674"),
+                            n.e("61099"),
+                            n.e("4551"),
+                            n.e("59791"),
+                            n.e("96680"),
+                            n.e("83799"),
+                            n.e("63874"),
+                            n.e("68214"),
+                            n.e("98425"),
+                            n.e("33973"),
                             n.e("91139"),
-                            n.e("47568"),
-                            n.e("26297"),
-                            n.e("96234"),
-                            n.e("44348"),
+                            n.e("25660"),
+                            n.e("95841"),
+                            n.e("37801"),
+                            n.e("53203"),
+                            n.e("39353"),
+                            n.e("46149"),
+                            n.e("2098"),
+                            n.e("17810"),
+                            n.e("21750"),
+                            n.e("48725"),
+                            n.e("97116"),
+                            n.e("91708"),
+                            n.e("6996"),
+                            n.e("6339"),
+                            n.e("57856"),
+                            n.e("28916"),
+                            n.e("6699"),
+                            n.e("30066"),
+                            n.e("27687"),
+                            n.e("10711"),
+                            n.e("59373"),
+                            n.e("69257"),
                         ]).then(n.bind(n, 783144));
                         return (n) =>
-                            (0, i.jsx)(e, { ...n, message: r, channel: l, mediaItem: t, shouldHideMediaOptions: o });
+                            (0, i.jsx)(e, { ...n, message: a, channel: l, mediaItem: t, shouldHideMediaOptions: o });
                     },
-                    { onClose: () => a({ contextMenu: !1 }), context: A },
+                    { onClose: () => s({ contextMenu: !1 }), context: C },
                 ));
         },
-        [f, c, u, a, A, o],
+        [x, d, u, s, C, o],
     );
 }
 function D(e, t) {
     return l.useCallback(
         (n) => {
-            let i = p.default.getUser(e),
-                l = _.A.getChannel(t);
-            null != i && null != l && (n.stopPropagation(), (0, C.wQ)(n, i, l));
+            let i = A.default.getUser(e),
+                l = m.A.getChannel(t);
+            null != i && null != l && (n.stopPropagation(), (0, E.wQ)(n, i, l));
         },
         [e, t],
     );
 }
-function M(e, t, n) {
+function w(e, t, n) {
     return l.useCallback(
         (i) => {
-            let l = p.default.getUser(e),
-                a = _.A.getChannel(t);
+            let l = A.default.getUser(e),
+                s = m.A.getChannel(t);
             null != l &&
-                null != a &&
-                (i.stopPropagation(), (0, C.B8)(i, { user: l, channel: a, moderationAlertId: n }));
+                null != s &&
+                (i.stopPropagation(), (0, E.B8)(i, { user: l, channel: s, moderationAlertId: n }));
         },
         [e, t, n],
     );
@@ -170,9 +273,9 @@ function M(e, t, n) {
 function O(e, t) {
     return l.useCallback(
         (n) => {
-            let i = p.default.getUser(e),
-                l = _.A.getChannel(t);
-            null != i && null != l && (n.stopPropagation(), (0, C.pB)(n, i, l.guild_id));
+            let i = A.default.getUser(e),
+                l = m.A.getChannel(t);
+            null != i && null != l && (n.stopPropagation(), (0, E.pB)(n, i, l.guild_id));
         },
         [e, t],
     );
@@ -189,42 +292,42 @@ function U(e, t) {
 }
 function G(e) {
     let { groupId: t, message: n, defaultValue: i } = e,
-        a = n.author.id,
-        r = `${t}:${a}`,
-        s = l.useRef(i),
-        [o, c] = l.useState(i);
-    s.current = o || s.current;
-    let d = l.useCallback(() => {
-            (0, u.cE)(), o || (f._.dispatchKeyed(E.zOV.ANIMATE_CHAT_AVATAR, r, !0), c(!0));
-        }, [o, r]),
-        _ = l.useCallback(() => {
-            f._.dispatchKeyed(E.zOV.ANIMATE_CHAT_AVATAR, r, !1), c(!1);
-        }, [r]);
-    return { hasHovered: s.current, isHovered: o, handleMouseEnter: d, handleMouseLeave: _ };
+        s = n.author.id,
+        a = `${t}:${s}`,
+        r = l.useRef(i),
+        [o, d] = l.useState(i);
+    r.current = o || r.current;
+    let c = l.useCallback(() => {
+            (0, u.cE)(), o || (x._.dispatchKeyed(_.zOV.ANIMATE_CHAT_AVATAR, a, !0), d(!0));
+        }, [o, a]),
+        m = l.useCallback(() => {
+            x._.dispatchKeyed(_.zOV.ANIMATE_CHAT_AVATAR, a, !1), d(!1);
+        }, [a]);
+    return { hasHovered: r.current, isHovered: o, handleMouseEnter: c, handleMouseLeave: m };
 }
-function B(e, t) {
+function V(e, t) {
     let [n, i] = l.useState(!1),
-        [r, s] = l.useState(!1);
+        [a, r] = l.useState(!1);
     return {
         handleFocus: l.useCallback(
             (t) => {
-                let n = (0, a.BF)(t)?.activeElement ?? null;
-                (t.target === t.currentTarget || t.currentTarget.contains(n)) && (s(!0), i(!0)), null != e && e(t);
+                let n = (0, s.BF)(t)?.activeElement ?? null;
+                (t.target === t.currentTarget || t.currentTarget.contains(n)) && (r(!0), i(!0)), null != e && e(t);
             },
             [e],
         ),
         handleBlur: l.useCallback(
             (e) => {
-                let n = (0, a.BF)(e)?.activeElement ?? null;
+                let n = (0, s.BF)(e)?.activeElement ?? null;
                 (e.target !== e.currentTarget && e.currentTarget.contains(n)) || i(!1), null != t && t(e);
             },
             [t],
         ),
         isFocused: n,
-        hasFocused: r,
+        hasFocused: a,
     };
 }
-function V(e, t) {
+function B(e, t) {
     return l.useCallback(() => {
         let { messageReference: n } = e,
             i = () => {
@@ -238,8 +341,8 @@ function V(e, t) {
         (null == t || (0, I.A)(t, i)) && i();
     }, [t, e]);
 }
-function F(e, t) {
-    let n = b("interactionData", e, t);
+function H(e, t) {
+    let n = j("interactionData", e, t);
     return l.useCallback(
         (e) => {
             e.preventDefault(), e.stopPropagation(), n();

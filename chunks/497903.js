@@ -1,8 +1,7 @@
-"use strict";
 e.exports = {
     j1: "settingCard__1a4ef",
     vu: "active__1a4ef",
-    a: "shield__1a4ef " + n(757854).WY,
+    a: "shield__1a4ef " + a(757854).WY,
     Ie: "cardIcon__1a4ef",
     X4: "cardFolder__1a4ef",
     Ux: "adminWarning__1a4ef",

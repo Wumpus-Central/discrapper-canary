@@ -1,24 +1,23 @@
-"use strict";
-r.d(t, { A: () => d }), r(323874), r(14289), r(35956), r(508300);
-var i = r(64700),
-    a = r(636537),
-    n = r(746002);
-async function s(e, t) {
-    let r = await a.Bo.get({ url: e, signal: t, binary: !0, rejectWithError: !0 });
-    t?.throwIfAborted();
-    let i = URL.createObjectURL(r.body);
+t.d(r, { A: () => i }), t(323874), t(14289), t(35956), t(508300);
+var n = t(64700),
+    u = t(636537),
+    c = t(746002);
+async function s(e, r) {
+    let t = await u.Bo.get({ url: e, signal: r, binary: !0, rejectWithError: !0 });
+    r?.throwIfAborted();
+    let n = URL.createObjectURL(t.body);
     try {
         let e = new Image();
         return (
-            (e.src = i),
+            (e.src = n),
             await Promise.race([
                 e.decode(),
-                new Promise((e, r) => {
-                    null != t &&
-                        t.addEventListener(
+                new Promise((e, t) => {
+                    null != r &&
+                        r.addEventListener(
                             "abort",
                             () => {
-                                r(new DOMException("Aborted", "AbortError"));
+                                t(new DOMException("Aborted", "AbortError"));
                             },
                             { once: !0 },
                         );
@@ -27,74 +26,74 @@ async function s(e, t) {
             e
         );
     } catch (e) {
-        throw (URL.revokeObjectURL(i), e);
+        throw (URL.revokeObjectURL(n), e);
     }
 }
-function l(e) {
+function a(e) {
     URL.revokeObjectURL(e);
 }
 function o(e) {
-    for (let t of e.values()) if (2 !== t) return !1;
+    for (let r of e.values()) if (2 !== r) return !1;
     return !0;
 }
-function c(e) {
+function l(e) {
     return "id" in e ? e.id : e.src;
 }
-function d(e) {
-    let { skuId: t, layers: r, playing: a = !0 } = e,
-        d = i.useRef(0),
-        [u, _] = i.useState(!1),
-        [p, f] = i.useState({}),
-        m = i.useRef(new AbortController()),
-        [h, b] = i.useState(a),
-        g = i.useRef(new Map()),
-        v = i.useRef(new Map()),
-        A = i.useRef(t);
+function i(e) {
+    let { skuId: r, layers: t, playing: u = !0 } = e,
+        i = n.useRef(0),
+        [f, d] = n.useState(!1),
+        [h, b] = n.useState({}),
+        w = n.useRef(new AbortController()),
+        [R, p] = n.useState(u),
+        E = n.useRef(new Map()),
+        g = n.useRef(new Map()),
+        k = n.useRef(r);
     return (
-        i.useEffect(() => {
-            a && !h && b(!0);
-        }, [a, h]),
-        i.useEffect(() => {
-            if (t !== A.current) {
-                (A.current = t), b(a);
-                let e = null != r && r.length > 0;
-                for (let t of r ?? []) {
-                    let r = c(t);
-                    !v.current.has(r) && ((e = !1), g.current.has(r) || g.current.set(r, 0));
+        n.useEffect(() => {
+            u && !R && p(!0);
+        }, [u, R]),
+        n.useEffect(() => {
+            if (r !== k.current) {
+                (k.current = r), p(u);
+                let e = null != t && t.length > 0;
+                for (let r of t ?? []) {
+                    let t = l(r);
+                    !g.current.has(t) && ((e = !1), E.current.has(t) || E.current.set(t, 0));
                 }
-                _(e), (d.current = 0);
+                d(e), (i.current = 0);
             }
-        }, [t, r, a]),
-        i.useEffect(() => {
-            if (null == t || null == r || 0 === r.length || !1 === h || 0 !== d.current) return;
-            d.current = 1;
-            let e = m.current;
-            r.forEach(async (r) => {
-                let i = c(r);
-                if (v.current.has(i)) g.current.set(i, 2), o(g.current) && (_(!0), (d.current = 2));
+        }, [r, t, u]),
+        n.useEffect(() => {
+            if (null == r || null == t || 0 === t.length || !1 === R || 0 !== i.current) return;
+            i.current = 1;
+            let e = w.current;
+            t.forEach(async (t) => {
+                let n = l(t);
+                if (g.current.has(n)) E.current.set(n, 2), o(E.current) && (d(!0), (i.current = 2));
                 else
                     try {
-                        let a =
-                            "id" in r
-                                ? (0, n.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: r.id })
-                                : r.src;
-                        if (null == a) return;
-                        let l = await s(a, e.signal);
+                        let u =
+                            "id" in t
+                                ? (0, c.getCollectiblesItemAssetUrl)({ skuId: r, assetFormat: "static", assetId: t.id })
+                                : t.src;
+                        if (null == u) return;
+                        let a = await s(u, e.signal);
                         if (e.signal.aborted) return;
-                        g.current.set(i, 2),
-                            v.current.set(i, l.src),
-                            f((e) => ({ ...e, [i]: l })),
-                            o(g.current) && (_(!0), (d.current = 2));
+                        E.current.set(n, 2),
+                            g.current.set(n, a.src),
+                            b((e) => ({ ...e, [n]: a })),
+                            o(E.current) && (d(!0), (i.current = 2));
                     } catch (e) {}
             });
-        }, [t, r, h]),
-        i.useEffect(() => {
-            let e = v.current,
-                t = m.current;
+        }, [r, t, R]),
+        n.useEffect(() => {
+            let e = g.current,
+                r = w.current;
             return () => {
-                Array.from(e.values()).forEach(l), t.abort();
+                Array.from(e.values()).forEach(a), r.abort();
             };
         }, []),
-        { loaded: u, layerData: p }
+        { loaded: f, layerData: h }
     );
 }

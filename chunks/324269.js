@@ -1,58 +1,57 @@
-"use strict";
-i.d(t, { default: () => f });
-var r = i(627968),
-    s = i(64700),
-    n = i(821609),
-    l = i(477782),
-    a = i(550079),
-    o = i(922016),
-    c = i(112173),
-    d = i(558060),
-    _ = i(284683),
-    u = i(985018);
-function C(e) {
-    let { closePopout: t, sortOptionContext: i } = e,
-        { sortOption: n, setSortOption: o, onReset: c } = i,
-        d = s.useMemo(
+n.d(e, { default: () => x });
+var r = n(627968),
+    i = n(64700),
+    l = n(821609),
+    o = n(477782),
+    s = n(550079),
+    a = n(922016),
+    c = n(112173),
+    d = n(558060),
+    u = n(284683),
+    p = n(985018);
+function h(t) {
+    let { closePopout: e, sortOptionContext: n } = t,
+        { sortOption: l, setSortOption: a, onReset: c } = n,
+        d = i.useMemo(
             () =>
-                _.aq.map((e) =>
+                u.aq.map((t) =>
                     (0, r.jsx)(
-                        l.iD,
-                        { id: `${e}`, group: "sort-by", label: (0, _.Ac)(e), action: () => o(e), checked: n === e },
-                        e,
+                        o.iD,
+                        { id: `${t}`, group: "sort-by", label: (0, u.Ac)(t), action: () => a(t), checked: l === t },
+                        t,
                     ),
                 ),
-            [o, n],
+            [a, l],
         );
     return (0, r.jsx)("div", {
-        children: (0, r.jsxs)(a.W, {
+        children: (0, r.jsxs)(s.W, {
             "data-menu-migrated": !0,
             navId: "sort-and-view",
-            "aria-label": u.intl.string(u.t["4jfWTK"]),
+            "aria-label": p.intl.string(p.t["4jfWTK"]),
             hideScroller: !0,
-            onClose: t,
-            onSelect: t,
+            onClose: e,
+            onSelect: e,
             children: [
-                (0, r.jsx)(l.rX, { label: u.intl.string(u.t.mBvLev), children: d }),
-                (0, r.jsx)(l.rX, {
-                    children: (0, r.jsx)(l.Dr, { id: "reset-all", label: u.intl.string(u.t["3b//lO"]), action: c }),
+                (0, r.jsx)(o.rX, { label: p.intl.string(p.t.mBvLev), children: d }),
+                (0, r.jsx)(o.rX, {
+                    children: (0, r.jsx)(o.Dr, { id: "reset-all", label: p.intl.string(p.t["3b//lO"]), action: c }),
                 }),
             ],
         }),
     });
 }
-function f() {
-    let e = (0, d.R)(),
-        t = (0, _.Ac)(e.sortOption),
-        i = s.useRef(null);
-    return (0, r.jsx)(o.Y, {
-        targetElementRef: i,
-        renderPopout: (t) => {
-            let { closePopout: i } = t;
-            return (0, r.jsx)(C, { closePopout: i, sortOptionContext: e });
+function x() {
+    let t = (0, d.R)(),
+        e = (0, u.Ac)(t.sortOption),
+        n = i.useRef(null);
+    return (0, r.jsx)(a.Y, {
+        targetElementRef: n,
+        renderPopout: (e) => {
+            let { closePopout: n } = e;
+            return (0, r.jsx)(h, { closePopout: n, sortOptionContext: t });
         },
         position: "bottom",
         align: "left",
-        children: (e) => (0, r.jsx)(n.$, { ...e, text: t, icon: c.J, variant: "secondary", buttonRef: i }),
+        children: (t) => (0, r.jsx)(l.$, { ...t, text: e, icon: c.J, variant: "secondary", buttonRef: n }),
     });
 }

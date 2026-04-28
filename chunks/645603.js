@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     fC: "badgeContainer__8fea4",
     kL: "container__8fea4",

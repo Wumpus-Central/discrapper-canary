@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+c.exports = {
     Kk: "icon__5c799",
     oD: "channelsWrapper__5c799",
     F6: "rolesWrapper__5c799",

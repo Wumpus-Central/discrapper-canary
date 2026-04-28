@@ -1,4 +1,4 @@
-r.d(t, { default: () => k });
+r.d(t, { default: () => S });
 var i = r(627968),
     n = r(64700),
     s = r(735438),
@@ -6,16 +6,16 @@ var i = r(627968),
     u = r(189213),
     l = r(17928),
     c = r(289873),
-    o = r(442433),
-    a = r(110574),
+    a = r(442433),
+    o = r(110574),
     m = r(342296),
     g = r(696451),
     I = r(994500),
     f = r(287809),
-    p = r(542986),
-    h = r(985018),
-    b = r(935076);
-function w(e) {
+    h = r(542986),
+    p = r(985018),
+    w = r(935076);
+function k(e) {
     let { guildId: t, guildOwnerId: s, member: d } = e,
         u = f.default.getUser(d.userId),
         l = n.useRef(null);
@@ -30,10 +30,10 @@ function w(e) {
             children: (e, n) => {
                 let { isShown: c } = n;
                 return (0, i.jsx)(
-                    a.A,
+                    o.A,
                     {
                         ref: l,
-                        className: b.Dc,
+                        className: w.Dc,
                         selected: c,
                         colorString: d.colorString,
                         colorStrings: d.colorStrings,
@@ -43,14 +43,46 @@ function w(e) {
                         premiumSince: null == d.premiumSince ? null : new Date(d.premiumSince),
                         guildId: t,
                         onContextMenu: (e) => {
-                            (0, o.L3)(e, async () => {
+                            (0, a.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    r.e("97262"),
+                                    r.e("91388"),
+                                    r.e("77598"),
+                                    r.e("23491"),
+                                    r.e("61748"),
+                                    r.e("26132"),
+                                    r.e("46652"),
+                                    r.e("93190"),
+                                    r.e("34552"),
+                                    r.e("55411"),
                                     r.e("93103"),
+                                    r.e("8757"),
+                                    r.e("89673"),
+                                    r.e("91007"),
+                                    r.e("68403"),
+                                    r.e("85968"),
+                                    r.e("76418"),
+                                    r.e("60195"),
+                                    r.e("21921"),
                                     r.e("88342"),
+                                    r.e("66495"),
+                                    r.e("29787"),
+                                    r.e("97558"),
+                                    r.e("94000"),
+                                    r.e("42451"),
+                                    r.e("98965"),
+                                    r.e("76665"),
                                     r.e("35313"),
+                                    r.e("76273"),
+                                    r.e("24198"),
+                                    r.e("39171"),
+                                    r.e("86169"),
+                                    r.e("49145"),
+                                    r.e("74610"),
+                                    r.e("70314"),
+                                    r.e("70515"),
+                                    r.e("27435"),
+                                    r.e("66939"),
                                     r.e("91042"),
-                                    r.e("42547"),
                                 ]).then(r.bind(r, 365689));
                                 return (r) => (0, i.jsx)(e, { ...r, user: u, guildId: t, showMediaItems: !0 });
                             });
@@ -64,32 +96,32 @@ function w(e) {
         u.id,
     );
 }
-function k(e) {
+function S(e) {
     let { guild: t, transitionState: r, onClose: s } = e,
-        o = n.useMemo(() => I.A.getFriendIDs(), []);
+        a = n.useMemo(() => I.A.getFriendIDs(), []);
     n.useEffect(() => {
-        p.A.fetchFriendMembersIfNotFetched(t.id, o);
-    }, [t.id, o]);
-    let a = (0, l.bG)([g.Ay], () => g.Ay.getMembers(t.id)),
+        h.A.fetchFriendMembersIfNotFetched(t.id, a);
+    }, [t.id, a]);
+    let o = (0, l.bG)([g.Ay], () => g.Ay.getMembers(t.id)),
         m = n.useMemo(
             () =>
-                d()(a)
-                    .filter((e) => !!o.includes(e.userId) && null != f.default.getUser(e.userId))
+                d()(o)
+                    .filter((e) => !!a.includes(e.userId) && null != f.default.getUser(e.userId))
                     .sortBy((e) => {
                         let t = f.default.getUser(e.userId);
                         return (null != t ? (e.nick ?? t.username) : "").toLocaleLowerCase();
                     })
-                    .map((e) => (0, i.jsx)(w, { guildId: t.id, guildOwnerId: t.ownerId, member: e }, e.userId))
+                    .map((e) => (0, i.jsx)(k, { guildId: t.id, guildOwnerId: t.ownerId, member: e }, e.userId))
                     .value(),
-            [o, t.id, t.ownerId, a],
+            [a, t.id, t.ownerId, o],
         ),
-        b = p.A.isFetchingFriendsForGuild(t.id);
+        w = h.A.isFetchingFriendsForGuild(t.id);
     return (0, i.jsxs)(u.Modal, {
-        title: h.intl.string(h.t.kYxEcH),
-        subtitle: h.intl.format(b ? h.t.EtQnZi : h.t.OgMdNS, { guildName: t.name, numFriends: m.length }),
+        title: p.intl.string(p.t.kYxEcH),
+        subtitle: p.intl.format(w ? p.t.EtQnZi : p.t.OgMdNS, { guildName: t.name, numFriends: m.length }),
         actions: void 0,
         transitionState: r,
         onClose: s,
-        children: [b && (0, i.jsx)(c.y, {}), m],
+        children: [w && (0, i.jsx)(c.y, {}), m],
     });
 }

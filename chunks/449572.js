@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+c.exports = {
     zr: "root_fdf9c0",
     Tp: "background_fdf9c0",
     Qs: "content_fdf9c0",

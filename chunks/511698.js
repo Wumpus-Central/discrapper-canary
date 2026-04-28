@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     CR: "modalRoot__39813",
     jE: "modalContent__39813",

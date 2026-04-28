@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     vk: "clickable_ef9ae7",
     B_: "imagePosition_ef9ae7",

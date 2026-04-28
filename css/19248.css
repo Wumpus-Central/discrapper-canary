@@ -1,0 +1,21 @@
+.error__584e1 {
+    color: var(--text-feedback-critical);
+    margin-top: 8px
+}
+
+.subTitle__584e1 {
+    margin-bottom: 24px
+}
+
+.button__584e1 {
+    margin-top: 24px
+}
+
+.codeInput__584e1 {
+    background-color: var(--input-background-default);
+    border: 1px solid var(--input-border-default)
+}
+
+.codeInput__584e1:focus {
+    border: 1px solid var(--brand-500)
+}

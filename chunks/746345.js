@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     my: "avatar_b8dbac",
     yt: "userPreview_b8dbac",

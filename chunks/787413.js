@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     Hc: "baseContainer__40d5b",
     Nr: "card__40d5b",
     Ki: "video__40d5b",

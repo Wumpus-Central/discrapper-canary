@@ -1,40 +1,80 @@
-"use strict";
-n.d(t, { r: () => r });
-var i = n(627968);
-n(64700);
-var l = n(442433);
-function r(e, t, r, a, s) {
-    let o = r.getGuildId();
-    return null != o
-        ? (0, l.L3)(
+t.d(n, { r: () => i });
+var a = t(627968);
+t(64700);
+var r = t(442433);
+function i(e, n, i, s, u) {
+    let l = i.getGuildId();
+    return null != l
+        ? (0, r.L3)(
               e,
               async () => {
-                  let { default: e } = await Promise.all([n.e("78178"), n.e("43076"), n.e("82250")]).then(
-                      n.bind(n, 335253),
-                  );
-                  return (n) =>
-                      (0, i.jsx)(e, {
-                          ...n,
-                          user: t,
-                          channel: r,
-                          guildId: o,
-                          onInteraction: (e) => s("GuildVoiceUserContextMenu", e),
+                  let { default: e } = await Promise.all([
+                      t.e("91388"),
+                      t.e("26132"),
+                      t.e("46652"),
+                      t.e("34552"),
+                      t.e("13708"),
+                      t.e("8757"),
+                      t.e("89673"),
+                      t.e("76418"),
+                      t.e("97558"),
+                      t.e("82263"),
+                      t.e("30221"),
+                      t.e("91994"),
+                      t.e("35027"),
+                      t.e("24198"),
+                      t.e("39171"),
+                      t.e("792"),
+                      t.e("45996"),
+                      t.e("92822"),
+                      t.e("49145"),
+                      t.e("66783"),
+                      t.e("11617"),
+                      t.e("70314"),
+                      t.e("27435"),
+                      t.e("17334"),
+                      t.e("45916"),
+                      t.e("43076"),
+                      t.e("52502"),
+                  ]).then(t.bind(t, 335253));
+                  return (t) =>
+                      (0, a.jsx)(e, {
+                          ...t,
+                          user: n,
+                          channel: i,
+                          guildId: l,
+                          onInteraction: (e) => u("GuildVoiceUserContextMenu", e),
                       });
               },
-              a,
+              s,
           )
-        : (0, l.L3)(
+        : (0, r.L3)(
               e,
               async () => {
-                  let { default: e } = await Promise.all([n.e("43076"), n.e("4197")]).then(n.bind(n, 661455));
-                  return (n) =>
-                      (0, i.jsx)(e, {
-                          ...n,
-                          user: t,
-                          channel: r,
-                          onInteraction: (e) => s("BaseVoiceUserContextMenu", e),
+                  let { default: e } = await Promise.all([
+                      t.e("91388"),
+                      t.e("26132"),
+                      t.e("46652"),
+                      t.e("34552"),
+                      t.e("13708"),
+                      t.e("8757"),
+                      t.e("89673"),
+                      t.e("97558"),
+                      t.e("24198"),
+                      t.e("792"),
+                      t.e("45996"),
+                      t.e("92822"),
+                      t.e("45916"),
+                      t.e("43076"),
+                  ]).then(t.bind(t, 661455));
+                  return (t) =>
+                      (0, a.jsx)(e, {
+                          ...t,
+                          user: n,
+                          channel: i,
+                          onInteraction: (e) => u("BaseVoiceUserContextMenu", e),
                       });
               },
-              a,
+              s,
           );
 }

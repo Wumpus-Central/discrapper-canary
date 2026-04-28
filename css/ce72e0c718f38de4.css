@@ -1,0 +1,211 @@
+.paypalLogo_e27f12 {
+    background-image: url(/assets/fb20a3f1b9783bae.svg)
+}
+
+.sofortLogo_e27f12 {
+    background-image: url(/assets/eb22e43f6f710d3b.svg)
+}
+
+.paysafeCardLogo_e27f12 {
+    background-image: url(/assets/745204c3b28350ab.svg)
+}
+
+.gcashLogo_e27f12 {
+    background-image: url(/assets/7e5579c4c73ca390.svg)
+}
+
+.grabPayLogo_e27f12 {
+    background-image: url(/assets/224f56365db6763e.svg)
+}
+
+.momoLogo_e27f12 {
+    background-image: url(/assets/0dbebb1dde8de002.svg)
+}
+
+.kakaopayLogo_e27f12 {
+    background-image: url(/assets/2a5fa2783cb39764.svg)
+}
+
+.goPayLogo_e27f12 {
+    background-image: url(/assets/637bf6beddb5589b.svg)
+}
+
+.bancontactLogo_e27f12 {
+    background-image: url(/assets/ce90dd2b5978b623.svg)
+}
+
+.epsLogo_e27f12 {
+    background-image: url(/assets/3f80791089be55d4.svg)
+}
+
+.idealLogo_e27f12 {
+    background-image: url(/assets/160f818e8dc66a17.svg)
+}
+
+.p24Logo_e27f12 {
+    background-image: url(/assets/3d961164938e62d7.svg)
+}
+
+.giropayLogo_e27f12 {
+    background-image: url(/assets/fcb798c4bf712284.svg)
+}
+
+.message_e27f12 {
+    font-size: 24px;
+    text-align: center
+}
+
+.verifyConnectedAccount_fb52a4 {
+    background: url(/assets/1243734d7e2a4654.png) 0 0 repeat;
+    background-color: #282b30;
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.logos_fb52a4,
+.verifyConnectedAccount_fb52a4 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.logos_fb52a4 {
+    margin-bottom: 95px
+}
+
+.logosDivider_fb52a4 {
+    background-image: url(/assets/f9951f6f63451f68.svg);
+    background-size: 28px 28px;
+    content: " ";
+    display: inline-block;
+    height: 28px;
+    margin: 0 37px;
+    width: 28px
+}
+
+.logo_fb52a4 {
+    background-size: 88px 88px;
+    height: 88px;
+    width: 88px
+}
+
+.logoDiscord_fb52a4 {
+    background-image: url(/assets/8068c1873bb18d03.svg)
+}
+
+.root__0d52d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-24);
+    text-align: center
+}
+
+.wrapper__0d52d {
+    min-height: auto
+}
+
+.header__0d52d {
+    margin-bottom: var(--space-12)
+}
+
+.body__0d52d,
+.logos__0d52d {
+    margin-bottom: var(--space-24)
+}
+
+.error__0d52d {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%
+}
+
+.buttonContainer_eeed5f {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 16px
+}
+
+.message_eeed5f {
+    font-size: 18px;
+    text-align: center
+}
+
+.btn_eeed5f {
+    margin-top: 22px;
+    transition: background-color .2s ease
+}
+
+.btn_eeed5f .spinnerItem_eeed5f {
+    background-color: var(--white);
+    opacity: .25
+}
+
+.btn_eeed5f:disabled {
+    background-color: transparent;
+    cursor: default;
+    opacity: 1;
+    padding: 28px
+}
+
+.message_d9edaa {
+    font-size: 18px;
+    text-align: center
+}
+
+.message_d9edaa.error_d9edaa {
+    color: var(--text-feedback-critical)
+}
+
+.message_d9edaa.details_d9edaa {
+    font-size: 16px
+}
+
+.message_d9edaa.details_d9edaa,
+.message_d9edaa.errorDetails_d9edaa {
+    color: var(--text-muted);
+    margin-top: 16px
+}
+
+.message_d9edaa.errorDetails_d9edaa {
+    font-size: 12px
+}
+
+.message_d9edaa strong {
+    font-weight: var(--font-weight-bold)
+}
+
+.btn_d9edaa {
+    margin-top: 22px;
+    transition: background-color .2s ease;
+    width: 100%
+}
+
+.btn_d9edaa:disabled {
+    background-color: transparent;
+    cursor: default;
+    opacity: 1;
+    padding: 28px
+}
+
+.message_f87c73 {
+    font-size: 18px;
+    text-align: center
+}
+
+.message_f87c73.details_f87c73 {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-top: 16px
+}
+
+.message_f87c73 strong {
+    font-weight: var(--font-weight-bold)
+}

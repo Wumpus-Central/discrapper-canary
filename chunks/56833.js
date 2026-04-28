@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { F: () => b });
 var r = n(756813),
     i = n(69171),
@@ -24,7 +23,7 @@ let b = (0, l._C)((e = {}) => {
     return {
         name: "Breadcrumbs",
         setup(e) {
-            var n, l, b, w, S, E, k;
+            var n, l, b, S, w, E, k;
             t.console &&
                 (0, a.P)(
                     ((n = e),
@@ -80,9 +79,9 @@ let b = (0, l._C)((e = {}) => {
                     ),
                 t.xhr &&
                     (0, i.Mn)(
-                        ((w = e),
+                        ((S = e),
                         function (e) {
-                            if ((0, c.KU)() !== w) return;
+                            if ((0, c.KU)() !== S) return;
                             let { startTimestamp: t, endTimestamp: n } = e,
                                 r = e.xhr[i.Er];
                             if (!t || !n || !r) return;
@@ -102,9 +101,9 @@ let b = (0, l._C)((e = {}) => {
                     ),
                 t.fetch &&
                     (0, s.ur)(
-                        ((S = e),
+                        ((w = e),
                         function (e) {
-                            if ((0, c.KU)() !== S) return;
+                            if ((0, c.KU)() !== w) return;
                             let { startTimestamp: t, endTimestamp: n } = e;
                             if (n && (!e.fetchData.url.match(/sentry_key/) || "POST" !== e.fetchData.method))
                                 if (e.error) {

@@ -1,29 +1,28 @@
-"use strict";
-n.d(t, { Ar: () => u, Ay: () => d, fU: () => c });
-var r = n(64700),
-    i = n(451988),
-    a = n(583846),
-    l = n(927813);
-let s = (e) => {
-        let t = Math.floor(e) % l.A.Seconds.MINUTE,
-            n = Math.floor(e / l.A.Seconds.MINUTE) % l.A.Seconds.MINUTE;
-        return { hours: Math.floor(e / l.A.Seconds.HOUR), minutes: n, seconds: t };
+a.d(e, { Ar: () => u, Ay: () => M, fU: () => h });
+var r = a(64700),
+    s = a(451988),
+    n = a(583846),
+    o = a(927813);
+let i = (t) => {
+        let e = Math.floor(t) % o.A.Seconds.MINUTE,
+            a = Math.floor(t / o.A.Seconds.MINUTE) % o.A.Seconds.MINUTE;
+        return { hours: Math.floor(t / o.A.Seconds.HOUR), minutes: a, seconds: e };
     },
-    o = (e) => String(e).padStart(2, "0"),
-    c = (e) => {
-        let { hours: t, minutes: n, seconds: r } = s(e);
-        return 0 === t ? `${o(n)}:${o(r)}` : `${o(t)}:${o(n)}:${o(r)}`;
+    l = (t) => String(t).padStart(2, "0"),
+    h = (t) => {
+        let { hours: e, minutes: a, seconds: r } = i(t);
+        return 0 === e ? `${l(a)}:${l(r)}` : `${l(e)}:${l(a)}:${l(r)}`;
     },
-    u = (e) => {
-        let { hours: t, minutes: n, seconds: r } = s(e);
-        return (0, a.XK)({ hours: t, minutes: n, seconds: r });
+    u = (t) => {
+        let { hours: e, minutes: a, seconds: r } = i(t);
+        return (0, n.XK)({ hours: e, minutes: a, seconds: r });
     };
-function d(e) {
-    let { start: t, end: n } = e,
-        [a] = (0, r.useState)(new i.IX()),
-        [s, o] = (0, r.useState)(() => Date.now());
-    (0, r.useEffect)(() => (a.start(l.A.Millis.HALF_SECOND, () => o(Date.now())), () => a.stop()), [a]);
-    let c = (n - t) / l.A.Millis.SECOND,
-        u = Math.max(Math.min((s - t) / l.A.Millis.SECOND, c), 0);
-    return { elapsed: u, duration: c, percentage: Math.max(Math.min(u / c, 1), 0) };
+function M(t) {
+    let { start: e, end: a } = t,
+        [n] = (0, r.useState)(new s.IX()),
+        [i, l] = (0, r.useState)(() => Date.now());
+    (0, r.useEffect)(() => (n.start(o.A.Millis.HALF_SECOND, () => l(Date.now())), () => n.stop()), [n]);
+    let h = (a - e) / o.A.Millis.SECOND,
+        u = Math.max(Math.min((i - e) / o.A.Millis.SECOND, h), 0);
+    return { elapsed: u, duration: h, percentage: Math.max(Math.min(u / h, 1), 0) };
 }

@@ -1,0 +1,30 @@
+.upsellPage_d204dc {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center
+}
+
+.upsellContainer_d204dc {
+    background-color: var(--background-base-lower);
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 24px
+}
+
+.upsellImage_d204dc {
+    height: 163px;
+    width: 201px
+}
+
+.upsellContent_d204dc {
+    display: flex;
+    flex-direction: column;
+    width: 357px
+}
+
+.bodyText_d204dc {
+    margin-bottom: auto;
+    margin-top: 8px
+}

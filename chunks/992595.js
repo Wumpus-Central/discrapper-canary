@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     PT: "markup__75297",
     tZ: "inlineFormat__75297",

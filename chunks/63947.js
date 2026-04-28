@@ -1,6 +1,5 @@
-"use strict";
-n.r(
-    (e.exports = {
+e.r(
+    (_.exports = {
         progressContainer: "progressContainer__0fd7d",
         blue: "blue__0fd7d",
         orange: "orange__0fd7d",

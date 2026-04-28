@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__0ab2c",
     aN: "sidebarHeader__0ab2c",

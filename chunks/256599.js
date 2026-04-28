@@ -1,42 +1,48 @@
-n.d(t, { A: () => I });
-var a = n(627968);
-n(64700);
-var r = n(503698),
-    i = n.n(r),
-    s = n(110259),
-    l = n(192308),
-    c = n(821609),
-    o = n(885574),
-    d = n(834730),
-    u = n(43990),
-    _ = n(359778),
-    m = n(534514),
-    p = n(139286),
-    A = n(872725),
-    f = n(920050);
-n(985603);
-var g = n(777376),
-    h = n(185797),
-    x = n(652215),
-    b = n(237146),
-    C = n(985018),
-    N = n(74776);
-function E() {
+i.d(t, { A: () => T });
+var a = i(627968);
+i(64700);
+var s = i(503698),
+    n = i.n(s),
+    r = i(110259),
+    l = i(192308),
+    c = i(821609),
+    d = i(885574),
+    o = i(834730),
+    u = i(43990),
+    m = i(359778),
+    A = i(534514),
+    p = i(139286),
+    g = i(872725),
+    x = i(920050);
+i(985603);
+var h = i(777376),
+    N = i(185797),
+    f = i(652215),
+    E = i(237146),
+    R = i(985018),
+    _ = i(74776);
+function C() {
     (0, l.openModalLazy)(async () => {
-        let { default: e } = await n.e("77632").then(n.bind(n, 836291));
+        let { default: e } = await Promise.all([
+            i.e("16848"),
+            i.e("30221"),
+            i.e("10622"),
+            i.e("46101"),
+            i.e("77632"),
+        ]).then(i.bind(i, 836291));
         return (t) => (0, a.jsx)(e, { ...t });
     });
 }
-function R() {
-    let e = (0, h.F)(),
+function I() {
+    let e = (0, N.F)(),
         t =
-            e.claimStatus === g.p1.CLAIMED
-                ? { text: C.intl.string(b.default.Plwzgf) }
-                : { text: C.intl.string(C.t.hvVgAZ) };
+            e.claimStatus === h.p1.CLAIMED
+                ? { text: R.intl.string(E.default.Plwzgf) }
+                : { text: R.intl.string(R.t.hvVgAZ) };
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)("div", {
-                className: N.R$,
+                className: _.R$,
                 children: [
                     (0, a.jsx)(c.$, {
                         variant: "overlay-primary",
@@ -52,80 +58,80 @@ function R() {
                         variant: "secondary",
                         size: "md",
                         ...t,
-                        onClick: E,
+                        onClick: C,
                         disabled: e.requestInProgress,
                     }),
                 ],
             }),
-            e.claimStatus === g.p1.CLAIM_IN_PROGRESS &&
+            e.claimStatus === h.p1.CLAIM_IN_PROGRESS &&
                 (0, a.jsxs)("div", {
-                    className: N.ed,
+                    className: _.ed,
                     children: [
-                        (0, a.jsx)(o.m, { size: "xs", color: "var(--text-subtle)" }),
-                        (0, a.jsx)(d.E, {
+                        (0, a.jsx)(d.m, { size: "xs", color: "var(--text-subtle)" }),
+                        (0, a.jsx)(o.E, {
                             variant: "text-xs/medium",
                             color: "text-subtle",
-                            children: C.intl.string(b.default.Fs74z9),
+                            children: R.intl.string(E.default.Fs74z9),
                         }),
                     ],
                 }),
         ],
     });
 }
-function I(e) {
+function T(e) {
     let { glowing: t = !1 } = e;
     return (
         (0, p.A)({
-            type: s.ImpressionTypes.VIEW,
-            name: s.ImpressionNames.PERK_DISCOVERABILITY_CARD,
-            properties: { name: f.XBOX_PREMIUM_PERK_HERO_ID, third_party_partner: "xbox" },
+            type: r.ImpressionTypes.VIEW,
+            name: r.ImpressionNames.PERK_DISCOVERABILITY_CARD,
+            properties: { name: x.XBOX_PREMIUM_PERK_HERO_ID, third_party_partner: "xbox" },
         }),
         (0, a.jsx)(u.N, {
-            theme: x.NJ8.DARKER,
+            theme: f.NJ8.DARKER,
             children: (e) =>
                 (0, a.jsx)("div", {
-                    className: i()(e, N.kL),
-                    children: (0, a.jsx)(A.A, {
-                        cardType: _.s.CUSTOM,
-                        cardClassName: N.Nr,
+                    className: n()(e, _.kL),
+                    children: (0, a.jsx)(g.A, {
+                        cardType: m.s.CUSTOM,
+                        cardClassName: _.Nr,
                         glowing: t,
                         hueRotate: 25,
                         glowAmount: 2,
                         blurAmount: 10,
                         children: (0, a.jsxs)("div", {
-                            className: N.XF,
+                            className: _.XF,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: N.j,
+                                    className: _.j,
                                     children: [
-                                        (0, a.jsx)("div", { className: N._g }),
-                                        (0, a.jsx)("div", { className: N.$h }),
-                                        (0, a.jsx)("div", { className: N.Rv }),
-                                        (0, a.jsx)("div", { className: N.Lw }),
-                                        (0, a.jsx)("div", { className: N.mR }),
+                                        (0, a.jsx)("div", { className: _._g }),
+                                        (0, a.jsx)("div", { className: _.$h }),
+                                        (0, a.jsx)("div", { className: _.Rv }),
+                                        (0, a.jsx)("div", { className: _.Lw }),
+                                        (0, a.jsx)("div", { className: _.mR }),
                                     ],
                                 }),
                                 (0, a.jsxs)("div", {
-                                    className: N.Qs,
+                                    className: _.Qs,
                                     children: [
                                         (0, a.jsx)("img", {
-                                            className: N.wm,
+                                            className: _.wm,
                                             src: "https://cdn.discordapp.com/assets/content/97981d492e2bd23cc19ff99d252811c75ed96226d81e8209f1038115a861a2a3.png",
                                             alt: "Xbox Game Pass",
                                         }),
-                                        (0, a.jsx)(m.D, {
+                                        (0, a.jsx)(A.D, {
                                             variant: "display-md",
                                             color: "text-strong",
-                                            className: N.DD,
-                                            children: C.intl.string(b.default.RGT513),
+                                            className: _.DD,
+                                            children: R.intl.string(E.default.RGT513),
                                         }),
-                                        (0, a.jsx)(d.E, {
+                                        (0, a.jsx)(o.E, {
                                             variant: "text-md/normal",
                                             color: "text-strong",
-                                            className: N.h_,
-                                            children: C.intl.string(b.default["+pTnsf"]),
+                                            className: _.h_,
+                                            children: R.intl.string(E.default["+pTnsf"]),
                                         }),
-                                        (0, a.jsx)(R, {}),
+                                        (0, a.jsx)(I, {}),
                                     ],
                                 }),
                             ],

@@ -1,28 +1,27 @@
-"use strict";
-i.d(t, { A: () => u });
-var r = i(627968);
-i(64700);
-var s = i(696986),
-    n = i(790284),
-    l = i(780964),
-    a = i(858897),
-    o = i(322092),
-    c = i(652215),
-    d = i(355097),
-    _ = i(985018);
-function u(e) {
-    let { subscription: t } = e;
-    return null == t
+e.d(n, { A: () => A });
+var s = e(627968);
+e(64700);
+var a = e(696986),
+    i = e(790284),
+    l = e(780964),
+    u = e(858897),
+    r = e(322092),
+    c = e(652215),
+    d = e(355097),
+    h = e(985018);
+function A(t) {
+    let { subscription: n } = t;
+    return null == n
         ? null
-        : t.status === c.Dmq.PAST_DUE
-          ? (0, r.jsxs)(r.Fragment, {
+        : n.status === c.Dmq.PAST_DUE
+          ? (0, s.jsxs)(s.Fragment, {
                 children: [
-                    (0, r.jsx)(s.h, { size: 16 }),
-                    (0, r.jsx)(o.A, {
-                        message: _.intl.string(_.t.eSuJE2),
-                        ctaMessage: _.intl.string(_.t.RXsxqb),
+                    (0, s.jsx)(a.h, { size: 16 }),
+                    (0, s.jsx)(r.A, {
+                        message: h.intl.string(h.t.eSuJE2),
+                        ctaMessage: h.intl.string(h.t.RXsxqb),
                         onClick: () => {
-                            n.A.setState({ subsection: d.nR }), (0, a.openUserSettings)(l.X.SUBSCRIPTIONS_PANEL);
+                            i.A.setState({ subsection: d.nR }), (0, u.openUserSettings)(l.X.SUBSCRIPTIONS_PANEL);
                         },
                     }),
                 ],

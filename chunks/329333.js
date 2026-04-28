@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     pd: "controlIcon_f1ceac",
     vu: "active_f1ceac",

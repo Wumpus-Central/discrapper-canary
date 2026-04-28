@@ -1,0 +1,29 @@
+.extrasContainer__19b74 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    min-width: 0;
+    padding-inline: var(--space-8)
+}
+
+.fullFlex__19b74 {
+    flex: 1
+}
+
+.debug__19b74:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    pointer-events: none;
+    visibility: visible
+}
+
+.debugUnpinned__19b74:after {
+    border: 2px solid var(--primary-300)
+}
+
+.debugPinned__19b74:after {
+    border: 2px solid var(--brand-600)
+}

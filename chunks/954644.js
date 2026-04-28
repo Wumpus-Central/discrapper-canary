@@ -1,18 +1,17 @@
-"use strict";
-r.d(t, { A: () => c });
-var l = r(627968),
-    s = r(64700),
-    n = r(674658),
-    a = r(491438),
-    i = r(561769);
+l.d(t, { A: () => c });
+var r = l(627968),
+    n = l(64700),
+    a = l(674658),
+    s = l(491438),
+    i = l(561769);
 let c = (e) => {
-    let { skuId: t, aspectRatio: r } = e,
-        { product: c } = (0, n.q)(t, !0),
-        u = s.useContext(i.v3);
+    let { skuId: t, aspectRatio: l } = e,
+        { product: c } = (0, a.q)(t, !0),
+        d = n.useContext(i.v3);
     if (null == c) return null;
-    let { flattenProductVariants: d, ...o } = u;
-    return (0, l.jsx)(i.v3.Provider, {
-        value: { flattenProductVariants: d ?? !0, ...o },
-        children: (0, l.jsx)(a.A, { skuId: t, aspectRatio: r }),
+    let { flattenProductVariants: o, ...u } = d;
+    return (0, r.jsx)(i.v3.Provider, {
+        value: { flattenProductVariants: o ?? !0, ...u },
+        children: (0, r.jsx)(s.A, { skuId: t, aspectRatio: l }),
     });
 };

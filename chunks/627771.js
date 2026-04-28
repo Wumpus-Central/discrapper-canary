@@ -1,2 +1,1 @@
-"use strict";
-e.exports = { B: "smallCardItem__02912" };
+o.exports = { B: "smallCardItem__02912" };

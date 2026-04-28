@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper__44b0c",
     Wn: "pointer__44b0c",

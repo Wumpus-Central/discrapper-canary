@@ -1,28 +1,30 @@
-n.d(t, { A: () => s });
-var i = n(627968);
-n(64700);
-var l = n(17928),
-    a = n(477782),
-    r = n(192308),
-    d = n(994500),
-    o = n(985018);
-function s(e) {
-    let { user: t, onAction: s, appContext: u } = e,
+e.d(t, { A: () => o });
+var i = e(627968);
+e(64700);
+var l = e(17928),
+    a = e(477782),
+    d = e(192308),
+    r = e(994500),
+    s = e(985018);
+function o(n) {
+    let { user: t, onAction: o, appContext: u } = n,
         c = t.id,
-        [A, g] = (0, l.yK)([d.A], () => [d.A.isFriend(c), d.A.getNickname(c) ?? null], [c]);
+        [A, b] = (0, l.yK)([r.A], () => [r.A.isFriend(c), r.A.getNickname(c) ?? null], [c]);
     if (!A) return null;
-    let f = null == g ? o.intl.string(o.t.BGYkaH) : o.intl.string(o.t["8pOYUE"]);
+    let p = null == b ? s.intl.string(s.t.BGYkaH) : s.intl.string(s.t["8pOYUE"]);
     return (0, i.jsx)(a.Dr, {
-        id: null == g ? "add-friend-nickname" : "edit-friend-nickname",
-        label: f,
+        id: null == b ? "add-friend-nickname" : "edit-friend-nickname",
+        label: p,
         action: () => {
-            s?.(),
-                (0, r.openModalLazy)(
+            o?.(),
+                (0, d.openModalLazy)(
                     async () => {
-                        let { default: e } = await n.e("59139").then(n.bind(n, 609422));
-                        return (n) => (0, i.jsx)(e, { user: t, nickname: g, ...n });
+                        let { default: n } = await Promise.all([e.e("77598"), e.e("88941"), e.e("59139")]).then(
+                            e.bind(e, 609422),
+                        );
+                        return (e) => (0, i.jsx)(n, { user: t, nickname: b, ...e });
                     },
-                    { contextKey: null != u ? (0, r.modalContextFromAppContext)(u) : void 0 },
+                    { contextKey: null != u ? (0, d.modalContextFromAppContext)(u) : void 0 },
                 );
         },
     });

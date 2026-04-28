@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Q3: "defaultCursor_ca5fa9",
     L8: "rewardImage_ca5fa9",

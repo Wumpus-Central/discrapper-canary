@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     _0: "connectedAccounts_e6abe8",
     Yy: "connectedAccountsColumn_e6abe8",

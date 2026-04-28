@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+i.r(
     (e.exports = {
         "heading-sm/normal": "heading-sm/normal__0f084",
         fontScaling: "fontScaling__0f084",

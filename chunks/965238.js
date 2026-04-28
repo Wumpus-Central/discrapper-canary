@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     ij: "wishlistButton__61424",
     hd: "sectionContainer__61424",

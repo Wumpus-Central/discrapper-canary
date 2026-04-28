@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Gf: "sectionTitle_d2a5f7",
     SH: "titleExtraPadding_d2a5f7",

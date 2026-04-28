@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     TU: "invalidWrapper__076c1",
     Gq: "invalid__076c1",

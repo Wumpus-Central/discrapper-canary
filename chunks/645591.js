@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper__2ea32",
     Kk: "icon__2ea32",

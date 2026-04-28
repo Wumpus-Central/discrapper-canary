@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__52c9d",
     Tp: "background__52c9d",

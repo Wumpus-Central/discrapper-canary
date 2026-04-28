@@ -1,34 +1,42 @@
-t.d(e, { A: () => c });
-var i = t(627968);
-t(64700);
-var l = t(17928),
-    r = t(477782),
-    a = t(192308),
-    d = t(576705),
-    o = t(652215),
-    s = t(985018);
-function c(n, e) {
-    let c = (0, l.bG)([d.A], () => d.A.can(o.xBc.MANAGE_CHANNELS, n), [n]);
-    return __OVERLAY__ || !c
+a.d(n, { A: () => p });
+var t = a(627968);
+a(64700);
+var d = a(17928),
+    i = a(477782),
+    l = a(192308),
+    c = a(576705),
+    r = a(652215),
+    s = a(985018);
+function p(e, n) {
+    let p = (0, d.bG)([c.A], () => c.A.can(r.xBc.MANAGE_CHANNELS, e), [e]);
+    return __OVERLAY__ || !p
         ? null
-        : (0, i.jsx)(r.Dr, {
+        : (0, t.jsx)(i.Dr, {
               id: "clone-channel",
               label: s.intl.string(s.t.dEaPc4),
               action: () =>
-                  (0, a.openModalLazy)(async () => {
-                      let { default: l } = await Promise.all([
-                          t.e("8018"),
-                          t.e("42282"),
-                          t.e("9431"),
-                          t.e("43735"),
-                      ]).then(t.bind(t, 113194));
-                      return (t) =>
-                          (0, i.jsx)(l, {
-                              ...t,
-                              channelType: n.type,
-                              guildId: e.id,
-                              categoryId: n.parent_id,
-                              cloneChannelId: n.id,
+                  (0, l.openModalLazy)(async () => {
+                      let { default: d } = await Promise.all([
+                          a.e("77598"),
+                          a.e("11585"),
+                          a.e("3589"),
+                          a.e("89916"),
+                          a.e("60773"),
+                          a.e("8018"),
+                          a.e("20379"),
+                          a.e("19193"),
+                          a.e("7775"),
+                          a.e("37038"),
+                          a.e("58608"),
+                          a.e("9431"),
+                      ]).then(a.bind(a, 113194));
+                      return (a) =>
+                          (0, t.jsx)(d, {
+                              ...a,
+                              channelType: e.type,
+                              guildId: n.id,
+                              categoryId: e.parent_id,
+                              cloneChannelId: e.id,
                           });
                   }),
           });

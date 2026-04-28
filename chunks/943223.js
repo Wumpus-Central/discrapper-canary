@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     iE: "wrapper_cc5dd2",
     JW: "svg_cc5dd2",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_d02962",
     FP: "categoryFade_d02962",

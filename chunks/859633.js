@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+o.r(
     (e.exports = {
         wishlistButton: "wishlistButton__979b1",
         disabled: "disabled__979b1",

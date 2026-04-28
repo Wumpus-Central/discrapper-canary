@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     zr: "root__1dd73",
     rf: "body__1dd73",

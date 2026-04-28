@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+o.r(
     (e.exports = {
         art: "art_c6e099",
         small: "small_c6e099",

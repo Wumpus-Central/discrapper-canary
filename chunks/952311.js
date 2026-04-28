@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+o.exports = {
     kL: "container__81040",
     jC: "twoColumnMainContent__81040",
     gF: "topColumnSideBarTopSpacingWithoutStoreLinks__81040",

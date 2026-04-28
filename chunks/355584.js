@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__8a003",
     p_: "list__8a003",

@@ -1,29 +1,29 @@
-t.d(e, { A: () => u });
-var i = t(627968);
-t(64700);
-var l = t(17928),
-    r = t(192308),
-    a = t(477782),
-    d = t(967198),
-    s = t(652215),
-    o = t(985018);
-function u(n) {
-    let e = (0, l.bG)([d.A], () => d.A.getGuildId()),
-        u = n.type === s.rbe.GUILD_CATEGORY;
-    return __OVERLAY__ || e !== s.YYv
+n.d(i, { A: () => u });
+var e = n(627968);
+n(64700);
+var l = n(17928),
+    a = n(192308),
+    r = n(477782),
+    s = n(967198),
+    d = n(652215),
+    c = n(985018);
+function u(t) {
+    let i = (0, l.bG)([s.A], () => s.A.getGuildId()),
+        u = t.type === d.rbe.GUILD_CATEGORY;
+    return __OVERLAY__ || i !== d.YYv
         ? null
-        : (0, i.jsx)(a.Dr, {
+        : (0, e.jsx)(r.Dr, {
               id: "set-channel-nickname",
-              label: u ? o.intl.string(o.t.xXYKiP) : o.intl.string(o.t.dilOF6),
+              label: u ? c.intl.string(c.t.xXYKiP) : c.intl.string(c.t.dilOF6),
               action: function () {
-                  (0, r.openModalLazy)(async () => {
-                      let { default: e } = await t.e("83504").then(t.bind(t, 872243));
-                      return (t) =>
-                          (0, i.jsx)(e, {
-                              ...t,
-                              channelId: n.id,
-                              heading: u ? o.intl.string(o.t.xXYKiP) : o.intl.string(o.t.dilOF6),
-                              formTitle: u ? o.intl.string(o.t.OCAkGP) : o.intl.string(o.t["621LJD"]),
+                  (0, a.openModalLazy)(async () => {
+                      let { default: i } = await Promise.all([n.e("63787"), n.e("83504")]).then(n.bind(n, 872243));
+                      return (n) =>
+                          (0, e.jsx)(i, {
+                              ...n,
+                              channelId: t.id,
+                              heading: u ? c.intl.string(c.t.xXYKiP) : c.intl.string(c.t.dilOF6),
+                              formTitle: u ? c.intl.string(c.t.OCAkGP) : c.intl.string(c.t["621LJD"]),
                           });
                   });
               },

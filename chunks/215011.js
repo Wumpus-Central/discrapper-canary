@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     $E: "drag__5c9fc",
     zr: "root__5c9fc",

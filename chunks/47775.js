@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Mp: "animationContainer__884d1",
     kL: "container__884d1",

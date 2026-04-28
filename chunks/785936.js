@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     ZM: "storeContainer_c79ea3",
     dD: "productSection_c79ea3",

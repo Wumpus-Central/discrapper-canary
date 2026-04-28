@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     k$: "animationWrapper_e8d31f",
     fF: "animationWrapperStacked_e8d31f",

@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+a.exports = {
     Ky: "gameProfileMedia_a1cc72",
     DA: "gameProfileMediaSmall_a1cc72 gameProfileMedia_a1cc72",
     ec: "imageScroller_a1cc72",

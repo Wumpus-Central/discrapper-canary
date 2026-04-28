@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     N9: "participantsButton__211d1",
     Yr: "rightCaret__211d1",

@@ -4,9 +4,9 @@ var s,
     n,
     i = a(627968),
     o = a(64700),
-    c = a(192308),
-    d = a(403581),
-    l = a(793574),
+    l = a(192308),
+    c = a(403581),
+    d = a(793574),
     p = a(688810),
     m = a(793943),
     b = a(31502),
@@ -18,16 +18,16 @@ var s,
     v = a(591179),
     E = a(462463),
     U = a(780964),
-    M = a(858897),
-    P = a(676279),
-    x = a(975571),
-    A = a(852218),
+    x = a(858897),
+    A = a(676279),
+    M = a(975571),
+    P = a(852218),
     S = a(382259),
     O = a(503698),
-    I = a.n(O),
+    _ = a.n(O),
     T = a(907581),
-    _ = a(533873);
-let y = o.forwardRef((e, t) => {
+    y = a(533873);
+let I = o.forwardRef((e, t) => {
     let { className: a } = e,
         s = o.useRef(null);
     return (
@@ -38,20 +38,20 @@ let y = o.forwardRef((e, t) => {
             pause: () => s.current?.pause(),
         })),
         (0, i.jsx)("div", {
-            className: I()(a, _.k),
+            className: _()(a, y.k),
             children: (0, i.jsx)(T.C, { ref: s, autoplay: !1, stateMachine: "State Machine 1", fit: "contain" }),
         })
     );
 });
-y.displayName = "PremiumRewardsBentoBoxAsset";
-var w = a(636592),
-    C = a(26508),
+I.displayName = "PremiumRewardsBentoBoxAsset";
+var C = a(636592),
+    w = a(26508),
     N = a(398523),
     L = a(881373),
     j = a(612669),
     B = a(788868),
-    k = a(88001),
-    V = a(652215),
+    V = a(88001),
+    k = a(652215),
     Y = a(654487),
     G = a(355097),
     D = a(962995),
@@ -61,7 +61,7 @@ var w = a(636592),
     X = a(693227),
     z = a(864386),
     K = a(817577);
-let Q = "/assets/b8d93bc2ac73e6a7.svg",
+let Q = "/assets/035ad0fba4997f3f.svg",
     Z =
         "https://cdn.discordapp.com/assets/content/a3d8a5ad88850f5dbfb86dcff1844ef525771e03d2e6bf64328980a361538f05.mov",
     J =
@@ -91,24 +91,24 @@ var q = a(576765),
         n);
 let ei = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        { analyticsLocations: t } = (0, p.Ay)(l.A.PREMIUM_MARKETING_BENTO_BOX),
+        { analyticsLocations: t } = (0, p.Ay)(d.A.PREMIUM_MARKETING_BENTO_BOX),
         s = (0, v.X)("useBentoBoxes"),
         r = (0, E.A)({ analyticsLocations: t }),
         n = (0, h.A)({ scrollPosition: G._F.TRY_IT_OUT, analyticsLocations: t }),
         O = (0, o.useCallback)(() => {
-            (0, M.openUserSettings)(U.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
+            (0, x.openUserSettings)(U.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
                 (0, u.L)({ analyticsLocations: t }),
             );
         }, [t]),
-        I = (0, o.useCallback)(() => {
+        _ = (0, o.useCallback)(() => {
             (0, f.A)({ subscriptionTier: B.pe.TIER_2, initialPlanId: B.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
         }, [t]),
-        T = (0, P.TM)(),
-        _ = x.A.getArticleURL(V.MVz.REFERRAL_PROGRAM),
+        T = (0, A.TM)(),
+        y = M.A.getArticleURL(k.MVz.REFERRAL_PROGRAM),
         { shouldShowBonusOrbsUX: es, multiplier: er } = (0, g.Dl)(Y.rE.NITRO_HOME_MARKETING),
         ei = o.useRef(null),
         eo = (0, b.l)("bento_box"),
-        ec = {
+        el = {
             premiumGroup: { thumbnail: K, assetUrl: K },
             serverProfiles: {
                 thumbnail: "/assets/27e5bfe55cd9ceac.png",
@@ -167,68 +167,70 @@ let ei = function () {
             orbRewards: { thumbnail: ea.A, assetUrl: et.A },
             orbMultiplier: { thumbnail: $, assetUrl: T ? Z : J },
             combinedOrbs: { thumbnail: $, assetUrl: T ? Z : J },
-            threePPromotions: { thumbnail: eo ? (0, i.jsx)(y, { ref: ei }) : Q, assetUrl: eo ? void 0 : Q },
+            threePPromotions: { thumbnail: eo ? (0, i.jsx)(I, { ref: ei }) : Q, assetUrl: eo ? void 0 : Q },
         },
-        ed = {
+        ec = {
             serverProfiles: {
                 name: "serverProfiles",
                 title: F.intl.string(F.t.I9TYMg),
                 description: F.intl.string(F.t.HMSHeH),
                 descriptionCta: F.intl.string(F.t.jVcuVY),
                 onClick: s ? r : n,
-                previewImage: ec.serverProfiles.thumbnail,
-                videoUrl: ec.serverProfiles.assetUrl,
+                previewImage: el.serverProfiles.thumbnail,
+                videoUrl: el.serverProfiles.assetUrl,
             },
             referralProgram: {
                 name: "referralProgram",
                 title: F.intl.string(F.t.tPY4o9),
-                description: F.intl.format(F.t.jRPQUH, { learnMoreLink: _ }),
-                previewImage: ec.referralProgram.thumbnail,
-                videoUrl: ec.referralProgram.assetUrl,
+                description: F.intl.format(F.t.jRPQUH, { learnMoreLink: y }),
+                previewImage: el.referralProgram.thumbnail,
+                videoUrl: el.referralProgram.assetUrl,
             },
             customThemes: {
                 name: "customThemes",
                 title: F.intl.string(X.default.XokIHM),
                 description: F.intl.string(X.default["7esQMC"]),
                 descriptionCta: F.intl.string(F.t.jVcuVY),
-                previewImage: ec.customThemes.thumbnail,
+                previewImage: el.customThemes.thumbnail,
                 onClick: () => {
                     (0, m.nf)(m.HP.CUSTOM_THEME);
                 },
-                videoUrl: ec.customThemes.assetUrl,
+                videoUrl: el.customThemes.assetUrl,
             },
             displayNameStyles: {
                 name: "displayNameStyles",
                 title: F.intl.string(z.default.ABtBDQ),
                 description: F.intl.string(z.default.MFNXZh),
                 descriptionCta: F.intl.string(F.t.jVcuVY),
-                previewImage: ec.displayNameStyles.thumbnail,
+                previewImage: el.displayNameStyles.thumbnail,
                 onClick: s ? r : O,
-                videoUrl: ec.displayNameStyles.assetUrl,
+                videoUrl: el.displayNameStyles.assetUrl,
             },
             premiumGroup: {
                 name: "premiumGroup",
-                title: F.intl.formatToPlainString(H.default.VFEDDB, { premiumGroupProductName: (0, k.DP)() }),
+                title: F.intl.formatToPlainString(H.default.VFEDDB, { premiumGroupProductName: (0, V.DP)() }),
                 description: F.intl.formatToPlainString(H.default.WudmR3, {
-                    totalSeats: k.aw,
-                    premiumGroupProductName: (0, k.DP)(),
+                    totalSeats: V.aw,
+                    premiumGroupProductName: (0, V.DP)(),
                 }),
-                previewImage: ec.premiumGroup.thumbnail,
-                videoUrl: ec.premiumGroup.assetUrl,
+                previewImage: el.premiumGroup.thumbnail,
+                videoUrl: el.premiumGroup.assetUrl,
                 actions: [
                     {
                         variant: "primary",
-                        text: F.intl.formatToPlainString(H.default.LwdrNi, { premiumGroupProductName: (0, k.DP)() }),
-                        onClick: I,
-                        icon: d.t,
+                        text: F.intl.formatToPlainString(H.default.LwdrNi, { premiumGroupProductName: (0, V.DP)() }),
+                        onClick: _,
+                        icon: c.t,
                         iconPosition: "start",
                     },
                     {
                         variant: "secondary",
                         text: F.intl.string(F.t.hvVgAZ),
                         onClick: () => {
-                            (0, c.openModalLazy)(async () => {
-                                let { default: e } = await a.e("69595").then(a.bind(a, 526710));
+                            (0, l.openModalLazy)(async () => {
+                                let { default: e } = await Promise.all([a.e("3370"), a.e("99709"), a.e("69595")]).then(
+                                    a.bind(a, 526710),
+                                );
                                 return (t) => (0, i.jsx)(e, { ...t });
                             });
                         },
@@ -242,46 +244,46 @@ let ei = function () {
                 title: F.intl.string(F.t.Ij3Zmv),
                 description: F.intl.string(F.t.UsOUxY),
                 descriptionCta: F.intl.string(F.t.jVcuVY),
-                previewImage: ec.showYourStyle.thumbnail,
+                previewImage: el.showYourStyle.thumbnail,
                 onClick: s ? r : n,
-                videoUrl: ec.showYourStyle.assetUrl,
+                videoUrl: el.showYourStyle.assetUrl,
             },
             yourSpace: {
                 name: "yourSpace",
                 title: F.intl.string(F.t.Wme3nX),
                 description: F.intl.string(F.t["/aAIqV"]),
                 descriptionCta: F.intl.string(F.t.jVcuVY),
-                previewImage: ec.yourSpace.thumbnail,
+                previewImage: el.yourSpace.thumbnail,
                 onClick: () => {
                     {
                         let { openUserSettings: e } = a(858897);
                         e(U.X.APPEARANCE_THEME_CATEGORY, { analyticsLocations: t });
                     }
                 },
-                videoUrl: ec.yourSpace.assetUrl,
+                videoUrl: el.yourSpace.assetUrl,
             },
             emojis: {
                 name: "emojis",
                 title: F.intl.string(F.t.zY5PPb),
                 description: F.intl.string(F.t.R5Xag2),
-                previewImage: ec.emojis.thumbnail,
-                videoUrl: ec.emojis.assetUrl,
+                previewImage: el.emojis.thumbnail,
+                videoUrl: el.emojis.assetUrl,
             },
             noLimits: {
                 name: "noLimits",
                 title: F.intl.string(F.t["6b3ydG"]),
                 description: F.intl.string(F.t["Y+IJyg"]),
-                previewImage: ec.noLimits.thumbnail,
-                videoUrl: ec.noLimits.assetUrl,
+                previewImage: el.noLimits.thumbnail,
+                videoUrl: el.noLimits.assetUrl,
             },
             threePPromotions: {
                 name: "threePPromotions",
                 title: eo ? F.intl.string(F.t.E4U4SS) : F.intl.string(D.default.OlObRa),
                 description: eo ? F.intl.string(F.t["B4uSy/"]) : F.intl.string(D.default["8Gl8gP"]),
                 descriptionCta: eo ? F.intl.string(F.t.RzWDqY) : F.intl.string(D.default.HINTfJ),
-                previewImage: ec.threePPromotions.thumbnail,
-                videoUrl: ec.threePPromotions.assetUrl,
-                onClick: () => (0, S.u)({ analyticsLocations: t, partnerIds: [A.KS, A.Cs, A.XY] }),
+                previewImage: el.threePPromotions.thumbnail,
+                videoUrl: el.threePPromotions.assetUrl,
+                onClick: () => (0, S.u)({ analyticsLocations: t, partnerIds: [P.KS, P.Cs, P.XY] }),
                 badgeText: eo ? void 0 : F.intl.string(F.t.y2b7CA).toLocaleUpperCase(),
                 badgeVariant: "expressive",
                 mediaRef: eo ? ei : void 0,
@@ -292,11 +294,11 @@ let ei = function () {
                 description: F.intl.string(W.default.wMi514),
                 descriptionCta: F.intl.string(F.t.hvVgAZ),
                 onClick: () => {
-                    window.open(x.A.getArticleURL(V.MVz.ORBS_REWARDS_FAQ), "_blank");
+                    window.open(M.A.getArticleURL(k.MVz.ORBS_REWARDS_FAQ), "_blank");
                 },
-                previewImage: ec.orbRewards.thumbnail,
+                previewImage: el.orbRewards.thumbnail,
                 previewImageStyle: "overlay",
-                backgroundVideoUrl: ec.orbRewards.assetUrl,
+                backgroundVideoUrl: el.orbRewards.assetUrl,
                 badgeText: eo ? void 0 : F.intl.string(F.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
             },
@@ -305,26 +307,26 @@ let ei = function () {
                 title: F.intl.string(F.t.F2MShO),
                 description: F.intl.format(F.t["G5k+lZ"], { bonusOrbMultiplier: er }),
                 descriptionCta: F.intl.string(F.t.jVcuVY),
-                onClick: () => (0, R.pX)(V.BVt.QUEST_HOME),
+                onClick: () => (0, R.pX)(k.BVt.QUEST_HOME),
                 badgeText: eo ? void 0 : F.intl.string(F.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
-                previewImage: ec.orbMultiplier.thumbnail,
-                videoUrl: ec.orbMultiplier.assetUrl,
+                previewImage: el.orbMultiplier.thumbnail,
+                videoUrl: el.orbMultiplier.assetUrl,
             },
             combinedOrbs: {
                 name: "combinedOrbs",
                 title: F.intl.string(F.t.Tzhw6e),
                 description: F.intl.format(F.t.djzJx6, { bonusOrbMultiplier: er }),
                 descriptionCta: F.intl.string(F.t.RzWDqY),
-                onClick: () => (0, R.pX)(V.BVt.QUEST_HOME),
+                onClick: () => (0, R.pX)(k.BVt.QUEST_HOME),
                 badgeText: eo ? void 0 : F.intl.string(F.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
-                previewImage: ec.combinedOrbs.thumbnail,
-                videoUrl: ec.combinedOrbs.assetUrl,
+                previewImage: el.combinedOrbs.thumbnail,
+                videoUrl: el.combinedOrbs.assetUrl,
             },
         },
-        el = (e) => {
-            let t = ed[e];
+        ed = (e) => {
+            let t = ec[e];
             if (null == t) throw Error(`useBentoBoxes: missing bento config for ${e}`);
             return t;
         },
@@ -332,7 +334,7 @@ let ei = function () {
             let t = (0, L.YS)({ location: "bento_box" }).functionalityEnabled,
                 { enabled: a } = N.Ay.useConfig({ location: "bento_box" }),
                 s = (0, j.O9)(),
-                r = (0, C.DK)(w.W.NITRO, "useBentoBoxes"),
+                r = (0, w.DK)(C.W.NITRO, "useBentoBoxes"),
                 n = r && e;
             return [
                 ...(t || a ? [en.THREE_P_PROMOTIONS] : []),
@@ -350,11 +352,11 @@ let ei = function () {
         eb = e ? null : ep[0],
         eu = ep.slice(+!e, e ? 2 : 3);
     return (
-        null != eb && em.push([el(eb)]),
-        1 === eu.length ? em.push([el(eu[0])]) : 2 === eu.length && em.push([el(eu[0]), el(eu[1])]),
+        null != eb && em.push([ed(eb)]),
+        1 === eu.length ? em.push([ed(eu[0])]) : 2 === eu.length && em.push([ed(eu[0]), ed(eu[1])]),
         {
             whatsNewBoxes: [...em],
-            bestOfBoxes: [[el("showYourStyle")], [el("yourSpace")], [el("emojis"), el("noLimits")]],
+            bestOfBoxes: [[ed("showYourStyle")], [ed("yourSpace")], [ed("emojis"), ed("noLimits")]],
         }
     );
 };

@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     kL: "container__14de9",
     bo: "guildContainer__14de9",
     wx: "header__14de9",

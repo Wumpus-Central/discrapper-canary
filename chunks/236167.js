@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     HP: "destinationRow__506b8",
     r9: "disabled__506b8",
     D_: "identity__506b8",

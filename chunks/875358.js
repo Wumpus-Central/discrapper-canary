@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_dfb989",
     $E: "inProfile_dfb989",

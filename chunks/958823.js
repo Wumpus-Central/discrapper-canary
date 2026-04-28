@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nM: "row__19fd1",
     vk: "clickable__19fd1",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     wx: "header__03630",
     Ny: "currentUser__03630",

@@ -1,0 +1,75 @@
+.wrapper__30359 {
+    padding-top: 32px
+}
+
+.heroImage__30359 {
+    display: block;
+    margin: 0 auto 24px;
+    width: 216px
+}
+
+.closeButton__30359 {
+    inset-inline-end: 4px;
+    position: absolute;
+    top: 12px
+}
+
+.heading__30359 {
+    margin-bottom: 16px
+}
+
+.perks__30359 {
+    background-color: var(--background-base-lower);
+    border-radius: 8px
+}
+
+.iconColorYellow__30359 {
+    color: var(--premium-perk-yellow)
+}
+
+.iconColorGreen__30359 {
+    color: var(--premium-perk-green)
+}
+
+.iconColorPurple__30359 {
+    color: var(--premium-perk-purple)
+}
+
+.iconColorBlue__30359 {
+    color: #8ea1e1
+}
+
+.footer__30359 {
+    flex-direction: row;
+    gap: var(--space-8);
+    justify-content: flex-end
+}
+
+.footer__30359,
+.header__30359 {
+    align-items: center
+}
+
+.header__30359 {
+    display: flex;
+    flex-direction: column
+}
+
+.subtitleText__30359 {
+    margin-bottom: 16px;
+    text-align: center
+}
+
+.inviteBannerPreview__30359 {
+    height: 104px;
+    margin: 0 auto 24px;
+    width: 248px
+}
+
+.featureHeading__30359 {
+    font-family: var(--font-display);
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    text-align: center
+}

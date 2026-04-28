@@ -1,65 +1,78 @@
-"use strict";
-n.d(e, { default: () => R });
-var r = n(627968),
-    o = n(64700),
-    i = n(522579),
-    a = n(17928),
-    s = n(477782),
-    u = n(192308),
-    l = n(550079),
-    c = n(157559),
-    d = n(442433),
-    f = n(847767),
-    p = n(358367),
-    w = n(793574),
-    y = n(50268),
-    b = n(576705),
-    g = n(723702),
-    h = n(19575),
-    v = n(102597),
-    m = n(688810),
-    S = n(915089),
-    A = n(287809),
-    x = n(927578),
-    O = n(536432);
+n.d(e, { default: () => E });
+var l = n(627968),
+    i = n(64700),
+    a = n(522579),
+    d = n(17928),
+    r = n(477782),
+    s = n(192308),
+    o = n(550079),
+    u = n(157559),
+    c = n(442433),
+    b = n(847767),
+    g = n(358367),
+    f = n(793574),
+    p = n(50268),
+    h = n(576705),
+    A = n(723702),
+    m = n(19575),
+    w = n(102597),
+    x = n(688810),
+    y = n(915089),
+    j = n(287809),
+    C = n(927578),
+    D = n(536432);
 n(980504);
-var E = n(985018),
-    N = n(652215);
-let R = (0, p.A)(
-    (0, f.A)(
+var U = n(985018),
+    k = n(652215);
+let E = (0, g.A)(
+    (0, b.A)(
         function (t) {
-            let { soundGuild: e, sound: f, activeCallGuildId: p, onSelect: w } = t,
-                N = (function (t, e) {
-                    let { canManageGuildExpressions: i } = (0, a.cf)(
-                            [b.A],
-                            () => (null == e ? { canManageGuildExpressions: !1 } : b.A.getGuildPermissionProps(e)),
+            let { soundGuild: e, sound: b, activeCallGuildId: g, onSelect: f } = t,
+                k = (function (t, e) {
+                    let { canManageGuildExpressions: a } = (0, d.cf)(
+                            [h.A],
+                            () => (null == e ? { canManageGuildExpressions: !1 } : h.A.getGuildPermissionProps(e)),
                             [e],
                         ),
-                        l = o.useCallback(() => {
+                        o = i.useCallback(() => {
                             if (e?.id == null) return null;
-                            (0, u.openModalLazy)(async () => {
-                                let { default: o } = await Promise.all([n.e("8555"), n.e("12811"), n.e("28000")]).then(
-                                    n.bind(n, 191110),
-                                );
-                                return (n) => (0, r.jsx)(o, { ...n, existingSound: t, guildId: e.id });
+                            (0, s.openModalLazy)(async () => {
+                                let { default: i } = await Promise.all([
+                                    n.e("73432"),
+                                    n.e("80813"),
+                                    n.e("21177"),
+                                    n.e("20287"),
+                                    n.e("8555"),
+                                    n.e("83952"),
+                                    n.e("66580"),
+                                    n.e("8979"),
+                                    n.e("20643"),
+                                    n.e("80559"),
+                                    n.e("98913"),
+                                    n.e("74049"),
+                                    n.e("52577"),
+                                    n.e("12811"),
+                                    n.e("69006"),
+                                ]).then(n.bind(n, 191110));
+                                return (n) => (0, l.jsx)(i, { ...n, existingSound: t, guildId: e.id });
                             });
                         }, [e, t]);
-                    return i
-                        ? (0, r.jsx)(
-                              s.Dr,
-                              { id: "edit-soundboard-sound", label: E.intl.string(E.t.ponZcG), action: l },
+                    return a
+                        ? (0, l.jsx)(
+                              r.Dr,
+                              { id: "edit-soundboard-sound", label: U.intl.string(U.t.ponZcG), action: o },
                               "edit-soundboard-sound",
                           )
                         : null;
-                })(f, e),
-                R = (function (t) {
+                })(b, e),
+                E = (function (t) {
                     let { soundId: e } = t,
-                        n = o.useCallback(async () => {
+                        n = i.useCallback(async () => {
                             try {
-                                let t = (0, v.A)(e),
+                                let t = (0, w.A)(e),
                                     n = await fetch(t),
-                                    r = await n.blob(),
-                                    o = (function (t) {
+                                    l = await n.blob(),
+                                    i = (function (t) {
                                         switch (t.type) {
                                             case "audio/mpeg":
                                             case "audio/mpeg3":
@@ -69,58 +82,58 @@ let R = (0, p.A)(
                                             default:
                                                 throw Error("unable to determine file type");
                                         }
-                                    })(r),
-                                    a = `${e}.${o}`;
-                                g.isPlatformEmbedded ? await h.Ay.saveFile(t, a) : (0, i.saveAs)(r, a);
+                                    })(l),
+                                    d = `${e}.${i}`;
+                                A.isPlatformEmbedded ? await m.Ay.saveFile(t, d) : (0, a.saveAs)(l, d);
                             } catch (t) {
-                                c.A.show({
-                                    title: E.intl.string(E.t.mK3tDH),
-                                    body: E.intl.string(E.t.jLlfDN),
-                                    confirmText: E.intl.string(E.t.BddRzS),
+                                u.A.show({
+                                    title: U.intl.string(U.t.mK3tDH),
+                                    body: U.intl.string(U.t.jLlfDN),
+                                    confirmText: U.intl.string(U.t.BddRzS),
                                 });
                             }
                         }, [e]);
                     return "0" === t.guildId
                         ? null
-                        : (0, r.jsx)(
-                              s.Dr,
-                              { id: "download-soundboard-sound", label: E.intl.string(E.t["/fzLLK"]), action: n },
+                        : (0, l.jsx)(
+                              r.Dr,
+                              { id: "download-soundboard-sound", label: U.intl.string(U.t["/fzLLK"]), action: n },
                               "download-soundboard-sound",
                           );
-                })(f),
-                j = (function (t, e) {
-                    let { analyticsLocations: n } = (0, m.Ay)(),
-                        o = (0, a.bG)([A.default], () => A.default.getCurrentUser()),
-                        i = (0, S.GV)(),
-                        u = (0, S.GV)();
-                    return null != e && x.Ay.canUseCustomCallSounds(o)
-                        ? (0, r.jsxs)(r.Fragment, {
+                })(b),
+                N = (function (t, e) {
+                    let { analyticsLocations: n } = (0, x.Ay)(),
+                        i = (0, d.bG)([j.default], () => j.default.getCurrentUser()),
+                        a = (0, y.GV)(),
+                        s = (0, y.GV)();
+                    return null != e && C.Ay.canUseCustomCallSounds(i)
+                        ? (0, l.jsxs)(l.Fragment, {
                               children: [
-                                  (0, r.jsx)(s.Dr, {
-                                      id: i,
-                                      label: E.intl.string(E.t.p2hUt7),
-                                      action: () => (0, O.un)(e, t, n),
+                                  (0, l.jsx)(r.Dr, {
+                                      id: a,
+                                      label: U.intl.string(U.t.p2hUt7),
+                                      action: () => (0, D.un)(e, t, n),
                                   }),
-                                  (0, r.jsx)(s.Dr, {
-                                      id: u,
-                                      label: E.intl.string(E.t["/yA6Qd"]),
-                                      action: () => (0, O.un)("0", t, n),
+                                  (0, l.jsx)(r.Dr, {
+                                      id: s,
+                                      label: U.intl.string(U.t["/yA6Qd"]),
+                                      action: () => (0, D.un)("0", t, n),
                                   }),
                               ],
                           })
                         : null;
-                })(f, p),
-                T = (0, y.A)({ id: f.soundId, label: E.intl.string(E.t.HJikXp) });
-            return (0, r.jsx)(l.W, {
+                })(b, g),
+                T = (0, p.A)({ id: b.soundId, label: U.intl.string(U.t.HJikXp) });
+            return (0, l.jsx)(o.W, {
                 "data-menu-migrated": !0,
                 navId: "sound-button-context",
-                onClose: d.Z_,
-                "aria-label": E.intl.string(E.t.liqwPJ),
-                onSelect: w,
-                children: (0, r.jsxs)(s.rX, { children: [N, j, R, T] }),
+                onClose: c.Z_,
+                "aria-label": U.intl.string(U.t.liqwPJ),
+                onSelect: f,
+                children: (0, l.jsxs)(r.rX, { children: [k, N, E, T] }),
             });
         },
-        { object: N.ZSU.CONTEXT_MENU },
+        { object: k.ZSU.CONTEXT_MENU },
     ),
-    [w.A.CONTEXT_MENU, w.A.SOUNDBOARD_BUTTON],
+    [f.A.CONTEXT_MENU, f.A.SOUNDBOARD_BUTTON],
 );

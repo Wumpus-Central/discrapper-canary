@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { u: () => o });
-var r = n(636537),
-    a = n(228366),
-    i = n(153488),
-    l = n(427358),
-    s = n(652215);
-function o() {
+i.d(r, { u: () => _ });
+var s = i(636537),
+    t = i(228366),
+    a = i(153488),
+    o = i(427358),
+    n = i(652215);
+function _() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return l.A.shouldFetch() && i.A.hasConsented(s.YAq.PERSONALIZATION)
-        ? (a.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2" }),
-          r.Bo.get({ url: s.Rsh.USER_AFFINITIES_V2, retries: 3 * !!e, oldFormErrors: !0, rejectWithError: !1 }).then(
+    return o.A.shouldFetch() && a.A.hasConsented(n.YAq.PERSONALIZATION)
+        ? (t.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2" }),
+          s.Bo.get({ url: n.Rsh.USER_AFFINITIES_V2, retries: 3 * !!e, oldFormErrors: !0, rejectWithError: !1 }).then(
               (e) => {
-                  let { body: t } = e;
-                  a.h.dispatch({
+                  let { body: r } = e;
+                  t.h.dispatch({
                       type: "LOAD_USER_AFFINITIES_V2_SUCCESS",
-                      affineUsers: t.user_affinities.map((e) => ({
+                      affineUsers: r.user_affinities.map((e) => ({
                           otherUserId: e.other_user_id,
                           userSegment: e.user_segment,
                           otherUserSegment: e.other_user_segment,
@@ -31,7 +30,7 @@ function o() {
                   });
               },
               () => {
-                  a.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
+                  t.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2_FAILURE" });
               },
           ))
         : Promise.resolve();

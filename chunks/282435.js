@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { Bf: () => a, aA: () => r, cG: () => i });
+o.d(a, { Bf: () => n, aA: () => r, cG: () => l });
 let r = [
         { name: "Soul", color: "#ff1c90" },
         { name: "Volcano", color: "#e81d1e" },
@@ -11,7 +10,7 @@ let r = [
         { name: "Earth", color: "#406601" },
         { name: "Boulder", color: "#272727" },
     ],
-    i = [
+    l = [
         "363445589247131668",
         "700136079562375258",
         "1402418696126992445",
@@ -115,4 +114,4 @@ let r = [
         "1272842103910699040",
         "1276737795012165766",
     ],
-    a = new Map(i.map((e, t, n) => [e, n.length - t]));
+    n = new Map(l.map((e, a, o) => [e, o.length - a]));

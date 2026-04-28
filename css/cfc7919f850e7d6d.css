@@ -1,0 +1,62 @@
+.note_eb110a {
+    margin: -4px
+}
+
+.note_eb110a textarea {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 4px
+}
+
+.note_eb110a textarea::-moz-placeholder {
+    color: var(--text-muted)
+}
+
+.note_eb110a textarea::placeholder {
+    color: var(--text-muted)
+}
+
+.note_eb110a textarea:hover {
+    border-color: var(--input-border-default)
+}
+
+.note_eb110a textarea:focus {
+    background: var(--user-profile-note-background-focus);
+    border-color: var(--border-strong)
+}
+
+.note_eb110a textarea:focus::-moz-placeholder {
+    color: transparent
+}
+
+.note_eb110a textarea:focus::placeholder {
+    color: transparent
+}
+
+.note_eb110a textarea:focus:focus,
+.note_eb110a textarea:focus:focus:hover {
+    border-color: var(--border-strong)
+}
+
+.scrim__4c1fe {
+    align-items: center;
+    background: var(--background-scrim);
+    border-radius: inherit;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .15s, visibility .15s;
+    visibility: hidden;
+    z-index: var(--custom-user-profile-hoist-z-index)
+}
+
+.scrim__4c1fe.isVisible__4c1fe {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible
+}

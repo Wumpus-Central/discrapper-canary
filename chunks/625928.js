@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => w });
+n.d(t, { A: () => R });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -14,98 +14,98 @@ var l = n(627968),
     p = n(688810),
     f = n(135621),
     g = n(287809),
-    _ = n(927578),
-    x = n(192308),
-    C = n(939249),
-    A = n(404374),
-    E = n(734057),
-    I = n(309010),
+    x = n(927578),
+    C = n(192308),
+    A = n(939249),
+    E = n(404374),
+    I = n(734057),
+    y = n(309010),
     v = n(954571),
-    y = n(652215),
-    b = n(985018),
-    S = n(341867);
-function N() {
-    (0, x.openModalLazy)(async () => {
-        let { default: e } = await n.e("66920").then(n.bind(n, 220763));
+    S = n(652215),
+    N = n(985018),
+    j = n(341867);
+function _() {
+    (0, C.openModalLazy)(async () => {
+        let { default: e } = await Promise.all([n.e("35257"), n.e("66920")]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
     });
 }
-function j(e) {
+function T(e) {
     let { className: t, iconOnly: n } = e,
-        s = (0, o.bG)([I.A, E.A], () => {
-            let e = E.A.getChannel(I.A.getChannelId());
-            return e?.isPrivate() ? y.liQ.DM_CHANNEL : y.liQ.GUILD_CHANNEL;
+        s = (0, o.bG)([y.A, I.A], () => {
+            let e = I.A.getChannel(y.A.getChannelId());
+            return e?.isPrivate() ? S.liQ.DM_CHANNEL : S.liQ.GUILD_CHANNEL;
         }),
         { analyticsLocations: r } = (0, p.Ay)(m.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
-            v.default.track(y.HAw.PREMIUM_UPSELL_VIEWED, {
+            v.default.track(S.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
-                location: { location_page: s, location_section: y.JJy.CHANNEL_TEXT_AREA },
+                location: { location_page: s, location_section: S.JJy.CHANNEL_TEXT_AREA },
                 location_stack: r,
             });
         }, [s, r]),
         n
-            ? (0, l.jsx)(C.D, {
-                  className: S.e7,
-                  onClick: () => N(),
+            ? (0, l.jsx)(A.D, {
+                  className: j.e7,
+                  onClick: () => _(),
                   children: (0, l.jsx)(c.m, {
-                      text: b.intl.string(b.t["+eFIjX"]),
+                      text: N.intl.string(N.t["+eFIjX"]),
                       position: "top",
-                      children: (0, l.jsx)(u.t, { size: "md", color: "currentColor", className: S.M2 }),
+                      children: (0, l.jsx)(u.t, { size: "md", color: "currentColor", className: j.M2 }),
                   }),
               })
             : (0, l.jsxs)("div", {
-                  className: a()(S.zr, t),
+                  className: a()(j.zr, t),
                   children: [
-                      (0, l.jsx)(u.t, { size: "md", className: S.M2, color: A.k0.PREMIUM_TIER_2 }),
+                      (0, l.jsx)(u.t, { size: "md", className: j.M2, color: E.k0.PREMIUM_TIER_2 }),
                       (0, l.jsx)(d.E, {
-                          className: S.Qq,
+                          className: j.Qq,
                           variant: "text-sm/normal",
-                          children: b.intl.format(b.t.BNAIBU, { onLearnMore: N }),
+                          children: N.intl.format(N.t.BNAIBU, { onLearnMore: _ }),
                       }),
                   ],
               })
     );
 }
-var T = n(481395);
-function w(e) {
-    let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s, className: x } = e,
-        C = (0, o.bG)([g.default], () => _.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
-        A = (0, f.A)(),
-        E = i ?? A,
-        I = s ?? i ?? A / 10,
+var b = n(481395);
+function R(e) {
+    let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: s, className: C } = e,
+        A = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
+        E = (0, f.A)(),
+        I = i ?? E,
+        y = s ?? i ?? E / 10,
         v = n.length,
-        S = null != t.upsellLongMessages && (v ?? 0) > y.uvi && C,
-        N = null != t.upsellLongMessages && !C,
-        w = E - v,
-        R = w > I;
-    (0, r.$)({ currentLength: v, maxLength: E, message: b.intl.string(b.t.c2Jqed) });
+        j = null != t.upsellLongMessages && (v ?? 0) > S.uvi && A,
+        _ = null != t.upsellLongMessages && !A,
+        R = I - v,
+        O = R > y;
+    (0, r.$)({ currentLength: v, maxLength: I, message: N.intl.string(N.t.c2Jqed) });
     let L =
-            0 === w
-                ? b.intl.string(b.t.tU6YQ7)
-                : w > 0
-                  ? b.intl.formatToPlainString(b.t.qH8uFW, { count: w })
-                  : b.intl.string(b.t.YSRIqa),
-        { analyticsLocations: k } = (0, p.Ay)(m.A.CHARACTER_COUNT);
-    if (!((S && w >= 0) || !R || (N && !R))) return null;
-    let O = w >= 0;
+            0 === R
+                ? N.intl.string(N.t.tU6YQ7)
+                : R > 0
+                  ? N.intl.formatToPlainString(N.t.qH8uFW, { count: R })
+                  : N.intl.string(N.t.YSRIqa),
+        { analyticsLocations: w } = (0, p.Ay)(m.A.CHARACTER_COUNT);
+    if (!((j && R >= 0) || !O || (_ && !O))) return null;
+    let M = R >= 0;
     return (0, l.jsx)(p.f5, {
-        value: k,
+        value: w,
         children: (0, l.jsxs)("div", {
-            className: a()(x, T.Dq),
+            className: a()(C, b.Dq),
             children: [
                 (0, l.jsxs)("div", {
-                    className: T.SW,
+                    className: b.SW,
                     children: [
-                        S && O
+                        j && M
                             ? (0, l.jsx)(c.m, {
-                                  text: b.intl.formatToPlainString(b.t.vcvHa0, { maxLength: E }),
+                                  text: N.intl.formatToPlainString(N.t.vcvHa0, { maxLength: I }),
                                   position: "top",
-                                  children: (0, l.jsx)(u.t, { size: "md", color: "currentColor", className: T.y }),
+                                  children: (0, l.jsx)(u.t, { size: "md", color: "currentColor", className: b.y }),
                               })
                             : null,
-                        R
+                        O
                             ? null
                             : (0, l.jsx)(c.m, {
                                   text: L,
@@ -114,15 +114,15 @@ function w(e) {
                                       variant: "text-sm/semibold",
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
-                                      color: O ? "text-default" : "text-feedback-critical",
-                                      children: w,
+                                      color: M ? "text-default" : "text-feedback-critical",
+                                      children: R,
                                   }),
                               }),
                     ],
                 }),
-                (0, l.jsx)(h.A, { children: b.intl.format(b.t.qH8uFW, { count: w }) }),
-                N && !R
-                    ? (0, l.jsx)(j, { className: T.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: w })
+                (0, l.jsx)(h.A, { children: N.intl.format(N.t.qH8uFW, { count: R }) }),
+                _ && !O
+                    ? (0, l.jsx)(T, { className: b.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: R })
                     : null,
             ],
         }),

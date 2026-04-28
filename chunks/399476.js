@@ -1,57 +1,66 @@
-n.d(t, { A: () => _ });
-var i = n(627968);
-n(64700);
-var l = n(17928),
-    a = n(477782),
-    r = n(192308),
-    o = n(49229),
-    d = n(994500),
-    u = n(287809),
-    s = n(652215),
-    c = n(985018);
-function _(e) {
+t.d(n, { A: () => p });
+var i = t(627968);
+t(64700);
+var o = t(17928),
+    r = t(477782),
+    s = t(192308),
+    d = t(49229),
+    l = t(994500),
+    a = t(287809),
+    u = t(652215),
+    c = t(985018);
+function p(e) {
     let {
-            user: t,
-            guildId: _,
-            channelId: A,
+            user: n,
+            guildId: p,
+            channelId: g,
             onBlock: h,
-            onIgnore: E,
-            onUnignore: f,
-            location: g = "ContextMenu",
-            appContext: p = s.BRT.APP,
+            onIgnore: k,
+            onUnignore: A,
+            location: C = "ContextMenu",
+            appContext: b = u.BRT.APP,
         } = e,
-        { id: b } = t,
-        S = (0, l.bG)([u.default], () => u.default.getCurrentUser()?.id === b, [b]),
-        { isIgnored: v, isBlocked: I } = (0, l.cf)(
-            [d.A],
-            () => ({ isIgnored: d.A.isIgnored(b), isBlocked: d.A.isBlocked(b) }),
-            [b],
+        { id: x } = n,
+        f = (0, o.bG)([a.default], () => a.default.getCurrentUser()?.id === x, [x]),
+        { isIgnored: w, isBlocked: B } = (0, o.cf)(
+            [l.A],
+            () => ({ isIgnored: l.A.isIgnored(x), isBlocked: l.A.isBlocked(x) }),
+            [x],
         );
-    return S || I
+    return f || B
         ? null
-        : (0, i.jsx)(a.Dr, {
+        : (0, i.jsx)(r.Dr, {
               id: "ignore",
-              label: v ? c.intl.string(c.t["8wXU9B"]) : c.intl.string(c.t.ytCpKs),
-              action: v
+              label: w ? c.intl.string(c.t["8wXU9B"]) : c.intl.string(c.t.ytCpKs),
+              action: w
                   ? () => {
-                        f?.(), o.A.unignoreUser(b, g ?? "use-ignore-user-item-web", A ?? void 0);
+                        A?.(), d.A.unignoreUser(x, C ?? "use-ignore-user-item-web", g ?? void 0);
                     }
                   : () => {
-                        (0, r.openModalLazy)(
+                        (0, s.openModalLazy)(
                             async () => {
-                                let { default: e } = await n.e("14788").then(n.bind(n, 143547));
-                                return (n) =>
+                                let { default: e } = await Promise.all([
+                                    t.e("48486"),
+                                    t.e("74370"),
+                                    t.e("11523"),
+                                    t.e("20683"),
+                                    t.e("63618"),
+                                    t.e("607"),
+                                    t.e("12755"),
+                                    t.e("14788"),
+                                ]).then(t.bind(t, 143547));
+                                return (t) =>
                                     (0, i.jsx)(e, {
-                                        ...n,
-                                        guildId: _,
-                                        channelId: A,
-                                        user: t,
-                                        onIgnore: E,
+                                        ...t,
+                                        guildId: p,
+                                        channelId: g,
+                                        user: n,
+                                        onIgnore: k,
                                         onBlock: h,
-                                        location: g,
+                                        location: C,
                                     });
                             },
-                            { contextKey: (0, r.modalContextFromAppContext)(p) },
+                            { contextKey: (0, s.modalContextFromAppContext)(b) },
                         );
                     },
           });

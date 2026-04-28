@@ -1,0 +1,61 @@
+.empty__99e7c {
+    fill: var(--background-base-low);
+    padding: 16px
+}
+
+.headerText__99e7c {
+    flex: 1;
+    margin-inline-end: var(--space-xs);
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.privateChannelsHeaderContainer__99e7c {
+    align-items: center;
+    display: flex;
+    height: var(--size-24);
+    justify-content: space-between;
+    padding-inline: var(--space-md) var(--space-xs);
+    padding-bottom: var(--space-4);
+    padding-top: 0
+}
+
+.privateChannelsHeaderContainer__99e7c:hover {
+    color: var(--interactive-text-hover)
+}
+
+.privateChannelRecipientsInviteButtonIcon__99e7c {
+    flex: unset;
+    height: 16px;
+    margin-inline: 0;
+    width: 16px
+}
+
+.privateChannelRecipientsInviteButtonIcon__99e7c,
+.privateChannelRecipientsInviteButtonIconContainer__99e7c {
+    height: 16px;
+    width: 16px
+}
+
+.scroller__99e7c {
+    background: var(--background-gradient-high, var(--background-base-lowest));
+    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 16px);
+    padding-bottom: 16px
+}
+
+.scroller__99e7c::-webkit-scrollbar-track {
+    margin-bottom: 16px
+}
+
+.enable-forced-colors .privateChannelsHeaderContainer__99e7c {
+    color: CanvasText;
+    forced-color-adjust: none
+}
+
+.enable-forced-colors .privateChannelRecipientsInviteButtonIcon__99e7c {
+    border: 1px solid ButtonFace
+}
+
+.enable-forced-colors .privateChannelRecipientsInviteButtonIcon__99e7c:hover {
+    border-color: ButtonText
+}

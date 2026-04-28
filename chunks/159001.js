@@ -1,64 +1,63 @@
-"use strict";
-n.d(t, { GL: () => l, IM: () => d, JJ: () => s, RE: () => u, V2: () => o, go: () => c, x8: () => _ });
-var r = n(636537),
-    i = n(228366),
-    a = n(652215);
-async function l(e, t) {
+t.d(E, { GL: () => n, IM: () => s, JJ: () => l, RE: () => o, V2: () => S, go: () => a, x8: () => I });
+var e = t(636537),
+    i = t(228366),
+    d = t(652215);
+async function n(_, E) {
     let {
-        nick: n,
-        avatar: l,
-        avatarDescription: s,
-        avatarId: o,
-        avatarDecoration: c,
-        nameplate: u,
-        displayNameStyles: d,
-    } = t;
-    if (null == e) throw Error("Need guildId");
-    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT", guildId: e });
-    let _ = {
-        nick: n,
-        avatar: l,
-        avatar_description: s,
-        avatar_id: o,
-        avatar_decoration_sku_id: void 0 !== c ? (c?.skuId ?? null) : void 0,
-        collectibles: void 0 !== u ? { nameplate: null === u ? null : { sku_id: u.skuId } } : void 0,
-        display_name_font_id: void 0 !== d ? (null !== d ? d.fontId : null) : void 0,
-        display_name_effect_id: void 0 !== d ? (null !== d ? d.effectId : null) : void 0,
-        display_name_colors: void 0 !== d ? (null !== d ? d.colors : null) : void 0,
+        nick: t,
+        avatar: n,
+        avatarDescription: l,
+        avatarId: S,
+        avatarDecoration: a,
+        nameplate: o,
+        displayNameStyles: s,
+    } = E;
+    if (null == _) throw Error("Need guildId");
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT", guildId: _ });
+    let I = {
+        nick: t,
+        avatar: n,
+        avatar_description: l,
+        avatar_id: S,
+        avatar_decoration_sku_id: void 0 !== a ? (a?.skuId ?? null) : void 0,
+        collectibles: void 0 !== o ? { nameplate: null === o ? null : { sku_id: o.skuId } } : void 0,
+        display_name_font_id: void 0 !== s ? (null !== s ? s.fontId : null) : void 0,
+        display_name_effect_id: void 0 !== s ? (null !== s ? s.effectId : null) : void 0,
+        display_name_colors: void 0 !== s ? (null !== s ? s.colors : null) : void 0,
     };
     try {
-        let t = await r.Bo.patch({ url: a.Rsh.SET_GUILD_MEMBER(e), body: _, oldFormErrors: !0, rejectWithError: !1 }),
-            n = t.body;
+        let E = await e.Bo.patch({ url: d.Rsh.SET_GUILD_MEMBER(_), body: I, oldFormErrors: !0, rejectWithError: !1 }),
+            t = E.body;
         return (
-            i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS", guildId: e }),
-            i.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildMember: n, guildId: e }),
-            (null != l || null != o) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
-            t
+            i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS", guildId: _ }),
+            i.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildMember: t, guildId: _ }),
+            (null != n || null != S) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+            E
         );
-    } catch (n) {
-        let t = n.body;
+    } catch (t) {
+        let E = t.body;
         return (
-            t?.username != null && ((t.nick = t.username), delete t.username),
-            i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", guildId: e, errors: n.body }),
-            n
+            E?.username != null && ((E.nick = E.username), delete E.username),
+            i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", guildId: _, errors: t.body }),
+            t
         );
     }
 }
-function s(e) {
-    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_GUILD", guildId: e });
+function l(_) {
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_GUILD", guildId: _ });
 }
-function o(e) {
-    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_INIT", guildId: e });
+function S(_) {
+    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_INIT", guildId: _ });
 }
-function c() {
+function a() {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 }
-function u() {
+function o() {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 }
-function d() {
+function s() {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 }
-function _() {
+function I() {
     i.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
 }

@@ -7,15 +7,17 @@ n(64700);
 var a = n(506774),
     o = n(192308),
     l = n(386936);
-let d = "dmSettingsUpsellLastShown",
-    _ = {
+let _ = "dmSettingsUpsellLastShown",
+    d = {
         openDmSettingsUpsellModal(e) {
-            let t = a.w.get(d),
+            let t = a.w.get(_),
                 i = Date.now();
             null == t || i - t > 6048e5
-                ? (a.w.set(d, i),
+                ? (a.w.set(_, i),
                   (0, o.openModalLazy)(async () => {
-                      let { default: t } = await n.e("40303").then(n.bind(n, 228855));
+                      let { default: t } = await Promise.all([n.e("26065"), n.e("73084"), n.e("62684")]).then(
+                          n.bind(n, 228855),
+                      );
                       return (n) => (0, s.jsx)(t, { ...n, guildId: e });
                   }))
                 : (0, l.$)(l.s.SUPPRESSED_BY_COOLDOWN, e);
@@ -25,7 +27,7 @@ var u = n(652215);
 class c extends r.A {
     actions = { DM_SETTINGS_UPSELL_SHOW: this.handleDmSettingsUpsellShow };
     handleDmSettingsUpsellShow(e) {
-        _.openDmSettingsUpsellModal(e.guildId);
+        d.openDmSettingsUpsellModal(e.guildId);
     }
 }
 function E(e) {

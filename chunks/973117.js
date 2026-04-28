@@ -1,14 +1,13 @@
-"use strict";
 let r;
-n.d(t, { J: () => s, n: () => a });
-let i = "__d6gp33cibjs";
+E.d(t, { J: () => _, n: () => T });
+let S = "__d6gp33cibjs";
 try {
-    (r = window.localStorage), null == r && ((r = window[i]), delete window[i]);
+    (r = window.localStorage), null == r && ((r = window[S]), delete window[S]);
 } catch (e) {}
 try {
-    null != window.localStorage && (window[i] = window.localStorage), delete window.localStorage;
+    null != window.localStorage && (window[S] = window.localStorage), delete window.localStorage;
 } catch (e) {}
-class s {
+class _ {
     storage;
     constructor() {
         this.storage = {};
@@ -41,7 +40,7 @@ class s {
         return Promise.resolve(this.get(e));
     }
 }
-let a = !(function () {
+let T = !(function () {
     let e = "test";
     try {
         return r.setItem(e, e), r.removeItem(e), !0;
@@ -49,18 +48,18 @@ let a = !(function () {
         return !1;
     }
 })()
-    ? new s()
+    ? new _()
     : new (class {
           get(e, t) {
-              let n = r.getItem(e);
-              if (null != n)
+              let E = r.getItem(e);
+              if (null != E)
                   try {
-                      n = JSON.parse(n);
+                      E = JSON.parse(E);
                   } catch (e) {
-                      n = t;
+                      E = t;
                   }
-              else n = t;
-              return n;
+              else E = t;
+              return E;
           }
           set(e, t) {
               r.setItem(e, JSON.stringify(t));

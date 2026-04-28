@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => o });
-var a = n(627968);
+n.d(t, { A: () => s });
+var r = n(627968);
 n(64700);
-var r = n(503698),
-    i = n.n(r),
+var i = n(503698),
+    a = n.n(i),
     l = n(155718),
-    s = n(118433);
-function o(e) {
+    o = n(118433);
+function s(e) {
     let { divider: t, spacing: n } = e;
-    return (0, a.jsx)("div", { className: i()({ [s.f]: n === l.C8.LARGE, [s.y]: t }) });
+    return (0, r.jsx)("div", { className: a()({ [o.f]: n === l.C8.LARGE, [o.y]: t }) });
 }

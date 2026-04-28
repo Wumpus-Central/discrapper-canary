@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__56dee",
     cy: "author__56dee",

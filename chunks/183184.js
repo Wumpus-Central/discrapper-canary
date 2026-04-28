@@ -1,20 +1,20 @@
-n.d(t, { A: () => u });
+n.d(e, { A: () => o });
 var i = n(627968);
 n(64700);
-var l = n(192308),
-    s = n(827343),
+var s = n(192308),
+    l = n(827343),
     r = n(579872),
     a = n(48686),
-    o = n(985018);
-function u(e, t, u) {
-    t && (0, a.t)()
-        ? (0, l.openModalLazy)(async () => {
-              let { default: e } = await n.e("59866").then(n.bind(n, 937489));
-              return (t) => (0, i.jsx)(e, { ...t });
+    u = n(985018);
+function o(t, e, o) {
+    e && (0, a.t)()
+        ? (0, s.openModalLazy)(async () => {
+              let { default: t } = await Promise.all([n.e("39765"), n.e("59866")]).then(n.bind(n, 937489));
+              return (e) => (0, i.jsx)(t, { ...e });
           })
-        : t
-          ? r.A.show({ title: o.intl.string(o.t.FJSZVM), body: o.intl.string(o.t.etJjgW) })
-          : e
-            ? r.A.show({ title: o.intl.string(o.t["+JQCa/"]), body: o.intl.string(o.t.hsNm7d) })
-            : s.A.toggleSelfMute({ location: u });
+        : e
+          ? r.A.show({ title: u.intl.string(u.t.FJSZVM), body: u.intl.string(u.t.etJjgW) })
+          : t
+            ? r.A.show({ title: u.intl.string(u.t["+JQCa/"]), body: u.intl.string(u.t.hsNm7d) })
+            : l.A.toggleSelfMute({ location: o });
 }

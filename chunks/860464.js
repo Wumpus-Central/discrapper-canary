@@ -1,2 +1,1 @@
-"use strict";
 e.exports = { kL: "container__8e51c", Qq: "text__8e51c", M0: "bar__8e51c", qB: "progress__8e51c" };

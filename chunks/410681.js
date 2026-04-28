@@ -1,84 +1,83 @@
-"use strict";
-i.d(t, { default: () => h });
-var n = i(627968),
-    r = i(64700),
-    a = i(550079),
-    o = i(477782),
-    s = i(358367),
-    l = i(793574),
-    d = i(581298),
-    u = i(858897),
-    c = i(74612),
-    p = i(17928),
-    f = i(406810),
-    v = i(848847),
-    g = i(148810),
-    y = i(521502),
-    m = i(380610),
-    A = i(390486),
-    E = i(540999),
-    S = i(985018),
-    N = i(484003),
-    b = i(616621);
-let h = (0, s.A)(
+r.d(i, { default: () => m });
+var l = r(627968),
+    n = r(64700),
+    t = r(550079),
+    d = r(477782),
+    c = r(358367),
+    s = r(793574),
+    a = r(581298),
+    o = r(858897),
+    u = r(74612),
+    v = r(17928),
+    b = r(406810),
+    p = r(848847),
+    y = r(148810),
+    h = r(521502),
+    A = r(380610),
+    g = r(390486),
+    k = r(540999),
+    x = r(985018),
+    j = r(484003),
+    f = r(616621);
+let m = (0, c.A)(
     function (e) {
-        let t = (function () {
-                let e = (0, p.bG)([y.A], () =>
-                        (0, m.kK)() ? y.A.getCurrentBuildOverride().overrides?.discord_web : null,
+        let i = (function () {
+                let e = (0, v.bG)([h.A], () =>
+                        (0, A.kK)() ? h.A.getCurrentBuildOverride().overrides?.discord_web : null,
                     ),
-                    t = (0, p.bG)([E.A], () => E.A.isDeveloper),
-                    i = r.useMemo(() => (t ? (0, A.H)() : []), [t]),
-                    [a, s] = r.useState(!1),
-                    l = async (t) => {
-                        if (null == t || t.id !== e?.id)
+                    i = (0, v.bG)([k.A], () => k.A.isDeveloper),
+                    r = n.useMemo(() => (i ? (0, g.H)() : []), [i]),
+                    [t, c] = n.useState(!1),
+                    s = async (i) => {
+                        if (null == i || i.id !== e?.id)
                             try {
-                                s(!0),
-                                    (null != t ? await (0, g.oA)(t.payload) : await (0, g.iD)()).ok &&
+                                c(!0),
+                                    (null != i ? await (0, y.oA)(i.payload) : await (0, y.iD)()).ok &&
                                         window.location.reload(!0);
                             } finally {
-                                s(!1);
+                                c(!1);
                             }
                     };
-                return (0, n.jsxs)(o.rX, {
+                return (0, l.jsxs)(d.rX, {
                     children: [
-                        t &&
-                            i.length > 0 &&
-                            (0, n.jsx)(
-                                o.Dr,
+                        i &&
+                            r.length > 0 &&
+                            (0, l.jsx)(
+                                d.Dr,
                                 {
                                     label: "Recent Build Overrides",
                                     id: "recent-build-overrides",
-                                    leadingAccessory: { type: "icon", icon: f.O },
-                                    children: i.map((t) =>
-                                        (0, n.jsx)(
-                                            o.iD,
+                                    leadingAccessory: { type: "icon", icon: b.O },
+                                    children: r.map((i) =>
+                                        (0, l.jsx)(
+                                            d.iD,
                                             {
-                                                id: t.id,
-                                                label: t.id,
+                                                id: i.id,
+                                                label: i.id,
                                                 group: "recent-build-overrides",
-                                                checked: t.id === e?.id,
-                                                action: () => l(t),
+                                                checked: i.id === e?.id,
+                                                action: () => s(i),
                                             },
-                                            t.id,
+                                            i.id,
                                         ),
                                     ),
                                 },
                                 "recent-build-overrides",
                             ),
                         null != e &&
-                            (0, n.jsx)(
-                                o.Dr,
+                            (0, l.jsx)(
+                                d.Dr,
                                 {
                                     id: "clear-build-override",
-                                    disabled: a,
-                                    leadingAccessory: { type: "icon", icon: v.H },
-                                    iconLeft: v.H,
-                                    label: S.intl.string(S.t["/Nz9rY"]),
-                                    subtext: (0, n.jsx)("div", {
-                                        className: N.Z,
-                                        children: (0, n.jsx)("div", { className: N.i, children: e.id }),
+                                    disabled: t,
+                                    leadingAccessory: { type: "icon", icon: p.H },
+                                    iconLeft: p.H,
+                                    label: x.intl.string(x.t["/Nz9rY"]),
+                                    subtext: (0, l.jsx)("div", {
+                                        className: j.Z,
+                                        children: (0, l.jsx)("div", { className: j.i, children: e.id }),
                                     }),
-                                    action: () => l(null),
+                                    action: () => s(null),
                                     color: "danger",
                                 },
                                 "clear-build-override",
@@ -86,59 +85,59 @@ let h = (0, s.A)(
                     ],
                 });
             })(),
-            i = (0, b.A)(!0),
-            s = (function (e, t) {
-                let { node: i } = (0, d.Ay)(e, ""),
-                    [a, s] = r.useState(i);
-                return a.layout.map((e) => {
-                    var i, r;
-                    let a;
+            r = (0, f.A)(!0),
+            c = (function (e, i) {
+                let { node: r } = (0, a.Ay)(e, ""),
+                    [t, c] = n.useState(r);
+                return t.layout.map((e) => {
+                    var r, n;
+                    let t;
                     return (
-                        (i = e),
-                        (r = t),
-                        (a = i.useTitle?.()),
-                        (0, n.jsx)(
-                            o.rX,
+                        (r = e),
+                        (n = i),
+                        (t = r.useTitle?.()),
+                        (0, l.jsx)(
+                            d.rX,
                             {
-                                label: a,
-                                children: i.layout.map((e) => {
-                                    var t, i;
-                                    let a, s, l, d;
+                                label: t,
+                                children: r.layout.map((e) => {
+                                    var i, r;
+                                    let t, c, s, a;
                                     return (
-                                        (t = e),
-                                        (i = r),
-                                        (a = t.useTitle?.()),
-                                        (s = t.useMenu?.()),
-                                        (l = "destructive" === t.variant ? "danger" : void 0),
-                                        (d = t.onClick ?? (() => i(t.key))),
-                                        (0, n.jsx)(
-                                            o.Dr,
+                                        (i = e),
+                                        (r = n),
+                                        (t = i.useTitle?.()),
+                                        (c = i.useMenu?.()),
+                                        (s = "destructive" === i.variant ? "danger" : void 0),
+                                        (a = i.onClick ?? (() => r(i.key))),
+                                        (0, l.jsx)(
+                                            d.Dr,
                                             {
-                                                label: a,
-                                                id: t.key,
-                                                leadingAccessory: { type: "icon", icon: t.icon },
-                                                iconLeft: t.icon,
-                                                color: l,
-                                                action: d,
-                                                children: s,
+                                                label: t,
+                                                id: i.key,
+                                                leadingAccessory: { type: "icon", icon: i.icon },
+                                                iconLeft: i.icon,
+                                                color: s,
+                                                action: a,
+                                                children: c,
                                             },
-                                            t.key,
+                                            i.key,
                                         )
                                     );
                                 }),
                             },
-                            i.key,
+                            r.key,
                         )
                     );
                 });
-            })(c.D, (e) => (0, u.openUserSettings)(e));
-        return (0, n.jsxs)(a.W, {
+            })(u.D, (e) => (0, o.openUserSettings)(e));
+        return (0, l.jsxs)(t.W, {
             navId: "settings-menu",
-            "aria-label": S.intl.string(S.t.opYYHn),
+            "aria-label": x.intl.string(x.t.opYYHn),
             onSelect: void 0,
             ...e,
-            children: [s, null != i && (0, n.jsx)(o.rX, { children: i }), t],
+            children: [c, null != r && (0, l.jsx)(d.rX, { children: r }), i],
         });
     },
-    [l.A.CONTEXT_MENU, l.A.USER_SETTINGS_MENU],
+    [s.A.CONTEXT_MENU, s.A.USER_SETTINGS_MENU],
 );

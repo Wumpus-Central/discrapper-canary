@@ -1,46 +1,45 @@
-"use strict";
-n.d(t, { A: () => m, N: () => u });
-var i,
-    a = n(17928),
-    s = n(228366),
-    l = n(156898),
-    r = n(67480),
-    o = n(328968);
-let c = new Map(),
-    d = new Map();
-var u =
-    (((i = {})[(i.NONE = 0)] = "NONE"),
-    (i[(i.FETCHING = 1)] = "FETCHING"),
-    (i[(i.FETCHED = 2)] = "FETCHED"),
-    (i[(i.FAILED = 3)] = "FAILED"),
-    i);
-let h = new l.A({ subscriptions: [], otps: [] });
-class p extends a.Ay.Store {
+r.d(e, { A: () => p, N: () => c });
+var s,
+    n = r(17928),
+    o = r(228366),
+    A = r(156898),
+    i = r(67480),
+    a = r(328968);
+let u = new Map(),
+    E = new Map();
+var c =
+    (((s = {})[(s.NONE = 0)] = "NONE"),
+    (s[(s.FETCHING = 1)] = "FETCHING"),
+    (s[(s.FETCHED = 2)] = "FETCHED"),
+    (s[(s.FAILED = 3)] = "FAILED"),
+    s);
+let C = new A.A({ subscriptions: [], otps: [] });
+class T extends n.Ay.Store {
     static displayName = "ApplicationStoreDirectoryStore";
     initialize() {
-        this.waitFor(r.A, o.A);
+        this.waitFor(i.A, a.A);
     }
-    hasStorefront(e) {
-        return c.has(e);
+    hasStorefront(t) {
+        return u.has(t);
     }
-    getStoreLayout(e) {
-        return c.get(e) ?? h;
+    getStoreLayout(t) {
+        return u.get(t) ?? C;
     }
-    getFetchStatus(e) {
-        return c.has(e) ? 2 : (d.get(e) ?? 0);
+    getFetchStatus(t) {
+        return u.has(t) ? 2 : (E.get(t) ?? 0);
     }
 }
-let m = new p(s.h, {
-    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function (e) {
-        let { applicationId: t, layout: n } = e;
-        c.set(t, l.A.createFromServer(n)), d.delete(t);
+let p = new T(o.h, {
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function (t) {
+        let { applicationId: e, layout: r } = t;
+        u.set(e, A.A.createFromServer(r)), E.delete(e);
     },
-    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: function (e) {
-        let { applicationId: t } = e;
-        d.set(t, 3);
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: function (t) {
+        let { applicationId: e } = t;
+        E.set(e, 3);
     },
-    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: function (e) {
-        let { applicationId: t } = e;
-        d.set(t, 1);
+    APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: function (t) {
+        let { applicationId: e } = t;
+        E.set(e, 1);
     },
 });

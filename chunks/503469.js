@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Nr: "card__84e3e",
     vk: "clickable__84e3e",

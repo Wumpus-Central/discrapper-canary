@@ -1,15 +1,14 @@
-"use strict";
-var a = r(557939),
-    n = r(108591),
-    s = r(581390),
-    o = r(633228),
-    i = Array;
-a(
+var s = e(557939),
+    a = e(108591),
+    p = e(581390),
+    i = e(633228),
+    o = Array;
+s(
     { target: "Array", proto: !0 },
     {
         toReversed: function () {
-            return n(s(this), i);
+            return a(p(this), o);
         },
     },
 ),
-    o("toReversed");
+    i("toReversed");

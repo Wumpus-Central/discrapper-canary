@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     $O: "messageWrapper__22cef",
     kL: "container__22cef",

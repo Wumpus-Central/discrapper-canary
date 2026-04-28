@@ -1,20 +1,19 @@
-"use strict";
-r.d(t, { A: () => u });
-var i = r(627968);
-r(64700);
-var a = r(503698),
-    n = r.n(a),
-    s = r(194261),
-    l = r(834730),
-    o = r(985018),
-    c = r(49673),
-    d = r(653307);
+e.d(n, { A: () => u });
+var l = e(627968);
+e(64700);
+var i = e(503698),
+    t = e.n(i),
+    s = e(194261),
+    a = e(834730),
+    c = e(985018),
+    d = e(49673),
+    o = e(653307);
 function u() {
-    return (0, i.jsxs)("div", {
-        className: n()(c.iG, d.Uu, d.Hu),
+    return (0, l.jsxs)("div", {
+        className: t()(d.iG, o.Uu, o.Hu),
         children: [
-            (0, i.jsx)(s.X, { size: "sm", color: "currentColor", className: c.hz }),
-            (0, i.jsx)(l.E, { variant: "text-sm/medium", className: c.aK, children: o.intl.string(o.t.Kv6Z4I) }),
+            (0, l.jsx)(s.X, { size: "sm", color: "currentColor", className: d.hz }),
+            (0, l.jsx)(a.E, { variant: "text-sm/medium", className: d.aK, children: c.intl.string(c.t.Kv6Z4I) }),
         ],
     });
 }

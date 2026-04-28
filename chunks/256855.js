@@ -1,2 +1,1 @@
-"use strict";
-e.exports = { $: "libraryHeader__5a895" };
+r.exports = { $: "libraryHeader__5a895" };

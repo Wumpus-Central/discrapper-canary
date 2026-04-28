@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     cI: "bannerContainer_b76d57",
     IH: "bannerContent_b76d57",

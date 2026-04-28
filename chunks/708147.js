@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     $4: "barBase__0f481",
     vC: "barButtonBase__0f481",
     t3: "barButtonIcon__0f481",

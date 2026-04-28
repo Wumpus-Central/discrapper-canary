@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     UD: "buttonContainer_e6e74f",
     x6: "button_e6e74f",

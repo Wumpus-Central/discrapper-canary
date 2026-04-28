@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { I: () => s });
-var a = n(627968),
-    i = n(508770),
-    l = n(111159),
-    r = n(985018);
-function s() {
-    return (0, a.jsx)(i.E, { type: { text: r.intl.string(r.t.RiDMFz) }, variant: "brand", icon: l.p });
+i.d(e, { I: () => u });
+var n = i(627968),
+    _ = i(508770),
+    s = i(111159),
+    a = i(985018);
+function u() {
+    return (0, n.jsx)(_.E, { type: { text: a.intl.string(a.t.RiDMFz) }, variant: "brand", icon: s.p });
 }

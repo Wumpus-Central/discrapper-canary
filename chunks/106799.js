@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { A: () => m, B: () => u });
-var a = n(627968),
-    i = n(503698),
-    l = n.n(i),
-    r = n(462887),
-    s = n(736653),
-    c = n(439032);
-let o = n(243884),
-    d = n(79825),
-    u = (e) => {
-        let { customSize: t, shouldUseThemeColor: n = !1, loading: i, className: u } = e,
-            m = (0, s.Ay)(),
-            f = n && (0, r.q)(m) ? d : o;
+t.d(e, { A: () => u, B: () => l });
+var a = t(627968),
+    c = t(503698),
+    i = t.n(c),
+    p = t(462887),
+    r = t(736653),
+    d = t(439032);
+let h = t(243884),
+    o = t(79825),
+    l = (s) => {
+        let { customSize: e, shouldUseThemeColor: t = !1, loading: c, className: l } = s,
+            u = (0, r.Ay)(),
+            v = t && (0, p.q)(u) ? o : h;
         return (0, a.jsx)("img", {
-            className: l()(c.H8, u, { [c.Lq]: i }),
-            src: f,
+            className: i()(d.H8, l, { [d.Lq]: c }),
+            src: v,
             alt: "",
-            style: void 0 !== t ? { height: t } : void 0,
+            style: void 0 !== e ? { height: e } : void 0,
         });
     },
-    m = u;
+    u = l;

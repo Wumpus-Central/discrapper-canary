@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(627968),
-    a = n(821609),
-    i = n(783420),
-    l = n(938973);
-let s = function (e) {
+r.d(e, { A: () => p });
+var s = r(627968),
+    c = r(821609),
+    i = r(783420),
+    n = r(938973);
+let p = function (t) {
     let {
-            subscriptionTier: t,
-            onClick: n,
-            postSuccessGuild: s,
-            onSubscribeModalClose: o,
-            premiumModalAnalyticsLocation: c,
-            applicationId: d,
-            confirmationFooter: u,
-            buttonTextOverride: _,
-            defaultTextOverride: p,
-            iconOverride: f,
-            variantOverride: m,
-            ...h
-        } = e,
-        { subscribeButtonProps: g } = (0, l.B)({
-            subscriptionTier: t,
-            buttonTextOverride: _,
-            defaultTextOverride: p,
-            iconOverride: f,
-            variantOverride: m,
+            subscriptionTier: e,
+            onClick: r,
+            postSuccessGuild: p,
+            onSubscribeModalClose: u,
+            premiumModalAnalyticsLocation: d,
+            applicationId: h,
+            confirmationFooter: a,
+            buttonTextOverride: k,
+            defaultTextOverride: l,
+            iconOverride: o,
+            variantOverride: C,
+            ...b
+        } = t,
+        { subscribeButtonProps: j } = (0, n.B)({
+            subscriptionTier: e,
+            buttonTextOverride: k,
+            defaultTextOverride: l,
+            iconOverride: o,
+            variantOverride: C,
         });
-    return (0, r.jsx)(i.A, {
-        onClick: n,
-        subscriptionTier: t,
-        postSuccessGuild: s,
-        onSubscribeModalClose: o,
-        premiumModalAnalyticsLocation: c,
-        applicationId: d,
-        confirmationFooter: u,
-        children: (e) => {
-            let { onClick: t } = e;
-            return (0, r.jsx)(a.$, { onClick: t, ...g, ...h });
+    return (0, s.jsx)(i.A, {
+        onClick: r,
+        subscriptionTier: e,
+        postSuccessGuild: p,
+        onSubscribeModalClose: u,
+        premiumModalAnalyticsLocation: d,
+        applicationId: h,
+        confirmationFooter: a,
+        children: (t) => {
+            let { onClick: e } = t;
+            return (0, s.jsx)(c.$, { onClick: e, ...j, ...b });
         },
     });
 };

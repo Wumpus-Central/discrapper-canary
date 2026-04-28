@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, {
     Bk: () => D,
     CC: () => f,
@@ -8,7 +7,7 @@ n.d(t, {
     VS: () => I,
     aO: () => m,
     cI: () => b,
-    et: () => S,
+    et: () => w,
     kX: () => y,
     pK: () => E,
     r2: () => R,
@@ -34,12 +33,12 @@ let f = 0,
     g = !1;
 function _(e) {
     let { spanId: t, traceId: n } = e.spanContext(),
-        { data: r, op: i, parent_span_id: o, status: a, origin: s } = S(e);
+        { data: r, op: i, parent_span_id: o, status: a, origin: s } = w(e);
     return (0, c.Ce)({ parent_span_id: o, span_id: t, trace_id: n, data: r, op: i, status: a, origin: s });
 }
 function y(e) {
     let { spanId: t, traceId: n, isRemote: r } = e.spanContext(),
-        i = r ? t : S(e).parent_span_id,
+        i = r ? t : w(e).parent_span_id,
         o = r ? (0, u.ZF)() : t;
     return (0, c.Ce)({ parent_span_id: i, span_id: o, trace_id: n });
 }
@@ -50,17 +49,17 @@ function v(e) {
 }
 function b(e) {
     return "number" == typeof e
-        ? w(e)
+        ? S(e)
         : Array.isArray(e)
           ? e[0] + e[1] / 1e9
           : e instanceof Date
-            ? w(e.getTime())
+            ? S(e.getTime())
             : (0, d.zf)();
 }
-function w(e) {
+function S(e) {
     return e > 0x2540be3ff ? e / 1e3 : e;
 }
-function S(e) {
+function w(e) {
     if ("function" == typeof e.getSpanJSON) return e.getSpanJSON();
     try {
         var t;

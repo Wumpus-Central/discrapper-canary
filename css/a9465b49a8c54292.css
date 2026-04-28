@@ -1,0 +1,36 @@
+.countDownWrapper__46b37 {
+    align-items: center;
+    border-radius: 48px;
+    bottom: 0;
+    display: flex;
+    font-family: var(--font-code);
+    gap: 12px;
+    height: 50px;
+    inset-inline-start: calc(50% + 156px);
+    justify-content: center;
+    min-width: 350px;
+    padding: 4px 32px;
+    pointer-events: none;
+    position: fixed;
+    width: min(506px, 40vw);
+    z-index: 100
+}
+
+.mobileWrapper__46b37 {
+    inset-inline-start: 50%
+}
+
+.countdownIcon__46b37 {
+    height: 40px;
+    pointer-events: none
+}
+
+.countdownLabel__46b37 {
+    color: #000;
+    font-family: var(--font-headline);
+    text-transform: uppercase
+}
+
+.countdownBody__46b37 {
+    color: #000
+}

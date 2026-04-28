@@ -1,80 +1,93 @@
-n.d(t, { A: () => p });
-var i = n(64700),
-    l = n(17928),
-    s = n(192308),
-    r = n(688810),
-    a = n(987144),
-    o = n(71393),
-    d = n(403362),
-    c = n(645619),
-    u = n(864310),
-    h = n(568065),
-    A = n(181940),
-    _ = n(627968),
-    g = n(652215);
-function m(e, t, i) {
-    i && (0, s.closeAllModals)(),
+n.d(t, { A: () => S });
+var l = n(64700),
+    u = n(17928),
+    r = n(192308),
+    i = n(688810),
+    o = n(987144),
+    s = n(71393),
+    E = n(403362),
+    _ = n(645619),
+    A = n(864310),
+    a = n(568065),
+    d = n(181940),
+    G = n(627968),
+    R = n(652215);
+function I(e, t, l) {
+    l && (0, r.closeAllModals)(),
         null != t &&
-            (0, s.openModalLazy)(async () => {
-                let { default: i } = await Promise.all([n.e("35016"), n.e("11530")]).then(n.bind(n, 843214));
-                return (n) => (0, _.jsx)(i, { guildId: e, powerup: t, ...n });
+            (0, r.openModalLazy)(async () => {
+                let { default: l } = await Promise.all([
+                    n.e("73432"),
+                    n.e("64827"),
+                    n.e("84569"),
+                    n.e("22455"),
+                    n.e("70698"),
+                    n.e("82926"),
+                    n.e("69149"),
+                    n.e("49379"),
+                    n.e("35016"),
+                    n.e("957"),
+                    n.e("50186"),
+                    n.e("2211"),
+                ]).then(n.bind(n, 843214));
+                return (n) => (0, G.jsx)(l, { guildId: e, powerup: t, ...n });
             });
 }
-function p(e, t) {
-    let { analyticsLocations: n } = (0, r.Ay)(),
-        { onToggle: s, isLoading: _, error: p } = (0, A.A)(e, t),
-        f = (0, l.bG)([o.A], () => o.A.getGuild(e)),
-        E = (function (e, t) {
-            let n = (0, l.bG)([o.A], () => o.A.getGuild(e)),
-                s = (0, l.bG)([c.A], () => c.A.getStateForGuild(e)),
-                { spent: r } = (0, u.A)(e),
-                a = i.useMemo(() => {
-                    if (null == t || t.type !== h.o9.LEVEL || null == s) return [];
-                    let e = h.y7[t.skuId];
+function S(e, t) {
+    let { analyticsLocations: n } = (0, i.Ay)(),
+        { onToggle: r, isLoading: G, error: S } = (0, d.A)(e, t),
+        P = (0, u.bG)([s.A], () => s.A.getGuild(e)),
+        O = (function (e, t) {
+            let n = (0, u.bG)([s.A], () => s.A.getGuild(e)),
+                r = (0, u.bG)([_.A], () => _.A.getStateForGuild(e)),
+                { spent: i } = (0, A.A)(e),
+                o = l.useMemo(() => {
+                    if (null == t || t.type !== a.o9.LEVEL || null == r) return [];
+                    let e = a.y7[t.skuId];
                     return null == e
                         ? []
-                        : Object.entries(h.wr)
+                        : Object.entries(a.wr)
                               .filter((t) => {
-                                  let [n, i] = t;
-                                  return i === e && null != s.unlockedPowerups[n];
+                                  let [n, l] = t;
+                                  return l === e && null != r.unlockedPowerups[n];
                               })
                               .map((e) => {
                                   let [t] = e;
-                                  return s.allPowerups[t];
+                                  return r.allPowerups[t];
                               })
-                              .filter(d.Vq);
-                }, [t, s]),
-                A = a?.reduce((e, t) => e + t.cost, 0);
-            return Math.max((n?.premiumSubscriberCount ?? 0) - r + (A ?? 0), 0);
+                              .filter(E.Vq);
+                }, [t, r]),
+                d = o?.reduce((e, t) => e + t.cost, 0);
+            return Math.max((n?.premiumSubscriberCount ?? 0) - i + (d ?? 0), 0);
         })(e, t);
     return {
-        onActivate: i.useCallback(
+        onActivate: l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                    { shouldCloseAllModals: i = !0 } = e;
-                if (null != f && null != t)
-                    return E < t.cost
-                        ? void (0, a.g)({
+                    { shouldCloseAllModals: l = !0 } = e;
+                if (null != P && null != t)
+                    return O < t.cost
+                        ? void (0, o.g)({
                               analyticsLocation: {
-                                  page: g.liQ.GUILD_POWERUPS_OVERVIEW,
-                                  section: g.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
+                                  page: R.liQ.GUILD_POWERUPS_OVERVIEW,
+                                  section: R.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
                               },
-                              numberOfBoostsToAdd: t.cost - E,
+                              numberOfBoostsToAdd: t.cost - O,
                               analyticsLocations: n,
-                              guild: f,
-                              intent: t.type === h.o9.LEVEL ? h.Pn.LEVEL : h.Pn.PERK,
+                              guild: P,
+                              intent: t.type === a.o9.LEVEL ? a.Pn.LEVEL : a.Pn.PERK,
                               onSubscribeComplete: () =>
-                                  s(!0)?.then(() => {
-                                      m(f.id, t, i);
+                                  r(!0)?.then(() => {
+                                      I(P.id, t, l);
                                   }),
                           })
-                        : s(!0)?.then(() => {
-                              m(f.id, t, i);
+                        : r(!0)?.then(() => {
+                              I(P.id, t, l);
                           });
             },
-            [s, t, E, n, f],
+            [r, t, O, n, P],
         ),
-        isLoading: _,
-        error: p,
+        isLoading: G,
+        error: S,
     };
 }

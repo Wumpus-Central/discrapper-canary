@@ -1,0 +1,37 @@
+.container_fc71d3 {
+    border: 1px solid var(--background-base-low);
+    box-shadow: var(--shadow-high);
+    container-type: inline-size;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    height: calc(100vh - var(--custom-app-top-bar-height) - var(--custom-app-panels-height) - 1rem);
+    max-height: 640px;
+    min-height: 0;
+    min-width: 320px;
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 10px)
+}
+
+.backgroundContainer_fc71d3,
+.container_fc71d3 {
+    border-radius: var(--radius-md);
+    overflow: hidden
+}
+
+.backgroundContainer_fc71d3 {
+    border: 1px solid var(--app-frame-border);
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.background_fc71d3 {
+    background: var(--background-gradient-highest, var(--background-base-low));
+    border-radius: var(--radius-md);
+    height: 100vh;
+    inset-inline-start: calc(var(--custom-guild-list-width)*-1);
+    position: absolute;
+    top: calc(var(--custom-app-top-bar-height)*-1);
+    width: 100vw
+}

@@ -1,0 +1,39 @@
+.modalContainer_fc200b {
+    display: flex;
+    margin-top: calc(var(--space-8)*-1)
+}
+
+.modalSection_fc200b {
+    display: flex;
+    flex: 1
+}
+
+.ctaSection_fc200b {
+    background: var(--background-base-lower);
+    border-start-start-radius: var(--radius-md);
+    justify-content: center;
+    min-height: 458px
+}
+
+.ctaContainer_fc200b {
+    margin-bottom: auto;
+    margin-top: auto;
+    padding: 32px;
+    text-align: center
+}
+
+.formSection_fc200b {
+    background: var(--background-base-low);
+    border-start-end-radius: var(--radius-md);
+    max-height: 458px
+}
+
+.formContainer_fc200b {
+    padding: 0 var(--space-16) var(--space-16)
+}
+
+.header_fc200b {
+    margin-bottom: 24px;
+    margin-top: 32px;
+    text-align: center
+}

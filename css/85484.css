@@ -1,0 +1,66 @@
+.subscriptionCostRowAmount__3d62f {
+    font-weight: var(--font-weight-medium)
+}
+
+.subscriptionCostRow__3d62f {
+    color: var(--text-strong)
+}
+
+.invoiceItemLabelWithIcon__3d62f {
+    align-items: center;
+    display: flex
+}
+
+.invoiceItemLabelIcon__3d62f {
+    color: var(--interactive-text-default);
+    height: 14px;
+    margin-inline-start: 8px;
+    width: 14px
+}
+
+.invoiceItemTooltip__3d62f {
+    max-width: 240px
+}
+
+.invoiceItemTooltip__3d62f p {
+    margin: 0
+}
+
+.invoiceItemTooltip__3d62f strong {
+    font-weight: var(--font-weight-bold)
+}
+
+.subscriptionDetailsToggle__3d62f {
+    align-items: center;
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    justify-content: center;
+    line-height: 16px;
+    margin: -16px 0;
+    padding: 16px 0
+}
+
+.subscriptionDetailsToggleCaret__3d62f {
+    height: 16px;
+    margin-inline-start: 6px;
+    width: 16px
+}
+
+.subscriptionPeriodResetNotice__3d62f {
+    color: var(--text-default);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 20px;
+    margin-bottom: 16px
+}
+
+.subscriptionAddedInvoiceItem__3d62f {
+    color: var(--text-feedback-positive)
+}
+
+.purchaseDetailsHeaderText__3d62f {
+    margin-bottom: 8px
+}

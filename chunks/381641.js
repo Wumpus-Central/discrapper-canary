@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+a.exports = {
     kL: "container_cc030b",
     QN: "heroContainerTopSpacing_cc030b",
     gv: "heroContainer_cc030b",

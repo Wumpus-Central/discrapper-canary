@@ -1,0 +1,137 @@
+.centeredSection_b558e5 {
+    box-sizing: border-box;
+    max-width: 1144px;
+    padding-inline: var(--space-32);
+    position: relative;
+    width: 100%
+}
+
+.container_b558e5 {
+    background-color: var(--bg-overlay-2, rgba(0, 0, 0, .6));
+    border-radius: var(--radius-lg);
+    container-type: inline-size;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    padding: var(--space-24);
+    position: relative
+}
+
+.gradient_b558e5 {
+    border-radius: inherit;
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.logo_b558e5 {
+    align-self: flex-start;
+    height: 32px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    position: relative
+}
+
+.closeButton_b558e5 {
+    inset-inline-end: var(--space-4);
+    position: absolute;
+    top: var(--space-4);
+    z-index: 1
+}
+
+.closeButton_b558e5>button {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.closeButton_b558e5>button:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: #fff
+}
+
+.promoSection_b558e5 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    position: relative
+}
+
+.headingRow_b558e5 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.cardGrid_b558e5 {
+    display: grid;
+    gap: var(--space-12);
+    grid-template-columns: 1fr;
+    position: relative
+}
+
+.cardGrid_b558e5>div {
+    border: none
+}
+
+@container (min-width: 472px) {
+    .cardGrid_b558e5 {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@container (min-width: 956px) {
+    .cardGrid_b558e5 {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+.transitionRail__014df {
+    inset-inline: 0;
+    bottom: 0;
+    position: fixed
+}
+
+.jumbleWrapper__014df {
+    inset-inline: calc(var(--custom-guild-sidebar-width) + 25px) 0;
+    bottom: -330px;
+    height: 128px;
+    transition: bottom .15s cubic-bezier(.48, -.08, .06, 1.4), opacity .1s linear
+}
+
+.asset__014df,
+.jumbleWrapper__014df {
+    position: absolute
+}
+
+.full-motion .asset__014df {
+    transition-property: top, left, transform;
+    transition-timing-function: ease-in-out
+}
+
+.peaking__014df {
+    bottom: 48px;
+    transition-duration: .3s
+}
+
+.transitioned__014df {
+    opacity: 0
+}
+
+.error__71b12 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+    justify-content: center;
+    padding-top: 40px;
+    width: 100%
+}
+
+.errorImage__71b12 {
+    height: 150px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 150px
+}

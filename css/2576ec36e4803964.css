@@ -1,0 +1,78 @@
+.header_f549e5 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-16);
+    padding-top: var(--space-64);
+    text-align: center
+}
+
+.headerImage_f549e5 {
+    margin: -45px auto;
+    width: 85px
+}
+
+.title_f549e5 {
+    padding-bottom: var(--space-4)
+}
+
+.body_f549e5,
+.title_f549e5 {
+    text-align: center
+}
+
+.content_f549e5 {
+    flex-direction: column;
+    padding: var(--space-16);
+    padding-top: 0
+}
+
+.content_f549e5,
+.guildInfo_f549e5 {
+    align-items: center;
+    display: flex
+}
+
+.guildName_f549e5 {
+    margin-inline-start: var(--space-12)
+}
+
+.buttonGroup_f549e5 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    width: 100%
+}
+
+.leave_f549e5 {
+    order: -1
+}
+
+.infoGroup_f549e5 {
+    border-radius: var(--radius-sm);
+    width: 100%
+}
+
+.infoRow_f549e5 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16);
+    padding: var(--space-16)
+}
+
+.row__6e3d6 {
+    gap: var(--space-12);
+    padding: var(--space-12)
+}
+
+.icon__6e3d6 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-width: 32px
+}
+
+.username__6e3d6 {
+    display: inline
+}

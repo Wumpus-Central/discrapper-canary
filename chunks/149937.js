@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     uK: "option__56a50",
     R4: "leading__56a50",

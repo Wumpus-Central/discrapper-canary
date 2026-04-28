@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     xd: "emptyOption_b088b0",
     LB: "emptyOptionActive_b088b0",

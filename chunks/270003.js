@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { n: () => u });
-var r = n(627968),
-    a = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    s = n(331322),
-    o = n(834730),
-    c = n(64584),
-    d = n(498990);
+l.d(t, { n: () => u });
+var s = l(627968),
+    a = l(64700),
+    n = l(503698),
+    c = l.n(n),
+    i = l(331322),
+    r = l(834730),
+    d = l(64584),
+    o = l(498990);
 function u(e) {
-    let { children: t, label: n, description: i, ...u } = e,
-        { spacing: _ } = a.useContext(c.c),
-        p = a.useId(),
-        f = null != i && "" !== i;
-    return (0, r.jsxs)("fieldset", {
+    let { children: t, label: l, description: n, ...u } = e,
+        { spacing: h } = a.useContext(d.c),
+        x = a.useId(),
+        p = null != n && "" !== n;
+    return (0, s.jsxs)("fieldset", {
         ...u,
-        className: l()(d.lI, u.className),
-        "aria-describedby": f ? p : void 0,
+        className: c()(o.lI, u.className),
+        "aria-describedby": p ? x : void 0,
         children: [
-            null != n
-                ? (0, r.jsx)(o.E, {
+            null != l
+                ? (0, s.jsx)(r.E, {
                       tag: "legend",
                       variant: "text-lg/medium",
                       color: "text-strong",
-                      className: d.o1,
+                      className: o.o1,
+                      children: l,
+                  })
+                : null,
+            p
+                ? (0, s.jsx)(r.E, {
+                      variant: "text-sm/normal",
+                      color: "text-default",
+                      className: o.h_,
+                      id: x,
                       children: n,
                   })
                 : null,
-            f
-                ? (0, r.jsx)(o.E, {
-                      variant: "text-sm/normal",
-                      color: "text-default",
-                      className: d.h_,
-                      id: p,
-                      children: i,
-                  })
-                : null,
-            (0, r.jsx)(s.B, { direction: "vertical", gap: _, children: t }),
+            (0, s.jsx)(i.B, { direction: "vertical", gap: h, children: t }),
         ],
     });
 }

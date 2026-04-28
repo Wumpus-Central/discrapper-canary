@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     D6: "arrowIcon_f41a99",
     S7: "arrowIconExpanded_f41a99",

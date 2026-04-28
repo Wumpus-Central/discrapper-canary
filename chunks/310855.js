@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     YL: "tooltip__4e35b",
     BM: "tooltipLayer__4e35b",

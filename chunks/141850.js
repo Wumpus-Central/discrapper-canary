@@ -1,58 +1,57 @@
-"use strict";
-n.d(t, {
-    Eg: () => l,
-    UA: () => s,
+r.d(e, {
+    Eg: () => s,
+    UA: () => n,
     WF: () =>
-        function e(t) {
-            let { channelId: n, limit: l = 25, before: s, after: o, around: c, isStaleRefresh: d } = t;
-            if (r.h.isDispatching())
+        function t(e) {
+            let { channelId: r, limit: s = 25, before: n, after: c, around: a, isStaleRefresh: E } = e;
+            if (h.h.isDispatching())
                 return void Promise.resolve().then(() =>
-                    e({ channelId: n, limit: l, before: s, after: o, around: c, isStaleRefresh: d }),
+                    t({ channelId: r, limit: s, before: n, after: c, around: a, isStaleRefresh: E }),
                 );
-            let u = null != c ? "around" : null != o ? "after" : "before";
-            r.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: n, direction: u });
-            let _ = { limit: l };
-            null != s && (_.before = s),
-                null != o && (_.after = o),
-                null != c && (_.around = c),
-                a.Bo.get({
-                    url: i.Rsh.CHANNEL_CONVERSATIONS(n),
-                    query: _,
+            let S = null != a ? "around" : null != c ? "after" : "before";
+            h.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: r, direction: S });
+            let p = { limit: s };
+            null != n && (p.before = n),
+                null != c && (p.after = c),
+                null != a && (p.around = a),
+                i.Bo.get({
+                    url: o.Rsh.CHANNEL_CONVERSATIONS(r),
+                    query: p,
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }).then(
-                    (e) => {
-                        let t = e.body;
-                        r.h.dispatch({
+                    (t) => {
+                        let e = t.body;
+                        h.h.dispatch({
                             type: "CONVERSATIONS_FETCH_SUCCESS",
-                            channelId: n,
-                            conversations: t.conversations,
-                            direction: u,
-                            beforeShortCircuited: t.before_short_circuited,
-                            afterShortCircuited: t.after_short_circuited,
-                            anchor: c ?? s ?? o,
-                            isStaleRefresh: d ?? !1,
+                            channelId: r,
+                            conversations: e.conversations,
+                            direction: S,
+                            beforeShortCircuited: e.before_short_circuited,
+                            afterShortCircuited: e.after_short_circuited,
+                            anchor: a ?? n ?? c,
+                            isStaleRefresh: E ?? !1,
                         });
                     },
                     () => {
-                        r.h.dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: n });
+                        h.h.dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: r });
                     },
                 );
         },
     xI: () =>
-        function e(t, n) {
-            r.h.isDispatching()
-                ? Promise.resolve().then(() => e(t, n))
-                : r.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: t, conversationId: n });
+        function t(e, r) {
+            h.h.isDispatching()
+                ? Promise.resolve().then(() => t(e, r))
+                : h.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: r });
         },
 });
-var a = n(636537),
-    r = n(228366);
-n(705448);
-var i = n(652215);
-function l() {
-    r.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
+var i = r(636537),
+    h = r(228366);
+r(705448);
+var o = r(652215);
+function s() {
+    h.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function s(e, t) {
-    r.h.dispatch({ type: "CONVERSATIONS_HOVER_CONVERSATION", channelId: e, conversationId: t });
+function n(t, e) {
+    h.h.dispatch({ type: "CONVERSATIONS_HOVER_CONVERSATION", channelId: t, conversationId: e });
 }

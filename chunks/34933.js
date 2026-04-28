@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__425a9",
     PG: "sizeSmall__425a9",

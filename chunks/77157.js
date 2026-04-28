@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(17928),
-    a = n(590180),
-    i = n(4227),
-    l = n(892118);
-function s(e) {
-    return (0, r.bG)([a.A, i.A], () => {
+t.d(r, { A: () => i });
+var s = t(17928),
+    a = t(590180),
+    l = t(4227),
+    n = t(892118);
+function i(e) {
+    return (0, s.bG)([a.A, l.A], () => {
         if (null == e) return;
-        let t = a.A.getProduct(e);
-        if ((0, l.s)(t?.items[0])) return t.items[0];
-        let n = i.A.getPurchase(e);
-        if ((0, l.s)(n?.items[0])) return n.items[0];
+        let r = a.A.getProduct(e);
+        if ((0, n.s)(r?.items[0])) return r.items[0];
+        let t = l.A.getPurchase(e);
+        if ((0, n.s)(t?.items[0])) return t.items[0];
     });
 }

@@ -1,161 +1,160 @@
-"use strict";
-n.d(t, { A: () => U });
-var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(419354),
-    o = n(23339),
-    d = n(17928),
-    c = n(661531),
-    u = n(990078),
-    m = n(319060),
-    p = n(192308),
-    _ = n(939249),
-    h = n(403581),
-    g = n(777666),
-    b = n(844222),
-    y = n(866323),
-    f = n(717421),
-    A = n(212245),
-    S = n(688810),
-    E = n(402216),
-    x = n(287809),
-    C = n(954571),
-    v = n(927578),
-    N = n(650338),
-    D = n(821715),
-    I = n(652215),
-    L = n(788868),
-    F = n(985018),
-    R = n(18238);
-let j = (0, o.xI)(m.A.LIVE_INDICATOR_BORDER_RADIUS),
-    T = { opacity: 0, transform: "translate3d(100%, 0, 0)" },
-    k = { opacity: 1, transform: "translate3d(0%, 0, 0)" },
-    M = { opacity: 0 },
-    O = { opacity: 1 },
-    G = { borderRadius: `${j}px ${j}px ${j}px ${j}px` },
-    w = { borderRadius: `0px ${j}px ${j}px 0px` },
-    B = { mass: 1, tension: 500, friction: 18, clamp: !0 },
-    P = (e) => {
+a.d(t, { A: () => G });
+var s = a(627968),
+    l = a(64700),
+    r = a(503698),
+    i = a.n(r),
+    n = a(123924),
+    c = a(23339),
+    o = a(17928),
+    p = a(661531),
+    u = a(990078),
+    _ = a(319060),
+    d = a(192308),
+    m = a(939249),
+    E = a(403581),
+    A = a(777666),
+    y = a(844222),
+    I = a(866323),
+    R = a(717421),
+    x = a(212245),
+    T = a(688810),
+    L = a(402216),
+    O = a(287809),
+    S = a(954571),
+    h = a(927578),
+    N = a(650338),
+    f = a(821715),
+    D = a(652215),
+    U = a(788868),
+    C = a(985018),
+    b = a(18238);
+let P = (0, c.xI)(_.A.LIVE_INDICATOR_BORDER_RADIUS),
+    k = { opacity: 0, transform: "translate3d(100%, 0, 0)" },
+    M = { opacity: 1, transform: "translate3d(0%, 0, 0)" },
+    j = { opacity: 0 },
+    v = { opacity: 1 },
+    V = { borderRadius: `${P}px ${P}px ${P}px ${P}px` },
+    w = { borderRadius: `0px ${P}px ${P}px 0px` },
+    g = { mass: 1, tension: 500, friction: 18, clamp: !0 },
+    H = (e) => {
         let t,
-            a,
+            r,
             {
-                participant: l,
-                isUpsellEnabled: o,
-                shape: m,
-                size: b,
-                didTrackUpsellViewed: y,
-                setDidTrackUpsellViewed: f,
-                className: j,
-                premiumIndicator: T,
-                quality: k,
+                participant: n,
+                isUpsellEnabled: c,
+                shape: _,
+                size: y,
+                didTrackUpsellViewed: I,
+                setDidTrackUpsellViewed: R,
+                className: P,
+                premiumIndicator: k,
+                quality: M,
             } = e,
-            { analyticsLocations: M } = (0, S.Ay)(),
-            O = null != (0, D.A)(l);
+            { analyticsLocations: j } = (0, T.Ay)(),
+            v = null != (0, f.A)(n);
         try {
-            t = (0, N.HB)(k);
+            t = (0, N.HB)(M);
         } catch (e) {
             t = !1;
         }
         try {
-            a = (0, N.OI)(k);
+            r = (0, N.OI)(M);
         } catch (e) {
-            a = !1;
+            r = !1;
         }
-        let G = t || a,
-            { location: w } = (0, A.p)(),
-            B = (0, d.bG)([x.default], () => x.default.getCurrentUser()),
-            P = o && !v.Ay.isPremium(B, L.PremiumTypes.TIER_1) && !v.Ay.canStreamQuality(v.Ay.StreamQuality.MID, B),
-            U = r.useCallback(() => {
-                P &&
-                    G &&
-                    (0, p.openModalLazy)(async () => {
-                        let { default: e } = await n.e("18630").then(n.bind(n, 826789));
-                        return (t) => (0, i.jsx)(e, { ...t, analyticsSource: w });
+        let V = t || r,
+            { location: w } = (0, x.p)(),
+            g = (0, o.bG)([O.default], () => O.default.getCurrentUser()),
+            H = c && !h.Ay.isPremium(g, U.PremiumTypes.TIER_1) && !h.Ay.canStreamQuality(h.Ay.StreamQuality.MID, g),
+            G = l.useCallback(() => {
+                H &&
+                    V &&
+                    (0, d.openModalLazy)(async () => {
+                        let { default: e } = await Promise.all([a.e("93475"), a.e("18630")]).then(a.bind(a, 826789));
+                        return (t) => (0, s.jsx)(e, { ...t, analyticsSource: w });
                     });
-            }, [P, G, w]);
+            }, [H, V, w]);
         if (
-            (r.useEffect(() => {
-                !y &&
-                    G &&
-                    (C.default.track(I.HAw.PREMIUM_UPSELL_VIEWED, {
-                        type: L.e.STREAM_QUALITY_INDICATOR,
+            (l.useEffect(() => {
+                !I &&
+                    V &&
+                    (S.default.track(D.HAw.PREMIUM_UPSELL_VIEWED, {
+                        type: U.e.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
-                        has_premium_stream_resolution: a,
-                        location_stack: M,
+                        has_premium_stream_resolution: r,
+                        location_stack: j,
                     }),
-                    f(!0));
-            }, [t, a, G, y, f, M]),
-            null == k)
+                    R(!0));
+            }, [t, r, V, I, R, j]),
+            null == M)
         )
             return null;
-        let H = (0, i.jsx)(u.m, {
-            text: O ? F.intl.string(F.t.q8TiVt) : G ? F.intl.string(F.t.IHgpEn) : F.intl.string(F.t.vLb0VW),
+        let W = (0, s.jsx)(u.m, {
+            text: v ? C.intl.string(C.t.q8TiVt) : V ? C.intl.string(C.t.IHgpEn) : C.intl.string(C.t.vLb0VW),
             position: "bottom",
-            children: (0, i.jsxs)(_.D, {
-                onClick: U,
-                className: s()(R.t5, b, E.u1[m], O ? R.Y5 : R.Lc, { [R.vk]: P && G }),
+            children: (0, s.jsxs)(m.D, {
+                onClick: G,
+                className: i()(b.t5, y, L.u1[_], v ? b.Y5 : b.Lc, { [b.vk]: H && V }),
                 children: [
-                    G ? (0, i.jsx)(h.t, { size: "md", color: "currentColor", className: R.fY }) : null,
-                    (0, i.jsx)("span", { className: R.UD, children: (0, N.ME)(k.maxResolution) }),
-                    (0, i.jsx)("span", { children: (0, N.Bs)(k.maxFrameRate) }),
+                    V ? (0, s.jsx)(E.t, { size: "md", color: "currentColor", className: b.fY }) : null,
+                    (0, s.jsx)("span", { className: b.UD, children: (0, N.ME)(M.maxResolution) }),
+                    (0, s.jsx)("span", { children: (0, N.Bs)(M.maxFrameRate) }),
                 ],
             }),
         });
-        return (0, i.jsx)(g.Lp, {
-            text: H,
-            className: s()(j, R.AA, { [R.Dc]: G && T }),
-            color: c.A.unsafe_rawColors.PRIMARY_500.css,
-            shape: E.u1[m],
+        return (0, s.jsx)(A.Lp, {
+            text: W,
+            className: i()(P, b.AA, { [b.Dc]: V && k }),
+            color: p.A.unsafe_rawColors.PRIMARY_500.css,
+            shape: L.u1[_],
         });
     },
-    U = (e) => {
-        let { participant: t, showQuality: n, isUpsellEnabled: a = !0, size: o, className: d, premiumIndicator: c } = e,
-            [u, m] = r.useState(!1),
-            p = (0, N.N5)(t),
-            { reducedMotion: _ } = r.useContext(b.C),
-            h = n && null != p,
-            A = (0, y.p)(
-                h,
-                { enter: { from: _.enabled ? M : T, to: _.enabled ? O : k }, leave: _.enabled ? M : T, config: B },
+    G = (e) => {
+        let { participant: t, showQuality: a, isUpsellEnabled: r = !0, size: c, className: o, premiumIndicator: p } = e,
+            [u, _] = l.useState(!1),
+            d = (0, N.N5)(t),
+            { reducedMotion: m } = l.useContext(y.C),
+            E = a && null != d,
+            x = (0, I.p)(
+                E,
+                { enter: { from: m.enabled ? j : k, to: m.enabled ? v : M }, leave: m.enabled ? j : k, config: g },
                 "animate-always",
             ),
-            S = (0, f.z)({ to: h ? w : G, config: B }, "animate-always");
+            T = (0, R.z)({ to: E ? w : V, config: g }, "animate-always");
         return ((e) => {
-            let { className: n, popoutProps: r } = e;
-            return (0, i.jsxs)("div", {
-                className: s()(R.dr, n),
-                ...r,
+            let { className: a, popoutProps: l } = e;
+            return (0, s.jsxs)("div", {
+                className: i()(b.dr, a),
+                ...l,
                 children: [
-                    A((e, n) =>
-                        n
-                            ? (0, i.jsx)(l.animated.div, {
+                    x((e, a) =>
+                        a
+                            ? (0, s.jsx)(n.animated.div, {
                                   style: e,
-                                  children: (0, i.jsx)(P, {
-                                      className: R.LZ,
+                                  children: (0, s.jsx)(H, {
+                                      className: b.LZ,
                                       participant: t,
-                                      size: o,
-                                      shape: g.EG.ROUND_LEFT,
-                                      isUpsellEnabled: a,
+                                      size: c,
+                                      shape: A.EG.ROUND_LEFT,
+                                      isUpsellEnabled: r,
                                       didTrackUpsellViewed: u,
-                                      setDidTrackUpsellViewed: m,
-                                      premiumIndicator: c,
-                                      quality: p,
+                                      setDidTrackUpsellViewed: _,
+                                      premiumIndicator: p,
+                                      quality: d,
                                   }),
                               })
                             : null,
                     ),
-                    (0, i.jsx)(l.animated.div, {
-                        style: S,
-                        className: R.Ok,
-                        children: (0, i.jsx)(E.Ay, {
-                            look: E.gv.RED,
-                            size: o,
-                            shape: h ? g.EG.ROUND_RIGHT : g.EG.ROUND,
+                    (0, s.jsx)(n.animated.div, {
+                        style: T,
+                        className: b.Ok,
+                        children: (0, s.jsx)(L.Ay, {
+                            look: L.gv.RED,
+                            size: c,
+                            shape: E ? A.EG.ROUND_RIGHT : A.EG.ROUND,
                         }),
                     }),
                 ],
             });
-        })({ className: d });
+        })({ className: o });
     };

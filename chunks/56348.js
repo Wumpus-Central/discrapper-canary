@@ -1,89 +1,88 @@
-"use strict";
-n.d(t, { yX: () => s, Sk: () => o, C5: () => c, yg: () => d }), n(321073);
-var a = n(575593),
-    r = n(392107),
-    i = n(287809),
-    l = n(841595);
-function s(e, t) {
-    let n = {};
-    void 0 !== e.pendingBanner && (n.banner = e.pendingBanner),
-        null != e.pendingBio && (n.bio = e.pendingBio),
-        null != e.pendingPronouns && (n.pronouns = e.pendingPronouns),
-        void 0 !== e.pendingAccentColor && (n.accent_color = e.pendingAccentColor),
-        void 0 !== e.pendingThemeColors && (n.theme_colors = e.pendingThemeColors);
-    let r = (function (e, t) {
-        let n,
-            { pendingProfileEffect: r, pendingProfileFrame: s } = e;
-        if (void 0 === r && void 0 === s) return {};
+i.d(n, { yX: () => d, Sk: () => o, C5: () => p, yg: () => s }), i(321073);
+var a = i(575593),
+    l = i(392107),
+    t = i(287809),
+    r = i(841595);
+function d(e, n) {
+    let i = {};
+    void 0 !== e.pendingBanner && (i.banner = e.pendingBanner),
+        null != e.pendingBio && (i.bio = e.pendingBio),
+        null != e.pendingPronouns && (i.pronouns = e.pendingPronouns),
+        void 0 !== e.pendingAccentColor && (i.accent_color = e.pendingAccentColor),
+        void 0 !== e.pendingThemeColors && (i.theme_colors = e.pendingThemeColors);
+    let l = (function (e, n) {
+        let i,
+            { pendingProfileEffect: l, pendingProfileFrame: d } = e;
+        if (void 0 === l && void 0 === d) return {};
         let o =
-                null == (n = i.default.getCurrentUser())
+                null == (i = t.default.getCurrentUser())
                     ? null
-                    : null != t
-                      ? l.A.getGuildMemberProfile(n.id, t)
-                      : l.A.getUserProfile(n.id),
-            c = [...(o?.collectibles ?? [])];
+                    : null != n
+                      ? r.A.getGuildMemberProfile(i.id, n)
+                      : r.A.getUserProfile(i.id),
+            p = [...(o?.collectibles ?? [])];
         return (
-            void 0 !== r &&
-                ((c = c.filter((e) => {
-                    let { type: t } = e;
-                    return t !== a.R.PROFILE_EFFECT;
+            void 0 !== l &&
+                ((p = p.filter((e) => {
+                    let { type: n } = e;
+                    return n !== a.R.PROFILE_EFFECT;
                 })),
-                null !== r && c.push({ skuId: r.skuId, type: a.R.PROFILE_EFFECT })),
-            void 0 !== s &&
-                ((c = c.filter((e) => {
-                    let { type: t } = e;
-                    return t !== a.R.PROFILE_FRAME;
+                null !== l && p.push({ skuId: l.skuId, type: a.R.PROFILE_EFFECT })),
+            void 0 !== d &&
+                ((p = p.filter((e) => {
+                    let { type: n } = e;
+                    return n !== a.R.PROFILE_FRAME;
                 })),
-                null !== s && c.push(s)),
+                null !== d && p.push(d)),
             {
-                collectibles_sku_ids: c.map((e) => {
-                    let { skuId: t } = e;
-                    return t;
+                collectibles_sku_ids: p.map((e) => {
+                    let { skuId: n } = e;
+                    return n;
                 }),
             }
         );
-    })(e, t);
-    return void 0 !== r.collectibles_sku_ids && (n.collectibles_sku_ids = r.collectibles_sku_ids), n;
+    })(e, n);
+    return void 0 !== l.collectibles_sku_ids && (i.collectibles_sku_ids = l.collectibles_sku_ids), i;
 }
 function o(e) {
-    let t = {};
+    let n = {};
     if (
-        (void 0 !== e.pendingGlobalName && (t.globalName = e.pendingGlobalName),
-        void 0 !== e.pendingNameplate && (t.nameplate = e.pendingNameplate),
+        (void 0 !== e.pendingGlobalName && (n.globalName = e.pendingGlobalName),
+        void 0 !== e.pendingNameplate && (n.nameplate = e.pendingNameplate),
         void 0 !== e.pendingAvatar)
     ) {
-        let { pendingAvatar: n } = e;
-        null === n
-            ? (t.avatar = null)
-            : n.assetOrigin === r.E.ARCHIVED_ASSET
-              ? (t.avatarId = n.originalAsset.id)
-              : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
+        let { pendingAvatar: i } = e;
+        null === i
+            ? (n.avatar = null)
+            : i.assetOrigin === l.E.ARCHIVED_ASSET
+              ? (n.avatarId = i.originalAsset.id)
+              : ((n.avatar = i.imageUri), (n.avatarDescription = i.description));
     }
     return (
-        void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration),
-        void 0 !== e.pendingDisplayNameStyles && (t.displayNameStyles = e.pendingDisplayNameStyles),
-        t
+        void 0 !== e.pendingAvatarDecoration && (n.avatarDecoration = e.pendingAvatarDecoration),
+        void 0 !== e.pendingDisplayNameStyles && (n.displayNameStyles = e.pendingDisplayNameStyles),
+        n
     );
 }
-function c(e) {
-    let t = {};
+function p(e) {
+    let n = {};
     if (void 0 !== e.pendingAvatar) {
-        let { pendingAvatar: n } = e;
-        null === n
-            ? (t.avatar = null)
-            : n.assetOrigin === r.E.ARCHIVED_ASSET
-              ? (t.avatarId = n.originalAsset.id)
-              : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
+        let { pendingAvatar: i } = e;
+        null === i
+            ? (n.avatar = null)
+            : i.assetOrigin === l.E.ARCHIVED_ASSET
+              ? (n.avatarId = i.originalAsset.id)
+              : ((n.avatar = i.imageUri), (n.avatarDescription = i.description));
     }
     return (
-        void 0 !== e.pendingNickname && (t.nick = e.pendingNickname ?? ""),
-        void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration),
-        void 0 !== e.pendingNameplate && (t.nameplate = e.pendingNameplate),
-        void 0 !== e.pendingDisplayNameStyles && (t.displayNameStyles = e.pendingDisplayNameStyles),
-        t
+        void 0 !== e.pendingNickname && (n.nick = e.pendingNickname ?? ""),
+        void 0 !== e.pendingAvatarDecoration && (n.avatarDecoration = e.pendingAvatarDecoration),
+        void 0 !== e.pendingNameplate && (n.nameplate = e.pendingNameplate),
+        void 0 !== e.pendingDisplayNameStyles && (n.displayNameStyles = e.pendingDisplayNameStyles),
+        n
     );
 }
-function d(e) {
-    let t = {};
-    return void 0 !== e.pendingPrimaryGuildId && (t.primaryGuildId = e.pendingPrimaryGuildId), t;
+function s(e) {
+    let n = {};
+    return void 0 !== e.pendingPrimaryGuildId && (n.primaryGuildId = e.pendingPrimaryGuildId), n;
 }

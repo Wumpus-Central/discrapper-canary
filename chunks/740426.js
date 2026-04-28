@@ -1,41 +1,40 @@
-"use strict";
-n.d(t, { k: () => s });
-var r = n(627968);
-n(64700);
-var a = n(661531),
-    i = n(996682),
-    l = n(27989);
-let s = (e) => {
+e.d(s, { k: () => d });
+var h = e(627968);
+e(64700);
+var l = e(661531),
+    t = e(996682),
+    i = e(27989);
+let d = (a) => {
     let {
-            size: t = "md",
-            width: n,
-            height: s,
-            color: o = a.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: c = "",
-            ...d
-        } = e,
-        u = (0, l.J)(t),
-        _ = u?.width ?? n,
-        p = u?.height ?? s;
-    return (0, r.jsxs)("svg", {
-        ...(0, i.A)(d),
+            size: s = "md",
+            width: e,
+            height: d,
+            color: c = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: p = "",
+            ...r
+        } = a,
+        n = (0, i.J)(s),
+        o = n?.width ?? e,
+        w = n?.height ?? d;
+    return (0, h.jsxs)("svg", {
+        ...(0, t.A)(r),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: p,
+        width: o,
+        height: w,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, r.jsx)("path", {
+            (0, h.jsx)("path", {
                 fillRule: "evenodd",
                 d: "M18.5 23c.88 0 1.7-.25 2.4-.69l1.4 1.4a1 1 0 0 0 1.4-1.42l-1.39-1.4A4.5 4.5 0 1 0 18.5 23Zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z",
                 clipRule: "evenodd",
-                fill: "string" == typeof o ? o : o.css,
-                className: c,
+                fill: "string" == typeof c ? c : c.css,
+                className: p,
             }),
-            (0, r.jsx)("path", {
+            (0, h.jsx)("path", {
                 d: "M3 3a1 1 0 0 0 0 2h18a1 1 0 1 0 0-2H3ZM2 8a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1ZM3 11a1 1 0 1 0 0 2h11a1 1 0 1 0 0-2H3ZM2 16a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1ZM3 19a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2H3Z",
-                fill: "string" == typeof o ? o : o.css,
-                className: c,
+                fill: "string" == typeof c ? c : c.css,
+                className: p,
             }),
         ],
     });

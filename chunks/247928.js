@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { M: () => l });
-var r = n(627968),
-    a = n(64700);
-let i = 0;
-function l(e) {
-    let { children: t, className: n, enabled: l = !0, "aria-hidden": s } = e,
-        o = a.useRef(null);
+r.d(t, { M: () => d });
+var l = r(627968),
+    n = r(64700);
+let u = 0;
+function d(e) {
+    let { children: t, className: r, enabled: d = !0, "aria-hidden": a } = e,
+        i = n.useRef(null);
     return (
         !(function (e, t) {
-            let [n] = a.useState(() => i++),
-                r = `data-focus-blocked-${n}`,
-                l = a.useCallback(
+            let [r] = n.useState(() => u++),
+                l = `data-focus-blocked-${r}`,
+                d = n.useCallback(
                     (e) => {
                         let t = document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
                                 acceptNode: (e) =>
                                     e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP,
                             }),
-                            n = t.currentNode;
-                        for (; null != n; ) {
-                            let e = n;
-                            e.setAttribute(r, String(e.tabIndex)), (e.tabIndex = -1), (n = t.nextNode());
+                            r = t.currentNode;
+                        for (; null != r; ) {
+                            let e = r;
+                            e.setAttribute(l, String(e.tabIndex)), (e.tabIndex = -1), (r = t.nextNode());
                         }
                     },
-                    [r],
+                    [l],
                 ),
-                s = a.useCallback(
+                a = n.useCallback(
                     (e) => {
-                        e.querySelectorAll(`[${r}]`).forEach((e) => {
-                            let t = e.getAttribute(r);
-                            null != t && ((e.tabIndex = parseInt(t, 10)), e.removeAttribute(r));
+                        e.querySelectorAll(`[${l}]`).forEach((e) => {
+                            let t = e.getAttribute(l);
+                            null != t && ((e.tabIndex = parseInt(t, 10)), e.removeAttribute(l));
                         });
                     },
-                    [r],
+                    [l],
                 );
-            a.useLayoutEffect(() => {
+            n.useLayoutEffect(() => {
                 if (t) {
                     let t = e.current;
-                    if (null != t) return l(t), () => s(t);
+                    if (null != t) return d(t), () => a(t);
                 }
-            }, [t, e, l, s]),
-                a.useEffect(() => {
+            }, [t, e, d, a]),
+                n.useEffect(() => {
                     if (!t) return;
-                    let n = e.current;
-                    if (null == n) return;
-                    let r = new MutationObserver((e) => {
-                        e.some((e) => e.addedNodes.length > 0) && l(n);
+                    let r = e.current;
+                    if (null == r) return;
+                    let l = new MutationObserver((e) => {
+                        e.some((e) => e.addedNodes.length > 0) && d(r);
                     });
-                    return r.observe(n, { childList: !0, subtree: !0 }), () => r.disconnect();
-                }, [t, e, l]);
-        })(o, l),
-        (0, r.jsx)("div", { ref: o, className: n, "aria-hidden": s, children: t })
+                    return l.observe(r, { childList: !0, subtree: !0 }), () => l.disconnect();
+                }, [t, e, d]);
+        })(i, d),
+        (0, l.jsx)("div", { ref: i, className: r, "aria-hidden": a, children: t })
     );
 }

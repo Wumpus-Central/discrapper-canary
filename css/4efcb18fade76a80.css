@@ -1,0 +1,64 @@
+.container_cdb3b1 {
+    background-color: var(--background-surface-highest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 36px 0 rgba(0, 0, 0, .12);
+    box-sizing: border-box;
+    max-width: 240px;
+    padding: var(--space-48) var(--space-24) var(--space-24);
+    position: relative
+}
+
+.container_cdb3b1:after {
+    border: 8px solid transparent;
+    border-top: 8px solid var(--background-surface-highest);
+    content: "";
+    inset-inline-start: 50%;
+    margin-inline-start: -8px;
+    position: absolute;
+    top: 100%
+}
+
+.closeButton_cdb3b1 {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 12px
+}
+
+.tagContainer_cdb3b1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-16)
+}
+
+.tag_cdb3b1 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    display: flex;
+    padding: var(--space-8) var(--space-12)
+}
+
+.badge_cdb3b1 {
+    margin-inline-end: var(--space-8)
+}
+
+.title_cdb3b1 {
+    margin-bottom: var(--space-4);
+    text-align: center
+}
+
+.description_cdb3b1 {
+    margin-bottom: var(--space-16);
+    text-align: center
+}
+
+.adoptButton_cdb3b1 {
+    margin-bottom: var(--space-8);
+    width: 100%
+}
+
+.editButton_cdb3b1 {
+    width: 100%
+}

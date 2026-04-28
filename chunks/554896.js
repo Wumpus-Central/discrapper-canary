@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     c6: "assetWrapper__31fc2",
     v2: "assetWrapperMasked__31fc2",

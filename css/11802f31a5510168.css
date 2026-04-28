@@ -1,0 +1,40 @@
+.gifPickerContainer__6c39d {
+    height: 100vh;
+    overflow-y: hidden
+}
+
+.upsellHeaderContainer__6c39d {
+    margin: 0 var(--space-16)
+}
+
+.gifPicker__6c39d {
+    background-color: transparent;
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 16px;
+    width: 100%
+}
+
+.loadingOverlay__6c39d {
+    opacity: .6;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.full-motion .loadingOverlay__6c39d {
+    transition: all .2s ease
+}
+
+.spinner__6c39d {
+    position: absolute;
+    top: 50%;
+    inset-inline: 0;
+    margin: 0 auto
+}
+
+.nitroUpsell__6c39d {
+    inset-block: auto var(--space-24);
+    inset-inline: var(--space-12)
+}

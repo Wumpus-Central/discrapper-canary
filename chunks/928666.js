@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     Ie: "empty__9d78f",
     Dw: "emptyIcon__9d78f",
     BI: "emptyText__9d78f",

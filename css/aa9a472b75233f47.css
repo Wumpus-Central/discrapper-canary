@@ -1,0 +1,62 @@
+.card__3988c {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px
+}
+
+.cardText__3988c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.cardRow__3988c {
+    align-items: center;
+    display: flex;
+    margin-bottom: 8px
+}
+
+.cardHeaderIcon__3988c {
+    background-color: var(--platform-xbox);
+    border-radius: 4px;
+    color: var(--white);
+    margin-inline-end: 8px;
+    padding: 4px
+}
+
+.qrCode__3988c {
+    margin-inline-start: 32px
+}
+
+.closeButton__3988c {
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 16px;
+    z-index: 1
+}
+
+.learnMore__3988c {
+    display: inline-block;
+    margin-top: 2px
+}
+
+.stepNumberContainer__3988c {
+    background-color: var(--background-mod-strong);
+    border-radius: 12px;
+    height: 24px;
+    margin-inline-end: 8px;
+    min-width: 24px;
+    width: 24px
+}
+
+.stepNumber__3988c {
+    color: var(--white);
+    line-height: 24px;
+    text-align: center
+}
+
+.instructions__3988c {
+    opacity: .6
+}

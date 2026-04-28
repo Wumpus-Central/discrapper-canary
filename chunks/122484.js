@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nx: "autocomplete__6b0e0",
     pK: "autocompleteAttached__6b0e0",

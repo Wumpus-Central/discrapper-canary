@@ -1,2 +1,1 @@
-"use strict";
-e.exports = { B: "platforms__93ebb" };
+o.exports = { B: "platforms__93ebb" };

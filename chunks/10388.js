@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     x6: "button_aa63ab",
     r9: "disabled_aa63ab",

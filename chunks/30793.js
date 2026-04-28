@@ -1,191 +1,190 @@
-"use strict";
-n.d(t, { A: () => b });
-var i = n(989349),
-    s = n.n(i),
-    l = n(17928),
-    r = n(451988),
-    a = n(228366),
-    o = n(869038),
-    d = n(7133),
+n.d(t, { A: () => L });
+var l = n(989349),
+    E = n.n(l),
+    r = n(17928),
+    u = n(451988),
+    s = n(228366),
+    i = n(869038),
+    S = n(7133),
     c = n(45938),
-    u = n(652215);
+    o = n(652215);
 let _ = {},
-    h = new Map(),
-    p = [],
-    m = [],
-    g = [],
-    x = new Set(),
-    f = {},
-    A = {},
-    E = new Set();
-function I(e) {
-    let t = d.A.createFromServer(e),
+    d = new Map(),
+    C = [],
+    f = [],
+    a = [],
+    A = new Set(),
+    O = {},
+    D = {},
+    I = new Set();
+function T(e) {
+    let t = S.A.createFromServer(e),
         n = t.code;
-    if (h.has(n)) h.set(n, h.get(n).merge(t));
-    else if ((h.set(n, t), null != t.expiresAt)) {
-        let e = new r.Ep();
+    if (d.has(n)) d.set(n, d.get(n).merge(t));
+    else if ((d.set(n, t), null != t.expiresAt)) {
+        let e = new u.Ep();
         (_[n] = e),
             (function e(t) {
-                let n = h.get(t);
+                let n = d.get(t);
                 if (null == n || null == n.expiresAt) return;
-                let i = n.expiresAt.valueOf() - s()().valueOf();
-                if (i <= 0) h.delete(t), delete _[t], y.emitChange();
+                let l = n.expiresAt.valueOf() - E()().valueOf();
+                if (l <= 0) d.delete(t), delete _[t], p.emitChange();
                 else {
                     let n = _[t];
                     if (null == n) return;
-                    n.start(Math.min(u.mnr, i), () => e(t));
+                    n.start(Math.min(o.mnr, l), () => e(t));
                 }
             })(n);
     }
 }
-function v(e) {
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (t && !E.has(e.channel_id)) return !1;
+    if (t && !I.has(e.channel_id)) return !1;
     let n = (0, c.pF)(e) ? (0, c.e7)(e?.embeds != null ? e?.embeds[0].url : void 0) : (0, c.e7)(e.content);
     return (
         0 !== n.length &&
         (n.forEach((e) => {
-            p.includes(e) ||
-                g.includes(e) ||
-                (j({ code: e }), a.h.wait(() => o.A.resolveGiftCode(e, !1, !0).catch(u.FXj)));
+            C.includes(e) ||
+                a.includes(e) ||
+                (h({ code: e }), s.h.wait(() => i.A.resolveGiftCode(e, !1, !0).catch(o.FXj)));
         }),
         !1)
     );
 }
-function j(e) {
+function h(e) {
     let { code: t } = e;
-    p.includes(t) || (p = [...p, t]);
+    C.includes(t) || (C = [...C, t]);
 }
-function C(e) {
+function F(e) {
     let { message: t } = e;
-    return v(t, !0);
+    return g(t, !0);
 }
-function N(e) {
+function U(e) {
     let { channelId: t, messages: n } = e;
-    E.add(t), n.forEach((e) => v(e, !0));
+    I.add(t), n.forEach((e) => g(e, !0));
 }
-function T(e) {
+function G(e) {
     let { firstMessages: t } = e;
     if (null == t) return !1;
-    t?.forEach((e) => v(e));
+    t?.forEach((e) => g(e));
 }
-class S extends l.Ay.Store {
+class R extends r.Ay.Store {
     static displayName = "GiftCodeStore";
     get(e) {
-        let t = h.get(e);
+        let t = d.get(e);
         return null == t || t.isExpired() ? null : t;
     }
     getError(e) {
-        return null != e ? A[e] : null;
+        return null != e ? D[e] : null;
     }
     getForGifterSKUAndPlan(e, t, n) {
-        return Array.from(h.values()).filter(
-            (i) => i.userId === e && i.skuId === t && (null == n || i.subscriptionPlanId === n) && !i.isExpired(),
+        return Array.from(d.values()).filter(
+            (l) => l.userId === e && l.skuId === t && (null == n || l.subscriptionPlanId === n) && !l.isExpired(),
         );
     }
     getIsResolving(e) {
-        return p.includes(e);
+        return C.includes(e);
     }
     getIsResolved(e) {
-        return g.includes(e);
+        return a.includes(e);
     }
     getIsAccepting(e) {
-        return m.includes(e);
+        return f.includes(e);
     }
     getUserGiftCodesFetchingForSKUAndPlan(e, t) {
-        return x.has((0, c.Kx)(e, t));
+        return A.has((0, c.Kx)(e, t));
     }
     getUserGiftCodesLoadedAtForSKUAndPlan(e, t) {
-        return f[(0, c.Kx)(e, t)];
+        return O[(0, c.Kx)(e, t)];
     }
     getResolvingCodes() {
-        return p;
+        return C;
     }
     getResolvedCodes() {
-        return g;
+        return a;
     }
     getAcceptingCodes() {
-        return m;
+        return f;
     }
 }
-let y = new S(a.h, {
+let p = new R(s.h, {
         CONNECTION_OPEN: function () {
-            return E.clear(), !1;
+            return I.clear(), !1;
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            return null != t && E.add(t), !1;
+            return null != t && I.add(t), !1;
         },
-        GIFT_CODE_RESOLVE: j,
+        GIFT_CODE_RESOLVE: h,
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;
-            return (p = p.filter((e) => e !== t.code)), g.includes(t.code) || (g = [...g, t.code]), I(t);
+            return (C = C.filter((e) => e !== t.code)), a.includes(t.code) || (a = [...a, t.code]), T(t);
         },
         GIFT_CODE_RESOLVE_FAILURE: function (e) {
             let { code: t, error: n } = e;
-            (p = p.filter((e) => e !== t)), g.includes(t) || (g = [...g, t]), null != n && (A[t] = n);
+            (C = C.filter((e) => e !== t)), a.includes(t) || (a = [...a, t]), null != n && (D[t] = n);
         },
         GIFT_CODE_REDEEM: function (e) {
             let { code: t } = e;
-            m.includes(t) || (m = [...m, t]);
+            f.includes(t) || (f = [...f, t]);
         },
         GIFT_CODE_REDEEM_SUCCESS: function (e) {
             let { code: t } = e;
-            m = m.filter((e) => e !== t);
-            let n = h.get(t);
-            null != n && h.set(t, n.merge({ redeemed: !0, uses: n.uses + 1 }));
+            f = f.filter((e) => e !== t);
+            let n = d.get(t);
+            null != n && d.set(t, n.merge({ redeemed: !0, uses: n.uses + 1 }));
         },
         GIFT_CODE_REDEEM_FAILURE: function (e) {
             let { code: t, error: n } = e;
-            m = m.filter((e) => e !== t);
-            let i = h.get(t);
-            if (((A[t] = n), null != i))
+            f = f.filter((e) => e !== t);
+            let l = d.get(t);
+            if (((D[t] = n), null != l))
                 switch (n.code) {
-                    case u.t02.UNKNOWN_GIFT_CODE:
-                        h.set(t, i.set("revoked", !0));
+                    case o.t02.UNKNOWN_GIFT_CODE:
+                        d.set(t, l.set("revoked", !0));
                         break;
-                    case u.t02.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-                        h.set(t, i.set("uses", i.maxUses));
+                    case o.t02.INVALID_GIFT_REDEMPTION_EXHAUSTED:
+                        d.set(t, l.set("uses", l.maxUses));
                 }
         },
         GIFT_CODE_REVOKE_SUCCESS: function (e) {
             let { code: t } = e;
-            h.delete(t);
+            d.delete(t);
             let n = _[t];
-            null != n && (n.stop(), delete _[t]), g.includes(t) || (g = [...g, t]);
+            null != n && (n.stop(), delete _[t]), a.includes(t) || (a = [...a, t]);
         },
         GIFT_CODE_CREATE_SUCCESS: function (e) {
             let { giftCode: t } = e;
-            I(t);
+            T(t);
         },
         GIFT_CODES_FETCH: function (e) {
             let { skuId: t, subscriptionPlanId: n } = e;
-            x.add((0, c.Kx)(t, n));
+            A.add((0, c.Kx)(t, n));
         },
         GIFT_CODES_FETCH_SUCCESS: function (e) {
-            let { giftCodes: t, skuId: n, subscriptionPlanId: i } = e;
-            t.forEach(I);
-            let s = (0, c.Kx)(n, i);
-            (f[s] = Date.now()), x.delete(s);
+            let { giftCodes: t, skuId: n, subscriptionPlanId: l } = e;
+            t.forEach(T);
+            let E = (0, c.Kx)(n, l);
+            (O[E] = Date.now()), A.delete(E);
         },
         GIFT_CODES_FETCH_FAILURE: function (e) {
             let { skuId: t, subscriptionPlanId: n } = e;
-            x.delete((0, c.Kx)(t, n));
+            A.delete((0, c.Kx)(t, n));
         },
-        MESSAGE_CREATE: C,
-        MESSAGE_UPDATE: C,
-        LOCAL_MESSAGES_LOADED: N,
-        LOAD_MESSAGES_SUCCESS: N,
-        LOAD_MESSAGES_AROUND_SUCCESS: N,
+        MESSAGE_CREATE: F,
+        MESSAGE_UPDATE: F,
+        LOCAL_MESSAGES_LOADED: U,
+        LOAD_MESSAGES_SUCCESS: U,
+        LOAD_MESSAGES_AROUND_SUCCESS: U,
         LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
             let { messages: t } = e;
-            t.forEach((e) => v(e));
+            t.forEach((e) => g(e));
         },
         LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
             let { pins: t } = e;
             t.forEach((e) => {
                 let { message: t } = e;
-                return v(t);
+                return g(t);
             });
         },
         SEARCH_MESSAGES_SUCCESS: function (e) {
@@ -193,23 +192,23 @@ let y = new S(a.h, {
             t.forEach((e) => {
                 let { messages: t } = e;
                 t.forEach((e) => {
-                    e.forEach((e) => v(e));
+                    e.forEach((e) => g(e));
                 });
             });
         },
         GIFT_CODE_UPDATE: function (e) {
             let { uses: t, code: n } = e,
-                i = h.get(n);
-            null != i && h.set(n, i.set("uses", Math.max(i.uses, t)));
+                l = d.get(n);
+            null != l && d.set(n, l.set("uses", Math.max(l.uses, t)));
         },
-        LOAD_THREADS_SUCCESS: T,
-        LOAD_ARCHIVED_THREADS_SUCCESS: T,
+        LOAD_THREADS_SUCCESS: G,
+        LOAD_ARCHIVED_THREADS_SUCCESS: G,
         LOAD_FORUM_POSTS: function (e) {
             let { threads: t } = e;
             Object.values(t).map((e) => {
                 let { first_message: t } = e;
-                return null != t && v(t);
+                return null != t && g(t);
             });
         },
     }),
-    b = y;
+    L = p;

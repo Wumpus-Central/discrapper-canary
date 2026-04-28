@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Xn: "shaker_e4d803",
     wx: "header_e4d803",

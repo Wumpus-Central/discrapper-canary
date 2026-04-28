@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     ld: "items__3ff92",
     R5: "itemMeasurements__3ff92",

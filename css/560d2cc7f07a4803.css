@@ -1,0 +1,10 @@
+.outer_ac6414 {
+    position: relative
+}
+
+.inner_ac6414 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}

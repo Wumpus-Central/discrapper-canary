@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+o.exports = {
     PC: "premiumIcon_b68a35",
     tV: "platformIcon_b68a35",
     ez: "giftIcon_b68a35",

@@ -1,14 +1,16 @@
-i.d(t, { A: () => s });
-var n = i(627968);
-i(64700);
-var a = i(192308),
-    l = i(228366);
-let s = {
+n.d(t, { A: () => o });
+var i = n(627968);
+n(64700);
+var a = n(192308),
+    l = n(228366);
+let o = {
     open(e) {
         l.h.dispatch({ type: "SAFETY_HUB_APPEAL_OPEN", classificationId: e }),
             (0, a.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([i.e("51471"), i.e("54867")]).then(i.bind(i, 550560));
-                return (i) => (0, n.jsx)(t, { classificationId: e, ...i });
+                let { default: t } = await Promise.all([n.e("48486"), n.e("57352"), n.e("8891"), n.e("51471")]).then(
+                    n.bind(n, 550560),
+                );
+                return (n) => (0, i.jsx)(t, { classificationId: e, ...n });
             });
     },
     close() {

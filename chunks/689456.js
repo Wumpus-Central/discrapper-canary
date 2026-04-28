@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { li: () => S, mG: () => w });
+n.d(t, { li: () => w, mG: () => S });
 var r = n(922248),
     i = n(630449),
     o = n(326447),
@@ -49,8 +48,8 @@ function v(e, t) {
 function b(e, t, n) {
     e[t] = (0, _.h)(e[t], n, 1);
 }
-function w(e, t, n, _, b, w) {
-    var S, E;
+function S(e, t, n, _, b, S) {
+    var w, E;
     let { normalizeDepth: k = 3, normalizeMaxBreadth: x = 1e3 } = e,
         C = { ...t, event_id: t.event_id || n.event_id || (0, d.eJ)(), timestamp: t.timestamp || (0, f.lu)() },
         T = n.integrations || e.integrations.map((e) => e.name);
@@ -65,8 +64,8 @@ function w(e, t, n, _, b, w) {
         let l = e.request;
         l && l.url && (l.url = (0, h.xv)(l.url, a));
     })(C, e),
-        (S = C),
-        (E = T).length > 0 && ((S.sdk = S.sdk || {}), (S.sdk.integrations = [...(S.sdk.integrations || []), ...E])),
+        (w = C),
+        (E = T).length > 0 && ((w.sdk = w.sdk || {}), (w.sdk.integrations = [...(w.sdk.integrations || []), ...E])),
         b && b.emit("applyFrameMetadata", t),
         void 0 === t.type &&
             (function (e, t) {
@@ -87,7 +86,7 @@ function w(e, t, n, _, b, w) {
     n.mechanism && (0, d.M6)(C, n.mechanism);
     let M = b ? b.getEventProcessors() : [],
         O = (0, i.m6)().getScopeData();
-    w && v(O, w.getScopeData()), I && v(O, I.getScopeData());
+    S && v(O, S.getScopeData()), I && v(O, I.getScopeData());
     let D = [...(n.attachments || []), ...O.attachments];
     return (
         D.length && (n.attachments = D),
@@ -207,7 +206,7 @@ function w(e, t, n, _, b, w) {
         )
     );
 }
-function S(e) {
+function w(e) {
     if (e) {
         var t;
         return (t = e) instanceof c.H || "function" == typeof t || Object.keys(e).some((e) => E.includes(e))

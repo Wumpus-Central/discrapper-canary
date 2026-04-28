@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jH: "flowerStarContainer__3e3b0",
     mP: "flowerStar__3e3b0",

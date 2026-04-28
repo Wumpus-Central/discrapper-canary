@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Qs: "content__22234",
     bQ: "contentNoMedia__22234 content__22234",

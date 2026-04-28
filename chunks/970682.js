@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     zr: "root_c5bcbe",
     NW: "pipMode_c5bcbe",

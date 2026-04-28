@@ -1,147 +1,146 @@
-"use strict";
-n.d(t, { A: () => A });
-var i = n(627968),
-    a = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(3666),
-    o = n(661531),
-    c = n(922016),
-    d = n(761508),
-    u = n(834730),
-    h = n(900797),
-    p = n(847374),
-    m = n(770178),
-    _ = n(124589),
-    g = n(985018),
-    x = n(33095);
-function f(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: s } = e,
-        r = a.useMemo(
+l.d(t, { A: () => v });
+var s = l(627968),
+    i = l(64700),
+    a = l(503698),
+    n = l.n(a),
+    r = l(3666),
+    o = l(661531),
+    c = l(922016),
+    d = l(761508),
+    u = l(834730),
+    h = l(900797),
+    m = l(847374),
+    p = l(770178),
+    g = l(124589),
+    x = l(985018),
+    A = l(33095);
+function j(e) {
+    let { onTabSelect: t, tabs: l, selectedTab: a } = e,
+        r = i.useMemo(
             () =>
                 null !=
-                n.find((e) => {
+                l.find((e) => {
                     let { id: t } = e;
-                    return t === s;
+                    return t === a;
                 }),
-            [s, n],
+            [a, l],
         ),
-        [m, f] = a.useState(!1),
-        A = (function (e) {
-            let { selected: t, isHovered: n } = e;
-            return n ? "text-strong" : t ? "text-brand" : "text-default";
-        })({ selected: r, isHovered: m }),
+        [p, j] = i.useState(!1),
+        v = (function (e) {
+            let { selected: t, isHovered: l } = e;
+            return l ? "text-strong" : t ? "text-brand" : "text-default";
+        })({ selected: r, isHovered: p }),
         C = (function (e) {
-            let { selected: t, isHovered: n } = e;
-            return n ? o.A.colors.TEXT_STRONG : t ? o.A.colors.TEXT_BRAND : o.A.colors.INTERACTIVE_TEXT_DEFAULT;
-        })({ selected: r, isHovered: m }),
-        b = a.useCallback(() => f(!0), []),
-        v = a.useCallback(() => f(!1), []),
-        I = a.useRef(null);
-    return (0, i.jsx)(c.Y, {
-        targetElementRef: I,
+            let { selected: t, isHovered: l } = e;
+            return l ? o.A.colors.TEXT_STRONG : t ? o.A.colors.TEXT_BRAND : o.A.colors.INTERACTIVE_TEXT_DEFAULT;
+        })({ selected: r, isHovered: p }),
+        _ = i.useCallback(() => j(!0), []),
+        I = i.useCallback(() => j(!1), []),
+        E = i.useRef(null);
+    return (0, s.jsx)(c.Y, {
+        targetElementRef: E,
         renderPopout: (e) => {
-            let { closePopout: a } = e;
-            return (0, i.jsx)(_.A, { selectedTab: s, onClose: a, tabs: n, onTabSelect: t });
+            let { closePopout: i } = e;
+            return (0, s.jsx)(g.A, { selectedTab: a, onClose: i, tabs: l, onTabSelect: t });
         },
         position: "bottom",
         align: "left",
         children: (e, t) => {
-            let { isShown: n } = t;
-            return (0, i.jsx)(d.V.Item, {
+            let { isShown: l } = t;
+            return (0, s.jsx)(d.V.Item, {
                 ...e,
                 id: "more",
                 look: "brand",
                 selectedItem: r ? "more" : void 0,
-                className: l()(x.Mf, { [x.wH]: !1 }),
+                className: n()(A.Mf, { [A.wH]: !1 }),
                 clickableRef: (e) => {
-                    null != e && null != e.ref && (I.current = e.ref);
+                    null != e && null != e.ref && (E.current = e.ref);
                 },
-                "aria-label": g.intl.string(g.t["UKOtz+"]),
-                children: (0, i.jsxs)("div", {
-                    className: x.OS,
-                    onMouseEnter: b,
-                    onMouseLeave: v,
+                "aria-label": x.intl.string(x.t["UKOtz+"]),
+                children: (0, s.jsxs)("div", {
+                    className: A.OS,
+                    onMouseEnter: _,
+                    onMouseLeave: I,
                     children: [
-                        (0, i.jsx)(u.E, {
+                        (0, s.jsx)(u.E, {
                             variant: "text-sm/semibold",
-                            color: A,
-                            children: g.intl.string(g.t["UKOtz+"]),
+                            color: v,
+                            children: x.intl.string(x.t["UKOtz+"]),
                         }),
-                        n ? (0, i.jsx)(h.t, { size: "xs", color: C }) : (0, i.jsx)(p.a, { size: "xs", color: C }),
+                        l ? (0, s.jsx)(h.t, { size: "xs", color: C }) : (0, s.jsx)(m.a, { size: "xs", color: C }),
                     ],
                 }),
             });
         },
     });
 }
-function A(e) {
-    let { className: t, selectedTab: n, tabs: s, onTabSelect: o, onAvailableWidthChange: c } = e,
-        [h, p] = a.useState(0),
-        _ = a.useRef(h),
+function v(e) {
+    let { className: t, selectedTab: l, tabs: a, onTabSelect: o, onAvailableWidthChange: c } = e,
+        [h, m] = i.useState(0),
+        g = i.useRef(h),
         {
-            lastVisibleIndex: g,
-            onItemLayout: A,
+            lastVisibleIndex: x,
+            onItemLayout: v,
             overflowItemsRef: C,
-            itemWidthsRef: b,
-        } = (0, r.Wv)({ items: s, itemGapPx: 20, maxLines: 1, containerWidth: h }),
-        v = a.useMemo(() => s.slice(0, g + 1), [g, s]),
-        I = a.useMemo(() => s.slice(g + 1), [g, s]),
-        E = a.useRef(null),
-        S = a.useCallback(
+            itemWidthsRef: _,
+        } = (0, r.Wv)({ items: a, itemGapPx: 20, maxLines: 1, containerWidth: h }),
+        I = i.useMemo(() => a.slice(0, x + 1), [x, a]),
+        E = i.useMemo(() => a.slice(x + 1), [x, a]),
+        N = i.useRef(null),
+        S = i.useCallback(
             (e) => {
                 let t = e.contentRect.width;
-                if (null == t || _.current === t) return;
-                p(t), (_.current = t);
-                let n = t - b.current.reduce((e, t, n) => e + t + 20 * (0 !== n));
-                c?.(n);
+                if (null == t || g.current === t) return;
+                m(t), (g.current = t);
+                let l = t - _.current.reduce((e, t, l) => e + t + 20 * (0 !== l));
+                c?.(l);
             },
-            [b, c],
+            [_, c],
         );
-    (0, m.g)(E, S);
-    let N = 0 !== h;
-    return (0, i.jsxs)("div", {
-        className: l()(x.kL, t),
-        ref: E,
+    (0, p.g)(N, S);
+    let f = 0 !== h;
+    return (0, s.jsxs)("div", {
+        className: n()(A.kL, t),
+        ref: N,
         children: [
-            (0, i.jsxs)("div", {
-                className: x.Kk,
+            (0, s.jsxs)("div", {
+                className: A.Kk,
                 children: [
-                    s.map((e, t) =>
-                        (0, i.jsx)(
+                    a.map((e, t) =>
+                        (0, s.jsx)(
                             r.Ae,
                             {
                                 index: t,
-                                onItemLayout: A,
-                                children: (0, i.jsx)(d.V.Item, {
+                                onItemLayout: v,
+                                children: (0, s.jsx)(d.V.Item, {
                                     id: e.id,
                                     "aria-label": e.label,
-                                    className: x.Mf,
-                                    children: (0, i.jsx)(u.E, { variant: "text-md/medium", children: e.label }),
+                                    className: A.Mf,
+                                    children: (0, s.jsx)(u.E, { variant: "text-md/medium", children: e.label }),
                                 }),
                             },
                             e.id,
                         ),
                     ),
-                    (0, i.jsx)("div", { ref: C, children: (0, i.jsx)(f, { tabs: I, onTabSelect: o, selectedTab: n }) }),
+                    (0, s.jsx)("div", { ref: C, children: (0, s.jsx)(j, { tabs: E, onTabSelect: o, selectedTab: l }) }),
                 ],
             }),
-            N &&
-                (0, i.jsxs)(d.V, {
+            f &&
+                (0, s.jsxs)(d.V, {
                     type: "top",
                     look: "brand",
-                    selectedItem: n,
+                    selectedItem: l,
                     onItemSelect: o,
-                    className: x.vR,
+                    className: A.vR,
                     children: [
-                        v.map((e) =>
-                            (0, i.jsx)(
+                        I.map((e) =>
+                            (0, s.jsx)(
                                 d.V.Item,
-                                { id: e.id, look: "brand", "aria-label": e.label, className: x.Mf, children: e.label },
+                                { id: e.id, look: "brand", "aria-label": e.label, className: A.Mf, children: e.label },
                                 e.id,
                             ),
                         ),
-                        0 !== I.length ? (0, i.jsx)(f, { tabs: I, onTabSelect: o, selectedTab: n }) : null,
+                        0 !== E.length ? (0, s.jsx)(j, { tabs: E, onTabSelect: o, selectedTab: l }) : null,
                     ],
                 }),
         ],

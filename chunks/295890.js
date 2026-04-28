@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jr: "headerBar__8a7fc",
     Lw: "overlay__8a7fc",

@@ -1,42 +1,41 @@
-"use strict";
-n.r(t), n.d(t, { default: () => x });
-var a = n(627968),
-    i = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    s = n(17928),
-    c = n(97808),
-    o = n(778712),
-    d = n(303136),
-    u = n(137177),
-    m = n(287809),
-    f = n(486020),
-    h = n(60934),
-    _ = n(268920),
-    g = n(633217);
-let p = () =>
-        (0, a.jsx)("div", {
-            className: h.Vi,
-            children: (0, a.jsx)(d.A, { src: g.A, fallbackImage: _.A, className: h.LG }),
+e.r(a), e.d(a, { default: () => b });
+var l = e(627968),
+    c = e(64700),
+    i = e(503698),
+    r = e.n(i),
+    d = e(17928),
+    m = e(97808),
+    t = e(778712),
+    n = e(303136),
+    u = e(137177),
+    j = e(287809),
+    x = e(486020),
+    N = e(60934),
+    h = e(268920),
+    p = e(633217);
+let v = () =>
+        (0, l.jsx)("div", {
+            className: N.Vi,
+            children: (0, l.jsx)(n.A, { src: p.A, fallbackImage: h.A, className: N.LG }),
         }),
-    x = i.memo(function (e) {
-        let { application: t, isIncentivizedAccountLinking: n } = e,
-            i = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
-            l = f.Ay.getUserAvatarURL(i),
-            d = r()(h.pw, { [h.yi]: n });
-        return (0, a.jsxs)("div", {
-            className: r()(h.Y, { [h.VT]: n }),
+    b = c.memo(function (s) {
+        let { application: a, isIncentivizedAccountLinking: e } = s,
+            c = (0, d.bG)([j.default], () => j.default.getCurrentUser()),
+            i = x.Ay.getUserAvatarURL(c),
+            n = r()(N.pw, { [N.yi]: e });
+        return (0, l.jsxs)("div", {
+            className: r()(N.Y, { [N.VT]: e }),
             children: [
-                (0, a.jsx)(u.A, { className: h.my, game: t, size: u.M.MEDIUM, "aria-label": t.name }),
-                (0, a.jsxs)("div", {
-                    className: r()(h.I5, { [h.BE]: n }),
+                (0, l.jsx)(u.A, { className: N.my, game: a, size: u.M.MEDIUM, "aria-label": a.name }),
+                (0, l.jsxs)("div", {
+                    className: r()(N.I5, { [N.BE]: e }),
                     children: [
-                        (0, a.jsx)("div", { className: d }),
-                        n ? (0, a.jsx)(p, {}) : (0, a.jsx)("div", { className: d }),
-                        (0, a.jsx)("div", { className: d }),
+                        (0, l.jsx)("div", { className: n }),
+                        e ? (0, l.jsx)(v, {}) : (0, l.jsx)("div", { className: n }),
+                        (0, l.jsx)("div", { className: n }),
                     ],
                 }),
-                (0, a.jsx)(c.eu, { className: h.my, src: l, size: o._3.SIZE_48, "aria-label": i.username }),
+                (0, l.jsx)(m.eu, { className: N.my, src: i, size: t._3.SIZE_48, "aria-label": c.username }),
             ],
         });
     });

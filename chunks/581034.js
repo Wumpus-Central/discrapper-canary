@@ -2,100 +2,105 @@ n.d(t, { l: () => I });
 var i = n(627968);
 n(64700);
 var l = n(989349),
-    a = n.n(l),
-    r = n(661531),
-    s = n(192308),
+    s = n.n(l),
+    a = n(661531),
+    r = n(192308),
     o = n(349288),
-    c = n(778492),
-    d = n(738188),
+    d = n(778492),
+    c = n(738188),
     u = n(939249),
-    _ = n(834730),
-    m = n(393033),
-    h = n(239093),
-    p = n(985018),
-    g = n(903009);
-function f(e) {
+    m = n(834730),
+    h = n(393033),
+    g = n(239093),
+    A = n(985018),
+    p = n(903009);
+function x(e) {
     let { classificationId: t } = e;
     return (0, i.jsx)(o.Anchor, {
         onClick: () => {
-            (0, s.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("83518"), n.e("29211"), n.e("93992")]).then(
-                    n.bind(n, 385430),
-                );
+            (0, r.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([
+                    n.e("57352"),
+                    n.e("13554"),
+                    n.e("61137"),
+                    n.e("92030"),
+                    n.e("51194"),
+                    n.e("29211"),
+                ]).then(n.bind(n, 385430));
                 return (n) =>
                     (0, i.jsx)(e, {
                         classificationId: t,
-                        source: h.XN.SystemDM,
+                        source: g.XN.SystemDM,
                         transitionState: n.transitionState,
                         onClose: n.onClose,
                     });
             });
         },
-        className: g.zh,
-        children: p.intl.string(p.t.QsqdXC),
+        className: p.zh,
+        children: A.intl.string(A.t.QsqdXC),
     });
 }
-function x(e) {
+function f(e) {
     let { learnMoreLink: t } = e;
-    return (0, i.jsx)(o.Anchor, { className: g.zh, href: t, children: p.intl.string(p.t["8/GdRB"]) });
+    return (0, i.jsx)(o.Anchor, { className: p.zh, href: t, children: A.intl.string(A.t["8/GdRB"]) });
 }
-function A(e) {
+function C(e) {
     let { ctaType: t, classificationId: n, learnMoreLink: l } = e;
     switch (t) {
-        case h.xw.POLICY_VIOLATION_DETAIL:
+        case g.xw.POLICY_VIOLATION_DETAIL:
             if (null == n) return null;
-            return (0, i.jsx)(f, { classificationId: n });
-        case h.xw.LEARN_MORE_LINK:
+            return (0, i.jsx)(x, { classificationId: n });
+        case g.xw.LEARN_MORE_LINK:
             if (null == l) return null;
-            return (0, i.jsx)(x, { learnMoreLink: l });
+            return (0, i.jsx)(f, { learnMoreLink: l });
         default:
             return null;
     }
 }
-function C(e) {
+function E(e) {
     let { iconType: t } = e,
         n = {
-            default: (0, i.jsx)(c.k, { size: "xs", color: r.A.colors.TEXT_LINK.css }),
-            danger: (0, i.jsx)(d.i, { color: r.A.colors.ICON_FEEDBACK_CRITICAL }),
+            default: (0, i.jsx)(d.k, { size: "xs", color: a.A.colors.TEXT_LINK.css }),
+            danger: (0, i.jsx)(c.i, { color: a.A.colors.ICON_FEEDBACK_CRITICAL }),
         };
-    return null != t && t in n ? (0, i.jsx)("div", { className: g.Kk, children: n[t] }) : null;
+    return null != t && t in n ? (0, i.jsx)("div", { className: p.Kk, children: n[t] }) : null;
 }
 function v(e) {
     let { children: t, theme: n } = e,
-        l = { default: g._y, danger: g.yk };
+        l = { default: p._y, danger: p.yk };
     return (0, i.jsx)("div", { className: l[n ?? "default"], children: t });
 }
 function I(e) {
     let t;
     if (null == e.embed || null == e.embed.fields) return null;
-    let n = (0, m.f4)(e.embed);
+    let n = (0, h.f4)(e.embed);
     return null == n
         ? null
         : (0, i.jsxs)(u.D, {
-              className: g.o3,
+              className: p.o3,
               children: [
                   (0, i.jsxs)("div", {
-                      className: g.qZ,
+                      className: p.qZ,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: g.U1,
+                              className: p.U1,
                               children: [
-                                  (0, i.jsx)(C, { iconType: n.icon }),
-                                  (0, i.jsx)(_.E, { variant: "text-md/semibold", children: n.header }),
+                                  (0, i.jsx)(E, { iconType: n.icon }),
+                                  (0, i.jsx)(m.E, { variant: "text-md/semibold", children: n.header }),
                               ],
                           }),
                           (0, i.jsx)("div", {
-                              className: g.VU,
-                              children: (0, i.jsx)(_.E, {
+                              className: p.VU,
+                              children: (0, i.jsx)(m.E, {
                                   variant: "text-xs/medium",
-                                  children: p.intl.format(p.t.eevFb6, {
-                                      daysAgo: ((t = n.timestamp ?? 0), a()().diff(a().unix(t), "days")),
+                                  children: A.intl.format(A.t.eevFb6, {
+                                      daysAgo: ((t = n.timestamp ?? 0), s()().diff(s().unix(t), "days")),
                                   }),
                               }),
                           }),
                           (0, i.jsx)("div", {
-                              className: g.vv,
-                              children: (0, i.jsx)(_.E, {
+                              className: p.vv,
+                              children: (0, i.jsx)(m.E, {
                                   variant: "text-md/normal",
                                   color: "text-muted",
                                   children: n.body,
@@ -107,7 +112,7 @@ function I(e) {
                       theme: n.theme,
                       children: n.ctas?.map((e) =>
                           (0, i.jsx)(
-                              A,
+                              C,
                               { ctaType: e, classificationId: n.classification_id, learnMoreLink: n.learn_more_link },
                               e,
                           ),

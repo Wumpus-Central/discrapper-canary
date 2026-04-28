@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     f3: "cardsArea__250d5",
     zI: "cardBody__250d5",
     cG: "mainCard__250d5",

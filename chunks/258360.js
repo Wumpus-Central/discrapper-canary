@@ -1,66 +1,65 @@
-"use strict";
-s.d(e, { default: () => R });
-var n = s(627968),
-    r = s(64700),
-    a = s(154283),
-    i = s(670482),
-    l = s(17928),
-    o = s(477782),
-    c = s(550079),
-    u = s(442433),
-    p = s(955572),
-    d = s(775602),
-    g = s(316254),
-    f = s(253932),
-    b = s(954571),
-    x = s(723702),
-    m = s(19575),
-    S = s(820066),
-    h = s(636537),
-    C = s(691540),
-    T = s(857250),
-    y = s(97483),
-    A = s(152367),
-    E = s(192308),
-    j = s(869388),
-    D = s(147087),
-    k = s(773669),
-    _ = s(186306),
-    L = s(323350),
-    M = s(652215),
-    O = s(985018),
-    v = s(27013);
-function R(t) {
-    let { text: e, editor: R, target: N, onHeightUpdate: P, onSelect: U } = t,
-        I = r.useCallback(
+n.d(e, { default: () => O });
+var a = n(627968),
+    r = n(64700),
+    l = n(154283),
+    i = n(670482),
+    s = n(17928),
+    o = n(477782),
+    c = n(550079),
+    u = n(442433),
+    d = n(955572),
+    m = n(775602),
+    g = n(316254),
+    b = n(253932),
+    f = n(954571),
+    p = n(723702),
+    S = n(19575),
+    T = n(820066),
+    y = n(636537),
+    C = n(691540),
+    h = n(857250),
+    x = n(97483),
+    A = n(152367),
+    j = n(192308),
+    D = n(869388),
+    k = n(147087),
+    E = n(773669),
+    _ = n(186306),
+    M = n(323350),
+    N = n(652215),
+    P = n(985018),
+    I = n(27013);
+function O(t) {
+    let { text: e, editor: O, target: R, onHeightUpdate: X, onSelect: U } = t,
+        L = r.useCallback(
             (t) => {
-                i.rL.focus(R),
+                i.rL.focus(O),
                     setTimeout(() => {
-                        t?.(), S.VW.focus(R);
+                        t?.(), T.VW.focus(O);
                     }, 0);
             },
-            [R],
+            [O],
         ),
-        G = r.useCallback(() => {
-            (0, u.Z_)(I);
-        }, [I]),
-        X = r.useCallback(() => {
-            let t = m.Ay.readClipboard();
+        v = r.useCallback(() => {
+            (0, u.Z_)(L);
+        }, [L]),
+        V = r.useCallback(() => {
+            let t = S.Ay.readClipboard();
             0 !== t.length &&
-                I(() => {
-                    a.gB.insertText(R, t);
+                L(() => {
+                    l.gB.insertText(O, t);
                 });
-        }, [I, R]),
-        [K, w] = (0, g.A)({ text: e, target: N, onHeightUpdate: P }),
-        H = (function (t) {
-            let e = (0, D.b)(),
-                a = (0, l.bG)([j.A], () => j.A.getTransforms()),
+        }, [L, O]),
+        [w, F] = (0, g.A)({ text: e, target: R, onHeightUpdate: X }),
+        G = (function (t) {
+            let e = (0, k.b)(),
+                l = (0, s.bG)([D.A], () => D.A.getTransforms()),
                 { selection: c } = t,
                 u =
                     null != c
-                        ? (0, L.WO)(S.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
+                        ? (0, M.WO)(T.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
                         : "",
-                p = r.useCallback(
+                d = r.useCallback(
                     (e) => {
                         i.rL.focus(t),
                             _.o.withSingleEntry(t, () => {
@@ -69,120 +68,120 @@ function R(t) {
                     },
                     [t],
                 ),
-                d = (function (t, e) {
-                    let [s, a] = r.useState(!1),
+                m = (function (t, e) {
+                    let [n, l] = r.useState(!1),
                         i = r.useCallback(async () => {
-                            if (!s) {
-                                a(!0), (0, C.P0)((0, T.o)(O.intl.string(O.t.p54KYY), y.Ck.AI));
+                            if (!n) {
+                                l(!0), (0, C.P0)((0, h.o)(P.intl.string(P.t.p54KYY), x.Ck.AI));
                                 try {
-                                    let s = await h.Bo.post({
-                                        url: M.Rsh.AI_FIX_GRAMMAR,
+                                    let n = await y.Bo.post({
+                                        url: N.Rsh.AI_FIX_GRAMMAR,
                                         body: { content: t },
                                         rejectWithError: !1,
                                     });
-                                    s.ok &&
-                                        s.body &&
-                                        (e(s.body.content),
-                                        (0, C.P0)((0, T.o)(O.intl.string(O.t.mxQpUY), y.Ck.SUCCESS)));
+                                    n.ok &&
+                                        n.body &&
+                                        (e(n.body.content),
+                                        (0, C.P0)((0, h.o)(P.intl.string(P.t.mxQpUY), x.Ck.SUCCESS)));
                                 } finally {
-                                    a(!1);
+                                    l(!1);
                                 }
                             }
-                        }, [s, t, e]);
-                    return (0, n.jsx)(o.Dr, {
+                        }, [n, t, e]);
+                    return (0, a.jsx)(o.Dr, {
                         id: "fix-grammar",
-                        label: s ? O.intl.string(O.t.p54KYY) : O.intl.string(O.t.fCpOHj),
+                        label: n ? P.intl.string(P.t.p54KYY) : P.intl.string(P.t.fCpOHj),
                         icon: A.D,
                         action: i,
-                        disabled: s,
+                        disabled: n,
                     });
-                })(u, p),
+                })(u, d),
                 g = (function (t, e) {
-                    let [a, i] = r.useState(!1),
-                        c = (0, l.bG)([k.default], () => k.default.locale),
+                    let [l, i] = r.useState(!1),
+                        c = (0, s.bG)([E.default], () => E.default.locale),
                         u = r.useCallback(
-                            async (s, n) => {
-                                if (a) return;
-                                let r = s ?? c;
+                            async (n, a) => {
+                                if (l) return;
+                                let r = n ?? c;
                                 i(!0);
-                                let l = n ?? r;
+                                let s = a ?? r;
                                 (0, C.P0)(
-                                    (0, T.o)(O.intl.formatToPlainString(O.t.Znl8Z8, { targetLanguage: l }), y.Ck.AI),
+                                    (0, h.o)(P.intl.formatToPlainString(P.t.Znl8Z8, { targetLanguage: s }), x.Ck.AI),
                                 );
                                 try {
-                                    let s = await h.Bo.post({
-                                        url: M.Rsh.AI_TRANSLATE,
+                                    let n = await y.Bo.post({
+                                        url: N.Rsh.AI_TRANSLATE,
                                         body: { content: t, locale: r },
                                         rejectWithError: !1,
                                     });
-                                    s.ok &&
-                                        s.body &&
-                                        (e(s.body.content),
+                                    n.ok &&
+                                        n.body &&
+                                        (e(n.body.content),
                                         (0, C.P0)(
-                                            (0, T.o)(
-                                                O.intl.formatToPlainString(O.t.FtVUqm, { targetLanguage: l }),
-                                                y.Ck.SUCCESS,
+                                            (0, h.o)(
+                                                P.intl.formatToPlainString(P.t.FtVUqm, { targetLanguage: s }),
+                                                x.Ck.SUCCESS,
                                             ),
                                         ));
                                 } finally {
                                     i(!1);
                                 }
                             },
-                            [a, c, t, e],
+                            [l, c, t, e],
                         ),
-                        p = (0, O.getAvailableLocales)().map((t) => {
+                        d = (0, P.getAvailableLocales)().map((t) => {
                             let e;
                             try {
-                                e = s(579832)(`./${t.value}.png`);
+                                e = n(579832)(`./${t.value}.png`);
                             } catch (t) {
-                                e = s(432706);
+                                e = n(432706);
                             }
-                            return (0, n.jsx)(
+                            return (0, a.jsx)(
                                 o.Dr,
                                 {
                                     id: `translate-${t.value}`,
                                     label: t.name,
-                                    icon: () => (0, n.jsx)("img", { alt: "", src: e, className: v.M }),
+                                    icon: () => (0, a.jsx)("img", { alt: "", src: e, className: I.M }),
                                     leadingAccessory: { type: "image", src: e },
                                     action: () => u(t.value, t.name),
-                                    disabled: a,
+                                    disabled: l,
                                 },
                                 t.value,
                             );
                         });
-                    return (0, n.jsx)(o.Dr, {
+                    return (0, a.jsx)(o.Dr, {
                         id: "translate",
-                        label: a ? O.intl.string(O.t.SVKIdU) : O.intl.string(O.t["6epDlR"]),
+                        label: l ? P.intl.string(P.t.SVKIdU) : P.intl.string(P.t["6epDlR"]),
                         action: () => u(),
-                        disabled: a,
-                        children: p,
+                        disabled: l,
+                        children: d,
                     });
-                })(u, p),
-                f = (function (t, e, s) {
-                    let [a, i] = r.useState(null),
-                        l = r.useCallback(
+                })(u, d),
+                b = (function (t, e, n) {
+                    let [l, i] = r.useState(null),
+                        s = r.useCallback(
                             async (t) => {
-                                if (null == a) {
+                                if (null == l) {
                                     i(t.id),
                                         (0, C.P0)(
-                                            (0, T.o)(
-                                                O.intl.formatToPlainString(O.t.rrf7Kf, { transformName: t.name }),
-                                                y.Ck.AI,
+                                            (0, h.o)(
+                                                P.intl.formatToPlainString(P.t.rrf7Kf, { transformName: t.name }),
+                                                x.Ck.AI,
                                             ),
                                         );
                                     try {
-                                        let n = await h.Bo.post({
-                                            url: M.Rsh.AI_TEXT_TRANSFORM,
+                                        let a = await y.Bo.post({
+                                            url: N.Rsh.AI_TEXT_TRANSFORM,
                                             body: { content: e, prompt: t.prompt },
                                             rejectWithError: !1,
                                         });
-                                        n.ok &&
-                                            n.body &&
-                                            (s(n.body.content),
+                                        a.ok &&
+                                            a.body &&
+                                            (n(a.body.content),
                                             (0, C.P0)(
-                                                (0, T.o)(
-                                                    O.intl.formatToPlainString(O.t.qe4KvQ, { transformName: t.name }),
-                                                    y.Ck.SUCCESS,
+                                                (0, h.o)(
+                                                    P.intl.formatToPlainString(P.t.qe4KvQ, { transformName: t.name }),
+                                                    x.Ck.SUCCESS,
                                                 ),
                                             ));
                                     } finally {
@@ -190,42 +189,44 @@ function R(t) {
                                     }
                                 }
                             },
-                            [a, e, s],
+                            [l, e, n],
                         );
                     return t.map((t) => {
-                        let e = a === t.id;
-                        return (0, n.jsx)(
+                        let e = l === t.id;
+                        return (0, a.jsx)(
                             o.Dr,
                             {
                                 id: `text-transform-${t.id}`,
-                                label: e ? O.intl.formatToPlainString(O.t.rrf7Kf, { transformName: t.name }) : t.name,
+                                label: e ? P.intl.formatToPlainString(P.t.rrf7Kf, { transformName: t.name }) : t.name,
                                 icon: A.D,
-                                action: () => l(t),
-                                disabled: null != a,
+                                action: () => s(t),
+                                disabled: null != l,
                             },
                             t.id,
                         );
                     });
-                })(a, u, p);
+                })(l, u, d);
             return "" !== u.trim() && e
-                ? (0, n.jsxs)(n.Fragment, {
+                ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          d,
+                          m,
                           g,
-                          (0, n.jsxs)(o.Dr, {
+                          (0, a.jsxs)(o.Dr, {
                               id: "text-transforms",
-                              label: O.intl.string(O.t["6YZezO"]),
+                              label: P.intl.string(P.t["6YZezO"]),
                               icon: A.D,
                               children: [
-                                  f,
-                                  f.length > 0 ? (0, n.jsx)(o.bX, {}) : null,
-                                  (0, n.jsx)(o.Dr, {
+                                  b,
+                                  b.length > 0 ? (0, a.jsx)(o.bX, {}) : null,
+                                  (0, a.jsx)(o.Dr, {
                                       id: "manage-text-transforms",
-                                      label: O.intl.string(O.t.IcDoaD),
+                                      label: P.intl.string(P.t.IcDoaD),
                                       action: () => {
-                                          (0, E.openModalLazy)(async () => {
-                                              let { default: t } = await s.e("54191").then(s.bind(s, 665906));
-                                              return (e) => (0, n.jsx)(t, { ...e });
+                                          (0, j.openModalLazy)(async () => {
+                                              let { default: t } = await Promise.all([n.e("21984"), n.e("54191")]).then(
+                                                  n.bind(n, 665906),
+                                              );
+                                              return (e) => (0, a.jsx)(t, { ...e });
                                           });
                                       },
                                   }),
@@ -234,87 +235,87 @@ function R(t) {
                       ],
                   })
                 : null;
-        })(R),
-        V = (0, l.bG)([d.A], () => d.A.isSubmitButtonEnabled),
-        W = f._3.useSetting();
-    if (!x.isPlatformEmbedded) return null;
-    let F = R.chatInputType?.commands?.enabled ?? !1,
-        z = R.chatInputType?.stickers?.autoSuggest ?? !1,
-        B = R.chatInputType?.submit?.button ?? !1,
-        Y = F || z,
-        q = m.Ay.clipboardHasMixedContent(),
-        Z =
+        })(O),
+        K = (0, s.bG)([m.A], () => m.A.isSubmitButtonEnabled),
+        W = b._3.useSetting();
+    if (!p.isPlatformEmbedded) return null;
+    let Y = O.chatInputType?.commands?.enabled ?? !1,
+        B = O.chatInputType?.stickers?.autoSuggest ?? !1,
+        Z = O.chatInputType?.submit?.button ?? !1,
+        z = Y || B,
+        H = S.Ay.clipboardHasMixedContent(),
+        Q =
             "" !== e
                 ? [
-                      (0, n.jsx)(
+                      (0, a.jsx)(
                           o.Dr,
                           {
                               id: "cut",
-                              label: O.intl.string(O.t.pNPVhe),
-                              shortcut: (0, x.isMac)() ? "⌘X" : "Ctrl+X",
-                              action: () => m.Ay.cut(),
+                              label: P.intl.string(P.t.pNPVhe),
+                              shortcut: (0, p.isMac)() ? "⌘X" : "Ctrl+X",
+                              action: () => S.Ay.cut(),
                           },
                           "cut",
                       ),
-                      (0, n.jsx)(
+                      (0, a.jsx)(
                           o.Dr,
                           {
                               id: "copy",
-                              label: O.intl.string(O.t.OpuAlK),
-                              shortcut: (0, x.isMac)() ? "⌘C" : "Ctrl+C",
-                              action: () => m.Ay.copy(),
+                              label: P.intl.string(P.t.OpuAlK),
+                              shortcut: (0, p.isMac)() ? "⌘C" : "Ctrl+C",
+                              action: () => S.Ay.copy(),
                           },
                           "copy",
                       ),
                   ]
                 : null,
-        $ = (0, n.jsx)(o.sL, {
+        $ = (0, a.jsx)(o.sL, {
             id: "command-suggestions",
-            label: O.intl.string(O.t["9rJKF7"]),
+            label: P.intl.string(P.t["9rJKF7"]),
             checked: W,
             action: () => {
                 let t = !W;
-                f._3.updateSetting(t),
-                    b.default.track(M.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
+                b._3.updateSetting(t),
+                    f.default.track(N.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
-                        location: { object: M.ZSU.CONTEXT_MENU },
+                        location: { object: N.ZSU.CONTEXT_MENU },
                     });
             },
         });
-    return (0, n.jsxs)(c.W, {
+    return (0, a.jsxs)(c.W, {
         "data-menu-migrated": !0,
         navId: "textarea-context",
-        onClose: G,
-        "aria-label": O.intl.string(O.t.NWlDSI),
+        onClose: v,
+        "aria-label": P.intl.string(P.t.NWlDSI),
         onSelect: U,
         children: [
-            Y && (0, n.jsx)(o.Dr, { id: "suggestions", label: O.intl.string(O.t.zgxg7v), children: F && $ }),
-            B &&
-                (0, n.jsx)(o.sL, {
+            z && (0, a.jsx)(o.Dr, { id: "suggestions", label: P.intl.string(P.t.zgxg7v), children: Y && $ }),
+            Z &&
+                (0, a.jsx)(o.sL, {
                     id: "submit-button",
-                    label: O.intl.string(O.t.G8XDyj),
-                    checked: V,
+                    label: P.intl.string(P.t.G8XDyj),
+                    checked: K,
                     action: () => {
-                        (0, p.Xt)();
+                        (0, d.Xt)();
                     },
                 }),
-            (0, n.jsx)(o.rX, { children: K }),
-            (0, n.jsxs)(o.rX, { children: [w, H] }),
-            (0, n.jsxs)(o.rX, {
+            (0, a.jsx)(o.rX, { children: w }),
+            (0, a.jsxs)(o.rX, { children: [F, G] }),
+            (0, a.jsxs)(o.rX, {
                 children: [
-                    Z,
-                    (0, n.jsx)(o.Dr, {
+                    Q,
+                    (0, a.jsx)(o.Dr, {
                         id: "paste",
-                        label: O.intl.string(O.t.lMUxVi),
-                        shortcut: (0, x.isMac)() ? "⌘V" : "Ctrl+V",
-                        action: () => m.Ay.paste(),
+                        label: P.intl.string(P.t.lMUxVi),
+                        shortcut: (0, p.isMac)() ? "⌘V" : "Ctrl+V",
+                        action: () => S.Ay.paste(),
                     }),
-                    q &&
-                        (0, n.jsx)(o.Dr, {
+                    H &&
+                        (0, a.jsx)(o.Dr, {
                             id: "paste-as-plain-text",
-                            label: O.intl.string(O.t.X92Qnr),
-                            shortcut: (0, x.isMac)() ? "⌘⇧V" : "Ctrl+Shift+V",
-                            action: X,
+                            label: P.intl.string(P.t.X92Qnr),
+                            shortcut: (0, p.isMac)() ? "⌘⇧V" : "Ctrl+Shift+V",
+                            action: V,
                         }),
                 ],
             }),

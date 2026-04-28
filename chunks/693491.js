@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     TQ: "checkboxWrapper__09aca",
     nM: "row__09aca",

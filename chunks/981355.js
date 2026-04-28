@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => i });
-var a = n(64700);
-function i() {
+n.d(i, { A: () => d });
+var t = n(64700);
+function d() {
     arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    let [e, t] = a.useState(
+    let [e, i] = t.useState(
         (function () {
             return (
                 arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -12,9 +11,9 @@ function i() {
         })(),
     );
     return (
-        a.useLayoutEffect(() => {
+        t.useLayoutEffect(() => {
             function e() {
-                t({ width: window.innerWidth, height: window.innerHeight });
+                i({ width: window.innerWidth, height: window.innerHeight });
             }
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),

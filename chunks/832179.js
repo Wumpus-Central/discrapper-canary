@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     pf: "inventory__1feb0",
     ne: "controls__1feb0",

@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+i.r(
     (e.exports = {
         icon: "icon_f34534",
         guildIconBadge: "guildIconBadge_f34534",

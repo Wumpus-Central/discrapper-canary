@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     nM: "row__8e830",
     fi: "column__8e830",
     Kt: "gapXs__8e830",

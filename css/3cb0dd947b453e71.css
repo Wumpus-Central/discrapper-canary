@@ -1,0 +1,40 @@
+.iconWrapper_ede711 {
+    flex: 0 0 auto;
+    margin-inline-start: -2px;
+    position: relative
+}
+
+.clickableContainer_ede711,
+.iconWrapper_ede711 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.clickableContainer_ede711 {
+    cursor: pointer;
+    flex-direction: row;
+    gap: 4px;
+    height: 24px;
+    margin: 0 -6px;
+    padding: 0 6px
+}
+
+.clickableContainer_ede711:hover {
+    background-color: var(--background-mod-normal);
+    border-radius: var(--custom-app-top-bar-item-radius)
+}
+
+.icon_ede711 {
+    cursor: pointer
+}
+
+.unreadDot_ede711 {
+    background-color: var(--icon-strong);
+    border-radius: 100%;
+    bottom: 3px;
+    height: 4px;
+    inset-inline-end: 3px;
+    position: absolute;
+    width: 4px
+}

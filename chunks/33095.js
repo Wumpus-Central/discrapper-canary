@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     kL: "container__65d41",
     Kk: "measurements__65d41",
     vR: "tabs__65d41",

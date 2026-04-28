@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Zp: "layout__81b99",
     wx: "header__81b99",

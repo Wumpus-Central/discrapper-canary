@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { Ym: () => l, f5: () => s, yW: () => o }), n(321073);
+n.d(t, { Ym: () => a, f5: () => u, yW: () => o }), n(321073);
 var r = n(64700),
-    a = n(575593),
+    l = n(575593),
     i = n(985018);
-class l {
+class a {
     itemsByTypes;
     constructor(e) {
         this.itemsByTypes = this.sortByTypes(e);
     }
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(a.R.AVATAR_DECORATION);
+        return this.getFirstItemByType(l.R.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(a.R.PROFILE_EFFECT);
+        return this.getFirstItemByType(l.R.PROFILE_EFFECT);
     }
     get firstNameplate() {
-        return this.getFirstItemByType(a.R.NAMEPLATE);
+        return this.getFirstItemByType(l.R.NAMEPLATE);
     }
     get firstProfileFrame() {
-        return this.getFirstItemByType(a.R.PROFILE_FRAME);
+        return this.getFirstItemByType(l.R.PROFILE_FRAME);
     }
     getFirstItemByType(e) {
         let t = (this.itemsByTypes.get(e) ?? [])[0];
@@ -31,9 +30,9 @@ class l {
         }, new Map());
     }
 }
-let s = (e) =>
+let u = (e) =>
         r.useMemo(() => {
-            let t = new l(e.items);
+            let t = new a(e.items);
             return {
                 firstProfileEffect: t.firstProfileEffect,
                 firstAvatarDecoration: t.firstAvatarDecoration,

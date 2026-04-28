@@ -1,53 +1,52 @@
-"use strict";
-n.d(t, { A: () => p });
-var i = n(627968),
-    a = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(939249),
-    o = n(7689),
-    c = n(661531),
-    d = n(892547),
-    u = n(488995),
-    h = n(206293);
-function p(e) {
+l.d(t, { A: () => m });
+var s = l(627968),
+    i = l(64700),
+    a = l(503698),
+    n = l.n(a),
+    r = l(939249),
+    o = l(7689),
+    c = l(661531),
+    d = l(892547),
+    u = l(488995),
+    h = l(206293);
+function m(e) {
     let {
             state: t,
-            query: n,
-            placeholder: s,
-            onTextChange: p,
-            onCollapsedClick: m,
-            onClear: _,
-            onBlur: g,
-            onSubmit: x,
+            query: l,
+            placeholder: a,
+            onTextChange: m,
+            onCollapsedClick: p,
+            onClear: g,
+            onBlur: x,
+            onSubmit: A,
         } = e,
-        f = a.useRef(null),
-        A = a.useCallback(
+        j = i.useRef(null),
+        v = i.useCallback(
             (e) => {
-                "Enter" === e.key && x();
+                "Enter" === e.key && A();
             },
-            [x],
+            [A],
         ),
-        C = a.useCallback(() => {
-            m(), setTimeout(() => f.current?.focus());
-        }, [m]);
+        C = i.useCallback(() => {
+            p(), setTimeout(() => j.current?.focus());
+        }, [p]);
     return t === u.GlobalDiscoverySearchBarState.COLLAPSED
-        ? (0, i.jsx)(r.D, {
+        ? (0, s.jsx)(r.D, {
               className: h.qc,
               onClick: C,
-              children: (0, i.jsx)(o.$, { size: "sm", color: c.A.colors.ICON_STRONG }),
+              children: (0, s.jsx)(o.$, { size: "sm", color: c.A.colors.ICON_STRONG }),
           })
-        : (0, i.jsx)("div", {
-              className: l()(h.ON, { [h.Nz]: t === u.GlobalDiscoverySearchBarState.FLOATING }),
-              children: (0, i.jsx)(d.I, {
+        : (0, s.jsx)("div", {
+              className: n()(h.ON, { [h.Nz]: t === u.GlobalDiscoverySearchBarState.FLOATING }),
+              children: (0, s.jsx)(d.I, {
                   size: "sm",
-                  ref: f,
-                  query: n,
-                  placeholder: s,
-                  onChange: p,
-                  onClear: _,
-                  onKeyDown: A,
-                  onBlur: g,
+                  ref: j,
+                  query: l,
+                  placeholder: a,
+                  onChange: m,
+                  onClear: g,
+                  onKeyDown: v,
+                  onBlur: x,
               }),
           });
 }

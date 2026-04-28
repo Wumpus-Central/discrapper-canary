@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     E6: "embed_f69538",
     kL: "container_f69538",

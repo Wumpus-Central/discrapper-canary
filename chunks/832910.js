@@ -1,95 +1,94 @@
-"use strict";
-s.d(t, { default: () => b });
-var r = s(627968),
-    i = s(64700),
-    n = s(189213),
+s.d(e, { default: () => E });
+var i = s(627968),
+    n = s(64700),
+    l = s(189213),
     a = s(17928),
-    o = s(834730),
-    l = s(349288),
+    r = s(834730),
+    d = s(349288),
     c = s(414121),
-    d = s(266080),
+    o = s(266080),
     u = s(975571),
-    p = s(643501),
-    f = s(636537),
-    m = s(47167),
-    _ = s(71393),
-    h = s(969341),
-    C = s(994500),
-    x = s(287809),
-    g = s(544105),
-    v = s(652215),
-    y = s(985018),
-    N = s(350701),
-    j = s(378393);
-function O(e) {
-    let { step: t, instructions: s } = e;
-    return (0, r.jsxs)("div", {
-        className: j.RA,
+    m = s(643501),
+    h = s(636537),
+    x = s(47167),
+    f = s(71393),
+    g = s(969341),
+    N = s(994500),
+    j = s(287809),
+    A = s(544105),
+    p = s(652215),
+    v = s(985018),
+    C = s(350701),
+    R = s(378393);
+function b(t) {
+    let { step: e, instructions: s } = t;
+    return (0, i.jsxs)("div", {
+        className: R.RA,
         children: [
-            (0, r.jsx)("div", {
-                className: j.RY,
-                children: (0, r.jsx)(o.E, { variant: "text-sm/semibold", className: j.CD, children: t }),
+            (0, i.jsx)("div", {
+                className: R.RY,
+                children: (0, i.jsx)(r.E, { variant: "text-sm/semibold", className: R.CD, children: e }),
             }),
-            (0, r.jsx)(o.E, { variant: "text-sm/normal", color: "text-strong", className: j.GA, children: s }),
+            (0, i.jsx)(r.E, { variant: "text-sm/normal", color: "text-strong", className: R.GA, children: s }),
         ],
     });
 }
-function b(e) {
-    let { channel: t, transitionState: s, onClose: b } = e,
-        A = (0, a.bG)([p.default], () => null != p.default.getRemoteSessionId()),
-        E = (function (e, t) {
-            let { nonce: s, forQRCode: r } = t,
-                i = e.getGuildId(),
-                n = _.A.getGuild(i),
-                a = (0, g.hw)({
-                    guildId: i ?? v.D0I,
-                    channelId: e.id,
-                    channelName: (0, m.m1)(e, x.default, C.A),
-                    guildName: n?.name ?? y.intl.string(y.t.LJpTRF),
-                    muted: h.Ay.isSelfMute(),
-                    deafened: h.Ay.isSelfDeaf(),
+function E(t) {
+    let { channel: e, transitionState: s, onClose: E } = t,
+        I = (0, a.bG)([m.default], () => null != m.default.getRemoteSessionId()),
+        O = (function (t, e) {
+            let { nonce: s, forQRCode: i } = e,
+                n = t.getGuildId(),
+                l = f.A.getGuild(n),
+                a = (0, A.hw)({
+                    guildId: n ?? p.D0I,
+                    channelId: t.id,
+                    channelName: (0, x.m1)(t, j.default, N.A),
+                    guildName: l?.name ?? v.intl.string(v.t.LJpTRF),
+                    muted: g.Ay.isSelfMute(),
+                    deafened: g.Ay.isSelfDeaf(),
                     nonce: s,
                 });
-            return r ? `${(0, f.TP)()}${v.Rsh.XBOX_HANDOFF}?${a.toString()}` : `${g.Gp}?${a.toString()}`;
-        })(t, { forQRCode: !0 });
+            return i ? `${(0, h.TP)()}${p.Rsh.XBOX_HANDOFF}?${a.toString()}` : `${A.Gp}?${a.toString()}`;
+        })(e, { forQRCode: !0 });
     return (
-        i.useEffect(() => {
-            A && b();
-        }, [A, b]),
-        i.useEffect(() => {
-            (0, N.A)(t.id, g.f$.XBOX);
-        }, [t.id]),
-        (0, r.jsx)(n.Modal, {
-            title: y.intl.string(y.t["f+Aijq"]),
-            subtitle: y.intl.string(y.t.mYFmDY),
+        n.useEffect(() => {
+            I && E();
+        }, [I, E]),
+        n.useEffect(() => {
+            (0, C.A)(e.id, A.f$.XBOX);
+        }, [e.id]),
+        (0, i.jsx)(l.Modal, {
+            title: v.intl.string(v.t["f+Aijq"]),
+            subtitle: v.intl.string(v.t.mYFmDY),
             actions: [],
-            onClose: b,
+            onClose: E,
             transitionState: s,
-            children: (0, r.jsxs)("div", {
-                className: j.Nr,
+            children: (0, i.jsxs)("div", {
+                className: R.Nr,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: j.O,
+                    (0, i.jsxs)("div", {
+                        className: R.O,
                         children: [
-                            (0, r.jsxs)(o.E, {
+                            (0, i.jsxs)(r.E, {
                                 variant: "text-lg/semibold",
                                 color: "text-strong",
-                                className: j.RA,
-                                children: [(0, r.jsx)(d.A, { className: j.Fp }), y.intl.string(y.t.ZNlYbK)],
+                                className: R.RA,
+                                children: [(0, i.jsx)(o.A, { className: R.Fp }), v.intl.string(v.t.ZNlYbK)],
                             }),
-                            (0, r.jsx)(O, { step: 1, instructions: y.intl.string(y.t.dDtkl9) }),
-                            (0, r.jsx)(O, { step: 2, instructions: y.intl.string(y.t.IWuXjC) }),
-                            (0, r.jsx)(o.E, {
+                            (0, i.jsx)(b, { step: 1, instructions: v.intl.string(v.t.dDtkl9) }),
+                            (0, i.jsx)(b, { step: 2, instructions: v.intl.string(v.t.IWuXjC) }),
+                            (0, i.jsx)(r.E, {
                                 variant: "text-sm/medium",
-                                children: (0, r.jsx)(l.Anchor, {
-                                    className: j.C2,
-                                    href: u.A.getArticleURL(v.MVz.XBOX_CONNECTION),
-                                    children: y.intl.string(y.t.hvVgAZ),
+                                children: (0, i.jsx)(d.Anchor, {
+                                    className: R.C2,
+                                    href: u.A.getArticleURL(p.MVz.XBOX_CONNECTION),
+                                    children: v.intl.string(v.t.hvVgAZ),
                                 }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(c.Ay, { className: j.JB, size: 120, text: E }),
+                    (0, i.jsx)(c.Ay, { className: R.JB, size: 120, text: O }),
                 ],
             }),
         })

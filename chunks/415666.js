@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { wE: () => D, Xq: () => j, q6: () => U });
-var r = n(627968),
-    a = n(64700),
-    i = n(17928),
-    l = n(775602),
-    s = n(7584),
-    o = n(267102),
-    c = n(232835),
-    d = n(417146),
-    u = n(552122),
-    _ = n(401266),
-    p = n(106778),
-    f = n(21161),
-    m = n(531301),
-    h = n(652215);
-let g = 1e3 / 60,
-    b = {
+n.d(t, { wE: () => T, Xq: () => O, q6: () => z });
+var i = n(627968),
+    r = n(64700),
+    l = n(17928),
+    u = n(775602),
+    a = n(7584),
+    s = n(267102),
+    o = n(232835),
+    c = n(417146),
+    f = n(552122),
+    m = n(401266),
+    d = n(106778),
+    x = n(21161),
+    p = n(531301),
+    g = n(652215);
+let A = 1e3 / 60,
+    y = {
         velocity: { type: "static-random", minValue: { x: 8, y: 0 }, maxValue: { x: 50, y: 0 } },
         rotation: {
             type: "linear-random",
@@ -28,52 +27,52 @@ let g = 1e3 / 60,
         dragCoefficient: { type: "static", value: 0.8 },
         opacity: { type: "static-random", minValue: 0.7, maxValue: 0.5 },
     },
-    A = ["#FFFFFF"],
-    E = [n(426560), ...(0, m.A)(["snowflake"])];
-function v(e) {
+    h = ["#FFFFFF"],
+    C = [n(426560), ...(0, p.A)(["snowflake"])];
+function j(e) {
     let { children: t } = e,
-        [n, i] = a.useState(!1),
-        l = (0, o.Us)(),
-        [s, c] = a.useState(null),
-        { confettiCanvas: d } = a.useContext(f.x),
-        u = (0, p.f9)(d, s),
-        _ = a.useMemo(() => ({ triggerAnimation: () => i(!0), untriggerAnimation: () => i(!1) }), []),
-        m = a.useCallback(() => {
-            let e = d?.getCanvas();
+        [n, l] = r.useState(!1),
+        u = (0, s.Us)(),
+        [a, o] = r.useState(null),
+        { confettiCanvas: c } = r.useContext(x.x),
+        f = (0, d.f9)(c, a),
+        m = r.useMemo(() => ({ triggerAnimation: () => l(!0), untriggerAnimation: () => l(!1) }), []),
+        p = r.useCallback(() => {
+            let e = c?.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
-            u.createConfetti({
-                ...b,
+            f.createConfetti({
+                ...y,
                 position: {
                     type: "static-random",
                     minValue: { x: -t.width / 2, y: -24 },
                     maxValue: { x: t.width, y: -24 },
                 },
             });
-        }, [u, d]);
-    return (a.useEffect(() => {
-        let e = n ? setInterval(m, g) : null;
+        }, [f, c]);
+    return (r.useEffect(() => {
+        let e = n ? setInterval(p, A) : null;
         return () => clearInterval(e);
-    }, [n, m]),
-    l === h.BRT.OVERLAY)
+    }, [n, p]),
+    u === g.BRT.OVERLAY)
         ? t
-        : (0, r.jsxs)(D.Provider, {
-              value: _,
-              children: [t, (0, r.jsx)(p.K_, { ref: c, colors: A, sprites: E, spriteWidth: 24, spriteHeight: 24 })],
+        : (0, i.jsxs)(T.Provider, {
+              value: m,
+              children: [t, (0, i.jsx)(d.K_, { ref: o, colors: h, sprites: C, spriteWidth: 24, spriteHeight: 24 })],
           });
 }
-var I = n(544048),
-    y = n(513609),
-    x = n(851110),
-    S = n(490114);
-let T = [],
-    C = new Set(["jack_o_lantern", "nose"]),
-    N = {
-        jack_o_lantern: { sprites: (0, m.A)(["chocolate_bar", "lollipop", "candy"]) },
-        nose: { sprites: (0, m.A)(["foot"]) },
+var V = n(544048),
+    R = n(513609),
+    v = n(851110),
+    E = n(490114);
+let k = [],
+    b = new Set(["jack_o_lantern", "nose"]),
+    w = {
+        jack_o_lantern: { sprites: (0, p.A)(["chocolate_bar", "lollipop", "candy"]) },
+        nose: { sprites: (0, p.A)(["foot"]) },
     },
-    R = { enter: { BEG: 0, END: 22 }, confetti: { BEG: 23, END: 119 }, exit: { BEG: 164, END: 200 } };
-function w() {
+    S = { enter: { BEG: 0, END: 22 }, confetti: { BEG: 23, END: 119 }, exit: { BEG: 164, END: 200 } };
+function _() {
     return n
         .e("98150")
         .then(n.t.bind(n, 633343, 19))
@@ -82,19 +81,19 @@ function w() {
             return t;
         });
 }
-let L = a.forwardRef(function (e, t) {
+let B = r.forwardRef(function (e, t) {
     let { sprites: n } = e,
-        [i, l] = a.useState(null),
-        { confettiCanvas: s } = a.useContext(f.x),
-        o = (0, p.f9)(s, i);
+        [l, u] = r.useState(null),
+        { confettiCanvas: a } = r.useContext(x.x),
+        s = (0, d.f9)(a, l);
     return (
-        a.useImperativeHandle(
+        r.useImperativeHandle(
             t,
             () => ({
                 fireConfetti: (e, t) => {
-                    o.createMultipleConfetti(
+                    s.createMultipleConfetti(
                         {
-                            ...x.Mw,
+                            ...v.Mw,
                             position: { type: "static", value: { x: e, y: t } },
                             velocity: {
                                 type: "static-random",
@@ -108,16 +107,16 @@ let L = a.forwardRef(function (e, t) {
                     );
                 },
             }),
-            [o],
+            [s],
         ),
-        (0, r.jsx)(p.K_, { ref: l, colors: T, sprites: n, spriteWidth: 48, spriteHeight: 48 })
+        (0, i.jsx)(d.K_, { ref: u, colors: k, sprites: n, spriteWidth: 48, spriteHeight: 48 })
     );
 });
-function M(e) {
+function I(e) {
     let { children: t } = e,
-        n = a.useRef({}),
-        [i, l] = a.useState(null),
-        s = (function (e) {
+        n = r.useRef({}),
+        [l, u] = r.useState(null),
+        a = (function (e) {
             if (null == e) return "enter";
             switch (e) {
                 case "enter":
@@ -127,54 +126,54 @@ function M(e) {
                 case "exit":
                     return "enter";
             }
-        })(i),
-        c = a.useRef(null),
-        [d, u] = a.useState(!1),
-        _ = a.useRef("jack_o_lantern"),
-        p = (0, o.Us)(),
-        f = a.useCallback(
+        })(l),
+        o = r.useRef(null),
+        [c, f] = r.useState(!1),
+        m = r.useRef("jack_o_lantern"),
+        d = (0, s.Us)(),
+        x = r.useCallback(
             (e) => {
-                if (!d) {
+                if (!c) {
                     let t = (function (e) {
                         if (null == e) return null;
-                        for (let t of C) if (null != e.match(RegExp(`:${t}(_tone[1-9])?`))) return t;
+                        for (let t of b) if (null != e.match(RegExp(`:${t}(_tone[1-9])?`))) return t;
                         return null;
                     })(e);
-                    null != t && ((_.current = t), u(!0), l(null));
+                    null != t && ((m.current = t), f(!0), u(null));
                 }
             },
-            [d],
+            [c],
         ),
-        m = a.useMemo(() => ({ triggerAnimation: f, untriggerAnimation: () => {} }), [f]),
-        g = a.useCallback((e) => {
-            l(e);
+        p = r.useMemo(() => ({ triggerAnimation: x, untriggerAnimation: () => {} }), [x]),
+        A = r.useCallback((e) => {
+            u(e);
         }, []),
-        b = a.useCallback((e) => {
-            "exit" === e && u(!1);
+        y = r.useCallback((e) => {
+            "exit" === e && f(!1);
         }, []),
-        A = a.useCallback((e) => {
-            c.current = e;
+        h = r.useCallback((e) => {
+            o.current = e;
         }, []);
-    return (a.useEffect(() => {
-        if ("confetti" === i) {
-            if (null == c.current) return;
-            let e = c.current.getBoundingClientRect(),
+    return (r.useEffect(() => {
+        if ("confetti" === l) {
+            if (null == o.current) return;
+            let e = o.current.getBoundingClientRect(),
                 t = e.left - 11,
-                r = e.top + 125,
-                a = n.current[_.current];
-            a?.fireConfetti(t, r);
+                i = e.top + 125,
+                r = n.current[m.current];
+            r?.fireConfetti(t, i);
         }
-    }, [i]),
-    p !== h.BRT.APP)
+    }, [l]),
+    d !== g.BRT.APP)
         ? t
-        : (0, r.jsxs)(D.Provider, {
-              value: m,
+        : (0, i.jsxs)(T.Provider, {
+              value: p,
               children: [
                   t,
-                  Object.keys(N).map((e) => {
-                      let t = N[e];
-                      return (0, r.jsx)(
-                          L,
+                  Object.keys(w).map((e) => {
+                      let t = w[e];
+                      return (0, i.jsx)(
+                          B,
                           {
                               ref: (t) => {
                                   null != t ? (n.current[e] = t) : delete n.current[e];
@@ -184,18 +183,18 @@ function M(e) {
                           e,
                       );
                   }),
-                  d
-                      ? (0, r.jsx)(y.Ay, {
-                            children: (0, r.jsx)("div", {
-                                className: S.k,
-                                children: (0, r.jsx)(I.t, {
-                                    animationRef: A,
-                                    className: S.I,
-                                    nextScene: s,
-                                    sceneSegments: R,
-                                    onScenePlay: g,
-                                    onSceneComplete: b,
-                                    importData: w,
+                  c
+                      ? (0, i.jsx)(R.Ay, {
+                            children: (0, i.jsx)("div", {
+                                className: E.k,
+                                children: (0, i.jsx)(V.t, {
+                                    animationRef: h,
+                                    className: E.I,
+                                    nextScene: a,
+                                    sceneSegments: S,
+                                    onScenePlay: A,
+                                    onSceneComplete: y,
+                                    importData: _,
                                     pauseWhileUnfocused: !1,
                                 }),
                             }),
@@ -204,70 +203,70 @@ function M(e) {
               ],
           });
 }
-function O(e) {
-    if (null == e || null == d.A.emojiAnimationTriggers) return !1;
-    for (let t of d.A.emojiAnimationTriggers) {
-        let n = s.Ay.getByName(t);
+function N(e) {
+    if (null == e || null == c.A.emojiAnimationTriggers) return !1;
+    for (let t of c.A.emojiAnimationTriggers) {
+        let n = a.Ay.getByName(t);
         if (null != n) {
             if (`:${n.uniqueName}:` === e) return !0;
             for (let t in n.diversityChildren) {
-                let r = n.diversityChildren[t];
-                if (`:${r.uniqueName}:` === e) return !0;
+                let i = n.diversityChildren[t];
+                if (`:${i.uniqueName}:` === e) return !0;
             }
         }
     }
     return !1;
 }
-let D = a.createContext({ triggerAnimation: () => {}, untriggerAnimation: () => {} });
-function P(e) {
+let T = r.createContext({ triggerAnimation: () => {}, untriggerAnimation: () => {} });
+function M(e) {
     let { children: t } = e,
-        { triggerAnimation: n, untriggerAnimation: i } = a.useContext(D),
-        l = (0, o.Us)(),
-        s = a.useMemo(
+        { triggerAnimation: n, untriggerAnimation: l } = r.useContext(T),
+        u = (0, s.Us)(),
+        a = r.useMemo(
             () => ({
                 triggerAnimation: (e) => {
-                    l !== h.BRT.OVERLAY && O(e) && n(e);
+                    u !== g.BRT.OVERLAY && N(e) && n(e);
                 },
                 untriggerAnimation: (e) => {
-                    l !== h.BRT.OVERLAY && O(e) && i(e);
+                    u !== g.BRT.OVERLAY && N(e) && l(e);
                 },
             }),
-            [l, n, i],
+            [u, n, l],
         );
-    return (0, r.jsx)(D.Provider, { value: s, children: t });
+    return (0, i.jsx)(T.Provider, { value: a, children: t });
 }
-function j(e) {
+function O(e) {
     let { children: t } = e,
-        n = u.A.useIsEligible(),
-        i = a.useCallback((e, t) => {
+        n = f.A.useIsEligible(),
+        l = r.useCallback((e, t) => {
             switch (t) {
-                case d.n.THROW_EMOJI:
-                    return (0, r.jsx)(M, { children: e });
-                case d.n.SNOW:
-                    return (0, r.jsx)(v, { children: e });
+                case c.n.THROW_EMOJI:
+                    return (0, i.jsx)(I, { children: e });
+                case c.n.SNOW:
+                    return (0, i.jsx)(j, { children: e });
             }
         }, []);
-    return n && null != d.A.emojiAnimationType ? i((0, r.jsx)(P, { children: t }), d.A.emojiAnimationType) : t;
+    return n && null != c.A.emojiAnimationType ? l((0, i.jsx)(M, { children: t }), c.A.emojiAnimationType) : t;
 }
-function k(e) {
-    let { emojiRef: t, channelId: n, messageId: r, emojiName: l } = e,
-        s = (0, i.bG)([c.A], () => c.A.getMessage(n, r)),
-        { triggerAnimation: o } = a.useContext(D);
+function F(e) {
+    let { emojiRef: t, channelId: n, messageId: i, emojiName: u } = e,
+        a = (0, l.bG)([o.A], () => o.A.getMessage(n, i)),
+        { triggerAnimation: s } = r.useContext(T);
     return (
-        a.useEffect(() => {
-            if (!d.A.triggerEmojiAnimationFromSentMessage || s?.state !== h.cmJ.SENT || (0, _.AI)(r)) return;
+        r.useEffect(() => {
+            if (!c.A.triggerEmojiAnimationFromSentMessage || a?.state !== g.cmJ.SENT || (0, m.AI)(i)) return;
             let { top: e, bottom: n } = t.getBoundingClientRect();
-            e >= 0 && n <= window.innerHeight && (o(l), (0, _.IL)(r));
-        }, [l, t, s?.state, r, o]),
+            e >= 0 && n <= window.innerHeight && (s(u), (0, m.IL)(i));
+        }, [u, t, a?.state, i, s]),
         null
     );
 }
-function U(e) {
-    let { channelId: t, messageId: n, emojiName: a, disable: s, emojiRef: c } = e,
-        d = (0, i.bG)([l.A], () => l.A.useReducedMotion),
-        _ = u.A.useIsEligible(),
-        p = (0, o.Us)();
-    return s || p === h.BRT.OVERLAY || !_ || null == n || null == t || d || null == c || !O(a)
+function z(e) {
+    let { channelId: t, messageId: n, emojiName: r, disable: a, emojiRef: o } = e,
+        c = (0, l.bG)([u.A], () => u.A.useReducedMotion),
+        m = f.A.useIsEligible(),
+        d = (0, s.Us)();
+    return a || d === g.BRT.OVERLAY || !m || null == n || null == t || c || null == o || !N(r)
         ? null
-        : (0, r.jsx)(k, { emojiRef: c, channelId: t, messageId: n, emojiName: a });
+        : (0, i.jsx)(F, { emojiRef: o, channelId: t, messageId: n, emojiName: r });
 }

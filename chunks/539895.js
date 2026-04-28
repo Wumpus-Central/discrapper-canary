@@ -1,150 +1,149 @@
-"use strict";
-let i;
-n.d(t, { A: () => O }), n(938796);
-var s = n(17928),
-    l = n(228366),
+let t;
+n.d(l, { A: () => S }), n(938796);
+var i = n(17928),
+    u = n(228366),
     r = n(376728),
-    a = n(346542),
-    o = n(976860),
+    o = n(346542),
+    s = n(976860),
     d = n(95701),
-    c = n(495544),
-    u = n(734057),
-    _ = n(696451),
-    h = n(71393),
-    p = n(299091),
-    m = n(576705),
-    g = n(994500),
-    x = n(287809),
-    f = n(860689),
-    A = n(19575),
-    E = n(260451),
-    I = n(652215),
-    v = n(746080);
-let j = I.BRT.APP,
-    C = !1,
-    N = !1,
-    T = null,
-    S = null;
-function y() {
-    C = !0;
+    a = n(495544),
+    c = n(734057),
+    f = n(696451),
+    A = n(71393),
+    _ = n(299091),
+    E = n(576705),
+    I = n(994500),
+    v = n(287809),
+    N = n(860689),
+    O = n(19575),
+    h = n(260451),
+    C = n(652215),
+    R = n(746080);
+let p = C.BRT.APP,
+    T = !1,
+    L = !1,
+    g = null,
+    P = null;
+function V() {
+    T = !0;
 }
-class b extends s.Ay.Store {
+class y extends i.Ay.Store {
     static displayName = "InviteModalStore";
     initialize() {
-        this.waitFor(c.default, u.A, _.Ay, h.A, p.A, m.A, g.A, x.default);
+        this.waitFor(a.default, c.A, f.Ay, A.A, _.A, E.A, I.A, v.default);
     }
     isOpen() {
-        let e = __OVERLAY__ ? I.BRT.OVERLAY : I.BRT.APP;
-        return !!(C && null != S && j === e);
+        let e = __OVERLAY__ ? C.BRT.OVERLAY : C.BRT.APP;
+        return !!(T && null != P && p === e);
     }
     getProps() {
         return {
-            invite: S?.invite ?? null,
-            error: null != i && "" !== i ? i : null,
-            submitting: N,
-            invite_instance_id: T,
+            invite: P?.invite ?? null,
+            error: null != t && "" !== t ? t : null,
+            submitting: L,
+            invite_instance_id: g,
         };
     }
 }
-let O = new b(l.h, {
-    OVERLAY_INITIALIZE: y,
-    CONNECTION_OPEN: y,
+let S = new y(u.h, {
+    OVERLAY_INITIALIZE: V,
+    CONNECTION_OPEN: V,
     CONNECTION_CLOSED: function () {
-        C = !1;
+        T = !1;
     },
     INVITE_MODAL_OPEN: function (e) {
-        let t = e.invite;
-        if (null == t) return !1;
-        if (t.state !== I.elq.EXPIRED && t.state !== I.elq.BANNED && t.state !== I.elq.ERROR) {
-            let { channel: e, guild: n } = t;
+        let l = e.invite;
+        if (null == l) return !1;
+        if (l.state !== C.elq.EXPIRED && l.state !== C.elq.BANNED && l.state !== C.elq.ERROR) {
+            let { channel: e, guild: n } = l;
             if (null == e) return !1;
             if ((0, d.MK)(e.type)) {
-                if (null != u.A.getChannel(e.id)) return (0, o.uh)(I.ME, e.id), A.Ay.focus(), !1;
+                if (null != c.A.getChannel(e.id)) return (0, s.uh)(C.ME, e.id), O.Ay.focus(), !1;
             } else {
                 if (null == n) return !1;
-                if (null != h.A.getGuild(n.id) && !(0, a.G4)(t)) {
+                if (null != A.A.getGuild(n.id) && !(0, o.G4)(l)) {
                     let e = !1;
-                    if (null != t.roles && t.roles.length > 0) {
-                        let i = c.default.getId(),
-                            s = _.Ay.getMember(n.id, i),
-                            l = new Set(s?.roles ?? []);
-                        e = t.roles.some((e) => !l.has(e.id));
+                    if (null != l.roles && l.roles.length > 0) {
+                        let t = a.default.getId(),
+                            i = f.Ay.getMember(n.id, t),
+                            u = new Set(i?.roles ?? []);
+                        e = l.roles.some((e) => !u.has(e.id));
                     }
                     if (!e) {
                         let e = (function (e) {
-                            if ((0, a.d4)(e)) return v.VV.ROLE_SUBSCRIPTIONS;
-                            let { channel: t } = e;
-                            if (null != t) {
-                                let e = u.A.getChannel(t.id);
-                                if (m.A.can(I.xBc.VIEW_CHANNEL, e)) return t.id;
+                            if ((0, o.d4)(e)) return R.VV.ROLE_SUBSCRIPTIONS;
+                            let { channel: l } = e;
+                            if (null != l) {
+                                let e = c.A.getChannel(l.id);
+                                if (E.A.can(C.xBc.VIEW_CHANNEL, e)) return l.id;
                             }
                             return null;
-                        })(t);
-                        return (0, o.uh)(n.id, e), A.Ay.focus(), !1;
+                        })(l);
+                        return (0, s.uh)(n.id, e), O.Ay.focus(), !1;
                     }
                 }
             }
         }
-        if (null != S && S.invite.code === t.code) return !1;
+        if (null != P && P.invite.code === l.code) return !1;
         if (
-            (null != S && null != S.resolve && S.resolve(),
-            (j = e.context),
-            (i = null),
-            (N = !1),
-            (T = e.invite_instance_id ?? null),
-            (S = {
+            (null != P && null != P.resolve && P.resolve(),
+            (p = e.context),
+            (t = null),
+            (L = !1),
+            (g = e.invite_instance_id ?? null),
+            (P = {
                 invite: (function (e) {
                     let {
-                            approximate_member_count: t,
+                            approximate_member_count: l,
                             approximate_presence_count: n,
-                            code: i,
-                            state: s,
-                            target_type: l,
+                            code: t,
+                            state: i,
+                            target_type: u,
                             target_user: r,
-                            target_application: a,
-                            type: o,
+                            target_application: o,
+                            type: s,
                             channel: d,
-                            guild: c,
-                            is_nickname_changeable: u,
-                            flags: _,
+                            guild: a,
+                            is_nickname_changeable: c,
+                            flags: f,
                         } = e,
-                        h = {
-                            code: i,
-                            state: s,
-                            approximate_member_count: t,
+                        A = {
+                            code: t,
+                            state: i,
+                            approximate_member_count: l,
                             approximate_presence_count: n,
-                            target_type: l,
+                            target_type: u,
                             target_user: r,
-                            target_application: a,
-                            type: o,
-                            is_nickname_changeable: u,
-                            flags: _,
+                            target_application: o,
+                            type: s,
+                            is_nickname_changeable: c,
+                            flags: f,
                         };
                     return (
-                        null != d && (h.channel = { ...d }),
-                        null != c && (h.guild = (0, f.DY)(c)),
-                        null != e.inviter && (h.inviter = { ...e.inviter }),
-                        null != e.roles && (h.roles = e.roles),
-                        h
+                        null != d && (A.channel = { ...d }),
+                        null != a && (A.guild = (0, N.DY)(a)),
+                        null != e.inviter && (A.inviter = { ...e.inviter }),
+                        null != e.roles && (A.roles = e.roles),
+                        A
                     );
-                })(t),
+                })(l),
                 resolve: e.resolve,
             }),
             null != e.received_installation_id)
         ) {
-            let { code: t, received_installation_id: n } = e;
-            l.h.wait(() => r.Ay.setReceivedInstallationIdForInviteCode(t, n));
+            let { code: l, received_installation_id: n } = e;
+            u.h.wait(() => r.Ay.setReceivedInstallationIdForInviteCode(l, n));
         }
-        E.SH.getConfig({ location: "accept_invite_modal" }).enabled && r.Ay.fetchFriendMembers(t.code);
+        h.SH.getConfig({ location: "accept_invite_modal" }).enabled && r.Ay.fetchFriendMembers(l.code);
     },
     INVITE_MODAL_CLOSE: function () {
-        (i = null), (N = !1), (T = null), null != S && (S.resolve?.(), (S = null));
+        (t = null), (L = !1), (g = null), null != P && (P.resolve?.(), (P = null));
     },
     INVITE_ACCEPT: function () {
-        N = !0;
+        L = !0;
     },
     INVITE_MODAL_ERROR: function (e) {
-        let { message: t } = e;
-        (i = t), (N = !1);
+        let { message: l } = e;
+        (t = l), (L = !1);
     },
 });

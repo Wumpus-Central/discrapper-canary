@@ -1,51 +1,50 @@
-"use strict";
-r.d(t, { A: () => d });
-var l = r(627968),
-    s = r(64700),
-    n = r(503698),
-    a = r.n(n),
-    i = r(713517),
-    c = r(482284);
-let u = (e) => {
-        let { position: t, children: r } = e;
-        return (0, l.jsx)("div", { className: a()(c.child, c[t]), children: r });
+l.d(t, { A: () => o });
+var r = l(627968),
+    n = l(64700),
+    a = l(503698),
+    s = l.n(a),
+    i = l(713517),
+    c = l(482284);
+let d = (e) => {
+        let { position: t, children: l } = e;
+        return (0, r.jsx)("div", { className: s()(c.child, c[t]), children: l });
     },
-    d = (e) => {
-        let { children: t, paused: r = !1, slideDuration: n = 5e3 } = e,
-            [a, d] = s.useState(0),
-            o = s.useRef(null),
-            h = (0, i.M)(o),
-            m = s.useRef(void 0),
-            p = s.useMemo(
+    o = (e) => {
+        let { children: t, paused: l = !1, slideDuration: a = 5e3 } = e,
+            [s, o] = n.useState(0),
+            u = n.useRef(null),
+            h = (0, i.M)(u),
+            m = n.useRef(void 0),
+            p = n.useMemo(
                 () =>
-                    s.Children.map(t, (e) =>
-                        s.isValidElement(e)
+                    n.Children.map(t, (e) =>
+                        n.isValidElement(e)
                             ? null != e && "object" == typeof e && e.$$typeof === Symbol.for("react.portal")
                                 ? e
-                                : s.cloneElement(e, { tabIndex: -1 })
+                                : n.cloneElement(e, { tabIndex: -1 })
                             : e,
                     ),
                 [t],
             );
-        s.useEffect(() => {
-            Array.isArray(p) ? d(a >= p?.length ? Math.max(p?.length - 1, 0) : a) : d(0);
-        }, [p, a]);
-        let g = r || h;
-        return (s.useEffect(() => {
+        n.useEffect(() => {
+            Array.isArray(p) ? o(s >= p?.length ? Math.max(p?.length - 1, 0) : s) : o(0);
+        }, [p, s]);
+        let g = l || h;
+        return (n.useEffect(() => {
             if (g) {
                 null != m.current && (window.clearTimeout(m.current), (m.current = void 0));
                 return;
             }
             let e = () => {
-                d((e) => {
+                o((e) => {
                     let t = e + 1;
                     return t >= (p?.length ?? 1) ? 0 : t;
                 }),
-                    (m.current = window.setTimeout(e, n));
+                    (m.current = window.setTimeout(e, a));
             };
-            window.clearTimeout(m.current), (m.current = window.setTimeout(e, n));
-        }, [g, n, p]),
-        s.useEffect(
+            window.clearTimeout(m.current), (m.current = window.setTimeout(e, a));
+        }, [g, a, p]),
+        n.useEffect(
             () => () => {
                 window.clearTimeout(m.current);
             },
@@ -54,36 +53,36 @@ let u = (e) => {
         null == p)
             ? null
             : Array.isArray(p)
-              ? (0, l.jsx)("div", {
-                    ref: o,
+              ? (0, r.jsx)("div", {
+                    ref: u,
                     className: c.carousel,
-                    children: (0, l.jsx)("div", {
+                    children: (0, r.jsx)("div", {
                         className: c.children,
                         children: p?.map((e, t) => {
-                            var r, s, n;
+                            var l, n, a;
                             let i =
-                                ((r = t),
-                                (s = a),
-                                (n = p.length),
-                                r === s
+                                ((l = t),
+                                (n = s),
+                                (a = p.length),
+                                l === n
                                     ? "center"
-                                    : r < s
-                                      ? s === n - 1 && 0 === r
+                                    : l < n
+                                      ? n === a - 1 && 0 === l
                                           ? "right"
                                           : "left"
-                                      : 0 === s && r === n - 1
+                                      : 0 === n && l === a - 1
                                         ? "left"
                                         : "right");
-                            return (0, l.jsx)(u, { position: i, children: e }, t);
+                            return (0, r.jsx)(d, { position: i, children: e }, t);
                         }),
                     }),
                 })
-              : (0, l.jsx)("div", {
-                    ref: o,
+              : (0, r.jsx)("div", {
+                    ref: u,
                     className: c.carousel,
-                    children: (0, l.jsx)("div", {
+                    children: (0, r.jsx)("div", {
                         className: c.children,
-                        children: (0, l.jsx)(u, { position: "center", children: t }),
+                        children: (0, r.jsx)(d, { position: "center", children: t }),
                     }),
                 });
     };

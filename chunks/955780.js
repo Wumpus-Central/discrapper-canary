@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Jp: "heading-lg/semibold_d9be46",
     kL: "container_d9be46",

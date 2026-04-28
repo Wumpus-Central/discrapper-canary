@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     AS: "item_caf372",
     vu: "active_caf372",

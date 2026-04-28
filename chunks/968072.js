@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { RV: () => u, gd: () => o, qQ: () => c, vk: () => a });
 let r = /\(error: (.*)\)/,
     i = /captureMessage|captureException/;

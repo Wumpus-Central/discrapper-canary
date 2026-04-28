@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     vk: "clickable__973df",
     GI: "appArch__973df",
     Pc: "versionHash__973df",

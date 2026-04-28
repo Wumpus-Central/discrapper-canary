@@ -1,216 +1,215 @@
-"use strict";
-n.d(t, { default: () => k });
-var s = n(627968),
-    o = n(64700),
-    r = n(935462),
-    i = n(430690),
-    a = n(71448),
-    l = n(333748),
-    c = n(693576),
-    d = n(652215),
-    p = n(544105);
-function _(e) {
-    let { authToken: t, onContinue: n, onError: o, onClose: r } = e;
-    return (0, s.jsx)(c.W, {
+e.d(n, { default: () => q });
+var i = e(627968),
+    s = e(64700),
+    o = e(935462),
+    r = e(430690),
+    l = e(71448),
+    a = e(333748),
+    c = e(693576),
+    d = e(652215),
+    h = e(544105);
+function g(t) {
+    let { authToken: n, onContinue: e, onError: s, onClose: o } = t;
+    return (0, i.jsx)(c.W, {
         platformType: d.fg2.XBOX,
-        clientId: l.i.XBOX_APPLICATION_ID,
-        scopes: p.sS,
-        authToken: t,
-        onContinue: n,
-        onError: o,
-        onClose: r,
+        clientId: a.i.XBOX_APPLICATION_ID,
+        scopes: h.sS,
+        authToken: n,
+        onContinue: e,
+        onError: s,
+        onClose: o,
     });
 }
-var h = n(723054),
-    C = n(985018);
-function f(e) {
-    let { onContinue: t, onClose: n } = e;
-    return (0, s.jsx)(h.s, {
+var x = e(723054),
+    C = e(985018);
+function f(t) {
+    let { onContinue: n, onClose: e } = t;
+    return (0, i.jsx)(x.s, {
         title: C.intl.string(C.t.INwPCV),
         body: C.intl.string(C.t.GyXRRz),
-        onClose: n,
-        onContinue: t,
+        onClose: e,
+        onContinue: n,
     });
 }
-var u = n(983851),
-    g = n(500060),
-    b = n(177953),
-    x = n(687966),
-    m = n(975571),
-    v = n(944995);
-function N(e) {
-    let { onContinue: t, onClose: n } = e,
-        r = m.A.getArticleURL(d.MVz.XBOX_CONNECTION),
-        i = C.intl.format(C.t.CIc3IN, { helpdeskArticleUrl: r }),
-        a = o.useMemo(
+var u = e(983851),
+    j = e(500060),
+    p = e(177953),
+    b = e(687966),
+    m = e(975571),
+    N = e(944995);
+function X(t) {
+    let { onContinue: n, onClose: e } = t,
+        o = m.A.getArticleURL(d.MVz.XBOX_CONNECTION),
+        r = C.intl.format(C.t.CIc3IN, { helpdeskArticleUrl: o }),
+        l = s.useMemo(
             () => [
                 { label: C.intl.string(C.t.ihQXsb), icon: u.H },
-                { label: C.intl.string(C.t.Xt1n4P), icon: g.o },
-                { label: C.intl.string(C.t.xqVY3p), icon: b.n },
-                { label: C.intl.string(C.t.iQsKVW), icon: x._ },
+                { label: C.intl.string(C.t.Xt1n4P), icon: j.o },
+                { label: C.intl.string(C.t.xqVY3p), icon: p.n },
+                { label: C.intl.string(C.t.iQsKVW), icon: b._ },
             ],
             [],
         );
-    return (0, s.jsx)(v.B, {
+    return (0, i.jsx)(N.B, {
         platformType: d.fg2.XBOX,
         headerConnect: C.intl.string(C.t.m8aahn),
         headerReconnect: C.intl.string(C.t.z3rAhq),
-        body: i,
-        onClose: n,
-        onContinue: t,
-        img: (0, s.jsx)("img", {
+        body: r,
+        onClose: e,
+        onContinue: n,
+        img: (0, i.jsx)("img", {
             src: "https://cdn.discordapp.com/assets/content/87626cb25be78ee682ab4ee85e63b0680a5d90f8a5e6f8d469ffb6889d7959e3.png",
             width: 230,
             height: 160,
             alt: "",
         }),
-        valueProps: a,
+        valueProps: l,
     });
 }
-var j = n(226377);
-function I(e) {
+var E = e(226377);
+function O(t) {
     let {
-            isWaitingForConnection: t,
-            onWaitingForConnection: n,
-            expectedCallbackState: o,
-            onAuthToken: r,
-            onError: i,
-            onClose: a,
-        } = e,
-        l = t
-            ? (0, s.jsx)("img", {
+            isWaitingForConnection: n,
+            onWaitingForConnection: e,
+            expectedCallbackState: s,
+            onAuthToken: o,
+            onError: r,
+            onClose: l,
+        } = t,
+        a = n
+            ? (0, i.jsx)("img", {
                   src: "https://cdn.discordapp.com/assets/content/2cf087a7f12e3d1d09c0c9416169f2b67f08a27a8642aef5635519900f3e904b.png",
                   width: "231",
                   height: "172",
                   alt: "",
               })
-            : (0, s.jsx)("img", {
+            : (0, i.jsx)("img", {
                   src: "https://cdn.discordapp.com/assets/content/abb7826c12c091e08c0ad121b2a6ab48fce6ffd2123f1219b8ef58399908f3ff.png",
                   width: "231",
                   height: "160",
                   alt: "",
               }),
-        c = t ? C.intl.string(C.t.EuwcxO) : C.intl.string(C.t["e/z3na"]),
-        p = t ? C.intl.string(C.t["1GjS/W"]) : C.intl.string(C.t["7tXu0i"]);
-    return (0, s.jsx)(j.b, {
+        c = n ? C.intl.string(C.t.EuwcxO) : C.intl.string(C.t["e/z3na"]),
+        h = n ? C.intl.string(C.t["1GjS/W"]) : C.intl.string(C.t["7tXu0i"]);
+    return (0, i.jsx)(E.b, {
         platformType: d.fg2.XBOX,
-        isWaitingForConnection: t,
-        onWaitingForConnection: n,
-        expectedCallbackState: o,
-        onAuthToken: r,
-        onError: i,
-        onClose: a,
-        img: l,
+        isWaitingForConnection: n,
+        onWaitingForConnection: e,
+        expectedCallbackState: s,
+        onAuthToken: o,
+        onError: r,
+        onClose: l,
+        img: a,
         title: c,
-        body: p,
+        body: h,
     });
 }
-var O = n(534514),
-    A = n(834730),
-    T = n(349288),
-    y = n(573648),
-    E = n(414121),
-    P = n(61917),
-    S = n(822379),
-    X = n(326513);
-function w() {
-    return (0, s.jsxs)("div", {
+var A = e(534514),
+    v = e(834730),
+    T = e(349288),
+    k = e(573648),
+    I = e(414121),
+    y = e(61917),
+    S = e(822379),
+    R = e(326513);
+function _() {
+    return (0, i.jsxs)("div", {
         className: S.rV,
         children: [
-            (0, s.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: S.bF,
                 children: [
-                    (0, s.jsxs)(O.D, {
+                    (0, i.jsxs)(A.D, {
                         className: S.n5,
                         variant: "text-lg/semibold",
                         children: [
-                            (0, s.jsx)("div", {
+                            (0, i.jsx)("div", {
                                 className: S.YD,
-                                children: (0, s.jsx)("img", { src: y.A.get(d.fg2.XBOX).icon.whiteSVG, alt: "" }),
+                                children: (0, i.jsx)("img", { src: k.A.get(d.fg2.XBOX).icon.whiteSVG, alt: "" }),
                             }),
                             C.intl.string(C.t["12Kx2v"]),
                         ],
                     }),
-                    (0, s.jsx)(A.E, {
+                    (0, i.jsx)(v.E, {
                         tag: "p",
                         variant: "text-md/normal",
                         color: "text-default",
                         children: C.intl.string(C.t.M5yEcb),
                     }),
-                    (0, s.jsx)(A.E, {
+                    (0, i.jsx)(v.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: (0, s.jsx)(T.Anchor, {
+                        children: (0, i.jsx)(T.Anchor, {
                             href: m.A.getArticleURL(d.MVz.XBOX_CONNECTION),
                             children: C.intl.string(C.t.hvVgAZ),
                         }),
                     }),
                 ],
             }),
-            (0, s.jsx)(E.Ay, { className: S.C9, text: p.EY, size: 90 }),
+            (0, i.jsx)(I.Ay, { className: S.C9, text: h.EY, size: 90 }),
         ],
     });
 }
-function L(e) {
-    let { onClose: t } = e;
-    return (0, s.jsx)(P.b, {
-        img: (0, s.jsx)("img", { src: X.A, width: "124", height: "160", alt: "" }),
+function w(t) {
+    let { onClose: n } = t;
+    return (0, i.jsx)(y.b, {
+        img: (0, i.jsx)("img", { src: R.A, width: "124", height: "160", alt: "" }),
         title: C.intl.string(C.t["7QsHmh"]),
         body: C.intl.string(C.t.byYNPX),
-        content: (0, s.jsx)(w, {}),
-        onClose: t,
+        content: (0, i.jsx)(_, {}),
+        onClose: n,
     });
 }
-var R = n(690095),
-    q = n(974651);
-function k(e) {
-    let { transitionState: t, onClose: n, analyticsLocation: o } = e,
+var B = e(690095),
+    W = e(974651);
+function q(t) {
+    let { transitionState: n, onClose: e, analyticsLocation: s } = t,
         {
-            slide: l,
+            slide: a,
             gotoNext: c,
-            gotoError: p,
-            handleWaitingForConnection: h,
+            gotoError: h,
+            handleWaitingForConnection: x,
             handleAuthToken: C,
             expectedCallbackState: u,
-            callbackData: g,
-        } = (0, a.m)(o, d.fg2.XBOX);
-    return (0, s.jsx)(r.EO, {
+            callbackData: j,
+        } = (0, l.m)(s, d.fg2.XBOX);
+    return (0, i.jsx)(o.EO, {
         "data-migration-pending": !0,
-        className: q.yl,
-        transitionState: t,
+        className: W.yl,
+        transitionState: n,
         disableTrack: !0,
         parentComponent: "XboxLinkModal",
-        children: (0, s.jsxs)(i.t, {
-            activeSlide: l,
+        children: (0, i.jsxs)(r.t, {
+            activeSlide: a,
             width: 408,
             children: [
-                (0, s.jsx)(i.q, { id: R.N.LANDING, children: (0, s.jsx)(N, { onContinue: c, onClose: n }) }),
-                (0, s.jsx)(i.q, {
-                    id: R.N.PRE_CONNECT,
-                    children: (0, s.jsx)(I, {
+                (0, i.jsx)(r.q, { id: B.N.LANDING, children: (0, i.jsx)(X, { onContinue: c, onClose: e }) }),
+                (0, i.jsx)(r.q, {
+                    id: B.N.PRE_CONNECT,
+                    children: (0, i.jsx)(O, {
                         isWaitingForConnection: !1,
-                        onWaitingForConnection: h,
+                        onWaitingForConnection: x,
                         onAuthToken: C,
-                        onError: p,
-                        onClose: n,
+                        onError: h,
+                        onClose: e,
                     }),
                 }),
-                (0, s.jsx)(i.q, {
-                    id: R.N.PRE_CONNECT_WAITING,
-                    children: (0, s.jsx)(I, {
+                (0, i.jsx)(r.q, {
+                    id: B.N.PRE_CONNECT_WAITING,
+                    children: (0, i.jsx)(O, {
                         isWaitingForConnection: !0,
                         expectedCallbackState: u,
                         onAuthToken: C,
-                        onError: p,
-                        onClose: n,
+                        onError: h,
+                        onClose: e,
                     }),
                 }),
-                (0, s.jsx)(i.q, {
-                    id: R.N.DISCORD_CONSENT,
-                    children: (0, s.jsx)(_, { authToken: g, onContinue: c, onError: p, onClose: n }),
+                (0, i.jsx)(r.q, {
+                    id: B.N.DISCORD_CONSENT,
+                    children: (0, i.jsx)(g, { authToken: j, onContinue: c, onError: h, onClose: e }),
                 }),
-                (0, s.jsx)(i.q, { id: R.N.ERROR, children: (0, s.jsx)(f, { onContinue: c, onClose: n }) }),
-                (0, s.jsx)(i.q, { id: R.N.SUCCESS, children: (0, s.jsx)(L, { onClose: n }) }),
+                (0, i.jsx)(r.q, { id: B.N.ERROR, children: (0, i.jsx)(f, { onContinue: c, onClose: e }) }),
+                (0, i.jsx)(r.q, { id: B.N.SUCCESS, children: (0, i.jsx)(w, { onClose: e }) }),
             ],
         }),
     });

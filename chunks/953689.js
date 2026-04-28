@@ -1,22 +1,22 @@
-l.d(t, { A: () => v });
-var s = l(627968),
-    n = l(64700),
-    a = l(503698),
-    i = l.n(a),
-    r = l(284009),
-    c = l.n(r),
-    o = l(17928),
-    u = l(534514),
-    d = l(150934),
-    h = l(192308),
-    p = l(834730),
-    A = l(293066),
-    f = l(975571),
-    m = l(927578),
-    I = l(652215),
-    g = l(985018),
-    L = l(470330);
-class _ extends n.Component {
+s.d(t, { A: () => U });
+var a = s(627968),
+    i = s(64700),
+    l = s(503698),
+    n = s.n(l),
+    r = s(284009),
+    c = s.n(r),
+    d = s(17928),
+    o = s(534514),
+    h = s(150934),
+    u = s(192308),
+    p = s(834730),
+    A = s(293066),
+    m = s(975571),
+    v = s(927578),
+    x = s(652215),
+    L = s(985018),
+    f = s(470330);
+class S extends i.Component {
     state = {
         hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
         hasAcceptedWithdrawalWaiver: !1,
@@ -25,9 +25,9 @@ class _ extends n.Component {
         this.props.onChange(this.hasAcceptedNeccessaryTerms(this.props, this.state));
     }
     componentDidUpdate(e, t) {
-        let l = this.hasAcceptedNeccessaryTerms(e, t),
-            s = this.hasAcceptedNeccessaryTerms(this.props, this.state);
-        s !== l && this.props.onChange(s);
+        let s = this.hasAcceptedNeccessaryTerms(e, t),
+            a = this.hasAcceptedNeccessaryTerms(this.props, this.state);
+        a !== s && this.props.onChange(a);
     }
     hasAcceptedNeccessaryTerms(e, t) {
         return (null == e.eulaId || t.hasAcceptedEULA) && (!e.showWithdrawalWaiver || t.hasAcceptedWithdrawalWaiver);
@@ -36,112 +36,117 @@ class _ extends n.Component {
         let {
                 eulaId: e,
                 applicationName: t,
-                hasPreviouslyAcceptedEULA: n,
-                forceShow: a,
+                hasPreviouslyAcceptedEULA: i,
+                forceShow: l,
                 disabled: r,
-                className: o,
+                className: d,
                 finePrint: p,
                 showPricingLink: A,
-                showWithdrawalWaiver: m,
-                isTrial: _,
-                isDiscount: v,
-                subscriptionPlan: S,
-                finePrintClassname: x,
+                showWithdrawalWaiver: v,
+                isTrial: S,
+                isDiscount: U,
+                subscriptionPlan: b,
+                finePrintClassname: g,
             } = this.props,
-            { hasAcceptedEULA: T, hasAcceptedWithdrawalWaiver: C } = this.state;
-        return (c()(!_ || null != S, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"),
-        a || (null != e && !n) || m)
-            ? (0, s.jsxs)("div", {
-                  className: o,
+            { hasAcceptedEULA: C, hasAcceptedWithdrawalWaiver: j } = this.state;
+        return (c()(!S || null != b, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"),
+        l || (null != e && !i) || v)
+            ? (0, a.jsxs)("div", {
+                  className: d,
                   children: [
-                      m &&
-                          (0, s.jsx)(u.D, {
+                      v &&
+                          (0, a.jsx)(o.D, {
                               variant: "heading-md/semibold",
-                              className: L.Hc,
-                              children: g.intl.string(g.t.Ogvn5o),
+                              className: f.Hc,
+                              children: L.intl.string(L.t.Ogvn5o),
                           }),
-                      null != e && (a || !n)
-                          ? (0, s.jsx)(d.S, {
-                                checked: T,
+                      null != e && (l || !i)
+                          ? (0, a.jsx)(h.S, {
+                                checked: C,
                                 onChange: (e) => this.setState({ hasAcceptedEULA: e }),
                                 disabled: r,
-                                label: g.intl.format(g.t.IodJKT, {
+                                label: L.intl.format(L.t.IodJKT, {
                                     applicationName: t,
                                     onClick: (t) => {
-                                        (0, h.openModalLazy)(async () => {
-                                            let { default: t } = await Promise.all([l.e("64615"), l.e("1963")]).then(
-                                                l.bind(l, 294264),
-                                            );
-                                            return (l) => (0, s.jsx)(t, { eulaId: e, ...l });
+                                        (0, u.openModalLazy)(async () => {
+                                            let { default: t } = await Promise.all([
+                                                s.e("28592"),
+                                                s.e("13498"),
+                                                s.e("71568"),
+                                                s.e("64615"),
+                                                s.e("92064"),
+                                                s.e("87297"),
+                                            ]).then(s.bind(s, 294264));
+                                            return (s) => (0, a.jsx)(t, { eulaId: e, ...s });
                                         }),
                                             t.preventDefault();
                                     },
                                 }),
                             })
                           : null,
-                      null == p ? null : (0, s.jsx)("div", { className: i()(L.aO, x), children: p }),
-                      m
-                          ? (0, s.jsxs)("div", {
-                                className: o,
+                      null == p ? null : (0, a.jsx)("div", { className: n()(f.aO, g), children: p }),
+                      v
+                          ? (0, a.jsxs)("div", {
+                                className: d,
                                 children: [
-                                    (0, s.jsx)(d.S, {
-                                        checked: C,
+                                    (0, a.jsx)(h.S, {
+                                        checked: j,
                                         onChange: (e) => this.setState({ hasAcceptedWithdrawalWaiver: e }),
                                         disabled: r,
-                                        label: g.intl.string(g.t["DFCVN+"]),
+                                        label: L.intl.string(L.t["DFCVN+"]),
                                     }),
-                                    (0, s.jsx)("div", { className: L.aO, children: g.intl.string(g.t.jhu6zm) }),
+                                    (0, a.jsx)("div", { className: f.aO, children: L.intl.string(L.t.jhu6zm) }),
                                 ],
                             })
                           : null,
                       A &&
-                          (0, s.jsxs)("div", {
-                              className: L.aO,
+                          (0, a.jsxs)("div", {
+                              className: f.aO,
                               children: [
                                   "*",
-                                  g.intl.format(g.t["5zmY3F"], {
-                                      documentationLink: f.A.getArticleURL(I.MVz.LOCALIZED_PRICING),
+                                  L.intl.format(L.t["5zmY3F"], {
+                                      documentationLink: m.A.getArticleURL(x.MVz.LOCALIZED_PRICING),
                                   }),
                               ],
                           }),
-                      (0, s.jsx)(E, { isTrial: _, subscriptionPlan: S, isDiscount: v }),
+                      (0, a.jsx)(E, { isTrial: S, subscriptionPlan: b, isDiscount: U }),
                   ],
               })
             : null;
     }
 }
 function E(e) {
-    let { isTrial: t, subscriptionPlan: l, isDiscount: n } = e;
-    return (0, s.jsxs)(s.Fragment, {
+    let { isTrial: t, subscriptionPlan: s, isDiscount: i } = e;
+    return (0, a.jsxs)(a.Fragment, {
         children: [
             t &&
-                null != l &&
-                (0, s.jsx)(p.E, {
+                null != s &&
+                (0, a.jsx)(p.E, {
                     variant: "text-xs/medium",
                     color: "interactive-text-default",
-                    children: g.intl.format(g.t["Hvo/Z5"], {
-                        buttonText: (0, m.ff)(null, l),
-                        interval: m.Ay.formatInterval(l?.interval),
-                        cancelSubscriptionArticle: f.A.getArticleURL(I.MVz.PREMIUM_DETAILS_CANCEL_SUB),
-                        paidServiceTermsArticle: f.A.getArticleURL(I.MVz.PAID_TERMS),
+                    children: L.intl.format(L.t["Hvo/Z5"], {
+                        buttonText: (0, v.ff)(null, s),
+                        interval: v.Ay.formatInterval(s?.interval),
+                        cancelSubscriptionArticle: m.A.getArticleURL(x.MVz.PREMIUM_DETAILS_CANCEL_SUB),
+                        paidServiceTermsArticle: m.A.getArticleURL(x.MVz.PAID_TERMS),
                     }),
                 }),
-            n &&
-                null != l &&
-                (0, s.jsx)(p.E, {
+            i &&
+                null != s &&
+                (0, a.jsx)(p.E, {
                     variant: "text-xs/medium",
                     color: "interactive-text-default",
-                    children: g.intl.format(g.t["Z2c+aV"], {
-                        buttonText: (0, m.ff)(null, l),
-                        interval: m.Ay.formatInterval(l?.interval),
-                        cancelSubscriptionArticle: f.A.getArticleURL(I.MVz.PREMIUM_DETAILS_CANCEL_SUB),
-                        paidServiceTermsArticle: f.A.getArticleURL(I.MVz.PAID_TERMS),
+                    children: L.intl.format(L.t["Z2c+aV"], {
+                        buttonText: (0, v.ff)(null, s),
+                        interval: v.Ay.formatInterval(s?.interval),
+                        cancelSubscriptionArticle: m.A.getArticleURL(x.MVz.PREMIUM_DETAILS_CANCEL_SUB),
+                        paidServiceTermsArticle: m.A.getArticleURL(x.MVz.PAID_TERMS),
                     }),
                 }),
         ],
     });
 }
-let v = o.Ay.connectStores([A.A], (e) => {
+let U = d.Ay.connectStores([A.A], (e) => {
     let { eulaId: t } = e;
     return { hasPreviouslyAcceptedEULA: null != t && A.A.hasAcceptedEULA(t) };
-})(_);
+})(S);

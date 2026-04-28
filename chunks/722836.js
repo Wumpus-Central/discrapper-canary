@@ -1,5 +1,4 @@
-"use strict";
-e.exports = {
+_.exports = {
     iE: "wrapper__124c8",
     lS: "titleRegion__124c8",
     G: "infoIcon__124c8",

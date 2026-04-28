@@ -1,5 +1,4 @@
-"use strict";
-n.r(
+_.r(
     (e.exports = {
         badge: "badge_c2b88c",
         default: "default_c2b88c",

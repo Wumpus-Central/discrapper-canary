@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     am: "seat__68e91",
     Sf: "claimed__68e91",

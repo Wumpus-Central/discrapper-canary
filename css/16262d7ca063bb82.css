@@ -1,0 +1,8 @@
+.root_dbd18e {
+    background-color: var(--background-base-low)
+}
+
+.description_dbd18e {
+    gap: var(--space-16);
+    text-align: center
+}

@@ -1,94 +1,94 @@
-i.d(t, { default: () => es });
-var n = i(627968),
-    s = i(284009),
-    l = i.n(s),
-    a = i(17928),
-    r = i(192308),
-    d = i(550079),
-    o = i(477782),
-    c = i(442433),
-    u = i(793574),
-    g = i(688810),
-    A = i(359047),
-    E = i(769591),
-    h = i(36942),
-    _ = i(260509),
-    S = i(495544),
-    p = i(287809),
-    N = i(346247),
-    b = i(810263),
-    L = i(911612),
-    y = i(664967),
-    G = i(64700),
-    f = i(458294),
-    M = i(567035),
-    x = i(985018),
-    j = i(507238),
-    m = i(832712),
-    D = i(568873),
-    O = i(543465),
-    I = i(477427),
-    v = i(652215);
+t.d(i, { default: () => es });
+var n = t(627968),
+    s = t(284009),
+    l = t.n(s),
+    r = t(17928),
+    a = t(192308),
+    d = t(550079),
+    o = t(477782),
+    c = t(442433),
+    u = t(793574),
+    g = t(688810),
+    h = t(359047),
+    A = t(769591),
+    E = t(36942),
+    _ = t(260509),
+    S = t(495544),
+    p = t(287809),
+    b = t(346247),
+    N = t(810263),
+    L = t(911612),
+    x = t(664967),
+    y = t(64700),
+    G = t(458294),
+    M = t(567035),
+    f = t(985018),
+    j = t(507238),
+    D = t(832712),
+    m = t(568873),
+    O = t(543465),
+    I = t(477427),
+    R = t(652215);
 function T() {
     return [
-        { setting: v.orn.ALL_MESSAGES, label: x.intl.string(x.t["n/bTaY"]) },
-        { setting: v.orn.ONLY_MENTIONS, label: x.intl.format(x.t.L2hmYy, {}) },
-        { setting: v.orn.NO_MESSAGES, label: x.intl.string(x.t.CtVGyQ) },
+        { setting: R.orn.ALL_MESSAGES, label: f.intl.string(f.t["n/bTaY"]) },
+        { setting: R.orn.ONLY_MENTIONS, label: f.intl.format(f.t.L2hmYy, {}) },
+        { setting: R.orn.NO_MESSAGES, label: f.intl.string(f.t.CtVGyQ) },
     ];
 }
-i(938796);
-var R = i(585510),
-    U = i(610136),
-    P = i(393432),
-    k = i(910323),
-    B = i(24873),
-    C = i(594061),
-    X = i(790782),
-    Y = i(355097),
-    w = i(138134),
-    H = i(865116),
-    F = i(928658),
-    W = i(811893),
-    V = i(837057),
-    J = i(310419),
-    z = i(997509),
-    Q = i(576705),
-    Z = i(887501),
-    K = i(684407),
-    q = i(47138),
-    $ = i(267102),
-    ee = i(488995),
-    et = i(153594),
-    ei = i(531335);
+t(938796);
+var v = t(585510),
+    U = t(610136),
+    k = t(393432),
+    P = t(910323),
+    B = t(24873),
+    X = t(594061),
+    C = t(790782),
+    H = t(355097),
+    w = t(138134),
+    Y = t(865116),
+    W = t(928658),
+    F = t(811893),
+    V = t(837057),
+    J = t(310419),
+    Q = t(997509),
+    z = t(576705),
+    Z = t(887501),
+    K = t(684407),
+    q = t(47138),
+    $ = t(267102),
+    ee = t(488995),
+    ei = t(153594),
+    et = t(531335);
 function en(e) {
-    var t, s, u;
+    var i, s, u;
     let g,
         en,
         es,
         el,
-        ea,
         er,
+        ea,
         ed,
         eo,
         ec,
-        { guild: eu, onSelect: eg, hideSettings: eA } = e,
-        eE = eu.id,
-        eh = (0, a.bG)([p.default], () => {
+        { guild: eu, onSelect: eg, hideSettings: eh } = e,
+        eA = eu.id,
+        eE = (0, r.bG)([p.default], () => {
             let e = p.default.getCurrentUser();
             return l()(null != e, "GuildContextMenu: user cannot be undefined"), (0, _.bM)(eu, e);
         }, [eu]),
-        e_ = (0, ei.A)({ guild: eu, source: v.PE1.GUILD_CONTEXT_MENU, channel: null }),
-        eS = (0, et.A)(eE),
+        e_ = (0, et.A)({ guild: eu, source: R.PE1.GUILD_CONTEXT_MENU, channel: null }),
+        eS = (0, ei.A)(eA),
         ep = (0, j.A)(eu),
-        eN =
+        eb =
             ((es = (function (e) {
                 let {
-                        suppressEveryone: t,
-                        suppressRoles: i,
+                        suppressEveryone: i,
+                        suppressRoles: t,
                         mobilePush: s,
                         messageNotifications: l,
-                        notifyHighlights: r,
-                    } = (0, a.cf)(
+                        notifyHighlights: a,
+                    } = (0, r.cf)(
                         [O.Ay],
                         () => ({
                             suppressEveryone: O.Ay.isSuppressEveryoneEnabled(e.id),
@@ -99,26 +99,26 @@ function en(e) {
                         }),
                         [e.id],
                     ),
-                    d = r === v.guM.DISABLED,
-                    c = (0, D.A)(e.id);
-                function u(t, i) {
-                    m.A.updateGuildNotificationSettings(e.id, t, i);
+                    d = a === R.guM.DISABLED,
+                    c = (0, m.A)(e.id);
+                function u(i, t) {
+                    D.A.updateGuildNotificationSettings(e.id, i, t);
                 }
                 return (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)(o.rX, {
                             children: T().map((e) => {
-                                let { setting: t, label: i } = e;
+                                let { setting: i, label: t } = e;
                                 return (0, n.jsx)(
                                     o.iD,
                                     {
                                         group: "guild-notifications",
-                                        id: `${t}`,
-                                        label: i,
-                                        action: () => u({ message_notifications: t }, I.G_.notifications(t)),
-                                        checked: t === l,
+                                        id: `${i}`,
+                                        label: t,
+                                        action: () => u({ message_notifications: i }, I.G_.notifications(i)),
+                                        checked: i === l,
                                     },
-                                    t,
+                                    i,
                                 );
                             }),
                         }),
@@ -126,22 +126,22 @@ function en(e) {
                             children: [
                                 (0, n.jsx)(o.sL, {
                                     id: "suppress-everyone",
-                                    label: x.intl.format(x.t.OWiWAp, {}),
-                                    action: () => u({ suppress_everyone: !t }, I.G_.suppressEveryone(!t)),
-                                    checked: t,
-                                }),
-                                (0, n.jsx)(o.sL, {
-                                    id: "suppress-roles",
-                                    label: x.intl.string(x.t["O/QdoD"]),
-                                    action: () => u({ suppress_roles: !i }, I.G_.suppressRoles(!i)),
+                                    label: f.intl.format(f.t.OWiWAp, {}),
+                                    action: () => u({ suppress_everyone: !i }, I.G_.suppressEveryone(!i)),
                                     checked: i,
                                 }),
                                 (0, n.jsx)(o.sL, {
+                                    id: "suppress-roles",
+                                    label: f.intl.string(f.t["O/QdoD"]),
+                                    action: () => u({ suppress_roles: !t }, I.G_.suppressRoles(!t)),
+                                    checked: t,
+                                }),
+                                (0, n.jsx)(o.sL, {
                                     id: "suppress-highlights",
-                                    label: x.intl.string(x.t.gPuteJ),
+                                    label: f.intl.string(f.t.gPuteJ),
                                     action: () => {
                                         u(
-                                            { notify_highlights: d ? v.guM.ENABLED : v.guM.DISABLED },
+                                            { notify_highlights: d ? R.guM.ENABLED : R.guM.DISABLED },
                                             I.G_.highlights(d),
                                         );
                                     },
@@ -153,7 +153,7 @@ function en(e) {
                         (0, n.jsx)(o.rX, {
                             children: (0, n.jsx)(o.sL, {
                                 id: "mobile-push",
-                                label: x.intl.string(x.t.h1DL66),
+                                label: f.intl.string(f.t.h1DL66),
                                 action: () => u({ mobile_push: !s }, I.G_.mobilePush(!s)),
                                 checked: s,
                             }),
@@ -161,88 +161,92 @@ function en(e) {
                     ],
                 });
             })(eu)),
-            (el = (0, a.bG)([O.Ay], () => O.Ay.getMessageNotifications(eu.id), [eu.id])),
-            (ea = T()?.find((e) => {
-                let { setting: t } = e;
-                return t === el;
+            (el = (0, r.bG)([O.Ay], () => O.Ay.getMessageNotifications(eu.id), [eu.id])),
+            (er = T()?.find((e) => {
+                let { setting: i } = e;
+                return i === el;
             })?.label),
             null != es
                 ? (0, n.jsx)(o.Dr, {
                       id: "guild-notifications",
-                      label: x.intl.string(x.t.h850Ss),
-                      subtext: ea,
+                      label: f.intl.string(f.t.h850Ss),
+                      subtext: er,
                       action: () =>
-                          (0, r.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([i.e("30282"), i.e("59566")]).then(
-                                  i.bind(i, 893605),
-                              );
-                              return (t) => (0, n.jsx)(e, { ...t, guildId: eu.id });
+                          (0, a.openModalLazy)(async () => {
+                              let { default: e } = await Promise.all([
+                                  t.e("93855"),
+                                  t.e("35321"),
+                                  t.e("42865"),
+                                  t.e("56814"),
+                                  t.e("30282"),
+                              ]).then(t.bind(t, 893605));
+                              return (i) => (0, n.jsx)(e, { ...i, guildId: eu.id });
                           }),
                       children: es,
                   })
                 : null),
-        eb = (function (e) {
-            let t,
-                i,
+        eN = (function (e) {
+            let i,
+                t,
                 s = (0, $.aL)(),
                 l = (function (e) {
                     let {
-                        canManageGuild: t,
-                        canManageRoles: i,
+                        canManageGuild: i,
+                        canManageRoles: t,
                         canBanMembers: n,
                         canManageNicknames: s,
                         canCreateEmojisAndStickers: l,
-                        canManageEmojisAndStickers: r,
+                        canManageEmojisAndStickers: a,
                         canManageWebhooks: d,
                         canViewAuditLog: o,
-                    } = (0, a.cf)(
-                        [Q.A],
+                    } = (0, r.cf)(
+                        [z.A],
                         () => ({
-                            canManageGuild: Q.A.can(v.xBc.MANAGE_GUILD, e),
-                            canManageRoles: Q.A.can(v.xBc.MANAGE_ROLES, e),
-                            canBanMembers: Q.A.can(v.xBc.BAN_MEMBERS, e),
-                            canManageNicknames: Q.A.can(v.xBc.MANAGE_NICKNAMES, e),
-                            canCreateEmojisAndStickers: Q.A.can(v.xBc.CREATE_GUILD_EXPRESSIONS, e),
-                            canManageEmojisAndStickers: Q.A.can(v.xBc.MANAGE_GUILD_EXPRESSIONS, e),
-                            canManageWebhooks: Q.A.can(v.xBc.MANAGE_WEBHOOKS, e),
-                            canViewAuditLog: Q.A.can(v.xBc.VIEW_AUDIT_LOG, e),
+                            canManageGuild: z.A.can(R.xBc.MANAGE_GUILD, e),
+                            canManageRoles: z.A.can(R.xBc.MANAGE_ROLES, e),
+                            canBanMembers: z.A.can(R.xBc.BAN_MEMBERS, e),
+                            canManageNicknames: z.A.can(R.xBc.MANAGE_NICKNAMES, e),
+                            canCreateEmojisAndStickers: z.A.can(R.xBc.CREATE_GUILD_EXPRESSIONS, e),
+                            canManageEmojisAndStickers: z.A.can(R.xBc.MANAGE_GUILD_EXPRESSIONS, e),
+                            canManageWebhooks: z.A.can(R.xBc.MANAGE_WEBHOOKS, e),
+                            canViewAuditLog: z.A.can(R.xBc.VIEW_AUDIT_LOG, e),
                         }),
                         [e],
                     );
-                    return t || i || n || s || l || r || d || o;
+                    return i || t || n || s || l || a || d || o;
                 })(e);
             if (__OVERLAY__ || !l) return null;
-            let d = (t) => {
-                z.A.open(e.id, t), s.dispatch(v.jej.POPOUT_CLOSE), (0, r.closeAllModals)();
+            let d = (i) => {
+                Q.A.open(e.id, i), s.dispatch(R.jej.POPOUT_CLOSE), (0, a.closeAllModals)();
             };
             return (0, n.jsx)(o.Dr, {
                 id: "guild-settings",
-                label: x.intl.string(x.t["154/bL"]),
+                label: f.intl.string(f.t["154/bL"]),
                 action: () => d(),
-                children: ((t = Q.A.getGuildPermissionProps(e)),
-                (i = (0, Z.b)(e.id).length > 0),
+                children: ((i = z.A.getGuildPermissionProps(e)),
+                (t = (0, Z.b)(e.id).length > 0),
                 q.Ay.generateSections({
                     showDirtyGuildTemplateIndicator: !1,
-                    ...t,
-                    canUnlinkChannels: i,
+                    ...i,
+                    canUnlinkChannels: t,
                     welcomeScreenEmpty: K.A.isEmpty(e.id),
                 })
                     .filter((e) => {
-                        let { section: t } = e;
-                        return "HEADER" !== t && "DIVIDER" !== t;
+                        let { section: i } = e;
+                        return "HEADER" !== i && "DIVIDER" !== i;
                     })
-                    .filter((e) => null == e.predicate || e.predicate())).map((t) => {
-                    let { section: i, label: s, ariaLabel: l } = t;
-                    switch (i) {
-                        case v.BEX.DELETE:
+                    .filter((e) => null == e.predicate || e.predicate())).map((i) => {
+                    let { section: t, label: s, ariaLabel: l } = i;
+                    switch (t) {
+                        case R.BEX.DELETE:
                             return null;
-                        case v.BEX.COMMUNITY:
-                            return (0, n.jsx)(o.Dr, { id: i, action: () => d(i), label: x.intl.string(x.t.nRtNqn) }, i);
-                        case v.BEX.APP_DIRECTORY:
+                        case R.BEX.COMMUNITY:
+                            return (0, n.jsx)(o.Dr, { id: t, action: () => d(t), label: f.intl.string(f.t.nRtNqn) }, t);
+                        case R.BEX.APP_DIRECTORY:
                             return (0, n.jsx)(
                                 o.Dr,
                                 {
-                                    id: i,
+                                    id: t,
                                     action: () => {
                                         (0, V.transitionToGlobalDiscovery)({
                                             tab: ee.GlobalDiscoveryTab.APPS,
@@ -252,118 +256,124 @@ function en(e) {
                                             },
                                         });
                                     },
-                                    leadingAccessory: { type: "icon", icon: W.t },
-                                    iconLeft: W.t,
-                                    label: x.intl.string(x.t.AKcFUj),
+                                    leadingAccessory: { type: "icon", icon: F.t },
+                                    iconLeft: F.t,
+                                    label: f.intl.string(f.t.AKcFUj),
                                 },
-                                i,
+                                t,
                             );
                         default:
-                            let a = "string" == typeof s ? s : l;
-                            if (null == a) return null;
-                            return (0, n.jsx)(o.Dr, { id: i, action: () => d(i), label: a }, i);
+                            let r = "string" == typeof s ? s : l;
+                            if (null == r) return null;
+                            return (0, n.jsx)(o.Dr, { id: t, action: () => d(t), label: r }, t);
                     }
                 }),
             });
         })(eu),
-        eL = (0, N.A)({
+        eL = (0, b.A)({
             guildId: eu.id,
             userId: S.default.getId(),
             analyticsLocation: {
-                page: v.liQ.GUILD_CHANNEL,
-                section: v.JJy.CHAT_USERNAME,
-                object: v.ZSU.CONTEXT_MENU_ITEM,
+                page: R.liQ.GUILD_CHANNEL,
+                section: R.JJy.CHAT_USERNAME,
+                object: R.ZSU.CONTEXT_MENU_ITEM,
             },
         }),
-        ey = (0, L.A)(eu),
-        eG = (0, A.A)(eu.id),
-        ef = (0, b.A)(eu),
+        ex = (0, L.A)(eu),
+        ey = (0, h.A)(eu.id),
+        eG = (0, N.A)(eu),
         eM =
-            ((t = { section: v.JJy.GUILD_LIST }),
-            (er = eu.id),
-            (ed = (0, a.bG)([f.default], () => f.default.getGuildHasUnreadIgnoreMuted(er), [er])),
+            ((i = { section: R.JJy.GUILD_LIST }),
+            (ea = eu.id),
+            (ed = (0, r.bG)([G.default], () => G.default.getGuildHasUnreadIgnoreMuted(ea), [ea])),
             (0, n.jsx)(o.Dr, {
                 id: "mark-guild-read",
-                label: x.intl.string(x.t.e6RscS),
+                label: f.intl.string(f.t.e6RscS),
                 icon: void 0,
-                action: () => (0, M.A)([er], t.section),
+                action: () => (0, M.A)([ea], i.section),
                 disabled: !ed,
             })),
-        ex = (0, h.A)(eu.id),
+        ef = (0, E.A)(eu.id),
         ej =
             ((s = eu.id),
             (0, n.jsxs)(o.Dr, {
                 id: "notification",
-                label: x.intl.string(x.t.HcoRu0),
+                label: f.intl.string(f.t.HcoRu0),
                 action: () => {
-                    (0, r.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([i.e("30282"), i.e("59566")]).then(i.bind(i, 893605));
-                        return (t) => (0, n.jsx)(e, { ...t, guildId: s });
+                    (0, a.openModalLazy)(async () => {
+                        let { default: e } = await Promise.all([
+                            t.e("93855"),
+                            t.e("35321"),
+                            t.e("42865"),
+                            t.e("56814"),
+                            t.e("30282"),
+                        ]).then(t.bind(t, 893605));
+                        return (i) => (0, n.jsx)(e, { ...i, guildId: s });
                     });
                 },
                 children: [
                     (function (e) {
-                        let [t, i] = G.useState(!1),
-                            [s, l] = G.useState(!1),
-                            r = (0, a.bG)([O.Ay], () => O.Ay.getGuildUnreadSetting(e)),
-                            d = (0, a.bG)([O.Ay], () => O.Ay.getMessageNotifications(e)),
-                            c = s ? B.N9.CUSTOM : (0, B.jU)(r, d),
-                            u = (t) => {
+                        let [i, t] = y.useState(!1),
+                            [s, l] = y.useState(!1),
+                            a = (0, r.bG)([O.Ay], () => O.Ay.getGuildUnreadSetting(e)),
+                            d = (0, r.bG)([O.Ay], () => O.Ay.getMessageNotifications(e)),
+                            c = s ? B.N9.CUSTOM : (0, B.jU)(a, d),
+                            u = (i) => {
                                 l(!1);
-                                let i = { message_notifications: t };
-                                t === v.orn.ALL_MESSAGES &&
-                                    r !== X.e.ALL_MESSAGES &&
-                                    (i.flags = (0, P.md)(O.Ay.getGuildFlags(e), Y.n3.UNREADS_ALL_MESSAGES)),
-                                    m.A.updateGuildNotificationSettings(e, i, I.G_.notifications(t));
+                                let t = { message_notifications: i };
+                                i === R.orn.ALL_MESSAGES &&
+                                    a !== C.e.ALL_MESSAGES &&
+                                    (t.flags = (0, k.md)(O.Ay.getGuildFlags(e), H.n3.UNREADS_ALL_MESSAGES)),
+                                    D.A.updateGuildNotificationSettings(e, t, I.G_.notifications(i));
                             },
-                            g = (t) => {
+                            g = (i) => {
                                 l(!1);
-                                let i = O.Ay.getGuildFlags(e);
-                                m.A.updateGuildNotificationSettings(
+                                let t = O.Ay.getGuildFlags(e);
+                                D.A.updateGuildNotificationSettings(
                                     e,
                                     {
-                                        flags: (0, P.md)(
-                                            i,
-                                            t === X.e.ALL_MESSAGES
-                                                ? Y.n3.UNREADS_ALL_MESSAGES
-                                                : Y.n3.UNREADS_ONLY_MENTIONS,
+                                        flags: (0, k.md)(
+                                            t,
+                                            i === C.e.ALL_MESSAGES
+                                                ? H.n3.UNREADS_ALL_MESSAGES
+                                                : H.n3.UNREADS_ONLY_MENTIONS,
                                         ),
                                     },
-                                    I.G_.unreads(t),
+                                    I.G_.unreads(i),
                                 );
                             },
-                            A = (function (e) {
-                                let t = (0, R._g)(e),
-                                    i = (0, a.bG)([U.A], () => U.A.getGuildAlertSettings()[e]);
-                                if (t && null != i)
+                            h = (function (e) {
+                                let i = (0, v._g)(e),
+                                    t = (0, r.bG)([U.A], () => U.A.getGuildAlertSettings()[e]);
+                                if (i && null != t)
                                     return (0, n.jsxs)(o.Dr, {
                                         id: "activity_alerts",
-                                        label: x.intl.string(x.t.D9yVAH),
+                                        label: f.intl.string(f.t.D9yVAH),
                                         children: [
                                             (0, n.jsx)(o.sL, {
                                                 id: "activity_alerts_in_app",
-                                                label: x.intl.string(x.t.u6dc5B),
-                                                checked: !i.disableRaidAlertNag,
+                                                label: f.intl.string(f.t.u6dc5B),
+                                                checked: !t.disableRaidAlertNag,
                                                 action: () =>
-                                                    (0, C.TG)(
+                                                    (0, X.TG)(
                                                         e,
                                                         (e) => {
                                                             e.disableRaidAlertNag = !e.disableRaidAlertNag;
                                                         },
-                                                        Y.Sb.INFREQUENT_USER_ACTION,
+                                                        H.Sb.INFREQUENT_USER_ACTION,
                                                     ),
                                             }),
                                             (0, n.jsx)(o.sL, {
                                                 id: "activity_alerts_push",
-                                                label: x.intl.string(x.t.P8MG6q),
-                                                checked: !i.disableRaidAlertPush,
+                                                label: f.intl.string(f.t.P8MG6q),
+                                                checked: !t.disableRaidAlertPush,
                                                 action: () =>
-                                                    (0, C.TG)(
+                                                    (0, X.TG)(
                                                         e,
                                                         (e) => {
                                                             e.disableRaidAlertPush = !e.disableRaidAlertPush;
                                                         },
-                                                        Y.Sb.INFREQUENT_USER_ACTION,
+                                                        H.Sb.INFREQUENT_USER_ACTION,
                                                     ),
                                             }),
                                         ],
@@ -377,33 +387,33 @@ function en(e) {
                                             id: "everything",
                                             group: "notification-preset",
                                             checked: c === B.N9.ALL_MESSAGES,
-                                            label: x.intl.string(x.t.hZrr6k),
-                                            action: () => ((0, k.i)(e, B.N9.ALL_MESSAGES), l(!1)),
+                                            label: f.intl.string(f.t.hZrr6k),
+                                            action: () => ((0, P.i)(e, B.N9.ALL_MESSAGES), l(!1)),
                                         }),
                                         (0, n.jsx)(o.iD, {
                                             id: "essentials",
                                             group: "notification-preset",
                                             checked: c === B.N9.MENTIONS,
-                                            label: x.intl.string(x.t.y59NJm),
-                                            action: () => ((0, k.i)(e, B.N9.MENTIONS), l(!1)),
+                                            label: f.intl.string(f.t.y59NJm),
+                                            action: () => ((0, P.i)(e, B.N9.MENTIONS), l(!1)),
                                         }),
                                         (0, n.jsx)(o.iD, {
                                             id: "nothing",
                                             group: "notification-preset",
                                             checked: c === B.N9.NOTHING,
-                                            label: x.intl.string(x.t["pGn/bJ"]),
-                                            action: () => ((0, k.i)(e, B.N9.NOTHING), l(!1)),
+                                            label: f.intl.string(f.t["pGn/bJ"]),
+                                            action: () => ((0, P.i)(e, B.N9.NOTHING), l(!1)),
                                         }),
                                         (0, n.jsx)(o.iD, {
                                             id: "custom",
                                             group: "notification-preset",
                                             checked: c === B.N9.CUSTOM,
-                                            action: () => (i(!0), l(!0)),
-                                            label: x.intl.string(x.t["32yow9"]),
+                                            action: () => (t(!0), l(!0)),
+                                            label: f.intl.string(f.t["32yow9"]),
                                         }),
                                     ],
                                 }),
-                                (c === B.N9.CUSTOM || t) &&
+                                (c === B.N9.CUSTOM || i) &&
                                     (0, n.jsxs)(o.rX, {
                                         children: [
                                             (0, n.jsxs)(
@@ -415,21 +425,21 @@ function en(e) {
                                                         (0, n.jsx)(o.iD, {
                                                             id: "unread_setting_all_messages",
                                                             group: "unread_setting",
-                                                            checked: r === X.e.ALL_MESSAGES,
-                                                            label: x.intl.string(x.t["HVah/3"]),
-                                                            action: () => g(X.e.ALL_MESSAGES),
+                                                            checked: a === C.e.ALL_MESSAGES,
+                                                            label: f.intl.string(f.t["HVah/3"]),
+                                                            action: () => g(C.e.ALL_MESSAGES),
                                                         }),
                                                         (0, n.jsx)(o.iD, {
                                                             id: "unread_setting_mention_only",
                                                             group: "unread_setting",
-                                                            checked: r === X.e.ONLY_MENTIONS,
-                                                            label: x.intl.string(x.t["tu+ZWJ"]),
-                                                            action: () => g(X.e.ONLY_MENTIONS),
+                                                            checked: a === C.e.ONLY_MENTIONS,
+                                                            label: f.intl.string(f.t["tu+ZWJ"]),
+                                                            action: () => g(C.e.ONLY_MENTIONS),
                                                             disabled:
-                                                                r !== X.e.ONLY_MENTIONS && d === v.orn.ALL_MESSAGES,
+                                                                a !== C.e.ONLY_MENTIONS && d === R.orn.ALL_MESSAGES,
                                                             subtext:
-                                                                r !== X.e.ONLY_MENTIONS && d === v.orn.ALL_MESSAGES
-                                                                    ? x.intl.string(x.t.eP8yWU)
+                                                                a !== C.e.ONLY_MENTIONS && d === R.orn.ALL_MESSAGES
+                                                                    ? f.intl.string(f.t.eP8yWU)
                                                                     : void 0,
                                                         }),
                                                     ],
@@ -440,52 +450,52 @@ function en(e) {
                                                 o.Dr,
                                                 {
                                                     id: "push_settings",
-                                                    label: x.intl.string(x.t.HcoRu0),
+                                                    label: f.intl.string(f.t.HcoRu0),
                                                     children: [
                                                         (0, n.jsx)(o.iD, {
                                                             group: "notification-preset",
                                                             id: "push_settings_everything",
-                                                            label: x.intl.string(x.t["HVah/3"]),
-                                                            checked: d === v.orn.ALL_MESSAGES,
-                                                            action: () => u(v.orn.ALL_MESSAGES),
+                                                            label: f.intl.string(f.t["HVah/3"]),
+                                                            checked: d === R.orn.ALL_MESSAGES,
+                                                            action: () => u(R.orn.ALL_MESSAGES),
                                                             subtext:
-                                                                r !== X.e.ALL_MESSAGES && d !== v.orn.ALL_MESSAGES
-                                                                    ? x.intl.string(x.t.idXSbI)
+                                                                a !== C.e.ALL_MESSAGES && d !== R.orn.ALL_MESSAGES
+                                                                    ? f.intl.string(f.t.idXSbI)
                                                                     : void 0,
                                                         }),
                                                         (0, n.jsx)(o.iD, {
                                                             group: "notification-preset",
                                                             id: "push_settings_everything_mention",
-                                                            checked: d === v.orn.ONLY_MENTIONS,
-                                                            label: x.intl.string(x.t["tu+ZWJ"]),
-                                                            action: () => u(v.orn.ONLY_MENTIONS),
+                                                            checked: d === R.orn.ONLY_MENTIONS,
+                                                            label: f.intl.string(f.t["tu+ZWJ"]),
+                                                            action: () => u(R.orn.ONLY_MENTIONS),
                                                         }),
                                                         (0, n.jsx)(o.iD, {
                                                             group: "notification-preset",
                                                             id: "push_settings_everything_nothing",
-                                                            label: x.intl.string(x.t.X4wWUi),
-                                                            checked: d === v.orn.NO_MESSAGES,
-                                                            action: () => u(v.orn.NO_MESSAGES),
+                                                            label: f.intl.string(f.t.X4wWUi),
+                                                            checked: d === R.orn.NO_MESSAGES,
+                                                            action: () => u(R.orn.NO_MESSAGES),
                                                         }),
                                                     ],
                                                 },
                                                 "push_settings",
                                             ),
-                                            A,
+                                            h,
                                         ],
                                     }),
                             ],
                         });
                     })(s),
                     ((u = s),
-                    (g = (0, a.cf)([O.Ay], () => ({
+                    (g = (0, r.cf)([O.Ay], () => ({
                         highligths: O.Ay.getNotifyHighlights(u),
                         mobilePush: O.Ay.isMobilePushEnabled(u),
                         suppressRoles: O.Ay.isSuppressRolesEnabled(u),
                         suppressEveryone: O.Ay.isSuppressEveryoneEnabled(u),
                         muteScheduledEvents: O.Ay.isMuteScheduledEventsEnabled(u),
                     }))),
-                    (en = m.A.updateGuildNotificationSettings),
+                    (en = D.A.updateGuildNotificationSettings),
                     (0, n.jsxs)(n.Fragment, {
                         children: [
                             (0, n.jsxs)(o.rX, {
@@ -493,7 +503,7 @@ function en(e) {
                                     (0, n.jsx)(o.sL, {
                                         id: "mention",
                                         checked: g.suppressEveryone,
-                                        label: x.intl.format(x.t.OWiWAp, {}),
+                                        label: f.intl.format(f.t.OWiWAp, {}),
                                         action: () =>
                                             en(
                                                 u,
@@ -504,7 +514,7 @@ function en(e) {
                                     (0, n.jsx)(o.sL, {
                                         id: "roles",
                                         checked: g.suppressRoles,
-                                        label: x.intl.string(x.t["O/QdoD"]),
+                                        label: f.intl.string(f.t["O/QdoD"]),
                                         action: () =>
                                             en(
                                                 u,
@@ -514,16 +524,16 @@ function en(e) {
                                     }),
                                     (0, n.jsx)(o.sL, {
                                         id: "hightlight",
-                                        label: x.intl.string(x.t.gPuteJ),
-                                        checked: g.highligths === v.guM.ENABLED,
+                                        label: f.intl.string(f.t.gPuteJ),
+                                        checked: g.highligths === R.guM.ENABLED,
                                         action: () =>
                                             en(
                                                 u,
                                                 {
                                                     notify_highlights:
-                                                        g.highligths === v.guM.ENABLED ? v.guM.DISABLED : v.guM.ENABLED,
+                                                        g.highligths === R.guM.ENABLED ? R.guM.DISABLED : R.guM.ENABLED,
                                                 },
-                                                I.G_.highlights(g.highligths !== v.guM.ENABLED),
+                                                I.G_.highlights(g.highligths !== R.guM.ENABLED),
                                             ),
                                     }),
                                 ],
@@ -533,7 +543,7 @@ function en(e) {
                                     (0, n.jsx)(o.sL, {
                                         id: "event",
                                         checked: g.muteScheduledEvents,
-                                        label: x.intl.string(x.t.ONG3Yz),
+                                        label: f.intl.string(f.t.ONG3Yz),
                                         action: () =>
                                             en(
                                                 u,
@@ -544,7 +554,7 @@ function en(e) {
                                     (0, n.jsx)(o.sL, {
                                         id: "mobile_push",
                                         checked: g.mobilePush,
-                                        label: x.intl.string(x.t.h1DL66),
+                                        label: f.intl.string(f.t.h1DL66),
                                         action: () =>
                                             en(u, { mobile_push: !g.mobilePush }, I.G_.mobilePush(!g.mobilePush)),
                                     }),
@@ -554,31 +564,31 @@ function en(e) {
                     })),
                 ],
             })),
-        em = (0, y.A)(eu),
-        eD = (0, E.os)("GuildContextMenu"),
+        eD = (0, x.A)(eu),
+        em = (0, A.os)("GuildContextMenu"),
         eO =
-            ((eo = (0, a.bG)([H.Ay], () => H.Ay.get("iar_testing"))),
-            null != (ec = (0, a.bG)([p.default], () => p.default.getCurrentUser())) && ec.isStaff() && eo
+            ((eo = (0, r.bG)([Y.Ay], () => Y.Ay.get("iar_testing"))),
+            null != (ec = (0, r.bG)([p.default], () => p.default.getCurrentUser())) && ec.isStaff() && eo
                 ? (0, n.jsx)(o.Dr, {
                       id: "staff-test-guild-report",
                       label: "[STAFF] Test Guild Report",
-                      action: () => (0, F.RV)(eu, "web_guild_context_menu"),
+                      action: () => (0, W.RV)(eu, "web_guild_context_menu"),
                       icon: w.i,
                       color: "danger",
                   })
                 : null);
     function eI() {
-        (0, r.openModalLazy)(async () => {
-            let { default: e } = await i.e("53485").then(i.bind(i, 20508));
-            return (t) => (0, n.jsx)(e, { ...t, guild: eu });
+        (0, a.openModalLazy)(async () => {
+            let { default: e } = await t.e("53485").then(t.bind(t, 20508));
+            return (i) => (0, n.jsx)(e, { ...i, guild: eu });
         });
     }
-    return eu.features.has(v.GuildFeatures.HUB)
+    return eu.features.has(R.GuildFeatures.HUB)
         ? (0, n.jsxs)(d.W, {
               "data-menu-migrated": !0,
               navId: "guild-context",
               onClose: c.Z_,
-              "aria-label": x.intl.string(x.t.HpQykc),
+              "aria-label": f.intl.string(f.t.HpQykc),
               onSelect: eg,
               children: [
                   (0, n.jsxs)(o.rX, {
@@ -586,85 +596,101 @@ function en(e) {
                           e_,
                           (0, n.jsx)(o.Dr, {
                               id: "privacy",
-                              label: x.intl.string(x.t.IlFwwR),
+                              label: f.intl.string(f.t.IlFwwR),
                               action: () =>
-                                  (0, r.openModalLazy)(async () => {
+                                  (0, a.openModalLazy)(async () => {
                                       let { default: e } = await Promise.all([
-                                          i.e("33098"),
-                                          i.e("55595"),
-                                          i.e("95311"),
-                                      ]).then(i.bind(i, 522566));
-                                      return (t) => (0, n.jsx)(e, { ...t, guild: eu });
+                                          t.e("87981"),
+                                          t.e("80813"),
+                                          t.e("43549"),
+                                          t.e("63497"),
+                                          t.e("54630"),
+                                          t.e("99053"),
+                                          t.e("73084"),
+                                          t.e("17823"),
+                                          t.e("36474"),
+                                          t.e("44414"),
+                                          t.e("55595"),
+                                      ]).then(t.bind(t, 522566));
+                                      return (i) => (0, n.jsx)(e, { ...i, guild: eu });
                                   }),
                           }),
                           eL,
                       ],
                   }),
-                  eh
+                  eE
                       ? null
                       : (0, n.jsx)(o.rX, {
                             children: (0, n.jsx)(o.Dr, {
                                 id: "leave-guild",
-                                label: x.intl.string(x.t.Dv8gFT),
+                                label: f.intl.string(f.t.Dv8gFT),
                                 action: eI,
                                 color: "danger",
                             }),
                         }),
-                  (0, n.jsx)(o.rX, { children: ef }),
+                  (0, n.jsx)(o.rX, { children: eG }),
               ],
           })
         : (0, n.jsxs)(d.W, {
               "data-menu-migrated": !0,
               navId: "guild-context",
               onClose: c.Z_,
-              "aria-label": x.intl.string(x.t.HpQykc),
+              "aria-label": f.intl.string(f.t.HpQykc),
               onSelect: eg,
               children: [
                   (0, n.jsx)(o.rX, { children: eM }),
                   (0, n.jsx)(o.rX, { children: e_ }),
                   (0, n.jsxs)(o.rX, {
-                      children: [ep, eD || __OVERLAY__ ? null : eN, eD && !__OVERLAY__ ? ej : null, eS, ex],
+                      children: [ep, em || __OVERLAY__ ? null : eb, em && !__OVERLAY__ ? ej : null, eS, ef],
                   }),
                   (0, n.jsxs)(o.rX, {
                       children: [
-                          eA ? null : eb,
+                          eh ? null : eN,
                           __OVERLAY__
                               ? null
                               : (0, n.jsx)(o.Dr, {
                                     id: "privacy",
-                                    label: x.intl.string(x.t.BayiAo),
+                                    label: f.intl.string(f.t.BayiAo),
                                     action: () =>
-                                        (0, r.openModalLazy)(async () => {
+                                        (0, a.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                i.e("33098"),
-                                                i.e("55595"),
-                                                i.e("95311"),
-                                            ]).then(i.bind(i, 522566));
-                                            return (t) => (0, n.jsx)(e, { ...t, guild: eu });
+                                                t.e("87981"),
+                                                t.e("80813"),
+                                                t.e("43549"),
+                                                t.e("63497"),
+                                                t.e("54630"),
+                                                t.e("99053"),
+                                                t.e("73084"),
+                                                t.e("17823"),
+                                                t.e("36474"),
+                                                t.e("44414"),
+                                                t.e("55595"),
+                                            ]).then(t.bind(t, 522566));
+                                            return (i) => (0, n.jsx)(e, { ...i, guild: eu });
                                         }),
                                 }),
                           eL,
                       ],
                   }),
-                  (0, n.jsxs)(o.rX, { children: [ey, eG] }),
+                  (0, n.jsxs)(o.rX, { children: [ex, ey] }),
                   (0, n.jsxs)(o.rX, {
                       children: [
-                          em,
-                          !eh &&
+                          eD,
+                          !eE &&
                               (0, n.jsx)(o.Dr, {
                                   id: "leave-guild",
-                                  label: x.intl.string(x.t.J2TBi3),
+                                  label: f.intl.string(f.t.J2TBi3),
                                   action: eI,
                                   color: "danger",
                               }),
                       ],
                   }),
                   (0, n.jsx)(o.rX, { children: eO }),
-                  (0, n.jsx)(o.rX, { children: ef }),
+                  (0, n.jsx)(o.rX, { children: eG }),
               ],
           });
 }
 function es(e) {
-    let { analyticsLocations: t } = (0, g.Ay)(u.A.CONTEXT_MENU);
-    return (0, n.jsx)(g.f5, { value: t, children: (0, n.jsx)(en, { ...e }) });
+    let { analyticsLocations: i } = (0, g.Ay)(u.A.CONTEXT_MENU);
+    return (0, n.jsx)(g.f5, { value: i, children: (0, n.jsx)(en, { ...e }) });
 }

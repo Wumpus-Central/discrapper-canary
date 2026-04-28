@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     cQ: "selectFieldContainer__0edde",
     Ij: "fullWidth__0edde",
