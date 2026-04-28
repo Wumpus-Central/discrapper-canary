@@ -1,2 +1,3 @@
-n.d(t, { c: () => i });
-let i = n(64700).createContext({ spacing: 24 });
+"use strict";
+n.d(t, { c: () => r });
+let r = n(64700).createContext({ spacing: 24 });
