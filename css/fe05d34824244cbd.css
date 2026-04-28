@@ -1,0 +1,120 @@
+.doubleInput__6dc4b {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    position: relative
+}
+
+.doubleInput__6dc4b>div {
+    flex: 1 1 0;
+    width: 0
+}
+
+.doubleInput__6dc4b>div:first-child {
+    margin-inline-end: 8px
+}
+
+.doubleInput__6dc4b>div:nth-child(2) {
+    margin-inline-start: 8px
+}
+
+.container__26abc {
+    background-color: var(--background-surface-high);
+    border-radius: 4px;
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    max-height: 300px;
+    padding: 8px
+}
+
+.user__26abc {
+    justify-content: flex-start;
+    padding: 8px
+}
+
+.user__26abc,
+.username__26abc {
+    align-items: center;
+    display: flex
+}
+
+.username__26abc {
+    gap: var(--space-4)
+}
+
+.avatar__26abc {
+    margin-inline-end: 12px;
+    opacity: .5
+}
+
+.blockedNotice__26abc {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px
+}
+
+.blockedButton__26abc {
+    color: var(--text-link);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold);
+    margin-inline-start: 4px
+}
+
+.icon__26abc {
+    background-clip: padding-box;
+    background-color: var(--background-mod-strong);
+    border-radius: 50%;
+    color: var(--white);
+    height: 12px;
+    inset-inline-end: -2px;
+    padding: 2px;
+    position: absolute;
+    top: 0;
+    width: 12px
+}
+
+.userInfo__26abc {
+    margin-inline-start: 12px
+}
+
+.blockedUsersContainer__97cfe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.form__97cfe {
+    align-self: stretch
+}
+
+.formItem__97cfe {
+    margin-top: 24px;
+    width: 100%
+}
+
+.topicFormItem__97cfe {
+    margin-bottom: 16px;
+    width: 100%
+}
+
+.cancelButton__97cfe {
+    margin-inline-end: 8px
+}
+
+.addImageHint__97cfe,
+.imagePreview__97cfe,
+.warning__97cfe {
+    margin-bottom: 8px
+}
+
+.imagePreviewInner__97cfe {
+    width: 100%
+}
+
+.header__047bc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: var(--space-16) 0
+}

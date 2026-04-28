@@ -19,5 +19,4 @@ e.exports = {
     eO: "isClipEmbed_f4758a",
     s: "nonVisualMediaItemContainer_f4758a",
     Br: "nonVisualMediaItem_f4758a",
-    yq: "hasFooter_f4758a",
 };

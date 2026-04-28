@@ -1,0 +1,254 @@
+.sidebar__6b102 {
+    background-color: var(--background-base-lower);
+    height: 100%;
+    margin-block: 0;
+    margin-inline: 8px 0;
+    min-width: 400px;
+    width: 25vw
+}
+
+.innerContainer__6b102,
+.sidebar__6b102 {
+    display: flex;
+    flex-direction: column
+}
+
+.innerContainer__6b102 {
+    flex: 1;
+    gap: 8px;
+    padding: 8px;
+    position: relative
+}
+
+.cardContainer__6b102 {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--elevation-low);
+    display: flex;
+    flex-direction: column
+}
+
+.clickable__6b102 {
+    cursor: pointer
+}
+
+.infoContainer__6b102 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 8px
+}
+
+.responsesContainer__6b102 {
+    padding: 16px 16px 20px
+}
+
+.actionRow__6b102 {
+    border-top: 1px solid var(--border-subtle);
+    flex-direction: row;
+    gap: 1px;
+    justify-content: space-around;
+    margin-top: 1px
+}
+
+.actionButton__6b102,
+.actionRow__6b102 {
+    align-items: center;
+    display: flex
+}
+
+.actionButton__6b102 {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 16px
+}
+
+.actionButton__6b102:hover {
+    background-color: var(--interactive-background-hover);
+    color: var(--interactive-text-active)
+}
+
+.disabled__6b102 {
+    cursor: default;
+    opacity: .8
+}
+
+.userInfoContainer__6b102 {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden
+}
+
+.infoRow__6b102 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px
+}
+
+.infoRow__6b102:not(:last-child) {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.accountLabel__6b102 {
+    margin-bottom: 8px;
+    margin-top: 20px
+}
+
+.actionContainer__6b102 {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    gap: 12px;
+    margin: 8px 16px 16px;
+    padding: 12px
+}
+
+.actionContainer__6b102,
+.actionedInfo__6b102 {
+    display: flex;
+    flex-direction: row
+}
+
+.actionedInfo__6b102 {
+    align-items: center;
+    gap: 8px
+}
+
+.dot__6b102 {
+    background-color: var(--text-muted);
+    border-radius: 4px;
+    height: 4px;
+    width: 4px
+}
+
+.container__34940 {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--elevation-low);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.topRow__34940 {
+    align-items: center;
+    background-color: color-mix(in oklab, var(--background-base-lower), transparent 20%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 8px
+}
+
+.memberNameAndTagContainer__34940 {
+    display: flex;
+    flex-direction: column
+}
+
+.memberNameContainer__34940 {
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.memberName__34940 {
+    gap: 4px
+}
+
+.memberName__34940,
+.memberNameGlobal__34940 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.memberNameTextContainer__34940 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.memberClanTag__34940 {
+    padding: 4px
+}
+
+.memberClanTagContainer__34940 {
+    flex-shrink: 0
+}
+
+.memberAvatar__34940 {
+    align-self: center;
+    grid-row: span 2
+}
+
+.closeAction__34940 {
+    color: var(--text-default);
+    cursor: pointer;
+    padding: 4px
+}
+
+.bottomRow__34940 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    justify-content: space-between;
+    margin-top: 1px
+}
+
+.bottomRowAction__34940 {
+    background-color: color-mix(in oklab, var(--background-base-lower), transparent 20%);
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.bottomRowAction__34940,
+.bottomRowAction__34940 .innerBottomRowAction__34940 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center
+}
+
+.bottomRowAction__34940 .innerBottomRowAction__34940 {
+    gap: 4px;
+    height: 52px;
+    padding: 12px 8px;
+    width: calc(100% - 16px)
+}
+
+.bottomRowAction__34940 .innerBottomRowAction__34940:hover {
+    background-color: var(--interactive-background-selected);
+    color: var(--interactive-text-hover)
+}
+
+.bottomRowActionDisabled__34940 {
+    cursor: not-allowed
+}
+
+.bottomRowActionDisabled__34940 .innerBottomRowAction__34940 {
+    opacity: .5
+}
+
+.bottomRowActionDisabled__34940 .innerBottomRowAction__34940,
+.bottomRowActionDisabled__34940 .innerBottomRowAction__34940:hover {
+    background-color: var(--background-mod-subtle);
+    color: var(--text-muted)
+}

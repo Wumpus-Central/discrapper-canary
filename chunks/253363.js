@@ -268,7 +268,7 @@ var eQ = n(97483),
     eZ = n(959495),
     e0 = n(988572);
 let e1 = { analyticsSource: { page: eB.liQ.GUILD_CHANNEL, section: eB.JJy.CHANNEL_LIST, object: eB.ZSU.CHANNEL } };
-function e3(e) {
+function e2(e) {
     let t,
         l,
         r,
@@ -469,11 +469,11 @@ function e3(e) {
         })
     );
 }
-var e2 = n(633965),
+var e3 = n(633965),
     e9 = n(857071),
     e6 = n(851109),
-    e8 = n(72314),
-    e5 = n(543897),
+    e5 = n(72314),
+    e8 = n(543897),
     e7 = n(696451),
     e4 = n(71393),
     te = n(711014),
@@ -757,10 +757,10 @@ class tH extends s.PureComponent {
         null != l
             ? (0, tN.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e("39431"),
-                      n.e("31788"),
+                      n.e("90673"),
+                      n.e("17764"),
                       n.e("63397"),
-                      n.e("6287"),
+                      n.e("98042"),
                       n.e("26132"),
                       n.e("46652"),
                       n.e("93190"),
@@ -1048,7 +1048,7 @@ function tZ() {
         onClick: () => {
             (0, E.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("81126"), n.e("25280")]).then(n.bind(n, 987482));
+                    let { default: e } = await Promise.all([n.e("75058"), n.e("25280")]).then(n.bind(n, 987482));
                     return (t) => (0, i.jsx)(e, { source: "Guilds", ...t });
                 },
                 { modalKey: t$ },
@@ -1061,12 +1061,12 @@ function tZ() {
 }
 var t0 = n(245604),
     t1 = n(272613),
-    t3 = n(398884),
-    t2 = n(772366),
+    t2 = n(398884),
+    t3 = n(772366),
     t9 = n(728321),
     t6 = n(260509),
-    t8 = n(284009),
-    t5 = n.n(t8),
+    t5 = n(284009),
+    t8 = n.n(t5),
     t7 = n(295868),
     t4 = n(686956),
     ne = n(954571),
@@ -1089,7 +1089,7 @@ function nl(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return (
-        t5()(t.type !== tl.PJ.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
+        t8()(t.type !== tl.PJ.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
         {
             accept: e,
             canDrop: (e) =>
@@ -1218,8 +1218,8 @@ function nh(e) {
                     showPill: !1,
                     id: "create-join-button",
                     onClick: () => {
-                        (0, t3.Sn)()
-                            ? (0, t2.A)({
+                        (0, t2.Sn)()
+                            ? (0, t3.A)({
                                   analyticsSource: { page: eB.ThZ.CREATE_JOIN_GUILD_MODAL },
                                   analyticsLocation: {
                                       page: eB.ThZ.CREATE_JOIN_GUILD_MODAL,
@@ -1479,8 +1479,8 @@ function n$(e) {
 var nZ = n(349288),
     n0 = n(695366),
     n1 = n(919638),
-    n3 = n(818348),
-    n2 = n(585212);
+    n2 = n(818348),
+    n3 = n(585212);
 function n9() {
     let e = (0, A.bG)([n1.A, e4.A], () => n1.A.unavailableGuilds.filter((e) => null == e4.A.getGuild(e)).length),
         t = (0, c.Vd)("unavailable-guilds-button");
@@ -1490,9 +1490,9 @@ function n9() {
               children: (0, i.jsx)(tQ, {
                   text: eH.intl.format(eH.t["TnH05/"], { count: e }),
                   children: (0, i.jsx)(nZ.Anchor, {
-                      href: n3.qF.STATUS,
+                      href: n2.qF.STATUS,
                       target: "_blank",
-                      className: n2.h,
+                      className: n3.h,
                       "aria-label": eH.intl.formatToPlainString(eH.t["MEpX+2"], { count: e }),
                       ...t,
                       children: (0, i.jsx)(n0.E, { color: "currentColor", "aria-hidden": !0 }),
@@ -1501,8 +1501,8 @@ function n9() {
           });
 }
 var n6 = n(312742),
-    n8 = n(317097),
-    n5 = n(319060),
+    n5 = n(317097),
+    n8 = n(319060),
     n7 = n(866323),
     n4 = n(817281),
     le = n(534409),
@@ -1636,7 +1636,7 @@ function lh(e) {
 }
 var lA = n(114329),
     lm = n(620370);
-let lg = (0, lt.xI)(n5.A.FOLDER_ITEM_ANIMATION_DURATION),
+let lg = (0, lt.xI)(n8.A.FOLDER_ITEM_ANIMATION_DURATION),
     lp = (0, tS.animated)(I.B),
     lf = s.memo(function (e) {
         var t;
@@ -1747,7 +1747,7 @@ let lg = (0, lt.xI)(n5.A.FOLDER_ITEM_ANIMATION_DURATION),
                 ],
             }),
             Z = null != o.color ? o.color : lA.DO,
-            ee = Z === lA.DO ? void 0 : (0, n8.Hl)(Z);
+            ee = Z === lA.DO ? void 0 : (0, n5.Hl)(Z);
         return (0, i.jsxs)("div", {
             ref: X,
             className: a()(lr.qc, { [lr.Av]: h, [lr.Lg]: U }),
@@ -2301,52 +2301,53 @@ let lZ = { analyticsSource: { page: eB.liQ.GUILD_CHANNEL, section: eB.JJy.CHANNE
 function l0(e, t) {
     (0, tN.L3)(e, async () => {
         let { default: e } = await Promise.all([
-            n.e("81510"),
-            n.e("29092"),
+            n.e("62370"),
+            n.e("16384"),
             n.e("45235"),
             n.e("63397"),
-            n.e("41909"),
-            n.e("6287"),
-            n.e("84611"),
-            n.e("32101"),
-            n.e("83097"),
-            n.e("72900"),
-            n.e("63419"),
+            n.e("43763"),
+            n.e("90673"),
+            n.e("61659"),
+            n.e("78220"),
+            n.e("40841"),
+            n.e("17764"),
+            n.e("89317"),
+            n.e("95957"),
+            n.e("81167"),
             n.e("69273"),
-            n.e("31788"),
-            n.e("77083"),
+            n.e("63941"),
             n.e("63009"),
-            n.e("84786"),
+            n.e("84580"),
             n.e("45650"),
             n.e("97189"),
+            n.e("24059"),
+            n.e("51402"),
             n.e("27660"),
             n.e("85484"),
-            n.e("36407"),
+            n.e("89516"),
+            n.e("39501"),
+            n.e("3256"),
+            n.e("19145"),
             n.e("79705"),
             n.e("55658"),
-            n.e("87616"),
             n.e("76032"),
             n.e("33957"),
-            n.e("8357"),
-            n.e("49699"),
-            n.e("43108"),
-            n.e("35598"),
+            n.e("59204"),
+            n.e("75058"),
+            n.e("23574"),
             n.e("63635"),
-            n.e("66782"),
-            n.e("82872"),
-            n.e("86479"),
-            n.e("13403"),
-            n.e("94925"),
-            n.e("93329"),
+            n.e("81462"),
+            n.e("44135"),
+            n.e("9176"),
+            n.e("33092"),
             n.e("87845"),
-            n.e("45317"),
-            n.e("85639"),
-            n.e("51643"),
+            n.e("20797"),
+            n.e("98042"),
+            n.e("75090"),
             n.e("61175"),
             n.e("92652"),
-            n.e("45229"),
-            n.e("84388"),
-            n.e("36685"),
+            n.e("5007"),
+            n.e("56574"),
             n.e("4974"),
             n.e("80186"),
             n.e("23924"),
@@ -2451,8 +2452,8 @@ function l0(e, t) {
             n.e("26295"),
             n.e("88599"),
             n.e("36863"),
-            n.e("1518"),
             n.e("67861"),
+            n.e("1518"),
             n.e("15186"),
             n.e("98765"),
             n.e("23354"),
@@ -2520,9 +2521,9 @@ function l0(e, t) {
             n.e("46769"),
             n.e("33297"),
             n.e("73384"),
-            n.e("86243"),
             n.e("82783"),
             n.e("7833"),
+            n.e("86243"),
             n.e("32209"),
             n.e("30788"),
             n.e("48295"),
@@ -2909,8 +2910,8 @@ let l1 = s.memo(function (e) {
         ],
     });
 });
-var l3 = n(182240);
-let l2 = s.memo(function (e) {
+var l2 = n(182240);
+let l3 = s.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         l = t.id,
         r = (0, A.bG)([e4.A], () => e4.A.getGuild(l)),
@@ -2935,11 +2936,11 @@ let l2 = s.memo(function (e) {
                     ? n
                     : p
                       ? (0, i.jsx)("div", {
-                            className: l3.j,
+                            className: l2.j,
                             children: (0, i.jsx)(l_.E, {
                                 size: "custom",
                                 color: "currentColor",
-                                className: l3.v,
+                                className: l2.v,
                                 width: 10,
                                 height: 10,
                             }),
@@ -2963,8 +2964,8 @@ let l2 = s.memo(function (e) {
 });
 var l9 = n(922016),
     l6 = n(534514),
-    l8 = n(821609),
-    l5 = n(339350),
+    l5 = n(821609),
+    l8 = n(339350),
     l7 = n(475743),
     l4 = n(624458),
     ie = n(408213),
@@ -3042,7 +3043,7 @@ function ia(e) {
                                                 }),
                                             ],
                                         }),
-                                        (0, i.jsx)(l8.$, {
+                                        (0, i.jsx)(l5.$, {
                                             variant: "primary",
                                             size: "sm",
                                             text: eH.intl.string(eH.t["4r+amb"]),
@@ -3105,7 +3106,7 @@ function io(e) {
                   folderButtonSize: "icon",
                   folderButtonContent: (0, i.jsx)("div", {
                       className: ir.rH,
-                      children: (0, i.jsx)(l5.Q, { size: "sm", color: "currentColor" }),
+                      children: (0, i.jsx)(l8.Q, { size: "sm", color: "currentColor" }),
                   }),
                   renderChildNode: function (e, t, n) {
                       return e.type !== tl.PJ.GUILD
@@ -3136,10 +3137,11 @@ let ic = (0, j.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("10373"),
-                n.e("72900"),
+                n.e("89317"),
                 n.e("81154"),
                 n.e("55658"),
-                n.e("63419"),
+                n.e("95957"),
+                n.e("81167"),
                 n.e("91763"),
                 n.e("76602"),
                 n.e("28229"),
@@ -3200,7 +3202,7 @@ class im {
             (this.setIsScrolledToBottom = n),
             (this.onScroll = l),
             (this.sizes = i),
-            (0, e2.u9)(this.getVisibleGuildIds);
+            (0, e3.u9)(this.getVisibleGuildIds);
     }
     setResizeObserver = () => {
         let e = this.scrollerRef.current?.getScrollerNode();
@@ -3316,7 +3318,7 @@ function ig(e) {
         children: [
             (0, i.jsx)(nJ, {}),
             x === e6.RK.SERVER_RAIL_TOP && (0, i.jsx)(ic, {}),
-            r ? (0, i.jsx)(e3, { shouldShowIntroPopover: f, markIntroPopoverAsDismissed: h }) : null,
+            r ? (0, i.jsx)(e2, { shouldShowIntroPopover: f, markIntroPopoverAsDismissed: h }) : null,
             !t && (0, i.jsx)(tW, {}),
             S.map((e) => (0, i.jsx)(iu, { guildId: e }, e)),
             (0, i.jsx)(io, { onActivate: n }),
@@ -3330,7 +3332,7 @@ function ip(e) {
             return [e, e.version];
         }),
         o = a.getRoots(),
-        u = (0, A.yK)([e5.A], () => e5.A.getGeoRestrictedGuilds()).map((e) =>
+        u = (0, A.yK)([e8.A], () => e8.A.getGeoRestrictedGuilds()).map((e) =>
             (0, i.jsx)(ng, { id: e.id, name: e.name, icon: e.icon }, e.id),
         );
     return (0, i.jsxs)(i.Fragment, {
@@ -3416,7 +3418,7 @@ function iE(e) {
     (0, T.u5)(() => {
         if (!R.current && 0 !== u.size) {
             if (!z) {
-                let { scrollTop: e } = e8.A.getGuildListDimensions();
+                let { scrollTop: e } = e5.A.getGuildListDimensions();
                 W.scrollTo({ to: e, animate: !1 });
             }
             return (R.current = !0), () => j.stop();
@@ -3470,7 +3472,7 @@ function iE(e) {
                         );
                     case tl.PJ.GUILD:
                         return (0, i.jsx)(
-                            l2,
+                            l3,
                             {
                                 guildNode: t,
                                 setRef: W.setNodeRef,

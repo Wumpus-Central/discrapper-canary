@@ -12,8 +12,6 @@ e.exports = {
     xV: "mosaicItemNoJustify__6c706",
     D$: "mosaicItemFullWidth__6c706",
     UI: "mosaicItemMediaMosaic__6c706",
-    yq: "hasFooter__6c706",
-    hU: "mosaicItemWithFooter__6c706",
     JP: "hideOverflow__6c706",
     GC: "removeMosaicItemHoverButton__6c706",
     qG: "downloadHoverButtonIcon__6c706",

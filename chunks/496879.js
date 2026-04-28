@@ -161,8 +161,8 @@ function O(e) {
                             e.event,
                             async () => {
                                 let { default: n } = await Promise.all([
-                                    t.e("39431"),
-                                    t.e("31788"),
+                                    t.e("90673"),
+                                    t.e("17764"),
                                     t.e("26132"),
                                     t.e("46652"),
                                     t.e("93190"),
@@ -198,10 +198,10 @@ function O(e) {
                         if (null == e.channel || null == e.user) return;
                         (0, h.L3)(e.event, async () => {
                             let { default: n } = await Promise.all([
-                                t.e("39431"),
-                                t.e("31788"),
+                                t.e("90673"),
+                                t.e("17764"),
                                 t.e("63397"),
-                                t.e("6287"),
+                                t.e("98042"),
                                 t.e("26132"),
                                 t.e("46652"),
                                 t.e("93190"),
@@ -347,8 +347,8 @@ function O(e) {
                         let n = e.guild?.id ?? null;
                         (0, h.L3)(e.event, async () => {
                             let { default: l } = await Promise.all([
-                                t.e("39431"),
-                                t.e("31788"),
+                                t.e("90673"),
+                                t.e("17764"),
                                 t.e("26132"),
                                 t.e("46652"),
                                 t.e("93190"),

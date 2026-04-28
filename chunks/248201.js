@@ -1,7 +1,6 @@
 e.exports = {
     Se: "upload_aa605f",
     BN: "smallActionBar_aa605f",
-    oi: "sizeClip_aa605f",
     PO: "uploadContainer_aa605f",
     TC: "actionBarContainer_aa605f",
     KY: "actionBar_aa605f",

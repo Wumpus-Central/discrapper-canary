@@ -331,7 +331,7 @@ var e$ = n(808380),
     e1 = n(266080),
     e3 = n(70191);
 let e2 = { [e$.Y.XBOX]: e1.A, [e$.Y.PLAYSTATION]: e0.A };
-function e4(e) {
+function e6(e) {
     let { activities: t, gameProfileEntry: n, gameIconSize: l, platformIconSizePx: s } = e,
         a = (0, d.b4)(),
         u = r.useMemo(() => {
@@ -358,7 +358,7 @@ function e4(e) {
               return (0, i.jsx)(es.A, { game: n, size: l, unknownGameIconFallback: u ?? d });
           })({ gameProfileEntry: n, gameApplication: o, gameIconSize: l, platformIconSizePx: s });
 }
-let e6 = F._3.SIZE_32,
+let e4 = F._3.SIZE_32,
     e5 = [ee.iq, ee.tR, ee.K7, ee.sp, ee.MK];
 function e9(e) {
     let t,
@@ -457,7 +457,7 @@ function e7(e) {
             avatarDecorationSrc: m,
             avatarSrc: I,
             eventHandlers: E,
-        } = (0, ec.A)({ userId: g, size: e6, animateOnHover: !0, guildId: null }),
+        } = (0, ec.A)({ userId: g, size: e4, animateOnHover: !0, guildId: null }),
         A = r.useMemo(() => {
             let e = h ?? "no-group",
                 t = l ?? "no-relationship",
@@ -645,7 +645,7 @@ let te = r.memo((e) => {
                                 "div",
                                 {
                                     className: ex.im,
-                                    children: (0, i.jsx)(e4, {
+                                    children: (0, i.jsx)(e6, {
                                         activities: n,
                                         gameProfileEntry: N,
                                         gameIconSize: es.M.SMALL,
@@ -670,7 +670,7 @@ let te = r.memo((e) => {
         onContextMenu: D,
         avatar: (0, i.jsx)(G.eu, {
             ...S,
-            size: e6,
+            size: e4,
             src: p,
             isMobile: _,
             isTyping: !1,
@@ -803,7 +803,7 @@ let tt = r.memo((e) => {
         onContextMenu: _,
         avatar: (0, i.jsx)(G.eu, {
             ...I,
-            size: e6,
+            size: e4,
             src: m,
             isMobile: S,
             isTyping: !1,
@@ -826,7 +826,7 @@ let tt = r.memo((e) => {
                     L
                         ? (0, i.jsx)("div", {
                               className: ex.im,
-                              children: (0, i.jsx)(e4, {
+                              children: (0, i.jsx)(e6, {
                                   activities: n,
                                   gameProfileEntry: A,
                                   gameIconSize: es.M.XSMALL,
@@ -1897,7 +1897,7 @@ function t2(e) {
         ],
     });
 }
-function t4(e) {
+function t6(e) {
     let { currentUser: t, activity: n, currentGameName: l, activeTab: u, onTabChange: d } = e,
         {
             friendsHasUnreadFavorites: c,
@@ -1959,7 +1959,7 @@ function t4(e) {
                         l = !0 === E[t],
                         r = !0 === f[t];
                     return (0, i.jsx)(
-                        t6,
+                        t4,
                         {
                             tab: t,
                             label: eX.intl.formatToPlainString(n, {}),
@@ -1975,7 +1975,7 @@ function t4(e) {
         ],
     });
 }
-function t6(e) {
+function t4(e) {
     let {
             tab: t,
             label: n,
@@ -3166,8 +3166,8 @@ function n0() {
 var n1 = n(776096),
     n3 = n(607567),
     n2 = n(377802),
-    n4 = n(342952),
-    n6 = n(676923),
+    n6 = n(342952),
+    n4 = n(676923),
     n5 = n(342296),
     n9 = n(481947),
     n7 = n(567346);
@@ -3297,7 +3297,7 @@ function ln(e) {
         ? null
         : (0, i.jsx)("div", {
               className: n7.X0,
-              children: (0, i.jsx)(n4.A, {
+              children: (0, i.jsx)(n6.A, {
                   users: l,
                   guildId: n ?? void 0,
                   maxUsers: Math.min(l.length, 4),
@@ -3410,7 +3410,7 @@ function ll(e) {
                 n = f ? H : nN._;
             return (0, i.jsx)("div", {
                 onDoubleClick: lt,
-                children: (0, i.jsx)(n6.S, {
+                children: (0, i.jsx)(n4.S, {
                     tooltipText: e,
                     onClick: f ? b : D,
                     onMouseEnter: Y,
@@ -3901,7 +3901,7 @@ function lT() {
     return (0, i.jsxs)("div", {
         className: lx.kL,
         children: [
-            (0, i.jsx)(t4, {
+            (0, i.jsx)(t6, {
                 currentUser: h,
                 activity: E,
                 currentGameName: n?.name ?? null,
@@ -4157,8 +4157,8 @@ let l_ = r.memo(function (e) {
                             e.event,
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("31788"),
-                                    n.e("39431"),
+                                    n.e("17764"),
+                                    n.e("90673"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -4222,10 +4222,10 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("31788"),
+                                    n.e("17764"),
                                     n.e("63397"),
-                                    n.e("6287"),
-                                    n.e("39431"),
+                                    n.e("98042"),
+                                    n.e("90673"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -4365,7 +4365,7 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("81510"),
+                                    n.e("16384"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("55411"),
@@ -4401,7 +4401,7 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: l } = await Promise.all([
-                                    n.e("39431"),
+                                    n.e("90673"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),

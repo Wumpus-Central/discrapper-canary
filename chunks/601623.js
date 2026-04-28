@@ -93,7 +93,7 @@ let eE = (e) => {
                                 onClick: () => {
                                     (0, d.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("81126"),
+                                            n.e("75058"),
                                             n.e("44602"),
                                             n.e("25280"),
                                         ]).then(n.bind(n, 987482));
@@ -425,8 +425,8 @@ function eX(e) {
                 : (0, d.openModalLazy)(async () => {
                       let e = { source: eh.Eo.NAGBAR, alertType: (0, eL.$5)(A) },
                           { default: t } = await Promise.all([
-                              n.e("41909"),
-                              n.e("36685"),
+                              n.e("43763"),
+                              n.e("17764"),
                               n.e("40258"),
                               n.e("73669"),
                               n.e("46313"),
@@ -529,27 +529,27 @@ var ez = n(503698),
 if (21552 == n.j) var eQ = n(873263);
 if (21552 == n.j) var eJ = n(314116);
 if (21552 == n.j) var e0 = n(821609);
-var e2 = n(334465),
-    e5 = n(624458),
+var e5 = n(334465),
+    e2 = n(624458),
     e1 = n(513461),
-    e8 = n(709977),
-    e7 = n(212455),
-    e9 = n(182430),
+    e7 = n(709977),
+    e9 = n(212455),
+    e8 = n(182430),
     e6 = n(580537);
 let e4 =
     21552 == n.j
         ? () => {
               let e = (0, o.bG)([ey.A], () => ey.A.getGuildId(), []),
                   t = (0, o.bG)([eg.A], () => eg.A.getGuild(e), [e]),
-                  l = (0, o.bG)([e7.A], () => (null != e ? e7.A.getRequest(e) : null), [e]),
+                  l = (0, o.bG)([e9.A], () => (null != e ? e9.A.getRequest(e) : null), [e]),
                   r = (0, eQ.zy)(),
-                  s = (0, e2.B)(r.pathname, ei.BVt.CHANNEL(t?.id, eG.VV.GUILD_ONBOARDING))?.isExact === !0;
-              if (null == t || !(0, e8.Qd)(t) || s) return null;
+                  s = (0, e5.B)(r.pathname, ei.BVt.CHANNEL(t?.id, eG.VV.GUILD_ONBOARDING))?.isExact === !0;
+              if (null == t || !(0, e7.Qd)(t) || s) return null;
               let a = l?.applicationStatus ?? e1.B5.STARTED,
                   E = null,
                   _ = null,
                   A = null,
-                  T = [e9.lm, e6.lm];
+                  T = [e8.lm, e6.lm];
               switch (a) {
                   case e1.B5.SUBMITTED:
                       (E = es.intl.string(es.t["5iLvSx"])),
@@ -560,7 +560,7 @@ let e4 =
                                   subtitle: es.intl.string(es.t["13tjTU"]),
                                   variant: "primary",
                                   confirmText: es.intl.string(es.t["cY+Oob"]),
-                                  onConfirm: () => e5.A.removeGuildJoinRequest(t.id),
+                                  onConfirm: () => e2.A.removeGuildJoinRequest(t.id),
                               });
                           });
                       break;
@@ -575,7 +575,7 @@ let e4 =
                                   return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                               });
                           }),
-                          T.push(e9.z3);
+                          T.push(e8.z3);
                       break;
                   default:
                       (E = es.intl.string(es.t.G5YKXP)),
@@ -587,7 +587,7 @@ let e4 =
               return (0, i.jsxs)("div", {
                   className: eZ()(...T),
                   children: [
-                      (0, i.jsx)(c.E, { className: e9.wx, variant: "text-sm/normal", children: E }),
+                      (0, i.jsx)(c.E, { className: e8.wx, variant: "text-sm/normal", children: E }),
                       (0, i.jsx)(e0.$, { variant: "overlay-primary", size: "sm", onClick: A, text: _ }),
                   ],
               });
@@ -914,8 +914,8 @@ var tW = n(969341),
     tQ = n(723702),
     tJ = n(325278),
     t0 = n(831502),
-    t2 = n(731854);
-let t5 = new v.A("Notice"),
+    t5 = n(731854);
+let t2 = new v.A("Notice"),
     t1 = (e) => {
         let { error: t, allowClick: n = !1 } = e,
             l = (0, eS.B1)(t)?.errorCode,
@@ -937,7 +937,7 @@ let t5 = new v.A("Notice"),
               })
             : s;
     },
-    t8 = (e) => {
+    t7 = (e) => {
         let { noticeType: t } = e;
         return (0, i.jsxs)(I.$T, {
             color: I.Hv.DANGER,
@@ -958,16 +958,16 @@ let t5 = new v.A("Notice"),
             ],
         });
     };
-function t7(e) {
+function t9(e) {
     return (0, tQ.isWindows)() && _().satisfies(x.A?.os.release, tJ.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
 }
-function t9(e) {
+function t8(e) {
     let t,
         n,
         { noticeType: l } = e,
-        r = (0, to.x5)(t2.oh.AUDIO_INPUT),
+        r = (0, to.x5)(t5.oh.AUDIO_INPUT),
         s = r?.guid ?? "",
         { inputDeviceOSMuted: a, inputDeviceOSVolume: E } = (0, o.cf)([tW.Ay], () => ({
             inputDeviceOSMuted: tW.Ay.getInputDeviceOSMuted(),
@@ -977,11 +977,11 @@ function t9(e) {
     return (
         !0 === a
             ? ((t = es.intl.string(es.t.ppW3ri)),
-              (n = (0, i.jsx)(I.eC, { href: t7(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
+              (n = (0, i.jsx)(I.eC, { href: t9(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
             : 0 === E
               ? ((t = es.intl.string(es.t.j4gGA4)),
-                (n = (0, i.jsx)(I.eC, { href: t7(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
-              : tW.Ay.supports(t2.O5.LOOPBACK)
+                (n = (0, i.jsx)(I.eC, { href: t9(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
+              : tW.Ay.supports(t5.O5.LOOPBACK)
                 ? ((t = es.intl.string(es.t.dNAJ18)),
                   (_ = !0),
                   (n = (0, i.jsx)(I.zr, {
@@ -1287,9 +1287,9 @@ let t4 =
                           ],
                       });
                   case ei.kqX.NO_INPUT_DETECTED:
-                      return (0, i.jsx)(t9, { noticeType: r.type });
-                  case ei.kqX.NO_INPUT_DEVICES_DETECTED:
                       return (0, i.jsx)(t8, { noticeType: r.type });
+                  case ei.kqX.NO_INPUT_DEVICES_DETECTED:
+                      return (0, i.jsx)(t7, { noticeType: r.type });
                   case ei.kqX.HARDWARE_MUTE:
                       if (null != r.metadata) {
                           let { vendor: e, model: t } = r.metadata;
@@ -1364,21 +1364,26 @@ let t4 =
                                   onClick: async () => {
                                       try {
                                           let { openIAPPurchaseModal: e } = await Promise.all([
-                                              n.e("32101"),
+                                              n.e("40841"),
                                               n.e("69273"),
-                                              n.e("31788"),
-                                              n.e("77083"),
+                                              n.e("89317"),
+                                              n.e("61659"),
+                                              n.e("63941"),
                                               n.e("63009"),
-                                              n.e("84786"),
-                                              n.e("41909"),
+                                              n.e("84580"),
+                                              n.e("62370"),
                                               n.e("63397"),
                                               n.e("45650"),
                                               n.e("97189"),
+                                              n.e("24059"),
+                                              n.e("51402"),
                                               n.e("27660"),
-                                              n.e("6287"),
+                                              n.e("17764"),
                                               n.e("85484"),
-                                              n.e("81510"),
-                                              n.e("36407"),
+                                              n.e("89516"),
+                                              n.e("39501"),
+                                              n.e("3256"),
+                                              n.e("19145"),
                                               n.e("79705"),
                                               n.e("23924"),
                                               n.e("15510"),
@@ -1462,7 +1467,7 @@ let t4 =
                                           }),
                                               M($.id);
                                       } catch (e) {
-                                          null != e && t5.error("Failed to open off-platform premium perk modal", e);
+                                          null != e && t2.error("Failed to open off-platform premium perk modal", e);
                                       }
                                   },
                                   children: es.intl.string(es.t.KEwPYx),
@@ -1545,7 +1550,7 @@ let t4 =
                                   onClick: () => {
                                       (0, d.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
-                                              n.e("81126"),
+                                              n.e("75058"),
                                               n.e("44602"),
                                               n.e("25280"),
                                           ]).then(n.bind(n, 987482));
@@ -1664,11 +1669,11 @@ let t4 =
                                       t6(r.metadata?.premiumSubscription?.currentPeriodEnd),
                                           (0, d.openModalLazy)(async () => {
                                               let { default: e } = await Promise.all([
-                                                  n.e("31788"),
-                                                  n.e("77083"),
+                                                  n.e("61659"),
+                                                  n.e("63941"),
                                                   n.e("63009"),
                                                   n.e("63397"),
-                                                  n.e("50603"),
+                                                  n.e("3256"),
                                                   n.e("35429"),
                                                   n.e("10471"),
                                                   n.e("23808"),

@@ -1,0 +1,121 @@
+.safetyPolicyNoticeContainer_e80b85 {
+    background: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column
+}
+
+.noticeContent_e80b85 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-12)
+}
+
+.headerRow_e80b85 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.warningIcon_e80b85 {
+    color: var(--icon-feedback-critical);
+    height: 14px;
+    margin-inline-end: var(--space-4);
+    width: 14px
+}
+
+.incidentTiming_e80b85 {
+    color: var(--text-muted);
+    margin-top: var(--space-4)
+}
+
+.noticeBody_e80b85 {
+    color: var(--text-muted);
+    margin-top: var(--space-8)
+}
+
+.footerContainer_e80b85 {
+    align-items: flex-start;
+    background-color: var(--control-critical-primary-background-default);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-8) var(--space-12)
+}
+
+.footerContainer_e80b85:hover {
+    background-color: var(--control-critical-primary-background-hover)
+}
+
+.safetyPolicyNoticeContainer__86361 {
+    background: var(--card-background-default);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column
+}
+
+.noticeContent__86361 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-12)
+}
+
+.headerRow__86361 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.icon__86361 {
+    height: 14px;
+    margin-inline-end: var(--space-4);
+    width: 14px
+}
+
+.incidentTiming__86361 {
+    color: var(--text-muted);
+    margin-top: var(--space-4)
+}
+
+.noticeBody__86361 {
+    color: var(--text-muted);
+    margin-top: var(--space-8)
+}
+
+.detailsButton__86361 {
+    margin-inline: var(--space-8);
+    padding: var(--space-8) 0
+}
+
+.defaultFooterContainer__86361 {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%
+}
+
+.defaultFooterContainer__86361:hover {
+    background-color: var(--control-secondary-background-hover)
+}
+
+.dangerFooterContainer__86361 {
+    align-items: flex-start;
+    background-color: var(--control-critical-primary-background-default);
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%
+}
+
+.dangerfooterContainer__86361:hover {
+    background-color: var(--control-critical-primary-background-hover)
+}

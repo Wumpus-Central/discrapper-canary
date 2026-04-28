@@ -1,5 +1,5 @@
 _.r(
-    (e.exports = {
+    (a.exports = {
         filenameContainer: "filenameContainer__41ea0",
         filename: "filename__41ea0",
         mediaContainer: "mediaContainer__41ea0",
@@ -10,7 +10,6 @@ _.r(
         sizeXXSmall: "sizeXXSmall__41ea0",
         spoilerWrapper: "spoilerWrapper__41ea0",
         media: "media__41ea0",
-        sizeClip: "sizeClip__41ea0",
         clickableMedia: "clickableMedia__41ea0",
         spoiler: "spoiler__41ea0",
         icon: "icon__41ea0",
@@ -32,8 +31,6 @@ _.r(
         attachmentItemSmall: "attachmentItemSmall__41ea0",
         actionBarIcon: "actionBarIcon__41ea0",
         action: "action__41ea0",
-        clipsBadge: "clipsBadge__41ea0",
-        clipsFooter: "clipsFooter__41ea0",
         clipOverlayHeader: "clipOverlayHeader__41ea0",
     }),
 );

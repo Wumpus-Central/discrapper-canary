@@ -1,0 +1,94 @@
+.reactionTooltip_b49891 {
+    background: var(--background-surface-high);
+    border-radius: var(--radius-xs);
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    color: var(--text-default);
+    font-weight: var(--font-weight-medium);
+    max-width: 288px;
+    overflow: hidden;
+    padding: 16px
+}
+
+.reactionTooltipEmoji_b49891 {
+    height: 32px;
+    width: 32px
+}
+
+.reactionTooltipText_b49891 {
+    margin-inline-start: 12px
+}
+
+.reactionTooltipInner_b49891 {
+    align-items: center;
+    display: flex;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    pointer-events: all;
+    word-break: break-word
+}
+
+.reactionTooltipInner_b49891:hover {
+    cursor: pointer
+}
+
+.reactionTooltipInner_b49891:hover a {
+    text-decoration: underline
+}
+
+.burstReactionTooltipInner_b49891 {
+    pointer-events: all
+}
+
+.burstReactionTooltipInner_b49891:hover {
+    cursor: pointer
+}
+
+.burstReactionTooltipInner_b49891:hover a {
+    text-decoration: underline
+}
+
+.burstReactionTooltipMessage_b49891 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    pointer-events: all;
+    word-break: break-word
+}
+
+.burstReactionTooltipSpacer_b49891 {
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 8px;
+    padding-top: 8px
+}
+
+.burstReactionTooltipPrompt_b49891 {
+    align-items: center;
+    display: flex;
+    margin: 12px 0 0;
+    width: 100%
+}
+
+.burstReactionTooltipPromptClickable_b49891 {
+    pointer-events: all
+}
+
+.burstReactionTooltipPromptClickable_b49891:hover {
+    cursor: pointer
+}
+
+.burstReactionTooltipPromptClickable_b49891:hover a {
+    text-decoration: underline
+}
+
+.burstReactionTooltipNitroIcon_b49891 {
+    margin-inline-end: 5px
+}
+
+.burstReactionTooltipUpsellCta_b49891 {
+    background: linear-gradient(270deg, var(--premium-tier-2-pink-for-gradients) 0, var(--premium-tier-2-pink-for-gradients-2) 33.63%, var(--premium-tier-2-purple-for-gradients) 100%);
+    border-radius: 4px;
+    margin-top: 8px;
+    width: 100%
+}
