@@ -1,4 +1,4 @@
-n.d(t, { A: () => N }), n(321073);
+n.d(t, { A: () => j }), n(321073);
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -15,7 +15,7 @@ var i = n(627968),
     g = n(565645),
     x = n(114166),
     f = n(891734),
-    A = n(624207),
+    A = n(93032),
     C = n(347353),
     v = n(866661);
 let I = l.memo(function (e) {
@@ -37,21 +37,21 @@ let I = l.memo(function (e) {
                 type: y,
                 emojiSize: T,
             } = e,
-            N = y === u.v.BURST,
-            j = (0, A.IN)(d, _, y),
-            S = (0, f.g)(N && null != h ? h : []),
+            j = y === u.v.BURST,
+            N = (0, A.IN)(d, _, y),
+            S = (0, f.g)(j && null != h ? h : []),
             k = l ? v : C,
-            L = N ? m : c,
+            L = j ? m : c,
             R = (0, x.x)(L, A.$Z),
             w = {};
-        if (N && null != S) {
+        if (j && null != S) {
             let { accentColor: e, backgroundColor: i, opacity: l } = S,
                 a = (0, p.xp)(i ?? "", l) ?? "";
-            j && (w.borderColor = i), (w.background = a), (t = e), (n = e);
+            N && (w.borderColor = i), (w.background = a), (t = e), (n = e);
         }
         let P = { minWidth: R, color: t, borderColor: n };
         return (0, i.jsxs)("div", {
-            className: r()(k.reaction, k.reactionInner, o, { [k.reactionMe]: j, [k.reactionReadOnly]: I && !E && !b }),
+            className: r()(k.reaction, k.reactionInner, o, { [k.reactionMe]: N, [k.reactionReadOnly]: I && !E && !b }),
             style: w,
             children: [
                 (0, i.jsx)(g.A, {
@@ -59,7 +59,7 @@ let I = l.memo(function (e) {
                     emojiId: s.id,
                     emojiName: s.name,
                     size: T,
-                    animated: N && s.animated,
+                    animated: j && s.animated,
                 }),
                 (0, i.jsx)("div", { className: k.reactionCount, style: P, children: L }),
             ],
@@ -125,15 +125,15 @@ class T extends l.PureComponent {
                 combinedReactions: y,
                 visibleReactionsCount: T,
             } = this.props,
-            { disableTransitionAppear: N } = this.state,
-            j = f ? v : C,
+            { disableTransitionAppear: j } = this.state,
+            N = f ? v : C,
             S = T > 0;
         if (!S && !g) return null;
         let k = g || S;
         return (0, i.jsxs)(s.F, {
             component: "div",
-            className: r()(j.reactions, p),
-            transitionAppear: !N,
+            className: r()(N.reactions, p),
+            transitionAppear: !j,
             role: "group",
             transitionLeave: !1,
             id: (0, m.JH)(e),
@@ -155,10 +155,10 @@ class T extends l.PureComponent {
                         onClick: (t) => {
                             t.stopPropagation(), (0, d.$)(e);
                         },
-                        className: r()(j.reaction, x, j.remainingReactions),
+                        className: r()(N.reaction, x, N.remainingReactions),
                         "aria-label": b.intl.string(b.t.lfIHs4),
                         children: (0, i.jsxs)(c.E, {
-                            className: j.reactionInner,
+                            className: N.reactionInner,
                             variant: "text-sm/normal",
                             children: ["+", I],
                         }),
@@ -171,13 +171,13 @@ class T extends l.PureComponent {
                         channel: h,
                         useChatFontScaling: f,
                         isHovered: this.state.isHovered,
-                        className: r()({ [j.forceShow]: k }),
+                        className: r()({ [N.forceShow]: k }),
                     }),
             ],
         });
     }
 }
-let N = (e) => {
+let j = (e) => {
     let { message: t, maxReactions: n, hoistReaction: a } = e,
         {
             combinedReactions: r,

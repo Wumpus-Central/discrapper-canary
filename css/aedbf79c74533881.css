@@ -180,6 +180,56 @@
     width: 64px
 }
 
+.reactionEmojiDetailsUnfurlGuildDetails__5a408 {
+    margin: 16px 0 8px
+}
+
+.reactionEmojiDetailsClickable__5a408 {
+    border-radius: var(--radius-xs);
+    color: var(--interactive-text-hover);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-weight: var(--font-weight-semibold);
+    justify-content: center;
+    margin-top: 8px;
+    padding: 6px 0;
+    transition: color .125s
+}
+
+.reactionEmojiDetailsClickable__5a408:hover {
+    color: var(--interactive-text-active)
+}
+
+.theme-dark .reactionEmojiDetailsClickable__5a408 {
+    background-color: hsl(var(--primary-300-hsl)/.1)
+}
+
+.theme-light .reactionEmojiDetailsClickable__5a408 {
+    background-color: hsl(var(--primary-700-hsl)/.1)
+}
+
+.reactionEmojiDetailsArrow__5a408 {
+    margin-top: 2px
+}
+
+.full-motion .reactionEmojiDetailsArrow__5a408 {
+    transition: transform .1s
+}
+
+.reactionEmojiDetailsArrow__5a408.reactionEmojiDetailsArrowCollapsed__5a408 {
+    transform: rotate(-90deg)
+}
+
+.reactionEmojiDetailsDivider__5a408 {
+    border-bottom: 1px solid var(--border-subtle);
+    margin: 16px 0
+}
+
+.emojiDetailsLoader__5a408 {
+    box-shadow: none
+}
+
 .effect_a9ddb3 {
     bottom: 0;
     overflow: hidden;
