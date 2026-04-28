@@ -1,28 +1,27 @@
 let t;
-l.d(s, { SyntaxHighlight: () => k });
+l.d(s, { SyntaxHighlight: () => y });
 var r = l(627968),
     n = l(64700),
-    c = l(974287),
-    a = l(199131),
-    o = l(635377),
-    i = l.n(o),
-    p = l(181370),
-    h = l.n(p),
-    m = l(52133);
-async function u(e) {
-    let s = a.p[e];
+    c = l(27003),
+    a = l(635377),
+    o = l.n(a),
+    i = l(181370),
+    p = l.n(i),
+    h = l(52133);
+async function m(e) {
+    let s = c.pb[e];
     return (await (null == t && (t = (0, c.A)()), t)).loadGrammar(s);
 }
-let j = /^[a-z0-9_+\-.#]+$/,
-    f = Promise.resolve(null),
+let u = /^[a-z0-9_+\-.#]+$/,
+    j = Promise.resolve(null),
     b = new Map(),
-    d = new (i())({ max: 256 });
-function x(e) {
-    if (null == e || !(e in a.p)) return f;
+    f = new (o())({ max: 256 });
+function d(e) {
+    if (null == e || !(e in c.pb)) return j;
     let s = b.get(e);
-    return null == s && ((s = u(e)), b.set(e, s)), s;
+    return null == s && ((s = m(e)), b.set(e, s)), s;
 }
-let g = {
+let x = {
         h: "cpp",
         hpp: "cpp",
         cc: "cpp",
@@ -166,44 +165,44 @@ let g = {
         "julia-repl": "julia",
         jldoctest: "julia",
     },
-    v = new Set(Object.keys(a.p));
-v.add("ansi");
-let y = null;
-function k(e) {
+    g = new Set(Object.keys(c.pb));
+g.add("ansi");
+let v = null;
+function y(e) {
     let { code: s, lang: l, ...t } = e,
         c = n.useMemo(
             () =>
                 (function (e) {
                     if (null == e) return;
                     let s = e.toLowerCase();
-                    if (!j.test(s)) return;
-                    if (v.has(s)) return s;
-                    let l = g[s];
-                    if (null != l && v.has(l)) return l;
+                    if (!u.test(s)) return;
+                    if (g.has(s)) return s;
+                    let l = x[s];
+                    if (null != l && g.has(l)) return l;
                 })(l),
             [l],
         );
     return null == c
-        ? (0, r.jsx)(w, { code: s, ...t })
+        ? (0, r.jsx)(k, { code: s, ...t })
         : (0, r.jsx)(n.Suspense, {
-              fallback: (0, r.jsx)(w, { code: s, ...t }),
-              children: "ansi" === c ? (0, r.jsx)(S, { code: s, ...t }) : (0, r.jsx)(q, { code: s, lang: c, ...t }),
+              fallback: (0, r.jsx)(k, { code: s, ...t }),
+              children: "ansi" === c ? (0, r.jsx)(q, { code: s, ...t }) : (0, r.jsx)(w, { code: s, lang: c, ...t }),
           });
 }
-function w(e) {
+function k(e) {
     let { code: s, ...l } = e;
     return (0, r.jsx)("code", { ...l, children: s });
 }
-function q(e) {
+function w(e) {
     let { code: s, lang: l, ...t } = e,
         c = (function (e, s) {
-            let l = n.use(x(e)),
-                t = n.useMemo(() => h()(`${e}\0${s}`), [e, s]),
+            let l = n.use(d(e)),
+                t = n.useMemo(() => p()(`${e}\0${s}`), [e, s]),
                 r = n.useCallback(
                     function () {
                         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                         if (!e) {
-                            let e = d.get(t);
+                            let e = f.get(t);
                             if (null != e) return e;
                         }
                         if (
@@ -226,7 +225,7 @@ function q(e) {
                                 t.free();
                             }
                         })(s, l);
-                        if (null != r) return d.set(t, r), r;
+                        if (null != r) return f.set(t, r), r;
                     },
                     [t, s, l],
                 ),
@@ -240,14 +239,14 @@ function q(e) {
                     if (null == e || 0 === e.length) return;
                     let s = !1;
                     for (let l of e)
-                        x(l).then(() => {
+                        d(l).then(() => {
                             s ||
                                 a((e) => {
                                     let s = r(!0);
                                     return null == s ||
                                         (null != e &&
                                             e.html === s.html &&
-                                            (0, m.v)(e.missingInjections, s.missingInjections))
+                                            (0, h.v)(e.missingInjections, s.missingInjections))
                                         ? e
                                         : s;
                                 });
@@ -259,19 +258,19 @@ function q(e) {
                 c?.html ?? null
             );
         })(l, s);
-    return null == c ? (0, r.jsx)(w, { code: s, ...t }) : (0, r.jsx)(M, { html: c, ...t });
+    return null == c ? (0, r.jsx)(k, { code: s, ...t }) : (0, r.jsx)(S, { html: c, ...t });
 }
-function S(e) {
+function q(e) {
     let { code: s, ...t } = e,
         c = (function (e) {
-            y ??= l.e("1180").then(l.t.bind(l, 628759, 23));
-            let { default: s } = n.use(y),
+            v ??= l.e("1180").then(l.t.bind(l, 628759, 23));
+            let { default: s } = n.use(v),
                 [t] = n.useState(() => new s({ escapeXML: !0 }));
             return n.useMemo(() => t.toHtml(e), [t, e]);
         })(s);
-    return (0, r.jsx)(M, { html: c, ...t });
+    return (0, r.jsx)(S, { html: c, ...t });
 }
-function M(e) {
+function S(e) {
     let { html: s, ...l } = e;
     return (0, r.jsx)("code", { ...l, dangerouslySetInnerHTML: { __html: s } });
 }
