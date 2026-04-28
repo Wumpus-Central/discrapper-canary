@@ -823,6 +823,18 @@ var a = {
         hasStoreChangeListeners: !0,
         loadRightBeforeConnectionOpen: !0,
     },
+    ConversationsFetchManager: {
+        actions: [
+            "CHANNEL_SELECT",
+            "LOAD_MESSAGES_SUCCESS",
+            "UPDATE_VISIBLE_MESSAGES",
+            "CONVERSATIONS_FETCH_SUCCESS",
+            "CHANNEL_DELETE",
+            "LOGOUT",
+        ],
+        inlineRequire: () => n(185522).A,
+        neverLoadBeforeConnectionOpen: !0,
+    },
 };
 for (let e in a) {
     let t = a[e];

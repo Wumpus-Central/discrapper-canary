@@ -6,7 +6,7 @@ var s,
     o = n(64700),
     c = n(503698),
     d = n.n(c),
-    u = n(123924),
+    u = n(519244),
     h = n(837381),
     m = n(17928),
     g = n(446837),
@@ -100,8 +100,8 @@ let M = [],
     D = [];
 var L = n(429913),
     k = n(47167),
-    P = n(17447),
-    G = n(736339),
+    P = n(828488),
+    G = n(958720),
     O = n(354328),
     U = n(559149),
     w = n(164956),
@@ -121,7 +121,7 @@ var L = n(429913),
     Q = n(234320),
     ee = n(863439),
     et = n(448761),
-    en = n(701952),
+    en = n(161204),
     el = n(58703),
     ei = n(935208),
     es = n(857069),
@@ -222,8 +222,8 @@ var eq = n(491182),
     e2 = n(406704),
     e3 = n(747926),
     e4 = n(54570),
-    e7 = n(8880),
-    e5 = n(957565),
+    e5 = n(8880),
+    e7 = n(957565),
     e8 = n(723702),
     e9 = n(697470),
     e6 = n(492841),
@@ -252,7 +252,7 @@ let tn = function (e, t, n) {
                             (n.preventDefault(), (0, tt.RC)(d, c, n));
                         break;
                     case "c":
-                        ((0, e8.isMac)() ? r : a) && e5.p5 && (n.preventDefault(), (0, e5.C)(c.content));
+                        ((0, e8.isMac)() ? r : a) && e7.p5 && (n.preventDefault(), (0, e7.C)(c.content));
                         break;
                     case "e":
                         i && !d.isSystemDM() && (0, e9.A)(c, u) && (n.preventDefault(), (0, tt.u_)(d, c));
@@ -291,7 +291,7 @@ let tn = function (e, t, n) {
                             "" !== c.content &&
                             (n.preventDefault(),
                             n.stopPropagation(),
-                            e7.A.isSpeakingMessage(t, e) ? (0, e4.pr)() : (0, e4.kP)(d, c));
+                            e5.A.isSpeakingMessage(t, e) ? (0, e4.pr)() : (0, e4.kP)(d, c));
                         break;
                     case "t":
                         if (i && (0, e2.D1)(d, c)) n.preventDefault(), (0, e3.Tv)(d, c, "Message Shortcut");
@@ -456,8 +456,8 @@ var t_ = n(111956),
     t2 = n(954571),
     t3 = n(690521),
     t4 = n(403362),
-    t7 = n(628691),
-    t5 = n(194085),
+    t5 = n(628691),
+    t7 = n(194085),
     t8 = n(607399),
     t9 = n(460905);
 function t6(e) {
@@ -476,7 +476,7 @@ function t6(e) {
         align: t8.Fr ? "center" : "top",
         clickTrap: !0,
         children: () =>
-            (0, r.jsx)(t5.qv, { ref: a, label: tp.intl.string(tp.t.lfIHs4), icon: t9.n, onClick: l }, "add-reaction"),
+            (0, r.jsx)(t7.qv, { ref: a, label: tp.intl.string(tp.t.lfIHs4), icon: t9.n, onClick: l }, "add-reaction"),
     });
 }
 var ne = n(783144),
@@ -529,7 +529,7 @@ let na = o.memo(function (e) {
                         ? tp.intl.formatToPlainString(tp.t.vjeruO, { emojiName: a })
                         : tp.intl.formatToPlainString(tp.t.L1JQwE, { emojiName: a });
             return (0, r.jsx)(
-                t5.qv,
+                t7.qv,
                 {
                     tooltipText: (0, r.jsxs)(r.Fragment, {
                         children: [
@@ -633,7 +633,7 @@ function nr(e) {
                 T = (E || n.canDeleteOwnMessage(u)) && h && !eh.MRS.UNDELETABLE.has(n.type);
             n.type === eh.lAJ.AUTO_MODERATION_ACTION && (T = T && E),
                 t.isModeratorReportChannel() && (T = T && n.id !== A?.id && !(0, eV.A)(n));
-            let N = (0, t7.ul)(n),
+            let N = (0, t5.ul)(n),
                 v = (0, e6.A)(n, t),
                 M = !t.isSystemDM() && (0, e9.A)(n, u) && h && !g,
                 { disableReactionCreates: R } = (0, te.A)({
@@ -675,7 +675,7 @@ function nr(e) {
                 canForward: P,
                 canManageOfficialMessages: G,
                 isGuildOfficial: O,
-                canCopy: e5.p5,
+                canCopy: e7.p5,
                 hasDeveloperMode: f,
                 canReact: !R && p,
                 canPublish: D,
@@ -712,7 +712,7 @@ function nr(e) {
                       children: [
                           l && N
                               ? (0, r.jsx)(
-                                    t5.qv,
+                                    t7.qv,
                                     {
                                         label: tp.intl.string(tp.t.zBoHlf),
                                         icon: tj.L,
@@ -723,28 +723,28 @@ function nr(e) {
                               : null,
                           l
                               ? (0, r.jsx)(
-                                    t5.qv,
+                                    t7.qv,
                                     { label: tp.intl.string(tp.t.WqhZss), icon: tb.q, onClick: () => (0, tt.S)(t, n) },
                                     "copy-link",
                                 )
                               : null,
                           h
                               ? (0, r.jsx)(
-                                    t5.qv,
+                                    t7.qv,
                                     { label: tp.intl.string(tp.t.NpHUi1), icon: tT.c, onClick: () => (0, tt.vc)(t) },
                                     "configure",
                                 )
                               : null,
                           L
                               ? (0, r.jsx)(
-                                    t5.qv,
+                                    t7.qv,
                                     { label: tp.intl.string(tp.t.RpE9k7), icon: tN.Q, onClick: () => (0, tt.cl)(t, n) },
                                     "mark-unread",
                                 )
                               : null,
                           y
                               ? (0, r.jsx)(
-                                    t5.qv,
+                                    t7.qv,
                                     {
                                         label: j ? tp.intl.string(tp.t.LHUP9D) : tp.intl.string(tp.t["9p3D9p"]),
                                         icon: j ? tv.c : tM.c,
@@ -755,7 +755,7 @@ function nr(e) {
                               : null,
                           i
                               ? (0, r.jsx)(
-                                    t5.qv,
+                                    t7.qv,
                                     {
                                         label: n.pinned ? tp.intl.string(tp.t["Bse+F/"]) : tp.intl.string(tp.t.CvQ18w),
                                         icon: tR.t,
@@ -766,14 +766,14 @@ function nr(e) {
                               : null,
                           A && f
                               ? (0, r.jsx)(
-                                    t5.qv,
+                                    t7.qv,
                                     { label: tp.intl.string(tp.t.rBIGBL), icon: tD.y, onClick: () => (0, tt.Nw)(t, n) },
                                     "thread",
                                 )
                               : null,
                           g && c
                               ? (0, r.jsx)(
-                                    t5.qv,
+                                    t7.qv,
                                     {
                                         label: tp.intl.string(tp.t["5IEsGx"]),
                                         icon: tL.W,
@@ -791,7 +791,7 @@ function nr(e) {
                           x
                               ? null
                               : (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(na, { channel: t, message: n }), (0, r.jsx)(t5.$$, {})],
+                                    children: [(0, r.jsx)(na, { channel: t, message: n }), (0, r.jsx)(t7.$$, {})],
                                 }),
                           (0, r.jsx)(t6, {
                               togglePopout: D,
@@ -806,42 +806,42 @@ function nr(e) {
                 : null,
             g && !c
                 ? (0, r.jsx)(
-                      t5.qv,
+                      t7.qv,
                       { label: tp.intl.string(tp.t["5IEsGx"]), icon: tL.W, onClick: (e) => (0, tt.$b)(t, n, e) },
                       "reply-other",
                   )
                 : null,
             c
                 ? (0, r.jsx)(
-                      t5.qv,
+                      t7.qv,
                       { label: tp.intl.string(tp.t.bt75uw), icon: tk.R, onClick: () => (0, tt.u_)(t, n) },
                       "edit",
                   )
                 : null,
             f
                 ? (0, r.jsx)(
-                      t5.qv,
+                      t7.qv,
                       { label: tp.intl.string(tp.t.I3ltXO), icon: tq.A, onClick: () => (0, tt.Z4)(t, n) },
                       "forward",
                   )
                 : null,
             A && !f
                 ? (0, r.jsx)(
-                      t5.qv,
+                      t7.qv,
                       { label: tp.intl.string(tp.t.rBIGBL), icon: tD.y, onClick: () => (0, tt.Nw)(t, n) },
                       "thread",
                   )
                 : null,
             !A && p
                 ? (0, r.jsx)(
-                      t5.qv,
+                      t7.qv,
                       { label: tp.intl.string(tp.t["39d0Wj"]), icon: tD.y, onClick: () => (0, tt.mF)(t, n) },
                       "view-thread",
                   )
                 : null,
             C
                 ? (0, r.jsx)(
-                      t5.qv,
+                      t7.qv,
                       {
                           label: E ? tp.intl.string(tp.t["2km5Gf"]) : tp.intl.string(tp.t["lE/PG3"]),
                           icon: E ? tP.$ : tG.L,
@@ -852,7 +852,7 @@ function nr(e) {
                 : null,
             d
                 ? (0, r.jsx)(
-                      t5.qv,
+                      t7.qv,
                       {
                           label: k ? tp.intl.string(tp.t["1kWJAr"]) : tp.intl.string(tp.t.MFGE51),
                           icon: tO.k,
@@ -864,7 +864,7 @@ function nr(e) {
                 : null,
             s && x
                 ? (0, r.jsx)(
-                      t5.qv,
+                      t7.qv,
                       {
                           label: tp.intl.string(tp.t.oyYWHE),
                           icon: tU.u,
@@ -898,7 +898,7 @@ function nr(e) {
                           let { onClick: n, ...l } = e,
                               { isShown: i } = t;
                           return (0, r.jsx)(
-                              t5.qv,
+                              t7.qv,
                               {
                                   ref: M,
                                   label: tp.intl.string(tp.t["UKOtz+"]),
@@ -923,12 +923,12 @@ function no(e) {
             !l &&
                 i &&
                 (0, r.jsx)(
-                    t5.qv,
+                    t7.qv,
                     { label: tp.intl.string(tp.t["5911Lb"]), icon: tB.m, onClick: () => (0, tt.Io)(t, n) },
                     "retry",
                 ),
             (0, r.jsx)(
-                t5.qv,
+                t7.qv,
                 { label: tp.intl.string(tp.t.oyYWHE), icon: tU.u, onClick: (e) => (0, tt.RC)(t, n, e) },
                 "delete-usent",
             ),
@@ -985,7 +985,7 @@ let nu = o.memo(function (e) {
               onContextMenu: ni,
               role: "group",
               "aria-label": tp.intl.string(tp.t.Lv7LxN),
-              children: (0, r.jsxs)(t5.Ay, { className: e.innerClassName, children: [a, o] }),
+              children: (0, r.jsxs)(t7.Ay, { className: e.innerClassName, children: [a, o] }),
           });
 });
 var nh = n(701628),
@@ -2318,7 +2318,7 @@ function n4(e) {
         ],
     });
 }
-function n7(e) {
+function n5(e) {
     let {
         channelId: t,
         warningId: n,
@@ -2337,7 +2337,7 @@ function n7(e) {
     }, [c, t, n, l, i]);
     return (0, r.jsx)(n4, { buttons: d, description: a, header: s, onDismiss: u });
 }
-var n5 = n(477427);
+var n7 = n(477427);
 function n8(e) {
     let { channelId: t, warningId: l, senderId: i } = e,
         s = [
@@ -2349,7 +2349,7 @@ function n8(e) {
             (0, nY.xi)(t, [l]);
         }, [t, l]),
         c = (e) => {
-            nW.A.updateChannelOverrideSettings(null, t, { muted: !0 }, n5.fd.Muted),
+            nW.A.updateChannelOverrideSettings(null, t, { muted: !0 }, n7.fd.Muted),
                 nq.A.showMuteSuccessToast(i, t),
                 (0, nQ._$)({ channelId: t, warningId: l, senderId: i, warningType: nX._j.LIKELY_ATO, cta: e }),
                 a();
@@ -2364,7 +2364,7 @@ function n8(e) {
             }),
                 n$.A.increment({ name: nK.K.SAFETY_WARNING_VIEW });
         }, [t, l, i]),
-        (0, r.jsx)(n7, {
+        (0, r.jsx)(n5, {
             channelId: t,
             warningId: l,
             senderId: i,
@@ -2740,8 +2740,8 @@ var l0 = n(997509),
     l2 = n(34457),
     l3 = n(317525),
     l4 = n(488926),
-    l7 = n(84476);
-function l5(e) {
+    l5 = n(84476);
+function l7(e) {
     let {
         className: t,
         roleColor: n,
@@ -2752,12 +2752,12 @@ function l5(e) {
         verified: o = !1,
     } = e;
     return (0, r.jsx)(ek.D, {
-        className: d()(t, l7.x6, { [l7.r9]: a }),
+        className: d()(t, l5.x6, { [l5.r9]: a }),
         onClick: a ? void 0 : s,
         "aria-disabled": a,
         role: "button",
         children: (0, r.jsx)(lQ, {
-            className: l7.JC,
+            className: l5.JC,
             roleColor: n,
             roleName: l,
             verified: o,
@@ -2768,8 +2768,8 @@ function l5(e) {
                     color: "currentColor",
                     height: 6,
                     width: 6,
-                    className: l7.Tj,
-                    colorClass: l7.eG,
+                    className: l5.Tj,
+                    colorClass: l5.eG,
                 }),
         }),
     });
@@ -2884,7 +2884,7 @@ function l9(e) {
                             i = e.tags?.guild_connections !== void 0;
                         return A
                             ? (0, r.jsx)(
-                                  l5,
+                                  l7,
                                   {
                                       className: d()(l8.JC, { [l8.HV]: n === h.length - 1 }),
                                       roleName: e.name,
@@ -3441,7 +3441,7 @@ function i2(e) {
 }
 var i3 = n(746080),
     i4 = n(818050);
-function i7(e) {
+function i5(e) {
     let { canManageRoles: t, channel: n } = e,
         l = t && (0, ls.Ae)(n),
         i = (0, m.bG)([lc.Ay], () => null != n.guild_id && n === lc.Ay.getDefaultChannel(n.guild_id), [n]);
@@ -3452,7 +3452,7 @@ function i7(e) {
     if (l) return (0, r.jsx)(l9, { channel: n });
     return (0, r.jsx)(ie, { channel: n });
 }
-function i5(e) {
+function i7(e) {
     let { channel: t, showingBanner: n } = e,
         l = (0, k.Ay)(t),
         { type: i } = t,
@@ -3488,7 +3488,7 @@ function i5(e) {
         else if (t.hasFlag(i3.lx.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, r.jsx)(lb, { channel: t });
         else return (0, r.jsx)(lV, { channel: t, children: tp.intl.format(tp.t.MFwcqO, { name: l }) });
     return c
-        ? (0, r.jsx)(i7, { channel: t, canManageRoles: o })
+        ? (0, r.jsx)(i5, { channel: t, canManageRoles: o })
         : (0, r.jsx)(lu.Ay, {
               channelId: t.id,
               children: (0, r.jsx)(lu.j1, { children: tp.intl.format(tp.t.hPVEQG, { channelName: l }) }),
@@ -3596,7 +3596,7 @@ function sm(e) {
             null != n &&
                 null != l &&
                 ((0, nB.zV)(eh.HAw.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }),
-                (0, e5.C)((0, so.af)(n, l)));
+                (0, e7.C)((0, so.af)(n, l)));
         }, [n, l]);
     return (0, r.jsxs)("div", {
         className: sh.BQ,
@@ -3930,7 +3930,7 @@ function sY(e) {
     let D = C.reactions.length > 0,
         L = () => {
             (0, sW.jC)({ postId: f.id, location: { section: eh.JJy.CHANNEL_HEADER } }),
-                (0, e5.C)((0, so.af)(f, b), () => p(!0));
+                (0, e7.C)((0, so.af)(f, b), () => p(!0));
         },
         k = E ? i9.A : i6.X;
     return (0, r.jsxs)(r.Fragment, {
@@ -4131,7 +4131,7 @@ function s2(e) {
                 };
             });
         }, [h, g, i, t, d]);
-    return (0, r.jsx)(n7, {
+    return (0, r.jsx)(n5, {
         channelId: t,
         warningId: l,
         senderId: i,
@@ -4176,7 +4176,7 @@ function s4(e) {
         onButtonPress: i ? a : s,
     });
 }
-function s7(e) {
+function s5(e) {
     let { channelId: t, warningId: l, senderId: i } = e,
         { isBlocked: s } = (0, m.cf)([nS.A], () => ({ isBlocked: nS.A.isBlocked(i) }), [i]),
         a = o.useCallback(() => {
@@ -4263,7 +4263,7 @@ function s7(e) {
                     });
             });
         };
-    return (0, r.jsx)(n7, {
+    return (0, r.jsx)(n5, {
         channelId: t,
         warningId: l,
         senderId: i,
@@ -4298,7 +4298,7 @@ function s7(e) {
         ],
     });
 }
-var s5 = n(866323),
+var s7 = n(866323),
     s8 = n(306788),
     s9 = n(340833),
     s6 = n(913642),
@@ -4311,7 +4311,7 @@ function al(e) {
         i = (e, l) => {
             e.stopPropagation(), (0, ae.A)({ summary: t, channel: n, rating: l });
         },
-        s = (0, s5.p)(
+        s = (0, s7.p)(
             null == l,
             {
                 enter: { from: { opacity: 0 }, to: { opacity: 1 } },
@@ -4816,7 +4816,7 @@ let aD = (0, u.animated)(S),
                         P = (function (e, t) {
                             if (e.isDM() && null != t)
                                 if (t.type === nX._j.STRANGER_DANGER)
-                                    return (0, r.jsx)(s7, {
+                                    return (0, r.jsx)(s5, {
                                         channelId: e.id,
                                         warningId: t.id,
                                         senderId: e.getRecipientId(),
@@ -4972,7 +4972,7 @@ let aD = (0, u.animated)(S),
                     }
                     if (
                         ((a.hasMoreBefore && null == f) ||
-                            F.unshift((0, r.jsx)(i5, { channel: s, showingBanner: C }, "empty-message")),
+                            F.unshift((0, r.jsx)(i7, { channel: s, showingBanner: C }, "empty-message")),
                         a.hasMoreAfter && F.push((0, r.jsx)(ex, { compact: u, ...p }, "has-more-after")),
                         !C && j && _() && F.push((0, r.jsx)(ab, { channel: s })),
                         c > 0 && d && _())
@@ -5298,7 +5298,7 @@ let aD = (0, u.animated)(S),
                     c = (0, O.A)("use_topic_dividers_in_chat"),
                     d = (0, m.yK)([B.A], () => (r && c ? (B.A.summaries(e.id) ?? []) : []), [r, e.id, c]),
                     u = (0, m.bG)([B.A], () => (r ? B.A.selectedSummary(e.id) : null), [r, e.id]),
-                    h = (0, P.f)("message_stream"),
+                    h = (0, P.fw)("message_stream"),
                     g = (0, m.bG)([G.A], () => (h ? G.A.getSelectedConversation(e.id) : null), [h, e.id]),
                     A =
                         ((t = l),
@@ -5512,22 +5512,11 @@ let aD = (0, u.animated)(S),
                                                 isSummaryDivider: !0,
                                             }),
                                         null != d &&
-                                            e.id === d.start_message_id &&
-                                            d.message_count > 1 &&
+                                            e.id === d.startMessageId &&
+                                            d.messageCount > 1 &&
                                             u.push({
                                                 type: eh.TZK.DIVIDER,
-                                                content: (function (e) {
-                                                    let t = e.summary_map?.entries.find(
-                                                        (e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type,
-                                                    );
-                                                    if (null != t) {
-                                                        let e = (0, en.i)(t.content_json);
-                                                        if (e?.title != null && "" !== e.title) return e.title;
-                                                    }
-                                                    return e.keywords.length > 0
-                                                        ? e.keywords.slice(0, 3).join(", ")
-                                                        : `${e.message_count} messages`;
-                                                })(d),
+                                                content: (0, en.u)(d),
                                                 contentKey: `conv-start-${d.id}`,
                                                 isConversationDivider: !0,
                                             }),
@@ -5544,8 +5533,8 @@ let aD = (0, u.animated)(S),
                                             c.count > 1 &&
                                             u.push({ type: eh.TZK.DIVIDER, contentKey: c.endId, isSummaryDivider: !0 }),
                                         null != d &&
-                                            e.id === d.end_message_id &&
-                                            d.message_count > 1 &&
+                                            e.id === d.endMessageId &&
+                                            d.messageCount > 1 &&
                                             u.push({
                                                 type: eh.TZK.DIVIDER,
                                                 contentKey: `conv-end-${d.id}`,
@@ -5572,30 +5561,36 @@ let aD = (0, u.animated)(S),
                     oldestUnreadMessageId: i,
                     editingMessageId: (0, m.bG)([W.A], () => W.A.getEditingMessage(e.id)?.id),
                 };
-            })(t);
-        return (0, r.jsx)(F.Bs.Provider, {
-            value: (0, ee.A)(f, d),
-            children: (0, r.jsx)(eS.t, {
-                children: (0, r.jsx)(aL, {
-                    ...c,
-                    messageGroupSpacing: g,
-                    showNewMessagesBar: !0,
-                    channel: t,
-                    messageDisplayCompact: !s && (i || p),
-                    messages: E,
-                    channelStream: x,
-                    permissionVersion: u,
-                    uploads: (0, m.bG)([Y.A], () => Y.A.getFiles(t.id), [t]),
-                    unreadCount: (0, m.bG)([Z.Ay], () => Z.Ay.getUnreadCount(t.id), [t]),
-                    hasUnreads: null != S,
-                    canChat: h,
-                    editingMessageId: _,
-                    fontSize: A,
-                    keyboardModeEnabled: C,
-                    showingQuarantineBanner: n,
-                    hideSummaries: l,
-                    typingGradient: a,
+            })(t),
+            I = t.getGuildId();
+        return (
+            o.useEffect(() => {
+                null != I && P.W$.trackExposure({ guildId: I, location: "guild_entry" });
+            }, [I]),
+            (0, r.jsx)(F.Bs.Provider, {
+                value: (0, ee.A)(f, d),
+                children: (0, r.jsx)(eS.t, {
+                    children: (0, r.jsx)(aL, {
+                        ...c,
+                        messageGroupSpacing: g,
+                        showNewMessagesBar: !0,
+                        channel: t,
+                        messageDisplayCompact: !s && (i || p),
+                        messages: E,
+                        channelStream: x,
+                        permissionVersion: u,
+                        uploads: (0, m.bG)([Y.A], () => Y.A.getFiles(t.id), [t]),
+                        unreadCount: (0, m.bG)([Z.Ay], () => Z.Ay.getUnreadCount(t.id), [t]),
+                        hasUnreads: null != S,
+                        canChat: h,
+                        editingMessageId: _,
+                        fontSize: A,
+                        keyboardModeEnabled: C,
+                        showingQuarantineBanner: n,
+                        hideSummaries: l,
+                        typingGradient: a,
+                    }),
                 }),
-            }),
-        });
+            })
+        );
     });

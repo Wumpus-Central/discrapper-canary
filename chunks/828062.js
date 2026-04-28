@@ -21,8 +21,8 @@ var r = n(64700),
     R = n(43990),
     C = n(942857),
     D = n(77729),
-    L = n(313961),
-    p = n(267102),
+    p = n(313961),
+    L = n(267102),
     m = n(85563),
     h = n(908031),
     g = n(953727);
@@ -137,8 +137,8 @@ var k = n(531685),
     x = n(652215);
 let K = u.Ay.connectStores([k.A], () => ({ focused: k.A.isFocused() }))(function (e) {
     let { focused: t, type: n, windowKey: i, macOSFrame: r = !1, themeOverride: _ } = e,
-        s = (0, p.Us)(),
-        l = (0, u.bG)([L.A], () => L.A.isFullscreenInContext(s)),
+        s = (0, L.Us)(),
+        l = (0, u.bG)([p.A], () => p.A.isFullscreenInContext(s)),
         o = (0, C.A)();
     if (l) return null;
     switch (n) {
@@ -319,12 +319,12 @@ var eO = n(463347),
     eR = n(464578),
     eC = n(53505),
     eD = n(492462),
-    eL = n(998218);
-let ep = (e) => {
+    ep = n(998218);
+let eL = (e) => {
     if (null == e || "" === e) return null;
     try {
         let t = new URL(e);
-        return eL.A.isDiscordHostname(t.hostname) || window.location.host === t.host ? t : null;
+        return ep.A.isDiscordHostname(t.hostname) || window.location.host === t.host ? t : null;
     } catch (e) {
         return null;
     }
@@ -396,7 +396,7 @@ let eh = (0, er.Fe)({
                 n.e("40841"),
                 n.e("13836"),
                 n.e("95429"),
-                n.e("29835"),
+                n.e("23104"),
                 n.e("98965"),
                 n.e("48370"),
                 n.e("38589"),
@@ -961,7 +961,7 @@ let eh = (0, er.Fe)({
                 n.e("15380"),
                 n.e("207"),
                 n.e("95429"),
-                n.e("29835"),
+                n.e("23104"),
                 n.e("34304"),
                 n.e("10368"),
                 n.e("20287"),
@@ -1649,7 +1649,6 @@ let eh = (0, er.Fe)({
                 n.e("86243"),
                 n.e("32209"),
                 n.e("30788"),
-                n.e("48295"),
                 n.e("60249"),
                 n.e("4193"),
                 n.e("39171"),
@@ -2304,8 +2303,8 @@ class ez extends r.Component {
                                                 i =
                                                     ((e = window.location.search ?? ""),
                                                     {
-                                                        desktop: ep((t = (0, eD.parse)(e)).desktop_link),
-                                                        mobile: ep(t.mobile_link),
+                                                        desktop: eL((t = (0, eD.parse)(e)).desktop_link),
+                                                        mobile: eL(t.mobile_link),
                                                     });
                                             if ("iOS" !== n && "Android" !== n)
                                                 return (0, a.jsx)(q.rd, {
@@ -2444,10 +2443,10 @@ function e6() {
         background_install_ms_total: 0,
     };
 }
-function e8(e) {
+function e7(e) {
     return "host" === e;
 }
-class e7 {
+class e8 {
     _installingModules = {};
     _downloadingModules = {};
     _report;
@@ -2455,7 +2454,7 @@ class e7 {
         this._report = e6();
     }
     handleDownloadingModule(e) {
-        if (!e8(e.name)) {
+        if (!e7(e.name)) {
             if (null != this._downloadingModules[e.name])
                 return void console.warn("Duplicate downloading-module event for module ", e.name);
             this._downloadingModules[e.name] = { startTime: BigInt(e.now), foreground: e.foreground };
@@ -2475,7 +2474,7 @@ class e7 {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (e8(e.name)) return;
+        if (e7(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t)
             return void console.warn("Downloaded complete without corresponding downloading event for module ", e.name);
@@ -2492,7 +2491,7 @@ class e7 {
             delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
-        if (!e8(e.name)) {
+        if (!e7(e.name)) {
             if (null != this._installingModules[e.name])
                 return void console.warn("Duplicate installing-module event for module ", e.name);
             this._installingModules[e.name] = {
@@ -2504,7 +2503,7 @@ class e7 {
         }
     }
     handleInstalledModule(e) {
-        if (e8(e.name)) return;
+        if (e7(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? "foreground" : "background",
@@ -2558,7 +2557,7 @@ class e7 {
     }
 }
 class e4 extends eA.A {
-    _tracker = new e7();
+    _tracker = new e8();
     _initialize() {
         y.isPlatformEmbedded &&
             (v.Ay.on("UPDATE_DOWNLOADED", () => this.processModuleEvents()),
@@ -2710,8 +2709,8 @@ class tC extends eA.A {
     }
 }
 let tD = new tC();
-var tL = n(200330),
-    tp = n(350723),
+var tp = n(200330),
+    tL = n(350723),
     tm = n(346142),
     th = n(451988),
     tg = n(664932),
@@ -2794,7 +2793,7 @@ let tq = (0, _.createRoot)(tQ),
                 null == n ||
                 null == a ||
                 null == r ||
-                ((0, tL.openOAuth2Modal)({
+                ((0, tp.openOAuth2Modal)({
                     clientId: t,
                     scopes: n,
                     redirectUri: a,
@@ -2841,17 +2840,17 @@ else {
             v.Ay.on("HELP_OPEN", () => window.open(Y.A.getCommunityURL()));
         let e = new th.J_(t$, () => v.Ay.purgeMemory());
         v.Ay.on("MAIN_WINDOW_BLUR", () => {
-            e.delay(), v.Ay.setFocused(!1), (0, tp.XC)(window, !1);
+            e.delay(), v.Ay.setFocused(!1), (0, tL.XC)(window, !1);
         }),
             v.Ay.on("MAIN_WINDOW_FOCUS", () => {
-                e.cancel(), v.Ay.setFocused(!0), (0, tp.XC)(window, !0);
+                e.cancel(), v.Ay.setFocused(!0), (0, tL.XC)(window, !0);
             }),
             v.Ay.on("MAIN_WINDOW_PATH", function (e, t, n) {
                 let i = null != n ? new URLSearchParams(n) : null;
                 tX[t]?.(i) || (0, tt.pX)(t);
             }),
             v.Ay.on("MAIN_WINDOW_HIDDEN", () => {
-                (0, tp.R)(window);
+                (0, tL.R)(window);
             });
     }
     e9.initialize(),

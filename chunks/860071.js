@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A }), n(321073);
+n.d(t, { A: () => I }), n(321073);
 var i = n(17928),
     r = n(228366),
     s = n(735438),
@@ -40,7 +40,7 @@ class l {
         this._pendingRequests.add(e);
     }
 }
-class d {
+class _ {
     _onChange;
     _guildMemberExists;
     _guildStates = {};
@@ -81,9 +81,9 @@ class d {
         );
     }
 }
-var _ = n(734057),
+var d = n(734057),
     u = n(696451);
-let c = new d(u.Ay.isMember, (e, t) => {
+let c = new _(u.Ay.isMember, (e, t) => {
     r.h.dispatch({ type: "GUILD_MEMBERS_REQUEST", guildIds: [e], userIds: t });
 });
 function E() {
@@ -103,7 +103,7 @@ function m(e, t) {
 }
 function f(e) {
     let { channelId: t, messages: n } = e,
-        i = _.A.getChannel(t);
+        i = d.A.getChannel(t);
     return null != i && null != i.guild_id && m(i.guild_id, n);
 }
 function g(e) {
@@ -122,10 +122,10 @@ function g(e) {
         m(t, i)
     );
 }
-class p extends i.Ay.Store {
+class A extends i.Ay.Store {
     static displayName = "GuildMemberRequesterStore";
     initialize() {
-        this.waitFor(_.A, u.Ay);
+        this.waitFor(d.A, u.Ay);
     }
     requestMember(e, t) {
         h(e, t);
@@ -134,7 +134,7 @@ class p extends i.Ay.Store {
         return c.getDebugState(e);
     }
 }
-let A = new p(r.h, {
+let I = new A(r.h, {
     CONNECTION_CLOSED: E,
     CONNECTION_OPEN: E,
     CONNECTION_RESUMED: function () {
@@ -157,7 +157,7 @@ let A = new p(r.h, {
     LOAD_RECENT_MENTIONS_SUCCESS: f,
     LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
         let { pins: t, channelId: n } = e,
-            i = _.A.getChannel(n);
+            i = d.A.getChannel(n);
         return (
             null != i &&
             null != i.guild_id &&
@@ -169,5 +169,10 @@ let A = new p(r.h, {
                 }),
             )
         );
+    },
+    CONVERSATION_FETCH_SUCCESS: function (e) {
+        let { channelId: t, messages: n } = e,
+            i = d.A.getChannel(t);
+        return null != i && null != i.guild_id && m(i.guild_id, n);
     },
 });

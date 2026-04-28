@@ -1,207 +1,271 @@
-l.d(t, { Ay: () => T, O7: () => b, gS: () => E });
-var n = l(627968),
-    a = l(64700),
-    r = l(503698),
-    s = l.n(r),
-    i = l(284009),
-    c = l.n(i),
-    o = l(17928),
-    u = l(834730),
-    d = l(939249),
-    m = l(150934),
-    x = l(937008),
-    h = l(97352),
-    g = l(252424),
-    v = l(927578),
-    j = l(580630),
-    p = l(788868),
-    f = l(985018),
-    N = l(672305);
-let b = (e, t) => {
-        let l = e.interval === p.WT.YEAR ? f.t.ECT4A5 : f.t.v9QeON;
-        return f.intl.format(l, { price: (0, j.$g)(t.amount, t.currency) });
-    },
-    E = (e, t, l) => {
-        let {
-                userLocale: n,
-                isEligibleForBOGOPromotion: a,
-                shouldShowSavingsPercent: r,
-                isGift: s,
-                planId: i,
-                savingsPercent: c,
-            } = l,
-            o = null != e && (e.planId === i || (null != t && e.planId === t.id));
-        return a
-            ? s || i !== p.gD.PREMIUM_MONTH_TIER_2
-                ? null
-                : { type: "badge", textBadgeVariant: "eyebrow", text: f.intl.string(f.t.iQTfWx) }
-            : null == t || (t.interval === p.WT.YEAR && null != e) || (r && !o)
-              ? null != t && t.interval === p.WT.YEAR && null != e
-                  ? f.intl.string(f.t["122kWB"])
-                  : r && !o && null != c
-                    ? {
-                          type: "badge",
-                          textBadgeVariant: "eyebrow",
-                          text: f.intl.format(f.t.IAybsG, { discount: (0, g.l9)(n, c / 100) }),
-                      }
-                    : null
-              : null;
-    };
-function T(e) {
-    let {
-            userLocale: t,
-            premiumSubscription: l,
-            planId: r,
-            selectPlan: i,
-            selected: g,
-            priceOptions: T,
-            isPrepaid: y,
-            isCustomGift: A,
-            shouldUseCalculatedDiscount: C,
-            shouldShowUpdatedPaymentModal: I,
-            discountOffer: S,
-            discountAmountOff: _,
-            isEligibleForDiscount: k,
-            isEligibleForBOGOPromotion: P,
-            isEligibleForTrial: G,
-            isCurrentPlan: L,
-            disabled: M,
-        } = e,
-        { isGift: w } = (0, x.Pv)(),
-        R = (0, o.bG)([h.A], () => h.A.get(r));
-    c()(null != R, "Missing subscriptionPlan");
-    let D = (0, v.L_)({ planId: r, shouldUseCalculatedDiscount: C, isGift: w, priceOptions: T, subscriptionPlan: R }),
-        O = (0, v.y8)(r, !1, w, T),
-        $ = null != D && !I,
-        B = a.useCallback(() => {
-            let e = E(l, R, {
-                userLocale: t,
-                isEligibleForBOGOPromotion: P,
-                shouldShowSavingsPercent: $,
-                isGift: w,
-                planId: r,
-                savingsPercent: D,
-            });
-            return "string" == typeof e
-                ? (0, n.jsxs)("span", { className: N.IS, children: ["(", e, ")"] })
-                : null != e && "badge" === e.type
-                  ? (0, n.jsx)(u.E, {
-                        tag: "span",
-                        variant: e.textBadgeVariant,
-                        color: "always-white",
-                        className: N.kP,
-                        children: e.text,
-                    })
-                  : null;
-        }, [t, P, R, l, $, w, r, D]),
-        U = (0, v.m6)(R.id),
-        W = a.useMemo(
-            () => (0, v.D8)(R.interval, w, y, R.intervalCount, A, U),
-            [R.interval, R.intervalCount, w, y, A, U],
-        ),
-        z = () => {
-            M || i(r);
-        },
-        F = I
-            ? f.intl.format(f.t.hXcaLT, {
-                  price:
-                      k && null != _ && R.interval === p.WT.MONTH
-                          ? (0, j.$g)(O.amount - _, O.currency)
-                          : G
-                            ? (0, j.$g)(0, O.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-                            : (0, j.$g)(O.amount, O.currency),
-              })
-            : (0, j.$g)(O.amount, O.currency);
-    return (0, n.jsxs)(d.D, {
-        role: A ? "menuitem" : "radio",
-        "aria-checked": g,
-        tabIndex: A || g ? 0 : -1,
-        focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
-        onClick: z,
-        className: s()(N.G_, { [N.vW]: A && g, [N.Gb]: A }),
-        children: [
-            (0, n.jsxs)("div", {
-                className: s()(N.XM, { [N.PA]: M }),
-                children: [
-                    (0, n.jsxs)("div", {
-                        className: N.l,
-                        children: [
-                            !A &&
-                                (0, n.jsx)("div", {
-                                    className: N.E2,
-                                    children: (0, n.jsx)(m.S, {
-                                        checked: g,
-                                        value: g,
-                                        label: "",
-                                        description: "",
-                                        onChange: z,
-                                    }),
-                                }),
-                            (0, n.jsxs)("div", {
-                                children: [
-                                    (0, n.jsxs)("div", {
-                                        className: s()(N.Gl, { [N.h4]: g || A, [N.ox]: I && (g || A) }),
-                                        children: [W, A && B()],
-                                    }),
-                                    A &&
-                                        (0, n.jsx)("div", {
-                                            className: N._R,
-                                            children: f.intl.format(f.t.ori2Jm, {
-                                                currencyAmount: (0, j.$g)(O.amount, O.currency),
-                                            }),
-                                        }),
-                                ],
-                            }),
-                            L &&
-                                (0, n.jsxs)("span", {
-                                    className: N.bq,
-                                    children: ["(", f.intl.string(f.t.ymSxhy), ")"],
-                                }),
-                            !A && B(),
-                        ],
-                    }),
-                    I
-                        ? (0, n.jsx)("div", { className: s()({ [N.kb]: g }), children: F })
-                        : (0, n.jsx)("div", { className: s()({ [N.h4]: g || A }), children: F }),
-                ],
-            }),
-            I &&
-                (0, n.jsx)("div", {
-                    className: N.hB,
-                    children: (0, n.jsx)(u.E, {
-                        variant: "text-md/normal",
-                        color: g ? "text-default" : "interactive-text-default",
-                        className: s()(N.Ub, { [N.sw]: k || G }),
-                        children: ((e, t) => {
-                            let {
-                                price: l,
-                                isEligibleForDiscount: n,
-                                isEligibleForTrial: a,
-                                discountAmountOff: r,
-                                discountOffer: s,
-                                savingsPercent: i,
-                            } = t;
-                            return n && null != r && e.interval === p.WT.MONTH
-                                ? f.intl.format(f.t["VeE/4E"], {
-                                      numMonths: s?.discount.user_usage_limit ?? p.OJ,
-                                      discountedPrice: (0, j.$g)(l.amount - r, l.currency),
-                                      regularPrice: (0, j.$g)(l.amount, l.currency),
-                                  })
-                                : a
-                                  ? b(e, l)
-                                  : e.interval === p.WT.YEAR
-                                    ? f.intl.formatToPlainString(f.t.rtLTJP, { percent: i ?? "" })
-                                    : null;
-                        })(R, {
-                            price: O,
-                            isEligibleForDiscount: k,
-                            isEligibleForTrial: G,
-                            discountAmountOff: _,
-                            discountOffer: S,
-                            savingsPercent: D,
-                        }),
-                    }),
-                }),
-        ],
-    });
+"use strict";
+n.d(t, { A: () => D }), n(321073);
+var i = n(17928),
+    r = n(228366),
+    s = n(320095),
+    a = n(495544),
+    o = n(734057),
+    l = n(994500),
+    _ = n(309010),
+    d = n(967198),
+    u = n(287809),
+    c = n(935208),
+    E = n(256331),
+    h = n(705448);
+let m = new Map(),
+    f = new Set(),
+    g = new Map(),
+    A = new Map(),
+    I = null,
+    p = null,
+    T = null,
+    S = !1,
+    N = new Set(),
+    O = 0;
+function R(e, t) {
+    let n = m.get(e);
+    if (null == n) return !1;
+    let i = n.messageMetadataByMessageId.get(t);
+    if (null != i) {
+        let e = n.conversationMetadataById.get(i.conversationId);
+        e?.hydratedMessages != null && (e.hydratedMessages = e.hydratedMessages.filter((e) => e.id !== t));
+    }
+    return n.messageMetadataByMessageId.delete(t);
 }
+function C(e) {
+    let t = m.delete(e);
+    return (
+        f.delete(e) && (t = !0),
+        g.delete(e) && (t = !0),
+        A.delete(e) && (t = !0),
+        I === e && (I = null),
+        p?.channelId === e && ((p = null), (t = !0)),
+        t
+    );
+}
+class y extends i.Ay.Store {
+    static displayName = "ConversationsStore";
+    initialize() {
+        this.waitFor(a.default, o.A, E.A, l.A, _.A, d.A, u.default);
+    }
+    hasChannelData(e) {
+        return m.has(e);
+    }
+    getChannelConversations(e) {
+        let t = m.get(e);
+        return null == t
+            ? []
+            : t.conversations.map((e) => {
+                  let n = t.conversationMetadataById.get(e.id);
+                  return { conversation: e, color: n?.color ?? h.J["0"] };
+              });
+    }
+    getConversationForMessage(e, t) {
+        return m.get(e)?.messageMetadataByMessageId.get(t)?.conversationId ?? null;
+    }
+    getMessageMetadata(e, t) {
+        return m.get(e)?.messageMetadataByMessageId.get(t) ?? null;
+    }
+    getConversationMetadata(e, t) {
+        return m.get(e)?.conversationMetadataById.get(t) ?? null;
+    }
+    getScrollToConversation(e) {
+        return p?.channelId === e ? { conversationId: p.conversationId, seq: p.seq } : null;
+    }
+    hasMoreConversations(e, t) {
+        return !!m.has(e) && ("before" === t ? !g.get(e) : !A.get(e));
+    }
+    isPendingFetch(e) {
+        return f.has(e);
+    }
+    getSelectedConversation(e) {
+        return null == T ? null : (m.get(e)?.conversationMetadataById.get(T)?.conversation ?? null);
+    }
+    getSelectedConversationColor(e) {
+        return null == T ? null : (m.get(e)?.conversationMetadataById.get(T)?.color ?? null);
+    }
+    getHydratedMessages(e, t) {
+        let n = m.get(e)?.conversationMetadataById.get(t)?.hydratedMessages;
+        return null != n && n.length > 0 ? n : null;
+    }
+    getHydratedMessageById(e, t) {
+        return m.get(e)?.messageMetadataByMessageId.get(t)?.message ?? null;
+    }
+    isConversationFetchPending(e) {
+        return N.has(e);
+    }
+    isConversationExpanded() {
+        return S;
+    }
+}
+let D = new y(r.h, {
+    CONVERSATION_FETCH_START: function (e) {
+        let { conversationId: t } = e;
+        N.add(t);
+    },
+    CONVERSATION_FETCH_SUCCESS: function (e) {
+        let { channelId: t, conversationId: n, conversation: i, messages: r } = e;
+        N.delete(n);
+        let a = m.get(t);
+        if (null == a) return;
+        let o = a.conversationMetadataById.get(n);
+        null != o && (o.conversation = i);
+        let l = r.map((e) => (0, s.rh)(e));
+        for (let e of l) {
+            let t = a.messageMetadataByMessageId.get(e.id);
+            null != t
+                ? (t.message = e)
+                : a.messageMetadataByMessageId.set(e.id, { conversationId: n, moderationLabel: null, message: e });
+        }
+        null != o && (o.hydratedMessages = l);
+    },
+    CONVERSATION_FETCH_FAILURE: function (e) {
+        let { conversationId: t } = e;
+        N.delete(t);
+    },
+    CONVERSATIONS_FETCH_START: function (e) {
+        let { channelId: t } = e;
+        f.add(t);
+    },
+    CONVERSATIONS_FETCH_SUCCESS: function (e) {
+        let {
+            channelId: t,
+            conversations: n,
+            direction: i,
+            beforeShortCircuited: r,
+            afterShortCircuited: s,
+            isStaleRefresh: a,
+        } = e;
+        f.delete(t);
+        let l = m.get(t)?.conversations ?? [];
+        a &&
+            (l = (function (e, t) {
+                if (0 === t.length) return e;
+                let n = new Set(t.map((e) => e.id)),
+                    i = Math.min(...t.map((e) => c.default.extractTimestamp(e.startMessageId))),
+                    r = Math.max(...t.map((e) => c.default.extractTimestamp(e.startMessageId)));
+                return e.filter((e) => {
+                    let t = c.default.extractTimestamp(e.startMessageId);
+                    return t < i || t > r || n.has(e.id);
+                });
+            })(l, n)),
+            r && ("before" === i || "around" === i) && g.set(t, !0),
+            s && ("after" === i || "around" === i) && A.set(t, !0);
+        let _ = (function (e, t) {
+            let n = new Map();
+            for (let t of e) n.set(t.id, t);
+            for (let e of t) n.set(e.id, e);
+            let i = Array.from(n.values());
+            return i.sort((e, t) => c.default.compare(e.startMessageId, t.startMessageId)), i;
+        })(l, n);
+        m.set(
+            t,
+            (function (e, t, n) {
+                let i = n?.guildId ?? t[0]?.guildId ?? o.A.getChannel(e)?.guild_id ?? null,
+                    r = new Map(),
+                    s = new Map();
+                for (let e of t) {
+                    let t = n?.conversationMetadataById.get(e.id),
+                        i = t?.color ?? h.J[O++ % h.J.length];
+                    r.set(e.id, { conversation: e, color: i, hydratedMessages: t?.hydratedMessages ?? null });
+                    let a = null;
+                    if (null != e.moderation)
+                        for (let t of ((a = new Map()), e.moderation.flaggedMessageDetails)) {
+                            let e = a.get(t.messageId);
+                            null != e ? e.push(t) : a.set(t.messageId, [t]);
+                        }
+                    for (let t of e.messageIds) {
+                        let i = null;
+                        null != e.moderation &&
+                            e.moderation.flaggedMessageIds.includes(t) &&
+                            null != a &&
+                            (i = (function (e) {
+                                let t = e[0],
+                                    n = e.map((e) => e.category ?? e.reason).filter((e) => null != e),
+                                    i = t?.severity ?? null,
+                                    r = t?.confidence ?? null,
+                                    s = [null != i ? `${i} severity` : null, null != r ? `${r} confidence` : null]
+                                        .filter(Boolean)
+                                        .join(", "),
+                                    a = [n.length > 0 ? n.join(", ") : null, s.length > 0 ? s : null]
+                                        .filter(Boolean)
+                                        .join(" \xb7 ");
+                                return a.length > 0 ? a : "Moderation Failed";
+                            })(a.get(t) ?? []));
+                        let r = n?.messageMetadataByMessageId.get(t)?.message ?? null;
+                        s.set(t, { conversationId: e.id, moderationLabel: i, message: r });
+                    }
+                }
+                return { guildId: i, conversations: t, conversationMetadataById: r, messageMetadataByMessageId: s };
+            })(t, _, m.get(t)),
+        );
+    },
+    CONVERSATIONS_FETCH_FAILURE: function (e) {
+        let { channelId: t } = e;
+        f.delete(t);
+    },
+    CHANNEL_SELECT: function (e) {
+        let { channelId: t } = e;
+        if (I === t) return !1;
+        (T = null), (S = !1), (I = t ?? null);
+    },
+    CHANNEL_DELETE: function (e) {
+        let { channel: t } = e;
+        return C(t.id);
+    },
+    GUILD_DELETE: function (e) {
+        let { guild: t } = e;
+        if ("unavailable" in t && !0 === t.unavailable) return !1;
+        let n = !1;
+        for (let [e, i] of m) i.guildId === t.id && C(e) && (n = !0);
+        return n;
+    },
+    LOAD_MESSAGES_SUCCESS: function (e) {
+        let { channelId: t, jump: n } = e;
+        return null != n && _.A.getChannelId() === t && (g.delete(t), A.delete(t), !0);
+    },
+    SET_SELECTED_CONVERSATION: function (e) {
+        let { channelId: t, conversationId: n } = e;
+        return (
+            T !== n &&
+            ((T = n),
+            (S = !1),
+            null != t && null != n && (p = { channelId: t, conversationId: n, seq: (p?.seq ?? 0) + 1 }),
+            !0)
+        );
+    },
+    SET_CONVERSATION_EXPANDED: function (e) {
+        let { expanded: t } = e;
+        return S !== t && ((S = t), !0);
+    },
+    MESSAGE_UPDATE: function (e) {
+        let { message: t } = e,
+            n = t.channel_id,
+            i = t.id;
+        if (null == n || null == i) return !1;
+        let r = m.get(n),
+            a = r?.messageMetadataByMessageId.get(i);
+        if (a?.message == null) return !1;
+        let o = (0, s.IU)(a.message, t);
+        a.message = o;
+        let l = r?.conversationMetadataById.get(a.conversationId);
+        if (l?.hydratedMessages != null) {
+            let e = l.hydratedMessages.findIndex((e) => e.id === i);
+            -1 !== e && (l.hydratedMessages[e] = o);
+        }
+        return !0;
+    },
+    MESSAGE_DELETE: function (e) {
+        let { channelId: t, id: n } = e;
+        return R(t, n);
+    },
+    MESSAGE_DELETE_BULK: function (e) {
+        let { channelId: t, ids: n } = e,
+            i = !1;
+        for (let e of n) R(t, e) && (i = !0);
+        return i;
+    },
+    LOGOUT: function () {
+        m.clear(), f.clear(), g.clear(), A.clear(), N.clear(), (I = null), (T = null), (S = !1), (p = null), (O = 0);
+    },
+});

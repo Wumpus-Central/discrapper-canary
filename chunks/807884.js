@@ -1,8 +1,8 @@
 n.d(l, { A: () => o });
 var t = n(17928),
-    a = n(17447),
-    i = n(256331),
-    s = n(736339);
+    i = n(828488),
+    a = n(256331),
+    s = n(958720);
 function r(e, l) {
     return (
         e === l ||
@@ -16,15 +16,15 @@ function r(e, l) {
     );
 }
 function o(e, l) {
-    let { enabled: n } = a.L.useConfig({ location: "useMessageConversation" });
+    let { enabled: n } = i.LX.useConfig({ location: "useMessageConversation" });
     return (0, t.bG)(
-        [s.A, i.A],
+        [s.A, a.A],
         () => {
-            if (!n || !i.A.isHighlightingEnabled()) return null;
+            if (!n || !a.A.isHighlightingEnabled()) return null;
             let t = s.A.getMessageMetadata(e, l);
             if (null == t) return null;
-            let a = s.A.getConversationMetadata(e, t.conversationId);
-            return null == a ? null : { conversation: a, message: t, color: s.A.getMessageConversationColor(e, l) };
+            let i = s.A.getConversationMetadata(e, t.conversationId);
+            return null == i ? null : { conversation: i, message: t, color: i.color };
         },
         [e, l, n],
         r,

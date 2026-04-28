@@ -1,230 +1,207 @@
-n.d(l, { A: () => M }), n(321073);
-var t = n(17928),
-    a = n(228366),
-    i = n(935208),
-    s = n(17447),
-    r = n(256331),
-    o = n(141850),
-    u = n(705448);
-let d = new Map(),
-    c = new Set(),
-    g = new Map(),
-    h = new Map(),
-    m = new Map(),
-    A = !1,
-    v = null,
-    f = null,
-    x = null,
-    p = null,
-    j = null,
-    C = null,
-    N = 0,
-    I = null,
-    _ = null,
-    E = 0;
-class b extends t.Ay.Store {
-    static displayName = "ConversationsStore";
-    initialize() {
-        this.waitFor(r.A);
-    }
-    getMessageConversationColor(e, l) {
-        if (!r.A.isHighlightingEnabled()) return null;
-        let n = d.get(e);
-        if (null == n) return null;
-        let t = n.messageMetadataByMessageId.get(l);
-        if (null == t) return null;
-        let a = n.conversationMetadataById.get(t.conversationId)?.color ?? null;
-        return null == a ? null : null != f && f.has(l) ? a.replace(/,\s*0\.12\)$/, ", 0.24)") : a;
-    }
-    getChannelConversations(e) {
-        let l = d.get(e);
-        return null == l
-            ? []
-            : l.conversations.map((e) => {
-                  let n = l.conversationMetadataById.get(e.id);
-                  return { conversation: e, color: n?.color ?? u.J["0"] };
-              });
-    }
-    getVisibleConversationIds(e) {
-        let l = new Set();
-        if (null == x && null == p) return l;
-        let n = d.get(e)?.conversations;
-        if (null == n) return l;
-        for (let e of n) {
-            let n = null != p && 0 > i.default.compare(p, e.start_message_id);
-            (null != x && i.default.compare(x, e.end_message_id) > 0) || n || l.add(e.id);
-        }
-        return l;
-    }
-    getConversationForMessage(e, l) {
-        return d.get(e)?.messageMetadataByMessageId.get(l)?.conversationId ?? null;
-    }
-    getMessageMetadata(e, l) {
-        return d.get(e)?.messageMetadataByMessageId.get(l) ?? null;
-    }
-    getConversationMetadata(e, l) {
-        return d.get(e)?.conversationMetadataById.get(l) ?? null;
-    }
-    getScrollToConversation(e) {
-        return C === e && null != j ? { conversationId: j, seq: N } : null;
-    }
-    hasMoreConversations(e, l) {
-        return !!d.has(e) && ("before" === l ? !h.get(e) : !m.get(e));
-    }
-    isPendingFetch(e) {
-        return c.has(e);
-    }
-    getSelectedConversation(e) {
-        return _ !== e || null == I ? null : (d.get(e)?.conversationMetadataById.get(I)?.conversation ?? null);
-    }
-    getSelectedConversationColor(e) {
-        return _ !== e || null == I ? null : (d.get(e)?.conversationMetadataById.get(I)?.color ?? null);
-    }
-}
-let M = new b(a.h, {
-    CONVERSATIONS_FETCH_START: function (e) {
-        let { channelId: l } = e;
-        return c.add(l), !0;
+n.d(t, { Ay: () => T, O7: () => y, gS: () => A });
+var l = n(627968),
+    a = n(64700),
+    r = n(503698),
+    i = n.n(r),
+    s = n(284009),
+    u = n.n(s),
+    o = n(17928),
+    c = n(834730),
+    d = n(939249),
+    m = n(150934),
+    x = n(937008),
+    f = n(97352),
+    g = n(252424),
+    h = n(927578),
+    p = n(580630),
+    v = n(788868),
+    b = n(985018),
+    j = n(672305);
+let y = (e, t) => {
+        let n = e.interval === v.WT.YEAR ? b.t.ECT4A5 : b.t.v9QeON;
+        return b.intl.format(n, { price: (0, p.$g)(t.amount, t.currency) });
     },
-    CONVERSATIONS_FETCH_SUCCESS: function (e) {
+    A = (e, t, n) => {
         let {
-            channelId: l,
-            conversations: n,
-            direction: t,
-            beforeShortCircuited: a,
-            afterShortCircuited: s,
-            isStaleRefresh: r,
-        } = e;
-        c.delete(l), g.set(l, Date.now());
-        let o = d.get(l)?.conversations ?? [];
-        r &&
-            (o = (function (e, l) {
-                if (0 === l.length) return e;
-                let n = new Set(l.map((e) => e.id)),
-                    t = Math.min(...l.map((e) => i.default.extractTimestamp(e.start_message_id))),
-                    a = Math.max(...l.map((e) => i.default.extractTimestamp(e.start_message_id)));
-                return e.filter((e) => {
-                    let l = i.default.extractTimestamp(e.start_message_id);
-                    return l < t || l > a || n.has(e.id);
-                });
-            })(o, n)),
-            a && ("before" === t || "around" === t) && h.set(l, !0),
-            s && ("after" === t || "around" === t) && m.set(l, !0);
-        let A = (function (e, l) {
-            let n = new Map();
-            for (let l of e) n.set(l.id, l);
-            for (let e of l) n.set(e.id, e);
-            let t = Array.from(n.values());
-            return t.sort((e, l) => i.default.compare(e.start_message_id, l.start_message_id)), t;
-        })(o, n);
-        return (
-            d.set(
-                l,
-                (function (e, l) {
-                    let n = new Map(),
-                        t = new Map();
-                    for (let a of e) {
-                        let e = l?.conversationMetadataById.get(a.id)?.color ?? u.J[E++ % u.J.length];
-                        n.set(a.id, { conversation: a, color: e });
-                        let i = null;
-                        if (null != a.moderation)
-                            for (let e of ((i = new Map()), a.moderation.flagged_message_details)) {
-                                let l = i.get(e.message_id);
-                                null != l ? l.push(e) : i.set(e.message_id, [e]);
-                            }
-                        for (let e of a.message_ids) {
-                            let l = null;
-                            null != a.moderation &&
-                                a.moderation.flagged_message_ids.includes(e) &&
-                                null != i &&
-                                (l = (function (e) {
-                                    let l = e[0],
-                                        n = e.map((e) => e.category ?? e.reason).filter((e) => null != e),
-                                        t = l?.severity ?? null,
-                                        a = l?.confidence ?? null,
-                                        i = [null != t ? `${t} severity` : null, null != a ? `${a} confidence` : null]
-                                            .filter(Boolean)
-                                            .join(", "),
-                                        s = [n.length > 0 ? n.join(", ") : null, i.length > 0 ? i : null]
-                                            .filter(Boolean)
-                                            .join(" \xb7 ");
-                                    return s.length > 0 ? s : "Moderation Failed";
-                                })(i.get(e) ?? [])),
-                                t.set(e, { conversationId: a.id, moderationLabel: l });
-                        }
-                    }
-                    return { conversations: e, conversationMetadataById: n, messageMetadataByMessageId: t };
-                })(A, d.get(l)),
-            ),
-            !0
-        );
-    },
-    CONVERSATIONS_FETCH_FAILURE: function (e) {
-        let { channelId: l } = e;
-        return c.delete(l), !0;
-    },
-    CHANNEL_SELECT: function (e) {
-        let { channelId: l, messageId: n } = e;
-        return (
-            (A = !1),
-            (v = l ?? null),
-            (x = null),
-            (p = null),
-            _ !== l && ((I = null), (_ = null)),
-            null != l &&
-                !c.has(l) &&
-                !d.has(l) &&
-                (0, s.f)("channel_select") &&
-                (null != n
-                    ? (0, o.WF)({ channelId: l, around: n, limit: 25 })
-                    : (0, o.WF)({ channelId: l, limit: 25 })),
-            !0
-        );
-    },
-    LOAD_MESSAGES_SUCCESS: function (e) {
-        let { channelId: l, jump: n } = e;
-        return null != n && v === l && (g.delete(l), h.delete(l), m.delete(l), (A = !0), !0);
-    },
-    UPDATE_VISIBLE_MESSAGES: function (e) {
-        let { topVisibleMessage: l, bottomVisibleMessage: n } = e;
-        if (null == v || !(0, s.f)("visible_messages")) return !1;
-        let t = x !== l,
-            a = p !== n;
-        if (((x = l ?? null), (p = n ?? null), !t && !a)) return !1;
-        if (c.has(v) || null == l) return !0;
-        if (A) return (A = !1), (0, o.WF)({ channelId: v, around: l, limit: 25 }), !0;
-        let r = g.get(v) ?? 0,
-            u = Date.now() - r;
-        if (u < 2e3) return !0;
-        let { above: f, below: j } = (function (e, l, n) {
-            let t = d.get(e)?.conversations;
-            if (null == t || 0 === t.length) return { above: 0, below: 0 };
-            let a = 0,
-                s = 0;
-            for (let e of t)
-                null != l && 0 > i.default.compare(e.start_message_id, l) && a++,
-                    null != n && i.default.compare(e.start_message_id, n) > 0 && s++;
-            return { above: a, below: s };
-        })(v, l, n);
-        return (
-            f < 5 && !h.get(v)
-                ? (0, o.WF)({ channelId: v, before: l, limit: 25 })
-                : j < 5 && null != n && !m.get(v)
-                  ? (0, o.WF)({ channelId: v, after: n, limit: 25 })
-                  : u > 6e4 && (0, o.WF)({ channelId: v, around: l, limit: 25, isStaleRefresh: !0 }),
-            !0
-        );
-    },
-    CONVERSATIONS_HOVER_CONVERSATION: function (e) {
-        let { channelId: l, conversationId: n } = e;
-        if (null != l && null != n) {
-            let e = d.get(l)?.conversationMetadataById.get(n)?.conversation;
-            f = null != e ? new Set(e.message_ids) : null;
-        } else f = null;
-        return !0;
-    },
-    SET_SELECTED_CONVERSATION: function (e) {
-        let { channelId: l, conversationId: n } = e;
-        return (_ !== l || I !== n) && ((_ = l), (I = n), null != l && null != n && ((j = n), (C = l), N++), !0);
-    },
-});
+                userLocale: l,
+                isEligibleForBOGOPromotion: a,
+                shouldShowSavingsPercent: r,
+                isGift: i,
+                planId: s,
+                savingsPercent: u,
+            } = n,
+            o = null != e && (e.planId === s || (null != t && e.planId === t.id));
+        return a
+            ? i || s !== v.gD.PREMIUM_MONTH_TIER_2
+                ? null
+                : { type: "badge", textBadgeVariant: "eyebrow", text: b.intl.string(b.t.iQTfWx) }
+            : null == t || (t.interval === v.WT.YEAR && null != e) || (r && !o)
+              ? null != t && t.interval === v.WT.YEAR && null != e
+                  ? b.intl.string(b.t["122kWB"])
+                  : r && !o && null != u
+                    ? {
+                          type: "badge",
+                          textBadgeVariant: "eyebrow",
+                          text: b.intl.format(b.t.IAybsG, { discount: (0, g.l9)(l, u / 100) }),
+                      }
+                    : null
+              : null;
+    };
+function T(e) {
+    let {
+            userLocale: t,
+            premiumSubscription: n,
+            planId: r,
+            selectPlan: s,
+            selected: g,
+            priceOptions: T,
+            isPrepaid: N,
+            isCustomGift: E,
+            shouldUseCalculatedDiscount: S,
+            shouldShowUpdatedPaymentModal: C,
+            discountOffer: P,
+            discountAmountOff: k,
+            isEligibleForDiscount: I,
+            isEligibleForBOGOPromotion: _,
+            isEligibleForTrial: L,
+            isCurrentPlan: w,
+            disabled: M,
+        } = e,
+        { isGift: O } = (0, x.Pv)(),
+        G = (0, o.bG)([f.A], () => f.A.get(r));
+    u()(null != G, "Missing subscriptionPlan");
+    let R = (0, h.L_)({ planId: r, shouldUseCalculatedDiscount: S, isGift: O, priceOptions: T, subscriptionPlan: G }),
+        D = (0, h.y8)(r, !1, O, T),
+        W = null != R && !C,
+        B = a.useCallback(() => {
+            let e = A(n, G, {
+                userLocale: t,
+                isEligibleForBOGOPromotion: _,
+                shouldShowSavingsPercent: W,
+                isGift: O,
+                planId: r,
+                savingsPercent: R,
+            });
+            return "string" == typeof e
+                ? (0, l.jsxs)("span", { className: j.IS, children: ["(", e, ")"] })
+                : null != e && "badge" === e.type
+                  ? (0, l.jsx)(c.E, {
+                        tag: "span",
+                        variant: e.textBadgeVariant,
+                        color: "always-white",
+                        className: j.kP,
+                        children: e.text,
+                    })
+                  : null;
+        }, [t, _, G, n, W, O, r, R]),
+        Y = (0, h.m6)(G.id),
+        F = a.useMemo(
+            () => (0, h.D8)(G.interval, O, N, G.intervalCount, E, Y),
+            [G.interval, G.intervalCount, O, N, E, Y],
+        ),
+        U = () => {
+            M || s(r);
+        },
+        $ = C
+            ? b.intl.format(b.t.hXcaLT, {
+                  price:
+                      I && null != k && G.interval === v.WT.MONTH
+                          ? (0, p.$g)(D.amount - k, D.currency)
+                          : L
+                            ? (0, p.$g)(0, D.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                            : (0, p.$g)(D.amount, D.currency),
+              })
+            : (0, p.$g)(D.amount, D.currency);
+    return (0, l.jsxs)(d.D, {
+        role: E ? "menuitem" : "radio",
+        "aria-checked": g,
+        tabIndex: E || g ? 0 : -1,
+        focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
+        onClick: U,
+        className: i()(j.G_, { [j.vW]: E && g, [j.Gb]: E }),
+        children: [
+            (0, l.jsxs)("div", {
+                className: i()(j.XM, { [j.PA]: M }),
+                children: [
+                    (0, l.jsxs)("div", {
+                        className: j.l,
+                        children: [
+                            !E &&
+                                (0, l.jsx)("div", {
+                                    className: j.E2,
+                                    children: (0, l.jsx)(m.S, {
+                                        checked: g,
+                                        value: g,
+                                        label: "",
+                                        description: "",
+                                        onChange: U,
+                                    }),
+                                }),
+                            (0, l.jsxs)("div", {
+                                children: [
+                                    (0, l.jsxs)("div", {
+                                        className: i()(j.Gl, { [j.h4]: g || E, [j.ox]: C && (g || E) }),
+                                        children: [F, E && B()],
+                                    }),
+                                    E &&
+                                        (0, l.jsx)("div", {
+                                            className: j._R,
+                                            children: b.intl.format(b.t.ori2Jm, {
+                                                currencyAmount: (0, p.$g)(D.amount, D.currency),
+                                            }),
+                                        }),
+                                ],
+                            }),
+                            w &&
+                                (0, l.jsxs)("span", {
+                                    className: j.bq,
+                                    children: ["(", b.intl.string(b.t.ymSxhy), ")"],
+                                }),
+                            !E && B(),
+                        ],
+                    }),
+                    C
+                        ? (0, l.jsx)("div", { className: i()({ [j.kb]: g }), children: $ })
+                        : (0, l.jsx)("div", { className: i()({ [j.h4]: g || E }), children: $ }),
+                ],
+            }),
+            C &&
+                (0, l.jsx)("div", {
+                    className: j.hB,
+                    children: (0, l.jsx)(c.E, {
+                        variant: "text-md/normal",
+                        color: g ? "text-default" : "interactive-text-default",
+                        className: i()(j.Ub, { [j.sw]: I || L }),
+                        children: ((e, t) => {
+                            let {
+                                price: n,
+                                isEligibleForDiscount: l,
+                                isEligibleForTrial: a,
+                                discountAmountOff: r,
+                                discountOffer: i,
+                                savingsPercent: s,
+                            } = t;
+                            return l && null != r && e.interval === v.WT.MONTH
+                                ? b.intl.format(b.t["VeE/4E"], {
+                                      numMonths: i?.discount.user_usage_limit ?? v.OJ,
+                                      discountedPrice: (0, p.$g)(n.amount - r, n.currency),
+                                      regularPrice: (0, p.$g)(n.amount, n.currency),
+                                  })
+                                : a
+                                  ? y(e, n)
+                                  : e.interval === v.WT.YEAR
+                                    ? b.intl.formatToPlainString(b.t.rtLTJP, { percent: s ?? "" })
+                                    : null;
+                        })(G, {
+                            price: D,
+                            isEligibleForDiscount: I,
+                            isEligibleForTrial: L,
+                            discountAmountOff: k,
+                            discountOffer: P,
+                            savingsPercent: R,
+                        }),
+                    }),
+                }),
+        ],
+    });
+}
