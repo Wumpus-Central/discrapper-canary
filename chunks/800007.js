@@ -1,24 +1,25 @@
 n.d(t, {
-    FG: () => T,
-    HS: () => s,
+    FG: () => A,
+    HS: () => _,
     LC: () => S,
     PH: () => u,
     ST: () => o,
     U$: () => E,
-    W5: () => O,
+    W5: () => f,
     XF: () => c,
-    YJ: () => A,
     ZI: () => d,
-    ZN: () => _,
+    ZN: () => s,
     by: () => l,
-    eh: () => N,
-    q4: () => I,
+    eh: () => O,
+    js: () => I,
+    q4: () => T,
+    t0: () => N,
 });
 var i,
-    r = n(281445),
-    a = n(115093),
-    s = (((i = {}).SELECT_GAME = "select-game"), (i.SERVER_SETTINGS = "server-settings"), i);
-let _ = {
+    a = n(281445),
+    r = n(115093),
+    _ = (((i = {}).SELECT_GAME = "select-game"), (i.SERVER_SETTINGS = "server-settings"), i);
+let s = {
         steps: {
             "select-game": { onBack: { type: "close" }, onNext: { type: "go-to-step", step: "server-settings" } },
             "server-settings": { onBack: { type: "go-to-step", step: "select-game" }, onNext: { type: "save" } },
@@ -30,14 +31,15 @@ let _ = {
     d = 10,
     c = 32,
     u = 1e3,
-    I =
+    I = 3,
+    T =
         "production" === window.GLOBAL_ENV.PROJECT_ENV
             ? "1425215263548117002"
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? "1415044199572832256"
-              : "1415025086791942144",
-    A = "production" === window.GLOBAL_ENV.PROJECT_ENV ? "1361763069696675961" : "1486428380437020672",
-    T =
+              : "1415025086791942144";
+window.GLOBAL_ENV.PROJECT_ENV;
+let A =
         "production" === window.GLOBAL_ENV.PROJECT_ENV
             ? "1402418491272986635"
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
@@ -48,7 +50,11 @@ let _ = {
             ? "1458530944955973852"
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? "1458563423670501376"
-              : "2";
-r.X.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, a.B.STAGING;
-let N = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
-    O = "0";
+              : "2",
+    N =
+        "production" === window.GLOBAL_ENV.PROJECT_ENV
+            ? "1497106682931707924"
+            : (window.GLOBAL_ENV.PROJECT_ENV, "1497105229567754240");
+a.X.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, r.B.STAGING;
+let O = { [a.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
+    f = "0";
