@@ -1,91 +1,96 @@
 n.d(t, { default: () => w });
-var d = n(627968),
-    a = n(64700),
-    i = n(17928),
-    r = n(935462),
-    l = n(289873),
-    s = n(534514),
-    o = n(682618),
+var i = n(627968),
+    r = n(64700),
+    a = n(17928),
+    l = n(935462),
+    s = n(289873),
+    d = n(534514),
+    g = n(682618),
     c = n(228366);
-let g = new Map();
-class u extends i.Ay.Store {
+let o = new Map();
+class u extends a.Ay.Store {
     static displayName = "BadgeDirectoryStore";
     getBadges() {
-        return Array.from(g.values());
+        return Array.from(o.values());
     }
     getBadgeById(e) {
-        return g.get(e);
+        return o.get(e);
     }
     getSingleRequirementProgress(e) {
-        let t = g.get(e)?.progress;
+        let t = o.get(e)?.progress;
         if (null != t && 0 !== t.length) return t[0];
     }
     getCurrentTier(e) {
-        let t = g.get(e);
+        let t = o.get(e);
         if (t?.current_tier != null) return t.tiers.find((e) => e.key === t.current_tier);
     }
     getNextTier(e) {
-        let t = g.get(e);
+        let t = o.get(e);
         if (t?.next_tier != null) return t.tiers.find((e) => e.key === t.next_tier);
     }
+    getRemainingToNextTier(e) {
+        let t = this.getNextTier(e),
+            n = this.getSingleRequirementProgress(e);
+        return null == t || null == n ? 0 : Math.max(0, (t.requirements[0]?.threshold ?? 0) - n.current);
+    }
 }
-let b = new u(c.h, {
+let m = new u(c.h, {
     BADGE_DIRECTORY_FETCH_SUCCESS: function (e) {
         let { badges: t } = e;
-        g = new Map(t.map((e) => [e.badge_id, e]));
+        o = new Map(t.map((e) => [e.badge_id, e]));
     },
     BADGE_FETCH_SUCCESS: function (e) {
         let { badge: t } = e,
-            n = new Map(g);
-        n.set(t.badge_id, t), (g = n);
+            n = new Map(o);
+        n.set(t.badge_id, t), (o = n);
     },
     LOGOUT: function () {
-        g = new Map();
+        o = new Map();
     },
 });
 n(321073);
-var m = n(503698),
-    _ = n.n(m),
-    h = n(837381),
-    x = n(741918),
-    p = n(939249),
-    j = n(707554),
-    S = n(834730),
-    f = n(260762),
-    y = n(518477),
-    C = n(985018),
-    v = n(490308);
-function B(e) {
-    let { badge: t, isSelected: n, onSelect: a, itemId: i } = e,
-        r = (0, h.rm)(i);
-    return (0, d.jsx)(p.D, {
-        ...r,
+var h = n(503698),
+    x = n.n(h),
+    b = n(837381),
+    p = n(741918),
+    j = n(939249),
+    f = n(707554),
+    _ = n(834730),
+    S = n(260762),
+    N = n(518477),
+    v = n(985018),
+    B = n(490308);
+function y(e) {
+    let { badge: t, isSelected: n, onSelect: r, itemId: a } = e,
+        l = (0, b.rm)(a);
+    return (0, i.jsx)(j.D, {
+        ...l,
         "aria-label": t.name,
         "aria-current": n ? "true" : void 0,
-        className: _()(v.oL, n && v.xO),
+        className: x()(B.oL, n && B.xO),
         onFocus: () => {
-            r.onFocus(), a();
+            l.onFocus(), r();
         },
-        onClick: a,
+        onClick: r,
         children:
             "" !== t.simple_icon &&
-            (0, d.jsx)("img", { src: (0, y.L7)(t.simple_icon), alt: "", "aria-hidden": !0, className: v.pW }),
+            (0, i.jsx)("img", { src: (0, N.L7)(t.simple_icon), alt: "", "aria-hidden": !0, className: B.pW }),
     });
 }
-function E(e) {
-    let { heading: t, headingId: n, badges: a, selectedBadgeId: i, onSelectBadge: r, getItemId: l } = e;
-    return (0, d.jsxs)("div", {
-        className: v.zE,
+function I(e) {
+    let { heading: t, headingId: n, badges: r, selectedBadgeId: a, onSelectBadge: l, getItemId: s } = e;
+    return (0, i.jsxs)("div", {
+        className: B.zE,
         role: "group",
         "aria-labelledby": n,
         children: [
-            (0, d.jsx)(s.D, { id: n, variant: "heading-sm/medium", color: "text-default", children: t }),
-            (0, d.jsx)("div", {
-                className: v.yq,
-                children: a.map((e) =>
-                    (0, d.jsx)(
-                        B,
-                        { itemId: l(e), badge: e, isSelected: e.badge_id === i, onSelect: () => r(e.badge_id) },
+            (0, i.jsx)(d.D, { id: n, variant: "heading-sm/medium", color: "text-default", children: t }),
+            (0, i.jsx)("div", {
+                className: B.yq,
+                children: r.map((e) =>
+                    (0, i.jsx)(
+                        y,
+                        { itemId: s(e), badge: e, isSelected: e.badge_id === a, onSelect: () => l(e.badge_id) },
                         e.badge_id,
                     ),
                 ),
@@ -93,67 +98,67 @@ function E(e) {
         ],
     });
 }
-function I(e) {
+function C(e) {
     let t = [],
         n = [];
-    for (let d of e) d.owned ? n.push(d) : d.is_earnable && t.push(d);
+    for (let i of e) i.owned ? n.push(i) : i.is_earnable && t.push(i);
     return { earnable: t, owned: n };
 }
-function N(e) {
+function E(e) {
     let { selectedBadgeId: t, onSelectBadge: n } = e,
-        r = (0, i.bG)([b], () => b.getBadges()),
-        l = (0, f.A)("badge-directory", x.Gl.HORIZONTAL),
-        { earnable: o, owned: c } = a.useMemo(() => I(r), [r]),
-        g = a.useMemo(() => [...o, ...c], [o, c]),
-        u = a.useMemo(() => {
+        l = (0, a.bG)([m], () => m.getBadges()),
+        s = (0, S.A)("badge-directory", p.Gl.HORIZONTAL),
+        { earnable: g, owned: c } = r.useMemo(() => C(l), [l]),
+        o = r.useMemo(() => [...g, ...c], [g, c]),
+        u = r.useMemo(() => {
             let e = new Map();
-            return g.forEach((t, n) => e.set(t.badge_id, `item-${n}`)), e;
-        }, [g]),
-        m = a.useCallback((e) => u.get(e.badge_id) ?? "item-0", [u]);
-    return (0, d.jsx)("div", {
-        className: v.ws,
-        children: (0, d.jsx)(j.F, {
-            component: (0, d.jsxs)("div", {
-                className: v.NG,
+            return o.forEach((t, n) => e.set(t.badge_id, `item-${n}`)), e;
+        }, [o]),
+        h = r.useCallback((e) => u.get(e.badge_id) ?? "item-0", [u]);
+    return (0, i.jsx)("div", {
+        className: B.ws,
+        children: (0, i.jsx)(f.F, {
+            component: (0, i.jsxs)("div", {
+                className: B.NG,
                 children: [
-                    (0, d.jsx)(s.D, {
+                    (0, i.jsx)(d.D, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",
-                        children: C.intl.string(C.t.sl2irJ),
+                        children: v.intl.string(v.t.sl2irJ),
                     }),
-                    (0, d.jsx)(S.E, {
+                    (0, i.jsx)(_.E, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
-                        children: C.intl.string(C.t["62xU4E"]),
+                        children: v.intl.string(v.t["62xU4E"]),
                     }),
                 ],
             }),
-            children: (0, d.jsx)(h.hD, {
-                navigator: l,
-                children: (0, d.jsx)(h.PR, {
+            children: (0, i.jsx)(b.hD, {
+                navigator: s,
+                children: (0, i.jsx)(b.PR, {
                     children: (e) =>
-                        (0, d.jsxs)("div", {
+                        (0, i.jsxs)("div", {
                             ...e,
                             ref: e.ref,
-                            className: v.hG,
+                            className: B.hG,
                             children: [
-                                o.length > 0 &&
-                                    (0, d.jsx)(E, {
-                                        heading: C.intl.string(C.t["0YzU//"]),
+                                g.length > 0 &&
+                                    (0, i.jsx)(I, {
+                                        heading: v.intl.string(v.t["0YzU//"]),
                                         headingId: "badge-directory-section-earnable",
-                                        badges: o,
+                                        badges: g,
                                         selectedBadgeId: t,
                                         onSelectBadge: n,
-                                        getItemId: m,
+                                        getItemId: h,
                                     }),
                                 c.length > 0 &&
-                                    (0, d.jsx)(E, {
-                                        heading: C.intl.string(C.t.UqnlQF),
+                                    (0, i.jsx)(I, {
+                                        heading: v.intl.string(v.t.UqnlQF),
                                         headingId: "badge-directory-section-owned",
                                         badges: c,
                                         selectedBadgeId: t,
                                         onSelectBadge: n,
-                                        getItemId: m,
+                                        getItemId: h,
                                     }),
                             ],
                         }),
@@ -164,43 +169,43 @@ function N(e) {
 }
 function w(e) {
     let { transitionState: t } = e,
-        [n, c] = a.useState(null),
-        g = (0, i.bG)([b], () => b.getBadges());
-    a.useEffect(() => {
-        (0, o.R)();
+        [n, c] = r.useState(null),
+        o = (0, a.bG)([m], () => m.getBadges());
+    r.useEffect(() => {
+        (0, g.R)();
     }, []);
-    let u = a.useMemo(() => {
-            let { earnable: e, owned: t } = I(g);
+    let u = r.useMemo(() => {
+            let { earnable: e, owned: t } = C(o);
             return e[0]?.badge_id ?? t[0]?.badge_id ?? null;
-        }, [g]),
-        m = n ?? u,
-        _ = null != m ? b.getBadgeById(m) : void 0,
-        h = 0 === g.length;
-    return (0, d.jsx)(r.EO, {
+        }, [o]),
+        h = n ?? u,
+        x = null != h ? m.getBadgeById(h) : void 0,
+        b = 0 === o.length;
+    return (0, i.jsx)(l.EO, {
         "data-migration-pending": !0,
         parentComponent: "BadgeDirectoryModal",
-        "aria-label": C.intl.string(C.t.PEjP4L),
+        "aria-label": v.intl.string(v.t.PEjP4L),
         transitionState: t,
-        size: r.rI.DYNAMIC,
+        size: l.rI.DYNAMIC,
         hideShadow: !0,
-        className: v.CR,
-        children: (0, d.jsx)(r.$m, {
+        className: B.CR,
+        children: (0, i.jsx)(l.$m, {
             "data-migration-pending": !0,
             scrollbarType: "none",
-            className: v.jE,
-            children: h
-                ? (0, d.jsx)("div", { className: v.Lq, children: (0, d.jsx)(l.y, {}) })
-                : (0, d.jsxs)(d.Fragment, {
+            className: B.jE,
+            children: b
+                ? (0, i.jsx)("div", { className: B.Lq, children: (0, i.jsx)(s.y, {}) })
+                : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, d.jsx)(N, { selectedBadgeId: m, onSelectBadge: c }),
-                          (0, d.jsx)("div", {
-                              className: v.SV,
+                          (0, i.jsx)(E, { selectedBadgeId: h, onSelectBadge: c }),
+                          (0, i.jsx)("div", {
+                              className: B.SV,
                               children:
-                                  null != _ &&
-                                  (0, d.jsx)(s.D, {
+                                  null != x &&
+                                  (0, i.jsx)(d.D, {
                                       variant: "heading-lg/semibold",
                                       color: "text-strong",
-                                      children: _.name,
+                                      children: x.name,
                                   }),
                           }),
                       ],
