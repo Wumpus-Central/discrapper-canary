@@ -40,6 +40,8 @@ let N = () => {
                 return { duration: 1, percentage: 20, discountId: t };
             case A.CW:
                 return { duration: 1, percentage: 25, discountId: t };
+            case A.V2:
+                return { duration: 1, percentage: 40, discountId: t };
             default:
                 return;
         }

@@ -1,42 +1,41 @@
-"use strict";
 n.d(t, { n: () => u });
-var r = n(627968),
-    a = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    s = n(331322),
+var i = n(627968),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(331322),
     o = n(834730),
-    c = n(64584),
-    d = n(498990);
+    d = n(64584),
+    c = n(498990);
 function u(e) {
-    let { children: t, label: n, description: i, ...u } = e,
-        { spacing: _ } = a.useContext(c.c),
-        p = a.useId(),
-        f = null != i && "" !== i;
-    return (0, r.jsxs)("fieldset", {
+    let { children: t, label: n, description: a, ...u } = e,
+        { spacing: h } = l.useContext(d.c),
+        _ = l.useId(),
+        m = null != a && "" !== a;
+    return (0, i.jsxs)("fieldset", {
         ...u,
-        className: l()(d.lI, u.className),
-        "aria-describedby": f ? p : void 0,
+        className: s()(c.lI, u.className),
+        "aria-describedby": m ? _ : void 0,
         children: [
             null != n
-                ? (0, r.jsx)(o.E, {
+                ? (0, i.jsx)(o.E, {
                       tag: "legend",
                       variant: "text-lg/medium",
                       color: "text-strong",
-                      className: d.o1,
+                      className: c.o1,
                       children: n,
                   })
                 : null,
-            f
-                ? (0, r.jsx)(o.E, {
+            m
+                ? (0, i.jsx)(o.E, {
                       variant: "text-sm/normal",
                       color: "text-default",
-                      className: d.h_,
-                      id: p,
-                      children: i,
+                      className: c.h_,
+                      id: _,
+                      children: a,
                   })
                 : null,
-            (0, r.jsx)(s.B, { direction: "vertical", gap: _, children: t }),
+            (0, i.jsx)(r.B, { direction: "vertical", gap: h, children: t }),
         ],
     });
 }
