@@ -1,29 +1,28 @@
-"use strict";
-n.d(t, { M: () => d, t: () => c });
-var a = n(627968);
+n.d(t, { M: () => c, t: () => d });
+var i = n(627968);
 n(64700);
 var l = n(192308),
-    i = n(440938),
-    r = n(4227),
-    s = n(466459);
+    a = n(440938),
+    s = n(4227),
+    r = n(466459);
 let o = "collectibles shop product details modal",
-    c = (e) => {
+    d = (e) => {
         let {
             product: t,
-            category: c,
-            shouldCheckoutWithOrbs: d,
+            category: d,
+            shouldCheckoutWithOrbs: c,
             analyticsSource: u,
-            analyticsLocations: _,
-            returnRef: m,
-            tab: h,
-            giftRecipient: p,
-            giftingOrigin: f,
-            cardId: g,
-            sessionId: A,
-            tilePosition: v,
+            analyticsLocations: h,
+            returnRef: _,
+            tab: m,
+            giftRecipient: g,
+            giftingOrigin: p,
+            cardId: A,
+            sessionId: x,
+            tilePosition: f,
         } = e;
         if (t.isCategoryReward) {
-            let { isPurchased: e } = (0, s.o)(r.A, t);
+            let { isPurchased: e } = (0, r.o)(s.A, t);
             if (!e) return;
         }
         (0, l.openModalLazy)(
@@ -60,25 +59,25 @@ let o = "collectibles shop product details modal",
                     n.e("17216"),
                 ]).then(n.bind(n, 81146));
                 return (n) =>
-                    (0, a.jsx)(i.R9, {
-                        newValue: { cardId: g, sessionId: A, tilePosition: v },
-                        children: (0, a.jsx)(e, {
+                    (0, i.jsx)(a.R9, {
+                        newValue: { cardId: A, sessionId: x, tilePosition: f },
+                        children: (0, i.jsx)(e, {
                             ...n,
                             product: t,
-                            category: c,
-                            shouldCheckoutWithOrbs: d,
+                            category: d,
+                            shouldCheckoutWithOrbs: c,
                             analyticsSource: u,
-                            analyticsLocations: _,
-                            returnRef: m,
-                            tab: h,
-                            giftRecipient: p,
-                            giftingOrigin: f,
+                            analyticsLocations: h,
+                            returnRef: _,
+                            tab: m,
+                            giftRecipient: g,
+                            giftingOrigin: p,
                         }),
                     });
             },
             { modalKey: o },
         );
     },
-    d = () => {
+    c = () => {
         (0, l.closeModal)(o);
     };
