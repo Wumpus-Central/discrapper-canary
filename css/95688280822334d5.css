@@ -6353,6 +6353,14 @@ span.clanTag__07f91.isOverlay__07f91 {
     background: linear-gradient(78.43deg, hsl(var(--blue-345-hsl)/.1), hsl(var(--blue-345-hsl)/.1), hsl(var(--premium-perk-light-blue-hsl)/.1)) padding-box
 }
 
+.newUpsellFeatureBorder__65c15 {
+    border: 2px solid var(--brand-500)
+}
+
+.newUpsellBackground__65c15 {
+    background: hsl(var(--brand-500-hsl)/.08)
+}
+
 .title_ace4f5 {
     align-items: center;
     display: flex;
