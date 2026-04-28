@@ -1248,11 +1248,6 @@
     display: inline-block
 }
 
-.timestampMention__1464f {
-    display: inline-flex;
-    margin: -4px 2px -8px
-}
-
 .inlineFlex__1464f {
     display: inline-flex;
     margin: 0
@@ -6797,6 +6792,12 @@ div.profileThemedContainer__656be {
     border-radius: 4px;
     height: 8px;
     width: 8px
+}
+
+.riveHoverTarget__438ba {
+    height: 100%;
+    pointer-events: auto;
+    width: 100%
 }
 
 .wrapper__3fa5b {

@@ -12,5 +12,5 @@ e.exports = {
     t$: "selectedPill__1464f",
     $2: "erroredPill__1464f",
     Nx: "newLine__1464f",
-    FF: "timestampMention__1464f",
+    Bz: "inlineFlex__1464f",
 };

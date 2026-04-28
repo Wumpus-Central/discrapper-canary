@@ -970,19 +970,19 @@ function e3(e) {
     }
     h && O.H2(n, u);
 }
-function e7(e) {
+function e4(e) {
     let t = G.n$(e);
     if (null == t) return { command: null, commandText: null };
     let [n] = t,
         l = n.children[0];
     return Z.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
 }
-function e4(e, t) {
+function e7(e, t) {
     let n = G.O7(e)[0];
     t();
     let l = Z.ZF.toPoint(e.selection);
     if (null == l || n === G.O7(e)[0]) return;
-    let { command: i, commandText: s } = e7(e);
+    let { command: i, commandText: s } = e4(e);
     !(null == i || null == s || s.endsWith(" ")) &&
         Z.Kh.equals(l, { path: e$.fP, offset: i.displayName.length + 1 }) &&
         z.b.insertText(e, " ");
@@ -1548,14 +1548,19 @@ let tB = (e) => {
         let { element: t, attributes: n, children: i } = e,
             s = (0, H.f7)(),
             r = (0, H.zL)(),
-            o = a()(eR.S0, eR.xP, eR.FF, { [eR.t$]: r && s, [eR.$2]: t.error }),
-            c = (0, l.jsx)("span", { className: eR._K, children: i });
+            o = a()(eR.S0, eR.xP, eR.Bz, { [eR.t$]: r && s, [eR.$2]: t.error }),
+            c = t.children[t.children.length - 1],
+            u = null != c && Z.l5.isText(c) && c.text.endsWith("\n"),
+            d = (0, l.jsxs)("span", {
+                className: eR._K,
+                children: [i, u ? (0, l.jsx)("span", { className: eR.Nx, contentEditable: !1 }) : null],
+            });
         return (0, l.jsxs)("span", {
             ...n,
             className: o,
             children: [
                 (0, l.jsxs)("span", { className: eR.gA, contentEditable: !1, children: ["@time", "​"] }),
-                c,
+                d,
                 (0, l.jsx)("span", { contentEditable: !1, children: "​" }),
             ],
         });
@@ -1913,13 +1918,13 @@ let tZ = i.forwardRef(function (e, t) {
                                                 !!("applicationCommandOption" === e.type && e0.has(e.optionType)) ||
                                                 a(e)),
                                             (e.deleteBackward = (t) => {
-                                                e4(e, () => o(t));
+                                                e7(e, () => o(t));
                                             }),
                                             (e.deleteForward = (t) => {
-                                                e4(e, () => c(t));
+                                                e7(e, () => c(t));
                                             }),
                                             (e.deleteFragment = (t) => {
-                                                e4(e, () => u(t));
+                                                e7(e, () => u(t));
                                             });
                                         let d = null,
                                             h = null,
@@ -1949,7 +1954,7 @@ let tZ = i.forwardRef(function (e, t) {
                                                                         commandChanged: a,
                                                                         previousOptionValues: r,
                                                                     } = e,
-                                                                    { command: o, commandText: c } = e7(t),
+                                                                    { command: o, commandText: c } = e4(t),
                                                                     u = n.activeCommand;
                                                                 if (
                                                                     (!i &&
