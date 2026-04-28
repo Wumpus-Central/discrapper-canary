@@ -1,32 +1,33 @@
-a.d(t, { A: () => s });
-var n = a(627968),
-    l = a(821609),
-    r = a(783420),
-    i = a(938973);
+"use strict";
+n.d(t, { A: () => s });
+var r = n(627968),
+    a = n(821609),
+    i = n(783420),
+    l = n(938973);
 let s = function (e) {
     let {
             subscriptionTier: t,
-            onClick: a,
+            onClick: n,
             postSuccessGuild: s,
             onSubscribeModalClose: o,
             premiumModalAnalyticsLocation: c,
             applicationId: d,
             confirmationFooter: u,
-            buttonTextOverride: h,
+            buttonTextOverride: _,
             defaultTextOverride: p,
-            iconOverride: m,
-            variantOverride: f,
-            ..._
+            iconOverride: f,
+            variantOverride: m,
+            ...h
         } = e,
-        { subscribeButtonProps: b } = (0, i.B)({
+        { subscribeButtonProps: g } = (0, l.B)({
             subscriptionTier: t,
-            buttonTextOverride: h,
+            buttonTextOverride: _,
             defaultTextOverride: p,
-            iconOverride: m,
-            variantOverride: f,
+            iconOverride: f,
+            variantOverride: m,
         });
-    return (0, n.jsx)(r.A, {
-        onClick: a,
+    return (0, r.jsx)(i.A, {
+        onClick: n,
         subscriptionTier: t,
         postSuccessGuild: s,
         onSubscribeModalClose: o,
@@ -35,7 +36,7 @@ let s = function (e) {
         confirmationFooter: u,
         children: (e) => {
             let { onClick: t } = e;
-            return (0, n.jsx)(l.$, { onClick: t, ...b, ..._ });
+            return (0, r.jsx)(a.$, { onClick: t, ...g, ...h });
         },
     });
 };

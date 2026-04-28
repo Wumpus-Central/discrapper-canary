@@ -1,21 +1,22 @@
-n.d(t, { A: () => o });
-var l = n(627968),
-    a = n(64700);
-n(17928);
-var r = n(602853),
-    i = n(661531),
-    s = n(939249),
-    E = n(417454);
-n(775602), n(967144);
-var _ = n(818348);
-function o(e) {
-    let { guildId: t, role: n, className: o, canRemove: u = !1, onRemove: c = _.tE } = e,
-        d = (0, r.r)(i.A.unsafe_rawColors.PRIMARY_300).hex(),
-        A = n?.colorString ?? d,
-        g = a.useMemo(() => ({ backgroundColor: `${A}27` }), [A]);
-    return null == n
+"use strict";
+l.d(t, { A: () => c });
+var n = l(627968),
+    i = l(64700);
+l(17928);
+var s = l(602853),
+    a = l(661531),
+    r = l(939249),
+    o = l(417454);
+l(775602), l(967144);
+var d = l(818348);
+function c(e) {
+    let { guildId: t, role: l, className: c, canRemove: u = !1, onRemove: h = d.tE } = e,
+        g = (0, s.r)(a.A.unsafe_rawColors.PRIMARY_300).hex(),
+        m = l?.colorString ?? g,
+        p = i.useMemo(() => ({ backgroundColor: `${m}27` }), [m]);
+    return null == l
         ? null
-        : (0, l.jsx)(s.D, {
-              children: (0, l.jsx)(E.b_, { className: o, style: g, role: n, guildId: t, canRemove: u, onRemove: c }),
+        : (0, n.jsx)(r.D, {
+              children: (0, n.jsx)(o.b_, { className: c, style: p, role: l, guildId: t, canRemove: u, onRemove: h }),
           });
 }

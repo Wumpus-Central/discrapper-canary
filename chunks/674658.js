@@ -10,18 +10,17 @@ var i = n(64700),
 function d(e, t) {
     let n = (0, s.bG)([a.A], () => (null != e ? a.A.get(e) : null)),
         d = null != n && n.productLine !== _.EZt.COLLECTIBLES,
-        [u, c, E, h] = (0, s.yK)([l.A], () => [
-            l.A.isFetchingProduct(e),
-            l.A.getProduct(e),
-            l.A.getProductFetchError(e),
-            l.A.getProductFetchErrorTimestamp(e),
-        ]),
-        m = null != E && null != h && Date.now() - h < 36e5,
-        f = !0 === t && c?.type === r.R.BUNDLE && 0 === c.items.length;
+        [u, c] = (0, s.yK)([l.A], () => [l.A.getProduct(e), l.A.getProductFetch(e)]),
+        E = !0 === t && u?.type === r.R.BUNDLE && 0 === u.items.length;
     return (
         (0, i.useEffect)(() => {
-            null == e || (null != c && !f) || d || u || m || (0, o.Jp)(e, { includeBundles: t });
-        }, [e, c, d, u, m, t, f]),
-        { product: c, isFetching: u }
+            null == e ||
+                (null != u && !E) ||
+                d ||
+                c?.state === "fetching" ||
+                (c?.state === "error" && null != c.endedAt && Date.now() - c.endedAt < 36e5) ||
+                (0, o.Jp)(e, { includeBundles: t });
+        }, [e, u, d, c, t, E]),
+        { product: u, isFetching: c?.state === "fetching" }
     );
 }

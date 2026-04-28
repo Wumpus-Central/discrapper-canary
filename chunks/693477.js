@@ -1,6 +1,6 @@
 n.d(t, {
     h$: () => er,
-    CK: () => z,
+    CK: () => Z,
     BX: () => eo,
     JJ: () => ei,
     RE: () => et,
@@ -13,7 +13,7 @@ n.d(t, {
     RD: () => X,
     gB: () => J,
     T2: () => eE,
-    gn: () => Z,
+    gn: () => z,
     Aq: () => es,
     LX: () => ea,
 });
@@ -454,7 +454,7 @@ let Q = (e) => {
     X = (e) => {
         l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId: e });
     },
-    Z = (e, t) =>
+    z = (e, t) =>
         !!e?.noCache == !!t?.noCache &&
         !!e?.includeUnpublished == !!t?.includeUnpublished &&
         !!e?.includeBundles == !!t?.includeBundles &&
@@ -463,7 +463,7 @@ let Q = (e) => {
         e?.paymentGateway === t?.paymentGateway &&
         e?.shopHomeConfig === t?.shopHomeConfig &&
         e?.skipNumCategories === t?.skipNumCategories,
-    z = async (e, t, n) => {
+    Z = async (e, t, n) => {
         l.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH", options: e ?? {} });
         let i = (0, K.ao)(e),
             a = E.Ay.get("shop_show_debug_overlay");
@@ -525,17 +525,23 @@ let Q = (e) => {
         }
     },
     ee = async (e, t) => {
-        l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId: e });
+        l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId: e, startedAt: Date.now() });
         try {
             let n = { locale: c.default.locale };
             t?.countryCode !== null && (n.country_code = t?.countryCode),
                 t?.paymentGateway !== null && (n.payment_gateway = t?.paymentGateway),
                 t?.includeBundles !== null && (n.include_bundles = t?.includeBundles);
             let i = await s.Bo.get({ url: $.Rsh.COLLECTIBLES_PRODUCTS(e), rejectWithError: !0, query: n });
-            l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: e, product: D.A.fromServer(i.body) });
+            l.h.dispatch({
+                type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
+                skuId: e,
+                product: D.A.fromServer(i.body),
+                endedAt: Date.now(),
+            });
         } catch (n) {
             let t = new o.LG(n);
-            (0, j.o)(t), l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: e, error: t });
+            (0, j.o)(t),
+                l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: e, error: t, endedAt: Date.now() });
         }
     },
     et = async (e, t) => {
