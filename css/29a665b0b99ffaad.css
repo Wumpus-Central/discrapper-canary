@@ -1,0 +1,105 @@
+.modalRoot__6db38 {
+    overflow: hidden;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.modalContent__6db38 {
+    display: flex;
+    height: 520px;
+    overflow: hidden;
+    padding: 0;
+    width: 715px
+}
+
+.loading__6db38 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center
+}
+
+.directoryPanel__6db38 {
+    background: var(--background-surface-high);
+    flex: 0 0 312px;
+    overflow: hidden
+}
+
+.directoryHeader__6db38,
+.directoryPanel__6db38 {
+    display: flex;
+    flex-direction: column
+}
+
+.directoryHeader__6db38 {
+    flex-shrink: 0;
+    gap: var(--space-8);
+    padding: var(--space-24)
+}
+
+.directoryContent__6db38 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-24);
+    min-height: 0;
+    overflow-y: auto;
+    padding-block-end: var(--space-24);
+    padding-inline: var(--space-24)
+}
+
+.badgeSection__6db38 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.badgeGrid__6db38 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8)
+}
+
+.badgeSlot__6db38 {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 60px;
+    justify-content: center;
+    width: 60px
+}
+
+.badgeSlot__6db38:hover {
+    background: var(--control-secondary-background-hover)
+}
+
+.badgeSlot__6db38:active {
+    background: var(--control-secondary-background-active)
+}
+
+.badgeSlotSelected__6db38 {
+    border-color: var(--brand-400)
+}
+
+.badgeSlotIcon__6db38 {
+    height: 28px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    pointer-events: none;
+    width: 28px
+}
+
+.detailPanel__6db38 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-48) var(--space-24) var(--space-24);
+    position: relative
+}

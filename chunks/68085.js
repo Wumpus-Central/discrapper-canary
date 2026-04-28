@@ -164,12 +164,12 @@ function F(e) {
                 shouldShow: !!(o || s),
                 position: "top",
                 caretConfig: { align: "center" },
-                children: [(0, l.jsx)(V, { showSubtext: a }), (0, l.jsx)(P.F, {})],
+                children: [(0, l.jsx)($, { showSubtext: a }), (0, l.jsx)(P.F, {})],
             }),
         ],
     });
 }
-function V(e) {
+function $(e) {
     let { showSubtext: n = !1 } = e;
     return (0, l.jsxs)(I, {
         assetComponent: (0, l.jsx)(H.A, { className: U.jc }),
@@ -190,7 +190,7 @@ function V(e) {
         ],
     });
 }
-var $ = t(287809),
+var V = t(287809),
     W = t(954571),
     z = t(474090),
     K = t(439174),
@@ -242,7 +242,7 @@ function ei(e) {
         k = r.useRef(null),
         { analyticsLocations: N } = (0, c.Ay)(u.A.BADGE),
         { context: I, trackUserProfileAction: D } = (0, q.NJ)(),
-        S = $.default.getCurrentUser(),
+        S = V.default.getCurrentUser(),
         M = (0, z.CC)(S?.premiumType, b.PremiumTypes.TIER_2),
         P = Y.useConfig({ location: "UserProfileBadgeList" }).enabled,
         H = (function (e) {
@@ -250,7 +250,7 @@ function ei(e) {
             return m.useConfig({ location: n }).enabled;
         })({ location: "UserProfileBadgeList" }),
         U = (0, X.AP)(S?.id ?? null),
-        V = (0, J.A)(U).some((e) => e.id === L.A.ORB_PROFILE_BADGE);
+        $ = (0, J.A)(U).some((e) => e.id === L.A.ORB_PROFILE_BADGE);
     return (0, l.jsx)("div", {
         className: a()(er.k, i),
         "aria-label": y.intl.string(y.t.VWV0y5),
@@ -263,7 +263,7 @@ function ei(e) {
                 b = "april_fools_2026" === e.id,
                 y = e.id.startsWith(Z.Ky),
                 U = void 0 !== i && e.id !== el,
-                $ = (0, l.jsx)("img", {
+                V = (0, l.jsx)("img", {
                     alt: " ",
                     "aria-hidden": !0,
                     src: e.iconSrc ?? (0, Z.L7)(e.icon),
@@ -278,7 +278,7 @@ function ei(e) {
                             n.preventDefault(),
                                 (0, f.openModalLazy)(
                                     async () => {
-                                        let { default: e } = await t.e("79879").then(t.bind(t, 367706));
+                                        let { default: e } = await t.e("835").then(t.bind(t, 1102));
                                         return (n) => (0, l.jsx)(e, { ...n });
                                     },
                                     { stackingBehavior: "stack" },
@@ -334,7 +334,7 @@ function ei(e) {
                     style: { filter: C && null != i ? `drop-shadow(0 0 5px ${i.glowColor})` : void 0 },
                 };
             if (U) {
-                let t = (0, l.jsx)(o.Anchor, { ...q, ref: E, children: $ });
+                let t = (0, l.jsx)(o.Anchor, { ...q, ref: E, children: V });
                 return (0, l.jsx)(
                     "div",
                     {
@@ -357,13 +357,13 @@ function ei(e) {
                 );
             }
             if (r) {
-                let t = (0, l.jsx)(o.Anchor, { ...q, ref: A, children: $ });
+                let t = (0, l.jsx)(o.Anchor, { ...q, ref: A, children: V });
                 return (0, l.jsx)(
                     F,
                     {
                         targetElementRef: A,
                         delay: Z.In,
-                        showSubtext: !V && !e.isPreviewMode,
+                        showSubtext: !$ && !e.isPreviewMode,
                         forceOpen: z,
                         children: t,
                     },
@@ -371,7 +371,7 @@ function ei(e) {
                 );
             }
             if (b) {
-                let t = (0, l.jsx)(o.Anchor, { ...q, ref: _, children: $ });
+                let t = (0, l.jsx)(o.Anchor, { ...q, ref: _, children: V });
                 return (0, l.jsx)(
                     h,
                     { targetElementRef: _, delay: Z.In, forceOpen: z, badgeDescription: e.description, children: t },
@@ -379,7 +379,7 @@ function ei(e) {
                 );
             }
             if (y && x?.premiumGuildSince != null && P) {
-                let t = (0, l.jsx)(o.Anchor, { ...q, ref: k, children: $ });
+                let t = (0, l.jsx)(o.Anchor, { ...q, ref: k, children: V });
                 return (0, l.jsx)(
                     ee,
                     {
@@ -392,7 +392,7 @@ function ei(e) {
                     `${e.id}-${n}`,
                 );
             }
-            let Y = (0, l.jsx)(o.Anchor, { ...q, children: $ }),
+            let Y = (0, l.jsx)(o.Anchor, { ...q, children: V }),
                 X = ((e) => {
                     let { badge: n, tieredTenureBadge: t } = e;
                     return void 0 !== t && n.id !== el
