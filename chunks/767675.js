@@ -21,8 +21,8 @@ var s = r(735438),
     v = r(763827),
     C = r(412780),
     E = r(994500),
-    D = r(287809),
-    x = r(427262),
+    x = r(287809),
+    D = r(427262),
     S = r(289873),
     R = r(331322),
     j = r(503698),
@@ -207,6 +207,8 @@ let z = {
     videoEntropy: "Video Entropy",
     videohookBackend: "Videohook Backend",
     videohookFrames: "Videohook Frames",
+    x11Frames: "X11 Frames",
+    pipewireFrames: "Pipewire Frames",
 };
 function K(e) {
     return `${(e / 1e3).toFixed(2)} Kbps`;
@@ -394,11 +396,11 @@ function ep(e) {
         } = e,
         [h, y] = i.useState("0"),
         g = (0, o.bG)([v.A], () => (u ? v.A.getGuildId() : null)),
-        A = (0, o.bG)([D.default], () => (u && null != s ? D.default.getUser(s) : null)),
+        A = (0, o.bG)([x.default], () => (u && null != s ? x.default.getUser(s) : null)),
         F = (0, o.bG)([b.Ay], () => (u && null != g && null != s ? b.Ay.getNick(g, s) : null));
     if (null == t || (u && null == s) || 0 === t.length) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
     let E = d;
-    u && null != A && (E = `${d} — ${F ?? x.Ay.getName(A)}`);
+    u && null != A && (E = `${d} — ${F ?? D.Ay.getName(A)}`);
     let j = t.map((e, t) => {
             let r, i;
             return (0, n.jsx)(
@@ -642,6 +644,8 @@ let eA = o.Ay.connectStores([C.Ay], (e) => {
         "videohookBackend",
         "screenshareCapturedFps",
         "screenshareCapturedFpsUnique",
+        "x11Frames",
+        "pipewireFrames",
     ],
     eC = new Set([...ev, ...Object.values(eb).map((e) => e.key)]);
 class eE extends i.PureComponent {
@@ -689,8 +693,8 @@ class eE extends i.PureComponent {
               });
     }
 }
-var eD = r(967198),
-    ex = r(116956),
+var ex = r(967198),
+    eD = r(116956),
     eS = r(351906),
     eR = r(562153),
     ej = r(917592);
@@ -705,8 +709,8 @@ class eN extends i.PureComponent {
             }),
             o = l().map(a.receiverReports, (e) => {
                 let t = Array.isArray(e.bitrate) ? e.bitrate.at(-1)?.value : e.bitrate,
-                    r = D.default.getUser(e.id);
-                var n = eR.Ay.getNickname(eD.A.getGuildId(), void 0, r);
+                    r = x.default.getUser(e.id);
+                var n = eR.Ay.getNickname(ex.A.getGuildId(), void 0, r);
                 return (
                     null == n && (n = null != r ? r.username : e.id),
                     { displayName: n, bitrate: t / 1e3, lost: (100 * e.fractionLost) / 256 }
@@ -753,12 +757,12 @@ class eN extends i.PureComponent {
         });
     }
 }
-let eP = o.Ay.connectStores([C.Ay, v.A, eS.A, ex.A], (e) => {
+let eP = o.Ay.connectStores([C.Ay, v.A, eS.A, eD.A], (e) => {
     let { context: t, index: r } = e,
         n = C.Ay.getAllStats(t)[r],
         i =
             t === eo.x.STREAM
-                ? Object.values(ex.A.getRTCConnections()).find(
+                ? Object.values(eD.A.getRTCConnections()).find(
                       (e) => e.getMediaEngineConnectionId() === n.mediaEngineConnectionId,
                   )
                 : null,
@@ -808,7 +812,7 @@ function ek(e, t, r, i, a) {
         let t = [];
         Object.keys(c).forEach((s) => {
             let l,
-                o = D.default.getUser(s),
+                o = x.default.getUser(s),
                 p = b.Ay.getNick(a, s),
                 h = (0, C.Xi)(e, s, r);
             null != c[s] &&
@@ -829,7 +833,7 @@ function ek(e, t, r, i, a) {
                                                   "aria-label": o.username,
                                                   className: W.my,
                                               }),
-                                              (0, n.jsx)("span", { className: W.Xh, children: p ?? x.Ay.getName(o) }),
+                                              (0, n.jsx)("span", { className: W.Xh, children: p ?? D.Ay.getName(o) }),
                                           ],
                                       }),
                                   }),
@@ -912,7 +916,7 @@ function eB() {
                                       (0, n.jsx)(c.D, {
                                           className: W.HA,
                                           variant: "heading-lg/semibold",
-                                          children: (0, y.m1)(l, D.default, E.A),
+                                          children: (0, y.m1)(l, x.default, E.A),
                                       }),
                               },
                           ]

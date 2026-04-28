@@ -757,6 +757,8 @@ class H extends T.A {
                                 e.hdrFramesCapable,
                                 e.hdrFrames,
                                 e.targetWindowElevated,
+                                e.pipewireFrames,
+                                e.x11Frames,
                             )
                           : "video_state" === e.type
                             ? this.emit(d.yq.VideoState, e.state)

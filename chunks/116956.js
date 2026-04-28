@@ -6,12 +6,12 @@ var r = n(284009),
     a = n(735438),
     o = n.n(a),
     l = n(17928),
-    d = n(205693),
-    _ = n(228366),
+    _ = n(205693),
+    d = n(228366),
     u = n(328153),
     c = n(499979),
     E = n(451988),
-    h = n(952462),
+    h = n(254948),
     m = n(507821);
 class f {
     _report;
@@ -73,27 +73,27 @@ class f {
     }
 }
 var g = n(274372),
-    p = n(572164),
-    A = n(680725),
-    I = n(973522),
+    A = n(572164),
+    I = n(680725),
+    p = n(973522),
     T = n(967347),
     S = n(929921),
     N = n(495544),
-    C = n(734057),
+    O = n(734057),
     R = n(877717),
-    O = n(969341),
+    C = n(969341),
     y = n(544180),
-    v = n(763827),
-    D = n(873985),
-    L = n(954571),
-    b = n(353835),
-    w = n(927813),
-    P = n(652215);
+    D = n(763827),
+    L = n(873985),
+    v = n(954571),
+    w = n(353835),
+    P = n(927813),
+    b = n(652215);
 function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
 }
-class M {
+class U {
     _statInterval;
     _isSender;
     _streamEnd;
@@ -140,13 +140,13 @@ class M {
     getStats() {
         let e = {
             num_layout_changes: this._layoutChanges,
-            duration_layout_fullscreen: k(this._layoutBuckets[P.SO9.FULL_SCREEN]),
-            duration_layout_theatre: k(this._layoutBuckets[P.SO9.THEATRE]),
-            duration_layout_pip: k(this._layoutBuckets[P.SO9.PIP]),
-            duration_layout_popout: k(this._layoutBuckets[P.SO9.POPOUT]),
-            duration_layout_portrait: k(this._layoutBuckets[P.SO9.PORTRAIT]),
-            duration_layout_landscape: k(this._layoutBuckets[P.SO9.LANDSCAPE]),
-            duration_layout_minimized: k(this._layoutBuckets[P.SO9.MINIMIZED]),
+            duration_layout_fullscreen: k(this._layoutBuckets[b.SO9.FULL_SCREEN]),
+            duration_layout_theatre: k(this._layoutBuckets[b.SO9.THEATRE]),
+            duration_layout_pip: k(this._layoutBuckets[b.SO9.PIP]),
+            duration_layout_popout: k(this._layoutBuckets[b.SO9.POPOUT]),
+            duration_layout_portrait: k(this._layoutBuckets[b.SO9.PORTRAIT]),
+            duration_layout_landscape: k(this._layoutBuckets[b.SO9.LANDSCAPE]),
+            duration_layout_minimized: k(this._layoutBuckets[b.SO9.MINIMIZED]),
         };
         return this._isSender
             ? {
@@ -163,11 +163,11 @@ class M {
         this._streamSettingsChanged = e !== this._targetResolution || t !== this._targetFPS;
     };
 }
-var U = n(652896),
-    x = n(540305);
-let G = n(815706).p;
+var M = n(652896),
+    G = n(540305);
+let x = n(815706).p;
 var V = n(731854);
-let F = 5 * w.A.Millis.SECOND;
+let F = 5 * P.A.Millis.SECOND;
 class B {
     streamRegion;
     streamApplication;
@@ -250,12 +250,12 @@ class H extends h.A {
         parentMediaSessionId: s,
         channelId: a,
     }) {
-        const l = (0, U.Iy)(t),
-            { guildId: d, channelId: u } = l;
+        const l = (0, M.Iy)(t),
+            { guildId: _, channelId: u } = l;
         super({
             userId: N.default.getId(),
             sessionId: e,
-            guildId: d,
+            guildId: _,
             channelId: u,
             context: V.x.STREAM,
             streamServerId: n,
@@ -265,11 +265,11 @@ class H extends h.A {
         }),
             (this.streamContext = l),
             (this.streamKey = t),
-            (this.videoStreamStats = new M(i, this.isOwner)),
+            (this.videoStreamStats = new U(i, this.isOwner)),
             (this.analyticsContext = r),
             (this.updateVideoStreamId = o().debounce((e, t) => {
-                let { guildId: n, channelId: i, ownerId: r } = (0, U.Iy)(this.streamKey);
-                _.h.dispatch({
+                let { guildId: n, channelId: i, ownerId: r } = (0, M.Iy)(this.streamKey);
+                d.h.dispatch({
                     type: "RTC_CONNECTION_VIDEO",
                     guildId: n,
                     channelId: i,
@@ -339,30 +339,30 @@ class H extends h.A {
     initializeEvents() {
         let e = !1;
         this.on(m.q.State, (e, t, n) => {
-            _.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n, streamKey: this.streamKey }),
-                e === P.S7L.RTC_CONNECTED &&
+            d.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n, streamKey: this.streamKey }),
+                e === b.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
-                        d.yq.ScreenshareFinish,
-                        (e, t, n, i, r, s, a, o, l, d, _, u, c, E, h, m, f, g, p, A, S, N, C) => {
-                            let R = this.analyticsContext.getStreamApplicationFromHistory(
+                        _.yq.ScreenshareFinish,
+                        (e, t, n, i, r, s, a, o, l, _, d, u, c, E, h, m, f, g, A, I, S, N, O, R, C) => {
+                            let y = this.analyticsContext.getStreamApplicationFromHistory(
                                 this.screenshareFinishedCount,
                             );
                             this.screenshareFinishedCount++;
-                            let { gameName: O, gameId: y, exe: v, distributor: D } = (0, I.wH)(R),
-                                w = this.getMediaSessionId(),
-                                k = this.getRTCConnectionId();
-                            (0, T.w)().then((I) => {
+                            let { gameName: D, gameId: L, exe: P, distributor: k } = (0, p.wH)(y),
+                                U = this.getMediaSessionId(),
+                                M = this.getRTCConnectionId();
+                            (0, T.w)().then((p) => {
                                 let T =
-                                        null != I
+                                        null != p
                                             ? {
-                                                  cpu_brand: I.cpu_brand,
-                                                  cpu_vendor: I.cpu_vendor,
-                                                  cpu_memory: I.cpu_memory,
-                                                  gpu_brand: I.gpu_brand,
-                                                  gpu_memory: I.gpu_memory,
+                                                  cpu_brand: p.cpu_brand,
+                                                  cpu_vendor: p.cpu_vendor,
+                                                  cpu_memory: p.cpu_memory,
+                                                  gpu_brand: p.gpu_brand,
+                                                  gpu_memory: p.gpu_memory,
                                               }
                                             : null,
-                                    R =
+                                    y =
                                         (e ?? 0) +
                                         (t ?? 0) +
                                         (n ?? 0) +
@@ -370,10 +370,12 @@ class H extends h.A {
                                         (r ?? 0) +
                                         (s ?? 0) +
                                         (m ?? 0) +
+                                        (I ?? 0) +
                                         (A ?? 0) +
-                                        (p ?? 0),
-                                    M = (d ?? 0) + (_ ?? 0) + (u ?? 0) + (c ?? 0) + (E ?? 0);
-                                L.default.track(P.HAw.SCREENSHARE_FINISHED, {
+                                        (C ?? 0) +
+                                        (R ?? 0),
+                                    G = (_ ?? 0) + (d ?? 0) + (u ?? 0) + (c ?? 0) + (E ?? 0);
+                                v.default.track(b.HAw.SCREENSHARE_FINISHED, {
                                     screenshare_frames: e,
                                     videohook_frames: t,
                                     hybrid_dxgi_frames: n,
@@ -383,68 +385,70 @@ class H extends h.A {
                                     hybrid_capture_method_switches: a,
                                     hybrid_gdi_bitblt_frames: o,
                                     hybrid_gdi_printwindow_frames: l,
-                                    hybrid_graphics_capture_frames_unique: d,
-                                    hybrid_dxgi_frames_unique: _,
+                                    hybrid_graphics_capture_frames_unique: _,
+                                    hybrid_dxgi_frames_unique: d,
                                     hybrid_videohook_frames_unique: u,
                                     hybrid_gdi_bitblt_frames_unique: c,
                                     hybrid_gdi_printwindow_frames_unique: E,
                                     skip_history_json: h,
                                     quartz_frames: m,
-                                    screencapturekit_frames: A,
-                                    go_live_camera_frames: p,
-                                    total_frames: R,
-                                    total_frames_unique: M,
+                                    screencapturekit_frames: I,
+                                    go_live_camera_frames: A,
+                                    total_frames: y,
+                                    total_frames_unique: G,
                                     desktop_capturer_type: f,
-                                    media_session_id: w,
-                                    rtc_connection_id: k,
+                                    media_session_id: U,
+                                    rtc_connection_id: M,
                                     context: V.x.STREAM,
                                     activity: g,
                                     soundshare_session: this.soundshareStats.getStats().soundshare_last_session,
                                     picker_type_used:
                                         null != this.analyticsContext.nativePickerStyleUsed ? "native" : "internal",
                                     duration: this.analyticsContext.getDuration(),
-                                    share_game_name: O,
-                                    share_game_id: y,
-                                    share_game_exe: v,
-                                    share_game_distributor: D,
+                                    share_game_name: D,
+                                    share_game_id: L,
+                                    share_game_exe: P,
+                                    share_game_distributor: k,
                                     hdr_frames_capable: S,
                                     hdr_frames: N,
-                                    discord_is_elevated: b.A.getDiscordIsElevated(),
-                                    target_window_elevated: C,
+                                    discord_is_elevated: w.A.getDiscordIsElevated(),
+                                    target_window_elevated: O,
+                                    pipewire_frames: R,
+                                    x11_frames: C,
                                     ...T,
                                 });
                             });
                         },
                     ),
-                    this._connection?.on(d.yq.SoundshareAttached, () => {
-                        let e = O.Ay.getGoLiveSource();
+                    this._connection?.on(_.yq.SoundshareAttached, () => {
+                        let e = C.Ay.getGoLiveSource();
                         e?.desktopSource != null &&
-                            L.default.track(P.HAw.SOUNDSHARE_ATTACHED, {
-                                ...(0, x.A)(e?.desktopSource),
+                            v.default.track(b.HAw.SOUNDSHARE_ATTACHED, {
+                                ...(0, G.A)(e?.desktopSource),
                                 ...this.getSoundshareAnalyticsProperties(),
                             });
                     }),
-                    this._connection?.on(d.yq.SoundshareFailed, (e) => {
+                    this._connection?.on(_.yq.SoundshareFailed, (e) => {
                         let { failureCode: t, failureReason: n, willRetry: i } = e,
-                            r = O.Ay.getGoLiveSource();
+                            r = C.Ay.getGoLiveSource();
                         this.reportSoundshareFailure(r?.desktopSource, t, n, i);
                     }),
-                    this._connection?.on(d.yq.SoundshareSpeaking, () => {
-                        let e = O.Ay.getGoLiveSource();
+                    this._connection?.on(_.yq.SoundshareSpeaking, () => {
+                        let e = C.Ay.getGoLiveSource();
                         e?.desktopSource != null &&
-                            (L.default.track(P.HAw.SOUNDSHARE_TRANSMITTING, {
-                                ...(0, x.A)(e?.desktopSource),
+                            (v.default.track(b.HAw.SOUNDSHARE_TRANSMITTING, {
+                                ...(0, G.A)(e?.desktopSource),
                                 ...this.getSoundshareAnalyticsProperties(),
                             }),
-                            null != R.A.getHookError(P.LU7.SOUND) &&
-                                _.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
+                            null != R.A.getHookError(b.LU7.SOUND) &&
+                                d.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
                     }),
-                    this._connection?.on(d.yq.SoundshareTrace, (e) => {
-                        let t = O.Ay.getGoLiveSource();
+                    this._connection?.on(_.yq.SoundshareTrace, (e) => {
+                        let t = C.Ay.getGoLiveSource();
                         switch ((this.soundshareStats.traceEvent(t?.desktopSource?.soundshareSession, e), e.type)) {
                             case "soundshare_attach_requested":
                                 this.errorTimer.start(F, () => {
-                                    _.h.dispatch({
+                                    d.h.dispatch({
                                         type: "MEDIA_ENGINE_SOUNDSHARE_FAILED",
                                         errorMessage: "Sound Hook Failed",
                                     });
@@ -458,7 +462,7 @@ class H extends h.A {
                                     (this.reportSoundshareFailure(t?.desktopSource, i, n, r),
                                     r ||
                                         (this.errorTimer.stop(),
-                                        _.h.dispatch({
+                                        d.h.dispatch({
                                             type: "MEDIA_ENGINE_SOUNDSHARE_FAILED",
                                             errorMessage: n,
                                             errorCode: i,
@@ -467,14 +471,14 @@ class H extends h.A {
                             case "soundshare_state_transition":
                                 4 === e.newState &&
                                     (this.errorTimer.stop(),
-                                    _.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
+                                    d.h.dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" }));
                         }
                     }),
-                    this._connection?.on(d.yq.FirstFrameStats, (e) => {
+                    this._connection?.on(_.yq.FirstFrameStats, (e) => {
                         if (this._firstFrameDelivered) return;
                         this._firstFrameDelivered = !0;
                         let t = this.getStreamAnalyticsProperties();
-                        L.default.track(P.HAw.RECEIVER_FIRST_FRAME_DELIVERED, {
+                        v.default.track(b.HAw.RECEIVER_FIRST_FRAME_DELIVERED, {
                             guild_id: t.guild_id,
                             channel_id: t.channel_id,
                             rtc_connection_id: t.rtc_connection_id,
@@ -518,9 +522,9 @@ class H extends h.A {
                                     : null,
                         });
                     }),
-                    this._connection?.on(d.yq.FirstFrameEncryptedStats, (e) => {
+                    this._connection?.on(_.yq.FirstFrameEncryptedStats, (e) => {
                         let t = this.getStreamAnalyticsProperties();
-                        L.default.track(P.HAw.STREAMER_FIRST_FRAME_ENCRYPTED, {
+                        v.default.track(b.HAw.STREAMER_FIRST_FRAME_ENCRYPTED, {
                             guild_id: t.guild_id,
                             channel_id: t.channel_id,
                             rtc_connection_id: t.rtc_connection_id,
@@ -550,12 +554,12 @@ class H extends h.A {
                                     : null,
                         });
                     }),
-                    this._connection?.on(d.yq.Destroy, () => {
+                    this._connection?.on(_.yq.Destroy, () => {
                         this.errorTimer.stop();
                     }));
         }),
             this.on(m.q.Video, (t, n, i, r, s) => {
-                let a = (0, U.Iy)(this.streamKey);
+                let a = (0, M.Iy)(this.streamKey);
                 a.guildId === t &&
                     a.channelId === n &&
                     a.ownerId === i &&
@@ -563,7 +567,7 @@ class H extends h.A {
                     this.updateVideoStreamId(r, s));
             }),
             this.on(m.q.VideoSourceQualityChanged, (e, t, n, i, r, s) => {
-                _.h.dispatch({
+                d.h.dispatch({
                     type: "MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED",
                     guildId: e,
                     channelId: t,
@@ -574,10 +578,10 @@ class H extends h.A {
                 });
             }),
             this.on(m.q.SecureFramesUpdate, () => {
-                _.h.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
+                d.h.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
             }),
             this.on(m.q.RosterMapUpdate, (e) => {
-                _.h.dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds: e });
+                d.h.dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds: e });
             });
     }
     reportSoundshareFailure(e, t, n, i) {
@@ -586,19 +590,19 @@ class H extends h.A {
         let s = null != t && !this.soundshareFailuresReported[r].has(t);
         s && this.soundshareFailuresReported[r].add(t),
             (null == t || s) &&
-                L.default.track(P.HAw.SOUNDSHARE_FAILED, {
+                v.default.track(b.HAw.SOUNDSHARE_FAILED, {
                     soundshare_failure_code: t,
                     soundshare_failure_reason: n,
                     soundshare_failure_will_retry: i,
-                    ...(0, x.A)(e),
+                    ...(0, G.A)(e),
                     ...this.getSoundshareAnalyticsProperties(),
                 });
     }
     getStreamAnalyticsProperties() {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: i } = this.analyticsContext,
             { ownerId: r, guildId: s } = this.streamContext,
-            a = D.A.getRegion(v.A.getHostname()),
-            { gameName: o, gameId: l, exe: d, distributor: _, sku: u, gameMetadata: c } = (0, I.wH)(t);
+            a = L.A.getRegion(D.A.getHostname()),
+            { gameName: o, gameId: l, exe: _, distributor: d, sku: u, gameMetadata: c } = (0, p.wH)(t);
         return {
             channel_id: this.channelId,
             rtc_connection_id: this.getRTCConnectionId(),
@@ -613,8 +617,8 @@ class H extends h.A {
             participant_type: this.isOwner ? "streamer" : "receiver",
             share_application_name: o,
             share_application_id: l,
-            share_application_executable: d,
-            share_application_distributor: _,
+            share_application_executable: _,
+            share_application_distributor: d,
             share_application_distributor_game_id: u,
             share_application_game_metadata: c,
             video_layout: this.videoStreamStats.getLayout(),
@@ -626,12 +630,12 @@ class H extends h.A {
     getSoundshareAnalyticsProperties() {
         return {
             rtc_connection_id: this.getRTCConnectionId(),
-            soundshare_experimental: O.Ay.getExperimentalSoundshare(),
+            soundshare_experimental: C.Ay.getExperimentalSoundshare(),
         };
     }
     trackVideoStartStats() {
-        let e = this.isOwner ? G() : null;
-        L.default.track(P.HAw.VIDEO_STREAM_STARTED, {
+        let e = this.isOwner ? x() : null;
+        v.default.track(b.HAw.VIDEO_STREAM_STARTED, {
             ...this.getStreamAnalyticsProperties(),
             ...e,
             connection_type: y.A.getType(),
@@ -642,7 +646,7 @@ class H extends h.A {
         });
     }
     trackVideoEndStats(e) {
-        let t = C.A.getChannel(this.channelId),
+        let t = O.A.getChannel(this.channelId),
             n = null != t ? t.type : null,
             { ownerId: i } = this.streamContext,
             r = null,
@@ -652,11 +656,11 @@ class H extends h.A {
         (r = a.getNetworkStats()),
             (s = this.isOwner ? a.getCodecUsageStats("streamer", this.userId) : a.getCodecUsageStats("receiver", i));
         let o = g.A.getSettings(),
-            l = this.isOwner ? { clips_enabled: (0, p.TD)(), clips_buffer_length: o.clipsLength } : {},
-            d = this.isOwner ? { bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment() } : {};
+            l = this.isOwner ? { clips_enabled: (0, A.TD)(), clips_buffer_length: o.clipsLength } : {},
+            _ = this.isOwner ? { bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment() } : {};
         a.getOutboundStats().forEach((t) => {
             (t.num_frames ?? 0) > 0 &&
-                L.default.track(P.HAw.VIDEO_STREAM_ENDED, {
+                v.default.track(b.HAw.VIDEO_STREAM_ENDED, {
                     ...s,
                     ...r,
                     ...null,
@@ -665,23 +669,23 @@ class H extends h.A {
                     ...this.soundshareStats.getStats(),
                     ...this.getStreamAnalyticsProperties(),
                     ...l,
-                    ...d,
-                    app_hardware_acceleration_enabled: b.A.getAppHardwareAccelerationEnabled(),
+                    ..._,
+                    app_hardware_acceleration_enabled: w.A.getAppHardwareAccelerationEnabled(),
                     channel_type: n,
                     reason: e,
                     max_viewers: this.analyticsContext.maxViewers,
                     hostname: this.hostname,
-                    hardware_enabled: O.Ay.getHardwareEncoding(),
-                    device_performance_class: this.isOwner ? (0, A.A)() : null,
-                    soundshare_experimental: O.Ay.getExperimentalSoundshare(),
+                    hardware_enabled: C.Ay.getHardwareEncoding(),
+                    device_performance_class: this.isOwner ? (0, I.A)() : null,
+                    soundshare_experimental: C.Ay.getExperimentalSoundshare(),
                     quality_preset: S.A.getState().preset,
-                    discord_is_elevated: b.A.getDiscordIsElevated(),
+                    discord_is_elevated: w.A.getDiscordIsElevated(),
                 });
         }),
             a.getInboundParticipants().forEach((t) => {
                 let i = a.getInboundStats(t);
                 (i?.num_frames ?? 0) > 0 &&
-                    L.default.track(P.HAw.VIDEO_STREAM_ENDED, {
+                    v.default.track(b.HAw.VIDEO_STREAM_ENDED, {
                         ...s,
                         ...r,
                         ...null,
@@ -690,37 +694,37 @@ class H extends h.A {
                         ...this.soundshareStats.getStats(),
                         ...this.getStreamAnalyticsProperties(),
                         ...l,
-                        ...d,
-                        app_hardware_acceleration_enabled: b.A.getAppHardwareAccelerationEnabled(),
+                        ..._,
+                        app_hardware_acceleration_enabled: w.A.getAppHardwareAccelerationEnabled(),
                         channel_type: n,
                         reason: e,
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
-                        hardware_enabled: O.Ay.getHardwareEncoding(),
-                        device_performance_class: this.isOwner ? (0, A.A)() : null,
+                        hardware_enabled: C.Ay.getHardwareEncoding(),
+                        device_performance_class: this.isOwner ? (0, I.A)() : null,
                     });
             });
     }
     getExtraConnectionOptions() {
-        return { streamUserId: (0, U.Iy)(this.streamKey).ownerId };
+        return { streamUserId: (0, M.Iy)(this.streamKey).ownerId };
     }
 }
-var j = n(834757),
+var Y = n(834757),
     W = n(254057),
-    Y = n(723702),
-    K = n(290863),
-    z = n(325278);
-let $ = {},
+    K = n(723702),
+    j = n(290863),
+    $ = n(325278);
+let z = {},
     q = {},
     X = {},
-    Z = {},
     Q = {},
     J = {},
-    ee = P.SO9.THEATRE,
+    Z = {},
+    ee = b.SO9.THEATRE,
     et = {};
 function en() {
     o().forEach(et, (e, t) => {
-        e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete et[t], delete J[t];
+        e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete et[t], delete Z[t];
     });
 }
 function ei() {
@@ -728,7 +732,7 @@ function ei() {
 }
 class er extends l.Ay.Store {
     initialize() {
-        this.waitFor(N.default, O.Ay, v.A, u.Ay);
+        this.waitFor(N.default, C.Ay, D.A, u.Ay);
     }
     static displayName = "StreamRTCConnectionStore";
     getRTCConnections() {
@@ -741,7 +745,7 @@ class er extends l.Ay.Store {
         return et[e];
     }
     getQuality(e) {
-        return (0, W.A)(O.Ay) && null != e ? (et[e]?.quality ?? P.bFR.UNKNOWN) : P.bFR.UNKNOWN;
+        return (0, W.A)(C.Ay) && null != e ? (et[e]?.quality ?? b.bFR.UNKNOWN) : b.bFR.UNKNOWN;
     }
     getMediaSessionId(e) {
         if (null == e) return null;
@@ -774,10 +778,10 @@ class er extends l.Ay.Store {
         return null != t ? t.getMaxViewers() : null;
     }
     getStreamSourceId(e) {
-        return Z[e];
+        return Q[e];
     }
     getLastNonZeroRemoteVideoSinkWantsTime(e) {
-        return J[e];
+        return Z[e];
     }
     getUserIds(e) {
         let t = et[e];
@@ -798,8 +802,8 @@ class er extends l.Ay.Store {
     }
 }
 let es = new er(
-    _.h,
-    !O.Ay.isSupported() || __OVERLAY__
+    d.h,
+    !C.Ay.isSupported() || __OVERLAY__
         ? {}
         : {
               CONNECTION_OPEN: function (e) {
@@ -817,14 +821,14 @@ let es = new er(
               RTC_CONNECTION_SECURE_FRAMES_UPDATE: ei,
               RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: function (e) {
                   let { context: t, wants: n, userId: i, guildId: r, channelId: s } = e,
-                      a = (0, U._z)({
-                          streamType: null == r ? z.U4.CALL : z.U4.GUILD,
+                      a = (0, M._z)({
+                          streamType: null == r ? $.U4.CALL : $.U4.GUILD,
                           guildId: r,
                           channelId: s,
                           ownerId: i,
                       });
                   if (
-                      t !== d.x.STREAM ||
+                      t !== _.x.STREAM ||
                       null == et[a] ||
                       !Object.entries(n).some((e) => {
                           let [t, n] = e;
@@ -832,7 +836,7 @@ let es = new er(
                       })
                   )
                       return !1;
-                  J[a] = performance.now();
+                  Z[a] = performance.now();
               },
               STREAM_START: function (e) {
                   let {
@@ -843,19 +847,19 @@ let es = new er(
                           pid: s,
                           sourceId: a,
                           sourcePid: l,
-                          nativePickerStyleUsed: d,
-                          goLiveModalDurationMs: _,
+                          nativePickerStyleUsed: _,
+                          goLiveModalDurationMs: d,
                           analyticsLocations: c,
                       } = e,
-                      E = (0, U._z)({ streamType: t, guildId: n, channelId: i, ownerId: N.default.getId() });
+                      E = (0, M._z)({ streamType: t, guildId: n, channelId: i, ownerId: N.default.getId() });
                   if (
-                      (($[E] = { appContext: r, analyticsLocations: c }),
+                      ((z[E] = { appContext: r, analyticsLocations: c }),
                       o().forEach(et, (e) => {
                           let { analyticsContext: t, isOwner: n } = e;
-                          t.setActionContext(r), t.setNativePickerStyleUsed(d), n && t.trackStart();
+                          t.setActionContext(r), t.setNativePickerStyleUsed(_), n && t.trackStart();
                       }),
                       null == s && (s = l),
-                      (Z[E] = a),
+                      (Q[E] = a),
                       (X[E] = s),
                       null != s)
                   ) {
@@ -871,31 +875,31 @@ let es = new er(
                           }),
                           et[E]?.analyticsContext.updateStreamApplication(q[E]);
                   } else et[E]?.analyticsContext.updateStreamApplication(null);
-                  null != _ ? (Q[E] = _) : delete Q[E];
+                  null != d ? (J[E] = d) : delete J[E];
               },
               STREAM_STOP: function (e) {
                   let { appContext: t, streamKey: n } = e;
-                  ($[n] = { appContext: t, analyticsLocations: void 0 }),
+                  (z[n] = { appContext: t, analyticsLocations: void 0 }),
                       o().forEach(et, (e) => {
                           let { analyticsContext: n, isOwner: i } = e;
                           n.setActionContext(t), i && n.trackEnd();
                       }),
-                      (Z[n] = null),
+                      (Q[n] = null),
                       (X[n] = null),
-                      delete Q[n];
+                      delete J[n];
               },
               STREAM_CREATE: function (e) {
                   let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: a, viewerIds: o } = e,
                       l = et[t],
-                      d = (0, U.Iy)(t);
+                      _ = (0, M.Iy)(t);
                   if (null == l && null != n) {
-                      null == X[t] && (q[t] = null), null == q[t] && null == Z[t] && (q[t] = (0, j.Ee)(d, K.A));
+                      null == X[t] && (q[t] = null), null == q[t] && null == Q[t] && (q[t] = (0, Y.Ee)(_, j.A));
                       let e = new B({
                           streamRegion: a,
                           streamApplication: q[t],
                           streamSourceType: (function (e) {
                               if (null == e) return "unknown";
-                              if (Y.isPlatformEmbedded || platform?.name === "Chrome") {
+                              if (K.isPlatformEmbedded || platform?.name === "Chrome") {
                                   if (e.startsWith("web-contents-media-stream:")) return "tab";
                                   else if (e.startsWith("window:")) return "window";
                                   else if (e.startsWith("screen:")) return "screen";
@@ -904,11 +908,11 @@ let es = new er(
                                   else return "screen";
                               else if (platform?.name === "Safari") return "window";
                               return "unknown";
-                          })(Z[t]),
-                          actionContext: $[t]?.appContext,
+                          })(Q[t]),
+                          actionContext: z[t]?.appContext,
                           numViewers: null != o ? o.length : 0,
-                          goLiveModalDurationMs: Q[t],
-                          analyticsLocations: $[t]?.analyticsLocations,
+                          goLiveModalDurationMs: J[t],
+                          analyticsLocations: z[t]?.analyticsLocations,
                       });
                       s()(null != i, "Creating RTCConnection without session."),
                           (l = new H({
@@ -918,12 +922,12 @@ let es = new er(
                               channelId: r,
                               initialLayout: ee,
                               analyticsContext: e,
-                              parentMediaSessionId: v.A.getMediaSessionId(),
+                              parentMediaSessionId: D.A.getMediaSessionId(),
                           })),
                           (et[t] = l);
                   }
-                  delete J[t],
-                      _.h.dispatch({
+                  delete Z[t],
+                      d.h.dispatch({
                           type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
                           mediaEngineConnectionId: l.getMediaEngineConnectionId(),
                       });
@@ -943,7 +947,7 @@ let es = new er(
                   let { streamKey: t } = e,
                       n = et[t];
                   if (null == n) return !1;
-                  _.h.dispatch({
+                  d.h.dispatch({
                       type: "MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET",
                       mediaEngineConnectionId: n.getMediaEngineConnectionId(),
                   }),
