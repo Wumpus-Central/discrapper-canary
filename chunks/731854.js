@@ -232,7 +232,7 @@ var eo =
     eE = (((f = {}).FIXED = "fixed"), (f.SOURCE = "source"), f),
     eh =
         (((g = {}).VIDEOTOOLBOX_RATE_CONTROL = "videotoolbox_rate_control"),
-        (g.SIGNAL_AV1 = "signal_av1"),
+        (g.SIGNAL_AV1_ENCODE = "signal_av1_encode"),
         (g.SIGNAL_AV1_DECODE = "signal_av1_decode"),
         (g.SIGNAL_AV1_HARDWARE_DECODE = "signal_av1_hardware_decode"),
         (g.VIEWER_CLIP = "viewer_clip"),
@@ -241,6 +241,7 @@ var eo =
         (g.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = "software_fallback_on_consecutive_errors"),
         (g.BROWSER_HEVC = "browser_hevc"),
         (g.LOW_LATENCY_RATE_CONTROL = "low_latency_rate_control"),
+        (g.H265_DISABLE_ENCODE = "h265_disable_encode"),
         (g.H265_HARDWARE_ONLY = "h265_hardware_only"),
         (g.H265_HARDWARE_DECODE_AVAILABLE = "h265_hardware_decode_available"),
         (g.WMF_GPU_ENCODE = "wmf_gpu_encode"),
