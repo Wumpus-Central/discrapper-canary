@@ -1,18 +1,19 @@
-n.d(t, { A: () => u });
-var a = n(627968),
-    l = n(64700),
-    i = n(451988),
-    r = n(862482),
-    s = n(109802),
-    o = n(957565),
-    c = n(985018);
-class d extends l.PureComponent {
+"use strict";
+l.d(t, { A: () => u });
+var n = l(627968),
+    i = l(64700),
+    s = l(451988),
+    a = l(862482),
+    r = l(109802),
+    o = l(957565),
+    d = l(985018);
+class c extends i.PureComponent {
     _timeout;
     static defaultProps = { delay: 1e3 };
     constructor(e) {
         super(e),
-            (this.state = { mode: s.e.Modes.DEFAULT }),
-            (this._timeout = new i.Ep()),
+            (this.state = { mode: r.e.Modes.DEFAULT }),
+            (this._timeout = new s.Ep()),
             (this.handleCopy = this.handleCopy.bind(this));
     }
     componentWillUnmount() {
@@ -21,28 +22,28 @@ class d extends l.PureComponent {
     render() {
         let { text: e } = this.props,
             { mode: t } = this.state,
-            n = t === s.e.Modes.SUCCESS ? c.intl.string(c.t.t5VZ88) : e;
-        return (0, a.jsx)(s.e, { ...this.props, onCopy: this.handleCopy, mode: t, text: n, supportsCopy: o.p5 });
+            l = t === r.e.Modes.SUCCESS ? d.intl.string(d.t.t5VZ88) : e;
+        return (0, n.jsx)(r.e, { ...this.props, onCopy: this.handleCopy, mode: t, text: l, supportsCopy: o.p5 });
     }
     handleCopy(e) {
-        let { onCopy: t, delay: n = 1e3 } = this.props;
+        let { onCopy: t, delay: l = 1e3 } = this.props;
         (0, o.C)(
             e,
-            () => this.setState({ mode: s.e.Modes.SUCCESS }),
-            () => this.setState({ mode: s.e.Modes.ERROR }),
+            () => this.setState({ mode: r.e.Modes.SUCCESS }),
+            () => this.setState({ mode: r.e.Modes.ERROR }),
         ),
-            this._timeout.start(n, () => this.setState({ mode: s.e.Modes.DEFAULT })),
+            this._timeout.start(l, () => this.setState({ mode: r.e.Modes.DEFAULT })),
             t?.(e);
     }
     getVerticalButtonColor(e) {
         switch (e) {
-            case s.e.Modes.SUCCESS:
-                return r.$n.Colors.GREEN;
-            case s.e.Modes.ERROR:
-                return r.$n.Colors.RED;
+            case r.e.Modes.SUCCESS:
+                return a.$n.Colors.GREEN;
+            case r.e.Modes.ERROR:
+                return a.$n.Colors.RED;
             default:
-                return r.$n.Colors.BRAND;
+                return a.$n.Colors.BRAND;
         }
     }
 }
-let u = d;
+let u = c;
