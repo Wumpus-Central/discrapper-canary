@@ -175,7 +175,7 @@ function en(e) {
     let { widget: t, ...n } = e;
     return t instanceof m.R
         ? (0, i.jsx)(C.A, { widget: t, ...n })
-        : (0, T.fu)(t)
+        : t instanceof T.Yy
           ? (0, i.jsx)(Y.A, { widget: t, ...n })
           : null;
 }
