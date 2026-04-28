@@ -4545,11 +4545,6 @@ img.thumbnail__0f2e8 {
     margin-inline: calc(var(--custom-activity-card-padding)*-1)
 }
 
-.divider__23eb0 {
-    background-color: var(--user-profile-border);
-    height: 1px
-}
-
 .roleIcon_ee71ee {
     display: inline-block;
     -o-object-fit: contain;
@@ -5919,6 +5914,10 @@ img.thumbnail__0f2e8 {
 .invoice_e4d803,
 .taxInclusiveNote_e4d803 {
     margin-bottom: 16px
+}
+
+.invoice_e4d803 {
+    background-color: var(--background-surface-high) !important
 }
 
 .premiumBrandRefreshInputBackground_e4d803 {
