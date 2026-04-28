@@ -40,4 +40,5 @@ e.exports = {
     _O: "categoriesWrapper__62e7a",
     zg: "socialIcon__62e7a",
     sX: "guildCapPremiumUpsell__62e7a",
+    Pb: "acceptUsername__62e7a",
 };

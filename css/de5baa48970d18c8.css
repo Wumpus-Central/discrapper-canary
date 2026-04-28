@@ -39,11 +39,18 @@
     flex-direction: row;
     margin-bottom: calc(var(--custom-modal-padding-md)*-1);
     margin-top: calc(var(--custom-modal-padding-top)*-1);
-    overflow: hidden
+    min-width: 0;
+    overflow: hidden;
+    width: 100%
 }
 
 .contentWrapper__9b0f4 {
-    flex-grow: 1
+    flex-grow: 1;
+    min-width: 0
+}
+
+.acceptUsername__9b0f4 {
+    overflow-wrap: anywhere
 }
 
 .inviterContainer__9b0f4 {
@@ -516,4 +523,8 @@
 
 .guildCapPremiumUpsell__62e7a {
     margin-top: 0
+}
+
+.acceptUsername__62e7a {
+    overflow-wrap: anywhere
 }
