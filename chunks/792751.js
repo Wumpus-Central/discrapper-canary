@@ -1,3 +1,13 @@
-e.exports = JSON.parse(
-    '{"ihBfyA":["Hozz\xe1ad\xe1s a kedvencekhez"],"PACPOV":["J\xe1t\xe9k"],"snNYS+":["Klipk\xe9sz\xedt\xe9si be\xe1ll\xedt\xe1sok"],"GPfOas":["A gyorsgombod m\xf3dos\xedt\xe1sa"],"DLzdl7":["Itt b\xe1rmikor szerkesztheted \xe9s megoszthatod a klipjeidet."],"4K56sP":["A Discord Klipek funkci\xf3ja minden sz\xe1m\xedt\xf3g\xe9pes j\xe1t\xe9kkal kompatibilisek."],"BIwQis":["Nyomd meg a k\xf6vetkezőt, ha klipet szeretn\xe9l r\xf6gz\xedteni j\xe1t\xe9k k\xf6zben: ",[1,"keybind"],"."],"HOUDUm":["Nyomd meg a gyorsgombot, ha klipet szeretn\xe9l r\xf6gz\xedteni j\xe1t\xe9k k\xf6zben."],"m2GEpP":["Minden, j\xe1t\xe9kokban \xe1t\xe9lt pillanat egyetlen helyen"],"xkY5xS":["Pr\xf3b\xe1lj meg valami m\xe1sra r\xe1keresni"],"+M2iLf":["Nem tal\xe1lhat\xf3k klipek"],"JbyR1U":["Szűrők: ",[1,"count"]],"IZsalP":["Elt\xe1vol\xedt\xe1s a kedvencek k\xf6z\xfcl"]}',
-);
+e.exports = {
+    WY: "imageUploader_e4d0bf",
+    DT: "removeButton_e4d0bf",
+    UZ: "sizeInfo_e4d0bf",
+    r9: "disabled_e4d0bf",
+    Yp: "imageUploaderInner_e4d0bf",
+    U1: "imageUploaderIconWrapper_e4d0bf",
+    c4: "imageUploaderFileInput_e4d0bf",
+    nX: "imageUploaderAcronym_e4d0bf",
+    $J: "imageUploaderHint_e4d0bf",
+    XD: "imageUploaderIcon_e4d0bf",
+    $N: "imageUploaderIconDisabled_e4d0bf",
+};

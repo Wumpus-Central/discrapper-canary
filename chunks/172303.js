@@ -1,4 +1,4 @@
-o.r(i), o.d(i, { default: () => s });
-let s = JSON.parse(
-    '{"ihBfyA":["Add to Favorites"],"PACPOV":["Game"],"f98Qe3":["Delete all clips"],"YKst58":["Share your POV"],"snNYS+":["Clip Options"],"GPfOas":["Change your shortcut"],"DLzdl7":["Edit and share your clips anytime from here."],"4K56sP":["Discord Clips works with any PC game."],"BIwQis":["Press ",[1,"keybind"]," to capture a clip while gaming."],"HOUDUm":["Setup a shortcut to capture a clip while gaming."],"m2GEpP":["All your gaming moments in one place"],"xkY5xS":["Try searching for something else"],"+M2iLf":["No clips found"],"tv7emB":["Copy Video"],"HH4Tjj":["Add to Soundboard"],"JbyR1U":["Filters: ",[1,"count"]],"dFu8vZ":[[1,"count"]," Recent ",[6,"count",{"one":["Clip"],"other":["Clips"]},0,"cardinal"]],"IZsalP":["Remove from Favorites"],"55C2MH":["View all clips"]}',
+s.r(i), s.d(i, { default: () => o });
+let o = JSON.parse(
+    '{"ihBfyA":["Add to Favorites"],"PACPOV":["Game"],"YKst58":["Share your POV"],"snNYS+":["Clip Options"],"GPfOas":["Change your shortcut"],"DLzdl7":["Edit and share your clips anytime from here."],"4K56sP":["Discord Clips works with any PC game."],"BIwQis":["Press ",[1,"keybind"]," to capture a clip while gaming."],"HOUDUm":["Setup a shortcut to capture a clip while gaming."],"m2GEpP":["All your gaming moments in one place"],"xkY5xS":["Try searching for something else"],"+M2iLf":["No clips found"],"tv7emB":["Copy Video"],"HH4Tjj":["Add to Soundboard"],"JbyR1U":["Filters: ",[1,"count"]],"IZsalP":["Remove from Favorites"]}',
 );

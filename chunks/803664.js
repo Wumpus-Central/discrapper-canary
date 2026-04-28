@@ -32,7 +32,7 @@ function A(e) {
                 action: function () {
                     (0, a.openModalLazy)(
                         async () => {
-                            let { ConfirmModal: e } = await n.e("4823").then(n.bind(n, 158954));
+                            let { ConfirmModal: e } = await n.e("27204").then(n.bind(n, 158954));
                             return (t) =>
                                 (0, r.jsx)(e, {
                                     title: f.intl.formatToPlainString(f.t.fPLvZd, { name: E }),

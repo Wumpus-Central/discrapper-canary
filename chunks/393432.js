@@ -1,10 +1,11 @@
-n.d(t, { PW: () => l, mD: () => s, md: () => r });
-var i = n(665260),
-    a = n(355097);
-function r(e, t) {
-    return i.UI(i.iE(e, a.n3.UNREADS_ALL_MESSAGES, a.n3.UNREADS_ONLY_MENTIONS), t);
+"use strict";
+n.d(t, { PW: () => a, mD: () => o, md: () => l });
+var r = n(665260),
+    i = n(355097);
+function l(e, t) {
+    return r.UI(r.iE(e, i.n3.UNREADS_ALL_MESSAGES, i.n3.UNREADS_ONLY_MENTIONS), t);
 }
-let l = (e) => i.iE(e, a.vv.UNREADS_ALL_MESSAGES, a.vv.UNREADS_ONLY_MENTIONS);
-function s(e, t) {
-    return i.UI(l(e), t);
+let a = (e) => r.iE(e, i.vv.UNREADS_ALL_MESSAGES, i.vv.UNREADS_ONLY_MENTIONS);
+function o(e, t) {
+    return r.UI(a(e), t);
 }

@@ -10,12 +10,12 @@ n.d(t, {
     f7: () => Y,
     gC: () => en,
     hJ: () => $,
-    l9: () => Z,
+    l9: () => z,
     m6: () => Q,
     navigateToQuestHome: () => X,
     q$: () => et,
     rx: () => x,
-    z6: () => z,
+    z6: () => Z,
 });
 var i = n(627968);
 n(64700);
@@ -91,51 +91,52 @@ function x(e) {
             n.e("57036"),
             n.e("88394"),
             n.e("80527"),
-            n.e("21909"),
+            n.e("58710"),
             n.e("31825"),
             n.e("23353"),
-            n.e("96123"),
             n.e("7175"),
             n.e("37249"),
             n.e("14138"),
             n.e("8971"),
+            n.e("85071"),
             n.e("88017"),
-            n.e("77404"),
             n.e("1040"),
             n.e("64615"),
             n.e("17239"),
-            n.e("7454"),
-            n.e("64492"),
+            n.e("66950"),
+            n.e("58164"),
+            n.e("38229"),
             n.e("20861"),
             n.e("36682"),
             n.e("45723"),
             n.e("56871"),
             n.e("69601"),
-            n.e("63191"),
+            n.e("47511"),
             n.e("51444"),
             n.e("62290"),
             n.e("80973"),
-            n.e("19235"),
-            n.e("22269"),
+            n.e("82731"),
+            n.e("38495"),
+            n.e("57752"),
         ]).then(n.bind(n, 130190));
         return (n) => (0, i.jsx)(e, { ...n, initialQuest: t, sourceQuestContent: a });
     });
 }
 function K(e, t, a) {
     (0, s.openModalLazy)(async () => {
-        let { default: r } = await Promise.all([n.e("7175"), n.e("19235"), n.e("6119")]).then(n.bind(n, 529398));
+        let { default: r } = await Promise.all([n.e("7175"), n.e("38495"), n.e("6119")]).then(n.bind(n, 529398));
         return (n) => (0, i.jsx)(r, { ...n, initialQuest: e, location: t, sourceQuestContent: a });
     });
 }
 function j(e, t, a) {
     (0, s.openModalLazy)(async () => {
-        let { default: r } = await Promise.all([n.e("7175"), n.e("19235"), n.e("61614")]).then(n.bind(n, 448887));
+        let { default: r } = await Promise.all([n.e("7175"), n.e("38495"), n.e("61614")]).then(n.bind(n, 448887));
         return (n) => (0, i.jsx)(r, { ...n, initialQuest: e, sourceQuestContent: a, location: t });
     });
 }
 function $(e, t, a, r) {
     (0, s.openModalLazy)(async () => {
-        let { default: _ } = await Promise.all([n.e("80527"), n.e("7175"), n.e("19235"), n.e("99477")]).then(
+        let { default: _ } = await Promise.all([n.e("80527"), n.e("7175"), n.e("38495"), n.e("14206")]).then(
             n.bind(n, 651663),
         );
         return (n) => (0, i.jsx)(_, { ...n, initialQuest: e, sourceQuestContent: a, location: t, preview: r });
@@ -169,13 +170,13 @@ function X(e) {
         (0, S.default)(),
         (0, A.pX)((i ? V.BVt.QUEST_HOME_DEPRECATED : V.BVt.QUEST_HOME) + a);
 }
-function z(e) {
+function Z(e) {
     let t = (0, P.L)({ quest: e });
     if (Math.random() > 0.01) return;
     let n = (0, M.A)(e);
     t.log(`Showing survey ${n.id}`), (0, w.m)({ questId: e.id, survey: n });
 }
-function Z() {
+function z() {
     return Promise.all([
         n.e("57174"),
         n.e("92868"),
@@ -183,7 +184,7 @@ function Z() {
         n.e("91652"),
         n.e("77375"),
         n.e("19580"),
-        n.e("25386"),
+        n.e("53174"),
     ]).then(n.bind(n, 834135));
 }
 function J(e) {
@@ -222,7 +223,7 @@ function J(e) {
     let O = performance.now();
     (0, s.openModalLazy)(
         async () => {
-            let { default: e } = await Z();
+            let { default: e } = await z();
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,
@@ -292,7 +293,7 @@ function en(e, t) {
             n.e("56871"),
             n.e("62092"),
             n.e("98970"),
-            n.e("44049"),
+            n.e("4544"),
         ]).then(n.bind(n, 50292));
         return (n) => (0, i.jsx)(a, { ...n, multiplier: e, eligibleToReceivePremiumRewards: t });
     });

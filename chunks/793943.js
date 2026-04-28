@@ -9,7 +9,6 @@ var i,
         (i.APP_ICON = "APP_ICON"),
         (i.CUSTOM_THEME = "CUSTOM_THEME"),
         (i.APPLICATION_TEST_MODE_DEBUG = "APPLICATION_TEST_MODE_DEBUG"),
-        (i.CLIPS_REMINDER = "CLIPS_REMINDER"),
         i),
     l =
         (((r = {}).CLIENT_THEMES_EDITOR = "CLIENT_THEMES_EDITOR"),

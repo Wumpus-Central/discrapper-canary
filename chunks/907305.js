@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     fx: "containerDefault_c69b6d",
     mU: "containerDragAfter_c69b6d",

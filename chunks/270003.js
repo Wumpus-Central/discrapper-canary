@@ -1,42 +1,41 @@
-"use strict";
-r.d(t, { n: () => u });
-var n = r(627968),
-    i = r(64700),
-    a = r(503698),
-    s = r.n(a),
-    l = r(331322),
-    o = r(834730),
-    c = r(64584),
-    d = r(498990);
+n.d(t, { n: () => u });
+var i = n(627968),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(331322),
+    o = n(834730),
+    d = n(64584),
+    c = n(498990);
 function u(e) {
-    let { children: t, label: r, description: a, ...u } = e,
-        { spacing: _ } = i.useContext(c.c),
-        p = i.useId(),
-        f = null != a && "" !== a;
-    return (0, n.jsxs)("fieldset", {
+    let { children: t, label: n, description: a, ...u } = e,
+        { spacing: h } = l.useContext(d.c),
+        _ = l.useId(),
+        m = null != a && "" !== a;
+    return (0, i.jsxs)("fieldset", {
         ...u,
-        className: s()(d.lI, u.className),
-        "aria-describedby": f ? p : void 0,
+        className: s()(c.lI, u.className),
+        "aria-describedby": m ? _ : void 0,
         children: [
-            null != r
-                ? (0, n.jsx)(o.E, {
+            null != n
+                ? (0, i.jsx)(o.E, {
                       tag: "legend",
                       variant: "text-lg/medium",
                       color: "text-strong",
-                      className: d.o1,
-                      children: r,
+                      className: c.o1,
+                      children: n,
                   })
                 : null,
-            f
-                ? (0, n.jsx)(o.E, {
+            m
+                ? (0, i.jsx)(o.E, {
                       variant: "text-sm/normal",
                       color: "text-default",
-                      className: d.h_,
-                      id: p,
+                      className: c.h_,
+                      id: _,
                       children: a,
                   })
                 : null,
-            (0, n.jsx)(l.B, { direction: "vertical", gap: _, children: t }),
+            (0, i.jsx)(r.B, { direction: "vertical", gap: h, children: t }),
         ],
     });
 }

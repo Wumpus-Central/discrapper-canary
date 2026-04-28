@@ -210,8 +210,8 @@ class $ extends r.PureComponent {
 var Q = n(488428),
     q = n(873263),
     X = n(110259),
-    z = n(279194),
-    Z = n(742821),
+    Z = n(279194),
+    z = n(742821),
     J = n(80703),
     ee = n(506774),
     et = n(736056),
@@ -229,7 +229,7 @@ let ei = u.Ay.connectStores([et.A, en.default], () => {
 });
 var ea = n(549711),
     er = n(268218),
-    e_ = n(144491),
+    e_ = n(276267),
     es = n(228366),
     el =
         (((i = {})[(i.NOT_STARTED = 0)] = "NOT_STARTED"),
@@ -263,7 +263,7 @@ function eI() {
     return (
         r.useEffect(() => {
             window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN &&
-                !0 !== ee.w.get(z.qx) &&
+                !0 !== ee.w.get(Z.qx) &&
                 v.Ay.supportsFeature(K.BYE.USER_DATA_CACHE) &&
                 (es.h.wait(() => es.h.dispatch({ type: "DOMAIN_MIGRATION_START" })),
                 p.A.userDataCache.getCached().then((e) => {
@@ -292,7 +292,7 @@ function eI() {
                             { success: !0, current_is_newer: r, has_data: n },
                             { flush: !0 },
                         ),
-                        ee.w.set(z.qx, !0),
+                        ee.w.set(Z.qx, !0),
                         p.A.userDataCache.deleteCache(),
                         window.location.reload();
                 }));
@@ -388,30 +388,31 @@ let eh = (0, er.Fe)({
                 n.e("2035"),
                 n.e("98248"),
                 n.e("80527"),
-                n.e("21909"),
+                n.e("58710"),
                 n.e("31825"),
                 n.e("23353"),
-                n.e("96123"),
                 n.e("7175"),
                 n.e("37249"),
                 n.e("14138"),
                 n.e("8971"),
+                n.e("85071"),
                 n.e("88017"),
-                n.e("77404"),
                 n.e("1040"),
                 n.e("64615"),
                 n.e("17239"),
-                n.e("7454"),
-                n.e("64492"),
+                n.e("66950"),
+                n.e("58164"),
+                n.e("38229"),
                 n.e("36682"),
                 n.e("56871"),
                 n.e("69601"),
-                n.e("63191"),
+                n.e("47511"),
                 n.e("48900"),
                 n.e("20735"),
                 n.e("27846"),
                 n.e("8306"),
                 n.e("24170"),
+                n.e("46506"),
                 n.e("20382"),
                 n.e("34268"),
                 n.e("35327"),
@@ -426,7 +427,7 @@ let eh = (0, er.Fe)({
                 n.e("91139"),
                 n.e("47568"),
                 n.e("8021"),
-                n.e("45675"),
+                n.e("17422"),
                 n.e("79149"),
                 n.e("26297"),
                 n.e("77058"),
@@ -434,21 +435,22 @@ let eh = (0, er.Fe)({
                 n.e("16310"),
                 n.e("49448"),
                 n.e("55811"),
-                n.e("82866"),
+                n.e("8797"),
                 n.e("56686"),
-                n.e("13504"),
+                n.e("90895"),
+                n.e("66636"),
                 n.e("78467"),
                 n.e("34418"),
                 n.e("76953"),
                 n.e("6044"),
                 n.e("18294"),
                 n.e("36423"),
+                n.e("92083"),
                 n.e("64919"),
                 n.e("5536"),
-                n.e("69026"),
                 n.e("37786"),
                 n.e("68798"),
-                n.e("52813"),
+                n.e("44846"),
                 n.e("84989"),
                 n.e("56423"),
                 n.e("59296"),
@@ -471,42 +473,43 @@ let eh = (0, er.Fe)({
                 n.e("28367"),
                 n.e("93103"),
                 n.e("80527"),
-                n.e("21909"),
+                n.e("58710"),
                 n.e("31825"),
                 n.e("23353"),
-                n.e("96123"),
                 n.e("7175"),
                 n.e("37249"),
                 n.e("14138"),
                 n.e("8971"),
+                n.e("85071"),
                 n.e("88017"),
-                n.e("77404"),
                 n.e("1040"),
                 n.e("64615"),
                 n.e("17239"),
-                n.e("7454"),
-                n.e("64492"),
+                n.e("66950"),
+                n.e("58164"),
+                n.e("38229"),
                 n.e("20861"),
                 n.e("36682"),
                 n.e("56871"),
                 n.e("69601"),
-                n.e("63191"),
+                n.e("47511"),
+                n.e("72401"),
                 n.e("51444"),
                 n.e("62290"),
-                n.e("80973"),
-                n.e("72401"),
                 n.e("93312"),
+                n.e("80973"),
+                n.e("82731"),
                 n.e("82486"),
-                n.e("45675"),
+                n.e("17422"),
                 n.e("34418"),
                 n.e("90966"),
                 n.e("16198"),
                 n.e("37446"),
-                n.e("34889"),
+                n.e("73076"),
                 n.e("37619"),
                 n.e("25505"),
                 n.e("23224"),
-                n.e("26460"),
+                n.e("37402"),
                 n.e("86142"),
             ]).then(n.bind(n, 656901)),
         webpackId: 656901,
@@ -551,33 +554,33 @@ let eh = (0, er.Fe)({
                 n.e("55343"),
                 n.e("93103"),
                 n.e("80527"),
-                n.e("21909"),
+                n.e("88342"),
+                n.e("58710"),
+                n.e("8555"),
                 n.e("31825"),
                 n.e("23353"),
-                n.e("96123"),
                 n.e("7175"),
                 n.e("37249"),
-                n.e("88342"),
                 n.e("14138"),
                 n.e("8971"),
+                n.e("85071"),
                 n.e("88017"),
-                n.e("77404"),
+                n.e("40142"),
                 n.e("1040"),
                 n.e("64615"),
                 n.e("17239"),
-                n.e("7454"),
-                n.e("64492"),
-                n.e("8555"),
-                n.e("36682"),
-                n.e("56871"),
-                n.e("69601"),
-                n.e("63191"),
-                n.e("40142"),
+                n.e("66950"),
                 n.e("60161"),
+                n.e("58164"),
+                n.e("38229"),
+                n.e("36682"),
                 n.e("98765"),
                 n.e("35313"),
                 n.e("65437"),
+                n.e("56871"),
                 n.e("34983"),
+                n.e("69601"),
+                n.e("47511"),
                 n.e("92414"),
                 n.e("95208"),
                 n.e("72401"),
@@ -611,6 +614,7 @@ let eh = (0, er.Fe)({
                 n.e("86674"),
                 n.e("4009"),
                 n.e("42282"),
+                n.e("46506"),
                 n.e("49862"),
                 n.e("20382"),
                 n.e("80093"),
@@ -637,8 +641,8 @@ let eh = (0, er.Fe)({
                 n.e("91139"),
                 n.e("47568"),
                 n.e("8021"),
-                n.e("45675"),
                 n.e("41706"),
+                n.e("17422"),
                 n.e("26297"),
                 n.e("77058"),
                 n.e("90779"),
@@ -647,13 +651,14 @@ let eh = (0, er.Fe)({
                 n.e("7121"),
                 n.e("49448"),
                 n.e("55811"),
-                n.e("82866"),
+                n.e("8797"),
                 n.e("56686"),
                 n.e("2059"),
                 n.e("53267"),
                 n.e("94989"),
+                n.e("90895"),
                 n.e("26223"),
-                n.e("13504"),
+                n.e("66636"),
                 n.e("34418"),
                 n.e("92539"),
                 n.e("76953"),
@@ -664,7 +669,7 @@ let eh = (0, er.Fe)({
                 n.e("18294"),
                 n.e("83438"),
                 n.e("36423"),
-                n.e("69026"),
+                n.e("92083"),
                 n.e("37786"),
                 n.e("60744"),
                 n.e("68798"),
@@ -721,7 +726,7 @@ let eh = (0, er.Fe)({
 function eX(e, t) {
     return t ? e.filter((e) => !eq.has(e)) : e;
 }
-class ez extends r.Component {
+class eZ extends r.Component {
     componentDidMount() {
         let { isAuthenticated: e } = this.props;
         v.Ay.cleanupDisplaySleep(), eN.initialize(), (ef.A.wasAuthenticated = e);
@@ -890,7 +895,7 @@ class ez extends r.Component {
                                                 });
                                             {
                                                 let e = (0, eC.b$)("app_open_from_email", n, i.mobile),
-                                                    t = (0, Z.X7)(e);
+                                                    t = (0, z.X7)(e);
                                                 null != t &&
                                                     ec.default.track(K.HAw.DEEP_LINK_CLICKED, {
                                                         fingerprint: (0, J.v)(t.fingerprint),
@@ -927,7 +932,7 @@ class ez extends r.Component {
                 skipsSettingDefaultPageTitle: i,
                 children: [
                     e,
-                    y.isPlatformEmbedded && (n === el.NOT_STARTED || n === el.IN_PROGRESS) && !0 !== ee.w.get(z.qx)
+                    y.isPlatformEmbedded && (n === el.NOT_STARTED || n === el.IN_PROGRESS) && !0 !== ee.w.get(Z.qx)
                         ? (0, a.jsx)(eI, {})
                         : null,
                 ],
@@ -935,7 +940,7 @@ class ez extends r.Component {
         );
     }
 }
-let eZ = u.Ay.connectStores(
+let ez = u.Ay.connectStores(
     [en.default, ed],
     () => ({ isAuthenticated: en.default.isAuthenticated(), migrationStatus: ed.getMigrationStatus() }),
     { forwardRef: !0 },
@@ -944,7 +949,7 @@ let eZ = u.Ay.connectStores(
         let { pathname: e } = (0, q.zy)();
         return null != (0, eR.B)(e, { path: K.BVt.APPLICATION_DIRECTORY });
     })();
-    return (0, a.jsx)(ez, { ...e, skipsSettingDefaultPageTitle: t });
+    return (0, a.jsx)(eZ, { ...e, skipsSettingDefaultPageTitle: t });
 });
 class eJ extends eA.A {
     _initialize() {
@@ -1386,7 +1391,7 @@ let tq = (0, _.createRoot)(tQ),
             return null != t && ((0, tj.N)({ token: t }), !0);
         },
     },
-    tz = (e) => tq.render((0, a.jsx)(tP.e, { children: (0, a.jsx)(tb, { children: (0, a.jsx)(e, {}) }) }));
+    tZ = (e) => tq.render((0, a.jsx)(tP.e, { children: (0, a.jsx)(tb, { children: (0, a.jsx)(e, {}) }) }));
 if (null != p.A) {
     p.A.setUncaughtExceptionHandler?.((e, t) => {
         setImmediate(() => {
@@ -1407,8 +1412,8 @@ if (null != p.A) {
         v.Ay.initializeExitHook(),
         v.Ay.initializeWERHandler();
 }
-if (((0, tm.M)(window), __OVERLAY__)) tz(() => (0, a.jsx)(o.W, { children: (0, a.jsx)(ek, {}) }));
-else if (null != window.require && null == window.DiscordNative) tz($);
+if (((0, tm.M)(window), __OVERLAY__)) tZ(() => (0, a.jsx)(o.W, { children: (0, a.jsx)(ek, {}) }));
+else if (null != window.require && null == window.DiscordNative) tZ($);
 else {
     if ((document.addEventListener("scroll", (e) => e.preventDefault()), y.isPlatformEmbedded)) {
         (window.onbeforeunload = () => v.Ay.beforeUnload()),
@@ -1444,5 +1449,5 @@ else {
         td.initialize(),
         tp.initialize(),
         tF(),
-        tz(() => (0, a.jsx)(o.W, { children: (0, a.jsx)(eZ, {}) }));
+        tZ(() => (0, a.jsx)(o.W, { children: (0, a.jsx)(ez, {}) }));
 }

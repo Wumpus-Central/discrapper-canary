@@ -1,40 +1,39 @@
-"use strict";
-n.d(t, { D: () => E, openUploadError: () => h });
+n.d(t, { D: () => p, openUploadError: () => m });
 var i = n(627968);
 n(64700);
 var r = n(192308),
-    s = n(189213),
+    l = n(189213),
     a = n(523527),
-    o = n(191244),
-    l = n(976860),
-    _ = n(954571),
-    d = n(652215),
-    u = n(985018);
-function c(e) {
-    let { title: t, help: n, showPremiumUpsell: r, transitionState: c, onClose: E } = e;
+    s = n(191244),
+    o = n(976860),
+    u = n(954571),
+    c = n(652215),
+    d = n(985018);
+function f(e) {
+    let { title: t, help: n, showPremiumUpsell: r, transitionState: f, onClose: p } = e;
     return r
-        ? (0, i.jsx)(o.A, {
-              transitionState: c,
-              onClose: E,
+        ? (0, i.jsx)(s.A, {
+              transitionState: f,
+              onClose: p,
               handleLearnMore: () => {
                   (0, a.A)(),
-                      E(),
-                      _.default.track(d.HAw.PREMIUM_PROMOTION_OPENED, {
-                          location_section: d.JJy.FILE_UPLOAD_UPSELL_MODAL,
-                          location_object: d.ZSU.NAVIGATION_LINK,
+                      p(),
+                      u.default.track(c.HAw.PREMIUM_PROMOTION_OPENED, {
+                          location_section: c.JJy.FILE_UPLOAD_UPSELL_MODAL,
+                          location_object: c.ZSU.NAVIGATION_LINK,
                       }),
-                      (0, l.pX)(d.BVt.APPLICATION_STORE);
+                      (0, o.pX)(c.BVt.APPLICATION_STORE);
               },
           })
-        : (0, i.jsx)(s.Modal, {
+        : (0, i.jsx)(l.Modal, {
               title: t,
               subtitle: n,
-              transitionState: c,
-              actions: [{ text: u.intl.string(u.t["NX+WJN"]), onClick: E, variant: "primary" }],
-              onClose: E,
+              transitionState: f,
+              actions: [{ text: d.intl.string(d.t["NX+WJN"]), onClick: p, variant: "primary" }],
+              onClose: p,
           });
 }
-let E = "UPLOAD_ERROR_MODAL_KEY";
-function h(e) {
-    (0, r.openModal)((t) => (0, i.jsx)(c, { ...t, ...e }), { modalKey: E });
+let p = "UPLOAD_ERROR_MODAL_KEY";
+function m(e) {
+    (0, r.openModal)((t) => (0, i.jsx)(f, { ...t, ...e }), { modalKey: p });
 }
