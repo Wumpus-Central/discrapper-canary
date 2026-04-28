@@ -1,9 +1,9 @@
-n.d(e, { getApplicationPaymentSteps: () => z });
+n.d(t, { getApplicationPaymentSteps: () => z });
 var i = n(627968),
     l = n(64700),
     r = n(166532),
-    a = n(735305),
-    s = n(939220);
+    s = n(735305),
+    a = n(939220);
 n(938796);
 var o = n(17928),
     c = n(241524),
@@ -11,35 +11,35 @@ var o = n(17928),
     d = n(163437),
     p = n(490744),
     m = n(821609),
-    f = n(534514),
-    x = n(834730),
-    g = n(701273),
-    h = n(985018),
-    S = n(425013);
-let b = (t) => {
-    let { onConfirm: e, onCancel: n, title: l, subtitle: r, confirmCta: a, showOpenDiscord: s = !0 } = t;
+    x = n(534514),
+    f = n(834730),
+    h = n(701273),
+    g = n(985018),
+    b = n(425013);
+let S = (e) => {
+    let { onConfirm: t, onCancel: n, title: l, subtitle: r, confirmCta: s, showOpenDiscord: a = !0 } = e;
     return (0, i.jsxs)("div", {
-        className: S.RP,
+        className: b.RP,
         children: [
-            (0, i.jsx)(f.D, { className: S.RS, variant: "heading-lg/extrabold", children: l }),
+            (0, i.jsx)(x.D, { className: b.RS, variant: "heading-lg/extrabold", children: l }),
             null != r
-                ? (0, i.jsx)(x.E, { className: S.sT, variant: "text-sm/normal", color: "text-default", children: r })
+                ? (0, i.jsx)(f.E, { className: b.sT, variant: "text-sm/normal", color: "text-default", children: r })
                 : null,
             (0, i.jsxs)("div", {
-                className: S.UD,
+                className: b.UD,
                 children: [
-                    s &&
+                    a &&
                         (0, i.jsx)(m.$, {
                             variant: "primary",
-                            text: h.intl.string(h.t["8L5bZG"]),
+                            text: g.intl.string(g.t["8L5bZG"]),
                             fullWidth: !0,
-                            onClick: () => (0, g.A)("application_sub_mweb_success_modal"),
+                            onClick: () => (0, h.A)("application_sub_mweb_success_modal"),
                         }),
-                    (0, i.jsx)(m.$, { variant: "secondary", text: a, fullWidth: !0, onClick: e }),
+                    (0, i.jsx)(m.$, { variant: "secondary", text: s, fullWidth: !0, onClick: t }),
                     null != n &&
                         (0, i.jsx)(m.$, {
                             variant: "secondary",
-                            text: h.intl.string(h.t.iAfxo3),
+                            text: g.intl.string(g.t.iAfxo3),
                             fullWidth: !0,
                             onClick: n,
                         }),
@@ -48,346 +48,347 @@ let b = (t) => {
         ],
     });
 };
-function A(t) {
-    let { onConfirm: e, tierName: n, subscription: l } = t;
+function j(e) {
+    let { onConfirm: t, tierName: n, subscription: l } = e;
     return (0, i.jsxs)("div", {
-        className: S.RP,
+        className: b.RP,
         children: [
-            (0, i.jsx)(f.D, {
-                className: S.RS,
+            (0, i.jsx)(x.D, {
+                className: b.RS,
                 variant: "heading-lg/extrabold",
-                children: h.intl.format(h.t.wLFT6z, { tier: n }),
+                children: g.intl.format(g.t.wLFT6z, { tier: n }),
             }),
-            (0, i.jsx)(x.E, {
-                className: S.sT,
+            (0, i.jsx)(f.E, {
+                className: b.sT,
                 variant: "text-sm/normal",
                 color: "text-default",
-                children: h.intl.format(h.t.OsAK9h, { timestamp: l?.currentPeriodEnd }),
+                children: g.intl.format(g.t.OsAK9h, { timestamp: l?.currentPeriodEnd }),
             }),
             (0, i.jsxs)("div", {
-                className: S.UD,
+                className: b.UD,
                 children: [
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: S.__invalid_openDiscordButton,
+                        className: b.__invalid_openDiscordButton,
                         children: (0, i.jsx)(m.$, {
                             variant: "primary",
-                            text: h.intl.string(h.t["8L5bZG"]),
-                            onClick: () => (0, g.A)("application_sub_mweb_success_modal"),
+                            text: g.intl.string(g.t["8L5bZG"]),
+                            onClick: () => (0, h.A)("application_sub_mweb_success_modal"),
                         }),
                     }),
-                    (0, i.jsx)(m.$, { variant: "secondary", text: h.intl.string(h.t.nlkywz), onClick: e }),
+                    (0, i.jsx)(m.$, { variant: "secondary", text: g.intl.string(g.t.nlkywz), onClick: t }),
                 ],
             }),
         ],
     });
 }
-var j = n(71393),
+var A = n(71393),
     C = n(156312),
-    E = n(19311),
-    y = n(482132),
-    I = n(376747);
-function v(t) {
-    let { handleStepChange: e, handleClose: n } = t,
-        { subscriptionMetadataRequest: a, selectedStoreListing: s, application: m } = (0, C.P5)(),
-        f = (0, u.S3)(),
-        x = (0, c.A)(I.Y),
-        g = (0, o.bG)([j.A], () => j.A.getGuild(a?.guild_id)),
-        S = l.useCallback(() => e(r.pn.REVIEW), [e]);
-    if (null == f) return null;
-    let A = (0, d.bg)(f.flags);
+    v = n(19311),
+    E = n(482132),
+    N = n(376747);
+function y(e) {
+    let { handleStepChange: t, handleClose: n } = e,
+        { subscriptionMetadataRequest: s, selectedStoreListing: a, application: m } = (0, C.P5)(),
+        x = (0, u.S3)(),
+        f = (0, c.A)(N.Y),
+        h = (0, o.bG)([A.A], () => A.A.getGuild(s?.guild_id)),
+        b = l.useCallback(() => t(r.pn.REVIEW), [t]);
+    if (null == x) return null;
+    let j = (0, d.bg)(x.flags);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(y.dZ, {
-                children: x
-                    ? (0, i.jsx)(b, {
-                          confirmCta: h.intl.string(h.t.PBHFSq),
-                          onConfirm: S,
+            (0, i.jsx)(E.dZ, {
+                children: f
+                    ? (0, i.jsx)(S, {
+                          confirmCta: g.intl.string(g.t.PBHFSq),
+                          onConfirm: b,
                           onCancel: n,
-                          title: h.intl.format(h.t["6n6oXA"], { tier: f.name }),
-                          subtitle: A
-                              ? h.intl.string(h.t.lzAoKB)
-                              : h.intl.formatToPlainString(h.t["GqaY/j"], { guildName: g?.name }),
+                          title: g.intl.format(g.t["6n6oXA"], { tier: x.name }),
+                          subtitle: j
+                              ? g.intl.string(g.t.lzAoKB)
+                              : g.intl.formatToPlainString(g.t["GqaY/j"], { guildName: h?.name }),
                           showOpenDiscord: !1,
                       })
                     : (0, i.jsx)(p.Uf, {
-                          icon: s?.thumbnail,
-                          storeListingBenefits: s?.benefits,
+                          icon: a?.thumbnail,
+                          storeListingBenefits: a?.benefits,
                           application: m ?? void 0,
-                          title: h.intl.format(h.t.haiCxc, { tier: f.name }),
-                          subtitle: A ? h.intl.string(h.t.RvtbP5) : h.intl.string(h.t.zY39Zu),
-                          description: A
-                              ? h.intl.formatToPlainString(h.t.QCe4rY, { applicationName: m?.name })
-                              : h.intl.string(h.t.n1Pu8C),
+                          title: g.intl.format(g.t.haiCxc, { tier: x.name }),
+                          subtitle: j ? g.intl.string(g.t.RvtbP5) : g.intl.string(g.t.zY39Zu),
+                          description: j
+                              ? g.intl.formatToPlainString(g.t.QCe4rY, { applicationName: m?.name })
+                              : g.intl.string(g.t.n1Pu8C),
                       }),
             }),
-            !x &&
-                (0, i.jsx)(y.UX, {
-                    children: (0, i.jsx)(E.Ay, {
+            !f &&
+                (0, i.jsx)(E.UX, {
+                    children: (0, i.jsx)(v.Ay, {
                         onBack: n,
-                        backText: h.intl.string(h.t.TQBY1J),
-                        onPrimary: S,
-                        primaryCTA: E.ti.CONTINUE,
-                        primaryText: h.intl.string(h.t["gZhF+3"]),
+                        backText: g.intl.string(g.t.TQBY1J),
+                        onPrimary: b,
+                        primaryCTA: v.ti.CONTINUE,
+                        primaryText: g.intl.string(g.t["gZhF+3"]),
                     }),
                 }),
         ],
     });
 }
-var N = n(775602),
+var k = n(775602),
     P = n(21161),
-    _ = n(534479),
+    I = n(534479),
     T = n(921925);
-function k(t) {
-    let e,
+function _(e) {
+    let t,
         n,
-        { showBenefits: a, handleClose: s, onSubscriptionConfirmation: o } = t,
-        { updatedSubscription: m, readySlideId: f, selectedStoreListing: x, application: g } = (0, C.P5)(),
-        S = (0, u.S3)(),
-        j = (0, c.A)(I.Y),
-        { createMultipleConfettiAt: v } = l.useContext(P.x),
-        k = S?.name ?? "",
+        { showBenefits: s, handleClose: a, onSubscriptionConfirmation: o } = e,
+        { updatedSubscription: m, readySlideId: x, selectedStoreListing: f, application: h } = (0, C.P5)(),
+        b = (0, u.S3)(),
+        A = (0, c.A)(N.Y),
+        { createMultipleConfettiAt: y } = l.useContext(P.x),
+        _ = b?.name ?? "",
         R = () => {
-            s(), o?.();
+            a(), o?.();
         },
-        w = f === r.pn.CONFIRM,
-        B = (0, d.bg)(S?.flags ?? 0),
-        D =
-            null != x && x.benefits.length > 0
-                ? h.intl.formatToPlainString(h.t["+IQQVM"], { benefitCount: x.benefits.length })
+        B = x === r.pn.CONFIRM,
+        w = (0, d.bg)(b?.flags ?? 0),
+        F =
+            null != f && f.benefits.length > 0
+                ? g.intl.formatToPlainString(g.t["+IQQVM"], { benefitCount: f.benefits.length })
                 : null;
     return (
-        a
-            ? j
-                ? (e = (0, i.jsx)(b, {
-                      title: h.intl.format(h.t.ea6tZr, { tierName: k }),
+        s
+            ? A
+                ? (t = (0, i.jsx)(S, {
+                      title: g.intl.format(g.t.ea6tZr, { tierName: _ }),
                       subtitle:
-                          null != x && x.benefits.length > 0
-                              ? h.intl.formatToPlainString(h.t.HNepft, { benefits: D })
+                          null != f && f.benefits.length > 0
+                              ? g.intl.formatToPlainString(g.t.HNepft, { benefits: F })
                               : null,
                       onConfirm: R,
-                      confirmCta: h.intl.string(h.t.nlkywz),
+                      confirmCta: g.intl.string(g.t.nlkywz),
                   }))
-                : ((e =
-                      null != x && null != g
+                : ((t =
+                      null != f && null != h
                           ? (0, i.jsx)(p.Uf, {
-                                icon: x.thumbnail,
-                                storeListingBenefits: x.benefits,
-                                application: g,
-                                title: h.intl.format(h.t["Q+qktS"], { tier: k }),
-                                subtitle: h.intl.string(h.t.ECKxXU),
-                                description: B
-                                    ? h.intl.format(h.t["MAtQk/"], { applicationName: g?.name })
-                                    : h.intl.format(h.t.vHkMF4, { tier: k }),
+                                icon: f.thumbnail,
+                                storeListingBenefits: f.benefits,
+                                application: h,
+                                title: g.intl.format(g.t["Q+qktS"], { tier: _ }),
+                                subtitle: g.intl.string(g.t.ECKxXU),
+                                description: w
+                                    ? g.intl.format(g.t["MAtQk/"], { applicationName: h?.name })
+                                    : g.intl.format(g.t.vHkMF4, { tier: _ }),
                             })
-                          : (0, i.jsx)(_.A, {})),
-                  (n = (0, i.jsx)(E.Ay, {
+                          : (0, i.jsx)(I.A, {})),
+                  (n = (0, i.jsx)(v.Ay, {
                       onPrimary: R,
-                      primaryCTA: E.ti.CONTINUE,
-                      primaryText: h.intl.string(h.t["JtWl+a"]),
+                      primaryCTA: v.ti.CONTINUE,
+                      primaryText: g.intl.string(g.t["JtWl+a"]),
                   })))
-            : (e = j
-                  ? (0, i.jsx)(A, { tierName: k, onConfirm: R, subscription: m })
-                  : (0, i.jsx)(p.XG, { tierName: k, onConfirm: R, subscription: m })),
+            : (t = A
+                  ? (0, i.jsx)(j, { tierName: _, onConfirm: R, subscription: m })
+                  : (0, i.jsx)(p.XG, { tierName: _, onConfirm: R, subscription: m })),
         l.useEffect(() => {
-            N.A.useReducedMotion && w && v(window.innerWidth / 2, window.innerHeight / 2);
-        }, [v, w]),
+            k.A.useReducedMotion && B && y(window.innerWidth / 2, window.innerHeight / 2);
+        }, [y, B]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(y.dZ, { children: [(0, i.jsx)(T.A, {}), e] }),
-                null != n && (0, i.jsx)(y.UX, { children: n }),
+                (0, i.jsxs)(E.dZ, { children: [(0, i.jsx)(T.A, {}), t] }),
+                null != n && (0, i.jsx)(E.UX, { children: n }),
             ],
         })
     );
 }
 var R = n(545075),
-    w = n(94420),
-    B = n(97352),
-    D = n(927578),
-    F = n(937008),
+    B = n(94420),
+    w = n(97352),
+    F = n(927578),
+    D = n(937008),
     U = n(615310);
-function H(t) {
-    let { initialStep: e, initialPlanId: n, guildId: r, setAnalyticsData: a } = t,
+function O(e) {
+    let { initialStep: t, initialPlanId: n, guildId: r, setAnalyticsData: s } = e,
         {
-            selectedSkuId: s,
+            selectedSkuId: a,
             setSelectedSkuId: o,
             setSelectedPlanId: c,
-        } = (0, w.t4)((t) => ({
-            selectedSkuId: t.selectedSkuId,
-            setSelectedSkuId: t.setSelectedSkuId,
-            setSelectedPlanId: t.setSelectedPlanId,
+        } = (0, B.t4)((e) => ({
+            selectedSkuId: e.selectedSkuId,
+            setSelectedSkuId: e.setSelectedSkuId,
+            setSelectedPlanId: e.setSelectedPlanId,
         })),
         {
             blockedPayments: u,
             hasFetchedSubscriptions: d,
             hasFetchedSubscriptionPlans: p,
             currencyLoading: m,
-            priceOptions: f,
-            setSubscriptionMetadataRequest: x,
-            displayCurrency: g,
+            priceOptions: x,
+            setSubscriptionMetadataRequest: f,
+            displayCurrency: h,
         } = (0, C.P5)(),
-        h = (0, U.l)(),
-        { isGift: S } = (0, F.Pv)(),
-        [b, A] = l.useState(!d || !p || m);
+        g = (0, U.l)(),
+        { isGift: b } = (0, D.Pv)(),
+        [S, j] = l.useState(!d || !p || m);
     return (l.useEffect(() => {
-        A(!d || !p || m);
+        j(!d || !p || m);
     }, [m, p, d]),
     l.useEffect(() => {
-        null != r && x({ guild_id: r });
-    }, [r, x]),
+        null != r && f({ guild_id: r });
+    }, [r, f]),
     l.useEffect(() => {
         c(n);
-        let t = null != n ? B.A.get(n) : null;
-        b ||
+        let e = null != n ? w.A.get(n) : null;
+        S ||
             u ||
-            (a((e) => {
-                let n = null != t ? (0, D.y8)(t.id, !1, S, { paymentSourceId: f.paymentSourceId }) : void 0;
-                return { ...e, subscription_plan_id: t?.id, price: n?.amount, regular_price: t?.price, currency: g };
+            (s((t) => {
+                let n = null != e ? (0, F.y8)(e.id, !1, b, { paymentSourceId: x.paymentSourceId }) : void 0;
+                return { ...t, subscription_plan_id: e?.id, price: n?.amount, regular_price: e?.price, currency: h };
             }),
-            null != t && (o(t?.skuId), h(e)));
-    }, [u, n, S, b, f, g, s, a, c, o, h, e]),
-    b)
-        ? (0, i.jsx)(_.A, {})
+            null != e && (o(e?.skuId), g(t)));
+    }, [u, n, b, S, x, h, a, s, c, o, g, t]),
+    S)
+        ? (0, i.jsx)(I.A, {})
         : u
           ? (0, i.jsx)(R.oO, {})
           : null;
 }
 var L = n(284009),
-    O = n.n(L),
-    M = n(304072),
-    G = n(666646),
-    Y = n(558620),
-    W = n(427858),
-    Q = n(566980),
-    Z = n(871084),
-    X = n(367160);
-function V(t) {
+    M = n.n(L),
+    G = n(304072),
+    H = n(666646),
+    W = n(558620),
+    Y = n(427858),
+    Z = n(566980),
+    Q = n(871084),
+    V = n(367160);
+function X(e) {
     let {
-            backButtonEligible: e,
+            backButtonEligible: t,
             prevStep: n,
-            handleStepChange: a,
-            planGroup: s,
+            handleStepChange: s,
+            planGroup: a,
             openInvoiceId: o,
             analyticsData: c,
             analyticsLocation: p,
             handleClose: m,
-        } = t,
-        f = (0, w.t4)((t) => t.setHasAcceptedTerms),
+        } = e,
+        x = (0, B.t4)((e) => e.setHasAcceptedTerms),
         {
-            activeSubscription: x,
-            setUpdatedSubscription: g,
-            contextMetadata: h,
-            currencies: S,
-            paymentSources: b,
-            priceOptions: A,
-            purchaseError: j,
-            setCurrency: E,
-            setPurchaseState: I,
-            purchaseState: v,
-            subscriptionMetadataRequest: N,
+            activeSubscription: f,
+            setUpdatedSubscription: h,
+            contextMetadata: g,
+            currencies: b,
+            paymentSources: S,
+            priceOptions: j,
+            purchaseError: A,
+            setCurrency: v,
+            setPurchaseState: N,
+            purchaseState: y,
+            subscriptionMetadataRequest: k,
         } = (0, C.P5)(),
-        P = (0, Y.A)(),
+        P = (0, W.A)(),
         T = (0, u.S3)();
-    O()(null != P, "Expected plan to be selected");
-    let k = l.useRef(null),
-        [R, B] = (0, M.A)(!1, 500),
-        D = (0, G.mx)(),
-        F = (0, d.bg)(T?.flags ?? 0);
+    M()(null != P, "Expected plan to be selected");
+    let _ = l.useRef(null),
+        [R, w] = (0, G.A)(!1, 500),
+        F = (0, H.mx)(),
+        D = (0, d.bg)(T?.flags ?? 0);
     l.useEffect(() => {
-        null != j && null != k.current && k.current.scrollIntoView({ behavior: "smooth" });
-    }, [j]);
+        null != A && null != _.current && _.current.scrollIntoView({ behavior: "smooth" });
+    }, [A]);
     let U = l.useCallback(
-            (t) => {
-                g(t), a(r.pn.CONFIRM);
+            (e) => {
+                h(e), s(r.pn.CONFIRM);
             },
-            [a, g],
+            [s, h],
         ),
-        H = l.useRef(null);
-    if (v === Q.h.PURCHASING) return (0, i.jsx)(_.A, {});
-    let L = () => {
-        a(r.pn.ADD_PAYMENT_STEPS);
-    };
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsx)(y.dZ, {
-                children:
-                    null == x
-                        ? (0, i.jsx)(X._, {
-                              selectedPlanId: P.id,
-                              planGroup: s,
-                              paymentSources: b,
-                              priceOptions: A,
-                              currencies: S,
-                              onCurrencyChange: (t) => E(t),
-                              handlePaymentSourceAdd: () => a(r.pn.ADD_PAYMENT_STEPS),
-                              metadata: F ? void 0 : N,
-                          })
-                        : (0, i.jsx)(W.A, {
-                              premiumSubscription: x,
-                              paymentSources: b,
-                              priceOptions: A,
-                              onPaymentSourceAdd: L,
-                              planId: P.id,
-                              setHasAcceptedTerms: f,
-                              legalTermsNodeRef: H,
-                              hasLegalTermsFlash: R,
-                              planGroup: s,
-                              currencies: S,
-                              onCurrencyChange: (t) => E(t),
-                              hasOpenInvoice: null != o,
-                              purchaseState: v,
-                              handleClose: m,
-                              shouldUseUnifiedCheckoutUI: !0,
-                          }),
-            }),
-            (0, i.jsx)(y.UX, {
-                children: (0, i.jsx)(Z.A, {
-                    premiumSubscription: x ?? null,
-                    setPurchaseState: I,
-                    onBack: () => null != n && a(n),
-                    onNext: U,
-                    legalTermsNodeRef: H,
-                    flashLegalTerms: () => B(!0),
-                    analyticsLocation: p,
-                    baseAnalyticsData: c,
-                    flowStartTime: h.startTime,
-                    planGroup: s,
-                    openInvoiceId: o,
-                    metadata: F ? void 0 : N,
-                    backButtonEligible: e,
-                    invoiceError: D,
-                    disablePurchase: N?.guild_id == null && !F,
-                    onPaymentSourceAdd: L,
-                }),
-            }),
-        ],
-    });
+        O = l.useRef(null),
+        L = l.useCallback(() => {
+            s(r.pn.ADD_PAYMENT_STEPS);
+        }, [s]);
+    return y === Z.h.PURCHASING
+        ? (0, i.jsx)(I.A, {})
+        : (0, i.jsxs)(i.Fragment, {
+              children: [
+                  (0, i.jsx)(E.dZ, {
+                      children:
+                          null == f
+                              ? (0, i.jsx)(V._, {
+                                    selectedPlanId: P.id,
+                                    planGroup: a,
+                                    paymentSources: S,
+                                    priceOptions: j,
+                                    currencies: b,
+                                    onCurrencyChange: (e) => v(e),
+                                    handlePaymentSourceAdd: L,
+                                    metadata: D ? void 0 : k,
+                                })
+                              : (0, i.jsx)(Y.A, {
+                                    premiumSubscription: f,
+                                    paymentSources: S,
+                                    priceOptions: j,
+                                    handlePaymentSourceAdd: L,
+                                    planId: P.id,
+                                    setHasAcceptedTerms: x,
+                                    legalTermsNodeRef: O,
+                                    hasLegalTermsFlash: R,
+                                    planGroup: a,
+                                    currencies: b,
+                                    onCurrencyChange: (e) => v(e),
+                                    hasOpenInvoice: null != o,
+                                    purchaseState: y,
+                                    handleClose: m,
+                                    shouldUseUnifiedCheckoutUI: !0,
+                                }),
+                  }),
+                  (0, i.jsx)(E.UX, {
+                      children: (0, i.jsx)(Q.A, {
+                          premiumSubscription: f ?? null,
+                          setPurchaseState: N,
+                          onBack: () => null != n && s(n),
+                          onNext: U,
+                          legalTermsNodeRef: O,
+                          flashLegalTerms: () => w(!0),
+                          analyticsLocation: p,
+                          baseAnalyticsData: c,
+                          flowStartTime: g.startTime,
+                          planGroup: a,
+                          openInvoiceId: o,
+                          metadata: D ? void 0 : k,
+                          backButtonEligible: t,
+                          invoiceError: F,
+                          disablePurchase: k?.guild_id == null && !D,
+                          onPaymentSourceAdd: L,
+                      }),
+                  }),
+              ],
+          });
 }
-function z(t) {
-    let { guildId: e, showBenefitsFirst: n } = t;
+function z(e) {
+    let { guildId: t, showBenefitsFirst: n } = e;
     return [
         {
             key: null,
-            renderStep: (t) => (0, i.jsx)(H, { initialStep: n ? r.pn.BENEFITS : r.pn.REVIEW, guildId: e, ...t }),
+            renderStep: (e) => (0, i.jsx)(O, { initialStep: n ? r.pn.BENEFITS : r.pn.REVIEW, guildId: t, ...e }),
         },
         {
             key: r.pn.BENEFITS,
-            renderStep: (t) => (0, i.jsx)(v, { ...t }),
-            options: { useBreadcrumbLabel: () => h.intl.string(h.t["5LD2+B"]) },
+            renderStep: (e) => (0, i.jsx)(y, { ...e }),
+            options: { useBreadcrumbLabel: () => g.intl.string(g.t["5LD2+B"]) },
         },
         {
             key: r.pn.ADD_PAYMENT_STEPS,
-            renderStep: (t) =>
-                (0, i.jsx)(a.x, { ...t, breadcrumbSteps: [r.pn.ADD_PAYMENT_STEPS, r.pn.REVIEW, r.pn.CONFIRM] }),
+            renderStep: (e) =>
+                (0, i.jsx)(s.x, { ...e, breadcrumbSteps: [r.pn.ADD_PAYMENT_STEPS, r.pn.REVIEW, r.pn.CONFIRM] }),
             options: { renderHeader: !0 },
         },
-        ...s.hh,
+        ...a.hh,
         {
             key: r.pn.REVIEW,
-            renderStep: (t) =>
-                (0, i.jsx)(V, { backButtonEligible: !!n || void 0, prevStep: n ? r.pn.BENEFITS : void 0, ...t }),
-            options: { renderHeader: !0, useBreadcrumbLabel: () => h.intl.string(h.t.QBnNHq) },
+            renderStep: (e) =>
+                (0, i.jsx)(X, { backButtonEligible: !!n || void 0, prevStep: n ? r.pn.BENEFITS : void 0, ...e }),
+            options: { renderHeader: !0, useBreadcrumbLabel: () => g.intl.string(g.t.QBnNHq) },
         },
-        { key: r.pn.CONFIRM, renderStep: (t) => (0, i.jsx)(k, { showBenefits: !n, ...t }) },
+        { key: r.pn.CONFIRM, renderStep: (e) => (0, i.jsx)(_, { showBenefits: !n, ...e }) },
     ];
 }

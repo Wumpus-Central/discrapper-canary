@@ -499,7 +499,7 @@ function eA(e) {
             premiumSubscription: n,
             paymentSources: a,
             priceOptions: s,
-            onPaymentSourceAdd: Y,
+            handlePaymentSourceAdd: Y,
             planId: G,
             setHasAcceptedTerms: F,
             legalTermsNodeRef: B,
