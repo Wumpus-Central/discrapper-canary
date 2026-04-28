@@ -2025,15 +2025,19 @@ function lP(e) {
 }
 var lw = l(49381),
     lD = l(223273);
-function lV(e, t) {
+function lV(e, t, l) {
     if (null == e || null == t || t < 10) return lD.vI.NO_USER_REVIEWS;
     if (e >= 80)
-        return t < 50 ? lD.vI.POSITIVE : t < 500 || e < 95 ? lD.vI.VERY_POSITIVE : lD.vI.OVERWHELMINGLY_POSITIVE;
+        return t < 50 * !l
+            ? lD.vI.POSITIVE
+            : t < (l ? 100 : 500) || e < 95
+              ? lD.vI.VERY_POSITIVE
+              : lD.vI.OVERWHELMINGLY_POSITIVE;
     if (e >= 70) return lD.vI.MOSTLY_POSITIVE;
     if (e >= 40) return lD.vI.MIXED;
     if (e >= 20) return lD.vI.MOSTLY_NEGATIVE;
-    else if (t < 50) return lD.vI.NEGATIVE;
-    else if (t < 500) return lD.vI.VERY_NEGATIVE;
+    else if (t < 50 * !l) return lD.vI.NEGATIVE;
+    else if (t < (l ? 100 : 500)) return lD.vI.VERY_NEGATIVE;
     return lD.vI.OVERWHELMINGLY_NEGATIVE;
 }
 function lW(e) {
@@ -2098,7 +2102,7 @@ var lB = l(99392);
 function lz(e) {
     let { url: t, trackAction: l, title: n, rating: a, ratingCount: r, tooltipVariant: c = "all" } = e,
         o = (0, ty.A)(),
-        d = lV(a, r),
+        d = lV(a, r, "recent" === c),
         u = lW(d),
         m = s.useCallback(() => {
             l(F.Ws.SteamReviews), o(t);
@@ -2315,7 +2319,7 @@ let l$ = function (e) {
         c = r.recentEnabled || r.englishEnabled,
         o = l.steamReleaseStatus !== m.Y.RETIRED_ABANDONED && null != s,
         d = l.reviews?.steam,
-        u = lV(d?.recentRating, d?.recentRatingCount),
+        u = lV(d?.recentRating, d?.recentRatingCount, !0),
         x = o && r.recentEnabled && u !== lD.vI.NO_USER_REVIEWS,
         h =
             r.englishEnabled &&
