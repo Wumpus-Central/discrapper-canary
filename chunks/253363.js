@@ -472,8 +472,8 @@ function e2(e) {
 var e3 = n(633965),
     e9 = n(857071),
     e6 = n(851109),
-    e8 = n(72314),
-    e5 = n(543897),
+    e5 = n(72314),
+    e8 = n(543897),
     e7 = n(696451),
     e4 = n(71393),
     te = n(711014),
@@ -757,7 +757,7 @@ class tB extends s.PureComponent {
             ? (0, tN.L3)(e, async () => {
                   let { default: e } = await Promise.all([
                       n.e("90673"),
-                      n.e("60049"),
+                      n.e("12512"),
                       n.e("63397"),
                       n.e("98042"),
                       n.e("26132"),
@@ -1063,8 +1063,8 @@ var tZ = n(245604),
     t3 = n(728321),
     t9 = n(260509),
     t6 = n(284009),
-    t8 = n.n(t6),
-    t5 = n(295868),
+    t5 = n.n(t6),
+    t8 = n(295868),
     t7 = n(686956),
     t4 = n(954571),
     ne = n(787426);
@@ -1086,7 +1086,7 @@ function nn(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return (
-        t8()(t.type !== tl.PJ.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
+        t5()(t.type !== tl.PJ.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
         {
             accept: e,
             canDrop: (e) =>
@@ -1105,7 +1105,7 @@ function nn(e, t) {
 function nl(e) {
     let { name: t, targetNode: n, combine: l, below: r } = e,
         a = s.useMemo(() => nn([tl.PJ.GUILD, tl.PJ.FOLDER], n, r, l), [n, r, l]),
-        [{ canDrop: o, isOver: u }, d] = (0, t5.H)(a),
+        [{ canDrop: o, isOver: u }, d] = (0, t8.H)(a),
         c = nt([
             [o, ne.OP],
             [u, ne.NQ],
@@ -1120,7 +1120,7 @@ function nl(e) {
 }
 function ni(e) {
     let { name: t, targetNode: n, onDragOverChanged: l } = e,
-        [{ canDrop: r, isOver: o }, u] = (0, t5.H)(() => nn([tl.PJ.GUILD], n, !0, !0));
+        [{ canDrop: r, isOver: o }, u] = (0, t8.H)(() => nn([tl.PJ.GUILD], n, !0, !0));
     s.useEffect(() => {
         l?.(o);
     }, [l, o]);
@@ -1156,7 +1156,7 @@ let ns = s.memo(function (e) {
 });
 function nr(e) {
     let { name: t, targetNode: n } = e,
-        [{ canDrop: l, isOver: s }, r] = (0, t5.H)(() => nn([tl.PJ.GUILD], n, !0, !0)),
+        [{ canDrop: l, isOver: s }, r] = (0, t8.H)(() => nn([tl.PJ.GUILD], n, !0, !0)),
         a = nt([[s, ne.a7]]),
         o = nt([
             [s, ne.NQ],
@@ -1180,7 +1180,7 @@ function nr(e) {
 }
 function na(e) {
     let { children: t } = e,
-        [, n] = (0, t5.H)({ accept: [] });
+        [, n] = (0, t8.H)({ accept: [] });
     return (0, i.jsx)("div", {
         ref: (e) => {
             n(e);
@@ -1499,8 +1499,8 @@ function n3() {
 }
 var n9 = n(312742),
     n6 = n(317097),
-    n8 = n(319060),
-    n5 = n(866323),
+    n5 = n(319060),
+    n8 = n(866323),
     n7 = n(817281),
     n4 = n(534409),
     le = n(240248),
@@ -1633,7 +1633,7 @@ function lc(e) {
 }
 var lh = n(114329),
     lA = n(620370);
-let lm = (0, le.xI)(n8.A.FOLDER_ITEM_ANIMATION_DURATION),
+let lm = (0, le.xI)(n5.A.FOLDER_ITEM_ANIMATION_DURATION),
     lg = (0, tS.animated)(_.B),
     lp = s.memo(function (e) {
         var t;
@@ -1695,7 +1695,7 @@ let lm = (0, le.xI)(n8.A.FOLDER_ITEM_ANIMATION_DURATION),
                 (n = (0, C.r)(f.A.modules.guildbar.FOLDER_SIZE)),
                 (l = (0, C.r)(f.A.modules.guildbar.AVATAR_SIZE)),
                 t * (l + (r = (0, C.r)(f.A.space.SPACE_XS))) - r + (r - (n - l) / 2) + (0, C.r)(f.A.space.SPACE_4)),
-            J = (0, n5.p)(!V && h, {
+            J = (0, n8.p)(!V && h, {
                 from: { height: 0 },
                 enter: { height: 1 },
                 leave: { height: 0 },
@@ -2000,7 +2000,7 @@ function lU(e) {
     let d = (0, C.r)(f.A.unsafe_rawColors.BRAND_500).hex(),
         c = (0, C.r)(f.A.unsafe_rawColors.PRIMARY_630).hex();
     l && null == t.icon && ((o.backgroundColor = d), (u.backgroundColor = c));
-    let h = (0, n5.p)(n, { from: o, enter: u, leave: o, config: { duration: 100 }, onStart: s, onRest: r });
+    let h = (0, n8.p)(n, { from: o, enter: u, leave: o, config: { duration: 100 }, onStart: s, onRest: r });
     return (0, i.jsx)(i.Fragment, {
         children: h(
             (e, n, l) =>
@@ -2309,7 +2309,7 @@ function lZ(e, t) {
             n.e("13709"),
             n.e("78220"),
             n.e("40841"),
-            n.e("60049"),
+            n.e("12512"),
             n.e("81349"),
             n.e("74112"),
             n.e("57948"),
@@ -2348,6 +2348,7 @@ function lZ(e, t) {
             n.e("56574"),
             n.e("4974"),
             n.e("80186"),
+            n.e("76547"),
             n.e("23924"),
             n.e("15510"),
             n.e("48226"),
@@ -2460,7 +2461,6 @@ function lZ(e, t) {
             n.e("37187"),
             n.e("71273"),
             n.e("27779"),
-            n.e("75842"),
             n.e("12743"),
             n.e("10957"),
             n.e("55973"),
@@ -2477,7 +2477,7 @@ function lZ(e, t) {
             n.e("86814"),
             n.e("52548"),
             n.e("35771"),
-            n.e("22266"),
+            n.e("75842"),
             n.e("53984"),
             n.e("59414"),
             n.e("80854"),
@@ -2499,6 +2499,7 @@ function lZ(e, t) {
             n.e("68904"),
             n.e("68802"),
             n.e("52617"),
+            n.e("22266"),
             n.e("8563"),
             n.e("2564"),
             n.e("47417"),
@@ -2524,7 +2525,6 @@ function lZ(e, t) {
             n.e("86243"),
             n.e("32209"),
             n.e("30788"),
-            n.e("60249"),
             n.e("4193"),
             n.e("39171"),
             n.e("25246"),
@@ -2535,19 +2535,20 @@ function lZ(e, t) {
             n.e("44571"),
             n.e("44795"),
             n.e("80436"),
+            n.e("60249"),
             n.e("71268"),
             n.e("95370"),
             n.e("97784"),
             n.e("10014"),
-            n.e("84783"),
             n.e("44928"),
             n.e("33416"),
-            n.e("83952"),
+            n.e("84783"),
             n.e("37752"),
             n.e("3217"),
             n.e("47678"),
             n.e("5557"),
             n.e("44780"),
+            n.e("83952"),
             n.e("95340"),
             n.e("62718"),
             n.e("93907"),
@@ -2568,12 +2569,12 @@ function lZ(e, t) {
             n.e("20930"),
             n.e("74610"),
             n.e("50535"),
-            n.e("81202"),
             n.e("26001"),
             n.e("99549"),
             n.e("14591"),
             n.e("52111"),
             n.e("8018"),
+            n.e("81202"),
             n.e("79211"),
             n.e("16988"),
             n.e("30997"),
@@ -2962,8 +2963,8 @@ let l2 = s.memo(function (e) {
 var l3 = n(922016),
     l9 = n(534514),
     l6 = n(821609),
-    l8 = n(339350),
-    l5 = n(475743),
+    l5 = n(339350),
+    l8 = n(475743),
     l7 = n(624458),
     l4 = n(408213),
     ie = (((l = {})[(l.PENDING_JOIN_REQUESTS_FOLDER = 1)] = "PENDING_JOIN_REQUESTS_FOLDER"), l),
@@ -3006,7 +3007,7 @@ function ir(e) {
         a = s.useCallback(() => {
             l4.Ay.clearCoachmark();
         }, []),
-        o = (0, l5.A)(r),
+        o = (0, l8.A)(r),
         u = s.useRef(null);
     return (
         s.useEffect(() => {
@@ -3069,7 +3070,7 @@ function ia(e) {
         r = (0, A.bG)([ti.A], () => ti.A.getGuildId()),
         a = (0, A.bG)([lC.A], () => lC.A.hasFetchedRequestToJoinGuilds),
         o = (0, it.A)(),
-        u = (0, l5.A)(r),
+        u = (0, l8.A)(r),
         d = s.useMemo(() => {
             let e = (0, tl.xW)({
                 folderId: ie.PENDING_JOIN_REQUESTS_FOLDER,
@@ -3103,7 +3104,7 @@ function ia(e) {
                   folderButtonSize: "icon",
                   folderButtonContent: (0, i.jsx)("div", {
                       className: is.rH,
-                      children: (0, i.jsx)(l8.Q, { size: "sm", color: "currentColor" }),
+                      children: (0, i.jsx)(l5.Q, { size: "sm", color: "currentColor" }),
                   }),
                   renderChildNode: function (e, t, n) {
                       return e.type !== tl.PJ.GUILD
@@ -3329,7 +3330,7 @@ function ig(e) {
             return [e, e.version];
         }),
         o = a.getRoots(),
-        u = (0, A.yK)([e5.A], () => e5.A.getGeoRestrictedGuilds()).map((e) =>
+        u = (0, A.yK)([e8.A], () => e8.A.getGeoRestrictedGuilds()).map((e) =>
             (0, i.jsx)(nm, { id: e.id, name: e.name, icon: e.icon }, e.id),
         );
     return (0, i.jsxs)(i.Fragment, {
@@ -3415,7 +3416,7 @@ function ip(e) {
     (0, T.u5)(() => {
         if (!R.current && 0 !== u.size) {
             if (!z) {
-                let { scrollTop: e } = e8.A.getGuildListDimensions();
+                let { scrollTop: e } = e5.A.getGuildListDimensions();
                 W.scrollTo({ to: e, animate: !1 });
             }
             return (R.current = !0), () => j.stop();

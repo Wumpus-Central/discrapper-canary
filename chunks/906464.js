@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => np });
+n.d(t, { A: () => ns });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -223,14 +223,14 @@ var ea = n(681582),
 let eh = (0, el.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("60049"),
+            n.e("12512"),
             n.e("40841"),
             n.e("63397"),
-            n.e("84580"),
+            n.e("47181"),
             n.e("75058"),
             n.e("31320"),
             n.e("33092"),
-            n.e("32181"),
+            n.e("66883"),
             n.e("24211"),
             n.e("92652"),
             n.e("41475"),
@@ -239,9 +239,9 @@ let eh = (0, el.Fe)({
             n.e("74112"),
             n.e("84615"),
             n.e("13709"),
-            n.e("25738"),
+            n.e("81349"),
             n.e("7276"),
-            n.e("54718"),
+            n.e("60571"),
             n.e("5036"),
             n.e("63133"),
             n.e("97271"),
@@ -404,10 +404,10 @@ let eh = (0, el.Fe)({
             n.e("17363"),
             n.e("88941"),
             n.e("34552"),
+            n.e("58337"),
             n.e("55411"),
             n.e("93103"),
             n.e("34530"),
-            n.e("58337"),
             n.e("61379"),
             n.e("62680"),
             n.e("43039"),
@@ -607,7 +607,6 @@ let eh = (0, el.Fe)({
             n.e("77265"),
             n.e("27779"),
             n.e("51130"),
-            n.e("75842"),
             n.e("12743"),
             n.e("71133"),
             n.e("1827"),
@@ -630,7 +629,7 @@ let eh = (0, el.Fe)({
             n.e("86814"),
             n.e("52548"),
             n.e("35771"),
-            n.e("22266"),
+            n.e("75842"),
             n.e("53984"),
             n.e("59414"),
             n.e("80854"),
@@ -655,6 +654,7 @@ let eh = (0, el.Fe)({
             n.e("46568"),
             n.e("68802"),
             n.e("52617"),
+            n.e("22266"),
             n.e("8563"),
             n.e("2564"),
             n.e("39406"),
@@ -684,7 +684,6 @@ let eh = (0, el.Fe)({
             n.e("7833"),
             n.e("86243"),
             n.e("32209"),
-            n.e("60249"),
             n.e("39171"),
             n.e("37021"),
             n.e("21976"),
@@ -694,6 +693,7 @@ let eh = (0, el.Fe)({
             n.e("79707"),
             n.e("80436"),
             n.e("27773"),
+            n.e("60249"),
             n.e("20007"),
             n.e("71268"),
             n.e("95370"),
@@ -704,13 +704,12 @@ let eh = (0, el.Fe)({
             n.e("59880"),
             n.e("78412"),
             n.e("10014"),
-            n.e("84783"),
             n.e("9662"),
             n.e("80239"),
             n.e("23276"),
             n.e("33416"),
             n.e("54791"),
-            n.e("83952"),
+            n.e("84783"),
             n.e("61268"),
             n.e("63213"),
             n.e("255"),
@@ -726,6 +725,7 @@ let eh = (0, el.Fe)({
             n.e("52229"),
             n.e("31445"),
             n.e("44780"),
+            n.e("83952"),
             n.e("19871"),
             n.e("5636"),
             n.e("95444"),
@@ -780,7 +780,6 @@ let eh = (0, el.Fe)({
             n.e("35996"),
             n.e("79211"),
             n.e("63071"),
-            n.e("88990"),
             n.e("26574"),
             n.e("18997"),
             n.e("57458"),
@@ -790,6 +789,7 @@ let eh = (0, el.Fe)({
             n.e("86697"),
             n.e("63618"),
             n.e("90213"),
+            n.e("88990"),
             n.e("42204"),
             n.e("20379"),
             n.e("96553"),
@@ -881,7 +881,6 @@ let eh = (0, el.Fe)({
             n.e("78434"),
             n.e("40204"),
             n.e("77467"),
-            n.e("39894"),
             n.e("97354"),
             n.e("34967"),
             n.e("47057"),
@@ -912,6 +911,7 @@ let eh = (0, el.Fe)({
             n.e("41838"),
             n.e("45830"),
             n.e("7775"),
+            n.e("39894"),
             n.e("46045"),
             n.e("94138"),
             n.e("99011"),
@@ -1024,7 +1024,6 @@ let eh = (0, el.Fe)({
             n.e("27838"),
             n.e("39353"),
             n.e("43114"),
-            n.e("30920"),
             n.e("46149"),
             n.e("9793"),
             n.e("63497"),
@@ -1053,6 +1052,7 @@ let eh = (0, el.Fe)({
             n.e("91708"),
             n.e("44727"),
             n.e("36973"),
+            n.e("30920"),
             n.e("15086"),
             n.e("6996"),
             n.e("78"),
@@ -1290,7 +1290,7 @@ let eh = (0, el.Fe)({
             n.e("93016"),
             n.e("21226"),
             n.e("40201"),
-            n.e("42486"),
+            n.e("76136"),
             n.e("31294"),
         ]).then(n.bind(n, 902592)),
     webpackId: 902592,
@@ -1788,225 +1788,19 @@ var tD = n(47671),
     tL = n(176781),
     tv = n(815021),
     tw = n(150616),
-    tP = n(274372);
-let tb = (e) => {
-    let { clips: t, onBeforeDelete: r, onAfterDelete: s } = e;
-    (0, E.openModalLazy)(
-        async () => {
-            let { default: e } = await n.e("13367").then(n.bind(n, 223818));
-            return (n) =>
-                (0, i.jsx)(e, {
-                    clips: t,
-                    ...n,
-                    onBeforeDelete: r,
-                    onAfterDelete: async () => {
-                        await n.onClose(), s?.();
-                    },
-                });
-        },
-        { stackingBehavior: "stack" },
-    );
-};
-var tk = n(271597),
-    tU = n(777666);
-let tM = r.createContext(null),
-    tG = (e) => {
-        let { clip: t, children: n } = e;
-        return (0, i.jsx)(tM.Provider, { value: t, children: n });
-    };
-var tx = n(408278),
-    tV = n(241326),
-    tF = n(990078);
-let tB = (e) => {
-    let { onBeforeDelete: t, onAfterDelete: n, variant: s = "overlay-secondary" } = e,
-        a = r.useContext(tM),
-        o = r.useCallback(
-            (e) => {
-                e.stopPropagation(), e.preventDefault(), tb({ clips: [a], onAfterDelete: n, onBeforeDelete: t });
-            },
-            [a, n, t],
-        );
-    return (0, i.jsx)(tF.m, {
-        text: eb.intl.string(eb.t.oyYWHE),
-        position: "top",
-        children: (0, i.jsx)(tx.K, {
-            onClick: o,
-            icon: tV.u,
-            "aria-label": eb.intl.string(eb.t.oyYWHE),
-            variant: s,
-            size: "sm",
-        }),
-    });
-};
-var tH = n(22231);
-let tY = (e) => {
-    let { variant: t = "overlay-secondary" } = e,
-        n = r.useContext(tM),
-        s = r.useCallback(
-            (e) => {
-                e.stopPropagation(), e.preventDefault(), (0, tk.p)({ initialEditingClipId: n.id });
-            },
-            [n],
-        );
-    return (0, i.jsx)(tF.m, {
-        text: eb.intl.string(eb.t.bt75uw),
-        position: "top",
-        children: (0, i.jsx)(tx.K, {
-            onClick: s,
-            icon: tH.R,
-            "aria-label": eb.intl.string(eb.t.bt75uw),
-            variant: t,
-            size: "sm",
-        }),
-    });
-};
-var tW = n(27232),
-    tK = n(505930),
-    tj = n(399925),
-    t$ = n(16590);
-let tz = () => {
-    let e = r.useContext(tM),
-        t = r.useCallback(
-            (t) => {
-                t.stopPropagation(), t.preventDefault(), (0, tj.XK)(e);
-            },
-            [e],
-        );
-    return (0, i.jsx)(
-        tF.m,
-        {
-            text: eb.intl.string(e.isFavorite ? t$.default.IZsalP : t$.default.ihBfyA),
-            position: "top",
-            children: (0, i.jsx)(tx.K, {
-                onClick: t,
-                icon: e.isFavorite ? tW.G : tK.y,
-                "aria-label": eb.intl.string(eb.t.k8fFjp),
-                variant: "overlay-secondary",
-                size: "sm",
-            }),
-        },
-        `${e.id}:favorite:${e.isFavorite}`,
-    );
-};
-var tq = n(405433),
-    tX = n(602902);
-let tQ = (e) => {
-    let { variant: t = "primary" } = e,
-        n = r.useContext(tM),
-        { analyticsLocations: s } = (0, tl.Ay)(),
-        a = r.useCallback(
-            (e) => {
-                e.stopPropagation(), e.preventDefault(), (0, tX.K)([n], { analyticsLocations: s });
-            },
-            [n, s],
-        );
-    return (0, i.jsx)(te.$, {
-        onClick: a,
-        icon: tq.l,
-        variant: t,
-        size: "sm",
-        text: eb.intl.string(eb.t.RDE0Sc),
-        fullWidth: !0,
-    });
-};
-var tJ = n(66455),
-    tZ = n(607470),
-    t0 = n(665039),
-    t1 = n(204351);
-let t2 = (e) => {
-    let { isPlaying: t = !1, scrubOnHover: n = !1, preload: s = "metadata", children: a } = e,
-        o = r.useContext(tM),
-        l = r.useRef(null),
-        _ = (0, tJ.A)(o.editMetadata?.start ?? 0),
-        d = (0, t0.j)(o),
-        u = 0 === o.length,
-        [c, E] = r.useState(0),
-        h = r.useCallback(
-            (e) => {
-                let t = l.current;
-                if (null == t) return;
-                let n = o.editMetadata?.start ?? 0,
-                    i = o.editMetadata?.end ?? t.duration;
-                t.currentTime = Math.max(0, _.current + ((i - n) * e) / 100);
-            },
-            [l, _, o],
-        ),
-        m = r.useCallback(
-            (e) => {
-                if (!n || null == l.current) return;
-                let t = l.current.getBoundingClientRect();
-                h(((e.clientX - t.left) / t.width) * 100);
-            },
-            [l, n, h],
-        );
-    return (
-        r.useEffect(() => {
-            if (u) return;
-            let e = l.current;
-            null == e || ((!t || e.paused) && ((e.currentTime = _.current), t ? e.play() : e.pause()));
-        }, [t, l, u, _]),
-        r.useEffect(() => {
-            let e = l?.current;
-            if (null == e || u) return;
-            let t = null,
-                n = () => {
-                    if (e.paused || e.ended) {
-                        (t = null), E(0);
-                        return;
-                    }
-                    let i = o.editMetadata?.start ?? 0,
-                        r = o.editMetadata?.end ?? e.duration,
-                        s = ((e.currentTime - i) / (r - i)) * 100;
-                    E(isNaN(s) ? 0 : Math.max(0, Math.min(100, s))), (t = requestAnimationFrame(n));
-                },
-                i = () => {
-                    null == t && (t = requestAnimationFrame(n));
-                },
-                r = () => {
-                    null != t && (cancelAnimationFrame(t), (t = null), E(0));
-                };
-            return (
-                e.addEventListener("play", i),
-                e.addEventListener("pause", r),
-                e.addEventListener("ended", r),
-                e.paused || i(),
-                () => {
-                    null != t && (cancelAnimationFrame(t), E(0)),
-                        e.removeEventListener("play", i),
-                        e.removeEventListener("pause", r),
-                        e.removeEventListener("ended", r);
-                }
-            );
-        }, [l, u, o.editMetadata]),
-        (0, i.jsxs)("div", {
-            className: t1.Q,
-            onMouseMove: m,
-            children: [
-                u
-                    ? (0, i.jsx)("img", { alt: "", src: o.thumbnail, className: t1.f })
-                    : null != d
-                      ? (0, i.jsx)(tZ.A, {
-                            preload: s,
-                            poster: o.thumbnail,
-                            muted: !0,
-                            src: d,
-                            loop: !0,
-                            className: t1.f,
-                            ref: l,
-                        })
-                      : null,
-                a,
-            ],
-        })
-    );
-};
-var t3 = n(780479);
-let t6 = (e) => {
-    let { children: t, className: n, isVisible: r = !0 } = e;
-    return (0, i.jsx)("div", { className: a()(t3.n, { [t3.z]: r }, n), children: t });
-};
-var t4 = n(46437);
-let t7 = (e) => {
+    tP = n(274372),
+    tb = n(140423),
+    tk = n(271597),
+    tU = n(777666),
+    tM = n(609174),
+    tG = n(353605),
+    tx = n(434320),
+    tV = n(82716),
+    tF = n(585579),
+    tB = n(226870),
+    tH = n(285072),
+    tY = n(46437);
+let tW = (e) => {
         let { clip: t, isNew: n } = e,
             [s, a] = r.useState(!1),
             { scrubOnHover: o } = tw.Z.useConfig({ location: "ClipsSidebarItem" }),
@@ -2017,47 +1811,48 @@ let t7 = (e) => {
             ? null
             : (0, i.jsx)("div", {
                   ref: l,
-                  className: t4.Jr,
+                  className: tY.Jr,
                   onMouseEnter: _,
                   onMouseLeave: d,
                   onFocus: _,
                   onBlur: d,
-                  children: (0, i.jsx)(tG, {
+                  children: (0, i.jsx)(tM.Cl, {
                       clip: t,
-                      children: (0, i.jsxs)(t2, {
+                      children: (0, i.jsxs)(tB.d, {
                           scrubOnHover: o,
                           isPlaying: !o && s,
                           preload: n ? "auto" : "metadata",
                           children: [
-                              n && (0, i.jsx)(tU.Lp, { className: t4.Ad, text: eb.intl.string(eb.t.y2b7CA) }),
-                              (0, i.jsxs)(t6, {
+                              n && (0, i.jsx)(tU.Lp, { className: tY.Ad, text: eb.intl.string(eb.t.y2b7CA) }),
+                              (0, i.jsxs)(tH.h, {
                                   isVisible: s,
-                                  className: t4.PJ,
-                                  children: [(0, i.jsx)(t5, {}), (0, i.jsx)(t8, {})],
+                                  className: tY.PJ,
+                                  children: [(0, i.jsx)(tK, {}), (0, i.jsx)(tj, {})],
                               }),
                           ],
                       }),
                   }),
               });
     },
-    t5 = () => (0, i.jsxs)("div", { className: t4.oK, children: [(0, i.jsx)(tz, {}), (0, i.jsx)(tB, {})] }),
-    t8 = () =>
+    tK = () => (0, i.jsxs)("div", { className: tY.oK, children: [(0, i.jsx)(tV.z, {}), (0, i.jsx)(tG.k, {})] }),
+    tj = () =>
         (0, i.jsxs)("div", {
-            className: t4.yG,
-            children: [(0, i.jsx)(tY, { variant: "primary" }), (0, i.jsx)(tQ, {})],
+            className: tY.yG,
+            children: [(0, i.jsx)(tx.f, { variant: "primary" }), (0, i.jsx)(tF.E, {})],
         });
-var t9 = n(542772);
-let ne = (e) => {
+var t$ = n(542772);
+let tz = (e) => {
     let { clips: t } = e,
         n = (0, d.bG)([tP.A], () => tP.A.getLastClipsSession()?.newClipIds) ?? [];
     return (0, i.jsx)("div", {
-        className: t9.u,
-        children: t.map((e) => (0, i.jsx)(t7, { clip: e, isNew: n.includes(e.id) }, e.id)),
+        className: t$.u,
+        children: t.map((e) => (0, i.jsx)(tW, { clip: e, isNew: n.includes(e.id) }, e.id)),
     });
 };
-var nt = n(994337);
-let nn = (e, t) => t.createdAt - e.createdAt;
-function ni() {
+var tq = n(16590),
+    tX = n(994337);
+let tQ = (e, t) => t.createdAt - e.createdAt;
+function tJ() {
     let { enableReminderSidebar: e } = tw.Z.useConfig({ location: "ClipsReminderSidebar" }),
         { clips: t, remindersEnabled: n } = (0, d.cf)([tP.A], () => {
             let e = Date.now() - 6048e5;
@@ -2065,7 +1860,7 @@ function ni() {
                 clips: tP.A.getClipIds()
                     .map((e) => tP.A.getClipById(e))
                     .filter((t) => t.createdAt > e)
-                    .sort(nn)
+                    .sort(tQ)
                     .slice(0, 15),
                 remindersEnabled: tP.A.getSettings().remindersEnabled,
             };
@@ -2075,49 +1870,49 @@ function ni() {
     }, [e, n]),
     e && n && 0 !== t.length)
         ? (0, i.jsxs)("div", {
-              className: nt.kL,
+              className: tX.kL,
               "data-app-right-panel": !0,
               children: [
                   (0, i.jsxs)("div", {
-                      className: nt.wx,
+                      className: tX.wx,
                       children: [
                           (0, i.jsxs)(y.E, {
                               variant: "text-md/bold",
                               color: "text-strong",
-                              className: nt.DD,
+                              className: tX.DD,
                               children: [
                                   (0, i.jsx)(tL.x, { size: "sm", color: ti.A.colors.TEXT_STRONG.css }),
-                                  eb.intl.formatToPlainString(t$.default.dFu8vZ, { count: t.length }),
+                                  eb.intl.formatToPlainString(tq.default.dFu8vZ, { count: t.length }),
                               ],
                           }),
                           (0, i.jsx)(tv.J, { onClick: t_.Jp }),
                       ],
                   }),
-                  (0, i.jsx)(ts.Ip, { className: nt.Qs, children: (0, i.jsx)(ne, { clips: t }) }),
-                  (0, i.jsx)(nr, { clips: t }),
+                  (0, i.jsx)(ts.Ip, { className: tX.Qs, children: (0, i.jsx)(tz, { clips: t }) }),
+                  (0, i.jsx)(tZ, { clips: t }),
               ],
           })
         : null;
 }
-let nr = (e) => {
+let tZ = (e) => {
     let { clips: t } = e,
         n = r.useCallback(() => {
             (0, tk.p)();
         }, []),
         s = r.useCallback(() => {
-            tb({ clips: t, onAfterDelete: () => (0, t_.Jp)() });
+            (0, tb.R)({ clips: t, onAfterDelete: () => (0, t_.Jp)() });
         }, [t]);
     return (0, i.jsxs)("div", {
-        className: nt.qr,
+        className: tX.qr,
         children: [
             (0, i.jsx)(te.$, {
-                text: eb.intl.string(t$.default.f98Qe3),
+                text: eb.intl.string(tq.default.f98Qe3),
                 variant: "critical-secondary",
                 size: "md",
                 onClick: s,
             }),
             (0, i.jsx)(te.$, {
-                text: eb.intl.string(t$.default["55C2MH"]),
+                text: eb.intl.string(tq.default["55C2MH"]),
                 variant: "primary",
                 size: "md",
                 onClick: n,
@@ -2125,18 +1920,18 @@ let nr = (e) => {
         ],
     });
 };
-var ns = n(826673),
-    na = n(932001),
-    no = n(805627),
-    nl = n(45945);
-function n_() {
-    return (0, i.jsx)("div", { "data-app-right-panel": !0, className: nl.kL });
+var t0 = n(826673),
+    t1 = n(932001),
+    t2 = n(805627),
+    t3 = n(45945);
+function t6() {
+    return (0, i.jsx)("div", { "data-app-right-panel": !0, className: t3.kL });
 }
-let nd = (0, W.Fe)({
+let t4 = (0, W.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("40841"),
-                n.e("25738"),
+                n.e("81349"),
                 n.e("53381"),
                 n.e("207"),
                 n.e("88077"),
@@ -2154,13 +1949,13 @@ let nd = (0, W.Fe)({
                 n.e("66996"),
             ]).then(n.bind(n, 974800)),
         webpackId: 974800,
-        renderLoader: n_,
+        renderLoader: t6,
     }),
-    nu = (0, W.Fe)({
+    t7 = (0, W.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("40841"),
-                n.e("25738"),
+                n.e("81349"),
                 n.e("42376"),
                 n.e("63397"),
                 n.e("43282"),
@@ -2189,9 +1984,9 @@ let nd = (0, W.Fe)({
                 n.e("51200"),
             ]).then(n.bind(n, 290948)),
         webpackId: 290948,
-        renderLoader: n_,
+        renderLoader: t6,
     }),
-    nc = (0, W.Fe)({
+    t5 = (0, W.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("63397"),
@@ -2211,7 +2006,7 @@ let nd = (0, W.Fe)({
             ]).then(n.bind(n, 563380)),
         webpackId: 563380,
     }),
-    nE = function (e) {
+    t8 = function (e) {
         let { mobile: t } = e,
             n = (0, d.bG)([eR.default], () => tf.Ay.canUseClientThemes(eR.default.getCurrentUser())),
             r = (0, d.bG)([tD.A], () => tD.A.isCoachmark),
@@ -2230,7 +2025,7 @@ let nd = (0, W.Fe)({
         null == a &&
             !l &&
             (r && !n && _.push(e9.M.CLIENT_THEMES_COACHMARK), s && n && _.push(e9.M.CUSTOM_THEME_COACHMARK));
-        let [u, c] = (0, na.kn)(_, tT.m.SIDEBAR, !0),
+        let [u, c] = (0, t1.kn)(_, tT.m.SIDEBAR, !0),
             E = u === e9.M.CLIENT_THEMES_COACHMARK,
             h = u === e9.M.CUSTOM_THEME_COACHMARK,
             m = a === t_.HP.CLIENT_THEMES || E,
@@ -2243,11 +2038,11 @@ let nd = (0, W.Fe)({
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     m &&
-                        (0, i.jsx)(nd, {
+                        (0, i.jsx)(t4, {
                             markAsDismissed: E
                                 ? c
                                 : () => {
-                                      (0, ns.Dr)(e9.M.CLIENT_THEMES_COACHMARK, {
+                                      (0, t0.Dr)(e9.M.CLIENT_THEMES_COACHMARK, {
                                           dismissAction: tT.i.INDIRECT_ACTION,
                                           forceTrack: !0,
                                       });
@@ -2255,17 +2050,17 @@ let nd = (0, W.Fe)({
                             showClientThemesCoachmark: E,
                         }),
                     f && (0, i.jsx)(ty, { isCoachmark: !1, markAsDismissed: c }),
-                    g && (0, i.jsx)(nu, { metadata: o ?? {}, markAsDismissed: c, isCoachmark: h, isMobile: t }),
-                    A && (0, i.jsx)(nc, {}),
-                    I && (0, i.jsx)(ni, {}),
+                    g && (0, i.jsx)(t7, { metadata: o ?? {}, markAsDismissed: c, isCoachmark: h, isMobile: t }),
+                    A && (0, i.jsx)(t5, {}),
+                    I && (0, i.jsx)(tJ, {}),
                 ],
             });
-        return t ? (0, i.jsx)("div", { className: no.A, children: p() }) : p();
+        return t ? (0, i.jsx)("div", { className: t2.A, children: p() }) : p();
     };
-var nh = n(404374),
-    nm = n(573435),
-    nf = n(71855),
-    ng = n(906292);
+var t9 = n(404374),
+    ne = n(573435),
+    nt = n(71855),
+    nn = n(906292);
 n(939857),
     Promise.resolve()
         .then(n.bind(n, 677134))
@@ -2287,17 +2082,17 @@ n(939857),
             Promise.all([n.e("94678"), n.e("1856"), n.e("76892"), n.e("4787"), n.e("56795")]).then(n.bind(n, 461624)),
         webpackId: 461624,
     });
-let nA = (0, W.Fe)({
+let ni = (0, W.Fe)({
         createPromise: () => Promise.all([n.e("13040"), n.e("98254"), n.e("99063")]).then(n.bind(n, 154056)),
         webpackId: 154056,
     }),
-    nI = r.memo(function () {
+    nr = r.memo(function () {
         let e = (0, d.bG)([e5.A], () => e5.A.hasLayers()),
             t = (0, E.useModalsStore)(E.hasAnyModalOpen),
             n = (0, d.bG)([eG.default], () => eG.default.isAuthenticated());
-        return (0, i.jsx)(nf.v5, { fixed: !0, show: e || t || !n, isLayerOpen: e });
+        return (0, i.jsx)(nt.v5, { fixed: !0, show: e || t || !n, isLayerOpen: e });
     }),
-    np = function (e) {
+    ns = function (e) {
         var t;
         let n,
             { children: s, skipsSettingDefaultPageTitle: c } = e,
@@ -2333,21 +2128,21 @@ let nA = (0, W.Fe)({
                                     children: (0, i.jsxs)(h.xp, {
                                         containerRef: C,
                                         children: [
-                                            (0, i.jsx)(nm.Al, {}),
-                                            (0, i.jsx)(nh.Ay, {}),
+                                            (0, i.jsx)(ne.Al, {}),
+                                            (0, i.jsx)(t9.Ay, {}),
                                             (0, i.jsx)(_.Ut, {}),
                                             (0, i.jsx)(eS.Wr, {
                                                 appContext: eE.BRT.APP,
                                                 renderWindow: window,
                                                 children: (0, i.jsxs)(w.Yf, {
                                                     children: [
-                                                        null != E ? (0, i.jsx)(nI, {}) : null,
+                                                        null != E ? (0, i.jsx)(nr, {}) : null,
                                                         (0, i.jsxs)("div", {
-                                                            className: a()(ng.XX, p && ng.Xq),
+                                                            className: a()(nn.XX, p && nn.Xq),
                                                             children: [
                                                                 (0, i.jsx)(eo.C1, {}),
                                                                 (0, i.jsx)("div", {
-                                                                    className: ng.x$,
+                                                                    className: nn.x$,
                                                                     "data-app-not-dev-tools": !0,
                                                                     children: (0, i.jsx)(ea.l, {
                                                                         children: (0, i.jsx)(eT.ks, {
@@ -2357,7 +2152,7 @@ let nA = (0, W.Fe)({
                                                                                     children: [
                                                                                         (0, i.jsx)("div", {
                                                                                             className: a()(
-                                                                                                p ? ng.C$ : ng.yA,
+                                                                                                p ? nn.C$ : nn.yA,
                                                                                             ),
                                                                                             children: s,
                                                                                         }),
@@ -2375,7 +2170,7 @@ let nA = (0, W.Fe)({
                                                                                         }),
                                                                                         (0, i.jsx)(G, {}),
                                                                                         (0, i.jsx)(eD, {}),
-                                                                                        (0, i.jsx)(nA, {}),
+                                                                                        (0, i.jsx)(ni, {}),
                                                                                     ],
                                                                                 }),
                                                                             }),
@@ -2383,7 +2178,7 @@ let nA = (0, W.Fe)({
                                                                     }),
                                                                 }),
                                                                 (0, i.jsx)(ei, {}),
-                                                                (0, i.jsx)(nE, { mobile: p }),
+                                                                (0, i.jsx)(t8, { mobile: p }),
                                                                 (0, i.jsx)(em, { mobile: p }),
                                                             ],
                                                         }),

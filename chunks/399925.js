@@ -1,6 +1,6 @@
 n.d(t, {
     $N: () => el,
-    Fb: () => Z,
+    Fb: () => z,
     GS: () => H,
     H1: () => en,
     HU: () => V,
@@ -8,7 +8,7 @@ n.d(t, {
     MI: () => $,
     Mt: () => F,
     PW: () => ea,
-    Su: () => z,
+    Su: () => Z,
     Ts: () => es,
     VO: () => et,
     XK: () => q,
@@ -96,7 +96,10 @@ function F(e) {
         C.default.track(y.HAw.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e });
 }
 function V(e) {
-    _.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { storageLocation: e } });
+    _.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { storageLocation: e } }),
+        z(e).catch((e) => {
+            G.nx.error("Failed to load clips directory after storage location change", e);
+        });
 }
 function H(e) {
     _.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { clipsQuality: e } });
@@ -363,10 +366,10 @@ async function q(e) {
 function X() {
     _.h.dispatch({ type: "CLIPS_CLEAR_CLIPS_SESSION" });
 }
-function z() {
+function Z() {
     _.h.dispatch({ type: "CLIPS_CLEAR_NEW_CLIP_IDS" });
 }
-async function Z(e) {
+async function z(e) {
     if (!(0, D.isDesktop)() || s.A.clips?.loadClipsDirectory == null) return;
     let t = await s.A.clips.loadClipsDirectory(e),
         n = [];

@@ -210,8 +210,8 @@ class $ extends r.PureComponent {
 var Q = n(488428),
     q = n(873263),
     X = n(110259),
-    z = n(279194),
-    Z = n(742821),
+    Z = n(279194),
+    z = n(742821),
     J = n(80703),
     ee = n(506774),
     et = n(736056),
@@ -229,7 +229,7 @@ let ei = u.Ay.connectStores([et.A, en.default], () => {
 });
 var ea = n(549711),
     er = n(268218),
-    e_ = n(144491),
+    e_ = n(906464),
     es = n(228366),
     el =
         (((i = {})[(i.NOT_STARTED = 0)] = "NOT_STARTED"),
@@ -263,7 +263,7 @@ function eI() {
     return (
         r.useEffect(() => {
             window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN &&
-                !0 !== ee.w.get(z.qx) &&
+                !0 !== ee.w.get(Z.qx) &&
                 v.Ay.supportsFeature(x.BYE.USER_DATA_CACHE) &&
                 (es.h.wait(() => es.h.dispatch({ type: "DOMAIN_MIGRATION_START" })),
                 D.A.userDataCache.getCached().then((e) => {
@@ -292,7 +292,7 @@ function eI() {
                             { success: !0, current_is_newer: r, has_data: n },
                             { flush: !0 },
                         ),
-                        ee.w.set(z.qx, !0),
+                        ee.w.set(Z.qx, !0),
                         D.A.userDataCache.deleteCache(),
                         window.location.reload();
                 }));
@@ -414,14 +414,14 @@ let eh = (0, er.Fe)({
     eB = (0, er.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("25738"),
+                n.e("81349"),
                 n.e("22604"),
                 n.e("40841"),
                 n.e("75058"),
                 n.e("3424"),
                 n.e("63133"),
                 n.e("48540"),
-                n.e("32181"),
+                n.e("66883"),
                 n.e("19415"),
                 n.e("7276"),
                 n.e("92652"),
@@ -440,14 +440,15 @@ let eh = (0, er.Fe)({
                 n.e("14326"),
                 n.e("81280"),
                 n.e("72838"),
-                n.e("60049"),
+                n.e("12512"),
+                n.e("57960"),
                 n.e("23313"),
                 n.e("24211"),
                 n.e("41475"),
                 n.e("79542"),
                 n.e("13044"),
                 n.e("84615"),
-                n.e("54718"),
+                n.e("60571"),
                 n.e("5036"),
                 n.e("97271"),
                 n.e("22513"),
@@ -894,7 +895,7 @@ let eh = (0, er.Fe)({
                 n.e("21226"),
                 n.e("7242"),
                 n.e("20578"),
-                n.e("42486"),
+                n.e("76136"),
                 n.e("31302"),
                 n.e("25281"),
                 n.e("92837"),
@@ -919,16 +920,16 @@ let eh = (0, er.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("80413"),
-                n.e("32181"),
+                n.e("66883"),
                 n.e("63397"),
-                n.e("60049"),
+                n.e("12512"),
                 n.e("61207"),
                 n.e("80760"),
                 n.e("40841"),
                 n.e("27724"),
                 n.e("28127"),
-                n.e("25738"),
-                n.e("84580"),
+                n.e("81349"),
+                n.e("47181"),
                 n.e("74112"),
                 n.e("5036"),
                 n.e("63133"),
@@ -937,7 +938,7 @@ let eh = (0, er.Fe)({
                 n.e("13709"),
                 n.e("13498"),
                 n.e("75058"),
-                n.e("54718"),
+                n.e("60571"),
                 n.e("71934"),
                 n.e("92652"),
                 n.e("86483"),
@@ -1231,7 +1232,7 @@ let eh = (0, er.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("50672"),
-                n.e("32181"),
+                n.e("66883"),
                 n.e("75058"),
                 n.e("92652"),
                 n.e("63397"),
@@ -1239,7 +1240,7 @@ let eh = (0, er.Fe)({
                 n.e("25568"),
                 n.e("48476"),
                 n.e("21977"),
-                n.e("25738"),
+                n.e("81349"),
                 n.e("40841"),
                 n.e("74112"),
                 n.e("5036"),
@@ -1248,9 +1249,9 @@ let eh = (0, er.Fe)({
                 n.e("22513"),
                 n.e("13709"),
                 n.e("13498"),
-                n.e("54718"),
+                n.e("60571"),
                 n.e("71934"),
-                n.e("60049"),
+                n.e("12512"),
                 n.e("86483"),
                 n.e("31632"),
                 n.e("32260"),
@@ -1282,7 +1283,7 @@ let eh = (0, er.Fe)({
                 n.e("69273"),
                 n.e("63941"),
                 n.e("63009"),
-                n.e("84580"),
+                n.e("47181"),
                 n.e("45650"),
                 n.e("97189"),
                 n.e("24059"),
@@ -1318,7 +1319,7 @@ let eh = (0, er.Fe)({
                 n.e("17270"),
                 n.e("97023"),
                 n.e("23967"),
-                n.e("85611"),
+                n.e("34248"),
                 n.e("27796"),
                 n.e("98197"),
                 n.e("77948"),
@@ -1397,10 +1398,10 @@ let eh = (0, er.Fe)({
                 n.e("17363"),
                 n.e("88941"),
                 n.e("34552"),
+                n.e("58337"),
                 n.e("55411"),
                 n.e("93103"),
                 n.e("34530"),
-                n.e("58337"),
                 n.e("61379"),
                 n.e("62680"),
                 n.e("43039"),
@@ -1574,7 +1575,6 @@ let eh = (0, er.Fe)({
                 n.e("71273"),
                 n.e("77265"),
                 n.e("27779"),
-                n.e("75842"),
                 n.e("12743"),
                 n.e("71133"),
                 n.e("10957"),
@@ -1595,7 +1595,7 @@ let eh = (0, er.Fe)({
                 n.e("86814"),
                 n.e("52548"),
                 n.e("35771"),
-                n.e("22266"),
+                n.e("75842"),
                 n.e("53984"),
                 n.e("59414"),
                 n.e("80854"),
@@ -1618,6 +1618,7 @@ let eh = (0, er.Fe)({
                 n.e("68904"),
                 n.e("68802"),
                 n.e("52617"),
+                n.e("22266"),
                 n.e("8563"),
                 n.e("2564"),
                 n.e("47417"),
@@ -1649,7 +1650,6 @@ let eh = (0, er.Fe)({
                 n.e("86243"),
                 n.e("32209"),
                 n.e("30788"),
-                n.e("60249"),
                 n.e("4193"),
                 n.e("39171"),
                 n.e("25246"),
@@ -1664,6 +1664,7 @@ let eh = (0, er.Fe)({
                 n.e("79707"),
                 n.e("44795"),
                 n.e("80436"),
+                n.e("60249"),
                 n.e("71268"),
                 n.e("95370"),
                 n.e("99518"),
@@ -1673,13 +1674,12 @@ let eh = (0, er.Fe)({
                 n.e("59880"),
                 n.e("78412"),
                 n.e("10014"),
-                n.e("84783"),
                 n.e("44928"),
                 n.e("9662"),
                 n.e("80239"),
                 n.e("33416"),
                 n.e("54791"),
-                n.e("83952"),
+                n.e("84783"),
                 n.e("61268"),
                 n.e("63213"),
                 n.e("255"),
@@ -1691,6 +1691,7 @@ let eh = (0, er.Fe)({
                 n.e("5557"),
                 n.e("31445"),
                 n.e("44780"),
+                n.e("83952"),
                 n.e("19871"),
                 n.e("95340"),
                 n.e("62718"),
@@ -1740,7 +1741,6 @@ let eh = (0, er.Fe)({
                 n.e("35996"),
                 n.e("79211"),
                 n.e("63071"),
-                n.e("88990"),
                 n.e("16988"),
                 n.e("18997"),
                 n.e("57458"),
@@ -1750,6 +1750,7 @@ let eh = (0, er.Fe)({
                 n.e("65826"),
                 n.e("86697"),
                 n.e("63618"),
+                n.e("88990"),
                 n.e("42204"),
                 n.e("12255"),
                 n.e("20379"),
@@ -1832,7 +1833,6 @@ let eh = (0, er.Fe)({
                 n.e("78434"),
                 n.e("40204"),
                 n.e("77467"),
-                n.e("39894"),
                 n.e("97354"),
                 n.e("34967"),
                 n.e("47057"),
@@ -1854,6 +1854,7 @@ let eh = (0, er.Fe)({
                 n.e("20965"),
                 n.e("44385"),
                 n.e("41838"),
+                n.e("39894"),
                 n.e("46045"),
                 n.e("94138"),
                 n.e("99011"),
@@ -2054,7 +2055,7 @@ let eh = (0, er.Fe)({
                 n.e("54588"),
                 n.e("30295"),
                 n.e("92313"),
-                n.e("59447"),
+                n.e("57807"),
                 n.e("29880"),
                 n.e("44030"),
                 n.e("7521"),
@@ -2146,7 +2147,7 @@ let eh = (0, er.Fe)({
 function eX(e, t) {
     return t ? e.filter((e) => !eq.has(e)) : e;
 }
-class ez extends r.Component {
+class eZ extends r.Component {
     componentDidMount() {
         let { isAuthenticated: e } = this.props;
         v.Ay.cleanupDisplaySleep(), eN.initialize(), (eR.A.wasAuthenticated = e);
@@ -2315,7 +2316,7 @@ class ez extends r.Component {
                                                 });
                                             {
                                                 let e = (0, eC.b$)("app_open_from_email", n, i.mobile),
-                                                    t = (0, Z.X7)(e);
+                                                    t = (0, z.X7)(e);
                                                 null != t &&
                                                     ec.default.track(x.HAw.DEEP_LINK_CLICKED, {
                                                         fingerprint: (0, J.v)(t.fingerprint),
@@ -2352,7 +2353,7 @@ class ez extends r.Component {
                 skipsSettingDefaultPageTitle: i,
                 children: [
                     e,
-                    y.isPlatformEmbedded && (n === el.NOT_STARTED || n === el.IN_PROGRESS) && !0 !== ee.w.get(z.qx)
+                    y.isPlatformEmbedded && (n === el.NOT_STARTED || n === el.IN_PROGRESS) && !0 !== ee.w.get(Z.qx)
                         ? (0, a.jsx)(eI, {})
                         : null,
                 ],
@@ -2360,7 +2361,7 @@ class ez extends r.Component {
         );
     }
 }
-let eZ = u.Ay.connectStores(
+let ez = u.Ay.connectStores(
     [en.default, ed],
     () => ({ isAuthenticated: en.default.isAuthenticated(), migrationStatus: ed.getMigrationStatus() }),
     { forwardRef: !0 },
@@ -2369,7 +2370,7 @@ let eZ = u.Ay.connectStores(
         let { pathname: e } = (0, q.zy)();
         return null != (0, ef.B)(e, { path: x.BVt.APPLICATION_DIRECTORY });
     })();
-    return (0, a.jsx)(ez, { ...e, skipsSettingDefaultPageTitle: t });
+    return (0, a.jsx)(eZ, { ...e, skipsSettingDefaultPageTitle: t });
 });
 class eJ extends eA.A {
     _initialize() {
@@ -2811,7 +2812,7 @@ let tq = (0, _.createRoot)(tQ),
             return null != t && ((0, tK.N)({ token: t }), !0);
         },
     },
-    tz = (e) => tq.render((0, a.jsx)(tP.e, { children: (0, a.jsx)(tU, { children: (0, a.jsx)(e, {}) }) }));
+    tZ = (e) => tq.render((0, a.jsx)(tP.e, { children: (0, a.jsx)(tU, { children: (0, a.jsx)(e, {}) }) }));
 if (null != D.A) {
     D.A.setUncaughtExceptionHandler?.((e, t) => {
         setImmediate(() => {
@@ -2832,8 +2833,8 @@ if (null != D.A) {
         v.Ay.initializeExitHook(),
         v.Ay.initializeWERHandler();
 }
-if (((0, tm.M)(window), __OVERLAY__)) tz(() => (0, a.jsx)(o.W, { children: (0, a.jsx)(ek, {}) }));
-else if (null != window.require && null == window.DiscordNative) tz($);
+if (((0, tm.M)(window), __OVERLAY__)) tZ(() => (0, a.jsx)(o.W, { children: (0, a.jsx)(ek, {}) }));
+else if (null != window.require && null == window.DiscordNative) tZ($);
 else {
     if ((document.addEventListener("scroll", (e) => e.preventDefault()), y.isPlatformEmbedded)) {
         (window.onbeforeunload = () => v.Ay.beforeUnload()),
@@ -2869,5 +2870,5 @@ else {
         td.initialize(),
         tD.initialize(),
         tF(),
-        tz(() => (0, a.jsx)(o.W, { children: (0, a.jsx)(eZ, {}) }));
+        tZ(() => (0, a.jsx)(o.W, { children: (0, a.jsx)(ez, {}) }));
 }

@@ -1,28 +1,29 @@
+"use strict";
 n.d(t, {
-    AC: () => u,
-    F0: () => E,
-    Jk: () => S,
-    ZV: () => I,
-    ce: () => N,
+    AC: () => E,
+    F0: () => d,
+    Jk: () => g,
+    ZV: () => h,
+    ce: () => A,
     jQ: () => c,
-    kn: () => d,
-    on: () => o,
-    zr: () => T,
+    kn: () => u,
+    on: () => _,
+    zr: () => f,
 });
 var i,
     r,
-    a,
-    s = n(652215),
-    _ = n(788868),
+    s,
+    a = n(652215),
+    o = n(788868),
     l = n(985018),
-    o =
+    _ =
         (((i = {})[(i.RESOLUTION_480 = 480)] = "RESOLUTION_480"),
         (i[(i.RESOLUTION_720 = 720)] = "RESOLUTION_720"),
         (i[(i.RESOLUTION_1080 = 1080)] = "RESOLUTION_1080"),
         (i[(i.RESOLUTION_1440 = 1440)] = "RESOLUTION_1440"),
         (i[(i.RESOLUTION_SOURCE = 0)] = "RESOLUTION_SOURCE"),
         i);
-function E(e) {
+function d(e) {
     switch (e) {
         case 480:
             return 480;
@@ -38,22 +39,22 @@ function E(e) {
             throw Error(`Unknown resolution: ${e}`);
     }
 }
-var d =
+var u =
         (((r = {})[(r.FPS_5 = 5)] = "FPS_5"),
         (r[(r.FPS_15 = 15)] = "FPS_15"),
         (r[(r.FPS_30 = 30)] = "FPS_30"),
         (r[(r.FPS_60 = 60)] = "FPS_60"),
         r),
     c =
-        (((a = {})[(a.PRESET_VIDEO = 1)] = "PRESET_VIDEO"),
-        (a[(a.PRESET_DOCUMENTS = 2)] = "PRESET_DOCUMENTS"),
-        (a[(a.PRESET_CUSTOM = 3)] = "PRESET_CUSTOM"),
-        (a[(a.PRESET_AUTO = 4)] = "PRESET_AUTO"),
-        (a[(a.PRESET_MOBILE_DEFAULT = 5)] = "PRESET_MOBILE_DEFAULT"),
-        (a[(a.PRESET_MOBILE_PERFORMANCE = 6)] = "PRESET_MOBILE_PERFORMANCE"),
-        (a[(a.PRESET_MOBILE_HIGH_QUALITY = 7)] = "PRESET_MOBILE_HIGH_QUALITY"),
-        a);
-function u(e) {
+        (((s = {})[(s.PRESET_VIDEO = 1)] = "PRESET_VIDEO"),
+        (s[(s.PRESET_DOCUMENTS = 2)] = "PRESET_DOCUMENTS"),
+        (s[(s.PRESET_CUSTOM = 3)] = "PRESET_CUSTOM"),
+        (s[(s.PRESET_AUTO = 4)] = "PRESET_AUTO"),
+        (s[(s.PRESET_MOBILE_DEFAULT = 5)] = "PRESET_MOBILE_DEFAULT"),
+        (s[(s.PRESET_MOBILE_PERFORMANCE = 6)] = "PRESET_MOBILE_PERFORMANCE"),
+        (s[(s.PRESET_MOBILE_HIGH_QUALITY = 7)] = "PRESET_MOBILE_HIGH_QUALITY"),
+        s);
+function E(e) {
     switch (e) {
         case 5:
             return 5;
@@ -67,27 +68,27 @@ function u(e) {
             throw Error(`Unknown frame rate: ${e}`);
     }
 }
-let I = [
-    { resolution: 0, fps: 60, quality: _.uP.HIGH_STREAMING_QUALITY },
-    { resolution: 0, fps: 30, quality: _.uP.HIGH_STREAMING_QUALITY },
-    { resolution: 0, fps: 15, quality: _.uP.HIGH_STREAMING_QUALITY },
+let h = [
+    { resolution: 0, fps: 60, quality: o.uP.HIGH_STREAMING_QUALITY },
+    { resolution: 0, fps: 30, quality: o.uP.HIGH_STREAMING_QUALITY },
+    { resolution: 0, fps: 15, quality: o.uP.HIGH_STREAMING_QUALITY },
     { resolution: 0, fps: 5, preset: 2 },
-    { resolution: 1440, fps: 60, guildPremiumTier: s.TVA.TIER_2, quality: _.uP.MID_STREAMING_QUALITY },
-    { resolution: 1440, fps: 30, guildPremiumTier: s.TVA.TIER_2, quality: _.uP.MID_STREAMING_QUALITY },
-    { resolution: 1440, fps: 15, guildPremiumTier: s.TVA.TIER_2, quality: _.uP.MID_STREAMING_QUALITY },
-    { resolution: 1080, fps: 60, guildPremiumTier: s.TVA.TIER_2, quality: _.uP.MID_STREAMING_QUALITY },
-    { resolution: 1080, fps: 30, guildPremiumTier: s.TVA.TIER_2, quality: _.uP.MID_STREAMING_QUALITY },
-    { resolution: 1080, fps: 15, guildPremiumTier: s.TVA.TIER_2, quality: _.uP.MID_STREAMING_QUALITY },
-    { resolution: 720, fps: 60, guildPremiumTier: s.TVA.TIER_1, quality: _.uP.MID_STREAMING_QUALITY },
+    { resolution: 1440, fps: 60, guildPremiumTier: a.TVA.TIER_2, quality: o.uP.MID_STREAMING_QUALITY },
+    { resolution: 1440, fps: 30, guildPremiumTier: a.TVA.TIER_2, quality: o.uP.MID_STREAMING_QUALITY },
+    { resolution: 1440, fps: 15, guildPremiumTier: a.TVA.TIER_2, quality: o.uP.MID_STREAMING_QUALITY },
+    { resolution: 1080, fps: 60, guildPremiumTier: a.TVA.TIER_2, quality: o.uP.MID_STREAMING_QUALITY },
+    { resolution: 1080, fps: 30, guildPremiumTier: a.TVA.TIER_2, quality: o.uP.MID_STREAMING_QUALITY },
+    { resolution: 1080, fps: 15, guildPremiumTier: a.TVA.TIER_2, quality: o.uP.MID_STREAMING_QUALITY },
+    { resolution: 720, fps: 60, guildPremiumTier: a.TVA.TIER_1, quality: o.uP.MID_STREAMING_QUALITY },
     { resolution: 720, fps: 30 },
     { resolution: 720, fps: 15 },
     { resolution: 720, fps: 5 },
-    { resolution: 480, fps: 60, guildPremiumTier: s.TVA.TIER_1, quality: _.uP.MID_STREAMING_QUALITY },
+    { resolution: 480, fps: 60, guildPremiumTier: a.TVA.TIER_1, quality: o.uP.MID_STREAMING_QUALITY },
     { resolution: 480, fps: 30 },
     { resolution: 480, fps: 15 },
     { resolution: 480, fps: 5 },
 ];
-function A(e, t, n) {
+function m(e, t, n) {
     return {
         value: e,
         get label() {
@@ -98,12 +99,12 @@ function A(e, t, n) {
         },
     };
 }
-A(720), A(1080), A(1440), A(0, () => l.intl.string(l.t.XjXqzh)), A(720), A(1080), A(1440);
-let T = (e) => (0 === e ? l.intl.string(l.t.XjXqzh) : l.intl.formatToPlainString(l.t.TEOC0I, { resolution: e })),
-    S = [A(480, () => T(480)), A(720, () => T(720)), A(1080, () => T(1080)), A(1440, () => T(1440)), A(0, () => T(0))];
-A(15), A(30), A(60);
-let N = [
-    A(15, () => l.intl.formatToPlainString(l.t["bW+JCW"], { value: 15 })),
-    A(30, () => l.intl.formatToPlainString(l.t["bW+JCW"], { value: 30 })),
-    A(60, () => l.intl.formatToPlainString(l.t["bW+JCW"], { value: 60 })),
+m(720), m(1080), m(1440), m(0, () => l.intl.string(l.t.XjXqzh)), m(720), m(1080), m(1440);
+let f = (e) => (0 === e ? l.intl.string(l.t.XjXqzh) : l.intl.formatToPlainString(l.t.TEOC0I, { resolution: e })),
+    g = [m(480, () => f(480)), m(720, () => f(720)), m(1080, () => f(1080)), m(1440, () => f(1440)), m(0, () => f(0))];
+m(15), m(30), m(60);
+let A = [
+    m(15, () => l.intl.formatToPlainString(l.t["bW+JCW"], { value: 15 })),
+    m(30, () => l.intl.formatToPlainString(l.t["bW+JCW"], { value: 30 })),
+    m(60, () => l.intl.formatToPlainString(l.t["bW+JCW"], { value: 60 })),
 ];

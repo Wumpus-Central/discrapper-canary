@@ -243,7 +243,7 @@ var L = a(789645),
     W = a(641886),
     H = a(780898),
     z = a(652215),
-    K = a(216894),
+    K = a(224196),
     Y = a(427262);
 function q(e) {
     let { nameplate: t } = e,
@@ -7016,7 +7016,7 @@ let rn = {
     "discord_app/modules/premium/web/animations/guild_sidebar_premium_entrypoint_dt.json": () =>
         a.e("15048").then(a.t.bind(a, 366043, 19)),
     "discord_app/modules/premium/web/animations/guild_sidebar_premium_entrypoint_lt.json": () =>
-        a.e("12512").then(a.t.bind(a, 789091, 19)),
+        a.e("90131").then(a.t.bind(a, 789091, 19)),
     "discord_common/js/shared/animations/app/activities/AppsIconWordlePromo.lottiejson": () =>
         a.e("73550").then(a.t.bind(a, 527613, 19)),
     "discord_common/js/shared/animations/app/nearby/nearby.lottiejson": () =>
@@ -7232,22 +7232,23 @@ let ro = {
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("28149"),
-                    a.e("32181"),
+                    a.e("66883"),
                     a.e("5989"),
                     a.e("90673"),
                     a.e("13709"),
-                    a.e("72823"),
+                    a.e("31320"),
                     a.e("44135"),
                     a.e("9176"),
                     a.e("87845"),
-                    a.e("20797"),
+                    a.e("35636"),
                     a.e("75090"),
-                    a.e("60049"),
+                    a.e("12512"),
                     a.e("61175"),
                     a.e("56574"),
                     a.e("4974"),
                     a.e("43763"),
                     a.e("80186"),
+                    a.e("76547"),
                     a.e("49681"),
                     a.e("96382"),
                     a.e("22687"),
@@ -7401,7 +7402,7 @@ let ro = {
         },
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([
-                    a.e("60049"),
+                    a.e("12512"),
                     a.e("9176"),
                     a.e("14656"),
                     a.e("11810"),
@@ -8393,7 +8394,7 @@ let rI = {
         return (s.displayName = "ConsentCheckBoxModalContent"), (e) => (0, r.jsx)(s, { ...e });
     },
     GuildRaidLockdownFeedbackModal: async () => {
-        let { default: e } = await Promise.all([a.e("60049"), a.e("46313")]).then(a.bind(a, 336496));
+        let { default: e } = await Promise.all([a.e("12512"), a.e("46313")]).then(a.bind(a, 336496));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
@@ -8544,7 +8545,7 @@ let rI = {
         let { default: e } = await Promise.all([
             a.e("40841"),
             a.e("30244"),
-            a.e("29835"),
+            a.e("23104"),
             a.e("48370"),
             a.e("72875"),
         ]).then(a.bind(a, 320742));
@@ -8663,7 +8664,7 @@ let rI = {
     },
     NewUserOnboarding: async () => {
         let { default: e } = await Promise.all([
-            a.e("32181"),
+            a.e("66883"),
             a.e("13754"),
             a.e("16138"),
             a.e("19580"),
