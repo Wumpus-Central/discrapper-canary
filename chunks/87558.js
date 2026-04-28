@@ -1,44 +1,43 @@
-"use strict";
-n.d(t, { Ay: () => l, GT: () => o, Mz: () => c, fB: () => u, qH: () => s, rs: () => d }),
-    n(323874),
-    n(14289),
-    n(35956),
-    n(508300),
-    n(393431),
-    n(532706),
-    n(42231),
-    n(232424),
-    n(949626),
-    n(767709),
-    n(65162);
-var r,
-    a = n(115943),
-    i = n.n(a);
-let l = async (e, t, n) => {
-    var r;
+a.d(t, { Ay: () => i, GT: () => o, Mz: () => c, fB: () => u, qH: () => s, rs: () => d }),
+    a(323874),
+    a(14289),
+    a(35956),
+    a(508300),
+    a(393431),
+    a(532706),
+    a(42231),
+    a(232424),
+    a(949626),
+    a(767709),
+    a(65162);
+var n,
+    l = a(115943),
+    r = a.n(l);
+let i = async (e, t, a) => {
+    var n;
     return {
         src: e,
         base64: e,
         loop: !1,
         loopDelay: 0,
-        duration: Math.round(((r = await t.arrayBuffer()), i().decode(r)).frames.reduce((e, t) => e + t.delay, 0)),
+        duration: Math.round(((n = await t.arrayBuffer()), r().decode(n)).frames.reduce((e, t) => e + t.delay, 0)),
         start: 0,
         position: { x: 0, y: 0 },
-        zIndex: 100 + n,
+        zIndex: 100 + a,
         height: 880,
         width: 450,
         name: t.name,
     };
 };
-var s = (((r = {}).THUMBNAIL = "Thumbnail"), (r.STATIC = "Static"), (r.REDUCED_MOTION = "Reduced Motion"), r);
+var s = (((n = {}).THUMBNAIL = "Thumbnail"), (n.STATIC = "Static"), (n.REDUCED_MOTION = "Reduced Motion"), n);
 let o = (e, t) => ({ name: t.name, src: URL.createObjectURL(t), base64: e }),
     c = (e, t) => {
         if (null == e) return;
-        let n = new FileReader();
-        (n.onload = (e) => {
+        let a = new FileReader();
+        (a.onload = (e) => {
             null == e.target || ("string" == typeof e.target.result && t?.(e.target.result));
         }),
-            n.readAsDataURL(e);
+            a.readAsDataURL(e);
     },
     d = (e) =>
         "PASTE THIS INTO THE DROP JSON:\n\n[\n" +
@@ -71,12 +70,12 @@ let o = (e, t) => ({ name: t.name, src: URL.createObjectURL(t), base64: e }),
         "\n]",
     u = (e) => {
         let t = ((e) => {
-            let [t, n] = e.split(","),
-                r = atob(n),
-                a = t.split(";")[0],
-                i = new Uint8Array(r.length);
-            for (let e = 0; e < r.length; e++) i[e] = r.charCodeAt(e);
-            return new Blob([i], { type: a });
+            let [t, a] = e.split(","),
+                n = atob(a),
+                l = t.split(";")[0],
+                r = new Uint8Array(n.length);
+            for (let e = 0; e < n.length; e++) r[e] = n.charCodeAt(e);
+            return new Blob([r], { type: l });
         })(e);
         return URL.createObjectURL(t);
     };

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     XM: "popoutWrapper__9ac28",
     XG: "scroller__9ac28",

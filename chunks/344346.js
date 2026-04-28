@@ -1,140 +1,139 @@
-"use strict";
-n.d(t, { a: () => L, A: () => M });
-var r = n(627968),
-    a = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    s = n(17928),
-    o = n(462887),
-    c = n(778712),
-    d = n(652215),
-    u = n(247928),
-    _ = n(97808),
-    p = n(736653),
-    f = n(262295),
-    m = n(609425),
-    h = n(922301),
-    g = n(368919),
-    b = n(685073),
-    A = n(534400),
-    E = n(919395),
-    v = n(252732),
-    I = n(696451),
-    y = n(290863),
-    x = n(162232),
-    S = n(88686),
-    T = n(780898),
-    C = n(174755),
-    N = n(985018),
-    R = n(136958);
-let w = { xlarge: c._3.SIZE_48, large: c._3.SIZE_40, small: c._3.SIZE_24, xsmall: c._3.SIZE_20, default: c._3.SIZE_32 },
-    L = a.memo(function (e) {
+a.d(t, { a: () => N, A: () => k });
+var n = a(627968),
+    l = a(64700),
+    r = a(503698),
+    i = a.n(r),
+    s = a(17928),
+    o = a(462887),
+    c = a(778712),
+    d = a(652215),
+    u = a(247928),
+    h = a(97808),
+    p = a(736653),
+    m = a(262295),
+    f = a(609425),
+    _ = a(922301),
+    b = a(368919),
+    g = a(685073),
+    x = a(534400),
+    v = a(919395),
+    A = a(252732),
+    E = a(696451),
+    y = a(290863),
+    I = a(162232),
+    S = a(88686),
+    j = a(780898),
+    C = a(174755),
+    T = a(985018),
+    w = a(136958);
+let R = { xlarge: c._3.SIZE_48, large: c._3.SIZE_40, small: c._3.SIZE_24, xsmall: c._3.SIZE_20, default: c._3.SIZE_32 },
+    N = l.memo(function (e) {
         let {
                 user: t,
-                guildId: n,
-                nameplate: i,
+                guildId: a,
+                nameplate: r,
                 nameplateData: c,
-                className: L,
-                innerClassName: M,
-                isHighlighted: O,
-                showStatus: D,
-                showPlaceholderUser: P,
-                pendingGlobalName: j,
-                pendingNickname: k,
+                className: N,
+                innerClassName: k,
+                isHighlighted: L,
+                showStatus: O,
+                showPlaceholderUser: M,
+                pendingGlobalName: P,
+                pendingNickname: D,
                 pendingAvatarDecoration: U,
-                pendingDisplayNameStyles: F,
-                pendingPrimaryGuildId: B,
-                nameplatePreviewSize: G = "default",
-                skipEffectDisplayName: V = !1,
+                pendingDisplayNameStyles: V,
+                pendingPrimaryGuildId: F,
+                nameplatePreviewSize: B = "default",
+                skipEffectDisplayName: G = !1,
                 width: H,
             } = e,
             W = (0, p.Ay)(),
             Z = (0, o.M)(W),
-            z = (0, T.WK)(i) ?? c,
-            Y = (0, s.bG)([y.A], () => (null != t ? y.A.getStatus(t.id) : d.clD.ONLINE)),
-            X = a.useRef(null),
-            q = (0, s.bG)([I.Ay], () => (null != n && null != t ? I.Ay.getMember(n, t.id) : null)),
-            J = null != t ? (0, v.eh)({ pendingNickname: k, pendingGlobalName: j, user: t, guildMember: q }) : void 0,
-            $ = (0, E.lw)({
+            z = (0, j.WK)(r) ?? c,
+            K = (0, s.bG)([y.A], () => (null != t ? y.A.getStatus(t.id) : d.clD.ONLINE)),
+            Y = l.useRef(null),
+            X = (0, s.bG)([E.Ay], () => (null != a && null != t ? E.Ay.getMember(a, t.id) : null)),
+            J = null != t ? (0, A.eh)({ pendingNickname: D, pendingGlobalName: P, user: t, guildMember: X }) : void 0,
+            $ = (0, v.lw)({
                 pendingValue: U,
                 userValue: t?.avatarDecoration,
-                guildValue: q?.avatarDecoration,
-                guildId: n,
+                guildValue: X?.avatarDecoration,
+                guildId: a,
             }),
-            K = a.useMemo(() => w[G], [G]),
-            Q = (0, m.A)({ userId: t?.id, guildId: n, pendingDisplayNameStyles: F }),
-            ee = (0, b.gS)(B),
-            et = a.useMemo(
+            q = l.useMemo(() => R[B], [B]),
+            Q = (0, f.A)({ userId: t?.id, guildId: a, pendingDisplayNameStyles: V }),
+            ee = (0, g.gS)(F),
+            et = l.useMemo(
                 () =>
-                    null != i
-                        ? N.intl.formatToPlainString(N.t.YJig7C, { a11y_text: i.label })
-                        : N.intl.string(N.t.SZeUdR),
-                [i],
+                    null != r
+                        ? T.intl.formatToPlainString(T.t.YJig7C, { a11y_text: r.label })
+                        : T.intl.string(T.t.SZeUdR),
+                [r],
             );
-        return (0, r.jsx)("div", {
+        return (0, n.jsx)("div", {
             role: "img",
             "aria-label": et,
             style: { color: Z ? "white" : "black", width: null != H ? `${H}px` : "100%" },
-            children: (0, r.jsxs)(u.M, {
-                className: l()(L, R.M4, {
-                    [R.s]: "xsmall" === G,
-                    [R.EX]: "small" === G,
-                    [R.as]: "large" === G,
-                    [R.AQ]: "xlarge" === G,
-                    [R.gf]: null != H,
+            children: (0, n.jsxs)(u.M, {
+                className: i()(N, w.M4, {
+                    [w.s]: "xsmall" === B,
+                    [w.EX]: "small" === B,
+                    [w.as]: "large" === B,
+                    [w.AQ]: "xlarge" === B,
+                    [w.gf]: null != H,
                 }),
                 children: [
                     null != z &&
-                        (0, r.jsx)(
+                        (0, n.jsx)(
                             C.A,
-                            { nameplate: z, hovered: O, placement: S.u.PREVIEW, content: P ? void 0 : X },
-                            i?.skuId,
+                            { nameplate: z, hovered: L, placement: S.u.PREVIEW, content: M ? void 0 : Y },
+                            r?.skuId,
                         ),
-                    (0, r.jsxs)("div", {
-                        className: R.MU,
+                    (0, n.jsxs)("div", {
+                        className: w.MU,
                         children: [
                             null != t
-                                ? (0, r.jsx)("div", {
-                                      className: l()(R.H, !P && R.Mk),
-                                      children: (0, r.jsx)(f.A, {
-                                          ref: X,
-                                          avatar: (0, r.jsx)(x.A, {
+                                ? (0, n.jsx)("div", {
+                                      className: i()(w.H, !M && w.Mk),
+                                      children: (0, n.jsx)(m.A, {
+                                          ref: Y,
+                                          avatar: (0, n.jsx)(I.A, {
                                               user: t,
-                                              guildId: n,
-                                              avatarSize: K,
-                                              status: D ? Y : void 0,
+                                              guildId: a,
+                                              avatarSize: q,
+                                              status: O ? K : void 0,
                                               avatarDecorationOverride: $,
                                               "aria-hidden": !0,
                                           }),
-                                          decorators: (0, r.jsx)(A.Ay, {
+                                          decorators: (0, n.jsx)(x.Ay, {
                                               primaryGuild: ee,
                                               userId: t.id,
-                                              contextGuildId: n,
-                                              className: R.id,
+                                              contextGuildId: a,
+                                              className: w.id,
                                           }),
-                                          name: (0, r.jsx)(g.A, {
+                                          name: (0, n.jsx)(b.A, {
                                               userName: J,
                                               displayNameStyles: Q,
-                                              effectDisplayType: V ? h.G.PLAIN : h.G.ANIMATED,
+                                              effectDisplayType: G ? _.G.PLAIN : _.G.ANIMATED,
                                               loop: !0,
                                           }),
-                                          innerClassName: M,
+                                          innerClassName: k,
                                           withDisplayNameStyles: null != Q,
                                       }),
                                   })
                                 : null,
-                            (0, r.jsxs)("div", {
-                                className: l()(R.H, P && R.Mk),
+                            (0, n.jsxs)("div", {
+                                className: i()(w.H, M && w.Mk),
                                 children: [
-                                    (0, r.jsx)(_.eu, {
+                                    (0, n.jsx)(h.eu, {
                                         src: Z ? "/assets/2ca6b6f4a73913ed.png" : "/assets/9d8606c1376ca484.png",
-                                        size: K,
+                                        size: q,
                                         "aria-hidden": !0,
                                         status: d.clD.ONLINE,
                                         statusColor: Z ? "#706F74" : "#aaaab2",
-                                        className: R.my,
+                                        className: w.my,
                                     }),
-                                    (0, r.jsx)("div", { className: R.gM }),
+                                    (0, n.jsx)("div", { className: w.gM }),
                                 ],
                             }),
                         ],
@@ -143,4 +142,4 @@ let w = { xlarge: c._3.SIZE_48, large: c._3.SIZE_40, small: c._3.SIZE_24, xsmall
             }),
         });
     }),
-    M = L;
+    k = N;

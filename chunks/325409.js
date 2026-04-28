@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     uF: "profileFrameContainer__7d80f",
     hH: "profileFrame__7d80f",
