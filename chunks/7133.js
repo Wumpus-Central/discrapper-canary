@@ -1,18 +1,17 @@
-"use strict";
-r.d(t, { A: () => u }), r(938796);
-var n = r(989349),
-    i = r.n(n),
-    a = r(665260),
-    s = r(315069),
-    l = r(835095),
-    o = r(832946),
-    c = r(788868);
+a.d(t, { A: () => u }), a(938796);
+var n = a(989349),
+    l = a.n(n),
+    r = a(665260),
+    i = a(315069),
+    s = a(835095),
+    o = a(832946),
+    c = a(788868);
 let d = Object.freeze({
     PAYMENT_SOURCE_REQUIRED: 1,
     EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
     NOT_SELF_REDEEMABLE: 4,
 });
-class u extends s.A {
+class u extends i.A {
     userId;
     code;
     skuId;
@@ -39,7 +38,7 @@ class u extends s.A {
             uses: e.uses,
             maxUses: e.max_uses,
             storeListingId: null != e.store_listing ? e.store_listing.id : null,
-            expiresAt: null != e.expires_at ? i()(e.expires_at) : null,
+            expiresAt: null != e.expires_at ? l()(e.expires_at) : null,
             redeemed: e.redeemed,
             subscriptionPlanId: null != e.subscription_plan ? e.subscription_plan.id : e.subscription_plan_id,
             subscriptionPlan: null != e.subscription_plan ? o.Ay.createFromServer(e.subscription_plan) : null,
@@ -56,7 +55,7 @@ class u extends s.A {
                           skuId: e.subscription_trial.sku_id,
                       }
                     : null,
-            promotion: null != e.promotion ? l.A.createFromServer(e.promotion) : null,
+            promotion: null != e.promotion ? s.A.createFromServer(e.promotion) : null,
         });
     }
     constructor(e) {
@@ -81,7 +80,7 @@ class u extends s.A {
     }
     isExpired() {
         let e = this.expiresAt;
-        return null != e && i()().isAfter(e);
+        return null != e && l()().isAfter(e);
     }
     get hasMultipleCopies() {
         return this.maxUses > 1;
@@ -99,10 +98,10 @@ class u extends s.A {
         return this.isSubscription ? (c.WN[this.skuId] ?? null) : null;
     }
     get isSelfRedeemable() {
-        return !(0, a.Lt)(this.flags, d.NOT_SELF_REDEEMABLE);
+        return !(0, r.Lt)(this.flags, d.NOT_SELF_REDEEMABLE);
     }
     get isExistingPremiumSubscriptionDisallowed() {
-        return (0, a.Lt)(this.flags, d.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+        return (0, r.Lt)(this.flags, d.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
     }
     get analyticsData() {
         return { gift_code: this.code, gift_code_max_uses: this.maxUses };

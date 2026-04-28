@@ -1,30 +1,29 @@
-"use strict";
-r.d(t, { c: () => c });
-var n = r(64700),
-    i = r(17928),
-    a = r(354670),
-    s = r(597758),
-    l = r(374200),
-    o = r(852218);
+a.d(t, { c: () => c });
+var n = a(64700),
+    l = a(17928),
+    r = a(354670),
+    i = a(597758),
+    s = a(374200),
+    o = a(852218);
 function c(e) {
     n.useEffect(() => {
-        (0, s.BE)();
+        (0, i.BE)();
     }, []);
-    let t = (0, i.bG)([l.A, a.A], () => {
-            let t = l.A.getMarketingComponentByType(e);
+    let t = (0, l.bG)([s.A, r.A], () => {
+            let t = s.A.getMarketingComponentByType(e);
             if (null == t) return null;
-            let r = t.promotionId,
-                n = l.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, r);
+            let a = t.promotionId,
+                n = s.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, a);
             if (n?.trialId != null) {
-                let e = a.A.getUserTrialOffer(n.trialId);
+                let e = r.A.getUserTrialOffer(n.trialId);
                 if (null == e || (null != e.expires_at && Date.parse(e.expires_at) < Date.now())) return null;
             }
             return t;
         }),
-        r = (0, i.bG)([l.A], () => l.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, t?.promotionId ?? "")),
-        c = r?.endDate,
+        a = (0, l.bG)([s.A], () => s.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, t?.promotionId ?? "")),
+        c = a?.endDate,
         [d, u] = n.useState(!1),
-        _ = n.useRef(null);
+        h = n.useRef(null);
     return (
         n.useEffect(() => {
             if (null != c) {
@@ -32,17 +31,17 @@ function c(e) {
                 return (
                     e > 0 && e < 864e5
                         ? (u(!1),
-                          clearTimeout(_.current),
-                          (_.current = setTimeout(() => {
+                          clearTimeout(h.current),
+                          (h.current = setTimeout(() => {
                               u(!0);
                           }, e)))
                         : e <= 0 && u(!0),
                     () => {
-                        clearTimeout(_.current);
+                        clearTimeout(h.current);
                     }
                 );
             }
-            u(!1), clearTimeout(_.current);
+            u(!1), clearTimeout(h.current);
         }, [c]),
         d ? null : t
     );

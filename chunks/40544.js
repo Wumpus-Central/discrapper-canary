@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Rf: "tooltipBodyContainer__7d7fe",
     V8: "tooltipPremiumFooterContainer__7d7fe",

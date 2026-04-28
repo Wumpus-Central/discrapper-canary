@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { EN: () => r, Ou: () => o, d5: () => a });
-var l = n(136722),
-    i = n(233993),
-    s = n(652215);
-let a = s.xBc.VIEW_CHANNEL,
-    r = l.kg(a, s.xBc.CONNECT),
-    o = l.kg(a, i.QY);
+a.d(t, { EN: () => s, Ou: () => o, d5: () => i });
+var n = a(136722),
+    l = a(233993),
+    r = a(652215);
+let i = r.xBc.VIEW_CHANNEL,
+    s = n.kg(i, r.xBc.CONNECT),
+    o = n.kg(i, l.QY);

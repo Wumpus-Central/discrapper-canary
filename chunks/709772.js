@@ -1,21 +1,20 @@
-"use strict";
-r.d(t, { a: () => l });
-var n = r(627968);
-r(64700);
-var i = r(342393),
-    a = r(71532),
-    s = r(714126);
-let l = (e) => {
-    let { errorLabel: t, children: r, elementOptions: l } = e,
+a.d(t, { a: () => s });
+var n = a(627968);
+a(64700);
+var l = a(342393),
+    r = a(71532),
+    i = a(714126);
+let s = (e) => {
+    let { errorLabel: t, children: a, elementOptions: s } = e,
         o = Date.now();
     return (0, n.jsx)(
-        s.W,
+        i.W,
         {
             label: t,
-            children: (0, n.jsx)(i.Elements, {
-                stripe: (0, a.Cv)(),
-                options: { mode: "setup", currency: "usd", setup_future_usage: "off_session", ...l },
-                children: r,
+            children: (0, n.jsx)(l.Elements, {
+                stripe: (0, r.Cv)(),
+                options: { mode: "setup", currency: "usd", setup_future_usage: "off_session", ...s },
+                children: a,
             }),
         },
         o,

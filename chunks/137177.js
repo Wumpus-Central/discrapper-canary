@@ -1,185 +1,184 @@
-"use strict";
-r.d(t, { A: () => y, M: () => v });
-var n = r(627968),
-    i = r(64700),
-    a = r(503698),
-    s = r.n(a),
-    l = r(172218),
-    o = r(109112),
-    c = r(635377),
-    d = r.n(c),
-    u = r(306044);
-let _ = new (d())({ max: 1e3 });
-var p = r(997013),
-    f = r(548118),
-    m = r(776231),
-    h = r(395671),
-    g = r(486020),
-    b = r(788868),
-    A = r(985018),
-    E = r(444282);
-let v = { XXSMALL: E.W6, XSMALL: E.s, SMALL: E.EX, MEDIUM: E.Y, MEDIUM_LARGE: E.rZ, LARGE: E.as, XLARGE: E.AQ },
-    y = i.forwardRef(function (e, t) {
-        let a,
+a.d(t, { A: () => E, M: () => A });
+var n = a(627968),
+    l = a(64700),
+    r = a(503698),
+    i = a.n(r),
+    s = a(172218),
+    o = a(109112),
+    c = a(635377),
+    d = a.n(c),
+    u = a(306044);
+let h = new (d())({ max: 1e3 });
+var p = a(997013),
+    m = a(548118),
+    f = a(776231),
+    _ = a(395671),
+    b = a(486020),
+    g = a(788868),
+    x = a(985018),
+    v = a(444282);
+let A = { XXSMALL: v.W6, XSMALL: v.s, SMALL: v.EX, MEDIUM: v.Y, MEDIUM_LARGE: v.rZ, LARGE: v.as, XLARGE: v.AQ },
+    E = l.forwardRef(function (e, t) {
+        let r,
             {
                 game: c,
                 guild: d,
-                skuId: y,
-                pid: I,
-                className: S,
-                guildClassName: x,
-                size: T = v.MEDIUM,
+                skuId: E,
+                pid: y,
+                className: I,
+                guildClassName: S,
+                size: j = A.MEDIUM,
                 allowUnknownGameIcon: C = !0,
-                unknownGameIconFallback: R,
+                unknownGameIconFallback: T,
             } = e,
-            [N, L] = i.useState(null),
-            [w, P] = i.useState(!1),
-            O = i.useCallback((e) => {
-                P(e);
+            [w, R] = l.useState(null),
+            [N, k] = l.useState(!1),
+            L = l.useCallback((e) => {
+                k(e);
             }, []),
-            D = i.useRef(null);
-        i.useEffect(() => {
-            null != D.current && w && (cancelIdleCallback(D.current), (D.current = null));
-        }, [w]);
-        let M = (0, l.K)(O);
+            O = l.useRef(null);
+        l.useEffect(() => {
+            null != O.current && N && (cancelIdleCallback(O.current), (O.current = null));
+        }, [N]);
+        let M = (0, s.K)(L);
         if (
-            (null != y &&
-                (a = (function (e) {
+            (null != E &&
+                (r = (function (e) {
                     if (null == e) return null;
                     switch (e) {
-                        case b.pe.GUILD:
-                            return r(664419);
-                        case b.pe.TIER_0:
-                            return r(31427);
-                        case b.pe.TIER_1:
-                            return r(831180);
-                        case b.pe.TIER_2:
-                        case b.pe.LEGACY:
-                            return r(29873);
+                        case g.pe.GUILD:
+                            return a(664419);
+                        case g.pe.TIER_0:
+                            return a(31427);
+                        case g.pe.TIER_1:
+                            return a(831180);
+                        case g.pe.TIER_2:
+                        case g.pe.LEGACY:
+                            return a(29873);
                         default:
                             return null;
                     }
-                })(y)),
+                })(E)),
             null != c &&
-                null == a &&
-                (c instanceof h.Ay
-                    ? (a = c.getIconURL(
+                null == r &&
+                (c instanceof _.Ay
+                    ? (r = c.getIconURL(
                           (function (e) {
                               switch (e) {
-                                  case v.XXSMALL:
+                                  case A.XXSMALL:
                                       return 16;
-                                  case v.XSMALL:
+                                  case A.XSMALL:
                                       return 24;
-                                  case v.SMALL:
+                                  case A.SMALL:
                                       return 30;
-                                  case v.MEDIUM:
+                                  case A.MEDIUM:
                                       return 40;
-                                  case v.MEDIUM_LARGE:
+                                  case A.MEDIUM_LARGE:
                                       return 48;
-                                  case v.LARGE:
+                                  case A.LARGE:
                                       return 60;
                                   default:
                                       return 80;
                               }
-                          })(T),
+                          })(j),
                       ))
                     : c instanceof p.A
-                      ? (a = g.Ay.getApplicationIconURL({ id: c.id, icon: c.iconHash }))
-                      : null != c.icon && (a = g.Ay.getApplicationIconURL({ id: c.id, icon: c.icon }))),
-            (a = (function (e, t) {
-                let [r, n] = i.useState();
+                      ? (r = b.Ay.getApplicationIconURL({ id: c.id, icon: c.iconHash }))
+                      : null != c.icon && (r = b.Ay.getApplicationIconURL({ id: c.id, icon: c.icon }))),
+            (r = (function (e, t) {
+                let [a, n] = l.useState();
                 return (
-                    i.useEffect(() => {
+                    l.useEffect(() => {
                         if (null == e || null != t) return void n(void 0);
-                        let r = _.get(e);
-                        if (null != r) return void n(r);
-                        let i = !1;
+                        let a = h.get(e);
+                        if (null != a) return void n(a);
+                        let l = !1;
                         return (
                             (0, u.A)()
                                 .then((t) => {
                                     null == t ||
-                                        i ||
-                                        t.identifyGame(e, (t, r) => {
-                                            if (i) return;
+                                        l ||
+                                        t.identifyGame(e, (t, a) => {
+                                            if (l) return;
                                             if (
                                                 0 !== t ||
-                                                null == r.icon ||
-                                                "" === r.icon ||
-                                                null == r.name ||
-                                                "" === r.name
+                                                null == a.icon ||
+                                                "" === a.icon ||
+                                                null == a.name ||
+                                                "" === a.name
                                             )
                                                 return void n(void 0);
-                                            let a = `data:image/png;base64,${r.icon}`;
-                                            _.set(e, a), n(a);
+                                            let r = `data:image/png;base64,${a.icon}`;
+                                            h.set(e, r), n(r);
                                         });
                                 })
                                 .catch(() => {
-                                    i || n(void 0);
+                                    l || n(void 0);
                                 }),
                             () => {
-                                i = !0;
+                                l = !0;
                             }
                         );
                     }, [e, t]),
-                    t ?? r
+                    t ?? a
                 );
-            })(I, a)),
-            i.useEffect(() => {
-                if (null == a || "" === a) return;
-                if ((0, g.V0)(a) || (0, m.LE)(a)) return void L(a);
+            })(y, r)),
+            l.useEffect(() => {
+                if (null == r || "" === r) return;
+                if ((0, b.V0)(r) || (0, f.LE)(r)) return void R(r);
                 let e = () =>
-                    (0, m.yt)(a, (e, t) => {
-                        L(a);
+                    (0, f.yt)(r, (e, t) => {
+                        R(r);
                     });
-                if (w) return e();
+                if (N) return e();
                 let t = requestIdleCallback(() => {
-                    (D.current = null), e();
+                    (O.current = null), e();
                 });
                 return (
-                    (D.current = t),
+                    (O.current = t),
                     () => {
-                        null != D.current && (cancelIdleCallback(D.current), (D.current = null));
+                        null != O.current && (cancelIdleCallback(O.current), (O.current = null));
                     }
                 );
-            }, [a, w]),
-            void 0 === a && null != d)
+            }, [r, N]),
+            void 0 === r && null != d)
         ) {
             let e = (function (e) {
                 switch (e) {
-                    case v.XSMALL:
-                        return f.Ay.Sizes.SMALLER;
-                    case v.SMALL:
-                        return f.Ay.Sizes.SMALL;
-                    case v.LARGE:
-                        return f.Ay.Sizes.LARGE;
+                    case A.XSMALL:
+                        return m.Ay.Sizes.SMALLER;
+                    case A.SMALL:
+                        return m.Ay.Sizes.SMALL;
+                    case A.LARGE:
+                        return m.Ay.Sizes.LARGE;
                     default:
-                    case v.MEDIUM:
-                        return f.Ay.Sizes.MEDIUM;
+                    case A.MEDIUM:
+                        return m.Ay.Sizes.MEDIUM;
                 }
-            })(T);
-            return (0, n.jsx)(f.Ay, { className: s()(E.Gt, x, S), guild: d, size: e });
+            })(j);
+            return (0, n.jsx)(m.Ay, { className: i()(v.Gt, S, I), guild: d, size: e });
         }
-        if (null == a || "" === a)
-            return C ? (R ?? (0, n.jsx)(o._, { size: "md", color: "currentColor", className: s()(E.Gt, T, S) })) : null;
-        let k = c?.name,
-            j =
-                null != k && "" !== k
-                    ? A.intl.formatToPlainString(A.t.tiKyYg, { applicationName: k })
-                    : A.intl.string(A.t["2B/phM"]),
-            U = (0, g.V0)(a),
-            F = (0, m.LE)(a),
-            B = N === a || U || F;
+        if (null == r || "" === r)
+            return C ? (T ?? (0, n.jsx)(o._, { size: "md", color: "currentColor", className: i()(v.Gt, j, I) })) : null;
+        let P = c?.name,
+            D =
+                null != P && "" !== P
+                    ? x.intl.formatToPlainString(x.t.tiKyYg, { applicationName: P })
+                    : x.intl.string(x.t["2B/phM"]),
+            U = (0, b.V0)(r),
+            V = (0, f.LE)(r),
+            F = w === r || U || V;
         return (0, n.jsxs)(n.Fragment, {
             children: [
-                B ? null : (0, n.jsx)("div", { className: s()(E.qD, T, S) }),
+                F ? null : (0, n.jsx)("div", { className: i()(v.qD, j, I) }),
                 (0, n.jsx)("img", {
                     ref: t,
-                    alt: j,
-                    src: a,
-                    className: s()(E.Gt, T, S),
-                    style: B ? void 0 : { display: "none" },
+                    alt: D,
+                    src: r,
+                    className: i()(v.Gt, j, I),
+                    style: F ? void 0 : { display: "none" },
                 }),
-                (0, n.jsx)("div", { className: E.Xc, children: (0, n.jsx)("div", { ref: M, className: E.Pr }) }),
+                (0, n.jsx)("div", { className: v.Xc, children: (0, n.jsx)("div", { ref: M, className: v.Pr }) }),
             ],
         });
     });

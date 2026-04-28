@@ -1,24 +1,23 @@
-"use strict";
-r.d(t, { Ym: () => s, f5: () => l, yW: () => o }), r(321073);
-var n = r(64700),
-    i = r(575593),
-    a = r(985018);
-class s {
+a.d(t, { Ym: () => i, f5: () => s, yW: () => o }), a(321073);
+var n = a(64700),
+    l = a(575593),
+    r = a(985018);
+class i {
     itemsByTypes;
     constructor(e) {
         this.itemsByTypes = this.sortByTypes(e);
     }
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(i.R.AVATAR_DECORATION);
+        return this.getFirstItemByType(l.R.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(i.R.PROFILE_EFFECT);
+        return this.getFirstItemByType(l.R.PROFILE_EFFECT);
     }
     get firstNameplate() {
-        return this.getFirstItemByType(i.R.NAMEPLATE);
+        return this.getFirstItemByType(l.R.NAMEPLATE);
     }
     get firstProfileFrame() {
-        return this.getFirstItemByType(i.R.PROFILE_FRAME);
+        return this.getFirstItemByType(l.R.PROFILE_FRAME);
     }
     getFirstItemByType(e) {
         let t = (this.itemsByTypes.get(e) ?? [])[0];
@@ -26,14 +25,14 @@ class s {
     }
     sortByTypes(e) {
         return e.reduce((e, t) => {
-            let r = e.get(t.type);
-            return null != r ? r.push(t) : e.set(t.type, [t]), e;
+            let a = e.get(t.type);
+            return null != a ? a.push(t) : e.set(t.type, [t]), e;
         }, new Map());
     }
 }
-let l = (e) =>
+let s = (e) =>
         n.useMemo(() => {
-            let t = new s(e.items);
+            let t = new i(e.items);
             return {
                 firstProfileEffect: t.firstProfileEffect,
                 firstAvatarDecoration: t.firstAvatarDecoration,
@@ -42,14 +41,14 @@ let l = (e) =>
             };
         }, [e]),
     o = (e) => {
-        let t = a.intl.string(a.t["7v0T9P"]),
-            r = a.intl.string(a.t.wR5wOo),
-            n = a.intl.string(a.t.x5CoXR);
+        let t = r.intl.string(r.t["7v0T9P"]),
+            a = r.intl.string(r.t.wR5wOo),
+            n = r.intl.string(r.t.x5CoXR);
         return (
             null != e.bundledProducts &&
                 (e.bundledProducts.length > 0 && (t = e.bundledProducts[0]?.name),
-                e.bundledProducts.length > 1 && (r = e.bundledProducts[1]?.name),
+                e.bundledProducts.length > 1 && (a = e.bundledProducts[1]?.name),
                 e.bundledProducts.length > 2 && (n = e.bundledProducts[2]?.name)),
-            { itemOneName: t, itemTwoName: r, itemThreeName: n }
+            { itemOneName: t, itemTwoName: a, itemThreeName: n }
         );
     };

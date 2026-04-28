@@ -1,4 +1,4 @@
-n.d(t, { x: () => M });
+n.d(t, { x: () => m });
 var i = n(132500),
     r = n(192308),
     a = n(228366),
@@ -20,26 +20,26 @@ var i = n(132500),
     p = n(71393),
     R = n(834942),
     g = n(576705),
-    h = n(977997),
-    m = n(147036);
-let M = function (e, t) {
-    let M = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    M = n(977997),
+    h = n(147036);
+let m = function (e, t) {
+    let m = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         L = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         { lockVoiceStateForResume: D = !1, bypassIdleUpdate: y = !1 } =
             arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         f = I.A.getChannel(e),
-        U = h.A.getCurrentClientVoiceChannelId(t ?? null) === e,
+        U = M.A.getCurrentClientVoiceChannelId(t ?? null) === e,
         P = null != f ? R.A.getCheck(f.guild_id) : null;
     if (!(null != t && (0, s.V)(t)) && (null == P || P.canChat || (0, E.pC)(f))) {
         if (null != f && !U) {
-            let e = (0, m.Pd)(f, h.A, p.A);
+            let e = (0, h.Pd)(f, M.A, p.A);
             if (e && f.isGuildStageVoice() && (0, _.xn)(f.id))
                 return void (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         n.e("24199"),
-                        n.e("58710"),
+                        n.e("21909"),
                         n.e("45723"),
-                        n.e("68551"),
+                        n.e("8546"),
                     ]).then(n.bind(n, 717523));
                     return (t) => e({ channel: f, ...t });
                 });
@@ -50,7 +50,7 @@ let M = function (e, t) {
                 });
             if (!(0, l.A)(f, g.A)) return;
         }
-        M && (0, o.PX)(),
+        m && (0, o.PX)(),
             (function (e, t, n) {
                 let i = S.A.getVoiceChannelId(),
                     r = I.A.getChannel(i);
@@ -94,7 +94,7 @@ let M = function (e, t) {
                         guildId: t,
                         channelId: e,
                         currentVoiceChannelId: S.A.getVoiceChannelId(),
-                        video: M,
+                        video: m,
                         stream: L,
                         lockVoiceStateForResume: D,
                         joinVoiceId: n,
@@ -102,7 +102,7 @@ let M = function (e, t) {
                     });
                 },
                 e,
-                M,
+                m,
             );
     }
 };

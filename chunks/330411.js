@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nz: "chipletContainerInner__10651",
     sM: "messageChipletContainerInner__10651",

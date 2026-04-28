@@ -1,45 +1,44 @@
-"use strict";
-r.d(t, { A: () => d });
-var n = r(627968);
-r(64700);
-var i = r(97808),
-    a = r(778712),
-    s = r(854627),
-    l = r(19575),
-    o = r(985018);
-let c = l.Ay.getEnableHardwareAcceleration() ? i.Js : i.eu,
+a.d(t, { A: () => d });
+var n = a(627968);
+a(64700);
+var l = a(97808),
+    r = a(778712),
+    i = a(854627),
+    s = a(19575),
+    o = a(985018);
+let c = s.Ay.getEnableHardwareAcceleration() ? l.Js : l.eu,
     d = (e) => {
         let {
                 user: t,
-                guildId: r,
-                avatarDecorationOverride: i,
-                status: l,
-                avatarSize: d = a._3.SIZE_120,
+                guildId: a,
+                avatarDecorationOverride: l,
+                status: s,
+                avatarSize: d = r._3.SIZE_120,
                 "aria-hidden": u = !1,
-                className: _,
+                className: h,
                 animateOnHover: p = !1,
-                questPreviewRewardAssetUrl: f = null,
+                questPreviewRewardAssetUrl: m = null,
             } = e,
             {
-                avatarDecorationSrc: m,
-                avatarSrc: h,
-                eventHandlers: g,
-            } = (0, s.A)({
+                avatarDecorationSrc: f,
+                avatarSrc: _,
+                eventHandlers: b,
+            } = (0, i.A)({
                 userId: t.id,
-                guildId: r,
+                guildId: a,
                 size: d,
                 showPending: !0,
-                avatarDecorationOverride: i,
+                avatarDecorationOverride: l,
                 animateOnHover: p,
             });
         return (0, n.jsx)(c, {
-            avatarDecoration: m ?? f,
-            src: h,
+            avatarDecoration: f ?? m,
+            src: _,
             size: d,
-            status: l,
+            status: s,
             "aria-label": u ? void 0 : o.intl.string(o.t.lqaIxI),
             "aria-hidden": u,
-            className: _,
-            ...g,
+            className: h,
+            ...b,
         });
     };

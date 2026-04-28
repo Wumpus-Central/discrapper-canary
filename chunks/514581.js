@@ -33,7 +33,7 @@ function I(e) {
                 let { channelId: t, blockedUserIds: i, ignoredUserIds: r } = e;
                 (0, d.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("83792"), n.e("47000")]).then(n.bind(n, 876717));
+                        let { default: e } = await n.e("24958").then(n.bind(n, 876717));
                         return (n) => {
                             let { transitionState: s, onClose: a } = n;
                             return (0, _.jsx)(e, {
@@ -84,7 +84,7 @@ class N extends i.A {
                 ((e = a.A.isBlocked(t)),
                 (0, d.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("83792"), n.e("49222")]).then(n.bind(n, 552258));
+                        let { default: e } = await n.e("39679").then(n.bind(n, 552258));
                         return (n) => {
                             let { transitionState: r, onClose: s } = n;
                             return (0, _.jsx)(e, { channelId: i, userId: t, transitionState: r, onClose: s });
