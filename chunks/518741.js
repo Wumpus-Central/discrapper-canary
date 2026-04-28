@@ -1,26 +1,26 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => P });
 var r = n(64700),
     i = n(681154),
-    l = n(17928),
+    s = n(17928),
     a = n(941726),
-    s = n(99753);
+    l = n(99753);
 n(321073);
-var u = n(136722),
-    o = n(52133),
-    d = n(734057),
-    c = n(860071),
-    p = n(696451),
-    A = n(488926),
-    f = n(818348);
-let m = [],
-    I = new Set();
-var y = n(99066),
-    h = n(435738),
-    g = n(583846);
-let E = new Set();
-var _ = n(808323),
-    v = n(424994);
-let S = new Set([
+var o = n(136722),
+    u = n(52133),
+    c = n(734057),
+    E = n(860071),
+    d = n(696451),
+    I = n(488926),
+    A = n(818348);
+let p = 21552 == n.j ? [] : null,
+    _ = new Set();
+var C = n(99066),
+    T = n(435738),
+    f = n(583846);
+let h = new Set();
+var y = n(808323),
+    S = n(424994);
+let O = new Set([
     i.ContentInventoryEntryType.PLAYED_GAME,
     i.ContentInventoryEntryType.WATCHED_MEDIA,
     i.ContentInventoryEntryType.TOP_GAME,
@@ -28,59 +28,59 @@ let S = new Set([
     i.ContentInventoryEntryType.LISTENED_SESSION,
     i.ContentInventoryEntryType.LAUNCHED_ACTIVITY,
 ]);
-function T(e) {
+function P(e) {
     var t;
     let n,
-        i = (0, _.A)({ id: v.X1.GLOBAL_FEED });
+        i = (0, y.A)({ id: S.X1.GLOBAL_FEED });
     i = (function (e) {
         let { entries: t, channelId: n } = e,
-            i = (0, l.bG)([d.A], () => d.A.getChannel(n)),
+            i = (0, s.bG)([c.A], () => c.A.getChannel(n)),
             a = i?.guild_id,
-            s = r.useRef(new Set()),
-            y = r.useMemo(() => {
+            l = r.useRef(new Set()),
+            C = r.useMemo(() => {
                 let e = new Set(t?.map((e) => e.author_id));
-                return (0, o.v)([...s.current], [...e]) || (s.current = e), s.current;
+                return (0, u.v)([...l.current], [...e]) || (l.current = e), l.current;
             }, [t]);
         r.useEffect(() => {
             null != a &&
-                Array.from(y).forEach((e) => {
-                    c.A.requestMember(a, e);
+                Array.from(C).forEach((e) => {
+                    E.A.requestMember(a, e);
                 });
-        }, [y, a]);
-        let h = (0, l.yK)([p.Ay], () => {
-                if (null == a) return m;
+        }, [C, a]);
+        let T = (0, s.yK)([d.Ay], () => {
+                if (null == a) return p;
                 let e = [];
-                for (let t of y) p.Ay.isMember(a, t) && e.push(t);
+                for (let t of C) d.Ay.isMember(a, t) && e.push(t);
                 return e;
-            }, [y, a]),
-            g = r.useMemo(() => {
-                if (null == i || 0 === h.length) return I;
+            }, [C, a]),
+            f = r.useMemo(() => {
+                if (null == i || 0 === T.length) return _;
                 let e = new Set();
-                for (let t of h) {
-                    let n = A.cc({ user: t, context: i });
-                    u.zy(n, f.xB.VIEW_CHANNEL) && e.add(t);
+                for (let t of T) {
+                    let n = I.cc({ user: t, context: i });
+                    o.zy(n, A.xB.VIEW_CHANNEL) && e.add(t);
                 }
                 return e;
-            }, [h, i]);
-        return r.useMemo(() => t?.filter((e) => g.has(e.author_id)), [t, g]);
+            }, [T, i]);
+        return r.useMemo(() => t?.filter((e) => f.has(e.author_id)), [t, f]);
     })({ entries: i, channelId: e });
-    let { entries: T, filteredIds: b } =
-        ((t = i = r.useMemo(() => i?.filter((e) => S.has(e.content_type)), [i])),
-        (n = (0, l.bG)([h.A, s.A], () => {
-            let e = s.A.getDebugImpressionCappingDisabled();
-            return !(0, y.sE)("useFilterImpressionCappedContent") || e ? E : h.A.getImpressionCappedItemIds();
+    let { entries: P, filteredIds: g } =
+        ((t = i = r.useMemo(() => i?.filter((e) => O.has(e.content_type)), [i])),
+        (n = (0, s.bG)([T.A, l.A], () => {
+            let e = l.A.getDebugImpressionCappingDisabled();
+            return !(0, C.sE)("useFilterImpressionCappedContent") || e ? h : T.A.getImpressionCappedItemIds();
         }, [t])),
         r.useMemo(() => {
-            if (null == t) return { entries: t, filteredIds: E };
+            if (null == t) return { entries: t, filteredIds: h };
             let e = new Set();
-            return { entries: t.filter((t) => !!(0, g.JM)(t) || !n.has(t.id) || (e.add(t.id), !1)), filteredIds: e };
+            return { entries: t.filter((t) => !!(0, f.JM)(t) || !n.has(t.id) || (e.add(t.id), !1)), filteredIds: e };
         }, [t, n]));
     return (
-        (i = T),
+        (i = P),
         {
-            requestId: (0, l.bG)([s.A], () => s.A.getFeedRequestId(v.X1.GLOBAL_FEED)),
+            requestId: (0, s.bG)([l.A], () => l.A.getFeedRequestId(S.X1.GLOBAL_FEED)),
             entries: (i = (0, a.Ay)(i)),
-            impressionCappedEntryIds: b,
+            impressionCappedEntryIds: g,
         }
     );
 }

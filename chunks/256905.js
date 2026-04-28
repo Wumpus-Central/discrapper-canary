@@ -1,54 +1,55 @@
-a.d(t, { K: () => s, R: () => o });
-var n = a(627968),
-    l = a(192308),
-    r = a(892491),
-    i = a(700331);
+"use strict";
+n.d(t, { K: () => s, R: () => o });
+var r = n(627968),
+    a = n(192308),
+    i = n(892491),
+    l = n(700331);
 let s = "Media Viewer Modal";
 function o(e, t) {
     let { location: o, contextKey: c, onClose: d, ...u } = e,
-        h = u.items[u.startingIndex ?? 0]?.sourceMetadata?.message;
-    i.l.markSessionStarted({
-        channelId: h?.channel_id,
+        _ = u.items[u.startingIndex ?? 0]?.sourceMetadata?.message;
+    l.l.markSessionStarted({
+        channelId: _?.channel_id,
         numMediaItems: u.items.length,
         source: o,
         hasMediaOptions: !u.shouldHideMediaOptions,
     }),
-        (0, l.openModalLazy)(
+        (0, a.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    a.e("24199"),
-                    a.e("57036"),
-                    a.e("88394"),
-                    a.e("80527"),
-                    a.e("21909"),
-                    a.e("31825"),
-                    a.e("23353"),
-                    a.e("96123"),
-                    a.e("7175"),
-                    a.e("37249"),
-                    a.e("14138"),
-                    a.e("8971"),
-                    a.e("88017"),
-                    a.e("77404"),
-                    a.e("1040"),
-                    a.e("64615"),
-                    a.e("17239"),
-                    a.e("67849"),
-                    a.e("64492"),
-                    a.e("20861"),
-                    a.e("36682"),
-                    a.e("45723"),
-                    a.e("56871"),
-                    a.e("69601"),
-                    a.e("63191"),
-                    a.e("51444"),
-                    a.e("62290"),
-                    a.e("80973"),
-                    a.e("20382"),
-                    a.e("88038"),
-                ]).then(a.bind(a, 315790));
+                    n.e("24199"),
+                    n.e("57036"),
+                    n.e("88394"),
+                    n.e("80527"),
+                    n.e("21909"),
+                    n.e("31825"),
+                    n.e("23353"),
+                    n.e("96123"),
+                    n.e("7175"),
+                    n.e("37249"),
+                    n.e("14138"),
+                    n.e("8971"),
+                    n.e("88017"),
+                    n.e("77404"),
+                    n.e("1040"),
+                    n.e("64615"),
+                    n.e("17239"),
+                    n.e("67849"),
+                    n.e("64492"),
+                    n.e("20861"),
+                    n.e("36682"),
+                    n.e("45723"),
+                    n.e("56871"),
+                    n.e("69601"),
+                    n.e("63191"),
+                    n.e("51444"),
+                    n.e("62290"),
+                    n.e("80973"),
+                    n.e("20382"),
+                    n.e("88038"),
+                ]).then(n.bind(n, 315790));
                 return function (t) {
-                    return (0, n.jsx)(e, {
+                    return (0, r.jsx)(e, {
                         ...t,
                         ...u,
                         onClose: () => {
@@ -60,8 +61,8 @@ function o(e, t) {
             {
                 modalKey: s,
                 contextKey: c,
-                onCloseCallback: i.l.markSessionCompleted,
-                backdropStyle: r.F.LIGHTBOX,
+                onCloseCallback: l.l.markSessionCompleted,
+                backdropStyle: i.F.LIGHTBOX,
                 stackingBehavior: t,
             },
         );

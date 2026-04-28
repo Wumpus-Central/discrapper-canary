@@ -1,8 +1,8 @@
 n.d(t, { A: () => m });
 var i = n(636537),
     r = n(765178),
-    l = n(228366),
-    a = n(315982),
+    a = n(228366),
+    l = n(315982),
     s = n(395484),
     o = n(700241),
     d = n(381689),
@@ -18,9 +18,9 @@ var i = n(636537),
 function I(e) {
     (0, p.Z_)(), _.A.show(e);
 }
-function T(e, t, n) {
+function S(e, t, n) {
     let { status: i, body: r } = e,
-        l = r && r.code;
+        a = r && r.code;
     switch (i) {
         case 429:
             0 === t &&
@@ -31,48 +31,48 @@ function T(e, t, n) {
                 });
             break;
         case 403:
-            if (l === A.t02.EMAIL_VERIFICATION_REQUIRED) {
+            if (a === A.t02.EMAIL_VERIFICATION_REQUIRED) {
                 I({
                     title: g.intl.string(g.t.Gqf33E),
                     body: g.intl.string(g.t.GHOBdx),
                     confirmText: g.intl.string(g.t.HbTSE6),
                     onConfirm: () => {
-                        a.R();
+                        l.R();
                     },
                 });
                 break;
             }
         default:
-            if (l === A.t02.USER_QUARANTINED) (0, p.Z_)(), (0, o.default)();
-            else if ((0, u.O)(i, l)) break;
-            else if (l === A.t02.RELATIONSHIP_INVALID_NO_CONFIRMATION) break;
+            if (a === A.t02.USER_QUARANTINED) (0, p.Z_)(), (0, o.default)();
+            else if ((0, u.O)(i, a)) break;
+            else if (a === A.t02.RELATIONSHIP_INVALID_NO_CONFIRMATION) break;
             else if (0 === t) {
-                let e = null != n ? (0, h.vU)(l || 0, n) : g.intl.string(g.t.paDJBM);
+                let e = null != n ? (0, h.vU)(a || 0, n) : g.intl.string(g.t.paDJBM);
                 I({ title: g.intl.string(g.t["6moJ8s"]), body: e, confirmText: g.intl.string(g.t.BddRzS) });
             }
     }
     throw e;
 }
-let S = {
+let T = {
         sendRequest(e) {
-            let { discordTag: t, context: n, captchaPayload: r, errorUxConfig: l = 0 } = e,
-                [a, s] = t.split("#");
+            let { discordTag: t, context: n, captchaPayload: r, note: a, errorUxConfig: l = 0 } = e,
+                [s, o] = t.split("#");
             return i.Bo.post({
                 url: A.Rsh.USER_RELATIONSHIPS(),
-                body: { username: a, discriminator: parseInt(s), ...r },
+                body: { username: s, discriminator: parseInt(o), note: a, ...r },
                 context: n,
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).catch((e) => {
-                T(e, l, t);
+                S(e, l, t);
             });
         },
         addRelationship(e, t) {
             let {
                     userId: n,
                     context: r,
-                    type: l,
-                    fromFriendSuggestion: a,
+                    type: a,
+                    fromFriendSuggestion: l,
                     confirmStrangerRequest: s,
                     captchaPayload: o,
                 } = e,
@@ -80,7 +80,7 @@ let S = {
                 u = c.default.getUser(n);
             return i.Bo.put({
                 url: A.Rsh.USER_RELATIONSHIP(n),
-                body: { type: l, from_friend_suggestion: a, confirm_stranger_request: s, ...o },
+                body: { type: a, from_friend_suggestion: l, confirm_stranger_request: s, ...o },
                 context: r,
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -88,27 +88,27 @@ let S = {
                 .then(() => {
                     t?.();
                 })
-                .catch((e) => (T(e, d, E.Ay.getUserTag(u)), Promise.reject(e)));
+                .catch((e) => (S(e, d, E.Ay.getUserTag(u)), Promise.reject(e)));
         },
         acceptFriendRequest: (e) =>
-            S.addRelationship(e, function () {
+            T.addRelationship(e, function () {
                 r.O.announce(g.intl.string(g.t["3goNa5"]));
             }),
         cancelFriendRequest: (e, t) =>
-            S.removeRelationship(e, t, function () {
+            T.removeRelationship(e, t, function () {
                 r.O.announce(g.intl.string(g.t.pLUaxR));
             }),
         removeFriend(e, t) {
-            S.removeRelationship(e, t, function () {
+            T.removeRelationship(e, t, function () {
                 r.O.announce(g.intl.string(g.t.vGSLa2));
             });
         },
         blockUser: (e, t) =>
-            S.addRelationship({ userId: e, context: t, type: A.eA$.BLOCKED }, function () {
+            T.addRelationship({ userId: e, context: t, type: A.eA$.BLOCKED }, function () {
                 r.O.announce(g.intl.string(g.t.mU0Vrp));
             }),
         unblockUser: (e, t) =>
-            S.removeRelationship(e, t, function () {
+            T.removeRelationship(e, t, function () {
                 r.O.announce(g.intl.string(g.t["9t1au7"]));
             }),
         removeRelationship: (e, t, n) =>
@@ -123,8 +123,8 @@ let S = {
             i.Bo.patch({ url: A.Rsh.USER_RELATIONSHIP(e), body: { nickname: t }, rejectWithError: !1 }),
         fetchRelationships() {
             i.Bo.get({ url: A.Rsh.USER_RELATIONSHIPS(), oldFormErrors: !0, rejectWithError: !0 }).then(
-                (e) => l.h.dispatch({ type: "LOAD_RELATIONSHIPS_SUCCESS", relationships: e.body }),
-                () => l.h.dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }),
+                (e) => a.h.dispatch({ type: "LOAD_RELATIONSHIPS_SUCCESS", relationships: e.body }),
+                () => a.h.dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }),
             );
         },
         confirmClearPendingRelationships(e) {
@@ -137,7 +137,7 @@ let S = {
                 rejectWithError: !1,
             })
                 .then(() => {
-                    l.h.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
+                    a.h.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
                 })
                 .catch(() => {
                     r.O.announce(g.intl.string(g.t.n6Jo3E));
@@ -150,7 +150,7 @@ let S = {
                 rejectWithError: !1,
             })
                 .then(() => {
-                    l.h.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
+                    a.h.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
                 })
                 .catch(() => {
                     r.O.announce(g.intl.string(g.t.n6Jo3E));
@@ -160,7 +160,7 @@ let S = {
                 .then(() => {
                     d.A.showIgnoreSuccessToast(e, n),
                         r.O.announce(g.intl.string(g.t.Us93Ca)),
-                        l.h.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: e, timestamp: Date.now() });
+                        a.h.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: e, timestamp: Date.now() });
                 })
                 .catch(() => {
                     d.A.showFailedToast(), r.O.announce(g.intl.string(g.t.n6Jo3E));
@@ -174,4 +174,4 @@ let S = {
                     d.A.showFailedToast(), r.O.announce(g.intl.string(g.t.n6Jo3E));
                 }),
     },
-    m = S;
+    m = T;

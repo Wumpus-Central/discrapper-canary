@@ -3129,6 +3129,7 @@ t1(
                 isStrangerRequest: e.is_stranger_request || !1,
                 userIgnored: e.user_ignored || !1,
                 originApplicationId: e.origin_application_id,
+                note: e.note,
             },
             shouldNotify: !0 === e.should_notify,
         });
@@ -3149,6 +3150,7 @@ t1(
                 isStrangerRequest: e.is_stranger_request || !1,
                 userIgnored: e.user_ignored || !1,
                 originApplicationId: e.origin_application_id,
+                note: e.note,
             },
         });
     }),
