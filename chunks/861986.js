@@ -1,26 +1,27 @@
-n.d(t, { A: () => c, O: () => o });
-var a,
-    i = n(627968);
+"use strict";
+n.d(t, { A: () => o, O: () => c });
+var i,
+    a = n(627968);
 n(64700);
-var l = n(606049),
-    r = n(985018),
-    s = n(334211),
-    o = (((a = {})[(a.WITH_CONTENT = 0)] = "WITH_CONTENT"), (a[(a.AFTER_ACCESSORIES = 1)] = "AFTER_ACCESSORIES"), a);
-function c(e) {
-    let { message: t, compact: n, location: a } = e;
+var r = n(606049),
+    s = n(985018),
+    l = n(334211),
+    c = (((i = {})[(i.WITH_CONTENT = 0)] = "WITH_CONTENT"), (i[(i.AFTER_ACCESSORIES = 1)] = "AFTER_ACCESSORIES"), i);
+function o(e) {
+    let { message: t, compact: n, location: i } = e;
     return t.isEdited() && null != t.editedTimestamp
-        ? a !== (n || (null != t.content && 0 !== t.content.length) ? 0 : 1)
+        ? i !== (n || (null != t.content && 0 !== t.content.length) ? 0 : 1)
             ? null
-            : (0, i.jsxs)(i.Fragment, {
+            : (0, a.jsxs)(a.Fragment, {
                   children: [
                       " ",
-                      (0, i.jsx)(l.A, {
+                      (0, a.jsx)(r.A, {
                           timestamp: t.editedTimestamp,
                           isEdited: !0,
                           isInline: !1,
-                          children: (0, i.jsxs)("span", {
-                              className: s.oh,
-                              children: ["(", r.intl.string(r.t.C8sXIM), ")"],
+                          children: (0, a.jsxs)("span", {
+                              className: l.oh,
+                              children: ["(", s.intl.string(s.t.C8sXIM), ")"],
                           }),
                       }),
                   ],
