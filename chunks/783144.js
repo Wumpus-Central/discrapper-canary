@@ -704,9 +704,7 @@ function tB(e) {
                       icon: Z.S,
                       action: () =>
                           (0, eF.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([n.e("39241"), n.e("77067")]).then(
-                                  n.bind(n, 475152),
-                              );
+                              let { default: e } = await Promise.resolve().then(n.bind(n, 475152));
                               return (t) => (0, l.jsx)(e, { ...t, message: tq });
                           }),
                   }),
