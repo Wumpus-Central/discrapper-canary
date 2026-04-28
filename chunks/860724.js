@@ -13,7 +13,7 @@ let d = () => {
         l = (function () {
             let t = (0, i.vg)("StatefulCheckoutStoreRelocationNotice"),
                 { paymentSourceId: e } = (0, c.P5)(),
-                { paymentSourceRecords: l } = (0, s.Fy)(),
+                { checkoutPaymentSources: l } = (0, s.t6)(),
                 {
                     relocationCountry: o,
                     relocationCurrencyCode: u,

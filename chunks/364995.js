@@ -1,67 +1,60 @@
-n.d(t, { Fy: () => s, P7: () => l, aN: () => d });
-var r = n(64700),
-    a = n(228366),
-    i = n(826469),
-    o = n(94420);
-let l = () => {
-        let e = (0, o.t4)((e) => {
-            let { invoiceOrderContext: t } = e;
-            return t;
-        });
-        return r.useMemo(() => (null == e || null == e.store_country ? null : e.store_country.country), [e]);
-    },
-    s = () => {
-        let { invoiceOrderContext: e } = (0, o.t4)((e) => {
-                let { invoiceOrderContext: t } = e;
-                return { invoiceOrderContext: t };
-            }),
-            t = null != e;
-        return {
-            ...r.useMemo(
-                () =>
-                    null == e
-                        ? { paymentSourceRecords: [], allowedCurrencies: [] }
-                        : {
-                              paymentSourceRecords: e.payment_sources.map(i.A.createFromCheckoutContext),
-                              allowedCurrencies: e.allowed_currencies ?? [],
-                          },
-                [e],
-            ),
-            hasCheckoutContextForSession: t,
-        };
-    },
-    d = (e) => {
-        let t = r.useCallback(
-                (t) => {
-                    null != t.price &&
-                        null != t.price.checkout_context &&
-                        null != t.price.checkout_context.payment_sources &&
-                        null != t.checkoutSessionId &&
-                        e.setState({
-                            invoiceOrderContext: t.price.checkout_context,
-                            invoiceOrderCheckoutSessionId: t.checkoutSessionId,
-                        });
-                },
-                [e],
-            ),
-            n = r.useCallback(
-                (t) => {
+"use strict";
+n.d(t, { aN: () => o, t6: () => l });
+var i = n(64700),
+    r = n(228366),
+    s = n(826469),
+    a = n(94420);
+let o = (e) => {
+        let t = i.useCallback(
+            (t) => {
+                null != t.price &&
+                    null != t.price.checkout_context &&
+                    null != t.price.checkout_context.payment_sources &&
+                    null != t.checkoutSessionId &&
                     e.setState({
-                        invoiceOrderContext: t.checkoutContext,
-                        invoiceOrderPreviewPaymentSourceId: t.paymentSourceId ?? null,
+                        standaloneInvoiceOrderContext: t.price.checkout_context,
+                        standaloneInvoiceOrderCheckoutSessionId: t.checkoutSessionId,
                     });
-                },
-                [e],
-            );
-        r.useEffect(
+            },
+            [e],
+        );
+        i.useEffect(
             () => (
-                a.h.subscribe("SKU_PURCHASE_PREVIEW_FETCH_SUCCESS", t),
-                a.h.subscribe("SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE", n),
+                r.h.subscribe("SKU_PURCHASE_PREVIEW_FETCH_SUCCESS", t),
                 () => {
-                    a.h.unsubscribe("SKU_PURCHASE_PREVIEW_FETCH_SUCCESS", t),
-                        a.h.unsubscribe("SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE", n);
+                    r.h.unsubscribe("SKU_PURCHASE_PREVIEW_FETCH_SUCCESS", t);
                 }
             ),
-            [t, n],
+            [t],
         );
+    },
+    l = () => {
+        let e = (0, a.t4)((e) => {
+                let { checkoutInvoicePreview: t, standaloneInvoiceOrderContext: n } = e;
+                return null != t && null != t.checkoutContext ? t.checkoutContext : n;
+            }),
+            {
+                paymentSourceRecords: t,
+                allowedCurrencies: n,
+                storeCountry: r,
+            } = i.useMemo(
+                () =>
+                    ((e) => {
+                        if (null == e) return { paymentSourceRecords: [], allowedCurrencies: [], storeCountry: null };
+                        let t = null != e.store_country ? e.store_country.country : null;
+                        return {
+                            paymentSourceRecords: e.payment_sources.map(s.A.createFromCheckoutContext),
+                            allowedCurrencies: e.allowed_currencies ?? [],
+                            storeCountry: t,
+                        };
+                    })(e),
+                [e],
+            );
+        return {
+            checkoutPaymentSources: t,
+            allowedCurrencies: n,
+            storeCountry: r,
+            hasInvoiceOrderContextLoaded: null != e,
+            invoiceOrderContext: e,
+        };
     };
