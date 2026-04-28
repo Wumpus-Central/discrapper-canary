@@ -2063,8 +2063,11 @@ class eq extends eE {
             this.videoSupported &&
                 (this.addTransceivers("video", "recvonly", 1, this.input.getVideoStream()),
                 (this.videoTransceiver = n.getTransceivers()[1])),
-            this.addTransceivers("audio", "recvonly", 10),
-            this.videoSupported && this.addTransceivers("video", "recvonly", 10),
+            (e.experiments ?? []).includes("browser_transceiver_padding_removal") &&
+                this.setExperimentFlag(L.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL, !0),
+            !this.experimentFlags.has(L.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) &&
+                (this.addTransceivers("audio", "recvonly", 10),
+                this.videoSupported && this.addTransceivers("video", "recvonly", 10)),
             this.setStream(this.input.stream),
             this.logger.info(`Renegotiating: Initial negotiation, user id: ${e.userId}`),
             this.handleNegotiationNeeded(!0);
@@ -2105,8 +2108,9 @@ class eq extends eE {
         if ((null == r && (r = {}), r.audioSSRC !== t)) {
             (r.audioSSRC = t), (i = !0), this.unassignedStreams.audio.push({ cname: e, ssrc: t });
             let n = this.inactiveTransceivers.audio.length,
-                s = this.unassignedStreams.audio.length;
-            this.addTransceivers("audio", "recvonly", 10 + s - n);
+                s = this.unassignedStreams.audio.length,
+                a = 10 * !this.experimentFlags.has(L.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + s - n;
+            this.addTransceivers("audio", "recvonly", a);
         }
         if (this.videoSupported && void 0 !== n && (!e$ || void 0 === r.videoSSRC)) {
             let t = null != n && n.length > 0 ? n[0] : 0;
@@ -2114,8 +2118,9 @@ class eq extends eE {
                 if (r.videoSSRC !== t) {
                     (r.videoSSRC = t), (i = !0), this.unassignedStreams.video.push({ cname: e, ssrc: t });
                     let n = this.inactiveTransceivers.video.length,
-                        s = this.unassignedStreams.video.length;
-                    this.addTransceivers("video", "recvonly", 10 + s - n);
+                        s = this.unassignedStreams.video.length,
+                        a = 10 * !this.experimentFlags.has(L.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + s - n;
+                    this.addTransceivers("video", "recvonly", a);
                 }
             } else null != r.videoSSRC && ((r.videoSSRC = void 0), (i = !0));
         }
@@ -2985,8 +2990,8 @@ class e9 extends m.A {
         var i;
         let r,
             s,
-            { ssrc: a, address: o, port: l, modes: _, streamUserId: d, streamParameters: c } = n,
-            E =
+            { ssrc: a, address: o, port: l, modes: _, streamUserId: d, streamParameters: c, experiments: E } = n,
+            h =
                 ((i = {
                     context: e,
                     userId: t,
@@ -2994,24 +2999,25 @@ class e9 extends m.A {
                     streamParameters: c,
                     dave: this.dave,
                     transientKeys: this.transientKeys,
+                    experiments: E,
                 }),
                 (r = `${null != u().name && "" !== u().name ? u().name : "unknown"} ${null != u().version && "" !== u().version ? u().version : "unknown"}`),
                 (s = new I.Vy(`Connection(${i.context})`)),
                 eu.PF ? (s.info(`Using Unified Plan (${r})`), new eq(i)) : (s.info(`Using Plan B (${r})`), new eQ(i)));
         return (
-            (E.streamUserId = d),
-            E.setOutputVolume(this.outputVolume),
-            E.setSinkId(this.sinkId),
-            E.once(A.y.Destroy, (e) => this.connections.delete(e)),
-            E.on(A.y.Silence, (e) => this.emit(p.bg.Silence, e)),
-            E.on(A.y.DesktopSourceEnd, this.handleDesktopSourceEnd),
-            E.on(A.y.AudioPermission, this.handleAudioPermission),
-            E.on(A.y.VideoPermission, this.handleVideoPermission),
-            this.interacted && E.interact(),
-            e === L.x.DEFAULT && (E.setAudioSource(this.sourceId), this.enabled && E.input.enableAudioInput()),
-            this.connections.add(E),
-            this.emit(p.bg.Connection, E),
-            E
+            (h.streamUserId = d),
+            h.setOutputVolume(this.outputVolume),
+            h.setSinkId(this.sinkId),
+            h.once(A.y.Destroy, (e) => this.connections.delete(e)),
+            h.on(A.y.Silence, (e) => this.emit(p.bg.Silence, e)),
+            h.on(A.y.DesktopSourceEnd, this.handleDesktopSourceEnd),
+            h.on(A.y.AudioPermission, this.handleAudioPermission),
+            h.on(A.y.VideoPermission, this.handleVideoPermission),
+            this.interacted && h.interact(),
+            e === L.x.DEFAULT && (h.setAudioSource(this.sourceId), this.enabled && h.input.enableAudioInput()),
+            this.connections.add(h),
+            this.emit(p.bg.Connection, h),
+            h
         );
     }
     findConnection(e) {
