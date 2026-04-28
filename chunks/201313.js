@@ -474,15 +474,15 @@ function eQ() {
 var eJ = n(851109),
     e0 = n(567249),
     e1 = n(912592),
-    e2 = n(851580),
-    e3 = n(222823),
+    e3 = n(851580),
+    e2 = n(222823),
     e8 = n(371911),
     e5 = n(790782);
 function e4(e) {
     let { onOpen: t, onClose: n, "data-jump-section": a } = e,
         l = (0, s.bG)([et.default], () => et.default.getCurrentUser()),
         o = r.useRef(null),
-        d = (0, s.bG)([e3.Ay], () => l?.id != null && e3.Ay.getMentionCount(l.id, e5.P.NOTIFICATION_CENTER) > 0);
+        d = (0, s.bG)([e2.Ay], () => l?.id != null && e2.Ay.getMentionCount(l.id, e5.P.NOTIFICATION_CENTER) > 0);
     return (0, i.jsx)(e8.C, {
         targetElementRef: o,
         onOpen: t,
@@ -503,7 +503,7 @@ function e4(e) {
                         "data-jump-section": a,
                         ref: o,
                     }),
-                    (0, i.jsx)(e2.v, { location: "inbox-button", targetElementRef: o }),
+                    (0, i.jsx)(e3.v, { location: "inbox-button", targetElementRef: o }),
                 ],
             }),
     });
@@ -531,7 +531,7 @@ let td = (0, ts.Fe)({
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
-                n.e("61659"),
+                n.e("64903"),
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
@@ -833,7 +833,7 @@ let td = (0, ts.Fe)({
                 n.e("3256"),
                 n.e("19145"),
                 n.e("57546"),
-                n.e("61659"),
+                n.e("64903"),
                 n.e("4664"),
                 n.e("89317"),
                 n.e("56289"),
@@ -898,7 +898,7 @@ let td = (0, ts.Fe)({
                 n.e("93327"),
                 n.e("75681"),
                 n.e("15086"),
-                n.e("8161"),
+                n.e("44590"),
                 n.e("9176"),
                 n.e("87208"),
                 n.e("4015"),

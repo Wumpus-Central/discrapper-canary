@@ -11,89 +11,67 @@
 }
 
 .hljs-ansi-foreground-black {
-    color: var(--text-muted)
-}
-
-.hljs-ansi-foreground-black .hljs-ansi-background-black,
-.hljs-ansi-foreground-black .hljs-ansi-background-blue,
-.hljs-ansi-foreground-black .hljs-ansi-background-cyan,
-.hljs-ansi-foreground-black .hljs-ansi-background-green,
-.hljs-ansi-foreground-black .hljs-ansi-background-magenta,
-.hljs-ansi-foreground-black .hljs-ansi-background-red,
-.hljs-ansi-foreground-black .hljs-ansi-background-white,
-.hljs-ansi-foreground-black .hljs-ansi-background-yellow {
-    color: #073642
+    color: var(--ansi-black)
 }
 
 .hljs-ansi-foreground-red {
-    color: #dc322f
+    color: var(--ansi-red)
 }
 
 .hljs-ansi-foreground-green {
-    color: #859900
+    color: var(--ansi-green)
 }
 
 .hljs-ansi-foreground-yellow {
-    color: #b58900
+    color: var(--ansi-yellow)
 }
 
 .hljs-ansi-foreground-blue {
-    color: #268bd2
+    color: var(--ansi-blue)
 }
 
 .hljs-ansi-foreground-magenta {
-    color: #d33682
+    color: var(--ansi-magenta)
 }
 
 .hljs-ansi-foreground-cyan {
-    color: #2aa198
+    color: var(--ansi-cyan)
 }
 
 .hljs-ansi-foreground-white {
-    color: var(--interactive-text-active)
-}
-
-.hljs-ansi-foreground-white .hljs-ansi-background-black,
-.hljs-ansi-foreground-white .hljs-ansi-background-blue,
-.hljs-ansi-foreground-white .hljs-ansi-background-cyan,
-.hljs-ansi-foreground-white .hljs-ansi-background-green,
-.hljs-ansi-foreground-white .hljs-ansi-background-magenta,
-.hljs-ansi-foreground-white .hljs-ansi-background-red,
-.hljs-ansi-foreground-white .hljs-ansi-background-white,
-.hljs-ansi-foreground-white .hljs-ansi-background-yellow {
-    color: #eee8d5
+    color: var(--ansi-white)
 }
 
 .hljs-ansi-background-black {
-    background-color: #002b36
+    background-color: var(--ansi-black)
 }
 
 .hljs-ansi-background-red {
-    background-color: #cb4b16
+    background-color: var(--ansi-red)
 }
 
 .hljs-ansi-background-green {
-    background-color: #586e75
+    background-color: var(--ansi-green)
 }
 
 .hljs-ansi-background-yellow {
-    background-color: #657b83
+    background-color: var(--ansi-yellow)
 }
 
 .hljs-ansi-background-blue {
-    background-color: #839496
+    background-color: var(--ansi-blue)
 }
 
 .hljs-ansi-background-magenta {
-    background-color: #6c71c4
+    background-color: var(--ansi-magenta)
 }
 
 .hljs-ansi-background-cyan {
-    background-color: #93a1a1
+    background-color: var(--ansi-cyan)
 }
 
 .hljs-ansi-background-white {
-    background-color: #fdf6e3
+    background-color: var(--ansi-white)
 }
 
 @use postcss-pxtorem;
@@ -6573,6 +6551,85 @@ screen and (max-width:485px) {
     padding-top: 2px
 }
 
+.container__70151 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.loading__70151 {
+    align-items: center;
+    display: flex;
+    height: 520px;
+    justify-content: center
+}
+
+.background__70151 {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.content__70151 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative
+}
+
+.subSectionHeader__70151 {
+    text-transform: uppercase
+}
+
+.accountCredit__70151 {
+    margin-top: 16px
+}
+
+.accountCreditTitle__70151 {
+    margin-bottom: 8px
+}
+
+.accountCreditDescription__70151 {
+    color: var(--text-default);
+    margin-bottom: 16px;
+    margin-top: 0
+}
+
+.cardText__70151 {
+    padding-inline-start: 8px
+}
+
+.noItemsCard__70151 {
+    background-color: var(--background-base-lower);
+    border: none;
+    color: var(--interactive-text-active);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 20px;
+    margin-top: 16px;
+    padding: 16px 19px
+}
+
+.theme-dark .noItemsIcon__70151 {
+    background: #4f545c
+}
+
+.hr__70151 {
+    border-color: hsl(var(--primary-300-hsl)/.3);
+    border-style: solid;
+    border-width: 1px 0 0;
+    display: block;
+    height: 0;
+    width: 100%
+}
+
+.theme-dark .hr__70151 {
+    border-color: hsl(var(--primary-400-hsl)/.3)
+}
+
 .moonIcon__1fc68 {
     align-items: center;
     background: hsla(229, 7%, 45%, .12);
@@ -6902,14 +6959,4 @@ screen and (max-width:485px) {
 
 .supportHeader_d9914b {
     margin-bottom: 4px
-}
-
-.confettiCanvas__6c43c {
-    height: 100%;
-    position: absolute;
-    width: 100%
-}
-
-.spacing_a5537d {
-    margin-bottom: var(--space-16)
 }
