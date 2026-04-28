@@ -21,8 +21,8 @@ var r = n(64700),
     R = n(43990),
     C = n(942857),
     D = n(77729),
-    p = n(313961),
-    L = n(267102),
+    L = n(313961),
+    p = n(267102),
     m = n(85563),
     h = n(908031),
     g = n(953727);
@@ -137,8 +137,8 @@ var k = n(531685),
     x = n(652215);
 let K = u.Ay.connectStores([k.A], () => ({ focused: k.A.isFocused() }))(function (e) {
     let { focused: t, type: n, windowKey: i, macOSFrame: r = !1, themeOverride: _ } = e,
-        s = (0, L.Us)(),
-        l = (0, u.bG)([p.A], () => p.A.isFullscreenInContext(s)),
+        s = (0, p.Us)(),
+        l = (0, u.bG)([L.A], () => L.A.isFullscreenInContext(s)),
         o = (0, C.A)();
     if (l) return null;
     switch (n) {
@@ -319,12 +319,12 @@ var eO = n(463347),
     eR = n(464578),
     eC = n(53505),
     eD = n(492462),
-    ep = n(998218);
-let eL = (e) => {
+    eL = n(998218);
+let ep = (e) => {
     if (null == e || "" === e) return null;
     try {
         let t = new URL(e);
-        return ep.A.isDiscordHostname(t.hostname) || window.location.host === t.host ? t : null;
+        return eL.A.isDiscordHostname(t.hostname) || window.location.host === t.host ? t : null;
     } catch (e) {
         return null;
     }
@@ -419,8 +419,9 @@ let eh = (0, er.Fe)({
                 n.e("40841"),
                 n.e("75058"),
                 n.e("3424"),
-                n.e("54333"),
-                n.e("45235"),
+                n.e("63133"),
+                n.e("48540"),
+                n.e("32181"),
                 n.e("19415"),
                 n.e("7276"),
                 n.e("92652"),
@@ -450,7 +451,7 @@ let eh = (0, er.Fe)({
                 n.e("5036"),
                 n.e("97271"),
                 n.e("22513"),
-                n.e("32442"),
+                n.e("13498"),
                 n.e("71934"),
                 n.e("86483"),
                 n.e("31632"),
@@ -610,9 +611,9 @@ let eh = (0, er.Fe)({
                 n.e("96565"),
                 n.e("37687"),
                 n.e("95093"),
+                n.e("60177"),
                 n.e("62615"),
                 n.e("48900"),
-                n.e("60177"),
                 n.e("21976"),
                 n.e("1006"),
                 n.e("79707"),
@@ -624,6 +625,7 @@ let eh = (0, er.Fe)({
                 n.e("80239"),
                 n.e("54791"),
                 n.e("61268"),
+                n.e("63213"),
                 n.e("255"),
                 n.e("68479"),
                 n.e("39286"),
@@ -634,6 +636,7 @@ let eh = (0, er.Fe)({
                 n.e("14461"),
                 n.e("25486"),
                 n.e("18024"),
+                n.e("17859"),
                 n.e("25279"),
                 n.e("20858"),
                 n.e("77473"),
@@ -760,7 +763,6 @@ let eh = (0, er.Fe)({
                 n.e("9793"),
                 n.e("2098"),
                 n.e("84794"),
-                n.e("17859"),
                 n.e("17810"),
                 n.e("21750"),
                 n.e("37479"),
@@ -831,10 +833,10 @@ let eh = (0, er.Fe)({
                 n.e("86197"),
                 n.e("18126"),
                 n.e("42664"),
-                n.e("68208"),
                 n.e("25717"),
                 n.e("7926"),
                 n.e("44602"),
+                n.e("55541"),
                 n.e("63309"),
                 n.e("20516"),
                 n.e("93609"),
@@ -916,7 +918,7 @@ let eh = (0, er.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("80413"),
-                n.e("45235"),
+                n.e("32181"),
                 n.e("63397"),
                 n.e("60049"),
                 n.e("61207"),
@@ -928,11 +930,11 @@ let eh = (0, er.Fe)({
                 n.e("84580"),
                 n.e("74112"),
                 n.e("5036"),
-                n.e("54333"),
+                n.e("63133"),
                 n.e("97271"),
                 n.e("22513"),
                 n.e("13709"),
-                n.e("32442"),
+                n.e("13498"),
                 n.e("75058"),
                 n.e("54718"),
                 n.e("71934"),
@@ -1215,7 +1217,7 @@ let eh = (0, er.Fe)({
         name: "ViewsWithOAuth2",
     }),
     eV = (0, er.Fe)({
-        createPromise: () => Promise.all([n.e("54333"), n.e("81334"), n.e("30514")]).then(n.bind(n, 146088)),
+        createPromise: () => Promise.all([n.e("63133"), n.e("81334"), n.e("30514")]).then(n.bind(n, 146088)),
         webpackId: 146088,
         name: "BrowserHandoff",
     }),
@@ -1228,7 +1230,7 @@ let eh = (0, er.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("50672"),
-                n.e("45235"),
+                n.e("32181"),
                 n.e("75058"),
                 n.e("92652"),
                 n.e("63397"),
@@ -1240,11 +1242,11 @@ let eh = (0, er.Fe)({
                 n.e("40841"),
                 n.e("74112"),
                 n.e("5036"),
-                n.e("54333"),
+                n.e("63133"),
                 n.e("97271"),
                 n.e("22513"),
                 n.e("13709"),
-                n.e("32442"),
+                n.e("13498"),
                 n.e("54718"),
                 n.e("71934"),
                 n.e("60049"),
@@ -1252,7 +1254,7 @@ let eh = (0, er.Fe)({
                 n.e("31632"),
                 n.e("32260"),
                 n.e("7276"),
-                n.e("27383"),
+                n.e("48540"),
                 n.e("19415"),
                 n.e("51529"),
                 n.e("44651"),
@@ -1310,6 +1312,7 @@ let eh = (0, er.Fe)({
                 n.e("4592"),
                 n.e("27518"),
                 n.e("47206"),
+                n.e("66465"),
                 n.e("75681"),
                 n.e("17270"),
                 n.e("97023"),
@@ -1625,6 +1628,7 @@ let eh = (0, er.Fe)({
                 n.e("78453"),
                 n.e("76273"),
                 n.e("95093"),
+                n.e("60177"),
                 n.e("8362"),
                 n.e("62615"),
                 n.e("80149"),
@@ -1643,7 +1647,6 @@ let eh = (0, er.Fe)({
                 n.e("7833"),
                 n.e("86243"),
                 n.e("32209"),
-                n.e("60177"),
                 n.e("30788"),
                 n.e("48295"),
                 n.e("60249"),
@@ -1678,6 +1681,7 @@ let eh = (0, er.Fe)({
                 n.e("54791"),
                 n.e("83952"),
                 n.e("61268"),
+                n.e("63213"),
                 n.e("255"),
                 n.e("68479"),
                 n.e("37752"),
@@ -1697,6 +1701,7 @@ let eh = (0, er.Fe)({
                 n.e("3998"),
                 n.e("25486"),
                 n.e("18024"),
+                n.e("17859"),
                 n.e("25279"),
                 n.e("89916"),
                 n.e("90301"),
@@ -1928,7 +1933,6 @@ let eh = (0, er.Fe)({
                 n.e("39353"),
                 n.e("2098"),
                 n.e("84794"),
-                n.e("17859"),
                 n.e("79593"),
                 n.e("17810"),
                 n.e("41706"),
@@ -2011,12 +2015,12 @@ let eh = (0, er.Fe)({
                 n.e("58932"),
                 n.e("18126"),
                 n.e("42664"),
-                n.e("68208"),
                 n.e("50695"),
                 n.e("24107"),
                 n.e("25717"),
                 n.e("36999"),
                 n.e("44602"),
+                n.e("55541"),
                 n.e("63309"),
                 n.e("20516"),
                 n.e("93609"),
@@ -2299,8 +2303,8 @@ class ez extends r.Component {
                                                 i =
                                                     ((e = window.location.search ?? ""),
                                                     {
-                                                        desktop: eL((t = (0, eD.parse)(e)).desktop_link),
-                                                        mobile: eL(t.mobile_link),
+                                                        desktop: ep((t = (0, eD.parse)(e)).desktop_link),
+                                                        mobile: ep(t.mobile_link),
                                                     });
                                             if ("iOS" !== n && "Android" !== n)
                                                 return (0, a.jsx)(q.rd, {
@@ -2426,7 +2430,7 @@ class e3 extends eA.A {
     };
 }
 let e5 = new e3();
-function e6() {
+function e8() {
     return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -2439,7 +2443,7 @@ function e6() {
         background_install_ms_total: 0,
     };
 }
-function e8(e) {
+function e6(e) {
     return "host" === e;
 }
 class e7 {
@@ -2447,10 +2451,10 @@ class e7 {
     _downloadingModules = {};
     _report;
     constructor() {
-        this._report = e6();
+        this._report = e8();
     }
     handleDownloadingModule(e) {
-        if (!e8(e.name)) {
+        if (!e6(e.name)) {
             if (null != this._downloadingModules[e.name])
                 return void console.warn("Duplicate downloading-module event for module ", e.name);
             this._downloadingModules[e.name] = { startTime: BigInt(e.now), foreground: e.foreground };
@@ -2470,7 +2474,7 @@ class e7 {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (e8(e.name)) return;
+        if (e6(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t)
             return void console.warn("Downloaded complete without corresponding downloading event for module ", e.name);
@@ -2487,7 +2491,7 @@ class e7 {
             delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
-        if (!e8(e.name)) {
+        if (!e6(e.name)) {
             if (null != this._installingModules[e.name])
                 return void console.warn("Duplicate installing-module event for module ", e.name);
             this._installingModules[e.name] = {
@@ -2499,7 +2503,7 @@ class e7 {
         }
     }
     handleInstalledModule(e) {
-        if (e8(e.name)) return;
+        if (e6(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? "foreground" : "background",
@@ -2537,7 +2541,7 @@ class e7 {
         return this._report;
     }
     reset() {
-        this._report = e6();
+        this._report = e8();
     }
     submissionReady() {
         return (
@@ -2705,8 +2709,8 @@ class tC extends eA.A {
     }
 }
 let tD = new tC();
-var tp = n(200330),
-    tL = n(350723),
+var tL = n(200330),
+    tp = n(350723),
     tm = n(346142),
     th = n(451988),
     tg = n(664932),
@@ -2789,7 +2793,7 @@ let tq = (0, _.createRoot)(tQ),
                 null == n ||
                 null == a ||
                 null == r ||
-                ((0, tp.openOAuth2Modal)({
+                ((0, tL.openOAuth2Modal)({
                     clientId: t,
                     scopes: n,
                     redirectUri: a,
@@ -2836,17 +2840,17 @@ else {
             v.Ay.on("HELP_OPEN", () => window.open(Y.A.getCommunityURL()));
         let e = new th.J_(t$, () => v.Ay.purgeMemory());
         v.Ay.on("MAIN_WINDOW_BLUR", () => {
-            e.delay(), v.Ay.setFocused(!1), (0, tL.XC)(window, !1);
+            e.delay(), v.Ay.setFocused(!1), (0, tp.XC)(window, !1);
         }),
             v.Ay.on("MAIN_WINDOW_FOCUS", () => {
-                e.cancel(), v.Ay.setFocused(!0), (0, tL.XC)(window, !0);
+                e.cancel(), v.Ay.setFocused(!0), (0, tp.XC)(window, !0);
             }),
             v.Ay.on("MAIN_WINDOW_PATH", function (e, t, n) {
                 let i = null != n ? new URLSearchParams(n) : null;
                 tX[t]?.(i) || (0, tt.pX)(t);
             }),
             v.Ay.on("MAIN_WINDOW_HIDDEN", () => {
-                (0, tL.R)(window);
+                (0, tp.R)(window);
             });
     }
     e9.initialize(),

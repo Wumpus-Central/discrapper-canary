@@ -80,8 +80,8 @@ var R = a(503698),
     z = a.n(R),
     w = a(331322),
     Y = a(939249),
-    U = a(922301),
-    F = a(368919),
+    F = a(922301),
+    U = a(368919),
     H = a(700090);
 function J(e) {
     let { selectedEffectId: s, setSelectedEffectId: a, className: t } = e;
@@ -114,9 +114,9 @@ function B(e) {
         {
             className: z()(H.Tw, { [H.wH]: a }),
             onClick: t,
-            children: (0, l.jsx)(F.A, {
+            children: (0, l.jsx)(U.A, {
                 userName: i.name,
-                effectDisplayType: U.G.STATIC,
+                effectDisplayType: F.G.STATIC,
                 displayNameStyles: i.previewStyles,
                 textClassName: H.tr,
                 inProfile: !0,
@@ -352,6 +352,7 @@ function e_(e) {
                                 containerClassName: eT.ME,
                                 interactive: !1,
                                 hideExampleButton: !0,
+                                hideProfileFrame: !0,
                             }),
                             (0, l.jsx)(eg.A, {
                                 author: y,
@@ -440,12 +441,12 @@ function ev(e) {
                 ""),
         R = (0, d.bG)([f.A], () => f.A.getGuild(v)),
         { userDisplayNameStyles: z, guildDisplayNameStyles: w, pendingDisplayNameStyles: Y } = (0, x.B0)(G, v),
-        U = void 0 !== Y ? Y : (w ?? z),
-        [F, H] = t.useState(U?.fontId ?? r.x.DEFAULT),
-        [B, K] = t.useState(U?.effectId ?? n.z.SOLID),
+        F = void 0 !== Y ? Y : (w ?? z),
+        [U, H] = t.useState(F?.fontId ?? r.x.DEFAULT),
+        [B, K] = t.useState(F?.effectId ?? n.z.SOLID),
         V = (0, S._)(B),
         X = (0, S._)(n.z.GRADIENT),
-        Q = U?.colors ?? [],
+        Q = F?.colors ?? [],
         [W, q] = t.useState(Q.length > 0 && B !== n.z.GRADIENT ? Q[0] : V.defaultColors[0]),
         [Z, ee] = t.useState(Q.length > 0 && B === n.z.GRADIENT ? Q : X.defaultColors);
     (0, A.A)(
@@ -454,7 +455,7 @@ function ev(e) {
     );
     let { analyticsLocations: es } = (0, N.Ay)(D, u.A.EDIT_DISPLAY_NAME_STYLES_MODAL),
         ea = t.useMemo(() => (B === n.z.GRADIENT ? Z : [W]), [B, Z, W]),
-        el = t.useMemo(() => F !== U?.fontId || B !== U?.effectId || !(0, o.v)(ea, U?.colors ?? []), [U, F, B, ea]),
+        el = t.useMemo(() => U !== F?.fontId || B !== F?.effectId || !(0, o.v)(ea, F?.colors ?? []), [F, U, B, ea]),
         et = (function (e) {
             let {
                 hasChanges: s,
@@ -482,7 +483,7 @@ function ev(e) {
             }, [s, a, l, i, d, m, o, c]);
         })({
             hasChanges: el,
-            selectedFontId: F,
+            selectedFontId: U,
             selectedEffectId: B,
             selectedColors: ea,
             defaultColor: V.defaultColors[0],
@@ -537,7 +538,7 @@ function ev(e) {
                                               }),
                                           }),
                                           (0, l.jsx)($, {
-                                              selectedFontId: F,
+                                              selectedFontId: U,
                                               setSelectedFontId: H,
                                               displayName: M,
                                               className: eD._,
@@ -560,7 +561,7 @@ function ev(e) {
                                       user: G,
                                       guild: R,
                                       displayName: M,
-                                      selectedFontId: F,
+                                      selectedFontId: U,
                                       selectedEffectId: B,
                                       selectedColors: B === n.z.SOLID && (0, o.v)(ea, V.defaultColors) ? [] : ea,
                                       onClose: y,

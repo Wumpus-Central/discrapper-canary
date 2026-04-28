@@ -472,8 +472,8 @@ function e2(e) {
 var e3 = n(633965),
     e9 = n(857071),
     e6 = n(851109),
-    e5 = n(72314),
-    e8 = n(543897),
+    e8 = n(72314),
+    e5 = n(543897),
     e7 = n(696451),
     e4 = n(71393),
     te = n(711014),
@@ -1065,8 +1065,8 @@ var t0 = n(245604),
     t3 = n(772366),
     t9 = n(728321),
     t6 = n(260509),
-    t5 = n(284009),
-    t8 = n.n(t5),
+    t8 = n(284009),
+    t5 = n.n(t8),
     t7 = n(295868),
     t4 = n(686956),
     ne = n(954571),
@@ -1089,7 +1089,7 @@ function nl(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return (
-        t8()(t.type !== tl.PJ.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
+        t5()(t.type !== tl.PJ.ROOT, "[GuildDropTarget] Tried using a root node as a drop target."),
         {
             accept: e,
             canDrop: (e) =>
@@ -1501,8 +1501,8 @@ function n9() {
           });
 }
 var n6 = n(312742),
-    n5 = n(317097),
-    n8 = n(319060),
+    n8 = n(317097),
+    n5 = n(319060),
     n7 = n(866323),
     n4 = n(817281),
     le = n(534409),
@@ -1636,7 +1636,7 @@ function lh(e) {
 }
 var lA = n(114329),
     lm = n(620370);
-let lg = (0, lt.xI)(n8.A.FOLDER_ITEM_ANIMATION_DURATION),
+let lg = (0, lt.xI)(n5.A.FOLDER_ITEM_ANIMATION_DURATION),
     lp = (0, tS.animated)(I.B),
     lf = s.memo(function (e) {
         var t;
@@ -1747,7 +1747,7 @@ let lg = (0, lt.xI)(n8.A.FOLDER_ITEM_ANIMATION_DURATION),
                 ],
             }),
             Z = null != o.color ? o.color : lA.DO,
-            ee = Z === lA.DO ? void 0 : (0, n5.Hl)(Z);
+            ee = Z === lA.DO ? void 0 : (0, n8.Hl)(Z);
         return (0, i.jsxs)("div", {
             ref: X,
             className: a()(lr.qc, { [lr.Av]: h, [lr.Lg]: U }),
@@ -2303,9 +2303,10 @@ function l0(e, t) {
         let { default: e } = await Promise.all([
             n.e("72823"),
             n.e("92510"),
-            n.e("54333"),
-            n.e("45235"),
+            n.e("28149"),
+            n.e("32181"),
             n.e("63397"),
+            n.e("5989"),
             n.e("43763"),
             n.e("90673"),
             n.e("13709"),
@@ -2313,7 +2314,7 @@ function l0(e, t) {
             n.e("40841"),
             n.e("60049"),
             n.e("25738"),
-            n.e("22810"),
+            n.e("74112"),
             n.e("57948"),
             n.e("69273"),
             n.e("63941"),
@@ -2341,7 +2342,7 @@ function l0(e, t) {
             n.e("9176"),
             n.e("33092"),
             n.e("87845"),
-            n.e("35636"),
+            n.e("20797"),
             n.e("98042"),
             n.e("75090"),
             n.e("61175"),
@@ -2964,8 +2965,8 @@ let l3 = s.memo(function (e) {
 });
 var l9 = n(922016),
     l6 = n(534514),
-    l5 = n(821609),
-    l8 = n(339350),
+    l8 = n(821609),
+    l5 = n(339350),
     l7 = n(475743),
     l4 = n(624458),
     ie = n(408213),
@@ -3043,7 +3044,7 @@ function ia(e) {
                                                 }),
                                             ],
                                         }),
-                                        (0, i.jsx)(l5.$, {
+                                        (0, i.jsx)(l8.$, {
                                             variant: "primary",
                                             size: "sm",
                                             text: eH.intl.string(eH.t["4r+amb"]),
@@ -3106,7 +3107,7 @@ function io(e) {
                   folderButtonSize: "icon",
                   folderButtonContent: (0, i.jsx)("div", {
                       className: ir.rH,
-                      children: (0, i.jsx)(l8.Q, { size: "sm", color: "currentColor" }),
+                      children: (0, i.jsx)(l5.Q, { size: "sm", color: "currentColor" }),
                   }),
                   renderChildNode: function (e, t, n) {
                       return e.type !== tl.PJ.GUILD
@@ -3332,7 +3333,7 @@ function ip(e) {
             return [e, e.version];
         }),
         o = a.getRoots(),
-        u = (0, A.yK)([e8.A], () => e8.A.getGeoRestrictedGuilds()).map((e) =>
+        u = (0, A.yK)([e5.A], () => e5.A.getGeoRestrictedGuilds()).map((e) =>
             (0, i.jsx)(ng, { id: e.id, name: e.name, icon: e.icon }, e.id),
         );
     return (0, i.jsxs)(i.Fragment, {
@@ -3418,7 +3419,7 @@ function iE(e) {
     (0, T.u5)(() => {
         if (!R.current && 0 !== u.size) {
             if (!z) {
-                let { scrollTop: e } = e5.A.getGuildListDimensions();
+                let { scrollTop: e } = e8.A.getGuildListDimensions();
                 W.scrollTo({ to: e, animate: !1 });
             }
             return (R.current = !0), () => j.stop();

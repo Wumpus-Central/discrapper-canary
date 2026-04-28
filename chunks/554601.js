@@ -636,9 +636,9 @@ function eJ(e) {
                                                         n.e("52548"),
                                                         n.e("37687"),
                                                         n.e("95093"),
+                                                        n.e("60177"),
                                                         n.e("62615"),
                                                         n.e("48900"),
-                                                        n.e("60177"),
                                                         n.e("21976"),
                                                         n.e("1006"),
                                                         n.e("79707"),
@@ -651,6 +651,7 @@ function eJ(e) {
                                                         n.e("80239"),
                                                         n.e("23276"),
                                                         n.e("54791"),
+                                                        n.e("63213"),
                                                         n.e("255"),
                                                         n.e("68479"),
                                                         n.e("10567"),
@@ -665,6 +666,7 @@ function eJ(e) {
                                                         n.e("834"),
                                                         n.e("33134"),
                                                         n.e("77446"),
+                                                        n.e("17859"),
                                                         n.e("84317"),
                                                         n.e("67176"),
                                                         n.e("20858"),
@@ -857,8 +859,8 @@ var e8 = n(34188),
     e2 = n(700623),
     e7 = n(177953),
     e5 = n(825484),
-    e9 = n(512950),
-    e3 = n(900797),
+    e3 = n(512950),
+    e9 = n(900797),
     e6 = n(847374),
     te = n(10716),
     tt = n(702841),
@@ -1241,9 +1243,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, j.Ag)(n)
-              ? (0, r.jsx)(e9.p, {
+              ? (0, r.jsx)(e3.p, {
                     className: ty.ai,
-                    messageType: e9.Y.WARNING,
+                    messageType: e3.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1306,7 +1308,7 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e3.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e9.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(e6.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1419,10 +1421,10 @@ var tQ = n(111042),
     t2 = n(594061),
     t7 = n(935208),
     t5 = n(630248),
-    t9 = n(355097);
-function t3(e, t) {
+    t3 = n(355097);
+function t9(e, t) {
     o.useEffect(() => {
-        t2.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t5.A], () => t5.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2144,15 +2146,15 @@ function n7(e, t) {
 }
 n(827669);
 var n5 = n(110259),
-    n9 = n(139286),
-    n3 = n(520117);
+    n3 = n(139286),
+    n9 = n(520117);
 function n6(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
         s = (0, A.bG)([p.A], () => p.A.entrypoint());
     return {
-        trackSearchResultsItemImpressionRef: (0, n3.A)({
+        trackSearchResultsItemImpressionRef: (0, n9.A)({
             onVisible: () => {
-                (0, n9.x)({
+                (0, n3.x)({
                     type: n5.ImpressionTypes.VIEW,
                     name: n5.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
@@ -3058,7 +3060,7 @@ function lj(e) {
                             let e = [];
                             return c && e.push(ni.gq), e;
                         }, [c]),
-                        u = t3(r, a);
+                        u = t9(r, a);
                     return o.useMemo(
                         () =>
                             l
@@ -3233,7 +3235,7 @@ function lv(e) {
                         }, new Set()),
                     [i],
                 ),
-                r = t3(
+                r = t9(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

@@ -128,7 +128,8 @@
     inset-inline-end: 16px;
     justify-content: flex-end;
     position: absolute;
-    top: 16px
+    top: 16px;
+    z-index: 1
 }
 
 .avatarPreviewContainer_c50f62 {
