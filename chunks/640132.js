@@ -16,14 +16,14 @@ var l = t(627968),
     f = t(71393),
     v = t(954571),
     A = t(645034),
-    N = t(285059),
-    I = t(698441),
+    I = t(285059),
+    N = t(698441),
     y = t(485394),
     _ = t(826383);
 t(321073);
 var E = t(988794),
-    C = t(530209),
-    S = t(974930),
+    S = t(530209),
+    C = t(974930),
     k = t(691012),
     p = t(428978),
     b = t(850183),
@@ -31,10 +31,10 @@ var E = t(988794),
     T = t(985018),
     L = t(378787);
 function D(e) {
-    let { selectedTab: n, onTabSelected: t, userCount: r } = e,
-        i = s.useRef(null);
+    let { selectedTab: n, onTabSelected: t, userCount: r, rsvpListTabInnerRef: i } = e,
+        d = s.useRef(null);
     return (
-        s.useEffect(() => i.current?.ref?.blur?.(), []),
+        s.useEffect(() => d.current?.ref?.blur?.(), []),
         (0, l.jsx)("div", {
             className: L.kL,
             children: (0, l.jsxs)(R.V, {
@@ -48,6 +48,7 @@ function D(e) {
                     (0, l.jsx)(R.V.Item, {
                         className: L.YU,
                         id: E.al.RSVP_LIST,
+                        clickableInnerRef: i,
                         children: T.intl.formatToPlainString(T.t["ZrTT/N"], { userCount: r }),
                     }),
                 ],
@@ -215,12 +216,12 @@ function eo(e) {
             [n],
         ),
         A = (0, ee.A)(o, n.id),
-        I = (0, J.A)(n);
+        N = (0, J.A)(n);
     s.useEffect(() => {
-        N.A.getGuildEventUserCounts(t.id, n.id, null != o ? [o] : []), N.A.getGuildEventsForCurrentUser(t.id);
+        I.A.getGuildEventUserCounts(t.id, n.id, null != o ? [o] : []), I.A.getGuildEventsForCurrentUser(t.id);
     }, [t.id, n.id, o]);
     let y = (0, et.Sn)(n.recurrence_rule),
-        C = n?.scheduled_start_time != null ? (0, S.j)(A, g, new Date(n?.scheduled_start_time)) : null;
+        S = n?.scheduled_start_time != null ? (0, C.j)(A, g, new Date(n?.scheduled_start_time)) : null;
     return (0, l.jsxs)("div", {
         ref: c,
         children: [
@@ -230,7 +231,7 @@ function eo(e) {
                     (0, l.jsx)(er.L, {
                         startTime: g.toISOString(),
                         endTime: m?.toISOString(),
-                        status: C ?? n.status,
+                        status: S ?? n.status,
                         eventType: n.entity_type,
                         guildEventId: n.id,
                         recurrenceId: o,
@@ -250,7 +251,7 @@ function eo(e) {
                     (0, l.jsx)(ea, { guild: t, onClick: x ? v : void 0, onClose: d }),
                     (0, l.jsx)(ei.A, { guildScheduledEvent: n, channel: r, onClose: d }),
                     null != j && (0, l.jsx)(ec, { userCount: j, onClick: u }),
-                    null != I && (0, l.jsx)(eu, { creator: I, guildId: t.id, channelId: r?.id }, I.id),
+                    null != N && (0, l.jsx)(eu, { creator: N, guildId: t.id, channelId: r?.id }, N.id),
                     null != n.description &&
                         (0, l.jsx)("div", {
                             className: ed.h_,
@@ -281,22 +282,22 @@ var eh = t(364522),
     ef = t(495544),
     ev = t(290863),
     eA = t(461213),
-    eN = t(287809),
-    eI = t(610324);
+    eI = t(287809),
+    eN = t(610324);
 function ey(e) {
     let { children: n } = e;
     return (0, l.jsxs)("div", {
-        className: eI.do,
+        className: eN.do,
         children: [
             (0, l.jsx)(em.A, {
                 children: (0, l.jsx)("div", {
-                    className: eI.n1,
+                    className: eN.n1,
                     children: (0, l.jsx)(K.n, {
                         size: "custom",
                         color: "currentColor",
                         height: 40,
                         width: 40,
-                        className: eI.Kk,
+                        className: eN.Kk,
                     }),
                 }),
             }),
@@ -309,7 +310,7 @@ function e_() {
         children: (0, l.jsx)(H.D, {
             color: "text-strong",
             variant: "heading-xl/semibold",
-            className: eI.DD,
+            className: eN.DD,
             children: T.intl.string(T.t.hW0mBR),
         }),
     });
@@ -319,24 +320,24 @@ function eE() {
         children: (0, l.jsx)(H.D, {
             color: "text-default",
             variant: "heading-md/semibold",
-            className: eI.JU,
+            className: eN.JU,
             children: T.intl.string(T.t.obChXk),
         }),
     });
 }
-function eC(e) {
+function eS(e) {
     let { count: n } = e;
     return (0, l.jsxs)("div", {
-        className: eI.f0,
+        className: eN.f0,
         children: [
             (0, l.jsx)("div", {
-                className: U()(eI.Pc, eI.uY),
+                className: U()(eN.Pc, eN.uY),
                 children: (0, l.jsx)(K.n, {
                     size: "custom",
                     color: "currentColor",
                     height: 14,
                     width: 14,
-                    className: eI.Kk,
+                    className: eN.Kk,
                 }),
             }),
             (0, l.jsx)(P.E, {
@@ -347,10 +348,10 @@ function eC(e) {
         ],
     });
 }
-function eS(e) {
+function eC(e) {
     let { eventUser: n, guildId: t, onContextMenu: r } = e,
         i = s.useRef(null),
-        d = (0, a.bG)([eN.default], () => eN.default.getUser(n.user_id)),
+        d = (0, a.bG)([eI.default], () => eI.default.getUser(n.user_id)),
         u = (0, a.bG)(
             [eA.A, ev.A, ef.default],
             () => (n.user_id === ef.default.getId() ? eA.A.getStatus() : ev.A.getStatus(n.user_id, t)),
@@ -368,7 +369,7 @@ function eS(e) {
                   let { isShown: a } = s;
                   return (0, l.jsxs)(V.D, {
                       innerRef: i,
-                      className: U()(eI.f0, eI.fv, { [eI.wH]: a }),
+                      className: U()(eN.f0, eN.fv, { [eN.wH]: a }),
                       onContextMenu: (e) => r(e, d),
                       ...e,
                       children: [
@@ -376,13 +377,13 @@ function eS(e) {
                               src: d.getAvatarURL(t, 24),
                               "aria-label": d.username,
                               size: w._3.SIZE_24,
-                              className: eI.uY,
+                              className: eN.uY,
                               status: u,
                           }),
                           (0, l.jsx)(eg.A, {
                               user: d,
-                              className: eI.sY,
-                              discriminatorClass: eI.XU,
+                              className: eN.sY,
+                              discriminatorClass: eN.XU,
                               nick: n.member?.nick,
                           }),
                       ],
@@ -393,16 +394,16 @@ function eS(e) {
 function ek(e) {
     let { eventUsers: n, guildId: t, usersNotShownCount: s = 0, onContextMenu: r } = e;
     return (0, l.jsxs)(eh.Ip, {
-        className: eI.DK,
+        className: eN.DK,
         children: [
-            n.map((e) => (0, l.jsx)(eS, { guildId: t, eventUser: e, onContextMenu: r }, e.user_id)),
-            s > 0 && (0, l.jsx)(eC, { count: s }),
+            n.map((e) => (0, l.jsx)(eC, { guildId: t, eventUser: e, onContextMenu: r }, e.user_id)),
+            s > 0 && (0, l.jsx)(eS, { count: s }),
         ],
     });
 }
 function ep(e) {
     let { children: n, style: t } = e;
-    return (0, l.jsx)("div", { className: eI.kL, style: null != t ? t : {}, children: n });
+    return (0, l.jsx)("div", { className: eN.kL, style: null != t ? t : {}, children: n });
 }
 function eb(e) {
     let { children: n, height: t } = e;
@@ -414,7 +415,7 @@ function eR(e) {
     if (i && 0 === r.length)
         return (0, l.jsx)(eb, {
             height: u,
-            children: (0, l.jsx)(ex.y, { type: ex.y.Type.SPINNING_CIRCLE, className: eI.u1 }),
+            children: (0, l.jsx)(ex.y, { type: ex.y.Type.SPINNING_CIRCLE, className: eN.u1 }),
         });
     if (null != d && 0 === r.length) return (0, l.jsx)(eb, { height: u, children: (0, l.jsx)(eE, {}) });
     let c = 0;
@@ -430,8 +431,8 @@ function eR(e) {
                           (0, o.L3)(e, async () => {
                               let { default: e } = await Promise.all([
                                   t.e("41475"),
-                                  t.e("39431"),
-                                  t.e("31788"),
+                                  t.e("90673"),
+                                  t.e("60049"),
                                   t.e("26132"),
                                   t.e("46652"),
                                   t.e("93190"),
@@ -476,11 +477,11 @@ var eT = t(482857),
     eD = t(832223);
 function eG(e) {
     let { guildEvent: n, guild: t, channel: s, onActionTaken: i, recurrenceId: d } = e,
-        u = (0, I.Fd)(n),
-        c = (0, a.bG)([I.Ay], () => I.Ay.isInterestedInEventRecurrence(n.id, d), [d, n]),
+        u = (0, N.Fd)(n),
+        c = (0, a.bG)([N.Ay], () => N.Ay.isInterestedInEventRecurrence(n.id, d), [d, n]),
         o = (0, y.Ay)(n),
         h = (0, a.bG)([m.A], () => m.A.isLurking(t.id), [t.id]),
-        x = (0, C.e)(s?.id, n.id),
+        x = (0, S.e)(s?.id, n.id),
         g = (0, eT.A)({ guild: t, channel: s, guildScheduledEvent: n, isActive: u, recurrenceId: d, onActionTaken: i }),
         j = (0, p.Zq)({
             isActive: u,
@@ -500,10 +501,10 @@ function eG(e) {
 let eU = (e) => {
     let n,
         r,
-        { guildScheduledEventId: m, transitionState: y, initialRecurrenceId: C, onClose: p } = e,
+        { guildScheduledEventId: m, transitionState: y, initialRecurrenceId: S, onClose: p } = e,
         { analyticsLocations: R } = (0, x.Ay)(h.A.GUILD_EVENT_MODAL),
-        [T, L] = s.useState(C),
-        G = (0, a.bG)([I.Ay], () => I.Ay.getGuildScheduledEvent(m), [m]),
+        [T, L] = s.useState(S),
+        G = (0, a.bG)([N.Ay], () => N.Ay.getGuildScheduledEvent(m), [m]),
         U = G?.id,
         M = G?.guild_id,
         w = (0, a.bG)([f.A], () => f.A.getGuild(M), [M]),
@@ -512,8 +513,8 @@ let eU = (e) => {
         O = (0, g.GV)(),
         [z, F] = s.useState(E.al.EVENT_INFO),
         K =
-            ((n = (0, a.yK)([I.Ay], () => Object.values(I.Ay.getUsersForGuildEvent(U, null)), [U])),
-            (r = (0, a.yK)([I.Ay], () => Object.values(I.Ay.getUsersForGuildEvent(U, T)), [U, T])),
+            ((n = (0, a.yK)([N.Ay], () => Object.values(N.Ay.getUsersForGuildEvent(U, null)), [U])),
+            (r = (0, a.yK)([N.Ay], () => Object.values(N.Ay.getUsersForGuildEvent(U, T)), [U, T])),
             (0, s.useMemo)(() => {
                 let e = r.reduce((e, n) => ((e[n.user_id] = n), e), {}),
                     t = n.filter((n) => {
@@ -540,7 +541,7 @@ let eU = (e) => {
             [H],
         ),
         Y = (0, _.A)(M, U, T),
-        [Z, { loading: B, error: Q }] = (0, A.A)(() => N.A.getGuildEventUsers(G?.id, T, M));
+        [Z, { loading: B, error: Q }] = (0, A.A)(() => I.A.getGuildEventUsers(G?.id, T, M));
     s.useEffect(() => {
         null == G ? p() : v.default.track(eL.HAw.OPEN_MODAL, { type: E.BV, guild_id: G.guild_id });
     }, [G, p]);
@@ -554,18 +555,22 @@ let eU = (e) => {
     }, [X]);
     let J = s.useRef(null),
         [ee, en] = s.useState(0);
+    s.useLayoutEffect(() => {
+        let e = 16 * (G?.recurrence_rule != null);
+        en((J?.current?.offsetHeight ?? 0) + e);
+    }, [J, G?.recurrence_rule]);
+    let et = s.useRef(null);
     if (
         (s.useLayoutEffect(() => {
-            let e = 16 * (G?.recurrence_rule != null);
-            en((J?.current?.offsetHeight ?? 0) + e);
-        }, [J, G?.recurrence_rule]),
+            z === E.al.RSVP_LIST && et.current?.focus();
+        }, [z]),
         null == G || null == w)
     )
         return null;
-    let et = (e) => {
+    let el = (e) => {
             e !== z && (e === E.al.RSVP_LIST && Z(), F(e));
         },
-        el = T ?? (0, S.G3)(G);
+        es = T ?? (0, C.G3)(G);
     return (0, l.jsx)(x.f5, {
         value: R,
         children: (0, l.jsxs)(i.d, {
@@ -578,7 +583,12 @@ let eU = (e) => {
                     null != H &&
                     (0, l.jsx)("div", { onContextMenu: q, children: (0, l.jsx)(b.A, { source: H, className: eD.vK }) }),
                 (0, l.jsx)(u.c, {
-                    controls: (0, l.jsx)(D, { selectedTab: z, onTabSelected: et, userCount: Y }),
+                    controls: (0, l.jsx)(D, {
+                        selectedTab: z,
+                        onTabSelected: el,
+                        userCount: Y,
+                        rsvpListTabInnerRef: et,
+                    }),
                     children: (0, l.jsx)("div", {
                         className: eD.kL,
                         ref: X,
@@ -595,9 +605,9 @@ let eU = (e) => {
                                         channel: V,
                                         headerId: O,
                                         onClose: p,
-                                        onClickInterestedCount: () => et(E.al.RSVP_LIST),
+                                        onClickInterestedCount: () => el(E.al.RSVP_LIST),
                                         containerRef: J,
-                                        recurrenceId: el,
+                                        recurrenceId: es,
                                         setRecurrenceId: L,
                                     }),
                                 }),
@@ -605,7 +615,7 @@ let eU = (e) => {
                                     id: E.al.RSVP_LIST,
                                     children: (0, l.jsx)(eR, {
                                         guildEvent: G,
-                                        recurrenceId: el,
+                                        recurrenceId: es,
                                         eventUsers: K,
                                         loading: B,
                                         containerHeight: ee,
@@ -616,7 +626,7 @@ let eU = (e) => {
                         }),
                     }),
                 }),
-                (0, l.jsx)(eG, { guildEvent: G, guild: w, channel: V, onActionTaken: p, recurrenceId: el }),
+                (0, l.jsx)(eG, { guildEvent: G, guild: w, channel: V, onActionTaken: p, recurrenceId: es }),
             ],
         }),
     });
