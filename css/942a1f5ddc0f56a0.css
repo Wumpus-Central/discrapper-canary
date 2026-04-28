@@ -1,0 +1,45 @@
+.textArea_d19bc9 {
+    background-color: var(--input-background-default);
+    border-color: var(--input-border-default)
+}
+
+.textAreaInner_d19bc9 {
+    padding-bottom: 36px
+}
+
+.textArea__89a34 {
+    height: auto;
+    resize: none
+}
+
+.resizeable__89a34 {
+    resize: auto
+}
+
+.inputMaxLength__89a34 {
+    position: relative
+}
+
+.flex__89a34 {
+    display: flex;
+    flex: 1 1 auto
+}
+
+.characterCount__89a34,
+.maxLength__89a34 {
+    bottom: 12px;
+    color: var(--text-muted);
+    font-family: var(--font-code);
+    font-size: 12px;
+    inset-inline-end: 14px;
+    pointer-events: none;
+    position: absolute
+}
+
+.errorOverflow__89a34 {
+    color: var(--text-feedback-critical)
+}
+
+.errorMessage__89a34 {
+    margin-top: 1px
+}

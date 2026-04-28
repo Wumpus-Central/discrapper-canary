@@ -1,0 +1,287 @@
+.notDetected__497cd,
+.nowPlaying__497cd {
+    animation: none;
+    border-radius: 3px;
+    margin-top: 0;
+    padding: 16px;
+    width: 100%
+}
+
+.notDetected__497cd .overlayStatusText__497cd,
+.notDetected__497cd .overlayWarningIcon__497cd,
+.nowPlaying__497cd .overlayStatusText__497cd,
+.nowPlaying__497cd .overlayWarningIcon__497cd {
+    opacity: 1
+}
+
+.game__497cd {
+    background-color: var(--background-mod-normal);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    padding: 16px;
+    position: relative
+}
+
+.game__497cd .removeGame__497cd {
+    cursor: pointer;
+    inset-inline-end: -15px;
+    opacity: 0;
+    position: absolute;
+    top: -12px
+}
+
+.game__497cd:focus-within .overlayStatusText__497cd,
+.game__497cd:focus-within .overlayWarningIcon__497cd,
+.game__497cd:focus-within .removeGame__497cd,
+.game__497cd:hover .overlayStatusText__497cd,
+.game__497cd:hover .overlayWarningIcon__497cd,
+.game__497cd:hover .removeGame__497cd {
+    opacity: 1
+}
+
+.toggleContainer__497cd {
+    margin-inline-start: 12px
+}
+
+.activeGame__497cd {
+    border-radius: 12px;
+    position: relative
+}
+
+.activeGame__497cd .removeGame__497cd {
+    inset-inline-end: -12px;
+    opacity: 0;
+    position: absolute;
+    top: -12px
+}
+
+.activeGame__497cd:focus-within .removeGame__497cd,
+.activeGame__497cd:hover .removeGame__497cd {
+    opacity: 1
+}
+
+.gameName__497cd,
+.gameNameInput__497cd,
+.gameVerifiedIcon__497cd,
+.lastPlayed__497cd,
+.overlayStatusText__497cd,
+.toggleIcon__497cd {
+    z-index: 1
+}
+
+.gameNameLastPlayed__497cd {
+    flex: 1
+}
+
+.gameVerifiedIcon__497cd {
+    margin-inline-start: 8px
+}
+
+.gameName__497cd {
+    color: var(--text-strong);
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 22px
+}
+
+.gameNameInput__497cd {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    margin-inline-start: -5px;
+    padding: 0 4px;
+    width: 240px
+}
+
+.gameNameInput__497cd:focus,
+.gameNameInput__497cd:hover {
+    background-color: var(--background-mod-normal);
+    border-color: hsl(var(--primary-500-hsl)/.3)
+}
+
+.lastPlayed__497cd {
+    color: var(--primary-400);
+    font-size: 14px
+}
+
+.overlayStatusText__497cd {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-inline-end: 4px;
+    opacity: 0;
+    text-transform: uppercase;
+    width: 100px
+}
+
+.toggleIcon__497cd {
+    cursor: pointer
+}
+
+.toggleIconOff__497cd .fill__497cd {
+    fill: var(--icon-feedback-critical)
+}
+
+.toggleIconInactive__497cd {
+    cursor: not-allowed
+}
+
+.toggleIconInactive__497cd .fill__497cd {
+    fill: var(--icon-feedback-critical);
+    opacity: .5
+}
+
+.overlayWarningIcon__497cd {
+    background: url(/assets/07e52d3b4c358536.svg) no-repeat;
+    height: 16px;
+    margin-inline-end: 20px;
+    opacity: 0;
+    width: 16px
+}
+
+.subgame__497cd {
+    align-items: center;
+    background-color: var(--background-surface-high);
+    border-radius: 0;
+    display: flex;
+    margin-bottom: 0;
+    width: 100%
+}
+
+.subgame__497cd:last-child {
+    border-radius: 0 0 12px 12px
+}
+
+.border__497cd {
+    border-bottom: 1px solid var(--border-subtle);
+    margin: 0 16px
+}
+
+.detectedApplication__497cd {
+    align-items: center;
+    display: flex
+}
+
+.nowPlaying__497cd {
+    background-color: var(--status-positive-background)
+}
+
+.nowPlaying__497cd .gameName__497cd {
+    color: var(--white)
+}
+
+.nowPlaying__497cd .gameNameInput__497cd:focus,
+.nowPlaying__497cd .gameNameInput__497cd:hover {
+    background-color: hsl(var(--green-560-hsl)/.3);
+    border-color: var(--green-560)
+}
+
+.nowPlaying__497cd .lastPlayed__497cd,
+.nowPlaying__497cd .overlayStatusText__497cd {
+    color: var(--white)
+}
+
+.nowPlaying__497cd .toggleIconInactive__497cd .fill__497cd,
+.nowPlaying__497cd .toggleIconOff__497cd .fill__497cd,
+.nowPlaying__497cd .toggleIconOn__497cd .fill__497cd {
+    fill: var(--white)
+}
+
+.notDetected__497cd {
+    background-color: var(--background-base-lower)
+}
+
+.notDetected__497cd .gameName__497cd {
+    color: var(--interactive-text-active)
+}
+
+.notDetected__497cd .lastPlayed__497cd {
+    color: var(--text-muted)
+}
+
+.toggleIconOn__497cd .fill__497cd {
+    fill: var(--interactive-text-default)
+}
+
+.game__497cd.gameHasSubgame__497cd {
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
+    margin-bottom: 0
+}
+
+.subgameContainer__497cd {
+    background-color: var(--background-surface-high);
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 20px
+}
+
+.detectionToggleModal__497cd {
+    width: var(--modal-width-small)
+}
+
+.addGamePopout__5d912 {
+    background-color: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: 3px;
+    padding: 10px;
+    width: 300px
+}
+
+.addGamePopout__5d912 .actions__5d912 {
+    align-items: center;
+    gap: var(--space-16);
+    justify-content: flex-end
+}
+
+.nowPlayingAdd__35663 {
+    align-items: center;
+    align-self: flex-start;
+    color: var(--text-muted);
+    display: flex;
+    font-size: 14px;
+    gap: 4px;
+    margin-inline-start: 0
+}
+
+.previewTitle__0e467 {
+    margin-bottom: var(--space-8);
+    position: relative
+}
+
+.preview__0e467 {
+    background: var(--background-base-low);
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-sm);
+    display: grid;
+    gap: var(--space-8);
+    grid-auto-flow: column;
+    grid-template-columns: 1fr min-content;
+    max-height: 25vh;
+    padding: var(--space-24);
+    position: relative;
+    --message-background-hover: transparent
+}
+
+.messages__0e467 {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    translate: calc(var(--custom-message-margin-horizontal)*-1) 0
+}
+
+.avatars__0e467 {
+    gap: var(--space-6);
+    justify-content: space-between
+}
+
+.avatars__0e467,
+.previewRight__0e467 {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column
+}
+
+.previewRight__0e467 {
+    gap: var(--space-20)
+}

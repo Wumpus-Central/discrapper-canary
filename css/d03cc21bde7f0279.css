@@ -1,0 +1,37 @@
+.preview__207b4 {
+    height: 100%;
+    width: 100%;
+    filter: blur(5px);
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: top;
+    object-position: top;
+    opacity: .3
+}
+
+.container__207b4,
+.preview__207b4 {
+    position: relative
+}
+
+.headerContainer__207b4 {
+    gap: var(--space-8)
+}
+
+.body__207b4,
+.headerContainer__207b4 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.body__207b4 {
+    gap: var(--space-16);
+    inset-inline-start: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%
+}

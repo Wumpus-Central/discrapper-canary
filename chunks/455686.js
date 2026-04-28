@@ -1,41 +1,41 @@
-n.d(t, { A: () => e8 });
-var r,
-    l = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(935399),
-    u = n(17928),
-    c = n(289873),
-    d = n(830215),
-    _ = n(6981),
-    h = n(475743),
-    m = n(707554),
-    g = n(821609),
-    f = n(854378),
-    E = n(652215),
-    A = n(985018),
-    p = n(379154),
+n.d(t, { A: () => e3 });
+var l,
+    r = n(627968),
+    a = n(64700),
+    i = n(935399),
+    s = n(17928),
+    o = n(289873),
+    u = n(830215),
+    c = n(6981),
+    d = n(475743),
+    h = n(503698),
+    m = n.n(h),
+    g = n(707554),
+    f = n(821609),
+    p = n(854378),
+    _ = n(652215),
+    E = n(985018),
+    A = n(379154),
     x = n(818050);
 function N(e) {
-    let { loginStatus: t, authBoxClassName: n, onSubmit: r, onCancelAccountDeletion: i } = e,
-        a = t === E.aUe.ACCOUNT_DISABLED,
-        o = a ? A.intl.string(A.t["j3rC+U"]) : A.intl.string(A.t.ZFWofo),
-        u = a ? A.intl.string(A.t["6eNTWe"]) : A.intl.string(A.t["pCBti+"]);
-    return (0, l.jsx)(f.Ay, {
+    let { loginStatus: t, authBoxClassName: n, onSubmit: l, onCancelAccountDeletion: a } = e,
+        i = t === _.aUe.ACCOUNT_DISABLED,
+        s = i ? E.intl.string(E.t["j3rC+U"]) : E.intl.string(E.t.ZFWofo),
+        o = i ? E.intl.string(E.t["6eNTWe"]) : E.intl.string(E.t["pCBti+"]);
+    return (0, r.jsx)(p.Ay, {
         tag: "form",
-        onSubmit: r,
+        onSubmit: l,
         className: n,
-        children: (0, l.jsxs)(m.F, {
-            component: (0, l.jsx)(f.hE, { className: x.QB, children: o }),
+        children: (0, r.jsxs)(g.F, {
+            component: (0, r.jsx)(p.hE, { className: x.QB, children: s }),
             children: [
-                (0, l.jsx)(f.tK, { className: x.SX, children: u }),
-                (0, l.jsxs)(f.eB, {
+                (0, r.jsx)(p.tK, { className: x.SX, children: o }),
+                (0, r.jsxs)(p.eB, {
                     children: [
-                        (0, l.jsx)(g.$, { text: A.intl.string(A.t.JhDw5o), fullWidth: !0, type: "submit" }),
-                        (0, l.jsx)("div", {
-                            className: s()(x.Ot, p.Qt),
-                            children: A.intl.format(A.t.js2rr5, { onClick: i }),
+                        (0, r.jsx)(f.$, { text: E.intl.string(E.t.JhDw5o), fullWidth: !0, type: "submit" }),
+                        (0, r.jsx)("div", {
+                            className: m()(x.Ot, A.Qt),
+                            children: E.intl.format(E.t.js2rr5, { onClick: a }),
                         }),
                     ],
                 }),
@@ -43,63 +43,65 @@ function N(e) {
         }),
     });
 }
-var I = n(921853),
-    v = n(123292),
-    S = n(161928),
-    y = n(504394),
-    b = n(702841),
-    C = n(765178),
+var I = n(492462),
+    j = n(607399),
+    S = n(921853),
+    y = n(123292),
+    v = n(331322),
+    b = n(161928),
+    C = n(504394),
+    w = n(702841),
+    R = n(765178),
     T = n(834730),
-    R = n(331322),
-    j = n(778712),
-    w = n(685094),
-    L = n(730134);
-function U() {
+    k = n(778712),
+    L = n(685094),
+    G = n(730134);
+function O() {
     return "u" < typeof document || "visible" === document.visibilityState;
 }
-var O = n(414121),
-    k =
-        (((r = {})[(r.INITIALIZING = 0)] = "INITIALIZING"),
-        (r[(r.PENDING_REMOTE_INIT = 1)] = "PENDING_REMOTE_INIT"),
-        (r[(r.PENDING_TICKET = 2)] = "PENDING_TICKET"),
-        (r[(r.PENDING_LOGIN = 3)] = "PENDING_LOGIN"),
-        (r[(r.FINISH = 4)] = "FINISH"),
-        r),
-    G = n(158390),
+var F = n(414121),
+    U =
+        (((l = {})[(l.INITIALIZING = 0)] = "INITIALIZING"),
+        (l[(l.PENDING_REMOTE_INIT = 1)] = "PENDING_REMOTE_INIT"),
+        (l[(l.PENDING_TICKET = 2)] = "PENDING_TICKET"),
+        (l[(l.PENDING_LOGIN = 3)] = "PENDING_LOGIN"),
+        (l[(l.FINISH = 4)] = "FINISH"),
+        l),
+    P = n(158390),
     D = n(636537),
-    M = n(765548),
-    P = n(626584),
-    F = n(751124),
-    B = n(625494);
+    B = n(765548),
+    M = n(626584),
+    V = n(751124),
+    H = n(625494);
 n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(508300);
-var V = n(284009),
-    H = n.n(V),
-    W = n(889227);
-async function Q(e, t) {
-    let n = (t = await $.decryptEncodedCiphertext(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
+var W = n(284009),
+    K = n.n(W),
+    Q = n(889227);
+async function $(e, t) {
+    let n = (t = await J.decryptEncodedCiphertext(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error("Invalid encoded user record.");
-    let [, r, l, i, a] = n;
-    return new W.A({ id: r, discriminator: l, avatar: "0" === i ? null : i, username: a });
+    let [, l, r, a, i] = n;
+    return new Q.A({ id: l, discriminator: r, avatar: "0" === a ? null : a, username: i });
 }
-function z(e) {
+function Z(e) {
     return btoa(String.fromCharCode(...new Uint8Array(e)))
         .replace(/\//g, "_")
         .replace(/\+/g, "-")
         .replace(/={1,2}$/, "");
 }
-function q(e) {
+function z(e) {
     return Uint8Array.from(atob(e), (e) => e.charCodeAt(0));
 }
-async function K(e) {
-    return z(await window.crypto.subtle.digest({ name: "SHA-256" }, e));
+async function X(e) {
+    return Z(await window.crypto.subtle.digest({ name: "SHA-256" }, e));
 }
-function Z(e, t) {
+function q(e, t) {
     return (
-        H()(null != e.privateKey, "private key cannot be null"),
+        K()(null != e.privateKey, "private key cannot be null"),
         window.crypto.subtle.decrypt({ name: "RSA-OAEP", hash: "SHA-256" }, e.privateKey, t)
     );
 }
-let $ = new (class {
+let J = new (class {
         generateRsaKeyPair() {
             return window.crypto.subtle.generateKey(
                 { name: "RSA-OAEP", modulusLength: 2048, publicExponent: new Uint8Array([1, 0, 1]), hash: "SHA-256" },
@@ -109,131 +111,131 @@ let $ = new (class {
         }
         async serializePublicKey(e) {
             return (
-                H()(null != e.publicKey, "public key cannot be null"),
+                K()(null != e.publicKey, "public key cannot be null"),
                 btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey("spki", e.publicKey))))
             );
         }
         async publicKeyFingerprint(e) {
             return (
-                H()(null != e.publicKey, "public key cannot be null"),
-                K(await window.crypto.subtle.exportKey("spki", e.publicKey))
+                K()(null != e.publicKey, "public key cannot be null"),
+                X(await window.crypto.subtle.exportKey("spki", e.publicKey))
             );
         }
         async decryptEncodedCiphertext(e, t) {
             let n = new TextDecoder(),
-                r = await Z(e, q(t));
-            return n.decode(r);
+                l = await q(e, z(t));
+            return n.decode(l);
         }
         async decryptNonce(e, t) {
-            return z(await Z(e, q(t)));
+            return Z(await q(e, z(t)));
         }
         release() {}
     })(),
-    X = new P.A("useAuthWebsocket");
-var Y = n(293731),
-    J = n(495544),
-    ee = n(723702),
-    et = n(427262),
-    en = n(19575),
-    er = n(818348),
-    el = n(611008);
-let ei = n(906118);
-function ea(e) {
+    Y = new M.A("useAuthWebsocket");
+var ee = n(293731),
+    et = n(495544),
+    en = n(723702),
+    el = n(427262),
+    er = n(19575),
+    ea = n(818348),
+    ei = n(611008);
+let es = n(906118);
+function eo(e) {
     let { text: t = "" } = e,
-        [n, r] = i.useState(!1);
+        [n, l] = a.useState(!1);
     return (
-        i.useEffect(() => {
+        a.useEffect(() => {
             let e = new Image();
-            (e.src = ei), (e.onload = () => r(!0)), (e.onerror = () => r(!0));
-        }, [ei]),
-        i.useEffect(() => {
-            n && C.O.announce(A.intl.string(A.t.j2p125));
+            (e.src = es), (e.onload = () => l(!0)), (e.onerror = () => l(!0));
+        }, [es]),
+        a.useEffect(() => {
+            n && R.O.announce(E.intl.string(E.t.j2p125));
         }, [n]),
-        (0, l.jsx)("div", {
-            className: el.Ac,
+        (0, r.jsx)("div", {
+            className: ei.Ac,
             children:
                 "" !== t && n
-                    ? (0, l.jsxs)(l.Fragment, {
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, l.jsx)(O.Ay, { className: el.JB, size: 160, text: t }),
-                              (0, l.jsx)("div", {
-                                  className: el.R6,
-                                  children: (0, l.jsx)("img", { src: ei, alt: "" }),
+                              (0, r.jsx)(F.Ay, { className: ei.JB, size: 160, text: t }),
+                              (0, r.jsx)("div", {
+                                  className: ei.R6,
+                                  children: (0, r.jsx)("img", { src: es, alt: "" }),
                               }),
                           ],
                       })
-                    : (0, l.jsx)("div", {
-                          className: el.R6,
-                          "aria-label": A.intl.string(A.t.BUGkVF),
+                    : (0, r.jsx)("div", {
+                          className: ei.R6,
+                          "aria-label": E.intl.string(E.t.BUGkVF),
                           "aria-busy": !0,
-                          children: (0, l.jsx)(c.y, {
-                              className: el.JB,
-                              type: c.y.Type.WANDERING_CUBES,
+                          children: (0, r.jsx)(o.y, {
+                              className: ei.JB,
+                              type: o.y.Type.WANDERING_CUBES,
                               "aria-hidden": !0,
                           }),
                       }),
         })
     );
 }
-let es = (e) => {
+let eu = (e) => {
     let { className: t, children: n } = e;
-    return (0, l.jsx)(T.E, { variant: "text-md/normal", color: "text-feedback-critical", className: t, children: n });
+    return (0, r.jsx)(T.E, { variant: "text-md/normal", color: "text-feedback-critical", className: t, children: n });
 };
-function eo(e) {
-    let { state: t, cancel: n, errorMessage: r, conditionalMediationAbortController: i, isPasswordlessActive: a } = e;
+function ec(e) {
+    let { state: t, cancel: n, errorMessage: l, conditionalMediationAbortController: a, isPasswordlessActive: i } = e;
     switch (t.step) {
-        case k.INITIALIZING:
-        case k.PENDING_REMOTE_INIT:
-            return (0, l.jsxs)(l.Fragment, {
+        case U.INITIALIZING:
+        case U.PENDING_REMOTE_INIT:
+            return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, l.jsx)(ea, {
-                        text: t.step === k.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
+                    (0, r.jsx)(eo, {
+                        text: t.step === U.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
                     }),
-                    (0, l.jsx)(f.hE, { className: x.QB, children: A.intl.string(A.t.UPiHaL) }),
-                    null != r
-                        ? (0, l.jsx)(es, { children: r })
-                        : (0, l.jsx)(f.tK, { children: A.intl.format(A.t["Qq+A6i"], {}) }),
-                    (0, l.jsx)(R.B, {
+                    (0, r.jsx)(p.hE, { className: x.QB, children: E.intl.string(E.t.UPiHaL) }),
+                    null != l
+                        ? (0, r.jsx)(eu, { children: l })
+                        : (0, r.jsx)(p.tK, { children: E.intl.format(E.t["Qq+A6i"], {}) }),
+                    (0, r.jsx)(v.B, {
                         padding: 8,
                         align: "center",
-                        children: (0, l.jsx)(v.Q, {
-                            text: A.intl.string(A.t["/kpMDt"]),
+                        children: (0, r.jsx)(y.Q, {
+                            text: E.intl.string(E.t["/kpMDt"]),
                             textVariant: "text-sm/normal",
                             onClick: () => {
                                 let e;
                                 return (
                                     (e =
-                                        ee.isPlatformEmbedded && en.Ay.supportsFeature(E.BYE.WEBAUTHN)
-                                            ? en.Ay.webAuthnAuthenticate
-                                            : Y.J),
-                                    void d.A.authenticatePasswordless({
+                                        en.isPlatformEmbedded && er.Ay.supportsFeature(_.BYE.WEBAUTHN)
+                                            ? er.Ay.webAuthnAuthenticate
+                                            : ee.J),
+                                    void u.A.authenticatePasswordless({
                                         authenticateFunc: e,
-                                        conditionalMediationAbortController: i,
+                                        conditionalMediationAbortController: a,
                                     }).catch(() => {})
                                 );
                             },
-                            disabled: a,
+                            disabled: i,
                         }),
                     }),
                 ],
             });
-        case k.PENDING_TICKET: {
+        case U.PENDING_TICKET: {
             let { user: e } = t;
-            return (0, l.jsxs)(l.Fragment, {
+            return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, l.jsx)(L.A, {
-                        className: el.b4,
+                    (0, r.jsx)(G.A, {
+                        className: ei.b4,
                         user: e,
-                        size: j._3.SIZE_120,
+                        size: k._3.SIZE_120,
                         isMobile: !0,
-                        status: er.cl.ONLINE,
+                        status: ea.cl.ONLINE,
                     }),
-                    (0, l.jsx)(f.hE, { className: x.QB, children: A.intl.string(A.t.apGCUT) }),
-                    (0, l.jsx)(f.tK, { children: A.intl.format(A.t.Cbl5JK, { username: `${et.Ay.getUserTag(e)}` }) }),
-                    (0, l.jsx)("div", {
-                        className: el.Z,
-                        children: (0, l.jsx)(v.Q, {
-                            text: A.intl.string(A.t.nOOhwo),
+                    (0, r.jsx)(p.hE, { className: x.QB, children: E.intl.string(E.t.apGCUT) }),
+                    (0, r.jsx)(p.tK, { children: E.intl.format(E.t.Cbl5JK, { username: `${el.Ay.getUserTag(e)}` }) }),
+                    (0, r.jsx)("div", {
+                        className: ei.Z,
+                        children: (0, r.jsx)(y.Q, {
+                            text: E.intl.string(E.t.nOOhwo),
                             textVariant: "text-sm/normal",
                             onClick: n,
                         }),
@@ -241,174 +243,174 @@ function eo(e) {
                 ],
             });
         }
-        case k.PENDING_LOGIN:
-        case k.FINISH:
-            return (0, l.jsx)(c.y, { type: c.y.Type.WANDERING_CUBES });
+        case U.PENDING_LOGIN:
+        case U.FINISH:
+            return (0, r.jsx)(o.y, { type: o.y.Type.WANDERING_CUBES });
     }
 }
-function eu(e) {
+function ed(e) {
     let { onAuthenticateSuccess: t, conditionalMediationAbortController: n } = e,
-        r = (0, b.bG)([J.default], () => J.default.getIsPasswordlessActive()),
-        { state: a, cancel: s } = (function (e, t) {
-            let [n, r] = i.useState(0),
-                [l, a] = i.useState(!1),
-                [s, o] = i.useState({ step: k.INITIALIZING }),
-                u = i.useRef(null),
-                c = i.useMemo(() => new G.A(1500, 3e4), []),
-                _ = (0, M.A)(() => {
-                    o({ step: k.INITIALIZING }),
+        l = (0, w.bG)([et.default], () => et.default.getIsPasswordlessActive()),
+        { state: i, cancel: s } = (function (e, t) {
+            let [n, l] = a.useState(0),
+                [r, i] = a.useState(!1),
+                [s, o] = a.useState({ step: U.INITIALIZING }),
+                c = a.useRef(null),
+                d = a.useMemo(() => new P.A(1500, 3e4), []),
+                h = (0, B.A)(() => {
+                    o({ step: U.INITIALIZING }),
                         t
-                            ? r((e) => e + 1)
-                            : (X.info(
+                            ? l((e) => e + 1)
+                            : (Y.info(
                                   "document is not visible, will defer reconnection when document becomes visible.",
                               ),
-                              a(!0));
+                              i(!0));
                 }),
-                h = i.useCallback(() => {
-                    X.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session."),
-                        o({ step: k.INITIALIZING }),
-                        c.pending || c.fail(_);
-                }, [_, c]);
+                m = a.useCallback(() => {
+                    Y.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session."),
+                        o({ step: U.INITIALIZING }),
+                        d.pending || d.fail(h);
+                }, [h, d]);
             return (
-                i.useEffect(() => {
+                a.useEffect(() => {
                     t &&
-                        l &&
-                        s.step === k.INITIALIZING &&
-                        (X.info("reconnecting, now that document is visible"), a(!1), r((e) => e + 1));
-                }, [s, t, l, a]),
-                i.useEffect(() => {
+                        r &&
+                        s.step === U.INITIALIZING &&
+                        (Y.info("reconnecting, now that document is visible"), i(!1), l((e) => e + 1));
+                }, [s, t, r, i]),
+                a.useEffect(() => {
                     let t = Date.now(),
                         n = (e) => `[${Date.now() - t}ms] ${e}`,
-                        r = (e) => X.info(n(e)),
-                        l = `${window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT}/?v=2`;
-                    l.startsWith("//") && (l = `wss:${l}`);
-                    let i = (0, F.A)(l);
-                    X.info(`[0ms] connecting to ${l}`);
-                    let a = null,
+                        l = (e) => Y.info(n(e)),
+                        r = `${window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT}/?v=2`;
+                    r.startsWith("//") && (r = `wss:${r}`);
+                    let a = (0, V.A)(r);
+                    Y.info(`[0ms] connecting to ${r}`);
+                    let i = null,
                         s = null,
-                        m = null,
                         g = null,
-                        f = !0;
-                    function A() {
-                        if (null != a) return a;
+                        f = null,
+                        p = !0;
+                    function E() {
+                        if (null != i) return i;
                         throw Error("No key pair set");
                     }
-                    let p = () => {
-                            f
-                                ? ((f = !1), i.send(JSON.stringify({ op: "heartbeat" })))
-                                : (r("heartbeat timeout, reconnecting."), i.close(), h());
+                    let A = () => {
+                            p
+                                ? ((p = !1), a.send(JSON.stringify({ op: "heartbeat" })))
+                                : (l("heartbeat timeout, reconnecting."), a.close(), m());
                         },
                         x = async (t) => {
-                            let { data: l } = t,
-                                a = JSON.parse(l);
-                            switch (a.op) {
+                            let { data: r } = t,
+                                i = JSON.parse(r);
+                            switch (i.op) {
                                 case "nonce_proof": {
-                                    let e = a.encrypted_nonce,
-                                        t = await $.decryptNonce(A(), e);
-                                    r("computed nonce proof"), i.send(JSON.stringify({ op: "nonce_proof", nonce: t }));
+                                    let e = i.encrypted_nonce,
+                                        t = await J.decryptNonce(E(), e);
+                                    l("computed nonce proof"), a.send(JSON.stringify({ op: "nonce_proof", nonce: t }));
                                     return;
                                 }
                                 case "pending_remote_init": {
-                                    c.succeed(), B._.dispatch(E.jej.WAVE_EMPHASIZE);
-                                    let e = await $.publicKeyFingerprint(A());
-                                    if (e !== a.fingerprint) throw Error(`bad fingerprint ${e} !== ${a.fingerprint}`);
-                                    r("handshake complete awaiting remote auth."),
-                                        o({ step: k.PENDING_REMOTE_INIT, fingerprint: e });
+                                    d.succeed(), H._.dispatch(_.jej.WAVE_EMPHASIZE);
+                                    let e = await J.publicKeyFingerprint(E());
+                                    if (e !== i.fingerprint) throw Error(`bad fingerprint ${e} !== ${i.fingerprint}`);
+                                    l("handshake complete awaiting remote auth."),
+                                        o({ step: U.PENDING_REMOTE_INIT, fingerprint: e });
                                     return;
                                 }
                                 case "pending_login": {
-                                    let t = a.ticket;
-                                    if (null == t) return void h();
-                                    o({ step: k.PENDING_LOGIN, ticket: t }),
+                                    let t = i.ticket;
+                                    if (null == t) return void m();
+                                    o({ step: U.PENDING_LOGIN, ticket: t }),
                                         D.Bo.post({
-                                            url: E.Rsh.REMOTE_AUTH_LOGIN,
+                                            url: _.Rsh.REMOTE_AUTH_LOGIN,
                                             body: { ticket: t },
                                             oldFormErrors: !0,
                                             rejectWithError: !0,
                                         })
                                             .then(async (t) => {
-                                                if (null == u.current) return void h();
-                                                let n = await $.decryptEncodedCiphertext(
-                                                        u.current,
+                                                if (null == c.current) return void m();
+                                                let n = await J.decryptEncodedCiphertext(
+                                                        c.current,
                                                         t.body.encrypted_token,
                                                     ),
-                                                    r = await $.publicKeyFingerprint(u.current);
-                                                await d.A.loginToken(n, !1), e(r);
+                                                    l = await J.publicKeyFingerprint(c.current);
+                                                await u.A.loginToken(n, !1), e(l);
                                             })
-                                            .catch(() => h());
+                                            .catch(() => m());
                                     return;
                                 }
                                 case "pending_ticket": {
-                                    B._.dispatch(E.jej.WAVE_EMPHASIZE),
-                                        r("remote auth handshake started, awaiting ticket/cancel.");
-                                    let e = a.encrypted_user_payload,
-                                        t = await Q(A(), e);
-                                    o({ step: k.PENDING_TICKET, user: t });
+                                    H._.dispatch(_.jej.WAVE_EMPHASIZE),
+                                        l("remote auth handshake started, awaiting ticket/cancel.");
+                                    let e = i.encrypted_user_payload,
+                                        t = await $(E(), e);
+                                    o({ step: U.PENDING_TICKET, user: t });
                                     return;
                                 }
                                 case "cancel":
-                                    r("remote auth handshake cancelled."), _();
+                                    l("remote auth handshake cancelled."), h();
                                     return;
                                 case "hello": {
-                                    r(`got hello, auth timeout=${a.timeout_ms}ms`);
-                                    let e = a.heartbeat_interval;
-                                    g = setTimeout(
+                                    l(`got hello, auth timeout=${i.timeout_ms}ms`);
+                                    let e = i.heartbeat_interval;
+                                    f = setTimeout(
                                         () => {
-                                            (g = null), p(), (m = setInterval(p, e));
+                                            (f = null), A(), (g = setInterval(A, e));
                                         },
                                         Math.floor(e * Math.random()),
                                     );
                                     return;
                                 }
                                 case "heartbeat_ack":
-                                    f = !0;
+                                    p = !0;
                                     return;
                                 default:
-                                    X.warn(n("received unsupported message"));
+                                    Y.warn(n("received unsupported message"));
                             }
                         },
                         N = async () => {
-                            (a = await $.generateRsaKeyPair()), (s = await $.serializePublicKey(a));
-                            let e = await $.publicKeyFingerprint(a);
-                            r(`connected, handshaking with fingerprint: ${e}`),
-                                i.send(JSON.stringify({ op: "init", encoded_public_key: s })),
-                                (u.current = a);
+                            (i = await J.generateRsaKeyPair()), (s = await J.serializePublicKey(i));
+                            let e = await J.publicKeyFingerprint(i);
+                            l(`connected, handshaking with fingerprint: ${e}`),
+                                a.send(JSON.stringify({ op: "init", encoded_public_key: s })),
+                                (c.current = i);
                         },
                         I = (e) => {
-                            r(`disconnected, code: ${e.code} ${e.reason}`), h();
+                            l(`disconnected, code: ${e.code} ${e.reason}`), m();
                         },
-                        v = (e) => {
-                            r(`disconnected, error: ${JSON.stringify(e)}`), h();
+                        j = (e) => {
+                            l(`disconnected, error: ${JSON.stringify(e)}`), m();
                         };
                     return (
-                        i.addEventListener("open", N),
-                        i.addEventListener("message", x),
-                        i.addEventListener("close", I),
-                        i.addEventListener("error", v),
+                        a.addEventListener("open", N),
+                        a.addEventListener("message", x),
+                        a.addEventListener("close", I),
+                        a.addEventListener("error", j),
                         () => {
-                            r("cleaning up"),
-                                i.removeEventListener("open", N),
-                                i.removeEventListener("message", x),
-                                i.removeEventListener("close", I),
-                                i.removeEventListener("error", v),
-                                i.close(1e3),
-                                c.cancel(),
-                                $.release(),
-                                null != g && clearTimeout(g),
-                                null != m && clearInterval(m);
+                            l("cleaning up"),
+                                a.removeEventListener("open", N),
+                                a.removeEventListener("message", x),
+                                a.removeEventListener("close", I),
+                                a.removeEventListener("error", j),
+                                a.close(1e3),
+                                d.cancel(),
+                                J.release(),
+                                null != f && clearTimeout(f),
+                                null != g && clearInterval(g);
                         }
                     );
-                }, [_, e, n, c, h]),
-                { state: s, cancel: _ }
+                }, [h, e, n, d, m]),
+                { state: s, cancel: h }
             );
         })(
             t,
             (function () {
-                let [e, t] = (0, i.useState)(U());
+                let [e, t] = (0, a.useState)(O());
                 return (
-                    (0, i.useEffect)(() => {
+                    (0, a.useEffect)(() => {
                         function e() {
-                            t(U());
+                            t(O());
                         }
                         return (
                             window.addEventListener("visibilitychange", e),
@@ -423,358 +425,93 @@ function eu(e) {
         ),
         o = (function (e) {
             switch (e) {
-                case k.INITIALIZING:
-                case k.PENDING_REMOTE_INIT:
+                case U.INITIALIZING:
+                case U.PENDING_REMOTE_INIT:
                     return 0;
-                case k.PENDING_TICKET:
-                case k.PENDING_LOGIN:
-                case k.FINISH:
+                case U.PENDING_TICKET:
+                case U.PENDING_LOGIN:
+                case U.FINISH:
                     return 1;
             }
-        })(a.step);
-    return (0, l.jsxs)(l.Fragment, {
-        children: [
-            (0, l.jsx)("div", { className: el.AC }),
-            (0, l.jsx)(w.Y, {
-                fillParent: !0,
-                className: el.ZF,
-                step: o,
-                steps: [0, 1],
-                children: (0, l.jsx)("div", {
-                    className: el.vP,
-                    children: (0, l.jsx)(eo, {
-                        state: a,
-                        cancel: s,
-                        conditionalMediationAbortController: n,
-                        isPasswordlessActive: r,
-                    }),
+        })(i.step);
+    return (0, r.jsx)(g.F, {
+        children: (0, r.jsx)(L.Y, {
+            fillParent: !0,
+            className: ei.ZF,
+            step: o,
+            steps: [0, 1],
+            children: (0, r.jsx)("div", {
+                className: ei.vP,
+                children: (0, r.jsx)(ec, {
+                    state: i,
+                    cancel: s,
+                    conditionalMediationAbortController: n,
+                    isPasswordlessActive: l,
                 }),
             }),
-        ],
-    });
-}
-var ec = n(235986),
-    ed = n(274303),
-    e_ = n(354948);
-function eh(e, t) {
-    if (null == t[e]) return null;
-    {
-        let n = t[e];
-        return Array.isArray(n) ? n[0] : n;
-    }
-}
-function em(e) {
-    let t,
-        {
-            invite: n,
-            giftCode: r,
-            loginStatus: i,
-            country: a,
-            showMobileWebHandoff: o,
-            disableAutofocusOnDefaultForm: c,
-            withQR: d,
-            dismissedChooseAccount: _,
-            login: h,
-            password: N,
-            errors: b,
-            conditionalMediationAbortController: C,
-            onLoginChange: T,
-            onPasswordChange: R,
-            setLoginRef: j,
-            setPasswordRef: w,
-            onReturnToChooseAccount: L,
-            handleForgotPassword: U,
-            handleGotoRegister: O,
-            handleAuthSuccess: k,
-        } = e,
-        G = (0, u.bG)([ed.A], () => ed.A.getHasLoggedInAccounts()),
-        D = null == b.email && null != b.password;
-    return (
-        (t =
-            null != n
-                ? (0, l.jsx)("div", { className: x.S3, children: (0, l.jsx)(y.A, { invite: n }) })
-                : null != r
-                  ? (0, l.jsx)(S.A, { giftCode: r })
-                  : (0, l.jsxs)("div", {
-                        className: p.wx,
-                        children: [
-                            (0, l.jsx)(f.hE, { className: x.QB, children: A.intl.string(A.t["7fNJgA"]) }, "title"),
-                            !1 === (0, ee.isAndroidWeb)()
-                                ? (0, l.jsx)(f.tK, { children: A.intl.string(A.t.euS7r4) }, "subtitle")
-                                : null,
-                        ],
-                    })),
-        (0, l.jsxs)(
-            ec.A,
-            {
-                direction: ec.A.Direction.HORIZONTAL,
-                align: ec.A.Align.CENTER,
-                children: [
-                    (0, l.jsxs)("div", {
-                        className: p.Eh,
-                        children: [
-                            G &&
-                                _ &&
-                                (0, l.jsx)("div", {
-                                    className: p.AX,
-                                    children: (0, l.jsx)(g.$, {
-                                        onClick: L,
-                                        variant: "secondary",
-                                        text: A.intl.string(A.t["1MrpWO"]),
-                                        icon: I.n,
-                                    }),
-                                }),
-                            t,
-                            (0, l.jsx)(m.F, {
-                                children: (0, l.jsxs)(f.eB, {
-                                    className: x.QX,
-                                    children: [
-                                        (0, l.jsx)(e_.A, {
-                                            alpha2: a.alpha2,
-                                            countryCode: a.code.split(" ")[0],
-                                            className: x.SX,
-                                            label: A.intl.string(A.t.tUjnxr),
-                                            error: eh("login", b) ?? eh("email", b),
-                                            onChange: T,
-                                            setRef: j,
-                                            autoCapitalize: "none",
-                                            autoComplete: "username webauthn",
-                                            autoCorrect: "off",
-                                            spellCheck: "false",
-                                            value: h,
-                                            autoFocus: !D && !o && !c,
-                                            required: !0,
-                                        }),
-                                        (0, l.jsx)(f.pd, {
-                                            label: A.intl.string(A.t["CIGa+7"]),
-                                            error: eh("password", b),
-                                            onChange: R,
-                                            name: "password",
-                                            type: "password",
-                                            setRef: w,
-                                            autoComplete: "current-password",
-                                            spellCheck: "false",
-                                            autoFocus: D && !o && !c,
-                                            value: N,
-                                            required: !0,
-                                        }),
-                                        (0, l.jsx)("div", {
-                                            className: s()(x.SX, x.a5),
-                                            children: (0, l.jsx)(v.Q, {
-                                                text: A.intl.string(A.t.wWIufs),
-                                                textVariant: "text-sm/normal",
-                                                onClick: U,
-                                            }),
-                                        }),
-                                        (0, l.jsx)("div", {
-                                            className: x.QB,
-                                            children: (0, l.jsx)(g.$, {
-                                                text: A.intl.string(A.t.dKhVQN),
-                                                fullWidth: !0,
-                                                type: "submit",
-                                                loading: i === E.aUe.LOGGING_IN,
-                                            }),
-                                        }),
-                                        (0, l.jsxs)("div", {
-                                            className: x.a5,
-                                            children: [
-                                                (0, l.jsx)("span", {
-                                                    className: p.Qt,
-                                                    children: A.intl.string(A.t.tmE73r),
-                                                }),
-                                                (0, l.jsx)("span", {
-                                                    className: p.Z8,
-                                                    children: (0, l.jsx)(v.Q, {
-                                                        text: A.intl.string(A.t.pV8xeR),
-                                                        textVariant: "text-sm/normal",
-                                                        onClick: O,
-                                                    }),
-                                                }),
-                                            ],
-                                        }),
-                                    ],
-                                }),
-                            }),
-                        ],
-                    }),
-                    (0, l.jsx)(m.F, {
-                        children: d
-                            ? (0, l.jsx)(eu, { onAuthenticateSuccess: k, conditionalMediationAbortController: C })
-                            : null,
-                    }),
-                ],
-            },
-            "form-wrapper",
-        )
-    );
-}
-var eg = n(228366),
-    ef = n(572469);
-function eE(e) {
-    let { loginSource: t, giftCodeSKUId: n } = e,
-        r = (0, u.cf)(
-            [J.default],
-            () => ({ ticket: J.default.getMFATicket(), methods: J.default.getMFAMethods() }),
-            [],
-        ),
-        a = i.useCallback(
-            (e) => {
-                let { mfaType: r, data: l, ticket: i } = e;
-                return (
-                    B._.dispatch(E.jej.WAVE_EMPHASIZE),
-                    d.A.loginMFAv2({ code: l, ticket: i, mfaType: r, source: t, giftCodeSKUId: n })
-                );
-            },
-            [t, n],
-        );
-    return (0, l.jsx)(f.Ay, {
-        style: { padding: 0 },
-        children: (0, l.jsx)(ef.t, {
-            mfaFinish: a,
-            mfaChallenge: r,
-            onEarlyClose: () => {
-                eg.h.dispatch({ type: "LOGIN_RESET" });
-            },
-            width: 480,
         }),
     });
 }
-function eA(e) {
-    let {
-        authBoxClassName: t,
-        country: n,
-        login: r,
-        password: i,
-        onLoginChange: a,
-        onPasswordChange: s,
-        setLoginRef: o,
-        setPasswordRef: u,
-    } = e;
-    return (0, l.jsxs)(f.Ay, {
-        className: t,
-        children: [
-            (0, l.jsx)(y.M, {}),
-            (0, l.jsxs)(f.eB, {
-                className: x.QX,
-                children: [
-                    (0, l.jsx)(e_.A, {
-                        className: x.SX,
-                        alpha2: n.alpha2,
-                        countryCode: n.code.split(" ")[0],
-                        label: A.intl.string(A.t.tUjnxr),
-                        onChange: a,
-                        setRef: o,
-                        autoCapitalize: "none",
-                        autoComplete: "username webauthn",
-                        autoCorrect: "off",
-                        spellCheck: "false",
-                        value: r,
-                        autoFocus: !0,
-                        required: !0,
-                    }),
-                    (0, l.jsx)(f.pd, {
-                        className: x.SX,
-                        label: A.intl.string(A.t["CIGa+7"]),
-                        onChange: s,
-                        type: "password",
-                        setRef: u,
-                        autoComplete: "current-password",
-                        spellCheck: "false",
-                        value: i,
-                        required: !0,
-                    }),
-                    (0, l.jsx)("div", {
-                        className: x.QB,
-                        children: (0, l.jsx)(g.$, {
-                            text: A.intl.string(A.t.dKhVQN),
-                            fullWidth: !0,
-                            type: "submit",
-                            disabled: !0,
-                        }),
-                    }),
-                    (0, l.jsx)(v.Q, { text: A.intl.string(A.t.wWIufs), textVariant: "text-sm/normal", disabled: !0 }),
-                    (0, l.jsx)("div", {
-                        className: x.a5,
-                        children: (0, l.jsx)(v.Q, {
-                            text: A.intl.string(A.t.tmE73r),
-                            textVariant: "text-sm/normal",
-                            disabled: !0,
-                        }),
-                    }),
-                ],
-            }),
-        ],
-    });
-}
-var ep = n(492462),
-    ex = n(511815),
-    eN = n(189213),
-    eI = n(139033),
-    ev = n(192308),
-    eS = n(557722),
-    ey = n(954571),
-    eb = n(351671),
-    eC = n(15552),
-    eT = n(212640),
-    eR = n(952116),
-    ej = n(491509),
-    ew = n(895600);
+var eh = n(538796),
+    em = n(895600);
 n(323874), n(14289), n(35956);
-var eL = n(80703),
-    eU = n(506774),
-    eO = n(927813),
-    ek = n(104798),
-    eG = n(1959);
-let eD = "mweb_handoff_nonce",
-    eM = "mweb_handoff_nonce_expiration",
-    eP = +eO.A.Millis.MINUTE,
-    eF = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
-    eB = new Set(["deep_link_failed"]),
-    eV = () => {
-        eU.w.remove(eD), eU.w.remove(eM);
+var eg = n(80703),
+    ef = n(506774),
+    ep = n(228366),
+    e_ = n(954571),
+    eE = n(927813),
+    eA = n(104798),
+    ex = n(1959);
+let eN = "mweb_handoff_nonce",
+    eI = "mweb_handoff_nonce_expiration",
+    ej = +eE.A.Millis.MINUTE,
+    eS = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
+    ey = new Set(["deep_link_failed"]),
+    ev = () => {
+        ef.w.remove(eN), ef.w.remove(eI);
     },
-    eH = () => {
-        let e = (0, u.bG)([J.default], () => J.default.getFingerprint()),
-            { fingerprint: t, handoff_token: n } = (0, ep.parse)(window.location.search),
-            r = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
-            a = r ?? (null !== e ? e : void 0);
-        i.useEffect(() => {
-            null !== r && e !== r && eg.h.dispatch({ type: "FINGERPRINT", fingerprint: r });
-        }, [r, e]);
-        let [s, o] = i.useState(null),
-            c = i.useCallback(
+    eb = () => {
+        let e = (0, s.bG)([et.default], () => et.default.getFingerprint()),
+            { fingerprint: t, handoff_token: n } = (0, I.parse)(window.location.search),
+            l = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
+            i = l ?? (null !== e ? e : void 0);
+        a.useEffect(() => {
+            null !== l && e !== l && ep.h.dispatch({ type: "FINGERPRINT", fingerprint: l });
+        }, [l, e]);
+        let [o, c] = a.useState(null),
+            d = a.useCallback(
                 (e) => {
-                    o(e),
-                        ey.default.track(
-                            E.HAw.MOBILE_WEB_HANDOFF_FAILURE,
-                            { reason: e, fingerprint: (0, eL.v)(a) },
-                            { fingerprint: a },
+                    c(e),
+                        e_.default.track(
+                            _.HAw.MOBILE_WEB_HANDOFF_FAILURE,
+                            { reason: e, fingerprint: (0, eg.v)(i) },
+                            { fingerprint: i },
                         );
                 },
-                [o, a],
+                [c, i],
             ),
-            _ = eU.w.get(eD);
+            h = ef.w.get(eN);
         if (
-            ("null" === n && null === s && c("deep_link_failed"),
-            null != n && "null" !== n && null == _ && null === s && c("nonce_missing"),
-            i.useEffect(() => {
-                if (null != _) {
-                    let e = eU.w.get(eM);
-                    (null == e || Date.now() >= e) && (c("nonce_expired"), eV());
+            ("null" === n && null === o && d("deep_link_failed"),
+            null != n && "null" !== n && null == h && null === o && d("nonce_missing"),
+            a.useEffect(() => {
+                if (null != h) {
+                    let e = ef.w.get(eI);
+                    (null == e || Date.now() >= e) && (d("nonce_expired"), ev());
                 }
-            }, [_, c]),
-            i.useEffect(() => {
+            }, [h, d]),
+            a.useEffect(() => {
                 null != n &&
                     "null" !== n &&
-                    null != _ &&
-                    null == s &&
-                    D.Bo.post({ url: E.Rsh.HANDOFF_EXCHANGE, body: { key: _, handoff_token: n }, rejectWithError: !0 })
-                        .then((e) => d.A.loginToken(e.body.token, !1))
+                    null != h &&
+                    null == o &&
+                    D.Bo.post({ url: _.Rsh.HANDOFF_EXCHANGE, body: { key: h, handoff_token: n }, rejectWithError: !0 })
+                        .then((e) => u.A.loginToken(e.body.token, !1))
                         .then(() => {
-                            ey.default.track(E.HAw.LOGIN_SUCCESSFUL, {
-                                source: E.mdB.MOBILE_WEB_HANDOFF,
+                            e_.default.track(_.HAw.LOGIN_SUCCESSFUL, {
+                                source: _.mdB.MOBILE_WEB_HANDOFF,
                                 is_new_user: !1,
-                                fingerprint: (0, eL.v)(a),
+                                fingerprint: (0, eg.v)(i),
                             });
                             let e = new URL(window.location.href),
                                 t = new URLSearchParams(e.search);
@@ -784,56 +521,56 @@ let eD = "mweb_handoff_nonce",
                                 window.history.pushState(null, "", e);
                         })
                         .catch(() => {
-                            c("handoff_exchange");
+                            d("handoff_exchange");
                         })
                         .finally(() => {
-                            eV();
+                            ev();
                         });
-            }, [n, _, s, a, c]),
-            null == a)
+            }, [n, h, o, i, d]),
+            null == i)
         )
             return null;
-        let h =
-            null == s
-                ? (0, l.jsxs)(l.Fragment, {
-                      children: [A.intl.string(A.t.uJ1JsY), (0, l.jsx)("br", {}), A.intl.string(A.t.GHVWAs)],
+        let m =
+            null == o
+                ? (0, r.jsxs)(r.Fragment, {
+                      children: [E.intl.string(E.t.uJ1JsY), (0, r.jsx)("br", {}), E.intl.string(E.t.GHVWAs)],
                   })
-                : eB.has(s)
-                  ? A.intl.string(A.t.EPt55r)
-                  : eF.has(s)
-                    ? A.intl.string(A.t.g87kTp)
+                : ey.has(o)
+                  ? E.intl.string(E.t.EPt55r)
+                  : eS.has(o)
+                    ? E.intl.string(E.t.g87kTp)
                     : void 0;
-        return null != s && eB.has(s)
-            ? (0, l.jsx)("div", {
-                  className: eG.Un,
-                  children: (0, l.jsx)(T.E, {
+        return null != o && ey.has(o)
+            ? (0, r.jsx)("div", {
+                  className: ex.Un,
+                  children: (0, r.jsx)(T.E, {
                       color: "interactive-text-default",
                       variant: "text-sm/semibold",
-                      children: h,
+                      children: m,
                   }),
               })
-            : (0, l.jsxs)("div", {
-                  className: eG.kL,
+            : (0, r.jsxs)("div", {
+                  className: ex.kL,
                   children: [
-                      (0, l.jsx)(T.E, { variant: "text-sm/semibold", children: h }),
-                      (0, l.jsx)(g.$, {
+                      (0, r.jsx)(T.E, { variant: "text-sm/semibold", children: m }),
+                      (0, r.jsx)(f.$, {
                           variant: "overlay-primary",
-                          text: A.intl.string(A.t.NcC759),
+                          text: E.intl.string(E.t.NcC759),
                           onClick: () => {
-                              let e = ek.A.generateNonce();
-                              eU.w.set(eD, e), eU.w.set(eM, Date.now() + eP);
-                              let t = new URL(E.J$u),
+                              let e = eA.A.generateNonce();
+                              ef.w.set(eN, e), ef.w.set(eI, Date.now() + ej);
+                              let t = new URL(_.J$u),
                                   n = new URLSearchParams(window.location.search);
                               n.delete("fingerprint"), n.delete("handoff_token");
-                              let r = new URLSearchParams();
-                              r.set("redirect", encodeURIComponent(window.location.pathname + n.toString())),
-                                  r.set("key", e),
-                                  r.set("fingerprint", a),
-                                  (t.search = r.toString()),
-                                  ey.default.track(
-                                      E.HAw.DEEP_LINK_CLICKED,
-                                      { fingerprint: (0, eL.v)(a), source: "mobile_web_handoff", destination: E.J$u },
-                                      { fingerprint: a, flush: !0 },
+                              let l = new URLSearchParams();
+                              l.set("redirect", encodeURIComponent(window.location.pathname + n.toString())),
+                                  l.set("key", e),
+                                  l.set("fingerprint", i),
+                                  (t.search = l.toString()),
+                                  e_.default.track(
+                                      _.HAw.DEEP_LINK_CLICKED,
+                                      { fingerprint: (0, eg.v)(i), source: "mobile_web_handoff", destination: _.J$u },
+                                      { fingerprint: i, flush: !0 },
                                   ),
                                   (window.location.href = t.toString());
                           },
@@ -841,37 +578,38 @@ let eD = "mweb_handoff_nonce",
                   ],
               });
     };
-var eW = n(110259),
-    eQ = n(139286),
-    ez = n(970573),
-    eq = n(364488);
-function eK(e) {
+var eC = n(274303),
+    ew = n(110259),
+    eR = n(139286),
+    eT = n(970573),
+    ek = n(364488);
+function eL(e) {
     let { onDismiss: t } = e;
     return (
-        (0, eQ.A)({ type: eW.ImpressionTypes.MODAL, name: eW.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING }),
-        (0, l.jsxs)(f.Ay, {
-            className: eq.ci,
+        (0, eR.A)({ type: ew.ImpressionTypes.MODAL, name: ew.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING }),
+        (0, r.jsxs)(p.Ay, {
+            className: ek.ci,
             children: [
-                (0, l.jsx)(f.hE, { children: A.intl.string(A.t.bVbB63) }),
-                (0, l.jsx)(T.E, {
-                    className: eq.PK,
+                (0, r.jsx)(p.hE, { children: E.intl.string(E.t.bVbB63) }),
+                (0, r.jsx)(T.E, {
+                    className: ek.PK,
                     variant: "text-md/normal",
                     color: "text-default",
-                    children: A.intl.string(A.t["0M5fN7"]),
+                    children: E.intl.string(E.t["0M5fN7"]),
                 }),
-                (0, l.jsx)(ez.A, {
-                    actionText: A.intl.string(A.t["DSN+hw"]),
+                (0, r.jsx)(eT.A, {
+                    actionText: E.intl.string(E.t["DSN+hw"]),
                     onAction: (e) => {
-                        e === ez.X.LOGIN_REQUIRED && t();
+                        e === eT.X.LOGIN_REQUIRED && t();
                     },
                 }),
-                (0, l.jsx)("div", {
-                    className: eq.o1,
-                    children: (0, l.jsx)(v.Q, {
+                (0, r.jsx)("div", {
+                    className: ek.o1,
+                    children: (0, r.jsx)(y.Q, {
                         variant: "secondary",
                         size: "md",
                         textVariant: "text-sm/medium",
-                        text: A.intl.string(A.t["9g2mqT"]),
+                        text: E.intl.string(E.t["9g2mqT"]),
                         onClick: t,
                     }),
                 }),
@@ -879,458 +617,676 @@ function eK(e) {
         })
     );
 }
-var eZ = n(148864),
-    e$ = n(976860),
-    eX = n(913612),
-    eY = n(210714),
-    eJ = n(933924),
-    e0 = n(115036),
-    e1 = n(538796),
-    e2 = n(401755);
-let e5 = (e) => n.g.location.assign(e);
-function e8(e) {
+var eG = n(148864),
+    eO = n(354948);
+function eF(e) {
+    let {
+        authBoxClassName: t,
+        country: n,
+        login: l,
+        password: a,
+        onLoginChange: i,
+        onPasswordChange: s,
+        loginRef: o,
+        passwordRef: u,
+    } = e;
+    return (0, r.jsxs)(p.Ay, {
+        className: t,
+        children: [
+            (0, r.jsx)(C.M, {}),
+            (0, r.jsxs)(p.eB, {
+                className: x.QX,
+                children: [
+                    (0, r.jsx)(eO.A, {
+                        className: x.SX,
+                        alpha2: n.alpha2,
+                        countryCode: n.code.split(" ")[0],
+                        label: E.intl.string(E.t.tUjnxr),
+                        onChange: i,
+                        setRef: o,
+                        autoCapitalize: "none",
+                        autoComplete: "username webauthn",
+                        autoCorrect: "off",
+                        spellCheck: "false",
+                        value: l,
+                        autoFocus: !0,
+                        required: !0,
+                    }),
+                    (0, r.jsx)(p.pd, {
+                        className: x.SX,
+                        label: E.intl.string(E.t["CIGa+7"]),
+                        onChange: s,
+                        type: "password",
+                        setRef: u,
+                        autoComplete: "current-password",
+                        spellCheck: "false",
+                        value: a,
+                        required: !0,
+                    }),
+                    (0, r.jsx)("div", {
+                        className: x.QB,
+                        children: (0, r.jsx)(f.$, {
+                            text: E.intl.string(E.t.dKhVQN),
+                            fullWidth: !0,
+                            type: "submit",
+                            disabled: !0,
+                        }),
+                    }),
+                    (0, r.jsx)(y.Q, { text: E.intl.string(E.t.wWIufs), textVariant: "text-sm/normal", disabled: !0 }),
+                    (0, r.jsx)("div", {
+                        className: x.a5,
+                        children: (0, r.jsx)(y.Q, {
+                            text: E.intl.string(E.t.tmE73r),
+                            textVariant: "text-sm/normal",
+                            disabled: !0,
+                        }),
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+var eU = n(401755);
+function eP(e, t) {
+    if (null == t[e]) return null;
+    {
+        let n = t[e];
+        return Array.isArray(n) ? n[0] : n;
+    }
+}
+function eD(e) {
+    let t,
+        {
+            invite: n,
+            guildTemplate: l,
+            giftCode: i,
+            authBoxClassName: o,
+            disableAutofocusOnDefaultForm: u,
+            login: c,
+            password: h,
+            errors: N,
+            loginSource: w,
+            dismissedChooseAccount: R,
+            setDismissedChooseAccount: T,
+            conditionalMediationAbortController: k,
+            onLoginChange: L,
+            onPasswordChange: G,
+            handleLogin: O,
+            handleForgotPassword: F,
+            handleGotoRegister: U,
+        } = e,
+        P = (0, s.bG)([eG.A], () => eG.A.getCountryCode()),
+        D = (0, s.bG)([et.default], () => et.default.getLoginStatus()),
+        B = (0, s.bG)([eC.A], () => eC.A.getHasLoggedInAccounts()),
+        M = a.useCallback(
+            (e) => {
+                e_.default.track(_.HAw.LOGIN_SUCCESSFUL, {
+                    source: _.mdB.QR_CODE,
+                    login_source: w,
+                    gift_code_sku_id: i?.skuId ?? null,
+                    is_new_user: !1,
+                    login_method: "remote_auth",
+                    login_instance_id: e ?? null,
+                });
+            },
+            [w, i],
+        ),
+        { handoff_token: V } = (0, I.parse)(window.location.search),
+        H = j.Fr && j.KY && null != V,
+        W = null == N.email && null != N.password,
+        K = a.useRef(null),
+        Q = a.useRef(null),
+        $ = (0, d.A)(N);
+    a.useEffect(() => {
+        let e = (e) => null != N[e];
+        null != $ && $ !== N && (e("password") ? Q.current?.focus() : (e("email") || e("login")) && K.current?.focus());
+    }, [N, K, Q, $]),
+        (t =
+            null != n
+                ? (0, r.jsx)("div", { className: x.S3, children: (0, r.jsx)(C.A, { invite: n }) })
+                : null != i
+                  ? (0, r.jsx)(b.A, { giftCode: i })
+                  : (0, r.jsxs)("div", {
+                        className: A.wx,
+                        children: [
+                            (0, r.jsx)(p.hE, { className: x.QB, children: E.intl.string(E.t["7fNJgA"]) }, "title"),
+                            !1 === (0, en.isAndroidWeb)()
+                                ? (0, r.jsx)(p.tK, { children: E.intl.string(E.t.euS7r4) }, "subtitle")
+                                : null,
+                        ],
+                    }));
+    let Z = (0, r.jsxs)("div", {
+        className: A.Eh,
+        children: [
+            B &&
+                R &&
+                (0, r.jsx)("div", {
+                    className: A.AX,
+                    children: (0, r.jsx)(f.$, {
+                        onClick: () => T(!1),
+                        variant: "secondary",
+                        text: E.intl.string(E.t["1MrpWO"]),
+                        icon: S.n,
+                    }),
+                }),
+            t,
+            (0, r.jsx)(g.F, {
+                children: (0, r.jsxs)(p.eB, {
+                    className: x.QX,
+                    children: [
+                        (0, r.jsx)(eO.A, {
+                            alpha2: P.alpha2,
+                            countryCode: P.code.split(" ")[0],
+                            className: x.SX,
+                            label: E.intl.string(E.t.tUjnxr),
+                            error: eP("login", N) ?? eP("email", N),
+                            onChange: L,
+                            setRef: K,
+                            autoCapitalize: "none",
+                            autoComplete: "username webauthn",
+                            autoCorrect: "off",
+                            spellCheck: "false",
+                            value: c,
+                            autoFocus: !W && !H && !u,
+                            required: !0,
+                        }),
+                        (0, r.jsx)(p.pd, {
+                            label: E.intl.string(E.t["CIGa+7"]),
+                            error: eP("password", N),
+                            onChange: G,
+                            name: "password",
+                            type: "password",
+                            setRef: Q,
+                            autoComplete: "current-password",
+                            spellCheck: "false",
+                            autoFocus: W && !H && !u,
+                            value: h,
+                            required: !0,
+                        }),
+                        (0, r.jsx)("div", {
+                            className: m()(x.SX, x.a5),
+                            children: (0, r.jsx)(y.Q, {
+                                text: E.intl.string(E.t.wWIufs),
+                                textVariant: "text-sm/normal",
+                                onClick: () => {
+                                    null != K.current && K.current.focus(), F();
+                                },
+                            }),
+                        }),
+                        (0, r.jsx)("div", {
+                            className: x.QB,
+                            children: (0, r.jsx)(f.$, {
+                                text: E.intl.string(E.t.dKhVQN),
+                                fullWidth: !0,
+                                type: "submit",
+                                loading: D === _.aUe.LOGGING_IN,
+                            }),
+                        }),
+                        (0, r.jsxs)("div", {
+                            className: x.a5,
+                            children: [
+                                (0, r.jsx)("span", { className: A.Qt, children: E.intl.string(E.t.tmE73r) }),
+                                (0, r.jsx)("span", {
+                                    className: A.Z8,
+                                    children: (0, r.jsx)(y.Q, {
+                                        text: E.intl.string(E.t.pV8xeR),
+                                        textVariant: "text-sm/normal",
+                                        onClick: U,
+                                    }),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            }),
+        ],
+    });
+    return null != n && n.state === _.elq.RESOLVING
+        ? (0, r.jsx)(eF, {
+              authBoxClassName: o,
+              country: P,
+              login: c,
+              password: h,
+              onLoginChange: L,
+              onPasswordChange: G,
+              loginRef: K,
+              passwordRef: Q,
+          })
+        : null != l
+          ? l.state === eU.QB.RESOLVING
+              ? (0, r.jsx)(eF, {
+                    authBoxClassName: o,
+                    country: P,
+                    login: c,
+                    password: h,
+                    onLoginChange: L,
+                    onPasswordChange: G,
+                    loginRef: K,
+                    passwordRef: Q,
+                })
+              : (0, r.jsx)(eh.A, {
+                    onSubmit: O,
+                    tag: "form",
+                    className: m()(o, A.Sy),
+                    children: () => [
+                        (0, r.jsx)(em.A, { guildTemplate: l }, "template"),
+                        (0, r.jsx)(a.Fragment, { children: Z }, "form-wrapper"),
+                    ],
+                })
+          : B && !R
+            ? (0, r.jsx)(eL, { onDismiss: () => T(!0) })
+            : (0, r.jsxs)("div", {
+                  children: [
+                      (0, r.jsx)(p.Ay, {
+                          onSubmit: O,
+                          tag: "form",
+                          className: m()(o, { [A.M0]: H }),
+                          expanded: !0,
+                          children: (0, r.jsxs)(v.B, {
+                              direction: "horizontal",
+                              align: "center",
+                              gap: 64,
+                              children: [
+                                  Z,
+                                  (0, r.jsx)(ed, { onAuthenticateSuccess: M, conditionalMediationAbortController: k }),
+                              ],
+                          }),
+                      }),
+                      H && (0, r.jsx)(eb, {}),
+                  ],
+              });
+}
+var eB = n(572469);
+function eM(e) {
+    let { loginSource: t, giftCodeSKUId: n } = e,
+        l = (0, s.cf)(
+            [et.default],
+            () => ({ ticket: et.default.getMFATicket(), methods: et.default.getMFAMethods() }),
+            [],
+        ),
+        i = a.useCallback(
+            (e) => {
+                let { mfaType: l, data: r, ticket: a } = e;
+                return (
+                    H._.dispatch(_.jej.WAVE_EMPHASIZE),
+                    u.A.loginMFAv2({ code: r, ticket: a, mfaType: l, source: t, giftCodeSKUId: n })
+                );
+            },
+            [t, n],
+        );
+    return (0, r.jsx)(p.Ay, {
+        style: { padding: 0 },
+        children: (0, r.jsx)(eB.t, {
+            mfaFinish: i,
+            mfaChallenge: l,
+            onEarlyClose: () => {
+                ep.h.dispatch({ type: "LOGIN_RESET" });
+            },
+            width: 480,
+        }),
+    });
+}
+var eV = n(511815),
+    eH = n(189213),
+    eW = n(139033),
+    eK = n(192308),
+    eQ = n(557722),
+    e$ = n(351671),
+    eZ = n(15552),
+    ez = n(212640),
+    eX = n(952116),
+    eq = n(491509),
+    eJ = n(976860),
+    eY = n(913612),
+    e0 = n(210714),
+    e1 = n(933924),
+    e5 = n(115036),
+    e2 = n(67480);
+let e8 = (e) => n.g.location.assign(e);
+function e3(e) {
     let {
         invite: t,
         guildTemplate: n,
-        giftCodeSKU: r,
-        giftCode: a,
-        location: m,
-        redirectTo: g,
-        transitionTo: I,
-        replaceWith: v,
-        authBoxClassName: S,
-        showMobileWebHandoff: y,
-        loginSource: b,
-        disableAutofocusOnDefaultForm: C,
+        giftCode: l,
+        location: h,
+        redirectTo: m,
+        transitionTo: g,
+        authBoxClassName: f,
+        loginSource: A,
+        disableAutofocusOnDefaultForm: j,
     } = e;
-    (0, eX.K)();
-    let R = (0, u.bG)([J.default], () => J.default.isAuthenticated()),
-        j = (0, u.bG)([e0.A], () => e0.A.isHandoffAvailable()),
-        w = (0, u.bG)([J.default], () => J.default.getLoginStatus()),
-        L = (0, u.bG)([eZ.A], () => eZ.A.getCountryCode()),
-        U = (0, u.bG)([ed.A], () => ed.A.getHasLoggedInAccounts()),
+    (0, eY.K)();
+    let S = (0, s.bG)([et.default], () => et.default.isAuthenticated()),
+        y = (0, s.bG)([e5.A], () => e5.A.isHandoffAvailable()),
+        v = (0, s.bG)([et.default], () => et.default.getLoginStatus()),
+        b = l?.skuId ?? null,
+        C = (0, s.bG)([e2.A], () => (null != b ? e2.A.get(b) : null)),
         {
-            checkingHandoff: O,
-            redirecting: k,
-            login: G,
-            password: D,
-            phoneVerifyError: M,
-            dismissedChooseAccount: P,
+            checkingHandoff: w,
+            redirecting: R,
+            login: k,
+            password: L,
+            phoneVerifyError: G,
+            dismissedChooseAccount: O,
             setDismissedChooseAccount: F,
-            errors: V,
-            conditionalMediationAbortController: H,
-            loginSource: W,
-            giftCodeSKUId: Q,
-            loginOrSSO: z,
-            loginRef: q,
-            passwordRef: K,
-            codeRef: Z,
-            handleLogin: $,
-            handleIPAuthorize: X,
-            handlePasswordReset: Y,
-            handleForgotPassword: ee,
-            handleResendCode: et,
-            handleReset: en,
-            handleCancelAccountDeletion: er,
-            handleGotoRegister: el,
-            handleAuthSuccess: ei,
-            loginReset: ea,
-            onLoginChange: es,
-            onPasswordChange: eo,
-            setLoginRef: eu,
-            setPasswordRef: ec,
+            errors: U,
+            conditionalMediationAbortController: P,
+            loginSource: D,
+            loginOrSSO: B,
+            handleLogin: M,
+            handleIPAuthorize: V,
+            handlePasswordReset: W,
+            handleForgotPassword: K,
+            handleResendCode: Q,
+            handleReset: $,
+            handleCancelAccountDeletion: Z,
+            handleGotoRegister: z,
+            loginReset: X,
+            onLoginChange: q,
+            onPasswordChange: J,
         } = (function (e) {
             let {
                     invite: t,
                     guildTemplate: n,
-                    giftCode: r,
-                    handoffAvailable: a,
+                    giftCode: l,
+                    handoffAvailable: i,
                     authenticated: s,
                     transitionTo: o,
-                    replaceWith: u,
                     redirectTo: c,
-                    location: _,
+                    location: d,
                     loginSource: h,
                 } = e,
-                [m, g] = i.useState(() => a),
-                [f, p] = i.useState(() => s),
-                [x, N] = i.useState(""),
-                [I, v] = i.useState(() => {
-                    let e = null != _ ? (0, ep.parse)(_.search) : {};
+                [m, g] = a.useState(() => i),
+                [f, p] = a.useState(() => s),
+                [A, x] = a.useState(""),
+                [N, j] = a.useState(() => {
+                    let e = null != d ? (0, I.parse)(d.search) : {};
                     return e.email ?? e.login ?? "";
                 }),
-                [S, y] = i.useState(""),
-                [b, C] = i.useState(!1),
-                [R, j] = i.useState(null),
-                [w, L] = i.useState(!1),
-                [U] = i.useState(() => new AbortController()),
-                [O, k] = i.useState({}),
-                G = i.useRef(null),
-                D = i.useRef(null),
-                M = i.useRef(null);
-            !m || a || s || g(!1);
-            let P = i.useMemo(() => {
+                [S, y] = a.useState(""),
+                [v, b] = a.useState(!1),
+                [C, w] = a.useState(null),
+                [R, k] = a.useState(!1),
+                [L] = a.useState(() => new AbortController()),
+                [G, O] = a.useState({});
+            !m || i || s || g(!1);
+            let F = a.useMemo(() => {
                     if (null != h) return h;
-                    if (null != r) return "gift";
+                    if (null != l) return "gift";
                     if (null != n) return "guild_template";
                     if (null != t) {
                         if (null != t.guild) return "guild_invite";
                         if (null != t.channel) return "dm_invite";
                         if (null != t.inviter) return "friend_invite";
                     }
-                    return null != c ? (0, eb.Q)(c) : null;
-                }, [h, r, n, t, c]),
-                F = null != r ? r.skuId : null,
-                V = i.useCallback(
+                    return null != c ? (0, e$.Q)(c) : null;
+                }, [h, l, n, t, c]),
+                U = null != l ? l.skuId : null,
+                P = a.useCallback(
                     (e) => {
-                        let t = null != e ? (0, ep.parse)(e.search) : {};
+                        let t = null != e ? (0, I.parse)(e.search) : {};
                         if ((delete t.redirect_to, null != c)) {
-                            if ((0, eT.RZ)(c)) return void (0, eT.NY)(c);
-                            null != u ? u(c) : o(c);
-                        } else if (null == t.service) o(E.BVt.APP);
+                            if ((0, ez.RZ)(c)) return void (0, ez.NY)(c);
+                            o(c);
+                        } else if (null == t.service) o(_.BVt.APP);
                         else {
-                            let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + E.Rsh.SSO,
-                                n = { ...t, token: J.default.getToken() };
-                            window.location = `${e}?${(0, ep.stringify)(n)}`;
+                            let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + _.Rsh.SSO,
+                                n = { ...t, token: et.default.getToken() };
+                            window.location = `${e}?${(0, I.stringify)(n)}`;
                         }
                     },
-                    [c, u, o],
+                    [c, o],
                 ),
-                H = i.useCallback(
+                D = a.useCallback(
                     function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        e && null != t && (p(!0), n ? d.A.verifySSOToken("login").then(() => V(t)) : V(t));
+                        e && null != t && (p(!0), n ? u.A.verifySSOToken("login").then(() => P(t)) : P(t));
                     },
-                    [V],
+                    [P],
                 ),
-                W = i.useCallback(
-                    (e) => {
-                        k({}),
-                            ey.default.track(E.HAw.LOGIN_SUCCESSFUL, {
-                                source: E.mdB.QR_CODE,
-                                login_source: P,
-                                gift_code_sku_id: F,
-                                is_new_user: !1,
-                                login_method: "remote_auth",
-                                login_instance_id: e ?? null,
-                            });
-                    },
-                    [P, F],
-                ),
-                Q = i.useCallback(() => {
-                    U.abort("Login state reset"), k({}), d.A.loginReset();
-                }, [U]),
-                z = i.useCallback((e) => {
-                    G.current = e ?? null;
-                }, []),
-                q = i.useCallback((e) => {
-                    D.current = e ?? null;
-                }, []),
-                K = i.useCallback(
+                B = a.useCallback(() => {
+                    L.abort("Login state reset"), O({}), u.A.loginReset();
+                }, [L]),
+                M = a.useCallback(
                     async function (e) {
                         let { undelete: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                         e?.preventDefault(),
-                            U.abort("Starting password login"),
-                            B._.dispatch(E.jej.WAVE_EMPHASIZE),
-                            k({});
+                            L.abort("Starting password login"),
+                            H._.dispatch(_.jej.WAVE_EMPHASIZE),
+                            O({});
                         try {
-                            await d.A.login({
-                                login: x + I,
+                            await u.A.login({
+                                login: A + N,
                                 password: S,
-                                undelete: n ?? b,
-                                source: P,
-                                giftCodeSKUId: F,
+                                undelete: n ?? v,
+                                source: F,
+                                giftCodeSKUId: U,
                                 invite: t,
                             });
                         } catch (e) {
-                            k((0, eC.p)(e));
+                            O((0, eZ.p)(e));
                         }
                     },
-                    [U, I, x, S, b, P, F, t],
+                    [L, N, A, S, v, F, U, t],
                 ),
-                Z = i.useCallback(
+                V = a.useCallback(
                     async (e) => {
-                        let t = x + I;
-                        k({});
+                        let t = A + N;
+                        O({});
                         try {
-                            let { token: n } = await eS.A.verifyPhone(t, e, !1);
-                            await d.A.authorizeIPAddress(n), K();
+                            let { token: n } = await eQ.A.verifyPhone(t, e, !1);
+                            await u.A.authorizeIPAddress(n), M();
                         } catch (e) {
-                            null != e.body && null != e.body.message && j(e.body.message);
+                            null != e.body && null != e.body.message && w(e.body.message);
                         }
                     },
-                    [x, I, K],
+                    [A, N, M],
                 ),
-                $ = i.useCallback(
+                W = a.useCallback(
                     async (e) => {
-                        j(null);
+                        w(null);
                         try {
-                            let { token: t } = await eS.A.verifyPhone(x + I, e, !1);
-                            o(E.BVt.RESET, { search: (0, ep.stringify)({ token: t, from_login: "true" }) });
+                            let { token: t } = await eQ.A.verifyPhone(A + N, e, !1);
+                            o(_.BVt.RESET, { search: (0, I.stringify)({ token: t, from_login: "true" }) });
                         } catch (e) {
-                            null != e.body && null != e.body.message && j(e.body.message);
+                            null != e.body && null != e.body.message && w(e.body.message);
                         }
                     },
-                    [x, I, o],
+                    [A, N, o],
                 ),
-                X = i.useCallback(
+                K = a.useCallback(
                     async (e) => {
-                        null != e && e.preventDefault(), null != G.current && G.current.focus();
-                        let t = x + I;
-                        k({});
+                        null != e && e.preventDefault();
+                        let t = A + N;
+                        O({});
                         try {
-                            B._.dispatch(E.jej.WAVE_EMPHASIZE);
-                            let e = await d.A.forgotPassword(t);
+                            H._.dispatch(_.jej.WAVE_EMPHASIZE);
+                            let e = await u.A.forgotPassword(t);
                             if (!1 === e) return;
-                            e === ex.D.ONE_TIME_LOGIN
-                                ? (0, ev.openModal)((e) => {
+                            e === eV.D.ONE_TIME_LOGIN
+                                ? (0, eK.openModal)((e) => {
                                       let t = [
                                           {
                                               variant: "primary",
-                                              text: A.intl.string(A.t.BddRzS),
+                                              text: E.intl.string(E.t.BddRzS),
                                               onClick: e.onClose,
                                               fullWidth: !0,
                                           },
                                       ];
-                                      return (0, l.jsx)(eN.Modal, {
-                                          title: A.intl.string(A.t["6Ecyts"]),
+                                      return (0, r.jsx)(eH.Modal, {
+                                          title: E.intl.string(E.t["6Ecyts"]),
                                           actions: t,
                                           ...e,
-                                          children: (0, l.jsx)(T.E, {
+                                          children: (0, r.jsx)(T.E, {
                                               variant: "text-md/normal",
-                                              children: A.intl.string(A.t.iAcrqV),
+                                              children: E.intl.string(E.t.iAcrqV),
                                           }),
                                       });
                                   })
-                                : (0, eI.A)({
-                                      title: A.intl.string(A.t.f5Pi7A),
-                                      subtitle: A.intl.format(A.t["6u5hQ9"], { email: t }),
+                                : (0, eW.A)({
+                                      title: E.intl.string(E.t.f5Pi7A),
+                                      subtitle: E.intl.format(E.t["6u5hQ9"], { email: t }),
                                   });
                         } catch (e) {
-                            k((0, eC.p)(e));
+                            O((0, eZ.p)(e));
                         }
                     },
-                    [x, I],
+                    [A, N],
                 ),
-                Y = i.useCallback(() => {
-                    eS.A.resendCode(x + I);
-                }, [x, I]),
-                ee = i.useCallback((e) => {
-                    null != e && e.preventDefault(), d.A.loginReset(), y(""), N(""), v(""), C(!1), g(!1), p(!1), k({});
+                Q = a.useCallback(() => {
+                    eQ.A.resendCode(A + N);
+                }, [A, N]),
+                $ = a.useCallback((e) => {
+                    null != e && e.preventDefault(), u.A.loginReset(), y(""), x(""), j(""), b(!1), g(!1), p(!1), O({});
                 }, []),
-                et = i.useCallback(() => {
-                    C(!0), K(void 0, { undelete: !0 });
-                }, [K]),
-                en = i.useCallback(() => {
+                Z = a.useCallback(() => {
+                    b(!0), M(void 0, { undelete: !0 });
+                }, [M]),
+                z = a.useCallback(() => {
                     let e,
-                        l = null != _ ? (0, ep.parse)(_.search) : {};
-                    "" !== I && (l.email = I),
+                        r = null != d ? (0, I.parse)(d.search) : {};
+                    "" !== N && (r.email = N),
                         null != t
-                            ? ((l.mode = "register"), (e = E.BVt.INVITE(t.code)))
-                            : null != r
-                              ? ((l.mode = "register"), (e = E.BVt.GIFT_CODE(r.code)))
+                            ? ((r.mode = "register"), (e = _.BVt.INVITE(t.code)))
+                            : null != l
+                              ? ((r.mode = "register"), (e = _.BVt.GIFT_CODE(l.code)))
                               : null != n
-                                ? (e = E.BVt.GUILD_TEMPLATE(n.code))
+                                ? (e = _.BVt.GUILD_TEMPLATE(n.code))
                                 : null != c
-                                  ? ((e = E.BVt.REGISTER), (l.redirect_to = c))
-                                  : (e = E.BVt.REGISTER),
-                        Q(),
-                        o(e, { search: (0, ep.stringify)(l) }),
-                        B._.dispatch(E.jej.WAVE_EMPHASIZE);
-                }, [I, t, r, n, c, _, Q, o]);
+                                  ? ((e = _.BVt.REGISTER), (r.redirect_to = c))
+                                  : (e = _.BVt.REGISTER),
+                        B(),
+                        o(e, { search: (0, I.stringify)(r) }),
+                        H._.dispatch(_.jej.WAVE_EMPHASIZE);
+                }, [N, t, l, n, c, d, B, o]);
             return {
                 checkingHandoff: m,
                 redirecting: f,
-                login: I,
+                login: N,
                 password: S,
-                phoneVerifyError: R,
-                dismissedChooseAccount: w,
-                setDismissedChooseAccount: L,
-                errors: O,
-                conditionalMediationAbortController: U,
-                loginSource: P,
-                giftCodeSKUId: F,
-                loginOrSSO: H,
-                loginRef: G,
-                passwordRef: D,
-                codeRef: M,
-                handleLogin: K,
-                handleIPAuthorize: Z,
-                handlePasswordReset: $,
-                handleForgotPassword: X,
-                handleResendCode: Y,
-                handleReset: ee,
-                handleCancelAccountDeletion: et,
-                handleGotoRegister: en,
-                handleAuthSuccess: W,
-                loginReset: Q,
-                onLoginChange: i.useCallback((e, t) => {
-                    v(e), N(t);
+                phoneVerifyError: C,
+                dismissedChooseAccount: R,
+                setDismissedChooseAccount: k,
+                errors: G,
+                conditionalMediationAbortController: L,
+                loginSource: F,
+                loginOrSSO: D,
+                handleLogin: M,
+                handleIPAuthorize: V,
+                handlePasswordReset: W,
+                handleForgotPassword: K,
+                handleResendCode: Q,
+                handleReset: $,
+                handleCancelAccountDeletion: Z,
+                handleGotoRegister: z,
+                loginReset: B,
+                onLoginChange: a.useCallback((e, t) => {
+                    j(e), x(t);
                 }, []),
-                onPasswordChange: i.useCallback((e) => {
+                onPasswordChange: a.useCallback((e) => {
                     y(e);
                 }, []),
-                setLoginRef: z,
-                setPasswordRef: q,
             };
         })({
             invite: t,
             guildTemplate: n,
-            giftCode: a,
-            handoffAvailable: j,
-            authenticated: R,
-            transitionTo: I ?? e5,
-            replaceWith: v,
-            redirectTo: g,
-            location: m,
-            loginSource: b,
+            giftCode: l,
+            handoffAvailable: y,
+            authenticated: S,
+            transitionTo: g ?? e8,
+            redirectTo: m,
+            location: h,
+            loginSource: A,
         });
-    (0, o.Ay)(() => {
-        j && !R ? (0, _.ST)() : R && z(R, m, !0),
-            ey.default.track(
-                E.HAw.LOGIN_VIEWED,
+    (0, i.Ay)(() => {
+        y && !S ? (0, c.ST)() : S && B(S, h, !0),
+            e_.default.track(
+                _.HAw.LOGIN_VIEWED,
                 {
                     location: null != t ? "Invite Login Page" : "Non-Invite Login Page",
-                    login_source: W,
-                    authenticated: R,
-                    ...(null != r ? (0, ej.A)(r, !1, !1) : {}),
-                    source: (0, e$.PR)(),
+                    login_source: D,
+                    authenticated: S,
+                    ...(null != C ? (0, eq.A)(C, !1, !1) : {}),
+                    source: (0, eJ.PR)(),
                 },
                 { flush: !0 },
             ),
-            R || (0, eJ.a)({ abortController: H, loginSource: W, giftCodeSKUId: Q }),
-            d.A.getLocationMetadata(),
-            (0, eY.d)("login");
+            S || (0, e1.a)({ abortController: P, loginSource: D, giftCodeSKUId: b }),
+            u.A.getLocationMetadata(),
+            (0, e0.d)("login");
     });
-    let e_ = (0, h.A)(R);
-    i.useEffect(() => {
-        let e = O && (j || k);
-        R && !1 === e_ && !e && (H.abort("Transitioning to authenticated state"), z(R, m));
-    }, [R, j, e_, k, O, H, z, m]);
-    let eh = (0, h.A)(V);
-    i.useEffect(() => {
-        let e = (e) => null != V[e];
-        null != eh &&
-            eh !== V &&
-            (e("password")
-                ? K.current?.focus()
-                : e("email") || e("login")
-                  ? q.current?.focus()
-                  : e("code") && Z.current?.focus());
-    }, [V, q, K, Z, eh]);
-    let eg = (e) =>
-        (0, l.jsx)(em, {
-            invite: t,
-            giftCode: a,
-            loginStatus: w,
-            country: L,
-            showMobileWebHandoff: y,
-            disableAutofocusOnDefaultForm: C,
-            withQR: e,
-            dismissedChooseAccount: P,
-            login: G,
-            password: D,
-            errors: V,
-            conditionalMediationAbortController: H,
-            onLoginChange: es,
-            onPasswordChange: eo,
-            setLoginRef: eu,
-            setPasswordRef: ec,
-            onReturnToChooseAccount: () => {
-                F(!1);
-            },
-            handleForgotPassword: ee,
-            handleGotoRegister: el,
-            handleAuthSuccess: ei,
-        });
-    if (k || O) return (0, l.jsx)(f.Ay, { children: (0, l.jsx)(c.y, {}) });
-    if (j)
-        return (0, l.jsxs)(f.Ay, {
-            className: S,
+    let Y = (0, d.A)(S);
+    if (
+        (a.useEffect(() => {
+            let e = w && (y || R);
+            S && !1 === Y && !e && (P.abort("Transitioning to authenticated state"), B(S, h));
+        }, [S, y, Y, R, w, P, B, h]),
+        R || w)
+    )
+        return (0, r.jsx)(p.Ay, { children: (0, r.jsx)(o.y, {}) });
+    if (y)
+        return (0, r.jsxs)(p.Ay, {
+            className: f,
             children: [
-                (0, l.jsx)(f.CK, {}),
-                (0, l.jsx)(f.hE, { className: x.QB, children: A.intl.string(A.t.S6RMNA) }),
-                (0, l.jsx)(f.tK, { children: A.intl.string(A.t.YZiJbh) }),
+                (0, r.jsx)(p.CK, {}),
+                (0, r.jsx)(p.hE, { className: x.QB, children: E.intl.string(E.t.S6RMNA) }),
+                (0, r.jsx)(p.tK, { children: E.intl.string(E.t.YZiJbh) }),
             ],
         });
-    switch (w) {
-        case E.aUe.LOGGING_IN_MFA_SMS:
-        case E.aUe.MFA_SMS_STEP:
-        case E.aUe.LOGGING_IN_MFA:
-        case E.aUe.MFA_STEP:
-            return (0, l.jsx)(eE, { loginSource: W, giftCodeSKUId: Q });
-        case E.aUe.ACCOUNT_SCHEDULED_FOR_DELETION:
-        case E.aUe.ACCOUNT_DISABLED:
-            return (0, l.jsx)(N, {
-                loginStatus: w,
-                authBoxClassName: S ?? "",
-                onSubmit: en,
-                onCancelAccountDeletion: er,
-            });
-        case E.aUe.PHONE_IP_AUTHORIZATION:
-            return (0, l.jsx)(f.Ay, {
+    switch (v) {
+        case _.aUe.LOGGING_IN_MFA_SMS:
+        case _.aUe.MFA_SMS_STEP:
+        case _.aUe.LOGGING_IN_MFA:
+        case _.aUe.MFA_STEP:
+            return (0, r.jsx)(eM, { loginSource: D, giftCodeSKUId: b });
+        case _.aUe.ACCOUNT_SCHEDULED_FOR_DELETION:
+        case _.aUe.ACCOUNT_DISABLED:
+            return (0, r.jsx)(N, { loginStatus: v, authBoxClassName: f, onSubmit: $, onCancelAccountDeletion: Z });
+        case _.aUe.PHONE_IP_AUTHORIZATION:
+            return (0, r.jsx)(p.Ay, {
                 tag: "form",
-                className: S,
-                children: (0, l.jsx)(eR.A, {
-                    title: A.intl.string(A.t.w55Oco),
-                    subtitle: A.intl.format(A.t.CfRZBj, { onResendClick: et }),
-                    error: M,
-                    onSubmit: X,
-                    onCancel: ea,
+                className: f,
+                children: (0, r.jsx)(eX.A, {
+                    title: E.intl.string(E.t.w55Oco),
+                    subtitle: E.intl.format(E.t.CfRZBj, { onResendClick: Q }),
+                    error: G,
+                    onSubmit: V,
+                    onCancel: X,
                 }),
             });
-        case E.aUe.PASSWORD_RECOVERY_PHONE_VERIFICATION:
-            return (0, l.jsx)(f.Ay, {
+        case _.aUe.PASSWORD_RECOVERY_PHONE_VERIFICATION:
+            return (0, r.jsx)(p.Ay, {
                 tag: "form",
-                className: S,
-                children: (0, l.jsx)(eR.A, {
-                    title: A.intl.string(A.t["+xqy3d"]),
-                    subtitle: A.intl.format(A.t.ef4uZ7, { onResendClick: et }),
-                    error: M,
-                    onSubmit: Y,
-                    onCancel: ea,
+                className: f,
+                children: (0, r.jsx)(eX.A, {
+                    title: E.intl.string(E.t["+xqy3d"]),
+                    subtitle: E.intl.format(E.t.ef4uZ7, { onResendClick: Q }),
+                    error: G,
+                    onSubmit: W,
+                    onCancel: X,
                 }),
             });
-        case E.aUe.LOGGING_IN:
-        case E.aUe.NONE:
+        case _.aUe.LOGGING_IN:
+        case _.aUe.NONE:
         default:
-            if (null != t && t.state === E.elq.RESOLVING)
-                return (0, l.jsx)(eA, {
-                    authBoxClassName: S,
-                    country: L,
-                    login: G,
-                    password: D,
-                    onLoginChange: es,
-                    onPasswordChange: eo,
-                    setLoginRef: eu,
-                    setPasswordRef: ec,
-                });
-            if (null != n)
-                if (n.state === e2.QB.RESOLVING)
-                    return (0, l.jsx)(eA, {
-                        authBoxClassName: S,
-                        country: L,
-                        login: G,
-                        password: D,
-                        onLoginChange: es,
-                        onPasswordChange: eo,
-                        setLoginRef: eu,
-                        setPasswordRef: ec,
-                    });
-                else
-                    return (0, l.jsx)(e1.A, {
-                        onSubmit: $,
-                        tag: "form",
-                        className: s()(S, p.Sy),
-                        children: () => [(0, l.jsx)(ew.A, { guildTemplate: n }, "template"), eg(!1)],
-                    });
-            if (U && !P) return (0, l.jsx)(eK, { onDismiss: () => F(!0) });
-            return (0, l.jsxs)("div", {
-                className: p.__invalid_pageContainer,
-                children: [
-                    (0, l.jsx)(f.Ay, { onSubmit: $, tag: "form", className: S, expanded: !0, children: eg(!0) }),
-                    y && (0, l.jsx)(eH, {}),
-                ],
+            return (0, r.jsx)(eD, {
+                invite: t,
+                guildTemplate: n,
+                giftCode: l,
+                authBoxClassName: f,
+                disableAutofocusOnDefaultForm: j,
+                login: k,
+                password: L,
+                errors: U,
+                loginSource: D,
+                dismissedChooseAccount: O,
+                setDismissedChooseAccount: F,
+                conditionalMediationAbortController: P,
+                onLoginChange: q,
+                onPasswordChange: J,
+                handleLogin: M,
+                handleForgotPassword: K,
+                handleGotoRegister: z,
             });
     }
 }

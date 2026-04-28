@@ -109,11 +109,6 @@ screen and (max-width:485px) {
     }
 }
 
-.authBoxWhenMobileWebHandoffIsVisible__9f45a {
-    height: calc(100% - var(--custom-mobile-web-handoff-link-mobile-web-handoff-height)) !important;
-    top: var(--custom-mobile-web-handoff-link-mobile-web-handoff-height) !important
-}
-
 .redeemWrapper__9f45a {
     height: 100vh;
     height: -moz-available;

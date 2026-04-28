@@ -314,32 +314,28 @@ function _(e, n, l) {
     switch (e) {
         case s.rX.TERMS:
             return (0, a.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([
-                    t.e("83818"),
-                    t.e("83013"),
-                    t.e("90152"),
-                    t.e("78618"),
-                    t.e("32435"),
-                ]).then(t.bind(t, 24094));
+                let { default: e } = await Promise.all([t.e("36685"), t.e("90152"), t.e("78618"), t.e("32435")]).then(
+                    t.bind(t, 24094),
+                );
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n, guild: l });
             });
         case s.rX.PARAGRAPH:
             return (0, a.openModalLazy)(async () => {
-                let { ParagraphFormFieldModal: e } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                let { ParagraphFormFieldModal: e } = await Promise.all([t.e("36685"), t.e("78618"), t.e("26510")]).then(
                     t.bind(t, 542717),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
             });
         case s.rX.TEXT_INPUT:
             return (0, a.openModalLazy)(async () => {
-                let { TextInputFormFieldModal: e } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                let { TextInputFormFieldModal: e } = await Promise.all([t.e("36685"), t.e("78618"), t.e("26510")]).then(
                     t.bind(t, 542717),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
             });
         case s.rX.MULTIPLE_CHOICE:
             return (0, a.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([t.e("83013"), t.e("78618"), t.e("52981")]).then(
+                let { default: e } = await Promise.all([t.e("36685"), t.e("78618"), t.e("52981")]).then(
                     t.bind(t, 520660),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
@@ -350,32 +346,28 @@ function z(e, n, l) {
     switch (e.field_type) {
         case s.rX.TERMS:
             return (0, a.openModalLazy)(async () => {
-                let { default: r } = await Promise.all([
-                    t.e("83818"),
-                    t.e("83013"),
-                    t.e("90152"),
-                    t.e("78618"),
-                    t.e("32435"),
-                ]).then(t.bind(t, 24094));
+                let { default: r } = await Promise.all([t.e("36685"), t.e("90152"), t.e("78618"), t.e("32435")]).then(
+                    t.bind(t, 24094),
+                );
                 return (t) => (0, i.jsx)(r, { ...t, field: e, onSave: n, guild: l });
             });
         case s.rX.PARAGRAPH:
             return (0, a.openModalLazy)(async () => {
-                let { ParagraphFormFieldModal: l } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                let { ParagraphFormFieldModal: l } = await Promise.all([t.e("36685"), t.e("78618"), t.e("26510")]).then(
                     t.bind(t, 542717),
                 );
                 return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });
             });
         case s.rX.TEXT_INPUT:
             return (0, a.openModalLazy)(async () => {
-                let { TextInputFormFieldModal: l } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                let { TextInputFormFieldModal: l } = await Promise.all([t.e("36685"), t.e("78618"), t.e("26510")]).then(
                     t.bind(t, 542717),
                 );
                 return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });
             });
         case s.rX.MULTIPLE_CHOICE:
             return (0, a.openModalLazy)(async () => {
-                let { default: l } = await Promise.all([t.e("83013"), t.e("78618"), t.e("52981")]).then(
+                let { default: l } = await Promise.all([t.e("36685"), t.e("78618"), t.e("52981")]).then(
                     t.bind(t, 520660),
                 );
                 return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });

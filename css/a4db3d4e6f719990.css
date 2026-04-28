@@ -1,0 +1,33 @@
+.searchBar__824d3 {
+    flex: 1 1 var(--custom-search-bar-width);
+    max-width: var(--custom-search-bar-width);
+    min-width: 0
+}
+
+.platform-osx .searchBar__824d3 {
+    -webkit-app-region: no-drag
+}
+
+.searchIcon__824d3 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex: 0 1 var(--custom-search-bar-icon-width);
+    justify-content: center;
+    max-width: var(--custom-search-bar-icon-width);
+    min-width: var(--custom-search-bar-icon-width)
+}
+
+.searchFloating__824d3 {
+    background: linear-gradient(to right, transparent 0, var(--background-base-lower) 40px, var(--background-base-lower) 100%);
+    border-radius: 4px;
+    max-width: var(--custom-search-bar-width);
+    padding-inline-end: var(--space-4);
+    position: relative;
+    width: var(--custom-search-bar-width);
+    z-index: 10
+}
+
+.searchCollapsed__824d3 {
+    display: none
+}

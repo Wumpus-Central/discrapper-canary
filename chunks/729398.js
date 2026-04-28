@@ -444,7 +444,7 @@ function ek(e) {
                           v(eS.Ps.STAGE_INSTANCE),
                               (0, x.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      l.e("77598"),
+                                      l.e("63397"),
                                       l.e("11585"),
                                       l.e("3589"),
                                       l.e("89916"),
@@ -614,10 +614,11 @@ function eW(e) {
                 ? G(null)
                 : (0, x.openModalLazy)(async () => {
                       let { default: n } = await Promise.all([
-                          l.e("48486"),
+                          l.e("72900"),
+                          l.e("84611"),
                           l.e("8308"),
-                          l.e("43662"),
-                          l.e("40851"),
+                          l.e("93329"),
+                          l.e("63232"),
                           l.e("71470"),
                           l.e("43437"),
                           l.e("58164"),
@@ -791,9 +792,9 @@ var eJ = l(789645),
     e1 = l(21599),
     e9 = l(279208),
     e8 = l(747007),
-    e4 = l(710358),
-    e7 = l(958590),
-    e3 = l(954571),
+    e7 = l(710358),
+    e3 = l(958590),
+    e4 = l(954571),
     e5 = l(957565),
     e2 = l(118888);
 let { INVITE_OPTIONS_7_DAYS: e6, INVITE_OPTIONS_UNLIMITED: te } = I.Ay;
@@ -803,9 +804,9 @@ function tt(e) {
         r = (0, a.bG)([C.Ay], () => (null != n ? C.Ay.getDefaultChannel(n)?.id : null), [n]),
         s = (0, a.bG)([b.A], () => b.A.getGuild(n), [n]),
         { channel_id: d, id: u } = l ?? {},
-        c = (0, a.bG)([e7.A], () => {
+        c = (0, a.bG)([e3.A], () => {
             let e = d ?? r;
-            return null == e ? null : e7.A.getInvite(e);
+            return null == e ? null : e3.A.getInvite(e);
         }, [d, r]);
     if (null == l) return t(), null;
     let o = s?.vanityURLCode ?? c?.code,
@@ -823,7 +824,7 @@ function tt(e) {
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(eJ.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e4.A, {
+            (0, i.jsx)(e7.A, {
                 children: (0, i.jsx)("div", {
                     className: e2.zc,
                     children: (0, i.jsx)(e0.C, {
@@ -856,7 +857,7 @@ function tt(e) {
                             if (h) return;
                             (0, e5.C)(e);
                             let t = (0, M.dy)(l.entity_type);
-                            e3.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e4.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: l.guild_id,
                                 channel: d,
                                 channel_type: t,

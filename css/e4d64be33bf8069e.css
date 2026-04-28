@@ -1,0 +1,95 @@
+.badge__323f7 {
+    background-color: var(--brand-500)
+}
+
+.trailingContainer__323f7 {
+    align-items: center;
+    color: var(--interactive-text-default);
+    display: flex;
+    height: 24px
+}
+
+.container__1d004 {
+    aspect-ratio: 3/4;
+    height: 100%;
+    margin: 0 auto;
+    position: relative
+}
+
+.gameImage__1d004 {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    position: relative
+}
+
+.imageDecoration__1d004 {
+    box-sizing: border-box;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.gameImageOverlay__1d004 {
+    z-index: 1
+}
+
+.gameImageBorder__1d004 {
+    border-radius: var(--radius-sm);
+    z-index: 2
+}
+
+.gameImage1__1d004 {
+    transform: rotate(-2.5deg) scale(.9) translate(-1%, 2%);
+    transform-origin: bottom right;
+    z-index: 1
+}
+
+.gameImage1__1d004,
+.gameImage2__1d004 {
+    height: 80%;
+    inset: 0;
+    position: absolute
+}
+
+.gameImage2__1d004 {
+    transform: rotate(1.25deg) scale(.9) translate(-1%, 2%);
+    transform-origin: bottom right;
+    z-index: 2
+}
+
+.gameImage3__1d004 {
+    height: 100%;
+    inset: 0;
+    transform: rotate(5deg) scale(.9) translateX(-4%);
+    transform-origin: bottom right;
+    z-index: 4
+}
+
+.image__1d004 {
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    z-index: 3
+}
+
+.theme-dark .gameImage__1d004 {
+    background: rgba(36, 36, 41, .5)
+}
+
+.theme-dark .gameImageOverlay__1d004 {
+    background: linear-gradient(156deg, hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, 0) 35.29%)
+}
+
+.theme-dark .gameImageBorder__1d004 {
+    border: 1.5px solid hsla(0, 0%, 100%, .1)
+}
+
+.theme-light .gameImageOverlay__1d004 {
+    background: linear-gradient(156deg, hsla(0, 0%, 100%, .9), hsla(0, 0%, 100%, 0) 35.29%)
+}
+
+.theme-light .gameImageBorder__1d004 {
+    border: 1.5px solid rgba(0, 0, 0, .1)
+}

@@ -8,6 +8,5 @@ a.exports = {
     Xq: "subscriptionContainer__9f45a",
     KS: "subscriptionDetailsBottomContainer__9f45a",
     I: "withMarginTop__9f45a",
-    mg: "authBoxWhenMobileWebHandoffIsVisible__9f45a",
     qQ: "redeemWrapper__9f45a",
 };

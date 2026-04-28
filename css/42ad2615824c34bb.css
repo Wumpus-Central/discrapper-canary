@@ -1,0 +1,14 @@
+.countryOption_b9da6a:has(.header_b9da6a) {
+    background-color: var(--background-base-lowest);
+    cursor: default
+}
+
+.countryContainer_b9da6a {
+    align-items: center;
+    display: flex
+}
+
+.countryFlagEmoji_b9da6a {
+    height: 25px;
+    margin-inline-end: 5px
+}

@@ -314,7 +314,7 @@ function eS(e) {
         e3 = (e) => {
             e.target === e.currentTarget && ec.current?.click();
         },
-        e5 = (e) => {
+        e6 = (e) => {
             let n =
                 "contextmenu" === e.type
                     ? c.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN
@@ -345,10 +345,10 @@ function eS(e) {
                           e,
                           async () => {
                               let { default: e } = await Promise.all([
-                                  s.e("91388"),
-                                  s.e("61748"),
-                                  s.e("77598"),
-                                  s.e("23491"),
+                                  s.e("39431"),
+                                  s.e("31788"),
+                                  s.e("63397"),
+                                  s.e("6287"),
                                   s.e("26132"),
                                   s.e("46652"),
                                   s.e("93190"),
@@ -399,7 +399,7 @@ function eS(e) {
                           { impressionName: n, onClose: () => eu(!1) },
                       );
         },
-        e6 = (e) => {
+        e5 = (e) => {
             e.preventDefault(), e.stopPropagation();
             let n = ex.intl.formatToPlainString(ex.t.hJ5Ap4, { name: e$ }),
                 i = ex.intl.format(ex.t.SSIVOu, { name: e$ });
@@ -470,7 +470,7 @@ function eS(e) {
                     onMouseDown: e1,
                     onFocus: eq,
                     onBlur: e0,
-                    onContextMenu: e5,
+                    onContextMenu: e6,
                     "aria-setsize": w,
                     "aria-posinset": T,
                     children: [
@@ -597,7 +597,7 @@ function eS(e) {
                                                   "aria-label": eO
                                                       ? ex.intl.string(ex.t["26C4oi"])
                                                       : ex.intl.string(ex.t.jsvgc3),
-                                                  onClick: eO ? e6 : e2,
+                                                  onClick: eO ? e5 : e2,
                                                   onMouseDown: e9,
                                                   nameplate: j,
                                                   reducedClickTarget: !0,

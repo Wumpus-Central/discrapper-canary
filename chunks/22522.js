@@ -991,8 +991,8 @@ function e3(e) {
         ],
     });
 }
-var e8 = n(110259),
-    e6 = n(121894),
+var e6 = n(110259),
+    e8 = n(121894),
     e4 = n(554146),
     e7 = n(933958),
     e9 = n(782091),
@@ -1218,8 +1218,7 @@ function tO(e) {
         (0, tf.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("80813"),
-                    n.e("83818"),
+                    n.e("36685"),
                     n.e("59957"),
                     n.e("28136"),
                     n.e("16084"),
@@ -1361,14 +1360,14 @@ function tB(e) {
         A = (0, a.bG)([c.A], () => c.A.getUserParticipantCount(o.id), [o]),
         f = (0, td.vp)(o.id, t),
         j = l.useCallback(() => {
-            (0, e6.r)(() => {
+            (0, e8.r)(() => {
                 tU.setState({ dismissedActivityEntryPointTileChannel: o.id });
             });
         }, [o.id]);
     l.useEffect(() => {
         null != g &&
             o.id !== g &&
-            (0, e6.r)(() => {
+            (0, e8.r)(() => {
                 tU.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [o.id, g]);
@@ -1399,8 +1398,8 @@ function tB(e) {
         );
     (0, te.A)(
         {
-            type: e8.ImpressionTypes.VIEW,
-            name: e8.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
+            type: e6.ImpressionTypes.VIEW,
+            name: e6.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
             properties: { total_participants: h, can_invite: v, is_afk_channel: y, channel_user_limit: o.userLimit },
         },
         { trackOnInitialLoad: !0 },
@@ -1531,8 +1530,8 @@ function t3(e) {
         }),
     });
 }
-var t8 = n(403362),
-    t6 = n(51082),
+var t6 = n(403362),
+    t8 = n(51082),
     t4 = n(163432),
     t7 = n(349488),
     t9 = n(196934);
@@ -1651,13 +1650,13 @@ function nn(e) {
               ? []
               : [
                     A.type === j.lp.STREAM
-                        ? h.find((e) => e.type === j.lp.USER && e.id === A?.user.id && e.id !== T && (0, t6.Ay)(e))
+                        ? h.find((e) => e.type === j.lp.USER && e.id === A?.user.id && e.id !== T && (0, t8.Ay)(e))
                         : null,
                     A.type === j.lp.USER
                         ? h.find((e) => e.type === j.lp.STREAM && e.user.id === A?.user.id && null != e.streamId)
                         : null,
-                    A.id !== T ? h.find((e) => e.type === j.lp.USER && e.id === T && (0, t6.Ay)(e)) : null,
-                ].filter(t8.Vq),
+                    A.id !== T ? h.find((e) => e.type === j.lp.USER && e.id === T && (0, t8.Ay)(e)) : null,
+                ].filter(t6.Vq),
         { visibleParticipants: ec, participantTileWidth: eo } = (0, t4.i4)(y, p);
     return (0, i.jsxs)("div", {
         className: d()(t9.zr, t7.tR, v),

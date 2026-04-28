@@ -1,0 +1,373 @@
+.container__94da4 {
+    --custom-premium-home-max-width: 1066px;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 auto -90px;
+    padding-bottom: 60px;
+    position: relative
+}
+
+.settingsContainer__94da4 {
+    width: 100%
+}
+
+.settingsHeroNoBackground__94da4 {
+    width: 660px
+}
+
+.noTopPaddingOverride__94da4 {
+    padding-top: 0
+}
+
+.settingsHeroBogoHeight__94da4 {
+    height: 260px
+}
+
+.premiumTierCardsContainerSettings__94da4 {
+    margin-bottom: 60px;
+    max-width: 824px;
+    width: 100%
+}
+
+.promoBannerContainer__94da4 {
+    justify-content: center;
+    margin-bottom: var(--space-24);
+    max-width: 1052px;
+    position: relative;
+    width: 100%;
+    z-index: 1
+}
+
+.giftPromoCard__94da4 {
+    margin-bottom: 25px
+}
+
+.perkCardsContainerSpacingSettings__94da4 {
+    margin-bottom: 60px !important;
+    width: 100%
+}
+
+.planComparisonTable__94da4 {
+    max-width: 700px
+}
+
+.planComparisonTableContainer__94da4 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%
+}
+
+.bottomIllustration__94da4 {
+    bottom: 0;
+    filter: saturate(var(--saturation-factor, 1));
+    position: absolute
+}
+
+.existingSubscriberSpacing__94da4 {
+    margin-bottom: 24px
+}
+
+.footerSpacing__94da4 {
+    height: 128px
+}
+
+.zIndex1__94da4 {
+    z-index: 1
+}
+
+.trialMarketingMargin__94da4 {
+    margin-bottom: 56px;
+    margin-top: 56px;
+    padding: unset
+}
+
+.bottomOfPageVisibilitySensor__94da4 {
+    bottom: 0;
+    height: 300px;
+    position: absolute
+}
+
+.heroWrapper__94da4 {
+    position: relative
+}
+
+.wishlistButton__94da4 {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: var(--control-secondary-background-default);
+    border-color: var(--control-secondary-border-default);
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    top: var(--space-16);
+    z-index: 1
+}
+
+.offerSplashWrapper__94da4 {
+    position: relative;
+    width: 95.6%
+}
+
+.offerSplashWrapper__94da4 .wishlistButton__94da4 {
+    top: calc(var(--space-16)*-1)
+}
+
+.container__61306 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 660px
+}
+
+.applicationStoreHomeWrapper__61306 {
+    margin: 60px 40px 80px
+}
+
+.loading__61306 {
+    align-items: center;
+    display: flex;
+    height: 520px;
+    justify-content: center
+}
+
+.background__61306 {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.content__61306 {
+    position: relative
+}
+
+.sectionTier2__61306 {
+    margin-top: 32px;
+    text-align: center
+}
+
+.marketingRefreshTier2Intro__61306 {
+    max-width: 325px
+}
+
+.marketingRefreshTitle__61306 {
+    color: var(--text-strong);
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 30px;
+    margin-bottom: 8px;
+    margin-top: 0
+}
+
+.marketingRefreshSubtitle__61306 {
+    color: var(--text-default);
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0
+}
+
+.marketingRefreshHeaderAnimation__61306 {
+    margin-inline-start: 16px;
+    width: 332px
+}
+
+.marketingRefreshTier2Cta__61306 {
+    margin-top: 48px;
+    text-align: center
+}
+
+.marketingRefreshSectionTier1__61306 {
+    border-top: 1px solid var(--border-subtle);
+    color: var(--text-default);
+    display: flex;
+    margin-top: 48px;
+    padding-top: 48px
+}
+
+.marketingRefreshTier1Graphic__61306 {
+    display: block;
+    flex-shrink: 0;
+    height: 148px;
+    margin-inline-end: 60px;
+    width: 175px
+}
+
+@media (max-width:920px) {
+    .marketingRefreshTier1Graphic__61306 {
+        display: none
+    }
+}
+
+.marketingRefreshTier1Logo__61306 {
+    color: var(--text-strong);
+    display: block;
+    height: 20px;
+    margin-bottom: 8px;
+    width: 194px
+}
+
+.marketingRefreshDescription__61306 {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 16px
+}
+
+.tier1InfoTooltipList__61306 {
+    list-style-type: disc;
+    padding-inline-start: 15px
+}
+
+.tier1InfoTooltipListItem__61306 {
+    padding: 2px
+}
+
+.tier1InfoTooltipListItemOffsetItem__61306 {
+    inset-inline-start: -5px;
+    position: relative
+}
+
+.tier1InfoIcon__61306 {
+    height: 10px;
+    width: 10px
+}
+
+.tier2Buttons__61306 {
+    margin-top: 24px
+}
+
+.subSectionHeader__61306 {
+    text-transform: uppercase
+}
+
+.sectionAccountCredit__61306,
+.subscriptionDetails__61306 {
+    border-bottom: 1px solid;
+    margin-bottom: 40px;
+    padding-bottom: 40px
+}
+
+.accountCredit__61306 {
+    margin-top: 16px
+}
+
+.accountCreditTitle__61306 {
+    margin-bottom: 16px
+}
+
+.accountCreditDescription__61306 {
+    color: var(--text-default);
+    line-height: 20px;
+    margin-bottom: 16px;
+    margin-top: 0
+}
+
+.tier2Plan__61306 {
+    display: flex
+}
+
+.marketingRefreshTier2PlanWrapper__61306 {
+    display: flex;
+    margin-bottom: 48px
+}
+
+.marketingRefreshTier2PlanName__61306 {
+    color: var(--logo-primary);
+    display: block;
+    height: 60px;
+    margin-bottom: 32px;
+    width: auto
+}
+
+.subscriptionsRedirectContainer__61306 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border: none;
+    display: flex;
+    margin-bottom: 24px;
+    padding: 8px
+}
+
+.subscriptionsRedirectWarningIcon__61306 {
+    color: var(--status-warning);
+    height: 13px;
+    margin-inline-end: 6px;
+    width: 13px
+}
+
+.theme-light .sectionAccountCredit__61306,
+.theme-light .subscriptionDetails__61306 {
+    border-color: hsl(var(--primary-300-hsl)/.3)
+}
+
+.theme-dark .sectionAccountCredit__61306,
+.theme-dark .subscriptionDetails__61306 {
+    border-color: hsl(var(--primary-400-hsl)/.3)
+}
+
+.perkList__61306,
+.perkListItem__61306 {
+    margin-bottom: 16px
+}
+
+.perkListItem__61306 {
+    align-items: center;
+    display: flex
+}
+
+.perkListItem__61306:last-child {
+    margin-bottom: 0
+}
+
+.perkListItemIcon__61306 {
+    flex-shrink: 0;
+    height: 20px;
+    margin-inline-end: 16px;
+    width: 20px
+}
+
+.theme-dark .tier1CustomEmojiPerk__61306 {
+    color: #fee64f
+}
+
+.theme-dark .tier1StreamPerk__61306 {
+    color: #9bdd73
+}
+
+.theme-light .tier1CustomEmojiPerk__61306 {
+    color: #d0820c
+}
+
+.theme-light .tier1StreamPerk__61306 {
+    color: #69974d
+}
+
+.images-light .tier1Banner__61306 {
+    background-image: url(/assets/460e67c2a6814672.svg)
+}
+
+.images-dark .tier1Banner__61306 {
+    background-image: url(/assets/cbe5498434e90cc1.svg)
+}
+
+.tier1Banner__61306 {
+    background-color: var(--background-base-lower);
+    color: var(--text-strong)
+}
+
+.tier1ProfilePerk__61306 {
+    color: #4087ed
+}
+
+.tier1BoostPerk__61306 {
+    color: var(--guild-boosting-pink)
+}
+
+.tier1UploadPerk__61306 {
+    color: #776bff
+}

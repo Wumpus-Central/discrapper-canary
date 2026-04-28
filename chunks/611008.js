@@ -6,5 +6,4 @@ e.exports = {
     R6: "qrCodeOverlay_e16417",
     b4: "qrAvatar_e16417",
     Z: "startOverButton_e16417",
-    AC: "verticalSeparator_e16417",
 };

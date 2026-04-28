@@ -5,4 +5,5 @@ e.exports = {
     Z8: "smallRegisterLink__1d5fc",
     Eh: "mainLoginContainer__1d5fc",
     AX: "goBackButton__1d5fc",
+    M0: "authBoxWithMobileWebHandoff__1d5fc",
 };

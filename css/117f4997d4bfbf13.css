@@ -1,0 +1,29 @@
+.privacyLevel__735fb {
+    align-items: baseline;
+    display: inline-flex;
+    margin: 0 3px
+}
+
+.publicIcon__735fb {
+    align-self: center;
+    margin-inline-end: 4px
+}
+
+.verticalSpacing__735fb {
+    margin-top: 16px
+}
+
+.errorMessage__735fb {
+    margin-top: 8px
+}
+
+.notificationToggle__735fb {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.ageVerificationNotice__735fb {
+    margin-top: 16px
+}

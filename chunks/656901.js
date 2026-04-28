@@ -1873,7 +1873,7 @@ class iv extends r.PureComponent {
                       : this.renderAuthenticated(n, t, e);
             }
             return "login" === this.getMode()
-                ? (0, l.jsx)(iN.A, { giftCodeSKU: e, giftCode: n, transitionTo: a, location: d })
+                ? (0, l.jsx)(iN.A, { giftCode: n, transitionTo: a, location: d })
                 : (0, l.jsx)(iI.A, { giftCodeSKU: e, giftCode: n, transitionTo: a, location: d });
         }
         return null;

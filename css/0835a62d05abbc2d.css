@@ -1,0 +1,223 @@
+.modalRoot_a470b4 {
+    min-height: 200px
+}
+
+.header_a470b4 {
+    padding-bottom: 8px
+}
+
+.header_a470b4,
+.headerText_a470b4 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.headerText_a470b4 {
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+    flex-grow: 1
+}
+
+.manageConnectionsFooterButton_a470b4 {
+    flex: 1
+}
+
+.platformIcon_a470b4 {
+    height: 32px;
+    width: 32px
+}
+
+.botTag_a470b4 {
+    margin-inline-start: 4px;
+    margin-top: -1px !important
+}
+
+.connectionsChecksGroups_a470b4 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-inline-end: -8px;
+    max-height: 280px;
+    padding-bottom: 4px;
+    padding-top: 8px
+}
+
+.connectionsChecksGroup_a470b4 {
+    align-items: center;
+    border: 2px solid var(--border-subtle);
+    border-radius: 12px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    padding: 20px 16px;
+    position: relative
+}
+
+.connectionsChecksGroup_a470b4:first-of-type {
+    margin-top: 0
+}
+
+.connectionsChecksGroup_a470b4:hover {
+    border-color: var(--border-muted)
+}
+
+.connectionsChecksGroupPassed_a470b4 {
+    background-color: var(--background-base-lowest);
+    border: 2px solid var(--background-base-lowest);
+    cursor: unset
+}
+
+.connectionsChecksGroupPassed_a470b4:hover {
+    border-color: var(--background-base-lowest)
+}
+
+.connectionsChecksGroupPlatformDisabled_a470b4 {
+    cursor: not-allowed;
+    opacity: .7
+}
+
+.connectionsChecksGroupTextContainer_a470b4 {
+    flex: 1
+}
+
+.connectionsChecksGroupTextNameContainer_a470b4 {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.connectionsChecksGroupTextNameInfoIcon_a470b4 {
+    color: var(--text-feedback-warning);
+    height: 16px;
+    width: 16px
+}
+
+.connectionsChecksGroupRequirementsNotMet_a470b4 {
+    background-color: var(--background-feedback-critical);
+    border-radius: 12px;
+    inset-inline-end: 20px;
+    padding: 4px 8px;
+    position: absolute;
+    top: -8px
+}
+
+.connectionsChecksGroupCaret_a470b4 {
+    color: var(--interactive-text-default);
+    height: 24px;
+    width: 24px
+}
+
+.connectionsChecksGroupRetryButton_a470b4 {
+    padding: 0
+}
+
+.connectionsChecksGroupCheckmark_a470b4 {
+    color: var(--text-feedback-positive);
+    height: 20px;
+    width: 20px
+}
+
+.connectionsCheck_a470b4 {
+    margin-top: 4px
+}
+
+.footerText_a470b4 {
+    margin-bottom: 24px;
+    margin-top: 12px
+}
+
+.accountConnectedContainer_a470b4 {
+    align-items: flex-start;
+    -moz-column-gap: 32px;
+    column-gap: 32px;
+    display: flex;
+    flex-direction: row;
+    margin: 24px 0
+}
+
+.accountConnectedLoading_a470b4 {
+    margin: auto
+}
+
+.accountConnectedContainerChild_a470b4 {
+    width: 268px
+}
+
+.accountConnectedHeader_a470b4 {
+    align-items: center;
+    color: var(--interactive-text-default);
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.accountConnectedPreviewConnectedUserAccount_a470b4 {
+    border: 1px solid var(--border-subtle);
+    margin-top: 8px !important
+}
+
+.accountConnectedPrivacyOptionsContainer_a470b4 {
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    margin-top: 8px;
+    padding: 8px
+}
+
+.roleGranted_a470b4 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    padding: 12px 8px
+}
+
+.roleGrantedName_a470b4 {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.verifiedIcon_a470b4 {
+    margin-inline-end: 8px
+}
+
+.channelsGranted_a470b4 {
+    background-color: var(--background-mod-normal);
+    border-radius: 0 0 4px 4px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    max-height: 200px;
+    padding: 16px
+}
+
+.channelName_a470b4 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4px
+}
+
+.channelName_a470b4:last-child {
+    margin-bottom: 0
+}
+
+.channelNameIcon_a470b4 {
+    color: var(--text-muted);
+    margin-inline-end: 8px;
+    min-width: 24px
+}
+
+.channelNameText_a470b4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}

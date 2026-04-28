@@ -1,0 +1,126 @@
+.root_b18605 {
+    background-color: var(--background-surface-high);
+    border-inline-start: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 418px
+}
+
+.headerToggle_b18605 {
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.content_b18605 {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 8px
+}
+
+.emptyText_b18605 {
+    display: block;
+    padding: 8px 4px
+}
+
+.conversationItem_b18605 {
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 8px;
+    padding: 16px;
+    width: 100%
+}
+
+.conversationHeader_b18605 {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    justify-content: space-between
+}
+
+.conversationTitle_b18605 {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-transform: capitalize
+}
+
+.summaryText_b18605 {
+    margin-bottom: 8px;
+    margin-top: 2px
+}
+
+.keyPoints_b18605 {
+    color: var(--text-default);
+    list-style: disc;
+    margin-top: 8px;
+    padding-inline-start: 16px
+}
+
+.keyPoints_b18605 li {
+    margin-top: 2px
+}
+
+.keywords_b18605 {
+    margin-top: 8px
+}
+
+.keywordsValue_b18605 {
+    color: var(--text-muted)
+}
+
+.cardSection_b18605 {
+    border-top: 1px solid hsla(0, 0%, 100%, .06);
+    margin-top: 12px;
+    padding-top: 8px
+}
+
+.sectionLabel_b18605 {
+    display: block;
+    margin-bottom: 6px
+}
+
+.scores_b18605 {
+    display: flex;
+    gap: 16px;
+    justify-content: space-around
+}
+
+.scoreItem_b18605 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center
+}
+
+.conversationMeta_b18605 {
+    display: block;
+    margin: 4px 0 8px
+}
+
+.conversationItemInViewport_b18605 {
+    outline: 2px solid hsla(0, 0%, 100%, .15);
+    outline-offset: -2px
+}
+
+.loadMoreFooter_b18605 {
+    padding: 8px;
+    text-align: center
+}
+
+.loadMoreButton_b18605 {
+    border-radius: 4px;
+    display: block;
+    padding: 4px 8px;
+    width: 100%
+}
+
+.loadMoreButton_b18605:hover {
+    background-color: var(--custom-background-modifier-hover)
+}

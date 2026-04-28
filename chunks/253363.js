@@ -268,7 +268,7 @@ var eQ = n(97483),
     eZ = n(959495),
     e0 = n(988572);
 let e1 = { analyticsSource: { page: eB.liQ.GUILD_CHANNEL, section: eB.JJy.CHANNEL_LIST, object: eB.ZSU.CHANNEL } };
-function e2(e) {
+function e3(e) {
     let t,
         l,
         r,
@@ -469,10 +469,10 @@ function e2(e) {
         })
     );
 }
-var e3 = n(633965),
+var e2 = n(633965),
     e9 = n(857071),
-    e8 = n(851109),
-    e6 = n(72314),
+    e6 = n(851109),
+    e8 = n(72314),
     e5 = n(543897),
     e7 = n(696451),
     e4 = n(71393),
@@ -757,10 +757,10 @@ class tH extends s.PureComponent {
         null != l
             ? (0, tN.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e("91388"),
-                      n.e("61748"),
-                      n.e("77598"),
-                      n.e("23491"),
+                      n.e("39431"),
+                      n.e("31788"),
+                      n.e("63397"),
+                      n.e("6287"),
                       n.e("26132"),
                       n.e("46652"),
                       n.e("93190"),
@@ -1048,7 +1048,7 @@ function tZ() {
         onClick: () => {
             (0, E.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("57568"), n.e("25280")]).then(n.bind(n, 987482));
+                    let { default: e } = await Promise.all([n.e("81126"), n.e("25280")]).then(n.bind(n, 987482));
                     return (t) => (0, i.jsx)(e, { source: "Guilds", ...t });
                 },
                 { modalKey: t$ },
@@ -1061,12 +1061,12 @@ function tZ() {
 }
 var t0 = n(245604),
     t1 = n(272613),
-    t2 = n(398884),
-    t3 = n(772366),
+    t3 = n(398884),
+    t2 = n(772366),
     t9 = n(728321),
-    t8 = n(260509),
-    t6 = n(284009),
-    t5 = n.n(t6),
+    t6 = n(260509),
+    t8 = n(284009),
+    t5 = n.n(t8),
     t7 = n(295868),
     t4 = n(686956),
     ne = n(954571),
@@ -1203,7 +1203,7 @@ function nh(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         l = (0, A.yK)([e4.A], () => e4.A.getGuildsArray()),
         r = (0, A.bG)([ek.default], () => ek.default.getCurrentUser()),
-        a = s.useMemo(() => l.some((e) => (0, t8.bM)(e, r)), [l, r]),
+        a = s.useMemo(() => l.some((e) => (0, t6.bM)(e, r)), [l, r]),
         o = (0, E.useModalsStore)((e) => (0, E.hasModalOpenSelector)(e, nu.fc)),
         { analyticsLocations: u } = (0, b.Ay)();
     return (0, i.jsx)("div", {
@@ -1218,8 +1218,8 @@ function nh(e) {
                     showPill: !1,
                     id: "create-join-button",
                     onClick: () => {
-                        (0, t2.Sn)()
-                            ? (0, t3.A)({
+                        (0, t3.Sn)()
+                            ? (0, t2.A)({
                                   analyticsSource: { page: eB.ThZ.CREATE_JOIN_GUILD_MODAL },
                                   analyticsLocation: {
                                       page: eB.ThZ.CREATE_JOIN_GUILD_MODAL,
@@ -1479,8 +1479,8 @@ function n$(e) {
 var nZ = n(349288),
     n0 = n(695366),
     n1 = n(919638),
-    n2 = n(818348),
-    n3 = n(585212);
+    n3 = n(818348),
+    n2 = n(585212);
 function n9() {
     let e = (0, A.bG)([n1.A, e4.A], () => n1.A.unavailableGuilds.filter((e) => null == e4.A.getGuild(e)).length),
         t = (0, c.Vd)("unavailable-guilds-button");
@@ -1490,9 +1490,9 @@ function n9() {
               children: (0, i.jsx)(tQ, {
                   text: eH.intl.format(eH.t["TnH05/"], { count: e }),
                   children: (0, i.jsx)(nZ.Anchor, {
-                      href: n2.qF.STATUS,
+                      href: n3.qF.STATUS,
                       target: "_blank",
-                      className: n3.h,
+                      className: n2.h,
                       "aria-label": eH.intl.formatToPlainString(eH.t["MEpX+2"], { count: e }),
                       ...t,
                       children: (0, i.jsx)(n0.E, { color: "currentColor", "aria-hidden": !0 }),
@@ -1500,8 +1500,8 @@ function n9() {
               }),
           });
 }
-var n8 = n(312742),
-    n6 = n(317097),
+var n6 = n(312742),
+    n8 = n(317097),
     n5 = n(319060),
     n7 = n(866323),
     n4 = n(817281),
@@ -1673,7 +1673,7 @@ let lg = (0, lt.xI)(n5.A.FOLDER_ITEM_ANIMATION_DURATION),
         s.useEffect(() => {
             _ && G(!1);
         }, [_]);
-        let [{ dragging: V }, F] = (0, n8.i)({
+        let [{ dragging: V }, F] = (0, n6.i)({
                 type: tl.PJ.FOLDER,
                 item: () => (S?.(), { type: tl.PJ.FOLDER, nodeId: o.id }),
                 end() {
@@ -1747,7 +1747,7 @@ let lg = (0, lt.xI)(n5.A.FOLDER_ITEM_ANIMATION_DURATION),
                 ],
             }),
             Z = null != o.color ? o.color : lA.DO,
-            ee = Z === lA.DO ? void 0 : (0, n6.Hl)(Z);
+            ee = Z === lA.DO ? void 0 : (0, n8.Hl)(Z);
         return (0, i.jsxs)("div", {
             ref: X,
             className: a()(lr.qc, { [lr.Av]: h, [lr.Lg]: U }),
@@ -2301,54 +2301,53 @@ let lZ = { analyticsSource: { page: eB.liQ.GUILD_CHANNEL, section: eB.JJy.CHANNE
 function l0(e, t) {
     (0, tN.L3)(e, async () => {
         let { default: e } = await Promise.all([
-            n.e("73432"),
-            n.e("94232"),
-            n.e("15652"),
-            n.e("47042"),
-            n.e("77598"),
-            n.e("43763"),
-            n.e("28592"),
-            n.e("78220"),
-            n.e("93816"),
-            n.e("80813"),
-            n.e("19364"),
+            n.e("81510"),
+            n.e("29092"),
+            n.e("45235"),
+            n.e("63397"),
+            n.e("41909"),
+            n.e("6287"),
+            n.e("84611"),
+            n.e("32101"),
+            n.e("83097"),
+            n.e("72900"),
+            n.e("63419"),
             n.e("69273"),
+            n.e("31788"),
             n.e("77083"),
             n.e("63009"),
-            n.e("25385"),
-            n.e("25806"),
+            n.e("84786"),
             n.e("45650"),
             n.e("97189"),
-            n.e("48486"),
             n.e("27660"),
             n.e("85484"),
-            n.e("63232"),
-            n.e("55918"),
-            n.e("15274"),
+            n.e("36407"),
             n.e("79705"),
-            n.e("74187"),
-            n.e("32245"),
+            n.e("55658"),
+            n.e("87616"),
             n.e("76032"),
-            n.e("61748"),
-            n.e("42987"),
-            n.e("8641"),
-            n.e("57568"),
-            n.e("58376"),
-            n.e("84200"),
-            n.e("33217"),
-            n.e("78304"),
-            n.e("17116"),
-            n.e("32292"),
+            n.e("33957"),
+            n.e("8357"),
+            n.e("49699"),
+            n.e("43108"),
+            n.e("35598"),
+            n.e("63635"),
+            n.e("66782"),
+            n.e("82872"),
+            n.e("86479"),
+            n.e("13403"),
+            n.e("94925"),
+            n.e("93329"),
             n.e("87845"),
-            n.e("35636"),
-            n.e("23491"),
-            n.e("47234"),
-            n.e("83030"),
+            n.e("45317"),
+            n.e("85639"),
+            n.e("51643"),
             n.e("61175"),
-            n.e("49937"),
-            n.e("56574"),
-            n.e("65533"),
-            n.e("83818"),
+            n.e("92652"),
+            n.e("45229"),
+            n.e("84388"),
+            n.e("36685"),
+            n.e("4974"),
             n.e("80186"),
             n.e("23924"),
             n.e("15510"),
@@ -2364,7 +2363,7 @@ function l0(e, t) {
             n.e("28367"),
             n.e("35429"),
             n.e("10471"),
-            n.e("40851"),
+            n.e("63232"),
             n.e("64827"),
             n.e("30938"),
             n.e("23808"),
@@ -2746,7 +2745,7 @@ let l1 = s.memo(function (e) {
               void 0)
         : null == M && null != T && (M = ed({ guildJoinRequestStatus: T }) ?? void 0);
     let L = e.lowerBadgeSize ?? { width: (0, X.o6)(E) },
-        [{ dragging: D }, G] = (0, n8.i)({
+        [{ dragging: D }, G] = (0, n6.i)({
             type: tl.PJ.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
@@ -2833,7 +2832,7 @@ let l1 = s.memo(function (e) {
                   onMouseDown: ee,
                   onContextMenu: en,
                   onKeyDown: el,
-                  icon: (0, t8.Iv)(u, 2 * eA, F && d, !0),
+                  icon: (0, t6.Iv)(u, 2 * eA, F && d, !0),
                   selected: h || F,
                   ...P,
                   "aria-setsize": y,
@@ -2859,7 +2858,7 @@ let l1 = s.memo(function (e) {
                           onMouseDown: ee,
                           onContextMenu: en,
                           onKeyDown: el,
-                          icon: (0, t8.Iv)(u, 2 * eA, F && d, !0),
+                          icon: (0, t6.Iv)(u, 2 * eA, F && d, !0),
                           selected: h || F,
                           ...P,
                           "aria-setsize": y,
@@ -2910,8 +2909,8 @@ let l1 = s.memo(function (e) {
         ],
     });
 });
-var l2 = n(182240);
-let l3 = s.memo(function (e) {
+var l3 = n(182240);
+let l2 = s.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         l = t.id,
         r = (0, A.bG)([e4.A], () => e4.A.getGuild(l)),
@@ -2936,11 +2935,11 @@ let l3 = s.memo(function (e) {
                     ? n
                     : p
                       ? (0, i.jsx)("div", {
-                            className: l2.j,
+                            className: l3.j,
                             children: (0, i.jsx)(l_.E, {
                                 size: "custom",
                                 color: "currentColor",
-                                className: l2.v,
+                                className: l3.v,
                                 width: 10,
                                 height: 10,
                             }),
@@ -2963,8 +2962,8 @@ let l3 = s.memo(function (e) {
     });
 });
 var l9 = n(922016),
-    l8 = n(534514),
-    l6 = n(821609),
+    l6 = n(534514),
+    l8 = n(821609),
     l5 = n(339350),
     l7 = n(475743),
     l4 = n(624458),
@@ -3032,7 +3031,7 @@ function ia(e) {
                                         (0, i.jsxs)("div", {
                                             className: ir.q3,
                                             children: [
-                                                (0, i.jsx)(l8.D, {
+                                                (0, i.jsx)(l6.D, {
                                                     variant: "heading-md/medium",
                                                     children: eH.intl.string(eH.t["0YV0YE"]),
                                                 }),
@@ -3043,7 +3042,7 @@ function ia(e) {
                                                 }),
                                             ],
                                         }),
-                                        (0, i.jsx)(l6.$, {
+                                        (0, i.jsx)(l8.$, {
                                             variant: "primary",
                                             size: "sm",
                                             text: eH.intl.string(eH.t["4r+amb"]),
@@ -3137,12 +3136,10 @@ let ic = (0, j.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("10373"),
-                n.e("48486"),
+                n.e("72900"),
                 n.e("81154"),
-                n.e("32245"),
-                n.e("47042"),
-                n.e("7927"),
-                n.e("7580"),
+                n.e("55658"),
+                n.e("63419"),
                 n.e("91763"),
                 n.e("76602"),
                 n.e("28229"),
@@ -3203,7 +3200,7 @@ class im {
             (this.setIsScrolledToBottom = n),
             (this.onScroll = l),
             (this.sizes = i),
-            (0, e3.u9)(this.getVisibleGuildIds);
+            (0, e2.u9)(this.getVisibleGuildIds);
     }
     setResizeObserver = () => {
         let e = this.scrollerRef.current?.getScrollerNode();
@@ -3314,12 +3311,12 @@ function ig(e) {
     }, [n, _]);
     let C = (0, A.yK)([e4.A, e7.Ay], () => e4.A.getGuildIds().filter((e) => e7.Ay.isCurrentUserGuest(e))),
         S = l.concat(C),
-        { entrypoint: x } = (0, e8.X8)({ location: "GuildsBar" });
+        { entrypoint: x } = (0, e6.X8)({ location: "GuildsBar" });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(nJ, {}),
-            x === e8.RK.SERVER_RAIL_TOP && (0, i.jsx)(ic, {}),
-            r ? (0, i.jsx)(e2, { shouldShowIntroPopover: f, markIntroPopoverAsDismissed: h }) : null,
+            x === e6.RK.SERVER_RAIL_TOP && (0, i.jsx)(ic, {}),
+            r ? (0, i.jsx)(e3, { shouldShowIntroPopover: f, markIntroPopoverAsDismissed: h }) : null,
             !t && (0, i.jsx)(tW, {}),
             S.map((e) => (0, i.jsx)(iu, { guildId: e }, e)),
             (0, i.jsx)(io, { onActivate: n }),
@@ -3374,8 +3371,8 @@ function iE(e) {
         V = (0, C.r)(f.A.space.SPACE_XS),
         F = (0, D.A)("GuildsBar"),
         { pathname: B } = (0, d.zy)(),
-        { entrypoint: H } = (0, e8.X8)({ location: "GuildsBar" }),
-        K = +!!F + +(H === e8.RK.SERVER_RAIL_TOP),
+        { entrypoint: H } = (0, e6.X8)({ location: "GuildsBar" }),
+        K = +!!F + +(H === e6.RK.SERVER_RAIL_TOP),
         W = s.useMemo(() => {
             let e,
                 t,
@@ -3419,7 +3416,7 @@ function iE(e) {
     (0, T.u5)(() => {
         if (!R.current && 0 !== u.size) {
             if (!z) {
-                let { scrollTop: e } = e6.A.getGuildListDimensions();
+                let { scrollTop: e } = e8.A.getGuildListDimensions();
                 W.scrollTo({ to: e, animate: !1 });
             }
             return (R.current = !0), () => j.stop();
@@ -3473,7 +3470,7 @@ function iE(e) {
                         );
                     case tl.PJ.GUILD:
                         return (0, i.jsx)(
-                            l3,
+                            l2,
                             {
                                 guildNode: t,
                                 setRef: W.setNodeRef,
@@ -3493,7 +3490,7 @@ function iE(e) {
             [I, N, E, W.setNodeRef],
         ),
         J = (0, i.jsx)(nT, { selected: z, className: id.ai }),
-        X = H === e8.RK.SERVER_RAIL_BOTTOM;
+        X = H === e6.RK.SERVER_RAIL_BOTTOM;
     return (0, i.jsx)(b.f5, {
         value: Y,
         children: (0, i.jsx)(S.N, {

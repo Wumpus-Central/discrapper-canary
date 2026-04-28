@@ -83,8 +83,7 @@ function eu(e) {
         R()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, I.openModalLazy)(async () => {
                 let { default: n } = await Promise.all([
-                    i.e("80813"),
-                    i.e("83818"),
+                    i.e("36685"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -335,8 +334,7 @@ function ep(e) {
             null != U &&
                 (0, I.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("80813"),
-                        i.e("83818"),
+                        i.e("36685"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -525,9 +523,9 @@ function eU(e) {
                 null != o &&
                     (0, eT.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            i.e("77598"),
-                            i.e("23491"),
-                            i.e("91388"),
+                            i.e("63397"),
+                            i.e("6287"),
+                            i.e("39431"),
                             i.e("26132"),
                             i.e("46652"),
                             i.e("93190"),
@@ -675,14 +673,14 @@ let e0 = (e) =>
         [e.name, e.application_id, e.assets, e.state, e.details, e.party].some((e) => null != e)) ||
     e.type === M.$pd.LISTENING;
 var e1 = i(685399),
-    e2 = i(960076),
-    e9 = i(323073),
-    e3 = i(85451),
-    e7 = i(268218),
-    e5 = i(834757),
-    e6 = i(727353),
-    e8 = i(832163),
-    e4 = i(565688),
+    e3 = i(960076),
+    e2 = i(323073),
+    e9 = i(85451),
+    e6 = i(268218),
+    e7 = i(834757),
+    e5 = i(727353),
+    e4 = i(832163),
+    e8 = i(565688),
     te = i(533562),
     tt = i(927813),
     ti = i(329554);
@@ -701,32 +699,29 @@ let tl = (0, i(600975).C)({
 });
 var tn = i(699976),
     ts = i(415679);
-let ta = (0, e7.Fe)({
+let ta = (0, e6.Fe)({
     createPromise: () =>
         Promise.all([
-            i.e("77598"),
-            i.e("25806"),
+            i.e("63397"),
+            i.e("41909"),
             i.e("9987"),
-            i.e("93816"),
+            i.e("32101"),
             i.e("69273"),
-            i.e("80813"),
+            i.e("31788"),
             i.e("77083"),
             i.e("63009"),
-            i.e("25385"),
+            i.e("84786"),
             i.e("45650"),
             i.e("97189"),
-            i.e("48486"),
             i.e("27660"),
-            i.e("73432"),
+            i.e("6287"),
             i.e("85484"),
-            i.e("63232"),
-            i.e("28592"),
-            i.e("61748"),
-            i.e("55918"),
-            i.e("91388"),
-            i.e("15274"),
+            i.e("81510"),
+            i.e("50603"),
+            i.e("96130"),
+            i.e("36407"),
+            i.e("41475"),
             i.e("79705"),
-            i.e("66694"),
             i.e("69279"),
             i.e("23924"),
             i.e("15510"),
@@ -735,7 +730,7 @@ let ta = (0, e7.Fe)({
             i.e("28367"),
             i.e("35429"),
             i.e("10471"),
-            i.e("40851"),
+            i.e("63232"),
             i.e("64827"),
             i.e("30938"),
             i.e("23808"),
@@ -899,14 +894,14 @@ function td(e) {
                         size: L._3.SIZE_32,
                         "aria-label": d,
                         avatarDecoration: c,
-                        status: (0, e2.A)(h) ? M.clD.STREAMING : o === M.clD.OFFLINE ? void 0 : o,
+                        status: (0, e3.A)(h) ? M.clD.STREAMING : o === M.clD.OFFLINE ? void 0 : o,
                         isMobile: m,
                         className: ts.my,
                     }),
                     (0, l.jsx)(j.E, { variant: "text-sm/medium", lineClamp: 1, children: d }),
                 ],
             }),
-            null != p && (0, l.jsx)(e3.z, { textColor: "text-feedback-positive", entry: { start: p } }),
+            null != p && (0, l.jsx)(e9.z, { textColor: "text-feedback-positive", entry: { start: p } }),
         ],
     });
 }
@@ -924,15 +919,15 @@ function tc(e) {
         ),
         [A, x] = (0, r.yK)([eC.A, G.A, P.A, eK.default], () => (0, eW.eo)(s, eC.A, G.A, P.A, eK.default)),
         v = (0, r.bG)([e_.default], () => e_.default.getId()),
-        I = (0, r.bG)([ei.A], () => (0, e5.nr)(g, ei.A), [g]),
-        f = (0, e9.r9)() && (0, e9.UK)(s.id),
+        I = (0, r.bG)([ei.A], () => (0, e7.nr)(g, ei.A), [g]),
+        f = (0, e2.r9)() && (0, e2.UK)(s.id),
         N =
             ((t = (0, e1.Ay)(s)),
             (i = n.useMemo(() => t.filter((e) => e.embeddedActivity.userIds.has(d.id)), [t, d.id])),
             [...(0, e1.Rz)(i).values()]),
         E = (0, te.W)(),
-        _ = (0, e4.m)({ location: "voice_channel_activities" }),
-        j = (0, r.bG)([e8.A], () => e8.A.getDetectableIdsToApplicationIds()),
+        _ = (0, e8.m)({ location: "voice_channel_activities" }),
+        j = (0, r.bG)([e4.A], () => e4.A.getDetectableIdsToApplicationIds()),
         S = u ?? I,
         y = (0, r.yK)([eX.A, ei.A, e_.default], () => {
             let e = d.id === e_.default.getId() ? eX.A.getActivities() : ei.A.getActivities(d.id),
@@ -969,7 +964,7 @@ function tc(e) {
     let k = (0, l.jsxs)(l.Fragment, {
         children: [
             C &&
-                (0, l.jsx)(e6.P, {
+                (0, l.jsx)(e5.P, {
                     stream: g,
                     activeStream: p,
                     streamActivity: I,
@@ -1106,9 +1101,9 @@ let tg = (0, eH.J)(function (e) {
         Z = (e) => {
             (0, eT.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("77598"),
-                    i.e("23491"),
-                    i.e("91388"),
+                    i.e("63397"),
+                    i.e("6287"),
+                    i.e("39431"),
                     i.e("26132"),
                     i.e("46652"),
                     i.e("93190"),

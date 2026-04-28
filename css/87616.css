@@ -1,0 +1,18 @@
+.roleTag__9cd44,
+.roleTagContainer__9cd44 {
+    display: flex
+}
+
+.roleTag__9cd44 {
+    align-items: center;
+    background: var(--interactive-background-hover);
+    border-radius: 4px;
+    padding: 8px
+}
+
+.roleColor__9cd44 {
+    border-radius: 6px;
+    flex: none;
+    height: 12px;
+    width: 12px
+}

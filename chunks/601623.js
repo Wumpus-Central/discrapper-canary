@@ -93,7 +93,7 @@ let eE = (e) => {
                                 onClick: () => {
                                     (0, d.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("57568"),
+                                            n.e("81126"),
                                             n.e("44602"),
                                             n.e("25280"),
                                         ]).then(n.bind(n, 987482));
@@ -167,7 +167,7 @@ let eE = (e) => {
                                             { ticket: t, challenge: l } = await e();
                                         (0, d.openModalLazy)(async () => {
                                             let { RegisterWebAuthnCredentialModal: e } = await Promise.all([
-                                                n.e("90217"),
+                                                n.e("87208"),
                                                 n.e("4736"),
                                                 n.e("40114"),
                                                 n.e("8508"),
@@ -425,8 +425,8 @@ function eX(e) {
                 : (0, d.openModalLazy)(async () => {
                       let e = { source: eh.Eo.NAGBAR, alertType: (0, eL.$5)(A) },
                           { default: t } = await Promise.all([
-                              n.e("43763"),
-                              n.e("48486"),
+                              n.e("41909"),
+                              n.e("36685"),
                               n.e("40258"),
                               n.e("73669"),
                               n.e("46313"),
@@ -529,8 +529,8 @@ var ez = n(503698),
 if (21552 == n.j) var eQ = n(873263);
 if (21552 == n.j) var eJ = n(314116);
 if (21552 == n.j) var e0 = n(821609);
-var e5 = n(334465),
-    e2 = n(624458),
+var e2 = n(334465),
+    e5 = n(624458),
     e1 = n(513461),
     e8 = n(709977),
     e7 = n(212455),
@@ -543,7 +543,7 @@ let e4 =
                   t = (0, o.bG)([eg.A], () => eg.A.getGuild(e), [e]),
                   l = (0, o.bG)([e7.A], () => (null != e ? e7.A.getRequest(e) : null), [e]),
                   r = (0, eQ.zy)(),
-                  s = (0, e5.B)(r.pathname, ei.BVt.CHANNEL(t?.id, eG.VV.GUILD_ONBOARDING))?.isExact === !0;
+                  s = (0, e2.B)(r.pathname, ei.BVt.CHANNEL(t?.id, eG.VV.GUILD_ONBOARDING))?.isExact === !0;
               if (null == t || !(0, e8.Qd)(t) || s) return null;
               let a = l?.applicationStatus ?? e1.B5.STARTED,
                   E = null,
@@ -560,7 +560,7 @@ let e4 =
                                   subtitle: es.intl.string(es.t["13tjTU"]),
                                   variant: "primary",
                                   confirmText: es.intl.string(es.t["cY+Oob"]),
-                                  onConfirm: () => e2.A.removeGuildJoinRequest(t.id),
+                                  onConfirm: () => e5.A.removeGuildJoinRequest(t.id),
                               });
                           });
                       break;
@@ -914,8 +914,8 @@ var tW = n(969341),
     tQ = n(723702),
     tJ = n(325278),
     t0 = n(831502),
-    t5 = n(731854);
-let t2 = new v.A("Notice"),
+    t2 = n(731854);
+let t5 = new v.A("Notice"),
     t1 = (e) => {
         let { error: t, allowClick: n = !1 } = e,
             l = (0, eS.B1)(t)?.errorCode,
@@ -967,7 +967,7 @@ function t9(e) {
     let t,
         n,
         { noticeType: l } = e,
-        r = (0, to.x5)(t5.oh.AUDIO_INPUT),
+        r = (0, to.x5)(t2.oh.AUDIO_INPUT),
         s = r?.guid ?? "",
         { inputDeviceOSMuted: a, inputDeviceOSVolume: E } = (0, o.cf)([tW.Ay], () => ({
             inputDeviceOSMuted: tW.Ay.getInputDeviceOSMuted(),
@@ -981,7 +981,7 @@ function t9(e) {
             : 0 === E
               ? ((t = es.intl.string(es.t.j4gGA4)),
                 (n = (0, i.jsx)(I.eC, { href: t7(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
-              : tW.Ay.supports(t5.O5.LOOPBACK)
+              : tW.Ay.supports(t2.O5.LOOPBACK)
                 ? ((t = es.intl.string(es.t.dNAJ18)),
                   (_ = !0),
                   (n = (0, i.jsx)(I.zr, {
@@ -1364,23 +1364,21 @@ let t4 =
                                   onClick: async () => {
                                       try {
                                           let { openIAPPurchaseModal: e } = await Promise.all([
-                                              n.e("93816"),
+                                              n.e("32101"),
                                               n.e("69273"),
-                                              n.e("80813"),
+                                              n.e("31788"),
                                               n.e("77083"),
                                               n.e("63009"),
-                                              n.e("25385"),
-                                              n.e("25806"),
-                                              n.e("77598"),
+                                              n.e("84786"),
+                                              n.e("41909"),
+                                              n.e("63397"),
                                               n.e("45650"),
                                               n.e("97189"),
-                                              n.e("48486"),
                                               n.e("27660"),
-                                              n.e("73432"),
+                                              n.e("6287"),
                                               n.e("85484"),
-                                              n.e("63232"),
-                                              n.e("55918"),
-                                              n.e("15274"),
+                                              n.e("81510"),
+                                              n.e("36407"),
                                               n.e("79705"),
                                               n.e("23924"),
                                               n.e("15510"),
@@ -1389,7 +1387,7 @@ let t4 =
                                               n.e("28367"),
                                               n.e("35429"),
                                               n.e("10471"),
-                                              n.e("40851"),
+                                              n.e("63232"),
                                               n.e("64827"),
                                               n.e("30938"),
                                               n.e("23808"),
@@ -1464,7 +1462,7 @@ let t4 =
                                           }),
                                               M($.id);
                                       } catch (e) {
-                                          null != e && t2.error("Failed to open off-platform premium perk modal", e);
+                                          null != e && t5.error("Failed to open off-platform premium perk modal", e);
                                       }
                                   },
                                   children: es.intl.string(es.t.KEwPYx),
@@ -1547,7 +1545,7 @@ let t4 =
                                   onClick: () => {
                                       (0, d.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
-                                              n.e("57568"),
+                                              n.e("81126"),
                                               n.e("44602"),
                                               n.e("25280"),
                                           ]).then(n.bind(n, 987482));
@@ -1666,12 +1664,11 @@ let t4 =
                                       t6(r.metadata?.premiumSubscription?.currentPeriodEnd),
                                           (0, d.openModalLazy)(async () => {
                                               let { default: e } = await Promise.all([
-                                                  n.e("19364"),
+                                                  n.e("31788"),
                                                   n.e("77083"),
                                                   n.e("63009"),
-                                                  n.e("63232"),
-                                                  n.e("77598"),
-                                                  n.e("23309"),
+                                                  n.e("63397"),
+                                                  n.e("50603"),
                                                   n.e("35429"),
                                                   n.e("10471"),
                                                   n.e("23808"),
