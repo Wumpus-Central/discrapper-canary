@@ -1,16 +1,16 @@
-a.r(t), a.d(t, { default: () => D }), a(321073);
+a.r(t), a.d(t, { default: () => b }), a(321073);
 var i,
     l,
-    o = a(205693),
-    s = a(626584),
+    s = a(205693),
+    o = a(626584),
     n = a(969341),
     d = a(274372),
     r = a(372684),
     c = a(399925),
     h = a(723702),
-    u = a(19575),
+    f = a(19575),
     M = a(572164),
-    f = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i),
+    u = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i),
     p =
         (((l = {}).UNINITIALIZED = "uninitialized"),
         (l.UNSUPPORTED = "unsupported"),
@@ -28,7 +28,7 @@ let L = [
         ["burr_burr_patta_pim.onnx", "3c1049fd33241f380028fe5c58798adc820e06b9b036ad62bf8dc7a7e55115ca"],
         ["ggml-tiny.en.bin", "921e4cf8686fdd993dcd081a5da5b6c365bfde1162e72b08d75ac75289920b1f"],
     ],
-    m = new s.A("MLNativeModuleManager");
+    m = new o.A("MLNativeModuleManager");
 class g {
     state = {
         nativeMLModuleState: p.UNINITIALIZED,
@@ -87,10 +87,10 @@ class g {
     }
     async loadMLNativeModule() {
         try {
-            await u.Ay.ensureModule("discord_ml");
-            let e = u.Ay.requireModule("discord_ml");
-            await e.setupResources(), await u.Ay.ensureModule("discord_voice");
-            let t = u.Ay.requireModule("discord_voice");
+            await f.Ay.ensureModule("discord_ml");
+            let e = f.Ay.requireModule("discord_ml");
+            await e.setupResources(), await f.Ay.ensureModule("discord_voice");
+            let t = f.Ay.requireModule("discord_voice");
             t.setupMLPath?.(),
                 await e.setMLResultCallback((e) => {
                     let t;
@@ -149,10 +149,10 @@ class g {
         return m.info("Loaded mock ML catalog with models:", Object.keys(e.models)), Promise.resolve(e);
     }
     async scanModelState(e) {
-        if (!u.Ay.canCheckMLModelFilesExist()) return;
+        if (!f.Ay.canCheckMLModelFilesExist()) return;
         let t = Object.keys(e.models).map((e) => ({ id: e, fileName: e }));
-        for (let { id: e, exists: a } of await u.Ay.checkMLModelFilesExist(t))
-            this.state.modelState[e] = { status: a ? f.DOWNLOADED : f.MISSING };
+        for (let { id: e, exists: a } of await f.Ay.checkMLModelFilesExist(t))
+            this.state.modelState[e] = { status: a ? u.DOWNLOADED : u.MISSING };
     }
     async prefetchMLModels() {
         if (__OVERLAY__) return;
@@ -160,8 +160,8 @@ class g {
             t = [];
         for (let [a, i] of Object.entries(e)) {
             let e = this.state.modelState[a];
-            e?.status !== f.DOWNLOADED &&
-                e?.status !== f.DOWNLOADING &&
+            e?.status !== u.DOWNLOADED &&
+                e?.status !== u.DOWNLOADING &&
                 t.push(this.downloadMLModel({ modelId: a, url: i.url, fileName: a }));
         }
         m.info("Waiting for ML model downloads", t), await Promise.all(t), m.info("Finished downloading all ML models");
@@ -169,53 +169,49 @@ class g {
     downloadMLModel(e) {
         let { url: t, modelId: a, fileName: i } = e,
             l = this.state.modelState[a],
-            o = this.activeDownloads.get(a);
-        if (null != o) return o;
-        if (l?.status === f.DOWNLOADED) return Promise.resolve();
-        if (l?.status === f.DOWNLOADING)
+            s = this.activeDownloads.get(a);
+        if (null != s) return s;
+        if (l?.status === u.DOWNLOADED) return Promise.resolve();
+        if (l?.status === u.DOWNLOADING)
             return Promise.reject(Error("ML model is downloading but not in active downloads map"));
-        this.state.modelState[a] = { status: f.DOWNLOADING, downloadedBytes: 0 };
-        let s = u.Ay.downloadMLModelFile(t, i, (e) => {
+        this.state.modelState[a] = { status: u.DOWNLOADING, downloadedBytes: 0 };
+        let o = f.Ay.downloadMLModelFile(t, i, (e) => {
             let { downloadedBytes: t, totalBytes: i } = e;
             this.state.modelState[a] = { ...this.state.modelState[a], downloadedBytes: t, totalBytes: i };
         })
             .then((e) => {
                 e.fetchedFromNetwork && m.info("Downloaded ML model from network:", a),
-                    (this.state.modelState[a] = { status: f.DOWNLOADED, downloadedBytes: void 0 });
+                    (this.state.modelState[a] = { status: u.DOWNLOADED, downloadedBytes: void 0 });
             })
             .catch((t) => {
                 t?.USER_CANCELED_DOWNLOAD
                     ? m.info("User canceled the download for ML model", e)
                     : m.error("Failed to download ML model", { reason: t, ...e }),
-                    (this.state.modelState[a] = { status: f.MISSING });
+                    (this.state.modelState[a] = { status: u.MISSING });
             })
             .finally(() => {
                 this.activeDownloads.delete(a);
             });
-        return this.activeDownloads.set(a, s), s;
+        return this.activeDownloads.set(a, o), o;
     }
 }
 let y = new g(),
-    w = new s.A("MLSignalHandler");
-class b {
+    w = new o.A("MLSignalHandler");
+class D {
     emitSignal;
     emotionHistory = [];
     yellHistory = [];
-    boundHandleV3MlDetection = null;
     constructor(e) {
         this.emitSignal = e;
     }
     start() {
         w.info("ML signal handler started"),
-            y.start(this.handleMLResult.bind(this), () => {}),
-            (this.boundHandleV3MlDetection = this.handleV3MlDetection.bind(this)),
-            n.Ay.getMediaEngine().on(o.bg.ClipsMlDetection, this.boundHandleV3MlDetection);
+            y.start(this.handleMLResult, () => {}),
+            n.Ay.getMediaEngine().on(s.bg.ClipsMlDetection, this.handleV3MlDetection);
     }
     stop() {
         y.stop(),
-            null != this.boundHandleV3MlDetection &&
-                (n.Ay.getMediaEngine().off(o.bg.ClipsMlDetection, this.boundHandleV3MlDetection),
-                (this.boundHandleV3MlDetection = null)),
+            n.Ay.getMediaEngine().off(s.bg.ClipsMlDetection, this.handleV3MlDetection),
             (this.emotionHistory = []),
             (this.yellHistory = []),
             w.info("ML signal handler stopped");
@@ -223,10 +219,10 @@ class b {
     getState() {
         return { emotionHistory: [...this.emotionHistory], yellHistory: [...this.yellHistory] };
     }
-    handleV3MlDetection(e) {
+    handleV3MlDetection = (e) => {
         (0, c.$N)(e);
-    }
-    handleMLResult(e) {
+    };
+    handleMLResult = (e) => {
         switch (e.type) {
             case "yell_classification":
                 this.handleYellClassification(e.payload);
@@ -243,13 +239,13 @@ class b {
             default:
                 w.warn(`Unknown ML result type: ${e.type}`);
         }
-    }
+    };
     handleYellClassification(e) {
-        let { userId: t, percentiles: a, yelling: i, debug: l, timestamp: o } = e;
+        let { userId: t, percentiles: a, yelling: i, debug: l, timestamp: s } = e;
         window.__CLIPS_DEBUG__?.yell &&
-            (this.yellHistory.push({ timestamp: o, userId: t, percentiles: a, debug: l }),
+            (this.yellHistory.push({ timestamp: s, userId: t, percentiles: a, debug: l }),
             this.yellHistory.length > 50 && this.yellHistory.shift()),
-            i && this.emitSignal({ type: r.Gy.YELLING, userId: t }, o);
+            i && this.emitSignal({ type: r.Gy.YELLING, userId: t }, s);
     }
     handleWakeWord(e) {
         let { userId: t, probabilities: a, timestamp: i } = e,
@@ -258,15 +254,15 @@ class b {
                     let [t, a] = e,
                         i = "number" == typeof a ? a : 0,
                         l = Math.round(20 * i),
-                        o = "*".repeat(l),
-                        s = " ".repeat(20 - l);
-                    return `${t}: |${o}${s}| (${i.toFixed(3)})`;
+                        s = "*".repeat(l),
+                        o = " ".repeat(20 - l);
+                    return `${t}: |${s}${o}| (${i.toFixed(3)})`;
                 })
                 .join("  ");
         window.__CLIPS_DEBUG__?.wakeWord && w.info(`Wake word: ${t}: ${l}`);
-        let o = d.A.getSettings().autoClipPhrases;
+        let s = d.A.getSettings().autoClipPhrases;
         for (let [e, t] of Object.entries(a))
-            if (("number" == typeof t ? t : 0) >= 0.5 && o.includes(e)) {
+            if (("number" == typeof t ? t : 0) >= 0.5 && s.includes(e)) {
                 this.emitSignal({ type: r.Gy.PHRASE, text: e }, i);
                 break;
             }
@@ -282,34 +278,34 @@ class b {
         window.__CLIPS_DEBUG__?.whisper && w.info(`Whisper transcription: ${t}: ${JSON.stringify(a)}`);
         let l = d.A.getSettings().autoClipPhrases;
         if (0 === l.length) return;
-        let o = (e) =>
+        let s = (e) =>
                 e
                     .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()@\[\]\?"'<>\\|+]/g, "")
                     .replace(/\s+/g, " ")
                     .trim()
                     .toLowerCase(),
-            s = l.map((e) => o(e).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
-            n = RegExp(`(${s.join("|")})`, "g");
+            o = l.map((e) => s(e).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")),
+            n = RegExp(`(${o.join("|")})`, "g");
         for (let e of a)
-            for (let t of o(e.text).matchAll(n)) {
+            for (let t of s(e.text).matchAll(n)) {
                 let a = t[0],
-                    s = l.find((e) => o(e) === a);
-                if (null != s) {
+                    o = l.find((e) => s(e) === a);
+                if (null != o) {
                     let t = i + 1e3 * e.t0;
                     if (null != e.words && e.words.length > 0) {
-                        let a = o(s).split(" "),
-                            l = e.words.map((e) => ({ ...e, cleanText: o(e.text) }));
+                        let a = s(o).split(" "),
+                            l = e.words.map((e) => ({ ...e, cleanText: s(e.text) }));
                         for (let e = 0; e <= l.length - a.length; e++) {
                             let n = l.slice(e, e + a.length);
-                            if (n.map((e) => e.cleanText).join(" ") === o(s)) {
+                            if (n.map((e) => e.cleanText).join(" ") === s(o)) {
                                 t = i + 1e3 * n[0].t0;
                                 break;
                             }
                         }
                     }
-                    this.emitSignal({ type: r.Gy.PHRASE, text: s }, t);
+                    this.emitSignal({ type: r.Gy.PHRASE, text: o }, t);
                 }
             }
     }
 }
-let D = (e) => new b(e);
+let b = (e) => new D(e);

@@ -540,7 +540,7 @@ var a = {
             "STREAM_STOP",
             "CLIPS_SAVE_CLIP",
         ],
-        inlineRequire: () => n(822151).A,
+        inlineRequire: () => n(871421).Ay,
     },
     ClipsSignalManager: {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
