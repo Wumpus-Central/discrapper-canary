@@ -1,4 +1,4 @@
-.reactionTooltip_b49891 {
+.reactionTooltip_bbcccb {
     background: var(--background-surface-high);
     border-radius: var(--radius-xs);
     box-shadow: var(--shadow-border), var(--shadow-high);
@@ -9,16 +9,16 @@
     padding: 16px
 }
 
-.reactionTooltipEmoji_b49891 {
+.reactionTooltipEmoji_bbcccb {
     height: 32px;
     width: 32px
 }
 
-.reactionTooltipText_b49891 {
+.reactionTooltipText_bbcccb {
     margin-inline-start: 12px
 }
 
-.reactionTooltipInner_b49891 {
+.reactionTooltipInner_bbcccb {
     align-items: center;
     display: flex;
     -webkit-hyphens: auto;
@@ -27,27 +27,27 @@
     word-break: break-word
 }
 
-.reactionTooltipInner_b49891:hover {
+.reactionTooltipInner_bbcccb:hover {
     cursor: pointer
 }
 
-.reactionTooltipInner_b49891:hover a {
+.reactionTooltipInner_bbcccb:hover a {
     text-decoration: underline
 }
 
-.burstReactionTooltipInner_b49891 {
+.burstReactionTooltipInner_bbcccb {
     pointer-events: all
 }
 
-.burstReactionTooltipInner_b49891:hover {
+.burstReactionTooltipInner_bbcccb:hover {
     cursor: pointer
 }
 
-.burstReactionTooltipInner_b49891:hover a {
+.burstReactionTooltipInner_bbcccb:hover a {
     text-decoration: underline
 }
 
-.burstReactionTooltipMessage_b49891 {
+.burstReactionTooltipMessage_bbcccb {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -57,38 +57,75 @@
     word-break: break-word
 }
 
-.burstReactionTooltipSpacer_b49891 {
+.burstReactionTooltipSpacer_bbcccb {
     border-top: 1px solid var(--border-subtle);
     margin-top: 8px;
     padding-top: 8px
 }
 
-.burstReactionTooltipPrompt_b49891 {
+.burstReactionTooltipPrompt_bbcccb {
     align-items: center;
     display: flex;
     margin: 12px 0 0;
     width: 100%
 }
 
-.burstReactionTooltipPromptClickable_b49891 {
+.burstReactionTooltipPromptClickable_bbcccb {
     pointer-events: all
 }
 
-.burstReactionTooltipPromptClickable_b49891:hover {
+.burstReactionTooltipPromptClickable_bbcccb:hover {
     cursor: pointer
 }
 
-.burstReactionTooltipPromptClickable_b49891:hover a {
+.burstReactionTooltipPromptClickable_bbcccb:hover a {
     text-decoration: underline
 }
 
-.burstReactionTooltipNitroIcon_b49891 {
+.burstReactionTooltipNitroIcon_bbcccb {
     margin-inline-end: 5px
 }
 
-.burstReactionTooltipUpsellCta_b49891 {
+.burstReactionTooltipUpsellCta_bbcccb {
     background: linear-gradient(270deg, var(--premium-tier-2-pink-for-gradients) 0, var(--premium-tier-2-pink-for-gradients-2) 33.63%, var(--premium-tier-2-purple-for-gradients) 100%);
     border-radius: 4px;
     margin-top: 8px;
     width: 100%
+}
+
+.effect_a9ddb3 {
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute
+}
+
+.effectsWrapper_a9ddb3 {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 1
+}
+
+.effect__263e4 {
+    margin-bottom: -2px
+}
+
+.effects__263e4 {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute
+}
+
+.effect_e5f2cb {
+    margin-bottom: -.125rem
+}
+
+.effects_e5f2cb {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute
 }

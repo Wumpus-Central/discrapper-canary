@@ -2196,20 +2196,6 @@
     color: var(--interactive-text-active)
 }
 
-.backupContainer__0efdf {
-    display: flex;
-    justify-content: center
-}
-
-.canvas__0efdf {
-    cursor: pointer;
-    flex: 1;
-    height: 32px;
-    margin-bottom: -4px;
-    margin-top: -4px;
-    min-width: 0
-}
-
 .clickable__4337d {
     cursor: pointer
 }
@@ -2474,6 +2460,41 @@
 
 .button_fc42a2 {
     cursor: pointer
+}
+
+.button__66b20 {
+    cursor: grab
+}
+
+.tooltipText__66b20 {
+    align-items: center;
+    color: var(--text-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.tooltipText__66b20 strong {
+    color: var(--text-strong)
+}
+
+.menu__66b20 {
+    margin-top: -8px
+}
+
+.button__9a406 {
+    align-items: center;
+    color: var(--icon-subtle);
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    margin-inline-end: -4px;
+    width: 24px
+}
+
+.button__9a406:hover {
+    color: var(--icon-strong)
 }
 
 @use postcss-pxtorem;
@@ -6402,39 +6423,14 @@
     box-shadow: none
 }
 
-.effect_a9ddb3 {
-    bottom: 0;
+.obscuredIcon__43090 {
+    height: 32px;
+    width: 32px
+}
+
+.smallCardItem__02912 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
     overflow: hidden;
-    pointer-events: none;
-    position: absolute
-}
-
-.effectsWrapper_a9ddb3 {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    position: relative;
-    z-index: 1
-}
-
-.effect__263e4 {
-    margin-bottom: -2px
-}
-
-.effects__263e4 {
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    position: absolute
-}
-
-.effect_e5f2cb {
-    margin-bottom: -.125rem
-}
-
-.effects_e5f2cb {
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    position: absolute
+    width: 246px
 }

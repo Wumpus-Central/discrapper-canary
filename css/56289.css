@@ -3224,173 +3224,6 @@
     width: 28px
 }
 
-.videoContainer__6c900 {
-    height: 100%;
-    position: relative;
-    width: 100%
-}
-
-.mainContainer__700c9 {
-    box-sizing: border-box;
-    height: 134px;
-    padding-bottom: var(--space-xxs);
-    padding-inline-end: 8px;
-    padding-top: var(--space-xxs);
-    padding-inline-start: 44px;
-    position: relative
-}
-
-.imageContainer__700c9 {
-    background-color: var(--black);
-    border-radius: var(--radius-sm);
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    transition: background-color .2s ease;
-    width: 100%;
-    z-index: 1
-}
-
-.theme-midnight .imageContainer__700c9 {
-    background-color: var(--background-mod-normal)
-}
-
-.clickableImageContainer__700c9 {
-    cursor: pointer
-}
-
-.image__700c9 {
-    display: block;
-    height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: 100%
-}
-
-.hoverOverlay__700c9 {
-    align-items: flex-start;
-    background-color: var(--background-base-lowest);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    display: flex;
-    gap: 0;
-    inset-inline-end: var(--space-sm);
-    justify-content: flex-end;
-    opacity: 0;
-    position: absolute;
-    top: var(--space-xs);
-    transition: opacity .15s ease;
-    z-index: 2
-}
-
-.mainContainer__700c9:hover .hoverOverlay__700c9 {
-    opacity: 1
-}
-
-.hoverButton__700c9 {
-    align-items: center;
-    border-radius: var(--radius-sm);
-    color: var(--interactive-text-default);
-    cursor: pointer;
-    display: flex;
-    height: 28px;
-    justify-content: center;
-    width: 28px
-}
-
-.hoverButton__700c9:hover {
-    background-color: var(--background-mod-muted)
-}
-
-.buttonWrapper__700c9 {
-    box-sizing: border-box;
-    height: 44px;
-    padding-bottom: var(--space-xxs);
-    padding-inline-end: var(--space-xs);
-    padding-top: var(--space-xxs);
-    padding-inline-start: 44px
-}
-
-.setVibeButton__700c9 {
-    align-items: center;
-    border: 1px dashed var(--border-subtle);
-    border-radius: var(--radius-sm);
-    color: var(--interactive-text-default);
-    cursor: pointer;
-    display: flex;
-    gap: var(--space-xs);
-    height: 100%;
-    justify-content: center;
-    transition: border-color .15s ease, color .15s ease;
-    width: 100%
-}
-
-.setVibeButton__700c9:hover {
-    background-color: var(--background-mod-muted);
-    color: var(--interactive-text-hover)
-}
-
-.statusDiv__5cda9 {
-    align-items: center;
-    display: flex
-}
-
-.statusDiv__5cda9.hoverable__5cda9:hover .pencilIcon__5cda9,
-.statusDiv__5cda9.hoverable__5cda9:hover .statusText__5cda9 {
-    color: var(--interactive-text-hover)
-}
-
-.statusDiv__5cda9 .statusText__5cda9 {
-    font-size: 12px;
-    line-height: 16px
-}
-
-.statusText__5cda9 {
-    overflow: hidden;
-    text-overflow: ellipsis
-}
-
-.pencilIcon__5cda9,
-.statusText__5cda9 {
-    color: var(--channels-default)
-}
-
-.pencilIcon__5cda9 {
-    margin-inline-start: 4px
-}
-
-.educationFeatureArt__5cda9 {
-    align-self: center;
-    background-image: url(/assets/5bbf9ffe2fe5208f.svg);
-    height: 112px;
-    width: 206px
-}
-
-.enable-forced-colors .statusDiv__5cda9 {
-    background-color: ButtonFace;
-    color: ButtonText;
-    forced-color-adjust: none;
-    text-decoration: underline
-}
-
-.enable-forced-colors .statusDiv__5cda9 .pencilIcon__5cda9,
-.enable-forced-colors .statusDiv__5cda9 .statusText__5cda9 {
-    color: inherit
-}
-
-.enable-forced-colors .statusDiv__5cda9:hover .pencilIcon__5cda9,
-.enable-forced-colors .statusDiv__5cda9:hover .statusText__5cda9 {
-    color: inherit
-}
-
-.resizeHandle__4b144 {
-    bottom: -2px;
-    cursor: ns-resize;
-    height: 4px;
-    position: absolute;
-    width: 100%
-}
-
 .wrapper_cb9592 {
     background-color: var(--background-base-lowest);
     display: flex;
@@ -3685,6 +3518,165 @@
     .gridOverlay__0bec3 {
         --custom-grid-line-width: 1px
     }
+}
+
+.videoContainer__6c900 {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.mainContainer__700c9 {
+    box-sizing: border-box;
+    height: 134px;
+    padding-bottom: var(--space-xxs);
+    padding-inline-end: 8px;
+    padding-top: var(--space-xxs);
+    padding-inline-start: 44px;
+    position: relative
+}
+
+.imageContainer__700c9 {
+    background-color: var(--black);
+    border-radius: var(--radius-sm);
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    transition: background-color .2s ease;
+    width: 100%;
+    z-index: 1
+}
+
+.theme-midnight .imageContainer__700c9 {
+    background-color: var(--background-mod-normal)
+}
+
+.clickableImageContainer__700c9 {
+    cursor: pointer
+}
+
+.image__700c9 {
+    display: block;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.hoverOverlay__700c9 {
+    align-items: flex-start;
+    background-color: var(--background-base-lowest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    gap: 0;
+    inset-inline-end: var(--space-sm);
+    justify-content: flex-end;
+    opacity: 0;
+    position: absolute;
+    top: var(--space-xs);
+    transition: opacity .15s ease;
+    z-index: 2
+}
+
+.mainContainer__700c9:hover .hoverOverlay__700c9 {
+    opacity: 1
+}
+
+.hoverButton__700c9 {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    height: 28px;
+    justify-content: center;
+    width: 28px
+}
+
+.hoverButton__700c9:hover {
+    background-color: var(--background-mod-muted)
+}
+
+.buttonWrapper__700c9 {
+    box-sizing: border-box;
+    height: 44px;
+    padding-bottom: var(--space-xxs);
+    padding-inline-end: var(--space-xs);
+    padding-top: var(--space-xxs);
+    padding-inline-start: 44px
+}
+
+.setVibeButton__700c9 {
+    align-items: center;
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-xs);
+    height: 100%;
+    justify-content: center;
+    transition: border-color .15s ease, color .15s ease;
+    width: 100%
+}
+
+.setVibeButton__700c9:hover {
+    background-color: var(--background-mod-muted);
+    color: var(--interactive-text-hover)
+}
+
+.statusDiv__5cda9 {
+    align-items: center;
+    display: flex
+}
+
+.statusDiv__5cda9.hoverable__5cda9:hover .pencilIcon__5cda9,
+.statusDiv__5cda9.hoverable__5cda9:hover .statusText__5cda9 {
+    color: var(--interactive-text-hover)
+}
+
+.statusDiv__5cda9 .statusText__5cda9 {
+    font-size: 12px;
+    line-height: 16px
+}
+
+.statusText__5cda9 {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.pencilIcon__5cda9,
+.statusText__5cda9 {
+    color: var(--channels-default)
+}
+
+.pencilIcon__5cda9 {
+    margin-inline-start: 4px
+}
+
+.educationFeatureArt__5cda9 {
+    align-self: center;
+    background-image: url(/assets/5bbf9ffe2fe5208f.svg);
+    height: 112px;
+    width: 206px
+}
+
+.enable-forced-colors .statusDiv__5cda9 {
+    background-color: ButtonFace;
+    color: ButtonText;
+    forced-color-adjust: none;
+    text-decoration: underline
+}
+
+.enable-forced-colors .statusDiv__5cda9 .pencilIcon__5cda9,
+.enable-forced-colors .statusDiv__5cda9 .statusText__5cda9 {
+    color: inherit
+}
+
+.enable-forced-colors .statusDiv__5cda9:hover .pencilIcon__5cda9,
+.enable-forced-colors .statusDiv__5cda9:hover .statusText__5cda9 {
+    color: inherit
 }
 
 .container_a7f798 {

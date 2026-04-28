@@ -1,3 +1,17 @@
+.backupContainer__0efdf {
+    display: flex;
+    justify-content: center
+}
+
+.canvas__0efdf {
+    cursor: pointer;
+    flex: 1;
+    height: 32px;
+    margin-bottom: -4px;
+    margin-top: -4px;
+    min-width: 0
+}
+
 .container_a8e786 {
     align-items: center;
     background-color: var(--background-mod-subtle);

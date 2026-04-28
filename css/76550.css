@@ -4584,6 +4584,13 @@
     margin-top: var(--space-8)
 }
 
+.selectorHeading_a1294d {
+    align-items: center;
+    display: flex;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8)
+}
+
 .container_b08af5 {
     background-color: var(--background-base-lowest);
     border-radius: var(--radius-xs);
@@ -7211,23 +7218,9 @@ div.profileThemedContainer__656be {
     margin-inline-start: auto
 }
 
-.container__05cdc {
-    display: flex
-}
-
-.sparkleIcon__05cdc {
-    height: 12px;
-    width: 12px
-}
-
-.sparkleTop__05cdc {
-    align-self: flex-start;
-    margin-inline-end: auto
-}
-
-.sparkleBottom__05cdc {
-    align-self: flex-end;
-    margin-inline-start: auto
+.blockedIgnoredSettingsNotice__6811a {
+    margin-block: 16px 8px;
+    margin-inline: 30px 20px
 }
 
 .tabs__9a3e9 {

@@ -426,17 +426,17 @@ var ej = n(447453),
     eJ = n(19575),
     e0 = n(726249);
 let e1 = new Set(["Blink", "Gecko", "WebKit"]),
-    e3 = D.tEg;
-if (U.isPlatformEmbedded) e3 = (e) => eJ.Ay.setBadge(e);
+    e2 = D.tEg;
+if (U.isPlatformEmbedded) e2 = (e) => eJ.Ay.setBadge(e);
 else if (e1.has(ez().layout)) {
     let e = new (eY())({ animation: "none" });
-    e3 = (t) => {
+    e2 = (t) => {
         try {
             (0, e0.sF)(t), e.badge(-1 === t ? "•" : t);
         } catch (e) {}
     };
 }
-var e2 = n(780964),
+var e3 = n(780964),
     e8 = n(858897),
     e5 = n(763827),
     e4 = n(485296);
@@ -469,7 +469,7 @@ U.isPlatformEmbedded &&
     (eJ.Ay.on("SYSTEM_TRAY_TOGGLE_MUTE", () => eT.A.toggleSelfMute({ location: "System Tray" })),
     eJ.Ay.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => eT.A.toggleSelfDeaf()),
     eJ.Ay.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
-        (0, e8.openUserSettings)(e2.X.VOICE_CATEGORY);
+        (0, e8.openUserSettings)(e3.X.VOICE_CATEGORY);
     }),
     (e9 = C.Ay.connectStores([e5.A, eS.Ay, e4.A, eW.default, eZ.A, eX.A, eq.A], () => {
         let e = eW.default.getTotalMentionCount(),
@@ -500,7 +500,7 @@ var tt = n(503698),
 let th = (0, tu.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("62370"),
+            n.e("92510"),
             n.e("61659"),
             n.e("40841"),
             n.e("3256"),
@@ -589,13 +589,13 @@ let tO = (0, tu.Fe)({
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -705,13 +705,13 @@ let tO = (0, tu.Fe)({
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -721,7 +721,7 @@ let tO = (0, tu.Fe)({
                 n.e("33957"),
                 n.e("94193"),
                 n.e("5384"),
-                n.e("95957"),
+                n.e("23082"),
                 n.e("62859"),
                 n.e("92652"),
                 n.e("10577"),
@@ -842,13 +842,13 @@ let tO = (0, tu.Fe)({
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -974,7 +974,7 @@ let t1 = (e, t) => {
         (0, tQ.I_)(e, t);
     });
 };
-function t3(e) {
+function t2(e) {
     let { embedId: t, className: n, style: i, currentWindow: r } = e,
         a = (0, C.bG)([tw.A], () => tw.A.getConnectedFrame()),
         l = (0, C.bG)([tw.A], () => tw.A.getFrameLayoutMode()),
@@ -1027,7 +1027,7 @@ function t3(e) {
         (0, E.jsx)("div", { ref: o, className: n, style: i })
     );
 }
-var t2 = n(227042),
+var t3 = n(227042),
     t8 = n(186111),
     t5 = n(334463);
 let t4 = null;
@@ -1050,7 +1050,7 @@ function t6() {
 }
 function t9() {
     let e;
-    if ((0, t2.A)({ LayerStore: t8.A, PopoutWindowStore: eN.A })) {
+    if ((0, t3.A)({ LayerStore: t8.A, PopoutWindowStore: eN.A })) {
         let e;
         return void (null != (e = void 0 ?? t4) && t5.A.isOpen(e) && W.h.wait(() => tQ.jD(e)));
     }
@@ -1141,7 +1141,7 @@ function na(e) {
                             className: tn()(ni.ht, { [ni.kK]: T }),
                             style: { paddingLeft: I, paddingRight: I, paddingTop: g, paddingBottom: g },
                             ref: c,
-                            children: (0, E.jsx)(t3, { className: ni.pU, embedId: L }),
+                            children: (0, E.jsx)(t2, { className: ni.pU, embedId: L }),
                         }),
                     }),
                     (0, E.jsxs)("div", {
@@ -1351,8 +1351,8 @@ var nV = n(777666),
     nJ = n(379848),
     n0 = n(821609),
     n1 = n(290595),
-    n3 = n(516746);
-function n2(e) {
+    n2 = n(516746);
+function n3(e) {
     let {
         padded: t = !0,
         inset: n = !1,
@@ -1369,13 +1369,13 @@ function n2(e) {
               innerRef: s,
               onClick: l,
               tabIndex: null != l ? 0 : -1,
-              className: tn()(r, { [n3.A7]: !n, [n3.C5]: n, [n3.jC]: t, [n3.vu]: i, [n3.bG]: null != l, [n3._$]: o }),
+              className: tn()(r, { [n2.A7]: !n, [n2.C5]: n, [n2.jC]: t, [n2.vu]: i, [n2.bG]: null != l, [n2._$]: o }),
               ...d,
               children: a,
           })
         : (0, E.jsx)("div", {
               ref: s,
-              className: tn()(r, { [n3.A7]: !n, [n3.C5]: n, [n3.jC]: t, [n3.vu]: i, [n3._$]: o }),
+              className: tn()(r, { [n2.A7]: !n, [n2.C5]: n, [n2.jC]: t, [n2.vu]: i, [n2._$]: o }),
               ...d,
               children: a,
           });
@@ -1383,7 +1383,7 @@ function n2(e) {
 var n8 = n(362288);
 function n5(e) {
     let { className: t, markAsDismissed: n } = e;
-    return (0, E.jsxs)(n2, {
+    return (0, E.jsxs)(n3, {
         className: tn()(n8.Nr, t),
         children: [
             (0, E.jsx)(nA.D, { variant: "heading-md/semibold", className: n8.wx, children: G.intl.string(G.t.HcbnMM) }),
@@ -1391,7 +1391,7 @@ function n5(e) {
                 variant: "text-sm/normal",
                 children: G.intl.format(G.t.NkFrzN, {
                     onPrivacyClick: () => {
-                        (0, e8.openUserSettings)(e2.X.DATA_AND_PRIVACY_PANEL);
+                        (0, e8.openUserSettings)(e3.X.DATA_AND_PRIVACY_PANEL);
                     },
                 }),
             }),
@@ -1510,8 +1510,8 @@ var iV = n(737393),
     iJ = n(279250),
     i0 = n(607407),
     i1 = n(290987),
-    i3 = n(928550),
-    i2 = n(594262),
+    i2 = n(928550),
+    i3 = n(594262),
     i8 = n(378570),
     i5 = n(345942),
     i4 = n(804980),
@@ -1570,7 +1570,7 @@ let rr = [14, 14, 12, 12, 10, 8, 6],
     },
     ru = (e) => {
         let { activity: t, user: n } = e,
-            i = (0, i2.l)({ activity: t, user: n, supportsAskToJoin: !1 }),
+            i = (0, i3.l)({ activity: t, user: n, supportsAskToJoin: !1 }),
             r = null != i,
             { data: a } = (0, iB.YY)(t.application_id),
             { fetched: l, hasAlreadyLinked: s, canStartAuthorization: o, startAuthorization: d } = (0, iH.RD)(a),
@@ -1628,7 +1628,7 @@ let rr = [14, 14, 12, 12, 10, 8, 6],
             { data: a } = (0, iB.YY)(i),
             l = (0, iV.A)({ application: a, analyticsLocations: n }),
             s = (0, iW.JZ)(nW.M.CLOUD_PLAY_NEW_BADGE),
-            o = (0, i3.L)(i);
+            o = (0, i2.L)(i);
         return null == l || o
             ? null
             : (0, E.jsxs)(E.Fragment, {
@@ -1726,13 +1726,13 @@ rp.Icon = rE;
 let rm = (e) => {
     let { children: t, className: n, ...i } = e;
     return (0, E.jsx)(iR.vN, {
-        children: (0, E.jsx)(n2, { noBackground: !0, className: tn()(n, ri.iE), padded: !1, ...i, children: t }),
+        children: (0, E.jsx)(n3, { noBackground: !0, className: tn()(n, ri.iE), padded: !1, ...i, children: t }),
     });
 };
 (rm.Header = rp),
     (rm.Body = (e) => {
         let { children: t } = e;
-        return (0, E.jsx)(n2, { inset: !0, padded: !1, className: ri.rf, children: t });
+        return (0, E.jsx)(n3, { inset: !0, padded: !1, className: ri.rf, children: t });
     }),
     (rm.Separator = rd),
     (rm.VoiceSection = (e) => {
@@ -2501,8 +2501,8 @@ function r0(e) {
     };
 }
 var r1 = n(655116),
-    r3 = n(341335),
-    r2 = n(286617),
+    r2 = n(341335),
+    r3 = n(286617),
     r8 = n(533207),
     r5 = n(881335),
     r4 = n(272984);
@@ -2606,7 +2606,7 @@ function r7(e) {
                 r = (function (e, t) {
                     let n = (0, C.bG)(
                         [r1.A, R.default],
-                        () => (null != t ? (0, r2.A)(r1.A, R.default, t, e) : void 0),
+                        () => (null != t ? (0, r3.A)(r1.A, R.default, t, e) : void 0),
                         [e, t],
                     );
                     if (null == n || null == e || null == t) return null;
@@ -2619,7 +2619,7 @@ function r7(e) {
                                 id: `spotify-play-${e.session_id}`,
                                 action: () => (0, r5.A)(n, r4.Qp.USER_ACTIVITY_PLAY, void 0),
                                 label: G.intl.string(G.t.rRffNz),
-                                subtext: i ? (0, r3.A)(n, r4.Qp.USER_ACTIVITY_PLAY) : void 0,
+                                subtext: i ? (0, r2.A)(n, r4.Qp.USER_ACTIVITY_PLAY) : void 0,
                                 disabled: i,
                             },
                             `spotify-play-${e.session_id}`,
@@ -2631,7 +2631,7 @@ function r7(e) {
                                       id: `spotify-sync-${e.session_id}`,
                                       action: () => (0, r8.A)(n, r4.Qp.USER_ACTIVITY_SYNC, void 0),
                                       label: G.intl.string(G.t.eU3inB),
-                                      subtext: r ? (0, r3.A)(n, r4.Qp.USER_ACTIVITY_SYNC) : void 0,
+                                      subtext: r ? (0, r2.A)(n, r4.Qp.USER_ACTIVITY_SYNC) : void 0,
                                       disabled: r,
                                   },
                                   `spotify-sync-${e.session_id}`,
@@ -2666,7 +2666,7 @@ function r7(e) {
                         ? null
                         : (0, E.jsx)(rS.Dr, {
                               id: "xbox-connect",
-                              action: () => (0, e8.openUserSettings)(e2.X.CONNECTIONS_PANEL),
+                              action: () => (0, e8.openUserSettings)(e3.X.CONNECTIONS_PANEL),
                               label: G.intl.formatToPlainString(G.t.XWSHTb, { platform: r$ }),
                           });
                 })(e),
@@ -2990,7 +2990,7 @@ let at = 15 * eu.A.Millis.MINUTE,
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e("90673"),
-                                n.e("17764"),
+                                n.e("76550"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -3018,8 +3018,9 @@ let at = 15 * eu.A.Millis.MINUTE,
                 handleGuildContextMenu(e, t) {
                     (0, r6.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            n.e("62370"),
-                            n.e("16384"),
+                            n.e("72823"),
+                            n.e("92510"),
+                            n.e("56289"),
                             n.e("45235"),
                             n.e("63397"),
                             n.e("43763"),
@@ -3027,10 +3028,10 @@ let at = 15 * eu.A.Millis.MINUTE,
                             n.e("61659"),
                             n.e("78220"),
                             n.e("40841"),
-                            n.e("17764"),
+                            n.e("76550"),
                             n.e("89317"),
-                            n.e("95957"),
-                            n.e("81167"),
+                            n.e("23082"),
+                            n.e("57948"),
                             n.e("69273"),
                             n.e("63941"),
                             n.e("63009"),
@@ -3053,12 +3054,12 @@ let at = 15 * eu.A.Millis.MINUTE,
                             n.e("75058"),
                             n.e("23574"),
                             n.e("63635"),
-                            n.e("81462"),
+                            n.e("25256"),
                             n.e("44135"),
                             n.e("9176"),
                             n.e("33092"),
                             n.e("87845"),
-                            n.e("20797"),
+                            n.e("35636"),
                             n.e("98042"),
                             n.e("75090"),
                             n.e("61175"),
@@ -3232,7 +3233,7 @@ let at = 15 * eu.A.Millis.MINUTE,
                             n.e("2698"),
                             n.e("62875"),
                             n.e("4744"),
-                            n.e("87046"),
+                            n.e("34654"),
                             n.e("12542"),
                             n.e("501"),
                             n.e("46769"),
@@ -3982,8 +3983,8 @@ function a0(e) {
     });
 }
 var a1 = n(22212),
-    a3 = n(430159),
-    a2 = n(513297),
+    a2 = n(430159),
+    a3 = n(513297),
     a8 = n(788868);
 function a5(e) {
     let { user: t, applicationId: n, isGameRelationship: i, onSelect: r } = e,
@@ -3996,7 +3997,7 @@ function a5(e) {
                 rQ.A.openPrivateChannel({ recipientIds: t.id, joinCall: !0, joinCallVideo: !0 });
         }, [t.id]),
         s = p.useCallback(() => {
-            a3.A.removeFriend({ userId: t.id, applicationId: i ? n : null, location: "Friends" });
+            a2.A.removeFriend({ userId: t.id, applicationId: i ? n : null, location: "Friends" });
         }, [n, i, t.id]),
         o = p.useCallback(() => {
             let e = i ? G.intl.string(G.t.RLcE6x) : G.intl.string(G.t.cvSt1J);
@@ -4123,13 +4124,13 @@ class a4 extends p.PureComponent {
                               (0, E.jsxs)("div", {
                                   className: aJ.o1,
                                   children: [
-                                      (0, E.jsx)(a2.A, {
+                                      (0, E.jsx)(a3.A, {
                                           icon: ak.o,
                                           tooltip: G.intl.string(G.t["g33r/P"]),
                                           onClick: this.handleMessageClick,
                                           shouldHighlight: t,
                                       }),
-                                      (0, E.jsx)(a2.A, {
+                                      (0, E.jsx)(a3.A, {
                                           icon: aV.F,
                                           tooltip: G.intl.string(G.t["UKOtz+"]),
                                           onClick: this.handleOpenActionsMenu,
@@ -4300,17 +4301,17 @@ function lc(e) {
                         text: G.intl.string(G.t.oMx98L),
                     }),
                 }),
-            (0, E.jsx)(a2.A, {
+            (0, E.jsx)(a3.A, {
                 icon: la.A,
-                actionType: a2.A.ActionTypes.ACCEPT,
+                actionType: a3.A.ActionTypes.ACCEPT,
                 tooltip: G.intl.string(G.t.Zcibdf),
                 onClick: c,
                 shouldHighlight: r,
                 loading: a,
             }),
-            (0, E.jsx)(a2.A, {
+            (0, E.jsx)(a3.A, {
                 icon: ll.P,
-                actionType: a2.A.ActionTypes.DENY,
+                actionType: a3.A.ActionTypes.DENY,
                 tooltip: G.intl.string(G.t.xuio0C),
                 onClick: u,
                 shouldHighlight: r,
@@ -4332,9 +4333,9 @@ function lu(e) {
             },
             [a],
         );
-    return (0, E.jsx)(a2.A, {
+    return (0, E.jsx)(a3.A, {
         icon: ll.P,
-        actionType: a2.A.ActionTypes.DENY,
+        actionType: a3.A.ActionTypes.DENY,
         tooltip: G.intl.string(G.t.eaq81S),
         onClick: l,
         shouldHighlight: r,
@@ -4568,7 +4569,7 @@ function lL() {
         ? (0, E.jsx)(lN.e, {
               label: G.t.zqv4nV,
               labelHook: () => {
-                  (0, e8.openUserSettings)(e2.X.CONTENT_AND_SOCIAL_RESTRICTED_USERS_CATEGORY);
+                  (0, e8.openUserSettings)(e3.X.CONTENT_AND_SOCIAL_RESTRICTED_USERS_CATEGORY);
               },
               dismissNotice: () => t(tf.i.USER_DISMISS),
               className: lS._,
@@ -4608,16 +4609,16 @@ function lR(e) {
         children: (e) => {
             let i = (0, E.jsxs)(E.Fragment, {
                 children: [
-                    (0, E.jsx)(a2.A, {
+                    (0, E.jsx)(a3.A, {
                         icon: la.A,
-                        actionType: a2.A.ActionTypes.ACCEPT,
+                        actionType: a3.A.ActionTypes.ACCEPT,
                         tooltip: G.intl.string(G.t.Zcibdf),
                         onClick: l,
                         shouldHighlight: e,
                     }),
-                    (0, E.jsx)(a2.A, {
+                    (0, E.jsx)(a3.A, {
                         icon: ll.P,
-                        actionType: a2.A.ActionTypes.DENY,
+                        actionType: a3.A.ActionTypes.DENY,
                         tooltip: G.intl.string(G.t.xuio0C),
                         onClick: s,
                         shouldHighlight: e,
@@ -5032,8 +5033,8 @@ var lV = n(488803),
     lJ = n(935208),
     l0 = n(521502),
     l1 = n(380610),
-    l3 = n(828184),
-    l2 = n(932553);
+    l2 = n(828184),
+    l3 = n(932553);
 let l8 = "isHideDevBanner",
     l5 = () => {
         let [e, t] = (0, p.useState)(ta.w.get(l8, "false")?.toString() === "true"),
@@ -5045,21 +5046,21 @@ let l8 = "isHideDevBanner",
             r = () =>
                 (0, E.jsx)(to.D, {
                     onClick: i,
-                    className: l2.b,
+                    className: l3.b,
                     "aria-label": G.intl.string(G.t.WAI6xu),
-                    children: (0, E.jsx)(ll.P, { size: "md", color: "currentColor", className: l2.ut }),
+                    children: (0, E.jsx)(ll.P, { size: "md", color: "currentColor", className: l3.ut }),
                 });
         return null != n
             ? (0, E.jsxs)("div", {
-                  className: tn()(l2.Wz, l2.DM),
-                  children: [(0, E.jsx)(l3.A, { className: l2.Kk }), G.intl.string(G.t.Wj3LW4), (0, E.jsx)(r, {})],
+                  className: tn()(l3.Wz, l3.DM),
+                  children: [(0, E.jsx)(l2.A, { className: l3.Kk }), G.intl.string(G.t.Wj3LW4), (0, E.jsx)(r, {})],
               })
             : "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, E.jsxs)("div", {
-                    className: tn()(l2.Wz, l2.mr),
+                    className: tn()(l3.Wz, l3.mr),
                     children: [
-                        (0, E.jsx)(l3.A, { className: l2.Kk }),
-                        G.intl.format(G.t.uyrfYF, { buildNumber: "536205" }),
+                        (0, E.jsx)(l2.A, { className: l3.Kk }),
+                        G.intl.format(G.t.uyrfYF, { buildNumber: "536249" }),
                         (0, E.jsx)(r, {}),
                     ],
                 })
@@ -5200,7 +5201,7 @@ class sh extends p.PureComponent {
         (0, r6.L3)(e, async () => {
             let { default: e } = await Promise.all([
                 n.e("90673"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("26132"),
                 n.e("46652"),
                 n.e("93190"),
@@ -5275,7 +5276,7 @@ class s_ extends p.PureComponent {
         (0, r6.L3)(e, async () => {
             let { default: e } = await Promise.all([
                 n.e("90673"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("26132"),
                 n.e("46652"),
                 n.e("93190"),
@@ -5409,8 +5410,8 @@ var sX = n(880144),
     sJ = n(891540),
     s0 = n(267102),
     s1 = n(205106),
-    s3 = n(999751),
-    s2 = n(123973),
+    s2 = n(999751),
+    s3 = n(123973),
     s8 = n(621956),
     s5 = n(160761),
     s4 = n(173660),
@@ -5692,7 +5693,7 @@ function oz(e) {
             : (0, r6.L3)(e, async () => {
                   let { default: e } = await Promise.all([
                       n.e("90673"),
-                      n.e("17764"),
+                      n.e("76550"),
                       n.e("26132"),
                       n.e("46652"),
                       n.e("93190"),
@@ -5944,7 +5945,7 @@ function o1(e) {
             [rb.Ay],
             () => null != rb.Ay.getSelfEmbeddedActivityForLocation(rb.Ay.getConnectedActivityLocation()),
         ),
-        d = (0, s2.Ay)(t),
+        d = (0, s3.Ay)(t),
         { reachedLimit: c, limit: u } = (0, oA.A)(t),
         A = p.useCallback(() => {
             (0, oE.A)();
@@ -6030,7 +6031,7 @@ function o1(e) {
         })
     );
 }
-function o3(e) {
+function o2(e) {
     let { channel: t, enableActivities: n } = e,
         i = (0, s0.Us)(),
         { parentAnalyticsLocation: r, newestAnalyticsLocation: a } = (0, nQ.Ay)(),
@@ -6087,7 +6088,7 @@ function o3(e) {
           })
         : null;
 }
-function o2(e) {
+function o3(e) {
     let t,
         { channel: n, canGoLive: i, enableActivities: r, disabled: a } = e,
         l = p.useRef(null),
@@ -6097,7 +6098,7 @@ function o2(e) {
         u = (0, oh.A)(n),
         A = n.getGuildId(),
         h = (0, C.cf)([rb.Ay], () => null != rb.Ay.getSelfEmbeddedActivityForChannel(n.id)),
-        _ = (0, s2.Ay)(n),
+        _ = (0, s3.Ay)(n),
         m = p.useCallback(() => {
             (0, om.A)(A, n.id, o);
         }, [A, n.id, o]),
@@ -6207,7 +6208,7 @@ class o8 extends p.PureComponent {
         let s = (0, i$.m1)(t, iu.default, eZ.A);
         return (
             null != n ? ((e = D.BVt.CHANNEL(n.id, t.id)), (s = `${s} / ${n.name}`)) : (e = D.BVt.CHANNEL(D.ME, t.id)),
-            (0, E.jsx)(s3.A, {
+            (0, E.jsx)(s2.A, {
                 channelId: t.id,
                 quality: i,
                 state: r,
@@ -6310,14 +6311,14 @@ class o8 extends p.PureComponent {
             className: ot.uu,
             children: [
                 (0, E.jsx)(o1, { channel: e, enableActivities: o, disabled: !c && d }),
-                (0, E.jsx)(o2, {
+                (0, E.jsx)(o3, {
                     channel: e,
                     canGoLive: t,
                     enableActivities: o,
                     disabled: e.isGuildStageVoice() && ((c && null == a) || (!c && d)),
                 }),
-                o ? (0, E.jsx)(o3, { channel: e, enableActivities: i }) : null,
-                (0, s2.Ay)(e) ? (0, E.jsx)(on, { channel: e, focusProps: oZ }) : null,
+                o ? (0, E.jsx)(o2, { channel: e, enableActivities: i }) : null,
+                (0, s3.Ay)(e) ? (0, E.jsx)(on, { channel: e, focusProps: oZ }) : null,
             ],
         });
     }
@@ -6616,8 +6617,8 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("89317"),
                 n.e("81154"),
                 n.e("55658"),
-                n.e("95957"),
-                n.e("81167"),
+                n.e("23082"),
+                n.e("57948"),
                 n.e("91763"),
                 n.e("76602"),
                 n.e("28229"),
@@ -6659,12 +6660,12 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
     dc = (0, g.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("81167"),
+                n.e("57948"),
                 n.e("76032"),
                 n.e("78220"),
                 n.e("74556"),
                 n.e("75681"),
-                n.e("95957"),
+                n.e("23082"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
@@ -6672,14 +6673,14 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("97189"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -6694,7 +6695,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("23574"),
                 n.e("45235"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("70306"),
                 n.e("80008"),
                 n.e("23924"),
@@ -6847,7 +6848,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -6909,21 +6910,21 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("97189"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
                 n.e("3256"),
                 n.e("19145"),
                 n.e("79705"),
-                n.e("95957"),
+                n.e("23082"),
                 n.e("2313"),
                 n.e("23924"),
                 n.e("15510"),
@@ -7011,12 +7012,12 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
             Promise.all([
                 n.e("86921"),
                 n.e("53539"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("23967"),
-                n.e("88826"),
+                n.e("79093"),
                 n.e("28510"),
-                n.e("95957"),
-                n.e("81167"),
+                n.e("23082"),
+                n.e("57948"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
@@ -7030,7 +7031,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -7047,16 +7048,16 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("23574"),
                 n.e("45235"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("92652"),
                 n.e("5007"),
                 n.e("98042"),
                 n.e("90673"),
                 n.e("57546"),
-                n.e("4592"),
-                n.e("1907"),
-                n.e("20605"),
-                n.e("20797"),
+                n.e("3840"),
+                n.e("81579"),
+                n.e("35636"),
+                n.e("33032"),
                 n.e("9176"),
                 n.e("23924"),
                 n.e("15510"),
@@ -7222,7 +7223,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -7369,20 +7370,20 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("56574"),
                 n.e("45235"),
                 n.e("43763"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("61659"),
                 n.e("3402"),
                 n.e("9176"),
                 n.e("75090"),
-                n.e("95957"),
-                n.e("81167"),
+                n.e("23082"),
+                n.e("57948"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("97189"),
@@ -7403,7 +7404,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("75058"),
                 n.e("23574"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("92652"),
                 n.e("5007"),
                 n.e("4974"),
@@ -7559,7 +7560,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -7651,12 +7652,12 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
         createPromise: () =>
             Promise.all([
                 n.e("53539"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("23967"),
-                n.e("88826"),
+                n.e("79093"),
                 n.e("28510"),
-                n.e("95957"),
-                n.e("81167"),
+                n.e("23082"),
+                n.e("57948"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
@@ -7670,7 +7671,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -7687,15 +7688,15 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("23574"),
                 n.e("45235"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("92652"),
                 n.e("5007"),
                 n.e("98042"),
                 n.e("90673"),
                 n.e("57546"),
-                n.e("4592"),
-                n.e("1907"),
-                n.e("20797"),
+                n.e("3840"),
+                n.e("81579"),
+                n.e("35636"),
                 n.e("9176"),
                 n.e("35477"),
                 n.e("23740"),
@@ -7864,7 +7865,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -8017,7 +8018,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
         createPromise: () =>
             Promise.all([
                 n.e("23740"),
-                n.e("20797"),
+                n.e("35636"),
                 n.e("89317"),
                 n.e("91428"),
                 n.e("96382"),
@@ -8046,10 +8047,10 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
             Promise.all([
                 n.e("62036"),
                 n.e("75681"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("10615"),
                 n.e("55658"),
-                n.e("95957"),
+                n.e("23082"),
                 n.e("7850"),
                 n.e("76602"),
                 n.e("82263"),
@@ -8091,8 +8092,8 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
         createPromise: () =>
             Promise.all([
                 n.e("37595"),
-                n.e("95957"),
-                n.e("62370"),
+                n.e("23082"),
+                n.e("72823"),
                 n.e("73801"),
                 n.e("9176"),
                 n.e("37320"),
@@ -8121,7 +8122,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("51529"),
                 n.e("63397"),
                 n.e("44651"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("3377"),
                 n.e("53539"),
                 n.e("63635"),
@@ -8129,12 +8130,12 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("52204"),
                 n.e("11491"),
                 n.e("60845"),
-                n.e("16384"),
+                n.e("56289"),
                 n.e("10373"),
                 n.e("89317"),
                 n.e("81154"),
                 n.e("46286"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("74968"),
                 n.e("92436"),
                 n.e("71470"),
@@ -8212,7 +8213,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
     dT = (0, g.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("62616"),
+                n.e("19315"),
                 n.e("45235"),
                 n.e("25652"),
                 n.e("33092"),
@@ -8361,7 +8362,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("29020"),
                 n.e("32442"),
                 n.e("9176"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
@@ -8374,7 +8375,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -8515,7 +8516,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("4015"),
                 n.e("61659"),
                 n.e("5384"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("20287"),
                 n.e("28367"),
                 n.e("20683"),
@@ -8587,8 +8588,8 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
         createPromise: () =>
             Promise.all([
                 n.e("84763"),
-                n.e("95957"),
-                n.e("81167"),
+                n.e("23082"),
+                n.e("57948"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
@@ -8596,14 +8597,14 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("97189"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -8620,7 +8621,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("23574"),
                 n.e("45235"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("92652"),
                 n.e("5007"),
                 n.e("11273"),
@@ -8776,7 +8777,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -8830,11 +8831,11 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
         createPromise: () =>
             Promise.all([
                 n.e("53539"),
-                n.e("62370"),
-                n.e("88826"),
+                n.e("72823"),
+                n.e("79093"),
                 n.e("28510"),
-                n.e("95957"),
-                n.e("81167"),
+                n.e("23082"),
+                n.e("57948"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
@@ -8848,7 +8849,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -8865,15 +8866,14 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("23574"),
                 n.e("45235"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("92652"),
                 n.e("5007"),
                 n.e("98042"),
                 n.e("90673"),
                 n.e("57546"),
-                n.e("4592"),
-                n.e("1907"),
-                n.e("70080"),
+                n.e("3840"),
+                n.e("81579"),
                 n.e("23924"),
                 n.e("15510"),
                 n.e("48226"),
@@ -9037,7 +9037,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -9170,11 +9170,10 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
         createPromise: () =>
             Promise.all([
                 n.e("2332"),
-                n.e("62370"),
-                n.e("16384"),
+                n.e("72823"),
                 n.e("75058"),
-                n.e("95957"),
-                n.e("81167"),
+                n.e("23082"),
+                n.e("57948"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
@@ -9188,7 +9187,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -9204,17 +9203,18 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("23574"),
                 n.e("45235"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("92652"),
                 n.e("5007"),
                 n.e("66346"),
                 n.e("57546"),
                 n.e("53773"),
-                n.e("88826"),
+                n.e("79093"),
                 n.e("28510"),
                 n.e("98042"),
                 n.e("90673"),
-                n.e("4592"),
+                n.e("3840"),
+                n.e("81579"),
                 n.e("53539"),
                 n.e("47206"),
                 n.e("75681"),
@@ -9393,7 +9393,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -9634,8 +9634,8 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
         createPromise: () =>
             Promise.all([
                 n.e("75681"),
-                n.e("95957"),
-                n.e("81167"),
+                n.e("23082"),
+                n.e("57948"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
@@ -9643,14 +9643,14 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("97189"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -9667,7 +9667,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("23574"),
                 n.e("45235"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("62177"),
                 n.e("23924"),
                 n.e("15510"),
@@ -9819,7 +9819,7 @@ let dl = (0, g.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 20131
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -10415,8 +10415,8 @@ function d0() {
 }
 var d1 = n(575486);
 n(938796);
-var d3 = n(665260),
-    d2 = n(56562),
+var d2 = n(665260),
+    d3 = n(56562),
     d8 = n(77729),
     d5 = n(237774),
     d4 = n(885437),
@@ -10486,7 +10486,7 @@ async function cb(e) {
         is_overlay_enabled: g,
         is_overlay_game_enabled: I,
         is_overlay_game_source: C,
-        fullscreen_type: null != u ? d2.aI[u] : d2.aI.UNKNOWN.toString(),
+        fullscreen_type: null != u ? d3.aI[u] : d3.aI.UNKNOWN.toString(),
         hardware_display_count: (await d8.A?.hardware?.getDisplayCount?.()) ?? null,
         overlay_method: cp.Ue[a] ?? (__OVERLAY__ ? cp.Ue[cp.Ue.Hook] : null),
         activity_status_enabled: oc.tz.getSetting(),
@@ -10693,7 +10693,7 @@ class cP extends p.PureComponent {
                         .reverse()
                         .find(
                             (e) =>
-                                (0, d3.Lt)(e.flags, D.pr7.IS_CROSSPOST) &&
+                                (0, d2.Lt)(e.flags, D.pr7.IS_CROSSPOST) &&
                                 e.messageReference?.guild_id === "667560445975986187",
                         );
                 ec.default.track(D.HAw.ACK_COMMUNITY_MESSAGES, {
@@ -10894,11 +10894,11 @@ let cG = (0, tu.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("33092"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("45235"),
                 n.e("51755"),
                 n.e("9176"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("61663"),
                 n.e("63397"),
                 n.e("92652"),
@@ -10975,13 +10975,13 @@ let cG = (0, tu.Fe)({
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -10991,7 +10991,7 @@ let cG = (0, tu.Fe)({
                 n.e("33957"),
                 n.e("94193"),
                 n.e("5384"),
-                n.e("95957"),
+                n.e("23082"),
                 n.e("62859"),
                 n.e("92652"),
                 n.e("10577"),
@@ -11103,8 +11103,9 @@ let cG = (0, tu.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("33092"),
-                n.e("62370"),
-                n.e("16384"),
+                n.e("72823"),
+                n.e("92510"),
+                n.e("56289"),
                 n.e("45235"),
                 n.e("63397"),
                 n.e("43763"),
@@ -11112,10 +11113,10 @@ let cG = (0, tu.Fe)({
                 n.e("61659"),
                 n.e("78220"),
                 n.e("40841"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("89317"),
-                n.e("95957"),
-                n.e("81167"),
+                n.e("23082"),
+                n.e("57948"),
                 n.e("69273"),
                 n.e("63941"),
                 n.e("63009"),
@@ -11138,11 +11139,11 @@ let cG = (0, tu.Fe)({
                 n.e("75058"),
                 n.e("23574"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("44135"),
                 n.e("9176"),
                 n.e("87845"),
-                n.e("20797"),
+                n.e("35636"),
                 n.e("98042"),
                 n.e("75090"),
                 n.e("61175"),
@@ -11313,7 +11314,7 @@ let cG = (0, tu.Fe)({
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -11690,9 +11691,9 @@ let cX = p.memo(function () {
             };
         }, [e]),
         p.useEffect(() => {
-            e3(t);
+            e2(t);
         }, [t]),
-        p.useEffect(() => () => e3(0), []),
+        p.useEffect(() => () => e2(0), []),
         (0, E.jsxs)(eG, {
             ref: i,
             className: cW.y,
@@ -11712,9 +11713,9 @@ var cZ = n(148803),
     cJ = n(536194),
     c0 = n(693477),
     c1 = n(892035);
-let c3 = "CollectiblesMarketingManager",
-    c2 = "CollectiblesAnnouncementModal",
-    c8 = new ct.A(c3);
+let c2 = "CollectiblesMarketingManager",
+    c3 = "CollectiblesAnnouncementModal",
+    c8 = new ct.A(c2);
 class c5 extends X.A {
     didOpenAnnouncementModal = !1;
     _initialize() {
@@ -11733,11 +11734,11 @@ class c5 extends X.A {
         (0, c0.LX)({ release: e ? cZ.P.BETA : cZ.P.PROD }), this.maybeOpenAnnouncementModal();
     };
     maybeOpenAnnouncementModal = async () => {
-        if (this.didOpenAnnouncementModal || cJ.P.isDisallowPopupsSet() || (0, T.hasModalOpen)(c2)) return;
+        if (this.didOpenAnnouncementModal || cJ.P.isDisallowPopupsSet() || (0, T.hasModalOpen)(c3)) return;
         let e = iu.default.getCurrentUser();
         if (
             !(null == e || !e.verified || (0, iW.k8)(nW.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT)) &&
-            (0, c1.ix)(c3).isAnnouncementEligible
+            (0, c1.ix)(c2).isAnnouncementEligible
         ) {
             this.didOpenAnnouncementModal = !0;
             try {
@@ -11746,7 +11747,7 @@ class c5 extends X.A {
                         let { default: e } = await Promise.all([n.e("80178"), n.e("13328")]).then(n.bind(n, 24851));
                         return (t) => (0, E.jsx)(e, { ...t });
                     },
-                    { modalKey: c2 },
+                    { modalKey: c3 },
                 );
             } catch (e) {
                 (this.didOpenAnnouncementModal = !1), c8.error("Failed to open announcement modal", e);
@@ -11949,7 +11950,7 @@ class uI extends X.A {
         } = e;
         (0, T.hasModalOpen)(um) ||
             (0, T.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("17764"), n.e("26343"), n.e("89588"), n.e("95198")]).then(
+                let { default: e } = await Promise.all([n.e("76550"), n.e("26343"), n.e("89588"), n.e("95198")]).then(
                     n.bind(n, 58829),
                 );
                 return (n) =>
@@ -12140,7 +12141,7 @@ let uQ = {
 var uJ = n(507263),
     u0 = n(376728),
     u1 = n(970163);
-async function u3(e) {
+async function u2(e) {
     let { code: t } = e,
         i = (await (0, u1.A)(t)).invite;
     if (null == i || null == i.guild) return;
@@ -12155,7 +12156,7 @@ async function u3(e) {
     let { default: s } = await Promise.resolve().then(n.bind(n, 608401));
     await s({ guildId: r }), u0.Ay.transitionToInvite(i, void 0, !0);
 }
-var u2 = n(997509),
+var u3 = n(997509),
     u8 = n(268313),
     u5 = n(567249),
     u4 = n(998740);
@@ -12454,7 +12455,7 @@ let AR = {
             if (null != e)
                 if (AN.A.enabled) (0, AS.Lk)(e);
                 else {
-                    if (!(0, s2.lI)()) return;
+                    if (!(0, s3.lI)()) return;
                     (0, AS.hK)(!0, e);
                 }
         },
@@ -12465,7 +12466,7 @@ let AR = {
             let t = (0, Ab.A)();
             if (null != t) {
                 if (e) {
-                    if (!(0, s2.lI)()) return;
+                    if (!(0, s3.lI)()) return;
                     (0, AS.hK)(!1, t);
                 } else (0, AS.Lk)(t);
                 return;
@@ -12700,8 +12701,8 @@ var AQ = n(682492),
     AJ = n(414736),
     A0 = n(874486),
     A1 = n(927018),
-    A3 = n(3137),
-    A2 = n(559908);
+    A2 = n(3137),
+    A3 = n(559908);
 let A8 = new Set();
 class A5 extends X.A {
     _initialize() {
@@ -12722,16 +12723,16 @@ class A5 extends X.A {
             channelId: t,
             message: { author: n, nonce: i, mentions: r },
         } = e;
-        if (!A3.A.isEnabled()) return !1;
+        if (!A2.A.isEnabled()) return !1;
         let a = R.default.getId();
         if (
             (r?.find((e) => e.id === a) != null
                 ? (0, AJ._)(A1.sn.PING_ME)
                 : (r?.length ?? 0) > 0 && n?.id === a && (0, AJ._)(A1.sn.PING_SOMEONE),
-            !(0, A2.gN)(n?.id, a, i, A8))
+            !(0, A3.gN)(n?.id, a, i, A8))
         )
             return !1;
-        let { combo: l } = A2.Ay.getMostRecentMessageCombo(t) ?? {};
+        let { combo: l } = A3.Ay.getMostRecentMessageCombo(t) ?? {};
         if (null == l) return !1;
         Object.values(A1.sn).forEach((e) => {
             if (null != A0.A.getUnlocked(e)) return;
@@ -12762,15 +12763,15 @@ n(41604);
 let hi = (0, tu.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("62370"),
+                n.e("72823"),
                 n.e("82397"),
                 n.e("90673"),
-                n.e("81167"),
+                n.e("57948"),
                 n.e("40841"),
                 n.e("45235"),
                 n.e("4981"),
-                n.e("95957"),
-                n.e("72553"),
+                n.e("23082"),
+                n.e("46788"),
                 n.e("89317"),
                 n.e("34712"),
                 n.e("69273"),
@@ -12784,7 +12785,7 @@ let hi = (0, tu.Fe)({
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -12795,7 +12796,7 @@ let hi = (0, tu.Fe)({
                 n.e("80287"),
                 n.e("23740"),
                 n.e("55658"),
-                n.e("88826"),
+                n.e("79093"),
                 n.e("28510"),
                 n.e("76032"),
                 n.e("78220"),
@@ -12805,17 +12806,18 @@ let hi = (0, tu.Fe)({
                 n.e("75058"),
                 n.e("23574"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("92652"),
                 n.e("5007"),
                 n.e("98042"),
                 n.e("57546"),
-                n.e("4592"),
+                n.e("3840"),
+                n.e("81579"),
                 n.e("53539"),
                 n.e("52204"),
                 n.e("11491"),
                 n.e("32703"),
-                n.e("16384"),
+                n.e("56289"),
                 n.e("33092"),
                 n.e("23924"),
                 n.e("15510"),
@@ -12983,7 +12985,7 @@ let hi = (0, tu.Fe)({
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -13180,8 +13182,8 @@ let hi = (0, tu.Fe)({
             Promise.all([
                 n.e("45235"),
                 n.e("4981"),
-                n.e("95957"),
-                n.e("72553"),
+                n.e("23082"),
+                n.e("46788"),
                 n.e("89317"),
                 n.e("34712"),
                 n.e("40841"),
@@ -13190,14 +13192,14 @@ let hi = (0, tu.Fe)({
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
-                n.e("62370"),
+                n.e("72823"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("97189"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -13312,11 +13314,11 @@ let hi = (0, tu.Fe)({
     ha = (0, tu.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("62370"),
-                n.e("88826"),
+                n.e("72823"),
+                n.e("79093"),
                 n.e("28510"),
-                n.e("95957"),
-                n.e("81167"),
+                n.e("23082"),
+                n.e("57948"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("89317"),
@@ -13330,7 +13332,7 @@ let hi = (0, tu.Fe)({
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -13347,18 +13349,18 @@ let hi = (0, tu.Fe)({
                 n.e("23574"),
                 n.e("45235"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("92652"),
                 n.e("5007"),
                 n.e("98042"),
                 n.e("90673"),
                 n.e("57546"),
-                n.e("4592"),
+                n.e("3840"),
+                n.e("81579"),
                 n.e("53539"),
                 n.e("23740"),
-                n.e("67233"),
                 n.e("4981"),
-                n.e("72553"),
+                n.e("46788"),
                 n.e("34712"),
                 n.e("20524"),
                 n.e("80287"),
@@ -13527,7 +13529,7 @@ let hi = (0, tu.Fe)({
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -13708,15 +13710,15 @@ let hi = (0, tu.Fe)({
     hl = (0, tu.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("62370"),
+                n.e("72823"),
                 n.e("82397"),
                 n.e("90673"),
-                n.e("81167"),
+                n.e("57948"),
                 n.e("40841"),
                 n.e("45235"),
                 n.e("4981"),
-                n.e("95957"),
-                n.e("72553"),
+                n.e("23082"),
+                n.e("46788"),
                 n.e("89317"),
                 n.e("34712"),
                 n.e("69273"),
@@ -13730,7 +13732,7 @@ let hi = (0, tu.Fe)({
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("17764"),
+                n.e("76550"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("39501"),
@@ -13741,7 +13743,7 @@ let hi = (0, tu.Fe)({
                 n.e("80287"),
                 n.e("23740"),
                 n.e("55658"),
-                n.e("88826"),
+                n.e("79093"),
                 n.e("28510"),
                 n.e("76032"),
                 n.e("78220"),
@@ -13751,17 +13753,18 @@ let hi = (0, tu.Fe)({
                 n.e("75058"),
                 n.e("23574"),
                 n.e("63635"),
-                n.e("81462"),
+                n.e("25256"),
                 n.e("92652"),
                 n.e("5007"),
                 n.e("98042"),
                 n.e("57546"),
-                n.e("4592"),
+                n.e("3840"),
+                n.e("81579"),
                 n.e("53539"),
                 n.e("52204"),
                 n.e("11491"),
                 n.e("32703"),
-                n.e("16384"),
+                n.e("56289"),
                 n.e("33092"),
                 n.e("23924"),
                 n.e("15510"),
@@ -13929,7 +13932,7 @@ let hi = (0, tu.Fe)({
                 n.e("2698"),
                 n.e("62875"),
                 n.e("4744"),
-                n.e("87046"),
+                n.e("34654"),
                 n.e("12542"),
                 n.e("501"),
                 n.e("46769"),
@@ -14616,7 +14619,7 @@ let hZ = {
                 .max(100)
                 .description("Developer-defined identifier for the button; max 100 characters"),
         });
-function h3(e, t) {
+function h2(e, t) {
     let { scope: n, handler: i } = t,
         r = { scope: n, handler: i },
         a = hZ[e]?.request,
@@ -14629,27 +14632,27 @@ function h3(e, t) {
         r
     );
 }
-var h2 = n(20015),
+var h3 = n(20015),
     h8 = n(636401);
 function h5() {
     let e = rb.Ay.getConnectedActivityChannelId();
     return i7.A.getChannel(e);
 }
 let h4 = {
-    [D.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: h3(D.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
+    [D.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: h2(D.e$_.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
         scope: hq,
         handler(e) {
             let { socket: t } = e;
             return (0, hH.lG)(t.transport), hz();
         },
     }),
-    [D.e$_.REQUEST_PROXY_TICKET_REFRESH]: h3(D.e$_.REQUEST_PROXY_TICKET_REFRESH, {
+    [D.e$_.REQUEST_PROXY_TICKET_REFRESH]: h2(D.e$_.REQUEST_PROXY_TICKET_REFRESH, {
         scope: hq,
         async handler(e) {
             let { socket: t } = e;
             (0, hH.lG)(t.transport);
             let n = (0, hH.D2)(t.application);
-            if (!(0, h2.n)(t.application, D.gfo.EMBEDDED))
+            if (!(0, h3.n)(t.application, D.gfo.EMBEDDED))
                 throw new h8.A(
                     { errorCode: D.Lw6.UNAUTHORIZED_FOR_APPLICATION },
                     "This application cannot access this API",
@@ -14685,7 +14688,7 @@ let _t = {
                     a = h5(),
                     l = a?.getGuildId(),
                     s = iY.A.getApplication(r);
-                if (!(0, h2.n)(s, D.gfo.EMBEDDED_FIRST_PARTY))
+                if (!(0, h3.n)(s, D.gfo.EMBEDDED_FIRST_PARTY))
                     throw new h8.A({ errorCode: D.Lw6.INVALID_COMMAND }, "This application cannot access this API");
                 let o = (0, h6.D)(r),
                     d = {
@@ -15064,7 +15067,7 @@ function _E() {
     return { frame: void 0, channel: t, guild: n };
 }
 let _p = {
-    [hX.e$.INVITE_USER_EMBEDDED]: h3(hX.e$.INVITE_USER_EMBEDDED, {
+    [hX.e$.INVITE_USER_EMBEDDED]: h2(hX.e$.INVITE_USER_EMBEDDED, {
         scope: { [dr.sm.ANY]: [hW.F.DM_CHANNELS_MESSAGES_WRITE, hW.F.ACTIVITIES_INVITES_WRITE] },
         async handler(e) {
             let t,
@@ -15211,11 +15214,11 @@ let _S = new Set([hK.AM, hK.eK]),
                     );
                 {
                     let { openUserSettings: e } = n(858897);
-                    e(e2.X.CONNECTIONS_PANEL);
+                    e(e3.X.CONNECTIONS_PANEL);
                 }
             },
         },
-        [D.e$_.SHARE_LINK]: h3(D.e$_.SHARE_LINK, {
+        [D.e$_.SHARE_LINK]: h2(D.e$_.SHARE_LINK, {
             scope: { [dr.sm.ANY]: [dr.VH] },
             handler(e) {
                 let {
@@ -15225,7 +15228,7 @@ let _S = new Set([hK.AM, hK.eK]),
                 (0, hH.lG)(t.transport);
                 let l = (0, hH.D2)(t.application);
                 if (null == l) throw new h8.A({ errorCode: D.Lw6.INVALID_COMMAND }, "No application.");
-                if (!(0, h2.n)(t.application, D.gfo.EMBEDDED))
+                if (!(0, h3.n)(t.application, D.gfo.EMBEDDED))
                     throw new h8.A({ errorCode: D.Lw6.INVALID_COMMAND }, "This application cannot access this API");
                 return new Promise((e) => {
                     !(function (e) {
@@ -15542,7 +15545,7 @@ let _D = new Set([hK.AM, hK.eK]),
         },
     },
     _x = {
-        [D.e$_.GET_RELATIONSHIPS]: h3(D.e$_.GET_RELATIONSHIPS, {
+        [D.e$_.GET_RELATIONSHIPS]: h2(D.e$_.GET_RELATIONSHIPS, {
             scope: { [dr.sm.ANY]: [hW.F.RELATIONSHIPS_READ] },
             handler(e) {
                 if (cd.zy(cd.iu(e.socket.application.flags ?? 0), cd.iu(D.gfo.DISABLE_RELATIONSHIPS_ACCESS)))
@@ -15793,7 +15796,7 @@ let _z = {
                 l = null != r && null != i && (0, s6.Ir)(i, r, a);
             if (null == a) throw new h8.A({ errorCode: hX.Lw.INVALID_CHANNEL }, "Invalid Channel.");
             if (l)
-                if ((0, s2.Ay)(a)) null != r && (0, s6.Ak)(r, a.id, [eg.A.RPC]);
+                if ((0, s3.Ay)(a)) null != r && (0, s6.Ak)(r, a.id, [eg.A.RPC]);
                 else throw new h8.A({ errorCode: hX.Lw.INVALID_PERMISSIONS }, "Invalid Permissions.");
             else throw new h8.A({ errorCode: hX.Lw.INVALID_SOUND }, "Invalid Sound.");
         },
@@ -15878,14 +15881,14 @@ let _1 = {
     },
 };
 n(142703);
-var _3 = n(722306);
-let _2 = {
+var _2 = n(722306);
+let _3 = {
     [D.e$_.SUBSCRIBE]: {
         async handler(e) {
             let { server: t, socket: n, evt: i, args: r } = e,
                 a = t.events[i];
             if (null == a) throw new h8.A({ errorCode: D.Lw6.INVALID_EVENT }, `Invalid event: ${i}`);
-            if (!(0, _3.A)(n.authorization.scopes, a.scope))
+            if (!(0, _2.A)(n.authorization.scopes, a.scope))
                 throw new h8.A({ errorCode: D.Lw6.INVALID_PERMISSIONS }, "Not authenticated or invalid scope");
             if (
                 (ec.default.track(D.HAw.RPC_SUBSCRIPTION_REQUESTED, {
@@ -15962,7 +15965,7 @@ let _2 = {
 var _8 = n(773669);
 let _5 = { [D.e$_.USER_SETTINGS_GET_LOCALE]: { scope: hW.F.IDENTIFY, handler: () => ({ locale: _8.default.locale }) } },
     _4 = {
-        [D.e$_.GET_USER]: h3(D.e$_.GET_USER, {
+        [D.e$_.GET_USER]: h2(D.e$_.GET_USER, {
             scope: { [dr.sm.ANY]: [dr.W_, dr.hj] },
             handler(e) {
                 let {
@@ -15989,7 +15992,7 @@ let _5 = { [D.e$_.USER_SETTINGS_GET_LOCALE]: { scope: hW.F.IDENTIFY, handler: ()
         ..._V,
         ..._F,
         ..._1,
-        ..._2,
+        ..._3,
         ..._4,
         ..._5,
         ..._v,
@@ -16465,7 +16468,7 @@ let Eg = {
                 (0, T.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("17764"),
+                            n.e("76550"),
                             n.e("40841"),
                             n.e("58216"),
                             n.e("59957"),
@@ -16489,7 +16492,7 @@ let Eg = {
                 );
         },
     },
-    [D.e$_.INITIATE_IMAGE_UPLOAD]: h3(D.e$_.INITIATE_IMAGE_UPLOAD, {
+    [D.e$_.INITIATE_IMAGE_UPLOAD]: h2(D.e$_.INITIATE_IMAGE_UPLOAD, {
         scope: { [dr.sm.ANY]: [hW.F.RPC, dr.hj, dr.VH] },
         handler(e) {
             let { socket: t } = e,
@@ -16537,7 +16540,7 @@ let Eg = {
             });
         },
     }),
-    [D.e$_.OPEN_SHARE_MOMENT_DIALOG]: h3(D.e$_.OPEN_SHARE_MOMENT_DIALOG, {
+    [D.e$_.OPEN_SHARE_MOMENT_DIALOG]: h2(D.e$_.OPEN_SHARE_MOMENT_DIALOG, {
         scope: { [dr.sm.ANY]: [dr.VH] },
         handler(e) {
             let {
@@ -16547,7 +16550,7 @@ let Eg = {
             (0, hH.lG)(t.transport);
             let r = t.application.id;
             if (null == r) throw new h8.A({ errorCode: D.Lw6.INVALID_COMMAND }, "No application.");
-            if (!(0, h2.n)(t.application, D.gfo.EMBEDDED))
+            if (!(0, h3.n)(t.application, D.gfo.EMBEDDED))
                 throw new h8.A({ errorCode: D.Lw6.INVALID_COMMAND }, "This application cannot access this API");
             let a = h5();
             if (!Ep.A.isDiscordCdnUrl(i))
@@ -16577,7 +16580,7 @@ let Eg = {
             })({ applicationId: r, channelId: a?.id, mediaUrl: i });
         },
     }),
-    [D.e$_.SHARE_INTERACTION]: h3(D.e$_.SHARE_INTERACTION, {
+    [D.e$_.SHARE_INTERACTION]: h2(D.e$_.SHARE_INTERACTION, {
         scope: { [dr.sm.ANY]: [dr.VH, dr.hj] },
         handler(e) {
             let t,
@@ -16596,7 +16599,7 @@ let Eg = {
                 c = n.application.id;
             if (null == c) throw new h8.A({ errorCode: D.Lw6.INVALID_COMMAND }, "No application.");
             if (!hK.mO.includes(c)) throw new h8.A({ errorCode: D.Lw6.INVALID_COMMAND }, "Unsupported application.");
-            if (!(0, h2.n)(n.application, D.gfo.EMBEDDED))
+            if (!(0, h3.n)(n.application, D.gfo.EMBEDDED))
                 throw new h8.A({ errorCode: D.Lw6.INVALID_COMMAND }, "This application cannot access this API");
             let u = h5();
             if (null == u && l) throw new h8.A({ errorCode: D.Lw6.INVALID_COMMAND }, "No channel found");
@@ -16773,7 +16776,7 @@ async function EG(e, t, n) {
         throw new h8.A({ errorCode: D.Lw6.OAUTH2_ERROR }, "Client is not logged in");
     if (null != T) r = Number(T);
     else {
-        let e = (e) => (0, h2.n)(e, D.gfo.EMBEDDED) && e?.integrationTypesConfig?.[Ey.b.USER_INSTALL] != null,
+        let e = (e) => (0, h3.n)(e, D.gfo.EMBEDDED) && e?.integrationTypesConfig?.[Ey.b.USER_INSTALL] != null,
             t = iY.A.getApplication(o);
         r = e(t) || e((t = Ew.Ay.createFromServer(await (0, ED.TA)(o, N)))) ? Ey.b.USER_INSTALL : Ey.b.GUILD_INSTALL;
     }
@@ -17018,7 +17021,7 @@ let Ek =
         (0, U.isWindows)() ? eJ.Ay.minimize(i) : eJ.Ay.restore(i), eJ.Ay.focus(i);
     }),
     {
-        [D.e$_.AUTHENTICATE]: h3(D.e$_.AUTHENTICATE, {
+        [D.e$_.AUTHENTICATE]: h2(D.e$_.AUTHENTICATE, {
             handler(e) {
                 let {
                     socket: t,
@@ -17314,7 +17317,7 @@ function E1(e, t) {
             link_type: t,
         });
 }
-let E3 = {
+let E2 = {
         [D.e$_.INVITE_BROWSER]: {
             scope: dr.LQ,
             async handler(e) {
@@ -17338,7 +17341,7 @@ let E3 = {
                     eJ.Ay.focus(),
                     (0, T.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("17764"),
+                            n.e("76550"),
                             n.e("45235"),
                             n.e("40841"),
                             n.e("99430"),
@@ -17594,7 +17597,7 @@ let E3 = {
             },
         },
     },
-    E2 = {
+    E3 = {
         [D.e$_.SET_SUPPRESS_NOTIFICATIONS]: {
             scope: dr.hj,
             handler(e) {
@@ -17651,14 +17654,14 @@ let E4 = {
                                 n.e("63941"),
                                 n.e("63009"),
                                 n.e("84580"),
-                                n.e("62370"),
+                                n.e("72823"),
                                 n.e("63397"),
                                 n.e("45650"),
                                 n.e("97189"),
                                 n.e("24059"),
                                 n.e("51402"),
                                 n.e("27660"),
-                                n.e("17764"),
+                                n.e("76550"),
                                 n.e("85484"),
                                 n.e("89516"),
                                 n.e("39501"),
@@ -18291,7 +18294,7 @@ let p_ = new ct.A("RPCServer:PostMessage"),
             });
         }),
         l),
-    pp = { ..._7, ...Eg, ...Ef, ...EH, ...EY, ...EB.A, ...Ez, ...E3, ...E2, ...E4, ...E6, ...pn, ...pt, ...Ek, ...E7 },
+    pp = { ..._7, ...Eg, ...Ef, ...EH, ...EY, ...EB.A, ...Ez, ...E2, ...E3, ...E4, ...E6, ...pn, ...pt, ...Ek, ...E7 },
     pm = { ...Er, ...El, ...Es, ...Ed },
     pI = {
         server: Ea.A,
@@ -18877,7 +18880,7 @@ class px extends pS {
         let i = i7.A.getChannel(t),
             r = AO.Ay.getKeybindForAction(D.hCu.SOUNDBOARD_HOLD);
         null != i &&
-            (0, s2.Ay)(i) &&
+            (0, s3.Ay)(i) &&
             null != r &&
             sJ.A.hasHotspot(pf._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
             (0, T.openModalLazy)(async () => {
@@ -18964,8 +18967,8 @@ var pY = n(989349),
 n(75804);
 let p0 = [],
     p1 = null,
-    p3 = null,
     p2 = null,
+    p3 = null,
     p8 = /\|\|([\s\S]+?)\|\|/g;
 function p5(e, t, n, i) {
     let r = rx.A.getGuild(n),
@@ -18998,20 +19001,20 @@ function p5(e, t, n, i) {
 function p4() {
     if (!pq.$j) return !1;
     let e = _8.default.locale;
-    null == p2 && (p2 = window.speechSynthesis?.getVoices());
-    let t = p2.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
-    p3 = t.length > 0 ? t[0] : null;
+    null == p3 && (p3 = window.speechSynthesis?.getVoices());
+    let t = p3.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
+    p2 = t.length > 0 ? t[0] : null;
 }
 async function p7(e, t, n, i, r) {
     let a = pq.aW(e, n);
     null !== a &&
-        (null == p3 && p4(),
+        (null == p2 && p4(),
         t ? await (0, pQ.pr)() : p1?.removeEventListener("end", pQ.pr),
         a.addEventListener("end", pQ.pr),
         null != i && a.addEventListener("start", i),
         null != r && a.addEventListener("end", r),
         (p1 = a),
-        pq.wz(a, p3));
+        pq.wz(a, p2));
 }
 function p6(e, t, n, i, r) {
     p7(e, t, r, () => {
@@ -19867,7 +19870,7 @@ function m0() {
 function m1() {
     (mX = D.XlH.OPEN), (mZ = {});
 }
-class m3 extends C.Ay.Store {
+class m2 extends C.Ay.Store {
     static displayName = "UserSettingsAccountStore";
     initialize() {
         this.waitFor(iu.default);
@@ -19882,7 +19885,7 @@ class m3 extends C.Ay.Store {
         return mQ;
     }
 }
-new m3(W.h, {
+new m2(W.h, {
     USER_SETTINGS_MODAL_OPEN: function () {
         mJ();
     },
@@ -19928,7 +19931,7 @@ new m3(W.h, {
     n(279061),
     n(750128),
     n(921955);
-let m2 = !1;
+let m3 = !1;
 (0, eI.as)(), C.Ay.initialize(), pg.loadServer();
 let m8 = (0, g.Fe)({
         createPromise: () => Promise.all([n.e("89145"), n.e("11415")]).then(n.bind(n, 844358)),
@@ -20043,7 +20046,7 @@ let Ii = [
                 { inviteCode: n } = t.params;
             return (
                 (0, uJ.B)(() => {
-                    u3({ code: n });
+                    u2({ code: n });
                 }),
                 (0, E.jsx)(I.rd, { to: lX.A.defaultRoute })
             );
@@ -20189,7 +20192,7 @@ let Ii = [
                             n.e("89317"),
                             n.e("92652"),
                             n.e("93855"),
-                            n.e("17764"),
+                            n.e("76550"),
                             n.e("63397"),
                             n.e("20287"),
                             n.e("28367"),
@@ -20215,7 +20218,7 @@ let Ii = [
         path: [D.BVt.APPLICATION_LIBRARY_INVENTORY],
         render: function () {
             return (
-                (0, uJ.B)(() => (0, e8.openUserSettings)(e2.X.GIFT_PANEL)), (0, E.jsx)(I.rd, { to: lX.A.defaultRoute })
+                (0, uJ.B)(() => (0, e8.openUserSettings)(e3.X.GIFT_PANEL)), (0, E.jsx)(I.rd, { to: lX.A.defaultRoute })
             );
         },
     },
@@ -20249,7 +20252,7 @@ let Ii = [
                 { guildId: n, section: i, subsection: r } = t.params;
             return (
                 (0, uJ.B)(() => {
-                    u2.A.open(n, (0, u8.A)(D.BEX, i), void 0, (0, u8.A)(D.nd0, r));
+                    u3.A.open(n, (0, u8.A)(D.BEX, i), void 0, (0, u8.A)(D.nd0, r));
                 }),
                 (0, E.jsx)(I.rd, { to: D.BVt.CHANNEL(n) })
             );
@@ -20418,8 +20421,8 @@ class Il extends p.PureComponent {
                     let n = ee.A.getChannelId(c),
                         s = n !== r,
                         o = null != pX.Ay.getGuildSidebarState(i);
-                    if (!m2 || u || s || null != a) {
-                        (m2 = !0), O.default.selectChannel({ guildId: i, channelId: r, messageId: a });
+                    if (!m3 || u || s || null != a) {
+                        (m3 = !0), O.default.selectChannel({ guildId: i, channelId: r, messageId: a });
                         let { summaryId: e } = (0, m.parse)(t);
                         null != e && pH.Ay.setSelectedSummary(r, e);
                     }

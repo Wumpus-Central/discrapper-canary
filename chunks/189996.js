@@ -81,7 +81,7 @@ var l,
     eR = n(465364),
     ek = n(467073),
     eI = n(34337),
-    eM = n(93032),
+    eM = n(831688),
     e_ = n(805964),
     ew = n(302031),
     eD = n(253932),
@@ -207,7 +207,7 @@ let eJ = s.memo(function (e) {
                                     hasMediaAttachment: null != j,
                                     originalAuthor: A,
                                 }),
-                                f?.blocked || null == j ? null : (0, i.jsx)(e8, { channel: c, firstMedia: j }),
+                                f?.blocked || null == j ? null : (0, i.jsx)(e3, { channel: c, firstMedia: j }),
                             ],
                         }),
                     }),
@@ -418,7 +418,7 @@ function e7(e) {
         }),
     });
 }
-function e3(e) {
+function e8(e) {
     let t,
         n,
         { firstMedia: l, shouldObscure: s, obscureReason: r, shouldShowAgeVerification: o } = e,
@@ -459,7 +459,7 @@ function e3(e) {
                 analyticsSource: "ForumPostMediaPreview",
             });
 }
-function e8(e) {
+function e3(e) {
     let { channel: t, firstMedia: n } = e,
         [l, s] = (0, eE.eJ)({ media: n, channel: t }),
         r = (0, em.qZ)(s);
@@ -475,7 +475,7 @@ function e8(e) {
                         eo.A.showAgeVerificationGetStartedModal({ entryPoint: ec.q1.FORUM_POST_MEDIA_PREVIEW }));
             },
             children: [
-                (0, i.jsx)(e3, { firstMedia: n, shouldObscure: l, obscureReason: s, shouldShowAgeVerification: r }),
+                (0, i.jsx)(e8, { firstMedia: n, shouldObscure: l, obscureReason: s, shouldShowAgeVerification: r }),
                 l && (0, i.jsx)(ep.A, { iconClassname: eQ.yo, obscureReason: s }),
             ],
         }),
@@ -1176,8 +1176,8 @@ function t2(e) {
 var t4 = n(191842),
     t5 = n(565645),
     t7 = n(21161),
-    t3 = n(796774),
-    t8 = n(209932),
+    t8 = n(796774),
+    t3 = n(209932),
     t9 = n(954571),
     t6 = n(102597),
     ne = n(904054),
@@ -1207,7 +1207,7 @@ function ni(e) {
 function ns(e) {
     let { containerRef: t, text: n } = e,
         l = s.useRef(null),
-        r = (0, g.bG)([t8.A], () => t8.A.getSoundsForGuild("0")?.find((e) => "airhorn" === e.name)),
+        r = (0, g.bG)([t3.A], () => t3.A.getSoundsForGuild("0")?.find((e) => "airhorn" === e.name)),
         { createMultipleConfettiAt: a } = s.useContext(t7.x),
         o = (0, g.bG)([L.A], () => L.A.useReducedMotion),
         { isPlaying: c, playSound: d } = (function (e) {
@@ -1223,7 +1223,7 @@ function ns(e) {
             );
         })(r);
     (0, D.Ay)(() => {
-        (0, t3.E7)();
+        (0, t8.E7)();
     });
     let u = s.useCallback(async () => {
         if ((await d()) && (l.current?.addAnimation(), !o && t?.current != null)) {
@@ -2035,8 +2035,8 @@ var nJ = n(201349),
     n4 = n(215497),
     n5 = n(914905),
     n7 = n(750943),
-    n3 = n(844222),
-    n8 = n(780777),
+    n8 = n(844222),
+    n3 = n(780777),
     n9 = n(518960),
     n6 = n(811998);
 let le = { scale: 0.95, opacity: 0 },
@@ -2060,7 +2060,7 @@ function lr(e) {
                 0 === e.detail && o.current?.activateUploadDialogue(), (0, tg.ri)({ isMobile: !1 }), n?.();
             },
             children: [
-                (0, i.jsx)(n8.A, {
+                (0, i.jsx)(n3.A, {
                     className: n6.Fg,
                     ref: o,
                     onChange: (e) => {
@@ -2083,7 +2083,7 @@ function lr(e) {
 function la(e) {
     let { channelId: t, closePopout: n } = e,
         [l, r] = s.useState(!1),
-        { reducedMotion: a } = s.useContext(n3.C),
+        { reducedMotion: a } = s.useContext(n8.C),
         o = (0, nT.z)({ from: a.enabled ? lt : le, to: ln, config: ll }, "animate-always"),
         c = (0, g.bG)([L.A], () => L.A.keyboardModeEnabled),
         d = (0, g.bG)([ta.A], () => ta.A.getUploads(t, nW.oU.CREATE_FORUM_POST.drafts.type)),
@@ -2773,7 +2773,7 @@ function l5(e) {
     });
 }
 let l7 = s.createContext(null);
-function l3(e) {
+function l8(e) {
     let { value: t, children: n, disabled: l = !1, selectedColor: r = l1.STANDARD, ...o } = e,
         { activeDescendant: c, selected: d, setSelected: m, itemToString: h } = s.useContext(l4),
         x = h(t),
@@ -2793,16 +2793,16 @@ function l3(e) {
         children: (0, i.jsx)(l7.Provider, { value: t, children: n }),
     });
 }
-(l3.Colors = l1),
-    (l3.Label = function (e) {
+(l8.Colors = l1),
+    (l8.Label = function (e) {
         let { children: t } = e;
         return (0, i.jsx)("span", { className: lZ.IR, children: t });
     }),
-    (l3.Icon = function (e) {
+    (l8.Icon = function (e) {
         let { children: t } = e;
         return (0, i.jsx)("span", { className: lZ.pp, children: t });
     }),
-    (l3.Checkbox = function (e) {
+    (l8.Checkbox = function (e) {
         let { checked: t } = e,
             { selected: n } = s.useContext(l4),
             l = s.useContext(l7);
@@ -2811,7 +2811,7 @@ function l3(e) {
             children: (0, i.jsx)(lY.P, { checked: t ?? (null != l && n.has(l)) }),
         });
     }),
-    (l3.Checkmark = function () {
+    (l8.Checkmark = function () {
         let { selected: e } = s.useContext(l4),
             t = s.useContext(l7);
         return e.has(t)
@@ -2821,7 +2821,7 @@ function l3(e) {
               })
             : null;
     });
-var l8 = n(305866),
+var l3 = n(305866),
     l9 = n(183610);
 function l6(e) {
     let {
@@ -2843,7 +2843,7 @@ function l6(e) {
             },
             [r, o, d],
         );
-    return (0, i.jsx)(l8.l, {
+    return (0, i.jsx)(l3.l, {
         className: a()(l9.kL, l9.XG, c),
         children: (0, i.jsx)(l5, {
             ...x,
@@ -2867,10 +2867,10 @@ let il = (e) => {
         a = (0, g.bG)([ie.Ay], () => (null != s ? ie.Ay.getUsableCustomEmojiById(s) : null)),
         o = null != s || null != r;
     return (0, i.jsx)(
-        l3,
+        l8,
         {
             value: n,
-            children: (0, i.jsx)(l3.Label, {
+            children: (0, i.jsx)(l8.Label, {
                 children: (0, i.jsxs)("div", {
                     className: it.nM,
                     children: [
@@ -3949,7 +3949,7 @@ function i4(e) {
             (0, i.jsx)("div", {
                 className: i1.qr,
                 children: (0, i.jsx)(Y.M, {
-                    children: (0, i.jsx)(i3, { channel: n, firstMessage: j, facepileRef: T }),
+                    children: (0, i.jsx)(i8, { channel: n, firstMessage: j, facepileRef: T }),
                 }),
             }),
         ],
@@ -4004,7 +4004,7 @@ function i7(e) {
               ],
           });
 }
-function i3(e) {
+function i8(e) {
     let { channel: t, facepileRef: n, firstMessage: l } = e,
         s = (0, eu.m)(t.id),
         r = l?.reactions != null && l.reactions.length > 0;
@@ -4048,7 +4048,7 @@ function i3(e) {
         ],
     });
 }
-let i8 = (e) => e.preventDefault(),
+let i3 = (e) => e.preventDefault(),
     i9 = s.memo(function (e) {
         return (0, i.jsx)(i.Fragment, {
             children: (0, eI.LL)({ ...e, analyticsSource: "ForumPostMediaPreviewImage" }),
@@ -4087,7 +4087,7 @@ let i8 = (e) => e.preventDefault(),
                                 width: e.width,
                                 height: e.height,
                                 alt: null != e.alt && l ? r : e.alt,
-                                onClick: i8,
+                                onClick: i3,
                                 shouldRenderAccessory: !u && !d,
                             },
                             f = (0, eS.ge)(e.src) ? `${e.src}?format=png` : e.src,
@@ -4402,7 +4402,7 @@ function sd(e) {
                 }
             });
         }, []),
-        (0, i.jsxs)(l8.l, {
+        (0, i.jsxs)(l3.l, {
             ref: (e) => {
                 l?.(e);
             },

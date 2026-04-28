@@ -136,3 +136,144 @@
 .micTestHelpLink_bd498a {
     margin-inline-start: 4px
 }
+
+.flex_aa3ffd {
+    display: flex
+}
+
+.alignStart_aa3ffd {
+    align-items: flex-start
+}
+
+.alignEnd_aa3ffd {
+    align-items: flex-end
+}
+
+.alignCenter_aa3ffd {
+    align-items: center
+}
+
+.alignStretch_aa3ffd {
+    align-items: stretch
+}
+
+.alignBaseline_aa3ffd {
+    align-items: baseline
+}
+
+.justifyStart_aa3ffd {
+    justify-content: flex-start
+}
+
+.justifyEnd_aa3ffd {
+    justify-content: flex-end
+}
+
+.justifyCenter_aa3ffd {
+    justify-content: center
+}
+
+.justifyAround_aa3ffd {
+    justify-content: space-around
+}
+
+.justifyBetween_aa3ffd {
+    justify-content: space-between
+}
+
+.noWrap_aa3ffd {
+    flex-wrap: nowrap
+}
+
+.wrap_aa3ffd {
+    flex-wrap: wrap
+}
+
+.wrapReverse_aa3ffd {
+    flex-wrap: wrap-reverse
+}
+
+.directionRow_aa3ffd {
+    flex-direction: row
+}
+
+.directionRowReverse_aa3ffd {
+    flex-direction: row-reverse
+}
+
+.directionColumn_aa3ffd {
+    flex-direction: column
+}
+
+.spacer_aa3ffd {
+    flex: 1;
+    overflow: hidden
+}
+
+.vertical_aa3ffd {
+    display: flex;
+    flex-direction: column
+}
+
+.horizontal_aa3ffd {
+    display: flex;
+    flex-direction: row
+}
+
+.horizontalReverse_aa3ffd {
+    display: flex;
+    flex-direction: row-reverse
+}
+
+.horizontal_aa3ffd>.spacer_aa3ffd,
+.horizontalReverse_aa3ffd>.spacer_aa3ffd,
+.vertical_aa3ffd>.spacer_aa3ffd {
+    min-height: 1px
+}
+
+.flexCenter_aa3ffd,
+.streamerModeEnabled_aa3ffd {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.streamerModeEnabled_aa3ffd {
+    flex: 1;
+    flex-direction: column
+}
+
+.userSettingsStreamerModeEnabled_aa3ffd {
+    height: 100%
+}
+
+.streamerModeEnabledImage_aa3ffd {
+    background-size: 100% 100%;
+    height: 220px;
+    width: 440px
+}
+
+.streamerModeEnabledBtn_aa3ffd {
+    background-color: var(--platform-twitch);
+    border-radius: 3px;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: var(--font-weight-bold);
+    line-height: 29px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-transform: uppercase
+}
+
+.streamerModeEnabledBtn_aa3ffd:hover {
+    background-color: var(--platform-twitch-secondary)
+}
+
+.images-light .streamerModeEnabledImage_aa3ffd {
+    background-image: url(/assets/9a898919395a3f13.svg)
+}
+
+.images-dark .streamerModeEnabledImage_aa3ffd {
+    background-image: url(/assets/a105cf85c9c42968.svg)
+}
