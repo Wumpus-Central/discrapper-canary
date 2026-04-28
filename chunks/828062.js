@@ -471,7 +471,8 @@ let eh = (0, er.Fe)({
                 n.e("83919"),
                 n.e("8672"),
                 n.e("89262"),
-                n.e("27518"),
+                n.e("52370"),
+                n.e("81579"),
                 n.e("45733"),
                 n.e("82679"),
                 n.e("48476"),
@@ -945,7 +946,7 @@ let eh = (0, er.Fe)({
                 n.e("25568"),
                 n.e("32260"),
                 n.e("7276"),
-                n.e("72823"),
+                n.e("31320"),
                 n.e("57948"),
                 n.e("74275"),
                 n.e("23740"),
@@ -1272,7 +1273,7 @@ let eh = (0, er.Fe)({
                 n.e("24211"),
                 n.e("25652"),
                 n.e("17049"),
-                n.e("72823"),
+                n.e("31320"),
                 n.e("2332"),
                 n.e("3424"),
                 n.e("81788"),
@@ -1304,13 +1305,13 @@ let eh = (0, er.Fe)({
                 n.e("5007"),
                 n.e("66346"),
                 n.e("53773"),
-                n.e("88826"),
+                n.e("79093"),
                 n.e("28510"),
                 n.e("98042"),
                 n.e("90673"),
                 n.e("36613"),
-                n.e("4592"),
-                n.e("27518"),
+                n.e("3840"),
+                n.e("81579"),
                 n.e("47206"),
                 n.e("66465"),
                 n.e("75681"),
@@ -2430,7 +2431,7 @@ class e3 extends eA.A {
     };
 }
 let e5 = new e3();
-function e8() {
+function e6() {
     return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -2443,7 +2444,7 @@ function e8() {
         background_install_ms_total: 0,
     };
 }
-function e6(e) {
+function e8(e) {
     return "host" === e;
 }
 class e7 {
@@ -2451,10 +2452,10 @@ class e7 {
     _downloadingModules = {};
     _report;
     constructor() {
-        this._report = e8();
+        this._report = e6();
     }
     handleDownloadingModule(e) {
-        if (!e6(e.name)) {
+        if (!e8(e.name)) {
             if (null != this._downloadingModules[e.name])
                 return void console.warn("Duplicate downloading-module event for module ", e.name);
             this._downloadingModules[e.name] = { startTime: BigInt(e.now), foreground: e.foreground };
@@ -2474,7 +2475,7 @@ class e7 {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (e6(e.name)) return;
+        if (e8(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t)
             return void console.warn("Downloaded complete without corresponding downloading event for module ", e.name);
@@ -2491,7 +2492,7 @@ class e7 {
             delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
-        if (!e6(e.name)) {
+        if (!e8(e.name)) {
             if (null != this._installingModules[e.name])
                 return void console.warn("Duplicate installing-module event for module ", e.name);
             this._installingModules[e.name] = {
@@ -2503,7 +2504,7 @@ class e7 {
         }
     }
     handleInstalledModule(e) {
-        if (e6(e.name)) return;
+        if (e8(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? "foreground" : "background",
@@ -2541,7 +2542,7 @@ class e7 {
         return this._report;
     }
     reset() {
-        this._report = e8();
+        this._report = e6();
     }
     submissionReady() {
         return (
