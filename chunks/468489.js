@@ -12,8 +12,7 @@ _.exports = {
     KX: "mainTitle__250d5",
     _N: "smallTitle__250d5",
     h_: "description__250d5",
-    My: "mainDescription__250d5",
-    Gd: "smallDescription__250d5",
+    fm: "descriptionFade__250d5",
     ov: "metadataRow__250d5",
     a5: "reactionInfo__250d5",
 };

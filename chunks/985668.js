@@ -496,11 +496,11 @@ var eq = n(95701),
     eZ = n(71393),
     e0 = n(969341),
     e1 = n(576705),
-    e2 = n(290863),
-    e3 = n(994500),
+    e3 = n(290863),
+    e2 = n(994500),
     e9 = n(309010),
-    e8 = n(287809),
-    e6 = n(157257),
+    e6 = n(287809),
+    e8 = n(157257),
     e5 = n(975571),
     e7 = n(723702);
 let e4 = (0, eo.mj)({
@@ -732,7 +732,7 @@ let tz = s.memo(function (e) {
             W = s.useCallback(() => {
                 (0, tl.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("77598"),
+                        n.e("63397"),
                         n.e("17918"),
                         n.e("98552"),
                         n.e("86672"),
@@ -781,7 +781,10 @@ let tz = s.memo(function (e) {
             s.useEffect(() => {
                 N && ($(!1), null != J.current && (clearTimeout(J.current), (J.current = null)));
             }, [N]);
-        let Z = v?.guildId == null || null == f ? null : (0, i.jsx)(tJ, { guildId: v.guildId, applicationId: v.id }),
+        let Z =
+                v?.guildId == null || null == f
+                    ? null
+                    : (0, i.jsx)(tJ, { guildId: v.guildId, applicationId: v.id, applicationName: v.name }),
             ee = k
                 ? (0, i.jsx)(tQ, {
                       tooltipText: q.intl.formatToPlainString(tP.default.YhnUVO, { gameName: Y }),
@@ -953,41 +956,43 @@ function tQ(e) {
     });
 }
 function tJ(e) {
-    let { applicationId: t, guildId: n } = e,
-        l = s.useRef(null);
+    let { applicationId: t, guildId: n, applicationName: l } = e,
+        r = s.useRef(null);
     s.useEffect(() => {
         D.default.track(P.HAw.RTC_GAME_SHOP_BUTTON_VIEWED, { application_id: t });
     }, [t]);
-    let [r, a] = (0, eI.kn)([A.M.GAME_SHOP_RTC_POPOVER], ei.m.ACCOUNT_NAME_ZONE, !0),
-        o = s.useCallback(() => {
+    let [a, o] = (0, eI.kn)([A.M.GAME_SHOP_RTC_POPOVER], ei.m.ACCOUNT_NAME_ZONE, !0),
+        u = s.useCallback(() => {
             (0, tF.X)({ guildId: n });
         }, [n]),
-        u = s.useCallback(() => {
-            (0, tF.default)({ guildId: n }), a(ei.i.USER_DISMISS);
-        }, [n, a]),
         d = s.useCallback(() => {
-            D.default.track(P.HAw.RTC_GAME_SHOP_BUTTON_CLICKED, { application_id: t }), u();
-        }, [t, u]),
+            (0, tF.default)({ guildId: n }), o(ei.i.USER_DISMISS);
+        }, [n, o]),
         c = s.useCallback(() => {
-            a(ei.i.USER_DISMISS);
-        }, [a]);
+            D.default.track(P.HAw.RTC_GAME_SHOP_BUTTON_CLICKED, { application_id: t }), d();
+        }, [t, d]),
+        h = s.useCallback(() => {
+            o(ei.i.USER_DISMISS);
+        }, [o]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(tE.A, {
                 tooltipText: q.intl.string(q.t.vyaWs7),
-                onClick: d,
-                onMouseDown: o,
+                onClick: c,
+                onMouseDown: u,
                 icon: tu.U,
-                ref: l,
+                ref: r,
             }),
-            r === A.M.GAME_SHOP_RTC_POPOVER
+            a === A.M.GAME_SHOP_RTC_POPOVER
                 ? (0, i.jsx)(tB.A, {
-                      onActionClick: u,
-                      onRequestClose: c,
-                      targetElementRef: l,
+                      onActionClick: d,
+                      onRequestClose: h,
+                      targetElementRef: r,
                       position: "top",
                       align: "center",
                       caretConfig: { align: "center" },
+                      title: q.intl.formatToPlainString(q.t.N6ZkPd, { applicationName: l }),
+                      body: q.intl.formatToPlainString(q.t.V3jyQq, { applicationName: l }),
                   })
                 : null,
         ],
@@ -1015,11 +1020,11 @@ function t0(e) {
     return __OVERLAY__ || (n && l !== P.clD.INVISIBLE) ? null : (0, i.jsx)(tZ, { onClick: t });
 }
 var t1 = n(409626),
-    t2 = n(692969),
-    t3 = n(379414);
+    t3 = n(692969),
+    t2 = n(379414);
 function t9(e) {
     let { name: t, applicationId: n } = e,
-        l = (0, t2.A)({
+        l = (0, t3.A)({
             location: "ActivityPanelGameCard",
             applicationId: n,
             source: t1.Ob.RtcPanel,
@@ -1027,11 +1032,11 @@ function t9(e) {
         });
     return (0, i.jsx)(p.D, {
         onClick: l,
-        className: a()(null != l && t3.On),
-        children: (0, i.jsx)(tt.A, { className: t3.mO, children: t }),
+        className: a()(null != l && t2.On),
+        children: (0, i.jsx)(tt.A, { className: t2.mO, children: t }),
     });
 }
-function t8(e) {
+function t6(e) {
     let t,
         n,
         {
@@ -1057,13 +1062,13 @@ function t8(e) {
             });
         }, [t, n]),
         (0, i.jsxs)("div", {
-            className: t3.cm,
+            className: t2.cm,
             children: [
                 (0, i.jsxs)("div", {
-                    className: t3.f9,
+                    className: t2.f9,
                     children: [
-                        (0, i.jsx)(ej.A, { className: t3.Gt, game: r, pid: a?.pid, ref: c }),
-                        l ? (0, i.jsx)(tX.n, { size: "md", color: "currentColor", className: t3.it }) : null,
+                        (0, i.jsx)(ej.A, { className: t2.Gt, game: r, pid: a?.pid, ref: c }),
+                        l ? (0, i.jsx)(tX.n, { size: "md", color: "currentColor", className: t2.it }) : null,
                     ],
                 }),
                 (0, i.jsx)(es, {
@@ -1072,7 +1077,7 @@ function t8(e) {
                     setIsForceShowSharingPopout: d,
                     hidePopout: !m,
                     children: (0, i.jsxs)("div", {
-                        className: t3.pq,
+                        className: t2.pq,
                         children: [
                             null != g ? (0, i.jsx)(t9, { name: g, applicationId: r?.id }) : null,
                             m
@@ -1089,7 +1094,7 @@ function t8(e) {
         })
     );
 }
-var t6 = n(5867),
+var t8 = n(5867),
     t5 = n(165610);
 let t7 = {
     "356942674672091136": "398627612299362304",
@@ -1392,7 +1397,7 @@ function no(e) {
                             s.id,
                             (0, eg.Qt)({ applicationId: l.applicationId, instanceId: l.compositeInstanceId }),
                         ),
-                    (0, eq.pQ)(s.type) && (0, R.gk)(t6.Gd.PANEL));
+                    (0, eq.pQ)(s.type) && (0, R.gk)(t8.Gd.PANEL));
         },
         f = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -1487,7 +1492,7 @@ let nc = (0, x.A)(function (e) {
         o = s.useRef(null),
         u = s.useRef(null),
         d = (0, h.bG)([eJ.default], () => eJ.default.getId()),
-        m = (0, h.bG)([eT.Ay, e6.A], () => (0, ek.A)(eT.Ay, e6.A)),
+        m = (0, h.bG)([eT.Ay, e8.A], () => (0, ek.A)(eT.Ay, e8.A)),
         { previouslyRunningGame: g, isWithinThreshold: p } = (function () {
             let [e, t] = (0, s.useState)(Date.now()),
                 n = (0, h.bG)([ev], () => ev.getLastPreviouslyRunningGame()),
@@ -1531,9 +1536,9 @@ let nc = (0, x.A)(function (e) {
         O =
             ((0, h.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),
             (0, h.bG)([e0.Ay], () => (0, eP.A)(e0.Ay) && (0, e7.isWindows)()) || !1),
-        M = (0, h.bG)([e2.A], () => (null != d ? e2.A.findActivity(d, (e) => e.type === P.$pd.PLAYING) : null)),
+        M = (0, h.bG)([e3.A], () => (null != d ? e3.A.findActivity(d, (e) => e.type === P.$pd.PLAYING) : null)),
         L = null != S && S.ownerId === d && S.state !== P.XYD.ENDED,
-        G = (0, h.bG)([e8.default, e3.A], () => (null != _ ? (0, ef.m1)(_, e8.default, e3.A) : void 0)),
+        G = (0, h.bG)([e6.default, e2.A], () => (null != _ ? (0, ef.m1)(_, e6.default, e2.A) : void 0)),
         w = (function () {
             let { resolution: e, fps: t } = (0, h.cf)([eH.A], () => eH.A.getState());
             if (e !== eW.on.RESOLUTION_720 || t === eW.kn.FPS_60) return `${(0, eW.zr)(e)} ${(0, eK.Bs)(t)}`;
@@ -1678,7 +1683,7 @@ let nc = (0, x.A)(function (e) {
         eu = s.useCallback(
             (e, t, n) => {
                 let { isGameRunning: l } = n;
-                return (0, i.jsx)(t8, {
+                return (0, i.jsx)(t6, {
                     isStreaming: L,
                     application: e,
                     game: t,
