@@ -21,8 +21,8 @@ var r = n(64700),
     R = n(43990),
     C = n(942857),
     D = n(77729),
-    L = n(313961),
-    p = n(267102),
+    p = n(313961),
+    L = n(267102),
     m = n(85563),
     h = n(908031),
     g = n(953727);
@@ -137,8 +137,8 @@ var k = n(531685),
     x = n(652215);
 let K = u.Ay.connectStores([k.A], () => ({ focused: k.A.isFocused() }))(function (e) {
     let { focused: t, type: n, windowKey: i, macOSFrame: r = !1, themeOverride: _ } = e,
-        s = (0, p.Us)(),
-        l = (0, u.bG)([L.A], () => L.A.isFullscreenInContext(s)),
+        s = (0, L.Us)(),
+        l = (0, u.bG)([p.A], () => p.A.isFullscreenInContext(s)),
         o = (0, C.A)();
     if (l) return null;
     switch (n) {
@@ -319,12 +319,12 @@ var eO = n(463347),
     eR = n(464578),
     eC = n(53505),
     eD = n(492462),
-    eL = n(998218);
-let ep = (e) => {
+    ep = n(998218);
+let eL = (e) => {
     if (null == e || "" === e) return null;
     try {
         let t = new URL(e);
-        return eL.A.isDiscordHostname(t.hostname) || window.location.host === t.host ? t : null;
+        return ep.A.isDiscordHostname(t.hostname) || window.location.host === t.host ? t : null;
     } catch (e) {
         return null;
     }
@@ -414,42 +414,41 @@ let eh = (0, er.Fe)({
     eB = (0, er.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("89317"),
+                n.e("25738"),
                 n.e("22604"),
                 n.e("40841"),
                 n.e("75058"),
                 n.e("3424"),
-                n.e("23082"),
-                n.e("48540"),
+                n.e("54333"),
                 n.e("45235"),
                 n.e("19415"),
-                n.e("18091"),
+                n.e("7276"),
                 n.e("92652"),
                 n.e("78029"),
                 n.e("81788"),
                 n.e("57948"),
-                n.e("61659"),
+                n.e("13709"),
                 n.e("77044"),
-                n.e("56289"),
                 n.e("63397"),
                 n.e("59204"),
                 n.e("97023"),
                 n.e("64911"),
                 n.e("43407"),
-                n.e("43559"),
+                n.e("35392"),
+                n.e("22810"),
                 n.e("14326"),
                 n.e("81280"),
                 n.e("72838"),
-                n.e("76550"),
-                n.e("36842"),
-                n.e("19315"),
+                n.e("60049"),
+                n.e("23313"),
+                n.e("24211"),
+                n.e("41475"),
                 n.e("79542"),
-                n.e("53539"),
-                n.e("3256"),
-                n.e("60417"),
-                n.e("19586"),
-                n.e("18125"),
-                n.e("80889"),
+                n.e("13044"),
+                n.e("84615"),
+                n.e("54718"),
+                n.e("5036"),
+                n.e("97271"),
                 n.e("22513"),
                 n.e("32442"),
                 n.e("71934"),
@@ -458,12 +457,12 @@ let eh = (0, er.Fe)({
                 n.e("86821"),
                 n.e("25568"),
                 n.e("32260"),
-                n.e("39501"),
+                n.e("79249"),
+                n.e("5432"),
                 n.e("51402"),
                 n.e("38123"),
-                n.e("34712"),
+                n.e("97137"),
                 n.e("20524"),
-                n.e("19145"),
                 n.e("92164"),
                 n.e("40792"),
                 n.e("50971"),
@@ -476,7 +475,7 @@ let eh = (0, er.Fe)({
                 n.e("45733"),
                 n.e("82679"),
                 n.e("48476"),
-                n.e("57546"),
+                n.e("37777"),
                 n.e("24199"),
                 n.e("57036"),
                 n.e("88394"),
@@ -533,9 +532,9 @@ let eh = (0, er.Fe)({
                 n.e("72535"),
                 n.e("76195"),
                 n.e("51485"),
-                n.e("76170"),
                 n.e("1177"),
                 n.e("26490"),
+                n.e("76170"),
                 n.e("32817"),
                 n.e("51243"),
                 n.e("18943"),
@@ -770,7 +769,7 @@ let eh = (0, er.Fe)({
                 n.e("95067"),
                 n.e("97116"),
                 n.e("79149"),
-                n.e("59848"),
+                n.e("15086"),
                 n.e("6996"),
                 n.e("78"),
                 n.e("6339"),
@@ -892,7 +891,7 @@ let eh = (0, er.Fe)({
                 n.e("93265"),
                 n.e("21226"),
                 n.e("7242"),
-                n.e("98197"),
+                n.e("20578"),
                 n.e("42486"),
                 n.e("31302"),
                 n.e("25281"),
@@ -920,23 +919,23 @@ let eh = (0, er.Fe)({
                 n.e("80413"),
                 n.e("45235"),
                 n.e("63397"),
-                n.e("76550"),
+                n.e("60049"),
                 n.e("61207"),
                 n.e("80760"),
                 n.e("40841"),
                 n.e("27724"),
                 n.e("28127"),
-                n.e("89317"),
+                n.e("25738"),
                 n.e("84580"),
-                n.e("23082"),
-                n.e("56289"),
-                n.e("19586"),
-                n.e("18125"),
-                n.e("80889"),
+                n.e("22810"),
+                n.e("5036"),
+                n.e("54333"),
+                n.e("97271"),
                 n.e("22513"),
-                n.e("61659"),
+                n.e("13709"),
                 n.e("32442"),
                 n.e("75058"),
+                n.e("54718"),
                 n.e("71934"),
                 n.e("92652"),
                 n.e("86483"),
@@ -944,7 +943,7 @@ let eh = (0, er.Fe)({
                 n.e("86821"),
                 n.e("25568"),
                 n.e("32260"),
-                n.e("18091"),
+                n.e("7276"),
                 n.e("72823"),
                 n.e("57948"),
                 n.e("74275"),
@@ -1016,9 +1015,9 @@ let eh = (0, er.Fe)({
                 n.e("72535"),
                 n.e("76195"),
                 n.e("51485"),
-                n.e("76170"),
                 n.e("1177"),
                 n.e("26490"),
+                n.e("76170"),
                 n.e("32817"),
                 n.e("51243"),
                 n.e("18943"),
@@ -1180,7 +1179,7 @@ let eh = (0, er.Fe)({
                 n.e("21489"),
                 n.e("12091"),
                 n.e("57993"),
-                n.e("84040"),
+                n.e("61659"),
                 n.e("20429"),
                 n.e("46658"),
                 n.e("79582"),
@@ -1210,14 +1209,14 @@ let eh = (0, er.Fe)({
                 n.e("71180"),
                 n.e("44861"),
                 n.e("63820"),
-                n.e("84040"),
+                n.e("61659"),
                 n.e("13419"),
             ]).then(n.bind(n, 234260)),
         webpackId: 234260,
         name: "ViewsWithOAuth2",
     }),
     eV = (0, er.Fe)({
-        createPromise: () => Promise.all([n.e("56289"), n.e("81334"), n.e("30514")]).then(n.bind(n, 146088)),
+        createPromise: () => Promise.all([n.e("54333"), n.e("81334"), n.e("30514")]).then(n.bind(n, 146088)),
         webpackId: 146088,
         name: "BrowserHandoff",
     }),
@@ -1238,38 +1237,38 @@ let eh = (0, er.Fe)({
                 n.e("25568"),
                 n.e("48476"),
                 n.e("21977"),
-                n.e("89317"),
+                n.e("25738"),
                 n.e("40841"),
-                n.e("23082"),
-                n.e("56289"),
-                n.e("19586"),
-                n.e("18125"),
-                n.e("80889"),
+                n.e("22810"),
+                n.e("5036"),
+                n.e("54333"),
+                n.e("97271"),
                 n.e("22513"),
-                n.e("61659"),
+                n.e("13709"),
                 n.e("32442"),
+                n.e("54718"),
                 n.e("71934"),
-                n.e("76550"),
+                n.e("60049"),
                 n.e("86483"),
                 n.e("31632"),
                 n.e("32260"),
-                n.e("18091"),
-                n.e("48540"),
+                n.e("7276"),
+                n.e("27383"),
                 n.e("19415"),
                 n.e("51529"),
                 n.e("44651"),
                 n.e("40792"),
                 n.e("3377"),
-                n.e("53539"),
+                n.e("13044"),
                 n.e("63635"),
                 n.e("52204"),
                 n.e("11491"),
-                n.e("60845"),
+                n.e("5432"),
                 n.e("10373"),
                 n.e("81154"),
                 n.e("92164"),
                 n.e("57948"),
-                n.e("19315"),
+                n.e("24211"),
                 n.e("25652"),
                 n.e("17049"),
                 n.e("72823"),
@@ -1289,9 +1288,10 @@ let eh = (0, er.Fe)({
                 n.e("27660"),
                 n.e("85484"),
                 n.e("89516"),
-                n.e("39501"),
-                n.e("3256"),
-                n.e("19145"),
+                n.e("73679"),
+                n.e("84615"),
+                n.e("27755"),
+                n.e("41475"),
                 n.e("79705"),
                 n.e("55658"),
                 n.e("76032"),
@@ -1300,16 +1300,14 @@ let eh = (0, er.Fe)({
                 n.e("33957"),
                 n.e("59204"),
                 n.e("23574"),
-                n.e("43559"),
-                n.e("25256"),
                 n.e("5007"),
                 n.e("66346"),
-                n.e("57546"),
                 n.e("53773"),
                 n.e("79093"),
                 n.e("28510"),
                 n.e("98042"),
                 n.e("90673"),
+                n.e("36613"),
                 n.e("3840"),
                 n.e("81579"),
                 n.e("47206"),
@@ -1319,10 +1317,11 @@ let eh = (0, er.Fe)({
                 n.e("23967"),
                 n.e("85611"),
                 n.e("27796"),
-                n.e("60417"),
-                n.e("50256"),
+                n.e("98197"),
+                n.e("77948"),
+                n.e("79249"),
+                n.e("97137"),
                 n.e("38123"),
-                n.e("34712"),
                 n.e("20524"),
                 n.e("86921"),
                 n.e("97046"),
@@ -1451,9 +1450,9 @@ let eh = (0, er.Fe)({
                 n.e("76195"),
                 n.e("85968"),
                 n.e("51485"),
-                n.e("76170"),
                 n.e("1177"),
                 n.e("26490"),
+                n.e("76170"),
                 n.e("32817"),
                 n.e("76418"),
                 n.e("51243"),
@@ -2071,7 +2070,7 @@ let eh = (0, er.Fe)({
                 n.e("78658"),
                 n.e("87634"),
                 n.e("7242"),
-                n.e("98197"),
+                n.e("20578"),
                 n.e("92461"),
                 n.e("90879"),
                 n.e("94329"),
@@ -2300,8 +2299,8 @@ class ez extends r.Component {
                                                 i =
                                                     ((e = window.location.search ?? ""),
                                                     {
-                                                        desktop: ep((t = (0, eD.parse)(e)).desktop_link),
-                                                        mobile: ep(t.mobile_link),
+                                                        desktop: eL((t = (0, eD.parse)(e)).desktop_link),
+                                                        mobile: eL(t.mobile_link),
                                                     });
                                             if ("iOS" !== n && "Android" !== n)
                                                 return (0, a.jsx)(q.rd, {
@@ -2443,7 +2442,7 @@ function e6() {
 function e8(e) {
     return "host" === e;
 }
-class e4 {
+class e7 {
     _installingModules = {};
     _downloadingModules = {};
     _report;
@@ -2553,8 +2552,8 @@ class e4 {
         );
     }
 }
-class e7 extends eA.A {
-    _tracker = new e4();
+class e4 extends eA.A {
+    _tracker = new e7();
     _initialize() {
         y.isPlatformEmbedded &&
             (v.Ay.on("UPDATE_DOWNLOADED", () => this.processModuleEvents()),
@@ -2585,7 +2584,7 @@ class e7 extends eA.A {
                 (ec.default.track(x.HAw.APP_MODULES_UPDATED, this._tracker.getStats()), this._tracker.reset());
     }
 }
-let e9 = new e7();
+let e9 = new e4();
 n(118356), n(205693), n(742459), n(499979), n(686956);
 var te = n(956793);
 n(401843), n(652896);
@@ -2706,8 +2705,8 @@ class tC extends eA.A {
     }
 }
 let tD = new tC();
-var tL = n(200330),
-    tp = n(350723),
+var tp = n(200330),
+    tL = n(350723),
     tm = n(346142),
     th = n(451988),
     tg = n(664932),
@@ -2790,7 +2789,7 @@ let tq = (0, _.createRoot)(tQ),
                 null == n ||
                 null == a ||
                 null == r ||
-                ((0, tL.openOAuth2Modal)({
+                ((0, tp.openOAuth2Modal)({
                     clientId: t,
                     scopes: n,
                     redirectUri: a,
@@ -2837,17 +2836,17 @@ else {
             v.Ay.on("HELP_OPEN", () => window.open(Y.A.getCommunityURL()));
         let e = new th.J_(t$, () => v.Ay.purgeMemory());
         v.Ay.on("MAIN_WINDOW_BLUR", () => {
-            e.delay(), v.Ay.setFocused(!1), (0, tp.XC)(window, !1);
+            e.delay(), v.Ay.setFocused(!1), (0, tL.XC)(window, !1);
         }),
             v.Ay.on("MAIN_WINDOW_FOCUS", () => {
-                e.cancel(), v.Ay.setFocused(!0), (0, tp.XC)(window, !0);
+                e.cancel(), v.Ay.setFocused(!0), (0, tL.XC)(window, !0);
             }),
             v.Ay.on("MAIN_WINDOW_PATH", function (e, t, n) {
                 let i = null != n ? new URLSearchParams(n) : null;
                 tX[t]?.(i) || (0, tt.pX)(t);
             }),
             v.Ay.on("MAIN_WINDOW_HIDDEN", () => {
-                (0, tp.R)(window);
+                (0, tL.R)(window);
             });
     }
     e9.initialize(),

@@ -7231,16 +7231,16 @@ let ro = {
         },
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
-                    a.e("16384"),
+                    a.e("54333"),
                     a.e("90673"),
-                    a.e("61659"),
-                    a.e("62370"),
+                    a.e("13709"),
+                    a.e("72823"),
                     a.e("44135"),
                     a.e("9176"),
                     a.e("87845"),
-                    a.e("20797"),
+                    a.e("35636"),
                     a.e("75090"),
-                    a.e("17764"),
+                    a.e("60049"),
                     a.e("61175"),
                     a.e("56574"),
                     a.e("4974"),
@@ -7399,7 +7399,7 @@ let ro = {
         },
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([
-                    a.e("17764"),
+                    a.e("60049"),
                     a.e("9176"),
                     a.e("14656"),
                     a.e("11810"),
@@ -7429,7 +7429,7 @@ let ro = {
                     a.e("65200"),
                     a.e("26250"),
                     a.e("51212"),
-                    a.e("84615"),
+                    a.e("39853"),
                 ]).then(a.bind(a, 612826)),
                 t = aM.A.getGuilds(),
                 n = null;
@@ -7741,7 +7741,7 @@ let rI = {
         return (a) => (0, r.jsx)(e, { ...a, clientSettingType: t.LEGACY_GAME, gameId: "123456789" });
     },
     PremiumSubscriptionPauseModal: async () => {
-        let { PremiumSubscriptionPauseModalSelect: e } = await Promise.all([a.e("61659"), a.e("80347")]).then(
+        let { PremiumSubscriptionPauseModalSelect: e } = await Promise.all([a.e("13709"), a.e("80347")]).then(
                 a.bind(a, 318998),
             ),
             { CancellationContext: t } = await Promise.resolve().then(a.bind(a, 916974)),
@@ -7890,9 +7890,7 @@ let rI = {
         return (t) => (0, r.jsx)(e, { ...t, detectedActivity: { application_id: "123456789", name: "Test Game" } });
     },
     AppealIngestionModal: async () => {
-        let { default: e } = await Promise.all([a.e("70760"), a.e("57546"), a.e("92030"), a.e("51471")]).then(
-            a.bind(a, 550560),
-        );
+        let { default: e } = await Promise.all([a.e("57352"), a.e("92030"), a.e("51471")]).then(a.bind(a, 550560));
         return (t) => (0, r.jsx)(e, { ...t, classificationId: "123456789" });
     },
     CreateTagModal: async () => {
@@ -8393,7 +8391,7 @@ let rI = {
         return (s.displayName = "ConsentCheckBoxModalContent"), (e) => (0, r.jsx)(s, { ...e });
     },
     GuildRaidLockdownFeedbackModal: async () => {
-        let { default: e } = await Promise.all([a.e("17764"), a.e("46313")]).then(a.bind(a, 336496));
+        let { default: e } = await Promise.all([a.e("60049"), a.e("46313")]).then(a.bind(a, 336496));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
@@ -8617,7 +8615,7 @@ let rI = {
         return (t) => (0, r.jsx)(e, { ...t });
     },
     UserAgreementsModal: async () => {
-        let { default: e } = await Promise.all([a.e("57546"), a.e("82911"), a.e("22220")]).then(a.bind(a, 639719));
+        let { default: e } = await Promise.all([a.e("37777"), a.e("82911"), a.e("22220")]).then(a.bind(a, 639719));
         return (t) => (0, r.jsx)(e, { ...t });
     },
     DisableRiskyPermsModal: async () => {

@@ -1,0 +1,657 @@
+.wrapper_be018f {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-low);
+    box-sizing: border-box;
+    overflow: hidden
+}
+
+.header_be018f {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    display: flex;
+    justify-content: space-between
+}
+
+.content_be018f,
+.header_be018f {
+    padding: 16px
+}
+
+.toggle_a63120 {
+    align-items: center;
+    color: var(--text-brand);
+    cursor: pointer;
+    display: flex;
+    gap: 4px
+}
+
+.headerWrapper__4909b {
+    gap: 8px;
+    height: 72px
+}
+
+.headerContent__4909b {
+    display: flex;
+    gap: 16px;
+    min-width: 0
+}
+
+.headerContentText__4909b {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.appIcon__4909b {
+    border-radius: var(--radius-md)
+}
+
+.headerButtons__4909b {
+    display: flex;
+    gap: 8px
+}
+
+.details__4909b {
+    padding-bottom: 16px
+}
+
+.row__4909b {
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0
+}
+
+.row__4909b:first-child {
+    padding-top: 0
+}
+
+.rowContent__4909b {
+    text-align: end
+}
+
+.subscriptionTypeRow__4909b {
+    display: inline-flex;
+    gap: 8px
+}
+
+.guildSubscriptionContentRow__4909b {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    padding-top: 2px
+}
+
+.noticeBanner__4909b {
+    margin-bottom: 16px
+}
+
+.payment__4909b {
+    height: 65px
+}
+
+.benefits__4909b {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px
+}
+
+.benefitsHeader__4909b {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.benefitsBtn__4909b {
+    margin-inline-start: auto
+}
+
+.managementBtns__4909b {
+    display: flex;
+    gap: 8px
+}
+
+.button_e08d4d {
+    background: inherit;
+    padding: 0
+}
+
+.seeMore_e08d4d {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    margin-top: 4px
+}
+
+.content_e08d4d {
+    overflow: hidden;
+    transition: height .25s ease-in-out
+}
+
+.wrapper__3425d {
+    max-width: 660px;
+    width: 100%
+}
+
+.headerTitle__3425d {
+    align-items: center;
+    display: flex;
+    gap: 16px
+}
+
+.subscriptionImg__3425d {
+    border-radius: 48px
+}
+
+.description__3425d {
+    white-space: pre-line
+}
+
+.benefits__3425d {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px
+}
+
+.header_b87308 {
+    align-items: flex-end;
+    border-bottom-width: 1px;
+    border-color: hsl(var(--primary-300-hsl)/.3);
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 24px
+}
+
+.theme-dark .header_b87308 {
+    border-color: hsl(var(--primary-400-hsl)/.3)
+}
+
+.appIcon_b87308 {
+    border-radius: var(--radius-md)
+}
+
+.subInfo_b87308 {
+    flex-direction: row;
+    padding-top: 2px
+}
+
+.guildSubscription_b87308,
+.subInfo_b87308,
+.subInfoType_b87308 {
+    display: flex;
+    gap: 8px
+}
+
+.subInfoType_b87308 {
+    align-items: center
+}
+
+.subscriptions_b87308 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 32px
+}
+
+.activeSubscriptionCard_b87308 {
+    border: 2px solid var(--brand-500)
+}
+
+.activeSubscriptionCTA_b87308 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: end
+}
+
+.planNotice_b87308 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.subscriptionsContainer__0dc23 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.title__0dc23 {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px
+}
+
+.fractionalPremiumAccountCredit__94f72,
+.premiumSubscriptionAccountCredit__94f72 {
+    background-color: var(--background-base-lower);
+    border-radius: 5px
+}
+
+.accountCreditRow__94f72 {
+    display: flex;
+    padding: 16px
+}
+
+.accountCreditsContainer__94f72 .accountCreditRow__94f72:not(:last-child) {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.iconBackground__94f72 {
+    align-items: center;
+    align-self: center;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    padding: 4px
+}
+
+.iconBackgroundTier0__94f72 {
+    background-image: linear-gradient(90deg, var(--premium-tier-0-purple-for-gradients), var(--premium-tier-0-blue-for-gradients))
+}
+
+.iconBackgroundTier1__94f72 {
+    background-image: linear-gradient(90deg, var(--premium-tier-1-dark-blue-for-gradients), var(--premium-tier-1-blue-for-gradients))
+}
+
+.iconBackgroundTier2__94f72 {
+    background-image: linear-gradient(90deg, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-pink-for-gradients))
+}
+
+.iconBackgroundFractional__94f72 {
+    background-image: linear-gradient(0deg, var(--guild-boosting-blue), var(--guild-boosting-purple))
+}
+
+.icon__94f72 {
+    color: var(--white)
+}
+
+.icon__94f72,
+.iconFractional__94f72 {
+    height: 24px;
+    width: 24px
+}
+
+.iconFractional__94f72 {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0/.4))
+}
+
+.rowDetails__94f72 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 8px
+}
+
+.rowApplied__94f72 {
+    font-weight: var(--font-weight-normal)
+}
+
+.rowCreditCount__94f72 {
+    align-self: center;
+    color: var(--interactive-text-default)
+}
+
+.fractionalTimeRemainingRow__94f72 {
+    background-color: var(--background-base-lowest);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    padding: 16px
+}
+
+.fractionalTimeRemainingRowDetails__94f72 {
+    color: var(--brand-360);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0
+}
+
+.fractionalTimeRemainingRowHeader__94f72 {
+    color: var(--brand-360)
+}
+
+.fractionalTimeRemainingPillWrapper__94f72 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.fractionalTimeRemainingPill__94f72 {
+    align-items: center;
+    background-image: linear-gradient(0deg, var(--brand-560), var(--brand-460));
+    border-radius: var(--radius-md);
+    display: flex
+}
+
+.fractionalTimeRemainingPillText__94f72 {
+    color: var(--white);
+    display: inline-block;
+    line-height: 18px;
+    padding: 4px 8px;
+    text-align: center
+}
+
+.tier1AccountCreditHeader__94f72 {
+    padding-bottom: 16px;
+    padding-top: 32px
+}
+
+.fractionalUnactivatedPill__94f72 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-md);
+    display: flex
+}
+
+.fractionalUnactivatedPillText__94f72 {
+    color: var(--brand-360);
+    display: inline-block;
+    line-height: 18px;
+    padding: 4px 8px;
+    text-align: center
+}
+
+.banner__84995 {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    position: relative
+}
+
+.bannerBackgroundImage__84995 {
+    background-image: url(/assets/be68608fe0247064.svg);
+    background-repeat: no-repeat;
+    bottom: 0;
+    position: absolute;
+    top: 6px;
+    inset-inline: 0
+}
+
+.image__84995 {
+    background-size: 100% 100%;
+    flex-shrink: 0;
+    height: 68px;
+    margin-inline-end: 8px;
+    width: 96px
+}
+
+@media (max-width:485px) {
+    .image__84995 {
+        display: none
+    }
+}
+
+.repositioned__84995 .image__84995 {
+    height: 68px;
+    margin-inline-end: 16px;
+    width: 88px
+}
+
+.repositioned__84995 .buttons__84995 {
+    inset-inline-end: 0;
+    position: relative;
+    top: 0
+}
+
+.repositioned__84995 .planInfo__84995 {
+    margin: 10px 0 16px
+}
+
+.repositioned__84995 .planName__84995 {
+    height: 28px
+}
+
+.repositioned__84995.tier0__84995 .basicWordmark__84995 {
+    background-size: contain;
+    height: 16px
+}
+
+.details__84995,
+.image__84995 {
+    position: relative
+}
+
+.tier0__84995.banner__84995 {
+    background-image: var(--custom-premium-colors-premium-gradient-tier-0)
+}
+
+.tier0__84995 .image__84995 {
+    background-image: url(/assets/678405b196a10914.svg)
+}
+
+.tier0__84995 .discordWordmark__84995 {
+    height: 16px;
+    width: 41px
+}
+
+.tier0__84995 .basicWordmark__84995 {
+    background-image: url(/assets/dbd86d446dd08738.svg);
+    background-repeat: no-repeat;
+    height: 19px
+}
+
+.tier0__84995 .details__84995 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100%
+}
+
+.tier0__84995.canceled__84995 .image__84995,
+.tier0__84995.failedPayment__84995 .image__84995,
+.tier0__84995.pausePending__84995 .image__84995,
+.tier0__84995.paused__84995 .image__84995 {
+    background-image: url(/assets/2151b9a5d6e8fd2d.svg)
+}
+
+.tier1__84995.banner__84995 {
+    background-image: var(--custom-premium-colors-premium-gradient-tier-1)
+}
+
+.tier1__84995 .image__84995 {
+    background-image: url(/assets/9e74dbc28e1b3b88.svg)
+}
+
+.tier1__84995 .discordWordmark__84995 {
+    height: 16px;
+    width: 41px
+}
+
+.tier1__84995 .classicWordmark__84995 {
+    background-image: url(/assets/1aa632d6117fca62.svg);
+    height: 19px;
+    width: 185px
+}
+
+.tier1__84995 .details__84995 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100%
+}
+
+.tier1__84995.canceled__84995 .image__84995,
+.tier1__84995.failedPayment__84995 .image__84995,
+.tier1__84995.pausePending__84995 .image__84995,
+.tier1__84995.paused__84995 .image__84995 {
+    background-image: url(/assets/2151b9a5d6e8fd2d.svg)
+}
+
+.tier2__84995.banner__84995 {
+    background-image: var(--custom-premium-colors-premium-gradient-tier-2)
+}
+
+.tier2__84995 .image__84995 {
+    background-image: url(/assets/64932bb2d0db66ec.svg)
+}
+
+.tier2__84995 .planName__84995 {
+    height: 32px;
+    width: 77px
+}
+
+.tier2__84995.canceled__84995 .image__84995,
+.tier2__84995.failedPayment__84995 .image__84995,
+.tier2__84995.pausePending__84995 .image__84995,
+.tier2__84995.paused__84995 .image__84995 {
+    background-image: url(/assets/3137261af6151921.svg)
+}
+
+.canceled__84995.banner__84995 {
+    background-image: linear-gradient(90deg, #f18623, #f6a12a 56%, #fab930)
+}
+
+.canceled__84995 .planInfo__84995,
+.canceled__84995 .planName__84995 {
+    color: var(--black)
+}
+
+.failedPayment__84995.banner__84995 {
+    background-image: linear-gradient(270deg, #e82427, #c81031)
+}
+
+.paused__84995.banner__84995 {
+    border-radius: 4px
+}
+
+.pausePending__84995.banner__84995,
+.paused__84995.banner__84995 {
+    background: var(--primary-500)
+}
+
+.planInfo__84995 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 8px
+}
+
+.buttons__84995 {
+    inset-inline-end: 20px;
+    justify-content: flex-end;
+    position: absolute;
+    top: 16px
+}
+
+.buttons__84995,
+.toolsButtons__84995 {
+    display: flex
+}
+
+.toolsButton__84995 {
+    margin-inline-start: 16px;
+    position: relative
+}
+
+@media (max-width:390px) {
+    .premiumSettingsPushButton__84995 {
+        margin-inline-start: 8px
+    }
+}
+
+.secondaryBannerTextButtonContainerWithPause__84995 {
+    margin-top: 5px;
+    margin-inline-end: 15px
+}
+
+@media (max-width:485px) {
+    .secondaryBannerTextButtonContainerWithPause__84995 {
+        margin-top: 0;
+        margin-inline-end: 0
+    }
+
+    .secondaryBannerTextButtonContainerWithPause__84995 button>span {
+        display: inline-block;
+        line-break: strict;
+        overflow-wrap: break-word;
+        text-align: center;
+        white-space: normal;
+        width: 130px;
+        word-break: keep-all
+    }
+}
+
+@media (max-width:390px) {
+    .secondaryBannerTextButtonContainerWithPause__84995 button>span {
+        width: 120px
+    }
+}
+
+.secondaryBannerTextButtonContainer__84995 {
+    margin-top: 5px;
+    margin-inline-end: 15px
+}
+
+.linkButton__84995 {
+    padding: 0 2px;
+    position: relative
+}
+
+.externalButton__84995 {
+    text-transform: uppercase
+}
+
+.detailsContainer__84995 {
+    align-items: center;
+    display: flex
+}
+
+.discountPill__84995 {
+    margin-inline-start: 8px;
+    position: relative;
+    top: 5px
+}
+
+.headerLabel__84995 {
+    display: flex;
+    flex-direction: row
+}
+
+.wordMark__84995 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column
+}
+
+.headerColumnB__84995 {
+    flex-direction: row
+}
+
+@media (max-width:485px) {
+    .tier0__84995 .headerLabel__84995 {
+        min-height: 60px
+    }
+
+    .tier0__84995 .toolsButtons__84995 {
+        align-items: flex-end;
+        flex-direction: column-reverse
+    }
+}
+
+.finePrintWithOverheadSeparator_df7724 {
+    border-top: 1px solid var(--border-subtle);
+    line-height: 1.4;
+    margin-top: 32px;
+    padding-top: 32px
+}
+
+.finePrint_df7724 {
+    line-height: 1.4
+}

@@ -247,7 +247,7 @@ var es = n(550079),
 let eh = () =>
     (0, I.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("89317"),
+            n.e("25738"),
             n.e("86173"),
             n.e("20287"),
             n.e("28367"),
@@ -477,12 +477,12 @@ var eJ = n(851109),
     e3 = n(851580),
     e2 = n(222823),
     e8 = n(371911),
-    e5 = n(790782);
-function e4(e) {
+    e4 = n(790782);
+function e7(e) {
     let { onOpen: t, onClose: n, "data-jump-section": a } = e,
         l = (0, s.bG)([et.default], () => et.default.getCurrentUser()),
         o = r.useRef(null),
-        d = (0, s.bG)([e2.Ay], () => l?.id != null && e2.Ay.getMentionCount(l.id, e5.P.NOTIFICATION_CENTER) > 0);
+        d = (0, s.bG)([e2.Ay], () => l?.id != null && e2.Ay.getMentionCount(l.id, e4.P.NOTIFICATION_CENTER) > 0);
     return (0, i.jsx)(e8.C, {
         targetElementRef: o,
         onOpen: t,
@@ -508,7 +508,7 @@ function e4(e) {
             }),
     });
 }
-var e7 = n(966597),
+var e5 = n(966597),
     e6 = n(97469),
     e9 = n(253932),
     te = n(430363);
@@ -526,12 +526,11 @@ n(801416);
 let td = (0, ts.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("23082"),
+                n.e("13709"),
                 n.e("57948"),
                 n.e("40841"),
                 n.e("69273"),
-                n.e("89317"),
-                n.e("64903"),
+                n.e("25738"),
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
@@ -542,24 +541,24 @@ let td = (0, ts.Fe)({
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("76550"),
+                n.e("60049"),
                 n.e("85484"),
                 n.e("89516"),
-                n.e("39501"),
-                n.e("3256"),
-                n.e("19145"),
+                n.e("73679"),
+                n.e("84615"),
+                n.e("27755"),
                 n.e("79705"),
                 n.e("55658"),
                 n.e("76032"),
                 n.e("78220"),
                 n.e("43763"),
+                n.e("22810"),
                 n.e("33957"),
                 n.e("59204"),
                 n.e("75058"),
                 n.e("23574"),
                 n.e("45235"),
                 n.e("63635"),
-                n.e("25256"),
                 n.e("92652"),
                 n.e("5007"),
                 n.e("32538"),
@@ -776,10 +775,10 @@ let td = (0, ts.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("10373"),
-                n.e("89317"),
+                n.e("25738"),
                 n.e("81154"),
                 n.e("55658"),
-                n.e("23082"),
+                n.e("13709"),
                 n.e("57948"),
                 n.e("91763"),
                 n.e("76602"),
@@ -824,24 +823,25 @@ let td = (0, ts.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("6619"),
-                n.e("76550"),
+                n.e("60049"),
                 n.e("72823"),
                 n.e("33092"),
-                n.e("19315"),
+                n.e("24211"),
                 n.e("45235"),
-                n.e("39501"),
-                n.e("3256"),
-                n.e("19145"),
-                n.e("57546"),
-                n.e("64903"),
-                n.e("4664"),
-                n.e("89317"),
-                n.e("56289"),
-                n.e("23082"),
-                n.e("46788"),
+                n.e("73679"),
+                n.e("84615"),
+                n.e("27755"),
+                n.e("36613"),
+                n.e("98197"),
+                n.e("22810"),
+                n.e("75240"),
+                n.e("25738"),
+                n.e("5432"),
+                n.e("35392"),
                 n.e("20524"),
                 n.e("40841"),
                 n.e("69273"),
+                n.e("13709"),
                 n.e("63941"),
                 n.e("63009"),
                 n.e("84580"),
@@ -854,6 +854,7 @@ let td = (0, ts.Fe)({
                 n.e("85484"),
                 n.e("89516"),
                 n.e("79705"),
+                n.e("97137"),
                 n.e("33957"),
                 n.e("94193"),
                 n.e("8996"),
@@ -871,7 +872,6 @@ let td = (0, ts.Fe)({
                 n.e("75058"),
                 n.e("23574"),
                 n.e("63635"),
-                n.e("25256"),
                 n.e("92652"),
                 n.e("87408"),
                 n.e("88059"),
@@ -888,7 +888,6 @@ let td = (0, ts.Fe)({
                 n.e("3840"),
                 n.e("81579"),
                 n.e("4981"),
-                n.e("34712"),
                 n.e("15453"),
                 n.e("92510"),
                 n.e("92793"),
@@ -897,8 +896,8 @@ let td = (0, ts.Fe)({
                 n.e("20158"),
                 n.e("93327"),
                 n.e("75681"),
-                n.e("15086"),
-                n.e("44590"),
+                n.e("25650"),
+                n.e("8161"),
                 n.e("9176"),
                 n.e("87208"),
                 n.e("4015"),
@@ -1437,7 +1436,7 @@ let td = (0, ts.Fe)({
     }),
     tA = () =>
         Promise.all([
-            n.e("76550"),
+            n.e("60049"),
             n.e("63397"),
             n.e("38559"),
             n.e("40841"),
@@ -1483,7 +1482,7 @@ let td = (0, ts.Fe)({
             ),
             A = null !== e && t === eJ.RK.TITLE_BAR_LEFT,
             h = null === e,
-            { enabled: I, inInbox: g } = e7.A.useConfig({ location: "AppTitleBar" });
+            { enabled: I, inInbox: g } = e5.A.useConfig({ location: "AppTitleBar" });
         r.useLayoutEffect(() => {
             ta.Ay.setMinimumSize(800, 500);
         }, []);
@@ -1531,7 +1530,7 @@ let td = (0, ts.Fe)({
                                           !1,
                                           (0, i.jsx)(G, { canShowReminder: !0 }),
                                           I && !g && (0, i.jsx)(td, {}),
-                                          h && (0, i.jsx)(e4, { ...("RECENTS" === N ? e : {}) }),
+                                          h && (0, i.jsx)(e7, { ...("RECENTS" === N ? e : {}) }),
                                           n
                                               ? (0, i.jsx)(eE, { focusSectionProps: "HELP" === N ? e : void 0 })
                                               : (0, i.jsx)(el, { focusSectionProps: "HELP" === N ? e : void 0 }),

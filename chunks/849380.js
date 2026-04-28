@@ -1294,7 +1294,7 @@ function nE(e) {
                         );
                         (0, $.openModalLazy)(async () => {
                             let { default: l } = await Promise.all([
-                                n.e("76550"),
+                                n.e("60049"),
                                 n.e("59957"),
                                 n.e("28136"),
                                 n.e("16084"),
@@ -2005,7 +2005,7 @@ let lE = r.memo(function (e) {
                                 n.e("65200"),
                                 n.e("26250"),
                                 n.e("51212"),
-                                n.e("84615"),
+                                n.e("39853"),
                             ]).then(n.bind(n, 612826));
                             return (t) => (0, s.jsx)(e, { ...t, channel: l });
                         });
@@ -2774,9 +2774,10 @@ function iI(e) {
                                     ? (0, lk.iN)(t.id)
                                     : (0, $.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
-                                              n.e("76550"),
+                                              n.e("60049"),
                                               n.e("55658"),
-                                              n.e("23082"),
+                                              n.e("13709"),
+                                              n.e("22810"),
                                               n.e("85611"),
                                               n.e("56402"),
                                               n.e("58337"),
@@ -3106,7 +3107,7 @@ class ik extends nS {
                 (0, eT.L3)(e, async () => {
                     let { default: e } = await Promise.all([
                         n.e("90673"),
-                        n.e("76550"),
+                        n.e("60049"),
                         n.e("63397"),
                         n.e("98042"),
                         n.e("26132"),

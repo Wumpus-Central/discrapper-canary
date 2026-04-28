@@ -15,8 +15,8 @@ var i = n(684013),
     m = n(41984),
     f = n(267355),
     g = n(956753),
-    I = n(833551),
-    A = n(489277),
+    A = n(833551),
+    I = n(489277),
     p = n(222506),
     T = n(897720),
     S = n(145567),
@@ -29,21 +29,21 @@ async function D() {
     try {
         return (
             await Promise.all([
-                n.e("89317"),
+                n.e("25738"),
                 n.e("63397"),
                 n.e("84580"),
                 n.e("40841"),
-                n.e("95957"),
-                n.e("16384"),
-                n.e("11243"),
-                n.e("18125"),
-                n.e("80889"),
+                n.e("22810"),
+                n.e("5036"),
+                n.e("54333"),
+                n.e("97271"),
                 n.e("22513"),
-                n.e("61659"),
+                n.e("13709"),
                 n.e("32442"),
                 n.e("75058"),
+                n.e("54718"),
                 n.e("71934"),
-                n.e("17764"),
+                n.e("60049"),
                 n.e("45235"),
                 n.e("92652"),
                 n.e("86483"),
@@ -51,9 +51,9 @@ async function D() {
                 n.e("86821"),
                 n.e("25568"),
                 n.e("32260"),
-                n.e("18091"),
-                n.e("60417"),
-                n.e("20797"),
+                n.e("7276"),
+                n.e("41475"),
+                n.e("24414"),
                 n.e("24199"),
                 n.e("57036"),
                 n.e("88394"),
@@ -103,9 +103,9 @@ async function D() {
                 n.e("72535"),
                 n.e("76195"),
                 n.e("51485"),
-                n.e("76170"),
                 n.e("1177"),
                 n.e("26490"),
+                n.e("76170"),
                 n.e("32817"),
                 n.e("51243"),
                 n.e("18943"),
@@ -250,7 +250,7 @@ async function D() {
 }
 function L(e) {
     let { channelId: t, guildId: n, messageId: i } = e;
-    if (!I.default.isAnyOverlayRendering() || null == l.A.getChannel(t) || _.A.isReady(t)) return;
+    if (!A.default.isAnyOverlayRendering() || null == l.A.getChannel(t) || _.A.isReady(t)) return;
     let r = R.get(t);
     null != r && clearTimeout(r);
     let a = setTimeout(() => {
@@ -260,12 +260,12 @@ function L(e) {
 }
 async function v(e) {
     let t = await D();
-    if (!(null == t || p.A.isInputLocked(A.A.getTargetPID())))
+    if (!(null == t || p.A.isInputLocked(I.A.getTargetPID())))
         for (let n of t.getNotificationsForChannel(e, T.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
 }
 function w() {
     !(function () {
-        if (!I.default.isAnyOverlayRendering()) return;
+        if (!A.default.isAnyOverlayRendering()) return;
         let e = h.A.getSelectedChannelId();
         if (null == e || e === C) return;
         let t = l.A.getChannel(e);
@@ -276,7 +276,7 @@ function w() {
 }
 function P(e) {
     let { channelId: t, message: n } = e;
-    if (!I.default.isAnyOverlayRendering()) return;
+    if (!A.default.isAnyOverlayRendering()) return;
     let i = l.A.getChannel(t);
     if (null == i) return;
     let r = c.default.getCurrentUser()?.id;
@@ -337,7 +337,7 @@ function x(e) {
 }
 function V(e) {
     let { channelId: t } = e;
-    !I.default.isAnyOverlayRendering() || null == t || ((0, f.isOverlayCurrentlyVisibleAndUnlocked)() && x(t));
+    !A.default.isAnyOverlayRendering() || null == t || ((0, f.isOverlayCurrentlyVisibleAndUnlocked)() && x(t));
 }
 async function F(e) {
     if (e.locked) {
@@ -346,7 +346,7 @@ async function F(e) {
         return;
     }
     let t = await D();
-    if (null == t || !I.default.isAnyOverlayRendering()) return;
+    if (null == t || !A.default.isAnyOverlayRendering()) return;
     let n = h.A.getSelectedChannelId();
     if (null != n && t.hasNotificationForChannel(n)) return;
     let r = null,

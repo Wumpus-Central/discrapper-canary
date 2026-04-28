@@ -1,0 +1,41 @@
+.container_f37514 {
+    margin-bottom: 16px;
+    margin-top: 0
+}
+
+.appContainer_f37514 {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 12px
+}
+
+.header_f37514 {
+    color: var(--text-default);
+    margin-bottom: 8px
+}
+
+.appInfo_f37514 {
+    align-items: center;
+    display: flex
+}
+
+.appIconMask_f37514 {
+    margin-inline-end: 16px;
+    min-height: 32px;
+    min-width: 32px
+}
+
+.appIcon_f37514 {
+    cursor: pointer;
+    height: 100%;
+    width: 100%
+}
+
+.textContainer_f37514 {
+    display: flex;
+    flex-direction: column
+}
+
+.guildStack_f37514 {
+    margin-top: 4px
+}

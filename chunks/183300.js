@@ -83,7 +83,7 @@ function eu(e) {
         R()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, I.openModalLazy)(async () => {
                 let { default: n } = await Promise.all([
-                    i.e("17764"),
+                    i.e("60049"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -334,7 +334,7 @@ function ep(e) {
             null != U &&
                 (0, I.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("17764"),
+                        i.e("60049"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -674,10 +674,10 @@ let e0 = (e) =>
     e.type === M.$pd.LISTENING;
 var e1 = i(685399),
     e2 = i(960076),
-    e3 = i(323073),
-    e9 = i(85451),
-    e6 = i(268218),
-    e7 = i(834757),
+    e9 = i(323073),
+    e3 = i(85451),
+    e7 = i(268218),
+    e6 = i(834757),
     e5 = i(727353),
     e4 = i(832163),
     e8 = i(565688),
@@ -699,35 +699,35 @@ let tl = (0, i(600975).C)({
 });
 var tn = i(699976),
     ts = i(415679);
-let ta = (0, e6.Fe)({
+let ta = (0, e7.Fe)({
     createPromise: () =>
         Promise.all([
             i.e("63397"),
             i.e("51402"),
             i.e("38123"),
-            i.e("34712"),
-            i.e("89317"),
+            i.e("97137"),
             i.e("20524"),
             i.e("40841"),
             i.e("69273"),
-            i.e("61659"),
+            i.e("25738"),
+            i.e("13709"),
             i.e("63941"),
             i.e("63009"),
             i.e("84580"),
-            i.e("62370"),
+            i.e("72823"),
             i.e("45650"),
             i.e("97189"),
             i.e("24059"),
             i.e("27660"),
-            i.e("17764"),
+            i.e("60049"),
             i.e("85484"),
             i.e("89516"),
-            i.e("16384"),
-            i.e("39501"),
-            i.e("3256"),
-            i.e("53539"),
-            i.e("19145"),
-            i.e("18091"),
+            i.e("54718"),
+            i.e("13044"),
+            i.e("73679"),
+            i.e("84615"),
+            i.e("27755"),
+            i.e("41475"),
             i.e("79705"),
             i.e("69279"),
             i.e("23924"),
@@ -908,7 +908,7 @@ function td(e) {
                     (0, l.jsx)(j.E, { variant: "text-sm/medium", lineClamp: 1, children: d }),
                 ],
             }),
-            null != p && (0, l.jsx)(e9.z, { textColor: "text-feedback-positive", entry: { start: p } }),
+            null != p && (0, l.jsx)(e3.z, { textColor: "text-feedback-positive", entry: { start: p } }),
         ],
     });
 }
@@ -926,8 +926,8 @@ function tc(e) {
         ),
         [A, x] = (0, r.yK)([eC.A, G.A, P.A, eK.default], () => (0, eW.eo)(s, eC.A, G.A, P.A, eK.default)),
         v = (0, r.bG)([e_.default], () => e_.default.getId()),
-        I = (0, r.bG)([ei.A], () => (0, e7.nr)(g, ei.A), [g]),
-        f = (0, e3.r9)() && (0, e3.UK)(s.id),
+        I = (0, r.bG)([ei.A], () => (0, e6.nr)(g, ei.A), [g]),
+        f = (0, e9.r9)() && (0, e9.UK)(s.id),
         N =
             ((t = (0, e1.Ay)(s)),
             (i = n.useMemo(() => t.filter((e) => e.embeddedActivity.userIds.has(d.id)), [t, d.id])),

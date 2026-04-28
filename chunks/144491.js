@@ -15,8 +15,8 @@ var i = n(627968),
     m = n(373495),
     f = n(988393),
     g = n(707233),
-    I = n(318009),
-    A = n(638421),
+    A = n(318009),
+    I = n(638421),
     p = n(464792),
     T = n(775602),
     S = n(697138),
@@ -223,7 +223,7 @@ var ea = n(681582),
 let eh = (0, el.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("76550"),
+            n.e("60049"),
             n.e("40841"),
             n.e("63397"),
             n.e("84580"),
@@ -231,20 +231,20 @@ let eh = (0, el.Fe)({
             n.e("72823"),
             n.e("33092"),
             n.e("45235"),
-            n.e("19315"),
+            n.e("24211"),
             n.e("92652"),
-            n.e("18091"),
+            n.e("41475"),
             n.e("79542"),
-            n.e("53539"),
-            n.e("23082"),
-            n.e("3256"),
-            n.e("56289"),
-            n.e("89317"),
-            n.e("60417"),
-            n.e("64903"),
-            n.e("19586"),
-            n.e("18125"),
-            n.e("80889"),
+            n.e("13044"),
+            n.e("22810"),
+            n.e("84615"),
+            n.e("13709"),
+            n.e("25738"),
+            n.e("7276"),
+            n.e("54718"),
+            n.e("5036"),
+            n.e("54333"),
+            n.e("97271"),
             n.e("22513"),
             n.e("32442"),
             n.e("71934"),
@@ -253,16 +253,19 @@ let eh = (0, el.Fe)({
             n.e("86821"),
             n.e("25568"),
             n.e("32260"),
-            n.e("39501"),
+            n.e("79249"),
+            n.e("5432"),
             n.e("51402"),
             n.e("38123"),
-            n.e("34712"),
+            n.e("97137"),
             n.e("20524"),
-            n.e("19145"),
             n.e("57948"),
-            n.e("57546"),
-            n.e("4664"),
-            n.e("46788"),
+            n.e("73679"),
+            n.e("27755"),
+            n.e("36613"),
+            n.e("98197"),
+            n.e("75240"),
+            n.e("35392"),
             n.e("69273"),
             n.e("63941"),
             n.e("63009"),
@@ -287,9 +290,7 @@ let eh = (0, el.Fe)({
             n.e("43763"),
             n.e("59204"),
             n.e("23574"),
-            n.e("43559"),
             n.e("63635"),
-            n.e("25256"),
             n.e("97023"),
             n.e("89262"),
             n.e("87408"),
@@ -320,8 +321,8 @@ let eh = (0, el.Fe)({
             n.e("20158"),
             n.e("93327"),
             n.e("75681"),
-            n.e("15086"),
-            n.e("44590"),
+            n.e("25650"),
+            n.e("8161"),
             n.e("9176"),
             n.e("87208"),
             n.e("4015"),
@@ -459,9 +460,9 @@ let eh = (0, el.Fe)({
             n.e("76195"),
             n.e("85968"),
             n.e("51485"),
-            n.e("76170"),
             n.e("1177"),
             n.e("26490"),
+            n.e("76170"),
             n.e("32817"),
             n.e("76418"),
             n.e("51243"),
@@ -1051,7 +1052,7 @@ let eh = (0, el.Fe)({
             n.e("91708"),
             n.e("44727"),
             n.e("36973"),
-            n.e("59848"),
+            n.e("15086"),
             n.e("6996"),
             n.e("78"),
             n.e("81398"),
@@ -1316,8 +1317,8 @@ function em(e) {
 }
 var ef = n(670735),
     eg = n(981133),
-    eI = n(183636),
-    eA = n(469177),
+    eA = n(183636),
+    eI = n(469177),
     ep = n(361158),
     eT = n(80556),
     eS = n(267102);
@@ -1671,8 +1672,8 @@ var e5 = n(186111),
 function tg() {
     eM.h.dispatch({ type: "APP_ICON_EDITOR_RESET" });
 }
-var tI = n(526162),
-    tA = n(806932),
+var tA = n(526162),
+    tI = n(806932),
     tp = n(635917),
     tT = n(49999),
     tS = n(788868),
@@ -1718,7 +1719,7 @@ let tO = () => {
     },
     tC = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
-            r = (0, d.bG)([tI.A], () => tI.A.isUpsellPreview);
+            r = (0, d.bG)([tA.A], () => tA.A.isUpsellPreview);
         return (0, i.jsxs)("div", {
             className: tN.N3,
             children: [
@@ -1741,8 +1742,8 @@ function ty(e) {
     let { isCoachmark: t, markAsDismissed: n, iconSize: s = tp.N8.SIZE_60 } = e,
         { analyticsLocations: o } = (0, tl.Ay)(to.A.APP_ICON_EDITOR),
         l = (0, d.bG)([eR.default], () => eR.default.getCurrentUser()),
-        { isUpsellPreview: _, shouldEditorAnimate: u } = (0, d.cf)([tI.A, T.A], () => ({
-            isUpsellPreview: tI.A.isUpsellPreview,
+        { isUpsellPreview: _, shouldEditorAnimate: u } = (0, d.cf)([tA.A, T.A], () => ({
+            isUpsellPreview: tA.A.isUpsellPreview,
             shouldEditorAnimate: t && !T.A.useReducedMotion,
         })),
         c = t_.fy.getState().activePanel === t_.HP.APP_ICON;
@@ -1774,7 +1775,7 @@ function ty(e) {
                           (0, i.jsx)(tR, { markAsDismissed: n }),
                           (0, i.jsx)(ts.Ip, {
                               className: tN.sV,
-                              children: (0, i.jsx)(tA.A, { className: tN.Gg, isEditor: !0, iconSize: s }),
+                              children: (0, i.jsx)(tI.A, { className: tN.Gg, isEditor: !0, iconSize: s }),
                           }),
                           (0, i.jsx)(tC, { markAsDismissed: n, isCoachmark: t }),
                       ],
@@ -2134,7 +2135,7 @@ let nd = (0, W.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("40841"),
-                n.e("89317"),
+                n.e("25738"),
                 n.e("53381"),
                 n.e("207"),
                 n.e("88077"),
@@ -2158,7 +2159,7 @@ let nd = (0, W.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("40841"),
-                n.e("89317"),
+                n.e("25738"),
                 n.e("42376"),
                 n.e("63397"),
                 n.e("43282"),
@@ -2234,9 +2235,9 @@ let nd = (0, W.Fe)({
             m = a === t_.HP.CLIENT_THEMES || E,
             f = a === t_.HP.APP_ICON,
             g = a === t_.HP.CUSTOM_THEME || h,
-            I = a === t_.HP.APPLICATION_TEST_MODE_DEBUG,
-            A = a === t_.HP.CLIPS_REMINDER;
-        if (!(m || f || g || I || A)) return null;
+            A = a === t_.HP.APPLICATION_TEST_MODE_DEBUG,
+            I = a === t_.HP.CLIPS_REMINDER;
+        if (!(m || f || g || A || I)) return null;
         let p = () =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -2254,8 +2255,8 @@ let nd = (0, W.Fe)({
                         }),
                     f && (0, i.jsx)(ty, { isCoachmark: !1, markAsDismissed: c }),
                     g && (0, i.jsx)(nu, { metadata: o ?? {}, markAsDismissed: c, isCoachmark: h, isMobile: t }),
-                    I && (0, i.jsx)(nc, {}),
-                    A && (0, i.jsx)(ni, {}),
+                    A && (0, i.jsx)(nc, {}),
+                    I && (0, i.jsx)(ni, {}),
                 ],
             });
         return t ? (0, i.jsx)("div", { className: no.A, children: p() }) : p();
@@ -2285,11 +2286,11 @@ n(939857),
             Promise.all([n.e("94678"), n.e("1856"), n.e("76892"), n.e("4787"), n.e("56795")]).then(n.bind(n, 461624)),
         webpackId: 461624,
     });
-let nI = (0, W.Fe)({
+let nA = (0, W.Fe)({
         createPromise: () => Promise.all([n.e("13040"), n.e("98254"), n.e("99063")]).then(n.bind(n, 154056)),
         webpackId: 154056,
     }),
-    nA = r.memo(function () {
+    nI = r.memo(function () {
         let e = (0, d.bG)([e5.A], () => e5.A.hasLayers()),
             t = (0, E.useModalsStore)(E.hasAnyModalOpen),
             n = (0, d.bG)([eG.default], () => eG.default.isAuthenticated());
@@ -2305,13 +2306,13 @@ let nI = (0, W.Fe)({
             C = r.useRef(document.body),
             y = `${R}`;
         (t = "AppSkeleton"),
-            (n = eI.A.useCanUIRequestGatewaySocket()),
+            (n = eA.A.useCanUIRequestGatewaySocket()),
             r.useEffect(() => {
                 if (n)
                     return (
-                        eA.uG(t),
+                        eI.uG(t),
                         () => {
-                            eA.qr(t);
+                            eI.qr(t);
                         }
                     );
             }, [t, n]);
@@ -2326,7 +2327,7 @@ let nI = (0, W.Fe)({
                     children: (0, i.jsxs)(S.A, {
                         children: [
                             (0, i.jsx)(e8.A, { skipsSettingDefaultPageTitle: c }),
-                            (0, i.jsx)(A.N, {
+                            (0, i.jsx)(I.N, {
                                 children: (0, i.jsx)(ef.A, {
                                     children: (0, i.jsxs)(h.xp, {
                                         containerRef: C,
@@ -2339,7 +2340,7 @@ let nI = (0, W.Fe)({
                                                 renderWindow: window,
                                                 children: (0, i.jsxs)(w.Yf, {
                                                     children: [
-                                                        null != E ? (0, i.jsx)(nA, {}) : null,
+                                                        null != E ? (0, i.jsx)(nI, {}) : null,
                                                         (0, i.jsxs)("div", {
                                                             className: a()(ng.XX, p && ng.Xq),
                                                             children: [
@@ -2361,7 +2362,7 @@ let nI = (0, W.Fe)({
                                                                                         }),
                                                                                         (0, i.jsx)(g.A, {}),
                                                                                         (0, i.jsx)(x.A, {}),
-                                                                                        (0, i.jsx)(I.A, {}),
+                                                                                        (0, i.jsx)(A.A, {}),
                                                                                         (0, i.jsx)(m.b, {}),
                                                                                         (0, i.jsx)(e7, {}),
                                                                                         (0, i.jsx)(ep.up, {}),
@@ -2373,7 +2374,7 @@ let nI = (0, W.Fe)({
                                                                                         }),
                                                                                         (0, i.jsx)(G, {}),
                                                                                         (0, i.jsx)(eD, {}),
-                                                                                        (0, i.jsx)(nI, {}),
+                                                                                        (0, i.jsx)(nA, {}),
                                                                                     ],
                                                                                 }),
                                                                             }),

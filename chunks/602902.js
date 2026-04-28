@@ -16,11 +16,11 @@ var r = n(192308),
     m = n(696016),
     f = n(652215);
 async function g(e, t) {
-    let { channelId: g, analyticsLocations: I, messageReference: A } = t,
+    let { channelId: g, analyticsLocations: A, messageReference: I } = t,
         p = o.A.getChannel(g);
     if (null != p) {
-        if (null != A) {
-            let e = _.A.getMessage(A.channel_id, A.message_id);
+        if (null != I) {
+            let e = _.A.getMessage(I.channel_id, I.message_id);
             null != e && (0, a.Yf)({ message: e, channel: p, shouldMention: !1, showMentionToggle: !1 });
         }
         try {
@@ -38,7 +38,7 @@ async function g(e, t) {
                     t.push(new File([e], i, { type: "image/jpeg" })), n.push({});
                 }
                 d.default.track(f.HAw.CLIP_SHARED, {
-                    location_stack: I,
+                    location_stack: A,
                     guild_id: p.guild_id,
                     channel_id: p.id,
                     channel_type: p.type,
@@ -55,26 +55,26 @@ async function g(e, t) {
             async () => {
                 let { default: t } = await Promise.all([
                     n.e("40841"),
-                    n.e("61659"),
+                    n.e("13709"),
                     n.e("63397"),
                     n.e("84580"),
-                    n.e("16384"),
-                    n.e("89317"),
-                    n.e("95957"),
+                    n.e("54718"),
+                    n.e("25738"),
+                    n.e("22810"),
                     n.e("22513"),
                     n.e("32442"),
+                    n.e("54333"),
                     n.e("75058"),
                     n.e("92652"),
                     n.e("31632"),
                     n.e("86821"),
                     n.e("25568"),
                     n.e("32260"),
-                    n.e("18091"),
-                    n.e("11243"),
-                    n.e("18125"),
-                    n.e("80889"),
+                    n.e("7276"),
+                    n.e("5036"),
+                    n.e("97271"),
                     n.e("71934"),
-                    n.e("17764"),
+                    n.e("60049"),
                     n.e("45235"),
                     n.e("86483"),
                     n.e("24092"),
@@ -131,9 +131,9 @@ async function g(e, t) {
                     n.e("72535"),
                     n.e("76195"),
                     n.e("51485"),
-                    n.e("76170"),
                     n.e("1177"),
                     n.e("26490"),
+                    n.e("76170"),
                     n.e("32817"),
                     n.e("51243"),
                     n.e("18943"),
@@ -248,7 +248,7 @@ async function g(e, t) {
                     n.e("23601"),
                     n.e("92871"),
                 ]).then(n.bind(n, 243258));
-                return (n) => (0, i.jsx)(t, { ...n, clips: e, analyticsLocations: I });
+                return (n) => (0, i.jsx)(t, { ...n, clips: e, analyticsLocations: A });
             },
             { stackingBehavior: "stack", modalKey: s.aU },
         );
