@@ -1,35 +1,35 @@
 n.d(t, {
-    G_: () => O,
+    G_: () => G,
     Hl: () => v,
     IM: () => A,
     Mw: () => M,
-    OY: () => U,
+    OY: () => L,
     Op: () => I,
     TP: () => D,
     Zv: () => y,
-    bo: () => h,
+    bo: () => g,
     gP: () => R,
     ks: () => C,
     lJ: () => b,
     m9: () => T,
-    q: () => G,
-    zC: () => g,
+    q: () => U,
+    zC: () => h,
 });
 var i,
     a = n(64700),
-    _ = n(284009),
-    r = n.n(_),
+    r = n(284009),
+    _ = n.n(r),
     d = n(2110),
     l = n(636537),
     o = n(228366),
     u = n(58149),
-    s = n(865116),
-    E = n(381689),
+    E = n(865116),
+    s = n(381689),
     c = n(17372),
     m = n(652215),
     S = n(835002);
 async function T(e, t) {
-    let n = L(e),
+    let n = p(e),
         i = await l.Bo.get({
             url: m.Rsh.GET_REPORT_MENU(n),
             query: t?.variant != null ? { variant: t.variant } : void 0,
@@ -40,16 +40,16 @@ async function T(e, t) {
 async function I(e, t) {
     var n;
     let i,
-        a = ((i = (n = e).name), r()(Object.values(c.Yw).includes(i), `Invalid report type ${n.name}`), i),
-        _ = await l.Bo.get({
+        a = ((i = (n = e).name), _()(Object.values(c.Yw).includes(i), `Invalid report type ${n.name}`), i),
+        r = await l.Bo.get({
             url: m.Rsh.GET_REPORT_MENU(a),
             query: t?.variant != null ? { variant: t.variant } : void 0,
             rejectWithError: !1,
         });
-    return _.body ?? JSON.parse(_.text);
+    return r.body ?? JSON.parse(r.text);
 }
 async function A(e, t) {
-    let n = p(e),
+    let n = O(e),
         i = await l.Bo.get({
             url: m.Rsh.GET_UNAUTHENTICATED_REPORT_MENU(n),
             query: t?.variant != null ? { variant: t.variant } : void 0,
@@ -58,7 +58,7 @@ async function A(e, t) {
     return i.body ?? JSON.parse(i.text);
 }
 async function R(e, t) {
-    let n = L(e),
+    let n = p(e),
         i = await T(e, t);
     await l.Bo.post({
         url: m.Rsh.SUBMIT_REPORT_MENU(n),
@@ -66,16 +66,16 @@ async function R(e, t) {
         rejectWithError: !1,
     });
 }
-function g(e, t, n) {
-    var i, a, _, u;
+function h(e, t, n) {
+    var i, a, r, u;
     let T;
-    return s.Ay.get("iar_skip_api_report_submit")
+    return E.Ay.get("iar_skip_api_report_submit")
         ? Promise.resolve()
         : d.x.REPORT_TO_MOD.has(t.name)
           ? ((T = N(e, (i = t), n)),
             l.Bo.post({
                 url: (function (e) {
-                    if ((r()(d.x.REPORT_TO_MOD.has(e.name), `Invalid report type ${e.name}`), e.name === c.Yw.MESSAGE))
+                    if ((_()(d.x.REPORT_TO_MOD.has(e.name), `Invalid report type ${e.name}`), e.name === c.Yw.MESSAGE))
                         return m.Rsh.SUBMIT_MODERATOR_MESSAGE_REPORT(e.record.channel_id, e.record.id);
                     throw Error(`Invalid report type ${e.name}`);
                 })(i),
@@ -83,7 +83,7 @@ function g(e, t, n) {
                 rejectWithError: !1,
             }).then(
                 (e) => (
-                    E.A.showSuccessToast(S.OB.REPORT_TO_MOD_SUCCESS),
+                    s.A.showSuccessToast(S.OB.REPORT_TO_MOD_SUCCESS),
                     T?.channel_id != null &&
                         T?.message_id != null &&
                         o.h.dispatch({
@@ -95,23 +95,28 @@ function g(e, t, n) {
                 ),
             ))
           : ((a = e),
-            (_ = t),
+            (r = t),
             (u = n),
-            l.Bo.post({ url: m.Rsh.SUBMIT_REPORT_MENU(L(_)), body: f(a, _, u), rejectWithError: !1 }));
+            l.Bo.post({ url: m.Rsh.SUBMIT_REPORT_MENU(p(r)), body: f(a, r, u), rejectWithError: !1 }));
 }
-function h(e, t, n, i) {
-    if (s.Ay.get("iar_skip_api_report_submit")) return Promise.resolve();
-    let a = p(t);
+function g(e, t, n, i) {
+    if (E.Ay.get("iar_skip_api_report_submit")) return Promise.resolve();
+    let a = O(t);
     return l.Bo.post({ url: m.Rsh.SUBMIT_UNAUTHENTICATED_REPORT_MENU(a), body: f(e, t, n, i), rejectWithError: !0 });
 }
 function D(e, t) {
     return l.Bo.post({
-        url: m.Rsh.SEND_UNAUTHENTICATED_REPORT_PINCODE(e),
+        url: `${m.Rsh.SEND_UNAUTHENTICATED_REPORT_PINCODE(e)}?b=${(function (e) {
+            let t = 5381;
+            for (let n = 0; n < e.length; n++) t = ((t << 5) + t + e.charCodeAt(n)) | 0;
+            return (t >>> 0).toString(36);
+        })(t)}`,
         body: { name: e, email: t },
         rejectWithError: !1,
+        failImmediatelyWhenRateLimited: !0,
     });
 }
-async function O(e, t, n) {
+async function G(e, t, n) {
     return (
         await l.Bo.post({
             url: m.Rsh.VERIFY_UNAUTHENTICATED_REPORT(e),
@@ -120,26 +125,26 @@ async function O(e, t, n) {
         })
     ).body;
 }
-async function U() {
+async function L() {
     return await l.Bo.get({ url: m.Rsh.DSA_CAPABILITIES, rejectWithError: !1 });
 }
-async function G(e) {
+async function U(e) {
     return (await l.Bo.post({ url: m.Rsh.SUBMIT_REPORT_SECOND_LOOK, body: { token: e }, rejectWithError: !1 })).body;
+}
+function O(e) {
+    let t = e.name;
+    return _()(Object.values(c.tY).includes(t), `Invalid report type ${e.name}`), t;
 }
 function p(e) {
     let t = e.name;
-    return r()(Object.values(c.tY).includes(t), `Invalid report type ${e.name}`), t;
-}
-function L(e) {
-    let t = e.name;
-    return r()(Object.values(c.t0).includes(t), `Invalid report type ${e.name}`), t;
+    return _()(Object.values(c.t0).includes(t), `Invalid report type ${e.name}`), t;
 }
 let N = (e, t, n) => {
-        let { version: i, variant: a, language: _ } = e,
-            r = {
+        let { version: i, variant: a, language: r } = e,
+            _ = {
                 version: i,
                 variant: a,
-                language: _ ?? "en",
+                language: r ?? "en",
                 breadcrumbs: n.map((e) => e.nodeRef),
                 elements: n.reduce((e, t) => {
                     let { multiSelect: n, textInput: i } = t;
@@ -158,7 +163,7 @@ let N = (e, t, n) => {
         if (t.name === c.Yw.MESSAGE) {
             let { channel_id: e, id: n } = t.record;
             return {
-                ...r,
+                ..._,
                 ...{ channel_id: void 0, message_id: void 0, guild_id: void 0 },
                 name: t.name,
                 channel_id: e,
@@ -168,7 +173,7 @@ let N = (e, t, n) => {
         return null;
     },
     f = (e, t, n, i) => {
-        let { version: a, variant: _, language: r } = e,
+        let { version: a, variant: r, language: _ } = e,
             d = {
                 channel_id: void 0,
                 message_id: void 0,
@@ -183,8 +188,8 @@ let N = (e, t, n) => {
             },
             l = {
                 version: a,
-                variant: _,
-                language: r ?? "en",
+                variant: r,
+                language: _ ?? "en",
                 breadcrumbs: n.map((e) => e.nodeRef),
                 elements: n.reduce((e, t) => {
                     let { multiSelect: n, textInput: i } = t;
@@ -273,8 +278,8 @@ function C(e, t) {
             freeTextElements: n,
             dropdownElements: i,
             countrySelectElement: a,
-            radioGroupElements: _,
-            multiSelectElement: r,
+            radioGroupElements: r,
+            multiSelectElement: _,
             contentUrlInputElement: d,
         } = e,
         { textInput: l, multiSelect: o } = t;
@@ -286,8 +291,8 @@ function C(e, t) {
         ) ||
         i.some((e) => !0 === e.should_submit_data && (l?.[e.name] == null || l?.[e.name].value === "")) ||
         (a?.should_submit_data === !0 && (l?.[a.name] == null || l?.[a.name].value === "")) ||
-        _.some((e) => !0 === e.should_submit_data && (l?.[e.name] == null || l?.[e.name].value === "")) ||
-        (r?.should_submit_data === !0 && (null == o || 0 === Object.keys(o).length)) ||
+        r.some((e) => !0 === e.should_submit_data && (l?.[e.name] == null || l?.[e.name].value === "")) ||
+        (_?.should_submit_data === !0 && (null == o || 0 === Object.keys(o).length)) ||
         (d?.should_submit_data === !0 && (l?.[d.name] == null || l?.[d.name].value === "" || !l?.[d.name]?.isValid))
     );
 }
