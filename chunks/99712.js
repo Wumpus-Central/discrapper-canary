@@ -1,6 +1,7 @@
-l.d(t, { i: () => s });
-var n = l(115328);
-function s() {
-    return n.A.get("enable_recently_active");
+"use strict";
+n.d(t, { i: () => i });
+var r = n(115328);
+function i() {
+    return r.A.get("enable_recently_active");
 }
-l(239433);
+n(239433);

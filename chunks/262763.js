@@ -78,7 +78,7 @@ let p = {
             : new Promise((e) => {
                   (0, r.openModalLazy)(
                       async () => {
-                          let { default: r } = await Promise.all([n.e("83792"), n.e("87539")]).then(n.bind(n, 525828));
+                          let { default: r } = await n.e("10117").then(n.bind(n, 525828));
                           return (n) => {
                               let { onClose: s, transitionState: a } = n;
                               return (0, i.jsx)(r, {

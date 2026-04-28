@@ -1,38 +1,35 @@
-"use strict";
-n.d(t, { A: () => h });
-var l = n(627968);
+n.d(t, { A: () => A });
+var r = n(627968);
 n(64700);
-var i = n(320448),
-    s = n(661531),
-    a = n(192308),
-    r = n(834730),
+var a = n(320448),
+    l = n(661531),
+    i = n(192308),
+    s = n(834730),
     o = n(286320),
     c = n(224850),
-    u = n(778712),
-    d = n(123139);
-function h(e) {
+    E = n(778712),
+    _ = n(123139);
+function A(e) {
     let { subtitle: t } = e,
-        h = (0, o.b)();
-    return (0, l.jsxs)("button", {
-        className: d.kL,
+        A = (0, o.b)();
+    return (0, r.jsxs)("button", {
+        className: _.kL,
         onClick: function () {
-            (0, a.openModalLazy)(async () => {
+            (0, i.openModalLazy)(async () => {
                 let { default: e } = await n.e("91976").then(n.bind(n, 526710));
-                return (t) => (0, l.jsx)(e, { ...t });
+                return (t) => (0, r.jsx)(e, { ...t });
             });
         },
         children: [
-            h.length > 1 &&
-                (0, l.jsx)("div", {
-                    className: d.zc,
-                    children: h
-                        .slice(0, 3)
-                        .map((e, t, n) =>
-                            (0, l.jsx)(c.n, { affinity: e, applyMask: t !== n.length - 1, size: u._3.SIZE_20 }, e.id),
-                        ),
+            A.length > 1 &&
+                (0, r.jsx)("div", {
+                    className: _.zc,
+                    children: A.slice(0, 3).map((e, t, n) =>
+                        (0, r.jsx)(c.n, { affinity: e, applyMask: t !== n.length - 1, size: E._3.SIZE_20 }, e.id),
+                    ),
                 }),
-            (0, l.jsx)(r.E, { variant: "text-md/medium", color: "text-default", className: d.VA, children: t }),
-            (0, l.jsx)(i._, { size: "sm", color: s.A.colors.INTERACTIVE_ICON_DEFAULT }),
+            (0, r.jsx)(s.E, { variant: "text-md/medium", color: "text-default", className: _.VA, children: t }),
+            (0, r.jsx)(a._, { size: "sm", color: l.A.colors.INTERACTIVE_ICON_DEFAULT }),
         ],
     });
 }

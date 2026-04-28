@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__61733",
     bD: "premiumBrandRefreshContainer__61733",

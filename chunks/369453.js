@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     al: "questRewardTile__28141",
     Ij: "fullWidth__28141",

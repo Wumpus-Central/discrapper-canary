@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     yF: "divider__908e2",
     KJ: "isUnread__908e2",
