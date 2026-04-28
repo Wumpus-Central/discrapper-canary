@@ -371,9 +371,12 @@
 }
 
 .content__235ca a {
-    color: var(--interactive-text-active);
     cursor: pointer;
     font-weight: var(--font-weight-medium)
+}
+
+.content__235ca a:not(.actionAnchor__235ca) {
+    color: var(--interactive-text-active)
 }
 
 .content__235ca .actionAnchor__235ca {
@@ -5247,11 +5250,6 @@
 
 .mentioned__5126c .mention.interactive:hover {
     text-decoration: underline
-}
-
-.obscuredIcon__43090 {
-    height: 32px;
-    width: 32px
 }
 
 .container_de50c1 {
