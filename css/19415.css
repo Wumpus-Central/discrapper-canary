@@ -58,12 +58,6 @@
     width: 20px
 }
 
-.pill__5bc7e {
-    inset-inline-start: 0;
-    position: absolute;
-    top: 0
-}
-
 .custom-theme-background .circleIconButton__5bc7e {
     background-color: var(--background-mod-strong)
 }
@@ -219,12 +213,6 @@
     padding: 4px;
     position: relative;
     width: 100%
-}
-
-.pill__1f388 {
-    inset-inline-start: 0;
-    position: absolute;
-    top: 0
 }
 
 .downloadProgress__1f388 {
@@ -532,12 +520,6 @@
     backface-visibility: hidden;
     position: relative;
     transform: translateY(1px) translateZ(0)
-}
-
-.pill_e5445c {
-    inset-inline-start: 0;
-    position: absolute;
-    top: 0
 }
 
 .sorting_e5445c {

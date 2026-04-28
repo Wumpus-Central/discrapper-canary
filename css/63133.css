@@ -1284,12 +1284,21 @@
     width: 8px
 }
 
+.overlay__58105 {
+    inset-inline-start: 0;
+    top: 0
+}
+
+.item__58105,
+.overlay__58105 {
+    position: absolute
+}
+
 .item__58105 {
     background-color: var(--text-strong);
     border-radius: 0 4px 4px 0;
     display: block;
     margin-inline-start: -4px;
-    position: absolute;
     width: 8px
 }
 

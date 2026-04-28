@@ -1478,12 +1478,6 @@
     color: var(--interactive-text-active)
 }
 
-.pill_ed9a5f {
-    inset-inline-start: 0;
-    position: absolute;
-    top: 0
-}
-
 .card_a23cbe {
     border-radius: var(--radius-sm);
     cursor: pointer;
@@ -5388,6 +5382,21 @@
     margin-bottom: 16px;
     margin-top: 18px;
     text-align: center
+}
+
+.optionHeader__1f657 {
+    margin-bottom: 8px;
+    margin-top: 16px;
+    text-transform: uppercase
+}
+
+.scroller__1f657 {
+    height: 330px;
+    margin: 12px -12px 0
+}
+
+.templatesList__1f657 {
+    padding: 0 12px
 }
 
 .message__51673 {
