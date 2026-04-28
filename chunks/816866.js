@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { ZK: () => g, pF: () => h, wu: () => m }), n(323874), n(14289), n(35956), n(321073);
-var r = n(64700),
-    a = n(942381),
-    i = n(265690),
-    l = n(121894),
-    s = n(506774),
-    o = n(691540),
-    c = n(857250),
-    d = n(97483),
-    u = n(87558);
-let _ = "__DEBUG_PROFILE_EFFECTS_STORE",
-    p = { profileEffects: s.w.get(_) ?? {} },
-    f = (e) => {
+a.d(t, { ZK: () => b, pF: () => _, wu: () => f }), a(323874), a(14289), a(35956), a(321073);
+var n = a(64700),
+    l = a(942381),
+    r = a(265690),
+    i = a(121894),
+    s = a(506774),
+    o = a(691540),
+    c = a(857250),
+    d = a(97483),
+    u = a(87558);
+let h = "__DEBUG_PROFILE_EFFECTS_STORE",
+    p = { profileEffects: s.w.get(h) ?? {} },
+    m = (e) => {
         try {
-            s.w.set(_, e.profileEffects);
+            s.w.set(h, e.profileEffects);
         } catch (e) {
             console.error(e),
                 (0, o.P0)(
@@ -24,58 +23,58 @@ let _ = "__DEBUG_PROFILE_EFFECTS_STORE",
                 );
         }
     },
-    m = (0, i.h)((e) => ({
+    f = (0, r.h)((e) => ({
         ...p,
         upsertProfileEffect: (t) =>
-            (0, l.r)(() => {
+            (0, i.r)(() => {
                 e((e) => {
-                    let n = { ...e };
-                    return (n.profileEffects[t.skuId] = t), f(n), n;
+                    let a = { ...e };
+                    return (a.profileEffects[t.skuId] = t), m(a), a;
                 });
             }),
         deleteProfileEffect: (t) =>
-            (0, l.r)(() => {
+            (0, i.r)(() => {
                 e((e) => {
-                    let n = { ...e };
-                    return delete n.profileEffects[t], f(n), n;
+                    let a = { ...e };
+                    return delete a.profileEffects[t], m(a), a;
                 });
             }),
         clearAll: () =>
-            (0, l.r)(() => {
-                e(() => (s.w.remove(_), { profileEffects: {} }));
+            (0, i.r)(() => {
+                e(() => (s.w.remove(h), { profileEffects: {} }));
             }),
     })),
-    h = () =>
-        m((e) => {
+    _ = () =>
+        f((e) => {
             let { profileEffects: t } = e;
             return Object.values(t);
-        }, a.x),
-    g = (e) => {
-        let t = m((t) => (null != e ? t.profileEffects[e] : null)),
-            n = r.useRef([]);
+        }, l.x),
+    b = (e) => {
+        let t = f((t) => (null != e ? t.profileEffects[e] : null)),
+            a = n.useRef([]);
         return (
-            r.useEffect(
+            n.useEffect(
                 () => () => {
-                    n.current.forEach((e) => {
+                    a.current.forEach((e) => {
                         URL.revokeObjectURL(e);
                     }),
-                        (n.current = []);
+                        (a.current = []);
                 },
                 [],
             ),
-            r.useMemo(() => {
+            n.useMemo(() => {
                 if (null == t) return null;
                 let e = (e) => {
                         let t = (0, u.fB)(e);
-                        return n.current.push(t), t;
+                        return a.current.push(t), t;
                     },
-                    r = t.stillFrames,
-                    a = null != r ? { ...r } : {};
-                for (let t in a) {
-                    let n = a[t];
-                    null != n && (a[t] = { ...n, src: e(n.base64) });
+                    n = t.stillFrames,
+                    l = null != n ? { ...n } : {};
+                for (let t in l) {
+                    let a = l[t];
+                    null != a && (l[t] = { ...a, src: e(a.base64) });
                 }
-                return { ...t, stillFrames: a };
+                return { ...t, stillFrames: l };
             }, [t])
         );
     };

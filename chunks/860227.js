@@ -1,60 +1,59 @@
-"use strict";
-n.d(t, { CJ: () => s, JH: () => d, XL: () => u, ZD: () => m, d$: () => c, fF: () => _, nS: () => l, xl: () => o });
-var i = n(264927),
-    a = n(143413),
-    r = n(652215);
+n.d(t, { CJ: () => s, JH: () => u, XL: () => d, ZD: () => _, d$: () => o, fF: () => m, nS: () => r, xl: () => c });
+var a = n(264927),
+    i = n(143413),
+    l = n(652215);
 function s(e) {
     return `message-content-${e.id}`;
 }
-function l(e) {
+function r(e) {
     return `message-reply-context-${e.id}`;
 }
-function c(e, t) {
+function o(e, t) {
     let n = t ?? e.id;
     return `message-username-${n}`;
 }
-function o(e) {
+function c(e) {
     return `message-timestamp-${e.id}`;
 }
-function d(e) {
+function u(e) {
     return `message-reactions-${e.id}`;
 }
-function u(e) {
+function d(e) {
     return `message-accessories-${e.id}`;
 }
-function _(e, t, n) {
-    let d = e.type === r.lAJ.REPLY && null != e.messageReference,
-        _ = e.embeds.length > 0,
-        m = e.attachments.length > 0,
-        p = e.stickerItems.length > 0,
-        f = e.codedLinks.length > 0,
+function m(e, t, n) {
+    let u = e.type === l.lAJ.REPLY && null != e.messageReference,
+        m = e.embeds.length > 0,
+        _ = e.attachments.length > 0,
+        h = e.stickerItems.length > 0,
+        p = e.codedLinks.length > 0,
         g = e.components.length > 0,
-        h = e.hasFlag(r.pr7.HAS_THREAD),
-        b = _ || m || p || f || h || g || e.isPoll() || e.type === r.lAJ.THREAD_CREATED,
-        C = _ && e.content === e.embeds[0].url && e.embeds[0].type === r.Auw.GIFV,
-        I = e.type !== r.lAJ.DEFAULT || (!C && "" !== e.content),
-        T = (0, a.A)(e),
-        x = !T && n?.hasTimestamp !== !1,
-        A = e.hasFlag(r.pr7.IS_GUILD_OFFICIAL),
-        E = c(e, t),
-        S = l(e),
-        v = T ? "" : `${d ? S : E} ${i.lW}`;
+        f = e.hasFlag(l.pr7.HAS_THREAD),
+        A = m || _ || h || p || f || g || e.isPoll() || e.type === l.lAJ.THREAD_CREATED,
+        b = m && e.content === e.embeds[0].url && e.embeds[0].type === l.Auw.GIFV,
+        I = e.type !== l.lAJ.DEFAULT || (!b && "" !== e.content),
+        T = (0, i.A)(e),
+        E = !T && n?.hasTimestamp !== !1,
+        S = e.hasFlag(l.pr7.IS_GUILD_OFFICIAL),
+        C = o(e, t),
+        x = r(e),
+        y = T ? "" : `${u ? x : C} ${a.lW}`;
     if (I) {
         let t = s(e);
-        v += ` ${t}`;
+        y += ` ${t}`;
     }
-    if (b) {
-        let t = u(e);
-        v += ` ${t}`;
+    if (A) {
+        let t = d(e);
+        y += ` ${t}`;
     }
-    if (x) {
-        let t = o(e);
-        v += ` ${i.l6} ${t}`;
+    if (E) {
+        let t = c(e);
+        y += ` ${a.l6} ${t}`;
     }
-    return A && (v += ` ${i.zV}`), v.trim();
+    return S && (y += ` ${a.zV}`), y.trim();
 }
-function m(e) {
+function _(e) {
     if (0 === e.reactions.length) return;
-    let t = d(e);
-    return `${i.oz} ${t}`;
+    let t = u(e);
+    return `${a.oz} ${t}`;
 }

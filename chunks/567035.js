@@ -1,43 +1,42 @@
-"use strict";
 n.d(t, { A: () => h }), n(321073);
-var r = n(735438),
-    i = n.n(r),
+var i = n(735438),
+    s = n.n(i),
     l = n(334738),
-    a = n(591552),
-    s = n(695633),
+    r = n(591552),
+    a = n(695633),
     o = n(808728),
-    c = n(222823),
-    u = n(954571),
-    _ = n(935208),
-    d = n(652215),
+    d = n(222823),
+    c = n(954571),
+    u = n(935208),
+    A = n(652215),
     g = n(790782);
 function h(e, t, n) {
-    let r = i()
+    let i = s()
         .flatMap(e, (e) => {
             let t = o.Ay.getSelectableChannelIds(e),
                 n = [...t, ...o.Ay.getVocalChannelIds(e)],
-                r = s.A.getActiveJoinedThreadsForGuild(e);
+                i = a.A.getActiveJoinedThreadsForGuild(e);
             for (let e of t) {
-                let t = r[e] ?? {};
+                let t = i[e] ?? {};
                 for (let e in t) n.push(e);
             }
             return n;
         })
-        .map((e) => ({ channelId: e, readStateType: g.P.CHANNEL, messageId: c.Ay.lastMessageId(e) }));
+        .map((e) => ({ channelId: e, readStateType: g.P.CHANNEL, messageId: d.Ay.lastMessageId(e) }));
     return (
         e.forEach((e) => {
-            r.push({
-                channelId: _.default.cast(e),
+            i.push({
+                channelId: u.default.cast(e),
                 readStateType: g.P.GUILD_EVENT,
-                messageId: c.Ay.lastMessageId(e, g.P.GUILD_EVENT),
+                messageId: d.Ay.lastMessageId(e, g.P.GUILD_EVENT),
             }),
-                r.push({
-                    channelId: _.default.cast(e),
+                i.push({
+                    channelId: u.default.cast(e),
                     readStateType: g.P.GUILD_ONBOARDING_QUESTION,
-                    messageId: a.A.ackIdForGuild(e),
+                    messageId: r.A.ackIdForGuild(e),
                 });
         }),
-        u.default.track(d.HAw.MARK_AS_READ, { source: t, type: "guild" }),
-        (0, l.Uq)(r, n)
+        c.default.track(A.HAw.MARK_AS_READ, { source: t, type: "guild" }),
+        (0, l.Uq)(i, n)
     );
 }
