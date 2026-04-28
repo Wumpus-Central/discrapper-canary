@@ -13485,6 +13485,22 @@ html.disable-forced-colors * {
 }
 
 .theme-dark {
+    --ansi-black: var(--black);
+    --ansi-blue: var(--blue-new-39);
+    --ansi-bright-black: var(--neutral-40);
+    --ansi-bright-blue: var(--illo-blue-30);
+    --ansi-bright-cyan: var(--teal-new-26);
+    --ansi-bright-green: var(--illo-green-50);
+    --ansi-bright-magenta: var(--illo-pink-30);
+    --ansi-bright-red: var(--red-new-22);
+    --ansi-bright-white: var(--white);
+    --ansi-bright-yellow: var(--illo-yellow-60);
+    --ansi-cyan: var(--teal-new-39);
+    --ansi-green: var(--green-new-38);
+    --ansi-magenta: var(--pink-52);
+    --ansi-red: var(--red-new-36);
+    --ansi-white: var(--neutral-20);
+    --ansi-yellow: var(--yellow-new-59);
     --app-frame-background: var(--neutral-78);
     --app-frame-border: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --app-message-embed-secondary-text: hsl(var(--white-hsl)/0.7);
@@ -14008,6 +14024,22 @@ html.disable-forced-colors * {
 
 @supports (color:color-mix(in lch, red, blue)) {
     .theme-dark {
+        --ansi-black: color-mix(in oklab, var(--black) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-blue: color-mix(in oklab, var(--blue-new-39) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-black: color-mix(in oklab, var(--neutral-40) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-bright-blue: color-mix(in oklab, var(--illo-blue-30) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-cyan: color-mix(in oklab, var(--teal-new-26) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-green: color-mix(in oklab, var(--illo-green-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-magenta: color-mix(in oklab, var(--illo-pink-30) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-red: color-mix(in oklab, var(--red-new-22) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-white: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-bright-yellow: color-mix(in oklab, var(--illo-yellow-60) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-cyan: color-mix(in oklab, var(--teal-new-39) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-green: color-mix(in oklab, var(--green-new-38) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-magenta: color-mix(in oklab, var(--pink-52) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-red: color-mix(in oklab, var(--red-new-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-white: color-mix(in oklab, var(--neutral-20) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-yellow: color-mix(in oklab, var(--yellow-new-59) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-background: color-mix(in oklab, var(--neutral-78) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-border: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-message-embed-secondary-text: color-mix(in oklab, hsl(var(--white-hsl)/0.7) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.7) var(--custom-theme-text-color-amount, 0%));
@@ -14295,6 +14327,22 @@ html.disable-forced-colors * {
 }
 
 .theme-light {
+    --ansi-black: var(--black);
+    --ansi-blue: var(--blue-new-42);
+    --ansi-bright-black: var(--neutral-40);
+    --ansi-bright-blue: var(--illo-blue-40);
+    --ansi-bright-cyan: var(--teal-new-55);
+    --ansi-bright-green: var(--illo-green-60);
+    --ansi-bright-magenta: var(--illo-pink-50);
+    --ansi-bright-red: var(--red-new-52);
+    --ansi-bright-white: var(--white);
+    --ansi-bright-yellow: var(--illo-yellow-70);
+    --ansi-cyan: var(--teal-new-42);
+    --ansi-green: var(--green-new-41);
+    --ansi-magenta: var(--pink-55);
+    --ansi-red: var(--red-new-39);
+    --ansi-white: var(--neutral-20);
+    --ansi-yellow: var(--yellow-new-62);
     --app-frame-background: var(--neutral-7);
     --app-frame-border: hsl(var(--opacity-28-hsl)/0.2784313725490196);
     --app-message-embed-secondary-text: hsl(var(--white-hsl)/0.7);
@@ -14818,6 +14866,22 @@ html.disable-forced-colors * {
 
 @supports (color:color-mix(in lch, red, blue)) {
     .theme-light {
+        --ansi-black: color-mix(in oklab, var(--black) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-blue: color-mix(in oklab, var(--blue-new-42) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-black: color-mix(in oklab, var(--neutral-40) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-bright-blue: color-mix(in oklab, var(--illo-blue-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-cyan: color-mix(in oklab, var(--teal-new-55) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-green: color-mix(in oklab, var(--illo-green-60) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-magenta: color-mix(in oklab, var(--illo-pink-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-red: color-mix(in oklab, var(--red-new-52) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-white: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-bright-yellow: color-mix(in oklab, var(--illo-yellow-70) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-cyan: color-mix(in oklab, var(--teal-new-42) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-green: color-mix(in oklab, var(--green-new-41) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-magenta: color-mix(in oklab, var(--pink-55) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-red: color-mix(in oklab, var(--red-new-39) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-white: color-mix(in oklab, var(--neutral-20) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-yellow: color-mix(in oklab, var(--yellow-new-62) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-background: color-mix(in oklab, var(--neutral-7) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-border: color-mix(in oklab, hsl(var(--opacity-28-hsl)/0.2784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2784313725490196) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-message-embed-secondary-text: color-mix(in oklab, hsl(var(--white-hsl)/0.7) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.7) var(--custom-theme-text-color-amount, 0%));
@@ -15105,6 +15169,22 @@ html.disable-forced-colors * {
 }
 
 .theme-midnight {
+    --ansi-black: var(--black);
+    --ansi-blue: var(--blue-new-53);
+    --ansi-bright-black: var(--neutral-40);
+    --ansi-bright-blue: var(--illo-blue-40);
+    --ansi-bright-cyan: var(--teal-new-41);
+    --ansi-bright-green: var(--illo-green-60);
+    --ansi-bright-magenta: var(--illo-pink-40);
+    --ansi-bright-red: var(--red-new-37);
+    --ansi-bright-white: var(--white);
+    --ansi-bright-yellow: var(--illo-yellow-70);
+    --ansi-cyan: var(--teal-new-53);
+    --ansi-green: var(--green-new-52);
+    --ansi-magenta: var(--pink-63);
+    --ansi-red: var(--red-new-50);
+    --ansi-white: var(--neutral-20);
+    --ansi-yellow: var(--yellow-new-68);
     --app-frame-background: var(--neutral-100);
     --app-frame-border: hsl(var(--opacity-20-hsl)/0.2);
     --app-message-embed-secondary-text: hsl(var(--white-hsl)/0.7);
@@ -15628,6 +15708,22 @@ html.disable-forced-colors * {
 
 @supports (color:color-mix(in lch, red, blue)) {
     .theme-midnight {
+        --ansi-black: color-mix(in oklab, var(--black) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-blue: color-mix(in oklab, var(--blue-new-53) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-black: color-mix(in oklab, var(--neutral-40) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-bright-blue: color-mix(in oklab, var(--illo-blue-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-cyan: color-mix(in oklab, var(--teal-new-41) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-green: color-mix(in oklab, var(--illo-green-60) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-magenta: color-mix(in oklab, var(--illo-pink-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-red: color-mix(in oklab, var(--red-new-37) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-white: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-bright-yellow: color-mix(in oklab, var(--illo-yellow-70) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-cyan: color-mix(in oklab, var(--teal-new-53) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-green: color-mix(in oklab, var(--green-new-52) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-magenta: color-mix(in oklab, var(--pink-63) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-red: color-mix(in oklab, var(--red-new-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-white: color-mix(in oklab, var(--neutral-20) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-yellow: color-mix(in oklab, var(--yellow-new-68) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-background: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-border: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-message-embed-secondary-text: color-mix(in oklab, hsl(var(--white-hsl)/0.7) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.7) var(--custom-theme-text-color-amount, 0%));
@@ -15915,6 +16011,22 @@ html.disable-forced-colors * {
 }
 
 .theme-darker {
+    --ansi-black: var(--black);
+    --ansi-blue: var(--blue-new-47);
+    --ansi-bright-black: var(--neutral-40);
+    --ansi-bright-blue: var(--illo-blue-40);
+    --ansi-bright-cyan: var(--teal-new-35);
+    --ansi-bright-green: var(--illo-green-50);
+    --ansi-bright-magenta: var(--illo-pink-40);
+    --ansi-bright-red: var(--red-new-31);
+    --ansi-bright-white: var(--white);
+    --ansi-bright-yellow: var(--illo-yellow-60);
+    --ansi-cyan: var(--teal-new-48);
+    --ansi-green: var(--green-new-47);
+    --ansi-magenta: var(--pink-58);
+    --ansi-red: var(--red-new-44);
+    --ansi-white: var(--neutral-20);
+    --ansi-yellow: var(--yellow-new-65);
     --app-frame-background: var(--neutral-97);
     --app-frame-border: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --app-message-embed-secondary-text: hsl(var(--white-hsl)/0.7);
@@ -16438,6 +16550,22 @@ html.disable-forced-colors * {
 
 @supports (color:color-mix(in lch, red, blue)) {
     .theme-darker {
+        --ansi-black: color-mix(in oklab, var(--black) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-blue: color-mix(in oklab, var(--blue-new-47) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-black: color-mix(in oklab, var(--neutral-40) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-bright-blue: color-mix(in oklab, var(--illo-blue-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-cyan: color-mix(in oklab, var(--teal-new-35) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-green: color-mix(in oklab, var(--illo-green-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-magenta: color-mix(in oklab, var(--illo-pink-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-red: color-mix(in oklab, var(--red-new-31) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-white: color-mix(in oklab, var(--white) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-bright-yellow: color-mix(in oklab, var(--illo-yellow-60) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-cyan: color-mix(in oklab, var(--teal-new-48) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-green: color-mix(in oklab, var(--green-new-47) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-magenta: color-mix(in oklab, var(--pink-58) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-red: color-mix(in oklab, var(--red-new-44) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-white: color-mix(in oklab, var(--neutral-20) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --ansi-yellow: color-mix(in oklab, var(--yellow-new-65) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-background: color-mix(in oklab, var(--neutral-97) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-border: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --app-message-embed-secondary-text: color-mix(in oklab, hsl(var(--white-hsl)/0.7) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.7) var(--custom-theme-text-color-amount, 0%));
@@ -16755,6 +16883,13 @@ html.disable-forced-colors * {
 .high-contrast-mode .theme-dark,
 .high-contrast-mode.theme-dark {
     --activity-timebar-progress-background: var(--neutral-1);
+    --ansi-blue: var(--blue-new-31);
+    --ansi-bright-blue: var(--illo-blue-30);
+    --ansi-cyan: var(--teal-new-32);
+    --ansi-green: var(--green-new-32);
+    --ansi-magenta: var(--pink-42);
+    --ansi-red: var(--red-new-29);
+    --ansi-yellow: var(--yellow-new-55);
     --app-frame-border: var(--neutral-12);
     --background-code: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
     --background-feedback-critical: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
@@ -16956,6 +17091,13 @@ html.disable-forced-colors * {
     .high-contrast-mode .theme-dark,
     .high-contrast-mode.theme-dark {
         --activity-timebar-progress-background: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-blue: color-mix(in oklab, var(--blue-new-31) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-blue: color-mix(in oklab, var(--illo-blue-30) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-cyan: color-mix(in oklab, var(--teal-new-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-green: color-mix(in oklab, var(--green-new-32) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-magenta: color-mix(in oklab, var(--pink-42) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-red: color-mix(in oklab, var(--red-new-29) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-yellow: color-mix(in oklab, var(--yellow-new-55) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-border: color-mix(in oklab, var(--neutral-12) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --background-code: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -17094,6 +17236,13 @@ html.disable-forced-colors * {
 .high-contrast-mode .theme-light,
 .high-contrast-mode.theme-light {
     --activity-timebar-progress-background: var(--neutral-100);
+    --ansi-blue: var(--blue-new-52);
+    --ansi-bright-blue: var(--illo-blue-40);
+    --ansi-cyan: var(--teal-new-53);
+    --ansi-green: var(--green-new-52);
+    --ansi-magenta: var(--pink-62);
+    --ansi-red: var(--red-new-50);
+    --ansi-yellow: var(--yellow-new-68);
     --app-frame-border: var(--neutral-50);
     --background-code: hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196);
     --background-feedback-critical: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
@@ -17295,6 +17444,13 @@ html.disable-forced-colors * {
     .high-contrast-mode .theme-light,
     .high-contrast-mode.theme-light {
         --activity-timebar-progress-background: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-blue: color-mix(in oklab, var(--blue-new-52) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-blue: color-mix(in oklab, var(--illo-blue-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-cyan: color-mix(in oklab, var(--teal-new-53) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-green: color-mix(in oklab, var(--green-new-52) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-magenta: color-mix(in oklab, var(--pink-62) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-red: color-mix(in oklab, var(--red-new-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-yellow: color-mix(in oklab, var(--yellow-new-68) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-border: color-mix(in oklab, var(--neutral-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --background-code: color-mix(in oklab, hsl(var(--opacity-blurple-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -17433,6 +17589,13 @@ html.disable-forced-colors * {
 .high-contrast-mode .theme-midnight,
 .high-contrast-mode.theme-midnight {
     --activity-timebar-progress-background: var(--neutral-1);
+    --ansi-blue: var(--blue-new-47);
+    --ansi-bright-blue: var(--illo-blue-40);
+    --ansi-cyan: var(--teal-new-48);
+    --ansi-green: var(--green-new-47);
+    --ansi-magenta: var(--pink-59);
+    --ansi-red: var(--red-new-44);
+    --ansi-yellow: var(--yellow-new-65);
     --app-frame-border: var(--neutral-24);
     --background-code: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
     --background-feedback-critical: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
@@ -17634,6 +17797,13 @@ html.disable-forced-colors * {
     .high-contrast-mode .theme-midnight,
     .high-contrast-mode.theme-midnight {
         --activity-timebar-progress-background: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-blue: color-mix(in oklab, var(--blue-new-47) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-blue: color-mix(in oklab, var(--illo-blue-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-cyan: color-mix(in oklab, var(--teal-new-48) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-green: color-mix(in oklab, var(--green-new-47) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-magenta: color-mix(in oklab, var(--pink-59) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-red: color-mix(in oklab, var(--red-new-44) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-yellow: color-mix(in oklab, var(--yellow-new-65) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-border: color-mix(in oklab, var(--neutral-24) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --background-code: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
@@ -17772,6 +17942,13 @@ html.disable-forced-colors * {
 .high-contrast-mode .theme-darker,
 .high-contrast-mode.theme-darker {
     --activity-timebar-progress-background: var(--neutral-1);
+    --ansi-blue: var(--blue-new-42);
+    --ansi-bright-blue: var(--illo-blue-40);
+    --ansi-cyan: var(--teal-new-43);
+    --ansi-green: var(--green-new-41);
+    --ansi-magenta: var(--pink-55);
+    --ansi-red: var(--red-new-39);
+    --ansi-yellow: var(--yellow-new-62);
     --app-frame-border: var(--neutral-19);
     --background-code: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
     --background-feedback-critical: hsl(var(--opacity-red-12-hsl)/0.12156862745098039);
@@ -17973,6 +18150,13 @@ html.disable-forced-colors * {
     .high-contrast-mode .theme-darker,
     .high-contrast-mode.theme-darker {
         --activity-timebar-progress-background: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-blue: color-mix(in oklab, var(--blue-new-42) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-bright-blue: color-mix(in oklab, var(--illo-blue-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-cyan: color-mix(in oklab, var(--teal-new-43) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-green: color-mix(in oklab, var(--green-new-41) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-magenta: color-mix(in oklab, var(--pink-55) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-red: color-mix(in oklab, var(--red-new-39) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --ansi-yellow: color-mix(in oklab, var(--yellow-new-62) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --app-frame-border: color-mix(in oklab, var(--neutral-19) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --background-code: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --background-feedback-critical: color-mix(in oklab, hsl(var(--opacity-red-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));

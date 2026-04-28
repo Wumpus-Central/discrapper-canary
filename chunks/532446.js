@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { M: () => l });
-var i = n(627968);
-n(64700);
-var s = n(331322);
-function l(e) {
-    let { children: t } = e;
-    return (0, i.jsx)(s.B, { direction: "horizontal", gap: 8, align: "end", children: t });
+t.d(e, { M: () => r });
+var a = t(627968);
+t(64700);
+var n = t(331322);
+function r(A) {
+    let { children: e } = A;
+    return (0, a.jsx)(n.B, { direction: "horizontal", gap: 8, align: "end", children: e });
 }

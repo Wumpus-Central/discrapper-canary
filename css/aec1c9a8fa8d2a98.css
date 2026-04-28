@@ -130,3 +130,22 @@ a-ps,
 a-rp {
     color: var(--text-code)
 }
+
+.ansi__65132 {
+    --custom-ansi-color-0: var(--ansi-black);
+    --custom-ansi-color-1: var(--ansi-red);
+    --custom-ansi-color-2: var(--ansi-green);
+    --custom-ansi-color-3: var(--ansi-yellow);
+    --custom-ansi-color-4: var(--ansi-blue);
+    --custom-ansi-color-5: var(--ansi-magenta);
+    --custom-ansi-color-6: var(--ansi-cyan);
+    --custom-ansi-color-7: var(--ansi-white);
+    --custom-ansi-color-8: var(--ansi-bright-black);
+    --custom-ansi-color-9: var(--ansi-bright-red);
+    --custom-ansi-color-10: var(--ansi-bright-green);
+    --custom-ansi-color-11: var(--ansi-bright-yellow);
+    --custom-ansi-color-12: var(--ansi-bright-blue);
+    --custom-ansi-color-13: var(--ansi-bright-magenta);
+    --custom-ansi-color-14: var(--ansi-bright-cyan);
+    --custom-ansi-color-15: var(--ansi-bright-white)
+}
