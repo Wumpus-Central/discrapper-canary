@@ -2317,6 +2317,10 @@
     width: 300px
 }
 
+:where(.outer_c0bea0).user-profile-popout.custom-profile-frame {
+    box-shadow: unset
+}
+
 :where(.outer_c0bea0).user-profile-modal {
     border-radius: var(--radius-sm);
     height: 780px;
