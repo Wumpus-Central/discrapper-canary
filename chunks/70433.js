@@ -1,25 +1,23 @@
-n.d(t, { n: () => c });
-var a = n(627968),
-    r = n(64700),
-    l = n(452027),
+n.d(t, { n: () => o });
+var l = n(627968),
+    a = n(64700),
+    r = n(452027),
     i = n(637141),
     s = n(87730),
-    o = n(883296);
-function c(e) {
+    u = n(883296);
+function o(e) {
     let {
             label: t,
             giftCardsEnabled: n,
-            giftCardCheckboxProps: c,
-            paymentSourceDropdownProps: d,
-            showCheckboxAboveDropdown: u = !1,
-            disabled: p,
+            giftCardCheckboxProps: o,
+            paymentSourceDropdownProps: c,
+            showCheckboxAboveDropdown: d = !1,
+            disabled: m,
         } = e,
-        _ = r.useMemo(
-            () => n && null != c && (0, a.jsx)(s.o, { ...c, className: u ? o.r : o.K, disabled: c.disabled || p }),
-            [n, c, u, p],
-        );
-    return (0, a.jsxs)(l.D, {
-        label: t,
-        children: [u && _, (0, a.jsx)(i.A, { ...d, disabled: p || (n && c?.checked === !0) }), !u && _],
-    });
+        x = a.useMemo(
+            () => n && null != o && (0, l.jsx)(s.o, { ...o, className: d ? u.r : u.K, disabled: o.disabled || m }),
+            [n, o, d, m],
+        ),
+        f = n && o?.checked === !0;
+    return (0, l.jsxs)(r.D, { label: t, children: [d && x, !f && (0, l.jsx)(i.A, { ...c, disabled: m }), !d && x] });
 }
