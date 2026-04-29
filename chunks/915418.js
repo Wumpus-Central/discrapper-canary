@@ -1,65 +1,42 @@
-n.d(t, { r: () => f });
-var a = n(64700),
-    i = n(913290),
-    r = n(357758),
-    s = n(17928),
-    l = n(469778),
-    c = n(276666),
-    o = n(545600),
-    d = n(777376),
-    u = n(674567),
-    _ = n(788868);
-let m = new Set(),
-    p = {
-        [d.gR.INITIAL]: d.p1.CLAIM_IN_PROGRESS,
-        [d.gR.AWAITING_ACTIVATION]: d.p1.CLAIM_IN_PROGRESS,
-        [d.gR.ACTIVATED]: d.p1.CLAIMED,
-        [d.gR.FAILED]: d.p1.NOT_CLAIMED,
-        [d.gR.EXPIRED]: d.p1.NOT_CLAIMED,
-    };
-function f() {
-    let e = (function () {
-            var e;
-            let t,
-                n = (0, s.bG)([l.A], () => l.A.getForSku("1476683556242718862") ?? m, [], r._);
-            if (null == n || 0 === n.size) return d.p1.NOT_CLAIMED;
-            let a = null;
-            for (let e of n) (null == a || (e.startsAt?.getTime() ?? 0) > (a.startsAt?.getTime() ?? 0)) && (a = e);
-            if (null == a) return d.p1.NOT_CLAIMED;
-            if (null == a.endsAt || new Date() < a.endsAt) return d.p1.CLAIMED;
-            if (
-                ((e = a),
-                (t = new Date()),
-                e.fulfillmentStatus === i.w.UNFULFILLMENT_NEEDED ||
-                    (null != e.endsAt && t >= e.endsAt && e.isFulfilled()))
-            )
-                return d.p1.CANCELLATION_IN_PROGRESS;
-        })(),
-        t = (0, u.V)(),
-        n = (0, s.bG)([l.A], () => l.A.isFetchedForApplication(_.tv)),
-        { activationStatus: f, activationRequestState: A } = (0, s.cf)([o.A], () => ({
-            activationStatus: o.A.getActivationStatus(),
-            activationRequestState: o.A.getRequestState(),
+i.d(t, { r: () => m });
+var a = i(64700),
+    s = i(17928),
+    n = i(469778),
+    r = i(276666),
+    l = i(545600),
+    c = i(777376),
+    d = i(674567),
+    o = i(788868);
+let u = {
+    [c.gR.INITIAL]: c.p1.CLAIM_IN_PROGRESS,
+    [c.gR.AWAITING_ACTIVATION]: c.p1.CLAIM_IN_PROGRESS,
+    [c.gR.ACTIVATED]: c.p1.CLAIMED,
+    [c.gR.FAILED]: c.p1.NOT_CLAIMED,
+    [c.gR.EXPIRED]: c.p1.NOT_CLAIMED,
+    [c.gR.CANCELLATION_PENDING]: c.p1.CANCELLATION_IN_PROGRESS,
+};
+function m() {
+    let e = (0, d.V)(),
+        t = (0, s.bG)([n.A], () => n.A.isFetchedForApplication(o.tv)),
+        { activationStatus: i, activationRequestState: m } = (0, s.cf)([l.A], () => ({
+            activationStatus: l.A.getActivationStatus(),
+            activationRequestState: l.A.getRequestState(),
         })),
-        g = n && (null == e || e === d.p1.NOT_CLAIMED) && t === u.s.NITRO && !(0, d.Nk)(f?.redirect);
+        A = t && (null != i ? i.state === c.gR.CANCELLATION_PENDING : m === c.Px.NOT_FETCHED);
     return (
         a.useEffect(() => {
-            g && (0, c.x6)(d.n9.XGPP);
-        }, [g]),
+            e === d.s.NITRO && A && (0, r.x6)(c.n9.XGPP);
+        }, [e, A]),
         (function (e) {
-            let { entitlementStatus: t, activationStatus: n, activationRequestState: a, entitlementsLoaded: i } = e,
-                r = a === d.Px.FETCHING || a === d.Px.CANCELLING;
-            return i
-                ? null != t && t !== d.p1.NOT_CLAIMED
-                    ? { status: t, redirect: null, requestInProgress: r }
-                    : a === d.Px.NOT_FETCHED || a === d.Px.FETCHING
-                      ? { status: d.p1.NOT_CLAIMED, redirect: null, requestInProgress: !0 }
-                      : {
-                            status: null != n ? p[n.state] : d.p1.NOT_CLAIMED,
-                            redirect: n?.redirect ?? null,
-                            requestInProgress: r,
-                        }
-                : { status: d.p1.NOT_CLAIMED, redirect: null, requestInProgress: !0 };
-        })({ entitlementStatus: e, activationStatus: f, activationRequestState: A, entitlementsLoaded: n })
+            let { activationStatus: t, activationRequestState: i } = e,
+                a = i === c.Px.FETCHING || i === c.Px.CANCELLING;
+            return i === c.Px.NOT_FETCHED || i === c.Px.FETCHING
+                ? { status: c.p1.NOT_CLAIMED, redirect: null, requestInProgress: !0 }
+                : {
+                      status: null != t ? u[t.state] : c.p1.NOT_CLAIMED,
+                      redirect: t?.redirect ?? null,
+                      requestInProgress: a,
+                  };
+        })({ activationStatus: i, activationRequestState: m })
     );
 }

@@ -8526,7 +8526,7 @@ function rR(e) {
                 onRequestClose: () => t(h5.i.USER_DISMISS),
                 badge: { type: "new", variant: "expressive" },
                 title: hY.intl.string(rE.default.pdaUSE),
-                body: hY.intl.format(rE.default.bsMVNi, { termsLink: (0, rZ.W)() }),
+                body: hY.intl.format(rE.default.bsMVNi, { termsLink: (0, rZ.Wi)() }),
                 graphic: {
                     type: "image",
                     src: "https://cdn.discordapp.com/assets/content/a626e89f21174d458db77a7934048a601ec3147f0d79fbe3d0f33b76d066c155.png",
