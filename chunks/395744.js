@@ -1,32 +1,26 @@
-n.d(t, { A: () => u });
-var a = n(627968);
-n(64700);
-var r = n(503698),
-    l = n.n(r),
-    i = n(744808),
-    s = n(985018),
-    o = n(744053),
-    c = n(778765),
-    d = n(423393);
-let u = (e) => {
-    let { profileFrame: t, isMini: n = !1 } = e,
-        r = t.layers.some((e) => "staple" === e.type && "bottom" === e.anchor);
-    return (0, a.jsx)("div", {
-        className: l()(o.i1, { [o.w1]: !r }),
+l.d(e, { A: () => m });
+var r = l(627968);
+l(64700);
+var s = l(503698),
+    i = l.n(s),
+    n = l(744808),
+    d = l(282389),
+    t = l(985018),
+    c = l(744053),
+    u = l(778765);
+function m(a) {
+    let { frame: e, ...l } = a,
+        s = (0, d.A)(e.skuId);
+    return (0, r.jsx)("div", {
+        className: i()(c.i1, s),
         role: "img",
-        "aria-label": s.intl.formatToPlainString(s.t["DT/PwH"], { a11y_text: t.label }),
-        children: (0, a.jsxs)("div", {
-            className: o.HX,
+        "aria-label": t.intl.formatToPlainString(t.t["DT/PwH"], { a11y_text: e.label }),
+        children: (0, r.jsxs)("div", {
+            className: c.HX,
             children: [
-                (0, a.jsx)("img", {
-                    src: n ? d.A : c.A,
-                    alt: "",
-                    className: l()(o.wt, { [o.WD]: n }),
-                    "aria-hidden": !0,
-                    draggable: !1,
-                }),
-                (0, a.jsx)(i.A, { frame: t }),
+                (0, r.jsx)("img", { src: u.A, alt: "", className: c.wt, "aria-hidden": !0, draggable: !1 }),
+                (0, r.jsx)(n.A, { frame: e, ...l }),
             ],
         }),
     });
-};
+}

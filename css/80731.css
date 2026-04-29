@@ -1610,12 +1610,11 @@ screen and (max-width:485px) {
     z-index: 0;
     --custom-profile-frame-preview-scale: calc(100%/(var(--custom-profile-frame-popout-width) + var(--custom-profile-frame-overflow-horizontal)*2));
     padding-inline: calc(var(--custom-profile-frame-overflow-horizontal)*var(--custom-profile-frame-preview-scale));
-    padding-bottom: calc(var(--custom-profile-frame-popout-overflow-bottom)*var(--custom-profile-frame-preview-scale));
     padding-top: calc(var(--custom-profile-frame-popout-overflow-top)*var(--custom-profile-frame-preview-scale))
 }
 
-.previewContainer_c9a5b2.noBottomStaple_c9a5b2 {
-    padding-bottom: 0
+.previewContainer_c9a5b2.custom-profile-frame-bottom {
+    padding-bottom: calc(var(--custom-profile-frame-popout-overflow-bottom)*var(--custom-profile-frame-preview-scale))
 }
 
 .profileContainer_c9a5b2 {
@@ -1637,7 +1636,7 @@ screen and (max-width:485px) {
     width: 100%
 }
 
-.sampleProfile_c9a5b2.isMini_c9a5b2 {
+.sampleProfile_c9a5b2.small_c9a5b2 {
     border-radius: var(--radius-xs);
     border-width: 1px
 }

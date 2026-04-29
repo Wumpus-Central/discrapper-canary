@@ -1,4 +1,4 @@
-n.d(t, { w: () => t6, A: () => t4 });
+n.d(t, { w: () => t6, A: () => t3 });
 var i = n(627968),
     l = n(64700),
     r = n(989349),
@@ -425,7 +425,7 @@ function eX(e) {
                 : (0, R.openModalLazy)(async () => {
                       let e = { source: eh.Eo.NAGBAR, alertType: (0, eL.$5)(A) },
                           { default: t } = await Promise.all([
-                              n.e("43763"),
+                              n.e("76348"),
                               n.e("80731"),
                               n.e("40258"),
                               n.e("73669"),
@@ -532,19 +532,19 @@ if (21552 == n.j) var e0 = n(821609);
 var e2 = n(334465),
     e5 = n(624458),
     e1 = n(513461),
-    e7 = n(709977),
-    e8 = n(212455),
+    e8 = n(709977),
+    e7 = n(212455),
     e9 = n(182430),
     e6 = n(580537);
-let e3 =
+let e4 =
     21552 == n.j
         ? () => {
               let e = (0, o.bG)([ey.A], () => ey.A.getGuildId(), []),
                   t = (0, o.bG)([eg.A], () => eg.A.getGuild(e), [e]),
-                  l = (0, o.bG)([e8.A], () => (null != e ? e8.A.getRequest(e) : null), [e]),
+                  l = (0, o.bG)([e7.A], () => (null != e ? e7.A.getRequest(e) : null), [e]),
                   r = (0, eQ.zy)(),
                   s = (0, e2.B)(r.pathname, ei.BVt.CHANNEL(t?.id, eG.VV.GUILD_ONBOARDING))?.isExact === !0;
-              if (null == t || !(0, e7.Qd)(t) || s) return null;
+              if (null == t || !(0, e8.Qd)(t) || s) return null;
               let a = l?.applicationStatus ?? e1.B5.STARTED,
                   E = null,
                   _ = null,
@@ -593,7 +593,7 @@ let e3 =
               });
           }
         : null;
-if (21552 == n.j) var e4 = n(477155);
+if (21552 == n.j) var e3 = n(477155);
 var te = n(22877);
 function tt(e) {
     let { buttonText: t, onGoBack: n, onDismiss: l, showCloseButton: r } = e;
@@ -601,7 +601,7 @@ function tt(e) {
         className: te.eR,
         children: [
             r && (0, i.jsx)(I.PM, { onClick: l, className: te.b, noticeType: ei.kqX.BACK_TO_PREVIOUS_SCREEN }),
-            (0, i.jsx)(e0.$, { text: t, variant: "overlay-secondary", size: "sm", icon: e4.r, onClick: n }),
+            (0, i.jsx)(e0.$, { text: t, variant: "overlay-secondary", size: "sm", icon: e3.r, onClick: n }),
         ],
     });
 }
@@ -639,7 +639,7 @@ let tE =
                               (0, $.JK)().goBack();
                           },
                           children: [
-                              (0, i.jsx)(e4.r, { size: "xs", color: "currentColor", className: ta.UE }),
+                              (0, i.jsx)(e3.r, { size: "xs", color: "currentColor", className: ta.UE }),
                               es.intl.string(es.t["13/7kX"]),
                           ],
                       }),
@@ -937,7 +937,7 @@ let t5 = new v.A("Notice"),
               })
             : s;
     },
-    t7 = (e) => {
+    t8 = (e) => {
         let { noticeType: t } = e;
         return (0, i.jsxs)(I.$T, {
             color: I.Hv.DANGER,
@@ -958,7 +958,7 @@ let t5 = new v.A("Notice"),
             ],
         });
     };
-function t8(e) {
+function t7(e) {
     return (0, tQ.isWindows)() && _().satisfies(x.A?.os.release, tJ.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
@@ -977,10 +977,10 @@ function t9(e) {
     return (
         !0 === a
             ? ((t = es.intl.string(es.t.ppW3ri)),
-              (n = (0, i.jsx)(I.eC, { href: t8(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
+              (n = (0, i.jsx)(I.eC, { href: t7(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
             : 0 === E
               ? ((t = es.intl.string(es.t.j4gGA4)),
-                (n = (0, i.jsx)(I.eC, { href: t8(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
+                (n = (0, i.jsx)(I.eC, { href: t7(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
               : tw.Ay.supports(t2.O5.LOOPBACK)
                 ? ((t = es.intl.string(es.t.dNAJ18)),
                   (_ = !0),
@@ -1015,7 +1015,7 @@ function t9(e) {
 function t6(e) {
     D.A.dismiss(null != e ? { untilAtLeast: s()(e) } : void 0);
 }
-let t3 =
+let t4 =
     21552 == n.j
         ? l.memo(function () {
               let e = (0, o.bG)([eR.default], () => eR.default.getCurrentUser()),
@@ -1070,7 +1070,7 @@ let t3 =
                   case ei.kqX.LURKING_GUILD:
                       return (0, i.jsx)(tE, {});
                   case ei.kqX.PENDING_MEMBER:
-                      return (0, i.jsx)(e3, {});
+                      return (0, i.jsx)(e4, {});
                   case ei.kqX.INVITED_TO_SPEAK:
                       return (0, i.jsx)(tX, {});
                   case ei.kqX.GUILD_RAID_NOTIFICATION:
@@ -1289,7 +1289,7 @@ let t3 =
                   case ei.kqX.NO_INPUT_DETECTED:
                       return (0, i.jsx)(t9, { noticeType: r.type });
                   case ei.kqX.NO_INPUT_DEVICES_DETECTED:
-                      return (0, i.jsx)(t7, { noticeType: r.type });
+                      return (0, i.jsx)(t8, { noticeType: r.type });
                   case ei.kqX.HARDWARE_MUTE:
                       if (null != r.metadata) {
                           let { vendor: e, model: t } = r.metadata;
@@ -1371,10 +1371,10 @@ let t3 =
                                               n.e("63009"),
                                               n.e("16933"),
                                               n.e("62349"),
-                                              n.e("7026"),
+                                              n.e("80848"),
                                               n.e("45650"),
                                               n.e("97189"),
-                                              n.e("48418"),
+                                              n.e("76348"),
                                               n.e("13520"),
                                               n.e("62296"),
                                               n.e("17546"),
@@ -1390,7 +1390,6 @@ let t3 =
                                               n.e("10471"),
                                               n.e("63232"),
                                               n.e("64827"),
-                                              n.e("30938"),
                                               n.e("23808"),
                                               n.e("11301"),
                                               n.e("60235"),
@@ -1398,11 +1397,12 @@ let t3 =
                                               n.e("79428"),
                                               n.e("29963"),
                                               n.e("47834"),
-                                              n.e("98329"),
+                                              n.e("30938"),
                                               n.e("20317"),
                                               n.e("84569"),
                                               n.e("2368"),
                                               n.e("24313"),
+                                              n.e("74016"),
                                               n.e("48405"),
                                               n.e("63185"),
                                               n.e("19551"),
@@ -1665,7 +1665,7 @@ let t3 =
                                                   n.e("13520"),
                                                   n.e("77083"),
                                                   n.e("63009"),
-                                                  n.e("7026"),
+                                                  n.e("80848"),
                                                   n.e("23309"),
                                                   n.e("35429"),
                                                   n.e("10471"),
@@ -1923,7 +1923,7 @@ let t3 =
               }
           })
         : null;
-function t4() {
+function t3() {
     let { analyticsLocations: e } = (0, G.Ay)(L.A.NOTICE);
-    return (0, i.jsx)(G.f5, { value: e, children: (0, i.jsx)(t3, {}) });
+    return (0, i.jsx)(G.f5, { value: e, children: (0, i.jsx)(t4, {}) });
 }

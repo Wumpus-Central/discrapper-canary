@@ -479,7 +479,7 @@ let tR = (e) => {
                     }),
                 });
             case o.R.PROFILE_FRAME:
-                return (0, i.jsx)("div", { className: tf.ob, children: (0, i.jsx)(ef.A, { profileFrame: t }) });
+                return (0, i.jsx)("div", { className: tf.ob, children: (0, i.jsx)(ef.A, { frame: t }) });
             case o.R.NAMEPLATE:
                 return (0, i.jsx)("div", {
                     className: tf.Dz,

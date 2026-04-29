@@ -732,7 +732,7 @@ let t$ = r.memo(function (e) {
             W = r.useCallback(() => {
                 (0, ti.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("7026"),
+                        n.e("80848"),
                         n.e("17918"),
                         n.e("98552"),
                         n.e("86672"),

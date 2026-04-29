@@ -3,7 +3,7 @@ var n = s(627968),
     l = s(64700),
     r = s(503698),
     t = s.n(r),
-    a = s(123924),
+    a = s(925747),
     d = s(17928),
     o = s(73939),
     u = s(717421),
@@ -15,8 +15,8 @@ var n = s(627968),
     f = s(80682),
     j = s(793574),
     I = s(688810),
-    P = s(480335),
-    m = s(31956),
+    m = s(480335),
+    P = s(31956),
     g = s(361628),
     y = s(744808),
     O = s(282389),
@@ -25,9 +25,9 @@ var n = s(627968),
     C = s(645507),
     E = s(267102),
     N = s(71393),
-    U = s(562153),
-    k = s(183555),
-    S = s(47675),
+    k = s(562153),
+    S = s(183555),
+    U = s(47675),
     b = s(570287),
     F = s(999291);
 let R = (0, s(945810).mj)({
@@ -96,8 +96,8 @@ var el = s(700174),
     ef = s(734057),
     ej = s(232835),
     eI = s(381941),
-    eP = s(901123),
-    em = s(656884);
+    em = s(901123),
+    eP = s(656884);
 function eg(e) {
     var i;
     let s,
@@ -119,7 +119,7 @@ function eg(e) {
                         (0, eA.W)({ channelId: l.id, source: i }),
                             await ec.A.sendStickers(l.id, [ex.w], "", { location: eI.Hx.SEND_WAVE }),
                             e?.(),
-                            (0, eh.pX)(Z.BVt.CHANNEL(eP.ME, l.id)),
+                            (0, eh.pX)(Z.BVt.CHANNEL(em.ME, l.id)),
                             ec.A.jumpToMessage({
                                 channelId: l.id,
                                 messageId: ej.A.getLastMessage(l.id)?.id ?? "",
@@ -138,13 +138,13 @@ function eg(e) {
         }, [t, p]);
     return a
         ? (0, n.jsx)("div", {
-              className: em.$J,
+              className: eP.$J,
               children:
                   null != d
                       ? (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsx)("div", {
-                                    className: em.i3,
+                                    className: eP.i3,
                                     children: (0, n.jsx)(et.P, { color: ea.A.colors.STATUS_DANGER }),
                                 }),
                                 (0, n.jsx)(ed.E, { variant: "text-sm/normal", color: "text-muted", children: d }),
@@ -176,9 +176,9 @@ var ey = s(364522),
     eC = s(994500),
     eE = s(351906),
     eN = s(927578),
-    eU = s(694720),
-    ek = s(744753),
-    eS = s(559506),
+    ek = s(694720),
+    eS = s(744753),
+    eU = s(559506),
     eb = s(886891),
     eF = s(501193),
     eR = s(383448),
@@ -204,7 +204,7 @@ function eB(e) {
             channelId: o,
             onClose: u,
         } = e,
-        c = U.Ay.useName(r?.id, o, i),
+        c = k.Ay.useName(r?.id, o, i),
         { relationshipType: p, originApplicationId: A } = (0, d.cf)([eC.A], () => ({
             relationshipType: eC.A.getRelationshipType(i.id),
             originApplicationId: eC.A.getOriginApplicationId(i.id),
@@ -214,12 +214,12 @@ function eB(e) {
         f = i.id === s.id,
         j = l?.widgets != null && l.widgets.length > 0,
         I = (0, eN.TW)(s),
-        P = (0, b.A)(i.id, r?.id);
+        m = (0, b.A)(i.id, r?.id);
     return (0, n.jsxs)(ey.Ip, {
         fade: !0,
-        className: em.rf,
+        className: eP.rf,
         children: [
-            (0, n.jsx)(eS.A, { userId: i.id }),
+            (0, n.jsx)(eU.A, { userId: i.id }),
             (0, n.jsx)(eL.Ay, {
                 user: i,
                 guildId: r?.id,
@@ -229,7 +229,7 @@ function eB(e) {
                 pronouns: l?.pronouns,
                 onClose: u,
                 usernameIcon: i.hasAvatarForGuild(r?.id) && (0, n.jsx)(eH.A, { user: i, nickname: c }),
-                trailing: (0, n.jsx)(eU.A, { displayProfile: l, themeType: eD.d.POPOUT, onClose: u }),
+                trailing: (0, n.jsx)(ek.A, { displayProfile: l, themeType: eD.d.POPOUT, onClose: u }),
             }),
             p === Z.eA$.PENDING_INCOMING &&
                 (0, n.jsx)(q.A.Overlay, {
@@ -251,12 +251,12 @@ function eB(e) {
             ),
             (0, n.jsx)(eR.A, { user: i }),
             !f && (0, n.jsx)(ez.A, { user: i, onOpenProfile: (e) => a?.({ tabSection: e }) }),
-            P && (0, n.jsx)(eq.A, { user: i, onClose: u }),
+            m && (0, n.jsx)(eq.A, { user: i, onClose: u }),
             l?.private && (0, n.jsx)(q.A.Overlay, { children: (0, n.jsx)(eF.A, { username: c }) }),
-            f && (0, n.jsx)(ek.A, { isPremiumUser: I, onInteraction: u }),
+            f && (0, n.jsx)(eS.A, { isPremiumUser: I, onInteraction: u }),
             i.isProvisional
                 ? (0, n.jsx)(q.A.Overlay, {
-                      className: em.Nr,
+                      className: eP.Nr,
                       children: (0, n.jsx)(e_.A, {
                           heading: es.intl.string(es.t.Iyka0U),
                           headingIcon: (0, n.jsx)(eO.E, { size: "xxs", color: ea.A.colors.TEXT_STRONG }),
@@ -291,7 +291,7 @@ function e$(e) {
         } = e,
         { analyticsLocations: et } = (0, I.Ay)([...Y, j.A.USER_PROFILE_POPOUT]),
         ea = (0, E.aL)(),
-        ed = (0, k.pb)({ layout: "POPOUT", userId: i.id, guildId: r, channelId: z, messageId: D, roleId: B }),
+        ed = (0, S.pb)({ layout: "POPOUT", userId: i.id, guildId: r, channelId: z, messageId: D, roleId: B }),
         eo = (0, d.bG)([N.A], () => (null != r ? N.A.getGuild(r) : null)),
         eu = l.useMemo(() => (null != r ? { [r]: [i.id] } : {}), [r, i.id]);
     (0, f.Eq)(eu, "UserProfilePopout");
@@ -301,11 +301,11 @@ function e$(e) {
         eh = (0, b.A)(i.id, r),
         { enabled: ef } = R.useConfig({ location: "UserProfilePopout" }),
         { isHoveringOrFocusing: ej, isHovering: eI } = (0, v.A)(ec),
-        eP = (0, _.fC)(),
+        em = (0, _.fC)(),
         ey = (0, g.A)(ep?.profileFrame?.skuId, "UserProfilePopout"),
         eO = (0, O.A)(ep?.profileFrame?.skuId);
-    (0, m.A)({ skuId: ep?.profileFrame?.skuId, openedAt: X, context: ed, analyticsLocations: et });
-    let eT = (0, u.z)({ opacity: +(null != eP.interactionType), config: { duration: 150 } });
+    (0, P.A)({ skuId: ep?.profileFrame?.skuId, openedAt: X, context: ed, analyticsLocations: et });
+    let eT = (0, u.z)({ opacity: +(null != em.interactionType), config: { duration: 150 } });
     l.useEffect(() => {
         K?.(ec?.current);
     }, [ec, K, ey?.skuId]);
@@ -324,51 +324,51 @@ function e$(e) {
                     appContext: J,
                 });
         },
-        eU = ee ? "div" : p.l,
-        ek = (0, T.GV)(),
-        eS = U.Ay.useName(eo?.id, z, i);
+        ek = ee ? "div" : p.l,
+        eS = (0, T.GV)(),
+        eU = k.Ay.useName(eo?.id, z, i);
     return (0, n.jsx)(I.f5, {
         value: et,
-        children: (0, n.jsx)(k.of, {
+        children: (0, n.jsx)(S.of, {
             value: ed,
             openedAt: X,
             fetchStartedAt: ep?.fetchStartedAt,
             fetchEndedAt: ep?.fetchEndedAt,
             isLoaded: ep?.isLoaded,
             children: (0, n.jsx)(_.Hl, {
-                value: eP,
-                children: (0, n.jsxs)(eU, {
+                value: em,
+                children: (0, n.jsxs)(ek, {
                     ref: ec,
-                    "aria-labelledby": ek,
+                    "aria-labelledby": eS,
                     onClick: ei,
                     children: [
                         eh &&
                             eA &&
                             (0, n.jsx)(o.F, {
                                 component: "div",
-                                className: em.g$,
+                                className: eP.g$,
                                 children: (0, n.jsx)(A.F, {
                                     children: (0, n.jsx)(eg, { userId: i.id, onSendWave: $ }),
                                 }),
                             }),
                         (0, n.jsx)(x.A, {
-                            children: (0, n.jsx)(h.H, { id: ek, children: es.intl.format(es.t.KRe1Fk, { name: eS }) }),
+                            children: (0, n.jsx)(h.H, { id: eS, children: es.intl.format(es.t.KRe1Fk, { name: eU }) }),
                         }),
                         (0, n.jsx)(h.F, {
                             children: (0, n.jsxs)(q.A, {
                                 user: i,
                                 displayProfile: ep,
                                 themeType: eD.d.POPOUT,
-                                className: t()(em.BK, eO),
+                                className: t()(eP.BK, eO),
                                 isPrivate: ep?.private === !0,
                                 children: [
                                     ep?.private === !0 && (0, n.jsx)(V.A, {}),
-                                    null != eP.interactionType &&
-                                        (0, n.jsx)(a.animated.div, { style: eT, className: em.tB }),
+                                    null != em.interactionType &&
+                                        (0, n.jsx)(a.animated.div, { style: eT, className: eP.tB }),
                                     (0, n.jsxs)(H.A, {
                                         children: [
                                             (0, n.jsx)(en, {
-                                                shouldShowTooltip: null === eP.interactionType,
+                                                shouldShowTooltip: null === em.interactionType,
                                                 user: i,
                                                 guildId: r,
                                                 channelId: z,
@@ -392,7 +392,7 @@ function e$(e) {
                                                               label: es.intl.string(es.t["+Xp3hq"]),
                                                               action: () => {
                                                                   eN(),
-                                                                      (0, S.Wn)({
+                                                                      (0, U.Wn)({
                                                                           action: "PRESS_VIEW_PROFILE",
                                                                           analyticsLocations: et,
                                                                           ...ed,
@@ -404,7 +404,7 @@ function e$(e) {
                                         ],
                                     }),
                                     (0, n.jsxs)("div", {
-                                        className: em.wx,
+                                        className: eP.wx,
                                         children: [
                                             (0, n.jsx)(L.A, {
                                                 user: i,
@@ -412,7 +412,7 @@ function e$(e) {
                                                 guildId: r,
                                                 themeType: eD.d.POPOUT,
                                             }),
-                                            (0, n.jsx)(M.A, { userId: i.id, className: em.oR, onClose: $ }),
+                                            (0, n.jsx)(M.A, { userId: i.id, className: eP.oR, onClose: $ }),
                                             (0, n.jsx)(G.A, {
                                                 user: i,
                                                 displayProfile: ep,
@@ -437,7 +437,7 @@ function e$(e) {
                                         currentUser: s,
                                         displayProfile: ep,
                                         guild: eo,
-                                        isHoveringOrFocusing: null == eP.interactionType && ej,
+                                        isHoveringOrFocusing: null == em.interactionType && ej,
                                         onOpenProfile: Q ? void 0 : eN,
                                         channelId: z,
                                         onClose: $,
@@ -451,8 +451,8 @@ function e$(e) {
                                         disableAutoFocus: ee,
                                     }),
                                     ep?.profileEffect != null &&
-                                        (0, n.jsx)(P.A, { skuId: ep?.profileEffect?.skuId, isHovering: eI }),
-                                    null != ey && (0, n.jsx)(y.A, { frame: ey, layout: "POPOUT" }),
+                                        (0, n.jsx)(m.A, { skuId: ep?.profileEffect?.skuId, isHovering: eI }),
+                                    null != ey && (0, n.jsx)(y.A, { frame: ey }),
                                 ],
                             }),
                         }),

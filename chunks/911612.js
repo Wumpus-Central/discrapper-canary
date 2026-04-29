@@ -32,7 +32,7 @@ function u(e) {
                           action: () =>
                               (0, r.openModalLazy)(async () => {
                                   let { default: a } = await Promise.all([
-                                      t.e("8528"),
+                                      t.e("80848"),
                                       t.e("11585"),
                                       t.e("3589"),
                                       t.e("89916"),
@@ -41,8 +41,8 @@ function u(e) {
                                       t.e("20379"),
                                       t.e("19193"),
                                       t.e("7775"),
-                                      t.e("37038"),
                                       t.e("58608"),
+                                      t.e("37038"),
                                       t.e("9431"),
                                   ]).then(t.bind(t, 113194));
                                   return (t) => (0, n.jsx)(a, { ...t, channelType: s.rbe.GUILD_TEXT, guildId: e.id });
@@ -58,7 +58,7 @@ function u(e) {
                           action: () =>
                               (0, r.openModalLazy)(async () => {
                                   let { default: a } = await Promise.all([
-                                      t.e("8528"),
+                                      t.e("80848"),
                                       t.e("11585"),
                                       t.e("3589"),
                                       t.e("89916"),
@@ -67,8 +67,8 @@ function u(e) {
                                       t.e("20379"),
                                       t.e("19193"),
                                       t.e("7775"),
-                                      t.e("37038"),
                                       t.e("58608"),
+                                      t.e("37038"),
                                       t.e("9431"),
                                   ]).then(t.bind(t, 113194));
                                   return (t) =>

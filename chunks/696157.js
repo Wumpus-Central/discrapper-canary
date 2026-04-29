@@ -1,4 +1,4 @@
-n.d(t, { z9: () => ey, w_: () => ej, Ay: () => eb, th: () => eI });
+n.d(t, { z9: () => eI, w_: () => ej, Ay: () => eb, th: () => ey });
 var l = n(627968),
     s = n(64700),
     i = n(503698),
@@ -24,12 +24,12 @@ var l = n(627968),
     _ = n(661531),
     S = n(549254),
     R = n(574553);
-function y(e) {
+function I(e) {
     let { as: t, muted: n = !1, selected: s = !1, className: i, ...r } = e,
         o = t ?? v.D;
     return (0, l.jsx)(o, { ...r, className: a()(R.bG, i, { [R.SU]: n, [R.wH]: s }) });
 }
-var I = n(778712),
+var y = n(778712),
     b = n(192308),
     M = n(789645),
     w = n(308528),
@@ -159,7 +159,7 @@ function eR(e) {
         );
     return (0, l.jsx)(S.U, { eventTargetRef: t, className: eE.a1, dataBinding: { ...c, DimmerWidth: (i ?? 0) + 32 } });
 }
-let ey = (e) => {
+let eI = (e) => {
     let {
             route: t,
             selected: n,
@@ -183,8 +183,8 @@ let ey = (e) => {
             ..._
         } = e,
         { width: S, ref: R } = (0, U.Ay)(),
-        I = s.useRef(null),
-        b = C ?? I;
+        y = s.useRef(null),
+        b = C ?? y;
     return (0, l.jsx)(ee, {
         className: a()(eE.Ix, { [eE.Ij]: g.Fr }, p),
         onClick: m,
@@ -193,7 +193,7 @@ let ey = (e) => {
         "aria-posinset": A,
         "aria-setsize": x,
         ref: b,
-        children: (0, l.jsxs)(y, {
+        children: (0, l.jsxs)(I, {
             as: "div",
             selected: n,
             className: a()(o, eE.bG, eE.$J, { [eE.Q2]: n }),
@@ -230,7 +230,7 @@ let ey = (e) => {
         }),
     });
 };
-function eI(e) {
+function ey(e) {
     let {
             channel: t,
             selected: i = !1,
@@ -259,8 +259,8 @@ function eI(e) {
         ),
         eA = s.useRef(null),
         eR = S ?? eA,
-        ey = (0, m.A)(eR, eg),
-        { showMenuItemPopover: eI, markMenuItemPopoverAsDismissed: eb } = (0, ei.z)({
+        eI = (0, m.A)(eR, eg),
+        { showMenuItemPopover: ey, markMenuItemPopoverAsDismissed: eb } = (0, ei.z)({
             location: "PrivateChannel",
             isChannelSelected: !0 === i,
             isTargetInViewport: em,
@@ -270,7 +270,7 @@ function eI(e) {
             avatarSrc: eM,
             avatarDecorationSrc: ew,
             eventHandlers: eO,
-        } = (0, eo.A)({ userId: r?.id, size: I._3.SIZE_32, animateOnHover: !(i || k || K || J) }),
+        } = (0, eo.A)({ userId: r?.id, size: y._3.SIZE_32, animateOnHover: !(i || k || K || J) }),
         [eU, eD] = s.useState({ maskImage: "none" }),
         eP = s.useRef(null),
         ek = t.isMultiUserDM(),
@@ -347,7 +347,7 @@ function eI(e) {
                               let { default: e } = await Promise.all([
                                   n.e("98944"),
                                   n.e("17546"),
-                                  n.e("7026"),
+                                  n.e("80848"),
                                   n.e("98042"),
                                   n.e("26132"),
                                   n.e("46652"),
@@ -462,7 +462,7 @@ function eI(e) {
                     className: a()(eE.Ix, eE.dm),
                     role: n,
                     focusProps: { ...eT, focusTarget: eu, ringTarget: eR },
-                    ref: ey,
+                    ref: eI,
                     onMouseEnter: eY,
                     onMouseLeave: eX,
                     onMouseDown: e2,
@@ -473,7 +473,7 @@ function eI(e) {
                     "aria-posinset": R,
                     children: [
                         eq ? (0, l.jsx)("div", { className: a()(eE.dM, { [eE.SU]: ez }) }) : null,
-                        (0, l.jsxs)(y, {
+                        (0, l.jsxs)(I, {
                             className: a()(eE.bG, { [eE.Q2]: i || J }),
                             as: "div",
                             onClick: e5,
@@ -498,7 +498,7 @@ function eI(e) {
                                     children: (0, l.jsx)(G.A, {
                                         ref: e7,
                                         avatar: (() => {
-                                            let e = I._3.SIZE_32;
+                                            let e = y._3.SIZE_32;
                                             if (t.isMultiUserDM())
                                                 if (t.recipients.length >= 2 && null == t.icon)
                                                     return (0, l.jsx)(ea.A, {
@@ -526,7 +526,7 @@ function eI(e) {
                                                 r.isSystemUser() || (n = (0, D.A)(g) ? ex.clD.STREAMING : T),
                                                 (0, l.jsx)(ev, {
                                                     ...eO,
-                                                    size: I._3.SIZE_32,
+                                                    size: y._3.SIZE_32,
                                                     src: eM,
                                                     avatarDecoration: ew,
                                                     status: n,
@@ -606,7 +606,7 @@ function eI(e) {
                                 }),
                             ],
                         }),
-                        eI && (0, l.jsx)(es.A, { targetElementRef: eR, markMenuItemPopoverAsDismissed: eb }),
+                        ey && (0, l.jsx)(es.A, { targetElementRef: eR, markMenuItemPopoverAsDismissed: eb }),
                     ],
                 });
             },
@@ -646,14 +646,14 @@ let eb =
                       [t, i],
                   );
               return t.isMultiUserDM()
-                  ? (0, l.jsx)(eI, {
+                  ? (0, l.jsx)(ey, {
                         channel: t,
                         selected: n,
                         isTyping: u,
                         status: r.status === ex.clD.ONLINE ? ex.clD.ONLINE : void 0,
                         ...s,
                     })
-                  : (0, l.jsx)(eI, {
+                  : (0, l.jsx)(ey, {
                         channel: t,
                         selected: n,
                         user: i,

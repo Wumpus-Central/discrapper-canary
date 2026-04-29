@@ -444,7 +444,7 @@ function ek(e) {
                           v(eS.Ps.STAGE_INSTANCE),
                               (0, x.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      l.e("7026"),
+                                      l.e("80848"),
                                       l.e("11585"),
                                       l.e("3589"),
                                       l.e("89916"),
@@ -791,8 +791,8 @@ var eJ = l(789645),
     e0 = l(81466),
     e1 = l(21599),
     e9 = l(279208),
-    e7 = l(747007),
-    e8 = l(710358),
+    e8 = l(747007),
+    e7 = l(710358),
     e4 = l(958590),
     e3 = l(954571),
     e5 = l(957565),
@@ -824,7 +824,7 @@ function tt(e) {
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(eJ.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e8.A, {
+            (0, i.jsx)(e7.A, {
                 children: (0, i.jsx)("div", {
                     className: e2.zc,
                     children: (0, i.jsx)(e0.C, {
@@ -850,7 +850,7 @@ function tt(e) {
             (0, i.jsxs)("div", {
                 className: e2.EZ,
                 children: [
-                    (0, i.jsx)(e7.I, {
+                    (0, i.jsx)(e8.I, {
                         value: m,
                         autoFocus: !1,
                         onCopy: (e) => {

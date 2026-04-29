@@ -141,7 +141,7 @@ function U(e) {
                             let { default: e } = await Promise.all([
                                 n.e("13520"),
                                 n.e("98944"),
-                                n.e("7026"),
+                                n.e("80848"),
                                 n.e("17546"),
                                 n.e("26132"),
                                 n.e("46652"),
