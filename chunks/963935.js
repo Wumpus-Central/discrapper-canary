@@ -33,7 +33,7 @@ function o(e) {
     return e.every((e) => 5 === e.type) && e.length > 0;
 }
 function l(e) {
-    return e.parent?.parent?.type === 2 && (null != e.useTitle || null != e.useSubnavLabel);
+    return null != e.useTitle || null != e.useSubnavLabel;
 }
 function _(e) {
     return e.parent?.type === 11;

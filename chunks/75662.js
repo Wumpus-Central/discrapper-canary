@@ -14,7 +14,6 @@ e.exports = {
     R4: "promoCardAssetContainer_e99fef",
     Ys: "promoCardAsset_e99fef",
     Cy: "promoCardAssetImageRounded_e99fef",
-    EM: "promoCardAssetImageLockedRounded_e99fef",
     MC: "lockIconContainer_e99fef",
     oP: "claimedFooterContainer_e99fef",
     t0: "claimedFooter_e99fef",
