@@ -223,18 +223,18 @@ let G = {
         linkText: { label: "Link Text", type: "text", defaultValue: "" },
     },
 };
-var $ = l(821609),
-    H = l(65738);
+var H = l(821609),
+    $ = l(65738);
 let W = {
         balance: { label: "Balance", type: "number", defaultValue: 150 },
         balanceWidgetMode: {
             label: "Balance Widget Mode",
             type: "select",
             options: [
-                { label: "Default", value: H.k7.DEFAULT },
-                { label: "Selected", value: H.k7.SELECTED },
+                { label: "Default", value: $.k7.DEFAULT },
+                { label: "Selected", value: $.k7.SELECTED },
             ],
-            defaultValue: H.k7.DEFAULT,
+            defaultValue: $.k7.DEFAULT,
         },
         showNotificationBadge: { label: "Show Notification Badge", type: "boolean", defaultValue: !1 },
         shouldUseTabularNums: { label: "Use Tabular Nums Font Variant", type: "boolean", defaultValue: !1 },
@@ -253,8 +253,8 @@ let W = {
                 (0, s.jsxs)("div", {
                     className: U.YG,
                     children: [
-                        (0, s.jsx)(H.Gy, { ...a, balance: t ? null : n, className: l ? U.jG : void 0 }),
-                        (0, s.jsx)($.$, { onClick: () => i(a.balance), text: "Update Balance" }),
+                        (0, s.jsx)($.Gy, { ...a, balance: t ? null : n, className: l ? U.jG : void 0 }),
+                        (0, s.jsx)(H.$, { onClick: () => i(a.balance), text: "Update Balance" }),
                     ],
                 })
             );
@@ -274,8 +274,8 @@ let W = {
                 (0, s.jsxs)("div", {
                     className: U.YG,
                     children: [
-                        (0, s.jsx)(H.Gy, { ...a, balance: n, className: l ? U.jG : void 0 }),
-                        (0, s.jsx)($.$, {
+                        (0, s.jsx)($.Gy, { ...a, balance: n, className: l ? U.jG : void 0 }),
+                        (0, s.jsx)(H.$, {
                             onClick: () => {
                                 i(null),
                                     setTimeout(() => {
@@ -347,7 +347,7 @@ let eP = "checkout-error-boundary-test-modal",
                         children:
                             "PaymentModal Step within PaymentContext loaded. Click below to navigate to a mock error step that will throw — the CheckoutErrorBoundary baked into PaymentContextProvider will catch it.",
                     }),
-                    (0, s.jsx)($.$, {
+                    (0, s.jsx)(H.$, {
                         variant: "primary",
                         text: "Navigate to Error Step",
                         onClick: () => e(m.pn.REVIEW),
@@ -447,7 +447,7 @@ let e_ = {
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
-                                        (0, s.jsx)($.$, {
+                                        (0, s.jsx)(H.$, {
                                             variant: "primary",
                                             text: "Select Plan",
                                             onClick: () => (0, ey.A)({ subscriptionTier: l, analyticsLocations: j }),
@@ -495,7 +495,7 @@ let e_ = {
                                                 (0, s.jsx)(J.m, {
                                                     text: "Need Promotion Code",
                                                     shouldShow: h.length < 1,
-                                                    children: (0, s.jsx)($.$, {
+                                                    children: (0, s.jsx)(H.$, {
                                                         variant: "primary",
                                                         text: "Open Link",
                                                         disabled: h.length < 1,
@@ -552,7 +552,7 @@ let e_ = {
                                 (0, s.jsx)(J.m, {
                                     text: "Already subscribed",
                                     shouldShow: v,
-                                    children: (0, s.jsx)($.$, {
+                                    children: (0, s.jsx)(H.$, {
                                         variant: "primary",
                                         text: "Open Link",
                                         disabled: v,
@@ -590,9 +590,9 @@ let e_ = {
                                                                           R.message,
                                                                       ],
                                                                   }),
-                                                              (0, s.jsx)(H.Gy, {
+                                                              (0, s.jsx)($.Gy, {
                                                                   balance: _ ?? 0,
-                                                                  balanceWidgetMode: H.k7.SELECTED,
+                                                                  balanceWidgetMode: $.k7.SELECTED,
                                                               }),
                                                           ],
                                                       }),
@@ -604,7 +604,7 @@ let e_ = {
                                             value: L,
                                             onChange: (e) => w(e),
                                         }),
-                                        (0, s.jsx)($.$, {
+                                        (0, s.jsx)(H.$, {
                                             variant: "primary",
                                             text: "Redeem Virtual Currency for SKU",
                                             loading: N,
@@ -657,7 +657,7 @@ let e_ = {
                                                 }),
                                             ],
                                         }),
-                                        (0, s.jsx)($.$, {
+                                        (0, s.jsx)(H.$, {
                                             variant: "primary",
                                             text: "Open App Subs Modal for Activity",
                                             onClick: () =>
@@ -697,7 +697,7 @@ let e_ = {
                                                     value: G,
                                                     onChange: (e) => W(e),
                                                 }),
-                                                (0, s.jsx)($.$, {
+                                                (0, s.jsx)(H.$, {
                                                     variant: "primary",
                                                     text: "Open Standard Payment Modal for SKU",
                                                     onClick: () =>
@@ -720,12 +720,12 @@ let e_ = {
                                         gap: 8,
                                         align: "end",
                                         children: [
-                                            (0, s.jsx)($.$, {
+                                            (0, s.jsx)(H.$, {
                                                 variant: "primary",
                                                 text: "Reset SubscriptionPlanStore",
                                                 onClick: () => (0, S.YG)(),
                                             }),
-                                            (0, s.jsx)($.$, {
+                                            (0, s.jsx)(H.$, {
                                                 variant: "primary",
                                                 text: "Reset SubscriptionStore",
                                                 onClick: () => (0, eo.uZ)(),
@@ -736,7 +736,7 @@ let e_ = {
                                 (0, s.jsx)(el.c, {}),
                                 (0, s.jsx)(en.n, {
                                     label: "Dismissible Content Framework",
-                                    children: (0, s.jsx)($.$, {
+                                    children: (0, s.jsx)(H.$, {
                                         variant: "primary",
                                         text: "Reset DismissibleContentFrameworkStore",
                                         onClick: () => (0, eu.Ab)(),
@@ -771,7 +771,7 @@ let e_ = {
                                     " catches it and logs to Sentry with checkout context.",
                                 ],
                             }),
-                            (0, s.jsx)($.$, {
+                            (0, s.jsx)(H.$, {
                                 variant: "primary",
                                 text: "Open Error Boundary Test Modal",
                                 onClick: () =>
@@ -1030,8 +1030,8 @@ let eM = () => ({
         },
     };
 var eG = l(27192),
-    e$ = l(359778),
-    eH = l(939249),
+    eH = l(359778),
+    e$ = l(939249),
     eW = l(97808),
     eF = l(778712),
     ez = l(401648),
@@ -1076,9 +1076,9 @@ let eZ = {
                         parentTransitionState: f.ip.ENTERED,
                     }),
                 }),
-                (0, s.jsxs)(e$.Z, {
+                (0, s.jsxs)(eH.Z, {
                     className: eQ.nd,
-                    type: e$.s.PRIMARY,
+                    type: eH.s.PRIMARY,
                     style: { width: m },
                     children: [
                         (0, s.jsxs)("div", {
@@ -1112,7 +1112,7 @@ let eZ = {
                                   children: i.map((e) => {
                                       let t = r.has(e.id);
                                       return (0, s.jsxs)(
-                                          eH.D,
+                                          e$.D,
                                           {
                                               className: eQ.nM,
                                               role: "checkbox",
@@ -1206,7 +1206,7 @@ let e6 = {
             {
                 name: "Edit Button",
                 component: function (e) {
-                    let { variant: t, showOverlay: l, accessibleLabel: a } = e;
+                    let { variant: t, showOverlayOnHover: l, accessibleLabel: a } = e;
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
@@ -1214,14 +1214,14 @@ let e6 = {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
-                                showOverlay: l,
+                                showOverlayOnHover: l,
                                 children: (0, s.jsx)(e1, {}),
                             }),
                             (0, s.jsx)(e0.NW, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
-                                showOverlay: l,
+                                showOverlayOnHover: l,
                                 children: (0, s.jsx)(e2, {}),
                             }),
                         ],
@@ -1230,14 +1230,20 @@ let e6 = {
                 id: "edit-tile-button",
                 controls: {
                     variant: e6,
-                    showOverlay: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
+                    showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                 },
             },
             {
                 name: "Edit Button - Deletable",
                 component: function (e) {
-                    let { variant: t, showOverlay: l, accessibleLabel: a, deleteType: n, deleteAccessibleLabel: i } = e,
+                    let {
+                            variant: t,
+                            showOverlayOnHover: l,
+                            accessibleLabel: a,
+                            deleteType: n,
+                            deleteAccessibleLabel: i,
+                        } = e,
                         r = { type: n, accessibleLabel: i, onClick: () => {} };
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
@@ -1246,7 +1252,7 @@ let e6 = {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
-                                showOverlay: l,
+                                showOverlayOnHover: l,
                                 deleteButtonConfig: r,
                                 children: (0, s.jsx)(e1, {}),
                             }),
@@ -1254,7 +1260,7 @@ let e6 = {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
-                                showOverlay: l,
+                                showOverlayOnHover: l,
                                 deleteButtonConfig: r,
                                 children: (0, s.jsx)(e2, {}),
                             }),
@@ -1264,7 +1270,7 @@ let e6 = {
                 id: "deletable-edit-tile-button",
                 controls: {
                     variant: e6,
-                    showOverlay: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
+                    showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                     deleteType: {
                         label: "Delete Button Type",
@@ -1286,7 +1292,7 @@ let e6 = {
     };
 var e8 = l(687021),
     e9 = l(487233),
-    e4 = l(230635),
+    e4 = l(120386),
     e7 = l(473219);
 let e5 = { value: "", label: "No Guild (main profile)" };
 var te = l(99696),
@@ -1359,7 +1365,7 @@ let tc = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                                 glowAmount: e.glowAmount,
                                 blurAmount: e.blurAmount,
                                 hueRotate: e.hueRotate,
-                                cardType: e$.s.PRIMARY,
+                                cardType: eH.s.PRIMARY,
                                 glowing: !0,
                                 children: (0, s.jsxs)("div", {
                                     style: { padding: 16, display: "flex", flexDirection: "column", gap: 8 },
@@ -1525,12 +1531,12 @@ let tc = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                                     (0, s.jsx)(tr.L, {
                                         targetElementRef: x,
                                         ...C,
-                                        children: (0, s.jsx)($.$, { buttonRef: x, variant: "primary", text: "Left" }),
+                                        children: (0, s.jsx)(H.$, { buttonRef: x, variant: "primary", text: "Left" }),
                                     }),
                                     (0, s.jsx)(tr.L, {
                                         targetElementRef: g,
                                         ...C,
-                                        children: (0, s.jsx)($.$, { buttonRef: g, variant: "primary", text: "Right" }),
+                                        children: (0, s.jsx)(H.$, { buttonRef: g, variant: "primary", text: "Right" }),
                                     }),
                                 ],
                             }),
@@ -1826,7 +1832,7 @@ function tI() {
         style: { marginTop: 64, display: "flex", flexDirection: "column", gap: 10 },
         children: [
             (0, s.jsx)(ea.k, { label: "Deep Linking", value: e, onChange: (e) => t(e), placeholder: "Perk ID" }),
-            (0, s.jsx)($.$, {
+            (0, s.jsx)(H.$, {
                 text: "Test Deep Link",
                 variant: "primary",
                 size: "sm",
@@ -1887,7 +1893,7 @@ let tL = "1271174907081789524",
             let { skuId: t } = e;
             return (0, s.jsx)("div", {
                 className: U.YG,
-                children: (0, s.jsx)($.$, {
+                children: (0, s.jsx)(H.$, {
                     onClick: () => {
                         (0, tO.B4)({
                             skuId: t,
@@ -1925,8 +1931,8 @@ var tV = l(324861),
     tB = l(73079),
     tU = l(818348),
     tG = l(76488),
-    t$ = l(877062);
-let tH = {
+    tH = l(877062);
+let t$ = {
     name: "Deep Link Test",
     id: "deep-link-test",
     component: function (e) {
@@ -1941,13 +1947,13 @@ let tH = {
                     (0, s.jsx)(t_.Hq, {
                         label: "Test Deeplinking with a Custom Path",
                         direction: "vertical",
-                        children: (0, s.jsx)($.$, {
+                        children: (0, s.jsx)(H.$, {
                             variant: "primary",
                             size: "sm",
                             text: "Test Deeplink",
                             onClick: () => {
                                 console.log("Opening deep link... ", t),
-                                    t$.A.launch(t, (e) => {
+                                    tH.A.launch(t, (e) => {
                                         console.log("onDone response: ", e);
                                     });
                             },
@@ -2253,14 +2259,14 @@ Error: ${t}`);
                     (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "8px", marginBottom: "8px", flexWrap: "wrap" },
                         children: [
-                            (0, s.jsx)($.$, {
+                            (0, s.jsx)(H.$, {
                                 variant: "primary",
                                 size: "sm",
                                 text: e ? "Creating Order..." : "Create Order",
                                 onClick: v,
                                 disabled: e || null == p || "" === p || null == d || "" === d || d === D.dJq,
                             }),
-                            (0, s.jsx)($.$, {
+                            (0, s.jsx)(H.$, {
                                 variant: "secondary",
                                 size: "sm",
                                 text: l ? "Signing Order..." : "Sign Order",
@@ -2399,7 +2405,7 @@ function le(e) {
                     }),
                 ],
             }),
-            (0, s.jsx)($.$, { variant: "primary", size: "sm", text: "Open Nitro Checkout", onClick: p }),
+            (0, s.jsx)(H.$, { variant: "primary", size: "sm", text: "Open Nitro Checkout", onClick: p }),
             null != r && (0, s.jsx)(y.E, { variant: "text-xs/normal", color: "status-danger", children: r }),
         ],
     });
@@ -2417,7 +2423,7 @@ function lt(e) {
         label: "Manage Subscription",
         direction: "vertical",
         children: [
-            (0, s.jsx)($.$, {
+            (0, s.jsx)(H.$, {
                 variant: "primary",
                 size: "sm",
                 text: "Open Manage Subscription",
@@ -2443,7 +2449,7 @@ function ll(e) {
         direction: "vertical",
         children: [
             (0, s.jsx)(ea.k, { label: "Guild ID", placeholder: "Guild ID", value: l, onChange: a }),
-            (0, s.jsx)($.$, {
+            (0, s.jsx)(H.$, {
                 variant: "primary",
                 size: "sm",
                 text: "Open Guild Boost Checkout",
@@ -2556,7 +2562,7 @@ function lc() {
             (0, s.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
                 className: tG.Ut,
-                children: (0, s.jsx)($.$, {
+                children: (0, s.jsx)(H.$, {
                     variant: "primary",
                     size: "sm",
                     text: "Apply Changes",
@@ -2617,7 +2623,7 @@ function lc() {
 let lp = {
     title: "Miscellaneous",
     stories: [
-        tH,
+        t$,
         {
             name: "Redirect To Standalone",
             id: "standalone-redirect",
@@ -3026,8 +3032,8 @@ var lM = l(735438),
     lB = l(606267),
     lU = l(169797),
     lG = l(93159),
-    l$ = l(181447),
-    lH = l(826469),
+    lH = l(181447),
+    l$ = l(826469),
     lW = l(812745);
 let lF = {
     name: "Primitive: Nitro Plan Select",
@@ -3103,7 +3109,7 @@ function lz(e) {
     u.useEffect(() => {
         (0, eo.$o)();
     }, []);
-    let d = u.useMemo(() => i.map((e) => new lH.A(e, !0, [])), [i]),
+    let d = u.useMemo(() => i.map((e) => new l$.A(e, !0, [])), [i]),
         {
             dropdownPaymentSources: c,
             dropdownPaymentSourceId: p,
@@ -3151,7 +3157,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                         variant: "text-md/normal",
                         children: "Click the button below to open the Unified Checkout modal",
                     }),
-                    (0, s.jsx)($.$, {
+                    (0, s.jsx)(H.$, {
                         variant: "primary",
                         text: "Open Unified Checkout Modal",
                         onClick: () =>
@@ -3408,7 +3414,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
             {
                 name: "Primitive: Payment Source Selector",
                 id: "unified-checkout-payment-source-selector",
-                component: (e) => (0, s.jsx)(l$.P, { children: (0, s.jsx)(lz, { ...e }) }),
+                component: (e) => (0, s.jsx)(lH.P, { children: (0, s.jsx)(lz, { ...e }) }),
                 controls: {
                     label: { label: "Label", type: "text", defaultValue: "Payment Method" },
                     giftCardsEnabled: { label: "Gift Cards Enabled", type: "boolean", defaultValue: !0 },
@@ -3551,7 +3557,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                         children:
                                             "Click the button below to open the gift card redemption modal (enter code form). On success it will open the success modal.",
                                     }),
-                                    (0, s.jsx)($.$, {
+                                    (0, s.jsx)(H.$, {
                                         variant: "primary",
                                         text: "Open Redemption Modal",
                                         onClick: () =>
@@ -3577,7 +3583,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                         children:
                                             "Click the button below to open the gift card redemption success modal (post-redemption).",
                                     }),
-                                    (0, s.jsx)($.$, {
+                                    (0, s.jsx)(H.$, {
                                         variant: "primary",
                                         text: "Open Success Modal",
                                         onClick: () =>
@@ -3648,7 +3654,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                         style: { marginBottom: "8px" },
                                         children: "Use this to reset your user's DCF Orb Onboarding state.",
                                     }),
-                                    (0, s.jsx)($.$, { onClick: () => e(), text: "Reset Announcement Modal State" }),
+                                    (0, s.jsx)(H.$, { onClick: () => e(), text: "Reset Announcement Modal State" }),
                                 ],
                             });
                         },
@@ -3680,7 +3686,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                 });
                             }, []);
                             return (0, s.jsx)(t_.LB, {
-                                children: (0, s.jsx)($.$, {
+                                children: (0, s.jsx)(H.$, {
                                     onClick: e,
                                     variant: "primary",
                                     size: "md",
@@ -3703,7 +3709,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                 });
                             }, []);
                             return (0, s.jsx)(t_.LB, {
-                                children: (0, s.jsx)($.$, {
+                                children: (0, s.jsx)(H.$, {
                                     onClick: e,
                                     variant: "primary",
                                     size: "md",
@@ -3728,7 +3734,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                 });
                             }, []);
                             return (0, s.jsx)(t_.LB, {
-                                children: (0, s.jsx)($.$, {
+                                children: (0, s.jsx)(H.$, {
                                     onClick: e,
                                     variant: "primary",
                                     size: "md",
@@ -3751,7 +3757,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                 });
                             }, []);
                             return (0, s.jsx)(t_.LB, {
-                                children: (0, s.jsx)($.$, {
+                                children: (0, s.jsx)(H.$, {
                                     onClick: e,
                                     variant: "primary",
                                     size: "md",
@@ -3775,7 +3781,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                     });
                                 }, [e]);
                             return (0, s.jsx)(t_.LB, {
-                                children: (0, s.jsx)($.$, {
+                                children: (0, s.jsx)(H.$, {
                                     onClick: t,
                                     variant: "primary",
                                     size: "md",
@@ -3819,7 +3825,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                             fullWidth: !0,
                                         }),
                                     }),
-                                    (0, s.jsx)($.$, {
+                                    (0, s.jsx)(H.$, {
                                         onClick: a,
                                         variant: "primary",
                                         size: "md",
@@ -3865,7 +3871,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                             fullWidth: !0,
                                         }),
                                     }),
-                                    (0, s.jsx)($.$, {
+                                    (0, s.jsx)(H.$, {
                                         onClick: a,
                                         variant: "primary",
                                         size: "md",
@@ -3904,7 +3910,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                             fullWidth: !0,
                                         }),
                                     }),
-                                    (0, s.jsx)($.$, {
+                                    (0, s.jsx)(H.$, {
                                         onClick: n,
                                         variant: "primary",
                                         size: "md",
@@ -3928,7 +3934,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                         });
                                 }, [e]);
                             return (0, s.jsx)(t_.LB, {
-                                children: (0, s.jsx)($.$, {
+                                children: (0, s.jsx)(H.$, {
                                     onClick: t,
                                     variant: "primary",
                                     size: "md",
@@ -3953,7 +3959,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                 });
                             }, []);
                             return (0, s.jsx)(t_.LB, {
-                                children: (0, s.jsx)($.$, {
+                                children: (0, s.jsx)(H.$, {
                                     onClick: e,
                                     variant: "primary",
                                     size: "md",
@@ -3978,7 +3984,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                 });
                             }, []);
                             return (0, s.jsx)(t_.LB, {
-                                children: (0, s.jsx)($.$, {
+                                children: (0, s.jsx)(H.$, {
                                     onClick: e,
                                     variant: "primary",
                                     size: "md",
@@ -3999,7 +4005,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                 });
                             }, []);
                             return (0, s.jsx)(t_.LB, {
-                                children: (0, s.jsx)($.$, {
+                                children: (0, s.jsx)(H.$, {
                                     onClick: e,
                                     variant: "primary",
                                     size: "md",
@@ -4031,7 +4037,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                 });
                             }, []);
                             return (0, s.jsx)(t_.LB, {
-                                children: (0, s.jsx)($.$, {
+                                children: (0, s.jsx)(H.$, {
                                     onClick: e,
                                     variant: "primary",
                                     size: "md",

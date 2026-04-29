@@ -3576,12 +3576,20 @@
     pointer-events: none
 }
 
+.disabled__4e9aa .content__4e9aa {
+    opacity: .6
+}
+
 .content__4e9aa {
     align-items: center;
     display: flex;
     height: 100%;
     justify-content: center;
     width: 100%
+}
+
+.dimmed__4e9aa {
+    opacity: .5
 }
 
 .overlay__4e9aa {
@@ -4649,24 +4657,6 @@
     padding-bottom: var(--space-20);
     padding-inline-start: var(--space-20);
     z-index: 1
-}
-
-.colorPicker_cd4367 {
-    margin-top: var(--space-8)
-}
-
-.colorPickerContainer_cd4367 {
-    height: 50px;
-    max-width: 52px;
-    min-width: 52px
-}
-
-.gradientPicker_cd4367 {
-    width: 104px
-}
-
-.description_cd4367 {
-    margin-top: var(--space-8)
 }
 
 .container_b08af5 {
@@ -6791,6 +6781,12 @@ div.profileThemedContainer__656be {
     opacity: .5
 }
 
+.riveHoverTarget__438ba {
+    height: 100%;
+    pointer-events: auto;
+    width: 100%
+}
+
 .wrapper__3fa5b {
     position: relative
 }
@@ -7208,6 +7204,11 @@ div.profileThemedContainer__656be {
 .safetySettingsNotice__9536c .closeButton__9536c {
     cursor: pointer;
     margin-inline-start: auto
+}
+
+.blockedIgnoredSettingsNotice__6811a {
+    margin-block: 16px 8px;
+    margin-inline: 30px 20px
 }
 
 .tabs__9a3e9 {

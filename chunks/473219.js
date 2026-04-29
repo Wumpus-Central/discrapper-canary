@@ -1,65 +1,68 @@
-l.d(t, { A: () => h });
-var a = l(627968),
-    n = l(64700),
-    r = l(688810),
-    i = l(512213),
-    o = l(637193),
-    s = l(713517),
-    d = l(919395),
-    c = l(84540),
-    u = l(930349),
-    p = l(985018),
-    m = l(432856);
-function h(e) {
-    let { user: t, guildId: l, disabled: h } = e,
-        { analyticsLocations: x } = (0, r.Ay)(),
-        b = null != l,
-        y = n.useRef(null),
-        { isHoveringOrFocusing: f } = (0, s.A)(y),
-        { guildNameplate: g, pendingNameplate: v } = (0, d.rv)(t, l ?? void 0),
-        _ = (0, d.lw)({ pendingValue: v, userValue: t.collectibles?.nameplate, guildValue: g, guildId: l ?? void 0 }),
-        E = void 0 !== v,
-        C = b ? g : t.collectibles?.nameplate,
-        j = n.useCallback(() => {
-            (0, o.p)({ analyticsLocations: x, guildId: l ?? void 0, stackingBehavior: "stack" });
-        }, [x, l]),
-        S = b && t.collectibles?.nameplate != null,
-        T =
-            null != _ && (E ? null != v : null != C)
+n.d(l, { A: () => b });
+var i = n(627968),
+    a = n(64700),
+    t = n(688810),
+    s = n(344346),
+    r = n(637193),
+    d = n(713517),
+    u = n(919395),
+    c = n(84540),
+    o = n(930349),
+    v = n(985018),
+    g = n(535592);
+function b(e) {
+    let { user: l, guildId: n, disabled: b } = e,
+        { analyticsLocations: h } = (0, t.Ay)(),
+        f = null != n,
+        m = a.useRef(null),
+        { isHoveringOrFocusing: k } = (0, d.A)(m),
+        { guildNameplate: C, pendingNameplate: x } = (0, u.rv)(l, n ?? void 0),
+        A = l.collectibles?.nameplate,
+        p = f ? C : A,
+        y = void 0 !== x,
+        j = null === x || (!y && null == p),
+        I = f && null != A,
+        N = j && I,
+        L = (0, u.lw)({ pendingValue: x, userValue: A, guildValue: C, guildId: n ?? void 0 }),
+        w =
+            null != L && (y ? null != x : null != p)
                 ? {
-                      onClick: () => (0, c.p)({ guildId: l ?? void 0, nameplate: null }),
-                      type: S ? "reset" : "remove",
-                      accessibleLabel: p.intl.string(S ? p.t.neYqhR : p.t["9zwziY"]),
+                      onClick: () => (0, c.p)({ guildId: n ?? void 0, nameplate: null }),
+                      type: I ? "reset" : "remove",
+                      accessibleLabel: v.intl.string(I ? v.t.neYqhR : v.t["9zwziY"]),
                   }
                 : void 0,
-        A = (0, a.jsx)("div", {
-            className: m.M,
+        B = a.useCallback(() => {
+            (0, r.p)({ analyticsLocations: h, guildId: n ?? void 0, stackingBehavior: "stack" });
+        }, [h, n]),
+        z = (0, i.jsx)("div", {
+            className: g.M,
             "aria-hidden": !0,
-            children: (0, a.jsx)(i.A, {
-                user: t,
-                guildId: l ?? void 0,
-                nameplate: _,
-                showPlaceholderUser: null == _ || !f || h,
+            children: (0, i.jsx)(s.A, {
+                user: l,
+                guildId: n ?? void 0,
+                nameplate: L,
+                showPlaceholderUser: j || !k || b,
             }),
         });
-    return (0, a.jsx)("div", {
-        ref: y,
-        children:
-            null == _
-                ? (0, a.jsx)(u.kL, {
-                      variant: "bar",
-                      onClick: j,
-                      accessibleLabel: p.intl.string(p.t.BwdeM1),
-                      disabled: h,
-                      children: A,
-                  })
-                : (0, a.jsx)(u.NW, {
-                      variant: "bar",
-                      onClick: j,
-                      accessibleLabel: p.intl.string(p.t.BwdeM1),
-                      deleteButtonConfig: T,
-                      disabled: h,
-                      children: A,
-                  }),
+    return (0, i.jsx)("div", {
+        ref: m,
+        children: j
+            ? (0, i.jsx)(o.kL, {
+                  variant: "bar",
+                  onClick: B,
+                  accessibleLabel: v.intl.string(v.t.BwdeM1),
+                  disabled: b,
+                  dimContent: N,
+                  children: z,
+              })
+            : (0, i.jsx)(o.NW, {
+                  variant: "bar",
+                  onClick: B,
+                  accessibleLabel: v.intl.string(v.t.BwdeM1),
+                  deleteButtonConfig: w,
+                  disabled: b,
+                  children: z,
+              }),
     });
 }

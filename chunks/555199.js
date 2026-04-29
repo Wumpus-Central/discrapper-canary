@@ -26,21 +26,21 @@ var d = i(17928),
     p = i(403581),
     g = i(821609),
     x = i(775602),
-    h = i(793574),
-    N = i(688810),
-    f = i(366999),
-    E = i(531260),
-    R = i(780964),
-    _ = i(858897),
-    C = i(166403),
+    N = i(793574),
+    E = i(688810),
+    h = i(366999),
+    f = i(531260),
+    _ = i(780964),
+    C = i(858897),
+    R = i(166403),
     I = i(786300),
     T = i(975571),
     b = i(927578),
     S = i(40185),
     v = i(89366),
     j = i(881489),
-    O = i(422936),
-    P = i(234419),
+    P = i(422936),
+    O = i(234419),
     y = i(549996),
     M = i(371764),
     D = i(949964),
@@ -48,13 +48,13 @@ var d = i(17928),
 i(321073);
 var U = i(778712),
     G = i(97808),
-    w = i(590251),
-    k = i(144165),
+    k = i(590251),
+    w = i(144165),
     F = i(534514),
     V = i(854627),
-    B = i(954571),
-    z = i(427262),
-    H = i(326084),
+    H = i(954571),
+    B = i(427262),
+    z = i(326084),
     X = i(851746),
     W = i(664654),
     K = i(212737),
@@ -66,7 +66,7 @@ let q = (e) => {
             { avatarSrc: i, eventHandlers: s } = (0, V.A)({ userId: t.id, size: U._3.SIZE_24 });
         return (0, a.jsx)(
             G.eu,
-            { className: Z.bj, src: i, "aria-label": (0, z.mG)(t), size: U._3.SIZE_24, ...s },
+            { className: Z.bj, src: i, "aria-label": (0, B.mG)(t), size: U._3.SIZE_24, ...s },
             t.id,
         );
     },
@@ -94,14 +94,14 @@ let q = (e) => {
     },
     ee = (e) => {
         let { nReferralsSent: t } = e;
-        return (0, a.jsx)(w.a, {
+        return (0, a.jsx)(k.a, {
             percent: 33.3 * t,
             colorOverride: "#53ac66",
             background: Z.cq,
             strokeSize: 0.8,
             ringColorOverrideClassName: Z.e0,
             overlayClassName: t === W.Z ? Z.ys : void 0,
-            children: (0, a.jsx)(k._, {
+            children: (0, a.jsx)(w._, {
                 src: "https://cdn.discordapp.com/assets/content/f55a25cc26b81c0d72e110bb7fd978e6aff78e847f53b34011ba4600be592975.svg",
                 height: 93,
                 width: 93,
@@ -114,7 +114,7 @@ let q = (e) => {
             { referralSentUsers: s } = (0, W.J)(),
             r = (0, d.bG)([X.A], () => X.A.getRecipientStatus()),
             l = (0, d.bG)([X.A], () => X.A.getHasEligibleFriends()),
-            c = r.size === W.Z && [...r.values()].every((e) => e === H.aK.REDEEMED),
+            c = r.size === W.Z && [...r.values()].every((e) => e === z.aK.REDEEMED),
             o = r.size === W.Z;
         return (0, a.jsxs)("div", {
             className: n()(Z.kL, t),
@@ -161,7 +161,7 @@ let q = (e) => {
                             onClick: () =>
                                 ((e) => {
                                     let { startingScreen: t, analyticsLocations: s } = e;
-                                    B.default.track(Y.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+                                    H.default.track(Y.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                                         location_stack: s,
                                     }),
                                         (0, u.openModalLazy)(async () => {
@@ -311,58 +311,58 @@ let eg = () => {
     });
 };
 var ex = i(103733),
-    eh = i(702841),
-    eN = i(384601),
-    ef = i(584151);
-let eE = () => {
-    let e = (0, eh.bG)([x.A], () => x.A.useReducedMotion);
-    return (0, a.jsx)(eN.A, {
+    eN = i(702841),
+    eE = i(384601),
+    eh = i(584151);
+let ef = () => {
+    let e = (0, eN.bG)([x.A], () => x.A.useReducedMotion);
+    return (0, a.jsx)(eE.A, {
         isMotionReduced: e,
         blurScale: 0.4,
-        starContainerClassName: ef.cI,
-        hammerContainerClassName: ef.qg,
-        keyContainerClassName: ef.h2,
-        boltContainerClassName: ef.Bz,
-        starAssetClassName: ef.ks,
-        hammerAssetClassName: ef.GY,
-        keyAssetClassName: ef.p4,
-        boltAssetClassName: ef.vy,
+        starContainerClassName: eh.cI,
+        hammerContainerClassName: eh.qg,
+        keyContainerClassName: eh.h2,
+        boltContainerClassName: eh.Bz,
+        starAssetClassName: eh.ks,
+        hammerAssetClassName: eh.GY,
+        keyAssetClassName: eh.p4,
+        boltAssetClassName: eh.vy,
     });
 };
-var eR = i(608416),
-    e_ = i(447764),
-    eC = i(180894);
+var e_ = i(608416),
+    eC = i(447764),
+    eR = i(180894);
 let eI = (e) => {
     let { containerVisibilityPercentage: t } = e,
-        i = (0, eh.bG)([x.A], () => x.A.useReducedMotion);
+        i = (0, eN.bG)([x.A], () => x.A.useReducedMotion);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
-                className: e_.BI,
-                children: (0, a.jsx)(eR.Ay, {
-                    scaleAnimationData: { startScale: 0.9, endScale: 1, duration: eR.$G },
-                    yAxisAnimationData: { range: 20, duration: eR.Mp, path: eR.aV.SINE },
+                className: eC.BI,
+                children: (0, a.jsx)(e_.Ay, {
+                    scaleAnimationData: { startScale: 0.9, endScale: 1, duration: e_.$G },
+                    yAxisAnimationData: { range: 20, duration: e_.Mp, path: e_.aV.SINE },
                     animateXAxisWiggle: !0,
                     isMotionReduced: i,
                     parallaxAnimationData: {
-                        pathDirection: eR.MN.UP,
+                        pathDirection: e_.MN.UP,
                         range: 125,
                         containerVisibilityPercentage: t,
                         changeOpacity: !0,
                     },
                     animationSpeedScale: 2,
-                    children: (0, a.jsx)("img", { src: eC.A, alt: "", className: e_.Q }),
+                    children: (0, a.jsx)("img", { src: eR.A, alt: "", className: eC.Q }),
                 }),
             }),
-            (0, a.jsx)(eN.A, {
+            (0, a.jsx)(eE.A, {
                 isMotionReduced: i,
                 containerVisibilityPercentage: t,
-                hammerContainerClassName: e_.Gj,
-                keyContainerClassName: e_.FV,
-                starContainerClassName: e_.E1,
-                hammerAssetClassName: e_.Wv,
-                keyAssetClassName: e_.rs,
-                starAssetClassName: e_.OY,
+                hammerContainerClassName: eC.Gj,
+                keyContainerClassName: eC.FV,
+                starContainerClassName: eC.E1,
+                hammerAssetClassName: eC.Wv,
+                keyAssetClassName: eC.rs,
+                starAssetClassName: eC.OY,
                 animationSpeedScale: 2,
             }),
         ],
@@ -417,7 +417,7 @@ let ej = (e) => {
                                         variant: "secondary",
                                         size: "md",
                                         text: $.intl.string($.t.Af7ye6),
-                                        onClick: () => (0, _.openUserSettings)(R.X.SUBSCRIPTIONS_PANEL),
+                                        onClick: () => (0, C.openUserSettings)(_.X.SUBSCRIPTIONS_PANEL),
                                     }),
                                 ],
                             }),
@@ -425,23 +425,23 @@ let ej = (e) => {
                     }),
                     (0, a.jsxs)("div", {
                         className: ev.Hk,
-                        children: [(0, a.jsx)(c, { alt: "", width: "100%", height: "auto" }), (0, a.jsx)(eE, {})],
+                        children: [(0, a.jsx)(c, { alt: "", width: "100%", height: "auto" }), (0, a.jsx)(ef, {})],
                     }),
                 ],
             }),
         });
     },
-    eO = (e) => {
+    eP = (e) => {
         let { className: t, isEligibleForBogoPromotion: s, isInReverseTrial: l, shouldShowReferralProgressBar: c } = e,
             {
                 headingText: o,
                 headingTop: m,
-                showPill: f,
-                userDiscountOffer: R,
-                discountedPrice: _,
+                showPill: h,
+                userDiscountOffer: _,
+                discountedPrice: C,
                 buttonVisibilityRef: I,
             } = ey(),
-            { analyticsLocations: T } = (0, N.Ay)(h.A.PREMIUM_MARKETING_HERO_CTA),
+            { analyticsLocations: T } = (0, E.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
             S = (0, y.c)(r.C.MARKETING_PAGE_BANNER),
             v = null;
         null != S && "marketingPageBanner" === S.properties.properties.oneofKind
@@ -454,16 +454,16 @@ let ej = (e) => {
               : l
                 ? (v = (0, a.jsx)(eg, {}))
                 : c && (v = (0, a.jsx)(et, {}));
-        let j = (0, d.bG)([C.A], () => C.A.getPremiumTypeSubscription()),
-            L = null != j && j.status === Y.Dmq.CANCELED && null != R,
-            U = (0, P.V)(),
-            G = (0, O.O)(),
-            w = (0, es.U9)(G, eS.pe.TIER_2) ? eS.pe.TIER_2 : void 0,
-            k = null != j && j.status !== Y.Dmq.ACCOUNT_HOLD && j.hasAnyPremiumNitro,
-            F = (0, E.A)(),
-            V = F.isFractionalPremiumActive && !k && null == v && !L,
-            B = (0, d.bG)([x.A], () => x.A.useReducedMotion),
-            { visibilityPercentageRef: z, visibilityPercentage: H } = (0, ex.U)(!B);
+        let j = (0, d.bG)([R.A], () => R.A.getPremiumTypeSubscription()),
+            L = null != j && j.status === Y.Dmq.CANCELED && null != _,
+            U = (0, O.V)(),
+            G = (0, P.O)(),
+            k = (0, es.U9)(G, eS.pe.TIER_2) ? eS.pe.TIER_2 : void 0,
+            w = null != j && j.status !== Y.Dmq.ACCOUNT_HOLD && j.hasAnyPremiumNitro,
+            F = (0, f.A)(),
+            V = F.isFractionalPremiumActive && !w && null == v && !L,
+            H = (0, d.bG)([x.A], () => x.A.useReducedMotion),
+            { visibilityPercentageRef: B, visibilityPercentage: z } = (0, ex.U)(!H);
         return l
             ? (0, a.jsx)(ej, { fpEndsAt: F.currentEntitlementEndsAt, className: t, buttonVisibilityRef: I })
             : (0, a.jsx)("div", {
@@ -472,29 +472,29 @@ let ej = (e) => {
                   ref: I,
                   children: (0, a.jsxs)("div", {
                       className: ev.Qs,
-                      ref: z,
+                      ref: B,
                       children: [
-                          f && m,
+                          h && m,
                           (0, a.jsxs)("div", {
                               className: ev.N1,
                               children: [
-                                  (0, a.jsx)(eI, { containerVisibilityPercentage: H }),
+                                  (0, a.jsx)(eI, { containerVisibilityPercentage: z }),
                                   L &&
-                                      null != R.expires_at &&
-                                      (0, a.jsx)(ed, { expiresAt: R.expires_at, className: ev.IZ }),
+                                      null != _.expires_at &&
+                                      (0, a.jsx)(ed, { expiresAt: _.expires_at, className: ev.IZ }),
                                   (0, a.jsx)(eb, {
-                                      children: L ? $.intl.format($.t["3yZP0G"], { percent: R.discount.amount }) : o,
+                                      children: L ? $.intl.format($.t["3yZP0G"], { percent: _.discount.amount }) : o,
                                   }),
                                   L &&
-                                      null != _ &&
+                                      null != C &&
                                       (0, a.jsx)(A.E, {
                                           className: ev.jG,
                                           variant: "text-sm/medium",
                                           color: "text-strong",
                                           children: $.intl.format($.t["3Q4wCy"], {
-                                              discountedPrice: _,
-                                              billingPeriod: (0, b.Ke)(R.discount.user_usage_limit_interval),
-                                              numMonths: R.discount.user_usage_limit,
+                                              discountedPrice: C,
+                                              billingPeriod: (0, b.Ke)(_.discount.user_usage_limit_interval),
+                                              numMonths: _.discount.user_usage_limit,
                                           }),
                                       }),
                               ],
@@ -506,7 +506,7 @@ let ej = (e) => {
                                       (0, a.jsx)(ea.A, {
                                           size: "md",
                                           hasActivePromotion: !!s,
-                                          subscriptionTier: U?.subscription_trial?.sku_id ?? w,
+                                          subscriptionTier: U?.subscription_trial?.sku_id ?? k,
                                       }),
                                   L &&
                                       (0, a.jsx)(g.$, {
@@ -529,7 +529,7 @@ let ej = (e) => {
                                                               i.e("81349"),
                                                               i.e("47181"),
                                                               i.e("40841"),
-                                                              i.e("22810"),
+                                                              i.e("74112"),
                                                               i.e("5036"),
                                                               i.e("63133"),
                                                               i.e("97271"),
@@ -538,7 +538,7 @@ let ej = (e) => {
                                                               i.e("75058"),
                                                               i.e("60571"),
                                                               i.e("71934"),
-                                                              i.e("12512"),
+                                                              i.e("47715"),
                                                               i.e("29139"),
                                                               i.e("56685"),
                                                               i.e("86483"),
@@ -547,7 +547,7 @@ let ej = (e) => {
                                                               i.e("25568"),
                                                               i.e("32260"),
                                                               i.e("7276"),
-                                                              i.e("9292"),
+                                                              i.e("31320"),
                                                               i.e("85484"),
                                                               i.e("84615"),
                                                               i.e("63941"),
@@ -750,24 +750,24 @@ let ej = (e) => {
                   }),
               });
     },
-    [eP, ey] = (0, I.A)(),
+    [eO, ey] = (0, I.A)(),
     eM = (e) => {
         let { className: t, buttonVisibilityRef: i, userDiscountOffer: s, discountedPrice: n } = e,
-            { analyticsLocations: r } = (0, N.Ay)(h.A.PREMIUM_MARKETING_HERO_CTA),
+            { analyticsLocations: r } = (0, E.Ay)(N.A.PREMIUM_MARKETING_HERO_CTA),
             l = (0, j.ds)(),
             c = (0, S.cg)(),
             d = (0, v.QQ)(),
             u = $.intl.string($.t.qYKftX),
             m = (0, L.m)(),
             A = $.intl.string($.t.ifwQZb),
-            { fractionalState: p, endsAt: g } = (0, E.A)(),
-            x = (0, f.Ay)(g, f.yE.CREDITS_ENDS_IN),
-            R = null;
-        if (p === eS.xc.NONE || l) R = (0, a.jsx)(eu.A, { text: u });
+            { fractionalState: p, endsAt: g } = (0, f.A)(),
+            x = (0, h.Ay)(g, h.yE.CREDITS_ENDS_IN),
+            _ = null;
+        if (p === eS.xc.NONE || l) _ = (0, a.jsx)(eu.A, { text: u });
         else {
             d = !0;
             let e = $.intl.format($.t["yR+oDD"], { helpCenterLink: T.A.getArticleURL(Y.MVz.FRACTIONAL_PREMIUM_ABOUT) });
-            R = (0, a.jsx)(o.A, {
+            _ = (0, a.jsx)(o.A, {
                 text: e,
                 "aria-label": e.toString(),
                 tooltipClassName: ev.YL,
@@ -780,18 +780,18 @@ let ej = (e) => {
                     }),
             });
         }
-        return (0, a.jsx)(N.f5, {
+        return (0, a.jsx)(E.f5, {
             value: r,
-            children: (0, a.jsx)(eP.Provider, {
+            children: (0, a.jsx)(eO.Provider, {
                 value: {
                     headingText: A,
-                    headingTop: R,
+                    headingTop: _,
                     showPill: d,
                     userDiscountOffer: s,
                     discountedPrice: n,
                     buttonVisibilityRef: i,
                 },
-                children: (0, a.jsx)(eO, {
+                children: (0, a.jsx)(eP, {
                     className: t,
                     isEligibleForBogoPromotion: c,
                     isInReverseTrial: l,

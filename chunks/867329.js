@@ -591,7 +591,7 @@ var ex = a(132500),
     eT = a(231723),
     eI = a(900686),
     eO = a(986687),
-    eR = a(944768),
+    eR = a(776135),
     ew = a(735438),
     eM = a.n(ew),
     eL = a(219220),
@@ -7016,7 +7016,7 @@ let rn = {
     "discord_app/modules/premium/web/animations/guild_sidebar_premium_entrypoint_dt.json": () =>
         a.e("15048").then(a.t.bind(a, 366043, 19)),
     "discord_app/modules/premium/web/animations/guild_sidebar_premium_entrypoint_lt.json": () =>
-        a.e("90131").then(a.t.bind(a, 789091, 19)),
+        a.e("12512").then(a.t.bind(a, 789091, 19)),
     "discord_common/js/shared/animations/app/activities/AppsIconWordlePromo.lottiejson": () =>
         a.e("73550").then(a.t.bind(a, 527613, 19)),
     "discord_common/js/shared/animations/app/nearby/nearby.lottiejson": () =>
@@ -7232,17 +7232,17 @@ let ro = {
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("28149"),
-                    a.e("66883"),
+                    a.e("29139"),
                     a.e("5989"),
                     a.e("90673"),
                     a.e("13709"),
-                    a.e("9292"),
+                    a.e("31320"),
                     a.e("44135"),
                     a.e("9176"),
                     a.e("87845"),
                     a.e("35636"),
                     a.e("75090"),
-                    a.e("12512"),
+                    a.e("47715"),
                     a.e("61175"),
                     a.e("56574"),
                     a.e("4974"),
@@ -7402,7 +7402,7 @@ let ro = {
         },
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([
-                    a.e("12512"),
+                    a.e("47715"),
                     a.e("9176"),
                     a.e("14656"),
                     a.e("11810"),
@@ -8394,7 +8394,7 @@ let rI = {
         return (s.displayName = "ConsentCheckBoxModalContent"), (e) => (0, r.jsx)(s, { ...e });
     },
     GuildRaidLockdownFeedbackModal: async () => {
-        let { default: e } = await Promise.all([a.e("12512"), a.e("46313")]).then(a.bind(a, 336496));
+        let { default: e } = await Promise.all([a.e("47715"), a.e("46313")]).then(a.bind(a, 336496));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
@@ -8638,7 +8638,7 @@ let rI = {
     },
     AcceptInviteModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("23740"),
+            a.e("44609"),
             a.e("74275"),
             a.e("91643"),
             a.e("74337"),
@@ -8664,7 +8664,7 @@ let rI = {
     },
     NewUserOnboarding: async () => {
         let { default: e } = await Promise.all([
-            a.e("66883"),
+            a.e("29139"),
             a.e("13754"),
             a.e("16138"),
             a.e("19580"),

@@ -1,62 +1,62 @@
-l.d(t, { A: () => v });
-var a = l(627968);
-l(64700);
-var n = l(17928),
-    r = l(778712),
-    i = l(97808),
-    o = l(688810),
-    s = l(919395),
-    d = l(252732),
-    c = l(101058),
-    u = l(696451),
-    p = l(84540),
-    m = l(836602),
-    b = l(854627),
-    h = l(930349),
-    x = l(339984),
-    y = l(985018);
-let g = r._3.SIZE_72;
-function v(e) {
-    let { user: t, guildId: l, disabled: r } = e,
-        { newestAnalyticsLocation: v } = (0, o.Ay)(),
-        f = null != l,
-        _ = (0, n.bG)([u.Ay], () => (null != l ? u.Ay.getMember(l, t.id) : null)),
-        E = (0, n.bG)([m.A], () => m.A.getPendingChanges(l ?? void 0).pendingAvatar),
-        C = (0, c.V7)({ userId: t.id, image: E }),
-        { avatarSrc: S } = (0, b.A)({ userId: t.id, guildId: l, avatarOverride: C, size: g }),
-        j = f ? _?.avatar : t.avatar,
-        T = null != t.avatar,
-        P = f && _?.avatar != null,
-        I = null != E,
-        A = null === E,
-        k = (0, s.z5)(E, j),
-        R = f && T,
-        N = () =>
-            (0, d.XD)({ uploadType: x.HL.AVATAR, analyticsSource: v, guildId: l ?? void 0, stackingBehavior: "stack" });
-    if (!(A ? f && T : I || P || T))
-        return (0, a.jsx)(h.kL, {
-            variant: "square",
-            onClick: N,
-            accessibleLabel: y.intl.string(y.t["4OynCD"]),
-            disabled: r,
-            children: (0, a.jsx)(i.eu, { src: S, size: g, "aria-hidden": !0 }),
-        });
-    let M = k
-        ? {
-              onClick: () => {
-                  (0, d.rM)(null, j, (e) => (0, p.p)({ guildId: l ?? void 0, avatar: e })),
-                      (0, s.WU)(R ? "reset" : "remove");
-              },
-              type: R ? "reset" : "remove",
-              accessibleLabel: y.intl.string(R ? y.t.Y0mxy1 : y.t.twB3fz),
-          }
-        : void 0;
-    return (0, a.jsx)(h.NW, {
-        variant: "square",
-        onClick: N,
-        accessibleLabel: y.intl.string(y.t["4OynCD"]),
-        deleteButtonConfig: M,
-        disabled: r,
-        children: (0, a.jsx)(i.eu, { src: S, size: g, "aria-hidden": !0 }),
-    });
+n.d(l, { A: () => C });
+var i = n(627968);
+n(64700);
+var a = n(17928),
+    t = n(778712),
+    s = n(97808),
+    r = n(688810),
+    d = n(919395),
+    u = n(252732),
+    c = n(101058),
+    o = n(696451),
+    v = n(84540),
+    g = n(836602),
+    b = n(854627),
+    h = n(930349),
+    f = n(339984),
+    m = n(985018);
+let k = t._3.SIZE_72;
+function C(e) {
+    let { user: l, guildId: n, disabled: t } = e,
+        { newestAnalyticsLocation: C } = (0, r.Ay)(),
+        x = null != n,
+        A = (0, a.bG)([o.Ay], () => (null != n ? o.Ay.getMember(n, l.id) : null)),
+        p = (0, a.bG)([g.A], () => g.A.getPendingChanges(n ?? void 0).pendingAvatar),
+        y = (0, c.V7)({ userId: l.id, image: p }),
+        { avatarSrc: j } = (0, b.A)({ userId: l.id, guildId: n, avatarOverride: y, size: k }),
+        I = l.avatar,
+        N = x ? A?.avatar : I,
+        L = void 0 !== p,
+        w = null === p || (!L && null == N),
+        B = x && null != I,
+        z = (0, d.z5)(p, N)
+            ? {
+                  onClick: () => {
+                      (0, u.rM)(null, N, (e) => (0, v.p)({ guildId: n ?? void 0, avatar: e })),
+                          (0, d.WU)(B ? "reset" : "remove");
+                  },
+                  type: B ? "reset" : "remove",
+                  accessibleLabel: m.intl.string(B ? m.t.Y0mxy1 : m.t.twB3fz),
+              }
+            : void 0,
+        O = () =>
+            (0, u.XD)({ uploadType: f.HL.AVATAR, analyticsSource: C, guildId: n ?? void 0, stackingBehavior: "stack" }),
+        R = (0, i.jsx)(s.eu, { src: j, size: k, "aria-hidden": !0 });
+    return w
+        ? (0, i.jsx)(h.kL, {
+              variant: "square",
+              onClick: O,
+              accessibleLabel: m.intl.string(m.t["4OynCD"]),
+              disabled: t,
+              dimContent: w && B,
+              children: R,
+          })
+        : (0, i.jsx)(h.NW, {
+              variant: "square",
+              onClick: O,
+              accessibleLabel: m.intl.string(m.t["4OynCD"]),
+              deleteButtonConfig: z,
+              disabled: t,
+              children: R,
+          });
 }

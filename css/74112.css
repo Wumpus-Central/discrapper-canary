@@ -5250,11 +5250,6 @@
     text-decoration: underline
 }
 
-.obscuredIcon__43090 {
-    height: 32px;
-    width: 32px
-}
-
 .container_de50c1 {
     position: relative
 }
@@ -5712,6 +5707,8 @@
 }
 
 .nameplatePreview__5828f {
+    align-items: center;
+    display: flex;
     height: 100%;
     width: 100%
 }

@@ -1,4 +1,4 @@
-l.r(
+t.r(
     (e.exports = {
         tile: "tile__4e9aa",
         square: "square__4e9aa",
@@ -6,6 +6,7 @@ l.r(
         tileButton: "tileButton__4e9aa",
         disabled: "disabled__4e9aa",
         content: "content__4e9aa",
+        dimmed: "dimmed__4e9aa",
         overlay: "overlay__4e9aa",
         iconContainer: "iconContainer__4e9aa",
         iconAlignCenter: "iconAlignCenter__4e9aa",

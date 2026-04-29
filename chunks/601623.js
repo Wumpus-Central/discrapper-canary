@@ -426,7 +426,7 @@ function eX(e) {
                       let e = { source: eh.Eo.NAGBAR, alertType: (0, eL.$5)(A) },
                           { default: t } = await Promise.all([
                               n.e("43763"),
-                              n.e("12512"),
+                              n.e("47715"),
                               n.e("40258"),
                               n.e("73669"),
                               n.e("46313"),
@@ -532,8 +532,8 @@ if (21552 == n.j) var e0 = n(821609);
 var e5 = n(334465),
     e2 = n(624458),
     e1 = n(513461),
-    e8 = n(709977),
-    e7 = n(212455),
+    e7 = n(709977),
+    e8 = n(212455),
     e9 = n(182430),
     e6 = n(580537);
 let e4 =
@@ -541,10 +541,10 @@ let e4 =
         ? () => {
               let e = (0, o.bG)([ey.A], () => ey.A.getGuildId(), []),
                   t = (0, o.bG)([eg.A], () => eg.A.getGuild(e), [e]),
-                  l = (0, o.bG)([e7.A], () => (null != e ? e7.A.getRequest(e) : null), [e]),
+                  l = (0, o.bG)([e8.A], () => (null != e ? e8.A.getRequest(e) : null), [e]),
                   r = (0, eQ.zy)(),
                   s = (0, e5.B)(r.pathname, ei.BVt.CHANNEL(t?.id, eG.VV.GUILD_ONBOARDING))?.isExact === !0;
-              if (null == t || !(0, e8.Qd)(t) || s) return null;
+              if (null == t || !(0, e7.Qd)(t) || s) return null;
               let a = l?.applicationStatus ?? e1.B5.STARTED,
                   E = null,
                   _ = null,
@@ -937,7 +937,7 @@ let t2 = new v.A("Notice"),
               })
             : s;
     },
-    t8 = (e) => {
+    t7 = (e) => {
         let { noticeType: t } = e;
         return (0, i.jsxs)(I.$T, {
             color: I.Hv.DANGER,
@@ -958,7 +958,7 @@ let t2 = new v.A("Notice"),
             ],
         });
     };
-function t7(e) {
+function t8(e) {
     return (0, tQ.isWindows)() && _().satisfies(x.A?.os.release, tJ.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
@@ -977,10 +977,10 @@ function t9(e) {
     return (
         !0 === a
             ? ((t = es.intl.string(es.t.ppW3ri)),
-              (n = (0, i.jsx)(I.eC, { href: t7(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
+              (n = (0, i.jsx)(I.eC, { href: t8(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
             : 0 === E
               ? ((t = es.intl.string(es.t.j4gGA4)),
-                (n = (0, i.jsx)(I.eC, { href: t7(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
+                (n = (0, i.jsx)(I.eC, { href: t8(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
               : tW.Ay.supports(t5.O5.LOOPBACK)
                 ? ((t = es.intl.string(es.t.dNAJ18)),
                   (_ = !0),
@@ -1289,7 +1289,7 @@ let t4 =
                   case ei.kqX.NO_INPUT_DETECTED:
                       return (0, i.jsx)(t9, { noticeType: r.type });
                   case ei.kqX.NO_INPUT_DEVICES_DETECTED:
-                      return (0, i.jsx)(t8, { noticeType: r.type });
+                      return (0, i.jsx)(t7, { noticeType: r.type });
                   case ei.kqX.HARDWARE_MUTE:
                       if (null != r.metadata) {
                           let { vendor: e, model: t } = r.metadata;
@@ -1371,14 +1371,14 @@ let t4 =
                                               n.e("63941"),
                                               n.e("63009"),
                                               n.e("47181"),
-                                              n.e("9292"),
+                                              n.e("31320"),
                                               n.e("8528"),
                                               n.e("45650"),
                                               n.e("97189"),
                                               n.e("24059"),
                                               n.e("51402"),
                                               n.e("27660"),
-                                              n.e("12512"),
+                                              n.e("47715"),
                                               n.e("85484"),
                                               n.e("89516"),
                                               n.e("73679"),

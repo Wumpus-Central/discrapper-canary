@@ -1,4 +1,4 @@
-i.d(t, { A: () => E });
+i.d(t, { A: () => f });
 var a = i(627968);
 i(64700);
 var s = i(503698),
@@ -14,39 +14,39 @@ var s = i(503698),
     p = i(688810),
     g = i(927578),
     x = i(473702),
-    h = i(985018),
-    N = i(98812),
-    f = i(67423);
-let E = function (e) {
-    let { isVisible: t, premiumSubscription: s, churnDiscountOffer: E, discountedPrice: R } = e,
-        { analyticsLocations: _ } = (0, p.Ay)(A.A.CHURN_DISCOUNT_PERSISTENT_CTA),
-        C = (0, l.z)({
+    N = i(985018),
+    E = i(98812),
+    h = i(67423);
+let f = function (e) {
+    let { isVisible: t, premiumSubscription: s, churnDiscountOffer: f, discountedPrice: _ } = e,
+        { analyticsLocations: C } = (0, p.Ay)(A.A.CHURN_DISCOUNT_PERSISTENT_CTA),
+        R = (0, l.z)({
             transform: t ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!t,
             config: { tension: 120, friction: 12 },
         });
     return (0, a.jsx)(r.animated.div, {
-        className: n()(N.iE, { [N.q4]: !t }),
-        style: C,
+        className: n()(E.iE, { [E.q4]: !t }),
+        style: R,
         children: (0, a.jsxs)("div", {
-            className: N.iJ,
+            className: E.iJ,
             children: [
-                (0, a.jsx)("img", { alt: "", src: f, className: N.oU }),
+                (0, a.jsx)("img", { alt: "", src: h, className: E.oU }),
                 (0, a.jsxs)("div", {
-                    className: N.iQ,
+                    className: E.iQ,
                     children: [
                         (0, a.jsx)(d.D, {
                             variant: "heading-md/semibold",
                             color: "text-strong",
-                            children: h.intl.format(h.t["3yZP0G"], { percent: E.discount.amount }),
+                            children: N.intl.format(N.t["3yZP0G"], { percent: f.discount.amount }),
                         }),
                         (0, a.jsx)(o.E, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            children: h.intl.format(h.t["3Q4wCy"], {
-                                numMonths: E.discount.user_usage_limit,
-                                discountedPrice: R,
-                                billingPeriod: (0, g.Ke)(E.discount.user_usage_limit_interval),
+                            children: N.intl.format(N.t["3Q4wCy"], {
+                                numMonths: f.discount.user_usage_limit,
+                                discountedPrice: _,
+                                billingPeriod: (0, g.Ke)(f.discount.user_usage_limit_interval),
                             }),
                         }),
                     ],
@@ -55,7 +55,7 @@ let E = function (e) {
                     variant: "expressive",
                     icon: m.t,
                     size: "md",
-                    text: h.intl.string(h.t.zrCzVB),
+                    text: N.intl.string(N.t.zrCzVB),
                     onClick: () =>
                         void (0, c.openModalLazy)(async () => {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
@@ -67,7 +67,7 @@ let E = function (e) {
                                 i.e("81349"),
                                 i.e("47181"),
                                 i.e("40841"),
-                                i.e("22810"),
+                                i.e("74112"),
                                 i.e("5036"),
                                 i.e("63133"),
                                 i.e("97271"),
@@ -76,7 +76,7 @@ let E = function (e) {
                                 i.e("75058"),
                                 i.e("60571"),
                                 i.e("71934"),
-                                i.e("12512"),
+                                i.e("47715"),
                                 i.e("29139"),
                                 i.e("56685"),
                                 i.e("86483"),
@@ -85,7 +85,7 @@ let E = function (e) {
                                 i.e("25568"),
                                 i.e("32260"),
                                 i.e("7276"),
-                                i.e("9292"),
+                                i.e("31320"),
                                 i.e("85484"),
                                 i.e("84615"),
                                 i.e("63941"),
@@ -269,7 +269,7 @@ let E = function (e) {
                                 (0, a.jsx)(e, {
                                     ...t,
                                     premiumSubscription: s,
-                                    analyticsLocations: _,
+                                    analyticsLocations: C,
                                     initialStep: x.g.CONFIRM_DISCOUNT,
                                 });
                         }),

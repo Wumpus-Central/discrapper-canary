@@ -474,16 +474,16 @@ function eQ() {
 var eJ = n(851109),
     e0 = n(567249),
     e1 = n(912592),
-    e8 = n(851580),
+    e3 = n(851580),
     e2 = n(222823),
-    e3 = n(371911),
+    e8 = n(371911),
     e4 = n(790782);
-function e5(e) {
+function e7(e) {
     let { onOpen: t, onClose: n, "data-jump-section": a } = e,
         l = (0, s.bG)([et.default], () => et.default.getCurrentUser()),
         o = r.useRef(null),
         d = (0, s.bG)([e2.Ay], () => l?.id != null && e2.Ay.getMentionCount(l.id, e4.P.NOTIFICATION_CENTER) > 0);
-    return (0, i.jsx)(e3.C, {
+    return (0, i.jsx)(e8.C, {
         targetElementRef: o,
         onOpen: t,
         onClose: n,
@@ -503,12 +503,12 @@ function e5(e) {
                         "data-jump-section": a,
                         ref: o,
                     }),
-                    (0, i.jsx)(e8.v, { location: "inbox-button", targetElementRef: o }),
+                    (0, i.jsx)(e3.v, { location: "inbox-button", targetElementRef: o }),
                 ],
             }),
     });
 }
-var e7 = n(966597),
+var e5 = n(966597),
     e6 = n(97469),
     e9 = n(253932),
     te = n(430363);
@@ -534,14 +534,14 @@ let td = (0, ts.Fe)({
                 n.e("63941"),
                 n.e("63009"),
                 n.e("47181"),
-                n.e("9292"),
+                n.e("31320"),
                 n.e("8528"),
                 n.e("45650"),
                 n.e("97189"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("18840"),
+                n.e("47715"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("73679"),
@@ -552,7 +552,7 @@ let td = (0, ts.Fe)({
                 n.e("76032"),
                 n.e("78220"),
                 n.e("43763"),
-                n.e("22810"),
+                n.e("74112"),
                 n.e("33957"),
                 n.e("59204"),
                 n.e("75058"),
@@ -795,7 +795,6 @@ let td = (0, ts.Fe)({
                 n.e("44780"),
                 n.e("90301"),
                 n.e("15109"),
-                n.e("88990"),
                 n.e("76413"),
                 n.e("3303"),
                 n.e("80945"),
@@ -803,6 +802,7 @@ let td = (0, ts.Fe)({
                 n.e("27659"),
                 n.e("36419"),
                 n.e("28850"),
+                n.e("88990"),
                 n.e("60003"),
                 n.e("26516"),
                 n.e("85802"),
@@ -822,8 +822,8 @@ let td = (0, ts.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("6619"),
-                n.e("18840"),
-                n.e("9292"),
+                n.e("47715"),
+                n.e("31320"),
                 n.e("33092"),
                 n.e("24211"),
                 n.e("29139"),
@@ -832,7 +832,7 @@ let td = (0, ts.Fe)({
                 n.e("27755"),
                 n.e("36613"),
                 n.e("98197"),
-                n.e("22810"),
+                n.e("74112"),
                 n.e("75240"),
                 n.e("81349"),
                 n.e("5432"),
@@ -1158,7 +1158,6 @@ let td = (0, ts.Fe)({
                 n.e("8829"),
                 n.e("86697"),
                 n.e("90213"),
-                n.e("88990"),
                 n.e("20379"),
                 n.e("69765"),
                 n.e("76413"),
@@ -1436,7 +1435,7 @@ let td = (0, ts.Fe)({
     }),
     tA = () =>
         Promise.all([
-            n.e("18840"),
+            n.e("47715"),
             n.e("8528"),
             n.e("38559"),
             n.e("40841"),
@@ -1482,7 +1481,7 @@ let td = (0, ts.Fe)({
             ),
             A = null !== e && t === eJ.RK.TITLE_BAR_LEFT,
             h = null === e,
-            { enabled: I, inInbox: g } = e7.A.useConfig({ location: "AppTitleBar" });
+            { enabled: I, inInbox: g } = e5.A.useConfig({ location: "AppTitleBar" });
         r.useLayoutEffect(() => {
             ta.Ay.setMinimumSize(800, 500);
         }, []);
@@ -1530,7 +1529,7 @@ let td = (0, ts.Fe)({
                                           !1,
                                           (0, i.jsx)(G, { canShowReminder: !0 }),
                                           I && !g && (0, i.jsx)(td, {}),
-                                          h && (0, i.jsx)(e5, { ...("RECENTS" === N ? e : {}) }),
+                                          h && (0, i.jsx)(e7, { ...("RECENTS" === N ? e : {}) }),
                                           n
                                               ? (0, i.jsx)(eE, { focusSectionProps: "HELP" === N ? e : void 0 })
                                               : (0, i.jsx)(el, { focusSectionProps: "HELP" === N ? e : void 0 }),

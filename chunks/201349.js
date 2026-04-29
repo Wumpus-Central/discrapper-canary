@@ -52,7 +52,7 @@ let R = { width: 500, height: _.$V },
                 n.e("40841"),
                 n.e("98042"),
                 n.e("90673"),
-                n.e("9292"),
+                n.e("31320"),
                 n.e("34552"),
                 n.e("55411"),
                 n.e("93103"),
@@ -513,8 +513,8 @@ var ew = n(931664),
     e2 = n(935063),
     e6 = n(73392),
     e3 = n(763754),
-    e4 = n(967144),
-    e7 = n(118517),
+    e7 = n(967144),
+    e4 = n(118517),
     e8 = n(976860),
     e5 = n(747926),
     e9 = n(232835),
@@ -548,7 +548,7 @@ function ts(e) {
         }, [t]),
         (0, l.jsxs)(Q.D, {
             onClick: function () {
-                (0, e7.Jx)(t.id), (0, e5.Tv)(t, n, "Reply Chain Nudge");
+                (0, e4.Jx)(t.id), (0, e5.Tv)(t, n, "Reply Chain Nudge");
             },
             className: tl._r,
             focusProps: { offset: { right: -4, left: -4 } },
@@ -583,7 +583,7 @@ function ta(e) {
             authorId: x,
             displayNameStyles: C,
         } = (0, e3.Ay)(o),
-        A = (0, e4.gn)(d, x, f),
+        A = (0, e7.gn)(d, x, f),
         E = (0, e6.a)({ displayNameStyles: C }),
         I =
             ((t = r.id),
@@ -645,7 +645,7 @@ function ta(e) {
                                                     role: "switch",
                                                     "aria-checked": c,
                                                     onClick: function (e) {
-                                                        e.stopPropagation(), (0, e7.vz)(r.id, !c);
+                                                        e.stopPropagation(), (0, e4.vz)(r.id, !c);
                                                     },
                                                     children: (0, l.jsxs)(eQ.E, {
                                                         variant: "text-sm/bold",
@@ -668,7 +668,7 @@ function ta(e) {
                                     }),
                                 (0, l.jsx)(tn, {
                                     onClick: function (e) {
-                                        e.stopPropagation(), (0, e7.Jx)(r.id);
+                                        e.stopPropagation(), (0, e4.Jx)(r.id);
                                     },
                                     "aria-label": T.intl.string(T.t.jSnJGT),
                                 }),
@@ -990,30 +990,30 @@ function t6(e) {
         : (0, l.jsxs)("div", {
               className: t2.Uo,
               children: [
-                  (0, l.jsx)(t4, {
+                  (0, l.jsx)(t7, {
                       slateEditor: r,
                       markdownSyntax: "bold",
                       children: (0, l.jsx)(tz.$, { size: "md", color: "currentColor", className: a()(t2.Kk, i) }),
                   }),
-                  (0, l.jsx)(t4, {
+                  (0, l.jsx)(t7, {
                       slateEditor: r,
                       markdownSyntax: "italics",
                       children: (0, l.jsx)(tZ.y, { size: "md", color: "currentColor", className: a()(t2.Kk, i) }),
                   }),
-                  (0, l.jsx)(t4, {
+                  (0, l.jsx)(t7, {
                       slateEditor: r,
                       markdownSyntax: "strikethrough",
                       children: (0, l.jsx)(tq.t, { size: "md", color: "currentColor", className: a()(t2.Kk, i) }),
                   }),
                   (0, l.jsx)("div", { className: a()(t2.yF, s) }),
                   !n?.disableBlockQuotes &&
-                      (0, l.jsx)(t7, {
+                      (0, l.jsx)(t4, {
                           slateEditor: r,
                           blockType: "blockQuote",
                           children: (0, l.jsx)(tJ.c, { size: "md", color: "currentColor", className: a()(t2.Kk, i) }),
                       }),
                   !n?.disableInlineCode &&
-                      (0, l.jsx)(t4, {
+                      (0, l.jsx)(t7, {
                           slateEditor: r,
                           markdownSyntax: "inlineCode",
                           children: (0, l.jsx)(tY.G, {
@@ -1024,7 +1024,7 @@ function t6(e) {
                               className: a()(t2.Kk, i),
                           }),
                       }),
-                  (0, l.jsx)(t4, {
+                  (0, l.jsx)(t7, {
                       slateEditor: r,
                       markdownSyntax: "spoiler",
                       children: (0, l.jsx)(tX.b, { size: "md", color: "currentColor", className: a()(t2.Kk, i) }),
@@ -1132,7 +1132,7 @@ let t3 = i.forwardRef(function (e, t) {
               }),
           });
 });
-function t4(e) {
+function t7(e) {
     let { slateEditor: t, markdownSyntax: n, children: i } = e,
         s = !1;
     if (t?.selection != null) {
@@ -1150,7 +1150,7 @@ function t4(e) {
         }),
     });
 }
-function t7(e) {
+function t4(e) {
     let { blockType: t, slateEditor: n, children: i } = e,
         s = null != n ? t1.VW.getCurrentBlock(n) : null,
         a = null != s && t1.AS.isType(s[0], t);
@@ -1236,8 +1236,8 @@ function nl(e, t, s, a, r) {
                     c(!1),
                         (0, p.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
-                                n.e("9292"),
-                                n.e("22810"),
+                                n.e("31320"),
+                                n.e("74112"),
                                 n.e("8528"),
                                 n.e("55658"),
                                 n.e("13709"),
@@ -1575,7 +1575,7 @@ let nf = (e, t) => ({
                     [D, T.commands?.enabled, ez],
                 ),
                 { submitting: e1, submit: e2, handleSubmit: e6 } = nl(H, T, em, eI, _.id),
-                { autocompleteRef: e3, handleMaybeShowAutocomplete: e4, handleHideAutocomplete: e7 } = nu(),
+                { autocompleteRef: e3, handleMaybeShowAutocomplete: e7, handleHideAutocomplete: e4 } = nu(),
                 e8 = ni(e2, T, em),
                 e5 = ns(em),
                 e9 = na({ editorRef: em, disabled: eR, textValue: s, channelId: _.id, chatInputType: T, submit: H }),
@@ -1835,8 +1835,8 @@ let nf = (e, t) => ({
                                                             onEnter: to,
                                                             onMoveSelection: tc,
                                                             onSelectionChanged: eq,
-                                                            onMaybeShowAutocomplete: e4,
-                                                            onHideAutocomplete: e7,
+                                                            onMaybeShowAutocomplete: e7,
+                                                            onHideAutocomplete: e4,
                                                             promptToUpload: W,
                                                             fontSize: eH,
                                                             spellcheckEnabled: eB,
