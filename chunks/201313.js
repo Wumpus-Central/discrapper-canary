@@ -468,15 +468,15 @@ var eQ = n(851109),
     eJ = n(567249),
     e0 = n(912592),
     e1 = n(851580),
-    e3 = n(222823),
-    e2 = n(371911),
-    e8 = n(790782);
-function e4(e) {
+    e2 = n(222823),
+    e8 = n(371911),
+    e3 = n(790782);
+function e7(e) {
     let { onOpen: t, onClose: n, "data-jump-section": a } = e,
         l = (0, s.bG)([ee.default], () => ee.default.getCurrentUser()),
         o = r.useRef(null),
-        d = (0, s.bG)([e3.Ay], () => l?.id != null && e3.Ay.getMentionCount(l.id, e8.P.NOTIFICATION_CENTER) > 0);
-    return (0, i.jsx)(e2.C, {
+        d = (0, s.bG)([e2.Ay], () => l?.id != null && e2.Ay.getMentionCount(l.id, e3.P.NOTIFICATION_CENTER) > 0);
+    return (0, i.jsx)(e8.C, {
         targetElementRef: o,
         onOpen: t,
         onClose: n,
@@ -501,7 +501,7 @@ function e4(e) {
             }),
     });
 }
-var e7 = n(966597),
+var e4 = n(966597),
     e5 = n(97469),
     e6 = n(253932),
     e9 = n(430363);
@@ -520,21 +520,21 @@ let to = (0, tl.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("13709"),
-                n.e("15758"),
+                n.e("85057"),
                 n.e("40841"),
                 n.e("69273"),
                 n.e("81349"),
                 n.e("63941"),
                 n.e("63009"),
                 n.e("47181"),
-                n.e("31320"),
+                n.e("27962"),
                 n.e("8528"),
                 n.e("45650"),
                 n.e("97189"),
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("47715"),
+                n.e("19241"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("73679"),
@@ -550,7 +550,7 @@ let to = (0, tl.Fe)({
                 n.e("59204"),
                 n.e("75058"),
                 n.e("23574"),
-                n.e("29139"),
+                n.e("39779"),
                 n.e("63635"),
                 n.e("56685"),
                 n.e("5007"),
@@ -771,7 +771,7 @@ let to = (0, tl.Fe)({
                 n.e("81154"),
                 n.e("55658"),
                 n.e("13709"),
-                n.e("15758"),
+                n.e("85057"),
                 n.e("91763"),
                 n.e("76602"),
                 n.e("28229"),
@@ -815,11 +815,11 @@ let to = (0, tl.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("6619"),
-                n.e("47715"),
-                n.e("31320"),
+                n.e("19241"),
+                n.e("27962"),
                 n.e("33092"),
-                n.e("24211"),
-                n.e("29139"),
+                n.e("96600"),
+                n.e("39779"),
                 n.e("73679"),
                 n.e("84615"),
                 n.e("27755"),
@@ -828,7 +828,7 @@ let to = (0, tl.Fe)({
                 n.e("74112"),
                 n.e("75240"),
                 n.e("81349"),
-                n.e("5432"),
+                n.e("75697"),
                 n.e("35392"),
                 n.e("20524"),
                 n.e("40841"),
@@ -852,10 +852,10 @@ let to = (0, tl.Fe)({
                 n.e("8996"),
                 n.e("63133"),
                 n.e("44609"),
-                n.e("79093"),
+                n.e("88826"),
                 n.e("28510"),
                 n.e("45503"),
-                n.e("15758"),
+                n.e("85057"),
                 n.e("55658"),
                 n.e("76032"),
                 n.e("78220"),
@@ -873,16 +873,17 @@ let to = (0, tl.Fe)({
                 n.e("52204"),
                 n.e("51404"),
                 n.e("98042"),
-                n.e("24414"),
+                n.e("20797"),
                 n.e("38559"),
                 n.e("80287"),
                 n.e("5007"),
                 n.e("90673"),
-                n.e("3840"),
-                n.e("81579"),
+                n.e("4592"),
+                n.e("27518"),
                 n.e("4981"),
                 n.e("15453"),
-                n.e("92510"),
+                n.e("99286"),
+                n.e("90053"),
                 n.e("92793"),
                 n.e("54316"),
                 n.e("66498"),
@@ -1428,7 +1429,7 @@ let to = (0, tl.Fe)({
     }),
     tu = () =>
         Promise.all([
-            n.e("47715"),
+            n.e("19241"),
             n.e("8528"),
             n.e("38559"),
             n.e("40841"),
@@ -1474,7 +1475,7 @@ let to = (0, tl.Fe)({
             ),
             A = null !== e && t === eQ.RK.TITLE_BAR_LEFT,
             h = null === e,
-            { enabled: I, inInbox: g } = e7.A.useConfig({ location: "AppTitleBar" });
+            { enabled: I, inInbox: g } = e4.A.useConfig({ location: "AppTitleBar" });
         r.useLayoutEffect(() => {
             tr.Ay.setMinimumSize(800, 500);
         }, []);
@@ -1522,7 +1523,7 @@ let to = (0, tl.Fe)({
                                           !1,
                                           (0, i.jsx)(U, { canShowReminder: !0 }),
                                           I && !g && (0, i.jsx)(to, {}),
-                                          h && (0, i.jsx)(e4, { ...("RECENTS" === N ? e : {}) }),
+                                          h && (0, i.jsx)(e7, { ...("RECENTS" === N ? e : {}) }),
                                           n
                                               ? (0, i.jsx)(e_, { focusSectionProps: "HELP" === N ? e : void 0 })
                                               : (0, i.jsx)(ea, { focusSectionProps: "HELP" === N ? e : void 0 }),
