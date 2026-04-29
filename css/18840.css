@@ -3648,6 +3648,10 @@
     }
 }
 
+.overlayIcon__4e9aa {
+    transition: opacity .1s ease-in
+}
+
 .full-motion .tile__4e9aa:not(.disabled__4e9aa):focus-within .overlayIcon__4e9aa,
 .full-motion .tile__4e9aa:not(.disabled__4e9aa):hover .overlayIcon__4e9aa {
     animation: overlayIconBounceIn__4e9aa .3s ease-out
@@ -3663,6 +3667,11 @@
 
 .fadeInAvatarImg_e3aa7b {
     animation: fadeIn_e3aa7b 1.5s
+}
+
+.sampleDecorationAvatar_e3aa7b {
+    animation: fadeIn_e3aa7b .15s ease-out;
+    filter: grayscale(100%)
 }
 
 @keyframes fadeIn_e3aa7b {
@@ -4658,13 +4667,6 @@
 
 .description_cd4367 {
     margin-top: var(--space-8)
-}
-
-.selectorHeading_a1294d {
-    align-items: center;
-    display: flex;
-    gap: var(--space-6);
-    margin-bottom: var(--space-8)
 }
 
 .container_b08af5 {
@@ -6787,12 +6789,6 @@ div.profileThemedContainer__656be {
 
 .profileViewDisabled_ee84e7 {
     opacity: .5
-}
-
-.riveHoverTarget__438ba {
-    height: 100%;
-    pointer-events: auto;
-    width: 100%
 }
 
 .wrapper__3fa5b {

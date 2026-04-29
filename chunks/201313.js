@@ -474,16 +474,16 @@ function eQ() {
 var eJ = n(851109),
     e0 = n(567249),
     e1 = n(912592),
-    e2 = n(851580),
-    e3 = n(222823),
-    e8 = n(371911),
+    e8 = n(851580),
+    e2 = n(222823),
+    e3 = n(371911),
     e4 = n(790782);
 function e5(e) {
     let { onOpen: t, onClose: n, "data-jump-section": a } = e,
         l = (0, s.bG)([et.default], () => et.default.getCurrentUser()),
         o = r.useRef(null),
-        d = (0, s.bG)([e3.Ay], () => l?.id != null && e3.Ay.getMentionCount(l.id, e4.P.NOTIFICATION_CENTER) > 0);
-    return (0, i.jsx)(e8.C, {
+        d = (0, s.bG)([e2.Ay], () => l?.id != null && e2.Ay.getMentionCount(l.id, e4.P.NOTIFICATION_CENTER) > 0);
+    return (0, i.jsx)(e3.C, {
         targetElementRef: o,
         onOpen: t,
         onClose: n,
@@ -503,7 +503,7 @@ function e5(e) {
                         "data-jump-section": a,
                         ref: o,
                     }),
-                    (0, i.jsx)(e2.v, { location: "inbox-button", targetElementRef: o }),
+                    (0, i.jsx)(e8.v, { location: "inbox-button", targetElementRef: o }),
                 ],
             }),
     });
@@ -541,7 +541,7 @@ let td = (0, ts.Fe)({
                 n.e("24059"),
                 n.e("51402"),
                 n.e("27660"),
-                n.e("12512"),
+                n.e("18840"),
                 n.e("85484"),
                 n.e("89516"),
                 n.e("73679"),
@@ -822,7 +822,7 @@ let td = (0, ts.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("6619"),
-                n.e("12512"),
+                n.e("18840"),
                 n.e("9292"),
                 n.e("33092"),
                 n.e("24211"),
@@ -1404,7 +1404,7 @@ let td = (0, ts.Fe)({
                 n.e("96975"),
                 n.e("83438"),
                 n.e("4787"),
-                n.e("2018"),
+                n.e("30373"),
                 n.e("18861"),
                 n.e("92223"),
                 n.e("51356"),
@@ -1436,7 +1436,7 @@ let td = (0, ts.Fe)({
     }),
     tA = () =>
         Promise.all([
-            n.e("12512"),
+            n.e("18840"),
             n.e("8528"),
             n.e("38559"),
             n.e("40841"),
