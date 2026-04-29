@@ -37,6 +37,7 @@ e.exports = {
     hq: "mockInputButton_c50f62",
     gn: "titleContainer_c50f62",
     h_: "description_c50f62",
+    LM: "framesEarlyAccessBadge_c50f62",
     ed: "disclaimer_c50f62",
     un: "disclaimerLight_c50f62",
     CU: "learnMoreLink_c50f62",

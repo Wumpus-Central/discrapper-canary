@@ -348,6 +348,10 @@ let x = new G(s.h, {
         CLIPS_CLEAR_NEW_CLIP_IDS: function () {
             k.newClipIds = [];
         },
+        CLIPS_REMOVE_SINGLE_NEW_CLIP_ID: function (e) {
+            let { clipId: t } = e;
+            k.newClipIds = k.newClipIds.filter((e) => e !== t);
+        },
         CLIPS_LOAD_DIRECTORY_SUCCESS: function (e) {
             for (let t of ((g = []), (N = []), e.clips))
                 t.isCandidate

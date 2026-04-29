@@ -1126,7 +1126,7 @@ let eh = (0, el.Fe)({
             n.e("91652"),
             n.e("25013"),
             n.e("38589"),
-            n.e("78814"),
+            n.e("73652"),
             n.e("54792"),
             n.e("20803"),
             n.e("37698"),
@@ -1151,7 +1151,7 @@ let eh = (0, el.Fe)({
             n.e("6391"),
             n.e("64526"),
             n.e("92097"),
-            n.e("52709"),
+            n.e("75090"),
             n.e("15809"),
             n.e("9861"),
             n.e("24564"),
@@ -1804,21 +1804,20 @@ let tW = (e) => {
         let { clip: t, isNew: n } = e,
             [s, a] = r.useState(!1),
             { scrubOnHover: o } = tw.Z.useConfig({ location: "ClipsSidebarItem" }),
-            l = r.useRef(null),
-            _ = r.useCallback(() => a(!0), []),
-            d = r.useCallback(() => a(!1), []);
+            l = r.useCallback(() => a(!0), []),
+            _ = r.useCallback(() => a(!1), []);
         return null == t
             ? null
             : (0, i.jsx)("div", {
-                  ref: l,
                   className: tY.Jr,
-                  onMouseEnter: _,
-                  onMouseLeave: d,
-                  onFocus: _,
-                  onBlur: d,
+                  onMouseEnter: l,
+                  onMouseLeave: _,
+                  onFocus: l,
+                  onBlur: _,
                   children: (0, i.jsx)(tM.Cl, {
                       clip: t,
                       children: (0, i.jsxs)(tB.d, {
+                          lazy: !0,
                           scrubOnHover: o,
                           isPlaying: !o && s,
                           preload: n ? "auto" : "metadata",
@@ -1843,7 +1842,7 @@ let tW = (e) => {
 var t$ = n(542772);
 let tz = (e) => {
     let { clips: t } = e,
-        n = (0, d.bG)([tP.A], () => tP.A.getLastClipsSession()?.newClipIds) ?? [];
+        n = (0, d.bG)([tP.A], () => tP.A.getNewClipIds()) ?? [];
     return (0, i.jsx)("div", {
         className: t$.u,
         children: t.map((e) => (0, i.jsx)(tW, { clip: e, isNew: n.includes(e.id) }, e.id)),
@@ -1854,21 +1853,29 @@ var tq = n(16590),
 let tQ = (e, t) => t.createdAt - e.createdAt;
 function tJ() {
     let { enableReminderSidebar: e } = tw.Z.useConfig({ location: "ClipsReminderSidebar" }),
-        { clips: t, remindersEnabled: n } = (0, d.cf)([tP.A], () => {
-            let e = Date.now() - 6048e5;
-            return {
-                clips: tP.A.getClipIds()
-                    .map((e) => tP.A.getClipById(e))
-                    .filter((t) => t.createdAt > e)
-                    .sort(tQ)
-                    .slice(0, 15),
-                remindersEnabled: tP.A.getSettings().remindersEnabled,
-            };
-        });
+        { remindersEnabled: t } = (0, d.cf)([tP.A], () => ({ remindersEnabled: tP.A.getSettings().remindersEnabled })),
+        [n, s] = r.useState(() =>
+            tP.A.getNewClipIds()
+                .map(tP.A.getClipById)
+                .filter((e) => void 0 !== e)
+                .sort(tQ),
+        );
     return (r.useEffect(() => {
-        (e && n) || (0, t_.Jp)();
-    }, [e, n]),
-    e && n && 0 !== t.length)
+        let e = () => {
+            let e = tP.A.getNewClipIds();
+            s((t) =>
+                [
+                    ...e.map(tP.A.getClipById).filter((e) => void 0 !== e),
+                    ...t.filter((t) => !e.includes(t.id) && null != tP.A.getClipById(t.id)),
+                ].sort(tQ),
+            );
+        };
+        return tP.A.addChangeListener(e), () => tP.A.removeChangeListener(e);
+    }, []),
+    r.useEffect(() => {
+        (e && t) || (0, t_.Jp)();
+    }, [e, t]),
+    e && t && 0 !== n.length)
         ? (0, i.jsxs)("div", {
               className: tX.kL,
               "data-app-right-panel": !0,
@@ -1882,14 +1889,14 @@ function tJ() {
                               className: tX.DD,
                               children: [
                                   (0, i.jsx)(tL.x, { size: "sm", color: ti.A.colors.TEXT_STRONG.css }),
-                                  eb.intl.formatToPlainString(tq.default.dFu8vZ, { count: t.length }),
+                                  eb.intl.formatToPlainString(tq.default.dFu8vZ, { count: n.length }),
                               ],
                           }),
                           (0, i.jsx)(tv.J, { onClick: t_.Jp }),
                       ],
                   }),
-                  (0, i.jsx)(ts.Ip, { className: tX.Qs, children: (0, i.jsx)(tz, { clips: t }) }),
-                  (0, i.jsx)(tZ, { clips: t }),
+                  (0, i.jsx)(ts.Ip, { className: tX.Qs, children: (0, i.jsx)(tz, { clips: n }) }),
+                  (0, i.jsx)(tZ, { clips: n }),
               ],
           })
         : null;

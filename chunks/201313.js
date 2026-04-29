@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { useAppSidebarState: () => t_, default: () => tE });
+n.r(t), n.d(t, { useAppSidebarState: () => th, default: () => t_ });
 var i = n(627968),
     r = n(64700),
     a = n(353640),
@@ -43,10 +43,10 @@ var I = n(192308),
     b = n(710315),
     v = n(338854),
     P = n(43105),
-    R = n(372684),
-    D = n(399925),
+    D = n(372684),
+    R = n(399925),
     w = n(665039);
-function M(e) {
+function x(e) {
     let { onOpenClipsGallery: t, clipIconRef: n, lastClipsSession: a } = e,
         l = (0, s.bG)([L.A], () => {
             let e = L.A.getLastClipsSession()?.newClipIds;
@@ -56,11 +56,11 @@ function M(e) {
         }),
         o = (0, w.j)(l),
         d = r.useCallback(() => {
-            (0, D.jA)();
+            (0, R.jA)();
         }, []);
     return null == l
         ? null
-        : l.type !== R.nQ.SCREENSHOT && l.type !== R.nQ.VOICE_CLIP && null != o
+        : l.type !== D.nQ.SCREENSHOT && l.type !== D.nQ.VOICE_CLIP && null != o
           ? (0, i.jsx)(v.H, {
                 targetElementRef: { current: n },
                 position: "bottom",
@@ -83,9 +83,8 @@ function M(e) {
                 onRequestClose: d,
             });
 }
-var x = n(271597),
-    U = n(370791);
-function G(e) {
+var M = n(271597);
+function U(e) {
     let { canShowReminder: t = !1 } = e,
         n = (0, O.A)(f.Ay),
         { enableReminderSidebar: a } = S.Z.useConfig({ location: "ClipsButton" }),
@@ -94,65 +93,59 @@ function G(e) {
         {
             hasNewClips: d,
             lastClipsSession: c,
-            remindersEnabled: _,
-            hasAnyClipAnimations: E,
+            remindersEnabled: u,
+            hasAnyClipAnimations: _,
         } = (0, s.cf)([L.A], () => ({
             hasNewClips: L.A.getNewClipIds().length > 0,
             lastClipsSession: L.A.getLastClipsSession(),
             remindersEnabled: L.A.getSettings().remindersEnabled,
             hasAnyClipAnimations: L.A.hasAnyClipAnimations(),
         })),
-        p = null != c && c.newClipIds.length > 0,
-        m = (0, y.K)((e) => e.clipsButtonRef),
-        v = (0, y.K)((e) => e.setClipsButtonRef),
-        P = (0, s.bG)([T.A], () => T.A.hasLayers()),
-        { preventIdle: R, allowIdle: D } = (0, C.o)("animation");
-    function w() {
-        (0, x.p)();
+        E = null != c && c.newClipIds.length > 0,
+        p = (0, y.K)((e) => e.clipsButtonRef),
+        m = (0, y.K)((e) => e.setClipsButtonRef),
+        v = (0, s.bG)([T.A], () => T.A.hasLayers()),
+        { preventIdle: P, allowIdle: D } = (0, C.o)("animation");
+    function R() {
+        (0, M.p)();
     }
-    return (r.useEffect(() => (E ? R() : D(), () => D()), [E, R, D]),
-    r.useEffect(() => {
-        if (!a || !_ || !p || !t || P || (0, I.hasAnyModalOpen)()) return;
-        let { activePanel: e } = u.fy.getState();
-        e !== u.HP.CLIPS_REMINDER && (0, U.w)();
-    }, [a, _, p, t, P]),
-    (l || o) && n)
+    return (r.useEffect(() => (_ ? P() : D(), () => D()), [_, P, D]), (l || o) && n)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  null != m &&
+                  null != p &&
                       t &&
                       !a &&
-                      _ &&
-                      p &&
+                      u &&
+                      E &&
                       !(0, I.hasAnyModalOpen)() &&
-                      !P &&
-                      (0, i.jsx)(M, { clipIconRef: m, lastClipsSession: c, onOpenClipsGallery: w }),
+                      !v &&
+                      (0, i.jsx)(x, { clipIconRef: p, lastClipsSession: c, onOpenClipsGallery: R }),
                   (0, i.jsx)("div", {
-                      ref: v,
+                      ref: m,
                       children: (0, i.jsx)(A.A, {
                           icon: g.x,
                           showBadge: d,
                           tooltip: h.intl.string(h.t.MXaLEM),
-                          onClick: w,
+                          onClick: R,
                       }),
                   }),
               ],
           })
         : null;
 }
-var j = n(503698),
-    k = n.n(j),
-    V = n(990078),
-    F = n(939249),
-    H = n(477155),
-    B = n(935286),
-    Y = n(176522),
-    $ = n(963169),
-    z = n(228366),
-    q = n(546859);
-let K = Y.GY.binds["0"],
-    W = Y.M$.binds["0"],
-    X = (e) => {
+var G = n(503698),
+    j = n.n(G),
+    k = n(990078),
+    V = n(939249),
+    F = n(477155),
+    H = n(935286),
+    B = n(176522),
+    Y = n(963169),
+    $ = n(228366),
+    z = n(546859);
+let q = B.GY.binds["0"],
+    K = B.M$.binds["0"],
+    W = (e) => {
         let { firstElementFocusJumpSectionProps: t = {} } = e,
             { canGoBack: n, canGoForward: a } = (function () {
                 let e = r.useCallback(() => {
@@ -167,10 +160,10 @@ let K = Y.GY.binds["0"],
                             n(e());
                         };
                         return (
-                            z.h.subscribe("ROUTE_CHANGED", t),
-                            z.h.subscribe("LOGOUT", t),
+                            $.h.subscribe("ROUTE_CHANGED", t),
+                            $.h.subscribe("LOGOUT", t),
                             () => {
-                                z.h.unsubscribe("ROUTE_CHANGED", t), z.h.unsubscribe("LOGOUT", t);
+                                $.h.unsubscribe("ROUTE_CHANGED", t), $.h.unsubscribe("LOGOUT", t);
                             }
                         );
                     }, [e]),
@@ -178,73 +171,73 @@ let K = Y.GY.binds["0"],
                 );
             })();
         return (0, i.jsxs)("div", {
-            className: q.y_,
+            className: z.y_,
             children: [
-                (0, i.jsx)(V.m, {
+                (0, i.jsx)(k.m, {
                     ariaHidden: !0,
                     shouldShow: n,
                     text: h.intl.string(h.t.B9vzIP),
-                    keyboardShortcut: K,
-                    children: (0, i.jsx)(F.D, {
+                    keyboardShortcut: q,
+                    children: (0, i.jsx)(V.D, {
                         "aria-label": h.intl.string(h.t.B9vzIP),
                         "aria-disabled": !n,
                         tabIndex: n ? 0 : -1,
-                        className: k()(q.x6, q.aX, { [q.r9]: !n }),
-                        onClick: () => (0, $.OE)("nav_button"),
+                        className: j()(z.x6, z.aX, { [z.r9]: !n }),
+                        onClick: () => (0, Y.OE)("nav_button"),
                         ...t,
-                        children: (0, i.jsx)(H.r, { size: "sm", color: "currentColor" }),
+                        children: (0, i.jsx)(F.r, { size: "sm", color: "currentColor" }),
                     }),
                 }),
-                (0, i.jsx)(V.m, {
+                (0, i.jsx)(k.m, {
                     ariaHidden: !0,
                     shouldShow: a,
                     text: h.intl.string(h.t["9KJ29e"]),
-                    keyboardShortcut: W,
-                    children: (0, i.jsx)(F.D, {
+                    keyboardShortcut: K,
+                    children: (0, i.jsx)(V.D, {
                         "aria-label": h.intl.string(h.t["9KJ29e"]),
                         "aria-disabled": !a,
                         tabIndex: a ? 0 : -1,
-                        className: k()(q.x6, q.sY, { [q.r9]: !a }),
-                        onClick: () => (0, $.Qb)("nav_button"),
-                        children: (0, i.jsx)(B.E, { size: "sm", color: "currentColor" }),
+                        className: j()(z.x6, z.sY, { [z.r9]: !a }),
+                        onClick: () => (0, Y.Qb)("nav_button"),
+                        children: (0, i.jsx)(H.E, { size: "sm", color: "currentColor" }),
                     }),
                 }),
             ],
         });
     };
-var Z = n(291445),
-    Q = n(661531),
-    J = n(349288),
-    ee = n(290136),
-    et = n(287809),
-    en = n(954571),
-    ei = n(975571),
-    er = n(427262),
-    ea = n(652215);
-function el(e) {
+var X = n(291445),
+    Z = n(661531),
+    Q = n(349288),
+    J = n(290136),
+    ee = n(287809),
+    et = n(954571),
+    en = n(975571),
+    ei = n(427262),
+    er = n(652215);
+function ea(e) {
     let { focusSectionProps: t } = e,
-        n = (0, s.bG)([et.default], () => et.default.getCurrentUser()),
-        r = (0, er.mv)(n);
-    return (0, i.jsx)(J.Anchor, {
-        href: ei.C,
+        n = (0, s.bG)([ee.default], () => ee.default.getCurrentUser()),
+        r = (0, ei.mv)(n);
+    return (0, i.jsx)(Q.Anchor, {
+        href: en.C,
         target: "_blank",
         tabIndex: -1,
         children: (0, i.jsx)(A.A, {
-            color: r ? Q.A.unsafe_rawColors.GREEN_360.css : "currentColor",
-            onClick: () => en.default.track(ea.HAw.HELP_CLICKED, { highlighted: r }),
-            icon: ee.c,
+            color: r ? Z.A.unsafe_rawColors.GREEN_360.css : "currentColor",
+            onClick: () => et.default.track(er.HAw.HELP_CLICKED, { highlighted: r }),
+            icon: J.c,
             tooltip: h.intl.string(h.t["cqEoj/"]),
             ...t,
         }),
     });
 }
-var es = n(550079),
-    eo = n(477782),
-    ed = n(92446),
-    ec = n(509434),
-    eu = n(922016),
-    eA = n(975807);
-let eh = () =>
+var el = n(550079),
+    es = n(477782),
+    eo = n(92446),
+    ed = n(509434),
+    ec = n(922016),
+    eu = n(975807);
+let eA = () =>
     (0, I.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
             n.e("81349"),
@@ -256,37 +249,37 @@ let eh = () =>
         ]).then(n.bind(n, 317248));
         return (t) => (0, i.jsx)(e, { ...t });
     });
-function e_(e) {
+function eh(e) {
     let { onClose: t } = e;
-    return (0, i.jsx)(es.W, {
+    return (0, i.jsx)(el.W, {
         "data-menu-migrated": !0,
         onSelect: () => {},
         navId: "staff-help-popout",
         variant: "fixed",
         onClose: t,
         "aria-label": h.intl.string(h.t.HpQykc),
-        children: (0, i.jsxs)(eo.rX, {
+        children: (0, i.jsxs)(es.rX, {
             children: [
-                (0, i.jsx)(eo.Dr, {
+                (0, i.jsx)(es.Dr, {
                     id: "staff-help-bug-reporter",
                     label: h.intl.string(h.t["5LqopY"]),
-                    icon: ed.Q,
-                    leadingAccessory: { type: "icon", icon: ed.Q },
-                    action: eh,
+                    icon: eo.Q,
+                    leadingAccessory: { type: "icon", icon: eo.Q },
+                    action: eA,
                 }),
-                (0, i.jsx)(eo.Dr, {
+                (0, i.jsx)(es.Dr, {
                     id: "staff-help-center",
                     label: "Go to Help Center",
-                    icon: ec.I,
-                    leadingAccessory: { type: "icon", icon: ee.c },
-                    trailingIndicator: { type: "icon", icon: ec.I },
-                    action: () => (0, eA.A)(ei.C),
+                    icon: ed.I,
+                    leadingAccessory: { type: "icon", icon: J.c },
+                    trailingIndicator: { type: "icon", icon: ed.I },
+                    action: () => (0, eu.A)(en.C),
                 }),
             ],
         }),
     });
 }
-function eE(e) {
+function e_(e) {
     let { focusSectionProps: t } = e,
         [n, a] = r.useState(!1),
         [l, s] = r.useState(0),
@@ -302,22 +295,22 @@ function eE(e) {
     return (0, i.jsx)("div", {
         onMouseEnter: () => d(!0),
         onMouseLeave: () => d(!1),
-        children: (0, i.jsx)(eu.Y, {
+        children: (0, i.jsx)(ec.Y, {
             targetElementRef: o,
             shouldShow: n,
-            animation: eu.Y.Animation.NONE,
+            animation: ec.Y.Animation.NONE,
             position: "bottom",
             align: "right",
             autoInvert: !1,
             onRequestOpen: () => a(!0),
             onRequestClose: () => a(!1),
-            renderPopout: () => (0, i.jsx)(e_, { onClose: () => a(!1) }),
+            renderPopout: () => (0, i.jsx)(eh, { onClose: () => a(!1) }),
             children: (e, n) => {
                 let { isShown: r } = n;
                 return (0, i.jsx)(A.A, {
                     ref: o,
-                    onClick: eh,
-                    icon: ed.Q,
+                    onClick: eA,
+                    icon: eo.Q,
                     "aria-label": h.intl.string(h.t["5LqopY"]),
                     selected: r,
                     ...t,
@@ -326,40 +319,40 @@ function eE(e) {
         }),
     });
 }
-var ep = n(32880),
-    em = n(157559),
-    eI = n(987482);
-let eg = "UPDATE_NOT_AVAILABLE";
-function eC(e) {
-    eg = e.type;
+var eE = n(32880),
+    ep = n(157559),
+    em = n(987482);
+let eI = "UPDATE_NOT_AVAILABLE";
+function eg(e) {
+    eI = e.type;
 }
-class eT extends s.Ay.Store {
+class eC extends s.Ay.Store {
     static displayName = "AutoUpdateStore";
     getState() {
-        return eg;
+        return eI;
     }
 }
-let ef = new eT(z.h, {
-    CHECKING_FOR_UPDATES: eC,
-    UPDATE_NOT_AVAILABLE: eC,
-    UPDATE_AVAILABLE: eC,
-    UPDATE_MANUALLY: eC,
-    UPDATE_ERROR: eC,
-    UPDATE_DOWNLOADED: eC,
+let eT = new eC($.h, {
+    CHECKING_FOR_UPDATES: eg,
+    UPDATE_NOT_AVAILABLE: eg,
+    UPDATE_AVAILABLE: eg,
+    UPDATE_MANUALLY: eg,
+    UPDATE_ERROR: eg,
+    UPDATE_DOWNLOADED: eg,
 });
-var eN = n(763827),
-    eS = n(82819);
-class eL extends r.PureComponent {
+var ef = n(763827),
+    eN = n(82819);
+class eS extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.memoizedMode ? { memoizedMode: e.mode, clicked: !1 } : null;
     }
     state = { memoizedMode: this.props.mode, clicked: !1 };
     handleDownloadApps() {
-        (0, I.openModal)((e) => (0, i.jsx)(eI.default, { source: "Links", ...e }));
+        (0, I.openModal)((e) => (0, i.jsx)(em.default, { source: "Links", ...e }));
     }
     handleInstallDownload = () => {
-        eN.A.isConnected()
-            ? em.A.show({
+        ef.A.isConnected()
+            ? ep.A.show({
                   title: h.intl.string(h.t.tiu1ly),
                   body: h.intl.string(h.t["zK+lqW"]),
                   onConfirm: this.doUpdate,
@@ -370,7 +363,7 @@ class eL extends r.PureComponent {
             : this.doUpdate();
     };
     doUpdate = () => {
-        this.state.clicked || (this.setState({ clicked: !0 }), z.h.dispatch({ type: "AUTO_UPDATER_QUIT_AND_INSTALL" }));
+        this.state.clicked || (this.setState({ clicked: !0 }), $.h.dispatch({ type: "AUTO_UPDATER_QUIT_AND_INSTALL" }));
     };
     render() {
         let e = "UPDATE_AVAILABLE" === this.props.mode,
@@ -378,112 +371,112 @@ class eL extends r.PureComponent {
         return e || t
             ? (0, i.jsx)(A.A, {
                   tooltip: e ? h.intl.string(h.t["zp9d/4"]) : h.intl.string(h.t.u18OXF),
-                  color: Q.A.unsafe_rawColors.GREEN_360.css,
-                  colorClass: e ? eS.z : void 0,
+                  color: Z.A.unsafe_rawColors.GREEN_360.css,
+                  colorClass: e ? eN.z : void 0,
                   onClick: this.handleInstallDownload,
-                  icon: ep.s,
+                  icon: eE.s,
                   disabled: e,
               })
             : null;
     }
 }
-let eO = s.Ay.connectStores([ef], () => ({ mode: ef.getState() }))(eL);
-var ey = n(873263),
-    eb = n(782603),
-    ev = n(27232),
-    eP = n(111159),
-    eR = n(768622),
+let eL = s.Ay.connectStores([eT], () => ({ mode: eT.getState() }))(eS);
+var eO = n(873263),
+    ey = n(782603),
+    eb = n(27232),
+    ev = n(111159),
+    eP = n(768622),
     eD = n(836480),
-    ew = n(403581),
-    eM = n(34188),
+    eR = n(403581),
+    ew = n(34188),
     ex = n(214947),
-    eU = n(177953),
-    eG = n(577473),
-    ej = n(834730),
-    ek = n(313281),
-    eV = n(5180),
-    eF = n(91242),
-    eH = n(548118),
-    eB = n(394953),
-    eY = n(734057),
-    e$ = n(71393),
-    ez = n(309010),
-    eq = n(967198),
-    eK = n(486020),
-    eW = n(165610),
-    eX = n(602339),
-    eZ = n(957896);
-function eQ() {
+    eM = n(177953),
+    eU = n(577473),
+    eG = n(834730),
+    ej = n(313281),
+    ek = n(5180),
+    eV = n(91242),
+    eF = n(548118),
+    eH = n(394953),
+    eB = n(734057),
+    eY = n(71393),
+    e$ = n(309010),
+    ez = n(967198),
+    eq = n(486020),
+    eK = n(165610),
+    eW = n(602339),
+    eX = n(957896);
+function eZ() {
     let e,
-        t = (0, ey.zy)(),
-        n = (0, s.bG)([eq.A], () => eq.A.getGuildId()),
-        r = (0, s.bG)([ez.A], () => ez.A.getChannelId()),
-        a = (0, s.bG)([eY.A], () => eY.A.getChannel(r), [r]),
+        t = (0, eO.zy)(),
+        n = (0, s.bG)([ez.A], () => ez.A.getGuildId()),
+        r = (0, s.bG)([e$.A], () => e$.A.getChannelId()),
+        a = (0, s.bG)([eB.A], () => eB.A.getChannel(r), [r]),
         l = n ?? a?.guild_id,
-        o = (0, s.bG)([e$.A], () => e$.A.getGuild(l), [l]),
-        d = (0, ek.DZ)(),
-        c = (0, eB.lI)(),
-        { application: u, isFrameInFocusedMode: A } = (0, s.cf)([E.A, eF.A], () => {
-            let e = eF.A.getConnectedFrame();
+        o = (0, s.bG)([eY.A], () => eY.A.getGuild(l), [l]),
+        d = (0, ej.DZ)(),
+        c = (0, eH.lI)(),
+        { application: u, isFrameInFocusedMode: A } = (0, s.cf)([E.A, eV.A], () => {
+            let e = eV.A.getConnectedFrame();
             return {
                 application: E.A.getApplication(e?.applicationId),
-                isFrameInFocusedMode: eF.A.getFrameLayoutMode() === eW.y.FOCUSED,
+                isFrameInFocusedMode: eV.A.getFrameLayoutMode() === eK.y.FOCUSED,
             };
         }),
-        _ = null != u ? eK.Ay.getApplicationIconURL({ id: u.id, icon: u.icon, bot: u.bot }) : void 0,
+        _ = null != u ? eq.Ay.getApplicationIconURL({ id: u.id, icon: u.icon, bot: u.bot }) : void 0,
         p = null;
     return (null != u && A
         ? ((e = u.name),
           (p = (0, i.jsx)("img", {
-              className: eZ.Z2,
+              className: eX.Z2,
               alt: h.intl.string(h.t.X4IxWL),
               src: _,
               "aria-hidden": !0,
               draggable: !1,
           })))
         : c
-          ? ((e = h.intl.string(h.t.HcoRu0)), (p = (0, i.jsx)(eb.X, { size: "sm" })))
+          ? ((e = h.intl.string(h.t.HcoRu0)), (p = (0, i.jsx)(ey.X, { size: "sm" })))
           : null != o
-            ? ((e = (0, eV.YC)(o)),
+            ? ((e = (0, ek.YC)(o)),
               (p = d
-                  ? (0, i.jsx)(ev.G, { size: "sm" })
-                  : (0, i.jsx)(eH.Ay, { guild: o, size: eH.Ay.Sizes.SMOL, active: !0, className: eZ.$f })))
+                  ? (0, i.jsx)(eb.G, { size: "sm" })
+                  : (0, i.jsx)(eF.Ay, { guild: o, size: eF.Ay.Sizes.SMOL, active: !0, className: eX.$f })))
             : null != a && (a.isDM() || a.isGroupDM())
-              ? ((e = h.intl.string(h.t.YUU0RF)), (p = (0, i.jsx)(eP.p, { size: "sm" })))
-              : t.pathname.startsWith(ea.BVt.ICYMI)
-                ? ((e = h.intl.string(h.t["jnXV/V"])), (p = (0, i.jsx)(eR.g, { size: "sm" })))
-                : t.pathname.startsWith(ea.BVt.GLOBAL_DISCOVERY)
+              ? ((e = h.intl.string(h.t.YUU0RF)), (p = (0, i.jsx)(ev.p, { size: "sm" })))
+              : t.pathname.startsWith(er.BVt.ICYMI)
+                ? ((e = h.intl.string(h.t["jnXV/V"])), (p = (0, i.jsx)(eP.g, { size: "sm" })))
+                : t.pathname.startsWith(er.BVt.GLOBAL_DISCOVERY)
                   ? ((e = h.intl.string(h.t["4nEZLk"])), (p = (0, i.jsx)(eD.Q, { size: "sm" })))
-                  : t.pathname.startsWith(ea.BVt.NITRO_HOME)
-                    ? ((e = h.intl.string(h.t.Ipxkog)), (p = (0, i.jsx)(ew.t, { size: "sm" })))
-                    : t.pathname.startsWith(ea.BVt.COLLECTIBLES_SHOP)
-                      ? ((e = h.intl.string(h.t.pWG4ze)), (p = (0, i.jsx)(eM.U, { size: "sm" })))
-                      : t.pathname.startsWith(ea.BVt.FRIENDS)
+                  : t.pathname.startsWith(er.BVt.NITRO_HOME)
+                    ? ((e = h.intl.string(h.t.Ipxkog)), (p = (0, i.jsx)(eR.t, { size: "sm" })))
+                    : t.pathname.startsWith(er.BVt.COLLECTIBLES_SHOP)
+                      ? ((e = h.intl.string(h.t.pWG4ze)), (p = (0, i.jsx)(ew.U, { size: "sm" })))
+                      : t.pathname.startsWith(er.BVt.FRIENDS)
                         ? ((e = h.intl.string(h.t.TdEu5X)), (p = (0, i.jsx)(ex.$, { size: "sm" })))
-                        : t.pathname.startsWith(ea.BVt.FAMILY_CENTER)
-                          ? ((e = h.intl.string(eX.default.RZqaJn)), (p = (0, i.jsx)(eU.n, { size: "sm" })))
-                          : t.pathname.startsWith(ea.BVt.QUEST_HOME) &&
-                            ((e = h.intl.string(h.t.JALI2K)), (p = (0, i.jsx)(eG.r, { size: "sm" }))),
+                        : t.pathname.startsWith(er.BVt.FAMILY_CENTER)
+                          ? ((e = h.intl.string(eW.default.RZqaJn)), (p = (0, i.jsx)(eM.n, { size: "sm" })))
+                          : t.pathname.startsWith(er.BVt.QUEST_HOME) &&
+                            ((e = h.intl.string(h.t.JALI2K)), (p = (0, i.jsx)(eU.r, { size: "sm" }))),
     null == e || "" === e)
         ? null
         : (0, i.jsxs)("div", {
-              className: eZ.DD,
-              children: [p, (0, i.jsx)(ej.E, { variant: "text-sm/medium", lineClamp: 1, children: e })],
+              className: eX.DD,
+              children: [p, (0, i.jsx)(eG.E, { variant: "text-sm/medium", lineClamp: 1, children: e })],
           });
 }
-var eJ = n(851109),
-    e0 = n(567249),
-    e1 = n(912592),
-    e3 = n(851580),
-    e2 = n(222823),
-    e8 = n(371911),
-    e4 = n(790782);
-function e7(e) {
+var eQ = n(851109),
+    eJ = n(567249),
+    e0 = n(912592),
+    e1 = n(851580),
+    e3 = n(222823),
+    e2 = n(371911),
+    e8 = n(790782);
+function e4(e) {
     let { onOpen: t, onClose: n, "data-jump-section": a } = e,
-        l = (0, s.bG)([et.default], () => et.default.getCurrentUser()),
+        l = (0, s.bG)([ee.default], () => ee.default.getCurrentUser()),
         o = r.useRef(null),
-        d = (0, s.bG)([e2.Ay], () => l?.id != null && e2.Ay.getMentionCount(l.id, e4.P.NOTIFICATION_CENTER) > 0);
-    return (0, i.jsx)(e8.C, {
+        d = (0, s.bG)([e3.Ay], () => l?.id != null && e3.Ay.getMentionCount(l.id, e8.P.NOTIFICATION_CENTER) > 0);
+    return (0, i.jsx)(e2.C, {
         targetElementRef: o,
         onOpen: t,
         onClose: n,
@@ -495,7 +488,7 @@ function e7(e) {
                 children: [
                     (0, i.jsx)(A.A, {
                         ...n,
-                        icon: e1.K,
+                        icon: e0.K,
                         tooltip: h.intl.string(h.t.GSmTKJ),
                         onClick: e,
                         showBadge: d || r,
@@ -503,27 +496,27 @@ function e7(e) {
                         "data-jump-section": a,
                         ref: o,
                     }),
-                    (0, i.jsx)(e3.v, { location: "inbox-button", targetElementRef: o }),
+                    (0, i.jsx)(e1.v, { location: "inbox-button", targetElementRef: o }),
                 ],
             }),
     });
 }
-var e5 = n(966597),
-    e6 = n(97469),
-    e9 = n(253932),
-    te = n(430363);
-function tt() {
+var e7 = n(966597),
+    e5 = n(97469),
+    e6 = n(253932),
+    e9 = n(430363);
+function te() {
     return null;
 }
-var tn = n(540999),
-    ti = n(147964),
-    tr = n(531685),
-    ta = n(19575),
-    tl = n(475815),
-    ts = n(268218),
-    to = n(71855);
+var tt = n(540999),
+    tn = n(147964),
+    ti = n(531685),
+    tr = n(19575),
+    ta = n(475815),
+    tl = n(268218),
+    ts = n(71855);
 n(801416);
-let td = (0, ts.Fe)({
+let to = (0, tl.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("13709"),
@@ -770,7 +763,7 @@ let td = (0, ts.Fe)({
         webpackId: 922281,
         name: "ForLaterButton",
     }),
-    tc = (0, ts.Fe)({
+    td = (0, tl.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("10373"),
@@ -818,7 +811,7 @@ let td = (0, ts.Fe)({
         webpackId: 667086,
         name: "NotificationsInboxTitleBarButton",
     }),
-    tu = (0, ts.Fe)({
+    tc = (0, tl.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("6619"),
@@ -1433,7 +1426,7 @@ let td = (0, ts.Fe)({
             ]).then(n.bind(n, 540177)),
         webpackId: 540177,
     }),
-    tA = () =>
+    tu = () =>
         Promise.all([
             n.e("47715"),
             n.e("8528"),
@@ -1461,32 +1454,32 @@ let td = (0, ts.Fe)({
             n.e("37886"),
             n.e("91803"),
         ]).then(n.bind(n, 496879)),
-    th = (0, ts.Fe)({ createPromise: tA, webpackId: 496879 }),
-    t_ = (0, a.v)(() => ({ isOpen: !0 })),
-    tE = r.memo(function () {
+    tA = (0, tl.Fe)({ createPromise: tu, webpackId: 496879 }),
+    th = (0, a.v)(() => ({ isOpen: !0 })),
+    t_ = r.memo(function () {
         r.useLayoutEffect(() => {
-            ta.Ay.setMinimumSize(800, 500);
+            tr.Ay.setMinimumSize(800, 500);
         }, []);
-        let { notificationCenterVariant: e, entrypoint: t } = (0, eJ.X8)({ location: "AppTitleBar" }),
+        let { notificationCenterVariant: e, entrypoint: t } = (0, eQ.X8)({ location: "AppTitleBar" }),
             { hasBugReporterAccess: n } = m.useConfig({ location: "HeaderBar" }),
-            a = (0, s.bG)([tn.A], () => tn.A.isDeveloper),
-            c = (0, te.Uk)("VoiceDareTitleBarButton"),
+            a = (0, s.bG)([tt.A], () => tt.A.isDeveloper),
+            c = (0, e9.Uk)("VoiceDareTitleBarButton"),
             u = (0, s.bG)(
-                [ti.A, E.A],
+                [tn.A, E.A],
                 () =>
-                    e9.Q_.getSetting() &&
-                    null != ti.A.testModeApplicationId &&
-                    null != E.A.getApplication(ti.A.testModeApplicationId) &&
-                    (0, p.A)(E.A.getApplication(ti.A.testModeApplicationId)),
+                    e6.Q_.getSetting() &&
+                    null != tn.A.testModeApplicationId &&
+                    null != E.A.getApplication(tn.A.testModeApplicationId) &&
+                    (0, p.A)(E.A.getApplication(tn.A.testModeApplicationId)),
             ),
-            A = null !== e && t === eJ.RK.TITLE_BAR_LEFT,
+            A = null !== e && t === eQ.RK.TITLE_BAR_LEFT,
             h = null === e,
-            { enabled: I, inInbox: g } = e5.A.useConfig({ location: "AppTitleBar" });
+            { enabled: I, inInbox: g } = e7.A.useConfig({ location: "AppTitleBar" });
         r.useLayoutEffect(() => {
-            ta.Ay.setMinimumSize(800, 500);
+            tr.Ay.setMinimumSize(800, 500);
         }, []);
-        let C = (0, e6.NC)(),
-            T = (0, s.bG)([tr.A, e0.A], () => (0, tl._U)()),
+        let C = (0, e5.NC)(),
+            T = (0, s.bG)([ti.A, eJ.A], () => (0, ta._U)()),
             f = (0, l.xl)(),
             N = (function (e) {
                 let { showBackForwardButtons: t, showNotificationsInbox: n, showRecentsButton: i } = e;
@@ -1495,9 +1488,9 @@ let td = (0, ts.Fe)({
                     [t, n, i],
                 );
             })({ showBackForwardButtons: f, showNotificationsInbox: A, showRecentsButton: h }),
-            { hasFriendList: S } = (0, Z.K)("friends-button");
+            { hasFriendList: S } = (0, X.K)("friends-button");
         return (r.useEffect(() => {
-            S && tA();
+            S && tu();
         }, [S]),
         T)
             ? null
@@ -1506,36 +1499,36 @@ let td = (0, ts.Fe)({
                       (0, i.jsx)(d.N, {
                           theme: C,
                           children: (t) =>
-                              (0, i.jsx)(to.cq, {
+                              (0, i.jsx)(ts.cq, {
                                   className: t,
                                   leading: (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           f &&
-                                              (0, i.jsx)(X, {
+                                              (0, i.jsx)(W, {
                                                   firstElementFocusJumpSectionProps:
                                                       "BACK_FORWARD_NAVIGATION" === N ? e : void 0,
                                               }),
                                           A &&
-                                              (0, i.jsx)(tc, {
+                                              (0, i.jsx)(td, {
                                                   focusSectionProps: "NOTIFICATIONS_INBOX" === N ? e : void 0,
                                               }),
                                       ],
                                   }),
-                                  title: (0, i.jsx)(eQ, {}),
+                                  title: (0, i.jsx)(eZ, {}),
                                   trailing: (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          S && (0, i.jsx)(th, {}),
-                                          c ? (0, i.jsx)(tt, {}) : null,
+                                          S && (0, i.jsx)(tA, {}),
+                                          c ? (0, i.jsx)(te, {}) : null,
                                           !1,
-                                          (0, i.jsx)(G, { canShowReminder: !0 }),
-                                          I && !g && (0, i.jsx)(td, {}),
-                                          h && (0, i.jsx)(e7, { ...("RECENTS" === N ? e : {}) }),
+                                          (0, i.jsx)(U, { canShowReminder: !0 }),
+                                          I && !g && (0, i.jsx)(to, {}),
+                                          h && (0, i.jsx)(e4, { ...("RECENTS" === N ? e : {}) }),
                                           n
-                                              ? (0, i.jsx)(eE, { focusSectionProps: "HELP" === N ? e : void 0 })
-                                              : (0, i.jsx)(el, { focusSectionProps: "HELP" === N ? e : void 0 }),
-                                          a && (0, i.jsx)(tu, {}),
+                                              ? (0, i.jsx)(e_, { focusSectionProps: "HELP" === N ? e : void 0 })
+                                              : (0, i.jsx)(ea, { focusSectionProps: "HELP" === N ? e : void 0 }),
+                                          a && (0, i.jsx)(tc, {}),
                                           u && (0, i.jsx)(_, {}),
-                                          (0, i.jsx)(eO, {}),
+                                          (0, i.jsx)(eL, {}),
                                       ],
                                   }),
                               }),

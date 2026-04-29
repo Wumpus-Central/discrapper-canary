@@ -534,8 +534,10 @@ var a = {
             "RUNNING_GAMES_CHANGE",
             "CLIPS_RESTART",
             "RTC_CONNECTION_VIDEO",
+            "CLIPS_SAVE_CLIP",
+            "CLIPS_PROMOTE_CLIP_CANDIDATE",
         ],
-        inlineRequire: () => n(363222).A,
+        inlineRequire: () => n(485162).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     ClipDecisionEngineManager: {

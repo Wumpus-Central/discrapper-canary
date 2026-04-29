@@ -1,28 +1,29 @@
 n.d(t, {
-    $N: () => el,
-    Fb: () => z,
+    $N: () => eo,
+    Fb: () => J,
     GS: () => H,
-    H1: () => en,
+    H1: () => ei,
     HU: () => V,
-    K7: () => J,
+    K7: () => ee,
     MI: () => $,
     Mt: () => F,
-    PW: () => ea,
+    PW: () => er,
     Su: () => Z,
-    Ts: () => es,
-    VO: () => et,
+    Ts: () => el,
+    VO: () => en,
     XK: () => q,
+    YK: () => z,
     Yy: () => Q,
-    dR: () => er,
-    e6: () => ei,
+    dR: () => e_,
+    e6: () => ea,
     eQ: () => v,
     fd: () => w,
     h$: () => k,
     jA: () => X,
-    l0: () => eo,
-    oH: () => ee,
-    pM: () => e_,
-    w7: () => eE,
+    l0: () => eE,
+    oH: () => et,
+    pM: () => es,
+    w7: () => ed,
     yO: () => B,
     yT: () => K,
     yd: () => x,
@@ -97,7 +98,7 @@ function F(e) {
 }
 function V(e) {
     _.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { storageLocation: e } }),
-        z(e).catch((e) => {
+        J(e).catch((e) => {
             G.nx.error("Failed to load clips directory after storage location change", e);
         });
 }
@@ -270,7 +271,7 @@ async function x() {
                 let i = t.sort((e, t) => e.createdAt - t.createdAt).slice(0, n);
                 for (let t of (G.nx.info(`Deleting ${i.length} temporary clips to stay within limit of ${e}`), i))
                     try {
-                        await ee(t.filepath, t.id);
+                        await et(t.filepath, t.id);
                     } catch (e) {
                         G.nx.error("Failed to delete temporary clip", e);
                     }
@@ -284,7 +285,7 @@ async function x() {
                 return t === a.id;
             })
         ) {
-            _.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }), ee(a.filepath, a.id);
+            _.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }), et(a.filepath, a.id);
             return;
         }
         _.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: a }), Y(a);
@@ -369,7 +370,10 @@ function X() {
 function Z() {
     _.h.dispatch({ type: "CLIPS_CLEAR_NEW_CLIP_IDS" });
 }
-async function z(e) {
+function z(e) {
+    _.h.dispatch({ type: "CLIPS_REMOVE_SINGLE_NEW_CLIP_ID", clipId: e });
+}
+async function J(e) {
     if (!(0, D.isDesktop)() || s.A.clips?.loadClipsDirectory == null) return;
     let t = await s.A.clips.loadClipsDirectory(e),
         n = [];
@@ -379,16 +383,16 @@ async function z(e) {
     }
     _.h.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: n });
 }
-function J(e) {
+function ee(e) {
     Q(e.id, { isCandidate: !1 }),
         _.h.dispatch({ type: "CLIPS_PROMOTE_CLIP_CANDIDATE", clip: { ...e, isCandidate: !1 } });
 }
-async function ee(e, t) {
+async function et(e, t) {
     (0, D.isDesktop)() &&
         s.A.clips?.deleteClip != null &&
         (await s.A.clips.deleteClip(e), _.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: t, filepath: e }));
 }
-async function et(e) {
+async function en(e) {
     let t = N.Ay.getMediaEngine(),
         { filepath: n, ...i } = e;
     await Q(e.id, i);
@@ -398,19 +402,19 @@ async function et(e) {
     );
     return e.type === m.nQ.SCREENSHOT ? a : (0, P.A)(a);
 }
-function en(e) {
+function ei(e) {
     _.h.dispatch({ type: "CLIPS_SET_EXPORTING", clipIds: e });
 }
-function ei(e) {
+function ea(e) {
     _.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { maxAutoClips: e } });
 }
-function ea(e) {
+function er(e) {
     _.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
         settings: { clipSignals: { ...L.A.getSettings().clipSignals, ...e } },
     });
 }
-function er(e) {
+function e_(e) {
     let t = N.Ay.getMediaEngine().setClipsMLPipelineTypeEnabled;
     null != t &&
         (t("emotion_classifier", e.emotionClassifier),
@@ -423,18 +427,18 @@ function er(e) {
             settings: { mlPipelinesEnabled: { ...L.A.getSettings().mlPipelinesEnabled, ...e } },
         });
 }
-function e_(e) {
+function es(e) {
     _.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { autoClipPhrases: e } });
 }
-function es(e, t) {
+function el(e, t) {
     _.h.dispatch({ type: "CLIPS_SIGNAL_CREATED", signal: e, timestamp: t });
 }
-function el(e) {
+function eo(e) {
     _.h.dispatch({ type: "CLIPS_ML_DETECTION", detections: e });
 }
-function eo() {
-    es({ type: m.Gy.MANUAL });
+function eE() {
+    el({ type: m.Gy.MANUAL });
 }
-async function eE(e) {
+async function ed(e) {
     await Q(e, { isTemporary: !1 });
 }
