@@ -10,7 +10,7 @@ let i = "display-name-styles-modal",
         (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    s.e("74112"),
+                    s.e("22810"),
                     s.e("12512"),
                     s.e("57822"),
                     s.e("63397"),
@@ -38,7 +38,7 @@ let i = "display-name-styles-modal",
                     s.e("69273"),
                     s.e("63941"),
                     s.e("63009"),
-                    s.e("31320"),
+                    s.e("9292"),
                     s.e("45650"),
                     s.e("97189"),
                     s.e("24059"),

@@ -2298,7 +2298,7 @@ let l$ = { analyticsSource: { page: eB.liQ.GUILD_CHANNEL, section: eB.JJy.CHANNE
 function lZ(e, t) {
     (0, tN.L3)(e, async () => {
         let { default: e } = await Promise.all([
-            n.e("31320"),
+            n.e("9292"),
             n.e("92510"),
             n.e("28149"),
             n.e("66883"),
@@ -2311,7 +2311,7 @@ function lZ(e, t) {
             n.e("40841"),
             n.e("12512"),
             n.e("81349"),
-            n.e("74112"),
+            n.e("22810"),
             n.e("57948"),
             n.e("69273"),
             n.e("63941"),

@@ -336,6 +336,7 @@ function er(e) {
                                   shape: "custom",
                                   backgroundImageClassName: el.GC,
                                   cardBackgroundImage: eE,
+                                  cssPosition: "absolute",
                               })
                             : (0, s.jsx)(Y.t, {})
                         : (0, s.jsx)("div", {

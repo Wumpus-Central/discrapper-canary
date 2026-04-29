@@ -5,13 +5,20 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    overflow: hidden;
-    position: relative
+    overflow: hidden
 }
 
 .cardContainer__47729.square__47729 {
     aspect-ratio: 1;
     border-radius: var(--radius-sm)
+}
+
+.cardContainerRelative__47729 {
+    position: relative
+}
+
+.cardContainerAbsolute__47729 {
+    position: absolute
 }
 
 .cardBackgroundImage__47729 {

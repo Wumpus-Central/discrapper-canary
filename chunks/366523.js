@@ -1,58 +1,67 @@
-r.d(e, { A: () => m, e: () => o });
-var s = r(627968),
-    n = r(64700),
-    t = r(310784),
-    l = r.n(t),
-    u = r(503698),
-    g = r.n(u),
-    c = r(654107),
-    i = r(871123),
-    d = r(705452);
-function m(a) {
+s.d(e, { A: () => d, e: () => m });
+var r = s(627968),
+    t = s(64700),
+    n = s(310784),
+    l = s.n(n),
+    u = s(503698),
+    i = s.n(u),
+    c = s(654107),
+    g = s(871123),
+    o = s(705452);
+function d(a) {
     let {
             cardImage: e,
-            cardBackgroundImage: r,
-            altText: t,
+            cardBackgroundImage: s,
+            altText: n,
             containerClassName: u,
-            backgroundImageClassName: i,
-            foregroundImageClassName: m,
-            shape: o,
+            backgroundImageClassName: g,
+            foregroundImageClassName: d,
+            shape: m,
+            cssPosition: h = "relative",
         } = a,
-        [h, p] = (0, c.rh)(e.toString(), "#000000"),
-        k = n.useMemo(() => {
-            let a = l()(h).brighten(1.5).saturate(0.3).alpha(0.8).hex(),
-                e = p ?? l()(h).saturate(1.2).alpha(0.9).hex();
+        [p, b] = (0, c.rh)(e.toString(), "#000000"),
+        k = t.useMemo(() => {
+            let a = l()(p).brighten(1.5).saturate(0.3).alpha(0.8).hex(),
+                e = b ?? l()(p).saturate(1.2).alpha(0.9).hex();
             return `linear-gradient(135deg, ${a}, ${e})`;
-        }, [h, p]);
-    return (0, s.jsxs)("div", {
-        className: g()(d.Ui, { [d.Ew]: "square" === o }, u),
+        }, [p, b]);
+    return (0, r.jsxs)("div", {
+        className: i()(o.Ui, "absolute" === h ? o.tz : o.oG, { [o.Ew]: "square" === m }, u),
         children: [
-            (0, s.jsx)("div", {
-                className: g()(d.GC, i),
-                style: null != r ? { backgroundImage: `url(${r.toString()})` } : { backgroundImage: k },
+            (0, r.jsx)("div", {
+                className: i()(o.GC, g),
+                style: null != s ? { backgroundImage: `url(${s.toString()})` } : { backgroundImage: k },
             }),
-            (0, s.jsx)("img", {
+            (0, r.jsx)("img", {
                 src: e.toString(),
-                alt: t,
+                alt: n,
                 draggable: !1,
-                className: g()(d.LC, { [d.Ew]: "square" === o }, m),
+                className: i()(o.LC, { [o.Ew]: "square" === m }, d),
             }),
         ],
     });
 }
-function o(a) {
-    let { sku: e, containerClassName: r, backgroundImageClassName: n, foregroundImageClassName: t, shape: l } = a,
-        u = (0, i.fq)(e),
-        g = (0, i.xf)(e);
-    return null == u
+function m(a) {
+    let {
+            sku: e,
+            containerClassName: s,
+            backgroundImageClassName: t,
+            foregroundImageClassName: n,
+            shape: l,
+            cssPosition: u,
+        } = a,
+        i = (0, g.fq)(e),
+        c = (0, g.xf)(e);
+    return null == i
         ? null
-        : (0, s.jsx)(m, {
-              cardImage: u,
-              cardBackgroundImage: g,
+        : (0, r.jsx)(d, {
+              cardImage: i,
+              cardBackgroundImage: c,
               altText: e.name,
-              containerClassName: r,
-              backgroundImageClassName: n,
-              foregroundImageClassName: t,
+              containerClassName: s,
+              backgroundImageClassName: t,
+              foregroundImageClassName: n,
               shape: l,
+              cssPosition: u,
           });
 }

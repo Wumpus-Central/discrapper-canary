@@ -307,7 +307,7 @@ function J(n) {
                   ? () => {
                         (0, v.openModalLazy)(async () => {
                             let { SubscriptionDetailsModal: n } = await Promise.all([
-                                i.e("25385"),
+                                i.e("9292"),
                                 i.e("53917"),
                                 i.e("15186"),
                                 i.e("80830"),
@@ -357,7 +357,7 @@ function X(n) {
                         : () => {
                               (0, v.openModalLazy)(async () => {
                                   let { ItemDetailsModal: n } = await Promise.all([
-                                      i.e("25385"),
+                                      i.e("9292"),
                                       i.e("53917"),
                                       i.e("15186"),
                                       i.e("80830"),

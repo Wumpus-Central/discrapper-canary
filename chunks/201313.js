@@ -474,15 +474,15 @@ function eQ() {
 var eJ = n(851109),
     e0 = n(567249),
     e1 = n(912592),
-    e3 = n(851580),
-    e2 = n(222823),
+    e2 = n(851580),
+    e3 = n(222823),
     e8 = n(371911),
     e4 = n(790782);
 function e7(e) {
     let { onOpen: t, onClose: n, "data-jump-section": a } = e,
         l = (0, s.bG)([et.default], () => et.default.getCurrentUser()),
         o = r.useRef(null),
-        d = (0, s.bG)([e2.Ay], () => l?.id != null && e2.Ay.getMentionCount(l.id, e4.P.NOTIFICATION_CENTER) > 0);
+        d = (0, s.bG)([e3.Ay], () => l?.id != null && e3.Ay.getMentionCount(l.id, e4.P.NOTIFICATION_CENTER) > 0);
     return (0, i.jsx)(e8.C, {
         targetElementRef: o,
         onOpen: t,
@@ -503,7 +503,7 @@ function e7(e) {
                         "data-jump-section": a,
                         ref: o,
                     }),
-                    (0, i.jsx)(e3.v, { location: "inbox-button", targetElementRef: o }),
+                    (0, i.jsx)(e2.v, { location: "inbox-button", targetElementRef: o }),
                 ],
             }),
     });
@@ -534,7 +534,7 @@ let td = (0, ts.Fe)({
                 n.e("63941"),
                 n.e("63009"),
                 n.e("47181"),
-                n.e("31320"),
+                n.e("9292"),
                 n.e("63397"),
                 n.e("45650"),
                 n.e("97189"),
@@ -552,7 +552,7 @@ let td = (0, ts.Fe)({
                 n.e("76032"),
                 n.e("78220"),
                 n.e("43763"),
-                n.e("74112"),
+                n.e("22810"),
                 n.e("33957"),
                 n.e("59204"),
                 n.e("75058"),
@@ -823,7 +823,7 @@ let td = (0, ts.Fe)({
             Promise.all([
                 n.e("6619"),
                 n.e("12512"),
-                n.e("31320"),
+                n.e("9292"),
                 n.e("33092"),
                 n.e("24211"),
                 n.e("66883"),
@@ -832,7 +832,7 @@ let td = (0, ts.Fe)({
                 n.e("27755"),
                 n.e("36613"),
                 n.e("98197"),
-                n.e("74112"),
+                n.e("22810"),
                 n.e("75240"),
                 n.e("81349"),
                 n.e("5432"),

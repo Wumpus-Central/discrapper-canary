@@ -716,8 +716,8 @@ var eq = l(619517),
     eJ = l(34337),
     e0 = l(615300),
     e1 = l(456412),
-    e8 = l(133296),
-    e9 = l(848752),
+    e9 = l(133296),
+    e8 = l(848752),
     e3 = l(452282),
     e7 = l(821209),
     e6 = l(795574);
@@ -911,8 +911,8 @@ class tn extends a.PureComponent {
                   className: e6.HY,
                   children: [
                       n,
-                      (0, i.jsx)(e9.Q8, { onClick: this.manualPrevious, className: r()(e6.UE, { [e6.h_]: s }) }),
-                      (0, i.jsx)(e9.Oj, { onClick: this.manualNext, className: r()(e6.UE, { [e6.h_]: a }) }),
+                      (0, i.jsx)(e8.Q8, { onClick: this.manualPrevious, className: r()(e6.UE, { [e6.h_]: s }) }),
+                      (0, i.jsx)(e8.Oj, { onClick: this.manualNext, className: r()(e6.UE, { [e6.h_]: a }) }),
                   ],
               });
     }
@@ -949,7 +949,7 @@ class tn extends a.PureComponent {
     render() {
         let { items: e, className: t, autoplayInterval: l, paused: s } = this.props,
             { currentIndex: a, playingVideo: n, hasInteracted: r } = this.state;
-        return (0, i.jsxs)(e8.A, {
+        return (0, i.jsxs)(e9.A, {
             pauseOnHover: !0,
             onInterval: this.autoNext,
             interval: l,
@@ -959,14 +959,14 @@ class tn extends a.PureComponent {
                 this.renderCarousel(),
                 (0, i.jsx)("div", {
                     className: e6.X$,
-                    children: (0, i.jsx)(e9.Ay, {
+                    children: (0, i.jsx)(e8.Ay, {
                         renderItem: this.renderPaginationItem,
                         scrollToPadding: 85,
                         items: e,
                         selectedIndex: a,
                         onSetItem: (e) => this.setItem(e, !0),
                         paginationContainerClass: e6.XG,
-                        align: e.length < 6 ? e9.Ay.Align.LEFT : e9.Ay.Align.CENTER,
+                        align: e.length < 6 ? e8.Ay.Align.LEFT : e8.Ay.Align.CENTER,
                     }),
                 }),
             ],
@@ -1532,14 +1532,14 @@ function t0(e) {
                       children: [
                           a.map((e, t) => (0, i.jsx)(t1, { url: e.url, children: e.name }, t)),
                           null != t.terms_of_service_url
-                              ? (0, i.jsx)(t8, {
+                              ? (0, i.jsx)(t9, {
                                     icon: tK.o,
                                     url: t.terms_of_service_url,
                                     children: w.intl.string(w.t.s7STcY),
                                 })
                               : null,
                           null != t.privacy_policy_url
-                              ? (0, i.jsx)(t8, {
+                              ? (0, i.jsx)(t9, {
                                     icon: tW.X,
                                     url: t.privacy_policy_url,
                                     children: w.intl.string(w.t.kH3JR5),
@@ -1556,9 +1556,9 @@ function t1(e) {
         s = (0, tq.Ay)(),
         a = tQ.A.getByUrl(t),
         n = (0, tX.M)(s) ? a?.icon?.darkSVG : a?.icon?.lightSVG;
-    return (0, i.jsx)(t8, { icon: void 0 === n ? tZ.q : void 0, imageSrc: n, url: t, children: l });
+    return (0, i.jsx)(t9, { icon: void 0 === n ? tZ.q : void 0, imageSrc: n, url: t, children: l });
 }
-function t8(e) {
+function t9(e) {
     let { icon: t, imageSrc: l, iconColor: s, url: a, children: n } = e,
         o = G(),
         c = null;
@@ -1576,7 +1576,7 @@ function t8(e) {
         children: d,
     });
 }
-var t9 = l(449054),
+var t8 = l(449054),
     t3 = l(781696),
     t7 = l(950305),
     t6 = l(548118),
@@ -1684,7 +1684,7 @@ function la(e) {
                     if (null != e) {
                         k(O.HAw.APP_DIRECTORY_SUPPORT_SERVER_JOINED, { application_id: t.id, support_guild_id: e });
                         let l = { page: O.liQ.APPLICATION_DIRECTORY };
-                        await (0, t9.Z2)(e, l);
+                        await (0, t8.Z2)(e, l);
                     }
                 } catch {}
             }, [t])),
@@ -2023,8 +2023,8 @@ var lM = l(607399),
     lJ = l(50268),
     l0 = l(375802),
     l1 = l(928658),
-    l8 = l(395671),
-    l9 = l(957565),
+    l9 = l(395671),
+    l8 = l(957565),
     l3 = l(692848),
     l7 = l(440970);
 let l6 = "start_application_install",
@@ -2152,13 +2152,13 @@ let st = a.forwardRef(function (e, t) {
         o = a.useCallback(() => {
             let e;
             k(O.HAw.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: l.id }),
-                (0, l9.C)(
+                (0, l8.C)(
                     ((e = l.id), `${location.protocol}//${location.host}${O.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(e)}`),
                     () => (0, lU.P0)((0, lw.o)(w.intl.string(w.t["L/PwZf"]), lV.Ck.SUCCESS)),
                 );
         }, [l.id]),
         c = a.useCallback(() => {
-            let e = l8.Ay.createFromServer(l);
+            let e = l9.Ay.createFromServer(l);
             (0, l1.r3)({ application: e, entrypoint: "app_directory" });
         }, [l]),
         u = (0, lJ.A)({
@@ -2243,7 +2243,7 @@ let st = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, i.jsx)(se, { size: s, contentWidth: "normal", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(l4, { application: l, size: s, contentWidth: "normal", variant: x }),
-                    l9.p5
+                    l8.p5
                         ? (0, i.jsx)(ew.K, {
                               variant: "secondary",
                               size: s,
@@ -2260,7 +2260,7 @@ let st = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, i.jsx)(se, { size: s, contentWidth: "small", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(l4, { application: l, size: s, contentWidth: "small", variant: x }),
-                    (0, i.jsx)(l5, { renderDropdown: (e) => h(l9.p5, e), size: s }),
+                    (0, i.jsx)(l5, { renderDropdown: (e) => h(l8.p5, e), size: s }),
                 ],
             }),
             (0, i.jsxs)("div", {
@@ -2268,7 +2268,7 @@ let st = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, i.jsx)(se, { size: s, contentWidth: "icon", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(l4, { application: l, size: s, contentWidth: "icon", variant: x }),
-                    (0, i.jsx)(l5, { renderDropdown: (e) => h(l9.p5, e), size: s }),
+                    (0, i.jsx)(l5, { renderDropdown: (e) => h(l8.p5, e), size: s }),
                 ],
             }),
         ],
@@ -2572,7 +2572,7 @@ function sj(e) {
                     return void (0, sc.openModalLazy)(
                         async () => {
                             let { ItemDetailsModal: e } = await Promise.all([
-                                l.e("25385"),
+                                l.e("9292"),
                                 l.e("53917"),
                                 l.e("15186"),
                                 l.e("80830"),
@@ -2600,7 +2600,7 @@ function sj(e) {
                         void (0, sc.openModalLazy)(
                             async () => {
                                 let { SubscriptionDetailsModal: a } = await Promise.all([
-                                    l.e("25385"),
+                                    l.e("9292"),
                                     l.e("53917"),
                                     l.e("15186"),
                                     l.e("80830"),

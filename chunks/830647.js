@@ -34,8 +34,8 @@ var x = n(289873),
     L = n(862772),
     M = n(310209),
     V = n(495544),
-    F = n(287809),
-    P = n(954571),
+    P = n(287809),
+    F = n(954571),
     G = n(427262),
     H = n(871123),
     U = n(832163),
@@ -230,6 +230,7 @@ function eA(e) {
                     containerClassName: ep.Vl,
                     foregroundImageClassName: ep.wP,
                     backgroundImageClassName: ep.GC,
+                    cssPosition: "absolute",
                 }),
                 (0, i.jsx)("div", { className: ep.iZ, style: { background: ex } }),
                 (0, i.jsxs)("div", {
@@ -447,7 +448,7 @@ function eD(e) {
     return (
         l.useEffect(() => {
             0 !== u.length &&
-                P.default.track(ec.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                F.default.track(ec.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
                     guild_id: i.guild_id,
                     channel_id: i.id,
                     sku_ids: u.map((e) => e.id),
@@ -484,7 +485,7 @@ function eM(e) {
     let { className: t, userId: n, applicationId: s, channel: a, onClose: r, canShowCTA: o, onDismissCTA: u } = e;
     (0, D.T)({ location: "social_layer_gifting_voice_panel" }), (0, _.P)(n);
     let { analyticsLocations: d } = (0, C.Ay)(E.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
-        m = (0, A.bG)([F.default], () => F.default.getUser(n)),
+        m = (0, A.bG)([P.default], () => P.default.getUser(n)),
         p = l.useMemo(() => new N.R({ applicationId: s }), [s]),
         g = (0, A.bG)([b.A], () => b.A.getWidgets(n)?.find((e) => e instanceof N.R && e.applicationId === s)),
         f = (0, A.bG)([V.default], () => V.default.getId()),
@@ -547,16 +548,16 @@ function eM(e) {
         T = (0, z.A)(s),
         {
             status: L,
-            recommendations: P,
+            recommendations: F,
             skusToUserAndReason: G,
             hasBothSources: H,
         } = eD({ userId: n, applicationId: s, channel: a, numItems: 8 }),
-        U = "loading" === L || 0 === P.length || null == m,
+        U = "loading" === L || 0 === F.length || null == m,
         W = l.useMemo(
             () =>
-                null == m || 0 === P.length
+                null == m || 0 === F.length
                     ? []
-                    : (P.length > 8 ? P.slice(0, 8) : P).map((e) => {
+                    : (F.length > 8 ? F.slice(0, 8) : F).map((e) => {
                           let t = (G[e.id] ?? {})[n] === M.j.WISHLIST;
                           return (0, i.jsx)(
                               ej,
@@ -575,7 +576,7 @@ function eM(e) {
                               e.id,
                           );
                       }),
-            [m, P, a.guild_id, a.id, G, n, h, H, d, r],
+            [m, F, a.guild_id, a.id, G, n, h, H, d, r],
         );
     return (0, i.jsxs)(ew, {
         className: t,
@@ -616,7 +617,7 @@ function eV(e) {
     let { className: t, userId: n, applicationId: s, channel: a, onClose: r } = e;
     (0, D.T)({ location: "social_layer_gifting_voice_panel" });
     let { analyticsLocations: o } = (0, C.Ay)(E.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
-        u = (0, A.bG)([F.default], () => F.default.getUser(n)),
+        u = (0, A.bG)([P.default], () => P.default.getUser(n)),
         d = n === (0, A.bG)([V.default], () => V.default.getId()),
         m = (0, z.A)(s),
         {

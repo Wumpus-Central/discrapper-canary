@@ -1921,10 +1921,8 @@
 
 .cardImageContainer_abfd90 {
     bottom: 0;
-    inset-inline-end: 0;
-    inset-inline-start: 0;
-    position: absolute;
     top: 0;
+    inset-inline: 0;
     z-index: 0
 }
 
@@ -5250,6 +5248,11 @@
 
 .mentioned__5126c .mention.interactive:hover {
     text-decoration: underline
+}
+
+.obscuredIcon__43090 {
+    height: 32px;
+    width: 32px
 }
 
 .container_de50c1 {
