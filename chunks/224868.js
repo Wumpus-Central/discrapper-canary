@@ -1,31 +1,33 @@
-n.d(t, { f: () => N, p: () => S });
+n.d(t, { f: () => f, p: () => O });
 var i = n(47167),
-    r = n(159273),
-    a = n(7584),
-    s = n(695633),
-    _ = n(734057),
+    a = n(159273),
+    r = n(7584),
+    _ = n(695633),
+    s = n(734057),
     l = n(808728),
     o = n(696451),
     E = n(317525),
     d = n(71393),
-    c = n(994500),
-    u = n(287809),
-    I = n(768038),
+    c = n(576705),
+    u = n(994500),
+    I = n(287809),
+    T = n(768038),
     A = n(935208),
-    T = n(408018);
-function S(e, t, n, T) {
-    let { allowUsers: S = !0, allowRoles: N = !0 } = T ?? {};
+    S = n(408018),
+    N = n(652215);
+function O(e, t, n, S) {
+    let { allowUsers: O = !0, allowRoles: f = !0 } = S ?? {};
     switch (e[0]) {
         case "@":
-            return (function (e, t, n, i, r) {
-                let [a, s] = e.slice(1).split("#", 2),
+            return (function (e, t, n, i, a) {
+                let [r, _] = e.slice(1).split("#", 2),
                     l = null != t ? d.A.getGuild(t) : null;
-                if (r && null == s && null != l) {
+                if (a && null == _ && null != l) {
                     for (let e of E.A.getSortedRoles(l.id))
-                        if (a === e.name) return { type: "roleMention", roleId: e.id, children: [{ text: "" }] };
+                        if (r === e.name) return { type: "roleMention", roleId: e.id, children: [{ text: "" }] };
                 }
                 if (i) {
-                    let e = null != n ? _.A.getChannel(n) : null;
+                    let e = null != n ? s.A.getChannel(n) : null;
                     if (null == e) return null;
                     let i = (
                         e.isPrivate()
@@ -35,23 +37,23 @@ function S(e, t, n, T) {
                                   return t;
                               })
                     )
-                        .map((e) => u.default.getUser(e))
-                        .filter((e) => void 0 !== e && O(a, s, e));
+                        .map((e) => I.default.getUser(e))
+                        .filter((e) => void 0 !== e && R(r, _, e));
                     if (1 === i.length) {
                         let e = i[0];
-                        if (O(a, s, e, { requireExact: !0 }))
+                        if (R(r, _, e, { requireExact: !0 }))
                             return { type: "userMention", userId: e.id, children: [{ text: "" }] };
                     }
                 }
                 return null;
-            })(e, t, n, S, N);
+            })(e, t, n, O, f);
         case ":":
-            var R = e,
-                f = t;
-            let C = a.Ay.EMOJI_NAME_RE.exec(R);
-            if (null == C) break;
-            let p = C[1],
-                m = r.Ay.getDisambiguatedEmojiContext(f).getCustomEmoji().get(p);
+            var C = e,
+                D = t;
+            let p = r.Ay.EMOJI_NAME_RE.exec(C);
+            if (null == p) break;
+            let L = p[1],
+                m = a.Ay.getDisambiguatedEmojiContext(D).getCustomEmoji().get(L);
             return null != m
                 ? {
                       type: "customEmoji",
@@ -65,39 +67,41 @@ function S(e, t, n, T) {
                   }
                 : null;
         case "#":
-            let L;
-            var D = e,
-                h = t;
-            if (null == h) break;
-            L =
-                D.length > 3 && '"' === D[1] && '"' === D[D.length - 1]
-                    ? (0, i.LG)(D.slice(2, D.length - 1))
-                    : D.slice(1);
-            let g = l.Ay.getTextChannelNameDisambiguations(h);
-            for (let e of A.default.keys(g))
-                if (g[e].name === L) return { type: "channelMention", channelId: e, children: [{ text: "" }] };
-            for (let e of I.L3)
+            let h;
+            var g = e,
+                b = t;
+            if (null == b) break;
+            h =
+                g.length > 3 && '"' === g[1] && '"' === g[g.length - 1]
+                    ? (0, i.LG)(g.slice(2, g.length - 1))
+                    : g.slice(1);
+            let U = l.Ay.getTextChannelNameDisambiguations(b);
+            for (let e of A.default.keys(U))
+                if (U[e].name === h) return { type: "channelMention", channelId: e, children: [{ text: "" }] };
+            for (let e of T.L3)
                 if (e !== l.I6) {
-                    for (let { channel: t } of l.Ay.getChannels(h)[e])
-                        if ((0, i.m1)(t, u.default, c.A) === L)
+                    for (let { channel: t } of l.Ay.getChannels(b)[e])
+                        if ((0, i.m1)(t, I.default, u.A) === h) {
+                            if (t.isCategory() && !c.A.can(N.xBc.VIEW_CHANNEL, t)) continue;
                             return { type: "channelMention", channelId: t.id, children: [{ text: "" }] };
+                        }
                 }
-            let b = s.A.getActiveJoinedThreadsForGuild(h);
-            for (let e of A.default.keys(b))
-                for (let t of A.default.keys(b[e])) {
-                    let { channel: n } = b[e][t];
-                    if ((0, i.m1)(n, u.default, c.A) === L)
+            let P = _.A.getActiveJoinedThreadsForGuild(b);
+            for (let e of A.default.keys(P))
+                for (let t of A.default.keys(P[e])) {
+                    let { channel: n } = P[e][t];
+                    if ((0, i.m1)(n, I.default, u.A) === h)
                         return { type: "channelMention", channelId: n.id, children: [{ text: "" }] };
                 }
             break;
     }
     return null;
 }
-function N(e, t, n, i) {
-    let r = S(e, t, n, i);
-    return null == r ? null : (0, T.QR)(r);
+function f(e, t, n, i) {
+    let a = O(e, t, n, i);
+    return null == a ? null : (0, S.QR)(a);
 }
-function O(e, t, n) {
+function R(e, t, n) {
     let { requireExact: i = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     return null != n && (i ? n.username === e : n.username.startsWith(e)) && n.discriminator === (t ?? "0");
 }
