@@ -31,7 +31,7 @@ let o = (e) => {
     l = () => {
         let e = (0, a.t4)((e) => {
                 let { checkoutInvoicePreview: t, standaloneInvoiceOrderContext: n } = e;
-                return null != t && null != t.checkoutContext ? t.checkoutContext : n;
+                return null != n ? n : null != t && null != t.checkoutContext ? t.checkoutContext : null;
             }),
             {
                 paymentSourceRecords: t,
