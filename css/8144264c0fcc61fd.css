@@ -426,7 +426,12 @@
     display: flex;
     flex-shrink: 0;
     line-height: 0;
-    margin-inline-start: var(--space-4)
+    margin-inline-start: var(--space-4);
+    opacity: .6
+}
+
+.subscribeButton__1afd8 {
+    margin-block-start: var(--space-20)
 }
 
 .termsLink__1afd8 {
@@ -463,7 +468,7 @@
 
     .content__1afd8 {
         min-width: 500px;
-        padding: 76px 36px 40px;
+        padding: 30px 36px 24px;
         width: 500px
     }
 

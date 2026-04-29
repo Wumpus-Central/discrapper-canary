@@ -95,7 +95,8 @@
     align-items: center;
     display: flex;
     flex-shrink: 0;
-    margin-inline-start: var(--space-4)
+    margin-inline-start: var(--space-4);
+    opacity: .6
 }
 
 .disclaimer__66bb2 {

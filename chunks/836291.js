@@ -8,8 +8,8 @@ var a = s(627968),
     d = s(990078),
     o = s(704333),
     u = s(414499),
-    m = s(597770),
-    x = s(500060),
+    x = s(597770),
+    m = s(500060),
     f = s(534514),
     p = s(834730),
     b = s(885574),
@@ -20,128 +20,130 @@ var a = s(627968),
     N = s(777376),
     C = s(983060),
     k = s(758209),
-    O = s(915418),
-    E = s(674567),
+    E = s(915418),
+    O = s(674567),
     A = s(652215),
-    _ = s(237146),
-    I = s(985018),
-    L = s(691539);
+    L = s(237146),
+    _ = s(985018),
+    I = s(691539);
 let y = [
-    { icon: o.B, message: _.default.bpksos },
-    { icon: u.h, message: _.default["5rbQbD"] },
-    { icon: m.o, message: _.default.b1X5Jf, tooltip: _.default.AyECej },
-    { icon: x.o, message: _.default.xZiyZj },
+    { icon: o.B, message: L.default.bpksos },
+    { icon: u.h, message: L.default["5rbQbD"] },
+    { icon: x.o, message: L.default.b1X5Jf, tooltip: L.default.AyECej },
+    { icon: m.o, message: L.default.xZiyZj },
 ];
 function D(t) {
     let { transitionState: e, onClose: s } = t,
-        o = (0, E.V)(),
-        { status: u, redirect: m, requestInProgress: x } = (0, O.r)(),
-        D = (0, k.A)(m),
-        R = i.useCallback(() => {
+        o = (0, O.V)(),
+        { status: u, redirect: x, requestInProgress: m } = (0, E.r)(),
+        D = (0, k.A)(x),
+        R = (0, v.A)(),
+        T = i.useCallback(() => {
             (0, r.A)({
-                title: I.intl.string(_.default["/GObQk"]),
-                subtitle: I.intl.string(_.default["r/jeXi"]),
-                confirmText: I.intl.string(_.default.bVwQhX),
+                title: _.intl.string(L.default["/GObQk"]),
+                subtitle: _.intl.string(L.default["r/jeXi"]),
+                confirmText: _.intl.string(L.default.bVwQhX),
                 variant: "critical",
                 onConfirm: () => (0, j.RB)(N.n9.XGPP),
-            });
-        }, []),
-        T = o === E.s.NONE || o === E.s.NON_NITRO;
+            }),
+                R(v.xf.CANCEL);
+        }, [R]),
+        z = o === O.s.NONE || o === O.s.NON_NITRO;
     i.useEffect(() => {
-        T && s();
-    }, [T, s]);
-    let z = i.useRef(!1);
+        z && s();
+    }, [z, s]);
+    let w = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            T || z.current || ((z.current = !0), h.default.track(A.HAw.OPEN_MODAL, { type: v.$ }));
-        }, [T]),
-        T)
+            z || w.current || ((w.current = !0), h.default.track(A.HAw.OPEN_MODAL, { type: v.$p }));
+        }, [z]),
+        z)
     )
         return null;
-    let w = (function (t) {
+    let P = (function (t) {
         let { claimStatus: e, handleActivationClick: s, cancelCroissant: a, requestInProgress: i } = t;
         switch (e) {
             case N.p1.NOT_CLAIMED:
             case N.p1.CLAIM_IN_PROGRESS:
                 return {
-                    ctaText: I.intl.string(_.default.EL3rU4),
+                    ctaText: _.intl.string(L.default.EL3rU4),
                     ctaVariant: "primary",
                     ctaOnClick: s,
                     processing: i,
-                    disclaimer: e === N.p1.CLAIM_IN_PROGRESS ? I.intl.string(_.default.Fs74z9) : void 0,
+                    disclaimer: e === N.p1.CLAIM_IN_PROGRESS ? _.intl.string(L.default.Fs74z9) : void 0,
                 };
             case N.p1.CLAIMED:
                 return {
-                    ctaText: I.intl.string(_.default["Z2Ipu/"]),
+                    ctaText: _.intl.string(L.default["Z2Ipu/"]),
                     ctaVariant: "critical-secondary",
                     ctaOnClick: a,
                     processing: i,
-                    disclaimer: I.intl.string(_.default.hjlZZf),
+                    disclaimer: _.intl.string(L.default.hjlZZf),
                 };
             case N.p1.CANCELLATION_IN_PROGRESS:
                 return {
-                    ctaText: I.intl.string(_.default.wBz9aO),
+                    ctaText: _.intl.string(L.default.wBz9aO),
                     ctaVariant: "critical-secondary",
                     ctaDisabled: !0,
-                    disclaimer: I.intl.string(_.default.hjlZZf),
+                    disclaimer: _.intl.string(L.default.hjlZZf),
                 };
         }
-    })({ claimStatus: u, handleActivationClick: D, cancelCroissant: R, requestInProgress: x });
+    })({ claimStatus: u, handleActivationClick: D, cancelCroissant: T, requestInProgress: m });
     return (0, a.jsx)(l.d, {
         transitionState: e,
         onClose: s,
         size: "xl",
-        "aria-label": I.intl.string(_.default.ukvxpp),
+        "aria-label": _.intl.string(L.default.ukvxpp),
         children: (0, a.jsxs)("div", {
-            className: L.yl,
+            className: I.yl,
             children: [
                 (0, a.jsxs)("div", {
-                    className: L.XN,
+                    className: I.XN,
                     children: [
                         (0, a.jsx)("img", {
-                            className: L.wm,
+                            className: I.wm,
                             src: "https://cdn.discordapp.com/assets/content/7ade8acce1774614eee4dbeb37b20b44fe7cb2a2b70b5107413ed7ee724e1344.png",
                             alt: "Xbox Game Pass",
                         }),
                         (0, a.jsxs)("div", {
-                            className: L.FD,
+                            className: I.FD,
                             children: [
                                 (0, a.jsxs)("div", {
-                                    className: L.gY,
+                                    className: I.gY,
                                     children: [
                                         (0, a.jsx)(f.D, {
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
-                                            children: I.intl.string(_.default.ukvxpp),
+                                            children: _.intl.string(L.default.ukvxpp),
                                         }),
                                         (0, a.jsx)(p.E, {
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
-                                            children: I.intl.format(_.default.FO4faL, { termsLink: (0, C.Wi)() }),
+                                            children: _.intl.format(L.default.FO4faL, { termsLink: (0, C.Wi)() }),
                                         }),
                                     ],
                                 }),
-                                null != w &&
+                                null != P &&
                                     (0, a.jsxs)(a.Fragment, {
                                         children: [
                                             (0, a.jsx)(n.$, {
                                                 fullWidth: !0,
-                                                variant: w.ctaVariant,
+                                                variant: P.ctaVariant,
                                                 size: "md",
-                                                text: w.ctaText,
-                                                onClick: w.ctaOnClick,
-                                                disabled: w.ctaDisabled,
-                                                loading: w.processing,
+                                                text: P.ctaText,
+                                                onClick: P.ctaOnClick,
+                                                disabled: P.ctaDisabled,
+                                                loading: P.processing,
                                             }),
-                                            null != w.disclaimer &&
+                                            null != P.disclaimer &&
                                                 (0, a.jsxs)("div", {
-                                                    className: L.ed,
+                                                    className: I.ed,
                                                     children: [
                                                         (0, a.jsx)(b.m, { size: "xs", color: "var(--text-subtle)" }),
                                                         (0, a.jsx)(p.E, {
                                                             variant: "text-xs/medium",
                                                             color: "text-subtle",
-                                                            children: w.disclaimer,
+                                                            children: P.disclaimer,
                                                         }),
                                                     ],
                                                 }),
@@ -152,18 +154,18 @@ function D(t) {
                     ],
                 }),
                 (0, a.jsxs)("div", {
-                    className: L.Hh,
+                    className: I.Hh,
                     children: [
                         (0, a.jsx)("img", {
                             src: "https://cdn.discordapp.com/assets/content/b565e9fbc877550c994314613b3d30af48001372642b027b45bd577f71a86442.png",
-                            className: L.d3,
+                            className: I.d3,
                             alt: "",
                         }),
-                        (0, a.jsx)("div", { className: L.gm }),
+                        (0, a.jsx)("div", { className: I.gm }),
                         (0, a.jsx)("div", {
-                            className: L.b,
+                            className: I.b,
                             children: (0, a.jsx)(c.K, {
-                                "aria-label": I.intl.string(I.t.cpT0Cq),
+                                "aria-label": _.intl.string(_.t.cpT0Cq),
                                 onClick: s,
                                 icon: g.d,
                                 variant: "overlay-secondary",
@@ -171,28 +173,28 @@ function D(t) {
                             }),
                         }),
                         (0, a.jsx)("div", {
-                            className: L.Jo,
+                            className: I.Jo,
                             children: y.map((t, e) => {
                                 let { icon: s, message: i, tooltip: l } = t;
                                 return (0, a.jsxs)(
                                     "div",
                                     {
-                                        className: L.vD,
+                                        className: I.vD,
                                         children: [
                                             (0, a.jsx)(s, { size: "sm", color: "var(--icon-strong)" }),
                                             (0, a.jsx)(p.E, {
                                                 variant: "text-md/medium",
                                                 color: "text-default",
-                                                children: I.intl.string(i),
+                                                children: _.intl.string(i),
                                             }),
                                             null != l &&
                                                 (0, a.jsx)("div", {
-                                                    className: L.Jn,
+                                                    className: I.Jn,
                                                     children: (0, a.jsx)(d.m, {
-                                                        text: I.intl.string(l),
+                                                        text: _.intl.string(l),
                                                         position: "top",
                                                         children: (0, a.jsx)(b.m, {
-                                                            size: "xs",
+                                                            size: "xxs",
                                                             color: "var(--icon-default)",
                                                         }),
                                                     }),
