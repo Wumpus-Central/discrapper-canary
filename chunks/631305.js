@@ -3,8 +3,8 @@ var i = s(627968);
 s(64700);
 var o = s(231723),
     r = s(192308),
-    l = s(869146),
-    e = s(709055),
+    e = s(869146),
+    l = s(709055),
     c = s(954571),
     a = s(652215);
 function f(t, n) {
@@ -12,8 +12,8 @@ function f(t, n) {
     null != t.targetBoostedGuildTier && (f += ` - Tier ${t.targetBoostedGuildTier}`),
         c.default.track(a.HAw.OPEN_MODAL, { type: f, location: t.analyticsSourceLocation });
     let { openInPopoutEnabled: u, ..._ } = t,
-        E = l.A.getWindowOpen(a.MLl.CHANNEL_CALL_POPOUT) && null != u && u;
-    E && (0, e.A)(a.MLl.CHANNEL_CALL_POPOUT);
+        E = e.A.getWindowOpen(a.MLl.CHANNEL_CALL_POPOUT) && null != u && u;
+    E && (0, l.A)(a.MLl.CHANNEL_CALL_POPOUT);
     let d = E ? o.KX : o.SY;
     (0, r.openModalLazy)(
         async () => {
@@ -26,7 +26,8 @@ function f(t, n) {
                 s.e("52041"),
                 s.e("60235"),
                 s.e("45959"),
-                s.e("55057"),
+                s.e("39667"),
+                s.e("53092"),
                 s.e("71202"),
                 s.e("45210"),
             ]).then(s.bind(s, 331617));

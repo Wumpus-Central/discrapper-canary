@@ -589,7 +589,7 @@ function eJ(e) {
                                                         n.e("19551"),
                                                         n.e("45959"),
                                                         n.e("18573"),
-                                                        n.e("55057"),
+                                                        n.e("39667"),
                                                         n.e("37794"),
                                                         n.e("26073"),
                                                         n.e("7743"),
@@ -606,6 +606,7 @@ function eJ(e) {
                                                         n.e("94723"),
                                                         n.e("62931"),
                                                         n.e("81987"),
+                                                        n.e("53092"),
                                                         n.e("58007"),
                                                         n.e("5812"),
                                                         n.e("17363"),
@@ -854,8 +855,8 @@ function e4(e) {
 var e8 = n(34188),
     e2 = n(700623),
     e7 = n(177953),
-    e5 = n(825484),
-    e3 = n(512950),
+    e3 = n(825484),
+    e5 = n(512950),
     e6 = n(900797),
     e9 = n(847374),
     te = n(10716),
@@ -1229,7 +1230,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, j.$B)(n) && (0, j.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e5.e, {
+            ? (0, r.jsxs)(e3.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tj, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1239,9 +1240,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, j.Ag)(n)
-              ? (0, r.jsx)(e3.p, {
+              ? (0, r.jsx)(e5.p, {
                     className: ty.ai,
-                    messageType: e3.Y.WARNING,
+                    messageType: e5.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1416,13 +1417,13 @@ var tQ = n(111042),
     t8 = n(168186),
     t2 = n(594061),
     t7 = n(935208),
-    t5 = n(630248),
-    t3 = n(355097);
+    t3 = n(630248),
+    t5 = n(355097);
 function t6(e, t) {
     o.useEffect(() => {
-        t2.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t5.A], () => t5.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -2129,8 +2130,8 @@ function n4(e, t) {
     ).slice(0, i);
 }
 function n8(e, t) {
-    let n = t5.A.getScoreWithoutLoadingLatest(e.id);
-    return t5.A.getScoreWithoutLoadingLatest(t.id) - n;
+    let n = t3.A.getScoreWithoutLoadingLatest(e.id);
+    return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
 function n2(e, t) {
     let n = (0, j.lq)(e),
@@ -2141,8 +2142,8 @@ function n7(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
-var n5 = n(110259),
-    n3 = n(139286),
+var n3 = n(110259),
+    n5 = n(139286),
     n6 = n(520117);
 function n9(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
@@ -2150,9 +2151,9 @@ function n9(e) {
     return {
         trackSearchResultsItemImpressionRef: (0, n6.A)({
             onVisible: () => {
-                (0, n3.x)({
-                    type: n5.ImpressionTypes.VIEW,
-                    name: n5.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                (0, n5.x)({
+                    type: n3.ImpressionTypes.VIEW,
+                    name: n3.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
                 });
             },

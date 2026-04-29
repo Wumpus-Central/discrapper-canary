@@ -331,8 +331,8 @@ var eF = n(734066),
     e1 = n(372684),
     e2 = n(572164),
     e3 = n(399925),
-    e5 = n(890856),
-    e6 = n(609174),
+    e6 = n(890856),
+    e5 = n(609174),
     e8 = n(353605),
     e4 = n(434320),
     e9 = n(82716),
@@ -348,9 +348,9 @@ let tl = s.memo(function (e) {
         h = s.useCallback(() => {
             i?.(), (0, eV.p)({ initialEditingClipId: t.id });
         }, [t.id, i]);
-    return (0, l.jsx)(e6.Cl, {
+    return (0, l.jsx)(e5.Cl, {
         clip: t,
-        children: (0, l.jsx)(e5.s, {
+        children: (0, l.jsx)(e6.s, {
             "aria-label": em.intl.string(em.t.bt75uw),
             onClick: h,
             onMouseEnter: u,
@@ -746,8 +746,8 @@ var tX = n(983495),
     t1 = n(290863),
     t2 = n(351906),
     t3 = n(562153),
-    t5 = n(661531),
-    t6 = n(477782),
+    t6 = n(661531),
+    t5 = n(477782),
     t8 = n(628284),
     t4 = n(695366),
     t9 = n(363195),
@@ -902,7 +902,7 @@ function nj() {
                     text: em.intl.string(em.t.L99HQm),
                     children: (0, l.jsx)(t4.E, {
                         size: "xs",
-                        color: t5.A.colors.STATUS_WARNING,
+                        color: t6.A.colors.STATUS_WARNING,
                         "aria-label": em.intl.string(em.t.L99HQm),
                     }),
                 }),
@@ -1064,7 +1064,7 @@ function nV(e) {
             children: nG.map((e) => {
                 let { duration: s, label: i } = e;
                 return (0, l.jsx)(
-                    t6.Dr,
+                    t5.Dr,
                     {
                         id: `${t}-${s}`,
                         label: i(),
@@ -1075,7 +1075,7 @@ function nV(e) {
                 );
             }),
         });
-    return (0, l.jsx)(t6.Dr, {
+    return (0, l.jsx)(t5.Dr, {
         id: t,
         keepItemStyles: !0,
         hasSubmenu: i,
@@ -1145,7 +1145,7 @@ function nz(e) {
                 children: nG.map((e) => {
                     let { duration: t, label: n } = e;
                     return (0, l.jsx)(
-                        t6.Dr,
+                        t5.Dr,
                         {
                             id: `${U}-${t}`,
                             label: n(),
@@ -1165,16 +1165,16 @@ function nz(e) {
             (0, l.jsxs)(l.Fragment, {
                 children: [
                     c,
-                    (0, l.jsx)(t6.bX, {}, "menu-separator-statuses"),
+                    (0, l.jsx)(t5.bX, {}, "menu-separator-statuses"),
                     d,
                     h,
                     f,
                     n
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [
-                                  (0, l.jsx)(t6.bX, {}, "menu-separator-statuses"),
+                                  (0, l.jsx)(t5.bX, {}, "menu-separator-statuses"),
                                   (0, l.jsx)(
-                                      t6.Dr,
+                                      t5.Dr,
                                       {
                                           id: "quiet-mode",
                                           "aria-label": "focus mode",
@@ -1222,7 +1222,7 @@ function nz(e) {
                         o = i.tokenStatus === nl.U.INVALID,
                         c = n ? null : `#${a.discriminator}`;
                     return (0, l.jsx)(
-                        t6.Dr,
+                        t5.Dr,
                         {
                             id: a.id,
                             focusedClassName: na.in,
@@ -1259,21 +1259,21 @@ function nz(e) {
                                             (0, l.jsx)(t8.y, {
                                                 size: "sm",
                                                 color: t
-                                                    ? t5.A.unsafe_rawColors.WHITE.css
-                                                    : t5.A.unsafe_rawColors.BRAND_500.css,
+                                                    ? t6.A.unsafe_rawColors.WHITE.css
+                                                    : t6.A.unsafe_rawColors.BRAND_500.css,
                                                 secondaryColor:
                                                     (t && s) || (t && !s)
-                                                        ? t5.A.unsafe_rawColors.BRAND_500.css
-                                                        : t5.A.unsafe_rawColors.WHITE.css,
+                                                        ? t6.A.unsafe_rawColors.BRAND_500.css
+                                                        : t6.A.unsafe_rawColors.WHITE.css,
                                                 className: na.s0,
                                             }),
                                         o &&
                                             (0, l.jsx)(t4.E, {
-                                                color: t5.A.unsafe_rawColors.RED_400.css,
+                                                color: t6.A.unsafe_rawColors.RED_400.css,
                                                 secondaryColor:
                                                     (t && s) || (t && !s)
-                                                        ? t5.A.unsafe_rawColors.BRAND_500.css
-                                                        : t5.A.unsafe_rawColors.WHITE.css,
+                                                        ? t6.A.unsafe_rawColors.BRAND_500.css
+                                                        : t6.A.unsafe_rawColors.WHITE.css,
                                                 size: "xs",
                                                 className: na.s0,
                                             }),
@@ -1299,8 +1299,8 @@ function nz(e) {
                 a.push(
                     (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, l.jsx)(t6.bX, {}),
-                            (0, l.jsx)(t6.Dr, {
+                            (0, l.jsx)(t5.bX, {}),
+                            (0, l.jsx)(t5.Dr, {
                                 id: "manage-accounts",
                                 label: em.intl.string(em.t.WbFpq4),
                                 action: () => {
@@ -1584,8 +1584,8 @@ var nq = n(201805),
     n1 = n(51760),
     n2 = n(763827),
     n3 = n(499156),
-    n5 = n(731854);
-let n6 = 2.5 * eY.A.Millis.SECOND,
+    n6 = n(731854);
+let n5 = 2.5 * eY.A.Millis.SECOND,
     n8 = +eY.A.Millis.HOUR;
 var n4 = n(205693),
     n9 = n(485296);
@@ -1909,7 +1909,7 @@ function lZ(e) {
             events: { onMouseEnter: g, onMouseLeave: A },
         } = (0, lV.I)(h ? "undeafen" : "deafen"),
         x = n ? lF.T : m,
-        { name: C } = (0, eA.x5)(n5.oh.AUDIO_OUTPUT),
+        { name: C } = (0, eA.x5)(n6.oh.AUDIO_OUTPUT),
         E = (0, lH.A)(t, n, i),
         { analyticsLocations: v } = (0, O.Ay)(w.A.AUDIO_OUTPUT_BUTTON),
         T = s.useRef(null);
@@ -1956,7 +1956,7 @@ function lZ(e) {
                                     size: "custom",
                                     width: 20,
                                     height: 20,
-                                    color: h ? t5.A.colors.ICON_VOICE_MUTED : "currentColor",
+                                    color: h ? t6.A.colors.ICON_VOICE_MUTED : "currentColor",
                                     className: o,
                                 }),
                                 iconForeground: h ? lq.o : void 0,
@@ -1978,7 +1978,7 @@ function lZ(e) {
                                     size: "custom",
                                     width: 12,
                                     height: 12,
-                                    color: h ? t5.A.colors.ICON_VOICE_MUTED : "currentColor",
+                                    color: h ? t6.A.colors.ICON_VOICE_MUTED : "currentColor",
                                 }),
                                 onClick: s,
                                 onContextMenu: s,
@@ -2027,8 +2027,8 @@ let l0 = new lJ(lj.h, {
 var l1 = n(362823),
     l2 = n(980923),
     l3 = n(224585),
-    l5 = n(949341),
-    l6 = n(973324);
+    l6 = n(949341),
+    l5 = n(973324);
 function l8(e) {
     let t,
         {
@@ -2049,11 +2049,11 @@ function l8(e) {
             speaking: v,
         } = e,
         { showPTTIconIndicator: T } = n3.A.useConfig({ location: "MicrophoneButton" }),
-        j = (0, u.bG)([n1.Ay], () => n1.Ay.getMode() === n5.TB.PUSH_TO_TALK),
+        j = (0, u.bG)([n1.Ay], () => n1.Ay.getMode() === n6.TB.PUSH_TO_TALK),
         N = (0, u.bG)([n1.Ay], () => n1.Ay.getSettings().modeOptions.shortcut),
         _ = (0, u.bG)([l0], () => l0.getIsTutorialActive(l1.v.MUTE_TUTORIAL)),
         S = (0, u.bG)([n2.A], () => null != n2.A.getChannelId()),
-        { name: R } = (0, eA.x5)(n5.oh.AUDIO_INPUT),
+        { name: R } = (0, eA.x5)(n6.oh.AUDIO_INPUT),
         { enabledInputProfiles: I } = (0, nX.d)({ location: "MicrophoneButton" }),
         y = s.useRef(null),
         b = n || r || i,
@@ -2073,7 +2073,7 @@ function l8(e) {
             }
           : { tooltipText: F };
     let B = T && j && S,
-        V = b ? t5.A.colors.ICON_VOICE_MUTED : "currentColor",
+        V = b ? t6.A.colors.ICON_VOICE_MUTED : "currentColor",
         H = s.useCallback(() => {
             m(), _ && lY.N(l1.v.MUTE_TUTORIAL);
         }, [m, _]);
@@ -2131,7 +2131,7 @@ function l8(e) {
                                 redGlow: b,
                                 role: "switch",
                                 ...t,
-                                children: B ? (0, l.jsx)("div", { className: a()(l5.U, { [l5.z]: v }) }) : null,
+                                children: B ? (0, l.jsx)("div", { className: a()(l6.U, { [l6.z]: v }) }) : null,
                             }),
                             (0, l.jsx)(lW.A, {
                                 "aria-label": x
@@ -2169,7 +2169,7 @@ function l8(e) {
             (0, l.jsx)(nr.A, {
                 targetElementRef: y,
                 shouldShow: _,
-                graphic: { type: "image", src: l6.A },
+                graphic: { type: "image", src: l5.A },
                 onRequestClose: () => {
                     lY.N(l1.v.MUTE_TUTORIAL);
                 },
@@ -2571,7 +2571,7 @@ class sf extends s.PureComponent {
                     n.e("19551"),
                     n.e("45959"),
                     n.e("18573"),
-                    n.e("55057"),
+                    n.e("39667"),
                     n.e("37794"),
                     n.e("26073"),
                     n.e("7743"),
@@ -2588,6 +2588,7 @@ class sf extends s.PureComponent {
                     n.e("94723"),
                     n.e("62931"),
                     n.e("81987"),
+                    n.e("53092"),
                     n.e("58007"),
                     n.e("5812"),
                     n.e("17363"),
@@ -3344,14 +3345,14 @@ function sx() {
         W = { avatar: [], settings: [] },
         z = (0, nK.lX)("AccountCoachmark");
     !I && (W.avatar.push(d.M.DISPLAY_NAME_STYLES_COACHMARK), z && W.settings.push(d.M.PRIVATE_PROFILE_COACHMARK));
-    let { shouldShowTooltip: q, dismissTooltip: Z } = sA(n5.oh.AUDIO_INPUT),
-        { shouldShowTooltip: K, dismissTooltip: $ } = sA(n5.oh.AUDIO_OUTPUT),
+    let { shouldShowTooltip: q, dismissTooltip: Z } = sA(n6.oh.AUDIO_INPUT),
+        { shouldShowTooltip: K, dismissTooltip: $ } = sA(n6.oh.AUDIO_OUTPUT),
         { shouldShowTooltip: X, dismissTooltip: J } = (function () {
             let [e, t] = s.useState(!1),
-                n = (0, u.bG)([n1.Ay], () => n1.Ay.getMode() === n5.TB.PUSH_TO_TALK),
+                n = (0, u.bG)([n1.Ay], () => n1.Ay.getMode() === n6.TB.PUSH_TO_TALK),
                 l = (0, u.bG)(
                     [n2.A],
-                    () => null != n2.A.getChannelId() && (n2.A.getDuration() ?? Number.MAX_VALUE) < n6,
+                    () => null != n2.A.getChannelId() && (n2.A.getDuration() ?? Number.MAX_VALUE) < n5,
                 ),
                 [i, a] = s.useState(!1),
                 { showPTTJoinTooltip: r } = n3.A.useConfig({ location: "usePTTJoinTooltip" }),
@@ -3365,7 +3366,7 @@ function sx() {
                         c.current.start(n8, () => {
                             t(!1);
                         }),
-                        o.current.start(n6, () => {
+                        o.current.start(n5, () => {
                             a(!1);
                         });
                 }
@@ -3384,7 +3385,7 @@ function sx() {
         ee = (function () {
             let { showPTTSpeakingIndicator: e } = n3.A.useConfig({ location: "useSpeakingWhilePTT" }),
                 [t, n] = s.useState(!1),
-                l = (0, u.bG)([n1.Ay], () => n1.Ay.getMode() === n5.TB.PUSH_TO_TALK),
+                l = (0, u.bG)([n1.Ay], () => n1.Ay.getMode() === n6.TB.PUSH_TO_TALK),
                 i = (0, u.bG)([n2.A], () => n2.A.getRTCConnectionId()),
                 a = (0, u.bG)([n1.Ay], () => {
                     let e = n1.Ay.getModeOptions().updatedAt;
@@ -3399,7 +3400,7 @@ function sx() {
                     let t = 0,
                         s = r.current;
                     function o(e, l) {
-                        let i = (l & n5.ME.VOICE) === n5.ME.VOICE,
+                        let i = (l & n6.ME.VOICE) === n6.ME.VOICE,
                             a = n9.A.isCurrentUserPTTActive();
                         i && !a
                             ? ++t >= 6 &&
