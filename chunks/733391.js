@@ -1,4 +1,4 @@
-n.d(t, { Kh: () => S, Rw: () => I, SP: () => A, Xw: () => N, dS: () => R, iR: () => O, qf: () => T });
+n.d(t, { Kh: () => S, Rw: () => I, SP: () => A, Xw: () => N, dS: () => f, iR: () => O, qf: () => T });
 var i = n(636537),
     a = n(228366),
     r = n(927813),
@@ -122,6 +122,7 @@ async function N() {
                             guildId: e.guild_id,
                             applicationId: e.application_id,
                             gameId: e.game_id,
+                            collectiblesShopNavigationEnabled: !0 === e.collectibles_shop_navigation_enabled,
                         })) ?? [],
                     announcementModalConfig:
                         null != e.announcement_modal_config
@@ -166,7 +167,7 @@ function O(e, t) {
                 });
             }));
 }
-async function R() {
+async function f() {
     a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_START" });
     try {
         let e = (await i.Bo.get({ url: l.Rsh.SOCIAL_LAYER_STOREFRONT_ELIGIBILITY, rejectWithError: !0 })).body;

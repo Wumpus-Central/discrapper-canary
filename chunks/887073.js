@@ -1,53 +1,53 @@
-n.r(_), n.d(_, { default: () => x });
-var o = n(627968),
-    t = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    d = n(364522),
-    l = n(785330),
-    i = n(475073),
-    c = n(611924),
-    s = n(976860),
-    u = n(594832),
-    B = n(621653),
-    C = n(983545),
-    h = n(70426),
-    b = n(146919),
-    k = n(758836),
-    f = n(652215),
-    p = n(647685),
-    g = n(941734);
-let x = (e) => {
-    let { collectionId: _ } = e,
-        n = t.useRef(null);
-    (0, c.P)(i.a), (0, B.g)();
-    let r = (0, b.yB)("CollectiblesShopIndexPage");
-    (0, b.gB)();
-    let { selectedTab: x, transitionToTab: m } = (0, C.o)(k.G2.COLLECTION_INDEX),
-        w = t.useCallback(() => {
-            (0, s.pX)(f.BVt.COLLECTIBLES_SHOP);
+s.r(l), s.d(l, { default: () => _ });
+var t = s(627968),
+    a = s(64700),
+    n = s(503698),
+    d = s.n(n),
+    c = s(364522),
+    r = s(785330),
+    i = s(475073),
+    u = s(611924),
+    o = s(976860),
+    p = s(594832),
+    h = s(621653),
+    x = s(983545),
+    b = s(630330),
+    C = s(146919),
+    E = s(758836),
+    I = s(652215),
+    j = s(647685),
+    L = s(941734);
+let _ = (e) => {
+    let { collectionId: l } = e,
+        s = a.useRef(null);
+    (0, u.P)(i.a), (0, h.g)();
+    let n = (0, C.yB)("CollectiblesShopIndexPage");
+    (0, C.gB)();
+    let { selectedTab: _, transitionToTab: f } = (0, x.o)(E.G2.COLLECTION_INDEX),
+        k = a.useCallback(() => {
+            (0, o.pX)(I.BVt.COLLECTIBLES_SHOP);
         }, []);
-    return ((0, u.pE)(),
-    t.useEffect(() => {
-        null == _ && w();
-    }, [_, w]),
-    null == _)
+    return ((0, p.pE)(),
+    a.useEffect(() => {
+        null == l && k();
+    }, [l, k]),
+    null == l)
         ? null
-        : (0, o.jsxs)("div", {
-              className: a()(p.bx, { [b.jP]: r }),
-              ref: n,
+        : (0, t.jsxs)("div", {
+              className: d()(j.bx, { [C.jP]: n }),
+              ref: s,
               tabIndex: -1,
               children: [
-                  (0, o.jsx)(h.G, { handleTransition: m, selectedTab: x }),
-                  (0, o.jsx)(d.Ip, {
-                      children: (0, o.jsx)("div", {
-                          className: a()(g.GS, g.rb),
-                          children: (0, o.jsx)(l.Z_, {
-                              tenantId: f.FYj,
+                  (0, t.jsx)(b.G, { handleTransition: f, selectedTab: _ }),
+                  (0, t.jsx)(c.Ip, {
+                      children: (0, t.jsx)("div", {
+                          className: d()(L.GS, L.rb),
+                          children: (0, t.jsx)(r.Z_, {
+                              tenantId: I.FYj,
                               templateId: "collection-index",
-                              requestParams: { collection_id: _ },
-                              onError: w,
-                              onEmptyLayout: w,
+                              requestParams: { collection_id: l },
+                              onError: k,
+                              onEmptyLayout: k,
                           }),
                       }),
                   }),
