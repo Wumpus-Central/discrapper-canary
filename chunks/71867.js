@@ -1,8 +1,8 @@
-n.d(t, { P: () => L });
+n.d(t, { P: () => R });
 var l = n(627968);
 n(64700);
-var a = n(877624),
-    i = n(742810),
+var i = n(877624),
+    a = n(742810),
     r = n(234419),
     s = n(549996),
     o = n(503698),
@@ -12,21 +12,21 @@ var a = n(877624),
     p = n(834730),
     m = n(262427),
     h = n(139286),
-    A = n(432029);
-let C = (e) => {
-    let { componentId: t, promotionBannerMarketingComponentFields: n, shouldUseOfferNotice: i, className: r } = e;
+    C = n(432029);
+let A = (e) => {
+    let { componentId: t, promotionBannerMarketingComponentFields: n, shouldUseOfferNotice: a, className: r } = e;
     (0, h.A)({
         type: c.ImpressionTypes.VIEW,
         name: c.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: a.C.PAYMENT_MODAL_BANNER, component_id: t },
+        properties: { component_type: i.C.PAYMENT_MODAL_BANNER, component_id: t },
     });
-    let s = (0, l.jsx)(d._, { src: n.assetUrl, width: 48, height: 48 });
-    return i
-        ? (0, l.jsx)(m.J, { className: A.No, customGraphic: s, text: n.body })
+    let s = (0, l.jsx)(d._, { src: n.assetUrl, width: 48, height: 48, zoomable: !1 });
+    return a
+        ? (0, l.jsx)(m.J, { className: C.No, customGraphic: s, text: n.body })
         : (0, l.jsx)("div", {
-              className: u()(A.kL, A.No, r),
+              className: u()(C.kL, C.No, r),
               children: (0, l.jsxs)("div", {
-                  className: A.Qs,
+                  className: C.Qs,
                   children: [
                       (0, l.jsx)("div", { children: s }),
                       (0, l.jsx)(p.E, { variant: "text-sm/medium", color: "text-strong", children: n.body }),
@@ -34,17 +34,17 @@ let C = (e) => {
               }),
           });
 };
-var _ = n(462887),
-    E = n(97808),
-    y = n(736653),
-    f = n(854627),
-    P = n(427262),
-    S = n(236834);
-let T = (e) => {
-        let { className: t, width: n = 83, height: a = 45 } = e;
+var E = n(462887),
+    y = n(97808),
+    P = n(736653),
+    S = n(854627),
+    _ = n(427262),
+    T = n(236834);
+let f = (e) => {
+        let { className: t, width: n = 83, height: i = 45 } = e;
         return (0, l.jsxs)("svg", {
             width: n,
-            height: a,
+            height: i,
             viewBox: "0 0 83 45",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
@@ -310,11 +310,11 @@ let T = (e) => {
             ],
         });
     },
-    x = (e) => {
-        let { className: t, width: n = 83, height: a = 45 } = e;
+    N = (e) => {
+        let { className: t, width: n = 83, height: i = 45 } = e;
         return (0, l.jsxs)("svg", {
             width: n,
-            height: a,
+            height: i,
             viewBox: "0 0 83 45",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
@@ -580,46 +580,46 @@ let T = (e) => {
             ],
         });
     };
-var N = n(778712),
-    g = n(985018),
-    I = n(577454);
+var x = n(778712),
+    I = n(985018),
+    g = n(577454);
 let v = (e) => {
     let { className: t } = e,
-        n = (0, S.A)(),
-        { avatarSrc: a, eventHandlers: i } = (0, f.A)({ userId: n?.id, size: N._3.SIZE_32, animateOnHover: !0 }),
-        r = (0, y.DP)(),
-        s = (0, _.q)(r),
-        o = P.Ay.getName(n);
+        n = (0, T.A)(),
+        { avatarSrc: i, eventHandlers: a } = (0, S.A)({ userId: n?.id, size: x._3.SIZE_32, animateOnHover: !0 }),
+        r = (0, P.DP)(),
+        s = (0, E.q)(r),
+        o = _.Ay.getName(n);
     return null == n
         ? null
         : (0, l.jsxs)("div", {
-              className: u()(I.$6, t),
+              className: u()(g.$6, t),
               children: [
                   (0, l.jsx)("div", {
-                      className: I.H,
-                      children: (0, l.jsx)(E.eu, { src: a, "aria-label": n.username, size: N._3.SIZE_32, ...i }),
+                      className: g.H,
+                      children: (0, l.jsx)(y.eu, { src: i, "aria-label": n.username, size: x._3.SIZE_32, ...a }),
                   }),
                   (0, l.jsx)(p.E, {
                       variant: "text-xs/bold",
-                      className: I.U_,
-                      children: g.intl.format(g.t.oxhCOl, { userName: o }),
+                      className: g.U_,
+                      children: I.intl.format(I.t.oxhCOl, { userName: o }),
                   }),
-                  (0, l.jsx)(s ? T : x, { className: I.q3 }),
+                  (0, l.jsx)(s ? f : N, { className: g.q3 }),
               ],
           });
 };
-var b = n(937008),
-    M = n(788868);
-function L(e) {
+var M = n(937008),
+    b = n(788868);
+function R(e) {
     let { planSkuId: t, referralTrialOfferId: n, className: o } = e,
-        { isGift: u } = (0, b.Pv)(),
+        { isGift: u } = (0, M.Pv)(),
         c = (0, r.V)(n),
-        d = (0, s.c)(a.C.PAYMENT_MODAL_BANNER),
-        p = (0, i.D7)({ location: "PremiumPaymentPromotionBanner" });
-    return u || t !== M.pe.TIER_2
+        d = (0, s.c)(i.C.PAYMENT_MODAL_BANNER),
+        p = (0, a.D7)({ location: "PremiumPaymentPromotionBanner" });
+    return u || t !== b.pe.TIER_2
         ? null
         : null != d && "paymentModalBanner" === d.properties.properties.oneofKind
-          ? (0, l.jsx)(C, {
+          ? (0, l.jsx)(A, {
                 className: o,
                 shouldUseOfferNotice: p,
                 componentId: d.id,
