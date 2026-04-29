@@ -229,14 +229,9 @@
     height: 64px;
     padding-bottom: 12px;
     padding-top: 12px;
-    padding-inline-start: 18px;
     position: sticky;
     top: 0;
     z-index: 10
-}
-
-.channelHeader__35a7e.showCollapseButton__35a7e {
-    padding-inline-start: 0
 }
 
 .collapseButton__35a7e {

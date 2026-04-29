@@ -1,6 +1,5 @@
 e.exports = {
     ZO: "channelHeader__35a7e",
-    b4: "showCollapseButton__35a7e",
     cS: "collapseButton__35a7e",
     yZ: "collapsed__35a7e",
     ro: "dmIcon__35a7e",

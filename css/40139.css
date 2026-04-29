@@ -1698,12 +1698,11 @@ html .tabBadge_e6b769 {
 }
 
 .scroller__95796 {
-    padding: 0
+    padding: 0 16px
 }
 
 .container__95796 {
-    margin-bottom: 16px;
-    padding-inline-end: 8px
+    margin-bottom: 16px
 }
 
 .closeButton__95796 {
@@ -1715,7 +1714,6 @@ html .tabBadge_e6b769 {
     background-color: var(--background-surface-higher);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
-    margin-inline-start: 16px;
     padding: 16px;
     padding-inline-start: 0;
     position: relative

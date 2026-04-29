@@ -1,4 +1,5 @@
 e.exports = {
+    XG: "scroller_f6bd5f",
     zC: "messageContainer_f6bd5f",
     $5: "messageSpinner_f6bd5f",
     Pd: "channelMessageAndButtons_f6bd5f",
