@@ -66,8 +66,8 @@ function F(e) {
                 window.open(D.A.getArticleURL(w.MVz.SOCIAL_LAYER_STOREFRONT));
         }, [d, p]);
     if (null == s) return null;
-    let f = null != s.logoAssetId ? (0, G.YE)(s.applicationId, s.logoAssetId, 75) : null,
-        I = null != s.lightThemeLogoAssetId ? (0, G.YE)(s.applicationId, s.lightThemeLogoAssetId, 75) : null,
+    let f = null != s.logoAssetId ? (0, G.YE)(s.applicationId, s.logoAssetId, 128) : null,
+        I = null != s.lightThemeLogoAssetId ? (0, G.YE)(s.applicationId, s.lightThemeLogoAssetId, 128) : null,
         h = null;
     return (
         (h = r ? (f ?? I) : (I ?? f)),

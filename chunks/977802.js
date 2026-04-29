@@ -2487,7 +2487,7 @@ let sU = (e) => {
         }, [p]);
         let C = (0, O.bG)([sB.A], () => {
                 let e = sB.A.getStorefrontMetadata(i);
-                return e?.logoAssetId != null ? (0, sw.YE)(i, e.logoAssetId, 75) : void 0;
+                return e?.logoAssetId != null ? (0, sw.YE)(i, e.logoAssetId, 256) : void 0;
             }, [i]),
             S =
                 ((t = u.useRef([])),

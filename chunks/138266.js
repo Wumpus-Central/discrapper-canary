@@ -485,8 +485,8 @@ function eE(e) {
         eh = D?.tenantMetadata?.socialLayer;
     if (null == D || null == eh) return E ? (0, s.jsx)(p.y, {}) : null;
     let eb = C?.storefront,
-        eN = eb?.logoAssetId != null ? (0, q.YE)(eb.applicationId, eb.logoAssetId, 75) : null,
-        eE = eb?.lightThemeLogoAssetId != null ? (0, q.YE)(eb.applicationId, eb.lightThemeLogoAssetId, 75) : null,
+        eN = eb?.logoAssetId != null ? (0, q.YE)(eb.applicationId, eb.logoAssetId, 256) : null,
+        eE = eb?.lightThemeLogoAssetId != null ? (0, q.YE)(eb.applicationId, eb.lightThemeLogoAssetId, 256) : null,
         ey = null;
     ey = y ? (eN ?? eE) : (eE ?? eN);
     let eR = null != D.orbsReward && D.orbsReward > 0;
@@ -1219,8 +1219,8 @@ function eK(e) {
             M(!D), X(eC.Jq.MUTE_BUTTON);
         }, [D, X]);
     if (null == G?.tenantMetadata?.socialLayer) return y ? (0, s.jsx)(p.y, {}) : null;
-    let el = N?.logoAssetId != null ? (0, q.YE)(i, N.logoAssetId, 75) : null,
-        et = N?.lightThemeLogoAssetId != null ? (0, q.YE)(i, N.lightThemeLogoAssetId, 75) : null,
+    let el = N?.logoAssetId != null ? (0, q.YE)(i, N.logoAssetId, 256) : null,
+        et = N?.lightThemeLogoAssetId != null ? (0, q.YE)(i, N.lightThemeLogoAssetId, 256) : null,
         es = null;
     return (
         (es = O ? (el ?? et) : (et ?? el)),
