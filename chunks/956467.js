@@ -1,42 +1,44 @@
 "use strict";
 n.d(t, { A: () => l });
-var r = n(177068),
-    i = n(409037),
-    a = n(768570),
-    s = n(652215);
-class o extends i.c {
+var i = n(177068),
+    r = n(409037),
+    s = n(768570),
+    a = n(652215);
+class o extends r.c {
     createRequestPayload(e) {
-        let { searchQuery: t, searchTabs: n, getLimit: r, pagination: i, trackExactTotalHits: s } = e,
-            { include_nsfw: o, channel_id: l, ...u } = t,
-            c = { include_nsfw: o, channel_ids: l, tabs: {}, track_exact_total_hits: s };
+        let { searchQuery: t, searchTabs: n, getLimit: i, pagination: r, trackExactTotalHits: a } = e,
+            { include_nsfw: o, channel_id: l, ..._ } = t,
+            d = { include_nsfw: o, channel_ids: l, tabs: {}, track_exact_total_hits: a };
         return (
             n.forEach((e) => {
-                let t = r(e),
-                    n = a.B7[e],
-                    s = null != n ? a.su[n] : {};
-                c.tabs[e] = { ...a.us, ...s, ...u, ...i, limit: t };
+                let t = i(e),
+                    n = s.B7[e],
+                    { has: a, ...o } = null != n ? s.su[n] : {},
+                    { has: l, ...u } = _,
+                    c = [...new Set([...(a ?? []), ...(l ?? [])])];
+                d.tabs[e] = { ...s.us, ...o, ...u, ...(c.length > 0 ? { has: c } : {}), ...r, limit: t };
             }),
-            c
+            d
         );
     }
     createWithPayload(e) {
-        let { searchContext: t, searchQuery: n, searchTabs: i, getLimit: a, pagination: o, trackExactTotalHits: l } = e,
-            u = this.createRequestPayload({
+        let { searchContext: t, searchQuery: n, searchTabs: r, getLimit: s, pagination: o, trackExactTotalHits: l } = e,
+            _ = this.createRequestPayload({
                 searchQuery: n,
-                searchTabs: i,
-                getLimit: a,
+                searchTabs: r,
+                getLimit: s,
                 pagination: o,
                 trackExactTotalHits: l,
             });
         switch (t.type) {
-            case s.I4_.GUILD:
-            case s.I4_.GUILD_CHANNEL:
-            case s.I4_.THREAD:
-                return new r.DX(t.guildId, t.type, n, u);
-            case s.I4_.CHANNEL:
-                return new r.DX(t.channelId, t.type, n, u);
-            case s.I4_.DMS:
-                return new r.DX(t.type, t.type, n, u);
+            case a.I4_.GUILD:
+            case a.I4_.GUILD_CHANNEL:
+            case a.I4_.THREAD:
+                return new i.DX(t.guildId, t.type, n, _);
+            case a.I4_.CHANNEL:
+                return new i.DX(t.channelId, t.type, n, _);
+            case a.I4_.DMS:
+                return new i.DX(t.type, t.type, n, _);
             default:
                 throw Error(`[SearchFetchManager] Unsupported search context type: ${t.type}`);
         }
@@ -45,19 +47,19 @@ class o extends i.c {
         let {
             id: t,
             searchContext: n,
-            searchQuery: r,
-            searchTabs: i,
-            getLimit: a,
-            pagination: s,
+            searchQuery: i,
+            searchTabs: r,
+            getLimit: s,
+            pagination: a,
             trackExactTotalHits: o,
         } = e;
         this.cancel(t);
         let l = this.createWithPayload({
             searchContext: n,
-            searchQuery: r,
-            searchTabs: i,
-            getLimit: a,
-            pagination: s,
+            searchQuery: i,
+            searchTabs: r,
+            getLimit: s,
+            pagination: a,
             trackExactTotalHits: o,
         });
         return this.set(t, l), l;
