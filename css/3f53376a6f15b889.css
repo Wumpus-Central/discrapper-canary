@@ -7,7 +7,7 @@
 }
 
 .container_b558e5 {
-    background-color: var(--bg-overlay-2, rgba(0, 0, 0, .6));
+    background-color: var(--background-base-low);
     border-radius: var(--radius-lg);
     container-type: inline-size;
     display: flex;
