@@ -1,5 +1,6 @@
 e.exports = {
     kL: "container__32139",
+    oE: "compact__32139",
     qG: "fadeIn__32139",
     VH: "preview__32139",
     LL: "editable__32139",

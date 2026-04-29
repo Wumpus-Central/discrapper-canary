@@ -1179,8 +1179,9 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .dotSpacer__26b1f {
     background-color: var(--text-default);
-    border-radius: 50%;
+    border-radius: var(--radius-round);
     height: 4px;
+    margin-inline: 1px;
     width: 4px
 }
 

@@ -6,8 +6,8 @@ var i = n(17928),
     a = n(919395),
     o = n(486020),
     l = n(927578),
-    d = n(289173),
-    _ = n(788868);
+    _ = n(289173),
+    d = n(788868);
 function u(e, t) {
     return null == t || "" === t ? e : t;
 }
@@ -58,13 +58,13 @@ class c {
         return this._userProfile.widgets;
     }
     get gameWidgets() {
-        return this._userProfile.widgets?.filter(d.fu);
+        return this._userProfile.widgets?.filter(_.fu);
     }
     get primaryColor() {
         return this.themeColors?.[0] ?? this.accentColor;
     }
     get canUsePremiumProfileCustomization() {
-        return l.Ay.isPremiumAtLeast(this.premiumType, _.PremiumTypes.TIER_2);
+        return l.Ay.isPremiumAtLeast(this.premiumType, d.PremiumTypes.TIER_2);
     }
     get canEditThemes() {
         return this.canUsePremiumProfileCustomization;
@@ -117,6 +117,14 @@ class c {
             pendingValue: e,
             userValue: this._userProfile.bio,
             guildValue: this._guildMemberProfile?.bio,
+            guildId: this.guildId,
+        });
+    }
+    getPreviewPronouns(e) {
+        return (0, a.lw)({
+            pendingValue: e,
+            userValue: this._userProfile.pronouns,
+            guildValue: this._guildMemberProfile?.pronouns,
             guildId: this.guildId,
         });
     }
