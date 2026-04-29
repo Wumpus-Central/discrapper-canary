@@ -29,10 +29,11 @@ let a = "collectibles shop product details modal",
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("13709"),
-                    n.e("57948"),
+                    n.e("15758"),
                     n.e("22810"),
                     n.e("63133"),
                     n.e("66883"),
+                    n.e("56685"),
                     n.e("55658"),
                     n.e("76032"),
                     n.e("78220"),

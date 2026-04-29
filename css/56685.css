@@ -1013,6 +1013,46 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     outline: 1px solid ButtonText
 }
 
+.backButtonInner__84419 {
+    display: flex;
+    gap: 8px;
+    padding: 2px 0
+}
+
+.backButton__84419:hover {
+    background-color: var(--brand-530)
+}
+
+.backNotice__84419 {
+    background-color: var(--brand-600);
+    border-radius: 0;
+    padding: 8px
+}
+
+.closeButton__84419 {
+    height: 100%
+}
+
+.left_caab99 {
+    transform: rotate(270deg)
+}
+
+.right_caab99 {
+    transform: rotate(90deg)
+}
+
+.down_caab99 {
+    transform: rotate(180deg)
+}
+
+.downRight_caab99 {
+    transform: rotate(135deg)
+}
+
+.upLeft_caab99 {
+    transform: rotate(315deg)
+}
+
 .audioButtonParent__5e764 {
     display: flex;
     margin-inline-end: 0
@@ -1596,26 +1636,6 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 .content__58471 {
     position: relative;
     z-index: 1
-}
-
-.backButtonInner__84419 {
-    display: flex;
-    gap: 8px;
-    padding: 2px 0
-}
-
-.backButton__84419:hover {
-    background-color: var(--brand-530)
-}
-
-.backNotice__84419 {
-    background-color: var(--brand-600);
-    border-radius: 0;
-    padding: 8px
-}
-
-.closeButton__84419 {
-    height: 100%
 }
 
 .container__09ccc {
@@ -4325,31 +4345,6 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     gap: 8px
 }
 
-.paymentElementStoryContainer__1f918 {
-    display: flex;
-    flex-direction: row;
-    gap: 12px
-}
-
-.paymentElementStepModalBody__1f918 {
-    max-width: 456px;
-    width: 456px
-}
-
-.fullLengthPaymentElementStepModalBody__1f918 {
-    max-width: 456px;
-    min-height: 900px;
-    width: 456px
-}
-
-.paymentElementContainer__1f918 {
-    margin: 8px
-}
-
-.fullLengthPaymentElementContainer__1f918 {
-    min-height: 900px
-}
-
 .container_e42096 {
     overflow: hidden;
     position: relative;
@@ -4901,7 +4896,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     margin-inline-start: 3px
 }
 
-.popover_f84418 {
+.popover_f84418.popover_f84418 {
     background: var(--background-surface-high);
     border: 1px solid var(--border-muted);
     border-radius: 8px;
@@ -4911,31 +4906,31 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     padding: 2px
 }
 
-.popover_f84418:hover {
+.popover_f84418.popover_f84418:hover {
     border: 1px solid var(--border-subtle);
     box-shadow: var(--shadow-medium) !important
 }
 
-.hoverBarButton_f84418 {
+.hoverBarButton_f84418.hoverBarButton_f84418 {
     border-radius: 6px;
     padding: 2px
 }
 
-.hoverBarButton_f84418:hover {
+.hoverBarButton_f84418.hoverBarButton_f84418:hover {
     background: var(--interactive-background-hover);
     cursor: pointer
 }
 
-.hoverBarButton_f84418:hover .icon_f84418 {
+.hoverBarButton_f84418.hoverBarButton_f84418:hover .icon_f84418 {
     transform: scale(1.1)
 }
 
-.hoverBarButton_f84418:active {
+.hoverBarButton_f84418.hoverBarButton_f84418:active {
     background: var(--interactive-background-active);
     padding: 2px
 }
 
-.hoverBarButton_f84418:active .icon_f84418 {
+.hoverBarButton_f84418.hoverBarButton_f84418:active .icon_f84418 {
     transform: scale(1)
 }
 
