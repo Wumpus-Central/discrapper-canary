@@ -83,36 +83,38 @@
 
 .featureCardGroup_d06335 {
     color: var(--text-strong);
-    -moz-column-gap: 8px;
-    column-gap: 8px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     position: relative;
     width: 100%
 }
 
+.featureCardGroup_d06335,
 .featureCardGroup_d06335.wideStyle_d06335 {
-    -moz-column-gap: var(--space-8);
-    column-gap: var(--space-8);
+    -moz-column-gap: var(--space-12);
+    column-gap: var(--space-12)
+}
+
+.featureCardGroup_d06335.wideStyle_d06335 {
     row-gap: var(--space-8)
 }
 
 .featureCard_d06335 {
     align-items: center;
     background: var(--background-mod-muted);
-    border-radius: var(--radius-sm);
+    border-radius: 16px;
     box-sizing: border-box;
     display: flex;
+    flex: 1 1 0;
     flex-direction: column;
     padding: var(--space-20);
-    position: relative;
-    width: 200px
+    position: relative
 }
 
 .featureCard_d06335.wideStyle_d06335 {
     align-items: center;
-    flex: 1 1 calc(50% - 8px);
     flex-direction: row;
     min-height: -moz-fit-content;
     min-height: fit-content;
@@ -170,7 +172,7 @@
 }
 
 .disclaimer_d06335 {
-    margin-top: calc(var(--space-8)*-1);
+    margin-top: calc(var(--space-16)*-1);
     max-width: 480px;
     text-align: center
 }
