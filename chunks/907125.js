@@ -12,7 +12,7 @@ var i = n(132500),
     d = n(912630),
     c = n(965162),
     I = n(734057),
-    T = n(969341),
+    T = n(51760),
     N = n(763827),
     S = n(309010),
     O = n(287809),
@@ -36,7 +36,7 @@ let m = function (e, t) {
             if (e && f.isGuildStageVoice() && (0, _.xn)(f.id))
                 return void (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("72900"),
+                        n.e("81349"),
                         n.e("24199"),
                         n.e("43039"),
                         n.e("88077"),

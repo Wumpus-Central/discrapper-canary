@@ -1,60 +1,60 @@
 "use strict";
-n.r(t), n.d(t, { WebAudioSound: () => p, playGiftSound: () => E, voiceSinkId: () => f });
-var r = n(735438),
-    i = n.n(r),
+n.r(t), n.d(t, { WebAudioSound: () => f, playGiftSound: () => h, voiceSinkId: () => E });
+var i = n(735438),
+    r = n.n(i),
     s = n(72978),
     a = n(102597),
     o = n(904054),
-    l = n(430452),
-    u = n(723702),
+    l = n(51760),
+    _ = n(723702),
     d = n(257645);
-let c = "default",
-    _ = /^( Device)?( \([^()]+\))+$/,
-    f = c;
-function E(e, t) {
+let u = "default",
+    c = /^( Device)?( \([^()]+\))+$/,
+    E = u;
+function h(e, t) {
     let n = new Audio((0, a.A)(e));
     (n.volume = (0, o.A)(t)), n.play();
 }
-async function h() {
+async function m() {
     if (null != window.navigator.mediaDevices)
         try {
             var e, t;
             let n = await window.navigator.mediaDevices.enumerateDevices(),
-                r = l.Ay.getOutputDevices(),
-                a = i()(r)
+                i = l.Ay.getOutputDevices(),
+                a = r()(i)
                     .sortBy((e) => e.index)
                     .findIndex((e) => e.id === l.Ay.getOutputDeviceId()),
-                o = r[l.Ay.getOutputDeviceId()];
+                o = i[l.Ay.getOutputDeviceId()];
             if (null == o) {
-                f = c;
+                E = u;
                 return;
             }
-            let u = n.filter((e) => "audiooutput" === e.kind && "communications" !== e.deviceId),
-                d = u[a];
-            if (((e = o.name), (t = d?.label ?? "").startsWith(e) && null != t.substring(e.length).match(_))) {
-                f = d.deviceId;
+            let _ = n.filter((e) => "audiooutput" === e.kind && "communications" !== e.deviceId),
+                d = _[a];
+            if (((e = o.name), (t = d?.label ?? "").startsWith(e) && null != t.substring(e.length).match(c))) {
+                E = d.deviceId;
                 return;
             }
             if (
-                ((d = i()(u).maxBy((e) => (0, s.stringSimilarity)(e.label, o.name))),
+                ((d = r()(_).maxBy((e) => (0, s.stringSimilarity)(e.label, o.name))),
                 null == d || 0.6 > (0, s.stringSimilarity)(d.label, o.name))
             ) {
-                f = c;
+                E = u;
                 return;
             }
-            f = d.deviceId;
+            E = d.deviceId;
         } catch {
-            f = c;
+            E = u;
         }
 }
-u.isPlatformEmbedded && (l.Ay.addChangeListener(h), h());
-let p = class {
+_.isPlatformEmbedded && (l.Ay.addChangeListener(m), m());
+let f = class {
     name;
     _volume;
     _audio;
     outputChannel;
-    constructor(e, t, n, r) {
-        (this.name = e), (this._volume = n), (this.outputChannel = r);
+    constructor(e, t, n, i) {
+        (this.name = e), (this._volume = n), (this.outputChannel = i);
     }
     get volume() {
         return this._volume;
@@ -101,16 +101,16 @@ let p = class {
             (this._audio =
                 this._audio ??
                 new Promise((e, t) => {
-                    let r = new Audio();
-                    (r.src = n(696354)(`./${this.name}.mp3`)),
-                        (r.onloadeddata = () => {
-                            (r.volume = Math.min((l.Ay.getOutputVolume() / 100) * this._volume, 1)),
-                                u.isPlatformEmbedded && r.setSinkId(this.outputChannel === d.a.DEFAULT ? c : f),
-                                e(r);
+                    let i = new Audio();
+                    (i.src = n(696354)(`./${this.name}.mp3`)),
+                        (i.onloadeddata = () => {
+                            (i.volume = Math.min((l.Ay.getOutputVolume() / 100) * this._volume, 1)),
+                                _.isPlatformEmbedded && i.setSinkId(this.outputChannel === d.a.DEFAULT ? u : E),
+                                e(i);
                         }),
-                        (r.onerror = () => t(Error("could not play audio"))),
-                        (r.onended = () => this.destroyAudio()),
-                        r.load();
+                        (i.onerror = () => t(Error("could not play audio"))),
+                        (i.onended = () => this.destroyAudio()),
+                        i.load();
                 })),
             this._audio
         );

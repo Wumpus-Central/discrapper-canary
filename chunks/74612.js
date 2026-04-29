@@ -3347,7 +3347,7 @@ var sE = i(410767),
     sC = i(880144),
     sI = i(680243),
     sv = i(695366),
-    sj = i(969341),
+    sj = i(51760),
     sy = i(364094);
 function sO(e) {
     let { game: t, application: i } = e;
@@ -8401,7 +8401,7 @@ let cX = function (e) {
 var cY = i(338548),
     cH = i(776096),
     cK = i(178368),
-    cW = i(519244),
+    cW = i(925747),
     cZ = i(866323),
     cQ = i(530005),
     cq = i(443865),

@@ -54,7 +54,7 @@ let D = l.memo(function (e) {
         [_, D] = l.useState(null),
         [O, L] = l.useState(null),
         [M, V] = l.useState(0),
-        [F, P] = l.useState(null),
+        [P, F] = l.useState(null),
         [G, H] = l.useState(null),
         [U, z] = l.useState(!1),
         W = l.useRef(new S.Ep()),
@@ -80,24 +80,24 @@ let D = l.memo(function (e) {
                 if (!Y || !T(e)) return;
                 e.preventDefault(), e.stopPropagation();
                 let t = Q(e);
-                m(!0), L(t), D(t), V(Date.now()), H(t), P(p);
+                m(!0), L(t), D(t), V(Date.now()), H(t), F(p);
             },
             [Q, Y, p, m],
         ),
         X = l.useCallback(
             (e) => {
-                if (((u || Y) && o(), !d || !Y || null == G || null == F)) return;
+                if (((u || Y) && o(), !d || !Y || null == G || null == P)) return;
                 e.preventDefault(), e.stopPropagation();
                 let t = Q(e),
                     n = t.x - G.x,
                     i = t.y - G.y;
-                f(j({ x: F.x + n, y: F.y + i })), D(t);
+                f(j({ x: P.x + n, y: P.y + i })), D(t);
             },
-            [j, G, F, u, Q, d, Y, o, f],
+            [j, G, P, u, Q, d, Y, o, f],
         ),
         q = l.useCallback(
             (e) => {
-                !d || T(e) || (e.preventDefault(), e.stopPropagation(), m(!1), H(null), P(null));
+                !d || T(e) || (e.preventDefault(), e.stopPropagation(), m(!1), H(null), F(null));
             },
             [d, m],
         ),
@@ -113,7 +113,7 @@ let D = l.memo(function (e) {
             [Y, O, M, _],
         ),
         ee = l.useCallback(() => {
-            m(!1), H(null), P(null);
+            m(!1), H(null), F(null);
         }, [m]),
         et = l.useCallback(
             (e) => {
@@ -198,10 +198,10 @@ var O = n(919706),
     L = n(616356),
     M = n(495544),
     V = n(734057),
-    F = n(969341),
-    P = n(531685),
+    P = n(51760),
+    F = n(531685),
     G = n(200749),
-    H = n(123924),
+    H = n(925747),
     U = n(844222),
     z = n(866323),
     W = n(274372),
@@ -376,14 +376,14 @@ function eh(e) {
             wrapperClassName: S,
             paused: N = !1,
         } = e,
-        b = F.Ay.getVideoComponent(),
+        b = P.Ay.getVideoComponent(),
         y = (0, r.bG)([M.default], () => M.default.getId()),
         w = (0, E.A)(),
         { stream: R, user: k, streamId: T } = t,
         H = (0, r.bG)([V.A], () => V.A.getChannel(R.channelId)),
         U = (0, r.bG)([L.A], () => L.A.getActiveStreamForUser(k.id, R.guildId), [k.id, R.guildId]),
         z = (0, r.bG)([L.A], () => L.A.getAllActiveStreams().length > 0),
-        W = (0, r.bG)([P.A], () => P.A.isFocused()),
+        W = (0, r.bG)([F.A], () => F.A.isFocused()),
         $ = (0, C.Qu)(),
         B = U?.ownerId === y,
         Y = B && !(W || $) && A === h.N.NO_POPOUT,
@@ -396,7 +396,7 @@ function eh(e) {
     if (
         (l.useEffect(() => {
             eg.info(
-                `Stream Tile State - activeStream: ${null != U} | selected: ${n} | Video: ${null != b} | MediaEngine: ${F.Ay.supports(ep.O5.VIDEO)}`,
+                `Stream Tile State - activeStream: ${null != U} | selected: ${n} | Video: ${null != b} | MediaEngine: ${P.Ay.supports(ep.O5.VIDEO)}`,
             );
         }, [b, U, n]),
         w)
@@ -406,7 +406,7 @@ function eh(e) {
     if (null != K || U?.state === ed.XYD.FAILED)
         return (0, i.jsx)(en.A, { avError: K?.type, avErrorContext: K, selected: n, stream: t.stream, width: _ });
     if (t.type === em.lp.HIDDEN_STREAM) return (0, i.jsx)(ei.A, { selected: n, participant: t, width: _ });
-    if (null != U && !n && null != b && F.Ay.supports(ep.O5.VIDEO))
+    if (null != U && !n && null != b && P.Ay.supports(ep.O5.VIDEO))
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(

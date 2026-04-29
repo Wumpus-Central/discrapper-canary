@@ -15,8 +15,8 @@ var i = n(627968),
     m = n(373495),
     f = n(988393),
     g = n(707233),
-    A = n(318009),
-    I = n(638421),
+    I = n(318009),
+    A = n(638421),
     p = n(464792),
     T = n(775602),
     S = n(697138),
@@ -1318,8 +1318,8 @@ function em(e) {
 }
 var ef = n(670735),
     eg = n(981133),
-    eA = n(183636),
-    eI = n(469177),
+    eI = n(183636),
+    eA = n(469177),
     ep = n(361158),
     eT = n(80556),
     eS = n(267102);
@@ -1382,7 +1382,7 @@ function eD() {
 var eL = n(164942),
     ev = n(189213),
     ew = n(827343),
-    eP = n(969341),
+    eP = n(51760),
     eb = n(985018);
 let ek = () => {
     let e = (0, d.bG)([eP.Ay], () => eP.Ay.isInteractionRequired(), []),
@@ -1673,8 +1673,8 @@ var e5 = n(186111),
 function tg() {
     eM.h.dispatch({ type: "APP_ICON_EDITOR_RESET" });
 }
-var tA = n(526162),
-    tI = n(806932),
+var tI = n(526162),
+    tA = n(806932),
     tp = n(635917),
     tT = n(49999),
     tS = n(788868),
@@ -1720,7 +1720,7 @@ let tO = () => {
     },
     tC = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
-            r = (0, d.bG)([tA.A], () => tA.A.isUpsellPreview);
+            r = (0, d.bG)([tI.A], () => tI.A.isUpsellPreview);
         return (0, i.jsxs)("div", {
             className: tN.N3,
             children: [
@@ -1743,8 +1743,8 @@ function ty(e) {
     let { isCoachmark: t, markAsDismissed: n, iconSize: s = tp.N8.SIZE_60 } = e,
         { analyticsLocations: o } = (0, tl.Ay)(to.A.APP_ICON_EDITOR),
         l = (0, d.bG)([eR.default], () => eR.default.getCurrentUser()),
-        { isUpsellPreview: _, shouldEditorAnimate: u } = (0, d.cf)([tA.A, T.A], () => ({
-            isUpsellPreview: tA.A.isUpsellPreview,
+        { isUpsellPreview: _, shouldEditorAnimate: u } = (0, d.cf)([tI.A, T.A], () => ({
+            isUpsellPreview: tI.A.isUpsellPreview,
             shouldEditorAnimate: t && !T.A.useReducedMotion,
         })),
         c = t_.fy.getState().activePanel === t_.HP.APP_ICON;
@@ -1776,7 +1776,7 @@ function ty(e) {
                           (0, i.jsx)(tR, { markAsDismissed: n }),
                           (0, i.jsx)(ts.Ip, {
                               className: tN.sV,
-                              children: (0, i.jsx)(tI.A, { className: tN.Gg, isEditor: !0, iconSize: s }),
+                              children: (0, i.jsx)(tA.A, { className: tN.Gg, isEditor: !0, iconSize: s }),
                           }),
                           (0, i.jsx)(tC, { markAsDismissed: n, isCoachmark: t }),
                       ],
@@ -2031,9 +2031,9 @@ let t4 = (0, W.Fe)({
             m = a === t_.HP.CLIENT_THEMES || E,
             f = a === t_.HP.APP_ICON,
             g = a === t_.HP.CUSTOM_THEME || h,
-            A = a === t_.HP.APPLICATION_TEST_MODE_DEBUG,
-            I = a === t_.HP.CLIPS_REMINDER;
-        if (!(m || f || g || A || I)) return null;
+            I = a === t_.HP.APPLICATION_TEST_MODE_DEBUG,
+            A = a === t_.HP.CLIPS_REMINDER;
+        if (!(m || f || g || I || A)) return null;
         let p = () =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -2051,8 +2051,8 @@ let t4 = (0, W.Fe)({
                         }),
                     f && (0, i.jsx)(ty, { isCoachmark: !1, markAsDismissed: c }),
                     g && (0, i.jsx)(t7, { metadata: o ?? {}, markAsDismissed: c, isCoachmark: h, isMobile: t }),
-                    A && (0, i.jsx)(t5, {}),
-                    I && (0, i.jsx)(tJ, {}),
+                    I && (0, i.jsx)(t5, {}),
+                    A && (0, i.jsx)(tJ, {}),
                 ],
             });
         return t ? (0, i.jsx)("div", { className: t2.A, children: p() }) : p();
@@ -2102,13 +2102,13 @@ let ni = (0, W.Fe)({
             C = r.useRef(document.body),
             y = `${R}`;
         (t = "AppSkeleton"),
-            (n = eA.A.useCanUIRequestGatewaySocket()),
+            (n = eI.A.useCanUIRequestGatewaySocket()),
             r.useEffect(() => {
                 if (n)
                     return (
-                        eI.uG(t),
+                        eA.uG(t),
                         () => {
-                            eI.qr(t);
+                            eA.qr(t);
                         }
                     );
             }, [t, n]);
@@ -2123,7 +2123,7 @@ let ni = (0, W.Fe)({
                     children: (0, i.jsxs)(S.A, {
                         children: [
                             (0, i.jsx)(e8.A, { skipsSettingDefaultPageTitle: c }),
-                            (0, i.jsx)(I.N, {
+                            (0, i.jsx)(A.N, {
                                 children: (0, i.jsx)(ef.A, {
                                     children: (0, i.jsxs)(h.xp, {
                                         containerRef: C,
@@ -2158,7 +2158,7 @@ let ni = (0, W.Fe)({
                                                                                         }),
                                                                                         (0, i.jsx)(g.A, {}),
                                                                                         (0, i.jsx)(x.A, {}),
-                                                                                        (0, i.jsx)(A.A, {}),
+                                                                                        (0, i.jsx)(I.A, {}),
                                                                                         (0, i.jsx)(m.b, {}),
                                                                                         (0, i.jsx)(e7, {}),
                                                                                         (0, i.jsx)(ep.up, {}),

@@ -6,8 +6,8 @@ var i = n(627968),
     a = n(554146),
     o = n(192308),
     l = n(773952),
-    d = n(826673),
-    _ = n(969341),
+    _ = n(826673),
+    d = n(51760),
     u = n(954571),
     c = n(17928),
     E = n(643501),
@@ -24,40 +24,40 @@ function m(e) {
 }
 var f = n(544105),
     g = n(652215),
-    p = n(985018);
+    I = n(985018);
 let A = "game_console_alert_modal",
-    I = "game_console_ptt_alert_modal",
+    p = "game_console_ptt_alert_modal",
     T = {
         maybeShowPTTAlert(e) {
-            if (_.Ay.getMode() !== g.TBI.PUSH_TO_TALK || (0, d.k8)(a.M.CONSOLE_PTT_DISABLE_ALERT))
+            if (d.Ay.getMode() !== g.TBI.PUSH_TO_TALK || (0, _.k8)(a.M.CONSOLE_PTT_DISABLE_ALERT))
                 return Promise.resolve();
             let t = {
-                [g.fg2.XBOX]: p.intl.string(p.t.bVZ7vy),
-                [g.fg2.PLAYSTATION]: p.intl.string(p.t["6iqUsf"]),
-                [g.fg2.PLAYSTATION_STAGING]: p.intl.string(p.t["6iqUsf"]),
+                [g.fg2.XBOX]: I.intl.string(I.t.bVZ7vy),
+                [g.fg2.PLAYSTATION]: I.intl.string(I.t["6iqUsf"]),
+                [g.fg2.PLAYSTATION_STAGING]: I.intl.string(I.t["6iqUsf"]),
             }[e];
             return null == t
                 ? Promise.resolve()
                 : new Promise((e) => {
                       let n = () => {
-                              (0, d.Dr)(a.M.CONSOLE_PTT_DISABLE_ALERT), e();
+                              (0, _.Dr)(a.M.CONSOLE_PTT_DISABLE_ALERT), e();
                           },
                           r = (e) =>
                               (0, i.jsx)(s.Modal, {
                                   ...e,
                                   title: t,
-                                  subtitle: p.intl.string(p.t.bL21zs),
-                                  actions: [{ text: p.intl.string(p.t.BddRzS), onClick: n }],
+                                  subtitle: I.intl.string(I.t.bL21zs),
+                                  actions: [{ text: I.intl.string(I.t.BddRzS), onClick: n }],
                               });
-                      (0, o.hasModalOpen)(I)
-                          ? (0, o.updateModal)(I, (e) => r(e))
-                          : (0, o.openModalLazy)(async () => (e) => r(e), { modalKey: I });
+                      (0, o.hasModalOpen)(p)
+                          ? (0, o.updateModal)(p, (e) => r(e))
+                          : (0, o.openModalLazy)(async () => (e) => r(e), { modalKey: p });
                   });
         },
         showSelfDismissableAlert(e) {
             let { title: t, body: n, errorCodeMessage: r, reconnectPlatformType: a } = e,
-                d = (0, i.jsx)(m, { body: n, errorCodeMessage: r, dismissCallback: () => (0, o.closeModal)(A) });
-            function _() {
+                _ = (0, i.jsx)(m, { body: n, errorCodeMessage: r, dismissCallback: () => (0, o.closeModal)(A) });
+            function d() {
                 null != a &&
                     ((0, l.A)({ platformType: a }),
                     u.default.track(g.HAw.ACCOUNT_LINK_STEP, {
@@ -70,8 +70,8 @@ let A = "game_console_alert_modal",
                 (0, i.jsx)(s.Modal, {
                     ...e,
                     title: t,
-                    actions: [{ text: p.intl.string(p.t.BddRzS), onClick: _ }],
-                    children: d,
+                    actions: [{ text: I.intl.string(I.t.BddRzS), onClick: d }],
+                    children: _,
                 });
             (0, o.hasModalOpen)(A)
                 ? (0, o.updateModal)(A, (e) => c(e))

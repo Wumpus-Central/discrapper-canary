@@ -73,15 +73,15 @@ class f {
     }
 }
 var g = n(274372),
-    A = n(572164),
-    I = n(680725),
+    I = n(572164),
+    A = n(680725),
     p = n(973522),
     T = n(967347),
     S = n(929921),
     N = n(495544),
     O = n(734057),
     R = n(877717),
-    C = n(969341),
+    C = n(51760),
     y = n(544180),
     D = n(763827),
     L = n(873985),
@@ -343,7 +343,7 @@ class H extends h.A {
                 e === b.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
                         _.yq.ScreenshareFinish,
-                        (e, t, n, i, r, s, a, o, l, _, d, u, c, E, h, m, f, g, A, I, S, N, O, R, C) => {
+                        (e, t, n, i, r, s, a, o, l, _, d, u, c, E, h, m, f, g, I, A, S, N, O, R, C) => {
                             let y = this.analyticsContext.getStreamApplicationFromHistory(
                                 this.screenshareFinishedCount,
                             );
@@ -370,8 +370,8 @@ class H extends h.A {
                                         (r ?? 0) +
                                         (s ?? 0) +
                                         (m ?? 0) +
-                                        (I ?? 0) +
                                         (A ?? 0) +
+                                        (I ?? 0) +
                                         (C ?? 0) +
                                         (R ?? 0),
                                     G = (_ ?? 0) + (d ?? 0) + (u ?? 0) + (c ?? 0) + (E ?? 0);
@@ -392,8 +392,8 @@ class H extends h.A {
                                     hybrid_gdi_printwindow_frames_unique: E,
                                     skip_history_json: h,
                                     quartz_frames: m,
-                                    screencapturekit_frames: I,
-                                    go_live_camera_frames: A,
+                                    screencapturekit_frames: A,
+                                    go_live_camera_frames: I,
                                     total_frames: y,
                                     total_frames_unique: G,
                                     desktop_capturer_type: f,
@@ -656,7 +656,7 @@ class H extends h.A {
         (r = a.getNetworkStats()),
             (s = this.isOwner ? a.getCodecUsageStats("streamer", this.userId) : a.getCodecUsageStats("receiver", i));
         let o = g.A.getSettings(),
-            l = this.isOwner ? { clips_enabled: (0, A.TD)(), clips_buffer_length: o.clipsLength } : {},
+            l = this.isOwner ? { clips_enabled: (0, I.TD)(), clips_buffer_length: o.clipsLength } : {},
             _ = this.isOwner ? { bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment() } : {};
         a.getOutboundStats().forEach((t) => {
             (t.num_frames ?? 0) > 0 &&
@@ -676,7 +676,7 @@ class H extends h.A {
                     max_viewers: this.analyticsContext.maxViewers,
                     hostname: this.hostname,
                     hardware_enabled: C.Ay.getHardwareEncoding(),
-                    device_performance_class: this.isOwner ? (0, I.A)() : null,
+                    device_performance_class: this.isOwner ? (0, A.A)() : null,
                     soundshare_experimental: C.Ay.getExperimentalSoundshare(),
                     quality_preset: S.A.getState().preset,
                     discord_is_elevated: w.A.getDiscordIsElevated(),
@@ -701,7 +701,7 @@ class H extends h.A {
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
                         hardware_enabled: C.Ay.getHardwareEncoding(),
-                        device_performance_class: this.isOwner ? (0, I.A)() : null,
+                        device_performance_class: this.isOwner ? (0, A.A)() : null,
                     });
             });
     }

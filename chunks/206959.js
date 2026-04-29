@@ -16,8 +16,8 @@ var c = n(119479),
     m = n.n(h),
     f = n(128080),
     g = n.n(f),
-    A = n(264968),
-    I = n.n(A),
+    I = n(264968),
+    A = n.n(I),
     p = n(141697),
     T = n(904986);
 n(618792);
@@ -506,8 +506,6 @@ class H extends T.A {
     automaticGainControl = { enabled: !0 };
     noiseCancellation = !1;
     noiseCancellationDuringProcessing = !1;
-    noiseCancellationAfterProcessing = !1;
-    vadAfterWebrtc = !1;
     attenuationFactor = 0.5;
     attenuateWhileSpeakingSelf = !1;
     attenuateWhileSpeakingOthers = !0;
@@ -661,8 +659,6 @@ class H extends T.A {
                                         automaticGainControlConfig: this.automaticGainControl,
                                         noiseCancellation: this.noiseCancellation,
                                         noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing,
-                                        noiseCancellationAfterProcessing: this.noiseCancellationAfterProcessing,
-                                        vadAfterWebrtc: this.vadAfterWebrtc,
                                     }),
                                     n.setNoInputThreshold(-100),
                                     n.setNoInputCallback(this.handleNoInput),
@@ -991,15 +987,6 @@ class H extends T.A {
                 noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing,
             });
     }
-    setNoiseCancellationAfterProcessing(e) {
-        (this.noiseCancellationAfterProcessing = e),
-            (0, L.lE)().setTransportOptions({
-                noiseCancellationAfterProcessing: this.noiseCancellationAfterProcessing,
-            });
-    }
-    setVADAfterWebrtc(e) {
-        (this.vadAfterWebrtc = e), (0, L.lE)().setTransportOptions({ vadAfterWebrtc: this.vadAfterWebrtc });
-    }
     getNoiseCancellation() {
         return this.noiseCancellation;
     }
@@ -1142,8 +1129,8 @@ class H extends T.A {
                     graphicsCaptureStaleFrameTimeoutMs: m,
                     hdrCaptureMode: f,
                     enableGlobalFramePoolLock: g,
-                    useGraphicsCaptureDirtyRegions: A,
-                    videoHookAllowDx12: I,
+                    useGraphicsCaptureDirtyRegions: I,
+                    videoHookAllowDx12: A,
                 } = e.desktopDescription;
                 this.setSoundshareSource(s, a);
                 let [p, T] = null != r ? r.split(":") : ["", ""];
@@ -1169,8 +1156,8 @@ class H extends T.A {
                                   graphicsCaptureStaleFrameTimeoutMs: m,
                                   hdrCaptureMode: f,
                                   enableGlobalFramePoolLock: g,
-                                  useGraphicsCaptureDirtyRegions: A,
-                                  videoHookAllowDx12: I,
+                                  useGraphicsCaptureDirtyRegions: I,
+                                  videoHookAllowDx12: A,
                               }))
                             : this.conn.clearDesktopSource()
                         : this.conn.setDesktopSource(`wumpus-${T}`, o, p);
@@ -1540,12 +1527,12 @@ class H extends T.A {
         if (this.connectionState === N.$I.DISCONNECTED) return void this.off(d.yq.Stats, this.handleStats);
         if (null != e) {
             if (null != this.stats) {
-                let t = I()(
+                let t = A()(
                         e.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },
                     ),
-                    n = I()(
+                    n = A()(
                         this.stats.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },

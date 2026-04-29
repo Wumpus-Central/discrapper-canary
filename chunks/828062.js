@@ -2430,7 +2430,7 @@ class e3 extends eA.A {
     };
 }
 let e5 = new e3();
-function e6() {
+function e8() {
     return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -2443,18 +2443,18 @@ function e6() {
         background_install_ms_total: 0,
     };
 }
-function e8(e) {
+function e7(e) {
     return "host" === e;
 }
-class e7 {
+class e6 {
     _installingModules = {};
     _downloadingModules = {};
     _report;
     constructor() {
-        this._report = e6();
+        this._report = e8();
     }
     handleDownloadingModule(e) {
-        if (!e8(e.name)) {
+        if (!e7(e.name)) {
             if (null != this._downloadingModules[e.name])
                 return void console.warn("Duplicate downloading-module event for module ", e.name);
             this._downloadingModules[e.name] = { startTime: BigInt(e.now), foreground: e.foreground };
@@ -2474,7 +2474,7 @@ class e7 {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (e8(e.name)) return;
+        if (e7(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t)
             return void console.warn("Downloaded complete without corresponding downloading event for module ", e.name);
@@ -2491,7 +2491,7 @@ class e7 {
             delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
-        if (!e8(e.name)) {
+        if (!e7(e.name)) {
             if (null != this._installingModules[e.name])
                 return void console.warn("Duplicate installing-module event for module ", e.name);
             this._installingModules[e.name] = {
@@ -2503,7 +2503,7 @@ class e7 {
         }
     }
     handleInstalledModule(e) {
-        if (e8(e.name)) return;
+        if (e7(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? "foreground" : "background",
@@ -2541,7 +2541,7 @@ class e7 {
         return this._report;
     }
     reset() {
-        this._report = e6();
+        this._report = e8();
     }
     submissionReady() {
         return (
@@ -2557,7 +2557,7 @@ class e7 {
     }
 }
 class e4 extends eA.A {
-    _tracker = new e7();
+    _tracker = new e6();
     _initialize() {
         y.isPlatformEmbedded &&
             (v.Ay.on("UPDATE_DOWNLOADED", () => this.processModuleEvents()),
@@ -2595,7 +2595,7 @@ n(401843), n(652896);
 var tt = n(976860);
 n(616356);
 var tn = n(734057),
-    ti = n(969341),
+    ti = n(51760),
     ta = n(309010);
 n(977997), n(536194), n(321034), n(574172);
 var tr = n(8917),

@@ -1,43 +1,43 @@
-n.d(t, { A: () => f });
-var i = n(627968);
-n(64700);
-var l = n(17928),
-    a = n(192308),
-    r = n(477782),
-    o = n(964404),
-    d = n(827343),
-    u = n(495544),
-    s = n(969341),
-    c = n(652215),
-    _ = n(731854),
-    A = n(513963),
-    h = n(951829),
-    E = n(985018);
-function f(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.x.DEFAULT,
-        [n, f, g] = (function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.x.DEFAULT,
-                n = (0, l.bG)([u.default], () => u.default.getId()),
-                i = (0, l.bG)([s.Ay], () => s.Ay.supports(_.O5.DISABLE_VIDEO)),
-                a = (0, l.bG)([s.Ay], () => s.Ay.isLocalVideoDisabled(n, t), [n, t]);
+t.d(i, { A: () => D });
+var l = t(627968);
+t(64700);
+var d = t(17928),
+    n = t(192308),
+    o = t(477782),
+    s = t(964404),
+    a = t(827343),
+    A = t(495544),
+    r = t(51760),
+    b = t(652215),
+    u = t(731854),
+    c = t(513963),
+    p = t(951829),
+    f = t(985018);
+function D(e) {
+    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.x.DEFAULT,
+        [t, D, h] = (function (e) {
+            let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.x.DEFAULT,
+                t = (0, d.bG)([A.default], () => A.default.getId()),
+                l = (0, d.bG)([r.Ay], () => r.Ay.supports(u.O5.DISABLE_VIDEO)),
+                n = (0, d.bG)([r.Ay], () => r.Ay.isLocalVideoDisabled(t, i), [t, i]);
             return [
-                (null == e || e === n) && i,
-                a,
+                (null == e || e === t) && l,
+                n,
                 (e) => {
-                    let i = e ? c.bb8.DISABLED : c.bb8.MANUAL_ENABLED;
-                    d.A.setDisableLocalVideo(n, i, t);
+                    let l = e ? b.bb8.DISABLED : b.bb8.MANUAL_ENABLED;
+                    a.A.setDisableLocalVideo(t, l, i);
                 },
             ];
-        })(e, t),
-        p = (0, l.bG)([o.Ay], () => o.Ay.disableHideSelfStreamAndVideoConfirmationAlert);
-    return n
-        ? (0, i.jsx)(r.sL, {
+        })(e, i),
+        E = (0, d.bG)([s.Ay], () => s.Ay.disableHideSelfStreamAndVideoConfirmationAlert);
+    return t
+        ? (0, l.jsx)(o.sL, {
               id: "self-video-hide",
-              label: E.intl.string(E.t.MH8ESU),
-              checked: !f,
+              label: f.intl.string(f.t.MH8ESU),
+              checked: !D,
               action: () => {
-                  if (p || f) return g(!f);
-                  (0, a.openModal)((e) => (0, i.jsx)(A.A, { ...e, type: h.f.VIDEO, onConfirm: () => g(!f) }));
+                  if (E || D) return h(!D);
+                  (0, n.openModal)((e) => (0, l.jsx)(c.A, { ...e, type: p.f.VIDEO, onConfirm: () => h(!D) }));
               },
           })
         : null;

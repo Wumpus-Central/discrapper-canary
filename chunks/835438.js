@@ -4,15 +4,15 @@ var i = n(205693),
     r = n(827343),
     s = n(439372),
     a = n(710195),
-    o = n(969341),
+    o = n(51760),
     l = n(723702),
-    d = n(250105);
-let _ = { enableStats: !1 },
-    u = (0, d.Ay)({
+    _ = n(250105);
+let d = { enableStats: !1 },
+    u = (0, _.Ay)({
         kind: "user",
         name: "2026-03-krisp-stats-collection",
-        defaultConfig: _,
-        variations: { 1: { ..._, enableStats: !0 } },
+        defaultConfig: d,
+        variations: { 1: { ...d, enableStats: !0 } },
     });
 var c = n(652215);
 class E extends s.A {

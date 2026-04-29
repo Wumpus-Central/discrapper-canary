@@ -1,215 +1,215 @@
-t.d(n, { default: () => D });
+t.d(n, { default: () => y });
 var l = t(627968),
     i = t(64700),
-    r = t(735438),
-    a = t(17928),
-    s = t(477782),
+    s = t(735438),
+    r = t(17928),
+    a = t(477782),
     d = t(964355),
-    o = t(550079),
-    u = t(827343),
+    u = t(550079),
+    o = t(827343),
     c = t(442433),
     I = t(956793),
-    A = t(401843),
-    g = t(820284),
-    h = t(688810),
-    m = t(74329),
-    E = t(304006),
-    f = t(479335),
-    S = t(643501),
-    b = t(652896),
-    p = t(51092),
-    x = t(972432),
-    v = t(616356),
-    C = t(495544),
-    j = t(734057),
-    V = t(969341),
-    G = t(287809),
-    _ = t(810412),
-    w = t(761661),
+    h = t(401843),
+    A = t(820284),
+    E = t(688810),
+    g = t(74329),
+    S = t(304006),
+    p = t(479335),
+    m = t(643501),
+    x = t(652896),
+    C = t(51092),
+    f = t(972432),
+    b = t(616356),
+    G = t(495544),
+    _ = t(734057),
+    j = t(51760),
+    w = t(287809),
+    O = t(810412),
+    V = t(761661),
     T = t(652215),
     L = t(731854),
-    O = t(985018);
-function y(e) {
-    return (0, a.bG)([v.A], () => {
-        let n = v.A.getActiveStreamForApplicationStream(e);
-        return null != n && (0, b._z)(n) === (0, b._z)(e);
+    D = t(985018);
+function N(e) {
+    return (0, r.bG)([b.A], () => {
+        let n = b.A.getActiveStreamForApplicationStream(e);
+        return null != n && (0, x._z)(n) === (0, x._z)(e);
     });
 }
-function D(e) {
+function y(e) {
     let n,
         t,
-        v,
-        D,
-        N,
-        k,
-        M,
+        b,
+        y,
         X,
-        U,
+        v,
+        M,
+        k,
         R,
-        z,
+        U,
         Z,
-        F,
-        J,
+        z,
         P,
         Y,
         B,
-        { stream: $, analyticsContext: H, appContext: K, exitFullscreen: q, onSelect: Q } = e,
-        W = y($),
+        J,
+        $,
+        { stream: q, analyticsContext: H, appContext: K, exitFullscreen: Q, onSelect: W } = e,
+        F = N(q),
         ee =
-            ((n = y($)),
+            ((n = N(q)),
             (t = i.useMemo(
                 () =>
-                    (0, r.debounce)((e) => {
-                        (0, _.YX)(T.uss.GO_LIVE, { type: _.Z5.AUDIO, value: _.IP.SETTING_ADJUSTED, userId: $.ownerId });
+                    (0, s.debounce)((e) => {
+                        (0, O.YX)(T.uss.GO_LIVE, { type: O.Z5.AUDIO, value: O.IP.SETTING_ADJUSTED, userId: q.ownerId });
                     }, 1e3),
-                [$.ownerId],
+                [q.ownerId],
             )),
-            (v = (0, x.A)($.ownerId, L.x.STREAM, t)),
-            n ? v : null),
+            (b = (0, f.A)(q.ownerId, L.x.STREAM, t)),
+            n ? b : null),
         en =
-            ((N = (0, a.bG)([S.default], () => null != S.default.getRemoteSessionId())),
-            (k = (0, a.bG)([j.A], () => j.A.getChannel($.channelId), [$.channelId])),
-            (M = y($)),
-            ((D = (U = null != (X = G.default.getCurrentUser()) && $.ownerId === X.id)
-                ? O.intl.string(O.t.S5anIc)
+            ((X = (0, r.bG)([m.default], () => null != m.default.getRemoteSessionId())),
+            (v = (0, r.bG)([_.A], () => _.A.getChannel(q.channelId), [q.channelId])),
+            (M = N(q)),
+            ((y = (R = null != (k = w.default.getCurrentUser()) && q.ownerId === k.id)
+                ? D.intl.string(D.t.S5anIc)
                 : M
-                  ? O.intl.string(O.t.q3O3J8)
-                  : O.intl.string(O.t["7Xq/nV"])),
-            N || (!U && M && k?.isGuildStageVoice()))
+                  ? D.intl.string(D.t.q3O3J8)
+                  : D.intl.string(D.t["7Xq/nV"])),
+            X || (!R && M && v?.isGuildStageVoice()))
                 ? null
-                : (0, l.jsx)(s.Dr, {
+                : (0, l.jsx)(a.Dr, {
                       id: "watch",
-                      label: D,
+                      label: y,
                       action: M
                           ? function () {
-                                (0, A.vN)((0, b._z)($)),
-                                    (0, _.YX)(T.uss.GO_LIVE, {
-                                        type: _.Z5.GO_LIVE,
-                                        value: _.IP.DISABLED,
-                                        userId: $.ownerId,
+                                (0, h.vN)((0, x._z)(q)),
+                                    (0, O.YX)(T.uss.GO_LIVE, {
+                                        type: O.Z5.GO_LIVE,
+                                        value: O.IP.DISABLED,
+                                        userId: q.ownerId,
                                     });
                             }
                           : function () {
-                                I.default.selectVoiceChannel($.channelId),
-                                    (0, A.A9)($),
-                                    (0, _.YX)(T.uss.GO_LIVE, {
-                                        type: _.Z5.GO_LIVE,
-                                        value: _.IP.ENABLED,
-                                        userId: $.ownerId,
+                                I.default.selectVoiceChannel(q.channelId),
+                                    (0, h.A9)(q),
+                                    (0, O.YX)(T.uss.GO_LIVE, {
+                                        type: O.Z5.GO_LIVE,
+                                        value: O.IP.ENABLED,
+                                        userId: q.ownerId,
                                     });
                             },
                   })),
         et =
-            ((R = y($)),
-            (z = (0, a.bG)([V.Ay], () => V.Ay.isLocalMute($.ownerId, L.x.STREAM))),
-            (F = null != (Z = G.default.getCurrentUser()) && $.ownerId === Z.id),
-            !R || F
+            ((U = N(q)),
+            (Z = (0, r.bG)([j.Ay], () => j.Ay.isLocalMute(q.ownerId, L.x.STREAM))),
+            (P = null != (z = w.default.getCurrentUser()) && q.ownerId === z.id),
+            !U || P
                 ? null
-                : (0, l.jsx)(s.sL, {
+                : (0, l.jsx)(a.sL, {
                       id: "mute",
-                      label: O.intl.string(O.t.sWmtI6),
+                      label: D.intl.string(D.t.sWmtI6),
                       action: function () {
-                          u.A.toggleLocalMute($.ownerId, L.x.STREAM);
+                          o.A.toggleLocalMute(q.ownerId, L.x.STREAM);
                       },
-                      checked: z,
+                      checked: Z,
                   })),
         el = (function (e) {
-            let n = y(e),
-                t = e.ownerId === C.default.getId(),
-                i = V.Ay.supports(L.O5.SIDECHAIN_COMPRESSION),
-                r = (0, a.bG)([V.Ay], () => V.Ay.getSidechainCompression()),
-                o = (0, a.bG)([V.Ay], () => V.Ay.getSidechainCompressionStrength()),
-                { analyticsLocations: c } = (0, h.Ay)();
+            let n = N(e),
+                t = e.ownerId === G.default.getId(),
+                i = j.Ay.supports(L.O5.SIDECHAIN_COMPRESSION),
+                s = (0, r.bG)([j.Ay], () => j.Ay.getSidechainCompression()),
+                u = (0, r.bG)([j.Ay], () => j.Ay.getSidechainCompressionStrength()),
+                { analyticsLocations: c } = (0, E.Ay)();
             return !t && n && i
-                ? (0, l.jsxs)(s.rX, {
+                ? (0, l.jsxs)(a.rX, {
                       children: [
-                          (0, l.jsx)(s.sL, {
+                          (0, l.jsx)(a.sL, {
                               id: "sidechain-compression",
-                              label: O.intl.string(O.t["/jwMtn"]),
-                              action: () => u.A.setSidechainCompression(!r, { analyticsLocations: c }),
-                              checked: r,
+                              label: D.intl.string(D.t["/jwMtn"]),
+                              action: () => o.A.setSidechainCompression(!s, { analyticsLocations: c }),
+                              checked: s,
                           }),
-                          (0, l.jsx)(s.aK, {
+                          (0, l.jsx)(a.aK, {
                               id: "sidechain-parameters",
-                              label: O.intl.string(O.t.fhEzfj),
+                              label: D.intl.string(D.t.fhEzfj),
                               control: (e, n) =>
                                   (0, l.jsx)(d.i, {
                                       ...e,
                                       ref: n,
-                                      value: o,
+                                      value: u,
                                       maxValue: 100,
                                       onChange: (e) =>
-                                          u.A.setSidechainCompressionStrength(e, { analyticsLocations: c }),
-                                      "aria-label": O.intl.string(O.t.fhEzfj),
+                                          o.A.setSidechainCompressionStrength(e, { analyticsLocations: c }),
+                                      "aria-label": D.intl.string(D.t.fhEzfj),
                                   }),
                           }),
                       ],
                   })
                 : null;
-        })($),
-        ei = (0, m.A)($, K, q),
-        er = (0, E.h)({ stream: $, channelId: $.channelId }),
-        ea = (0, f.u)({ userId: $.ownerId, channelId: $.channelId, guildId: $.guildId }),
-        es =
-            ((J = i.useMemo(
+        })(q),
+        ei = (0, g.A)(q, K, Q),
+        es = (0, S.h)({ stream: q, channelId: q.channelId }),
+        er = (0, p.u)({ userId: q.ownerId, channelId: q.channelId, guildId: q.guildId }),
+        ea =
+            ((Y = i.useMemo(
                 () =>
-                    (0, r.debounce)(() => {
-                        (0, _.YX)(T.uss.GO_LIVE, {
-                            type: _.Z5.SCREEN_SHARE,
-                            value: _.IP.SETTING_ADJUSTED,
-                            userId: $.ownerId,
+                    (0, s.debounce)(() => {
+                        (0, O.YX)(T.uss.GO_LIVE, {
+                            type: O.Z5.SCREEN_SHARE,
+                            value: O.IP.SETTING_ADJUSTED,
+                            userId: q.ownerId,
                         });
                     }, 1e3),
-                [$.ownerId],
+                [q.ownerId],
             )),
-            (P = (e) => {
-                (0, w.Qp)($, e), J();
+            (B = (e) => {
+                (0, V.Qp)(q, e), Y();
             }),
-            (Y = (0, w.f4)($)),
-            (0, l.jsx)(s.aK, {
+            (J = (0, V.f4)(q)),
+            (0, l.jsx)(a.aK, {
                 id: "stream-zoom",
-                label: O.intl.string(O.t.B3kEDs),
+                label: D.intl.string(D.t.B3kEDs),
                 control: (e, n) =>
                     (0, l.jsx)(d.i, {
                         ...e,
                         ref: n,
-                        value: Y,
+                        value: J,
                         maxValue: 300,
-                        onChange: P,
+                        onChange: B,
                         minValue: 100,
-                        "aria-label": O.intl.string(O.t.B3kEDs),
+                        "aria-label": D.intl.string(D.t.B3kEDs),
                     }),
             })),
         ed =
-            ((B = (0, w.XG)($)),
-            (0, l.jsx)(s.sL, {
+            (($ = (0, V.XG)(q)),
+            (0, l.jsx)(a.sL, {
                 id: "fit",
-                label: O.intl.string(O.t.mpnvrV),
+                label: D.intl.string(D.t.mpnvrV),
                 action: () => {
-                    (0, w.CZ)($, B === p.$.CONTAIN ? p.$.COVER : p.$.CONTAIN),
-                        (0, _.YX)(T.uss.GO_LIVE, {
-                            type: _.Z5.GO_LIVE,
-                            value: _.IP.SETTING_ADJUSTED,
-                            userId: $.ownerId,
+                    (0, V.CZ)(q, $ === C.$.CONTAIN ? C.$.COVER : C.$.CONTAIN),
+                        (0, O.YX)(T.uss.GO_LIVE, {
+                            type: O.Z5.GO_LIVE,
+                            value: O.IP.SETTING_ADJUSTED,
+                            userId: q.ownerId,
                         });
                 },
-                checked: B === p.$.COVER,
+                checked: $ === C.$.COVER,
             }));
-    return (0, l.jsx)(g.A, {
+    return (0, l.jsx)(A.A, {
         context: H,
         object: T.ZSU.CONTEXT_MENU,
-        children: (0, l.jsxs)(o.W, {
+        children: (0, l.jsxs)(u.W, {
             "data-menu-migrated-auto": !0,
             navId: "stream-context",
             onClose: c.Z_,
-            "aria-label": O.intl.string(O.t.Gl3Q30),
-            onSelect: Q,
+            "aria-label": D.intl.string(D.t.Gl3Q30),
+            onSelect: W,
             children: [
-                (0, l.jsxs)(s.rX, { children: [en, et, er, ea] }),
-                (0, l.jsx)(s.rX, { children: ee }),
-                (0, l.jsxs)(s.rX, { children: [es, ed] }),
+                (0, l.jsxs)(a.rX, { children: [en, et, es, er] }),
+                (0, l.jsx)(a.rX, { children: ee }),
+                (0, l.jsxs)(a.rX, { children: [ea, ed] }),
                 el,
-                (0, l.jsx)(s.rX, { children: W && ei }),
+                (0, l.jsx)(a.rX, { children: F && ei }),
             ],
         }),
     });

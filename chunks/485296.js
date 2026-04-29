@@ -5,9 +5,9 @@ var i = n(17928),
     s = n(124838),
     a = n(488926),
     o = n(734057),
-    l = n(969341),
-    d = n(763827),
-    _ = n(309010),
+    l = n(51760),
+    _ = n(763827),
+    d = n(309010),
     u = n(652215),
     c = n(731854);
 let E = new Map(),
@@ -15,7 +15,7 @@ let E = new Map(),
     m = null,
     f = null,
     g = !1;
-function p(e, t) {
+function I(e, t) {
     let n = E.get(e);
     if (null == n) return !1;
     let i = n.delete(t);
@@ -24,7 +24,7 @@ function p(e, t) {
 function A(e, t, n) {
     return ((E.get(e)?.get(t)?.flags ?? c.ME.NONE) & n) === n;
 }
-function I(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = E.get(e);
     if (null == i) return !1;
@@ -39,7 +39,7 @@ class S extends i.Ay.Store {
     static displayName = "SpeakingStore";
     initialize() {
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
-            this.waitFor(o.A, l.Ay, d.A, _.A);
+            this.waitFor(o.A, l.Ay, _.A, d.A);
     }
     getSpeakingDuration(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.x.DEFAULT,
@@ -64,7 +64,7 @@ class S extends i.Ay.Store {
     }
     isAnyoneElseSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.x.DEFAULT;
-        return I(e, c.ME.VOICE, !0);
+        return p(e, c.ME.VOICE, !0);
     }
     isCurrentUserSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.x.DEFAULT;
@@ -75,7 +75,7 @@ class S extends i.Ay.Store {
     }
     isAnyonePrioritySpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.x.DEFAULT;
-        return I(e, c.ME.VOICE | c.ME.PRIORITY);
+        return p(e, c.ME.VOICE | c.ME.PRIORITY);
     }
     isCurrentUserPrioritySpeaker() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.x.DEFAULT;
@@ -97,7 +97,7 @@ let N = new S(r.h, {
     SPEAKING: function (e) {
         let { context: t, userId: n, speakingFlags: i, voiceDb: r } = e;
         if ((i & c.ME.PRIORITY) === c.ME.PRIORITY) {
-            let e = o.A.getChannel(_.A.getVoiceChannelId());
+            let e = o.A.getChannel(d.A.getVoiceChannelId());
             null != e && a.$3({ permission: u.xBc.PRIORITY_SPEAKER, user: n, context: e })
                 ? l.Ay.setCanHavePriority(n, !0)
                 : (l.Ay.setCanHavePriority(n, !1), (i &= ~c.ME.PRIORITY));
@@ -135,10 +135,10 @@ let N = new S(r.h, {
                 n === h && r === m && (f = i ?? null),
                 a !== f && (s = E.delete(c.x.DEFAULT) || s),
                 null == i
-                    ? (s = n === h && r === m ? E.delete(c.x.DEFAULT) || s : p(c.x.DEFAULT, n) || s)
+                    ? (s = n === h && r === m ? E.delete(c.x.DEFAULT) || s : I(c.x.DEFAULT, n) || s)
                     : n === h && r !== m
                       ? (s = E.delete(c.x.DEFAULT) || s)
-                      : n !== h && i !== d.A.getChannelId() && (s = p(c.x.DEFAULT, n) || s),
+                      : n !== h && i !== _.A.getChannelId() && (s = I(c.x.DEFAULT, n) || s),
                 s || e
             );
         }, !1);

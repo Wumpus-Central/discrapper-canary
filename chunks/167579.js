@@ -1,7 +1,7 @@
 n.d(t, { A: () => i });
 var r = n(17928),
     a = n(495544),
-    l = n(969341),
+    l = n(51760),
     u = n(977997);
 function i(e) {
     return (0, r.cf)(

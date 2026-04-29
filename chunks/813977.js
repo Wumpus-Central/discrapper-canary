@@ -1,30 +1,30 @@
-n.d(t, { A: () => c });
-var i = n(627968);
-n(64700);
-var l = n(17928),
-    s = n(477782),
-    a = n(827343),
-    r = n(969341),
-    o = n(723702),
-    d = n(652215),
-    u = n(985018);
-function c(e) {
-    let t = !o.isPlatformEmbedded,
-        n = (0, l.bG)([r.Ay], () => r.Ay.getMode()),
-        c = (t, l) =>
-            (0, i.jsx)(
-                s.iD,
+d.d(i, { A: () => u });
+var e = d(627968);
+d(64700);
+var s = d(17928),
+    n = d(477782),
+    r = d(827343),
+    o = d(51760),
+    c = d(723702),
+    a = d(652215),
+    p = d(985018);
+function u(t) {
+    let i = !c.isPlatformEmbedded,
+        d = (0, s.bG)([o.Ay], () => o.Ay.getMode()),
+        u = (i, s) =>
+            (0, e.jsx)(
+                n.iD,
                 {
-                    id: t,
+                    id: i,
                     group: "input-modes",
-                    label: l,
-                    checked: n === t,
-                    action: () => a.A.setMode(t, void 0, void 0, { analyticsLocations: e }),
+                    label: s,
+                    checked: d === i,
+                    action: () => r.A.setMode(i, void 0, void 0, { analyticsLocations: t }),
                 },
-                t,
+                i,
             );
     return [
-        c(d.TBI.VOICE_ACTIVITY, u.intl.string(u.t.cHCEOJ)),
-        c(d.TBI.PUSH_TO_TALK, t ? u.intl.string(u.t["1AINrB"]) : u.intl.string(u.t.Q8gkVL)),
+        u(a.TBI.VOICE_ACTIVITY, p.intl.string(p.t.cHCEOJ)),
+        u(a.TBI.PUSH_TO_TALK, i ? p.intl.string(p.t["1AINrB"]) : p.intl.string(p.t.Q8gkVL)),
     ];
 }

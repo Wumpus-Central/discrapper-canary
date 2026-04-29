@@ -29,7 +29,7 @@ n(321073);
 var h = n(136722),
     g = n(937724),
     A = n(626584),
-    C = n(454219),
+    C = n(446458),
     _ = n(95701),
     m = n(495544),
     f = n(734057),
@@ -1169,14 +1169,14 @@ let eJ = "ActivityTrackingStore",
     e1 = 5 * eV.A.Millis.MINUTE,
     e7 = o.w.get(eJ) ?? {},
     e5 = {},
-    e9 = !1;
-function e3(e) {
+    e6 = !1;
+function e9(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    t && e6(e, !0);
+    t && e3(e, !0);
     let n = e5[e.applicationId];
     null != n && (n.stop(), delete e5[e.applicationId]), delete e7[e.applicationId], o.w.set(eJ, e7);
 }
-function e6(e) {
+function e3(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         l = null != e.updatedAt ? n - e.updatedAt : 0;
@@ -1199,7 +1199,7 @@ function e6(e) {
     }),
         (e.updatedAt = n);
     let u = e5[e.applicationId];
-    null == u && (u = e5[e.applicationId] = new eY.IX()).start(e0, () => e6(e)),
+    null == u && (u = e5[e.applicationId] = new eY.IX()).start(e0, () => e3(e)),
         t || ((e7[e.applicationId] = e), o.w.set(eJ, e7));
 }
 function e8() {
@@ -1211,20 +1211,20 @@ function e8() {
         null != t &&
             (n.add(t.id),
             t.id in e7 ||
-                e6({
+                e3({
                     applicationId: t.id,
                     updatedAt: Date.now(),
                     distributor: e.distributor,
                     exePath: (0, eW.Ic)(e.exePath ?? ""),
                 }));
     }
-    for (let t of Object.keys(e7)) n.has(t) || e3(e7[t], e);
+    for (let t of Object.keys(e7)) n.has(t) || e9(e7[t], e);
 }
-function e2() {
-    for (let e of Object.keys(e7)) e3(e7[e]);
-    e9 = !1;
+function e4() {
+    for (let e of Object.keys(e7)) e9(e7[e]);
+    e6 = !1;
 }
-class e4 extends l.Ay.Store {
+class e2 extends l.Ay.Store {
     static displayName = "ActivityTrackingStore";
     initialize() {
         this.waitFor(m.default, eQ.A, eZ.A, eX.A, ev.Ay, en.A, K.A), this.syncWith([K.A], e8);
@@ -1233,18 +1233,18 @@ class e4 extends l.Ay.Store {
         return e7;
     }
 }
-new e4(i.h, {
+new e2(i.h, {
     RUNNING_GAMES_CHANGE: () => e8(),
     CONNECTION_OPEN: function () {
-        if (e9) return !1;
-        for (let e of Object.keys(e7)) e6(e7[e]);
-        e8(!1), (e9 = !0);
+        if (e6) return !1;
+        for (let e of Object.keys(e7)) e3(e7[e]);
+        e8(!1), (e6 = !0);
     },
     CONNECTION_CLOSED: function (e) {
         let { code: t } = e;
-        4004 === t && e2();
+        4004 === t && e4();
     },
-    LOGOUT: e2,
+    LOGOUT: e4,
     ACTIVITY_UPDATE_SUCCESS: function (e) {
         let { applicationId: t, token: n } = e,
             l = e7[t];
@@ -1303,7 +1303,7 @@ new tt(i.h, {
     n(834942),
     n(958590),
     n(670492),
-    n(969341),
+    n(51760),
     n(956703),
     n(232835),
     n(783592),

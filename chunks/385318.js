@@ -1,106 +1,106 @@
-n.d(t, { default: () => I });
-var i = n(627968);
-n(64700);
-var l = n(110259),
-    a = n(17928),
-    s = n(205693),
-    r = n(550079),
-    o = n(477782),
-    c = n(827343),
-    d = n(820284),
-    u = n(688810),
-    _ = n(139286),
-    p = n(270816),
-    h = n(813977),
-    A = n(485873),
-    m = n(24933),
-    g = n(964592),
-    x = n(969341),
-    f = n(723702),
-    C = n(819027),
-    E = n(652215),
-    j = n(509381),
-    b = n(731854),
-    N = n(985018),
-    T = n(347933);
-function I(e) {
+t.d(n, { default: () => g });
+var i = t(627968);
+t(64700);
+var l = t(110259),
+    s = t(17928),
+    a = t(205693),
+    d = t(550079),
+    o = t(477782),
+    c = t(827343),
+    r = t(820284),
+    A = t(688810),
+    u = t(139286),
+    T = t(270816),
+    I = t(813977),
+    p = t(485873),
+    U = t(24933),
+    b = t(964592),
+    m = t(51760),
+    _ = t(723702),
+    h = t(819027),
+    f = t(652215),
+    S = t(509381),
+    v = t(731854),
+    x = t(985018),
+    O = t(347933);
+function g(e) {
     let {
-            onClose: t,
-            renderOutputDevices: n = !1,
-            renderInputDevices: I = !1,
-            renderInputProfiles: S = !1,
-            renderInputModes: v = !1,
-            renderInputVolume: y = !1,
-            renderOutputVolume: O = !1,
-            renderDeafen: L = !1,
-            minimal: R = !1,
-            onSelect: U,
-            appContext: w,
-            onInteraction: P,
+            onClose: n,
+            renderOutputDevices: t = !1,
+            renderInputDevices: g = !1,
+            renderInputProfiles: y = !1,
+            renderInputModes: D = !1,
+            renderInputVolume: E = !1,
+            renderOutputVolume: j = !1,
+            renderDeafen: C = !1,
+            minimal: k = !1,
+            onSelect: L,
+            appContext: M,
+            onInteraction: N,
         } = e,
-        { analyticsLocations: k } = (0, u.Ay)();
-    (0, _.A)({
+        { analyticsLocations: P } = (0, A.Ay)();
+    (0, u.A)({
         type: l.ImpressionTypes.MENU,
         name: l.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: k },
+        properties: { location_stack: P },
     });
-    let M = (0, C.A)(w),
-        D = (0, p.H)({ deviceType: b.oh.AUDIO_INPUT, analyticsLocations: k, asSubmenu: R }),
-        G = (0, p.H)({ deviceType: b.oh.AUDIO_OUTPUT, analyticsLocations: k, asSubmenu: R }),
-        V = (0, a.bG)([x.Ay], () => x.Ay.getActiveInputProfile()),
-        B = (0, m.A)(k),
-        z = (0, h.A)(k),
-        K = (0, A.A)(k),
-        q = (0, g.A)(k),
-        H = s.x.DEFAULT,
-        F = x.Ay.isSelfDeaf(H),
-        Q = (0, a.bG)([x.Ay], () => x.Ay.getMode()),
-        Y = Q === E.TBI.VOICE_ACTIVITY ? E.TBI.PUSH_TO_TALK : E.TBI.VOICE_ACTIVITY;
-    return (0, i.jsx)(d.A, {
-        object: E.ZSU.CONTEXT_MENU,
-        children: (0, i.jsxs)(r.W, {
+    let V = (0, h.A)(M),
+        X = (0, T.H)({ deviceType: v.oh.AUDIO_INPUT, analyticsLocations: P, asSubmenu: k }),
+        B = (0, T.H)({ deviceType: v.oh.AUDIO_OUTPUT, analyticsLocations: P, asSubmenu: k }),
+        H = (0, s.bG)([m.Ay], () => m.Ay.getActiveInputProfile()),
+        K = (0, U.A)(P),
+        w = (0, I.A)(P),
+        F = (0, p.A)(P),
+        G = (0, b.A)(P),
+        R = a.x.DEFAULT,
+        Y = m.Ay.isSelfDeaf(R),
+        Z = (0, s.bG)([m.Ay], () => m.Ay.getMode()),
+        Q = Z === f.TBI.VOICE_ACTIVITY ? f.TBI.PUSH_TO_TALK : f.TBI.VOICE_ACTIVITY;
+    return (0, i.jsx)(r.A, {
+        object: f.ZSU.CONTEXT_MENU,
+        children: (0, i.jsxs)(d.W, {
             "data-menu-migrated": !0,
-            onSelect: U,
-            onInteraction: P,
-            className: T.MK,
-            onClose: t,
+            onSelect: L,
+            onInteraction: N,
+            className: O.MK,
+            onClose: n,
             navId: "audio-device-context",
             variant: "fixed",
-            "aria-label": N.intl.string(N.t.ZR1Ss6),
+            "aria-label": x.intl.string(x.t.ZR1Ss6),
             children: [
-                I && D,
-                n && G,
-                S && B,
-                !R && v && V !== j.m.STUDIO
-                    ? (0, i.jsx)(o.rX, { label: N.intl.string(N.t["pS+K2L"]), children: z })
+                g && X,
+                t && B,
+                y && K,
+                !k && D && H !== S.m.STUDIO
+                    ? (0, i.jsx)(o.rX, { label: x.intl.string(x.t["pS+K2L"]), children: w })
                     : null,
                 (0, i.jsxs)(o.rX, {
                     children: [
-                        y ? K : null,
-                        O ? q : null,
-                        R ? (0, i.jsx)(o.bX, {}) : null,
-                        R && L
+                        E ? F : null,
+                        j ? G : null,
+                        k ? (0, i.jsx)(o.bX, {}) : null,
+                        k && C
                             ? (0, i.jsx)(
                                   o.sL,
                                   {
                                       id: "deafen",
-                                      label: N.intl.string(N.t.wjcRFX),
-                                      action: () => c.A.toggleSelfDeaf({ context: H, location: "AudioDeviceMenu" }),
-                                      checked: F,
+                                      label: x.intl.string(x.t.wjcRFX),
+                                      action: () => c.A.toggleSelfDeaf({ context: R, location: "AudioDeviceMenu" }),
+                                      checked: Y,
                                   },
                                   "self-deafen",
                               )
                             : null,
-                        R && I && f.isPlatformEmbedded
+                        k && g && _.isPlatformEmbedded
                             ? (0, i.jsx)(o.sL, {
-                                  checked: Q === E.TBI.PUSH_TO_TALK,
+                                  checked: Z === f.TBI.PUSH_TO_TALK,
                                   id: "input-mode",
-                                  label: N.intl.string(N.t.Q8gkVL),
-                                  action: () => c.A.setMode(Y, void 0, void 0, { analyticsLocations: k }),
-                                  disabled: V === j.m.STUDIO,
+                                  label: x.intl.string(x.t.Q8gkVL),
+                                  action: () => c.A.setMode(Q, void 0, void 0, { analyticsLocations: P }),
+                                  disabled: H === S.m.STUDIO,
                               })
                             : null,
-                        M,
+                        V,
                     ],
                 }),
             ],

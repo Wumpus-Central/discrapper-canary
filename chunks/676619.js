@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { Ay: () => T, Qu: () => p, yn: () => A });
+n.d(t, { Ay: () => T, Qu: () => p, yn: () => I });
 var i = n(17928),
     r = n(205693),
     s = n(228366),
     a = n(540999),
-    o = n(969341);
+    o = n(51760);
 let l = [
         ["codecH264", "H264"],
         ["codecH265", "H265"],
@@ -129,16 +129,16 @@ class g extends i.Ay.DeviceSettingsStore {
         return c;
     }
 }
-function A(e) {
+function I(e) {
     s.h.dispatch({ type: "AUDIO_VIDEO_OVERRIDES_UPDATE", partial: e });
 }
-let I = new g(s.h, {
+let A = new g(s.h, {
     AUDIO_VIDEO_OVERRIDES_UPDATE: function (e) {
         if (!a.A.isDeveloper) return !1;
         (c = { ...c, ...e.partial }), f();
     },
 });
 function p() {
-    return (0, i.bG)([I, a.A], () => a.A.isDeveloper && I.alwaysShowCapturePreview);
+    return (0, i.bG)([A, a.A], () => a.A.isDeveloper && A.alwaysShowCapturePreview);
 }
-let T = I;
+let T = A;

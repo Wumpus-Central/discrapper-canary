@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => D }), n(321073), n(134528), n(947204);
+n.d(t, { A: () => L }), n(321073), n(134528), n(947204);
 var i = n(141931),
     r = n(506774),
     s = n(439372),
     a = n(77729),
     o = n(31717),
     l = n(885576),
-    d = n(969341),
-    _ = n(763827),
+    _ = n(51760),
+    d = n(763827),
     u = n(954571),
     c = n(927813),
     E = n(723702),
@@ -15,19 +15,19 @@ var i = n(141931),
     m = n(38405),
     f = n(19575),
     g = n(652215);
-let p = 15 * c.A.Millis.MINUTE,
+let I = 15 * c.A.Millis.MINUTE,
     A = 15 * c.A.Millis.MINUTE,
-    I = 15 * c.A.Millis.MINUTE,
+    p = 15 * c.A.Millis.MINUTE,
     T = 30 * c.A.Millis.MINUTE,
     S = 60 * c.A.Millis.MINUTE,
     N = "lastMemoryUsageRestart",
-    C = +c.A.Millis.DAY,
+    O = +c.A.Millis.DAY,
     R = 10 * c.A.Millis.MINUTE,
-    O = 60 * c.A.Millis.MINUTE;
+    C = 60 * c.A.Millis.MINUTE;
 function y() {
     return E.isPlatformEmbedded && (0, E.isWindows)();
 }
-class v extends s.A {
+class D extends s.A {
     _checkIntervalNativeHeap = null;
     _checkIntervalPA = null;
     _checkIntervalV8 = null;
@@ -62,7 +62,7 @@ class v extends s.A {
             clearInterval(this._checkIntervalNativeHeap),
             (this._checkIntervalNativeHeap = setInterval(async () => {
                 await this.trackNativeHeapPerformanceStats();
-            }, p)),
+            }, I)),
             this._supportedNativeChannel &&
                 (clearInterval(this._checkIntervalPA),
                 (this._checkIntervalPA = setInterval(async () => {
@@ -71,7 +71,7 @@ class v extends s.A {
                 clearInterval(this._checkIntervalV8),
                 (this._checkIntervalV8 = setInterval(async () => {
                     await this.trackV8HeapAlloc();
-                }, I)),
+                }, p)),
                 clearTimeout(this._checkIntervalCPUProfiler),
                 (this._checkIntervalCPUProfiler = setTimeout(() => {
                     100 * Math.random() < 0.5 && this.trackCPUProfiling();
@@ -148,7 +148,7 @@ class v extends s.A {
                 message: "Desktop Memory Thread State",
                 extra: {
                     renderer_memory_kb: e,
-                    gpu_brand: d.Ay.getGpuBrand(),
+                    gpu_brand: _.Ay.getGpuBrand(),
                     used_v8_heap_kb: n,
                     avail_size_kb: i,
                     peak_malloc_kb: r,
@@ -162,11 +162,11 @@ class v extends s.A {
         let t = performance.now() - this._startupTime;
         if (t < S) return;
         let n = r.w.get(N);
-        if (null != n && n.timestamp >= Date.now() - C) return;
+        if (null != n && n.timestamp >= Date.now() - O) return;
         let s = l.A.getIdleSince();
         null == s ||
             s > Date.now() - T ||
-            null != _.A.getRTCConnection() ||
+            null != d.A.getRTCConnection() ||
             (o.A.persist(),
             r.w.set(N, { timeSinceStartup: t, timestamp: Date.now() }),
             f.Ay.setCrashInformation(i.du.IntentionalCrashReason, "excessive-memory-usage"),
@@ -323,21 +323,21 @@ class v extends s.A {
                 }
                 let o = a.join("\n"),
                     l = await f.Ay.gzipAndBase64Encode(o),
-                    d = null != l && l.length > 0 ? l : o,
-                    _ = {
+                    _ = null != l && l.length > 0 ? l : o,
+                    d = {
                         sample_period_ms: 1,
                         sample_count: e.fg_sample_count,
-                        fg_sample_data: d,
+                        fg_sample_data: _,
                         fg_module_name: t,
                         fg_code_id: i,
                         fg_instr_rel_addr_high: e.fg_instr_rel_addr_high,
                         fg_instr_rel_addr_low: e.fg_instr_rel_addr_low,
                     };
-                u.default.track(g.HAw.DESKTOP_PERF_CPU_PROFILE, _),
+                u.default.track(g.HAw.DESKTOP_PERF_CPU_PROFILE, d),
                     (this._checkIntervalCPUProfiler = setTimeout(() => {
                         this.trackCPUProfiling();
-                    }, O));
+                    }, C));
             }, 11e3));
     }
 }
-let D = new v();
+let L = new D();

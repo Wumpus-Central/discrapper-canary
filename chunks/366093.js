@@ -239,7 +239,7 @@ function R(e) {
                   .catch(i),
               !0)
             : 401 === e.statusCode && e.body?.code === E.t02.MFA_REQUIRED && e.body?.mfa
-              ? (Promise.all([n.e("93816"), n.e("8979"), n.e("4736"), n.e("90966"), n.e("65171")])
+              ? (Promise.all([n.e("40841"), n.e("8979"), n.e("4736"), n.e("90966"), n.e("65171")])
                     .then(n.bind(n, 522238))
                     .then((n) => {
                         let { openMFAModal: r } = n;
@@ -374,7 +374,7 @@ function er(e, t) {
 n(937982);
 var es = n(141931),
     ea = n(506774),
-    eo = n(969341),
+    eo = n(51760),
     el = n(287809),
     e_ = n(19575),
     ed = n(77138);
@@ -722,7 +722,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let ew = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new ef.A().log(
-    `[BUILD INFO] Release Channel: ${ew}, Build Number: 536181, Version Hash: 45aa7ae3fe93013bb1b546eafd0af3c26aaef1f7`,
+    `[BUILD INFO] Release Channel: ${ew}, Build Number: 536797, Version Hash: b97073eec0b197e4983614d5cc478be731af45d0`,
 ),
     o.A.setTags({ appContext: E.QCW }),
     K.A.initBasic(),

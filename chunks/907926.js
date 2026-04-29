@@ -6,51 +6,51 @@ var i = n(118356),
     a = n(439372),
     o = n(624694),
     l = n(929921),
-    d = n(616356),
-    _ = n(71393),
-    u = n(969341),
+    _ = n(616356),
+    d = n(71393),
+    u = n(51760),
     c = n(116956),
     E = n(287809),
     h = n(927813),
     m = n(258585),
     f = n(652896),
     g = n(837859),
-    p = n(753070);
+    I = n(753070);
 let A = new i.Vy("AutoQualityStreamingManager"),
-    I = 0;
+    p = 0;
 class T extends a.A {
     actions = { MEDIA_ENGINE_CONNECTION_STATS: this.handleStats, POST_CONNECTION_OPEN: this.handlePostConnectionOpen };
     handleStats() {
-        if ((I += 1) % 10 != 0) return;
-        let e = d.A.getCurrentUserActiveStream();
+        if ((p += 1) % 10 != 0) return;
+        let e = _.A.getCurrentUserActiveStream();
         if (null == e) return;
         let t = c.A.getRTCConnection((0, f._z)(e)),
             n = u.Ay.getGoLiveSource();
         if (null == t || null == n || !t.hasActiveRemoteWants()) return;
         let i = l.A.getState();
-        if (i.preset !== p.jQ.PRESET_AUTO) return;
-        if (d.A.getStreamerActiveStreamMetadata()?.id != null)
+        if (i.preset !== I.jQ.PRESET_AUTO) return;
+        if (_.A.getStreamerActiveStreamMetadata()?.id != null)
             return void A.info("Skipping auto quality checker for game stream.");
         let a = o.A.getAccumulatedPerformanceStats(t.getMediaEngineConnectionId(), e.ownerId, "long"),
             m = (t.analyticsContext.getDuration() ?? 30) >= 30 * h.A.Millis.SECOND ? 30 : 15;
         if (null == a || a.numDatapoints < m) return;
         let T = E.default.getCurrentUser(),
-            S = _.A.getGuild(e.guildId),
-            [N, C] = (0, g.Ay)(p.jQ.PRESET_DOCUMENTS, T, S?.premiumTier) ?? [p.on.RESOLUTION_SOURCE, p.kn.FPS_5],
-            [R, O] = (0, g.Ay)(p.jQ.PRESET_VIDEO, T, S?.premiumTier) ?? [p.on.RESOLUTION_720, p.kn.FPS_30],
+            S = d.A.getGuild(e.guildId),
+            [N, O] = (0, g.Ay)(I.jQ.PRESET_DOCUMENTS, T, S?.premiumTier) ?? [I.on.RESOLUTION_SOURCE, I.kn.FPS_5],
+            [R, C] = (0, g.Ay)(I.jQ.PRESET_VIDEO, T, S?.premiumTier) ?? [I.on.RESOLUTION_720, I.kn.FPS_30],
             y = null;
         if (
-            (a.entropy < 10 && (i.resolution !== N || i.fps !== C)
+            (a.entropy < 10 && (i.resolution !== N || i.fps !== O)
                 ? (A.info("Low entropy average, switching to screenshare preset."),
                   (y = {
-                      qualityOptions: { preset: p.jQ.PRESET_AUTO, resolution: N, frameRate: C },
+                      qualityOptions: { preset: I.jQ.PRESET_AUTO, resolution: N, frameRate: O },
                       context: r.x.STREAM,
                   }))
                 : a.entropy > 20 &&
-                  (i.resolution !== R || i.fps !== O) &&
+                  (i.resolution !== R || i.fps !== C) &&
                   (A.info("High entropy average, switching to video preset."),
                   (y = {
-                      qualityOptions: { preset: p.jQ.PRESET_AUTO, resolution: R, frameRate: O },
+                      qualityOptions: { preset: I.jQ.PRESET_AUTO, resolution: R, frameRate: C },
                       context: r.x.STREAM,
                   })),
             null != y)

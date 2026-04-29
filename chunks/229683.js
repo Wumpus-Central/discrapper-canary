@@ -6,29 +6,29 @@ var i = n(284009),
     a = n(157559),
     o = n(827343),
     l = n(439372),
-    d = n(626584),
-    _ = n(495544),
-    u = n(969341),
+    _ = n(626584),
+    d = n(495544),
+    u = n(51760),
     c = n(763827),
     E = n(528767),
     h = n(977997),
     m = n(403362),
     f = n(108713),
     g = n(124697),
-    p = n(643501),
+    I = n(643501),
     A = n(30529),
-    I = n(975571),
+    p = n(975571),
     T = n(544105),
     S = n(985018),
     N = n(731854);
-let C = new d.A("GameConsoleManager");
+let O = new _.A("GameConsoleManager");
 async function R(e) {
     let t = c.A.getChannelId();
     r()(null == t, "Syncing to remote while in voice!"),
         e.selfMute !== u.Ay.isSelfMute() && (await o.A.toggleSelfMute({ syncRemote: !1 })),
         e.selfDeaf !== u.Ay.isSelfDeaf() && o.A.toggleSelfDeaf({ syncRemote: !1 });
 }
-class O extends l.A {
+class C extends l.A {
     rollbackCommandTimeout = new s.Ep();
     awaitRemoteTimeout = new s.Ep();
     actions = {
@@ -45,16 +45,16 @@ class O extends l.A {
     maybeConnect = (e) => {
         let t,
             n =
-                ((t = p.default.getAwaitingRemoteSessionInfo()),
+                ((t = I.default.getAwaitingRemoteSessionInfo()),
                 e.find((e) => {
                     let n = T.hv.has(e.clientInfo.os),
-                        i = null != h.A.getVoiceStateForSession(_.default.getId(), e.sessionId),
+                        i = null != h.A.getVoiceStateForSession(d.default.getId(), e.sessionId),
                         r = null == t || (0, A.X)(t.type) === e.clientInfo.os;
                     return n && r && i;
                 }));
         if (null == n) return null;
         this.awaitRemoteTimeout.stop(), (0, f.m9)(n.sessionId);
-        let i = h.A.getVoiceStateForSession(_.default.getId(), n.sessionId);
+        let i = h.A.getVoiceStateForSession(d.default.getId(), n.sessionId);
         null != i && R(i);
     };
     handleAudioStateToggle = (e) => {
@@ -62,8 +62,8 @@ class O extends l.A {
         if (!t || n !== N.x.DEFAULT) return;
         let i = u.Ay.isSelfDeaf(),
             r = u.Ay.isSelfMute(),
-            s = _.default.getId(),
-            a = p.default.getRemoteSessionId();
+            s = d.default.getId(),
+            a = I.default.getRemoteSessionId();
         if (null == a) return;
         let o = h.A.getVoiceStateForSession(s, a);
         null == o ||
@@ -75,7 +75,7 @@ class O extends l.A {
     };
     handleVoiceStateUpdates = (e) => {
         let t = e.voiceStates,
-            n = p.default.getRemoteSessionId();
+            n = I.default.getRemoteSessionId();
         if (null == n) {
             let e = t
                 .map((e) => {
@@ -92,7 +92,7 @@ class O extends l.A {
         null != i && (this.rollbackCommandTimeout.stop(), R(i));
     };
     handleSessionsChanged = () => {
-        let e = p.default.getRemoteSessionId();
+        let e = I.default.getRemoteSessionId();
         null != e && null == E.A.getSessionById(e) && (0, f.ZG)(),
             null == e && this.maybeConnect(Object.values(E.A.getSessions()));
     };
@@ -106,11 +106,11 @@ class O extends l.A {
         let n,
             { id: i, result: r, error: s } = e;
         if (("failed" !== r && "n/a" !== r) || null == s) return;
-        C.info("Console command Error result:", r, s);
-        let a = p.default.getAwaitingRemoteSessionInfo();
+        O.info("Console command Error result:", r, s);
+        let a = I.default.getAwaitingRemoteSessionInfo();
         if (a?.commandId !== i) return;
         let o =
-            ((t = p.default.getDevice(a.type, a.deviceId ?? "") ?? {
+            ((t = I.default.getDevice(a.type, a.deviceId ?? "") ?? {
                 id: "id",
                 platform: S.intl.string(S.t["UQMV/E"]),
                 name: S.intl.string(S.t["UQMV/E"]),
@@ -160,7 +160,7 @@ class O extends l.A {
                   })(t, s.code)),
             null != n &&
                 (n.errorCodeMessage = S.intl.format(S.t["1Bi9Cf"], {
-                    supportURL: I.A.getSubmitRequestURL(),
+                    supportURL: p.A.getSubmitRequestURL(),
                     errorCode: s.code,
                 })),
             n);
@@ -179,4 +179,4 @@ class O extends l.A {
         this.awaitRemoteTimeout.stop();
     };
 }
-let y = new O();
+let y = new C();

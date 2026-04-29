@@ -4,17 +4,17 @@ var i = n(636537),
     r = n(306173),
     s = n(845584),
     a = n(626584),
-    o = n(969341),
+    o = n(51760),
     l = n(453771),
-    d = n(77729),
-    _ = n(652215);
+    _ = n(77729),
+    d = n(652215);
 let u = new a.A("uploadRtcLogFiles");
 async function c(e, t) {
     let n;
-    if (null == d.A.fileManager.readLogFiles) throw new s._(s.ct.GENERAL);
+    if (null == _.A.fileManager.readLogFiles) throw new s._(s.ct.GENERAL);
     let r = [];
     try {
-        r = (r = await d.A.fileManager.readLogFiles(e)).map((e) => (0, l.ww)(e, "application/octet-stream"));
+        r = (r = await _.A.fileManager.readLogFiles(e)).map((e) => (0, l.ww)(e, "application/octet-stream"));
     } catch (e) {
         throw (u.error(`uploadDebugFiles: read error '${e}'`), new s._(s.ct.READ));
     }
@@ -31,7 +31,7 @@ async function c(e, t) {
         E = new Set();
     try {
         n = await i.Bo.post({
-            url: _.Rsh.DEBUG_LOGS(_.Umv.RTC),
+            url: d.Rsh.DEBUG_LOGS(d.Umv.RTC),
             attachments: [
                 ...c.map((e) => {
                     let t = (function (e, t) {
@@ -78,9 +78,9 @@ function m(e, t) {
 var f = n(734057),
     g = n(53943);
 n(321073);
-var p = n(735438),
-    A = n.n(p),
-    I = n(61090),
+var I = n(735438),
+    A = n.n(I),
+    p = n(61090),
     T = n(707539);
 function S(e) {
     let t = null == e.tag ? e.label : `${e.label} ${e.tag}`;
@@ -91,10 +91,10 @@ function S(e) {
     );
 }
 var N = n(506774);
-let C = new a.A("DebugUploadManager");
+let O = new a.A("DebugUploadManager");
 async function R(e, t) {
     try {
-        await O(e), await c(0xe00000, t);
+        await C(e), await c(0xe00000, t);
     } catch (t) {
         let e;
         throw (
@@ -120,7 +120,7 @@ async function R(e, t) {
         );
     }
 }
-async function O(e) {
+async function C(e) {
     try {
         let t, n, s, a;
         try {
@@ -137,8 +137,8 @@ async function O(e) {
             s = await Promise.resolve([]).then((e) =>
                 (function (e, t) {
                     if (0 === e.length) return "No logs";
-                    let n = N.w.get(_.Xlh),
-                        i = N.w.get(_.Ahp),
+                    let n = N.w.get(d.Xlh),
+                        i = N.w.get(d.Ahp),
                         r = null != n ? `Device Token: ${n}` : "",
                         s = null != i ? `Device Voip Token: ${i}` : "",
                         a = e
@@ -174,26 +174,26 @@ ${a}`;
     ${(function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        return I.A.logGroups
+        return p.A.logGroups
             .map((i) => {
-                var r, s, a, o, l, d;
-                let _,
+                var r, s, a, o, l, _;
+                let d,
                     u,
                     c,
                     E,
                     h,
                     m,
                     f,
-                    { index: g, timestamp: p, logs: I, nativeLogs: N, serverTrace: C } = i,
-                    R = 0 === g ? (A().find(I, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
-                    O =
+                    { index: g, timestamp: I, logs: p, nativeLogs: N, serverTrace: O } = i,
+                    R = 0 === g ? (A().find(p, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : I,
+                    C =
                         ((l =
-                            ((r = I),
+                            ((r = p),
                             (s = N),
                             (a = t),
                             (o = n),
                             (r = r.slice()),
-                            (_ = new Set(s.map(S))),
+                            (d = new Set(s.map(S))),
                             (u = ""),
                             (c = []),
                             s.forEach((e) => {
@@ -203,11 +203,11 @@ ${a}`;
                                     s =
                                         t.startsWith("Start ") &&
                                         !t.includes("RUN_JS_BUNDLE") &&
-                                        _.has(t.replace("Start ", "Finish "));
+                                        d.has(t.replace("Start ", "Finish "));
                                 if (
                                     t.startsWith("Finish ") &&
                                     !t.includes("RUN_JS_BUNDLE") &&
-                                    _.has(t.replace("Finish ", "Start "))
+                                    d.has(t.replace("Finish ", "Start "))
                                 ) {
                                     var o;
                                     u = u.substring(2);
@@ -245,7 +245,7 @@ ${a}`;
                                     !(E && e.log.includes("↪")) &&
                                     !(E = (!o && e.emoji === `🎨`) || !1 === e.shouldKeep),
                             ))),
-                        (d = R),
+                        (_ = R),
                         (h = (function (e) {
                             let t = [];
                             for (let n = 0; n < e.length; n++) {
@@ -257,7 +257,7 @@ ${a}`;
                             }
                             return t;
                         })(l).map((e) => ({
-                            totalTime: null == e.timestamp ? "" : ((e.timestamp - d) / 1e3).toFixed(3),
+                            totalTime: null == e.timestamp ? "" : ((e.timestamp - _) / 1e3).toFixed(3),
                             deltaTime: null == e.delta ? "" : String(Math.round(e.delta)),
                             log: `${e.emoji.length > 0 ? `${e.emoji} ` : ""}${e.prefix}${e.log}
 `,
@@ -270,12 +270,12 @@ ${a}`;
                                 return `${A().padStart(t, m)} ${A().padStart(n, f)} ${i}`;
                             })
                             .join("")),
-                    y = `Trace #${g + 1} started ${(0, T.aK)(p)}
-${O}`;
+                    y = `Trace #${g + 1} started ${(0, T.aK)(I)}
+${C}`;
                 return (
-                    null != C &&
+                    null != O &&
                         (y += `
- Server trace for trace #${g + 1}${C}`),
+ Server trace for trace #${g + 1}${O}`),
                     y
                 );
             })
@@ -300,7 +300,7 @@ ${O}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "534155", versionHash: "1b403b4f4bffbbc8fc15861878618cd7c2479e24" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "536797", versionHash: "b97073eec0b197e4983614d5cc478be731af45d0" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(f.A.getDebugInfo(), void 0, 2)}
@@ -318,9 +318,9 @@ ${O}`;
     ${s}
     `;
         g.IU();
-        let d = _.Rsh.DEBUG_LOG(e, "discord_app_logs");
+        let _ = d.Rsh.DEBUG_LOG(e, "discord_app_logs");
         await i.Bo.post({
-            url: d,
+            url: _,
             body: l,
             retries: 3,
             headers: { "Content-Type": "text/plain" },
@@ -328,6 +328,6 @@ ${O}`;
             rejectWithError: !1,
         });
     } catch (e) {
-        C.error(`uploadAppLogFiles: upload app log files error ${e.message}`);
+        O.error(`uploadAppLogFiles: upload app log files error ${e.message}`);
     }
 }

@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { id: () => c, jY: () => u });
-var r = n(205693),
-    i = n(652896),
-    a = n(430452),
-    s = n(383501),
+n.d(t, { id: () => d, jY: () => _ });
+var i = n(205693),
+    r = n(652896),
+    s = n(51760),
+    a = n(763827),
     o = n(309010),
-    l = n(162605);
-function u() {
+    l = n(116956);
+function _() {
     return {
         channelId: o.A.getVoiceChannelId() ?? void 0,
-        mediaSessionId: s.A.getMediaSessionId() ?? void 0,
-        rtcConnectionId: s.A.getRTCConnectionId(),
-        mediaContext: r.x.DEFAULT,
-        ...d(),
+        mediaSessionId: a.A.getMediaSessionId() ?? void 0,
+        rtcConnectionId: a.A.getRTCConnectionId(),
+        mediaContext: i.x.DEFAULT,
+        ...u(),
     };
 }
-function c(e) {
-    let { channelId: t, ownerId: n } = (0, i.Iy)(e),
-        a = l.A.getRTCConnection(e);
+function d(e) {
+    let { channelId: t, ownerId: n } = (0, r.Iy)(e),
+        s = l.A.getRTCConnection(e);
     return {
         channelId: t,
-        mediaSessionId: a?.getMediaSessionId() ?? void 0,
-        rtcConnectionId: a?.getRTCConnectionId(),
-        mediaContext: r.x.STREAM,
+        mediaSessionId: s?.getMediaSessionId() ?? void 0,
+        rtcConnectionId: s?.getRTCConnectionId(),
+        mediaContext: i.x.STREAM,
         streamKey: e,
         userId: n,
-        ...d(),
+        ...u(),
     };
 }
-function d() {
+function u() {
     return {
-        videoDeviceName: a.Ay.getVideoDevices()[a.Ay.getVideoDeviceId()]?.name,
-        audioInputDeviceName: a.Ay.getInputDevices()[a.Ay.getInputDeviceId()]?.name,
-        audioOutputDeviceName: a.Ay.getOutputDevices()[a.Ay.getOutputDeviceId()]?.name,
+        videoDeviceName: s.Ay.getVideoDevices()[s.Ay.getVideoDeviceId()]?.name,
+        audioInputDeviceName: s.Ay.getInputDevices()[s.Ay.getInputDeviceId()]?.name,
+        audioOutputDeviceName: s.Ay.getOutputDevices()[s.Ay.getOutputDeviceId()]?.name,
     };
 }

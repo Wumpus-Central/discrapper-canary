@@ -14,8 +14,8 @@ var s = n(627968),
     m = n(289873),
     f = n(228366),
     g = n(367513),
-    A = n(951001),
-    I = n(398590),
+    I = n(951001),
+    A = n(398590),
     p = n(793574),
     T = n(688810),
     S = n(429913),
@@ -243,7 +243,7 @@ let ef = function (e) {
           });
 };
 var eg = n(919706);
-function eA(e) {
+function eI(e) {
     let { title: t, onJumpToChannel: n, idle: i, preventIdleComponent: r } = e,
         a = (0, o.bG)([er.A], () => er.A.getChannelId()),
         l = null != a ? (0, s.jsx)(ef, { voiceChannelId: a, idle: i }) : null;
@@ -274,7 +274,7 @@ function eA(e) {
         ],
     });
 }
-function eI(e) {
+function eA(e) {
     let {
         children: t,
         idle: n,
@@ -306,7 +306,7 @@ function eI(e) {
                     children: [
                         (0, s.jsx)("div", {
                             className: eh.K1,
-                            children: (0, s.jsx)(eA, { idle: n, onJumpToChannel: i, ...f }),
+                            children: (0, s.jsx)(eI, { idle: n, onJumpToChannel: i, ...f }),
                         }),
                         (0, s.jsxs)("div", {
                             className: eh.q6,
@@ -339,7 +339,7 @@ var ep = n(709562),
     eS = n(128286),
     eN = n(80051),
     eO = n(970636),
-    eR = n(969341),
+    eR = n(51760),
     eC = n(646865),
     ey = n(104171),
     eD = n(47294),
@@ -372,10 +372,10 @@ function eP(e) {
         m = !1 === (h?.disabled ?? !0),
         f = (0, S.A)([n])[0],
         g = (0, B.Ay)(t),
-        A = (0, K.A)(t),
-        { parentAnalyticsLocation: I } = (0, T.Ay)(),
+        I = (0, K.A)(t),
+        { parentAnalyticsLocation: A } = (0, T.Ay)(),
         p = (e) => {
-            (0, F.X)(I, F.O.CAMERA, e), x.A.setVideoEnabled(e);
+            (0, F.X)(A, F.O.CAMERA, e), x.A.setVideoEnabled(e);
         };
     return (0, s.jsxs)("div", {
         className: eh._v,
@@ -385,7 +385,7 @@ function eP(e) {
         children: [
             (0, s.jsx)("div", {
                 className: eh.K1,
-                children: (0, s.jsx)(eA, {
+                children: (0, s.jsx)(eI, {
                     idle: _,
                     title: f?.name ?? g ?? "",
                     onJumpToChannel: l,
@@ -405,7 +405,7 @@ function eP(e) {
                                 className: ev.Oc,
                                 enabled: E,
                                 cameraUnavailable: !m,
-                                hasPermission: A,
+                                hasPermission: I,
                                 onChange: p,
                                 onCameraUnavailable: () => {
                                     m ? p(!0) : (0, j.A)();
@@ -436,7 +436,7 @@ function eP(e) {
                                       className: ev.BD,
                                       popoutOpen: !1,
                                       onOpenPopout: () => {
-                                          (0, F.X)(I, F.O.POPOUT, !0),
+                                          (0, F.X)(A, F.O.POPOUT, !0),
                                               null != t &&
                                                   (0, eD.A)({
                                                       onConfirm: async () => {
@@ -477,7 +477,7 @@ function eb(e) {
         children: [
             (0, s.jsx)("div", {
                 className: eh.K1,
-                children: (0, s.jsx)(eA, {
+                children: (0, s.jsx)(eI, {
                     idle: l,
                     title: u?.name ?? c ?? "",
                     onJumpToChannel: o,
@@ -532,7 +532,7 @@ function eU(e) {
                 r &&
                     (0, s.jsxs)(s.Fragment, {
                         children: [
-                            (0, s.jsx)(eA, {
+                            (0, s.jsx)(eI, {
                                 idle: !r,
                                 title: E?.name ?? m ?? "",
                                 onJumpToChannel: l,
@@ -599,9 +599,9 @@ function eF(e) {
                     (0, N.Qt)({ applicationId: l.applicationId, instanceId: l.compositeInstanceId }),
                 );
             let e = t.getGuildId() ?? Z.ME;
-            A.A.channelListScrollTo(e, t.id), (0, R.uh)(e, t.id);
+            I.A.channelListScrollTo(e, t.id), (0, R.uh)(e, t.id);
         }
-        null == x && (0, I.bz)();
+        null == x && (0, A.bz)();
     }
     function q() {
         r(!i);
@@ -761,7 +761,7 @@ function e$(e) {
         children: [
             (0, s.jsx)("div", {
                 className: eh.K1,
-                children: (0, s.jsx)(eA, {
+                children: (0, s.jsx)(eI, {
                     idle: o,
                     title: l?.name ?? "",
                     onJumpToChannel: a,
@@ -916,8 +916,8 @@ function tf(e) {
     });
 }
 var tg = n(344548),
-    tA = n(495544),
-    tI = n(485296);
+    tI = n(495544),
+    tA = n(485296);
 function tp() {
     let e,
         t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -934,7 +934,7 @@ function tp() {
             null == n || O.A.isParticipantPoppedOut(i, n) || (e = n);
         }
         if (null == e) {
-            let t = tA.default.getId(),
+            let t = tI.default.getId(),
                 n = te()(O.A.getVideoParticipants(i)).filter(
                     (e) =>
                         e.type === ec.lp.USER &&
@@ -946,7 +946,7 @@ function tp() {
                 a = Date.now();
             null ==
                 (e = n
-                    .map((e) => [e.user.id, tI.A.getSpeakingDuration(e.user.id, a)])
+                    .map((e) => [e.user.id, tA.A.getSpeakingDuration(e.user.id, a)])
                     .filter((e) => {
                         let [t, n] = e;
                         return 0 !== n;
@@ -966,10 +966,10 @@ function tS() {
 class tN extends o.Ay.Store {
     static displayName = "VideoSpeakerStore";
     initialize() {
-        this.waitFor(O.A, tA.default, tI.A, eu.A, eR.Ay), this.syncWith([O.A, eu.A], tS);
+        this.waitFor(O.A, tI.default, tA.A, eu.A, eR.Ay), this.syncWith([O.A, eu.A], tS);
     }
     getSpeaker(e) {
-        return i !== e && ((i = e), tp(!1)), r ?? tA.default.getId();
+        return i !== e && ((i = e), tp(!1)), r ?? tI.default.getId();
     }
 }
 let tO = new tN(f.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: tS });
@@ -1099,9 +1099,9 @@ class tB extends a.PureComponent {
     };
     handleJumpToChannel = () => {
         let { channel: e } = this.props;
-        (0, I.bz)();
+        (0, A.bz)();
         let t = e.getGuildId() ?? Z.ME;
-        (0, R.uh)(t, e.id), A.A.channelListScrollTo(t, e.id);
+        (0, R.uh)(t, e.id), I.A.channelListScrollTo(t, e.id);
         let n = this.activeStreamForSelectedParticipant;
         null != n && g.A.selectParticipant(n.channelId, (0, t_._z)(n));
     };
@@ -1218,7 +1218,7 @@ class tB extends a.PureComponent {
     render() {
         let { channel: e, streamId: t, participantOnScreen: n, isVideoEnabled: i, width: r } = this.props,
             a = (0, B.m1)(e, v.default, eQ.A),
-            o = n?.id === tA.default.getId() && i,
+            o = n?.id === tI.default.getId() && i,
             l = this.renderStreamState(),
             _ = this.activeStreamForSelectedParticipant,
             d = null;
@@ -1243,7 +1243,7 @@ class tB extends a.PureComponent {
             (0, s.jsx)(y.Ay, {
                 timeout: 1800,
                 children: (e) =>
-                    (0, s.jsx)(eI, {
+                    (0, s.jsx)(eA, {
                         title: a,
                         backgroundKey: n?.id ?? "",
                         screenMessage: null == l ? this.getScreenMessage() : null,
@@ -1282,13 +1282,13 @@ let tK = {
                 d = !_,
                 u = (0, o.bG)([eR.Ay], () => !_ && eR.Ay.isVideoEnabled(), [_]),
                 c = (0, o.bG)([eR.Ay], () => (0, td.A)(eR.Ay)),
-                E = (0, o.bG)([tA.default], () => tA.default.getId()),
+                E = (0, o.bG)([tI.default], () => tI.default.getId()),
                 h = (0, o.bG)([eu.A], () => eu.A.getCurrentUserActiveStream()),
                 m = null != r && "user" in r ? r.user.id : "",
                 f = (0, to.A)(r?.type === ec.lp.STREAM ? tt.x.STREAM : tt.x.DEFAULT, m),
                 g = (0, ta.A)(m),
-                A = (0, o.yK)([eu.A], () => eu.A.getAllActiveStreams()),
-                I = (0, o.bG)([tC.A], () => tC.A.isFocused()),
+                I = (0, o.yK)([eu.A], () => eu.A.getAllActiveStreams()),
+                A = (0, o.bG)([tC.A], () => tC.A.isFocused()),
                 p = (0, tl.Qu)();
             return (0, s.jsx)(tB, {
                 channel: t,
@@ -1298,9 +1298,9 @@ let tK = {
                 isVideoEnabled: u,
                 canGoLive: c,
                 currentUserId: E,
-                activeStreams: A,
+                activeStreams: I,
                 activeSelfStream: h,
-                isMainWindowFocused: I || p,
+                isMainWindowFocused: A || p,
                 width: n,
                 isOverlayRenderingVideo: !1,
                 videoStreamError: f,
@@ -1336,10 +1336,10 @@ let tK = {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         { selectParticipantId: n } = t;
                     return a.useCallback(() => {
-                        (0, I.bz)();
+                        (0, A.bz)();
                         let t = e.getGuildId() ?? Z.ME;
                         (0, R.uh)(t, e.id),
-                            A.A.channelListScrollTo(t, e.id),
+                            I.A.channelListScrollTo(t, e.id),
                             null != n && g.A.selectParticipant(e.id, n);
                     }, [e, n]);
                 })(t),
@@ -1356,7 +1356,7 @@ let tK = {
             return (0, s.jsx)(y.Ay, {
                 timeout: 2e3,
                 children: (e) =>
-                    (0, s.jsx)(eI, {
+                    (0, s.jsx)(eA, {
                         title: l,
                         backgroundKey: t.id,
                         screenMessage: null,
@@ -1412,7 +1412,7 @@ class tz extends a.PureComponent {
             } = this.props,
             f = document.body.style.getPropertyValue("--custom-guild-sidebar-width"),
             g = "" !== f ? parseInt(f, 10) : Z.MdR,
-            A = u.width - g - (h ? m : 0);
+            I = u.width - g - (h ? m : 0);
         return (0, s.jsxs)(e3.ic, {
             children: [
                 (0, s.jsx)(e2.A, {
@@ -1431,7 +1431,7 @@ class tz extends a.PureComponent {
                     resizeConfig: tj,
                     getDockedRectPositionY: d,
                 }),
-                (0, s.jsx)(e3.Md, { className: !c && null != E && h && A < 550 ? tW.ah : void 0 }),
+                (0, s.jsx)(e3.Md, { className: !c && null != E && h && I < 550 ? tW.ah : void 0 }),
             ],
         });
     }
@@ -1455,16 +1455,16 @@ let tq = o.Ay.connectStores([eY.A, _.Ay, tC.A, e4.A, tH.A, L.A, D.A, O.A, e7.Ay,
         m = null != a && null != o && O.A.getSelectedParticipant(o)?.type === ec.lp.ACTIVITY,
         f = eH.A.getConnectedFrame(),
         g = eH.A.getFrameLayoutMode() === ez.y.FOCUSED,
-        A = null != n,
-        I = A ? eY.A.getWindow(n) : null,
-        p = !!A && eY.A.isWindowFullScreen(n),
+        I = null != n,
+        A = I ? eY.A.getWindow(n) : null,
+        p = !!I && eY.A.isWindowFullScreen(n),
         T = tC.A.windowSize();
-    A && (T = null == I ? T : { width: I.innerWidth, height: I.innerHeight });
-    let S = A ? Z.BRT.POPOUT : Z.BRT.APP;
+    I && (T = null == A ? T : { width: A.innerWidth, height: A.innerHeight });
+    let S = I ? Z.BRT.POPOUT : Z.BRT.APP;
     t =
-        (null != a && s) || (A && l) || (A && null != f)
+        (null != a && s) || (I && l) || (I && null != f)
             ? null
-            : A || !r || l || null != f
+            : I || !r || l || null != f
               ? null != a && h
                   ? (D.A.pipActivityWindow ?? D.A.pipVideoWindow)
                   : null != f && g
@@ -1493,11 +1493,11 @@ let tq = o.Ay.connectStores([eY.A, _.Ay, tC.A, e4.A, tH.A, L.A, D.A, O.A, e7.Ay,
         theme: e4.A.theme,
         dockedRect: D.A.getDockedRect(t?.id ?? ""),
         getDockedRectPositionY: (e) =>
-            A && (0, e6.q)({ withTitleBar: i, isFullScreen: p }) ? e - (0, eB.LI)({ isPopoutWindow: A }) : e,
+            I && (0, e6.q)({ withTitleBar: i, isFullScreen: p }) ? e - (0, eB.LI)({ isPopoutWindow: I }) : e,
         appContext: S,
         roundCorners: !G,
         windowSize: T,
-        inPopoutWindow: A,
+        inPopoutWindow: I,
         activityPIPWindow: y,
         chatOpen: U,
         callChatSidebarWidth: P,

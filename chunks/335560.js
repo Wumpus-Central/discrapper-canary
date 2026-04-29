@@ -4,13 +4,13 @@ var i = n(636537),
     r = n(228366),
     s = n(439372),
     a = n(626584),
-    o = n(969341),
+    o = n(51760),
     l = n(873985),
-    d = n(927813),
-    _ = n(723702),
+    _ = n(927813),
+    d = n(723702),
     u = n(731854);
-let c = +d.A.Millis.SECOND,
-    E = 30 * d.A.Millis.SECOND,
+let c = +_.A.Millis.SECOND,
+    E = 30 * _.A.Millis.SECOND,
     h = new a.A("RTCLatencyTestManager");
 h.enableNativeLogger(!0);
 class m extends s.A {
@@ -41,10 +41,10 @@ class m extends s.A {
         i.Bo.get({ url: `https:${window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT}?v=${e}`, rejectWithError: !1 }))
             .then((e) => this._handleTestRegionsResponse(e.body))
             .catch((e) => h.warn(e)),
-            (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * d.A.Millis.MINUTE));
+            (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * _.A.Millis.MINUTE));
     };
     _handleConnectionOpen = () => {
-        if (_.isPlatformEmbedded && !__OVERLAY__) {
+        if (d.isPlatformEmbedded && !__OVERLAY__) {
             let e = Math.floor(c + Math.random() * E);
             null != this.refetchTimeout && clearTimeout(this.refetchTimeout),
                 (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e));

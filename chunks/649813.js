@@ -5,9 +5,9 @@ var i = n(228366),
     s = n(439372),
     a = n(976860),
     o = n(345942),
-    l = n(969341),
-    d = n(309010),
-    _ = n(967198),
+    l = n(51760),
+    _ = n(309010),
+    d = n(967198),
     u = n(652215);
 class c extends s.A {
     actions = {
@@ -17,18 +17,18 @@ class c extends s.A {
     };
     handleGuildCreate(e) {
         let { guild: t } = e,
-            n = d.A.getChannelId(u.ME),
-            i = d.A.getVoiceChannelId();
+            n = _.A.getChannelId(u.ME),
+            i = _.A.getVoiceChannelId();
         t.id === n && (0, o.u)(t.id),
-            t.id === i && !1 !== t.unavailable && null == i && r.default.selectVoiceChannel((0, d.c)(t.id));
+            t.id === i && !1 !== t.unavailable && null == i && r.default.selectVoiceChannel((0, _.c)(t.id));
     }
     handleChannelCreate(e) {
         let { channel: t } = e;
         if (t.type !== u.rbe.GROUP_DM) return;
         let n = t.originChannelId,
-            i = d.A.getChannelId(u.eGj);
-        null == _.A.getGuildId() && null != n && n === i && (0, a.pX)(u.BVt.CHANNEL(u.ME, t.id)),
-            null != n && n === d.A.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, l.Ay.isVideoEnabled());
+            i = _.A.getChannelId(u.eGj);
+        null == d.A.getGuildId() && null != n && n === i && (0, a.pX)(u.BVt.CHANNEL(u.ME, t.id)),
+            null != n && n === _.A.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, l.Ay.isVideoEnabled());
     }
     handleLogout() {
         i.h.dispatch({

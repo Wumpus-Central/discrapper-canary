@@ -23,7 +23,7 @@ var E = n(442433),
     _ = n(220839),
     v = n(397244),
     N = n(729551),
-    y = n(519244),
+    y = n(925747),
     R = n(866323),
     b = n(449450);
 function I(e) {
@@ -334,8 +334,8 @@ var eF = n(734066),
     e8 = n(890856),
     e5 = n(609174),
     e6 = n(353605),
-    e4 = n(434320),
-    e7 = n(82716),
+    e7 = n(434320),
+    e4 = n(82716),
     e9 = n(585579),
     te = n(226870),
     tt = n(285072),
@@ -370,12 +370,12 @@ function ti(e) {
                         children: [
                             (0, i.jsxs)("div", {
                                 className: tn.mY,
-                                children: [(0, i.jsx)(e7.z, {}), (0, i.jsx)(e6.k, {})],
+                                children: [(0, i.jsx)(e4.z, {}), (0, i.jsx)(e6.k, {})],
                             }),
                             (0, i.jsxs)("div", {
                                 className: tn.E_,
                                 children: [
-                                    (0, i.jsx)(e4.f, { variant: "primary", onBeforeEdit: n }),
+                                    (0, i.jsx)(e7.f, { variant: "primary", onBeforeEdit: n }),
                                     (0, i.jsx)("div", { className: tn.OI, children: (0, i.jsx)(e9.E, {}) }),
                                 ],
                             }),
@@ -735,8 +735,8 @@ var tZ = n(983495),
     t8 = n(661531),
     t5 = n(477782),
     t6 = n(628284),
-    t4 = n(695366),
-    t7 = n(363195),
+    t7 = n(695366),
+    t4 = n(363195),
     t9 = n(889227),
     ne = n(287809),
     nt = n(954571),
@@ -886,7 +886,7 @@ function nS() {
                 n &&
                 (0, i.jsx)(eQ.m, {
                     text: em.intl.string(em.t.L99HQm),
-                    children: (0, i.jsx)(t4.E, {
+                    children: (0, i.jsx)(t7.E, {
                         size: "xs",
                         color: t8.A.colors.STATUS_WARNING,
                         "aria-label": em.intl.string(em.t.L99HQm),
@@ -1200,7 +1200,7 @@ function nq(e) {
         B = (function (e) {
             let t = (0, c.bG)([ne.default], () => ne.default.getCurrentUser()),
                 n = (0, c.bG)([t2.A], () => t2.A.hidePersonalInformation),
-                s = (0, c.bG)([t7.A], () => (0, tE.M)(t7.A.theme)),
+                s = (0, c.bG)([t4.A], () => (0, tE.M)(t4.A.theme)),
                 { multiAccountUsers: l } = (0, ns.K)(),
                 a = l.map((l) => {
                     let a = new t9.A(l),
@@ -1254,7 +1254,7 @@ function nq(e) {
                                                 className: na.s0,
                                             }),
                                         o &&
-                                            (0, i.jsx)(t4.E, {
+                                            (0, i.jsx)(t7.E, {
                                                 color: t8.A.unsafe_rawColors.RED_400.css,
                                                 secondaryColor:
                                                     (t && s) || (t && !s)
@@ -1567,14 +1567,14 @@ var nz = n(201805),
     nZ = n(533488),
     nJ = n(167579),
     n0 = n(173660),
-    n1 = n(969341),
+    n1 = n(51760),
     n2 = n(763827),
     n3 = n(499156),
     n8 = n(731854);
 let n5 = 2.5 * eX.A.Millis.SECOND,
     n6 = +eX.A.Millis.HOUR;
-var n4 = n(205693),
-    n7 = n(485296);
+var n7 = n(205693),
+    n4 = n(485296);
 let n9 = 3 * eX.A.Millis.SECOND,
     ie = +eX.A.Millis.DAY;
 var it = n(616356),
@@ -2014,8 +2014,8 @@ var i3 = n(362823),
     i8 = n(980923),
     i5 = n(224585),
     i6 = n(949341),
-    i4 = n(973324);
-function i7(e) {
+    i7 = n(973324);
+function i4(e) {
     let t,
         {
             selfMute: n,
@@ -2155,7 +2155,7 @@ function i7(e) {
             (0, i.jsx)(nr.A, {
                 targetElementRef: b,
                 shouldShow: v,
-                graphic: { type: "image", src: i4.A },
+                graphic: { type: "image", src: i7.A },
                 onRequestClose: () => {
                     iJ.N(i3.v.MUTE_TUTORIAL);
                 },
@@ -3281,7 +3281,7 @@ function sA(e) {
         className: sc.Uo,
         style: N,
         children: [
-            (0, i.jsx)(i7, {
+            (0, i.jsx)(i4, {
                 accountContainerRef: T,
                 selfMute: n,
                 serverMute: l,
@@ -3367,7 +3367,7 @@ function sE() {
         }),
         r = (0, c.bG)([it.A], () => it.A.getAnyStreamForUser(t)),
         u = (0, j.A)({ userId: t }),
-        m = (0, c.bG)([n7.A], () => n7.A.getVoiceVolume(t)),
+        m = (0, c.bG)([n4.A], () => n4.A.getVoiceVolume(t)),
         h = t$.Ay.useUserTag(e, { decoration: "never" }),
         f = (0, c.bG)([n2.A, ii.A], () => {
             let e = n2.A.getChannelId();
@@ -3462,7 +3462,7 @@ function sE() {
                         s = r.current;
                     function o(e, i) {
                         let l = (i & n8.ME.VOICE) === n8.ME.VOICE,
-                            a = n7.A.isCurrentUserPTTActive();
+                            a = n4.A.isCurrentUserPTTActive();
                         l && !a
                             ? ++t >= 6 &&
                               (n(!0),
@@ -3472,9 +3472,9 @@ function sE() {
                             : (t = 0);
                     }
                     return (
-                        a && e && i && null != l && n1.Ay.getMediaEngine().on(n4.bg.VoiceActivity, o),
+                        a && e && i && null != l && n1.Ay.getMediaEngine().on(n7.bg.VoiceActivity, o),
                         () => {
-                            n1.Ay.getMediaEngine().removeListener(n4.bg.VoiceActivity, o), s.stop();
+                            n1.Ay.getMediaEngine().removeListener(n7.bg.VoiceActivity, o), s.stop();
                         }
                     );
                 }, [e, i, a, l]),

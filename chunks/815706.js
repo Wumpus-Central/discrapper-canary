@@ -6,8 +6,8 @@ var i = n(77729),
     a = n(833551),
     o = n(243612),
     l = n(929921),
-    d = n(969341),
-    _ = n(763827),
+    _ = n(51760),
+    d = n(763827),
     u = n(157257),
     c = n(954571),
     E = n(58149),
@@ -18,7 +18,7 @@ function m() {
         n,
         i,
         s,
-        a = d.Ay.getGoLiveSource(),
+        a = _.Ay.getGoLiveSource(),
         o = l.A.getState().preset;
     if (null != a && ((e = a.quality.resolution), (t = a.quality.frameRate), null != a.desktopSource)) {
         n = a.desktopSource.soundshareSession;
@@ -37,21 +37,21 @@ function m() {
 async function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = __OVERLAY__ ? u.A.getGame() : (0, o.qv)(),
-        d = r.Ay.getRunningGames().find((e) => e.name === l?.name),
-        m = d?.pid != null ? a.default.getTrackedGameByPid(d?.pid) : null,
+        _ = r.Ay.getRunningGames().find((e) => e.name === l?.name),
+        m = _?.pid != null ? a.default.getTrackedGameByPid(_?.pid) : null,
         f = m?.source ?? null,
-        g = m?.overlayMethod ?? a.default.getRenderMethod(d?.pid) ?? null,
-        p = {
+        g = m?.overlayMethod ?? a.default.getRenderMethod(_?.pid) ?? null,
+        I = {
             overlay_game_source: f,
             overlay_game_name: null != l ? l.name : "Unknown Game",
             overlay_app_id: null != l ? l.id : null,
             overlay_render_method: null != g ? s.Ue[g] : null,
-            media_session_id: _.A.getMediaSessionId(),
-            overlay_game_elevated: d?.elevated,
+            media_session_id: d.A.getMediaSessionId(),
+            overlay_game_elevated: _?.elevated,
             input_service_initialized: r.Ay.isSystemServiceInitialized("input-service"),
             hardware_display_count: (await i.A?.hardware?.getDisplayCount?.()) ?? null,
         };
-    switch ((__OVERLAY__ && (p.overlay_render_method = s.Ue[s.Ue.Hook]), (t = { ...p, ...t }), e)) {
+    switch ((__OVERLAY__ && (I.overlay_render_method = s.Ue[s.Ue.Hook]), (t = { ...I, ...t }), e)) {
         case h.HAw.VOICE_CHANNEL_SELECTED:
         case h.HAw.SETTINGS_PANE_VIEWED:
         case h.HAw.GUILD_VIEWED:

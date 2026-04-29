@@ -296,7 +296,7 @@ var eI = n(861638),
     eT = n(827343),
     ef = n(328153),
     eN = n(869146),
-    eS = n(969341),
+    eS = n(51760),
     eL = n(531685),
     eO = n(731854);
 let ey = new Set(),
@@ -5060,7 +5060,7 @@ let l8 = "isHideDevBanner",
                     className: tn()(l2.Wz, l2.mr),
                     children: [
                         (0, E.jsx)(l3.A, { className: l2.Kk }),
-                        G.intl.format(G.t.uyrfYF, { buildNumber: "536721" }),
+                        G.intl.format(G.t.uyrfYF, { buildNumber: "536797" }),
                         (0, E.jsx)(r, {}),
                     ],
                 })
@@ -14193,7 +14193,7 @@ class ho extends X.A {
     }
 }
 let hd = new ho();
-var hc = n(519244);
+var hc = n(925747);
 class hu extends X.A {
     _initialize() {
         eN.A.addChangeListener(this.handlePopoutWindowChange),

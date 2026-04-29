@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => I });
 var i = n(451988),
     r = n(439372),
     s = n(855511),
     a = n(328153),
     o = n(871633),
-    l = n(969341),
-    d = n(763827),
-    _ = n(461213),
+    l = n(51760),
+    _ = n(763827),
+    d = n(461213),
     u = n(485296),
     c = n(607567),
     E = n(927813),
@@ -24,11 +24,11 @@ class g extends r.A {
             ? (this.stores = new Map())
             : ((this.stores = new Map()
                   .set(u.A, () => this._handleSpeakingStoreChanged())
-                  .set(d.A, () => this._handleRTCConnectionStoreChanged())),
+                  .set(_.A, () => this._handleRTCConnectionStoreChanged())),
               this._reset());
     }
     _handleRTCConnectionStoreChanged = () => {
-        let e = d.A.getChannelId();
+        let e = _.A.getChannelId();
         if (this._voiceChannelId !== e) {
             if (((this._voiceChannelId = e), null == e)) return void this._reset();
             null == this._reportInterval &&
@@ -51,8 +51,8 @@ class g extends r.A {
     }
     _trackStartSpeaking() {
         if (this._currentUserSpeaking) {
-            let e = d.A.getChannelId(),
-                t = d.A.getGuildId();
+            let e = _.A.getChannelId(),
+                t = _.A.getGuildId();
             (0, h.zV)(m.HAw.START_SPEAKING, {
                 mode: l.Ay.getMode(),
                 priority: u.A.isCurrentUserPrioritySpeaking(),
@@ -60,18 +60,18 @@ class g extends r.A {
                 server: t,
                 channel_id: e,
                 guild_id: t,
-                rtc_connection_id: d.A.getRTCConnectionId(),
-                media_session_id: d.A.getMediaSessionId(),
+                rtc_connection_id: _.A.getRTCConnectionId(),
+                media_session_id: _.A.getMediaSessionId(),
                 voice_state_count: c.Ay.countVoiceStatesForChannel(this._voiceChannelId),
                 ...this.getGameMetadata(),
-                ...d.A.getPacketStats(),
+                ..._.A.getPacketStats(),
             });
         }
     }
     _trackStartListening() {
         if (l.Ay.isDeaf() || !this._anyoneElseSpeaking) return;
-        let e = d.A.getChannelId(),
-            t = d.A.getGuildId();
+        let e = _.A.getChannelId(),
+            t = _.A.getGuildId();
         (0, h.zV)(m.HAw.START_LISTENING, {
             mute: l.Ay.isMute(),
             anyone_priority: u.A.isAnyonePrioritySpeaking(),
@@ -79,8 +79,8 @@ class g extends r.A {
             server: t,
             channel_id: e,
             guild_id: t,
-            rtc_connection_id: d.A.getRTCConnectionId(),
-            media_session_id: d.A.getMediaSessionId(),
+            rtc_connection_id: _.A.getRTCConnectionId(),
+            media_session_id: _.A.getMediaSessionId(),
             voice_state_count: c.Ay.countVoiceStatesForChannel(this._voiceChannelId),
             ...this.getGameMetadata(),
         });
@@ -88,10 +88,10 @@ class g extends r.A {
     _terminate() {
         this._reset(),
             u.A.removeChangeListener(this._handleSpeakingStoreChanged),
-            d.A.removeChangeListener(this._handleRTCConnectionStoreChanged);
+            _.A.removeChangeListener(this._handleRTCConnectionStoreChanged);
     }
     getGameMetadata() {
-        let e = _.A.findActivity((e) => e.type === m.$pd.PLAYING),
+        let e = d.A.findActivity((e) => e.type === m.$pd.PLAYING),
             t = a.Ay.getCurrentGameForAnalytics();
         return {
             game_platform: (0, s.A)(e),
@@ -104,4 +104,4 @@ class g extends r.A {
         };
     }
 }
-let p = new g();
+let I = new g();

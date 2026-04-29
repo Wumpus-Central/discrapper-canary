@@ -1,24 +1,24 @@
-n.d(t, { default: () => R });
-var i = n(627968),
-    s = n(64700),
-    l = n(17928),
-    o = n(189213),
-    a = n(243721),
-    r = n(106236),
-    d = n(452027),
+n.d(t, { default: () => y });
+var l = n(627968),
+    i = n(64700),
+    s = n(17928),
+    a = n(189213),
+    o = n(243721),
+    d = n(106236),
+    r = n(452027),
     h = n(331322),
     u = n(144228),
-    c = n(827343),
+    g = n(827343),
     p = n(635242),
-    g = n(625841),
-    m = n(969341),
-    _ = n(824744),
-    v = n(319437),
-    C = n(652215),
-    b = n(731854),
-    f = n(985018),
-    x = n(818050);
-class A extends s.PureComponent {
+    A = n(625841),
+    c = n(51760),
+    V = n(824744),
+    x = n(319437),
+    T = n(652215),
+    C = n(731854),
+    j = n(985018),
+    m = n(818050);
+class b extends i.PureComponent {
     handleAutoThresholdChange = (e) => {
         let { onThresholdChange: t, threshold: n } = this.props;
         t?.(n, e);
@@ -32,8 +32,8 @@ class A extends s.PureComponent {
     }
     renderAutomaticVADToggle() {
         let { autoThreshold: e } = this.props;
-        return (0, i.jsx)(a.d, {
-            label: f.intl.string(f.t.I1Zuq0),
+        return (0, l.jsx)(o.d, {
+            label: j.intl.string(j.t.I1Zuq0),
             checked: e,
             onChange: this.handleAutoThresholdChange,
         });
@@ -41,125 +41,125 @@ class A extends s.PureComponent {
     renderSlider() {
         let { autoThreshold: e, threshold: t } = this.props;
         if (!e)
-            return (0, i.jsx)(r.A, {
+            return (0, l.jsx)(d.A, {
                 initialValue: t + 100,
                 onValueRender: this.handleValueRender,
                 onValueChange: this.handleSensitivityChange,
-                label: f.intl.string(f.t["sqUm+k"]),
+                label: j.intl.string(j.t["sqUm+k"]),
                 hideLabel: !0,
             });
     }
     render() {
-        return (0, i.jsx)("div", {
-            className: x.SX,
-            children: (0, i.jsxs)(d.D, {
-                label: f.intl.string(f.t["sqUm+k"]),
+        return (0, l.jsx)("div", {
+            className: m.SX,
+            children: (0, l.jsxs)(r.D, {
+                label: j.intl.string(j.t["sqUm+k"]),
                 role: "group",
                 children: [this.renderAutomaticVADToggle(), this.renderSlider()],
             }),
         });
     }
 }
-function D(e) {
+function M(e) {
     let t,
-        { mediaEngineContext: n, speaking: s = !1 } = e,
+        { mediaEngineContext: n, speaking: i = !1 } = e,
         {
-            inputVolume: o,
-            outputVolume: a,
-            inputMode: v,
-            shortcut: x,
-            vadThreshold: D,
-            vadAutoThreshold: R,
-            delay: E,
-        } = (0, l.cf)([m.Ay], () => ({
-            inputVolume: m.Ay.getInputVolume(),
-            outputVolume: m.Ay.getOutputVolume(),
-            inputMode: m.Ay.getMode(n),
-            shortcut: m.Ay.getModeOptions(n).shortcut,
-            vadThreshold: m.Ay.getModeOptions(n).threshold,
-            vadAutoThreshold: m.Ay.getModeOptions(n).autoThreshold,
-            delay: m.Ay.getModeOptions(n).delay,
+            inputVolume: a,
+            outputVolume: o,
+            inputMode: x,
+            shortcut: m,
+            vadThreshold: M,
+            vadAutoThreshold: y,
+            delay: O,
+        } = (0, s.cf)([c.Ay], () => ({
+            inputVolume: c.Ay.getInputVolume(),
+            outputVolume: c.Ay.getOutputVolume(),
+            inputMode: c.Ay.getMode(n),
+            shortcut: c.Ay.getModeOptions(n).shortcut,
+            vadThreshold: c.Ay.getModeOptions(n).threshold,
+            vadAutoThreshold: c.Ay.getModeOptions(n).autoThreshold,
+            delay: c.Ay.getModeOptions(n).delay,
         })),
         I = [
-            { value: C.TBI.VOICE_ACTIVITY, name: f.intl.string(f.t.cHCEOJ) },
-            { value: C.TBI.PUSH_TO_TALK, name: f.intl.string(f.t.Q8gkVL) },
+            { value: T.TBI.VOICE_ACTIVITY, name: j.intl.string(j.t.cHCEOJ) },
+            { value: T.TBI.PUSH_TO_TALK, name: j.intl.string(j.t.Q8gkVL) },
         ];
     return (
         (t =
-            v === C.TBI.PUSH_TO_TALK
-                ? (0, i.jsxs)(h.B, {
+            x === T.TBI.PUSH_TO_TALK
+                ? (0, l.jsxs)(h.B, {
                       gap: 20,
                       children: [
-                          (0, i.jsx)(d.D, {
-                              label: f.intl.string(f.t.YkDjVM),
-                              children: (0, i.jsx)(p.A, {
-                                  defaultValue: x,
-                                  onChange: (e) => c.A.setMode(v, { shortcut: e }, n),
+                          (0, l.jsx)(r.D, {
+                              label: j.intl.string(j.t.YkDjVM),
+                              children: (0, l.jsx)(p.A, {
+                                  defaultValue: m,
+                                  onChange: (e) => g.A.setMode(x, { shortcut: e }, n),
                               }),
                           }),
-                          (0, i.jsx)(r.A, {
-                              label: f.intl.string(f.t.y0ShVt),
-                              initialValue: E,
-                              onValueChange: (e) => c.A.setMode(v, { delay: e }, n),
+                          (0, l.jsx)(d.A, {
+                              label: j.intl.string(j.t.y0ShVt),
+                              initialValue: O,
+                              onValueChange: (e) => g.A.setMode(x, { delay: e }, n),
                               onValueRender: (e) => (e >= 1e3 ? ((e /= 1e3), `${e.toFixed(2)}s`) : `${e.toFixed(0)}ms`),
-                              maxValue: C.IjB,
+                              maxValue: T.IjB,
                           }),
                       ],
                   })
-                : (0, i.jsx)(A, {
-                      speaking: s,
-                      inputMode: v,
-                      threshold: D,
-                      autoThreshold: R,
-                      onThresholdChange: (e, t) => c.A.setMode(v, { threshold: e, autoThreshold: t }, n),
+                : (0, l.jsx)(b, {
+                      speaking: i,
+                      inputMode: x,
+                      threshold: M,
+                      autoThreshold: y,
+                      onThresholdChange: (e, t) => g.A.setMode(x, { threshold: e, autoThreshold: t }, n),
                   })),
-        (0, i.jsxs)(h.B, {
+        (0, l.jsxs)(h.B, {
             gap: 20,
             children: [
-                (0, i.jsx)(g.U, {
-                    label: f.intl.string(f.t.hHMYbb),
-                    deviceType: b.oh.AUDIO_INPUT,
+                (0, l.jsx)(A.U, {
+                    label: j.intl.string(j.t.hHMYbb),
+                    deviceType: C.oh.AUDIO_INPUT,
                     location: "VoiceSettingsModal",
                 }),
-                (0, i.jsx)(r.A, {
-                    label: f.intl.string(f.t.OX2Bnr),
-                    initialValue: (0, _.M)(o),
-                    asValueChanges: (e) => c.A.setInputVolume((0, _.w)(e)),
+                (0, l.jsx)(d.A, {
+                    label: j.intl.string(j.t.OX2Bnr),
+                    initialValue: (0, V.M)(a),
+                    asValueChanges: (e) => g.A.setInputVolume((0, V.w)(e)),
                 }),
-                (0, i.jsx)(g.U, {
-                    label: f.intl.string(f.t.dl18zb),
-                    deviceType: b.oh.AUDIO_OUTPUT,
+                (0, l.jsx)(A.U, {
+                    label: j.intl.string(j.t.dl18zb),
+                    deviceType: C.oh.AUDIO_OUTPUT,
                     location: "VoiceSettingsModal",
                 }),
-                (0, i.jsx)(r.A, {
-                    label: f.intl.string(f.t.eATD2B),
-                    initialValue: (0, _.M)(a),
+                (0, l.jsx)(d.A, {
+                    label: j.intl.string(j.t.eATD2B),
+                    initialValue: (0, V.M)(o),
                     maxValue: 200,
-                    asValueChanges: (e) => c.A.setOutputVolume((0, _.w)(e)),
+                    asValueChanges: (e) => g.A.setOutputVolume((0, V.w)(e)),
                 }),
-                (0, i.jsx)(u.z, {
-                    label: f.intl.string(f.t["pS+K2L"]),
-                    onChange: (e) => c.A.setMode(e, {}, n),
+                (0, l.jsx)(u.z, {
+                    label: j.intl.string(j.t["pS+K2L"]),
+                    onChange: (e) => g.A.setMode(e, {}, n),
                     options: I,
-                    value: v,
+                    value: x,
                 }),
                 t,
             ],
         })
     );
 }
-function R(e) {
+function y(e) {
     return (
-        (0, v.A)(() => {
-            null != C.QCW && e.onClose();
+        (0, x.A)(() => {
+            null != T.QCW && e.onClose();
         }),
-        (0, i.jsx)(o.Modal, {
-            title: f.intl.string(f.t.NiTd0e),
+        (0, l.jsx)(a.Modal, {
+            title: j.intl.string(j.t.NiTd0e),
             subtitle: e.subtitle,
             actions: void 0,
             transitionState: e.transitionState,
             onClose: e.onClose,
-            children: (0, i.jsx)(D, { mediaEngineContext: e.mediaEngineContext ?? b.x.DEFAULT }),
+            children: (0, l.jsx)(M, { mediaEngineContext: e.mediaEngineContext ?? C.x.DEFAULT }),
         })
     );
 }
