@@ -1,50 +1,44 @@
-n.d(t, { C: () => a, m: () => l });
+n.d(t, { C: () => r, m: () => s });
 var i = n(627968);
 n(64700);
-var r = n(192308);
-let a = "command-share-modal";
-function l(e) {
+var a = n(192308);
+let r = "command-share-modal";
+function s(e) {
     let {
         applicationId: t,
-        channel: l,
-        command: s,
+        channel: s,
+        command: l,
         previewMessage: o,
         requireLaunchChannel: d,
         contextKey: c,
-        onShareResult: u,
+        onShareResult: _,
     } = e;
-    (0, r.openModalLazy)(
+    (0, a.openModalLazy)(
         async () => {
             let { ApplicationCommandShareModal: e } = await Promise.all([
-                n.e("31320"),
+                n.e("62349"),
                 n.e("40841"),
                 n.e("69273"),
-                n.e("81349"),
-                n.e("13709"),
-                n.e("63941"),
+                n.e("80731"),
+                n.e("77083"),
                 n.e("63009"),
-                n.e("47181"),
-                n.e("8528"),
+                n.e("16933"),
+                n.e("7026"),
                 n.e("45650"),
                 n.e("97189"),
-                n.e("24059"),
-                n.e("51402"),
-                n.e("27660"),
-                n.e("47715"),
-                n.e("85484"),
-                n.e("89516"),
-                n.e("73679"),
-                n.e("84615"),
-                n.e("27755"),
+                n.e("48418"),
+                n.e("13520"),
+                n.e("62296"),
+                n.e("17546"),
+                n.e("333"),
+                n.e("68432"),
                 n.e("79705"),
-                n.e("15758"),
                 n.e("43763"),
-                n.e("74112"),
                 n.e("55658"),
                 n.e("24092"),
                 n.e("23924"),
                 n.e("15510"),
-                n.e("48226"),
+                n.e("25845"),
                 n.e("20287"),
                 n.e("28367"),
                 n.e("35429"),
@@ -63,12 +57,10 @@ function l(e) {
                 n.e("20317"),
                 n.e("84569"),
                 n.e("2368"),
-                n.e("27084"),
                 n.e("24313"),
                 n.e("48405"),
                 n.e("63185"),
                 n.e("19551"),
-                n.e("84150"),
                 n.e("45959"),
                 n.e("18573"),
                 n.e("55057"),
@@ -78,7 +70,6 @@ function l(e) {
                 n.e("34303"),
                 n.e("48172"),
                 n.e("28866"),
-                n.e("54961"),
                 n.e("8304"),
                 n.e("58038"),
                 n.e("93159"),
@@ -92,8 +83,6 @@ function l(e) {
                 n.e("58007"),
                 n.e("5812"),
                 n.e("17363"),
-                n.e("58337"),
-                n.e("26437"),
                 n.e("76602"),
                 n.e("28229"),
                 n.e("21921"),
@@ -105,7 +94,6 @@ function l(e) {
                 n.e("6949"),
                 n.e("29871"),
                 n.e("17249"),
-                n.e("41250"),
                 n.e("53917"),
                 n.e("15423"),
                 n.e("67861"),
@@ -125,7 +113,6 @@ function l(e) {
                 n.e("79745"),
                 n.e("64850"),
                 n.e("70104"),
-                n.e("68802"),
                 n.e("2564"),
                 n.e("47417"),
                 n.e("78453"),
@@ -149,19 +136,19 @@ function l(e) {
             return (n) =>
                 (0, i.jsx)(e, {
                     applicationId: t,
-                    channel: l,
-                    command: s,
+                    channel: s,
+                    command: l,
                     previewMessage: o,
-                    onShareResult: u,
+                    onShareResult: _,
                     requireLaunchChannel: d,
                     ...n,
                 });
         },
         {
-            modalKey: a,
+            modalKey: r,
             contextKey: c,
             onCloseCallback: () => {
-                u(!1);
+                _(!1);
             },
         },
     );

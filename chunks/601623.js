@@ -1,4 +1,4 @@
-n.d(t, { w: () => t6, A: () => t3 });
+n.d(t, { w: () => t6, A: () => t4 });
 var i = n(627968),
     l = n(64700),
     r = n(989349),
@@ -13,11 +13,11 @@ if (21552 == n.j) var T = n(939249);
 if (21552 == n.j) var I = n(417098);
 if (21552 == n.j) var N = n(349288);
 if (21552 == n.j) var u = n(403581);
-if (21552 == n.j) var d = n(192308);
-if (21552 == n.j) var R = n(289873);
+if (21552 == n.j) var R = n(192308);
+if (21552 == n.j) var d = n(289873);
 var O = n(157559),
-    C = n(827343),
-    P = n(830215),
+    P = n(827343),
+    C = n(830215),
     S = n(228366);
 function M(e) {
     S.h.dispatch({ type: "DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS", skuId: e });
@@ -54,8 +54,8 @@ if (21552 == n.j) var V = n(857250);
 if (21552 == n.j) var F = n(97483);
 var H = n(803306),
     Y = n(975807),
-    W = n(773952),
-    w = n(532794),
+    w = n(773952),
+    W = n(532794),
     K = n(745299),
     $ = n(976860),
     z = n(780964),
@@ -91,9 +91,9 @@ let eE = (e) => {
                             (0, i.jsx)(I.Z_, {
                                 noticeType: l,
                                 onClick: () => {
-                                    (0, d.openModalLazy)(async () => {
+                                    (0, R.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("75058"),
+                                            n.e("81013"),
                                             n.e("44602"),
                                             n.e("25280"),
                                         ]).then(n.bind(n, 987482));
@@ -128,7 +128,7 @@ let eE = (e) => {
                             (0, i.jsx)(J.A, { className: ea.tV }),
                             es.intl.string(es.t["5NUVHH"]),
                             (0, i.jsx)(I.Z_, {
-                                onClick: () => (0, W.A)({ platformType: ei.fg2.SPOTIFY, location: "Notice Bar" }),
+                                onClick: () => (0, w.A)({ platformType: ei.fg2.SPOTIFY, location: "Notice Bar" }),
                                 noticeType: l,
                                 children: es.intl.string(es.t.S0W8Z5),
                             }),
@@ -146,7 +146,7 @@ let eE = (e) => {
                             }),
                             es.intl.string(es.t.WHWgoY),
                             (0, i.jsx)(I.zr, {
-                                onClick: () => (0, W.A)({ platformType: ei.fg2.PLAYSTATION, location: "Notice Bar" }),
+                                onClick: () => (0, w.A)({ platformType: ei.fg2.PLAYSTATION, location: "Notice Bar" }),
                                 children: es.intl.string(es.t.S0W8Z5),
                             }),
                         ],
@@ -165,9 +165,9 @@ let eE = (e) => {
                                                 n.bind(n, 917136),
                                             ),
                                             { ticket: t, challenge: l } = await e();
-                                        (0, d.openModalLazy)(async () => {
+                                        (0, R.openModalLazy)(async () => {
                                             let { RegisterWebAuthnCredentialModal: e } = await Promise.all([
-                                                n.e("87208"),
+                                                n.e("90217"),
                                                 n.e("4736"),
                                                 n.e("40114"),
                                                 n.e("8508"),
@@ -263,7 +263,7 @@ let eE = (e) => {
                             es.intl.string(es.t["O9GI+k"]),
                             (0, i.jsx)(I.Z_, {
                                 onClick: () => {
-                                    (0, w.A)({
+                                    (0, W.A)({
                                         subscriptionTier: el.pe.TIER_2,
                                         analyticsLocations: [L.A.CHECKOUT_RECOVERY_NAGBAR],
                                         analyticsLocation: ei.ThZ.CHECKOUT_RECOVERY_NAGBAR,
@@ -311,7 +311,7 @@ let eT = (e) => {
                       l.body,
                       (0, i.jsx)(I.Z_, {
                           onClick: () => {
-                              (0, w.A)({
+                              (0, W.A)({
                                   isGift: !0,
                                   initialPlanId: null,
                                   analyticsLocations: n,
@@ -344,13 +344,13 @@ let eT = (e) => {
     };
 var eN = n(264779),
     eu = n(597758),
-    ed = n(287809),
-    eR = n(927578),
+    eR = n(287809),
+    ed = n(927578),
     eO = n(946319);
-let eC = (e) => {
+let eP = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, eN.Cp)(),
-        r = (0, o.bG)([ed.default], () => !eR.Ay.isPremium(ed.default.getCurrentUser())),
+        r = (0, o.bG)([eR.default], () => !ed.Ay.isPremium(eR.default.getCurrentUser())),
         s = l.useCallback(() => {
             ee.default.track(ei.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
                 (0, Q.openUserSettings)(z.X.GIFT_PANEL),
@@ -390,7 +390,7 @@ let eC = (e) => {
               },
           });
 };
-var eP = n(587054),
+var eC = n(587054),
     eS = n(487329),
     eM = n(102609),
     eD = n(736056);
@@ -422,11 +422,11 @@ function eX(e) {
                       notice_type: ei.kqX.GUILD_RAID_NOTIFICATION,
                       guild_id: E.id,
                   })
-                : (0, d.openModalLazy)(async () => {
+                : (0, R.openModalLazy)(async () => {
                       let e = { source: eh.Eo.NAGBAR, alertType: (0, eL.$5)(A) },
                           { default: t } = await Promise.all([
                               n.e("43763"),
-                              n.e("47715"),
+                              n.e("80731"),
                               n.e("40258"),
                               n.e("73669"),
                               n.e("46313"),
@@ -435,7 +435,7 @@ function eX(e) {
                       return (n) => (0, i.jsx)(t, { ...n, guildId: E.id, analyticsData: e });
                   });
         },
-        R = (0, i.jsx)(ep.Ay, { className: ej.$f, guild: E, size: ep.Ay.Sizes.MINI }),
+        d = (0, i.jsx)(ep.Ay, { className: ej.$f, guild: E, size: ep.Ay.Sizes.MINI }),
         O = (0, eL.ql)(A, E.name);
     if (null != (A.dmsDisabledUntil ?? A.invitesDisabledUntil) && c)
         return (0, i.jsxs)(I.$T, {
@@ -443,7 +443,7 @@ function eX(e) {
             color: I.Hv.NEUTRAL,
             children: [
                 (0, i.jsx)(I.PM, { onClick: t, noticeType: ei.kqX.GUILD_RAID_NOTIFICATION }),
-                R,
+                d,
                 O,
                 (0, i.jsx)(I.zr, {
                     className: ej.hP,
@@ -458,20 +458,20 @@ function eX(e) {
                 }),
             ],
         });
-    let C = (0, eL.P$)(A)
+    let P = (0, eL.P$)(A)
             ? es.intl.formatToPlainString(es.t.tZTx2E, { guildName: E.name })
             : (0, eL.Qm)(A)
               ? es.intl.formatToPlainString(es.t["1bSmxr"], { guildName: E.name })
               : es.intl.formatToPlainString(es.t.W87xDE, { guildName: E.name }),
-        P = T && s === eG.VV.MEMBER_SAFETY;
+        C = T && s === eG.VV.MEMBER_SAFETY;
     return (0, i.jsxs)(I.$T, {
         className: ej.lm,
         color: I.Hv.WARNING,
         children: [
             (0, i.jsx)(I.PM, { onClick: t, noticeType: ei.kqX.GUILD_RAID_NOTIFICATION }),
-            R,
-            C,
-            !P &&
+            d,
+            P,
+            !C &&
                 (0, i.jsx)(I.zr, {
                     className: ej.hP,
                     onClick: () => u(!0),
@@ -497,7 +497,7 @@ function eY(e) {
         a = r ? es.intl.string(es.t.S09nw4) : es.intl.string(es.t.tEttXd);
     return (0, i.jsxs)(I.$T, { color: I.Hv.DANGER, children: [s, (0, i.jsx)(I.zr, { onClick: l, children: a })] });
 }
-function eW() {
+function ew() {
     let e = (0, ev.A)({ scrollPosition: er._F.GUILD_TAG });
     return (0, i.jsxs)(I.$T, {
         color: I.Hv.DANGER,
@@ -507,7 +507,7 @@ function eW() {
         ],
     });
 }
-function ew(e) {
+function eW(e) {
     let { analyticsLocations: t, ...n } = e,
         { analyticsLocations: l } = (0, G.Ay)(t, L.A.AUTOMOD_NAGBAR_NOTICE),
         r = (0, o.bG)([eB.default, eb.Ay], () => {
@@ -518,7 +518,7 @@ function ew(e) {
     return r.has(eH.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || r.has(eH.D.AUTOMOD_QUARANTINED_BIO)
         ? (0, i.jsx)(eY, { ...n, analyticsLocations: l })
         : r.has(eH.D.AUTOMOD_QUARANTINED_SERVER_TAG)
-          ? (0, i.jsx)(eW, {})
+          ? (0, i.jsx)(ew, {})
           : (0, i.jsx)(eY, { ...n, analyticsLocations: l });
 }
 var eK = n(202384),
@@ -529,21 +529,21 @@ var ez = n(503698),
 if (21552 == n.j) var eQ = n(873263);
 if (21552 == n.j) var eJ = n(314116);
 if (21552 == n.j) var e0 = n(821609);
-var e5 = n(334465),
-    e2 = n(624458),
+var e2 = n(334465),
+    e5 = n(624458),
     e1 = n(513461),
     e7 = n(709977),
     e8 = n(212455),
     e9 = n(182430),
     e6 = n(580537);
-let e4 =
+let e3 =
     21552 == n.j
         ? () => {
               let e = (0, o.bG)([ey.A], () => ey.A.getGuildId(), []),
                   t = (0, o.bG)([eg.A], () => eg.A.getGuild(e), [e]),
                   l = (0, o.bG)([e8.A], () => (null != e ? e8.A.getRequest(e) : null), [e]),
                   r = (0, eQ.zy)(),
-                  s = (0, e5.B)(r.pathname, ei.BVt.CHANNEL(t?.id, eG.VV.GUILD_ONBOARDING))?.isExact === !0;
+                  s = (0, e2.B)(r.pathname, ei.BVt.CHANNEL(t?.id, eG.VV.GUILD_ONBOARDING))?.isExact === !0;
               if (null == t || !(0, e7.Qd)(t) || s) return null;
               let a = l?.applicationStatus ?? e1.B5.STARTED,
                   E = null,
@@ -560,7 +560,7 @@ let e4 =
                                   subtitle: es.intl.string(es.t["13tjTU"]),
                                   variant: "primary",
                                   confirmText: es.intl.string(es.t["cY+Oob"]),
-                                  onConfirm: () => e2.A.removeGuildJoinRequest(t.id),
+                                  onConfirm: () => e5.A.removeGuildJoinRequest(t.id),
                               });
                           });
                       break;
@@ -568,7 +568,7 @@ let e4 =
                       (E = es.intl.string(es.t.lk30cY)),
                           (_ = es.intl.string(es.t["8RrsHr"])),
                           (A = () => {
-                              (0, d.openModalLazy)(async () => {
+                              (0, R.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([n.e("25099"), n.e("14382")]).then(
                                       n.bind(n, 463325),
                                   );
@@ -593,7 +593,7 @@ let e4 =
               });
           }
         : null;
-if (21552 == n.j) var e3 = n(477155);
+if (21552 == n.j) var e4 = n(477155);
 var te = n(22877);
 function tt(e) {
     let { buttonText: t, onGoBack: n, onDismiss: l, showCloseButton: r } = e;
@@ -601,7 +601,7 @@ function tt(e) {
         className: te.eR,
         children: [
             r && (0, i.jsx)(I.PM, { onClick: l, className: te.b, noticeType: ei.kqX.BACK_TO_PREVIOUS_SCREEN }),
-            (0, i.jsx)(e0.$, { text: t, variant: "overlay-secondary", size: "sm", icon: e3.r, onClick: n }),
+            (0, i.jsx)(e0.$, { text: t, variant: "overlay-secondary", size: "sm", icon: e4.r, onClick: n }),
         ],
     });
 }
@@ -639,7 +639,7 @@ let tE =
                               (0, $.JK)().goBack();
                           },
                           children: [
-                              (0, i.jsx)(e3.r, { size: "xs", color: "currentColor", className: ta.UE }),
+                              (0, i.jsx)(e4.r, { size: "xs", color: "currentColor", className: ta.UE }),
                               es.intl.string(es.t["13/7kX"]),
                           ],
                       }),
@@ -669,8 +669,8 @@ var tT = n(367727),
     tI = n(635995),
     tN = n(88001),
     tu = n(466919),
-    td = n(375043);
-function tR(e) {
+    tR = n(375043);
+function td(e) {
     let { premiumSubscription: t } = e,
         r = t?.id,
         s = l.useCallback(() => {
@@ -688,14 +688,14 @@ function tR(e) {
                     notice_type: ei.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR,
                 }),
                 s(),
-                (0, d.openModalLazy)(async () => {
+                (0, R.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e("44616"), n.e("85579")]).then(n.bind(n, 785606));
                     return (n) => (0, i.jsx)(e, { ...n, subscription: t });
                 }));
         }, [t, s]);
     return (0, i.jsxs)(tI.T0, {
         onClick: a,
-        className: td.A,
+        className: tR.A,
         children: [
             (0, i.jsx)(u.t, { color: tc.A.colors.ICON_STRONG }),
             (0, i.jsx)(tI.In, {
@@ -711,8 +711,8 @@ function tR(e) {
     });
 }
 var tO = n(549996),
-    tC = n(498470);
-function tP() {
+    tP = n(498470);
+function tC() {
     let e = (0, tO.c)(e_.C.NAGBAR),
         t = e?.properties.properties.oneofKind === "nagbar" ? e.properties.properties.nagbar : null,
         n = e?.promotionId,
@@ -724,7 +724,7 @@ function tP() {
             ee.default.track(ei.HAw.APP_NOTICE_CLOSED, { notice_type: ei.kqX.PREMIUM_MARKETING_NAGBAR }), r();
         }, [r]);
     if (null == t) return null;
-    let a = (0, tC.h)({ buttonAction: t.ctaAction, deeplinkSection: t.deeplinkSection, onClose: r });
+    let a = (0, tP.h)({ buttonAction: t.ctaAction, deeplinkSection: t.deeplinkSection, onClose: r });
     return (0, i.jsxs)(tI.T0, {
         onClick: s,
         children: [
@@ -756,7 +756,7 @@ function tm() {
                   es.intl.string(es.t.XkeW9N),
                   (0, i.jsx)(I.Z_, {
                       onClick: () => {
-                          (0, d.openModalLazy)(async () => {
+                          (0, R.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
                                   n.e("56030"),
                                   n.e("18413"),
@@ -891,7 +891,7 @@ function tY(e) {
             {
                 text: es.intl.string(es.t.BddRzS),
                 onClick: () => {
-                    t && C.A.setSilenceWarning(!1), e.onClose();
+                    t && P.A.setSilenceWarning(!1), e.onClose();
                 },
                 variant: "primary",
             },
@@ -905,8 +905,8 @@ function tY(e) {
         ...e,
     });
 }
-var tW = n(51760),
-    tw = n(763827),
+var tw = n(51760),
+    tW = n(763827),
     tK = n(67480),
     t$ = n(147964),
     tz = n(519057),
@@ -914,8 +914,8 @@ var tW = n(51760),
     tQ = n(723702),
     tJ = n(325278),
     t0 = n(831502),
-    t5 = n(731854);
-let t2 = new v.A("Notice"),
+    t2 = n(731854);
+let t5 = new v.A("Notice"),
     t1 = (e) => {
         let { error: t, allowClick: n = !1 } = e,
             l = (0, eS.B1)(t)?.errorCode,
@@ -967,11 +967,11 @@ function t9(e) {
     let t,
         n,
         { noticeType: l } = e,
-        r = (0, to.x5)(t5.oh.AUDIO_INPUT),
+        r = (0, to.x5)(t2.oh.AUDIO_INPUT),
         s = r?.guid ?? "",
-        { inputDeviceOSMuted: a, inputDeviceOSVolume: E } = (0, o.cf)([tW.Ay], () => ({
-            inputDeviceOSMuted: tW.Ay.getInputDeviceOSMuted(),
-            inputDeviceOSVolume: tW.Ay.getInputDeviceOSVolume(),
+        { inputDeviceOSMuted: a, inputDeviceOSVolume: E } = (0, o.cf)([tw.Ay], () => ({
+            inputDeviceOSMuted: tw.Ay.getInputDeviceOSMuted(),
+            inputDeviceOSVolume: tw.Ay.getInputDeviceOSVolume(),
         })),
         _ = !1;
     return (
@@ -981,7 +981,7 @@ function t9(e) {
             : 0 === E
               ? ((t = es.intl.string(es.t.j4gGA4)),
                 (n = (0, i.jsx)(I.eC, { href: t8(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
-              : tW.Ay.supports(t5.O5.LOOPBACK)
+              : tw.Ay.supports(t2.O5.LOOPBACK)
                 ? ((t = es.intl.string(es.t.dNAJ18)),
                   (_ = !0),
                   (n = (0, i.jsx)(I.zr, {
@@ -1002,7 +1002,7 @@ function t9(e) {
                 (0, i.jsx)(I.PM, {
                     noticeType: l,
                     onClick: () => {
-                        t6(), (0, d.openModal)((e) => (0, i.jsx)(tY, { ...e }));
+                        t6(), (0, R.openModal)((e) => (0, i.jsx)(tY, { ...e }));
                     },
                 }),
                 t,
@@ -1015,10 +1015,10 @@ function t9(e) {
 function t6(e) {
     D.A.dismiss(null != e ? { untilAtLeast: s()(e) } : void 0);
 }
-let t4 =
+let t3 =
     21552 == n.j
         ? l.memo(function () {
-              let e = (0, o.bG)([ed.default], () => ed.default.getCurrentUser()),
+              let e = (0, o.bG)([eR.default], () => eR.default.getCurrentUser()),
                   t = (0, o.bG)([ey.A], () => ey.A.getGuildId()),
                   r = (0, o.bG)([tz.Ay], () => tz.Ay.getNotice()),
                   { analyticsLocations: s } = (0, G.Ay)(),
@@ -1059,9 +1059,9 @@ let t4 =
                   S = null != r.type ? tz.rV[r.type] : null,
                   D = null != r.type ? tz.f7[r.type] : null,
                   x = tz.pe[r.type];
-              if (null != T) return (0, i.jsx)(eP.$, { dismissibleContent: T, noticeType: r.type });
+              if (null != T) return (0, i.jsx)(eC.$, { dismissibleContent: T, noticeType: r.type });
               if (null != S) return (0, i.jsx)(eI, { dismissibleContent: S });
-              if (null != D) return (0, i.jsx)(eC, { dismissibleContent: D });
+              if (null != D) return (0, i.jsx)(eP, { dismissibleContent: D });
               if (null != x) return (0, i.jsx)(eE, { dismissibleContent: x, noticeType: r.type });
               let L = r.metadata?.premiumType;
               switch (r.type) {
@@ -1070,7 +1070,7 @@ let t4 =
                   case ei.kqX.LURKING_GUILD:
                       return (0, i.jsx)(tE, {});
                   case ei.kqX.PENDING_MEMBER:
-                      return (0, i.jsx)(e4, {});
+                      return (0, i.jsx)(e3, {});
                   case ei.kqX.INVITED_TO_SPEAK:
                       return (0, i.jsx)(tX, {});
                   case ei.kqX.GUILD_RAID_NOTIFICATION:
@@ -1186,7 +1186,7 @@ let t4 =
                               es.intl.string(es.t.bOQ3jV),
                               (0, i.jsx)(I.Z_, {
                                   onClick: () => {
-                                      let e = tw.A.getRemoteDisconnectVoiceChannelId();
+                                      let e = tW.A.getRemoteDisconnectVoiceChannelId();
                                       null != e && null != tg.A.getChannel(e) && p.default.selectVoiceChannel(e);
                                   },
                                   noticeType: r.type,
@@ -1207,7 +1207,7 @@ let t4 =
                               es.intl.string(es.t.jY2lUA),
                               (0, i.jsx)(I.Z_, {
                                   onClick: () => {
-                                      let e = tw.A.getLastSessionVoiceChannelId();
+                                      let e = tW.A.getLastSessionVoiceChannelId();
                                       null != e && null != tg.A.getChannel(e) && p.default.selectVoiceChannel(e);
                                   },
                                   noticeType: r.type,
@@ -1260,7 +1260,7 @@ let t4 =
                               (0, i.jsx)(I.Z_, {
                                   noticeType: r.type,
                                   onClick: () => {
-                                      P.A.verifyResend(),
+                                      C.A.verifyResend(),
                                           O.A.show({
                                               title: es.intl.string(es.t.LykQYk),
                                               body: es.intl.format(es.t.azKEPy, { email: e?.email }),
@@ -1300,7 +1300,7 @@ let t4 =
                                   (0, i.jsx)(I.PM, {
                                       noticeType: r.type,
                                       onClick: () => {
-                                          C.A.setEnableHardwareMuteNotice(!1), t6();
+                                          P.A.setEnableHardwareMuteNotice(!1), t6();
                                       },
                                   }),
                                   (0, i.jsx)(I.eC, {
@@ -1324,7 +1324,7 @@ let t4 =
                                   (0, i.jsx)(I.PM, {
                                       noticeType: r.type,
                                       onClick: () => {
-                                          C.A.setEnableHardwareMuteNotice(!1), t6();
+                                          P.A.setEnableHardwareMuteNotice(!1), t6();
                                       },
                                   }),
                               ],
@@ -1345,8 +1345,8 @@ let t4 =
                       });
                   case ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
                       if (null == r.metadata) return null;
-                      let { skuId: W, applicationId: K } = r.metadata,
-                          $ = tK.A.get(W),
+                      let { skuId: w, applicationId: K } = r.metadata,
+                          $ = tK.A.get(w),
                           Z = j.A.getApplication(K);
                       if (null == $ || null == Z) return null;
                       let J = { page: ei.liQ.IN_APP };
@@ -1366,28 +1366,24 @@ let t4 =
                                           let { openIAPPurchaseModal: e } = await Promise.all([
                                               n.e("40841"),
                                               n.e("69273"),
-                                              n.e("81349"),
-                                              n.e("13709"),
-                                              n.e("63941"),
+                                              n.e("80731"),
+                                              n.e("77083"),
                                               n.e("63009"),
-                                              n.e("47181"),
-                                              n.e("31320"),
-                                              n.e("8528"),
+                                              n.e("16933"),
+                                              n.e("62349"),
+                                              n.e("7026"),
                                               n.e("45650"),
                                               n.e("97189"),
-                                              n.e("24059"),
-                                              n.e("51402"),
-                                              n.e("27660"),
-                                              n.e("47715"),
-                                              n.e("85484"),
-                                              n.e("89516"),
-                                              n.e("73679"),
-                                              n.e("84615"),
-                                              n.e("27755"),
+                                              n.e("48418"),
+                                              n.e("13520"),
+                                              n.e("62296"),
+                                              n.e("17546"),
+                                              n.e("333"),
+                                              n.e("68432"),
                                               n.e("79705"),
                                               n.e("23924"),
                                               n.e("15510"),
-                                              n.e("48226"),
+                                              n.e("25845"),
                                               n.e("20287"),
                                               n.e("28367"),
                                               n.e("35429"),
@@ -1406,12 +1402,10 @@ let t4 =
                                               n.e("20317"),
                                               n.e("84569"),
                                               n.e("2368"),
-                                              n.e("27084"),
                                               n.e("24313"),
                                               n.e("48405"),
                                               n.e("63185"),
                                               n.e("19551"),
-                                              n.e("84150"),
                                               n.e("45959"),
                                               n.e("18573"),
                                               n.e("55057"),
@@ -1421,7 +1415,6 @@ let t4 =
                                               n.e("34303"),
                                               n.e("48172"),
                                               n.e("28866"),
-                                              n.e("54961"),
                                               n.e("8304"),
                                               n.e("58038"),
                                               n.e("93159"),
@@ -1454,7 +1447,7 @@ let t4 =
                                               applicationId: Z.id,
                                               skuId: $.id,
                                               openPremiumPaymentModal: () => {
-                                                  (0, w.A)({
+                                                  (0, W.A)({
                                                       initialPlanId: null,
                                                       subscriptionTier: el.pe.TIER_2,
                                                       analyticsLocations: s,
@@ -1467,7 +1460,7 @@ let t4 =
                                           }),
                                               M($.id);
                                       } catch (e) {
-                                          null != e && t2.error("Failed to open off-platform premium perk modal", e);
+                                          null != e && t5.error("Failed to open off-platform premium perk modal", e);
                                       }
                                   },
                                   children: es.intl.string(es.t.KEwPYx),
@@ -1548,9 +1541,9 @@ let t4 =
                               (0, i.jsx)(I.Z_, {
                                   noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER,
                                   onClick: () => {
-                                      (0, d.openModalLazy)(async () => {
+                                      (0, R.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
-                                              n.e("75058"),
+                                              n.e("81013"),
                                               n.e("44602"),
                                               n.e("25280"),
                                           ]).then(n.bind(n, 987482));
@@ -1572,8 +1565,8 @@ let t4 =
                               (0, i.jsx)(I.Z_, {
                                   noticeType: ei.kqX.DISPATCH_ERROR,
                                   onClick: () =>
-                                      (0, d.openModalLazy)(async () => {
-                                          let { default: e } = await Promise.all([n.e("13520"), n.e("88014")]).then(
+                                      (0, R.openModalLazy)(async () => {
+                                          let { default: e } = await Promise.all([n.e("46377"), n.e("88014")]).then(
                                               n.bind(n, 627261),
                                           );
                                           return (t) => (0, i.jsx)(e, { ...t });
@@ -1602,7 +1595,7 @@ let t4 =
                                                 total: er,
                                             })
                                           : es.intl.formatToPlainString(es.t["lHZn+A"], { progress: en, total: er }),
-                                      (0, i.jsx)(R.y, { type: R.y.Type.PULSING_ELLIPSIS, className: ea.gO }),
+                                      (0, i.jsx)(d.y, { type: d.y.Type.PULSING_ELLIPSIS, className: ea.gO }),
                                   ],
                               }),
                           ],
@@ -1667,13 +1660,13 @@ let t4 =
                                   noticeType: ei.kqX.PREMIUM_UNCANCEL,
                                   onClick: () => {
                                       t6(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                          (0, d.openModalLazy)(async () => {
+                                          (0, R.openModalLazy)(async () => {
                                               let { default: e } = await Promise.all([
-                                                  n.e("13709"),
-                                                  n.e("63941"),
+                                                  n.e("13520"),
+                                                  n.e("77083"),
                                                   n.e("63009"),
-                                                  n.e("8528"),
-                                                  n.e("84615"),
+                                                  n.e("7026"),
+                                                  n.e("23309"),
                                                   n.e("35429"),
                                                   n.e("10471"),
                                                   n.e("23808"),
@@ -1813,7 +1806,7 @@ let t4 =
                           showCloseButton: !0,
                       });
                   case ei.kqX.AUTOMOD_QUARANTINED_USER_PROFILE:
-                      return (0, i.jsx)(ew, { guildId: t, analyticsLocations: s });
+                      return (0, i.jsx)(eW, { guildId: t, analyticsLocations: s });
                   case ei.kqX.QUARANTINED:
                       return (0, i.jsxs)(I.$T, {
                           color: I.Hv.DANGER,
@@ -1889,7 +1882,7 @@ let t4 =
                               es.intl.string(es.t["0klLS7"]),
                               (0, i.jsx)(I.Z_, {
                                   onClick: () => {
-                                      (0, d.openModalLazy)(async () => {
+                                      (0, R.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
                                               n.e("56030"),
                                               n.e("18413"),
@@ -1911,9 +1904,9 @@ let t4 =
                   case ei.kqX.IGNORE_USER_FEEDBACK_NAGBAR:
                       return (0, i.jsx)(tm, {});
                   case ei.kqX.PREMIUM_MARKETING_NAGBAR:
-                      return (0, i.jsx)(tP, {});
+                      return (0, i.jsx)(tC, {});
                   case ei.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR:
-                      return (0, i.jsx)(tR, { premiumSubscription: r.metadata.premiumSubscription });
+                      return (0, i.jsx)(td, { premiumSubscription: r.metadata.premiumSubscription });
                   case ei.kqX.SYSTEM_SERVICE_WARNING:
                       return (0, i.jsx)(tb, {});
                   case ei.kqX.RESTRICTED_HOURS_WARNING:
@@ -1930,7 +1923,7 @@ let t4 =
               }
           })
         : null;
-function t3() {
+function t4() {
     let { analyticsLocations: e } = (0, G.Ay)(L.A.NOTICE);
-    return (0, i.jsx)(G.f5, { value: e, children: (0, i.jsx)(t4, {}) });
+    return (0, i.jsx)(G.f5, { value: e, children: (0, i.jsx)(t3, {}) });
 }

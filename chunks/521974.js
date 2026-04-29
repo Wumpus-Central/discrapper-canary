@@ -1,3 +1,52 @@
-e.exports = JSON.parse(
-    '{"xKXcSu":["Ajouter aux favoris"],"LbCa8x":["Ajouter aux favoris (",[2,"count"],")"],"kQL9be":["Nous avons cherch\xe9 dans tous les coins et recoins., et malheureusement, nous n\'avons trouv\xe9 aucun r\xe9sultat. Rejoins un serveur ou cr\xe9e un MP pour ajouter ton premier serveur favori."],"Rp35U1":["Ajouter aux favoris"],"1QJmIL":["Ajouter \xe0 la cat\xe9gorie"],"G9fGlP":["Ajouter aux favoris"],"CgmkFJ":["Favoris"],"8FO0y9":["Masquer les favoris"],"FaHxWl":["Active cette option \xe0 tout moment dans les param\xe8tres."],"+SuGKb":["Regroupe tes salons et MP les plus utilis\xe9s au m\xeame endroit pour un acc\xe8s rapide."],"yYVbdv":["D\xe9verrouiller avec Nitro"],"6kk0gM":["Ajouter aux favoris"],"Wwzrs9":["Fais un clic droit sur n\'importe quel salon ou MP et ajoute-le \xe0 tes favoris pour un acc\xe8s rapide."],"1n0TGE":["Remplis tes favoris"],"wh+Rz1":["Tes conversations favorites, toutes au m\xeame endroit."],"3KruG3":["Aller sur le serveur"],"1HRKGn":["Tu ne peux pas avoir plus de ",[2,"max"],"\xa0favoris et cat\xe9gories."],"9jWMQ9":["Compris"],"GCCs6j":["Oh non\xa0!"],"OXC/Du":["Ajout\xe9 aux favoris"],"/x2jT7":["Ajoute tes salons et MP les plus utilis\xe9s ici pour un acc\xe8s rapide. Uniquement avec Nitro."],"0nZZEk":["Obtenir Nitro"],"0lHa0Z":["Ajouter aux favoris"],"bu/mLv":["Les favoris sont l\xe0\xa0!"],"qJUI2v":["Fais un clic droit sur n\'importe quel salon ou MP pour qu\'ils soient toujours \xe0 port\xe9e de main."],"DFjrWw":["Fais un clic droit sur n\'importe quel salon ou MP pour l\'ajouter aux favoris. Eh oui, c\'est aussi simple que \xe7a."],"avps/2":["Obtenir Nitro"],"+h9aza":["Compris"],"A3ZjbM":["Ajoute \xe7a \xe0 tes favoris avec Nitro"],"25YCHl":["Ajouter aux favoris"],"TWuDTt":["Ajouter plus de favoris"],"TN4nAX":["Retirer des favoris"],"HdGkqu":["Une erreur s\'est produite lors de la sauvegarde de tes favoris. Merci de r\xe9essayer."],"W9y4i6":["Oh non\xa0!"],"4XlAQd":["Favoris"],"20sYUU":["Obtenir Nitro"],"7WwLnr":["Aper\xe7u"],"GR2KOG":["Tes favoris restent enregistr\xe9s, m\xeame si tu d\xe9sactives cette option. ",[8,"$link",["En savoir plus"],[[1,"helpCenterLink"]]],"."],"OT1NK5":["Favoris"],"WaP/lz":["Ajoute tes salons et MP les plus utilis\xe9s \xe0 tes favoris pour un acc\xe8s rapide. Uniquement avec Nitro."],"+dSwhE":["Aper\xe7u des favoris"],"aA0vO8":["Ajoute \xe7a \xe0 tes favoris avec Nitro"]}',
-);
+l.d(t, { A: () => m });
+var s = l(627968),
+    i = l(64700),
+    a = l(503698),
+    n = l.n(a),
+    r = l(939249),
+    o = l(7689),
+    c = l(661531),
+    d = l(892547),
+    u = l(488995),
+    h = l(206293);
+function m(e) {
+    let {
+            state: t,
+            query: l,
+            placeholder: a,
+            onTextChange: m,
+            onCollapsedClick: p,
+            onClear: g,
+            onBlur: x,
+            onSubmit: A,
+        } = e,
+        j = i.useRef(null),
+        v = i.useCallback(
+            (e) => {
+                "Enter" === e.key && A();
+            },
+            [A],
+        ),
+        C = i.useCallback(() => {
+            p(), setTimeout(() => j.current?.focus());
+        }, [p]);
+    return t === u.GlobalDiscoverySearchBarState.COLLAPSED
+        ? (0, s.jsx)(r.D, {
+              className: h.qc,
+              onClick: C,
+              children: (0, s.jsx)(o.$, { size: "sm", color: c.A.colors.ICON_STRONG }),
+          })
+        : (0, s.jsx)("div", {
+              className: n()(h.ON, { [h.Nz]: t === u.GlobalDiscoverySearchBarState.FLOATING }),
+              children: (0, s.jsx)(d.I, {
+                  size: "sm",
+                  ref: j,
+                  query: l,
+                  placeholder: a,
+                  onChange: m,
+                  onClear: g,
+                  onKeyDown: v,
+                  onBlur: x,
+              }),
+          });
+}

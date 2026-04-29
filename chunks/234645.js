@@ -1,0 +1,18 @@
+e.exports = {
+    q3: "indicator_ffc7aa",
+    Mp: "animationContainer_ffc7aa",
+    bW: "animating_ffc7aa",
+    EO: "notAnimating_ffc7aa",
+    Mn: "top_ffc7aa",
+    j7: "exclaim-loop_ffc7aa",
+    AJ: "quick-fade-out_ffc7aa",
+    sQ: "bottom_ffc7aa",
+    vJ: "dot-loop_ffc7aa",
+    r6: "innerCircle_ffc7aa",
+    Fn: "inner-circle-loop_ffc7aa",
+    TX: "highPriority_ffc7aa",
+    d6: "inner-circle-loop-high-priority_ffc7aa",
+    CY: "outerCircle_ffc7aa",
+    cb: "outer-circle-loop_ffc7aa",
+    gM: "outer-circle-loop-high-priority_ffc7aa",
+};

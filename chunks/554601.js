@@ -541,33 +541,30 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("31320"),
+                                                        n.e("62349"),
                                                         n.e("40841"),
                                                         n.e("69273"),
-                                                        n.e("81349"),
-                                                        n.e("13709"),
-                                                        n.e("63941"),
+                                                        n.e("80731"),
+                                                        n.e("77083"),
                                                         n.e("63009"),
-                                                        n.e("47181"),
-                                                        n.e("8528"),
+                                                        n.e("16933"),
+                                                        n.e("7026"),
                                                         n.e("45650"),
                                                         n.e("97189"),
-                                                        n.e("24059"),
-                                                        n.e("51402"),
-                                                        n.e("27660"),
-                                                        n.e("47715"),
-                                                        n.e("85484"),
-                                                        n.e("89516"),
-                                                        n.e("60571"),
-                                                        n.e("13044"),
-                                                        n.e("73679"),
-                                                        n.e("84615"),
-                                                        n.e("27755"),
-                                                        n.e("41475"),
+                                                        n.e("48418"),
+                                                        n.e("13520"),
+                                                        n.e("42105"),
+                                                        n.e("90261"),
+                                                        n.e("55990"),
+                                                        n.e("62296"),
+                                                        n.e("17546"),
+                                                        n.e("7066"),
+                                                        n.e("333"),
+                                                        n.e("68432"),
                                                         n.e("79705"),
                                                         n.e("23924"),
                                                         n.e("15510"),
-                                                        n.e("48226"),
+                                                        n.e("25845"),
                                                         n.e("20287"),
                                                         n.e("28367"),
                                                         n.e("35429"),
@@ -586,12 +583,10 @@ function eJ(e) {
                                                         n.e("20317"),
                                                         n.e("84569"),
                                                         n.e("2368"),
-                                                        n.e("27084"),
                                                         n.e("24313"),
                                                         n.e("48405"),
                                                         n.e("63185"),
                                                         n.e("19551"),
-                                                        n.e("84150"),
                                                         n.e("45959"),
                                                         n.e("18573"),
                                                         n.e("55057"),
@@ -601,7 +596,6 @@ function eJ(e) {
                                                         n.e("34303"),
                                                         n.e("48172"),
                                                         n.e("28866"),
-                                                        n.e("54961"),
                                                         n.e("8304"),
                                                         n.e("58038"),
                                                         n.e("93159"),
@@ -616,65 +610,68 @@ function eJ(e) {
                                                         n.e("5812"),
                                                         n.e("17363"),
                                                         n.e("34530"),
-                                                        n.e("26437"),
-                                                        n.e("28561"),
                                                         n.e("91146"),
-                                                        n.e("21570"),
+                                                        n.e("28561"),
                                                         n.e("6174"),
                                                         n.e("39851"),
                                                         n.e("6949"),
                                                         n.e("29871"),
-                                                        n.e("41250"),
+                                                        n.e("21570"),
                                                         n.e("53917"),
                                                         n.e("15423"),
                                                         n.e("15186"),
                                                         n.e("89088"),
                                                         n.e("10957"),
-                                                        n.e("77084"),
                                                         n.e("45172"),
-                                                        n.e("96565"),
                                                         n.e("52548"),
+                                                        n.e("77084"),
+                                                        n.e("96565"),
                                                         n.e("37687"),
                                                         n.e("95093"),
                                                         n.e("60177"),
                                                         n.e("62615"),
+                                                        n.e("20007"),
                                                         n.e("48900"),
                                                         n.e("21976"),
                                                         n.e("1006"),
                                                         n.e("79707"),
-                                                        n.e("20007"),
+                                                        n.e("23276"),
                                                         n.e("99518"),
                                                         n.e("55577"),
-                                                        n.e("59880"),
-                                                        n.e("78412"),
-                                                        n.e("9662"),
-                                                        n.e("80239"),
-                                                        n.e("23276"),
-                                                        n.e("54791"),
-                                                        n.e("63213"),
-                                                        n.e("255"),
-                                                        n.e("68479"),
                                                         n.e("10567"),
-                                                        n.e("39286"),
                                                         n.e("63645"),
+                                                        n.e("59880"),
+                                                        n.e("27084"),
                                                         n.e("88343"),
-                                                        n.e("31445"),
+                                                        n.e("78412"),
                                                         n.e("5636"),
                                                         n.e("95444"),
                                                         n.e("38472"),
+                                                        n.e("9662"),
                                                         n.e("48720"),
+                                                        n.e("80239"),
                                                         n.e("834"),
-                                                        n.e("33134"),
+                                                        n.e("84150"),
+                                                        n.e("54791"),
                                                         n.e("77446"),
-                                                        n.e("17859"),
+                                                        n.e("63213"),
+                                                        n.e("255"),
+                                                        n.e("68479"),
                                                         n.e("84317"),
                                                         n.e("67176"),
-                                                        n.e("20858"),
+                                                        n.e("39286"),
+                                                        n.e("54961"),
+                                                        n.e("31445"),
                                                         n.e("54625"),
                                                         n.e("166"),
+                                                        n.e("33134"),
+                                                        n.e("17859"),
+                                                        n.e("20858"),
                                                         n.e("26574"),
+                                                        n.e("26437"),
                                                         n.e("78050"),
                                                         n.e("74907"),
+                                                        n.e("41250"),
                                                         n.e("19475"),
                                                         n.e("94607"),
                                                         n.e("68031"),
@@ -763,7 +760,7 @@ function e1(e) {
         t
     );
 }
-function e4(e) {
+function e8(e) {
     let { application: t, context: n, name: l, iconURL: i, scrollerRef: s, sectionName: a } = e,
         c = (0, eg.q)((0, ej.Ay)()),
         d = o.useRef(null),
@@ -855,7 +852,7 @@ function e4(e) {
         })
     );
 }
-var e8 = n(34188),
+var e4 = n(34188),
     e2 = n(700623),
     e7 = n(177953),
     e5 = n(825484),
@@ -1116,7 +1113,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: ty.wi,
                             children: [
-                                (0, r.jsx)(e8.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e4.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1342,7 +1339,7 @@ function tH(e) {
             role: "region",
             "aria-label": et.intl.formatToPlainString(et.t["4OP4Uk"], { applicationName: N }),
             children: [
-                (0, r.jsx)(e4, { application: a, context: t, name: N, iconURL: h, scrollerRef: d, sectionName: l }),
+                (0, r.jsx)(e8, { application: a, context: t, name: N, iconURL: h, scrollerRef: d, sectionName: l }),
                 null != h && (0, r.jsx)(I.A, { src: h, className: tk.Z }),
                 (0, r.jsx)(x.A, { size: 54 }),
                 (0, r.jsx)(c ? tD : tS, { context: t, application: a, sectionName: l, hasCommands: u }),
@@ -1416,8 +1413,8 @@ var tQ = n(111042),
     tJ = n(111162),
     t0 = n(403362),
     t1 = n(179771),
-    t4 = n(824552),
-    t8 = n(168186),
+    t8 = n(824552),
+    t4 = n(168186),
     t2 = n(594061),
     t7 = n(935208),
     t5 = n(630248),
@@ -1441,7 +1438,7 @@ function t9(e, t) {
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
-            let e = i?.map((e) => (0, t8.bq)(e.application, !0)) ?? [],
+            let e = i?.map((e) => (0, t4.bq)(e.application, !0)) ?? [],
                 t = [...l];
             return (
                 t.push(...e),
@@ -2082,7 +2079,7 @@ var nq = n(984516),
     nJ = n(994369),
     n0 = n(240591),
     n1 = n(46477);
-function n4(e, t) {
+function n8(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2132,7 +2129,7 @@ function n4(e, t) {
         i,
     ).slice(0, i);
 }
-function n8(e, t) {
+function n4(e, t) {
     let n = t5.A.getScoreWithoutLoadingLatest(e.id);
     return t5.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
@@ -2380,7 +2377,7 @@ function lc(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, x;
                     if (!s) return [];
-                    return n4(c, {
+                    return n8(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n0.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2517,7 +2514,7 @@ function lc(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n4(u, {
+                    return n8(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n0.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2564,7 +2561,7 @@ function lc(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n8, n2],
+                        sortComparers: [n4, n2],
                     });
                 }, [a, r, i, t, n, m, p]),
                 f = A.length > 0,
@@ -3045,7 +3042,7 @@ function lj(e) {
                         } = e,
                         s = (0, A.bG)([t6.default], () => t6.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t6.FetchState.NOT_FETCHED && t4.A.fetch();
+                        i && s === t6.FetchState.NOT_FETCHED && t8.A.fetch();
                     }, [i, s]);
                     let a = (0, A.yK)([t6.default], () =>
                             i

@@ -3,7 +3,7 @@ var n = s(627968),
     a = s(64700),
     r = s(503698),
     l = s.n(r),
-    i = s(123924),
+    i = s(925747),
     o = s(607399),
     c = s(17928),
     d = s(990078),
@@ -26,7 +26,7 @@ var n = s(627968),
     y = s(652215),
     E = s(335993),
     k = s(985018);
-let D = a.lazy(() => Promise.all([s.e("87141"), s.e("60497")]).then(s.bind(s, 908424)));
+let D = a.lazy(() => s.e("60497").then(s.bind(s, 908424)));
 function M(e) {
     let { className: t } = e,
         { hasAccess: s } = (0, S.TW)("FavoriteGuildHeaderActionButton"),
@@ -86,29 +86,29 @@ var R = s(454938),
     T = s(932883),
     V = s(599486),
     G = s(394953),
-    P = s(628325),
-    _ = s(849077),
-    w = s(337376);
-function z(e) {
+    _ = s(628325),
+    w = s(849077),
+    z = s(337376);
+function P(e) {
     let { className: t } = e,
         s = (0, T.op)(),
         a = (0, G.i3)(),
         { selectedFilter: r, setSelectedFilter: i } = (0, V.A)(),
-        o = (0, P.S)((e) => e.setInboxReadState);
+        o = (0, _.S)((e) => e.setInboxReadState);
     if (!a) return null;
-    let c = r === _.Io.ALL ? k.intl.string(k.t["2pAkDA"]) : k.intl.string(k.t.HcoRu0);
+    let c = r === w.Io.ALL ? k.intl.string(k.t["2pAkDA"]) : k.intl.string(k.t.HcoRu0);
     return (0, n.jsx)(d.m, {
         position: "bottom",
         text: c,
         children: (0, n.jsx)(f.D, {
-            className: l()(t, w.a, { [w.S]: r === _.Io.BOOKMARKS }),
+            className: l()(t, z.a, { [z.S]: r === w.Io.BOOKMARKS }),
             "aria-label": c,
             onClick: () => {
-                let e = r === _.Io.ALL ? _.Io.BOOKMARKS : _.Io.ALL;
-                i(e), e === _.Io.ALL && o(!1), (0, T.Ut)({ section: e, enabled: !0, viewId: s });
+                let e = r === w.Io.ALL ? w.Io.BOOKMARKS : w.Io.ALL;
+                i(e), e === w.Io.ALL && o(!1), (0, T.Ut)({ section: e, enabled: !0, viewId: s });
             },
             children:
-                r === _.Io.BOOKMARKS
+                r === w.Io.BOOKMARKS
                     ? (0, n.jsx)(O.c, { size: "xs", color: F.A.colors.ICON_DEFAULT.css })
                     : (0, n.jsx)(U.c, { size: "xs", color: F.A.colors.ICON_MUTED.css }),
         }),
@@ -194,9 +194,8 @@ function en(e) {
             m
                 ? (0, j.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          s.e("36685"),
-                          s.e("32101"),
-                          s.e("58216"),
+                          s.e("80731"),
+                          s.e("40841"),
                           s.e("59957"),
                           s.e("19454"),
                           s.e("28136"),
@@ -246,7 +245,7 @@ function en(e) {
                         children: (0, n.jsx)(N.D, { size: "refresh_sm", color: "currentColor" }),
                     }),
                 }),
-            r.id === y.gNP && (0, n.jsx)(z, {}),
+            r.id === y.gNP && (0, n.jsx)(P, {}),
         ],
     });
 }

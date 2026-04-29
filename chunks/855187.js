@@ -1,59 +1,58 @@
-n.d(i, { A: () => v });
-var a = n(627968);
-n(64700);
-var t = n(17928),
-    d = n(373495),
-    o = n(192308),
-    l = n(477782),
-    c = n(635739),
-    r = n(39623),
-    s = n(952572),
-    u = n(495544),
-    b = n(51760),
-    p = n(985018);
-function v(e, i) {
-    let v = (0, d.k)(),
-        { videoEnabled: y, hasVideoDevice: f } = (0, t.cf)([b.Ay], () => ({
-            videoEnabled: b.Ay.isVideoEnabled(),
-            hasVideoDevice: b.Ay.isVideoAvailable(),
+l.d(a, { A: () => p });
+var t = l(627968);
+l(64700);
+var i = l(17928),
+    n = l(373495),
+    c = l(192308),
+    d = l(477782),
+    o = l(635739),
+    r = l(39623),
+    s = l(952572),
+    A = l(495544),
+    h = l(51760),
+    u = l(985018);
+function p(e, a) {
+    let p = (0, n.k)(),
+        { videoEnabled: v, hasVideoDevice: b } = (0, i.cf)([h.Ay], () => ({
+            videoEnabled: h.Ay.isVideoEnabled(),
+            hasVideoDevice: h.Ay.isVideoAvailable(),
         })),
-        h = (0, t.bG)([u.default], () => u.default.getId() === e),
-        A = (0, s.A)();
-    return (!y || A) && h && f
-        ? (0, a.jsx)(l.Dr, {
+        f = (0, i.bG)([A.default], () => A.default.getId() === e),
+        g = (0, s.A)();
+    return (!v || g) && f && b
+        ? (0, t.jsx)(d.Dr, {
               id: "change-video-background",
-              label: y ? p.intl.string(p.t.mZKxHb) : p.intl.string(p.t["vkV93/"]),
+              label: v ? u.intl.string(u.t.mZKxHb) : u.intl.string(u.t["vkV93/"]),
               action: function () {
-                  (0, o.openModalLazy)(
+                  (0, c.openModalLazy)(
                       async () => {
                           let { default: e } = await Promise.all([
-                              n.e("81349"),
-                              n.e("8528"),
-                              n.e("15453"),
-                              n.e("66759"),
-                              n.e("20287"),
-                              n.e("28367"),
-                              n.e("58337"),
-                              n.e("18441"),
-                              n.e("21690"),
-                              n.e("31644"),
-                              n.e("9915"),
-                              n.e("20683"),
-                              n.e("80436"),
-                              n.e("6809"),
-                              n.e("27838"),
-                              n.e("97162"),
-                              n.e("95782"),
-                              n.e("85160"),
-                              n.e("10534"),
-                          ]).then(n.bind(n, 308229));
-                          return (i) => (0, a.jsx)(e, { ...i, videoEnabled: y });
+                              l.e("48418"),
+                              l.e("7026"),
+                              l.e("60811"),
+                              l.e("66759"),
+                              l.e("20287"),
+                              l.e("28367"),
+                              l.e("18441"),
+                              l.e("21690"),
+                              l.e("31644"),
+                              l.e("9915"),
+                              l.e("58337"),
+                              l.e("20683"),
+                              l.e("80436"),
+                              l.e("6809"),
+                              l.e("97162"),
+                              l.e("95782"),
+                              l.e("39176"),
+                              l.e("10534"),
+                          ]).then(l.bind(l, 308229));
+                          return (a) => (0, t.jsx)(e, { ...a, videoEnabled: v });
                       },
-                      { modalKey: "camera-preview", contextKey: null != i ? (0, o.modalContextFromAppContext)(i) : v },
+                      { modalKey: "camera-preview", contextKey: null != a ? (0, c.modalContextFromAppContext)(a) : p },
                   );
               },
-              icon: y ? c.f : r.b,
-              leadingAccessory: { type: "icon", icon: y ? c.f : r.b },
+              icon: v ? o.f : r.b,
+              leadingAccessory: { type: "icon", icon: v ? o.f : r.b },
           })
         : null;
 }

@@ -18,7 +18,7 @@ n(100544);
 let m = 3 * o.A.Millis.DAY,
     f = 2 * o.A.Millis.DAY,
     g = +o.A.Millis.HOUR;
-function I(e) {
+function A(e) {
     let { channelId: t } = e;
     if (null == t) return;
     let i = r.A.getChannel(t);
@@ -34,12 +34,12 @@ function I(e) {
                 (0, d.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("61748"),
-                            n.e("19364"),
+                            n.e("7026"),
+                            n.e("42105"),
                             n.e("21537"),
                             n.e("18943"),
-                            n.e("65617"),
                             n.e("42234"),
+                            n.e("65617"),
                             n.e("20577"),
                             n.e("83792"),
                             n.e("24958"),
@@ -71,7 +71,7 @@ function I(e) {
             })({ channelId: t, blockedUserIds: e, ignoredUserIds: r });
     }
 }
-function A(e) {
+function I(e) {
     let { state: t } = e;
 }
 function p() {
@@ -85,7 +85,7 @@ function S(e) {
     return !!(!t && p()) || ((0, l.kP)(e) ?? 0) > Date.now() - f;
 }
 class N extends i.A {
-    actions = { CHANNEL_SELECT: I, APP_STATE_UPDATE: A };
+    actions = { CHANNEL_SELECT: A, APP_STATE_UPDATE: I };
     handleBlockedOrIgnoredUserVoiceChannelJoin(e, t) {
         let i = s.A.getChannelId();
         if (e === i && null != r.A.getChannel(e)) {
@@ -95,13 +95,13 @@ class N extends i.A {
                 (0, d.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("19364"),
+                            n.e("7026"),
+                            n.e("42105"),
                             n.e("21537"),
-                            n.e("61748"),
                             n.e("35588"),
                             n.e("18943"),
-                            n.e("65617"),
                             n.e("42234"),
+                            n.e("65617"),
                             n.e("20577"),
                             n.e("83792"),
                             n.e("39679"),

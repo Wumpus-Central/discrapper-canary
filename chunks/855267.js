@@ -1,4 +1,4 @@
-s.d(t, { A: () => en });
+s.d(e, { A: () => tn });
 var n = s(627968),
     i = s(64700),
     r = s(731738),
@@ -24,10 +24,10 @@ var n = s(627968),
     T = s(97808),
     C = s(466757),
     O = s(476324);
-function p(e) {
-    let { user: t, size: s } = e,
+function p(t) {
+    let { user: e, size: s } = t,
         i = (0, A.Kj)(s),
-        r = null != t ? t.getAvatarURL(null, i.size) : O;
+        r = null != e ? e.getAvatarURL(null, i.size) : O;
     return (0, n.jsx)("div", {
         className: C.oJ,
         children: (0, n.jsx)("div", {
@@ -40,8 +40,8 @@ function p(e) {
 var S = s(985018),
     P = s(70845);
 function R() {
-    let e = (0, N.K)(),
-        t = (0, m.bG)([D.default], () => D.default.getCurrentUser()),
+    let t = (0, N.K)(),
+        e = (0, m.bG)([D.default], () => D.default.getCurrentUser()),
         [s, r] = i.useState(36),
         l = i.useRef({
             [v.PN.ALL_GOOD]: null,
@@ -51,22 +51,22 @@ function R() {
             [v.PN.SUSPENDED]: null,
         }),
         a = i.useCallback(() => {
-            r(Math.max(Math.max(...Object.values(l.current).map((e) => e?.getBoundingClientRect().height ?? 36)), 36));
+            r(Math.max(Math.max(...Object.values(l.current).map((t) => t?.getBoundingClientRect().height ?? 36)), 36));
         }, []);
     i.useEffect(() => {
         a();
-        let e = (0, x.debounce)(a, 100);
-        return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
+        let t = (0, x.debounce)(a, 100);
+        return window.addEventListener("resize", t), () => window.removeEventListener("resize", t);
     }, [a]);
     let c = (0, f.QB)(),
-        { title: o, description: d, color: u, Icon: h } = c[e.state],
+        { title: o, description: d, color: u, Icon: h } = c[t.state],
         E = Object.keys(c).length;
     return (0, n.jsxs)(I.Z, {
         className: P.kL,
         outline: !1,
         type: I.s.CUSTOM,
         children: [
-            (0, n.jsx)("div", { className: P.ME, children: (0, n.jsx)(p, { user: t, size: A._3.SIZE_80 }) }),
+            (0, n.jsx)("div", { className: P.ME, children: (0, n.jsx)(p, { user: e, size: A._3.SIZE_80 }) }),
             (0, n.jsxs)("div", {
                 className: P.h5,
                 children: [
@@ -77,12 +77,12 @@ function R() {
                                 color: "text-strong",
                                 variant: "heading-lg/normal",
                                 children: S.intl.format(o, {
-                                    hook: (e) =>
+                                    hook: (t) =>
                                         (0, n.jsx)(j.E, {
                                             style: { color: u.css },
                                             variant: "heading-lg/bold",
                                             tag: "span",
-                                            children: e,
+                                            children: t,
                                         }),
                                 }),
                             }),
@@ -94,15 +94,15 @@ function R() {
                         style: { height: s },
                         children: [
                             (0, n.jsx)("div", { className: P.n8 }),
-                            Object.entries(c).map((t, s) => {
-                                let [i, r] = t,
-                                    a = parseInt(i) === e.state;
+                            Object.entries(c).map((e, s) => {
+                                let [i, r] = e,
+                                    a = parseInt(i) === t.state;
                                 return (0, n.jsxs)(
                                     "div",
                                     {
                                         className: P.Kx,
-                                        ref: (e) => {
-                                            l.current[parseInt(i)] = e;
+                                        ref: (t) => {
+                                            l.current[parseInt(i)] = t;
                                         },
                                         children: [
                                             a
@@ -116,12 +116,12 @@ function R() {
                                                       children: (0, n.jsx)("div", { className: P.Ie }),
                                                   }),
                                             S.intl.format(r.status, {
-                                                hook: (e) =>
+                                                hook: (t) =>
                                                     (0, n.jsx)(j.E, {
                                                         color: "text-default",
                                                         variant: "text-sm/normal",
                                                         className: P.Rh,
-                                                        children: e,
+                                                        children: t,
                                                     }),
                                             }),
                                         ],
@@ -152,8 +152,8 @@ var L = s(503698),
     Y = s(239093),
     F = s(652215),
     W = s(86789);
-let X = (e) => {
-        let { status: t, onClick: s, opened: i, count: r } = e;
+let X = (t) => {
+        let { status: e, onClick: s, opened: i, count: r } = t;
         return (0, n.jsxs)(M.D, {
             className: W.wx,
             onClick: s,
@@ -162,7 +162,7 @@ let X = (e) => {
                     className: W.Y5,
                     children: (0, n.jsx)(U.i, {
                         size: "md",
-                        color: "active" === t ? k.A.colors.INTERACTIVE_TEXT_ACTIVE : k.A.colors.ICON_MUTED,
+                        color: "active" === e ? k.A.colors.INTERACTIVE_TEXT_ACTIVE : k.A.colors.ICON_MUTED,
                     }),
                 }),
                 (0, n.jsxs)("div", {
@@ -172,14 +172,14 @@ let X = (e) => {
                             variant: "heading-md/semibold",
                             color: "text-default",
                             children:
-                                "active" === t
+                                "active" === e
                                     ? S.intl.formatToPlainString(S.t.IeV2oY, { count: r.toString() })
                                     : S.intl.formatToPlainString(S.t.fZAHBT, { count: r.toString() }),
                         }),
                         (0, n.jsx)(_.D, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: "active" === t ? S.intl.string(S.t.XJ2YVR) : S.intl.string(S.t.SzGV0g),
+                            children: "active" === e ? S.intl.string(S.t.XJ2YVR) : S.intl.string(S.t.SzGV0g),
                         }),
                     ],
                 }),
@@ -221,236 +221,67 @@ let X = (e) => {
                 children: S.intl.string(S.t.RV3AXf),
             }),
         }),
-    Q = (e) => {
-        let { timestamp: t } = e;
-        return (0, n.jsx)(j.E, { variant: "text-xs/normal", className: W.vE, children: (0, z._W)(t) });
+    Q = (t) => {
+        let { timestamp: e } = t;
+        return (0, n.jsx)(j.E, { variant: "text-xs/normal", className: W.vE, children: (0, z._W)(e) });
     },
     q = () => (0, n.jsx)(j.E, { variant: "text-xs/bold", className: W.Ad, children: S.intl.string(S.t.QKMRC4) }),
-    J = (e) => {
-        let { classification: t } = e,
-            { id: r, description: l } = t,
+    J = (t) => {
+        let { classification: e } = t,
+            { id: r, description: l } = e,
             a = y.default.extractTimestamp(r),
-            c = 864e5 > Math.abs(y.default.extractTimestamp(t.id) - new Date().getTime()),
+            c = 864e5 > Math.abs(y.default.extractTimestamp(e.id) - new Date().getTime()),
             o = i.useMemo(() => {
-                let e = {
+                let t = {
                     description: l,
-                    descriptionHook: (e) => (0, n.jsx)(j.E, { tag: "span", variant: "heading-lg/bold", children: e }),
+                    descriptionHook: (t) => (0, n.jsx)(j.E, { tag: "span", variant: "heading-lg/bold", children: t }),
                 };
-                return (0, z._g)(t)
-                    ? t?.guild_metadata?.member_type === v.Z9.OWNER
-                        ? S.intl.format(S.t.Lb0HVv, { ...e, guildName: t?.guild_metadata?.name })
+                return (0, z._g)(e)
+                    ? e?.guild_metadata?.member_type === v.Z9.OWNER
+                        ? S.intl.format(S.t.Lb0HVv, { ...t, guildName: e?.guild_metadata?.name })
                         : S.intl.format(S.t.rmpEPD, {
-                              guildName: t?.guild_metadata?.name,
-                              classification_type: e.description,
-                              classificationHook: e.descriptionHook,
+                              guildName: e?.guild_metadata?.name,
+                              classification_type: t.description,
+                              classificationHook: t.descriptionHook,
                           })
-                    : S.intl.format(S.t.QY4g5t, e);
-            }, [t, l]);
+                    : S.intl.format(S.t.QY4g5t, t);
+            }, [e, l]);
         return (0, n.jsx)(
             M.D,
             {
                 onClick: () => {
                     (0, G.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([
-                            s.e("81349"),
-                            s.e("5036"),
-                            s.e("13709"),
-                            s.e("22810"),
-                            s.e("40841"),
-                            s.e("63133"),
-                            s.e("97271"),
-                            s.e("22513"),
-                            s.e("13498"),
-                            s.e("8528"),
-                            s.e("75058"),
-                            s.e("60571"),
-                            s.e("71934"),
-                            s.e("12512"),
-                            s.e("29139"),
-                            s.e("56685"),
-                            s.e("86483"),
-                            s.e("31632"),
-                            s.e("86821"),
-                            s.e("25568"),
-                            s.e("32260"),
-                            s.e("7276"),
-                            s.e("15758"),
+                        let { default: t } = await Promise.all([
+                            s.e("13520"),
+                            s.e("99961"),
                             s.e("55658"),
+                            s.e("95248"),
                             s.e("57352"),
-                            s.e("24199"),
-                            s.e("57036"),
-                            s.e("88394"),
-                            s.e("15380"),
-                            s.e("207"),
-                            s.e("88941"),
-                            s.e("34530"),
-                            s.e("61379"),
-                            s.e("62680"),
-                            s.e("43039"),
-                            s.e("98125"),
-                            s.e("18441"),
                             s.e("76602"),
-                            s.e("21825"),
-                            s.e("69354"),
-                            s.e("28154"),
-                            s.e("48804"),
-                            s.e("88077"),
-                            s.e("80527"),
-                            s.e("85502"),
-                            s.e("18401"),
-                            s.e("13681"),
-                            s.e("53729"),
-                            s.e("21690"),
-                            s.e("32551"),
-                            s.e("31644"),
-                            s.e("52367"),
-                            s.e("23353"),
-                            s.e("36561"),
                             s.e("28229"),
-                            s.e("86949"),
-                            s.e("50015"),
-                            s.e("77998"),
-                            s.e("31145"),
-                            s.e("11523"),
-                            s.e("66900"),
-                            s.e("44695"),
-                            s.e("10004"),
-                            s.e("55314"),
-                            s.e("29177"),
-                            s.e("44376"),
-                            s.e("9915"),
-                            s.e("96905"),
-                            s.e("33902"),
-                            s.e("70653"),
-                            s.e("31825"),
-                            s.e("54527"),
-                            s.e("72535"),
-                            s.e("76195"),
-                            s.e("51485"),
-                            s.e("1177"),
-                            s.e("26490"),
-                            s.e("76170"),
-                            s.e("32817"),
                             s.e("76418"),
-                            s.e("51243"),
-                            s.e("18943"),
-                            s.e("89094"),
-                            s.e("84103"),
                             s.e("21921"),
-                            s.e("99999"),
-                            s.e("5501"),
-                            s.e("96123"),
-                            s.e("27168"),
-                            s.e("39038"),
-                            s.e("36320"),
-                            s.e("77245"),
-                            s.e("31549"),
-                            s.e("20320"),
-                            s.e("43919"),
-                            s.e("31390"),
-                            s.e("57906"),
-                            s.e("37622"),
-                            s.e("22584"),
-                            s.e("45421"),
-                            s.e("44265"),
-                            s.e("99141"),
                             s.e("66495"),
-                            s.e("21435"),
-                            s.e("98793"),
-                            s.e("92731"),
-                            s.e("25990"),
-                            s.e("33584"),
-                            s.e("63095"),
-                            s.e("68647"),
-                            s.e("67657"),
-                            s.e("64615"),
-                            s.e("88017"),
-                            s.e("87225"),
-                            s.e("12373"),
-                            s.e("75134"),
-                            s.e("84967"),
-                            s.e("23216"),
-                            s.e("30770"),
-                            s.e("56212"),
                             s.e("39970"),
-                            s.e("36498"),
-                            s.e("3458"),
-                            s.e("62827"),
-                            s.e("73547"),
-                            s.e("32823"),
-                            s.e("34691"),
-                            s.e("99593"),
-                            s.e("61935"),
-                            s.e("62168"),
-                            s.e("55602"),
-                            s.e("52463"),
-                            s.e("13499"),
-                            s.e("91381"),
-                            s.e("93158"),
-                            s.e("10034"),
-                            s.e("72832"),
-                            s.e("73500"),
-                            s.e("14879"),
-                            s.e("53526"),
-                            s.e("34472"),
-                            s.e("45723"),
-                            s.e("29375"),
-                            s.e("48778"),
-                            s.e("5895"),
-                            s.e("38835"),
-                            s.e("90889"),
-                            s.e("2537"),
-                            s.e("78777"),
                             s.e("17249"),
-                            s.e("62355"),
-                            s.e("93708"),
-                            s.e("71482"),
-                            s.e("36126"),
                             s.e("62422"),
-                            s.e("80565"),
-                            s.e("58765"),
-                            s.e("49697"),
-                            s.e("78707"),
-                            s.e("19452"),
-                            s.e("65881"),
                             s.e("1518"),
-                            s.e("10745"),
-                            s.e("84113"),
-                            s.e("51391"),
-                            s.e("91942"),
-                            s.e("89465"),
                             s.e("82644"),
-                            s.e("27779"),
                             s.e("20590"),
-                            s.e("64480"),
                             s.e("53984"),
                             s.e("79780"),
-                            s.e("78651"),
                             s.e("46844"),
                             s.e("79745"),
-                            s.e("34150"),
-                            s.e("39406"),
                             s.e("19558"),
                             s.e("2698"),
                             s.e("86243"),
-                            s.e("18997"),
-                            s.e("32326"),
-                            s.e("16916"),
-                            s.e("49205"),
-                            s.e("49181"),
-                            s.e("81328"),
-                            s.e("20973"),
-                            s.e("34967"),
                             s.e("12682"),
-                            s.e("6142"),
-                            s.e("49345"),
-                            s.e("61437"),
                             s.e("43114"),
                             s.e("92030"),
                             s.e("51194"),
                             s.e("29211"),
                         ]).then(s.bind(s, 385430));
-                        return (t) => (0, n.jsx)(e, { classificationId: r, source: Y.XN.StandingTab, ...t });
+                        return (e) => (0, n.jsx)(t, { classificationId: r, source: Y.XN.StandingTab, ...e });
                     });
                 },
                 className: b()(W.zk, { [W.V5]: c }),
@@ -465,8 +296,8 @@ let X = (e) => {
             r,
         );
     },
-    ee = (e) => {
-        let { status: t, classifications: s } = e,
+    tt = (t) => {
+        let { status: e, classifications: s } = t,
             [r, l] = i.useState(!1),
             [a, c] = i.useState(3),
             o = (0, N.K)(),
@@ -477,7 +308,7 @@ let X = (e) => {
                 d.default.track(F.HAw.SAFETY_HUB_ACTION, {
                     action: Y.ZU.ViewViolationsDropdown,
                     account_standing: o.state,
-                    classification_ids: E.map((e) => Number(e.id)),
+                    classification_ids: E.map((t) => Number(t.id)),
                     source: Y.XN.StandingTab,
                     is_violative_content_shown: !1,
                     is_dsa_eligible: u,
@@ -487,47 +318,47 @@ let X = (e) => {
         return (0, n.jsxs)("div", {
             className: W.Wm,
             children: [
-                (0, n.jsx)(X, { status: t, onClick: () => l((e) => !e), opened: r, count: s.length }),
+                (0, n.jsx)(X, { status: e, onClick: () => l((t) => !t), opened: r, count: s.length }),
                 r &&
                     (0, n.jsxs)("div", {
                         className: W.ld,
                         children: [
                             (0, n.jsx)(V.V.Separator, { style: { height: "1px", width: "100%" } }),
-                            E.length > 0 && E.map((e) => (0, n.jsx)(J, { classification: e }, e.id)),
+                            E.length > 0 && E.map((t) => (0, n.jsx)(J, { classification: t }, t.id)),
                             E.length < s.length &&
                                 (0, n.jsxs)(n.Fragment, {
                                     children: [
                                         (0, n.jsx)(V.V.Separator, { style: { height: "1px", width: "100%" } }),
                                         (0, n.jsx)("button", {
                                             className: W.Hr,
-                                            onClick: () => c((e) => e + g),
+                                            onClick: () => c((t) => t + g),
                                             children: S.intl.format(S.t["9Ml56H"], { nextPageSize: g }),
                                         }),
                                     ],
                                 }),
-                            0 === E.length && "active" === t && (0, n.jsx)($, {}),
-                            0 === E.length && "expired" === t && (0, n.jsx)(Z, {}),
+                            0 === E.length && "active" === e && (0, n.jsx)($, {}),
+                            0 === E.length && "expired" === e && (0, n.jsx)(Z, {}),
                         ],
                     }),
             ],
         });
     },
-    et = () => {
-        let e = (0, H.CI)(),
-            t = (0, H.XK)();
-        return 0 === e.length && 0 === t.length
+    te = () => {
+        let t = (0, H.CI)(),
+            e = (0, H.XK)();
+        return 0 === t.length && 0 === e.length
             ? null
             : (0, n.jsxs)("div", {
                   children: [
-                      (0, n.jsx)(ee, { status: "active", classifications: e }),
-                      (0, n.jsx)(ee, { status: "expired", classifications: t }),
+                      (0, n.jsx)(tt, { status: "active", classifications: t }),
+                      (0, n.jsx)(tt, { status: "expired", classifications: e }),
                   ],
               });
     };
-var es = s(746631);
-function en() {
-    let e = (0, g.A)(),
-        t = (0, E.v)(),
+var ts = s(746631);
+function tn() {
+    let t = (0, g.A)(),
+        e = (0, E.v)(),
         s = (0, N.K)(),
         x = (0, m.bG)([h.A], () => h.A.getFetchError());
     (0, c.Ay)(() => {
@@ -538,20 +369,20 @@ function en() {
         I.current = s;
     }),
     i.useEffect(() => {
-        t &&
+        e &&
             (d.default.track(F.HAw.SAFETY_HUB_VIEWED, { account_standing: I.current.state }),
             o.A.increment({ name: r.K.SAFETY_HUB_VIEW }));
-    }, [t]),
-    e)
+    }, [e]),
+    t)
         ? (0, n.jsx)(l.y, {})
         : null != x
           ? (0, n.jsxs)(a.$T, {
                 color: a.Hv.DANGER,
-                className: es.aL,
+                className: ts.aL,
                 children: [
                     S.intl.string(S.t.TDRvqs),
                     (0, n.jsx)(a.zr, { onClick: () => u.Yn(), children: S.intl.string(S.t.R1AN4F) }),
                 ],
             })
-          : (0, n.jsxs)("div", { className: es.kL, children: [(0, n.jsx)(R, {}), (0, n.jsx)(et, {})] });
+          : (0, n.jsxs)("div", { className: ts.kL, children: [(0, n.jsx)(R, {}), (0, n.jsx)(te, {})] });
 }

@@ -452,7 +452,7 @@ var eS = n(352413),
     eH = n(635071),
     e$ = n(860227),
     ez = n(606049),
-    eB = n(3026),
+    eB = n(780645),
     eF = n(305866),
     eY = n(104510),
     eK = n(376304),
@@ -531,7 +531,7 @@ let eQ = (e) => {
 var e0 = n(812299),
     e1 = n(109054),
     e2 = n(334211);
-function e3(e) {
+function e7(e) {
     let {
         avatarSrc: l,
         avatarDecorationSrc: n,
@@ -565,7 +565,7 @@ function e3(e) {
         ],
     });
 }
-let e7 = i.memo(function (e) {
+let e3 = i.memo(function (e) {
     let {
             message: l,
             author: n,
@@ -879,7 +879,7 @@ let e5 = i.memo(function (e) {
                               onRequestClose: v,
                               clickTrap: N,
                               children: (e) =>
-                                  e3({
+                                  e7({
                                       ...O,
                                       avatarSrc: k,
                                       avatarDecorationSrc: T,
@@ -896,7 +896,7 @@ let e5 = i.memo(function (e) {
                       })
                     : (0, t.jsx)(A.f5, {
                           value: b,
-                          children: e3({
+                          children: e7({
                               ...O,
                               avatarSrc: k,
                               avatarDecorationSrc: T,
@@ -943,7 +943,7 @@ let e5 = i.memo(function (e) {
                             ],
                         }),
                     }),
-                (0, t.jsx)(e7, {
+                (0, t.jsx)(e3, {
                     ...e,
                     message: l,
                     channel: C,

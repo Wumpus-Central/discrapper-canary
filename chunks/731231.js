@@ -24,7 +24,7 @@ var l = n(627968),
     S = n(750506),
     N = n(267102),
     j = n(704591),
-    _ = n(126970),
+    _ = n(334348),
     T = n(256449),
     b = n(750385),
     R = n(111956),
@@ -505,15 +505,15 @@ let e0 = (0, z.xI)(w.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
     });
 var e6 = n(140735),
     e3 = n(442433),
-    e7 = n(304072),
-    e4 = n(194261),
+    e4 = n(304072),
+    e7 = n(194261),
     e8 = n(429631);
 let e5 = (e) => {
     let { size: t } = e;
     return (0, l.jsx)("div", {
         className: e8.G,
         style: { width: t, height: t },
-        children: (0, l.jsx)(e4.X, { size: "xxs", color: "currentColor", className: e8.I }),
+        children: (0, l.jsx)(e7.X, { size: "xxs", color: "currentColor", className: e8.I }),
     });
 };
 var e9 = n(584176);
@@ -552,7 +552,7 @@ let te = i.memo(function (e) {
             [t, u, b],
         ),
         O = i.useMemo(() => ({ width: y, height: y, padding: I }), [I, y]),
-        [L, w] = (0, e7.A)(null, 300);
+        [L, w] = (0, e4.A)(null, 300);
     return (0, l.jsx)("div", {
         className: e9.nM,
         style: R,
@@ -585,15 +585,16 @@ let te = i.memo(function (e) {
                                         }),
                                         (0, m.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("17764"),
-                                                n.e("61659"),
-                                                n.e("92652"),
-                                                n.e("88059"),
+                                                n.e("62349"),
+                                                n.e("42105"),
+                                                n.e("17546"),
+                                                n.e("60909"),
+                                                n.e("95248"),
                                                 n.e("31232"),
                                                 n.e("8891"),
-                                                n.e("80436"),
                                                 n.e("83952"),
                                                 n.e("66580"),
+                                                n.e("80436"),
                                                 n.e("50342"),
                                                 n.e("20643"),
                                                 n.e("98913"),
@@ -1382,15 +1383,16 @@ let tk = (0, z.xI)(w.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 K.default.track(eh.HAw.OPEN_MODAL, { type: eh.JJy.CREATE_STICKER_MODAL, location: u }),
                                     (0, m.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("17764"),
-                                            n.e("61659"),
-                                            n.e("92652"),
-                                            n.e("88059"),
+                                            n.e("62349"),
+                                            n.e("42105"),
+                                            n.e("17546"),
+                                            n.e("60909"),
+                                            n.e("95248"),
                                             n.e("31232"),
                                             n.e("8891"),
-                                            n.e("80436"),
                                             n.e("83952"),
                                             n.e("66580"),
+                                            n.e("80436"),
                                             n.e("50342"),
                                             n.e("20643"),
                                             n.e("98913"),
@@ -1756,8 +1758,8 @@ function t1(e) {
 var t2 = n(49999),
     t6 = n(307731),
     t3 = n(645264);
-let t7 = 498 + t$.as.MEDIUM,
-    t4 = i.memo(function (e) {
+let t4 = 498 + t$.as.MEDIUM,
+    t7 = i.memo(function (e) {
         let { isActive: t, className: n, viewType: i, autoFocus: s = !1, "aria-controls": r, ...o } = e;
         return (0, l.jsx)(p.D, {
             role: "tab",
@@ -1949,7 +1951,7 @@ let t7 = 498 + t$.as.MEDIUM,
         let eC = "left" === k ? "right" : "left",
             eA = null != P ? P : "left" === k ? t3.sj : t3.Jg,
             eE = en
-                ? (0, l.jsx)(t4, {
+                ? (0, l.jsx)(t7, {
                       id: t$.g9,
                       "aria-controls": t$.ni,
                       "aria-selected": z === em.kx.GIF,
@@ -1959,7 +1961,7 @@ let t7 = 498 + t$.as.MEDIUM,
                   })
                 : null,
             eI = el
-                ? (0, l.jsx)(t4, {
+                ? (0, l.jsx)(t7, {
                       id: ew.LD,
                       "aria-controls": ew.GX,
                       "aria-selected": z === em.kx.STICKER,
@@ -1969,7 +1971,7 @@ let t7 = 498 + t$.as.MEDIUM,
                       children: (0, l.jsx)("div", { className: t3.dG, children: ep.intl.string(ep.t.nf1s3u) }),
                   })
                 : null,
-            ey = (0, l.jsx)(t4, {
+            ey = (0, l.jsx)(t7, {
                 id: t$.k1,
                 "aria-controls": t$.Do,
                 "aria-selected": z === em.kx.EMOJI,
@@ -2017,7 +2019,7 @@ let t7 = 498 + t$.as.MEDIUM,
                                                                 ey,
                                                                 X &&
                                                                     eg &&
-                                                                    (0, l.jsx)(t4, {
+                                                                    (0, l.jsx)(t7, {
                                                                         id: t$.N6,
                                                                         "aria-controls": t$.AA,
                                                                         "aria-selected": z === em.kx.SOUNDBOARD,
@@ -2037,7 +2039,7 @@ let t7 = 498 + t$.as.MEDIUM,
                                                                         }),
                                                                     }),
                                                                 ex
-                                                                    ? (0, l.jsx)(t4, {
+                                                                    ? (0, l.jsx)(t7, {
                                                                           id: t$.W3,
                                                                           "aria-controls": t$.pE,
                                                                           "aria-selected": z === em.kx.KAOMOJI,
@@ -2076,7 +2078,7 @@ let t7 = 498 + t$.as.MEDIUM,
                                                         persistSearch: !0,
                                                         channel: L,
                                                         containerWidth: B,
-                                                        emojiSize: null != B && B < t7 ? t$.as.MEDIUM : t$.as.LARGE,
+                                                        emojiSize: null != B && B < t4 ? t$.as.MEDIUM : t$.as.LARGE,
                                                         pickerIntention:
                                                             w.expressionPicker?.emojiIntention ??
                                                             t6.EmojiIntention.CHAT,

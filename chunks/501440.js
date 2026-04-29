@@ -6,7 +6,7 @@ var s,
     o = n(64700),
     c = n(503698),
     d = n.n(c),
-    u = n(519244),
+    u = n(925747),
     h = n(837381),
     m = n(17928),
     g = n(446837),
@@ -39,8 +39,8 @@ let S =
                 style: _,
                 ...I
             } = e,
-            y = o.useRef(null),
             j = o.useRef(null),
+            y = o.useRef(null),
             [b, T] = o.useState(!1),
             { scrollerRef: N, getScrollerState: v } = (0, p.A)(),
             M = (0, f.A)(N);
@@ -48,7 +48,7 @@ let S =
             t,
             () => ({
                 getScrollerNode: () => N.current,
-                isScrolling: () => null != y.current,
+                isScrolling: () => null != j.current,
                 getScrollerState: v,
                 ...(0, C.A)(N, v, M),
             }),
@@ -56,18 +56,18 @@ let S =
         );
         let R = o.useCallback(
             (e) => {
-                null == y.current ? T(!0) : clearTimeout(y.current),
-                    (y.current = setTimeout(() => {
-                        (y.current = null), T(!1);
+                null == j.current ? T(!0) : clearTimeout(j.current),
+                    (j.current = setTimeout(() => {
+                        (j.current = null), T(!1);
                     }, 200)),
                     null != h && h(e);
             },
             [h],
         );
         return (
-            o.useEffect(() => () => clearTimeout(y.current), []),
+            o.useEffect(() => () => clearTimeout(j.current), []),
             (0, E.A)({ ref: N, key: "container", onUpdate: c, resizeObserver: i, listenerMap: l }),
-            (0, E.A)({ ref: j, key: "content", onUpdate: c, resizeObserver: i, listenerMap: l }),
+            (0, E.A)({ ref: y, key: "content", onUpdate: c, resizeObserver: i, listenerMap: l }),
             (0, r.jsx)("div", {
                 ref: N,
                 className: d()(a, { [x.Rv]: g, [x.D8]: S, [s]: !0, [x.fs]: !0, [x.qw]: b && g }),
@@ -76,9 +76,9 @@ let S =
                 onScroll: R,
                 ...I,
                 children: (0, r.jsx)(A.xp, {
-                    containerRef: j,
+                    containerRef: y,
                     children: (0, r.jsxs)("div", {
-                        ref: j,
+                        ref: y,
                         className: d()(u, x.Qs),
                         children: [n, b && (0, r.jsx)("div", { className: x.X3 })],
                     }),
@@ -88,8 +88,8 @@ let S =
     }));
 var _ = n(312138),
     I = n(720149),
-    y = n(432371),
-    j = n(765548),
+    j = n(432371),
+    y = n(765548),
     b = n(775602);
 n(321073);
 var T = n(228366),
@@ -168,8 +168,8 @@ function ex(e) {
 var eS = n(830178),
     e_ = n(887129),
     eI = n(625494),
-    ey = n(375901),
-    ej = n(381941),
+    ej = n(375901),
+    ey = n(381941),
     eb = n(621466),
     eT = n(951001),
     eN = n(334738),
@@ -421,8 +421,8 @@ let tx = o.memo(function (e) {
     }, tg.sP);
 var t_ = n(111956),
     tI = n.n(t_),
-    ty = n(311283),
-    tj = n(473935),
+    tj = n(311283),
+    ty = n(473935),
     tb = n(173936),
     tT = n(290136),
     tN = n(666492),
@@ -592,8 +592,8 @@ function nr(e) {
             isExpanded: x,
             showMoreUtilities: S,
             showEmojiPicker: _,
-            showMessageBookmarksActions: y,
-            isMessageBookmark: j,
+            showMessageBookmarksActions: j,
+            isMessageBookmark: y,
             setPopout: T,
             hasDeveloperMode: N,
             isFocused: v,
@@ -628,8 +628,8 @@ function nr(e) {
                 S = (0, e1.u)(t, n),
                 _ = (0, e2.n)(t, n),
                 I = (0, e2.R)(n),
-                y = (0, m.bG)([e0.A], () => null != t.guild_id && e0.A.isLurking(t.guild_id), [t]),
-                j = c.id === u,
+                j = (0, m.bG)([e0.A], () => null != t.guild_id && e0.A.isLurking(t.guild_id), [t]),
+                y = c.id === u,
                 T = (E || n.canDeleteOwnMessage(u)) && h && !eh.MRS.UNDELETABLE.has(n.type);
             n.type === eh.lAJ.AUTO_MODERATION_ACTION && (T = T && E),
                 t.isModeratorReportChannel() && (T = T && n.id !== A?.id && !(0, eV.A)(n));
@@ -641,14 +641,14 @@ function nr(e) {
                     canChat: C,
                     renderReactions: p,
                     canAddNewReactions: x,
-                    isLurking: y,
+                    isLurking: j,
                     isActiveChannelOrUnarchivableThread: h,
                 }),
                 D =
                     t.type === eh.rbe.GUILD_ANNOUNCEMENT &&
                     null != d &&
                     d.features.has(eh.GuildFeatures.NEWS) &&
-                    (j || E) &&
+                    (y || E) &&
                     (0, tK.A)(n),
                 L = t.getGuildId(),
                 k =
@@ -660,7 +660,7 @@ function nr(e) {
                 O = n.hasFlag(eh.pr7.IS_GUILD_OFFICIAL),
                 { enabled: U } = tQ.A.useConfig({ location: "message_utilities" }),
                 w = (0, m.bG)([t0.A], () => null != t0.A.getSavedMessage(t.id, n.id)),
-                F = (0, ty.A)(a),
+                F = (0, tj.A)(a),
                 B = (0, m.bG)([b.A], () => b.A.keyboardModeEnabled);
             return {
                 channel: t,
@@ -715,7 +715,7 @@ function nr(e) {
                                     t7.qv,
                                     {
                                         label: tp.intl.string(tp.t.zBoHlf),
-                                        icon: tj.L,
+                                        icon: ty.L,
                                         onClick: (e) => (0, tt.DT)(t, n, e),
                                     },
                                     "copy-id",
@@ -742,13 +742,13 @@ function nr(e) {
                                     "mark-unread",
                                 )
                               : null,
-                          y
+                          j
                               ? (0, r.jsx)(
                                     t7.qv,
                                     {
-                                        label: j ? tp.intl.string(tp.t.LHUP9D) : tp.intl.string(tp.t["9p3D9p"]),
-                                        icon: j ? tv.c : tM.c,
-                                        onClick: () => (j ? (0, tt.r7)(t, n) : (0, tt.wF)(t, n)),
+                                        label: y ? tp.intl.string(tp.t.LHUP9D) : tp.intl.string(tp.t["9p3D9p"]),
+                                        icon: y ? tv.c : tM.c,
+                                        onClick: () => (y ? (0, tt.r7)(t, n) : (0, tt.wF)(t, n)),
                                     },
                                     "bookmark",
                                 )
@@ -1075,8 +1075,8 @@ var nC = n(141268),
     nS = n(994500),
     n_ = n(217424),
     nI = n(436857),
-    ny = n(387408),
-    nj = n(942075),
+    nj = n(387408),
+    ny = n(942075),
     nb = n(808829),
     nT = n(552691),
     nN = n(861464),
@@ -1098,7 +1098,7 @@ let nM = o.memo(function (e) {
         A = (0, eU.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         p = o.useMemo(() => {
             if (null == h) return null;
-            let e = (0, ny.A)(h);
+            let e = (0, nj.A)(h);
             if (e.type === eh.lAJ.USER_JOIN)
                 return (0, nI.$)(
                     tp.intl.formatToParts(nN.A.getSystemMessageUserJoin(e.id), {
@@ -1108,7 +1108,7 @@ let nM = o.memo(function (e) {
                 );
             if (e.type === eh.lAJ.ROLE_SUBSCRIPTION_PURCHASE)
                 return (0, nI.$)(
-                    (0, nj.WC)({
+                    (0, ny.WC)({
                         username: null != g ? g.nick : e.author.username,
                         guildId: l?.guild_id,
                         roleSubscriptionData: e.roleSubscriptionData,
@@ -1144,12 +1144,12 @@ let nM = o.memo(function (e) {
         I = o.useCallback(() => {
             c({ referencedUsernameProfile: !1, referencedAvatarProfile: !1 });
         }, [c]),
-        y = (0, ez.X4)(t);
+        j = (0, ez.X4)(t);
     return (0, r.jsx)(nv.A, {
         repliedAuthor: g,
         baseMessage: t,
         channel: l,
-        baseAuthor: y,
+        baseAuthor: j,
         referencedMessage: n,
         content: p,
         compact: i,
@@ -1225,8 +1225,8 @@ let nD = o.memo(function (e) {
         S = (0, eZ.r4)(x, n.id),
         _ = (0, eZ.I)(x, n, c, u),
         I = (0, eZ.Ge)(d, u),
-        y = (0, eZ.U_)(a, u),
-        j = o.useCallback(() => {
+        j = (0, eZ.U_)(a, u),
+        y = o.useCallback(() => {
             u({
                 interactionUsernameProfile: !1,
                 interactionAvatarProfile: !1,
@@ -1264,12 +1264,12 @@ let nD = o.memo(function (e) {
         showTargetUsernamePopout: c,
         onClickAvatar: C,
         onClickUsername: f,
-        onClickCommand: y,
+        onClickCommand: j,
         onUserContextMenu: p,
         onClickTargetAvatar: I,
         onClickTargetUsername: _,
         onTargetUserContextMenu: S,
-        onPopoutRequestClose: j,
+        onPopoutRequestClose: y,
         renderTargetMessage: b,
     });
 });
@@ -1285,7 +1285,7 @@ function nk(e) {
     eL()(n.type === eh.lAJ.THREAD_STARTER_MESSAGE, "Message must be a thread starter message");
     let { ...a } = (0, h.rm)(e.id ?? ""),
         o = (0, m.bG)([eF.A], () => eF.A.getMessageByReference(l)),
-        { popouts: c, setPopout: u } = (0, tl.A)(n.id, ej.Fd),
+        { popouts: c, setPopout: u } = (0, tl.A)(n.id, ey.Fd),
         g = (0, ez.Ay)(n),
         A = (0, eJ.fF)(n),
         p = (0, eJ.ZD)(n);
@@ -1319,9 +1319,9 @@ function nP(e) {
         A = n.type === eh.lAJ.REPLY ? n.messageReference : void 0,
         { onFocus: p, ...f } = (0, h.rm)(e.id ?? ""),
         { isFocused: C, handleFocus: E, handleBlur: x } = (0, eZ.G8)(p),
-        { popouts: S, selected: _, setPopout: I } = (0, tl.A)(n.id, ej.Fd),
-        y = H.hD.useSetting(),
-        j = H.rs.useSetting(),
+        { popouts: S, selected: _, setPopout: I } = (0, tl.A)(n.id, ey.Fd),
+        j = H.hD.useSetting(),
+        y = H.rs.useSetting(),
         T = (0, m.bG)([eF.A], () => eF.A.getMessageByReference(A)),
         N = (0, eU.S)((n.editedTimestamp ?? n.timestamp).valueOf()),
         {
@@ -1338,7 +1338,7 @@ function nP(e) {
             hasSpoilerEmbeds: O,
             hasBailedAst: U,
         } = (0, ti.A)(n, {
-            hideSimpleEmbedContent: y && j,
+            hideSimpleEmbedContent: j && y,
             formatInline: !1,
             allowList: N,
             allowHeading: N,
@@ -1442,8 +1442,8 @@ let nG = o.memo(function (e) {
         { onFocus: x, ...S } = (0, h.rm)(e.id ?? ""),
         _ = H.hD.useSetting(),
         I = H.rs.useSetting(),
-        y = (0, m.bG)([eF.A], () => eF.A.getMessageByReference(E)),
-        { popouts: j, selected: T, setPopout: N } = (0, tl.A)(i.id, ej.Fd),
+        j = (0, m.bG)([eF.A], () => eF.A.getMessageByReference(E)),
+        { popouts: y, selected: T, setPopout: N } = (0, tl.A)(i.id, ey.Fd),
         v = (0, eZ.VL)(i, a, N),
         M = (0, eZ.ri)(i, a),
         {
@@ -1559,10 +1559,10 @@ let nG = o.memo(function (e) {
                             : nR({
                                   ...e,
                                   setPopout: N,
-                                  referencedUsernameProfile: j.referencedUsernameProfile,
-                                  referencedAvatarProfile: j.referencedAvatarProfile,
+                                  referencedUsernameProfile: y.referencedUsernameProfile,
+                                  referencedAvatarProfile: y.referencedAvatarProfile,
                                   replyReference: E,
-                                  replyMessage: y,
+                                  replyMessage: j,
                                   isReplySpineClickable: !0,
                               }),
                     childrenExecutedCommand: (function (e, t, n) {
@@ -1570,16 +1570,16 @@ let nG = o.memo(function (e) {
                         return null != l.interaction && "" !== l.interaction.displayName
                             ? (0, r.jsx)(nD, { message: l, channel: i, compact: s, setPopout: t, ...n })
                             : null;
-                    })(e, N, j),
+                    })(e, N, y),
                     childrenHeader: C
                         ? void 0
                         : nf({
                               messageProps: e,
                               setPopout: N,
-                              messagePopouts: j,
+                              messagePopouts: y,
                               replyReference: E,
                               author: et,
-                              repliedMessage: y,
+                              repliedMessage: j,
                               roleIcon: es,
                           }),
                     childrenAccessories: (0, ta.A)({
@@ -1624,7 +1624,7 @@ let nG = o.memo(function (e) {
                               })({
                                   buttonProps: e,
                                   setPopout: N,
-                                  messagePopouts: j,
+                                  messagePopouts: y,
                                   isFocused: k || P,
                                   messageWindow: eg.current,
                               })
@@ -1749,7 +1749,7 @@ class nF {
             {
                 channel: { id: n },
             } = this.props;
-        return null == t ? null : t.getElementById((0, ey.j)(n, e));
+        return null == t ? null : t.getElementById((0, ej.j)(n, e));
     }
     isScrolledToBottom() {
         let {
@@ -1817,7 +1817,7 @@ class nF {
             if (null != e)
                 return void this.ref.current?.scrollIntoViewNode({
                     node: e,
-                    padding: ej.mZ + this.props.additionalMessagePadding,
+                    padding: ey.mZ + this.props.additionalMessagePadding,
                     callback: this.handleScroll,
                 });
         }
@@ -1839,7 +1839,7 @@ class nF {
         this.setAutomaticAnchor(null);
     }
     newMessageBarBuffer() {
-        return this.props.channel.isForumPost() ? ej.Gt : ej.k8;
+        return this.props.channel.isForumPost() ? ey.Gt : ey.k8;
     }
     findAnchor() {
         let { messages: e, hasUnreads: t, channel: n } = this.props,
@@ -1899,7 +1899,7 @@ class nF {
                   : this.mergeTo(n, this.handleScroll),
               this.ref.current?.scrollIntoViewNode({
                   node: t,
-                  padding: ej.mZ + this.props.additionalMessagePadding,
+                  padding: ey.mZ + this.props.additionalMessagePadding,
                   callback: this.handleScroll,
               }))
             : this.mergeTo(n, this.handleScroll),
@@ -2062,7 +2062,7 @@ class nF {
             let l = this.getElementFromMessageId(n);
             (0, eb.vq)(l)
                 ? this.scrollTo(
-                      this.getOffsetOrientationFromNode(l, "middle", t ? this.newMessageBarBuffer() : ej.mZ),
+                      this.getOffsetOrientationFromNode(l, "middle", t ? this.newMessageBarBuffer() : ey.mZ),
                       !0,
                   )
                 : this.scrollToNewMessages(!0, "middle");
@@ -2072,7 +2072,7 @@ class nF {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
             n = arguments.length > 2 ? arguments[2] : void 0,
-            l = this.getDocument()?.getElementById(ej.q4),
+            l = this.getDocument()?.getElementById(ey.q4),
             i = () => {
                 (this.jumping = !1), this.setAutomaticAnchor(this.findAnchor()), null != n && n(), this.handleScroll();
             };
@@ -2196,7 +2196,7 @@ class nF {
                   this.getOffsetOrientationFromNode(
                       i,
                       "middle",
-                      this.props.hasUnreads ? this.newMessageBarBuffer() : ej.mZ,
+                      this.props.hasUnreads ? this.newMessageBarBuffer() : ey.mZ,
                   ),
                   n,
                   s,
@@ -2208,7 +2208,7 @@ class nF {
             { messages: i, hasUnreads: s, placeholderHeight: a } = this.props;
         if ("top" === e)
             if (!i.hasMoreBefore) return 0;
-            else return s ? a - ej.N0 - 2 : a + 500;
+            else return s ? a - ey.N0 - 2 : a + 500;
         return i.hasMoreAfter ? n - l - a - 500 : n - l;
     }
     getOffsetToPreventLoading(e) {
@@ -2539,21 +2539,21 @@ var lE = n(289873),
     lS = n(513461),
     l_ = n(654265),
     lI = n(561446),
-    ly = n(806700);
-function lj(e) {
+    lj = n(806700);
+function ly(e) {
     let { joinRequest: t, guild: n } = e,
         l = (0, m.bG)([X.default], () => X.default.getUser(t.userId));
     return (0, r.jsxs)("div", {
-        className: ly.I8,
+        className: lj.I8,
         children: [
             (0, r.jsxs)("div", {
-                className: ly.Ov,
+                className: lj.Ov,
                 children: [
                     null != n &&
                         (0, r.jsxs)("div", {
-                            className: ly.yB,
+                            className: lj.yB,
                             children: [
-                                (0, r.jsx)(lx.Ay, { guild: n, active: !0, size: lx.Ay.Sizes.SMOL, className: ly.$f }),
+                                (0, r.jsx)(lx.Ay, { guild: n, active: !0, size: lx.Ay.Sizes.SMOL, className: lj.$f }),
                                 (0, r.jsx)(nz.D, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
@@ -2578,9 +2578,9 @@ function lj(e) {
                             : e.response;
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)("hr", { className: ly.g2 }),
+                            (0, r.jsx)("hr", { className: lj.g2 }),
                             (0, r.jsxs)("div", {
-                                className: ly.fs,
+                                className: lj.fs,
                                 children: [
                                     (0, r.jsx)(td.E, {
                                         variant: "text-xs/semibold",
@@ -2601,13 +2601,13 @@ function lb(e) {
         { loading: n, joinRequest: l, joinRequestGuild: i } = (0, l_.A)(t.id);
     return (0, r.jsx)(lu.Ay, {
         channelId: t.id,
-        className: ly.kL,
+        className: lj.kL,
         children:
             null != l && null != l.formResponses
                 ? (0, r.jsxs)("div", {
-                      className: ly.KJ,
+                      className: lj.KJ,
                       children: [
-                          (0, r.jsx)("div", { children: (0, r.jsx)(lj, { guild: i, joinRequest: l }) }),
+                          (0, r.jsx)("div", { children: (0, r.jsx)(ly, { guild: i, joinRequest: l }) }),
                           (0, r.jsx)(lI.A, { channelId: t.id, showProfile: !0 }),
                       ],
                   })
@@ -2972,8 +2972,8 @@ function ic(e) {
         if (null == a) return null;
         (0, il.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                n.e("90673"),
-                n.e("60049"),
+                n.e("98944"),
+                n.e("17546"),
                 n.e("26132"),
                 n.e("46652"),
                 n.e("93190"),
@@ -3075,8 +3075,8 @@ var ih = n(603968),
     iS = n(546183),
     i_ = n(543465),
     iI = n(308528),
-    iy = n(928658),
-    ij = n(978914),
+    ij = n(928658),
+    iy = n(978914),
     ib = n(977347);
 function iT(e) {
     let { channel: t, user: n } = e,
@@ -3093,7 +3093,7 @@ function iT(e) {
                     l === eh.eA$.PENDING_INCOMING,
                 s = n || i,
                 a = (0, ib.D)(e.id, t),
-                { message: r, loaded: o, error: c } = (0, ij.I)(e, { enabled: s }),
+                { message: r, loaded: o, error: c } = (0, iy.I)(e, { enabled: s }),
                 d = a ?? (r?.author?.id === t ? r : null);
             return { message: d, isReportable: s, isLoaded: null != d || o || c };
         })(t, n.id, l),
@@ -3102,7 +3102,7 @@ function iT(e) {
         u = !t8.Fr && !d,
         h = o.useCallback(() => {
             null != i &&
-                (0, iy.b8)(i, () => {
+                (0, ij.b8)(i, () => {
                     iI.A.closePrivateChannel(t.id, u);
                 });
         }, [t.id, i, u]);
@@ -3679,8 +3679,8 @@ let sE = () =>
 var sS = n(930390),
     s_ = n(831688),
     sI = n(226698),
-    sy = n(376708),
-    sj = n(715757),
+    sj = n(376708),
+    sy = n(715757),
     sb = n(390897),
     sT = n(862482),
     sN = n(215026),
@@ -3716,7 +3716,7 @@ function sB(e) {
         a = s?.reported_user_id,
         c = (0, m.bG)([X.default], () => (null != a ? X.default.getUser(a) : null)),
         d = (0, m.bG)([t1.A], () => t1.A.getGuild(t.guild_id));
-    (0, sj.ml)(l);
+    (0, sy.ml)(l);
     let u = (function (e) {
             let { channel: t, user: l, guild: i } = e,
                 s = (0, m.bG)([sD.A], () => null != l && sD.A.isUserBanned(l.id)),
@@ -3853,7 +3853,7 @@ var sK = n(152007),
 function sZ(e) {
     let { channel: t } = e,
         l = t.isArchivedThread(),
-        i = (0, sy.uW)(t),
+        i = (0, sj.uW)(t),
         [s, a] = o.useState(!1),
         c = () => {
             a(!0),
@@ -3892,8 +3892,8 @@ function sY(e) {
         f = (0, m.bG)([eB.A], () => eB.A.getChannel(t), [t]),
         { firstMessage: C } = (0, sz.OA)(f),
         E = (0, m.bG)([sK.A], () => sK.A.hasJoined(t)),
-        { disableReactionUpdates: x, disableReactionCreates: S, isLurking: _, isPendingMember: y } = (0, sA.A)(f),
-        j = (0, sj.W1)(f),
+        { disableReactionUpdates: x, disableReactionCreates: S, isLurking: _, isPendingMember: j } = (0, sA.A)(f),
+        y = (0, sy.W1)(f),
         b = (0, m.bG)([eB.A], () => eB.A.getChannel(i)),
         T = (0, lm.Ck)(b),
         N = (0, m.bG)([ss.A], () => ss.A.shouldDisplayPrompt(t) && !0 === n, [t, n]),
@@ -3939,7 +3939,7 @@ function sY(e) {
                 className: d()(s$.kL, { [s$.wx]: h }),
                 ref: s,
                 children: [
-                    j
+                    y
                         ? (0, r.jsx)("div", { className: s$.kX, children: (0, r.jsx)(sH, { message: C, channel: f }) })
                         : (0, r.jsxs)("div", {
                               className: d()(s$.hY, { [s$.Lq]: M }),
@@ -3954,7 +3954,7 @@ function sY(e) {
                                               readOnly: !1,
                                               useChatFontScaling: !1,
                                               isLurking: _,
-                                              isPendingMember: y,
+                                              isPendingMember: j,
                                               emoji: T,
                                               type: sg.v.NORMAL,
                                               hideCount: !0,
@@ -3971,7 +3971,7 @@ function sY(e) {
                                       disableReactionCreates: !0,
                                       disableReactionUpdates: x,
                                       isLurking: _,
-                                      isPendingMember: y,
+                                      isPendingMember: j,
                                       maxReactions: c,
                                       className: s$.Br,
                                       useChatFontScaling: !1,
@@ -3992,7 +3992,7 @@ function sY(e) {
                     (0, r.jsxs)("div", {
                         className: s$.Uo,
                         children: [
-                            j
+                            y
                                 ? (0, r.jsx)(sZ, { channel: f })
                                 : !_ &&
                                   (0, r.jsx)(lG.m, {
@@ -4082,12 +4082,12 @@ function s2(e) {
                 async () => {
                     let { default: e } = await Promise.all([
                         n.e("25028"),
-                        n.e("43549"),
                         n.e("6627"),
-                        n.e("20516"),
+                        n.e("43549"),
                         n.e("70940"),
                         n.e("2033"),
                         n.e("82830"),
+                        n.e("20516"),
                         n.e("19959"),
                     ]).then(n.bind(n, 131882));
                     return (n) => {
@@ -4373,7 +4373,7 @@ function ai(e) {
                 className: d()(an.aK, o ? an.Ke : an.hO),
                 contentClassName: o ? an.Ew : an.rD,
                 isUnread: a,
-                id: a ? ej.q4 : void 0,
+                id: a ? ey.q4 : void 0,
                 children: t,
             },
             `divider-${n.contentKey ?? n.unreadId ?? i}`,
@@ -4467,7 +4467,7 @@ let aC = o.memo(function (e) {
                           return (0, r.jsx)(
                               t,
                               {
-                                  id: (0, ey.j)(n.id, e.content.id),
+                                  id: (0, ej.j)(n.id, e.content.id),
                                   className: ap.__invalid_blocked,
                                   compact: l,
                                   channel: n,
@@ -4490,8 +4490,8 @@ var aE = n(34337),
     aS = n(631576),
     a_ = n(750385),
     aI = n(148355),
-    ay = n(310876);
-let aj = "749054660769218631";
+    aj = n(310876);
+let ay = "749054660769218631";
 function ab(e) {
     let { channel: t } = e,
         [n, l] = o.useState("");
@@ -4507,11 +4507,11 @@ function ab(e) {
         ),
         s = (0, m.bG)([X.default], () => X.default.getUser(t.isPrivate() ? t.getRecipientId() : null)),
         a = ld.Ay.useName(s) ?? tp.intl.string(tp.t.y1Wu2f),
-        c = (0, m.bG)([a_.A], () => a_.A.getStickerById(aj)),
+        c = (0, m.bG)([a_.A], () => a_.A.getStickerById(ay)),
         d = o.useCallback(async () => {
             if (null == n || "" === n)
                 try {
-                    (0, ax.W)({ channelId: t.id, source: "In-channel greet" }), await I.A.sendGreetMessage(t.id, aj);
+                    (0, ax.W)({ channelId: t.id, source: "In-channel greet" }), await I.A.sendGreetMessage(t.id, ay);
                 } catch (e) {
                     e.ok || 429 !== e.status || l(tp.intl.string(tp.t.Whhv4w));
                 }
@@ -4520,7 +4520,7 @@ function ab(e) {
         h =
             null != n && "" !== n
                 ? (0, r.jsx)(td.E, {
-                      className: ay.z3,
+                      className: aj.z3,
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       children: n,
@@ -4528,24 +4528,24 @@ function ab(e) {
                 : null;
     return i
         ? (0, r.jsxs)("div", {
-              className: ay.ft,
+              className: aj.ft,
               children: [
                   (0, r.jsxs)(ek.D, {
-                      className: null != n && "" !== n ? ay.AO : ay.Iq,
+                      className: null != n && "" !== n ? aj.AO : aj.Iq,
                       "aria-label": tp.intl.string(tp.t.pJObYI),
                       onClick: d,
                       children: [
                           (0, r.jsx)(aI.A, { sticker: c, size: 24 }),
-                          (0, r.jsx)(td.E, { className: ay.Qq, variant: "text-md/medium", children: u }),
+                          (0, r.jsx)(td.E, { className: aj.Qq, variant: "text-md/medium", children: u }),
                       ],
                   }),
                   h,
               ],
           })
         : (0, r.jsxs)("div", {
-              className: ay.nj,
+              className: aj.nj,
               children: [
-                  (0, r.jsx)(aI.A, { sticker: c, size: 160, className: ay.Xr }),
+                  (0, r.jsx)(aI.A, { sticker: c, size: 160, className: aj.Xr }),
                   (0, r.jsx)(n1.$, {
                       fullWidth: !0,
                       variant: "primary",
@@ -4723,7 +4723,7 @@ let aD = (0, u.animated)(S),
                 }),
                 Y = (function (e) {
                     let { scrollerRef: t, ...n } = e,
-                        l = (0, j.A)(() => {
+                        l = (0, y.A)(() => {
                             let e = t.current;
                             return null == e
                                 ? Promise.resolve()
@@ -4731,7 +4731,7 @@ let aD = (0, u.animated)(S),
                                       e.scrollToBottom({ callback: () => requestAnimationFrame(t) });
                                   });
                         }),
-                        i = (0, j.A)(() => {
+                        i = (0, y.A)(() => {
                             let e = t.current;
                             return null == e
                                 ? Promise.resolve()
@@ -4747,7 +4747,7 @@ let aD = (0, u.animated)(S),
                                 null != i &&
                                     t.current?.scrollIntoViewNode({
                                         node: i,
-                                        padding: 4 * ej.mZ,
+                                        padding: 4 * ey.mZ,
                                         callback: () => i?.focus(),
                                     });
                             },
@@ -4757,7 +4757,7 @@ let aD = (0, u.animated)(S),
                             n.hasMoreAfter || eI._.dispatchToLastSubscribed(eh.jej.TEXTAREA_FOCUS);
                         }, [n.hasMoreAfter]),
                         r = (0, e_.Ay)({
-                            id: ey.D,
+                            id: ej.D,
                             preserveFocusPosition: !1,
                             setFocus: s,
                             isEnabled: n.keyboardModeEnabled && !n.isEditing,
@@ -4805,9 +4805,9 @@ let aD = (0, u.animated)(S),
                         } = e,
                         S = X.default.getCurrentUser(),
                         _ = () => A.isInitialized() || a.ready,
-                        j = (0, ac.r)(s),
+                        y = (0, ac.r)(s),
                         N = a.length > 0 && a.first()?.isFirstMessageInForumPost(s),
-                        v = (0, y.cI)(s),
+                        v = (0, j.cI)(s),
                         M = (0, m.bG)([B.A], () => B.A.shouldShowTopicsBar() && !E),
                         R = (0, s3.l)(s.id),
                         D = (0, s0.j)(s.id, s1.Rx),
@@ -4837,7 +4837,7 @@ let aD = (0, u.animated)(S),
                         })(s, R ?? D ?? L),
                         G = s.isForumPost() && !N ? (0, r.jsx)(sY, { postId: s.id }) : null,
                         O = (0, la.A)(s.id),
-                        U = (0, sj.W1)(s);
+                        U = (0, sy.W1)(s);
                     (t = H.Sf.useSetting()),
                         (n = (0, sa.bG)([b.A], () => b.A.useReducedMotion)),
                         o.useEffect(() => {
@@ -4881,7 +4881,7 @@ let aD = (0, u.animated)(S),
                                               {
                                                   isUnread: n,
                                                   isBeforeGroup: null == e.content && av(h[t + 1]),
-                                                  id: n ? ej.q4 : void 0,
+                                                  id: n ? ey.q4 : void 0,
                                                   itemId: null != e.content ? `divider-${e.contentKey ?? t}` : void 0,
                                                   children: e.content,
                                               },
@@ -4918,7 +4918,7 @@ let aD = (0, u.animated)(S),
                                     (0, r.jsx)(
                                         aC,
                                         {
-                                            unreadId: ej.q4,
+                                            unreadId: ey.q4,
                                             messages: e,
                                             channel: s,
                                             compact: u,
@@ -4942,7 +4942,7 @@ let aD = (0, u.animated)(S),
                                     message: e.content,
                                     groupId: n,
                                     flashKey: e.flashKey,
-                                    id: (0, ey.j)(s.id, e.content.id),
+                                    id: (0, ej.j)(s.id, e.content.id),
                                     isLastItem: t >= h.length - 1,
                                     renderContentOnly: O || l,
                                 },
@@ -4966,7 +4966,7 @@ let aD = (0, u.animated)(S),
                         a.hasMoreBefore && null == f)
                     ) {
                         a.length > 0 &&
-                            F.unshift((0, r.jsx)("div", { style: { height: ej.N0, flex: "0 0 auto" } }, "buffer"));
+                            F.unshift((0, r.jsx)("div", { style: { height: ey.N0, flex: "0 0 auto" } }, "buffer"));
                         let { useReducedMotion: e } = b.A;
                         ((e && _()) || !e) && F.unshift((0, r.jsx)(ex, { compact: u, ...p }, "has-more"));
                     }
@@ -4974,7 +4974,7 @@ let aD = (0, u.animated)(S),
                         ((a.hasMoreBefore && null == f) ||
                             F.unshift((0, r.jsx)(i7, { channel: s, showingBanner: C }, "empty-message")),
                         a.hasMoreAfter && F.push((0, r.jsx)(ex, { compact: u, ...p }, "has-more-after")),
-                        !C && j && _() && F.push((0, r.jsx)(ab, { channel: s })),
+                        !C && y && _() && F.push((0, r.jsx)(ab, { channel: s })),
                         c > 0 && d && _())
                     ) {
                         let e,
@@ -4986,7 +4986,7 @@ let aD = (0, u.animated)(S),
                             (Z.Ay.isEstimated(s.id)
                                 ? ((e = a ? tp.t.wvtbbG : tp.t.tHqbtg), (t = tp.t.vaPWFe))
                                 : ((e = a ? tp.t["BctFH/"] : tp.t["3wXb9P"]), (t = tp.t["4H8ldG"])),
-                            v && (0, y.Kc)(s) && k.includes(aN.i.SUMMARIES))
+                            v && (0, j.Kc)(s) && k.includes(aN.i.SUMMARIES))
                         ) {
                             let n = Z.Ay.ackMessageId(s.id),
                                 a = (function (e, t) {
@@ -5001,9 +5001,9 @@ let aD = (0, u.animated)(S),
                                     num_unread_messages: c,
                                     last_ack_message_id: n,
                                     summaries_enabled_by_user: M,
-                                    summaries_enabled_for_channel: (0, y.pk)(s),
+                                    summaries_enabled_for_channel: (0, j.pk)(s),
                                 }),
-                                (0, y.pk)(s))
+                                (0, j.pk)(s))
                             ) {
                                 let n = M
                                     ? tp.intl.format(t, { count: c })
@@ -5078,7 +5078,7 @@ let aD = (0, u.animated)(S),
                     }
                     if (
                         (null == l &&
-                            (0, y.pk)(s) &&
+                            (0, j.pk)(s) &&
                             M &&
                             k.includes(aN.i.SUMMARIES) &&
                             (l = (0, r.jsx)(aE.UK, { channel: s, scrollManager: A })),
@@ -5161,7 +5161,7 @@ let aD = (0, u.animated)(S),
                 (0, Q.Vo)({ event: eh.jej.SCROLL_PAGE_DOWN, handler: i });
             let ec = (0, _.R7)(),
                 { ref: ed, ...eu } = (0, h.LT)(Y),
-                em = (0, j.A)((e) => {
+                em = (0, y.A)((e) => {
                     (q.ref.current = e), (ed.current = e?.getScrollerNode() ?? null);
                 }),
                 eg = (0, m.bG)([K.A], () => {
@@ -5294,7 +5294,7 @@ let aD = (0, u.animated)(S),
                     i = (0, m.bG)([Z.Ay], () => Z.Ay.getOldestUnreadMessageId(e.id) ?? null, [e.id]),
                     { enabled: s } = U.A.useExperiment({ location: "41de6d_1" }, { autoTrackExposure: !1 }),
                     a = X.default.getUser(V.default.getId())?.hasFlag(eh.nhx.SPAMMER) ?? !1,
-                    r = (0, y.cI)(e),
+                    r = (0, j.cI)(e),
                     c = (0, O.A)("use_topic_dividers_in_chat"),
                     d = (0, m.yK)([B.A], () => (r && c ? (B.A.summaries(e.id) ?? []) : []), [r, e.id, c]),
                     u = (0, m.bG)([B.A], () => (r ? B.A.selectedSummary(e.id) : null), [r, e.id]),
@@ -5428,7 +5428,7 @@ let aD = (0, u.animated)(S),
                                         _ = null,
                                         I = (0, ea.kf)(e);
                                     h = h || I;
-                                    let y = (function (e, t, n) {
+                                    let j = (function (e, t, n) {
                                         if (et.M.NON_COLLAPSIBLE.has(t.type));
                                         else if (t.hasFlag(eh.pr7.HIDDEN_SUSPENDED_USER))
                                             return eh.TZK.MESSAGE_GROUP_SUSPENDED_USER;
@@ -5437,11 +5437,11 @@ let aD = (0, u.animated)(S),
                                         else if ((0, ea.iJ)(e) && n) return eh.TZK.MESSAGE_GROUP_SPAMMER;
                                         return null;
                                     })(i, e, I && r);
-                                    (null !== y &&
+                                    (null !== j &&
                                         ([_, S] =
                                             ((C = A = S),
-                                            null == A || A.type !== y
-                                                ? ((f = { type: y, content: [], key: e.id }), u.push(f))
+                                            null == A || A.type !== j
+                                                ? ((f = { type: j, content: [], key: e.id }), u.push(f))
                                                 : (C = (f = A).content[f.content.length - 1]),
                                             [f, C])),
                                     a === e.id && null != m)
@@ -5460,7 +5460,7 @@ let aD = (0, u.animated)(S),
                                           (e.isFirstMessageInForumPost(i) ||
                                               u.push({ type: eh.TZK.DIVIDER, unreadId: e.id }),
                                           (m = null));
-                                    let j =
+                                    let y =
                                         null !=
                                         (E = (function (e, t) {
                                             if (em.get(t.id) === e.id) return eg(e, t.id);
@@ -5485,9 +5485,9 @@ let aD = (0, u.animated)(S),
                                         })(e, i))
                                             ? { message: E, position: "before" }
                                             : null;
-                                    null != j &&
-                                        "before" === j.position &&
-                                        u.push({ type: eh.TZK.MESSAGE, content: j.message, groupId: j.message.id });
+                                    null != y &&
+                                        "before" === y.position &&
+                                        u.push({ type: eh.TZK.MESSAGE, content: y.message, groupId: y.message.id });
                                     let b = S?.type === eh.TZK.MESSAGE ? l : S;
                                     (0, es.l)(i, b, e) && (n = e.id);
                                     let T = {
@@ -5525,9 +5525,9 @@ let aD = (0, u.animated)(S),
                                             : u.push(T),
                                         e.isFirstMessageInForumPost(i) &&
                                             u.push({ type: eh.TZK.FORUM_POST_ACTION_BAR }),
-                                        null != j &&
-                                            "after" === j.position &&
-                                            u.push({ type: eh.TZK.MESSAGE, content: j.message, groupId: j.message.id }),
+                                        null != y &&
+                                            "after" === y.position &&
+                                            u.push({ type: eh.TZK.MESSAGE, content: y.message, groupId: y.message.id }),
                                         null != c &&
                                             e.id === c.endId &&
                                             c.count > 1 &&

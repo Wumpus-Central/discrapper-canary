@@ -36,17 +36,18 @@ let m = function (e, t) {
             if (e && f.isGuildStageVoice() && (0, _.xn)(f.id))
                 return void (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("81349"),
+                        n.e("90261"),
                         n.e("24199"),
                         n.e("43039"),
                         n.e("88077"),
                         n.e("13681"),
-                        n.e("21690"),
                         n.e("32551"),
                         n.e("52367"),
                         n.e("77998"),
                         n.e("66900"),
+                        n.e("1555"),
                         n.e("44695"),
+                        n.e("21690"),
                         n.e("55314"),
                         n.e("29177"),
                         n.e("1177"),
@@ -54,7 +55,6 @@ let m = function (e, t) {
                         n.e("89094"),
                         n.e("5501"),
                         n.e("77245"),
-                        n.e("1555"),
                         n.e("34472"),
                         n.e("45723"),
                         n.e("38835"),

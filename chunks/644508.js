@@ -13,11 +13,11 @@ let c = async (e) => {
             async () => {
                 let { EmojiStudioModal: e } = await Promise.all([
                     n.e("91766"),
-                    n.e("34936"),
                     n.e("50342"),
                     n.e("7406"),
-                    n.e("71167"),
                     n.e("55524"),
+                    n.e("34936"),
+                    n.e("71167"),
                     n.e("89908"),
                     n.e("70876"),
                     n.e("95903"),

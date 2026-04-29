@@ -16,8 +16,8 @@ var r = n(192308),
     m = n(977997),
     f = n(954571),
     g = n(389234),
-    I = n(652215),
-    A = n(64175);
+    A = n(652215),
+    I = n(64175);
 let p = {
     async handleVoiceConnect(e) {
         let {
@@ -72,19 +72,19 @@ let p = {
                               i = e.getGuildId();
                           if (null == i && !t)
                               throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");
-                          (0, l.pX)(I.BVt.CHANNEL(i, e.id), n);
+                          (0, l.pX)(A.BVt.CHANNEL(i, e.id), n);
                       })(t, C, y),
                   !0)
             : new Promise((e) => {
                   (0, r.openModalLazy)(
                       async () => {
                           let { default: r } = await Promise.all([
-                              n.e("61748"),
-                              n.e("19364"),
+                              n.e("7026"),
+                              n.e("42105"),
                               n.e("21537"),
                               n.e("18943"),
-                              n.e("65617"),
                               n.e("42234"),
+                              n.e("65617"),
                               n.e("20577"),
                               n.e("83792"),
                               n.e("10117"),
@@ -114,12 +114,12 @@ let p = {
                       },
                       {
                           onCloseCallback: () => {
-                              f.default.track(I.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                                  action: A.Qi.DISMISS,
+                              f.default.track(A.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                                  action: I.Qi.DISMISS,
                                   channel_id: t.id,
                                   blocked_user_ids: Array.from(w),
                                   ignored_user_ids: Array.from(P),
-                                  warning_surface: A.gD.PRE_JOIN_MODAL,
+                                  warning_surface: I.gD.PRE_JOIN_MODAL,
                               });
                           },
                       },

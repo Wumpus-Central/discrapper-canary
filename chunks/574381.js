@@ -1,89 +1,88 @@
-"use strict";
 n.d(t, {
-    Aq: () => f,
-    Av: () => a,
-    Ct: () => E,
-    HZ: () => _,
-    Ls: () => I,
-    R0: () => N,
-    Sn: () => h,
-    cX: () => u,
-    cZ: () => O,
-    fg: () => i,
-    j9: () => d,
-    m0: () => p,
-    q4: () => g,
-    r_: () => y,
-    t1: () => S,
-    tn: () => A,
-    uF: () => l,
-    un: () => m,
-    uo: () => T,
-    xl: () => c,
+    Aq: () => u,
+    Av: () => s,
+    Ct: () => A,
+    HZ: () => E,
+    Ls: () => f,
+    R0: () => C,
+    Sn: () => I,
+    cX: () => d,
+    cZ: () => R,
+    fg: () => a,
+    j9: () => c,
+    m0: () => T,
+    q4: () => S,
+    r_: () => O,
+    t1: () => m,
+    tn: () => N,
+    uF: () => o,
+    un: () => h,
+    uo: () => p,
+    xl: () => _,
 });
-var r,
-    i = (((r = {}).WINDOWS = "WINDOWS"), (r.OSX = "OSX"), (r.LINUX = "LINUX"), (r.WEB = "WEB"), r);
-let s = window.DiscordNative,
-    a = null != s,
-    o = null != s ? s.process.platform : "";
-function l() {
-    return /^win/.test(o);
-}
-function u() {
-    return "darwin" === o;
+var i,
+    a = (((i = {}).WINDOWS = "WINDOWS"), (i.OSX = "OSX"), (i.LINUX = "LINUX"), (i.WEB = "WEB"), i);
+let r = window.DiscordNative,
+    s = null != r,
+    l = null != r ? r.process.platform : "";
+function o() {
+    return /^win/.test(l);
 }
 function d() {
-    return "linux" === o;
+    return "darwin" === l;
 }
 function c() {
-    return l() || u() || d();
+    return "linux" === l;
 }
 function _() {
-    return "WEB" === T();
+    return o() || d() || c();
 }
-function f() {
+function E() {
+    return "WEB" === p();
+}
+function u() {
     return (
         null != navigator.userAgent &&
         null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
     );
 }
-function E() {
+function A() {
     return navigator.userAgent?.match(/android/i) != null;
 }
-function h() {
+function I() {
     return navigator.userAgent?.match(/Macintosh/i) != null;
 }
-function p() {
-    return "android" === o;
-}
-function m() {
-    return "ios" === o;
-}
-function g() {
-    return navigator.userAgent?.match(/OculusBrowser/i) != null;
-}
-function A() {
-    return g();
-}
-function I() {
-    return c() || g() || a;
-}
 function T() {
-    return l() ? "WINDOWS" : u() ? "OSX" : d() ? "LINUX" : "WEB";
+    return "android" === l;
+}
+function h() {
+    return "ios" === l;
 }
 function S() {
-    return o;
+    return navigator.userAgent?.match(/OculusBrowser/i) != null;
 }
-function y() {
-    switch (o) {
+function N() {
+    return S();
+}
+function f() {
+    return _() || S() || s;
+}
+function p() {
+    return o() ? "WINDOWS" : d() ? "OSX" : c() ? "LINUX" : "WEB";
+}
+function m() {
+    return l;
+}
+function O() {
+    switch (l) {
         case "ios":
         case "android":
-            return o;
+            return l;
         default:
             return "web";
     }
 }
-function N() {
+function C() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "windows mobile" : "windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "ios";
@@ -93,6 +92,6 @@ function N() {
         return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? "ios" : "macos";
     else if (/Linux/i.test(e)) return "linux";
 }
-function O() {
-    return l() ? "win" : u() ? "osx" : void 0;
+function R() {
+    return o() ? "win" : d() ? "osx" : void 0;
 }

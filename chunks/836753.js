@@ -1,41 +1,38 @@
-n.d(t, { A: () => m });
-var l = n(627968);
+n.d(t, { A: () => A });
+var i = n(627968);
 n(64700);
-var i = n(192308),
-    s = n(228366),
-    r = n(272355),
-    a = n(960736),
+var a = n(192308),
+    r = n(228366),
+    s = n(272355),
+    l = n(960736),
     o = n(954571),
-    u = n(972387),
-    d = n(539895),
-    c = n(652215);
-let h = "INVITE_MODAL_KEY";
-class A extends r.A {
+    d = n(972387),
+    c = n(539895),
+    _ = n(652215);
+let E = "INVITE_MODAL_KEY";
+class u extends s.A {
     _initialize() {
-        s.h.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
-            s.h.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
+        r.h.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
+            r.h.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     _terminate() {
-        (0, i.closeModal)(h),
-            s.h.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
-            s.h.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
+        (0, a.closeModal)(E),
+            r.h.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
+            r.h.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
     }
     handleOpenModal(e) {
         let { context: t } = e;
-        d.A.isOpen() &&
-            !(0, i.hasModalOpen)(h) &&
-            (0, i.openModalLazy)(
+        c.A.isOpen() &&
+            !(0, a.hasModalOpen)(E) &&
+            (0, a.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("44609"),
-                        n.e("29139"),
-                        n.e("74112"),
-                        n.e("74275"),
-                        n.e("47715"),
-                        n.e("13709"),
-                        n.e("81349"),
-                        n.e("31320"),
-                        n.e("71470"),
+                        n.e("82519"),
+                        n.e("90261"),
+                        n.e("42105"),
+                        n.e("17546"),
+                        n.e("6445"),
+                        n.e("62349"),
                         n.e("43437"),
                         n.e("86127"),
                         n.e("53917"),
@@ -46,37 +43,31 @@ class A extends r.A {
                         n.e("90664"),
                         n.e("72401"),
                         n.e("15109"),
-                        n.e("14020"),
                         n.e("91643"),
-                        n.e("74337"),
                         n.e("63497"),
-                        n.e("58838"),
-                        n.e("38714"),
-                        n.e("69237"),
-                        n.e("54360"),
+                        n.e("74337"),
                         n.e("40247"),
                         n.e("7265"),
                         n.e("81079"),
-                        n.e("78124"),
                         n.e("46658"),
                         n.e("55540"),
                     ]).then(n.bind(n, 57375));
-                    return (t) => (0, l.jsx)(e, { ...t });
+                    return (t) => (0, i.jsx)(e, { ...t });
                 },
                 {
-                    modalKey: h,
-                    contextKey: (0, i.modalContextFromAppContext)(t),
+                    modalKey: E,
+                    contextKey: (0, a.modalContextFromAppContext)(t),
                     onCloseRequest: () => {
-                        let e = (0, a.p9)(),
-                            t = (0, a.xD)();
-                        o.default.track(c.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: e, guild_id: t }),
-                            u.A.close(d.A.getProps().invite?.code ?? e);
+                        let e = (0, l.p9)(),
+                            t = (0, l.xD)();
+                        o.default.track(_.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: e, guild_id: t }),
+                            d.A.close(c.A.getProps().invite?.code ?? e);
                     },
                 },
             );
     }
     handleCloseModal(e) {
-        (0, i.closeModal)(h);
+        (0, a.closeModal)(E);
     }
 }
-let m = new A();
+let A = new u();

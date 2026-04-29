@@ -89,13 +89,9 @@ let C = (0, o.Qx)(u.X.ACTIVITY_PRIVACY_PER_GUILD_DEFAULT_SETTING, {
             if (null == l) return;
             let s = (0, b.Xc)(e);
             (0, f.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([
-                    i.e("92164"),
-                    i.e("15758"),
-                    i.e("90213"),
-                    i.e("62041"),
-                    i.e("41996"),
-                ]).then(i.bind(i, 32167));
+                let { default: e } = await Promise.all([i.e("92164"), i.e("54306"), i.e("62041"), i.e("41996")]).then(
+                    i.bind(i, 32167),
+                );
                 return (t) =>
                     (0, p.jsx)(e, {
                         ...t,
@@ -20401,10 +20397,9 @@ let bb = {
                 (0, f.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         i.e("92164"),
-                        i.e("15758"),
-                        i.e("90213"),
-                        i.e("99126"),
+                        i.e("54306"),
                         i.e("62041"),
+                        i.e("99126"),
                         i.e("63786"),
                     ]).then(i.bind(i, 413201));
                     return (t) =>

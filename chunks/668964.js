@@ -1,10 +1,10 @@
 let r, i, E, o, _, s, l;
-var I,
-    a = n(214958),
-    A = n.n(a),
+var a,
+    I = n(214958),
+    A = n.n(I),
     O = n(70298),
-    S = n(175259),
-    c = n(506774),
+    c = n(175259),
+    S = n(506774),
     R = n(362474),
     N = n(71931),
     T = n(368849);
@@ -19,7 +19,7 @@ if (null != L) {
         E = L.os.arch,
         o = L.os.appArch,
         _ = L.app.getReleaseChannel(),
-        s = (0, S.c)();
+        s = (0, c.c)();
     switch (n) {
         case "win32":
             e = "Windows";
@@ -109,7 +109,7 @@ function f() {
 if (null == r)
     try {
         r = (function () {
-            let e = c.w.get(u);
+            let e = S.w.get(u);
             if (null == e) {
                 let t;
                 ((t = {}).os = (function () {
@@ -155,13 +155,13 @@ if (null == r)
                         if (/iPad/.test(e)) return "iPad";
                         else return "";
                     })()),
-                    (t.system_locale = (0, S.c)()),
+                    (t.system_locale = (0, c.c)()),
                     (t.has_client_mods = (0, O.b)()),
                     (e = t),
-                    c.w.set(u, e);
+                    S.w.set(u, e);
             }
-            let t = c.w.get(d);
-            null == t && ((t = f()), c.w.set(d, t));
+            let t = S.w.get(d);
+            null == t && ((t = f()), S.w.set(d, t));
             let n = R.u.get(d);
             if (null == n) {
                 var r;
@@ -185,7 +185,7 @@ if (null == r)
     (_ = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == o.release_channel || "" === o.release_channel) &&
         (o.release_channel = _.split("-")[0]),
-    isNaN((s = parseInt("536181", 10))) || (o.client_build_number = s),
+    isNaN((s = parseInt("537078", 10))) || (o.client_build_number = s),
     null == (l = L?.app.getBuildNumber()) || isNaN(l) || (o.native_build_number = l),
     (o.client_event_source = (function () {
         try {
@@ -207,11 +207,11 @@ function g(e) {
     }
     return t;
 }
-class P {
+class m {
     parts;
     str;
     static fromString(e) {
-        return new P(
+        return new m(
             (function (e) {
                 let t = g(e),
                     n = [, , , ,];
@@ -234,7 +234,7 @@ class P {
         let t = [, , , ,],
             n = Math.floor(e / 16);
         for (let r = 0; r < 4; r++) t[3 - r] = r === n ? 1 << (e - 16 * n) : 0;
-        return new P(t);
+        return new m(t);
     }
     static asUintN(e, t) {
         let { parts: n } = t,
@@ -253,18 +253,18 @@ class P {
     }
     and(e) {
         let { parts: t } = e;
-        return new P(this.parts.map((e, n) => e & t[n]));
+        return new m(this.parts.map((e, n) => e & t[n]));
     }
     or(e) {
         let { parts: t } = e;
-        return new P(this.parts.map((e, n) => e | t[n]));
+        return new m(this.parts.map((e, n) => e | t[n]));
     }
     xor(e) {
         let { parts: t } = e;
-        return new P(this.parts.map((e, n) => e ^ t[n]));
+        return new m(this.parts.map((e, n) => e ^ t[n]));
     }
     not() {
-        return new P(this.parts.map((e) => ~e));
+        return new m(this.parts.map((e) => ~e));
     }
     equals(e) {
         let { parts: t } = e;
@@ -285,31 +285,31 @@ class P {
         return this.toString();
     }
 }
-let M = (function () {
+let P = (function () {
     try {
         return !0;
     } catch (e) {
         return !1;
     }
 })();
-M &&
+P &&
     null == BigInt.prototype.toJSON &&
     (BigInt.prototype.toJSON = function () {
         return this.toString();
     });
-let m = {},
+let M = {},
     h = (
-        M
+        P
             ? function (e) {
                   return BigInt(e);
               }
             : function (e) {
-                  return e instanceof P
+                  return e instanceof m
                       ? e
-                      : ("number" == typeof e && (e = e.toString()), null != m[e] || (m[e] = P.fromString(e)), m[e]);
+                      : ("number" == typeof e && (e = e.toString()), null != M[e] || (M[e] = m.fromString(e)), M[e]);
               }
     )(0),
-    $ = M
+    $ = P
         ? function () {
               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h,
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h;
@@ -320,12 +320,12 @@ let m = {},
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h;
               return e.or(t);
           },
-    w = M
+    w = P
         ? function (e) {
               return BigInt(1) << BigInt(e);
           }
         : function (e) {
-              return P.fromBit(e);
+              return m.fromBit(e);
           };
 var U = n(323125);
 let b = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
@@ -466,94 +466,94 @@ let y = Object.freeze({
     QUEST_PREVIEW_TOOL_2: (e) => `${b}/quest-preview/${e}`,
 });
 var H =
-    (((I = H || {}).INDEX = "/"),
-    (I.INDEX_WORD = "/index"),
-    (I.INDEX_BUCKET = "/index/:bucketId"),
-    (I.CHANGELOGS = "/changelogs/:date"),
-    (I.COMMUNITY = "/community"),
-    (I.COMPANY = "/company"),
-    (I.COMPANY_INFORMATION = "/company-information"),
-    (I.CREATORS = "/creators"),
-    (I.DOWNLOADS = "/downloads"),
-    (I.DOWNLOAD = "/download"),
-    (I.GAMING = "/gaming"),
-    (I.PRIVACY = "/privacy"),
-    (I.TOS = "/tos"),
-    (I.TERMS = "/terms"),
-    (I.STORE_TERMS = "/store-terms"),
-    (I.ACKNOWLEDGEMENTS = "/acknowledgements"),
-    (I.LICENSES = "/licenses"),
-    (I.PARTNERS = "/partners"),
-    (I.HYPESQUAD = "/hypesquad"),
-    (I.HYPESQUAD_RIOT = "/hypesquad-riot"),
-    (I.BRANDING = "/branding"),
-    (I.ERROR_404 = "/404"),
-    (I.JOBS = "/jobs"),
-    (I.JOB = "/jobs/:jobId"),
-    (I.STREAMKIT = "/streamkit"),
-    (I.SECURITY = "/security"),
-    (I.NITRO = "/nitro"),
-    (I.DISCOVER = "/servers"),
-    (I.QUESTS = "/ads/quests"),
-    (I.GUIDELINES = "/guidelines"),
-    (I.RICH_PRESENCE = "/rich-presence"),
-    (I.VERIFICATION = "/verification"),
-    (I.OPEN_SOURCE = "/open-source"),
-    (I.WARFRAME = "/warframe"),
-    (I.REMOTE_AUTH = "/ra/:remoteAuthFingerprint"),
-    (I.SAFETY_LANDING = "/safetycenter"),
-    (I.SAFETY_ARTICLE_ROOT = "/safety"),
-    (I.SAFETY_ARTICLE = "/safety/:article"),
-    (I.NEWSROOM = "/newsroom"),
-    (I.INSPIRATION = "/inspiration"),
-    (I.MOD_ACADEMY_LANDING = "/moderation"),
-    (I.MOD_ACADEMY_EXAM = "/moderation/exam"),
-    (I.MOD_ACADEMY_ARTICLE = "/moderation/:article"),
-    (I.BLOG = "/blog"),
-    (I.BUILD = "/build"),
-    (I.DEVELOPERS = "/developers"),
-    (I.APP_DIRECTORY = "/application-directory"),
-    (I.REFRESH_INDEX = "/new"),
-    (I.REFRESH_INDEX_WORD = "/new/index"),
-    (I.REFRESH_COMPANY = "/new/company"),
-    (I.REFRESH_DOWNLOAD = "/new/download"),
-    (I.REFRESH_PRIVACY = "/new/privacy"),
-    (I.REFRESH_TERMS = "/new/terms"),
-    (I.REFRESH_ACKNOWLEDGEMENTS = "/new/acknowledgements"),
-    (I.REFRESH_LICENSES = "/new/licenses"),
-    (I.REFRESH_BRANDING = "/new/branding"),
-    (I.REFRESH_JOBS = "/new/jobs"),
-    (I.REFRESH_JOB = "/new/jobs/:jobId"),
-    (I.REFRESH_STREAMKIT = "/new/streamkit"),
-    (I.REFRESH_NITRO = "/new/nitro"),
-    (I.REFRESH_GUIDELINES = "/new/guidelines"),
-    (I.REFRESH_SAFETY_LANDING = "/new/safety"),
-    (I.REFRESH_SAFETY_ARTICLE = "/new/safety/:article"),
-    (I.COLLEGE = "/college"),
-    (I.LEAGUE_CLUBS = "/league-communities"),
-    (I.DISCORD_RECRUITING_SCAMS = "/discord-recruitment-scams"),
-    (I.DEV_NEWSLETTER_SIGNUP = "/dev-newsletter"),
-    (I.LEGACY_DEV_NEWSLETTER = "/newsletter"),
-    (I.LEGAL_ARCHIVE = "/archive/"),
-    (I.TERMS_MAY_2020 = "/archive/terms/may-2020"),
-    (I.PRIVACY_JUNE_2020 = "/archive/privacy/june-2020"),
-    (I.GUIDELINES_MAY_2020 = "/archive/guidelines/may-2020"),
-    (I.FALL_RELEASE_2023 = "/fallrelease"),
-    (I.MOBILE_REDESIGN_2023 = "/mobile"),
-    (I.REFRESH_XBOX_OFFER = "/new/discord-xbox-offer-2019"),
-    (I.REFRESH_WHY_DISCORD = "/why-discord-is-different"),
-    (I.WHY_DISCORD = "/why-discord"),
-    (I.XBOX_OFFER = "/discord-xbox-offer-2020"),
-    (I.COLLEGE_BRUINS = "/bruins"),
-    (I.COLLEGE_ANTEATERS = "/anteaters"),
-    (I.COLLEGE_GAUCHOS = "/gauchos"),
-    (I.COLLEGE_BEARS = "/bears"),
-    (I.COLLEGE_SLUGS = "/slugs"),
-    (I.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = "/terms/back-to-school-2020/instagram"),
-    (I.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = "/terms/back-to-school-2020/twitter"),
-    (I.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram"),
-    (I.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
-    I);
+    (((a = H || {}).INDEX = "/"),
+    (a.INDEX_WORD = "/index"),
+    (a.INDEX_BUCKET = "/index/:bucketId"),
+    (a.CHANGELOGS = "/changelogs/:date"),
+    (a.COMMUNITY = "/community"),
+    (a.COMPANY = "/company"),
+    (a.COMPANY_INFORMATION = "/company-information"),
+    (a.CREATORS = "/creators"),
+    (a.DOWNLOADS = "/downloads"),
+    (a.DOWNLOAD = "/download"),
+    (a.GAMING = "/gaming"),
+    (a.PRIVACY = "/privacy"),
+    (a.TOS = "/tos"),
+    (a.TERMS = "/terms"),
+    (a.STORE_TERMS = "/store-terms"),
+    (a.ACKNOWLEDGEMENTS = "/acknowledgements"),
+    (a.LICENSES = "/licenses"),
+    (a.PARTNERS = "/partners"),
+    (a.HYPESQUAD = "/hypesquad"),
+    (a.HYPESQUAD_RIOT = "/hypesquad-riot"),
+    (a.BRANDING = "/branding"),
+    (a.ERROR_404 = "/404"),
+    (a.JOBS = "/jobs"),
+    (a.JOB = "/jobs/:jobId"),
+    (a.STREAMKIT = "/streamkit"),
+    (a.SECURITY = "/security"),
+    (a.NITRO = "/nitro"),
+    (a.DISCOVER = "/servers"),
+    (a.QUESTS = "/ads/quests"),
+    (a.GUIDELINES = "/guidelines"),
+    (a.RICH_PRESENCE = "/rich-presence"),
+    (a.VERIFICATION = "/verification"),
+    (a.OPEN_SOURCE = "/open-source"),
+    (a.WARFRAME = "/warframe"),
+    (a.REMOTE_AUTH = "/ra/:remoteAuthFingerprint"),
+    (a.SAFETY_LANDING = "/safetycenter"),
+    (a.SAFETY_ARTICLE_ROOT = "/safety"),
+    (a.SAFETY_ARTICLE = "/safety/:article"),
+    (a.NEWSROOM = "/newsroom"),
+    (a.INSPIRATION = "/inspiration"),
+    (a.MOD_ACADEMY_LANDING = "/moderation"),
+    (a.MOD_ACADEMY_EXAM = "/moderation/exam"),
+    (a.MOD_ACADEMY_ARTICLE = "/moderation/:article"),
+    (a.BLOG = "/blog"),
+    (a.BUILD = "/build"),
+    (a.DEVELOPERS = "/developers"),
+    (a.APP_DIRECTORY = "/application-directory"),
+    (a.REFRESH_INDEX = "/new"),
+    (a.REFRESH_INDEX_WORD = "/new/index"),
+    (a.REFRESH_COMPANY = "/new/company"),
+    (a.REFRESH_DOWNLOAD = "/new/download"),
+    (a.REFRESH_PRIVACY = "/new/privacy"),
+    (a.REFRESH_TERMS = "/new/terms"),
+    (a.REFRESH_ACKNOWLEDGEMENTS = "/new/acknowledgements"),
+    (a.REFRESH_LICENSES = "/new/licenses"),
+    (a.REFRESH_BRANDING = "/new/branding"),
+    (a.REFRESH_JOBS = "/new/jobs"),
+    (a.REFRESH_JOB = "/new/jobs/:jobId"),
+    (a.REFRESH_STREAMKIT = "/new/streamkit"),
+    (a.REFRESH_NITRO = "/new/nitro"),
+    (a.REFRESH_GUIDELINES = "/new/guidelines"),
+    (a.REFRESH_SAFETY_LANDING = "/new/safety"),
+    (a.REFRESH_SAFETY_ARTICLE = "/new/safety/:article"),
+    (a.COLLEGE = "/college"),
+    (a.LEAGUE_CLUBS = "/league-communities"),
+    (a.DISCORD_RECRUITING_SCAMS = "/discord-recruitment-scams"),
+    (a.DEV_NEWSLETTER_SIGNUP = "/dev-newsletter"),
+    (a.LEGACY_DEV_NEWSLETTER = "/newsletter"),
+    (a.LEGAL_ARCHIVE = "/archive/"),
+    (a.TERMS_MAY_2020 = "/archive/terms/may-2020"),
+    (a.PRIVACY_JUNE_2020 = "/archive/privacy/june-2020"),
+    (a.GUIDELINES_MAY_2020 = "/archive/guidelines/may-2020"),
+    (a.FALL_RELEASE_2023 = "/fallrelease"),
+    (a.MOBILE_REDESIGN_2023 = "/mobile"),
+    (a.REFRESH_XBOX_OFFER = "/new/discord-xbox-offer-2019"),
+    (a.REFRESH_WHY_DISCORD = "/why-discord-is-different"),
+    (a.WHY_DISCORD = "/why-discord"),
+    (a.XBOX_OFFER = "/discord-xbox-offer-2020"),
+    (a.COLLEGE_BRUINS = "/bruins"),
+    (a.COLLEGE_ANTEATERS = "/anteaters"),
+    (a.COLLEGE_GAUCHOS = "/gauchos"),
+    (a.COLLEGE_BEARS = "/bears"),
+    (a.COLLEGE_SLUGS = "/slugs"),
+    (a.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = "/terms/back-to-school-2020/instagram"),
+    (a.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = "/terms/back-to-school-2020/twitter"),
+    (a.SNOWSGIVING_GIVEAWAY_INSTAGRAM = "/terms/snowsgiving-2020/instagram"),
+    (a.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
+    a);
 (0, U.dN)(y),
     (0, U.dN)(H),
     Object.freeze({
@@ -584,7 +584,7 @@ var j = n(949189),
     let e =
         ((function () {
             if (K) return;
-            (E = c.w.get("token")), (k = c.w.get("tokens") || {});
+            (E = S.w.get("token")), (k = S.w.get("tokens") || {});
             let { decryptedToken: e, wasEncrypted: t } = x(E);
             (W = t),
                 (i = e),
@@ -608,9 +608,15 @@ var j = n(949189),
         i);
     if (null == e || __OVERLAY__) return;
     let t = window._ws.ws,
-        n = window._ws.state;
-    t.onopen = function () {
-        if (((n.open = !0), !(0, q.Q)(window.location.pathname)))
+        n = window._ws.state,
+        o = n.open;
+    performance.mark("FastConnect-socket-open", { detail: { alreadyOpen: o } });
+    let _ = function () {
+        if (
+            (performance.mark("FastConnect-identify-handler-running"),
+            (n.open = !0),
+            !(0, q.Q)(window.location.pathname))
+        )
             return void console.log("[FAST CONNECT] session is not required, skipping fast connect early identify");
         console.log("[FAST CONNECT] sending identify");
         let i = (e) => JSON.stringify(e);
@@ -626,16 +632,17 @@ var j = n(949189),
             }
             null != e && (i = (t) => e.pack(t).buffer);
         }
-        let E = c.w.get("analytics_installation");
+        let E = S.w.get("analytics_installation");
         var o = i({
             op: X.p.IDENTIFY,
             d: {
                 token: e,
-                capabilities: (0, j.O)({ useChannelObfuscation: null != c.w.get("private_channel_obfuscation") }),
+                capabilities: (0, j.O)({ useChannelObfuscation: null != S.w.get("private_channel_obfuscation") }),
                 properties: { ...r, is_fast_connect: !0, ...(null != E && "" !== E ? { installation_id: E } : {}) },
                 client_state: { guild_versions: {} },
             },
         });
-        t.send(o), (n.identify = !0);
+        performance.mark("FastConnect-identify-sent"), t.send(o), (n.identify = !0);
     };
+    o ? _() : (t.onopen = _);
 })();

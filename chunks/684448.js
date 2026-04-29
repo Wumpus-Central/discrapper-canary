@@ -1,47 +1,47 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    a = n.n(r),
-    s = n(3026),
-    _ = n(834730),
-    l = n(51183);
+var a = n(503698),
+    r = n.n(a),
+    s = n(780645),
+    l = n(834730),
+    o = n(51183);
 n(851883);
-var o = n(124704);
-function E(e) {
+var d = n(124704);
+function c(e) {
     let t,
         n,
         {
-            customStatusActivity: r,
-            textClassName: E,
-            iconClassName: d,
-            tooltipClassName: c,
+            customStatusActivity: a,
+            textClassName: c,
+            iconClassName: _,
+            tooltipClassName: E,
             textSize: u = "xs",
-            animateEmoji: I = !0,
-            hideEmoji: A = !1,
+            animateEmoji: A = !0,
+            hideEmoji: I = !1,
             hideTooltip: T = !1,
         } = e;
-    if (null == r) return null;
-    let S = r?.emoji,
-        N = r?.state,
-        O = null != N && "" !== N,
-        R = null;
-    null == S || A || (R = (0, i.jsx)(l.A, { emoji: S, animate: I, className: d, hideTooltip: T || O }));
-    let f = O && (null != R ? ` ${N}` : N);
-    return (0, i.jsx)(_.E, {
+    if (null == a) return null;
+    let h = a?.emoji,
+        S = a?.state,
+        N = null != S && "" !== S,
+        f = null;
+    null == h || I || (f = (0, i.jsx)(o.A, { emoji: h, animate: A, className: _, hideTooltip: T || N }));
+    let p = N && (null != f ? ` ${S}` : S);
+    return (0, i.jsx)(l.E, {
         variant: `text-${u}/medium`,
         color: "none",
-        className: a()(o.ps, E),
+        className: r()(d.ps, c),
         children:
-            ((t = null != S && !A && !O),
-            (n = null != N && N.length > 30),
+            ((t = null != h && !I && !N),
+            (n = null != S && S.length > 30),
             T || t
-                ? (0, i.jsxs)(i.Fragment, { children: [R, f] })
+                ? (0, i.jsxs)(i.Fragment, { children: [f, p] })
                 : (0, i.jsxs)(s.A, {
                       delay: 150,
-                      tooltipClassName: c,
-                      className: a()({ [o.D7]: !n }),
-                      children: [R, f],
+                      tooltipClassName: E,
+                      className: r()({ [d.D7]: !n }),
+                      children: [f, p],
                   })),
     });
 }

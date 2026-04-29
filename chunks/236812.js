@@ -184,7 +184,7 @@ var Y = n(47167),
     ed = n(565688),
     eh = n(533562);
 n(735438);
-var em = n(519244),
+var em = n(925747),
     ep = n(805901),
     ef = n(565645);
 n(915089);
@@ -349,42 +349,37 @@ let e1 = () =>
     };
 var e6 = n(424994),
     e3 = n(381941),
-    e7 = n(699976),
-    e4 = n(994063);
+    e4 = n(699976),
+    e7 = n(994063);
 let e8 = (0, Q.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("8528"),
-            n.e("51402"),
-            n.e("38123"),
-            n.e("97137"),
-            n.e("20524"),
+            n.e("7026"),
+            n.e("80731"),
+            n.e("66361"),
+            n.e("13520"),
             n.e("40841"),
             n.e("69273"),
-            n.e("81349"),
-            n.e("13709"),
-            n.e("63941"),
+            n.e("77083"),
             n.e("63009"),
-            n.e("47181"),
-            n.e("31320"),
+            n.e("16933"),
+            n.e("62349"),
             n.e("45650"),
             n.e("97189"),
-            n.e("24059"),
-            n.e("27660"),
-            n.e("47715"),
-            n.e("85484"),
-            n.e("89516"),
-            n.e("60571"),
-            n.e("13044"),
-            n.e("73679"),
-            n.e("84615"),
-            n.e("27755"),
-            n.e("41475"),
+            n.e("48418"),
+            n.e("42105"),
+            n.e("90261"),
+            n.e("55990"),
+            n.e("62296"),
+            n.e("17546"),
+            n.e("7066"),
+            n.e("333"),
+            n.e("68432"),
             n.e("79705"),
             n.e("69279"),
             n.e("23924"),
             n.e("15510"),
-            n.e("48226"),
+            n.e("25845"),
             n.e("20287"),
             n.e("28367"),
             n.e("35429"),
@@ -403,12 +398,10 @@ let e8 = (0, Q.Fe)({
             n.e("20317"),
             n.e("84569"),
             n.e("2368"),
-            n.e("27084"),
             n.e("24313"),
             n.e("48405"),
             n.e("63185"),
             n.e("19551"),
-            n.e("84150"),
             n.e("45959"),
             n.e("18573"),
             n.e("55057"),
@@ -418,7 +411,6 @@ let e8 = (0, Q.Fe)({
             n.e("34303"),
             n.e("48172"),
             n.e("28866"),
-            n.e("54961"),
             n.e("8304"),
             n.e("58038"),
             n.e("93159"),
@@ -433,11 +425,11 @@ let e8 = (0, Q.Fe)({
             n.e("5812"),
             n.e("17363"),
             n.e("34530"),
-            n.e("28561"),
             n.e("9233"),
             n.e("69747"),
-            n.e("54975"),
+            n.e("28561"),
             n.e("21570"),
+            n.e("54975"),
             n.e("49697"),
             n.e("77265"),
             n.e("71133"),
@@ -447,57 +439,60 @@ let e8 = (0, Q.Fe)({
             n.e("95093"),
             n.e("60177"),
             n.e("62615"),
+            n.e("27773"),
+            n.e("20007"),
             n.e("48900"),
             n.e("21976"),
             n.e("1006"),
             n.e("79707"),
-            n.e("27773"),
-            n.e("20007"),
+            n.e("23276"),
             n.e("99518"),
             n.e("55577"),
-            n.e("59880"),
-            n.e("78412"),
-            n.e("9662"),
-            n.e("80239"),
-            n.e("23276"),
-            n.e("54791"),
-            n.e("63213"),
-            n.e("255"),
-            n.e("68479"),
             n.e("10567"),
-            n.e("39286"),
             n.e("63645"),
+            n.e("59880"),
+            n.e("27084"),
             n.e("88343"),
-            n.e("31445"),
+            n.e("78412"),
             n.e("5636"),
             n.e("95444"),
             n.e("38472"),
+            n.e("9662"),
             n.e("48720"),
+            n.e("80239"),
             n.e("834"),
-            n.e("33134"),
+            n.e("84150"),
+            n.e("54791"),
             n.e("77446"),
-            n.e("17859"),
+            n.e("63213"),
+            n.e("255"),
+            n.e("68479"),
             n.e("84317"),
-            n.e("25279"),
             n.e("67176"),
-            n.e("20858"),
+            n.e("39286"),
+            n.e("54961"),
+            n.e("31445"),
             n.e("54625"),
-            n.e("18489"),
-            n.e("77473"),
             n.e("166"),
-            n.e("35996"),
+            n.e("25279"),
+            n.e("33134"),
+            n.e("77473"),
+            n.e("17859"),
+            n.e("20858"),
             n.e("26574"),
+            n.e("35996"),
             n.e("21856"),
             n.e("72963"),
             n.e("21930"),
             n.e("77467"),
-            n.e("93461"),
             n.e("49013"),
             n.e("20965"),
             n.e("11133"),
-            n.e("86313"),
+            n.e("8694"),
             n.e("42324"),
+            n.e("93461"),
             n.e("90779"),
+            n.e("18489"),
             n.e("66523"),
             n.e("39808"),
             n.e("9763"),
@@ -507,7 +502,7 @@ let e8 = (0, Q.Fe)({
 });
 function e5(e) {
     let { children: t } = e;
-    return (0, l.jsx)("div", { className: e4.SW, children: t });
+    return (0, l.jsx)("div", { className: e7.SW, children: t });
 }
 function e9(e) {
     let { children: t, backgroundImgSrc: n, className: i, style: s = {} } = e,
@@ -517,13 +512,13 @@ function e9(e) {
         (0, l.jsx)(p.N, {
             theme: B.NJ8.DARK,
             disableAdaptiveTheme: !0,
-            children: (e) => (0, l.jsx)("div", { className: a()(e4.ZK, e, i), style: s, children: t }),
+            children: (e) => (0, l.jsx)("div", { className: a()(e7.ZK, e, i), style: s, children: t }),
         })
     );
 }
 function te(e) {
     let { children: t } = e;
-    return (0, l.jsx)("div", { className: e4.$m, children: t });
+    return (0, l.jsx)("div", { className: e7.$m, children: t });
 }
 function tt(e) {
     var t;
@@ -565,7 +560,7 @@ function tt(e) {
                         s = i
                             ? (0, l.jsxs)(l.Fragment, {
                                   children: [
-                                      (0, l.jsx)(_.i, { size: "custom", width: 13, height: 13, className: e4.vb }),
+                                      (0, l.jsx)(_.i, { size: "custom", width: 13, height: 13, className: e7.vb }),
                                       K.intl.string(K.t.d6DpXI),
                                   ],
                               })
@@ -585,7 +580,7 @@ function tt(e) {
                 voiceBar: (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsxs)("div", {
-                            className: e4.kP,
+                            className: e7.kP,
                             children: [
                                 (0, l.jsx)(A, {
                                     text: K.intl.string(K.t.WIVYqJ),
@@ -595,12 +590,12 @@ function tt(e) {
                                         onClick: () => {
                                             O.A.updateChatOpen(r.id, !0), (0, ec.iN)(r.id), s?.(r);
                                         },
-                                        className: e4.I3,
+                                        className: e7.I3,
                                         children: [
                                             (0, l.jsx)(er.Ay, {
                                                 guild: h,
                                                 size: er.Ay.Sizes.SMOL,
-                                                className: e4.O9,
+                                                className: e7.O9,
                                                 active: !0,
                                             }),
                                             (0, l.jsx)(N._, {
@@ -611,7 +606,7 @@ function tt(e) {
                                             (0, l.jsx)(S.E, {
                                                 variant: "text-sm/medium",
                                                 color: "text-default",
-                                                className: e4.NR,
+                                                className: e7.NR,
                                                 children: o,
                                             }),
                                         ],
@@ -630,7 +625,7 @@ function tt(e) {
                                         }),
                                     renderMoreUsers: (e) =>
                                         (0, l.jsx)("div", {
-                                            className: e4.V9,
+                                            className: e7.V9,
                                             children: (0, l.jsx)(S.E, {
                                                 variant: "text-xxs/semibold",
                                                 color: "text-default",
@@ -676,17 +671,17 @@ function tt(e) {
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsxs)("div", {
-                              className: e4.kP,
+                              className: e7.kP,
                               children: [
                                   (0, l.jsxs)(g.D, {
                                       "aria-label": K.intl.string(K.t["W/A4Qp"]),
                                       onClick: () => (0, ec.iN)(s.id),
-                                      className: e4.I3,
+                                      className: e7.I3,
                                       children: [
                                           (0, l.jsx)(er.Ay, {
                                               guild: n,
                                               size: er.Ay.Sizes.SMOL,
-                                              className: e4.O9,
+                                              className: e7.O9,
                                               active: !0,
                                           }),
                                           (0, l.jsx)(N._, { size: "xxs", color: d.A.colors.INTERACTIVE_TEXT_DEFAULT }),
@@ -694,7 +689,7 @@ function tt(e) {
                                           (0, l.jsx)(S.E, {
                                               variant: "text-sm/medium",
                                               color: "text-default",
-                                              className: e4.NR,
+                                              className: e7.NR,
                                               children: r,
                                           }),
                                       ],
@@ -712,7 +707,7 @@ function tt(e) {
                                           }),
                                       renderMoreUsers: (e) =>
                                           (0, l.jsx)("div", {
-                                              className: e4.V9,
+                                              className: e7.V9,
                                               children: (0, l.jsx)(S.E, {
                                                   variant: "text-xxs/semibold",
                                                   color: "text-default",
@@ -813,11 +808,11 @@ function tt(e) {
             containerRef: F,
             children: (0, l.jsxs)("div", {
                 children: [
-                    (0, l.jsx)(e2, { sent: $, shown: z, className: e4.Jt }),
+                    (0, l.jsx)(e2, { sent: $, shown: z, className: e7.Jt }),
                     eE ??
                         (0, l.jsx)(eZ, {
                             children: (0, l.jsxs)("div", {
-                                className: e4.T7,
+                                className: e7.T7,
                                 children: [
                                     (0, l.jsx)(tn, { channel: h, onClickSuggestion: ex }),
                                     (0, l.jsx)(J, { onSelectEmoji: ex }),
@@ -825,7 +820,7 @@ function tt(e) {
                             }),
                         }),
                     (0, l.jsxs)("div", {
-                        className: ed ? e4.P2 : e4.VE,
+                        className: ed ? e7.P2 : e7.VE,
                         children: [
                             (0, l.jsx)(q, {
                                 placeholder: ef,
@@ -833,14 +828,14 @@ function tt(e) {
                                 setEditorRef: (e) => G(e),
                                 channel: D ? h : void 0,
                                 showEmojiButton: null != eE,
-                                className: e4.N8,
+                                className: e7.N8,
                                 autoFocus: !1,
                                 renderAttachButton: H
                                     ? () =>
                                           (0, l.jsx)(m.m, {
                                               text: eg,
                                               children: (0, l.jsx)(g.D, {
-                                                  className: e4.wD,
+                                                  className: e7.wD,
                                                   onClick: eI,
                                                   children: D
                                                       ? (0, l.jsx)(x.N, { size: "custom", width: 20, height: 20 })
@@ -852,7 +847,7 @@ function tt(e) {
                             ea &&
                                 (0, l.jsx)(g.D, {
                                     onClick: () => eL(!1),
-                                    className: e4.i3,
+                                    className: e7.i3,
                                     children: (0, l.jsx)(A.P, {
                                         size: "custom",
                                         width: 20,
@@ -864,7 +859,7 @@ function tt(e) {
                     }),
                     !1 === ed &&
                         (0, l.jsxs)("div", {
-                            className: e4.fh,
+                            className: e7.fh,
                             children: [
                                 !eu &&
                                     (0, l.jsx)(
@@ -917,7 +912,7 @@ let tn = (e) => {
                                   emoji: t,
                                   isDisabled: !s,
                                   onClick: () => n({ emoji: t }),
-                                  className: e4.Zg,
+                                  className: e7.Zg,
                               }),
                           }),
                       },
@@ -935,10 +930,10 @@ function tl(e) {
         { streamPreviewUrl: g } = (0, eF.A)(i),
         x = [d, m];
     return (0, l.jsxs)("div", {
-        className: e4.MH,
+        className: e7.MH,
         children: [
             (0, l.jsxs)("div", {
-                className: e4.WP,
+                className: e7.WP,
                 children: [
                     (0, l.jsx)(h.A, {
                         maxUsers: 3,
@@ -952,7 +947,7 @@ function tl(e) {
                     (0, l.jsx)(y.h, { size: 8, horizontal: !0 }),
                     (0, l.jsx)(v.D, {
                         variant: "heading-sm/normal",
-                        className: a()(e4.Xn, e4.zA),
+                        className: a()(e7.Xn, e7.zA),
                         children: K.intl.format(n, {
                             user0: ew.Ay.getName(o, t?.id, x[0]),
                             user1: ew.Ay.getName(o, t?.id, x[1]),
@@ -960,14 +955,14 @@ function tl(e) {
                             countOthersHook: (e, t) =>
                                 (0, l.jsx)(
                                     S.E,
-                                    { variant: "text-sm/medium", className: a()(e4.Mj, e4.nk), children: e },
+                                    { variant: "text-sm/medium", className: a()(e7.Mj, e7.nk), children: e },
                                     t,
                                 ),
                             name0Hook: (e, n) =>
                                 (0, l.jsx)(
                                     eP.A,
                                     {
-                                        textClassName: a()(e4.Mj, e4.nk),
+                                        textClassName: a()(e7.Mj, e7.nk),
                                         text: e,
                                         user: x[0],
                                         channel: t,
@@ -980,7 +975,7 @@ function tl(e) {
                                 (0, l.jsx)(
                                     eP.A,
                                     {
-                                        textClassName: a()(e4.Mj, e4.nk),
+                                        textClassName: a()(e7.Mj, e7.nk),
                                         text: e,
                                         user: x[1],
                                         channel: t,
@@ -1000,7 +995,7 @@ function tl(e) {
 }
 function ti(e) {
     let { children: t, onClick: n } = e;
-    return null == n ? t : (0, l.jsx)(g.D, { className: e4.Zw, onClick: n, children: t });
+    return null == n ? t : (0, l.jsx)(g.D, { className: e7.Zw, onClick: n, children: t });
 }
 function ts(e) {
     let {
@@ -1038,17 +1033,17 @@ function ts(e) {
         T = (0, c.bG)([eu.A], () => eu.A.getDetectableIdsToApplicationIds()),
         b = C ? I : void 0;
     return (0, l.jsxs)("div", {
-        className: e4.au,
+        className: e7.au,
         children: [
             (0, l.jsx)(tl, { disableGameProfileLinks: h, ...g, onUserPopoutClosed: p }),
             (0, l.jsxs)(e9, {
                 backgroundImgSrc: N?.src,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: e4.CG,
+                        className: e7.CG,
                         children: [
                             (0, l.jsx)("div", {
-                                className: e4.Fb,
+                                className: e7.Fb,
                                 children: (0, l.jsx)(eD.d, {
                                     image: N,
                                     smallImage: j,
@@ -1058,13 +1053,13 @@ function ts(e) {
                                 }),
                             }),
                             (0, l.jsxs)("div", {
-                                className: e4.iC,
+                                className: e7.iC,
                                 children: [
                                     (0, l.jsx)(ti, {
                                         onClick: o ?? b,
                                         children: (0, l.jsx)(v.D, {
                                             variant: "heading-md/medium",
-                                            className: a()(e4.$2, { [e4.bC]: null != d }),
+                                            className: a()(e7.$2, { [e7.bC]: null != d }),
                                             lineClamp: 3,
                                             children: t,
                                         }),
@@ -1074,7 +1069,7 @@ function ts(e) {
                                               onClick: u ?? b,
                                               children: (0, l.jsx)(S.E, {
                                                   variant: "text-sm/normal",
-                                                  className: e4.LG,
+                                                  className: e7.LG,
                                                   children: n,
                                               }),
                                           })
@@ -1083,7 +1078,7 @@ function ts(e) {
                                     i,
                                 ],
                             }),
-                            (0, l.jsx)("div", { className: e4.hO, children: d }),
+                            (0, l.jsx)("div", { className: e7.hO, children: d }),
                         ],
                     }),
                     s,
@@ -1091,15 +1086,15 @@ function ts(e) {
             }),
             _ && null != A && null != T[A]
                 ? (0, l.jsx)(e8, {
-                      className: e4.zu,
-                      rewardOfferNoticeClassName: e4.PU,
+                      className: e7.zu,
+                      rewardOfferNoticeClassName: e7.PU,
                       applicationId: A,
                       userIds: [x.author_id],
                       location: "content_popout",
                       guildId: g.channel?.guild_id,
                       channelId: g.channel?.id,
                       numWishlistItems: 3,
-                      cardSpec: e7.Z.SIZE_90,
+                      cardSpec: e4.Z.SIZE_90,
                   })
                 : null,
         ],
@@ -1143,12 +1138,12 @@ function ta(e) {
         M = (0, ed.w)({ location: "content_inventory" }),
         k = (0, c.bG)([eu.A], () => eu.A.getDetectableIdsToApplicationIds());
     return (0, l.jsxs)("div", {
-        className: e4.au,
+        className: e7.au,
         children: [
             (0, l.jsx)(tl, { ...p, onUserPopoutClosed: h }),
             (0, l.jsxs)(e9, {
                 backgroundImgSrc: O?.src,
-                className: e4.uR,
+                className: e7.uR,
                 children: [
                     (0, l.jsx)(ti, {
                         onClick: g
@@ -1157,12 +1152,12 @@ function ta(e) {
                               }
                             : void 0,
                         children: (0, l.jsxs)("div", {
-                            className: e4.nh,
+                            className: e7.nh,
                             children: [
-                                (0, l.jsx)(ea.A, { className: e4.j7, stream: r }),
+                                (0, l.jsx)(ea.A, { className: e7.j7, stream: r }),
                                 g &&
                                     (0, l.jsx)("div", {
-                                        className: e4.NE,
+                                        className: e7.NE,
                                         children: (0, l.jsx)(S.E, {
                                             variant: "text-md/normal",
                                             color: "always-white",
@@ -1173,11 +1168,11 @@ function ta(e) {
                         }),
                     }),
                     (0, l.jsxs)("div", {
-                        className: e4.$6,
+                        className: e7.$6,
                         children: [
                             null != b &&
                                 (0, l.jsx)("div", {
-                                    className: e4.Fb,
+                                    className: e7.Fb,
                                     children: (0, l.jsx)(eD.d, {
                                         image: b,
                                         smallImage: R,
@@ -1186,13 +1181,13 @@ function ta(e) {
                                     }),
                                 }),
                             (0, l.jsxs)("div", {
-                                className: e4.gv,
+                                className: e7.gv,
                                 children: [
                                     (0, l.jsx)(ti, {
                                         onClick: u ?? N,
                                         children: (0, l.jsx)(v.D, {
                                             variant: "heading-md/semibold",
-                                            className: e4.nk,
+                                            className: e7.nk,
                                             lineClamp: 3,
                                             children: t,
                                         }),
@@ -1202,7 +1197,7 @@ function ta(e) {
                                               onClick: d ?? N,
                                               children: (0, l.jsx)(S.E, {
                                                   variant: "text-sm/normal",
-                                                  className: e4.zA,
+                                                  className: e7.zA,
                                                   children: n,
                                               }),
                                           })
@@ -1218,14 +1213,14 @@ function ta(e) {
             }),
             M && null != A && null != k[A]
                 ? (0, l.jsx)(e8, {
-                      className: e4.zu,
+                      className: e7.zu,
                       applicationId: A,
                       userIds: [x.author_id],
                       location: "content_popout",
                       guildId: p.channel?.guild_id,
                       channelId: p.channel?.id,
                       numWishlistItems: 3,
-                      cardSpec: e7.Z.SIZE_90,
+                      cardSpec: e4.Z.SIZE_90,
                   })
                 : null,
         ],
