@@ -77,6 +77,11 @@ var a = {
     DesktopNotificationsManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(105613).A },
     DesktopPerfAnalyticsManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(311849).A },
     DesktopPerfHeartbeatManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(687829).A },
+    DesktopTTIClearV8CacheExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(107653).A,
+        hasStoreChangeListeners: !0,
+    },
     DesktopTTIDnsTcpWarmupExperimentManager: {
         actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
         inlineRequire: () => n(388427).A,

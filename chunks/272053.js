@@ -47,7 +47,15 @@ class o {
             n = t.parentPanelKey;
         if (null == n) return;
         let i = this.accessibleDirectory?.getPanelOrThrow(n);
-        if (null == i || (0, r.Px)(i)) return;
+        if (null == i) return;
+        if ((0, r.Px)(i)) {
+            let e = i.parent;
+            for (; null != e; ) {
+                if (e.type === r.Z6.CATEGORY && (0, r.bJ)(e)) return e.key;
+                e = e.parent;
+            }
+            return;
+        }
         let s = i.layout;
         if (!(0, r.Iu)(s)) return;
         let a = [],
