@@ -31,7 +31,7 @@ class u extends a.Ay.Store {
     getRemainingToNextTier(e) {
         let t = this.getNextTier(e),
             n = this.getSingleRequirementProgress(e);
-        return null == t || null == n ? 0 : Math.max(0, (t.requirements[0]?.threshold ?? 0) - n.current);
+        return null == t || null == n ? 0 : Math.max(0, (t?.requirements[0]?.threshold ?? 0) - n.current);
     }
 }
 let m = new u(c.h, {
