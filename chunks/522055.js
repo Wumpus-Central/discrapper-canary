@@ -7,11 +7,7 @@ var i = n(17928),
 let o = {},
     l = { catalog: {}, hasFetchedCatalog: !1, catalogLastFetchedAt: void 0 };
 function _(e) {
-    return (
-        null == o[e] &&
-            (o[e] = { catalog: {}, newGameServerProducts: [], instances: {}, instructions: {}, entitlements: {} }),
-        o[e]
-    );
+    return null == o[e] && (o[e] = { catalog: {}, instances: {}, instructions: {}, entitlements: {} }), o[e];
 }
 function d(e, t) {
     return Object.values(t).reduce((e, t) => e + ((0, s.A)(t) ?? 0), 0);
@@ -67,13 +63,6 @@ class E extends i.Ay.PersistedStore {
         let e = l.catalogLastFetchedAt;
         return null == e || e + 864e5 < Date.now();
     }
-    getNewProducts(e) {
-        return null != e ? (o[e]?.newGameServerProducts ?? []) : [];
-    }
-    shouldFetchNewProductsForGuild(e) {
-        let t = o[e]?.newGameServerProductsLastFetchedAt;
-        return null == t || t + 864e5 < Date.now();
-    }
 }
 let h = new E(r.h, {
     LOGOUT: function () {
@@ -94,14 +83,6 @@ let h = new E(r.h, {
     GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS: function (e) {
         let { guildId: t, skuId: n, instructions: i } = e;
         o = { ...o, [t]: { ..._(t), instructions: { ..._(t).instructions, [n]: i } } };
-    },
-    GAME_SERVER_FETCH_NEW_GAMES_SUCCESS: function (e) {
-        let { guildId: t, products: n } = e;
-        o = { ...o, [t]: { ..._(t), newGameServerProducts: n, newGameServerProductsLastFetchedAt: Date.now() } };
-    },
-    GAME_SERVER_FETCH_NEW_GAMES_FAILURE: function (e) {
-        let { guildId: t } = e;
-        o = { ...o, [t]: { ..._(t), newGameServerProductsLastFetchedAt: Date.now() } };
     },
     GAME_SERVER_UPDATE_INSTANCE_SUCCESS: function (e) {
         let { guildId: t, instance: n } = e,

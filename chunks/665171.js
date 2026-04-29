@@ -1,24 +1,23 @@
 t.d(r, {
-    BX: () => T,
     Jr: () => P,
     K: () => S,
-    KH: () => G,
+    KH: () => C,
     QK: () => I,
-    Wp: () => C,
-    as: () => O,
+    Wp: () => A,
+    as: () => v,
     cq: () => h,
-    e_: () => y,
-    jL: () => f,
+    e_: () => f,
+    jL: () => G,
     pj: () => m,
-    tT: () => A,
+    tT: () => T,
     z9: () => R,
 });
 var u = t(636537),
     o = t(228366),
-    l = t(773669),
+    n = t(773669),
     E = t(287809),
-    n = t(954571),
-    i = t(371794),
+    i = t(954571),
+    l = t(371794),
     _ = t(79133),
     d = t(532555),
     s = t(627072),
@@ -36,10 +35,10 @@ function R(e) {
             });
         }, 5e3);
     let t = E.default.getCurrentUser()?.isStaff() ?? !1;
-    return (0, i.aP)({
+    return (0, l.aP)({
         url: a.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(p.q4),
         query: {
-            locale: l.default.locale,
+            locale: n.default.locale,
             guild_id: e,
             include_unpublished_products: t,
             include_unpublished_collection: t,
@@ -57,9 +56,9 @@ function R(e) {
 }
 function S() {
     let e = E.default.getCurrentUser()?.isStaff() ?? !1;
-    return (0, i.aP)({
+    return (0, l.aP)({
         url: a.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(p.q4),
-        query: { locale: l.default.locale, include_unpublished_products: e, include_unpublished_collection: e },
+        query: { locale: n.default.locale, include_unpublished_products: e, include_unpublished_collection: e },
         oldFormErrors: !0,
         rejectWithError: !1,
         retries: 2,
@@ -90,39 +89,10 @@ function h(e) {
               }
           });
 }
-function T(e) {
-    let r = E.default.getCurrentUser()?.isStaff() ?? !1;
-    return (0, i.aP)({
-        url: a.Rsh.STOREFRONT_COLLECTIONS_WITH_PRODUCTS,
-        query: {
-            collection_ids: [p.t0],
-            locale: l.default.locale,
-            include_unpublished_products: r,
-            include_unpublished_collections: r,
-        },
-        oldFormErrors: !0,
-        rejectWithError: !1,
-        retries: 2,
-    }).then(
-        (r) => {
-            let t = r.body.collections[0];
-            if (null == t) return void o.h.dispatch({ type: "GAME_SERVER_FETCH_NEW_GAMES_FAILURE", guildId: e });
-            let u = (t.products ?? []).reduce((e, r) => {
-                    let t = (0, s.o)(r);
-                    return (e[t.id] = t), e;
-                }, {}),
-                l = t.product_ids.map((e) => u[e]).filter((e) => null != e);
-            o.h.dispatch({ type: "GAME_SERVER_FETCH_NEW_GAMES_SUCCESS", guildId: e, products: l });
-        },
-        () => {
-            o.h.dispatch({ type: "GAME_SERVER_FETCH_NEW_GAMES_FAILURE", guildId: e });
-        },
-    );
-}
-function A(e, r) {
-    return (0, i.aP)({
+function T(e, r) {
+    return (0, l.aP)({
         url: a.Rsh.STOREFRONT_PRODUCT_BY_SKU_ID(r),
-        query: { locale: l.default.locale },
+        query: { locale: n.default.locale },
         rejectWithError: !0,
         retries: 3,
     }).then((t) => {
@@ -137,20 +107,20 @@ function A(e, r) {
         }
     });
 }
-function C(e, r) {
+function A(e, r) {
     e &&
-        n.default.track(a.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
+        i.default.track(a.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
             user_id: E.default.getCurrentUser()?.id,
             provider: r,
         });
 }
-function G() {
+function C() {
     o.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
 }
 function I(e, r) {
     o.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl: e, state: r });
 }
-function f(e, r, t, o) {
+function G(e, r, t, o) {
     return u.Bo.post({
         url: a.Rsh.GUILD_POWERUP_TOGGLE(e, r),
         body: { game_server_name: t, game_server_region: o },
@@ -166,7 +136,7 @@ function m(e, r, t, o) {
         oldFormErrors: !0,
     });
 }
-function y(e, r, t) {
+function f(e, r, t) {
     return u.Bo.del({
         url: a.Rsh.GUILD_POWERUP_TOGGLE(e, r),
         query: { entitlement_id: t },
@@ -184,7 +154,7 @@ function P(e) {
         },
     );
 }
-function O(e, r) {
+function v(e, r) {
     return u.Bo.post({ url: a.Rsh.GAME_SERVER_WAKE(e, r), rejectWithError: !0 }).then((r) => {
         o.h.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: e, instance: (0, d.A)(r.body) });
     });
