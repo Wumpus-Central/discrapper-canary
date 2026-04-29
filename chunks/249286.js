@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => c });
 var u = n(64700),
     l = n(17928),
     r = n(192308),
@@ -17,7 +17,8 @@ function I(e, t, u) {
         null != t &&
             (0, r.openModalLazy)(async () => {
                 let { default: u } = await Promise.all([
-                    n.e("47715"),
+                    n.e("86052"),
+                    n.e("67567"),
                     n.e("64827"),
                     n.e("84569"),
                     n.e("22455"),
@@ -33,11 +34,11 @@ function I(e, t, u) {
                 return (n) => (0, G.jsx)(u, { guildId: e, powerup: t, ...n });
             });
 }
-function S(e, t) {
+function c(e, t) {
     let { analyticsLocations: n } = (0, i.Ay)(),
-        { onToggle: r, isLoading: G, error: S } = (0, d.A)(e, t),
+        { onToggle: r, isLoading: G, error: c } = (0, d.A)(e, t),
         P = (0, l.bG)([s.A], () => s.A.getGuild(e)),
-        c = (function (e, t) {
+        S = (function (e, t) {
             let n = (0, l.bG)([s.A], () => s.A.getGuild(e)),
                 r = (0, l.bG)([A.A], () => A.A.getStateForGuild(e)),
                 { spent: i } = (0, _.A)(e),
@@ -66,13 +67,13 @@ function S(e, t) {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     { shouldCloseAllModals: u = !0 } = e;
                 if (null != P && null != t)
-                    return c < t.cost
+                    return S < t.cost
                         ? void (0, o.g)({
                               analyticsLocation: {
                                   page: R.liQ.GUILD_POWERUPS_OVERVIEW,
                                   section: R.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
                               },
-                              numberOfBoostsToAdd: t.cost - c,
+                              numberOfBoostsToAdd: t.cost - S,
                               analyticsLocations: n,
                               guild: P,
                               intent: t.type === a.o9.LEVEL ? a.Pn.LEVEL : a.Pn.PERK,
@@ -85,9 +86,9 @@ function S(e, t) {
                               I(P.id, t, u);
                           });
             },
-            [r, t, c, n, P],
+            [r, t, S, n, P],
         ),
         isLoading: G,
-        error: S,
+        error: c,
     };
 }
