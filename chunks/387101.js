@@ -19,22 +19,22 @@ var n = a(627968),
     v = a(985018),
     k = a(85987);
 function w(t) {
-    let { onClose: e, transitionState: a, clientSettingType: w, gameId: C } = t,
-        [f, A] = i.useState("unreported"),
+    let { onClose: e, transitionState: a, clientSettingType: w, gameId: f } = t,
+        [C, A] = i.useState("unreported"),
         [S, j] = i.useState(""),
         [E, M] = i.useState(!1),
-        [H, N] = i.useState(!1),
-        [P, R] = i.useState(!1),
-        [z, D] = i.useState(!1),
-        F = (0, s.bG)([y.A, h.Ay], () => {
-            let t = C ?? h.Ay.getCurrentGameForAnalytics()?.id;
+        [R, z] = i.useState(!1),
+        [D, F] = i.useState(!1),
+        [L, N] = i.useState(!1),
+        O = (0, s.bG)([y.A, h.Ay], () => {
+            let t = f ?? h.Ay.getCurrentGameForAnalytics()?.id;
             return null == t ? null : y.A.getDetectableGame(t);
         }),
-        L = (0, s.bG)([x.default], () => {
+        P = (0, s.bG)([x.default], () => {
             let t = x.default?.getMostRecentOverlayRenderMethod() ?? void 0;
             return null != t ? p.Ue[t] : void 0;
         }),
-        O = i.useMemo(() => {
+        U = i.useMemo(() => {
             let t = {
                 not_working: v.t.CHXHFX,
                 not_useful: v.t.a95skc,
@@ -47,68 +47,68 @@ function w(t) {
             };
             return Object.keys(t).map((e) => ({ name: v.intl.string(t[e]), value: e }));
         }, []),
-        U = i.useCallback(async () => {
-            if ("unreported" === f && 0 === S.length) {
-                R(!0), await (0, l.yy)(100), R(!1), D(!0);
+        Y = i.useCallback(async () => {
+            if ("unreported" === C && 0 === S.length) {
+                F(!0), await (0, l.yy)(100), F(!1), N(!0);
                 return;
             }
             M(!0),
                 await g.default.track(b.HAw.OVERLAY_DISABLED_SURVEY, {
-                    reason: f,
+                    reason: C,
                     comment: S,
                     client_setting_type: w,
-                    application_id: F?.id,
-                    application_name: F?.name,
-                    most_recent_overlay_render_method: L,
+                    application_id: O?.id,
+                    application_name: O?.name,
+                    most_recent_overlay_render_method: P,
                     hardware_display_count: (await _.A?.hardware?.getDisplayCount?.()) ?? null,
                 }),
                 await (0, l.yy)(1e3),
                 M(!1),
-                N(!0),
+                z(!0),
                 await (0, l.yy)(1500),
                 e();
-        }, [f, S, w, F?.id, F?.name, L, e]);
+        }, [C, S, w, O?.id, O?.name, P, e]);
     (0, m.Ay)(() => {
         g.default.track(b.HAw.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
     });
-    let Y = i.useMemo(
+    let G = i.useMemo(
         () => [
             { variant: "secondary", text: v.intl.string(v.t["5Wxrcd"]), onClick: e, disabled: E },
             {
-                variant: P ? "secondary" : "primary",
-                text: H ? v.intl.string(v.t.bxiZU6) : v.intl.string(v.t.geKm7t),
-                onClick: U,
-                disabled: E || H,
+                variant: D ? "secondary" : "primary",
+                text: R ? v.intl.string(v.t.bxiZU6) : v.intl.string(v.t.geKm7t),
+                onClick: Y,
+                disabled: E || R,
                 loading: E,
                 autoFocus: !1,
             },
         ],
-        [e, E, H, U, P],
+        [e, E, R, Y, D],
     );
     return (0, n.jsxs)(r.Modal, {
         onClose: e,
         transitionState: a,
         title: v.intl.string(v.t["9JKzxe"]),
         subtitle: v.intl.string(v.t["2yjnmb"]),
-        actions: Y,
+        actions: G,
         children: [
             (0, n.jsxs)("div", {
                 children: [
                     (0, n.jsx)(o.b, {
-                        isShaking: P,
+                        isShaking: D,
                         intensity: 1,
                         className: k.lm,
                         children: (0, n.jsx)(d.E, {
                             variant: "text-sm/semibold",
-                            color: z ? "text-feedback-critical" : "text-muted",
+                            color: L ? "text-feedback-critical" : "text-muted",
                             children: v.intl.string(v.t.yhUvdd),
                         }),
                     }),
                     (0, n.jsx)(c.z, {
-                        value: f,
-                        options: O,
+                        value: "unreported" === C ? void 0 : C,
+                        options: U,
                         onChange: (t) => {
-                            A(t), D(!1), R(!1);
+                            A(t), N(!1), F(!1);
                         },
                     }),
                 ],
