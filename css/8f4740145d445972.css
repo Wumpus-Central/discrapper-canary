@@ -1,37 +1,3 @@
-.catalogBanner__3f82e {
-    border-radius: var(--radius-xxl);
-    height: 180px;
-    overflow: hidden;
-    pointer-events: none;
-    position: relative
-}
-
-.catalogBanner__3f82e.riveBanner__3f82e {
-    pointer-events: auto
-}
-
-.animationAsset__3f82e,
-.catalogBannerImage__3f82e {
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: left;
-    object-position: left;
-    width: 100%
-}
-
-.animationAsset__3f82e {
-    inset-inline-start: 0;
-    position: absolute;
-    top: 0
-}
-
-.limitedTimeBadge__3f82e {
-    inset-inline-end: 20px;
-    position: absolute;
-    top: 16px
-}
-
 @keyframes pulse_e4f643 {
     0% {
         background: var(--background-base-lower)

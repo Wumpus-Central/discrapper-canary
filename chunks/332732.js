@@ -13,9 +13,9 @@ var s,
     p = i(228366),
     g = i(793574),
     x = i(688810),
-    h = i(31502),
+    E = i(31502),
     N = i(726649),
-    E = i(611924),
+    h = i(611924),
     f = i(961250),
     _ = i(366505),
     R = i(841595),
@@ -93,8 +93,8 @@ var F = i(502572),
     W = i(366999),
     K = i(531260),
     Y = i(780964),
-    $ = i(858897),
-    Z = i(786300),
+    Z = i(858897),
+    $ = i(786300),
     q = i(975571),
     Q = i(927578),
     J = i(40185),
@@ -115,9 +115,9 @@ var F = i(502572),
     ep = i(851746),
     eg = i(664654),
     ex = i(212737),
-    eh = i(652215),
+    eE = i(652215),
     eN = i(849812);
-let eE = (e) => {
+let eh = (e) => {
         let { user: t } = e,
             { avatarSrc: i, eventHandlers: s } = (0, eu.A)({ userId: t.id, size: el._3.SIZE_24 });
         return (0, a.jsx)(
@@ -138,7 +138,7 @@ let eE = (e) => {
                 let e = [];
                 for (let i = 0; i < eg.Z; i++)
                     if (t?.[i] !== void 0) {
-                        let s = (0, a.jsx)(eE, { user: t[i] }, t[i].id);
+                        let s = (0, a.jsx)(eh, { user: t[i] }, t[i].id);
                         e.push(s);
                     } else {
                         let t = (0, a.jsx)(ef, { slotIndex: i + 1 }, i);
@@ -194,18 +194,18 @@ let eE = (e) => {
                                     children:
                                         !1 === r
                                             ? D.intl.format(D.t["zWhX/Q"], {
-                                                  helpdeskArticle: q.A.getArticleURL(eh.MVz.REFERRAL_PROGRAM),
+                                                  helpdeskArticle: q.A.getArticleURL(eE.MVz.REFERRAL_PROGRAM),
                                               })
                                             : s.length === eg.Z
                                               ? !0 === c
                                                   ? D.intl.format(D.t["1aEjsH"], {
-                                                        helpdeskArticle: q.A.getArticleURL(eh.MVz.REFERRAL_PROGRAM),
+                                                        helpdeskArticle: q.A.getArticleURL(eE.MVz.REFERRAL_PROGRAM),
                                                     })
                                                   : D.intl.format(D.t["+u3AOO"], {
-                                                        helpdeskArticle: q.A.getArticleURL(eh.MVz.REFERRAL_PROGRAM),
+                                                        helpdeskArticle: q.A.getArticleURL(eE.MVz.REFERRAL_PROGRAM),
                                                     })
                                               : D.intl.format(D.t["omMr+V"], {
-                                                    helpdeskArticle: q.A.getArticleURL(eh.MVz.REFERRAL_PROGRAM),
+                                                    helpdeskArticle: q.A.getArticleURL(eE.MVz.REFERRAL_PROGRAM),
                                                 }),
                                 }),
                             ],
@@ -217,7 +217,7 @@ let eE = (e) => {
                             onClick: () =>
                                 ((e) => {
                                     let { startingScreen: t, analyticsLocations: s } = e;
-                                    T.default.track(eh.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+                                    T.default.track(eE.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                                         location_stack: s,
                                     }),
                                         (0, V.openModalLazy)(async () => {
@@ -335,7 +335,7 @@ var eP = i(473702),
     eM = i(774774),
     eD = i(695661);
 let eL = () => {
-    let e = { section: eh.JJy.REVERSE_TRIAL_BANNER };
+    let e = { section: eE.JJy.REVERSE_TRIAL_BANNER };
     return (0, a.jsxs)("div", {
         className: eD.vK,
         children: [
@@ -429,7 +429,7 @@ let eW = (e) => {
 };
 var eK = i(788868),
     eY = i(97584);
-let e$ = (e) => {
+let eZ = (e) => {
         let { fpEndsAt: t, className: i, buttonVisibilityRef: s } = e,
             n = (0, b.Zb)(t);
         return (0, a.jsx)("div", {
@@ -471,7 +471,7 @@ let e$ = (e) => {
                                         variant: "secondary",
                                         size: "md",
                                         text: D.intl.string(D.t.Af7ye6),
-                                        onClick: () => (0, $.openUserSettings)(Y.X.SUBSCRIPTIONS_PANEL),
+                                        onClick: () => (0, Z.openUserSettings)(Y.X.SUBSCRIPTIONS_PANEL),
                                     }),
                                 ],
                             }),
@@ -485,7 +485,7 @@ let e$ = (e) => {
             }),
         });
     },
-    eZ = (e) => {
+    e$ = (e) => {
         let { className: t, isEligibleForBogoPromotion: s, isInReverseTrial: n, shouldShowReferralProgressBar: r } = e,
             {
                 headingText: c,
@@ -495,31 +495,31 @@ let e$ = (e) => {
                 discountedPrice: A,
                 buttonVisibilityRef: p,
             } = eQ(),
-            { analyticsLocations: h } = (0, x.Ay)(g.A.PREMIUM_MARKETING_HERO_CTA),
+            { analyticsLocations: E } = (0, x.Ay)(g.A.PREMIUM_MARKETING_HERO_CTA),
             N = (0, es.c)(G.C.MARKETING_PAGE_BANNER),
-            E = null;
+            h = null;
         null != N && "marketingPageBanner" === N.properties.properties.oneofKind
-            ? (E = (0, a.jsx)(ea.x, {
+            ? (h = (0, a.jsx)(ea.x, {
                   componentId: N.id,
                   promotionBannerMarketingComponentFields: N.properties.properties.marketingPageBanner,
               }))
             : s
-              ? (E = (0, a.jsx)(en.A, { variant: en.c.SUBSCRIBER_HOME }))
+              ? (h = (0, a.jsx)(en.A, { variant: en.c.SUBSCRIBER_HOME }))
               : n
-                ? (E = (0, a.jsx)(eL, {}))
-                : r && (E = (0, a.jsx)(eC, {}));
+                ? (h = (0, a.jsx)(eL, {}))
+                : r && (h = (0, a.jsx)(eC, {}));
         let f = (0, d.bG)([I.A], () => I.A.getPremiumTypeSubscription()),
-            _ = null != f && f.status === eh.Dmq.CANCELED && null != m,
+            _ = null != f && f.status === eE.Dmq.CANCELED && null != m,
             R = (0, ei.V)(),
             C = (0, et.O)(),
             T = (0, v.U9)(C, eK.pe.TIER_2) ? eK.pe.TIER_2 : void 0,
-            b = null != f && f.status !== eh.Dmq.ACCOUNT_HOLD && f.hasAnyPremiumNitro,
+            b = null != f && f.status !== eE.Dmq.ACCOUNT_HOLD && f.hasAnyPremiumNitro,
             S = (0, K.A)(),
-            j = S.isFractionalPremiumActive && !b && null == E && !_,
+            j = S.isFractionalPremiumActive && !b && null == h && !_,
             P = (0, d.bG)([X.A], () => X.A.useReducedMotion),
             { visibilityPercentageRef: O, visibilityPercentage: L } = (0, eU.U)(!P);
         return n
-            ? (0, a.jsx)(e$, { fpEndsAt: S.currentEntitlementEndsAt, className: t, buttonVisibilityRef: p })
+            ? (0, a.jsx)(eZ, { fpEndsAt: S.currentEntitlementEndsAt, className: t, buttonVisibilityRef: p })
             : (0, a.jsx)("div", {
                   className: l()(eY.kL, t),
                   "data-testid": "subscriber-nitro-home-hero-header",
@@ -575,7 +575,7 @@ let e$ = (e) => {
                                                   void (0, V.openModalLazy)(async () => {
                                                       let { PremiumBrandRefreshSubscriptionCancellationModal: t } =
                                                           await Promise.all([
-                                                              i.e("80731"),
+                                                              i.e("75527"),
                                                               i.e("80848"),
                                                               i.e("97189"),
                                                               i.e("90261"),
@@ -591,7 +591,7 @@ let e$ = (e) => {
                                                               i.e("92931"),
                                                               i.e("13498"),
                                                               i.e("71543"),
-                                                              i.e("64150"),
+                                                              i.e("48751"),
                                                               i.e("13520"),
                                                               i.e("71934"),
                                                               i.e("12721"),
@@ -602,8 +602,8 @@ let e$ = (e) => {
                                                               i.e("32260"),
                                                               i.e("40153"),
                                                               i.e("68953"),
-                                                              i.e("62349"),
-                                                              i.e("76348"),
+                                                              i.e("89603"),
+                                                              i.e("44398"),
                                                               i.e("77083"),
                                                               i.e("63009"),
                                                               i.e("23924"),
@@ -665,7 +665,6 @@ let e$ = (e) => {
                                                               i.e("96905"),
                                                               i.e("31644"),
                                                               i.e("70653"),
-                                                              i.e("31825"),
                                                               i.e("993"),
                                                               i.e("54527"),
                                                               i.e("72535"),
@@ -673,7 +672,6 @@ let e$ = (e) => {
                                                               i.e("26490"),
                                                               i.e("76170"),
                                                               i.e("32817"),
-                                                              i.e("51243"),
                                                               i.e("36498"),
                                                               i.e("18943"),
                                                               i.e("89094"),
@@ -683,15 +681,17 @@ let e$ = (e) => {
                                                               i.e("11527"),
                                                               i.e("96123"),
                                                               i.e("27168"),
+                                                              i.e("31825"),
                                                               i.e("39038"),
                                                               i.e("36320"),
                                                               i.e("6223"),
-                                                              i.e("77245"),
                                                               i.e("20320"),
+                                                              i.e("77245"),
                                                               i.e("31549"),
                                                               i.e("43919"),
                                                               i.e("31390"),
                                                               i.e("57906"),
+                                                              i.e("51243"),
                                                               i.e("45421"),
                                                               i.e("44265"),
                                                               i.e("99141"),
@@ -722,7 +722,6 @@ let e$ = (e) => {
                                                               i.e("73547"),
                                                               i.e("99593"),
                                                               i.e("61935"),
-                                                              i.e("36126"),
                                                               i.e("62168"),
                                                               i.e("55602"),
                                                               i.e("77793"),
@@ -733,38 +732,39 @@ let e$ = (e) => {
                                                               i.e("10034"),
                                                               i.e("73500"),
                                                               i.e("25252"),
-                                                              i.e("78707"),
                                                               i.e("65881"),
                                                               i.e("32035"),
+                                                              i.e("36126"),
                                                               i.e("51391"),
                                                               i.e("29375"),
                                                               i.e("91942"),
                                                               i.e("48778"),
                                                               i.e("89465"),
+                                                              i.e("78707"),
                                                               i.e("93708"),
                                                               i.e("71482"),
                                                               i.e("10942"),
                                                               i.e("64480"),
                                                               i.e("10745"),
-                                                              i.e("77084"),
                                                               i.e("78651"),
-                                                              i.e("96565"),
+                                                              i.e("77084"),
                                                               i.e("39406"),
+                                                              i.e("96565"),
                                                               i.e("95093"),
-                                                              i.e("60177"),
                                                               i.e("62615"),
                                                               i.e("20007"),
+                                                              i.e("60177"),
                                                               i.e("21976"),
                                                               i.e("1006"),
                                                               i.e("23276"),
                                                               i.e("10567"),
                                                               i.e("59880"),
+                                                              i.e("77446"),
                                                               i.e("5636"),
                                                               i.e("95444"),
                                                               i.e("38472"),
                                                               i.e("48720"),
                                                               i.e("84150"),
-                                                              i.e("77446"),
                                                               i.e("6159"),
                                                               i.e("87075"),
                                                               i.e("94161"),
@@ -776,7 +776,7 @@ let e$ = (e) => {
                                                       return (i) =>
                                                           (0, a.jsx)(t, {
                                                               ...i,
-                                                              analyticsLocations: h,
+                                                              analyticsLocations: E,
                                                               initialStep: e,
                                                               premiumSubscription: f,
                                                           });
@@ -791,12 +791,12 @@ let e$ = (e) => {
                                   }),
                               ],
                           }),
-                          E,
+                          h,
                       ],
                   }),
               });
     },
-    [eq, eQ] = (0, Z.A)(),
+    [eq, eQ] = (0, $.A)(),
     eJ = (e) => {
         let { className: t, buttonVisibilityRef: i, userDiscountOffer: s, discountedPrice: n } = e,
             { analyticsLocations: r } = (0, x.Ay)(g.A.PREMIUM_MARKETING_HERO_CTA),
@@ -807,13 +807,13 @@ let e$ = (e) => {
             u = (0, er.m)(),
             m = D.intl.string(D.t.ifwQZb),
             { fractionalState: A, endsAt: p } = (0, K.A)(),
-            h = (0, W.Ay)(p, W.yE.CREDITS_ENDS_IN),
+            E = (0, W.Ay)(p, W.yE.CREDITS_ENDS_IN),
             N = null;
         if (A === eK.xc.NONE || l) N = (0, a.jsx)(eO.A, { text: o });
         else {
             d = !0;
             let e = D.intl.format(D.t["yR+oDD"], {
-                helpCenterLink: q.A.getArticleURL(eh.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                helpCenterLink: q.A.getArticleURL(eE.MVz.FRACTIONAL_PREMIUM_ABOUT),
             });
             N = (0, a.jsx)(F.A, {
                 text: e,
@@ -824,7 +824,7 @@ let e$ = (e) => {
                     (0, a.jsx)("div", {
                         ...e,
                         className: eY.V_,
-                        children: (0, a.jsx)("div", { className: eY.eL, children: (0, a.jsx)(eO.A, { text: h }) }),
+                        children: (0, a.jsx)("div", { className: eY.eL, children: (0, a.jsx)(eO.A, { text: E }) }),
                     }),
             });
         }
@@ -839,7 +839,7 @@ let e$ = (e) => {
                     discountedPrice: n,
                     buttonVisibilityRef: i,
                 },
-                children: (0, a.jsx)(eZ, {
+                children: (0, a.jsx)(e$, {
                     className: t,
                     isEligibleForBogoPromotion: c,
                     isInReverseTrial: l,
@@ -894,7 +894,7 @@ let e8 = function (e) {
                     onClick: () =>
                         void (0, V.openModalLazy)(async () => {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
-                                i.e("80731"),
+                                i.e("75527"),
                                 i.e("80848"),
                                 i.e("97189"),
                                 i.e("90261"),
@@ -910,7 +910,7 @@ let e8 = function (e) {
                                 i.e("92931"),
                                 i.e("13498"),
                                 i.e("71543"),
-                                i.e("64150"),
+                                i.e("48751"),
                                 i.e("13520"),
                                 i.e("71934"),
                                 i.e("12721"),
@@ -921,8 +921,8 @@ let e8 = function (e) {
                                 i.e("32260"),
                                 i.e("40153"),
                                 i.e("68953"),
-                                i.e("62349"),
-                                i.e("76348"),
+                                i.e("89603"),
+                                i.e("44398"),
                                 i.e("77083"),
                                 i.e("63009"),
                                 i.e("23924"),
@@ -984,7 +984,6 @@ let e8 = function (e) {
                                 i.e("96905"),
                                 i.e("31644"),
                                 i.e("70653"),
-                                i.e("31825"),
                                 i.e("993"),
                                 i.e("54527"),
                                 i.e("72535"),
@@ -992,7 +991,6 @@ let e8 = function (e) {
                                 i.e("26490"),
                                 i.e("76170"),
                                 i.e("32817"),
-                                i.e("51243"),
                                 i.e("36498"),
                                 i.e("18943"),
                                 i.e("89094"),
@@ -1002,15 +1000,17 @@ let e8 = function (e) {
                                 i.e("11527"),
                                 i.e("96123"),
                                 i.e("27168"),
+                                i.e("31825"),
                                 i.e("39038"),
                                 i.e("36320"),
                                 i.e("6223"),
-                                i.e("77245"),
                                 i.e("20320"),
+                                i.e("77245"),
                                 i.e("31549"),
                                 i.e("43919"),
                                 i.e("31390"),
                                 i.e("57906"),
+                                i.e("51243"),
                                 i.e("45421"),
                                 i.e("44265"),
                                 i.e("99141"),
@@ -1041,7 +1041,6 @@ let e8 = function (e) {
                                 i.e("73547"),
                                 i.e("99593"),
                                 i.e("61935"),
-                                i.e("36126"),
                                 i.e("62168"),
                                 i.e("55602"),
                                 i.e("77793"),
@@ -1052,38 +1051,39 @@ let e8 = function (e) {
                                 i.e("10034"),
                                 i.e("73500"),
                                 i.e("25252"),
-                                i.e("78707"),
                                 i.e("65881"),
                                 i.e("32035"),
+                                i.e("36126"),
                                 i.e("51391"),
                                 i.e("29375"),
                                 i.e("91942"),
                                 i.e("48778"),
                                 i.e("89465"),
+                                i.e("78707"),
                                 i.e("93708"),
                                 i.e("71482"),
                                 i.e("10942"),
                                 i.e("64480"),
                                 i.e("10745"),
-                                i.e("77084"),
                                 i.e("78651"),
-                                i.e("96565"),
+                                i.e("77084"),
                                 i.e("39406"),
+                                i.e("96565"),
                                 i.e("95093"),
-                                i.e("60177"),
                                 i.e("62615"),
                                 i.e("20007"),
+                                i.e("60177"),
                                 i.e("21976"),
                                 i.e("1006"),
                                 i.e("23276"),
                                 i.e("10567"),
                                 i.e("59880"),
+                                i.e("77446"),
                                 i.e("5636"),
                                 i.e("95444"),
                                 i.e("38472"),
                                 i.e("48720"),
                                 i.e("84150"),
-                                i.e("77446"),
                                 i.e("6159"),
                                 i.e("87075"),
                                 i.e("94161"),
@@ -1258,9 +1258,9 @@ var tA = i(462887),
     tp = i(736653),
     tg = i(259065),
     tx = i(206835),
-    th = i(976860),
+    tE = i(976860),
     tN = i(591179),
-    tE = i(462463),
+    th = i(462463),
     tf = i(112848),
     t_ = i(425713),
     tR = i(920050),
@@ -1346,9 +1346,9 @@ var tU = i(256358),
     tW = i(466919),
     tK = i(555599),
     tY = i(817577);
-let t$ =
+let tZ =
         "https://cdn.discordapp.com/assets/content/0722a293c878afdc8718373a6436d7fa1f06014597d138d824d7bb5da55d3d7f.svg",
-    tZ =
+    t$ =
         "https://cdn.discordapp.com/assets/content/7bb191dd09571f8910a367c7cf35b500ea7b64dde29309c7c74831cc16b1dc1d.png",
     tq =
         "https://cdn.discordapp.com/assets/content/c0c412ad58e2520901e2cb967308eb432d0b349b3b5f54b14f141e12b80f7d42.svg";
@@ -1360,19 +1360,19 @@ function tQ() {
         o = (0, tU.S)(),
         u = (0, d.bG)([I.A], () => I.A.getPremiumTypeSubscription()),
         m = u?.hasActiveTrial ?? !1,
-        A = (0, tE.A)({ analyticsLocations: e }),
+        A = (0, th.A)({ analyticsLocations: e }),
         p = (0, n.useCallback)(() => {
-            (0, $.openUserSettings)(Y.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
+            (0, Z.openUserSettings)(Y.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
                 (0, tg.L)({ analyticsLocations: e }),
             );
         }, [e]),
         N = (0, n.useCallback)(() => {
-            (0, $.openUserSettings)(Y.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
+            (0, Z.openUserSettings)(Y.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
                 (0, tI.L)({ analyticsLocations: e }),
             );
         }, [e]),
-        E = (0, n.useCallback)(() => {
-            (0, $.openUserSettings)(Y.X.APPEARANCE_IN_APP_ICON_CATEGORY);
+        h = (0, n.useCallback)(() => {
+            (0, Z.openUserSettings)(Y.X.APPEARANCE_IN_APP_ICON_CATEGORY);
         }, []),
         f = () => {
             (0, tC.A)(tB.TE);
@@ -1453,7 +1453,7 @@ function tQ() {
             }, [s, c, r, a, d, i, o, u, e]);
         })(e),
         { shouldShowBonusOrbsUX: T, multiplier: b } = (0, tj.Dl)(tX.rE.NITRO_HOME_MARKETING),
-        S = (0, h.l)("useWhatsNewPerkCards"),
+        S = (0, E.l)("useWhatsNewPerkCards"),
         { isEligible: j, programReward: v } = (0, _.F)({ location: "useWhatsNewPerkCards" }),
         P = S && j && null != v;
     return (0, n.useMemo)(() => {
@@ -1468,7 +1468,7 @@ function tQ() {
                           primaryAsset: "/assets/0e1f72ee8aba3549.svg",
                           footerContent: (0, a.jsx)(tL, {}),
                           ctaText: D.intl.string(tM.default.BxjHiu),
-                          onCtaClick: () => (0, th.pX)(eh.BVt.COLLECTIBLES_SHOP_WITH_TAB(tz.G2.ORBS)),
+                          onCtaClick: () => (0, tE.pX)(eE.BVt.COLLECTIBLES_SHOP_WITH_TAB(tz.G2.ORBS)),
                       }
                     : null,
                 T
@@ -1480,7 +1480,7 @@ function tQ() {
                           primaryAsset:
                               "https://cdn.discordapp.com/assets/content/6a45cf480a4894d29a155fbc23df4dca701a69e7f09227ef964a61bdb6e5833a.png",
                           ctaText: D.intl.string(D.t.jVcuVY),
-                          onCtaClick: () => (0, th.pX)(eh.BVt.QUEST_HOME),
+                          onCtaClick: () => (0, tE.pX)(eE.BVt.QUEST_HOME),
                           primaryAssetClassName: tK.Nf,
                       }
                     : null,
@@ -1517,7 +1517,7 @@ function tQ() {
                     description: D.intl.string(D.t["di/pXR"]),
                     onCtaClick: t ? A : p,
                     ctaText: D.intl.string(D.t.jVcuVY),
-                    primaryAsset: t$,
+                    primaryAsset: tZ,
                 },
                 {
                     id: tR.CLIENT_THEMES_CARD_ID,
@@ -1541,15 +1541,15 @@ function tQ() {
                     id: tR.CUSTOM_APP_ICONS_CARD_ID,
                     title: D.intl.string(D.t["GU+wqh"]),
                     description: D.intl.string(D.t["1uPk1Z"]),
-                    primaryAsset: tZ,
+                    primaryAsset: t$,
                     ctaText: D.intl.string(D.t.y9TxXV),
-                    onCtaClick: E,
+                    onCtaClick: h,
                 },
             ],
             i = (e = e.filter((e) => null != e))[0].featured,
             n = i ? 5 : 6;
         return e.splice(+!!i, 0, C), e.length > n && e.splice(n, e.length - n), e;
-    }, [S, C, P, v, s, T, b, p, E, N, R, A, t, r, c, o]);
+    }, [S, C, P, v, s, T, b, p, h, N, R, A, t, r, c, o]);
 }
 var tJ = i(355097),
     t0 = i(64514),
@@ -1577,29 +1577,29 @@ function t5(e) {
                 { analyticsLocations: r } = (0, x.Ay)(g.A.PREMIUM_MARKETING_PERK_CARD),
                 l = (0, tx.A)({ scrollPosition: tJ._F.TRY_IT_OUT, analyticsLocations: r }),
                 c = (0, n.useCallback)(() => {
-                    (0, $.openUserSettings)(Y.X.APPEARANCE_THEME_CATEGORY, { analyticsLocations: r });
+                    (0, Z.openUserSettings)(Y.X.APPEARANCE_THEME_CATEGORY, { analyticsLocations: r });
                 }, [r]),
                 d = (0, n.useCallback)(() => {
-                    (0, $.openUserSettings)(Y.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { analyticsLocations: r });
+                    (0, Z.openUserSettings)(Y.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { analyticsLocations: r });
                 }, [r]),
                 o = (0, n.useCallback)(() => {
-                    (0, $.openUserSettings)(Y.X.APPEARANCE_IN_APP_ICON_CATEGORY, { analyticsLocations: r });
+                    (0, Z.openUserSettings)(Y.X.APPEARANCE_IN_APP_ICON_CATEGORY, { analyticsLocations: r });
                 }, [r]),
                 u = (0, n.useCallback)(() => {
-                    (0, th.pX)(eh.BVt.COLLECTIBLES_SHOP);
+                    (0, tE.pX)(eE.BVt.COLLECTIBLES_SHOP);
                 }, []),
                 m = (0, n.useCallback)(() => {
-                    (0, $.openUserSettings)(Y.X.SOUNDBOARD_CATEGORY, { analyticsLocations: r });
+                    (0, Z.openUserSettings)(Y.X.SOUNDBOARD_CATEGORY, { analyticsLocations: r });
                 }, [r]),
-                A = (0, tE.A)({ analyticsLocations: r }),
+                A = (0, th.A)({ analyticsLocations: r }),
                 p = (0, n.useCallback)(() => {
-                    (0, $.openUserSettings)(Y.X.PROFILE_PANEL, { analyticsLocations: r }, () =>
+                    (0, Z.openUserSettings)(Y.X.PROFILE_PANEL, { analyticsLocations: r }, () =>
                         (0, tg.L)({ analyticsLocations: r }),
                     );
                 }, [r]),
-                h = tQ(),
-                N = (0, n.useMemo)(() => h.map((e) => e?.id), [h]),
-                E = (0, n.useMemo)(
+                E = tQ(),
+                N = (0, n.useMemo)(() => E.map((e) => e?.id), [E]),
+                h = (0, n.useMemo)(
                     () => [
                         {
                             id: tR.SERVER_BOOSTS_CARD_ID,
@@ -1656,7 +1656,7 @@ function t5(e) {
                             description: D.intl.string(D.t["1uPk1Z"]),
                             ctaText: D.intl.string(D.t.jVcuVY),
                             onCtaClick: o,
-                            primaryAsset: tZ,
+                            primaryAsset: t$,
                             categories: ["appearance"],
                         },
                         {
@@ -1675,7 +1675,7 @@ function t5(e) {
                             description: D.intl.string(D.t["di/pXR"]),
                             onCtaClick: t ? A : p,
                             ctaText: D.intl.string(D.t.jVcuVY),
-                            primaryAsset: t$,
+                            primaryAsset: tZ,
                             categories: ["appearance"],
                         },
                         {
@@ -1744,7 +1744,7 @@ function t5(e) {
                     ],
                     [e, s, l, c, d, o, u, m, p, A, t],
                 );
-            return (0, n.useMemo)(() => E.filter((e) => null != e && !N.includes(e.id)), [E, N]);
+            return (0, n.useMemo)(() => h.filter((e) => null != e && !N.includes(e.id)), [h, N]);
         })(),
         s = null != t ? i.find((e) => e?.id === t) : null,
         [r, l] = (0, n.useState)(s?.categories[0] ?? t2.BEST_OF_NITRO),
@@ -1809,7 +1809,7 @@ let is = "section",
     ir = (e) => {
         let { userId: t } = e,
             i = (0, b.ds)(),
-            s = (0, h.l)("PremiumSubscriberHome"),
+            s = (0, E.l)("PremiumSubscriberHome"),
             r = (0, c.zy)();
         n.useEffect(() => {
             p.h.wait(async () => {
@@ -1821,7 +1821,7 @@ let is = "section",
                 X(!0);
             }, []),
             (0, j.j)(),
-            (0, E.P)(N.b);
+            (0, h.P)(N.b);
         let O = n.useRef(null),
             y = n.useRef(null),
             M = (0, d.bG)([I.A], () => I.A.getPremiumTypeSubscription()),
@@ -1846,10 +1846,10 @@ let is = "section",
         let [z, X] = n.useState(!1),
             W = (0, S.p)(),
             K = n.useRef(null),
-            [Y, $] = n.useState(!1),
-            Z = null != W && null != M && M.status === eh.Dmq.CANCELED,
+            [Y, Z] = n.useState(!1),
+            $ = null != W && null != M && M.status === eE.Dmq.CANCELED,
             q = (0, v.iU)(eK.gD.PREMIUM_MONTH_TIER_2, W, M),
-            Q = !Y && Z,
+            Q = !Y && $,
             { analyticsLocations: J } = (0, x.Ay)(g.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
             [ee, et] = n.useState(!1);
         return null != (0, d.bG)([R.A], () => (null != t ? R.A.getUserProfile(t) : null)) && (L || null != G)
@@ -1866,7 +1866,7 @@ let is = "section",
                               children: [
                                   (0, a.jsx)(o.L, {
                                       innerRef: K,
-                                      onChange: (e) => $(e),
+                                      onChange: (e) => Z(e),
                                       threshold: 0.1,
                                       active: !0,
                                       children: (0, a.jsx)(eJ, {
@@ -1886,7 +1886,7 @@ let is = "section",
                                   (0, a.jsx)(U, {
                                       className: it.Zy,
                                       location: g.A.PREMIUM_MARKETING_GIFT_SECTION,
-                                      analyticsLocation: { page: eh.liQ.NITRO_HOME, section: eh.JJy.GIFT_BANNER },
+                                      analyticsLocation: { page: eE.liQ.NITRO_HOME, section: eE.JJy.GIFT_BANNER },
                                   }),
                                   (0, a.jsx)("div", { className: it.hz }),
                                   (0, a.jsx)(o.L, {
@@ -1894,7 +1894,7 @@ let is = "section",
                                       onChange: (e) => {
                                           e &&
                                               !ee &&
-                                              (T.default.track(eh.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                              (T.default.track(eE.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                                   location_stack: J,
                                               }),
                                               et(!0));
@@ -1911,7 +1911,7 @@ let is = "section",
                               ],
                           }),
                       }),
-                      Z &&
+                      $ &&
                           null != q &&
                           (0, a.jsx)(e8, {
                               isVisible: Q && z,

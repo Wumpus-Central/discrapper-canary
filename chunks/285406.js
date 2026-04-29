@@ -30,7 +30,7 @@ let E = [
             handler: (e, t) =>
                 (0, a.openModalLazy)(async () => {
                     let { default: i } = await Promise.all([
-                        n.e("29139"),
+                        n.e("90261"),
                         n.e("13754"),
                         n.e("72891"),
                         n.e("54046"),
@@ -59,7 +59,8 @@ let E = [
             handler: (e, t) =>
                 (0, a.openModalLazy)(async () => {
                     let { default: i } = await Promise.all([
-                        n.e("12512"),
+                        n.e("75527"),
+                        n.e("41884"),
                         n.e("59957"),
                         n.e("28136"),
                         n.e("16084"),
