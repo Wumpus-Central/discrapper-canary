@@ -27,8 +27,8 @@ function u(e) {
             async () => {
                 let { default: e } = await Promise.all([
                     a.e("99796"),
-                    a.e("92652"),
-                    a.e("63397"),
+                    a.e("56685"),
+                    a.e("8528"),
                     a.e("40841"),
                     a.e("98042"),
                     a.e("90673"),

@@ -114,7 +114,7 @@ function T(t) {
     async function B() {
         S.current?.pause(),
             await (0, u.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("77598"), n.e("18710")]).then(n.bind(n, 770101));
+                let { default: t } = await Promise.all([n.e("8528"), n.e("18710")]).then(n.bind(n, 770101));
                 return (e) =>
                     (0, i.jsx)(t, {
                         ...e,

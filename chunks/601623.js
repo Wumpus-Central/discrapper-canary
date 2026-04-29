@@ -532,24 +532,24 @@ if (21552 == n.j) var e0 = n(821609);
 var e5 = n(334465),
     e2 = n(624458),
     e1 = n(513461),
-    e7 = n(709977),
-    e9 = n(212455),
-    e8 = n(182430),
+    e8 = n(709977),
+    e7 = n(212455),
+    e9 = n(182430),
     e6 = n(580537);
 let e4 =
     21552 == n.j
         ? () => {
               let e = (0, o.bG)([ey.A], () => ey.A.getGuildId(), []),
                   t = (0, o.bG)([eg.A], () => eg.A.getGuild(e), [e]),
-                  l = (0, o.bG)([e9.A], () => (null != e ? e9.A.getRequest(e) : null), [e]),
+                  l = (0, o.bG)([e7.A], () => (null != e ? e7.A.getRequest(e) : null), [e]),
                   r = (0, eQ.zy)(),
                   s = (0, e5.B)(r.pathname, ei.BVt.CHANNEL(t?.id, eG.VV.GUILD_ONBOARDING))?.isExact === !0;
-              if (null == t || !(0, e7.Qd)(t) || s) return null;
+              if (null == t || !(0, e8.Qd)(t) || s) return null;
               let a = l?.applicationStatus ?? e1.B5.STARTED,
                   E = null,
                   _ = null,
                   A = null,
-                  T = [e8.lm, e6.lm];
+                  T = [e9.lm, e6.lm];
               switch (a) {
                   case e1.B5.SUBMITTED:
                       (E = es.intl.string(es.t["5iLvSx"])),
@@ -575,7 +575,7 @@ let e4 =
                                   return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                               });
                           }),
-                          T.push(e8.z3);
+                          T.push(e9.z3);
                       break;
                   default:
                       (E = es.intl.string(es.t.G5YKXP)),
@@ -587,7 +587,7 @@ let e4 =
               return (0, i.jsxs)("div", {
                   className: eZ()(...T),
                   children: [
-                      (0, i.jsx)(c.E, { className: e8.wx, variant: "text-sm/normal", children: E }),
+                      (0, i.jsx)(c.E, { className: e9.wx, variant: "text-sm/normal", children: E }),
                       (0, i.jsx)(e0.$, { variant: "overlay-primary", size: "sm", onClick: A, text: _ }),
                   ],
               });
@@ -937,7 +937,7 @@ let t2 = new v.A("Notice"),
               })
             : s;
     },
-    t7 = (e) => {
+    t8 = (e) => {
         let { noticeType: t } = e;
         return (0, i.jsxs)(I.$T, {
             color: I.Hv.DANGER,
@@ -958,12 +958,12 @@ let t2 = new v.A("Notice"),
             ],
         });
     };
-function t9(e) {
+function t7(e) {
     return (0, tQ.isWindows)() && _().satisfies(x.A?.os.release, tJ.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
 }
-function t8(e) {
+function t9(e) {
     let t,
         n,
         { noticeType: l } = e,
@@ -977,10 +977,10 @@ function t8(e) {
     return (
         !0 === a
             ? ((t = es.intl.string(es.t.ppW3ri)),
-              (n = (0, i.jsx)(I.eC, { href: t9(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
+              (n = (0, i.jsx)(I.eC, { href: t7(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
             : 0 === E
               ? ((t = es.intl.string(es.t.j4gGA4)),
-                (n = (0, i.jsx)(I.eC, { href: t9(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
+                (n = (0, i.jsx)(I.eC, { href: t7(s), noticeType: l, children: es.intl.string(es.t.QghSIq) })))
               : tW.Ay.supports(t5.O5.LOOPBACK)
                 ? ((t = es.intl.string(es.t.dNAJ18)),
                   (_ = !0),
@@ -1287,9 +1287,9 @@ let t4 =
                           ],
                       });
                   case ei.kqX.NO_INPUT_DETECTED:
-                      return (0, i.jsx)(t8, { noticeType: r.type });
+                      return (0, i.jsx)(t9, { noticeType: r.type });
                   case ei.kqX.NO_INPUT_DEVICES_DETECTED:
-                      return (0, i.jsx)(t7, { noticeType: r.type });
+                      return (0, i.jsx)(t8, { noticeType: r.type });
                   case ei.kqX.HARDWARE_MUTE:
                       if (null != r.metadata) {
                           let { vendor: e, model: t } = r.metadata;
@@ -1372,7 +1372,7 @@ let t4 =
                                               n.e("63009"),
                                               n.e("47181"),
                                               n.e("9292"),
-                                              n.e("63397"),
+                                              n.e("8528"),
                                               n.e("45650"),
                                               n.e("97189"),
                                               n.e("24059"),
@@ -1672,7 +1672,7 @@ let t4 =
                                                   n.e("13709"),
                                                   n.e("63941"),
                                                   n.e("63009"),
-                                                  n.e("63397"),
+                                                  n.e("8528"),
                                                   n.e("84615"),
                                                   n.e("35429"),
                                                   n.e("10471"),

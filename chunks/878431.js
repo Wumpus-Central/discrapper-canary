@@ -4768,11 +4768,11 @@ let rY = () => (0, i.jsx)("div", { className: rW.wG, children: (0, i.jsx)(x.y, {
             t.e("97137"),
             t.e("20524"),
             t.e("80287"),
-            t.e("23740"),
+            t.e("44609"),
             t.e("13044"),
             t.e("40841"),
             t.e("52204"),
-            t.e("63397"),
+            t.e("8528"),
             t.e("11491"),
             t.e("32703"),
             t.e("5432"),
@@ -4841,7 +4841,7 @@ let rY = () => (0, i.jsx)("div", { className: rW.wG, children: (0, i.jsx)(x.y, {
     rK = (0, nL.Fe)({ createPromise: rq, webpackId: 540462, name: "ChannelCall", renderLoader: rY }),
     rX = () =>
         Promise.all([
-            t.e("23740"),
+            t.e("44609"),
             t.e("9292"),
             t.e("29139"),
             t.e("4981"),

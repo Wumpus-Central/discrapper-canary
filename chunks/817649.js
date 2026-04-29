@@ -694,7 +694,7 @@ let eK = (e) => {
                                     let { PaymentContextProvider: e } = await Promise.resolve().then(i.bind(i, 156312)),
                                         { PaymentModal: v } = await Promise.resolve().then(i.bind(i, 546042)),
                                         { STEPS: p } = await Promise.all([
-                                            i.e("63397"),
+                                            i.e("8528"),
                                             i.e("84615"),
                                             i.e("40841"),
                                             i.e("63009"),

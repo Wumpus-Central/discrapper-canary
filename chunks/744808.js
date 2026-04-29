@@ -1,71 +1,61 @@
-t.d(r, { A: () => f });
-var s = t(627968),
-    a = t(64700),
-    l = t(503698),
-    n = t.n(l),
-    i = t(43990),
-    o = t(17928),
-    c = t(363195),
-    u = t(746002),
-    d = t(219220),
-    m = t(282389),
-    h = t(325409);
+r.d(t, { A: () => b });
+var s = r(627968),
+    l = r(64700),
+    a = r(503698),
+    i = r.n(a),
+    n = r(43990),
+    o = r(17928),
+    u = r(363195),
+    c = r(746002),
+    m = r(219220),
+    d = r(282389),
+    h = r(325409);
 function p(e) {
-    let { skuId: r, layer: t, data: l } = e,
-        i = l?.src ?? (0, u.getCollectiblesItemAssetUrl)({ skuId: r, assetFormat: "static", assetId: t.id }),
-        o = a.useMemo(() => ({ [h.Wm]: "front" === t.order, [h.aX]: "back" === t.order }), [t.order]);
-    if (null == i) return null;
-    switch (t.type) {
-        case "staple":
-            return (0, s.jsx)("img", {
-                src: i,
-                alt: "",
-                "aria-hidden": !0,
-                className: n()(h.S_, o, h.im, { [h.Mn]: "top" === t.anchor, [h.sQ]: "bottom" === t.anchor }),
-            });
-        case "rail":
-            return (0, s.jsx)("div", {
-                className: n()(h.S_, o, h.H$, {
-                    [h.Mn]: "top" === t.anchor,
-                    [h.sQ]: "bottom" === t.anchor,
-                    [h.gX]: "center" === t.anchor,
-                    [h.no]: !0 === t.responsive,
-                }),
-                children: (0, s.jsx)("img", { src: i, alt: "", "aria-hidden": !0 }),
-            });
-        case "border":
-            let c = { "--custom-profile-frame-layer-src": `url(${i})` };
-            return (0, s.jsx)("div", { role: "img", className: n()(h.S_, o, h.PQ), style: c });
-        default:
-            return null;
-    }
+    let { skuId: t, layer: r, data: l } = e,
+        a = l?.src ?? (0, c.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: r.id });
+    if (null == a) return null;
+    let n = i()(h.S_, {
+        [h.Wm]: "front" === r.order,
+        [h.aX]: "back" === r.order,
+        [h.Mn]: "top" === r.anchor,
+        [h.sQ]: "bottom" === r.anchor,
+        [h.gX]: "center" === r.anchor,
+        [h.no]: !0 === r.responsive,
+    });
+    return "staple" === r.type
+        ? (0, s.jsx)("img", { src: a, alt: "", "aria-hidden": !0, className: i()(n, h.im) })
+        : "rail" === r.type
+          ? (0, s.jsx)("div", { role: "img", style: { backgroundImage: `url(${a})` }, className: i()(n, h.H$) })
+          : "border" === r.type
+            ? (0, s.jsx)("div", { role: "img", style: { backgroundImage: `url(${a})` }, className: i()(n, h.PQ) })
+            : null;
 }
-function f(e) {
-    let { frame: r, layout: t } = e,
-        l = (0, o.bG)([c.A], () => c.A.theme),
-        u = (0, m.A)(r.skuId),
-        f = a.useMemo(
+function b(e) {
+    let { frame: t, layout: r } = e,
+        a = (0, o.bG)([u.A], () => u.A.theme),
+        c = (0, d.A)(t.skuId),
+        b = l.useMemo(
             () =>
-                "MODAL_V2" === t
-                    ? r.layers.filter((e) => "bottom" !== e.anchor)
-                    : "SIDEBAR" === t
-                      ? r.layers.filter((e) => "staple" === e.type && "bottom" !== e.anchor)
-                      : r.layers,
-            [t, r.layers],
+                "MODAL_V2" === r
+                    ? t.layers.filter((e) => "bottom" !== e.anchor)
+                    : "SIDEBAR" === r
+                      ? t.layers.filter((e) => "staple" === e.type && "bottom" !== e.anchor)
+                      : t.layers,
+            [r, t.layers],
         ),
-        { layerData: b } = (0, d.A)({ skuId: r.skuId, layers: f });
-    return 0 === f.length
+        { layerData: f } = (0, m.A)({ skuId: t.skuId, layers: b });
+    return 0 === b.length
         ? null
-        : (0, s.jsx)(i.N, {
-              theme: l,
+        : (0, s.jsx)(n.N, {
+              theme: a,
               children: (e) =>
                   (0, s.jsx)("div", {
-                      className: n()(h.uF, e, u),
-                      "aria-label": r.label,
+                      className: i()(h.uF, e, c),
+                      "aria-label": t.label,
                       role: "img",
                       children: (0, s.jsx)("div", {
                           className: h.hH,
-                          children: f.map((e) => (0, s.jsx)(p, { skuId: r.skuId, layer: e, data: b[e.id] }, e.id)),
+                          children: b.map((e) => (0, s.jsx)(p, { skuId: t.skuId, layer: e, data: f[e.id] }, e.id)),
                       }),
                   }),
           });

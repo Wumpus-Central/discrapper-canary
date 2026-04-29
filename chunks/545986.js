@@ -10,12 +10,12 @@ n.d(t, {
     f7: () => Y,
     gC: () => en,
     hJ: () => $,
-    l9: () => Z,
+    l9: () => z,
     m6: () => Q,
     navigateToQuestHome: () => X,
     q$: () => et,
     rx: () => W,
-    z6: () => z,
+    z6: () => Z,
 });
 var i = n(627968);
 n(64700);
@@ -88,22 +88,22 @@ function W(e) {
     (0, s.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
             n.e("13709"),
-            n.e("25738"),
-            n.e("63397"),
-            n.e("84580"),
+            n.e("81349"),
+            n.e("8528"),
+            n.e("47181"),
             n.e("40841"),
             n.e("22810"),
             n.e("5036"),
-            n.e("54333"),
+            n.e("63133"),
             n.e("97271"),
             n.e("22513"),
-            n.e("32442"),
+            n.e("13498"),
             n.e("75058"),
-            n.e("54718"),
+            n.e("60571"),
             n.e("71934"),
-            n.e("60049"),
-            n.e("45235"),
-            n.e("92652"),
+            n.e("12512"),
+            n.e("29139"),
+            n.e("56685"),
             n.e("86483"),
             n.e("31632"),
             n.e("86821"),
@@ -389,16 +389,16 @@ function X(e) {
         (0, S.default)(),
         (0, A.pX)((i ? V.BVt.QUEST_HOME_DEPRECATED : V.BVt.QUEST_HOME) + a);
 }
-function z(e) {
+function Z(e) {
     let t = (0, P.L)({ quest: e });
     if (Math.random() > 0.01) return;
     let n = (0, M.A)(e);
     t.log(`Showing survey ${n.id}`), (0, w.m)({ questId: e.id, survey: n });
 }
-function Z() {
+function z() {
     return Promise.all([
         n.e("40841"),
-        n.e("84580"),
+        n.e("47181"),
         n.e("75058"),
         n.e("22448"),
         n.e("57174"),
@@ -471,7 +471,7 @@ function J(e) {
     let O = performance.now();
     (0, s.openModalLazy)(
         async () => {
-            let { default: e } = await Z();
+            let { default: e } = await z();
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,
@@ -538,7 +538,7 @@ function en(e, t) {
         let { default: a } = await Promise.all([
             n.e("40841"),
             n.e("13709"),
-            n.e("92652"),
+            n.e("56685"),
             n.e("19415"),
             n.e("77044"),
             n.e("24199"),
@@ -607,7 +607,7 @@ function ei(e) {
             n.e("40841"),
             n.e("75222"),
             n.e("95429"),
-            n.e("29835"),
+            n.e("23104"),
             n.e("48370"),
             n.e("46485"),
         ]).then(n.bind(n, 518420));

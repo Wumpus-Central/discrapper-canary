@@ -474,15 +474,15 @@ function eQ() {
 var eJ = n(851109),
     e0 = n(567249),
     e1 = n(912592),
-    e3 = n(851580),
-    e2 = n(222823),
+    e2 = n(851580),
+    e3 = n(222823),
     e8 = n(371911),
     e4 = n(790782);
-function e7(e) {
+function e5(e) {
     let { onOpen: t, onClose: n, "data-jump-section": a } = e,
         l = (0, s.bG)([et.default], () => et.default.getCurrentUser()),
         o = r.useRef(null),
-        d = (0, s.bG)([e2.Ay], () => l?.id != null && e2.Ay.getMentionCount(l.id, e4.P.NOTIFICATION_CENTER) > 0);
+        d = (0, s.bG)([e3.Ay], () => l?.id != null && e3.Ay.getMentionCount(l.id, e4.P.NOTIFICATION_CENTER) > 0);
     return (0, i.jsx)(e8.C, {
         targetElementRef: o,
         onOpen: t,
@@ -503,12 +503,12 @@ function e7(e) {
                         "data-jump-section": a,
                         ref: o,
                     }),
-                    (0, i.jsx)(e3.v, { location: "inbox-button", targetElementRef: o }),
+                    (0, i.jsx)(e2.v, { location: "inbox-button", targetElementRef: o }),
                 ],
             }),
     });
 }
-var e5 = n(966597),
+var e7 = n(966597),
     e6 = n(97469),
     e9 = n(253932),
     te = n(430363);
@@ -535,7 +535,7 @@ let td = (0, ts.Fe)({
                 n.e("63009"),
                 n.e("47181"),
                 n.e("9292"),
-                n.e("63397"),
+                n.e("8528"),
                 n.e("45650"),
                 n.e("97189"),
                 n.e("24059"),
@@ -557,7 +557,7 @@ let td = (0, ts.Fe)({
                 n.e("59204"),
                 n.e("75058"),
                 n.e("23574"),
-                n.e("66883"),
+                n.e("29139"),
                 n.e("63635"),
                 n.e("56685"),
                 n.e("5007"),
@@ -826,7 +826,7 @@ let td = (0, ts.Fe)({
                 n.e("9292"),
                 n.e("33092"),
                 n.e("24211"),
-                n.e("66883"),
+                n.e("29139"),
                 n.e("73679"),
                 n.e("84615"),
                 n.e("27755"),
@@ -844,7 +844,7 @@ let td = (0, ts.Fe)({
                 n.e("63941"),
                 n.e("63009"),
                 n.e("47181"),
-                n.e("63397"),
+                n.e("8528"),
                 n.e("45650"),
                 n.e("97189"),
                 n.e("24059"),
@@ -858,7 +858,7 @@ let td = (0, ts.Fe)({
                 n.e("94193"),
                 n.e("8996"),
                 n.e("63133"),
-                n.e("23740"),
+                n.e("44609"),
                 n.e("79093"),
                 n.e("28510"),
                 n.e("45503"),
@@ -1419,7 +1419,7 @@ let td = (0, ts.Fe)({
                 n.e("81863"),
                 n.e("37589"),
                 n.e("56153"),
-                n.e("39065"),
+                n.e("96428"),
                 n.e("81250"),
                 n.e("24805"),
                 n.e("22154"),
@@ -1437,7 +1437,7 @@ let td = (0, ts.Fe)({
     tA = () =>
         Promise.all([
             n.e("12512"),
-            n.e("63397"),
+            n.e("8528"),
             n.e("38559"),
             n.e("40841"),
             n.e("63635"),
@@ -1482,7 +1482,7 @@ let td = (0, ts.Fe)({
             ),
             A = null !== e && t === eJ.RK.TITLE_BAR_LEFT,
             h = null === e,
-            { enabled: I, inInbox: g } = e5.A.useConfig({ location: "AppTitleBar" });
+            { enabled: I, inInbox: g } = e7.A.useConfig({ location: "AppTitleBar" });
         r.useLayoutEffect(() => {
             ta.Ay.setMinimumSize(800, 500);
         }, []);
@@ -1530,7 +1530,7 @@ let td = (0, ts.Fe)({
                                           !1,
                                           (0, i.jsx)(G, { canShowReminder: !0 }),
                                           I && !g && (0, i.jsx)(td, {}),
-                                          h && (0, i.jsx)(e7, { ...("RECENTS" === N ? e : {}) }),
+                                          h && (0, i.jsx)(e5, { ...("RECENTS" === N ? e : {}) }),
                                           n
                                               ? (0, i.jsx)(eE, { focusSectionProps: "HELP" === N ? e : void 0 })
                                               : (0, i.jsx)(el, { focusSectionProps: "HELP" === N ? e : void 0 }),

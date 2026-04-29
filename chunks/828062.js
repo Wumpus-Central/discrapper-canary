@@ -391,7 +391,7 @@ let eh = (0, er.Fe)({
     ev = (0, er.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("23740"),
+                n.e("44609"),
                 n.e("9351"),
                 n.e("40841"),
                 n.e("13836"),
@@ -421,7 +421,7 @@ let eh = (0, er.Fe)({
                 n.e("3424"),
                 n.e("63133"),
                 n.e("48540"),
-                n.e("66883"),
+                n.e("29139"),
                 n.e("19415"),
                 n.e("7276"),
                 n.e("56685"),
@@ -429,7 +429,7 @@ let eh = (0, er.Fe)({
                 n.e("81788"),
                 n.e("13709"),
                 n.e("77044"),
-                n.e("63397"),
+                n.e("8528"),
                 n.e("59204"),
                 n.e("97023"),
                 n.e("64911"),
@@ -920,8 +920,8 @@ let eh = (0, er.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("80413"),
-                n.e("66883"),
-                n.e("63397"),
+                n.e("29139"),
+                n.e("8528"),
                 n.e("12512"),
                 n.e("61207"),
                 n.e("80760"),
@@ -950,7 +950,7 @@ let eh = (0, er.Fe)({
                 n.e("9292"),
                 n.e("15758"),
                 n.e("74275"),
-                n.e("23740"),
+                n.e("44609"),
                 n.e("56888"),
                 n.e("20969"),
                 n.e("84027"),
@@ -1204,7 +1204,7 @@ let eh = (0, er.Fe)({
     eF = (0, er.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("23740"),
+                n.e("44609"),
                 n.e("15275"),
                 n.e("74821"),
                 n.e("38589"),
@@ -1232,10 +1232,10 @@ let eh = (0, er.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("50672"),
-                n.e("66883"),
+                n.e("29139"),
                 n.e("75058"),
                 n.e("56685"),
-                n.e("63397"),
+                n.e("8528"),
                 n.e("86821"),
                 n.e("25568"),
                 n.e("48476"),
@@ -2431,7 +2431,7 @@ class e3 extends eA.A {
     };
 }
 let e5 = new e3();
-function e6() {
+function e8() {
     return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -2444,7 +2444,7 @@ function e6() {
         background_install_ms_total: 0,
     };
 }
-function e8(e) {
+function e6(e) {
     return "host" === e;
 }
 class e7 {
@@ -2452,10 +2452,10 @@ class e7 {
     _downloadingModules = {};
     _report;
     constructor() {
-        this._report = e6();
+        this._report = e8();
     }
     handleDownloadingModule(e) {
-        if (!e8(e.name)) {
+        if (!e6(e.name)) {
             if (null != this._downloadingModules[e.name])
                 return void console.warn("Duplicate downloading-module event for module ", e.name);
             this._downloadingModules[e.name] = { startTime: BigInt(e.now), foreground: e.foreground };
@@ -2475,7 +2475,7 @@ class e7 {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (e8(e.name)) return;
+        if (e6(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t)
             return void console.warn("Downloaded complete without corresponding downloading event for module ", e.name);
@@ -2492,7 +2492,7 @@ class e7 {
             delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
-        if (!e8(e.name)) {
+        if (!e6(e.name)) {
             if (null != this._installingModules[e.name])
                 return void console.warn("Duplicate installing-module event for module ", e.name);
             this._installingModules[e.name] = {
@@ -2504,7 +2504,7 @@ class e7 {
         }
     }
     handleInstalledModule(e) {
-        if (e8(e.name)) return;
+        if (e6(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? "foreground" : "background",
@@ -2542,7 +2542,7 @@ class e7 {
         return this._report;
     }
     reset() {
-        this._report = e6();
+        this._report = e8();
     }
     submissionReady() {
         return (

@@ -59,8 +59,8 @@ var i = n(627968),
     Q = n(864721),
     q = n(629442),
     X = n(54605),
-    z = n(189880),
-    Z = n(321987),
+    Z = n(189880),
+    z = n(321987),
     J = n(595244),
     ee = n(618865),
     et = n(652215),
@@ -72,20 +72,20 @@ let er = (0, U.Fe)({
         Promise.all([
             n.e("99796"),
             n.e("13709"),
-            n.e("25738"),
-            n.e("63397"),
-            n.e("84580"),
+            n.e("81349"),
+            n.e("8528"),
+            n.e("47181"),
             n.e("40841"),
             n.e("22810"),
             n.e("75058"),
-            n.e("54718"),
+            n.e("60571"),
             n.e("97271"),
-            n.e("54333"),
+            n.e("63133"),
             n.e("71934"),
-            n.e("60049"),
+            n.e("12512"),
             n.e("22513"),
-            n.e("45235"),
-            n.e("92652"),
+            n.e("29139"),
+            n.e("56685"),
             n.e("86483"),
             n.e("31632"),
             n.e("86821"),
@@ -93,7 +93,7 @@ let er = (0, U.Fe)({
             n.e("32260"),
             n.e("7276"),
             n.e("5036"),
-            n.e("32442"),
+            n.e("13498"),
             n.e("24199"),
             n.e("57036"),
             n.e("88394"),
@@ -333,10 +333,10 @@ function e_() {
                               (0, i.jsx)(N.y, {}),
                           ],
                       })),
-            (0, i.jsx)(Z.$, { removeChildWrapper: !0, children: (0, i.jsx)("div", { className: ea.ah, children: e }) })
+            (0, i.jsx)(z.$, { removeChildWrapper: !0, children: (0, i.jsx)("div", { className: ea.ah, children: e }) })
         );
     }
-    return (0, i.jsx)(Z.$, {
+    return (0, i.jsx)(z.$, {
         removeChildWrapper: !0,
         children: (0, i.jsx)(es, {
             transitionState: I.i.ENTERED,
@@ -377,7 +377,7 @@ function es(e) {
                       ],
                   })
                 : null;
-    return (0, i.jsx)(Z.f, {
+    return (0, i.jsx)(z.f, {
         ...e,
         onClose: () => Promise.resolve(e.onClose?.()),
         size: u,
@@ -407,7 +407,7 @@ function eo(e) {
             nonce: U,
             prompt: P,
             authorizations: G,
-            scopes: Z,
+            scopes: z,
             permissions: en,
             guildId: e_,
             channelId: es,
@@ -443,7 +443,7 @@ function eo(e) {
         ej = (0, g.A)(ep?.application ?? null),
         eY = a.useMemo(() => ey?.find((e) => e.id === ev), [ey, ev]),
         [eW, ex] = a.useState(null),
-        eK = a.useMemo(() => null == eR && null == eo && (Z?.length ?? 0) === 0 && null == S, [eR, Z?.length, S, eo]),
+        eK = a.useMemo(() => null == eR && null == eo && (z?.length ?? 0) === 0 && null == S, [eR, z?.length, S, eo]),
         [e$, eQ] = a.useState(null);
     a.useEffect(() => {
         eK && m.Ay.fetchApplication(I).then((e) => eQ(v.Ay.createFromServer(e)));
@@ -452,13 +452,13 @@ function eo(e) {
             () => (null == eW ? null : e$?.integrationTypesConfig?.[eW]?.oauth2InstallParams),
             [e$?.integrationTypesConfig, eW],
         ),
-        { requestedScopes: eX, accountScopes: ez } = a.useMemo(() => {
-            let e = eK ? eq?.scopes : Z,
+        { requestedScopes: eX, accountScopes: eZ } = a.useMemo(() => {
+            let e = eK ? eq?.scopes : z,
                 t = (0, H.e)(e ?? []),
                 n = W.k$.filter((e) => t.includes(e));
             return { requestedScopes: t, accountScopes: n };
-        }, [eq?.scopes, Z, eK]),
-        eZ = a.useMemo(() => (eK ? u.iu(eq?.permissions ?? 0) : en) ?? F.x3, [eq?.permissions, en, eK]),
+        }, [eq?.scopes, z, eK]),
+        ez = a.useMemo(() => (eK ? u.iu(eq?.permissions ?? 0) : en) ?? F.x3, [eq?.permissions, en, eK]),
         eJ = a.useRef(!1),
         [e0, e1] = a.useState(eN ?? []),
         [e2, e3] = a.useState(null != eN && eN.length > 0);
@@ -512,7 +512,7 @@ function eo(e) {
                         state: b,
                         nonce: U,
                         integrationType: eW,
-                        permissions: u.TF(eZ, eV),
+                        permissions: u.TF(ez, eV),
                         guildId: eW === d.b.GUILD_INSTALL && null != ev ? ev : void 0,
                         channelId: eW === d.b.GUILD_INSTALL && null != ew ? ew : void 0,
                     });
@@ -533,13 +533,13 @@ function eo(e) {
                         eP(!1);
                 }
             },
-            [eA, ec, eT, ep?.application, eY, eS, I, eX, A, S, N, L, b, U, eZ, eV, ev, eW, ew, e0],
+            [eA, ec, eT, ep?.application, eY, eS, I, eX, A, S, N, L, b, U, ez, eV, ev, eW, ew, e0],
         ),
-        e6 = a.useRef(!1),
-        e8 = a.useCallback(async () => {
+        e8 = a.useRef(!1),
+        e6 = a.useCallback(async () => {
             if (!w.default.isAuthenticated()) return void (0, k.Vh)(eC, "oauth2_error_not_authenticated");
-            if (!eJ.current && !e6.current) {
-                e6.current = !0;
+            if (!eJ.current && !e8.current) {
+                e8.current = !0;
                 try {
                     let e =
                         null != eR
@@ -563,7 +563,7 @@ function eo(e) {
                     if (401 === e) return void (0, k.Vh)(eC, "oauth2_error_unauthorized");
                     eb(Error(null != t.message ? t.message : `${Object.keys(t)[0]}: ${Object.values(t)[0]}`));
                 } finally {
-                    e6.current = !1;
+                    e8.current = !1;
                 }
             }
         }, [eC, eR, I, eX, A, S, N, L, b, U, eW, P, e5, e2]),
@@ -591,9 +591,9 @@ function eo(e) {
                 application_id: I,
                 integration_type: eW,
                 scopes: eX,
-                permissions: eZ.toString(),
+                permissions: ez.toString(),
             }));
-    }, [I, eW, eZ, eX, em]),
+    }, [I, eW, ez, eX, em]),
         a.useEffect(() => {
             null == em &&
                 (!eK || null != e$) &&
@@ -613,10 +613,10 @@ function eo(e) {
                 ? eb(Error("No scopes were provided."))
                 : e.length > 0
                   ? eb(Error(`Invalid scope: ${e[0]}`))
-                  : (0, Y.F7)(eZ)
+                  : (0, Y.F7)(ez)
                     ? eb(Error("Invalid permission(s) provided."))
-                    : e8();
-        }, [e2, e8, eX, eZ, eW, ep, eg]);
+                    : e6();
+        }, [e2, e6, eX, ez, eW, ep, eg]);
     let e9 = a.useCallback((e) => {
             e && eG(!0);
         }, []),
@@ -674,10 +674,10 @@ function eo(e) {
                     (eW === d.b.GUILD_INSTALL && (eX.includes(c.F.BOT) || eX.includes(c.F.APPLICATIONS_COMMANDS)));
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)($.A, { application: ep.application, accountScopes: ez }),
+                    (0, i.jsx)($.A, { application: ep.application, accountScopes: eZ }),
                     (0, i.jsx)(Q.A, {
                         application: ep.application,
-                        accountScopes: ez,
+                        accountScopes: eZ,
                         requestedScopes: eX,
                         integrationType: eW,
                         errors: ts,
@@ -703,7 +703,7 @@ function eo(e) {
                         : null,
                 ],
             })),
-                eX.includes(c.F.BOT) && !u.aI(eZ, F.x3) && (r = "AUTHORIZE_BOT_PERMISSIONS"),
+                eX.includes(c.F.BOT) && !u.aI(ez, F.x3) && (r = "AUTHORIZE_BOT_PERMISSIONS"),
                 e7.length > 1 && (n = "SELECT_INSTALL_TYPE"),
                 (tn = (tE && null == eY) || (to && null == ew)),
                 (tt = !0);
@@ -712,7 +712,7 @@ function eo(e) {
             if (null == ep) return { label: ei.intl.string(ei.t.ZTNur7), body: (0, i.jsx)(el, {}) };
             (t = (0, i.jsx)(q.A, {
                 application: ep.application,
-                permissions: eZ,
+                permissions: ez,
                 deniedPermissions: eV,
                 onPermissionsChange: (e, t) => {
                     eH((n) => (e ? u.TF(n, t) : u.WQ(n, t)));
@@ -743,11 +743,11 @@ function eo(e) {
         ta &&
             null != ep &&
             null != ek &&
-            (E = (0, i.jsx)(z.A, {
+            (E = (0, i.jsx)(Z.A, {
                 user: ek,
                 application: ep.application,
                 bot: ep.bot,
-                accountScopes: ez,
+                accountScopes: eZ,
                 showLogout: ed || !1,
                 location: eC,
                 scopes: eX,
@@ -796,7 +796,7 @@ function eE(e, t) {
                 let t = r?.get("error_description") ?? r?.get("error") ?? ei.intl.string(ei.t.mqn873);
                 return (
                     Array.isArray(t) && (t = t[0]),
-                    (0, i.jsx)(Z.f, { ...e, children: (0, i.jsx)(J.gz, { message: t, onClose: e.onClose }) })
+                    (0, i.jsx)(z.f, { ...e, children: (0, i.jsx)(J.gz, { message: t, onClose: e.onClose }) })
                 );
             })
           : window.open(t.location, "_blank")?.focus();
