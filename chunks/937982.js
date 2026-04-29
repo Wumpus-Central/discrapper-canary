@@ -346,6 +346,11 @@ var a = {
         inlineRequire: () => n(435736).Ay,
         neverLoadBeforeConnectionOpen: !0,
     },
+    OverlayFPSLimitExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(186427).A,
+        hasStoreChangeListeners: !0,
+    },
     BugReporterManager: {
         actions: [
             "POST_CONNECTION_OPEN",
