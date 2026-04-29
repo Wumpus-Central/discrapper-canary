@@ -1,61 +1,67 @@
 "use strict";
 let i;
-n.d(t, { A: () => A });
+n.d(t, { A: () => I });
 var r = n(17928),
     s = n(228366),
     a = n(773669),
     o = n(112589),
     l = n(403362);
-let d = {},
-    _ = {},
+let _ = {},
+    d = {},
     u = {},
     c = {},
-    E = new Set();
+    E = new Map();
 function h(e) {
     let t = e.id,
         n = e.sku.id,
-        i = d[t],
+        i = _[t],
         r = o.A.createFromServer(e);
     (null != i && !i.isSlimDirectoryVersion() && r.isSlimDirectoryVersion()) ||
         (!1 === e.published ? (null == u[n] && (u[n] = new Set()), u[n].add(t)) : (c[n] = t),
-        (d[t] = r),
+        (_[t] = r),
         E.delete(e.sku.id));
 }
 function m(e, t) {
     return `${e}:${t}`;
 }
 function f() {
-    (d = {}), (c = {}), (u = {}), (_ = {}), (E = new Set());
+    (_ = {}), (c = {}), (u = {}), (d = {}), (E = new Map());
 }
 function g() {
     if (i === a.default.locale) return !1;
     f(), (i = a.default.locale);
 }
-class p extends r.Ay.Store {
+class A extends r.Ay.Store {
     static displayName = "StoreListingStore";
     initialize() {
         this.waitFor(a.default), this.syncWith([a.default], g), (i = a.default.locale);
     }
     get(e) {
-        return d[e];
+        return _[e];
     }
     getForSKU(e, t) {
         let n = c[e];
-        return null != t ? _[m(t, e)] : null != n ? d[n] : null;
+        return null != t ? d[m(t, e)] : null != n ? _[n] : null;
     }
     getUnpublishedForSKU(e) {
         let t = u[e];
         return null == t
             ? []
             : Array.from(t)
-                  .map((e) => d[e])
+                  .map((e) => _[e])
                   .filter(l.Vq);
     }
     getForChannel(e, t) {
-        return _[m(e, t)];
+        return d[m(e, t)];
     }
     isFetchingForSKU(e) {
-        return E.has(e);
+        return !0 === E.get(e);
+    }
+    didFetchingForSKUFail(e) {
+        return !1 === E.get(e);
+    }
+    getFetchingOrFailedSkuIds() {
+        return Array.from(E.keys());
     }
     getStoreListing(e) {
         let { storeListingId: t, skuId: n, channelId: i, isTestMode: r } = e;
@@ -71,14 +77,16 @@ class p extends r.Ay.Store {
         return null != n ? this.getForSKU(n) : null;
     }
 }
-let A = new p(s.h, {
+let I = new A(s.h, {
     STORE_LISTINGS_FETCH_START: function (e) {
-        let { skuId: t } = e;
-        E.add(t);
+        let { skuId: t } = e,
+            n = E.get(t);
+        return E.set(t, !0), !0 !== n;
     },
     STORE_LISTINGS_FETCH_FAIL: function (e) {
-        let { skuId: t } = e;
-        E.delete(t);
+        let { skuId: t } = e,
+            n = E.get(t);
+        return E.set(t, !1), !1 !== n;
     },
     STORE_LISTINGS_FETCH_SUCCESS: function (e) {
         let { storeListings: t } = e;
@@ -88,7 +96,7 @@ let A = new p(s.h, {
         let { storeListing: t, channelId: n } = e;
         if (null != n) {
             let e = o.A.createFromServer(t);
-            (_[m(n, e.skuId)] = e), (c[e.skuId] = e.id);
+            (d[m(n, e.skuId)] = e), (c[e.skuId] = e.id);
         } else h(t);
     },
     USER_SETTINGS_PROTO_UPDATE: g,
