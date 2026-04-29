@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => nh });
+n.d(t, { A: () => nF });
 var i,
     r,
     s,
@@ -15,8 +15,8 @@ var i,
     m = n(796774),
     f = n(617617),
     g = n(495544),
-    I = n(470710),
-    A = n(734057),
+    A = n(470710),
+    I = n(734057),
     p = n(969341),
     T = n(763827),
     S = n(873985),
@@ -415,49 +415,810 @@ function eu(e) {
     return new ed(e);
 }
 el.push(ed);
-let ec = (function () {
-    if (C.isPlatformEmbedded) {
-        let e;
-        try {
-            e = ei.Ay.requireModule("discord_erlpack");
-        } catch (t) {
-            try {
-                e = ei.Ay.requireModule("erlpack");
-            } catch (e) {}
+let ec = BigInt(0),
+    eE = BigInt(8),
+    eh = BigInt(16),
+    em = BigInt(32),
+    ef = BigInt(64),
+    eg = BigInt(128),
+    eA = BigInt(256),
+    eI = BigInt(65536),
+    ep = BigInt(0x1000000),
+    eT = BigInt(0x80000000),
+    eS = BigInt(0x100000000),
+    eN = BigInt(0x10000000000),
+    eO = BigInt(0x1000000000000),
+    eR = BigInt("72057594037927936"),
+    eC = BigInt("18446744073709551615"),
+    ey = BigInt("18446744073709551616"),
+    eD = BigInt("340282366920938463463374607431768211455"),
+    eL = BigInt("340282366920938463463374607431768211456"),
+    ev = BigInt("115792089237316195423570985008687907853269984665640564039457584007913129639935"),
+    ew = BigInt("115792089237316195423570985008687907853269984665640564039457584007913129639936");
+function eP(e, t) {
+    let n = e.indexOf(t?.toLowerCase() ?? "");
+    return -1 === n ? void 0 : n + 1;
+}
+var eb = n(945810);
+let ek = (0, eb.mj)({
+    name: "2026-04-wetf-parser",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+function eU(e) {
+    return ek.getConfig({ location: e }).enabled;
+}
+let eM = new (class {
+        _stringEncoding;
+        _keyEncoding;
+        _safeIntEncoding;
+        _safeBigIntEncoding;
+        _nullEncoding;
+        _bufferEncoding;
+        _undefinedEncoding;
+        _infinityEncoding;
+        _nanEncoding;
+        _arrayEncoding;
+        _useLegacyAtoms;
+        _poolSize;
+        _u;
+        _v;
+        _i;
+        _o;
+        _r;
+        _T;
+        _encoder;
+        constructor(e = {}) {
+            if (
+                ((this._stringEncoding = eP(["string", "binary"], e.encoding?.string) ?? 1),
+                (this._keyEncoding = eP(["atom", "binary", "string"], e.encoding?.key) ?? 1),
+                (this._safeIntEncoding = eP(["bigint", "float"], e.encoding?.safeInt) ?? 1),
+                (this._safeBigIntEncoding = eP(["number", "bigint"], e.encoding?.safeBigInt) ?? 1),
+                (this._nullEncoding = eP(["atom", "nil"], e.encoding?.null) ?? 1),
+                (this._bufferEncoding = eP(["binary", "bitbinary", "string"], e.encoding?.buffer) ?? 1),
+                (this._undefinedEncoding = eP(["atom", "null", "ignore"], e.encoding?.undefined) ?? 1),
+                (this._infinityEncoding = eP(["atom", "null", "ignore"], e.encoding?.infinity) ?? 1),
+                (this._nanEncoding = eP(["atom", "null", "ignore"], e.encoding?.nan) ?? 1),
+                (this._arrayEncoding = eP(["list", "improperlist", "tuple"], e.encoding?.array) ?? 3),
+                (this._useLegacyAtoms = !!e.useLegacyAtoms),
+                (this._poolSize = null != e.poolSize && e.poolSize > 0 ? e.poolSize : 1048576),
+                (this._u = new Uint8Array(this._poolSize)),
+                (this._v = new DataView(this._u.buffer)),
+                (this._i = 0),
+                (this._o = 0),
+                (this._r = 0),
+                (this._encoder = new TextEncoder()),
+                (this._T = 32),
+                "object" == typeof navigator)
+            ) {
+                const e = navigator.userAgent;
+                e.includes("Firefox") ? (this._T = 128) : e.includes("Chrome") && (this._T = 540);
+            }
         }
-        if (null != e)
-            return class {
-                static canUse() {
-                    return null != e;
+        pack(e) {
+            return (
+                (this._o = this._i),
+                (this._r = 0),
+                this._expand(10),
+                (this._u[this._i++] = 131),
+                this._loop(e),
+                this._u.subarray(this._o, this._i)
+            );
+        }
+        _loop(e) {
+            let t = typeof e;
+            switch (t) {
+                case "undefined":
+                    if (3 === this._undefinedEncoding) break;
+                    this._expand(11),
+                        (this._u[this._i] = this._useLegacyAtoms ? 115 : 119),
+                        (this._u[this._i + 1] = 9),
+                        (this._u[this._i + 2] = 117),
+                        this._v.setUint32(this._i + 3, 0x6e646566),
+                        this._v.setUint32(this._i + 7, 0x696e6564),
+                        (this._i += 11);
+                    break;
+                case "boolean":
+                    this._expand(7),
+                        (this._u[this._i] = this._useLegacyAtoms ? 115 : 119),
+                        !0 === e
+                            ? ((this._u[this._i + 1] = 4), this._v.setUint32(this._i + 2, 0x74727565), (this._i += 6))
+                            : ((this._u[this._i + 1] = 5),
+                              (this._u[this._i + 2] = 102),
+                              this._v.setUint32(this._i + 3, 0x616c7365),
+                              (this._i += 7));
+                    break;
+                case "string":
+                case "symbol": {
+                    let n = "symbol" === t ? e.toString() : e;
+                    if (2 === this._stringEncoding) {
+                        this._expand(2 * n.length + 5), (this._u[this._i++] = 109);
+                        let e = this._i;
+                        this._i += 4;
+                        let t = this._utf(n);
+                        this._v.setUint32(e, t);
+                    } else {
+                        this._expand(2 * n.length + 3), (this._u[this._i++] = 107);
+                        let e = this._i;
+                        this._i += 2;
+                        let t = this._utf(n);
+                        (this._u[e] = t >> 8), (this._u[e + 1] = 255 & t);
+                    }
+                    break;
                 }
-                pack(t) {
-                    return e.pack(t).buffer;
+                case "number":
+                    if (Number.isFinite(e))
+                        if ((this._expand(11), Number.isInteger(e))) {
+                            let t = Math.abs(e),
+                                n = e < 0;
+                            if (e < 256 && !n) (this._u[this._i++] = 97), (this._u[this._i++] = e);
+                            else if (t < 0x80000000)
+                                (this._u[this._i] = 98), this._v.setInt32(this._i + 1, e), (this._i += 5);
+                            else if (t <= Number.MAX_SAFE_INTEGER && 1 === this._safeIntEncoding)
+                                if (((this._u[this._i] = 110), (this._u[this._i + 2] = +!!n), t < 0x100000000))
+                                    this._v.setUint32(this._i + 3, t, !0), (this._u[this._i + 1] = 4), (this._i += 7);
+                                else {
+                                    let e = Math.floor(t / 0x100000000);
+                                    this._v.setUint32(this._i + 3, t >>> 0, !0),
+                                        e < 256
+                                            ? ((this._u[this._i + 1] = 5), (this._u[this._i + 7] = e), (this._i += 8))
+                                            : e < 65536
+                                              ? ((this._u[this._i + 1] = 6),
+                                                (this._u[this._i + 7] = 255 & e),
+                                                (this._u[this._i + 8] = e >> 8),
+                                                (this._i += 9))
+                                              : ((this._u[this._i + 1] = 7),
+                                                (this._u[this._i + 7] = 255 & e),
+                                                (this._u[this._i + 8] = (e >> 8) & 255),
+                                                (this._u[this._i + 9] = e >> 16),
+                                                (this._i += 10));
+                                }
+                            else (this._u[this._i++] = 70), this._v.setFloat64(this._i, e), (this._i += 8);
+                        } else (this._u[this._i++] = 70), this._v.setFloat64(this._i, e), (this._i += 8);
+                    else if (Number.isNaN(e)) {
+                        if (3 === this._nanEncoding) break;
+                        this._expand(4),
+                            (this._u[this._i] = this._useLegacyAtoms ? 115 : 119),
+                            (this._u[this._i + 1] = 110),
+                            (this._u[this._i + 2] = 97),
+                            (this._u[this._i + 3] = 110),
+                            (this._i += 4);
+                    } else {
+                        if (3 === this._infinityEncoding) break;
+                        this._expand(18),
+                            (this._u[this._i] = this._useLegacyAtoms ? 115 : 119),
+                            e < 0
+                                ? this._v.setUint32(this._i + 1, 0x6e656761)
+                                : this._v.setUint32(this._i + 1, 0x706f7369),
+                            (this._u[this._i + 5] = 95),
+                            this._v.setUint32(this._i + 6, 0x6976655f),
+                            this._v.setUint32(this._i + 10, 0x696e6669),
+                            this._v.setUint32(this._i + 14, 0x6e697479),
+                            (this._i += 18);
+                    }
+                    break;
+                case "bigint": {
+                    if (e === ec) {
+                        this._expand(3),
+                            2 === this._safeBigIntEncoding
+                                ? ((this._u[this._i++] = 110), (this._u[this._i++] = 0))
+                                : (this._u[this._i++] = 97),
+                            (this._u[this._i++] = 0);
+                        break;
+                    }
+                    let t = e < ec,
+                        n = t ? -e : e;
+                    if (n < ey)
+                        if ((this._expand(11), 1 === this._safeBigIntEncoding && n < eT))
+                            n < eA && !t
+                                ? ((this._u[this._i++] = 97), this._v.setBigUint64(this._i++, n, !0))
+                                : ((this._u[this._i++] = 98),
+                                  this._v.setBigUint64(this._i, n),
+                                  (this._u[this._i] = this._u[this._i + 4]),
+                                  (this._u[this._i + 1] = this._u[this._i + 5]),
+                                  (this._u[this._i + 2] = this._u[this._i + 6]),
+                                  (this._u[this._i + 3] = this._u[this._i + 7]),
+                                  t && (this._u[this._i] = 128 | this._u[this._i]),
+                                  (this._i += 4));
+                        else {
+                            (this._u[this._i] = 110),
+                                (this._u[this._i + 2] = +!!t),
+                                this._v.setBigUint64(this._i + 3, n, !0);
+                            for (let e = 10; e > 3; e--)
+                                if (0 !== this._u[this._i + e]) {
+                                    (this._u[this._i + 1] = e - 2), (this._i += e + 1);
+                                    break;
+                                }
+                        }
+                    else if (n < eL) {
+                        this._expand(19),
+                            (this._u[this._i] = 110),
+                            (this._u[this._i + 2] = +!!t),
+                            this._v.setBigUint64(this._i + 3, n & eC, !0),
+                            this._v.setBigUint64(this._i + 11, n >> ef, !0);
+                        for (let e = 18; e > 10; e--)
+                            if (0 !== this._u[this._i + e]) {
+                                (this._u[this._i + 1] = e - 2), (this._i += e + 1);
+                                break;
+                            }
+                    } else if (n < ew) {
+                        this._expand(35), (this._u[this._i] = 110), (this._u[this._i + 2] = +!!t);
+                        let e = n >> eg,
+                            i = n & eD;
+                        this._v.setBigUint64(this._i + 3, i & eC, !0),
+                            this._v.setBigUint64(this._i + 11, i >> ef, !0),
+                            this._v.setBigUint64(this._i + 19, e & eC, !0),
+                            this._v.setBigUint64(this._i + 27, e >> ef, !0);
+                        for (let e = 34; e > 18; e--)
+                            if (0 !== this._u[this._i + e]) {
+                                (this._u[this._i + 1] = e - 2), (this._i += e + 1);
+                                break;
+                            }
+                    } else {
+                        let e = n,
+                            i = [];
+                        for (; e > ev; ) {
+                            let t = e & ev,
+                                n = t >> eg,
+                                r = t & eD;
+                            i.push(r & eC, r >> ef, n & eC, n >> ef), (e >>= eA);
+                        }
+                        if (e > eD) {
+                            let t = e >> eg,
+                                n = e & eD;
+                            i.push(n & eC, n >> ef, t & eC, t >> ef);
+                        } else e > eC ? i.push(e & eC, e >> ef) : e > ec && i.push(e);
+                        let r = i[i.length - 1],
+                            s =
+                                8 * i.length -
+                                (r < eS
+                                    ? r < eI
+                                        ? r < eA
+                                            ? 7
+                                            : 6
+                                        : r < ep
+                                          ? 5
+                                          : 4
+                                    : r < eO
+                                      ? r < eN
+                                          ? 3
+                                          : 2
+                                      : +(r < eR));
+                        this._expand(s + 6),
+                            s < 256
+                                ? ((this._u[this._i] = 110),
+                                  (this._u[this._i + 1] = s),
+                                  (this._u[this._i + 2] = +!!t),
+                                  (this._i += 3))
+                                : ((this._u[this._i] = 111),
+                                  this._v.setUint32(this._i + 1, s),
+                                  (this._u[this._i + 5] = +!!t),
+                                  (this._i += 6));
+                        for (let e = 0; e < i.length; e++) this._v.setBigUint64(this._i + 8 * e, i[e], !0);
+                        this._i += s;
+                    }
+                    break;
                 }
-                unpack(t) {
-                    t instanceof ArrayBuffer && (t = new Uint8Array(t));
-                    try {
-                        return e.unpack(t);
-                    } catch (e) {
-                        throw (
-                            (new E.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
-                                erlpackUnpackError: e,
-                                erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
-                                erlpackDataLength: null != t ? t.length : null,
-                            }),
-                            e)
-                        );
+                case "object":
+                    if (null === e)
+                        this._expand(5),
+                            2 === this._nullEncoding
+                                ? (this._u[this._i++] = 106)
+                                : ((this._u[this._i] = this._useLegacyAtoms ? 115 : 119),
+                                  this._v.setUint32(this._i + 1, 0x36e696c),
+                                  (this._i += 5));
+                    else if (Array.isArray(e))
+                        if ((this._expand(5), 0 === e.length))
+                            3 === this._arrayEncoding
+                                ? ((this._u[this._i++] = 104), (this._u[this._i++] = 0))
+                                : (this._u[this._i++] = 106);
+                        else {
+                            let t = e.length,
+                                n = this._i + 1,
+                                i = 1,
+                                r = this._r;
+                            3 === this._arrayEncoding
+                                ? e.length < 256
+                                    ? ((this._u[this._i] = 104), (this._i += 2))
+                                    : ((this._u[this._i] = 105), (this._i += 5), (i = 2))
+                                : ((this._u[this._i] = 108),
+                                  (this._i += 5),
+                                  2 === this._arrayEncoding ? (t--, (i = 3)) : (i = 4));
+                            for (let n = 0; n < e.length; n++) {
+                                let i = e[n],
+                                    r = this._notIgnoreOrNull(i);
+                                if (!0 !== r)
+                                    if (null === r) i = null;
+                                    else {
+                                        t--;
+                                        continue;
+                                    }
+                                this._loop(i);
+                            }
+                            switch ((r !== this._r && (n -= this._r), i)) {
+                                case 1:
+                                    this._u[n] = t;
+                                    break;
+                                case 2:
+                                case 3:
+                                    this._v.setUint32(n, t);
+                                    break;
+                                case 4:
+                                    this._v.setUint32(n, t), (this._u[this._i++] = 106);
+                            }
+                        }
+                    else if (ArrayBuffer.isView(e)) {
+                        let t = 1 !== e.BYTES_PER_ELEMENT ? new Uint8Array(e.buffer, e.byteOffset, e.byteLength) : e,
+                            n = t.length,
+                            i = !1;
+                        if (
+                            (3 === this._bufferEncoding
+                                ? (this._expand(n + 3),
+                                  (this._u[this._i] = 107),
+                                  (this._u[this._i + 1] = n >> 8),
+                                  (this._u[this._i + 2] = 255 & n),
+                                  (this._i += 3))
+                                : 2 === this._bufferEncoding
+                                  ? (this._expand(n + 6),
+                                    (this._u[this._i] = 77),
+                                    this._v.setUint32(this._i + 1, n),
+                                    (this._u[this._i + 5] = 0),
+                                    (this._i += 6),
+                                    (i = !0))
+                                  : (this._expand(n + 5),
+                                    (this._u[this._i] = 109),
+                                    this._v.setUint32(this._i + 1, n),
+                                    (this._i += 5)),
+                            n > 0 && (this._u.set(t, this._i), i))
+                        ) {
+                            let e = this._u[this._i + n - 1],
+                                t = Math.floor(Math.log2(e) + 1);
+                            (this._u[this._i + n - 1] = e << (8 - t)), (this._u[this._i - 1] = t);
+                        }
+                        this._i += n;
+                    } else {
+                        this._expand(6), (this._u[this._i++] = 116);
+                        let t = Object.keys(e),
+                            n = t.length,
+                            i = this._i,
+                            r = this._r;
+                        this._i += 4;
+                        for (let i = 0; i < t.length; i++) {
+                            let r = t[i],
+                                s = e[r],
+                                a = this._notIgnoreOrNull(s);
+                            if (!0 !== a)
+                                if (null === a) s = null;
+                                else {
+                                    n--;
+                                    continue;
+                                }
+                            let o = r.length;
+                            if (1 === this._keyEncoding && this._useLegacyAtoms) {
+                                o < 256
+                                    ? (this._expand(o + 2), (this._u[this._i++] = 115), (this._u[this._i++] = o))
+                                    : (this._expand(o + 3),
+                                      (this._u[this._i++] = 100),
+                                      (this._u[this._i++] = o >> 8),
+                                      (this._u[this._i++] = 255 & o));
+                                for (let e = 0; e < o; e++) this._u[this._i++] = r.charCodeAt(e);
+                            } else {
+                                let e = 2 * o,
+                                    t = 0;
+                                this._expand(e + 5),
+                                    2 === this._keyEncoding
+                                        ? ((this._u[this._i] = 109), (t = 4))
+                                        : 3 === this._keyEncoding
+                                          ? ((this._u[this._i] = 107), (t = 2))
+                                          : e < 256
+                                            ? ((this._u[this._i] = 119), (t = 1))
+                                            : ((this._u[this._i] = 118), (t = 2));
+                                let n = this._i + 1;
+                                this._i += t + 1;
+                                let i = this._utf(r);
+                                1 === t
+                                    ? (this._u[n] = i)
+                                    : 2 === t
+                                      ? ((this._u[n] = i >> 8), (this._u[n + 1] = 255 & i))
+                                      : this._v.setUint32(n, i);
+                            }
+                            this._loop(s);
+                        }
+                        let s = r !== this._r ? i - this._r : i;
+                        this._v.setUint32(s, n);
+                    }
+            }
+        }
+        _notIgnoreOrNull(e) {
+            let t = typeof e;
+            if ("undefined" === t) {
+                if (2 === this._undefinedEncoding) return null;
+                if (3 === this._undefinedEncoding) return !1;
+            }
+            if ("number" === t && !Number.isFinite(e)) {
+                if (Number.isNaN(e)) {
+                    if (2 === this._nanEncoding) return null;
+                    if (3 === this._nanEncoding) return !1;
+                } else if (2 === this._infinityEncoding) return null;
+                else if (3 === this._infinityEncoding) return !1;
+            }
+            return !0;
+        }
+        _expand(e) {
+            if (this._i + e >= this._poolSize) {
+                let e;
+                0 === this._o
+                    ? ((this._poolSize *= 2), (e = this._u), (this._u = new Uint8Array(this._poolSize)))
+                    : ((e = this._u.subarray(this._o, this._i)),
+                      (this._u = new Uint8Array(this._poolSize)),
+                      (this._i = e.length),
+                      (this._r = this._o),
+                      (this._o = 0)),
+                    (this._v = new DataView(this._u.buffer)),
+                    this._u.set(e);
+            }
+        }
+        _utf(e) {
+            let t = e.length;
+            if (t < this._T) {
+                let n = this._i;
+                for (let n = 0; n < t; n++) {
+                    let t = e.charCodeAt(n);
+                    if (t < 128) this._u[this._i++] = t;
+                    else if (t < 2048) (this._u[this._i++] = 192 + (t >> 6)), (this._u[this._i++] = 128 + (63 & t));
+                    else if (t < 55296 || t > 57343)
+                        (this._u[this._i++] = 224 + (t >> 12)),
+                            (this._u[this._i++] = 128 + ((t >> 6) & 63)),
+                            (this._u[this._i++] = 128 + (63 & t));
+                    else {
+                        let i = 65536 + ((1023 & t) << 10) + (1023 & e.charCodeAt(++n));
+                        (this._u[this._i++] = 240 + (i >> 18)),
+                            (this._u[this._i++] = 128 + ((i >> 12) & 63)),
+                            (this._u[this._i++] = 128 + ((i >> 6) & 63)),
+                            (this._u[this._i++] = 128 + (63 & i));
                     }
                 }
-                getName() {
-                    return "etf";
+                return this._i - n;
+            }
+            let n = this._encoder.encodeInto(e, this._u.subarray(this._i)).written ?? 0;
+            return (this._i += n), n;
+        }
+    })({
+        encoding: { string: "binary", key: "binary", array: "list", null: "atom", undefined: "null" },
+        useLegacyAtoms: !0,
+    }),
+    eG = new (class {
+        _nilDecoding;
+        _stringDecoding;
+        _binaryDecoding;
+        _bitbinaryDecoding;
+        _atomRegistration;
+        _d;
+        _v;
+        _sd;
+        _sv;
+        _i;
+        _u;
+        _l;
+        _T;
+        _atoms;
+        _atomTableLatin;
+        _atomTableUtf;
+        constructor(e = {}) {
+            let t;
+            (this._nilDecoding = eP(["null", "array"], e.decoding?.nil) ?? 1),
+                (this._stringDecoding =
+                    eP(["utf8", "latin1", "buffer", "uint8array", "array"], e.decoding?.string) ?? 1),
+                (this._binaryDecoding =
+                    eP(["utf8", "latin1", "buffer", "uint8array", "array"], e.decoding?.binary) ?? 4),
+                (this._bitbinaryDecoding =
+                    eP(["utf8", "latin1", "buffer", "uint8array", "array"], e.decoding?.bitbinary) ?? 4),
+                (this._atomRegistration = !!(e.atomRegistration ?? !0)),
+                (this._d = new Uint8Array(0)),
+                (this._v = new DataView(this._d.buffer, this._d.byteOffset, this._d.length)),
+                (this._sd = new Uint8Array(12e3)),
+                (this._sv = new DataView(this._sd.buffer, this._sd.byteOffset, this._sd.length)),
+                (this._i = 0);
+            const n = new TextDecoder("utf8");
+            if (
+                ((this._u = n.decode.bind(n)),
+                (this._l = (e) => (null == t && (t = new TextDecoder("latin1")), t.decode(e))),
+                (this._T = 32),
+                "object" == typeof navigator)
+            ) {
+                const e = navigator.userAgent;
+                e.includes("Firefox") ? (this._T = 4) : e.includes("Chrome") && (this._T = 200);
+            }
+            (this._atoms = e.atomTable ?? {
+                true: !0,
+                false: !1,
+                undefined: void 0,
+                null: null,
+                nil: null,
+                nan: NaN,
+                infinity: 1 / 0,
+                positive_infinity: 1 / 0,
+                negative_infinity: -1 / 0,
+            }),
+                (this._atomTableLatin = []),
+                (this._atomTableUtf = []);
+            const i = new TextEncoder();
+            for (const [e, t] of Object.entries(this._atoms)) {
+                const n = i.encode(e);
+                let r = (this._atomTableLatin[e.length] ??= []),
+                    s = (this._atomTableUtf[n.length] ??= []);
+                for (let n = 0; n < e.length; n++) {
+                    const i = e.charCodeAt(n);
+                    r = r[i] ??= n === e.length - 1 ? t : [];
                 }
-                wantsString() {
-                    return !1;
+                for (let e = 0; e < n.length; e++) {
+                    const i = n[e];
+                    s = s[i] ??= e === n.length - 1 ? t : [];
                 }
-            };
-    }
-})();
-class eE {
+            }
+        }
+        unpack(e) {
+            let t = +(131 === e[0]);
+            return (
+                (this._i = t),
+                e.length <= this._sd.length
+                    ? (this._sd.set(e), (this._d = this._sd), (this._v = this._sv))
+                    : ((this._d = e), (this._v = new DataView(e.buffer, e.byteOffset, e.length))),
+                this._loop()
+            );
+        }
+        _loop() {
+            let e = this._d[this._i++];
+            switch (e) {
+                case 70: {
+                    let e = this._v.getFloat64(this._i);
+                    return (this._i += 8), e;
+                }
+                case 97:
+                    return this._d[this._i++];
+                case 98: {
+                    let e = this._v.getInt32(this._i);
+                    return (this._i += 4), e;
+                }
+                case 100:
+                case 115:
+                case 118:
+                case 119: {
+                    let t =
+                        100 === e || 118 === e ? (this._d[this._i++] << 8) + this._d[this._i++] : this._d[this._i++];
+                    return this._resolveAtom(t, e >= 118);
+                }
+                case 104:
+                case 105:
+                case 108: {
+                    let t;
+                    104 === e ? (t = this._d[this._i++]) : ((t = this._v.getUint32(this._i)), (this._i += 4));
+                    let n = Array(t);
+                    for (let e = 0; e < t; e++) n[e] = this._loop();
+                    return 108 === e && (106 === this._d[this._i] ? this._i++ : n.push(this._loop())), n;
+                }
+                case 106:
+                    return 2 === this._nilDecoding ? [] : null;
+                case 107:
+                case 109:
+                case 77: {
+                    let t, n;
+                    if (107 === e) (t = (this._d[this._i++] << 8) + this._d[this._i++]), (n = this._stringDecoding);
+                    else if (109 === e) (t = this._v.getUint32(this._i)), (n = this._binaryDecoding), (this._i += 4);
+                    else {
+                        (t = this._v.getUint32(this._i)), (n = this._bitbinaryDecoding);
+                        let e = this._d[this._i + 4],
+                            i = this._d[this._i + t - 1];
+                        (this._d[this._i + t - 1] = i >> (8 - e)), (this._i += 5);
+                    }
+                    if (5 === n) {
+                        let e = Array(t);
+                        for (let n = 0; n < t; n++) e[n] = this._d[this._i + n];
+                        return (this._i += t), e;
+                    }
+                    if (n >= 4) {
+                        let e = this._d.subarray(this._i, this._i + t);
+                        this._i += t;
+                        let n = new Uint8Array(t);
+                        return n.set(e), n;
+                    }
+                    return 2 === n ? this._latin(t) : this._utf(t);
+                }
+                case 110:
+                case 111: {
+                    let t, n;
+                    if (
+                        (110 === e ? (t = this._d[this._i++]) : ((t = this._v.getUint32(this._i)), (this._i += 4)),
+                        0 === t)
+                    )
+                        return (this._i += 1), 0;
+                    if (1 === t && 0 === this._d[this._i + 1]) return (this._i += 2), 0;
+                    let i = this._d[this._i++];
+                    if (t <= 4) {
+                        let e = 0;
+                        return (
+                            (e =
+                                1 === t
+                                    ? this._d[this._i]
+                                    : 2 === t
+                                      ? (this._d[this._i + 1] << 8) + this._d[this._i]
+                                      : 3 === t
+                                        ? (this._d[this._i + 2] << 16) + (this._d[this._i + 1] << 8) + this._d[this._i]
+                                        : this._v.getUint32(this._i, !0)),
+                            (this._i += t),
+                            1 === i ? -e : e
+                        );
+                    }
+                    if (t < 7 || (7 === t && this._d[this._i + 6] < 32)) {
+                        let e = 0;
+                        return (
+                            (e =
+                                5 === t
+                                    ? 0x100000000 * this._d[this._i + 4] + this._v.getUint32(this._i, !0)
+                                    : 6 === t
+                                      ? ((this._d[this._i + 5] << 8) + this._d[this._i + 4]) * 0x100000000 +
+                                        this._v.getUint32(this._i, !0)
+                                      : ((this._d[this._i + 6] << 16) +
+                                            (this._d[this._i + 5] << 8) +
+                                            this._d[this._i + 4]) *
+                                            0x100000000 +
+                                        this._v.getUint32(this._i, !0)),
+                            (this._i += t),
+                            1 === i && (e = -e),
+                            e.toString()
+                        );
+                    }
+                    if (8 === t) n = this._v.getBigUint64(this._i, !0);
+                    else {
+                        let e = t;
+                        for (n = ec; e > 0; )
+                            e >= 8
+                                ? ((n <<= ef), (n += this._v.getBigUint64(this._i + (e -= 8), !0)))
+                                : e >= 4
+                                  ? ((n <<= em), (n += BigInt(this._v.getUint32(this._i + (e -= 4), !0))))
+                                  : e >= 2
+                                    ? ((n <<= eh), (n += BigInt(this._v.getUint16(this._i + (e -= 2), !0))))
+                                    : ((n <<= eE), (n += BigInt(this._d[this._i])), e--);
+                    }
+                    return (this._i += t), 1 === i && (n = -n), n.toString();
+                }
+                case 116: {
+                    let e = {},
+                        t = this._v.getUint32(this._i);
+                    this._i += 4;
+                    for (let n = 0; n < t; n++) e[this._loop()] = this._loop();
+                    return e;
+                }
+            }
+            throw Error(`Unexpected ETF tag: ${e}`);
+        }
+        _resolveAtom(e, t) {
+            let n = t ? this._atomTableUtf : this._atomTableLatin;
+            if (e in n) {
+                let t = n[e],
+                    i = this._i;
+                for (let n = 0; n < e; n++) {
+                    let r = this._d[i++];
+                    if (r in t) {
+                        if (n === e - 1) return (this._i += e), t[r];
+                        t = t[r];
+                    } else break;
+                }
+            }
+            return this._atomRegistration ? this._registerAtom(e, t) : t ? this._utf(e) : this._latin(e);
+        }
+        _registerAtom(e, t) {
+            let n = t ? this._atomTableUtf : this._atomTableLatin;
+            e in n || (n[e] = []);
+            let i = n[e],
+                r = "",
+                s = this._i;
+            for (let n = 0; n < e; n++) {
+                let a = this._d[s++];
+                if (a in i) i = i[a];
+                else if (n === e - 1) {
+                    (r = t ? this._utf(e) : this._latin(e)), (i[a] = r);
+                    break;
+                } else i = i[a] = [];
+            }
+            return r;
+        }
+        _utf(e) {
+            let t = "",
+                n = this._i,
+                i = this._d;
+            if (e < this._T) {
+                let r = n + e;
+                for (; n < r; ) {
+                    let e = i[n++];
+                    if (e < 128) t += String.fromCharCode(e);
+                    else if (e < 224) t += String.fromCharCode(((31 & e) << 6) + (63 & i[n++]));
+                    else if (e < 240) t += String.fromCharCode(((15 & e) << 12) + ((63 & i[n++]) << 6) + (63 & i[n++]));
+                    else {
+                        let r = ((7 & e) << 18) + ((63 & i[n++]) << 12) + ((63 & i[n++]) << 6) + (63 & i[n++]);
+                        t += String.fromCharCode(55296 + ((r - 65536) >> 10), 56320 + ((r - 65536) & 1023));
+                    }
+                }
+            } else t = this._u(i.subarray(this._i, this._i + e));
+            return (this._i += e), t;
+        }
+        _latin(e) {
+            let t = "",
+                n = this._i,
+                i = this._d;
+            if (e < this._T) for (let r = n; r < n + e; r++) t += String.fromCharCode(i[r]);
+            else t = this._l(i.subarray(n, n + e));
+            return (this._i += e), t;
+        }
+    })({
+        decoding: { binary: "utf8", string: "array", nil: "array" },
+        atomTable: { nil: null, null: null, true: !0, false: !1 },
+    }),
+    ex = (function () {
+        let e;
+        if (C.isPlatformEmbedded) {
+            try {
+                e = ei.Ay.requireModule("discord_erlpack");
+            } catch (t) {
+                try {
+                    e = ei.Ay.requireModule("erlpack");
+                } catch (e) {}
+            }
+            if (null != e)
+                return class {
+                    _useWetf;
+                    static canUse() {
+                        return null != e;
+                    }
+                    pack(t) {
+                        if ((null == this._useWetf && (this._useWetf = eU("EtfEncoding")), this._useWetf)) {
+                            let e = eM.pack(t);
+                            return e.buffer.slice(e.byteOffset, e.byteOffset + e.byteLength);
+                        }
+                        return e.pack(t).buffer;
+                    }
+                    unpack(t) {
+                        if ((null == this._useWetf && (this._useWetf = eU("EtfEncoding")), this._useWetf)) {
+                            let e = t instanceof Uint8Array ? t : new Uint8Array(t);
+                            try {
+                                return eG.unpack(e);
+                            } catch (n) {
+                                throw (
+                                    (ee.A.captureException(n, { tags: { app_context: "WetfParser" } }),
+                                    new E.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
+                                        erlpackUnpackError: n,
+                                        erlpackDataPreview: null != t ? Array.from(e.slice(0, 32)) : null,
+                                        erlpackDataLength: e.length,
+                                    }),
+                                    n)
+                                );
+                            }
+                        }
+                        t instanceof ArrayBuffer && (t = new Uint8Array(t));
+                        try {
+                            return e.unpack(t);
+                        } catch (e) {
+                            throw (
+                                (new E.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
+                                    erlpackUnpackError: e,
+                                    erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
+                                    erlpackDataLength: null != t ? t.length : null,
+                                }),
+                                e)
+                            );
+                        }
+                    }
+                    getName() {
+                        return "etf";
+                    }
+                    wantsString() {
+                        return !1;
+                    }
+                };
+        }
+    })();
+class eV {
     pack(e) {
         return JSON.stringify(e);
     }
@@ -473,13 +1234,13 @@ class eE {
         return !0;
     }
 }
-let eh = void 0 !== ec ? ec : eE;
-en.P.isDiscordGatewayPlaintextSet() && (eh = eE);
-let em = eh;
+let eF = void 0 !== ex ? ex : eV;
+en.P.isDiscordGatewayPlaintextSet() && (eF = eV);
+let eB = eF;
 n(423034);
-var ef = n(287809),
-    eg = n(652215);
-function eI(e) {
+var eH = n(287809),
+    eY = n(652215);
+function eW(e) {
     try {
         var t;
         let n =
@@ -499,7 +1260,7 @@ ${n}${t[r]}: ${t[r + 1].micros / 1e3}`),
     } catch (e) {}
     return null != e._trace ? e._trace.join(" -> ") : "???";
 }
-function eA(e) {
+function eK(e) {
     return {
         connectTime: e ?? 0,
         numEvents: 0,
@@ -512,11 +1273,11 @@ function eA(e) {
     };
 }
 n(667532);
-class ep {
+class ej {
     socket;
     static batchers = [];
     static flush(e, t) {
-        for (let n of ep.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
+        for (let n of ej.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
     }
     action = null;
     add;
@@ -527,7 +1288,7 @@ class ep {
             (this.add = (e) => {
                 this.action = t(this.action, e);
             }),
-            ep.batchers.push(this);
+            ej.batchers.push(this);
     }
     flush() {
         let { action: e } = this;
@@ -536,58 +1297,58 @@ class ep {
                 u.h.dispatch(e).catch((t) => this.socket.resetSocketAndClearCacheOnError({ error: t, action: e.type }));
     }
 }
-var eT = n(365971),
-    eS =
+var e$ = n(365971),
+    ez =
         (((r = {}).LONGER_DISPATCH = "longer_dispatch"),
         (r.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = "exceeded_max_consecutive_flushes"),
         (r.FIRED_DUE_TO_MAX_TIMEOUT = "fired_due_to_max_timeout"),
         (r.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED = "skip_idle_callback_due_to_backgrounded"),
         r),
-    eN =
+    eq =
         (((s = {}).TIME_TO_FIRE_IDLE_CALLBACK = "time_to_fire_idle_callback"),
         (s.TIME_TO_QUEUE_EMPTY = "time_to_flush_all_work"),
         (s.TIME_OVER_DEADLINE = "time_over_deadline"),
         (s.DEADLINE_INITIAL_TIME_REMAINING = "initial_time_of_deadline"),
         s),
-    eO =
+    eX =
         (((a = {}).COUNT_DISPATCHES_LEFT_AFTER_YIELD = "count_dispatches_left_after_yield"),
         (a.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = "count_flush_before_queue_empty"),
         (a.COUNT_INITIAL_DISPATCHS_LENGTH = "count_initial_dispatches_length"),
         a);
-let eR = Object.freeze({
+let eQ = Object.freeze({
         time_to_fire_idle_callback: null,
         time_to_flush_all_work: null,
         time_over_deadline: null,
         initial_time_of_deadline: null,
     }),
-    eC = Object.freeze({
+    eJ = Object.freeze({
         time_to_fire_idle_callback: [0, 0],
         time_to_flush_all_work: [0, 0],
         time_over_deadline: [0, 0],
         initial_time_of_deadline: [0, 0],
     }),
-    ey = Object.freeze({
+    eZ = Object.freeze({
         count_flush_before_queue_empty: [0, 0],
         count_dispatches_left_after_yield: [0, 0],
         count_initial_dispatches_length: [0, 0],
     }),
-    eD = Object.freeze({
+    e0 = Object.freeze({
         longer_dispatch: 0,
         exceeded_max_consecutive_flushes: 0,
         fired_due_to_max_timeout: 0,
         skip_idle_callback_due_to_backgrounded: 0,
     });
-class eL {
-    _timeTracking = (0, o.cloneDeep)(eR);
-    _timingStats = (0, o.cloneDeep)(eC);
-    _measurements = (0, o.cloneDeep)(ey);
-    _eventCounts = (0, o.cloneDeep)(eD);
+class e1 {
+    _timeTracking = (0, o.cloneDeep)(eQ);
+    _timingStats = (0, o.cloneDeep)(eJ);
+    _measurements = (0, o.cloneDeep)(eZ);
+    _eventCounts = (0, o.cloneDeep)(e0);
     _enabled = !1;
     reset() {
-        (this._timeTracking = (0, o.cloneDeep)(eR)),
-            (this._timingStats = (0, o.cloneDeep)(eC)),
-            (this._measurements = (0, o.cloneDeep)(ey)),
-            (this._eventCounts = (0, o.cloneDeep)(eD));
+        (this._timeTracking = (0, o.cloneDeep)(eQ)),
+            (this._timingStats = (0, o.cloneDeep)(eJ)),
+            (this._measurements = (0, o.cloneDeep)(eZ)),
+            (this._eventCounts = (0, o.cloneDeep)(e0));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -642,17 +1403,17 @@ class eL {
         };
     }
 }
-let ev = (1e3 / 60) * 3,
-    ew = (1e3 / 60) * 3,
-    eP = 1e3 / 60 / 8,
-    eb = (1e3 / 60) * 12;
-class ek {
+let e2 = (1e3 / 60) * 3,
+    e3 = (1e3 / 60) * 3,
+    e6 = 1e3 / 60 / 8,
+    e4 = (1e3 / 60) * 12;
+class e7 {
     _browserDeadlineMs;
     _deadlineMs;
     _startMs;
     _firedDueToMaxTimeout;
     constructor(e, t = !1) {
-        (this._deadlineMs = Math.max(eP, e)),
+        (this._deadlineMs = Math.max(e6, e)),
             (this._browserDeadlineMs = e),
             (this._firedDueToMaxTimeout = t),
             (this._startMs = performance.now());
@@ -669,30 +1430,30 @@ class ek {
     }
     generateDeadlineMetrics() {
         return {
-            isDeadlineNotIdeal: this._browserDeadlineMs < eP,
+            isDeadlineNotIdeal: this._browserDeadlineMs < e6,
             deadlineMs: this._deadlineMs.toFixed(2),
             timeSinceStartMs: (performance.now() - this._startMs).toFixed(2),
         };
     }
 }
-let eU = new E.A("DispatcherWorkScheduler");
-class eM {
+let e5 = new E.A("DispatcherWorkScheduler");
+class e8 {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
-    _nextDispatchTimeout = ev;
+    _nextDispatchTimeout = e2;
     _workCallbackFn = null;
     _consecutiveFlushesBeforeQueueEmpty = 0;
     _isBackgrounded = !1;
     _enableRequestIdleCallback = !0;
     _criticalWorkScheduled = !1;
-    telemetry = new eL();
-    _logger = eU;
+    telemetry = new e1();
+    _logger = e5;
     _trackAppBackgrounded(e) {
         this._isBackgrounded === e ||
             ((this._isBackgrounded = e),
             this._isBackgrounded &&
                 this.hasWorkScheduled &&
-                (this.telemetry.track(eS.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
+                (this.telemetry.track(ez.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
     }
     _queueIdleCallback() {
         throw Error("Not implemented");
@@ -706,24 +1467,24 @@ class eM {
     _processWorkCallback(e) {
         if (null == this._workCallbackFn) return;
         if (this._hasExceededMaxConsecutiveFlushes) {
-            eU.log("Unable to fully flush work queue after max retries, skipping future deadline."),
+            e5.log("Unable to fully flush work queue after max retries, skipping future deadline."),
                 this._workCallbackFn(),
                 this.clearWorkTimeout(),
-                this.telemetry.measure(eO.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
-                this.telemetry.track(eS.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
+                this.telemetry.measure(eX.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
+                this.telemetry.track(ez.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
                 (this._consecutiveFlushesBeforeQueueEmpty = 0),
-                (this._nextDispatchTimeout = eb);
+                (this._nextDispatchTimeout = e4);
             return;
         }
         let t = performance.now(),
             n = this._workCallbackFn(e),
             i = performance.now();
         this.clearWorkTimeout(),
-            i - t > ew ? (this._nextDispatchTimeout = eb) : (this._nextDispatchTimeout = ev),
+            i - t > e3 ? (this._nextDispatchTimeout = e4) : (this._nextDispatchTimeout = e2),
             n
                 ? (this._consecutiveFlushesBeforeQueueEmpty > 0 &&
                       this.telemetry.measure(
-                          eO.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
+                          eX.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
                           parseInt(`${this._consecutiveFlushesBeforeQueueEmpty}`),
                       ),
                   (this._consecutiveFlushesBeforeQueueEmpty = 0),
@@ -751,27 +1512,27 @@ class eM {
         null != this._flushTimeoutHandler &&
             (clearTimeout(this._flushTimeoutHandler), (this._flushTimeoutHandler = null)),
             this._clearIdleCallback(),
-            (this._nextDispatchTimeout = ev),
+            (this._nextDispatchTimeout = e2),
             (this._workCallbackFn = null);
     }
     requestWorkTimeout(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (((this._workCallbackFn = e), !this.hasWorkScheduled)) {
             if (
-                (this.telemetry.time(eN.TIME_TO_QUEUE_EMPTY),
-                this._nextDispatchTimeout === eb && this.telemetry.track(eS.LONGER_DISPATCH),
+                (this.telemetry.time(eq.TIME_TO_QUEUE_EMPTY),
+                this._nextDispatchTimeout === e4 && this.telemetry.track(ez.LONGER_DISPATCH),
                 t)
             )
                 return void this._queueIdleCallback();
             this._flushTimeoutHandler = setTimeout(() => {
                 if ((b()(null != this._workCallbackFn, "Work callback should be set"), this._isBackgrounded))
-                    return this.telemetry.track(eS.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
+                    return this.telemetry.track(ez.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
                 this._queueIdleCallback();
             }, this._nextDispatchTimeout);
         }
     }
 }
-let eG =
+let e9 =
         window.requestIdleCallback ??
         ((e) => {
             let t = Date.now();
@@ -779,47 +1540,47 @@ let eG =
                 e({ didTimeout: !1, timeRemaining: () => Math.max(0, 50 - (Date.now() - t)) });
             }, 1);
         }),
-    ex = window.cancelIdleCallback ?? clearTimeout;
-function eV(e) {
-    return null == e ? new ek(eP, !0) : new ek(e.timeRemaining(), e.didTimeout);
+    te = window.cancelIdleCallback ?? clearTimeout;
+function tt(e) {
+    return null == e ? new e7(e6, !0) : new e7(e.timeRemaining(), e.didTimeout);
 }
-class eF extends eM {
+class tn extends e8 {
     _flushIdleMaxTimeoutHandler = null;
     constructor() {
         super(),
             u.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
                 let { visible: t, windowId: n } = e;
-                n === (0, eT.Xg)() && this._trackAppBackgrounded(!t);
+                n === (0, e$.Xg)() && this._trackAppBackgrounded(!t);
             });
     }
     _queueIdleCallback() {
         if (!this._enableRequestIdleCallback || this._criticalWorkScheduled) return this._processWorkCallback();
-        this.telemetry.time(eN.TIME_TO_FIRE_IDLE_CALLBACK),
+        this.telemetry.time(eq.TIME_TO_FIRE_IDLE_CALLBACK),
             this._scheduleRequestIdleCallback(
                 (e) => {
                     if (e?.didTimeout) {
-                        this.telemetry.track(eS.FIRED_DUE_TO_MAX_TIMEOUT),
-                            this.telemetry.clearTime(eN.TIME_TO_FIRE_IDLE_CALLBACK),
+                        this.telemetry.track(ez.FIRED_DUE_TO_MAX_TIMEOUT),
+                            this.telemetry.clearTime(eq.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._processWorkCallback();
                         return;
                     }
-                    if ((this.telemetry.timeEnd(eN.TIME_TO_FIRE_IDLE_CALLBACK), (e?.timeRemaining() ?? eP) < eP))
-                        this.telemetry.time(eN.TIME_TO_FIRE_IDLE_CALLBACK),
+                    if ((this.telemetry.timeEnd(eq.TIME_TO_FIRE_IDLE_CALLBACK), (e?.timeRemaining() ?? e6) < e6))
+                        this.telemetry.time(eq.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._scheduleRequestIdleCallback(
                                 (e) => {
-                                    this.telemetry.timeEnd(eN.TIME_TO_FIRE_IDLE_CALLBACK);
-                                    let t = eV(e),
+                                    this.telemetry.timeEnd(eq.TIME_TO_FIRE_IDLE_CALLBACK);
+                                    let t = tt(e),
                                         n = t?.timeRemaining();
-                                    null != n && this.telemetry.timeTrack(eN.DEADLINE_INITIAL_TIME_REMAINING, n),
+                                    null != n && this.telemetry.timeTrack(eq.DEADLINE_INITIAL_TIME_REMAINING, n),
                                         this._processWorkCallback(t);
                                 },
                                 { timeout: 200 },
                             );
                     else {
-                        this.telemetry.timeEnd(eN.TIME_TO_FIRE_IDLE_CALLBACK);
-                        let t = eV(e),
+                        this.telemetry.timeEnd(eq.TIME_TO_FIRE_IDLE_CALLBACK);
+                        let t = tt(e),
                             n = t?.timeRemaining();
-                        null != n && this.telemetry.timeTrack(eN.DEADLINE_INITIAL_TIME_REMAINING, n),
+                        null != n && this.telemetry.timeTrack(eq.DEADLINE_INITIAL_TIME_REMAINING, n),
                             this._processWorkCallback(t);
                     }
                 },
@@ -827,7 +1588,7 @@ class eF extends eM {
             );
     }
     _scheduleRequestIdleCallback(e, t) {
-        (this._flushIdleHandler = eG((t) => {
+        (this._flushIdleHandler = e9((t) => {
             this._clearIdleCallback(), e(t);
         })),
             t?.timeout != null && this._scheduleMaxIdleCallback(t.timeout);
@@ -839,16 +1600,16 @@ class eF extends eM {
             }, e));
     }
     _clearIdleCallback() {
-        null != this._flushIdleHandler && (ex(this._flushIdleHandler), (this._flushIdleHandler = null)),
+        null != this._flushIdleHandler && (te(this._flushIdleHandler), (this._flushIdleHandler = null)),
             null != this._flushIdleMaxTimeoutHandler &&
                 (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
     }
 }
-let eB = new E.A("GatewaySocket"),
-    eH = new Set(["INITIAL_GUILD", "READY"]),
-    eY = new Set(["READY", "INITIAL_GUILD"]),
-    eW = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
-    eK = new Set([
+let ti = new E.A("GatewaySocket"),
+    tr = new Set(["INITIAL_GUILD", "READY"]),
+    ts = new Set(["READY", "INITIAL_GUILD"]),
+    ta = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
+    to = new Set([
         "READY",
         "INITIAL_GUILD",
         "READY_SUPPLEMENTAL",
@@ -868,13 +1629,13 @@ let eB = new E.A("GatewaySocket"),
         "STREAM_DELETE",
         "STREAM_UPDATE",
     ]),
-    ej = {};
-class e$ {
+    tl = {};
+class t_ {
     socket;
-    scheduler = new eF();
+    scheduler = new tn();
     queue = [];
     paused = !0;
-    resumeAnalytics = eA();
+    resumeAnalytics = eK();
     getDispatchHandler = null;
     constructor(e) {
         this.socket = e;
@@ -898,7 +1659,7 @@ class e$ {
         this.queue.push(i), this.maybePreload(i) || this.scheduleFlush(t);
     }
     maybePreload(e) {
-        if (this.paused && !eH.has(e.type)) return !1;
+        if (this.paused && !tr.has(e.type)) return !1;
         if (0 === e.status) {
             let t = this.getDispatchHandler(e.type)?.preload(e.data);
             if (((e.status = null == t ? 2 : 1), (e.preloadPromise = t), null != t))
@@ -915,10 +1676,10 @@ class e$ {
     }
     scheduleFlush(e) {
         !this.paused &&
-            (eY.has(e)
+            (ts.has(e)
                 ? (this.scheduler.clearWorkTimeout(), this.flush())
                 : this.scheduler.hasWorkScheduled || this.scheduler.requestWorkTimeout(this.flush),
-            eK.has(e) && this.scheduler.markCriticalWorkScheduled());
+            to.has(e) && this.scheduler.markCriticalWorkScheduled());
     }
     flush = (e) => {
         if (this.paused) return !0;
@@ -928,12 +1689,12 @@ class e$ {
         if (0 === n) return !0;
         let i = this.queue.splice(0, n),
             r = this.dispatchMultiple(i, e);
-        r && this.scheduler.telemetry.timeEnd(eN.TIME_TO_QUEUE_EMPTY);
+        r && this.scheduler.telemetry.timeEnd(eq.TIME_TO_QUEUE_EMPTY);
         let s = performance.now() - t;
-        return s > ew && !r && eB.log(`Dispatched ${i.length} messages in ${s}ms`), r;
+        return s > e3 && !r && ti.log(`Dispatched ${i.length} messages in ${s}ms`), r;
     };
     getDispatchTimings() {
-        return ej;
+        return tl;
     }
     getSchedulerTelemetry() {
         return this.scheduler.telemetry;
@@ -951,7 +1712,7 @@ class e$ {
         if (0 === e.length) return !0;
         let n = "none",
             i = !1;
-        this.scheduler.telemetry.measure(eO.COUNT_INITIAL_DISPATCHS_LENGTH, e.length);
+        this.scheduler.telemetry.measure(eX.COUNT_INITIAL_DISPATCHS_LENGTH, e.length);
         try {
             let r = [];
             this.socket.connectionState === y.RESUMING && _.Ay.Emitter.pause(150);
@@ -960,14 +1721,14 @@ class e$ {
                 (_.Ay.Emitter.batched(() => {
                     for (let a = 0; a < e.length; a++) {
                         let o = e[a];
-                        (n = o.type), (i = i || eW.has(o.type));
+                        (n = o.type), (i = i || ta.has(o.type));
                         let l = performance.now();
                         if (
                             (this.dispatchOne(o),
                             (s = performance.now() - l),
                             !(function (e, t) {
-                                let [n, i] = ej[e] ?? [0, 0];
-                                ej[e] = [(n * i + t) / (i + 1), i + 1];
+                                let [n, i] = tl[e] ?? [0, 0];
+                                tl[e] = [(n * i + t) / (i + 1), i + 1];
                             })(o.type, s),
                             (function (e, t, n) {
                                 if (null == n) return !1;
@@ -983,17 +1744,17 @@ class e$ {
                             (r = e.slice(a + 1)),
                                 null != t &&
                                     0 >= t.timeRemaining() &&
-                                    this.scheduler.telemetry.timeTrack(eN.TIME_OVER_DEADLINE, t.timeSinceExpiration);
+                                    this.scheduler.telemetry.timeTrack(eq.TIME_OVER_DEADLINE, t.timeSinceExpiration);
                             break;
                         }
                     }
-                    ep.flush();
+                    ej.flush();
                 }),
                 i && _.Ay.Emitter.resume(),
                 r.length > 0)
             )
                 return (
-                    this.scheduler.telemetry.measure(eO.COUNT_DISPATCHES_LEFT_AFTER_YIELD, r.length),
+                    this.scheduler.telemetry.measure(eX.COUNT_DISPATCHES_LEFT_AFTER_YIELD, r.length),
                     this.queue.unshift(...r),
                     this.scheduler.requestWorkTimeout(this.flush, !0),
                     !1
@@ -1016,7 +1777,7 @@ class e$ {
                 (this.resumeAnalytics.lastUpdateTime = o),
                 (this.resumeAnalytics.numEvents += 1);
         }
-        if ((ep.flush(r, i), "READY" === r)) {
+        if ((ej.flush(r, i), "READY" === r)) {
             let e,
                 n,
                 l = (function (e) {
@@ -1039,8 +1800,8 @@ class e$ {
                         m = [],
                         f = [],
                         g = [],
-                        I = [],
                         A = [],
+                        I = [],
                         p = [],
                         T = [],
                         S = [];
@@ -1052,8 +1813,8 @@ class e$ {
                             m.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels),
                                 f.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles),
                                 g.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
-                                I.push(i),
-                                A.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
+                                A.push(i),
+                                I.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
                                 p.push(t),
                                 T.push(r),
                                 S.push(s, n);
@@ -1073,8 +1834,8 @@ class e$ {
                             guild_presences_size: JSON.stringify(i?.guilds ?? []).length,
                             guild_roles_size: JSON.stringify(f).length,
                             guild_emojis_size: JSON.stringify(g).length,
-                            guild_threads_size: JSON.stringify(I).length,
-                            guild_stickers_size: JSON.stringify(A).length,
+                            guild_threads_size: JSON.stringify(A).length,
+                            guild_stickers_size: JSON.stringify(I).length,
                             guild_events_size: JSON.stringify(T).length,
                             guild_features_size: JSON.stringify(p).length,
                             guild_remaining_data_size: JSON.stringify(S).length,
@@ -1124,7 +1885,7 @@ class e$ {
                                 null != t &&
                                     null != t.forEach &&
                                     t.forEach((e) => {
-                                        i++, e.type === eg.rbe.GUILD_CATEGORY && n++;
+                                        i++, e.type === eY.rbe.GUILD_CATEGORY && n++;
                                     });
                             }),
                             { num_guilds: t.length, num_guild_channels: i, num_guild_category_channels: n }
@@ -1143,14 +1904,14 @@ class e$ {
                     used_cache_at_startup: t.analytics.usedCacheAtStartup ?? !1,
                 }),
                 X.A.attachReadyPayloadProperties(n),
-                v.default.track(eg.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
+                v.default.track(eY.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
         } else
             "RESUMED" === r
                 ? (this.getDispatchHandler(r)?.dispatch(i, r, a),
                   (n = this.resumeAnalytics),
-                  (!ef.default.getCurrentUser()?.isStaff() && 0.5 > Math.random()) ||
+                  (!eH.default.getCurrentUser()?.isStaff() && 0.5 > Math.random()) ||
                       v.default.track(
-                          eg.HAw.CONNECTION_RESUMED,
+                          eY.HAw.CONNECTION_RESUMED,
                           {
                               connect_time_ms: n.connectTime,
                               resume_time_ms: Math.floor(performance.now() - n.startTime),
@@ -1163,7 +1924,7 @@ class e$ {
                           { logEventProperties: !0 },
                       ),
                   this.socket.handleResumeDispatched(),
-                  (this.resumeAnalytics = eA()))
+                  (this.resumeAnalytics = eK()))
                 : this.getDispatchHandler(r)?.dispatch(i, r, a);
         this.socket.connectionState === y.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - o);
     }
@@ -1172,12 +1933,12 @@ class e$ {
     }
 }
 n(938796);
-var ez = n(143236),
-    eq = n(935208),
-    eX = n(353198);
-class eQ extends ez.EventEmitter {
+var td = n(143236),
+    tu = n(935208),
+    tc = n(353198);
+class tE extends td.EventEmitter {
     presenceUpdate(e, t, n, i) {
-        this.send(eX.p.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
+        this.send(tc.p.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
     }
     voiceStateUpdate(e) {
         let {
@@ -1194,65 +1955,65 @@ class eQ extends ez.EventEmitter {
             d = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: s, flags: _ };
         null != n && S.A.shouldIncludePreferredRegion() && ((d.preferred_region = a), (d.preferred_regions = o)),
             null != l && (d.tracks = l?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
-            this.send(eX.p.VOICE_STATE_UPDATE, d);
+            this.send(tc.p.VOICE_STATE_UPDATE, d);
     }
     voiceServerPing() {
-        this.send(eX.p.VOICE_SERVER_PING, null);
+        this.send(tc.p.VOICE_SERVER_PING, null);
     }
     requestGuildMembers(e, t) {
         let { query: n, limit: i, userIds: r, presences: s } = t;
-        this.send(eX.p.REQUEST_GUILD_MEMBERS, { guild_id: e, query: n, limit: i, user_ids: r, presences: s });
+        this.send(tc.p.REQUEST_GUILD_MEMBERS, { guild_id: e, query: n, limit: i, user_ids: r, presences: s });
     }
     searchRecentMembers(e, t) {
         let { query: n, continuationToken: i } = t;
-        this.send(eX.p.SEARCH_RECENT_MEMBERS, { guild_id: e, query: n ?? "", continuation_token: i ?? null });
+        this.send(tc.p.SEARCH_RECENT_MEMBERS, { guild_id: e, query: n ?? "", continuation_token: i ?? null });
     }
     updateGuildSubscriptions(e) {
         let t = {},
             n = 0;
-        eq.default.keys(e).forEach((i) => {
+        tu.default.keys(e).forEach((i) => {
             let r = e[i],
                 s = JSON.stringify([i, r]).length;
-            n + s > 15360 && (this.send(eX.p.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
+            n + s > 15360 && (this.send(tc.p.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
                 (t[i] = r),
                 (n += s);
         }),
-            n > 0 && this.send(eX.p.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t });
+            n > 0 && this.send(tc.p.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t });
     }
     callConnect(e) {
-        this.send(eX.p.CALL_CONNECT, { channel_id: e });
+        this.send(tc.p.CALL_CONNECT, { channel_id: e });
     }
     streamCreate(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this.send(eX.p.STREAM_CREATE, { type: e, guild_id: t, channel_id: n, preferred_region: i });
+        this.send(tc.p.STREAM_CREATE, { type: e, guild_id: t, channel_id: n, preferred_region: i });
     }
     streamWatch(e) {
-        this.send(eX.p.STREAM_WATCH, { stream_key: e });
+        this.send(tc.p.STREAM_WATCH, { stream_key: e });
     }
     streamPing(e) {
-        this.send(eX.p.STREAM_PING, { stream_key: e });
+        this.send(tc.p.STREAM_PING, { stream_key: e });
     }
     streamDelete(e) {
-        this.send(eX.p.STREAM_DELETE, { stream_key: e });
+        this.send(tc.p.STREAM_DELETE, { stream_key: e });
     }
     streamSetPaused(e, t) {
-        this.send(eX.p.STREAM_SET_PAUSED, { stream_key: e, paused: t });
+        this.send(tc.p.STREAM_SET_PAUSED, { stream_key: e, paused: t });
     }
     requestForumUnreads(e, t, n) {
-        this.send(eX.p.REQUEST_FORUM_UNREADS, {
+        this.send(tc.p.REQUEST_FORUM_UNREADS, {
             guild_id: e,
             channel_id: t,
             threads: n.map((e) => ({ thread_id: e.threadId, ack_message_id: e.ackMessageId })),
         });
     }
     requestSoundboardSounds(e) {
-        this.send(eX.p.REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: e });
+        this.send(tc.p.REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: e });
     }
     requestLastMessages(e, t) {
-        this.send(eX.p.REQUEST_LAST_MESSAGES, { guild_id: e, channel_ids: t });
+        this.send(tc.p.REQUEST_LAST_MESSAGES, { guild_id: e, channel_ids: t });
     }
     getDeletedEntityIdsNotMatchingHash(e, t, n, i, r) {
-        this.send(eX.p.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH, {
+        this.send(tc.p.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH, {
             guild_id: e,
             channel_ids_hash: t,
             role_ids_hash: n,
@@ -1261,35 +2022,35 @@ class eQ extends ez.EventEmitter {
         });
     }
     triggerGuildChannelResync(e, t) {
-        this.send(eX.p.GUILD_CHANNELS_RESYNC, { guild_id: e, obfuscated_channel_ids: t });
+        this.send(tc.p.GUILD_CHANNELS_RESYNC, { guild_id: e, obfuscated_channel_ids: t });
     }
     requestChannelInfo(e, t) {
-        this.send(eX.p.REQUEST_CHANNEL_INFO, { guild_id: e, fields: t });
+        this.send(tc.p.REQUEST_CHANNEL_INFO, { guild_id: e, fields: t });
     }
     requestChannelMemberCount(e, t) {
-        this.send(eX.p.REQUEST_CHANNEL_MEMBER_COUNT, { guild_id: e, channel_id: t });
+        this.send(tc.p.REQUEST_CHANNEL_MEMBER_COUNT, { guild_id: e, channel_id: t });
     }
     remoteCommand(e, t) {
-        this.send(eX.p.REMOTE_COMMAND, { target_session_id: e, payload: t });
+        this.send(tc.p.REMOTE_COMMAND, { target_session_id: e, payload: t });
     }
 }
-let eJ = !1;
-var eZ = n(981133),
-    e0 = n(751124);
-let e1 = new E.A("GatewaySocket"),
-    e2 = new em();
-function e3() {}
-let e6 = 30 * Z.A.Millis.SECOND,
-    e4 = 3 * Z.A.Millis.MINUTE,
-    e7 = +Z.A.Millis.MINUTE;
-function e5(e) {
+let th = !1;
+var tm = n(981133),
+    tf = n(751124);
+let tg = new E.A("GatewaySocket"),
+    tA = new eB();
+function tI() {}
+let tp = 30 * Z.A.Millis.SECOND,
+    tT = 3 * Z.A.Millis.MINUTE,
+    tS = +Z.A.Millis.MINUTE;
+function tN(e) {
     return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength;
 }
-let e8 = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class e9 extends eQ {
+let tO = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
+class tR extends tE {
     gatewayBackoff;
     handleIdentify;
-    dispatchExceptionBackoff = new M.A(1e3, e7);
+    dispatchExceptionBackoff = new M.A(1e3, tS);
     dispatchSuccessTimer = 0;
     connectionState_;
     webSocket;
@@ -1323,11 +2084,11 @@ class e9 extends eQ {
         return this.connectionState_;
     }
     set connectionState(e) {
-        e1.verbose(`Setting connection state to ${e}`), (this.connectionState_ = e);
+        tg.verbose(`Setting connection state to ${e}`), (this.connectionState_ = e);
     }
     constructor() {
         super(),
-            (this.dispatcher = new e$(this)),
+            (this.dispatcher = new t_(this)),
             (this.gatewayBackoff = new M.A(1e3, 6e4)),
             (this.connectionState_ = y.CLOSED),
             (this.webSocket = null),
@@ -1345,7 +2106,7 @@ class e9 extends eQ {
             (this.connectionStartTime = 0),
             (this.identifyStartTime = 0),
             (this.nextReconnectIsImmediate = !1),
-            (this.compressionHandler = eu(e2)),
+            (this.compressionHandler = eu(tA)),
             (this.hasConnectedOnce = !1),
             (this.isFastConnect = !1),
             (this.identifyCount = 0),
@@ -1356,7 +2117,7 @@ class e9 extends eQ {
     }
     setResumeUrl(e) {
         null != e && e.endsWith("/") && (e = e.substring(0, e.length - 1)),
-            null !== e && e1.verbose(`Updating resume url to ${e}`),
+            null !== e && tg.verbose(`Updating resume url to ${e}`),
             (this.resumeUrl = e);
     }
     handleActiveStateChange(e) {
@@ -1371,7 +2132,7 @@ class e9 extends eQ {
     }
     handleUpdateTimeSpentSessionId(e, t, n) {
         this.connectionState_ === y.SESSION_ESTABLISHED &&
-            (this.send(eX.p.UPDATE_TIME_SPENT_SESSION_ID, {
+            (this.send(tc.p.UPDATE_TIME_SPENT_SESSION_ID, {
                 initialization_timestamp: e,
                 session_id: t,
                 client_launch_id: n,
@@ -1381,23 +2142,23 @@ class e9 extends eQ {
     _connect() {
         var e, t, n;
         let i, r;
-        if (!this.willReconnect()) return void e1.verbose("Skipping _connect because willReconnect is false");
-        if (eJ) return void e1.info("Skipping _connect because socket is paused");
+        if (!this.willReconnect()) return void tg.verbose("Skipping _connect because willReconnect is false");
+        if (th) return void tg.info("Skipping _connect because socket is paused");
         (this.connectionState = y.CONNECTING), (this.nextReconnectIsImmediate = !1);
         let s = this.compressionHandler.getAlgorithm(),
-            a = e2.getName(),
+            a = tA.getName(),
             o = this._getGatewayUrl(),
             l = window.GLOBAL_ENV.API_VERSION;
         U.A.mark("\uD83C\uDF10", "Socket._connect"),
-            e1.info(`[CONNECT] ${o}, encoding: ${a}, version: ${l}, compression: ${s ?? "none"}`),
+            tg.info(`[CONNECT] ${o}, encoding: ${a}, version: ${l}, compression: ${s ?? "none"}`),
             null !== this.webSocket &&
-                (e1.error("_connect called with already existing websocket"), this._cleanup((e) => e.close(4e3))),
+                (tg.error("_connect called with already existing websocket"), this._cleanup((e) => e.close(4e3))),
             (this.connectionStartTime = Date.now()),
             (this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
                 this._handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`),
                     this.setResumeUrl(null);
-            }, e6));
+            }, tp));
         let _ = new URL(o);
         _.searchParams.append("encoding", a),
             _.searchParams.append("v", l.toString()),
@@ -1405,7 +2166,7 @@ class e9 extends eQ {
             !(function (e) {
                 let t,
                     { gatewayURL: n, newCallback: i, onOpen: r, onMessage: s, onError: a, onClose: o } = e;
-                e1.enableNativeLogger(!0);
+                tg.enableNativeLogger(!0);
                 let l = window._ws,
                     _ = !1,
                     d = !1,
@@ -1413,7 +2174,7 @@ class e9 extends eQ {
                     c = null;
                 if (((window._ws = null), null != l))
                     if (((t = l.ws), l.state.gateway !== n))
-                        e1.verbose(`[FAST CONNECT] gatewayURL mismatch: ${l.state.gateway} !== ${n}`),
+                        tg.verbose(`[FAST CONNECT] gatewayURL mismatch: ${l.state.gateway} !== ${n}`),
                             t.close(1e3),
                             (t = null);
                     else {
@@ -1424,7 +2185,7 @@ class e9 extends eQ {
                                     ? { ...e, data: e.data.substring(0, 100) }
                                     : e,
                             )),
-                            e1.log("[FAST CONNECT] successfully took over websocket, state:", {
+                            tg.log("[FAST CONNECT] successfully took over websocket, state:", {
                                 ...e,
                                 messages: e.messages?.length,
                             }),
@@ -1433,7 +2194,7 @@ class e9 extends eQ {
                             (u = l.state.messages),
                             (c = l.state.clientState);
                     }
-                null == t && ((t = (0, e0.A)(n)).binaryType = "arraybuffer"),
+                null == t && ((t = (0, tf.A)(n)).binaryType = "arraybuffer"),
                     i(t),
                     _ && r(d, c),
                     null != u && u.forEach(s),
@@ -1449,7 +2210,7 @@ class e9 extends eQ {
                 onOpen: (e) => {
                     U.A.mark(`🌐`, `GatewaySocket.onOpen ${e}`);
                     let t = Date.now() - this.connectionStartTime;
-                    e1.info(`[CONNECTED] ${_.toString()} in ${t} ms`),
+                    tg.info(`[CONNECTED] ${_.toString()} in ${t} ms`),
                         (this.isFastConnect = e),
                         e ? this._doFastConnectIdentify() : this._doResumeOrIdentify();
                 },
@@ -1458,13 +2219,13 @@ class e9 extends eQ {
                     (t = this._handleClose.bind(this)),
                     (n = (e, t) => {
                         let n = Date.now(),
-                            { op: i, s: r, t: s, d: a } = e2.unpack(e);
+                            { op: i, s: r, t: s, d: a } = tA.unpack(e);
                         if (
-                            (i !== eX.p.DISPATCH && U.A.mark(`🌐`, `GatewaySocket.onMessage ${i} ${eX.p[i]}`),
+                            (i !== tc.p.DISPATCH && U.A.mark(`🌐`, `GatewaySocket.onMessage ${i} ${tc.p[i]}`),
                             Q.default.isLoggingGatewayEvents)
                         ) {
                             let e = [i];
-                            i === eX.p.DISPATCH && e.push(s), e.push(a), e1.verboseDangerously("<~", ...e);
+                            i === tc.p.DISPATCH && e.push(s), e.push(a), tg.verboseDangerously("<~", ...e);
                         }
                         let o = Date.now() - n;
                         switch (
@@ -1476,38 +2237,38 @@ class e9 extends eQ {
                             null != r && (this.seq = r),
                             i)
                         ) {
-                            case eX.p.HELLO:
+                            case tc.p.HELLO:
                                 this._clearHelloTimeout(), this._handleHello(a);
                                 break;
-                            case eX.p.RECONNECT:
+                            case tc.p.RECONNECT:
                                 this._handleReconnect();
                                 break;
-                            case eX.p.INVALID_SESSION:
+                            case tc.p.INVALID_SESSION:
                                 this._handleInvalidSession(a);
                                 break;
-                            case eX.p.HEARTBEAT:
+                            case tc.p.HEARTBEAT:
                                 this._handleHeartbeatReceive();
                                 break;
-                            case eX.p.HEARTBEAT_ACK:
+                            case tc.p.HEARTBEAT_ACK:
                                 this._handleHeartbeatAck(a);
                                 break;
-                            case eX.p.DISPATCH:
+                            case tc.p.DISPATCH:
                                 this._handleDispatch(
                                     a,
                                     s,
                                     "READY" === s
                                         ? {
                                               compressed_byte_size: t,
-                                              uncompressed_byte_size: e5(e),
+                                              uncompressed_byte_size: tN(e),
                                               compression_algorithm: this.compressionHandler.getAlgorithm(),
-                                              packing_algorithm: e2.getName(),
+                                              packing_algorithm: tA.getName(),
                                               unpack_duration_ms: o,
                                           }
                                         : null,
                                 );
                                 break;
                             default:
-                                e1.info(`Unhandled op ${i}`);
+                                tg.info(`Unhandled op ${i}`);
                         }
                         this._sendHeartbeatIfDue();
                     }),
@@ -1522,7 +2283,7 @@ class e9 extends eQ {
                     (r = !1),
                     (n) => {
                         let s = n.data;
-                        null != n.raw_length ? (i += n.raw_length) : (i += e5(s));
+                        null != n.raw_length ? (i += n.raw_length) : (i += tN(s));
                         try {
                             e.feed(s);
                         } catch (e) {
@@ -1543,38 +2304,38 @@ class e9 extends eQ {
     _handleHello(e) {
         let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now() - this.connectionStartTime;
-        e1.verbose(`[HELLO] via ${eI(e)}, heartbeat interval: ${t}, took ${n} ms`), this._startHeartbeater();
+        tg.verbose(`[HELLO] via ${eW(e)}, heartbeat interval: ${t}, took ${n} ms`), this._startHeartbeater();
     }
     _handleReconnect() {
-        e1.verbose("[RECONNECT] gateway requested I reconnect."),
+        tg.verbose("[RECONNECT] gateway requested I reconnect."),
             this._cleanup((e) => e.close(4e3)),
             (this.connectionState = y.WILL_RECONNECT),
             this._connect();
     }
     _handleInvalidSession(e) {
-        e1.info(`[INVALID_SESSION]${e ? " can resume)" : ""}`), e ? this._doResumeOrIdentify() : this._doIdentify();
+        tg.info(`[INVALID_SESSION]${e ? " can resume)" : ""}`), e ? this._doResumeOrIdentify() : this._doIdentify();
     }
     _handleDispatch(e, t, n) {
         let i = Date.now() - this.connectionStartTime;
         if ("READY" === t) {
             let t = e.session_id;
             this.sessionId = t;
-            let n = eI(e);
+            let n = eW(e);
             U.A.setServerTrace(n),
-                e1.info(`[READY] took ${i}ms, as ${t}`),
-                e1.verbose(`${n}`),
+                tg.info(`[READY] took ${i}ms, as ${t}`),
+                tg.verbose(`${n}`),
                 (this.connectionState = y.SESSION_ESTABLISHED),
                 this.gatewayBackoff.succeed(),
                 (this.iosGoingAwayEventCount = 0),
                 this.setResumeUrl(e.resume_gateway_url);
         } else
             "READY_SUPPLEMENTAL" === t
-                ? (e1.info(`[READY_SUPPLEMENTAL] took ${i}ms`),
+                ? (tg.info(`[READY_SUPPLEMENTAL] took ${i}ms`),
                   (this.connectionState = y.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0))
                 : "RESUMED" === t &&
-                  (e1.verbose(eI(e)),
+                  (tg.verbose(eW(e)),
                   (this.connectionState = y.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0));
@@ -1582,7 +2343,7 @@ class e9 extends eQ {
     }
     handleResumeDispatched() {
         let e = Date.now() - this.connectionStartTime;
-        e1.info(
+        tg.info(
             `[RESUMED] took ${e}ms, replayed ${this.dispatcher.resumeAnalytics.numEvents} events, new seq: ${this.seq}`,
         );
     }
@@ -1590,7 +2351,7 @@ class e9 extends eQ {
         (this.didForceClearGuildHashes = !1), (this.hasConnectedOnce = !0);
     }
     _getGatewayUrl() {
-        return null != this.resumeUrl ? this.resumeUrl : e8;
+        return null != this.resumeUrl ? this.resumeUrl : tO;
     }
     _handleHeartbeatReceive() {
         this._sendHeartbeat(),
@@ -1605,18 +2366,18 @@ class e9 extends eQ {
             null !== this.expeditedHeartbeatTimeout &&
                 (clearTimeout(this.expeditedHeartbeatTimeout),
                 (this.expeditedHeartbeatTimeout = null),
-                e1.verbose("Expedited heartbeat succeeded"));
+                tg.verbose("Expedited heartbeat succeeded"));
     }
     _handleHeartbeatTimeout() {
         this._cleanup((e) => e.close(4e3)), (this.connectionState = y.WILL_RECONNECT);
         let e = this.gatewayBackoff.fail(() => this._connect());
-        e1.warn(`[ACK TIMEOUT] reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
+        tg.warn(`[ACK TIMEOUT] reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
     }
     _handleClose(e, t, n) {
         if (((e = e || !1), this._cleanup(), this.emit("close", { code: t, reason: n }), 4004 === t))
             return (
                 (this.connectionState = y.CLOSED),
-                e1.warn("[WS CLOSED] because of authentication failure, marking as closed."),
+                tg.warn("[WS CLOSED] because of authentication failure, marking as closed."),
                 this._reset(e, t, n)
             );
         if (
@@ -1624,10 +2385,10 @@ class e9 extends eQ {
             (this.connectionState = y.WILL_RECONNECT),
             this.nextReconnectIsImmediate)
         )
-            e1.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying immediately.`), this._connect();
+            tg.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying immediately.`), this._connect();
         else {
             let i = this.gatewayBackoff.fail(() => this._connect());
-            e1.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying in ${(i / 1e3).toFixed(2)} seconds.`),
+            tg.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying in ${(i / 1e3).toFixed(2)} seconds.`),
                 this.gatewayBackoff.fails > 4 && this._reset(e, t, n);
         }
     }
@@ -1638,25 +2399,25 @@ class e9 extends eQ {
             "Stream end encountered" === t &&
             ((this.iosGoingAwayEventCount += 1),
             3 === this.iosGoingAwayEventCount &&
-                V.Bo.get({ url: eg.Rsh.ME, headers: { authorization: this.token }, rejectWithError: !1 }).then(
+                V.Bo.get({ url: eY.Rsh.ME, headers: { authorization: this.token }, rejectWithError: !1 }).then(
                     (e) => {
                         let { status: t } = e;
-                        v.default.track(eg.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                        v.default.track(eY.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                     (e) => {
                         let { status: t } = e;
                         401 === t &&
                             ((this.connectionState = y.CLOSED),
-                            e1.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
+                            tg.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
                             this._reset(n, 4004, "invalid token manually detected")),
-                            v.default.track(eg.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            v.default.track(eY.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                 ));
     }
     _reset(e, t, n) {
         (this.sessionId = null),
             (this.seq = 0),
-            e1.warn(`[RESET] (${e.toString()}, ${t}, ${n})`),
+            tg.warn(`[RESET] (${e.toString()}, ${t}, ${n})`),
             this.emit("disconnect", { wasClean: e, code: t, reason: n });
     }
     _sendHeartbeatIfDue() {
@@ -1698,16 +2459,16 @@ class e9 extends eQ {
         _.Ay.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
         let t = this.webSocket;
         (this.webSocket = null),
-            null != t && ((t.onopen = e3), (t.onmessage = e3), (t.onerror = e3), (t.onclose = e3), e?.(t)),
+            null != t && ((t.onopen = tI), (t.onmessage = tI), (t.onerror = tI), (t.onclose = tI), e?.(t)),
             this.gatewayBackoff.cancel(),
             this.compressionHandler.close(),
-            (this.compressionHandler = eu(e2));
+            (this.compressionHandler = eu(tA));
     }
     _doResume() {
         (this.connectionState = y.RESUMING),
-            (this.dispatcher.resumeAnalytics = eA(Date.now() - this.connectionStartTime)),
-            e1.info(`[RESUME] resuming session ${this.sessionId ?? ""}, seq: ${this.seq}`),
-            this.send(eX.p.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1);
+            (this.dispatcher.resumeAnalytics = eK(Date.now() - this.connectionStartTime)),
+            tg.info(`[RESUME] resuming session ${this.sessionId ?? ""}, seq: ${this.seq}`),
+            this.send(tc.p.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1);
     }
     async _doIdentify() {
         (this.seq = 0), (this.sessionId = null);
@@ -1734,12 +2495,12 @@ class e9 extends eQ {
                   }
                 : { guild_versions: {} };
         if (this.connectionState !== y.IDENTIFYING || this.identifyStartTime !== t)
-            return void e1.warn("Skipping identify because connectionState or identifyStartTime has changed");
+            return void tg.warn("Skipping identify because connectionState or identifyStartTime has changed");
         let { token: a, properties: o = {}, presence: l } = e;
-        (this.token = a), e1.verbose("[IDENTIFY]");
+        (this.token = a), tg.verbose("[IDENTIFY]");
         let _ = {
                 token: a,
-                capabilities: (0, et.O)({ useChannelObfuscation: (0, eZ.RK)("GatewaySocket") }),
+                capabilities: (0, et.O)({ useChannelObfuscation: (0, tm.RK)("GatewaySocket") }),
                 properties: o,
                 presence: l,
                 compress: this.compressionHandler.usesLegacyCompression(),
@@ -1749,8 +2510,8 @@ class e9 extends eQ {
         (this.identifyUncompressedByteSize = d.length),
             (this.identifyCompressedByteSize = k.deflate(d).length),
             (this.identifyCount += 1),
-            this.send(eX.p.IDENTIFY, _, !1),
-            v.default.track(eg.HAw.SESSION_START_CLIENT, {});
+            this.send(tc.p.IDENTIFY, _, !1),
+            v.default.track(eY.HAw.SESSION_START_CLIENT, {});
     }
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
@@ -1761,12 +2522,12 @@ class e9 extends eQ {
             (this.connectionState = y.IDENTIFYING),
             (this.identifyStartTime = Date.now()),
             (this.identifyCount += 1),
-            e1.verbose("[IDENTIFY, fast-connect]"),
+            tg.verbose("[IDENTIFY, fast-connect]"),
             this._updateLastHeartbeatAckTime();
     }
     _doResumeOrIdentify() {
         let e = Date.now();
-        null !== this.sessionId && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= e4)
+        null !== this.sessionId && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= tT)
             ? this._doResume()
             : this._doIdentify(),
             this._updateLastHeartbeatAckTime();
@@ -1785,10 +2546,10 @@ class e9 extends eQ {
     }
     _sendHeartbeat() {
         let e = this._consumeQOSPayload();
-        this.send(eX.p.QOS_HEARTBEAT, { seq: this.seq, qos: e }, !1), (this.lastHeartbeatTime = Date.now());
+        this.send(tc.p.QOS_HEARTBEAT, { seq: this.seq, qos: e }, !1), (this.lastHeartbeatTime = Date.now());
     }
     getLogger() {
-        return e1;
+        return tg;
     }
     willReconnect() {
         return this.connectionState === y.WILL_RECONNECT;
@@ -1808,19 +2569,19 @@ class e9 extends eQ {
     }
     connect() {
         return this.isClosed()
-            ? (e1.verbose(".connect() called, new state is WILL_RECONNECT"),
+            ? (tg.verbose(".connect() called, new state is WILL_RECONNECT"),
               (this.connectionState = y.WILL_RECONNECT),
               this._connect(),
               !0)
-            : (e1.error("Cannot start a new connection, connection state is not closed"), !1);
+            : (tg.error("Cannot start a new connection, connection state is not closed"), !1);
     }
     resetSocketAndClearCacheOnError(e) {
         let { action: t, error: n, metricAction: i } = e;
-        e1.error(`resetSocketAndClearCacheOnError during ${t}: ${n.message}`, n.stack);
+        tg.error(`resetSocketAndClearCacheOnError during ${t}: ${n.message}`, n.stack);
         let r = (0, x.b)();
         q.A.increment({ name: G.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
             !1 !== e.sentry && ee.A.captureException(n, { tags: { socketCrashedAction: t } }),
-            v.default.track(eg.HAw.GATEWAY_SOCKET_RESET, {
+            v.default.track(eY.HAw.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 has_client_mods: r,
@@ -1832,7 +2593,7 @@ class e9 extends eQ {
             (this.connectionState = y.WILL_RECONNECT),
             this.dispatchExceptionBackoff.cancel(),
             0 === this.dispatchExceptionBackoff._fails
-                ? (e1.verbose("Triggering fast reconnect"),
+                ? (tg.verbose("Triggering fast reconnect"),
                   this.dispatchExceptionBackoff.fail(() => {}),
                   setTimeout(() => this._connect(), 0))
                 : this.dispatchExceptionBackoff.fail(() => this._connect()),
@@ -1840,7 +2601,7 @@ class e9 extends eQ {
             u.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` }),
             u.h.dispatch({ type: "LIBDISCORE_RESET" }),
             clearTimeout(this.dispatchSuccessTimer),
-            (this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * e7));
+            (this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * tS));
     }
     resetSocketOnDispatchError(e) {
         let t = null != e.error.message && e.error.message.indexOf("Guild data was missing from store") >= 0;
@@ -1848,8 +2609,8 @@ class e9 extends eQ {
     }
     close() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (this.isClosed()) return void e1.verbose("close() called, but socket is already closed.");
-        e1.info(`Closing connection, current state is ${this.connectionState}`);
+        if (this.isClosed()) return void tg.verbose("close() called, but socket is already closed.");
+        tg.info(`Closing connection, current state is ${this.connectionState}`);
         let t = e ? 4e3 : void 0;
         this._cleanup((e) => e.close(t)),
             (this.connectionState = y.CLOSED),
@@ -1870,7 +2631,7 @@ class e9 extends eQ {
             i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
         if (!this.isClosed()) {
             if (this.isConnected()) {
-                e1.verbose(`Performing an expedited heartbeat ${null != t && "" !== t ? "reason: " + t : ""}`),
+                tg.verbose(`Performing an expedited heartbeat ${null != t && "" !== t ? "reason: " + t : ""}`),
                     (this.heartbeatAck = !1),
                     this._sendHeartbeat(),
                     null !== this.expeditedHeartbeatTimeout && clearTimeout(this.expeditedHeartbeatTimeout),
@@ -1882,7 +2643,7 @@ class e9 extends eQ {
             }
             n
                 ? this.resetBackoff(t, i)
-                : e1.verbose(
+                : tg.verbose(
                       `Expedited heartbeat requested, but, connection state is ${this.connectionState} and reconnectImmediately was not requested ${null != t && "" !== t ? "reason: " + t : ""}`,
                   );
         }
@@ -1890,7 +2651,7 @@ class e9 extends eQ {
     resetBackoff() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
             t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        e1.verbose(`Connection has reset backoff${null != e && "" !== e ? " for reason: " + e : ""}`),
+        tg.verbose(`Connection has reset backoff${null != e && "" !== e ? " for reason: " + e : ""}`),
             this.gatewayBackoff.succeed(),
             (this.iosGoingAwayEventCount = 0),
             (this.nextReconnectIsImmediate = !0),
@@ -1899,18 +2660,18 @@ class e9 extends eQ {
                 : t && this.connectionState !== y.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
     }
     send = (e, t, n) => {
-        Q.default.isLoggingGatewayEvents && e1.verboseDangerously("~>", e, eX.p[e], t);
-        let i = e2.pack({ op: e, d: t });
+        Q.default.isLoggingGatewayEvents && tg.verboseDangerously("~>", e, tc.p[e], t);
+        let i = tA.pack({ op: e, d: t });
         if (!n || this.isSessionEstablished())
             try {
                 null != this.webSocket && this.webSocket.send(i);
             } catch (e) {}
-        else e1.warn(`Attempted to send while not being in a connected state opcode: ${e}`);
+        else tg.warn(`Attempted to send while not being in a connected state opcode: ${e}`);
     };
 }
-var te = n(812729),
-    tt = n.n(te);
-class tn {
+var tC = n(812729),
+    ty = n.n(tC);
+class tD {
     alwaysUpdateState;
     dirty = !1;
     state = this.getInitialState();
@@ -1933,8 +2694,8 @@ class tn {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = this.getNextState({ ...this.state, ...e });
-        if (t) this.dirty = !tt()(n, this.getInitialState());
-        else for (let e of Object.keys(n)) this.dirty = this.dirty || !tt()(this.state[e], n[e]);
+        if (t) this.dirty = !ty()(n, this.getInitialState());
+        else for (let e of Object.keys(n)) this.dirty = this.dirty || !ty()(this.state[e], n[e]);
         let i = this.dirty && this.shouldCommit();
         return (
             (i || this.alwaysUpdateState) && (this.state = n),
@@ -1945,7 +2706,7 @@ class tn {
         (this.dirty = !1), this.didCommit(this.state);
     }
 }
-class ti extends tn {
+class tL extends tD {
     socket;
     switchingAccounts = !1;
     constructor(e) {
@@ -1983,16 +2744,16 @@ class ti extends tn {
         (this.switchingAccounts = !0), this.reset(), this.emitPresenceUpdate(this.getState());
     }
 }
-var tr = n(665260),
-    ts = n(572164),
-    ta = n(328153),
-    to = n(253932),
-    tl = n(616356),
-    t_ = n(469177);
-let td = new E.A("ConnectionStore"),
-    tu = new e9(),
-    tc = new ti(tu),
-    tE = new (class extends tn {
+var tv = n(665260),
+    tw = n(572164),
+    tP = n(328153),
+    tb = n(253932),
+    tk = n(616356),
+    tU = n(469177);
+let tM = new E.A("ConnectionStore"),
+    tG = new tR(),
+    tx = new tL(tG),
+    tV = new (class extends tD {
         socket;
         constructor(e) {
             super(), (this.socket = e);
@@ -2005,14 +2766,14 @@ let td = new E.A("ConnectionStore"),
         }
         computeVoiceFlags() {
             let e = 0,
-                t = to.Q$.getSetting();
-            e = (0, tr.lA)(e, eg.Ajs.ALLOW_VOICE_RECORDING, t);
+                t = tb.Q$.getSetting();
+            e = (0, tv.lA)(e, eY.Ajs.ALLOW_VOICE_RECORDING, t);
             let n =
-                    (0, ts.TD)() &&
-                    (tl.A.getCurrentUserActiveStream()?.state === eg.XYD.ACTIVE ||
-                        tl.A.getCurrentUserActiveStream()?.state === eg.XYD.PAUSED),
-                i = (0, ts.Ao)() && ta.Ay.getVisibleGame()?.windowHandle != null;
-            return (0, tr.lA)(e, eg.Ajs.CLIPS_ENABLED, n || i);
+                    (0, tw.TD)() &&
+                    (tk.A.getCurrentUserActiveStream()?.state === eY.XYD.ACTIVE ||
+                        tk.A.getCurrentUserActiveStream()?.state === eY.XYD.PAUSED),
+                i = (0, tw.Ao)() && tP.Ay.getVisibleGame()?.windowHandle != null;
+            return (0, tv.lA)(e, eY.Ajs.CLIPS_ENABLED, n || i);
         }
         getInitialState() {
             return {
@@ -2056,7 +2817,7 @@ let td = new E.A("ConnectionStore"),
                 videoStreamParameters: l,
                 flags: _ = 0,
             } = e;
-            s && A.A.getChannel(n)?.type === eg.rbe.GUILD_STAGE_VOICE
+            s && I.A.getChannel(n)?.type === eY.rbe.GUILD_STAGE_VOICE
                 ? this.socket.voiceStateUpdate({
                       guildId: t,
                       channelId: n,
@@ -2079,10 +2840,10 @@ let td = new E.A("ConnectionStore"),
                       flags: _,
                   });
         }
-    })(tu);
-(tu.handleIdentify = () => {
+    })(tG);
+(tG.handleIdentify = () => {
     let e = g.default.getToken();
-    if ((td.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
+    if ((tM.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
     let t = L.A.getState(),
         n = g.default.getInstallationForTracking();
     return {
@@ -2091,70 +2852,70 @@ let td = new E.A("ConnectionStore"),
             ...v.default.getSuperProperties(),
             client_app_state: t,
             is_fast_connect: !1,
-            gateway_connect_reasons: t_.L7(),
+            gateway_connect_reasons: tU.L7(),
             ...(null != n ? { installation_id: n } : {}),
         },
-        presence: tc.getInitialState(),
+        presence: tx.getInitialState(),
     };
 }),
     (0, C.isDesktop)() &&
         D.A.powerMonitor.on("resume", () => {
-            tu.expeditedHeartbeat(5e3, "power monitor resumed");
+            tG.expeditedHeartbeat(5e3, "power monitor resumed");
         }),
     w.A.addOfflineCallback(() => {
-        tu.networkStateChange(15e3, "network detected offline.", !1);
+        tG.networkStateChange(15e3, "network detected offline.", !1);
     }),
     w.A.addOnlineCallback(() => {
-        tu.networkStateChange(5e3, "network detected online.");
+        tG.networkStateChange(5e3, "network detected online.");
     }),
-    tu.on("disconnect", (e) => {
+    tG.on("disconnect", (e) => {
         let { code: t, reason: n } = e;
         u.h.dispatch({ type: "CONNECTION_CLOSED", code: t, reason: n });
     }),
-    tu.on("close", (e) => {
+    tG.on("close", (e) => {
         let { code: t, reason: n } = e;
         u.h.dispatch({ type: "CONNECTION_INTERRUPTED", code: t, reason: n });
     }),
     n(237751);
-var th = n(73825),
-    tm = n(803306),
-    tf = n(821956),
-    tg = n(628856),
-    tI = n(945096),
-    tA = n(692744),
-    tp = n(814890),
-    tT = n(505527),
-    tS = n(853811),
-    tN = n(381438);
-let tO = (0, n(945810).mj)({
+var tF = n(73825),
+    tB = n(803306),
+    tH = n(821956),
+    tY = n(628856),
+    tW = n(945096),
+    tK = n(692744),
+    tj = n(814890),
+    t$ = n(505527),
+    tz = n(853811),
+    tq = n(381438);
+let tX = (0, eb.mj)({
     kind: "user",
     name: "2026-02-content-classification-presence-filter",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var tR = n(756377),
-    tC = n(736130),
-    ty = n(761821),
-    tD = n(95701),
-    tL = n(545934),
-    tv = n(889227),
-    tw = n(696451),
-    tP = n(186111),
-    tb = n(628965),
-    tk = n(977997),
-    tU = n(97352),
-    tM = n(166403),
-    tG = n(107351),
-    tx = n(531743),
-    tV = n(45773);
-let tF = null,
-    tB = {};
-function tH(e, t, n) {
-    return null == tF || tF.identifyTime !== e || (null != t && t.some((e) => e.id === tF.guild.id))
+var tQ = n(756377),
+    tJ = n(736130),
+    tZ = n(761821),
+    t0 = n(95701),
+    t1 = n(545934),
+    t2 = n(889227),
+    t3 = n(696451),
+    t6 = n(186111),
+    t4 = n(628965),
+    t7 = n(977997),
+    t5 = n(97352),
+    t8 = n(166403),
+    t9 = n(107351),
+    ne = n(531743),
+    nt = n(45773);
+let nn = null,
+    ni = {};
+function nr(e, t, n) {
+    return null == nn || nn.identifyTime !== e || (null != t && t.some((e) => e.id === nn.guild.id))
         ? null
-        : n(tF.guild);
+        : n(nn.guild);
 }
-function tY(e, t) {
+function ns(e, t) {
     let n = [];
     return (
         t?.forEach((t) => {
@@ -2167,7 +2928,7 @@ function tY(e, t) {
         n
     );
 }
-function tW(e) {
+function na(e) {
     return "partial" !== e.data_mode
         ? {
               id: e.id,
@@ -2184,9 +2945,9 @@ function tW(e) {
               roles: { op: "full_sync", items: e.roles },
               stage_instances: e.stage_instances,
               stickers: { op: "full_sync", items: e.stickers },
-              threads: e.threads?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
-              threadMessages: tj(e.threads),
-              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, tD.UE)(t, e.id))) },
+              threads: e.threads?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
+              threadMessages: nl(e.threads),
+              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, t0.UE)(t, e.id))) },
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           }
@@ -2195,7 +2956,7 @@ function tW(e) {
               dataMode: e.data_mode,
               channels: {
                   op: "update",
-                  writes: e.partial_updates.channels?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
+                  writes: e.partial_updates.channels?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
                   deletes: e.partial_updates.deleted_channel_ids ?? [],
               },
               channelTimestampUpdates: e.channel_updates,
@@ -2224,13 +2985,13 @@ function tW(e) {
                   deletes: e.partial_updates.deleted_sticker_ids ?? [],
               },
               unableToSyncDeletes: e.unable_to_sync_deletes,
-              threads: e.threads?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
-              threadMessages: tj(e.threads),
+              threads: e.threads?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
+              threadMessages: nl(e.threads),
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           };
 }
-function tK(e) {
+function no(e) {
     return "partial" !== e.data_mode
         ? {
               id: e.id,
@@ -2244,8 +3005,8 @@ function tK(e) {
               properties: e.properties,
               roles: { op: "full_sync", items: e.roles },
               stage_instances: e.stage_instances,
-              threads: e.threads?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
-              threadMessages: tj(e.threads),
+              threads: e.threads?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
+              threadMessages: nl(e.threads),
               presences: e.presences,
               activity_instances: e.activity_instances,
               voice_states: e.voice_states,
@@ -2253,13 +3014,13 @@ function tK(e) {
               hasThreadsSubscription: e.has_threads_subscription,
               emojis: { op: "full_sync", items: e.emojis },
               stickers: { op: "full_sync", items: e.stickers },
-              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, tD.UE)(t, e.id))) },
+              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, t0.UE)(t, e.id))) },
           }
         : {
               id: e.id,
               channels: {
                   op: "update",
-                  writes: e.partial_updates.channels?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
+                  writes: e.partial_updates.channels?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
                   deletes: e.partial_updates.deleted_channel_ids ?? [],
               },
               channelTimestampUpdates: e.channel_updates,
@@ -2290,41 +3051,41 @@ function tK(e) {
                   deletes: e.partial_updates.deleted_sticker_ids ?? [],
               },
               unableToSyncDeletes: e.unable_to_sync_deletes,
-              threads: e.threads?.map((t) => (0, tD.UE)(t, e.id)) ?? [],
-              threadMessages: tj(e.threads),
+              threads: e.threads?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
+              threadMessages: nl(e.threads),
               voice_states: e.voice_states,
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           };
 }
-function tj(e) {
+function nl(e) {
     let t = [];
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
     return t;
 }
-let t$ = new E.A("ConnectionStore");
-function tz(e) {
+let n_ = new E.A("ConnectionStore");
+function nd(e) {
     return e.map((e) => {
         let t = e.timestamps?.end,
             n = e.created_at;
         return null != t && null != n
-            ? { ...e, timestamps: { ...e.timestamps, isCountDown: t > n && e.type !== eg.$pd.LISTENING } }
+            ? { ...e, timestamps: { ...e.timestamps, isCountDown: t > n && e.type !== eY.$pd.LISTENING } }
             : e;
     });
 }
-let tq = new ep(
-        tu,
+let nu = new ej(
+        tG,
         (e, t) => {
             e = e ?? { type: "CHANNEL_UPDATES", channels: [] };
-            let n = (0, tD.UE)(t),
-                i = A.A.getChannel(t.id),
+            let n = (0, t0.UE)(t),
+                i = I.A.getChannel(t.id),
                 r = i?.merge({ ...n, recipients: i.recipients, bitrate: n.bitrate ?? i.bitrate });
             return e.channels.push(r ?? n), e;
         },
         (e) => "CHANNEL_UPDATE" !== e,
     ),
-    tX = new ep(
-        tu,
+    nc = new ej(
+        tG,
         (e, t) => (
             (e = null == e ? { type: "SOUNDBOARD_SOUNDS_RECEIVED", updates: [] } : e).updates.push({
                 guildId: t.guild_id,
@@ -2343,27 +3104,27 @@ let tq = new ep(
         ),
         (e) => "SOUNDBOARD_SOUNDS" !== e,
     ),
-    tQ = new ep(
-        tu,
+    nE = new ej(
+        tG,
         (e, t) => ((e = e ?? { type: "GUILD_MEMBERS_CHUNK_BATCH", chunks: [] }).chunks.push(t), e),
         (e) => "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    tJ = new ep(
-        tu,
+    nh = new ej(
+        tG,
         (e, t) => ((e = null == e ? { type: "PRESENCE_UPDATES", updates: [] } : e).updates.push(t), e),
         (e) => "PRESENCE_UPDATE" !== e && "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    tZ = {};
-function t0(e, t) {
-    for (let n of e) tZ[n] = { preload: () => null, dispatch: t };
+    nm = {};
+function nf(e, t) {
+    for (let n of e) nm[n] = { preload: () => null, dispatch: t };
 }
-function t1(e, t, n) {
-    for (let i of e) tZ[i] = { preload: t, dispatch: n };
+function ng(e, t, n) {
+    for (let i of e) nm[i] = { preload: t, dispatch: n };
 }
-function t2(e) {
+function nA(e) {
     let t = [];
     for (let n of e)
-        null != n.member && t6(n.guild_id, n.member.user, n.member),
+        null != n.member && np(n.guild_id, n.member.user, n.member),
             t.push({
                 userId: n.user_id,
                 guildId: n.guild_id,
@@ -2378,18 +3139,18 @@ function t2(e) {
                 selfStream: n.self_stream || !1,
                 requestToSpeakTimestamp: n.request_to_speak_timestamp ?? null,
                 discoverable: n.discoverable ?? !0,
-                oldChannelId: tk.A.getUserVoiceChannelId(n.guild_id, n.user_id),
+                oldChannelId: t7.A.getUserVoiceChannelId(n.guild_id, n.user_id),
                 connectedAt: n.connected_at,
             });
-    t3({ type: "VOICE_STATE_UPDATES", voiceStates: t });
+    nI({ type: "VOICE_STATE_UPDATES", voiceStates: t });
 }
-function t3(e) {
+function nI(e) {
     u.h.dispatch(e).catch((t) => {
-        t$.error(`dispatchOrResetSocket error during ${e.type}:`, t),
-            tu.resetSocketOnDispatchError({ error: t, action: e.type });
+        n_.error(`dispatchOrResetSocket error during ${e.type}:`, t),
+            tG.resetSocketOnDispatchError({ error: t, action: e.type });
     });
 }
-function t6(e, t, n) {
+function np(e, t, n) {
     let {
             roles: i,
             nick: r,
@@ -2404,14 +3165,14 @@ function t6(e, t, n) {
             collectibles: h,
             display_name_styles: m,
         } = n,
-        f = tw.Ay.getMember(e, t.id),
-        g = (0, tg.t)(h),
-        I = (0, tI.mT)(m);
+        f = t3.Ay.getMember(e, t.id),
+        g = (0, tY.t)(h),
+        A = (0, tW.mT)(m);
     (null != f &&
         f.nick === r &&
         f.avatar === s &&
         l().isEqual(f.roles, i) &&
-        (0, tf.kn)(f.avatarDecoration ?? null, a ?? null) &&
+        (0, tH.kn)(f.avatarDecoration ?? null, a ?? null) &&
         f.premiumSince === _ &&
         f.isPending === d &&
         f.joinedAt === u &&
@@ -2419,8 +3180,8 @@ function t6(e, t, n) {
         f.flags === o &&
         (f.unusualDMActivityUntil ?? null) === (E ?? null) &&
         l().isEqual(f.collectibles ?? null, g ?? null) &&
-        l().isEqual(f.displayNameStyles ?? null, I ?? null)) ||
-        t3({
+        l().isEqual(f.displayNameStyles ?? null, A ?? null)) ||
+        nI({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
             user: t,
@@ -2435,37 +3196,37 @@ function t6(e, t, n) {
             unusualDMActivityUntil: E,
             flags: o,
             collectibles: g,
-            displayNameStyles: I,
+            displayNameStyles: A,
         });
 }
-function t4(e) {
+function nT(e) {
     let { member: t, mentions: n, author: i, guild_id: r } = e;
-    null != t && null != r && t6(r, i, t),
+    null != t && null != r && np(r, i, t),
         null != n &&
             n.forEach((e) => {
                 if (null != e.member && null != r) {
                     let { member: t } = e;
-                    delete e.member, t6(r, e, t);
+                    delete e.member, np(r, e, t);
                 }
             });
 }
-function t7(e) {
+function nS(e) {
     return e.map((e) => ({
         sessionId: e.session_id,
         lastModified: e.last_modified,
         status: e.status,
-        activities: tz(e.activities ?? []),
+        activities: nd(e.activities ?? []),
         hiddenActivities: e.hidden_activities ?? [],
         active: !!e.active,
         clientInfo: e.client_info,
     }));
 }
-function t5(e, t) {
-    return e.map((e) => t8(e, t));
+function nN(e, t) {
+    return e.map((e) => nO(e, t));
 }
-function t8(e, t) {
+function nO(e, t) {
     let n = (function (e, t) {
-        let { enabled: n } = tO.getConfig({ location: "presence_filtering" });
+        let { enabled: n } = tX.getConfig({ location: "presence_filtering" });
         if (!n) return { activities: e, hiddenActivities: t };
         let i = [],
             r = [];
@@ -2474,7 +3235,7 @@ function t8(e, t) {
                 t.content_classification?.loaded
                     ? null == t.content_classification.data
                         ? 0
-                        : (0, tS.U1)({ type: tS.fS.MINIMAL, data: t.content_classification.data }) !== tN.Y.EVERYONE
+                        : (0, tz.U1)({ type: tz.fS.MINIMAL, data: t.content_classification.data }) !== tq.Y.EVERYONE
                     : 1
             )
                 ? r.push(t)
@@ -2487,27 +3248,27 @@ function t8(e, t) {
         user: e.user,
         status: e.status,
         clientStatus: e.client_status,
-        activities: tz(n.activities),
+        activities: nd(n.activities),
         hiddenActivities: n.hiddenActivities,
         guildId: t,
         processedAtTimestamp: e.processed_at_timestamp,
     };
 }
-function t9(e) {
-    tJ.add(e);
+function nR(e) {
+    nh.add(e);
 }
-t1(
+ng(
     ["INITIAL_GUILD"],
-    (e) => ("full" === e.data_mode ? null : A.D.loadGuildIds([e.id])),
+    (e) => ("full" === e.data_mode ? null : I.D.loadGuildIds([e.id])),
     (e) => {
         X.A.initialGuild.measure(() => {
             _.Ay.Emitter.batched(() => {
                 var t;
                 let n,
-                    i = ((t = tu.identifyStartTime), (n = tK(e)), (tF = { guild: e, identifyTime: t }), n);
-                null != ef.default.getCurrentUser() &&
-                    (t3({ type: "GUILD_CREATE", guild: i }),
-                    t3({
+                    i = ((t = tG.identifyStartTime), (n = no(e)), (nn = { guild: e, identifyTime: t }), n);
+                null != eH.default.getCurrentUser() &&
+                    (nI({ type: "GUILD_CREATE", guild: i }),
+                    nI({
                         type: "VOICE_STATE_UPDATES",
                         voiceStates: i.voice_states.map((e) => ({
                             userId: e.user_id,
@@ -2526,25 +3287,25 @@ t1(
                             connectedAt: e.connected_at,
                         })),
                     }),
-                    t$.log(`Dispatched INITIAL_GUILD ${e.id}`));
+                    n_.log(`Dispatched INITIAL_GUILD ${e.id}`));
             });
         });
     },
 ),
-    t0(["READY_SUPPLEMENTAL"], (e) => {
+    nf(["READY_SUPPLEMENTAL"], (e) => {
         X.A.readySupplemental.measure(() => {
             _.Ay.Emitter.batched(() => {
                 let t = (e = X.A.hydrateReadySupplemental.measure(() =>
                     (function (e, t) {
                         let { guilds: n, merged_members: i, merged_presences: r, ...s } = e,
-                            a = tY(tB, r?.friends),
+                            a = ns(ni, r?.friends),
                             o =
                                 n?.map((e, t) => {
-                                    let n = tY(tB, r?.guilds[t]),
-                                        s = tY(tB, i?.[t]);
+                                    let n = ns(ni, r?.guilds[t]),
+                                        s = ns(ni, i?.[t]);
                                     return { ...e, unavailable: void 0 === e.voice_states, presences: n, members: s };
                                 }) ?? [],
-                            l = tH(t, n, (e) => ({
+                            l = nr(t, n, (e) => ({
                                 id: e.id,
                                 members: e.members,
                                 presences: e.presences,
@@ -2552,16 +3313,16 @@ t1(
                                 voice_states: e.voice_states,
                                 unavailable: !1,
                             }));
-                        return null != l && o.push(l), (tB = {}), { ...s, presences: a, guilds: o };
-                    })(e, tu.identifyStartTime),
+                        return null != l && o.push(l), (ni = {}), { ...s, presences: a, guilds: o };
+                    })(e, tG.identifyStartTime),
                 )).guilds.filter((e) => !0 !== e.unavailable);
                 t.forEach((e) => {
-                    e.presences = t5(e.presences || [], e.id);
+                    e.presences = nN(e.presences || [], e.id);
                 });
-                let n = t5(e.presences ?? [], void 0),
-                    i = (e.lazy_private_channels ?? []).map((e) => (0, tD.UE)(e));
+                let n = nN(e.presences ?? [], void 0),
+                    i = (e.lazy_private_channels ?? []).map((e) => (0, t0.UE)(e));
                 X.A.dispatchReadySupplemental.measure(() => {
-                    t3({ type: "CONNECTION_OPEN_SUPPLEMENTAL", guilds: t, presences: n, lazyPrivateChannels: i });
+                    nI({ type: "CONNECTION_OPEN_SUPPLEMENTAL", guilds: t, presences: n, lazyPrivateChannels: i });
                 });
                 let r = [];
                 t.forEach((e) => {
@@ -2584,13 +3345,13 @@ t1(
                         });
                     });
                 }),
-                    t3({ type: "VOICE_STATE_UPDATES", voiceStates: r, initial: !0 }),
-                    tE.update();
+                    nI({ type: "VOICE_STATE_UPDATES", voiceStates: r, initial: !0 }),
+                    tV.update();
             });
         }),
-            setTimeout(() => t3({ type: "POST_CONNECTION_OPEN" }), 2e3);
+            setTimeout(() => nI({ type: "POST_CONNECTION_OPEN" }), 2e3);
     }),
-    t1(
+    ng(
         ["READY"],
         (e) => {
             let t,
@@ -2600,7 +3361,7 @@ t1(
                     (n = (0, z.O)() ? K.getCommittedVersions() : Promise.resolve({})),
                     Promise.all([
                         n,
-                        (0, z.O)() ? tx.A.getGuildIds() : Promise.resolve(new Set()),
+                        (0, z.O)() ? ne.A.getGuildIds() : Promise.resolve(new Set()),
                         null != t ? j.A.okAsync(t) : Promise.resolve(!1),
                     ]).then((e) => {
                         let [t, n, i] = e;
@@ -2616,14 +3377,14 @@ t1(
                                 void 0),
                     )
                     .map((e) => e.id);
-            return Promise.all([i, A.D.loadGuildIds(r) ?? Promise.resolve()]).then((e) => {
+            return Promise.all([i, I.D.loadGuildIds(r) ?? Promise.resolve()]).then((e) => {
                 let [t] = e;
                 return t;
             });
         },
         (e, t, n) => {
             e.user.bot
-                ? t3({ type: "LOGOUT" })
+                ? nI({ type: "LOGOUT" })
                 : X.A.ready.measure(() => {
                       _.Ay.Emitter.batched(() => {
                           let t = (e = X.A.hydrateReady.measure(() =>
@@ -2631,41 +3392,41 @@ t1(
                                       let { users: i, private_channels: r, merged_members: s, guilds: a, ...o } = e;
                                       null != H.A.database() &&
                                           !1 === n.databaseOk &&
-                                          tV.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
-                                          (tB = l().keyBy(i, (e) => e.id)),
+                                          nt.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
+                                          (ni = l().keyBy(i, (e) => e.id)),
                                           r?.forEach((e) => {
                                               let t = e.recipient_ids;
                                               null != t &&
                                                   (e.recipients = t.map(
                                                       (e) => (
                                                           b()(
-                                                              null != tB[e],
+                                                              null != ni[e],
                                                               "Missing user in compressed ready payload",
                                                           ),
-                                                          tB[e]
+                                                          ni[e]
                                                       ),
                                                   )),
                                                   delete e.recipient_ids;
                                           });
                                       let _ =
                                               a?.map((e, t) =>
-                                                  !0 === e.unavailable ? e : ((e.members = tY(tB, s?.[t])), tW(e)),
+                                                  !0 === e.unavailable ? e : ((e.members = ns(ni, s?.[t])), na(e)),
                                               ) ?? [],
-                                          d = tH(t, a, (e) => tW(e));
+                                          d = nr(t, a, (e) => na(e));
                                       return (
                                           null != d && _.push(d),
                                           { ...o, users: i, presences: [], guilds: _, private_channels: r ?? [] }
                                       );
-                                  })(e, tu.identifyStartTime, n),
-                              )).private_channels.map((e) => (0, tD.UE)(e)),
+                                  })(e, tG.identifyStartTime, n),
+                              )).private_channels.map((e) => (0, t0.UE)(e)),
                               i = e.guilds
                                   .filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted)
                                   .map((e) => e.id),
                               r = e.guilds.filter((e) => !0 !== e.unavailable),
                               s = e.guilds.filter((e) => !0 === e.geo_restricted),
-                              a = null == e.user_settings_proto ? void 0 : (0, ty.Gd)(e.user_settings_proto);
+                              a = null == e.user_settings_proto ? void 0 : (0, tZ.Gd)(e.user_settings_proto);
                           X.A.dispatchReady.measure(() => {
-                              t3({
+                              nI({
                                   type: "CONNECTION_OPEN",
                                   sessionId: e.session_id,
                                   authSessionIdHash: e.auth_session_id_hash,
@@ -2688,7 +3449,7 @@ t1(
                                   apexExperiments: e.apex_experiments ?? void 0,
                                   requiredAction: e.required_action,
                                   consents: e.consents,
-                                  sessions: t7(e.sessions ?? []),
+                                  sessions: nS(e.sessions ?? []),
                                   pendingPayments: e.pending_payments,
                                   countryCode: e.country_code ?? void 0,
                                   guildJoinRequests: e.guild_join_requests ?? [],
@@ -2704,49 +3465,49 @@ t1(
                               });
                           }),
                               null != e.auth_token &&
-                                  t3({ type: "UPDATE_TOKEN", token: e.auth_token, userId: e.user.id }),
+                                  nI({ type: "UPDATE_TOKEN", token: e.auth_token, userId: e.user.id }),
                               null != e.ad_personalization_toggles_disabled &&
-                                  t3({
+                                  nI({
                                       type: "AD_PERSONALIZATION_TOGGLES_RESTRICTED",
                                       disabled: e.ad_personalization_toggles_disabled,
                                   }),
-                              tc.update(),
-                              tE.update();
+                              tx.update(),
+                              tV.update();
                       });
                   });
         },
     ),
-    t0(["STATE_UPDATE"], (e) => {
-        t3({ type: "CONNECTION_OPEN_STATE_UPDATE", apexExperiments: e.apex_experiments ?? void 0 });
+    nf(["STATE_UPDATE"], (e) => {
+        nI({ type: "CONNECTION_OPEN_STATE_UPDATE", apexExperiments: e.apex_experiments ?? void 0 });
     }),
-    t0(["EXPERIMENT_SESSION_OVERRIDE_CREATE"], (e) => {
+    nf(["EXPERIMENT_SESSION_OVERRIDE_CREATE"], (e) => {
         u.h.dispatch({
             type: "APEX_EXPERIMENT_SESSION_OVERRIDE_CREATE",
             experimentName: e.experiment_name,
             variantId: e.variant_id,
         });
     }),
-    t0(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (e) => {
+    nf(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (e) => {
         u.h.dispatch({ type: "APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE", experimentName: e.experiment_name });
     }),
-    t0(["RESUMED"], () => {
-        tc.forceUpdate(), tE.forceUpdate(), t3({ type: "CONNECTION_RESUMED" });
+    nf(["RESUMED"], () => {
+        tx.forceUpdate(), tV.forceUpdate(), nI({ type: "CONNECTION_RESUMED" });
     }),
-    t0(["TYPING_START"], (e) => {
-        null != e.member && t6(e.guild_id, e.member.user, e.member),
-            t3({ type: "TYPING_START", channelId: e.channel_id, userId: e.user_id });
+    nf(["TYPING_START"], (e) => {
+        null != e.member && np(e.guild_id, e.member.user, e.member),
+            nI({ type: "TYPING_START", channelId: e.channel_id, userId: e.user_id });
     }),
-    t0(["GUILD_RING_START"], (e) => {
-        t3({ type: "GUILD_RING_START", ongoingRings: e.ongoing_rings, channelId: e.channel_id, guildId: e.guild_id });
+    nf(["GUILD_RING_START"], (e) => {
+        nI({ type: "GUILD_RING_START", ongoingRings: e.ongoing_rings, channelId: e.channel_id, guildId: e.guild_id });
     }),
-    t0(["GUILD_RING_STOP"], (e) => {
-        t3({ type: "GUILD_RING_STOP", ringing: e.ringing, channelId: e.channel_id, guildId: e.guild_id });
+    nf(["GUILD_RING_STOP"], (e) => {
+        nI({ type: "GUILD_RING_STOP", ringing: e.ringing, channelId: e.channel_id, guildId: e.guild_id });
     }),
-    t0(["ACTIVITY_START"], (e) => {
-        t3({ type: "ACTIVITY_START", userId: e.user_id, activity: e.activity });
+    nf(["ACTIVITY_START"], (e) => {
+        nI({ type: "ACTIVITY_START", userId: e.user_id, activity: e.activity });
     }),
-    t0(["ACTIVITY_USER_ACTION"], (e) => {
-        t3({
+    nf(["ACTIVITY_USER_ACTION"], (e) => {
+        nI({
             type: "ACTIVITY_USER_ACTION",
             actionType: e.action_type,
             user: e.user,
@@ -2755,13 +3516,13 @@ t1(
             messageId: e.message_id,
         });
     }),
-    t1(
+    ng(
         ["MESSAGE_CREATE"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            t4(e),
+            nT(e),
                 null != e.author &&
-                    t3({
+                    nI({
                         type: "MESSAGE_CREATE",
                         guildId: e.guild_id,
                         channelId: e.channel_id,
@@ -2771,32 +3532,32 @@ t1(
                     });
         },
     ),
-    t1(
+    ng(
         ["MESSAGE_UPDATE"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            t4(e), t3({ type: "MESSAGE_UPDATE", guildId: e.guild_id, message: e });
+            nT(e), nI({ type: "MESSAGE_UPDATE", guildId: e.guild_id, message: e });
         },
     ),
-    t1(
+    ng(
         ["MESSAGE_DELETE"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            t3({ type: "MESSAGE_DELETE", guildId: e.guild_id, id: e.id, channelId: e.channel_id });
+            nI({ type: "MESSAGE_DELETE", guildId: e.guild_id, id: e.id, channelId: e.channel_id });
         },
     ),
-    t1(
+    ng(
         ["MESSAGE_DELETE_BULK"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            t3({ type: "MESSAGE_DELETE_BULK", guildId: e.guild_id, ids: e.ids, channelId: e.channel_id });
+            nI({ type: "MESSAGE_DELETE_BULK", guildId: e.guild_id, ids: e.ids, channelId: e.channel_id });
         },
     ),
-    t1(
+    ng(
         ["MESSAGE_ACK"],
-        (e) => A.D.loadGuildFromChannelId(e.channel_id),
+        (e) => I.D.loadGuildFromChannelId(e.channel_id),
         (e) => {
-            t3({
+            nI({
                 type: "MESSAGE_ACK",
                 channelId: e.channel_id,
                 messageId: e.message_id,
@@ -2806,83 +3567,83 @@ t1(
             });
         },
     ),
-    t0(["GUILD_FEATURE_ACK"], (e) => {
-        t3({ type: "GUILD_FEATURE_ACK", id: e.resource_id, ackType: e.ack_type, ackedId: e.entity_id });
+    nf(["GUILD_FEATURE_ACK"], (e) => {
+        nI({ type: "GUILD_FEATURE_ACK", id: e.resource_id, ackType: e.ack_type, ackedId: e.entity_id });
     }),
-    t0(["USER_NON_CHANNEL_ACK"], (e) => {
-        t3({ type: "USER_NON_CHANNEL_ACK", ackType: e.ack_type, ackedId: e.entity_id });
+    nf(["USER_NON_CHANNEL_ACK"], (e) => {
+        nI({ type: "USER_NON_CHANNEL_ACK", ackType: e.ack_type, ackedId: e.entity_id });
     }),
-    t1(
+    ng(
         ["CHANNEL_PINS_ACK"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            t3({ type: "CHANNEL_PINS_ACK", channelId: e.channel_id, timestamp: e.timestamp, version: e.version });
+            nI({ type: "CHANNEL_PINS_ACK", channelId: e.channel_id, timestamp: e.timestamp, version: e.version });
         },
     ),
-    t1(
+    ng(
         ["CHANNEL_PINS_UPDATE"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            t3({ type: "CHANNEL_PINS_UPDATE", channelId: e.channel_id, lastPinTimestamp: e.last_pin_timestamp });
+            nI({ type: "CHANNEL_PINS_UPDATE", channelId: e.channel_id, lastPinTimestamp: e.last_pin_timestamp });
         },
     ),
-    t1(
+    ng(
         ["CHANNEL_CREATE", "CHANNEL_DELETE"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e, t) => {
-            t3({ type: t, channel: (0, tD.UE)(e) });
+            nI({ type: t, channel: (0, t0.UE)(e) });
         },
     ),
-    t0(["VOICE_CHANNEL_STATUS_UPDATE"], (e, t) => {
-        t3({ type: t, id: e.id, guildId: e.guild_id, status: e.status });
+    nf(["VOICE_CHANNEL_STATUS_UPDATE"], (e, t) => {
+        nI({ type: t, id: e.id, guildId: e.guild_id, status: e.status });
     }),
-    t0(["VOICE_CHANNEL_START_TIME_UPDATE"], (e, t) => {
-        t3({ type: t, id: e.id, guildId: e.guild_id, voiceStartTime: e.voice_start_time ?? void 0 });
+    nf(["VOICE_CHANNEL_START_TIME_UPDATE"], (e, t) => {
+        nI({ type: t, id: e.id, guildId: e.guild_id, voiceStartTime: e.voice_start_time ?? void 0 });
     }),
-    t0(["CHANNEL_INFO"], (e, t) => {
-        t3({
+    nf(["CHANNEL_INFO"], (e, t) => {
+        nI({
             type: t,
             guildId: e.guild_id,
             channels: e.channels.map((e) => ({ id: e.id, status: e.status, voiceStartTime: e.voice_start_time })),
         });
     }),
-    t0(["CHANNEL_MEMBER_COUNT_UPDATE"], (e, t) => {
-        t3({ type: t, guildId: e.guild_id, channelId: e.channel_id, online: e.presence_count, total: e.member_count });
+    nf(["CHANNEL_MEMBER_COUNT_UPDATE"], (e, t) => {
+        nI({ type: t, guildId: e.guild_id, channelId: e.channel_id, online: e.presence_count, total: e.member_count });
     }),
-    t1(
+    ng(
         ["CHANNEL_UPDATE"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            tq.add(e);
+            nu.add(e);
         },
     ),
-    t1(
+    ng(
         ["THREAD_CREATE", "THREAD_UPDATE", "THREAD_DELETE"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n, ...i } = e;
-            t3({ type: t, isNewlyCreated: n, channel: (0, tD.UE)(i) });
+            nI({ type: t, isNewlyCreated: n, channel: (0, t0.UE)(i) });
         },
     ),
-    t1(
+    ng(
         ["THREAD_LIST_SYNC"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            t3({
+            nI({
                 type: "THREAD_LIST_SYNC",
                 guildId: e.guild_id,
                 threads: e.threads.map((e) => {
-                    let t = A.A.getChannel(e.parent_id);
-                    return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, tD.UE)(e);
+                    let t = I.A.getChannel(e.parent_id);
+                    return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, t0.UE)(e);
                 }),
                 mostRecentMessages: e.most_recent_messages,
-                members: e.members ? l().map(e.members, tC.A) : void 0,
+                members: e.members ? l().map(e.members, tJ.A) : void 0,
                 channelIds: e.channel_ids,
             });
         },
     ),
-    t0(["THREAD_MEMBER_UPDATE"], (e) => {
-        t3({
+    nf(["THREAD_MEMBER_UPDATE"], (e) => {
+        nI({
             type: "THREAD_MEMBER_UPDATE",
             id: e.id,
             guildId: e.guild_id,
@@ -2893,8 +3654,8 @@ t1(
             joinTimestamp: e.join_timestamp,
         });
     }),
-    t0(["THREAD_MEMBERS_UPDATE"], (e) => {
-        t3({
+    nf(["THREAD_MEMBERS_UPDATE"], (e) => {
+        nI({
             type: "THREAD_MEMBERS_UPDATE",
             id: e.id,
             guildId: e.guild_id,
@@ -2910,30 +3671,30 @@ t1(
             memberIdsPreview: e.member_ids_preview,
         });
     }),
-    t0(["FORUM_UNREADS"], (e) => {
+    nf(["FORUM_UNREADS"], (e) => {
         e.permission_denied ||
-            t3({
+            nI({
                 type: "FORUM_UNREADS",
                 channelId: e.channel_id,
                 threads: e.threads.map((e) => ({ threadId: e.thread_id, missing: e.missing, count: e.count })),
             });
     }),
-    t0(["SOUNDBOARD_SOUNDS"], (e) => {
-        tX.add(e);
+    nf(["SOUNDBOARD_SOUNDS"], (e) => {
+        nc.add(e);
     }),
-    t0(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
-        let n = A.A.getBasicChannel(e.channel_id);
-        t3({ type: t, channelId: e.channel_id, user: e.user, nick: e.nick, isMember: null != n });
+    nf(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
+        let n = I.A.getBasicChannel(e.channel_id);
+        nI({ type: t, channelId: e.channel_id, user: e.user, nick: e.nick, isMember: null != n });
     }),
-    t1(
+    ng(
         ["GUILD_CREATE"],
-        (e) => ("full" === e.data_mode ? null : A.D.loadGuildIds([e.id])),
+        (e) => ("full" === e.data_mode ? null : I.D.loadGuildIds([e.id])),
         (e) => {
-            if (e.unavailable) t3({ type: "GUILD_UNAVAILABLE", guildId: e.id });
+            if (e.unavailable) nI({ type: "GUILD_UNAVAILABLE", guildId: e.id });
             else {
-                let t = tK(e);
-                t3({ type: "GUILD_CREATE", guild: t }),
-                    t3({
+                let t = no(e);
+                nI({ type: "GUILD_CREATE", guild: t }),
+                    nI({
                         type: "VOICE_STATE_UPDATES",
                         voiceStates: t.voice_states.map((e) => ({
                             userId: e.user_id,
@@ -2955,11 +3716,11 @@ t1(
             }
         },
     ),
-    t0(["GUILD_UPDATE"], (e) => {
-        t3({ type: "GUILD_UPDATE", guild: e }), e.unavailable && t3({ type: "GUILD_UNAVAILABLE", guildId: e.id });
+    nf(["GUILD_UPDATE"], (e) => {
+        nI({ type: "GUILD_UPDATE", guild: e }), e.unavailable && nI({ type: "GUILD_UNAVAILABLE", guildId: e.id });
     }),
-    t0(["GUILD_PRUNE_UPDATE"], (e) => {
-        t3({
+    nf(["GUILD_PRUNE_UPDATE"], (e) => {
+        nI({
             type: "GUILD_PRUNE_UPDATE",
             guildId: e.guild_id,
             prune: {
@@ -2971,37 +3732,37 @@ t1(
             },
         });
     }),
-    t0(["GUILD_BULK_BAN_UPDATE"], (e) => {
-        t3({
+    nf(["GUILD_BULK_BAN_UPDATE"], (e) => {
+        nI({
             type: "GUILD_BULK_BAN_UPDATE",
             guildId: e.guild_id,
             bulkBan: { bannedUsers: e.bulk_ban?.banned_users ?? [], failedUsers: e.bulk_ban?.failed_users ?? [] },
         });
     }),
-    t0(["GUILD_DELETE"], (e) => {
-        t3({ type: "GUILD_DELETE", guild: e }),
+    nf(["GUILD_DELETE"], (e) => {
+        nI({ type: "GUILD_DELETE", guild: e }),
             e.geo_restricted
-                ? t3({ type: "GUILD_GEO_RESTRICTED", guildId: e.id, icon: e.icon, name: e.name })
-                : e.unavailable && t3({ type: "GUILD_UNAVAILABLE", guildId: e.id });
+                ? nI({ type: "GUILD_GEO_RESTRICTED", guildId: e.id, icon: e.icon, name: e.name })
+                : e.unavailable && nI({ type: "GUILD_UNAVAILABLE", guildId: e.id });
     }),
-    t0(["GUILD_MEMBERS_CHUNK"], (e) => {
+    nf(["GUILD_MEMBERS_CHUNK"], (e) => {
         _.Ay.Emitter.batched(() => {
-            tQ.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
-                null != e.presences && t5(e.presences, e.guild_id).forEach(t9),
-                ep.flush("GUILD_MEMBERS_CHUNK");
+            nE.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
+                null != e.presences && nN(e.presences, e.guild_id).forEach(nR),
+                ej.flush("GUILD_MEMBERS_CHUNK");
         });
     }),
-    t0(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
+    nf(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
         _.Ay.Emitter.batched(() => {
-            t3({ type: "THREAD_MEMBER_LIST_UPDATE", guildId: e.guild_id, threadId: e.thread_id, members: e.members }),
-                null != e.presences && t5(e.presences, e.guild_id).forEach(t9),
-                ep.flush();
+            nI({ type: "THREAD_MEMBER_LIST_UPDATE", guildId: e.guild_id, threadId: e.thread_id, members: e.members }),
+                null != e.presences && nN(e.presences, e.guild_id).forEach(nR),
+                ej.flush();
         });
     }),
-    t0(
+    nf(
         ["GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "GUILD_MEMBER_ADD", "GUILD_MEMBER_UPDATE", "GUILD_MEMBER_REMOVE"],
         (e, t) => {
-            t3({
+            nI({
                 type: t,
                 guildId: e.guild_id,
                 user: e.user,
@@ -3015,45 +3776,45 @@ t1(
                 communicationDisabledUntil: e.communication_disabled_until,
                 unusualDMActivityUntil: e.unusual_dm_activity_until,
                 flags: e.flags,
-                collectibles: (0, tg.t)(e.collectibles),
-                displayNameStyles: (0, tI.mT)(e.display_name_styles),
+                collectibles: (0, tY.t)(e.collectibles),
+                displayNameStyles: (0, tW.mT)(e.display_name_styles),
             });
         },
     ),
-    t1(
+    ng(
         ["GUILD_ROLE_CREATE", "GUILD_ROLE_UPDATE"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e, t) => {
-            t3({ type: t, guildId: e.guild_id, role: e.role });
+            nI({ type: t, guildId: e.guild_id, role: e.role });
         },
     ),
-    t1(
+    ng(
         ["GUILD_ROLE_DELETE"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            t3({ type: "GUILD_ROLE_DELETE", guildId: e.guild_id, roleId: e.role_id, version: e.version });
+            nI({ type: "GUILD_ROLE_DELETE", guildId: e.guild_id, roleId: e.role_id, version: e.version });
         },
     ),
-    t0(["GUILD_EMOJIS_UPDATE"], (e) => {
-        t3({ type: "GUILD_EMOJIS_UPDATE", guildId: e.guild_id, emojis: e.emojis });
+    nf(["GUILD_EMOJIS_UPDATE"], (e) => {
+        nI({ type: "GUILD_EMOJIS_UPDATE", guildId: e.guild_id, emojis: e.emojis });
     }),
-    t0(["GUILD_STICKERS_UPDATE"], (e) => {
-        t3({ type: "GUILD_STICKERS_UPDATE", guildId: e.guild_id, stickers: e.stickers });
+    nf(["GUILD_STICKERS_UPDATE"], (e) => {
+        nI({ type: "GUILD_STICKERS_UPDATE", guildId: e.guild_id, stickers: e.stickers });
     }),
-    t0(["GUILD_INTEGRATIONS_UPDATE"], (e) => {
-        t3({ type: "GUILD_INTEGRATIONS_UPDATE", guildId: e.guild_id });
+    nf(["GUILD_INTEGRATIONS_UPDATE"], (e) => {
+        nI({ type: "GUILD_INTEGRATIONS_UPDATE", guildId: e.guild_id });
     }),
-    t0(["INTEGRATION_CREATE"], (e) => {
-        t3({ type: "INTEGRATION_CREATE", application: e.application, guildId: e.guild_id });
+    nf(["INTEGRATION_CREATE"], (e) => {
+        nI({ type: "INTEGRATION_CREATE", application: e.application, guildId: e.guild_id });
     }),
-    t0(["INTEGRATION_DELETE"], (e) => {
-        t3({ type: "INTEGRATION_DELETE", applicationId: e.application_id, guildId: e.guild_id });
+    nf(["INTEGRATION_DELETE"], (e) => {
+        nI({ type: "INTEGRATION_DELETE", applicationId: e.application_id, guildId: e.guild_id });
     }),
-    t0(["USER_UPDATE"], (e) => {
-        t3({ type: "CURRENT_USER_UPDATE", user: e });
+    nf(["USER_UPDATE"], (e) => {
+        nI({ type: "CURRENT_USER_UPDATE", user: e });
     }),
-    t0(["USER_SETTINGS_PROTO_UPDATE"], (e) => {
-        let t = (0, ty.Y5)(e.settings.type, e.settings.proto);
+    nf(["USER_SETTINGS_PROTO_UPDATE"], (e) => {
+        let t = (0, tZ.Y5)(e.settings.type, e.settings.proto);
         if (null != t) {
             if ("string" == typeof t)
                 throw (
@@ -3061,27 +3822,27 @@ t1(
                     console.error({ parsed: t, wire: e.settings.proto, type: e.settings.type }),
                     Error("UserSettingsProto must not be a string"))
                 );
-            t3({
+            nI({
                 type: "USER_SETTINGS_PROTO_UPDATE",
                 settings: { proto: t, type: e.settings.type },
                 partial: e.partial,
             });
         }
     }),
-    t0(["USER_GUILD_SETTINGS_UPDATE"], (e) => {
-        t3({ type: "USER_GUILD_SETTINGS_FULL_UPDATE", userGuildSettings: [e] });
+    nf(["USER_GUILD_SETTINGS_UPDATE"], (e) => {
+        nI({ type: "USER_GUILD_SETTINGS_FULL_UPDATE", userGuildSettings: [e] });
     }),
-    t0(["USER_CONNECTIONS_UPDATE"], () => {
-        t3({ type: "USER_CONNECTIONS_UPDATE" });
+    nf(["USER_CONNECTIONS_UPDATE"], () => {
+        nI({ type: "USER_CONNECTIONS_UPDATE" });
     }),
-    t0(["USER_REQUIRED_ACTION_UPDATE"], (e) => {
-        t3({ type: "USER_REQUIRED_ACTION_UPDATE", requiredAction: e.required_action });
+    nf(["USER_REQUIRED_ACTION_UPDATE"], (e) => {
+        nI({ type: "USER_REQUIRED_ACTION_UPDATE", requiredAction: e.required_action });
     }),
-    t0(["USER_NOTE_UPDATE"], (e) => {
-        t3({ type: "USER_NOTE_UPDATE", ...e });
+    nf(["USER_NOTE_UPDATE"], (e) => {
+        nI({ type: "USER_NOTE_UPDATE", ...e });
     }),
-    t0(["RELATIONSHIP_ADD"], (e) => {
-        t3({
+    nf(["RELATIONSHIP_ADD"], (e) => {
+        nI({
             type: "RELATIONSHIP_ADD",
             relationship: {
                 id: e.id,
@@ -3098,11 +3859,11 @@ t1(
             shouldNotify: !0 === e.should_notify,
         });
     }),
-    t0(["RELATIONSHIP_REMOVE"], (e) => {
-        t3({ type: "RELATIONSHIP_REMOVE", relationship: e });
+    nf(["RELATIONSHIP_REMOVE"], (e) => {
+        nI({ type: "RELATIONSHIP_REMOVE", relationship: e });
     }),
-    t0(["RELATIONSHIP_UPDATE"], (e) => {
-        t3({
+    nf(["RELATIONSHIP_UPDATE"], (e) => {
+        nI({
             type: "RELATIONSHIP_UPDATE",
             relationship: {
                 id: e.id,
@@ -3118,8 +3879,8 @@ t1(
             },
         });
     }),
-    t0(["GAME_RELATIONSHIP_ADD"], (e) => {
-        t3({
+    nf(["GAME_RELATIONSHIP_ADD"], (e) => {
+        nI({
             type: "GAME_RELATIONSHIP_ADD",
             gameRelationship: {
                 id: e.id,
@@ -3131,26 +3892,26 @@ t1(
             },
         });
     }),
-    t0(["GAME_RELATIONSHIP_REMOVE"], (e) => {
-        t3({ type: "GAME_RELATIONSHIP_REMOVE", userId: e.id, applicationId: e.application_id });
+    nf(["GAME_RELATIONSHIP_REMOVE"], (e) => {
+        nI({ type: "GAME_RELATIONSHIP_REMOVE", userId: e.id, applicationId: e.application_id });
     }),
-    t0(["PRESENCE_UPDATE"], (e) => {
-        t9(t8(e, e.guild_id));
+    nf(["PRESENCE_UPDATE"], (e) => {
+        nR(nO(e, e.guild_id));
     }),
-    t0(["PRESENCES_REPLACE"], (e) => {
-        t3({ type: "PRESENCES_REPLACE", presences: t5(e, void 0) });
+    nf(["PRESENCES_REPLACE"], (e) => {
+        nI({ type: "PRESENCES_REPLACE", presences: nN(e, void 0) });
     }),
-    t0(["SESSIONS_REPLACE"], (e) => {
-        t3({ type: "SESSIONS_REPLACE", sessions: t7(e) });
+    nf(["SESSIONS_REPLACE"], (e) => {
+        nI({ type: "SESSIONS_REPLACE", sessions: nS(e) });
     }),
-    t0(["VOICE_STATE_UPDATE"], (e) => {
-        t2([e]);
+    nf(["VOICE_STATE_UPDATE"], (e) => {
+        nA([e]);
     }),
-    t0(["VOICE_STATE_UPDATE_BATCH"], (e) => {
-        t2(e.voice_states);
+    nf(["VOICE_STATE_UPDATE_BATCH"], (e) => {
+        nA(e.voice_states);
     }),
-    t0(["VOICE_SERVER_UPDATE"], (e) => {
-        t3({
+    nf(["VOICE_SERVER_UPDATE"], (e) => {
+        nI({
             type: "VOICE_SERVER_UPDATE",
             guildId: e.guild_id,
             channelId: e.channel_id,
@@ -3158,8 +3919,8 @@ t1(
             token: e.token,
         });
     }),
-    t0(["CALL_CREATE"], (e) => {
-        t3({
+    nf(["CALL_CREATE"], (e) => {
+        nI({
             type: "CALL_CREATE",
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -3168,7 +3929,7 @@ t1(
         });
         let t = e.voice_states;
         null != t &&
-            t3({
+            nI({
                 type: "VOICE_STATE_UPDATES",
                 voiceStates: t.map((e) => ({
                     userId: e.user_id,
@@ -3188,8 +3949,8 @@ t1(
                 })),
             });
     }),
-    t0(["CALL_UPDATE"], (e) => {
-        t3({
+    nf(["CALL_UPDATE"], (e) => {
+        nI({
             type: "CALL_UPDATE",
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -3197,38 +3958,38 @@ t1(
             ongoingRings: e.ongoing_rings,
         });
     }),
-    t0(["CALL_DELETE"], (e) => {
-        t3({ type: "CALL_DELETE", channelId: e.channel_id, unavailable: e.unavailable });
+    nf(["CALL_DELETE"], (e) => {
+        nI({ type: "CALL_DELETE", channelId: e.channel_id, unavailable: e.unavailable });
     }),
-    t0(["OAUTH2_TOKEN_CREATE"], (e) => {
-        t3({ type: "OAUTH2_TOKEN_CREATE", id: e.id, scopes: e.scopes, application: e.application });
+    nf(["OAUTH2_TOKEN_CREATE"], (e) => {
+        nI({ type: "OAUTH2_TOKEN_CREATE", id: e.id, scopes: e.scopes, application: e.application });
     }),
-    t0(["OAUTH2_TOKEN_DELETE"], (e) => {
-        t3({ type: "OAUTH2_TOKEN_DELETE", id: e.id, applicationId: e.application_id });
+    nf(["OAUTH2_TOKEN_DELETE"], (e) => {
+        nI({ type: "OAUTH2_TOKEN_DELETE", id: e.id, applicationId: e.application_id });
     }),
-    t0(["OAUTH2_TOKEN_REVOKE"], (e) => {
-        t3({ type: "OAUTH2_TOKEN_REVOKE", accessToken: e.access_token });
+    nf(["OAUTH2_TOKEN_REVOKE"], (e) => {
+        nI({ type: "OAUTH2_TOKEN_REVOKE", accessToken: e.access_token });
     }),
-    t0(["RECENT_MENTION_DELETE"], (e) => {
-        t3({ type: "RECENT_MENTION_DELETE", id: e.message_id });
+    nf(["RECENT_MENTION_DELETE"], (e) => {
+        nI({ type: "RECENT_MENTION_DELETE", id: e.message_id });
     }),
-    t0(["SAVED_MESSAGE_CREATE"], (e) => {
-        t3({ type: "SAVED_MESSAGE_CREATE", savedMessage: (0, tR.iz)(e) });
+    nf(["SAVED_MESSAGE_CREATE"], (e) => {
+        nI({ type: "SAVED_MESSAGE_CREATE", savedMessage: (0, tQ.iz)(e) });
     }),
-    t0(["SAVED_MESSAGE_DELETE"], (e) => {
-        t3({ type: "SAVED_MESSAGE_DELETE", savedMessageData: (0, tR.x6)(e) });
+    nf(["SAVED_MESSAGE_DELETE"], (e) => {
+        nI({ type: "SAVED_MESSAGE_DELETE", savedMessageData: (0, tQ.x6)(e) });
     }),
-    t0(["FRIEND_SUGGESTION_CREATE"], (e) => {
-        t3({ type: "FRIEND_SUGGESTION_CREATE", suggestion: e });
+    nf(["FRIEND_SUGGESTION_CREATE"], (e) => {
+        nI({ type: "FRIEND_SUGGESTION_CREATE", suggestion: e });
     }),
-    t0(["FRIEND_SUGGESTION_DELETE"], (e) => {
-        t3({ type: "FRIEND_SUGGESTION_DELETE", suggestedUserId: e.suggested_user_id });
+    nf(["FRIEND_SUGGESTION_DELETE"], (e) => {
+        nI({ type: "FRIEND_SUGGESTION_DELETE", suggestedUserId: e.suggested_user_id });
     }),
-    t0(["WEBHOOKS_UPDATE"], (e) => {
-        t3({ type: "WEBHOOKS_UPDATE", guildId: e.guild_id, channelId: e.channel_id });
+    nf(["WEBHOOKS_UPDATE"], (e) => {
+        nI({ type: "WEBHOOKS_UPDATE", guildId: e.guild_id, channelId: e.channel_id });
     }),
-    t0(["MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE"], (e, t) => {
-        t3({
+    nf(["MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE"], (e, t) => {
+        nI({
             type: t,
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -3239,70 +4000,70 @@ t1(
             messageAuthorId: e.message_author_id,
         });
     }),
-    t0(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (e, t) => {
-        t3({
+    nf(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (e, t) => {
+        nI({
             type: "MESSAGE_POLL_VOTE_ADD" === t ? "MESSAGE_REACTION_ADD" : "MESSAGE_REACTION_REMOVE",
             channelId: e.channel_id,
             messageId: e.message_id,
             userId: e.user_id,
             emoji: { id: e.answer_id, name: "" },
-            reactionType: tT.v.VOTE,
+            reactionType: t$.v.VOTE,
         });
     }),
-    t0(["MESSAGE_POLL_VOTE_ADD_MANY"], (e) => {
-        t3({
+    nf(["MESSAGE_POLL_VOTE_ADD_MANY"], (e) => {
+        nI({
             type: "MESSAGE_REACTION_ADD_MANY",
             channelId: e.channel_id,
             messageId: e.message_id,
-            reactions: e.votes.map((e) => ({ ...e, emoji: { id: e.answer_id, name: "" }, reactionType: tT.v.VOTE })),
+            reactions: e.votes.map((e) => ({ ...e, emoji: { id: e.answer_id, name: "" }, reactionType: t$.v.VOTE })),
         });
     }),
-    t0(["MESSAGE_REACTION_REMOVE_ALL"], (e) => {
-        t3({ type: "MESSAGE_REACTION_REMOVE_ALL", channelId: e.channel_id, messageId: e.message_id });
+    nf(["MESSAGE_REACTION_REMOVE_ALL"], (e) => {
+        nI({ type: "MESSAGE_REACTION_REMOVE_ALL", channelId: e.channel_id, messageId: e.message_id });
     }),
-    t0(["MESSAGE_REACTION_REMOVE_EMOJI"], (e) => {
-        t3({ type: "MESSAGE_REACTION_REMOVE_EMOJI", channelId: e.channel_id, messageId: e.message_id, emoji: e.emoji });
+    nf(["MESSAGE_REACTION_REMOVE_EMOJI"], (e) => {
+        nI({ type: "MESSAGE_REACTION_REMOVE_EMOJI", channelId: e.channel_id, messageId: e.message_id, emoji: e.emoji });
     }),
-    t0(["MESSAGE_REACTION_ADD_MANY"], (e) => {
-        t3({
+    nf(["MESSAGE_REACTION_ADD_MANY"], (e) => {
+        nI({
             type: "MESSAGE_REACTION_ADD_MANY",
             channelId: e.channel_id,
             messageId: e.message_id,
             reactions: e.reactions,
         });
     }),
-    t0(["PAYMENT_UPDATE"], (e) => {
-        t3({ type: "PAYMENT_UPDATE", payment: e });
+    nf(["PAYMENT_UPDATE"], (e) => {
+        nI({ type: "PAYMENT_UPDATE", payment: e });
     }),
-    t0(["ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE"], (e, t) => {
-        t3({ type: t, entitlement: e });
+    nf(["ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE"], (e, t) => {
+        nI({ type: t, entitlement: e });
     }),
-    t0(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        (tP.A.hasLayers() || null != tb.A.getSection()) && (n(323082).$o(), th.jv(tU.A.getFetchedSKUIDs()));
+    nf(["USER_PAYMENT_SOURCES_UPDATE"], () => {
+        (t6.A.hasLayers() || null != t4.A.getSection()) && (n(323082).$o(), tF.jv(t5.A.getFetchedSKUIDs()));
     }),
-    t0(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-        tm.rQ(), (tP.A.hasLayers() || null != tb.A.getSection()) && n(323082).hP();
+    nf(["USER_SUBSCRIPTIONS_UPDATE"], () => {
+        tB.rQ(), (t6.A.hasLayers() || null != t4.A.getSection()) && n(323082).hP();
     }),
-    t0(["WISHLIST_ITEM_PURCHASED"], (e) => {
-        t3({ type: "WISHLIST_ITEM_PURCHASED", recipientId: e.recipient_id, skuId: e.sku_id });
+    nf(["WISHLIST_ITEM_PURCHASED"], (e) => {
+        nI({ type: "WISHLIST_ITEM_PURCHASED", recipientId: e.recipient_id, skuId: e.sku_id });
     }),
-    t0(["USER_BADGE_STATE_UPDATE"], (e) => {
+    nf(["USER_BADGE_STATE_UPDATE"], (e) => {
         n(682618).o(e.badge_id);
     }),
-    t0(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (e) => {
-        t3({
+    nf(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (e) => {
+        nI({
             type: "GUILD_BOOST_SLOT_CREATE",
-            guildBoostSlot: tL.A.createFromServer(e, tM.A.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: t1.A.createFromServer(e, t8.A.getSubscriptionById(e.subscription_id)),
         });
     }),
-    t0(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], (e) => {
-        t3({
+    nf(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], (e) => {
+        nI({
             type: "GUILD_BOOST_SLOT_UPDATE",
-            guildBoostSlot: tL.A.createFromServer(e, tM.A.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: t1.A.createFromServer(e, t8.A.getSubscriptionById(e.subscription_id)),
         });
     }),
-    t0(["BILLING_POPUP_BRIDGE_CALLBACK"], (e) => {
-        t3({
+    nf(["BILLING_POPUP_BRIDGE_CALLBACK"], (e) => {
+        nI({
             type: "BILLING_POPUP_BRIDGE_CALLBACK",
             paymentSourceType: e.payment_source_type,
             state: e.state,
@@ -3310,28 +4071,28 @@ t1(
             query: e.query,
         });
     }),
-    t0(["USER_PAYMENT_BROWSER_CHECKOUT_DONE"], (e) => {
-        t3({
+    nf(["USER_PAYMENT_BROWSER_CHECKOUT_DONE"], (e) => {
+        nI({
             type: "USER_PAYMENT_BROWSER_CHECKOUT_DONE",
             loadId: e.load_id,
             skuId: e.sku_id,
             skuSubscriptionPlanId: e.sku_subscription_plan_id,
         });
     }),
-    t0(["USER_PAYMENT_CLIENT_ADD"], (e) => {
-        (0, tG.D)().then((t) => {
+    nf(["USER_PAYMENT_CLIENT_ADD"], (e) => {
+        (0, t9.D)().then((t) => {
             let n = e.purchase_token_hash;
-            n === t && t3({ type: "USER_PAYMENT_CLIENT_ADD", purchaseTokenHash: n, expiresAt: e.expires_at });
+            n === t && nI({ type: "USER_PAYMENT_CLIENT_ADD", purchaseTokenHash: n, expiresAt: e.expires_at });
         });
     }),
-    t0(["GUILD_MEMBER_LIST_UPDATE"], (e) => {
+    nf(["GUILD_MEMBER_LIST_UPDATE"], (e) => {
         _.Ay.Emitter.batched(() => {
             let t = (t) => {
                 if (null == t.member) return;
                 let { member: n } = t;
-                if ((t6(e.guild_id, n.user, n), null == n.presence)) return;
+                if ((np(e.guild_id, n.user, n), null == n.presence)) return;
                 let { presence: i } = n;
-                t9(t8(i, e.guild_id));
+                nR(nO(i, e.guild_id));
             };
             e.ops.forEach((e) => {
                 let { op: n, items: i, item: r } = e;
@@ -3344,8 +4105,8 @@ t1(
                         t(r);
                 }
             }),
-                ep.flush(),
-                t3({
+                ej.flush(),
+                nI({
                     type: "GUILD_MEMBER_LIST_UPDATE",
                     guildId: e.guild_id,
                     id: e.id,
@@ -3356,17 +4117,17 @@ t1(
                 });
         });
     }),
-    t0(["GIFT_CODE_UPDATE"], (e) => {
-        t3({ type: "GIFT_CODE_UPDATE", uses: e.uses, code: e.code });
+    nf(["GIFT_CODE_UPDATE"], (e) => {
+        nI({ type: "GIFT_CODE_UPDATE", uses: e.uses, code: e.code });
     }),
-    t0(["GIFT_CODE_CREATE"], (e) => {
-        t3({ type: "GIFT_CODE_CREATE", giftCode: e });
+    nf(["GIFT_CODE_CREATE"], (e) => {
+        nI({ type: "GIFT_CODE_CREATE", giftCode: e });
     }),
-    t0(["LIBRARY_APPLICATION_UPDATE"], (e) => {
-        t3({ type: "LIBRARY_APPLICATION_UPDATE", libraryApplication: e });
+    nf(["LIBRARY_APPLICATION_UPDATE"], (e) => {
+        nI({ type: "LIBRARY_APPLICATION_UPDATE", libraryApplication: e });
     }),
-    t0(["STREAM_CREATE"], (e) => {
-        t3({
+    nf(["STREAM_CREATE"], (e) => {
+        nI({
             type: "STREAM_CREATE",
             streamKey: e.stream_key,
             region: e.region,
@@ -3376,11 +4137,11 @@ t1(
             paused: e.paused,
         });
     }),
-    t0(["STREAM_SERVER_UPDATE"], (e) => {
-        t3({ type: "STREAM_SERVER_UPDATE", streamKey: e.stream_key, endpoint: e.endpoint, token: e.token });
+    nf(["STREAM_SERVER_UPDATE"], (e) => {
+        nI({ type: "STREAM_SERVER_UPDATE", streamKey: e.stream_key, endpoint: e.endpoint, token: e.token });
     }),
-    t0(["STREAM_UPDATE"], (e) => {
-        t3({
+    nf(["STREAM_UPDATE"], (e) => {
+        nI({
             type: "STREAM_UPDATE",
             streamKey: e.stream_key,
             region: e.region,
@@ -3388,11 +4149,11 @@ t1(
             paused: e.paused,
         });
     }),
-    t0(["STREAM_DELETE"], (e) => {
-        t3({ type: "STREAM_DELETE", streamKey: e.stream_key, unavailable: e.unavailable, reason: e.reason });
+    nf(["STREAM_DELETE"], (e) => {
+        nI({ type: "STREAM_DELETE", streamKey: e.stream_key, unavailable: e.unavailable, reason: e.reason });
     }),
-    t0(["GENERIC_PUSH_NOTIFICATION_SENT"], (e) => {
-        t3({
+    nf(["GENERIC_PUSH_NOTIFICATION_SENT"], (e) => {
+        nI({
             type: "GENERIC_PUSH_NOTIFICATION_SENT",
             title: e.title,
             body: e.body,
@@ -3402,8 +4163,8 @@ t1(
             tag: e.tag,
         });
     }),
-    t0(["REACTION_NOTIFICATION_SENT"], (e) => {
-        t3({
+    nf(["REACTION_NOTIFICATION_SENT"], (e) => {
+        nI({
             type: "REACTION_NOTIFICATION_SENT",
             route: e.route,
             message: e.message,
@@ -3415,69 +4176,69 @@ t1(
             icon: e.icon,
         });
     }),
-    t0(["NOTIFICATION_CENTER_ITEM_CREATE"], (e) => {
-        t3({ type: "NOTIFICATION_CENTER_ITEM_CREATE", item: e });
+    nf(["NOTIFICATION_CENTER_ITEM_CREATE"], (e) => {
+        nI({ type: "NOTIFICATION_CENTER_ITEM_CREATE", item: e });
     }),
-    t0(["NOTIFICATION_CENTER_ITEM_DELETE"], (e) => {
-        t3({ type: "NOTIFICATION_CENTER_ITEM_DELETE", id: e.id });
+    nf(["NOTIFICATION_CENTER_ITEM_DELETE"], (e) => {
+        nI({ type: "NOTIFICATION_CENTER_ITEM_DELETE", id: e.id });
     }),
-    t0(["NOTIFICATION_CENTER_ITEMS_ACK"], (e) => {
-        t3({ type: "NOTIFICATION_CENTER_ITEMS_ACK", ids: [e.id], optimistic: !1 });
+    nf(["NOTIFICATION_CENTER_ITEMS_ACK"], (e) => {
+        nI({ type: "NOTIFICATION_CENTER_ITEMS_ACK", ids: [e.id], optimistic: !1 });
     }),
-    t0(["NOTIFICATION_CENTER_ITEM_COMPLETED"], (e) => {
-        t3({ type: "NOTIFICATION_CENTER_ITEM_COMPLETED", item_enum: e.item_enum });
+    nf(["NOTIFICATION_CENTER_ITEM_COMPLETED"], (e) => {
+        nI({ type: "NOTIFICATION_CENTER_ITEM_COMPLETED", item_enum: e.item_enum });
     }),
-    t0(["QUESTS_USER_STATUS_UPDATE"], (e) => {
-        t3({ type: "QUESTS_USER_STATUS_UPDATE", user_status: e.user_status });
+    nf(["QUESTS_USER_STATUS_UPDATE"], (e) => {
+        nI({ type: "QUESTS_USER_STATUS_UPDATE", user_status: e.user_status });
     }),
-    t0(["QUESTS_USER_COMPLETION_UPDATE"], (e) => {
-        t3({ type: "QUESTS_USER_COMPLETION_UPDATE", quest_enrollment_blocked_until: e.quest_enrollment_blocked_until });
+    nf(["QUESTS_USER_COMPLETION_UPDATE"], (e) => {
+        nI({ type: "QUESTS_USER_COMPLETION_UPDATE", quest_enrollment_blocked_until: e.quest_enrollment_blocked_until });
     }),
-    t0(["QUEST_PREVIEW_UPDATE"], (e) => {
-        t3({ type: "QUEST_PREVIEW_UPDATE", quest_id: e.quest_id });
+    nf(["QUEST_PREVIEW_UPDATE"], (e) => {
+        nI({ type: "QUEST_PREVIEW_UPDATE", quest_id: e.quest_id });
     }),
-    t0(["APPLICATION_COMMAND_PERMISSIONS_UPDATE"], (e, t) => {
-        t3({ type: t, guildId: e.guild_id });
+    nf(["APPLICATION_COMMAND_PERMISSIONS_UPDATE"], (e, t) => {
+        nI({ type: t, guildId: e.guild_id });
     }),
-    t0(["GUILD_APPLICATION_COMMAND_INDEX_UPDATE"], (e) => {
-        t3({ type: "GUILD_APPLICATION_COMMAND_INDEX_UPDATE", guildId: e.guild_id, version: e.version });
+    nf(["GUILD_APPLICATION_COMMAND_INDEX_UPDATE"], (e) => {
+        nI({ type: "GUILD_APPLICATION_COMMAND_INDEX_UPDATE", guildId: e.guild_id, version: e.version });
     }),
-    t0(["GUILD_JOIN_REQUEST_CREATE"], (e) => {
-        t3({ type: "GUILD_JOIN_REQUEST_CREATE", request: e.request, status: e.status, guildId: e.guild_id });
+    nf(["GUILD_JOIN_REQUEST_CREATE"], (e) => {
+        nI({ type: "GUILD_JOIN_REQUEST_CREATE", request: e.request, status: e.status, guildId: e.guild_id });
     }),
-    t0(["GUILD_JOIN_REQUEST_UPDATE"], (e) => {
-        t3({ type: "GUILD_JOIN_REQUEST_UPDATE", request: e.request, status: e.status, guildId: e.guild_id });
+    nf(["GUILD_JOIN_REQUEST_UPDATE"], (e) => {
+        nI({ type: "GUILD_JOIN_REQUEST_UPDATE", request: e.request, status: e.status, guildId: e.guild_id });
     }),
-    t0(["GUILD_JOIN_REQUEST_DELETE"], (e) => {
-        t3({ type: "GUILD_JOIN_REQUEST_DELETE", id: e.id, userId: e.user_id, guildId: e.guild_id });
+    nf(["GUILD_JOIN_REQUEST_DELETE"], (e) => {
+        nI({ type: "GUILD_JOIN_REQUEST_DELETE", id: e.id, userId: e.user_id, guildId: e.guild_id });
     }),
-    t0(["INTERACTION_CREATE"], (e) => {
-        t3({ type: "INTERACTION_CREATE", interactionId: e.id, nonce: e.nonce });
+    nf(["INTERACTION_CREATE"], (e) => {
+        nI({ type: "INTERACTION_CREATE", interactionId: e.id, nonce: e.nonce });
     }),
-    t0(["INTERACTION_SUCCESS"], (e) => {
-        t3({ type: "INTERACTION_SUCCESS", interactionId: e.id, nonce: e.nonce });
+    nf(["INTERACTION_SUCCESS"], (e) => {
+        nI({ type: "INTERACTION_SUCCESS", interactionId: e.id, nonce: e.nonce });
     }),
-    t0(["INTERACTION_FAILURE"], (e) => {
-        t3({ type: "INTERACTION_FAILURE", interactionId: e.id, nonce: e.nonce, reasonCode: e.reason_code });
+    nf(["INTERACTION_FAILURE"], (e) => {
+        nI({ type: "INTERACTION_FAILURE", interactionId: e.id, nonce: e.nonce, reasonCode: e.reason_code });
     }),
-    t0(["APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE"], (e) => {
-        t3({ type: "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE", choices: e.choices, nonce: e.nonce });
+    nf(["APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE"], (e) => {
+        nI({ type: "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE", choices: e.choices, nonce: e.nonce });
     }),
-    t0(["INTERACTION_MODAL_CREATE"], (e) => {
-        t3({
+    nf(["INTERACTION_MODAL_CREATE"], (e) => {
+        nI({
             type: "INTERACTION_MODAL_CREATE",
             id: e.id,
             channelId: e.channel_id,
             customId: e.custom_id,
             application: e.application,
             title: e.title,
-            components: (0, tp.ZV)(e.components),
+            components: (0, tj.ZV)(e.components),
             nonce: e.nonce,
             resolved: e.resolved,
         });
     }),
-    t0(["INTERACTION_IFRAME_MODAL_CREATE"], (e) => {
-        t3({
+    nf(["INTERACTION_IFRAME_MODAL_CREATE"], (e) => {
+        nI({
             type: "INTERACTION_IFRAME_MODAL_CREATE",
             id: e.id,
             channelId: e.channel_id,
@@ -3489,38 +4250,38 @@ t1(
             nonce: e.nonce,
         });
     }),
-    t0(["STAGE_INSTANCE_CREATE"], (e) => {
-        t3({ type: "STAGE_INSTANCE_CREATE", instance: e });
+    nf(["STAGE_INSTANCE_CREATE"], (e) => {
+        nI({ type: "STAGE_INSTANCE_CREATE", instance: e });
     }),
-    t0(["STAGE_INSTANCE_UPDATE"], (e) => {
-        t3({ type: "STAGE_INSTANCE_UPDATE", instance: e });
+    nf(["STAGE_INSTANCE_UPDATE"], (e) => {
+        nI({ type: "STAGE_INSTANCE_UPDATE", instance: e });
     }),
-    t0(["STAGE_INSTANCE_DELETE"], (e) => {
-        t3({ type: "STAGE_INSTANCE_DELETE", instance: e });
+    nf(["STAGE_INSTANCE_DELETE"], (e) => {
+        nI({ type: "STAGE_INSTANCE_DELETE", instance: e });
     }),
-    t0(["GUILD_SCHEDULED_EVENT_CREATE"], (e) => {
-        t3({ type: "GUILD_SCHEDULED_EVENT_CREATE", guildScheduledEvent: e });
+    nf(["GUILD_SCHEDULED_EVENT_CREATE"], (e) => {
+        nI({ type: "GUILD_SCHEDULED_EVENT_CREATE", guildScheduledEvent: e });
     }),
-    t0(["GUILD_SCHEDULED_EVENT_UPDATE"], (e) => {
-        t3({ type: "GUILD_SCHEDULED_EVENT_UPDATE", guildScheduledEvent: e });
+    nf(["GUILD_SCHEDULED_EVENT_UPDATE"], (e) => {
+        nI({ type: "GUILD_SCHEDULED_EVENT_UPDATE", guildScheduledEvent: e });
     }),
-    t0(["GUILD_SCHEDULED_EVENT_DELETE"], (e) => {
-        t3({ type: "GUILD_SCHEDULED_EVENT_DELETE", guildScheduledEvent: e });
+    nf(["GUILD_SCHEDULED_EVENT_DELETE"], (e) => {
+        nI({ type: "GUILD_SCHEDULED_EVENT_DELETE", guildScheduledEvent: e });
     }),
-    t0(["GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE"], (e) => {
-        t3({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE", eventException: e });
+    nf(["GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE"], (e) => {
+        nI({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE", eventException: e });
     }),
-    t0(["GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE"], (e) => {
-        t3({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE", eventException: e });
+    nf(["GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE"], (e) => {
+        nI({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE", eventException: e });
     }),
-    t0(["GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE"], (e) => {
-        t3({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE", eventException: e });
+    nf(["GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE"], (e) => {
+        nI({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE", eventException: e });
     }),
-    t0(["GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE"], (e) => {
-        t3({ type: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE", eventId: e.event_id });
+    nf(["GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE"], (e) => {
+        nI({ type: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE", eventId: e.event_id });
     }),
-    t0(["GUILD_SCHEDULED_EVENT_USER_ADD"], (e) => {
-        t3({
+    nf(["GUILD_SCHEDULED_EVENT_USER_ADD"], (e) => {
+        nI({
             type: "GUILD_SCHEDULED_EVENT_USER_ADD",
             userId: e.user_id,
             guildId: e.guild_id,
@@ -3529,8 +4290,8 @@ t1(
             response: e.response,
         });
     }),
-    t0(["GUILD_SCHEDULED_EVENT_USER_REMOVE"], (e) => {
-        t3({
+    nf(["GUILD_SCHEDULED_EVENT_USER_REMOVE"], (e) => {
+        nI({
             type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
             userId: e.user_id,
             guildId: e.guild_id,
@@ -3539,25 +4300,25 @@ t1(
             response: e.response,
         });
     }),
-    t0(["GUILD_DIRECTORY_ENTRY_CREATE"], (e) => {
-        t3({ type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: e.directory_channel_id, entry: e });
+    nf(["GUILD_DIRECTORY_ENTRY_CREATE"], (e) => {
+        nI({ type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: e.directory_channel_id, entry: e });
     }),
-    t0(["GUILD_DIRECTORY_ENTRY_UPDATE"], (e) => {
-        t3({ type: "GUILD_DIRECTORY_ENTRY_UPDATE", channelId: e.directory_channel_id, entry: e });
+    nf(["GUILD_DIRECTORY_ENTRY_UPDATE"], (e) => {
+        nI({ type: "GUILD_DIRECTORY_ENTRY_UPDATE", channelId: e.directory_channel_id, entry: e });
     }),
-    t0(["GUILD_DIRECTORY_ENTRY_DELETE"], (e) => {
-        t3({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId: e.directory_channel_id, guildId: e.entity_id });
+    nf(["GUILD_DIRECTORY_ENTRY_DELETE"], (e) => {
+        nI({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId: e.directory_channel_id, guildId: e.entity_id });
     }),
-    t0(["AUTO_MODERATION_MENTION_RAID_DETECTION"], (e) => {
-        t3({
+    nf(["AUTO_MODERATION_MENTION_RAID_DETECTION"], (e) => {
+        nI({
             type: "AUTO_MODERATION_MENTION_RAID_DETECTION",
             guildId: e.guild_id,
             decisionId: e.decision_id,
             suspiciousMentionActivityUntil: e.suspicious_mention_activity_until,
         });
     }),
-    t0(["VOICE_CHANNEL_EFFECT_SEND"], (e) => {
-        t3({
+    nf(["VOICE_CHANNEL_EFFECT_SEND"], (e) => {
+        nI({
             type: "VOICE_CHANNEL_EFFECT_SEND",
             emoji: e.emoji,
             channelId: e.channel_id,
@@ -3568,8 +4329,8 @@ t1(
             soundVolume: e.sound_volume,
         });
     }),
-    t0(["CLIPS_REMOTE_TRIGGER"], (e) => {
-        t3({
+    nf(["CLIPS_REMOTE_TRIGGER"], (e) => {
+        nI({
             type: "CLIPS_REMOTE_TRIGGER",
             userId: e.user_id,
             applicationId: e.application_id,
@@ -3577,14 +4338,14 @@ t1(
             remoteClipId: e.remote_clip_id,
         });
     }),
-    t0(["GUILD_SOUNDBOARD_SOUND_CREATE"], (e) => {
-        t3({
+    nf(["GUILD_SOUNDBOARD_SOUND_CREATE"], (e) => {
+        nI({
             type: "GUILD_SOUNDBOARD_SOUND_CREATE",
             sound: {
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new tv.A(e.user),
+                user: new t2.A(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -3593,14 +4354,14 @@ t1(
             },
         });
     }),
-    t0(["GUILD_SOUNDBOARD_SOUND_UPDATE"], (e) => {
-        t3({
+    nf(["GUILD_SOUNDBOARD_SOUND_UPDATE"], (e) => {
+        nI({
             type: "GUILD_SOUNDBOARD_SOUND_UPDATE",
             sound: {
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new tv.A(e.user),
+                user: new t2.A(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -3609,11 +4370,11 @@ t1(
             },
         });
     }),
-    t0(["GUILD_SOUNDBOARD_SOUND_DELETE"], (e) => {
-        t3({ type: "GUILD_SOUNDBOARD_SOUND_DELETE", guildId: e.guild_id, soundId: e.sound_id });
+    nf(["GUILD_SOUNDBOARD_SOUND_DELETE"], (e) => {
+        nI({ type: "GUILD_SOUNDBOARD_SOUND_DELETE", guildId: e.guild_id, soundId: e.sound_id });
     }),
-    t0(["GUILD_SOUNDBOARD_SOUNDS_UPDATE"], (e) => {
-        t3({
+    nf(["GUILD_SOUNDBOARD_SOUNDS_UPDATE"], (e) => {
+        nI({
             type: "GUILD_SOUNDBOARD_SOUNDS_UPDATE",
             guildId: e.guild_id,
             soundboardSounds: e.soundboard_sounds.map((t) => ({
@@ -3628,11 +4389,11 @@ t1(
             })),
         });
     }),
-    t1(
+    ng(
         ["EMBEDDED_ACTIVITY_UPDATE_V2"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            t3({
+            nI({
                 type: "EMBEDDED_ACTIVITY_UPDATE_V2",
                 applicationId: e.application_id,
                 launchId: e.launch_id,
@@ -3642,19 +4403,19 @@ t1(
             });
         },
     ),
-    t0(["AUTH_SESSION_CHANGE"], (e) => {
-        t3({ type: "AUTH_SESSION_CHANGE", authSessionIdHash: e.auth_session_id_hash });
+    nf(["AUTH_SESSION_CHANGE"], (e) => {
+        nI({ type: "AUTH_SESSION_CHANGE", authSessionIdHash: e.auth_session_id_hash });
     }),
-    t0(["USER_CONNECTIONS_LINK_CALLBACK"], (e) => {
-        t3({
+    nf(["USER_CONNECTIONS_LINK_CALLBACK"], (e) => {
+        nI({
             type: "USER_CONNECTIONS_LINK_CALLBACK",
             provider: e.provider,
             callbackCode: e.callback_code,
             callbackState: e.callback_state,
         });
     }),
-    t0(["USER_CONNECTIONS_CALLBACK"], (e) => {
-        t3({
+    nf(["USER_CONNECTIONS_CALLBACK"], (e) => {
+        nI({
             type: "USER_CONNECTIONS_CALLBACK",
             provider: e.provider,
             code: e.code,
@@ -3662,17 +4423,17 @@ t1(
             openid_params: e.openid_params,
         });
     }),
-    t0(["DELETED_ENTITY_IDS"], (e) => {
-        t3({ type: "DELETED_ENTITY_IDS", ...e });
+    nf(["DELETED_ENTITY_IDS"], (e) => {
+        nI({ type: "DELETED_ENTITY_IDS", ...e });
     }),
-    t1(
+    ng(
         ["CHANNEL_SYNC"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
             e.channels.forEach((e) => {
-                tq.add(e);
+                nu.add(e);
             }),
-                t3({
+                nI({
                     type: "CHANNEL_SYNC",
                     guild_id: e.guild_id,
                     channels: e.channels,
@@ -3680,14 +4441,14 @@ t1(
                 });
         },
     ),
-    t0(["CONSOLE_COMMAND_UPDATE"], (e) => {
-        t3({ type: "CONSOLE_COMMAND_UPDATE", id: e.id, result: e.result, error: e.error });
+    nf(["CONSOLE_COMMAND_UPDATE"], (e) => {
+        nI({ type: "CONSOLE_COMMAND_UPDATE", id: e.id, result: e.result, error: e.error });
     }),
-    t1(
+    ng(
         ["PASSIVE_UPDATE_V2"],
-        (e) => A.D.loadGuildIds([e.guild_id]),
+        (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            t3({
+            nI({
                 type: "PASSIVE_UPDATE_V2",
                 guildId: e.guild_id,
                 members: e.updated_members,
@@ -3715,70 +4476,70 @@ t1(
             });
         },
     ),
-    t0(["CREATOR_MONETIZATION_RESTRICTIONS_UPDATE"], (e) => {
-        t3({
+    nf(["CREATOR_MONETIZATION_RESTRICTIONS_UPDATE"], (e) => {
+        nI({
             type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS",
             guildId: e.guild_id,
             restrictions: e.restrictions,
         });
     }),
-    t0(["BILLING_REFERRAL_TRIAL_OFFER_UPDATE"], (e) => {
-        t3({
+    nf(["BILLING_REFERRAL_TRIAL_OFFER_UPDATE"], (e) => {
+        nI({
             type: "BILLING_REFERRAL_TRIAL_OFFER_UPDATE",
             userTrialOfferId: e.user_trial_offer_id,
             recipientId: e.recipient_id,
         });
     }),
-    t0(["LAST_MESSAGES"], (e) => {
-        t3({ type: "MESSAGE_PREVIEWS_LOADED", guildId: e.guild_id, messages: e.messages });
+    nf(["LAST_MESSAGES"], (e) => {
+        nI({ type: "MESSAGE_PREVIEWS_LOADED", guildId: e.guild_id, messages: e.messages });
     }),
-    t0(["AUTHENTICATOR_UPDATE"], (e) => {
-        t3({ type: "AUTHENTICATOR_UPDATE", credential: e });
+    nf(["AUTHENTICATOR_UPDATE"], (e) => {
+        nI({ type: "AUTHENTICATOR_UPDATE", credential: e });
     }),
-    t0(["AUTHENTICATOR_CREATE"], (e) => {
-        t3({ type: "AUTHENTICATOR_CREATE", credential: e });
+    nf(["AUTHENTICATOR_CREATE"], (e) => {
+        nI({ type: "AUTHENTICATOR_CREATE", credential: e });
     }),
-    t0(["AUTHENTICATOR_DELETE"], (e) => {
-        t3({ type: "AUTHENTICATOR_DELETE", credential: e });
+    nf(["AUTHENTICATOR_DELETE"], (e) => {
+        nI({ type: "AUTHENTICATOR_DELETE", credential: e });
     }),
-    t0(["NOTIFICATION_SETTINGS_UPDATE"], (e) => {
-        t3({ type: "NOTIFICATION_SETTINGS_UPDATE", settings: { flags: e.flags } });
+    nf(["NOTIFICATION_SETTINGS_UPDATE"], (e) => {
+        nI({ type: "NOTIFICATION_SETTINGS_UPDATE", settings: { flags: e.flags } });
     }),
-    t0(["CONVERSATION_SUMMARY_UPDATE"], (e) => {
-        t3({ type: "CONVERSATION_SUMMARY_UPDATE", ...e });
+    nf(["CONVERSATION_SUMMARY_UPDATE"], (e) => {
+        nI({ type: "CONVERSATION_SUMMARY_UPDATE", ...e });
     }),
-    t0(["PREMIUM_MARKETING_PREVIEW"], (e) => {
-        t3({ type: "PREMIUM_MARKETING_PREVIEW", data: e });
+    nf(["PREMIUM_MARKETING_PREVIEW"], (e) => {
+        nI({ type: "PREMIUM_MARKETING_PREVIEW", data: e });
     }),
-    t0(["USER_APPLICATION_UPDATE"], (e) => {
-        t3({ type: "USER_APPLICATION_UPDATE", applicationId: e.application_id });
+    nf(["USER_APPLICATION_UPDATE"], (e) => {
+        nI({ type: "USER_APPLICATION_UPDATE", applicationId: e.application_id });
     }),
-    t0(["USER_APPLICATION_REMOVE"], (e) => {
-        t3({ type: "USER_APPLICATION_REMOVE", applicationId: e.application_id });
+    nf(["USER_APPLICATION_REMOVE"], (e) => {
+        nI({ type: "USER_APPLICATION_REMOVE", applicationId: e.application_id });
     }),
-    t0(["DM_SETTINGS_UPSELL_SHOW"], (e) => {
-        t3({ type: "DM_SETTINGS_UPSELL_SHOW", guildId: e.guild_id });
+    nf(["DM_SETTINGS_UPSELL_SHOW"], (e) => {
+        nI({ type: "DM_SETTINGS_UPSELL_SHOW", guildId: e.guild_id });
     }),
-    t0(["CONTENT_INVENTORY_INBOX_STALE"], (e) => {
-        t3({ type: "CONTENT_INVENTORY_INBOX_STALE", refreshAfterMs: e.refresh_after_ms });
+    nf(["CONTENT_INVENTORY_INBOX_STALE"], (e) => {
+        nI({ type: "CONTENT_INVENTORY_INBOX_STALE", refreshAfterMs: e.refresh_after_ms });
     }),
-    t0(["VIRTUAL_CURRENCY_BALANCE_UPDATE"], (e) => {
-        t3({ type: "VIRTUAL_CURRENCY_BALANCE_UPDATE", balance: e.balance });
+    nf(["VIRTUAL_CURRENCY_BALANCE_UPDATE"], (e) => {
+        nI({ type: "VIRTUAL_CURRENCY_BALANCE_UPDATE", balance: e.balance });
     }),
-    t0(["GUILD_POWERUP_ENTITLEMENTS_CREATE", "GUILD_POWERUP_ENTITLEMENTS_DELETE"], (e, t) => {
-        t3({ type: t, guildId: e.guild_id, entitlements: e.entitlements });
+    nf(["GUILD_POWERUP_ENTITLEMENTS_CREATE", "GUILD_POWERUP_ENTITLEMENTS_DELETE"], (e, t) => {
+        nI({ type: t, guildId: e.guild_id, entitlements: e.entitlements });
     }),
-    t0(["GAME_SERVER_CREATE", "GAME_SERVER_UPDATE"], (e, t) => {
-        t3({ type: t, guildId: e.guild_id, gameServer: e.game_server });
+    nf(["GAME_SERVER_CREATE", "GAME_SERVER_UPDATE"], (e, t) => {
+        nI({ type: t, guildId: e.guild_id, gameServer: e.game_server });
     }),
-    t0(["GAME_SERVER_DELETE"], (e, t) => {
-        t3({ type: t, guildId: e.guild_id, gameServerId: e.game_server_id });
+    nf(["GAME_SERVER_DELETE"], (e, t) => {
+        nI({ type: t, guildId: e.guild_id, gameServerId: e.game_server_id });
     }),
-    t0(["GUILD_APPLIED_BOOSTS_UPDATE"], (e, t) => {
-        t3({ type: t, guildId: e.guild_id });
+    nf(["GUILD_APPLIED_BOOSTS_UPDATE"], (e, t) => {
+        nI({ type: t, guildId: e.guild_id });
     }),
-    t0(["USER_APPLICATION_IDENTITY_UPDATE"], (e, t) => {
-        t3({
+    nf(["USER_APPLICATION_IDENTITY_UPDATE"], (e, t) => {
+        nI({
             type: t,
             user_id: e.user_id,
             application_id: e.application_id,
@@ -3787,11 +4548,11 @@ t1(
             metadata: e.metadata,
         });
     }),
-    t0(["USER_APPLICATION_IDENTITY_REMOVE"], (e, t) => {
-        t3({ type: t, user_id: e.user_id, application_id: e.application_id });
+    nf(["USER_APPLICATION_IDENTITY_REMOVE"], (e, t) => {
+        nI({ type: t, user_id: e.user_id, application_id: e.application_id });
     }),
-    t0(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (e) => {
-        t3({
+    nf(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (e) => {
+        nI({
             type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE",
             interactionId: e.interaction_id,
             applicationId: e.application_id,
@@ -3801,31 +4562,31 @@ t1(
             ineligibleReason: e.ineligible_reason,
         });
     }),
-    t0(["HAVEN_CONNECT"], (e, t) => {
-        t3({ type: t, room: (0, tA.xf)(e) });
+    nf(["HAVEN_CONNECT"], (e, t) => {
+        nI({ type: t, room: (0, tK.xf)(e) });
     }),
-    t0(["HAVEN_DISCONNECT"], (e, t) => {
-        t3({ type: t, userId: e.user_id, roomId: e.room_id });
+    nf(["HAVEN_DISCONNECT"], (e, t) => {
+        nI({ type: t, userId: e.user_id, roomId: e.room_id });
     }),
-    t0(["HAVEN_UPDATE"], (e, t) => {
-        t3({ type: t, room: (0, tA.xf)(e) });
+    nf(["HAVEN_UPDATE"], (e, t) => {
+        nI({ type: t, room: (0, tK.xf)(e) });
     }),
-    t0(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (e, t) => {
-        t3({ type: t, gameApplicationIds: e.game_application_ids, guildId: e.guild_id });
+    nf(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (e, t) => {
+        nI({ type: t, gameApplicationIds: e.game_application_ids, guildId: e.guild_id });
     });
-var ne = n(355097);
-let nt = window.DiscordNative;
-tu.dispatcher.getDispatchHandler = function (e) {
-    return tZ[e];
+var nC = n(355097);
+let ny = window.DiscordNative;
+tG.dispatcher.getDispatchHandler = function (e) {
+    return nm[e];
 };
-let nn = new E.A("ConnectionStore"),
-    ni = 0,
-    nr = null,
-    ns = !0,
-    na = null,
-    no = null;
-async function nl(e) {
-    (ni = Date.now()), (nr = e.sessionId), tc.handleConnectionOpen();
+let nD = new E.A("ConnectionStore"),
+    nL = 0,
+    nv = null,
+    nw = !0,
+    nP = null,
+    nb = null;
+async function nk(e) {
+    (nL = Date.now()), (nv = e.sessionId), tx.handleConnectionOpen();
     let t = {},
         n = N.A.getVoiceChannelId();
     if (null != n) {
@@ -3835,88 +4596,88 @@ async function nl(e) {
             (d.w.remove("discord_watchdog_restart_timestamp"),
             window?.performance?.getEntriesByType?.("navigation")?.[0]?.type === "reload" ||
                 i ||
-                (await nt?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
-                !ns)
+                (await ny?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
+                !nw)
         ) {
-            let e = A.A.getChannel(n);
+            let e = I.A.getChannel(n);
             null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, m.CX)(n));
         } else T.A.setLastSessionVoiceChannelId(null != n ? n : null), c.default.selectVoiceChannel(null);
     }
-    tE.update(t, !0), (ns = !1), (no = null);
+    tV.update(t, !0), (nw = !1), (nb = null);
 }
-function n_() {
-    tE.update();
+function nU() {
+    tV.update();
 }
-function nd() {
-    return tE.update(), !1;
+function nM() {
+    return tV.update(), !1;
 }
-function nu() {
-    return tc.update(), !1;
+function nG() {
+    return tx.update(), !1;
 }
-function nc(e) {
-    tu.isSessionEstablished() && tu.streamDelete(e);
+function nx(e) {
+    tG.isSessionEstablished() && tG.streamDelete(e);
 }
-class nE extends _.Ay.Store {
+class nV extends _.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        this.waitFor(g.default, I.A, A.A, p.Ay, T.A, S.A, N.A, O.A, R.A, f.A),
-            this.syncWith([p.Ay], nd),
-            this.syncWith([O.A], nu);
+        this.waitFor(g.default, A.A, I.A, p.Ay, T.A, S.A, N.A, O.A, R.A, f.A),
+            this.syncWith([p.Ay], nM),
+            this.syncWith([O.A], nG);
     }
     getSocket() {
-        return tu;
+        return tG;
     }
     isTryingToConnect() {
-        return !tu.isClosed();
+        return !tG.isClosed();
     }
     isConnected() {
-        return tu.isSessionEstablished();
+        return tG.isSessionEstablished();
     }
     isConnectedOrOverlay() {
-        return tu.isSessionEstablished() || __OVERLAY__;
+        return tG.isSessionEstablished() || __OVERLAY__;
     }
     lastTimeConnectedChanged() {
-        return ni;
+        return nL;
     }
 }
-let nh = new nE(u.h, {
+let nF = new nV(u.h, {
     START_SESSION: function () {
-        return tu.isClosed()
-            ? (nn.verbose("Socket is reconnecting because of starting new session"), tu.connect())
-            : (nn.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
+        return tG.isClosed()
+            ? (nD.verbose("Socket is reconnecting because of starting new session"), tG.connect())
+            : (nD.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
     },
     LOGIN_SUCCESS: function () {
         return (
-            nn.verbose("session refresh dispatched", { isEstablished: tu.isSessionEstablished() }),
-            !!tu.isSessionEstablished() && (tu.close(), tu.connect())
+            nD.verbose("session refresh dispatched", { isEstablished: tG.isSessionEstablished() }),
+            !!tG.isSessionEstablished() && (tG.close(), tG.connect())
         );
     },
     LOGOUT: function (e) {
-        e.isSwitchingAccount && tc.handleAccountSwitch(), nn.verbose("Closing socket because of logout"), tu.close();
+        e.isSwitchingAccount && tx.handleAccountSwitch(), nD.verbose("Closing socket because of logout"), tG.close();
     },
     CLEAR_CACHES: function (e) {
-        return e.resetSocket && (tu.close(), tu.dispatcher.clear(), tu.connect()), !1;
+        return e.resetSocket && (tG.close(), tG.dispatcher.clear(), tG.connect()), !1;
     },
     CONNECTION_OPEN: (e) => {
-        nl(e);
+        nk(e);
     },
     CONNECTION_RESUMED: function () {
-        no = null;
+        nb = null;
     },
     CONNECTION_CLOSED: function () {
-        nn.verbose("connection closed dispatched"), (ni = Date.now());
+        nD.verbose("connection closed dispatched"), (nL = Date.now());
     },
     RTC_CONNECTION_STATE: function (e) {
-        if (e.state !== eg.S7L.DISCONNECTED) return !1;
-        e.willReconnect && (null != e.streamKey ? tu.streamPing(e.streamKey) : tu.voiceServerPing());
+        if (e.state !== eY.S7L.DISCONNECTED) return !1;
+        e.willReconnect && (null != e.streamKey ? tG.streamPing(e.streamKey) : tG.voiceServerPing());
     },
     VOICE_CHANNEL_SELECT: function (e) {
         return (
-            tE.update({ guildId: e.guildId, channelId: e.channelId }),
-            (no = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+            tV.update({ guildId: e.guildId, channelId: e.channelId }),
+            (nb = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
             (0, C.isIOS)() &&
-                na === eg.g6G.BACKGROUND &&
-                (null == e.channelId ? tu.close(!0) : tu.isClosed() && ((eJ = !1), tu.connect())),
+                nP === eY.g6G.BACKGROUND &&
+                (null == e.channelId ? tG.close(!0) : tG.isClosed() && ((th = !1), tG.connect())),
             !1
         );
     },
@@ -3924,137 +4685,137 @@ let nh = new nE(u.h, {
         let { voiceStates: t } = e;
         return t.reduce((e, t) => {
             if (g.default.getId() !== t.userId) return e;
-            if (t.sessionId === nr) {
-                if (null != no)
-                    return nn.verbose("Ignoring voice state for own session due to VSU lock on channel:", no), e;
-                tE.setState({ guildId: t.guildId, channelId: t.channelId });
+            if (t.sessionId === nv) {
+                if (null != nb)
+                    return nD.verbose("Ignoring voice state for own session due to VSU lock on channel:", nb), e;
+                tV.setState({ guildId: t.guildId, channelId: t.channelId });
             } else {
-                if (t.guildId !== tE.guildId) return e;
-                tE.setState({ guildId: null, channelId: null });
+                if (t.guildId !== tV.guildId) return e;
+                tV.setState({ guildId: null, channelId: null });
             }
             return !0;
         }, !1);
     },
     GUILD_DELETE: function (e) {
-        e.guild.id === tE.guildId && tE.setState({ guildId: null, channelId: null });
+        e.guild.id === tV.guildId && tV.setState({ guildId: null, channelId: null });
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        t.id === tE.channelId && tE.setState({ guildId: null, channelId: null });
+        t.id === tV.channelId && tV.setState({ guildId: null, channelId: null });
     },
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
-        if (t === tE.channelId) {
-            if (no === t) return !1;
-            tE.setState({ guildId: null, channelId: null });
+        if (t === tV.channelId) {
+            if (nb === t) return !1;
+            tV.setState({ guildId: null, channelId: null });
         }
     },
     APP_STATE_UPDATE: function (e) {
         return (
             (0, C.isIOS)()
                 ? (g.default.isAuthenticated() &&
-                      (na === eg.g6G.INACTIVE && e.state === eg.g6G.BACKGROUND && null == tE.channelId
-                          ? tu.close(!0)
-                          : na === eg.g6G.BACKGROUND &&
-                            e.state === eg.g6G.ACTIVE &&
-                            tu.isClosed() &&
-                            ((eJ = !1), tu.connect())),
-                  (na = e.state))
-                : e.state === eg.g6G.ACTIVE &&
-                  ((eJ = !1), g.default.isAuthenticated() && tu.resetBackoff("App state is active")),
+                      (nP === eY.g6G.INACTIVE && e.state === eY.g6G.BACKGROUND && null == tV.channelId
+                          ? tG.close(!0)
+                          : nP === eY.g6G.BACKGROUND &&
+                            e.state === eY.g6G.ACTIVE &&
+                            tG.isClosed() &&
+                            ((th = !1), tG.connect())),
+                  (nP = e.state))
+                : e.state === eY.g6G.ACTIVE &&
+                  ((th = !1), g.default.isAuthenticated() && tG.resetBackoff("App state is active")),
             !1
         );
     },
     GUILD_MEMBERS_REQUEST: function (e) {
         return (
-            tu.isSessionEstablished() &&
+            tG.isSessionEstablished() &&
                 ("userIds" in e
                     ? l()(e.userIds)
                           .chunk(100)
                           .forEach((t) => {
-                              tu.requestGuildMembers(e.guildIds, { userIds: t, presences: !!e.presences });
+                              tG.requestGuildMembers(e.guildIds, { userIds: t, presences: !!e.presences });
                           })
-                    : tu.requestGuildMembers(e.guildIds, { query: e.query, limit: e.limit, presences: !!e.presences })),
+                    : tG.requestGuildMembers(e.guildIds, { query: e.query, limit: e.limit, presences: !!e.presences })),
             !1
         );
     },
     GUILD_SEARCH_RECENT_MEMBERS: function (e) {
         let { guildId: t, query: n, continuationToken: i } = e;
-        tu.isSessionEstablished() && tu.searchRecentMembers(t, { query: n, continuationToken: i });
+        tG.isSessionEstablished() && tG.searchRecentMembers(t, { query: n, continuationToken: i });
     },
     GUILD_SUBSCRIPTIONS_FLUSH: function (e) {
         let { subscriptions: t } = e;
-        return tu.isSessionEstablished() && tu.updateGuildSubscriptions(t), !1;
+        return tG.isSessionEstablished() && tG.updateGuildSubscriptions(t), !1;
     },
     CALL_CONNECT: function (e) {
         let { channelId: t } = e;
-        return tu.isSessionEstablished() && tu.callConnect(t), !1;
+        return tG.isSessionEstablished() && tG.callConnect(t), !1;
     },
     CALL_CONNECT_MULTIPLE: function (e) {
         let { channelIds: t } = e;
         return (
-            tu.isSessionEstablished() &&
+            tG.isSessionEstablished() &&
                 t.forEach((e) => {
-                    tu.callConnect(e);
+                    tG.callConnect(e);
                 }),
             !1
         );
     },
-    STREAM_CREATE: n_,
+    STREAM_CREATE: nU,
     STREAM_START: function (e) {
         let { streamType: t, guildId: n, channelId: i } = e;
-        if (tu.isSessionEstablished()) {
-            let e = null != n ? A.A.getChannel(i)?.rtcRegion : I.A.getCall(i)?.region;
-            tu.streamCreate(t, n, i, e ?? S.A.getPreferredRegion());
+        if (tG.isSessionEstablished()) {
+            let e = null != n ? I.A.getChannel(i)?.rtcRegion : A.A.getCall(i)?.region;
+            tG.streamCreate(t, n, i, e ?? S.A.getPreferredRegion());
         }
         return !1;
     },
     STREAM_WATCH: function (e) {
         let { streamKey: t, allowMultiple: n } = e;
-        if (tu.isSessionEstablished()) {
+        if (tG.isSessionEstablished()) {
             if (n);
             else {
                 let e;
                 (e = R.A.getAllActiveStreamKeys().find((e) => (0, h.Iy)(e).ownerId === g.default.getId())),
                     R.A.getAllActiveStreamKeys()
                         .filter((t) => t !== e)
-                        .forEach((e) => nc(e));
+                        .forEach((e) => nx(e));
             }
-            tu.streamWatch(t);
+            tG.streamWatch(t);
         }
         return !1;
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return nc(t), n_(), !1;
+        return nx(t), nU(), !1;
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;
-        tu.isSessionEstablished() && tu.streamSetPaused(t, n);
+        tG.isSessionEstablished() && tG.streamSetPaused(t, n);
     },
     PUSH_NOTIFICATION_CLICK: function () {
-        return tu.expeditedHeartbeat(5e3, "user clicked on notification", !0), !1;
+        return tG.expeditedHeartbeat(5e3, "user clicked on notification", !0), !1;
     },
     REQUEST_FORUM_UNREADS: function (e) {
         let { guildId: t, channelId: n, threads: i } = e;
-        tu.requestForumUnreads(t, n, i);
+        tG.requestForumUnreads(t, n, i);
     },
     REQUEST_SOUNDBOARD_SOUNDS: function (e) {
         let { guildIds: t } = e;
-        tu.requestSoundboardSounds(t);
+        tG.requestSoundboardSounds(t);
     },
     REMOTE_COMMAND: function (e) {
         let { sessionId: t, payload: n } = e;
-        return tu.isSessionEstablished() && tu.remoteCommand(t, n), !1;
+        return tG.isSessionEstablished() && tG.remoteCommand(t, n), !1;
     },
     RESET_SOCKET: function (e) {
-        tu.connectionState !== y.WILL_RECONNECT && tu.resetSocketAndClearCacheOnError(e.args);
+        tG.connectionState !== y.WILL_RECONNECT && tG.resetSocketAndClearCacheOnError(e.args);
     },
-    CLIPS_SETTINGS_UPDATE: n_,
-    RUNNING_GAMES_CHANGE: n_,
+    CLIPS_SETTINGS_UPDATE: nU,
+    RUNNING_GAMES_CHANGE: nU,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
-        e.settings.type === ne.oD.PRELOADED_USER_SETTINGS &&
+        e.settings.type === nC.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
-            n_();
+            nU();
     },
 });
