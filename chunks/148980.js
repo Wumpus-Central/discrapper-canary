@@ -13,8 +13,8 @@ var t = s(627968),
     _ = s(171491),
     x = s(594832),
     f = s(495544),
-    I = s(696451),
-    h = s(71393),
+    h = s(696451),
+    I = s(71393),
     A = s(67480),
     E = s(449054),
     m = s(733391),
@@ -67,10 +67,10 @@ function F(e) {
         }, [d, p]);
     if (null == s) return null;
     let f = null != s.logoAssetId ? (0, G.YE)(s.applicationId, s.logoAssetId, 128) : null,
-        I = null != s.lightThemeLogoAssetId ? (0, G.YE)(s.applicationId, s.lightThemeLogoAssetId, 128) : null,
-        h = null;
+        h = null != s.lightThemeLogoAssetId ? (0, G.YE)(s.applicationId, s.lightThemeLogoAssetId, 128) : null,
+        I = null;
     return (
-        (h = r ? (f ?? I) : (I ?? f)),
+        (I = r ? (f ?? h) : (h ?? f)),
         (0, t.jsxs)(C.A, {
             disableDoubleClick: !0,
             className: U.N1,
@@ -81,27 +81,28 @@ function F(e) {
                     },
                     className: U.gn,
                     children: [
-                        null != h && (0, t.jsx)("img", { className: U.wm, src: h, alt: s.title }),
+                        null != I && (0, t.jsx)("img", { className: U.wm, src: I, alt: s.title }),
                         (0, t.jsx)(C.A.Title, { children: s.title }),
                     ],
                 }),
-                (0, t.jsx)("div", {
-                    className: U.YC,
-                    children: s.pages.map((e, s) =>
-                        (0, t.jsx)(
-                            C.A.Title,
-                            {
-                                onClick: () => {
-                                    (0, P.default)({ guildId: l, pageIndex: s });
+                s.pages.length > 1 &&
+                    (0, t.jsx)("div", {
+                        className: U.YC,
+                        children: s.pages.map((e, s) =>
+                            (0, t.jsx)(
+                                C.A.Title,
+                                {
+                                    onClick: () => {
+                                        (0, P.default)({ guildId: l, pageIndex: s });
+                                    },
+                                    wrapperClassName: U.oB,
+                                    className: i()(U.xT, { [U.ys]: a === s }),
+                                    children: (0, t.jsx)(b.E, { variant: "text-sm/medium", children: e.title }),
                                 },
-                                wrapperClassName: U.oB,
-                                className: i()(U.xT, { [U.ys]: a === s }),
-                                children: (0, t.jsx)(b.E, { variant: "text-sm/medium", children: e.title }),
-                            },
-                            `${e.title}-${s}`,
+                                `${e.title}-${s}`,
+                            ),
                         ),
-                    ),
-                }),
+                    }),
                 (0, t.jsxs)("div", {
                     className: U.sZ,
                     children: [
@@ -387,8 +388,8 @@ function ef(e) {
               ],
           });
 }
-var eI = s(253004);
-function eh(e) {
+var eh = s(253004);
+function eI(e) {
     let { storefront: l, guildId: s, selectedPageIndex: a, selectedSku: i } = e,
         r = (0, S.jM)(),
         o = n.useRef(r);
@@ -417,7 +418,7 @@ function eh(e) {
                 );
         }, [s, a, c, l.applicationId]),
         (0, t.jsxs)("div", {
-            className: eI.k,
+            className: eh.k,
             children: [
                 (0, t.jsx)(F, { guildId: s, storefront: l, selectedPageIndex: a }),
                 (0, t.jsx)(ef, { applicationId: l.applicationId, page: l.pages[a] }),
@@ -434,7 +435,7 @@ function eA(e) {
         v = (0, o.bG)([A.A], () => A.A.get(p), [p]);
     (0, x.pE)(), (0, _.x)({ applicationId: R?.storefront?.applicationId, location: "SocialLayerStorefront" });
     let b = (0, d.A)((0, r.A)()),
-        L = (0, o.bG)([I.Ay, f.default], () => I.Ay.isMember(s, f.default.getId())),
+        L = (0, o.bG)([h.Ay, f.default], () => h.Ay.isMember(s, f.default.getId())),
         M = n.useMemo(() => {
             if (null == a) return 0;
             let e = parseInt(a, 10);
@@ -457,15 +458,15 @@ function eA(e) {
         null != s && (0, m.SP)(s, M, null != p ? p : null);
     }, [s, M, p]),
     n.useEffect(() => {
-        null == s || null == N || (null == h.A.getGuild(s) && (0, E.Z2)(s, {}, { shouldNavigate: !1 }));
+        null == s || null == N || (null == I.A.getGuild(s) && (0, E.Z2)(s, {}, { shouldNavigate: !1 }));
     }, [s, N]),
     null == s || R?.storefront == null)
-        ? (0, t.jsx)("div", { className: i()(eI.u, eI.k), children: (0, t.jsx)(c.y, {}) })
+        ? (0, t.jsx)("div", { className: i()(eh.u, eh.k), children: (0, t.jsx)(c.y, {}) })
         : (0, t.jsx)(g.f5, {
               value: j,
               children: (0, t.jsx)(S.E9, {
                   newValue: y,
-                  children: (0, t.jsx)(eh, {
+                  children: (0, t.jsx)(eI, {
                       storefront: R.storefront,
                       guildId: s,
                       selectedPageIndex: M,
