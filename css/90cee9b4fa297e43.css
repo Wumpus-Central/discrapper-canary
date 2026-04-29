@@ -108,6 +108,10 @@
     position: relative
 }
 
+.profilePreviewContainerWithChat_c50f62.custom-profile-frame-bottom {
+    padding-block-end: 0 !important
+}
+
 .collectiblePreviewsContainerNoChat_c50f62 {
     padding: 0 40px
 }
@@ -256,7 +260,7 @@
     align-items: stretch;
     background: var(--background-gradient-chat, var(--background-base-low));
     border-radius: var(--radius-sm);
-    bottom: 44px;
+    bottom: 38px;
     display: flex;
     flex-direction: column;
     gap: 12px;
