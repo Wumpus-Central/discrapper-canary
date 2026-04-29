@@ -13,7 +13,7 @@
 }
 
 .content_d9185c:before {
-    background: var(--background-surface-high);
+    background: var(--background-base-low);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     margin-bottom: calc(-1px - var(--custom-modal-padding-bottom));
@@ -87,7 +87,7 @@
 
 .feature_d9185c {
     align-items: center;
-    background: var(--background-surface-highest);
+    background: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     display: flex;
@@ -119,11 +119,12 @@
 
 .featureIcon_d9185c {
     justify-content: center;
-    position: relative
+    position: relative;
+    width: 100%
 }
 
 .featureIcon_d9185c img {
-    max-height: 80px;
+    max-height: 100px;
     max-width: 100%;
     -o-object-fit: contain;
     object-fit: contain
