@@ -224,7 +224,7 @@ async function Module(moduleArg = {}) {
             throw _;
         },
         _scriptName =
-            "file:///ci/build/discord/discord/node_modules/.pnpm/@discord+arborium-rt@https+++github.com+appellation+arborium-rt+releases+download+v0.1.4+discord-arborium-rt-0.1.4.tgz/node_modules/@discord/arborium-rt/dist/host/web-tree-sitter.mjs",
+            "file:///ci/build/discord/discord/node_modules/.pnpm/@discord+arborium-rt@https+++github.com+discord+arborium-rt+releases+download+v0.1.4+discord-arborium-rt-0.1.4.tgz/node_modules/@discord/arborium-rt/dist/host/web-tree-sitter.mjs",
         scriptDirectory = "";
     function locateFile(e) {
         return Module.locateFile ? Module.locateFile(e, scriptDirectory) : scriptDirectory + e;
@@ -303,7 +303,7 @@ async function Module(moduleArg = {}) {
     function findWasmBinary() {
         return Module.locateFile
             ? locateFile("web-tree-sitter.wasm")
-            : new URL(__webpack_require__(594532), __webpack_require__.b).href;
+            : new URL(__webpack_require__(344525), __webpack_require__.b).href;
     }
     function getBinarySync(e) {
         if (e == wasmBinaryFile && wasmBinary) return new Uint8Array(wasmBinary);
@@ -476,11 +476,11 @@ async function Module(moduleArg = {}) {
                 o(0x6d736100 != d[0] && 6386541 != d[0], "need to see wasm magic number"),
                     o(0 !== e[8], "need the dylink section to be first"),
                     (_ = 9);
-                var l = s();
-                (t = _ + l), o("dylink.0" !== a());
+                var u = s();
+                (t = _ + u), o("dylink.0" !== a());
             }
             for (
-                var u = { neededDynlibs: [], tlsExports: new Set(), weakImports: new Set(), runtimePaths: [] },
+                var l = { neededDynlibs: [], tlsExports: new Set(), weakImports: new Set(), runtimePaths: [] },
                     c = 1,
                     m = 2,
                     p = 3,
@@ -493,24 +493,24 @@ async function Module(moduleArg = {}) {
             ) {
                 var h = r(),
                     v = s();
-                if (h === c) (u.memorySize = s()), (u.memoryAlign = s()), (u.tableSize = s()), (u.tableAlign = s());
-                else if (h === m) u.neededDynlibs = n();
+                if (h === c) (l.memorySize = s()), (l.memoryAlign = s()), (l.tableSize = s()), (l.tableAlign = s());
+                else if (h === m) l.neededDynlibs = n();
                 else if (h === p)
                     for (var x = s(); x--; ) {
                         var A = a(),
                             k = s();
-                        k & g && u.tlsExports.add(A);
+                        k & g && l.tlsExports.add(A);
                     }
                 else if (h === w)
                     for (var x = s(); x--; ) {
                         a();
                         var A = a(),
                             k = s();
-                        (k & y) == b && u.weakImports.add(A);
+                        (k & y) == b && l.weakImports.add(A);
                     }
-                else h === f ? (u.runtimePaths = n()) : (_ += v);
+                else h === f ? (l.runtimePaths = n()) : (_ += v);
             }
-            return u;
+            return l;
         };
     function getValue(e, _ = "i8") {
         switch ((_.endsWith("*") && (_ = "*"), _)) {

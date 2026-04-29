@@ -1,8 +1,8 @@
 e.d(n, { A: () => x });
 var i = e(17928),
     l = e(688810),
-    r = e(211401),
-    a = e(500049),
+    a = e(211401),
+    r = e(500049),
     s = e(975412),
     o = e(355622),
     c = e(267102),
@@ -23,6 +23,6 @@ function x(t) {
                       openInPopout: f,
                       initialState: { applicationId: n },
                   })
-                : (0, r.R)(a.s4.TEXT, o.oU.NORMAL, { applicationId: n });
+                : (0, a.R)(r.s4.TEXT, o.oU.NORMAL, { applicationId: n }, p.id);
     };
 }
