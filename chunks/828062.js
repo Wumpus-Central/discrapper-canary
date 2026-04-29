@@ -396,7 +396,7 @@ let eh = (0, er.Fe)({
                 n.e("40841"),
                 n.e("13836"),
                 n.e("95429"),
-                n.e("23104"),
+                n.e("6515"),
                 n.e("98965"),
                 n.e("48370"),
                 n.e("38589"),
@@ -961,7 +961,7 @@ let eh = (0, er.Fe)({
                 n.e("15380"),
                 n.e("207"),
                 n.e("95429"),
-                n.e("23104"),
+                n.e("6515"),
                 n.e("34304"),
                 n.e("10368"),
                 n.e("20287"),
@@ -2430,7 +2430,7 @@ class e3 extends eA.A {
     };
 }
 let e5 = new e3();
-function e8() {
+function e6() {
     return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -2443,7 +2443,7 @@ function e8() {
         background_install_ms_total: 0,
     };
 }
-function e6(e) {
+function e8(e) {
     return "host" === e;
 }
 class e7 {
@@ -2451,10 +2451,10 @@ class e7 {
     _downloadingModules = {};
     _report;
     constructor() {
-        this._report = e8();
+        this._report = e6();
     }
     handleDownloadingModule(e) {
-        if (!e6(e.name)) {
+        if (!e8(e.name)) {
             if (null != this._downloadingModules[e.name])
                 return void console.warn("Duplicate downloading-module event for module ", e.name);
             this._downloadingModules[e.name] = { startTime: BigInt(e.now), foreground: e.foreground };
@@ -2474,7 +2474,7 @@ class e7 {
         this._updateReportField(e, t, Math.max);
     }
     handleDownloadedModule(e) {
-        if (e6(e.name)) return;
+        if (e8(e.name)) return;
         let t = this._downloadingModules[e.name];
         if (null == t)
             return void console.warn("Downloaded complete without corresponding downloading event for module ", e.name);
@@ -2491,7 +2491,7 @@ class e7 {
             delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
-        if (!e6(e.name)) {
+        if (!e8(e.name)) {
             if (null != this._installingModules[e.name])
                 return void console.warn("Duplicate installing-module event for module ", e.name);
             this._installingModules[e.name] = {
@@ -2503,7 +2503,7 @@ class e7 {
         }
     }
     handleInstalledModule(e) {
-        if (e6(e.name)) return;
+        if (e8(e.name)) return;
         let t = this._installingModules[e.name];
         if (null == t) return;
         let n = t.foreground ? "foreground" : "background",
@@ -2541,7 +2541,7 @@ class e7 {
         return this._report;
     }
     reset() {
-        this._report = e8();
+        this._report = e6();
     }
     submissionReady() {
         return (

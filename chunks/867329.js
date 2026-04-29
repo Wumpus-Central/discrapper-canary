@@ -7085,7 +7085,7 @@ let rn = {
     "discord_common/js/shared/animations/app/premium_marketing_surface/emoji.lottiejson": () =>
         a.e("17124").then(a.t.bind(a, 616175, 19)),
     "discord_common/js/shared/animations/app/premium_marketing_surface/interstitial_wheel_dark.lottiejson": () =>
-        a.e("94675").then(a.t.bind(a, 180440, 19)),
+        a.e("94675").then(a.t.bind(a, 735678, 19)),
     "discord_common/js/shared/animations/app/premium_marketing_surface/interstitial_wheel_light.lottiejson": () =>
         a.e("78465").then(a.t.bind(a, 247704, 19)),
     "discord_common/js/shared/animations/app/premium_marketing_surface/profile_customization.lottiejson": () =>
@@ -8545,7 +8545,7 @@ let rI = {
         let { default: e } = await Promise.all([
             a.e("40841"),
             a.e("30244"),
-            a.e("23104"),
+            a.e("6515"),
             a.e("48370"),
             a.e("72875"),
         ]).then(a.bind(a, 320742));
@@ -12673,7 +12673,7 @@ function ce() {
 }
 var ct = a(141931),
     ca = a(306173),
-    cn = a(454219),
+    cn = a(446458),
     cl = a(237984),
     cs = a(43203),
     ci = a(349435),
