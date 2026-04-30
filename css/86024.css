@@ -3019,7 +3019,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 .card__5b393.featured__5b393 .blurOverlay__5b393,
 .cardContainer__5b393:focus-within .blurOverlay__5b393,
 .cardContainer__5b393:hover .blurOverlay__5b393 {
-    background: var(--__card-accent-color)
+    background: var(--__card-background-color)
 }
 
 .card__5b393.featured__5b393.hasBackgroundAsset__5b393 .blurOverlay__5b393,
@@ -3124,8 +3124,8 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 .blurOverlay__5b393 {
     --custom-blur: blur(40px);
     --custom-fallback-bg: transparent;
-    --custom-asset-bg: color-mix(in srgb, var(--custom-tint-color) 20%, var(--__card-accent-color) 15%);
-    --custom-hover-asset-bg: color-mix(in srgb, var(--custom-tint-color) 25%, var(--__card-accent-color) 20%);
+    --custom-asset-bg: color-mix(in srgb, var(--custom-tint-color) 20%, var(--__card-background-color) 15%);
+    --custom-hover-asset-bg: color-mix(in srgb, var(--custom-tint-color) 25%, var(--__card-background-color) 20%);
     -webkit-backdrop-filter: var(--custom-blur);
     backdrop-filter: var(--custom-blur);
     background: var(--custom-fallback-bg);
@@ -3198,7 +3198,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 @supports (-moz-appearance:none) {
     .blurOverlay__5b393 {
         --custom-blur: none;
-        --custom-fallback-bg: color-mix(in srgb, var(--custom-tint-color) 25%, var(--__card-accent-color) 60%);
+        --custom-fallback-bg: color-mix(in srgb, var(--custom-tint-color) 25%, var(--__card-background-color) 60%);
         --custom-asset-bg: var(--custom-fallback-bg);
         --custom-hover-asset-bg: var(--custom-fallback-bg)
     }
