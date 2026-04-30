@@ -135,7 +135,7 @@ let k = (i) => {
 function E() {
     (0, a.openModalLazy)(
         async () => {
-            let { default: i } = await Promise.all([e.e("63292"), e.e("60658"), e.e("26388")]).then(e.bind(e, 297187));
+            let { default: i } = await Promise.all([e.e("63292"), e.e("26388")]).then(e.bind(e, 297187));
             return (t) => (0, n.jsx)(i, { ...t });
         },
         { modalKey: "slayer-storefront-announcement-modal" },

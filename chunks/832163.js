@@ -1,13 +1,13 @@
 "use strict";
 let i;
-n.d(t, { A: () => R });
+n.d(t, { A: () => C });
 var r = n(17928),
     s = n(228366),
     a = n(773669),
     o = n(495544);
 let l = {},
-    d = {},
     _ = {},
+    d = {},
     u = {},
     c = {},
     E = {},
@@ -15,25 +15,26 @@ let l = {},
     m = new Set(),
     f = { state: "idle" },
     g = new Set(),
-    p = {},
     A = {},
-    I = new Set(),
-    T = null,
-    S = { state: "idle" };
-function N() {
+    I = {},
+    p = {},
+    T = new Set(),
+    S = null,
+    N = { state: "idle" };
+function O() {
     if (i === a.default.locale) return !1;
-    (i = a.default.locale), (l = {}), (d = {}), (_ = {}), (u = {});
+    (i = a.default.locale), (l = {}), (_ = {}), (d = {}), (u = {});
 }
-class C extends r.Ay.Store {
+class R extends r.Ay.Store {
     static displayName = "SocialLayerStorefrontStore";
     initialize() {
-        this.waitFor(o.default, a.default), this.syncWith([a.default], N), (i = a.default.locale);
+        this.waitFor(o.default, a.default), this.syncWith([a.default], O), (i = a.default.locale);
     }
     getStorefrontData(e) {
-        return d[e];
+        return _[e];
     }
     getSkuAssets() {
-        return _;
+        return d;
     }
     getStorefrontMetadata(e) {
         return u[e];
@@ -47,11 +48,14 @@ class C extends r.Ay.Store {
     getConfig() {
         return "success" === f.state ? f.config : null;
     }
+    getConfigForApplicationId(e) {
+        return p[e];
+    }
     getApplicationIdFromDetectableId(e) {
-        return A[e];
+        return I[e];
     }
     getDetectableIdsToApplicationIds() {
-        return A;
+        return I;
     }
     getGuildIdFromApplicationId(e) {
         return "success" === f.state
@@ -59,7 +63,7 @@ class C extends r.Ay.Store {
             : void 0;
     }
     getApplicationIdFromGuildId(e) {
-        return p[e];
+        return A[e];
     }
     getConfigFetchState() {
         return f;
@@ -68,7 +72,7 @@ class C extends r.Ay.Store {
         return g;
     }
     getStorefrontGuildIds() {
-        return I;
+        return T;
     }
     getSKUEligibility(e) {
         return E[e]?.state;
@@ -80,26 +84,27 @@ class C extends r.Ay.Store {
         return E[e]?.state !== "ineligible";
     }
     getAnnouncementModalConfig() {
-        return T;
-    }
-    getStorefrontAffinity() {
         return S;
     }
+    getStorefrontAffinity() {
+        return N;
+    }
 }
-let R = new C(s.h, {
+let C = new R(s.h, {
     LOGOUT: function () {
-        (_ = {}),
+        (d = {}),
             (u = {}),
             (E = {}),
             (h = {}),
             (m = new Set()),
             (f = { state: "idle" }),
             (g = new Set()),
-            (p = {}),
             (A = {}),
-            (I = new Set()),
-            (T = null),
-            (S = { state: "idle" });
+            (I = {}),
+            (p = {}),
+            (T = new Set()),
+            (S = null),
+            (N = { state: "idle" });
     },
     POST_CONNECTION_OPEN: function () {
         (E = {}), (h = {}), (m = new Set());
@@ -132,18 +137,18 @@ let R = new C(s.h, {
     },
     SOCIAL_LAYER_STOREFRONT_LOAD: function (e) {
         let { guildId: t } = e,
-            n = d[t];
-        (d[t] = { ...n, state: "loading" }), (d = { ...d });
+            n = _[t];
+        (_[t] = { ...n, state: "loading" }), (_ = { ..._ });
     },
     SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: function (e) {
         let { guildId: t, storefront: n } = e;
-        (d[t] = { storefront: n, state: "fetched", fetchedAt: Date.now() }),
-            (d = { ...d }),
-            null != n.assets && (_ = { ..._, ...n.assets });
+        (_[t] = { storefront: n, state: "fetched", fetchedAt: Date.now() }),
+            (_ = { ..._ }),
+            null != n.assets && (d = { ...d, ...n.assets });
     },
     SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: function (e) {
         let { assets: t } = e;
-        _ = { ..._, ...t };
+        d = { ...d, ...t };
     },
     SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS: function (e) {
         let { applicationId: t, storefrontMetadata: n } = e;
@@ -152,10 +157,10 @@ let R = new C(s.h, {
     SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: function (e) {
         let { guildId: t, eager: n } = e;
         if (n) {
-            let e = d[t];
-            e?.state === "loading" && e?.storefront != null ? (d[t] = { ...e, state: "fetched" }) : delete d[t];
-        } else d[t] = { storefront: null, state: "error", fetchedAt: Date.now() };
-        d = { ...d };
+            let e = _[t];
+            e?.state === "loading" && e?.storefront != null ? (_[t] = { ...e, state: "fetched" }) : delete _[t];
+        } else _[t] = { storefront: null, state: "error", fetchedAt: Date.now() };
+        _ = { ..._ };
     },
     SET_SOCIAL_LAYER_STOREFRONT_STATE: function (e) {
         let { guildId: t, pageIndex: n, skuId: i } = e;
@@ -180,13 +185,14 @@ let R = new C(s.h, {
         let { config: t } = e;
         (f = { state: "success", config: t, fetchedAt: Date.now() }),
             (g = new Set(t.storefronts.map((e) => e.applicationId))),
-            (I = new Set(t.storefronts.map((e) => e.guildId))),
-            (p = t.storefronts.reduce((e, t) => ((e[t.guildId] = t.applicationId), e), {})),
-            (A = t.storefronts.reduce(
+            (T = new Set(t.storefronts.map((e) => e.guildId))),
+            (A = t.storefronts.reduce((e, t) => ((e[t.guildId] = t.applicationId), e), {})),
+            (I = t.storefronts.reduce(
                 (e, t) => ((e[t.gameId] = t.applicationId), (e[t.applicationId] = t.applicationId), e),
                 {},
             )),
-            (T = t.announcementModalConfig ?? null);
+            (p = t.storefronts.reduce((e, t) => ((e[t.applicationId] = t), e), {})),
+            (S = t.announcementModalConfig ?? null);
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE: function () {
         f = { state: "error", fetchedAt: Date.now() };
@@ -216,13 +222,13 @@ let R = new C(s.h, {
         E = { ...E, [t]: i ? { state: "eligible" } : { state: "ineligible", ineligibleReason: r } };
     },
     SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_START: function () {
-        S = { state: "loading" };
+        N = { state: "loading" };
     },
     SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_SUCCESS: function (e) {
         let { affinity: t } = e;
-        S = { state: "success", affinity: t };
+        N = { state: "success", affinity: t };
     },
     SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_FAILURE: function () {
-        S = { state: "error" };
+        N = { state: "error" };
     },
 });
