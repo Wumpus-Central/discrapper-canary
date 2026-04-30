@@ -5553,7 +5553,7 @@ html.disable-forced-colors * {
     gap: var(--space-8)
 }
 
-.container__0b563 {
+.chat__0b563 .container__0b563 {
     display: flex;
     flex-direction: column
 }
