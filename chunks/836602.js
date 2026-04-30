@@ -1,34 +1,34 @@
 "use strict";
 let i;
-n.d(t, { A: () => C, _: () => E });
+n.d(t, { A: () => O, _: () => E });
 var r = n(17928),
     s = n(228366),
     a = n(652215),
     o = n(349828),
     l = n(849077),
-    d = n(901123);
-let _ = {},
+    _ = n(901123);
+let d = {},
     u = {},
     c = {},
-    E = new Set([...d.Cr, o.Vc, l.Hy]),
+    E = new Set([..._.Cr, o.Vc, l.Hy]),
     h = {},
     m = u,
     f = a.XlH.CLOSED,
     g = {};
-function p() {
+function A() {
     (f = a.XlH.OPEN), (g = {});
 }
-function A() {
+function I() {
     (f = a.XlH.CLOSED), (g = {});
 }
-function I() {
+function p() {
     m = u;
 }
 function T() {
     (h = {}), (g = {});
 }
 function S() {
-    T(), I(), A();
+    T(), p(), I();
 }
 class N extends r.Ay.Store {
     static displayName = "UserProfileSettingsStore";
@@ -42,7 +42,7 @@ class N extends r.Ay.Store {
         return g[e ?? a.ME] ?? c;
     }
     getPendingChanges(e) {
-        return h[e ?? a.ME] ?? _;
+        return h[e ?? a.ME] ?? d;
     }
     getTryItOutChanges() {
         return m;
@@ -64,9 +64,9 @@ class N extends r.Ay.Store {
         return !0;
     }
 }
-let C = new N(s.h, {
-    USER_SETTINGS_MODAL_INIT: p,
-    USER_SETTINGS_MODAL_OPEN: p,
+let O = new N(s.h, {
+    USER_SETTINGS_MODAL_INIT: A,
+    USER_SETTINGS_MODAL_OPEN: A,
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {
         let { section: t } = e;
         if (t !== a.nc_.ACCOUNT) return !1;
@@ -80,7 +80,7 @@ let C = new N(s.h, {
         let { guildId: t } = e;
         (i = null == t || E.has(t) ? void 0 : t), (g = {});
     },
-    USER_PROFILE_SETTINGS_CLOSE: A,
+    USER_PROFILE_SETTINGS_CLOSE: I,
     USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: S,
     USER_PROFILE_SETTINGS_SUBMIT: function () {
         (f = a.XlH.SUBMITTING), (g = {});
@@ -167,6 +167,7 @@ let C = new N(s.h, {
                         pendingProfileEffect: void 0,
                         pendingProfileFrame: void 0,
                         pendingBanner: void 0,
+                        pendingBannerOriginalMd5: void 0,
                         pendingAccentColor: void 0,
                         pendingThemeColors: void 0,
                         pendingBio: void 0,
@@ -176,7 +177,7 @@ let C = new N(s.h, {
         );
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: T,
-    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: I,
+    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: p,
     USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function () {
         if ((h[a.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
         h[a.ME] = { ...h[a.ME], pendingLegacyUsernameDisabled: void 0 };

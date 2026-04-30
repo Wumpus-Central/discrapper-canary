@@ -1,99 +1,101 @@
 _.d(e, {
-    EW: () => f,
-    FY: () => D,
-    Go: () => N,
+    EW: () => y,
+    FY: () => g,
+    Go: () => C,
     Gr: () => u,
     RE: () => L,
     VQ: () => P,
-    XQ: () => d,
-    a: () => F,
-    e$: () => U,
+    XQ: () => U,
+    a: () => f,
+    e$: () => N,
     gi: () => l,
-    w5: () => y,
-    xe: () => C,
+    w5: () => G,
+    xe: () => F,
 });
 var E = _(17928),
     i = _(636537),
     n = _(765178),
     T = _(228366),
     I = _(845584),
-    S = _(451909),
-    R = _(287809),
-    a = _(954571),
-    A = _(625494),
+    S = _(870218),
+    R = _(451909),
+    a = _(287809),
+    A = _(954571),
+    r = _(625494),
     o = _(38405),
     c = _(841595),
-    r = _(814390),
-    p = _(652215),
+    p = _(814390),
+    s = _(652215),
     O = _(788868),
-    s = _(985018);
+    h = _(985018);
 function P() {
-    A._.dispatch(p.jej.SHAKE_PROFILE_MODAL),
-        A._.dispatch(p.jej.EMPHASIZE_NOTICE),
-        n.O.announce(`${s.intl.string(s.t.GP7JLE)} ${s.intl.string(s.t.gKoO1D)}`);
+    r._.dispatch(s.jej.SHAKE_PROFILE_MODAL),
+        r._.dispatch(s.jej.EMPHASIZE_NOTICE),
+        n.O.announce(`${h.intl.string(h.t.GP7JLE)} ${h.intl.string(h.t.gKoO1D)}`);
 }
-function h(t) {
-    a.default.track(p.HAw.PREMIUM_FEATURE_TRY_OUT, { feature_name: t, feature_tier: O.tz.PREMIUM_STANDARD });
+function d(t) {
+    A.default.track(s.HAw.PREMIUM_FEATURE_TRY_OUT, { feature_name: t, feature_tier: O.tz.PREMIUM_STANDARD });
 }
-async function l(t, e) {
-    let _ = R.default.getCurrentUser()?.id;
-    if (null == _) return;
-    let E = (0, r.h)();
-    null != t.bio && E && (t.bio = S.Ay.parse(void 0, t.bio).content);
+async function l(t, e, _) {
+    let E = a.default.getCurrentUser()?.id;
+    if (null == E) return;
+    let n = (0, p.h)();
+    null != t.bio && n && (t.bio = R.Ay.parse(void 0, t.bio).content);
     try {
-        T.h.dispatch({ type: "USER_PROFILE_UPDATE_START", userId: _, guildId: e });
-        let E = await i.Bo.patch({
-            url: null != e ? p.Rsh.USER_GUILD_PROFILE(e, p.ME) : p.Rsh.USER_PROFILE(p.ME),
+        T.h.dispatch({ type: "USER_PROFILE_UPDATE_START", userId: E, guildId: e });
+        let n = await i.Bo.patch({
+            url: null != e ? s.Rsh.USER_GUILD_PROFILE(e, s.ME) : s.Rsh.USER_PROFILE(s.ME),
             body: t,
+            headers: S.A.buildHeadersForMd5(_),
             rejectWithError: !1,
         });
-        if (E.ok) T.h.dispatch({ type: "USER_PROFILE_UPDATE_SUCCESS", userId: _, guildId: e, ...E.body });
+        if (n.ok) T.h.dispatch({ type: "USER_PROFILE_UPDATE_SUCCESS", userId: E, guildId: e, ...n.body });
         else {
-            let t = new I.LG(E);
-            T.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: e, errors: E.body, apiError: t });
+            let t = new I.LG(n);
+            T.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: e, errors: n.body, apiError: t });
         }
-        return E;
+        return n;
     } catch (_) {
         let t = new I.LG(_);
         return T.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: e, errors: {}, apiError: t }), _;
     }
 }
 function u(t, e) {
-    let _ = R.default.getCurrentUser()?.id;
+    let _ = a.default.getCurrentUser()?.id;
     null != _ && T.h.dispatch({ type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: t, ttlInSeconds: e, userId: _ });
 }
 function L() {
     T.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 }
-function d() {
+function U() {
     T.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 }
-function U(t) {
-    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: t }), h(O.Ae.ANIMATED_AVATAR);
-}
 function N(t) {
-    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration: t }),
-        h(O.Ae.AVATAR_DECORATION);
+    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR", avatar: t }), d(O.Ae.ANIMATED_AVATAR);
 }
 function C(t) {
-    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: t }), h(O.Ae.PROFILE_BANNER);
+    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION", avatarDecoration: t }),
+        d(O.Ae.AVATAR_DECORATION);
 }
 function F(t) {
-    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors: t }),
-        h(O.Ae.PROFILE_THEME_COLOR);
+    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER", banner: t }), d(O.Ae.PROFILE_BANNER);
 }
 function f(t) {
-    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles: t }),
-        h(O.Ae.DISPLAY_NAME_STYLES);
+    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS", themeColors: t }),
+        d(O.Ae.PROFILE_THEME_COLOR);
 }
 function y(t) {
-    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET", ...t }), h(O.Ae.PRESET);
+    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES", displayNameStyles: t }),
+        d(O.Ae.DISPLAY_NAME_STYLES);
 }
-async function G() {
+function G(t) {
+    T.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET", ...t }), d(O.Ae.PRESET);
+}
+async function D() {
     if (null == c.A.applicationWidgetConfigs || !(c.A.applicationWidgetConfigs.length > 0)) {
         T.h.dispatch({ type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_START" });
         try {
-            let t = await i.Bo.get({ url: p.Rsh.USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS, rejectWithError: !0 });
+            let t = await i.Bo.get({ url: s.Rsh.USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS, rejectWithError: !0 });
             T.h.dispatch({
                 type: "USER_PROFILE_APPLICATION_WIDGET_CONFIGS_FETCH_SUCCESS",
                 applicationConfigs: t.body.application_configs,
@@ -107,8 +109,8 @@ async function G() {
         }
     }
 }
-let D = (0, E.UT)(c.A, {
-    getQueryId: p.fic.APPLICATION_WIDGET_APPLICATION_CONFIGS,
+let g = (0, E.UT)(c.A, {
+    getQueryId: s.fic.APPLICATION_WIDGET_APPLICATION_CONFIGS,
     get: () => c.A.applicationWidgetConfigs,
-    load: () => G(),
+    load: () => D(),
 });

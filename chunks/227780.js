@@ -1,55 +1,57 @@
-l.d(t, { EmojiStudioModal: () => eR });
+l.d(t, { EmojiStudioModal: () => ew });
 var n = l(627968),
-    i = l(64700),
-    a = l(935462),
-    r = l(503698),
-    s = l.n(r);
-let o = (e) => "image/gif" === e || "image/webp" === e || "image/avif" === e;
-var u = l(17928),
-    c = l(192308),
+    r = l(64700),
+    i = l(935462),
+    a = l(503698),
+    s = l.n(a);
+let u = (e) => "image/gif" === e || "image/webp" === e || "image/avif" === e;
+var c = l(17928),
+    o = l(192308),
     d = l(534514),
-    h = l(815021),
-    m = l(922016),
-    g = l(550079),
-    x = l(477782),
-    f = l(408278),
-    j = l(454743),
-    v = l(452027),
-    E = l(821609),
-    _ = l(157559),
-    b = l(554375),
+    m = l(815021),
+    g = l(922016),
+    h = l(550079),
+    j = l(477782),
+    x = l(408278),
+    f = l(454743),
+    b = l(452027),
+    v = l(821609),
+    E = l(157559),
+    N = l(554375),
     I = l(964486),
-    A = l(626584),
-    N = l(691223),
-    p = l(288224),
-    S = l(71393),
-    w = l(576705),
+    S = l(870218),
+    A = l(61310),
+    p = l(626584),
+    O = l(691223),
+    _ = l(288224),
+    C = l(71393),
+    y = l(576705),
     M = l(967198),
-    C = l(954571),
-    y = l(690521),
-    O = l(339143),
-    R = l(80569),
+    k = l(954571),
+    R = l(690521),
+    D = l(339143),
+    w = l(80569),
     T = l(834730),
-    D = l(691540),
-    k = l(857250),
-    L = l(97483),
-    G = l(565645),
-    H = l(927813),
-    F = l(985018),
-    U = l(780999),
-    J = l(861173);
-let W = 6 * H.A.Millis.SECOND;
-function Z(e) {
+    G = l(691540),
+    L = l(857250),
+    z = l(97483),
+    F = l(565645),
+    K = l(927813),
+    P = l(985018),
+    H = l(780999),
+    W = l(861173);
+let B = 6 * K.A.Millis.SECOND;
+function J(e) {
     let { emoji: t, guildId: l } = e,
-        i = (0, u.bG)([S.A], () => S.A.getGuild(l)?.name);
+        r = (0, c.bG)([C.A], () => C.A.getGuild(l)?.name);
     return (0, n.jsxs)("div", {
-        className: s()(J.oR, U.o),
+        className: s()(W.oR, H.o),
         children: [
-            (0, n.jsx)(G.A, { emojiId: t.id, size: "default" }),
+            (0, n.jsx)(F.A, { emojiId: t.id, size: "default" }),
             (0, n.jsx)(T.E, {
                 variant: "text-md/normal",
                 color: "text-muted",
-                children: F.intl.format(F.t.BaxFf8, {
+                children: P.intl.format(P.t.BaxFf8, {
                     emojiName: t.name,
                     emojiNameHook: (e, t) =>
                         (0, n.jsx)(
@@ -57,7 +59,7 @@ function Z(e) {
                             { variant: "text-md/semibold", color: "text-strong", tag: "strong", children: e },
                             t,
                         ),
-                    guildName: i,
+                    guildName: r,
                     guildNameHook: (e, t) =>
                         (0, n.jsx)(
                             T.E,
@@ -69,79 +71,79 @@ function Z(e) {
         ],
     });
 }
-var z = l(292666);
-let B = (e) => {
-    let { name: t, onNameChange: l, label: a } = e,
-        r = i.useRef(null),
-        s = i.useRef(null),
-        [o, u] = i.useState(!1),
-        c = i.useCallback(
+var U = l(292666);
+let Y = (e) => {
+    let { name: t, onNameChange: l, label: i } = e,
+        a = r.useRef(null),
+        s = r.useRef(null),
+        [u, c] = r.useState(!1),
+        o = r.useCallback(
             (e) => {
-                (s.current = r.current?.selectionStart),
-                    l((e = (e = e.replace(/\s/g, "_")).length < 2 ? e : y.Ay.sanitizeEmojiName(e)));
+                (s.current = a.current?.selectionStart),
+                    l((e = (e = e.replace(/\s/g, "_")).length < 2 ? e : R.Ay.sanitizeEmojiName(e)));
             },
             [l],
         );
-    i.useEffect(() => {
-        null != s.current && (r.current?.setSelectionRange(s.current, s.current), (s.current = null));
+    r.useEffect(() => {
+        null != s.current && (a.current?.setSelectionRange(s.current, s.current), (s.current = null));
     });
-    let d = i.useCallback(() => {
-            u(!1);
+    let d = r.useCallback(() => {
+            c(!1);
         }, []),
-        h = i.useCallback(() => {
-            u(!0);
+        m = r.useCallback(() => {
+            c(!0);
         }, []);
-    return (0, n.jsx)(z.k, {
-        inputRef: r,
-        error: o ? "" : void 0,
+    return (0, n.jsx)(U.k, {
+        inputRef: a,
+        error: u ? "" : void 0,
         minLength: 2,
         value: t,
-        onChange: c,
-        placeholder: F.intl.string(F.t.U2JFHZ),
+        onChange: o,
+        placeholder: P.intl.string(P.t.U2JFHZ),
         name: "emoji_name",
         onBlur: d,
-        onFocus: h,
-        label: a,
+        onFocus: m,
+        label: i,
         clearable: !0,
         required: !0,
     });
 };
-var P = l(308295),
+var $ = l(308295),
     V = l(652215),
-    K = l(307731);
-let Y = (e) => {
-        let { error: t, variant: l, color: i } = e;
-        return (0, n.jsx)(T.E, { variant: l, color: i, children: $(t) });
+    Q = l(307731);
+let X = (e) => {
+        let { error: t, variant: l, color: r } = e;
+        return (0, n.jsx)(T.E, { variant: l, color: r, children: q(t) });
     },
-    $ = (e) => {
+    q = (e) => {
         switch (e) {
             case V.t02.TOO_MANY_EMOJI:
             case V.t02.TOO_MANY_ANIMATED_EMOJI:
-                return F.intl.string(F.t.FtKH49);
-            case R.j.TOO_BIG:
+                return P.intl.string(P.t.FtKH49);
+            case w.j.TOO_BIG:
             case V.t02.INVALID_FILE_ASSET_SIZE:
             case V.t02.INVALID_FORM_BODY:
-                return F.intl.formatToPlainString(F.t.kIO9jy, { maxSize: K.EMOJI_MAX_FILESIZE_KB });
+                return P.intl.formatToPlainString(P.t.kIO9jy, { maxSize: Q.EMOJI_MAX_FILESIZE_KB });
             case V.t02.INVALID_FILE_ASSET_SIZE_RESIZE_ANIMATED:
-                return F.intl.string(F.t["6WN/qk"]);
-            case R.j.MISSING_IMAGE_DATA:
-                return F.intl.string(F.t["41/Kbh"]);
-            case R.j.MISSING_GUILD:
-                return F.intl.string(F.t["8RCtpD"]);
-            case R.j.ANIMATED_CROPPING:
-                return F.intl.string(F.t.yoVkHN);
-            case R.j.IMAGE_LOAD:
-                return F.intl.format(F.t.xZLPcF, {});
-            case R.j.NO_PERMISSIONS:
-                return F.intl.string(F.t.QY7ZFZ);
+                return P.intl.string(P.t["6WN/qk"]);
+            case w.j.MISSING_IMAGE_DATA:
+                return P.intl.string(P.t["41/Kbh"]);
+            case w.j.MISSING_GUILD:
+                return P.intl.string(P.t["8RCtpD"]);
+            case w.j.ANIMATED_CROPPING:
+                return P.intl.string(P.t.yoVkHN);
+            case w.j.IMAGE_LOAD:
+                return P.intl.format(P.t.xZLPcF, {});
+            case w.j.NO_PERMISSIONS:
+                return P.intl.string(P.t.QY7ZFZ);
             case 429:
-                return F.intl.string(F.t["4rjikl"]);
-            case R.j.UNKNOWN:
+                return P.intl.string(P.t["4rjikl"]);
+            case w.j.UNKNOWN:
             default:
-                return F.intl.string(F.t.iufib1);
+                return P.intl.string(P.t.iufib1);
         }
     },
-    Q = (e) => {
+    Z = (e) => {
         if (e?.body?.code != null) {
             let t = Number(e.body.code);
             if (!Number.isNaN(t)) return t;
@@ -154,394 +156,394 @@ let Y = (e) => {
                     if (!Number.isNaN(e)) return e;
                 }
             } catch (e) {}
-        return R.j.UNKNOWN;
+        return w.j.UNKNOWN;
     };
-var q = l(691885),
-    X = l(159273),
-    ee = l(548118),
-    et = l(492494),
-    el = l(711014),
-    en = l(403362),
-    ei = l(473145);
-let ea = (e) => ({ label: e.name, value: e.id }),
-    er = (e) => w.A.can(V.xBc.CREATE_GUILD_EXPRESSIONS, e),
-    es = (e) => {
+var ee = l(691885),
+    et = l(159273),
+    el = l(548118),
+    en = l(492494),
+    er = l(711014),
+    ei = l(403362),
+    ea = l(473145);
+let es = (e) => ({ label: e.name, value: e.id }),
+    eu = (e) => y.A.can(V.xBc.CREATE_GUILD_EXPRESSIONS, e),
+    ec = (e) => {
         let {
                 onChange: t,
                 selected: l,
-                onError: a,
-                labelledBy: r,
+                onError: i,
+                labelledBy: a,
                 isEmojiAnimated: s,
-                label: o,
-                required: c,
+                label: u,
+                required: o,
                 errorMessage: d,
             } = e,
-            h = (0, u.cf)([S.A, el.Ay], () =>
+            m = (0, c.cf)([C.A, er.Ay], () =>
                 Object.fromEntries(
-                    el.Ay.getFlattenedGuildIds()
-                        .map((e) => S.A.getGuild(e))
-                        .filter(en.Vq)
+                    er.Ay.getFlattenedGuildIds()
+                        .map((e) => C.A.getGuild(e))
+                        .filter(ei.Vq)
                         .map((e) => [e.id, e]),
                 ),
             ),
-            m = (0, u.cf)(
-                [X.Ay],
+            g = (0, c.cf)(
+                [et.Ay],
                 () =>
                     Object.fromEntries(
-                        Object.entries(h).map((e) => {
+                        Object.entries(m).map((e) => {
                             let [t, l] = e;
                             return [
                                 t,
                                 (function (e) {
                                     let { guild: t, emojis: l, isEmojiAnimated: n } = e,
-                                        i =
-                                            l.filter((e) => e.animated === n && !e.managed && !(0, et.Eg)(e, t.id))
+                                        r =
+                                            l.filter((e) => e.animated === n && !e.managed && !(0, en.Eg)(e, t.id))
                                                 .length ?? 0;
-                                    return (0, ei.sN)(t) - i;
-                                })({ guild: l, emojis: X.Ay.getGuildEmoji(t), isEmojiAnimated: s }),
+                                    return (0, ea.sN)(t) - r;
+                                })({ guild: l, emojis: et.Ay.getGuildEmoji(t), isEmojiAnimated: s }),
                             ];
                         }),
                     ),
-                [h, s],
+                [m, s],
             ),
-            g = i.useMemo(() => Object.values(h).filter(er).map(ea), [h]),
-            x = i.useCallback(
+            h = r.useMemo(() => Object.values(m).filter(eu).map(es), [m]),
+            j = r.useCallback(
                 (e) => {
-                    let { value: t, label: l, disabled: i } = e;
+                    let { value: t, label: l, disabled: r } = e;
                     return {
                         id: String(t),
                         value: t,
                         label: l,
-                        disabled: i,
+                        disabled: r,
                         leading: ((e) => {
                             if (null == e.value) return null;
-                            let t = h[e.value];
+                            let t = m[e.value];
                             return null == t
                                 ? null
-                                : (0, n.jsx)(ee.Ay, { guild: t, size: ee.Ay.Sizes.SMALLER, active: !0 });
+                                : (0, n.jsx)(el.Ay, { guild: t, size: el.Ay.Sizes.SMALLER, active: !0 });
                         })(e),
                         trailing:
-                            null == e.value ? null : F.intl.formatToPlainString(F.t.WkK72v, { count: m[e.value] }),
+                            null == e.value ? null : P.intl.formatToPlainString(P.t.WkK72v, { count: g[e.value] }),
                     };
                 },
-                [m, h],
+                [g, m],
             );
         return (
-            i.useEffect(() => {
-                g.length < 1
-                    ? a(R.j.NO_PERMISSIONS)
-                    : null != l && (m?.[l] ?? 0) < 1
-                      ? a(V.t02.TOO_MANY_EMOJI)
-                      : a(null);
-            }, [g, t, a, l, m]),
-            (0, n.jsx)(q.l, {
-                label: o,
-                required: c,
+            r.useEffect(() => {
+                h.length < 1
+                    ? i(w.j.NO_PERMISSIONS)
+                    : null != l && (g?.[l] ?? 0) < 1
+                      ? i(V.t02.TOO_MANY_EMOJI)
+                      : i(null);
+            }, [h, t, i, l, g]),
+            (0, n.jsx)(ee.l, {
+                label: u,
+                required: o,
                 selectionMode: "single",
                 errorMessage: d,
                 onSelectionChange: t,
-                options: g,
-                formatOption: x,
+                options: h,
+                formatOption: j,
                 value: l,
-                "aria-labelledby": r,
-                placeholder: g.length < 1 ? F.intl.string(F.t.jHpxwo) : F.intl.string(F.t["4mqeQO"]),
-                disabled: g.length < 1,
+                "aria-labelledby": a,
+                placeholder: h.length < 1 ? P.intl.string(P.t.jHpxwo) : P.intl.string(P.t["4mqeQO"]),
+                disabled: h.length < 1,
             })
         );
     };
 var eo = l(830917),
-    eu = l(990078),
-    ec = l(831453),
-    ed = l(725441),
+    ed = l(990078),
+    em = l(831453),
+    eg = l(725441),
     eh = l(92259),
-    em = l(106236),
-    eg = l(218429),
-    ex = l(59520),
-    ef = l(424632),
-    ej = l(902916),
-    ev = l(818348),
-    eE = l(482390);
-let e_ = new A.A("ImageEditor"),
-    eb = { width: 288, height: 288 },
-    eI = i.forwardRef(function (e, t) {
-        let { file: l, imageUri: a, onUpdate: r, onThrottledEdit: u } = e,
-            c = i.useRef({ x: 0, y: 0 }),
-            [d, h] = i.useState({ x: 0, y: 0 }),
-            m = i.useRef(null),
-            [g, x] = i.useState(1),
-            [j, v] = i.useState(null),
-            [E, _] = i.useState(!1),
-            [b, I] = i.useState({ top: 0, bottom: 0, left: 0, right: 0 }),
-            [A, N] = i.useState(0),
-            [p, S] = i.useState({ x: 0, y: 0 }),
-            [w, M] = i.useState(!1),
-            { isGIF: C, isWebP: y, isCheckingAnimation: O, isEditableAnimatedImage: D } = (0, ej._)(l),
-            k = o(l.type) && !C && !y,
-            [L, G] = i.useState(null),
-            H = (0, ex.I)(u ?? ev.tE, 500),
-            U = i.useRef(null),
-            J = i.useRef(0),
-            W = i.useCallback(
+    ej = l(106236),
+    ex = l(218429),
+    ef = l(59520),
+    eb = l(424632),
+    ev = l(902916),
+    eE = l(818348),
+    eN = l(482390);
+let eI = new p.A("ImageEditor"),
+    eS = { width: 288, height: 288 },
+    eA = r.forwardRef(function (e, t) {
+        let { file: l, imageUri: i, onUpdate: a, onThrottledEdit: c } = e,
+            o = r.useRef({ x: 0, y: 0 }),
+            [d, m] = r.useState({ x: 0, y: 0 }),
+            g = r.useRef(null),
+            [h, j] = r.useState(1),
+            [f, b] = r.useState(null),
+            [v, E] = r.useState(!1),
+            [N, I] = r.useState({ top: 0, bottom: 0, left: 0, right: 0 }),
+            [S, A] = r.useState(0),
+            [p, O] = r.useState({ x: 0, y: 0 }),
+            [_, C] = r.useState(!1),
+            { isGIF: y, isWebP: M, isCheckingAnimation: k, isEditableAnimatedImage: R } = (0, ev._)(l),
+            D = u(l.type) && !y && !M,
+            [G, L] = r.useState(null),
+            z = (0, ef.I)(c ?? eE.tE, 500),
+            F = r.useRef(null),
+            K = r.useRef(0),
+            H = r.useCallback(
                 function () {
                     let e =
                         arguments.length > 0 && void 0 !== arguments[0]
                             ? arguments[0]
-                            : { x: c.current.x, y: c.current.y };
-                    if (null == m.current) return;
-                    let { x: t, y: l } = (0, ef.F3)(e.x, e.y, b);
-                    (c.current = { x: t, y: l }),
-                        (m.current.style.transform = `translate3d(${t}px, ${l}px, 0) rotate(${A}deg) scaleX(${E ? "-1" : "1"})`),
-                        h({ x: t, y: l });
+                            : { x: o.current.x, y: o.current.y };
+                    if (null == g.current) return;
+                    let { x: t, y: l } = (0, eb.F3)(e.x, e.y, N);
+                    (o.current = { x: t, y: l }),
+                        (g.current.style.transform = `translate3d(${t}px, ${l}px, 0) rotate(${S}deg) scaleX(${v ? "-1" : "1"})`),
+                        m({ x: t, y: l });
                 },
-                [m, A, b, E],
+                [g, S, N, v],
             );
-        i.useEffect(() => {
-            null == j || O || I(ep(j, g, D));
-        }, [j, g, D, O]);
-        let Z = i.useCallback(
+        r.useEffect(() => {
+            null == f || k || I(e_(f, h, R));
+        }, [f, h, R, k]);
+        let W = r.useCallback(
                 (e) => {
-                    if (null == j) return;
-                    let t = ep(j, e, D);
-                    x(e), I(t), W(), H?.();
+                    if (null == f) return;
+                    let t = e_(f, e, R);
+                    j(e), I(t), H(), z?.();
                 },
-                [j, W, D, H],
+                [f, H, R, z],
             ),
-            z = i.useCallback(() => {
-                if (null == m.current || null == j) return;
-                let e = (A + 90) % 360,
-                    t = j.height,
-                    l = j.width,
-                    n = ep({ width: t, height: l }, g, D);
-                N(e), v({ width: t, height: l }), I(n), W(), H?.();
-            }, [j, A, W, g, D, H]),
-            B = i.useCallback(() => {
-                null != m.current && (_((e) => !e), W(), H?.());
-            }, [m, W, H]),
-            P = i.useCallback(() => {
-                if (null == j) return {};
-                let { height: e, width: t } = eN(eA(j, A), g);
+            B = r.useCallback(() => {
+                if (null == g.current || null == f) return;
+                let e = (S + 90) % 360,
+                    t = f.height,
+                    l = f.width,
+                    n = e_({ width: t, height: l }, h, R);
+                A(e), b({ width: t, height: l }), I(n), H(), z?.();
+            }, [f, S, H, h, R, z]),
+            J = r.useCallback(() => {
+                null != g.current && (E((e) => !e), H(), z?.());
+            }, [g, H, z]),
+            U = r.useCallback(() => {
+                if (null == f) return {};
+                let { height: e, width: t } = eO(ep(f, S), h);
                 return { height: e, width: t, minHeight: e, minWidth: t };
-            }, [j, A, g]),
-            V = i.useCallback(() => {
-                U.current?.moveGrabber(-0.025);
+            }, [f, S, h]),
+            Y = r.useCallback(() => {
+                F.current?.moveGrabber(-0.025);
             }, []),
-            K = i.useCallback(() => {
-                U.current?.moveGrabber(0.025);
+            $ = r.useCallback(() => {
+                F.current?.moveGrabber(0.025);
             }, []),
-            Y = i.useCallback((e) => {
-                S({ x: e.clientX - c.current.x, y: e.clientY - c.current.y }), M(!0);
+            V = r.useCallback((e) => {
+                O({ x: e.clientX - o.current.x, y: e.clientY - o.current.y }), C(!0);
             }, []);
-        i.useEffect(() => {
-            let e = () => M(!1);
+        r.useEffect(() => {
+            let e = () => C(!1);
             return window.addEventListener("mouseup", e), () => window.removeEventListener("mouseup", e);
         }, []);
-        let $ = i.useCallback(
+        let Q = r.useCallback(
             (e) => {
-                let { x: t, y: l } = c.current;
-                w &&
+                let { x: t, y: l } = o.current;
+                _ &&
                     (e.clientX !== t || e.clientY !== l) &&
-                    (W({ x: (t = e.clientX - p.x), y: (l = e.clientY - p.y) }), H?.());
+                    (H({ x: (t = e.clientX - p.x), y: (l = e.clientY - p.y) }), z?.());
             },
-            [w, p, W, H],
+            [_, p, H, z],
         );
-        i.useEffect(() => {
-            if (w) return window.addEventListener("mousemove", $), () => window.removeEventListener("mousemove", $);
-        }, [$, w]);
-        let Q = i.useRef(null),
-            q = i.useCallback(async () => {
+        r.useEffect(() => {
+            if (_) return window.addEventListener("mousemove", Q), () => window.removeEventListener("mousemove", Q);
+        }, [Q, _]);
+        let X = r.useRef(null),
+            q = r.useCallback(async () => {
                 let e;
-                if (null == m.current || null == j || O) return;
+                if (null == g.current || null == f || k) return;
                 let t = Date.now(),
-                    n = m.current,
-                    i = { height: 128, width: 128 },
+                    n = g.current,
+                    r = { height: 128, width: 128 },
                     s = null;
-                if ((null != Q.current && (Q.current(), (Q.current = null)), D))
+                if ((null != X.current && (X.current(), (X.current = null)), R))
                     try {
-                        let t = eS(
+                        let t = eC(
                                 {
                                     file: l,
                                     image: n,
-                                    cropDimensions: eb,
-                                    cropOriginCoordinates: c.current,
-                                    maxDimensions: i,
-                                    imageRotation: A,
-                                    flipHorizontal: E,
+                                    cropDimensions: eS,
+                                    cropOriginCoordinates: o.current,
+                                    maxDimensions: r,
+                                    imageRotation: S,
+                                    flipHorizontal: v,
                                     resizeWidth: 128,
                                     resizeHeight: 128,
                                 },
-                                j,
-                                g,
+                                f,
+                                h,
                             ),
-                            { result: a, cancelFn: r } = await (0, ef.ny)(t);
-                        (Q.current = r), (e = await a);
+                            { result: i, cancelFn: a } = await (0, eb.ny)(t);
+                        (X.current = a), (e = await i);
                     } catch (e) {
-                        e_.error("Error cropping animated image", e), (s = R.j.ANIMATED_CROPPING);
+                        eI.error("Error cropping animated image", e), (s = w.j.ANIMATED_CROPPING);
                     } finally {
-                        Q.current?.(), (Q.current = null);
+                        X.current?.(), (X.current = null);
                     }
                 else
-                    e = k
-                        ? a
+                    e = D
+                        ? i
                         : (0, eo.iL)({
                               image: n,
-                              cropDimensions: eb,
-                              cropOriginCoordinates: c.current,
-                              maxDimensions: i,
-                              imageRotation: A,
-                              flipHorizontal: E,
+                              cropDimensions: eS,
+                              cropOriginCoordinates: o.current,
+                              maxDimensions: r,
+                              imageRotation: S,
+                              flipHorizontal: v,
                           });
                 return (
-                    r({ imageData: e, imageDataTimestamp: t, error: s, loading: !1 }),
+                    a({ imageData: e, imageDataTimestamp: t, error: s, loading: !1 }),
                     () => {
-                        Q.current?.(), (Q.current = null);
+                        X.current?.(), (X.current = null);
                     }
                 );
-            }, [l, A, D, k, O, r, j, g, a, E]);
-        i.useEffect(() => {
-            w || q();
-        }, [q, d, A, j, w, g, L, E]);
-        let X = i.useCallback(() => {
-                if (null == m.current) return;
-                let e = m.current.naturalWidth,
-                    t = m.current.naturalHeight;
-                v({ width: e, height: t }), N(0), _(!1);
+            }, [l, S, R, D, k, a, f, h, i, v]);
+        r.useEffect(() => {
+            _ || q();
+        }, [q, d, S, f, _, h, G, v]);
+        let Z = r.useCallback(() => {
+                if (null == g.current) return;
+                let e = g.current.naturalWidth,
+                    t = g.current.naturalHeight;
+                b({ width: e, height: t }), A(0), E(!1);
                 let l = Math.min(Math.max(e, t) / Math.min(e, t), 4);
-                x(l), G(l), (J.current += 1), I(ep({ width: e, height: t }, l, D)), W({ x: 0, y: 0 });
-            }, [m, D, W]),
-            ee = i.useCallback(() => {
-                X();
-            }, [X]);
+                j(l), L(l), (K.current += 1), I(e_({ width: e, height: t }, l, R)), H({ x: 0, y: 0 });
+            }, [g, R, H]),
+            ee = r.useCallback(() => {
+                Z();
+            }, [Z]);
         return (
-            i.useImperativeHandle(t, () => ({ reset: X })),
+            r.useImperativeHandle(t, () => ({ reset: Z })),
             (0, n.jsxs)("div", {
-                className: s()(eE.j0, { [eE.Id]: w }),
+                className: s()(eN.j0, { [eN.Id]: _ }),
                 style: { "--custom-image-editor-size": "288px" },
                 children: [
                     (0, n.jsxs)("div", {
-                        className: eE.oW,
+                        className: eN.oW,
                         children: [
                             (0, n.jsx)("img", {
                                 onLoad: ee,
                                 onError: () => {
-                                    r({ error: R.j.IMAGE_LOAD, loading: !1 });
+                                    a({ error: w.j.IMAGE_LOAD, loading: !1 });
                                 },
                                 style: {
-                                    opacity: +(null != j),
-                                    transform: `translate3d(${c.current.x}px, ${c.current.y}px, 0) rotate(${A}deg) scaleX(${E ? "-1" : "1"})`,
-                                    ...P(),
+                                    opacity: +(null != f),
+                                    transform: `translate3d(${o.current.x}px, ${o.current.y}px, 0) rotate(${S}deg) scaleX(${v ? "-1" : "1"})`,
+                                    ...U(),
                                 },
-                                className: eE.Sl,
-                                src: a,
+                                className: eN.Sl,
+                                src: i,
                                 crossOrigin: "anonymous",
-                                alt: F.intl.string(F.t.EYR1Fa),
-                                ref: m,
-                                onMouseDown: Y,
+                                alt: P.intl.string(P.t.EYR1Fa),
+                                ref: g,
+                                onMouseDown: V,
                                 draggable: !1,
                             }),
-                            !k &&
-                                !O &&
+                            !D &&
+                                !k &&
                                 (0, n.jsx)("div", {
-                                    className: eE.Lw,
-                                    style: { opacity: +(null != j), width: eb.width, height: eb.height },
+                                    className: eN.Lw,
+                                    style: { opacity: +(null != f), width: eS.width, height: eS.height },
                                     children: (0, n.jsx)(T.E, {
-                                        className: eE.TB,
+                                        className: eN.TB,
                                         variant: "text-xs/normal",
                                         color: "text-strong",
-                                        children: F.intl.string(F.t.oBPhdN),
+                                        children: P.intl.string(P.t.oBPhdN),
                                     }),
                                 }),
                         ],
                     }),
-                    k
+                    D
                         ? (0, n.jsx)("div", {
-                              className: eE.Nf,
+                              className: eN.Nf,
                               children: (0, n.jsx)(T.E, {
                                   variant: "text-sm/normal",
                                   color: "text-muted",
-                                  children: F.intl.string(F.t.AjdEvM),
+                                  children: P.intl.string(P.t.AjdEvM),
                               }),
                           })
                         : (0, n.jsxs)("div", {
-                              className: eE.KE,
+                              className: eN.KE,
                               children: [
                                   (0, n.jsxs)("div", {
-                                      className: eE.R5,
+                                      className: eN.R5,
                                       children: [
-                                          (0, n.jsx)(eu.m, {
-                                              text: F.intl.string(F.t.FEIIO9),
-                                              "aria-label": F.intl.string(F.t.FEIIO9),
+                                          (0, n.jsx)(ed.m, {
+                                              text: P.intl.string(P.t.FEIIO9),
+                                              "aria-label": P.intl.string(P.t.FEIIO9),
                                               children: (0, n.jsx)("div", {
-                                                  className: eE.Q$,
-                                                  children: (0, n.jsx)(f.K, {
+                                                  className: eN.Q$,
+                                                  children: (0, n.jsx)(x.K, {
                                                       size: "sm",
                                                       variant: "icon-only",
-                                                      icon: ec.H,
-                                                      onClick: z,
-                                                      "aria-label": F.intl.string(F.t.FEIIO9),
+                                                      icon: em.H,
+                                                      onClick: B,
+                                                      "aria-label": P.intl.string(P.t.FEIIO9),
                                                   }),
                                               }),
                                           }),
-                                          (0, n.jsx)(eu.m, {
-                                              text: F.intl.string(F.t["4LRS2p"]),
-                                              "aria-label": F.intl.string(F.t["4LRS2p"]),
+                                          (0, n.jsx)(ed.m, {
+                                              text: P.intl.string(P.t["4LRS2p"]),
+                                              "aria-label": P.intl.string(P.t["4LRS2p"]),
                                               children: (0, n.jsx)("div", {
-                                                  className: eE.Q$,
-                                                  children: (0, n.jsx)(f.K, {
+                                                  className: eN.Q$,
+                                                  children: (0, n.jsx)(x.K, {
                                                       size: "sm",
                                                       variant: "icon-only",
-                                                      icon: ed.v,
-                                                      onClick: B,
-                                                      "aria-label": F.intl.string(F.t["4LRS2p"]),
+                                                      icon: eg.v,
+                                                      onClick: J,
+                                                      "aria-label": P.intl.string(P.t["4LRS2p"]),
                                                   }),
                                               }),
                                           }),
                                       ],
                                   }),
                                   (0, n.jsxs)("div", {
-                                      className: s()(eE.mu, eE.R5),
+                                      className: s()(eN.mu, eN.R5),
                                       children: [
-                                          (0, n.jsx)(eu.m, {
-                                              text: F.intl.string(F.t.QlArhK),
-                                              "aria-label": F.intl.string(F.t.QlArhK),
+                                          (0, n.jsx)(ed.m, {
+                                              text: P.intl.string(P.t.QlArhK),
+                                              "aria-label": P.intl.string(P.t.QlArhK),
                                               children: (0, n.jsx)("div", {
-                                                  className: eE.Q$,
-                                                  children: (0, n.jsx)(f.K, {
+                                                  className: eN.Q$,
+                                                  children: (0, n.jsx)(x.K, {
                                                       size: "sm",
                                                       variant: "icon-only",
                                                       icon: eh.V,
-                                                      onClick: V,
-                                                      "aria-label": F.intl.string(F.t.QlArhK),
+                                                      onClick: Y,
+                                                      "aria-label": P.intl.string(P.t.QlArhK),
                                                   }),
                                               }),
                                           }),
-                                          null != L &&
+                                          null != G &&
                                               (0, n.jsx)(
-                                                  em.A,
+                                                  ej.A,
                                                   {
-                                                      ref: U,
-                                                      className: eE.aw,
-                                                      initialValue: L,
+                                                      ref: F,
+                                                      className: eN.aw,
+                                                      initialValue: G,
                                                       minValue: 1,
                                                       maxValue: 4,
                                                       keyboardStep: 0.025,
-                                                      asValueChanges: Z,
+                                                      asValueChanges: W,
                                                       equidistant: !0,
                                                       hideBubble: !0,
-                                                      "aria-label": F.intl.string(F.t["2hPcVJ"]),
+                                                      "aria-label": P.intl.string(P.t["2hPcVJ"]),
                                                   },
-                                                  J.current,
+                                                  K.current,
                                               ),
-                                          (0, n.jsx)(eu.m, {
-                                              text: F.intl.string(F.t.Ch32tT),
-                                              "aria-label": F.intl.string(F.t.Ch32tT),
+                                          (0, n.jsx)(ed.m, {
+                                              text: P.intl.string(P.t.Ch32tT),
+                                              "aria-label": P.intl.string(P.t.Ch32tT),
                                               children: (0, n.jsx)("div", {
-                                                  className: eE.Q$,
-                                                  children: (0, n.jsx)(f.K, {
+                                                  className: eN.Q$,
+                                                  children: (0, n.jsx)(x.K, {
                                                       size: "sm",
                                                       variant: "icon-only",
-                                                      icon: eg.r,
-                                                      onClick: K,
-                                                      "aria-label": F.intl.string(F.t.Ch32tT),
+                                                      icon: ex.r,
+                                                      onClick: $,
+                                                      "aria-label": P.intl.string(P.t.Ch32tT),
                                                   }),
                                               }),
                                           }),
@@ -553,272 +555,287 @@ let e_ = new A.A("ImageEditor"),
             })
         );
     }),
-    eA = (e, t) => {
+    ep = (e, t) => {
         let { width: l, height: n } = e;
         return t % 180 != 0 ? { width: n, height: l } : { width: l, height: n };
     },
-    eN = (e, t) => {
+    eO = (e, t) => {
         let { width: l, height: n } = e,
-            i = 288 * t,
-            a = l / n;
-        return l > n ? (n = (l = i) / a) : (l = (n = i) * a), { width: l, height: n };
+            r = 288 * t,
+            i = l / n;
+        return l > n ? (n = (l = r) / i) : (l = (n = r) * i), { width: l, height: n };
     };
-function ep(e, t, l) {
-    let { width: n, height: i } = eN(e, t),
-        a = Math.abs(288 - n) / 2,
-        r = Math.abs(288 - i) / 2;
-    return l && (n < 288 || i < 288)
+function e_(e, t, l) {
+    let { width: n, height: r } = eO(e, t),
+        i = Math.abs(288 - n) / 2,
+        a = Math.abs(288 - r) / 2;
+    return l && (n < 288 || r < 288)
         ? { top: 0, bottom: 0, left: 0, right: 0 }
-        : { top: r, bottom: -r, left: -a, right: a };
+        : { top: a, bottom: -a, left: -i, right: i };
 }
-let eS = (e, t, l) => {
-    let { height: n, width: i } = eN(t, l),
-        a = (n = Math.min(n, 288)) / (i = Math.min(i, 288)),
-        r = { height: n, width: i },
-        s = Math.floor(a < 1 ? 128 * a : 128 / a);
-    return { ...e, cropDimensions: r, resizeHeight: a < 1 ? s : 128, resizeWidth: a > 1 ? s : 128 };
+let eC = (e, t, l) => {
+    let { height: n, width: r } = eO(t, l),
+        i = (n = Math.min(n, 288)) / (r = Math.min(r, 288)),
+        a = { height: n, width: r },
+        s = Math.floor(i < 1 ? 128 * i : 128 / i);
+    return { ...e, cropDimensions: a, resizeHeight: i < 1 ? s : 128, resizeWidth: i > 1 ? s : 128 };
 };
-var ew = l(905702);
-let eM = new A.A("EmojiStudio"),
-    eC = (e) => {
-        let { guildId: t } = e,
-            l = "userImage" in e ? e.userImage : void 0,
-            a = "emoji" in e ? e.emoji : void 0,
-            r = !!a,
-            [A, T] = i.useState(l ?? null),
-            [G, H] = i.useState(!1),
-            U = (0, u.bG)([S.A, M.A, w.A], () => {
+var ey = l(905702);
+let eM = new p.A("EmojiStudio"),
+    ek = (e) => {
+        var t;
+        let l,
+            { guildId: i } = e,
+            a = "userImage" in e ? e.userImage : void 0,
+            p = "emoji" in e ? e.emoji : void 0,
+            T = !!p,
+            [F, K] = r.useState(a ?? null),
+            [H, W] = r.useState(!1),
+            U = (0, c.bG)([C.A, M.A, y.A], () => {
                 let e = M.A.getGuildId(),
-                    t = S.A.getGuild(e);
-                return w.A.can(V.xBc.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
+                    t = C.A.getGuild(e);
+                return y.A.can(V.xBc.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
             }),
-            [J, z] = i.useState(t ?? U),
-            [K, q] = i.useState(!1),
-            [X, ee] = i.useState(null),
-            [et, el] = i.useState(null),
-            [en, ei] = i.useState(
+            [Q, ee] = r.useState(i ?? U),
+            [et, el] = r.useState(!1),
+            [en, er] = r.useState(null),
+            [ei, ea] = r.useState(null),
+            [es, eu] = r.useState(
                 (function (e) {
                     if (null == e) return "";
                     let t = e?.file?.name ?? "",
                         l = t.lastIndexOf("."),
                         n = -1 === l ? t : t.substring(0, l);
-                    return y.Ay.sanitizeEmojiName(n);
-                })(A),
+                    return R.Ay.sanitizeEmojiName(n);
+                })(F),
             ),
-            [ea, er] = i.useState(null),
-            eo = i.useRef(Date.now()),
-            eu = i.useRef(0),
-            ec = i.useRef(0),
-            ed = i.useRef(!1),
-            eh = i.useRef(null),
-            [em, eg] = i.useState(!1),
-            ex = i.useRef(null);
-        i.useEffect(
+            [eo, ed] = r.useState(null),
+            em = r.useRef(Date.now()),
+            eg = r.useRef(0),
+            eh = r.useRef(0),
+            ej = r.useRef(!1),
+            ex = r.useRef(null),
+            [ef, eb] = r.useState(!1),
+            ev = r.useRef(null),
+            eE =
+                ((t = F?.file),
+                (l = r.useRef(null)),
+                r.useEffect(() => {
+                    if (null == t) {
+                        l.current = null;
+                        return;
+                    }
+                    l.current = S.A.fromBlob(A.f.EMOJI, t);
+                }, [t]),
+                l);
+        r.useEffect(
             () => (
-                (0, O.O)(!1),
+                (0, D.O)(!1),
                 () => {
-                    (0, O.O)(!1);
+                    (0, D.O)(!1);
                 }
             ),
             [],
         ),
-            i.useEffect(() => {
-                if (null == a) return;
-                let e = N.A.getEmojiRawAsset(a.id);
+            r.useEffect(() => {
+                if (null == p) return;
+                let e = O.A.getEmojiRawAsset(p.id);
                 if (null != e) {
-                    T(e), er(e.data), ei(a.name), H(!1);
+                    K(e), ed(e.data), eu(p.name), W(!1);
                     return;
                 }
-                H(!0),
-                    (0, P.$)(a)
+                W(!0),
+                    (0, $.$)(p)
                         .then((e) => {
-                            T(e), er(e.data), ei(a.name), H(!1);
+                            K(e), ed(e.data), eu(p.name), W(!1);
                         })
                         .catch((e) => {
-                            eM.error("Failed to fetch emoji image", e), ee(R.j.MISSING_IMAGE_DATA), H(!1);
+                            eM.error("Failed to fetch emoji image", e), er(w.j.MISSING_IMAGE_DATA), W(!1);
                         });
-            }, [a]);
-        let ef = i.useCallback(
+            }, [p]);
+        let eN = r.useCallback(
             (e) => {
                 let { reason: t } = e,
-                    l = X ?? et;
-                C.default.track(V.HAw.EMOJI_STUDIO_ENDED, {
+                    l = en ?? ei;
+                k.default.track(V.HAw.EMOJI_STUDIO_ENDED, {
                     reason: t,
-                    is_initial: 0 === eu.current,
-                    has_image: null != A,
+                    is_initial: 0 === eg.current,
+                    has_image: null != F,
                     error: null == l ? null : String(l),
-                    throttled_edit_count: ec.current,
-                    session_duration_ms: Date.now() - eo.current,
-                    has_guild_selected: null != J,
+                    throttled_edit_count: eh.current,
+                    session_duration_ms: Date.now() - em.current,
+                    has_guild_selected: null != Q,
                 });
             },
-            [X, et, eo, A, J],
+            [en, ei, em, F, Q],
         );
         (0, I.l0)(() => {
-            ed.current || ef({ reason: "closed" });
+            ej.current || eN({ reason: "closed" });
         });
-        let ej = i.useCallback(async () => {
-                if ((ee(null), null == J)) return void ee(R.j.MISSING_GUILD);
-                if (null == A || A?.file == null || null == ea) return void ee(R.j.MISSING_IMAGE_DATA);
-                q(!0);
-                let e = null;
+        let eI = r.useCallback(async () => {
+                if ((er(null), null == Q)) return void er(w.j.MISSING_GUILD);
+                if (null == F || F?.file == null || null == eo) return void er(w.j.MISSING_IMAGE_DATA);
+                el(!0);
+                let e = (await eE.current?.getOriginalMd5()) ?? null,
+                    t = null;
                 try {
-                    (e = await (0, b.Gf)({
-                        image: ea,
-                        guildId: J,
-                        name: en,
+                    (t = await (0, N.Gf)({
+                        image: eo,
+                        guildId: Q,
+                        name: es,
+                        originalMd5: e,
                         analyticsLocation: { page: V.liQ.EMOJI_STUDIO },
                     })),
-                        p.X({ emojiId: e.id, userImage: { ...A } });
+                        _.X({ emojiId: t.id, userImage: { ...F } });
                 } catch (e) {
-                    q(!1), ee(Q(e)), eM.error("Failed to upload emoji.", e);
+                    el(!1), er(Z(e)), eM.error("Failed to upload emoji.", e);
                     return;
                 }
-                if (null != a)
+                if (null != p)
                     try {
-                        await (0, b.ak)(J, a.id, e.id);
+                        await (0, N.ak)(Q, p.id, t.id);
                     } catch (e) {
                         if (429 === e.status)
-                            _.A.show({ title: F.intl.string(F.t.iufib1), body: F.intl.string(F.t.Whhv4w) });
+                            E.A.show({ title: P.intl.string(P.t.iufib1), body: P.intl.string(P.t.Whhv4w) });
                         else {
-                            q(!1), ee(Q(e)), eM.error("Failed to delete emoji.", e);
+                            el(!1), er(Z(e)), eM.error("Failed to delete emoji.", e);
                             return;
                         }
                     }
-                (0, O.O)(!1),
-                    (0, c.closeModal)(R.y),
-                    ef({ reason: "uploaded" }),
-                    (ed.current = !0),
+                (0, D.O)(!1),
+                    (0, o.closeModal)(w.y),
+                    eN({ reason: "uploaded" }),
+                    (ej.current = !0),
                     (function (e) {
                         let { emoji: t, guildId: l } = e;
-                        (0, D.P0)(
-                            (0, k.o)("", L.Ck.CUSTOM, {
-                                position: L.xJ.TOP,
-                                component: (0, n.jsx)(Z, { emoji: t, guildId: l }),
-                                duration: W,
+                        (0, G.P0)(
+                            (0, L.o)("", z.Ck.CUSTOM, {
+                                position: z.xJ.TOP,
+                                component: (0, n.jsx)(J, { emoji: t, guildId: l }),
+                                duration: B,
                             }),
                         );
-                    })({ emoji: e, guildId: J }),
-                    q(!1);
-            }, [J, A, a, ea, ef, en]),
-            ev = i.useCallback(() => {
-                ee(null), null != A && er(A.data), (ec.current = 0), (0, O.O)(!1), eh.current?.reset();
-            }, [eh, A]),
-            eE = i.useCallback(() => {
-                (0, P.p)({ onClose: ev });
-            }, [ev]),
-            e_ = i.useCallback((e) => {
+                    })({ emoji: t, guildId: Q }),
+                    el(!1);
+            }, [Q, F, p, eo, eN, es, eE]),
+            eS = r.useCallback(() => {
+                er(null), null != F && ed(F.data), (eh.current = 0), (0, D.O)(!1), ex.current?.reset();
+            }, [ex, F]),
+            ep = r.useCallback(() => {
+                (0, $.p)({ onClose: eS });
+            }, [eS]),
+            eO = r.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: l = 0, error: n } = e,
-                    i = null;
-                null != t && y.Ay.isDataTooBig(t) && (i = R.j.TOO_BIG),
-                    ee(n ?? i),
-                    l < eu.current || (null != t && (er(t), (eu.current = l)));
+                    r = null;
+                null != t && R.Ay.isDataTooBig(t) && (r = w.j.TOO_BIG),
+                    er(n ?? r),
+                    l < eg.current || (null != t && (ed(t), (eg.current = l)));
             }, []),
-            eb = i.useCallback(() => {
-                ec.current++, (0, O.O)(!0);
+            e_ = r.useCallback(() => {
+                eh.current++, (0, D.O)(!0);
             }, []),
-            eA = r ? F.intl.string(F.t.FOYn8U) : F.intl.string(F.t.iMJO37);
-        return G || null == A
+            eC = T ? P.intl.string(P.t.FOYn8U) : P.intl.string(P.t.iMJO37);
+        return H || null == F
             ? (0, n.jsx)("main", {
-                  className: ew.iW,
+                  className: ey.iW,
                   children: (0, n.jsxs)("div", {
-                      className: ew.EN,
+                      className: ey.EN,
                       children: [
                           (0, n.jsx)("div", {
-                              className: ew.uv,
+                              className: ey.uv,
                               children: (0, n.jsx)(d.D, {
                                   variant: "heading-lg/medium",
                                   color: "text-strong",
-                                  className: ew.DD,
-                                  children: eA,
+                                  className: ey.DD,
+                                  children: eC,
                               }),
                           }),
                           (0, n.jsx)("div", {
-                              className: ew.b,
-                              children: (0, n.jsx)(h.J, { size: "md", onClick: eE }),
+                              className: ey.b,
+                              children: (0, n.jsx)(m.J, { size: "md", onClick: ep }),
                           }),
                       ],
                   }),
               })
             : (0, n.jsxs)("main", {
-                  className: s()(ew.iW, { [ew.WY]: null != A }),
+                  className: s()(ey.iW, { [ey.WY]: null != F }),
                   children: [
                       (0, n.jsxs)("div", {
-                          className: ew.EN,
+                          className: ey.EN,
                           children: [
-                              (0, n.jsx)(eI, {
-                                  ref: eh,
-                                  file: A.file,
-                                  imageUri: A.data,
-                                  onUpdate: e_,
-                                  onThrottledEdit: eb,
+                              (0, n.jsx)(eA, {
+                                  ref: ex,
+                                  file: F.file,
+                                  imageUri: F.data,
+                                  onUpdate: eO,
+                                  onThrottledEdit: e_,
                               }),
                               (0, n.jsx)("div", {
-                                  className: ew.uv,
+                                  className: ey.uv,
                                   children: (0, n.jsx)(d.D, {
                                       variant: "heading-lg/medium",
                                       color: "text-strong",
-                                      className: ew.DD,
-                                      children: eA,
+                                      className: ey.DD,
+                                      children: eC,
                                   }),
                               }),
                               (0, n.jsx)("div", {
-                                  className: ew.b,
-                                  children: (0, n.jsx)(h.J, { size: "md", onClick: eE }),
+                                  className: ey.b,
+                                  children: (0, n.jsx)(m.J, { size: "md", onClick: ep }),
                               }),
                               (0, n.jsx)("div", {
-                                  className: ew.WA,
-                                  children: (0, n.jsx)(m.Y, {
-                                      targetElementRef: ex,
-                                      "aria-label": F.intl.string(F.t.vznjTl),
+                                  className: ey.WA,
+                                  children: (0, n.jsx)(g.Y, {
+                                      targetElementRef: ev,
+                                      "aria-label": P.intl.string(P.t.vznjTl),
                                       position: "bottom",
                                       align: "right",
                                       renderPopout: (e) => {
                                           let { closePopout: t } = e;
-                                          return (0, n.jsx)(g.W, {
+                                          return (0, n.jsx)(h.W, {
                                               "data-menu-migrated-auto": !0,
                                               navId: "emoji-studio-context-menu",
                                               onClose: t,
                                               onSelect: t,
-                                              "aria-label": F.intl.string(F.t.vznjTl),
-                                              children: (0, n.jsx)(x.Dr, {
+                                              "aria-label": P.intl.string(P.t.vznjTl),
+                                              children: (0, n.jsx)(j.Dr, {
                                                   id: "emoji-studio-reset",
                                                   color: "danger",
-                                                  label: F.intl.string(F.t.ka3Yhm),
-                                                  action: ev,
+                                                  label: P.intl.string(P.t.ka3Yhm),
+                                                  action: eS,
                                               }),
                                           });
                                       },
-                                      shouldShow: em,
-                                      onRequestClose: () => eg(!1),
+                                      shouldShow: ef,
+                                      onRequestClose: () => eb(!1),
                                       children: () =>
-                                          (0, n.jsx)(f.K, {
-                                              buttonRef: ex,
+                                          (0, n.jsx)(x.K, {
+                                              buttonRef: ev,
                                               variant: "icon-only",
-                                              icon: j.n,
-                                              onClick: () => eg(!0),
-                                              "aria-label": F.intl.string(F.t.u8IcM0),
+                                              icon: f.n,
+                                              onClick: () => eb(!0),
+                                              "aria-label": P.intl.string(P.t.u8IcM0),
                                           }),
                                   }),
                               }),
                           ],
                       }),
                       (0, n.jsxs)("aside", {
-                          className: ew.HU,
+                          className: ey.HU,
                           children: [
                               (0, n.jsx)("div", {
-                                  className: ew.ey,
-                                  children: (0, n.jsx)(v.D, {
-                                      label: F.intl.string(F.t.JmuIb5),
+                                  className: ey.ey,
+                                  children: (0, n.jsx)(b.D, {
+                                      label: P.intl.string(P.t.JmuIb5),
                                       children: (0, n.jsxs)("ul", {
                                           children: [
                                               (0, n.jsx)("li", {
                                                   children: (0, n.jsxs)("div", {
-                                                      className: ew.Br,
+                                                      className: ey.Br,
                                                       children: [
-                                                          (0, n.jsx)(ey, {
-                                                              src: ea,
-                                                              alt: F.intl.string(F.t["zS0K+s"]),
+                                                          (0, n.jsx)(eR, {
+                                                              src: eo,
+                                                              alt: P.intl.string(P.t["zS0K+s"]),
                                                           }),
                                                           (0, n.jsx)("span", { children: "6" }),
                                                       ],
@@ -826,10 +843,10 @@ let eM = new A.A("EmojiStudio"),
                                               }),
                                               (0, n.jsx)("li", {
                                                   children: (0, n.jsx)("div", {
-                                                      className: ew.SA,
-                                                      children: (0, n.jsx)(ey, {
-                                                          src: ea,
-                                                          alt: F.intl.string(F.t["tE41+d"]),
+                                                      className: ey.SA,
+                                                      children: (0, n.jsx)(eR, {
+                                                          src: eo,
+                                                          alt: P.intl.string(P.t["tE41+d"]),
                                                       }),
                                                   }),
                                               }),
@@ -838,40 +855,40 @@ let eM = new A.A("EmojiStudio"),
                                   }),
                               }),
                               (0, n.jsx)("div", {
-                                  children: (0, n.jsx)(B, {
-                                      label: F.intl.string(F.t.m0YV7M),
-                                      name: en,
-                                      onNameChange: ei,
+                                  children: (0, n.jsx)(Y, {
+                                      label: P.intl.string(P.t.m0YV7M),
+                                      name: es,
+                                      onNameChange: eu,
                                   }),
                               }),
-                              r
+                              T
                                   ? null
                                   : (0, n.jsx)("div", {
-                                        children: (0, n.jsx)(es, {
-                                            label: F.intl.string(F.t["9uKafS"]),
+                                        children: (0, n.jsx)(ec, {
+                                            label: P.intl.string(P.t["9uKafS"]),
                                             required: !0,
-                                            onChange: z,
-                                            selected: J,
-                                            onError: (e) => el(e),
+                                            onChange: ee,
+                                            selected: Q,
+                                            onError: (e) => ea(e),
                                             labelledBy: "guild-selector-label",
-                                            isEmojiAnimated: o(A?.file?.type),
-                                            errorMessage: null != et ? $(et) : void 0,
+                                            isEmojiAnimated: u(F?.file?.type),
+                                            errorMessage: null != ei ? q(ei) : void 0,
                                         }),
                                     }),
                               (0, n.jsxs)("div", {
-                                  className: ew.jt,
+                                  className: ey.jt,
                                   children: [
-                                      null != X &&
-                                          (0, n.jsx)(Y, {
-                                              error: X,
+                                      null != en &&
+                                          (0, n.jsx)(X, {
+                                              error: en,
                                               variant: "text-sm/normal",
                                               color: "text-feedback-critical",
                                           }),
-                                      (0, n.jsx)(E.$, {
-                                          text: F.intl.string(F.t.Q7UP6F),
-                                          onClick: ej,
-                                          loading: K,
-                                          disabled: K || null == A || null == J || en.length < 2 || null != et,
+                                      (0, n.jsx)(v.$, {
+                                          text: P.intl.string(P.t.Q7UP6F),
+                                          onClick: eI,
+                                          loading: et,
+                                          disabled: et || null == F || null == Q || es.length < 2 || null != ei,
                                           fullWidth: !0,
                                       }),
                                   ],
@@ -881,28 +898,28 @@ let eM = new A.A("EmojiStudio"),
                   ],
               });
     },
-    ey = (e) => {
+    eR = (e) => {
         let { src: t, alt: l } = e;
-        return null == t || "" === t ? (0, n.jsx)("div", { className: ew.A3 }) : (0, n.jsx)("img", { src: t, alt: l });
+        return null == t || "" === t ? (0, n.jsx)("div", { className: ey.A3 }) : (0, n.jsx)("img", { src: t, alt: l });
     };
-var eO = l(250747);
-let eR = (e) => {
+var eD = l(250747);
+let ew = (e) => {
     let { transitionState: t, guildId: l } = e,
-        i = "userImage" in e ? e.userImage : void 0,
-        r = "emoji" in e ? e.emoji : void 0,
-        s = { guildId: l, ...(null != r ? { emoji: r } : null != i ? { userImage: i } : {}) };
-    return (0, n.jsx)(a.EO, {
+        r = "userImage" in e ? e.userImage : void 0,
+        a = "emoji" in e ? e.emoji : void 0,
+        s = { guildId: l, ...(null != a ? { emoji: a } : null != r ? { userImage: r } : {}) };
+    return (0, n.jsx)(i.EO, {
         "data-migration-pending": !0,
         transitionState: t,
-        size: a.rI.DYNAMIC,
+        size: i.rI.DYNAMIC,
         fullscreenOnMobile: !1,
-        className: eO.CR,
+        className: eD.CR,
         parentComponent: "Modal",
-        children: (0, n.jsx)(a.$m, {
+        children: (0, n.jsx)(i.$m, {
             "data-migration-pending": !0,
             scrollbarType: "none",
-            className: eO.jE,
-            children: (0, n.jsx)(eC, { ...s }),
+            className: eD.jE,
+            children: (0, n.jsx)(ek, { ...s }),
         }),
     });
 };
