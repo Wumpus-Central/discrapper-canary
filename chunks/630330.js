@@ -1,17 +1,17 @@
-r.d(t, { G: () => eh }), r(321073);
-var l = r(627968),
-    s = r(64700),
-    n = r(696292),
-    a = r(17928),
-    o = r(509434),
-    i = r(939249),
-    c = r(926268),
-    u = r(34188),
-    d = r(661531),
-    b = r(770178),
-    p = r(742589),
-    m = r(545986);
-let S = (0, r(945810).mj)({
+l.d(t, { G: () => eh }), l(321073);
+var r = l(627968),
+    s = l(64700),
+    n = l(696292),
+    a = l(17928),
+    o = l(509434),
+    i = l(939249),
+    c = l(926268),
+    u = l(34188),
+    d = l(661531),
+    b = l(770178),
+    S = l(742589),
+    p = l(545986);
+let m = (0, l(945810).mj)({
     name: "2026-03-slayer-storefront-shop-tab",
     kind: "user",
     defaultConfig: { enabled: !1, useGameShopsDropdown: !1 },
@@ -21,36 +21,37 @@ let S = (0, r(945810).mj)({
         2: { enabled: !0, useGameShopsDropdown: !0 },
     },
 });
-var h = r(44724),
-    E = r(975732),
-    f = r(318346),
-    C = r(270051),
-    g = r(70926),
-    A = r(287809),
-    y = r(954571),
-    T = r(440938),
-    O = r(23161),
-    _ = r(503698),
-    x = r.n(_),
-    I = r(477782),
-    L = r(550079),
-    R = r(146919),
-    v = r(985018);
-function j(e) {
-    let { shops: t, onClose: r } = e,
-        s = (0, R.yB)("CollectiblesGameShopsContextMenu");
-    return (0, l.jsx)("div", {
-        className: x()({ [R.jP]: s }),
-        children: (0, l.jsx)(L.W, {
+var E = l(44724),
+    h = l(975732),
+    f = l(318346),
+    C = l(270051),
+    g = l(70926),
+    A = l(287809),
+    y = l(954571),
+    T = l(440938),
+    O = l(13875),
+    _ = l(23161),
+    I = l(503698),
+    L = l.n(I),
+    x = l(477782),
+    R = l(550079),
+    v = l(146919),
+    j = l(985018);
+function F(e) {
+    let { shops: t, onClose: l } = e,
+        s = (0, v.yB)("CollectiblesGameShopsContextMenu");
+    return (0, r.jsx)("div", {
+        className: L()({ [v.jP]: s }),
+        children: (0, r.jsx)(R.W, {
             "data-menu-migrated": !0,
             navId: "collectibles-game-shops-menu",
-            className: x()({ [R.jP]: s }),
-            onClose: r,
-            "aria-label": v.intl.string(v.t.FkjcWY),
+            className: L()({ [v.jP]: s }),
+            onClose: l,
+            "aria-label": j.intl.string(j.t.FkjcWY),
             onSelect: () => {},
             children: t.map((e) =>
-                (0, l.jsx)(
-                    I.Dr,
+                (0, r.jsx)(
+                    x.Dr,
                     { id: e.id, label: e.label, trailingIndicator: { type: "icon", icon: o.I }, action: e.onSelect },
                     e.id,
                 ),
@@ -58,75 +59,82 @@ function j(e) {
         }),
     });
 }
-var G = r(641150),
-    k = r(628284),
-    N = r(758836);
-let F = [
-        { tab: N.G2.AVATAR_DECORATIONS, labelKey: v.t.dRZYNE },
-        { tab: N.G2.PROFILE_EFFECTS, labelKey: v.t["1cNjtx"] },
-        { tab: N.G2.NAMEPLATES, labelKey: v.t.V68Fqz },
-        { tab: N.G2.BUNDLES, labelKey: v.t.FYFpps },
-        { tab: N.G2.CATALOG, labelKey: v.t.xFcotU },
+var G = l(641150),
+    P = l(628284),
+    k = l(758836);
+let N = [
+        { tab: k.G2.AVATAR_DECORATIONS, labelKey: j.t.dRZYNE },
+        { tab: k.G2.PROFILE_EFFECTS, labelKey: j.t["1cNjtx"] },
+        { tab: k.G2.NAMEPLATES, labelKey: j.t.V68Fqz },
+        { tab: k.G2.PROFILE_FRAMES, labelKey: j.t.ecTJkR },
+        { tab: k.G2.BUNDLES, labelKey: j.t.FYFpps },
+        { tab: k.G2.CATALOG, labelKey: j.t.xFcotU },
     ],
-    P = {
-        [G.q.ALL]: N.G2.CATALOG,
-        [G.q.AVATAR_DECORATION]: N.G2.AVATAR_DECORATIONS,
-        [G.q.PROFILE_EFFECT]: N.G2.PROFILE_EFFECTS,
-        [G.q.NAMEPLATE]: N.G2.NAMEPLATES,
-        [G.q.PROFILE_FRAME]: N.G2.PROFILE_FRAMES,
-        [G.q.BUNDLE]: N.G2.BUNDLES,
+    M = {
+        [G.q.ALL]: k.G2.CATALOG,
+        [G.q.AVATAR_DECORATION]: k.G2.AVATAR_DECORATIONS,
+        [G.q.PROFILE_EFFECT]: k.G2.PROFILE_EFFECTS,
+        [G.q.NAMEPLATE]: k.G2.NAMEPLATES,
+        [G.q.PROFILE_FRAME]: k.G2.PROFILE_FRAMES,
+        [G.q.BUNDLE]: k.G2.BUNDLES,
     };
-function M(e, t) {
-    if (e !== N.G2.CATALOG || 0 === t.size) return e;
-    let r = t.values().next().value;
-    return null == r ? e : (P[r] ?? e);
+function $(e, t) {
+    if (e !== k.G2.CATALOG || 0 === t.size) return e;
+    let l = t.values().next().value;
+    return null == l ? e : (M[l] ?? e);
 }
-function $(e) {
-    let { handleTransition: t, onClose: r, selectedTab: s, itemTypeFilters: n } = e,
-        a = (0, R.yB)("CollectiblesIndexPageContextMenu"),
-        o = M(s, n);
-    return (0, l.jsx)("div", {
-        className: x()({ [R.jP]: a }),
-        children: (0, l.jsx)(L.W, {
+function w(e) {
+    let { handleTransition: t, onClose: l, selectedTab: s, itemTypeFilters: n } = e,
+        a = (0, v.yB)("CollectiblesIndexPageContextMenu"),
+        o = (0, O.sk)("CollectiblesIndexPageContextMenu"),
+        i = $(s, n),
+        c = N.filter((e) => {
+            let { tab: t } = e;
+            return o || t !== k.G2.PROFILE_FRAMES;
+        });
+    return (0, r.jsx)("div", {
+        className: L()({ [v.jP]: a }),
+        children: (0, r.jsx)(R.W, {
             "data-menu-migrated": !0,
             navId: "collectibles-index-page-menu",
-            className: x()({ [R.jP]: a }),
-            onClose: r,
-            "aria-label": v.intl.string(v.t.xFcotU),
+            className: L()({ [v.jP]: a }),
+            onClose: l,
+            "aria-label": j.intl.string(j.t.xFcotU),
             onSelect: () => {},
-            children: F.map((e) => {
-                let { tab: r, labelKey: s } = e,
-                    n = r === o;
-                return (0, l.jsx)(
-                    I.Dr,
+            children: c.map((e) => {
+                let { tab: l, labelKey: s } = e,
+                    n = l === i;
+                return (0, r.jsx)(
+                    x.Dr,
                     {
-                        id: r,
-                        label: v.intl.string(s),
-                        icon: n ? k.y : void 0,
-                        leadingAccessory: n ? { type: "icon", icon: k.y } : void 0,
+                        id: l,
+                        label: j.intl.string(s),
+                        icon: n ? P.y : void 0,
+                        leadingAccessory: n ? { type: "icon", icon: P.y } : void 0,
+                        badge: l === k.G2.PROFILE_FRAMES ? "new" : void 0,
                         action: () => {
-                            t(r);
+                            t(l);
                         },
                     },
-                    r,
+                    l,
                 );
             }),
         }),
     });
 }
-var D = r(7689),
-    w = r(892547),
-    B = r(773669),
-    H = r(652215),
-    q = r(113960);
-function U(e) {
-    let { handleTransition: t, selectedTab: r, isNarrow: n, hasText: o } = e,
-        { searchQuery: c, onSetSearchQuery: u } = (0, O.v)(),
-        [b, p] = s.useState(""),
-        m = (0, T.uM)(),
-        S = (0, a.bG)([B.default], () => B.default.locale),
-        h = s.useRef(null),
-        [E, f] = s.useState(!1);
+var D = l(7689),
+    B = l(892547),
+    H = l(773669),
+    q = l(652215),
+    U = l(113960);
+function z(e) {
+    let { handleTransition: t, selectedTab: l, isNarrow: n, hasText: o } = e,
+        { searchQuery: c, onSetSearchQuery: u } = (0, _.v)(),
+        [b, S] = s.useState(""),
+        p = (0, T.uM)(),
+        m = (0, a.bG)([H.default], () => H.default.locale),
+        E = s.useRef(null),
+        [h, f] = s.useState(!1);
     s.useEffect(() => {
         let e = setTimeout(() => {
             u(b);
@@ -134,7 +142,7 @@ function U(e) {
         return () => clearTimeout(e);
     }, [b, u]),
         s.useEffect(() => {
-            p(c);
+            S(c);
         }, [c]),
         s.useEffect(() => {
             f(n && o);
@@ -147,102 +155,102 @@ function U(e) {
         ),
         g = s.useCallback(
             (e) => {
-                y.default.track(H.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: m?.sessionId,
-                    page_section: m?.pageSection,
-                    page_category: m?.pageCategory,
-                    page_index: m?.pageIndex,
-                    page_size: m?.pageSize,
+                y.default.track(q.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    collectibles_shop_session_id: p?.sessionId,
+                    page_section: p?.pageSection,
+                    page_category: p?.pageCategory,
+                    page_index: p?.pageIndex,
+                    page_size: p?.pageSize,
                     cta_name: e,
-                    page_type: r,
+                    page_type: l,
                 });
             },
-            [r, m],
+            [l, p],
         ),
         A = s.useCallback(() => {
-            r !== N.G2.CATALOG && t(N.G2.CATALOG), g(N.uY.SEARCH_ICON), f(!0), setTimeout(() => h.current?.focus());
-        }, [r, t, g]),
-        _ = s.useCallback(() => {
-            r !== N.G2.CATALOG && t(N.G2.CATALOG), g(N.uY.SEARCH_BAR);
-        }, [r, t, g]),
+            l !== k.G2.CATALOG && t(k.G2.CATALOG), g(k.uY.SEARCH_ICON), f(!0), setTimeout(() => E.current?.focus());
+        }, [l, t, g]),
+        O = s.useCallback(() => {
+            l !== k.G2.CATALOG && t(k.G2.CATALOG), g(k.uY.SEARCH_BAR);
+        }, [l, t, g]),
         I = s.useCallback(() => {
-            p(""), u(""), g(N.uY.SEARCH_BAR_CLEAR), n && f(!1);
+            S(""), u(""), g(k.uY.SEARCH_BAR_CLEAR), n && f(!1);
         }, [u, g, n]),
-        L = s.useCallback(() => {
+        x = s.useCallback(() => {
             n && "" === b && f(!1);
         }, [n, b]),
-        R = n && !E,
-        j = (0, l.jsx)(i.D, {
-            className: q.qc,
+        R = n && !h,
+        v = (0, r.jsx)(i.D, {
+            className: U.qc,
             onClick: A,
-            children: (0, l.jsx)(D.$, { size: "sm", color: d.A.colors.INTERACTIVE_ICON_DEFAULT }),
+            children: (0, r.jsx)(D.$, { size: "sm", color: d.A.colors.INTERACTIVE_ICON_DEFAULT }),
         }),
-        G = (0, l.jsx)(w.I, {
+        F = (0, r.jsx)(B.I, {
             size: "sm",
-            ref: h,
+            ref: E,
             onKeyDown: C,
             query: b,
-            onChange: p,
+            onChange: S,
             onClear: I,
-            onBlur: L,
-            placeholder: "en-US" === S ? v.intl.string(v.t.arz34K) : v.intl.string(v.t["hIt/Nm"]),
+            onBlur: x,
+            placeholder: "en-US" === m ? j.intl.string(j.t.arz34K) : j.intl.string(j.t["hIt/Nm"]),
         }),
-        k = { "--custom-search-bar-width": `${N.rr}px`, "--custom-search-bar-icon-width": `${N.Dy}px` };
+        G = { "--custom-search-bar-width": `${k.rr}px`, "--custom-search-bar-icon-width": `${k.Dy}px` };
     return R
-        ? (0, l.jsx)("div", { style: k, children: j })
-        : (0, l.jsx)("div", {
-              className: x()(q.ON, { [q.Nz]: E }),
-              style: k,
-              children: (0, l.jsx)(i.D, { ignoreKeyPress: !0, onClick: _, children: G }),
+        ? (0, r.jsx)("div", { style: G, children: v })
+        : (0, r.jsx)("div", {
+              className: L()(U.ON, { [U.Nz]: h }),
+              style: G,
+              children: (0, r.jsx)(i.D, { ignoreKeyPress: !0, onClick: O, children: F }),
           });
 }
-var z = r(3666),
-    V = r(834730),
-    K = r(777666),
-    Y = r(761508),
-    W = r(922016),
-    Q = r(900797),
-    J = r(847374),
-    X = r(955572),
-    Z = r(775602),
-    ee = r(421773);
-function et(e) {
-    let { tabs: t, selectedTab: r, onTabSelect: s, onClose: n, showOrbRentalNewBadge: a } = e;
-    return (0, l.jsx)(L.W, {
+var V = l(3666),
+    K = l(834730),
+    Y = l(777666),
+    W = l(761508),
+    Q = l(922016),
+    J = l(900797),
+    X = l(847374),
+    Z = l(955572),
+    ee = l(775602),
+    et = l(421773);
+function el(e) {
+    let { tabs: t, selectedTab: l, onTabSelect: s, onClose: n, showOrbRentalNewBadge: a } = e;
+    return (0, r.jsx)(R.W, {
         "data-menu-migrated-auto": !0,
         navId: "collectibles-shop-tabs-overflow-menu",
-        "aria-label": v.intl.string(v.t["UKOtz+"]),
+        "aria-label": j.intl.string(j.t["UKOtz+"]),
         hideScroller: !0,
         onClose: n,
         onSelect: n,
-        children: (0, l.jsx)(
-            I.rX,
+        children: (0, r.jsx)(
+            x.rX,
             {
                 children: t.map((e) => {
                     let { tab: t, label: o, renderOverflowContent: i } = e;
                     if (null != i) {
-                        let e = t === r;
-                        return (0, l.jsx)(
-                            I.Dr,
+                        let e = t === l;
+                        return (0, r.jsx)(
+                            x.Dr,
                             {
                                 id: t,
                                 label: o,
-                                icon: e ? k.y : void 0,
-                                leadingAccessory: e ? { type: "icon", icon: k.y } : void 0,
+                                icon: e ? P.y : void 0,
+                                leadingAccessory: e ? { type: "icon", icon: P.y } : void 0,
                                 hasSubmenu: !0,
                                 children: i({ onClose: n }),
                             },
                             t,
                         );
                     }
-                    let c = t === N.G2.ORBS && a;
-                    return (0, l.jsx)(
-                        I.Dr,
+                    let c = t === k.G2.ORBS && a;
+                    return (0, r.jsx)(
+                        x.Dr,
                         {
                             id: t,
                             label: o,
-                            icon: t === r ? k.y : void 0,
-                            leadingAccessory: t === r ? { type: "icon", icon: k.y } : void 0,
+                            icon: t === l ? P.y : void 0,
+                            leadingAccessory: t === l ? { type: "icon", icon: P.y } : void 0,
                             badge: c ? "new" : void 0,
                             action: () => s(t),
                         },
@@ -254,27 +262,27 @@ function et(e) {
         ),
     });
 }
-var er = r(584512);
-function el(e) {
-    let { label: t, icon: r, showNewBadge: s } = e;
-    return (0, l.jsxs)(V.E, {
+var er = l(584512);
+function es(e) {
+    let { label: t, icon: l, showNewBadge: s } = e;
+    return (0, r.jsxs)(K.E, {
         variant: "text-md/medium",
         color: "none",
         children: [
-            null != r
-                ? (0, l.jsxs)("span", {
+            null != l
+                ? (0, r.jsxs)("span", {
                       className: er.nt,
-                      children: [t, (0, l.jsx)(r, { size: "xs", color: "currentColor" })],
+                      children: [t, (0, r.jsx)(l, { size: "xs", color: "currentColor" })],
                   })
                 : t,
-            s && (0, l.jsx)(K.Lp, { text: v.intl.string(v.t.y2b7CA), className: er.Ad }),
+            s && (0, r.jsx)(Y.Lp, { text: j.intl.string(j.t.y2b7CA), className: er.Ad }),
         ],
     });
 }
-function es(e) {
+function en(e) {
     let {
         tab: t,
-        label: r,
+        label: l,
         selected: s,
         handleTransition: n,
         renderSubmenu: a,
@@ -283,72 +291,72 @@ function es(e) {
         icon: c,
     } = e;
     return null != a
-        ? (0, l.jsx)(en, { tab: t, label: r, selected: s, handleTransition: n, renderSubmenu: a, submenuOnly: o })
-        : (0, l.jsx)(Y.V.Item, {
+        ? (0, r.jsx)(ea, { tab: t, label: l, selected: s, handleTransition: n, renderSubmenu: a, submenuOnly: o })
+        : (0, r.jsx)(W.V.Item, {
               id: t,
               look: "brand",
               disableItemStyles: !0,
               selectedItem: s ? t : void 0,
               onClick: () => n(t),
               className: er.Mf,
-              "aria-label": r,
-              children: (0, l.jsx)(el, { label: r, icon: c, showNewBadge: i }),
+              "aria-label": l,
+              children: (0, r.jsx)(es, { label: l, icon: c, showNewBadge: i }),
           });
 }
-function en(e) {
-    let { tab: t, label: r, selected: n, handleTransition: a, renderSubmenu: o, submenuOnly: i } = e,
+function ea(e) {
+    let { tab: t, label: l, selected: n, handleTransition: a, renderSubmenu: o, submenuOnly: i } = e,
         c = s.useRef(null),
         u = s.useRef(!1),
-        { isHovered: d, setIsHovered: b, onMouseEnter: p, onMouseLeave: m, cancelTimers: S } = (0, ee.A)(100, 100),
-        h = s.useCallback(() => {
-            (u.current = Z.A.keyboardModeEnabled), p();
-        }, [p]),
+        { isHovered: d, setIsHovered: b, onMouseEnter: S, onMouseLeave: p, cancelTimers: m } = (0, et.A)(100, 100),
         E = s.useCallback(() => {
-            S(), b(!0), (u.current = Z.A.keyboardModeEnabled), i || a(t);
-        }, [S, b, i, a, t]);
-    return (0, l.jsx)(W.Y, {
+            (u.current = ee.A.keyboardModeEnabled), S();
+        }, [S]),
+        h = s.useCallback(() => {
+            m(), b(!0), (u.current = ee.A.keyboardModeEnabled), i || a(t);
+        }, [m, b, i, a, t]);
+    return (0, r.jsx)(Q.Y, {
         targetElementRef: c,
         shouldShow: d,
         position: "bottom",
         align: "left",
         onRequestOpen: () => {
-            S(), b(!0), (u.current = Z.A.keyboardModeEnabled);
+            m(), b(!0), (u.current = ee.A.keyboardModeEnabled);
         },
         onRequestClose: () => {
-            u.current && !Z.A.keyboardModeEnabled && (0, X.uS)(),
+            u.current && !ee.A.keyboardModeEnabled && (0, Z.uS)(),
                 b(!1),
                 requestAnimationFrame(() => c.current?.focus());
         },
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, l.jsx)("div", { onMouseEnter: p, onMouseLeave: m, children: o({ onClose: t }) });
+            return (0, r.jsx)("div", { onMouseEnter: S, onMouseLeave: p, children: o({ onClose: t }) });
         },
         children: (e, s) => {
             let { isShown: a } = s,
-                o = a ? Q.t : J.a;
-            return (0, l.jsx)(Y.V.Item, {
+                o = a ? J.t : X.a;
+            return (0, r.jsx)(W.V.Item, {
                 ...e,
                 id: t,
                 look: "brand",
                 disableItemStyles: !0,
                 selectedItem: n ? t : void 0,
-                onClick: E,
+                onClick: h,
                 clickableRef: (e) => {
                     null != e && null != e.ref && (c.current = e.ref);
                 },
                 className: er.Mf,
-                "aria-label": r,
-                children: (0, l.jsx)("div", {
+                "aria-label": l,
+                children: (0, r.jsx)("div", {
                     "aria-hidden": "true",
                     className: er.Lj,
-                    onMouseEnter: h,
-                    onMouseLeave: m,
-                    children: (0, l.jsx)(V.E, {
+                    onMouseEnter: E,
+                    onMouseLeave: p,
+                    children: (0, r.jsx)(K.E, {
                         variant: "text-md/medium",
                         color: "none",
-                        children: (0, l.jsxs)("span", {
+                        children: (0, r.jsxs)("span", {
                             className: er.hP,
-                            children: [r, (0, l.jsx)(o, { size: "sm", color: "currentColor" })],
+                            children: [l, (0, r.jsx)(o, { size: "sm", color: "currentColor" })],
                         }),
                     }),
                 }),
@@ -356,64 +364,64 @@ function en(e) {
         },
     });
 }
-function ea(e) {
-    let { onTabSelect: t, tabs: r, selectedTab: n, selected: a } = e,
+function eo(e) {
+    let { onTabSelect: t, tabs: l, selectedTab: n, selected: a } = e,
         o = s.useRef(null),
         i = s.useRef(!1),
-        { isHovered: c, setIsHovered: u, onMouseEnter: d, onMouseLeave: b, cancelTimers: p } = (0, ee.A)(100, 100),
-        m = s.useCallback(() => {
-            (i.current = Z.A.keyboardModeEnabled), d();
+        { isHovered: c, setIsHovered: u, onMouseEnter: d, onMouseLeave: b, cancelTimers: S } = (0, et.A)(100, 100),
+        p = s.useCallback(() => {
+            (i.current = ee.A.keyboardModeEnabled), d();
         }, [d]),
-        S = s.useCallback(() => {
-            p(), u(!0), (i.current = Z.A.keyboardModeEnabled);
-        }, [p, u]);
-    return (0, l.jsx)(W.Y, {
+        m = s.useCallback(() => {
+            S(), u(!0), (i.current = ee.A.keyboardModeEnabled);
+        }, [S, u]);
+    return (0, r.jsx)(Q.Y, {
         targetElementRef: o,
         shouldShow: c,
         position: "bottom",
         align: "left",
         onRequestOpen: () => {
-            p(), u(!0), (i.current = Z.A.keyboardModeEnabled);
+            S(), u(!0), (i.current = ee.A.keyboardModeEnabled);
         },
         onRequestClose: () => {
-            i.current && !Z.A.keyboardModeEnabled && (0, X.uS)(),
+            i.current && !ee.A.keyboardModeEnabled && (0, Z.uS)(),
                 u(!1),
                 requestAnimationFrame(() => o.current?.focus());
         },
         renderPopout: (e) => {
             let { closePopout: s } = e;
-            return (0, l.jsx)("div", {
+            return (0, r.jsx)("div", {
                 onMouseEnter: d,
                 onMouseLeave: b,
-                children: (0, l.jsx)(et, { selectedTab: n, onClose: s, tabs: r, onTabSelect: t }),
+                children: (0, r.jsx)(el, { selectedTab: n, onClose: s, tabs: l, onTabSelect: t }),
             });
         },
         children: (e, t) => {
-            let { isShown: r } = t,
-                s = r ? Q.t : J.a;
-            return (0, l.jsx)(Y.V.Item, {
+            let { isShown: l } = t,
+                s = l ? J.t : X.a;
+            return (0, r.jsx)(W.V.Item, {
                 ...e,
                 id: "more",
                 look: "brand",
                 disableItemStyles: !0,
                 selectedItem: a ? "more" : void 0,
-                onClick: S,
+                onClick: m,
                 clickableRef: (e) => {
                     null != e && null != e.ref && (o.current = e.ref);
                 },
-                className: x()(er.Mf, er.OS),
-                "aria-label": v.intl.string(v.t["UKOtz+"]),
-                children: (0, l.jsx)("div", {
+                className: L()(er.Mf, er.OS),
+                "aria-label": j.intl.string(j.t["UKOtz+"]),
+                children: (0, r.jsx)("div", {
                     "aria-hidden": "true",
                     className: er.Lj,
-                    onMouseEnter: m,
+                    onMouseEnter: p,
                     onMouseLeave: b,
-                    children: (0, l.jsx)(V.E, {
+                    children: (0, r.jsx)(K.E, {
                         variant: "text-md/medium",
                         color: "none",
-                        children: (0, l.jsxs)("span", {
+                        children: (0, r.jsxs)("span", {
                             className: er.hP,
-                            children: [v.intl.string(v.t["UKOtz+"]), (0, l.jsx)(s, { size: "xs" })],
+                            children: [j.intl.string(j.t["UKOtz+"]), (0, r.jsx)(s, { size: "xs" })],
                         }),
                     }),
                 }),
@@ -421,46 +429,46 @@ function ea(e) {
         },
     });
 }
-function eo(e, t, r) {
-    return e === r || (null != t.renderSubmenu && (0, N.dF)(r) && e === N.G2.CATALOG);
+function ei(e, t, l) {
+    return e === l || (null != t.renderSubmenu && (0, k.dF)(l) && e === k.G2.CATALOG);
 }
-function ei(e) {
-    let { className: t, selectedTab: r, tabs: n, onTabSelect: a } = e,
+function ec(e) {
+    let { className: t, selectedTab: l, tabs: n, onTabSelect: a } = e,
         [o, i] = s.useState(0),
         c = s.useRef(o),
         {
             lastVisibleIndex: u,
             onItemLayout: d,
-            overflowItemsRef: p,
-        } = (0, z.Wv)({ items: n, itemGapPx: 32, maxLines: 1, containerWidth: o }),
-        m = s.useMemo(() => n.slice(0, u + 1), [u, n]),
-        S = s.useMemo(() => n.slice(u + 1), [u, n]),
-        h = s.useRef(null),
-        E = s.useCallback((e) => {
+            overflowItemsRef: S,
+        } = (0, V.Wv)({ items: n, itemGapPx: 32, maxLines: 1, containerWidth: o }),
+        p = s.useMemo(() => n.slice(0, u + 1), [u, n]),
+        m = s.useMemo(() => n.slice(u + 1), [u, n]),
+        E = s.useRef(null),
+        h = s.useCallback((e) => {
             let t = e.contentRect.width;
             null != t && c.current !== t && (i(t), (c.current = t));
         }, []);
-    (0, b.g)(h, E);
+    (0, b.g)(E, h);
     let f = 0 !== o,
-        C = S.some((e) => eo(e.tab, e, r));
-    return (0, l.jsxs)("div", {
-        className: x()(er.kL, t),
-        ref: h,
+        C = m.some((e) => ei(e.tab, e, l));
+    return (0, r.jsxs)("div", {
+        className: L()(er.kL, t),
+        ref: E,
         children: [
-            (0, l.jsxs)("div", {
+            (0, r.jsxs)("div", {
                 className: er.Kk,
                 "aria-hidden": "true",
                 children: [
                     n.map((e, t) =>
-                        (0, l.jsx)(
-                            z.Ae,
+                        (0, r.jsx)(
+                            V.Ae,
                             {
                                 index: t,
                                 onItemLayout: d,
-                                children: (0, l.jsx)(es, {
+                                children: (0, r.jsx)(en, {
                                     tab: e.tab,
                                     label: e.label,
-                                    selected: eo(e.tab, e, r),
+                                    selected: ei(e.tab, e, l),
                                     handleTransition: a,
                                     renderSubmenu: e.renderSubmenu,
                                     submenuOnly: e.submenuOnly,
@@ -470,27 +478,27 @@ function ei(e) {
                             e.tab,
                         ),
                     ),
-                    (0, l.jsx)("div", {
-                        ref: p,
-                        children: (0, l.jsx)(ea, { tabs: S, onTabSelect: a, selectedTab: r, selected: C }),
+                    (0, r.jsx)("div", {
+                        ref: S,
+                        children: (0, r.jsx)(eo, { tabs: m, onTabSelect: a, selectedTab: l, selected: C }),
                     }),
                 ],
             }),
             f &&
-                (0, l.jsxs)(Y.V, {
+                (0, r.jsxs)(W.V, {
                     type: "top",
                     look: "brand",
-                    selectedItem: r,
+                    selectedItem: l,
                     onItemSelect: a,
                     className: er.vR,
                     children: [
-                        m.map((e) =>
-                            (0, l.jsx)(
-                                es,
+                        p.map((e) =>
+                            (0, r.jsx)(
+                                en,
                                 {
                                     tab: e.tab,
                                     label: e.label,
-                                    selected: eo(e.tab, e, r),
+                                    selected: ei(e.tab, e, l),
                                     handleTransition: a,
                                     renderSubmenu: e.renderSubmenu,
                                     submenuOnly: e.submenuOnly,
@@ -499,222 +507,233 @@ function ei(e) {
                                 e.tab,
                             ),
                         ),
-                        0 !== S.length
-                            ? (0, l.jsx)(ea, { tabs: S, onTabSelect: a, selectedTab: r, selected: C })
+                        0 !== m.length
+                            ? (0, r.jsx)(eo, { tabs: m, onTabSelect: a, selectedTab: l, selected: C })
                             : null,
                     ],
                 }),
         ],
     });
 }
-var ec = r(627363),
-    eu = r(587895),
-    ed = r(733391),
-    eb = r(832163);
-r(801416);
-var ep = r(188275),
-    em = r(518477),
-    eS = r(773743);
+var eu = l(627363),
+    ed = l(587895),
+    eb = l(733391),
+    eS = l(832163);
+l(801416);
+var ep = l(188275),
+    em = l(518477),
+    eE = l(773743);
 function eh(e) {
-    let { selectedTab: t, handleTransition: r } = e,
-        _ = (0, a.bG)([A.default], () => A.default.getCurrentUser()),
-        { enabled: x } = (0, C.Z)({ location: "collectibles_shop_header_bar" }),
-        L = (function (e) {
-            let { location: t } = e,
-                { enabled: r, useGameShopsDropdown: l } = S.useConfig({ location: t });
-            return r && !l;
-        })({ location: "collectibles_shop_header_bar" }),
+    let { selectedTab: t, handleTransition: l } = e,
+        I = (0, a.bG)([A.default], () => A.default.getCurrentUser()),
+        { enabled: L } = (0, C.Z)({ location: "collectibles_shop_header_bar" }),
         R = (function (e) {
             let { location: t } = e,
-                { enabled: r, useGameShopsDropdown: l } = S.useConfig({ location: t });
-            return r && l;
+                { enabled: l, useGameShopsDropdown: r } = m.useConfig({ location: t });
+            return l && !r;
         })({ location: "collectibles_shop_header_bar" }),
-        G = (0, T.uM)(),
-        { searchQuery: P, itemTypeFilters: D } = (0, O.v)(),
-        w = s.useRef(null),
-        [B, q] = s.useState(!1);
+        v = (function (e) {
+            let { location: t } = e,
+                { enabled: l, useGameShopsDropdown: r } = m.useConfig({ location: t });
+            return l && r;
+        })({ location: "collectibles_shop_header_bar" }),
+        G = (0, O.sk)("CollectiblesShopHeaderBar"),
+        M = (0, T.uM)(),
+        { searchQuery: D, itemTypeFilters: B } = (0, _.v)(),
+        H = s.useRef(null),
+        [U, V] = s.useState(!1);
     (0, b.g)(
-        w,
+        H,
         s.useCallback((e) => {
-            q(e.contentRect.width < 800);
+            V(e.contentRect.width < 800);
         }, []),
     );
-    let z = s.useCallback(() => {
-            y.default.track(H.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                collectibles_shop_session_id: G?.sessionId,
-                page_type: N.G2.RIVALS,
-                page_category: G?.pageCategory,
-                page_section: G?.pageSection,
+    let K = s.useCallback(() => {
+            y.default.track(q.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                collectibles_shop_session_id: M?.sessionId,
+                page_type: k.G2.RIVALS,
+                page_category: M?.pageCategory,
+                page_section: M?.pageSection,
                 tile_type: "SOCIAL_LAYER_STOREFRONT_SHOP_TAB",
                 cta_name: "go_to_game_shop",
             }),
-                (0, h.default)({ guildId: ep.Kf }).catch(() => {});
-        }, [G]),
-        V = (function (e) {
+                (0, E.default)({ guildId: ep.Kf }).catch(() => {});
+        }, [M]),
+        Y = (function (e) {
             let { enabled: t } = e,
-                r = (0, T.uM)(),
-                l = (0, a.yK)(
-                    [eb.A],
+                l = (0, T.uM)(),
+                r = (0, a.yK)(
+                    [eS.A],
                     () =>
                         t
-                            ? (eb.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled)
+                            ? (eS.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled)
                             : [],
                     [t],
                 );
             s.useEffect(() => {
-                t && (0, ed.Xw)();
+                t && (0, eb.Xw)();
             }, [t]),
                 s.useEffect(() => {
-                    l.length > 0 &&
-                        ec.Ay.fetchApplications(
-                            l.map((e) => e.applicationId),
+                    r.length > 0 &&
+                        eu.Ay.fetchApplications(
+                            r.map((e) => e.applicationId),
                             !1,
                         );
-                }, [l]);
+                }, [r]);
             let n = s.useCallback(
                 (e) => {
-                    y.default.track(H.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: r?.sessionId,
-                        page_type: N.G2.GAME_SHOPS,
-                        page_category: r?.pageCategory,
-                        page_section: r?.pageSection,
+                    y.default.track(q.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        collectibles_shop_session_id: l?.sessionId,
+                        page_type: k.G2.GAME_SHOPS,
+                        page_category: l?.pageCategory,
+                        page_section: l?.pageSection,
                         tile_type: "SOCIAL_LAYER_STOREFRONT_SHOP_TAB",
                         cta_name: "go_to_game_shop",
                     }),
-                        (0, h.default)({ guildId: e }).catch(() => {});
+                        (0, E.default)({ guildId: e }).catch(() => {});
                 },
-                [r],
+                [l],
             );
             return (0, a.bG)(
-                [eu.A],
+                [ed.A],
                 () =>
-                    l.flatMap((e) => {
-                        let t = eu.A.getApplication(e.applicationId)?.name;
+                    r.flatMap((e) => {
+                        let t = ed.A.getApplication(e.applicationId)?.name;
                         return null == t ? [] : [{ id: e.guildId, label: t, onSelect: () => n(e.guildId) }];
                     }),
-                [l, n],
+                [r, n],
             );
-        })({ enabled: R }),
-        K = V.length > 0,
-        Y = s.useMemo(() => {
+        })({ enabled: v }),
+        W = Y.length > 0,
+        Q = s.useMemo(() => {
             let e = [
-                { tab: N.G2.HOME, label: v.intl.string(v.t["xNiB/O"]) },
+                { tab: k.G2.HOME, label: j.intl.string(j.t["xNiB/O"]) },
                 {
-                    tab: N.G2.CATALOG,
-                    label: v.intl.string(v.t.Ah5sJo),
+                    tab: k.G2.CATALOG,
+                    label: j.intl.string(j.t.Ah5sJo),
                     renderSubmenu: (e) => {
                         let { onClose: s } = e;
-                        return (0, l.jsx)($, { handleTransition: r, onClose: s, selectedTab: t, itemTypeFilters: D });
+                        return (0, r.jsx)(w, { handleTransition: l, onClose: s, selectedTab: t, itemTypeFilters: B });
                     },
                     renderOverflowContent: (e) => {
                         let { onClose: s } = e;
                         return (function (e) {
-                            let { selectedTab: t, itemTypeFilters: r, onTabSelect: s, onClose: n } = e,
-                                a = M(t, r);
-                            return F.map((e) => {
-                                let { tab: t, labelKey: r } = e,
-                                    o = t === a;
-                                return (0, l.jsx)(
-                                    I.Dr,
+                            let {
+                                    selectedTab: t,
+                                    itemTypeFilters: l,
+                                    canViewProfileFrames: s,
+                                    onTabSelect: n,
+                                    onClose: a,
+                                } = e,
+                                o = $(t, l);
+                            return N.filter((e) => {
+                                let { tab: t } = e;
+                                return s || t !== k.G2.PROFILE_FRAMES;
+                            }).map((e) => {
+                                let { tab: t, labelKey: l } = e,
+                                    s = t === o;
+                                return (0, r.jsx)(
+                                    x.Dr,
                                     {
                                         id: t,
-                                        label: v.intl.string(r),
-                                        icon: o ? k.y : void 0,
-                                        leadingAccessory: o ? { type: "icon", icon: k.y } : void 0,
+                                        label: j.intl.string(l),
+                                        icon: s ? P.y : void 0,
+                                        leadingAccessory: s ? { type: "icon", icon: P.y } : void 0,
+                                        badge: t === k.G2.PROFILE_FRAMES ? "new" : void 0,
                                         action: () => {
-                                            s(t), n();
+                                            n(t), a();
                                         },
                                     },
                                     t,
                                 );
                             });
-                        })({ selectedTab: t, itemTypeFilters: D, onTabSelect: r, onClose: s });
+                        })({ selectedTab: t, itemTypeFilters: B, canViewProfileFrames: G, onTabSelect: l, onClose: s });
                     },
                 },
             ];
             return (
-                x && e.push({ tab: N.G2.ORBS, label: v.intl.string(v.t.EBYkzk) }),
-                L
-                    ? e.push({ tab: N.G2.RIVALS, label: v.intl.string(v.t["kq/75v"]), icon: o.I })
-                    : K &&
+                L && e.push({ tab: k.G2.ORBS, label: j.intl.string(j.t.EBYkzk) }),
+                R
+                    ? e.push({ tab: k.G2.RIVALS, label: j.intl.string(j.t["kq/75v"]), icon: o.I })
+                    : W &&
                       e.push({
-                          tab: N.G2.GAME_SHOPS,
-                          label: v.intl.string(v.t.FkjcWY),
+                          tab: k.G2.GAME_SHOPS,
+                          label: j.intl.string(j.t.FkjcWY),
                           submenuOnly: !0,
                           renderSubmenu: (e) => {
                               let { onClose: t } = e;
-                              return (0, l.jsx)(j, { shops: V, onClose: t });
+                              return (0, r.jsx)(F, { shops: Y, onClose: t });
                           },
                           renderOverflowContent: (e) => {
                               let { onClose: t } = e;
                               return (function (e) {
-                                  let { shops: t, onClose: r } = e;
+                                  let { shops: t, onClose: l } = e;
                                   return t.map((e) =>
-                                      (0, l.jsx)(
-                                          I.Dr,
+                                      (0, r.jsx)(
+                                          x.Dr,
                                           {
                                               id: e.id,
                                               label: e.label,
                                               trailingIndicator: { type: "icon", icon: o.I },
                                               action: () => {
-                                                  e.onSelect(), r();
+                                                  e.onSelect(), l();
                                               },
                                           },
                                           e.id,
                                       ),
                                   );
-                              })({ shops: V, onClose: t });
+                              })({ shops: Y, onClose: t });
                           },
                       }),
                 e
             );
-        }, [x, L, K, r, V, t, D]),
-        W = t === N.G2.ORBS ? H.liQ.SHOP_ORBS_TAB : H.liQ.COLLECTIBLES_SHOP,
-        Q = s.useCallback(() => {
-            (0, f.Y)({ pageType: W, sectionType: H.JJy.ORBS_BALANCE_MENU, ctaObject: H.ZSU.CTA_TO_QUEST_HOME }),
-                (0, m.navigateToQuestHome)({ fromContent: n.u.ORBS_BALANCE_MENU });
-        }, [W]),
-        J = s.useCallback(() => {
-            _?.id != null && (0, E.openUserProfileModal)({ userId: _.id, tabSection: em.RP.WISHLIST });
-        }, [_?.id]),
-        X = s.useCallback(
+        }, [L, R, W, l, Y, t, B, G]),
+        J = t === k.G2.ORBS ? q.liQ.SHOP_ORBS_TAB : q.liQ.COLLECTIBLES_SHOP,
+        X = s.useCallback(() => {
+            (0, f.Y)({ pageType: J, sectionType: q.JJy.ORBS_BALANCE_MENU, ctaObject: q.ZSU.CTA_TO_QUEST_HOME }),
+                (0, p.navigateToQuestHome)({ fromContent: n.u.ORBS_BALANCE_MENU });
+        }, [J]),
+        Z = s.useCallback(() => {
+            I?.id != null && (0, h.openUserProfileModal)({ userId: I.id, tabSection: em.RP.WISHLIST });
+        }, [I?.id]),
+        ee = s.useCallback(
             (e) => {
-                e === N.G2.RIVALS ? z() : r(e);
+                e === k.G2.RIVALS ? K() : l(e);
             },
-            [r, z],
+            [l, K],
         );
-    return (0, l.jsx)("div", {
-        ref: w,
-        children: (0, l.jsxs)(p.A, {
+    return (0, r.jsx)("div", {
+        ref: H,
+        children: (0, r.jsxs)(S.A, {
             disableDoubleClick: !0,
-            className: eS.jr,
-            toolbar: (0, l.jsxs)(l.Fragment, {
+            className: eE.jr,
+            toolbar: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, l.jsx)(U, { handleTransition: r, selectedTab: t, isNarrow: B, hasText: "" !== P }),
-                    (0, l.jsx)(i.D, {
-                        className: eS.ij,
-                        onClick: J,
-                        "aria-label": v.intl.string(v.t["7lZ31J"]),
-                        children: (0, l.jsx)(c.C, { size: "xs", color: "currentColor" }),
+                    (0, r.jsx)(z, { handleTransition: l, selectedTab: t, isNarrow: U, hasText: "" !== D }),
+                    (0, r.jsx)(i.D, {
+                        className: eE.ij,
+                        onClick: Z,
+                        "aria-label": j.intl.string(j.t["7lZ31J"]),
+                        children: (0, r.jsx)(c.C, { size: "xs", color: "currentColor" }),
                     }),
-                    x &&
-                        (0, l.jsx)(g.SS, {
-                            analyticsPage: W,
+                    L &&
+                        (0, r.jsx)(g.SS, {
+                            analyticsPage: J,
                             cardAlignment: g.SS.CardAlignment.END,
-                            ctaText: v.intl.string(v.t.VC4Mq0),
-                            ctaOnClick: Q,
+                            ctaText: j.intl.string(j.t.VC4Mq0),
+                            ctaOnClick: X,
                         }),
                 ],
             }),
             hideSearch: !0,
             children: [
-                (0, l.jsx)(i.D, {
-                    className: eS.sU,
-                    onClick: () => r(N.G2.HOME),
-                    "aria-label": v.intl.string(v.t["5upuqx"]),
-                    children: (0, l.jsx)(u.U, { size: "md", color: d.A.colors.TEXT_DEFAULT }),
+                (0, r.jsx)(i.D, {
+                    className: eE.sU,
+                    onClick: () => l(k.G2.HOME),
+                    "aria-label": j.intl.string(j.t["5upuqx"]),
+                    children: (0, r.jsx)(u.U, { size: "md", color: d.A.colors.TEXT_DEFAULT }),
                 }),
-                (0, l.jsx)(ei, { tabs: Y, selectedTab: t, onTabSelect: X }),
+                (0, r.jsx)(ec, { tabs: Q, selectedTab: t, onTabSelect: ee }),
             ],
         }),
     });

@@ -299,6 +299,14 @@
     margin-bottom: 2px
 }
 
+.filterWithBadge__11877 {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
 .colorSwatchRow__11877,
 .themeRow__11877 {
     display: flex;
