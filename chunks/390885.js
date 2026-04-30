@@ -1,4 +1,4 @@
-a.d(e, { default: () => k });
+a.d(e, { default: () => v });
 var i = a(627968),
     n = a(64700),
     r = a(284009),
@@ -14,20 +14,21 @@ var i = a(627968),
     f = a(821609),
     m = a(964486),
     P = a(975807),
-    p = a(344346),
-    N = a(303136),
-    U = a(639289),
-    b = a(976860),
-    O = a(287809),
+    N = a(344346),
+    U = a(303136),
+    p = a(639289),
+    O = a(976860),
+    b = a(287809),
     R = a(954571),
     T = a(676279),
     g = a(751877),
     C = a(88001),
     E = a(652215),
     L = a(466919),
-    h = a(985018),
-    G = a(651702);
-let x = {
+    G = a(985018),
+    h = a(651702),
+    x = a(49402);
+let B = {
     [C.Hy.BILLING_SUBSCRIPTION_GROUP_USER_ON_COOLDOWN]: 1,
     [C.Hy.BILLING_SUBSCRIPTION_GROUP_USER_ACTIVE_BOOSTS]: 2,
     [C.Hy.BILLING_SUBSCRIPTION_GROUP_USER_BOOST_ONLY]: 2,
@@ -42,63 +43,63 @@ let x = {
     [C.Hy.BILLING_SUBSCRIPTION_GROUP_USER_ALREADY_IN_GROUP]: 12,
     [C.Hy.BILLING_SUBSCRIPTION_GROUP_USER_IS_BOT]: 13,
 };
-function B(t) {
+function A(t) {
     let { onClose: e, isExistingSub: a, premiumGroupPrimaryName: n, currentUser: r, ...s } = t,
         _ = (0, T.TM)()
             ? "https://cdn.discordapp.com/assets/content/6f1af775556f31ba3974e07284f40d22447cbda5a6bbbb8ca186194b286063e3.mov"
-            : "https://cdn.discordapp.com/assets/content/5b4b773c0a11f965af7ffe155e4aed3407c32c7050165e74650a5521691d1743.webm";
+            : x.A;
     return (0, i.jsx)(l.d, {
         ...s,
         onClose: e,
         children: (0, i.jsx)(o.c, {
             children: (0, i.jsxs)("div", {
-                className: G.hQ,
+                className: h.hQ,
                 children: [
-                    (0, i.jsx)("div", { className: G.ZB }),
+                    (0, i.jsx)("div", { className: h.ZB }),
                     (0, i.jsx)(c.D, {
-                        className: G.wx,
+                        className: h.wx,
                         variant: "display-md",
                         color: "text-strong",
-                        children: h.intl.string(h.t.QWljxE),
+                        children: G.intl.string(G.t.QWljxE),
                     }),
                     (0, i.jsxs)("div", {
-                        className: G.Dz,
+                        className: h.Dz,
                         children: [
-                            (0, i.jsx)(N.A, {
+                            (0, i.jsx)(U.A, {
                                 fallbackImage:
                                     "https://cdn.discordapp.com/assets/content/b0bb3929d31ac9ae0bf431b4b92ee6c334165d518a03e286a9d664691750ad04.png",
-                                className: G.d9,
+                                className: h.d9,
                                 children: (0, i.jsx)("source", { src: _ }),
                             }),
-                            (0, i.jsx)(p.A, {
+                            (0, i.jsx)(N.A, {
                                 user: r,
                                 isHighlighted: !0,
                                 nameplate: null,
                                 nameplateData: r.nameplate,
-                                className: G.M4,
+                                className: h.M4,
                                 nameplatePreviewSize: "large",
                             }),
                         ],
                     }),
                     (0, i.jsx)("div", {
-                        className: G.FS,
+                        className: h.FS,
                         children: (0, i.jsx)(d.E, {
                             variant: "text-md/medium",
                             color: "text-muted",
-                            children: h.intl.format(a ? L.default.axh0pl : L.default["+KAArL"], {
+                            children: G.intl.format(a ? L.default.axh0pl : L.default["+KAArL"], {
                                 premiumGroupProductName: (0, C.DP)(),
                                 primaryName: n,
                             }),
                         }),
                     }),
                     (0, i.jsx)("div", {
-                        className: G.qr,
+                        className: h.qr,
                         children: (0, i.jsx)(f.$, {
                             variant: "primary",
                             fullWidth: !0,
-                            text: h.intl.string(L.default.EL9m2H),
+                            text: G.intl.string(L.default.EL9m2H),
                             onClick: () => {
-                                e(), (0, b.pX)(E.BVt.APPLICATION_STORE);
+                                e(), (0, O.pX)(E.BVt.APPLICATION_STORE);
                             },
                         }),
                     }),
@@ -120,7 +121,7 @@ function y(t) {
             ...I
         } = t,
         S = (0, C.DP)(),
-        [f, p] = (0, n.useState)(!1);
+        [f, N] = (0, n.useState)(!1);
     (0, m.Ay)(() => {
         R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_MODAL_VIEWED, {
             invite_id: s,
@@ -128,18 +129,18 @@ function y(t) {
             is_existing_sub: l,
         });
     });
-    let N = async () => {
+    let U = async () => {
         R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_CTA_CLICKED, {
             invite_id: s,
             subscription_id: r,
             is_existing_sub: l,
         }),
-            p(!0);
+            N(!0);
         let t = await (0, g.wc)(r, c.id, s);
-        if ((p(!1), t.ok)) e(1);
+        if ((N(!1), t.ok)) e(1);
         else {
             var a;
-            let i = null == (a = t.body?.code) ? 0 : (x[a] ?? 0);
+            let i = null == (a = t.body?.code) ? 0 : (B[a] ?? 0);
             R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_ERROR, {
                 invite_id: s,
                 subscription_id: r,
@@ -190,67 +191,67 @@ function y(t) {
             src: "https://cdn.discordapp.com/assets/content/e73f685093cfc29d516c588ba27f23a1e03e9dbe02edcbe92a7ac79170c1931d.png",
             type: "image",
         },
-        title: h.intl.formatToPlainString(l ? L.default["0Yxz12"] : L.default.UjA5k8, { premiumGroupProductName: S }),
-        subtitle: h.intl.format(l ? L.default.YjSsdH : L.default.qkFeBP, {
+        title: G.intl.formatToPlainString(l ? L.default["0Yxz12"] : L.default.UjA5k8, { premiumGroupProductName: S }),
+        subtitle: G.intl.format(l ? L.default.YjSsdH : L.default.qkFeBP, {
             premiumGroupProductName: S,
             cooldownMonths: C.wl,
             primaryName: o,
         }),
         actions: [
             {
-                text: h.intl.string(L.default["IO+nlU"]),
+                text: G.intl.string(L.default["IO+nlU"]),
                 onClick: () => {
                     (0, P.A)(C.TE);
                 },
                 variant: "secondary",
             },
-            { text: h.intl.string(L.default.odQeh3), onClick: N, variant: "expressive", icon: u.t, loading: f },
+            { text: G.intl.string(L.default.odQeh3), onClick: U, variant: "expressive", icon: u.t, loading: f },
         ],
     });
 }
-function A(t) {
+function k(t) {
     let e,
         a,
         { error: n, onClose: r, ...s } = t,
         l = (0, C.DP)();
     switch (n) {
         case 1:
-            (e = h.intl.formatToPlainString(L.default["wMo6/n"], { premiumGroupProductName: l })),
-                (a = h.intl.formatToPlainString(L.default.C08r8L, {
+            (e = G.intl.formatToPlainString(L.default["wMo6/n"], { premiumGroupProductName: l })),
+                (a = G.intl.formatToPlainString(L.default.C08r8L, {
                     premiumGroupProductName: l,
                     cooldownMonths: C.wl,
                 }));
             break;
         case 2:
-            (e = h.intl.formatToPlainString(L.default["Um4ml+"], { premiumGroupProductName: l })),
-                (a = h.intl.string(L.default.Fm8iss));
+            (e = G.intl.formatToPlainString(L.default["Um4ml+"], { premiumGroupProductName: l })),
+                (a = G.intl.string(L.default.Fm8iss));
             break;
         case 3:
-            (e = h.intl.string(L.default.yGTLxP)),
-                (a = h.intl.formatToPlainString(L.default["7/qtoL"], { premiumGroupProductName: l }));
+            (e = G.intl.string(L.default.yGTLxP)),
+                (a = G.intl.formatToPlainString(L.default["7/qtoL"], { premiumGroupProductName: l }));
             break;
         case 4:
-            (e = h.intl.formatToPlainString(L.default["S+UfpQ"], { premiumGroupProductName: l })),
-                (a = h.intl.formatToPlainString(L.default.AKYhx6, {
+            (e = G.intl.formatToPlainString(L.default["S+UfpQ"], { premiumGroupProductName: l })),
+                (a = G.intl.formatToPlainString(L.default.AKYhx6, {
                     premiumGroupProductName: l,
                     countryName: (0, C.mU)(),
                 }));
             break;
         case 5:
-            (e = h.intl.formatToPlainString(L.default.anKEqI, { premiumGroupProductName: l })),
-                (a = h.intl.formatToPlainString(L.default["67BbUf"], { premiumGroupProductName: l }));
+            (e = G.intl.formatToPlainString(L.default.anKEqI, { premiumGroupProductName: l })),
+                (a = G.intl.formatToPlainString(L.default["67BbUf"], { premiumGroupProductName: l }));
             break;
         case 6:
-            (e = h.intl.formatToPlainString(L.default.VH7zHG, { premiumGroupProductName: l })),
-                (a = h.intl.string(L.default.s47Jqb));
+            (e = G.intl.formatToPlainString(L.default.VH7zHG, { premiumGroupProductName: l })),
+                (a = G.intl.string(L.default.s47Jqb));
             break;
         case 7:
-            (e = h.intl.formatToPlainString(L.default.agSoQJ, { premiumGroupProductName: l })),
-                (a = h.intl.formatToPlainString(L.default.YhJsq4, { premiumGroupProductName: l }));
+            (e = G.intl.formatToPlainString(L.default.agSoQJ, { premiumGroupProductName: l })),
+                (a = G.intl.formatToPlainString(L.default.YhJsq4, { premiumGroupProductName: l }));
             break;
         default:
-            (e = h.intl.formatToPlainString(L.default["Kpg/uU"], { premiumGroupProductName: l })),
-                (a = h.intl.formatToPlainString(L.default.GrEzlX, { premiumGroupProductName: l }));
+            (e = G.intl.formatToPlainString(L.default["Kpg/uU"], { premiumGroupProductName: l })),
+                (a = G.intl.formatToPlainString(L.default.GrEzlX, { premiumGroupProductName: l }));
     }
     return (0, i.jsx)(I.Modal, {
         size: "md",
@@ -259,7 +260,7 @@ function A(t) {
         onClose: r,
         actions: [
             {
-                text: h.intl.string(L.default["IO+nlU"]),
+                text: G.intl.string(L.default["IO+nlU"]),
                 variant: "secondary",
                 onClick: () => {
                     (0, P.A)(C.TE);
@@ -269,7 +270,7 @@ function A(t) {
         ...s,
     });
 }
-function k(t) {
+function v(t) {
     let {
             premiumGroupSubscriptionId: e,
             premiumGroupInviteId: a,
@@ -279,7 +280,7 @@ function k(t) {
         } = t,
         [c, d] = (0, n.useState)(0),
         [_, u] = (0, n.useState)(null),
-        I = (0, S.bG)([O.default], () => O.default.getCurrentUser());
+        I = (0, S.bG)([b.default], () => b.default.getCurrentUser());
     s()(null != I, "UserSettingsProfileCustomization: user cannot be undefined");
     let f = null;
     switch (c) {
@@ -296,12 +297,12 @@ function k(t) {
             });
             break;
         case 1:
-            f = (0, i.jsx)(B, { ...o, isExistingSub: r, premiumGroupPrimaryName: l, currentUser: I });
+            f = (0, i.jsx)(A, { ...o, isExistingSub: r, premiumGroupPrimaryName: l, currentUser: I });
             break;
         case 2:
-            f = (0, i.jsx)(A, { error: _, ...o });
+            f = (0, i.jsx)(k, { error: _, ...o });
     }
-    return (0, i.jsx)(U.A, {
+    return (0, i.jsx)(p.A, {
         isConfirmationStep: 1 === c,
         isEligibleForWowMoment: !0,
         shouldPrefetchWowMoment: !0,

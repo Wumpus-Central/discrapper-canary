@@ -481,10 +481,9 @@
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
     box-shadow: var(--shadow-border), var(--shadow-high);
-    display: flex;
-    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
     inset-inline-end: 0;
-    max-height: calc(100dvh - 160px);
     overflow: hidden;
     position: absolute;
     top: 100%;
@@ -493,8 +492,7 @@
 }
 
 .filterOverlayContent__1feb0 {
-    flex: 1;
-    min-height: 0;
+    height: 100%;
     padding-block: 16px;
     padding-inline: 16px 0
 }
