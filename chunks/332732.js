@@ -578,7 +578,7 @@ let eq = (e) => {
                                                           await Promise.all([
                                                               n.e("34218"),
                                                               n.e("4469"),
-                                                              n.e("97893"),
+                                                              n.e("24953"),
                                                               n.e("88205"),
                                                               n.e("65086"),
                                                               n.e("90261"),
@@ -855,7 +855,7 @@ let e6 = function (e) {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
                                 n.e("34218"),
                                 n.e("4469"),
-                                n.e("97893"),
+                                n.e("24953"),
                                 n.e("88205"),
                                 n.e("65086"),
                                 n.e("90261"),
@@ -1243,7 +1243,7 @@ let tx = () => {
                     (0, r.jsx)(w.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: P.intl.format(tM.default.UDwsvL, { orbsCount: t.total_rewarded_from_program }),
+                        children: P.intl.format(tM.default.UDwsvL, { orbsCount: t.total_rewarded_from_program ?? 0 }),
                     }),
                 ],
             }),
@@ -1372,7 +1372,7 @@ function tQ() {
         { shouldShowBonusOrbsUX: C, multiplier: v } = (0, tR.Dl)(tW.rE.NITRO_HOME_MARKETING),
         O = (0, m.l)("useWhatsNewPerkCards"),
         { isEligible: R, programReward: b } = (0, T.F)({ location: "useWhatsNewPerkCards" }),
-        D = O && R && null != b;
+        D = O && R && null != b && null != b.reward_amount && b.reward_amount > 0;
     return (0, s.useMemo)(() => {
         let e = [
                 c ? null : a,
@@ -1381,8 +1381,9 @@ function tQ() {
                     ? {
                           id: tS.NITRO_ORBS_REWARDS_CARD_ID,
                           title: P.intl.string(tM.default.hx5AFp),
-                          description: P.intl.format(tM.default["Pz+6Ix"], { orbsCount: b?.reward_amount ?? 0 }),
-                          primaryAsset: "/assets/0e1f72ee8aba3549.svg",
+                          description: P.intl.format(tM.default["Pz+6Ix"], { orbsCount: b.reward_amount }),
+                          primaryAsset: "/assets/8f530451dce1ccc0.svg",
+                          primaryAssetClassName: o()(tz.lH, tz.yK),
                           footerContent: (0, r.jsx)(tx, {}),
                           ctaText: P.intl.string(tM.default.BxjHiu),
                           onCtaClick: () => (0, tm.pX)(em.BVt.COLLECTIBLES_SHOP_WITH_TAB(tY.G2.ORBS)),
