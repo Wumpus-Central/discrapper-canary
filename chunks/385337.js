@@ -9,17 +9,23 @@ var a = i(920050),
     d = i(985018);
 function o(e) {
     let { className: t, containerClassName: i } = e,
-        o = (0, l.F)();
+        o = (0, l.F)(),
+        u =
+            o.kind === l.L.SUBSCRIBE
+                ? { subscriptionRequired: !0 }
+                : {
+                      ctaText: o.text,
+                      ctaIcon: o.icon,
+                      ctaIconPosition: o.iconPosition,
+                      ctaDisabled: o.disabled,
+                      ctaLoading: o.loading,
+                      onCtaClick: o.onClick,
+                  };
     return (0, s.jsx)(n.S, {
         id: a.XBOX_PREMIUM_PERK_CARD_ID,
         title: d.intl.string(c.default.UVL9tD),
         description: d.intl.string(c.default["I+IXr0"]),
-        ctaText: o.text,
-        ctaIcon: o.icon,
-        ctaIconPosition: o.iconPosition,
-        ctaDisabled: o.disabled,
-        ctaLoading: o.loading,
-        onCtaClick: o.onClick,
+        ...u,
         className: t,
         containerClassName: i,
         backgroundAssetUrl:
