@@ -1,53 +1,53 @@
 n.d(t, {
-    A6: () => L,
-    B3: () => H,
+    A6: () => C,
+    B3: () => F,
     BQ: () => K,
-    CI: () => g,
-    Fw: () => G,
-    GD: () => h,
-    J6: () => V,
-    K3: () => W,
-    Ko: () => C,
-    Li: () => c.L,
+    CI: () => D,
+    Fw: () => v,
+    GD: () => L,
+    J6: () => B,
+    K3: () => j,
+    Ko: () => m,
+    Li: () => E.L,
     Ls: () => k,
-    Pc: () => x,
-    TY: () => S.T,
-    Tz: () => O,
+    Pc: () => W,
+    TY: () => h.T,
+    Tz: () => N,
     WQ: () => $,
-    ZV: () => R,
-    aA: () => D,
+    ZV: () => p,
+    aA: () => O,
     aJ: () => y,
-    eA: () => M,
-    ej: () => U,
-    fO: () => p,
+    eA: () => U,
+    ej: () => M,
+    fO: () => R,
     fP: () => b,
-    gB: () => v,
-    hK: () => B,
+    gB: () => G,
+    hK: () => w,
     kL: () => Y,
     mg: () => P,
     pc: () => q,
-    rE: () => N,
+    rE: () => S,
     tZ: () => f,
-    uz: () => F,
-    yr: () => w,
-    zO: () => j,
+    uz: () => V,
+    yr: () => x,
+    zO: () => H,
 });
 var i,
     a,
     r,
-    _,
     s,
     l,
     o,
-    E = n(735438),
-    d = n(412703),
-    c = n(902173),
+    d,
+    c = n(735438),
+    _ = n(412703),
+    E = n(902173),
     u = n(257280),
-    I = n(636537),
-    T = n(927813),
-    A = n(507107),
-    S = n(557567),
-    N =
+    A = n(636537),
+    I = n(927813),
+    T = n(507107),
+    h = n(557567),
+    S =
         (((i = {}).ACTIVITY_PANEL = "quests_bar_activity_panel"),
         (i.QUESTS_MANAGER = "quests_manager"),
         (i.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = "quests_console_optimistic_updates_manager"),
@@ -97,19 +97,19 @@ var i,
         (i.NITRO_HOME_MARKETING = "nitro_home_marketing"),
         (i.NITRO_HOME_TAB = "nitro_home_tab"),
         i);
-let O = new Set([c.L.NITRO_CONTROL_CTA, c.L.NITRO_2_POINT_0_CTA]),
-    f = T.A.Millis.MINUTE * u.K.ConsecutiveHeartbeatPeriodMinutes,
-    R = { tension: 900, friction: 45, clamp: !0 },
-    C = { tension: 360, friction: 30, clamp: !0 },
-    D = 6,
-    L = 2;
-var p = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a);
-let m = (0, I.TP)(),
-    h =
-        -1 !== m.indexOf("localhost") || -1 !== m.indexOf("127.0.0.1")
-            ? `${m}/_cdn_storage/`
+let N = new Set([E.L.NITRO_2_POINT_0_CTA]),
+    f = I.A.Millis.MINUTE * u.K.ConsecutiveHeartbeatPeriodMinutes,
+    p = { tension: 900, friction: 45, clamp: !0 },
+    m = { tension: 360, friction: 30, clamp: !0 },
+    O = 6,
+    C = 2;
+var R = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a);
+let g = (0, A.TP)(),
+    L =
+        -1 !== g.indexOf("localhost") || -1 !== g.indexOf("127.0.0.1")
+            ? `${g}/_cdn_storage/`
             : "https://cdn.discordapp.com/",
-    g = h + "quests/";
+    D = L + "quests/";
 var b =
     (((r = {}).COLLAPSED = "collapsed"),
     (r.EXPANDED = "expanded"),
@@ -117,69 +117,69 @@ var b =
     (r.SOFT_DISMISSED = "soft-dismissed"),
     (r.RESET_TO_PREVIOUS = "reset-to-previous"),
     r);
-let U = "545364944258990091",
+let M = "545364944258990091",
     P = "{reward_code}";
-var M =
-    (((_ = {}).EXCLUDED_QUEST = "excluded_quest"),
-    (_.UNKNOWN_QUEST = "unknown_quest"),
-    (_.NOT_SHAREABLE_QUEST = "not_shareable_quest"),
-    _);
-let G = "1333839522189938740",
+var U =
+    (((s = {}).EXCLUDED_QUEST = "excluded_quest"),
+    (s.UNKNOWN_QUEST = "unknown_quest"),
+    (s.NOT_SHAREABLE_QUEST = "not_shareable_quest"),
+    s);
+let v = "1333839522189938740",
     y = "1410358070831480904",
-    v = "1420556874629251124",
-    B = "1402418703554842694",
-    w = "1496993616537587813",
-    F = "1496993616537587812",
-    V = new Set([
-        A.yW.DESKTOP_ACCOUNT_PANEL_AREA,
-        A.yW.MOBILE_HOME_DOCK_AREA,
-        A.yW.QUEST_HOME_BANNER_DESKTOP,
-        A.yW.QUEST_HOME_MOBILE_CAROUSEL,
+    G = "1420556874629251124",
+    w = "1402418703554842694",
+    x = "1496993616537587813",
+    V = "1496993616537587812",
+    B = new Set([
+        T.yW.DESKTOP_ACCOUNT_PANEL_AREA,
+        T.yW.MOBILE_HOME_DOCK_AREA,
+        T.yW.QUEST_HOME_BANNER_DESKTOP,
+        T.yW.QUEST_HOME_MOBILE_CAROUSEL,
     ]),
-    H = new Set([
-        d.n.STREAM_ON_DESKTOP,
-        d.n.PLAY_ON_DESKTOP,
-        d.n.PLAY_ON_XBOX,
-        d.n.PLAY_ON_PLAYSTATION,
-        d.n.PLAY_ACTIVITY,
+    F = new Set([
+        _.n.STREAM_ON_DESKTOP,
+        _.n.PLAY_ON_DESKTOP,
+        _.n.PLAY_ON_XBOX,
+        _.n.PLAY_ON_PLAYSTATION,
+        _.n.PLAY_ACTIVITY,
     ]),
     k = new Set([
-        d.n.STREAM_ON_DESKTOP,
-        d.n.PLAY_ON_DESKTOP,
-        d.n.PLAY_ON_XBOX,
-        d.n.PLAY_ON_PLAYSTATION,
-        d.n.PLAY_ACTIVITY,
+        _.n.STREAM_ON_DESKTOP,
+        _.n.PLAY_ON_DESKTOP,
+        _.n.PLAY_ON_XBOX,
+        _.n.PLAY_ON_PLAYSTATION,
+        _.n.PLAY_ACTIVITY,
     ]),
-    j = new Set([
-        d.n.STREAM_ON_DESKTOP,
-        d.n.PLAY_ON_DESKTOP,
-        d.n.PLAY_ON_XBOX,
-        d.n.PLAY_ON_PLAYSTATION,
-        d.n.PLAY_ACTIVITY,
+    H = new Set([
+        _.n.STREAM_ON_DESKTOP,
+        _.n.PLAY_ON_DESKTOP,
+        _.n.PLAY_ON_XBOX,
+        _.n.PLAY_ON_PLAYSTATION,
+        _.n.PLAY_ACTIVITY,
     ]),
-    W = { is_targeted: !1 };
+    j = { is_targeted: !1 };
 var Y =
-        (((s = {}).SUGGESTED = "suggested"),
-        (s.MOST_RECENT = "most_recent"),
-        (s.EXPIRING_SOON = "expiring_soon"),
-        (s.RECENTLY_ENROLLED = "recently_enrolled"),
-        s),
-    x = (((l = {}).VIDEO = "task_video"), (l.PLAY = "task_play"), l),
+        (((l = {}).SUGGESTED = "suggested"),
+        (l.MOST_RECENT = "most_recent"),
+        (l.EXPIRING_SOON = "expiring_soon"),
+        (l.RECENTLY_ENROLLED = "recently_enrolled"),
+        l),
+    W = (((o = {}).VIDEO = "task_video"), (o.PLAY = "task_play"), o),
     K =
-        (((o = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
-        (o.COLLECTIBLE = "reward_collectible"),
-        (o.IN_GAME = "reward_in_game"),
-        o);
+        (((d = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
+        (d.COLLECTIBLE = "reward_collectible"),
+        (d.IN_GAME = "reward_in_game"),
+        d);
 function $(e) {
-    return Object.values(x).includes(e)
+    return Object.values(W).includes(e)
         ? { group: "task", filter: e }
         : Object.values(K).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
-let Q = ["reward", "task"],
+let Z = ["reward", "task"],
     q = Object.entries(
-        (0, E.groupBy)(
+        (0, c.groupBy)(
             [
                 { group: "task", filter: "task_play" },
                 { group: "task", filter: "task_video" },
@@ -190,7 +190,7 @@ let Q = ["reward", "task"],
             "group",
         ),
     ).sort((e, t) => {
-        let n = Q.indexOf(e[0]),
-            i = Q.indexOf(t[0]);
+        let n = Z.indexOf(e[0]),
+            i = Z.indexOf(t[0]);
         return n < i ? -1 : +(i < n);
     });
