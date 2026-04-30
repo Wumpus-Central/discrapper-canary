@@ -882,7 +882,6 @@
     font-family: var(--font-code);
     font-size: 85%;
     -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
     text-size-adjust: none
 }
 
