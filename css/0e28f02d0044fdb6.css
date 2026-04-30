@@ -131,6 +131,16 @@ a-rp {
     color: var(--text-code)
 }
 
+.language-diff a-s {
+    background-color: var(--background-code-addition);
+    color: var(--text-code-addition)
+}
+
+.language-diff a-k {
+    background-color: var(--background-code-deletion);
+    color: var(--text-code-deletion)
+}
+
 .ansi__65132 {
     --custom-ansi-color-0: var(--ansi-black);
     --custom-ansi-color-1: var(--ansi-red);
