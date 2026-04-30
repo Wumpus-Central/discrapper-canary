@@ -223,7 +223,7 @@ function eI(e) {
                         (0, w.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("80813"),
+                                    n.e("42105"),
                                     n.e("44616"),
                                     n.e("96680"),
                                     n.e("85579"),
@@ -575,8 +575,8 @@ var eJ = n(337092),
     e0 = n(975571),
     e1 = n(927578),
     e4 = n(69494),
-    e8 = n(534479),
-    e6 = n(340034),
+    e6 = n(534479),
+    e8 = n(340034),
     e2 = n(50956),
     e5 = n(71867),
     e3 = n(249872);
@@ -643,11 +643,11 @@ function e7(e) {
         }),
         [w, j?.id, r, K?.subscriptionPeriodEnd, U, u],
     );
-    if ($) return J ? (0, l.jsx)(eK.Ed, { className: e3.QW }) : (0, l.jsx)(e8.A, {});
+    if ($) return J ? (0, l.jsx)(eK.E, { className: e3.QW }) : (0, l.jsx)(e6.A, {});
     v()(null != M, "Step should be set"), v()(w.length > 0, "Premium plan options should be set");
     let et =
         J && !R
-            ? (0, l.jsx)(e6.XH, { ...ee, isInPlanSelectStep: !0, showPlanStatusSubText: !0 })
+            ? (0, l.jsx)(e8.XH, { ...ee, isInPlanSelectStep: !0, showPlanStatusSubText: !0 })
             : (0, l.jsx)(eJ.$p, { ...ee });
     return (0, l.jsxs)(l.Fragment, {
         children: [

@@ -3,7 +3,7 @@ var i,
     s,
     l = n(627968),
     a = n(64700),
-    r = n(925747),
+    r = n(785651),
     o = n(942381),
     d = n(17928),
     u = n(554146),
@@ -319,7 +319,7 @@ function e3(e) {
     );
 }
 var e8 = n(338854);
-function e4(e) {
+function e6(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e;
     return (0, l.jsx)(e8.H, {
         targetElementRef: i,
@@ -338,7 +338,7 @@ function e4(e) {
         caretConfig: { align: "center" },
     });
 }
-var e6 = n(834730),
+var e4 = n(834730),
     e2 = n(821609),
     e5 = n(383470);
 function e9(e) {
@@ -347,7 +347,7 @@ function e9(e) {
         className: e5.kL,
         children: [
             (0, l.jsx)("div", { className: e5.Wn }),
-            (0, l.jsx)(e6.E, { variant: "text-sm/normal", className: e5.Qs, children: e0.intl.string(e0.t.rdzeVP) }),
+            (0, l.jsx)(e4.E, { variant: "text-sm/normal", className: e5.Qs, children: e0.intl.string(e0.t.rdzeVP) }),
             (0, l.jsx)(e2.$, {
                 variant: "overlay-primary",
                 text: e0.intl.string(e0.t["NX+WJN"]),
@@ -474,7 +474,7 @@ let tn = a.memo(function (e) {
                     });
                 case u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
                     return (0, l.jsx)(tt, {
-                        renderPopout: (e) => (0, l.jsx)(e4, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e6, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 default:
@@ -558,7 +558,7 @@ let tc = ts().debounce(td.Ay.trackWithMetadata, 500),
                         null != n
                             ? (0, l.jsx)(to.D, { variant: "heading-md/semibold", className: tu.DD, children: n })
                             : null,
-                        (0, l.jsx)(e6.E, { variant: "text-sm/normal", children: i }),
+                        (0, l.jsx)(e4.E, { variant: "text-sm/normal", children: i }),
                         g,
                     ],
                 }),
@@ -761,8 +761,8 @@ var tK = n(503698),
     t1 = n(713654),
     t3 = n(976860),
     t8 = n(790535),
-    t4 = n(110618),
-    t6 = n(495544),
+    t6 = n(110618),
+    t4 = n(495544),
     t2 = n(309010),
     t5 = n(312006),
     t9 = n(403362),
@@ -794,7 +794,7 @@ let nd = a.memo(function (e) {
                 className: tW()(no.fI, no.pF),
                 children: [
                     (0, l.jsx)("div", { className: no.Ok }),
-                    (0, l.jsx)(e6.E, {
+                    (0, l.jsx)(e4.E, {
                         color: "text-feedback-positive",
                         variant: "text-xs/semibold",
                         className: no.U4,
@@ -814,19 +814,19 @@ let nd = a.memo(function (e) {
                 className: tW()(no.fI, no.pF),
                 children: [
                     i,
-                    (0, l.jsx)(e6.E, { color: "none", variant: "text-xs/normal", className: no.HA, children: n }),
+                    (0, l.jsx)(e4.E, { color: "none", variant: "text-xs/normal", className: no.HA, children: n }),
                     null != s &&
                         null != a &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(e6.E, {
+                                (0, l.jsx)(e4.E, {
                                     className: no.hY,
                                     color: "none",
                                     variant: "text-xs/normal",
                                     children: "•",
                                 }),
                                 a,
-                                (0, l.jsx)(e6.E, {
+                                (0, l.jsx)(e4.E, {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: no.zH,
@@ -909,7 +909,7 @@ function nA(e) {
                         (0, l.jsx)(ta.D, {
                             onClick: () => (0, t7.uR)({ eventId: t.id }),
                             className: no.oP,
-                            children: (0, l.jsx)(e6.E, {
+                            children: (0, l.jsx)(e4.E, {
                                 color: "text-strong",
                                 variant: "text-md/semibold",
                                 className: no.eq,
@@ -937,7 +937,7 @@ function nA(e) {
                             width: 16,
                             height: 16,
                         }),
-                        (0, l.jsx)(e6.E, {
+                        (0, l.jsx)(e4.E, {
                             color: "text-default",
                             variant: "text-xs/normal",
                             className: no.Sv,
@@ -957,7 +957,7 @@ function nA(e) {
                                   height: 16,
                                   className: no.uE,
                               }),
-                        (0, l.jsx)(e6.E, {
+                        (0, l.jsx)(e4.E, {
                             color: "none",
                             variant: "text-xs/normal",
                             className: no.HA,
@@ -1063,8 +1063,8 @@ function nN(e) {
         u = (0, d.bG)([x.A], () => x.A.can(H.xBc.CONNECT, n)),
         c =
             ((t = n.id),
-            (0, d.bG)([t6.default, t2.A, t5.Ay], () => {
-                let e = t6.default.getId();
+            (0, d.bG)([t4.default, t2.A, t5.Ay], () => {
+                let e = t4.default.getId();
                 return t2.A.getVoiceChannelId() === t ? t5.Ay.getPermissionsForUser(e, t) : null;
             }, [t])),
         A = e0.intl.string(e0.t.VJlc0S);
@@ -1091,11 +1091,11 @@ function nN(e) {
                             className: tW()(no.fI, no.pF),
                             children: [
                                 (0, l.jsx)(tJ.Ay, { guildId: r, users: o, showUserPopout: !0, size: tJ.DN.SIZE_16 }),
-                                (0, l.jsx)(e6.E, {
+                                (0, l.jsx)(e4.E, {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: no.c8,
-                                    children: (0, t4.c)(r, o, n?.id, i.length),
+                                    children: (0, t6.c)(r, o, n?.id, i.length),
                                 }),
                             ],
                         })
@@ -1438,8 +1438,8 @@ let n0 = new nJ(I.h),
         { type: H.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
     ],
     n8 = n3.map((e) => e.store).filter(t9.Vq),
-    n4 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
-function n6(e) {
+    n6 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
+function n4(e) {
     e.stopPropagation();
 }
 let n2 = [];
@@ -1475,7 +1475,7 @@ function n5(e) {
                     : n3
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
-                              return !0 === n?.channelNoticePredicate(r, o) && !n4.has(t);
+                              return !0 === n?.channelNoticePredicate(r, o) && !n6.has(t);
                           })
                           .map((e) => e.dismissibleContentType),
             [r, o, _],
@@ -1507,7 +1507,7 @@ function n5(e) {
                     return null;
             }
         })();
-    return null == T ? null : (0, l.jsx)("div", { onContextMenu: n6, children: T });
+    return null == T ? null : (0, l.jsx)("div", { onContextMenu: n4, children: T });
 }
 let n9 = (e) => {
     let { guild: t } = e;
@@ -1664,8 +1664,7 @@ class ir extends a.PureComponent {
                     n.e("80186"),
                     n.e("51507"),
                     n.e("23924"),
-                    n.e("15510"),
-                    n.e("25845"),
+                    n.e("71470"),
                     n.e("19402"),
                     n.e("49681"),
                     n.e("96382"),
@@ -1675,9 +1674,9 @@ class ir extends a.PureComponent {
                     n.e("82596"),
                     n.e("20287"),
                     n.e("28367"),
-                    n.e("63232"),
                     n.e("35429"),
                     n.e("10471"),
+                    n.e("63232"),
                     n.e("64827"),
                     n.e("23808"),
                     n.e("11301"),
@@ -1693,31 +1692,31 @@ class ir extends a.PureComponent {
                     n.e("24313"),
                     n.e("74016"),
                     n.e("48405"),
-                    n.e("63185"),
+                    n.e("12544"),
                     n.e("19551"),
                     n.e("7743"),
                     n.e("45959"),
                     n.e("18573"),
                     n.e("55936"),
                     n.e("31988"),
+                    n.e("71751"),
                     n.e("39667"),
-                    n.e("37794"),
                     n.e("26073"),
                     n.e("34303"),
-                    n.e("48172"),
                     n.e("28866"),
                     n.e("8304"),
                     n.e("58038"),
                     n.e("93159"),
                     n.e("11566"),
-                    n.e("21106"),
+                    n.e("10556"),
                     n.e("94723"),
                     n.e("62931"),
                     n.e("81987"),
                     n.e("53092"),
                     n.e("58007"),
                     n.e("5812"),
-                    n.e("17363"),
+                    n.e("27602"),
+                    n.e("83157"),
                     n.e("55411"),
                     n.e("93103"),
                     n.e("76602"),
@@ -1811,7 +1810,7 @@ class ir extends a.PureComponent {
                     n.e("21049"),
                     n.e("8377"),
                     n.e("28610"),
-                    n.e("44795"),
+                    n.e("36603"),
                     n.e("95370"),
                     n.e("97784"),
                     n.e("44928"),
@@ -2283,8 +2282,8 @@ function io(e) {
         e1 = (0, d.bG)([X.A], () => X.A.getGuild(L)?.features.has(H.GuildFeatures.GAME_SERVERS) ?? !1, [L]),
         e3 = e0 && !e1 && !1 === eJ,
         e8 = (0, eG.J)("GuildSidebar"),
-        e4 = (0, ef.S)(L, "GuildSidebar"),
-        e6 = e0 && !e1 && e4 && !1 === eJ,
+        e6 = (0, ef.S)(L, "GuildSidebar"),
+        e4 = e0 && !e1 && e6 && !1 === eJ,
         e2 = (0, eH.A)(),
         e5 = (0, eb.A)(L),
         e9 = !1 === eJ && e2 && null != e5,
@@ -2296,7 +2295,7 @@ function io(e) {
         eM && tt.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === eJ && tt.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
         e3 && tt.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
-        e6 && tt.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
+        e4 && tt.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         eq && tt.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [tn, ti] = (0, ei.kn)(tt, eE.m.GUILD_HEADER_TOOLTIPS),
         [ts, tl] = (0, eU.vB)(e8 && e0 && !1 === eJ && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),
