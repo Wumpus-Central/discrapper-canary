@@ -15,8 +15,8 @@ var i = n(111956),
     m = n(309010),
     f = n(287809),
     g = n(954571),
-    I = n(650338),
-    A = n(652215),
+    A = n(650338),
+    I = n(652215),
     p = n(257645),
     T = n(731854);
 let S = new a.A("AudioActionCreators");
@@ -36,7 +36,7 @@ function R(e, t, n, i) {
         _ = e[n],
         d = E.Ay.getMediaEngine().getAudioSubsystem(),
         h = E.Ay.getMediaEngine().getAudioLayer();
-    g.default.track(A.HAw.MEDIA_DEVICE_CHANGED, {
+    g.default.track(I.HAw.MEDIA_DEVICE_CHANGED, {
         device_from_name: u.A.getCertifiedDeviceName(t, null != l ? l.name : ""),
         device_to_name: u.A.getCertifiedDeviceName(n, null != _ ? _.name : ""),
         device_type: i,
@@ -50,7 +50,7 @@ function R(e, t, n, i) {
 }
 S.enableNativeLogger(!0);
 let C = r()((e, t, n) => {
-        g.default.track(A.HAw.USER_VOLUME_SETTING_UPDATED, {
+        g.default.track(I.HAw.USER_VOLUME_SETTING_UPDATED, {
             target_user_id: e,
             context: t,
             volume: n,
@@ -134,6 +134,10 @@ let C = r()((e, t, n) => {
                 i = (0, l.z)(t, n);
             s.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: i }), C(e, n, i);
         },
+        setAudioMixerSettings(e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T.x.DEFAULT;
+            s.h.dispatch({ type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: t, settings: e });
+        },
         setLocalPan(e, t, n) {
             let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : T.x.DEFAULT;
             s.h.dispatch({ type: "AUDIO_SET_LOCAL_PAN", context: i, userId: e, left: t, right: n });
@@ -151,7 +155,7 @@ let C = r()((e, t, n) => {
                     r = m.A.getVoiceChannelId(),
                     s = null != r ? c.A.getChannel(r) : null,
                     a = O();
-                g.default.track(A.HAw.VOICE_ACTIVATION_MODE_CHANGED, {
+                g.default.track(I.HAw.VOICE_ACTIVATION_MODE_CHANGED, {
                     mode: e,
                     location_stack: i,
                     voice_channel_type: s?.type,
@@ -159,13 +163,13 @@ let C = r()((e, t, n) => {
                     audio_subsystem: t,
                     audio_layer: n,
                 });
-            } else if (e === A.TBI.VOICE_ACTIVITY && a !== t) {
+            } else if (e === I.TBI.VOICE_ACTIVITY && a !== t) {
                 let e = E.Ay.getMediaEngine().getAudioSubsystem(),
                     n = E.Ay.getMediaEngine().getAudioLayer(),
                     r = m.A.getVoiceChannelId(),
                     s = null != r ? c.A.getChannel(r) : null,
                     o = O();
-                g.default.track(A.HAw.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
+                g.default.track(I.HAw.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
                     location_stack: i,
                     voice_channel_type: s?.type,
                     input_device_name: o,
@@ -187,7 +191,7 @@ let C = r()((e, t, n) => {
             s.h.dispatch({ type: "AUDIO_SET_INPUT_VOLUME", volume: e });
             let n = m.A.getVoiceChannelId(),
                 i = null != n ? c.A.getChannel(n) : null;
-            g.default.track(A.HAw.MEDIA_INPUT_VOLUME_CHANGED, {
+            g.default.track(I.HAw.MEDIA_INPUT_VOLUME_CHANGED, {
                 volume: e,
                 location_stack: t,
                 voice_channel_type: i?.type,
@@ -199,7 +203,7 @@ let C = r()((e, t, n) => {
             s.h.dispatch({ type: "AUDIO_SET_OUTPUT_VOLUME", volume: e });
             let n = m.A.getVoiceChannelId(),
                 i = null != n ? c.A.getChannel(n) : null;
-            g.default.track(A.HAw.MEDIA_OUTPUT_VOLUME_CHANGED, {
+            g.default.track(I.HAw.MEDIA_OUTPUT_VOLUME_CHANGED, {
                 volume: e,
                 location_stack: t,
                 voice_channel_type: i?.type,
@@ -331,7 +335,7 @@ let C = r()((e, t, n) => {
         },
         setGoLiveSource(e) {
             e?.qualityOptions != null &&
-                (0, I.K2)(
+                (0, A.K2)(
                     e.qualityOptions.preset,
                     e.qualityOptions.resolution,
                     e.qualityOptions.frameRate,

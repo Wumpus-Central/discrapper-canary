@@ -16,8 +16,8 @@ var c = n(119479),
     m = n.n(h),
     f = n(128080),
     g = n.n(f),
-    I = n(264968),
-    A = n.n(I),
+    A = n(264968),
+    I = n.n(A),
     p = n(141697),
     T = n(904986);
 n(618792);
@@ -456,6 +456,7 @@ var x =
         (r.GAMESCOPE_CAPTURE = "gamescope_capture"),
         (r.ASYNC_VIDEO_INPUT_DEVICE_INIT = "async_video_input_device_init"),
         (r.PORT_AWARE_LATENCY_TESTING = "port_aware_latency_testing"),
+        (r.SPATIAL_AUDIO = "spatial_audio"),
         r),
     V =
         (((s = {})[(s.Started = 0)] = "Started"),
@@ -872,6 +873,9 @@ class H extends T.A {
     setLocalMute(e, t) {
         (this.localMutes[e] = t), this.conn.setLocalMute(e, t), this.emit(d.yq.LocalMute, e, t);
     }
+    setUserPosition(e, t) {
+        this.conn.setUserPosition?.(e, t);
+    }
     fastUdpReconnect() {
         null != this.conn.fastUdpReconnect && ((this.numFastUdpReconnects += 1), this.conn.fastUdpReconnect());
     }
@@ -1129,8 +1133,8 @@ class H extends T.A {
                     graphicsCaptureStaleFrameTimeoutMs: m,
                     hdrCaptureMode: f,
                     enableGlobalFramePoolLock: g,
-                    useGraphicsCaptureDirtyRegions: I,
-                    videoHookAllowDx12: A,
+                    useGraphicsCaptureDirtyRegions: A,
+                    videoHookAllowDx12: I,
                 } = e.desktopDescription;
                 this.setSoundshareSource(s, a);
                 let [p, T] = null != r ? r.split(":") : ["", ""];
@@ -1156,8 +1160,8 @@ class H extends T.A {
                                   graphicsCaptureStaleFrameTimeoutMs: m,
                                   hdrCaptureMode: f,
                                   enableGlobalFramePoolLock: g,
-                                  useGraphicsCaptureDirtyRegions: I,
-                                  videoHookAllowDx12: A,
+                                  useGraphicsCaptureDirtyRegions: A,
+                                  videoHookAllowDx12: I,
                               }))
                             : this.conn.clearDesktopSource()
                         : this.conn.setDesktopSource(`wumpus-${T}`, o, p);
@@ -1527,12 +1531,12 @@ class H extends T.A {
         if (this.connectionState === N.$I.DISCONNECTED) return void this.off(d.yq.Stats, this.handleStats);
         if (null != e) {
             if (null != this.stats) {
-                let t = A()(
+                let t = I()(
                         e.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },
                     ),
-                    n = A()(
+                    n = I()(
                         this.stats.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },
@@ -1957,6 +1961,8 @@ class er extends l.A {
                 return (0, L.$b)(x.ASYNC_VIDEO_INPUT_DEVICE_INIT);
             case N.O5.PORT_AWARE_LATENCY_TESTING:
                 return (0, L.$b)(x.PORT_AWARE_LATENCY_TESTING);
+            case N.O5.SPATIAL_AUDIO:
+                return (0, L.$b)(x.SPATIAL_AUDIO);
             case N.O5.DIAGNOSTICS:
             case N.O5.NATIVE_PING:
             case N.O5.AUTOMATIC_VAD:
@@ -2013,6 +2019,9 @@ class er extends l.A {
     }
     enable() {
         return Promise.resolve();
+    }
+    setAudioMixerOptions(e) {
+        (0, L.$b)(x.SPATIAL_AUDIO) && (0, L.lE)().setTransportOptions({ audioMixerOptions: e });
     }
     setAudioInputBypassSystemProcessing(e) {
         (0, L.lE)().setTransportOptions({ bypassSystemProcessing: e });

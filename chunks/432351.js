@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => l });
-var r = n(972347),
-    i = n(205693),
+var i = n(972347),
+    r = n(205693),
     s = n(731854);
 function a(e) {
     return null;
@@ -9,11 +9,11 @@ function a(e) {
 function o(e) {
     return null;
 }
-class l extends r.A {
+class l extends i.A {
     Video = a;
     Camera = o;
     destroy() {
-        this.emit(i.bg.Destroy), this.removeAllListeners();
+        this.emit(r.bg.Destroy), this.removeAllListeners();
     }
     interact() {}
     supported() {
@@ -29,6 +29,7 @@ class l extends r.A {
     enable() {
         return Promise.resolve();
     }
+    setAudioMixerOptions(e) {}
     setInputVolume(e) {}
     setOutputVolume(e) {}
     getAudioInputDevices() {
@@ -97,7 +98,7 @@ class l extends r.A {
     exportClip(e, t) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
-    saveScreenshot(e, t, n, r, i) {
+    saveScreenshot(e, t, n, i, r) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     setAudioSubsystem(e) {}
@@ -121,7 +122,7 @@ class l extends r.A {
     setAecDump(e) {}
     startRecordingRawSamples(e) {}
     stopRecordingRawSamples() {}
-    processBatchAudioFiles(e, t, n, r) {}
+    processBatchAudioFiles(e, t, n, i) {}
     cancelBatchAudioProcessing() {}
     createReplayConnection(e, t) {
         throw Error("Connection replay is not supported.");
