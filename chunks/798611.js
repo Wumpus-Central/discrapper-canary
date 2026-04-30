@@ -423,8 +423,8 @@ let $ = new A.A("ReadStates"),
     })();
 var W = n(617617),
     K = n(45773);
-let q = new A.A("UserSettingsProto");
-class Z {
+let Z = new A.A("UserSettingsProto");
+class q {
     actions = {
         CONNECTION_OPEN: () => this.throttledOnChange(),
         USER_SETTINGS_PROTO_UPDATE: () => this.throttledOnChange(),
@@ -435,7 +435,7 @@ class Z {
         let t = performance.now(),
             n = await C.A.userSettings(e).getMany(),
             i = performance.now();
-        q.verbose(`loaded in ${i - t}ms (settings: ${n.length})`);
+        Z.verbose(`loaded in ${i - t}ms (settings: ${n.length})`);
         let l = {};
         for (let e of n) l[e.id] = e.value;
         return l;
@@ -454,9 +454,9 @@ class Z {
     throttledOnChange = k().debounce(this.handleUserSettingsProtoChange, 0);
     resetInMemoryState() {}
 }
-let Q = new Z();
+let Q = new q();
 var X = n(531743),
-    J = n(264392),
+    J = n(824579),
     ee = n(548965),
     et = n(917878),
     en = n(464578),
@@ -628,7 +628,18 @@ async function ef(e, t, n, i) {
         );
     ee.iQ.getCachedEnabled()
         ? ed.verbose("loadLateLazyCache: not yielding to react")
-        : (ed.verbose("loadLateLazyCache: yielding to react"), await (0, J.i)((0, er.isIOS)() ? 0 : void 0)),
+        : (ed.verbose("loadLateLazyCache: yielding to react"),
+          await (function () {
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 4e3;
+              return new Promise((t) => {
+                  let n = setTimeout(() => {
+                      t();
+                  }, e);
+                  (0, J.t)(() => {
+                      clearTimeout(n), t();
+                  });
+              });
+          })((0, er.isIOS)() ? 0 : void 0)),
         en.A.loadLazyCache.recordStart();
     let u = _.A.getSocket();
     eI(() => {
@@ -1149,8 +1160,8 @@ new ez(l.h, {
     n(769022);
 var eW = n(451988),
     eK = n(308368),
-    eq = n(973522),
-    eZ = n(674378),
+    eZ = n(973522),
+    eq = n(674378),
     eQ = n(760751),
     eX = n(189081),
     eJ = n(763827);
@@ -1171,7 +1182,7 @@ function e8(e) {
         n = Date.now(),
         i = null != e.updatedAt ? n - e.updatedAt : 0;
     i > e1 + e2 && (i = 0);
-    let l = (0, eZ.kv)(e.applicationId, eX.A),
+    let l = (0, eq.kv)(e.applicationId, eX.A),
         a = ei.A.getVoiceChannelId(),
         r = g.default.getSessionId(),
         s = eJ.A.getMediaSessionId();
@@ -1205,7 +1216,7 @@ function e9() {
                     applicationId: t.id,
                     updatedAt: Date.now(),
                     distributor: e.distributor,
-                    exePath: (0, eq.Ic)(e.exePath ?? ""),
+                    exePath: (0, eZ.Ic)(e.exePath ?? ""),
                 }));
     }
     for (let t of Object.keys(e3)) n.has(t) || e6(e3[t], e);
