@@ -56,7 +56,6 @@
 }
 
 .skuImage__47729 {
-    border-radius: var(--radius-xs);
     max-width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
@@ -65,7 +64,8 @@
 }
 
 .skuImage__47729.square__47729 {
-    aspect-ratio: 1
+    aspect-ratio: 1;
+    border-radius: var(--radius-xs)
 }
 
 .socialLayerCardHover__517e1 .socialLayerCardBackgroundImage__517e1 {
