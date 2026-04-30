@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { y: () => r });
+n.d(t, { y: () => a });
 var i = n(651162);
-class r {
+class a {
     title;
     body;
     categoryStoreListingId;
@@ -30,6 +29,6 @@ class r {
             (this.dismissibleContentVersion = e.dismissible_content_version);
     }
     static fromServer(e) {
-        return new r(e);
+        return new a(e);
     }
 }

@@ -29,7 +29,7 @@ let I = function (t) {
     return (0, i.jsx)(a.$m, { "data-migration-pending": !0, className: R()(p.j, n), children: e });
 };
 var F = n(652215),
-    U = n(375708),
+    U = n(985018),
     N = n(425020);
 let k = function (t) {
     let { onClose: e, channelId: n } = t,
@@ -77,7 +77,7 @@ var y = n(17928),
     Y = n(661531),
     f = n(320448),
     v = n(192308),
-    P = n(717398),
+    P = n(49229),
     M = n(975807),
     W = n(928658),
     B = n(426190),

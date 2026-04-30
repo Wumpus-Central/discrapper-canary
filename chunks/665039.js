@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { j: () => s });
+n.d(t, { j: () => r });
 var i = n(64700),
-    r = n(77729);
-function s(e) {
+    a = n(77729);
+function r(e) {
     return (0, i.useMemo)(
         () =>
-            null == e || null == r.A.clips.getClipProtocolURLFromPath
+            null == e || null == a.A.clips.getClipProtocolURLFromPath
                 ? null
-                : r.A.clips.getClipProtocolURLFromPath(e.filepath),
+                : a.A.clips.getClipProtocolURLFromPath(e.filepath),
         [e],
     );
 }

@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { el: () => u, xf: () => l });
+n.d(t, { el: () => d, xf: () => o });
 var i = n(572808),
-    r = n(368662),
-    s = n(375708);
-function a(e) {
+    l = n(368662),
+    a = n(985018);
+function r(e) {
     return { userId: e.user_id, position: e.position, avatar: e.avatar };
 }
-function o(e) {
+function s(e) {
     return { id: e.id, claimedBy: e.claimed_by };
 }
-function l(e) {
-    return { roomId: e.room_id, participants: e.participants.map(a), seats: e.seats.map(o) };
+function o(e) {
+    return { roomId: e.room_id, participants: e.participants.map(r), seats: e.seats.map(s) };
 }
-function u(e) {
+function d(e) {
     switch (e) {
         case i.wS.RADIO:
-            return s.intl.string(r.default.AjiGKB);
+            return a.intl.string(l.default.AjiGKB);
         case i.wS.ENVIRONMENT:
-            return s.intl.string(r.default.YEYIbI);
+            return a.intl.string(l.default.YEYIbI);
         case i.wS.CAMPFIRE:
-            return s.intl.string(r.default["Vk9+Ez"]);
+            return a.intl.string(l.default["Vk9+Ez"]);
         default:
             return "";
     }

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, {
     $: () => r,
     Ae: () =>
@@ -6,13 +5,13 @@ n.d(t, {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { limit: 200, hasBailedAst: !1 };
             if (Array.isArray(t)) {
                 let r = t.length;
-                for (let s = 0; s < r; s++) {
-                    let { ast: r } = e(t[s], n);
+                for (let a = 0; a < r; a++) {
+                    let { ast: r } = e(t[a], n);
                     if (r === i) {
-                        (n.hasBailedAst = !0), (t.length = s);
+                        (n.hasBailedAst = !0), (t.length = a);
                         break;
                     }
-                    t[s] = r;
+                    t[a] = r;
                 }
             } else if ("text" !== t.type) {
                 if (((n.limit -= 1), n.limit <= 0)) return (n.hasBailedAst = !0), { ast: i, hasBailedAst: !0 };
@@ -33,8 +32,8 @@ n.d(t, {
             let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
             if (Array.isArray(n)) {
                 let r = n.length,
-                    s = [];
-                for (let a = 0; a < r; a++)
+                    a = [];
+                for (let l = 0; l < r; l++)
                     !(function (e, t) {
                         if (Array.isArray(t)) {
                             let { length: n } = t;
@@ -42,7 +41,7 @@ n.d(t, {
                             return;
                         }
                         e.push(t);
-                    })(s, e(t, n[a], i));
+                    })(a, e(t, n[l], i));
                 return (
                     t.isSlate ||
                         (function (e) {
@@ -55,8 +54,8 @@ n.d(t, {
                                 }
                                 (t.content += i.content), e.splice(n, 1), n--;
                             }
-                        })(s),
-                    s
+                        })(a),
+                    a
                 );
             }
             return (null != n.content && (n.content = e(t, n.content, n)),

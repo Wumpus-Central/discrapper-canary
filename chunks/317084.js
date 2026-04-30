@@ -1,48 +1,47 @@
-"use strict";
-n.d(t, { A: () => w }), n(321073);
-var i = n(627968),
-    r = n(64700),
-    s = n(562708),
-    a = n(17928),
-    o = n(793574),
-    l = n(688810),
-    u = n(139286),
-    c = n(594061),
-    d = n(763827),
-    _ = n(935208),
-    f = n(796774),
-    h = n(209932),
-    p = n(813564),
-    E = n(933204),
-    m = n(805143),
-    g = n(735438),
-    A = n.n(g),
-    I = n(939249);
-function T(e, t, n) {
-    return (n.y - e.y) * (t.x - e.x) > (t.y - e.y) * (n.x - e.x);
+l.d(t, { A: () => b }), l(321073);
+var n = l(627968),
+    a = l(64700),
+    r = l(110259),
+    s = l(17928),
+    i = l(793574),
+    u = l(688810),
+    o = l(139286),
+    c = l(594061),
+    d = l(763827),
+    h = l(935208),
+    x = l(796774),
+    f = l(209932),
+    y = l(536432),
+    p = l(933204),
+    g = l(805143),
+    A = l(735438),
+    v = l.n(A),
+    m = l(939249);
+function _(e, t, l) {
+    return (l.y - e.y) * (t.x - e.x) > (t.y - e.y) * (l.x - e.x);
 }
-function S(e, t, n, i) {
-    return T(e, n, i) !== T(t, n, i) && T(e, t, n) !== T(e, t, i);
+function I(e, t, l, n) {
+    return _(e, l, n) !== _(t, l, n) && _(e, t, l) !== _(e, t, n);
 }
-var N = n(375708),
-    y = n(740371);
+var M = l(985018),
+    E = l(740371);
 function C(e) {
     let { className: t } = e;
-    return (0, i.jsxs)("svg", {
+    return (0, n.jsxs)("svg", {
         className: t,
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 48 48",
         children: [
-            (0, i.jsx)("g", {
+            (0, n.jsx)("g", {
                 filter: "url(#a)",
-                children: (0, i.jsx)("path", {
+                children: (0, n.jsx)("path", {
                     d: "M30.4 8 24 14.4 17.6 8 16 9.6l6.4 6.4-6.4 6.4 1.6 1.6 6.4-6.4 6.4 6.4 1.6-1.6-6.4-6.4L32 9.6 30.4 8Z",
                     fill: "currentColor",
                 }),
             }),
-            (0, i.jsx)("defs", {
-                children: (0, i.jsxs)("filter", {
+            (0, n.jsx)("defs", {
+                children: (0, n.jsxs)("filter", {
                     id: "a",
                     x: "0",
                     y: "0",
@@ -51,17 +50,17 @@ function C(e) {
                     filterUnits: "userSpaceOnUse",
                     colorInterpolationFilters: "sRGB",
                     children: [
-                        (0, i.jsx)("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
-                        (0, i.jsx)("feColorMatrix", {
+                        (0, n.jsx)("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
+                        (0, n.jsx)("feColorMatrix", {
                             in: "SourceAlpha",
                             values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",
                             result: "hardAlpha",
                         }),
-                        (0, i.jsx)("feOffset", { dy: "8" }),
-                        (0, i.jsx)("feGaussianBlur", { stdDeviation: "8" }),
-                        (0, i.jsx)("feColorMatrix", { values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0" }),
-                        (0, i.jsx)("feBlend", { in2: "BackgroundImageFix", result: "effect1_dropShadow_605_72103" }),
-                        (0, i.jsx)("feBlend", {
+                        (0, n.jsx)("feOffset", { dy: "8" }),
+                        (0, n.jsx)("feGaussianBlur", { stdDeviation: "8" }),
+                        (0, n.jsx)("feColorMatrix", { values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0" }),
+                        (0, n.jsx)("feBlend", { in2: "BackgroundImageFix", result: "effect1_dropShadow_605_72103" }),
+                        (0, n.jsx)("feBlend", {
                             in: "SourceGraphic",
                             in2: "effect1_dropShadow_605_72103",
                             result: "shape",
@@ -72,7 +71,7 @@ function C(e) {
         ],
     });
 }
-let v = [
+let w = [
         { x: 0.5, y: 0.05 },
         { x: 0.95, y: 0.2 },
         { x: 1, y: 0.5 },
@@ -82,159 +81,159 @@ let v = [
         { x: 0, y: 0.5 },
         { x: 0.05, y: 0.2 },
     ],
-    O = v.length;
-function R(e, t, n) {
-    let i = e * t;
-    return e > 0.5 ? i - n : e < 0.5 ? i : i - n / 2;
+    D = w.length;
+function N(e, t, l) {
+    let n = e * t;
+    return e > 0.5 ? n - l : e < 0.5 ? n : n - l / 2;
 }
-let b = r.memo(function (e) {
+let O = a.memo(function (e) {
     let {
             wheelWidth: t,
-            wheelHeight: n,
-            itemWidth: s,
-            itemHeight: a,
-            showDeadZoneIndicator: o,
-            activeItem: l,
-            onItemSelect: u,
+            wheelHeight: l,
+            itemWidth: r,
+            itemHeight: s,
+            showDeadZoneIndicator: i,
+            activeItem: u,
+            onItemSelect: o,
             onItemAction: c,
             interactive: d = !0,
-            onClose: _,
-            children: f,
+            onClose: h,
+            children: x,
         } = e,
-        h = r.useRef(null),
-        p = r.useRef([]),
-        E = r.useRef(!1),
-        m = r.useRef(null),
-        [T, b] = r.useState(0),
-        [D, L] = r.useState({ x: 0, y: 0 }),
-        w = Math.abs(D.x) + Math.abs(D.y) > 0,
-        M = r.useMemo(() => A().chunk(f, O), [f]),
-        P = r.useCallback(
+        f = a.useRef(null),
+        y = a.useRef([]),
+        p = a.useRef(!1),
+        g = a.useRef(null),
+        [_, O] = a.useState(0),
+        [T, j] = a.useState({ x: 0, y: 0 }),
+        b = Math.abs(T.x) + Math.abs(T.y) > 0,
+        S = a.useMemo(() => v().chunk(x, D), [x]),
+        k = a.useCallback(
             (e, t) => {
-                null == p.current[T] ? (p.current[T] = []) : (p.current[T][t] = e);
+                null == y.current[_] ? (y.current[_] = []) : (y.current[_][t] = e);
             },
-            [T],
+            [_],
         ),
-        x = r.useCallback(
+        R = a.useCallback(
             (e, t) => {
-                (m.current = t), u(O * e + t);
+                (g.current = t), o(D * e + t);
             },
-            [u],
+            [o],
         ),
-        U = r.useCallback(() => {
-            (m.current = null), u(null);
-        }, [u]),
-        k = r.useCallback(
+        L = a.useCallback(() => {
+            (g.current = null), o(null);
+        }, [o]),
+        U = a.useCallback(
             (e) => {
-                U(), (E.current = e);
+                L(), (p.current = e);
             },
-            [U],
+            [L],
         ),
-        G = r.useCallback((e, t, n) => {
-            let i, r, s;
-            if (E.current) return void L({ x: 0, y: 0 });
-            let a = { x: e.x - t.x, y: e.y - t.y },
-                o = a.x < 0,
-                l = a.y < 0,
-                u =
-                    ((i = Math.abs(a.x)),
-                    (r = (180 / Math.PI) * Math.atan2(Math.abs(a.y), i)),
+        B = a.useCallback((e, t, l) => {
+            let n, a, r;
+            if (p.current) return void j({ x: 0, y: 0 });
+            let s = { x: e.x - t.x, y: e.y - t.y },
+                i = s.x < 0,
+                u = s.y < 0,
+                o =
+                    ((n = Math.abs(s.x)),
+                    (a = (180 / Math.PI) * Math.atan2(Math.abs(s.y), n)),
                     {
-                        x: Math.max((s = n / 2 - 28.8) * Math.cos((2 * Math.PI * r) / 360), 0),
-                        y: Math.max(s * Math.sin((2 * Math.PI * r) / 360), 0),
+                        x: Math.max((r = l / 2 - 28.8) * Math.cos((2 * Math.PI * a) / 360), 0),
+                        y: Math.max(r * Math.sin((2 * Math.PI * a) / 360), 0),
                     });
-            L({
-                x: (o ? Math.max(a.x, -u.x) : Math.min(a.x, u.x)) / 2,
-                y: (l ? Math.max(a.y, -u.y) : Math.min(a.y, u.y)) / 2,
+            j({
+                x: (i ? Math.max(s.x, -o.x) : Math.min(s.x, o.x)) / 2,
+                y: (u ? Math.max(s.y, -o.y) : Math.min(s.y, o.y)) / 2,
             });
         }, []),
-        F = r.useCallback(
+        P = a.useCallback(
             (e) => {
-                null != m.current && (e.preventDefault(), e.stopPropagation(), c?.(O * T + m.current));
+                null != g.current && (e.preventDefault(), e.stopPropagation(), c?.(D * _ + g.current));
             },
-            [c, T],
+            [c, _],
         ),
-        V = r.useMemo(
+        V = a.useMemo(
             () =>
-                (0, g.throttle)((e) => {
-                    var i;
-                    let r;
-                    if (null == h.current) return;
-                    let s = h.current.getBoundingClientRect(),
-                        a = { x: s.left + s.width / 2, y: s.top + s.height / 2 },
-                        o = { x: e.clientX, y: e.clientY };
-                    if ((G(o, a, Math.max(t, n)), E.current)) {
-                        null != l && U();
+                (0, A.throttle)((e) => {
+                    var n;
+                    let a;
+                    if (null == f.current) return;
+                    let r = f.current.getBoundingClientRect(),
+                        s = { x: r.left + r.width / 2, y: r.top + r.height / 2 },
+                        i = { x: e.clientX, y: e.clientY };
+                    if ((B(i, s, Math.max(t, l)), p.current)) {
+                        null != u && L();
                         return;
                     }
-                    let u =
-                        ((i = Math.max(t, n)),
-                        (r = Math.sqrt(Math.pow(a.x - o.x, 2) + Math.pow(a.y - o.y, 2))),
-                        { x: o.x + ((o.x - a.x) / r) * i, y: o.y + ((o.y - a.y) / r) * i });
-                    for (let e = 0; e < p.current[T].length; e++) {
-                        let t = p.current[T][e];
+                    let o =
+                        ((n = Math.max(t, l)),
+                        (a = Math.sqrt(Math.pow(s.x - i.x, 2) + Math.pow(s.y - i.y, 2))),
+                        { x: i.x + ((i.x - s.x) / a) * n, y: i.y + ((i.y - s.y) / a) * n });
+                    for (let e = 0; e < y.current[_].length; e++) {
+                        let t = y.current[_][e];
                         if (
                             null != t &&
-                            (function (e, t, n) {
-                                let i = { x: n.x, y: n.y },
-                                    r = { x: n.x + n.width, y: n.y },
-                                    s = { x: n.x, y: n.y + n.height },
-                                    a = { x: n.x + n.width, y: n.y + n.height };
-                                return S(e, t, i, r) || S(e, t, r, a) || S(e, t, a, s) || S(e, t, s, i);
-                            })(a, u, t.getBoundingClientRect())
+                            (function (e, t, l) {
+                                let n = { x: l.x, y: l.y },
+                                    a = { x: l.x + l.width, y: l.y },
+                                    r = { x: l.x, y: l.y + l.height },
+                                    s = { x: l.x + l.width, y: l.y + l.height };
+                                return I(e, t, n, a) || I(e, t, a, s) || I(e, t, s, r) || I(e, t, r, n);
+                            })(s, o, t.getBoundingClientRect())
                         )
-                            return void x(T, e);
+                            return void R(_, e);
                     }
-                    U();
+                    L();
                 }, 16),
-            [l, G, U, x, T, n, t],
+            [u, B, L, R, _, l, t],
         ),
-        B = r.useCallback(
+        Y = a.useCallback(
             (e) => {
                 if (!d) return;
-                let t = T + (e.deltaY > 0 ? 1 : -1);
+                let t = _ + (e.deltaY > 0 ? 1 : -1);
                 t >= 0 &&
-                    t < M.length &&
-                    (null != m.current && (M[t].length > m.current ? x(t, m.current) : U()), b(t));
+                    t < S.length &&
+                    (null != g.current && (S[t].length > g.current ? R(t, g.current) : L()), O(t));
             },
-            [d, T, M, x, U],
+            [d, _, S, R, L],
         ),
-        H = r.useMemo(
+        F = a.useMemo(
             () =>
-                M[T].map((e, r) => {
-                    let o = v[r];
-                    if (null == o) throw Error(`Too many items supplied ${f.length} expected max of ${v.length}`);
-                    let l = R(o.x, t, s),
-                        u = R(o.y, n, a);
-                    return (0, i.jsx)(
+                S[_].map((e, a) => {
+                    let i = w[a];
+                    if (null == i) throw Error(`Too many items supplied ${x.length} expected max of ${w.length}`);
+                    let u = N(i.x, t, r),
+                        o = N(i.y, l, s);
+                    return (0, n.jsx)(
                         "div",
                         {
-                            ref: (e) => P(e, r),
-                            className: y.Tj,
-                            style: { left: l, top: u, width: s, height: a },
+                            ref: (e) => k(e, a),
+                            className: E.Tj,
+                            style: { left: u, top: o, width: r, height: s },
                             children: e,
                         },
-                        r,
+                        a,
                     );
                 }),
-            [M, T, t, s, n, a, f.length, P],
+            [S, _, t, r, l, s, x.length, k],
         );
-    return (0, i.jsx)(I.D, {
-        className: y.Pw,
+    return (0, n.jsx)(m.D, {
+        className: E.Pw,
         onMouseMove: V,
-        onWheel: B,
-        onClick: F,
-        children: (0, i.jsxs)("div", {
-            ref: h,
-            className: y._$,
-            style: { width: t, height: n },
+        onWheel: Y,
+        onClick: P,
+        children: (0, n.jsxs)("div", {
+            ref: f,
+            className: E._$,
+            style: { width: t, height: l },
             children: [
-                (0, i.jsxs)("svg", {
-                    className: y.cA,
+                (0, n.jsxs)("svg", {
+                    className: E.cA,
                     viewBox: "0 0 288 288",
                     xmlns: "http://www.w3.org/2000/svg",
                     children: [
-                        (0, i.jsxs)("filter", {
+                        (0, n.jsxs)("filter", {
                             id: "soundboard-wheel-background-shadow",
                             x: "0",
                             y: "0",
@@ -243,53 +242,53 @@ let b = r.memo(function (e) {
                             filterUnits: "userSpaceOnUse",
                             colorInterpolationFilters: "sRGB",
                             children: [
-                                (0, i.jsx)("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
-                                (0, i.jsx)("feColorMatrix", {
+                                (0, n.jsx)("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
+                                (0, n.jsx)("feColorMatrix", {
                                     in: "SourceAlpha",
                                     values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",
                                     result: "hardAlpha",
                                 }),
-                                (0, i.jsx)("feOffset", { dy: "8" }),
-                                (0, i.jsx)("feGaussianBlur", { stdDeviation: "8" }),
-                                (0, i.jsx)("feColorMatrix", { values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0" }),
-                                (0, i.jsx)("feBlend", {
+                                (0, n.jsx)("feOffset", { dy: "8" }),
+                                (0, n.jsx)("feGaussianBlur", { stdDeviation: "8" }),
+                                (0, n.jsx)("feColorMatrix", { values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0" }),
+                                (0, n.jsx)("feBlend", {
                                     in2: "BackgroundImageFix",
                                     result: "effect1_dropShadow_489_60382",
                                 }),
-                                (0, i.jsx)("feBlend", {
+                                (0, n.jsx)("feBlend", {
                                     in: "SourceGraphic",
                                     in2: "effect1_dropShadow_489_60382",
                                     result: "shape",
                                 }),
                             ],
                         }),
-                        (0, i.jsxs)("g", {
+                        (0, n.jsxs)("g", {
                             filter: "url(#soundboard-wheel-background-shadow)",
                             children: [
-                                (0, i.jsx)("circle", {
-                                    className: y.cA,
+                                (0, n.jsx)("circle", {
+                                    className: E.cA,
                                     cx: "144",
                                     cy: "144",
                                     r: "103.68",
                                     strokeWidth: "40.32",
                                 }),
-                                o &&
-                                    (0, i.jsx)("circle", {
-                                        className: y.u1,
-                                        onMouseEnter: () => k(!0),
-                                        onMouseLeave: () => k(!1),
+                                i &&
+                                    (0, n.jsx)("circle", {
+                                        className: E.u1,
+                                        onMouseEnter: () => U(!0),
+                                        onMouseLeave: () => U(!1),
                                         cx: 144,
                                         cy: 144,
                                         r: 28.8,
                                     }),
-                                w && (0, i.jsx)("circle", { className: y.JV, cx: 144 + D.x, cy: 144 + D.y, r: 28.8 }),
+                                b && (0, n.jsx)("circle", { className: E.JV, cx: 144 + T.x, cy: 144 + T.y, r: 28.8 }),
                             ],
                         }),
-                        o &&
-                            (0, i.jsx)("circle", {
-                                className: y.u1,
-                                onMouseEnter: () => k(!0),
-                                onMouseLeave: () => k(!1),
+                        i &&
+                            (0, n.jsx)("circle", {
+                                className: E.u1,
+                                onMouseEnter: () => U(!0),
+                                onMouseLeave: () => U(!1),
                                 cx: 144,
                                 cy: 144,
                                 r: 28.8,
@@ -297,131 +296,131 @@ let b = r.memo(function (e) {
                             }),
                     ],
                 }),
-                (0, i.jsxs)("div", {
-                    className: y.gx,
+                (0, n.jsxs)("div", {
+                    className: E.gx,
                     children: [
-                        o &&
-                            (0, i.jsx)(I.D, {
-                                className: y.$2,
-                                onClick: _,
-                                children: (0, i.jsx)(C, { className: y.$2 }),
+                        i &&
+                            (0, n.jsx)(m.D, {
+                                className: E.$2,
+                                onClick: h,
+                                children: (0, n.jsx)(C, { className: E.$2 }),
                             }),
-                        d && M.length > 1
-                            ? (0, i.jsx)("div", { className: y.YB, children: N.intl.string(N.t["Xy+S02"]) })
+                        d && S.length > 1
+                            ? (0, n.jsx)("div", { className: E.YB, children: M.intl.string(M.t["Xy+S02"]) })
                             : null,
                     ],
                 }),
-                H,
+                F,
             ],
         }),
     });
 });
-var D = n(805945);
-n(980504);
-var L = n(1986);
-function w(e) {
+var T = l(805945);
+l(980504);
+var j = l(1986);
+function b(e) {
     let {
             guildId: t,
-            channel: n,
-            width: g,
-            height: A,
-            keepOpen: I,
-            interactive: T = !0,
-            analyticsSource: S,
-            onClose: N,
+            channel: l,
+            width: A,
+            height: v,
+            keepOpen: m,
+            interactive: _ = !0,
+            analyticsSource: I,
+            onClose: M,
         } = e,
-        y = (function (e) {
-            let [t, n] = (0, a.yK)([h.A], () => [h.A.getSounds(), h.A.getFavorites()]);
-            return r.useMemo(() => {
-                let i = [],
-                    r = [...e, "0"],
-                    s = (e, r) => {
-                        for (let s of t.get(e)?.sort((e, t) => _.default.compare(e.soundId, t.soundId)) ?? []) {
-                            let e = n.has(s.soundId);
-                            ((e && r) || (!e && !r)) && s.available && i.push(s);
+        E = (function (e) {
+            let [t, l] = (0, s.yK)([f.A], () => [f.A.getSounds(), f.A.getFavorites()]);
+            return a.useMemo(() => {
+                let n = [],
+                    a = [...e, "0"],
+                    r = (e, a) => {
+                        for (let r of t.get(e)?.sort((e, t) => h.default.compare(e.soundId, t.soundId)) ?? []) {
+                            let e = l.has(r.soundId);
+                            ((e && a) || (!e && !a)) && r.available && n.push(r);
                         }
                     };
-                return r.forEach((e) => s(e, !0)), r.forEach((e) => s(e, !1)), i;
-            }, [t, n, e]);
-        })((0, m.Y)(n, !0)),
-        C = (0, E.T)(),
-        v = r.useRef(null),
-        [O, R] = r.useState(void 0),
-        w = (0, a.bG)([d.A], () => d.A.getMediaSessionId()),
-        { analyticsLocations: M } = (0, l.Ay)(o.A.SOUNDBOARD_WHEEL),
-        P = r.useCallback(
+                return a.forEach((e) => r(e, !0)), a.forEach((e) => r(e, !1)), n;
+            }, [t, l, e]);
+        })((0, g.Y)(l, !0)),
+        C = (0, p.T)(),
+        w = a.useRef(null),
+        [D, N] = a.useState(void 0),
+        b = (0, s.bG)([d.A], () => d.A.getMediaSessionId()),
+        { analyticsLocations: S } = (0, u.Ay)(i.A.SOUNDBOARD_WHEEL),
+        k = a.useCallback(
             (e) => {
-                (0, p.Ak)(e, n.id, M), N();
+                (0, y.Ak)(e, l.id, S), M();
             },
-            [M, n.id, N],
+            [S, l.id, M],
         );
-    r.useEffect(() => {
-        f.E7(), c.bW.loadIfNecessary();
+    a.useEffect(() => {
+        x.E7(), c.bW.loadIfNecessary();
     }, []),
-        r.useEffect(() => {
-            0 === y.length && 0 === C.length && N();
-        }, [y.length, C, N]),
-        r.useEffect(
+        a.useEffect(() => {
+            0 === E.length && 0 === C.length && M();
+        }, [E.length, C, M]),
+        a.useEffect(
             () => () => {
-                let e = v.current;
-                I || null == e || P(e);
+                let e = w.current;
+                m || null == e || k(e);
             },
-            [I, P],
+            [m, k],
         ),
-        (0, u.A)(
+        (0, o.A)(
             {
-                type: s.ImpressionTypes.POPOUT,
-                name: s.ImpressionNames.SOUNDBOARD_POPOUT,
-                properties: { source: S, guild_id: t, media_session_id: w },
+                type: r.ImpressionTypes.POPOUT,
+                name: r.ImpressionNames.SOUNDBOARD_POPOUT,
+                properties: { source: I, guild_id: t, media_session_id: b },
             },
-            { disableTrack: !T },
+            { disableTrack: !_ },
         );
-    let x = r.useCallback((e) => {
-            (v.current = e), R(e?.soundId);
+    let R = a.useCallback((e) => {
+            (w.current = e), N(e?.soundId);
         }, []),
-        U = r.useCallback(
+        L = a.useCallback(
             (e) => {
-                if (null == e) return void x(null);
-                let t = y[e];
-                null != t && x(t);
+                if (null == e) return void R(null);
+                let t = E[e];
+                null != t && R(t);
             },
-            [x, y],
+            [R, E],
         ),
-        k = r.useCallback(
+        U = a.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = y[e];
-                null != t && P(t);
+                let t = E[e];
+                null != t && k(t);
             },
-            [y, P],
+            [E, k],
         ),
-        G = r.useMemo(
+        B = a.useMemo(
             () =>
-                y.map((e) =>
-                    (0, i.jsx)(
-                        D.Ay,
-                        { interactive: T, className: L.a, sound: e, focused: O === e.soundId, channel: n },
+                E.map((e) =>
+                    (0, n.jsx)(
+                        T.Ay,
+                        { interactive: _, className: j.a, sound: e, focused: D === e.soundId, channel: l },
                         e.soundId,
                     ),
                 ),
-            [O, n, T, y],
+            [D, l, _, E],
         );
-    return 0 === y.length
+    return 0 === E.length
         ? null
-        : (0, i.jsx)(l.f5, {
-              value: M,
-              children: (0, i.jsx)(b, {
-                  wheelWidth: g,
-                  wheelHeight: A,
+        : (0, n.jsx)(u.f5, {
+              value: S,
+              children: (0, n.jsx)(O, {
+                  wheelWidth: A,
+                  wheelHeight: v,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !I,
-                  activeItem: O,
-                  onItemSelect: U,
-                  onItemAction: k,
-                  onClose: N,
-                  interactive: T,
-                  children: G,
+                  showDeadZoneIndicator: !m,
+                  activeItem: D,
+                  onItemSelect: L,
+                  onItemAction: U,
+                  onClose: M,
+                  interactive: _,
+                  children: B,
               }),
           });
 }

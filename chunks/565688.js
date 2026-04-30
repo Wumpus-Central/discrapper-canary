@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { m: () => r, w: () => s });
-let i = (0, n(945810).mj)({
+n.d(t, { m: () => i, w: () => l });
+let r = (0, n(945810).mj)({
     name: "2025-12-social-layer-storefront-activity-card-entrypoints-user-experiment",
     kind: "user",
     defaultConfig: { voiceChannelActivitiesEnabled: !1, guildActivitiesEnabled: !1 },
@@ -11,11 +10,11 @@ let i = (0, n(945810).mj)({
         3: { voiceChannelActivitiesEnabled: !0, guildActivitiesEnabled: !0 },
     },
 });
-function r(e) {
+function i(e) {
     let { location: t } = e;
-    return i.useConfig({ location: t }).voiceChannelActivitiesEnabled;
+    return r.useConfig({ location: t }).voiceChannelActivitiesEnabled;
 }
-function s(e) {
+function l(e) {
     let { location: t } = e;
-    return i.useConfig({ location: t }).guildActivitiesEnabled;
+    return r.useConfig({ location: t }).guildActivitiesEnabled;
 }

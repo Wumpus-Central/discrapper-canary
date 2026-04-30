@@ -1,71 +1,70 @@
-"use strict";
 n.d(t, {
-    Bu: () => T,
-    D1: () => A,
-    Ii: () => k,
-    Kd: () => I,
-    Km: () => v,
-    ME: () => N,
-    Mc: () => O,
-    QY: () => h,
-    Q_: () => f,
+    Bu: () => p,
+    D1: () => N,
+    Ii: () => x,
+    Kd: () => f,
+    Km: () => g,
+    ME: () => O,
+    Mc: () => L,
+    QY: () => A,
+    Q_: () => u,
     SA: () => b,
-    SD: () => y,
-    Sq: () => x,
-    Uh: () => L,
-    a5: () => R,
-    fs: () => E,
-    hv: () => w,
-    iD: () => p,
-    kq: () => _,
-    n4: () => G,
-    pA: () => m,
-    qC: () => S,
-    sd: () => g,
-    tb: () => M,
-    vK: () => U,
-    wZ: () => C,
+    SD: () => C,
+    Sq: () => G,
+    Uh: () => P,
+    a5: () => D,
+    fs: () => T,
+    hv: () => U,
+    iD: () => I,
+    kq: () => E,
+    n4: () => V,
+    pA: () => h,
+    qC: () => m,
+    sd: () => S,
+    tb: () => v,
+    vK: () => w,
+    wZ: () => R,
 }),
     n(321073);
 var i,
+    a,
     r,
     s,
-    a,
-    o = n(812729),
-    l = n.n(o),
-    u = n(240248),
+    l = n(812729),
+    o = n.n(l),
+    d = n(240248),
     c = n(652215),
-    d = n(375708);
-let _ = 100,
-    f = 50,
-    h = 100,
-    p = 15,
-    E = 50,
-    m = 10,
-    g = 100,
-    A = 4,
-    I = 1,
-    T = 13;
-var S = (((i = {})[(i.CUSTOMIZE = 0)] = "CUSTOMIZE"), (i[(i.BROWSE = 1)] = "BROWSE"), i),
-    N = (((r = {})[(r.MULTIPLE_CHOICE = 0)] = "MULTIPLE_CHOICE"), (r[(r.DROPDOWN = 1)] = "DROPDOWN"), r),
-    y =
-        (((s = {})[(s.ONBOARDING_DEFAULT = 0)] = "ONBOARDING_DEFAULT"),
-        (s[(s.ONBOARDING_ADVANCED = 1)] = "ONBOARDING_ADVANCED"),
-        s),
+    _ = n(985018);
+let E = 100,
+    u = 50,
+    A = 100,
+    I = 15,
+    T = 50,
+    h = 10,
+    S = 100,
+    N = 4,
+    f = 1,
+    p = 13;
+var m = (((i = {})[(i.CUSTOMIZE = 0)] = "CUSTOMIZE"), (i[(i.BROWSE = 1)] = "BROWSE"), i),
+    O = (((a = {})[(a.MULTIPLE_CHOICE = 0)] = "MULTIPLE_CHOICE"), (a[(a.DROPDOWN = 1)] = "DROPDOWN"), a),
     C =
-        (((a = {})[(a.APPLICATION = 0)] = "APPLICATION"),
-        (a[(a.PROVIDER_CONNECTED_ACCOUNT = 1)] = "PROVIDER_CONNECTED_ACCOUNT"),
-        a);
-function v(e) {
+        (((r = {})[(r.ONBOARDING_DEFAULT = 0)] = "ONBOARDING_DEFAULT"),
+        (r[(r.ONBOARDING_ADVANCED = 1)] = "ONBOARDING_ADVANCED"),
+        r),
+    R =
+        (((s = {})[(s.APPLICATION = 0)] = "APPLICATION"),
+        (s[(s.PROVIDER_CONNECTED_ACCOUNT = 1)] = "PROVIDER_CONNECTED_ACCOUNT"),
+        s);
+function g(e) {
     if (e.options.length > 0) return !1;
-    let { id: t, ...n } = O(),
-        { id: i, ...r } = e;
-    return l()(n, r);
+    let { id: t, ...n } = L(),
+        { id: i, ...a } = e;
+    return o()(n, a);
 }
-function O() {
+function L() {
     return {
         id: String(Date.now()),
-        title: d.intl.string(d.t.vY91C9),
+        title: _.intl.string(_.t.vY91C9),
         options: [],
         singleSelect: !1,
         required: !1,
@@ -73,7 +72,7 @@ function O() {
         type: 0,
     };
 }
-function R(e) {
+function D(e) {
     return { id: String(Date.now()), title: "", options: [], singleSelect: !1, required: !1, inOnboarding: e, type: 0 };
 }
 function b(e) {
@@ -98,7 +97,7 @@ function b(e) {
         type: e.type,
     };
 }
-function D(e) {
+function M(e) {
     return {
         id: e.id,
         options: e.options.map((e) => ({
@@ -117,9 +116,9 @@ function D(e) {
         type: e.type,
     };
 }
-function L(e) {
+function P(e) {
     return {
-        prompts: e.prompts.map(D),
+        prompts: e.prompts.map(M),
         defaultChannelIds: e.default_channel_ids,
         responses: e.responses ?? [],
         mode: e.mode,
@@ -130,10 +129,10 @@ function L(e) {
         connections: e.connections ?? [],
     };
 }
-function w(e) {
+function U(e) {
     return null == e || (null == e.id && null == e.name);
 }
-let M = new Set([
+let v = new Set([
         c.fg2.PLAYSTATION_STAGING,
         c.fg2.CONTACTS,
         c.fg2.DOMAIN,
@@ -143,11 +142,11 @@ let M = new Set([
         c.fg2.LEAGUE_OF_LEGENDS,
         c.fg2.SKYPE,
     ]),
-    P = Object.values(c.fg2).filter((e) => !M.has(e));
-function x(e) {
+    y = Object.values(c.fg2).filter((e) => !v.has(e));
+function G(e) {
     return 0 === e.connection_type ? `app:${e.application_id}` : `provider:${e.provider_id}`;
 }
-function U(e) {
+function w(e) {
     let [t, n] = e.split(":");
     return "app" === t && void 0 !== n && "" !== n
         ? { type: 0, applicationId: n }
@@ -155,33 +154,33 @@ function U(e) {
           ? { type: 1, providerId: n }
           : null;
 }
-function k(e) {
+function x(e) {
     let t = [];
     return (
         0 !== e.connection_type && 1 !== e.connection_type
             ? t.push("Invalid connection type")
             : (0 === e.connection_type
-                  ? ((0, u.uJ)(e.application_id) && t.push("Application ID is required for application connections"),
-                    (0, u.uJ)(e.provider_id) || t.push("Platform ID not allowed for application connections"))
+                  ? ((0, d.uJ)(e.application_id) && t.push("Application ID is required for application connections"),
+                    (0, d.uJ)(e.provider_id) || t.push("Platform ID not allowed for application connections"))
                   : 1 === e.connection_type &&
-                    ((0, u.uJ)(e.provider_id)
+                    ((0, d.uJ)(e.provider_id)
                         ? t.push("Platform ID is required for platform connections")
-                        : P.includes(e.provider_id) || t.push("Invalid platform ID"),
-                    (0, u.uJ)(e.application_id) || t.push("Application ID not allowed for platform connections")),
+                        : y.includes(e.provider_id) || t.push("Invalid platform ID"),
+                    (0, d.uJ)(e.application_id) || t.push("Application ID not allowed for platform connections")),
               null != e.description &&
-                  e.description.length > g &&
-                  t.push(`Description must be ${g} characters or less`)),
+                  e.description.length > S &&
+                  t.push(`Description must be ${S} characters or less`)),
         t
     );
 }
-function G(e) {
+function V(e) {
     let t = [],
         n = new Set();
-    for (let [i, r] of e.entries()) {
-        let e = k(r);
+    for (let [i, a] of e.entries()) {
+        let e = x(a);
         t.push(...e.map((e) => `Connection ${i + 1}: ${e}`));
-        let s = x(r);
-        n.has(s) && t.push("Duplicate connection configuration"), n.add(s);
+        let r = G(a);
+        n.has(r) && t.push("Duplicate connection configuration"), n.add(r);
     }
     return t;
 }

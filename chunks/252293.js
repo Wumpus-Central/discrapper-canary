@@ -1,29 +1,28 @@
-"use strict";
 n.d(t, { A: () => d });
-var i = n(64700),
+var o = n(64700),
     r = n(635358),
-    s = n(830382),
-    a = n(845584),
-    o = n(136857),
-    l = n(354328),
-    u = n(79387),
-    c = n(67480);
+    a = n(830382),
+    i = n(845584),
+    l = n(136857),
+    u = n(354328),
+    s = n(79387),
+    _ = n(67480);
 function d(e) {
     let {
             applicationId: t,
             skuIDs: n,
             currentPaymentSourceId: d,
-            isGift: _,
-            excludeSKUPurchasePreviews: f = !1,
-            loadId: h,
-            currency: p,
+            isGift: C,
+            excludeSKUPurchasePreviews: E = !1,
+            loadId: p,
+            currency: h,
         } = e,
-        E = (0, l.A)("shop_include_unpublished"),
-        { previewErrorsById: m, setErrorById: g } = (function () {
-            let [e, t] = i.useState({});
+        c = (0, u.A)("shop_include_unpublished"),
+        { previewErrorsById: A, setErrorById: y } = (function () {
+            let [e, t] = o.useState({});
             return {
                 previewErrorsById: e,
-                setErrorById: i.useCallback(
+                setErrorById: o.useCallback(
                     (e, n) => {
                         t((t) => ({ ...t, [e]: n }));
                     },
@@ -31,27 +30,27 @@ function d(e) {
                 ),
             };
         })();
-    i.useEffect(() => {
-        for (let e of n) c.A.isFetching(e) || null != c.A.get(e) || (0, s.EX)(t, e, r.g.VARIANTS_GROUP, E);
-    }, [t, n, E]);
-    let A = i.useRef(!1);
+    o.useEffect(() => {
+        for (let e of n) _.A.isFetching(e) || null != _.A.get(e) || (0, a.EX)(t, e, r.g.VARIANTS_GROUP, c);
+    }, [t, n, c]);
+    let I = o.useRef(!1);
     return (
-        i.useEffect(() => {
-            if (!f) {
+        o.useEffect(() => {
+            if (!E) {
                 for (let e of n)
-                    if (!u.A.isFetchingSKU(e)) {
-                        let n = A.current ? d : null;
-                        (0, s.QX)(t, e, n, { isGift: _, loadId: h, currency: p }).catch((t) => {
-                            t instanceof a.Ey &&
-                                (t.code === o.tG.BILLING_BUNDLE_ALREADY_PURCHASED ||
-                                    t.code === o.tG.BILLING_BUNDLE_PARTIALLY_OWNED ||
-                                    t.code === o.tG.INVALID_BILLING_ADDRESS) &&
-                                g(e, t);
+                    if (!s.A.isFetchingSKU(e)) {
+                        let n = I.current ? d : null;
+                        (0, a.QX)(t, e, n, { isGift: C, loadId: p, currency: h }).catch((t) => {
+                            t instanceof i.Ey &&
+                                (t.code === l.tG.BILLING_BUNDLE_ALREADY_PURCHASED ||
+                                    t.code === l.tG.BILLING_BUNDLE_PARTIALLY_OWNED ||
+                                    t.code === l.tG.INVALID_BILLING_ADDRESS) &&
+                                y(e, t);
                         });
                     }
-                A.current = !0;
+                I.current = !0;
             }
-        }, [t, n, d, _, g, f, h, p]),
-        { previewErrorsById: m }
+        }, [t, n, d, C, y, E, p, h]),
+        { previewErrorsById: A }
     );
 }

@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { cx: () => o, iJ: () => a, kf: () => l });
+n.d(t, { cx: () => l, iJ: () => s, kf: () => o });
 var i = n(877133),
-    r = n(287809),
-    s = n(652215);
-function a(e) {
-    return void 0 !== e && e.type !== s.rbe.DM;
-}
-function o(e) {
-    return r.default.getUser(e)?.hasFlag(s.nhx.SPAMMER) ?? !1;
+    a = n(287809),
+    r = n(652215);
+function s(e) {
+    return void 0 !== e && e.type !== r.rbe.DM;
 }
 function l(e) {
-    return o(e.author.id) && !(0, i.ER)(e);
+    return a.default.getUser(e)?.hasFlag(r.nhx.SPAMMER) ?? !1;
+}
+function o(e) {
+    return l(e.author.id) && !(0, i.ER)(e);
 }

@@ -1,21 +1,20 @@
-"use strict";
 n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(811893),
-    o = n(204651),
-    l = n(375708),
-    u = n(541831);
+var a = n(503698),
+    r = n.n(a),
+    s = n(811893),
+    l = n(709562),
+    o = n(985018),
+    d = n(541831);
 function c(e) {
-    let { popoutOpen: t, onClosePopout: n, onOpenPopout: r, ...c } = e,
-        d = t ? l.intl.string(l.t["7Dwcnj"]) : l.intl.string(l.t.JzWezz);
-    return (0, i.jsx)(o.A, {
-        label: d,
-        onClick: t ? n : r,
-        iconComponent: a.t,
-        iconClassName: s()({ [u.r]: t }),
+    let { popoutOpen: t, onClosePopout: n, onOpenPopout: a, ...c } = e,
+        _ = t ? o.intl.string(o.t["7Dwcnj"]) : o.intl.string(o.t.JzWezz);
+    return (0, i.jsx)(l.A, {
+        label: _,
+        onClick: t ? n : a,
+        iconComponent: s.t,
+        iconClassName: r()({ [d.r]: t }),
         ...c,
     });
 }

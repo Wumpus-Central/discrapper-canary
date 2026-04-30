@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(17928),
-    r = n(517164),
-    s = n(99753),
-    a = n(424994);
-function o(e) {
-    let { activity: t, user: n } = e,
-        o = (0, i.bG)([s.A], () => s.A.getMatchingInboxEntry({ activity: t, userId: n.id, feedId: a.X1.GLOBAL_FEED }), [
-            t,
-            n.id,
+e.d(n, { A: () => s });
+var i = e(17928),
+    l = e(517164),
+    a = e(99753),
+    r = e(424994);
+function s(t) {
+    let { activity: n, user: e } = t,
+        s = (0, i.bG)([a.A], () => a.A.getMatchingInboxEntry({ activity: n, userId: e.id, feedId: r.X1.GLOBAL_FEED }), [
+            n,
+            e.id,
         ]),
-        l = (0, i.bG)([r.A], () => r.A.getMatchingOutboxEntry({ activity: t, userId: n.id }), [t, n.id]);
-    return o ?? l;
+        o = (0, i.bG)([l.A], () => l.A.getMatchingOutboxEntry({ activity: n, userId: e.id }), [n, e.id]);
+    return s ?? o;
 }

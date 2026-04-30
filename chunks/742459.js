@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { A: () => u }), n(321073);
-var i = n(284009),
-    r = n.n(i),
-    s = n(656470),
-    a = n.n(s),
-    o = n(731854);
-let l = [o.fS.WINDOW, o.fS.SCREEN];
-function u(e, t, n) {
+s.d(t, { A: () => d }), s(321073);
+var i = s(284009),
+    p = s.n(i),
+    r = s(656470),
+    u = s.n(r),
+    h = s(731854);
+let n = [h.fS.WINDOW, h.fS.SCREEN];
+function d(e, t, s) {
     let i = window.DiscordNative;
-    r()(null != i, "Can't get desktop sources outside of native app"),
-        (t = t?.filter((e) => l.includes(e)) ?? l),
-        (n = n ?? { width: 150, height: 150 });
-    let s = [];
+    p()(null != i, "Can't get desktop sources outside of native app"),
+        (t = t?.filter((e) => n.includes(e)) ?? n),
+        (s = s ?? { width: 150, height: 150 });
+    let r = [];
     return (
-        t.includes(o.fS.SCREEN) &&
-            e.supports(o.O5.SCREEN_PREVIEWS) &&
-            (s.push(e.getScreenPreviews(n.width, n.height)), (t = t.filter((e) => e !== o.fS.SCREEN))),
-        t.includes(o.fS.WINDOW) &&
-            e.supports(o.O5.WINDOW_PREVIEWS) &&
-            (s.push(e.getWindowPreviews(n.width, n.height)), (t = t.filter((e) => e !== o.fS.WINDOW))),
-        0 !== t.length && s.push(i.desktopCapture.getDesktopCaptureSources({ types: t, thumbnailSize: n })),
-        Promise.all(s).then((e) => a()(e))
+        t.includes(h.fS.SCREEN) &&
+            e.supports(h.O5.SCREEN_PREVIEWS) &&
+            (r.push(e.getScreenPreviews(s.width, s.height)), (t = t.filter((e) => e !== h.fS.SCREEN))),
+        t.includes(h.fS.WINDOW) &&
+            e.supports(h.O5.WINDOW_PREVIEWS) &&
+            (r.push(e.getWindowPreviews(s.width, s.height)), (t = t.filter((e) => e !== h.fS.WINDOW))),
+        0 !== t.length && r.push(i.desktopCapture.getDesktopCaptureSources({ types: t, thumbnailSize: s })),
+        Promise.all(r).then((e) => u()(e))
     );
 }

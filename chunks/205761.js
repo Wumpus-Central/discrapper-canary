@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { A: () => N, D: () => p }), n(321073);
+n.d(t, { A: () => O, D: () => I }), n(321073);
 var i = n(735438),
-    r = n.n(i),
-    s = n(17928),
-    a = n(228366),
-    o = n(283047),
-    l = n(617617),
-    u = n(734057),
+    a = n.n(i),
+    r = n(17928),
+    s = n(228366),
+    l = n(283047),
+    o = n(617617),
+    d = n(734057),
     c = n(71393),
-    d = n(309010),
-    _ = n(967198),
-    f = n(652215),
-    h = n(355097);
-let p = 100,
-    E = new o.A({
+    _ = n(309010),
+    E = n(967198),
+    u = n(652215),
+    A = n(355097);
+let I = 100,
+    T = new l.A({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
@@ -30,84 +29,84 @@ let p = 100,
                 t
             );
         },
-        lookupKey: (e) => c.A.getGuild(e) ?? u.A.getChannel(e) ?? u.A.getChannel(u.A.getDMFromUserId(e)),
+        lookupKey: (e) => c.A.getGuild(e) ?? d.A.getChannel(e) ?? d.A.getChannel(d.A.getDMFromUserId(e)),
         afterCompute: () => {},
-        numFrequentlyItems: p,
+        numFrequentlyItems: I,
         maxSamples: 10,
     }),
-    m = null,
-    g = null;
-function A(e) {
+    h = null,
+    S = null;
+function N(e) {
     let { guildId: t, channelId: n } = e,
         i = !1;
     return (
-        n !== m &&
-            ((m = n ?? null),
+        n !== h &&
+            ((h = n ?? null),
             null != n &&
-                f.Ut1.test(n) &&
-                ((i = !0), E.track(n), T.pendingUsages.push({ key: n, timestamp: Date.now() }))),
-        t !== g &&
-            ((g = t ?? null),
+                u.Ut1.test(n) &&
+                ((i = !0), T.track(n), p.pendingUsages.push({ key: n, timestamp: Date.now() }))),
+        t !== S &&
+            ((S = t ?? null),
             null != t &&
-                f.Ut1.test(t) &&
-                ((i = !0), E.track(t), T.pendingUsages.push({ key: t, timestamp: Date.now() }))),
+                u.Ut1.test(t) &&
+                ((i = !0), T.track(t), p.pendingUsages.push({ key: t, timestamp: Date.now() }))),
         i
     );
 }
-function I() {
-    let e = l.A.frecencyWithoutFetchingLatest.guildAndChannelFrecency?.guildAndChannels;
+function f() {
+    let e = o.A.frecencyWithoutFetchingLatest.guildAndChannelFrecency?.guildAndChannels;
     if (null == e) return !1;
-    E.overwriteHistory(
-        r().mapValues(e, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
-        T.pendingUsages,
+    T.overwriteHistory(
+        a().mapValues(e, (e) => ({ ...e, recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        p.pendingUsages,
     );
 }
-let T = { pendingUsages: [] };
-class S extends s.Ay.PersistedStore {
+let p = { pendingUsages: [] };
+class m extends r.Ay.PersistedStore {
     static displayName = "FrecencyStore";
     static persistKey = "FrecencyStore";
     initialize(e) {
-        this.waitFor(u.A, c.A, d.A, _.A, l.A),
-            null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && f.Ut1.test(e.key))), (T = e)),
-            this.syncWith([l.A], I);
+        this.waitFor(d.A, c.A, _.A, E.A, o.A),
+            null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && u.Ut1.test(e.key))), (p = e)),
+            this.syncWith([o.A], f);
     }
     getState() {
-        return T;
+        return p;
     }
     hasPendingUsage() {
-        return T.pendingUsages.length > 0;
+        return p.pendingUsages.length > 0;
     }
     get frecencyWithoutFetchingLatest() {
-        return E;
+        return T;
     }
     getFrequentlyWithoutFetchingLatest() {
-        return E.frequently;
+        return T.frequently;
     }
     getScoreWithoutFetchingLatest(e) {
-        return E.getFrecency(e) ?? 0;
+        return T.getFrecency(e) ?? 0;
     }
     getScoreForDMWithoutFetchingLatest(e) {
-        let t = u.A.getDMFromUserId(e);
+        let t = d.A.getDMFromUserId(e);
         return null != t ? this.getScoreWithoutFetchingLatest(t) : 0;
     }
     getMaxScore() {
-        return 10 * p;
+        return 10 * I;
     }
     getBonusScore() {
         return 100;
     }
     getVersion() {
-        return E.version;
+        return T.version;
     }
 }
-let N = new S(a.h, {
-    CHANNEL_SELECT: A,
-    VOICE_CHANNEL_SELECT: A,
+let O = new m(s.h, {
+    CHANNEL_SELECT: N,
+    VOICE_CHANNEL_SELECT: N,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
         let {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        return t === h.oD.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((T.pendingUsages = []), !0);
+        return t === A.oD.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((p.pendingUsages = []), !0);
     },
 });

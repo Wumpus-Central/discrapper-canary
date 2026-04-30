@@ -1,40 +1,39 @@
-"use strict";
-var i,
-    r,
-    s,
-    a = n(593858),
-    o = n(257943),
-    l = n(860511),
-    u = n(339626),
-    c = n(598349),
-    d = n(210140),
-    _ = n(324988),
-    f = n(406208),
-    h = n(706938),
-    p = n(693655),
-    E = n(485155),
-    m = n(524152),
-    g = n(42756),
-    A = n(458680),
-    I = n(380744),
-    T = n(753891),
-    S = n(883972),
-    N = S.enforce,
-    y = S.get,
-    C = l.Int8Array,
-    v = C && C.prototype,
-    O = l.Uint8ClampedArray,
-    R = O && O.prototype,
-    b = C && g(C),
-    D = v && g(v),
-    L = Object.prototype,
-    w = l.TypeError,
-    M = I("toStringTag"),
-    P = T("TYPED_ARRAY_TAG"),
-    x = "TypedArrayConstructor",
-    U = a && !!A && "Opera" !== _(l.opera),
-    k = !1,
-    G = {
+var n,
+    o,
+    a,
+    i = e(593858),
+    p = e(257943),
+    u = e(860511),
+    y = e(339626),
+    f = e(598349),
+    c = e(210140),
+    s = e(324988),
+    d = e(406208),
+    v = e(706938),
+    A = e(693655),
+    h = e(485155),
+    g = e(524152),
+    T = e(42756),
+    w = e(458680),
+    x = e(380744),
+    l = e(753891),
+    _ = e(883972),
+    I = _.enforce,
+    b = _.get,
+    E = u.Int8Array,
+    O = E && E.prototype,
+    R = u.Uint8ClampedArray,
+    C = R && R.prototype,
+    U = E && T(E),
+    j = O && T(O),
+    m = Object.prototype,
+    M = u.TypeError,
+    P = x("toStringTag"),
+    S = l("TYPED_ARRAY_TAG"),
+    B = "TypedArrayConstructor",
+    F = i && !!w && "Opera" !== s(u.opera),
+    V = !1,
+    L = {
         Int8Array: 1,
         Uint8Array: 1,
         Uint8ClampedArray: 1,
@@ -45,94 +44,94 @@ var i,
         Float32Array: 4,
         Float64Array: 8,
     },
-    F = { BigInt64Array: 8, BigUint64Array: 8 },
-    V = function (e) {
-        var t = g(e);
-        if (c(t)) {
-            var n = y(t);
-            return n && d(n, x) ? n[x] : V(t);
+    Y = { BigInt64Array: 8, BigUint64Array: 8 },
+    D = function (r) {
+        var t = T(r);
+        if (f(t)) {
+            var e = b(t);
+            return e && c(e, B) ? e[B] : D(t);
         }
     },
-    B = function (e) {
-        if (!c(e)) return !1;
-        var t = _(e);
-        return d(G, t) || d(F, t);
+    k = function (r) {
+        if (!f(r)) return !1;
+        var t = s(r);
+        return c(L, t) || c(Y, t);
     };
-for (i in G) (s = (r = l[i]) && r.prototype) ? (N(s)[x] = r) : (U = !1);
-for (i in F) (s = (r = l[i]) && r.prototype) && (N(s)[x] = r);
+for (n in L) (a = (o = u[n]) && o.prototype) ? (I(a)[B] = o) : (F = !1);
+for (n in Y) (a = (o = u[n]) && o.prototype) && (I(a)[B] = o);
 if (
-    (!U || !u(b) || b === Function.prototype) &&
-    ((b = function () {
-        throw new w("Incorrect invocation");
+    (!F || !y(U) || U === Function.prototype) &&
+    ((U = function () {
+        throw new M("Incorrect invocation");
     }),
-    U)
+    F)
 )
-    for (i in G) l[i] && A(l[i], b);
-if ((!U || !D || D === L) && ((D = b.prototype), U)) for (i in G) l[i] && A(l[i].prototype, D);
-if ((U && g(R) !== D && A(R, D), o && !d(D, M)))
-    for (i in ((k = !0),
-    E(D, M, {
+    for (n in L) u[n] && w(u[n], U);
+if ((!F || !j || j === m) && ((j = U.prototype), F)) for (n in L) u[n] && w(u[n].prototype, j);
+if ((F && T(C) !== j && w(C, j), p && !c(j, P)))
+    for (n in ((V = !0),
+    h(j, P, {
         configurable: !0,
         get: function () {
-            return c(this) ? this[P] : void 0;
+            return f(this) ? this[S] : void 0;
         },
     }),
-    G))
-        l[i] && h(l[i], P, i);
-e.exports = {
-    NATIVE_ARRAY_BUFFER_VIEWS: U,
-    TYPED_ARRAY_TAG: k && P,
-    aTypedArray: function (e) {
-        if (B(e)) return e;
-        throw new w("Target is not a typed array");
+    L))
+        u[n] && v(u[n], S, n);
+r.exports = {
+    NATIVE_ARRAY_BUFFER_VIEWS: F,
+    TYPED_ARRAY_TAG: V && S,
+    aTypedArray: function (r) {
+        if (k(r)) return r;
+        throw new M("Target is not a typed array");
     },
-    aTypedArrayConstructor: function (e) {
-        if (u(e) && (!A || m(b, e))) return e;
-        throw new w(f(e) + " is not a typed array constructor");
+    aTypedArrayConstructor: function (r) {
+        if (y(r) && (!w || g(U, r))) return r;
+        throw new M(d(r) + " is not a typed array constructor");
     },
-    exportTypedArrayMethod: function (e, t, n, i) {
-        if (o) {
-            if (n)
-                for (var r in G) {
-                    var s = l[r];
-                    if (s && d(s.prototype, e))
+    exportTypedArrayMethod: function (r, t, e, n) {
+        if (p) {
+            if (e)
+                for (var o in L) {
+                    var a = u[o];
+                    if (a && c(a.prototype, r))
                         try {
-                            delete s.prototype[e];
-                        } catch (n) {
+                            delete a.prototype[r];
+                        } catch (e) {
                             try {
-                                s.prototype[e] = t;
-                            } catch (e) {}
+                                a.prototype[r] = t;
+                            } catch (r) {}
                         }
                 }
-            (!D[e] || n) && p(D, e, n ? t : (U && v[e]) || t, i);
+            (!j[r] || e) && A(j, r, e ? t : (F && O[r]) || t, n);
         }
     },
-    exportTypedArrayStaticMethod: function (e, t, n) {
-        var i, r;
-        if (o) {
-            if (A) {
-                if (n) {
-                    for (i in G)
-                        if ((r = l[i]) && d(r, e))
+    exportTypedArrayStaticMethod: function (r, t, e) {
+        var n, o;
+        if (p) {
+            if (w) {
+                if (e) {
+                    for (n in L)
+                        if ((o = u[n]) && c(o, r))
                             try {
-                                delete r[e];
-                            } catch (e) {}
+                                delete o[r];
+                            } catch (r) {}
                 }
-                if (b[e] && !n) return;
+                if (U[r] && !e) return;
                 try {
-                    return p(b, e, n ? t : (U && b[e]) || t);
-                } catch (e) {}
+                    return A(U, r, e ? t : (F && U[r]) || t);
+                } catch (r) {}
             }
-            for (i in G) (r = l[i]) && (!r[e] || n) && p(r, e, t);
+            for (n in L) (o = u[n]) && (!o[r] || e) && A(o, r, t);
         }
     },
-    getTypedArrayConstructor: V,
-    isView: function (e) {
-        if (!c(e)) return !1;
-        var t = _(e);
-        return "DataView" === t || d(G, t) || d(F, t);
+    getTypedArrayConstructor: D,
+    isView: function (r) {
+        if (!f(r)) return !1;
+        var t = s(r);
+        return "DataView" === t || c(L, t) || c(Y, t);
     },
-    isTypedArray: B,
-    TypedArray: b,
-    TypedArrayPrototype: D,
+    isTypedArray: k,
+    TypedArray: U,
+    TypedArrayPrototype: j,
 };

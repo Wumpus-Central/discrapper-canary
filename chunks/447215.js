@@ -10,7 +10,7 @@ var n = i(627968),
     c = i(609425),
     h = i(922301),
     p = i(368919),
-    m = i(252545),
+    m = i(73392),
     g = i(676608),
     A = i(342296),
     f = i(734057),
@@ -22,13 +22,13 @@ function x(e) {
             channelId: i,
             guildId: x,
             messageId: E,
-            stopPropagation: R = !1,
-            ariaLabel: N,
-            enableDisplayNameStyles: I = !1,
+            stopPropagation: N = !1,
+            ariaLabel: I,
+            enableDisplayNameStyles: R = !1,
         } = e,
         j = l.useRef(null),
-        { analyticsLocations: b } = (0, d.Ay)(u.A.USERNAME),
-        S = (0, g.Ay)(x, t?.id),
+        { analyticsLocations: S } = (0, d.Ay)(u.A.USERNAME),
+        b = (0, g.Ay)(x, t?.id),
         C = (0, c.A)({ userId: t?.id, guildId: x }),
         y = (0, m.a)({ displayNameStyles: C }),
         O = l.useCallback(
@@ -40,13 +40,13 @@ function x(e) {
         ),
         L = l.useContext(a.C);
     return (
-        (0, v.A)({ subscribeToGroupId: E, authorId: t?.id, shouldSubscribe: I && null != C && null == x }),
+        (0, v.A)({ subscribeToGroupId: E, authorId: t?.id, shouldSubscribe: R && null != C && null == x }),
         l.useCallback(
             (e) => (l, a) => {
                 let u = e?.colorStrings,
-                    c = S && null != u && null != u.primaryColor && null != u.secondaryColor,
+                    c = b && null != u && null != u.primaryColor && null != u.secondaryColor,
                     m = (t, i) => {
-                        if (!I || null == C || null != x)
+                        if (!R || null == C || null != x)
                             return (0, n.jsx)(s.V, {
                                 ...(null != t ? t : {}),
                                 ref: j,
@@ -55,7 +55,7 @@ function x(e) {
                                 colorString: e?.colorString ?? null,
                                 roleName: e?.colorRoleName,
                                 colorStrings: c ? u : null,
-                                "aria-label": N,
+                                "aria-label": I,
                                 className: y,
                             });
                         {
@@ -64,7 +64,7 @@ function x(e) {
                                 ...(null != t ? t : {}),
                                 ref: j,
                                 onContextMenu: O,
-                                "aria-label": N,
+                                "aria-label": I,
                                 children: (0, n.jsx)(p.A, {
                                     userName: (0, r.O)(l) ?? "",
                                     displayNameStyles: C,
@@ -78,7 +78,7 @@ function x(e) {
                 return (0, n.jsx)(
                     d.f5,
                     {
-                        value: b,
+                        value: S,
                         children:
                             null != t
                                 ? (0, n.jsx)(A.A, {
@@ -94,7 +94,7 @@ function x(e) {
                                           return m(
                                               {
                                                   onClick: (e) => {
-                                                      R && null != e && e.stopPropagation(), i(e);
+                                                      N && null != e && e.stopPropagation(), i(e);
                                                   },
                                                   ...n,
                                               },
@@ -107,7 +107,7 @@ function x(e) {
                     a,
                 );
             },
-            [b, t, i, x, E, O, R, N, S, y, L?.animate, C, I],
+            [S, t, i, x, E, O, N, I, b, y, L?.animate, C, R],
         )
     );
 }

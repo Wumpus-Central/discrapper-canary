@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { L7: () => A, qA: () => T });
-var i = n(627968),
-    r = n(17928),
-    s = n(939249),
-    a = n(320448),
-    o = n(661531),
-    l = n(834730),
-    u = n(885386),
-    c = n(780964),
-    d = n(858897),
-    _ = n(711014),
-    f = n(115063),
-    h = n(365258),
-    p = n(926418),
-    E = n(395277),
-    m = n(375708),
-    g = n(141710);
-let A = () => {
-    (0, d.openUserSettings)(c.X.ACTIVITY_PRIVACY_PANEL);
+s.d(i, { L7: () => k, qA: () => C });
+var t = s(627968),
+    l = s(17928);
+if (21552 == s.j) var r = s(939249);
+if (21552 == s.j) var n = s(320448);
+if (21552 == s.j) var a = s(661531);
+if (21552 == s.j) var d = s(834730);
+var c = s(253932),
+    u = s(780964),
+    o = s(858897),
+    h = s(711014),
+    j = s(115063),
+    f = s(365258),
+    p = s(926418),
+    v = s(395277),
+    x = s(985018),
+    A = s(141710);
+let k = () => {
+    (0, o.openUserSettings)(u.X.ACTIVITY_PRIVACY_PANEL);
 };
-function I(e) {
-    let { children: t, onClick: n } = e;
-    return (0, i.jsxs)(s.D, {
-        className: g.E1,
-        onClick: n,
+function g(e) {
+    let { children: i, onClick: s } = e;
+    return (0, t.jsxs)(r.D, {
+        className: A.E1,
+        onClick: s,
         children: [
-            (0, i.jsx)("div", { className: g.j3, children: t }),
-            (0, i.jsx)(a._, { color: o.A.colors.TEXT_SUBTLE, size: "xs" }),
+            (0, t.jsx)("div", { className: A.j3, children: i }),
+            (0, t.jsx)(n._, { color: a.A.colors.TEXT_SUBTLE, size: "xs" }),
         ],
     });
 }
-function T(e) {
-    let { onClosePopout: t } = e,
-        n = u.tz.useSetting(),
-        s = (0, r.bG)([_.Ay], () => _.Ay.getFlattenedGuildIds()),
-        a = (0, f.Kk)(),
-        o = s.filter((e) => !a.has(e)),
-        c = (0, h.AB)(o);
-    return 0 === s.length
+function C(e) {
+    let { onClosePopout: i } = e,
+        s = c.tz.useSetting(),
+        r = (0, l.bG)([h.Ay], () => h.Ay.getFlattenedGuildIds()),
+        n = (0, j.Kk)(),
+        a = r.filter((e) => !n.has(e)),
+        u = (0, f.AB)(a);
+    return 0 === r.length
         ? null
-        : (0, i.jsxs)(I, {
+        : (0, t.jsxs)(g, {
               onClick: () => {
-                  t(), A();
+                  i(), k();
               },
               children: [
-                  (0, i.jsx)(l.E, {
+                  (0, t.jsx)(d.E, {
                       variant: "text-sm/semibold",
-                      children: m.intl.string(n ? E.default["3GrhnF"] : E.default["54ycKJ"]),
+                      children: x.intl.string(s ? v.default["3GrhnF"] : v.default["54ycKJ"]),
                   }),
-                  (0, i.jsx)(p.l, { guildIds: c, prioritizeSelectedGuild: !0 }),
+                  (0, t.jsx)(p.l, { guildIds: u, prioritizeSelectedGuild: !0 }),
               ],
           });
 }

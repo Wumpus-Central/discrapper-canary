@@ -6,26 +6,26 @@ var i = n(684013),
     a = n(938005),
     o = n(95701),
     l = n(734057),
-    u = n(232835),
-    c = n(309010),
-    d = n(543465),
-    _ = n(287809),
-    f = n(38405),
-    h = n(140069),
-    p = n(41984),
-    E = n(267355),
-    m = n(956753),
-    g = n(296027),
-    A = n(489277),
-    I = n(222506),
+    _ = n(232835),
+    d = n(309010),
+    u = n(543465),
+    c = n(287809),
+    E = n(38405),
+    h = n(1193),
+    m = n(41984),
+    f = n(267355),
+    g = n(956753),
+    A = n(833551),
+    I = n(489277),
+    p = n(222506),
     T = n(897720),
     S = n(145567),
     N = n(652215);
-let y = (e) => (0, m.U5)(e, "OverlayTextChatAutomaticLifecycleManager"),
-    C = new Map(),
-    v = null,
-    O = !1;
-async function R() {
+let O = (e) => (0, g.U5)(e, "OverlayTextChatAutomaticLifecycleManager"),
+    R = new Map(),
+    C = null,
+    y = !1;
+async function D() {
     try {
         return (
             await Promise.all([
@@ -57,95 +57,110 @@ async function R() {
                 n.e("68953"),
                 n.e("60417"),
                 n.e("24199"),
-                n.e("207"),
                 n.e("57036"),
-                n.e("98839"),
+                n.e("207"),
+                n.e("88394"),
+                n.e("15380"),
                 n.e("88941"),
                 n.e("61379"),
                 n.e("34530"),
                 n.e("62680"),
                 n.e("43039"),
-                n.e("25693"),
                 n.e("21825"),
                 n.e("98125"),
+                n.e("69354"),
                 n.e("28154"),
                 n.e("18441"),
                 n.e("48804"),
                 n.e("88077"),
-                n.e("76640"),
+                n.e("80527"),
                 n.e("85502"),
                 n.e("18401"),
                 n.e("13681"),
                 n.e("53729"),
-                n.e("10004"),
-                n.e("55314"),
-                n.e("89094"),
                 n.e("32551"),
-                n.e("32885"),
-                n.e("4369"),
+                n.e("52367"),
                 n.e("23353"),
-                n.e("53930"),
-                n.e("32817"),
+                n.e("36561"),
                 n.e("50015"),
                 n.e("47017"),
-                n.e("14879"),
+                n.e("22584"),
+                n.e("77998"),
+                n.e("31145"),
                 n.e("11523"),
                 n.e("66900"),
                 n.e("1555"),
                 n.e("44695"),
                 n.e("21690"),
+                n.e("10004"),
+                n.e("55314"),
                 n.e("29177"),
                 n.e("44376"),
+                n.e("83429"),
+                n.e("96905"),
                 n.e("33902"),
-                n.e("11527"),
                 n.e("31644"),
                 n.e("70653"),
-                n.e("45723"),
-                n.e("63070"),
-                n.e("70697"),
-                n.e("18546"),
+                n.e("993"),
+                n.e("54527"),
                 n.e("72535"),
                 n.e("86949"),
-                n.e("61622"),
-                n.e("38835"),
+                n.e("76195"),
+                n.e("39227"),
+                n.e("1177"),
+                n.e("26490"),
                 n.e("76170"),
+                n.e("32817"),
+                n.e("36498"),
                 n.e("18943"),
+                n.e("89094"),
                 n.e("84103"),
                 n.e("9915"),
                 n.e("99999"),
                 n.e("5501"),
                 n.e("28561"),
-                n.e("53614"),
+                n.e("11527"),
                 n.e("96123"),
+                n.e("27168"),
                 n.e("31825"),
+                n.e("39038"),
                 n.e("36320"),
+                n.e("6223"),
                 n.e("20320"),
+                n.e("77245"),
+                n.e("31549"),
                 n.e("43919"),
                 n.e("31390"),
                 n.e("57906"),
-                n.e("90889"),
                 n.e("37622"),
+                n.e("14879"),
                 n.e("51243"),
                 n.e("45421"),
                 n.e("44265"),
                 n.e("99141"),
-                n.e("35027"),
                 n.e("21435"),
                 n.e("98793"),
                 n.e("92731"),
                 n.e("25990"),
+                n.e("34472"),
+                n.e("33584"),
                 n.e("63095"),
                 n.e("68647"),
-                n.e("66541"),
-                n.e("27413"),
+                n.e("45723"),
+                n.e("67657"),
                 n.e("64615"),
+                n.e("88017"),
                 n.e("87225"),
+                n.e("12373"),
                 n.e("75134"),
                 n.e("84967"),
                 n.e("23216"),
-                n.e("87079"),
+                n.e("25582"),
+                n.e("30770"),
+                n.e("38835"),
+                n.e("90889"),
+                n.e("78777"),
                 n.e("21570"),
-                n.e("78707"),
                 n.e("3458"),
                 n.e("62827"),
                 n.e("73547"),
@@ -155,36 +170,61 @@ async function R() {
                 n.e("61935"),
                 n.e("62168"),
                 n.e("55602"),
-                n.e("28128"),
-                n.e("59023"),
+                n.e("77793"),
+                n.e("13499"),
                 n.e("91381"),
                 n.e("93158"),
+                n.e("58765"),
+                n.e("22407"),
                 n.e("10034"),
                 n.e("73500"),
-                n.e("31145"),
                 n.e("25252"),
+                n.e("19452"),
+                n.e("53526"),
+                n.e("65881"),
+                n.e("35027"),
+                n.e("32035"),
+                n.e("36126"),
+                n.e("51391"),
+                n.e("29375"),
+                n.e("91942"),
+                n.e("48778"),
+                n.e("89465"),
                 n.e("79440"),
-                n.e("77084"),
-                n.e("86672"),
+                n.e("78707"),
+                n.e("62355"),
+                n.e("93708"),
+                n.e("71482"),
+                n.e("10942"),
+                n.e("64480"),
+                n.e("10745"),
+                n.e("78651"),
                 n.e("77265"),
+                n.e("77084"),
+                n.e("39406"),
+                n.e("86672"),
                 n.e("95093"),
-                n.e("1354"),
-                n.e("78412"),
+                n.e("79707"),
                 n.e("80239"),
+                n.e("88343"),
+                n.e("78412"),
+                n.e("255"),
                 n.e("25486"),
+                n.e("54625"),
                 n.e("18997"),
-                n.e("37977"),
-                n.e("66783"),
                 n.e("72877"),
-                n.e("71467"),
+                n.e("66783"),
+                n.e("37977"),
                 n.e("97069"),
                 n.e("32207"),
+                n.e("71467"),
+                n.e("37588"),
+                n.e("36150"),
                 n.e("99011"),
                 n.e("28752"),
-                n.e("36150"),
+                n.e("49333"),
                 n.e("22067"),
                 n.e("55266"),
-                n.e("49333"),
                 n.e("29852"),
                 n.e("27752"),
                 n.e("45724"),
@@ -192,50 +232,51 @@ async function R() {
                 n.e("10147"),
                 n.e("50541"),
                 n.e("25013"),
-                n.e("96232"),
+                n.e("96843"),
+                n.e("43447"),
             ]).then(n.bind(n, 21076))
         ).default;
     } catch (e) {
-        return f.A.captureException(e), null;
+        return E.A.captureException(e), null;
     }
 }
-function b(e) {
+function L(e) {
     let { channelId: t, guildId: n, messageId: i } = e;
-    if (!g.default.isAnyOverlayRendering() || null == l.A.getChannel(t) || u.A.isReady(t)) return;
-    let r = C.get(t);
+    if (!A.default.isAnyOverlayRendering() || null == l.A.getChannel(t) || _.A.isReady(t)) return;
+    let r = R.get(t);
     null != r && clearTimeout(r);
     let a = setTimeout(() => {
-        C.delete(t), u.A.isReady(t) || s.A.fetchMessages({ guildId: n, channelId: t, messageId: i });
+        R.delete(t), _.A.isReady(t) || s.A.fetchMessages({ guildId: n, channelId: t, messageId: i });
     }, 1e3);
-    C.set(t, a);
+    R.set(t, a);
 }
-async function D(e) {
-    let t = await R();
-    if (!(null == t || I.A.isInputLocked(A.A.getTargetPID())))
+async function v(e) {
+    let t = await D();
+    if (!(null == t || p.A.isInputLocked(I.A.getTargetPID())))
         for (let n of t.getNotificationsForChannel(e, T.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
 }
-function L() {
+function w() {
     !(function () {
-        if (!g.default.isAnyOverlayRendering()) return;
+        if (!A.default.isAnyOverlayRendering()) return;
         let e = h.A.getSelectedChannelId();
-        if (null == e || e === v) return;
+        if (null == e || e === C) return;
         let t = l.A.getChannel(e);
         null != t &&
             (0, o.pQ)(t.type) &&
-            ((v = e), b({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
+            ((C = e), L({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
     })();
 }
-function w(e) {
+function P(e) {
     let { channelId: t, message: n } = e;
-    if (!g.default.isAnyOverlayRendering()) return;
+    if (!A.default.isAnyOverlayRendering()) return;
     let i = l.A.getChannel(t);
     if (null == i) return;
-    let r = _.default.getCurrentUser()?.id;
-    if ((null != r && n.author?.id === r && D(t), h.A.isChannelTracked(t))) return;
+    let r = c.default.getCurrentUser()?.id;
+    if ((null != r && n.author?.id === r && v(t), h.A.isChannelTracked(t))) return;
     if (i.isPrivate()) {
-        if (d.Ay.isChannelMuted(null, t)) return;
-    } else if (d.Ay.isChannelMuted(i.getGuildId(), t) || !(0, a.lx)(n, t, !0)) return;
-    let s = i.isPrivate() ? p.B9.INCOMING_DM_MESSAGE : p.B9.INCOMING_MENTION_MESSAGE,
+        if (u.Ay.isChannelMuted(null, t)) return;
+    } else if (u.Ay.isChannelMuted(i.getGuildId(), t) || !(0, a.lx)(n, t, !0)) return;
+    let s = i.isPrivate() ? m.B9.INCOMING_DM_MESSAGE : m.B9.INCOMING_MENTION_MESSAGE,
         o = (function (e) {
             if (null == e.timestamp) return Date.now();
             let t = new Date(e.timestamp).getTime();
@@ -243,80 +284,80 @@ function w(e) {
         })(n);
     (0, S.Ml)({ channelId: t, source: s, lastActivityAtMs: o, lastMessageId: n.id });
 }
-function M(e) {
+function b(e) {
     let { channelId: t, lastMessageId: n } = e,
         i = l.A.getChannel(t);
-    b({ channelId: t, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: n ?? null });
-}
-function P(e) {
-    let { channelId: t, guildId: n, messageId: i, source: r } = e;
-    r !== p.B9.AUTOMATIC_CHANNEL_SELECT && ((O = !0), D(t)), b({ channelId: t, guildId: n, messageId: i });
-}
-function x(e) {
-    let { channelId: t } = e,
-        n = C.get(t);
-    null != n && (clearTimeout(n), C.delete(t)),
-        setTimeout(() => {
-            let e = h.A.getSelectedChannelId();
-            if ((null == e && (O = !1), null == e || e === t)) return;
-            let n = l.A.getChannel(e);
-            b({ channelId: e, guildId: n?.getGuildId?.() ?? n?.guild_id ?? null, messageId: null });
-        }, 0);
-}
-function U() {
-    for (let [e, t] of C) clearTimeout(t), C.delete(e);
-    O = !1;
+    L({ channelId: t, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: n ?? null });
 }
 function k(e) {
+    let { channelId: t, guildId: n, messageId: i, source: r } = e;
+    r !== m.B9.AUTOMATIC_CHANNEL_SELECT && ((y = !0), v(t)), L({ channelId: t, guildId: n, messageId: i });
+}
+function U(e) {
+    let { channelId: t } = e,
+        n = R.get(t);
+    null != n && (clearTimeout(n), R.delete(t)),
+        setTimeout(() => {
+            let e = h.A.getSelectedChannelId();
+            if ((null == e && (y = !1), null == e || e === t)) return;
+            let n = l.A.getChannel(e);
+            L({ channelId: e, guildId: n?.getGuildId?.() ?? n?.guild_id ?? null, messageId: null });
+        }, 0);
+}
+function M() {
+    for (let [e, t] of R) clearTimeout(t), R.delete(e);
+    y = !1;
+}
+function G(e) {
     let { minimized: t } = e;
     if (!t) return;
     let n = h.A.getSelectedChannelId();
     if (null == n) return;
     let i = l.A.getChannel(n);
-    b({ channelId: n, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: null });
+    L({ channelId: n, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: null });
 }
-function G(e) {
+function x(e) {
     let t = l.A.getChannel(e);
     null != t &&
         (0, o.pQ)(t.type) &&
         h.A.getSelectedChannelId() !== e &&
         (0, S.D$)({
             target: { kind: S.bB.CHANNEL, channelId: e, guildId: t.getGuildId(), messageId: null },
-            source: p.B9.AUTOMATIC_CHANNEL_SELECT,
+            source: m.B9.AUTOMATIC_CHANNEL_SELECT,
             widgetType: null,
         });
 }
-function F(e) {
+function V(e) {
     let { channelId: t } = e;
-    !g.default.isAnyOverlayRendering() || null == t || ((0, E.isOverlayCurrentlyVisibleAndUnlocked)() && G(t));
+    !A.default.isAnyOverlayRendering() || null == t || ((0, f.isOverlayCurrentlyVisibleAndUnlocked)() && x(t));
 }
-async function V(e) {
+async function F(e) {
     if (e.locked) {
         let e = h.A.getSelectedChannelId();
         null != e && i.A.ackTextChatChannel(e);
         return;
     }
-    let t = await R();
-    if (null == t || !g.default.isAnyOverlayRendering()) return;
+    let t = await D();
+    if (null == t || !A.default.isAnyOverlayRendering()) return;
     let n = h.A.getSelectedChannelId();
     if (null != n && t.hasNotificationForChannel(n)) return;
     let r = null,
         s = t.getMostRecentNotificationChannelId();
-    null != s ? (r = s) : O || (r = c.A.getChannelId() ?? null), null != r && (G(r), D(r));
+    null != s ? (r = s) : y || (r = d.A.getChannelId() ?? null), null != r && (x(r), v(r));
 }
 class B extends r.A {
     actions = {
-        CHANNEL_SELECT: y(F),
-        SIDEBAR_VIEW_CHANNEL: y(F),
-        MESSAGE_CREATE: y(w),
-        VOICE_STATE_UPDATES: y(L),
-        VOICE_CHANNEL_SELECT: y(L),
-        OVERLAY_SET_INPUT_LOCKED: y(V),
-        OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: y(M),
-        OVERLAY_TEXT_CHAT_SELECT_CHANNEL: y(P),
-        OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: y(x),
-        OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: y(U),
-        OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: y(k),
+        CHANNEL_SELECT: O(V),
+        SIDEBAR_VIEW_CHANNEL: O(V),
+        MESSAGE_CREATE: O(P),
+        VOICE_STATE_UPDATES: O(w),
+        VOICE_CHANNEL_SELECT: O(w),
+        OVERLAY_SET_INPUT_LOCKED: O(F),
+        OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: O(b),
+        OVERLAY_TEXT_CHAT_SELECT_CHANNEL: O(k),
+        OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: O(U),
+        OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: O(M),
+        OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: O(G),
     };
 }
 let H = new B();

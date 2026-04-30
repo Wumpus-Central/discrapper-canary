@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(17928),
-    r = n(228366);
-let s = {},
-    a = null,
-    o = null;
-function l(e, t) {
-    null == t ? e in s && delete s[e] : null != e && (s[e] = t);
+    l = n(228366);
+let a = {},
+    r = null,
+    s = null;
+function o(e, t) {
+    null == t ? e in a && delete a[e] : null != e && (a[e] = t);
 }
-function u(e) {
+function d(e) {
     let { user: t } = e;
-    o = t.id;
+    s = t.id;
 }
-class c extends i.Ay.PersistedStore {
+class u extends i.Ay.PersistedStore {
     static displayName = "LoginRequiredActionStore";
     static persistKey = "LoginRequiredActionStore";
     initialize(e) {
-        null != e && (s = e);
+        null != e && (a = e);
     }
     requiredActions(e) {
-        return s[e] ?? null;
+        return a[e] ?? null;
     }
     requiredActionsIncludes(e, t) {
         let n = this.requiredActions(e);
         return null != n && t.reduce((e, t) => e || n.includes(t), !1);
     }
     wasLoginAttemptedInSession(e) {
-        return a === e;
+        return r === e;
     }
     getState() {
-        return s;
+        return a;
     }
 }
-let d = new c(r.h, {
+let c = new u(l.h, {
     LOGIN_ATTEMPTED: function (e) {
         let { required_actions: t, user_id: n } = e;
-        l((a = n), t);
+        o((r = n), t);
     },
-    CONNECTION_OPEN: u,
-    CURRENT_USER_UPDATE: u,
+    CONNECTION_OPEN: d,
+    CURRENT_USER_UPDATE: d,
     LOGOUT: function (e) {
         let { isSwitchingAccount: t } = e;
-        t || null == o || l(o, null);
+        t || null == s || o(s, null);
     },
     PASSWORD_UPDATED: function (e) {
         let { userId: t } = e;
-        l(t, null);
+        o(t, null);
     },
     MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
         let { userId: t } = e;
-        l(t, null);
+        o(t, null);
     },
 });

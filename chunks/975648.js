@@ -1,33 +1,32 @@
-"use strict";
-let i;
-n.d(t, { A: () => l });
-var r = n(17928),
-    s = n(228366);
-let a = !1;
-class o extends r.Ay.Store {
+let l;
+t.d(n, { A: () => _ });
+var E = t(17928),
+    i = t(228366);
+let A = !1;
+class a extends E.Ay.Store {
     static displayName = "DataHarvestStore";
     get harvestType() {
-        return i;
+        return l;
     }
     get requestingHarvest() {
-        return a;
+        return A;
     }
 }
-let l = new o(s.h, {
+let _ = new a(i.h, {
     CONNECTION_OPEN: function () {
-        i = void 0;
+        l = void 0;
     },
     UPDATE_DATA_HARVEST_TYPE: function (e) {
-        let { harvestType: t } = e;
-        (a = !1), (i = t);
+        let { harvestType: n } = e;
+        (A = !1), (l = n);
     },
     LOAD_DATA_HARVEST_TYPE_START: function () {
-        a = !0;
+        A = !0;
     },
     LOAD_DATA_HARVEST_TYPE_FAILURE: function () {
-        a = !1;
+        A = !1;
     },
     LOGOUT: function () {
-        (a = !1), (i = null);
+        (A = !1), (l = null);
     },
 });

@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => s });
 var i = n(627968),
-    r = n(64700),
-    s = n(349288);
-class a extends r.PureComponent {
+    l = n(64700),
+    a = n(349288);
+class r extends l.PureComponent {
     render() {
         let { text: e, lastItem: t, className: n } = this.props;
         return (0, i.jsxs)("span", {
-            children: [(0, i.jsx)(s.Anchor, { className: n, onClick: this.handleClick, children: e }), t ? "" : ", "],
+            children: [(0, i.jsx)(a.Anchor, { className: n, onClick: this.handleClick, children: e }), t ? "" : ", "],
         });
     }
     handleClick = () => {
@@ -15,14 +14,14 @@ class a extends r.PureComponent {
         e?.(t);
     };
 }
-class o extends r.PureComponent {
+class s extends l.PureComponent {
     render() {
         let e = this.props.artists.split("; ");
         if (!this.props.canOpen) return e.join(", ");
         let t = e.length - 1;
         return e.map((e, n) =>
             (0, i.jsx)(
-                a,
+                r,
                 {
                     text: e,
                     index: n,

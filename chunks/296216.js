@@ -1,36 +1,36 @@
-i.d(t, { F: () => m, J: () => h });
-var n = i(913247),
-    l = i(22174),
-    s = i(66834),
+i.d(t, { F: () => h, J: () => p });
+var r = i(913247),
+    n = i(639627),
+    o = i(686956),
     a = i(71393),
-    r = i(576705),
-    d = i(977997),
-    o = i(607567),
-    u = i(652215);
+    l = i(576705),
+    s = i(977997),
+    u = i(607567),
+    d = i(652215);
 let c = "DRAGGABLE_USER";
-function m(e) {
-    return (0, n.T)(
+function h(e) {
+    return (0, r.T)(
         c,
         {
             canDrop(e) {
                 let { channel: t } = e,
                     i = t.getGuildId(),
-                    n = a.A.getGuild(i)?.maxVideoChannelUsers ?? -1,
-                    l = o.Ay.countVoiceStatesForChannel(t.id),
-                    s = null != i && d.A.hasVideo(t.id) && n > 0 && l >= n + 1;
-                return r.A.can(u.xBc.MOVE_MEMBERS, t) && r.A.can(u.xBc.CONNECT, t) && !s;
+                    r = a.A.getGuild(i)?.maxVideoChannelUsers ?? -1,
+                    n = u.Ay.countVoiceStatesForChannel(t.id),
+                    o = null != i && s.A.hasVideo(t.id) && r > 0 && n >= r + 1;
+                return l.A.can(d.xBc.MOVE_MEMBERS, t) && l.A.can(d.xBc.CONNECT, t) && !o;
             },
             drop(e, t) {
                 let { channel: i } = e,
-                    n = d.A.getVoiceStateForUser(t.getItem().user.id);
-                n?.channelId !== i.id && s.A.setChannel(i.getGuildId(), t.getItem().user.id, i.id);
+                    r = s.A.getVoiceStateForUser(t.getItem().user.id);
+                r?.channelId !== i.id && o.A.setChannel(i.getGuildId(), t.getItem().user.id, i.id);
             },
         },
         (e, t) => ({ connectUserDropTarget: e.dropTarget(), isUserOver: t.isOver() && t.canDrop() }),
     )(e);
 }
-function h(e) {
-    return (0, l.I)(
+function p(e) {
+    return (0, n.I)(
         c,
         {
             canDrag(e) {

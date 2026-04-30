@@ -1,14 +1,13 @@
-"use strict";
-var i = n(230606),
-    r = n(410323),
-    s = n(855835),
-    a = n(800098),
-    o = n(101968),
-    l = r([].concat);
-e.exports =
-    i("Reflect", "ownKeys") ||
-    function (e) {
-        var t = s.f(o(e)),
-            n = a.f;
-        return n ? l(t, n(e)) : t;
+var n = e(230606),
+    o = e(410323),
+    i = e(855835),
+    u = e(800098),
+    a = e(101968),
+    c = o([].concat);
+r.exports =
+    n("Reflect", "ownKeys") ||
+    function (r) {
+        var t = i.f(a(r)),
+            e = u.f;
+        return e ? c(t, e(r)) : t;
     };

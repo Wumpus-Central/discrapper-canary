@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { A: () => m });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(890856),
-    l = n(688810),
-    u = n(183555),
-    c = n(975732),
-    d = n(946356),
-    _ = n(939496),
-    f = n(518477),
-    h = n(996988),
-    p = n(375708),
-    E = n(514566);
-let m = r.forwardRef(function (e, t) {
+e.d(n, { A: () => m });
+var i = e(627968),
+    l = e(64700),
+    a = e(503698),
+    r = e.n(a),
+    s = e(890856),
+    o = e(688810),
+    c = e(183555),
+    u = e(975732),
+    d = e(946356),
+    A = e(939496),
+    x = e(518477),
+    p = e(996988),
+    f = e(985018),
+    _ = e(514566);
+let m = l.forwardRef(function (t, n) {
     let {
-            children: n,
-            className: r,
-            profileModalScrollTarget: s,
+            children: e,
+            className: l,
+            profileModalScrollTarget: a,
             onAction: m,
-            onClose: g,
-            "aria-labelledby": A,
-            ...I
-        } = e,
-        { themeType: T } = (0, _.E)(),
-        { analyticsLocations: S } = (0, l.Ay)(),
-        { context: N } = (0, u.NJ)();
-    return T === h.d.MODAL || T === h.d.MODAL_V2 || N?.userId == null
+            onClose: T,
+            "aria-labelledby": E,
+            ...g
+        } = t,
+        { themeType: N } = (0, A.E)(),
+        { analyticsLocations: C } = (0, o.Ay)(),
+        { context: I } = (0, c.NJ)();
+    return N === p.d.MODAL || N === p.d.MODAL_V2 || I?.userId == null
         ? (0, i.jsx)("article", {
-              "aria-labelledby": A,
-              children: (0, i.jsx)(d.A.Overlay, { ref: t, className: a()(E.Nr, r), ...I, children: n }),
+              "aria-labelledby": E,
+              children: (0, i.jsx)(d.A.Overlay, { ref: n, className: r()(_.Nr, l), ...g, children: e }),
           })
         : (0, i.jsx)("article", {
-              "aria-labelledby": A,
-              children: (0, i.jsx)(o.s, {
-                  className: E.OV,
-                  "aria-label": p.intl.string(p.t.pD1L1u),
-                  focusProps: { ringTarget: t },
+              "aria-labelledby": E,
+              children: (0, i.jsx)(s.s, {
+                  className: _.OV,
+                  "aria-label": f.intl.string(f.t.pD1L1u),
+                  focusProps: { ringTarget: n },
                   onClick: () => {
                       m?.({ action: "PRESS_CARD" }),
-                          (0, c.openUserProfileModal)({
-                              tabSection: f.RP.ACTIVITY,
-                              sourceAnalyticsLocations: S,
-                              scrollTarget: s,
-                              ...N,
+                          (0, u.openUserProfileModal)({
+                              tabSection: x.RP.ACTIVITY,
+                              sourceAnalyticsLocations: C,
+                              scrollTarget: a,
+                              ...I,
                           }),
-                          g?.();
+                          T?.();
                   },
-                  children: (0, i.jsx)(d.A.Overlay, { ref: t, className: a()(E.Nr, r), ...I, children: n }),
+                  children: (0, i.jsx)(d.A.Overlay, { ref: n, className: r()(_.Nr, l), ...g, children: e }),
               }),
           });
 });

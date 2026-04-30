@@ -1,31 +1,30 @@
-"use strict";
-n.d(t, { D: () => h, d: () => f });
-var i = n(835245),
-    r = n(77729),
-    s = n(824579),
-    a = n(174459),
-    o = n(19575),
-    l = n(464578),
-    u = n(652215);
+s.d(t, { D: () => y, d: () => u });
+var r = s(132500),
+    n = s(77729),
+    a = s(824579),
+    i = s(954571),
+    d = s(19575),
+    _ = s(464578),
+    o = s(652215);
 function c() {
     return window.GLOBAL_ENV.HTML_TIMESTAMP;
 }
-class d {
-    loadId = (0, i.A)();
+class l {
+    loadId = (0, r.A)();
     appUIViewed = !1;
     trackEvent(e) {
         let t = Date.now();
         requestIdleCallback(() => {
-            let n, i;
-            a.default.track(u.HAw.APP_UI_VIEWED, {
+            let s, r;
+            i.default.track(o.HAw.APP_UI_VIEWED, {
                 ...(function () {
                     let e = "--campaign-id=";
-                    for (let t of r.A?.processUtils?.getMainArgvSync?.() ?? [])
+                    for (let t of n.A?.processUtils?.getMainArgvSync?.() ?? [])
                         if (t.startsWith(e)) return { referrer: t.substr(e.length) };
                     return {};
                 })(),
-                ...((n = !1),
-                (i = {
+                ...((s = !1),
+                (r = {
                     total_compressed_byte_size: 0,
                     total_uncompressed_byte_size: 0,
                     total_transfer_byte_size: 0,
@@ -40,33 +39,33 @@ class d {
                     null != window.performance.getEntries &&
                     window.performance.getEntries().forEach((e) => {
                         let t = null != e.encodedBodySize ? e.encodedBodySize : e.decodedBodySize,
-                            r = null != e.decodedBodySize ? e.decodedBodySize : e.encodedBodySize,
-                            s = e.transferSize;
-                        null != r &&
+                            n = null != e.decodedBodySize ? e.decodedBodySize : e.encodedBodySize,
+                            a = e.transferSize;
+                        null != n &&
                             null != t &&
-                            ((n = !0),
-                            (i.total_compressed_byte_size += t),
-                            (i.total_uncompressed_byte_size += r),
-                            null != s && (i.total_uncompressed_byte_size += s),
+                            ((s = !0),
+                            (r.total_compressed_byte_size += t),
+                            (r.total_uncompressed_byte_size += n),
+                            null != a && (r.total_uncompressed_byte_size += a),
                             "resource" === e.entryType &&
                                 ("script" === e.initiatorType &&
                                     null != e.name &&
                                     null != e.name.match(/\.js/) &&
-                                    ((i.js_compressed_byte_size += t),
-                                    (i.js_uncompressed_byte_size += r),
-                                    null != s && (i.js_uncompressed_byte_size += s)),
+                                    ((r.js_compressed_byte_size += t),
+                                    (r.js_uncompressed_byte_size += n),
+                                    null != a && (r.js_uncompressed_byte_size += a)),
                                 "link" === e.initiatorType &&
                                     null != e.name &&
                                     null != e.name.match(/\.css/) &&
-                                    ((i.css_compressed_byte_size += t),
-                                    (i.css_uncompressed_byte_size += r),
-                                    null != s && (i.css_uncompressed_byte_size += s))));
+                                    ((r.css_compressed_byte_size += t),
+                                    (r.css_uncompressed_byte_size += n),
+                                    null != a && (r.css_uncompressed_byte_size += a))));
                     }),
-                n ? i : {}),
+                s ? r : {}),
                 load_id: this.loadId,
                 screen_name: e,
                 duration_ms_since_app_opened: t - c(),
-                app_hardware_acceleration_enabled: o.Ay.getEnableHardwareAcceleration(),
+                app_hardware_acceleration_enabled: d.Ay.getEnableHardwareAcceleration(),
             });
         });
     }
@@ -77,29 +76,29 @@ class d {
             t = e?.startsWith("/channels/@me") ? "channels/@me" : e?.split("/")?.[1];
         requestIdleCallback(() => {
             let e = c();
-            l.A.firstRenderAfterReadyPayload.record();
-            let n = l.A.serializeWebPerfStartupMetrics(e);
-            a.default.track(u.HAw.APP_WEB_PERF_STARTUP_METRICS, { load_id: this.loadId, url_root_path: t, ...n });
+            _.A.firstRenderAfterReadyPayload.record();
+            let s = _.A.serializeWebPerfStartupMetrics(e);
+            i.default.track(o.HAw.APP_WEB_PERF_STARTUP_METRICS, { load_id: this.loadId, url_root_path: t, ...s });
             try {
-                o.Ay.appFirstRenderAfterReadyPayload();
+                d.Ay.appFirstRenderAfterReadyPayload();
             } catch (e) {}
-            (0, s.K)();
+            (0, a.K)();
         });
     }
     trackAppUIViewed(e) {
         if (!this.appUIViewed) {
             performance.mark(`trackAppUIViewed-${e}`), this.trackEvent(e);
             try {
-                o.Ay.appViewed();
+                d.Ay.appViewed();
             } catch (e) {}
             this.appUIViewed = !0;
         }
     }
 }
-let _ = new d();
-function f(e) {
-    _.trackAppUIViewed(e);
+let p = new l();
+function u(e) {
+    p.trackAppUIViewed(e);
 }
-function h() {
-    _.trackTTI();
+function y() {
+    p.trackTTI();
 }

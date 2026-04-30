@@ -1,31 +1,30 @@
-"use strict";
-n.d(t, { Rg: () => d, Wb: () => p, Zo: () => f, gC: () => _, gS: () => h, q0: () => c });
-var i = n(17928),
-    r = n(229527),
-    s = n(696451),
-    a = n(71393),
-    o = n(287809),
-    l = n(743981),
-    u = n(652215);
-function c(e) {
+n.d(t, { Rg: () => s, Wb: () => b, Zo: () => p, gC: () => c, gS: () => f, q0: () => g });
+var l = n(17928),
+    i = n(229527),
+    r = n(696451),
+    u = n(71393),
+    d = n(287809),
+    a = n(743981),
+    o = n(652215);
+function g(e) {
     return e?.profile?.tag != null;
 }
-function d(e) {
-    return e.features.has(u.GuildFeatures.GUILD_TAGS);
+function s(e) {
+    return e.features.has(o.GuildFeatures.GUILD_TAGS);
 }
-function _(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.Sl.SIZE_12;
+function c(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Sl.SIZE_12;
     if (null == t) return;
-    let { CDN_HOST: i } = window.GLOBAL_ENV;
-    if (null == i) return;
-    let r = l.lv[n];
-    return `https://${i}/clan-badges/${e}/${t}.png?size=${r}`;
+    let { CDN_HOST: l } = window.GLOBAL_ENV;
+    if (null == l) return;
+    let i = a.lv[n];
+    return `https://${l}/clan-badges/${e}/${t}.png?size=${i}`;
 }
-function f(e) {
+function p(e) {
     return null != e && e.identityEnabled ? { guildId: e.identityGuildId, tag: e.tag, badge: e.badge } : {};
 }
-function h(e) {
-    let t = (0, i.bG)([a.A], () => a.A.getGuild(e), [e]);
+function f(e) {
+    let t = (0, l.bG)([u.A], () => u.A.getGuild(e), [e]);
     return null == e
         ? e
         : null == t
@@ -37,13 +36,13 @@ function h(e) {
                 badge: t.profile?.badge ?? void 0,
             };
 }
-function p(e, t, n) {
-    let a = (0, i.bG)([o.default], () => o.default.getUser(e), [e]),
-        l = (0, i.bG)([s.Ay], () => {
+function b(e, t, n) {
+    let u = (0, l.bG)([d.default], () => d.default.getUser(e), [e]),
+        a = (0, l.bG)([r.Ay], () => {
             if (null == t || null == e) return null;
-            let n = s.Ay.getMember(t, e);
-            return (0, r.TR)(n);
+            let n = r.Ay.getMember(t, e);
+            return (0, i.TR)(n);
         }, [t, e]),
-        { tag: u, guildId: c } = f(void 0 !== n ? n : a?.primaryGuild);
-    return null != c && null != u && !l;
+        { tag: o, guildId: g } = p(void 0 !== n ? n : u?.primaryGuild);
+    return null != g && null != o && !a;
 }

@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { F: () => p, L: () => h });
-var i,
-    r = n(743368),
-    s = n(975807),
-    a = n(723702),
-    o = n(985603),
-    l = n(777376),
-    u = n(758209),
-    c = n(693037),
-    d = n(674567),
-    _ = n(237146),
-    f = n(375708),
-    h = (((i = {}).DEFAULT = "default"), (i.SUBSCRIBE = "subscribe"), i);
-function p() {
+i.d(t, { F: () => g, L: () => p });
+var s,
+    a = i(743368),
+    n = i(975807),
+    r = i(723702),
+    l = i(985603),
+    c = i(777376),
+    d = i(758209),
+    o = i(915418),
+    u = i(674567),
+    m = i(237146),
+    A = i(985018),
+    p = (((s = {}).DEFAULT = "default"), (s.SUBSCRIBE = "subscribe"), s);
+function g() {
     let e,
-        t = (0, d.V)(),
-        { status: n, requestInProgress: i, redirect: h } = (0, c.r)(),
-        p = (0, u.A)(h),
-        E = (0, o.A)();
-    if (t === d.s.FREE_FRACTIONAL_NITRO) return { kind: "subscribe", text: f.intl.string(f.t.sEAnVH) };
-    let m = (function (e) {
+        t = (0, u.V)(),
+        { status: i, requestInProgress: s, redirect: p } = (0, o.r)(),
+        g = (0, d.A)(p),
+        x = (0, l.A)();
+    if (t === u.s.FREE_FRACTIONAL_NITRO) return { kind: "subscribe", text: A.intl.string(A.t.sEAnVH) };
+    let N = (function (e) {
         switch (e) {
-            case l.p1.NOT_CLAIMED:
-            case l.p1.CLAIM_IN_PROGRESS:
-                return { text: f.intl.string(_.default.EL3rU4) };
-            case l.p1.CLAIMED:
-                return { text: f.intl.string(_.default["0mQ2U6"]), icon: r.W, iconPosition: "end" };
-            case l.p1.CANCELLATION_IN_PROGRESS:
-                return { text: f.intl.string(_.default.wBz9aO), disabled: !0 };
+            case c.p1.NOT_CLAIMED:
+            case c.p1.CLAIM_IN_PROGRESS:
+                return { text: A.intl.string(m.default.EL3rU4) };
+            case c.p1.CLAIMED:
+                return { text: A.intl.string(m.default["0mQ2U6"]), icon: a.W, iconPosition: "end" };
+            case c.p1.CANCELLATION_IN_PROGRESS:
+                return { text: A.intl.string(m.default.wBz9aO), disabled: !0 };
         }
-    })(n);
-    if (n === l.p1.NOT_CLAIMED || n === l.p1.CLAIM_IN_PROGRESS)
+    })(i);
+    if (i === c.p1.NOT_CLAIMED || i === c.p1.CLAIM_IN_PROGRESS)
         e = () => {
-            p();
+            g();
         };
-    else if (n === l.p1.CLAIMED) {
-        let t = (0, a.isWindows)() ? "msxbox://" : "https://xbox.com/play";
+    else if (i === c.p1.CLAIMED) {
+        let t = (0, r.isWindows)() ? "msxbox://" : "https://xbox.com/play";
         e = () => {
-            (0, s.A)(t), E(o.xf.PARTNER_PAGE_REDIRECT, t);
+            (0, n.A)(t), x(l.xf.PARTNER_PAGE_REDIRECT, t);
         };
     }
     return {
         kind: "default",
-        claimStatus: n,
-        requestInProgress: i,
-        text: m.text,
-        disabled: (m.disabled ?? !1) || i,
-        loading: i,
-        icon: m.icon,
-        iconPosition: m.iconPosition,
+        claimStatus: i,
+        requestInProgress: s,
+        text: N.text,
+        disabled: (N.disabled ?? !1) || s,
+        loading: s,
+        icon: N.icon,
+        iconPosition: N.iconPosition,
         onClick: e,
     };
 }

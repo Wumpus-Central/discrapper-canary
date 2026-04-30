@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { default: () => _ });
-var i = n(627968);
-n(64700);
-var r = n(562708),
-    s = n(189213),
-    a = n(976860),
-    o = n(975571),
-    l = n(612200),
-    u = n(652215),
-    c = n(375708);
-function d() {
+i.d(e, { default: () => g });
+var s = i(627968);
+i(64700);
+var n = i(110259),
+    r = i(189213),
+    a = i(976860),
+    o = i(975571),
+    l = i(612200),
+    u = i(652215),
+    c = i(985018);
+function p() {
     return (0, l.IO)(), (0, a.pX)(u.BVt.LOGIN, { source: "existing_user_age_gate_underage" }), Promise.resolve();
 }
-function _(e) {
-    let { underageMessage: t, transitionState: n } = e;
-    return (0, i.jsx)(s.Modal, {
-        transitionState: n,
-        onClose: d,
+function g(t) {
+    let { underageMessage: e, transitionState: i } = t;
+    return (0, s.jsx)(r.Modal, {
+        transitionState: i,
+        onClose: p,
         title: c.intl.string(c.t["NR/zrG"]),
-        subtitle: c.intl.format(c.t.ukclM1, { underageMessage: t ?? c.intl.string(c.t.WqEH4D), days: 30 }),
+        subtitle: c.intl.format(c.t.ukclM1, { underageMessage: e ?? c.intl.string(c.t.WqEH4D), days: 30 }),
         actions: [
             {
                 text: c.intl.string(c.t.hvVgAZ),
@@ -27,11 +26,11 @@ function _(e) {
                 },
                 variant: "secondary",
             },
-            { text: c.intl.string(c.t.szzQ6H), onClick: d },
+            { text: c.intl.string(c.t.szzQ6H), onClick: p },
         ],
         trackingProps: {
             impression: {
-                impressionName: r.ImpressionNames.USER_AGE_GATE_UNDERAGE,
+                impressionName: n.ImpressionNames.USER_AGE_GATE_UNDERAGE,
                 impressionProperties: { existing_user: !0 },
             },
         },

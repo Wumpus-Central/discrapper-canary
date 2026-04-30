@@ -1,138 +1,137 @@
-"use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(17928),
-    r = n(228366),
-    s = n(836039),
-    a = n(98318),
-    o = n(855918),
-    l = n(164956),
-    u = n(95701),
-    c = n(34457),
-    d = n(734057),
-    _ = n(696451),
-    f = n(317525),
-    h = n(71393),
-    p = n(287809),
-    E = n(652215);
-let m = {},
-    g = new Set();
-function A(e) {
+    l = n(228366),
+    a = n(836039),
+    r = n(98318),
+    s = n(855918),
+    o = n(164956),
+    d = n(95701),
+    u = n(34457),
+    c = n(734057),
+    h = n(696451),
+    E = n(317525),
+    A = n(71393),
+    _ = n(287809),
+    p = n(652215);
+let g = {},
+    f = new Set();
+function I(e) {
     let { guildId: t, role: n, isPreviewingRoles: i } = e;
     return (
-        !!(0, a.U)(n) &&
+        !!(0, r.U)(n) &&
         !!(
             i ||
-            (0, a.X)(n ?? void 0) ||
+            (0, r.X)(n ?? void 0) ||
             (function (e, t) {
                 if (null == e) return !1;
-                let n = p.default.getCurrentUser();
+                let n = _.default.getCurrentUser();
                 if (null == n) return !1;
-                let i = _.Ay.getMember(t, n.id);
+                let i = h.Ay.getMember(t, n.id);
                 return null != i && i.roles.includes(e.id);
             })(n, t)
         )
     );
 }
-function I(e, t) {
+function S(e, t) {
     if (
-        !t.features.has(E.GuildFeatures.CREATOR_MONETIZABLE) &&
-        !t.features.has(E.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)
+        !t.features.has(p.GuildFeatures.CREATOR_MONETIZABLE) &&
+        !t.features.has(p.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)
     )
         return !1;
-    let n = l.A.isViewingServerShop(t.id);
+    let n = o.A.isViewingServerShop(t.id);
     for (let i of Object.keys(e.permissionOverwrites)) {
-        let r = f.A.getRole(t.id, i);
-        if (!A({ guildId: t.id, role: r, isPreviewingRoles: n })) continue;
-        let s = e.permissionOverwrites[i];
-        if ((0, o.Uj)(e, s)) return !0;
+        let l = E.A.getRole(t.id, i);
+        if (!I({ guildId: t.id, role: l, isPreviewingRoles: n })) continue;
+        let a = e.permissionOverwrites[i];
+        if ((0, s.Uj)(e, a)) return !0;
     }
-    let i = f.A.getEveryoneRole(t),
-        r = !(0, c._m)(i, E.xBc.VIEW_CHANNEL),
-        s = (0, o.AN)(e, e.permissionOverwrites[t.id]);
-    if (r && !s) {
-        for (let e of f.A.getSortedRoles(t.id))
-            if (A({ guildId: t.id, role: e, isPreviewingRoles: n }) && (0, o.iR)(e)) return !0;
+    let i = E.A.getEveryoneRole(t),
+        l = !(0, u._m)(i, p.xBc.VIEW_CHANNEL),
+        a = (0, s.AN)(e, e.permissionOverwrites[t.id]);
+    if (l && !a) {
+        for (let e of E.A.getSortedRoles(t.id))
+            if (I({ guildId: t.id, role: e, isPreviewingRoles: n }) && (0, s.iR)(e)) return !0;
     }
     return !1;
 }
 function T(e, t) {
-    let n = m[e];
+    let n = g[e];
     if (null == n) return !1;
-    let i = d.A.getChannel(t);
+    let i = c.A.getChannel(t);
     if (null == i) return !1;
-    let r = h.A.getGuild(i.getGuildId());
-    if (null == r) return !1;
-    let s = n.has(t),
-        a = I(i, r);
-    return s !== a && (a ? n.add(t) : n.delete(t), !0);
+    let l = A.A.getGuild(i.getGuildId());
+    if (null == l) return !1;
+    let a = n.has(t),
+        r = S(i, l);
+    return a !== r && (r ? n.add(t) : n.delete(t), !0);
 }
-function S() {
-    (m = {}), g.clear();
-}
-function N(e) {
-    let { guild: t } = e;
-    delete m[t.id];
-}
-function y(e) {
-    let { guildId: t } = e;
-    delete m[t];
+function m() {
+    (g = {}), f.clear();
 }
 function C(e) {
+    let { guild: t } = e;
+    delete g[t.id];
+}
+function O(e) {
+    let { guildId: t } = e;
+    delete g[t];
+}
+function N(e) {
     let { channel: t } = e;
     return null != t.guild_id && T(t.guild_id, t.id);
 }
-class v extends i.Ay.Store {
+class y extends i.Ay.Store {
     static displayName = "GatedChannelStore";
     initialize() {
-        this.waitFor(d.A, _.Ay, f.A, h.A, l.A, p.default);
+        this.waitFor(c.A, h.Ay, E.A, A.A, o.A, _.default);
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
-        let n = m[e];
+        let n = g[e];
         return (
             null == n &&
                 (!(function (e) {
-                    let t = h.A.getGuild(e);
+                    let t = A.A.getGuild(e);
                     if (null == t) return;
-                    let n = (m[e] = new Set());
-                    if (!t.features.has(E.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) return;
-                    let i = d.A.getMutableGuildChannelsForGuild(e);
+                    let n = (g[e] = new Set());
+                    if (!t.features.has(p.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) return;
+                    let i = c.A.getMutableGuildChannelsForGuild(e);
                     for (let e in i) {
-                        let r = i[e];
-                        I(r, t) && n.add(r.id);
+                        let l = i[e];
+                        S(l, t) && n.add(l.id);
                     }
                 })(e),
-                (n = m[e])),
+                (n = g[e])),
             null != n && n.has(t)
         );
     }
     isChannelGatedAndVisible(e, t) {
-        return null != e && this.isChannelGated(e, t) && !g.has(e);
+        return null != e && this.isChannelGated(e, t) && !f.has(e);
     }
     isChannelOrThreadParentGated(e, t) {
         if (null == e) return !1;
         if (this.isChannelGated(e, t)) return !0;
-        let n = d.A.getChannel(t);
+        let n = c.A.getChannel(t);
         return (
-            !!(null != n && null != n.parent_id && u.Le.has(n?.type)) &&
+            !!(null != n && null != n.parent_id && d.Le.has(n?.type)) &&
             this.isChannelOrThreadParentGated(e, n.parent_id)
         );
     }
 }
-let O = new v(r.h, {
-    CONNECTION_OPEN: S,
-    OVERLAY_INITIALIZE: S,
-    CACHE_LOADED_LAZY: S,
-    GUILD_CREATE: N,
-    GUILD_UPDATE: N,
-    GUILD_DELETE: N,
-    GUILD_ROLE_CREATE: y,
-    GUILD_ROLE_UPDATE: y,
-    GUILD_ROLE_DELETE: y,
-    IMPERSONATE_UPDATE: y,
-    IMPERSONATE_STOP: y,
-    CHANNEL_CREATE: C,
-    CHANNEL_DELETE: C,
+let R = new y(l.h, {
+    CONNECTION_OPEN: m,
+    OVERLAY_INITIALIZE: m,
+    CACHE_LOADED_LAZY: m,
+    GUILD_CREATE: C,
+    GUILD_UPDATE: C,
+    GUILD_DELETE: C,
+    GUILD_ROLE_CREATE: O,
+    GUILD_ROLE_UPDATE: O,
+    GUILD_ROLE_DELETE: O,
+    IMPERSONATE_UPDATE: O,
+    IMPERSONATE_STOP: O,
+    CHANNEL_CREATE: N,
+    CHANNEL_DELETE: N,
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;
@@ -141,10 +140,10 @@ let O = new v(r.h, {
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: function (e) {
         let { guildId: t, restrictions: n } = e;
-        (0, s.Y5)(n) ? g.add(t) : g.delete(t);
+        (0, a.Y5)(n) ? f.add(t) : f.delete(t);
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function (e) {
         let { guildId: t } = e;
-        g.add(t);
+        f.add(t);
     },
 });

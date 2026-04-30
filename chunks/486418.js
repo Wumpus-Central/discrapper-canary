@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { P: () => u });
+n.d(t, { P: () => d });
 var i = n(702841),
-    r = n(554146),
-    s = n(826673),
-    a = n(440293),
-    o = n(576705),
-    l = n(652215);
-function u(e) {
-    let t = (0, s.JZ)(r.M.SERVER_SHOP_PHANTOM_PREVIEW),
-        n = (0, i.bG)([o.A], () => null != e && o.A.can(l.xBc.ADMINISTRATOR, e)),
-        u = e?.features.has(l.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) ?? !1,
-        c = (0, a.w)(e?.id),
-        d = [
-            l.GuildFeatures.CREATOR_MONETIZABLE,
-            l.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL,
-            l.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED,
+    a = n(554146),
+    r = n(826673),
+    s = n(440293),
+    l = n(576705),
+    o = n(652215);
+function d(e) {
+    let t = (0, r.JZ)(a.M.SERVER_SHOP_PHANTOM_PREVIEW),
+        n = (0, i.bG)([l.A], () => null != e && l.A.can(o.xBc.ADMINISTRATOR, e)),
+        d = e?.features.has(o.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) ?? !1,
+        c = (0, s.w)(e?.id),
+        _ = [
+            o.GuildFeatures.CREATOR_MONETIZABLE,
+            o.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL,
+            o.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED,
         ].some((t) => e?.features.has(t));
-    return null != e && n && !u && d && c && !t;
+    return null != e && n && !d && _ && c && !t;
 }

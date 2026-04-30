@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { C: () => s, k: () => r });
+n.d(t, { C: () => r, k: () => a });
 var i = n(228366);
-function r(e) {
+function a(e) {
     i.h.dispatch({ type: "STAGE_MUSIC_MUTE", muted: e });
 }
-function s(e) {
+function r(e) {
     i.h.dispatch({ type: "STAGE_MUSIC_PLAY", play: e });
 }

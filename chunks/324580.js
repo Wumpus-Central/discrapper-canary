@@ -1,31 +1,30 @@
-"use strict";
 n.d(t, {
-    FZ: () => T,
-    I9: () => E,
+    FZ: () => p,
+    I9: () => T,
     Iq: () => c,
-    J8: () => f,
-    O3: () => g,
-    OR: () => m,
-    R0: () => h,
-    Us: () => d,
-    VX: () => p,
-    WV: () => A,
-    ig: () => l,
-    o: () => _,
-    tO: () => N,
-    v: () => u,
-    wz: () => I,
+    J8: () => u,
+    O3: () => S,
+    OR: () => h,
+    R0: () => A,
+    Us: () => _,
+    VX: () => I,
+    WV: () => N,
+    ig: () => o,
+    o: () => E,
+    tO: () => O,
+    v: () => d,
+    wz: () => f,
 });
 var i,
+    a,
     r,
-    s,
-    a = n(927813),
-    o = n(375708);
-let l = 0,
-    u = 13,
+    s = n(927813),
+    l = n(985018);
+let o = 0,
+    d = 13,
     c = -1,
-    d = -2;
-var _ =
+    _ = -2;
+var E =
         (((i = {}).FEATURED = "featured"),
         (i.GAMING = "gaming"),
         (i.MUSIC = "music"),
@@ -34,34 +33,34 @@ var _ =
         (i.EDUCATION = "education"),
         (i.HUBS = "hubs"),
         i),
-    f =
-        (((r = {}).UNKNOWN = "unknown"),
-        (r.GUILDS_BAR = "guilds_bar"),
-        (r.RTC_PANEL = "rtc_panel"),
-        (r.PROFILE = "profile"),
-        (r.GAME_LINK = "game_link"),
-        (r.EMBED = "embed"),
-        r);
-let h = new Set(["hubs"]),
-    p = [],
-    E = "q",
-    m = "c",
-    g = "l",
-    A = 10 * a.A.Millis.MINUTE;
-var I =
-    (((s = {})[(s.Clans = -3)] = "Clans"),
-    (s[(s.Hub = d)] = "Hub"),
-    (s[(s.Communities = c)] = "Communities"),
-    (s[(s.Activity = 1)] = "Activity"),
-    (s[(s.Music = 2)] = "Music"),
-    (s[(s.Television = 3)] = "Television"),
-    (s[(s.Science = 5)] = "Science"),
-    (s[(s.Education = 6)] = "Education"),
-    s);
-let T = [1, 2, 3, 5, 6],
-    S = ["en-GB"];
-function N() {
-    return (0, o.getLanguages)()
-        .filter((e) => !S.includes(e.code))
-        .map((e) => ("en-US" === e.code ? { ...e, name: o.intl.string(o.t.LQLMGP) } : e));
+    u =
+        (((a = {}).UNKNOWN = "unknown"),
+        (a.GUILDS_BAR = "guilds_bar"),
+        (a.RTC_PANEL = "rtc_panel"),
+        (a.PROFILE = "profile"),
+        (a.GAME_LINK = "game_link"),
+        (a.EMBED = "embed"),
+        a);
+let A = new Set(["hubs"]),
+    I = [],
+    T = "q",
+    h = "c",
+    S = "l",
+    N = 10 * s.A.Millis.MINUTE;
+var f =
+    (((r = {})[(r.Clans = -3)] = "Clans"),
+    (r[(r.Hub = _)] = "Hub"),
+    (r[(r.Communities = c)] = "Communities"),
+    (r[(r.Activity = 1)] = "Activity"),
+    (r[(r.Music = 2)] = "Music"),
+    (r[(r.Television = 3)] = "Television"),
+    (r[(r.Science = 5)] = "Science"),
+    (r[(r.Education = 6)] = "Education"),
+    r);
+let p = [1, 2, 3, 5, 6],
+    m = ["en-GB"];
+function O() {
+    return (0, l.getLanguages)()
+        .filter((e) => !m.includes(e.code))
+        .map((e) => ("en-US" === e.code ? { ...e, name: l.intl.string(l.t.LQLMGP) } : e));
 }

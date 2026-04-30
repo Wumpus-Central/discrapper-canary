@@ -1,78 +1,77 @@
-"use strict";
-n.d(t, { A: () => g, m: () => m });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(534514),
-    l = n(696986),
-    u = n(939249),
-    c = n(834730),
-    d = n(847374),
-    _ = n(661531),
-    f = n(975571),
-    h = n(652215),
-    p = n(375708),
-    E = n(159607);
-let m = [
-    { getQuestion: () => p.intl.string(p.t.C4J8UB), getAnswer: () => p.intl.string(p.t.nhkk6k) },
+i.d(t, { A: () => h, m: () => A });
+var s = i(627968),
+    l = i(64700),
+    a = i(503698),
+    n = i.n(a),
+    r = i(534514),
+    c = i(696986),
+    o = i(939249),
+    d = i(834730),
+    u = i(847374),
+    m = i(661531),
+    T = i(975571),
+    g = i(652215),
+    x = i(985018),
+    f = i(159607);
+let A = [
+    { getQuestion: () => x.intl.string(x.t.C4J8UB), getAnswer: () => x.intl.string(x.t.nhkk6k) },
     {
-        getQuestion: () => p.intl.string(p.t.ai4ym2),
-        getAnswer: () => p.intl.format(p.t["8zlqlD"], { helpCenterUrl: f.A.getArticleURL(h.MVz.GUILD_BOOSTING_FAQ) }),
+        getQuestion: () => x.intl.string(x.t.ai4ym2),
+        getAnswer: () => x.intl.format(x.t["8zlqlD"], { helpCenterUrl: T.A.getArticleURL(g.MVz.GUILD_BOOSTING_FAQ) }),
     },
-    { getQuestion: () => p.intl.string(p.t.kMVGsC), getAnswer: () => p.intl.string(p.t["Vz/SCQ"]) },
-    { getQuestion: () => p.intl.string(p.t.kYmXWF), getAnswer: () => p.intl.string(p.t["+OURPp"]) },
-    { getQuestion: () => p.intl.string(p.t["LsX/vb"]), getAnswer: () => p.intl.string(p.t["3TeauK"]) },
-    { getQuestion: () => p.intl.string(p.t.fRlnXU), getAnswer: () => p.intl.string(p.t.bTRacj) },
-    { getQuestion: () => p.intl.string(p.t["8Mu5Q9"]), getAnswer: () => p.intl.string(p.t["2T5iPo"]) },
-    { getQuestion: () => p.intl.string(p.t["6EN+TZ"]), getAnswer: () => p.intl.string(p.t.NZax1u) },
-    { getQuestion: () => p.intl.string(p.t.f5B4EW), getAnswer: () => p.intl.string(p.t.Aje8Pb) },
+    { getQuestion: () => x.intl.string(x.t.kMVGsC), getAnswer: () => x.intl.string(x.t["Vz/SCQ"]) },
+    { getQuestion: () => x.intl.string(x.t.kYmXWF), getAnswer: () => x.intl.string(x.t["+OURPp"]) },
+    { getQuestion: () => x.intl.string(x.t["LsX/vb"]), getAnswer: () => x.intl.string(x.t["3TeauK"]) },
+    { getQuestion: () => x.intl.string(x.t.fRlnXU), getAnswer: () => x.intl.string(x.t.bTRacj) },
+    { getQuestion: () => x.intl.string(x.t["8Mu5Q9"]), getAnswer: () => x.intl.string(x.t["2T5iPo"]) },
+    { getQuestion: () => x.intl.string(x.t["6EN+TZ"]), getAnswer: () => x.intl.string(x.t.NZax1u) },
+    { getQuestion: () => x.intl.string(x.t.f5B4EW), getAnswer: () => x.intl.string(x.t.Aje8Pb) },
 ];
-function g(e) {
+function h(e) {
     let { className: t } = e,
-        [n, s] = r.useState(null),
-        [f, h] = r.useState(null);
-    return (0, i.jsxs)("div", {
-        className: a()(E.iE, t),
+        [i, a] = l.useState(null),
+        [T, g] = l.useState(null);
+    return (0, s.jsxs)("div", {
+        className: n()(f.iE, t),
         children: [
-            (0, i.jsx)(o.D, { className: E.R_, variant: "heading-xxl/semibold", children: p.intl.string(p.t.HPJ6Nj) }),
-            (0, i.jsx)(l.h, { size: 32 }),
-            (0, i.jsx)("ul", {
-                className: E.p_,
-                children: m.map((e, t) => {
-                    let r = n === t,
-                        o = f === t,
-                        l = r || o ? "text-default" : "text-muted";
-                    return (0, i.jsxs)(
-                        u.D,
+            (0, s.jsx)(r.D, { className: f.R_, variant: "heading-xxl/semibold", children: x.intl.string(x.t.HPJ6Nj) }),
+            (0, s.jsx)(c.h, { size: 32 }),
+            (0, s.jsx)("ul", {
+                className: f.p_,
+                children: A.map((e, t) => {
+                    let l = i === t,
+                        r = T === t,
+                        c = l || r ? "text-default" : "text-muted";
+                    return (0, s.jsxs)(
+                        o.D,
                         {
                             tag: "li",
-                            className: a()(E.Aw, { [E.$K]: r }),
-                            onClick: () => s((e) => (e === t ? null : t)),
-                            onMouseEnter: () => h(t),
-                            onMouseLeave: () => h(null),
+                            className: n()(f.Aw, { [f.$K]: l }),
+                            onClick: () => a((e) => (e === t ? null : t)),
+                            onMouseEnter: () => g(t),
+                            onMouseLeave: () => g(null),
                             children: [
-                                (0, i.jsxs)("div", {
-                                    className: E.k7,
+                                (0, s.jsxs)("div", {
+                                    className: f.k7,
                                     children: [
-                                        (0, i.jsx)(c.E, {
-                                            className: E.b1,
-                                            color: l,
+                                        (0, s.jsx)(d.E, {
+                                            className: f.b1,
+                                            color: c,
                                             variant: "heading-md/semibold",
                                             tag: "span",
                                             children: e.getQuestion(),
                                         }),
-                                        (0, i.jsx)(d.a, {
+                                        (0, s.jsx)(u.a, {
                                             size: "sm",
-                                            color: _.A.colors.INTERACTIVE_ICON_DEFAULT,
-                                            className: E.q4,
-                                            style: { transform: r ? "rotate(180deg)" : "rotate(0deg)" },
+                                            color: m.A.colors.INTERACTIVE_ICON_DEFAULT,
+                                            className: f.q4,
+                                            style: { transform: l ? "rotate(180deg)" : "rotate(0deg)" },
                                         }),
                                     ],
                                 }),
-                                r &&
-                                    (0, i.jsx)(c.E, {
-                                        className: E.ZF,
+                                l &&
+                                    (0, s.jsx)(d.E, {
+                                        className: f.ZF,
                                         color: "text-muted",
                                         variant: "text-sm/medium",
                                         children: e.getAnswer(),

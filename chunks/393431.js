@@ -1,12 +1,11 @@
-"use strict";
-var i = n(739305),
-    r = n(503199),
-    s = n(120394),
-    a = i.aTypedArray;
-(0, i.exportTypedArrayMethod)("at", function (e) {
-    var t = a(this),
-        n = r(t),
-        i = s(e),
-        o = i >= 0 ? i : n + i;
-    return o < 0 || o >= n ? void 0 : t[o];
+var n = e(739305),
+    o = e(503199),
+    a = e(120394),
+    i = n.aTypedArray;
+(0, n.exportTypedArrayMethod)("at", function (r) {
+    var t = i(this),
+        e = o(t),
+        n = a(r),
+        p = n >= 0 ? n : e + n;
+    return p < 0 || p >= e ? void 0 : t[p];
 });

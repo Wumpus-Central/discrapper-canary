@@ -6,7 +6,7 @@ var d = a(17928),
     l = a(192308),
     c = a(576705),
     r = a(652215),
-    s = a(375708);
+    s = a(985018);
 function p(e, n) {
     let p = (0, d.bG)([c.A], () => c.A.can(r.xBc.MANAGE_CHANNELS, e), [e]);
     return __OVERLAY__ || !p
@@ -27,8 +27,8 @@ function p(e, n) {
                           a.e("19193"),
                           a.e("7775"),
                           a.e("58608"),
-                          a.e("9431"),
                           a.e("37038"),
+                          a.e("9431"),
                       ]).then(a.bind(a, 113194));
                       return (a) =>
                           (0, t.jsx)(d, {

@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { U: () => p, n: () => E });
+n.d(t, { U: () => _, n: () => p });
 var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(785651),
-    l = n(717421),
-    u = n(866323),
-    c = n(597619),
-    d = n(872293);
-let _ = {
+    l = n(64700),
+    a = n(503698),
+    r = n.n(a),
+    s = n(785651),
+    o = n(717421),
+    d = n(866323),
+    u = n(597619),
+    c = n(872293);
+let h = {
         config: { friction: 50, tension: 900, mass: 1 },
         unique: !0,
         initial: { dotPosition: 1 },
@@ -17,23 +16,23 @@ let _ = {
         enter: { dotPosition: 1 },
         leave: { dotPosition: 0 },
     },
-    f = { config: { duration: 2400 }, from: { dotCycle: 2.8 }, reset: !0 };
-function h(e) {
+    E = { config: { duration: 2400 }, from: { dotCycle: 2.8 }, reset: !0 };
+function A(e) {
     let t = e % 2;
     return t > 1 ? 1 - (t - 1) : t;
 }
-let p = r.memo(function (e) {
-        let { dotRadius: t, dotPosition: n, fill: s = "currentColor", spacing: a = 2.5 } = e,
-            { focused: u } = (0, c.xb)(),
-            d = r.useRef(!0);
-        r.useEffect(() => () => void (d.current = !1), []);
-        let [_] = (0, l.z)(
+let _ = l.memo(function (e) {
+        let { dotRadius: t, dotPosition: n, fill: a = "currentColor", spacing: r = 2.5 } = e,
+            { focused: d } = (0, u.xb)(),
+            c = l.useRef(!0);
+        l.useEffect(() => () => void (c.current = !1), []);
+        let [h] = (0, o.z)(
                 () => ({
-                    ...f,
+                    ...E,
                     to: async (e) => {
                         let t = 2.8;
-                        for (; d.current; )
-                            u
+                        for (; c.current; )
+                            d
                                 ? ((t += 4), await e({ dotCycle: t, immediate: !1 }))
                                 : 2.8 !== t
                                   ? ((t = 2.8), await e({ dotCycle: t, immediate: !0 }))
@@ -41,28 +40,28 @@ let p = r.memo(function (e) {
                     },
                 }),
                 "animate-always",
-                [u],
+                [d],
             ),
-            p = (2 * t * 3 + (t / 4) * 2) / 2;
+            _ = (2 * t * 3 + (t / 4) * 2) / 2;
         return (0, i.jsx)(i.Fragment, {
             children: [0, 1, 2].map((e) => {
-                let r = 0.25 * e,
-                    l = t + t * a * e;
+                let l = 0.25 * e,
+                    o = t + t * r * e;
                 return (0, i.jsx)(
-                    o.animated.circle,
+                    s.animated.circle,
                     {
-                        cx: n ? n.to([0, 1], [p, l]) : l,
+                        cx: n ? n.to([0, 1], [_, o]) : o,
                         cy: t,
-                        r: _.dotCycle
-                            .to((e) => h(e - r))
+                        r: h.dotCycle
+                            .to((e) => A(e - l))
                             .to([0, 0.4, 0.8, 1], [0.8 * t, 0.8 * t, t, t])
-                            .to((e) => (u ? e : t)),
-                        fill: s,
+                            .to((e) => (d ? e : t)),
+                        fill: a,
                         style: {
-                            opacity: _.dotCycle
-                                .to((e) => h(e - r))
+                            opacity: h.dotCycle
+                                .to((e) => A(e - l))
                                 .to([0, 0.4, 0.8, 1], [0.3, 0.3, 1, 1])
-                                .to((e) => (u ? e : 1)),
+                                .to((e) => (d ? e : 1)),
                         },
                     },
                     e,
@@ -70,33 +69,33 @@ let p = r.memo(function (e) {
             }),
         });
     }),
-    E = r.memo(function (e) {
-        let { dotRadius: t, x: n, y: r, hide: s = !1, themed: l = !1, className: f, ref: h } = e,
-            { focused: E } = (0, c.xb)();
-        return (0, u.p)(
-            s,
-            { ..._, key: (e) => (e ? "true" : "false") },
-            E ? "animate-always" : "animate-never",
-        )((e, s, u) => {
-            let { dotPosition: c } = e,
-                { key: _ } = u;
-            return s
+    p = l.memo(function (e) {
+        let { dotRadius: t, x: n, y: l, hide: a = !1, themed: o = !1, className: E, ref: A } = e,
+            { focused: p } = (0, u.xb)();
+        return (0, d.p)(
+            a,
+            { ...h, key: (e) => (e ? "true" : "false") },
+            p ? "animate-always" : "animate-never",
+        )((e, a, d) => {
+            let { dotPosition: u } = e,
+                { key: h } = d;
+            return a
                 ? null
                 : (0, i.jsx)(
                       "svg",
                       {
-                          ref: h,
+                          ref: A,
                           x: n,
-                          y: r,
+                          y: l,
                           width: 2 * t * 3 + (t / 2) * 2,
                           height: 2 * t,
-                          className: a()(f, d.r, l ? d.S : null),
-                          children: (0, i.jsx)(o.animated.g, {
-                              style: { opacity: c.to((e) => Math.min(1, Math.max(e, 0))) },
-                              children: (0, i.jsx)(p, { dotRadius: t, dotPosition: c }),
+                          className: r()(E, c.r, o ? c.S : null),
+                          children: (0, i.jsx)(s.animated.g, {
+                              style: { opacity: u.to((e) => Math.min(1, Math.max(e, 0))) },
+                              children: (0, i.jsx)(_, { dotRadius: t, dotPosition: u }),
                           }),
                       },
-                      _,
+                      h,
                   );
         });
     });

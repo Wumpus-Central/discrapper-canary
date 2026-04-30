@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(426983),
-    r = n(176128);
-let s = new Set([i._.PARTNERED, i._.VERIFIED, i._.VERIFIED_AND_PARTNERED, i._.COMMUNITY, i._.DISCOVERABLE]);
-function a(e) {
-    if (null == e) return !1;
-    let t = (0, r.Jp)(e),
-        n = (0, i.K)(t);
-    return s.has(n);
+s.d(r, { A: () => n });
+var e = s(426983),
+    a = s(176128);
+let l = new Set([e._.PARTNERED, e._.VERIFIED, e._.VERIFIED_AND_PARTNERED, e._.COMMUNITY, e._.DISCOVERABLE]);
+function n(o) {
+    if (null == o) return !1;
+    let r = (0, a.Jp)(o),
+        s = (0, e.K)(r);
+    return l.has(s);
 }

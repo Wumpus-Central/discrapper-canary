@@ -1,150 +1,149 @@
-"use strict";
-n.d(t, { _: () => A });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s);
-function o(e) {
-    let { alt: t, ariaLabel: n, ariaHidden: r, role: s, width: a = 288, height: o = 162 } = e;
-    return (0, i.jsx)("img", {
-        style: { width: a, height: o },
+i.d(t, { _: () => b });
+var a = i(627968),
+    l = i(64700),
+    s = i(503698),
+    d = i.n(s);
+function r(e) {
+    let { alt: t, ariaLabel: i, ariaHidden: l, role: s, width: d = 288, height: r = 162 } = e;
+    return (0, a.jsx)("img", {
+        style: { width: d, height: r },
         src: "https://cdn.discordapp.com/assets/content/01fad351459d7599c15e3503bc14fadd01f8d18ffb2c66e064370504bd59ee82.svg",
         alt: t,
-        "aria-label": n,
-        "aria-hidden": r,
+        "aria-label": i,
+        "aria-hidden": l,
         role: s ?? "img",
     });
 }
-var l = n(187322),
-    u = n(939249),
-    c = n(834730),
-    d = n(264927),
-    _ = n(515718),
-    f = n(835517),
-    h = n(966697),
-    p = n(652215),
-    E = n(838541),
-    m = n(375708),
-    g = n(503117);
-let A = r.forwardRef((e, t) => {
-    var n, s, o, c;
-    let f,
+var n = i(187322),
+    c = i(939249),
+    h = i(834730),
+    u = i(264927),
+    o = i(515718),
+    m = i(835517),
+    x = i(966697),
+    p = i(652215),
+    g = i(838541),
+    f = i(985018),
+    R = i(503117);
+let b = l.forwardRef((e, t) => {
+    var i, s, r, h;
+    let m,
         {
-            className: A,
-            imageClassName: S,
-            readyState: N = p.Rv1.READY,
-            src: y,
-            placeholder: C,
-            placeholderVersion: v,
-            alt: O,
-            width: R,
-            height: b,
-            maxWidth: D = R,
-            maxHeight: L = b,
-            minWidth: w = 0,
-            minHeight: M = 0,
-            mediaLayoutType: P,
-            limitResponsiveWidth: x = !0,
-            accessory: U,
-            zoomable: k = !0,
-            original: G,
-            children: F = (e) => {
-                let { src: t, size: n, alt: r, className: s, mediaLayoutType: a } = e;
-                return (0, i.jsx)("img", {
+            className: b,
+            imageClassName: j,
+            readyState: y = p.Rv1.READY,
+            src: N,
+            placeholder: I,
+            placeholderVersion: S,
+            alt: k,
+            width: E,
+            height: W,
+            maxWidth: A = E,
+            maxHeight: O = W,
+            minWidth: C = 0,
+            minHeight: G = 0,
+            mediaLayoutType: H,
+            limitResponsiveWidth: L = !0,
+            accessory: $,
+            zoomable: D = !0,
+            original: M,
+            children: P = (e) => {
+                let { src: t, size: i, alt: l, className: s, mediaLayoutType: d } = e;
+                return (0, a.jsx)("img", {
                     className: s ?? void 0,
-                    alt: r ?? m.intl.string(m.t.X4IxWL),
+                    alt: l ?? f.intl.string(f.t.X4IxWL),
                     src: t,
-                    style: T(n, a),
+                    style: w(i, d),
                 });
             },
-            renderAccessory: V,
-            onClick: B,
-            tabIndex: H,
-            dataSafeSrc: j,
-            useFullWidth: Y = !1,
-            srcIsAnimated: W,
-            disableLoadingSpinner: K = !1,
+            renderAccessory: T,
+            onClick: V,
+            tabIndex: X,
+            dataSafeSrc: _,
+            useFullWidth: F = !1,
+            srcIsAnimated: Q,
+            disableLoadingSpinner: Y = !1,
             ...z
         } = e,
-        $ = r.useRef(null),
-        q = r.useRef(null);
-    if (1 === R && 1 === b) return null;
-    let Z = (0, _.Uj)({ width: R, height: b, maxWidth: D, maxHeight: L, minWidth: w, minHeight: M }),
-        X = 0 !== Z.width ? Z.width / Z.height : 1;
-    "" !== y && N !== p.Rv1.ERROR
-        ? (f = F({ src: y, size: Z, alt: O, className: S, mediaLayoutType: P }))
-        : N !== p.Rv1.LOADING && (f = (0, i.jsx)(I, { size: Z, mediaLayoutType: P, alt: O })),
-        (f = (0, i.jsx)(h.y, {
-            disableSpinner: K,
-            readyState: N,
-            aspectRatio: X,
-            placeholder: C,
-            placeholderVersion: v,
-            placeholderStyle: T(Z, P),
-            children: f,
+        K = l.useRef(null),
+        U = l.useRef(null);
+    if (1 === E && 1 === W) return null;
+    let q = (0, o.Uj)({ width: E, height: W, maxWidth: A, maxHeight: O, minWidth: C, minHeight: G }),
+        B = 0 !== q.width ? q.width / q.height : 1;
+    "" !== N && y !== p.Rv1.ERROR
+        ? (m = P({ src: N, size: q, alt: k, className: j, mediaLayoutType: H }))
+        : y !== p.Rv1.LOADING && (m = (0, a.jsx)(v, { size: q, mediaLayoutType: H, alt: k })),
+        (m = (0, a.jsx)(x.y, {
+            disableSpinner: Y,
+            readyState: y,
+            aspectRatio: B,
+            placeholder: I,
+            placeholderVersion: S,
+            placeholderStyle: w(q, H),
+            children: m,
         }));
-    let Q = null != V ? V() : null;
+    let J = null != T ? T() : null;
     return (
-        (Q = Q ?? U),
-        (0, i.jsx)(l.vN, {
-            ringTarget: $,
-            focusTarget: q,
-            children: (0, i.jsxs)("div", {
+        (J = J ?? $),
+        (0, a.jsx)(n.vN, {
+            ringTarget: K,
+            focusTarget: U,
+            children: (0, a.jsxs)("div", {
                 ref: t,
-                className: a()("imageWrapper", g.h4, { [g.j3]: k, [g.LF]: N !== p.Rv1.READY, [g.vk]: null != B }, A),
+                className: d()("imageWrapper", R.h4, { [R.j3]: D, [R.LF]: y !== p.Rv1.READY, [R.vk]: null != V }, b),
                 style:
-                    ((n = Z),
-                    (s = x),
-                    (o = Y),
-                    (c = P) === E.dG.MOSAIC
+                    ((i = q),
+                    (s = L),
+                    (r = F),
+                    (h = H) === g.dG.MOSAIC
                         ? {
                               display: "block",
                               maxHeight: "inherit",
                               margin: "auto",
-                              width: o ? "100%" : n.width,
+                              width: r ? "100%" : i.width,
                               height: "100%",
                           }
-                        : c === E.dG.RESPONSIVE
-                          ? { maxWidth: s ? n.width : void 0, width: "100%", aspectRatio: `${n.width} / ${n.height}` }
-                          : n),
+                        : h === g.dG.RESPONSIVE
+                          ? { maxWidth: s ? i.width : void 0, width: "100%", aspectRatio: `${i.width} / ${i.height}` }
+                          : i),
                 ...z,
                 children: [
-                    null != G &&
-                        (0, i.jsx)("a", {
+                    null != M &&
+                        (0, a.jsx)("a", {
                             tabIndex: -1,
-                            onClick: B,
+                            onClick: V,
                             "aria-hidden": !0,
-                            className: g.mt,
-                            href: G,
-                            ref: $,
+                            className: R.mt,
+                            href: M,
+                            ref: K,
                             "data-role": "img",
-                            "data-safe-src": j ?? y,
+                            "data-safe-src": _ ?? N,
                         }),
-                    null != B
-                        ? (0, i.jsx)(u.D, {
-                              className: g.w8,
-                              tabIndex: H ?? 0,
-                              onClick: B,
-                              "aria-label": O ?? m.intl.string(m.t.X4IxWL),
-                              "aria-describedby": d.l2,
-                              innerRef: q,
+                    null != V
+                        ? (0, a.jsx)(c.D, {
+                              className: R.w8,
+                              tabIndex: X ?? 0,
+                              onClick: V,
+                              "aria-label": k ?? f.intl.string(f.t.X4IxWL),
+                              "aria-describedby": u.l2,
+                              innerRef: U,
                               focusProps: { enabled: !1 },
-                              children: f,
+                              children: m,
                           })
-                        : f,
-                    null != Q ? (0, i.jsx)("div", { className: g.mQ, children: Q }) : null,
+                        : m,
+                    null != J ? (0, a.jsx)("div", { className: R.mQ, children: J }) : null,
                 ],
             }),
         })
     );
 });
-function I(e) {
-    let { size: t, mediaLayoutType: n, alt: r } = e;
-    return (0, i.jsxs)("div", {
-        className: g.x5,
+function v(e) {
+    let { size: t, mediaLayoutType: i, alt: l } = e;
+    return (0, a.jsxs)("div", {
+        className: R.x5,
         style: (function (e, t) {
             switch (t) {
-                case E.dG.MOSAIC:
+                case g.dG.MOSAIC:
                     return {
                         width: "100%",
                         height: "100%",
@@ -152,44 +151,44 @@ function I(e) {
                         display: "flex",
                         maxHeight: "inherit",
                     };
-                case E.dG.RESPONSIVE:
-                    return { ...S(e), display: "flex" };
+                case g.dG.RESPONSIVE:
+                    return { ...j(e), display: "flex" };
                 default:
                     return e;
             }
-        })(t, n),
+        })(t, i),
         children: [
-            (0, i.jsx)("div", {
-                className: g.QM,
-                children: (0, i.jsx)(o, { alt: r ?? m.intl.string(m.t.X4IxWL), height: "auto" }),
+            (0, a.jsx)("div", {
+                className: R.QM,
+                children: (0, a.jsx)(r, { alt: l ?? f.intl.string(f.t.X4IxWL), height: "auto" }),
             }),
-            (0, i.jsx)(c.E, {
-                className: g.b4,
+            (0, a.jsx)(h.E, {
+                className: R.b4,
                 variant: "text-sm/medium",
                 color: "text-subtle",
-                children: m.intl.string(m.t.sAfT1K),
+                children: f.intl.string(f.t.sAfT1K),
             }),
         ],
     });
 }
-function T(e, t) {
+function w(e, t) {
     switch (t) {
-        case E.dG.MOSAIC:
+        case g.dG.MOSAIC:
             return {
                 display: "block",
                 objectFit: "cover",
                 minWidth: "100%",
                 minHeight: "100%",
-                maxWidth: 1 === (0, f.A)() ? "calc(100% + 1px)" : "100%",
+                maxWidth: 1 === (0, m.A)() ? "calc(100% + 1px)" : "100%",
             };
-        case E.dG.RESPONSIVE:
-            return S(e);
+        case g.dG.RESPONSIVE:
+            return j(e);
         default:
             return e;
     }
 }
-function S(e) {
-    let { width: t, height: n } = e;
-    return { maxWidth: t, maxHeight: n, width: "100%", display: "block", aspectRatio: `${t} / ${n}` };
+function j(e) {
+    let { width: t, height: i } = e;
+    return { maxWidth: t, maxHeight: i, width: "100%", display: "block", aspectRatio: `${t} / ${i}` };
 }
-A.displayName = "Image";
+b.displayName = "Image";

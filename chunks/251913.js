@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { QR: () => h, b: () => f, oc: () => _ });
-var i,
+n.d(t, { QR: () => p, b: () => E, oc: () => C });
+var o,
     r = n(64700),
-    s = n(17928),
-    a = n(451988),
-    o = n(753390),
-    l = n(587626),
-    u = n(166532),
-    c = n(566980),
+    a = n(17928),
+    i = n(451988),
+    l = n(323082),
+    u = n(446458),
+    s = n(166532),
+    _ = n(566980),
     d = n(153084),
-    _ = (((i = {})[(i.PENDING = 1)] = "PENDING"), (i[(i.ERROR = 2)] = "ERROR"), (i[(i.NONE = 3)] = "NONE"), i);
-function f(e, t, n, i) {
-    let s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        a = arguments.length > 5 ? arguments[5] : void 0;
+    C = (((o = {})[(o.PENDING = 1)] = "PENDING"), (o[(o.ERROR = 2)] = "ERROR"), (o[(o.NONE = 3)] = "NONE"), o);
+function E(e, t, n, o) {
+    let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        i = arguments.length > 5 ? arguments[5] : void 0;
     r.useEffect(() => {
         null != e &&
-            (1 === t && e !== u.pn.AWAITING_AUTHENTICATION
-                ? n(u.pn.AWAITING_AUTHENTICATION)
-                : e === u.pn.AWAITING_AUTHENTICATION &&
+            (1 === t && e !== s.pn.AWAITING_AUTHENTICATION
+                ? n(s.pn.AWAITING_AUTHENTICATION)
+                : e === s.pn.AWAITING_AUTHENTICATION &&
                   (2 === t
-                      ? n(u.pn.REVIEW)
-                      : 3 === t && (s ? (null != a ? a() : n(u.pn.REVIEW)) : (i(c.h.COMPLETED), n(u.pn.CONFIRM)))));
-    }, [e, t, n, i, s, a]);
+                      ? n(s.pn.REVIEW)
+                      : 3 === t && (a ? (null != i ? i() : n(s.pn.REVIEW)) : (o(_.h.COMPLETED), n(s.pn.CONFIRM)))));
+    }, [e, t, n, o, a, i]);
 }
-function h(e) {
-    let t = (0, s.bG)([d.A], () => d.A.awaitingPaymentId),
-        n = (0, s.bG)([l.A], () => l.A.isConnected()),
-        i = r.useRef(new a.IX());
+function p(e) {
+    let t = (0, a.bG)([d.A], () => d.A.awaitingPaymentId),
+        n = (0, a.bG)([u.A], () => u.A.isConnected()),
+        o = r.useRef(new i.IX());
     r.useEffect(() => {
-        n || null == t || 1 !== e ? i.current.stop() : i.current.start(5e3, () => (0, o.TK)(t));
+        n || null == t || 1 !== e ? o.current.stop() : o.current.start(5e3, () => (0, l.TK)(t));
     }, [t, e, n]);
 }

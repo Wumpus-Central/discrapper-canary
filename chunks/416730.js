@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => r });
 var i = n(839214);
-let r = Object.freeze({ query: "", searchBarState: n(488995).GlobalDiscoverySearchBarState.DEFAULT }),
-    s = (0, i.D)(() => r);
+let a = Object.freeze({ query: "", searchBarState: n(488995).GlobalDiscoverySearchBarState.DEFAULT }),
+    r = (0, i.D)(() => a);

@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { K: () => r });
+n.d(t, { K: () => a });
 var i,
-    r =
+    a =
         (((i = {}).APP_CRASHED = "app_crashed"),
         (i.SOCKET_CRASHED = "socket_crashed"),
         (i.MESSAGE_REQUEST_VIEW = "message_request_view"),

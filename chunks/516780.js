@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { oH: () => s, vz: () => r });
-var i = n(723702);
+n.d(t, { oH: () => a, vz: () => r });
+var o = n(723702);
 let r = null;
-function s() {
-    return (0, i.isAndroid)(), null;
+function a() {
+    return (0, o.isAndroid)(), null;
 }

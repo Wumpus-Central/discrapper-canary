@@ -1,112 +1,112 @@
-t.d(l, { A: () => N });
-var n = t(627968),
-    i = t(64700),
-    a = t(17928),
-    s = t(834730),
-    r = t(781696),
-    u = t(997590),
-    c = t(107773),
-    d = t(9994),
-    o = t(107123),
-    m = t(86376),
-    g = t(534400),
-    x = t(773669),
-    h = t(299091),
-    j = t(935208),
-    p = t(652215),
-    A = t(375708),
-    v = t(963120);
-function N(e) {
-    let { guild: l, invite: t, discoveryGuild: N, showGuildTag: _ = !1, highContrast: f = !1, hideEnglish: E = !1 } = e,
-        y = t.approximate_presence_count ?? 0,
-        S = t.approximate_member_count ?? 0,
-        b = (0, a.bG)([x.default], () => x.default.locale),
-        C = (0, o.P)(j.default.extractTimestamp(l.id), b),
-        L = (0, a.bG)([u.A], () =>
-            N?.primary_category_id != null ? u.A.getCategoryName(N.primary_category_id) : null,
+l.d(a, { A: () => v });
+var s = l(627968),
+    t = l(64700),
+    i = l(17928),
+    n = l(834730),
+    r = l(781696),
+    d = l(997590),
+    o = l(57991),
+    c = l(9994),
+    m = l(107123),
+    h = l(86376),
+    u = l(534400),
+    x = l(773669),
+    g = l(299091),
+    p = l(935208),
+    j = l(652215),
+    A = l(985018),
+    N = l(963120);
+function v(e) {
+    let { guild: a, invite: l, discoveryGuild: v, showGuildTag: f = !1, highContrast: b = !1, hideEnglish: y = !1 } = e,
+        C = l.approximate_presence_count ?? 0,
+        L = l.approximate_member_count ?? 0,
+        _ = (0, i.bG)([x.default], () => x.default.locale),
+        E = (0, m.P)(p.default.extractTimestamp(a.id), _),
+        k = (0, i.bG)([d.A], () =>
+            v?.primary_category_id != null ? d.A.getCategoryName(v.primary_category_id) : null,
         ),
-        T = l.premiumTier ?? p.TVA.NONE,
-        R = T !== p.TVA.NONE,
-        k = l.preferredLocale ?? N?.preferred_locale ?? null,
-        I = i.useMemo(() => {
-            if ("en-US" === k) return A.intl.string(A.t.LQLMGP);
-            let e = (0, A.getAvailableLocales)().find((e) => e.value === k);
-            return null != e ? A.intl.string(e.localizedName) : k;
-        }, [k]),
-        z = ["en-US", "en-GB"].includes(k ?? ""),
-        F = null != k && "" !== k && !(E && z),
-        P = null != L,
-        D = F || P || R,
-        M = P || R,
-        G = (0, a.bG)([h.A], () => h.A.getInvite(t.code));
-    if (null == G) return null;
-    let w = (0, d.oO)(G),
-        O = f ? "text-default" : "text-subtle";
-    return (0, n.jsxs)("div", {
-        className: v.hn,
+        R = a.premiumTier ?? j.TVA.NONE,
+        G = R !== j.TVA.NONE,
+        O = a.preferredLocale ?? v?.preferred_locale ?? null,
+        S = t.useMemo(() => {
+            if ("en-US" === O) return A.intl.string(A.t.LQLMGP);
+            let e = (0, A.getAvailableLocales)().find((e) => e.value === O);
+            return null != e ? A.intl.string(e.localizedName) : O;
+        }, [O]),
+        w = ["en-US", "en-GB"].includes(O ?? ""),
+        I = null != O && "" !== O && !(y && w),
+        M = null != k,
+        T = I || M || G,
+        U = M || G,
+        z = (0, i.bG)([g.A], () => g.A.getInvite(l.code));
+    if (null == z) return null;
+    let Q = (0, c.oO)(z),
+        P = b ? "text-default" : "text-subtle";
+    return (0, s.jsxs)("div", {
+        className: N.hn,
         children: [
-            (0, n.jsxs)("div", {
-                className: v.S7,
+            (0, s.jsxs)("div", {
+                className: N.S7,
                 children: [
-                    (0, n.jsx)(s.E, {
+                    (0, s.jsx)(n.E, {
                         tag: "span",
                         variant: "heading-xl/semibold",
                         color: "text-strong",
-                        children: l.name,
+                        children: a.name,
                     }),
-                    (0, n.jsx)(c.A, {
-                        guild: l,
+                    (0, s.jsx)(o.A, {
+                        guild: a,
                         tooltipPosition: "bottom",
                         size: 18,
                         tooltipColor: r.ST.Colors.PRIMARY,
                     }),
-                    _ &&
-                        w?.tag != null &&
-                        w?.badgeHash != null &&
-                        (0, n.jsx)(g.o9, {
-                            guildId: l.id,
-                            guildTag: w?.tag ?? void 0,
-                            guildBadge: w.badgeHash,
+                    f &&
+                        Q?.tag != null &&
+                        Q?.badgeHash != null &&
+                        (0, s.jsx)(u.o9, {
+                            guildId: a.id,
+                            guildTag: Q?.tag ?? void 0,
+                            guildBadge: Q.badgeHash,
                             inline: !1,
                         }),
                 ],
             }),
-            (0, n.jsx)(m.X, { onlineCount: y, memberCount: S, className: v.He, highContrast: f }),
-            (0, n.jsxs)("div", {
-                className: v.ov,
+            (0, s.jsx)(h.X, { onlineCount: C, memberCount: L, className: N.He, highContrast: b }),
+            (0, s.jsxs)("div", {
+                className: N.ov,
                 children: [
-                    null != C &&
-                        (0, n.jsxs)(n.Fragment, {
+                    null != E &&
+                        (0, s.jsxs)(s.Fragment, {
                             children: [
-                                (0, n.jsx)(s.E, {
+                                (0, s.jsx)(n.E, {
                                     tag: "span",
                                     variant: "text-sm/normal",
-                                    color: O,
-                                    children: A.intl.format(A.t.zb2Q56, { createdAtDate: C }),
+                                    color: P,
+                                    children: A.intl.format(A.t.zb2Q56, { createdAtDate: E }),
                                 }),
-                                D && (0, n.jsx)("span", { className: v.LO, "aria-hidden": !0 }),
+                                T && (0, s.jsx)("span", { className: N.LO, "aria-hidden": !0 }),
                             ],
                         }),
-                    F &&
-                        (0, n.jsxs)(n.Fragment, {
+                    I &&
+                        (0, s.jsxs)(s.Fragment, {
                             children: [
-                                (0, n.jsx)(s.E, { tag: "span", variant: "text-sm/normal", color: O, children: I }),
-                                M && (0, n.jsx)("span", { className: v.LO, "aria-hidden": !0 }),
+                                (0, s.jsx)(n.E, { tag: "span", variant: "text-sm/normal", color: P, children: S }),
+                                U && (0, s.jsx)("span", { className: N.LO, "aria-hidden": !0 }),
                             ],
                         }),
-                    P &&
-                        (0, n.jsxs)(n.Fragment, {
+                    M &&
+                        (0, s.jsxs)(s.Fragment, {
                             children: [
-                                (0, n.jsx)(s.E, { tag: "span", variant: "text-sm/normal", color: O, children: L }),
-                                R && (0, n.jsx)("span", { className: v.LO, "aria-hidden": !0 }),
+                                (0, s.jsx)(n.E, { tag: "span", variant: "text-sm/normal", color: P, children: k }),
+                                G && (0, s.jsx)("span", { className: N.LO, "aria-hidden": !0 }),
                             ],
                         }),
-                    R &&
-                        (0, n.jsx)(s.E, {
+                    G &&
+                        (0, s.jsx)(n.E, {
                             tag: "span",
                             variant: "text-sm/normal",
-                            color: O,
-                            children: A.intl.format(A.t.hmdOwf, { tier: T }),
+                            color: P,
+                            children: A.intl.format(A.t.hmdOwf, { tier: R }),
                         }),
                 ],
             }),

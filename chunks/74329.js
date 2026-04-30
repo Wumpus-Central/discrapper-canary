@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => E });
 var i = n(627968);
 n(64700);
-var r = n(17928),
-    s = n(192308),
-    a = n(477782),
-    o = n(695366),
-    l = n(652896),
-    u = n(834757),
-    c = n(495544),
-    d = n(116956),
-    _ = n(375708);
-function f(e, t, f) {
-    let h = (0, u.AO)(e),
-        p = (0, r.bG)([c.default], () => c.default.getId());
+var l = n(17928),
+    a = n(192308),
+    r = n(477782),
+    s = n(695366),
+    o = n(652896),
+    d = n(834757),
+    u = n(495544),
+    c = n(116956),
+    h = n(985018);
+function E(e, t, E) {
+    let A = (0, d.AO)(e),
+        _ = (0, l.bG)([u.default], () => u.default.getId());
     if (null == e) return null;
-    let E = (0, l._z)(e),
-        m = d.A.getVideoStats(E) ?? {},
-        g = {
-            media_session_id: d.A.getMediaSessionId(E),
-            rtc_connection_id: d.A.getRtcConnectionId(E),
-            stream_region: d.A.getRegion(E),
-            max_viewers: d.A.getMaxViewers(E),
-            ...m,
+    let p = (0, o._z)(e),
+        g = c.A.getVideoStats(p) ?? {},
+        f = {
+            media_session_id: c.A.getMediaSessionId(p),
+            rtc_connection_id: c.A.getRtcConnectionId(p),
+            stream_region: c.A.getRegion(p),
+            max_viewers: c.A.getMaxViewers(p),
+            ...g,
         };
-    return (0, i.jsx)(a.Dr, {
+    return (0, i.jsx)(r.Dr, {
         id: "report-stream-problem",
         color: "danger",
-        label: _.intl.string(_.t.sdnCxV),
+        label: h.intl.string(h.t.sdnCxV),
         action: () => {
-            f?.(),
+            E?.(),
                 null != e &&
-                    (0, s.openModalLazy)(async () => {
+                    (0, a.openModalLazy)(async () => {
                         let { default: t } = await Promise.all([n.e("17171"), n.e("86889")]).then(n.bind(n, 292208));
                         return (n) =>
                             (0, i.jsx)(t, {
                                 stream: e,
-                                streamApplication: h,
-                                isStreamer: p === e?.ownerId,
-                                analyticsData: g,
+                                streamApplication: A,
+                                isStreamer: _ === e?.ownerId,
+                                analyticsData: f,
                                 ...n,
                             });
                     });
         },
-        icon: o.E,
-        leadingAccessory: { type: "icon", icon: o.E },
+        icon: s.E,
+        leadingAccessory: { type: "icon", icon: s.E },
     });
 }

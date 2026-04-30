@@ -1,55 +1,54 @@
-"use strict";
-n.d(t, { A: () => _ });
-var i = n(17928),
+n.d(t, { A: () => C });
+var o = n(17928),
     r = n(228366),
-    s = n(845584);
-let a = null,
-    o = null,
-    l = null;
-function u(e) {
+    a = n(845584);
+let i = null,
+    l = null,
+    u = null;
+function s(e) {
     let { error: t } = e;
-    a = t;
+    i = t;
 }
-function c() {
-    a = null;
+function _() {
+    i = null;
 }
-class d extends i.Ay.Store {
+class d extends o.Ay.Store {
     static displayName = "PremiumPaymentModalStore";
     get paymentError() {
-        return a;
+        return i;
     }
     getGiftCode(e) {
-        return e === l ? o : null;
+        return e === u ? l : null;
     }
 }
-let _ = new d(r.h, {
-    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: u,
-    PREMIUM_PAYMENT_UPDATE_FAIL: u,
+let C = new d(r.h, {
+    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: s,
+    PREMIUM_PAYMENT_UPDATE_FAIL: s,
     PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function () {
-        c();
+        _();
     },
-    PREMIUM_PAYMENT_UPDATE_SUCCESS: c,
-    PREMIUM_PAYMENT_ERROR_CLEAR: c,
+    PREMIUM_PAYMENT_UPDATE_SUCCESS: _,
+    PREMIUM_PAYMENT_ERROR_CLEAR: _,
     BRAINTREE_TOKENIZE_PAYPAL_FAIL: function (e) {
         let { message: t } = e;
-        a = new s.Ey(t);
+        i = new a.Ey(t);
     },
     BRAINTREE_TOKENIZE_VENMO_FAIL: function (e) {
         let { message: t } = e;
-        a = new s.Ey(t);
+        i = new a.Ey(t);
     },
     SKU_PURCHASE_SUCCESS: function (e) {
-        (o = e.giftCode), (l = e.skuId);
+        (l = e.giftCode), (u = e.skuId);
     },
     SKU_PURCHASE_FAIL: function (e) {
-        a = e.error;
+        i = e.error;
     },
     SKU_PURCHASE_AWAIT_CONFIRMATION: function (e) {
-        e.isGift && (l = e.skuId);
+        e.isGift && (u = e.skuId);
     },
     GIFT_CODE_CREATE: function (e) {
         let { giftCode: t } = e;
-        if (0 !== t.uses || t.sku_id !== l) return !1;
-        o = t.code;
+        if (0 !== t.uses || t.sku_id !== u) return !1;
+        l = t.code;
     },
 });

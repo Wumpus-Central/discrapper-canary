@@ -1,38 +1,37 @@
-"use strict";
-n.d(t, { A: () => c }), n(321073);
+n.d(t, { A: () => u }), n(321073);
 var i = n(17928),
-    r = n(228366),
-    s = n(320095);
-let a = new Map();
-function o() {
-    a = new Map();
+    l = n(228366),
+    a = n(320095);
+let r = new Map();
+function s() {
+    r = new Map();
 }
-let l = [];
-class u extends i.Ay.Store {
+let o = [];
+class d extends i.Ay.Store {
     static displayName = "SearchRecentMessageStore";
     getRecentMessageAuthorIds(e) {
-        return a.get(e) ?? l;
+        return r.get(e) ?? o;
     }
 }
-let c = new u(r.h, {
+let u = new d(l.h, {
     SEARCH_MESSAGES_SUCCESS: function (e) {
         let { guildId: t, data: n } = e;
         if (null == t) return !1;
         let i = !1,
-            r = [...(a.get(t) ?? [])],
-            o = new Set(r);
+            l = [...(r.get(t) ?? [])],
+            s = new Set(l);
         return (
             n.forEach((e) => {
                 e.messages.forEach((e) => {
                     let [t] = e,
-                        n = (0, s.rh)(t);
-                    !o.has(n.author.id) && o.size < 15 && (o.add(n.author.id), r.push(n.author.id), (i = !0));
+                        n = (0, a.rh)(t);
+                    !s.has(n.author.id) && s.size < 15 && (s.add(n.author.id), l.push(n.author.id), (i = !0));
                 });
             }),
-            i && a.set(t, r),
+            i && r.set(t, l),
             i
         );
     },
-    SEARCH_RECENT_MESSAGES_CLEAR: o,
-    CONNECTION_OPEN: o,
+    SEARCH_RECENT_MESSAGES_CLEAR: s,
+    CONNECTION_OPEN: s,
 });
