@@ -1079,7 +1079,7 @@ let tR = (0, d.createContext)({
                 let { handleClose: t } = e;
                 ((e) => {
                     let { handleClose: t } = e,
-                        { purchaseState: n } = (0, E.P5)();
+                        n = (0, M.t4)((e) => e.purchaseState);
                     (0, d.useEffect)(() => {
                         n === tm.h.COMPLETED && t();
                     }, [n, t]);
@@ -1109,7 +1109,7 @@ let tR = (0, d.createContext)({
                                 orbBalanceToDisplay: C,
                                 onClickCheckout: p,
                                 showCollectiblesDiscountWarning: m,
-                                errorMessage: T,
+                                errorMessage: E,
                             } = ((e) => {
                                 let {
                                         skuId: t,
@@ -1119,8 +1119,10 @@ let tR = (0, d.createContext)({
                                         analyticsLocations: r,
                                         analyticsSourceLocation: s,
                                     } = e,
-                                    a = (0, M.t4)((e) => e.selectedSkuId),
-                                    { setPurchaseState: o } = (0, E.P5)(),
+                                    { selectedSkuId: a, setPurchaseState: o } = (0, M.t4)((e) => ({
+                                        selectedSkuId: e.selectedSkuId,
+                                        setPurchaseState: e.setPurchaseState,
+                                    })),
                                     u = (0, tE.gN)(),
                                     c = (0, d.useRef)(u),
                                     { emitOrbCheckoutPaymentFlowEvent: C } = (0, tT.O)({
@@ -1145,7 +1147,7 @@ let tR = (0, d.createContext)({
                                             });
                                     }, [n, o, u, C]),
                                     m = c.current ?? u,
-                                    T = null != i ? i.orbPriceAmount : null;
+                                    E = null != i ? i.orbPriceAmount : null;
                                 return {
                                     isStepLoading: null == i,
                                     showCollectiblesDiscountWarning: (0, eE.vw)({ skuId: t, isOrbsPurchase: !0 }),
@@ -1160,7 +1162,7 @@ let tR = (0, d.createContext)({
                                                     : B.intl.string(B.t.fqJZ11),
                                         [l],
                                     ),
-                                    orbPriceAmount: T,
+                                    orbPriceAmount: E,
                                     orbBalanceToDisplay: m,
                                     onClickCheckout: p,
                                     selectedSkuId: a,
@@ -1173,12 +1175,12 @@ let tR = (0, d.createContext)({
                                 orbRedemptionError: a,
                                 onRedeemVirtualCurrency: o,
                             }),
-                            _ = (0, V.bG)([eU.A], () => eU.A.get(t), [t]),
-                            A = (0, to.u)(_?.applicationId),
+                            T = (0, V.bG)([eU.A], () => eU.A.get(t), [t]),
+                            _ = (0, to.u)(T?.applicationId),
                             {
-                                disabled: O,
-                                tooltipText: h,
-                                text: S,
+                                disabled: A,
+                                tooltipText: O,
+                                text: h,
                             } = ((e) => {
                                 let { orbBalance: t, orbPriceAmount: n, isInTestMode: l = !1 } = e,
                                     { disabled: i, tooltipText: r } = (0, d.useMemo)(
@@ -1191,34 +1193,34 @@ let tR = (0, d.createContext)({
                                         [n, t, l],
                                     );
                                 return { disabled: i, tooltipText: r, text: ty() };
-                            })({ orbBalance: C, orbPriceAmount: c, isInTestMode: A }),
-                            I = (0, d.useMemo)(
-                                () => ({ onClick: p, loading: s, text: S, disabled: O, tooltipText: h }),
-                                [p, s, S, O, h],
+                            })({ orbBalance: C, orbPriceAmount: c, isInTestMode: _ }),
+                            S = (0, d.useMemo)(
+                                () => ({ onClick: p, loading: s, text: h, disabled: A, tooltipText: O }),
+                                [p, s, h, A, O],
                             ),
-                            x = m ? B.intl.format(B.t.fsOXXO, {}) : null,
-                            f = A ? B.intl.string(B.t.OvMyMd) : null;
+                            I = m ? B.intl.format(B.t.fsOXXO, {}) : null,
+                            x = _ ? B.intl.string(B.t.OvMyMd) : null;
                         return {
                             isStepLoading: u,
                             upperInlineNoticeProps: (0, d.useMemo)(() => {
-                                if (null != f || null != x || null != T) {
+                                if (null != x || null != I || null != E) {
                                     let e = [];
                                     return (
-                                        null != f &&
-                                            e.push({ type: "warning", message: f, key: "test-mode-warning-notice" }),
                                         null != x &&
-                                            e.push({ type: "warning", message: x, key: "orb-checkout-warning-notice" }),
-                                        null != T &&
-                                            e.push({ type: "critical", message: T, key: "orb-checkout-error-notice" }),
+                                            e.push({ type: "warning", message: x, key: "test-mode-warning-notice" }),
+                                        null != I &&
+                                            e.push({ type: "warning", message: I, key: "orb-checkout-warning-notice" }),
+                                        null != E &&
+                                            e.push({ type: "critical", message: E, key: "orb-checkout-error-notice" }),
                                         e
                                     );
                                 }
                                 return null;
-                            }, [f, x, T]),
+                            }, [x, I, E]),
                             purchaseItemContent: (0, i.jsx)(tP, { skuId: t, orbPriceAmount: c }),
                             paymentSelectContent: (0, i.jsx)(tN, { orbBalance: C }),
                             legalContent: (0, i.jsx)(tL, {}),
-                            primaryButtonProps: I,
+                            primaryButtonProps: S,
                             invoiceSummaryContent: null,
                             invoiceTotalDueLabel: null,
                             invoiceTotalDueValue: null,
