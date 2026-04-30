@@ -104,7 +104,8 @@ class Q extends s.PureComponent {
             (e.stopPropagation(),
             (0, B.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("60811"),
+                    n.e("6305"),
+                    n.e("2925"),
                     n.e("55411"),
                     n.e("93103"),
                     n.e("52229"),

@@ -1,0 +1,88 @@
+.container__733ad {
+    align-items: center;
+    background: var(--brand-500);
+    box-sizing: border-box;
+    display: flex;
+    height: var(--custom-mobile-web-handoff-link-mobile-web-handoff-height);
+    justify-content: space-between;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.errorContainer__733ad {
+    background: var(--primary-800)
+}
+
+.buttonText__733ad {
+    color: var(--brand-500)
+}
+
+.list__920b8 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column
+}
+
+.accountCard__920b8 {
+    align-self: stretch;
+    display: flex;
+    padding: 12px 16px
+}
+
+.separator__920b8 {
+    border-bottom: 1px solid var(--border-subtle);
+    margin-inline-start: 16px;
+    width: calc(100% - 16px)
+}
+
+.userDetails__920b8 {
+    align-items: center;
+    display: flex;
+    width: 100%
+}
+
+.usernameSection__920b8 {
+    margin-inline-start: 8px;
+    max-width: 76%
+}
+
+.hasActionMaxWidth__920b8 {
+    max-width: 45%
+}
+
+.userActions__920b8,
+.username__920b8 {
+    align-items: center;
+    display: flex
+}
+
+.userActions__920b8 {
+    gap: 8px;
+    margin-inline-start: auto
+}
+
+.hintText__920b8 {
+    text-align: start
+}
+
+.spinner__920b8 {
+    margin: 8px
+}
+
+.chooseAccountAuthBox_df9c06 {
+    padding: 24px 16px 16px
+}
+
+.chooseAccountHelpText_df9c06 {
+    margin: 8px 0 24px
+}
+
+.actions_df9c06 {
+    display: flex;
+    justify-content: center;
+    margin: 28px 0 12px
+}

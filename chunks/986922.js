@@ -1035,7 +1035,7 @@ function tP() {
         onClick: () => {
             (0, q.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    l.e("40841"),
+                    l.e("6305"),
                     l.e("30244"),
                     l.e("95429"),
                     l.e("24009"),

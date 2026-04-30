@@ -541,26 +541,25 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("89603"),
-                                                        n.e("40841"),
+                                                        n.e("88205"),
+                                                        n.e("6305"),
                                                         n.e("69273"),
-                                                        n.e("97219"),
+                                                        n.e("97893"),
                                                         n.e("77083"),
                                                         n.e("63009"),
                                                         n.e("16933"),
                                                         n.e("80848"),
                                                         n.e("45650"),
-                                                        n.e("97189"),
-                                                        n.e("76348"),
-                                                        n.e("13520"),
-                                                        n.e("42105"),
+                                                        n.e("22894"),
+                                                        n.e("25310"),
+                                                        n.e("93880"),
+                                                        n.e("71561"),
                                                         n.e("90261"),
                                                         n.e("55990"),
-                                                        n.e("62296"),
-                                                        n.e("90738"),
+                                                        n.e("29946"),
+                                                        n.e("1195"),
                                                         n.e("7066"),
-                                                        n.e("333"),
-                                                        n.e("68432"),
+                                                        n.e("22995"),
                                                         n.e("79705"),
                                                         n.e("23924"),
                                                         n.e("71470"),
@@ -569,10 +568,10 @@ function eJ(e) {
                                                         n.e("35429"),
                                                         n.e("10471"),
                                                         n.e("63232"),
+                                                        n.e("60235"),
                                                         n.e("64827"),
                                                         n.e("23808"),
                                                         n.e("11301"),
-                                                        n.e("60235"),
                                                         n.e("61737"),
                                                         n.e("79428"),
                                                         n.e("29963"),
@@ -857,8 +856,8 @@ var e4 = n(34188),
     e2 = n(700623),
     e7 = n(177953),
     e5 = n(825484),
-    e3 = n(512950),
-    e9 = n(900797),
+    e9 = n(512950),
+    e3 = n(900797),
     e6 = n(847374),
     te = n(10716),
     tt = n(702841),
@@ -1241,9 +1240,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, j.Ag)(n)
-              ? (0, r.jsx)(e3.p, {
+              ? (0, r.jsx)(e9.p, {
                     className: ty.ai,
-                    messageType: e3.Y.WARNING,
+                    messageType: e9.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1306,7 +1305,7 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e9.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e3.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(e6.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1419,10 +1418,10 @@ var tQ = n(111042),
     t2 = n(594061),
     t7 = n(935208),
     t5 = n(630248),
-    t3 = n(355097);
-function t9(e, t) {
+    t9 = n(355097);
+function t3(e, t) {
     o.useEffect(() => {
-        t2.bW.loadIfUncached(t3.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t5.A], () => t5.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2144,15 +2143,15 @@ function n7(e, t) {
 }
 n(827669);
 var n5 = n(110259),
-    n3 = n(139286),
-    n9 = n(520117);
+    n9 = n(139286),
+    n3 = n(520117);
 function n6(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
         s = (0, A.bG)([p.A], () => p.A.entrypoint());
     return {
-        trackSearchResultsItemImpressionRef: (0, n9.A)({
+        trackSearchResultsItemImpressionRef: (0, n3.A)({
             onVisible: () => {
-                (0, n3.x)({
+                (0, n9.x)({
                     type: n5.ImpressionTypes.VIEW,
                     name: n5.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
@@ -3058,7 +3057,7 @@ function lj(e) {
                             let e = [];
                             return c && e.push(ni.gq), e;
                         }, [c]),
-                        u = t9(r, a);
+                        u = t3(r, a);
                     return o.useMemo(
                         () =>
                             l
@@ -3233,7 +3232,7 @@ function lv(e) {
                         }, new Set()),
                     [i],
                 ),
-                r = t9(
+                r = t3(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

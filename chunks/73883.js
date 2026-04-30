@@ -97,7 +97,7 @@ function w(e) {
                               : i.type === P.fg2.XBOX
                                 ? (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("40841"),
+                                          n.e("6305"),
                                           n.e("76962"),
                                           n.e("95429"),
                                           n.e("24009"),
@@ -109,7 +109,7 @@ function w(e) {
                                 : (i.type === P.fg2.PLAYSTATION || i.type === P.fg2.PLAYSTATION_STAGING) &&
                                   (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("23551"),
+                                          n.e("1195"),
                                           n.e("25861"),
                                           n.e("91007"),
                                           n.e("38035"),

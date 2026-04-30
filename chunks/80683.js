@@ -20,8 +20,8 @@ var l = n(627968),
     S = n(486020),
     _ = n(60465),
     I = n(409626),
-    y = n(422069),
-    j = n(652215),
+    j = n(422069),
+    y = n(652215),
     b = n(624458),
     T = n(821124),
     N = n(202384),
@@ -199,8 +199,8 @@ class eA extends i.PureComponent {
         (0, d.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("93816"),
-                    n.e("94232"),
+                    n.e("6305"),
+                    n.e("4469"),
                     n.e("89545"),
                     n.e("84704"),
                     n.e("86197"),
@@ -223,7 +223,7 @@ class eA extends i.PureComponent {
         this.setState({ submitting: !0 });
         let e = this.props.channel.getGuildId();
         try {
-            await f.A.joinGuild(e, { source: j.Q4z.CHAT_INPUT_BLOCKER });
+            await f.A.joinGuild(e, { source: y.Q4z.CHAT_INPUT_BLOCKER });
         } catch {
             this.setState({ submitting: !1 });
         }
@@ -282,17 +282,17 @@ class eA extends i.PureComponent {
                 guildJoinRequest: S,
                 showLinkedLobbyApplicationLoadingIndicator: _,
                 requiredLinkedLobbyApplication: I,
-                pendingGameProfileReturn: y,
+                pendingGameProfileReturn: j,
             } = this.props,
             { shouldShowLurkerModeUpsellPopout: b, shouldShowLurkerModeSuccessPopout: T } = this.state,
             N = { theme: d, useReducedMotion: E };
-        if (e && !A && null != y)
-            null != y.gameIconUrl && (N.imageSrc = y.gameIconUrl),
-                (N.message = w.intl.format(w.t["qxH/YE"], { gameName: y.gameName })),
+        if (e && !A && null != j)
+            null != j.gameIconUrl && (N.imageSrc = j.gameIconUrl),
+                (N.message = w.intl.format(w.t["qxH/YE"], { gameName: j.gameName })),
                 (N.buttonText = w.intl.string(w.t.DjifDP)),
                 (N.buttonIcon = h.r),
                 (N.buttonVariant = "primary"),
-                (N.onButtonClick = y.onReturnToGameProfile);
+                (N.onButtonClick = j.onReturnToGameProfile);
         else if (e && !A) {
             if (((N.message = w.intl.string(w.t.Hl0Mqh)), null != p && p >= 1e3)) {
                 let e = 1e3 * Math.floor(p / 1e3);
@@ -337,10 +337,10 @@ class eA extends i.PureComponent {
                         (N.buttonText = w.intl.string(w.t.lm1UKt)),
                         (N.onButtonClick = this.handleResendVerification))
                       : a
-                        ? ((N.message = w.intl.formatToPlainString(w.t.IH7RMF, { min: j.$8o.MEMBER_AGE })),
+                        ? ((N.message = w.intl.formatToPlainString(w.t.IH7RMF, { min: y.$8o.MEMBER_AGE })),
                           (N.countdown = r))
                         : o &&
-                          ((N.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: j.$8o.ACCOUNT_AGE })),
+                          ((N.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: y.$8o.ACCOUNT_AGE })),
                           (N.countdown = c))
                 : ((N.imageSrc = I.getIconURL(eh.iu.SMALL) ?? void 0),
                   (N.message = w.intl.format(w.t.EvDn1D, { name: I.name })),
@@ -390,7 +390,7 @@ function ep(e) {
         s = t.getGuildId(),
         a = (0, r.bG)([es.A], () => es.A.getGuild(s)),
         o = (0, r.bG)([ea.A], () => ea.A.getCheck(s)),
-        c = t.type === j.rbe.GUILD_ANNOUNCEMENT && null != a && a.features.has(j.GuildFeatures.NEWS),
+        c = t.type === y.rbe.GUILD_ANNOUNCEMENT && null != a && a.features.has(y.GuildFeatures.NEWS),
         d = (0, r.bG)([el.A], () => (c ? el.A.getFollowerStatsForChannel(t.id) : null)),
         u = (0, r.bG)([V.A], () => V.A.isLurking(s)),
         h = (0, r.bG)([eo.default], () => eo.default.getCurrentUser()),
@@ -398,13 +398,13 @@ function ep(e) {
         g = (0, r.bG)([ei.Ay], () => null != h && (ei.Ay.getMember(s, h.id)?.isPending ?? !1)),
         A = !!(0, M.Qd)(a),
         p = (0, r.bG)([J], () => J.shouldShowPopout(s)),
-        f = (0, r.bG)([er.A], () => er.A.can(j.xBc.SEND_MESSAGES, t)),
+        f = (0, r.bG)([er.A], () => er.A.can(y.xBc.SEND_MESSAGES, t)),
         E = (0, r.bG)([R.A], () => R.A.getRequest(s)),
         { showLinkedLobbyApplicationLoadingIndicator: b, requiredLinkedLobbyApplication: T } = (0, ed.A)(t.linkedLobby),
         N = (function (e) {
             let { channelId: t } = e,
-                n = (0, r.bG)([y.A], () => {
-                    let e = y.A.getPendingReturn();
+                n = (0, r.bG)([j.A], () => {
+                    let e = j.A.getPendingReturn();
                     return null == e || e.channelId !== t ? null : e;
                 }),
                 l = i.useCallback(() => {
@@ -423,7 +423,7 @@ function ep(e) {
             if (null == s || null == a) return null;
             let o =
                 s?.iconHash != null && "" !== s.iconHash
-                    ? S.Ay.getGameAssetURL({ id: s.id, hash: s.iconHash, size: j.eQT })
+                    ? S.Ay.getGameAssetURL({ id: s.id, hash: s.iconHash, size: y.eQT })
                     : void 0;
             return { gameId: s.id, gameName: a, gameIconUrl: o, onReturnToGameProfile: l };
         })({ channelId: t.id }),
@@ -433,7 +433,7 @@ function ep(e) {
             isLurking: u,
             isFollowable: c,
             shouldShowLurkerModeSuccessPopout: p,
-            showLurkerModeUpsellPopout: u && null != a && ec.MJ(j.xBc.SEND_MESSAGES, t),
+            showLurkerModeUpsellPopout: u && null != a && ec.MJ(y.xBc.SEND_MESSAGES, t),
             theme: en.A.theme,
             canSendMessages: f,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,

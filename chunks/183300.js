@@ -83,7 +83,8 @@ function eu(e) {
         R()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, I.openModalLazy)(async () => {
                 let { default: n } = await Promise.all([
-                    i.e("97219"),
+                    i.e("99332"),
+                    i.e("76664"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -334,7 +335,8 @@ function ep(e) {
             null != U &&
                 (0, I.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("97219"),
+                        i.e("99332"),
+                        i.e("76664"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -524,8 +526,8 @@ function eU(e) {
                     (0, eT.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                             i.e("80848"),
-                            i.e("23551"),
-                            i.e("98944"),
+                            i.e("1195"),
+                            i.e("39431"),
                             i.e("26132"),
                             i.e("46652"),
                             i.e("93190"),
@@ -674,8 +676,8 @@ var e1 = i(685399),
     e2 = i(323073),
     e3 = i(85451),
     e6 = i(268218),
-    e7 = i(834757),
-    e5 = i(727353),
+    e5 = i(834757),
+    e7 = i(727353),
     e4 = i(832163),
     e8 = i(565688),
     te = i(533562),
@@ -700,26 +702,26 @@ let ta = (0, e6.Fe)({
     createPromise: () =>
         Promise.all([
             i.e("80848"),
-            i.e("97219"),
-            i.e("66361"),
-            i.e("13520"),
-            i.e("40841"),
+            i.e("97893"),
+            i.e("56795"),
+            i.e("24685"),
+            i.e("6305"),
             i.e("69273"),
             i.e("77083"),
             i.e("63009"),
             i.e("16933"),
-            i.e("89603"),
+            i.e("88205"),
             i.e("45650"),
-            i.e("97189"),
-            i.e("76348"),
-            i.e("42105"),
+            i.e("22894"),
+            i.e("25310"),
+            i.e("93880"),
+            i.e("71561"),
             i.e("90261"),
             i.e("55990"),
-            i.e("62296"),
-            i.e("90738"),
+            i.e("29946"),
+            i.e("1195"),
             i.e("7066"),
-            i.e("333"),
-            i.e("68432"),
+            i.e("22995"),
             i.e("79705"),
             i.e("69279"),
             i.e("23924"),
@@ -729,10 +731,10 @@ let ta = (0, e6.Fe)({
             i.e("35429"),
             i.e("10471"),
             i.e("63232"),
+            i.e("60235"),
             i.e("64827"),
             i.e("23808"),
             i.e("11301"),
-            i.e("60235"),
             i.e("61737"),
             i.e("79428"),
             i.e("29963"),
@@ -922,7 +924,7 @@ function tc(e) {
         ),
         [A, x] = (0, r.yK)([eC.A, G.A, P.A, eK.default], () => (0, eW.eo)(s, eC.A, G.A, P.A, eK.default)),
         v = (0, r.bG)([e_.default], () => e_.default.getId()),
-        I = (0, r.bG)([ei.A], () => (0, e7.nr)(g, ei.A), [g]),
+        I = (0, r.bG)([ei.A], () => (0, e5.nr)(g, ei.A), [g]),
         f = (0, e2.r9)() && (0, e2.UK)(s.id),
         N =
             ((t = (0, e1.Ay)(s)),
@@ -967,7 +969,7 @@ function tc(e) {
     let k = (0, l.jsxs)(l.Fragment, {
         children: [
             C &&
-                (0, l.jsx)(e5.P, {
+                (0, l.jsx)(e7.P, {
                     stream: g,
                     activeStream: p,
                     streamActivity: I,
@@ -1105,8 +1107,8 @@ let tg = (0, eH.J)(function (e) {
             (0, eT.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     i.e("80848"),
-                    i.e("23551"),
-                    i.e("98944"),
+                    i.e("1195"),
+                    i.e("39431"),
                     i.e("26132"),
                     i.e("46652"),
                     i.e("93190"),

@@ -1,89 +1,89 @@
-n.d(t, { A: () => D });
-var i = n(627968),
+n.d(t, { A: () => P });
+var l = n(627968),
     s = n(64700),
-    l = n(110259),
+    i = n(110259),
     a = n(17928),
     r = n(636537),
     o = n(192308),
-    u = n(830215),
-    c = n(398590),
+    c = n(830215),
+    u = n(398590),
     d = n(631670),
-    p = n(475743),
+    h = n(475743),
     m = n(775121),
-    h = n(139286),
+    p = n(139286),
     f = n(80556),
     g = n(557722),
-    x = n(363195),
-    A = n(870570),
+    A = n(363195),
+    x = n(870570),
     C = n(446868),
     E = n(503698),
-    T = n.n(E),
-    _ = n(607399),
-    S = n(821609),
-    j = n(331322),
-    v = n(534514),
-    N = n(834730),
-    y = n(700525),
-    R = n(975571),
-    I = n(652215),
+    v = n.n(E),
+    T = n(607399),
+    j = n(821609),
+    N = n(331322),
+    _ = n(534514),
+    S = n(834730),
+    R = n(700525),
+    I = n(975571),
+    y = n(652215),
     b = n(985018),
     M = n(72828);
-let O = R.A.getArticleURL(I.MVz.VERIFICATION_FAQ);
-class U extends s.PureComponent {
-    static defaultProps = { types: [I.Fz7.CAPTCHA], onCaptchaVerify: I.tEg, onLogout: I.tEg };
+let w = I.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
+class O extends s.PureComponent {
+    static defaultProps = { types: [y.Fz7.CAPTCHA], onCaptchaVerify: y.tEg, onLogout: y.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: s } = this.props;
-        return (0, i.jsx)(i.Fragment, {
+        return (0, l.jsx)(l.Fragment, {
             children: e.map((e) =>
-                e === I.Fz7.CAPTCHA
-                    ? (0, i.jsx)(y.A, { onVerify: s, theme: n }, t)
-                    : (0, i.jsx)(S.$, { onClick: () => this.handleClick(e), text: C.A.getButtonTitle(e) }, e),
+                e === y.Fz7.CAPTCHA
+                    ? (0, l.jsx)(R.A, { onVerify: s, theme: n }, t)
+                    : (0, l.jsx)(j.$, { onClick: () => this.handleClick(e), text: C.A.getButtonTitle(e) }, e),
             ),
         });
     }
     render() {
-        return (0, i.jsxs)(j.B, {
+        return (0, l.jsxs)(N.B, {
             gap: 16,
             className: M.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, i.jsxs)(j.B, {
+                (0, l.jsxs)(N.B, {
                     gap: 16,
                     fullWidth: !1,
-                    className: T()(M.kL, { [M.Fr]: _.Fr }),
+                    className: v()(M.kL, { [M.Fr]: T.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsxs)(j.B, {
+                        (0, l.jsxs)(N.B, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, i.jsx)("div", { className: M.Sl }),
-                                (0, i.jsxs)(j.B, {
+                                (0, l.jsx)("div", { className: M.Sl }),
+                                (0, l.jsxs)(N.B, {
                                     className: M.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, i.jsx)(v.D, {
+                                        (0, l.jsx)(_.D, {
                                             variant: "heading-xl/normal",
                                             children: b.intl.string(b.t.Iz0kDg),
                                         }),
-                                        (0, i.jsx)(N.E, {
+                                        (0, l.jsx)(S.E, {
                                             variant: "text-md/normal",
-                                            children: b.intl.format(b.t["0rqMV5"], { helpCenterURL: O }),
+                                            children: b.intl.format(b.t["0rqMV5"], { helpCenterURL: w }),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(j.B, {
+                        (0, l.jsx)(N.B, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -92,30 +92,30 @@ class U extends s.PureComponent {
                         }),
                     ],
                 }),
-                (0, i.jsxs)(j.B, {
+                (0, l.jsxs)(N.B, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsx)(N.E, {
+                        (0, l.jsx)(S.E, {
                             variant: "text-sm/normal",
                             className: M.qr,
                             children: b.intl.string(b.t.qqYun3),
                         }),
-                        (0, i.jsxs)(j.B, {
+                        (0, l.jsxs)(N.B, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, i.jsx)(N.E, {
+                                (0, l.jsx)(S.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
-                                    children: b.intl.format(b.t.WL51ZR, { supportURL: R.A.getSubmitRequestURL() }),
+                                    children: b.intl.format(b.t.WL51ZR, { supportURL: I.A.getSubmitRequestURL() }),
                                 }),
-                                (0, i.jsx)("div", { className: T()(M.qr, M.mf), children: "•" }),
-                                (0, i.jsx)(N.E, {
+                                (0, l.jsx)("div", { className: v()(M.qr, M.mf), children: "•" }),
+                                (0, l.jsx)(S.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
                                     children: b.intl.format(b.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
@@ -132,32 +132,32 @@ class U extends s.PureComponent {
         t?.(e);
     };
 }
-var P = n(87404),
-    k = n(53516);
-function D() {
-    let { action: e, theme: t } = (0, a.cf)([A.A, x.A], () => ({ action: A.A.getAction(), theme: x.A.theme })),
+var U = n(87404),
+    D = n(53516);
+function P() {
+    let { action: e, theme: t } = (0, a.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
         E = C.A.getVerificationTypes(e),
-        [T, _] = s.useState(0),
-        S = (0, p.A)(E);
-    (0, h.A)(
+        [v, T] = s.useState(0),
+        j = (0, h.A)(E);
+    (0, p.A)(
         {
-            type: l.ImpressionTypes.MODAL,
-            name: l.ImpressionNames.USER_ACTION_REQUIRED,
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.USER_ACTION_REQUIRED,
             properties: { verification_type: E[0], verification_types: E },
         },
         {},
         [E.toString()],
     );
-    let j = () => {
+    let N = () => {
         (0, d.Cw)(),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("53983"), n.e("89913"), n.e("25467")]).then(
                         n.bind(n, 415478),
                     );
-                    return (t) => (0, i.jsx)(e, { ...t });
+                    return (t) => (0, l.jsx)(e, { ...t });
                 },
-                { modalKey: P.H1, Layer: f.Ay },
+                { modalKey: U.H1, Layer: f.Ay },
             );
     };
     return (
@@ -171,51 +171,51 @@ function D() {
             [],
         ),
         s.useEffect(() => {
-            S?.[0] === I.Fz7.PHONE &&
-                E?.[0] === I.Fz7.EMAIL &&
+            j?.[0] === y.Fz7.PHONE &&
+                E?.[0] === y.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("31910"), n.e("10919")]).then(n.bind(n, 556506));
                         return (t) =>
-                            (0, i.jsx)(e, {
+                            (0, l.jsx)(e, {
                                 ...t,
                                 title: b.intl.string(b.t.KLnLIP),
                                 body: b.intl.string(b.t.XGbCq3),
                                 confirmText: b.intl.string(b.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: P.Pr, Layer: f.Ay, onCloseCallback: j },
+                    { modalKey: U.Pr, Layer: f.Ay, onCloseCallback: N },
                 );
-        }, [E, S]),
-        (0, i.jsx)(U, {
+        }, [E, j]),
+        (0, l.jsx)(O, {
             types: E,
-            captchaKey: T,
+            captchaKey: v,
             onCaptchaVerify: (e) => {
                 r.Bo.post({
-                    url: I.Rsh.CAPTCHA,
+                    url: y.Rsh.CAPTCHA,
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
-                }).then(c.jH, () => {
-                    _((e) => e + 1);
+                }).then(u.jH, () => {
+                    T((e) => e + 1);
                 });
             },
             theme: t,
             onClick: (e) => {
-                e === I.Fz7.EMAIL_OR_PHONE || e === I.Fz7.EMAIL || e === I.Fz7.REVERIFY_EMAIL
-                    ? j()
+                e === y.Fz7.EMAIL_OR_PHONE || e === y.Fz7.EMAIL || e === y.Fz7.REVERIFY_EMAIL
+                    ? N()
                     : (0, o.openModalLazy)(
                           async () => {
                               let { default: e } = await Promise.all([
-                                  n.e("93816"),
-                                  n.e("94232"),
+                                  n.e("6305"),
+                                  n.e("4469"),
                                   n.e("89545"),
                                   n.e("84704"),
                               ]).then(n.bind(n, 615715));
                               return (t) =>
-                                  (0, i.jsx)(e, { layerContext: f.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
+                                  (0, l.jsx)(e, { layerContext: f.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: k.V, Layer: f.Ay },
+                          { modalKey: D.V, Layer: f.Ay },
                       );
             },
             onLogout: () => {
@@ -223,12 +223,12 @@ function D() {
                     async () => {
                         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 732159));
                         return (t) =>
-                            (0, i.jsx)(e, {
+                            (0, l.jsx)(e, {
                                 title: b.intl.string(b.t["2jxGer"]),
                                 subtitle: b.intl.string(b.t.SUnWBB),
                                 confirmText: b.intl.string(b.t["2jxGer"]),
                                 cancelText: b.intl.string(b.t["ETE/oC"]),
-                                onConfirm: () => u.A.logout("verification"),
+                                onConfirm: () => c.A.logout("verification"),
                                 ...t,
                             });
                     },

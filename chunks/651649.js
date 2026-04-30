@@ -16,8 +16,8 @@ var r = n(192308),
     m = n(116956),
     f = n(37962),
     g = n(670455),
-    I = n(652215);
-class A extends f.A {
+    A = n(652215);
+class I extends f.A {
     actions = {
         VOICE_CHANNEL_SHOW_FEEDBACK: (e) => this.handleVoiceChannelFeedback(e),
         STREAM_CLOSE: (e) => this.handleStreamClose(e),
@@ -32,8 +32,7 @@ class A extends f.A {
         this.possiblyShowFeedbackModal(g.MW.VOICE, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("61659"),
-                    n.e("16384"),
+                    n.e("25310"),
                     n.e("56030"),
                     n.e("67829"),
                     n.e("61379"),
@@ -66,8 +65,7 @@ class A extends f.A {
             this.possiblyShowFeedbackModal(g.MW.STREAM, () => {
                 (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("61659"),
-                        n.e("16384"),
+                        n.e("25310"),
                         n.e("56030"),
                         n.e("67829"),
                         n.e("61379"),
@@ -96,8 +94,7 @@ class A extends f.A {
         this.possiblyShowFeedbackModal(g.MW.VIDEO_BACKGROUND, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("61659"),
-                    n.e("16384"),
+                    n.e("25310"),
                     n.e("56030"),
                     n.e("61379"),
                     n.e("8891"),
@@ -118,15 +115,14 @@ class A extends f.A {
             E = (0, a.H)(l),
             m = c.A.getChannel(E),
             f = { rtc_connection_id: h.A.getRTCConnectionId(), media_session_id: h.A.getMediaSessionId() },
-            A = d.A.getWindowOpen(I.MLl.CHANNEL_CALL_POPOUT) ? s.KX : s.SY;
+            I = d.A.getWindowOpen(A.MLl.CHANNEL_CALL_POPOUT) ? s.KX : s.SY;
         null != u &&
             _ &&
             this.possiblyShowFeedbackModal(g.MW.ACTIVITY, () => {
                 (0, r.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("61659"),
-                            n.e("16384"),
+                            n.e("25310"),
                             n.e("56030"),
                             n.e("61379"),
                             n.e("8891"),
@@ -146,7 +142,7 @@ class A extends f.A {
                                 analyticsData: f,
                             });
                     },
-                    { contextKey: A },
+                    { contextKey: I },
                 );
             });
     };
@@ -155,8 +151,7 @@ class A extends f.A {
         this.possiblyShowFeedbackModal(g.MW.IN_APP_REPORTS, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("61659"),
-                    n.e("16384"),
+                    n.e("25310"),
                     n.e("56030"),
                     n.e("61379"),
                     n.e("8891"),
@@ -175,16 +170,15 @@ class A extends f.A {
         this.possiblyShowFeedbackModal(g.MW.BLOCK_USER, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("61659"),
-                    n.e("16384"),
+                    n.e("25310"),
                     n.e("56030"),
                     n.e("61379"),
                     n.e("8891"),
                     n.e("18413"),
                     n.e("22255"),
                     n.e("55925"),
-                    n.e("59791"),
                     n.e("85033"),
+                    n.e("59791"),
                     n.e("26484"),
                     n.e("9163"),
                 ]).then(n.bind(n, 307750));
@@ -197,16 +191,15 @@ class A extends f.A {
         this.possiblyShowFeedbackModal(g.MW.AGE_VERIFICATION, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("61659"),
-                    n.e("16384"),
+                    n.e("25310"),
                     n.e("56030"),
                     n.e("61379"),
                     n.e("8891"),
                     n.e("18413"),
                     n.e("22255"),
                     n.e("55925"),
-                    n.e("59791"),
                     n.e("85033"),
+                    n.e("59791"),
                     n.e("26484"),
                     n.e("22493"),
                 ]).then(n.bind(n, 949004));
@@ -215,4 +208,4 @@ class A extends f.A {
         });
     };
 }
-let p = new A();
+let p = new I();

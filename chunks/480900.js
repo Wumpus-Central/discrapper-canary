@@ -32,8 +32,10 @@ function G(e, t) {
     (0, c.openModalLazy)(async () => {
         let { default: i } = await Promise.all([
             l.e("16933"),
-            l.e("17546"),
-            l.e("76831"),
+            l.e("1195"),
+            l.e("54081"),
+            l.e("73435"),
+            l.e("79816"),
             l.e("60235"),
             l.e("53984"),
             l.e("38042"),

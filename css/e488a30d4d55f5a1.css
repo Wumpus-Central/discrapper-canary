@@ -1,0 +1,71 @@
+.header__5348b {
+    background-color: var(--background-surface-higher);
+    border-radius: var(--radius-sm)
+}
+
+.gameNamesHeader__5348b {
+    gap: 24px;
+    justify-content: space-between;
+    min-height: 36px;
+    padding: var(--space-8) var(--space-12)
+}
+
+.gameIcons__5348b,
+.gameNamesHeader__5348b {
+    align-items: center;
+    display: flex
+}
+
+.gameIcons__5348b {
+    flex: 0;
+    flex-direction: row;
+    gap: var(--space-8);
+    min-height: 56px;
+    padding: var(--space-12)
+}
+
+.divider__5348b {
+    background-color: var(--border-subtle);
+    height: 1px;
+    width: 100%
+}
+
+.icon__5348b {
+    border-radius: var(--radius-xs);
+    height: 32px;
+    width: 32px
+}
+
+.moreIcon__5348b {
+    background-color: var(--background-base-lowest);
+    justify-content: center
+}
+
+.manageGamesLink__5348b,
+.moreIcon__5348b {
+    align-items: center;
+    display: flex
+}
+
+.manageGamesLink__5348b {
+    cursor: pointer
+}
+
+.manageGamesChevron__5348b {
+    margin-top: 1px
+}
+
+.emptyContainer__5348b {
+    align-items: center;
+    background-color: var(--background-surface-higher);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    justify-content: center;
+    padding: var(--space-48) 0
+}
+
+.noGamesConnectedText__5348b {
+    text-transform: uppercase
+}

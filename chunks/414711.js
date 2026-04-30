@@ -48,8 +48,8 @@ class A extends n.PureComponent {
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
-                            s.e("91388"),
-                            s.e("61748"),
+                            s.e("39431"),
+                            s.e("1195"),
                             s.e("26132"),
                             s.e("46652"),
                             s.e("93190"),
