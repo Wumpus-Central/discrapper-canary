@@ -87,6 +87,11 @@ var a = {
         inlineRequire: () => n(388427).A,
         hasStoreChangeListeners: !0,
     },
+    DesktopTTIEarlyUpdateCheckExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(788768).A,
+        hasStoreChangeListeners: !0,
+    },
     FriendOnlineTimerManager: {
         actions: [
             "POST_CONNECTION_OPEN",
@@ -505,7 +510,7 @@ var a = {
     },
     UserSettingsManager: {
         actions: ["POST_CONNECTION_OPEN", "OVERLAY_INITIALIZE", "USER_SETTINGS_PROTO_UPDATE"],
-        inlineRequire: () => n(465761).A,
+        inlineRequire: () => n(281084).A,
     },
     VoiceChannelSettingsManager: {
         actions: ["CHANNEL_UPDATES", "VOICE_STATE_UPDATES"],
