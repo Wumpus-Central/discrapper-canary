@@ -1,38 +1,39 @@
-n.d(t, { d: () => v, o: () => E });
+n.d(t, { d: () => T, o: () => N });
 var i = n(627968),
-    a = n(409626),
-    l = n(692969),
-    s = n(562153);
+    l = n(409626),
+    s = n(692969),
+    a = n(562153),
+    r = n(510466);
 n(64700);
-var r = n(503698),
-    o = n.n(r),
-    c = n(342952),
+var c = n(503698),
+    o = n.n(c),
+    u = n(342952),
     d = n(990078),
-    u = n(778712),
-    g = n(834730),
-    m = n(939249),
-    _ = n(915089),
-    f = n(499270);
-function x(e) {
-    let { label: t, className: n, size: a = u._3.SIZE_16, maxUsers: l = 4, ...s } = e,
-        r = (0, _.GV)();
+    g = n(778712),
+    m = n(834730),
+    f = n(939249),
+    x = n(915089),
+    I = n(499270);
+function p(e) {
+    let { label: t, className: n, size: l = g._3.SIZE_16, maxUsers: s = 4, ...a } = e,
+        r = (0, x.GV)();
     return (0, i.jsxs)("div", {
-        className: o()(n, f.k),
+        className: o()(n, I.k),
         children: [
-            (0, i.jsx)(c.I, { "aria-labelledby": r, overflowCountClassName: f.j, size: a, maxUsers: l, ...s }),
-            (0, i.jsx)(g.E, { variant: "text-xs/normal", color: "text-subtle", id: r, children: t }),
+            (0, i.jsx)(u.I, { "aria-labelledby": r, overflowCountClassName: I.j, size: l, maxUsers: s, ...a }),
+            (0, i.jsx)(m.E, { variant: "text-xs/normal", color: "text-subtle", id: r, children: t }),
         ],
     });
 }
-function p(e) {
+function A(e) {
     let {
         label: t,
         className: n,
-        overflowCountClassName: a,
-        size: l = u._3.SIZE_16,
-        maxUsers: s = 4,
+        overflowCountClassName: l,
+        size: s = g._3.SIZE_16,
+        maxUsers: a = 4,
         onClick: r,
-        ...g
+        ...c
     } = e;
     return (0, i.jsx)("div", {
         className: n,
@@ -40,46 +41,47 @@ function p(e) {
             text: t,
             asContainer: !0,
             ariaHidden: !0,
-            children: (0, i.jsx)(m.D, {
+            children: (0, i.jsx)(f.D, {
                 onClick: r,
                 "aria-label": t,
-                children: (0, i.jsx)(c.I, {
-                    size: l,
-                    maxUsers: s,
-                    overflowCountClassName: o()(f.j, a),
+                children: (0, i.jsx)(u.I, {
+                    size: s,
+                    maxUsers: a,
+                    overflowCountClassName: o()(I.j, l),
                     "aria-hidden": !0,
-                    ...g,
+                    ...c,
                 }),
             }),
         }),
     });
 }
-var I = n(617086),
+var E = n(617086),
     h = n(985018),
-    A = n(73934);
-function E(e) {
+    j = n(73934);
+function N(e) {
     let { applicationId: t, ...n } = e,
-        a = (0, I.A)(t);
-    return a.length > 0
-        ? (0, i.jsx)(x, {
-              label: h.intl.formatToPlainString(h.t.ujhJdG, { numFriends: a.length }),
-              users: a,
+        l = (0, E.A)(t),
+        s = (0, r.S)("SocialProofWithLabel");
+    return 0 === l.length || s
+        ? null
+        : (0, i.jsx)(p, {
+              label: h.intl.formatToPlainString(h.t.ujhJdG, { numFriends: l.length }),
+              users: l,
               maxUsers: 4,
               ...n,
-          })
-        : null;
+          });
 }
-function v(e) {
-    var t, n, r;
+function T(e) {
+    var t, n, c;
     let o,
-        { userId: c, applicationId: d, guildId: u, channelId: g, className: m } = e,
-        _ = (0, I.A)(d),
-        f = _.length > 0,
-        x =
-            ((t = _),
-            (n = u),
-            (r = g),
-            (o = t.slice(0, 3).map((e) => s.Ay.getName(n, r, e))),
+        { userId: u, applicationId: d, guildId: g, channelId: m, className: f } = e,
+        x = (0, E.A)(d),
+        I = (0, r.S)("GameCoverSocialProofButton"),
+        p =
+            ((t = x),
+            (n = g),
+            (c = m),
+            (o = t.slice(0, 3).map((e) => a.Ay.getName(n, c, e))),
             1 === t.length
                 ? h.intl.formatToPlainString(h.t.FURqTU, { name: o[0] })
                 : 2 === t.length
@@ -92,24 +94,24 @@ function v(e) {
                           name3: o[2],
                           numPeople: t.length - 3,
                       })),
-        E = (0, l.A)({
+        N = (0, s.A)({
             location: "SocialProofButton",
             applicationId: d,
-            source: a.Ob.UserProfile,
-            sourceUserId: c,
+            source: l.Ob.UserProfile,
+            sourceUserId: u,
             trackEntryPointImpression: !0,
         });
-    return f && null != E
-        ? (0, i.jsx)(p, {
-              users: _,
-              label: x,
-              className: m,
-              onClick: E,
-              guildId: u,
-              channelId: g,
-              "aria-label": x,
+    return 0 === x.length || I || null == N
+        ? null
+        : (0, i.jsx)(A, {
+              users: x,
+              label: p,
+              className: f,
+              onClick: N,
+              guildId: g,
+              channelId: m,
+              "aria-label": p,
               overflowCountColor: "text-strong",
-              overflowCountClassName: A.L,
-          })
-        : null;
+              overflowCountClassName: j.L,
+          });
 }
