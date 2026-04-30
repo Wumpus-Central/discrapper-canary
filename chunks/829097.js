@@ -1,5 +1,6 @@
-a.d(t, { _: () => r });
-let n = (0, a(945810).mj)({
+"use strict";
+n.d(t, { _: () => r });
+let i = (0, n(945810).mj)({
     name: "2025-09-video-qoe-metrics-tracking",
     kind: "user",
     defaultConfig: { externalAnalyticsEnabled: !1 },
@@ -7,5 +8,5 @@ let n = (0, a(945810).mj)({
 });
 function r(e) {
     let { location: t } = e;
-    return n.getConfig({ location: t });
+    return i.getConfig({ location: t });
 }

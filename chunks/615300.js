@@ -1,22 +1,23 @@
-n.d(t, { A: () => I }), n(321073);
+"use strict";
+n.d(t, { A: () => h }), n(321073);
 var i = n(685908),
     r = n(497387),
-    a = n.n(r),
-    s = n(94809),
-    _ = n.n(s),
+    s = n.n(r),
+    a = n(94809),
+    o = n.n(a),
     l = n(505737),
-    o = n.n(l);
-function E(e) {
+    u = n.n(l);
+function c(e) {
     let t = Object.keys(e)[0];
     return `${t}(${e[t]})`;
 }
 let d = /rgba\(([\d.]+), ([\d.]+), ([\d.]+), ([\d.]+)\)/;
-function c(e) {
+function _(e) {
     let t = e.match(d);
     return null != t && (e = `rgba(${0 | t[1]}, ${0 | t[2]}, ${0 | t[3]}, ${t[4]})`), e;
 }
-function u(e, t, n) {
-    return void 0 !== t && void 0 != n ? _()(t, n) : e;
+function f(e, t, n) {
+    return void 0 !== t && void 0 != n ? o()(t, n) : e;
 }
 i.inject.ApplyAnimatedValues(
     function (e, t, n) {
@@ -24,12 +25,12 @@ i.inject.ApplyAnimatedValues(
         else {
             var i;
             if (!e.nodeType || void 0 === e.setAttribute) return !1;
-            o().setValueForStyles(
+            u().setValueForStyles(
                 e,
                 ((i = t.style) &&
-                    (i.transform && (i.transform = i.WebkitTransform = i.MozTransform = i.transform.map(E).join(" ")),
-                    i.color && (i.color = c(i.color)),
-                    i.backgroundColor && (i.backgroundColor = c(i.backgroundColor))),
+                    (i.transform && (i.transform = i.WebkitTransform = i.MozTransform = i.transform.map(c).join(" ")),
+                    i.color && (i.color = _(i.color)),
+                    i.backgroundColor && (i.backgroundColor = _(i.backgroundColor))),
                 i),
                 n._reactInternalInstance,
             );
@@ -37,44 +38,44 @@ i.inject.ApplyAnimatedValues(
     },
     (e) => e,
 );
-let I = {
+let h = {
     ...i,
-    Easing: a(),
+    Easing: s(),
     accelerate: function (e) {
         return (e.transform = e.transform || []), e.transform.push({ translateZ: 0 }), e;
     },
     animate: function e(t, n) {
         let r,
             {
-                toValueMin: a,
-                toValueMax: s,
-                tension: _ = 0,
+                toValueMin: s,
+                toValueMax: a,
+                tension: o = 0,
                 friction: l = 0,
-                loop: o,
-                reverse: E,
+                loop: u,
+                reverse: c,
                 invert: d,
-                callback: c,
-                type: I = "spring",
-                shouldLoop: A,
-                durationMin: T,
-                durationMax: S,
-                ...N
+                callback: _,
+                type: h = "spring",
+                shouldLoop: p,
+                durationMin: E,
+                durationMax: m,
+                ...g
             } = n,
-            O = t._value,
-            R = u(n.duration, T, S),
-            f = u(n.toValue, a, s),
-            C = i[I](t, { ...N, toValue: f, tension: _, friction: l, duration: R }),
-            p = C;
-        if (E || d) {
-            let e = u(n.duration, T, S);
-            (r = i[I](t, { ...N, toValue: E ? O : -f, tension: _, friction: l, duration: e })),
-                (p = i.sequence([C, r]));
+            A = t._value,
+            I = f(n.duration, E, m),
+            T = f(n.toValue, s, a),
+            S = i[h](t, { ...g, toValue: T, tension: o, friction: l, duration: I }),
+            N = S;
+        if (c || d) {
+            let e = f(n.duration, E, m);
+            (r = i[h](t, { ...g, toValue: c ? A : -T, tension: o, friction: l, duration: e })),
+                (N = i.sequence([S, r]));
         }
-        o
-            ? p.start(() => {
-                  (!A || (A && A())) && (c ? c(e.bind(null, t, n)) : e(t, n));
+        u
+            ? N.start(() => {
+                  (!p || (p && p())) && (_ ? _(e.bind(null, t, n)) : e(t, n));
               })
-            : p.start(c);
+            : N.start(_);
     },
     interpolate: function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];

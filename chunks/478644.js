@@ -1,2 +1,3 @@
-a.d(n, { j: () => t });
-let t = 0xa00000;
+"use strict";
+n.d(t, { j: () => i });
+let i = 0xa00000;

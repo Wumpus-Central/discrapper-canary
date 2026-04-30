@@ -1,18 +1,19 @@
+"use strict";
 n.d(t, { A: () => _ });
 var i = n(17928),
-    E = n(228366),
-    l = n(495544),
-    a = n(414736),
-    s = n(3137),
-    r = n(559908);
-let o = { unlockedAchievements: {} },
-    c = { ...o };
-class u extends i.Ay.PersistedStore {
+    r = n(228366),
+    s = n(495544),
+    a = n(754692),
+    o = n(3137),
+    l = n(559908);
+let u = { unlockedAchievements: {} },
+    c = { ...u };
+class d extends i.Ay.PersistedStore {
     static displayName = "PoggermodeAchievementStore";
     static persistKey = "PoggermodeAchievementStore";
     initialize(e) {
-        this.waitFor(l.default, s.A, r.Ay);
-        let t = e ?? { ...o };
+        this.waitFor(s.default, o.A, l.Ay);
+        let t = e ?? { ...u };
         for (let e in t) c[e] = t[e];
     }
     getState() {
@@ -25,10 +26,10 @@ class u extends i.Ay.PersistedStore {
         return c.unlockedAchievements[e] ?? null;
     }
 }
-let _ = new u(E.h, {
+let _ = new d(r.h, {
     POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
         let { achievementId: t } = e;
-        if (!s.A.isEnabled()) return !1;
+        if (!o.A.isEnabled()) return !1;
         null != c.unlockedAchievements[t] ||
             ((c.unlockedAchievements = {
                 ...c.unlockedAchievements,

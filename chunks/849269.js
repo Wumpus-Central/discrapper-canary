@@ -1,127 +1,128 @@
-n.d(t, { Ay: () => L, Hq: () => h, l$: () => D, o6: () => m, wK: () => g });
+"use strict";
+n.d(t, { Ay: () => C, Hq: () => O, l$: () => v, o6: () => y, wK: () => R });
 var i,
     r = n(308528),
-    a = n(155718),
-    s = n(688810),
-    _ = n(429913),
+    s = n(155718),
+    a = n(688810),
+    o = n(429913),
     l = n(20015),
-    o = n(625180),
-    E = n(375802),
+    u = n(113854),
+    c = n(375802),
     d = n(723702),
-    c = n(933958),
-    u = n(62583),
-    I = n(956549),
-    A = n(685399),
-    T = n(969151),
-    S = n(847381),
-    N = n(435582),
-    O = n(902439),
-    R = n(620148),
-    f = n(283488),
-    C = n(360469),
-    p = n(652215),
-    m = (((i = {})[(i.START = 0)] = "START"), (i[(i.JOIN = 1)] = "JOIN"), (i[(i.LEAVE = 2)] = "LEAVE"), i);
-function L(e) {
+    _ = n(933958),
+    f = n(62583),
+    h = n(956549),
+    p = n(685399),
+    E = n(969151),
+    m = n(847381),
+    g = n(435582),
+    A = n(902439),
+    I = n(620148),
+    T = n(283488),
+    S = n(360469),
+    N = n(652215),
+    y = (((i = {})[(i.START = 0)] = "START"), (i[(i.JOIN = 1)] = "JOIN"), (i[(i.LEAVE = 2)] = "LEAVE"), i);
+function C(e) {
     let {
             activityItem: t,
             context: n,
             locationObject: i,
             onActivityItemSelected: r,
-            embeddedActivitiesManager: s,
-            assetNames: _ = ["embedded_cover"],
+            embeddedActivitiesManager: a,
+            assetNames: o = ["embedded_cover"],
             backgroundResolution: l = 250,
-            launchingComponentId: o,
-            commandOrigin: E,
-            source: c,
+            launchingComponentId: u,
+            commandOrigin: c,
+            source: _,
         } = e,
-        { application: u, activity: I } = t,
-        T = I.client_platform_config[(0, S.A)((0, d.getOS)())],
-        O = Date.now(),
-        R =
-            null != T.label_until &&
-            O < Date.parse(T.label_until) &&
-            null != T.label_from &&
-            O > Date.parse(T.label_from),
-        C = (0, f.A)({ applicationId: u.id, size: l, names: _, format: "webp" }),
-        p = null != I.activity_preview_video_asset_id ? (0, N.A)(u.id, I.activity_preview_video_asset_id) : null,
-        m = (0, A.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
+        { application: f, activity: h } = t,
+        E = h.client_platform_config[(0, m.A)((0, d.getOS)())],
+        A = Date.now(),
+        I =
+            null != E.label_until &&
+            A < Date.parse(E.label_until) &&
+            null != E.label_from &&
+            A > Date.parse(E.label_from),
+        S = (0, T.A)({ applicationId: f.id, size: l, names: o, format: "webp" }),
+        N = null != h.activity_preview_video_asset_id ? (0, g.A)(f.id, h.activity_preview_video_asset_id) : null,
+        y = (0, p.Ay)("channel" === n.type ? n.channel : void 0).find((e) => {
             let { embeddedActivity: t } = e;
-            return u.id === t.applicationId;
+            return f.id === t.applicationId;
         }),
-        L = h({ context: n, applicationId: u.id }),
-        b = g({
+        C = O({ context: n, applicationId: f.id }),
+        b = R({
             application: t.application,
             context: n,
             locationObject: i,
-            embeddedActivitiesManager: s,
+            embeddedActivitiesManager: a,
             onActivityItemSelectedProp: r,
-            launchingComponentId: o,
-            commandOrigin: E,
-            source: c,
+            launchingComponentId: u,
+            commandOrigin: c,
+            source: _,
         }),
-        U = D(u, t.activity);
+        D = v(f, t.activity);
     return {
-        imageBackground: C,
-        videoUrl: p,
-        joinableEmbeddedApp: m,
-        activityAction: L,
+        imageBackground: S,
+        videoUrl: N,
+        joinableEmbeddedApp: y,
+        activityAction: C,
         onActivityItemSelected: b,
-        labelType: R ? T.label_type : a.Hr.NONE,
-        staffReleasePhase: U,
+        labelType: I ? E.label_type : s.Hr.NONE,
+        staffReleasePhase: D,
     };
 }
-function D(e, t) {
-    if (!((0, l.n)(e, p.gfo.EMBEDDED_RELEASED) || (0, l.n)(e, p.gfo.EMBEDDED_FIRST_PARTY))) return;
-    let n = t.client_platform_config[(0, S.A)((0, d.getOS)())].release_phase;
-    return C.qG.includes(n) ? n.replace("_", " ").replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
+function v(e, t) {
+    if (!((0, l.n)(e, N.gfo.EMBEDDED_RELEASED) || (0, l.n)(e, N.gfo.EMBEDDED_FIRST_PARTY))) return;
+    let n = t.client_platform_config[(0, m.A)((0, d.getOS)())].release_phase;
+    return S.qG.includes(n) ? n.replace("_", " ").replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
-function h(e) {
+function O(e) {
     let { context: t, applicationId: n, fetchesApplication: i = !0 } = e,
         r = 0,
-        a = "channel" === t.type ? t.channel : void 0,
-        s = (0, O.A)(),
-        l = (0, R.A)({ fetchesApplication: i }),
-        o = (0, _.h)(n, i),
-        E = (0, A.Ay)(a).find((e) => {
+        s = "channel" === t.type ? t.channel : void 0,
+        a = (0, A.A)(),
+        l = (0, I.A)({ fetchesApplication: i }),
+        u = (0, o.h)(n, i),
+        c = (0, p.Ay)(s).find((e) => {
             let { embeddedActivity: t } = e;
-            return null != o && o.id === t.applicationId;
+            return null != u && u.id === t.applicationId;
         });
-    if (null == o) return r;
-    let d = (0, T.H)(s?.location);
-    return null != a && d === a.id && l?.id === o.id ? (r = 2) : null != E && (r = 1), r;
+    if (null == u) return r;
+    let d = (0, E.H)(a?.location);
+    return null != s && d === s.id && l?.id === u.id ? (r = 2) : null != c && (r = 1), r;
 }
-function g(e) {
+function R(e) {
     let {
             application: t,
             botUserIdForAppDM: n,
             context: i,
-            locationObject: a,
-            embeddedActivitiesManager: _,
+            locationObject: s,
+            embeddedActivitiesManager: o,
             onActivityItemSelectedProp: l,
             launchingComponentId: d,
-            commandOrigin: A,
-            sectionName: T,
-            source: S,
-            fetchesApplication: N = !0,
-            customId: R,
-            referrerId: f,
-            onConfirmActivityLaunchChecksAlertOpen: C,
+            commandOrigin: p,
+            sectionName: E,
+            source: m,
+            fetchesApplication: g = !0,
+            customId: I,
+            referrerId: T,
+            onConfirmActivityLaunchChecksAlertOpen: S,
         } = e,
-        p = t?.id ?? "",
-        m = h({ context: i, applicationId: p, fetchesApplication: N }),
-        { analyticsLocations: L } = (0, s.Ay)(),
-        D = (0, O.A)(),
-        g = (0, E.e)(t);
+        N = t?.id ?? "",
+        y = O({ context: i, applicationId: N, fetchesApplication: g }),
+        { analyticsLocations: C } = (0, a.Ay)(),
+        v = (0, A.A)(),
+        R = (0, c.e)(t);
     if (null == t)
         return () => {
             l?.({ applicationId: "" });
         };
-    switch (m) {
+    switch (y) {
         case 0:
             return async () => {
-                if (g) {
+                if (R) {
                     try {
-                        await o.A.launchFrame({ applicationId: p }), l?.({ applicationId: p });
+                        await u.A.launchFrame({ applicationId: N }), l?.({ applicationId: N });
                     } catch (e) {}
                     return;
                 }
@@ -132,40 +133,40 @@ function g(e) {
                     } catch (e) {
                         return;
                     }
-                await (0, I.A)({
-                    targetApplicationId: p,
-                    locationObject: a,
+                await (0, h.A)({
+                    targetApplicationId: N,
+                    locationObject: s,
                     channelId: e,
-                    analyticsLocations: L,
+                    analyticsLocations: C,
                     componentId: d,
-                    commandOrigin: A,
-                    sectionName: T,
-                    source: S,
-                    customId: R,
-                    referrerId: f,
-                    onConfirmActivityLaunchChecksAlertOpen: C,
-                }).then((e) => e && l?.({ applicationId: p }));
+                    commandOrigin: p,
+                    sectionName: E,
+                    source: m,
+                    customId: I,
+                    referrerId: T,
+                    onConfirmActivityLaunchChecksAlertOpen: S,
+                }).then((e) => e && l?.({ applicationId: N }));
             };
         case 1:
             return async () => {
-                c.Ay.isLaunchingActivity() ||
-                    (await (0, u.A)({
-                        applicationId: p,
+                _.Ay.isLaunchingActivity() ||
+                    (await (0, f.A)({
+                        applicationId: N,
                         activityChannelId: "channel" === i.type ? i.channel.id : void 0,
-                        locationObject: a,
-                        analyticsLocations: L,
+                        locationObject: s,
+                        analyticsLocations: C,
                         componentId: d,
-                        sectionName: T,
-                        source: S,
-                        customId: R,
-                        referrerId: f,
-                    }).then((e) => e && l?.({ applicationId: p })));
+                        sectionName: E,
+                        source: m,
+                        customId: I,
+                        referrerId: T,
+                    }).then((e) => e && l?.({ applicationId: N })));
             };
         case 2:
             return () => {
-                c.Ay.isLaunchingActivity() ||
-                    (null != D && _.leaveActivity({ location: D.location, applicationId: p }),
-                    l?.({ applicationId: p }));
+                _.Ay.isLaunchingActivity() ||
+                    (null != v && o.leaveActivity({ location: v.location, applicationId: N }),
+                    l?.({ applicationId: N }));
             };
     }
 }

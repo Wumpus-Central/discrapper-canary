@@ -1,29 +1,30 @@
-n.d(t, { HN: () => l, RL: () => o, U$: () => s });
+"use strict";
+n.d(t, { HN: () => l, RL: () => u, U$: () => a });
 var i = n(374994),
     r = n(31408);
-let a = function (e, t) {
+let s = function (e, t) {
         let { multiplier: n, value: i } = e,
-            [r, a] = t,
-            s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-            _ = i * n;
-        return _ <= 0
+            [r, s] = t,
+            a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+            o = i * n;
+        return o <= 0
             ? 0
             : Math.min(
-                  s,
+                  a,
                   r.reduce((e, t, n) => {
-                      if (_ > t) {
-                          let e = a[n];
-                          return n + 1 === r.length ? a[n] : ((_ - t) / (r[n + 1] - t)) * (a[n + 1] - e) + e;
+                      if (o > t) {
+                          let e = s[n];
+                          return n + 1 === r.length ? s[n] : ((o - t) / (r[n + 1] - t)) * (s[n + 1] - e) + e;
                       }
-                      return _ === t ? a[n] : e;
+                      return o === t ? s[n] : e;
                   }, 0),
               );
     },
-    s = function (e) {
+    a = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.fZ.LEVEL_3;
-        return a(e, [r.dw[t], r.MO[t]], 1e5);
+        return s(e, [r.dw[t], r.MO[t]], 1e5);
     },
-    _ = [
+    o = [
         [1, 0.001],
         [25, 0.3],
         [100, 0.5],
@@ -32,11 +33,11 @@ let a = function (e, t) {
         [2500, 0.95],
         [9001, 1],
     ];
-_.map((e) => {
+o.map((e) => {
     let [t] = e;
     return t;
 }),
-    _.map((e) => {
+    o.map((e) => {
         let [t, n] = e;
         return n;
     });
@@ -50,6 +51,6 @@ let l = (e) =>
             : 6 === e
               ? { color: (0, i.dE)("RED_400"), square: !0 }
               : { color: (0, i.dE)("ORANGE_345"), flair: !0 };
-function o(e) {
+function u(e) {
     return e.value * (e.multiplier ?? 1);
 }

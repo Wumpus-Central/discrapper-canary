@@ -1,19 +1,20 @@
-n.d(t, { b: () => a });
-var s = n(64700),
-    i = n(17928),
-    l = n(476370),
-    r = n(795816),
+"use strict";
+n.d(t, { b: () => l });
+var i = n(64700),
+    r = n(17928),
+    s = n(476370),
+    a = n(795816),
     o = n(933958);
-let a = (e) => {
+let l = (e) => {
     let { surface: t, skipFetchingShelf: n = !0 } = e,
-        a = (0, i.bG)([o.Ay], () => o.Ay.getState());
+        l = (0, r.bG)([o.Ay], () => o.Ay.getState());
     return (
-        (0, s.useEffect)(() => {
+        (0, i.useEffect)(() => {
             var e;
-            (null == (e = a.lastCheckedForBadgeableActivities) || new Date(e).getTime() < Date.now() - 432e5) &&
+            (null == (e = l.lastCheckedForBadgeableActivities) || new Date(e).getTime() < Date.now() - 432e5) &&
                 !n &&
-                (0, r.LV)({ guildId: null });
-        }, [a.lastCheckedForBadgeableActivities, n]),
-        (0, s.useMemo)(() => (0, l.C)({ storeState: a, surface: t }), [a, t])
+                (0, a.LV)({ guildId: null });
+        }, [l.lastCheckedForBadgeableActivities, n]),
+        (0, i.useMemo)(() => (0, s.C)({ storeState: l, surface: t }), [l, t])
     );
 };

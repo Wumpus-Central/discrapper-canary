@@ -1,17 +1,18 @@
-n.d(t, { A: () => _, w: () => s });
+"use strict";
+n.d(t, { A: () => o, w: () => a });
 var i = n(17928),
     r = n(71393),
-    a = n(652215);
-function s(e) {
+    s = n(652215);
+function a(e) {
     return (
-        !e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_DISABLED) &&
-        (e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE) ||
-            e.features.has(a.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))
+        !e.features.has(s.GuildFeatures.CREATOR_MONETIZABLE_DISABLED) &&
+        (e.features.has(s.GuildFeatures.CREATOR_MONETIZABLE) ||
+            e.features.has(s.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))
     );
 }
-function _(e) {
+function o(e) {
     return (0, i.bG)([r.A], () => {
         let t = r.A.getGuild(e);
-        return null != t && s(t);
+        return null != t && a(t);
     });
 }

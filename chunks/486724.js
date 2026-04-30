@@ -1,7 +1,8 @@
-var o = e(339626),
-    c = e(598349),
-    n = e(458680);
-r.exports = function (r, t, e) {
-    var a, s;
-    return n && o((a = t.constructor)) && a !== e && c((s = a.prototype)) && s !== e.prototype && n(r, s), r;
+"use strict";
+var i = n(339626),
+    r = n(598349),
+    s = n(458680);
+e.exports = function (e, t, n) {
+    var a, o;
+    return s && i((a = t.constructor)) && a !== n && r((o = a.prototype)) && o !== n.prototype && s(e, o), e;
 };

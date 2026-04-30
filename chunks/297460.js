@@ -1,61 +1,61 @@
-n.d(t, { A: () => E });
-var r = n(627968);
-n(64700);
-var i = n(17928),
-    l = n(477782),
-    a = n(442433),
-    d = n(734057),
-    s = n(576705),
-    u = n(1193),
-    o = n(589051),
-    c = n(145567),
-    A = n(34307),
-    g = n(652215),
-    f = n(499214),
-    h = n(985018);
-function E(e, t) {
-    let { hasChat: n } = (0, o.M8)("useOverlayTextChatToggleMenuItem"),
-        E = "DM_USER" === e.kind ? e.userId : null,
-        I = (0, i.bG)([d.A], () => (null != E ? (d.A.getDMFromUserId(E) ?? null) : null), [E]),
-        _ = "CHANNEL" === e.kind ? e.channel.id : I,
-        x = (0, i.bG)([u.A], () => {
-            if (null == _) return !1;
-            let [e] = u.A.getSessionEntries();
-            for (let t of e) if (t.channelId === _) return !0;
-            return u.A.getSelectedChannelId() === _;
-        }, [_]),
-        b = "CHANNEL" === e.kind ? e.channel : null,
-        v = (0, i.bG)(
+t.d(n, { A: () => f });
+var r = t(627968);
+t(64700);
+var l = t(17928),
+    i = t(477782),
+    a = t(442433),
+    u = t(734057),
+    s = t(576705),
+    d = t(140069),
+    c = t(589051),
+    o = t(145567),
+    A = t(34307),
+    E = t(652215),
+    I = t(499214),
+    v = t(375708);
+function f(e, n) {
+    let { hasChat: t } = (0, c.M8)("useOverlayTextChatToggleMenuItem"),
+        f = "DM_USER" === e.kind ? e.userId : null,
+        N = (0, l.bG)([u.A], () => (null != f ? (u.A.getDMFromUserId(f) ?? null) : null), [f]),
+        g = "CHANNEL" === e.kind ? e.channel.id : N,
+        S = (0, l.bG)([d.A], () => {
+            if (null == g) return !1;
+            let [e] = d.A.getSessionEntries();
+            for (let n of e) if (n.channelId === g) return !0;
+            return d.A.getSelectedChannelId() === g;
+        }, [g]),
+        D = "CHANNEL" === e.kind ? e.channel : null,
+        h = (0, l.bG)(
             [s.A],
             () =>
-                !!(null == b || b.isDM() || b.isMultiUserDM() || b.isPrivate()) ||
-                s.A.can(g.xBc.READ_MESSAGE_HISTORY, b),
-            [b],
+                !!(null == D || D.isDM() || D.isMultiUserDM() || D.isPrivate()) ||
+                s.A.can(E.xBc.READ_MESSAGE_HISTORY, D),
+            [D],
         );
-    return x && null != _
-        ? (0, r.jsx)(l.Dr, {
+    return S && null != g
+        ? (0, r.jsx)(i.Dr, {
               id: "close-chat",
-              label: h.intl.string(f.default.ERApc4),
+              label: v.intl.string(I.default.ERApc4),
               action: () => {
-                  (0, c.lu)({ channelId: _, widgetType: t, secondaryValue: "context_menu_close_chat" }), (0, a.Z_)();
+                  (0, o.lu)({ channelId: g, widgetType: n, secondaryValue: "context_menu_close_chat" }), (0, a.Z_)();
               },
           })
-        : n && v
-          ? (0, r.jsx)(l.Dr, {
+        : t && h
+          ? (0, r.jsx)(i.Dr, {
                 id: "open-chat",
-                label: h.intl.string(f.default.KWrMk5),
+                label: v.intl.string(I.default.KWrMk5),
                 action: () => {
                     switch (e.kind) {
                         case "CHANNEL":
-                            (0, c.D$)({
+                            (0, o.D$)({
                                 target: {
-                                    kind: c.bB.CHANNEL,
+                                    kind: o.bB.CHANNEL,
                                     channelId: e.channel.id,
                                     guildId: e.guildId,
                                     messageId: null,
                                 },
                                 source: A.B.MANUAL,
-                                widgetType: t,
+                                widgetType: n,
                             });
                             break;
                         case "DM_USER":
@@ -69,15 +69,15 @@ function E(e, t) {
                             }
                             (async () => {
                                 try {
-                                    await (0, c.D$)({
+                                    await (0, o.D$)({
                                         target: {
-                                            kind: c.bB.DM_USER,
+                                            kind: o.bB.DM_USER,
                                             userId: e.userId,
                                             messageId: null,
-                                            existingChannelId: I,
+                                            existingChannelId: N,
                                         },
                                         source: A.B.MANUAL,
-                                        widgetType: t,
+                                        widgetType: n,
                                     });
                                 } catch {
                                 } finally {

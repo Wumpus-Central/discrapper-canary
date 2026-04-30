@@ -1,21 +1,22 @@
-n.d(e, { k: () => l });
-var r = n(17928),
-    i = n(734057),
-    a = n(763827);
-function l(t) {
-    let { channelId: e } = t;
-    return (0, r.bG)(
-        [a.A, i.A],
+"use strict";
+n.d(t, { k: () => a });
+var i = n(17928),
+    r = n(734057),
+    s = n(763827);
+function a(e) {
+    let { channelId: t } = e;
+    return (0, i.bG)(
+        [s.A, r.A],
         () =>
-            (function (t) {
-                let [e, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.A, i.A];
-                if (null == t || e.getChannelId() !== t) return !1;
-                let r = n.getChannel(t);
-                if (null == r || r.isGuildStageVoice()) return !1;
-                let l = e.getSecureFramesState()?.version;
-                return null != l && 0 !== l;
-            })(e, [a.A, i.A]),
-        [e],
+            (function (e) {
+                let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.A, r.A];
+                if (null == e || t.getChannelId() !== e) return !1;
+                let i = n.getChannel(e);
+                if (null == i || i.isGuildStageVoice()) return !1;
+                let a = t.getSecureFramesState()?.version;
+                return null != a && 0 !== a;
+            })(t, [s.A, r.A]),
+        [t],
     );
 }
 n(603266);

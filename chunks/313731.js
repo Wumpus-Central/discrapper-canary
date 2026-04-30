@@ -1,9 +1,10 @@
-n.d(t, { A: () => s });
+"use strict";
+n.d(t, { A: () => o });
 var i = n(735438),
     r = n.n(i),
-    a = n(636401),
-    l = n(652215);
-class s {
+    s = n(636401),
+    a = n(652215);
+class o {
     transport;
     version;
     encoding;
@@ -15,7 +16,7 @@ class s {
         (this.transport = e), (this.version = t), (this.encoding = n), this.checkRpcVersion(t);
     }
     checkRpcVersion(e) {
-        if (null == e || e > l.dL4 || e < 1)
-            throw new a.A({ closeCode: l.YI$.INVALID_VERSION }, `Invalid Version: ${e}`);
+        if (null == e || e > a.dL4 || e < 1)
+            throw new s.A({ closeCode: a.YI$.INVALID_VERSION }, `Invalid Version: ${e}`);
     }
 }

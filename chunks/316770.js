@@ -1,60 +1,61 @@
-i.d(t, { A: () => v });
-var l = i(627968),
-    n = i(503698),
-    s = i.n(n),
-    a = i(17928),
-    d = i(939249),
-    r = i(834730),
-    o = i(661531),
-    c = i(956793),
-    u = i(963027),
-    A = i(47167),
-    h = i(378570),
-    g = i(345942),
-    x = i(790535),
-    m = i(576705),
-    C = i(531648),
-    _ = i(10862),
-    p = i(818348),
-    N = i(985018),
-    f = i(514566);
-function v(e) {
-    let { channel: t, guild: i, onAction: n, onClose: v } = e,
-        j = (0, A.Ay)(t),
-        E = (0, a.bG)([m.A], () => t.isPrivate() || m.A.can(p.xB.CONNECT, t));
-    return (0, l.jsxs)("div", {
+"use strict";
+n.d(t, { A: () => S });
+var i = n(627968),
+    r = n(503698),
+    s = n.n(r),
+    a = n(17928),
+    o = n(939249),
+    l = n(834730),
+    u = n(661531),
+    c = n(730852),
+    d = n(963027),
+    _ = n(47167),
+    f = n(378570),
+    h = n(345942),
+    p = n(790535),
+    E = n(576705),
+    m = n(531648),
+    g = n(10862),
+    A = n(818348),
+    I = n(375708),
+    T = n(514566);
+function S(e) {
+    let { channel: t, guild: n, onAction: r, onClose: S } = e,
+        N = (0, _.Ay)(t),
+        y = (0, a.bG)([E.A], () => t.isPrivate() || E.A.can(A.xB.CONNECT, t));
+    return (0, i.jsxs)("div", {
         children: [
-            (0, l.jsxs)(r.E, {
+            (0, i.jsxs)(l.E, {
                 tag: "div",
                 variant: "heading-sm/semibold",
                 color: "text-default",
-                className: f.CT,
+                className: T.CT,
                 children: [
-                    (0, l.jsx)(_.A, { channel: t, size: "xxs", color: o.A.colors.TEXT_DEFAULT, className: f.Ow }),
-                    E
-                        ? (0, l.jsx)(d.D, {
-                              className: s()(f.sd, f.mG),
+                    (0, i.jsx)(g.A, { channel: t, size: "xxs", color: u.A.colors.TEXT_DEFAULT, className: T.Ow }),
+                    y
+                        ? (0, i.jsx)(o.D, {
+                              className: s()(T.sd, T.mG),
                               onClick: (e) => {
                                   e.stopPropagation(),
                                       t.isGuildStageVoice()
-                                          ? (0, x.av)(t)
-                                          : (c.default.selectVoiceChannel(t.id), (0, h.iN)(t.id)),
-                                      n?.({ action: "OPEN_VOICE_CHANNEL" }),
-                                      v?.();
+                                          ? (0, p.av)(t)
+                                          : (c.default.selectVoiceChannel(t.id), (0, f.iN)(t.id)),
+                                      r?.({ action: "OPEN_VOICE_CHANNEL" }),
+                                      S?.();
                               },
-                              "aria-label": (0, u.Ay)({ channel: t }),
-                              children: j,
+                              "aria-label": (0, d.Ay)({ channel: t }),
+                              children: N,
                           })
-                        : j,
+                        : N,
                 ],
             }),
-            null == i
+            null == n
                 ? null
-                : (0, l.jsx)(C.A, {
+                : (0, i.jsx)(m.A, {
                       variant: "text-xs/normal",
-                      text: N.intl.formatToPlainString(N.t["hq/Qze"], { guildName: i.name }),
+                      text: I.intl.formatToPlainString(I.t["hq/Qze"], { guildName: n.name }),
                       onClick: (e) => {
-                          e.stopPropagation(), (0, g.u)(i.id), n?.({ action: "OPEN_VOICE_GUILD" }), v?.();
+                          e.stopPropagation(), (0, h.u)(n.id), r?.({ action: "OPEN_VOICE_GUILD" }), S?.();
                       },
                   }),
         ],

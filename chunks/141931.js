@@ -1,4 +1,5 @@
-n.d(t, { Fh: () => i, du: () => l, dv: () => d, fS: () => E, qQ: () => o });
+"use strict";
+n.d(t, { Fh: () => i, du: () => l, dv: () => d, fS: () => c, qQ: () => u });
 class i extends Error {
     name = "SystemServiceNotAvailableError";
     constructor() {
@@ -6,9 +7,9 @@ class i extends Error {
     }
 }
 var r,
-    a,
     s,
-    _,
+    a,
+    o,
     l =
         (((r = {})[(r.HasRTCConnection = 0)] = "HasRTCConnection"),
         (r[(r.IsSendingVideo = 1)] = "IsSendingVideo"),
@@ -19,10 +20,10 @@ var r,
         (r[(r.StreamMediaSessionId = 6)] = "StreamMediaSessionId"),
         (r[(r.IntentionalCrashReason = 7)] = "IntentionalCrashReason"),
         r),
-    o =
-        (((a = {})[(a.RendererProcessDelayed = 0)] = "RendererProcessDelayed"),
-        (a[(a.RendererProcess = 1)] = "RendererProcess"),
-        (a[(a.MainProcess = 2)] = "MainProcess"),
-        a),
-    E = (((s = {}).WINDOW = "window"), (s.SCREEN = "screen"), (s.CAMERA = "camera"), s),
-    d = (((_ = {}).VIDEO = "VIDEO"), (_.MUTE = "MUTE"), (_.DEAFEN = "DEAFEN"), (_.DISCONNECT = "DISCONNECT"), _);
+    u =
+        (((s = {})[(s.RendererProcessDelayed = 0)] = "RendererProcessDelayed"),
+        (s[(s.RendererProcess = 1)] = "RendererProcess"),
+        (s[(s.MainProcess = 2)] = "MainProcess"),
+        s),
+    c = (((a = {}).WINDOW = "window"), (a.SCREEN = "screen"), (a.CAMERA = "camera"), a),
+    d = (((o = {}).VIDEO = "VIDEO"), (o.MUTE = "MUTE"), (o.DEAFEN = "DEAFEN"), (o.DISCONNECT = "DISCONNECT"), o);

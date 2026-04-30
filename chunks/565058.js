@@ -1,39 +1,40 @@
-let l, i;
-n.d(t, { A: () => c });
+"use strict";
+let i, r;
+n.d(t, { A: () => d });
 var s = n(627968);
 n(64700);
-var r = n(192308),
-    a = n(228366);
-n(323082), n(166403);
-var o = n(652215);
+var a = n(192308),
+    o = n(228366);
+n(753390), n(166403);
+var l = n(652215);
 let u = null;
-function d(e) {
-    null != l && e ? l() : null != i && i(), (l = null), (i = null);
+function c(e) {
+    null != i && e ? i() : null != r && r(), (i = null), (r = null);
 }
-let c = {
+let d = {
     init() {
-        a.h.subscribe("PREMIUM_REQUIRED_MODAL_OPEN", (e) => {
+        o.h.subscribe("PREMIUM_REQUIRED_MODAL_OPEN", (e) => {
             let t;
-            d(!1),
+            c(!1),
                 (u = e.context),
-                (l = e.resolve),
-                (i = e.reject),
-                o.QCW === e.context &&
+                (i = e.resolve),
+                (r = e.reject),
+                l.QCW === e.context &&
                     ((t = !1),
-                    (0, r.openModalLazy)(
+                    (0, a.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([
-                                n.e("39868"),
+                                n.e("17487"),
                                 n.e("12206"),
                                 n.e("9998"),
                                 n.e("77821"),
                             ]).then(n.bind(n, 633772));
                             return (n) => {
-                                let { onClose: l, ...i } = n;
+                                let { onClose: i, ...r } = n;
                                 return (0, s.jsx)(e, {
-                                    ...i,
+                                    ...r,
                                     onClose: (e) => {
-                                        (t = e), l();
+                                        (t = e), i();
                                     },
                                 });
                             };
@@ -41,18 +42,18 @@ let c = {
                         {
                             onCloseCallback: () => {
                                 var e;
-                                (e = t), a.h.dispatch({ type: "PREMIUM_REQUIRED_MODAL_CLOSE", shouldContinue: e });
+                                (e = t), o.h.dispatch({ type: "PREMIUM_REQUIRED_MODAL_CLOSE", shouldContinue: e });
                             },
                         },
                     ));
         }),
-            a.h.subscribe("PREMIUM_REQUIRED_MODAL_CLOSE", (e) => {
+            o.h.subscribe("PREMIUM_REQUIRED_MODAL_CLOSE", (e) => {
                 let { shouldContinue: t } = e;
-                (u = null), d(t);
+                (u = null), c(t);
             }),
-            a.h.subscribe("OVERLAY_SET_INPUT_LOCKED", (e) => {
+            o.h.subscribe("OVERLAY_SET_INPUT_LOCKED", (e) => {
                 let { locked: t } = e;
-                t && null != u && ((u = null), d(!1));
+                t && null != u && ((u = null), c(!1));
             });
     },
 };

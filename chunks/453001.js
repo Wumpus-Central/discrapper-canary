@@ -1,10 +1,11 @@
-n.d(t, { A: () => o });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(17928),
     r = n(228366),
-    l = n(626584),
+    s = n(626584),
     a = n(184989);
-new l.A("BasicChannelCacheStore");
-class s extends i.Ay.Store {
+new s.A("BasicChannelCacheStore");
+class o extends i.Ay.Store {
     channels = new Map();
     guilds = new Map();
     hasChannel(e) {
@@ -56,4 +57,4 @@ class s extends i.Ay.Store {
         this.guilds.delete(e);
     }
 }
-let o = new s();
+let l = new o();

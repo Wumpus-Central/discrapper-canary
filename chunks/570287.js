@@ -1,29 +1,30 @@
-n.d(t, { A: () => u, q: () => d });
+"use strict";
+n.d(t, { A: () => d, q: () => c });
 var i = n(17928),
     r = n(800828),
-    a = n(857071),
-    l = n(253932),
+    s = n(857071),
+    a = n(885386),
     o = n(495544),
-    s = n(696451),
-    c = n(994500);
-let d = (e, t) => {
+    l = n(696451),
+    u = n(994500);
+let c = (e, t) => {
     let n = o.default.getId() === e,
-        i = null != t && a.A.isLurking(t),
-        d = l.$s.getSetting(),
-        u = c.A.isFriend(e);
+        i = null != t && s.A.isLurking(t),
+        c = a.$s.getSetting(),
+        d = u.A.isFriend(e);
     return (
-        (!n && !i && (u || null != s.Ay.memberOf(e).find((e) => !d.includes(e)))) ||
-        (r.A.getGameFriendsForUser(e).length > 0 && l.Zk.getSetting())
+        (!n && !i && (d || null != l.Ay.memberOf(e).find((e) => !c.includes(e)))) ||
+        (r.A.getGameFriendsForUser(e).length > 0 && a.Zk.getSetting())
     );
 };
-function u(e, t) {
+function d(e, t) {
     let n = (0, i.bG)([o.default], () => o.default.getId() === e),
-        d = (0, i.bG)([a.A], () => null != t && a.A.isLurking(t)),
-        u = l.$s.useSetting();
+        c = (0, i.bG)([s.A], () => null != t && s.A.isLurking(t)),
+        d = a.$s.useSetting();
     return (0, i.bG)(
-        [c.A, s.Ay, r.A],
+        [u.A, l.Ay, r.A],
         () =>
-            (!n && !d && (c.A.isFriend(e) || null != s.Ay.memberOf(e).find((e) => !u.includes(e)))) ||
-            (r.A.getGameFriendsForUser(e).length > 0 && l.Zk.getSetting()),
+            (!n && !c && (u.A.isFriend(e) || null != l.Ay.memberOf(e).find((e) => !d.includes(e)))) ||
+            (r.A.getGameFriendsForUser(e).length > 0 && a.Zk.getSetting()),
     );
 }

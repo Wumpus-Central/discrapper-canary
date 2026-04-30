@@ -1,21 +1,22 @@
-n.d(t, { c: () => c, w: () => u });
-var l = n(17928),
+"use strict";
+n.d(t, { c: () => u, w: () => l });
+var i = n(17928),
     r = n(495544),
     s = n(763827),
-    i = n(116956);
-function a(e, t) {
+    a = n(116956);
+function o(e, t) {
     return 0 === e.size || (1 === e.size && e.has(t));
 }
-function u(e) {
-    return (0, l.bG)([i.A, r.default], () => {
+function l(e) {
+    return (0, i.bG)([a.A, r.default], () => {
         if (null == e) return !0;
-        let t = i.A.getUserIds(e);
-        return null == t || a(t, r.default.getId());
+        let t = a.A.getUserIds(e);
+        return null == t || o(t, r.default.getId());
     });
 }
-function c() {
-    return (0, l.bG)([s.A, r.default], () => {
+function u() {
+    return (0, i.bG)([s.A, r.default], () => {
         let e = s.A.getUserIds();
-        return null == e || a(e, r.default.getId());
+        return null == e || o(e, r.default.getId());
     });
 }

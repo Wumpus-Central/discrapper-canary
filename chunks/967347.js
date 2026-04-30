@@ -1,36 +1,37 @@
-n.d(t, { w: () => A });
+"use strict";
+n.d(t, { w: () => p });
 var i = n(17928),
     r = n(228366),
-    a = n(736056),
-    s = n(954571),
-    _ = n(723702),
+    s = n(736056),
+    a = n(174459),
+    o = n(723702),
     l = n(19575),
-    o = n(652215);
-let E = { hashes: {} };
+    u = n(652215);
+let c = { hashes: {} };
 async function d() {
-    if (!_.isPlatformEmbedded || !(0, _.isWindows)()) return [];
+    if (!o.isPlatformEmbedded || !(0, o.isWindows)()) return [];
     await l.Ay.ensureModule("discord_media");
     let e = l.Ay.requireModule("discord_media");
     return (await e.getSystemAnalyticsBlob()) ?? [];
 }
-async function c() {
+async function _() {
     try {
-        let e = (await d()).filter((e) => E.hashes[e.name] !== e.hash);
+        let e = (await d()).filter((e) => c.hashes[e.name] !== e.hash);
         for (let { name: t, hash: n, data: i } of e) {
             let e = { ...i, gpus: i.gpus?.map((e) => JSON.stringify(e)) };
-            s.default.track(o.HAw.HARDWARE_DETECTED, e), ((E = { hashes: { ...E.hashes } }).hashes[t] = n);
+            a.default.track(u.HAw.HARDWARE_DETECTED, e), ((c = { hashes: { ...c.hashes } }).hashes[t] = n);
         }
-        e.length > 0 && I.emitChange();
+        e.length > 0 && h.emitChange();
     } catch (e) {}
 }
-class u extends i.Ay.PersistedStore {
+class f extends i.Ay.PersistedStore {
     static displayName = "SystemAnalyticsStore";
     static persistKey = "SystemAnalyticsStore";
     initialize(e) {
-        (E = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(a.A);
+        (c = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.A);
     }
     getState() {
-        return E;
+        return c;
     }
     async info() {
         try {
@@ -40,11 +41,11 @@ class u extends i.Ay.PersistedStore {
         } catch (e) {}
     }
 }
-let I = new u(r.h, {
+let h = new f(r.h, {
     START_SESSION: function () {
-        return c(), !1;
+        return _(), !1;
     },
 });
-function A() {
-    return I.info();
+function p() {
+    return h.info();
 }

@@ -1,99 +1,100 @@
-n.d(t, { A: () => R });
-var l = n(627968),
-    i = n(64700),
+"use strict";
+n.d(t, { A: () => b });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(990078),
-    o = n(200192),
-    c = n(526701),
-    d = n(522937),
-    u = n(653766),
-    h = n(922016),
-    g = n(939249),
-    m = n(793574),
-    A = n(384059),
-    p = n(917592),
-    C = n(830618),
-    E = n(834730),
-    x = n(29160),
-    N = n(985018),
-    f = n(60062);
-let _ = function (e) {
-    let { className: t, hasVideo: n, text: i, hasConnectedChannel: s, textVariant: r = "text-md/medium" } = e,
-        o = n ? N.intl.string(N.t.IlHdW8) : N.intl.string(N.t.WsOisp);
-    return (0, l.jsx)(x.A, {
-        className: a()(t, f.H),
-        hoverText: s ? (0, l.jsx)(E.E, { variant: r, color: "currentColor", children: o }) : null,
-        children: (0, l.jsx)(E.E, { variant: r, color: "currentColor", children: i }),
+    o = n(990078),
+    l = n(200192),
+    u = n(526701),
+    c = n(522937),
+    d = n(653766),
+    _ = n(922016),
+    f = n(939249),
+    h = n(793574),
+    p = n(384059),
+    E = n(917592),
+    m = n(830618),
+    g = n(834730),
+    A = n(29160),
+    I = n(375708),
+    T = n(60062);
+let S = function (e) {
+    let { className: t, hasVideo: n, text: r, hasConnectedChannel: s, textVariant: o = "text-md/medium" } = e,
+        l = n ? I.intl.string(I.t.IlHdW8) : I.intl.string(I.t.WsOisp);
+    return (0, i.jsx)(A.A, {
+        className: a()(t, T.H),
+        hoverText: s ? (0, i.jsx)(g.E, { variant: o, color: "currentColor", children: l }) : null,
+        children: (0, i.jsx)(g.E, { variant: o, color: "currentColor", children: r }),
     });
 };
-var T = n(652215),
-    v = n(648881);
-let I = { [T.vkP.CONNECTED]: v.nf, [T.vkP.CONNECTING]: v._6, [T.vkP.ERROR]: v.Il },
-    S = { [T.bFR.FINE]: v.LP, [T.bFR.AVERAGE]: v.mq, [T.bFR.BAD]: v.yA, [T.bFR.UNKNOWN]: null },
-    j = { [T.bFR.FINE]: o.Q, [T.bFR.AVERAGE]: c.j, [T.bFR.BAD]: d.R, [T.bFR.UNKNOWN]: u.e };
-function y(e) {
-    let { quality: t, largePing: n, ...i } = e,
-        s = j[t];
-    return (0, l.jsx)(s, { className: a()(v.hU, { [v.kV]: n }), ...i });
-}
+var N = n(652215),
+    y = n(648881);
+let C = { [N.vkP.CONNECTED]: y.nf, [N.vkP.CONNECTING]: y._6, [N.vkP.ERROR]: y.Il },
+    v = { [N.bFR.FINE]: y.LP, [N.bFR.AVERAGE]: y.mq, [N.bFR.BAD]: y.yA, [N.bFR.UNKNOWN]: null },
+    O = { [N.bFR.FINE]: l.Q, [N.bFR.AVERAGE]: u.j, [N.bFR.BAD]: c.R, [N.bFR.UNKNOWN]: d.e };
 function R(e) {
+    let { quality: t, largePing: n, ...r } = e,
+        s = O[t];
+    return (0, i.jsx)(s, { className: a()(y.hU, { [y.kV]: n }), ...r });
+}
+function b(e) {
     let {
             quality: t,
             lastPing: n,
             state: s,
-            className: o,
-            children: c,
-            channelId: d,
-            childrenAsSubtitle: u,
-            connectionStatusTextVariant: E,
-            hasVideo: x,
+            className: l,
+            children: u,
+            channelId: c,
+            childrenAsSubtitle: d,
+            connectionStatusTextVariant: g,
+            hasVideo: A,
         } = e,
-        N = i.useRef(null),
-        f = s === T.S7L.RTC_CONNECTED,
-        j = i.useCallback((e) => (0, l.jsx)(C.A, { ...e, channelId: d }), [d]),
-        { connectionStatus: R, connectionStatusText: P } = p.A.getStatus(s, x);
-    return (0, l.jsxs)("div", {
-        className: v.pe,
+        I = r.useRef(null),
+        T = s === N.S7L.RTC_CONNECTED,
+        O = r.useCallback((e) => (0, i.jsx)(m.A, { ...e, channelId: c }), [c]),
+        { connectionStatus: b, connectionStatusText: D } = E.A.getStatus(s, A);
+    return (0, i.jsxs)("div", {
+        className: y.pe,
         children: [
-            (0, l.jsx)("div", {
-                className: a()(v.yH, S[t], o),
-                ref: N,
-                children: (0, l.jsx)(h.Y, {
-                    targetElementRef: N,
-                    renderPopout: j,
+            (0, i.jsx)("div", {
+                className: a()(y.yH, v[t], l),
+                ref: I,
+                children: (0, i.jsx)(_.Y, {
+                    targetElementRef: I,
+                    renderPopout: O,
                     position: "top",
                     children: (e) => {
-                        let { onClick: i } = e;
-                        return (0, l.jsxs)(l.Fragment, {
+                        let { onClick: r } = e;
+                        return (0, i.jsxs)(i.Fragment, {
                             children: [
-                                f &&
-                                    (0, l.jsx)(r.m, {
-                                        text: t !== T.bFR.UNKNOWN && null != n ? `${n.toFixed(0)} ms` : null,
-                                        children: (0, l.jsx)(g.D, {
-                                            className: v.xr,
+                                T &&
+                                    (0, i.jsx)(o.m, {
+                                        text: t !== N.bFR.UNKNOWN && null != n ? `${n.toFixed(0)} ms` : null,
+                                        children: (0, i.jsx)(f.D, {
+                                            className: y.xr,
                                             onClick: (e) => {
-                                                (0, A.X)(m.A.RTC_PANEL, A.O.CONNECTION_STATUS), i(e);
+                                                (0, p.X)(h.A.RTC_PANEL, p.O.CONNECTION_STATUS), r(e);
                                             },
-                                            children: (0, l.jsx)(y, { quality: t, largePing: u }),
+                                            children: (0, i.jsx)(R, { quality: t, largePing: d }),
                                         }),
                                     }),
-                                (0, l.jsxs)("div", {
-                                    className: v.ei,
+                                (0, i.jsxs)("div", {
+                                    className: y.ei,
                                     children: [
-                                        (0, l.jsx)(g.D, {
+                                        (0, i.jsx)(f.D, {
                                             onClick: (e) => {
-                                                (0, A.X)(m.A.RTC_PANEL, A.O.CONNECTION_STATUS), i(e);
+                                                (0, p.X)(h.A.RTC_PANEL, p.O.CONNECTION_STATUS), r(e);
                                             },
-                                            children: (0, l.jsx)(_, {
-                                                text: P,
-                                                textVariant: E,
-                                                hasVideo: x,
-                                                className: I[R],
-                                                hasConnectedChannel: null != d,
+                                            children: (0, i.jsx)(S, {
+                                                text: D,
+                                                textVariant: g,
+                                                hasVideo: A,
+                                                className: C[b],
+                                                hasConnectedChannel: null != c,
                                             }),
                                         }),
-                                        u ? c : null,
+                                        d ? u : null,
                                     ],
                                 }),
                             ],
@@ -101,7 +102,7 @@ function R(e) {
                     },
                 }),
             }),
-            u ? null : c,
+            d ? null : u,
         ],
     });
 }

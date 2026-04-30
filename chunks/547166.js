@@ -1,76 +1,76 @@
-r.d(t, { default: () => y });
-var l = r(627968),
-    a = r(64700),
-    n = r(189213),
-    o = r(732159),
-    i = r(17928),
-    s = r(150934),
-    d = r(260598),
-    u = r(686956),
-    c = r(504049),
-    g = r(734057),
-    h = r(427262),
-    p = r(226698),
-    b = r(652215),
-    m = r(221314),
-    x = r(985018),
-    f = r(614487);
-function y(e) {
-    let { guildId: t, user: r, location: y, modReportId: v, ...C } = e,
-        [w, j] = a.useState(""),
-        [A, E] = a.useState(!1),
-        T = (0, c.$9)(t, { location: y, targetUserId: r.id }),
-        { isModReportClosed: M, isModReport: P } = (0, i.cf)([g.A], () => {
-            let e = g.A.getChannel(v);
-            return { isModReportClosed: e?.isArchivedThread(), isModReport: e?.isModeratorReportChannel() };
+l.d(e, { default: () => k });
+var n = l(627968),
+    i = l(64700),
+    a = l(189213),
+    r = l(732159),
+    s = l(17928),
+    o = l(150934),
+    u = l(260598),
+    c = l(66834),
+    d = l(504049),
+    h = l(734057),
+    g = l(427262),
+    m = l(226698),
+    C = l(652215),
+    p = l(221314),
+    f = l(375708),
+    x = l(614487);
+function k(t) {
+    let { guildId: e, user: l, location: k, modReportId: T, ...b } = t,
+        [A, v] = i.useState(""),
+        [j, y] = i.useState(!1),
+        I = (0, d.$9)(e, { location: k, targetUserId: l.id }),
+        { isModReportClosed: E, isModReport: M } = (0, s.cf)([h.A], () => {
+            let t = h.A.getChannel(T);
+            return { isModReportClosed: t?.isArchivedThread(), isModReport: t?.isModeratorReportChannel() };
         }),
-        R = a.useCallback(() => {
-            u.A.kickUser(t, r.id, w, v).then(() => {
-                A && null != v && p.A.resolveFlag(v);
+        S = i.useCallback(() => {
+            c.A.kickUser(e, l.id, A, T).then(() => {
+                j && null != T && m.A.resolveFlag(T);
             }),
-                T(c.Nj.KICK),
-                null != v && C.onClose?.();
-        }, [t, r.id, w, T, v, A, C]),
-        _ = a.useCallback((e) => {
-            j(e);
+                I(d.Nj.KICK),
+                null != T && b.onClose?.();
+        }, [e, l.id, A, I, T, j, b]),
+        w = i.useCallback((t) => {
+            v(t);
         }, []);
-    return null != v && P
-        ? (0, l.jsx)(n.Modal, {
-              ...C,
-              title: x.intl.formatToPlainString(x.t["1Ie87p"], { user: r.username }),
-              subtitle: x.intl.format(x.t["/yH0UT"], { user: `@${h.Ay.getName(r)}` }),
-              actions: [{ text: x.intl.string(x.t["3glT6Z"]), onClick: R, size: "sm", variant: "critical-primary" }],
-              actionBarInput: M
+    return null != T && M
+        ? (0, n.jsx)(a.Modal, {
+              ...b,
+              title: f.intl.formatToPlainString(f.t["1Ie87p"], { user: l.username }),
+              subtitle: f.intl.format(f.t["/yH0UT"], { user: `@${g.Ay.getName(l)}` }),
+              actions: [{ text: f.intl.string(f.t["3glT6Z"]), onClick: S, size: "sm", variant: "critical-primary" }],
+              actionBarInput: E
                   ? void 0
-                  : (0, l.jsx)(s.S, {
-                        checked: A,
-                        onChange: (e) => {
-                            E(e);
+                  : (0, n.jsx)(o.S, {
+                        checked: j,
+                        onChange: (t) => {
+                            y(t);
                         },
-                        label: x.intl.string(m.default["8yIKem"]),
+                        label: f.intl.string(p.default["8yIKem"]),
                     }),
-              children: (0, l.jsx)(d.f, {
-                  label: x.intl.string(null != v ? x.t.hmKy8E : x.t["+2QEPt"]),
-                  maxLength: b.hlA,
-                  onChange: _,
-                  value: w,
+              children: (0, n.jsx)(u.f, {
+                  label: f.intl.string(null != T ? f.t.hmKy8E : f.t["+2QEPt"]),
+                  maxLength: C.hlA,
+                  onChange: w,
+                  value: A,
                   rows: 2,
               }),
           })
-        : (0, l.jsx)(o.ConfirmModal, {
-              title: x.intl.formatToPlainString(x.t["1Ie87p"], { user: r.username }),
-              subtitle: x.intl.format(x.t["/yH0UT"], { user: `@${h.Ay.getName(r)}` }),
-              confirmText: x.intl.string(x.t["3glT6Z"]),
-              cancelText: x.intl.string(x.t["ETE/oC"]),
-              onConfirm: R,
-              ...C,
-              children: (0, l.jsx)("div", {
-                  className: f.Y,
-                  children: (0, l.jsx)(d.f, {
-                      label: x.intl.string(x.t["+2QEPt"]),
-                      maxLength: b.hlA,
-                      onChange: _,
-                      value: w,
+        : (0, n.jsx)(r.ConfirmModal, {
+              title: f.intl.formatToPlainString(f.t["1Ie87p"], { user: l.username }),
+              subtitle: f.intl.format(f.t["/yH0UT"], { user: `@${g.Ay.getName(l)}` }),
+              confirmText: f.intl.string(f.t["3glT6Z"]),
+              cancelText: f.intl.string(f.t["ETE/oC"]),
+              onConfirm: S,
+              ...b,
+              children: (0, n.jsx)("div", {
+                  className: x.Y,
+                  children: (0, n.jsx)(u.f, {
+                      label: f.intl.string(f.t["+2QEPt"]),
+                      maxLength: C.hlA,
+                      onChange: w,
+                      value: A,
                       rows: 2,
                   }),
               }),

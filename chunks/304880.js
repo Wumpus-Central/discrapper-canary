@@ -1,6 +1,7 @@
-var n = t(324988),
-    o = String;
-r.exports = function (r) {
-    if ("Symbol" === n(r)) throw TypeError("Cannot convert a Symbol value to a string");
-    return o(r);
+"use strict";
+var i = n(324988),
+    r = String;
+e.exports = function (e) {
+    if ("Symbol" === i(e)) throw TypeError("Cannot convert a Symbol value to a string");
+    return r(e);
 };

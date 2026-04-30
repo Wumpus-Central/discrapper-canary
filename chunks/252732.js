@@ -1,126 +1,126 @@
-t.d(a, { XD: () => R, sv: () => d, eh: () => g, sN: () => m, rM: () => f });
-var n = t(627968);
-t(64700);
-var r = t(317097),
-    l = t(192308);
-t(23658);
-var i = t(870218),
-    o = t(61310),
-    s = t(101058),
-    _ = t(486020);
-t(453771);
-var u = t(427262),
-    A = t(228366),
-    c = t(478644),
-    E = t(339984),
-    p = t(985018);
-function R(e) {
-    let { uploadType: a, guildId: r, analyticsSource: _, filters: u, isTryItOut: R = !1, stackingBehavior: d } = e,
-        g = (0, o.Y)(a, r),
-        f = null;
-    (0, l.openModalLazy)(
+"use strict";
+n.d(t, { XD: () => p, sv: () => E, eh: () => m, sN: () => A, rM: () => g });
+var i = n(627968);
+n(64700);
+var r = n(317097),
+    s = n(192308);
+n(494921);
+var a = n(77257),
+    o = n(61310),
+    l = n(101058),
+    u = n(486020);
+n(453771);
+var c = n(427262),
+    d = n(228366),
+    _ = n(478644),
+    f = n(339984),
+    h = n(375708);
+function p(e) {
+    let { uploadType: t, guildId: r, analyticsSource: u, filters: c, isTryItOut: p = !1, stackingBehavior: E } = e,
+        m = (0, o.Y)(t, r),
+        g = null;
+    (0, s.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
-                t.e("69668"),
-                t.e("90261"),
-                t.e("16933"),
-                t.e("73873"),
-                t.e("63232"),
-                t.e("50015"),
-                t.e("47017"),
-                t.e("1555"),
-                t.e("44695"),
-                t.e("33902"),
-                t.e("31644"),
-                t.e("993"),
-                t.e("76170"),
-                t.e("99999"),
-                t.e("11527"),
-                t.e("6223"),
-                t.e("29666"),
-                t.e("80436"),
-                t.e("93513"),
-                t.e("47011"),
-                t.e("79149"),
-                t.e("90017"),
-                t.e("99150"),
-                t.e("60987"),
-            ]).then(t.bind(t, 902550));
-            return (t) =>
-                (0, n.jsx)(e, {
-                    filters: u,
-                    maxFileSizeBytes: c.j,
-                    imageSpecifications: a === E.HL.BANNER ? p.intl.string(p.t.IhzZlo) : void 0,
+                n.e("69668"),
+                n.e("90261"),
+                n.e("16933"),
+                n.e("73873"),
+                n.e("63232"),
+                n.e("50015"),
+                n.e("47017"),
+                n.e("1555"),
+                n.e("44695"),
+                n.e("33902"),
+                n.e("11527"),
+                n.e("31644"),
+                n.e("63070"),
+                n.e("76170"),
+                n.e("99999"),
+                n.e("29666"),
+                n.e("80436"),
+                n.e("93513"),
+                n.e("47011"),
+                n.e("79149"),
+                n.e("90017"),
+                n.e("99150"),
+                n.e("60987"),
+            ]).then(n.bind(n, 902550));
+            return (n) =>
+                (0, i.jsx)(e, {
+                    filters: c,
+                    maxFileSizeBytes: _.j,
+                    imageSpecifications: t === f.HL.BANNER ? h.intl.string(h.t.IhzZlo) : void 0,
                     onFileSelected: (e) => {
-                        f = null != g ? i.A.fromBlob(g, e) : null;
+                        g = null != m ? a.A.fromBlob(m, e) : null;
                     },
                     onComplete: async (e) => {
-                        let { assetOrigin: t, imageUri: n, file: l, originalAsset: o } = e;
-                        null == f && null != g && (f = i.A.fromBlob(g, l));
-                        let u = (await f?.getOriginalMd5()) ?? null,
-                            c = l.name.replace(/\.[^/.]+$/, ""),
-                            E = (0, s.Rh)({ filename: c, assetOrigin: t });
+                        let { assetOrigin: n, imageUri: i, file: s, originalAsset: o } = e;
+                        null == g && null != m && (g = a.A.fromBlob(m, s));
+                        let c = (await g?.getOriginalMd5()) ?? null,
+                            _ = s.name.replace(/\.[^/.]+$/, ""),
+                            f = (0, l.Rh)({ filename: _, assetOrigin: n });
                         !(function (e) {
                             let {
-                                image: a,
-                                file: t,
-                                uploadType: n,
+                                image: t,
+                                file: n,
+                                uploadType: i,
                                 guildId: r,
-                                analyticsSource: l,
-                                isTryItOut: i = !1,
+                                analyticsSource: s,
+                                isTryItOut: a = !1,
                             } = e;
-                            A.h.dispatch({
+                            d.h.dispatch({
                                 type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
-                                image: a,
-                                file: t,
-                                uploadType: n,
+                                image: t,
+                                file: n,
+                                uploadType: i,
                                 guildId: r,
-                                analyticsSource: l,
-                                isTryItOut: i,
+                                analyticsSource: s,
+                                isTryItOut: a,
                             });
                         })({
-                            image: (0, s.XB)({
-                                assetOrigin: t,
-                                imageUri: n,
-                                description: E,
+                            image: (0, l.XB)({
+                                assetOrigin: n,
+                                imageUri: i,
+                                description: f,
                                 originalAsset: o,
-                                originalMd5: u,
+                                originalMd5: c,
                             }),
-                            file: l,
-                            uploadType: a,
+                            file: s,
+                            uploadType: t,
                             guildId: r,
-                            analyticsSource: _,
-                            isTryItOut: R,
+                            analyticsSource: u,
+                            isTryItOut: p,
                         });
                     },
-                    uploadType: a,
+                    uploadType: t,
                     showUpsellHeader: !0,
-                    ...t,
+                    ...n,
                 });
         },
-        { stackingBehavior: d },
+        { stackingBehavior: E },
     );
 }
-function d(e, a, t) {
-    let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function E(e, t, n) {
+    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
-    let { size: r = 80, canAnimate: l = !0 } = n,
-        i = null === e;
-    return i && null == a
-        ? _.Ay.getDefaultAvatarURL(t.id, t.discriminator)
-        : i || a?.avatar == null
-          ? t.getAvatarURL(void 0, r, l)
-          : t.getAvatarURL(a?.guildId, r, l);
-}
-function g(e) {
-    let { pendingNickname: a, pendingGlobalName: t, user: n, guildMember: r } = e,
-        l = "" === a ? null : (a ?? r?.nick),
-        i = "" === t ? n.username : t;
-    return l ?? i ?? u.Ay.getName(n);
-}
-function f(e, a, t) {
-    t(e ?? (null != a ? null : void 0));
+    let { size: r = 80, canAnimate: s = !0 } = i,
+        a = null === e;
+    return a && null == t
+        ? u.Ay.getDefaultAvatarURL(n.id, n.discriminator)
+        : a || t?.avatar == null
+          ? n.getAvatarURL(void 0, r, s)
+          : n.getAvatarURL(t?.guildId, r, s);
 }
 function m(e) {
+    let { pendingNickname: t, pendingGlobalName: n, user: i, guildMember: r } = e,
+        s = "" === t ? null : (t ?? r?.nick),
+        a = "" === n ? i.username : n;
+    return s ?? a ?? c.Ay.getName(i);
+}
+function g(e, t, n) {
+    n(e ?? (null != t ? null : void 0));
+}
+function A(e) {
     return (null != e ? (0, r.OK)(e) : 1) > 0.25;
 }

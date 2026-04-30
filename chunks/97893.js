@@ -1,32 +1,33 @@
-n.d(t, { Z: () => a });
+"use strict";
+n.d(t, { Z: () => o });
 var i = n(627968);
 n(64700);
-var l = n(827734),
+var r = n(661531),
     s = n(996682),
-    r = n(27989);
-let a = (e) => {
+    a = n(27989);
+let o = (e) => {
     let {
             size: t = "md",
             width: n,
-            height: a,
-            color: o = l.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: d = "",
+            height: o,
+            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: u = "",
             ...c
         } = e,
-        u = (0, r.J)(t),
-        m = u?.width ?? n,
-        g = u?.height ?? a;
+        d = (0, a.J)(t),
+        _ = d?.width ?? n,
+        f = d?.height ?? o;
     return (0, i.jsx)("svg", {
         ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: m,
-        height: g,
+        width: _,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {
-            fill: "string" == typeof o ? o : o.css,
+            fill: "string" == typeof l ? l : l.css,
             d: "M1 5a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM1 12a1 1 0 0 1 1-1h20a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1ZM2 18a1 1 0 1 0 0 2h20a1 1 0 1 0 0-2H2Z",
-            className: d,
+            className: u,
         }),
     });
 };

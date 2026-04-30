@@ -1,4 +1,5 @@
-n.d(t, { A: () => a });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(839214);
 let r = Object.freeze({
         query: "",
@@ -9,4 +10,4 @@ let r = Object.freeze({
         resultsInitialCategoryId: null,
         scrollPosition: null,
     }),
-    a = (0, i.D)(() => r);
+    s = (0, i.D)(() => r);

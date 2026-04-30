@@ -1,44 +1,45 @@
+"use strict";
 n.d(t, {
-    $r: () => y,
-    Lg: () => b,
-    P0: () => R,
-    Rh: () => L,
-    Vq: () => C,
+    $r: () => O,
+    Lg: () => R,
+    P0: () => L,
+    Rh: () => v,
+    Vq: () => I,
     Wu: () => N,
-    YM: () => v,
-    _x: () => O,
-    be: () => w,
-    kx: () => S,
+    YM: () => b,
+    _x: () => C,
+    be: () => P,
+    kx: () => y,
     n$: () => T,
-    px: () => P,
+    px: () => M,
     tI: () => D,
-    xj: () => f,
-    yx: () => M,
+    xj: () => S,
+    yx: () => w,
 }),
     n(321073);
 var i,
     r = n(6161),
-    a = n(681154);
+    s = n(681154);
 n(17928), n(256265);
-var l = n(698441),
-    s = n(320095),
-    o = n(95701),
-    d = n(734057),
-    u = n(71393);
+var a = n(698441),
+    o = n(320095),
+    l = n(95701),
+    u = n(734057),
+    c = n(71393);
 n(232835);
-var c = n(222823),
+var d = n(222823),
     _ = n(935208),
-    A = n(4106),
-    h = n(875448),
-    E = n(800319),
-    p = n(557740),
+    f = n(4106),
+    h = n(519059),
+    p = n(800319),
+    E = n(557740),
     m = n(596720),
-    I = n(449e3),
-    g = n(652215);
-function C(e, t) {
+    g = n(449e3),
+    A = n(652215);
+function I(e, t) {
     return `hydration-${e}-${t}`;
 }
-n(985018);
+n(375708);
 var T =
     (((i = {})[(i.UNKNOWN = 0)] = "UNKNOWN"),
     (i[(i.DEFAULT = 1)] = "DEFAULT"),
@@ -46,22 +47,22 @@ var T =
     (i[(i.LESS = 3)] = "LESS"),
     (i[(i.MUTED = 4)] = "MUTED"),
     i);
-function f(e) {
+function S(e) {
     return e.type === m.Mm.MESSAGE || e.type === m.Mm.GUILD_EVENT;
 }
 function N(e) {
     return e < -1.5 ? 4 : e < 0 ? 3 : e > 0 ? 2 : 1;
 }
-async function S(e, t, n) {
-    let i = p.A.getHydratedItems(),
+async function y(e, t, n) {
+    let i = E.A.getHydratedItems(),
         r = e.slice(t, n);
     if (0 === r.length) return;
-    A.A.loadHydratedAttempt(C(t, n));
-    let a = r.filter((e) => null == i[e.id]),
-        l = a
+    f.A.loadHydratedAttempt(I(t, n));
+    let s = r.filter((e) => null == i[e.id]),
+        a = s
             .filter((e) => e.type === m.Mm.MESSAGE)
             .map((e) => ({ channel_id: e.data.channel_id, message_id: e.data.message_id })),
-        s = a
+        o = s
             .map((e) => {
                 if (e.type === m.Mm.MESSAGE) {
                     let t = [];
@@ -88,32 +89,32 @@ async function S(e, t, n) {
             })
             .flat()
             .filter(Boolean),
-        o = a
+        l = s
             .filter((e) => e.type === m.Mm.ACTIVITY)
             .map((e) => ({ user_id: e.data.user_id, content_id: e.data.content_id }));
-    await A.A.fetchHydrated(t, n, { messageItems: [...l, ...s], activityItems: o });
+    await f.A.fetchHydrated(t, n, { messageItems: [...a, ...o], activityItems: l });
 }
-async function O() {
-    let e = p.A.getUnreadDisplayItems(),
-        t = p.A.getReadDisplayItems(),
-        n = p.A.getNextIndexToHydrate();
-    await S([...e, ...t], n, n + m.w5);
+async function C() {
+    let e = E.A.getUnreadDisplayItems(),
+        t = E.A.getReadDisplayItems(),
+        n = E.A.getNextIndexToHydrate();
+    await y([...e, ...t], n, n + m.w5);
 }
-function L(e, t) {
+function v(e, t) {
     return {
         ...t,
-        message: (0, s.rh)(e.message),
-        threadChannel: null != e.thread_channel ? o.Lt.fromServer(e.thread_channel, e.guild_id) : void 0,
+        message: (0, o.rh)(e.message),
+        threadChannel: null != e.thread_channel ? l.Lt.fromServer(e.thread_channel, e.guild_id) : void 0,
     };
 }
-function y(e, t) {
-    let n = c.Ay.getTrackedAckMessageId(e);
+function O(e, t) {
+    let n = d.Ay.getTrackedAckMessageId(e);
     return null == n || _.default.extractTimestamp(t) > _.default.extractTimestamp(n);
 }
-function b(e) {
+function R(e) {
     return (0, h.HF)(e);
 }
-function v(e) {
+function b(e) {
     return {
         id: e.id,
         type: m.Mm.CUSTOM_STATUS,
@@ -123,7 +124,7 @@ function v(e) {
             author_type: r.ContentInventoryAuthorType.USER,
             traits: [],
             participants: [],
-            content_type: a.ContentInventoryEntryType.CUSTOM_STATUS,
+            content_type: s.ContentInventoryEntryType.CUSTOM_STATUS,
             extra: {
                 type: "custom_status_extra",
                 status: e.data.text ?? "",
@@ -138,17 +139,17 @@ function v(e) {
     };
 }
 function D(e, t, n) {
-    let i = I.A.getReadTimestamp(e);
+    let i = g.A.getReadTimestamp(e);
     null == i && (i = n?.[e]);
-    let r = I.A.getReadTimestamp(t);
+    let r = g.A.getReadTimestamp(t);
     return (null == r && (r = n?.[t]), null == i && null == r) ? 0 : null == i ? -1 : null == r ? 1 : r - i;
 }
-function R(e) {
-    let t = [...p.A.getUnreadDisplayItems(), ...p.A.getReadDisplayItems()],
+function L(e) {
+    let t = [...E.A.getUnreadDisplayItems(), ...E.A.getReadDisplayItems()],
         n = null;
     for (let t = e.length - 1; t >= 0; t--) {
         let i = e[t];
-        if (null != i && !E.P.has(i.item.data.kind)) {
+        if (null != i && !p.P.has(i.item.data.kind)) {
             n = i.item.id;
             break;
         }
@@ -157,7 +158,7 @@ function R(e) {
     let i = t.findIndex((e) => e.id === n);
     return i < 0 ? [] : t.slice(0, i + 1);
 }
-function M(e) {
+function w(e) {
     let t, n;
     switch (e.data.kind) {
         case "message":
@@ -167,17 +168,17 @@ function M(e) {
             t = e.data.threadChannel.id;
             break;
         case "guildEvent":
-            n = l.Ay.getGuildScheduledEvent(e.data.eventId)?.guild_id;
+            n = a.Ay.getGuildScheduledEvent(e.data.eventId)?.guild_id;
             break;
         default:
             return !1;
     }
-    let i = d.A.getChannel(t);
+    let i = u.A.getChannel(t);
     if (i?.nsfw) return !0;
-    let r = null != (n = i?.guild_id ?? n) ? u.A.getGuild(n) : null;
-    return r?.nsfwLevel === g.ftr.EXPLICIT || r?.nsfwLevel === g.ftr.AGE_RESTRICTED;
+    let r = null != (n = i?.guild_id ?? n) ? c.A.getGuild(n) : null;
+    return r?.nsfwLevel === A.ftr.EXPLICIT || r?.nsfwLevel === A.ftr.AGE_RESTRICTED;
 }
-function P(e) {
+function M(e) {
     switch (e.data.kind) {
         case "end":
             return "end";
@@ -186,13 +187,13 @@ function P(e) {
         case "bottomLoading":
             return "bottomLoading";
         case "message":
-            if (e.channelType === g.rbe.GUILD_ANNOUNCEMENT) return "announcement";
+            if (e.channelType === A.rbe.GUILD_ANNOUNCEMENT) return "announcement";
             if (e.data.messageContext?.external_content_application_id != null) return "game_message";
             return "message";
         case "guildEvent":
             return "guild_event";
         case "contentInventory":
-            if (e.data.content.content_type === a.ContentInventoryEntryType.CUSTOM_STATUS)
+            if (e.data.content.content_type === s.ContentInventoryEntryType.CUSTOM_STATUS)
                 return "hotwheels_custom_status";
             return "hotwheels_gaming_activity";
         case "recommendedGuilds":
@@ -205,13 +206,13 @@ function P(e) {
             return "unknown";
     }
 }
-async function w(e) {
+async function P(e) {
     let { ack: t } = await Promise.resolve().then(n.bind(n, 334738)),
         { AnalyticsObjectTypes: i } = await Promise.resolve().then(n.bind(n, 652215));
-    p.A.getDehydratedItems().forEach((n) => {
+    E.A.getDehydratedItems().forEach((n) => {
         n.type === m.Mm.MESSAGE &&
-            n.data.channel_type === g.rbe.GUILD_ANNOUNCEMENT &&
-            _.default.compare(c.Ay.ackMessageId(n.data.channel_id), n.data.message_id) >= 0 &&
+            n.data.channel_type === A.rbe.GUILD_ANNOUNCEMENT &&
+            _.default.compare(d.Ay.ackMessageId(n.data.channel_id), n.data.message_id) >= 0 &&
             t(
                 n.data.channel_id,
                 { object: e, objectType: i.ACK_SEMI_AUTOMATIC },
@@ -220,9 +221,9 @@ async function w(e) {
                 _.default.atPreviousMillisecond(n.data.message_id),
             );
     }),
-        await A.A.clearReadStates(),
-        await A.A.fetchDehydrated({ isReloading: !0, forceRefresh: !0 }),
-        await A.A.reloadICYMITab(),
-        await A.A.getGuildChannelScores(),
-        A.A.getRecommendedGuilds();
+        await f.A.clearReadStates(),
+        await f.A.fetchDehydrated({ isReloading: !0, forceRefresh: !0 }),
+        await f.A.reloadICYMITab(),
+        await f.A.getGuildChannelScores(),
+        f.A.getRecommendedGuilds();
 }

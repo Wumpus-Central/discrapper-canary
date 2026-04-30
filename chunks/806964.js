@@ -1,16 +1,17 @@
-n.d(t, { u: () => o });
+"use strict";
+n.d(t, { u: () => l });
 var i = n(951001),
-    s = n(265422),
-    r = n(383501),
+    r = n(265422),
+    s = n(763827),
     a = n(309010),
-    l = n(652215);
-let o = {
+    o = n(652215);
+let l = {
     binds: ["mod+alt+left"],
     comboKeysBindGlobal: !0,
     action() {
-        if (!r.A.isConnected()) return !1;
-        let e = r.A.getGuildId() ?? l.ME,
+        if (!s.A.isConnected()) return !1;
+        let e = s.A.getGuildId() ?? o.ME,
             t = a.A.getChannelId(e);
-        return (0, s.i)(e, t), i.A.channelListScrollTo(e, r.A.getChannelId()), !1;
+        return (0, r.i)(e, t), i.A.channelListScrollTo(e, s.A.getChannelId()), !1;
     },
 };

@@ -1,4 +1,5 @@
-function n(e) {
+"use strict";
+function i(e) {
     return e instanceof DOMException && "NotAllowedError" === e.name;
 }
-s.d(t, { u: () => n }), s(508300);
+n.d(t, { u: () => i }), n(508300);

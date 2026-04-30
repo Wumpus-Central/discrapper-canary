@@ -1,59 +1,60 @@
-n.d(t, { x: () => h });
-var a = n(627968);
+"use strict";
+n.d(t, { x: () => g });
+var i = n(627968);
 n(64700);
-var i = n(110259),
-    r = n(877624),
-    s = n(403581),
-    l = n(534514),
-    c = n(834730),
-    o = n(232582),
-    d = n(821609),
-    u = n(349288),
+var r = n(562708),
+    s = n(877624),
+    a = n(403581),
+    o = n(534514),
+    l = n(834730),
+    u = n(232582),
+    c = n(821609),
+    d = n(349288),
     _ = n(212245),
-    m = n(688810),
-    p = n(139286),
-    f = n(498470),
-    A = n(637706),
-    g = n(975841);
-let h = (e) => {
+    f = n(688810),
+    h = n(139286),
+    p = n(498470),
+    E = n(637706),
+    m = n(975841);
+let g = (e) => {
     let { componentId: t, promotionBannerMarketingComponentFields: n } = e,
-        { analyticsLocations: h } = (0, m.Ay)(),
-        x = (0, _.p)();
-    (0, p.A)({
-        type: i.ImpressionTypes.VIEW,
-        name: i.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: r.C.MARKETING_PAGE_BANNER, component_id: t },
+        { analyticsLocations: g } = (0, f.Ay)(),
+        A = (0, _.p)();
+    (0, h.A)({
+        type: r.ImpressionTypes.VIEW,
+        name: r.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: { component_type: s.C.MARKETING_PAGE_BANNER, component_id: t },
     });
-    let b = (0, f.h)({
-            buttonAction: n.button?.buttonAction ?? o.dz.OPEN_TIER_2_PAYMENT_MODAL,
+    let I = (0, p.h)({
+            buttonAction: n.button?.buttonAction ?? u.dz.OPEN_TIER_2_PAYMENT_MODAL,
             deeplinkSection: n.button?.deeplinkSection,
-            analyticsLocations: h,
-            analyticsLocation: x.location,
+            analyticsLocations: g,
+            analyticsLocation: A.location,
         }),
-        C = (0, A.a)(n.body),
-        N = (0, A.C)(n.helpArticle, n.helpArticleId);
-    return (0, a.jsxs)("div", {
-        className: g.kL,
+        T = (0, E.a)(n.body),
+        S = (0, E.C)(n.helpArticle, n.helpArticleId);
+    return (0, i.jsxs)("div", {
+        className: m.kL,
         children: [
-            (0, a.jsx)("div", {
-                className: g.LY,
-                children: (0, a.jsx)("img", { src: n.assetUrl, className: g.ot, alt: "" }),
+            (0, i.jsx)("div", {
+                className: m.LY,
+                children: (0, i.jsx)("img", { src: n.assetUrl, className: m.ot, alt: "" }),
             }),
-            (0, a.jsxs)("div", {
-                className: g.IH,
+            (0, i.jsxs)("div", {
+                className: m.IH,
                 children: [
-                    (0, a.jsx)(l.D, { variant: "heading-md/semibold", color: "text-strong", children: n.header }),
-                    (0, a.jsxs)(c.E, {
+                    (0, i.jsx)(o.D, { variant: "heading-md/semibold", color: "text-strong", children: n.header }),
+                    (0, i.jsxs)(l.E, {
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        className: g.tb,
+                        className: m.tb,
                         children: [
-                            C,
-                            null != N &&
-                                (0, a.jsxs)(a.Fragment, {
+                            T,
+                            null != S &&
+                                (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         "\xa0",
-                                        (0, a.jsx)(u.Anchor, { className: g.$T, href: N.url, children: N.linkText }),
+                                        (0, i.jsx)(d.Anchor, { className: m.$T, href: S.url, children: S.linkText }),
                                     ],
                                 }),
                         ],
@@ -61,14 +62,14 @@ let h = (e) => {
                 ],
             }),
             null != n.button &&
-                (0, a.jsx)("div", {
-                    className: g.UD,
-                    children: (0, a.jsx)(d.$, {
+                (0, i.jsx)("div", {
+                    className: m.UD,
+                    children: (0, i.jsx)(c.$, {
                         variant: "expressive",
                         size: "md",
-                        onClick: b,
+                        onClick: I,
                         text: n.button.copy,
-                        icon: s.t,
+                        icon: a.t,
                     }),
                 }),
         ],

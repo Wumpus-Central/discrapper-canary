@@ -1,47 +1,48 @@
-l.d(t, { A: () => h });
-var n = l(64700),
-    i = l(735438),
-    r = l(17928),
-    a = l(87664),
-    s = l(517164),
-    u = l(20805),
-    o = l(83971),
-    d = l(583846),
-    c = l(290863),
-    A = l(652215);
-let _ = [],
-    T = [];
-function h(e) {
+"use strict";
+n.d(t, { A: () => p });
+var i = n(64700),
+    r = n(735438),
+    s = n(17928),
+    a = n(87664),
+    o = n(517164),
+    l = n(20805),
+    u = n(83971),
+    c = n(832384),
+    d = n(290863),
+    _ = n(652215);
+let f = [],
+    h = [];
+function p(e) {
     let t = (0, a.A)(e),
-        l = (0, r.bG)([c.A], () => c.A.getActivities(e)),
-        h = (0, r.bG)([s.A], () => s.A.getUserOutbox(e)),
-        g = (0, n.useMemo)(
+        n = (0, s.bG)([d.A], () => d.A.getActivities(e)),
+        p = (0, s.bG)([o.A], () => o.A.getUserOutbox(e)),
+        E = (0, i.useMemo)(
             () =>
-                l.filter((e) => {
+                n.filter((e) => {
                     let { type: t } = e;
-                    return t !== A.$pd.CUSTOM_STATUS && t !== A.$pd.HANG_STATUS;
+                    return t !== _.$pd.CUSTOM_STATUS && t !== _.$pd.HANG_STATUS;
                 }),
-            [l],
+            [n],
         ),
-        { live: E, recent: O } = (0, n.useMemo)(() => {
-            let e = (0, i.uniqWith)(
-                    g,
+        { live: m, recent: g } = (0, i.useMemo)(() => {
+            let e = (0, r.uniqWith)(
+                    E,
                     (e, t) =>
                         (null != e.application_id &&
                             null != t.application_id &&
                             e.application_id === t.application_id) ||
                         (null != e.name && null != t.name && e.name === t.name),
                 ),
-                t = h?.entries.filter(
+                t = p?.entries.filter(
                     (t) =>
-                        !(0, d.Hd)(t) &&
-                        ((0, u.Tq)(t)
-                            ? t.extra.entries.length > 0 && !e.some((e) => null != e && (0, o.qb)(t, e))
-                            : (0, u.Lf)(t)
-                              ? !e.some((e) => null != e && (0, o.SU)(t, e))
-                              : (0, u.$R)(t)),
+                        !(0, c.Hd)(t) &&
+                        ((0, l.Tq)(t)
+                            ? t.extra.entries.length > 0 && !e.some((e) => null != e && (0, u.qb)(t, e))
+                            : (0, l.Lf)(t)
+                              ? !e.some((e) => null != e && (0, u.SU)(t, e))
+                              : (0, l.$R)(t)),
                 );
-            return { live: 0 === e.length ? _ : e, recent: null == t || 0 === t.length ? T : t };
-        }, [g, h?.entries]);
-    return { live: E, recent: O, stream: t, outbox: h };
+            return { live: 0 === e.length ? f : e, recent: null == t || 0 === t.length ? h : t };
+        }, [E, p?.entries]);
+    return { live: m, recent: g, stream: t, outbox: p };
 }

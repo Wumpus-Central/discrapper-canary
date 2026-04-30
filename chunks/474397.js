@@ -1,30 +1,31 @@
-n.d(t, { A: () => d });
+"use strict";
+n.d(t, { A: () => c });
 var i = n(627968),
-    l = n(192308),
+    r = n(192308),
     s = n(531685),
     a = n(723702),
-    r = n(19575),
-    o = n(267102),
-    c = n(652215);
-function d() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.BRT.APP,
+    o = n(19575),
+    l = n(267102),
+    u = n(652215);
+function c() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.BRT.APP,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        d = e ?? (0, o.zd)();
-    if (d !== c.BRT.APP && null != d) {
+        c = e ?? (0, l.zd)();
+    if (c !== u.BRT.APP && null != c) {
         if (s.A.isFocused()) return;
         t
             ? a.isPlatformEmbedded
-                ? r.Ay.focus()
+                ? o.Ay.focus()
                 : window.focus()
             : (function () {
-                  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.BRT.POPOUT;
-                  e !== c.BRT.APP &&
-                      (0, l.openModalLazy)(
+                  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.BRT.POPOUT;
+                  e !== u.BRT.APP &&
+                      (0, r.openModalLazy)(
                           async () => {
                               let { default: t } = await n.e("20570").then(n.bind(n, 368033));
                               return (n) => (0, i.jsx)(t, { ...n, contextKey: e });
                           },
-                          { contextKey: (0, l.modalContextFromAppContext)(e) },
+                          { contextKey: (0, r.modalContextFromAppContext)(e) },
                       );
               })(e);
     }

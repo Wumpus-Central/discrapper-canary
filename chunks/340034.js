@@ -6,7 +6,7 @@ var l = n(627968),
     s = n(546605),
     o = n(854354),
     u = n(364995),
-    c = n(93159),
+    c = n(474367),
     d = n(848584),
     p = n(881489),
     m = n(531506),
@@ -14,12 +14,12 @@ var l = n(627968),
     C = n(692440),
     A = n(367921),
     E = n(299301),
-    y = n(156312),
+    y = n(902958),
     P = n(908419),
     S = n(888751),
     _ = n(652215),
     T = n(788868),
-    f = n(985018),
+    f = n(375708),
     N = n(327105),
     x = n(299279);
 let I = (e) => {
@@ -76,14 +76,14 @@ let I = (e) => {
                 premiumSubscriptionPlan: v,
                 skuId: M,
             } = m,
-            { shouldShowPremiumSwitchPlanSelectText: b, premiumSwitchPlanSelectText: R } = i.useMemo(() => {
+            { shouldShowPremiumSwitchPlanSelectText: j, premiumSwitchPlanSelectText: b } = i.useMemo(() => {
                 let e = (0, h.U_)(v, { isEligibleForBOGOPromotion: g });
                 return {
                     shouldShowPremiumSwitchPlanSelectText: e,
                     premiumSwitchPlanSelectText: e ? (0, h.yq)(v, M) : null,
                 };
             }, [v, g, M]),
-            j = i.useMemo(
+            R = i.useMemo(
                 () => (d && I ? (0, h.Ct)(f, { subscriptionPeriodEnd: s, trialPeriodCopy: N }) : p),
                 [d, I, f, s, N, p],
             ),
@@ -140,16 +140,16 @@ let I = (e) => {
             ? null
             : (0, l.jsxs)(l.Fragment, {
                   children: [
-                      b &&
+                      j &&
                           (0, l.jsx)(a.E, {
                               variant: "text-md/medium",
                               color: "text-subtle",
                               className: x.S,
-                              children: R,
+                              children: b,
                           }),
                       (0, l.jsx)(c.me, {
                           headingComponent: (0, l.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: B }),
-                          headingSubText: j,
+                          headingSubText: R,
                           planRadioOptions: H,
                           value: C?.id ?? "",
                           onChange: W,
@@ -210,9 +210,9 @@ function M(e) {
         v = (0, s.vg)("PremiumUnifiedCheckoutLegal");
     if (d.type === E.N$.LOADING) return null;
     let { invoicePreview: M } = d,
-        b = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? M,
-        R = b.invoiceItems.find((e) => e.subscriptionPlanId === i.id),
-        j = null != R ? (0, S.Re)(R, x).amount : b.subtotal;
+        j = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? M,
+        b = j.invoiceItems.find((e) => e.subscriptionPlanId === i.id),
+        R = null != b ? (0, S.Re)(b, x).amount : j.subtotal;
     if (T) return null;
     let L = v && null != I && g?.some((e) => e.id === I && null != e.relocationCountry),
         O = {
@@ -227,14 +227,14 @@ function M(e) {
                 willRelocateStoreCountry: L,
             }),
             totalDue: f ? M.total : 0,
-            renewalPrice: j,
+            renewalPrice: R,
             currency: M.currency,
             interval: i.interval,
             intervalCount: i.intervalCount,
             startDate: (0, C.de)({
                 overrideRenewalDate: m,
-                currentInvoice: M.id !== b.id ? M : void 0,
-                renewalInvoice: b,
+                currentInvoice: M.id !== j.id ? M : void 0,
+                renewalInvoice: j,
                 isSubscriptionUpdate: null != o,
                 fractionalPremiumInfo: h,
             }),

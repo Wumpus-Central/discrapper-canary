@@ -1,16 +1,17 @@
-n.d(i, { A: () => l });
-var t = n(60465),
-    a = n(713900);
-function l(e) {
-    let { onOpened: i } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = (0, a.Ay)(e),
-        { gameId: l } = n;
-    return n.shouldOpenGameProfile && null != l
-        ? (a) => {
-              a?.stopPropagation(),
-                  a?.preventDefault(),
-                  t.A.openGameProfileModal({ ...e, gameId: l, gameProfileModalChecks: n }),
-                  i?.();
+"use strict";
+n.d(t, { A: () => s });
+var i = n(60465),
+    r = n(713900);
+function s(e) {
+    let { onOpened: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        n = (0, r.Ay)(e),
+        { gameId: s } = n;
+    return n.shouldOpenGameProfile && null != s
+        ? (r) => {
+              r?.stopPropagation(),
+                  r?.preventDefault(),
+                  i.A.openGameProfileModal({ ...e, gameId: s, gameProfileModalChecks: n }),
+                  t?.();
           }
         : void 0;
 }

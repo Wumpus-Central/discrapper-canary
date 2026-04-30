@@ -7,12 +7,12 @@ var l = i(627968),
     u = i(17928),
     o = i(27192),
     d = i(892547),
-    c = i(686956),
+    c = i(66834),
     p = i(71393),
     h = i(200662),
     b = i(739174),
     g = i(73510),
-    k = i(985018),
+    k = i(375708),
     C = i(997020);
 function m(e) {
     let {
@@ -21,44 +21,44 @@ function m(e) {
             hasMemberSearch: n,
             headerText: m,
             onClose: y,
-            overwrittenKeys: x,
-            search: E,
+            overwrittenKeys: E,
+            search: x,
             searchPlaceholderText: f,
             selectedPermissionCount: j,
             transitionState: v,
         } = e,
-        A = (0, u.bG)([p.A], () => p.A.getGuild(i), [i]);
-    a()(null != A, "");
-    let [w, T] = s.useState(null),
-        { query: M, results: I, setQuery: _ } = E(i),
-        [q, N] = s.useState({}),
-        O = s.useMemo(() => Object.keys(q).length, [q]),
-        S = O + j >= g.iW,
-        G = s.useMemo(
+        w = (0, u.bG)([p.A], () => p.A.getGuild(i), [i]);
+    a()(null != w, "");
+    let [A, T] = s.useState(null),
+        { query: M, results: I, setQuery: q } = x(i),
+        [N, O] = s.useState({}),
+        S = s.useMemo(() => Object.keys(N).length, [N]),
+        G = S + j >= g.iW,
+        H = s.useMemo(
             () =>
                 I.filter((e) => {
                     let t = (0, h.Eu)(e.id, e.type);
-                    return !x.includes(t);
+                    return !E.includes(t);
                 }),
-            [x, I],
+            [E, I],
         ),
-        H = s.useCallback(
+        R = s.useCallback(
             (e, t) => {
-                N((i) => {
+                O((i) => {
                     let l = (0, h.Eu)(e, t),
                         s = { ...i };
-                    return l in i ? delete s[l] : S || (s[l] = { id: e, permission: !0, type: t }), s;
+                    return l in i ? delete s[l] : G || (s[l] = { id: e, permission: !0, type: t }), s;
                 });
             },
-            [S, N],
+            [G, O],
         ),
-        R = s.useCallback(() => {
-            t(q, []), y();
-        }, [t, y, q]);
-    s.useEffect(() => () => clearTimeout(w), [w]);
-    let V = s.useCallback(
+        V = s.useCallback(() => {
+            t(N, []), y();
+        }, [t, y, N]);
+    s.useEffect(() => () => clearTimeout(A), [A]);
+    let W = s.useCallback(
             (e) => {
-                _(e),
+                q(e),
                     n &&
                         T((t) =>
                             (clearTimeout(t), 0 === e.length)
@@ -68,14 +68,14 @@ function m(e) {
                                   }, 500),
                         );
             },
-            [i, n, _, T],
+            [i, n, q, T],
         ),
-        W = s.useCallback(
+        _ = s.useCallback(
             (e) => {
-                let t = G[e.rowIndex],
+                let t = H[e.rowIndex],
                     i = (0, h.Eu)(t.id, t.type),
-                    s = i in q,
-                    n = S && !s;
+                    s = i in N,
+                    n = G && !s;
                 return (0, l.jsx)(
                     "div",
                     {
@@ -84,14 +84,14 @@ function m(e) {
                             type: o.Or.INVERTED,
                             disabled: n,
                             value: s,
-                            onChange: () => H(t.id, t.type),
-                            children: (0, l.jsx)(b.A, { guild: A, id: t.id, type: t.type, isLocked: !1 }),
+                            onChange: () => R(t.id, t.type),
+                            children: (0, l.jsx)(b.A, { guild: w, id: t.id, type: t.type, isLocked: !1 }),
                         }),
                     },
                     i,
                 );
             },
-            [G, A, S, H, q],
+            [H, w, G, R, N],
         );
     return (
         s.useEffect(() => {
@@ -101,14 +101,14 @@ function m(e) {
             "aria-label": k.intl.string(k.t["N+InBa"]),
             transitionState: v,
             title: m,
-            subtitle: S ? k.intl.string(k.t["XTwtW/"]) : void 0,
+            subtitle: G ? k.intl.string(k.t["XTwtW/"]) : void 0,
             onClose: y,
-            input: (0, l.jsx)(d.I, { query: M, placeholder: f, "aria-label": f, onChange: V, onClear: () => _("") }),
+            input: (0, l.jsx)(d.I, { query: M, placeholder: f, "aria-label": f, onChange: W, onClear: () => q("") }),
             actions: [
                 { text: k.intl.string(k.t["ETE/oC"]), onClick: y, variant: "secondary" },
-                { text: k.intl.string(k.t.OYkgVk), onClick: R, variant: "primary", disabled: 0 === O },
+                { text: k.intl.string(k.t.OYkgVk), onClick: V, variant: "primary", disabled: 0 === S },
             ],
-            listProps: { renderRow: W, sections: [G.length], rowHeight: 36, sectionHeight: 36 },
+            listProps: { renderRow: _, sections: [H.length], rowHeight: 36, sectionHeight: 36 },
         })
     );
 }

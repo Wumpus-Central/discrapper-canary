@@ -1,11 +1,12 @@
-n.d(t, { A: () => a });
-var r = n(985018);
-function a(e, t, n) {
+"use strict";
+n.d(t, { A: () => r });
+var i = n(375708);
+function r(e, t, n) {
     return n
-        ? r.intl.string(r.t["2Ne/Y1"])
+        ? i.intl.string(i.t["2Ne/Y1"])
         : t
-          ? r.intl.string(r.t.QZ7WSS)
+          ? i.intl.string(i.t.QZ7WSS)
           : e
-            ? r.intl.string(r.t["2US872"])
-            : r.intl.string(r.t.wjcRFX);
+            ? i.intl.string(i.t["2US872"])
+            : i.intl.string(i.t.wjcRFX);
 }

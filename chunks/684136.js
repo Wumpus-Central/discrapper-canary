@@ -1,32 +1,33 @@
-l.d(e, { A: () => u });
-var a,
-    i = l(627968);
-l(64700);
-var s = l(503698),
-    n = l.n(s),
-    A = l(607399),
-    r = l(939249),
-    _ = l(285796),
-    I = l(789645),
-    E = l(985018),
-    h = l(589753),
-    d = (((a = d || {}).DEFAULT = ""), (a.BOLD = "Bold"), (a.SOLID = "Solid"), a);
-function u(t) {
-    let { closeAction: e, variant: l = "", keybind: a, className: s } = t;
-    return (0, i.jsxs)("div", {
-        className: n()(h.kL, s),
+"use strict";
+n.d(t, { A: () => h });
+var i,
+    r = n(627968);
+n(64700);
+var s = n(503698),
+    a = n.n(s),
+    o = n(607399),
+    l = n(939249),
+    u = n(285796),
+    c = n(789645),
+    d = n(375708),
+    _ = n(589753),
+    f = (((i = f || {}).DEFAULT = ""), (i.BOLD = "Bold"), (i.SOLID = "Solid"), i);
+function h(e) {
+    let { closeAction: t, variant: n = "", keybind: i, className: s } = e;
+    return (0, r.jsxs)("div", {
+        className: a()(_.kL, s),
         children: [
-            (0, i.jsx)(r.D, {
-                className: n()(h.b, { [h.EH]: "Bold" === l, [h.O3]: "Solid" === l }),
-                onClick: e,
-                "aria-label": E.intl.string(E.t.cpT0Cq),
+            (0, r.jsx)(l.D, {
+                className: a()(_.b, { [_.EH]: "Bold" === n, [_.O3]: "Solid" === n }),
+                onClick: t,
+                "aria-label": d.intl.string(d.t.cpT0Cq),
                 children:
-                    "Solid" === l
-                        ? (0, i.jsx)(_.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
-                        : (0, i.jsx)(I.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                    "Solid" === n
+                        ? (0, r.jsx)(u.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
+                        : (0, r.jsx)(c.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
             }),
-            A.Fr ? null : (0, i.jsx)("div", { className: h.P, "aria-hidden": !0, children: a }),
+            o.Fr ? null : (0, r.jsx)("div", { className: _.P, "aria-hidden": !0, children: i }),
         ],
     });
 }
-u.Variants = d;
+h.Variants = f;

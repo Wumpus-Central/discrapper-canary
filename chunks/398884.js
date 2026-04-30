@@ -1,10 +1,11 @@
-n.d(t, { Sn: () => a }), n(17928), n(450510);
-var s = n(71393),
-    i = n(287809),
-    l = n(927578),
-    r = n(652215);
-function a() {
-    let e = s.A.getGuildCount() >= r.qlD,
-        t = l.Ay.canUseIncreasedGuildCap(i.default.getCurrentUser());
+"use strict";
+n.d(t, { Sn: () => o }), n(17928), n(450510);
+var i = n(71393),
+    r = n(287809),
+    s = n(927578),
+    a = n(652215);
+function o() {
+    let e = i.A.getGuildCount() >= a.qlD,
+        t = s.Ay.canUseIncreasedGuildCap(r.default.getCurrentUser());
     return e && !t;
 }

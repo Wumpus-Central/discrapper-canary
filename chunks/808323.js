@@ -1,71 +1,72 @@
-n.d(t, { l: () => I, A: () => A });
+"use strict";
+n.d(t, { l: () => h, A: () => p });
 var i = n(64700),
     r = n(17928),
-    a = n(99753),
-    s = n(734057),
-    _ = n(543465),
-    l = n(352139);
-let o = [];
-var E = n(52133),
+    s = n(99753),
+    a = n(734057),
+    o = n(543465),
+    l = n(574520);
+let u = [];
+var c = n(52133),
     d = n(290863),
-    c = n(583846),
-    u = n(818348);
-function I(e, t) {
+    _ = n(832384),
+    f = n(818348);
+function h(e, t) {
     let { types: n } = e;
     return null == n || !!n.has(t.content_type);
 }
-function A(e) {
-    var t, n, A;
-    let T,
+function p(e) {
+    var t, n, p;
+    let E,
+        m,
+        g,
+        A,
+        I,
+        T,
         S,
-        N,
-        O,
-        R,
-        f,
-        C,
-        { id: p, unrankedEntries: m = !1 } = e,
-        { feed: L, filters: D } = (0, r.cf)([a.A], () => ({ feed: a.A.getFeed(p), filters: a.A.getFilters() })),
-        h = i.useMemo(() => {
-            let e = m ? L?.unranked_game_entries.map((e) => e.content) : L?.entries.map((e) => e.content);
-            return null != D ? e?.filter((e) => I(D, e)) : e;
-        }, [L, D, m]);
+        { id: N, unrankedEntries: y = !1 } = e,
+        { feed: C, filters: v } = (0, r.cf)([s.A], () => ({ feed: s.A.getFeed(N), filters: s.A.getFilters() })),
+        O = i.useMemo(() => {
+            let e = y ? C?.unranked_game_entries.map((e) => e.content) : C?.entries.map((e) => e.content);
+            return null != v ? e?.filter((e) => h(v, e)) : e;
+        }, [C, v, y]);
     return (
-        (t = h),
-        (T = (0, r.bG)([s.A], () => s.A.getPrivateChannelsVersion())),
-        (S = (0, r.bG)([s.A], () => s.A.getMutableDMsByUserIds(), [T])),
-        (N = (0, r.bG)([_.Ay], () => _.Ay.getMutedChannels(null))),
-        (O = i.useMemo(() => {
+        (t = O),
+        (E = (0, r.bG)([a.A], () => a.A.getPrivateChannelsVersion())),
+        (m = (0, r.bG)([a.A], () => a.A.getMutableDMsByUserIds(), [E])),
+        (g = (0, r.bG)([o.Ay], () => o.Ay.getMutedChannels(null))),
+        (A = i.useMemo(() => {
             let e = new Set();
-            for (let t in S) {
-                let n = S[t];
-                null != n && N.has(n) && e.add(t);
+            for (let t in m) {
+                let n = m[t];
+                null != n && g.has(n) && e.add(t);
             }
             return e;
-        }, [S, N])),
-        (n = h =
+        }, [m, g])),
+        (n = O =
             i.useMemo(
                 () =>
                     t?.filter((e) => {
-                        for (let t of e.participants) if (O.has(t)) return !1;
+                        for (let t of e.participants) if (A.has(t)) return !1;
                         return !0;
                     }),
-                [t, O],
+                [t, A],
             )),
-        (A = h = (0, r.yK)([l.A], () => (null == n ? o : n.filter(l.A.canRenderContent)), [n])),
-        (R = i.useRef(new Set())),
-        (f = i.useMemo(() => {
-            let e = new Set(A?.map((e) => e.author_id));
-            return (0, E.v)([...R.current], [...e]) || (R.current = e), R.current;
-        }, [A])),
-        (C = (0, r.yK)([d.A], () =>
-            Array.from(f).filter((e) => {
+        (p = O = (0, r.yK)([l.A], () => (null == n ? u : n.filter(l.A.canRenderContent)), [n])),
+        (I = i.useRef(new Set())),
+        (T = i.useMemo(() => {
+            let e = new Set(p?.map((e) => e.author_id));
+            return (0, c.v)([...I.current], [...e]) || (I.current = e), I.current;
+        }, [p])),
+        (S = (0, r.yK)([d.A], () =>
+            Array.from(T).filter((e) => {
                 let t = d.A.getStatus(e);
-                return null !== t && [u.cl.OFFLINE, u.cl.INVISIBLE].includes(t);
+                return null !== t && [f.cl.OFFLINE, f.cl.INVISIBLE].includes(t);
             }),
         )),
-        (h = i.useMemo(() => {
-            let e = new Set(C);
-            return A?.filter((t) => !(0, c.JM)(t) || !e.has(t.author_id));
-        }, [A, C]))
+        (O = i.useMemo(() => {
+            let e = new Set(S);
+            return p?.filter((t) => !(0, _.JM)(t) || !e.has(t.author_id));
+        }, [p, S]))
     );
 }

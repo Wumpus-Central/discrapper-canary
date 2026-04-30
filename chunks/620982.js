@@ -1,12 +1,13 @@
-n.d(t, { A: () => i });
-var a = n(17928),
+"use strict";
+n.d(t, { A: () => a });
+var i = n(17928),
     r = n(495544),
-    l = n(470710);
-function i(e) {
-    return (0, a.cf)([l.A, r.default], () => {
-        let t = l.A.getCall(e),
+    s = n(470710);
+function a(e) {
+    return (0, i.cf)([s.A, r.default], () => {
+        let t = s.A.getCall(e),
             n = r.default.getId(),
-            a = null != t && null != n && t.ringing.includes(n);
-        return { isIncomingCall: a, isOngoingCall: l.A.isCallActive(e) && !a };
+            i = null != t && null != n && t.ringing.includes(n);
+        return { isIncomingCall: i, isOngoingCall: s.A.isCallActive(e) && !i };
     });
 }

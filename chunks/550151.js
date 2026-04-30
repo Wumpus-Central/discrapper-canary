@@ -1,16 +1,17 @@
-n.d(t, { Ay: () => A, Gy: () => I, vG: () => T });
+"use strict";
+n.d(t, { Ay: () => p, Gy: () => h, vG: () => E });
 var i,
     r = n(17928),
-    a = n(734057),
-    s = n(71393),
-    _ = n(576705),
+    s = n(734057),
+    a = n(71393),
+    o = n(576705),
     l = n(287809),
-    o = n(977997),
-    E = n(147036),
+    u = n(977997),
+    c = n(871237),
     d = n(170148),
-    c = n(166352),
-    u = n(652215),
-    I =
+    _ = n(166352),
+    f = n(652215),
+    h =
         (((i = {})[(i.CAN_JOIN = 0)] = "CAN_JOIN"),
         (i[(i.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION"),
         (i[(i.NO_CHANNEL_CONNECT_PERMISSION = 2)] = "NO_CHANNEL_CONNECT_PERMISSION"),
@@ -23,62 +24,62 @@ var i,
         (i[(i.IS_AFK_CHANNEL = 9)] = "IS_AFK_CHANNEL"),
         (i[(i.NO_GUILD = 10)] = "NO_GUILD"),
         i);
-function A(e) {
+function p(e) {
     let {
         userId: t,
         activity: n,
         application: i,
         channelId: r,
-        currentUser: a,
-        isActivitiesEnabledForCurrentPlatform: s,
-        ChannelStore: _,
+        currentUser: s,
+        isActivitiesEnabledForCurrentPlatform: a,
+        ChannelStore: o,
         VoiceStateStore: l,
-        PermissionStore: o,
+        PermissionStore: u,
         GuildStore: d,
     } = e;
     if (null == t) return 8;
-    if (a?.nsfwAllowed === !1 && i?.embeddedActivityConfig?.requires_age_gate === !0) return 7;
-    if (!s) return 5;
-    if (!(0, c.A)(i?.embeddedActivityConfig?.supported_platforms)) return 6;
-    let I = null != r ? r : l.getVoiceStateForSession(t, n?.session_id)?.channelId;
-    if (null == I) return 4;
-    let A = _.getChannel(r);
-    if (null == A) return 4;
-    if (!A.isPrivate()) {
-        let e = A.getGuildId();
+    if (s?.nsfwAllowed === !1 && i?.embeddedActivityConfig?.requires_age_gate === !0) return 7;
+    if (!a) return 5;
+    if (!(0, _.A)(i?.embeddedActivityConfig?.supported_platforms)) return 6;
+    let h = null != r ? r : l.getVoiceStateForSession(t, n?.session_id)?.channelId;
+    if (null == h) return 4;
+    let p = o.getChannel(r);
+    if (null == p) return 4;
+    if (!p.isPrivate()) {
+        let e = p.getGuildId();
         if (null == e) return 10;
         let t = d.getGuild(e);
-        if (t?.afkChannelId === A.id) return 9;
-        let n = l.getCurrentClientVoiceChannelId(A.getGuildId()) === I,
-            i = (0, E.Pd)(A, l, d),
-            r = o.can(u.xBc.CONNECT, A);
-        if (!o.can(u.xBc.USE_EMBEDDED_ACTIVITIES, A)) return 1;
-        if (A.isVocal() && !n) {
+        if (t?.afkChannelId === p.id) return 9;
+        let n = l.getCurrentClientVoiceChannelId(p.getGuildId()) === h,
+            i = (0, c.Pd)(p, l, d),
+            r = u.can(f.xBc.CONNECT, p);
+        if (!u.can(f.xBc.USE_EMBEDDED_ACTIVITIES, p)) return 1;
+        if (p.isVocal() && !n) {
             if (i) return 3;
             if (!r) return 2;
         }
     }
     return 0;
 }
-function T(e) {
-    let { userId: t, activity: n, channelId: i, application: E } = e,
-        c = (0, d.z)(),
-        u = (0, r.bG)([l.default], () => l.default.getCurrentUser());
+function E(e) {
+    let { userId: t, activity: n, channelId: i, application: c } = e,
+        _ = (0, d.z)(),
+        f = (0, r.bG)([l.default], () => l.default.getCurrentUser());
     return (0, r.bG)(
-        [a.A, o.A, _.A, s.A],
+        [s.A, u.A, o.A, a.A],
         () =>
-            A({
+            p({
                 userId: t,
                 activity: n,
-                application: E,
+                application: c,
                 channelId: i,
-                currentUser: u,
-                isActivitiesEnabledForCurrentPlatform: c,
-                ChannelStore: a.A,
-                VoiceStateStore: o.A,
-                PermissionStore: _.A,
-                GuildStore: s.A,
+                currentUser: f,
+                isActivitiesEnabledForCurrentPlatform: _,
+                ChannelStore: s.A,
+                VoiceStateStore: u.A,
+                PermissionStore: o.A,
+                GuildStore: a.A,
             }),
-        [n, E, i, u, c, t],
+        [n, c, i, f, _, t],
     );
 }

@@ -1,14 +1,15 @@
-n.d(t, { t: () => s });
-var l = n(392107),
-    a = n(954571),
-    i = n(486020),
-    r = n(652215);
-function s(e) {
-    let { avatarHash: t, avatarId: n, isGuildProfile: s = !1, avatarAssetOrigin: o = l.E.NEW_ASSET } = e;
-    a.default.track(r.HAw.USER_AVATAR_UPDATED, {
-        animated: (0, i.VI)(t),
-        is_guild_profile: s,
-        recent_avatar_id: o === l.E.ARCHIVED_ASSET ? Number(n) : void 0,
-        is_edited_recent_avatar: o === l.E.EDITED_ARCHIVED_ASSET,
+"use strict";
+n.d(t, { t: () => o });
+var i = n(392107),
+    r = n(174459),
+    s = n(486020),
+    a = n(652215);
+function o(e) {
+    let { avatarHash: t, avatarId: n, isGuildProfile: o = !1, avatarAssetOrigin: l = i.E.NEW_ASSET } = e;
+    r.default.track(a.HAw.USER_AVATAR_UPDATED, {
+        animated: (0, s.VI)(t),
+        is_guild_profile: o,
+        recent_avatar_id: l === i.E.ARCHIVED_ASSET ? Number(n) : void 0,
+        is_edited_recent_avatar: l === i.E.EDITED_ARCHIVED_ASSET,
     });
 }

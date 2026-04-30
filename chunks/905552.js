@@ -1,15 +1,16 @@
-let l;
-n.d(t, { A: () => a });
-var s = n(9302);
-function a(e, t) {
+"use strict";
+let i;
+n.d(t, { A: () => s });
+var r = n(9302);
+function s(e, t) {
     if (__OVERLAY__) {
         let e = t.getGame(),
-            n = (0, s.getPID)();
+            n = (0, r.getPID)();
         return null == e || null == n
             ? null
-            : l?.id === e.id && l?.pid === n
-              ? l
-              : (l = {
+            : i?.id === e.id && i?.pid === n
+              ? i
+              : (i = {
                     id: e.id,
                     pid: n,
                     pidPath: [],

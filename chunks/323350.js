@@ -1,93 +1,94 @@
-n.d(t, { IQ: () => x, WO: () => p }), n(321073);
-var r = n(284009),
-    i = n.n(r),
-    l = n(47167),
-    s = n(379418),
-    u = n(209932),
-    a = n(734057),
-    c = n(317525),
-    o = n(994500),
-    m = n(967198),
-    d = n(287809),
+"use strict";
+n.d(t, { IQ: () => m, WO: () => p }), n(321073);
+var i = n(284009),
+    r = n.n(i),
+    s = n(47167),
+    a = n(379418),
+    o = n(209932),
+    l = n(734057),
+    u = n(317525),
+    c = n(994500),
+    d = n(967198),
+    _ = n(287809),
     f = n(427262),
     h = n(820066);
 function p(e, t) {
-    let { mode: n, ignoreTrailingEmptyNodes: r, preventEmojiSurrogates: i } = t ?? {},
-        [l, s] = t?.range != null ? h.ZF.edges(t.range) : [void 0, void 0];
-    return g(e, { mode: n, start: l, end: s, ignoreTrailingEmptyNodes: r, preventEmojiSurrogates: i });
+    let { mode: n, ignoreTrailingEmptyNodes: i, preventEmojiSurrogates: r } = t ?? {},
+        [s, a] = t?.range != null ? h.ZF.edges(t.range) : [void 0, void 0];
+    return E(e, { mode: n, start: s, end: a, ignoreTrailingEmptyNodes: i, preventEmojiSurrogates: r });
 }
-function g(e, t) {
+function E(e, t) {
     let {
             mode: n,
-            start: r,
-            end: i,
-            separator: l,
-            ignoreEmptyNodes: s,
-            ignoreTrailingEmptyNodes: u,
-            preventEmojiSurrogates: a,
+            start: i,
+            end: r,
+            separator: s,
+            ignoreEmptyNodes: a,
+            ignoreTrailingEmptyNodes: o,
+            preventEmojiSurrogates: l,
         } = t ?? {},
-        c = e.length > 0 && !h.l5.isText(e[0]);
-    null == l && (l = c ? "\n" : "");
-    let o = r?.path[0] ?? 0,
-        m = i?.path[0] ?? e.length - 1;
-    if (u)
-        for (let t = m; t >= o; t--) {
+        u = e.length > 0 && !h.l5.isText(e[0]);
+    null == s && (s = u ? "\n" : "");
+    let c = i?.path[0] ?? 0,
+        d = r?.path[0] ?? e.length - 1;
+    if (o)
+        for (let t = d; t >= c; t--) {
             let n = e[t];
             if (h.l5.isText(n)) {
                 if (n.text.length > 0) {
-                    m = t;
+                    d = t;
                     break;
                 }
             } else if (!h.cv.isEmpty(n)) {
-                m = t;
+                d = t;
                 break;
             }
-            if (t === o) return "";
+            if (t === c) return "";
         }
-    let d = o > 0 && h.AS.isType(e[o - 1], "blockQuote"),
-        f = h.AS.isType(e[o], "blockQuote"),
-        p = h.AS.isType(e[m], "blockQuote"),
-        g = [];
-    for (let t = o; t <= m; t++) {
-        let l = e[t];
-        if (s && h.l5.isText(l) && 0 === l.text.length) continue;
-        let u = x(l, {
+    let _ = c > 0 && h.AS.isType(e[c - 1], "blockQuote"),
+        f = h.AS.isType(e[c], "blockQuote"),
+        p = h.AS.isType(e[d], "blockQuote"),
+        E = [];
+    for (let t = c; t <= d; t++) {
+        let s = e[t];
+        if (a && h.l5.isText(s) && 0 === s.text.length) continue;
+        let o = m(s, {
             mode: n,
-            start: null != r && t === o ? { path: r.path.slice(1), offset: r.offset } : void 0,
-            end: null != i && t === m ? { path: i.path.slice(1), offset: i.offset } : void 0,
-            allowBlockQuotePrefix: null == r || null == i || (!d && (!f || p)),
-            preventEmojiSurrogates: a,
+            start: null != i && t === c ? { path: i.path.slice(1), offset: i.offset } : void 0,
+            end: null != r && t === d ? { path: r.path.slice(1), offset: r.offset } : void 0,
+            allowBlockQuotePrefix: null == i || null == r || (!_ && (!f || p)),
+            preventEmojiSurrogates: l,
         });
-        (!s || u.length > 0) && g.push(u);
+        (!a || o.length > 0) && E.push(o);
     }
-    return g.join(l);
+    return E.join(s);
 }
-function x(e, t) {
-    let { mode: n, start: r, allowBlockQuotePrefix: p = !1, preventEmojiSurrogates: x = !1 } = t ?? {};
+function m(e, t) {
+    let { mode: n, start: i, allowBlockQuotePrefix: p = !1, preventEmojiSurrogates: m = !1 } = t ?? {};
     if (h.l5.isText(e))
         return (function (e, t) {
-            let { start: n, end: r } = t ?? {};
+            let { start: n, end: i } = t ?? {};
             return (
-                i()(null == n || 0 === n.path.length, "Invalid start provided to serializeText"),
-                i()(null == r || 0 === r.path.length, "Invalid end provided to serializeText"),
-                e.substring(n?.offset ?? 0, r?.offset ?? e.length)
+                r()(null == n || 0 === n.path.length, "Invalid start provided to serializeText"),
+                r()(null == i || 0 === i.path.length, "Invalid end provided to serializeText"),
+                e.substring(n?.offset ?? 0, i?.offset ?? e.length)
             );
         })(e.text, t);
     switch (e.type) {
         case "line":
         case "testInline":
-            return g(e.children, t);
+            return E(e.children, t);
         case "testInlineVoid":
             return "";
         case "blockQuote": {
-            let n = g(e.children, t),
-                i = null != r && 1 === r.path.length && 0 === r.path[0] && 0 === r.offset;
-            if (p && (null == r || i)) return `> ${n}`;
+            let n = E(e.children, t),
+                r = null != i && 1 === i.path.length && 0 === i.path[0] && 0 === i.offset;
+            if (p && (null == i || r)) return `> ${n}`;
             return n;
         }
         case "emoji": {
             let t = e.emoji;
-            if (!x && null != t.surrogate) return t.surrogate;
+            if (!m && null != t.surrogate) return t.surrogate;
             return t.name;
         }
         case "customEmoji": {
@@ -104,48 +105,48 @@ function x(e, t) {
         case "channelMention": {
             let t = `<#${e.channelId}>`;
             if ("raw" === n) return t;
-            let r = a.A.getChannel(e.channelId);
-            if (null == r) return t;
-            return (0, l.m1)(r, d.default, o.A, !0, !0);
+            let i = l.A.getChannel(e.channelId);
+            if (null == i) return t;
+            return (0, s.m1)(i, _.default, c.A, !0, !0);
         }
         case "soundboard": {
             let t = `<sound:${e.guildId}:${e.soundId}>`;
             if ("raw" === n) return t;
-            let r = u.A.getSoundById(e.soundId);
-            if (null == r) return t;
-            return r.name;
+            let i = o.A.getSoundById(e.soundId);
+            if (null == i) return t;
+            return i.name;
         }
         case "staticRouteLink":
             return null != e.itemId ? `<id:${e.id}:${e.itemId}>` : `<id:${e.id}>`;
         case "roleMention": {
             let t = `<@&${e.roleId}>`;
             if ("raw" === n) return t;
-            let r = m.A.getGuildId(),
-                i = null != r ? c.A.getRole(r, e.roleId) : void 0;
-            if (null == i) return t;
-            return `@${i.name}`;
+            let i = d.A.getGuildId(),
+                r = null != i ? u.A.getRole(i, e.roleId) : void 0;
+            if (null == r) return t;
+            return `@${r.name}`;
         }
         case "userMention": {
             let t = `<@${e.userId}>`;
             if ("raw" === n) return t;
-            let r = d.default.getUser(e.userId);
-            if (null == r) return t;
-            return `@${f.Ay.getUserTag(r, { decoration: "never" })}`;
+            let i = _.default.getUser(e.userId);
+            if (null == i) return t;
+            return `@${f.Ay.getUserTag(i, { decoration: "never" })}`;
         }
         case "commandMention":
             return `</${e.commandName}:${e.commandId}>`;
         case "timestamp":
-            return (0, s.tf)(e.parsed.timestamp, e.parsed.format);
+            return (0, a.tf)(e.parsed.timestamp, e.parsed.format);
         case "timestampMentionInput": {
-            let n = g(e.children, t);
-            if (null == r) return `<@time:${n}>`;
+            let n = E(e.children, t);
+            if (null == i) return `<@time:${n}>`;
             return n;
         }
         case "applicationCommand":
-            return g(e.children, { ...t, separator: " ", ignoreEmptyNodes: !0 });
+            return E(e.children, { ...t, separator: " ", ignoreEmptyNodes: !0 });
         case "applicationCommandOption": {
-            let n = g(e.children, t);
-            if (null == r) return `${e.optionDisplayName}:${n}`;
+            let n = E(e.children, t);
+            if (null == i) return `${e.optionDisplayName}:${n}`;
             return n;
         }
     }

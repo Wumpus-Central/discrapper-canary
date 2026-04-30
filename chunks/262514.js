@@ -5,7 +5,7 @@ var n = s(627968),
     l = s.n(a),
     o = s(507107),
     r = s(73473),
-    c = s(487514),
+    c = s(785651),
     d = s(494012),
     u = s(717421),
     m = s(834730),
@@ -13,49 +13,49 @@ var n = s(627968),
     h = s(534514),
     j = s(825484),
     g = s(821609),
-    v = s(17928),
-    f = s(775602),
+    f = s(17928),
+    v = s(775602),
     E = s(409626),
-    N = s(106799),
-    C = s(859703),
-    A = s(112142),
-    q = s(838077),
-    _ = s(890687),
-    S = s(561844),
-    p = s(590202),
-    b = s(710969),
-    y = s(801365),
-    I = s(792620),
-    w = s(453384),
-    T = s(201805),
-    Q = s(212614),
-    D = s(79545),
-    M = s(646764),
-    k = s(398025),
-    L = s(545986),
-    U = s(654487),
-    B = s(985018),
+    C = s(106799),
+    N = s(859703),
+    q = s(112142),
+    A = s(838077),
+    S = s(31587),
+    _ = s(561844),
+    b = s(590202),
+    y = s(710969),
+    p = s(801365),
+    w = s(792620),
+    I = s(453384),
+    T = s(371912),
+    D = s(368715),
+    Q = s(79545),
+    k = s(646764),
+    M = s(398025),
+    U = s(617986),
+    L = s(190107),
+    B = s(375708),
     W = s(562296),
-    O = s(474491);
-let z = async () => await s.e("40119").then(s.t.bind(s, 718698, 19));
+    z = s(474491);
+let O = async () => await s.e("40119").then(s.t.bind(s, 718698, 19));
 function R(e) {
     let { quest: t, location: s, isInteracting: a, contentPosition: o, sourceQuestContent: r } = e,
-        I = i.useRef(null),
+        w = i.useRef(null),
         { ref: T, scrollHeight: R } = (0, d.wR)(),
-        P = 104 !== R,
-        { expansionSpring: F } = (0, u.z)({ expansionSpring: +!!a, config: { tension: 250, friction: 20, clamp: !0 } }),
-        V = (0, b.Ic)(t),
-        $ = (0, _.In)(t),
-        K = (0, y.mq)(t.config),
-        Y = (0, y.mH)(t.config),
+        F = 104 !== R,
+        { expansionSpring: G } = (0, u.z)({ expansionSpring: +!!a, config: { tension: 250, friction: 20, clamp: !0 } }),
+        $ = (0, y.Ic)(t),
+        K = (0, S.In)(t),
+        V = (0, p.mq)(t.config),
+        Y = (0, p.mH)(t.config),
         X = t.userStatus?.enrolledAt != null,
         Z = t.userStatus?.completedAt != null,
         J = t.userStatus?.claimedAt != null,
-        ee = (0, y.ks)(t.config),
-        et = (0, y._Z)(t.config),
-        { completedRatio: es, completedRatioDisplay: en } = (0, _.O9)(t),
-        ei = (0, q.gj)(t, r, E.Ob.QuestEmbed, I),
-        ea = (0, D.Pd)(t),
+        ee = (0, p.ks)(t.config),
+        et = (0, p._Z)(t.config),
+        { completedRatio: es, completedRatioDisplay: en } = (0, S.O9)(t),
+        ei = (0, A.gj)(t, r, E.Ob.QuestEmbed, w),
+        ea = (0, Q.Pd)(t),
         el = i.useMemo(
             () =>
                 J && ee
@@ -66,7 +66,7 @@ function R(e) {
                                   {
                                       questId: t.id,
                                       children: [
-                                          (0, n.jsx)(N.A, { shouldUseThemeColor: !0, className: O.Kq, customSize: 14 }),
+                                          (0, n.jsx)(C.A, { shouldUseThemeColor: !0, className: z.Kq, customSize: 14 }),
                                           et,
                                       ],
                                   },
@@ -74,7 +74,7 @@ function R(e) {
                               ),
                       })
                     : J
-                      ? (0, n.jsx)(H, { questId: t.id, children: K })
+                      ? (0, n.jsx)(H, { questId: t.id, children: V })
                       : ee
                         ? B.intl.format(B.t.ro1sze, {
                               balanceHook: () =>
@@ -83,9 +83,9 @@ function R(e) {
                                       {
                                           questId: t.id,
                                           children: [
-                                              (0, n.jsx)(N.A, {
+                                              (0, n.jsx)(C.A, {
                                                   shouldUseThemeColor: !0,
-                                                  className: O.Kq,
+                                                  className: z.Kq,
                                                   customSize: 14,
                                               }),
                                               et,
@@ -97,59 +97,59 @@ function R(e) {
                         : B.intl.format(B.t["0IUT4Y"], {
                               rewardWithArticleHook: () => (0, n.jsx)(H, { questId: t.id, children: Y }, t.id),
                           }),
-            [K, J, Y, t.id, et, ee],
+            [V, J, Y, t.id, et, ee],
         ),
         eo = i.useMemo(() => {
             if (null != ei)
                 return (0, n.jsx)(m.E, {
                     variant: "text-sm/medium",
                     color: "text-muted",
-                    className: O.h_,
+                    className: z.h_,
                     children: ei,
                 });
         }, [ei]),
-        er = (0, v.bG)([f.A], () => f.A.useReducedMotion),
+        er = (0, f.bG)([v.A], () => v.A.useReducedMotion),
         ec = i.useCallback(() => {
-            (0, L.navigateToQuestHome)({ fromContent: s, questId: t.id }),
-                (0, S.Y5)({
+            (0, U.navigateToQuestHome)({ fromContent: s, questId: t.id }),
+                (0, _.Y5)({
                     questId: t.id,
                     questContent: s,
                     questContentPosition: o,
-                    questContentCTA: p.Cy.LEARN_MORE,
+                    questContentCTA: b.Cy.LEARN_MORE,
                     sourceQuestContent: r,
                 });
         }, [t.id, s, o, r]),
-        ed = (0, v.bG)([C.A], () => null != C.A.questEnrollmentBlockedUntil, []),
-        eu = A.t.useConfig({ location: U.rE.EMBED_DESKTOP });
+        ed = (0, f.bG)([N.A], () => null != N.A.questEnrollmentBlockedUntil, []),
+        eu = q.t.useConfig({ location: L.rE.EMBED_DESKTOP });
     return (0, n.jsxs)("div", {
-        className: O.kL,
-        ref: I,
+        className: z.kL,
+        ref: w,
         children: [
             (0, n.jsxs)(c.animated.div, {
-                style: { maxHeight: F.to([0, 1], [104, (R ?? 0) + 12]) },
-                className: O.z,
+                style: { maxHeight: G.to([0, 1], [104, (R ?? 0) + 12]) },
+                className: z.z,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: O.c6,
+                        className: z.c6,
                         children: [
-                            !J && Z && (0, n.jsx)("div", { className: O.Nz }),
+                            !J && Z && (0, n.jsx)("div", { className: z.Nz }),
                             X
                                 ? (0, n.jsxs)("div", {
-                                      className: O.Tr,
+                                      className: z.Tr,
                                       children: [
                                           Z &&
                                               (0, n.jsx)(x.a, {
-                                                  importData: z,
-                                                  className: O.t_,
+                                                  importData: O,
+                                                  className: z.t_,
                                                   loop: !1,
                                                   autoplay: !1,
                                                   shouldAnimate: !er,
                                               }),
-                                          (0, n.jsx)(w.A, {
+                                          (0, n.jsx)(I.A, {
                                               size: 76,
                                               percentComplete: es,
-                                              overlayText: a && !V ? en : void 0,
-                                              children: (0, n.jsx)(M.A, {
+                                              overlayText: a && !$ ? en : void 0,
+                                              children: (0, n.jsx)(k.A, {
                                                   quest: t,
                                                   questContent: s,
                                                   autoplay: a,
@@ -160,11 +160,11 @@ function R(e) {
                                           }),
                                       ],
                                   })
-                                : (0, n.jsx)(M.A, {
+                                : (0, n.jsx)(k.A, {
                                       quest: t,
                                       autoplay: a,
                                       questContent: s,
-                                      className: O.eB,
+                                      className: z.eB,
                                       lazyLoad: !0,
                                       sourceQuestContent: r,
                                   }),
@@ -172,27 +172,27 @@ function R(e) {
                     }),
                     (0, n.jsxs)("div", {
                         ref: T,
-                        className: l()(O.FS, { [O.wq]: !P }),
+                        className: l()(z.FS, { [z.wq]: !F }),
                         children: [
                             (0, n.jsx)(h.D, {
                                 variant: "eyebrow",
                                 color: "text-brand",
-                                className: O.G$,
+                                className: z.G$,
                                 children: B.intl.format(B.t.EAYZAr, { questName: t.config.messages.questName }),
                             }),
                             (0, n.jsx)(m.E, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
-                                className: O.wx,
+                                className: z.wx,
                                 children: el,
                             }),
                             eo,
                         ],
                     }),
-                    P &&
+                    F &&
                         (0, n.jsx)(c.animated.div, {
-                            style: { opacity: (0, k.a)(F.to([0, 1], [1, 0])) },
-                            className: O.hS,
+                            style: { opacity: (0, M.a)(G.to([0, 1], [1, 0])) },
+                            className: z.hS,
                         }),
                 ],
             }),
@@ -207,7 +207,7 @@ function R(e) {
                               (0, n.jsx)(g.$, { variant: "secondary", disabled: !0, text: B.intl.string(B.t.V293qn) }),
                               (0, n.jsx)(g.$, {
                                   variant: "primary",
-                                  onClick: () => (0, L.m6)(t, s, r),
+                                  onClick: () => (0, U.m6)(t, s, r),
                                   text: B.intl.string(B.t.vY9GgG),
                               }),
                           ],
@@ -224,16 +224,16 @@ function R(e) {
                                   onClick: ec,
                               }),
                               eu.enabled && eu.enabledQuestStates.has(ea)
-                                  ? (0, n.jsx)(Q.A, {
+                                  ? (0, n.jsx)(D.A, {
                                         quest: t,
-                                        surface: D.V3.QUEST_EMBED,
+                                        surface: Q.V3.QUEST_EMBED,
                                         analyticsCtxQuestContent: s,
                                         analyticsCtxSourceQuestContent: r,
                                         analyticsCtxQuestContentPosition: o,
                                     })
-                                  : (0, n.jsx)(G, {
+                                  : (0, n.jsx)(P, {
                                         quest: t,
-                                        progressState: $,
+                                        progressState: K,
                                         questContent: s,
                                         sourceQuestContent: r,
                                         questContentPosition: o,
@@ -248,16 +248,16 @@ let H = i.memo(function (e) {
     let { questId: t, children: s } = e;
     return (0, n.jsx)(
         m.E,
-        { variant: "text-md/semibold", color: "text-strong", tag: "span", className: O.wx, children: s },
+        { variant: "text-md/semibold", color: "text-strong", tag: "span", className: z.wx, children: s },
         `${t}_reward`,
     );
 });
-function G(e) {
+function P(e) {
     let { quest: t, progressState: s, questContent: i, questContentPosition: a, sourceQuestContent: l } = e,
-        o = (0, v.bG)([C.A], () => C.A.isEnrolling(t.id)),
-        r = (0, I.vv)(t),
-        c = (0, I.Cr)(t),
-        d = (0, b.Ic)(t),
+        o = (0, f.bG)([N.A], () => N.A.isEnrolling(t.id)),
+        r = (0, w.vv)(t),
+        c = (0, w.Cr)(t),
+        d = (0, y.Ic)(t),
         u = (0, T._c)({
             progressState: s,
             quest: t,
@@ -268,7 +268,7 @@ function G(e) {
             inGameQuest: c,
             sourceQuestContent: l,
         }),
-        m = (0, _.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" });
+        m = (0, S.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" });
     return d
         ? (0, n.jsx)(g.$, {
               variant: "secondary",
@@ -285,14 +285,14 @@ function G(e) {
               text: u.text,
           });
 }
-var P = s(366010),
-    F = s(331322),
-    V = s(939249),
-    $ = s(365199),
-    K = s(820081),
+var F = s(366010),
+    G = s(331322),
+    $ = s(939249),
+    K = s(365199),
+    V = s(820081),
     Y = s(661531),
     X = s(736653),
-    Z = s(496885),
+    Z = s(814925),
     J = s(814793),
     ee = s(918338),
     et = s(270045),
@@ -312,13 +312,13 @@ function ei(e) {
 }
 function ea(e) {
     let { quest: t, isInteracting: s, location: a, sourceQuestContent: l } = e,
-        o = (0, b.Ic)(t),
+        o = (0, y.Ic)(t),
         r = t.userStatus?.claimedAt != null,
-        c = (0, _.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
-        d = (0, v.bG)([C.A], () => C.A.getQuestHomeHero()),
+        c = (0, S.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
+        d = (0, f.bG)([N.A], () => N.A.getQuestHomeHero()),
         u = i.useMemo(() => null != d && (0, J.I0)(d, t.id), [d, t.id]),
         x = (0, X.Ay)(),
-        h = (0, P.M)(x) ? "text-muted" : "always-white";
+        h = (0, F.M)(x) ? "text-muted" : "always-white";
     return (0, n.jsxs)("div", {
         className: en.kL,
         children: [
@@ -342,7 +342,7 @@ function ea(e) {
                             className: en.mY,
                             children: [
                                 (u || t.preview) &&
-                                    (0, n.jsxs)(F.B, {
+                                    (0, n.jsxs)(G.B, {
                                         className: en.Bv,
                                         direction: "horizontal",
                                         fullWidth: !1,
@@ -364,11 +364,11 @@ function ea(e) {
                                     showShareLink: !0,
                                     sourceQuestContent: l,
                                     children: (e) =>
-                                        (0, n.jsx)(V.D, {
+                                        (0, n.jsx)($.D, {
                                             ...e,
                                             className: en.iI,
                                             "aria-label": B.intl.string(B.t.DEoVWZ),
-                                            children: (0, n.jsx)($.j, {
+                                            children: (0, n.jsx)(K.j, {
                                                 size: "md",
                                                 color: "currentColor",
                                                 className: en.A9,
@@ -400,7 +400,7 @@ function ea(e) {
                                             size: 16,
                                             color: Y.A.unsafe_rawColors.GREEN_360.css,
                                             allowFullSizedIcon: !0,
-                                            children: (0, n.jsx)(K.B, {
+                                            children: (0, n.jsx)(V.B, {
                                                 color: Y.A.unsafe_rawColors.WHITE.css,
                                                 size: "custom",
                                                 width: 13,

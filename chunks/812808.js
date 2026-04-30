@@ -1,18 +1,19 @@
-n.d(t, { B: () => l, G: () => _ });
+"use strict";
+n.d(t, { B: () => l, G: () => o });
 var i = n(17928),
     r = n(153488),
-    a = n(531685);
+    s = n(531685);
 n(595);
-var s = n(652215);
-function _() {
+var a = n(652215);
+function o() {
     var e, t;
     return (
-        (e = (0, i.bG)([a.A], () => a.A.windowSize().width)),
-        (t = (0, i.bG)([r.A], () => r.A.hasConsented(s.YAq.PERSONALIZATION))),
+        (e = (0, i.bG)([s.A], () => s.A.windowSize().width)),
+        (t = (0, i.bG)([r.A], () => r.A.hasConsented(a.YAq.PERSONALIZATION))),
         e > 1200 && t
     );
 }
 function l() {
     var e, t;
-    return (e = a.A.windowSize().width), (t = r.A.hasConsented(s.YAq.PERSONALIZATION)), e > 1200 && t;
+    return (e = s.A.windowSize().width), (t = r.A.hasConsented(a.YAq.PERSONALIZATION)), e > 1200 && t;
 }

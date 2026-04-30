@@ -1,57 +1,58 @@
-n.d(t, { A: () => y, f: () => m });
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => E, f: () => p });
+var i = n(627968);
 n(64700);
-var l = n(451394),
-    i = n(687966),
+var r = n(451394),
+    s = n(687966),
     a = n(323384),
-    u = n(432017),
-    o = n(526181),
-    s = n(765379),
-    d = n(82149),
-    c = n(566903),
-    A = n(864436),
+    o = n(432017),
+    l = n(526181),
+    u = n(765379),
+    c = n(82149),
+    d = n(566903),
+    _ = n(864436),
     f = n(200041),
-    p = n(652215);
-let m = function (e) {
+    h = n(652215);
+let p = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, d.Cy)(e)
-        ? l.q
-        : (0, s.A)(e)
+    return (0, c.Cy)(e)
+        ? r.q
+        : (0, u.A)(e)
           ? t
-              ? i._
+              ? s._
               : a.k
-          : e.type === p.$pd.PLAYING
-            ? i._
-            : e.type === p.$pd.LISTENING
-              ? u.T
-              : e.type === p.$pd.WATCHING || e.type === p.$pd.STREAMING
-                ? o.U
-                : e.type === p.$pd.COMPETING
-                  ? i._
+          : e.type === h.$pd.PLAYING
+            ? s._
+            : e.type === h.$pd.LISTENING
+              ? o.T
+              : e.type === h.$pd.WATCHING || e.type === h.$pd.STREAMING
+                ? l.U
+                : e.type === h.$pd.COMPETING
+                  ? s._
                   : null;
 };
-function y(e) {
+function E(e) {
     let {
             activity: t,
             textVariant: n,
-            textClassName: l,
-            iconClassName: i,
+            textClassName: r,
+            iconClassName: s,
             hideIcon: a = !1,
-            hideText: u = !1,
-            hideTooltip: o = !1,
-            canTruncate: s = !0,
+            hideText: o = !1,
+            hideTooltip: l = !1,
+            canTruncate: u = !0,
         } = e,
-        { text: d, tooltip: p } = (0, c.A)(t, !0),
-        y = m(t),
-        I = null != y && !a;
-    return (0, r.jsx)(f.A, {
-        icon: I ? (0, r.jsx)(A.A, { icon: y, className: i }) : void 0,
-        text: d ?? "",
+        { text: c, tooltip: h } = (0, d.A)(t, !0),
+        E = p(t),
+        m = null != E && !a;
+    return (0, i.jsx)(f.A, {
+        icon: m ? (0, i.jsx)(_.A, { icon: E, className: s }) : void 0,
+        text: c ?? "",
         textVariant: n,
-        textClassName: l,
-        hideTooltip: o,
-        canTruncate: s,
-        "aria-label": p ?? "",
-        hideText: u,
+        textClassName: r,
+        hideTooltip: l,
+        canTruncate: u,
+        "aria-label": h ?? "",
+        hideText: o,
     });
 }

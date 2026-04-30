@@ -1,4 +1,5 @@
-n.d(t, { R: () => r });
+"use strict";
+n.d(t, { R: () => s });
 var i = n(793322),
-    s = n(186111);
-let r = { binds: ["mod+k", "mod+t"], comboKeysBindGlobal: !0, action: () => (s.A.hasLayers() || (0, i.WU)(), !1) };
+    r = n(186111);
+let s = { binds: ["mod+k", "mod+t"], comboKeysBindGlobal: !0, action: () => (r.A.hasLayers() || (0, i.WU)(), !1) };

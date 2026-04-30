@@ -1,11 +1,12 @@
-s.d(e, { KU: () => o, rm: () => n });
-var r = s(452681),
-    i = s(75109);
-function n() {
-    let t = (0, i.E)();
-    return (0, r.h)(t).getIsolationScope();
+"use strict";
+n.d(t, { KU: () => a, rm: () => s });
+var i = n(452681),
+    r = n(75109);
+function s() {
+    let e = (0, r.E)();
+    return (0, i.h)(e).getIsolationScope();
 }
-function o() {
-    let t;
-    return ((t = (0, i.E)()), (0, r.h)(t).getCurrentScope()).getClient();
+function a() {
+    let e;
+    return ((e = (0, r.E)()), (0, i.h)(e).getCurrentScope()).getClient();
 }

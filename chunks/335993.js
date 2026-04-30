@@ -1,6 +1,7 @@
-n.r(t), n.d(t, { default: () => b, messagesLoader: () => d });
-let { createLoader: h } = n(919523),
-    d = h(
+"use strict";
+n.r(t), n.d(t, { default: () => a, messagesLoader: () => r });
+let { createLoader: i } = n(919523),
+    r = i(
         {
             bg: () => n.e("98458").then(n.t.bind(n, 689537, 19)),
             cs: () => n.e("56601").then(n.t.bind(n, 295232, 19)),
@@ -11,7 +12,7 @@ let { createLoader: h } = n(919523),
             "es-419": () => n.e("15834").then(n.t.bind(n, 908641, 19)),
             "es-ES": () => n.e("65160").then(n.t.bind(n, 717371, 19)),
             fi: () => n.e("70368").then(n.t.bind(n, 511619, 19)),
-            fr: () => n.e("955").then(n.t.bind(n, 521974, 19)),
+            fr: () => n.e("955").then(n.t.bind(n, 299593, 19)),
             hi: () => n.e("90182").then(n.t.bind(n, 435301, 19)),
             hr: () => n.e("41629").then(n.t.bind(n, 828236, 19)),
             hu: () => n.e("97402").then(n.t.bind(n, 367553, 19)),
@@ -20,7 +21,7 @@ let { createLoader: h } = n(919523),
             ko: () => n.e("24637").then(n.t.bind(n, 386572, 19)),
             lt: () => n.e("1343").then(n.t.bind(n, 421570, 19)),
             nl: () => n.e("63541").then(n.t.bind(n, 470996, 19)),
-            no: () => n.e("23065").then(n.t.bind(n, 605509, 19)),
+            no: () => n.e("90208").then(n.t.bind(n, 605509, 19)),
             pl: () => n.e("75987").then(n.t.bind(n, 130558, 19)),
             "pt-BR": () => n.e("48944").then(n.t.bind(n, 327411, 19)),
             ro: () => n.e("24626").then(n.t.bind(n, 817481, 19)),
@@ -36,5 +37,5 @@ let { createLoader: h } = n(919523),
         },
         "en-US",
     ),
-    { makeMessagesProxy: i } = n(919523),
-    b = i(d);
+    { makeMessagesProxy: s } = n(919523),
+    a = s(r);

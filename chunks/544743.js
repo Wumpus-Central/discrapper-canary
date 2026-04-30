@@ -1,3 +1,4 @@
+"use strict";
 function i(e) {
     let { muted: t, mute_config: n } = e;
     return !!t && (null == n || null == n.end_time || new Date(n.end_time) >= new Date());
@@ -6,8 +7,8 @@ function r(e) {
     let { muted: t, mute_config: n } = e;
     return !!t && null != n && null != n.end_time && new Date(n.end_time) >= new Date();
 }
-n.d(t, { Ay: () => a, tG: () => i, wG: () => r });
-class a {
+n.d(t, { Ay: () => s, tG: () => i, wG: () => r });
+class s {
     timers;
     constructor() {
         this.timers = {};

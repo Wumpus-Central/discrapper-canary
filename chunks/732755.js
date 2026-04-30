@@ -1,76 +1,77 @@
-n.d(t, { A: () => N });
+"use strict";
+n.d(t, { A: () => C });
 var i = n(812729),
     r = n.n(i),
-    l = n(17928),
+    s = n(17928),
     a = n(228366),
-    s = n(47167),
-    o = n(734057),
-    d = n(71393),
-    u = n(763827),
-    c = n(994500),
-    h = n(309010),
-    E = n(287809),
-    _ = n(488926),
+    o = n(47167),
+    l = n(734057),
+    u = n(71393),
+    c = n(763827),
+    d = n(994500),
+    _ = n(309010),
+    f = n(287809),
+    h = n(488926),
     p = n(63995),
-    A = n(69407),
-    f = n(82149),
+    E = n(518769),
+    m = n(82149),
     g = n(446600),
-    I = n(96566),
-    T = n(516607),
-    S = n(652215);
-let m = null;
-function O() {
+    A = n(96566),
+    I = n(516607),
+    T = n(652215);
+let S = null;
+function N() {
     let e = (function () {
-        let e = h.A.getVoiceChannelId();
+        let e = _.A.getVoiceChannelId();
         if (null == e) return null;
         let t = g.A.getStageInstanceByChannel(e);
         if (null == t) return null;
-        let n = o.A.getChannel(e);
-        if (null == n || !_.Ib(S.xBc.VIEW_CHANNEL, n)) return null;
-        let i = d.A.getGuild(n.getGuildId());
-        if (null == i || !i.features.has(S.GuildFeatures.DISCOVERABLE)) return null;
-        let r = (0, f.eL)(n, t),
-            l = m?.party?.id === r ? m : null,
-            a = p.A.getMutableParticipants(n.id, A.ip.SPEAKER),
-            u = a.filter((e) => e.type === A.wY.STREAM).length,
-            O = a.length - u,
-            C = p.A.getParticipantCount(e) - u,
-            N = l?.party?.size != null ? l.party.size[1] : 0;
+        let n = l.A.getChannel(e);
+        if (null == n || !h.Ib(T.xBc.VIEW_CHANNEL, n)) return null;
+        let i = u.A.getGuild(n.getGuildId());
+        if (null == i || !i.features.has(T.GuildFeatures.DISCOVERABLE)) return null;
+        let r = (0, m.eL)(n, t),
+            s = S?.party?.id === r ? S : null,
+            a = p.A.getMutableParticipants(n.id, E.ip.SPEAKER),
+            c = a.filter((e) => e.type === E.wY.STREAM).length,
+            N = a.length - c,
+            y = p.A.getParticipantCount(e) - c,
+            C = s?.party?.size != null ? s.party.size[1] : 0;
         return {
-            application_id: T.SS,
-            name: t.topic ?? n.topic ?? (0, s.m1)(n, E.default, c.A),
-            type: (0, I.xn)(n.id) ? S.$pd.WATCHING : S.$pd.LISTENING,
-            timestamps: { start: l?.timestamps?.start ?? new Date().getTime() },
+            application_id: I.SS,
+            name: t.topic ?? n.topic ?? (0, o.m1)(n, f.default, d.A),
+            type: (0, A.xn)(n.id) ? T.$pd.WATCHING : T.$pd.LISTENING,
+            timestamps: { start: s?.timestamps?.start ?? new Date().getTime() },
             assets: { small_image: i.icon ?? void 0, small_text: i.name },
-            party: { id: r, size: [O, Math.max(C, N)] },
+            party: { id: r, size: [N, Math.max(y, C)] },
         };
     })();
-    return !r()(e, m) && ((m = e), !0);
+    return !r()(e, S) && ((S = e), !0);
 }
-class C extends l.Ay.Store {
+class y extends s.Ay.Store {
     static displayName = "StageChannelSelfRichPresenceStore";
     initialize() {
-        this.waitFor(o.A, d.A, u.A, h.A, p.A, g.A);
+        this.waitFor(l.A, u.A, c.A, _.A, p.A, g.A);
     }
     getActivity() {
-        return m;
+        return S;
     }
 }
-let N = new C(a.h, {
-    CONNECTION_OPEN: O,
-    STAGE_INSTANCE_CREATE: O,
-    STAGE_INSTANCE_UPDATE: O,
-    STAGE_INSTANCE_DELETE: O,
-    VOICE_CHANNEL_SELECT: O,
+let C = new y(a.h, {
+    CONNECTION_OPEN: N,
+    STAGE_INSTANCE_CREATE: N,
+    STAGE_INSTANCE_UPDATE: N,
+    STAGE_INSTANCE_DELETE: N,
+    VOICE_CHANNEL_SELECT: N,
     RTC_CONNECTION_STATE: function (e) {
         let { state: t } = e,
-            n = m?.party?.size?.[1] ?? 0;
-        return t === S.S7L.RTC_CONNECTED && !(n > 0) && O();
+            n = S?.party?.size?.[1] ?? 0;
+        return t === T.S7L.RTC_CONNECTED && !(n > 0) && N();
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
-        if (null == m) return;
-        let n = (0, f.UW)(m);
-        null != n && null != t.find((e) => e.channelId === n.channelId) && O();
+        if (null == S) return;
+        let n = (0, m.UW)(S);
+        null != n && null != t.find((e) => e.channelId === n.channelId) && N();
     },
 });

@@ -1,7 +1,8 @@
-n.d(t, { M: () => a });
+"use strict";
+n.d(t, { M: () => s });
 var i = n(136722),
     r = n(652215);
-let a = i.kg(
+let s = i.kg(
     r.xBc.ADMINISTRATOR,
     r.xBc.MANAGE_GUILD,
     r.xBc.BAN_MEMBERS,

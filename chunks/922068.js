@@ -21,11 +21,11 @@ var s,
     S = n(334738),
     p = n(186840),
     R = n(135978),
-    x = n(110259),
+    x = n(562708),
     T = n(636537),
     y = n(933681),
     j = n(228366),
-    D = n(253932),
+    D = n(885386),
     O = n(499785),
     M = n(652215);
 function v(e) {
@@ -240,7 +240,7 @@ var Y = n(837381),
     Q = n(689175),
     V = n(928039),
     W = n(139286),
-    $ = n(985018),
+    $ = n(375708),
     q = n(729920);
 let Z = () =>
     (0, i.jsxs)("div", {
@@ -259,13 +259,13 @@ var ee = n(778712),
     ea = n(730134),
     ei = n(688810),
     er = n(587895),
-    eo = n(22007),
+    eo = n(741231),
     ec = n(46054),
     ed = n(102876),
     eu = n(975732),
     eh = n(889227),
     eA = n(287809),
-    em = n(954571),
+    em = n(174459),
     eg = n(998218),
     eE = n(284009),
     e_ = n.n(eE),
@@ -502,7 +502,7 @@ function eK(e) {
         }),
     });
 }
-var eH = n(550079),
+var eH = n(980707),
     eB = n(477782),
     ez = n(241326),
     eJ = n(922016),
@@ -781,7 +781,7 @@ let eZ = r.memo(function (e) {
         );
     });
 var e1 = n(523396);
-function e2(e) {
+function e3(e) {
     let { initialized: t, items: n, loading: s, loadMore: l } = e,
         a = r.useRef(null),
         o = (0, V.A)("for-you", a);
@@ -823,18 +823,18 @@ function e2(e) {
               })
         : (0, i.jsx)(X.y, { className: e1.k$ });
 }
-function e3() {
+function e2() {
     let { initialized: e, items: t, loading: n, loadMore: s } = J(),
         l = e7(
             t,
             (0, g.bG)([f.A], () => f.A.localItems),
         );
-    return (0, i.jsx)(e2, { initialized: e, items: l, loading: n, loadMore: s });
+    return (0, i.jsx)(e3, { initialized: e, items: l, loading: n, loadMore: s });
 }
 function e7(e, t) {
     return r.useMemo(() => [...[...e, ...t].sort((e, t) => -1 * G.default.compare(e.id, t.id))], [e, t]);
 }
-function e5() {
+function e8() {
     let { items: e } = J(),
         t = e.length > 0 ? e[0] : null,
         n = e7(
@@ -866,10 +866,10 @@ function e5() {
           })
         : null;
 }
-var e8 = n(815021),
-    e9 = n(935063),
-    e4 = n(378939),
-    e6 = n(964486),
+var e5 = n(815021),
+    e6 = n(935063),
+    e9 = n(378939),
+    e4 = n(964486),
     te = n(475743),
     tt = n(323073),
     tn = n(202803),
@@ -899,8 +899,8 @@ var th = n(187322),
     tm = n(777666),
     tg = n(397244),
     tE = n(714114),
-    t_ = n(729551),
-    tN = n(58149),
+    t_ = n(394871),
+    tN = n(95561),
     tf = n(571694),
     tI = n(47167),
     tC = n(713654),
@@ -1118,7 +1118,7 @@ function tH(e, t, n) {
         a = t ? R.Ay.everyoneFilter : null,
         i = null;
     null != e && null != s && (i = s === M.KE7.ALL_SERVERS ? null : e.getGuildId()),
-        e4.A.fetchRecentMentions({ before: n, limit: M.Ue3, guildId: i, roles: l, everyone: a });
+        e9.A.fetchRecentMentions({ before: n, limit: M.Ue3, guildId: i, roles: l, everyone: a });
 }
 function tB(e) {
     let { onJump: t } = e,
@@ -1147,12 +1147,12 @@ function tB(e) {
             ? ((null != A && o !== A) || (null != m && d !== m) || (null != E && u !== E)) && tH(n, !0)
             : tH(n, !0);
     }, [A, o, m, d, E, u, n, !0]),
-        (0, e6.Ay)(() => {
-            s?.some(tn.$r) && (e4.A.clearMentions(), tH(n, !0));
+        (0, e4.Ay)(() => {
+            s?.some(tn.$r) && (e9.A.clearMentions(), tH(n, !0));
         }),
         r.useEffect(
             () => () => {
-                e4.A.truncateMentions(M.Ue3);
+                e9.A.truncateMentions(M.Ue3);
             },
             [],
         );
@@ -1163,7 +1163,7 @@ function tB(e) {
         onFetch: () => null,
         onJump: t,
         onCloseMessage: function (e) {
-            e4.A.deleteRecentMention(e.id);
+            e9.A.deleteRecentMention(e.id);
         },
         channel: n,
         messages: s,
@@ -1198,7 +1198,7 @@ function tJ(e) {
                 channel: l,
                 gotoChannel: n,
                 children:
-                    null != s ? (0, i.jsx)(e8.J, { size: "sm", onClick: () => e4.A.deleteRecentMention(t.id) }) : null,
+                    null != s ? (0, i.jsx)(e5.J, { size: "sm", onClick: () => e9.A.deleteRecentMention(t.id) }) : null,
             }),
             (0, i.jsxs)("div", {
                 className: tP.zC,
@@ -1224,7 +1224,7 @@ function tJ(e) {
     });
 }
 function tY() {
-    return (0, i.jsx)(tw, { Icon: e9.X, header: $.intl.string($.t.bgDz74), tip: $.intl.string($.t.NS15vk) });
+    return (0, i.jsx)(tw, { Icon: e6.X, header: $.intl.string($.t.bgDz74), tip: $.intl.string($.t.NS15vk) });
 }
 var tX = n(702841),
     tQ = n(912592),
@@ -1235,7 +1235,7 @@ var tX = n(702841),
     tZ = n(711950),
     t0 = n(912309),
     t1 = n(911933);
-function t2(e) {
+function t3(e) {
     let { closePopout: t } = e,
         n = (0, t0.kX)();
     return (0, i.jsx)(E.m, {
@@ -1256,7 +1256,7 @@ function t2(e) {
         }),
     });
 }
-var t3 = n(783977);
+var t2 = n(783977);
 function t7(e) {
     let { closePopout: t, onSelect: n } = e,
         s = (0, g.bG)([ti.A, to.A], () => ti.A.getChannel(to.A.getChannelId())),
@@ -1279,7 +1279,7 @@ function t7(e) {
                 id: "Everyone",
                 label: $.intl.string($.t.cdyUsV),
                 action: function () {
-                    e4.A.setGuildFilter({ everyoneFilter: !l });
+                    e9.A.setGuildFilter({ everyoneFilter: !l });
                 },
                 checked: l,
             }),
@@ -1287,7 +1287,7 @@ function t7(e) {
                 id: "Roles",
                 label: $.intl.string($.t.lZejCq),
                 action: function () {
-                    e4.A.setGuildFilter({ roleFilter: !a });
+                    e9.A.setGuildFilter({ roleFilter: !a });
                 },
                 checked: a,
             }),
@@ -1297,7 +1297,7 @@ function t7(e) {
                       id: "All Servers",
                       label: $.intl.string($.t.GWMA6s),
                       action: function () {
-                          e4.A.setGuildFilter({
+                          e9.A.setGuildFilter({
                               guildFilter: r === M.KE7.THIS_SERVER ? M.KE7.ALL_SERVERS : M.KE7.THIS_SERVER,
                           });
                       },
@@ -1306,7 +1306,7 @@ function t7(e) {
         ],
     });
 }
-function t5() {
+function t8() {
     let e = r.useRef(null);
     return (0, i.jsx)(eJ.Y, {
         targetElementRef: e,
@@ -1326,17 +1326,17 @@ function t5() {
                     size: "sm",
                     variant: "secondary",
                     "aria-label": $.intl.string($.t.pEasFX),
-                    icon: t3.R,
+                    icon: t2.R,
                     onClick: n,
                 }),
             });
         },
     });
 }
-var t8 = n(481613),
-    t9 = n.n(t8),
-    t4 = n(775602),
-    t6 = n(625494),
+var t5 = n(481613),
+    t6 = n.n(t5),
+    t9 = n(775602),
+    t4 = n(625494),
     ne = n(723702),
     nt = n(862482),
     nn = n(640238);
@@ -1388,7 +1388,7 @@ function nl(e) {
 var na = n(735438),
     ni = n.n(na),
     nr = n(749314),
-    no = n(925747),
+    no = n(785651),
     nc = n(311283),
     nd = n(717421),
     nu = n(933832),
@@ -1517,7 +1517,7 @@ var nx = n(989349),
     nK = n(467073),
     nH = n(491182),
     nB = n(860227),
-    nz = n(970848),
+    nz = n(110637),
     nJ = n(375199),
     nY = n(522871),
     nX = n(715628),
@@ -1586,7 +1586,7 @@ let n1 = r.memo(function e(t) {
                   ? (n = $.t["VFWjc+"])
                   : (0, nO.kf)(l) && A && (n = $.t.xfkfTK),
             void 0 !== n)
-          ? (0, i.jsx)(n2, { className: r, compact: a, count: 1, collapsedReason: n })
+          ? (0, i.jsx)(n3, { className: r, compact: a, count: 1, collapsedReason: n })
           : (0, i.jsx)(nH.A, {
                 compact: a,
                 className: c()(r, { [n0.M1]: (0, nG.ec)(l), [n0.XN]: u, [n0._A]: t.isGroupStart }),
@@ -1630,7 +1630,7 @@ let n1 = r.memo(function e(t) {
                 "aria-roledescription": $.intl.string($.t.BAB0yK),
             });
 });
-function n2(e) {
+function n3(e) {
     let { className: t, count: n, compact: s, collapsedReason: l } = e;
     return (0, i.jsx)(nH.A, {
         className: t,
@@ -1644,13 +1644,13 @@ function n2(e) {
         }),
     });
 }
-var n3 = n(495544),
+var n2 = n(495544),
     n7 = n(58703),
-    n5 = n(143236),
-    n8 = n(720149),
-    n9 = n(181079),
-    n4 = n(567035),
-    n6 = n(455234),
+    n8 = n(143236),
+    n5 = n(720149),
+    n6 = n(181079),
+    n9 = n(567035),
+    n4 = n(455234),
     se = n(695633),
     st = n(152007),
     sn = n(607508),
@@ -1674,7 +1674,7 @@ var n3 = n(495544),
         (s[(s.ReallyOldChannel = 8)] = "ReallyOldChannel"),
         s),
     sh = (((l = {}).Loading = "loading"), (l.Loaded = "loaded"), (l.Done = "done"), l);
-class sA extends n5.EventEmitter {
+class sA extends n8.EventEmitter {
     state;
     scrollerRef;
     undoStack = [];
@@ -1708,7 +1708,7 @@ class sA extends n5.EventEmitter {
     populateInitialStateFromStore(e) {
         if ("messages" === e.type) {
             let t = sm(e, !1);
-            return t.messages.some(tn.$r) ? (n8.A.clearChannel(e.channelId), { ...e, messages: [] }) : t;
+            return t.messages.some(tn.$r) ? (n5.A.clearChannel(e.channelId), { ...e, messages: [] }) : t;
         }
         if ("nsfw" === e.type) return { ...e, isFullyLoaded: !0, hasLoadedAnything: !0 };
         if ("forum" === e.type) {
@@ -1744,7 +1744,7 @@ class sA extends n5.EventEmitter {
         (null != s && this.undoStack.push(s), 1 === this.state.channels.length)
             ? this.deleteChannel(t)
             : (this.setState({ channels: this.updateChannel(t, (e) => ({ ...e, deleted: !0 })) }),
-              t4.A.useReducedMotion && this.deleteChannel(t),
+              t9.A.useReducedMotion && this.deleteChannel(t),
               this.maybeLoadMore());
     };
     undoMarkChannelRead = () => {
@@ -1763,7 +1763,7 @@ class sA extends n5.EventEmitter {
         t < 0 ? n.push(e) : n.splice(t, 0, e), this.setState({ scrollToChannelIndex: t, channels: n });
     };
     markGuildRead = (e) => {
-        j.h.wait(() => (0, n4.A)([e], M.JJy.INBOX)),
+        j.h.wait(() => (0, n9.A)([e], M.JJy.INBOX)),
             this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }),
             this.maybeLoadMore();
     };
@@ -1824,8 +1824,8 @@ class sA extends n5.EventEmitter {
         this.setState({ channels: e });
     };
     loadChannelMessages(e) {
-        n8.A.clearChannel(e.channelId);
-        let t = n8.A.fetchMessages({
+        n5.A.clearChannel(e.channelId);
+        let t = n5.A.fetchMessages({
             channelId: e.channelId,
             limit: M.EMb,
             jump: { messageId: e.oldestReadMessageId, flash: !0 },
@@ -1946,7 +1946,7 @@ function sE(e, t, n, s) {
     if (null == l || (!sa.Le.has(l.type) && sd.Ay.isGuildOrCategoryOrChannelMuted(n, l.id))) return;
     if (l.isPrivate()) {
         if (0 === tT.Ay.getMentionCount(s)) return;
-    } else if (!(0, n6.Y)(l) && 0 === tT.Ay.getMentionCount(s)) return;
+    } else if (!(0, n4.Y)(l) && 0 === tT.Ay.getMentionCount(s)) return;
     if ((!l.isPrivate() && !so.A.can(M.xBc.READ_MESSAGE_HISTORY, l)) || (0, tt.qR)(l)) return;
     let a = tT.Ay.ackMessageId(s);
     if (null == a) {
@@ -1974,7 +1974,7 @@ function sE(e, t, n, s) {
         mentionCount: o,
         sortOrder: (function (e, t, n) {
             let s = ti.A.getChannel(t);
-            if (n9.A.isFavorite(t)) return 0;
+            if (n6.A.isFavorite(t)) return 0;
             if (s.isPrivate()) return 1;
             if (tT.Ay.getMentionCount(t) > 0) return tT.Ay.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
@@ -2048,7 +2048,7 @@ function sp(e) {
         r = (0, nO.iJ)(n),
         o = !1,
         c = 0 === t.messages.length || nT()(t.messages[0].timestamp).isSame(nT()(), "day"),
-        d = eA.default.getUser(n3.default.getId())?.hasFlag(M.nhx.SPAMMER) ?? !1,
+        d = eA.default.getUser(n2.default.getId())?.hasFlag(M.nhx.SPAMMER) ?? !1,
         u = [];
     if (!t.collapsed) {
         let e = null,
@@ -2280,7 +2280,7 @@ function sO(e) {
         })(m),
         { loadState: N, channels: f } = E,
         { maybeLoadMore: I } = _,
-        C = (0, g.bG)([t4.A], () => t4.A.messageGroupSpacing);
+        C = (0, g.bG)([t9.A], () => t9.A.messageGroupSpacing);
     (t = m),
         (n = E),
         (s = _),
@@ -2304,9 +2304,9 @@ function sO(e) {
                 null != e && a.markChannelRead(e);
             };
             return (
-                t6._.subscribe(M.jej.MARK_TOP_INBOX_CHANNEL_READ, e),
+                t4._.subscribe(M.jej.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    t6._.unsubscribe(M.jej.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    t4._.unsubscribe(M.jej.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
         }, [a, l.channels]),
@@ -2338,11 +2338,11 @@ function sO(e) {
             ),
             [A],
         ),
-        (0, e6.Ay)(
+        (0, e4.Ay)(
             () => (
-                t6._.subscribe(M.jej.INBOX_MARK_ALL_UNREADS_READ, _.markAllRead),
+                t4._.subscribe(M.jej.INBOX_MARK_ALL_UNREADS_READ, _.markAllRead),
                 () => {
-                    t6._.unsubscribe(M.jej.INBOX_MARK_ALL_UNREADS_READ, _.markAllRead);
+                    t4._.unsubscribe(M.jej.INBOX_MARK_ALL_UNREADS_READ, _.markAllRead);
                 }
             ),
         );
@@ -2351,7 +2351,7 @@ function sO(e) {
         ? (0, i.jsx)(tw, {
               Icon: tQ.K,
               header: $.intl.string($.t["6XMM+D"]),
-              tip: t9().os?.family === "OS X" ? $.intl.string($.t.w9uDOW) : $.intl.string($.t.BiUJC6),
+              tip: t6().os?.family === "OS X" ? $.intl.string($.t.w9uDOW) : $.intl.string($.t.BiUJC6),
           })
         : (0, i.jsx)(Y.hD, {
               navigator: S,
@@ -2474,7 +2474,7 @@ function sv() {
         tip: $.intl.string($.t.cvcKzX),
     });
 }
-let sb = () => (0, i.jsx)(ns, { onClick: () => t6._.dispatch(M.jej.INBOX_MARK_ALL_UNREADS_READ) });
+let sb = () => (0, i.jsx)(ns, { onClick: () => t4._.dispatch(M.jej.INBOX_MARK_ALL_UNREADS_READ) });
 var sF = n(716030);
 function sL(e) {
     let { tab: t, setTab: n, badgeState: s, closePopout: l } = e,
@@ -2499,7 +2499,7 @@ function sL(e) {
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
                         "aria-label": $.intl.string($.t["8k+6QY"]),
-                        children: [(0, i.jsx)(sU, { tab: t }), (0, i.jsx)(t2, { closePopout: l })],
+                        children: [(0, i.jsx)(sU, { tab: t }), (0, i.jsx)(t3, { closePopout: l })],
                     }),
                 ],
             }),
@@ -2565,11 +2565,11 @@ function sL(e) {
 function sU(e) {
     let { tab: t } = e;
     return t === u.Y2.FOR_YOU
-        ? (0, i.jsx)(e5, {})
+        ? (0, i.jsx)(e8, {})
         : t === u.Y2.UNREADS
           ? (0, i.jsx)(sb, {})
           : t === u.Y2.MENTIONS
-            ? (0, i.jsx)(t5, {})
+            ? (0, i.jsx)(t8, {})
             : null;
 }
 var sk = n(406810),
@@ -2786,7 +2786,7 @@ function s$(e) {
                 component: (0, i.jsx)(sL, { tab: s, setTab: l, badgeState: a, closePopout: r }),
                 children:
                     s === u.Y2.FOR_YOU
-                        ? (0, i.jsx)(e3, {})
+                        ? (0, i.jsx)(e2, {})
                         : s === u.Y2.MENTIONS
                           ? (0, i.jsx)(tB, { onJump: o })
                           : _ && N && s === u.Y2.BOOKMARKS

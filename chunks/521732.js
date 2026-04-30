@@ -1,32 +1,33 @@
-n.d(t, { eh: () => c, er: () => u, hf: () => o, j0: () => p, tk: () => d });
+"use strict";
+n.d(t, { eh: () => c, er: () => u, hf: () => l, j0: () => _, tk: () => d });
 var i,
-    l,
     r,
-    s = n(927813),
-    a = n(985018);
-let o = 5 * s.A.Millis.SECOND;
-var u = 21552 == n.j ? (((i = {}).TOOLBAR_BUTTON = "toolbar button"), (i.PILL = "pill"), i) : null,
+    s,
+    a = n(927813),
+    o = n(375708);
+let l = 5 * a.A.Millis.SECOND;
+var u = (((i = {}).TOOLBAR_BUTTON = "toolbar button"), (i.PILL = "pill"), i),
     c =
-        (((l = {}).SIDEBAR = "sidebar"),
-        (l.PILL_DROPDOWN = "pill dropdown"),
-        (l.PILL_NEXT_ARROW = "pill next arrow"),
-        (l.PILL_PREVIOUS_ARROW = "pill previous arrow"),
-        l),
+        (((r = {}).SIDEBAR = "sidebar"),
+        (r.PILL_DROPDOWN = "pill dropdown"),
+        (r.PILL_NEXT_ARROW = "pill next arrow"),
+        (r.PILL_PREVIOUS_ARROW = "pill previous arrow"),
+        r),
     d =
-        (((r = {}).DUPLICATED = "DUPLICATED"),
-        (r.TOO_GENERIC = "TOO_GENERIC"),
-        (r.TOO_MANY = "TOO_MANY"),
-        (r.INACCURATE = "INACCURATE"),
-        (r.NOT_USEFUL = "NOT_USEFUL"),
-        (r.OTHER = "OTHER"),
-        r);
-function p() {
+        (((s = {}).DUPLICATED = "DUPLICATED"),
+        (s.TOO_GENERIC = "TOO_GENERIC"),
+        (s.TOO_MANY = "TOO_MANY"),
+        (s.INACCURATE = "INACCURATE"),
+        (s.NOT_USEFUL = "NOT_USEFUL"),
+        (s.OTHER = "OTHER"),
+        s);
+function _() {
     return [
-        { value: "DUPLICATED", label: a.intl.string(a.t.wwXl5h) },
-        { value: "TOO_GENERIC", label: a.intl.string(a.t["t+6knu"]) },
-        { value: "TOO_MANY", label: a.intl.string(a.t.xnKDnv) },
-        { value: "INACCURATE", label: a.intl.string(a.t.JW5VFj) },
-        { value: "NOT_USEFUL", label: a.intl.string(a.t.ZtCNiY) },
-        { value: "OTHER", label: a.intl.string(a.t.BufsKk) },
+        { value: "DUPLICATED", label: o.intl.string(o.t.wwXl5h) },
+        { value: "TOO_GENERIC", label: o.intl.string(o.t["t+6knu"]) },
+        { value: "TOO_MANY", label: o.intl.string(o.t.xnKDnv) },
+        { value: "INACCURATE", label: o.intl.string(o.t.JW5VFj) },
+        { value: "NOT_USEFUL", label: o.intl.string(o.t.ZtCNiY) },
+        { value: "OTHER", label: o.intl.string(o.t.BufsKk) },
     ];
 }

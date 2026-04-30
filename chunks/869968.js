@@ -1,29 +1,30 @@
+"use strict";
 n.d(t, { A: () => u });
 var i = n(17928),
-    l = n(228366);
-let r = !1,
+    r = n(228366);
+let s = !1,
     a = !1,
     o = !1;
-class s extends i.Ay.Store {
+class l extends i.Ay.Store {
     static displayName = "CheckoutRecoveryStore";
     getIsTargeted() {
         return o;
     }
     shouldFetchCheckoutRecovery() {
-        return !r && !a;
+        return !s && !a;
     }
 }
-let u = new s(l.h, {
+let u = new l(r.h, {
     CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS: function (e) {
-        (a = !0), (r = !1), (o = e.isTargeted);
+        (a = !0), (s = !1), (o = e.isTargeted);
     },
     CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE: function () {
-        (a = !0), (r = !1);
+        (a = !0), (s = !1);
     },
     CHECKOUT_RECOVERY_STATUS_FETCH: function () {
-        r = !0;
+        s = !0;
     },
     LOGOUT: function () {
-        (r = !1), (a = !1), (o = !1);
+        (s = !1), (a = !1), (o = !1);
     },
 });

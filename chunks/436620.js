@@ -1,3 +1,4 @@
-e.d(n, { J: () => l });
+"use strict";
+n.d(t, { J: () => r });
 var i,
-    l = (((i = {}).MY_GAMES = "MY_GAMES"), (i.OVERLAY = "OVERLAY"), (i.ACTIVITY_PRIVACY = "ACTIVITY_PRIVACY"), i);
+    r = (((i = {}).MY_GAMES = "MY_GAMES"), (i.OVERLAY = "OVERLAY"), (i.ACTIVITY_PRIVACY = "ACTIVITY_PRIVACY"), i);

@@ -1,24 +1,25 @@
-a.d(l, { Z: () => s });
-var t = a(627968);
-a(64700);
-let o =
+"use strict";
+n.d(t, { Z: () => l });
+var i = n(627968);
+n(64700);
+let r =
     "https://cdn.discordapp.com/assets/content/8a7ac8dc9047bab64168144f5a3b303136a96b175530939355c8612193350419.riv";
-var n = a(502377),
-    i = a(799226);
-let r = { Torbs_Main: {} };
-function s(e) {
-    let { artboard: l = "Torbs_Main", stateMachine: a, ...s } = e,
-        { status: d, buffer: u } = (0, i.CE)(o),
-        c = (0, i.m2)(o);
-    return d === i.BW.Loading
+var s = n(594639),
+    a = n(105596);
+let o = { Torbs_Main: {} };
+function l(e) {
+    let { artboard: t = "Torbs_Main", stateMachine: n, ...l } = e,
+        { status: u, buffer: c } = (0, a.CE)(r),
+        d = (0, a.m2)(r);
+    return u === a.BW.Loading
         ? null
-        : (0, t.jsx)(n.w, {
-              ...(c ? { key: "override" } : {}),
-              buffer: u,
-              artboard: l,
-              stateMachine: a,
-              artboardProperties: r,
-              ...s,
+        : (0, i.jsx)(s.w, {
+              ...(d ? { key: "override" } : {}),
+              buffer: c,
+              artboard: t,
+              stateMachine: n,
+              artboardProperties: o,
+              ...l,
           });
 }
-s.riveSrc = o;
+l.riveSrc = r;

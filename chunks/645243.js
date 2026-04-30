@@ -1,7 +1,8 @@
-n.d(t, { O: () => a });
+"use strict";
+n.d(t, { O: () => s });
 var i = n(723702),
     r = n(652215);
-function a() {
+function s() {
     switch ((0, i.getPlatform)()) {
         case i.PlatformTypes.WINDOWS:
             let e = "x86";

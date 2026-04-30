@@ -1,35 +1,36 @@
-n.d(t, { A: () => i });
-var a = n(627968),
+"use strict";
+n.d(t, { A: () => l });
+var i = n(627968),
     r = n(64700),
-    l = n(97808),
-    s = n(571694),
+    s = n(97808),
+    a = n(571694),
     o = n(954376);
-let i = r.memo(function (e) {
+let l = r.memo(function (e) {
     let {
         channel: t,
         size: n,
         facepileSizeOverride: r,
-        isTyping: i,
-        status: c,
-        className: d,
-        animated: _ = !1,
-        ...u
+        isTyping: l,
+        status: u,
+        className: c,
+        animated: d = !1,
+        ..._
     } = e;
     return t.recipients.length >= 2 && null == t.icon
-        ? (0, a.jsx)(o.A, {
-              "aria-label": u["aria-label"],
-              "aria-hidden": u["aria-hidden"],
-              className: d,
+        ? (0, i.jsx)(o.A, {
+              "aria-label": _["aria-label"],
+              "aria-hidden": _["aria-hidden"],
+              className: c,
               recipients: t.recipients,
               size: r ?? n,
-              isTyping: i,
-              status: c,
+              isTyping: l,
+              status: u,
           })
-        : (0, a.jsx)(l.eu, {
-              "aria-hidden": u["aria-hidden"],
-              "aria-label": u["aria-label"],
-              className: d,
+        : (0, i.jsx)(s.eu, {
+              "aria-hidden": _["aria-hidden"],
+              "aria-label": _["aria-label"],
+              className: c,
               size: n,
-              src: (0, s.Y)(t, 80, _),
+              src: (0, a.Y)(t, 80, d),
           });
 });

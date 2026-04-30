@@ -1,6 +1,7 @@
-n.d(t, { n: () => s });
+"use strict";
+n.d(t, { n: () => r });
 var i,
-    s =
+    r =
         (((i = {}).GUILD_PREMIUM_PROGRESS_BAR = "guild-premium-progress-bar"),
         (i.GUILD_SCHEDULED_EVENTS = "guild-scheduled-events"),
         (i.GUILD_HUB_HEADER_OPTIONS = "guild-hub-header-options"),
@@ -19,4 +20,3 @@ var i,
         (i.GAME_SERVERS = "game-servers"),
         (i.GAME_SERVERS_EMPTY = "game-servers-empty"),
         i);
-/^(14256|21552)$/.test(n.j);

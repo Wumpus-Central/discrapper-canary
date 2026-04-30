@@ -1,8 +1,9 @@
+"use strict";
 n.d(t, { A: () => a }), n(321073);
 var i = n(64700),
-    l = n(451988);
+    r = n(451988);
 class s extends i.Component {
-    _interval = new l.IX();
+    _interval = new r.IX();
     static defaultProps = { numUpdatesToShow: 30, updateInterval: 500, pointsToSmooth: 10 };
     constructor(e) {
         super(e);
@@ -22,37 +23,37 @@ class s extends i.Component {
     }
     calculateInitialDeltaBytes(e) {
         let { numUpdatesToShow: t, updateInterval: n, pointsToSmooth: i } = this.props,
-            l = Date.now(),
+            r = Date.now(),
             s = 0,
             a = 0,
-            r = [],
-            o = null != e[0] ? e[0].bytes : 0;
+            o = [],
+            l = null != e[0] ? e[0].bytes : 0;
         for (; s < t + i; s++) {
             let t,
-                i = l - (s + 1) * n;
+                i = r - (s + 1) * n;
             for (; a < e.length; )
                 if ((t = e[a]).timestamp > i) a++;
                 else break;
             if (a === e.length) break;
-            null != t && (r.push(o - t.bytes), (o = t.bytes));
+            null != t && (o.push(l - t.bytes), (l = t.bytes));
         }
-        for (; s < t + i; s++) r.push(0);
-        return r.reverse(), r;
+        for (; s < t + i; s++) o.push(0);
+        return o.reverse(), o;
     }
     smoothDeltaBytes(e) {
         let { pointsToSmooth: t } = this.props,
             n = [];
         for (let i = 0; i < e.length - t; i++) {
-            let l = 0;
-            for (let n = 0; n < t; n++) l += e[i + n];
-            n.push(l / t);
+            let r = 0;
+            for (let n = 0; n < t; n++) r += e[i + n];
+            n.push(r / t);
         }
         return n;
     }
     update = () => {
         let { onUpdate: e, numUpdatesToShow: t, pointsToSmooth: n, updateInterval: i } = this.props,
-            l = this.props.getHistoricalTotalBytes(),
-            s = null != l[0] ? l[0].bytes : 0,
+            r = this.props.getHistoricalTotalBytes(),
+            s = null != r[0] ? r[0].bytes : 0,
             a = [...this.state.deltaBytes.slice(1, t + n), s - this.state.lastTotalBytes];
         this.setState(
             { deltaBytes: a, smoothedDeltaBytes: this.smoothDeltaBytes(a), lastTotalBytes: s },

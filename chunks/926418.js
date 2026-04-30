@@ -1,44 +1,45 @@
-n.d(t, { l: () => A }), n(667532);
+"use strict";
+n.d(t, { l: () => f }), n(667532);
 var i = n(627968),
-    l = n(64700),
+    r = n(64700),
     s = n(17928),
-    r = n(834730),
-    a = n(573435),
-    o = n(71393),
-    d = n(967198),
+    a = n(834730),
+    o = n(573435),
+    l = n(71393),
+    u = n(967198),
     c = n(743790),
-    u = n(340879);
-function h(e) {
+    d = n(340879);
+function _(e) {
     let { children: t, iconSize: n } = e;
-    return (0, i.jsx)(a.Ay, { className: u.Iu, mask: a.Ay.Masks.SQUIRCLE, width: n + 5, height: n + 5, children: t });
+    return (0, i.jsx)(o.Ay, { className: d.Iu, mask: o.Ay.Masks.SQUIRCLE, width: n + 5, height: n + 5, children: t });
 }
-function A(e) {
-    let { guildIds: t, iconSize: n = 20, prioritizeSelectedGuild: a = !1 } = e,
-        A = (0, s.bG)([d.A], () => (a ? d.A.getGuildId() : null), [a]),
-        _ = (0, s.yK)([o.A], () => t.map((e) => o.A.getGuild(e)), [t]),
-        g = (0, l.useMemo)(() => _.filter((e) => null != e), [_]),
-        { visibleGuilds: m, numTruncated: p } = (0, l.useMemo)(() => {
-            let e = [...g];
-            if (null != A) {
-                let t = e.findIndex((e) => e.id === A);
-                t > 0 && (e.splice(t, 1), e.unshift(g[t]));
+function f(e) {
+    let { guildIds: t, iconSize: n = 20, prioritizeSelectedGuild: o = !1 } = e,
+        f = (0, s.bG)([u.A], () => (o ? u.A.getGuildId() : null), [o]),
+        h = (0, s.yK)([l.A], () => t.map((e) => l.A.getGuild(e)), [t]),
+        p = (0, r.useMemo)(() => h.filter((e) => null != e), [h]),
+        { visibleGuilds: E, numTruncated: m } = (0, r.useMemo)(() => {
+            let e = [...p];
+            if (null != f) {
+                let t = e.findIndex((e) => e.id === f);
+                t > 0 && (e.splice(t, 1), e.unshift(p[t]));
             }
             return 4 === e.length
                 ? { visibleGuilds: e, numTruncated: 0 }
                 : { visibleGuilds: e.slice(0, 3), numTruncated: e.length - 3 };
-        }, [g, A]);
+        }, [p, f]);
     return (0, i.jsxs)("div", {
-        className: u.WM,
+        className: d.WM,
         children: [
-            m.map((e) => (0, i.jsx)(h, { iconSize: n, children: (0, i.jsx)(c.K, { guild: e, size: n }) }, e.id)),
-            p > 0 &&
-                (0, i.jsx)(h, {
+            E.map((e) => (0, i.jsx)(_, { iconSize: n, children: (0, i.jsx)(c.K, { guild: e, size: n }) }, e.id)),
+            m > 0 &&
+                (0, i.jsx)(_, {
                     iconSize: n,
-                    children: (0, i.jsxs)(r.E, {
-                        className: u.br,
+                    children: (0, i.jsxs)(a.E, {
+                        className: d.br,
                         color: "text-subtle",
                         variant: "text-xxs/semibold",
-                        children: ["+", p],
+                        children: ["+", m],
                     }),
                 }),
         ],

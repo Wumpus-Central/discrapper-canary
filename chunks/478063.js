@@ -1,21 +1,22 @@
-n.d(t, { A: () => p });
-var a = n(627968),
+"use strict";
+n.d(t, { A: () => I });
+var i = n(627968),
     r = n(64700),
-    l = n(503698),
-    s = n.n(l),
+    s = n(503698),
+    a = n.n(s),
     o = n(97808),
-    i = n(863610),
-    c = n(778712),
-    d = n(652215),
-    _ = n(935154),
-    u = n(573435);
+    l = n(863610),
+    u = n(778712),
+    c = n(652215),
+    d = n(133171),
+    _ = n(573435);
 n(883392);
-var A = n(989822);
-let E = {},
-    C = 1 / 4;
-function h(e) {
+var f = n(989822);
+let h = {},
+    p = 1 / 4;
+function E(e) {
     let { height: t, fillColor: n } = e;
-    return (0, a.jsx)("div", {
+    return (0, i.jsx)("div", {
         style: {
             display: "flex",
             justifyContent: "center",
@@ -25,150 +26,150 @@ function h(e) {
             height: t,
             width: 2.5 * t,
         },
-        children: (0, a.jsx)(i.n, { className: A.r$, dotRadius: t * C }),
+        children: (0, i.jsx)(l.n, { className: f.r$, dotRadius: t * p }),
     });
 }
 function m(e) {
     let { isTyping: t, statusCoords: n, status: r } = e,
-        l = (0, _.S3)(d.clD.ONLINE);
+        s = (0, d.S3)(c.clD.ONLINE);
     return t
-        ? (0, a.jsx)("div", {
+        ? (0, i.jsx)("div", {
               style: { position: "absolute", top: n.y, left: n.x },
-              children: (0, a.jsx)(h, { height: n.height, fillColor: l }),
+              children: (0, i.jsx)(E, { height: n.height, fillColor: s }),
           })
         : null != r
-          ? (0, a.jsx)(_.nW, { size: n.height, status: r, style: { position: "absolute", top: n.y, left: n.x } })
+          ? (0, i.jsx)(d.nW, { size: n.height, status: r, style: { position: "absolute", top: n.y, left: n.x } })
           : null;
 }
-function I(e) {
+function g(e) {
     let { src: t, size: n } = e;
-    return (0, a.jsx)("img", { className: A.tM, src: t, alt: "", width: n, height: n });
+    return (0, i.jsx)("img", { className: f.tM, src: t, alt: "", width: n, height: n });
 }
-let N = {
-        [c._3.SIZE_16]: {
-            default: u.hW.DIAGONAL_FACEPILE_16,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_16,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_16,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_16,
+let A = {
+        [u._3.SIZE_16]: {
+            default: _.hW.DIAGONAL_FACEPILE_16,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_16,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_16,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_16,
         },
-        [c._3.SIZE_20]: {
-            default: u.hW.DIAGONAL_FACEPILE_20,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_20,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_20,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_20,
+        [u._3.SIZE_20]: {
+            default: _.hW.DIAGONAL_FACEPILE_20,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_20,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_20,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_20,
         },
-        [c._3.SIZE_24]: {
-            default: u.hW.DIAGONAL_FACEPILE_24,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_24,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_24,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_24,
+        [u._3.SIZE_24]: {
+            default: _.hW.DIAGONAL_FACEPILE_24,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_24,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_24,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_24,
         },
-        [c._3.SIZE_32]: {
-            default: u.hW.DIAGONAL_FACEPILE_32,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_32,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_32,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_32,
+        [u._3.SIZE_32]: {
+            default: _.hW.DIAGONAL_FACEPILE_32,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_32,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_32,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_32,
         },
-        [c._3.SIZE_40]: {
-            default: u.hW.DIAGONAL_FACEPILE_32,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_32,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_32,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_32,
+        [u._3.SIZE_40]: {
+            default: _.hW.DIAGONAL_FACEPILE_32,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_32,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_32,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_32,
         },
-        [c._3.SIZE_48]: {
-            default: u.hW.DIAGONAL_FACEPILE_40,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_40,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_40,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_40,
+        [u._3.SIZE_48]: {
+            default: _.hW.DIAGONAL_FACEPILE_40,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_40,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_40,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_40,
         },
-        [c._3.SIZE_56]: {
-            default: u.hW.DIAGONAL_FACEPILE_56,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_56,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_56,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_56,
+        [u._3.SIZE_56]: {
+            default: _.hW.DIAGONAL_FACEPILE_56,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_56,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_56,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_56,
         },
-        [c._3.SIZE_72]: {
-            default: u.hW.DIAGONAL_FACEPILE_72,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_72,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_72,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_72,
+        [u._3.SIZE_72]: {
+            default: _.hW.DIAGONAL_FACEPILE_72,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_72,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_72,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_72,
         },
-        [c._3.SIZE_80]: {
-            default: u.hW.DIAGONAL_FACEPILE_80,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_80,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_80,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_80,
+        [u._3.SIZE_80]: {
+            default: _.hW.DIAGONAL_FACEPILE_80,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_80,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_80,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_80,
         },
-        [c._3.SIZE_96]: {
-            default: u.hW.DIAGONAL_FACEPILE_96,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_96,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_96,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_96,
+        [u._3.SIZE_96]: {
+            default: _.hW.DIAGONAL_FACEPILE_96,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_96,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_96,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_96,
         },
-        [c._3.SIZE_120]: {
-            default: u.hW.DIAGONAL_FACEPILE_120,
-            typing: u.hW.DIAGONAL_FACEPILE_TYPING_120,
-            status: u.hW.DIAGONAL_FACEPILE_STATUS_120,
-            back: u.hW.DIAGONAL_FACEPILE_BACK_120,
+        [u._3.SIZE_120]: {
+            default: _.hW.DIAGONAL_FACEPILE_120,
+            typing: _.hW.DIAGONAL_FACEPILE_TYPING_120,
+            status: _.hW.DIAGONAL_FACEPILE_STATUS_120,
+            back: _.hW.DIAGONAL_FACEPILE_BACK_120,
         },
     },
-    p = function (e) {
+    I = function (e) {
         var t;
-        let { backSrc: n, frontSrc: l, size: i, isTyping: _, status: C, style: h, className: p, ...f } = e,
-            { size: g } = c.vC[i],
+        let { backSrc: n, frontSrc: s, size: l, isTyping: d, status: p, style: E, className: I, ...T } = e,
+            { size: S } = u.vC[l],
             {
-                statusCoords: O,
-                frontAvatarOffsetPx: T,
-                frontAvatarSizePx: P,
-                backAvatarSizePx: b,
+                statusCoords: N,
+                frontAvatarOffsetPx: y,
+                frontAvatarSizePx: C,
+                backAvatarSizePx: v,
             } = r.useMemo(() => {
                 let e,
                     t,
                     n,
-                    a,
+                    i,
                     r,
-                    l = `${g}-${_}`;
+                    s = `${S}-${d}`;
                 return (
-                    E[l] ??
-                    ((n = +(t = (e = c.vC[i]).size / 1.5)),
-                    (a = 0.5 * t),
+                    h[s] ??
+                    ((n = +(t = (e = u.vC[l]).size / 1.5)),
+                    (i = 0.5 * t),
                     (r = {
-                        statusCoords: (0, o.Rb)(e, d.clD.ONLINE, { isTyping: _, isMobile: !1, isVR: !1 }),
+                        statusCoords: (0, o.Rb)(e, c.clD.ONLINE, { isTyping: d, isMobile: !1, isVR: !1 }),
                         frontAvatarSizePx: n,
                         backAvatarSizePx: t,
-                        frontAvatarOffsetPx: a,
-                        frontAvatarCenter: a + n / 2,
+                        frontAvatarOffsetPx: i,
+                        frontAvatarCenter: i + n / 2,
                     }),
-                    (E[l] = r),
+                    (h[s] = r),
                     r)
                 );
-            }, [g, _, i]),
-            R = ((t = null != C), _ ? N[i].typing : t ? N[i].status : N[i].default),
-            S = N[i].back;
-        return (0, a.jsxs)("div", {
-            style: { width: g, height: g, ...h },
-            "aria-label": f["aria-label"],
-            "aria-hidden": f["aria-hidden"],
-            className: s()(A.kL, p),
+            }, [S, d, l]),
+            O = ((t = null != p), d ? A[l].typing : t ? A[l].status : A[l].default),
+            R = A[l].back;
+        return (0, i.jsxs)("div", {
+            style: { width: S, height: S, ...E },
+            "aria-label": T["aria-label"],
+            "aria-hidden": T["aria-hidden"],
+            className: a()(f.kL, I),
             children: [
-                (0, a.jsxs)(u.Ay, {
-                    mask: R,
-                    height: g,
-                    width: g,
+                (0, i.jsxs)(_.Ay, {
+                    mask: O,
+                    height: S,
+                    width: S,
                     children: [
-                        (0, a.jsx)(u.Ay, {
-                            mask: S,
-                            height: g,
-                            width: g,
-                            children: (0, a.jsx)("img", { src: n, alt: "", width: b, height: b }),
+                        (0, i.jsx)(_.Ay, {
+                            mask: R,
+                            height: S,
+                            width: S,
+                            children: (0, i.jsx)("img", { src: n, alt: "", width: v, height: v }),
                         }),
-                        (0, a.jsx)("div", {
-                            style: { position: "absolute", top: T, left: T },
-                            children: (0, a.jsx)(I, { src: l, size: P, isTyping: _, status: C }),
+                        (0, i.jsx)("div", {
+                            style: { position: "absolute", top: y, left: y },
+                            children: (0, i.jsx)(g, { src: s, size: C, isTyping: d, status: p }),
                         }),
                     ],
                 }),
-                (0, a.jsx)(m, { statusCoords: O, status: C, isTyping: _ }),
+                (0, i.jsx)(m, { statusCoords: N, status: p, isTyping: d }),
             ],
         });
     };

@@ -1,79 +1,80 @@
-i.d(t, { A: () => A });
-var a = i(17928),
-    s = i(228366),
-    n = i(777376),
-    r = i(983060),
-    l = i(788868);
-let c = null,
-    d = n.Px.NOT_FETCHED;
-function o() {
-    d === n.Px.NOT_FETCHED && (d = n.Px.FETCHED);
+"use strict";
+n.d(t, { A: () => f });
+var i = n(17928),
+    r = n(228366),
+    s = n(777376),
+    a = n(983060),
+    o = n(788868);
+let l = null,
+    u = s.Px.NOT_FETCHED;
+function c() {
+    u === s.Px.NOT_FETCHED && (u = s.Px.FETCHED);
 }
-function u(e) {
-    if (e.entitlement.sku_id !== r.X8) return !1;
-    let t = (0, r.MM)(e.entitlement);
-    (c = null == t ? null : { perk: n.n9.XGPP, state: t, entitlement_id: e.entitlement.id, redirect: null }), o();
+function d(e) {
+    if (e.entitlement.sku_id !== a.X8) return !1;
+    let t = (0, a.MM)(e.entitlement);
+    (l = null == t ? null : { perk: s.n9.XGPP, state: t, entitlement_id: e.entitlement.id, redirect: null }), c();
 }
-class m extends a.Ay.Store {
+class _ extends i.Ay.Store {
     static displayName = "CroissantActivationStore";
     getActivationStatus() {
-        return c;
+        return l;
     }
     getRequestState() {
-        return d;
+        return u;
     }
 }
-let A = new m(s.h, {
+let f = new _(r.h, {
     CROISSANT_ACTIVATION_FETCH_START: function () {
-        d = n.Px.FETCHING;
+        u = s.Px.FETCHING;
     },
     CROISSANT_ACTIVATION_FETCH_SUCCESS: function (e) {
         let { activationStatus: t } = e;
-        (c = t), (d = n.Px.FETCHED);
+        (l = t), (u = s.Px.FETCHED);
     },
     CROISSANT_ACTIVATION_FETCH_FAILURE: function () {
-        d = n.Px.FETCHED;
+        u = s.Px.FETCHED;
     },
     CROISSANT_CANCELLATION_START: function () {
-        d = n.Px.CANCELLING;
+        u = s.Px.CANCELLING;
     },
     CROISSANT_CANCELLATION_SUCCESS: function () {
-        (c = {
-            perk: c?.perk ?? n.n9.XGPP,
-            state: n.gR.CANCELLATION_PENDING,
-            entitlement_id: c?.entitlement_id ?? null,
+        (l = {
+            perk: l?.perk ?? s.n9.XGPP,
+            state: s.gR.CANCELLATION_PENDING,
+            entitlement_id: l?.entitlement_id ?? null,
             redirect: null,
         }),
-            (d = n.Px.FETCHED);
+            (u = s.Px.FETCHED);
     },
     CROISSANT_CANCELLATION_FAILURE: function () {
-        d = n.Px.FETCHED;
+        u = s.Px.FETCHED;
     },
     CROISSANT_ACTIVATION_RESET: function () {
-        (c = null), (d = n.Px.FETCHED);
+        (l = null), (u = s.Px.FETCHED);
     },
-    ENTITLEMENT_CREATE: u,
-    ENTITLEMENT_UPDATE: u,
+    ENTITLEMENT_CREATE: d,
+    ENTITLEMENT_UPDATE: d,
     ENTITLEMENT_DELETE: function (e) {
-        if (e.entitlement.sku_id !== r.X8) return !1;
-        (c = null), o();
+        if (e.entitlement.sku_id !== a.X8) return !1;
+        (l = null), c();
     },
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: function (e) {
-        if (e.applicationId !== l.tv || 0 === e.entitlements.length) return !1;
+        if (e.applicationId !== o.tv || 0 === e.entitlements.length) return !1;
         let t = null;
-        for (let i of e.entitlements) {
-            if (i.sku_id !== r.X8) continue;
-            let e = (0, r.MM)(i);
-            if (e === n.gR.ACTIVATED) {
-                (c = { perk: n.n9.XGPP, state: n.gR.ACTIVATED, entitlement_id: i.id, redirect: null }), o();
+        for (let n of e.entitlements) {
+            if (n.sku_id !== a.X8) continue;
+            let e = (0, a.MM)(n);
+            if (e === s.gR.ACTIVATED) {
+                (l = { perk: s.n9.XGPP, state: s.gR.ACTIVATED, entitlement_id: n.id, redirect: null }), c();
                 return;
             }
-            e === n.gR.CANCELLATION_PENDING && (t = i.id);
+            e === s.gR.CANCELLATION_PENDING && (t = n.id);
         }
         if (null == t) return !1;
-        (c = { perk: n.n9.XGPP, state: n.gR.CANCELLATION_PENDING, entitlement_id: t, redirect: null }), o();
+        (l = { perk: s.n9.XGPP, state: s.gR.CANCELLATION_PENDING, entitlement_id: t, redirect: null }), c();
     },
     LOGOUT: function () {
-        (c = null), (d = n.Px.NOT_FETCHED);
+        (l = null), (u = s.Px.NOT_FETCHED);
     },
 });

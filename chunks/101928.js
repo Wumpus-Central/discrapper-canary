@@ -1,30 +1,31 @@
-n.d(t, { A: () => h });
+"use strict";
+n.d(t, { A: () => f });
 var i = n(317097),
     r = n(17928),
-    a = n(374994),
-    l = n(462887),
+    s = n(374994),
+    a = n(462887),
     o = n(736653),
-    s = n(775602),
-    c = n(654107),
-    d = n(543699),
-    u = n(837529),
+    l = n(775602),
+    u = n(654107),
+    c = n(543699),
+    d = n(837529),
     _ = n(652215);
-function h(e) {
-    let { user: t, displayProfile: n, pendingThemeColors: h, pendingAvatarSrc: p, isPreview: f, forceUserTheme: m } = e,
-        A = (0, o.Ay)(),
-        g = (0, u.Wd)(),
-        b = (0, r.bG)([s.A], () => s.A.syncProfileThemeWithUserTheme),
-        y = p ?? t?.getAvatarURL(n?.guildId, 80),
-        E = (0, a.nt)("PRIMARY_530", { saturation: 1 }),
-        [v, S] = (0, c.rh)(y, E, !1);
+function f(e) {
+    let { user: t, displayProfile: n, pendingThemeColors: f, pendingAvatarSrc: h, isPreview: p, forceUserTheme: E } = e,
+        m = (0, o.Ay)(),
+        g = (0, d.Wd)(),
+        A = (0, r.bG)([l.A], () => l.A.syncProfileThemeWithUserTheme),
+        I = h ?? t?.getAvatarURL(n?.guildId, 80),
+        T = (0, s.nt)("PRIMARY_530", { saturation: 1 }),
+        [S, N] = (0, u.rh)(I, T, !1);
     if (null != g) return g;
-    if (!n?.canEditThemes && !f) return { theme: A, primaryColor: null, secondaryColor: null };
-    let I = n?.getPreviewThemeColors(h),
-        T = I?.[0] ?? (0, i.LX)(v),
-        C = I?.[1] ?? (0, i.LX)(S),
-        x = b || m ? A : ((0, d.tM)(T) ?? A);
+    if (!n?.canEditThemes && !p) return { theme: m, primaryColor: null, secondaryColor: null };
+    let y = n?.getPreviewThemeColors(f),
+        C = y?.[0] ?? (0, i.LX)(S),
+        v = y?.[1] ?? (0, i.LX)(N),
+        O = A || E ? m : ((0, c.tM)(C) ?? m);
     return (
-        x === _.NJ8.DARK && (0, l.M)(A) ? (x = A) : x === _.NJ8.DARK && (0, l.q)(A) && (x = _.NJ8.DARKER),
-        { theme: x, primaryColor: T, secondaryColor: C }
+        O === _.NJ8.DARK && (0, a.M)(m) ? (O = m) : O === _.NJ8.DARK && (0, a.q)(m) && (O = _.NJ8.DARKER),
+        { theme: O, primaryColor: C, secondaryColor: v }
     );
 }

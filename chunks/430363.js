@@ -1,3 +1,4 @@
+"use strict";
 n.d(t, { Uk: () => r });
 let i = (0, n(945810).mj)({
     name: "2026-01-voice-dares-v0",

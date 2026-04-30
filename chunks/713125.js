@@ -1,9 +1,10 @@
-n.d(t, { $o: () => _, Ay: () => c, eg: () => l });
+"use strict";
+n.d(t, { $o: () => o, Ay: () => _, eg: () => l });
 var i,
     r = n(17928),
-    a = n(228366),
-    s = n(652215),
-    _ =
+    s = n(228366),
+    a = n(652215),
+    o =
         (((i = {}).STARTED = "started"),
         (i.READY = "ready"),
         (i.COMPLETED = "completed"),
@@ -12,53 +13,53 @@ var i,
 function l(e) {
     return null != e && ["started", "ready"].includes(e);
 }
-let o = {},
-    E = {};
+let u = {},
+    c = {};
 class d extends r.Ay.Store {
     static displayName = "GuildOnboardingStore";
     shouldShowOnboarding(e) {
-        return e !== s.ME && e !== s.YYv && !!l(o[e]);
+        return e !== a.ME && e !== a.YYv && !!l(u[e]);
     }
     getOnboardingStatus(e) {
-        return o[e];
+        return u[e];
     }
     resetOnboardingStatus(e) {
-        (o[e] = "started"), (E[e] = "cover");
+        (u[e] = "started"), (c[e] = "cover");
     }
     getCurrentOnboardingStep(e) {
-        return E[e] ?? "cover";
+        return c[e] ?? "cover";
     }
 }
-let c = new d(a.h, {
+let _ = new d(s.h, {
     LOGOUT: function () {
-        (o = {}), (E = {});
+        (u = {}), (c = {});
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete o[t.id], delete E[t.id];
+        delete u[t.id], delete c[t.id];
     },
     GUILD_ONBOARDING_START: function (e) {
         let { guildId: t } = e;
-        o[t] = "started";
+        u[t] = "started";
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, enabled: n } = e;
-        if ("started" !== o[t]) return !1;
-        n ? (o[t] = "ready") : (o[t] = "not_applicable");
+        if ("started" !== u[t]) return !1;
+        n ? (u[t] = "ready") : (u[t] = "not_applicable");
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function (e) {
         let { guildId: t } = e;
-        o[t] = "not_applicable";
+        u[t] = "not_applicable";
     },
     GUILD_ONBOARDING_COMPLETE: function (e) {
         let { guildId: t } = e;
-        o[t] = "completed";
+        u[t] = "completed";
     },
     GUILD_ONBOARDING_SET_STEP: function (e) {
         let { guildId: t, step: n } = e;
-        E[t] = n;
+        c[t] = n;
     },
     CONNECTION_OPEN: function () {
-        E = {};
+        c = {};
     },
 });

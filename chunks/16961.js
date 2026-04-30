@@ -1,8 +1,9 @@
-n.d(t, { G: () => r });
+"use strict";
+n.d(t, { G: () => a });
 var i = n(723702),
-    l = n(19575),
+    r = n(19575),
     s = n(652215);
-function r() {
-    let e = i.isPlatformEmbedded && l.Ay.supportsFeature(s.BYE.POPOUT_WINDOWS);
+function a() {
+    let e = i.isPlatformEmbedded && r.Ay.supportsFeature(s.BYE.POPOUT_WINDOWS);
     return !i.isPlatformEmbedded || e;
 }

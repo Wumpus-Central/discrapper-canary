@@ -1,12 +1,13 @@
-n.d(t, { A: () => u });
+"use strict";
+n.d(t, { A: () => d });
 var i,
-    l = n(627968);
+    r = n(627968);
 n(64700);
 var s = n(503698),
     a = n.n(s),
-    r = n(953727),
-    o = n(89406),
-    d =
+    o = n(953727),
+    l = n(89406),
+    u =
         (((i = {}).LEFT = "LEFT"),
         (i.RIGHT = "RIGHT"),
         (i.UP = "UP"),
@@ -20,13 +21,13 @@ let c = (e) => {
         height: n = 24,
         color: i = "currentColor",
         direction: s,
-        foreground: d,
+        foreground: u,
         className: c,
-        title: u,
-        ...h
+        title: d,
+        ..._
     } = e;
-    return (0, l.jsxs)("svg", {
-        ...(0, r.A)(h),
+    return (0, r.jsxs)("svg", {
+        ...(0, o.A)(_),
         width: t,
         height: n,
         className: a()(
@@ -34,17 +35,17 @@ let c = (e) => {
             (function (e) {
                 switch (e) {
                     case "LEFT":
-                        return o.kb;
+                        return l.kb;
                     case "RIGHT":
-                        return o.pG;
+                        return l.pG;
                     case "UP":
                         return null;
                     case "DOWN":
-                        return o.TR;
+                        return l.TR;
                     case "UP_LEFT":
-                        return o.l0;
+                        return l.l0;
                     case "DOWN_RIGHT":
-                        return o.Nu;
+                        return l.Nu;
                     default:
                         throw Error(`Invalid Direction ${e}`);
                 }
@@ -52,9 +53,9 @@ let c = (e) => {
         ),
         viewBox: "0 0 24 24",
         children: [
-            null != u ? (0, l.jsx)("title", { children: u }) : null,
-            (0, l.jsx)("polygon", {
-                className: d,
+            null != d ? (0, r.jsx)("title", { children: d }) : null,
+            (0, r.jsx)("polygon", {
+                className: u,
                 fill: i,
                 fillRule: "nonzero",
                 points: "13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8",
@@ -62,5 +63,5 @@ let c = (e) => {
         ],
     });
 };
-c.Directions = d;
-let u = c;
+c.Directions = u;
+let d = c;

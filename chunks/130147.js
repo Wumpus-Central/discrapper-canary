@@ -1,29 +1,30 @@
-a.d(t, { _: () => d });
-var r = a(627968),
-    n = a(503698),
-    l = a.n(n),
-    i = a(778712),
-    s = a(97808),
-    o = a(652215),
-    c = a(124882);
-let d = (e) => {
-    let { showStatus: t, width: a, opacity: n, size: d = "default" } = e,
-        u = "small" === d ? i._3.SIZE_24 : i._3.SIZE_32;
-    return (0, r.jsxs)("div", {
-        className: l()(c.Os, { [c.i]: "small" === d }),
-        style: { opacity: n },
+"use strict";
+n.d(t, { _: () => c });
+var i = n(627968),
+    r = n(503698),
+    s = n.n(r),
+    a = n(778712),
+    o = n(97808),
+    l = n(652215),
+    u = n(124882);
+let c = (e) => {
+    let { showStatus: t, width: n, opacity: r, size: c = "default" } = e,
+        d = "small" === c ? a._3.SIZE_24 : a._3.SIZE_32;
+    return (0, i.jsxs)("div", {
+        className: s()(u.Os, { [u.i]: "small" === c }),
+        style: { opacity: r },
         children: [
-            (0, r.jsx)(s.eu, {
+            (0, i.jsx)(o.eu, {
                 src: null,
-                size: u,
-                status: t ? o.clD.ONLINE : void 0,
+                size: d,
+                status: t ? l.clD.ONLINE : void 0,
                 statusColor: "var(--border-subtle)",
                 "aria-hidden": !0,
-                imageClassName: c.yf,
+                imageClassName: u.yf,
             }),
-            (0, r.jsx)("div", {
-                className: l()(c.aA, { [c.vX]: "small" === d }),
-                style: { maxWidth: null != a ? a : "100px" },
+            (0, i.jsx)("div", {
+                className: s()(u.aA, { [u.vX]: "small" === c }),
+                style: { maxWidth: null != n ? n : "100px" },
             }),
         ],
     });

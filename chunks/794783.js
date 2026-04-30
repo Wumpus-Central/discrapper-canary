@@ -1,105 +1,106 @@
-s.d(t, { A: () => N });
-var i = s(627968),
-    a = s(64700),
-    l = s(172218),
-    r = s(534514),
-    n = s(834730),
-    c = s(364522),
-    d = s(289873),
-    u = s(503698),
-    o = s.n(u),
-    m = s(990078),
-    f = s(778712),
-    _ = s(939249),
-    h = s(97808),
-    x = s(658675),
-    p = s(854627),
-    b = s(3161);
-function g(e) {
-    let { user: t, checked: s, onChange: l, disabled: r, tooltipConfig: c } = e,
-        d = a.useRef(null),
-        { avatarSrc: u, eventHandlers: g } = (0, p.A)({ userId: t?.id, size: f._3.SIZE_32 }),
-        v = t.globalName ?? t.username;
-    return (0, i.jsx)(m.m, {
-        text: c?.isActive(t, r) ? c.text(t) : null,
+"use strict";
+n.d(t, { A: () => T });
+var i = n(627968),
+    r = n(64700),
+    s = n(172218),
+    a = n(534514),
+    o = n(834730),
+    l = n(364522),
+    u = n(289873),
+    c = n(503698),
+    d = n.n(c),
+    _ = n(990078),
+    f = n(778712),
+    h = n(939249),
+    p = n(97808),
+    E = n(658675),
+    m = n(854627),
+    g = n(3161);
+function A(e) {
+    let { user: t, checked: n, onChange: s, disabled: a, tooltipConfig: l } = e,
+        u = r.useRef(null),
+        { avatarSrc: c, eventHandlers: A } = (0, m.A)({ userId: t?.id, size: f._3.SIZE_32 }),
+        I = t.globalName ?? t.username;
+    return (0, i.jsx)(_.m, {
+        text: l?.isActive(t, a) ? l.text(t) : null,
         position: "top",
-        anchorRef: d,
+        anchorRef: u,
         asContainer: !0,
-        children: (0, i.jsxs)(_.D, {
-            className: o()(b.kL, { [b.vk]: !r }),
+        children: (0, i.jsxs)(h.D, {
+            className: d()(g.kL, { [g.vk]: !a }),
             onClick: () => {
-                r || l(t, !s);
+                a || s(t, !n);
             },
             children: [
                 (0, i.jsx)("div", {
-                    className: b.dj,
-                    children: (0, i.jsx)(h.eu, {
-                        className: o()({ [b.SU]: r }),
-                        src: u,
-                        "aria-label": v,
+                    className: g.dj,
+                    children: (0, i.jsx)(p.eu, {
+                        className: d()({ [g.SU]: a }),
+                        src: c,
+                        "aria-label": I,
                         size: f._3.SIZE_32,
-                        ...g,
+                        ...A,
                     }),
                 }),
                 (0, i.jsxs)("div", {
-                    className: b.QV,
+                    className: g.QV,
                     children: [
-                        (0, i.jsx)(n.E, {
-                            className: b.nT,
-                            color: r ? "text-muted" : "text-default",
+                        (0, i.jsx)(o.E, {
+                            className: g.nT,
+                            color: a ? "text-muted" : "text-default",
                             variant: "text-md/semibold",
-                            children: v,
+                            children: I,
                         }),
-                        (0, i.jsx)(n.E, {
-                            className: b.nT,
-                            color: r ? "text-muted" : "text-subtle",
+                        (0, i.jsx)(o.E, {
+                            className: g.nT,
+                            color: a ? "text-muted" : "text-subtle",
                             variant: "text-xs/normal",
                             children: t.username,
                         }),
                     ],
                 }),
-                (0, i.jsx)("div", { ref: d, className: b.kv, children: (0, i.jsx)(x.P, { checked: s, disabled: r }) }),
+                (0, i.jsx)("div", { ref: u, className: g.kv, children: (0, i.jsx)(E.P, { checked: n, disabled: a }) }),
             ],
         }),
     });
 }
-var v = s(661829);
-function N(e) {
+var I = n(661829);
+function T(e) {
     let {
             users: t,
-            isUserSelected: s,
-            onSelectionChange: a,
-            isFetching: u,
-            onFetchMore: o,
-            isUserDisabled: m,
+            isUserSelected: n,
+            onSelectionChange: r,
+            isFetching: c,
+            onFetchMore: d,
+            isUserDisabled: _,
             searchQuery: f = "",
-            emptySearchContent: _,
-            className: h,
-            tooltipConfig: x,
+            emptySearchContent: h,
+            className: p,
+            tooltipConfig: E,
         } = e,
-        p = (0, l.K)((e) => {
-            e && !u && o?.();
+        m = (0, s.K)((e) => {
+            e && !c && d?.();
         });
-    return f.length > 0 && 0 === t.length && null != _
+    return f.length > 0 && 0 === t.length && null != h
         ? (0, i.jsxs)("div", {
-              className: v.t,
+              className: I.t,
               children: [
-                  (0, i.jsx)(r.D, { variant: "heading-md/semibold", color: "text-strong", children: _.header }),
-                  (0, i.jsx)(n.E, { variant: "text-md/medium", color: "text-subtle", children: _.body }),
+                  (0, i.jsx)(a.D, { variant: "heading-md/semibold", color: "text-strong", children: h.header }),
+                  (0, i.jsx)(o.E, { variant: "text-md/medium", color: "text-subtle", children: h.body }),
               ],
           })
-        : (0, i.jsxs)(c.d_, {
-              className: h,
+        : (0, i.jsxs)(l.d_, {
+              className: p,
               children: [
                   t.map((e) =>
                       (0, i.jsx)(
-                          g,
-                          { user: e, checked: s(e), disabled: !!m?.(e), onChange: a, tooltipConfig: x },
+                          A,
+                          { user: e, checked: n(e), disabled: !!_?.(e), onChange: r, tooltipConfig: E },
                           e.id,
                       ),
                   ),
-                  u && (0, i.jsx)(d.y, {}),
-                  (0, i.jsx)("div", { ref: p }),
+                  c && (0, i.jsx)(u.y, {}),
+                  (0, i.jsx)("div", { ref: m }),
               ],
           });
 }

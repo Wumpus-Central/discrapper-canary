@@ -1,16 +1,17 @@
-n.d(t, { LG: () => _, MS: () => a });
+"use strict";
+n.d(t, { LG: () => o, MS: () => s });
 let i = "__root_errors";
 var r,
-    a =
+    s =
         (((r = {}).HCAPTCHA = "hcaptcha"),
         (r.RECAPTCHA = "recaptcha"),
         (r.RECAPTCHA_ENTERPRISE = "recaptcha_enterprise"),
         (r.TURNSTILE = "turnstile"),
         r);
-function s(e) {
+function a(e) {
     return e.map((e) => ({ code: "UNKNOWN", message: e }));
 }
-class _ extends Error {
+class o extends Error {
     code;
     retryAfter;
     errors;
@@ -20,10 +21,10 @@ class _ extends Error {
         const {
             message: i,
             code: r,
-            retryAfter: a,
-            errors: _,
+            retryAfter: s,
+            errors: o,
             status: l,
-            captchaFields: o,
+            captchaFields: u,
         } = (function (e, t) {
             if ("string" == typeof e) return { message: e, code: t };
             if (null == e.body) return { status: e.status };
@@ -45,11 +46,11 @@ class _ extends Error {
                               let t = {};
                               for (let [n, i] of Object.entries(e)) {
                                   if ("_misc" === n) {
-                                      t._errors = s(i);
+                                      t._errors = a(i);
                                       continue;
                                   }
                                   let e = {};
-                                  (e._errors = s(i)), (t[n] = e);
+                                  (e._errors = a(i)), (t[n] = e);
                               }
                               return t;
                           })(n),
@@ -58,10 +59,10 @@ class _ extends Error {
         })(e, t);
         super(i ?? n),
             (this.code = r ?? -1),
-            (this.retryAfter = a),
-            (this.errors = _),
+            (this.retryAfter = s),
+            (this.errors = o),
             (this.status = l),
-            (this.captchaFields = o ?? {}),
+            (this.captchaFields = u ?? {}),
             (this.cause = e);
     }
     hasFieldErrors() {
@@ -86,8 +87,8 @@ class _ extends Error {
                     let [n, r] = e;
                     "_errors" === n ||
                         Object.entries(this.getAllFieldErrorsUnder(r)).forEach((e) => {
-                            let [r, a] = e;
-                            r === i ? (t[n] = a) : (t[`${n}.${r}`] = a);
+                            let [r, s] = e;
+                            r === i ? (t[n] = s) : (t[`${n}.${r}`] = s);
                         });
                 }),
             t

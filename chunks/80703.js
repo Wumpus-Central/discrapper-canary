@@ -1,3 +1,4 @@
+"use strict";
 function i(e) {
     return e.split(".")[0];
 }

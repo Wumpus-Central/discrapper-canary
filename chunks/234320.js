@@ -1,51 +1,52 @@
-n.d(t, { Ah: () => E, EG: () => c, EH: () => o, Vo: () => d });
+"use strict";
+n.d(t, { Ah: () => c, EG: () => _, EH: () => u, Vo: () => d });
 var i = n(627968),
     r = n(64700),
-    a = n(143236),
-    s = n(444927),
-    _ = n(625494);
+    s = n(143236),
+    a = n(444927),
+    o = n(625494);
 class l {
-    emitter = new a.EventEmitter();
+    emitter = new s.EventEmitter();
     subscribe(e, t) {
-        _._.subscribe(e, t), this.emitter.on(e, t);
+        o._.subscribe(e, t), this.emitter.on(e, t);
     }
     unsubscribe(e, t) {
-        _._.unsubscribe(e, t), this.emitter.off(e, t);
+        o._.unsubscribe(e, t), this.emitter.off(e, t);
     }
     bumpDispatchPriority() {
-        for (let e of this.emitter.eventNames()) for (let t of this.emitter.listeners(e)) _._.resubscribe(e, t);
+        for (let e of this.emitter.eventNames()) for (let t of this.emitter.listeners(e)) o._.resubscribe(e, t);
     }
 }
-let o = r.createContext(
+let u = r.createContext(
         new (class {
             subscribe(e, t) {
-                _._.subscribe(e, t);
+                o._.subscribe(e, t);
             }
             unsubscribe(e, t) {
-                _._.unsubscribe(e, t);
+                o._.unsubscribe(e, t);
             }
             bumpDispatchPriority() {}
         })(),
     ),
-    E = r.forwardRef(function (e, t) {
+    c = r.forwardRef(function (e, t) {
         let { children: n } = e,
-            a = (0, s.A)(() => new l());
-        return r.useImperativeHandle(t, () => a, [a]), (0, i.jsx)(o.Provider, { value: a, children: n });
+            s = (0, a.A)(() => new l());
+        return r.useImperativeHandle(t, () => s, [s]), (0, i.jsx)(u.Provider, { value: s, children: n });
     });
 function d(e) {
     let { event: t, handler: n } = e,
-        i = r.useContext(o),
-        a = r.useRef(n);
+        i = r.useContext(u),
+        s = r.useRef(n);
     r.useEffect(() => {
-        a.current = n;
+        s.current = n;
     }, [n]);
-    let s = null == n;
+    let a = null == n;
     return (
         r.useEffect(() => {
-            if (s) return;
+            if (a) return;
             let e = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                a.current?.(...t);
+                s.current?.(...t);
             };
             return (
                 i.subscribe(t, e),
@@ -53,10 +54,10 @@ function d(e) {
                     i.unsubscribe(t, e);
                 }
             );
-        }, [i, t, s]),
+        }, [i, t, a]),
         null
     );
 }
-function c(e) {
+function _(e) {
     return d(e), null;
 }

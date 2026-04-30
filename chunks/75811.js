@@ -1,29 +1,30 @@
-n.d(t, { j: () => d });
+"use strict";
+n.d(t, { j: () => c });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    r = n(289873),
-    o = n(834730),
-    c = n(686052);
-function d(e) {
-    let { chunks: t, columns: n, className: a } = e,
-        d = l.useMemo(() => ({ "--secure-frames-columns": n }), [n]);
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(289873),
+    l = n(834730),
+    u = n(686052);
+function c(e) {
+    let { chunks: t, columns: n, className: s } = e,
+        c = r.useMemo(() => ({ "--secure-frames-columns": n }), [n]);
     return null == t
-        ? (0, i.jsx)("div", { className: c.Lq, children: (0, i.jsx)(r.y, {}) })
+        ? (0, i.jsx)("div", { className: u.Lq, children: (0, i.jsx)(o.y, {}) })
         : (0, i.jsx)("div", {
-              style: d,
-              className: s()(c.aY, a),
+              style: c,
+              className: a()(u.aY, s),
               children: t.map((e, t) =>
                   (0, i.jsxs)(
-                      l.Fragment,
+                      r.Fragment,
                       {
                           children: [
-                              t > 0 && t % n == 0 && (0, i.jsx)("hr", { className: c.yF }),
+                              t > 0 && t % n == 0 && (0, i.jsx)("hr", { className: u.yF }),
                               (0, i.jsx)("div", {
-                                  className: c.iv,
-                                  children: (0, i.jsx)(o.E, {
-                                      className: c.ph,
+                                  className: u.iv,
+                                  children: (0, i.jsx)(l.E, {
+                                      className: u.ph,
                                       variant: "code",
                                       color: "text-default",
                                       children: e,

@@ -1,7 +1,8 @@
-n.d(t, { A: () => a });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(945810),
-    r = n(985018);
-let a = (0, i.mj)({
+    r = n(375708);
+let s = (0, i.mj)({
     name: "2026-04-riot-social-sdk-migration",
     kind: "user",
     defaultConfig: { enabled: !1, defaultBody: null },

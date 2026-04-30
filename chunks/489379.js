@@ -1,23 +1,24 @@
-i.d(t, { A: () => r });
-var l = i(17928),
-    n = i(765379),
-    s = i(714114),
-    a = i(290863),
-    d = i(977997);
-function r(e) {
-    let { userId: t, guildId: i } = e,
-        { voiceState: r, voiceChannel: o } = (0, s.A)({ userId: t, guildId: i }),
-        c = o?.id;
+"use strict";
+n.d(t, { A: () => l });
+var i = n(17928),
+    r = n(765379),
+    s = n(714114),
+    a = n(290863),
+    o = n(977997);
+function l(e) {
+    let { userId: t, guildId: n } = e,
+        { voiceState: l, voiceChannel: u } = (0, s.A)({ userId: t, guildId: n }),
+        c = u?.id;
     return {
-        voiceState: r,
-        voiceChannel: o,
-        voiceActivity: (0, l.bG)([a.A, d.A], () => {
+        voiceState: l,
+        voiceChannel: u,
+        voiceActivity: (0, i.bG)([a.A, o.A], () => {
             if (null != t && null != c)
                 return (
                     a.A.findActivity(t, (e) => {
-                        if (!(0, n.A)(e)) return !1;
-                        let i = d.A.getVoiceStateForSession(t, e.session_id);
-                        return i?.channelId === c;
+                        if (!(0, r.A)(e)) return !1;
+                        let n = o.A.getVoiceStateForSession(t, e.session_id);
+                        return n?.channelId === c;
                     }) ?? void 0
                 );
         }),

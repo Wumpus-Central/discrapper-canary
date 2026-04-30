@@ -1,62 +1,63 @@
-n.d(e, { DZ: () => E, m_: () => b, CJ: () => O, TW: () => _, Af: () => v, e4: () => C, Rm: () => p }), n(321073);
+"use strict";
+n.d(t, { DZ: () => A, m_: () => m, CJ: () => T, TW: () => p, Af: () => E, e4: () => I, Rm: () => g }), n(321073);
 var i = n(17928),
-    a = n(873298);
+    r = n(873298);
 n(734057);
-var l = n(967198),
-    r = n(287809),
+var s = n(967198),
+    a = n(287809),
     o = n(474090);
 n(935208);
-var d = n(181079),
+var l = n(181079),
     u = n(379587),
-    s = n(353640),
-    f = n(121894);
-let c = (0, s.v)((t) => ({
+    c = n(353640),
+    d = n(121894);
+let _ = (0, c.v)((e) => ({
     favoriteAdded: !1,
-    notifyFavoriteAdded: () => (0, f.r)(() => t({ favoriteAdded: !0 })),
-    clearFavoriteAdded: () => (0, f.r)(() => t({ favoriteAdded: !1 })),
+    notifyFavoriteAdded: () => (0, d.r)(() => e({ favoriteAdded: !0 })),
+    clearFavoriteAdded: () => (0, d.r)(() => e({ favoriteAdded: !1 })),
 }));
-var h = n(5180),
-    A = n(788868);
-function _(t) {
-    let { enabled: e, hasHigherPrivileges: n } = (0, u.m)({ location: t }),
-        a = (0, i.bG)([r.default], () => r.default.getCurrentUser()),
-        l = o.Ay.isPremiumExactly(a, A.PremiumTypes.TIER_2);
-    return { hasAccess: e && l, isExperimentEnabled: e, hasHigherPrivileges: n };
+var f = n(5180),
+    h = n(788868);
+function p(e) {
+    let { enabled: t, hasHigherPrivileges: n } = (0, u.m)({ location: e }),
+        r = (0, i.bG)([a.default], () => a.default.getCurrentUser()),
+        s = o.Ay.isPremiumExactly(r, h.PremiumTypes.TIER_2);
+    return { hasAccess: t && s, isExperimentEnabled: t, hasHigherPrivileges: n };
 }
-function v(t) {
-    return (0, i.bG)([d.A], () => d.A.getFavorite(t));
+function E(e) {
+    return (0, i.bG)([l.A], () => l.A.getFavorite(e));
 }
-function b() {
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.A.getFavoriteChannels(),
-        e = [{ id: null, name: "" }];
-    for (let n in t) {
-        let i = t[n];
-        i.type === a.Ip.CATEGORY && e.push({ id: i.id, name: i.nickname ?? "" });
+function m() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.A.getFavoriteChannels(),
+        t = [{ id: null, name: "" }];
+    for (let n in e) {
+        let i = e[n];
+        i.type === r.Ip.CATEGORY && t.push({ id: i.id, name: i.nickname ?? "" });
     }
-    return e.sort((e, n) => (t[e.id]?.order ?? 0) - (t[n.id]?.order ?? 0)), e;
+    return t.sort((t, n) => (e[t.id]?.order ?? 0) - (e[n.id]?.order ?? 0)), t;
 }
-function p() {
-    return (0, i.bG)([d.A], () => b(d.A.getFavoriteChannels()));
+function g() {
+    return (0, i.bG)([l.A], () => m(l.A.getFavoriteChannels()));
 }
-function E() {
-    let t = (0, i.bG)([l.A], () => l.A.getGuildId());
-    return (0, h.ai)(t);
+function A() {
+    let e = (0, i.bG)([s.A], () => s.A.getGuildId());
+    return (0, f.ai)(e);
 }
-function C(t, e) {
-    let n = E(),
-        { hasAccess: a } = _(e),
-        l = (0, i.bG)(
-            [d.A],
-            () => null != t && (d.A.isFavorite(t.id) || (t.isThread() && d.A.isFavorite(t.parent_id))),
-            [t],
+function I(e, t) {
+    let n = A(),
+        { hasAccess: r } = p(t),
+        s = (0, i.bG)(
+            [l.A],
+            () => null != e && (l.A.isFavorite(e.id) || (e.isThread() && l.A.isFavorite(e.parent_id))),
+            [e],
         );
-    return n && (!a || !l || t?.isCategory()) ? null : (t ?? null);
+    return n && (!r || !s || e?.isCategory()) ? null : (e ?? null);
 }
-function O() {
-    let t = c((t) => t.favoriteAdded);
+function T() {
+    let e = _((e) => e.favoriteAdded);
     return {
-        favoriteAdded: t,
-        notifyFavoriteAdded: c((t) => t.notifyFavoriteAdded),
-        clearFavoriteAdded: c((t) => t.clearFavoriteAdded),
+        favoriteAdded: e,
+        notifyFavoriteAdded: _((e) => e.notifyFavoriteAdded),
+        clearFavoriteAdded: _((e) => e.clearFavoriteAdded),
     };
 }

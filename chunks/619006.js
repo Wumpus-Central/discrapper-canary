@@ -1,10 +1,11 @@
-n.d(t, { XC: () => r, os: () => i, qK: () => s });
-var a = n(636537),
-    l = n(228366),
-    c = n(545868),
-    o = n(652215);
-function i(e, t) {
-    a.Bo.get({ url: o.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t), rejectWithError: !0 })
+"use strict";
+n.d(t, { XC: () => u, os: () => o, qK: () => l });
+var i = n(636537),
+    r = n(228366),
+    s = n(545868),
+    a = n(652215);
+function o(e, t) {
+    i.Bo.get({ url: a.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t), rejectWithError: !0 })
         .then((e) => {
             let n = [];
             e.body.length > 0 &&
@@ -17,7 +18,7 @@ function i(e, t) {
                         value: e.value,
                     })),
                 )),
-                l.h.dispatch({
+                r.h.dispatch({
                     type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
                     roleId: t,
                     roleConnectionConfigurations: n,
@@ -25,8 +26,8 @@ function i(e, t) {
         })
         .catch(() => {});
 }
-async function s(e, t, n) {
-    let i = n.map((e) =>
+async function l(e, t, n) {
+    let o = n.map((e) =>
             e.map((e) => ({
                 connection_type: e.connectionType,
                 connection_metadata_field: e.connectionMetadataField,
@@ -35,9 +36,9 @@ async function s(e, t, n) {
                 value: e.value,
             })),
         ),
-        s = await a.Bo.put({
-            url: o.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
-            body: 0 === i.length ? [] : i,
+        l = await i.Bo.put({
+            url: a.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
+            body: 0 === o.length ? [] : o,
             oldFormErrors: !0,
             rejectWithError: !1,
         }).then((e) => {
@@ -56,14 +57,14 @@ async function s(e, t, n) {
                 t
             );
         }),
-        r = await (0, c.a)(e, t, !1);
-    null != r && l.h.dispatch({ type: "GUILD_ROLE_MEMBER_COUNT_UPDATE", guildId: e, roleId: t, count: r }),
-        l.h.dispatch({
+        u = await (0, s.a)(e, t, !1);
+    null != u && r.h.dispatch({ type: "GUILD_ROLE_MEMBER_COUNT_UPDATE", guildId: e, roleId: t, count: u }),
+        r.h.dispatch({
             type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS",
             roleId: t,
-            roleConnectionConfigurations: s,
+            roleConnectionConfigurations: l,
         });
 }
-async function r() {
-    return (await a.Bo.get({ url: o.Rsh.APPLICATION_USER_ROLE_CONNECTIONS, rejectWithError: !1 })).body;
+async function u() {
+    return (await i.Bo.get({ url: a.Rsh.APPLICATION_USER_ROLE_CONNECTIONS, rejectWithError: !1 })).body;
 }

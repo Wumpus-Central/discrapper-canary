@@ -1,117 +1,117 @@
 "use strict";
-n.d(t, { R: () => S, V: () => I });
-var r = n(367513),
-    i = n(720149),
-    a = n(608299),
-    l = n(23658),
-    s = n(743445),
-    o = n(565150),
-    c = n(58149),
-    u = n(313961),
+n.d(t, { R: () => y, V: () => N });
+var i = n(367513),
+    r = n(720149),
+    s = n(608299),
+    a = n(494921),
+    o = n(417325),
+    l = n(565150),
+    u = n(95561),
+    c = n(313961),
     d = n(550642),
-    _ = n(301169),
-    p = n(522602),
-    f = n(287809),
-    h = n(954571),
-    m = n(453771),
-    g = n(927578),
-    b = n(382287),
+    _ = n(567231),
+    f = n(522602),
+    h = n(287809),
+    p = n(174459),
+    E = n(453771),
+    m = n(927578),
+    g = n(382287),
     A = n(652215),
-    E = n(381941),
-    v = n(788868),
-    y = n(985018);
-function I(e, t, n) {
-    let r = f.default.getCurrentUser(),
-        i = e.guild_id,
-        a = m.o2(i),
-        s = (0, d.R8)({ location: "web.showUploadFileSizeExceededError" }),
-        o = (0, d.Jy)(s, a),
-        u = Array.from(t).map((e) => e.size),
+    I = n(381941),
+    T = n(788868),
+    S = n(375708);
+function N(e, t, n) {
+    let i = h.default.getCurrentUser(),
+        r = e.guild_id,
+        s = E.o2(r),
+        o = (0, d.R8)({ location: "web.showUploadFileSizeExceededError" }),
+        l = (0, d.Jy)(o, s),
+        c = Array.from(t).map((e) => e.size),
         _ = Array.from(t).map((e) => (null != e.type ? e.type : "unknown")),
-        p = u.reduce((e, t) => e + t, 0),
-        h = u.length > 0 ? Math.max(...u) : 0,
-        I = u.length;
-    if (h > o) {
+        f = c.reduce((e, t) => e + t, 0),
+        p = c.length > 0 ? Math.max(...c) : 0,
+        N = c.length;
+    if (p > l) {
         let t = n?.reduce((e, t) => e + t, 0);
-        (0, c.zV)(A.HAw.FILE_SIZE_LIMIT_EXCEEDED, {
+        (0, u.zV)(A.HAw.FILE_SIZE_LIMIT_EXCEEDED, {
             channel_id: e.id,
-            guild_id: i,
-            user_individual_file_size_limit: a,
-            pre_compression_file_sizes: u,
-            pre_compression_aggregate_file_size: p,
-            num_attachments: I,
-            error_type: E.ty.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
+            guild_id: r,
+            user_individual_file_size_limit: s,
+            pre_compression_file_sizes: c,
+            pre_compression_aggregate_file_size: f,
+            num_attachments: N,
+            error_type: I.ty.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
             attachment_mimetypes: _,
             post_compression_file_sizes: n,
             post_compression_aggregate_file_size: t,
-            kestrel_variant: (0, d.H6)(s),
+            kestrel_variant: (0, d.H6)(o),
         }),
-            (0, l.openUploadError)({
-                title: y.intl.string(y.t["/tGlcj"]),
-                help: (0, b.WQ)(r, i),
-                showPremiumUpsell: !(0, g.YE)(r, v.PremiumTypes.TIER_2),
-                fileSize: h,
+            (0, a.openUploadError)({
+                title: S.intl.string(S.t["/tGlcj"]),
+                help: (0, g.WQ)(i, r),
+                showPremiumUpsell: !(0, m.YE)(i, T.PremiumTypes.TIER_2),
+                fileSize: p,
             });
         return;
     }
-    (0, l.openUploadError)({
-        title: y.intl.string(y.t["/tGlcj"]),
-        help: y.intl.formatToPlainString(y.t.tUOJdH, { maxSize: m.Hb(m.bB()) }),
+    (0, a.openUploadError)({
+        title: S.intl.string(S.t["/tGlcj"]),
+        help: S.intl.formatToPlainString(S.t.tUOJdH, { maxSize: E.Hb(E.bB()) }),
     });
 }
-async function S(e, t, n) {
+async function y(e, t, n) {
     let {
-        filesMetadata: c,
+        filesMetadata: u,
         requireConfirm: d = !0,
-        isThumbnail: f = !1,
-        origin: m,
+        isThumbnail: h = !1,
+        origin: E,
     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (e.length < 1) return;
-    if (null != c && c.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
-    let g = t.getGuildId(),
-        v = Array.from(e),
-        S = v.map((e) => ({ originalContentType: e.type, preCompressionSize: e.size }));
-    if ((await Promise.resolve(), (0, b.fJ)(v, g))) return void I(t, v);
-    if (p.A.getUploadCount(t.id, n) + v.length > A.XgB) {
-        (0, l.openUploadError)({
-            title: y.intl.string(y.t.wOr6hB),
-            help: y.intl.formatToPlainString(y.t["qqyp/e"], { limit: A.XgB }),
+    if (null != u && u.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
+    let m = t.getGuildId(),
+        T = Array.from(e),
+        y = T.map((e) => ({ originalContentType: e.type, preCompressionSize: e.size }));
+    if ((await Promise.resolve(), (0, g.fJ)(T, m))) return void N(t, T);
+    if (f.A.getUploadCount(t.id, n) + T.length > A.XgB) {
+        (0, a.openUploadError)({
+            title: S.intl.string(S.t.wOr6hB),
+            help: S.intl.formatToPlainString(S.t["qqyp/e"], { limit: A.XgB }),
         }),
-            h.default.track(A.HAw.UPLOAD_FILE_LIMIT_ERROR, {
-                existing_count: p.A.getUploadCount(t.id, n),
-                new_count: v.length,
+            p.default.track(A.HAw.UPLOAD_FILE_LIMIT_ERROR, {
+                existing_count: f.A.getUploadCount(t.id, n),
+                new_count: T.length,
             });
         return;
     }
     if (
         ((t.type !== A.rbe.GUILD_VOICE && t.type !== A.rbe.GUILD_STAGE_VOICE) ||
-            u.A.getChatOpen(t.id) ||
-            r.A.updateChatOpen(t.id, !0),
+            c.A.getChatOpen(t.id) ||
+            i.A.updateChatOpen(t.id, !0),
         d)
     ) {
-        let e = v.map((e, t) => ({
+        let e = T.map((e, t) => ({
             file: e,
-            platform: o.xz.WEB,
-            isThumbnail: f,
-            origin: m,
-            compressionMetadata: S[t],
-            ...c?.[t],
+            platform: l.xz.WEB,
+            isThumbnail: h,
+            origin: E,
+            compressionMetadata: y[t],
+            ...u?.[t],
         }));
-        a.A.addFiles({ files: e, channelId: t.id, draftType: n });
+        s.A.addFiles({ files: e, channelId: t.id, draftType: n });
     } else {
-        let e = v.map((e, n) => {
-            let r = null != c ? c[n] : {};
-            return new s.bK(
-                { file: e, platform: o.xz.WEB, isThumbnail: f, origin: m, compressionMetadata: S[n], ...r },
+        let e = T.map((e, n) => {
+            let i = null != u ? u[n] : {};
+            return new o.bK(
+                { file: e, platform: l.xz.WEB, isThumbnail: h, origin: E, compressionMetadata: y[n], ...i },
                 t.id,
             );
         });
-        i.A.sendMessage(t.id, { content: "", tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] }, void 0, {
+        r.A.sendMessage(t.id, { content: "", tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] }, void 0, {
             eagerDispatch: !1,
             attachmentsToUpload: e,
-            location: E.Hx.INSTANT_UPLOAD,
-            onAttachmentUploadError: (e, n, r) => {
-                (0, _.k)({ file: e, guildId: t.getGuildId(), analyticsLocations: [], code: n, reason: r });
+            location: I.Hx.INSTANT_UPLOAD,
+            onAttachmentUploadError: (e, n, i) => {
+                (0, _.k)({ file: e, guildId: t.getGuildId(), analyticsLocations: [], code: n, reason: i });
             },
         });
     }

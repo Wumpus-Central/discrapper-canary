@@ -1,265 +1,266 @@
-n.d(t, { A: () => X, Z: () => G });
+"use strict";
+n.d(t, { A: () => Y, Z: () => j });
 var i = n(627968),
-    a = n(64700),
-    r = n(503698),
-    l = n.n(r),
-    s = n(548411),
-    o = n(554830),
-    d = n(930125),
-    u = n(338717),
-    h = n(282108),
-    c = n(776231),
-    m = n(302031),
-    g = n(644447),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(548411),
+    l = n(554830),
+    u = n(930125),
+    c = n(338717),
+    d = n(282108),
+    _ = n(776231),
+    f = n(302031),
+    h = n(644447),
     p = n(625494),
-    f = n(515718),
-    A = n(700331),
-    x = n(454290),
-    y = n(536763),
-    w = n(452282),
-    _ = n(967758),
-    E = n(358731),
-    C = n(158816);
-let b = a.memo(function (e) {
-    let { items: t, currentIndex: n, children: r } = e,
-        s = t[n],
-        o = t.length > 1,
-        d = (0, _.A)(o, { width: s.width, height: s.height }),
-        [u, h] = a.useState(0);
+    E = n(515718),
+    m = n(700331),
+    g = n(454290),
+    A = n(536763),
+    I = n(452282),
+    T = n(967758),
+    S = n(358731),
+    N = n(158816);
+let y = r.memo(function (e) {
+    let { items: t, currentIndex: n, children: s } = e,
+        o = t[n],
+        l = t.length > 1,
+        u = (0, T.A)(l, { width: o.width, height: o.height }),
+        [c, d] = r.useState(0);
     return (
-        a.useEffect(() => {
-            let e = () => h((e) => e + 1);
+        r.useEffect(() => {
+            let e = () => d((e) => e + 1);
             return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }),
-        a.useEffect(() => {
+        r.useEffect(() => {
             if (t.length > 1) {
-                let e = t[(0, w.U3)(n - 1, t.length)],
-                    i = t[(0, w.U3)(n + 1, t.length)];
-                G(e, !0), t.length > 2 && G(i, !0);
+                let e = t[(0, I.U3)(n - 1, t.length)],
+                    i = t[(0, I.U3)(n + 1, t.length)];
+                j(e, !0), t.length > 2 && j(i, !0);
             }
         }, [n, t]),
-        (0, i.jsx)(E.Ay, {
-            mode: E.nY.PINNED,
+        (0, i.jsx)(S.Ay, {
+            mode: S.nY.PINNED,
             children: (e) =>
                 (0, i.jsx)("div", {
-                    className: l()(C.k4, e),
+                    className: a()(N.k4, e),
                     children: (0, i.jsx)(
                         "div",
-                        { children: d.width > 0 && d.height > 0 && r(d.width, d.height) },
-                        s.url,
+                        { children: u.width > 0 && u.height > 0 && s(u.width, u.height) },
+                        o.url,
                     ),
                 }),
         })
     );
 });
-var S = n(331322),
-    I = n(87221),
-    v = n(689175),
-    M = n(939249),
-    j = n(775602),
-    T = n(607470),
-    N = n(619517),
-    O = n(154872),
-    P = n(838541),
-    D = n(985018),
-    R = n(656633);
-function L(e) {
+var C = n(331322),
+    v = n(87221),
+    O = n(689175),
+    R = n(939249),
+    b = n(775602),
+    D = n(607470),
+    L = n(619517),
+    w = n(154872),
+    M = n(838541),
+    P = n(375708),
+    x = n(656633);
+function U(e) {
     return `media-view-scroll-thumbnail-${e}`;
 }
-let U = a.memo(function (e) {
+let k = r.memo(function (e) {
     let { item: t, enabledContentHarmTypeFlags: n = 0 } = e,
-        a = (function (e) {
-            if ("IMAGE" === e.type) return (0, g.E)({ proxyURL: e.proxyUrl, url: e.url });
+        r = (function (e) {
+            if ("IMAGE" === e.type) return (0, h.E)({ proxyURL: e.proxyUrl, url: e.url });
             if ("VIDEO" === e.type) {
                 if (null != e.poster) return e.poster;
-                if (null != e.proxyUrl) return (0, O.VZ)(e.proxyUrl);
+                if (null != e.proxyUrl) return (0, w.VZ)(e.proxyUrl);
             }
             return null;
         })(t);
-    return null == a && "VIDEO" === t.type
-        ? (0, i.jsx)(T.A, {
+    return null == r && "VIDEO" === t.type
+        ? (0, i.jsx)(D.A, {
               src: `${t.url}#t=1`,
               preload: "metadata",
               muted: !0,
               style: { width: 40, height: 40, objectFit: "cover" },
           })
-        : null == a
+        : null == r
           ? null
-          : (0, h.qo)({ type: d.D.GenericMedia, media: t }, n)
-            ? (0, i.jsx)(S.B, {
+          : (0, d.qo)({ type: u.D.GenericMedia, media: t }, n)
+            ? (0, i.jsx)(C.B, {
                   align: "center",
                   justify: "center",
-                  className: R.cd,
+                  className: x.cd,
                   style: { width: 40, height: 40 },
-                  children: (0, i.jsx)(I.D, { size: "sm", color: "white" }),
+                  children: (0, i.jsx)(v.D, { size: "sm", color: "white" }),
               })
-            : (0, i.jsx)(N.Ay, {
+            : (0, i.jsx)(L.Ay, {
                   width: t.width ?? 40,
                   height: t.height ?? 40,
                   maxWidth: 40,
                   maxHeight: 40,
                   useFullWidth: !0,
-                  src: a,
+                  src: r,
                   shouldAnimate: !1,
                   shouldRenderAccessory: !1,
                   srcIsAnimated: t.srcIsAnimated,
                   alt: t.alt,
-                  mediaLayoutType: P.dG.MOSAIC,
+                  mediaLayoutType: M.dG.MOSAIC,
               });
 });
-function V(e) {
-    let { items: t, currentIndex: n, onGalleryItemClick: r, className: s, enabledContentHarmTypeFlags: o } = e,
-        d = a.useRef(null);
+function G(e) {
+    let { items: t, currentIndex: n, onGalleryItemClick: s, className: o, enabledContentHarmTypeFlags: l } = e,
+        u = r.useRef(null);
     return (
-        a.useLayoutEffect(() => {
-            let e = document.getElementById(L(n));
-            null != d.current &&
+        r.useLayoutEffect(() => {
+            let e = document.getElementById(U(n));
+            null != u.current &&
                 null != e &&
-                d.current.scrollIntoViewNode({ node: e, animate: !j.A.useReducedMotion, padding: 20 });
+                u.current.scrollIntoViewNode({ node: e, animate: !b.A.useReducedMotion, padding: 20 });
         }, [n]),
         (0, i.jsx)("div", {
-            className: l()(R.IL, s),
-            children: (0, i.jsx)(v.Ch, {
+            className: a()(x.IL, o),
+            children: (0, i.jsx)(O.Ch, {
                 orientation: "horizontal",
-                className: l()(R.nV, s),
-                ref: d,
+                className: a()(x.nV, o),
+                ref: u,
                 onClick: (e) => e.stopPropagation(),
-                children: t.map((e, a) => {
-                    let s = a === n,
-                        d = s ? D.t["qv/U5V"] : D.t.zviMAG;
+                children: t.map((e, r) => {
+                    let o = r === n,
+                        u = o ? P.t["qv/U5V"] : P.t.zviMAG;
                     return (0, i.jsx)(
-                        M.D,
+                        R.D,
                         {
-                            id: L(a),
-                            className: l()(R.Qq, { [R.AD]: !s, [R.$1]: 0 === a, [R.HV]: a === t.length - 1 }),
-                            "aria-label": D.intl.formatToPlainString(d, { pageNumber: a + 1, totalPages: t.length }),
-                            onClick: () => r(a),
-                            children: (0, i.jsx)(U, { item: e, enabledContentHarmTypeFlags: o }),
+                            id: U(r),
+                            className: a()(x.Qq, { [x.AD]: !o, [x.$1]: 0 === r, [x.HV]: r === t.length - 1 }),
+                            "aria-label": P.intl.formatToPlainString(u, { pageNumber: r + 1, totalPages: t.length }),
+                            onClick: () => s(r),
+                            children: (0, i.jsx)(k, { item: e, enabledContentHarmTypeFlags: l }),
                         },
-                        a,
+                        r,
                     );
                 }),
             }),
         })
     );
 }
-var k = n(597351),
-    H = n(652215),
-    F = n(420165);
-function W(e) {
-    let { children: t, isObscured: n, src: r } = e,
-        [s, o] = a.useState(!1),
-        d = a.useCallback(() => {
-            o((e) => !e);
+var F = n(597351),
+    V = n(652215),
+    B = n(420165);
+function H(e) {
+    let { children: t, isObscured: n, src: s } = e,
+        [o, l] = r.useState(!1),
+        u = r.useCallback(() => {
+            l((e) => !e);
         }, []);
     return n
-        ? (0, i.jsx)(m.Bs.Provider, {
-              value: s,
+        ? (0, i.jsx)(f.Bs.Provider, {
+              value: o,
               children: (0, i.jsx)(
-                  m.Ay,
+                  f.Ay,
                   {
-                      type: m.Ay.Types.ATTACHMENT,
-                      reason: u.Oc.EXPLICIT_CONTENT,
+                      type: f.Ay.Types.ATTACHMENT,
+                      reason: c.Oc.EXPLICIT_CONTENT,
                       obscured: !0,
                       isSingleMosaicItem: !0,
-                      onToggleObscurity: d,
-                      children: (e) => (0, i.jsx)("div", { className: l()(F.JT, { [F.Qr]: e }), children: t(e) }),
+                      onToggleObscurity: u,
+                      children: (e) => (0, i.jsx)("div", { className: a()(B.JT, { [B.Qr]: e }), children: t(e) }),
                   },
-                  r,
+                  s,
               ),
           })
         : (0, i.jsx)(i.Fragment, { children: t(!1) });
 }
-function G(e, t) {
+function j(e, t) {
     if ("IMAGE" !== e.type) return;
-    if (!(0, f.eJ)(e)) return void (0, c.yt)(e.url);
-    let n = (0, g.E)({ proxyURL: e.proxyUrl, url: e.url });
-    (0, y.A)({ src: n, width: e.width, height: e.height, hasMultiple: t, options: e });
+    if (!(0, E.eJ)(e)) return void (0, _.yt)(e.url);
+    let n = (0, h.E)({ proxyURL: e.proxyUrl, url: e.url });
+    (0, A.A)({ src: n, width: e.width, height: e.height, hasMultiple: t, options: e });
 }
-function X(e) {
+function Y(e) {
     let {
             items: t,
             onIndexChange: n,
-            startIndex: r = 0,
-            enabledContentHarmTypeFlags: u = 0,
-            shouldHideMediaOptions: c = !1,
+            startIndex: s = 0,
+            enabledContentHarmTypeFlags: c = 0,
+            shouldHideMediaOptions: _ = !1,
         } = e,
-        [m, g] = a.useState(r),
-        f = a.useRef(r),
-        { zoomed: y, setZoomed: w } = (0, x.Q)(),
-        _ = a.useCallback(
+        [f, h] = r.useState(s),
+        E = r.useRef(s),
+        { zoomed: A, setZoomed: I } = (0, g.Q)(),
+        T = r.useCallback(
             (e) => {
                 var i;
-                g((e = ((e % (i = t.length)) + i) % i)), (f.current = e), n?.(e), w(!1);
+                h((e = ((e % (i = t.length)) + i) % i)), (E.current = e), n?.(e), I(!1);
             },
-            [n, t, w],
+            [n, t, I],
         );
-    a.useEffect(() => {
-        let e = () => _(f.current + 1),
-            t = () => _(f.current - 1);
+    r.useEffect(() => {
+        let e = () => T(E.current + 1),
+            t = () => T(E.current - 1);
         return (
-            p._.subscribe(H.jej.MODAL_CAROUSEL_NEXT, e),
-            p._.subscribe(H.jej.MODAL_CAROUSEL_PREV, t),
+            p._.subscribe(V.jej.MODAL_CAROUSEL_NEXT, e),
+            p._.subscribe(V.jej.MODAL_CAROUSEL_PREV, t),
             () => {
-                p._.unsubscribe(H.jej.MODAL_CAROUSEL_NEXT, e), p._.unsubscribe(H.jej.MODAL_CAROUSEL_PREV, t);
+                p._.unsubscribe(V.jej.MODAL_CAROUSEL_NEXT, e), p._.unsubscribe(V.jej.MODAL_CAROUSEL_PREV, t);
             }
         );
-    }, [_, w]);
-    let C = t[m],
-        S = (0, h.qo)({ type: d.D.GenericMedia, media: C }, u),
-        I = c
+    }, [T, I]);
+    let N = t[f],
+        C = (0, d.qo)({ type: u.D.GenericMedia, media: N }, c),
+        v = _
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
-            : () => A.l.markActionPerformed(A.N.CONTEXT_MENU_OPENED),
-        v = t.length > 1;
+            : () => m.l.markActionPerformed(m.N.CONTEXT_MENU_OPENED),
+        O = t.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(E.Ay, {
+            (0, i.jsx)(S.Ay, {
                 children: (e) =>
-                    v
+                    O
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(k.A, {
+                                  (0, i.jsx)(F.A, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), p._.dispatch(H.jej.MODAL_CAROUSEL_PREV);
+                                          e.stopPropagation(), p._.dispatch(V.jej.MODAL_CAROUSEL_PREV);
                                       },
-                                      icon: s.Z,
-                                      tooltip: D.intl.string(D.t.vgfxaA),
-                                      className: l()(F.vi, e),
+                                      icon: o.Z,
+                                      tooltip: P.intl.string(P.t.vgfxaA),
+                                      className: a()(B.vi, e),
                                   }),
-                                  (0, i.jsx)(k.A, {
+                                  (0, i.jsx)(F.A, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), p._.dispatch(H.jej.MODAL_CAROUSEL_NEXT);
+                                          e.stopPropagation(), p._.dispatch(V.jej.MODAL_CAROUSEL_NEXT);
                                       },
-                                      icon: o.K,
-                                      tooltip: D.intl.string(D.t.XiOHRX),
-                                      className: l()(F.f8, e),
+                                      icon: l.K,
+                                      tooltip: P.intl.string(P.t.XiOHRX),
+                                      className: a()(B.f8, e),
                                   }),
                               ],
                           })
                         : void 0,
             }),
-            (0, i.jsx)(b, {
+            (0, i.jsx)(y, {
                 items: t,
-                currentIndex: m,
+                currentIndex: f,
                 children: (e, t) =>
-                    (0, i.jsx)(W, {
-                        isObscured: !y && S,
-                        src: C.url,
+                    (0, i.jsx)(H, {
+                        isObscured: !A && C,
+                        src: N.url,
                         children: (n) =>
-                            (0, i.jsx)(O.Ay, { media: C, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: I }),
+                            (0, i.jsx)(w.Ay, { media: N, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: v }),
                     }),
             }),
-            v &&
-                (0, i.jsx)(E.Ay, {
+            O &&
+                (0, i.jsx)(S.Ay, {
                     children: (e) =>
-                        (0, i.jsx)(V, {
+                        (0, i.jsx)(G, {
                             items: t,
-                            currentIndex: m,
-                            onGalleryItemClick: _,
+                            currentIndex: f,
+                            onGalleryItemClick: T,
                             className: e,
-                            enabledContentHarmTypeFlags: u,
+                            enabledContentHarmTypeFlags: c,
                         }),
                 }),
         ],

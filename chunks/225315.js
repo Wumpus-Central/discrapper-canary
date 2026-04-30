@@ -1,31 +1,32 @@
-n.d(t, { Fy: () => a, Vv: () => d, Xx: () => c, i4: () => u, oZ: () => o, ry: () => r });
+"use strict";
+n.d(t, { Fy: () => o, Vv: () => u, Xx: () => c, i4: () => d, oZ: () => l, ry: () => a });
 var i = n(636537),
-    l = n(228366),
+    r = n(228366),
     s = n(652215);
-let r = function (e) {
+let a = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        l.h.dispatch({ type: "WELCOME_SCREEN_VIEW", guildId: e, isLurking: t });
+        r.h.dispatch({ type: "WELCOME_SCREEN_VIEW", guildId: e, isLurking: t });
     },
-    a = async (e) => {
-        l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
+    o = async (e) => {
+        r.h.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
         try {
             let t = await i.Bo.get({ url: s.Rsh.GUILD_WELCOME_SCREEN(e), oldFormErrors: !0, rejectWithError: !0 });
-            return l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: e, welcomeScreen: t.body }), t.body;
+            return r.h.dispatch({ type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: e, welcomeScreen: t.body }), t.body;
         } catch (e) {
-            l.h.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
+            r.h.dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
         }
     },
-    o = () => {
-        l.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
+    l = () => {
+        r.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
     },
-    d = () => {
-        l.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
+    u = () => {
+        r.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
     },
     c = (e) => {
-        l.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings: e });
+        r.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings: e });
     },
-    u = async (e, t) => {
-        l.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
+    d = async (e, t) => {
+        r.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
         try {
             let n = await i.Bo.patch({
                 url: s.Rsh.GUILD_WELCOME_SCREEN(e),
@@ -33,8 +34,8 @@ let r = function (e) {
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });
-            l.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_SUCCESS", guildId: e, welcomeScreen: n.body });
+            r.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_SUCCESS", guildId: e, welcomeScreen: n.body });
         } catch (e) {
-            l.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
+            r.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
         }
     };

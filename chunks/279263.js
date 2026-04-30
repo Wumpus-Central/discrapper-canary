@@ -1,9 +1,10 @@
-n.d(t, { A: () => o });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(867051),
-    r = n(548965),
-    l = n(137903);
+    r = n(892842),
+    s = n(137903);
 let a = "Note";
-class s extends l.yW {
+class o extends s.yW {
     static displayName = "NoteStore";
     database = this.addKVDatabase("notes");
     getNote(e) {
@@ -13,7 +14,7 @@ class s extends l.yW {
         return this.database;
     }
 }
-let o = new s(
+let l = new o(
     {
         LOGOUT: (e, t) => t.clear(),
         RESET_SOCKET: (e, t) => t.clear(),

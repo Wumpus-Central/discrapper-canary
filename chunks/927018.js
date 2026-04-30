@@ -1,9 +1,10 @@
-n.d(t, { ag: () => u, l0: () => d, md: () => o, sn: () => r, vM: () => c });
+"use strict";
+n.d(t, { ag: () => d, l0: () => u, md: () => l, sn: () => o, vM: () => c });
 var i,
-    l,
+    r,
     s = n(103640),
-    a = n(985018),
-    r =
+    a = n(375708),
+    o =
         (((i = {})[(i.ENABLE_POGGERMODE = 0)] = "ENABLE_POGGERMODE"),
         (i[(i.DISABLE_POGGERMODE = 1)] = "DISABLE_POGGERMODE"),
         (i[(i.PING_SOMEONE = 2)] = "PING_SOMEONE"),
@@ -25,14 +26,14 @@ var i,
         (i[(i.COMBO_VALUE_LEVEL_3 = 18)] = "COMBO_VALUE_LEVEL_3"),
         (i[(i.COMBO_VALUE_LEVEL_4 = 19)] = "COMBO_VALUE_LEVEL_4"),
         i),
-    o =
-        (((l = {})[(l.COMMON = 0)] = "COMMON"),
-        (l[(l.UNCOMMON = 1)] = "UNCOMMON"),
-        (l[(l.RARE = 2)] = "RARE"),
-        (l[(l.EPIC = 3)] = "EPIC"),
-        (l[(l.LEGENDARY = 4)] = "LEGENDARY"),
-        l);
-let d = {
+    l =
+        (((r = {})[(r.COMMON = 0)] = "COMMON"),
+        (r[(r.UNCOMMON = 1)] = "UNCOMMON"),
+        (r[(r.RARE = 2)] = "RARE"),
+        (r[(r.EPIC = 3)] = "EPIC"),
+        (r[(r.LEGENDARY = 4)] = "LEGENDARY"),
+        r);
+let u = {
     0: {
         id: 0,
         name: () => a.intl.string(a.t["CRLcO+"]),
@@ -191,9 +192,9 @@ let d = {
     },
 };
 function c(e) {
-    return d[e];
+    return u[e];
 }
-let u = (e) => {
+let d = (e) => {
     switch (e) {
         case 0:
             return { color: "#1ABC9C" };

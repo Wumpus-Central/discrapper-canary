@@ -1,19 +1,20 @@
-n.d(t, { A: () => i });
-var r = n(17928),
-    a = n(495544),
-    l = n(51760),
-    u = n(977997);
-function i(e) {
-    return (0, r.cf)(
-        [u.A, l.Ay, a.default],
+"use strict";
+n.d(t, { A: () => o });
+var i = n(17928),
+    r = n(495544),
+    s = n(51760),
+    a = n(977997);
+function o(e) {
+    return (0, i.cf)(
+        [a.A, s.Ay, r.default],
         () =>
             (function (e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.A,
-                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.Ay,
-                    r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.default,
-                    i = null != e ? t.getVoiceState(e.getGuildId(), r.getId()) : null;
-                return { selfDeaf: n.isSelfDeaf(), deaf: i?.deaf ?? !1 };
-            })(e, u.A, l.Ay, a.default),
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.A,
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Ay,
+                    i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.default,
+                    o = null != e ? t.getVoiceState(e.getGuildId(), i.getId()) : null;
+                return { selfDeaf: n.isSelfDeaf(), deaf: o?.deaf ?? !1 };
+            })(e, a.A, s.Ay, r.default),
         [e],
     );
 }

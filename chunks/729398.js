@@ -80,7 +80,7 @@ function D(e, t) {
 l(219935);
 var P = l(794782),
     M = l(9448),
-    V = l(974930),
+    V = l(647090),
     U = l(70456),
     z = l(989349),
     O = l.n(z),
@@ -91,7 +91,7 @@ var P = l(794782),
     X = l(783878),
     q = l(292666),
     Y = l(116085),
-    Q = l(144228),
+    Q = l(773812),
     W = l(331322),
     K = l(534514),
     $ = l(47167),
@@ -107,7 +107,7 @@ var P = l(794782),
     ea = l(975571),
     ed = l(418208),
     eu = l(652215),
-    ec = l(985018);
+    ec = l(375708);
 function eo() {
     return (0, es.yM)()
         ? ec.intl.format(ec.t.iWGjcg, {
@@ -444,7 +444,7 @@ function ek(e) {
                           v(eS.Ps.STAGE_INSTANCE),
                               (0, x.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      l.e("80848"),
+                                      l.e("65086"),
                                       l.e("11585"),
                                       l.e("3589"),
                                       l.e("89916"),
@@ -455,8 +455,8 @@ function ek(e) {
                                       l.e("7775"),
                                       l.e("2329"),
                                       l.e("58608"),
-                                      l.e("37038"),
                                       l.e("9431"),
+                                      l.e("37038"),
                                   ]).then(l.bind(l, 113194));
                                   return (l) =>
                                       (0, i.jsx)(e, { ...l, channelType: eu.rbe.GUILD_STAGE_VOICE, guildId: t });
@@ -618,12 +618,12 @@ function eW(e) {
                           l.e("73873"),
                           l.e("63232"),
                           l.e("43437"),
-                          l.e("49089"),
                           l.e("58164"),
+                          l.e("49089"),
                           l.e("37490"),
                           l.e("50342"),
-                          l.e("93513"),
                           l.e("63726"),
+                          l.e("93513"),
                           l.e("79149"),
                           l.e("7406"),
                           l.e("55524"),
@@ -787,12 +787,12 @@ function eZ(e) {
 }
 var eJ = l(789645),
     e0 = l(81466),
-    e1 = l(21599),
+    e1 = l(842241),
     e9 = l(279208),
-    e8 = l(747007),
-    e4 = l(710358),
-    e7 = l(958590),
-    e3 = l(954571),
+    e7 = l(747007),
+    e8 = l(710358),
+    e4 = l(958590),
+    e3 = l(174459),
     e5 = l(957565),
     e2 = l(118888);
 let { INVITE_OPTIONS_7_DAYS: e6, INVITE_OPTIONS_UNLIMITED: te } = I.Ay;
@@ -802,9 +802,9 @@ function tt(e) {
         r = (0, a.bG)([C.Ay], () => (null != n ? C.Ay.getDefaultChannel(n)?.id : null), [n]),
         s = (0, a.bG)([b.A], () => b.A.getGuild(n), [n]),
         { channel_id: d, id: u } = l ?? {},
-        c = (0, a.bG)([e7.A], () => {
+        c = (0, a.bG)([e4.A], () => {
             let e = d ?? r;
-            return null == e ? null : e7.A.getInvite(e);
+            return null == e ? null : e4.A.getInvite(e);
         }, [d, r]);
     if (null == l) return t(), null;
     let o = s?.vanityURLCode ?? c?.code,
@@ -822,7 +822,7 @@ function tt(e) {
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(eJ.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e4.A, {
+            (0, i.jsx)(e8.A, {
                 children: (0, i.jsx)("div", {
                     className: e2.zc,
                     children: (0, i.jsx)(e0.C, {
@@ -848,7 +848,7 @@ function tt(e) {
             (0, i.jsxs)("div", {
                 className: e2.EZ,
                 children: [
-                    (0, i.jsx)(e8.I, {
+                    (0, i.jsx)(e7.I, {
                         value: m,
                         autoFocus: !1,
                         onCopy: (e) => {

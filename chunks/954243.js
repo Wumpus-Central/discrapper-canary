@@ -1,34 +1,35 @@
-n.d(t, { xs: () => G, n0: () => M });
+"use strict";
+n.d(t, { xs: () => M, n0: () => w });
 var i = n(627968),
-    a = n(64700),
-    r = n(132500),
-    _ = n(323889),
-    s = n(731738),
+    r = n(64700),
+    s = n(835245),
+    a = n(323889),
+    o = n(731738),
     l = n(17928),
-    o = n(964486),
-    E = n(345353),
+    u = n(964486),
+    c = n(345353),
     d = n(69114),
-    c = n(831062),
-    u = n(723702),
-    I = n(829219),
-    T = n(859703),
-    A = n(710969),
-    S = n(851936),
-    N = n(561844),
-    O = n(590202),
-    f = n(47167),
-    R = n(633965),
-    C = n(734057),
-    D = n(71393),
-    L = n(994500),
-    p = n(967198),
-    m = n(287809),
-    h = n(486020);
+    _ = n(807393),
+    f = n(723702),
+    h = n(340124),
+    p = n(859703),
+    E = n(710969),
+    m = n(851936),
+    g = n(561844),
+    A = n(590202),
+    I = n(47167),
+    T = n(633965),
+    S = n(734057),
+    N = n(71393),
+    y = n(994500),
+    C = n(967198),
+    v = n(287809),
+    O = n(486020);
 n(23766);
-var g = n(971649),
+var R = n(971649),
     b = n(652215);
-let U = new Set();
-class P {
+let D = new Set();
+class L {
     id;
     entity;
     questContent;
@@ -50,27 +51,27 @@ class P {
             adContentIds: t,
             adCreativeType: n,
             questContent: i,
-            triggeredByStatusChange: a,
-            trackGuildAndChannelMetadata: s,
+            triggeredByStatusChange: r,
+            trackGuildAndChannelMetadata: o,
             questContentPosition: l,
-            questContentRowIndex: o,
-            minViewTimeSeconds: E = 1,
+            questContentRowIndex: u,
+            minViewTimeSeconds: c = 1,
             isQuestEnrollmentBlocked: d,
-            onImpression: c,
-            sourceQuestContent: u,
+            onImpression: _,
+            sourceQuestContent: f,
         } = e;
-        (this.id = (0, r.A)()),
+        (this.id = (0, s.A)()),
             (this.questContent = i),
             (this.questContentPosition = l),
-            (this.minViewTimeSeconds = E),
+            (this.minViewTimeSeconds = c),
             (this.minViewportPercentage = 0.5),
-            (this.trackGuildAndChannelMetadata = s),
-            (this.triggeredByStatusChange = a),
-            (this.questContentRowIndex = o),
+            (this.trackGuildAndChannelMetadata = o),
+            (this.triggeredByStatusChange = r),
+            (this.questContentRowIndex = u),
             (this.isQuestEnrollmentBlocked = d),
-            (this.onImpressionCallback = c),
-            (this.sourceQuestContent = u),
-            _.p.QUEST,
+            (this.onImpressionCallback = _),
+            (this.sourceQuestContent = f),
+            a.p.QUEST,
             (this.entity = { adContentIds: t, adCreativeType: n });
     }
     getId() {
@@ -80,15 +81,15 @@ class P {
         return this.questContentPosition;
     }
     trackViewedPlacement = (e) => {
-        let t = (0, A.HN)(this.questContent);
-        null != t && (0, A.xn)(this.questContent) && U.add(`${e}_${t}`);
+        let t = (0, E.HN)(this.questContent);
+        null != t && (0, E.xn)(this.questContent) && D.add(`${e}_${t}`);
     };
     shouldExtendSession = (e) => {
-        let t = (0, A.HN)(this.questContent);
-        return null != t && !U.has(`${e}_${t}`) && (0, A.xn)(this.questContent);
+        let t = (0, E.HN)(this.questContent);
+        return null != t && !D.has(`${e}_${t}`) && (0, E.xn)(this.questContent);
     };
     onMinViewTimeReached = async () => {
-        let e = await (0, E.N)((0, O.jO)(this.questContent)),
+        let e = await (0, c.N)((0, A.jO)(this.questContent)),
             t = {
                 trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                 sourceQuestContent: this.sourceQuestContent,
@@ -97,103 +98,103 @@ class P {
                 min_view_time_seconds: this.minViewTimeSeconds,
                 min_viewport_percentage: this.minViewportPercentage,
                 triggered_by_status_change: this.triggeredByStatusChange,
-                apple_advertising_id: null != e && (0, u.isIOS)() ? e.advertisingId : null,
-                android_advertising_id: null != e && (0, u.isAndroid)() ? e.advertisingId : null,
+                apple_advertising_id: null != e && (0, f.isIOS)() ? e.advertisingId : null,
+                android_advertising_id: null != e && (0, f.isAndroid)() ? e.advertisingId : null,
                 ...(0, d.A)(),
                 ...(function (e) {
                     let t,
                         n,
-                        i = (0, A.xn)(e),
-                        a = (0, A.vZ)(e),
-                        r = (0, R.pc)(),
-                        _ = (0, R.Ld)();
-                    if (!a?.is_campaign_ias_enabled || !i || void 0 === r || void 0 === _) return null;
-                    let s = p.A.getGuildId(),
-                        l = null != s ? D.A.getGuild(s) : null,
-                        o = {
+                        i = (0, E.xn)(e),
+                        r = (0, E.vZ)(e),
+                        s = (0, T.pc)(),
+                        a = (0, T.Ld)();
+                    if (!r?.is_campaign_ias_enabled || !i || void 0 === s || void 0 === a) return null;
+                    let o = C.A.getGuildId(),
+                        l = null != o ? N.A.getGuild(o) : null,
+                        u = {
                             guilds:
-                                ((t = r()),
-                                (n = D.A.getGuilds()),
+                                ((t = s()),
+                                (n = N.A.getGuilds()),
                                 t
                                     .map((e) => {
                                         let t = n[e];
                                         if (void 0 === t) return null;
                                         let i = { id: t.id, name: t.name };
                                         null !== t.description && (i.description = t.description);
-                                        let a =
+                                        let r =
                                             null !== t.icon
-                                                ? (h.Ay.getGuildIconURL({
+                                                ? (O.Ay.getGuildIconURL({
                                                       id: t.id,
                                                       icon: t.icon,
                                                       size: 44,
                                                       canAnimate: !0,
                                                   }) ?? null)
                                                 : null;
-                                        return null !== a && (i.icon_url = a), i;
+                                        return null !== r && (i.icon_url = r), i;
                                     })
                                     .filter((e) => null !== e)),
                             channels:
                                 null == l
                                     ? []
-                                    : _()
+                                    : a()
                                           .map((e) => {
-                                              let t = C.A.getChannel(e);
+                                              let t = S.A.getChannel(e);
                                               if (void 0 === t) return null;
-                                              let n = { id: t.id, name: (0, f.m1)(t, m.default, L.A) };
+                                              let n = { id: t.id, name: (0, I.m1)(t, v.default, y.A) };
                                               return t.topic.length > 0 && (n.channel_topic = t.topic), n;
                                           })
                                           .filter((e) => null !== e),
                         };
-                    null != s && (o.selected_guild_id = s);
-                    let E =
+                    null != o && (u.selected_guild_id = o);
+                    let c =
                         l?.banner !== null && l?.banner !== void 0
-                            ? (h.Ay.getGuildBannerURL({ id: l.id, banner: l.banner }, !0) ?? null)
+                            ? (O.Ay.getGuildBannerURL({ id: l.id, banner: l.banner }, !0) ?? null)
                             : null;
                     return (
-                        null !== E && (o.selected_guild_banner_url = E),
-                        o.guilds.length > 100 && ((o.guilds = o.guilds.slice(0, 100)), (o.truncated = !0)),
-                        o.channels.length > 100 && ((o.channels = o.channels.slice(0, 100)), (o.truncated = !0)),
-                        { brand_safety_context: JSON.stringify(o) }
+                        null !== c && (u.selected_guild_banner_url = c),
+                        u.guilds.length > 100 && ((u.guilds = u.guilds.slice(0, 100)), (u.truncated = !0)),
+                        u.channels.length > 100 && ((u.channels = u.channels.slice(0, 100)), (u.truncated = !0)),
+                        { brand_safety_context: JSON.stringify(u) }
                     );
                 })(this.questContent),
             };
         this.entity.adContentIds.forEach((e, i) => {
-            let a = (0, A.L4)(this.questContent, e),
-                r = this.shouldExtendSession(e);
-            if ((this.trackViewedPlacement(e), this.entity.adCreativeType === _.p.QUEST)) {
+            let r = (0, E.L4)(this.questContent, e),
+                s = this.shouldExtendSession(e);
+            if ((this.trackViewedPlacement(e), this.entity.adCreativeType === a.p.QUEST)) {
                 let e = this.entity.adContentIds[i],
-                    s = T.A.getQuest(e);
-                null == s || (0, A.Ic)(s) || (0, I.zh)(_.p.QUEST, [e]),
-                    (0, S.L)().info(
-                        `${s?.config.messages.questName ?? e} Quest viewed for at least ${this.minViewTimeSeconds}s at ${(0, O.jO)(this.questContent)}`,
+                    o = p.A.getQuest(e);
+                null == o || (0, E.Ic)(o) || (0, h.zh)(a.p.QUEST, [e]),
+                    (0, m.L)().info(
+                        `${o?.config.messages.questName ?? e} Quest viewed for at least ${this.minViewTimeSeconds}s at ${(0, A.jO)(this.questContent)}`,
                         { impressionId: this.id },
                     ),
-                    (0, N.av)({
+                    (0, g.av)({
                         ...t,
-                        shouldExtendSession: r,
+                        shouldExtendSession: s,
                         questId: e,
                         event: b.HAw.QUEST_CONTENT_VIEWED,
                         properties: {
                             ...n,
-                            ...this.commonProperties(s),
-                            metadata_sealed: a ?? null,
-                            traffic_metadata_raw: (0, A.yI)(this.questContent, s?.id) ?? null,
-                            traffic_metadata_sealed: (0, A.Gp)(this.questContent, s?.id) ?? null,
+                            ...this.commonProperties(o),
+                            metadata_sealed: r ?? null,
+                            traffic_metadata_raw: (0, E.yI)(this.questContent, o?.id) ?? null,
+                            traffic_metadata_sealed: (0, E.Gp)(this.questContent, o?.id) ?? null,
                         },
                     });
             } else {
                 let e = this.entity.adContentIds[i];
-                (0, S.L)().info(
-                    `${e} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, O.jO)(this.questContent)}`,
+                (0, m.L)().info(
+                    `${e} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, A.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
-                    (0, N.Qg)({
+                    (0, g.Qg)({
                         ...t,
-                        shouldExtendSession: r,
+                        shouldExtendSession: s,
                         adContentId: e,
                         adCreativeType: this.entity.adCreativeType,
                         event: b.HAw.QUEST_CONTENT_VIEWED,
-                        properties: { ...n, metadata_sealed: a ?? null, ...this.commonProperties() },
+                        properties: { ...n, metadata_sealed: r ?? null, ...this.commonProperties() },
                     });
             }
         }),
@@ -209,37 +210,37 @@ class P {
                         trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
                         sourceQuestContent: e.sourceQuestContent,
                     },
-                    a = {
+                    r = {
                         is_termination_beat: t,
                         viewed_time_ms: n,
                         triggered_by_status_change: e.triggeredByStatusChange,
                     };
-                e.entity.adContentIds.forEach((r, s) => {
-                    if (e.entity.adCreativeType === _.p.QUEST) {
-                        let r = e.entity.adContentIds[s],
-                            _ = T.A.getQuest(r);
-                        (0, S.L)().info(
-                            `${_?.config.messages.questName ?? r} Quest impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
+                e.entity.adContentIds.forEach((s, o) => {
+                    if (e.entity.adCreativeType === a.p.QUEST) {
+                        let s = e.entity.adContentIds[o],
+                            a = p.A.getQuest(s);
+                        (0, m.L)().info(
+                            `${a?.config.messages.questName ?? s} Quest impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: e.id },
                         ),
-                            (0, N.av)({
+                            (0, g.av)({
                                 ...i,
-                                questId: r,
+                                questId: s,
                                 event: b.HAw.QUEST_CONTENT_VIEW_TIME,
-                                properties: { ...a, ...e.commonProperties(_) },
+                                properties: { ...r, ...e.commonProperties(a) },
                             });
                     } else {
-                        let r = e.entity.adContentIds[s];
-                        (0, S.L)().info(
-                            `${r} ad content impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
+                        let s = e.entity.adContentIds[o];
+                        (0, m.L)().info(
+                            `${s} ad content impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: e.id },
                         ),
-                            (0, N.Qg)({
+                            (0, g.Qg)({
                                 ...i,
-                                adContentId: r,
+                                adContentId: s,
                                 adCreativeType: e.entity.adCreativeType,
                                 event: b.HAw.QUEST_CONTENT_VIEW_TIME,
-                                properties: { ...a, ...e.commonProperties() },
+                                properties: { ...r, ...e.commonProperties() },
                             });
                     }
                 });
@@ -250,14 +251,14 @@ class P {
     commonProperties = (e) => ({
         impression_id: this.id,
         is_quest_enrollment_blocked: this.isQuestEnrollmentBlocked,
-        quest_status: null == e ? void 0 : (0, O.NI)(e),
-        ...(0, O.fF)(this.questContent, this.questContentPosition, this.questContentRowIndex),
+        quest_status: null == e ? void 0 : (0, A.NI)(e),
+        ...(0, A.fF)(this.questContent, this.questContentPosition, this.questContentRowIndex),
     });
     clone = (e) => {
         let { triggeredByStatusChange: t } = e;
         return (
             this.stop(),
-            new P({
+            new L({
                 questContent: this.questContent,
                 questContentRowIndex: this.questContentRowIndex,
                 questContentPosition: this.questContentPosition,
@@ -284,43 +285,43 @@ class P {
             },
             t = { triggered_by_status_change: this.triggeredByStatusChange };
         this.entity.adContentIds.forEach((n, i) => {
-            let a = (0, A.L4)(this.questContent, n);
-            if (this.entity.adCreativeType === _.p.QUEST) {
+            let r = (0, E.L4)(this.questContent, n);
+            if (this.entity.adCreativeType === a.p.QUEST) {
                 let n = this.entity.adContentIds[i],
-                    r = T.A.getQuest(n);
-                (0, S.L)().info(
-                    `${r?.config.messages.questName ?? n} Quest became visible at ${(0, O.jO)(this.questContent)}`,
+                    s = p.A.getQuest(n);
+                (0, m.L)().info(
+                    `${s?.config.messages.questName ?? n} Quest became visible at ${(0, A.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
-                    (0, N.av)({
+                    (0, g.av)({
                         ...e,
                         questId: n,
                         event: b.HAw.QUEST_CONTENT_LOADED,
                         properties: {
                             ...t,
-                            metadata_sealed: a ?? null,
-                            ...this.commonProperties(r),
-                            traffic_metadata_raw: (0, A.yI)(this.questContent, r?.id) ?? null,
-                            traffic_metadata_sealed: (0, A.Gp)(this.questContent, r?.id) ?? null,
+                            metadata_sealed: r ?? null,
+                            ...this.commonProperties(s),
+                            traffic_metadata_raw: (0, E.yI)(this.questContent, s?.id) ?? null,
+                            traffic_metadata_sealed: (0, E.Gp)(this.questContent, s?.id) ?? null,
                         },
                     });
             } else {
                 let n = this.entity.adContentIds[i];
-                (0, S.L)().info(`${n} ad content became visible at ${(0, O.jO)(this.questContent)}`, {
+                (0, m.L)().info(`${n} ad content became visible at ${(0, A.jO)(this.questContent)}`, {
                     impressionId: this.id,
                 }),
-                    (0, N.Qg)({
+                    (0, g.Qg)({
                         ...e,
                         adContentId: n,
                         adCreativeType: this.entity.adCreativeType,
                         event: b.HAw.QUEST_CONTENT_LOADED,
-                        properties: { ...t, metadata_sealed: a ?? null, ...this.commonProperties() },
+                        properties: { ...t, metadata_sealed: r ?? null, ...this.commonProperties() },
                     });
             }
         }),
-            c.A.increment({
-                name: s.K.QUEST_CONTENT_IMPRESSION,
-                tags: [`quest_content:${(0, O.jO)(this.questContent)}`],
+            _.A.increment({
+                name: o.K.QUEST_CONTENT_IMPRESSION,
+                tags: [`quest_content:${(0, A.jO)(this.questContent)}`],
             }),
             (this.isRunning = !0);
     };
@@ -336,23 +337,23 @@ class P {
         };
     })();
 }
-let M = a.createContext(void 0);
-function G(e) {
-    let { visible: t, visibleChanged: n, focused: r, reference: s, focusedChanged: E, sourceQuestContent: d } = e,
-        c = (0, g.iY)(e),
-        u = a.useRef(null),
-        I = (0, l.bG)([T.A], () => null != T.A.questEnrollmentBlockedUntil, []);
+let w = r.createContext(void 0);
+function M(e) {
+    let { visible: t, visibleChanged: n, focused: s, reference: o, focusedChanged: c, sourceQuestContent: d } = e,
+        _ = (0, R.iY)(e),
+        f = r.useRef(null),
+        h = (0, l.bG)([p.A], () => null != p.A.questEnrollmentBlockedUntil, []);
     return (
-        (0, o.Ay)(() => () => {
-            null != u.current && u.current.stop();
+        (0, u.Ay)(() => () => {
+            null != f.current && f.current.stop();
         }),
-        a.useEffect(() => {
-            let i = r && t,
-                a = (n || E || c) && i,
-                s = ((n || E) && !i) || c;
-            if (((a || s) && null != u.current && u.current.stop(), a)) {
+        r.useEffect(() => {
+            let i = s && t,
+                r = (n || c || _) && i,
+                o = ((n || c) && !i) || _;
+            if (((r || o) && null != f.current && f.current.stop(), r)) {
                 let t = {
-                    isQuestEnrollmentBlocked: I,
+                    isQuestEnrollmentBlocked: h,
                     minViewTimeSeconds: e.minViewTimeSeconds,
                     onImpression: e.onImpression,
                     questContent: e.questContent,
@@ -360,17 +361,17 @@ function G(e) {
                     questContentRowIndex: e.questContentRowIndex,
                     sourceQuestContent: d,
                     trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
-                    triggeredByStatusChange: c,
+                    triggeredByStatusChange: _,
                 };
                 e.adCreativeType,
-                    _.p.QUEST,
-                    (u.current = new P({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType })),
-                    u.current.start();
+                    a.p.QUEST,
+                    (f.current = new L({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType })),
+                    f.current.start();
             }
         }, [
-            r,
+            s,
             t,
-            E,
+            c,
             n,
             e.adContentIds,
             e.onImpression,
@@ -378,12 +379,12 @@ function G(e) {
             e.questContentPosition,
             e.questContentRowIndex,
             e.trackGuildAndChannelMetadata,
-            c,
+            _,
             e.minViewTimeSeconds,
-            I,
+            h,
             d,
             e.adCreativeType,
         ]),
-        (0, i.jsx)(M.Provider, { value: u, children: e.children(s, u) })
+        (0, i.jsx)(w.Provider, { value: f, children: e.children(o, f) })
     );
 }

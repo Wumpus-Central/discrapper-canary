@@ -1,68 +1,68 @@
-n.d(t, { A: () => p, N: () => x });
-var i = n(64700),
-    l = n(942381),
-    s = n(465532),
-    a = n(843472),
-    r = n(608299),
-    o = n(23658),
-    c = n(425059),
-    d = n(218152),
-    u = n(451909),
-    h = n(31717),
-    A = n(522602),
-    _ = n(393309),
-    m = n(381941),
-    g = n(985018);
+t.d(n, { A: () => p, N: () => j });
+var l = t(64700),
+    i = t(942381),
+    s = t(465532),
+    a = t(720149),
+    r = t(608299),
+    d = t(494921),
+    o = t(395780),
+    c = t(218152),
+    u = t(451909),
+    h = t(31717),
+    A = t(522602),
+    m = t(659617),
+    g = t(381941),
+    x = t(375708);
 function p(e) {
     let {
-            parentChannel: t,
-            parentMessageId: n,
-            threadSettings: l,
-            privateThreadMode: c,
-            location: d,
+            parentChannel: n,
+            parentMessageId: t,
+            threadSettings: i,
+            privateThreadMode: o,
+            location: c,
             onThreadCreated: p,
             useDefaultThreadName: f,
         } = e,
-        x = i.useCallback((e, t, n, i) => {
-            a.A.sendMessage(e.id, u.Ay.parse(e, n), void 0, {
+        j = l.useCallback((e, n, t, l) => {
+            a.A.sendMessage(e.id, u.Ay.parse(e, t), void 0, {
                 eagerDispatch: !1,
-                location: m.Hx.THREAD_CREATION,
-                stickerIds: i,
-                attachmentsToUpload: t,
-                onAttachmentUploadError: (i, l, a, c) => {
-                    (0, o.openUploadError)({
-                        title: g.intl.string(g.t.B3vFdU),
-                        help: c?.message ?? g.intl.string(g.t.zMEjJg),
+                location: g.Hx.THREAD_CREATION,
+                stickerIds: l,
+                attachmentsToUpload: n,
+                onAttachmentUploadError: (l, i, a, o) => {
+                    (0, d.openUploadError)({
+                        title: x.intl.string(x.t.B3vFdU),
+                        help: o?.message ?? x.intl.string(x.t.zMEjJg),
                     }),
-                        "" !== n &&
+                        "" !== t &&
                             "" === h.A.getDraft(e.id, h.C.FirstThreadMessage) &&
-                            s.A.saveDraft(e.id, n, h.C.FirstThreadMessage),
+                            s.A.saveDraft(e.id, t, h.C.FirstThreadMessage),
                         0 === A.A.getUploadCount(e.id, h.C.FirstThreadMessage) &&
-                            r.A.setUploads({ channelId: e.id, uploads: t, draftType: h.C.FirstThreadMessage });
+                            r.A.setUploads({ channelId: e.id, uploads: n, draftType: h.C.FirstThreadMessage });
                 },
             });
         }, []);
-    return (0, _.r$)({
-        parentChannel: t,
-        parentMessageId: n,
-        threadSettings: l,
-        privateThreadMode: c,
-        location: d,
+    return (0, m.r$)({
+        parentChannel: n,
+        parentMessageId: t,
+        threadSettings: i,
+        privateThreadMode: o,
+        location: c,
         onThreadCreated: p,
         useDefaultThreadName: f,
-        uploadHandler: x,
+        uploadHandler: j,
     });
 }
 async function f(e) {
-    let t = new c.A(),
-        n = await t.uploadFiles(e);
-    return { uploaderFile: t._file, files: n };
+    let n = new o.A(),
+        t = await n.uploadFiles(e);
+    return { uploaderFile: n._file, files: t };
 }
-function x(e) {
-    let { parentChannel: t } = e,
-        { name: n, appliedTags: i } = (0, d.kU)((e) => {
-            let { name: t, appliedTags: n } = e;
-            return { name: t, appliedTags: n };
-        }, l.x);
-    return (0, _.w0)({ parentChannel: t, name: n, appliedTags: i, upload: f });
+function j(e) {
+    let { parentChannel: n } = e,
+        { name: t, appliedTags: l } = (0, c.kU)((e) => {
+            let { name: n, appliedTags: t } = e;
+            return { name: n, appliedTags: t };
+        }, i.x);
+    return (0, m.w0)({ parentChannel: n, name: t, appliedTags: l, upload: f });
 }

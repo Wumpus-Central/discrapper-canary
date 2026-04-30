@@ -1,4 +1,5 @@
-n.d(t, { L: () => a, i: () => r });
+"use strict";
+n.d(t, { L: () => s, i: () => r });
 var i,
     r =
         (((i = {}).CLASSIC = "classic"),
@@ -11,4 +12,4 @@ var i,
         (i.HALLOWEEN = "halloween"),
         (i.WINTER_HOLIDAY = "winter_holiday"),
         i);
-let a = "custom_notification_sounds_discodo";
+let s = "custom_notification_sounds_discodo";

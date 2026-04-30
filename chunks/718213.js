@@ -1,16 +1,17 @@
-s.d(t, { A: () => r });
-var a = s(64700);
+"use strict";
+n.d(t, { A: () => r });
+var i = n(64700);
 let r = function (e, t) {
-    let [s, r] = a.useState(e);
+    let [n, r] = i.useState(e);
     return (
-        a.useEffect(() => {
-            let s = setTimeout(() => {
+        i.useEffect(() => {
+            let n = setTimeout(() => {
                 r(e);
             }, t);
             return () => {
-                clearTimeout(s);
+                clearTimeout(n);
             };
         }, [e, t]),
-        s
+        n
     );
 };

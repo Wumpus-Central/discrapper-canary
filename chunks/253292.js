@@ -1,26 +1,27 @@
-s.d(t, { K: () => c });
-var l = s(64700),
-    a = s(17928),
-    r = s(775602),
-    n = s(723702),
-    o = s(746002),
-    u = s(901139);
-function c(e) {
-    let { getImgCache: t } = (0, u.TW)(),
-        s = (0, a.bG)([r.A], () => r.A.useReducedMotion);
-    return l.useMemo(() => {
+"use strict";
+n.d(t, { K: () => u });
+var i = n(64700),
+    r = n(17928),
+    s = n(775602),
+    a = n(723702),
+    o = n(746002),
+    l = n(901139);
+function u(e) {
+    let { getImgCache: t } = (0, l.TW)(),
+        n = (0, r.bG)([s.A], () => s.A.useReducedMotion);
+    return i.useMemo(() => {
         if (null != e.previewToolKey && "" !== e.previewToolKey) {
-            let s = t(e.previewToolKey);
-            return { staticImageUrl: s?.staticUrl, animatedImageUrl: s?.animatedUrl };
+            let n = t(e.previewToolKey);
+            return { staticImageUrl: n?.staticUrl, animatedImageUrl: n?.animatedUrl };
         }
-        let l = (platform.name ?? "unknown").toLowerCase(),
-            a = s || (0, n.isLinux)() || "safari" === l;
+        let i = (platform.name ?? "unknown").toLowerCase(),
+            r = n || (0, a.isLinux)() || "safari" === i;
         return {
             staticImageUrl: (0, o.getCollectiblesItemAssetUrl)({
                 skuId: e.skuId,
                 assetFormat: o.CollectiblesItemAssetFormat.STATIC,
             }),
-            ...(a
+            ...(r
                 ? {
                       animatedImageUrl: (0, o.getCollectiblesItemAssetUrl)({
                           skuId: e.skuId,
@@ -34,5 +35,5 @@ function c(e) {
                       }),
                   }),
         };
-    }, [e, t, s]);
+    }, [e, t, n]);
 }

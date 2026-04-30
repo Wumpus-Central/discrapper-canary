@@ -1,26 +1,27 @@
-n.d(e, { A: () => m });
+"use strict";
+n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
-var s = n(17928),
-    l = n(477782),
-    r = n(964355),
-    a = n(827343),
-    u = n(51760),
-    o = n(824744),
+var r = n(17928),
+    s = n(477782),
+    a = n(964355),
+    o = n(827343),
+    l = n(51760),
+    u = n(824744),
     c = n(723702),
-    d = n(985018);
-function m(t) {
-    let e = (0, s.bG)([u.Ay], () => (0, o.M)(u.Ay.getOutputVolume()));
-    return (0, i.jsx)(l.aK, {
+    d = n(375708);
+function _(e) {
+    let t = (0, r.bG)([l.Ay], () => (0, u.M)(l.Ay.getOutputVolume()));
+    return (0, i.jsx)(s.aK, {
         id: "output",
         label: d.intl.string(d.t.eATD2B),
-        control: (n, s) =>
-            (0, i.jsx)(r.i, {
+        control: (n, r) =>
+            (0, i.jsx)(a.i, {
                 ...n,
-                ref: s,
-                value: e,
+                ref: r,
+                value: t,
                 maxValue: c.isPlatformEmbedded ? 200 : 100,
-                onChange: (e) => a.A.setOutputVolume((0, o.w)(e), { analyticsLocations: t }),
+                onChange: (t) => o.A.setOutputVolume((0, u.w)(t), { analyticsLocations: e }),
                 "aria-label": d.intl.string(d.t.eATD2B),
             }),
     });

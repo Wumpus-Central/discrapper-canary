@@ -1,83 +1,84 @@
-n.d(t, { EG: () => l, Gu: () => E, JI: () => u, Lp: () => c, SC: () => A, fk: () => I, hV: () => d, o6: () => o });
+"use strict";
+n.d(t, { EG: () => l, Gu: () => c, JI: () => f, Lp: () => _, SC: () => p, fk: () => h, hV: () => d, o6: () => u });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    a = n.n(r),
-    s = n(661531),
-    _ = n(95361);
-let l = { ROUND: _.rS, ROUND_LEFT: _.Q2, ROUND_RIGHT: _.Hg, SQUARE: "" };
-function o(e) {
+    s = n.n(r),
+    a = n(661531),
+    o = n(95361);
+let l = { ROUND: o.rS, ROUND_LEFT: o.Q2, ROUND_RIGHT: o.Hg, SQUARE: "" };
+function u(e) {
     return e < 10 ? 16 : e < 100 ? 22 : 30;
 }
-function E(e) {
+function c(e) {
     return e < 1e3 ? `${e}` : `${Math.min(Math.floor(e / 1e3), 9)}k+`;
 }
 let d = (e) => {
         let {
             count: t,
-            color: n = s.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+            color: n = a.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
             disableColor: r = !1,
             shape: d = l.ROUND,
-            className: c,
-            style: u,
-            renderBadgeCount: I = E,
-            ...A
+            className: _,
+            style: f,
+            renderBadgeCount: h = c,
+            ...p
         } = e;
         return (0, i.jsx)("div", {
-            className: a()(c, _.Do, d),
-            style: { backgroundColor: r ? void 0 : n, width: o(t), ...u },
-            ...A,
-            children: I(t),
+            className: s()(_, o.Do, d),
+            style: { backgroundColor: r ? void 0 : n, width: u(t), ...f },
+            ...p,
+            children: h(t),
         });
     },
-    c = (e) => {
+    _ = (e) => {
         let {
             text: t,
             className: n,
-            color: r = s.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            shape: o = l.ROUND,
-            disableColor: E = !1,
+            color: r = a.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+            shape: u = l.ROUND,
+            disableColor: c = !1,
             style: d,
-            ...c
+            ..._
         } = e;
         return (0, i.jsx)("div", {
-            className: a()(n, _.U1, o),
-            style: { backgroundColor: E ? void 0 : r, ...d },
-            ...c,
+            className: s()(n, o.U1, u),
+            style: { backgroundColor: c ? void 0 : r, ...d },
+            ..._,
             children: t,
         });
     },
-    u = (e) => {
+    f = (e) => {
         let { text: t, className: n, ...r } = e;
-        return (0, i.jsx)(c, { className: a()(_.BE, n), text: t, ...r });
+        return (0, i.jsx)(_, { className: s()(o.BE, n), text: t, ...r });
     },
-    I = (e) => {
+    h = (e) => {
         let {
             icon: t,
             className: n,
-            color: r = s.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            shape: o = l.ROUND,
-            disableColor: E = !1,
+            color: r = a.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+            shape: u = l.ROUND,
+            disableColor: c = !1,
             style: d,
         } = e;
         return (0, i.jsx)("div", {
-            className: a()(n, _.u3, o),
-            style: { backgroundColor: E ? void 0 : r, ...d },
-            children: (0, i.jsx)(t, { className: _.Kk, color: "currentColor" }),
+            className: s()(n, o.u3, u),
+            style: { backgroundColor: c ? void 0 : r, ...d },
+            children: (0, i.jsx)(t, { className: o.Kk, color: "currentColor" }),
         });
     },
-    A = (e) => {
+    p = (e) => {
         let {
             className: t,
-            color: n = s.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
+            color: n = a.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
             shape: r = l.ROUND,
-            disableColor: o = !1,
-            style: E,
+            disableColor: u = !1,
+            style: c,
             ...d
         } = e;
         return (0, i.jsx)("div", {
-            className: a()(t, _.Ky, r),
-            style: { backgroundColor: o ? void 0 : n, ...E },
+            className: s()(t, o.Ky, r),
+            style: { backgroundColor: u ? void 0 : n, ...c },
             ...d,
         });
     };

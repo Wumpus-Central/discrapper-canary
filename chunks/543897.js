@@ -1,14 +1,15 @@
-n.d(t, { A: () => a }), n(321073);
+"use strict";
+n.d(t, { A: () => o }), n(321073);
 var i = n(17928),
-    l = n(228366);
+    r = n(228366);
 let s = [];
-class r extends i.Ay.Store {
+class a extends i.Ay.Store {
     static displayName = "GeoRestrictedGuildStore";
     getGeoRestrictedGuilds() {
         return s;
     }
 }
-let a = new r(l.h, {
+let o = new a(r.h, {
     CONNECTION_OPEN: function (e) {
         s = e.geoRestrictedGuilds;
     },

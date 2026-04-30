@@ -1,56 +1,57 @@
-n.d(t, { yx: () => C, yv: () => S });
+"use strict";
+n.d(t, { yx: () => I, yv: () => T });
 var i = n(735438),
     r = n.n(i),
     s = n(554146),
-    l = n(771781),
+    a = n(558845),
     o = n(826673),
-    a = n(181079),
-    d = n(379587),
+    l = n(181079),
+    u = n(379587),
     c = n(832275),
-    _ = n(366811),
-    u = n(309010),
-    g = n(967198),
+    d = n(366811),
+    _ = n(309010),
+    f = n(967198),
     h = n(711014),
-    A = n(287809),
-    p = n(619921),
-    I = n(265422),
-    E = n(652215);
-let b = r().throttle(function () {
+    p = n(287809),
+    E = n(619921),
+    m = n(265422),
+    g = n(652215);
+let A = r().throttle(function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
             t = h.Ay.getFlattenedGuildIds(),
-            { enabled: n } = d.o.getConfig({ location: "navigateToServer" }),
-            i = (0, l.dD)(s.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
+            { enabled: n } = u.o.getConfig({ location: "navigateToServer" }),
+            i = (0, a.dD)(s.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
             r = (0, o.k8)(s.M.FAVORITES_SERVER_ONBOARDING_INTRO),
-            b = (function (e) {
-                let t = _.A.getState().guildId;
+            A = (function (e) {
+                let t = d.A.getState().guildId;
                 if (null == t) return -2;
-                if (t === E.YYv) return -1;
+                if (t === g.YYv) return -1;
                 let n = e.indexOf(t);
                 return -1 === n ? -2 : n;
             })(t);
         if (
-            (-1 !== (b += e) ||
-                (0, c.J)(a.A, A.default, g.A, {
+            (-1 !== (A += e) ||
+                (0, c.J)(l.A, p.default, f.A, {
                     favoritesGuildXPEnabled: n,
                     isMenuItemDCSelected: i,
                     isIntroDCDismissed: r,
                 }) ||
-                (b += e),
-            -3 === b && (b = t.length - 1),
-            b >= t.length || -2 === b)
+                (A += e),
+            -3 === A && (A = t.length - 1),
+            A >= t.length || -2 === A)
         )
-            return void (0, I.a)(p.A.getHomeLink());
-        let C = -1 === b ? E.YYv : t[b],
-            S = u.A.getChannelId(C);
-        (0, I.i)(C, S === C ? null : S, !1);
-    }, E.ugG),
-    C = {
+            return void (0, m.a)(E.A.getHomeLink());
+        let I = -1 === A ? g.YYv : t[A],
+            T = _.A.getChannelId(I);
+        (0, m.i)(I, T === I ? null : T, !1);
+    }, g.ugG),
+    I = {
         binds: ["mod+alt+down", "mod+shift+]", "ctrl+tab"],
         comboKeysBindGlobal: !0,
-        action: (e) => (e.preventDefault(), e.stopPropagation(), b(), !1),
+        action: (e) => (e.preventDefault(), e.stopPropagation(), A(), !1),
     },
-    S = {
+    T = {
         binds: ["mod+alt+up", "mod+shift+[", "ctrl+shift+tab"],
         comboKeysBindGlobal: !0,
-        action: (e) => (e.preventDefault(), e.stopPropagation(), b(-1), !1),
+        action: (e) => (e.preventDefault(), e.stopPropagation(), A(-1), !1),
     };

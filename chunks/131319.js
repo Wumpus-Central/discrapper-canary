@@ -1,15 +1,16 @@
-n.d(t, { A: () => _ });
+"use strict";
+n.d(t, { A: () => o });
 var i = n(17928),
     r = n(228366);
-let a = n(731854).PR;
-class s extends i.Ay.Store {
+let s = n(731854).PR;
+class a extends i.Ay.Store {
     static displayName = "BitRateStore";
     get bitrate() {
-        return a;
+        return s;
     }
 }
-let _ = new s(r.h, {
+let o = new a(r.h, {
     SET_CHANNEL_BITRATE: function (e) {
-        a = e.bitrate;
+        s = e.bitrate;
     },
 });

@@ -1,17 +1,18 @@
-n.d(t, { A: () => u });
-var r = n(636537),
-    a = n(228366),
-    l = n(652215);
-let u = {
+"use strict";
+n.d(t, { A: () => a });
+var i = n(636537),
+    r = n(228366),
+    s = n(652215);
+let a = {
     async fetch() {
         try {
-            let e = await r.Bo.get({ url: l.Rsh.FRIEND_SUGGESTIONS, rejectWithError: !0 });
-            a.h.dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: e.body });
+            let e = await i.Bo.get({ url: s.Rsh.FRIEND_SUGGESTIONS, rejectWithError: !0 });
+            r.h.dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: e.body });
         } catch (e) {
-            a.h.dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_FAILURE" });
+            r.h.dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_FAILURE" });
         }
     },
     ignore(e) {
-        r.Bo.del({ url: l.Rsh.FRIEND_SUGGESTION(e), rejectWithError: !0 });
+        i.Bo.del({ url: s.Rsh.FRIEND_SUGGESTION(e), rejectWithError: !0 });
     },
 };

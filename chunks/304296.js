@@ -1,50 +1,51 @@
-n.d(t, { A: () => p });
+"use strict";
+n.d(t, { A: () => E });
 var i = n(17928),
     r = n(228366),
-    a = n(723702),
-    l = n(19575);
-let s = new Set(["nvidia"]);
-var o = n(299855),
-    d = n.n(o);
-let u = { [a.PlatformTypes.WINDOWS]: { nvidia: "<=537.58.0 || >=546.31" } },
-    c = { [a.PlatformTypes.WINDOWS]: { nvidia: ">=397.93.0" } },
+    s = n(723702),
+    a = n(19575);
+let o = new Set(["nvidia"]);
+var l = n(299855),
+    u = n.n(l);
+let c = { [s.PlatformTypes.WINDOWS]: { nvidia: "<=537.58.0 || >=546.31" } },
+    d = { [s.PlatformTypes.WINDOWS]: { nvidia: ">=397.93.0" } },
     _ = !1,
-    A = !0,
+    f = !0,
     h = !1;
-class E extends i.Ay.Store {
+class p extends i.Ay.Store {
     static displayName = "StreamingCapabilitiesStore";
     initialize() {
-        !a.isPlatformEmbedded ||
+        !s.isPlatformEmbedded ||
             __OVERLAY__ ||
-            l.Ay.getGPUDriverVersions().then((e) => {
+            a.Ay.getGPUDriverVersions().then((e) => {
                 (_ = (function (e) {
-                    let t = c[(0, a.getPlatform)()];
+                    let t = d[(0, s.getPlatform)()];
                     if (null == t) return !1;
                     for (let n of Object.keys(e)) {
                         let i = e[n],
                             r = t[n];
                         if (null == i || null == r || null != i.error) continue;
-                        let a = `${i.major ?? 0}.${i.minor ?? 0}.0`;
-                        if (!d().satisfies(a, r)) return !0;
+                        let s = `${i.major ?? 0}.${i.minor ?? 0}.0`;
+                        if (!u().satisfies(s, r)) return !0;
                     }
                     return !1;
                 })(e)),
-                    (A = (function (e) {
+                    (f = (function (e) {
                         for (let t of Object.keys(e)) {
                             let n = e[t];
-                            if (null != n && null == n.error && s.has(t)) return !0;
+                            if (null != n && null == n.error && o.has(t)) return !0;
                         }
                         return !1;
                     })(e)),
                     (h = (function (e) {
-                        let t = u[(0, a.getPlatform)()];
+                        let t = c[(0, s.getPlatform)()];
                         if (null == t) return !1;
                         for (let n of Object.keys(e)) {
                             let i = e[n],
                                 r = t[n];
                             if (null == i || null == r || null != i.error) continue;
-                            let a = `${i.major ?? 0}.${i.minor ?? 0}.0`;
-                            if (!d().satisfies(a, r)) return !0;
+                            let s = `${i.major ?? 0}.${i.minor ?? 0}.0`;
+                            if (!u().satisfies(s, r)) return !0;
                         }
                         return !1;
                     })(e)),
@@ -55,18 +56,18 @@ class E extends i.Ay.Store {
         return _;
     }
     get canUseHardwareAcceleration() {
-        return A;
+        return f;
     }
     get problematicGPUDriver() {
         return h;
     }
     getState() {
-        return { GPUDriversOutdated: _, canUseHardwareAcceleration: A, problematicGPUDriver: h };
+        return { GPUDriversOutdated: _, canUseHardwareAcceleration: f, problematicGPUDriver: h };
     }
 }
-let p = new E(r.h, {
+let E = new p(r.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { streamingCapabilitiesStoreState: t } = e;
-        (_ = t.GPUDriversOutdated), (A = t.canUseHardwareAcceleration);
+        (_ = t.GPUDriversOutdated), (f = t.canUseHardwareAcceleration);
     },
 });

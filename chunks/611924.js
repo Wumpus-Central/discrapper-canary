@@ -1,10 +1,11 @@
-n.d(t, { P: () => s });
-var a = n(64700),
-    i = n(17928),
-    r = n(736056);
-function s(e) {
-    let [t, n] = (0, i.yK)([r.A], () => [r.A.getAllUserExperimentDescriptors(), r.A.getGuildExperiments()]);
-    a.useEffect(() => {
+"use strict";
+n.d(t, { P: () => a });
+var i = n(64700),
+    r = n(17928),
+    s = n(736056);
+function a(e) {
+    let [t, n] = (0, r.yK)([s.A], () => [s.A.getAllUserExperimentDescriptors(), s.A.getGuildExperiments()]);
+    i.useEffect(() => {
         e.trigger();
     }, [e, t, n]);
 }

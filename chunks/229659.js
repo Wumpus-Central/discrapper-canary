@@ -1,35 +1,36 @@
-n.d(t, { A: () => o });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(627968),
-    l = n(64700),
-    a = n(502671),
-    s = n(827734),
-    r = n(602853);
-function o(e) {
-    let t = (0, l.useRef)(null),
-        [n, o] = (0, l.useState)(null),
-        [c] = (0, l.useState)(() => new a.TimelineDataSeries()),
-        d = (0, r.r)(s.A.colors.BACKGROUND_BASE_LOW).hsl(),
-        u = (0, r.r)(s.A.colors.TEXT_DEFAULT).hsl(),
-        h = (0, r.r)(s.A.colors.BACKGROUND_MOD_MUTED).hsl(),
-        m = (0, r.r)(s.A.unsafe_rawColors.BRAND_500).hsl();
-    (0, l.useEffect)(() => {
+    r = n(64700),
+    s = n(502671),
+    a = n(661531),
+    o = n(602853);
+function l(e) {
+    let t = (0, r.useRef)(null),
+        [n, l] = (0, r.useState)(null),
+        [u] = (0, r.useState)(() => new s.TimelineDataSeries()),
+        c = (0, o.r)(a.A.colors.BACKGROUND_BASE_LOW).hsl(),
+        d = (0, o.r)(a.A.colors.TEXT_DEFAULT).hsl(),
+        _ = (0, o.r)(a.A.colors.BACKGROUND_MOD_MUTED).hsl(),
+        f = (0, o.r)(a.A.unsafe_rawColors.BRAND_500).hsl();
+    (0, r.useEffect)(() => {
         let e = t.current;
         if (null == e) return;
-        let n = new a.TimelineGraphView(e, window.devicePixelRatio ?? 1);
-        (n.backgroundColor = d),
-            (n.textColor = u),
-            (n.gridColor = h),
+        let n = new s.TimelineGraphView(e, window.devicePixelRatio ?? 1);
+        (n.backgroundColor = c),
+            (n.textColor = d),
+            (n.gridColor = _),
             (n.timeOptions = { timeStyle: "short" }),
             (n.fontFamily = "gg sans"),
             (n.fontSize = 11),
-            c.setColor(m),
-            n.addDataSeries(c),
+            u.setColor(f),
+            n.addDataSeries(u),
             n.updateEndDate(),
-            o(n);
-    }, [t, d, m, h, u, c]);
-    let A = e.converter,
-        g = null != A ? e.dataPoints.map((e) => ({ ...e, value: A(e.value) })) : e.dataPoints;
-    c.setPoints(g), n?.updateEndDate();
-    let p = { width: e.width, height: e.height };
-    return (0, i.jsx)("canvas", { style: p, width: e.width, height: e.height, ref: t }, "canvas");
+            l(n);
+    }, [t, c, f, _, d, u]);
+    let h = e.converter,
+        p = null != h ? e.dataPoints.map((e) => ({ ...e, value: h(e.value) })) : e.dataPoints;
+    u.setPoints(p), n?.updateEndDate();
+    let E = { width: e.width, height: e.height };
+    return (0, i.jsx)("canvas", { style: E, width: e.width, height: e.height, ref: t }, "canvas");
 }

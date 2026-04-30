@@ -1,5 +1,6 @@
-n.d(t, { A: () => a, M: () => r });
-let i = (0, n(250105).Ay)({
+"use strict";
+n.d(t, { A: () => s, M: () => r });
+let i = (0, n(240921).Ay)({
     name: "2026-02-boost-to-unlock-coachmark",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -8,4 +9,4 @@ let i = (0, n(250105).Ay)({
 function r(e) {
     return i.useConfig({ location: e }).enabled;
 }
-let a = i;
+let s = i;

@@ -1,18 +1,19 @@
-n.d(t, { o: () => l, z: () => _ });
+"use strict";
+n.d(t, { o: () => l, z: () => o });
 var i = n(947320),
-    r = n(205693),
-    a = n(824744),
-    s = n(355097);
-function _(e, t) {
+    r = n(459838),
+    s = n(824744),
+    a = n(355097);
+function o(e, t) {
     let n = t === r.x.STREAM ? i.i.STREAM : i.i.USER;
-    return 1 > Math.abs((0, a.M)(n) - (0, a.M)(e)) ? n : e;
+    return 1 > Math.abs((0, s.M)(n) - (0, s.M)(e)) ? n : e;
 }
 function l(e) {
     switch (e) {
         case r.x.DEFAULT:
-            return s.W.USER;
+            return a.W.USER;
         case r.x.STREAM:
-            return s.W.STREAM;
+            return a.W.STREAM;
         default:
             return;
     }

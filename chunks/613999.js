@@ -1,26 +1,27 @@
-n.d(t, { $l: () => _, Ay: () => E, O_: () => o, xx: () => l }), n(321073);
+"use strict";
+n.d(t, { $l: () => o, Ay: () => c, O_: () => u, xx: () => l }), n(321073);
 var i = n(543531),
     r = n(407689),
-    a = n(853742),
-    s = n(759735);
-function _(e) {
+    s = n(853742),
+    a = n(935505);
+function o(e) {
     return `${r.mG.FORUM_CHANNEL}_${e}`;
 }
 function l(e, t, n) {
-    (0, i.wR)(_(e), t, n);
+    (0, i.wR)(o(e), t, n);
 }
-function o(e, t, n) {
-    (0, i.zK)(_(e), t, n);
+function u(e, t, n) {
+    (0, i.zK)(o(e), t, n);
 }
-class E extends r.id {
+class c extends r.id {
     guildId;
     channelId;
     sessionId;
     constructor({ guildId: e, channelId: t, windowId: n, isPaused: i }) {
-        super({ windowId: n, isPaused: i, id: _(t) }),
+        super({ windowId: n, isPaused: i, id: o(t) }),
             (this.guildId = e),
             (this.channelId = t),
-            (this.sessionId = (0, s.cr)(t));
+            (this.sessionId = (0, a.cr)(t));
     }
     createFlushSeenItemsFunction = (e) => {
         let t = this.trackedFeedItems,
@@ -34,14 +35,14 @@ class E extends r.id {
             };
         return () =>
             (function (e) {
-                let { guildId: t, channelId: n, sessionId: i, trackedFeedItems: r, isForcedFlush: s } = e,
-                    _ = [],
+                let { guildId: t, channelId: n, sessionId: i, trackedFeedItems: r, isForcedFlush: a } = e,
+                    o = [],
                     l = [];
                 for (let e of Object.keys(r)) {
-                    let t = r[e].computeSeenTimeDestructive(s);
-                    t > 0 && (_.push(e), l.push(t));
+                    let t = r[e].computeSeenTimeDestructive(a);
+                    t > 0 && (o.push(e), l.push(t));
                 }
-                0 !== _.length && (0, a.Z_)({ guildId: t, channelId: n, sessionId: i, postIds: _, additionalTimes: l });
+                0 !== o.length && (0, s.Z_)({ guildId: t, channelId: n, sessionId: i, postIds: o, additionalTimes: l });
             })(i);
     };
 }

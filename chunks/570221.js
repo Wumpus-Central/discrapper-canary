@@ -1,7 +1,8 @@
-n.d(t, { A: () => l });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(315069),
     r = n(874638);
-class l extends i.A {
+class s extends i.A {
     id;
     invoiceItems;
     total;
@@ -15,7 +16,7 @@ class l extends i.A {
     orbsReward;
     checkoutContext;
     static createInvoiceFromServer(e) {
-        return new l({
+        return new s({
             id: e.id,
             invoiceItems: e.invoice_items?.map(r.c),
             total: e.total,
@@ -31,7 +32,7 @@ class l extends i.A {
         });
     }
     static createFromOTPPreview(e) {
-        return new l({
+        return new s({
             id: "",
             invoiceItems: e.invoice_items?.map(r.c),
             total: e.amount,

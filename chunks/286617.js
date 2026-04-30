@@ -1,29 +1,30 @@
-i.d(e, { A: () => a });
-var l = i(981616);
-function a(t, e, i, a) {
-    let n = t.hasConnectedAccount(),
-        r = (0, l.d3)(t),
-        s = t.getTrack(),
-        o = t.getSyncingWith(),
-        c = t.getActivity(),
-        d = s?.id ?? c?.sync_id ?? t.getLastPlayedTrackId(),
-        u = i.id === e.getId(),
-        _ = n && !r,
-        p = null != d && d === a?.sync_id,
-        f = c?.party != null && a?.party?.id === c.party.id,
-        A = o?.userId != null && o?.userId === i.id;
+"use strict";
+n.d(t, { A: () => r });
+var i = n(981616);
+function r(e, t, n, r) {
+    let s = e.hasConnectedAccount(),
+        a = (0, i.d3)(e),
+        o = e.getTrack(),
+        l = e.getSyncingWith(),
+        u = e.getActivity(),
+        c = o?.id ?? u?.sync_id ?? e.getLastPlayedTrackId(),
+        d = n.id === t.getId(),
+        _ = s && !a,
+        f = null != c && c === r?.sync_id,
+        h = u?.party != null && r?.party?.id === u.party.id,
+        p = l?.userId != null && l?.userId === n.id;
     return {
-        user: i,
-        activity: a,
-        hasSpotifyAccount: n,
-        canPlaySpotify: r,
+        user: n,
+        activity: r,
+        hasSpotifyAccount: s,
+        canPlaySpotify: a,
         notPlayable: _,
-        syncingWithParty: f,
-        syncingWithUser: A,
-        isCurrentUser: u,
-        currentUserTrackId: d,
-        playingSameTrack: p,
-        playDisabled: u || _ || p,
-        syncDisabled: u || A || f,
+        syncingWithParty: h,
+        syncingWithUser: p,
+        isCurrentUser: d,
+        currentUserTrackId: c,
+        playingSameTrack: f,
+        playDisabled: d || _ || f,
+        syncDisabled: d || p || h,
     };
 }

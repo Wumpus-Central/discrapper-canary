@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, { A: () => d });
-var r = n(439372),
-    i = n(287809),
+var i = n(439372),
+    r = n(287809),
     s = n(927578);
-n(40185);
-var a = n(597758),
+n(960851);
+var a = n(962644),
     o = n(788868),
     l = n(652215),
     u = n(818348);
-class c extends r.A {
+class c extends i.A {
     actions = {
         POST_CONNECTION_OPEN: this.onPostConnectionOpen.bind(this),
         EXPERIMENTS_FETCH_SUCCESS: this.onPostConnectionOpen.bind(this),
@@ -23,7 +23,7 @@ class c extends r.A {
         (0, a.BE)(), await this.maybeFetchBogoPromotion();
     }
     maybeFetchBogoPromotion = async () => {
-        let e = i.default.getCurrentUser();
+        let e = r.default.getCurrentUser();
         s.Ay.isPremiumExactly(e, o.PremiumTypes.TIER_2);
     };
     onSubscriptionUpdated(e) {

@@ -1,46 +1,47 @@
-n.d(t, { Au: () => m, d5: () => h, j7: () => E, kS: () => A, l6: () => p });
+"use strict";
+n.d(t, { Au: () => m, d5: () => h, j7: () => p, kS: () => f, l6: () => E });
 var i = n(684013),
-    r = n(833551),
-    a = n(489277),
-    l = n(19575),
-    s = n(350535),
-    o = n(636401),
-    d = n(90924),
-    u = n(613057),
-    c = n(652215);
+    r = n(296027),
+    s = n(489277),
+    a = n(19575),
+    o = n(350535),
+    l = n(636401),
+    u = n(90924),
+    c = n(613057),
+    d = n(652215);
 let _ = ["207646673902501888"];
-function A(e) {
-    return null != e && !!r.default.isOverlayOOPEnabledForPid(e) && a.A.isReady(e);
+function f(e) {
+    return null != e && !!r.default.isOverlayOOPEnabledForPid(e) && s.A.isReady(e);
 }
 function h(e) {
     return null == e
-        ? { lock: c.FXj, context: c.BRT.APP }
-        : A(e)
+        ? { lock: d.FXj, context: d.BRT.APP }
+        : f(e)
           ? (i.A.setInputLocked(!1, e),
             {
                 lock() {
                     i.A.setInputLocked(!0, e);
                 },
-                context: c.BRT.POPOUT,
+                context: d.BRT.POPOUT,
             })
-          : (l.Ay.focus(null, !0),
+          : (a.Ay.focus(null, !0),
             {
                 lock() {
-                    l.Ay.setForegroundProcess(e);
+                    a.Ay.setForegroundProcess(e);
                 },
-                context: c.BRT.APP,
+                context: d.BRT.APP,
             });
 }
-let E = async (e, t, n) => {
-        if (((0, d.sq)(e, t), (null == n || "" === n) && (0, d.IR)(t)))
-            return (e.authorization.scopes = [u.LQ, u.kw]), Promise.resolve();
+let p = async (e, t, n) => {
+        if (((0, u.sq)(e, t), (null == n || "" === n) && (0, u.IR)(t)))
+            return (e.authorization.scopes = [c.LQ, c.kw]), Promise.resolve();
         if (null == n || "" === n)
-            return Promise.reject(new o.A({ closeCode: c.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
-        let i = l.Ay.releaseChannel !== c.BIo.CANARY && !_.includes(n) && e.transport !== u.z4.POST_MESSAGE;
-        return await (0, d.e2)(n, i, e.abortController.signal), (0, d.uM)(e, n, t);
+            return Promise.reject(new l.A({ closeCode: d.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
+        let i = a.Ay.releaseChannel !== d.BIo.CANARY && !_.includes(n) && e.transport !== c.z4.POST_MESSAGE;
+        return await (0, u.e2)(n, i, e.abortController.signal), (0, u.uM)(e, n, t);
     },
-    p = () =>
-        (0, d.BB)((e) => {
+    E = () =>
+        (0, u.BB)((e) => {
             let t = [];
             return (
                 null != e.modeOptions.shortcut &&
@@ -48,18 +49,18 @@ let E = async (e, t, n) => {
                     (t = e.modeOptions.shortcut.map((e) => ({
                         type: e[0],
                         code: e[1],
-                        name: (0, s.Qd)(e) ?? "unknown",
+                        name: (0, o.Qd)(e) ?? "unknown",
                     }))),
                 t
             );
         }),
     m = (e) =>
-        (0, d.Ub)(e, (e) => {
+        (0, u.Ub)(e, (e) => {
             let t = "";
             return (
                 null != e.modeOptions.shortcut &&
                     Array.isArray(e.modeOptions.shortcut) &&
-                    (t = (0, s.dI)(e.modeOptions.shortcut)),
+                    (t = (0, o.dI)(e.modeOptions.shortcut)),
                 t
             );
         });

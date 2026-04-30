@@ -1,4 +1,5 @@
-n.d(t, { M: () => a, l: () => r });
+"use strict";
+n.d(t, { M: () => s, l: () => r });
 var i,
     r =
         (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"),
@@ -69,7 +70,7 @@ var i,
         (i[(i.GUILD_BOOST_UPSELL = 66)] = "GUILD_BOOST_UPSELL"),
         (i[(i.FRIEND_REQUEST_ACCEPTED = 67)] = "FRIEND_REQUEST_ACCEPTED"),
         i);
-let a = {
+let s = {
     UNDELETABLE: new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64]),
     GUILD_DISCOVERY_STATUS: new Set([14, 15, 16, 17]),
     USER_MESSAGE: new Set([0, 19, 20, 23, 26, 41, 45, 47]),

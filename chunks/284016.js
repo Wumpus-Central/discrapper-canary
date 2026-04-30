@@ -1,22 +1,23 @@
-n.d(t, { A: () => E });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(735438),
     r = n.n(i),
-    a = n(17928),
-    l = n(506774),
-    s = n(228366),
-    o = n(652215);
+    s = n(17928),
+    a = n(506774),
+    o = n(228366),
+    l = n(652215);
 let u = {};
-class _ extends a.Ay.PersistedStore {
+class c extends s.Ay.PersistedStore {
     static displayName = "SelectivelySyncedUserSettingsStore";
     static persistKey = "SelectivelySyncedUserSettingsStore";
     static migrations = [
         () => {
-            let e = l.w.get("UserSettingsSync") ?? {},
-                t = l.w.get("UserSettingsStore") ?? {};
-            l.w.remove("UserSettingsSync");
+            let e = a.w.get("UserSettingsSync") ?? {},
+                t = a.w.get("UserSettingsStore") ?? {};
+            a.w.remove("UserSettingsSync");
             let n = {};
             return (
-                !1 === e[o.nc_.TEXT] &&
+                !1 === e[l.nc_.TEXT] &&
                     (n.text = {
                         shouldSync: !1,
                         settings: r().pick(t, [
@@ -30,7 +31,7 @@ class _ extends a.Ay.PersistedStore {
                             "defaultReactionEmoji",
                         ]),
                     }),
-                !1 === e[o.nc_.APPEARANCE] &&
+                !1 === e[l.nc_.APPEARANCE] &&
                     (n.appearance = {
                         shouldSync: !1,
                         settings: r().pick(t, ["theme", "clientThemeSettings", "developerMode"]),
@@ -62,7 +63,7 @@ class _ extends a.Ay.PersistedStore {
         return u.appearance?.settings;
     }
 }
-let E = new _(s.h, {
+let d = new c(o.h, {
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: function (e) {
         let { changes: t } = e;
         for (let e in t) {

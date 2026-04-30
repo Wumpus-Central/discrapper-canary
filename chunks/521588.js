@@ -1,31 +1,32 @@
-l.d(t, { a: () => r });
-var n = l(627968);
-l(64700);
-var s = l(503698),
-    i = l.n(s),
-    a = l(489857);
-let r = (e) => {
+"use strict";
+n.d(t, { a: () => o });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(489857);
+let o = (e) => {
     let {
         left: t,
-        top: l = 0,
-        right: s = 0,
-        bottom: r,
-        size: u = 8,
-        alert: d = !1,
+        top: n = 0,
+        right: r = 0,
+        bottom: o,
+        size: l = 8,
+        alert: u = !1,
         showBlurpleTreatment: c = !1,
-        maskColor: o = 2,
-        additionalStyles: f,
+        maskColor: d = 2,
+        additionalStyles: _,
     } = e;
-    return (0, n.jsx)("span", {
-        className: i()(a.Om, {
-            [a.xE]: d,
+    return (0, i.jsx)("span", {
+        className: s()(a.Om, {
+            [a.xE]: u,
             [a.nB]: c,
-            [a.GS]: 0 === o,
-            [a.Pn]: 1 === o,
-            [a.HP]: 2 === o,
-            [a.gl]: 3 === o,
-            [f ?? ""]: void 0 !== f,
+            [a.GS]: 0 === d,
+            [a.Pn]: 1 === d,
+            [a.HP]: 2 === d,
+            [a.gl]: 3 === d,
+            [_ ?? ""]: void 0 !== _,
         }),
-        style: { height: u, width: u, left: t, top: l, right: s, bottom: r },
+        style: { height: l, width: l, left: t, top: n, right: r, bottom: o },
     });
 };

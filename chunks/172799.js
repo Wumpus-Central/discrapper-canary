@@ -1,12 +1,13 @@
-n.d(t, { QR: () => u, Xd: () => l, uR: () => o, yV: () => s });
-var r,
-    i,
-    a,
-    l = (((r = {})[(r.GUILD = 0)] = "GUILD"), (r[(r.GROUP_DM = 1)] = "GROUP_DM"), (r[(r.FRIEND = 2)] = "FRIEND"), r);
+"use strict";
+n.d(t, { QR: () => u, Xd: () => a, uR: () => o, yV: () => l });
+var i,
+    r,
+    s,
+    a = (((i = {})[(i.GUILD = 0)] = "GUILD"), (i[(i.GROUP_DM = 1)] = "GROUP_DM"), (i[(i.FRIEND = 2)] = "FRIEND"), i);
 let o = new Set([0, 1]);
-var s =
-        (((i = {})[(i.STREAM = 1)] = "STREAM"),
-        (i[(i.EMBEDDED_APPLICATION = 2)] = "EMBEDDED_APPLICATION"),
-        (i[(i.ROLE_SUBSCRIPTIONS_PURCHASE = 3)] = "ROLE_SUBSCRIPTIONS_PURCHASE"),
-        i),
-    u = (((a = {}).MAIN = "main"), (a.SETTINGS = "settings"), a);
+var l =
+        (((r = {})[(r.STREAM = 1)] = "STREAM"),
+        (r[(r.EMBEDDED_APPLICATION = 2)] = "EMBEDDED_APPLICATION"),
+        (r[(r.ROLE_SUBSCRIPTIONS_PURCHASE = 3)] = "ROLE_SUBSCRIPTIONS_PURCHASE"),
+        r),
+    u = (((s = {}).MAIN = "main"), (s.SETTINGS = "settings"), s);

@@ -18,28 +18,28 @@ var n = s(627968),
     v = s(775602),
     N = s(363195),
     g = s(507107),
-    O = s(890687),
+    O = s(31587),
     p = s(859387),
     A = s(18437),
     y = s(590202),
     S = s(971649),
     T = s(901406),
-    I = s(792620),
-    _ = s(73473),
-    w = s(371912),
+    _ = s(792620),
+    w = s(73473),
+    I = s(371912),
     Q = s(818348),
-    q = s(985018),
+    q = s(375708),
     L = s(212885);
 function b(e) {
     let { quest: t, errorHints: s, transitionState: a, onClose: C, sourceQuestContent: j } = e,
         [E, f] = (0, i.useState)(s),
-        _ = (0, O.UX)(),
+        w = (0, O.UX)(),
         b = (0, A.Ut)(),
         R = (0, S.vU)()?.getId(),
         D = (0, o.bG)([v.A], () => v.A.useReducedMotion),
-        M = (0, w.Xf)({ useReducedMotion: D, className: L.Zf }),
+        M = (0, I.Xf)({ useReducedMotion: D, className: L.Zf }),
         z = E.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
-        P = (0, I.YL)(t),
+        P = (0, _.YL)(t),
         U = (0, o.bG)([N.A], () => N.A.getState().theme),
         H = (0, u.M)(U) ? Q.NJ.DARK : Q.NJ.LIGHT,
         { startConsoleQuest: W, startingConsoleQuest: F } = (0, O.Wj)({
@@ -61,7 +61,7 @@ function b(e) {
         transitionState: a,
         onClose: C,
         title: q.intl.string(q.t.W5lmKt),
-        subtitle: _.message,
+        subtitle: w.message,
         actions: [
             {
                 variant: "secondary",
@@ -197,7 +197,7 @@ function R(e) {
     (0, f.openModalLazy)(async () => {
         let { default: t } = await Promise.resolve().then(s.bind(s, 988436));
         return function (s) {
-            return (0, n.jsx)(_.R, {
+            return (0, n.jsx)(w.R, {
                 overrideVisibility: !0,
                 questOrQuests: e.quest,
                 questContent: g.uF.CONNECTIONS_MODAL,

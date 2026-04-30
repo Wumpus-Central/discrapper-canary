@@ -1,29 +1,30 @@
-n.d(t, { K: () => c });
+"use strict";
+n.d(t, { K: () => u });
 var i = n(64700),
-    s = n(17928),
-    l = n(228366),
+    r = n(17928),
+    s = n(228366),
     a = n(287809),
-    r = n(429707),
-    o = n(274303);
-function c() {
-    let e = (0, s.cf)([o.A, a.default], () => {
-        let e = o.A.getUsers(),
+    o = n(429707),
+    l = n(274303);
+function u() {
+    let e = (0, r.cf)([l.A, a.default], () => {
+        let e = l.A.getUsers(),
             t = a.default.getCurrentUser();
         return null == t ||
             e.some((e) => {
                 let { id: n } = e;
                 return n === t.id;
             })
-            ? { isLoading: o.A.getIsValidatingUsers(), multiAccountUsers: e }
+            ? { isLoading: l.A.getIsValidatingUsers(), multiAccountUsers: e }
             : {
-                  isLoading: o.A.getIsValidatingUsers(),
+                  isLoading: l.A.getIsValidatingUsers(),
                   multiAccountUsers: [
                       {
                           id: t.id,
                           avatar: t.avatar,
                           username: t.username,
                           discriminator: t.discriminator,
-                          tokenStatus: o.U.VALID,
+                          tokenStatus: l.U.VALID,
                           pushSyncToken: null,
                       },
                       ...e,
@@ -32,8 +33,8 @@ function c() {
     });
     return (
         i.useEffect(() => {
-            l.h.wait(() => {
-                r.F6();
+            s.h.wait(() => {
+                o.F6();
             });
         }, []),
         e

@@ -1,35 +1,36 @@
-i.d(t, { U: () => o, j: () => a });
-var l = i(64700),
-    s = i(17928),
-    n = i(824552),
-    r = i(546183),
-    u = i(403362);
-function a(e, t) {
-    let { disableFetch: i = !1 } = t ?? {},
-        a = (0, s.yK)([r.default], () => e?.map((e) => r.default.getNewestTokenForApplication(e)).filter(u.Vq) ?? [], [
+"use strict";
+n.d(t, { U: () => u, j: () => l });
+var i = n(64700),
+    r = n(17928),
+    s = n(824552),
+    a = n(546183),
+    o = n(403362);
+function l(e, t) {
+    let { disableFetch: n = !1 } = t ?? {},
+        l = (0, r.yK)([a.default], () => e?.map((e) => a.default.getNewestTokenForApplication(e)).filter(o.Vq) ?? [], [
             e,
         ]),
-        o = (0, s.bG)(
-            [r.default],
-            () => e?.every((e) => r.default.getFetchStateForApplication(e) === r.FetchState.FETCHED) ?? !1,
+        u = (0, r.bG)(
+            [a.default],
+            () => e?.every((e) => a.default.getFetchStateForApplication(e) === a.FetchState.FETCHED) ?? !1,
             [e],
         ),
-        d = (0, s.yK)(
-            [r.default],
-            () => e?.filter((e) => r.default.getFetchStateForApplication(e) === r.FetchState.NOT_FETCHED) ?? [],
+        c = (0, r.yK)(
+            [a.default],
+            () => e?.filter((e) => a.default.getFetchStateForApplication(e) === a.FetchState.NOT_FETCHED) ?? [],
             [e],
         );
     return (
-        l.useEffect(() => {
-            i || 0 === d.length || n.A.fetch(d);
-        }, [i, d]),
-        { tokens: a, fetched: o }
+        i.useEffect(() => {
+            n || 0 === c.length || s.A.fetch(c);
+        }, [n, c]),
+        { tokens: l, fetched: u }
     );
 }
-function o(e, t) {
-    let { tokens: i, fetched: s } = a(
-        l.useMemo(() => (null != e ? [e] : null), [e]),
+function u(e, t) {
+    let { tokens: n, fetched: r } = l(
+        i.useMemo(() => (null != e ? [e] : null), [e]),
         t,
     );
-    return { token: i.length > 0 ? i[0] : null, fetched: s };
+    return { token: n.length > 0 ? n[0] : null, fetched: r };
 }

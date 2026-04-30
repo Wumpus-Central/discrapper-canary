@@ -1,61 +1,62 @@
+"use strict";
 n.d(t, { A: () => u });
-var l = n(627968),
-    i = n(64700),
+var i = n(627968),
+    r = n(64700),
     s = n(43105),
-    r = n(486318),
-    a = n(985018),
-    o = n(469611);
+    a = n(486318),
+    o = n(375708),
+    l = n(469611);
 function u(e) {
     let {
         targetElementRef: t,
         onRender: n,
         onRequestClose: u,
-        onActionClick: d,
-        onActionMouseDown: c,
-        position: h = "right",
-        align: A = "top",
-        caretConfig: m = { align: "start" },
-        graphicSource: g,
-        title: p,
-        body: f,
-        actionLabel: E,
+        onActionClick: c,
+        onActionMouseDown: d,
+        position: _ = "right",
+        align: f = "top",
+        caretConfig: h = { align: "start" },
+        graphicSource: p,
+        title: E,
+        body: m,
+        actionLabel: g,
     } = e;
-    i.useEffect(() => {
+    r.useEffect(() => {
         n?.();
     }, [n]);
-    let I = i.useMemo(() => {
-        if (null == g)
+    let A = r.useMemo(() => {
+        if (null == p)
             return {
                 type: "image",
                 src: "https://cdn.discordapp.com/assets/content/e0c51f00bb5a665b9048ff1b45d37dc0009e7a893bf08c2212471b44c9818d41.png",
                 aspectRatio: "6/4",
             };
-        switch (g.type) {
+        switch (p.type) {
             case "asset":
-                return { type: "image", src: g.src, aspectRatio: "6/4" };
+                return { type: "image", src: p.src, aspectRatio: "6/4" };
             case "sku":
-                return (0, r.e)({
-                    imageUrl: g.imageUrl,
-                    backgroundImageUrl: g.backgroundImageUrl,
-                    altText: a.intl.string(a.t["ulQB+t"]),
-                    customClassNames: { containerClassName: o.z, foregroundImageClassName: o._ },
+                return (0, a.e)({
+                    imageUrl: p.imageUrl,
+                    backgroundImageUrl: p.backgroundImageUrl,
+                    altText: o.intl.string(o.t["ulQB+t"]),
+                    customClassNames: { containerClassName: l.z, foregroundImageClassName: l._ },
                 });
         }
-    }, [g]);
-    return (0, l.jsx)(s.A, {
+    }, [p]);
+    return (0, i.jsx)(s.A, {
         size: "lg",
         shouldShow: !0,
-        position: h,
-        caretConfig: m,
+        position: _,
+        caretConfig: h,
         gradientColor: "purple",
         alignmentStrategy: "edge",
-        align: A,
+        align: f,
         badge: { type: "new", variant: "default" },
         onRequestClose: u,
-        actions: [{ text: E ?? a.intl.string(a.t.RzWDqY), variant: "primary", onClick: d, onMouseDown: c }],
+        actions: [{ text: g ?? o.intl.string(o.t.RzWDqY), variant: "primary", onClick: c, onMouseDown: d }],
         targetElementRef: t,
-        title: p,
-        body: f,
-        graphic: I,
+        title: E,
+        body: m,
+        graphic: A,
     });
 }

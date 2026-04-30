@@ -1,6 +1,7 @@
-n.d(t, { k: () => l });
+"use strict";
+n.d(t, { k: () => s });
 var i = n(192308),
-    s = n(830215);
-function l(e) {
-    (0, i.closeAllModals)(), s.A.logout(e);
+    r = n(830215);
+function s(e) {
+    (0, i.closeAllModals)(), r.A.logout(e);
 }

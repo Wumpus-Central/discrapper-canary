@@ -1,5 +1,6 @@
+"use strict";
 n.d(t, { M: () => i, T: () => r });
-let i = (0, n(250105).Ay)({
+let i = (0, n(240921).Ay)({
     kind: "user",
     name: "2025-11-auto-open-tiv",
     defaultConfig: { collectAnalytics: !1, autoOpenTIV: !1, autoNavigateChannel: !1 },

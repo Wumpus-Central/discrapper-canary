@@ -1,8 +1,9 @@
-n.d(t, { A: () => l });
+"use strict";
+n.d(t, { A: () => a });
 var i = n(17928),
-    a = n(531685),
-    r = n(3137);
-function l(e) {
-    let t = (0, i.bG)([a.A], () => a.A.isFocused());
-    return (0, i.bG)([r.A], () => (r.A.isEnabled({ shakeLocation: e }) && t ? r.A.shakeIntensity : 0));
+    r = n(531685),
+    s = n(3137);
+function a(e) {
+    let t = (0, i.bG)([r.A], () => r.A.isFocused());
+    return (0, i.bG)([s.A], () => (s.A.isEnabled({ shakeLocation: e }) && t ? s.A.shakeIntensity : 0));
 }

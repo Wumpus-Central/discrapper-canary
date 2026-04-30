@@ -1,30 +1,31 @@
+"use strict";
 n.d(t, { v: () => _ });
 var i = n(627968),
     r = n(554146),
-    a = n(43105),
-    l = n(932001),
-    s = n(966597),
-    o = n(49999),
-    d = n(985018),
+    s = n(43105),
+    a = n(131607),
+    o = n(966597),
+    l = n(49999),
+    u = n(375708),
     c = n(936037);
-let u = r.M.FOR_LATER_POPOUT_COACHMARK;
+let d = r.M.FOR_LATER_POPOUT_COACHMARK;
 function _(e) {
     let { location: t, targetElementRef: n } = e,
-        { enabled: r, inInbox: _ } = s.A.useConfig({ location: "ForLaterCoachmarkWeb" }),
-        [A, h] = (0, l.kn)(r && t === (_ ? "inbox-button" : "bookmarks-button") ? [u] : [], void 0);
-    return A !== u
+        { enabled: r, inInbox: _ } = o.A.useConfig({ location: "ForLaterCoachmarkWeb" }),
+        [f, h] = (0, a.kn)(r && t === (_ ? "inbox-button" : "bookmarks-button") ? [d] : [], void 0);
+    return f !== d
         ? null
-        : (0, i.jsx)(a.A, {
+        : (0, i.jsx)(s.A, {
               targetElementRef: n,
               gradientColor: "purple",
               position: "bottom",
               align: "right",
               shouldShow: !0,
               caretConfig: { align: "end" },
-              onRequestClose: () => h(o.i.USER_DISMISS),
-              title: d.intl.string(d.t.qPbFK2),
-              body: d.intl.string(d.t.URrJq1),
-              actions: [{ text: d.intl.string(d.t["NX+WJN"]), onClick: () => h(o.i.USER_DISMISS) }],
+              onRequestClose: () => h(l.i.USER_DISMISS),
+              title: u.intl.string(u.t.qPbFK2),
+              body: u.intl.string(u.t.URrJq1),
+              actions: [{ text: u.intl.string(u.t["NX+WJN"]), onClick: () => h(l.i.USER_DISMISS) }],
               graphic: { type: "image", src: c },
           });
 }

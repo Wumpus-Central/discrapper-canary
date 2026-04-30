@@ -1,55 +1,56 @@
-n.d(t, { A: () => S }), n(321073);
-var l = n(627968),
-    i = n(64700),
-    r = n(17928),
+"use strict";
+n.d(t, { A: () => I }), n(321073);
+var i = n(627968),
+    r = n(64700),
+    s = n(17928),
     a = n(688810),
     o = n(290863),
-    s = n(461213),
-    d = n(183555),
-    u = n(841595),
-    _ = n(146655),
-    c = n(489379),
+    l = n(461213),
+    u = n(183555),
+    c = n(841595),
+    d = n(146655),
+    _ = n(489379),
     f = n(80330),
-    A = n(402857),
-    h = n(842241),
-    p = n(986712),
-    E = n(518477),
-    T = n(818348),
-    N = n(985018);
-function S(e) {
-    let { user: t, currentUser: n, guildId: S, onOpenUserProfileModal: I, onClose: m } = e,
-        { analyticsLocations: C } = (0, a.Ay)(),
-        { trackUserProfileAction: g } = (0, d.NJ)(),
-        { live: v, stream: x } = (0, _.A)(t.id),
-        { voiceChannel: y, voiceActivity: b } = (0, c.A)({ userId: t.id, guildId: S }),
-        L = t.id === n.id,
-        O = (0, r.bG)([s.A, o.A], () => {
-            let e = L ? s.A.getStatus() : o.A.getStatus(t.id, S);
-            return e === T.cl.OFFLINE || e === T.cl.INVISIBLE;
+    h = n(402857),
+    p = n(64622),
+    E = n(986712),
+    m = n(518477),
+    g = n(818348),
+    A = n(375708);
+function I(e) {
+    let { user: t, currentUser: n, guildId: I, onOpenUserProfileModal: T, onClose: S } = e,
+        { analyticsLocations: N } = (0, a.Ay)(),
+        { trackUserProfileAction: y } = (0, u.NJ)(),
+        { live: C, stream: v } = (0, d.A)(t.id),
+        { voiceChannel: O, voiceActivity: R } = (0, _.A)({ userId: t.id, guildId: I }),
+        b = t.id === n.id,
+        D = (0, s.bG)([l.A, o.A], () => {
+            let e = b ? l.A.getStatus() : o.A.getStatus(t.id, I);
+            return e === g.cl.OFFLINE || e === g.cl.INVISIBLE;
         }),
-        j = !(0, r.bG)([u.A], () => u.A.getUserProfile(t.id)?.private === !0) && null == x && null == b && null != y,
-        P = i.useCallback(
+        L = !(0, s.bG)([c.A], () => c.A.getUserProfile(t.id)?.private === !0) && null == v && null == R && null != O,
+        w = r.useCallback(
             (e) => {
-                let i = [],
-                    r = { ...e, user: t, currentUser: n, onClose: m };
+                let r = [],
+                    s = { ...e, user: t, currentUser: n, onClose: S };
                 return (
-                    null != x && i.push((0, l.jsx)(h.A, { stream: x, ...r }, "stream")),
-                    v.forEach((e, t) => {
-                        i.push((0, l.jsx)(A.A, { activity: e, ...r }, `live-${t}`));
+                    null != v && r.push((0, i.jsx)(p.A, { stream: v, ...s }, "stream")),
+                    C.forEach((e, t) => {
+                        r.push((0, i.jsx)(h.A, { activity: e, ...s }, `live-${t}`));
                     }),
-                    j && i.push((0, l.jsx)(p.A, { voiceChannel: y, ...r }, "voice")),
-                    i
+                    L && r.push((0, i.jsx)(E.A, { voiceChannel: O, ...s }, "voice")),
+                    r
                 );
             },
-            [n, j, v, m, x, t, y],
+            [n, L, C, S, v, t, O],
         );
-    return O
+    return D
         ? null
-        : (0, l.jsx)(f.A, {
-              renderCards: P,
-              heading: N.intl.string(N.t.J6STd9),
+        : (0, i.jsx)(f.A, {
+              renderCards: w,
+              heading: A.intl.string(A.t.J6STd9),
               onExpand: () => {
-                  g({ action: "PRESS_SHOW_MORE_ACTIVITY", analyticsLocations: C }), I?.({ tabSection: E.RP.ACTIVITY });
+                  y({ action: "PRESS_SHOW_MORE_ACTIVITY", analyticsLocations: N }), T?.({ tabSection: m.RP.ACTIVITY });
               },
           });
 }

@@ -1,43 +1,44 @@
-n.d(t, { Hz: () => s, It: () => a, LU: () => y, PF: () => d, VP: () => o, fA: () => h, g7: () => u, zU: () => c });
-var r = n(214958),
-    i = n.n(r);
-let a = parseInt(i().version ?? "0", 10),
-    l = null != i().ua && i().ua.indexOf("OculusBrowser") > -1,
+"use strict";
+n.d(t, { Hz: () => l, It: () => s, LU: () => f, PF: () => c, VP: () => o, fA: () => _, g7: () => u, zU: () => d });
+var i = n(214958),
+    r = n.n(i);
+let s = parseInt(r().version ?? "0", 10),
+    a = null != r().ua && r().ua.indexOf("OculusBrowser") > -1,
     o = (() => {
         if ("u" > typeof window && null == window.WebSocket) return !1;
-        switch (i().name) {
+        switch (r().name) {
             case "IE":
             case "Microsoft Edge":
-                return a >= 15;
+                return s >= 15;
             default:
                 return !0;
         }
     })(),
-    s =
-        l ||
-        ("Firefox" === i().name && a >= 80) ||
-        ("Chrome" === i().name && a >= 37) ||
-        ("Opera" === i().name && a >= 66) ||
-        ("Node.js" === i().name && a >= 6) ||
-        ("Electron" === i().name && a >= 1) ||
-        ("Safari" === i().name && a >= 13) ||
-        ("Microsoft Edge" === i().name && a >= 37),
+    l =
+        a ||
+        ("Firefox" === r().name && s >= 80) ||
+        ("Chrome" === r().name && s >= 37) ||
+        ("Opera" === r().name && s >= 66) ||
+        ("Node.js" === r().name && s >= 6) ||
+        ("Electron" === r().name && s >= 1) ||
+        ("Safari" === r().name && s >= 13) ||
+        ("Microsoft Edge" === r().name && s >= 37),
     u =
-        "Chrome" === i().name ||
-        "Safari" === i().name ||
-        ("Firefox" === i().name && a >= 80) ||
-        "Opera" === i().name ||
-        "Microsoft Edge" === i().name,
-    d = "u" > typeof RTCPeerConnection && "function" == typeof RTCPeerConnection.prototype.addTransceiver,
-    c =
+        "Chrome" === r().name ||
+        "Safari" === r().name ||
+        ("Firefox" === r().name && s >= 80) ||
+        "Opera" === r().name ||
+        "Microsoft Edge" === r().name,
+    c = "u" > typeof RTCPeerConnection && "function" == typeof RTCPeerConnection.prototype.addTransceiver,
+    d =
         "u" > typeof RTCRtpSender &&
         ("transform" in RTCRtpSender.prototype || "createEncodedStreams" in RTCRtpSender.prototype),
-    h =
-        ("Chrome" === i().name && a >= 58) ||
-        ("Safari" === i().name && a >= 15) ||
-        ("Firefox" === i().name && a >= 108),
-    y =
-        ("Chrome" === i().name && a >= 72) ||
-        ("Safari" === i().name && a >= 11) ||
-        ("Opera" === i().name && a >= 60) ||
-        ("Microsoft Edge" === i().name && a >= 79);
+    _ =
+        ("Chrome" === r().name && s >= 58) ||
+        ("Safari" === r().name && s >= 15) ||
+        ("Firefox" === r().name && s >= 108),
+    f =
+        ("Chrome" === r().name && s >= 72) ||
+        ("Safari" === r().name && s >= 11) ||
+        ("Opera" === r().name && s >= 60) ||
+        ("Microsoft Edge" === r().name && s >= 79);

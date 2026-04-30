@@ -1,9 +1,10 @@
-n.d(t, { BR: () => o, Jr: () => _, KS: () => E, Kv: () => c, Li: () => u, Vo: () => l, uj: () => d });
+"use strict";
+n.d(t, { BR: () => u, Jr: () => o, KS: () => c, Kv: () => _, Li: () => f, Vo: () => l, uj: () => d });
 var i,
     r,
-    a,
     s,
-    _ =
+    a,
+    o =
         (((i = {})[(i.WELCOME = 0)] = "WELCOME"),
         (i[(i.NEWS = 1)] = "NEWS"),
         (i[(i.GO_LIVE_VOICE = 2)] = "GO_LIVE_VOICE"),
@@ -31,7 +32,7 @@ function l(e) {
             return 5;
     }
 }
-var o =
+var u =
         (((r = {})[(r.Nudge = 0)] = "Nudge"),
         (r[(r.TextChat = 1)] = "TextChat"),
         (r[(r.VoiceCall = 2)] = "VoiceCall"),
@@ -39,28 +40,28 @@ var o =
         (r[(r.Clips = 4)] = "Clips"),
         (r[(r.Other = 5)] = "Other"),
         r),
-    E =
-        (((a = {}).NewsNudge = "News Nudge"),
-        (a.WelcomeNudge = "Welcome Nudge"),
-        (a.TextChat = "Text Chat"),
-        (a.ActivityUserJoin = "Activity User Join"),
-        (a.ActivityInvite = "Activity Invite"),
-        (a.IncomingCall = "Incoming Call"),
-        (a.GoLiveNudge = "Go Live Nudge"),
-        (a.GoLiveNonVoiceNudge = "Go Live Non Voice Nudge"),
-        (a.OverlayCrashed = "Overlay Crashed"),
-        (a.ClipsReminderNotification = "Clips Reminder Notification"),
-        (a.ClipsNotification = "Clips Notification"),
-        (a.SendGameInvitesNotification = "Send Game Invites Notification"),
-        (a.NowPlayingNotification = "Now Playing Notification"),
-        (a.RequestToStream = "Request To Stream"),
-        a),
-    d = (((s = {})[(s.Viewed = 0)] = "Viewed"), (s[(s.Clicked = 1)] = "Clicked"), s);
-let c = Object.freeze({
+    c =
+        (((s = {}).NewsNudge = "News Nudge"),
+        (s.WelcomeNudge = "Welcome Nudge"),
+        (s.TextChat = "Text Chat"),
+        (s.ActivityUserJoin = "Activity User Join"),
+        (s.ActivityInvite = "Activity Invite"),
+        (s.IncomingCall = "Incoming Call"),
+        (s.GoLiveNudge = "Go Live Nudge"),
+        (s.GoLiveNonVoiceNudge = "Go Live Non Voice Nudge"),
+        (s.OverlayCrashed = "Overlay Crashed"),
+        (s.ClipsReminderNotification = "Clips Reminder Notification"),
+        (s.ClipsNotification = "Clips Notification"),
+        (s.SendGameInvitesNotification = "Send Game Invites Notification"),
+        (s.NowPlayingNotification = "Now Playing Notification"),
+        (s.RequestToStream = "Request To Stream"),
+        s),
+    d = (((a = {})[(a.Viewed = 0)] = "Viewed"), (a[(a.Clicked = 1)] = "Clicked"), a);
+let _ = Object.freeze({
         LOW: "background-opacity-low",
         MEDIUM: "background-opacity-medium",
         HIGH: "background-opacity-high",
         FULL: "background-opacity-full",
         DISABLED: null,
     }),
-    u = Object.freeze({ BOTTOM: 0, LOWER: 0.25, UPPER: 0.75, TOP: 1 });
+    f = Object.freeze({ BOTTOM: 0, LOWER: 0.25, UPPER: 0.75, TOP: 1 });

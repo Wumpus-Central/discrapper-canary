@@ -1,12 +1,13 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => _ });
 var i = n(627968),
     r = n(64700),
-    a = n(621466),
-    s = n(17928),
-    _ = n(531685),
+    s = n(621466),
+    a = n(17928),
+    o = n(531685),
     l = n(787541),
-    o = n(575486),
-    E = n(79858);
+    u = n(159730),
+    c = n(79858);
 class d extends r.Component {
     static defaultProps = { position: "top", offsetX: 0, offsetY: 0, autoInvert: !0 };
     componentDidMount() {
@@ -18,14 +19,14 @@ class d extends r.Component {
         null == e && this.show(!1);
     }
     componentDidUpdate(e) {
-        let { position: t, offsetX: n, offsetY: i, tutorialId: r, visible: a, windowSize: s } = e;
+        let { position: t, offsetX: n, offsetY: i, tutorialId: r, visible: s, windowSize: a } = e;
         r !== this.props.tutorialId
             ? l.jD(r)
-            : (a !== this.props.visible ||
+            : (s !== this.props.visible ||
                   t !== this.props.position ||
                   n !== this.props.offsetX ||
                   i !== this.props.offsetY ||
-                  s !== this.props.windowSize) &&
+                  a !== this.props.windowSize) &&
               this.show(this.props.visible);
     }
     show(e) {
@@ -34,47 +35,47 @@ class d extends r.Component {
             tutorialId: n,
             position: i,
             offsetX: r,
-            offsetY: s,
-            visible: _,
-            inlineSpecs: o,
-            autoInvert: E,
+            offsetY: a,
+            visible: o,
+            inlineSpecs: u,
+            autoInvert: c,
         } = this.props;
-        if (e && null == o) {
+        if (e && null == u) {
             let e = t?.current;
-            if (!(0, a.vq)(e)) return;
-            let { top: _, left: o, right: d, bottom: c } = e.getBoundingClientRect();
+            if (!(0, s.vq)(e)) return;
+            let { top: o, left: u, right: d, bottom: _ } = e.getBoundingClientRect();
             l.WU(n, {
                 position: i,
-                targetWidth: d - o,
-                targetHeight: c - _,
-                autoInvert: E,
-                origin: { x: o, y: _ },
-                offset: { x: r, y: s },
+                targetWidth: d - u,
+                targetHeight: _ - o,
+                autoInvert: c,
+                origin: { x: u, y: o },
+                offset: { x: r, y: a },
             });
-        } else _ && l.jD(n);
+        } else o && l.jD(n);
     }
     render() {
         let {
                 inlineSpecs: e,
                 tutorialId: t,
                 children: n,
-                visible: a,
-                windowFocused: s,
-                position: _,
+                visible: s,
+                windowFocused: a,
+                position: o,
                 autoInvert: l,
             } = this.props,
-            d = E.A.getData()[t];
+            d = c.A.getData()[t];
         return null != e && null != d
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       n,
-                      a &&
-                          (0, i.jsx)(o.Y, {
+                      s &&
+                          (0, i.jsx)(u.Y, {
                               autoInvert: l,
-                              position: _,
+                              position: o,
                               tutorialId: t,
                               tutorialDefinition: d,
-                              focused: s,
+                              focused: a,
                               ...e,
                           }),
                   ],
@@ -82,10 +83,10 @@ class d extends r.Component {
             : r.Children.only(n);
     }
 }
-function c(e) {
+function _(e) {
     let { tutorialId: t, disabled: n } = e,
-        r = (0, s.bG)([E.A], () => !n && E.A.shouldShow(t), [n, t]),
-        a = (0, s.bG)([_.A], () => _.A.isFocused()),
-        l = (0, s.bG)([_.A], () => _.A.windowSize(), []);
-    return (0, i.jsx)(d, { ...e, visible: r, windowFocused: a, windowSize: l });
+        r = (0, a.bG)([c.A], () => !n && c.A.shouldShow(t), [n, t]),
+        s = (0, a.bG)([o.A], () => o.A.isFocused()),
+        l = (0, a.bG)([o.A], () => o.A.windowSize(), []);
+    return (0, i.jsx)(d, { ...e, visible: r, windowFocused: s, windowSize: l });
 }

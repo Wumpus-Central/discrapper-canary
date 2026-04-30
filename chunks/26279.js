@@ -1,20 +1,21 @@
-n.d(t, { BM: () => s, Re: () => l, uH: () => o });
-var r,
-    a,
-    i,
+"use strict";
+n.d(t, { BM: () => l, Re: () => o, uH: () => a });
+var i,
+    r,
+    s,
+    a =
+        (((i = {}).MOBILE_WEB_REDIRECT_CHECKOUT = "mobile_web_redirect_checkout"),
+        (i.META_QUEST_WEB_REDIRECT_CHECKOUT = "meta_quest_web_redirect_checkout"),
+        i),
     o =
-        (((r = {}).MOBILE_WEB_REDIRECT_CHECKOUT = "mobile_web_redirect_checkout"),
-        (r.META_QUEST_WEB_REDIRECT_CHECKOUT = "meta_quest_web_redirect_checkout"),
+        (((r = {})[(r.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (r[(r.DRAFT = 1)] = "DRAFT"),
+        (r[(r.SIGNED = 2)] = "SIGNED"),
+        (r[(r.DISCARDED = 3)] = "DISCARDED"),
+        (r[(r.SIGNING_IN_PROGRESS = 4)] = "SIGNING_IN_PROGRESS"),
         r),
     l =
-        (((a = {})[(a.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (a[(a.DRAFT = 1)] = "DRAFT"),
-        (a[(a.SIGNED = 2)] = "SIGNED"),
-        (a[(a.DISCARDED = 3)] = "DISCARDED"),
-        (a[(a.SIGNING_IN_PROGRESS = 4)] = "SIGNING_IN_PROGRESS"),
-        a),
-    s =
-        (((i = {})[(i.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (i[(i.ONE_TIME = 1)] = "ONE_TIME"),
-        (i[(i.SUBSCRIPTION = 2)] = "SUBSCRIPTION"),
-        i);
+        (((s = {})[(s.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (s[(s.ONE_TIME = 1)] = "ONE_TIME"),
+        (s[(s.SUBSCRIPTION = 2)] = "SUBSCRIPTION"),
+        s);

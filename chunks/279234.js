@@ -1,34 +1,35 @@
-n.d(t, { P: () => h, x: () => y });
-var r = n(118356),
-    i = n(31436);
-let a = null,
-    l = new r.Vy("libdiscore");
+"use strict";
+n.d(t, { P: () => _, x: () => f });
+var i = n(941426),
+    r = n(31436);
+let s = null,
+    a = new i.Vy("libdiscore");
 function o(e) {
-    l.error(e);
+    a.error(e);
 }
-function s(e) {
-    l.warn(e);
+function l(e) {
+    a.warn(e);
 }
 function u(e) {
-    l.info(e);
-}
-function d(e) {
-    l.verbose(e);
+    a.info(e);
 }
 function c(e) {
-    l.trace(e);
+    a.verbose(e);
 }
-function h() {
+function d(e) {
+    a.trace(e);
+}
+function _() {
     return (
-        null == a &&
-            (a = (async () => {
-                await i.Bf();
-                let e = i.vZ();
-                e.installLogCallback(o, s, u, d, c), await e.initLibdiscore(), (window._libdiscoreInitialized = !0);
+        null == s &&
+            (s = (async () => {
+                await r.Bf();
+                let e = r.vZ();
+                e.installLogCallback(o, l, u, c, d), await e.initLibdiscore(), (window._libdiscoreInitialized = !0);
             })()),
-        a
+        s
     );
 }
-function y() {
+function f() {
     return !0 === window._libdiscoreInitialized;
 }

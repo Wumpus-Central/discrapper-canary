@@ -1,7 +1,8 @@
-n.d(t, { O: () => l, h: () => a });
+"use strict";
+n.d(t, { O: () => s, h: () => a });
 var i = n(600975),
     r = n(688151);
-let l = (0, i.C)({
+let s = (0, i.C)({
     kind: "guild",
     id: "2026-04_voice_invite_suggestion_placement",
     label: "Voice Invite Suggestion Placement",
@@ -13,5 +14,5 @@ let l = (0, i.C)({
     ],
 });
 function a(e, t) {
-    return l.useExperiment({ guildId: e.guildId, location: e.location }, { autoTrackExposure: t.autoTrackExposure });
+    return s.useExperiment({ guildId: e.guildId, location: e.location }, { autoTrackExposure: t.autoTrackExposure });
 }

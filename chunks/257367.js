@@ -1,17 +1,18 @@
-e.d(n, { A: () => s });
-var i = e(64700),
-    l = e(172218),
-    r = e(17928),
-    a = e(517164);
-function s(t) {
-    let { userId: n, onAction: e } = t,
-        [s, o] = (0, i.useState)(!1),
-        c = (0, r.bG)([a.A], () => a.A.isFetchingUserOutbox(n)),
-        u = (0, i.useCallback)(
-            (t) => {
-                t && (e({ action: "VIEW_ACTIVITY_CARD" }), o(!0));
+"use strict";
+n.d(t, { A: () => o });
+var i = n(64700),
+    r = n(172218),
+    s = n(17928),
+    a = n(517164);
+function o(e) {
+    let { userId: t, onAction: n } = e,
+        [o, l] = (0, i.useState)(!1),
+        u = (0, s.bG)([a.A], () => a.A.isFetchingUserOutbox(t)),
+        c = (0, i.useCallback)(
+            (e) => {
+                e && (n({ action: "VIEW_ACTIVITY_CARD" }), l(!0));
             },
-            [e],
+            [n],
         );
-    return (0, l.K)(u, void 0, !c && !s);
+    return (0, r.K)(c, void 0, !u && !o);
 }

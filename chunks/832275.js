@@ -1,27 +1,28 @@
-n.d(t, { A: () => A, J: () => I });
+"use strict";
+n.d(t, { A: () => p, J: () => h });
 var i = n(17928),
     r = n(554146),
-    a = n(771781),
-    s = n(826673),
-    _ = n(967198),
+    s = n(558845),
+    a = n(826673),
+    o = n(967198),
     l = n(287809),
-    o = n(474090),
-    E = n(181079),
+    u = n(474090),
+    c = n(181079),
     d = n(379587),
-    c = n(5180),
-    u = n(788868);
-function I(e, t, n, i) {
-    let { favoritesGuildXPEnabled: r, isMenuItemDCSelected: a, isIntroDCDismissed: s } = i;
+    _ = n(5180),
+    f = n(788868);
+function h(e, t, n, i) {
+    let { favoritesGuildXPEnabled: r, isMenuItemDCSelected: s, isIntroDCDismissed: a } = i;
     if (!r) return !1;
-    if ((a && !s) || (0, c.ai)(n.getGuildId())) return !0;
-    let _ = t.getCurrentUser();
-    return null != _ && !!o.Ay.isPremiumExactly(_, u.PremiumTypes.TIER_2) && e.favoriteGuildEnabled;
+    if ((s && !a) || (0, _.ai)(n.getGuildId())) return !0;
+    let o = t.getCurrentUser();
+    return null != o && !!u.Ay.isPremiumExactly(o, f.PremiumTypes.TIER_2) && e.favoriteGuildEnabled;
 }
-function A(e) {
+function p(e) {
     let t = (0, d.m)({ location: e }).enabled,
-        n = (0, a.mB)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
-        o = (0, s.JZ)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO);
-    return (0, i.bG)([E.A, l.default, _.A], () =>
-        I(E.A, l.default, _.A, { favoritesGuildXPEnabled: t, isMenuItemDCSelected: n, isIntroDCDismissed: o }),
+        n = (0, s.mB)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
+        u = (0, a.JZ)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO);
+    return (0, i.bG)([c.A, l.default, o.A], () =>
+        h(c.A, l.default, o.A, { favoritesGuildXPEnabled: t, isMenuItemDCSelected: n, isIntroDCDismissed: u }),
     );
 }

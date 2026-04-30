@@ -1,51 +1,52 @@
-n.d(t, { Cu: () => r.Cu, Fe: () => s, c2: () => o, qT: () => l, sq: () => r.sq });
+"use strict";
+n.d(t, { Cu: () => s.Cu, Fe: () => o, c2: () => u, qT: () => l, sq: () => s.sq });
 var i = n(627968),
-    a = n(64700),
-    r = n(841117);
-let _ = function () {
+    r = n(64700),
+    s = n(841117);
+let a = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "transparent";
     return () =>
         (0, i.jsx)("div", { style: { position: "absolute", width: "100%", height: "100%", backgroundColor: e } });
 };
-function s(e) {
-    let { createPromise: t, webpackId: n, renderLoader: s, name: l, memo: o = !1 } = e,
-        E = a.lazy(() => (0, r.sq)({ createPromise: t, webpackId: n })),
-        d = (e) => (0, i.jsx)(a.Suspense, { fallback: null != s ? s() : _()(), children: (0, i.jsx)(E, { ...e }) });
-    return o && (d = a.memo(d)), (d.displayName = `Suspense(${l || "Unknown"})`), d;
+function o(e) {
+    let { createPromise: t, webpackId: n, renderLoader: o, name: l, memo: u = !1 } = e,
+        c = r.lazy(() => (0, s.sq)({ createPromise: t, webpackId: n })),
+        d = (e) => (0, i.jsx)(r.Suspense, { fallback: null != o ? o() : a()(), children: (0, i.jsx)(c, { ...e }) });
+    return u && (d = r.memo(d)), (d.displayName = `Suspense(${l || "Unknown"})`), d;
 }
 function l(e) {
-    let { createPromise: t, webpackId: n, renderLoader: s, name: l, memo: o = !1 } = e,
-        E = null,
+    let { createPromise: t, webpackId: n, renderLoader: o, name: l, memo: u = !1 } = e,
+        c = null,
         d = null,
-        c = () => (
-            null == E && (E = (0, r.sq)({ createPromise: t, webpackId: n }).then((e) => ((d = e.default), e))), E
+        _ = () => (
+            null == c && (c = (0, s.sq)({ createPromise: t, webpackId: n }).then((e) => ((d = e.default), e))), c
         ),
-        u = a.lazy(c),
-        I = (e) => {
-            let [t] = a.useState(() => d);
+        f = r.lazy(_),
+        h = (e) => {
+            let [t] = r.useState(() => d);
             return null != t
                 ? (0, i.jsx)(t, { ...e })
-                : (0, i.jsx)(a.Suspense, { fallback: null != s ? s() : _()(), children: (0, i.jsx)(u, { ...e }) });
+                : (0, i.jsx)(r.Suspense, { fallback: null != o ? o() : a()(), children: (0, i.jsx)(f, { ...e }) });
         };
-    o && (I = a.memo(I)), (I.displayName = `Suspense(${l || "Unknown"})`);
-    let T = I;
+    u && (h = r.memo(h)), (h.displayName = `Suspense(${l || "Unknown"})`);
+    let p = h;
     return (
-        (T.preload = () => {
-            c();
+        (p.preload = () => {
+            _();
         }),
-        T
+        p
     );
 }
-function o(e) {
-    let { createPromise: t, webpackId: n, render: _, renderFallback: s } = e,
-        [l, o] = a.useState(null);
+function u(e) {
+    let { createPromise: t, webpackId: n, render: a, renderFallback: o } = e,
+        [l, u] = r.useState(null);
     return (
-        a.useEffect(() => {
-            (0, r.sq)({ createPromise: t, webpackId: n }).then((e) => {
+        r.useEffect(() => {
+            (0, s.sq)({ createPromise: t, webpackId: n }).then((e) => {
                 let { default: t } = e;
-                return o(t);
+                return u(t);
             });
         }, []),
-        (0, i.jsx)(i.Fragment, { children: null == l ? s() : _(l) })
+        (0, i.jsx)(i.Fragment, { children: null == l ? o() : a(l) })
     );
 }

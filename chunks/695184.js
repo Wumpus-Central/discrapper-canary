@@ -1,42 +1,42 @@
 "use strict";
-let r;
-n.d(t, { A: () => h }), n(321073);
-var i = n(635377),
-    a = n.n(i),
-    s = n(686956),
+let i;
+n.d(t, { A: () => p }), n(321073);
+var r = n(635377),
+    s = n.n(r),
+    a = n(66834),
     o = n(71393),
     l = n(287809),
     u = n(927813),
     c = n(427262),
-    d = n(985018);
-let _ = new (a())({ maxAge: +u.A.Millis.MINUTE });
+    d = n(375708);
+let _ = new (s())({ maxAge: +u.A.Millis.MINUTE });
 function f(e, t, n) {
-    null != r && clearTimeout(r),
-        (r = setTimeout(() => {
-            let r = [],
-                i = (e) => {
-                    r.push(e.id);
+    null != i && clearTimeout(i),
+        (i = setTimeout(() => {
+            let i = [],
+                r = (e) => {
+                    i.push(e.id);
                 };
-            if (null == e) r.push(...o.A.getGuildIds());
+            if (null == e) i.push(...o.A.getGuildIds());
             else if (Array.isArray(e))
                 e.forEach((e) => {
                     let t = o.A.getGuild(e);
-                    null != t && i(t);
+                    null != t && r(t);
                 });
             else {
                 let t = o.A.getGuild(e);
-                null != t && i(t);
+                null != t && r(t);
             }
-            r.length > 0 && s.A.requestMembers(r, t.toLocaleLowerCase(), n);
+            i.length > 0 && a.A.requestMembers(i, t.toLocaleLowerCase(), n);
         }, 200));
 }
-function p(e, t) {
+function h(e, t) {
     let n = `${e ?? ""}:${t}`,
-        r = _.get(n);
-    if (null != r) return r;
+        i = _.get(n);
+    if (null != i) return i;
     _.set(n, !0);
 }
-let h = {
+let p = {
     getGuildNameSuggestion: function (e) {
         let t = l.default.getCurrentUser(),
             n = c.mG(t);
@@ -46,14 +46,14 @@ let h = {
     },
     requestMembers(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
-            r = Array.isArray(e),
-            i = [],
-            a = !1;
-        r
+            i = Array.isArray(e),
+            r = [],
+            s = !1;
+        i
             ? e.forEach((e) => {
-                  null == p(e, t) && i.push(e);
+                  null == h(e, t) && r.push(e);
               })
-            : null == p(e, t) && (a = !0),
-            i.length > 0 && r ? f(i, t, n) : a && f(e, t, n);
+            : null == h(e, t) && (s = !0),
+            r.length > 0 && i ? f(r, t, n) : s && f(e, t, n);
     },
 };

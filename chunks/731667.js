@@ -1,33 +1,34 @@
+"use strict";
 n.d(t, { A: () => _ });
 var i = n(17928),
     r = n(228366),
-    a = n(891540),
-    l = n(71393),
-    s = n(652215);
-let o = !1;
-function d(e) {
-    let t = l.A.getGuild(e);
-    return null != t && !!t.features.has(s.GuildFeatures.HUB) && ((o = !0), !0);
+    s = n(891540),
+    a = n(71393),
+    o = n(652215);
+let l = !1;
+function u(e) {
+    let t = a.A.getGuild(e);
+    return null != t && !!t.features.has(o.GuildFeatures.HUB) && ((l = !0), !0);
 }
-function u() {
+function c() {
     return !0;
 }
-class c extends i.Ay.Store {
+class d extends i.Ay.Store {
     static displayName = "HubLinkNoticeStore";
     initialize() {
-        this.waitFor(l.A, a.A), this.syncWith([a.A], u);
+        this.waitFor(a.A, s.A), this.syncWith([s.A], c);
     }
     channelNoticePredicate(e) {
-        return !!e.features.has(s.GuildFeatures.LINKED_TO_HUB) && !o;
+        return !!e.features.has(o.GuildFeatures.LINKED_TO_HUB) && !l;
     }
 }
-let _ = new c(r.h, {
+let _ = new d(r.h, {
     CONNECTION_OPEN: function (e) {
-        for (let t of e.guilds) if (d(t.id)) return !0;
+        for (let t of e.guilds) if (u(t.id)) return !0;
         return !1;
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        return d(t.id);
+        return u(t.id);
     },
 });

@@ -1,59 +1,60 @@
-n.d(t, { A: () => f });
+"use strict";
+n.d(t, { A: () => I });
 var i = n(735438),
-    a = n.n(i),
-    r = n(17928),
-    _ = n(499979),
-    s = n(228366),
+    r = n.n(i),
+    s = n(17928),
+    a = n(499979),
+    o = n(228366),
     l = n(283047),
-    o = n(51760),
-    E = n(287809),
+    u = n(51760),
+    c = n(287809),
     d = n(731854);
-let c = {
+let _ = {
         inputDeviceFrecency: d.oh.AUDIO_INPUT,
         outputDeviceFrecency: d.oh.AUDIO_OUTPUT,
         videoDeviceFrecency: d.oh.VIDEO_INPUT,
     },
-    u = {
+    f = {
         afterCompute: () => {},
         computeBonus: () => 100,
         lookupKey: (e) => e,
         maxSamples: 256,
         numFrequentlyItems: 1 / 0,
     };
-function I(e, t) {
+function h(e, t) {
     let { oldId: n } = t;
-    if (!O.isSampling(e)) return !1;
-    O.stopSampling(e, n), O.startSampling(e);
+    if (!A.isSampling(e)) return !1;
+    A.stopSampling(e, n), A.startSampling(e);
 }
-let T = { [d.oh.AUDIO_INPUT]: new _.W0(), [d.oh.AUDIO_OUTPUT]: new _.W0(), [d.oh.VIDEO_INPUT]: new _.W0() },
-    A = { [d.oh.AUDIO_INPUT]: {}, [d.oh.AUDIO_OUTPUT]: {}, [d.oh.VIDEO_INPUT]: {} },
-    S = { [d.oh.AUDIO_INPUT]: new l.A(u), [d.oh.AUDIO_OUTPUT]: new l.A(u), [d.oh.VIDEO_INPUT]: new l.A(u) };
-class N extends r.Ay.PersistedStore {
+let p = { [d.oh.AUDIO_INPUT]: new a.W0(), [d.oh.AUDIO_OUTPUT]: new a.W0(), [d.oh.VIDEO_INPUT]: new a.W0() },
+    E = { [d.oh.AUDIO_INPUT]: {}, [d.oh.AUDIO_OUTPUT]: {}, [d.oh.VIDEO_INPUT]: {} },
+    m = { [d.oh.AUDIO_INPUT]: new l.A(f), [d.oh.AUDIO_OUTPUT]: new l.A(f), [d.oh.VIDEO_INPUT]: new l.A(f) };
+class g extends s.Ay.PersistedStore {
     static displayName = "DeviceFrecencyStore";
     static persistKey = "DeviceFrecencyStore";
-    static migrations = [(e) => a().mapKeys(e, (e, t) => c[t])];
+    static migrations = [(e) => r().mapKeys(e, (e, t) => _[t])];
     initialize(e) {
-        this.waitFor(o.Ay, E.default),
+        this.waitFor(u.Ay, c.default),
             [d.oh.AUDIO_INPUT, d.oh.AUDIO_OUTPUT, d.oh.VIDEO_INPUT].forEach((t) => {
-                e?.[t] != null && S[t].overwriteHistory(e[t]), T[t].reset();
+                e?.[t] != null && m[t].overwriteHistory(e[t]), p[t].reset();
             });
     }
     reset() {
         [d.oh.AUDIO_INPUT, d.oh.AUDIO_OUTPUT, d.oh.VIDEO_INPUT].forEach((e) => {
-            T[e].reset(), (A[e] = {});
+            p[e].reset(), (E[e] = {});
         });
     }
     track(e, t, n) {
-        null == A[e][t] && (A[e][t] = 0), (A[e][t] += n), S[e].track(t, { usesSinceLastTrack: n });
+        null == E[e][t] && (E[e][t] = 0), (E[e][t] += n), m[e].track(t, { usesSinceLastTrack: n });
     }
     isSampling(e) {
-        return T[e].isRunning();
+        return p[e].isRunning();
     }
     startSampling(e) {
-        T[e].start();
+        p[e].start();
     }
     stopSampling(e, t) {
-        let n = T[e];
+        let n = p[e];
         n.stop();
         let i = n.elapsed().asMilliseconds();
         if (i > 0) {
@@ -63,26 +64,26 @@ class N extends r.Ay.PersistedStore {
                     [d.oh.AUDIO_INPUT]: { getCurrentDeviceId: (e) => e.getInputDeviceId() },
                     [d.oh.AUDIO_OUTPUT]: { getCurrentDeviceId: (e) => e.getOutputDeviceId() },
                     [d.oh.VIDEO_INPUT]: { getCurrentDeviceId: (e) => e.getVideoDeviceId() },
-                }[e].getCurrentDeviceId(o.Ay);
+                }[e].getCurrentDeviceId(u.Ay);
             this.track(e, n, i);
         }
         n.reset();
     }
     getState() {
         return {
-            [d.oh.AUDIO_INPUT]: S[d.oh.AUDIO_INPUT].usageHistory,
-            [d.oh.AUDIO_OUTPUT]: S[d.oh.AUDIO_OUTPUT].usageHistory,
-            [d.oh.VIDEO_INPUT]: S[d.oh.VIDEO_INPUT].usageHistory,
+            [d.oh.AUDIO_INPUT]: m[d.oh.AUDIO_INPUT].usageHistory,
+            [d.oh.AUDIO_OUTPUT]: m[d.oh.AUDIO_OUTPUT].usageHistory,
+            [d.oh.VIDEO_INPUT]: m[d.oh.VIDEO_INPUT].usageHistory,
         };
     }
     getDeviceIdsSortedByFrecency(e) {
-        return S[e].frequently;
+        return m[e].frequently;
     }
     getUsageStats() {
         let e = { [d.oh.AUDIO_INPUT]: [], [d.oh.AUDIO_OUTPUT]: [], [d.oh.VIDEO_INPUT]: [] };
         return (
             [d.oh.AUDIO_INPUT, d.oh.AUDIO_OUTPUT].forEach((t) => {
-                this.isSampling(t) && (this.stopSampling(t), this.startSampling(t)), (e[t] = Object.entries(A[t]));
+                this.isSampling(t) && (this.stopSampling(t), this.startSampling(t)), (e[t] = Object.entries(E[t]));
             }),
             {
                 duration_input_device_used_ids: e[d.oh.AUDIO_INPUT].map((e) => {
@@ -105,24 +106,24 @@ class N extends r.Ay.PersistedStore {
         );
     }
 }
-let O = new N(s.h, {
-        AUDIO_SET_INPUT_DEVICE: (e) => I(d.oh.AUDIO_INPUT, e),
-        AUDIO_SET_OUTPUT_DEVICE: (e) => I(d.oh.AUDIO_OUTPUT, e),
-        MEDIA_ENGINE_SET_VIDEO_DEVICE: (e) => I(d.oh.VIDEO_INPUT, e),
+let A = new g(o.h, {
+        AUDIO_SET_INPUT_DEVICE: (e) => h(d.oh.AUDIO_INPUT, e),
+        AUDIO_SET_OUTPUT_DEVICE: (e) => h(d.oh.AUDIO_OUTPUT, e),
+        MEDIA_ENGINE_SET_VIDEO_DEVICE: (e) => h(d.oh.VIDEO_INPUT, e),
         SPEAKING: function (e) {
             let { context: t, userId: n, speakingFlags: i } = e;
             if (t !== d.x.DEFAULT) return !1;
-            let a = E.default.getCurrentUser()?.id;
-            if (null == a) return !1;
-            let r = n === a ? d.oh.AUDIO_INPUT : d.oh.AUDIO_OUTPUT;
-            if (i === d.ME.NONE && O.isSampling(r)) O.stopSampling(r);
+            let r = c.default.getCurrentUser()?.id;
+            if (null == r) return !1;
+            let s = n === r ? d.oh.AUDIO_INPUT : d.oh.AUDIO_OUTPUT;
+            if (i === d.ME.NONE && A.isSampling(s)) A.stopSampling(s);
             else {
-                if (i === d.ME.NONE || O.isSampling(r)) return !1;
-                O.startSampling(r);
+                if (i === d.ME.NONE || A.isSampling(s)) return !1;
+                A.startSampling(s);
             }
         },
         RTC_CONNECTION_CLIENT_CONNECT: function () {
-            O.reset();
+            A.reset();
         },
     }),
-    f = O;
+    I = A;

@@ -1,7 +1,8 @@
-n.d(t, { A: () => l });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(600975),
     r = n(688151);
-let l = (0, i.C)({
+let s = (0, i.C)({
     kind: "guild",
     id: "2024-12_guild_voice_channel_ringing",
     label: "Guild Voice Ringing",

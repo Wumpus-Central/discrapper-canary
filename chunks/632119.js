@@ -1,17 +1,18 @@
-n.d(t, { Bb: () => d, C$: () => S, Jz: () => N, Ys: () => u, fu: () => c });
+"use strict";
+n.d(t, { Bb: () => d, C$: () => m, Jz: () => g, Ys: () => f, fu: () => _ });
 var i = n(923457),
     r = n(873298),
-    a = n(207560),
-    s = n(253932),
-    _ = n(287809);
+    s = n(207560),
+    a = n(885386),
+    o = n(287809);
 n(975214);
 var l = n(656402);
-let o = {
+let u = {
         [l.Je.DISABLED.valueOf()]: r.TO.SHOW,
         [l.Je.NON_FRIENDS.valueOf()]: r.TO.SHOW,
         [l.Je.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.TO.BLOCK,
     },
-    E = {
+    c = {
         [l.Je.DISABLED.valueOf()]: r.TO.SHOW,
         [l.Je.NON_FRIENDS.valueOf()]: r.TO.BLOCK,
         [l.Je.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.TO.BLOCK,
@@ -21,46 +22,46 @@ let o = {
         [l.Je.NON_FRIENDS.valueOf()]: r.TO.BLUR,
         [l.Je.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.TO.BLOCK,
     },
-    c = {
+    _ = {
         [l.Je.DISABLED.valueOf()]: r.TO.BLUR,
         [l.Je.NON_FRIENDS.valueOf()]: r.TO.BLOCK,
         [l.Je.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.TO.BLOCK,
     },
-    u = (e) => {
-        let { setting: t, isDm: n = !1, isFriend: s = !1 } = e;
+    f = (e) => {
+        let { setting: t, isDm: n = !1, isFriend: a = !1 } = e;
         if (null != t && t !== r.TO.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-        let l = _.default.getCurrentUser();
-        return (0, a.To)(i.p.SENSITIVE_CONTENT)
-            ? T({ isDm: n, isFriend: s })
+        let l = o.default.getCurrentUser();
+        return (0, s.To)(i.p.SENSITIVE_CONTENT)
+            ? E({ isDm: n, isFriend: a })
             : l?.nsfwAllowed === !1
-              ? A({ isDm: n, isFriend: s })
-              : I({ isDm: n, isFriend: s });
+              ? p({ isDm: n, isFriend: a })
+              : h({ isDm: n, isFriend: a });
     },
-    I = (e) => {
+    h = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return r.TO.SHOW;
-        let i = s.cj.getSetting();
-        return n ? o[i] : E[i];
+        let i = a.cj.getSetting();
+        return n ? u[i] : c[i];
     },
-    A = (e) => {
+    p = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return r.TO.BLUR;
-        let i = s.cj.getSetting();
-        return n ? d[i] : c[i];
+        let i = a.cj.getSetting();
+        return n ? d[i] : _[i];
     },
-    T = (e) => {
+    E = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         return t && !n ? r.TO.BLOCK : r.TO.BLUR;
     },
-    S = (e) => {
-        let t = e ?? s.Vd.getSetting();
+    m = (e) => {
+        let t = e ?? a.Vd.getSetting();
         return {
-            explicitContentGuilds: u({ setting: t?.explicitContentGuilds }),
-            explicitContentNonFriendDm: u({ setting: t?.explicitContentNonFriendDm, isDm: !0 }),
-            explicitContentFriendDm: u({ setting: t?.explicitContentFriendDm, isDm: !0, isFriend: !0 }),
+            explicitContentGuilds: f({ setting: t?.explicitContentGuilds }),
+            explicitContentNonFriendDm: f({ setting: t?.explicitContentNonFriendDm, isDm: !0 }),
+            explicitContentFriendDm: f({ setting: t?.explicitContentFriendDm, isDm: !0, isFriend: !0 }),
         };
     },
-    N = (e) => {
-        let t = S();
-        s.Vd.updateSetting({ ...t, ...e });
+    g = (e) => {
+        let t = m();
+        a.Vd.updateSetting({ ...t, ...e });
     };

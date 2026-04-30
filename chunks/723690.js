@@ -1,43 +1,44 @@
-n.d(t, { A: () => u });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
-var s = n(503698),
-    l = n.n(s),
+var r = n(503698),
+    s = n.n(r),
     a = n(17928),
-    r = n(297413),
-    o = n(966327),
-    c = n(994500);
+    o = n(297413),
+    l = n(966327),
+    u = n(994500);
 n(427262);
-var d = n(463361);
-let u = function (e) {
+var c = n(463361);
+let d = function (e) {
     let {
             user: t,
             hovered: n,
-            subText: s,
-            showAccountIdentifier: u,
-            status: m,
-            isMobile: h,
-            isVR: A,
-            className: x,
+            subText: r,
+            showAccountIdentifier: d,
+            status: _,
+            isMobile: f,
+            isVR: h,
+            className: p,
         } = e,
-        p = (0, a.bG)([c.A], () => c.A.getNickname(t.id));
+        E = (0, a.bG)([u.A], () => u.A.getNickname(t.id));
     return (0, i.jsxs)("div", {
-        className: l()(d.eF, x, { [d.yo]: n }),
+        className: s()(c.eF, p, { [c.yo]: n }),
         children: [
-            (0, i.jsx)(o.A, { user: t, className: d.my, animate: n, status: m, isMobile: h, isVR: A }),
+            (0, i.jsx)(l.A, { user: t, className: c.my, animate: n, status: _, isMobile: f, isVR: h }),
             (0, i.jsxs)("div", {
-                className: d.Qq,
+                className: c.Qq,
                 children: [
-                    (0, i.jsx)(r.A, {
+                    (0, i.jsx)(o.A, {
                         user: t,
-                        nick: p,
-                        botClass: d.AO,
-                        className: l()(d.xK, { [d.Nu]: t.hasUniqueUsername() }),
-                        usernameClass: d.Xh,
-                        discriminatorClass: d.D2,
-                        showAccountIdentifier: u,
+                        nick: E,
+                        botClass: c.AO,
+                        className: s()(c.xK, { [c.Nu]: t.hasUniqueUsername() }),
+                        usernameClass: c.Xh,
+                        discriminatorClass: c.D2,
+                        showAccountIdentifier: d,
                     }),
-                    (0, i.jsx)("div", { className: d.W$, children: s }),
+                    (0, i.jsx)("div", { className: c.W$, children: r }),
                 ],
             }),
         ],

@@ -1,38 +1,39 @@
-n.d(t, { A: () => d });
-var r = n(17928),
-    a = n(228366),
-    i = n(495544);
-let o = new Set(),
-    l = new Set();
-class s extends r.Ay.Store {
+"use strict";
+n.d(t, { A: () => u });
+var i = n(17928),
+    r = n(228366),
+    s = n(495544);
+let a = new Set(),
+    o = new Set();
+class l extends i.Ay.Store {
     static displayName = "BulkBanStore";
     initialize() {
-        this.waitFor(i.default);
+        this.waitFor(s.default);
     }
     hasPendingBulkBan(e) {
-        return o.has(e);
+        return a.has(e);
     }
     consumeCompletedBeforeStarted(e, t) {
         let n = `${e}:${t}`;
-        return l.delete(n);
+        return o.delete(n);
     }
 }
-let d = new s(a.h, {
+let u = new l(r.h, {
     GUILD_BULK_BAN_STARTED: function (e) {
-        o.add(e.guildId);
+        a.add(e.guildId);
     },
     GUILD_BULK_BAN_FAILED: function (e) {
-        if (!o.has(e.guildId)) return !1;
-        o.delete(e.guildId);
+        if (!a.has(e.guildId)) return !1;
+        a.delete(e.guildId);
     },
     GUILD_BULK_BAN_UPDATE: function (e) {
-        if (!o.has(e.guildId)) {
-            let t = i.default.getId();
-            return l.add(`${e.guildId}:${t}`), !1;
+        if (!a.has(e.guildId)) {
+            let t = s.default.getId();
+            return o.add(`${e.guildId}:${t}`), !1;
         }
-        o.delete(e.guildId);
+        a.delete(e.guildId);
     },
     CONNECTION_OPEN: function () {
-        o.clear(), l.clear();
+        a.clear(), o.clear();
     },
 });

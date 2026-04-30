@@ -1,11 +1,12 @@
-n.d(t, { A: () => h, d: () => d });
+"use strict";
+n.d(t, { A: () => f, d: () => d });
 var i = n(627968),
-    s = n(64700),
-    l = n(3745),
+    r = n(64700),
+    s = n(3745),
     a = n(462887),
-    r = n(289873),
-    o = n(954571);
-class c {
+    o = n(289873),
+    l = n(174459);
+class u {
     static getSiteKey(e) {
         return null != e
             ? e
@@ -30,51 +31,51 @@ class c {
                 });
     }
 }
-var u = n(652215);
+var c = n(652215);
 function d(e) {
-    let { sitekey: t, action: n, onVerify: l } = e,
-        [a, d] = s.useState("uninitialized"),
-        p = s.useCallback((e) => {
-            o.default.track(u.HAw.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
+    let { sitekey: t, action: n, onVerify: s } = e,
+        [a, d] = r.useState("uninitialized"),
+        _ = r.useCallback((e) => {
+            l.default.track(c.HAw.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
         }, []),
-        h = s.useCallback(
+        f = r.useCallback(
             (e) => {
-                p("handle-verify"), l(e);
+                _("handle-verify"), s(e);
             },
-            [l, p],
+            [s, _],
         ),
-        m = s.useCallback(() => {
+        h = r.useCallback(() => {
             window?.grecaptcha?.enterprise?.ready(async () => {
-                p("recaptcha-ready"),
-                    h(await (window?.grecaptcha).enterprise.execute(t, null != n ? { action: n } : void 0)),
+                _("recaptcha-ready"),
+                    f(await (window?.grecaptcha).enterprise.execute(t, null != n ? { action: n } : void 0)),
                     d("loaded");
             });
-        }, [t, n, h, p]),
-        _ = s.useCallback(() => {
-            d("running"), p("recaptcha-loading"), c.loadRecaptchaScript(t, m, p);
-        }, [t, m, p]);
+        }, [t, n, f, _]),
+        p = r.useCallback(() => {
+            d("running"), _("recaptcha-loading"), u.loadRecaptchaScript(t, h, _);
+        }, [t, h, _]);
     return (
-        s.useEffect(() => {
-            "uninitialized" === a && _();
-        }, [_, a]),
-        s.useEffect(
+        r.useEffect(() => {
+            "uninitialized" === a && p();
+        }, [p, a]),
+        r.useEffect(
             () => () => {
-                p("recaptcha-unloading"),
+                _("recaptcha-unloading"),
                     document
                         .querySelectorAll('script[src*="recaptcha/enterprise.js"],.grecaptcha-badge')
                         .forEach((e) => e.parentNode?.removeChild(e)),
                     null != window.grecaptcha && delete window.grecaptcha;
             },
-            [p],
+            [_],
         ),
-        (0, i.jsx)(r.y, {})
+        (0, i.jsx)(o.y, {})
     );
 }
-let p = (e) => {
+let _ = (e) => {
     let { theme: t, ...n } = e,
-        s = (0, a.M)(t) ? "dark" : "light";
-    return (0, i.jsx)(l.A, { sitekey: u._Ak, ...n, theme: s });
+        r = (0, a.M)(t) ? "dark" : "light";
+    return (0, i.jsx)(s.A, { sitekey: c._Ak, ...n, theme: r });
 };
-(p.Themes = { LIGHT: "light", DARK: "dark" }),
-    (p.Sizes = { COMPACT: "compact", NORMAL: "normal", INVISIBLE: "invisible" });
-let h = p;
+(_.Themes = { LIGHT: "light", DARK: "dark" }),
+    (_.Sizes = { COMPACT: "compact", NORMAL: "normal", INVISIBLE: "invisible" });
+let f = _;
