@@ -1,14 +1,25 @@
 .root_d06335 {
     background: var(--background-surface-high);
+    display: flex;
+    flex-direction: column;
     max-height: -moz-fit-content;
     max-height: fit-content;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
     width: 716px
 }
 
 .root_d06335.largeBorderRadius_d06335 {
     border-radius: var(--radius-lg)
+}
+
+.gradientWrapper_d06335 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 44px;
+    padding-top: 44px
 }
 
 .splash_d06335 {
@@ -45,7 +56,8 @@
 
 .content_d06335 {
     gap: var(--space-32);
-    padding: 44px 48px;
+    padding: 0 var(--space-48);
+    padding-bottom: var(--space-8);
     word-break: break-word
 }
 
@@ -86,19 +98,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: var(--space-12);
     justify-content: center;
     position: relative;
     width: 100%
-}
-
-.featureCardGroup_d06335,
-.featureCardGroup_d06335.wideStyle_d06335 {
-    -moz-column-gap: var(--space-12);
-    column-gap: var(--space-12)
-}
-
-.featureCardGroup_d06335.wideStyle_d06335 {
-    row-gap: var(--space-8)
 }
 
 .featureCard_d06335 {
@@ -172,7 +175,15 @@
 }
 
 .disclaimer_d06335 {
-    margin-top: calc(var(--space-16)*-1);
     max-width: 480px;
     text-align: center
+}
+
+.footerContainer_d06335 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    justify-content: center;
+    margin-top: var(--space-24)
 }
