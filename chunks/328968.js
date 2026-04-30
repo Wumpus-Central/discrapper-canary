@@ -10,7 +10,7 @@ let _ = {},
     d = {},
     u = {},
     c = {},
-    E = new Map();
+    E = new Set();
 function h(e) {
     let t = e.id,
         n = e.sku.id,
@@ -25,7 +25,7 @@ function m(e, t) {
     return `${e}:${t}`;
 }
 function f() {
-    (_ = {}), (c = {}), (u = {}), (d = {}), (E = new Map());
+    (_ = {}), (c = {}), (u = {}), (d = {}), (E = new Set());
 }
 function g() {
     if (i === a.default.locale) return !1;
@@ -55,13 +55,7 @@ class A extends r.Ay.Store {
         return d[m(e, t)];
     }
     isFetchingForSKU(e) {
-        return !0 === E.get(e);
-    }
-    didFetchingForSKUFail(e) {
-        return !1 === E.get(e);
-    }
-    getFetchingOrFailedSkuIds() {
-        return Array.from(E.keys());
+        return E.has(e);
     }
     getStoreListing(e) {
         let { storeListingId: t, skuId: n, channelId: i, isTestMode: r } = e;
@@ -79,14 +73,12 @@ class A extends r.Ay.Store {
 }
 let I = new A(s.h, {
     STORE_LISTINGS_FETCH_START: function (e) {
-        let { skuId: t } = e,
-            n = E.get(t);
-        return E.set(t, !0), !0 !== n;
+        let { skuId: t } = e;
+        E.add(t);
     },
     STORE_LISTINGS_FETCH_FAIL: function (e) {
-        let { skuId: t } = e,
-            n = E.get(t);
-        return E.set(t, !1), !1 !== n;
+        let { skuId: t } = e;
+        E.delete(t);
     },
     STORE_LISTINGS_FETCH_SUCCESS: function (e) {
         let { storeListings: t } = e;
