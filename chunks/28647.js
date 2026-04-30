@@ -1,8 +1,9 @@
-n.d(t, { z: () => l });
+"use strict";
+n.d(t, { z: () => a });
 var i = n(192308),
     r = n(228366),
     s = n(946974);
-let l = {
+let a = {
     binds: ["mod+/", "mod+shift+/"],
     comboKeysBindGlobal: !0,
     action: () => (

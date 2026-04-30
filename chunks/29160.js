@@ -1,21 +1,22 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => u });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    r = n(80477);
-class o extends l.PureComponent {
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(80477);
+class l extends r.PureComponent {
     static defaultProps = { tag: "div", forceHover: !1 };
     render() {
-        let { tag: e, children: t, hoverText: n, className: l, forceHover: a, ...o } = this.props;
+        let { tag: e, children: t, hoverText: n, className: r, forceHover: s, ...l } = this.props;
         return (0, i.jsxs)("div", {
-            ...o,
-            className: s()(l, r.oM, { [r.r9]: null == n, [r.EE]: a }),
+            ...l,
+            className: a()(r, o.oM, { [o.r9]: null == n, [o.EE]: s }),
             children: [
-                (0, i.jsx)(e, { className: r.yo, children: n }),
-                (0, i.jsx)(e, { className: r.Ay, children: t }),
+                (0, i.jsx)(e, { className: o.yo, children: n }),
+                (0, i.jsx)(e, { className: o.Ay, children: t }),
             ],
         });
     }
 }
-let c = o;
+let u = l;
