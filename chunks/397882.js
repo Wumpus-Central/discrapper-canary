@@ -1,4 +1,5 @@
 e.exports = {
+    TE: "chat__0b563",
     kL: "container__0b563",
     $H: "tabBar__0b563",
     YU: "tabBarItem__0b563",
