@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 537837, Version Hash: e4e27e64eddca5c77f60e7dff360754f19423ce5`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 537881, Version Hash: 8ccbfd8dd5ec0f2a4397d1f1bee884f33eb4538f`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -2981,7 +2981,7 @@ let rI = (0, rs.Fe)({
                 n.e("73873"),
                 n.e("59530"),
                 n.e("25310"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("22995"),
                 n.e("6305"),
                 n.e("69273"),
@@ -3079,7 +3079,7 @@ let rI = (0, rs.Fe)({
                 n.e("73873"),
                 n.e("59530"),
                 n.e("25310"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("22995"),
                 n.e("6305"),
                 n.e("69273"),
@@ -3191,7 +3191,7 @@ let rI = (0, rs.Fe)({
                 n.e("73873"),
                 n.e("59530"),
                 n.e("25310"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("22995"),
                 n.e("6305"),
                 n.e("69273"),
@@ -3781,7 +3781,7 @@ let s0 = (0, rs.Fe)({
                 n.e("94898"),
                 n.e("6305"),
                 n.e("69273"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("77083"),
                 n.e("63009"),
                 n.e("16933"),
@@ -4018,7 +4018,7 @@ let s0 = (0, rs.Fe)({
                 n.e("25781"),
                 n.e("6305"),
                 n.e("69273"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("77083"),
                 n.e("63009"),
                 n.e("16933"),
@@ -6667,7 +6667,7 @@ let ul = 15 * n5.A.Millis.MINUTE,
                             n.e("99961"),
                             n.e("94898"),
                             n.e("69273"),
-                            n.e("97893"),
+                            n.e("24953"),
                             n.e("77083"),
                             n.e("63009"),
                             n.e("16933"),
@@ -16903,7 +16903,7 @@ let Tg = (e) => {
                                 let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
                                     n.e("34218"),
                                     n.e("4469"),
-                                    n.e("97893"),
+                                    n.e("24953"),
                                     n.e("88205"),
                                     n.e("22894"),
                                     n.e("77083"),
@@ -18232,7 +18232,7 @@ let SC = "isHideDevBanner",
                     className: t2()(Sy.Wz, Sy.mr),
                     children: [
                         (0, k.jsx)(SN, { className: Sy.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "537837" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "537881" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -19815,7 +19815,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
             Promise.all([
                 n.e("82209"),
                 n.e("74556"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("25310"),
                 n.e("99961"),
                 n.e("94898"),
@@ -20001,7 +20001,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
                 n.e("79848"),
                 n.e("6305"),
                 n.e("69273"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("77083"),
                 n.e("63009"),
                 n.e("16933"),
@@ -20086,7 +20086,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
                 n.e("86921"),
                 n.e("8946"),
                 n.e("89324"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("79093"),
                 n.e("28510"),
                 n.e("25310"),
@@ -20368,7 +20368,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
                 n.e("94898"),
                 n.e("6305"),
                 n.e("69273"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("77083"),
                 n.e("63009"),
                 n.e("16933"),
@@ -20569,7 +20569,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
             Promise.all([
                 n.e("8946"),
                 n.e("89324"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("79093"),
                 n.e("28510"),
                 n.e("25310"),
@@ -20944,7 +20944,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
                 n.e("89324"),
                 n.e("1195"),
                 n.e("91314"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("63635"),
                 n.e("6305"),
                 n.e("52204"),
@@ -21027,7 +21027,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
                 n.e("88205"),
                 n.e("6305"),
                 n.e("69273"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("77083"),
                 n.e("63009"),
                 n.e("16933"),
@@ -21216,7 +21216,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
                 n.e("94898"),
                 n.e("6305"),
                 n.e("69273"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("77083"),
                 n.e("63009"),
                 n.e("16933"),
@@ -21392,7 +21392,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
         createPromise: () =>
             Promise.all([
                 n.e("8946"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("89324"),
                 n.e("79093"),
                 n.e("28510"),
@@ -21656,7 +21656,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
                 n.e("94898"),
                 n.e("6305"),
                 n.e("69273"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("77083"),
                 n.e("63009"),
                 n.e("16933"),
@@ -22020,7 +22020,7 @@ let yE = () => (0, k.jsx)("div", { className: yu.wG, children: (0, k.jsx)(rn.y, 
     yV = (0, ny.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("97893"),
+                n.e("24953"),
                 n.e("25310"),
                 n.e("99961"),
                 n.e("94898"),
@@ -23291,7 +23291,7 @@ let CG = (0, rs.Fe)({
                 n.e("73873"),
                 n.e("59530"),
                 n.e("25310"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("22995"),
                 n.e("6305"),
                 n.e("69273"),
@@ -23418,7 +23418,7 @@ let CG = (0, rs.Fe)({
                 n.e("99961"),
                 n.e("94898"),
                 n.e("69273"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("77083"),
                 n.e("63009"),
                 n.e("16933"),
@@ -25237,7 +25237,7 @@ let Rr = (0, rs.Fe)({
                 n.e("99961"),
                 n.e("65086"),
                 n.e("4981"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("69273"),
                 n.e("77083"),
                 n.e("63009"),
@@ -25550,7 +25550,7 @@ let Rr = (0, rs.Fe)({
                 n.e("65086"),
                 n.e("4981"),
                 n.e("25310"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("6305"),
                 n.e("69273"),
                 n.e("77083"),
@@ -25652,7 +25652,7 @@ let Rr = (0, rs.Fe)({
                 n.e("94898"),
                 n.e("6305"),
                 n.e("69273"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("77083"),
                 n.e("63009"),
                 n.e("16933"),
@@ -25957,7 +25957,7 @@ let Rr = (0, rs.Fe)({
                 n.e("99961"),
                 n.e("65086"),
                 n.e("4981"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("69273"),
                 n.e("77083"),
                 n.e("63009"),
@@ -26695,19 +26695,13 @@ let Rq = {
             request: (e) => ({ quest_id: e.string().required() }),
             response: (e) => ({ success: e.boolean().required() }),
         },
-        [R$.e$.GET_QUESTS]: {
+        [R$.e$.GET_QUEST]: {
             request: void 0,
             response: (e) => ({
-                quests: e
-                    .array()
-                    .items(
-                        e.object({
-                            quest_id: e.string().required(),
-                            enrolled_at: e.string().allow(null).optional(),
-                            external_cta_url: e.string().required(),
-                        }),
-                    )
-                    .required(),
+                quest_id: e.string().required(),
+                enrolled_at: e.string().allow(null).optional(),
+                completed_at: e.string().allow(null).optional(),
+                external_cta_url: e.string().required(),
             }),
         },
         [R$.e$.REQUEST_PROXY_TICKET_REFRESH]: { request: void 0, response: (e) => ({ ticket: e.string().required() }) },
@@ -27693,29 +27687,30 @@ let bv = new Set([RK.AM, RK.eK]),
                 );
             },
         },
-        [eL.e$_.GET_QUESTS]: {
+        [eL.e$_.GET_QUEST]: {
             scope: Rz.F.IDENTIFY,
             handler(e) {
                 let { socket: t } = e;
                 (0, RB.lG)(t.transport);
-                let n = (0, RB.D2)(t.application);
-                return {
-                    quests: (0, oO.jm)(oS.A.quests, n, !0)
-                        .map((e) => ({
-                            quest_id: e.id,
-                            enrolled_at: e.userStatus?.enrolledAt ?? null,
-                            external_cta_url: e.config.ctaConfig.link,
-                        }))
-                        .sort((e, t) =>
-                            null == e.enrolled_at && null == t.enrolled_at
-                                ? 0
-                                : null == e.enrolled_at
-                                  ? 1
-                                  : null == t.enrolled_at
-                                    ? -1
-                                    : new Date(e.enrolled_at).getTime() - new Date(t.enrolled_at).getTime(),
-                        ),
-                };
+                let n = (0, RB.D2)(t.application),
+                    i = (0, oO.jm)(oS.A.quests, n, !0);
+                if (0 === i.length) throw new R2.A({ errorCode: eL.Lw6.INVALID_COMMAND }, "No eligible quests found");
+                return i
+                    .map((e) => ({
+                        quest_id: e.id,
+                        enrolled_at: e.userStatus?.enrolledAt ?? null,
+                        completed_at: e.userStatus?.completedAt ?? null,
+                        external_cta_url: e.config.ctaConfig.link,
+                    }))
+                    .sort((e, t) =>
+                        null == e.enrolled_at && null == t.enrolled_at
+                            ? 0
+                            : null == e.enrolled_at
+                              ? 1
+                              : null == t.enrolled_at
+                                ? -1
+                                : new Date(e.enrolled_at).getTime() - new Date(t.enrolled_at).getTime(),
+                    )[0];
             },
         },
     },
@@ -29630,7 +29625,7 @@ let DZ = {
                                     ew.default.track(eL.HAw.OPEN_MODAL, { type: "gift_accept", location: eL.$OG }),
                                     (0, nC.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("97893"),
+                                            n.e("24953"),
                                             n.e("73646"),
                                             n.e("10471"),
                                             n.e("35429"),
@@ -29905,7 +29900,7 @@ let D0 = {
                         let { openIAPPurchaseModal: e } = await Promise.all([
                                 n.e("6305"),
                                 n.e("69273"),
-                                n.e("97893"),
+                                n.e("24953"),
                                 n.e("77083"),
                                 n.e("63009"),
                                 n.e("16933"),
@@ -34266,7 +34261,7 @@ let P$ = (0, ny.Fe)({
             n.e("76937"),
             n.e("55990"),
             n.e("67218"),
-            n.e("97893"),
+            n.e("24953"),
             n.e("56795"),
             n.e("86024"),
             n.e("19032"),
@@ -36382,7 +36377,7 @@ let Us = (0, rs.Fe)({
                 n.e("89324"),
                 n.e("1195"),
                 n.e("91314"),
-                n.e("97893"),
+                n.e("24953"),
                 n.e("63635"),
                 n.e("6305"),
                 n.e("52204"),
