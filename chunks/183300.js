@@ -83,8 +83,7 @@ function eu(e) {
         R()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, I.openModalLazy)(async () => {
                 let { default: n } = await Promise.all([
-                    i.e("75527"),
-                    i.e("41884"),
+                    i.e("97219"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -335,8 +334,7 @@ function ep(e) {
             null != U &&
                 (0, I.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("75527"),
-                        i.e("41884"),
+                        i.e("97219"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -526,7 +524,7 @@ function eU(e) {
                     (0, eT.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                             i.e("80848"),
-                            i.e("98042"),
+                            i.e("23551"),
                             i.e("98944"),
                             i.e("26132"),
                             i.e("46652"),
@@ -672,8 +670,8 @@ let e0 = (e) =>
         [e.name, e.application_id, e.assets, e.state, e.details, e.party].some((e) => null != e)) ||
     e.type === M.$pd.LISTENING;
 var e1 = i(685399),
-    e2 = i(960076),
-    e9 = i(323073),
+    e9 = i(960076),
+    e2 = i(323073),
     e3 = i(85451),
     e6 = i(268218),
     e7 = i(834757),
@@ -702,7 +700,7 @@ let ta = (0, e6.Fe)({
     createPromise: () =>
         Promise.all([
             i.e("80848"),
-            i.e("75527"),
+            i.e("97219"),
             i.e("66361"),
             i.e("13520"),
             i.e("40841"),
@@ -713,12 +711,12 @@ let ta = (0, e6.Fe)({
             i.e("89603"),
             i.e("45650"),
             i.e("97189"),
-            i.e("44398"),
+            i.e("76348"),
             i.e("42105"),
             i.e("90261"),
             i.e("55990"),
             i.e("62296"),
-            i.e("17546"),
+            i.e("90738"),
             i.e("7066"),
             i.e("333"),
             i.e("68432"),
@@ -898,7 +896,7 @@ function td(e) {
                         size: L._3.SIZE_32,
                         "aria-label": d,
                         avatarDecoration: c,
-                        status: (0, e2.A)(h) ? M.clD.STREAMING : o === M.clD.OFFLINE ? void 0 : o,
+                        status: (0, e9.A)(h) ? M.clD.STREAMING : o === M.clD.OFFLINE ? void 0 : o,
                         isMobile: m,
                         className: ts.my,
                     }),
@@ -924,7 +922,7 @@ function tc(e) {
         [A, x] = (0, r.yK)([eC.A, G.A, P.A, eK.default], () => (0, eW.eo)(s, eC.A, G.A, P.A, eK.default)),
         v = (0, r.bG)([e_.default], () => e_.default.getId()),
         I = (0, r.bG)([ei.A], () => (0, e7.nr)(g, ei.A), [g]),
-        f = (0, e9.r9)() && (0, e9.UK)(s.id),
+        f = (0, e2.r9)() && (0, e2.UK)(s.id),
         N =
             ((t = (0, e1.Ay)(s)),
             (i = n.useMemo(() => t.filter((e) => e.embeddedActivity.userIds.has(d.id)), [t, d.id])),
@@ -1106,7 +1104,7 @@ let tg = (0, eH.J)(function (e) {
             (0, eT.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     i.e("80848"),
-                    i.e("98042"),
+                    i.e("23551"),
                     i.e("98944"),
                     i.e("26132"),
                     i.e("46652"),

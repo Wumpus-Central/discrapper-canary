@@ -1,0 +1,9 @@
+.theme-dark .badge_dd79c2 {
+    background-color: var(--white);
+    color: var(--black)
+}
+
+.theme-light .badge_dd79c2 {
+    background-color: var(--black);
+    color: var(--white)
+}
