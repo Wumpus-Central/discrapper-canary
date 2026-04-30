@@ -1,6 +1,7 @@
-var n = e(374316),
-    o = e(837082);
-r.exports = function (r) {
-    var t = n(r, "string");
-    return o(t) ? t : t + "";
+"use strict";
+var i = n(374316),
+    r = n(837082);
+e.exports = function (e) {
+    var t = i(e, "string");
+    return r(t) ? t : t + "";
 };

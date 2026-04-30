@@ -1,14 +1,15 @@
-e.d(a, { A: () => p });
-var c = e(627968),
-    i = e(64700),
-    r = e(503698),
-    d = e.n(r),
-    h = e(403581),
-    l = e(569319);
-let p = i.forwardRef((s, a) =>
-    (0, c.jsx)("div", {
-        ref: a,
-        className: d()(l.R, s.className),
-        children: (0, c.jsx)(h.t, { size: "lg", className: l.Q, color: "white" }),
+"use strict";
+n.d(t, { A: () => u });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(403581),
+    l = n(569319);
+let u = r.forwardRef((e, t) =>
+    (0, i.jsx)("div", {
+        ref: t,
+        className: a()(l.R, e.className),
+        children: (0, i.jsx)(o.t, { size: "lg", className: l.Q, color: "white" }),
     }),
 );

@@ -6,13 +6,13 @@ var l = t(17928),
     a = t(442433),
     u = t(734057),
     s = t(576705),
-    d = t(1193),
+    d = t(140069),
     c = t(589051),
     o = t(145567),
     A = t(34307),
     E = t(652215),
     I = t(499214),
-    v = t(985018);
+    v = t(375708);
 function f(e, n) {
     let { hasChat: t } = (0, c.M8)("useOverlayTextChatToggleMenuItem"),
         f = "DM_USER" === e.kind ? e.userId : null,

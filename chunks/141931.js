@@ -1,28 +1,29 @@
-n.d(t, { Fh: () => i, du: () => o, dv: () => _, fS: () => c, qQ: () => d });
+"use strict";
+n.d(t, { Fh: () => i, du: () => l, dv: () => d, fS: () => c, qQ: () => u });
 class i extends Error {
     name = "SystemServiceNotAvailableError";
     constructor() {
         super("System service not available");
     }
 }
-var a,
-    r,
+var r,
     s,
-    l,
-    o =
-        (((a = {})[(a.HasRTCConnection = 0)] = "HasRTCConnection"),
-        (a[(a.IsSendingVideo = 1)] = "IsSendingVideo"),
-        (a[(a.IsSendingStream = 2)] = "IsSendingStream"),
-        (a[(a.IsReceivingVideo = 3)] = "IsReceivingVideo"),
-        (a[(a.IsReceivingStream = 4)] = "IsReceivingStream"),
-        (a[(a.VideoMediaSessionId = 5)] = "VideoMediaSessionId"),
-        (a[(a.StreamMediaSessionId = 6)] = "StreamMediaSessionId"),
-        (a[(a.IntentionalCrashReason = 7)] = "IntentionalCrashReason"),
-        a),
-    d =
-        (((r = {})[(r.RendererProcessDelayed = 0)] = "RendererProcessDelayed"),
-        (r[(r.RendererProcess = 1)] = "RendererProcess"),
-        (r[(r.MainProcess = 2)] = "MainProcess"),
+    a,
+    o,
+    l =
+        (((r = {})[(r.HasRTCConnection = 0)] = "HasRTCConnection"),
+        (r[(r.IsSendingVideo = 1)] = "IsSendingVideo"),
+        (r[(r.IsSendingStream = 2)] = "IsSendingStream"),
+        (r[(r.IsReceivingVideo = 3)] = "IsReceivingVideo"),
+        (r[(r.IsReceivingStream = 4)] = "IsReceivingStream"),
+        (r[(r.VideoMediaSessionId = 5)] = "VideoMediaSessionId"),
+        (r[(r.StreamMediaSessionId = 6)] = "StreamMediaSessionId"),
+        (r[(r.IntentionalCrashReason = 7)] = "IntentionalCrashReason"),
         r),
-    c = (((s = {}).WINDOW = "window"), (s.SCREEN = "screen"), (s.CAMERA = "camera"), s),
-    _ = (((l = {}).VIDEO = "VIDEO"), (l.MUTE = "MUTE"), (l.DEAFEN = "DEAFEN"), (l.DISCONNECT = "DISCONNECT"), l);
+    u =
+        (((s = {})[(s.RendererProcessDelayed = 0)] = "RendererProcessDelayed"),
+        (s[(s.RendererProcess = 1)] = "RendererProcess"),
+        (s[(s.MainProcess = 2)] = "MainProcess"),
+        s),
+    c = (((a = {}).WINDOW = "window"), (a.SCREEN = "screen"), (a.CAMERA = "camera"), a),
+    d = (((o = {}).VIDEO = "VIDEO"), (o.MUTE = "MUTE"), (o.DEAFEN = "DEAFEN"), (o.DISCONNECT = "DISCONNECT"), o);

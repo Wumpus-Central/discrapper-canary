@@ -1,15 +1,16 @@
-a.d(t, { N: () => r, e: () => c });
-var e = a(116833),
-    p = a(871123);
-function c(n) {
-    let { imageUrl: t, backgroundImageUrl: a, altText: p, overlayImageUrl: c, customClassNames: r } = n;
+"use strict";
+n.d(t, { N: () => a, e: () => s });
+var i = n(116833),
+    r = n(871123);
+function s(e) {
+    let { imageUrl: t, backgroundImageUrl: n, altText: r, overlayImageUrl: s, customClassNames: a } = e;
     return {
         type: "dynamic",
-        component: e.DynamicGraphicComponent.SOCIAL_LAYER_SKU_PREVIEW,
+        component: i.DynamicGraphicComponent.SOCIAL_LAYER_SKU_PREVIEW,
         aspectRatio: "16/9",
-        props: { imageUrl: t, backgroundImageUrl: a, altText: p, overlayImageUrl: c, customClassNames: r },
+        props: { imageUrl: t, backgroundImageUrl: n, altText: r, overlayImageUrl: s, customClassNames: a },
     };
 }
-function r(n) {
-    return c({ imageUrl: (0, p.fq)(n), backgroundImageUrl: (0, p.xf)(n), altText: n.name });
+function a(e) {
+    return s({ imageUrl: (0, r.fq)(e), backgroundImageUrl: (0, r.xf)(e), altText: e.name });
 }

@@ -1,57 +1,58 @@
-n.d(t, { A: () => I });
+"use strict";
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
-var a = n(661531),
-    r = n(462887),
-    s = n(778712),
-    l = n(369606),
-    o = n(194261),
-    d = n(736653),
+var r = n(661531),
+    s = n(462887),
+    a = n(778712),
+    o = n(369606),
+    l = n(194261),
+    u = n(736653),
     c = n(459793),
-    _ = n(927018),
-    E = n(661093);
-let u = {
-        trophy: a.A.unsafe_rawColors.PRIMARY_400.css,
-        locked: a.A.unsafe_rawColors.PRIMARY_400.css,
-        unlocked: a.A.unsafe_rawColors.GREEN_330.css,
+    d = n(927018),
+    _ = n(661093);
+let f = {
+        trophy: r.A.unsafe_rawColors.PRIMARY_400.css,
+        locked: r.A.unsafe_rawColors.PRIMARY_400.css,
+        unlocked: r.A.unsafe_rawColors.GREEN_330.css,
     },
-    A = {
-        trophy: a.A.unsafe_rawColors.PRIMARY_400.css,
-        locked: a.A.unsafe_rawColors.PRIMARY_400.css,
-        unlocked: a.A.unsafe_rawColors.GREEN_330.css,
+    h = {
+        trophy: r.A.unsafe_rawColors.PRIMARY_400.css,
+        locked: r.A.unsafe_rawColors.PRIMARY_400.css,
+        unlocked: r.A.unsafe_rawColors.GREEN_330.css,
     };
-function I(e) {
-    let { achievementId: t, unlocked: n, size: a = s._3.SIZE_40 } = e,
-        I = (0, d.Ay)(),
-        T = (0, _.vM)(t);
-    if (null == T) return null;
-    let h = (0, s.Kj)(a),
-        { name: S, rarity: N } = T,
-        { color: f } = (0, _.ag)(N),
-        p = (0, r.M)(I) ? u : A,
-        m = (h.size - h.offset - 2 * h.stroke) * 0.8,
-        O = h.size - h.stroke,
-        C = { width: 0.4 * m, height: 0.4 * m },
-        R = { width: C.width + 1, height: C.height + 1, right: h.stroke + 1, bottom: h.stroke + 1, padding: 0 };
+function p(e) {
+    let { achievementId: t, unlocked: n, size: r = a._3.SIZE_40 } = e,
+        p = (0, u.Ay)(),
+        E = (0, d.vM)(t);
+    if (null == E) return null;
+    let m = (0, a.Kj)(r),
+        { name: g, rarity: A } = E,
+        { color: I } = (0, d.ag)(A),
+        T = (0, s.M)(p) ? f : h,
+        S = (m.size - m.offset - 2 * m.stroke) * 0.8,
+        N = m.size - m.stroke,
+        y = { width: 0.4 * S, height: 0.4 * S },
+        C = { width: y.width + 1, height: y.height + 1, right: m.stroke + 1, bottom: m.stroke + 1, padding: 0 };
     return (0, i.jsxs)("div", {
-        className: E.kL,
-        style: { width: O, height: O, padding: h.stroke },
-        "aria-label": `${S() ?? ""}`,
+        className: _.kL,
+        style: { width: N, height: N, padding: m.stroke },
+        "aria-label": `${g() ?? ""}`,
         children: [
             (0, i.jsx)("div", {
-                className: E.r5,
-                children: (0, i.jsx)(l.O, { size: "custom", color: n ? f : p.trophy, width: m, height: m }),
+                className: _.r5,
+                children: (0, i.jsx)(o.O, { size: "custom", color: n ? I : T.trophy, width: S, height: S }),
             }),
             !n &&
                 (0, i.jsx)("div", {
-                    className: E.dq,
-                    style: R,
-                    children: (0, i.jsx)(o.X, { size: "custom", color: p.locked, ...C }),
+                    className: _.dq,
+                    style: C,
+                    children: (0, i.jsx)(l.X, { size: "custom", color: T.locked, ...y }),
                 }),
             n &&
-                N === _.md.LEGENDARY &&
-                (0, i.jsx)("div", { className: E.dq, style: R, children: (0, i.jsx)(c.A, { className: E.ox, ...C }) }),
+                A === d.md.LEGENDARY &&
+                (0, i.jsx)("div", { className: _.dq, style: C, children: (0, i.jsx)(c.A, { className: _.ox, ...y }) }),
         ],
     });
 }
-I.Sizes = s._3;
+p.Sizes = a._3;

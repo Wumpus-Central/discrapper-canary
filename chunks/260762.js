@@ -1,15 +1,16 @@
-n.d(t, { A: () => o });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(887129),
-    l = n(17928),
-    r = n(775602);
-function s() {
+    r = n(17928),
+    s = n(775602);
+function a() {
     return Promise.resolve();
 }
-function a(e) {
+function o(e) {
     let t = document.querySelector(e);
     null != t && t.focus();
 }
-function o(e, t) {
-    let n = (0, l.bG)([r.A], () => r.A.keyboardModeEnabled);
-    return (0, i.Ay)({ id: e, isEnabled: n, orientation: t, setFocus: a, scrollToStart: s, scrollToEnd: s });
+function l(e, t) {
+    let n = (0, r.bG)([s.A], () => s.A.keyboardModeEnabled);
+    return (0, i.Ay)({ id: e, isEnabled: n, orientation: t, setFocus: o, scrollToStart: a, scrollToEnd: a });
 }

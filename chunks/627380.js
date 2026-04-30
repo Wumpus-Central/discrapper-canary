@@ -1,22 +1,23 @@
-t.d(u, { t: () => s });
-var l = t(64700),
-    e = t(989349),
-    r = t.n(e),
-    d = t(655752),
-    a = t(112848);
-function i(n, u) {
-    return r()(n).add(u, "months").add(1, "day");
+"use strict";
+n.d(t, { t: () => u });
+var i = n(64700),
+    r = n(989349),
+    s = n.n(r),
+    a = n(655752),
+    o = n(878784);
+function l(e, t) {
+    return s()(e).add(t, "months").add(1, "day");
 }
-function s() {
-    let n = (0, d.P)(),
-        u = (0, a.Xb)();
-    return (0, l.useMemo)(() => {
-        if (null == n || null == u) return null;
-        let t = n.tenureReqNumMonths,
-            l = i(u, t);
+function u() {
+    let e = (0, a.P)(),
+        t = (0, o.Xb)();
+    return (0, i.useMemo)(() => {
+        if (null == e || null == t) return null;
+        let n = e.tenureReqNumMonths,
+            i = l(t, n);
         return {
-            days: Math.max(0, i(u, t).diff(r()(), "days")),
-            months: Math.max(0, Math.round(l.diff(r()(), "months", !0))),
+            days: Math.max(0, l(t, n).diff(s()(), "days")),
+            months: Math.max(0, Math.round(i.diff(s()(), "months", !0))),
         };
-    }, [n, u]);
+    }, [e, t]);
 }

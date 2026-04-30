@@ -1,34 +1,35 @@
-n.d(t, { F: () => a });
+"use strict";
+n.d(t, { F: () => o });
 var i = n(627968);
 n(64700);
-var l = n(661531),
+var r = n(661531),
     s = n(996682),
-    r = n(27989);
-let a = (e) => {
+    a = n(27989);
+let o = (e) => {
     let {
             size: t = "md",
             width: n,
-            height: a,
-            color: o = l.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: d = "",
+            height: o,
+            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: u = "",
             ...c
         } = e,
-        u = (0, r.J)(t),
-        h = u?.width ?? n,
-        g = u?.height ?? a;
+        d = (0, a.J)(t),
+        _ = d?.width ?? n,
+        f = d?.height ?? o;
     return (0, i.jsx)("svg", {
         ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: h,
-        height: g,
+        width: _,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {
-            fill: "string" == typeof o ? o : o.css,
+            fill: "string" == typeof l ? l : l.css,
             fillRule: "evenodd",
             d: "M4 4a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H4Zm-.5 3a.5.5 0 0 0-.5.5v1c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm4 0a.5.5 0 0 0-.5.5v1c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM7 11.5c0-.28.22-.5.5-.5h1c.28 0 .5.22.5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM3.5 11a.5.5 0 0 0-.5.5v1c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM11 7.5c0-.28.22-.5.5-.5h1c.28 0 .5.22.5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm.5 3.5a.5.5 0 0 0-.5.5v1c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM15 7.5c0-.28.22-.5.5-.5h1c.28 0 .5.22.5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm.5 3.5a.5.5 0 0 0-.5.5v1c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM19 7.5c0-.28.22-.5.5-.5h1c.28 0 .5.22.5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm.5 3.5a.5.5 0 0 0-.5.5v1c0 .28.22.5.5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM7 15.5c0-.28.22-.5.5-.5h9c.28 0 .5.22.5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1Z",
             clipRule: "evenodd",
-            className: d,
+            className: u,
         }),
     });
 };

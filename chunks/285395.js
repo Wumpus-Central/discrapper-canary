@@ -1,27 +1,28 @@
-n.d(t, { j: () => l, t: () => s });
+"use strict";
+n.d(t, { j: () => o, t: () => a });
 var i = n(403362),
-    a = n(488995),
-    r = n(985018);
-function s(e) {
+    r = n(488995),
+    s = n(375708);
+function a(e) {
     switch (e) {
-        case a.GlobalDiscoveryTab.SERVERS:
-            return r.intl.string(r.t["+Anbp9"]);
-        case a.GlobalDiscoveryTab.APPS:
-            return r.intl.string(r.t.bGwCoR);
-        case a.GlobalDiscoveryTab.QUESTS:
-            return r.intl.string(r.t.EcaD4e);
+        case r.GlobalDiscoveryTab.SERVERS:
+            return s.intl.string(s.t["+Anbp9"]);
+        case r.GlobalDiscoveryTab.APPS:
+            return s.intl.string(s.t.bGwCoR);
+        case r.GlobalDiscoveryTab.QUESTS:
+            return s.intl.string(s.t.EcaD4e);
         default:
             (0, i.xb)(e);
     }
 }
-function l(e) {
-    if (e.startsWith("/discovery/applications")) return a.GlobalDiscoveryTab.APPS;
+function o(e) {
+    if (e.startsWith("/discovery/applications")) return r.GlobalDiscoveryTab.APPS;
     switch (e) {
         case "/discovery/quests":
-            return a.GlobalDiscoveryTab.QUESTS;
+            return r.GlobalDiscoveryTab.QUESTS;
         case "/discovery/servers":
-            return a.GlobalDiscoveryTab.SERVERS;
+            return r.GlobalDiscoveryTab.SERVERS;
         default:
-            return a.GLOBAL_DISCOVERY_DEFAULT_TAB;
+            return r.GLOBAL_DISCOVERY_DEFAULT_TAB;
     }
 }

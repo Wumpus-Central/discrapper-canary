@@ -1,31 +1,32 @@
-n.d(t, { Db: () => c, sN: () => d });
-var i = n(132500),
-    a = n(927813),
-    r = n(38405),
-    s = n(604594);
-let l = 12 * a.A.Millis.HOUR,
-    o = null;
-function d() {
+"use strict";
+n.d(t, { Db: () => c, sN: () => u });
+var i = n(835245),
+    r = n(927813),
+    s = n(38405),
+    a = n(604594);
+let o = 12 * r.A.Millis.HOUR,
+    l = null;
+function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now();
-    return null == o ||
+    return null == l ||
         (function (e) {
             let t = Date.now();
             if (t < e.createdAtTimestamp)
                 return (
-                    r.A.addBreadcrumb({
+                    s.A.addBreadcrumb({
                         category: "ad",
                         message: `future facing timestamp Date.now(): ${t}, initialized timestamp: ${e.createdAtTimestamp}`,
                     }),
                     !0
                 );
-            let n = t - e.lastUsedTimestamp > s.jj,
-                i = t - e.createdAtTimestamp > l;
+            let n = t - e.lastUsedTimestamp > a.jj,
+                i = t - e.createdAtTimestamp > o;
             return n || i;
-        })(o)
-        ? (o = { uuid: (0, i.A)(), createdAtTimestamp: t, lastUsedTimestamp: t, version: s.Ir })
-        : (e && (o.lastUsedTimestamp = t), o);
+        })(l)
+        ? (l = { uuid: (0, i.A)(), createdAtTimestamp: t, lastUsedTimestamp: t, version: a.Ir })
+        : (e && (l.lastUsedTimestamp = t), l);
 }
 function c() {
-    o = null;
+    l = null;
 }

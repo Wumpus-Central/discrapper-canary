@@ -1,20 +1,21 @@
+"use strict";
 n.d(t, { $: () => a });
-var l = n(989349),
-    s = n.n(l),
-    i = n(985018);
+var i = n(989349),
+    r = n.n(i),
+    s = n(375708);
 function a(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.intl.string(i.t.Yl1D84),
-        l = s().duration(e, "seconds");
-    return l.days() > 0
-        ? i.intl.formatToPlainString(t ? i.t.GBLpQ8 : i.t["k2UNz+"], { days: l.days() })
-        : l.hours() > 0
-          ? i.intl.formatToPlainString(t ? i.t.rhY1Rs : i.t.xCjYxK, { hours: l.hours() })
-          : l.minutes() > 0
-            ? i.intl.formatToPlainString(t ? i.t["XIGt+W"] : i.t.iXLF9W, { minutes: l.minutes() })
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.intl.string(s.t.Yl1D84),
+        i = r().duration(e, "seconds");
+    return i.days() > 0
+        ? s.intl.formatToPlainString(t ? s.t.GBLpQ8 : s.t["k2UNz+"], { days: i.days() })
+        : i.hours() > 0
+          ? s.intl.formatToPlainString(t ? s.t.rhY1Rs : s.t.xCjYxK, { hours: i.hours() })
+          : i.minutes() > 0
+            ? s.intl.formatToPlainString(t ? s.t["XIGt+W"] : s.t.iXLF9W, { minutes: i.minutes() })
             : e > 0
-              ? i.intl.formatToPlainString(t ? i.t.pyvjRp : i.t.geSp4K, { seconds: l.seconds() })
+              ? s.intl.formatToPlainString(t ? s.t.pyvjRp : s.t.geSp4K, { seconds: i.seconds() })
               : t
-                ? i.intl.string(i.t.Yl1D84)
+                ? s.intl.string(s.t.Yl1D84)
                 : n;
 }

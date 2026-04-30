@@ -1,126 +1,127 @@
-n.d(t, { A: () => R }), n(938796);
+"use strict";
+n.d(t, { A: () => w }), n(938796);
 var i = n(665260),
-    l = n(17928),
+    r = n(17928),
     s = n(228366),
-    r = n(495544),
-    a = n(734057),
-    u = n(71393),
-    o = n(309010),
-    d = n(543465),
-    c = n(927813),
-    h = n(935208),
-    A = n(887560),
-    f = n(652215),
-    g = n(790782),
+    a = n(495544),
+    o = n(734057),
+    l = n(71393),
+    u = n(309010),
+    c = n(543465),
+    d = n(927813),
+    _ = n(935208),
+    f = n(887560),
+    h = n(652215),
+    p = n(790782),
     E = n(355097);
-let I = [
-        { timeSinceJoin: +c.A.Millis.HOUR, sends: 1, viewTime: +c.A.Millis.MINUTE },
-        { timeSinceJoin: +c.A.Millis.DAY, sends: 2, viewTime: 2 * c.A.Millis.MINUTE },
-        { timeSinceJoin: +c.A.Millis.WEEK, sends: 5, viewTime: 5 * c.A.Millis.MINUTE },
-        { timeSinceJoin: +c.A.Millis.DAYS_30, sends: 10, viewTime: 30 * c.A.Millis.MINUTE },
+let m = [
+        { timeSinceJoin: +d.A.Millis.HOUR, sends: 1, viewTime: +d.A.Millis.MINUTE },
+        { timeSinceJoin: +d.A.Millis.DAY, sends: 2, viewTime: 2 * d.A.Millis.MINUTE },
+        { timeSinceJoin: +d.A.Millis.WEEK, sends: 5, viewTime: 5 * d.A.Millis.MINUTE },
+        { timeSinceJoin: +d.A.Millis.DAYS_30, sends: 10, viewTime: 30 * d.A.Millis.MINUTE },
     ],
-    S = 5 * I[I.length - 1].viewTime,
-    _ = c.A.Millis.WEEK,
-    T = { channels: {} },
-    C = new Set(),
-    m = null,
-    p = 0,
-    N = 0;
-function M() {
-    if (null == m || !y(m)) return !1;
-    let e = v(m);
-    if (e.lastActionTime > Date.now() - c.A.Millis.DAY && e.viewDuration > S) return !1;
+    g = 5 * m[m.length - 1].viewTime,
+    A = d.A.Millis.WEEK,
+    I = { channels: {} },
+    T = new Set(),
+    S = null,
+    N = 0,
+    y = 0;
+function C() {
+    if (null == S || !R(S)) return !1;
+    let e = O(S);
+    if (e.lastActionTime > Date.now() - d.A.Millis.DAY && e.viewDuration > g) return !1;
     let t = Date.now();
-    return (e.lastActionTime = t), (e.viewDuration += t - p), (p = t), !0;
+    return (e.lastActionTime = t), (e.viewDuration += t - N), (N = t), !0;
 }
-function D() {
+function v() {
     return (
-        0 !== N && (clearInterval(N), (N = 0)),
-        d.Ay.useNewNotifications &&
-            (N = setInterval(() => {
-                M() && L.emitChange();
-            }, 15 * c.A.Millis.SECOND)),
+        0 !== y && (clearInterval(y), (y = 0)),
+        c.Ay.useNewNotifications &&
+            (y = setInterval(() => {
+                C() && L.emitChange();
+            }, 15 * d.A.Millis.SECOND)),
         !1
     );
 }
-function v(e) {
-    return e in T.channels || (T.channels[e] = { lastActionTime: 0, viewDuration: 0, numSends: 0 }), T.channels[e];
+function O(e) {
+    return e in I.channels || (I.channels[e] = { lastActionTime: 0, viewDuration: 0, numSends: 0 }), I.channels[e];
 }
-function y(e) {
-    if (!d.Ay.useNewNotifications || C.has(e)) return !1;
-    let t = a.A.getBasicChannel(e);
+function R(e) {
+    if (!c.Ay.useNewNotifications || T.has(e)) return !1;
+    let t = o.A.getBasicChannel(e);
     if (
         null == t ||
         null == t.guild_id ||
-        d.Ay.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
-        U(t.guild_id, t.id) ||
-        U(t.guild_id, t.parent_id)
+        c.Ay.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
+        b(t.guild_id, t.id) ||
+        b(t.guild_id, t.parent_id)
     )
         return !1;
-    let n = d.Ay.resolveUnreadSetting(t);
-    return d.Ay.getChannelUnreadSetting(t.guild_id, t.id) === g.e.UNSET && n !== g.e.ALL_MESSAGES;
+    let n = c.Ay.resolveUnreadSetting(t);
+    return c.Ay.getChannelUnreadSetting(t.guild_id, t.id) === p.e.UNSET && n !== p.e.ALL_MESSAGES;
 }
-function U(e, t) {
+function b(e, t) {
     if (null == t) return !1;
-    let n = d.Ay.getChannelOverrides(e)[t];
+    let n = c.Ay.getChannelOverrides(e)[t];
     return (
         null != n &&
         !!(
-            (null != n.message_notifications && n.message_notifications !== f.orn.NULL) ||
+            (null != n.message_notifications && n.message_notifications !== h.orn.NULL) ||
             (null != n.flags && (0, i.br)(n.flags, E.vv.UNREADS_ALL_MESSAGES | E.vv.UNREADS_ONLY_MENTIONS))
         )
     );
 }
-class O extends l.Ay.PersistedStore {
+class D extends r.Ay.PersistedStore {
     static displayName = "UnreadSettingNoticeStore2";
     static persistKey = "UnreadSettingNoticeStore2";
     initialize(e) {
-        null != e && (T.channels = e.channels), this.syncWith([d.Ay], D), this.waitFor(r.default, a.A, u.A, o.A, d.Ay);
+        null != e && (I.channels = e.channels), this.syncWith([c.Ay], v), this.waitFor(a.default, o.A, l.A, u.A, c.Ay);
     }
     getState() {
-        return T;
+        return I;
     }
     getLastActionTime(e) {
-        return T.channels[e]?.lastActionTime ?? 0;
+        return I.channels[e]?.lastActionTime ?? 0;
     }
     maybeAutoUpgradeChannel(e) {
-        if (!y(e)) return !1;
-        let t = a.A.getBasicChannel(e);
+        if (!R(e)) return !1;
+        let t = o.A.getBasicChannel(e);
         return (
             null != t &&
             null != t.guild_id &&
             !!(function (e) {
-                let t = u.A.getGuild(e.guild_id),
+                let t = l.A.getGuild(e.guild_id),
                     n = t?.joinedAt ?? new Date(),
-                    i = Math.min(h.default.age(e.id), Date.now() - n.getTime()),
-                    l = T.channels[e.id];
-                if (null == l || l.lastActionTime < Date.now() - _) return !1;
-                for (let e of I)
-                    if (i < e.timeSinceJoin && (l.numSends >= e.sends || l.viewDuration >= e.viewTime)) return !0;
+                    i = Math.min(_.default.age(e.id), Date.now() - n.getTime()),
+                    r = I.channels[e.id];
+                if (null == r || r.lastActionTime < Date.now() - A) return !1;
+                for (let e of m)
+                    if (i < e.timeSinceJoin && (r.numSends >= e.sends || r.viewDuration >= e.viewTime)) return !0;
                 return !1;
             })(t) &&
-            (delete T.channels[e], C.add(e), (0, A.mA)(t.guild_id, t.id, g.e.ALL_MESSAGES), !0)
+            (delete I.channels[e], T.add(e), (0, f.mA)(t.guild_id, t.id, p.e.ALL_MESSAGES), !0)
         );
     }
 }
-let L = new O(s.h, {
+let L = new D(s.h, {
         CHANNEL_SELECT: function () {
-            let e = M();
-            return (m = o.A.getChannelId()), (p = Date.now()), e;
+            let e = C();
+            return (S = u.A.getChannelId()), (N = Date.now()), e;
         },
         CONNECTION_OPEN: function () {
-            (m = o.A.getChannelId()), (p = Date.now()), D();
-            let e = Date.now() - _;
-            h.default.forEach(T.channels, (t, n) => {
+            (S = u.A.getChannelId()), (N = Date.now()), v();
+            let e = Date.now() - A;
+            _.default.forEach(I.channels, (t, n) => {
                 let { lastActionTime: i } = t;
-                i < e && delete T.channels[n];
+                i < e && delete I.channels[n];
             });
         },
         MESSAGE_CREATE: function (e) {
-            if (e.optimistic || e.isPushNotification || e.message.author?.id !== r.default.getId() || !y(e.channelId))
+            if (e.optimistic || e.isPushNotification || e.message.author?.id !== a.default.getId() || !R(e.channelId))
                 return !1;
-            let t = v(e.channelId);
+            let t = O(e.channelId);
             (t.lastActionTime = Date.now()), t.numSends++;
         },
     }),
-    R = L;
+    w = L;

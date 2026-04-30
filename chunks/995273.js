@@ -1,15 +1,16 @@
-n.d(t, { KS: () => c, NW: () => o, Qi: () => d, _u: () => _, gk: () => E, jb: () => l });
-var i = n(253932),
-    a = n(935208),
-    r = n(322387),
-    s = n(381849);
-let l = function (e) {
+"use strict";
+n.d(t, { KS: () => c, NW: () => l, Qi: () => u, _u: () => d, gk: () => _, jb: () => o });
+var i = n(885386),
+    r = n(935208),
+    s = n(322387),
+    a = n(381849);
+let o = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        return (0, s.Ay)({ since: e, getFormatter: t ? s.i : s._e });
+        return (0, a.Ay)({ since: e, getFormatter: t ? a.i : a._e });
     },
-    o = (e, t) => e.acked || (t !== i.xM && a.default.compare(t, e.id) >= 0);
-function d(e, t, n) {
-    let i = a.default.fromTimestamp(new Date(t).getTime());
+    l = (e, t) => e.acked || (t !== i.xM && r.default.compare(t, e.id) >= 0);
+function u(e, t, n) {
+    let i = r.default.fromTimestamp(new Date(t).getTime());
     return {
         acked: !1,
         forceUnacked: !0,
@@ -17,13 +18,13 @@ function d(e, t, n) {
         kind: "notification-center-item",
         local_id: `incoming_friend_requests_${e.id}_${i}`,
         deeplink: `https://discord.com/users/${e.id}`,
-        type: r.Uo.INCOMING_FRIEND_REQUESTS,
+        type: s.Uo.INCOMING_FRIEND_REQUESTS,
         id: i,
         applicationId: n,
     };
 }
 function c(e, t, n) {
-    let i = a.default.fromTimestamp(new Date(t).getTime());
+    let i = r.default.fromTimestamp(new Date(t).getTime());
     return {
         acked: !1,
         forceUnacked: !0,
@@ -31,20 +32,20 @@ function c(e, t, n) {
         kind: "notification-center-item",
         local_id: `incoming_game_friend_requests_${e.id}_${i}`,
         deeplink: `https://discord.com/users/${e.id}`,
-        type: r.Uo.INCOMING_GAME_FRIEND_REQUESTS,
+        type: s.Uo.INCOMING_GAME_FRIEND_REQUESTS,
         id: i,
         applicationId: n,
     };
 }
-function _(e) {
+function d(e) {
     return {
         acked: !1,
         enableBadge: !0,
-        id: a.default.fromTimestamp(new Date().getTime()),
+        id: r.default.fromTimestamp(new Date().getTime()),
         kind: "notification-center-item",
         local_id: `mobile_update_available_${e.build}`,
-        type: r.Uo.MOBILE_NATIVE_UPDATE_AVAILABLE,
+        type: s.Uo.MOBILE_NATIVE_UPDATE_AVAILABLE,
         deeplink: e.urls.install.toString(),
     };
 }
-let E = (e) => e.type === r.hW.RECENT_MENTION || e.type === r.hW.REPLY_MENTION;
+let _ = (e) => e.type === s.hW.RECENT_MENTION || e.type === s.hW.REPLY_MENTION;

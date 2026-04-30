@@ -1,25 +1,26 @@
-l.d(t, { A: () => u });
-var n = l(636537),
-    i = l(228366),
-    r = l(652215);
-let s = `${r.Joy}/api/v2/scheduled-maintenances`,
-    a = `${r.Joy}/api/v2/incidents/unresolved.json`,
-    u = {
+"use strict";
+n.d(t, { A: () => l });
+var i = n(636537),
+    r = n(228366),
+    s = n(652215);
+let a = `${s.Joy}/api/v2/scheduled-maintenances`,
+    o = `${s.Joy}/api/v2/incidents/unresolved.json`,
+    l = {
         checkIncidents() {
-            Promise.all([n.Bo.get({ url: `${s}/active.json`, rejectWithError: !0 }), n.Bo.get(a)]).then((e) => {
-                let [t, l] = e,
-                    [n] = t.body.scheduled_maintenances,
-                    [r] = l.body.incidents;
-                i.h.dispatch({ type: "STATUS_PAGE_INCIDENT", incident: r || n });
+            Promise.all([i.Bo.get({ url: `${a}/active.json`, rejectWithError: !0 }), i.Bo.get(o)]).then((e) => {
+                let [t, n] = e,
+                    [i] = t.body.scheduled_maintenances,
+                    [s] = n.body.incidents;
+                r.h.dispatch({ type: "STATUS_PAGE_INCIDENT", incident: s || i });
             });
         },
         checkScheduledMaintenances() {
-            n.Bo.get({ url: `${s}/upcoming.json`, rejectWithError: !0 }).then((e) => {
+            i.Bo.get({ url: `${a}/upcoming.json`, rejectWithError: !0 }).then((e) => {
                 let [t] = e.body.scheduled_maintenances;
-                i.h.dispatch({ type: "STATUS_PAGE_SCHEDULED_MAINTENANCE", maintenance: t });
+                r.h.dispatch({ type: "STATUS_PAGE_SCHEDULED_MAINTENANCE", maintenance: t });
             });
         },
         ackScheduledMaintenance() {
-            i.h.dispatch({ type: "STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK" });
+            r.h.dispatch({ type: "STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK" });
         },
     };

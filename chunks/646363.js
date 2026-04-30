@@ -1,2 +1,3 @@
-C.d(s, { C: () => _ });
-let _ = "ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL";
+"use strict";
+n.d(t, { C: () => i });
+let i = "ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL";

@@ -1,46 +1,47 @@
-n.d(t, { Au: () => h, d5: () => A, j7: () => I, kS: () => u, l6: () => T });
+"use strict";
+n.d(t, { Au: () => m, d5: () => h, j7: () => p, kS: () => f, l6: () => E });
 var i = n(684013),
-    a = n(833551),
-    r = n(489277),
-    s = n(19575),
-    l = n(350535),
-    o = n(636401),
-    d = n(90924),
+    r = n(296027),
+    s = n(489277),
+    a = n(19575),
+    o = n(350535),
+    l = n(636401),
+    u = n(90924),
     c = n(613057),
-    _ = n(652215);
-let E = ["207646673902501888"];
-function u(e) {
-    return null != e && !!a.default.isOverlayOOPEnabledForPid(e) && r.A.isReady(e);
+    d = n(652215);
+let _ = ["207646673902501888"];
+function f(e) {
+    return null != e && !!r.default.isOverlayOOPEnabledForPid(e) && s.A.isReady(e);
 }
-function A(e) {
+function h(e) {
     return null == e
-        ? { lock: _.FXj, context: _.BRT.APP }
-        : u(e)
+        ? { lock: d.FXj, context: d.BRT.APP }
+        : f(e)
           ? (i.A.setInputLocked(!1, e),
             {
                 lock() {
                     i.A.setInputLocked(!0, e);
                 },
-                context: _.BRT.POPOUT,
+                context: d.BRT.POPOUT,
             })
-          : (s.Ay.focus(null, !0),
+          : (a.Ay.focus(null, !0),
             {
                 lock() {
-                    s.Ay.setForegroundProcess(e);
+                    a.Ay.setForegroundProcess(e);
                 },
-                context: _.BRT.APP,
+                context: d.BRT.APP,
             });
 }
-let I = async (e, t, n) => {
-        if (((0, d.sq)(e, t), (null == n || "" === n) && (0, d.IR)(t)))
+let p = async (e, t, n) => {
+        if (((0, u.sq)(e, t), (null == n || "" === n) && (0, u.IR)(t)))
             return (e.authorization.scopes = [c.LQ, c.kw]), Promise.resolve();
         if (null == n || "" === n)
-            return Promise.reject(new o.A({ closeCode: _.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
-        let i = s.Ay.releaseChannel !== _.BIo.CANARY && !E.includes(n) && e.transport !== c.z4.POST_MESSAGE;
-        return await (0, d.e2)(n, i, e.abortController.signal), (0, d.uM)(e, n, t);
+            return Promise.reject(new l.A({ closeCode: d.YI$.INVALID_CLIENTID }, "No Client ID Specified"));
+        let i = a.Ay.releaseChannel !== d.BIo.CANARY && !_.includes(n) && e.transport !== c.z4.POST_MESSAGE;
+        return await (0, u.e2)(n, i, e.abortController.signal), (0, u.uM)(e, n, t);
     },
-    T = () =>
-        (0, d.BB)((e) => {
+    E = () =>
+        (0, u.BB)((e) => {
             let t = [];
             return (
                 null != e.modeOptions.shortcut &&
@@ -48,18 +49,18 @@ let I = async (e, t, n) => {
                     (t = e.modeOptions.shortcut.map((e) => ({
                         type: e[0],
                         code: e[1],
-                        name: (0, l.Qd)(e) ?? "unknown",
+                        name: (0, o.Qd)(e) ?? "unknown",
                     }))),
                 t
             );
         }),
-    h = (e) =>
-        (0, d.Ub)(e, (e) => {
+    m = (e) =>
+        (0, u.Ub)(e, (e) => {
             let t = "";
             return (
                 null != e.modeOptions.shortcut &&
                     Array.isArray(e.modeOptions.shortcut) &&
-                    (t = (0, l.dI)(e.modeOptions.shortcut)),
+                    (t = (0, o.dI)(e.modeOptions.shortcut)),
                 t
             );
         });

@@ -1,5 +1,5 @@
-E.d(t, { c: () => r });
-function r() {
+"use strict";
+function i() {
     return (
         ((Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
             navigator.language ||
@@ -8,3 +8,4 @@ function r() {
         ""
     );
 }
+n.d(t, { c: () => i });

@@ -1,12 +1,13 @@
-n.d(t, { A: () => i });
-var o = n(64700),
+"use strict";
+n.d(t, { A: () => a });
+var i = n(64700),
     r = n(739508),
-    a = n(71532);
-function i() {
-    let [e, t] = o.useState(null);
+    s = n(71532);
+function a() {
+    let [e, t] = i.useState(null);
     return (
-        o.useEffect(() => {
-            (0, a.Cv)()
+        i.useEffect(() => {
+            (0, s.Cv)()
                 .then((e) => t(e))
                 .catch((e) => {
                     (0, r.pM)(e);

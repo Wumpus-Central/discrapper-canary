@@ -1,89 +1,90 @@
-n.d(t, { Ay: () => _, Vi: () => c, pO: () => E }), n(938796), n(321073);
+"use strict";
+n.d(t, { Ay: () => d, Vi: () => c, pO: () => _ }), n(938796), n(321073);
 var i = n(284009),
-    a = n.n(i),
-    r = n(9842),
-    s = n(889227),
-    l = n(287809),
-    o = n(195880),
-    d = n(652215);
+    r = n.n(i),
+    s = n(9842),
+    a = n(889227),
+    o = n(287809),
+    l = n(195880),
+    u = n(652215);
 function c(e) {
-    let { id: t, username: n, avatar: i, discriminator: a, bot: r, globalName: s, primaryGuild: l } = e;
-    return { id: t, username: n, avatar: i, discriminator: a, bot: r, global_name: s, primary_guild: l };
+    let { id: t, username: n, avatar: i, discriminator: r, bot: s, globalName: a, primaryGuild: o } = e;
+    return { id: t, username: n, avatar: i, discriminator: r, bot: s, global_name: a, primary_guild: o };
 }
-function _(e) {
+function d(e) {
     let {
             channelId: t,
             content: n,
             tts: i = !1,
-            type: _ = d.lAJ.DEFAULT,
-            messageReference: E,
-            allowedMentions: u,
-            author: A,
-            flags: I,
-            nonce: T,
-            poll: h,
-            sharedCustomTheme: S,
-            changelogId: N,
-            giftingPrompt: f,
-            boostingPrompt: p,
-            state: m,
+            type: d = u.lAJ.DEFAULT,
+            messageReference: _,
+            allowedMentions: f,
+            author: h,
+            flags: p,
+            nonce: E,
+            poll: m,
+            sharedCustomTheme: g,
+            changelogId: A,
+            giftingPrompt: I,
+            boostingPrompt: T,
+            state: S,
         } = e,
-        O = [];
-    if (_ === d.lAJ.REPLY && (a()(null != E, "Replies must have a message reference"), null == u || u.replied_user)) {
-        let e = r.A.getMessageByReference(E);
-        e?.state === r.a.LOADED && O.push(c(e.message.author));
+        N = [];
+    if (d === u.lAJ.REPLY && (r()(null != _, "Replies must have a message reference"), null == f || f.replied_user)) {
+        let e = s.A.getMessageByReference(_);
+        e?.state === s.a.LOADED && N.push(c(e.message.author));
     }
     return (
-        null == A && (A = l.default.getCurrentUser()),
-        A instanceof s.A && (A = c(A)),
-        a()(null != A, "createMessage: author cannot be undefined"),
+        null == h && (h = o.default.getCurrentUser()),
+        h instanceof a.A && (h = c(h)),
+        r()(null != h, "createMessage: author cannot be undefined"),
         {
-            id: T ?? (0, o.m)(),
-            type: _,
+            id: E ?? (0, l.m)(),
+            type: d,
             content: n,
             channel_id: t,
-            author: A,
+            author: h,
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: O,
+            mentions: N,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,
             timestamp: new Date().toISOString(),
-            state: m ?? d.cmJ.SENDING,
+            state: S ?? u.cmJ.SENDING,
             tts: i,
-            message_reference: E,
+            message_reference: _,
             message_snapshots: [],
-            flags: I,
-            nonce: T,
-            poll: h,
-            shared_client_theme: S,
-            changelog_id: N,
-            gifting_prompt: f,
-            boosting_prompt: p,
+            flags: p,
+            nonce: E,
+            poll: m,
+            shared_client_theme: g,
+            changelog_id: A,
+            gifting_prompt: I,
+            boosting_prompt: T,
         }
     );
 }
-function E(e) {
-    let { messageId: t, channelId: n, content: i, embeds: a, loggingName: r } = e;
+function _(e) {
+    let { messageId: t, channelId: n, content: i, embeds: r, loggingName: s } = e;
     return {
-        id: t ?? (0, o.m)(),
-        type: d.lAJ.DEFAULT,
-        flags: d.pr7.EPHEMERAL,
+        id: t ?? (0, l.m)(),
+        type: u.lAJ.DEFAULT,
+        flags: u.pr7.EPHEMERAL,
         content: i,
         channel_id: n,
-        author: { id: d.oIV, username: "Clyde", discriminator: d.h3J, avatar: "clyde", bot: !0 },
+        author: { id: u.oIV, username: "Clyde", discriminator: u.h3J, avatar: "clyde", bot: !0 },
         attachments: [],
-        embeds: a ?? [],
+        embeds: r ?? [],
         pinned: !1,
         mentions: [],
         mention_channels: [],
         mention_roles: [],
         mention_everyone: !1,
         timestamp: new Date().toISOString(),
-        state: d.cmJ.SENT,
+        state: u.cmJ.SENT,
         tts: !1,
-        loggingName: r,
+        loggingName: s,
     };
 }

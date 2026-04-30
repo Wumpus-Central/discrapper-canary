@@ -1,3 +1,4 @@
+"use strict";
 function i(e) {
     return null != e && new Date(e) > new Date();
 }

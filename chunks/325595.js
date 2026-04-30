@@ -1,6 +1,7 @@
-n.d(t, { p: () => a });
+"use strict";
+n.d(t, { p: () => r });
 var i = n(651162);
-class a {
+class r {
     title;
     body;
     mobileBackgroundImage;
@@ -15,6 +16,6 @@ class a {
             (this.desktopBackgroundImage = e.desktop_background_image);
     }
     static fromServer(e) {
-        return new a(e);
+        return new r(e);
     }
 }

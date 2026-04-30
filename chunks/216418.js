@@ -1,13 +1,14 @@
-n.d(t, { A: () => s, q: () => l });
+"use strict";
+n.d(t, { A: () => a, q: () => o });
 var i = n(64700),
-    a = n(587895),
-    r = n(360469);
-function s(e) {
-    return i.useMemo(() => l(e), [e]);
+    r = n(587895),
+    s = n(360469);
+function a(e) {
+    return i.useMemo(() => o(e), [e]);
 }
-function l(e) {
+function o(e) {
     return (
-        !(null != e && r.xW.includes(e ?? "")) ||
-        a.A.getApplication(e)?.embeddedActivityConfig?.legacy_responsive_aspect_ratio
+        !(null != e && s.xW.includes(e ?? "")) ||
+        r.A.getApplication(e)?.embeddedActivityConfig?.legacy_responsive_aspect_ratio
     );
 }

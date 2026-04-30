@@ -1,8 +1,9 @@
-a.d(e, { C: () => i, D: () => o });
-var n = a(228366);
-function i(t) {
-    n.h.wait(() => n.h.dispatch({ type: "NUF_NEW_USER", newUserType: t }));
+"use strict";
+n.d(t, { C: () => r, D: () => s });
+var i = n(228366);
+function r(e) {
+    i.h.wait(() => i.h.dispatch({ type: "NUF_NEW_USER", newUserType: e }));
 }
-function o() {
-    n.h.wait(() => n.h.dispatch({ type: "NUF_COMPLETE" }));
+function s() {
+    i.h.wait(() => i.h.dispatch({ type: "NUF_COMPLETE" }));
 }

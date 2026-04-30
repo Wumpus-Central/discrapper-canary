@@ -1,11 +1,12 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(627968);
 n(64700);
-var a = n(953727);
-function r(e) {
-    let { width: t = 12, height: n = 12, color: r = "currentColor", foreground: s, ...l } = e;
+var r = n(953727);
+function s(e) {
+    let { width: t = 12, height: n = 12, color: s = "currentColor", foreground: a, ...o } = e;
     return (0, i.jsx)("svg", {
-        ...(0, a.A)(l),
+        ...(0, r.A)(o),
         width: t,
         height: n,
         viewBox: "0 0 12 12",
@@ -15,8 +16,8 @@ function r(e) {
             x: "1.5",
             y: "1.5",
             fill: "none",
-            stroke: r,
-            className: s,
+            stroke: s,
+            className: a,
         }),
     });
 }

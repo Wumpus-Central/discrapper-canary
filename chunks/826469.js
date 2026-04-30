@@ -1,16 +1,17 @@
-r.d(t, { A: () => n }), r(938796);
-var i = r(202613);
-class n {
+"use strict";
+n.d(t, { A: () => r }), n(938796);
+var i = n(202613);
+class r {
     source;
     enabled;
     allowedCurrencies;
     relocationCountry;
     relocationCurrencyCode;
     willForfeitGiftCardBalance;
-    constructor(e, t, r, i) {
+    constructor(e, t, n, i) {
         (this.source = e),
             (this.enabled = t),
-            (this.allowedCurrencies = r),
+            (this.allowedCurrencies = n),
             (this.relocationCountry = i?.country ?? null),
             (this.relocationCurrencyCode = i?.currencyCode ?? null),
             (this.willForfeitGiftCardBalance = i?.willForfeitGiftCardBalance ?? !1);
@@ -45,7 +46,7 @@ class n {
             username: e.username,
             bank: e.bank,
         };
-        return new n(i.Ay.createFromServer(t), e.enabled, e.allowed_currencies ?? [], {
+        return new r(i.Ay.createFromServer(t), e.enabled, e.allowed_currencies ?? [], {
             country: e.relocation_info?.country ?? null,
             currencyCode: e.relocation_info?.currency ?? null,
             willForfeitGiftCardBalance: e.relocation_info?.will_forfeit_gift_card_balance ?? !1,

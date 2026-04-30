@@ -1,125 +1,126 @@
+"use strict";
 n.d(t, {
-    Kv: () => N,
-    M9: () => T,
-    MC: () => h,
-    Ot: () => u,
-    UW: () => A,
-    Ub: () => I,
-    Wl: () => f,
-    YP: () => p,
-    jR: () => _,
-    kc: () => E,
-    uk: () => S,
+    Kv: () => A,
+    M9: () => E,
+    MC: () => m,
+    Ot: () => f,
+    UW: () => h,
+    Ub: () => p,
+    Wl: () => I,
+    YP: () => T,
+    jR: () => d,
+    kc: () => _,
+    uk: () => g,
 });
-var i = n(132500),
-    a = n(773669),
-    r = n(954571),
-    s = n(403362),
-    l = n(449054);
+var i = n(835245),
+    r = n(773669),
+    s = n(174459),
+    a = n(403362),
+    o = n(449054);
 n(688713), n(351022);
-var o = n(324580),
-    d = n(652215),
-    c = n(985018);
-function _(e) {
+var l = n(324580),
+    u = n(652215),
+    c = n(375708);
+function d(e) {
     switch (e) {
-        case o.o.FEATURED:
+        case l.o.FEATURED:
             return c.intl.string(c.t["RU+DCe"]);
-        case o.o.GAMING:
+        case l.o.GAMING:
             return c.intl.string(c.t["CD/USA"]);
-        case o.o.MUSIC:
+        case l.o.MUSIC:
             return c.intl.string(c.t["nt9PL+"]);
-        case o.o.ENTERTAINMENT:
+        case l.o.ENTERTAINMENT:
             return c.intl.string(c.t.gSbmdt);
-        case o.o.TECH:
+        case l.o.TECH:
             return c.intl.string(c.t["0A0By5"]);
-        case o.o.EDUCATION:
+        case l.o.EDUCATION:
             return c.intl.string(c.t.Gy9woq);
-        case o.o.HUBS:
+        case l.o.HUBS:
             return c.intl.string(c.t["q469/Z"]);
     }
 }
-function E(e) {
+function _(e) {
     switch (e) {
-        case o.o.FEATURED:
+        case l.o.FEATURED:
             return c.intl.string(c.t.OlDfzP);
-        case o.o.GAMING:
+        case l.o.GAMING:
             return c.intl.string(c.t["CD/USA"]);
-        case o.o.MUSIC:
+        case l.o.MUSIC:
             return c.intl.string(c.t["nt9PL+"]);
-        case o.o.ENTERTAINMENT:
+        case l.o.ENTERTAINMENT:
             return c.intl.string(c.t.gSbmdt);
-        case o.o.TECH:
+        case l.o.TECH:
             return c.intl.string(c.t["0A0By5"]);
-        case o.o.EDUCATION:
+        case l.o.EDUCATION:
             return c.intl.string(c.t.Gy9woq);
-        case o.o.HUBS:
+        case l.o.HUBS:
             return c.intl.string(c.t.X5xPlb);
         default:
             throw Error(`[getGlobalDiscoveryServerTabTitle] Unsupported tab: ${e}`);
     }
 }
-function u(e) {
+function f(e) {
     switch (e) {
-        case o.o.FEATURED:
+        case l.o.FEATURED:
             return c.intl.string(c.t.SdMhrk);
-        case o.o.GAMING:
+        case l.o.GAMING:
             return c.intl.string(c.t.AAJ5ov);
-        case o.o.MUSIC:
+        case l.o.MUSIC:
             return c.intl.string(c.t["SOio+D"]);
-        case o.o.ENTERTAINMENT:
+        case l.o.ENTERTAINMENT:
             return c.intl.string(c.t.R09vf0);
-        case o.o.TECH:
+        case l.o.TECH:
             return c.intl.string(c.t.Ew4d56);
-        case o.o.EDUCATION:
+        case l.o.EDUCATION:
             return c.intl.string(c.t.sasIWU);
-        case o.o.HUBS:
+        case l.o.HUBS:
             return c.intl.string(c.t["F/IQCI"]);
         default:
             throw Error(`[getGlobalDiscoveryServerTabTitle] Unsupported tab: ${e}`);
     }
 }
-function A(e) {
+function h(e) {
     switch (e) {
-        case o.o.FEATURED:
+        case l.o.FEATURED:
             return c.intl.string(c.t.crt84X);
-        case o.o.GAMING:
+        case l.o.GAMING:
             return c.intl.string(c.t.fWbIpf);
-        case o.o.MUSIC:
+        case l.o.MUSIC:
             return c.intl.string(c.t.nfgDzz);
-        case o.o.ENTERTAINMENT:
+        case l.o.ENTERTAINMENT:
             return c.intl.string(c.t.k1CYxv);
-        case o.o.TECH:
+        case l.o.TECH:
             return c.intl.string(c.t["4dawps"]);
-        case o.o.EDUCATION:
+        case l.o.EDUCATION:
             return c.intl.string(c.t.uexPgT);
         default:
             return null;
     }
 }
-function I(e) {
+function p(e) {
     switch (e) {
-        case o.o.FEATURED:
-            return o.Iq;
-        case o.o.GAMING:
-            return o.wz.Activity;
-        case o.o.MUSIC:
-            return o.wz.Music;
-        case o.o.ENTERTAINMENT:
-            return o.wz.Television;
-        case o.o.TECH:
-            return o.wz.Science;
-        case o.o.EDUCATION:
-            return o.wz.Education;
-        case o.o.HUBS:
-            return o.Us;
+        case l.o.FEATURED:
+            return l.Iq;
+        case l.o.GAMING:
+            return l.wz.Activity;
+        case l.o.MUSIC:
+            return l.wz.Music;
+        case l.o.ENTERTAINMENT:
+            return l.wz.Television;
+        case l.o.TECH:
+            return l.wz.Science;
+        case l.o.EDUCATION:
+            return l.wz.Education;
+        case l.o.HUBS:
+            return l.Us;
         default:
-            (0, s.xb)(e);
+            (0, a.xb)(e);
     }
 }
-function T(e) {
-    return null == e || Date.now() - e > o.WV;
+function E(e) {
+    return null == e || Date.now() - e > l.WV;
 }
-function h(e) {
+function m(e) {
     return {
         id: e.id,
         name: e.name,
@@ -137,7 +138,7 @@ function h(e) {
         emojiCount: e.emoji_count,
     };
 }
-function S(e) {
+function g(e) {
     return {
         id: e.id,
         name: e.name,
@@ -154,24 +155,24 @@ function S(e) {
         emojis: [],
     };
 }
-function N() {
-    let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [a.default],
-        t = (0, o.tO)(),
+function A() {
+    let [e] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [r.default],
+        t = (0, l.tO)(),
         n = e.locale;
     return (t.find((e) => e.code === n) ?? t[0]).code;
 }
-async function f(e) {
-    let { loadId: t, guildId: n, index: i, categoryId: a, analyticsLocation: s, options: o } = e,
-        c = { ...o, loadId: t };
-    await l.Z2(n, s, c),
-        r.default.track(d.HAw.GUILD_DISCOVERY_GUILD_SELECTED, {
+async function I(e) {
+    let { loadId: t, guildId: n, index: i, categoryId: r, analyticsLocation: a, options: l } = e,
+        c = { ...l, loadId: t };
+    await o.Z2(n, a, c),
+        s.default.track(u.HAw.GUILD_DISCOVERY_GUILD_SELECTED, {
             guild_id: n,
             load_id: t,
             card_index: i,
-            category_id: a,
-            location: s,
+            category_id: r,
+            location: a,
         });
 }
-function p() {
+function T() {
     return (0, i.A)().replace(/-/g, "");
 }

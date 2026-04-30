@@ -1,16 +1,17 @@
-n.d(t, { LG: () => l, MS: () => r });
+"use strict";
+n.d(t, { LG: () => o, MS: () => s });
 let i = "__root_errors";
-var a,
-    r =
-        (((a = {}).HCAPTCHA = "hcaptcha"),
-        (a.RECAPTCHA = "recaptcha"),
-        (a.RECAPTCHA_ENTERPRISE = "recaptcha_enterprise"),
-        (a.TURNSTILE = "turnstile"),
-        a);
-function s(e) {
+var r,
+    s =
+        (((r = {}).HCAPTCHA = "hcaptcha"),
+        (r.RECAPTCHA = "recaptcha"),
+        (r.RECAPTCHA_ENTERPRISE = "recaptcha_enterprise"),
+        (r.TURNSTILE = "turnstile"),
+        r);
+function a(e) {
     return e.map((e) => ({ code: "UNKNOWN", message: e }));
 }
-class l extends Error {
+class o extends Error {
     code;
     retryAfter;
     errors;
@@ -19,11 +20,11 @@ class l extends Error {
     constructor(e, t, n = "An unexpected error occurred.") {
         const {
             message: i,
-            code: a,
-            retryAfter: r,
-            errors: l,
-            status: o,
-            captchaFields: d,
+            code: r,
+            retryAfter: s,
+            errors: o,
+            status: l,
+            captchaFields: u,
         } = (function (e, t) {
             if ("string" == typeof e) return { message: e, code: t };
             if (null == e.body) return { status: e.status };
@@ -45,11 +46,11 @@ class l extends Error {
                               let t = {};
                               for (let [n, i] of Object.entries(e)) {
                                   if ("_misc" === n) {
-                                      t._errors = s(i);
+                                      t._errors = a(i);
                                       continue;
                                   }
                                   let e = {};
-                                  (e._errors = s(i)), (t[n] = e);
+                                  (e._errors = a(i)), (t[n] = e);
                               }
                               return t;
                           })(n),
@@ -57,11 +58,11 @@ class l extends Error {
                 : { message: n.message, code: n.code, retryAfter: n.retry_after, errors: n.errors, status: e.status };
         })(e, t);
         super(i ?? n),
-            (this.code = a ?? -1),
-            (this.retryAfter = r),
-            (this.errors = l),
-            (this.status = o),
-            (this.captchaFields = d ?? {}),
+            (this.code = r ?? -1),
+            (this.retryAfter = s),
+            (this.errors = o),
+            (this.status = l),
+            (this.captchaFields = u ?? {}),
             (this.cause = e);
     }
     hasFieldErrors() {
@@ -83,11 +84,11 @@ class l extends Error {
             null != n && n.length > 0 && (t[i] = n),
             void 0 !== e &&
                 Object.entries(e).forEach((e) => {
-                    let [n, a] = e;
+                    let [n, r] = e;
                     "_errors" === n ||
-                        Object.entries(this.getAllFieldErrorsUnder(a)).forEach((e) => {
-                            let [a, r] = e;
-                            a === i ? (t[n] = r) : (t[`${n}.${a}`] = r);
+                        Object.entries(this.getAllFieldErrorsUnder(r)).forEach((e) => {
+                            let [r, s] = e;
+                            r === i ? (t[n] = s) : (t[`${n}.${r}`] = s);
                         });
                 }),
             t

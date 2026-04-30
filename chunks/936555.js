@@ -1,17 +1,18 @@
-n.d(t, { A: () => l, w: () => s });
+"use strict";
+n.d(t, { A: () => o, w: () => a });
 var i = n(17928),
-    a = n(71393),
-    r = n(652215);
-function s(e) {
+    r = n(71393),
+    s = n(652215);
+function a(e) {
     return (
-        !e.features.has(r.GuildFeatures.CREATOR_MONETIZABLE_DISABLED) &&
-        (e.features.has(r.GuildFeatures.CREATOR_MONETIZABLE) ||
-            e.features.has(r.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))
+        !e.features.has(s.GuildFeatures.CREATOR_MONETIZABLE_DISABLED) &&
+        (e.features.has(s.GuildFeatures.CREATOR_MONETIZABLE) ||
+            e.features.has(s.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))
     );
 }
-function l(e) {
-    return (0, i.bG)([a.A], () => {
-        let t = a.A.getGuild(e);
-        return null != t && s(t);
+function o(e) {
+    return (0, i.bG)([r.A], () => {
+        let t = r.A.getGuild(e);
+        return null != t && a(t);
     });
 }

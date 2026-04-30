@@ -1,37 +1,38 @@
-n.d(t, { A: () => r });
-var i = n(954571),
-    a = n(652215);
-function r(e) {
+"use strict";
+n.d(t, { A: () => s });
+var i = n(174459),
+    r = n(652215);
+function s(e) {
     let {
         type: t,
         source: n,
-        userId: r,
-        guildId: s,
-        channelId: l,
-        channelType: o,
-        applicationId: d,
+        userId: s,
+        guildId: a,
+        channelId: o,
+        channelType: l,
+        applicationId: u,
         partyId: c,
-        messageId: _,
-        locationObject: E,
-        analyticsLocations: u,
-        referrerId: A,
-        inviterUserId: I,
-        remoteJoinPlatform: T,
+        messageId: d,
+        locationObject: _,
+        analyticsLocations: f,
+        referrerId: h,
+        inviterUserId: p,
+        remoteJoinPlatform: E,
     } = e;
-    i.default.track(a.HAw.APPLICATION_OPENED, {
+    i.default.track(r.HAw.APPLICATION_OPENED, {
         type: t,
         source: n,
-        guild_id: s,
-        channel_id: l,
-        channel_type: o,
-        application_id: d,
+        guild_id: a,
+        channel_id: o,
+        channel_type: l,
+        application_id: u,
         party_id: c ?? void 0,
-        other_user_id: r,
-        message_id: _,
-        location: E,
-        location_stack: u,
-        referrer_id: A,
-        invite_inviter_id: I,
-        remote_join_platform: T,
+        other_user_id: s,
+        message_id: d,
+        location: _,
+        location_stack: f,
+        referrer_id: h,
+        invite_inviter_id: p,
+        remote_join_platform: E,
     });
 }

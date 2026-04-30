@@ -1,91 +1,92 @@
-let i, a, r;
+"use strict";
+let i, r, s;
 n.d(t, {
-    EL: () => N,
-    JK: () => p,
-    MX: () => g,
-    PR: () => m,
-    SB: () => R,
-    TX: () => I,
-    UC: () => O,
-    aX: () => L,
-    bG: () => f,
-    m: () => C,
-    pX: () => h,
-    sY: () => D,
-    uh: () => S,
+    EL: () => A,
+    JK: () => T,
+    MX: () => v,
+    PR: () => S,
+    SB: () => C,
+    TX: () => p,
+    UC: () => N,
+    aX: () => O,
+    bG: () => I,
+    m: () => y,
+    pX: () => m,
+    sY: () => R,
+    uh: () => g,
 }),
     n(321073),
     n(323874),
     n(14289),
     n(35956);
-var s = n(830845),
-    l = n(626584),
-    o = n(625494),
-    d = n(824865),
+var a = n(830845),
+    o = n(626584),
+    l = n(625494),
+    u = n(824865),
     c = n(652215);
-let _ = new l.A("Routing/Utils"),
-    E = [c.dSh.DEVELOPER_PORTAL];
+let d = new o.A("Routing/Utils"),
+    _ = [c.dSh.DEVELOPER_PORTAL];
 __OVERLAY__
-    ? (i = (0, s.sC)())
-    : (i = (0, s.zR)()).block((e, t) => {
-          if ("POP" === t && !I()) return !1;
+    ? (i = (0, a.sC)())
+    : (i = (0, a.zR)()).block((e, t) => {
+          if ("POP" === t && !p()) return !1;
       });
-let u = !1,
-    A = i.listen((e, t) => {
-        "REPLACE" !== t && ((u = !0), A());
+let f = !1,
+    h = i.listen((e, t) => {
+        "REPLACE" !== t && ((f = !0), h());
     });
-function I() {
-    if (o._.hasSubscribers(c.jej.MODAL_CLOSE)) {
+function p() {
+    if (l._.hasSubscribers(c.jej.MODAL_CLOSE)) {
         let { doesTopModalAllowNavigation: e } = n(192308);
         if (!e()) return !1;
     }
     return n(712687).A.close(), !0;
 }
-function T(e, t) {
+function E(e, t) {
     return (
-        !!("string" == typeof e && E.some((t) => e.startsWith(t))) &&
-        (_.log(`${t} - route to external path ${e}`),
+        !!("string" == typeof e && _.some((t) => e.startsWith(t))) &&
+        (d.log(`${t} - route to external path ${e}`),
         window.dispatchEvent(new Event("beforeunload")),
         window.location[t](e),
         !0)
     );
 }
-function h(e, t) {
-    if (T(e, "assign")) return;
-    _.log(`transitionTo - Transitioning to ${e}`);
+function m(e, t) {
+    if (E(e, "assign")) return;
+    d.log(`transitionTo - Transitioning to ${e}`);
     let n = t?.source,
-        s = t?.sourceLocationStack;
+        a = t?.sourceLocationStack;
     if (null == t) i.push(e);
     else {
         let n = new URL(e, `https:${window.GLOBAL_ENV.WEBAPP_ENDPOINT}`);
         i.push({ pathname: n.pathname, search: n.search, hash: n.hash, ...t });
     }
-    (a = n), (r = s);
+    (r = n), (s = a);
 }
-function S(e, t, n, i) {
-    _.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
-        h(c.BVt.CHANNEL(e, t, n), i);
+function g(e, t, n, i) {
+    d.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
+        m(c.BVt.CHANNEL(e, t, n), i);
 }
-function N() {
-    return null != a && d.n.has(a);
+function A() {
+    return null != r && u.n.has(r);
 }
-function f(e, t, n) {
-    T(e, "replace") ||
-        (_.log(`Replacing route with ${e}`), "string" == typeof e ? i.replace(e, t) : i.replace(e), (a = n));
+function I(e, t, n) {
+    E(e, "replace") ||
+        (d.log(`Replacing route with ${e}`), "string" == typeof e ? i.replace(e, t) : i.replace(e), (r = n));
 }
-function p() {
+function T() {
     return i;
 }
-function m() {
-    return a;
-}
-function O() {
+function S() {
     return r;
 }
-function C(e) {
+function N() {
+    return s;
+}
+function y(e) {
     return null == e && (e = i.location.pathname ?? ""), !e.startsWith(c.BVt.HANDOFF);
 }
-function R(e) {
+function C(e) {
     if ((null == e && (e = i.location.pathname ?? ""), e.startsWith(c.BVt.LOGIN))) return c.S3d.LOGIN;
     if (e.startsWith(c.BVt.REGISTER)) return c.S3d.REGISTER;
     if (e.startsWith(c.BVt.INVITE(""))) return c.S3d.INVITE;
@@ -103,12 +104,12 @@ function R(e) {
     else if (e.startsWith(c.BVt.ACCOUNT_REVERT(""))) return c.S3d.ACCOUNT_REVERT;
     return e;
 }
-function g() {
-    return u;
+function v() {
+    return f;
 }
-function L() {
-    I() && ((a = null), i.goBack());
+function O() {
+    p() && ((r = null), i.goBack());
 }
-function D() {
-    I() && ((a = null), i.goForward());
+function R() {
+    p() && ((r = null), i.goForward());
 }

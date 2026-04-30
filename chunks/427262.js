@@ -1,128 +1,129 @@
+"use strict";
 n.d(t, {
-    $3: () => _,
-    Ay: () => O,
-    G2: () => h,
-    Gn: () => m,
-    MU: () => I,
-    QV: () => f,
-    R1: () => p,
-    mG: () => E,
-    mv: () => S,
-    tx: () => u,
+    $3: () => d,
+    Ay: () => N,
+    G2: () => m,
+    Gn: () => S,
+    MU: () => p,
+    QV: () => I,
+    R1: () => T,
+    mG: () => _,
+    mv: () => g,
+    tx: () => f,
 });
 var i = n(17928),
-    a = n(351906),
-    r = n(287809),
-    s = n(652215),
-    l = n(985018);
-let o = (e) => `${e[0]}…`,
-    d = { mode: "full", decoration: "never", identifiable: "auto" };
+    r = n(351906),
+    s = n(287809),
+    a = n(652215),
+    o = n(375708);
+let l = (e) => `${e[0]}…`,
+    u = { mode: "full", decoration: "never", identifiable: "auto" };
 function c(e) {
     return !!(null != e && e.length > 0);
 }
-function _(e) {
+function d(e) {
     return c(e.global_name) ? e.global_name : c(e.globalName) ? e.globalName : c(e.username) ? e.username : "???";
 }
-function E(e) {
+function _(e) {
     if (null == e) return;
-    let t = a.A.hidePersonalInformation,
-        n = _(e);
-    return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = o(n)), n;
+    let t = r.A.hidePersonalInformation,
+        n = d(e);
+    return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = l(n)), n;
 }
-function u(e) {
-    let t = (0, i.bG)([a.A], () => a.A.hidePersonalInformation);
+function f(e) {
+    let t = (0, i.bG)([r.A], () => r.A.hidePersonalInformation);
     if (null == e) return;
-    let n = _(e);
-    return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = o(n)), n;
+    let n = d(e);
+    return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = l(n)), n;
 }
-function A(e) {
+function h(e) {
     if (null != e)
         if (c(e.globalName)) return e.globalName;
         else if (c(e.global_name)) return e.global_name;
         else return;
 }
-function I(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { isMobile: n = !1, isVR: i = !1 } = t;
     switch (e) {
-        case s.clD.ONLINE:
-            if (i) return l.intl.string(l.t.SWnU0R);
-            if (n) return l.intl.string(l.t["9hghLD"]);
-            return l.intl.string(l.t.WbGtnH);
-        case s.clD.OFFLINE:
-            return l.intl.string(l.t.Vv0abJ);
-        case s.clD.IDLE:
-            return l.intl.string(l.t.qWbtVU);
-        case s.clD.DND:
-            return l.intl.string(l.t.jaNpQH);
-        case s.clD.INVISIBLE:
-            return l.intl.string(l.t.bg24HO);
-        case s.clD.STREAMING:
-            return l.intl.string(l.t.XKYej5);
-        case s.clD.UNKNOWN:
+        case a.clD.ONLINE:
+            if (i) return o.intl.string(o.t.SWnU0R);
+            if (n) return o.intl.string(o.t["9hghLD"]);
+            return o.intl.string(o.t.WbGtnH);
+        case a.clD.OFFLINE:
+            return o.intl.string(o.t.Vv0abJ);
+        case a.clD.IDLE:
+            return o.intl.string(o.t.qWbtVU);
+        case a.clD.DND:
+            return o.intl.string(o.t.jaNpQH);
+        case a.clD.INVISIBLE:
+            return o.intl.string(o.t.bg24HO);
+        case a.clD.STREAMING:
+            return o.intl.string(o.t.XKYej5);
+        case a.clD.UNKNOWN:
         default:
             return null;
     }
 }
-function T(e, t) {
+function E(e, t) {
     let { maxDaysOld: n, minDaysOld: i = 0 } = t;
     if (null == e) return !1;
-    let a = Date.now() - e.createdAt.getTime();
-    return (null == n || !!(a <= 864e5 * n)) && !!(a >= 864e5 * i);
+    let r = Date.now() - e.createdAt.getTime();
+    return (null == n || !!(r <= 864e5 * n)) && !!(r >= 864e5 * i);
 }
-function h(e) {
-    return !T(e, { minDaysOld: 0, maxDaysOld: 30 });
+function m(e) {
+    return !E(e, { minDaysOld: 0, maxDaysOld: 30 });
 }
-function S(e) {
-    return T(e, { minDaysOld: 0, maxDaysOld: 7 });
+function g(e) {
+    return E(e, { minDaysOld: 0, maxDaysOld: 7 });
 }
-function N(e, t, n) {
-    if (null == e) return l.intl.string(l.t.sKdZ6U);
+function A(e, t, n) {
+    if (null == e) return o.intl.string(o.t.sKdZ6U);
     if (!c(e.username)) return "???";
     let i = n;
     if (
         ("always" === t.identifiable ? (i = !1) : "never" === t.identifiable && (i = !0),
-        "0" !== e.discriminator && e.discriminator !== s.h3J)
+        "0" !== e.discriminator && e.discriminator !== a.h3J)
     )
         return "username" === t.mode || i ? e.username : `${e.username}#${e.discriminator}`;
-    let a = i ? o(e.username) : e.username;
-    return "never" !== t.decoration ? `@${a}` : a;
+    let r = i ? l(e.username) : e.username;
+    return "never" !== t.decoration ? `@${r}` : r;
 }
-function f(e, t) {
-    let n = { ...d, ...t },
-        i = "auto" !== n.identifiable || a.A.hidePersonalInformation;
-    return N(e, n, i);
+function I(e, t) {
+    let n = { ...u, ...t },
+        i = "auto" !== n.identifiable || r.A.hidePersonalInformation;
+    return A(e, n, i);
 }
-function p(e) {
-    return (0, i.bG)([r.default], () => {
-        if (null != e) return e.isPrivate() && e.isDM() ? r.default.getUser(e.getRecipientId()) : null;
+function T(e) {
+    return (0, i.bG)([s.default], () => {
+        if (null != e) return e.isPrivate() && e.isDM() ? s.default.getUser(e.getRecipientId()) : null;
     });
 }
-function m() {
-    let e = r.default.getCurrentUser();
+function S() {
+    let e = s.default.getCurrentUser();
     return null != e && e.isStaff();
 }
-let O = {
-    getName: E,
-    useName: u,
+let N = {
+    getName: _,
+    useName: f,
     isNameConcealed: (e) => 2 === e.length && e.endsWith("…"),
-    getUserTag: f,
+    getUserTag: I,
     useUserTag: function (e, t) {
-        return N(
+        return A(
             e,
-            { ...d, ...t },
-            (0, i.bG)([a.A], () => a.A.hidePersonalInformation),
+            { ...u, ...t },
+            (0, i.bG)([r.A], () => r.A.hidePersonalInformation),
         );
     },
-    getUserIsStaff: m,
+    getUserIsStaff: S,
     getFormattedName: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return "???";
-        let n = A(e),
-            i = t ? f(e) : (e.username ?? "???");
+        let n = h(e),
+            i = t ? I(e) : (e.username ?? "???");
         return n === i ? n : null != n ? `${n} (${i})` : i;
     },
-    getGlobalName: A,
-    humanizeStatus: I,
-    useDirectMessageRecipient: p,
+    getGlobalName: h,
+    humanizeStatus: p,
+    useDirectMessageRecipient: T,
 };

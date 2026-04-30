@@ -1,36 +1,37 @@
-s.d(e, { A: () => c });
-var r = s(64700),
-    i = s(735438),
-    n = s(17928),
-    l = s(633075),
-    a = s(289173),
-    o = s(999291),
-    u = s(832163),
-    d = s(501838);
-function c(t) {
-    let { userId: e } = t,
-        s = (0, o.Ay)(e),
-        c = r.useMemo(() => (s?.userId != null ? [s.userId] : []), [s]),
-        S = (0, d.w)({ userIds: c }),
-        p = (0, d.mn)({ userIds: c }),
-        _ = (0, d.tR)(c),
-        h = (0, n.yK)([u.A], () => {
-            if (s?.widgets == null) return [];
-            let t = new Set();
-            for (let e of s?.widgets ?? [])
-                if (e instanceof a.Yy)
-                    e.games.forEach((e) => {
-                        let s = u.A.getApplicationIdFromDetectableId(e.applicationId);
-                        null != s && t.add(s);
+"use strict";
+n.d(t, { A: () => d });
+var i = n(64700),
+    r = n(735438),
+    s = n(17928),
+    a = n(633075),
+    o = n(289173),
+    l = n(999291),
+    u = n(832163),
+    c = n(501838);
+function d(e) {
+    let { userId: t } = e,
+        n = (0, l.Ay)(t),
+        d = i.useMemo(() => (n?.userId != null ? [n.userId] : []), [n]),
+        _ = (0, c.w)({ userIds: d }),
+        f = (0, c.mn)({ userIds: d }),
+        h = (0, c.tR)(d),
+        p = (0, s.yK)([u.A], () => {
+            if (n?.widgets == null) return [];
+            let e = new Set();
+            for (let t of n?.widgets ?? [])
+                if (t instanceof o.Yy)
+                    t.games.forEach((t) => {
+                        let n = u.A.getApplicationIdFromDetectableId(t.applicationId);
+                        null != n && e.add(n);
                     });
-                else if (e instanceof l.R) {
-                    let s = u.A.getApplicationIdFromDetectableId(e.applicationId);
-                    null != s && t.add(s);
+                else if (t instanceof a.R) {
+                    let n = u.A.getApplicationIdFromDetectableId(t.applicationId);
+                    null != n && e.add(n);
                 }
-            return Array.from(t).sort();
-        }, [s]);
-    return r.useMemo(
-        () => (s?.application != null ? [] : (0, i.uniq)([...S, ...p, ..._, ...h])),
-        [s?.application, S, p, _, h],
+            return Array.from(e).sort();
+        }, [n]);
+    return i.useMemo(
+        () => (n?.application != null ? [] : (0, r.uniq)([..._, ...f, ...h, ...p])),
+        [n?.application, _, f, h, p],
     );
 }

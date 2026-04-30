@@ -1,78 +1,79 @@
-n.d(t, { Kh: () => h, Rw: () => A, SP: () => T, Xw: () => S, dS: () => f, iR: () => N, qf: () => I });
+"use strict";
+n.d(t, { Kh: () => m, Rw: () => h, SP: () => E, Xw: () => g, dS: () => I, iR: () => A, qf: () => p });
 var i = n(636537),
-    a = n(228366),
-    r = n(927813),
-    s = n(871123),
-    l = n(832163),
-    o = n(652215);
-let d = 30 * r.A.Millis.SECOND,
-    c = 30 * r.A.Millis.MINUTE,
-    _ = 60 * r.A.Millis.MINUTE,
-    E = 30 * r.A.Millis.SECOND,
-    u = 5 * r.A.Millis.SECOND;
-async function A(e) {
+    r = n(228366),
+    s = n(927813),
+    a = n(871123),
+    o = n(832163),
+    l = n(652215);
+let u = 30 * s.A.Millis.SECOND,
+    c = 30 * s.A.Millis.MINUTE,
+    d = 60 * s.A.Millis.MINUTE,
+    _ = 30 * s.A.Millis.SECOND,
+    f = 5 * s.A.Millis.SECOND;
+async function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { eager: n = !1, forceFetch: r = !1 } = t,
-        _ = l.A.getStorefrontData(e),
-        E = _?.state === "loading",
-        u = _?.state === "error" && _?.fetchedAt != null && Date.now() - _.fetchedAt < d,
-        A = _?.state === "fetched" && _?.fetchedAt != null && Date.now() - _.fetchedAt < c;
-    if (!(E || u || A) || r)
+        { eager: n = !1, forceFetch: s = !1 } = t,
+        d = o.A.getStorefrontData(e),
+        _ = d?.state === "loading",
+        f = d?.state === "error" && d?.fetchedAt != null && Date.now() - d.fetchedAt < u,
+        h = d?.state === "fetched" && d?.fetchedAt != null && Date.now() - d.fetchedAt < c;
+    if (!(_ || f || h) || s)
         try {
-            a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD", guildId: e });
+            r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD", guildId: e });
             let t = await i.Bo.get({
-                    url: o.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT(e),
+                    url: l.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT(e),
                     rejectWithError: !0,
                     retries: 3,
                 }),
                 n = t.body,
-                r = (0, s.sq)(n);
-            null != r.storefrontPricing &&
-                a.h.dispatch({
+                s = (0, a.sq)(n);
+            null != s.storefrontPricing &&
+                r.h.dispatch({
                     type: "SKUS_PRICING_FETCH_SUCCESS",
-                    priceId: { type: "application", applicationId: r.applicationId },
-                    data: r.storefrontPricing,
+                    priceId: { type: "application", applicationId: s.applicationId },
+                    data: s.storefrontPricing,
                 }),
-                a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS", guildId: e, storefront: r }),
-                a.h.dispatch({
+                r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS", guildId: e, storefront: s }),
+                r.h.dispatch({
                     type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
-                    applicationId: r.applicationId,
-                    storefrontMetadata: (0, s.NE)(n),
+                    applicationId: s.applicationId,
+                    storefrontMetadata: (0, a.NE)(n),
                 }),
-                a.h.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: t.body.store_listings ?? [] });
+                r.h.dispatch({ type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: t.body.store_listings ?? [] });
         } catch (t) {
-            a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE", guildId: e, eager: n });
+            r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE", guildId: e, eager: n });
         }
 }
-async function I(e, t) {
+async function p(e, t) {
     try {
-        a.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: t });
-        let n = await i.Bo.get({ url: o.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(e, t), rejectWithError: !0 });
+        r.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: t });
+        let n = await i.Bo.get({ url: l.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(e, t), rejectWithError: !0 });
         if (null == n.body || !n.ok) throw Error("Failed to fetch social layer storefront SKU");
-        let r = n.body.store_listing,
-            l = n.body.storefront_metadata;
-        a.h.dispatch({
+        let s = n.body.store_listing,
+            o = n.body.storefront_metadata;
+        r.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS",
             assets: Object.fromEntries(n.body.assets.map((e) => [e.id, e])),
         }),
-            null != l &&
-                a.h.dispatch({
+            null != o &&
+                r.h.dispatch({
                     type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
-                    applicationId: r.sku.application_id,
-                    storefrontMetadata: (0, s.NE)(l),
+                    applicationId: s.sku.application_id,
+                    storefrontMetadata: (0, a.NE)(o),
                 }),
-            a.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: r });
+            r.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: s });
     } catch (e) {
-        a.h.dispatch({ type: "STORE_LISTINGS_FETCH_FAIL", skuId: t });
+        r.h.dispatch({ type: "STORE_LISTINGS_FETCH_FAIL", skuId: t });
     }
 }
-function T(e, t, n) {
-    a.h.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", guildId: e, pageIndex: t, skuId: n });
+function E(e, t, n) {
+    r.h.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", guildId: e, pageIndex: t, skuId: n });
 }
-async function h(e) {
+async function m(e) {
     try {
-        a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START", guildId: e });
-        let t = (await i.Bo.get({ url: o.Rsh.SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(e), rejectWithError: !0 })).body,
+        r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START", guildId: e });
+        let t = (await i.Bo.get({ url: l.Rsh.SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(e), rejectWithError: !0 })).body,
             n =
                 "guild-discord-announcement" === t.type
                     ? {
@@ -93,26 +94,26 @@ async function h(e) {
                           assetId: t.asset_id,
                           backgroundImageAssetId: t.background_image_asset_id,
                       };
-        a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS", guildId: e, announcement: n });
+        r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS", guildId: e, announcement: n });
     } catch (t) {
-        a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE", guildId: e });
+        r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE", guildId: e });
     }
 }
-async function S() {
-    let e = l.A.getConfigFetchState();
+async function g() {
+    let e = o.A.getConfigFetchState();
     if (
-        !("loading" === e.state || ("success" === e.state && Date.now() - e.fetchedAt < _)) &&
-        !("error" === e.state && Date.now() - e.fetchedAt < E)
+        !("loading" === e.state || ("success" === e.state && Date.now() - e.fetchedAt < d)) &&
+        !("error" === e.state && Date.now() - e.fetchedAt < _)
     )
         try {
-            a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START" });
-            let e = (await i.Bo.get({ url: o.Rsh.SOCIAL_LAYER_STOREFRONT_CONFIG, rejectWithError: !0 })).body,
+            r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START" });
+            let e = (await i.Bo.get({ url: l.Rsh.SOCIAL_LAYER_STOREFRONT_CONFIG, rejectWithError: !0 })).body,
                 t = null;
             if (null != e.promotion_end_datetime) {
                 let n = new Date(e.promotion_end_datetime);
                 Number.isNaN(n.getTime()) || (t = n);
             }
-            a.h.dispatch({
+            r.h.dispatch({
                 type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                 config: {
                     promotionalSkuIds: e.promotional_sku_ids,
@@ -135,45 +136,45 @@ async function S() {
                 },
             });
         } catch {
-            a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE" });
+            r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE" });
         }
 }
-function N(e, t) {
-    let n = l.A.getSKUEligibility(t);
+function A(e, t) {
+    let n = o.A.getSKUEligibility(t);
     "checking" !== n &&
         "eligible" !== n &&
         "ineligible" !== n &&
-        (a.h.dispatch({ type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START", skuId: t }),
+        (r.h.dispatch({ type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START", skuId: t }),
         setTimeout(() => {
-            "checking" === l.A.getSKUEligibility(t) &&
-                a.h.dispatch({
+            "checking" === o.A.getSKUEligibility(t) &&
+                r.h.dispatch({
                     type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
                     skuId: t,
                     reason: "interaction_deadline",
                 });
-        }, u),
-        i.Bo.post({ url: o.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(e, t), rejectWithError: !0 })
+        }, f),
+        i.Bo.post({ url: l.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(e, t), rejectWithError: !0 })
             .then((e) => {
-                a.h.dispatch({
+                r.h.dispatch({
                     type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE",
                     skuId: t,
                     interactionId: e.body.interaction_id,
                 });
             })
             .catch((e) => {
-                a.h.dispatch({
+                r.h.dispatch({
                     type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
                     skuId: t,
                     httpStatus: e?.status,
                 });
             }));
 }
-async function f() {
-    a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_START" });
+async function I() {
+    r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_START" });
     try {
-        let e = (await i.Bo.get({ url: o.Rsh.SOCIAL_LAYER_STOREFRONT_ELIGIBILITY, rejectWithError: !0 })).body;
-        return a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_SUCCESS", affinity: (0, s.Ox)(e) }), e;
+        let e = (await i.Bo.get({ url: l.Rsh.SOCIAL_LAYER_STOREFRONT_ELIGIBILITY, rejectWithError: !0 })).body;
+        return r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_SUCCESS", affinity: (0, a.Ox)(e) }), e;
     } catch (e) {
-        return a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_FAILURE" }), null;
+        return r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_FAILURE" }), null;
     }
 }

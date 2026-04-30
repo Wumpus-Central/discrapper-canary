@@ -1,37 +1,38 @@
+"use strict";
 let i;
-n.d(t, { Ak: () => E, Qh: () => _, aN: () => c });
-var a = n(626584),
-    r = n(312671),
-    s = n(458640),
-    l = n(351906),
-    o = n(257645);
+n.d(t, { Ak: () => _, Qh: () => d, aN: () => c });
+var r = n(626584),
+    s = n(312671),
+    a = n(458640),
+    o = n(351906),
+    l = n(257645);
 i = n(946261).WebAudioSound;
-let d = new a.A("SoundUtils");
+let u = new r.A("SoundUtils");
 function c(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.a.DEFAULT;
-    return _((0, s.A)(t)[e] ?? e, e, n, i);
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.a.DEFAULT;
+    return d((0, a.A)(t)[e] ?? e, e, n, i);
 }
-function _(e, t) {
+function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-        a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.a.DEFAULT;
-    return new i(e, t, n, a);
+        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.a.DEFAULT;
+    return new i(e, t, n, r);
 }
-function E(e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = arguments.length > 3 ? arguments[3] : void 0,
-        a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : o.a.DEFAULT;
-    if (l.A.disableSounds) return;
-    let c = (0, s.A)(i ?? r.A.getSoundpack());
-    null == c && d.log(`Unable to find sound for pack name: ${i}`);
-    let E = _(c[e] ?? e, e, t, a);
+        r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.a.DEFAULT;
+    if (o.A.disableSounds) return;
+    let c = (0, a.A)(i ?? s.A.getSoundpack());
+    null == c && u.log(`Unable to find sound for pack name: ${i}`);
+    let _ = d(c[e] ?? e, e, t, r);
     return (
         null != n
-            ? E.playWithListener().then((e) => {
+            ? _.playWithListener().then((e) => {
                   e && n();
               })
-            : E.play(),
-        E
+            : _.play(),
+        _
     );
 }

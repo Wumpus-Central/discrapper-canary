@@ -1,13 +1,14 @@
-n.d(t, { A: () => o });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(64700),
-    a = n(17928),
-    r = n(803306),
-    s = n(475743),
-    l = n(495544);
-function o() {
-    let [e, t] = (0, a.yK)([l.default], () => [l.default.isAuthenticated(), null != l.default.getAnalyticsToken()]),
-        n = (0, s.A)(e);
+    r = n(17928),
+    s = n(803306),
+    a = n(475743),
+    o = n(495544);
+function l() {
+    let [e, t] = (0, r.yK)([o.default], () => [o.default.isAuthenticated(), null != o.default.getAnalyticsToken()]),
+        n = (0, a.A)(e);
     i.useEffect(() => {
-        n || !e || t || r.rQ({ withAnalyticsToken: !0 });
+        n || !e || t || s.rQ({ withAnalyticsToken: !0 });
     }, [n, e, t]);
 }

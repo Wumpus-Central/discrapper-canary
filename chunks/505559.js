@@ -1,12 +1,13 @@
-i.d(t, { A: () => r });
-var s = i(627968);
-i(64700);
-var a = i(834730),
-    n = i(166988);
-let r = (e) => {
+"use strict";
+n.d(t, { A: () => a });
+var i = n(627968);
+n(64700);
+var r = n(834730),
+    s = n(166988);
+let a = (e) => {
     let { text: t } = e;
-    return (0, s.jsx)("div", {
-        className: n.i,
-        children: (0, s.jsx)(a.E, { variant: "text-sm/bold", color: "always-white", children: t }),
+    return (0, i.jsx)("div", {
+        className: s.i,
+        children: (0, i.jsx)(r.E, { variant: "text-sm/bold", color: "always-white", children: t }),
     });
 };

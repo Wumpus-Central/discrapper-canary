@@ -7,7 +7,7 @@ var l = t(17928),
     c = t(5180),
     d = t(576705),
     s = t(652215),
-    o = t(985018);
+    o = t(375708);
 function u(e) {
     let a = (0, l.bG)([d.A], () => d.A.can(s.xBc.MANAGE_CHANNELS, e));
     return __OVERLAY__
@@ -42,8 +42,8 @@ function u(e) {
                                       t.e("19193"),
                                       t.e("7775"),
                                       t.e("58608"),
-                                      t.e("37038"),
                                       t.e("9431"),
+                                      t.e("37038"),
                                   ]).then(t.bind(t, 113194));
                                   return (t) => (0, n.jsx)(a, { ...t, channelType: s.rbe.GUILD_TEXT, guildId: e.id });
                               }),
@@ -68,8 +68,8 @@ function u(e) {
                                       t.e("19193"),
                                       t.e("7775"),
                                       t.e("58608"),
-                                      t.e("37038"),
                                       t.e("9431"),
+                                      t.e("37038"),
                                   ]).then(t.bind(t, 113194));
                                   return (t) =>
                                       (0, n.jsx)(a, { ...t, channelType: s.rbe.GUILD_CATEGORY, guildId: e.id });

@@ -1,57 +1,58 @@
-n.d(t, { Ay: () => p, Zl: () => N, bF: () => S });
+"use strict";
+n.d(t, { Ay: () => T, Zl: () => A, bF: () => g });
 var i = n(17928),
-    a = n(439372),
-    r = n(400492),
-    s = n(734057),
-    l = n(51760),
-    o = n(309010),
-    d = n(977997),
+    r = n(439372),
+    s = n(400492),
+    a = n(734057),
+    o = n(51760),
+    l = n(309010),
+    u = n(977997),
     c = n(63995),
-    _ = n(113783),
-    E = n(69407),
-    u = n(446600),
-    A = n(39938);
-let I = !1,
-    T = (0, r.Qh)("stage_waiting", "stage_waiting", l.Ay.getOutputVolume() / 400);
-function h() {
-    let e = o.A.getVoiceChannelId();
+    d = n(113783),
+    _ = n(518769),
+    f = n(446600),
+    h = n(39938);
+let p = !1,
+    E = (0, s.Qh)("stage_waiting", "stage_waiting", o.Ay.getOutputVolume() / 400);
+function m() {
+    let e = l.A.getVoiceChannelId();
     if (null == e) {
-        T.stop(), (I = !1);
+        E.stop(), (p = !1);
         return;
     }
-    let t = s.A.getChannel(e);
-    if (!t?.isGuildStageVoice() || l.Ay.isSelfDeaf()) {
-        T.stop(), (I = !1);
+    let t = a.A.getChannel(e);
+    if (!t?.isGuildStageVoice() || o.Ay.isSelfDeaf()) {
+        E.stop(), (p = !1);
         return;
     }
-    if (A.A.shouldPlay()) {
-        (T.volume = l.Ay.getOutputVolume() / 400), T.loop(), (I = !0);
+    if (h.A.shouldPlay()) {
+        (E.volume = o.Ay.getOutputVolume() / 400), E.loop(), (p = !0);
         return;
     }
-    if (u.A.isLive(e)) {
-        T.stop(), (I = !1);
+    if (f.A.isLive(e)) {
+        E.stop(), (p = !1);
         return;
     }
-    if (A.A.isMuted()) {
-        T.pause(), (I = !1);
+    if (h.A.isMuted()) {
+        E.pause(), (p = !1);
         return;
     }
-    let n = null != Object.values(d.A.getVoiceStatesForChannel(e)).find((e) => !e.suppress && !e.isVoiceMuted());
-    n || I ? n && (T.pause(), (I = !1)) : ((T.volume = l.Ay.getOutputVolume() / 400), T.loop(), (I = !0));
+    let n = null != Object.values(u.A.getVoiceStatesForChannel(e)).find((e) => !e.suppress && !e.isVoiceMuted());
+    n || p ? n && (E.pause(), (p = !1)) : ((E.volume = o.Ay.getOutputVolume() / 400), E.loop(), (p = !0));
 }
-function S(e) {
-    let t = (0, i.bG)([o.A], () => o.A.getVoiceChannelId() === e),
-        n = null != (0, _.E5)(e, E.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        a = (0, i.bG)([u.A], () => u.A.getStageInstanceByChannel(e));
-    return t && null == a && !n;
+function g(e) {
+    let t = (0, i.bG)([l.A], () => l.A.getVoiceChannelId() === e),
+        n = null != (0, d.E5)(e, _.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
+        r = (0, i.bG)([f.A], () => f.A.getStageInstanceByChannel(e));
+    return t && null == r && !n;
 }
-function N(e) {
-    let t = o.A.getVoiceChannelId() === e,
-        n = null != c.A.getMutableParticipants(e, E.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        i = u.A.getStageInstanceByChannel(e);
+function A(e) {
+    let t = l.A.getVoiceChannelId() === e,
+        n = null != c.A.getMutableParticipants(e, _.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
+        i = f.A.getStageInstanceByChannel(e);
     return t && null == i && !n;
 }
-class f extends a.A {
+class I extends r.A {
     actions = {
         VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
         LOGOUT: this.handleLogout,
@@ -64,30 +65,30 @@ class f extends a.A {
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
         if (null != t) {
-            let e = s.A.getChannel(t);
-            e?.isGuildStageVoice() ? h() : (T.stop(), (I = !1));
-        } else T.stop(), (I = !1);
+            let e = a.A.getChannel(t);
+            e?.isGuildStageVoice() ? m() : (E.stop(), (p = !1));
+        } else E.stop(), (p = !1);
     }
     handleLogout() {
-        T.stop(), (I = !1);
+        E.stop(), (p = !1);
     }
     handlePlay(e) {
         let { play: t } = e;
-        t ? h() : (T.pause(), (I = !1));
+        t ? m() : (E.pause(), (p = !1));
     }
     handleMute(e) {
         let { muted: t } = e;
-        t ? (T.pause(), (I = !1)) : h();
+        t ? (E.pause(), (p = !1)) : m();
     }
     handleVoiceStateUpdates() {
-        h();
+        m();
     }
     handleSetOutputVolume(e) {
         let { volume: t } = e;
-        T.volume = t / 400;
+        E.volume = t / 400;
     }
     handleToggleSelfDeaf() {
-        h();
+        m();
     }
 }
-let p = new f();
+let T = new I();

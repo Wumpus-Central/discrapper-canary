@@ -1,11 +1,12 @@
-n.d(t, { A: () => a });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(600975),
-    l = n(688151);
-let a = (0, i.C)({
+    r = n(688151);
+let s = (0, i.C)({
     kind: "guild",
     id: "2024-12_guild_voice_channel_ringing",
     label: "Guild Voice Ringing",
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: l.$G.VOICE_CALL,
+    commonTriggerPoint: r.$G.VOICE_CALL,
     treatments: [{ id: 1, label: "Allow users to ring each other in Guild Voice Channels", config: { enabled: !0 } }],
 });

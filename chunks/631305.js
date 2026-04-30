@@ -1,43 +1,44 @@
-s.d(n, { A: () => f });
-var i = s(627968);
-s(64700);
-var o = s(231723),
-    r = s(192308),
-    e = s(869146),
-    l = s(709055),
-    c = s(954571),
-    a = s(652215);
-function f(t, n) {
-    let f = n ?? `${a.JJy.PREMIUM_GUILD_UPSELL_MODAL}`;
-    null != t.targetBoostedGuildTier && (f += ` - Tier ${t.targetBoostedGuildTier}`),
-        c.default.track(a.HAw.OPEN_MODAL, { type: f, location: t.analyticsSourceLocation });
-    let { openInPopoutEnabled: u, ..._ } = t,
-        E = e.A.getWindowOpen(a.MLl.CHANNEL_CALL_POPOUT) && null != u && u;
-    E && (0, l.A)(a.MLl.CHANNEL_CALL_POPOUT);
-    let d = E ? o.KX : o.SY;
-    (0, r.openModalLazy)(
+"use strict";
+n.d(t, { A: () => c });
+var i = n(627968);
+n(64700);
+var r = n(231723),
+    s = n(192308),
+    a = n(869146),
+    o = n(709055),
+    l = n(174459),
+    u = n(652215);
+function c(e, t) {
+    let c = t ?? `${u.JJy.PREMIUM_GUILD_UPSELL_MODAL}`;
+    null != e.targetBoostedGuildTier && (c += ` - Tier ${e.targetBoostedGuildTier}`),
+        l.default.track(u.HAw.OPEN_MODAL, { type: c, location: e.analyticsSourceLocation });
+    let { openInPopoutEnabled: d, ..._ } = e,
+        f = a.A.getWindowOpen(u.MLl.CHANNEL_CALL_POPOUT) && null != d && d;
+    f && (0, o.A)(u.MLl.CHANNEL_CALL_POPOUT);
+    let h = f ? r.KX : r.SY;
+    (0, s.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([
-                s.e("65086"),
-                s.e("16933"),
-                s.e("45650"),
-                s.e("97893"),
-                s.e("40305"),
-                s.e("52041"),
-                s.e("60235"),
-                s.e("45959"),
-                s.e("39667"),
-                s.e("50417"),
-                s.e("71202"),
-                s.e("45210"),
-            ]).then(s.bind(s, 331617));
-            return (n) => (0, i.jsx)(t, { ..._, ...n });
+            let { default: e } = await Promise.all([
+                n.e("65086"),
+                n.e("16933"),
+                n.e("45650"),
+                n.e("97893"),
+                n.e("40305"),
+                n.e("52041"),
+                n.e("60235"),
+                n.e("45959"),
+                n.e("39667"),
+                n.e("50417"),
+                n.e("71202"),
+                n.e("45210"),
+            ]).then(n.bind(n, 331617));
+            return (t) => (0, i.jsx)(e, { ..._, ...t });
         },
         {
             onCloseCallback: () => {
-                c.default.track(a.HAw.MODAL_DISMISSED, { type: f, location: t.analyticsSourceLocation });
+                l.default.track(u.HAw.MODAL_DISMISSED, { type: c, location: e.analyticsSourceLocation });
             },
-            contextKey: d,
+            contextKey: h,
         },
     );
 }

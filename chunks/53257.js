@@ -1,9 +1,10 @@
-e.d(l, { A: () => n });
-var s = e(652215);
-function n(t) {
+"use strict";
+n.d(t, { A: () => r });
+var i = n(652215);
+function r(e) {
     return (
-        (t.type === s.$pd.LISTENING || t.type === s.$pd.WATCHING) &&
-        t.timestamps?.start != null &&
-        null != t.timestamps.end
+        (e.type === i.$pd.LISTENING || e.type === i.$pd.WATCHING) &&
+        e.timestamps?.start != null &&
+        null != e.timestamps.end
     );
 }

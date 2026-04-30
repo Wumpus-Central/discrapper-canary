@@ -1,57 +1,58 @@
-l.d(a, { A: () => p });
-var t = l(627968);
-l(64700);
-var i = l(17928),
-    n = l(373495),
-    c = l(192308),
-    d = l(477782),
-    o = l(635739),
-    r = l(39623),
-    s = l(952572),
-    A = l(495544),
-    h = l(51760),
-    u = l(985018);
-function p(e, a) {
-    let p = (0, n.k)(),
-        { videoEnabled: v, hasVideoDevice: b } = (0, i.cf)([h.Ay], () => ({
-            videoEnabled: h.Ay.isVideoEnabled(),
-            hasVideoDevice: h.Ay.isVideoAvailable(),
+"use strict";
+n.d(t, { A: () => h });
+var i = n(627968);
+n(64700);
+var r = n(17928),
+    s = n(373495),
+    a = n(192308),
+    o = n(477782),
+    l = n(635739),
+    u = n(39623),
+    c = n(952572),
+    d = n(495544),
+    _ = n(51760),
+    f = n(375708);
+function h(e, t) {
+    let h = (0, s.k)(),
+        { videoEnabled: p, hasVideoDevice: E } = (0, r.cf)([_.Ay], () => ({
+            videoEnabled: _.Ay.isVideoEnabled(),
+            hasVideoDevice: _.Ay.isVideoAvailable(),
         })),
-        f = (0, i.bG)([A.default], () => A.default.getId() === e),
-        g = (0, s.A)();
-    return (!v || g) && f && b
-        ? (0, t.jsx)(d.Dr, {
+        m = (0, r.bG)([d.default], () => d.default.getId() === e),
+        g = (0, c.A)();
+    return (!p || g) && m && E
+        ? (0, i.jsx)(o.Dr, {
               id: "change-video-background",
-              label: v ? u.intl.string(u.t.mZKxHb) : u.intl.string(u.t["vkV93/"]),
+              label: p ? f.intl.string(f.t.mZKxHb) : f.intl.string(f.t["vkV93/"]),
               action: function () {
-                  (0, c.openModalLazy)(
+                  (0, a.openModalLazy)(
                       async () => {
                           let { default: e } = await Promise.all([
-                              l.e("22894"),
-                              l.e("65086"),
-                              l.e("73873"),
-                              l.e("20287"),
-                              l.e("28367"),
-                              l.e("18441"),
-                              l.e("21690"),
-                              l.e("31644"),
-                              l.e("9915"),
-                              l.e("58337"),
-                              l.e("20683"),
-                              l.e("80436"),
-                              l.e("6809"),
-                              l.e("97162"),
-                              l.e("95782"),
-                              l.e("39176"),
-                              l.e("10534"),
-                          ]).then(l.bind(l, 308229));
-                          return (a) => (0, t.jsx)(e, { ...a, videoEnabled: v });
+                              n.e("22894"),
+                              n.e("65086"),
+                              n.e("73873"),
+                              n.e("20287"),
+                              n.e("28367"),
+                              n.e("18441"),
+                              n.e("21690"),
+                              n.e("31644"),
+                              n.e("9915"),
+                              n.e("58337"),
+                              n.e("20683"),
+                              n.e("80436"),
+                              n.e("6809"),
+                              n.e("97162"),
+                              n.e("95782"),
+                              n.e("39176"),
+                              n.e("10534"),
+                          ]).then(n.bind(n, 308229));
+                          return (t) => (0, i.jsx)(e, { ...t, videoEnabled: p });
                       },
-                      { modalKey: "camera-preview", contextKey: null != a ? (0, c.modalContextFromAppContext)(a) : p },
+                      { modalKey: "camera-preview", contextKey: null != t ? (0, a.modalContextFromAppContext)(t) : h },
                   );
               },
-              icon: v ? o.f : r.b,
-              leadingAccessory: { type: "icon", icon: v ? o.f : r.b },
+              icon: p ? l.f : u.b,
+              leadingAccessory: { type: "icon", icon: p ? l.f : u.b },
           })
         : null;
 }

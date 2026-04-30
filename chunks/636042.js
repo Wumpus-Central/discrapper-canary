@@ -13,7 +13,7 @@ S.d(_, {
     yy: () => e,
 });
 var i = S(228366),
-    E = S(686956),
+    E = S(66834),
     n = S(619006);
 function e(t) {
     i.h.dispatch({ type: "GUILD_SETTINGS_ROLES_SORT_UPDATE", roles: t });

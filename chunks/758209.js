@@ -1,17 +1,18 @@
-i.d(t, { A: () => c });
-var s = i(64700),
-    a = i(975807),
-    n = i(276666),
-    r = i(985603),
-    l = i(777376);
-function c(e) {
-    let t = (0, r.A)();
-    return s.useCallback(async () => {
-        if (null != e && (0, l.Nk)(e)) (0, a.A)(e.url, !0);
+"use strict";
+n.d(t, { A: () => l });
+var i = n(64700),
+    r = n(975807),
+    s = n(276666),
+    a = n(985603),
+    o = n(777376);
+function l(e) {
+    let t = (0, a.A)();
+    return i.useCallback(async () => {
+        if (null != e && (0, o.Nk)(e)) (0, r.A)(e.url, !0);
         else {
-            let e = await (0, n.aB)(l.n9.XGPP);
-            e?.redirect != null && (0, a.A)(e.redirect.url, !0);
+            let e = await (0, s.aB)(o.n9.XGPP);
+            e?.redirect != null && (0, r.A)(e.redirect.url, !0);
         }
-        t(r.xf.CLAIM);
+        t(a.xf.CLAIM);
     }, [e, t]);
 }

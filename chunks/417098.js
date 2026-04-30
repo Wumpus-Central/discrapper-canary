@@ -1,79 +1,80 @@
-n.d(r, { $T: () => I, Hv: () => C, PM: () => d, Z_: () => P, eC: () => T, zr: () => f });
-var t = n(627968);
+"use strict";
+n.d(t, { $T: () => I, Hv: () => p, PM: () => A, Z_: () => m, eC: () => g, zr: () => E });
+var i = n(627968);
 n(64700);
-var l = n(503698),
-    c = n.n(l),
-    i = n(607399),
-    s = n(187322);
-if (21552 == n.j) var a = n(349288);
-if (21552 == n.j) var o = n(939249);
-if (21552 == n.j) var u = n(789645);
-var _ = n(954571),
-    A = n(652215),
-    E = n(985018),
-    N = n(580537);
-let C = Object.freeze({
-    DEFAULT: N.Lx,
-    NEUTRAL: N.NT,
-    BRAND: N.x8,
-    WARNING: N.SO,
-    DANGER: N.HW,
-    INFO: N.io,
-    STREAMER_MODE: N.kL,
-    CUSTOM: N.P4,
-    SPOTIFY: N.AU,
-    PLAYSTATION: N._9,
-    PREMIUM_TIER_0: N.zw,
-    PREMIUM_TIER_1: N.G_,
-    PREMIUM_TIER_2: N.NS,
+var r = n(503698),
+    s = n.n(r),
+    a = n(607399),
+    o = n(187322),
+    l = n(349288),
+    u = n(939249),
+    c = n(789645),
+    d = n(174459),
+    _ = n(652215),
+    f = n(375708),
+    h = n(580537);
+let p = Object.freeze({
+    DEFAULT: h.Lx,
+    NEUTRAL: h.NT,
+    BRAND: h.x8,
+    WARNING: h.SO,
+    DANGER: h.HW,
+    INFO: h.io,
+    STREAMER_MODE: h.kL,
+    CUSTOM: h.P4,
+    SPOTIFY: h.AU,
+    PLAYSTATION: h._9,
+    PREMIUM_TIER_0: h.zw,
+    PREMIUM_TIER_1: h.G_,
+    PREMIUM_TIER_2: h.NS,
 });
-function f(e) {
-    let { children: r, className: n, minor: l = !1, ...i } = e;
-    return (0, t.jsx)(s.vN, {
-        children: (0, t.jsx)("button", { className: c()(N.x6, n, { [N.oy]: l }), ...i, children: r }),
+function E(e) {
+    let { children: t, className: n, minor: r = !1, ...a } = e;
+    return (0, i.jsx)(o.vN, {
+        children: (0, i.jsx)("button", { className: s()(h.x6, n, { [h.oy]: r }), ...a, children: t }),
     });
 }
-function P(e) {
-    let { children: r, noticeType: n, ...l } = e;
-    return (0, t.jsx)(f, {
-        ...l,
+function m(e) {
+    let { children: t, noticeType: n, ...r } = e;
+    return (0, i.jsx)(E, {
+        ...r,
         onClick: (e) => {
-            null != l.onClick && l.onClick(e),
-                null != n && _.default.track(A.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: n });
+            null != r.onClick && r.onClick(e),
+                null != n && d.default.track(_.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: n });
         },
-        children: r,
+        children: t,
     });
 }
-function T(e) {
-    let { children: r, href: n, noticeType: l, ...c } = e;
-    return (0, t.jsx)(a.Anchor, {
-        ...c,
-        className: N.x6,
+function g(e) {
+    let { children: t, href: n, noticeType: r, ...s } = e;
+    return (0, i.jsx)(l.Anchor, {
+        ...s,
+        className: h.x6,
         href: n,
         onClick: (e) => {
-            c.onClick?.(e), _.default.track(A.HAw.APP_NOTICE_ANCHOR_CLICKED, { notice_type: l, href: n });
+            s.onClick?.(e), d.default.track(_.HAw.APP_NOTICE_ANCHOR_CLICKED, { notice_type: r, href: n });
         },
-        children: r,
+        children: t,
     });
 }
-function d(e) {
-    let { onClick: r, noticeType: n, className: l } = e;
-    return (0, t.jsx)(o.D, {
+function A(e) {
+    let { onClick: t, noticeType: n, className: r } = e;
+    return (0, i.jsx)(u.D, {
         focusProps: { offset: 6 },
-        className: c()(N.b, l),
+        className: s()(h.b, r),
         onClick: () => {
-            r(), null != n && _.default.track(A.HAw.APP_NOTICE_CLOSED, { notice_type: n });
+            t(), null != n && d.default.track(_.HAw.APP_NOTICE_CLOSED, { notice_type: n });
         },
-        "aria-label": E.intl.string(E.t.WAI6xu),
-        children: (0, t.jsx)(u.P, { size: "sm", color: "currentColor", className: N.ut }),
+        "aria-label": f.intl.string(f.t.WAI6xu),
+        children: (0, i.jsx)(c.P, { size: "sm", color: "currentColor", className: h.ut }),
     });
 }
 function I(e) {
-    let { color: r = C.DEFAULT, className: n, style: l, ref: s, children: a } = e;
-    return (0, t.jsx)("div", {
-        ref: s,
-        className: c()(N.lm, { [N.Fr]: i.Fr }, n, r),
-        style: null != l ? l : void 0,
-        children: a,
+    let { color: t = p.DEFAULT, className: n, style: r, ref: o, children: l } = e;
+    return (0, i.jsx)("div", {
+        ref: o,
+        className: s()(h.lm, { [h.Fr]: a.Fr }, n, t),
+        style: null != r ? r : void 0,
+        children: l,
     });
 }

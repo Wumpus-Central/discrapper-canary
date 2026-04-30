@@ -1,10 +1,11 @@
-n.d(t, { P: () => l });
-var o = n(627968),
+"use strict";
+n.d(t, { P: () => o });
+var i = n(627968),
     r = n(64700),
-    a = n(364995),
-    i = n(94420);
-function l(e) {
+    s = n(364995),
+    a = n(94420);
+function o(e) {
     let { children: t } = e,
-        [n] = r.useState(i.y$);
-    return (0, a.aN)(n), (0, o.jsx)(i.Ni, { value: n, children: t });
+        [n] = r.useState(a.y$);
+    return (0, s.aN)(n), (0, i.jsx)(a.Ni, { value: n, children: t });
 }

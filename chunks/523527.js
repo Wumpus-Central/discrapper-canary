@@ -1,6 +1,7 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(723702),
-    a = n(19575);
-function r(e, t) {
-    i.isPlatformEmbedded ? a.Ay.focus(e, t) : window.focus();
+    r = n(19575);
+function s(e, t) {
+    i.isPlatformEmbedded ? r.Ay.focus(e, t) : window.focus();
 }

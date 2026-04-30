@@ -1,76 +1,77 @@
+"use strict";
 n.d(t, {
-    Ay: () => p,
-    Iy: () => T,
-    Us: () => N,
+    Ay: () => T,
+    Iy: () => E,
+    Us: () => A,
     Uw: () => c,
-    Wr: () => S,
-    aL: () => f,
-    mU: () => u,
-    rH: () => I,
-    wp: () => A,
-    zd: () => h,
+    Wr: () => g,
+    aL: () => I,
+    mU: () => f,
+    rH: () => p,
+    wp: () => h,
+    zd: () => m,
 });
 var i = n(627968),
-    a = n(64700),
-    r = n(621466),
-    s = n(625494),
-    l = n(365971),
-    o = n(158368),
-    d = n(652215);
-let c = new s.H(),
-    _ = a.createContext({ appContext: d.BRT.APP, renderWindow: window, windowDispatch: c, windowId: (0, l.Xg)() }),
-    E = new Map();
-function u(e) {
+    r = n(64700),
+    s = n(621466),
+    a = n(625494),
+    o = n(365971),
+    l = n(158368),
+    u = n(652215);
+let c = new a.H(),
+    d = r.createContext({ appContext: u.BRT.APP, renderWindow: window, windowDispatch: c, windowId: (0, o.Xg)() }),
+    _ = new Map();
+function f(e) {
     let t = e.ownerDocument.defaultView;
     if (null == t) return;
-    let n = (0, l.Q2)(t);
-    return E.get(n)?.windowDispatch;
+    let n = (0, o.Q2)(t);
+    return _.get(n)?.windowDispatch;
 }
-function A(e) {
-    return (0, r.vq)(e?.target) ? (u(e.target) ?? null) : null;
+function h(e) {
+    return (0, s.vq)(e?.target) ? (f(e.target) ?? null) : null;
 }
-function I() {
-    let e = (0, o.Sf)();
-    return null == e ? null : (E.get(e) ?? null);
+function p() {
+    let e = (0, l.Sf)();
+    return null == e ? null : (_.get(e) ?? null);
 }
-function T(e) {
-    return E.get(e);
+function E(e) {
+    return _.get(e);
 }
-function h() {
-    let e = I();
+function m() {
+    let e = p();
     return null != e ? e.appContext : null;
 }
-function S(e) {
-    let { appContext: t, renderWindow: n, children: r } = e,
-        o = (function (e, t) {
-            let [n, i] = a.useState((0, l.Q2)(t)),
-                r = a.useMemo(() => new s.H(), []),
-                o = a.useMemo(() => ({ appContext: e, renderWindow: t, windowDispatch: r, windowId: n }), [e, t, r, n]);
+function g(e) {
+    let { appContext: t, renderWindow: n, children: s } = e,
+        l = (function (e, t) {
+            let [n, i] = r.useState((0, o.Q2)(t)),
+                s = r.useMemo(() => new a.H(), []),
+                l = r.useMemo(() => ({ appContext: e, renderWindow: t, windowDispatch: s, windowId: n }), [e, t, s, n]);
             return (
-                a.useEffect(() => {
+                r.useEffect(() => {
                     if (null != n) return;
                     let e = setInterval(() => {
-                        let n = (0, l.Q2)(t);
+                        let n = (0, o.Q2)(t);
                         null != n && (i(n), clearInterval(e));
                     }, 10);
                     return () => clearInterval(e);
                 }, [t, n]),
-                a.useEffect(() => {
-                    E.set(n, o);
+                r.useEffect(() => {
+                    _.set(n, l);
                     let e = () => {
-                        E.delete(n);
+                        _.delete(n);
                     };
                     return t.addEventListener("unload", e), () => t.removeEventListener("unload", e);
-                }, [o, t, n]),
-                o
+                }, [l, t, n]),
+                l
             );
         })(t, n);
-    return (0, i.jsx)(_.Provider, { value: o, children: r });
+    return (0, i.jsx)(d.Provider, { value: l, children: s });
 }
-function N() {
-    return a.useContext(_).appContext;
+function A() {
+    return r.useContext(d).appContext;
 }
-function f() {
-    return a.useContext(_).windowDispatch;
+function I() {
+    return r.useContext(d).windowDispatch;
 }
-let p = _;
+let T = d;

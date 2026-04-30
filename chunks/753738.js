@@ -1,42 +1,43 @@
-n.d(t, { Nr: () => o, PD: () => _, cw: () => c, lH: () => l, yf: () => d });
-var i = n(884384),
-    a = n(734057),
-    r = n(652215),
-    s = n(985018);
-class l extends Error {}
+"use strict";
+n.d(t, { Nr: () => l, PD: () => d, cw: () => c, lH: () => o, yf: () => u });
+var i = n(779185),
+    r = n(734057),
+    s = n(652215),
+    a = n(375708);
 class o extends Error {}
-let d = new Set([
-    r.t02.AUTOMOD_MESSAGE_BLOCKED,
-    r.t02.AUTOMOD_TITLE_BLOCKED,
-    r.t02.AUTOMOD_INVALID_RUST_SERVICE_RESPONSE,
+class l extends Error {}
+let u = new Set([
+    s.t02.AUTOMOD_MESSAGE_BLOCKED,
+    s.t02.AUTOMOD_TITLE_BLOCKED,
+    s.t02.AUTOMOD_INVALID_RUST_SERVICE_RESPONSE,
 ]);
 function c(e, t) {
     if (null == e) return null;
     let { code: n, message: i } = e;
-    if (!d.has(n)) return null;
+    if (!u.has(n)) return null;
     if (null != i) return i;
     if (null == t) return null;
-    let l = a.A.getChannel(t);
-    return l?.isThread()
-        ? s.intl.string(s.t.DVdG9E)
-        : (l?.isForumPost() || l?.isForumLikeChannel()) &&
-            (n === r.t02.AUTOMOD_TITLE_BLOCKED || n === r.t02.AUTOMOD_MESSAGE_BLOCKED)
-          ? s.intl.string(s.t.ipgKDg)
+    let o = r.A.getChannel(t);
+    return o?.isThread()
+        ? a.intl.string(a.t.DVdG9E)
+        : (o?.isForumPost() || o?.isForumLikeChannel()) &&
+            (n === s.t02.AUTOMOD_TITLE_BLOCKED || n === s.t02.AUTOMOD_MESSAGE_BLOCKED)
+          ? a.intl.string(a.t.ipgKDg)
           : null;
 }
-function _(e, t) {
+function d(e, t) {
     let n,
-        r = c(t);
-    return null != r
-        ? r
+        s = c(t);
+    return null != s
+        ? s
         : null == e
-          ? s.intl.string(s.t.zQ69pv)
-          : ((n = a.A.getChannel(e.message.channelId)),
+          ? a.intl.string(a.t.zQ69pv)
+          : ((n = r.A.getChannel(e.message.channelId)),
             (0, i.Qn)(e)
-                ? s.intl.string(s.t.bU6o0z)
+                ? a.intl.string(a.t.bU6o0z)
                 : n?.isThread()
-                  ? s.intl.string(s.t.DVdG9E)
+                  ? a.intl.string(a.t.DVdG9E)
                   : n?.isForumPost() || n?.isForumLikeChannel()
-                    ? s.intl.string(s.t.ipgKDg)
-                    : s.intl.string(s.t.zQ69pv));
+                    ? a.intl.string(a.t.ipgKDg)
+                    : a.intl.string(a.t.zQ69pv));
 }
