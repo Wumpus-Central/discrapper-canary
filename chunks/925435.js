@@ -126,7 +126,7 @@ var x = i(885996),
     I = i(775602),
     j = i(793574),
     k = i(688810),
-    A = i(285871),
+    A = i(75304),
     P = i(548118),
     f = i(915043),
     E = i(163437),
@@ -307,7 +307,7 @@ function J(n) {
                   ? () => {
                         (0, v.openModalLazy)(async () => {
                             let { SubscriptionDetailsModal: n } = await Promise.all([
-                                i.e("31320"),
+                                i.e("89603"),
                                 i.e("53917"),
                                 i.e("15186"),
                                 i.e("80830"),
@@ -357,7 +357,7 @@ function X(n) {
                         : () => {
                               (0, v.openModalLazy)(async () => {
                                   let { ItemDetailsModal: n } = await Promise.all([
-                                      i.e("31320"),
+                                      i.e("89603"),
                                       i.e("53917"),
                                       i.e("15186"),
                                       i.e("80830"),

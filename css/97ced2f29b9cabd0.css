@@ -154,3 +154,13 @@
 .groupLabel_b08638 {
     grid-column: 1/-1
 }
+
+.groupLabelHeading_b08638 {
+    display: inline
+}
+
+.groupLabelIcon_b08638 {
+    display: inline-flex;
+    margin-inline-start: var(--space-4);
+    vertical-align: middle
+}

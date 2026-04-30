@@ -451,7 +451,7 @@ var tj = n(284009),
     tS = n(877062);
 u.Ay.initialize();
 var tb = n(21599),
-    tO = n(519244),
+    tO = n(785651),
     tR = n(280513),
     tL = n(717421),
     tD = n(661531),
@@ -521,13 +521,13 @@ let tZ = (t) => {
     t1 = (t) => t.channel?.type === b.rbe.GROUP_DM,
     t2 = (t) => null == t.channel && null == t.guild && null != t.inviter,
     t3 = (t) => t.state === b.elq.ACCEPTED,
-    t4 = (t) => {
+    t8 = (t) => {
         let { guild_scheduled_event: e } = t;
         return null != e;
     },
-    t8 = (t) => {
+    t4 = (t) => {
         let e;
-        return !t4(t) && (!!t2(t) || (null != t.inviter && !t3(t) && ((e = tZ(t)), !((e?.memberCount ?? 0) > 100))));
+        return !t8(t) && (!!t2(t) || (null != t.inviter && !t3(t) && ((e = tZ(t)), !((e?.memberCount ?? 0) > 100))));
     },
     t7 = (t) => {
         let { guild: e, user: n, application: i } = t;
@@ -546,7 +546,7 @@ let tZ = (t) => {
 function t6(t) {
     let { invite: e, textClassName: n, className: i } = t,
         s = tZ(e);
-    return null == s || t8(e) || e?.guild?.id === t$.TA
+    return null == s || t4(e) || e?.guild?.id === t$.TA
         ? null
         : (0, l.jsx)(A.R1, {
               className: N()(tJ.He, i),
@@ -564,7 +564,7 @@ function t9(t) {
                     ? null
                     : t0(e) && null != e.target_user
                       ? tK.Ay.getUserAvatarURL(e.target_user)
-                      : t8(e) && null != e.inviter
+                      : t4(e) && null != e.inviter
                         ? tK.Ay.getUserAvatarURL(e.inviter)
                         : null,
             [e, n],
@@ -580,7 +580,7 @@ function t9(t) {
               ? (s = O.intl.formatToPlainString(O.t.x2L32Q, { username: e.target_user.username }))
               : t3(e)
                 ? (s = O.intl.string(O.t["FDsl+J"]))
-                : t8(e) &&
+                : t4(e) &&
                   null != e.inviter &&
                   (s = O.intl.format(O.t.spU2mI, { username: tq.Ay.getFormattedName(e.inviter) })),
         (0, l.jsxs)("div", {
@@ -761,7 +761,7 @@ function eu(t) {
             }
         })(e),
         u = { invite: e, user: d, guild: s, channel: r, application: a };
-    return t4(e)
+    return t8(e)
         ? (0, l.jsx)(ec, { invite: e, channel: r, isSubmitting: o, onAcceptInvite: n })
         : (0, l.jsxs)("div", {
               className: eo.kL,
@@ -924,7 +924,7 @@ function ev(t) {
 }
 function eC(t) {
     let { invite: e } = t;
-    if (null == e || !t4(e)) return null;
+    if (null == e || !t8(e)) return null;
     let n = eN(e);
     return (0, l.jsx)(ev, {
         startAnimHeightPx: 0,
@@ -940,7 +940,7 @@ function ey(t) {
         { enabled: s } = eE.useConfig({ location: "AcceptInviteMobile" }),
         a = null != n ? (0, tM.oO)(n) : null,
         d = n?.guild != null ? (0, H.DY)(n.guild) : null,
-        c = null != d && ef(a) && null != n && !t4(n),
+        c = null != d && ef(a) && null != n && !t8(n),
         o = s && c;
     if (
         (r.useEffect(() => {
@@ -971,7 +971,7 @@ function eS(t) {
         s = {},
         { enabled: r } = eE.useConfig({ location: "AcceptInviteMobile" }),
         a = null != e ? (0, tM.oO)(e) : null,
-        d = null != i && ef(a) && null != e && !t4(e);
+        d = null != i && ef(a) && null != e && !t8(e);
     if (i?.splash != null) {
         let t = tK.Ay.getGuildSplashURL({ id: i.id, splash: i.splash });
         null != t && ((s.backgroundImage = `url(${t})`), (s.backgroundSize = "cover"));
@@ -1226,10 +1226,10 @@ var eZ = n(881636),
 let e1 = () => {
     let { goToStep: t } = (0, eU.n)(),
         e = r.useCallback(() => {
-            t(e8.DSA);
+            t(e4.DSA);
         }, [t]),
         n = r.useCallback(() => {
-            t(e8.TIDA);
+            t(e4.TIDA);
         }, [t]);
     return (0, l.jsxs)(tc.B, {
         gap: 8,
@@ -1356,9 +1356,9 @@ let e3 = () =>
             }),
         ],
     });
-var e4 = n(725925);
+var e8 = n(725925);
 u.Ay.initialize();
-var e8 = (((s = {}).SELECTION = "selection"), (s.DSA = "dsa"), (s.TIDA = "tida"), s);
+var e4 = (((s = {}).SELECTION = "selection"), (s.DSA = "dsa"), (s.TIDA = "tida"), s);
 let e7 = (t) => {
         let { transitionState: e, onClose: n } = t,
             [i, s] = r.useState(!0),
@@ -1467,7 +1467,7 @@ let e7 = (t) => {
             },
         ];
         return (0, l.jsx)("div", {
-            className: { selection: e4.a, dsa: e4.q, tida: void 0 }[v],
+            className: { selection: e8.a, dsa: e8.q, tida: void 0 }[v],
             children: (0, l.jsx)(eU.t, {
                 steps: C,
                 currentStepKey: v,
@@ -2163,11 +2163,11 @@ function n3(t) {
         ],
     });
 }
-function n4(t) {
+function n8(t) {
     let { title: e } = t;
     return (0, l.jsxs)(A.Ay, { children: [(0, l.jsx)(A.hE, { children: e }), (0, l.jsx)(A.CK, {})] });
 }
-function n8(t) {
+function n4(t) {
     let { invite: e, error: n, handleAccept: i, handleDefaultTransition: s } = t;
     return (0, l.jsx)(A.Ay, {
         children: (0, l.jsxs)(tc.B, {
@@ -2345,15 +2345,19 @@ let is = (0, ni.A)(n_.A),
                         null != e &&
                             s !== u &&
                             s === b.fAW.OPEN &&
-                            ty.default.track(b.HAw.INVITE_APP_INVOKED, {
-                                invite_code: (0, tb.m0)(n),
-                                guild_id: e.guild?.id,
-                                channel_id: e.channel?.id,
-                                inviter_id: e.inviter?.id,
-                                user_is_member: null != e.guild && null != tw.A.getGuild(e.guild.id),
-                                size_total: e.approximate_member_count,
-                                invite_type: null != e.type ? tX.Xd[e.type] : void 0,
-                            });
+                            ty.default.track(
+                                b.HAw.INVITE_APP_INVOKED,
+                                {
+                                    invite_code: (0, tb.m0)(n),
+                                    guild_id: e.guild?.id,
+                                    channel_id: e.channel?.id,
+                                    inviter_id: e.inviter?.id,
+                                    user_is_member: null != e.guild && null != tw.A.getGuild(e.guild.id),
+                                    size_total: e.approximate_member_count,
+                                    invite_type: null != e.type ? tX.Xd[e.type] : void 0,
+                                },
+                                { flush: !0 },
+                            );
                     }, [e, s, u, n]);
             })({
                 invite: a,
@@ -2374,14 +2378,14 @@ let is = (0, ni.A)(n_.A),
         if ([b.elq.RESOLVING, b.elq.ACCEPTING, b.elq.APP_OPENING].includes(T)) {
             let t =
                 T === b.elq.ACCEPTING ? O.intl.string(O.t["6wsY16"]) : (b.elq.RESOLVING, O.intl.string(O.t["Z+hCVU"]));
-            return (0, l.jsx)(n4, { title: t });
+            return (0, l.jsx)(n8, { title: t });
         }
         return T === b.elq.EXPIRED
             ? (0, l.jsx)(n7, { banned: !1, handleDefaultTransition: C })
             : T === b.elq.BANNED
               ? (0, l.jsx)(n7, { banned: !0, handleDefaultTransition: C })
               : T === b.elq.ERROR
-                ? (0, l.jsx)(n8, { invite: a, error: m, handleAccept: v, handleDefaultTransition: C })
+                ? (0, l.jsx)(n4, { invite: a, error: m, handleAccept: v, handleDefaultTransition: C })
                 : T === b.elq.RESOLVED
                   ? c && (0, nF.Lt)(a.flags ?? 0, nw.Q.IS_GUEST_INVITE)
                       ? (g.Ay.openApp(a.code),
