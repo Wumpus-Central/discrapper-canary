@@ -43,7 +43,7 @@ class l extends s.Component {
             { focusedColumn: s, focusedRow: n } = this.state;
         if (null == e) return;
         let l = t();
-        if (null == l) return;
+        if (null == l || 0 === l.length) return;
         let i = this.getNext(l, s, n, e);
         this.setState({ focusedColumn: i.column, focusedRow: i.row }, () => {
             let e = this.calculateFocusedItem();
@@ -75,8 +75,8 @@ class l extends s.Component {
                     n = this.wrapPosition(e, l, i, 1);
             }
         return (
-            null != n && (a = e[n.column][n.row]),
-            (null == a || null == n) && (a = e[(n = { column: l, row: i }).column][n.row]),
+            null != n && (a = e[n.column]?.[n.row]),
+            (null == a || null == n) && ((n = { column: l, row: i }), (a = e[n.column]?.[n.row])),
             { column: n.column, row: n.row, id: a }
         );
     }
