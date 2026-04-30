@@ -655,8 +655,8 @@ if (
     let { initWasmTracking: e } = n(474570);
     e(),
         n
-            .e("60649")
-            .then(n.bind(n, 38896))
+            .e("67620")
+            .then(n.bind(n, 559023))
             .then((e) => e.init());
 }
 (0, G.Zs)(function (e) {
@@ -722,7 +722,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let ew = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new ef.A().log(
-    `[BUILD INFO] Release Channel: ${ew}, Build Number: 537580, Version Hash: e62eab3447068f417fa3730d77d40a0227d8ffeb`,
+    `[BUILD INFO] Release Channel: ${ew}, Build Number: 537594, Version Hash: 1bbad623d4aa54897dac5142bda34cabfbfa493e`,
 ),
     o.A.setTags({ appContext: E.QCW }),
     K.A.initBasic(),

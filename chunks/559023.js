@@ -1,9 +1,9 @@
-i.d(t, { init: () => I });
-var r = i(626584);
-i(321073);
-var s = i(228366),
-    a = i(723702),
-    n = i(290805);
+s.d(t, { init: () => w });
+var r = s(626584);
+s(321073);
+var i = s(228366),
+    a = s(723702),
+    n = s(290805);
 function o(e) {
     return {
         js_heap_size_limit: e.jsHeapSizeLimit,
@@ -11,7 +11,7 @@ function o(e) {
         used_js_heap_size: e.usedJSHeapSize,
     };
 }
-var l = i(927813);
+var l = s(927813);
 function m(e) {
     let t = e / l.A.Millis.MINUTE;
     return t < 5
@@ -30,10 +30,10 @@ function m(e) {
                     ? "2-3hr"
                     : "3hr+";
 }
-let d = new r.A("MeticulousActionTracker"),
-    h = "meticulous-start",
+let h = new r.A("MeticulousActionTracker"),
+    u = "meticulous-start",
     c = "meticulous-end",
-    u = new Set([
+    d = new Set([
         "APP_STATE_UPDATE",
         "CONNECTION_CLOSED",
         "CONNECTION_OPEN",
@@ -76,7 +76,7 @@ class p {
         null != this.flushIntervalId && (clearInterval(this.flushIntervalId), (this.flushIntervalId = null)),
             null != this.observer && (this.observer.disconnect(), (this.observer = null)),
             this.actionHandlers.forEach((e, t) => {
-                s.h.unsubscribe(t, e);
+                i.h.unsubscribe(t, e);
             }),
             this.actionHandlers.clear(),
             this.pendingDispatches.clear(),
@@ -101,7 +101,7 @@ class p {
     buildReport(e) {
         if (null == this.mode) throw Error("Cannot build report without mode");
         let t = this.mode.getMemory(),
-            i = this.mode.baselineUsedMemory;
+            s = this.mode.baselineUsedMemory;
         return {
             type: "heap_snapshot_action",
             session_id: this.mode.sessionId,
@@ -110,14 +110,14 @@ class p {
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "537580",
-            built_at: "1777571497351",
+            build_number: "537594",
+            built_at: "1777572212007",
             release_channel: n.y ?? "unknown",
             tags: this.getTags(),
             metrics: {
                 report_time_memory: null != t ? o(t) : void 0,
-                delta_from_baseline: null != i && t?.usedJSHeapSize != null ? t.usedJSHeapSize - i : void 0,
-                baseline_memory: i,
+                delta_from_baseline: null != s && t?.usedJSHeapSize != null ? t.usedJSHeapSize - s : void 0,
+                baseline_memory: s,
                 timing: { collected_at: this.mode.performanceNow() },
                 entries: e,
             },
@@ -131,33 +131,33 @@ class p {
     setupDispatcherSubscription() {
         null != this.mode &&
             (this.interceptorAdded ||
-                (s.h.addInterceptor((e) => {
-                    if (null != this.mode && u.has(e.type)) {
+                (i.h.addInterceptor((e) => {
+                    if (null != this.mode && d.has(e.type)) {
                         let t = ++this.dispatchCounter,
-                            i = this.mode.getMemory(),
+                            s = this.mode.getMemory(),
                             r = this.pendingDispatches.get(e.type) ?? [];
                         r.push(t),
                             this.pendingDispatches.set(e.type, r),
-                            this.mode.mark(`${h}-${e.type}-${t}`, { detail: { memory: i } });
+                            this.mode.mark(`${u}-${e.type}-${t}`, { detail: { memory: s } });
                     }
                     return !1;
                 }),
                 (this.interceptorAdded = !0)),
-            u.forEach((e) => {
+            d.forEach((e) => {
                 if (this.actionHandlers.has(e)) return;
                 let t = () => {
                     let t = this.pendingDispatches.get(e),
-                        i = t?.shift();
-                    if (null == i) return void d.warn(`No pending dispatch ID for action: ${e}`);
+                        s = t?.shift();
+                    if (null == s) return void h.warn(`No pending dispatch ID for action: ${e}`);
                     let r = () => {
                         let t = this.mode?.getMemory();
-                        this.mode?.mark(`${c}-${e}-${i}`, { detail: { memory: t, actionType: e, dispatchId: i } });
+                        this.mode?.mark(`${c}-${e}-${s}`, { detail: { memory: t, actionType: e, dispatchId: s } });
                     };
                     requestAnimationFrame(() => {
                         requestAnimationFrame(r);
                     });
                 };
-                s.h.subscribe(e, t), this.actionHandlers.set(e, t);
+                i.h.subscribe(e, t), this.actionHandlers.set(e, t);
             }));
     }
     setupPerformanceObserver() {
@@ -170,34 +170,34 @@ class p {
                 })),
                     this.observer.observe({ type: "mark", buffered: !0 });
             } catch (e) {
-                d.warn("Failed to set up PerformanceObserver:", e);
+                h.warn("Failed to set up PerformanceObserver:", e);
             }
     }
     collectEntry(e) {
         try {
             let t = e.detail?.actionType,
-                i = e.detail?.dispatchId;
-            if (null == t || null == i) {
-                d.warn("End mark missing actionType or dispatchId:", e.name), performance.clearMarks(e.name);
+                s = e.detail?.dispatchId;
+            if (null == t || null == s) {
+                h.warn("End mark missing actionType or dispatchId:", e.name), performance.clearMarks(e.name);
                 return;
             }
-            let r = `${h}-${t}-${i}`,
-                s = performance.getEntriesByName(r);
-            if (0 === s.length) {
-                d.warn(`Missing start mark for action: ${r}`), performance.clearMarks(e.name);
+            let r = `${u}-${t}-${s}`,
+                i = performance.getEntriesByName(r);
+            if (0 === i.length) {
+                h.warn(`Missing start mark for action: ${r}`), performance.clearMarks(e.name);
                 return;
             }
-            let a = s[0],
+            let a = i[0],
                 n = a.detail?.memory,
                 l = e.detail?.memory,
                 m = this.mode?.baselineUsedMemory,
                 c = l?.usedJSHeapSize != null && null != m ? l.usedJSHeapSize - m : void 0,
-                u = null != this.mode ? this.mode.performanceNow() : 0;
+                d = null != this.mode ? this.mode.performanceNow() : 0;
             this.collectedEntries.push({
                 name: t,
                 start_time: a.startTime,
                 end_time: e.startTime,
-                collected_at: u,
+                collected_at: d,
                 start_memory: null != n ? o(n) : void 0,
                 end_memory: null != l ? o(l) : void 0,
                 memory_delta_from_baseline: c,
@@ -205,25 +205,27 @@ class p {
                 performance.clearMarks(r),
                 performance.clearMarks(e.name);
         } catch (e) {
-            d.warn("Failed to collect performance entry information:", e);
+            h.warn("Failed to collect performance entry information:", e);
         }
     }
 }
-var S = i(474570);
-let f = +l.A.Millis.MINUTE;
-class _ {
+var S = s(474570);
+let _ = +l.A.Millis.MINUTE;
+class f {
     mode = null;
     sampleIntervalId = null;
     sessionStartTime = 0;
     peakMemory = 0;
-    start(e, t) {
+    getPressureMetrics = null;
+    start(e, t, s) {
         (this.mode = e),
             (this.sessionStartTime = t),
             (this.peakMemory = e.getMemory()?.usedJSHeapSize ?? 0),
+            (this.getPressureMetrics = s ?? null),
             this.sampleAndSend(),
             (this.sampleIntervalId = window.setInterval(() => {
                 this.sampleAndSend();
-            }, f));
+            }, _));
     }
     stop() {
         null != this.sampleIntervalId && (clearInterval(this.sampleIntervalId), (this.sampleIntervalId = null)),
@@ -238,46 +240,107 @@ class _ {
     updatePeakMemory(e) {
         e > this.peakMemory && (this.peakMemory = e);
     }
-    sampleAndSend() {
-        if (null == this.mode) return;
-        let e = this.mode.getMemory();
+    async sampleAndSend() {
+        let e = this.mode;
         if (null == e) return;
-        this.updatePeakMemory(e.usedJSHeapSize);
-        let t = this.mode.performanceNow() - this.sessionStartTime,
-            i = { platform: (0, a.getNativePlatform)(), release_channel: n.y ?? "unknown", uptime_bucket: m(t) },
-            r = {
+        let t = e.getMemory();
+        if (null == t) return;
+        this.updatePeakMemory(t.usedJSHeapSize);
+        let s = this.peakMemory,
+            r = e.performanceNow(),
+            i = new Date().toISOString(),
+            o = r - this.sessionStartTime,
+            l = (0, S.collectNonHeapMetrics)(),
+            h = this.getPressureMetrics?.(),
+            u = null != e.baselineUsedMemory ? t.usedJSHeapSize - e.baselineUsedMemory : void 0,
+            c = await e.measureAgentMemory?.(),
+            d = {
                 type: "heap_snapshot_interval",
-                session_id: this.mode.sessionId,
-                commit_sha: this.mode.commitSha,
-                base_commit_sha: this.mode.baseCommitSha,
-                branch_name: this.mode.branchName,
-                commit_date: this.mode.commitDate,
-                timestamp: new Date().toISOString(),
-                build_number: "537580",
-                built_at: "1777571497351",
+                session_id: e.sessionId,
+                commit_sha: e.commitSha,
+                base_commit_sha: e.baseCommitSha,
+                branch_name: e.branchName,
+                commit_date: e.commitDate,
+                timestamp: i,
+                build_number: "537594",
+                built_at: "1777572212007",
                 release_channel: n.y ?? "unknown",
-                tags: i,
+                tags: { platform: (0, a.getNativePlatform)(), release_channel: n.y ?? "unknown", uptime_bucket: m(o) },
                 metrics: {
-                    js_heap_size_limit: e.jsHeapSizeLimit,
-                    total_js_heap_size: e.totalJSHeapSize,
-                    used_js_heap_size: e.usedJSHeapSize,
-                    peak_memory: this.peakMemory,
-                    delta_from_baseline:
-                        null != this.mode.baselineUsedMemory ? e.usedJSHeapSize - this.mode.baselineUsedMemory : void 0,
-                    baseline_memory: this.mode.baselineUsedMemory,
-                    ...(0, S.collectNonHeapMetrics)(),
-                    timing: { collected_at: this.mode.performanceNow() },
+                    js_heap_size_limit: t.jsHeapSizeLimit,
+                    total_js_heap_size: t.totalJSHeapSize,
+                    used_js_heap_size: t.usedJSHeapSize,
+                    peak_memory: s,
+                    delta_from_baseline: u,
+                    baseline_memory: e.baselineUsedMemory,
+                    ...l,
+                    ...h,
+                    ...(null != c
+                        ? {
+                              agent_memory_bytes: c.bytes,
+                              agent_memory_breakdown: c.breakdown.map((e) => ({ bytes: e.bytes, types: e.types })),
+                          }
+                        : {}),
+                    timing: { collected_at: r },
                 },
             };
-        this.mode.sendToIngest(r);
+        e.sendToIngest(d);
     }
 }
-let y = new r.A("MeticulousPerformanceReporter");
+let y = ["nominal", "fair", "serious", "critical"];
 class b {
+    observer = null;
+    currentState = "nominal";
+    stateCounts = { nominal: 0, fair: 0, serious: 0, critical: 0 };
+    totalSamples = 0;
+    start(e) {
+        if (null != e) {
+            (this.currentState = "nominal"),
+                (this.stateCounts = { nominal: 0, fair: 0, serious: 0, critical: 0 }),
+                (this.totalSamples = 0);
+            try {
+                let t = new e((e) => {
+                    for (let t of e)
+                        "cpu" === t.source &&
+                            y.includes(t.state) &&
+                            ((this.currentState = t.state), this.stateCounts[this.currentState]++, this.totalSamples++);
+                });
+                (this.observer = t),
+                    t.observe("cpu", { sampleInterval: 1e3 }).catch(() => {
+                        this.observer === t && (this.observer = null);
+                    });
+            } catch {
+                this.observer = null;
+            }
+        }
+    }
+    stop() {
+        if (null != this.observer) {
+            try {
+                this.observer.unobserve("cpu");
+            } catch {}
+            this.observer = null;
+        }
+    }
+    collect() {
+        if (0 !== this.totalSamples)
+            return {
+                cpu_pressure_state: this.currentState,
+                cpu_pressure_nominal_pct: Math.round((this.stateCounts.nominal / this.totalSamples) * 100),
+                cpu_pressure_fair_pct: Math.round((this.stateCounts.fair / this.totalSamples) * 100),
+                cpu_pressure_serious_pct: Math.round((this.stateCounts.serious / this.totalSamples) * 100),
+                cpu_pressure_critical_pct: Math.round((this.stateCounts.critical / this.totalSamples) * 100),
+                cpu_pressure_sample_count: this.totalSamples,
+            };
+    }
+}
+let g = new r.A("MeticulousPerformanceReporter");
+class v {
     mode = null;
     boundBeforeUnload = null;
     actionTracker = new p();
-    heapSampler = new _();
+    heapSampler = new f();
+    pressureTracker = new b();
     get isInitialized() {
         return null != this.mode;
     }
@@ -293,20 +356,20 @@ class b {
     init() {
         let e, t;
         if (this.isInitialized) return !0;
-        let i =
+        let s =
             null != (e = window.Meticulous) && e.isRunningAsTest && e.replay?.isBenchmarkableReplay ? e.replay : null;
         return (
-            null != i &&
+            null != s &&
             ((this.mode =
-                ((t = i.native.performance),
+                ((t = s.native.performance),
                 {
                     name: "meticulous",
-                    sessionId: i.sessionBeingReplayed.id,
-                    commitSha: i.commitUnderTest?.sha,
-                    baseCommitSha: i.commitUnderTest?.baseCommitSha,
-                    branchName: i.commitUnderTest?.branchName,
-                    commitDate: i.commitUnderTest?.date,
-                    PerformanceObserver: i.native.PerformanceObserver,
+                    sessionId: s.sessionBeingReplayed.id,
+                    commitSha: s.commitUnderTest?.sha,
+                    baseCommitSha: s.commitUnderTest?.baseCommitSha,
+                    branchName: s.commitUnderTest?.branchName,
+                    commitDate: s.commitUnderTest?.date,
+                    PerformanceObserver: s.native.PerformanceObserver,
                     performanceNow: () => t.now(),
                     mark: (e, t) => performance.mark(e, t),
                     getMemory: () => {
@@ -318,11 +381,21 @@ class b {
                                 usedJSHeapSize: e.usedJSHeapSize,
                             };
                     },
+                    measureAgentMemory:
+                        null != t.measureUserAgentSpecificMemory
+                            ? async () => {
+                                  try {
+                                      return await t.measureUserAgentSpecificMemory();
+                                  } catch {
+                                      return;
+                                  }
+                              }
+                            : void 0,
                     sendToIngest: async (e) => {
                         let t = JSON.stringify(e),
-                            { metrics: i, ...r } = e;
-                        y.log("QP payload metadata", JSON.stringify(r, null, 2)),
-                            y.log("QP payload metrics", JSON.stringify(i, null, 2));
+                            { metrics: s, ...r } = e;
+                        g.log("QP payload metadata", JSON.stringify(r, null, 2)),
+                            g.log("QP payload metrics", JSON.stringify(s, null, 2));
                         try {
                             let e = await fetch("https://meticulous-ingest.discord.tools/webhook", {
                                 method: "POST",
@@ -331,15 +404,15 @@ class b {
                                 keepalive: !0,
                             });
                             if (!e.ok)
-                                return y.warn(`Failed to send performance data: ${e.status} ${e.statusText}`), !1;
+                                return g.warn(`Failed to send performance data: ${e.status} ${e.statusText}`), !1;
                             return !0;
                         } catch (e) {
-                            return y.warn("Error sending performance data:", e), !1;
+                            return g.warn("Error sending performance data:", e), !1;
                         }
                     },
                 })),
-            this.start(),
-            y.log(`Performance reporter initialized [${this.mode.name}]`),
+            this.start(s.native.PressureObserver),
+            g.log(`Performance reporter initialized [${this.mode.name}]`),
             !0)
         );
     }
@@ -365,20 +438,21 @@ class b {
                         };
                 },
                 sendToIngest: async (e) => (
-                    y.log("\uD83D\uDCE4 [DEV] Ingest payload:", JSON.stringify(e, null, 2)), await Promise.resolve(!0)
+                    g.log("\uD83D\uDCE4 [DEV] Ingest payload:", JSON.stringify(e, null, 2)), await Promise.resolve(!0)
                 ),
             }),
             this.start(),
-            y.log(`🔧 Performance reporter initialized [${this.mode.name}] - entries will be logged to console`),
+            g.log(`🔧 Performance reporter initialized [${this.mode.name}] - entries will be logged to console`),
             !0)
         );
     }
-    start() {
+    start(e) {
         if (null == this.mode) return;
-        let e = this.mode.performanceNow();
+        let t = this.mode.performanceNow();
         (this.mode.baselineUsedMemory = this.mode.getMemory()?.usedJSHeapSize),
-            this.actionTracker.start(this.mode, e),
-            this.heapSampler.start(this.mode, e),
+            this.pressureTracker.start(e),
+            this.actionTracker.start(this.mode, t),
+            this.heapSampler.start(this.mode, t, () => this.pressureTracker.collect()),
             (this.boundBeforeUnload = () => void this.terminate()),
             window.addEventListener("beforeunload", this.boundBeforeUnload);
     }
@@ -389,11 +463,12 @@ class b {
             await this.actionTracker.flush(),
             this.actionTracker.stop(),
             this.heapSampler.stop(),
-            y.log("Performance reporter terminated"),
+            this.pressureTracker.stop(),
+            g.log("Performance reporter terminated"),
             (this.mode = null));
     }
 }
-let g = new b();
-function I() {
-    return g.init();
+let I = new v();
+function w() {
+    return I.init();
 }

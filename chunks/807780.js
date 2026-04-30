@@ -1153,7 +1153,7 @@ function tf(e) {
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: a()(tu.TE, { [tu.js]: C }),
+                      className: a()(tu.TE, tp.TE, { [tu.js]: C }),
                       children: [
                           (0, l.jsx)(tj, { guild: s }),
                           (0, l.jsxs)("div", {

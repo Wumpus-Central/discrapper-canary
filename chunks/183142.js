@@ -212,7 +212,7 @@ let $ = function (e) {
                 [i, n] = (0, N.useState)("server-order"),
                 l = (0, O.bG)([K.Ay], () => K.Ay.getFlattenedGuildIds()),
                 s = (0, O.bG)([H.A], () => H.A.getGuilds()),
-                r = l.map((e) => s[e]),
+                r = l.map((e) => s[e]).filter(Boolean),
                 a = c.Pw.useSetting(),
                 [o, u] = (0, N.useState)(a);
             (0, N.useEffect)(() => {
@@ -8397,7 +8397,7 @@ let cX = function (e) {
 var cY = i(338548),
     cH = i(776096),
     cK = i(178368),
-    cW = i(925747),
+    cW = i(785651),
     cZ = i(866323),
     cQ = i(530005),
     cq = i(443865),

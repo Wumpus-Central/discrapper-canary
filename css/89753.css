@@ -629,7 +629,6 @@ h2.title_feb59c {
     overflow-x: auto;
     padding: .5em;
     -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
     text-size-adjust: none;
     background: var(--background-base-lower);
     color: var(--text-code)
@@ -983,7 +982,6 @@ h2.title_feb59c {
     overflow-x: auto;
     padding: .5em;
     -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
     text-size-adjust: none;
     background: var(--background-base-lower);
     color: var(--text-code)
