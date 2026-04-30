@@ -1,0 +1,21 @@
+n.d(t, { $: () => r });
+var l,
+    r =
+        (((l = {})[(l.PREMIUM_TENURE = 1)] = "PREMIUM_TENURE"),
+        (l[(l.PARTNER = 2)] = "PARTNER"),
+        (l[(l.CERTIFIED_MODERATOR = 3)] = "CERTIFIED_MODERATOR"),
+        (l[(l.HYPESQUAD = 4)] = "HYPESQUAD"),
+        (l[(l.HYPESQUAD_HOUSE_1 = 5)] = "HYPESQUAD_HOUSE_1"),
+        (l[(l.HYPESQUAD_HOUSE_2 = 6)] = "HYPESQUAD_HOUSE_2"),
+        (l[(l.HYPESQUAD_HOUSE_3 = 7)] = "HYPESQUAD_HOUSE_3"),
+        (l[(l.BUG_HUNTER_LEVEL_1 = 8)] = "BUG_HUNTER_LEVEL_1"),
+        (l[(l.BUG_HUNTER_LEVEL_2 = 9)] = "BUG_HUNTER_LEVEL_2"),
+        (l[(l.VERIFIED_DEVELOPER = 10)] = "VERIFIED_DEVELOPER"),
+        (l[(l.EARLY_SUPPORTER = 11)] = "EARLY_SUPPORTER"),
+        (l[(l.GUILD_BOOSTER = 12)] = "GUILD_BOOSTER"),
+        (l[(l.LEGACY_USERNAME = 13)] = "LEGACY_USERNAME"),
+        (l[(l.QUEST_COMPLETED = 14)] = "QUEST_COMPLETED"),
+        (l[(l.APRIL_FOOLS_2026 = 15)] = "APRIL_FOOLS_2026"),
+        (l[(l.ORB_PROFILE = 16)] = "ORB_PROFILE"),
+        (l[(l.GIFTING = 17)] = "GIFTING"),
+        l);

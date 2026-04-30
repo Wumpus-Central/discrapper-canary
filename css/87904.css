@@ -1901,6 +1901,7 @@
 }
 
 .checklist_bbb935 {
+    background-color: var(--background-base-low);
     flex-basis: 248px;
     flex-grow: 0;
     margin-inline-start: 40px;
