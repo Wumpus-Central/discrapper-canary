@@ -219,6 +219,7 @@ screen and (max-width:900px) {
     height: 100vh;
     justify-content: center;
     max-height: -webkit-fill-available;
+    max-height: -moz-available;
     max-height: stretch;
     overflow: hidden;
     position: relative;
