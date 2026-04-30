@@ -3851,12 +3851,6 @@ screen and (max-width:485px) {
     border-color: var(--primary-630)
 }
 
-.confettiCanvas__78e61 {
-    height: 100%;
-    position: absolute;
-    width: 100%
-}
-
 .externalLink__900c6 {
     width: 100%
 }
@@ -5020,7 +5014,6 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
 
 .eventContent__243fe {
     display: flex;
-    flex: 1;
     flex-direction: column;
     gap: 2px;
     min-width: 0
@@ -5030,7 +5023,9 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
     align-items: baseline;
     display: flex;
     gap: 0;
-    min-width: 0
+    justify-content: flex-start;
+    min-width: 0;
+    white-space: pre-wrap
 }
 
 .activityHeader__243fe {
@@ -5039,15 +5034,14 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
 }
 
 .eventHeaderUsername__243fe {
-    min-width: 0;
+    flex: 1 0 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
 .eventHeaderLabel__243fe {
-    flex-shrink: 0;
-    white-space: pre-wrap
+    flex-shrink: 0
 }
 
 .eventTime__243fe {
@@ -5095,16 +5089,20 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
 .label__70e41 {
     align-items: baseline;
     display: flex;
+    flex: 1 0 0;
     gap: 4px;
-    min-width: 0;
     opacity: .75
+}
+
+.label__70e41,
+.username__70e41 {
+    white-space: nowrap
 }
 
 .username__70e41 {
     min-width: 0;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
+    text-overflow: ellipsis
 }
 
 .wasHere__70e41 {
