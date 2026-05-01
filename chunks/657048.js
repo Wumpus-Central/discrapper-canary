@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(990078),
-    l = n(187322),
+    l = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    a = n(990078),
+    o = n(187322),
     u = n(939249),
-    c = n(375708),
-    d = n(877217);
-let _ = r.forwardRef(function (e, t) {
+    d = n(985018),
+    c = n(877217);
+let h = l.forwardRef(function (e, t) {
     let n,
         {
-            className: r,
-            src: s,
-            unicodeEmoji: _,
-            name: f,
-            size: h = 20,
-            enableTooltip: p = !0,
+            className: l,
+            src: r,
+            unicodeEmoji: h,
+            name: p,
+            size: m = 20,
+            enableTooltip: f = !0,
             enableHeight: E = !0,
-            onClick: m,
+            onClick: g,
         } = e;
-    return null == s && null == _
+    return null == r && null == h
         ? null
-        : (0, i.jsx)(o.m, {
+        : (0, i.jsx)(a.m, {
               asContainer: !0,
-              text: f,
+              text: p,
               "aria-label": !1,
-              shouldShow: p,
+              shouldShow: f,
               tag: "span",
               children:
                   ((n = (0, i.jsx)("img", {
                       ref: t,
-                      alt: c.intl.formatToPlainString(c.t["9+YWrE"], { name: f }),
-                      className: a()(d.U, r, { [d.v]: null != m }),
-                      height: E ? h : void 0,
-                      src: s,
-                      width: h,
+                      alt: d.intl.formatToPlainString(d.t["9+YWrE"], { name: p }),
+                      className: s()(c.U, l, { [c.v]: null != g }),
+                      height: E ? m : void 0,
+                      src: r,
+                      width: m,
                   })),
-                  (null != _ &&
+                  (null != h &&
                       (n = (0, i.jsx)("img", {
                           ref: t,
-                          alt: _.allNamesString,
-                          className: a()(d.U, r, { [d.v]: null != m }),
-                          height: E ? h : void 0,
-                          src: _.url,
-                          width: h,
+                          alt: h.allNamesString,
+                          className: s()(c.U, l, { [c.v]: null != g }),
+                          height: E ? m : void 0,
+                          src: h.url,
+                          width: m,
                       })),
-                  null == m)
-                      ? (0, i.jsx)(l.vN, { offset: { left: 5 }, children: n })
-                      : (0, i.jsx)(u.D, { onClick: m, tag: "span", focusProps: { offset: { left: 5 } }, children: n })),
+                  null == g)
+                      ? (0, i.jsx)(o.vN, { offset: { left: 5 }, children: n })
+                      : (0, i.jsx)(u.D, { onClick: g, tag: "span", focusProps: { offset: { left: 5 } }, children: n })),
           });
 });

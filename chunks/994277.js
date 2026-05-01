@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { i: () => r });
+n.d(t, { i: () => a });
 var i,
-    r =
+    a =
         (((i = {}).AGE_GATE = "age-gate"),
         (i.CHOOSE_TEMPLATE = "choose-template"),
         (i.CUSTOMIZE_GUILD = "customize-server"),

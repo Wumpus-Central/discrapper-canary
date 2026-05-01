@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(315069),
-    r = n(874638);
+r.d(t, { A: () => s });
+var i = r(315069),
+    n = r(874638);
 class s extends i.A {
     id;
     invoiceItems;
@@ -18,7 +17,7 @@ class s extends i.A {
     static createInvoiceFromServer(e) {
         return new s({
             id: e.id,
-            invoiceItems: e.invoice_items?.map(r.c),
+            invoiceItems: e.invoice_items?.map(n.c),
             total: e.total,
             subtotal: e.subtotal,
             currency: e.currency,
@@ -34,7 +33,7 @@ class s extends i.A {
     static createFromOTPPreview(e) {
         return new s({
             id: "",
-            invoiceItems: e.invoice_items?.map(r.c),
+            invoiceItems: e.invoice_items?.map(n.c),
             total: e.amount,
             subtotal: e.subtotal,
             currency: e.currency,

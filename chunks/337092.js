@@ -28,11 +28,11 @@ var l = n(627968),
     P = n(793574),
     S = n(688810),
     _ = n(509536),
-    T = n(663066),
+    T = n(361158),
     f = n(976860),
-    N = n(859040),
+    N = n(693477),
     x = n(652215),
-    I = n(375708),
+    I = n(985018),
     g = n(456508);
 let v = (e) => {
     let { onClose: t } = e,
@@ -61,16 +61,16 @@ let v = (e) => {
     });
 };
 var M = n(937008),
-    j = n(902958),
-    b = n(222707),
-    R = n(773669),
-    L = n(561794),
+    b = n(156312),
+    R = n(222707),
+    j = n(773669),
+    L = n(594832),
     O = n(97352),
     D = n(45938),
     w = n(975571),
     U = n(927578),
     k = n(580630),
-    Y = n(960851),
+    Y = n(40185),
     G = n(881489);
 let F = (0, n(945810).mj)({
     name: "2026-03-calculated-annual-discount-percent",
@@ -78,7 +78,7 @@ let F = (0, n(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var B = n(380619),
+var B = n(810498),
     W = n(477421),
     H = n(422936),
     V = n(735164),
@@ -145,7 +145,7 @@ function en(e, t) {
     }
 }
 let el = () => {
-        let { userTrialOffer: e } = (0, j.P5)(),
+        let { userTrialOffer: e } = (0, b.P5)(),
             t = e?.subscription_trial,
             { daysCount: n, copy: l } = i.useMemo(
                 () =>
@@ -170,7 +170,7 @@ let el = () => {
                 userTrialOffer: E,
                 isEligibleForTrial: y,
                 discountOffer: P,
-            } = (0, j.P5)(),
+            } = (0, b.P5)(),
             {
                 isGift: S,
                 giftRecipient: _,
@@ -182,9 +182,9 @@ let el = () => {
             } = (0, M.Pv)(),
             g = (0, p.A)(),
             v = (0, B.kz)(g, S && (0, D.Ik)(_), x),
-            b = (0, L.tA)({ giftRecipient: _, isGift: S });
+            R = (0, L.tA)({ giftRecipient: _, isGift: S });
         r()(void 0 !== C, "should not be undefined");
-        let [R, w] = (0, s.yK)([O.A], () => [null != C ? O.A.get(C.planId) : null, null != t ? O.A.get(t) : null]),
+        let [j, w] = (0, s.yK)([O.A], () => [null != C ? O.A.get(C.planId) : null, null != t ? O.A.get(t) : null]),
             k = E?.subscription_trial,
             G = (0, Y.cg)(),
             F = w ?? g,
@@ -202,13 +202,13 @@ let el = () => {
             z = F?.id != null && l.includes(F.id);
         i.useEffect(() => {
             if (!z) {
-                if (null == R || S) H(l[0]);
-                else if (null != R) {
-                    let e = l.find((e) => e !== R.id);
+                if (null == j || S) H(l[0]);
+                else if (null != j) {
+                    let e = l.find((e) => e !== j.id);
                     null != e && H(e);
                 }
             }
-        }, [z, S, l, R, H]),
+        }, [z, S, l, j, H]),
             i.useEffect(() => {
                 v && null != x && x.length > 0 && I(x[0]);
             }, [x, I, v]);
@@ -225,10 +225,10 @@ let el = () => {
             setPlanId: H,
             selectedPlan: F,
             selectedPlanPrice: ee,
-            premiumSubscriptionPlan: R,
+            premiumSubscriptionPlan: j,
             premiumSubscription: C,
             thePriceOptions: V,
-            hasSeenCollectiblesInSkuSelect: b,
+            hasSeenCollectiblesInSkuSelect: R,
             shouldShowUpdatedPaymentModal: ea,
             shouldShowHRKEuroWarning: en,
             shouldShowTotalInSubscriptionFlow: !y && !Z && z && u,
@@ -341,7 +341,7 @@ let el = () => {
                 isPlansEligibleForDiscount: o,
                 discountAmountOff: u,
             } = e,
-            c = (0, s.bG)([R.default], () => R.default.locale),
+            c = (0, s.bG)([j.default], () => j.default.locale),
             { isGift: d, giftRecipient: p } = (0, M.Pv)(),
             m = d && (0, D.Ik)(p),
             { enabled: h } = F.getConfig({ location: "PremiumSwitchPlanSelectOption" });
@@ -471,8 +471,8 @@ function em(e) {
             isPlansEligibleForDiscount: g,
             discountedPlanRegularPrice: v,
             hasSeenCollectiblesInSkuSelect: M,
-            userTrialOffer: j,
-            shouldShowUpdatedPaymentModal: R,
+            userTrialOffer: b,
+            shouldShowUpdatedPaymentModal: j,
             discountAmountOff: L,
             isPrepaid: O,
             radioGroupRef: D,
@@ -496,12 +496,12 @@ function em(e) {
                 setPlanId: m,
                 selectedPlan: h,
                 thePriceOptions: P,
-                shouldShowUpdatedPaymentModal: R,
+                shouldShowUpdatedPaymentModal: j,
                 isEligibleForTrial: S,
                 isPlansEligibleForDiscount: g,
                 discountAmountOff: L,
             }),
-        { showFractionalPremiumBanner: K, fractionalPremiumInfo: q } = (0, b._V)({
+        { showFractionalPremiumBanner: K, fractionalPremiumInfo: q } = (0, R._V)({
             premiumSubscription: C,
             selectedPlanId: n,
             planGroup: i,
@@ -544,14 +544,14 @@ function em(e) {
                 }),
             $ && !K && (0, l.jsx)("div", { className: ee.G3, children: en(A, p) }),
             z &&
-                (R
+                (j
                     ? S
                         ? (0, l.jsxs)("div", {
                               children: [
                                   (0, l.jsx)(c.E, {
                                       variant: "text-sm/normal",
                                       className: ee.Tz,
-                                      children: ec(j, { subscriptionPeriodEnd: s, trialPeriodCopy: W }),
+                                      children: ec(b, { subscriptionPeriodEnd: s, trialPeriodCopy: W }),
                                   }),
                                   (0, l.jsx)("hr", { className: ee.RA }),
                               ],
@@ -579,7 +579,7 @@ function em(e) {
                 selectedPlanPrice: U,
                 isPrepaid: O,
                 shouldShowHRKEuroWarning: Y,
-                shouldShowUpdatedPaymentModal: R,
+                shouldShowUpdatedPaymentModal: j,
                 showTotal: o,
                 shouldShowTotalInSubscriptionFlow: F,
             }),

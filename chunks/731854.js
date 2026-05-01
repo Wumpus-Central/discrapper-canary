@@ -204,7 +204,6 @@ var eo =
         (d.GAMESCOPE_CAPTURE = "GAMESCOPE_CAPTURE"),
         (d.ASYNC_VIDEO_INPUT_DEVICE_INIT = "ASYNC_VIDEO_INPUT_DEVICE_INIT"),
         (d.PORT_AWARE_LATENCY_TESTING = "PORT_AWARE_LATENCY_TESTING"),
-        (d.SPATIAL_AUDIO = "SPATIAL_AUDIO"),
         d),
     el = (((u = {}).NATIVE = "NATIVE"), (u.WEBRTC = "WEBRTC"), (u.DUMMY = "DUMMY"), u),
     e_ =

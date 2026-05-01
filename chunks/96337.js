@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => i });
-let i = [
+n.d(t, { A: () => o });
+let o = [
     { name: "Afghanistan", alpha2: "AF", phoneCountryCode: "+93", phoneCountryCodes: ["+93"] },
     { name: "Aland Islands", alpha2: "AX", phoneCountryCode: "+358", phoneCountryCodes: ["+358"] },
     { name: "Albania", alpha2: "AL", phoneCountryCode: "+355", phoneCountryCodes: ["+355"] },

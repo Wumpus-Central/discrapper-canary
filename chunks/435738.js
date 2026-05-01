@@ -1,76 +1,75 @@
-"use strict";
-n.d(t, { A: () => p }), n(321073);
+n.d(t, { A: () => I }), n(321073);
 var i = n(17928),
-    r = n(228366);
-let s = 3 * n(927813).A.Millis.DAY,
-    a = () => ({ itemImpressions: [], hidden: !1 }),
-    o = a(),
-    l = new Set(),
-    u = new Set(),
+    a = n(228366);
+let r = 3 * n(927813).A.Millis.DAY,
+    s = () => ({ itemImpressions: [], hidden: !1 }),
+    l = s(),
+    o = new Set(),
+    d = new Set(),
     c = 0,
-    d = !1,
-    _ = !1;
-function f() {
+    _ = !1,
+    E = !1;
+function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (!e && Date.now() < c) return;
     let t = 0,
         n = Date.now() - 2592e6;
-    for (let e = 0; e < o.itemImpressions.length; e++) {
-        let [i, r] = o.itemImpressions[e];
-        if (r < n) t = e + 1;
+    for (let e = 0; e < l.itemImpressions.length; e++) {
+        let [i, a] = l.itemImpressions[e];
+        if (a < n) t = e + 1;
         else break;
     }
-    t > 0 && (o.itemImpressions = o.itemImpressions.slice(t)),
-        o.itemImpressions.length > 2048 && (o.itemImpressions = o.itemImpressions.slice(-2048));
-    let i = _ ? 1e3 : s,
-        r = new Set(),
+    t > 0 && (l.itemImpressions = l.itemImpressions.slice(t)),
+        l.itemImpressions.length > 2048 && (l.itemImpressions = l.itemImpressions.slice(-2048));
+    let i = E ? 1e3 : r,
         a = new Set(),
-        f = Date.now() - i,
-        h = null;
-    for (let [e, t] of o.itemImpressions) t < f ? r.add(e) : null == h && (h = t + i), a.add(e);
-    (l = r), (u = a), (c = h ?? 1 / 0), (d = !0);
+        s = new Set(),
+        u = Date.now() - i,
+        A = null;
+    for (let [e, t] of l.itemImpressions) t < u ? a.add(e) : null == A && (A = t + i), s.add(e);
+    (o = a), (d = s), (c = A ?? 1 / 0), (_ = !0);
 }
-class h extends i.Ay.PersistedStore {
+class A extends i.Ay.PersistedStore {
     static displayName = "ContentInventoryPersistedStore";
     static persistKey = "ContentInventoryPersistedStore";
     initialize(e) {
-        o = { ...o, ...(e ?? {}) };
+        l = { ...l, ...(e ?? {}) };
     }
     getState() {
-        return o;
+        return l;
     }
     getImpressionCappedItemIds() {
-        return f(), l;
+        return u(), o;
     }
     getDebugFastImpressionCappingEnabled() {
-        return _;
+        return E;
     }
     get hidden() {
-        return o.hidden;
+        return l.hidden;
     }
     reset() {
-        o = a();
+        l = s();
     }
 }
-let p = new h(r.h, {
+let I = new A(a.h, {
     CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: function (e) {
         let { itemIds: t } = e;
-        d || f();
+        _ || u();
         let n = Date.now(),
             i = !1;
-        for (let e of t) u.has(e) || (o.itemImpressions.push([e, n]), (i = !0));
-        return f(i), i;
+        for (let e of t) d.has(e) || (l.itemImpressions.push([e, n]), (i = !0));
+        return u(i), i;
     },
     CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: function () {
-        (o.itemImpressions = []), f(!0);
+        (l.itemImpressions = []), u(!0);
     },
     CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: function () {
-        return console.log("Item impressions:", o.itemImpressions), !1;
+        return console.log("Item impressions:", l.itemImpressions), !1;
     },
     CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: function () {
-        _ = !_;
+        E = !E;
     },
     CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: function () {
-        o.hidden = !o.hidden;
+        l.hidden = !l.hidden;
     },
 });

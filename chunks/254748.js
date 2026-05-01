@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { A: () => l });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(367791),
-    o = n(672193);
-function l(e) {
-    let { id: t, sectionClassName: n, heading: r, beforeGrid: l, grid: u, gridClassName: c } = e,
-        d = o.Ui;
-    return (0, i.jsxs)("div", {
+i.d(t, { A: () => c });
+var s = i(627968);
+i(64700);
+var a = i(503698),
+    n = i.n(a),
+    r = i(367791),
+    l = i(672193);
+function c(e) {
+    let { id: t, sectionClassName: i, heading: a, beforeGrid: c, grid: d, gridClassName: o } = e,
+        u = l.Ui;
+    return (0, s.jsxs)("div", {
         id: t,
-        className: n,
+        className: i,
         children: [
-            r,
-            l,
-            null != u ? (0, i.jsx)("div", { className: s()(d, null != l && a.Jx, c), children: u }) : null,
+            a,
+            c,
+            null != d ? (0, s.jsx)("div", { className: n()(u, null != c && r.Jx, o), children: d }) : null,
         ],
     });
 }

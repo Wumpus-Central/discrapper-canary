@@ -1,118 +1,117 @@
-"use strict";
-n.d(t, { V: () => N, A: () => x });
+n.d(t, { V: () => p, A: () => G });
 var i,
-    r = n(627968),
+    l = n(627968),
     s = n(64700),
-    a = n(503698),
-    o = n.n(a),
-    l = n(735438),
-    u = n.n(l),
-    c = n(17928),
-    d = n(459838),
-    _ = n(451988),
-    f = n(990078),
-    h = n(834730),
-    p = n(452027),
+    r = n(503698),
+    a = n.n(r),
+    u = n(735438),
+    o = n.n(u),
+    d = n(17928),
+    c = n(205693),
+    h = n(451988),
+    A = n(990078),
+    f = n(834730),
+    g = n(452027),
     E = n(821609),
-    m = n(827343),
-    g = n(765671),
-    A = n(661531),
-    I = n(953727);
-function T(e) {
-    let { width: t = 80, height: n = 28, color: i = "currentColor", foreground: a, ...o } = e,
-        l = `pill-frame-pattern-${n}`,
-        u = s.useMemo(() => {
+    I = n(827343),
+    S = n(765671),
+    _ = n(661531),
+    T = n(953727);
+function C(e) {
+    let { width: t = 80, height: n = 28, color: i = "currentColor", foreground: r, ...a } = e,
+        u = `pill-frame-pattern-${n}`,
+        o = s.useMemo(() => {
             let e;
             return (
                 (e = n - 8),
                 `m0 0h8v${n}h-8zm4 2c-1.1045695 0-2 .8954305-2 2v${e}c0 1.1045695.8954305 2 2 2s2-.8954305 2-2v-${e}c0-1.1045695-.8954305-2-2-2z`
             );
         }, [n]);
-    return (0, r.jsxs)("svg", {
-        ...(0, I.A)(o),
+    return (0, l.jsxs)("svg", {
+        ...(0, T.A)(a),
         width: t,
         height: n,
         viewBox: `0 0 ${t} ${n}`,
         children: [
-            (0, r.jsx)("pattern", {
-                id: l,
+            (0, l.jsx)("pattern", {
+                id: u,
                 width: 8 / t,
                 height: "1",
-                children: (0, r.jsx)("path", { d: u, fillRule: "evenodd", fill: i, className: a }),
+                children: (0, l.jsx)("path", { d: o, fillRule: "evenodd", fill: i, className: r }),
             }),
-            (0, r.jsx)("rect", { fill: `url(#${l})`, height: "100%", width: "100%" }),
+            (0, l.jsx)("rect", { fill: `url(#${u})`, height: "100%", width: "100%" }),
         ],
     });
 }
-var S = n(75753),
-    N = (((i = {}).BLACK = "BLACK"), (i.GRAY = "GRAY"), i);
-let y = { BLACK: S.Ql, GRAY: S.wm },
-    C = { sm: 20, md: 28 };
-function v(e) {
+var m = n(75753),
+    p = (((i = {}).BLACK = "BLACK"), (i.GRAY = "GRAY"), i);
+let N = { BLACK: m.Ql, GRAY: m.wm },
+    M = { sm: 20, md: 28 };
+function D(e) {
     return 8 * Math.round(e / 8);
 }
-function O(e) {
+function v(e) {
     let {
             notchBackground: t,
             progress: n,
             size: i = "md",
-            gradientStart: a = A.A.unsafe_rawColors.YELLOW_260.css,
-            gradientEnd: l = A.A.unsafe_rawColors.GREEN_360.css,
-            className: u,
-            notchClassName: c,
-            children: d,
+            gradientStart: r = _.A.unsafe_rawColors.YELLOW_260.css,
+            gradientEnd: u = _.A.unsafe_rawColors.GREEN_360.css,
+            className: o,
+            notchClassName: d,
+            children: c,
         } = e,
-        _ = C[i],
-        { ref: f, width: h } = (0, g.Ay)(),
-        p = s.useMemo(() => (null != h ? v(h) : 0), [h]),
+        h = M[i],
+        { ref: A, width: f } = (0, S.Ay)(),
+        g = s.useMemo(() => (null != f ? D(f) : 0), [f]),
         E = s.useMemo(() => {
-            let e = Math.abs(v((p * (100 - Math.max(0, Math.min(100, n)))) / 100) - p);
+            let e = Math.abs(D((g * (100 - Math.max(0, Math.min(100, n)))) / 100) - g);
             return { transform: `translateX(${e}px)` };
-        }, [n, p]),
-        m = s.useMemo(
-            () => ({ width: `${p}px`, background: n <= 0 ? "none" : `linear-gradient(to right, ${a}, ${l})` }),
-            [l, a, n, p],
+        }, [n, g]),
+        I = s.useMemo(
+            () => ({ width: `${g}px`, background: n <= 0 ? "none" : `linear-gradient(to right, ${r}, ${u})` }),
+            [u, r, n, g],
         );
-    return (0, r.jsxs)("div", {
-        className: S.iE,
-        ref: f,
-        style: { height: _ },
+    return (0, l.jsxs)("div", {
+        className: m.iE,
+        ref: A,
+        style: { height: h },
         children: [
-            (0, r.jsxs)("div", {
-                className: o()(S.kL, u),
-                style: m,
+            (0, l.jsxs)("div", {
+                className: a()(m.kL, o),
+                style: I,
                 children: [
-                    (0, r.jsx)("div", { className: S.qB, style: E }),
-                    0 !== p && (0, r.jsx)(T, { width: p, height: _, className: o()(S.DR, y[t], c) }),
+                    (0, l.jsx)("div", { className: m.qB, style: E }),
+                    0 !== g && (0, l.jsx)(C, { width: g, height: h, className: a()(m.DR, N[t], d) }),
                 ],
             }),
-            d,
+            c,
         ],
     });
 }
-var R = n(51760),
-    b = n(763827),
-    D = n(174459),
+var y = n(51760),
+    U = n(763827),
+    O = n(954571),
     L = n(652215),
-    w = n(375708),
-    M = n(32854);
+    R = n(985018),
+    w = n(32854);
 class P extends s.PureComponent {
-    _initTimeout = new _.Ep();
-    _silenceTimeout = new _.Ep();
-    _messageTimeout = new _.Ep();
+    _initTimeout = new h.Ep();
+    _silenceTimeout = new h.Ep();
+    _messageTimeout = new h.Ep();
     _micTestStartTime;
     state = { volume: -100, isMicTesting: !1, isDetectingInput: !0, didDeafenUser: !1 };
     componentDidMount() {
         this._initTimeout.start(1e3, this.setupVoiceActivity);
     }
     setupVoiceActivity = () => {
-        R.Ay.getMediaEngine().on(d.bg.VoiceActivity, this.handleVoiceActivity);
+        y.Ay.getMediaEngine().on(c.bg.VoiceActivity, this.handleVoiceActivity);
     };
     componentWillUnmount() {
         this._initTimeout.stop(),
             this._silenceTimeout.stop(),
             this._micTestStop(),
-            R.Ay.getMediaEngine().removeListener(d.bg.VoiceActivity, this.handleVoiceActivity);
+            y.Ay.getMediaEngine().removeListener(c.bg.VoiceActivity, this.handleVoiceActivity);
     }
     handleVoiceActivity = (e) => {
         let { isMicTesting: t } = this.state;
@@ -132,38 +131,38 @@ class P extends s.PureComponent {
                 inputDeviceName: t,
                 inputVolume: n,
                 outputDeviceName: i,
-                outputVolume: r,
+                outputVolume: l,
                 inputMode: s,
-                vadAutoThreshold: a,
-                vadThreshold: o,
-                location: l,
-                isDeafened: u,
+                vadAutoThreshold: r,
+                vadThreshold: a,
+                location: u,
+                isDeafened: o,
             } = this.props,
-            c = !1;
-        e && !u && (m.A.toggleSelfDeaf(), (c = !0)),
-            m.A.setLoopback("mic_test", !0),
+            d = !1;
+        e && !o && (I.A.toggleSelfDeaf(), (d = !0)),
+            I.A.setLoopback("mic_test", !0),
             (this._micTestStartTime = Date.now()),
-            this.setState({ isMicTesting: !0, isDetectingInput: !0, didDeafenUser: c }),
-            D.default.track(L.HAw.MIC_TESTING_STARTED, {
+            this.setState({ isMicTesting: !0, isDetectingInput: !0, didDeafenUser: d }),
+            O.default.track(L.HAw.MIC_TESTING_STARTED, {
                 input_device_name: t,
                 input_device_volume: n,
                 output_device_name: i,
-                output_device_volume: r,
+                output_device_volume: l,
                 input_mode: s,
-                input_sensitivity_is_automatic: a,
-                input_sensitivity_threshold: Math.round(o),
-                location: l,
+                input_sensitivity_is_automatic: r,
+                input_sensitivity_threshold: Math.round(a),
+                location: u,
             });
     }
     _micTestStop() {
         let { didDeafenUser: e, isMicTesting: t } = this.state,
             { isVoiceConnected: n, isDeafened: i } = this.props;
         t &&
-            (n && i && e && m.A.toggleSelfDeaf(),
-            m.A.setLoopback("mic_test", !1),
+            (n && i && e && I.A.toggleSelfDeaf(),
+            I.A.setLoopback("mic_test", !1),
             this.setState({ isMicTesting: !1, didDeafenUser: !1 }),
             null != this._micTestStartTime &&
-                D.default.track(L.HAw.MIC_TESTING_STOPPED, {
+                O.default.track(L.HAw.MIC_TESTING_STOPPED, {
                     testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1e3),
                 }));
     }
@@ -175,10 +174,10 @@ class P extends s.PureComponent {
             { isMicTesting: n, isDetectingInput: i } = this.state;
         return null == e && null == t
             ? null
-            : (0, r.jsx)(h.E, {
+            : (0, l.jsx)(f.E, {
                   variant: "text-xs/normal",
                   color: "text-subtle",
-                  className: M.Qe,
+                  className: w.Qe,
                   children: n ? (i ? e : t) : void 0,
               });
     }
@@ -189,46 +188,46 @@ class P extends s.PureComponent {
                 description: n,
                 notchBackground: i,
                 buttonTest: s = "",
-                buttonStop: a = "",
-                buttonVariant: l = "secondary",
-                size: u = "sm",
-                isDeafened: c,
-                buttonMinWidth: d,
-                measureButtonRef: _,
-                meterOnly: m = !1,
-                containerClassName: g,
-                helpText: A,
+                buttonStop: r = "",
+                buttonVariant: u = "secondary",
+                size: o = "sm",
+                isDeafened: d,
+                buttonMinWidth: c,
+                measureButtonRef: h,
+                meterOnly: I = !1,
+                containerClassName: S,
+                helpText: _,
             } = this.props,
-            { isMicTesting: I, volume: T, isDetectingInput: S } = this.state,
-            N = e && !I ? w.intl.string(w.t["9viE2A"]) : null;
-        I && e && !c && this._micTestStop();
-        let y = a.length >= s.length ? a : s;
-        return (0, r.jsxs)("div", {
-            className: o()(M.kL, g),
+            { isMicTesting: T, volume: C, isDetectingInput: m } = this.state,
+            p = e && !T ? R.intl.string(R.t["9viE2A"]) : null;
+        T && e && !d && this._micTestStop();
+        let N = r.length >= s.length ? r : s;
+        return (0, l.jsxs)("div", {
+            className: a()(w.kL, S),
             children: [
-                (0, r.jsx)(p.D, {
+                (0, l.jsx)(g.D, {
                     label: t ?? void 0,
-                    hideLabel: m,
-                    description: m ? null : n,
-                    children: (0, r.jsxs)("div", {
-                        className: o()(M.ak, { [M.mi]: m, [M.EX]: "sm" === u }),
+                    hideLabel: I,
+                    description: I ? null : n,
+                    children: (0, l.jsxs)("div", {
+                        className: a()(w.ak, { [w.mi]: I, [w.EX]: "sm" === o }),
                         children: [
-                            !m &&
-                                (0, r.jsxs)(r.Fragment, {
+                            !I &&
+                                (0, l.jsxs)(l.Fragment, {
                                     children: [
-                                        (0, r.jsx)("div", {
-                                            className: M.km,
+                                        (0, l.jsx)("div", {
+                                            className: w.km,
                                             "aria-hidden": !0,
-                                            children: (0, r.jsx)(E.$, { buttonRef: _, size: u, variant: l, text: y }),
+                                            children: (0, l.jsx)(E.$, { buttonRef: h, size: o, variant: u, text: N }),
                                         }),
-                                        (0, r.jsx)(f.m, {
-                                            text: N,
-                                            children: (0, r.jsx)("div", {
-                                                style: null != d ? { minWidth: d } : { visibility: "hidden" },
-                                                children: (0, r.jsx)(E.$, {
-                                                    size: u,
-                                                    variant: l,
-                                                    text: I ? a : s,
+                                        (0, l.jsx)(A.m, {
+                                            text: p,
+                                            children: (0, l.jsx)("div", {
+                                                style: null != c ? { minWidth: c } : { visibility: "hidden" },
+                                                children: (0, l.jsx)(E.$, {
+                                                    size: o,
+                                                    variant: u,
+                                                    text: T ? r : s,
                                                     onClick: this.handleToggleMicTest,
                                                     fullWidth: !0,
                                                 }),
@@ -236,78 +235,78 @@ class P extends s.PureComponent {
                                         }),
                                     ],
                                 }),
-                            (0, r.jsx)(O, {
-                                progress: I || m ? T + 100 : 0,
+                            (0, l.jsx)(v, {
+                                progress: T || I ? C + 100 : 0,
                                 notchBackground: i,
                                 notchClassName: this.props.notchClassName,
-                                size: u,
+                                size: o,
                             }),
                             this.renderCaption(),
                         ],
                     }),
                 }),
-                null != A &&
-                    (0, r.jsx)(h.E, {
+                null != _ &&
+                    (0, l.jsx)(f.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
-                        style: { visibility: I && !S ? "hidden" : "visible" },
-                        children: A,
+                        style: { visibility: T && !m ? "hidden" : "visible" },
+                        children: _,
                     }),
             ],
         });
     }
 }
-function x(e) {
+function G(e) {
     let {
             inputDevice: t,
             outputDevice: n,
             threshold: i,
             autoThreshold: s,
-            inputVolume: a,
-            outputVolume: o,
-            inputMode: l,
-            isDeafened: d,
-        } = (0, c.cf)([R.Ay], () => {
-            let e = R.Ay.getInputDeviceId(),
-                t = R.Ay.getInputDevices(),
-                n = u().find(t, (t) => {
+            inputVolume: r,
+            outputVolume: a,
+            inputMode: u,
+            isDeafened: c,
+        } = (0, d.cf)([y.Ay], () => {
+            let e = y.Ay.getInputDeviceId(),
+                t = y.Ay.getInputDevices(),
+                n = o().find(t, (t) => {
                     let { id: n } = t;
                     return n === e;
                 }),
-                i = R.Ay.getOutputDeviceId(),
-                r = R.Ay.getOutputDevices(),
-                s = u().find(r, (e) => {
+                i = y.Ay.getOutputDeviceId(),
+                l = y.Ay.getOutputDevices(),
+                s = o().find(l, (e) => {
                     let { id: t } = e;
                     return t === i;
                 }),
-                { threshold: a, autoThreshold: o } = R.Ay.getModeOptions(),
-                l = R.Ay.getInputVolume(),
-                c = R.Ay.getOutputVolume();
+                { threshold: r, autoThreshold: a } = y.Ay.getModeOptions(),
+                u = y.Ay.getInputVolume(),
+                d = y.Ay.getOutputVolume();
             return {
                 inputDevice: n,
                 outputDevice: s,
-                threshold: a,
-                autoThreshold: o,
-                inputVolume: l,
-                outputVolume: c,
-                inputMode: R.Ay.getMode(),
-                isDeafened: R.Ay.isSelfDeaf(),
+                threshold: r,
+                autoThreshold: a,
+                inputVolume: u,
+                outputVolume: d,
+                inputMode: y.Ay.getMode(),
+                isDeafened: y.Ay.isSelfDeaf(),
             };
         }),
-        _ = (0, c.bG)([b.A], () => b.A.isConnected()),
-        { ref: f, width: h } = (0, g.Ay)();
-    return (0, r.jsx)(P, {
-        isVoiceConnected: _,
-        inputVolume: a,
-        outputVolume: o,
-        inputMode: l,
-        isDeafened: d,
+        h = (0, d.bG)([U.A], () => U.A.isConnected()),
+        { ref: A, width: f } = (0, S.Ay)();
+    return (0, l.jsx)(P, {
+        isVoiceConnected: h,
+        inputVolume: r,
+        outputVolume: a,
+        inputMode: u,
+        isDeafened: c,
         vadThreshold: i,
         vadAutoThreshold: s,
         inputDeviceName: t?.name ?? "",
         outputDeviceName: n?.name ?? "",
-        measureButtonRef: f,
-        buttonMinWidth: h,
+        measureButtonRef: A,
+        buttonMinWidth: f,
         ...e,
     });
 }

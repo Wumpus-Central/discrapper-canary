@@ -1,38 +1,37 @@
-"use strict";
-n.d(t, { A: () => c, e: () => l });
-var i,
-    r = n(17928),
-    s = n(228366);
+n.d(e, { A: () => u, e: () => o });
+var s,
+    i = n(17928),
+    l = n(228366);
 let a = new Map(),
-    o = new Map();
-var l =
-    (((i = {})[(i.NOT_FETCHED = 0)] = "NOT_FETCHED"),
-    (i[(i.FETCHING = 1)] = "FETCHING"),
-    (i[(i.FETCHED = 2)] = "FETCHED"),
-    i);
-class u extends r.Ay.Store {
+    r = new Map();
+var o =
+    (((s = {})[(s.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+    (s[(s.FETCHING = 1)] = "FETCHING"),
+    (s[(s.FETCHED = 2)] = "FETCHED"),
+    s);
+class c extends i.Ay.Store {
     static displayName = "CreatorMonetizationStore";
-    getPriceTiersFetchStateForGuildAndType(e, t) {
-        return o.get(e)?.get(t) ?? 0;
+    getPriceTiersFetchStateForGuildAndType(t, e) {
+        return r.get(t)?.get(e) ?? 0;
     }
-    getPriceTiersForGuildAndType(e, t) {
-        return a.get(e)?.get(t);
+    getPriceTiersForGuildAndType(t, e) {
+        return a.get(t)?.get(e);
     }
 }
-let c = new u(s.h, {
+let u = new c(l.h, {
     CONNECTION_OPEN: function () {
-        a.clear(), o.clear();
+        a.clear(), r.clear();
     },
-    CREATOR_MONETIZATION_PRICE_TIERS_FETCH: function (e) {
-        let { guildId: t, priceTierType: n } = e;
-        o.has(t) || o.set(t, new Map()), o.get(t).set(n, 1);
+    CREATOR_MONETIZATION_PRICE_TIERS_FETCH: function (t) {
+        let { guildId: e, priceTierType: n } = t;
+        r.has(e) || r.set(e, new Map()), r.get(e).set(n, 1);
     },
-    CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: function (e) {
-        let { guildId: t, priceTierType: n, priceTiers: i } = e;
-        o.has(t) || o.set(t, new Map()), o.get(t).set(n, 2), a.has(t) || a.set(t, new Map()), a.get(t).set(n, i);
+    CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: function (t) {
+        let { guildId: e, priceTierType: n, priceTiers: s } = t;
+        r.has(e) || r.set(e, new Map()), r.get(e).set(n, 2), a.has(e) || a.set(e, new Map()), a.get(e).set(n, s);
     },
-    CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE: function (e) {
-        let { guildId: t, priceTierType: n } = e;
-        o.has(t) || o.set(t, new Map()), o.get(t).set(n, 2);
+    CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE: function (t) {
+        let { guildId: e, priceTierType: n } = t;
+        r.has(e) || r.set(e, new Map()), r.get(e).set(n, 2);
     },
 });

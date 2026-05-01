@@ -4,7 +4,7 @@ var i,
     r = n(627968),
     l = n(442433),
     a = n(763827),
-    o = n(140069),
+    o = n(1193),
     d = n(589051),
     u = n(308726),
     c = n(64700),
@@ -12,7 +12,7 @@ var i,
     m = n.n(h),
     g = n(812729),
     p = n.n(g),
-    x = n(785651),
+    x = n(925747),
     f = n(866323),
     A = n(939249),
     E = n(834730),
@@ -114,10 +114,10 @@ var C = n(149741),
     L = n(41984),
     V = n(412477),
     G = n(475743),
-    U = n(184809),
+    U = n(256415),
     F = n(810412),
     H = n(702841),
-    Z = n(459838),
+    Z = n(205693),
     Y = n(990078),
     X = n(358618),
     W = n(983851),
@@ -141,7 +141,7 @@ var C = n(149741),
     ec = n(562153),
     eh = n(761661),
     em = n(652215),
-    eg = n(375708),
+    eg = n(985018),
     ep = n(614715);
 function ex(e) {
     let { participant: t } = e,
@@ -888,7 +888,7 @@ function eX(e) {
 var eW = n(243721),
     eB = n(821609),
     eq = n(706712),
-    eK = n(587626),
+    eK = n(446458),
     eQ = n(321090),
     eJ = n(548934);
 function e$(e) {
@@ -1121,14 +1121,14 @@ var e0 = n(417098),
     e2 = n(351906),
     e3 = n(377802),
     e5 = n(348858),
-    e6 = n(523875),
-    e4 = n(416696),
+    e4 = n(523875),
+    e6 = n(416696),
     e9 = n(621956),
     e8 = n(446080),
     e7 = n(922016),
     te = n(615675),
     tt = n(978940),
-    tn = n(730852),
+    tn = n(956793),
     ti = n(688810),
     ts = n(617354),
     tr = n(980923),
@@ -1151,7 +1151,7 @@ var e0 = n(417098),
     tv = n(848362),
     tT = n(141157),
     tj = n(222692),
-    tC = n(204651),
+    tC = n(709562),
     ty = n(71393),
     tw = n(977997),
     tb = n(823901),
@@ -1219,7 +1219,7 @@ function tk(e) {
         { suppress: s, selfMute: l, mute: a } = (0, tS.A)(t),
         o = l || a || s,
         d = (0, tr.A)(l, a, s, !1),
-        { Component: u, play: h, events: m } = (0, e6.L)(o ? "unmute" : "mute");
+        { Component: u, play: h, events: m } = (0, e4.L)(o ? "unmute" : "mute");
     c.useEffect(() => () => h(), [h, o]);
     let g = tO(n),
         p = (e) => (t) => {
@@ -1442,7 +1442,7 @@ function tP(e) {
             Component: f,
             events: { onMouseEnter: A, onMouseLeave: E },
             play: S,
-        } = (0, e4.c)(g ? "disable" : "enable");
+        } = (0, e6.c)(g ? "disable" : "enable");
     c.useEffect(() => () => S(), [g, S]);
     let I = tO(i);
     return (0, r.jsx)(e7.Y, {
@@ -1779,12 +1779,12 @@ var tQ = n(459192),
     t2 = n(241541),
     t3 = n(320448),
     t5 = n(661531),
-    t6 = n(446576),
-    t4 = n(789645),
+    t4 = n(446576),
+    t6 = n(789645),
     t9 = n(387755),
     t8 = n(945830),
     t7 = n(461678),
-    ne = n(72781),
+    ne = n(95550),
     nt = n(95701),
     nn = n(543465),
     ni = n(914853),
@@ -2213,7 +2213,7 @@ function nj(e) {
                                   text: v,
                                   "aria-label": v,
                                   children: (0, r.jsx)(tJ.K, {
-                                      icon: t6.g,
+                                      icon: t4.g,
                                       "aria-label": v,
                                       size: "sm",
                                       variant: "icon-only",
@@ -2231,7 +2231,7 @@ function nj(e) {
                                   title: eg.intl.string(nf.default.ERApc4),
                                   body: eg.intl.string(nf.default.PBVXVW),
                                   children: (0, r.jsx)(tJ.K, {
-                                      icon: t4.P,
+                                      icon: t6.P,
                                       "aria-label": eg.intl.string(nf.default.ERApc4),
                                       size: "sm",
                                       variant: "icon-only",
@@ -2379,8 +2379,8 @@ let nz = c.memo(function (e) {
                         if (t.isDM() && null != s)
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("1195"),
-                                    n.e("39431"),
+                                    n.e("90738"),
+                                    n.e("98944"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -2395,8 +2395,8 @@ let nz = c.memo(function (e) {
                                     n.e("38730"),
                                     n.e("76665"),
                                     n.e("76273"),
-                                    n.e("45996"),
                                     n.e("792"),
+                                    n.e("45996"),
                                     n.e("92822"),
                                     n.e("23427"),
                                     n.e("29422"),
@@ -2434,16 +2434,18 @@ let nz = c.memo(function (e) {
                             if (null == i) return;
                             (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("71561"),
+                                    n.e("13520"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("38730"),
                                     n.e("43266"),
                                     n.e("9004"),
                                     n.e("44058"),
-                                    n.e("81609"),
                                     n.e("94138"),
-                                    n.e("58262"),
+                                    n.e("11295"),
+                                    n.e("81609"),
+                                    n.e("14479"),
+                                    n.e("88881"),
                                     n.e("18663"),
                                     n.e("21905"),
                                 ]).then(n.bind(n, 769192));
@@ -2721,7 +2723,7 @@ let n1 = c.memo(function (e) {
                     (0, F.YX)(em.uss.VIDEO, { type: F.Z5.CAMERA, value: F.IP.SETTINGS_OPENED, userId: s?.id }),
                         (0, l.L3)(i, async () => {
                             let { default: e } = await Promise.all([
-                                n.e("39431"),
+                                n.e("98944"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -2851,7 +2853,7 @@ let n1 = c.memo(function (e) {
             { maxWidth: 0.75 * r.maxX, maxHeight: 0.75 * r.maxY },
         );
     };
-function n6(e) {
+function n4(e) {
     let t = (0, y.bG)([P.A, D.A], () => D.A.getChannel(P.A.getVoiceChannelId())),
         n = 2 * e.padding + 2 * e.borderWidth,
         i = t?.id,
@@ -2926,7 +2928,7 @@ function n6(e) {
         })
     );
 }
-var n4 = n(450740),
+var n6 = n(450740),
     n9 = n(968898);
 n(321073);
 var n8 = n(518009),
@@ -2985,7 +2987,7 @@ let iu = c.memo(function (e) {
             renderWidget(e) {
                 let { widget: t, locked: n, size: i, padding: s, borderWidth: l, showEmpty: a } = e;
                 return (0, e_.cv)(t)
-                    ? (0, r.jsx)(n6, {
+                    ? (0, r.jsx)(n4, {
                           id: t.id,
                           locked: n,
                           widget: t,
@@ -3025,7 +3027,7 @@ let iu = c.memo(function (e) {
             renderWidget(e) {
                 let { widget: t, anchorLeft: n, locked: i, showEmpty: s } = e;
                 return (0, e_.ZO)(t)
-                    ? (0, r.jsx)(n4.Ay, {
+                    ? (0, r.jsx)(n6.Ay, {
                           anchorLeft: n,
                           id: t.id,
                           locked: i,

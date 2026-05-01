@@ -3,7 +3,7 @@ var l = n(627968),
     s = n(64700),
     i = n(503698),
     a = n.n(i),
-    r = n(785651),
+    r = n(925747),
     o = n(17928),
     c = n(475743),
     u = n(840251),
@@ -12,14 +12,14 @@ let h = new u.E([], d.$G.QUEST_BAR_RENDERED, { location: "quest bar rendered" })
 var m = n(186111),
     p = n(859703),
     f = n(507107),
-    g = n(31587),
+    g = n(890687),
     A = n(971276),
     x = n(851936),
     C = n(792620),
     E = n(241124),
     v = n(73473),
-    T = n(371912),
-    j = n(617986),
+    T = n(201805),
+    j = n(545986),
     N = n(939249),
     _ = n(834730),
     S = n(290136),
@@ -33,8 +33,8 @@ var m = n(186111),
     U = n(398025);
 n(321073);
 var D = n(340287),
-    P = n(765671);
-let k = "#00000000",
+    k = n(765671);
+let P = "#00000000",
     L = "#CDD8FF1A",
     F = s.createContext({
         registerComponent: () => {},
@@ -78,7 +78,7 @@ let k = "#00000000",
             },
             [c],
         );
-        (0, P.i4)(p, A);
+        (0, k.i4)(p, A);
         let x = m.get(i)?.current,
             C = null;
         return (
@@ -241,7 +241,7 @@ let q = () => {
     let e = document.body.style.getPropertyValue("--custom-guild-sidebar-width").slice(0, -2);
     return parseInt("" !== e ? e : "375");
 };
-var Z = n(375708),
+var Z = n(985018),
     K = n(173399);
 let $ = (e) => {
     let { isFullyExpanded: t, partnerBranding: n } = e,
@@ -414,7 +414,7 @@ var ee = n(821609),
     en = n(862482),
     el = n(921853),
     es = n(793574),
-    ei = n(859040),
+    ei = n(693477),
     ea = n(838077),
     er = n(651892),
     eo = n(801365),
@@ -593,7 +593,7 @@ function ev(e) {
     });
 }
 var eT = n(106778),
-    ej = n(536283),
+    ej = n(851110),
     eN = n(947638);
 let e_ = (e) => {
     let { overlayRef: t, progressBarRef: n, isHovered: i } = e,
@@ -825,7 +825,7 @@ let ew = s.forwardRef(function (e, t) {
                 className: a()(n, eM.hR, { [eM.Ag]: d, [eM.s]: x }),
                 style: {
                     opacity: (0, U.a)(o.to({ range: [0, 1], output: [1, 0] })),
-                    backgroundImage: m ? `linear-gradient(90deg, ${k}, ${L})` : void 0,
+                    backgroundImage: m ? `linear-gradient(90deg, ${P}, ${L})` : void 0,
                 },
                 onMouseEnter: () => v(!0),
                 onMouseLeave: () => v(!1),
@@ -864,17 +864,17 @@ n(801541);
 var eO = n(889137),
     eU = n(417270),
     eD = n(782134),
-    eP = n(534514),
-    ek = n(825484),
+    ek = n(534514),
+    eP = n(825484),
     eL = n(607470),
     eF = n(409626),
-    eG = n(340124),
+    eG = n(829219),
     eB = n(405670),
     eV = n(112142),
     eH = n(859387),
     eQ = n(895253),
     eW = n(442734),
-    ez = n(368715),
+    ez = n(212614),
     eq = n(79545),
     eZ = n(139384),
     eK = n(114046),
@@ -907,7 +907,7 @@ function e3(e) {
         ? (0, l.jsx)(e2, { text: Z.intl.string(Z.t["qiS+xj"]), quest: n, sourceQuestContent: s })
         : null;
 }
-function e6(e) {
+function e5(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(_.E, { color: "text-muted", variant: "text-xs/medium", children: Z.intl.string(Z.t.EJFSvD) }),
@@ -915,7 +915,7 @@ function e6(e) {
         ],
     });
 }
-var e5 = n(947641),
+var e6 = n(947641),
     e8 = n(629436);
 function e4(e) {
     let { children: t, isComplete: n, hasNextStep: s } = e;
@@ -927,7 +927,7 @@ function e4(e) {
                 children: [
                     (0, l.jsx)("div", {
                         className: e8.$P,
-                        children: n && (0, l.jsx)(e5.r, { className: e8.ap, color: R.A.colors.WHITE }),
+                        children: n && (0, l.jsx)(e6.r, { className: e8.ap, color: R.A.colors.WHITE }),
                     }),
                     s && (0, l.jsx)("div", { className: e8.UK }),
                 ],
@@ -936,18 +936,18 @@ function e4(e) {
         ],
     });
 }
-function e7(e) {
+function e9(e) {
     let { children: t } = e;
     return (0, l.jsx)(_.E, { color: "text-muted", variant: "text-xs/medium", children: t });
 }
-let e9 = function (e) {
+let e7 = function (e) {
     let { children: t, heading: n, steps: s } = e;
     return (0, l.jsxs)("div", {
         className: e8.iE,
         children: [
             (0, l.jsx)("div", {
                 className: e8.Mj,
-                children: (0, l.jsx)(eP.D, {
+                children: (0, l.jsx)(ek.D, {
                     className: e8.R_,
                     color: "text-strong",
                     variant: "text-xs/semibold",
@@ -1097,12 +1097,12 @@ let tl = function (e) {
                     steps: [
                         {
                             renderContent: () =>
-                                (0, l.jsx)(e6, { ...a, quest: t, sourceQuestContent: f.uF.QUEST_BAR_V2 }),
+                                (0, l.jsx)(e5, { ...a, quest: t, sourceQuestContent: f.uF.QUEST_BAR_V2 }),
                             isComplete: e || s || o,
                         },
                         {
                             renderContent: () =>
-                                (0, l.jsx)(e7, {
+                                (0, l.jsx)(e9, {
                                     children: (0, ec.ui)(t)
                                         ? Z.intl.string(Z.t["5tXqFe"])
                                         : Z.intl.formatToPlainString(Z.t["+8JB6Y"], { gameTitle: i }),
@@ -1111,7 +1111,7 @@ let tl = function (e) {
                         },
                         {
                             renderContent: () =>
-                                (0, l.jsx)(e7, {
+                                (0, l.jsx)(e9, {
                                     children: Z.intl.formatToPlainString(Z.t.HhfrYS, { numMinutes: n.targetMinutes }),
                                 }),
                             isComplete: o,
@@ -1122,7 +1122,7 @@ let tl = function (e) {
                     isQuestComplete: o,
                 };
             }, [a, r.length, t, n.targetMinutes]);
-        return (0, l.jsx)(e9, {
+        return (0, l.jsx)(e7, {
             heading: Z.intl.string(Z.t.UPWlJu),
             steps: c,
             children: u && !d && !h && (0, l.jsx)(tn, { useReducedMotion: i, quest: t }),
@@ -1140,7 +1140,7 @@ function ta(e) {
     let { children: t } = e,
         { springConfig: n, isExpanded: i } = s.useContext(ts),
         a = (0, o.bG)([Q.A], () => Q.A.useReducedMotion),
-        { ref: u, height: d = null } = (0, P.Ay)(),
+        { ref: u, height: d = null } = (0, k.Ay)(),
         h = (0, c.A)(d) ?? null,
         [{ height: m }, p] = (0, z.z)(() => ({ from: { height: 0 }, config: n }));
     return (
@@ -1170,7 +1170,7 @@ function to(e) {
                         width: 16,
                         height: 16,
                     }),
-                    (0, l.jsx)(eP.D, { color: "text-default", variant: "heading-sm/medium", children: t }),
+                    (0, l.jsx)(ek.D, { color: "text-default", variant: "heading-sm/medium", children: t }),
                 ],
             }),
             (0, l.jsx)(_.E, { color: "text-muted", variant: "text-xs/normal", className: tr.r2, children: n }),
@@ -1193,7 +1193,7 @@ var tu = n(31300),
     th = n(825807);
 let tm = function (e) {
     let { onDesktop: t, onConsole: n } = e;
-    return (0, l.jsxs)(ek.e, {
+    return (0, l.jsxs)(eP.e, {
         direction: "vertical",
         fullWidth: !0,
         className: th.G,
@@ -1216,7 +1216,7 @@ let tm = function (e) {
         ],
     });
 };
-var tp = n(190107),
+var tp = n(654487),
     tf = n(495707);
 let tg = s.forwardRef(function (e, t) {
     let { isHovered: n, asset: i, poster: a, className: r, autoPlay: c = !1 } = e,
@@ -1339,7 +1339,7 @@ function tC(e) {
                             className: tf.zH,
                             children: [
                                 (0, l.jsx)(tx, { quest: c }),
-                                (0, l.jsx)(eP.D, {
+                                (0, l.jsx)(ek.D, {
                                     className: tf.DD,
                                     color: "text-strong",
                                     variant: "heading-md/medium",
@@ -1356,7 +1356,7 @@ function tC(e) {
                         }),
                         (0, l.jsx)("div", {
                             className: tf.lO,
-                            children: (0, l.jsx)(ek.e, {
+                            children: (0, l.jsx)(eP.e, {
                                 direction: "horizontal",
                                 fullWidth: !0,
                                 wrap: !1,
@@ -1439,7 +1439,7 @@ function tE(e) {
             (0, l.jsx)(r.animated.div, {
                 className: a()(tf.tv, tf.ag),
                 style: {
-                    backgroundImage: `linear-gradient(90deg, ${k}, ${L})`,
+                    backgroundImage: `linear-gradient(90deg, ${P}, ${L})`,
                     opacity: (0, U.a)(c.to({ range: [0, 1], output: [1, 0] })),
                 },
             }),
@@ -1493,7 +1493,7 @@ function tE(e) {
             }),
             (0, l.jsx)("div", {
                 className: a()(tf.tv, tf.Sx),
-                style: { backgroundImage: `linear-gradient(90deg, ${k}, ${L})` },
+                style: { backgroundImage: `linear-gradient(90deg, ${P}, ${L})` },
             }),
         ],
     });
@@ -1589,7 +1589,7 @@ function tN() {
 var t_ = n(561844),
     tS = n(652215),
     tR = n(731738),
-    ty = n(807393),
+    ty = n(831062),
     tI = n(260364),
     tb = n(737595);
 function tM(e) {
@@ -1629,8 +1629,8 @@ function tO(e) {
         U = s.useContext(tj.Z) || (i && d && !O && !u),
         {
             isExpanded: D,
-            setIsExpanded: P,
-            expandQuestBar: k,
+            setIsExpanded: k,
+            expandQuestBar: P,
             isExpansionAnimationComplete: L,
             isVisibilityAnimationAtRest: F,
             expansionSpring: G,
@@ -1809,8 +1809,8 @@ function tO(e) {
         })({
             quest: t,
             isExpanded: D,
-            setIsExpanded: P,
-            expandQuestBar: k,
+            setIsExpanded: k,
+            expandQuestBar: P,
             isQuestCompleted: M,
             isQuestAccepted: y,
             prevIsQuestAccepted: b,

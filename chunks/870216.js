@@ -1,44 +1,43 @@
-"use strict";
 let i;
-n.d(t, { A: () => f });
-var r = n(17928),
-    s = n(228366);
-let a = [],
-    o = a,
-    l = null,
-    u = {},
+n.d(t, { A: () => u });
+var a = n(17928),
+    r = n(228366);
+let s = [],
+    l = s,
+    o = null,
+    d = {},
     c = new Set(),
-    d = {};
-class _ extends r.Ay.Store {
+    _ = {};
+class E extends a.Ay.Store {
     static displayName = "CollectiblesShopStore";
     get analyticsLocations() {
-        return o;
+        return l;
     }
     get analyticsSource() {
-        return l;
+        return o;
     }
     get initialProductSkuId() {
         return i;
     }
     getAnalytics() {
-        return { analyticsLocations: o, analyticsSource: l };
+        return { analyticsLocations: l, analyticsSource: o };
     }
     getLayout(e) {
-        return null == e ? null : (u[e] ?? null);
+        return null == e ? null : (d[e] ?? null);
     }
     isFetchingLayout(e) {
         return null != e && c.has(e);
     }
     getLayoutFetchError(e) {
-        return null == e ? null : (d[e] ?? null);
+        return null == e ? null : (_[e] ?? null);
     }
 }
-let f = new _(s.h, {
+let u = new E(r.h, {
     COLLECTIBLES_SHOP_OPEN: (e) => {
-        (o = e.analyticsLocations ?? a), (l = e.analyticsSource ?? null), (i = e.initialProductSkuId);
+        (l = e.analyticsLocations ?? s), (o = e.analyticsSource ?? null), (i = e.initialProductSkuId);
     },
     COLLECTIBLES_SHOP_CLOSE: (e) => {
-        (o = a), (l = null), (i = void 0);
+        (l = s), (o = null), (i = void 0);
     },
     COLLECTIBLES_PRODUCT_DETAILS_OPEN: (e) => {
         e.skuId === i && (i = void 0);
@@ -49,13 +48,13 @@ let f = new _(s.h, {
     },
     COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS: (e) => {
         let { tab: t, layoutId: n } = e;
-        (u[t] = n), delete d[t], c.delete(t);
+        (d[t] = n), delete _[t], c.delete(t);
     },
     COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE: (e) => {
         let { tab: t, apiError: n } = e;
-        (d[t] = n), c.delete(t);
+        (_[t] = n), c.delete(t);
     },
     LOGOUT: (e) => {
-        (o = a), (l = null), (i = void 0), (u = {}), (c = new Set()), (d = {});
+        (l = s), (o = null), (i = void 0), (d = {}), (c = new Set()), (_ = {});
     },
 });

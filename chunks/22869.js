@@ -3,9 +3,9 @@ n.d(t, { A: () => d });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
-    r = n.n(s),
-    a = n(834730),
-    o = n(252545),
+    a = n.n(s),
+    r = n(834730),
+    o = n(73392),
     c = n(291594),
     u = n(959);
 function d(e) {
@@ -22,9 +22,9 @@ function d(e) {
             (0, l.jsx)(c.A, {
                 ...e,
                 tag: "span",
-                children: (0, l.jsx)(a.E, {
+                children: (0, l.jsx)(r.E, {
                     ref: f,
-                    className: m ? r()(d, g) : d,
+                    className: m ? a()(d, g) : d,
                     variant: "text-sm/semibold",
                     color: "text-strong",
                     lineClamp: 1,

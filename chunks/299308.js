@@ -1,0 +1,87 @@
+"use strict";
+n.d(t, { D: () => s, Z: () => r });
+var i = n(568065);
+let r = [
+        {
+            type: i.o9.LEVEL,
+            skuId: "1",
+            title: "Lorem ipsum",
+            cost: 1,
+            dependencies: [],
+            features: {
+                additional_emoji_slots: 50,
+                additional_sound_slots: 50,
+                additional_sticker_slots: 50,
+                total_emoji_slots: 50,
+                total_sound_slots: 50,
+                total_sticker_slots: 50,
+                features: [],
+            },
+        },
+        {
+            type: i.o9.LEVEL,
+            skuId: "2",
+            title: "Lorem ipsum",
+            cost: 1,
+            dependencies: ["1"],
+            features: {
+                additional_emoji_slots: 50,
+                additional_sound_slots: 50,
+                additional_sticker_slots: 50,
+                total_emoji_slots: 50,
+                total_sound_slots: 50,
+                total_sticker_slots: 50,
+                features: [],
+            },
+        },
+        {
+            type: i.o9.LEVEL,
+            skuId: "3",
+            title: "Lorem ipsum",
+            cost: 1,
+            dependencies: ["2"],
+            features: {
+                additional_emoji_slots: 50,
+                additional_sound_slots: 50,
+                additional_sticker_slots: 50,
+                total_emoji_slots: 50,
+                total_sound_slots: 50,
+                total_sticker_slots: 50,
+                features: [],
+            },
+        },
+    ],
+    s = [
+        {
+            type: i.o9.PERK,
+            skuId: "4",
+            title: "Lorem ipsum",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao",
+            cost: 1,
+            dependencies: [],
+        },
+        {
+            type: i.o9.PERK,
+            skuId: "5",
+            title: "Lorem ipsum",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao",
+            cost: 1,
+            dependencies: [],
+        },
+        {
+            type: i.o9.PERK,
+            skuId: "6",
+            title: "Lorem ipsum",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao",
+            cost: 1,
+            dependencies: [],
+        },
+        {
+            type: i.o9.PERK,
+            skuId: "7",
+            title: "Lorem ipsum",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat posuere lao",
+            cost: 1,
+            dependencies: [],
+        },
+    ];

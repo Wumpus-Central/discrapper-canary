@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { A: () => l });
-var i = n(17928),
-    r = n(228366),
-    s = n(71393);
-let a = new Map();
-class o extends i.Ay.Store {
+l.d(t, { A: () => u });
+var n = l(17928),
+    i = l(228366),
+    r = l(71393);
+let s = new Map();
+class a extends n.Ay.Store {
     static displayName = "GuildRoleConnectionsConfigurationStore";
     initialize() {
-        this.waitFor(s.A);
+        this.waitFor(r.A);
     }
     getGuildRoleConnectionsConfiguration(e) {
-        return a.get(e);
+        return s.get(e);
     }
 }
-let l = new o(r.h, {
+let u = new a(i.h, {
     GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: (e) => {
-        let { roleId: t, roleConnectionConfigurations: n } = e;
-        a.set(t, n);
+        let { roleId: t, roleConnectionConfigurations: l } = e;
+        s.set(t, l);
     },
 });

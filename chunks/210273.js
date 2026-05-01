@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { X: () => p });
-var i = n(460905),
-    r = n(7807),
-    s = n(391242),
-    a = n(597601),
-    o = n(183623),
-    l = n(95635),
-    u = n(179866),
-    c = n(477262),
-    d = n(27232),
-    _ = n(451394),
-    f = n(797285),
-    h = n(473145);
-function p(e) {
+i.d(t, { X: () => x });
+var s = i(460905),
+    l = i(7807),
+    a = i(391242),
+    n = i(597601),
+    r = i(183623),
+    c = i(95635),
+    o = i(179866),
+    d = i(477262),
+    u = i(27232),
+    m = i(451394),
+    T = i(797285),
+    g = i(473145);
+function x(e) {
     switch (e) {
-        case h.TP.EMOJI:
-            return i.n;
-        case h.TP.SOUNDBOARD:
-            return r.J;
-        case h.TP.ANIMATED:
-            return s.O;
-        case h.TP.AUDIO:
-            return a.L;
-        case h.TP.STREAM:
-            return o.F;
-        case h.TP.UPLOAD:
+        case g.TP.EMOJI:
+            return s.n;
+        case g.TP.SOUNDBOARD:
             return l.J;
-        case h.TP.CUSTOM_ROLE_ICON:
-            return u.i;
-        case h.TP.CUSTOMIZATION:
-            return c.s;
-        case h.TP.VANITY:
-            return d.G;
-        case h.TP.STAGE_VIDEO:
-            return _.q;
-        case h.TP.STICKER:
-            return f.t;
+        case g.TP.ANIMATED:
+            return a.O;
+        case g.TP.AUDIO:
+            return n.L;
+        case g.TP.STREAM:
+            return r.F;
+        case g.TP.UPLOAD:
+            return c.J;
+        case g.TP.CUSTOM_ROLE_ICON:
+            return o.i;
+        case g.TP.CUSTOMIZATION:
+            return d.s;
+        case g.TP.VANITY:
+            return u.G;
+        case g.TP.STAGE_VIDEO:
+            return m.q;
+        case g.TP.STICKER:
+            return T.t;
         default:
-            return i.n;
+            return s.n;
     }
 }

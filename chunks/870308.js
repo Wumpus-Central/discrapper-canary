@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => A });
 var i = n(64700),
-    r = n(379197),
-    s = n(488430),
-    a = n(17928),
-    o = n(554146),
-    l = n(192308),
-    u = n(131607),
+    a = n(379197),
+    r = n(488430),
+    s = n(17928),
+    l = n(554146),
+    o = n(192308),
+    d = n(932001),
     c = n(457421),
-    d = n(212407),
-    _ = n(966971),
-    f = n(49999);
-let h = () => {
-    let e = (0, a.bG)([c.A], () => c.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
-        t = !(0, l.hasAnyModalOpen)(),
-        [n, h] = (0, u.RF)(t ? o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
-        p = (0, d.bv)(e),
-        E =
+    _ = n(212407),
+    E = n(158216),
+    u = n(49999);
+let A = () => {
+    let e = (0, s.bG)([c.A], () => c.A.getMarketingBySurface(a.R.DESKTOP_SHOP_BUTTON)),
+        t = !(0, o.hasAnyModalOpen)(),
+        [n, A] = (0, d.RF)(t ? l.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
+        I = (0, _.bv)(e),
+        T =
             null != n
                 ? ((e, t) => {
-                      if (t?.type === s.G.COACHMARK) {
+                      if (t?.type === r.G.COACHMARK) {
                           let e = t.refTargetBackground;
                           return {
-                              type: _.FF.COACHMARK,
+                              type: E.FF.COACHMARK,
                               title: () => t.title,
                               body: () => t.body,
                               assetDark: t.assetDark,
@@ -36,9 +35,9 @@ let h = () => {
                               },
                           };
                       }
-                      return t?.type === s.G.TAB_TOOLTIP
+                      return t?.type === r.G.TAB_TOOLTIP
                           ? {
-                                type: _.FF.TAB_TOOLTIP,
+                                type: E.FF.TAB_TOOLTIP,
                                 title: () => t.title,
                                 body: () => t.body,
                                 asset: t.asset,
@@ -54,10 +53,10 @@ let h = () => {
                                 showHoverGradient: t.showHoverGradient,
                             }
                           : null;
-                  })(p, e)
+                  })(I, e)
                 : null,
-        m = i.useCallback(() => {
-            null != E && h(f.i.AUTO);
-        }, [E, h]);
-    return { shopButtonDisplayOptions: E, dismissShopButtonDC: m };
+        h = i.useCallback(() => {
+            null != T && A(u.i.AUTO);
+        }, [T, A]);
+    return { shopButtonDisplayOptions: T, dismissShopButtonDC: h };
 };

@@ -10,7 +10,7 @@ var n = i(627968),
     c = i(609425),
     h = i(922301),
     p = i(368919),
-    m = i(252545),
+    m = i(73392),
     g = i(676608),
     A = i(342296),
     f = i(734057),
@@ -22,15 +22,15 @@ function x(e) {
             channelId: i,
             guildId: x,
             messageId: E,
-            stopPropagation: R = !1,
+            stopPropagation: I = !1,
             ariaLabel: N,
-            enableDisplayNameStyles: I = !1,
+            enableDisplayNameStyles: R = !1,
         } = e,
         j = l.useRef(null),
-        { analyticsLocations: b } = (0, d.Ay)(u.A.USERNAME),
-        S = (0, g.Ay)(x, t?.id),
-        C = (0, c.A)({ userId: t?.id, guildId: x }),
-        y = (0, m.a)({ displayNameStyles: C }),
+        { analyticsLocations: S } = (0, d.Ay)(u.A.USERNAME),
+        b = (0, g.Ay)(x, t?.id),
+        y = (0, c.A)({ userId: t?.id, guildId: x }),
+        C = (0, m.a)({ displayNameStyles: y }),
         O = l.useCallback(
             (e) => {
                 let n = f.A.getChannel(i);
@@ -40,13 +40,13 @@ function x(e) {
         ),
         L = l.useContext(a.C);
     return (
-        (0, v.A)({ subscribeToGroupId: E, authorId: t?.id, shouldSubscribe: I && null != C && null == x }),
+        (0, v.A)({ subscribeToGroupId: E, authorId: t?.id, shouldSubscribe: R && null != y && null == x }),
         l.useCallback(
             (e) => (l, a) => {
                 let u = e?.colorStrings,
-                    c = S && null != u && null != u.primaryColor && null != u.secondaryColor,
+                    c = b && null != u && null != u.primaryColor && null != u.secondaryColor,
                     m = (t, i) => {
-                        if (!I || null == C || null != x)
+                        if (!R || null == y || null != x)
                             return (0, n.jsx)(s.V, {
                                 ...(null != t ? t : {}),
                                 ref: j,
@@ -56,7 +56,7 @@ function x(e) {
                                 roleName: e?.colorRoleName,
                                 colorStrings: c ? u : null,
                                 "aria-label": N,
-                                className: y,
+                                className: C,
                             });
                         {
                             let e = L?.animate || i?.isShown ? h.G.ANIMATED : h.G.PLAIN;
@@ -67,7 +67,7 @@ function x(e) {
                                 "aria-label": N,
                                 children: (0, n.jsx)(p.A, {
                                     userName: (0, r.O)(l) ?? "",
-                                    displayNameStyles: C,
+                                    displayNameStyles: y,
                                     effectDisplayType: e,
                                     shouldUnderlineOnHover: !0,
                                     loop: !0,
@@ -78,7 +78,7 @@ function x(e) {
                 return (0, n.jsx)(
                     d.f5,
                     {
-                        value: b,
+                        value: S,
                         children:
                             null != t
                                 ? (0, n.jsx)(A.A, {
@@ -94,7 +94,7 @@ function x(e) {
                                           return m(
                                               {
                                                   onClick: (e) => {
-                                                      R && null != e && e.stopPropagation(), i(e);
+                                                      I && null != e && e.stopPropagation(), i(e);
                                                   },
                                                   ...n,
                                               },
@@ -107,7 +107,7 @@ function x(e) {
                     a,
                 );
             },
-            [b, t, i, x, E, O, R, N, S, y, L?.animate, C, I],
+            [S, t, i, x, E, O, I, N, b, C, L?.animate, y, R],
         )
     );
 }

@@ -1,87 +1,86 @@
-"use strict";
-n.d(t, { A: () => _ }), n(321073);
+n.d(t, { A: () => h }), n(321073);
 var i = n(17928),
-    r = n(228366),
+    l = n(228366),
     s = n(427358),
-    a = n(153488),
-    o = n(994500),
-    l = n(287809);
-let u = [],
-    c = !1;
-class d extends i.Ay.PersistedStore {
+    r = n(153488),
+    a = n(994500),
+    u = n(287809);
+let o = [],
+    d = !1;
+class c extends i.Ay.PersistedStore {
     static displayName = "FriendGroupsStore";
     static persistKey = "FriendGroupsStoreV2";
     initialize(e) {
-        this.waitFor(a.A, o.A, s.A, l.default), null != e && ((u = e.groups ?? []), (c = e.isInitialized ?? !1));
+        this.waitFor(r.A, a.A, s.A, u.default), null != e && ((o = e.groups ?? []), (d = e.isInitialized ?? !1));
     }
     getGroups() {
-        return u;
+        return o;
     }
     getGroup(e) {
-        return u.find((t) => t.id === e) ?? null;
+        return o.find((t) => t.id === e) ?? null;
     }
     getGroupIds() {
-        return u.map((e) => e.id);
+        return o.map((e) => e.id);
     }
     getUserGroups(e) {
-        return u.filter((t) => t.userIds.includes(e));
+        return o.filter((t) => t.userIds.includes(e));
     }
     isGroupEmpty(e) {
         let t = this.getGroup(e);
         return null == t || 0 === t.userIds.length;
     }
     isInitialized() {
-        return c;
+        return d;
     }
     getState() {
-        return { groups: u, isInitialized: c };
+        return { groups: o, isInitialized: d };
     }
 }
-let _ = new d(r.h, {
+let h = new c(l.h, {
     POST_CONNECTION_OPEN: function () {
-        if (c || u.length > 0) return !1;
-        (u = []), (c = !0);
+        if (d || o.length > 0) return !1;
+        (o = []), (d = !0);
     },
     CREATE_FRIEND_GROUP: function (e) {
         let { groupId: t, name: n } = e;
-        return !u.some((e) => e.id === t) && (u.push({ id: t, name: n, userIds: [] }), !0);
+        return !o.some((e) => e.id === t) && (o.push({ id: t, name: n, userIds: [] }), !0);
     },
     UPDATE_FRIEND_GROUP: function (e) {
         let { groupId: t, name: n } = e,
-            i = u.findIndex((e) => e.id === t);
-        return -1 !== i && ((u[i] = { ...u[i], name: n }), !0);
+            i = o.findIndex((e) => e.id === t);
+        return -1 !== i && ((o[i] = { ...o[i], name: n }), !0);
     },
     DELETE_FRIEND_GROUP: function (e) {
         let { groupId: t } = e,
-            n = u.length;
-        return (u = u.filter((e) => e.id !== t)).length !== n;
+            n = o.length;
+        return (o = o.filter((e) => e.id !== t)).length !== n;
     },
     REORDER_FRIEND_GROUPS: function (e) {
         let { groupIds: t } = e,
             n = [],
-            i = new Map(u.map((e) => [e.id, e]));
+            i = new Map(o.map((e) => [e.id, e]));
         for (let e of t) {
             let t = i.get(e);
             null != t && n.push(t);
         }
-        return n.length === u.length && ((u = n), !0);
+        return n.length === o.length && ((o = n), !0);
     },
     ADD_USERS_TO_GROUP: function (e) {
         let { groupId: t, userIds: n } = e,
-            i = u.findIndex((e) => e.id === t);
+            i = o.findIndex((e) => e.id === t);
         if (-1 === i) return !1;
-        let r = u[i],
-            s = new Set(r.userIds),
-            a = n.filter((e) => !s.has(e));
-        return 0 !== a.length && ((u[i] = { ...r, userIds: [...r.userIds, ...a] }), !0);
+        let l = o[i],
+            s = new Set(l.userIds),
+            r = n.filter((e) => !s.has(e));
+        return 0 !== r.length && ((o[i] = { ...l, userIds: [...l.userIds, ...r] }), !0);
     },
     REMOVE_USERS_FROM_GROUP: function (e) {
         let { groupId: t, userIds: n } = e,
-            i = u.findIndex((e) => e.id === t);
+            i = o.findIndex((e) => e.id === t);
         if (-1 === i) return !1;
-        let r = u[i],
+        let l = o[i],
             s = new Set(n),
-            a = r.userIds.filter((e) => !s.has(e));
-        return a.length !== r.userIds.length && ((u[i] = { ...r, userIds: a }), !0);
+            r = l.userIds.filter((e) => !s.has(e));
+        return r.length !== l.userIds.length && ((o[i] = { ...l, userIds: r }), !0);
     },
 });

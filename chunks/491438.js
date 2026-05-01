@@ -502,7 +502,7 @@ let eN = (e) => {
         if (g && !k && !A) return (0, n.jsx)(eO, { text: l, onTrackClick: c });
         if (!_ || h) return (0, n.jsx)(eS, { handlePreviewButtonClick: P, text: l, onTrackClick: c });
         if (I) return (0, n.jsx)(eH, { handleUseNow: N, isApplying: H, text: l, onTrackClick: c });
-        if (o) return (0, n.jsx)(eO, { text: F.intl.string(F.t.IvmZVF), onTrackClick: c });
+        if (o) return (0, n.jsx)(eO, { text: l, onTrackClick: c });
         if (g)
             return (0, n.jsx)(eB, {
                 product: t,

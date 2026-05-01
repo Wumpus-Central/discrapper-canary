@@ -167,7 +167,6 @@ let O = new N(s.h, {
                         pendingProfileEffect: void 0,
                         pendingProfileFrame: void 0,
                         pendingBanner: void 0,
-                        pendingBannerOriginalMd5: void 0,
                         pendingAccentColor: void 0,
                         pendingThemeColors: void 0,
                         pendingBio: void 0,

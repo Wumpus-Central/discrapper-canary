@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(375708);
-let r = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
-function s(e) {
+n.d(t, { A: () => r });
+var i = n(985018);
+let a = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+function r(e) {
     let t = i.intl.string(i.t.FeUKeA);
     return (
         null != e && null != e.sourceName && e.sourceName.length > 0 && (t = e.sourceName),
-        { sanitizedTitle: t.replace(r, ""), title: t }
+        { sanitizedTitle: t.replace(a, ""), title: t }
     );
 }

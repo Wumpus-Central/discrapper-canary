@@ -56,10 +56,9 @@ function T() {
                 }
             }
             if (Object.keys(n).length > 0) {
-                let { bannerOriginalMd5: t, ...i } = n,
-                    s = await (0, o.gi)(i, e, t);
-                (l = l && (s?.ok ?? !1)),
-                    s?.ok ? (0, E.RE)() : (0, c.P0)((0, g.o)(A.intl.string(A.t.s35OuK), m.Ck.FAILURE));
+                let t = await (0, o.gi)(n, e);
+                (l = l && (t?.ok ?? !1)),
+                    t?.ok ? (0, E.RE)() : (0, c.P0)((0, g.o)(A.intl.string(A.t.s35OuK), m.Ck.FAILURE));
             }
             l && (0, E.x8)(), T(!1);
         }, [e]),
@@ -97,9 +96,8 @@ function _() {
                 } else i?.body?.username != null && (0, N.E)();
             }
             if (Object.keys(i).length > 0) {
-                let { bannerOriginalMd5: e, ...t } = i,
-                    n = await (0, o.gi)(t, void 0, e);
-                (l = l && (n?.ok ?? !1)), n?.ok ? (0, o.RE)() : h();
+                let e = await (0, o.gi)(i);
+                (l = l && (e?.ok ?? !1)), e?.ok ? (0, o.RE)() : h();
             }
             if (void 0 !== e.pendingLegacyUsernameDisabled)
                 try {

@@ -1,7 +1,7 @@
 n.d(t, { default: () => e6 });
 var r = n(627968),
     l = n(64700),
-    s = n(562708),
+    s = n(110259),
     i = n(892547),
     a = n(834730),
     u = n(252452),
@@ -12,8 +12,8 @@ var r = n(627968),
     m = n(17928),
     g = n(521489),
     x = n(568602),
-    f = n(775602),
-    y = n(531685),
+    y = n(775602),
+    f = n(531685),
     v = n(625494),
     j = n(964486);
 n(667532), n(134528), n(947204);
@@ -55,7 +55,7 @@ let F = function (e) {
             return (0, r.jsx)(P, { badge: t });
     }
 };
-var G = n(375708),
+var G = n(985018),
     X = n(508891);
 function U(e) {
     let { node: t, isLast: n } = e,
@@ -177,7 +177,7 @@ var Q = n(837381),
     W = n(689175),
     Y = n(534514),
     Z = n(928039),
-    J = n(131607),
+    J = n(932001),
     ee = n(199966),
     et = n(397274);
 function en(e, t, n) {
@@ -198,11 +198,11 @@ let el = function (e) {
 };
 var es = n(284009),
     ei = n.n(es),
-    ea = n(785651),
+    ea = n(925747),
     eu = n(935399),
     eo = n(319354),
     ec = n(717421),
-    ed = n(885386),
+    ed = n(253932),
     eh = n(429566);
 function em(e) {
     let { category: t, onClick: n, active: l, dismissibleBadge: s } = e,
@@ -242,7 +242,7 @@ function eg(e) {
     let x = l.useMemo(() => o.findIndex((e) => e.key === h), [o, h]);
     l.useEffect(() => {
         if (!a) {
-            let e = f.current;
+            let e = y.current;
             null != e &&
                 ((e.style.height = `${e.scrollHeight}px`),
                 window.getComputedStyle(e).height,
@@ -252,8 +252,8 @@ function eg(e) {
                 }));
         }
     }, [a]);
-    let f = l.useRef(null),
-        [y, v] = l.useState(a ? "auto" : "0");
+    let y = l.useRef(null),
+        [f, v] = l.useState(a ? "auto" : "0");
     return (
         (t = l.useRef(null)),
         (n = l.useRef(new Set())),
@@ -321,8 +321,8 @@ function eg(e) {
         }, [i, u]),
         (0, r.jsx)("div", {
             className: eh.lK,
-            style: { height: y, opacity: +!!a },
-            ref: f,
+            style: { height: f, opacity: +!!a },
+            ref: y,
             children:
                 m &&
                 (0, r.jsx)(ex, {
@@ -332,7 +332,7 @@ function eg(e) {
                     visibleContent: c,
                     dismissibleBadges: d,
                     onMount: function () {
-                        let e = f.current;
+                        let e = y.current;
                         null != e &&
                             ((e.style.height = `${e.scrollHeight}px`),
                             Promise.all(e.getAnimations().map((e) => e.finished))
@@ -371,7 +371,7 @@ function ex(e) {
                                 m = d.width / 2,
                                 g = (h.y - d.y) / m,
                                 x = h.height / m;
-                            i.current || l || f.A.useReducedMotion || -1 === u.current
+                            i.current || l || y.A.useReducedMotion || -1 === u.current
                                 ? (o.y.set(g), o.height.set(x))
                                 : c({ y: g, height: x }),
                                 (i.current = !1),
@@ -402,7 +402,7 @@ function ex(e) {
                 "--custom-nav-count": s.length,
                 "--custom-nav-index": Math.max(t, 0),
                 "--custom-nav-width": "2px",
-                "--custom-icon-size": `${eo.E[ey]}px`,
+                "--custom-icon-size": `${eo.E[ef]}px`,
             },
             children: [
                 (0, r.jsx)("div", {
@@ -436,8 +436,8 @@ function ex(e) {
         })
     );
 }
-var ef = n(585635);
-let ey = "refresh_sm";
+var ey = n(585635);
+let ef = "refresh_sm";
 function ev(e) {
     let {
             tag: t,
@@ -454,10 +454,10 @@ function ev(e) {
             icon: m,
             StronglyDiscouragedCustomComponent: g,
             usePersistentBadge: x,
-            useTitle: f,
-            variant: y = "default",
+            useTitle: y,
+            variant: f = "default",
         } = u,
-        v = f?.(),
+        v = y?.(),
         j = (function (e) {
             switch (e) {
                 case "default":
@@ -465,7 +465,7 @@ function ev(e) {
                 case "destructive":
                     return "text-feedback-critical";
             }
-        })(y),
+        })(f),
         p = (function (e) {
             switch (e) {
                 case "default":
@@ -473,7 +473,7 @@ function ev(e) {
                 case "destructive":
                     return er.A.colors.ICON_FEEDBACK_CRITICAL;
             }
-        })(y),
+        })(f),
         b = x?.(s),
         S = l.useMemo(
             () =>
@@ -488,21 +488,21 @@ function ev(e) {
         );
     return (0, r.jsxs)(t, {
         "data-settings-sidebar-item": c,
-        className: ef.DB,
+        className: ey.DB,
         children: [
             (0, r.jsxs)(O.D, {
                 ...d,
                 "aria-expanded": i,
-                className: A()(ef.AS, { [ef.vu]: s, [ef.RD]: "destructive" === y }),
+                className: A()(ey.AS, { [ey.vu]: s, [ey.RD]: "destructive" === f }),
                 "aria-current": s ? "page" : void 0,
                 onClick: n,
                 children: [
                     null != g
                         ? (0, r.jsx)(g, {})
                         : (0, r.jsxs)("div", {
-                              className: ef.Ly,
+                              className: ey.Ly,
                               children: [
-                                  (0, r.jsx)(m, { color: p, size: ey, className: ef.Kk }),
+                                  (0, r.jsx)(m, { color: p, size: ef, className: ey.Kk }),
                                   (0, r.jsx)(a.E, { variant: "text-md/medium", color: j, children: v }),
                               ],
                           }),
@@ -550,30 +550,30 @@ function ej(e) {
                     : null,
             [h, g, d, c, n, s],
         ),
-        f = i ? "li" : "div",
-        y = l.useMemo(() => en(t.key, n, s), [t.key, n, s]);
+        y = i ? "li" : "div",
+        f = l.useMemo(() => en(t.key, n, s), [t.key, n, s]);
     return i
         ? (0, r.jsx)(ev, {
-              tag: f,
+              tag: y,
               panelKey: a?.key,
               onClick: m,
               active: d,
               "aria-expanded": null != h ? d : void 0,
               node: t,
-              dismissibleBadge: y,
+              dismissibleBadge: f,
               children: x,
           })
         : (0, r.jsx)(Q.tG, {
               id: t.key,
               children: (e) =>
                   (0, r.jsx)(ev, {
-                      tag: f,
+                      tag: y,
                       panelKey: a?.key,
                       onClick: m,
                       active: d,
                       "aria-expanded": null != h ? d : void 0,
                       node: t,
-                      dismissibleBadge: y,
+                      dismissibleBadge: f,
                       listItemProps: e,
                       children: x,
                   }),
@@ -672,10 +672,10 @@ function eS(e) {
                 [e, n]
             );
         }, [t.layout]),
-        f = (0, w.NC)(),
-        y = (0, Z.A)("settings-sidebar", o);
+        y = (0, w.NC)(),
+        f = (0, Z.A)("settings-sidebar", o);
     return (0, r.jsx)(N.N, {
-        theme: f,
+        theme: y,
         children: (e) =>
             (0, r.jsxs)("div", {
                 className: A()(eb.pz, e, { [eb.Hw]: b.Fr, [eb.n7]: u }),
@@ -708,7 +708,7 @@ function eS(e) {
                         ],
                     }),
                     (0, r.jsx)(Q.hD, {
-                        navigator: y,
+                        navigator: f,
                         children: (0, r.jsx)(Q.PR, {
                             children: (e) => {
                                 let { ref: t, ...n } = e;
@@ -782,35 +782,35 @@ function eM(e) {
             clearSearchQuery: h,
         } = e,
         m = I.A.useField("currentPanelKey"),
-        { node: g, visibleDirectory: x, accessibleDirectory: f } = (0, eE.Ay)(t, d ?? ""),
-        y = null != n && x.entry(n)?.parentPanelKey != null ? n : s,
+        { node: g, visibleDirectory: x, accessibleDirectory: y } = (0, eE.Ay)(t, d ?? ""),
+        f = null != n && x.entry(n)?.parentPanelKey != null ? n : s,
         v = l.useMemo(() => {
-            let e = f.entry(m ?? y)?.parentPanelKey;
-            if (null != e) return f.getPanelOrThrow(e);
-        }, [m, f, y]),
+            let e = y.entry(m ?? f)?.parentPanelKey;
+            if (null != e) return y.getPanelOrThrow(e);
+        }, [m, y, f]),
         { navigateWithValidation: p } = (0, eN.L_)(),
         A = l.useMemo(() => () => p(i), [p, i]);
     l.useEffect(() => {
         T.A.init({
-            accessibleDirectory: f,
+            accessibleDirectory: y,
             onViewChange: o,
             navigateWithValidation: (e, t) => {
                 null == x.entry(e) && h?.(), p(t);
             },
             closeWithValidation: A,
         });
-    }, [f, p, o, h, x, A]);
+    }, [y, p, o, h, x, A]);
     let [b, S] = l.useState(!0);
     (0, j.Ay)(
         () => (
-            T.A.navigate(y, { animatePanelScroll: !1, animateSidebarScroll: !1, showNavigationMobile: null == n }),
+            T.A.navigate(f, { animatePanelScroll: !1, animateSidebarScroll: !1, showNavigationMobile: null == n }),
             S(!1),
             () => {
                 T.A.reset(), et.A.reset(), I.A.resetState();
             }
         ),
     );
-    let C = l.useMemo(() => ({ visibleDirectory: x, accessibleDirectory: f }), [x, f]),
+    let C = l.useMemo(() => ({ visibleDirectory: x, accessibleDirectory: y }), [x, y]),
         N = null != m ? x.get(m) : void 0;
     return (0, r.jsx)(ee.x.Provider, {
         value: C,
@@ -843,8 +843,8 @@ function eI(e) {
         [j, p] = l.useState(!1),
         [A, b] = l.useState(1.4),
         S = l.useRef(null),
-        C = (0, m.bG)([f.A], () => f.A.useReducedMotion),
-        N = (0, m.bG)([y.A], () => y.A.isFocused());
+        C = (0, m.bG)([y.A], () => y.A.useReducedMotion),
+        N = (0, m.bG)([f.A], () => f.A.isFocused());
     return (
         l.useEffect(() => {
             let e = (e) => {
@@ -885,8 +885,8 @@ var eT = n(495544),
     eK = n(287809),
     eO = n(152056),
     e_ = n(780964),
-    eB = n(44343),
-    eL = n(980707),
+    eB = n(183142),
+    eL = n(550079),
     eP = n(477782),
     eD = n(349288),
     eF = n(922016),
@@ -905,8 +905,8 @@ var eT = n(495544),
 function eJ() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "537837",
-        l = "e4e27e64eddca5c77f60e7dff360754f19423ce5".substring(0, 7),
+        n = "538041",
+        l = "d9c860a7b0a23e62629d5064fbda898f0d1c0b6b".substring(0, 7),
         s = e$.A?.app.getVersion(),
         i = e$.A?.app.getBuildNumber(),
         u = e$.A?.app.getAppArch(),
@@ -1017,7 +1017,7 @@ function e1(e) {
         }),
     });
 }
-function e7() {
+function e9() {
     let e = l.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
@@ -1074,9 +1074,9 @@ function e7() {
         ],
     });
 }
-var e9 = n(175665),
-    e5 = n(178241),
-    e2 = n(779733),
+var e2 = n(175665),
+    e7 = n(178241),
+    e5 = n(779733),
     e8 = n(298859);
 let e3 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
     e4 = new Map([
@@ -1092,12 +1092,12 @@ function e6(e) {
         [m, g] = l.useState(!1);
     return (l.useLayoutEffect(() => {
         let e = () => {
-            null == eK.default.getCurrentUser() && (g(!0), (0, e2.default)());
+            null == eK.default.getCurrentUser() && (g(!0), (0, e5.default)());
         };
         return (
             eT.default.addChangeListener(e),
             () => {
-                eT.default.removeChangeListener(e), e9.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
+                eT.default.removeChangeListener(e), e2.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
             }
         );
     }, []),
@@ -1107,17 +1107,17 @@ function e6(e) {
               partialRoot: eB.D,
               searchBar: te,
               emptyState: tt,
-              sidebarFooter: e7,
+              sidebarFooter: e9,
               onViewChange: (e) => {
-                  e3.has(e) || (0, e5._)(e);
+                  e3.has(e) || (0, e7._)(e);
                   let t = e4.get(e);
                   null != t &&
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e9.A.getField("source") },
+                          properties: { source: e2.A.getField("source") },
                       }),
-                      e9.A.setState({ source: void 0 });
+                      e2.A.setState({ source: void 0 });
               },
               target: t,
               defaultTarget: e_.X.ACCOUNT_PANEL,

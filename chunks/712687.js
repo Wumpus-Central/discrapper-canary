@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => _ });
 var i = n(17928),
-    r = n(228366),
-    s = n(625494),
-    a = n(652215);
-let o = null,
-    l = 0;
-function u() {
-    o = null;
+    a = n(228366),
+    r = n(625494),
+    s = n(652215);
+let l = null,
+    o = 0;
+function d() {
+    l = null;
 }
 class c extends i.Ay.Store {
     static displayName = "ContextMenuStore";
     isOpen() {
-        return null != o;
+        return null != l;
     }
     get version() {
-        return l;
-    }
-    getContextMenu() {
         return o;
     }
+    getContextMenu() {
+        return l;
+    }
     close() {
-        return !!this.isOpen() && (s._.dispatch(a.jej.CONTEXT_MENU_CLOSE), !0);
+        return !!this.isOpen() && (r._.dispatch(s.jej.CONTEXT_MENU_CLOSE), !0);
     }
 }
-let d = new c(r.h, {
+let _ = new c(a.h, {
     CONTEXT_MENU_OPEN: function (e) {
         let { contextMenu: t } = e;
-        l++, (o = t);
+        o++, (l = t);
     },
-    LAYER_PUSH: u,
-    CONTEXT_MENU_CLOSE: u,
-    OVERLAY_SET_INPUT_LOCKED: u,
-    OVERLAY_DEACTIVATE_ALL_REGIONS: u,
+    LAYER_PUSH: d,
+    CONTEXT_MENU_CLOSE: d,
+    OVERLAY_SET_INPUT_LOCKED: d,
+    OVERLAY_DEACTIVATE_ALL_REGIONS: d,
 });

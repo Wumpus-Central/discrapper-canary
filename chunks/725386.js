@@ -5,8 +5,8 @@ var i = n(64700),
     a = n(382483),
     r = n(385113),
     c = n(369374),
-    o = n(457965),
-    u = n(885386),
+    o = n(395332),
+    u = n(253932),
     d = n(287809),
     g = n(403362),
     m = n(633075),
@@ -18,8 +18,8 @@ function p(e) {
         n = u.Q_.useSetting(),
         p = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
         A = (0, x.A)(p?.id),
-        h = (0, o.w$)(e),
-        E = (0, s.bG)([r.A], () => r.A.getAllConfigsByApplication());
+        E = (0, o.w$)(e),
+        h = (0, s.bG)([r.A], () => r.A.getAllConfigsByApplication());
     return (
         i.useEffect(() => {
             t && ((0, a.Wq)(), n && (0, a.i$)());
@@ -30,22 +30,22 @@ function p(e) {
             return I.Zc.flatMap((i) =>
                 i === l.x.APPLICATION
                     ? t
-                        ? Object.values(E)
+                        ? Object.values(h)
                               .map((e) => e[0])
                               .filter(g.Vq)
                               .filter((t) => !e.has(t.application_id))
                               .map((e) => new m.R({ applicationId: e.application_id }))
-                        : null == h
+                        : null == E
                           ? []
-                          : h
-                                .filter((t) => !e.has(t.applicationId))
-                                .map((e) => new m.R({ applicationId: e.applicationId }))
+                          : E.filter((t) => !e.has(t.applicationId)).map(
+                                (e) => new m.R({ applicationId: e.applicationId }),
+                            )
                     : (0, f.hL)(i)
                       ? n.has(i)
                           ? []
                           : new f.Yy({ type: i, games: [] })
                       : void (0, g.xb)(i),
             );
-        }, [t, E, h, A])
+        }, [t, h, E, A])
     );
 }

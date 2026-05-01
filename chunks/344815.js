@@ -1,4 +1,3 @@
-"use strict";
-var i = n(380744)("toStringTag"),
-    r = {};
-(r[i] = "z"), (e.exports = "[object z]" === String(r));
+var n = e(380744)("toStringTag"),
+    o = {};
+(o[n] = "z"), (r.exports = "[object z]" === String(o));

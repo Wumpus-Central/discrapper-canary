@@ -1,34 +1,33 @@
-"use strict";
 let i;
-n.d(t, { A: () => C });
-var r = n(177029),
+n.d(t, { A: () => N });
+var l = n(177029),
+    a = n.n(l),
+    r = n(818125),
     s = n.n(r),
-    a = n(818125),
-    o = n.n(a),
-    l = n(725918),
-    u = n.n(l),
-    c = n(17928),
-    d = n(228366),
-    _ = n(671759),
-    f = n(172799);
-let h = {},
+    o = n(725918),
+    d = n.n(o),
+    u = n(17928),
+    c = n(228366),
+    h = n(671759),
+    E = n(172799);
+let A = {},
+    _ = {},
     p = {},
-    E = {},
-    m = {},
-    g = !1,
-    A = !1,
+    g = {},
+    f = !1,
     I = !1,
+    S = !1,
     T = new Map();
-function S(e) {
+function m(e) {
     return e.toLowerCase();
 }
-function N(e) {
+function C(e) {
     let { inviteCode: t } = e,
-        n = S(t);
+        n = m(t);
     if (!T.has(n)) return !1;
     (T = new Map(T)).delete(n);
 }
-class y extends c.Ay.Store {
+class O extends u.Ay.Store {
     static displayName = "InstantInviteStore";
     getInvite(e) {
         let {
@@ -36,93 +35,93 @@ class y extends c.Ay.Store {
             targetUserId: n,
             targetApplicationId: i,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return t === f.yV.STREAM && null != n
-            ? p[e]?.[n]
-            : t === f.yV.EMBEDDED_APPLICATION && null != i
-              ? E[e]?.[i]
-              : h[e];
+        return t === E.yV.STREAM && null != n
+            ? _[e]?.[n]
+            : t === E.yV.EMBEDDED_APPLICATION && null != i
+              ? p[e]?.[i]
+              : A[e];
     }
     getFriendInvite() {
         return i;
     }
     getFriendInvitesFetching() {
-        return g;
+        return f;
     }
     canRevokeFriendInvite() {
-        return null != i && !A && !I;
+        return null != i && !I && !S;
     }
     getReceivedInstallationIdForInviteCode(e) {
-        return T.get(S(e));
+        return T.get(m(e));
     }
 }
-let C = new y(d.h, {
+let N = new O(c.h, {
     CONNECTION_OPEN: function () {
-        (h = {}), (p = {}), (E = {}), (m = {}), (i = null), (A = !1), (I = !1), (g = !1);
+        (A = {}), (_ = {}), (p = {}), (g = {}), (i = null), (I = !1), (S = !1), (f = !1);
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        delete h[t.id], delete p[t.id], delete E[t.id];
+        delete A[t.id], delete _[t.id], delete p[t.id];
     },
     FRIEND_INVITE_CREATE_SUCCESS: function (e) {
-        (m[e.invite.code] = _.A.createFromServer(e.invite)),
-            (i = s()(o()(u()(Object.values(m), "createdAt"))) ?? null),
-            (I = !1);
+        (g[e.invite.code] = h.A.createFromServer(e.invite)),
+            (i = a()(s()(d()(Object.values(g), "createdAt"))) ?? null),
+            (S = !1);
     },
     FRIEND_INVITE_CREATE_FAILURE: function () {
-        I = !1;
+        S = !1;
     },
     FRIEND_INVITE_REVOKE_SUCCESS: function (e) {
         null != e.invites &&
             e.invites.forEach((e) => {
-                null != m[e.code] && delete m[e.code];
+                null != g[e.code] && delete g[e.code];
             }),
-            (i = s()(o()(u()(Object.values(m), "createdAt"))) ?? null),
-            (A = !1);
+            (i = a()(s()(d()(Object.values(g), "createdAt"))) ?? null),
+            (I = !1);
     },
     INSTANT_INVITE_CREATE_SUCCESS: function (e) {
         let { channelId: t, invite: n } = e,
-            i = _.A.createFromServer(n);
-        i.targetType === f.yV.STREAM && null != i.targetUser
-            ? (null == p[t] && (p[t] = {}), (p[t][String(i.targetUser.id)] = i))
-            : i.targetType === f.yV.EMBEDDED_APPLICATION && null != i.targetApplication
-              ? (null == E[t] && (E[t] = {}), (E[t][i.targetApplication.id] = i))
-              : (h[t] = i);
+            i = h.A.createFromServer(n);
+        i.targetType === E.yV.STREAM && null != i.targetUser
+            ? (null == _[t] && (_[t] = {}), (_[t][String(i.targetUser.id)] = i))
+            : i.targetType === E.yV.EMBEDDED_APPLICATION && null != i.targetApplication
+              ? (null == p[t] && (p[t] = {}), (p[t][i.targetApplication.id] = i))
+              : (A[t] = i);
     },
     INSTANT_INVITE_CREATE_FAILURE: function (e) {
         let { channelId: t } = e;
-        h[t] = null;
+        A[t] = null;
     },
     INSTANT_INVITE_REVOKE_SUCCESS: function (e) {
         let { channelId: t } = e;
-        h[t] = null;
+        A[t] = null;
     },
     FRIEND_INVITE_REVOKE_REQUEST: function () {
-        A = !0;
-    },
-    FRIEND_INVITE_CREATE_REQUEST: function () {
         I = !0;
     },
+    FRIEND_INVITE_CREATE_REQUEST: function () {
+        S = !0;
+    },
     FRIEND_INVITES_FETCH_REQUEST: function () {
-        g = !0;
+        f = !0;
     },
     FRIEND_INVITES_FETCH_RESPONSE: function (e) {
-        (m = {}),
+        (g = {}),
             e.invites.forEach((e) => {
-                m[e.code] = _.A.createFromServer(e);
+                g[e.code] = h.A.createFromServer(e);
             }),
-            (i = s()(o()(u()(Object.values(m), "createdAt"))) ?? null),
-            (g = !1);
+            (i = a()(s()(d()(Object.values(g), "createdAt"))) ?? null),
+            (f = !1);
     },
     INSTANT_INVITE_CLEAR: function (e) {
-        delete h[e.channelId];
+        delete A[e.channelId];
     },
     INSTANT_INVITE_RECEIVED_INSTALLATION_ID_SET: function (e) {
-        (T = new Map(T)).set(S(e.inviteCode), e.receivedInstallationId);
+        (T = new Map(T)).set(m(e.inviteCode), e.receivedInstallationId);
     },
-    INSTANT_INVITE_RECEIVED_INSTALLATION_ID_CLEAR: N,
+    INSTANT_INVITE_RECEIVED_INSTALLATION_ID_CLEAR: C,
     INVITE_MODAL_CLOSE: function (e) {
         let { inviteCode: t } = e;
-        return null != t && N({ inviteCode: t });
+        return null != t && C({ inviteCode: t });
     },
     LOGOUT: function () {
         if (0 === T.size) return !1;

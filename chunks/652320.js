@@ -1,4 +1,3 @@
-"use strict";
-e.exports = function (e) {
-    return null == e;
+r.exports = function (r) {
+    return null == r;
 };

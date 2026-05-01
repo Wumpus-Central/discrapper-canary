@@ -1,75 +1,74 @@
-"use strict";
 n.d(t, {
-    $o: () => I,
-    Gd: () => E,
-    Mr: () => y,
-    RK: () => A,
-    Su: () => _,
-    VB: () => S,
-    Y5: () => h,
-    aw: () => m,
-    gc: () => T,
-    ii: () => p,
-    ob: () => g,
-    vI: () => N,
+    $o: () => f,
+    Gd: () => T,
+    Mr: () => C,
+    RK: () => N,
+    Su: () => E,
+    VB: () => m,
+    Y5: () => A,
+    aw: () => h,
+    gc: () => p,
+    ii: () => I,
+    ob: () => S,
+    vI: () => O,
 }),
     n(321073);
 var i = n(638504),
-    r = n(65412),
-    s = n(735438),
-    a = n.n(s),
-    o = n(803805),
-    l = n(873298),
-    u = n(813827),
+    a = n(65412),
+    r = n(735438),
+    s = n.n(r),
+    l = n(803805),
+    o = n(873298),
+    d = n(813827),
     c = n(355097),
-    d = n(652215);
-let _ = { readerFactory: (e) => new i.V(e, new TextDecoder("utf-8")) },
-    f = { [c.oD.PRELOADED_USER_SETTINGS]: l.nT, [c.oD.FRECENCY_AND_FAVORITES_SETTINGS]: o.aw };
-function h(e, t) {
-    return null != t && e in f ? p(f[e], t) : null;
+    _ = n(652215);
+let E = { readerFactory: (e) => new i.V(e, new TextDecoder("utf-8")) },
+    u = { [c.oD.PRELOADED_USER_SETTINGS]: o.nT, [c.oD.FRECENCY_AND_FAVORITES_SETTINGS]: l.aw };
+function A(e, t) {
+    return null != t && e in u ? I(u[e], t) : null;
 }
-function p(e, t) {
+function I(e, t) {
     if (null == t) return null;
-    let n = (0, r.A)(t);
+    let n = (0, a.A)(t);
     try {
-        return e.fromBinary(n, _);
+        return e.fromBinary(n, E);
     } catch (e) {
         throw Error(`Settings proto failed to deserialize (potentially corrupt): ${e}`);
     }
 }
-function E(e) {
-    return p(l.nT, e);
+function T(e) {
+    return I(o.nT, e);
 }
-function m(e, t) {
-    return g(f[e], t);
+function h(e, t) {
+    return S(u[e], t);
 }
-function g(e, t) {
-    return (0, r.C)(e.toBinary(t));
+function S(e, t) {
+    return (0, a.C)(e.toBinary(t));
 }
-function A(e, t, n) {
+function N(e, t, n) {
     for (let e in ((t = { ...t }), n)) delete t[e];
     return e.mergePartial(t, n), t;
 }
-function I(e, t, n) {
-    return (null == t || "null" === t) && (t = d.D0I), t in e.guilds || (e.guilds[t] = l.nx.create()), n(e.guilds[t]);
+function f(e, t, n) {
+    return (null == t || "null" === t) && (t = _.D0I), t in e.guilds || (e.guilds[t] = o.nx.create()), n(e.guilds[t]);
 }
-function T(e, t, n, i) {
-    var r;
-    return (r = (e) => S(e, n, i)), null == e.guilds && (e.guilds = l.KJ.create()), I(e.guilds, t, r);
+function p(e, t, n, i) {
+    var a;
+    return (a = (e) => m(e, n, i)), null == e.guilds && (e.guilds = o.KJ.create()), f(e.guilds, t, a);
 }
-function S(e, t, n) {
-    return t in e.channels || (e.channels[t] = l.Ju.create()), n(e.channels[t]);
+function m(e, t, n) {
+    return t in e.channels || (e.channels[t] = o.Ju.create()), n(e.channels[t]);
 }
-function N(e, t) {
-    null == e.versions && (e.versions = u.u.create());
+function O(e, t) {
+    null == e.versions && (e.versions = d.u.create());
     let n = 0;
     for (let e of t) {
         if (e.version <= n) throw Error("Migrations are out of order or there is a duplicate version");
         n = e.version;
     }
     let i = 0.1 > Math.random(),
-        r = !1,
-        s = [];
+        a = !1,
+        r = [];
     for (let n of t) {
         if (n.version <= e.versions.clientVersion) {
             i && n.cleanup?.();
@@ -80,15 +79,15 @@ function N(e, t) {
             n.cleanup?.();
             continue;
         }
-        (r = !0), null != n.cleanup && s.push(n.cleanup);
+        (a = !0), null != n.cleanup && r.push(n.cleanup);
     }
-    return { proto: e, isDirty: r, cleanupFuncs: s };
+    return { proto: e, isDirty: a, cleanupFuncs: r };
 }
-function y(e, t) {
+function C(e, t) {
     let n = Object.entries(e);
     if (n.length > t)
         for (
-            n = a()
+            n = s()
                 .sortBy(n, (e) => {
                     let [t, n] = e;
                     return n.recentUses[n.recentUses.length - 1];
@@ -99,7 +98,7 @@ function y(e, t) {
             n.pop();
     let i = {};
     for (let [e, t] of n) {
-        let n = o.zT.create();
+        let n = l.zT.create();
         (n.frecency = t.frecency),
             (n.recentUses = t.recentUses.filter((e) => null != e && e > 0).map(String)),
             (n.score = Math.round(t.score)),

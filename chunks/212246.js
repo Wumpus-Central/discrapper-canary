@@ -1,22 +1,21 @@
-"use strict";
-function i(e, t, n) {
-    var i = n.getRegistry(),
-        r = i.addTarget(e, t);
+function n(e, t, r) {
+    var n = r.getRegistry(),
+        i = n.addTarget(e, t);
     return [
-        r,
+        i,
         function () {
-            return i.removeTarget(r);
+            return n.removeTarget(i);
         },
     ];
 }
-function r(e, t, n) {
-    var i = n.getRegistry(),
-        r = i.addSource(e, t);
+function i(e, t, r) {
+    var n = r.getRegistry(),
+        i = n.addSource(e, t);
     return [
-        r,
+        i,
         function () {
-            return i.removeSource(r);
+            return n.removeSource(i);
         },
     ];
 }
-n.d(t, { V: () => r, l: () => i });
+r.d(t, { V: () => i, l: () => n });

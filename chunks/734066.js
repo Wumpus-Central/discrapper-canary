@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { BW: () => p, J: () => m, L_: () => c, Pm: () => d, Vr: () => E, cx: () => h, sw: () => _ });
+n.d(t, { BW: () => I, J: () => h, L_: () => c, Pm: () => _, Vr: () => T, cx: () => A, sw: () => E });
 var i = n(17928),
-    r = n(945810),
-    s = n(51760),
-    a = n(287809),
-    o = n(927578),
-    l = n(915618),
-    u = n(788868);
-let c = (0, r.mj)({
+    a = n(945810),
+    r = n(51760),
+    s = n(287809),
+    l = n(927578),
+    o = n(915618),
+    d = n(788868);
+let c = (0, a.mj)({
     kind: "user",
     name: "2026-03-clips-experiment",
     defaultConfig: {
@@ -45,34 +44,34 @@ let c = (0, r.mj)({
         },
     },
 });
-function d() {
-    if (!(0, l.A)(s.Ay)) return !1;
-    let e = f(a.default.getCurrentUser()),
+function _() {
+    if (!(0, o.A)(r.Ay)) return !1;
+    let e = u(s.default.getCurrentUser()),
         { enableClips: t } = c.getConfig({ location: "areClipsEnabled" });
     return e || t;
 }
-function _() {
-    let e = (0, l.A)(s.Ay),
-        t = (0, i.bG)([a.default], () => f(a.default.getCurrentUser())),
+function E() {
+    let e = (0, o.A)(r.Ay),
+        t = (0, i.bG)([s.default], () => u(s.default.getCurrentUser())),
         { enableClips: n } = c.getConfig({ location: "useEnableClips" });
     return (n || t) && e;
 }
-function f(e) {
-    return o.Ay.isPremiumAtLeast(e?.premiumType, u.PremiumTypes.TIER_2);
+function u(e) {
+    return l.Ay.isPremiumAtLeast(e?.premiumType, d.PremiumTypes.TIER_2);
 }
-function h() {
+function A() {
     let { enableScreenshotKeybind: e } = c.getConfig({ location: "isScreenshotKeybindEnabled" });
     return e;
 }
-function p() {
+function I() {
     let { enableScreenshotKeybind: e } = c.useConfig({ location: "useScreenshotKeybindEnabled" });
     return e;
 }
-function E() {
+function T() {
     let { enableVoiceOnlyClips: e } = c.getConfig({ location: "areVoiceOnlyClipsEnabled" });
     return e;
 }
-function m() {
+function h() {
     let { enableAdvancedSignals: e } = c.getConfig({ location: "areAdvancedSignalsEnabled" });
     return e;
 }

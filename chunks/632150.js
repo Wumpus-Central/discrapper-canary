@@ -1,38 +1,39 @@
-"use strict";
-n.d(t, { A: () => _ });
-var i = n(627968);
-n(64700);
-var r = n(320448),
-    s = n(661531),
-    a = n(192308),
-    o = n(834730),
-    l = n(286320),
-    u = n(224850),
-    c = n(778712),
-    d = n(123139);
-function _(e) {
-    let { subtitle: t } = e,
-        _ = (0, l.b)();
+s.d(a, { A: () => m });
+var i = s(627968);
+s(64700);
+var n = s(320448),
+    t = s(661531),
+    l = s(192308),
+    r = s(834730),
+    c = s(286320),
+    o = s(224850),
+    d = s(778712),
+    u = s(123139);
+function m(e) {
+    let { subtitle: a } = e,
+        m = (0, c.b)();
     return (0, i.jsxs)("button", {
-        className: d.kL,
+        className: u.kL,
         onClick: function () {
-            (0, a.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("33902"), n.e("99709"), n.e("3370"), n.e("69595")]).then(
-                    n.bind(n, 526710),
+            (0, l.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([s.e("33902"), s.e("3370"), s.e("99709"), s.e("69595")]).then(
+                    s.bind(s, 526710),
                 );
-                return (t) => (0, i.jsx)(e, { ...t });
+                return (a) => (0, i.jsx)(e, { ...a });
             });
         },
         children: [
-            _.length > 1 &&
+            m.length > 1 &&
                 (0, i.jsx)("div", {
-                    className: d.zc,
-                    children: _.slice(0, 3).map((e, t, n) =>
-                        (0, i.jsx)(u.n, { affinity: e, applyMask: t !== n.length - 1, size: c._3.SIZE_20 }, e.id),
-                    ),
+                    className: u.zc,
+                    children: m
+                        .slice(0, 3)
+                        .map((e, a, s) =>
+                            (0, i.jsx)(o.n, { affinity: e, applyMask: a !== s.length - 1, size: d._3.SIZE_20 }, e.id),
+                        ),
                 }),
-            (0, i.jsx)(o.E, { variant: "text-md/medium", color: "text-default", className: d.VA, children: t }),
-            (0, i.jsx)(r._, { size: "sm", color: s.A.colors.INTERACTIVE_ICON_DEFAULT }),
+            (0, i.jsx)(r.E, { variant: "text-md/medium", color: "text-default", className: u.VA, children: a }),
+            (0, i.jsx)(n._, { size: "sm", color: t.A.colors.INTERACTIVE_ICON_DEFAULT }),
         ],
     });
 }

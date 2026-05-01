@@ -1,117 +1,116 @@
-"use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => E });
 var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
+    l = n(64700),
+    r = n(503698),
+    a = n.n(r),
     o = n(17928),
-    l = n(268218),
-    u = n(776231),
-    c = n(614269),
-    d = n(829097),
-    _ = n(734057),
-    f = n(401648),
-    h = n(939249),
-    p = n(734066),
-    E = n(274372),
-    m = n(794905),
-    g = n(16590),
-    A = n(375708),
-    I = n(310882);
-function T(e) {
-    let { attachment: t, channelId: n, messageId: s } = e,
-        { enableAdvancedSignals: a } = p.L_.useConfig({ location: "DistributedClipShareCTA" }),
-        l = t.clip_remote_id,
-        u = (0, o.bG)([E.A], () => (null != l ? E.A.getClipByRemoteId(l) : null)),
-        { onShareClick: c } = (0, m.A)(n),
-        d = (0, o.bG)([E.A], () => null != u && null != n && null != l && E.A.wasClipSharedInChannel(l, n)),
-        _ = r.useCallback(
+    s = n(268218),
+    d = n(776231),
+    u = n(614269),
+    h = n(829097),
+    c = n(734057),
+    m = n(401648),
+    p = n(939249),
+    g = n(734066),
+    x = n(274372),
+    A = n(794905),
+    f = n(16590),
+    y = n(985018),
+    w = n(310882);
+function C(e) {
+    let { attachment: t, channelId: n, messageId: r } = e,
+        { enableAdvancedSignals: a } = g.L_.useConfig({ location: "DistributedClipShareCTA" }),
+        s = t.clip_remote_id,
+        d = (0, o.bG)([x.A], () => (null != s ? x.A.getClipByRemoteId(s) : null)),
+        { onShareClick: u } = (0, A.A)(n),
+        h = (0, o.bG)([x.A], () => null != d && null != n && null != s && x.A.wasClipSharedInChannel(s, n)),
+        c = l.useCallback(
             (e) => {
-                null != u &&
-                    (e.stopPropagation(), c({ clips: [u], messageReference: { channel_id: n, message_id: s } }));
+                null != d &&
+                    (e.stopPropagation(), u({ clips: [d], messageReference: { channel_id: n, message_id: r } }));
             },
-            [c, u, n, s],
+            [u, d, n, r],
         );
-    return !a || null == u || d
+    return !a || null == d || h
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   " \xb7 ",
-                  (0, i.jsx)(h.D, {
+                  (0, i.jsx)(p.D, {
                       tag: "span",
-                      className: I.s,
-                      onClick: _,
-                      children: A.intl.string(g.default.YKst58),
+                      className: w.s,
+                      onClick: c,
+                      children: y.intl.string(f.default.YKst58),
                   }),
               ],
           });
 }
-var S = n(696016),
-    N = n(581874);
-let y = (0, l.Fe)({
+var I = n(696016),
+    v = n(581874);
+let j = (0, s.Fe)({
     createPromise: () =>
         Promise.all([n.e("99245"), n.e("57174"), n.e("84971"), n.e("30920"), n.e("78010"), n.e("91652")]).then(
             n.bind(n, 664111),
         ),
     webpackId: 664111,
     name: "DiscordVideoPlayer",
-    renderLoader: () => (0, i.jsx)("div", { className: N.Lq }),
+    renderLoader: () => (0, i.jsx)("div", { className: v.Lq }),
 });
-function C(e) {
+function E(e) {
     let {
             attachment: t,
             posterUrl: n,
-            className: s,
-            active: l = !1,
-            autoPlay: h,
-            src: p,
-            embed: E = !1,
-            fillContainer: m = !1,
-            minWidth: g = 500,
-            maxWidth: A = 1 / 0,
-            maxHeight: I = 1 / 0,
-            channelId: C,
-            messageId: v,
-            showTextContent: O = A >= 250,
-            showParticipants: R = !0,
-            volume: b,
-            autoMute: D,
-            onVolumeChange: L,
-            onMutedChange: w,
-            onClick: M,
-            onContextMenu: P,
+            className: r,
+            active: s = !1,
+            autoPlay: p,
+            src: g,
+            embed: x = !1,
+            fillContainer: A = !1,
+            minWidth: f = 500,
+            maxWidth: y = 1 / 0,
+            maxHeight: w = 1 / 0,
+            channelId: E,
+            messageId: M,
+            showTextContent: S = y >= 250,
+            showParticipants: _ = !0,
+            volume: N,
+            autoMute: O,
+            onVolumeChange: b,
+            onMutedChange: P,
+            onClick: V,
+            onContextMenu: T,
         } = e,
-        x = t.width ?? 0,
-        U = t.height ?? 0,
-        k = (0, o.bG)([_.A], () => _.A.getBasicChannel(C)?.guild_id, [C]),
-        G = x > 0 && U > 0 ? x / U : 16 / 9,
-        F = Math.min(x > 0 ? x : g, A),
-        V = F / G;
-    V > I && (F = (V = I) * G), F < g && (V = (F = g) / G);
-    let B = Math.round(Math.min(F, A)),
-        H = Math.round(Math.min(V, I)),
-        j = x > 0 && U > 0 ? Math.min(B / x, H / U, 1) : 1,
-        Y = (0, u.AE)({ src: n, width: Math.round(x * j), height: Math.round(U * j) }),
-        [W, K] = r.useState(!1),
-        z = (0, d._)({ location: S.Mu }).externalAnalyticsEnabled,
-        $ = r.useMemo(
+        D = t.width ?? 0,
+        L = t.height ?? 0,
+        U = (0, o.bG)([c.A], () => c.A.getBasicChannel(E)?.guild_id, [E]),
+        R = D > 0 && L > 0 ? D / L : 16 / 9,
+        k = Math.min(D > 0 ? D : f, y),
+        F = k / R;
+    F > w && (k = (F = w) * R), k < f && (F = (k = f) / R);
+    let H = Math.round(Math.min(k, y)),
+        W = Math.round(Math.min(F, w)),
+        G = D > 0 && L > 0 ? Math.min(H / D, W / L, 1) : 1,
+        X = (0, d.AE)({ src: n, width: Math.round(D * G), height: Math.round(L * G) }),
+        [z, B] = l.useState(!1),
+        Y = (0, h._)({ location: I.Mu }).externalAnalyticsEnabled,
+        Q = l.useMemo(
             () =>
-                z
+                Y
                     ? {
-                          contentId: p,
-                          videoStreamType: c.u.isHlsUrl(p) ? "hls" : "mp4",
+                          contentId: g,
+                          videoStreamType: u.u.isHlsUrl(g) ? "hls" : "mp4",
                           contentType: "clips",
                           title: t.title,
                       }
                     : void 0,
-            [z, p, t.title],
+            [Y, g, t.title],
         ),
-        q = r.useCallback(
+        Z = l.useCallback(
             (e) => {
-                let { playerState: n, isControlBarExpanded: r } = e;
-                return (0, i.jsx)(f.A, {
+                let { playerState: n, isControlBarExpanded: l } = e;
+                return (0, i.jsx)(m.A, {
                     createdAt: null != t.clip_created_at ? Date.parse(t.clip_created_at) : void 0,
-                    participantIds: R
+                    participantIds: _
                         ? (t.clip_participants?.map((e) => {
                               let { id: t } = e;
                               return t;
@@ -119,46 +118,46 @@ function C(e) {
                         : [],
                     applicationId: t.application?.id,
                     title: t.title,
-                    guildId: k,
+                    guildId: U,
                     playerState: n,
-                    isControlBarExpanded: r,
-                    isFullScreen: W,
-                    showTextContent: O,
-                    shareCTA: null != v && null != C && (0, i.jsx)(T, { attachment: t, messageId: v, channelId: C }),
+                    isControlBarExpanded: l,
+                    isFullScreen: z,
+                    showTextContent: S,
+                    shareCTA: null != M && null != E && (0, i.jsx)(C, { attachment: t, messageId: M, channelId: E }),
                 });
             },
-            [t, k, W, R, O, C, v],
+            [t, U, z, _, S, E, M],
         );
     return (0, i.jsx)("div", {
-        className: a()(N.kL, { [N.HA]: m }, s),
+        className: a()(v.kL, { [v.HA]: A }, r),
         onClick: (e) => e.stopPropagation(),
-        onKeyUp: E ? (e) => e.stopPropagation() : void 0,
-        onKeyDown: E ? (e) => e.stopPropagation() : void 0,
-        onContextMenu: P,
-        style: m ? void 0 : { width: B, height: H },
-        children: (0, i.jsx)(y, {
+        onKeyUp: x ? (e) => e.stopPropagation() : void 0,
+        onKeyDown: x ? (e) => e.stopPropagation() : void 0,
+        onContextMenu: T,
+        style: A ? void 0 : { width: H, height: W },
+        children: (0, i.jsx)(j, {
             crossOrigin: null,
-            src: p,
+            src: g,
             downloadUrl: t.url,
             downloadContentType: t.content_type,
-            poster: Y,
+            poster: X,
             posterPlaceholder: t.placeholder,
             posterPlaceholderVersion: t.placeholder_version,
-            active: l,
-            autoplay: h,
-            initialVolume: b,
-            initialMuted: D,
-            onVolumeChange: L,
-            onMutedChange: w,
+            active: s,
+            autoplay: p,
+            initialVolume: N,
+            initialMuted: O,
+            onVolumeChange: b,
+            onMutedChange: P,
             orientation: "landscape",
             loadingSpinnerPosition: "center",
-            renderPersistentOverlay: q,
+            renderPersistentOverlay: Z,
             parentTransitionState: null,
-            onFullscreenChange: K,
-            onClick: M,
+            onFullscreenChange: B,
+            onClick: V,
             withVideoHalo: !0,
-            objectFit: m ? "cover" : void 0,
-            muxContentMetadata: $,
+            objectFit: A ? "cover" : void 0,
+            muxContentMetadata: Q,
         }),
     });
 }

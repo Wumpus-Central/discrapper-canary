@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(17928),
-    r = n(212455),
-    s = n(71393);
-function a() {
-    return (0, i.yK)([r.A, s.A], () =>
+i.d(u, { A: () => r });
+var e = i(17928),
+    n = i(212455),
+    d = i(71393);
+function r() {
+    return (0, e.yK)([n.A, d.A], () =>
         (function () {
-            let [e, t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [r.A, s.A],
-                n = e.computeGuildIds(),
-                i = t.getGuilds();
-            return n.filter((e) => null == i[e]);
-        })([r.A, s.A]),
+            let [t, u] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [n.A, d.A],
+                i = t.computeGuildIds(),
+                e = u.getGuilds();
+            return i.filter((t) => null == e[t]);
+        })([n.A, d.A]),
     );
 }

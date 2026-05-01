@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { Ay: () => p, Gy: () => h, vG: () => E });
+n.d(t, { Ay: () => I, Gy: () => A, vG: () => T });
 var i,
-    r = n(17928),
-    s = n(734057),
-    a = n(71393),
-    o = n(576705),
-    l = n(287809),
-    u = n(977997),
-    c = n(871237),
-    d = n(170148),
-    _ = n(166352),
-    f = n(652215),
-    h =
+    a = n(17928),
+    r = n(734057),
+    s = n(71393),
+    l = n(576705),
+    o = n(287809),
+    d = n(977997),
+    c = n(147036),
+    _ = n(170148),
+    E = n(166352),
+    u = n(652215),
+    A =
         (((i = {})[(i.CAN_JOIN = 0)] = "CAN_JOIN"),
         (i[(i.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION"),
         (i[(i.NO_CHANNEL_CONNECT_PERMISSION = 2)] = "NO_CHANNEL_CONNECT_PERMISSION"),
@@ -24,62 +23,62 @@ var i,
         (i[(i.IS_AFK_CHANNEL = 9)] = "IS_AFK_CHANNEL"),
         (i[(i.NO_GUILD = 10)] = "NO_GUILD"),
         i);
-function p(e) {
+function I(e) {
     let {
         userId: t,
         activity: n,
         application: i,
-        channelId: r,
-        currentUser: s,
-        isActivitiesEnabledForCurrentPlatform: a,
-        ChannelStore: o,
-        VoiceStateStore: l,
-        PermissionStore: u,
-        GuildStore: d,
+        channelId: a,
+        currentUser: r,
+        isActivitiesEnabledForCurrentPlatform: s,
+        ChannelStore: l,
+        VoiceStateStore: o,
+        PermissionStore: d,
+        GuildStore: _,
     } = e;
     if (null == t) return 8;
-    if (s?.nsfwAllowed === !1 && i?.embeddedActivityConfig?.requires_age_gate === !0) return 7;
-    if (!a) return 5;
-    if (!(0, _.A)(i?.embeddedActivityConfig?.supported_platforms)) return 6;
-    let h = null != r ? r : l.getVoiceStateForSession(t, n?.session_id)?.channelId;
-    if (null == h) return 4;
-    let p = o.getChannel(r);
-    if (null == p) return 4;
-    if (!p.isPrivate()) {
-        let e = p.getGuildId();
+    if (r?.nsfwAllowed === !1 && i?.embeddedActivityConfig?.requires_age_gate === !0) return 7;
+    if (!s) return 5;
+    if (!(0, E.A)(i?.embeddedActivityConfig?.supported_platforms)) return 6;
+    let A = null != a ? a : o.getVoiceStateForSession(t, n?.session_id)?.channelId;
+    if (null == A) return 4;
+    let I = l.getChannel(a);
+    if (null == I) return 4;
+    if (!I.isPrivate()) {
+        let e = I.getGuildId();
         if (null == e) return 10;
-        let t = d.getGuild(e);
-        if (t?.afkChannelId === p.id) return 9;
-        let n = l.getCurrentClientVoiceChannelId(p.getGuildId()) === h,
-            i = (0, c.Pd)(p, l, d),
-            r = u.can(f.xBc.CONNECT, p);
-        if (!u.can(f.xBc.USE_EMBEDDED_ACTIVITIES, p)) return 1;
-        if (p.isVocal() && !n) {
+        let t = _.getGuild(e);
+        if (t?.afkChannelId === I.id) return 9;
+        let n = o.getCurrentClientVoiceChannelId(I.getGuildId()) === A,
+            i = (0, c.Pd)(I, o, _),
+            a = d.can(u.xBc.CONNECT, I);
+        if (!d.can(u.xBc.USE_EMBEDDED_ACTIVITIES, I)) return 1;
+        if (I.isVocal() && !n) {
             if (i) return 3;
-            if (!r) return 2;
+            if (!a) return 2;
         }
     }
     return 0;
 }
-function E(e) {
+function T(e) {
     let { userId: t, activity: n, channelId: i, application: c } = e,
-        _ = (0, d.z)(),
-        f = (0, r.bG)([l.default], () => l.default.getCurrentUser());
-    return (0, r.bG)(
-        [s.A, u.A, o.A, a.A],
+        E = (0, _.z)(),
+        u = (0, a.bG)([o.default], () => o.default.getCurrentUser());
+    return (0, a.bG)(
+        [r.A, d.A, l.A, s.A],
         () =>
-            p({
+            I({
                 userId: t,
                 activity: n,
                 application: c,
                 channelId: i,
-                currentUser: f,
-                isActivitiesEnabledForCurrentPlatform: _,
-                ChannelStore: s.A,
-                VoiceStateStore: u.A,
-                PermissionStore: o.A,
-                GuildStore: a.A,
+                currentUser: u,
+                isActivitiesEnabledForCurrentPlatform: E,
+                ChannelStore: r.A,
+                VoiceStateStore: d.A,
+                PermissionStore: l.A,
+                GuildStore: s.A,
             }),
-        [n, c, i, f, _, t],
+        [n, c, i, u, E, t],
     );
 }

@@ -152,26 +152,20 @@ let L = {
             });
     },
     async authenticatePasswordless(e) {
-        let {
-            authenticateFunc: t,
-            conditionalMediationAbortController: n,
-            source: i,
-            giftCodeSKUId: r,
-            isMultiAccount: s,
-        } = e;
+        let { authenticateFunc: t, conditionalMediationAbortController: n, source: i, giftCodeSKUId: r } = e;
         n?.abort("Starting non-conditional mediation"), _.h.dispatch({ type: "PASSWORDLESS_START" });
         try {
             let { challenge: e, ticket: n } = await (0, f.YS)(),
-                a = await t(e);
+                s = await t(e);
             try {
-                await this.loginWebAuthn({ ticket: n, credential: a, source: i, giftCodeSKUId: r, isMultiAccount: s });
+                await this.loginWebAuthn({ ticket: n, credential: s, source: i, giftCodeSKUId: r });
             } catch (e) {
                 throw (
                     (e instanceof d.LG &&
                         null != e.status &&
                         e.status >= 400 &&
                         e.status < 500 &&
-                        (await m.A.signalUnknownCredential(a)),
+                        (await m.A.signalUnknownCredential(s)),
                     e)
                 );
             }
@@ -180,7 +174,7 @@ let L = {
         }
     },
     loginWebAuthn(e) {
-        let { ticket: t, credential: n, source: i, giftCodeSKUId: r, isMultiAccount: a } = e;
+        let { ticket: t, credential: n, source: i, giftCodeSKUId: r } = e;
         return p.A.post({
             url: S.Rsh.WEBAUTHN_CONDITIONAL_UI_LOGIN,
             body: { credential: n, ticket: t, source: i, giftCodeSKUId: r },
@@ -193,7 +187,7 @@ let L = {
                     body: { token: t, user_id: n, required_actions: i },
                 } = e;
                 _.h.dispatch({ type: "LOGIN_ATTEMPTED", user_id: n, required_actions: i }),
-                    a ? this.switchAccountToken(t) : _.h.dispatch({ type: "LOGIN_SUCCESS", token: t });
+                    _.h.dispatch({ type: "LOGIN_SUCCESS", token: t });
             })
             .catch((e) => {
                 if (e instanceof o.oh) {

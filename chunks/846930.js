@@ -1,42 +1,41 @@
-"use strict";
 n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(868883);
-let o = () => (0, i.jsx)("div", { className: a.jH }),
-    l = () => (0, i.jsx)("div", { className: a.L1 }),
-    u = (e) => {
+var a = n(503698),
+    r = n.n(a),
+    s = n(868883);
+let l = () => (0, i.jsx)("div", { className: s.jH }),
+    o = () => (0, i.jsx)("div", { className: s.L1 }),
+    d = (e) => {
         let { width: t } = e;
         return (0, i.jsxs)("div", {
-            className: a.Ix,
+            className: s.Ix,
             children: [
-                (0, i.jsx)("div", { className: a.p }),
-                (0, i.jsx)("div", { className: a.HA, style: { width: `${t}px` } }),
+                (0, i.jsx)("div", { className: s.p }),
+                (0, i.jsx)("div", { className: s.HA, style: { width: `${t}px` } }),
             ],
         });
     },
     c = (e) => {
         let { withBannerPadding: t } = e;
         return (0, i.jsxs)("div", {
-            className: s()(a.kL, { [a.o5]: t }),
+            className: r()(s.kL, { [s.o5]: t }),
             children: [
-                (0, i.jsx)(l, {}),
-                (0, i.jsx)(u, { width: 100 }),
-                (0, i.jsx)(u, { width: 74 }),
-                (0, i.jsx)(u, { width: 100 }),
-                (0, i.jsx)(u, { width: 70 }),
-                (0, i.jsx)(u, { width: 112 }),
-                (0, i.jsx)(u, { width: 175 }),
                 (0, i.jsx)(o, {}),
+                (0, i.jsx)(d, { width: 100 }),
+                (0, i.jsx)(d, { width: 74 }),
+                (0, i.jsx)(d, { width: 100 }),
+                (0, i.jsx)(d, { width: 70 }),
+                (0, i.jsx)(d, { width: 112 }),
+                (0, i.jsx)(d, { width: 175 }),
                 (0, i.jsx)(l, {}),
-                (0, i.jsx)(u, { width: 100 }),
-                (0, i.jsx)(u, { width: 74 }),
-                (0, i.jsx)(u, { width: 100 }),
-                (0, i.jsx)(u, { width: 70 }),
-                (0, i.jsx)(u, { width: 112 }),
-                (0, i.jsx)(u, { width: 56 }),
+                (0, i.jsx)(o, {}),
+                (0, i.jsx)(d, { width: 100 }),
+                (0, i.jsx)(d, { width: 74 }),
+                (0, i.jsx)(d, { width: 100 }),
+                (0, i.jsx)(d, { width: 70 }),
+                (0, i.jsx)(d, { width: 112 }),
+                (0, i.jsx)(d, { width: 56 }),
             ],
         });
     };

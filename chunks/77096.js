@@ -1,3 +1,3 @@
 p.exports = JSON.parse(
-    '{"u72Prd":["透過 Nitro 訂閱以 HD 解析度進行直播"],"uwMBDo":["分享應用程式音訊"],"3wwZ/Q":["開始直播"],"OsS9Ll":["停止直播"],"j+eAMQ":["直播音訊"],"/XSr8v":["直播模式"],"ibH7vy":["平衡畫質和效能 (",[1,"resolution"],"p、",[1,"fps"],"fps)"],"2qmQ8N":["預設"],"q4gYBi":["看影片和玩遊戲所使用的模式 (",[1,"resolution"],"p、",[1,"fps"],"fps)"],"nMcXo1":["高畫質"],"fN0UQY":["已為運作速度較慢的裝置進行最佳化 (",[1,"resolution"],"p、",[1,"fps"],"fps)"],"5eO4/m":["效能"],"CrNjqp":["直播設定"]}',
+    '{"u72Prd":["透過 Nitro 訂閱以 HD 解析度進行直播"],"3wwZ/Q":["開始直播"],"OsS9Ll":["停止直播"],"j+eAMQ":["直播音訊"],"/XSr8v":["直播模式"],"2qmQ8N":["預設"],"CrNjqp":["直播設定"]}',
 );

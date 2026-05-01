@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { P: () => o });
-var i = n(816885),
-    r = n(611886),
-    s = n(251874);
-function a(e, t, n) {
+r.d(t, { P: () => u });
+var n = r(816885),
+    i = r(611886),
+    o = r(251874);
+function a(e, t, r) {
     return (
-        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
+        t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
         e
     );
 }
-var o = (function () {
+var u = (function () {
     var e;
     function t(e) {
-        var n = this;
+        var r = this;
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         a(
             this,
             "hooks",
-            (0, r.i)({
+            (0, i.i)({
                 dropTarget: function (e, t) {
-                    n.clearDropTarget(),
-                        (n.dropTargetOptions = t),
-                        (0, s.i)(e) ? (n.dropTargetRef = e) : (n.dropTargetNode = e),
-                        n.reconnect();
+                    r.clearDropTarget(),
+                        (r.dropTargetOptions = t),
+                        (0, o.i)(e) ? (r.dropTargetRef = e) : (r.dropTargetNode = e),
+                        r.reconnect();
                 },
             }),
         ),
@@ -98,7 +97,7 @@ var o = (function () {
             {
                 key: "didOptionsChange",
                 value: function () {
-                    return !(0, i.b)(this.lastConnectedDropTargetOptions, this.dropTargetOptions);
+                    return !(0, n.b)(this.lastConnectedDropTargetOptions, this.dropTargetOptions);
                 },
             },
             {
@@ -121,12 +120,12 @@ var o = (function () {
             },
         ]),
         (function (e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1),
-                    (i.configurable = !0),
-                    "value" in i && (i.writable = !0),
-                    Object.defineProperty(e, i.key, i);
+            for (var r = 0; r < t.length; r++) {
+                var n = t[r];
+                (n.enumerable = n.enumerable || !1),
+                    (n.configurable = !0),
+                    "value" in n && (n.writable = !0),
+                    Object.defineProperty(e, n.key, n);
             }
         })(t.prototype, e),
         t

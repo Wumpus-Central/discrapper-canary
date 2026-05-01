@@ -1,3 +1,3 @@
-e.exports = JSON.parse(
-    '{"odtr7f":["W\xe4hle ein voreingestelltes Farbschema oder erstelle dein eigenes. Alle Mitglieder sehen dieses Farbschema, wenn sie den Server \xf6ffnen, und es passt sich ihrem hellen oder dunklen Schema an. ",[8,"$link",["Mehr erfahren"],[[1,"articleUrl"]]]],"XhiIAu":["Dadurch \xe4ndert sich, wie dein Server f\xfcr alle Mitglieder aussieht."],"aZpFFn":["Server-Farbschema aktivieren"],"jSrqR2":["Voreinstellungen"],"HkvkHP":["Die Einstellungen aller Mitglieder f\xfcr ein helles oder dunkles Farbschema werden f\xfcr sie angezeigt."],"zry4l5":["Vorschau des Schemas"],"Ck5zxP":["W\xe4hle dein Farbschema"],"/6NbRv":["Server-Farbschema"]}',
+s.exports = JSON.parse(
+    '{"jSrqR2":["Voreinstellungen"],"zry4l5":["Vorschau des Schemas"],"/6NbRv":["Server-Farbschema"]}',
 );

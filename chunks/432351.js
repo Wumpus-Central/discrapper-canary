@@ -29,7 +29,6 @@ class l extends i.A {
     enable() {
         return Promise.resolve();
     }
-    setAudioMixerOptions(e) {}
     setInputVolume(e) {}
     setOutputVolume(e) {}
     getAudioInputDevices() {

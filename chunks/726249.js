@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { HI: () => p, HU: () => h, cu: () => E, iA: () => _, sF: () => d });
+n.d(t, { HI: () => I, HU: () => A, cu: () => T, iA: () => E, sF: () => _ });
 var i = n(64700),
-    r = n(942381),
-    s = n(265690),
-    a = n(121894);
-let o = { base: n(723702).isPlatformEmbedded ? void 0 : "Discord" },
-    l = 0,
-    u = { count: 3, onlyWhenBlurred: !1, interval: 1e3 },
-    c = (0, s.h)(() => ({ titles: [o], notificationCount: void 0, flashQueue: [] }));
-function d(e) {
-    (0, a.r)(() => c.setState({ notificationCount: e }));
-}
+    a = n(942381),
+    r = n(265690),
+    s = n(121894);
+let l = { base: n(723702).isPlatformEmbedded ? void 0 : "Discord" },
+    o = 0,
+    d = { count: 3, onlyWhenBlurred: !1, interval: 1e3 },
+    c = (0, r.h)(() => ({ titles: [l], notificationCount: void 0, flashQueue: [] }));
 function _(e) {
-    let t = { ...u, ...e, id: l++ };
+    (0, s.r)(() => c.setState({ notificationCount: e }));
+}
+function E(e) {
+    let t = { ...d, ...e, id: o++ };
     return (
         (t.count = Math.max(t.count, t.messages.length)),
         c.setState((e) => ({ flashQueue: [...e.flashQueue, t] })),
-        () => f(t.id)
+        () => u(t.id)
     );
 }
-function f(e) {
+function u(e) {
     c.setState((t) => ({ flashQueue: t.flashQueue.filter((t) => t.id !== e) }));
 }
-function h(e) {
+function A(e) {
     i.useEffect(
         () => (
-            (0, a.r)(() => c.setState((t) => ({ titles: [e, ...t.titles] }))),
+            (0, s.r)(() => c.setState((t) => ({ titles: [e, ...t.titles] }))),
             () => {
-                (0, a.r)(() => c.setState((t) => ({ titles: t.titles.filter((t) => t !== e) })));
+                (0, s.r)(() => c.setState((t) => ({ titles: t.titles.filter((t) => t !== e) })));
             }
         ),
         [...Object.values(e)],
     );
 }
-function p(e) {
-    return h(e), null;
+function I(e) {
+    return A(e), null;
 }
-function E() {
+function T() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     i.useEffect(() => {
         function e() {
@@ -52,9 +51,9 @@ function E() {
                 let { flashQueue: t } = e,
                     n = (function (e) {
                         let t, n, i;
-                        for (let r of e.titles) {
+                        for (let a of e.titles) {
                             if (null != t && null != n) break;
-                            (t = t ?? r.base), (n = n ?? r.location), (i = i ?? r.subsection);
+                            (t = t ?? a.base), (n = n ?? a.location), (i = i ?? a.subsection);
                         }
                         return [t, i, n];
                     })(e)
@@ -65,34 +64,34 @@ function E() {
                         return null == t || 0 === t ? "" : t < 0 ? "• " : `(${t}) `;
                     })(e);
                 return [`${i}${n}`, t[0]];
-            }, r.x),
-            [n, s] = i.useState(!1),
-            a = i.useRef(0),
-            o = t?.messages[a.current % t.messages.length];
+            }, a.x),
+            [n, r] = i.useState(!1),
+            s = i.useRef(0),
+            l = t?.messages[s.current % t.messages.length];
         return (
             i.useEffect(() => {
                 if (null == t) {
-                    (a.current = 0), s(!1);
+                    (s.current = 0), r(!1);
                     return;
                 }
                 if (document.hasFocus() && t.onlyWhenBlurred) {
-                    f(t.id), s(!1);
+                    u(t.id), r(!1);
                     return;
                 }
                 let e = setInterval(() => {
-                    if (a.current >= t.count) {
-                        f(t.id), s(!1);
+                    if (s.current >= t.count) {
+                        u(t.id), r(!1);
                         return;
                     }
-                    s((e) => !e || ((a.current += 1), !1));
+                    r((e) => !e || ((s.current += 1), !1));
                 }, t.interval);
                 return () => clearInterval(e);
             }, [t]),
-            n ? o : e
+            n ? l : e
         );
     })();
     i.useEffect(() => {
-        let n = t === o.base;
+        let n = t === l.base;
         (e && n) || (document.title = t);
     }, [e, t]);
 }

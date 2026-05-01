@@ -456,7 +456,6 @@ var x =
         (r.GAMESCOPE_CAPTURE = "gamescope_capture"),
         (r.ASYNC_VIDEO_INPUT_DEVICE_INIT = "async_video_input_device_init"),
         (r.PORT_AWARE_LATENCY_TESTING = "port_aware_latency_testing"),
-        (r.SPATIAL_AUDIO = "spatial_audio"),
         r),
     V =
         (((s = {})[(s.Started = 0)] = "Started"),
@@ -872,9 +871,6 @@ class H extends T.A {
     }
     setLocalMute(e, t) {
         (this.localMutes[e] = t), this.conn.setLocalMute(e, t), this.emit(d.yq.LocalMute, e, t);
-    }
-    setUserPosition(e, t) {
-        this.conn.setUserPosition?.(e, t);
     }
     fastUdpReconnect() {
         null != this.conn.fastUdpReconnect && ((this.numFastUdpReconnects += 1), this.conn.fastUdpReconnect());
@@ -1961,8 +1957,6 @@ class er extends l.A {
                 return (0, L.$b)(x.ASYNC_VIDEO_INPUT_DEVICE_INIT);
             case N.O5.PORT_AWARE_LATENCY_TESTING:
                 return (0, L.$b)(x.PORT_AWARE_LATENCY_TESTING);
-            case N.O5.SPATIAL_AUDIO:
-                return (0, L.$b)(x.SPATIAL_AUDIO);
             case N.O5.DIAGNOSTICS:
             case N.O5.NATIVE_PING:
             case N.O5.AUTOMATIC_VAD:
@@ -2019,9 +2013,6 @@ class er extends l.A {
     }
     enable() {
         return Promise.resolve();
-    }
-    setAudioMixerOptions(e) {
-        (0, L.$b)(x.SPATIAL_AUDIO) && (0, L.lE)().setTransportOptions({ audioMixerOptions: e });
     }
     setAudioInputBypassSystemProcessing(e) {
         (0, L.lE)().setTransportOptions({ bypassSystemProcessing: e });

@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { DO: () => s });
-var i = n(317097),
-    r = n(374994);
-let s = (0, i.LX)((0, r.nt)("BRAND_500", { saturation: 1 }));
+a.d(t, { DO: () => c });
+var p = a(317097),
+    i = a(374994);
+let c = (0, p.LX)((0, i.nt)("BRAND_500", { saturation: 1 }));

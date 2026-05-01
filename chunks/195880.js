@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { m: () => a });
+n.d(t, { m: () => s });
 var i = n(935208);
-let r = 0,
-    s = new i.SnowflakeSequence();
-function a() {
+let a = 0,
+    r = new i.SnowflakeSequence();
+function s() {
     let e = Date.now();
-    return r !== e && (s.reset(), (r = e)), i.default.fromTimestampWithSequence(e, s);
+    return a !== e && (r.reset(), (a = e)), i.default.fromTimestampWithSequence(e, r);
 }

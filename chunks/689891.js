@@ -1,3 +1,3 @@
-e.exports = JSON.parse(
-    '{"odtr7f":["Choisis un th\xe8me pr\xe9d\xe9fini ou cr\xe9e le tien. Chaque membre voit ce th\xe8me lorsqu\'il ouvre le serveur, et il s\'adapte \xe0 son mode clair ou sombre. ",[8,"$link",["En savoir plus"],[[1,"articleUrl"]]]],"XhiIAu":["Cela change l\'apparence de ton serveur pour tous les membres."],"aZpFFn":["Activer le th\xe8me du serveur"],"jSrqR2":["Pr\xe9d\xe9finis"],"HkvkHP":["La pr\xe9f\xe9rence de mode clair ou sombre de chaque membre sera affich\xe9e pour celui ou celle-ci."],"zry4l5":["Aper\xe7u du th\xe8me"],"Ck5zxP":["S\xe9lectionne ton th\xe8me"],"/6NbRv":["Th\xe8me du serveur"]}',
+r.exports = JSON.parse(
+    '{"jSrqR2":["Pr\xe9d\xe9finis"],"zry4l5":["Aper\xe7u du th\xe8me"],"/6NbRv":["Th\xe8me du serveur"]}',
 );

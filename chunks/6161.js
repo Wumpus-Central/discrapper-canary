@@ -1,4 +1,3 @@
-"use strict";
-n.d(t, { ContentInventoryAuthorType: () => i });
-var l,
-    i = (((l = {})[(l.AUTHOR_TYPE_UNSPECIFIED = 0)] = "AUTHOR_TYPE_UNSPECIFIED"), (l[(l.USER = 1)] = "USER"), l);
+n.d(t, { ContentInventoryAuthorType: () => l });
+var i,
+    l = (((i = {})[(i.AUTHOR_TYPE_UNSPECIFIED = 0)] = "AUTHOR_TYPE_UNSPECIFIED"), (i[(i.USER = 1)] = "USER"), i);

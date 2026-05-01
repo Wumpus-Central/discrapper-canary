@@ -1,0 +1,15 @@
+e.exports = {
+    rs: "mainContainer_c5e6a1",
+    Ji: "ruleIconContainer_c5e6a1",
+    Wy: "actionRuleListContainer_c5e6a1",
+    S3: "ruleIcon_c5e6a1",
+    p5: "menuIconButton_c5e6a1",
+    ro: "menuIcon_c5e6a1",
+    XG: "ruleTextContainer_c5e6a1",
+    aY: "ruleTextHeaderContainer_c5e6a1",
+    bR: "ruleTextHeader_c5e6a1",
+    bL: "ruleSubtextHeader_c5e6a1",
+    mT: "ruleTextDescription_c5e6a1",
+    Ik: "actionContainer_c5e6a1",
+    n0: "alphaBetaTag_c5e6a1",
+};

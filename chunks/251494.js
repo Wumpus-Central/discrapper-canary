@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { X: () => a });
+n.d(t, { X: () => r });
 var i = n(775602),
-    r = n(625494),
+    l = n(625494),
     s = n(652215);
-let a = {
+let r = {
     binds: ["return"],
     action() {
-        if (!i.A.keyboardModeEnabled && r._.hasSubscribers(s.jej.MODAL_SUBMIT))
-            return r._.dispatch(s.jej.MODAL_SUBMIT), !1;
+        if (!i.A.keyboardModeEnabled && l._.hasSubscribers(s.jej.MODAL_SUBMIT))
+            return l._.dispatch(s.jej.MODAL_SUBMIT), !1;
     },
 };

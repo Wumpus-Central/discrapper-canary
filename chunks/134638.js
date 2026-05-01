@@ -2,7 +2,7 @@ n.d(t, { _: () => N });
 var l = n(627968),
     i = n(17928),
     a = n(587895),
-    r = n(474367),
+    r = n(93159),
     s = n(241989),
     o = n(548118),
     u = n(815545),
@@ -17,7 +17,7 @@ var l = n(627968),
     y = n(888751),
     P = n(652215),
     S = n(88001),
-    _ = n(375708),
+    _ = n(985018),
     T = n(327105),
     f = n(466919);
 function N(e) {
@@ -28,9 +28,9 @@ function N(e) {
             isPrepaidPaymentSource: N,
             giftRecipient: v,
             isPremiumGroupPurchase: M = !1,
-            guildId: j,
-            bottomSubText: b,
-            storeListing: R,
+            guildId: b,
+            bottomSubText: R,
+            storeListing: j,
         } = e,
         L = (function (e) {
             let {
@@ -65,7 +65,7 @@ function N(e) {
                 : null != a
                   ? { type: "guildSubscription", guild: a }
                   : void 0;
-        })({ guildId: j, invoiceSummaryType: t, giftRecipient: v }),
+        })({ guildId: b, invoiceSummaryType: t, giftRecipient: v }),
         D = (function (e) {
             let { invoiceSummaryType: t, guildId: n, giftRecipient: l } = e;
             return I(t)
@@ -75,7 +75,7 @@ function N(e) {
                 : null == n
                   ? _.intl.string(T.default["2zUa6I"])
                   : void 0;
-        })({ guildId: j, invoiceSummaryType: t, giftRecipient: v }),
+        })({ guildId: b, invoiceSummaryType: t, giftRecipient: v }),
         {
             header: w,
             headerIconSrc: U,
@@ -121,11 +121,11 @@ function N(e) {
         priceSubText: F,
         priceSubTextHasStrikethrough: B,
         target: O,
-        graphic: (0, l.jsx)(x, { subscriptionPlan: s, storeListing: R }),
+        graphic: (0, l.jsx)(x, { subscriptionPlan: s, storeListing: j }),
         header: w,
         headerIconSrc: U,
         headerIconComponent: Y,
-        bottomSubText: b,
+        bottomSubText: R,
     });
 }
 function x(e) {

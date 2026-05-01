@@ -3,7 +3,7 @@ var n = i(627968),
     l = i(64700),
     s = i(503698),
     a = i.n(s),
-    r = i(785651),
+    r = i(925747),
     d = i(17928),
     o = i(866323),
     c = i(765178),
@@ -36,8 +36,8 @@ function k(e) {
         [P, _] = l.useState(!1),
         {
             widgetsToSave: M,
-            changedWidgets: U,
-            removedWidgets: D,
+            changedWidgets: D,
+            removedWidgets: U,
             hasUnsavedWidgets: F,
             canSaveWidgets: W,
         } = (function () {
@@ -84,9 +84,8 @@ function k(e) {
                                     (0, m.pZ)());
                         }
                         if (Object.keys(n).length > 0) {
-                            let { bannerOriginalMd5: t, ...i } = n,
-                                l = await (0, f.gi)(i, void 0, t);
-                            (e = e && (l?.ok ?? !1)), l?.ok && (0, f.RE)();
+                            let t = await (0, f.gi)(n);
+                            (e = e && (t?.ok ?? !1)), t?.ok && (0, f.RE)();
                         }
                         if (Object.keys(l).length > 0) {
                             let { primaryGuildId: t } = l;
@@ -113,9 +112,8 @@ function k(e) {
                                     (0, m.pZ)());
                         }
                         if (Object.keys(l).length > 0) {
-                            let { bannerOriginalMd5: t, ...n } = l,
-                                s = await (0, f.gi)(n, i, t);
-                            (e = e && (s?.ok ?? !1)), s?.ok && (0, f.RE)();
+                            let t = await (0, f.gi)(l, i);
+                            (e = e && (t?.ok ?? !1)), t?.ok && (0, f.RE)();
                         }
                     }
                 } catch {
@@ -123,7 +121,7 @@ function k(e) {
                 }
             if (F)
                 try {
-                    for (let e of (await b.A.savePendingWidgets(M), U)) {
+                    for (let e of (await b.A.savePendingWidgets(M), D)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                         (0, S.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.applicationId)),
@@ -131,12 +129,12 @@ function k(e) {
                             (t.numCharactersCommentary = e.games.reduce((e, t) => e + (t.comment?.length ?? 0), 0))),
                             s(t);
                     }
-                    for (let e of D) s({ widgetEdited: e.type, isWidgetRemoved: !0 });
+                    for (let e of U) s({ widgetEdited: e.type, isWidgetRemoved: !0 });
                 } catch {
                     e = !1;
                 }
             e ? (0, m.x8)() : (0, N.XA)(T.jM.PROFILE_SAVE_GENERIC_FAILURE), _(!1);
-        }, [H, F, M, U, D, s, i]);
+        }, [H, F, M, D, U, s, i]);
     return (
         l.useEffect(() => {
             let e = null;

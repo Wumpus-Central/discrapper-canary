@@ -1,49 +1,48 @@
-"use strict";
 n.d(t, {
-    A2: () => p,
-    Cx: () => E,
-    FH: () => f,
+    A2: () => I,
+    Cx: () => T,
+    FH: () => u,
     If: () => c,
-    N0: () => h,
-    Vr: () => _,
-    Zm: () => g,
-    ib: () => d,
-    uq: () => m,
+    N0: () => A,
+    Vr: () => E,
+    Zm: () => S,
+    ib: () => _,
+    uq: () => h,
 });
 var i,
+    a,
     r,
     s,
-    a,
-    o,
     l,
-    u,
+    o,
+    d,
     c =
         (((i = {})[(i.NONE = 0)] = "NONE"),
         (i[(i.PLAY = 1)] = "PLAY"),
         (i[(i.ADD = 2)] = "ADD"),
         (i[(i.SOUNDMOJI = 3)] = "SOUNDMOJI"),
         i),
-    d = (((r = {}).ENTRY = "entry_sound"), (r.EXIT = "exit_sound"), (r.DEFAULT = "default"), r),
-    _ = (((s = {}).ADDED = "added"), (s.UPDATED = "updated"), (s.REMOVED = "removed"), s),
-    f = (((a = {}).DEFAULT = "default"), (a.CUSTOM = "custom"), a);
-function h(e, t) {
-    let { sound_id: n, emoji_id: i, emoji_name: r, user_id: s, available: a, ...o } = e;
-    return { ...o, soundId: n, guildId: t, emojiId: i, emojiName: r, userId: s, available: a ?? !0 };
+    _ = (((a = {}).ENTRY = "entry_sound"), (a.EXIT = "exit_sound"), (a.DEFAULT = "default"), a),
+    E = (((r = {}).ADDED = "added"), (r.UPDATED = "updated"), (r.REMOVED = "removed"), r),
+    u = (((s = {}).DEFAULT = "default"), (s.CUSTOM = "custom"), s);
+function A(e, t) {
+    let { sound_id: n, emoji_id: i, emoji_name: a, user_id: r, available: s, ...l } = e;
+    return { ...l, soundId: n, guildId: t, emojiId: i, emojiName: a, userId: r, available: s ?? !0 };
 }
-function p(e) {
-    let { soundId: t, guildId: n, emojiId: i, emojiName: r, userId: s, ...a } = e;
-    return { ...a, sound_id: t, guild_id: n, emoji_id: i, emoji_name: r, user_id: s };
+function I(e) {
+    let { soundId: t, guildId: n, emojiId: i, emojiName: a, userId: r, ...s } = e;
+    return { ...s, sound_id: t, guild_id: n, emoji_id: i, emoji_name: a, user_id: r };
 }
-var E =
-        (((o = {})[(o.FAVORITES = 0)] = "FAVORITES"),
-        (o[(o.GUILD = 1)] = "GUILD"),
-        (o[(o.DEFAULTS = 2)] = "DEFAULTS"),
-        (o[(o.SEARCH = 3)] = "SEARCH"),
-        o),
-    m = (((l = {})[(l.SOUND = 0)] = "SOUND"), (l[(l.ADD_SOUND = 1)] = "ADD_SOUND"), l),
-    g =
-        (((u = {})[(u.GIFT_CODE = 0)] = "GIFT_CODE"),
-        (u[(u.SOUNDBOARD = 1)] = "SOUNDBOARD"),
-        (u[(u.JOINED_VOICE_CHANNEL = 2)] = "JOINED_VOICE_CHANNEL"),
-        (u[(u.SOUNDMOJI = 3)] = "SOUNDMOJI"),
-        u);
+var T =
+        (((l = {})[(l.FAVORITES = 0)] = "FAVORITES"),
+        (l[(l.GUILD = 1)] = "GUILD"),
+        (l[(l.DEFAULTS = 2)] = "DEFAULTS"),
+        (l[(l.SEARCH = 3)] = "SEARCH"),
+        l),
+    h = (((o = {})[(o.SOUND = 0)] = "SOUND"), (o[(o.ADD_SOUND = 1)] = "ADD_SOUND"), o),
+    S =
+        (((d = {})[(d.GIFT_CODE = 0)] = "GIFT_CODE"),
+        (d[(d.SOUNDBOARD = 1)] = "SOUNDBOARD"),
+        (d[(d.JOINED_VOICE_CHANNEL = 2)] = "JOINED_VOICE_CHANNEL"),
+        (d[(d.SOUNDMOJI = 3)] = "SOUNDMOJI"),
+        d);

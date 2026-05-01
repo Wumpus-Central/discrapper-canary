@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => F }), n(321073);
+n.d(t, { A: () => V }), n(321073);
 var r = n(17928),
     s = n(506774),
     a = n(228366),
@@ -31,9 +31,8 @@ let I = "GameStoreReportedGames",
     w = [],
     P = [],
     b = new Map(),
-    k = E.A.Millis.HOUR,
-    U = new Set();
-function M(e) {
+    k = E.A.Millis.HOUR;
+function U(e) {
     return {
         id: e.id,
         name: e.name,
@@ -51,15 +50,15 @@ function M(e) {
         content_classification: e.content_classification ?? void 0,
     };
 }
-function G(e, t) {
+function M(e, t) {
     null == S[t] && (S[t] = []), S[t].push(e);
 }
-function x(e) {
-    let t = e instanceof _.xg ? M(e) : e;
-    for (let n of (T.set(e.id, t), G(t.id, t.name.toLowerCase()), e.aliases)) G(t.id, n.toLowerCase());
+function G(e) {
+    let t = e instanceof _.xg ? U(e) : e;
+    for (let n of (T.set(e.id, t), M(t.id, t.name.toLowerCase()), e.aliases)) M(t.id, n.toLowerCase());
     if ((0, m.isDesktop)()) for (let n of e.executables) N[n.name] = t.id;
 }
-class V extends r.Ay.PersistedStore {
+class x extends r.Ay.PersistedStore {
     static displayName = "GameStore";
     static persistKey = "GameStore";
     static migrations = [
@@ -67,7 +66,7 @@ class V extends r.Ay.PersistedStore {
             null != e
                 ? {
                       detectableGamesEtag: e.detectableGamesEtag,
-                      detectableGames: e.detectableGames?.map((e) => M(new _.xg(e))) ?? [],
+                      detectableGames: e.detectableGames?.map((e) => U(new _.xg(e))) ?? [],
                   }
                 : { detectableGamesEtag: "", detectableGames: [] },
         (e) => ((0, m.isDesktop)() ? e : { detectableGamesEtag: "", detectableGames: [] }),
@@ -85,7 +84,7 @@ class V extends r.Ay.PersistedStore {
             null != e.blocklistEtag && (v = e.blocklistEtag),
             null != e.blocklistExecutables && (w = e.blocklistExecutables),
             null != e.blocklistPatterns && (P = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
-            e.detectableGames?.forEach((e) => x(e)));
+            e.detectableGames?.forEach((e) => G(e)));
     }
     getState() {
         return (0, m.isDesktop)()
@@ -152,25 +151,14 @@ class V extends r.Ay.PersistedStore {
             : this.getDetectableGame(t);
     }
     getGameByApplication(e) {
-        let t,
-            n = this.getDetectableGame(e.id);
-        if (null != n) return n;
-        let i = "none";
-        if (null != e.linkedGames)
-            for (let n of e.linkedGames) {
-                let e = this.getDetectableGame(n.id);
-                if (null != e) {
-                    (i = "linked_game"), (t = e);
-                    break;
-                }
-            }
-        if (null == t) {
-            let n = this.searchGamesByName(e.name)
-                .map((e) => this.getDetectableGame(e))
-                .reverse()[0];
-            null != n && ((i = "name"), (t = n));
+        let t = this.getDetectableGame(e.id);
+        if (null != t) return t;
+        if (null != e.linkedGames) {
+            for (let n of e.linkedGames) if (null != (t = this.getDetectableGame(n.id))) return t;
         }
-        return this.maybeTrackApplicationLookupFallthrough(e, i, t), t;
+        return this.searchGamesByName(e.name)
+            .map((e) => this.getDetectableGame(e))
+            .reverse()[0];
     }
     isGameInDatabase(e) {
         return (
@@ -215,18 +203,6 @@ class V extends r.Ay.PersistedStore {
         let i = P.find((t) => t.test(e.exePath));
         return null != i && (this.maybeTrackBlock(e, "pattern_match", i.source), !0);
     }
-    maybeTrackApplicationLookupFallthrough(e, t, n) {
-        let i = e.id;
-        U.has(i) ||
-            (U.add(i),
-            c.default.track(g.HAw.GAME_APPLICATION_LOOKUP_FALLTHROUGH, {
-                application_id: i,
-                application_name: e.name ?? null,
-                match_type: t,
-                matched_game_id: n?.id ?? null,
-                matched_game_name: n?.name ?? null,
-            }));
-    }
     maybeTrackBlock(e, t, n) {
         let i = e.exePath.split(/[/\\]/).pop() ?? "unknown",
             r = b.get(i),
@@ -250,10 +226,10 @@ class V extends r.Ay.PersistedStore {
         (O[e] = !0), s.w.set(I, O);
     }
 }
-let F = new V(a.h, {
+let V = new x(a.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { detectableApplications: t } = e;
-        for (let e of (T.clear(), (S = Object.create(null)), (N = Object.create(null)), t)) x(e);
+        for (let e of (T.clear(), (S = Object.create(null)), (N = Object.create(null)), t)) G(e);
     },
     GAMES_DATABASE_FETCH: function () {
         i = !0;
@@ -267,7 +243,7 @@ let F = new V(a.h, {
             R !== n &&
             (T.clear(), (S = Object.create(null)), (N = Object.create(null)), (R = n)),
         t))
-            x({
+            G({
                 id: e.id,
                 name: e.name,
                 executables: (e.executables ?? []).map(u.lg),

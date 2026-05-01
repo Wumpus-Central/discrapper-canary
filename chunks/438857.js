@@ -38,7 +38,7 @@ var l = i(627968),
     G = i(177953),
     B = i(203363),
     V = i(841595),
-    z = i(375708),
+    z = i(985018),
     Y = i(935059);
 function H(e) {
     let { icon: s, title: i, description: n } = e;
@@ -148,7 +148,7 @@ var et = i(652215),
     eA = i(489379),
     eh = i(402857),
     ej = i(353394),
-    eI = i(64622),
+    eI = i(842241),
     em = i(986712),
     ep = i(437781),
     eg = i(928666);
@@ -803,13 +803,13 @@ function eq(e) {
 var e$ = i(628284),
     e0 = i(331322),
     e5 = i(632738),
-    e3 = i(994500),
-    e9 = i(47675),
-    e7 = i(249790),
-    e1 = i(254828),
-    e6 = i(783123),
-    e4 = i(449572);
-function e8(e) {
+    e9 = i(994500),
+    e3 = i(47675),
+    e1 = i(249790),
+    e7 = i(254828),
+    e4 = i(783123),
+    e8 = i(449572);
+function e6(e) {
     let {
             user: s,
             guildId: i,
@@ -822,7 +822,7 @@ function e8(e) {
             sourceAnalyticsLocations: A = [],
         } = e,
         m = i === et.ME ? void 0 : i,
-        p = (0, _.bG)([e3.A], () => e3.A.isBlocked(s.id)),
+        p = (0, _.bG)([e9.A], () => e9.A.isBlocked(s.id)),
         { analyticsLocations: g } = (0, x.Ay)([...A, p ? u.A.BLOCKED_PROFILE_MODAL : u.A.IGNORED_PROFILE_MODAL]),
         f = (0, j.pb)({ layout: "MODAL_V2", userId: s.id, guildId: m, channelId: n, messageId: t, roleId: r }),
         N = [
@@ -843,7 +843,7 @@ function e8(e) {
             children: (0, l.jsx)(d.EO, {
                 "data-migration-pending": !0,
                 transitionState: a,
-                className: e4.zr,
+                className: e8.zr,
                 "aria-label": y,
                 parentComponent: "RestrictedUserProfileModalV2",
                 children: (0, l.jsxs)(E.A, {
@@ -851,13 +851,13 @@ function e8(e) {
                     displayProfile: v,
                     themeType: ew.d.MODAL_V2,
                     children: [
-                        (0, l.jsx)("div", { className: e4.Tp }),
+                        (0, l.jsx)("div", { className: e8.Tp }),
                         (0, l.jsxs)("div", {
-                            className: e4.Qs,
+                            className: e8.Qs,
                             children: [
-                                (0, l.jsx)(e7.A, { user: s, guildId: m }),
+                                (0, l.jsx)(e1.A, { user: s, guildId: m }),
                                 (0, l.jsxs)("div", {
-                                    className: e4.FS,
+                                    className: e8.FS,
                                     children: [
                                         (0, l.jsx)(M.D, {
                                             variant: "heading-xl/bold",
@@ -872,7 +872,7 @@ function e8(e) {
                                     ],
                                 }),
                                 (0, l.jsx)("div", {
-                                    className: e4.vb,
+                                    className: e8.vb,
                                     children: N.map((e, s) => {
                                         let { icon: i, description: n } = e;
                                         return (0, l.jsx)(
@@ -890,23 +890,23 @@ function e8(e) {
                                 (0, l.jsxs)(e0.B, {
                                     align: "center",
                                     children: [
-                                        (0, l.jsx)(e6.A, {
+                                        (0, l.jsx)(e4.A, {
                                             size: "md",
                                             isBlocked: p,
                                             onClick: () => {
                                                 c(),
-                                                    (0, e9.Wn)({
+                                                    (0, e3.Wn)({
                                                         action: p ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
                                                         analyticsLocations: g,
                                                         ...f,
                                                     });
                                             },
                                         }),
-                                        (0, l.jsx)(e1.A, {
+                                        (0, l.jsx)(e7.A, {
                                             userId: s.id,
                                             onClick: () => {
                                                 c(),
-                                                    (0, e9.Wn)({
+                                                    (0, e3.Wn)({
                                                         action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                         analyticsLocations: g,
                                                         ...f,
@@ -929,7 +929,7 @@ function se(e) {
         { user: n } = i,
         [d, r] = (0, t.A)(n.id);
     return d && !s
-        ? (0, l.jsx)(e8, { onHide: r, ...i })
+        ? (0, l.jsx)(e6, { onHide: r, ...i })
         : n.isNonUserBot()
           ? (0, l.jsx)(eq, { ...i })
           : n.bot

@@ -1,3 +1,3 @@
-h.exports = JSON.parse(
-    '{"u72Prd":["Stream ở độ ph\xe2n giải HD với Nitro"],"uwMBDo":["Chia Sẻ \xc2m Thanh Ứng Dụng"],"3wwZ/Q":["Bắt Đầu Stream"],"OsS9Ll":["Ngừng Stream"],"j+eAMQ":["\xc2m thanh của stream"],"/XSr8v":["Chế Độ Stream"],"ibH7vy":["C\xe2n bằng chất lượng v\xe0 hiệu năng (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"2qmQ8N":["Mặc định"],"q4gYBi":["D\xe0nh cho video v\xe0 chơi game (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"nMcXo1":["Chất Lượng Cao"],"fN0UQY":["Tối ưu cho c\xe1c thiết bị chậm hơn (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"5eO4/m":["Hiệu Năng"],"CrNjqp":["C\xe0i Đặt Stream"]}',
+r.exports = JSON.parse(
+    '{"u72Prd":["Stream ở độ ph\xe2n giải HD với Nitro"],"3wwZ/Q":["Bắt Đầu Stream"],"OsS9Ll":["Ngừng Stream"],"j+eAMQ":["\xc2m thanh của stream"],"/XSr8v":["Chế Độ Stream"],"2qmQ8N":["Mặc định"],"CrNjqp":["C\xe0i Đặt Stream"]}',
 );

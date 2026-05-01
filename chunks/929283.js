@@ -1,46 +1,45 @@
-"use strict";
-n.d(t, { i: () => p });
+n.d(t, { i: () => I });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(575593),
-    o = n(97808),
-    l = n(778712),
-    u = n(19575),
+var a = n(503698),
+    r = n.n(a),
+    s = n(575593),
+    l = n(97808),
+    o = n(778712),
+    d = n(19575),
     c = n(562819),
-    d = n(963977),
-    _ = n(375708),
-    f = n(628538);
-let h = u.Ay.getEnableHardwareAcceleration() ? o.Js : o.eu,
-    p = (e) => {
+    _ = n(963977),
+    E = n(985018),
+    u = n(628538);
+let A = d.Ay.getEnableHardwareAcceleration() ? l.Js : l.eu,
+    I = (e) => {
         let {
                 item: t,
                 user: n,
-                isHighlighted: r = !1,
-                avatarSize: o = l._3.SIZE_152,
-                avatarPlaceholderSrc: u,
-                className: p,
+                isHighlighted: a = !1,
+                avatarSize: l = o._3.SIZE_152,
+                avatarPlaceholderSrc: d,
+                className: I,
             } = e,
-            E = (0, c.Te)(o),
+            T = (0, c.Te)(l),
             {
-                avatarDecorationSrc: m,
-                eventHandlers: g,
-                avatarPlaceholderSrc: A,
-            } = (0, d.A)({
+                avatarDecorationSrc: h,
+                eventHandlers: S,
+                avatarPlaceholderSrc: N,
+            } = (0, _.A)({
                 user: n,
-                avatarDecorationOverride: t?.type === a.R.AVATAR_DECORATION ? t : void 0,
-                size: E,
-                onlyAnimateOnHoverOrFocus: !r,
+                avatarDecorationOverride: t?.type === s.R.AVATAR_DECORATION ? t : void 0,
+                size: T,
+                onlyAnimateOnHoverOrFocus: !a,
             }),
-            I = _.intl.formatToPlainString(_.t.Do2lxE, { a11y_text: t.label });
-        return (0, i.jsx)(h, {
-            ...g,
-            avatarDecoration: m,
-            src: r ? n?.getAvatarURL(void 0, 152, !0) : (u ?? A),
-            imageClassName: r ? f.WG : void 0,
-            className: s()(p, f.my),
-            size: o,
-            "aria-label": I,
+            f = E.intl.formatToPlainString(E.t.Do2lxE, { a11y_text: t.label });
+        return (0, i.jsx)(A, {
+            ...S,
+            avatarDecoration: h,
+            src: a ? n?.getAvatarURL(void 0, 152, !0) : (d ?? N),
+            imageClassName: a ? u.WG : void 0,
+            className: r()(I, u.my),
+            size: l,
+            "aria-label": f,
         });
     };

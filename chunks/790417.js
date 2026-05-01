@@ -13,13 +13,13 @@ var l = i(17928),
     m = i(489379),
     h = i(402857),
     x = i(353394),
-    p = i(64622),
+    p = i(842241),
     j = i(986712),
     A = i(782505),
     f = i(83013),
     I = i(515054),
     S = i(518477),
-    v = i(375708),
+    v = i(985018),
     b = i(740620);
 function y(e) {
     let { user: t, currentUser: i, displayProfile: y, guildId: E, channelId: N, onClose: T } = e,
@@ -33,15 +33,15 @@ function y(e) {
         }),
         _ = C.length > 0 || null != R,
         M = y?.private !== !0 && null == R && null == k && null != O,
-        U = !P && (_ || M),
-        D = w.length > 0;
-    return U || D || !L
-        ? U || D || L
+        D = !P && (_ || M),
+        U = w.length > 0;
+    return D || U || !L
+        ? D || U || L
             ? (0, n.jsxs)(I.K, {
                   className: b.XG,
                   fade: !0,
                   children: [
-                      U
+                      D
                           ? (0, n.jsx)(f.A, {
                                 heading: v.intl.string(v.t.J6STd9),
                                 children: (0, n.jsxs)("ul", {
@@ -83,7 +83,7 @@ function y(e) {
                                 }),
                             })
                           : null,
-                      D
+                      U
                           ? (0, n.jsx)(f.A, {
                                 heading: v.intl.string(v.t.jzgEoL),
                                 introText: G

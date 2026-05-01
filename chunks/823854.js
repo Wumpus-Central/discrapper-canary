@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(17928),
-    r = n(228366),
-    s = n(495544);
-class a extends i.Ay.Store {
+    a = n(228366),
+    r = n(495544);
+class s extends i.Ay.Store {
     static displayName = "VoiceDareTrackingStore";
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(r.default);
     }
     getProgressForUserId(e) {
         return null;
@@ -24,4 +23,4 @@ class a extends i.Ay.Store {
         return null;
     }
 }
-let o = new a(r.h, {});
+let l = new s(a.h, {});

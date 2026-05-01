@@ -134,10 +134,6 @@ let C = r()((e, t, n) => {
                 i = (0, l.z)(t, n);
             s.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: i }), C(e, n, i);
         },
-        setAudioMixerSettings(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T.x.DEFAULT;
-            s.h.dispatch({ type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: t, settings: e });
-        },
         setLocalPan(e, t, n) {
             let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : T.x.DEFAULT;
             s.h.dispatch({ type: "AUDIO_SET_LOCAL_PAN", context: i, userId: e, left: t, right: n });

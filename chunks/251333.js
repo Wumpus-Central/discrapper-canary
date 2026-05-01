@@ -5,9 +5,9 @@ var a = t(627968),
     i = t.n(l),
     r = t(284009),
     c = t.n(r),
-    d = t(989349),
-    o = t.n(d),
-    u = t(562708),
+    o = t(989349),
+    d = t.n(o),
+    u = t(110259),
     m = t(837381),
     x = t(17928),
     g = t(305866),
@@ -29,10 +29,10 @@ var a = t(627968),
     S = t(636922),
     k = t(194085),
     y = t(835835),
-    M = t(885386),
+    M = t(253932),
     O = t(576705),
-    L = t(174459),
-    P = t(625494),
+    P = t(954571),
+    L = t(625494),
     w = t(927813),
     G = t(164684),
     z = t(704456),
@@ -52,7 +52,7 @@ var V = t(320448),
     H = t(598104),
     W = t(548118),
     $ = t(71393),
-    Q = t(375708),
+    Q = t(985018),
     ee = t(2224);
 let es = { top: 8, bottom: 8, left: -4, right: -4 };
 function et(e) {
@@ -99,8 +99,8 @@ var el = t(403581),
     ei = t(834730),
     er = t(862482),
     ec = t(192308),
-    ed = t(404374),
-    eo = t(725807),
+    eo = t(404374),
+    ed = t(725807),
     eu = t(927578),
     em = t(226017),
     ex = t(652215),
@@ -167,9 +167,9 @@ function eA() {
     return (0, a.jsxs)("div", {
         className: ev.Zj,
         children: [
-            (0, a.jsx)(el.t, { size: "md", color: ed.k0.PREMIUM_TIER_2 }),
+            (0, a.jsx)(el.t, { size: "md", color: eo.k0.PREMIUM_TIER_2 }),
             (0, a.jsx)(ei.E, { variant: "text-xs/medium", color: "text-strong", className: ev.tD, children: l }),
-            (0, a.jsx)(eo.A, {
+            (0, a.jsx)(ed.A, {
                 className: ev.Oy,
                 size: er.lO.TINY,
                 shinyButtonClassName: ev.Oy,
@@ -268,21 +268,21 @@ function ep(e) {
 }
 function eD(e) {
     let { onOpen: s, onClose: t, children: l, popoutPosition: i, popoutAlign: r } = e,
-        [c, d] = n.useState(!1),
-        o = n.useRef(null),
+        [c, o] = n.useState(!1),
+        d = n.useRef(null),
         u = n.useCallback(() => {
-            d(!1), c && t?.();
+            o(!1), c && t?.();
         }, [t, c]),
         m = n.useCallback(() => {
-            d(!c), c ? t?.() : s?.();
+            o(!c), c ? t?.() : s?.();
         }, [t, s, c]);
     n.useEffect(
-        () => (P._.subscribe(ex.jej.TOGGLE_FOR_LATER, m), () => void P._.unsubscribe(ex.jej.TOGGLE_FOR_LATER, m)),
+        () => (L._.subscribe(ex.jej.TOGGLE_FOR_LATER, m), () => void L._.unsubscribe(ex.jej.TOGGLE_FOR_LATER, m)),
         [m],
     );
     let g = (0, x.bG)([q.A], () => q.A.hasOverdueReminder(), []);
     return (0, a.jsx)(j.Y, {
-        targetElementRef: o,
+        targetElementRef: d,
         animation: j.Y.Animation.NONE,
         position: i,
         align: r,
@@ -295,7 +295,7 @@ function eD(e) {
         ignoreModalClicks: !0,
         children: (e, s) => {
             let { isShown: t } = s;
-            return l(m, t, e, g, o);
+            return l(m, t, e, g, d);
         },
     });
 }
@@ -338,18 +338,18 @@ function eI(e) {
             async (e) => {
                 await (0, z.le)(s, r),
                     e.shiftKey || t(),
-                    L.default.track(ex.HAw.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    P.default.track(ex.HAw.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: s.saveData.channelId,
                         message_id: s.saveData.messageId,
                         message_author_id: s.message?.author.id,
                         type: null != s.saveData.dueAt ? F.Yf.REMINDER : F.Yf.BOOKMARK,
-                        due_duration: null != s.saveData.dueAt ? o()().diff(s.saveData.dueAt) : void 0,
+                        due_duration: null != s.saveData.dueAt ? d()().diff(s.saveData.dueAt) : void 0,
                     });
             },
             [t, s, r],
         ),
-        d = (0, x.bG)([O.A], () => !!(r?.type === ex.rbe.UNKNOWN || r?.isPrivate()) || O.A.can(ex.xBc.VIEW_CHANNEL, r));
-    return null != r && null != s.message && d
+        o = (0, x.bG)([O.A], () => !!(r?.type === ex.rbe.UNKNOWN || r?.isPrivate()) || O.A.can(ex.xBc.VIEW_CHANNEL, r));
+    return null != r && null != s.message && o
         ? (0, a.jsxs)("div", {
               className: eE.zC,
               children: [
@@ -435,7 +435,10 @@ function eT(e) {
                           icon: D.R,
                           onClick: (e) =>
                               (0, C.L3)(e, async () => {
-                                  let { MessageReminderEditMenu: e } = await t.e("75133").then(t.bind(t, 195404));
+                                  let { MessageReminderEditMenu: e } = await Promise.all([
+                                      t.e("18265"),
+                                      t.e("36419"),
+                                  ]).then(t.bind(t, 49678));
                                   return (t) =>
                                       (0, a.jsx)(e, { ...t, label: Q.intl.string(Q.t.roMu1H), message: s.message });
                               }),
@@ -464,7 +467,10 @@ function eT(e) {
                           icon: I.O,
                           onClick: (e) =>
                               (0, C.L3)(e, async () => {
-                                  let { MessageReminderEditMenu: e } = await t.e("75133").then(t.bind(t, 195404));
+                                  let { MessageReminderEditMenu: e } = await Promise.all([
+                                      t.e("18265"),
+                                      t.e("36419"),
+                                  ]).then(t.bind(t, 49678));
                                   return (t) =>
                                       (0, a.jsx)(e, { ...t, label: Q.intl.string(Q.t.mJ3P0N), message: s.message });
                               }),

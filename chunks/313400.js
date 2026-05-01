@@ -1,39 +1,38 @@
-"use strict";
-var i = n(410323),
-    r = n(503628),
-    s = n(339626),
-    a = n(210140),
-    o = n(257943),
-    l = n(814113).CONFIGURABLE,
-    u = n(997159),
-    c = n(883972),
-    d = c.enforce,
-    _ = c.get,
-    f = String,
-    h = Object.defineProperty,
-    p = i("".slice),
-    E = i("".replace),
-    m = i([].join),
-    g =
-        o &&
-        !r(function () {
-            return 8 !== h(function () {}, "length", { value: 8 }).length;
+var n = e(410323),
+    o = e(503628),
+    i = e(339626),
+    u = e(210140),
+    a = e(257943),
+    c = e(814113).CONFIGURABLE,
+    f = e(997159),
+    s = e(883972),
+    p = s.enforce,
+    l = s.get,
+    v = String,
+    y = Object.defineProperty,
+    h = n("".slice),
+    b = n("".replace),
+    g = n([].join),
+    x =
+        a &&
+        !o(function () {
+            return 8 !== y(function () {}, "length", { value: 8 }).length;
         }),
-    A = String(String).split("String"),
-    I = (e.exports = function (e, t, n) {
-        "Symbol(" === p(f(t), 0, 7) && (t = "[" + E(f(t), /^Symbol\(([^)]*)\).*$/, "$1") + "]"),
-            n && n.getter && (t = "get " + t),
-            n && n.setter && (t = "set " + t),
-            (!a(e, "name") || (l && e.name !== t)) && (o ? h(e, "name", { value: t, configurable: !0 }) : (e.name = t)),
-            g && n && a(n, "arity") && e.length !== n.arity && h(e, "length", { value: n.arity });
+    m = String(String).split("String"),
+    d = (r.exports = function (r, t, e) {
+        "Symbol(" === h(v(t), 0, 7) && (t = "[" + b(v(t), /^Symbol\(([^)]*)\).*$/, "$1") + "]"),
+            e && e.getter && (t = "get " + t),
+            e && e.setter && (t = "set " + t),
+            (!u(r, "name") || (c && r.name !== t)) && (a ? y(r, "name", { value: t, configurable: !0 }) : (r.name = t)),
+            x && e && u(e, "arity") && r.length !== e.arity && y(r, "length", { value: e.arity });
         try {
-            n && a(n, "constructor") && n.constructor
-                ? o && h(e, "prototype", { writable: !1 })
-                : e.prototype && (e.prototype = void 0);
-        } catch (e) {}
-        var i = d(e);
-        return a(i, "source") || (i.source = m(A, "string" == typeof t ? t : "")), e;
+            e && u(e, "constructor") && e.constructor
+                ? a && y(r, "prototype", { writable: !1 })
+                : r.prototype && (r.prototype = void 0);
+        } catch (r) {}
+        var n = p(r);
+        return u(n, "source") || (n.source = g(m, "string" == typeof t ? t : "")), r;
     });
-Function.prototype.toString = I(function () {
-    return (s(this) && _(this).source) || u(this);
+Function.prototype.toString = d(function () {
+    return (i(this) && l(this).source) || f(this);
 }, "toString");

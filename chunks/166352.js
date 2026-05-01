@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(155718),
     r = n(723702);
-function s(e) {
+function a(e) {
     let t;
     return (t = (0, r.isIOS)() ? i.Yl.IOS : (0, r.isAndroid)() ? i.Yl.ANDROID : i.Yl.WEB), e?.includes(t) ?? !1;
 }

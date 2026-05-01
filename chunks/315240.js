@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { A: () => eo, u: () => k }), n(321073);
+n.d(t, { A: () => ea, u: () => F }), n(321073);
 var i,
-    r,
+    l,
     s = n(17928),
-    a = n(228366),
-    o = n(427358),
-    l = n(95701),
-    u = n(734057),
-    c = n(776096),
-    d = n(576705),
-    _ = n(763827),
-    f = n(222823),
-    h = n(543465),
-    p = n(287809),
+    r = n(228366),
+    a = n(427358),
+    u = n(95701),
+    o = n(734057),
+    d = n(776096),
+    c = n(576705),
+    h = n(763827),
+    A = n(222823),
+    f = n(543465),
+    g = n(287809),
     E = n(977997),
-    m = n(927813),
-    g = n(935208),
-    A = n(914853),
-    I = n(41984),
-    T = n(956753),
-    S = n(296027),
-    N =
+    I = n(927813),
+    S = n(935208),
+    _ = n(914853),
+    T = n(41984),
+    C = n(956753),
+    m = n(833551),
+    p =
         (((i = {}).GuildText = "GUILD_TEXT"),
         (i.GuildVoice = "GUILD_VOICE"),
         (i.DirectMessage = "DIRECT_MESSAGE"),
         (i.GroupDM = "GROUP_DM"),
         i);
-function y(e, t, n, i) {
-    let r = 0;
-    for (let [s, a] of e.entries()) {
+function N(e, t, n, i) {
+    let l = 0;
+    for (let [s, r] of e.entries()) {
         let e = i(s);
         if (e <= 0) continue;
-        let o = e * O(a, t, n);
-        o > r && (r = o);
+        let a = e * v(r, t, n);
+        a > l && (l = a);
     }
-    return r;
+    return l;
 }
-class C {
+class M {
     signals;
     providers;
     lastActivityAtMs;
@@ -46,9 +45,9 @@ class C {
     }
     _computeMentionScore(e) {
         if (this.signals.mentionCount <= 0) return 0;
-        let t = O(this.signals.lastDirectMentionAtMs, e, 6e5);
+        let t = v(this.signals.lastDirectMentionAtMs, e, 6e5);
         this.scoreInfo.rawSignalsScore.lastDirectMentionAtMs = t;
-        let n = O(this.signals.lastRoleMentionAtMs, e, 6e5);
+        let n = v(this.signals.lastRoleMentionAtMs, e, 6e5);
         return (
             (this.scoreInfo.rawSignalsScore.lastRoleMentionAtMs = n),
             2 * Math.min(this.signals.mentionCount, 3) * Math.max(t, n)
@@ -66,15 +65,15 @@ class C {
                 })(this.signals.lastMessageAtMs, e)),
             this.signals.unread)
         ) {
-            let n = O(this.signals.lastUnreadAtMs, e, 18e5);
+            let n = v(this.signals.lastUnreadAtMs, e, 18e5);
             (t += 0.8 * n), (this.scoreInfo.rawSignalsScore.lastUnreadAtMs = n);
         }
-        let n = y(this.signals.recentMessageAuthorIds, e, 6e5, this.providers.getNormalizedUserAffinity);
+        let n = N(this.signals.recentMessageAuthorIds, e, 6e5, this.providers.getNormalizedUserAffinity);
         return (this.scoreInfo.rawSignalsScore.recentMessageAuthorIds = n), (t += 1.2 * n);
     }
     _computeActivityScore(e) {
         if (!this.signals.isTyping) return 0;
-        let t = y(this.signals.typingUserIdsWithTimestampMs, e, 15e3, this.providers.getNormalizedUserAffinity);
+        let t = N(this.signals.typingUserIdsWithTimestampMs, e, 15e3, this.providers.getNormalizedUserAffinity);
         return (this.scoreInfo.rawSignalsScore.typingUserIdsWithTimestampMs = t), 1.5 * t;
     }
     getScoreWithoutPenalty(e) {
@@ -89,7 +88,7 @@ class C {
         );
     }
     computeScore(e) {
-        let t = D(e, this.lastActivityAtMs);
+        let t = O(e, this.lastActivityAtMs);
         return (this.scoreInfo.penalty = t), this.getScoreWithoutPenalty(e) * (1 - t);
     }
     pruneSignals(e) {
@@ -118,7 +117,7 @@ class C {
         (this.lastActivityAtMs = t), (this.signals = e);
     }
 }
-class v {
+class D {
     signals;
     providers;
     lastActivityAtMs;
@@ -127,7 +126,7 @@ class v {
     constructor(e, t) {
         (this.signals = e),
             (this.providers = t),
-            (this._textualScore = new C(e, t)),
+            (this._textualScore = new M(e, t)),
             (this.lastActivityAtMs = Date.now());
     }
     _computeTextualScore(e) {
@@ -138,47 +137,47 @@ class v {
                 ...this._textualScore.scoreInfo,
                 rawSignalsScore: { ...this.scoreInfo.rawSignalsScore, ...this._textualScore.scoreInfo.rawSignalsScore },
             }),
-            R(t, 2)
+            y(t, 2)
         );
     }
     _computeVoiceUsersScore(e) {
         if (0 === this.signals.voiceUsersWithJoinTimestampMs.size) return 0;
-        let t = y(this.signals.voiceUsersWithJoinTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
+        let t = N(this.signals.voiceUsersWithJoinTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
         return (this.scoreInfo.rawSignalsScore.voiceUsersWithJoinTimestampMs = t), 1.25 * t;
     }
     _computeVoiceActivityScore(e) {
         let t = 0;
-        null != this.signals.lastVoiceJoinAtMs && (t = Math.max(t, O(this.signals.lastVoiceJoinAtMs, e, 12e4))),
+        null != this.signals.lastVoiceJoinAtMs && (t = Math.max(t, v(this.signals.lastVoiceJoinAtMs, e, 12e4))),
             (this.scoreInfo.rawSignalsScore.lastVoiceJoinAtMs = t);
-        let n = y(this.signals.lastUnmuteActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity);
+        let n = N(this.signals.lastUnmuteActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity);
         return (
             (this.scoreInfo.rawSignalsScore.lastUnmuteActivityAtMs = n),
             (n = Math.max(
                 n,
-                y(this.signals.lastUndeafenActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity),
+                N(this.signals.lastUndeafenActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity),
             )),
             (this.scoreInfo.rawSignalsScore.lastUndeafenActivityAtMs = n),
             1.25 * (n + t)
         );
     }
     _computeStreamUsersScore(e) {
-        let t = y(this.signals.streamUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
+        let t = N(this.signals.streamUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
         this.scoreInfo.rawSignalsScore.streamUsersWithTimestampMs = t;
-        let n = y(this.signals.videoUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
+        let n = N(this.signals.videoUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
         return (this.scoreInfo.rawSignalsScore.videoUsersWithTimestampMs = n), 2 * (t + n);
     }
     computeScore(e) {
         let t = this._computeTextualScore(e),
             n = this._computeVoiceUsersScore(e),
             i = this._computeVoiceActivityScore(e),
-            r = this._computeStreamUsersScore(e),
-            s = D(e, this.lastActivityAtMs);
+            l = this._computeStreamUsersScore(e),
+            s = O(e, this.lastActivityAtMs);
         return (
             (this.scoreInfo.penalty = s),
             (this.scoreInfo.voiceUsersScore = n),
             (this.scoreInfo.voiceActivityScore = i),
-            (this.scoreInfo.streamUsersScore = r),
-            (t + n + i + r) * (1 - s)
+            (this.scoreInfo.streamUsersScore = l),
+            (t + n + i + l) * (1 - s)
         );
     }
     pruneSignals(e) {
@@ -186,7 +185,7 @@ class v {
         let t = (t) => {
             if (0 === t.size) return t;
             let n = new Map();
-            for (let [i, r] of t.entries()) e - r <= 12e4 && n.set(i, r);
+            for (let [i, l] of t.entries()) e - l <= 12e4 && n.set(i, l);
             return n;
         };
         this.signals = {
@@ -199,16 +198,16 @@ class v {
         this._textualScore.updateSignals(e, t), (this.signals = e), (this.lastActivityAtMs = t);
     }
 }
-function O(e, t, n) {
+function v(e, t, n) {
     if (null == e) return 0;
     let i = t - e;
     return i <= 0 ? 1 : i >= n ? 0 : 1 - i / n;
 }
-function R(e) {
+function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     return e <= 0 ? 0 : e >= t ? t : e;
 }
-function b(e) {
+function U(e) {
     let t = e.getGuildId?.() ?? null;
     if (e.isDM?.()) {
         let t = e.getRecipientId?.() ?? null;
@@ -220,7 +219,7 @@ function b(e) {
           ? { channelId: e.id, kind: e.isVocal?.() ? "GUILD_VOICE" : "GUILD_TEXT", guildId: t, recipientIds: [] }
           : null;
 }
-function D(e, t) {
+function O(e, t) {
     let n = e - t;
     return n <= 6e5 ? 0 : n >= 18e5 ? 1 : (n - 6e5) / 12e5;
 }
@@ -234,10 +233,10 @@ function L(e, t) {
         i
     );
 }
-function w(e, t) {
-    return 0.8 * (null != e.guildId ? R(t.getNormalizedGuildAffinity(e.guildId)) : 0);
+function R(e, t) {
+    return 0.8 * (null != e.guildId ? y(t.getNormalizedGuildAffinity(e.guildId)) : 0);
 }
-class M {
+class w {
     candidate;
     signals;
     _activeNowScoreSource;
@@ -246,8 +245,8 @@ class M {
         (this.candidate = e),
             (this.signals = t),
             "GUILD_VOICE" === e.kind || "GROUP_DM" === e.kind
-                ? (this._activeNowScoreSource = new v(t, n))
-                : (this._activeNowScoreSource = new C(t, n)),
+                ? (this._activeNowScoreSource = new D(t, n))
+                : (this._activeNowScoreSource = new M(t, n)),
             this.recomputeScore(Date.now());
     }
     get score() {
@@ -281,10 +280,10 @@ class M {
     }
 }
 var P = n(406595),
-    x = n(240516),
-    U = n(652215),
-    k = (((r = {}).Text = "TEXT"), (r.Voice = "VOICE"), r);
-class G {
+    G = n(240516),
+    x = n(652215),
+    F = (((l = {}).Text = "TEXT"), (l.Voice = "VOICE"), l);
+class V {
     _maxItems;
     _channelsByChannelId = new Map();
     _sortedScoreIndex = [];
@@ -312,8 +311,8 @@ class G {
         if (!this._isDirty) return;
         let t = [];
         for (let [n, i] of this._channelsByChannelId.entries()) {
-            let r = e(i);
-            r > 0 && t.push({ channelId: n, score: r });
+            let l = e(i);
+            l > 0 && t.push({ channelId: n, score: l });
         }
         t.sort((e, t) => (e.score !== t.score ? t.score - e.score : e.channelId < t.channelId ? -1 : 1));
         let n = t.slice(0, this._maxItems);
@@ -342,39 +341,39 @@ class G {
             (this._isDirty = !1);
     }
 }
-let F = !1,
-    V = null,
-    B = !1,
-    H = new G(100),
-    j = new G(100);
-function Y() {
-    return S.default.isAnyOverlayRendering();
+let b = !1,
+    H = null,
+    k = !1,
+    Y = new V(100),
+    j = new V(100);
+function W() {
+    return m.default.isAnyOverlayRendering();
 }
-function W(e) {
-    return (!!e || !B) && F !== e && ((F = e), !0);
+function J(e) {
+    return (!!e || !k) && b !== e && ((b = e), !0);
 }
-function K() {
-    let e = _.A.getChannelId();
+function $() {
+    let e = h.A.getChannelId();
     if (null == e) return null;
-    let t = u.A.getChannel(e);
+    let t = o.A.getChannel(e);
     return t?.getGuildId?.() ?? null;
 }
-function z(e) {
-    let { isAlreadyTracked: t, guildId: n, updatingUserId: i, providers: r } = e;
+function B(e) {
+    let { isAlreadyTracked: t, guildId: n, updatingUserId: i, providers: l } = e;
     return (
         !!(
             t ||
             (function (e, t) {
                 if (null == e) return !1;
-                if (null != V && e === V) return !0;
-                let n = K();
-                return (null != n && e === n) || t.getNormalizedGuildAffinity(e) > x.u.MINIMUM_GUILD_AFFINITY;
-            })(n, r)
-        ) || !!(null != i && r.getNormalizedUserAffinity(i) > x.u.MINIMUM_USER_AFFINITY)
+                if (null != H && e === H) return !0;
+                let n = $();
+                return (null != n && e === n) || t.getNormalizedGuildAffinity(e) > G.u.MINIMUM_GUILD_AFFINITY;
+            })(n, l)
+        ) || !!(null != i && l.getNormalizedUserAffinity(i) > G.u.MINIMUM_USER_AFFINITY)
     );
 }
-function $(e) {
-    let t = c.A.affinities,
+function z(e) {
+    let t = d.A.affinities,
         n = 0;
     for (let e = 0; e < t.length; e += 1) {
         let i = t[e].score ?? 0;
@@ -384,33 +383,33 @@ function $(e) {
         n <= 0 && (n = 1),
         {
             getNormalizedGuildAffinity: (e) => {
-                let t = (c.A.getGuildAffinity(e)?.score ?? 0) / n;
+                let t = (d.A.getGuildAffinity(e)?.score ?? 0) / n;
                 return t <= 0 ? 0 : t >= 1 ? 1 : t;
             },
             getNormalizedUserAffinity: (t) => {
-                let n = o.A.getUserAffinity(t);
-                if (n?.isFriend) return x.u.FRIEND_BASE_COMMUNICATION_AFFINITY;
+                let n = a.A.getUserAffinity(t);
+                if (n?.isFriend) return G.u.FRIEND_BASE_COMMUNICATION_AFFINITY;
                 let i = n?.communicationProbability ?? 0,
-                    r = e.includeVcProbability ? Math.max(i, n?.vcProbability ?? 0) : i;
-                return r <= 0 ? 0 : r >= 1 ? 1 : r;
+                    l = e.includeVcProbability ? Math.max(i, n?.vcProbability ?? 0) : i;
+                return l <= 0 ? 0 : l >= 1 ? 1 : l;
             },
         }
     );
 }
-function q(e, t) {
-    let n = L(e.candidate, { voiceGuildId: K(), mostRecentGuildId: V });
+function Z(e, t) {
+    let n = L(e.candidate, { voiceGuildId: $(), mostRecentGuildId: H });
     return (
         e.score *
         (1 + n) *
-        (e.candidate.kind === N.DirectMessage || e.candidate.kind === N.GroupDM ? 1 : 1 + w(e.candidate, t))
+        (e.candidate.kind === p.DirectMessage || e.candidate.kind === p.GroupDM ? 1 : 1 + R(e.candidate, t))
     );
 }
-function Z() {
-    let e = $({ includeVcProbability: !1 }),
-        t = $({ includeVcProbability: !0 });
-    H.rebuildSortedIndexIfDirty((t) => q(t, e)), j.rebuildSortedIndexIfDirty((e) => q(e, t));
+function K() {
+    let e = z({ includeVcProbability: !1 }),
+        t = z({ includeVcProbability: !0 });
+    Y.rebuildSortedIndexIfDirty((t) => Z(t, e)), j.rebuildSortedIndexIfDirty((e) => Z(e, t));
 }
-function X() {
+function Q() {
     return {
         mentionCount: 0,
         lastDirectMentionAtMs: null,
@@ -426,9 +425,9 @@ function X() {
         unreadOrMentionAgeMs: null,
     };
 }
-function Q() {
+function X() {
     return {
-        ...X(),
+        ...Q(),
         voiceUsersWithJoinTimestampMs: new Map(),
         lastVoiceJoinAtMs: null,
         lastUnmuteActivityAtMs: new Map(),
@@ -437,23 +436,23 @@ function Q() {
         videoUsersWithTimestampMs: new Map(),
     };
 }
-function J(e, t) {
-    let n = u.A.getChannel(e);
+function q(e, t) {
+    let n = o.A.getChannel(e);
     if (null == n) return !1;
-    let [i] = P.A.isFavorite(A.x.MESSAGES, e);
+    let [i] = P.A.isFavorite(_.x.MESSAGES, e);
     if (i || n.isPrivate?.()) return !1;
-    let r = n.getGuildId?.() ?? null;
+    let l = n.getGuildId?.() ?? null;
     return (
-        !(null == r || h.Ay.isGuildOrCategoryOrChannelMuted(r, n.id)) &&
-        !!d.A.can(U.xBc.READ_MESSAGE_HISTORY, n) &&
-        ("TEXT" === t ? (0, l.ke)(n.type) : n.isVocal?.() === !0)
+        !(null == l || f.Ay.isGuildOrCategoryOrChannelMuted(l, n.id)) &&
+        !!c.A.can(x.xBc.READ_MESSAGE_HISTORY, n) &&
+        ("TEXT" === t ? (0, u.ke)(n.type) : n.isVocal?.() === !0)
     );
 }
 function ee(e, t, n) {
-    if (!J(e, "TEXT")) return null;
-    let i = u.A.getChannel(e);
+    if (!q(e, "TEXT")) return null;
+    let i = o.A.getChannel(e);
     if (null == i) return null;
-    let r = b({
+    let l = U({
         id: i.id,
         getGuildId: () => i.getGuildId?.() ?? null,
         isDM: () => i.isDM?.() ?? !1,
@@ -462,17 +461,17 @@ function ee(e, t, n) {
         recipients: i.recipients ?? [],
         isVocal: () => i.isVocal?.() ?? !1,
     });
-    if (null == r || r.kind !== N.GuildText) return null;
-    let s = H.getChannel(e);
+    if (null == l || l.kind !== p.GuildText) return null;
+    let s = Y.getChannel(e);
     if (null != s) return s;
-    let a = new M(r, t, n);
-    return H.upsert(a), a;
+    let r = new w(l, t, n);
+    return Y.upsert(r), r;
 }
 function et(e, t, n) {
-    if (!J(e, "VOICE")) return null;
-    let i = u.A.getChannel(e);
+    if (!q(e, "VOICE")) return null;
+    let i = o.A.getChannel(e);
     if (null == i) return null;
-    let r = b({
+    let l = U({
         id: i.id,
         getGuildId: () => i.getGuildId?.() ?? null,
         isDM: () => i.isDM?.() ?? !1,
@@ -481,197 +480,197 @@ function et(e, t, n) {
         recipients: i.recipients ?? [],
         isVocal: () => i.isVocal?.() ?? !1,
     });
-    if (null == r || r.kind !== N.GuildVoice) return null;
+    if (null == l || l.kind !== p.GuildVoice) return null;
     let s = j.getChannel(e);
     if (null != s) return s;
-    let a = new M(r, t, n);
-    return j.upsert(a), a;
+    let r = new w(l, t, n);
+    return j.upsert(r), r;
 }
-let en = 30 * m.A.Millis.MINUTE;
+let en = 30 * I.A.Millis.MINUTE;
 function ei() {
     let e = Date.now(),
         t = e - en,
-        n = c.A.affinities
+        n = d.A.affinities
             .filter((e) => (e.score ?? 0) > 0)
             .slice(0, 3)
             .map((e) => e.guildId),
-        i = K();
+        i = $();
     null == i || n.includes(i) || n.push(i);
-    let r = $({ includeVcProbability: !1 }),
-        s = $({ includeVcProbability: !0 });
+    let l = z({ includeVcProbability: !1 }),
+        s = z({ includeVcProbability: !0 });
     for (let i of n) {
-        let n = u.A.getMutableGuildChannelsForGuild(i);
+        let n = o.A.getMutableGuildChannelsForGuild(i);
         for (let i in n) {
-            let a = n[i];
-            if (null != a) {
-                if ((0, l.ke)(a.type)) {
-                    let e = a.lastMessageId;
+            let r = n[i];
+            if (null != r) {
+                if ((0, u.ke)(r.type)) {
+                    let e = r.lastMessageId;
                     if (null == e) continue;
-                    let n = g.default.extractTimestamp(e);
-                    if (n < t || null != H.getChannel(i)) continue;
-                    let s = X();
+                    let n = S.default.extractTimestamp(e);
+                    if (n < t || null != Y.getChannel(i)) continue;
+                    let s = Q();
                     (s.lastMessageAtMs = n),
-                        (s.unread = f.Ay.hasUnread(i)),
-                        (s.mentionCount = f.Ay.getMentionCount(i)),
+                        (s.unread = A.Ay.hasUnread(i)),
+                        (s.mentionCount = A.Ay.getMentionCount(i)),
                         s.unread && (s.lastUnreadAtMs = n),
                         s.mentionCount > 0 && (s.lastDirectMentionAtMs = n),
-                        ee(i, s, r);
+                        ee(i, s, l);
                 }
-                if (a.isVocal()) {
+                if (r.isVocal()) {
                     if (null != j.getChannel(i)) continue;
                     let t = Object.entries(E.A.getVoiceStatesForChannel(i));
                     if (0 === t.length) continue;
                     let n = new Map();
                     for (let [i] of t) n.set(i, e);
-                    et(i, { ...Q(), voiceUsersWithJoinTimestampMs: n, lastVoiceJoinAtMs: e }, s);
+                    et(i, { ...X(), voiceUsersWithJoinTimestampMs: n, lastVoiceJoinAtMs: e }, s);
                 }
             }
         }
     }
-    Z();
+    K();
 }
-function er(e) {
-    let t = u.A.getChannel(e);
+function el(e) {
+    let t = o.A.getChannel(e);
     if (null == t) return !1;
     let n = t.getGuildId?.() ?? null;
-    if (null == n || !h.Ay.isGuildOrCategoryOrChannelMuted(n, e)) return !1;
-    let i = null != H.getChannel(e),
-        r = null != j.getChannel(e);
-    return i && H.delete(e), r && j.delete(e), i || r;
+    if (null == n || !f.Ay.isGuildOrCategoryOrChannelMuted(n, e)) return !1;
+    let i = null != Y.getChannel(e),
+        l = null != j.getChannel(e);
+    return i && Y.delete(e), l && j.delete(e), i || l;
 }
 class es extends s.Ay.Store {
     static displayName = "OverlayActiveNowStore";
     initialize() {
-        this.waitFor(u.A, c.A, P.A, S.default, d.A, f.Ay, _.A, o.A, p.default, h.Ay, E.A);
+        this.waitFor(o.A, d.A, P.A, m.default, c.A, A.Ay, h.A, a.A, g.default, f.Ay, E.A);
     }
     getActiveNowChannelByChannelId(e, t) {
-        return "TEXT" === t ? H.getChannel(e) : j.getChannel(e);
+        return "TEXT" === t ? Y.getChannel(e) : j.getChannel(e);
     }
     getActiveNowChannels(e) {
         let { kind: t } = e;
-        return "VOICE" === t ? j.getSortedChannels() : H.getSortedChannels();
+        return "VOICE" === t ? j.getSortedChannels() : Y.getSortedChannels();
     }
     getActiveNowChannelIds(e) {
         let { kind: t } = e;
-        return "VOICE" === t ? j.getSortedChannelIds() : H.getSortedChannelIds();
+        return "VOICE" === t ? j.getSortedChannelIds() : Y.getSortedChannelIds();
     }
     hasActiveNowChannelId(e) {
         let { kind: t, channelId: n } = e;
-        return "VOICE" === t ? j.hasSortedChannelId(n) : H.hasSortedChannelId(n);
+        return "VOICE" === t ? j.hasSortedChannelId(n) : Y.hasSortedChannelId(n);
     }
     getScoreForChannelId(e) {
-        let t = H.getChannel(e) ?? j.getChannel(e);
+        let t = Y.getChannel(e) ?? j.getChannel(e);
         if (null == t) return null;
-        let n = $({ includeVcProbability: t.candidate.kind === N.GuildVoice });
-        return q(t, n);
+        let n = z({ includeVcProbability: t.candidate.kind === p.GuildVoice });
+        return Z(t, n);
     }
     getScoreBreakdownForChannelId(e) {
-        let t = H.getChannel(e) ?? j.getChannel(e) ?? null;
+        let t = Y.getChannel(e) ?? j.getChannel(e) ?? null;
         if (null == t) return null;
-        let n = t.candidate.kind === N.GuildVoice ? "VOICE" : "TEXT",
-            i = $({ includeVcProbability: t.candidate.kind === N.GuildVoice }),
-            r = L(t.candidate, { voiceGuildId: K(), mostRecentGuildId: V }),
-            s = t.candidate.kind === N.DirectMessage || t.candidate.kind === N.GroupDM,
-            a = s ? 0 : w(t.candidate, i),
-            o = t.score;
+        let n = t.candidate.kind === p.GuildVoice ? "VOICE" : "TEXT",
+            i = z({ includeVcProbability: t.candidate.kind === p.GuildVoice }),
+            l = L(t.candidate, { voiceGuildId: $(), mostRecentGuildId: H }),
+            s = t.candidate.kind === p.DirectMessage || t.candidate.kind === p.GroupDM,
+            r = s ? 0 : R(t.candidate, i),
+            a = t.score;
         return {
             channelId: e,
             kind: n,
-            baseScore: o,
-            contextBoost: r,
+            baseScore: a,
+            contextBoost: l,
             guildAffinity: null != t.candidate.guildId ? i.getNormalizedGuildAffinity(t.candidate.guildId) : 0,
-            finalScore: o * (1 + r) * (s ? 1 : 1 + a),
+            finalScore: a * (1 + l) * (s ? 1 : 1 + r),
             scoreInfo: t.lastScoreInfo,
         };
     }
 }
-let ea = (e) => (0, T.v$)(e, "OverlayActiveNowStore"),
-    eo = new es(
-        a.h,
+let er = (e) => (0, C.v$)(e, "OverlayActiveNowStore"),
+    ea = new es(
+        r.h,
         __OVERLAY__
             ? {}
             : {
-                  OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: ea(function (e) {
-                      if (e.tab !== A.x.MESSAGES) return !1;
+                  OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: er(function (e) {
+                      if (e.tab !== _.x.MESSAGES) return !1;
                       let t = e.targetId;
                       if (e.isFavorite) {
-                          let e = null != H.getChannel(t),
+                          let e = null != Y.getChannel(t),
                               n = null != j.getChannel(t);
-                          return e && H.delete(t), n && j.delete(t), e || n;
+                          return e && Y.delete(t), n && j.delete(t), e || n;
                       }
                       return !1;
                   }),
-                  OVERLAY_MOUNTED: ea(function (e) {
-                      return W(!0), ei(), !0;
+                  OVERLAY_MOUNTED: er(function (e) {
+                      return J(!0), ei(), !0;
                   }),
-                  OVERLAY_UPDATE_OVERLAY_METHOD: ea(function (e) {
+                  OVERLAY_UPDATE_OVERLAY_METHOD: er(function (e) {
                       let { overlayMethod: t } = e;
-                      return t === I.Ue.OutOfProcess || t === I.Ue.OutOfProcessLimitedInteraction
-                          ? (W(!0), Z(), !0)
-                          : !Y() && W(!1);
+                      return t === T.Ue.OutOfProcess || t === T.Ue.OutOfProcessLimitedInteraction
+                          ? (J(!0), K(), !0)
+                          : !W() && J(!1);
                   }),
-                  OVERLAY_CRASHED: ea(function (e) {
-                      return !Y() && W(!1);
+                  OVERLAY_CRASHED: er(function (e) {
+                      return !W() && J(!1);
                   }),
-                  OVERLAY_SET_INPUT_LOCKED: ea(function (e) {
-                      return !e.locked && (W(!0), Z(), !0);
+                  OVERLAY_SET_INPUT_LOCKED: er(function (e) {
+                      return !e.locked && (J(!0), K(), !0);
                   }),
-                  FRIENDS_LIST_POPOUT_MOUNTED: ea(function () {
-                      return (B = !0), W(!0), ei(), !0;
+                  FRIENDS_LIST_POPOUT_MOUNTED: er(function () {
+                      return (k = !0), J(!0), ei(), !0;
                   }),
-                  MESSAGE_CREATE: ea(function (e) {
-                      if (!F || e.optimistic) return !1;
-                      let t = p.default.getCurrentUser()?.id ?? null,
+                  MESSAGE_CREATE: er(function (e) {
+                      if (!b || e.optimistic) return !1;
+                      let t = g.default.getCurrentUser()?.id ?? null,
                           n = e.message?.author?.id ?? null;
                       if (null == t || null == n || n === t) return !1;
-                      let i = u.A.getChannel(e.channelId);
-                      if (null == i || i.isPrivate() || !(0, l.ke)(i.type)) return !1;
-                      let r = (function (e) {
+                      let i = o.A.getChannel(e.channelId);
+                      if (null == i || i.isPrivate() || !(0, u.ke)(i.type)) return !1;
+                      let l = (function (e) {
                               let t = e.timestamp;
                               if (null == t) return Date.now();
                               let n = new Date(t).getTime();
                               return Number.isFinite(n) ? n : Date.now();
                           })(e.message),
-                          s = $({ includeVcProbability: !1 }),
-                          a = i.getGuildId?.() ?? null;
+                          s = z({ includeVcProbability: !1 }),
+                          r = i.getGuildId?.() ?? null;
                       if (
-                          !z({
-                              isAlreadyTracked: null != H.getChannel(e.channelId),
-                              guildId: a,
+                          !B({
+                              isAlreadyTracked: null != Y.getChannel(e.channelId),
+                              guildId: r,
                               updatingUserId: n,
                               providers: s,
                           })
                       )
                           return !1;
-                      let o = ee(e.channelId, X(), s);
-                      if (null == o) return !1;
-                      let c = (e.message?.mentions ?? []).some((e) => e?.id === t),
-                          d = e.message?.mention_roles,
-                          _ = Array.isArray(d) && d.length > 0,
-                          f = o.prepareForUpdate(r),
-                          h = new Map(f.recentMessageAuthorIds);
-                      h.set(n, r);
+                      let a = ee(e.channelId, Q(), s);
+                      if (null == a) return !1;
+                      let d = (e.message?.mentions ?? []).some((e) => e?.id === t),
+                          c = e.message?.mention_roles,
+                          h = Array.isArray(c) && c.length > 0,
+                          A = a.prepareForUpdate(l),
+                          f = new Map(A.recentMessageAuthorIds);
+                      f.set(n, l);
                       let E = {
-                          lastMessageAtMs: r,
+                          lastMessageAtMs: l,
                           unread: !0,
-                          lastUnreadAtMs: r,
+                          lastUnreadAtMs: l,
                           recentMessageAuthorId: n,
-                          recentMessageAuthorIds: h,
+                          recentMessageAuthorIds: f,
                       };
                       return (
-                          (c || _) &&
-                              ((E.mentionCount = Math.max(f.mentionCount, +!!c + +!!_)),
-                              c && (E.lastDirectMentionAtMs = r),
-                              _ && (E.lastRoleMentionAtMs = r)),
-                          o.updateSignalsAndRescore(E, r),
-                          o.prunable && H.delete(e.channelId),
-                          Z(),
+                          (d || h) &&
+                              ((E.mentionCount = Math.max(A.mentionCount, +!!d + +!!h)),
+                              d && (E.lastDirectMentionAtMs = l),
+                              h && (E.lastRoleMentionAtMs = l)),
+                          a.updateSignalsAndRescore(E, l),
+                          a.prunable && Y.delete(e.channelId),
+                          K(),
                           !0
                       );
                   }),
-                  MESSAGE_ACK: ea(function (e) {
-                      if (!F) return !1;
-                      let t = H.getChannel(e.channelId);
+                  MESSAGE_ACK: er(function (e) {
+                      if (!b) return !1;
+                      let t = Y.getChannel(e.channelId);
                       if (null == t) return !1;
                       let n = Date.now(),
                           i = { unread: !1, lastUnreadAtMs: null };
@@ -684,170 +683,170 @@ let ea = (e) => (0, T.v$)(e, "OverlayActiveNowStore"),
                                     (i.lastDirectMentionAtMs = null),
                                     (i.lastRoleMentionAtMs = null))),
                           t.updateSignalsAndRescore(i, n),
-                          t.prunable && H.delete(e.channelId),
-                          Z(),
+                          t.prunable && Y.delete(e.channelId),
+                          K(),
                           !0
                       );
                   }),
-                  TYPING_START: ea(function (e) {
-                      if (!F) return !1;
-                      let t = p.default.getCurrentUser()?.id ?? null;
+                  TYPING_START: er(function (e) {
+                      if (!b) return !1;
+                      let t = g.default.getCurrentUser()?.id ?? null;
                       if (null == t || e.userId === t) return !1;
-                      let n = u.A.getChannel(e.channelId);
-                      if (null == n || n.isPrivate() || !(0, l.ke)(n.type)) return !1;
+                      let n = o.A.getChannel(e.channelId);
+                      if (null == n || n.isPrivate() || !(0, u.ke)(n.type)) return !1;
                       let i = Date.now(),
-                          r = $({ includeVcProbability: !1 }),
+                          l = z({ includeVcProbability: !1 }),
                           s = n.getGuildId?.() ?? null;
                       if (
-                          !z({
-                              isAlreadyTracked: null != H.getChannel(e.channelId),
+                          !B({
+                              isAlreadyTracked: null != Y.getChannel(e.channelId),
                               guildId: s,
                               updatingUserId: e.userId,
-                              providers: r,
+                              providers: l,
                           })
                       )
                           return !1;
-                      let a = ee(e.channelId, X(), r);
-                      if (null == a) return !1;
-                      let o = new Map(a.prepareForUpdate(i).typingUserIdsWithTimestampMs);
-                      o.set(e.userId, i);
-                      let c = Array.from(o.keys());
+                      let r = ee(e.channelId, Q(), l);
+                      if (null == r) return !1;
+                      let a = new Map(r.prepareForUpdate(i).typingUserIdsWithTimestampMs);
+                      a.set(e.userId, i);
+                      let d = Array.from(a.keys());
                       return (
-                          a.updateSignalsAndRescore(
-                              { typingUserIdsWithTimestampMs: o, typingUserIds: c, isTyping: c.length > 0 },
+                          r.updateSignalsAndRescore(
+                              { typingUserIdsWithTimestampMs: a, typingUserIds: d, isTyping: d.length > 0 },
                               i,
                           ),
-                          a.prunable && H.delete(e.channelId),
-                          Z(),
+                          r.prunable && Y.delete(e.channelId),
+                          K(),
                           !0
                       );
                   }),
-                  VOICE_STATE_UPDATES: ea(function (e) {
-                      if (!F) return !1;
+                  VOICE_STATE_UPDATES: er(function (e) {
+                      if (!b) return !1;
                       let t = Date.now(),
-                          n = $({ includeVcProbability: !0 }),
+                          n = z({ includeVcProbability: !0 }),
                           i = !1;
                       return (
                           j.applyBatch(() => {
-                              for (let r of e.voiceStates) {
-                                  let e = r.userId,
-                                      s = r.channelId ?? null,
-                                      a = r.oldChannelId ?? null,
-                                      o = (n) => {
-                                          let r = j.getChannel(n);
-                                          if (null == r) return;
-                                          let s = r.signals,
-                                              a = new Map(s.voiceUsersWithJoinTimestampMs);
+                              for (let l of e.voiceStates) {
+                                  let e = l.userId,
+                                      s = l.channelId ?? null,
+                                      r = l.oldChannelId ?? null,
+                                      a = (n) => {
+                                          let l = j.getChannel(n);
+                                          if (null == l) return;
+                                          let s = l.signals,
+                                              r = new Map(s.voiceUsersWithJoinTimestampMs);
+                                          r.delete(e);
+                                          let a = new Map(s.streamUsersWithTimestampMs);
                                           a.delete(e);
-                                          let o = new Map(s.streamUsersWithTimestampMs);
-                                          o.delete(e);
-                                          let l = new Map(s.videoUsersWithTimestampMs);
-                                          l.delete(e);
-                                          let u = new Map(s.lastUnmuteActivityAtMs);
+                                          let u = new Map(s.videoUsersWithTimestampMs);
                                           u.delete(e);
-                                          let c = new Map(s.lastUndeafenActivityAtMs);
-                                          c.delete(e),
-                                              r.updateSignalsAndRescore(
+                                          let o = new Map(s.lastUnmuteActivityAtMs);
+                                          o.delete(e);
+                                          let d = new Map(s.lastUndeafenActivityAtMs);
+                                          d.delete(e),
+                                              l.updateSignalsAndRescore(
                                                   {
-                                                      voiceUsersWithJoinTimestampMs: a,
-                                                      streamUsersWithTimestampMs: o,
-                                                      videoUsersWithTimestampMs: l,
-                                                      lastUnmuteActivityAtMs: u,
-                                                      lastUndeafenActivityAtMs: c,
+                                                      voiceUsersWithJoinTimestampMs: r,
+                                                      streamUsersWithTimestampMs: a,
+                                                      videoUsersWithTimestampMs: u,
+                                                      lastUnmuteActivityAtMs: o,
+                                                      lastUndeafenActivityAtMs: d,
                                                   },
                                                   t,
                                               ),
-                                              r.prunable && j.delete(n),
+                                              l.prunable && j.delete(n),
                                               (i = !0);
                                       };
-                                  if ((null != a && a !== s && o(a), null != s)) {
-                                      let o = u.A.getChannel(s),
-                                          l = o?.getGuildId?.() ?? null;
+                                  if ((null != r && r !== s && a(r), null != s)) {
+                                      let a = o.A.getChannel(s),
+                                          u = a?.getGuildId?.() ?? null;
                                       if (
-                                          !z({
+                                          !B({
                                               isAlreadyTracked: null != j.getChannel(s),
-                                              guildId: l,
+                                              guildId: u,
                                               updatingUserId: e,
                                               providers: n,
                                           })
                                       )
                                           continue;
-                                      let c = et(s, Q(), n);
-                                      if (null == c) continue;
-                                      let d = c.prepareForUpdate(t),
-                                          _ = null == a || a !== s,
-                                          f = new Map(d.voiceUsersWithJoinTimestampMs);
-                                      _ && !f.has(e) && f.set(e, t);
-                                      let h = new Map(d.streamUsersWithTimestampMs);
-                                      r.selfStream ? h.has(e) || h.set(e, t) : h.delete(e);
-                                      let p = new Map(d.videoUsersWithTimestampMs);
-                                      r.selfVideo ? p.has(e) || p.set(e, t) : p.delete(e);
-                                      let E = new Map(d.lastUnmuteActivityAtMs);
-                                      if (!r.selfMute && !r.mute) {
+                                      let d = et(s, X(), n);
+                                      if (null == d) continue;
+                                      let c = d.prepareForUpdate(t),
+                                          h = null == r || r !== s,
+                                          A = new Map(c.voiceUsersWithJoinTimestampMs);
+                                      h && !A.has(e) && A.set(e, t);
+                                      let f = new Map(c.streamUsersWithTimestampMs);
+                                      l.selfStream ? f.has(e) || f.set(e, t) : f.delete(e);
+                                      let g = new Map(c.videoUsersWithTimestampMs);
+                                      l.selfVideo ? g.has(e) || g.set(e, t) : g.delete(e);
+                                      let E = new Map(c.lastUnmuteActivityAtMs);
+                                      if (!l.selfMute && !l.mute) {
                                           let n = E.get(e) ?? null;
                                           (null == n || t - n >= 15e3) && E.set(e, t);
                                       }
-                                      let m = new Map(d.lastUndeafenActivityAtMs);
-                                      if (!r.selfDeaf && !r.deaf) {
-                                          let n = m.get(e) ?? null;
-                                          (null == n || t - n >= 15e3) && m.set(e, t);
+                                      let I = new Map(c.lastUndeafenActivityAtMs);
+                                      if (!l.selfDeaf && !l.deaf) {
+                                          let n = I.get(e) ?? null;
+                                          (null == n || t - n >= 15e3) && I.set(e, t);
                                       }
-                                      c.updateSignalsAndRescore(
+                                      d.updateSignalsAndRescore(
                                           {
-                                              voiceUsersWithJoinTimestampMs: f,
-                                              lastVoiceJoinAtMs: _ ? t : d.lastVoiceJoinAtMs,
-                                              streamUsersWithTimestampMs: h,
-                                              videoUsersWithTimestampMs: p,
+                                              voiceUsersWithJoinTimestampMs: A,
+                                              lastVoiceJoinAtMs: h ? t : c.lastVoiceJoinAtMs,
+                                              streamUsersWithTimestampMs: f,
+                                              videoUsersWithTimestampMs: g,
                                               lastUnmuteActivityAtMs: E,
-                                              lastUndeafenActivityAtMs: m,
+                                              lastUndeafenActivityAtMs: I,
                                           },
                                           t,
                                       ),
-                                          c.prunable && j.delete(s),
+                                          d.prunable && j.delete(s),
                                           (i = !0);
                                   }
                               }
                           }),
-                          i && Z(),
+                          i && K(),
                           i
                       );
                   }),
-                  VOICE_CHANNEL_SELECT: ea(function (e) {
-                      return Z(), !0;
+                  VOICE_CHANNEL_SELECT: er(function (e) {
+                      return K(), !0;
                   }),
-                  RTC_CONNECTION_STATE: ea(function (e) {
-                      return Z(), !0;
+                  RTC_CONNECTION_STATE: er(function (e) {
+                      return K(), !0;
                   }),
-                  CHANNEL_SELECT: ea(function (e) {
+                  CHANNEL_SELECT: er(function (e) {
                       let { channelId: t } = e;
                       if (null == t) return !1;
-                      let n = u.A.getChannel(t);
-                      return !(null == n || n.isPrivate()) && ((V = n.getGuildId?.() ?? null), Z(), !0);
+                      let n = o.A.getChannel(t);
+                      return !(null == n || n.isPrivate()) && ((H = n.getGuildId?.() ?? null), K(), !0);
                   }),
-                  USER_GUILD_SETTINGS_CHANNEL_UPDATE: ea(function (e) {
-                      return er(e.channelId);
+                  USER_GUILD_SETTINGS_CHANNEL_UPDATE: er(function (e) {
+                      return el(e.channelId);
                   }),
-                  USER_GUILD_SETTINGS_GUILD_UPDATE: ea(function (e) {
+                  USER_GUILD_SETTINGS_GUILD_UPDATE: er(function (e) {
                       let t = e.guildId,
                           n = !1;
-                      for (let e of H.getSortedChannels())
-                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                      for (let e of Y.getSortedChannels())
+                          e.candidate.guildId === t && (n = el(e.candidate.channelId) || n);
                       for (let e of j.getSortedChannels())
-                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                          e.candidate.guildId === t && (n = el(e.candidate.channelId) || n);
                       return n;
                   }),
-                  USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: ea(function (e) {
+                  USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: er(function (e) {
                       let t = e.guildId,
                           n = !1;
-                      for (let e of H.getSortedChannels())
-                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                      for (let e of Y.getSortedChannels())
+                          e.candidate.guildId === t && (n = el(e.candidate.channelId) || n);
                       for (let e of j.getSortedChannels())
-                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                          e.candidate.guildId === t && (n = el(e.candidate.channelId) || n);
                       return n;
                   }),
-                  LOGOUT: ea(function () {
-                      let e = H.size > 0 || j.size > 0;
-                      return H.clear(), j.clear(), (F = !1), (B = !1), (V = null), e;
+                  LOGOUT: er(function () {
+                      let e = Y.size > 0 || j.size > 0;
+                      return Y.clear(), j.clear(), (b = !1), (k = !1), (H = null), e;
                   }),
               },
     );

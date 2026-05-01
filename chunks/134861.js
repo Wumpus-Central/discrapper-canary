@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(735438),
-    r = n.n(i),
-    s = n(17928),
-    a = n(228366);
-let o = {};
-class l extends s.Ay.Store {
+    a = n.n(i),
+    r = n(17928),
+    s = n(228366);
+let l = {};
+class o extends r.Ay.Store {
     static displayName = "ConnectedAppsStore";
     isConnected(e) {
-        return null != o[e];
+        return null != l[e];
     }
     isChildConnected(e) {
-        return null != e && Object.values(o).some((t) => t.parentId === e);
+        return null != e && Object.values(l).some((t) => t.parentId === e);
     }
     get connections() {
-        return r().values(o);
+        return a().values(l);
     }
     getApplication(e) {
-        return o[e];
+        return l[e];
     }
     getAllConnections() {
-        return o;
+        return l;
     }
 }
-let u = new l(a.h, {
+let d = new o(s.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { connectedApps: t } = e;
-        o = { ...t };
+        l = { ...t };
     },
     RPC_APP_CONNECTED: function (e) {
         let { application: t } = e;
         if (null == t.id) return !1;
         let n = t.id;
-        null == o[n] &&
-            (o[n] = {
+        null == l[n] &&
+            (l[n] = {
                 count: 0,
                 id: t.id,
                 parentId: t.parentId,
@@ -42,14 +41,14 @@ let u = new l(a.h, {
                 coverImage: t.coverImage,
                 authenticated: !1,
             }),
-            o[n].count++;
+            l[n].count++;
     },
     RPC_APP_AUTHENTICATED: function (e) {
         let { application: t } = e;
-        null != t.id && null != o[t.id] && (o[t.id].authenticated = !0);
+        null != t.id && null != l[t.id] && (l[t.id].authenticated = !0);
     },
     RPC_APP_DISCONNECTED: function (e) {
         let { application: t } = e;
-        null != t.id && null != o[t.id] && (o[t.id].count--, 0 === o[t.id].count && delete o[t.id]);
+        null != t.id && null != l[t.id] && (l[t.id].count--, 0 === l[t.id].count && delete l[t.id]);
     },
 });

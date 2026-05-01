@@ -334,19 +334,6 @@ function e6() {
         disabledLocalVideos: {},
         videoToggleStateMap: {},
         localVolumes: {},
-        audioMixerSettings: {
-            enabled: !1,
-            mode: "line",
-            spatialBlend: 1,
-            distance: 3,
-            roomSize: 25,
-            spread: 4,
-            arcAngle: 180,
-            gridColumns: 3,
-            gridSpacing: 1.5,
-            buckets: 10,
-            listenerHeight: 0.15,
-        },
         localPans: {},
         inputVolume: e$.Hz,
         outputVolume: e$.Hz,
@@ -680,8 +667,7 @@ function ni() {
         e7.setSidechainCompression(e.sidechainCompression),
         e7.setSidechainCompressionStrength(e.sidechainCompressionStrength),
         e7.setAudioInputBypassSystemProcessing(e.bypassSystemInputProcessing),
-        (0, f.isLinux)() && g.Ay?.setOpenH264Enabled?.(e.openH264Enabled),
-        e7.setAudioMixerOptions(e.audioMixerSettings);
+        (0, f.isLinux)() && g.Ay?.setOpenH264Enabled?.(e.openH264Enabled);
 }
 function nr() {
     e9 || e7.enable().then(() => v.h.dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: !0, unmute: !1 }));
@@ -1216,21 +1202,7 @@ class nS extends C.Ay.Store {
                         ? 1 !== e.ncUseKrispjsSettingVersion &&
                           ((e.ncUseKrispjsSettingVersion = 1), (e.noiseSuppression = !1), (e.noiseCancellation = !0))
                         : 1 !== e.ncUseKrispSettingVersion &&
-                          ((e.ncUseKrispSettingVersion = 1), (e.noiseSuppression = !1), (e.noiseCancellation = !0)),
-                    null == e.audioMixerSettings &&
-                        (e.audioMixerSettings = {
-                            enabled: !1,
-                            mode: "line",
-                            spatialBlend: 1,
-                            distance: 3,
-                            roomSize: 25,
-                            spread: 4,
-                            arcAngle: 180,
-                            gridColumns: 3,
-                            gridSpacing: 1.5,
-                            buckets: 10,
-                            listenerHeight: 0.15,
-                        });
+                          ((e.ncUseKrispSettingVersion = 1), (e.noiseSuppression = !1), (e.noiseCancellation = !0));
             }),
             ni(),
             ((0, f.isWindows)() || (0, f.isLinux)() || (0, f.isMac)()) && !__OVERLAY__ && !tO && !tR
@@ -1346,9 +1318,6 @@ class nS extends C.Ay.Store {
     }
     isDeaf() {
         return this.isSelfDeaf() || tu;
-    }
-    getAudioMixerSettings() {
-        return tJ().audioMixerSettings;
     }
     hasContext(e) {
         return null != e5[e];
@@ -1903,10 +1872,6 @@ function nN(e) {
         i === r ? delete s[n] : (s[n] = i),
             nn({ localVolumes: s }, t),
             e7.eachConnection((e) => e.setLocalVolume(n, i), t);
-    },
-    AUDIO_SET_AUDIO_MIXER_SETTINGS: function (e) {
-        let { context: t, settings: n } = e;
-        nn({ audioMixerSettings: n }, t), e7.setAudioMixerOptions(n);
     },
     AUDIO_SET_LOCAL_PAN: function (e) {
         let { context: t, userId: n, left: i, right: r } = e,
