@@ -1,11 +1,11 @@
-i.d(t, { default: () => L }), i(321073);
+i.d(t, { default: () => S }), i(321073);
 var l = i(627968),
     n = i(64700),
     s = i(503698),
     a = i.n(s),
     c = i(192308),
     r = i(834730),
-    o = i(65154),
+    o = i(176781),
     d = i(661531),
     u = i(691540),
     h = i(857250),
@@ -20,19 +20,19 @@ var l = i(627968),
     _ = i(95701),
     k = i(734057),
     E = i(31717),
-    j = i(954571),
+    j = i(174459),
     w = i(403362),
     I = i(518960),
     b = i(372684),
     N = i(439818),
-    R = i(399925),
+    R = i(948138),
     T = i(74847),
     v = i(696016),
     P = i(652215),
     F = i(381941),
-    M = i(985018),
+    M = i(375708),
     O = i(28289);
-function S(e) {
+function L(e) {
     let { clips: t } = e,
         i = t[0],
         n = i.thumbnail,
@@ -69,7 +69,7 @@ function S(e) {
                     children: (0, l.jsxs)("div", {
                         className: O.kp,
                         children: [
-                            (0, l.jsx)(o.S, { size: "custom", width: 20, color: d.A.colors.TEXT_MUTED }),
+                            (0, l.jsx)(o.x, { size: "custom", width: 20, color: d.A.colors.TEXT_MUTED }),
                             (0, l.jsx)(r.E, {
                                 variant: "text-md/medium",
                                 color: "text-muted",
@@ -86,7 +86,7 @@ function S(e) {
         })
     );
 }
-function L(e) {
+function S(e) {
     let { clips: t, analyticsLocations: i, onClose: s, ...a } = e,
         r = n.useCallback(
             async (e, l, n) => {
@@ -151,7 +151,7 @@ function L(e) {
         onClose: s,
         customTitle: M.intl.string(M.t.I8lglT),
         customSubtitle: M.intl.string(M.t.Ey7mOU),
-        customPreview: (0, l.jsx)(S, { clips: t }),
+        customPreview: (0, l.jsx)(L, { clips: t }),
         customSendHandler: r,
         customValidateDestination: o,
     });
