@@ -340,45 +340,45 @@ function Q(e) {
                 { onClose: d } = s,
                 _ = r.button?.copy ?? C.intl.string(C.t.YScQSF),
                 f = r.button?.buttonAction === E.dz.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button",
-                h = (0, S.h)({
+                O = (0, S.h)({
                     buttonAction: r.button?.buttonAction,
                     deeplinkSection: r.button?.deeplinkSection,
                     analyticsLocations: o,
                     analyticsLocation: l,
                     onClose: d,
                 }),
-                O = (0, T.C)(r.helpArticle, r.helpArticleId),
-                R =
-                    null != O
+                R = (0, T.C)(r.helpArticle, r.helpArticleId),
+                b =
+                    null != R
                         ? () =>
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, i.jsx)(g.Anchor, { className: v.$T, href: O.url, children: O.linkText }),
+                                      (0, i.jsx)(g.Anchor, { className: v.$T, href: R.url, children: R.linkText }),
                                   ],
                               })
                         : void 0,
-                b = (0, T.C)(r.disclaimer?.disclaimerHelpArticle, ""),
-                D =
-                    null != b
+                D = (0, T.C)(r.disclaimer?.disclaimerHelpArticle, ""),
+                L =
+                    null != D
                         ? () =>
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, i.jsx)(g.Anchor, { className: v.$T, href: b.url, children: b.linkText }),
+                                      (0, i.jsx)(g.Anchor, { className: v.$T, href: D.url, children: D.linkText }),
                                   ],
                               })
                         : void 0,
-                L = { type: "video", src: u ? r.heroArtVideoLinkLightTheme : r.videoLink };
+                w = { type: "video", src: u ? r.heroArtVideoLinkLightTheme : r.videoLink };
             return (
                 null != r.heroArtVideoSubtitles &&
-                    (L.subtitles = r.heroArtVideoSubtitles.map((e) => ({
+                    (w.subtitles = r.heroArtVideoSubtitles.map((e) => ({
                         locale: e.locale,
                         src: e.link,
                         isDefault: !1,
                     }))),
                 ("" !== r.heroArtImageLinkDarkTheme || "" !== r.heroArtImageLinkLightTheme) &&
-                    (L = { type: "image", src: u ? r.heroArtImageLinkLightTheme : r.heroArtImageLinkDarkTheme }),
+                    (w = { type: "image", src: u ? r.heroArtImageLinkLightTheme : r.heroArtImageLinkDarkTheme }),
                 {
                     componentId: t,
                     promotionId: n,
@@ -386,9 +386,9 @@ function Q(e) {
                     header: r.header,
                     modalTopPill: r.modalTopPill,
                     subHeader: r.subheader,
-                    subHeaderExtra: R,
+                    subHeaderExtra: b,
                     body: r.body,
-                    heroArt: L,
+                    heroArt: w,
                     featureCards: r.featureCards.map((e) => ({
                         header: e.header,
                         subHeader: e.body,
@@ -397,29 +397,29 @@ function Q(e) {
                     })),
                     changeLogId: c,
                     button: () => {
-                        let e = Date.now();
-                        return (0, i.jsx)(m.$, {
-                            variant: "expressive",
-                            size: "md",
-                            onClick: () => {
+                        let e = Date.now(),
+                            t = async () => {
                                 I.default.track(N.HAw.CHANGE_LOG_CTA_CLICKED, {
                                     change_log_id: c,
                                     cta_type: f,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
                                     target: c,
-                                }),
+                                });
+                                try {
                                     r.button?.buttonAction === E.dz.OPEN_MARKETING_PAGE &&
-                                        (0, A.qr)(a.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, n, {
+                                        (await (0, A.qr)(a.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, n, {
                                             dismissAction: y.i.TAKE_ACTION,
-                                        }),
-                                    h();
-                            },
-                            text: _,
-                            icon: p.t,
-                        });
+                                        }));
+                                } catch (e) {
+                                    h.A.captureException(e);
+                                } finally {
+                                    O();
+                                }
+                            };
+                        return (0, i.jsx)(m.$, { variant: "expressive", size: "md", onClick: t, text: _, icon: p.t });
                     },
                     disclaimer: r.disclaimer?.disclaimerText !== "" ? r.disclaimer?.disclaimerText : void 0,
-                    disclaimerExtra: D,
+                    disclaimerExtra: L,
                 }
             );
         })({
