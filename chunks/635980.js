@@ -16,52 +16,52 @@ var i = n(627968),
     E = n(232582),
     m = n(821609),
     g = n(349288),
-    A = n(174459),
-    I = n(637706),
-    T = n(498470),
-    S = n(652215),
-    N = n(375708),
-    y = n(870433);
+    A = n(281678),
+    I = n(174459),
+    T = n(637706),
+    S = n(498470),
+    N = n(652215),
+    y = n(49999),
+    C = n(375708),
+    v = n(870433);
 n(323874), n(14289), n(35956);
-var C = n(503698),
-    v = n.n(C),
-    O = n(562708),
-    R = n(877624),
-    b = n(17928),
-    D = n(815021),
-    L = n(777666),
-    w = n(534514),
-    M = n(834730),
-    P = n(935462),
-    x = n(315629),
-    U = n(775602),
-    k = n(139286),
-    G = n(175671),
-    F = n(259407),
-    V = n(915089),
-    B = n(607470),
-    H = n(281678),
-    j = n(34337),
-    Y = n(774774),
-    W = n(49999),
+var O = n(503698),
+    R = n.n(O),
+    b = n(562708),
+    D = n(877624),
+    L = n(17928),
+    w = n(815021),
+    M = n(777666),
+    P = n(534514),
+    x = n(834730),
+    U = n(935462),
+    k = n(315629),
+    G = n(775602),
+    F = n(139286),
+    V = n(175671),
+    B = n(259407),
+    H = n(915089),
+    j = n(607470),
+    Y = n(34337),
+    W = n(774774),
     K = n(695594);
 let z = [],
     $ = (e) => {
         let { tagText: t, className: n } = e;
-        return (0, i.jsx)(L.Lp, { className: v()(K.Tc, n), text: t });
+        return (0, i.jsx)(M.Lp, { className: R()(K.Tc, n), text: t });
     },
     q = (e) => {
         let { header: t, subHeader: n, imageSrc: r, tagText: s, wideStyle: a } = e;
         return (0, i.jsxs)("div", {
-            className: v()(K.Vr, { [K.tF]: a }),
+            className: R()(K.Vr, { [K.tF]: a }),
             children: [
                 null != s ? (0, i.jsx)($, { tagText: s, className: K.bX }) : null,
-                (0, i.jsx)("img", { alt: "", className: v()(K._n, { [K.tF]: a }), src: r }),
+                (0, i.jsx)("img", { alt: "", className: R()(K._n, { [K.tF]: a }), src: r }),
                 (0, i.jsxs)("div", {
-                    className: v()(K.Zz, { [K.tF]: a }),
+                    className: R()(K.Zz, { [K.tF]: a }),
                     children: [
-                        (0, i.jsx)(w.D, { variant: "heading-md/bold", className: K.Hf, children: t }),
-                        (0, i.jsx)(M.E, { variant: "text-md/medium", color: "text-subtle", children: n }),
+                        (0, i.jsx)(P.D, { variant: "heading-md/bold", className: K.Hf, children: t }),
+                        (0, i.jsx)(x.E, { variant: "text-md/medium", color: "text-subtle", children: n }),
                     ],
                 }),
             ],
@@ -83,14 +83,14 @@ function Z(e) {
             featureCards: E,
             changeLogId: m,
             button: g,
-            body: I,
-            disclaimer: T,
-            disclaimerExtra: y,
+            body: T,
+            disclaimer: S,
+            disclaimerExtra: v,
         } = e,
-        { onClose: C, transitionState: L } = o,
-        $ = (0, V.GV)(),
+        { onClose: O, transitionState: M } = o,
+        $ = (0, H.GV)(),
         Z = E.length % 2 == 0,
-        X = (0, b.bG)([U.A], () => U.A.useReducedMotion),
+        X = (0, L.bG)([G.A], () => G.A.useReducedMotion),
         [Q, J] = r.useState(Date.now()),
         [ee, et] = r.useState(0),
         [en, ei] = r.useState(0),
@@ -111,10 +111,10 @@ function Z(e) {
         return ed.current && (et((n += t)), e_.current || ei((i += t))), J(e), [n, i];
     }
     return (
-        (0, k.A)({
-            type: O.ImpressionTypes.MODAL,
-            name: O.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-            properties: { component_id: t, component_type: R.C.ANNOUNCEMENT_MODAL },
+        (0, F.A)({
+            type: b.ImpressionTypes.MODAL,
+            name: b.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+            properties: { component_id: t, component_type: D.C.ANNOUNCEMENT_MODAL },
         }),
         r.useEffect(() => {
             let e = async () => {
@@ -151,11 +151,11 @@ function Z(e) {
             () => () => {
                 if ("video" === l.type || "embed" === l.type) {
                     let [e, t] = eE();
-                    A.default.track(S.HAw.CHANGE_LOG_VIDEO_PLAYED, {
+                    I.default.track(N.HAw.CHANGE_LOG_VIDEO_PLAYED, {
                         change_log_id: m,
                         seconds_played: Math.round(e / 1e3),
                     }),
-                        A.default.track(S.HAw.CHANGE_LOG_VIDEO_UNMUTE, {
+                        I.default.track(N.HAw.CHANGE_LOG_VIDEO_UNMUTE, {
                             change_log_id: m,
                             seconds_unmuted: Math.round(t / 1e3),
                         });
@@ -164,42 +164,42 @@ function Z(e) {
             [m, l.type],
         ),
         r.useEffect(() => {
-            (0, H.Vh)(a.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL);
+            (0, A.Vh)(a.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL);
             let e = Date.now();
             return (
-                A.default.track(S.HAw.CHANGE_LOG_OPENED, { change_log_id: m }),
+                I.default.track(N.HAw.CHANGE_LOG_OPENED, { change_log_id: m }),
                 () => {
-                    A.default.track(S.HAw.CHANGE_LOG_CLOSED, {
+                    I.default.track(N.HAw.CHANGE_LOG_CLOSED, {
                         change_log_id: m,
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                     }),
-                        (0, H.qr)(a.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, n, { dismissAction: W.i.DISMISS });
+                        (0, A.qr)(a.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, n, { dismissAction: y.i.DISMISS });
                 }
             );
         }, [m, n]),
-        (0, i.jsx)(P.EO, {
+        (0, i.jsx)(U.EO, {
             "data-migration-pending": !0,
-            className: v()(K.zr, K.kv, s),
-            transitionState: L,
+            className: R()(K.zr, K.kv, s),
+            transitionState: M,
             "aria-labelledby": $,
             parentComponent: "PremiumAnnouncementModalVariant1",
-            children: (0, i.jsxs)(x.h, {
+            children: (0, i.jsxs)(k.h, {
                 color: "nitro-pink",
                 className: K.YV,
                 children: [
                     (0, i.jsx)("div", {
                         className: K.cG,
-                        children: (0, i.jsx)(D.J, { "data-migration-pending": !0, onClick: async () => await C() }),
+                        children: (0, i.jsx)(w.J, { "data-migration-pending": !0, onClick: async () => await O() }),
                     }),
-                    (0, i.jsxs)(P.$m, {
+                    (0, i.jsxs)(U.$m, {
                         "data-migration-pending": !0,
                         className: K.Qs,
                         scrollbarType: "auto",
                         overflow: "auto",
                         children: [
                             "video" === l.type
-                                ? (0, i.jsx)(B.A, {
-                                      className: v()(K.Ki, u),
+                                ? (0, i.jsx)(j.A, {
+                                      className: R()(K.Ki, u),
                                       autoPlay: !X,
                                       loop: !0,
                                       muted: !0,
@@ -208,7 +208,7 @@ function Z(e) {
                                       src: l.src,
                                       poster: l.poster,
                                       onPlay: (e) => {
-                                          A.default.track(S.HAw.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: m }),
+                                          I.default.track(N.HAw.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: m }),
                                               J(Date.now()),
                                               es(!0),
                                               eo(e.currentTarget.muted);
@@ -224,7 +224,7 @@ function Z(e) {
                                       },
                                       disablePictureInPicture: !0,
                                       children: ef?.map((e) => {
-                                          let t = (0, N.getLanguages)().find((t) => t.code === e.locale);
+                                          let t = (0, C.getLanguages)().find((t) => t.code === e.locale);
                                           return null == t
                                               ? null
                                               : (0, i.jsx)(
@@ -241,37 +241,37 @@ function Z(e) {
                                       }),
                                   })
                                 : "embed" === l.type
-                                  ? (0, i.jsx)(G.rr, {
-                                        className: v()(K.Ki, u),
+                                  ? (0, i.jsx)(V.rr, {
+                                        className: R()(K.Ki, u),
                                         allowFullScreen: !1,
                                         href: l.href,
                                         thumbnail: l.thumbnail,
                                         video: l.embed,
-                                        provider: F.mt.YOUTUBE,
+                                        provider: B.mt.YOUTUBE,
                                         maxWidth: l.embed.width,
                                         maxHeight: l.embed.height,
-                                        renderVideoComponent: j.$o,
-                                        renderImageComponent: j.LL,
-                                        renderLinkComponent: j.bU,
+                                        renderVideoComponent: Y.$o,
+                                        renderImageComponent: Y.LL,
+                                        renderLinkComponent: Y.bU,
                                         onPlay: () => {
-                                            A.default.track(S.HAw.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: m });
+                                            I.default.track(N.HAw.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: m });
                                         },
                                     })
                                   : "image" === l.type
-                                    ? (0, i.jsx)("img", { alt: "", className: v()(K.Ki, u), src: l.src })
+                                    ? (0, i.jsx)("img", { alt: "", className: R()(K.Ki, u), src: l.src })
                                     : null,
                             null != _ && "" !== _
-                                ? (0, i.jsx)(Y.e4, {
+                                ? (0, i.jsx)(W.e4, {
                                       text: _,
-                                      colorOptions: Y.at.PREMIUM_TIER_2_WHITE_FILL,
+                                      colorOptions: W.at.PREMIUM_TIER_2_WHITE_FILL,
                                       className: K.ON,
                                   })
                                 : null,
                             (0, i.jsxs)("div", {
                                 className: K.Z,
                                 children: [
-                                    (0, i.jsx)(w.D, { variant: "display-md", className: v()(K.TK, d), children: c }),
-                                    (0, i.jsxs)(M.E, {
+                                    (0, i.jsx)(P.D, { variant: "display-md", className: R()(K.TK, d), children: c }),
+                                    (0, i.jsxs)(x.E, {
                                         variant: "text-md/medium",
                                         color: "text-subtle",
                                         className: K.uI,
@@ -279,9 +279,9 @@ function Z(e) {
                                     }),
                                 ],
                             }),
-                            null != I &&
-                                "" !== I &&
-                                (0, i.jsx)(w.D, { variant: "heading-lg/semibold", className: K.G3, children: I }),
+                            null != T &&
+                                "" !== T &&
+                                (0, i.jsx)(P.D, { variant: "heading-lg/semibold", className: K.G3, children: T }),
                             E.length > 0 &&
                                 (0, i.jsx)("div", {
                                     className: K.IS,
@@ -295,13 +295,13 @@ function Z(e) {
                         className: K.xQ,
                         children: [
                             g(),
-                            null != T &&
-                                "" !== T &&
-                                (0, i.jsxs)(M.E, {
+                            null != S &&
+                                "" !== S &&
+                                (0, i.jsxs)(x.E, {
                                     variant: "text-xs/medium",
                                     color: "text-subtle",
                                     className: K.ed,
-                                    children: [T, y?.()],
+                                    children: [S, v?.()],
                                 }),
                         ],
                     }),
@@ -321,10 +321,10 @@ function X(e) {
 }
 function Q(e) {
     let { componentId: t, promotionId: n, renderModalProps: r, properties: s } = e,
-        { location: a } = (0, u.p)(),
-        { analyticsLocations: o } = (0, _.Ay)(d.A.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
-        f = (0, c.Ay)(),
-        C = (0, l.q)(f);
+        { location: o } = (0, u.p)(),
+        { analyticsLocations: f } = (0, _.Ay)(d.A.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
+        O = (0, c.Ay)(),
+        R = (0, l.q)(O);
     if ("announcementModalVariant1" === s.properties.oneofKind) {
         let e = (function (e) {
             let {
@@ -332,53 +332,53 @@ function Q(e) {
                     promotionId: n,
                     content: r,
                     renderModalProps: s,
-                    analyticsLocations: a,
-                    analyticsLocation: o,
-                    isLightTheme: l,
+                    analyticsLocations: o,
+                    analyticsLocation: l,
+                    isLightTheme: u,
                 } = e,
-                u = `AnnouncementModalVariant1_${t}`,
-                { onClose: c } = s,
-                d = r.button?.copy ?? N.intl.string(N.t.YScQSF),
-                _ = r.button?.buttonAction === E.dz.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button",
-                f = (0, T.h)({
+                c = `AnnouncementModalVariant1_${t}`,
+                { onClose: d } = s,
+                _ = r.button?.copy ?? C.intl.string(C.t.YScQSF),
+                f = r.button?.buttonAction === E.dz.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button",
+                h = (0, S.h)({
                     buttonAction: r.button?.buttonAction,
                     deeplinkSection: r.button?.deeplinkSection,
-                    analyticsLocations: a,
-                    analyticsLocation: o,
-                    onClose: c,
+                    analyticsLocations: o,
+                    analyticsLocation: l,
+                    onClose: d,
                 }),
-                h = (0, I.C)(r.helpArticle, r.helpArticleId),
-                C =
-                    null != h
+                O = (0, T.C)(r.helpArticle, r.helpArticleId),
+                R =
+                    null != O
                         ? () =>
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, i.jsx)(g.Anchor, { className: y.$T, href: h.url, children: h.linkText }),
+                                      (0, i.jsx)(g.Anchor, { className: v.$T, href: O.url, children: O.linkText }),
                                   ],
                               })
                         : void 0,
-                v = (0, I.C)(r.disclaimer?.disclaimerHelpArticle, ""),
-                O =
-                    null != v
+                b = (0, T.C)(r.disclaimer?.disclaimerHelpArticle, ""),
+                D =
+                    null != b
                         ? () =>
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, i.jsx)(g.Anchor, { className: y.$T, href: v.url, children: v.linkText }),
+                                      (0, i.jsx)(g.Anchor, { className: v.$T, href: b.url, children: b.linkText }),
                                   ],
                               })
                         : void 0,
-                R = { type: "video", src: l ? r.heroArtVideoLinkLightTheme : r.videoLink };
+                L = { type: "video", src: u ? r.heroArtVideoLinkLightTheme : r.videoLink };
             return (
                 null != r.heroArtVideoSubtitles &&
-                    (R.subtitles = r.heroArtVideoSubtitles.map((e) => ({
+                    (L.subtitles = r.heroArtVideoSubtitles.map((e) => ({
                         locale: e.locale,
                         src: e.link,
                         isDefault: !1,
                     }))),
                 ("" !== r.heroArtImageLinkDarkTheme || "" !== r.heroArtImageLinkLightTheme) &&
-                    (R = { type: "image", src: l ? r.heroArtImageLinkLightTheme : r.heroArtImageLinkDarkTheme }),
+                    (L = { type: "image", src: u ? r.heroArtImageLinkLightTheme : r.heroArtImageLinkDarkTheme }),
                 {
                     componentId: t,
                     promotionId: n,
@@ -386,36 +386,40 @@ function Q(e) {
                     header: r.header,
                     modalTopPill: r.modalTopPill,
                     subHeader: r.subheader,
-                    subHeaderExtra: C,
+                    subHeaderExtra: R,
                     body: r.body,
-                    heroArt: R,
+                    heroArt: L,
                     featureCards: r.featureCards.map((e) => ({
                         header: e.header,
                         subHeader: e.body,
-                        imageSrc: l ? e.imageLinkLightTheme : e.imageLink,
+                        imageSrc: u ? e.imageLinkLightTheme : e.imageLink,
                         tagText: "" !== e.pill ? e.pill : void 0,
                     })),
-                    changeLogId: u,
+                    changeLogId: c,
                     button: () => {
                         let e = Date.now();
                         return (0, i.jsx)(m.$, {
                             variant: "expressive",
                             size: "md",
                             onClick: () => {
-                                A.default.track(S.HAw.CHANGE_LOG_CTA_CLICKED, {
-                                    change_log_id: u,
-                                    cta_type: _,
+                                I.default.track(N.HAw.CHANGE_LOG_CTA_CLICKED, {
+                                    change_log_id: c,
+                                    cta_type: f,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
-                                    target: u,
+                                    target: c,
                                 }),
-                                    f();
+                                    r.button?.buttonAction === E.dz.OPEN_MARKETING_PAGE &&
+                                        (0, A.qr)(a.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, n, {
+                                            dismissAction: y.i.TAKE_ACTION,
+                                        }),
+                                    h();
                             },
-                            text: d,
+                            text: _,
                             icon: p.t,
                         });
                     },
                     disclaimer: r.disclaimer?.disclaimerText !== "" ? r.disclaimer?.disclaimerText : void 0,
-                    disclaimerExtra: O,
+                    disclaimerExtra: D,
                 }
             );
         })({
@@ -423,9 +427,9 @@ function Q(e) {
             promotionId: n,
             content: s.properties.announcementModalVariant1,
             renderModalProps: r,
-            analyticsLocations: o,
-            analyticsLocation: a,
-            isLightTheme: C,
+            analyticsLocations: f,
+            analyticsLocation: o,
+            isLightTheme: R,
         });
         return (0, i.jsx)(Z, { ...e });
     }
