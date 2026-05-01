@@ -1128,7 +1128,10 @@ function nz(e) {
     r.useEffect(() => {
         I?.(R.current);
     }, [R, I]),
-        r.useEffect(() => (tI.A.setState({ isOpen: !0 }), () => tI.A.setState({ isOpen: !1 })), []);
+        r.useEffect(
+            () => (tI.A.setState({ isOpen: !0 }), () => tI.A.setState({ isOpen: !1, shouldRenderTenureLevelUp: !1 })),
+            [],
+        );
     let P = (0, c.bG)([t2.A], () => t2.A.getStatus(E.id)),
         x = nY(t1.CY.useSetting()),
         U = (0, c.bG)([t3.A], () => t3.A.hidePersonalInformation),
@@ -1331,11 +1334,12 @@ function nz(e) {
     (0, th.A)({ skuId: C?.profileFrame?.skuId, openedAt: S, context: O, analyticsLocations: v });
     let z = r.useRef((0, tI.A)((e) => e.shouldRenderTenureLevelUp)),
         $ = r.useMemo(() => (0, tg.A)(), []),
-        [q, Z] = r.useState(!0);
+        [q, Z] = r.useState(() => tI.A.getState().shouldRenderTenureLevelUp);
     r.useEffect(() => {
-        setTimeout(() => {
+        let e = setTimeout(() => {
             Z(!1);
         }, 500);
+        return () => clearTimeout(e);
     }, []);
     let X = (e) => {
             g?.(), (0, tk.openUserProfileModal)({ customStatusPrompt: $, sourceAnalyticsLocations: v, ...O, ...e });
@@ -2590,7 +2594,7 @@ class rg extends r.PureComponent {
                     n.e("62931"),
                     n.e("81987"),
                     n.e("50417"),
-                    n.e("58007"),
+                    n.e("91737"),
                     n.e("34552"),
                     n.e("93103"),
                     n.e("91763"),
