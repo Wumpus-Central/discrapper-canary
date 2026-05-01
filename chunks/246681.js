@@ -1,7 +1,7 @@
-t.d(n, { WrappedUnifiedPaymentModal: () => p });
-var o = t(627968),
-    i = t(64700),
-    a = t(937008),
+t.d(n, { WrappedUnifiedPaymentModal: () => C });
+var a = t(627968),
+    o = t(64700),
+    i = t(937008),
     l = t(902958),
     r = t(546042),
     s = t(75304),
@@ -11,99 +11,104 @@ let c = (e) => {
         let {
                 skuId: n,
                 applicationId: t,
-                analyticsLocations: a,
+                analyticsLocations: i,
                 returnRef: l,
                 onComplete: s,
                 onClose: u,
                 renderHeader: c,
-                transitionState: C,
-                modalOnClose: p,
-                paymentModalVersion: h = "v2",
+                transitionState: p,
+                modalOnClose: C,
+                paymentModalVersion: m = "v2",
             } = e,
-            { customPaymentModalProps: m } = (0, d.u)(),
-            P = i.useCallback(
+            { customPaymentModalProps: y } = (0, d.u)(),
+            h = o.useCallback(
                 (e, n) => {
-                    p(), null != u && u(e, n);
+                    C(), null != u && u(e, n);
                 },
-                [p, u],
+                [C, u],
             ),
-            k = m?.onClose ?? P;
-        return (0, o.jsx)(r.PaymentModal, {
-            transitionState: C,
+            P = y?.onClose ?? h;
+        return (0, a.jsx)(r.PaymentModal, {
+            transitionState: p,
             returnRef: l,
             applicationId: t,
             onComplete: s,
             skuId: n,
             renderHeader: c,
             initialPlanId: null,
-            analyticsLocations: a,
-            paymentModalVersion: h,
-            ...m,
-            onClose: k,
+            analyticsLocations: i,
+            paymentModalVersion: m,
+            ...y,
+            onClose: P,
         });
     },
-    C = (e) => {
-        let { skuId: n } = e;
-        return (0, o.jsx)(l.PaymentContextProvider, { ...e, skuIDs: null != n ? [n] : [], children: e.children });
-    },
     p = (e) => {
+        let { skuId: n } = e;
+        return (0, a.jsx)(l.PaymentContextProvider, { ...e, skuIDs: null != n ? [n] : [], children: e.children });
+    },
+    C = (e) => {
         let {
                 loadId: n,
                 discoverySessionId: t,
-                skuId: i,
+                skuId: o,
                 analyticsSourceLocation: l,
                 analyticsLocations: r,
                 applicationId: d,
-                giftContextProps: p,
-                additionalOptions: h,
-                onComplete: m,
-                onClose: P,
-                renderModalProps: k,
-                checkoutFlow: y,
-                checkoutFlowConfiguration: I,
-                tenantCheckoutFlowConfig: R,
-                renderHeader: x,
-                stepConfigs: O,
+                giftContextProps: C,
+                additionalOptions: m,
+                onComplete: y,
+                onClose: h,
+                renderModalProps: P,
+                checkoutFlow: k,
+                checkoutFlowConfiguration: x,
+                tenantCheckoutFlowConfig: I,
+                renderHeader: S,
+                stepConfigs: f,
             } = e,
-            { purchaseType: S } = I,
-            { CustomTenantProvider: _, tenantProvidesPaymentContext: f } = R.TENANT_PROVIDER_CONFIGS,
-            v = null != p ? a.dX : a.Mq,
-            E = {
+            { purchaseType: v } = x,
+            {
+                CustomTenantProvider: O,
+                tenantProvidesPaymentContext: _,
+                overrideAnalyticParams: j,
+            } = I.TENANT_PROVIDER_CONFIGS,
+            w = null != C ? i.dX : i.Mq,
+            M = {
                 applicationId: d,
-                unifiedCheckoutFlow: y,
-                skuId: i,
+                unifiedCheckoutFlow: k,
+                skuId: o,
                 activeSubscription: null,
                 loadId: n,
                 discoverySessionId: t,
-                stepConfigs: O,
-                purchaseType: S,
+                stepConfigs: f,
+                purchaseType: v,
                 analyticsLocations: r,
-                paymentGateway: y === s.C.ORB_CHECKOUT ? u.kM.VIRTUAL_CURRENCY : void 0,
-                isGift: p?.isGift,
-                excludeSubscriptionPlansBySKU: S === u.VV.ONE_TIME,
-                excludeSKUPurchasePreviews: y === s.C.ORB_CHECKOUT,
+                paymentGateway: j?.payment_gateway,
+                isGift: C?.isGift,
+                excludeSubscriptionPlansBySKU: v === u.VV.ONE_TIME,
+                excludeSKUPurchasePreviews: k === s.C.ORB_CHECKOUT,
             },
-            M = (0, o.jsx)(_, {
-                ...E,
+            R = (0, a.jsx)(O, {
+                ...M,
                 analyticsSourceLocation: l,
-                additionalOptions: h,
-                renderModalProps: k,
-                onComplete: m,
-                onClose: P,
-                children: (0, o.jsx)(v, {
-                    ...p,
-                    children: (0, o.jsx)(c, {
+                additionalOptions: m,
+                overrideAnalyticParams: j,
+                renderModalProps: P,
+                onComplete: y,
+                onClose: h,
+                children: (0, a.jsx)(w, {
+                    ...C,
+                    children: (0, a.jsx)(c, {
                         applicationId: d,
-                        skuId: i,
-                        renderHeader: x,
+                        skuId: o,
+                        renderHeader: S,
                         analyticsLocations: r,
-                        onComplete: m,
-                        onClose: P,
-                        modalOnClose: k.onClose,
-                        transitionState: k.transitionState,
-                        returnRef: k.returnRef,
+                        onComplete: y,
+                        onClose: h,
+                        modalOnClose: P.onClose,
+                        transitionState: P.transitionState,
+                        returnRef: P.returnRef,
                     }),
                 }),
             });
-        return f ? M : (0, o.jsx)(C, { ...E, children: M });
+        return _ ? R : (0, a.jsx)(p, { ...M, children: R });
     };

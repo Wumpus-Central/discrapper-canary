@@ -1,9 +1,9 @@
 l.r(t),
     l.d(t, {
-        nitroCollection: () => l6,
+        nitroCollection: () => l3,
         virtualCurrencyCollection: () => l2,
         playgroundConfig: () => l8,
-        identityCollection: () => l3,
+        identityCollection: () => l6,
         RevenuePlaygroundCollectionId: () => lZ,
         paymentsCollection: () => l1,
     });
@@ -305,7 +305,7 @@ var Y = l(488428),
     ei = l(289873),
     er = l(192308),
     eo = l(753390),
-    es = l(226991),
+    es = l(110048),
     eu = l(541689),
     ed = l(721923),
     ec = l(300233),
@@ -1163,7 +1163,7 @@ function e1() {
 function e2() {
     return (0, s.jsx)("div", { style: { width: "60%", height: "60%", borderRadius: "50%", background: "red" } });
 }
-let e6 = {
+let e3 = {
         label: "Variant",
         type: "select",
         defaultValue: "square",
@@ -1172,7 +1172,7 @@ let e6 = {
             { label: "Bar", value: "bar" },
         ],
     },
-    e3 = {
+    e6 = {
         title: "Editable Tile Button",
         stories: [
             {
@@ -1199,7 +1199,7 @@ let e6 = {
                 },
                 id: "add-tile-button",
                 controls: {
-                    variant: e6,
+                    variant: e3,
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                 },
             },
@@ -1229,7 +1229,7 @@ let e6 = {
                 },
                 id: "edit-tile-button",
                 controls: {
-                    variant: e6,
+                    variant: e3,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                 },
@@ -1269,7 +1269,7 @@ let e6 = {
                 },
                 id: "deletable-edit-tile-button",
                 controls: {
-                    variant: e6,
+                    variant: e3,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                     deleteType: {
@@ -1897,9 +1897,12 @@ let tL = "1271174907081789524",
                     onClick: () => {
                         (0, tO.B4)({
                             skuId: t,
-                            onCheckoutSuccess: (e) => {
-                                let { skuId: t, entitlements: l } = e;
-                                console.log(`Orb Checkout Success for SKU: ${t}. Entitlement(s): `, l, Date.now());
+                            onComplete: (e) => {
+                                console.log(
+                                    `Orb Checkout Success for SKU: ${t}. Entitlement(s): `,
+                                    e?.entitlements,
+                                    Date.now(),
+                                );
                             },
                             onCloseCallback: () => {
                                 console.log("Orb Checkout Closed");
@@ -2320,7 +2323,7 @@ function t2(e) {
           ? (0, s.jsx)(tZ.Mv, { ...l, ...e })
           : (0, s.jsx)(tZ.dP, { ...l, ...e });
 }
-function t6(e) {
+function t3(e) {
     let { paymentRequestWallet: t } = e,
         l = u.useRef(null),
         [a, n] = u.useState(!1);
@@ -2341,7 +2344,7 @@ function t6(e) {
         }),
     });
 }
-var t3 = l(150934),
+var t6 = l(150934),
     t8 = l(36167),
     t9 = l(26279);
 let t7 = [
@@ -2643,7 +2646,7 @@ let lp = {
                             gap: 8,
                             align: "end",
                             children: [
-                                (0, s.jsx)(t3.S, { label: "Enable Flow Type", checked: e, onChange: n }),
+                                (0, s.jsx)(t6.S, { label: "Enable Flow Type", checked: e, onChange: n }),
                                 (0, s.jsx)(et.l, {
                                     label: "Flow Type",
                                     value: l,
@@ -2701,7 +2704,7 @@ let lp = {
                             }),
                             (0, s.jsx)(t_.Hq, {
                                 label: "Add Payment Step Body Connector View",
-                                children: (0, s.jsx)(t6, { paymentRequestWallet: t }),
+                                children: (0, s.jsx)(t3, { paymentRequestWallet: t }),
                             }),
                         ],
                     }),
@@ -3666,7 +3669,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
         tags: l0,
         IconComponent: i.C,
     },
-    l6 = {
+    l3 = {
         id: "nitro",
         name: "Nitro",
         groups: [
@@ -4055,11 +4058,11 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
         tags: l0,
         IconComponent: r.t,
     },
-    l3 = {
+    l6 = {
         id: "identity",
         name: "Identity",
         groups: [
-            e3,
+            e6,
             {
                 title: "Editable Tile Button Examples",
                 stories: [
@@ -4153,4 +4156,4 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
         tags: l0,
         IconComponent: o.n,
     },
-    l8 = { playgroundBaseUrl: "revenue", collections: [l1, l2, l6, l3] };
+    l8 = { playgroundBaseUrl: "revenue", collections: [l1, l2, l3, l6] };
