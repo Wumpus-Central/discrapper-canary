@@ -89,18 +89,18 @@
     z-index: 0
 }
 
-.previewContainer__5a2c6.custom-profile-frame {
-    padding-block-start: calc(var(--custom-profile-frame-popout-overflow-top)*1px);
-    padding-inline: calc(var(--custom-profile-frame-overflow-horizontal)*1px)
-}
-
-.previewContainer__5a2c6.custom-profile-frame-bottom {
-    padding-block-end: calc(var(--custom-profile-frame-popout-overflow-bottom)*1px)
-}
-
 .container__5a2c6 {
     box-sizing: content-box;
     position: relative
+}
+
+.container__5a2c6.custom-profile-frame {
+    margin-block-start: calc(var(--custom-profile-frame-popout-overflow-top)*1px);
+    margin-inline: calc(var(--custom-profile-frame-overflow-horizontal)*1px)
+}
+
+.container__5a2c6.custom-profile-frame-bottom {
+    margin-block-end: calc(var(--custom-profile-frame-popout-overflow-bottom)*1px)
 }
 
 .header__5a2c6 {
@@ -110,6 +110,10 @@
 
 .custom-user-profile-theme .header__5a2c6 {
     min-height: calc(var(--custom-user-profile-banner-height) + 35px)
+}
+
+.profileFrame__5a2c6 {
+    --custom-profile-frame-drop-shadow-opacity: 0
 }
 
 .wrapper__926d7 {
@@ -6480,6 +6484,30 @@
     width: 18px
 }
 
+.obscuredIcon__43090 {
+    height: 32px;
+    width: 32px
+}
+
+.noScroll_e81c2b {
+    overflow: visible !important
+}
+
+.settingsContent_e81c2b {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1
+}
+
+.switch_e81c2b {
+    margin: 0
+}
+
+.selectedIcon_e81c2b {
+    background-color: var(--background-base-lower)
+}
+
 .container__2af41 {
     background-color: rgba(19, 19, 24, .95);
     border: 1px solid var(--border-subtle);
@@ -6786,33 +6814,8 @@
     }
 }
 
-.chatIcon__233f8 {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    position: relative
-}
-
-.chatIcon__233f8 svg {
-    flex-shrink: 0
-}
-
-.chatIcon__233f8:hover .unreadCount__233f8 {
-    background: var(--white)
-}
-
-.chatIcon__233f8:hover .unreadCount__233f8.mention__233f8 {
-    background: var(--red-360)
-}
-
-.upArrow__233f8 {
-    transform: rotate(180deg)
-}
-
-.downArrow__233f8 {
-    transform: rotate(0deg)
-}
-
-.badge__233f8 {
-    margin-top: 14px
+.list__20827 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px
 }

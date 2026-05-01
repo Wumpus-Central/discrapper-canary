@@ -298,26 +298,26 @@
     width: 100%
 }
 
-:root {
+:where(:root) {
     --custom-profile-frame-overflow-horizontal: 14;
     --custom-profile-frame-popout-overflow-top: 77;
     --custom-profile-frame-popout-overflow-bottom: 53;
     --custom-profile-frame-popout-width: 300
 }
 
-:root .theme-midnight {
+:where(:root) .theme-midnight {
     --custom-profile-frame-drop-shadow-opacity: 0.6
 }
 
-:root .theme-darker {
+:where(:root) .theme-darker {
     --custom-profile-frame-drop-shadow-opacity: 0.4
 }
 
-:root .theme-dark {
+:where(:root) .theme-dark {
     --custom-profile-frame-drop-shadow-opacity: 0.2
 }
 
-:root .theme-light {
+:where(:root) .theme-light {
     --custom-profile-frame-drop-shadow-opacity: 0.13
 }
 
@@ -6960,10 +6960,6 @@
 
 .reverseTrialContextMarginBottom__945b8 {
     margin-bottom: 8px
-}
-
-.errorText__38262 {
-    margin-top: var(--space-4)
 }
 
 .formContent__30f2d {

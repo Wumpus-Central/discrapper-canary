@@ -246,22 +246,3 @@
     background-color: var(--border-strong);
     height: 1px
 }
-
-.noScroll_e81c2b {
-    overflow: visible !important
-}
-
-.settingsContent_e81c2b {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    z-index: 1
-}
-
-.switch_e81c2b {
-    margin: 0
-}
-
-.selectedIcon_e81c2b {
-    background-color: var(--background-base-lower)
-}

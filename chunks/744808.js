@@ -32,30 +32,28 @@ function h(e) {
             : null;
 }
 function p(e) {
-    let { frame: t, filterLayer: n } = e,
-        s = (0, l.bG)([u.A], () => u.A.theme),
-        c = (0, _.A)(t.skuId),
-        p = null == n ? t.layers : t.layers.filter(n),
-        E = p
-            .map((e) => {
-                let { id: t } = e;
-                return t;
-            })
-            .join("\0"),
-        m = r.useMemo(() => p, [t.layers, E]),
-        { layerData: g } = (0, d.A)({ skuId: t.skuId, layers: m });
-    return 0 === m.length
+    let { frame: t, className: n, filterLayer: s } = e,
+        c = (0, l.bG)([u.A], () => u.A.theme),
+        p = (0, _.A)(t.skuId),
+        E = null == s ? t.layers : t.layers.filter(s),
+        m = E.map((e) => {
+            let { id: t } = e;
+            return t;
+        }).join("\0"),
+        g = r.useMemo(() => E, [t.layers, m]),
+        { layerData: A } = (0, d.A)({ skuId: t.skuId, layers: g });
+    return 0 === g.length
         ? null
         : (0, i.jsx)(o.N, {
-              theme: s,
+              theme: c,
               children: (e) =>
                   (0, i.jsx)("div", {
-                      className: a()(f.uF, e, c),
+                      className: a()(f.uF, e, p, n),
                       "aria-label": t.label,
                       role: "img",
                       children: (0, i.jsx)("div", {
                           className: f.hH,
-                          children: m.map((e) => (0, i.jsx)(h, { skuId: t.skuId, layer: e, data: g[e.id] }, e.id)),
+                          children: g.map((e) => (0, i.jsx)(h, { skuId: t.skuId, layer: e, data: A[e.id] }, e.id)),
                       }),
                   }),
           });

@@ -27,9 +27,9 @@ var l = a(627968),
     D = a(562819),
     T = a(290863),
     k = a(19575),
-    O = a(550079),
+    O = a(980707),
     S = a(477782),
-    U = a(985018);
+    U = a(375708);
 let B = (e) => {
     let { onChangeAvatar: i, onChangeAvatarDecoration: a, onClose: r } = e;
     return (0, l.jsxs)(O.W, {
@@ -315,7 +315,7 @@ function en(e) {
             displayProfile: J,
             themeType: M.d.POPOUT,
             pendingThemeColors: T,
-            className: er.kL,
+            className: s()(er.kL, eo),
             forceShowPremium: r,
             children: [
                 (0, l.jsxs)("div", {
@@ -367,14 +367,14 @@ function en(e) {
                 }),
                 (0, l.jsx)(ea, { user: i, hideMessageInput: Y, hideExampleButton: W }),
                 null != es && (0, l.jsx)(u.A, { skuId: es.skuId }),
-                null != ed && (0, l.jsx)(m.A, { frame: ed }),
+                null != ed && (0, l.jsx)(m.A, { frame: ed, className: er.hH }),
             ],
         });
     return X
-        ? (0, l.jsx)("div", { className: s()(er.i1, eo, z), children: em })
+        ? (0, l.jsx)("div", { className: s()(er.i1, z), children: em })
         : (0, l.jsx)("div", {
               role: "img",
-              className: s()(er.i1, eo, z),
+              className: s()(er.i1, z),
               "aria-label": U.intl.string(U.t.ayozFl),
               children: (0, l.jsx)(o.M, { children: em }),
           });
