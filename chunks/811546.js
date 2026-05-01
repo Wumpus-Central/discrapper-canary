@@ -2,7 +2,7 @@ u.d(e, { openGuildProductLink: () => r });
 var d = u(627968);
 u(64700);
 var a = u(192308),
-    i = u(22007),
+    i = u(741231),
     s = u(71393),
     l = u(871109),
     n = u(652215);

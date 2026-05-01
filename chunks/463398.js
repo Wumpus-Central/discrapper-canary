@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(439372),
     r = n(287809),
     s = n(927578);
-n(40185);
-var a = n(597758),
+n(960851);
+var a = n(962644),
     o = n(788868),
     l = n(652215),
-    _ = n(818348);
-class d extends i.A {
+    u = n(818348);
+class c extends i.A {
     actions = {
         POST_CONNECTION_OPEN: this.onPostConnectionOpen.bind(this),
         EXPERIMENTS_FETCH_SUCCESS: this.onPostConnectionOpen.bind(this),
@@ -28,7 +28,7 @@ class d extends i.A {
     };
     onSubscriptionUpdated(e) {
         let { subscription: t } = e;
-        t.type === _.rz.PREMIUM && (0, a.BE)(!1);
+        t.type === u.rz.PREMIUM && (0, a.BE)(!1);
     }
     onMobilePurchaseSuccess() {
         (0, a.BE)(!1);
@@ -41,4 +41,4 @@ class d extends i.A {
         t.some((e) => e.type === l.zF_.FRACTIONAL_REDEMPTION) && (0, a.BE)(!1);
     }
 }
-let u = new d();
+let d = new c();

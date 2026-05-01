@@ -1,129 +1,134 @@
 "use strict";
 let i;
-n.d(t, { A: () => R });
+n.d(t, { A: () => v });
 var r = n(17928),
     s = n(228366),
     a = n(773669),
     o = n(495544);
 let l = {},
-    _ = {},
-    d = {},
     u = {},
     c = {},
-    E = {},
+    d = {},
+    _ = {},
+    f = {},
     h = {},
+    p = new Set(),
+    E = { state: "idle" },
     m = new Set(),
-    f = { state: "idle" },
-    g = new Set(),
+    g = {},
     A = {},
     I = {},
-    p = new Set(),
-    T = null,
-    S = { state: "idle" };
-function N() {
+    T = new Set(),
+    S = null,
+    N = { state: "idle" };
+function y() {
     if (i === a.default.locale) return !1;
-    (i = a.default.locale), (l = {}), (_ = {}), (d = {}), (u = {});
+    (i = a.default.locale), (l = {}), (u = {}), (c = {}), (d = {});
 }
-class O extends r.Ay.Store {
+class C extends r.Ay.Store {
     static displayName = "SocialLayerStorefrontStore";
     initialize() {
-        this.waitFor(o.default, a.default), this.syncWith([a.default], N), (i = a.default.locale);
+        this.waitFor(o.default, a.default), this.syncWith([a.default], y), (i = a.default.locale);
     }
     getStorefrontData(e) {
-        return _[e];
+        return u[e];
     }
     getSkuAssets() {
-        return d;
+        return c;
     }
     getStorefrontMetadata(e) {
-        return u[e];
+        return d[e];
     }
     getStorefrontState(e) {
         return l[e];
     }
     getAnnouncement(e) {
-        return c[e];
+        return _[e];
     }
     getConfig() {
-        return "success" === f.state ? f.config : null;
+        return "success" === E.state ? E.config : null;
     }
-    getApplicationIdFromDetectableId(e) {
+    getConfigForApplicationId(e) {
         return I[e];
     }
+    getApplicationIdFromDetectableId(e) {
+        return A[e];
+    }
     getDetectableIdsToApplicationIds() {
-        return I;
+        return A;
     }
     getGuildIdFromApplicationId(e) {
-        return "success" === f.state
-            ? f.config.storefronts.find((t) => t.applicationId === e || t.gameId === e)?.guildId
+        return "success" === E.state
+            ? E.config.storefronts.find((t) => t.applicationId === e || t.gameId === e)?.guildId
             : void 0;
     }
     getApplicationIdFromGuildId(e) {
-        return A[e];
+        return g[e];
     }
     getConfigFetchState() {
-        return f;
+        return E;
     }
     getStorefrontApplicationIds() {
-        return g;
+        return m;
     }
     getStorefrontGuildIds() {
-        return p;
-    }
-    getSKUEligibility(e) {
-        return E[e]?.state;
-    }
-    getSKUEligibilityEntry(e) {
-        return E[e];
-    }
-    getNormalizedSKUEligibility(e) {
-        return E[e]?.state !== "ineligible";
-    }
-    getAnnouncementModalConfig() {
         return T;
     }
-    getStorefrontAffinity() {
+    getSKUEligibility(e) {
+        return f[e]?.state;
+    }
+    getSKUEligibilityEntry(e) {
+        return f[e];
+    }
+    getNormalizedSKUEligibility(e) {
+        return f[e]?.state !== "ineligible";
+    }
+    getAnnouncementModalConfig() {
         return S;
     }
+    getStorefrontAffinity() {
+        return N;
+    }
 }
-let R = new O(s.h, {
+let v = new C(s.h, {
     LOGOUT: function () {
-        (d = {}),
-            (u = {}),
-            (E = {}),
+        (c = {}),
+            (d = {}),
+            (f = {}),
             (h = {}),
+            (p = new Set()),
+            (E = { state: "idle" }),
             (m = new Set()),
-            (f = { state: "idle" }),
-            (g = new Set()),
+            (g = {}),
             (A = {}),
             (I = {}),
-            (p = new Set()),
-            (T = null),
-            (S = { state: "idle" });
+            (T = new Set()),
+            (S = null),
+            (N = { state: "idle" });
     },
     POST_CONNECTION_OPEN: function () {
-        (E = {}), (h = {}), (m = new Set());
+        (f = {}), (h = {}), (p = new Set());
     },
     ENTITLEMENT_CREATE: function (e) {
         let { entitlement: t } = e;
-        if (null == E[t.sku_id]) return !1;
-        (E = { ...E }), delete E[t.sku_id];
+        if (null == f[t.sku_id]) return !1;
+        (f = { ...f }), delete f[t.sku_id];
     },
     INTERACTION_FAILURE: function (e) {
         let { interactionId: t } = e;
         if (null == t) return !1;
         let n = h[t];
         if (null == n) {
-            if (Object.values(E).some((e) => "checking" === e.state)) {
-                if (m.size >= 25) {
-                    let e = m.values().next().value;
-                    m.delete(e);
+            if (Object.values(f).some((e) => "checking" === e.state)) {
+                if (p.size >= 25) {
+                    let e = p.values().next().value;
+                    p.delete(e);
                 }
-                m.add(t);
+                p.add(t);
             }
             return !1;
         }
-        (E = { ...E, [n]: { state: "error", reason: "interaction_failure" } }), delete h[t];
+        (f = { ...f, [n]: { state: "error", reason: "interaction_failure" } }), delete h[t];
     },
     INTERACTION_SUCCESS: function (e) {
         let { interactionId: t } = e;
@@ -132,30 +137,30 @@ let R = new O(s.h, {
     },
     SOCIAL_LAYER_STOREFRONT_LOAD: function (e) {
         let { guildId: t } = e,
-            n = _[t];
-        (_[t] = { ...n, state: "loading" }), (_ = { ..._ });
+            n = u[t];
+        (u[t] = { ...n, state: "loading" }), (u = { ...u });
     },
     SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: function (e) {
         let { guildId: t, storefront: n } = e;
-        (_[t] = { storefront: n, state: "fetched", fetchedAt: Date.now() }),
-            (_ = { ..._ }),
-            null != n.assets && (d = { ...d, ...n.assets });
+        (u[t] = { storefront: n, state: "fetched", fetchedAt: Date.now() }),
+            (u = { ...u }),
+            null != n.assets && (c = { ...c, ...n.assets });
     },
     SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: function (e) {
         let { assets: t } = e;
-        d = { ...d, ...t };
+        c = { ...c, ...t };
     },
     SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS: function (e) {
         let { applicationId: t, storefrontMetadata: n } = e;
-        u = { ...u, [t]: n };
+        d = { ...d, [t]: n };
     },
     SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: function (e) {
         let { guildId: t, eager: n } = e;
         if (n) {
-            let e = _[t];
-            e?.state === "loading" && e?.storefront != null ? (_[t] = { ...e, state: "fetched" }) : delete _[t];
-        } else _[t] = { storefront: null, state: "error", fetchedAt: Date.now() };
-        _ = { ..._ };
+            let e = u[t];
+            e?.state === "loading" && e?.storefront != null ? (u[t] = { ...e, state: "fetched" }) : delete u[t];
+        } else u[t] = { storefront: null, state: "error", fetchedAt: Date.now() };
+        u = { ...u };
     },
     SET_SOCIAL_LAYER_STOREFRONT_STATE: function (e) {
         let { guildId: t, pageIndex: n, skuId: i } = e;
@@ -163,66 +168,67 @@ let R = new O(s.h, {
     },
     SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START: function (e) {
         let { guildId: t } = e;
-        (c = { ...c })[t] = { state: "loading" };
+        (_ = { ..._ })[t] = { state: "loading" };
     },
     SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: function (e) {
         let { guildId: t, announcement: n } = e;
-        (c = { ...c })[t] = { state: "success", announcement: n };
+        (_ = { ..._ })[t] = { state: "success", announcement: n };
     },
     SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE: function (e) {
         let { guildId: t } = e;
-        (c = { ...c })[t] = { state: "error" };
+        (_ = { ..._ })[t] = { state: "error" };
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START: function () {
-        f = { state: "loading" };
+        E = { state: "loading" };
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS: function (e) {
         let { config: t } = e;
-        (f = { state: "success", config: t, fetchedAt: Date.now() }),
-            (g = new Set(t.storefronts.map((e) => e.applicationId))),
-            (p = new Set(t.storefronts.map((e) => e.guildId))),
-            (A = t.storefronts.reduce((e, t) => ((e[t.guildId] = t.applicationId), e), {})),
-            (I = t.storefronts.reduce(
+        (E = { state: "success", config: t, fetchedAt: Date.now() }),
+            (m = new Set(t.storefronts.map((e) => e.applicationId))),
+            (T = new Set(t.storefronts.map((e) => e.guildId))),
+            (g = t.storefronts.reduce((e, t) => ((e[t.guildId] = t.applicationId), e), {})),
+            (A = t.storefronts.reduce(
                 (e, t) => ((e[t.gameId] = t.applicationId), (e[t.applicationId] = t.applicationId), e),
                 {},
             )),
-            (T = t.announcementModalConfig ?? null);
+            (I = t.storefronts.reduce((e, t) => ((e[t.applicationId] = t), e), {})),
+            (S = t.announcementModalConfig ?? null);
     },
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE: function () {
-        f = { state: "error", fetchedAt: Date.now() };
+        E = { state: "error", fetchedAt: Date.now() };
     },
     SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START: function (e) {
         let { skuId: t } = e;
-        E = { ...E, [t]: { state: "checking" } };
+        f = { ...f, [t]: { state: "checking" } };
     },
     SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: function (e) {
         let { skuId: t, interactionId: n } = e;
-        if (E[t]?.state !== "checking") return !1;
-        if (m.has(n)) {
-            m.delete(n), (E = { ...E, [t]: { state: "error", reason: "interaction_failure" } });
+        if (f[t]?.state !== "checking") return !1;
+        if (p.has(n)) {
+            p.delete(n), (f = { ...f, [t]: { state: "error", reason: "interaction_failure" } });
             return;
         }
         h[n] = t;
     },
     SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE: function (e) {
         let { skuId: t, reason: n = "http_error", httpStatus: i } = e,
-            r = E[t];
+            r = f[t];
         if (r?.state !== "checking" && "interaction_deadline" === n) return !1;
-        E = { ...E, [t]: { state: "error", reason: n, httpStatus: i } };
+        f = { ...f, [t]: { state: "error", reason: n, httpStatus: i } };
     },
     SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE: function (e) {
         let { skuId: t, recipientId: n, eligible: i, ineligibleReason: r } = e;
         if (o.default.getId() !== n) return !1;
-        E = { ...E, [t]: i ? { state: "eligible" } : { state: "ineligible", ineligibleReason: r } };
+        f = { ...f, [t]: i ? { state: "eligible" } : { state: "ineligible", ineligibleReason: r } };
     },
     SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_START: function () {
-        S = { state: "loading" };
+        N = { state: "loading" };
     },
     SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_SUCCESS: function (e) {
         let { affinity: t } = e;
-        S = { state: "success", affinity: t };
+        N = { state: "success", affinity: t };
     },
     SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_FAILURE: function () {
-        S = { state: "error" };
+        N = { state: "error" };
     },
 });

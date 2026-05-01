@@ -1,52 +1,53 @@
-n.d(t, { A: () => _ });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(17928),
-    a = n(873298),
-    r = n(228366),
-    s = n(761821);
-let l = !1,
-    o = {},
-    d = {};
+    r = n(873298),
+    s = n(228366),
+    a = n(761821);
+let o = !1,
+    l = {},
+    u = {};
 class c extends i.Ay.Store {
     static displayName = "FamilyCenterControlledSettingsStore";
     getSettings(e) {
-        return o[e];
+        return l[e];
     }
     getControlledSettings(e) {
-        return o[e];
+        return l[e];
     }
     hasSettingsForUser(e) {
-        return null != o[e];
+        return null != l[e];
     }
     getConsents(e) {
-        return d[e];
+        return u[e];
     }
     hasConsented(e, t) {
         if (null == e) return !1;
-        let n = d[e];
+        let n = u[e];
         return null != n && null != n[t] && n[t].consented;
     }
     get isLoading() {
-        return l;
+        return o;
     }
 }
-let _ = new c(r.h, {
+let d = new c(s.h, {
     FAMILY_CENTER_TEEN_SETTINGS_FETCH_START: function () {
-        l = !0;
+        o = !0;
     },
     FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS: function (e) {
         let { userId: t, settings: n, consents: i } = e;
-        null != n && (o[t] = (0, s.Gd)(n)), null != i && (d[t] = i), (l = !1);
+        null != n && (l[t] = (0, a.Gd)(n)), null != i && (u[t] = i), (o = !1);
     },
     FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS: function (e) {
         let { userId: t, consents: n } = e;
-        d[t] = n;
+        u[t] = n;
     },
     FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS: function (e) {
         let { userId: t, settings: n } = e,
-            i = (0, s.Gd)(n);
-        o[t] = (0, s.RK)(a.nT, o[t], i);
+            i = (0, a.Gd)(n);
+        l[t] = (0, a.RK)(r.nT, l[t], i);
     },
     LOGOUT: function () {
-        (o = {}), (d = {}), (l = !1);
+        (l = {}), (u = {}), (o = !1);
     },
 });

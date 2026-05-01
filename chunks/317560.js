@@ -1,75 +1,72 @@
-t.d(a, { R: () => n, j: () => s });
-var i = t(627968),
-    o = t(192308);
-let l = "social-layer-storefront-product-details-modal",
-    n = (e) => {
+n.d(t, { R: () => i, j: () => u });
+var l = n(627968),
+    r = n(192308);
+let a = "social-layer-storefront-product-details-modal",
+    i = (e) => {
         let {
-            skuId: a,
-            applicationId: n,
-            isStorefront: s,
-            giftRecipient: c,
-            giftingOrigin: d,
-            analyticsLocations: r,
-            analyticsContext: p,
-            onClose: u,
+            skuId: t,
+            applicationId: i,
+            isStorefront: u,
+            giftRecipient: o,
+            giftingOrigin: s,
+            analyticsLocations: d,
+            analyticsContext: c,
+            onClose: A,
         } = e;
-        (0, o.openModalLazy)(
+        (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    t.e("46438"),
-                    t.e("90738"),
-                    t.e("68495"),
-                    t.e("90261"),
-                    t.e("89553"),
-                    t.e("99786"),
-                    t.e("29020"),
-                    t.e("94573"),
-                    t.e("9233"),
-                    t.e("69747"),
-                    t.e("86814"),
-                    t.e("52617"),
-                    t.e("37021"),
-                    t.e("18024"),
-                    t.e("20131"),
-                    t.e("72963"),
-                    t.e("36149"),
-                    t.e("32326"),
-                    t.e("21930"),
-                    t.e("16916"),
-                    t.e("49205"),
-                    t.e("20382"),
-                    t.e("63333"),
-                    t.e("73165"),
-                    t.e("45830"),
-                    t.e("34268"),
-                    t.e("93766"),
-                    t.e("52511"),
-                    t.e("52212"),
-                    t.e("76361"),
-                    t.e("36768"),
-                    t.e("63335"),
-                ]).then(t.bind(t, 138266));
-                return (t) =>
-                    (0, i.jsx)(e, {
-                        ...t,
-                        skuId: a,
-                        applicationId: n,
-                        isStorefront: s,
-                        analyticsLocations: r,
-                        analyticsContext: p,
-                        giftRecipient: c,
-                        giftingOrigin: d,
+                    n.e("46438"),
+                    n.e("1195"),
+                    n.e("68495"),
+                    n.e("90261"),
+                    n.e("89553"),
+                    n.e("71018"),
+                    n.e("7170"),
+                    n.e("86814"),
+                    n.e("52617"),
+                    n.e("37021"),
+                    n.e("18024"),
+                    n.e("20131"),
+                    n.e("72963"),
+                    n.e("21930"),
+                    n.e("36149"),
+                    n.e("32326"),
+                    n.e("16916"),
+                    n.e("49205"),
+                    n.e("45830"),
+                    n.e("20382"),
+                    n.e("63333"),
+                    n.e("93766"),
+                    n.e("73165"),
+                    n.e("52511"),
+                    n.e("34268"),
+                    n.e("52212"),
+                    n.e("76361"),
+                    n.e("36768"),
+                    n.e("63335"),
+                ]).then(n.bind(n, 138266));
+                return (n) =>
+                    (0, l.jsx)(e, {
+                        ...n,
+                        skuId: t,
+                        applicationId: i,
+                        isStorefront: u,
+                        analyticsLocations: d,
+                        analyticsContext: c,
+                        giftRecipient: o,
+                        giftingOrigin: s,
                     });
             },
             {
-                modalKey: l,
-                allowsNavigation: s,
+                modalKey: a,
+                allowsNavigation: u,
                 onCloseCallback: () => {
-                    u?.();
+                    A?.();
                 },
             },
         );
     };
-function s() {
-    (0, o.hasModalOpen)(l) && (0, o.closeModal)(l);
+function u() {
+    (0, r.hasModalOpen)(a) && (0, r.closeModal)(a);
 }

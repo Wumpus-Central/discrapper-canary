@@ -1,41 +1,42 @@
-n.d(t, { SH: () => s, qE: () => d, zQ: () => r });
-var l = n(64700),
-    a = n(945810),
-    i = n(449054),
-    u = n(652215);
-let r = (0, a.mj)({
+"use strict";
+n.d(t, { SH: () => l, qE: () => u, zQ: () => o });
+var i = n(64700),
+    r = n(945810),
+    s = n(449054),
+    a = n(652215);
+let o = (0, r.mj)({
         name: "2026-02-silp-in-app-redesign",
         kind: "user",
         defaultConfig: { enabled: !1, treatment: void 0 },
         variations: { 1: { enabled: !0, treatment: "v1" }, 2: { enabled: !0, treatment: "v2" } },
     }),
-    s = (0, a.mj)({
+    l = (0, r.mj)({
         name: "2026-03-silp-in-app-redesign-profile",
         kind: "user",
         defaultConfig: { enabled: !1, treatment: void 0 },
         variations: { 1: { enabled: !0, treatment: "v1" }, 2: { enabled: !0, treatment: "v2" } },
     });
-function d(e, t) {
-    let { enabled: n, treatment: a } = r.useConfig({ location: t }),
-        [s, d] = l.useState(null),
-        [p, f] = l.useState(!1),
-        o = n && null != e && e.features.has(u.GuildFeatures.DISCOVERABLE);
-    l.useEffect(() => {
-        if (!o || null == e) {
-            d(null), f(!1);
+function u(e, t) {
+    let { enabled: n, treatment: r } = o.useConfig({ location: t }),
+        [l, u] = i.useState(null),
+        [c, d] = i.useState(!1),
+        _ = n && null != e && e.features.has(a.GuildFeatures.DISCOVERABLE);
+    i.useEffect(() => {
+        if (!_ || null == e) {
+            u(null), d(!1);
             return;
         }
-        f(!0);
+        d(!0);
         let t = !1;
         return (
-            (0, i.jm)(e.id).then((e) => {
-                t || (f(!1), null != e ? d(e.guild) : d(null));
+            (0, s.jm)(e.id).then((e) => {
+                t || (d(!1), null != e ? u(e.guild) : u(null));
             }),
             () => {
                 t = !0;
             }
         );
-    }, [o, e]);
-    let m = n && null != e && e.features.has(u.GuildFeatures.DISCOVERABLE) && s?.is_published === !0;
-    return { enabled: m, discoveryGuild: m ? s : null, treatment: a, isLoading: p };
+    }, [_, e]);
+    let f = n && null != e && e.features.has(a.GuildFeatures.DISCOVERABLE) && l?.is_published === !0;
+    return { enabled: f, discoveryGuild: f ? l : null, treatment: r, isLoading: c };
 }

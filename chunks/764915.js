@@ -3,6 +3,7 @@ e.exports = {
     KZ: "filterSection__11877",
     YG: "itemType__11877",
     hr: "filterTitle__11877",
+    Ym: "filterWithBadge__11877",
     OW: "colorSwatchRow__11877",
     Ot: "themeRow__11877",
     w4: "theme__11877",

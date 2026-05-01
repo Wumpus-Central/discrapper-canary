@@ -1,3 +1,4 @@
-var n = e(860511).navigator,
-    o = n && n.userAgent;
-r.exports = o ? String(o) : "";
+"use strict";
+var i = n(860511).navigator,
+    r = i && i.userAgent;
+e.exports = r ? String(r) : "";

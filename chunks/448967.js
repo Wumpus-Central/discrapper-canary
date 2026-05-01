@@ -1,115 +1,115 @@
 "use strict";
-n.d(t, { m: () => L, default: () => y });
+n.d(t, { m: () => b, default: () => O });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(925747),
+    o = n(785651),
     l = n(717421),
-    _ = n(935462),
-    d = n(430690),
-    u = n(534514),
-    c = n(834730),
-    E = n(821609),
+    u = n(935462),
+    c = n(430690),
+    d = n(534514),
+    _ = n(834730),
+    f = n(821609),
     h = n(939249),
-    m = n(320448),
-    f = n(192308),
-    g = n(964486),
-    A = n(235986),
-    I = n(954571),
-    p = n(859703),
-    T = n(890687),
+    p = n(320448),
+    E = n(192308),
+    m = n(964486),
+    g = n(235986),
+    A = n(174459),
+    I = n(859703),
+    T = n(31587),
     S = n(590202),
     N = n(652215),
-    O = n(985018),
-    R = n(399407);
-let C = "/assets/1929535a8397f7f0.png";
-function y(e) {
+    y = n(375708),
+    C = n(399407);
+let v = "/assets/1929535a8397f7f0.png";
+function O(e) {
     let { questId: t, survey: n, transitionState: s, onClose: a, onSubmit: h } = e,
-        m = (0, T.C5)(t),
-        [f, p] = r.useState(0),
-        [S, y] = (0, l.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } })),
-        L = (e) => {
+        p = (0, T.C5)(t),
+        [E, I] = r.useState(0),
+        [S, O] = (0, l.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } })),
+        b = (e) => {
             h(),
-                p(1),
-                null != m &&
-                    I.default.track(N.HAw.QUEST_SURVEY_SUBMITTED, { ...v(m, n), choice: e.text, choice_id: e.key });
+                I(1),
+                null != p &&
+                    A.default.track(N.HAw.QUEST_SURVEY_SUBMITTED, { ...D(p, n), choice: e.text, choice_id: e.key });
         },
-        w = async (e) => {
-            1 === e && (await y({ width: "100%" }), a());
+        L = async (e) => {
+            1 === e && (await O({ width: "100%" }), a());
         };
     return (
-        (0, g.Ay)(() => {
-            null != m && I.default.track(N.HAw.QUEST_SURVEY_DISPLAYED, v(m, n));
+        (0, m.Ay)(() => {
+            null != p && A.default.track(N.HAw.QUEST_SURVEY_DISPLAYED, D(p, n));
         }),
-        null == m && a(),
-        (0, i.jsx)(_.EO, {
+        null == p && a(),
+        (0, i.jsx)(u.EO, {
             "data-migration-pending": !0,
             transitionState: s,
-            size: _.rI.DYNAMIC,
-            className: R.modalRoot,
+            size: u.rI.DYNAMIC,
+            className: C.modalRoot,
             parentComponent: "QuestSurveyModal",
-            children: (0, i.jsxs)(d.t, {
-                activeSlide: f,
+            children: (0, i.jsxs)(c.t, {
+                activeSlide: E,
                 width: 467,
-                onSlideReady: w,
+                onSlideReady: L,
                 children: [
-                    (0, i.jsxs)(d.q, {
+                    (0, i.jsxs)(c.q, {
                         id: 0,
                         children: [
-                            (0, i.jsxs)(_.rQ, {
+                            (0, i.jsxs)(u.rQ, {
                                 "data-migration-pending": !0,
-                                direction: A.A.Direction.VERTICAL,
+                                direction: g.A.Direction.VERTICAL,
                                 separator: !1,
-                                className: R.Hc,
+                                className: C.Hc,
                                 children: [
-                                    (0, i.jsx)(_.s_, { "data-migration-pending": !0, className: R.PV, onClick: a }),
-                                    (0, i.jsx)("img", { src: C, alt: "", className: R.LY }),
-                                    (0, i.jsx)(u.D, { variant: "heading-lg/semibold", children: n.title }),
-                                    (0, i.jsx)(c.E, {
+                                    (0, i.jsx)(u.s_, { "data-migration-pending": !0, className: C.PV, onClick: a }),
+                                    (0, i.jsx)("img", { src: v, alt: "", className: C.LY }),
+                                    (0, i.jsx)(d.D, { variant: "heading-lg/semibold", children: n.title }),
+                                    (0, i.jsx)(_.E, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
                                         children: n.subtitle,
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(_.$m, {
+                            (0, i.jsx)(u.$m, {
                                 "data-migration-pending": !0,
-                                className: R.jE,
-                                children: n.choices.map((e) => (0, i.jsx)(D, { choice: e, onClick: L }, e.key)),
+                                className: C.jE,
+                                children: n.choices.map((e) => (0, i.jsx)(R, { choice: e, onClick: b }, e.key)),
                             }),
                         ],
                     }),
-                    (0, i.jsxs)(d.q, {
+                    (0, i.jsxs)(c.q, {
                         id: 1,
                         children: [
-                            (0, i.jsxs)(_.$m, {
+                            (0, i.jsxs)(u.$m, {
                                 "data-migration-pending": !0,
-                                className: R.wD,
+                                className: C.wD,
                                 children: [
-                                    (0, i.jsx)("img", { src: C, alt: "", className: R.LY }),
-                                    (0, i.jsx)(u.D, {
+                                    (0, i.jsx)("img", { src: v, alt: "", className: C.LY }),
+                                    (0, i.jsx)(d.D, {
                                         variant: "heading-lg/semibold",
-                                        children: O.intl.string(O.t.KTjjrG),
+                                        children: y.intl.string(y.t.KTjjrG),
                                     }),
-                                    (0, i.jsx)(c.E, {
+                                    (0, i.jsx)(_.E, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: O.intl.string(O.t.AvbrEM),
+                                        children: y.intl.string(y.t.AvbrEM),
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(_.jl, {
+                            (0, i.jsx)(u.jl, {
                                 "data-migration-pending": !0,
                                 children: (0, i.jsxs)("div", {
-                                    className: R.cG,
+                                    className: C.cG,
                                     children: [
-                                        (0, i.jsx)(E.$, {
+                                        (0, i.jsx)(f.$, {
                                             variant: "primary",
-                                            text: O.intl.string(O.t.cpT0Cq),
+                                            text: y.intl.string(y.t.cpT0Cq),
                                             onClick: a,
                                         }),
-                                        (0, i.jsx)(o.animated.div, { className: R.ce, style: S }),
+                                        (0, i.jsx)(o.animated.div, { className: C.ce, style: S }),
                                     ],
                                 }),
                             }),
@@ -120,17 +120,17 @@ function y(e) {
         })
     );
 }
-function D(e) {
+function R(e) {
     let { className: t, choice: n, onClick: r } = e;
     return (0, i.jsxs)(h.D, {
-        className: a()(R.z5, t),
+        className: a()(C.z5, t),
         onClick: () => r(n),
-        children: [(0, i.jsx)(c.E, { variant: "text-sm/semibold", children: n.text }), (0, i.jsx)(m._, {})],
+        children: [(0, i.jsx)(_.E, { variant: "text-sm/semibold", children: n.text }), (0, i.jsx)(p._, {})],
     });
 }
-function L(e) {
+function b(e) {
     let t = !1;
-    (0, f.openModalLazy)(
+    (0, E.openModalLazy)(
         async () => {
             let { default: r } = await Promise.resolve().then(n.bind(n, 448967));
             return (n) =>
@@ -144,13 +144,13 @@ function L(e) {
         },
         {
             onCloseCallback: () => {
-                let n = p.A.getQuest(e.questId);
-                null != n && I.default.track(N.HAw.QUEST_SURVEY_DISMISSED, { ...v(n, e.survey), submitted: t });
+                let n = I.A.getQuest(e.questId);
+                null != n && A.default.track(N.HAw.QUEST_SURVEY_DISMISSED, { ...D(n, e.survey), submitted: t });
             },
         },
     );
 }
-function v(e, t) {
+function D(e, t) {
     return {
         quest_id: e.id,
         quest_status: (0, S.NI)(e),

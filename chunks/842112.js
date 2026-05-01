@@ -2,16 +2,16 @@ t.d(l, { default: () => h });
 var r = t(627968);
 t(64700);
 var d = t(17928),
-    i = t(550079),
+    i = t(980707),
     n = t(477782),
     a = t(192308),
     s = t(442433),
-    o = t(686956),
+    o = t(66834),
     c = t(383394),
     u = t(711014),
     p = t(567035),
     b = t(652215),
-    f = t(985018);
+    f = t(375708);
 function h(e) {
     let { folderId: l, folderName: h, folderColor: x, unread: g, onSelect: A } = e,
         j = (0, d.bG)([u.Ay], () => u.Ay.getGuildFolderById(l), [l]),
@@ -42,7 +42,7 @@ function h(e) {
                         label: f.intl.string(f.t.Dx7im5),
                         action: () =>
                             (0, a.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([t.e("80155"), t.e("78658"), t.e("99116")]).then(
+                                let { default: e } = await Promise.all([t.e("80155"), t.e("99116")]).then(
                                     t.bind(t, 672551),
                                 );
                                 return (t) => (0, r.jsx)(e, { ...t, folderId: l, folderName: h, folderColor: x });

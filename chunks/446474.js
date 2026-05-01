@@ -1,7 +1,8 @@
-var n = e(630017),
-    o = Function.prototype.call;
-r.exports = n
-    ? o.bind(o)
+"use strict";
+var i = n(630017),
+    r = Function.prototype.call;
+e.exports = i
+    ? r.bind(r)
     : function () {
-          return o.apply(o, arguments);
+          return r.apply(r, arguments);
       };

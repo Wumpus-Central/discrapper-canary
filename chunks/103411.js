@@ -1,8 +1,9 @@
-i.d(t, { m: () => r });
-var s = i(17928),
-    a = i(851746),
-    n = i(190187);
-let r = function () {
+"use strict";
+n.d(t, { m: () => a });
+var i = n(17928),
+    r = n(851746),
+    s = n(190187);
+let a = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return (0, n.i)(e), (0, s.bG)([a.A], () => a.A.getIsEligibleToSendReferrals());
+    return (0, s.i)(e), (0, i.bG)([r.A], () => r.A.getIsEligibleToSendReferrals());
 };

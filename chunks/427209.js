@@ -1,6 +1,7 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(627968),
-    a = n(292801);
-function r(e) {
-    return (0, i.jsx)(a.t, { ...e });
+    r = n(292801);
+function s(e) {
+    return (0, i.jsx)(r.t, { ...e });
 }

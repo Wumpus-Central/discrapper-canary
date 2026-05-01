@@ -1,25 +1,26 @@
-function o(n) {
-    return n.valueOf ? n.valueOf() : Object.prototype.valueOf.call(n);
+"use strict";
+function i(e) {
+    return e.valueOf ? e.valueOf() : Object.prototype.valueOf.call(e);
 }
-e.d(t, { A: () => i });
-let i = function n(t, e) {
-    if (t === e) return !0;
-    if (null == t || null == e) return !1;
+n.d(t, { A: () => r });
+let r = function e(t, n) {
+    if (t === n) return !0;
+    if (null == t || null == n) return !1;
     if (Array.isArray(t))
         return (
-            Array.isArray(e) &&
-            t.length === e.length &&
-            t.every(function (t, o) {
-                return n(t, e[o]);
+            Array.isArray(n) &&
+            t.length === n.length &&
+            t.every(function (t, i) {
+                return e(t, n[i]);
             })
         );
-    if ("object" == typeof t || "object" == typeof e) {
-        var i = o(t),
-            r = o(e);
-        return i !== t || r !== e
-            ? n(i, r)
-            : Object.keys(Object.assign({}, t, e)).every(function (o) {
-                  return n(t[o], e[o]);
+    if ("object" == typeof t || "object" == typeof n) {
+        var r = i(t),
+            s = i(n);
+        return r !== t || s !== n
+            ? e(r, s)
+            : Object.keys(Object.assign({}, t, n)).every(function (i) {
+                  return e(t[i], n[i]);
               });
     }
     return !1;

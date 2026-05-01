@@ -1,64 +1,65 @@
-n.d(t, { AB: () => m, AI: () => E, Xc: () => S, ae: () => f, g8: () => h, gF: () => O, gS: () => p, vz: () => N });
+"use strict";
+n.d(t, { AB: () => S, AI: () => _, Xc: () => g, ae: () => I, g8: () => m, gF: () => N, gS: () => T, vz: () => A });
 var i,
-    a = n(873298),
-    r = n(253932),
-    s = n(205761),
-    l = n(498642),
-    o = n(71393),
-    d = n(711014),
+    r = n(873298),
+    s = n(885386),
+    a = n(205761),
+    o = n(498642),
+    l = n(71393),
+    u = n(711014),
     c = n(115063),
-    _ = n(985018),
-    E = (((i = {}).RESTRICTING = "restricting"), (i.EXPANDING = "expanding"), i);
-let u = a.Qd;
-function A(e) {
+    d = n(375708),
+    _ = (((i = {}).RESTRICTING = "restricting"), (i.EXPANDING = "expanding"), i);
+let f = r.Qd;
+function h(e) {
     switch (e) {
-        case u.ACTIVITY_STATUS_OFF:
+        case f.ACTIVITY_STATUS_OFF:
             return 2;
-        case u.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS:
+        case f.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS:
             return 1;
-        case u.ACTIVITY_STATUS_ON:
+        case f.ACTIVITY_STATUS_ON:
             return 0;
         default:
             return -1;
     }
 }
-let I = new Map([
-    [a.KP.FRIENDS_AND_ALL_GUILDS, u.ACTIVITY_STATUS_OFF],
-    [a.KP.FRIENDS_AND_SMALL_GUILDS, u.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS],
-    [a.KP.FRIENDS_ONLY, u.ACTIVITY_STATUS_ON],
+let p = new Map([
+    [r.KP.FRIENDS_AND_ALL_GUILDS, f.ACTIVITY_STATUS_OFF],
+    [r.KP.FRIENDS_AND_SMALL_GUILDS, f.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS],
+    [r.KP.FRIENDS_ONLY, f.ACTIVITY_STATUS_ON],
 ]);
-function T(e) {
-    return I.get(e) ?? u.ACTIVITY_STATUS_OFF;
+function E(e) {
+    return p.get(e) ?? f.ACTIVITY_STATUS_OFF;
 }
-function h(e, t) {
+function m(e, t) {
     if (e === t) return null;
-    let n = A(e),
-        i = A(t);
+    let n = h(e),
+        i = h(t);
     if (n < 0 || i < 0) return null;
-    let a = i < n ? "restricting" : "expanding",
-        r = (0, c.Kk)(),
-        s = d.Ay.getFlattenedGuildIds(),
-        _ =
-            (e === u.ACTIVITY_STATUS_OFF && t === u.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) ||
-            (e === u.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS && t === u.ACTIVITY_STATUS_OFF)
+    let r = i < n ? "restricting" : "expanding",
+        s = (0, c.Kk)(),
+        a = u.Ay.getFlattenedGuildIds(),
+        d =
+            (e === f.ACTIVITY_STATUS_OFF && t === f.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) ||
+            (e === f.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS && t === f.ACTIVITY_STATUS_OFF)
                 ? "large_only"
-                : (e === u.ACTIVITY_STATUS_ON && t === u.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) ||
-                    (e === u.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS && t === u.ACTIVITY_STATUS_ON)
+                : (e === f.ACTIVITY_STATUS_ON && t === f.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) ||
+                    (e === f.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS && t === f.ACTIVITY_STATUS_ON)
                   ? "small_only"
                   : "all",
-        E = s.filter((e) => {
-            if (null == o.A.getGuild(e)) return !1;
-            let t = r.has(e);
-            if (("restricting" === a && t) || ("expanding" === a && !t)) return !1;
-            if ("all" === _) return !0;
-            let n = l.A.getMemberCount(e);
-            return null == n ? "restricting" === a : "large_only" === _ ? n > 200 : n <= 200;
+        _ = a.filter((e) => {
+            if (null == l.A.getGuild(e)) return !1;
+            let t = s.has(e);
+            if (("restricting" === r && t) || ("expanding" === r && !t)) return !1;
+            if ("all" === d) return !0;
+            let n = o.A.getMemberCount(e);
+            return null == n ? "restricting" === r : "large_only" === d ? n > 200 : n <= 200;
         });
-    return 0 === E.length
+    return 0 === _.length
         ? null
-        : (E.sort((e, t) => {
-              let n = o.A.getGuild(e),
-                  i = o.A.getGuild(t);
+        : (_.sort((e, t) => {
+              let n = l.A.getGuild(e),
+                  i = l.A.getGuild(t);
               return n?.joinedAt == null && i?.joinedAt == null
                   ? 0
                   : n?.joinedAt == null
@@ -67,67 +68,67 @@ function h(e, t) {
                       ? -1
                       : new Date(i.joinedAt).getTime() - new Date(n.joinedAt).getTime();
           }),
-          { affectedGuildIds: E, direction: a });
+          { affectedGuildIds: _, direction: r });
 }
-function S(e) {
+function g(e) {
     switch (e) {
-        case u.ACTIVITY_STATUS_OFF:
-            return _.intl.string(_.t.FzgQna).toLowerCase();
-        case u.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS:
-            return _.intl.string(_.t["1hvuGH"]).toLowerCase();
-        case u.ACTIVITY_STATUS_ON:
-            return _.intl.string(_.t.fQc5la).toLowerCase();
+        case f.ACTIVITY_STATUS_OFF:
+            return d.intl.string(d.t.FzgQna).toLowerCase();
+        case f.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS:
+            return d.intl.string(d.t["1hvuGH"]).toLowerCase();
+        case f.ACTIVITY_STATUS_ON:
+            return d.intl.string(d.t.fQc5la).toLowerCase();
         default:
             return "";
     }
 }
-function N(e, t) {
+function A(e, t) {
     return {
-        title: _.intl.string(e ? _.t.eYDA7D : _.t["9jYwjo"]),
-        subtitle: _.intl.format(e ? _.t["c5/jDc"] : _.t.ajzh8S, { settingName: t }),
-        confirmText: _.intl.string(e ? _.t["6uPZV1"] : _.t.a9PIyD),
-        toastContent: _.intl.string(e ? _.t.AdpgML : _.t["Q7E+QF"]),
+        title: d.intl.string(e ? d.t.eYDA7D : d.t["9jYwjo"]),
+        subtitle: d.intl.format(e ? d.t["c5/jDc"] : d.t.ajzh8S, { settingName: t }),
+        confirmText: d.intl.string(e ? d.t["6uPZV1"] : d.t.a9PIyD),
+        toastContent: d.intl.string(e ? d.t.AdpgML : d.t["Q7E+QF"]),
     };
 }
-function f(e, t) {
+function I(e, t) {
     return {
-        title: _.intl.string(e ? _.t.jRx1Aa : _.t.S0Y0bh),
-        subtitle: _.intl.format(e ? _.t.Fs96LO : _.t.GcoYX8, { settingName: t }),
-        confirmText: _.intl.string(e ? _.t["4DM5HJ"] : _.t.WRrDtI),
-        toastContent: _.intl.string(e ? _.t.AdpgML : _.t["Q7E+QF"]),
+        title: d.intl.string(e ? d.t.jRx1Aa : d.t.S0Y0bh),
+        subtitle: d.intl.format(e ? d.t.Fs96LO : d.t.GcoYX8, { settingName: t }),
+        confirmText: d.intl.string(e ? d.t["4DM5HJ"] : d.t.WRrDtI),
+        toastContent: d.intl.string(e ? d.t.AdpgML : d.t["Q7E+QF"]),
     };
 }
-function p(e, t) {
-    let n = T(t),
-        i = r._Z.getSetting();
-    if (i === n || A(T(e)) > A(n) != A(i) > A(n)) return null;
-    let s = h(i, n);
-    if (null == s) return null;
-    let l = (function (e) {
+function T(e, t) {
+    let n = E(t),
+        i = s._Z.getSetting();
+    if (i === n || h(E(e)) > h(n) != h(i) > h(n)) return null;
+    let a = m(i, n);
+    if (null == a) return null;
+    let o = (function (e) {
         switch (e) {
-            case a.KP.FRIENDS_AND_ALL_GUILDS:
-                return _.intl.string(_.t.Boxc8R).toLowerCase();
-            case a.KP.FRIENDS_AND_SMALL_GUILDS:
-                return _.intl.string(_.t.YOIKBt).toLowerCase();
-            case a.KP.FRIENDS_ONLY:
-                return _.intl.string(_.t.u0nlJv).toLowerCase();
+            case r.KP.FRIENDS_AND_ALL_GUILDS:
+                return d.intl.string(d.t.Boxc8R).toLowerCase();
+            case r.KP.FRIENDS_AND_SMALL_GUILDS:
+                return d.intl.string(d.t.YOIKBt).toLowerCase();
+            case r.KP.FRIENDS_ONLY:
+                return d.intl.string(d.t.u0nlJv).toLowerCase();
             default:
                 return "";
         }
     })(t);
-    return { affectedGuildIds: s.affectedGuildIds, direction: s.direction, settingName: l, mappedActivityValue: n };
+    return { affectedGuildIds: a.affectedGuildIds, direction: a.direction, settingName: o, mappedActivityValue: n };
 }
-function m(e) {
-    return [...e].sort((e, t) => s.A.getScoreWithoutFetchingLatest(t) - s.A.getScoreWithoutFetchingLatest(e));
+function S(e) {
+    return [...e].sort((e, t) => a.A.getScoreWithoutFetchingLatest(t) - a.A.getScoreWithoutFetchingLatest(e));
 }
-function O(e, t) {
+function N(e, t) {
     let n = (0, c.Kk)(),
         i = new Set(t);
     if ("restricting" === e) {
         let e = new Set([...n, ...i]);
-        r.JG.updateSetting([...e]);
+        s.JG.updateSetting([...e]);
     } else {
         let e = [...n].filter((e) => !i.has(e));
-        r.JG.updateSetting(e);
+        s.JG.updateSetting(e);
     }
 }

@@ -1,106 +1,107 @@
+"use strict";
 n.d(t, { A: () => T });
 var i = n(17928),
-    l = n(506774),
-    a = n(228366),
-    r = n(773669),
-    s = n(253932),
-    o = n(617617),
-    d = n(559868);
-let u = {},
-    c = {},
+    r = n(506774),
+    s = n(228366),
+    a = n(773669),
+    o = n(885386),
+    l = n(617617),
+    u = n(559868);
+let c = {},
+    d = {},
+    _ = null,
+    f = null,
     h = null,
+    p = "lastChangeLogDate",
     E = null,
-    A = null,
-    _ = "lastChangeLogDate",
-    p = null,
-    g = null,
-    f = new Set();
-function I() {
-    p = s.pK.getSetting();
+    m = null,
+    g = new Set();
+function A() {
+    E = o.pK.getSetting();
 }
-class S extends i.Ay.Store {
+class I extends i.Ay.Store {
     static displayName = "ChangelogStore";
     initialize() {
-        this.waitFor(r.default, o.A), this.syncWith([r.default], () => !0), this.syncWith([o.A], I);
-        let e = l.w.get(_);
+        this.waitFor(a.default, l.A), this.syncWith([a.default], () => !0), this.syncWith([l.A], A);
+        let e = r.w.get(p);
         if (null != e)
             try {
-                g = new Date(e);
+                m = new Date(e);
             } catch {
-                l.w.remove(_);
+                r.w.remove(p);
             }
     }
     getChangelog(e, t) {
-        return u[e]?.[t] ?? null;
+        return c[e]?.[t] ?? null;
     }
     latestChangelogId() {
-        return h;
+        return _;
     }
     getChangelogLoadStatus(e, t) {
-        return c[e]?.[t] ?? d._f.NOT_LOADED;
+        return d[e]?.[t] ?? u._f.NOT_LOADED;
     }
     hasLoadedConfig() {
-        return null != A;
+        return null != h;
     }
     getConfig() {
-        return A;
+        return h;
     }
     overrideId() {
-        return E;
+        return f;
     }
     lastSeenChangelogId() {
-        return p;
+        return E;
     }
     lastSeenChangelogDate() {
-        return g;
+        return m;
     }
     getStateForDebugging() {
-        return { changelogConfig: A, loadedChangelogs: c, lastSeenChangelogId: p, lastSeenChangelogDate: g };
+        return { changelogConfig: h, loadedChangelogs: d, lastSeenChangelogId: E, lastSeenChangelogDate: m };
     }
     isLocked() {
-        return f.size > 0;
+        return g.size > 0;
     }
 }
-let T = new S(a.h, {
+let T = new I(s.h, {
     CHANGE_LOG_LOCK: function (e) {
         let { key: t } = e;
-        if (f.has(t)) return !1;
-        (f = new Set(f)).add(t);
+        if (g.has(t)) return !1;
+        (g = new Set(g)).add(t);
     },
     CHANGE_LOG_UNLOCK: function (e) {
         let { key: t } = e;
-        if (!f.has(t)) return !1;
-        (f = new Set(f)).delete(t);
+        if (!g.has(t)) return !1;
+        (g = new Set(g)).delete(t);
     },
     CHANGE_LOG_SET_CONFIG: function (e) {
         let { config: t, latestChangelogId: n } = e;
-        (h = n), (A = t);
+        (_ = n), (h = t);
     },
     CHANGE_LOG_FETCH_SUCCESS: function (e) {
         let { id: t, changelog: n } = e;
-        null == u[t] && (u[t] = {}),
-            (u[t][n.locale] = {
+        null == c[t] && (c[t] = {}),
+            (c[t][n.locale] = {
                 id: t,
                 date: n.date,
                 body: n.content,
                 revision: 1,
                 locale: n.locale,
-                [n.asset_type === d.PW.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset,
+                [n.asset_type === u.PW.YOUTUBE_VIDEO_ID ? "youtube_video_id" : "image"]: n.asset,
             }),
-            null == c[t] && (c[t] = {}),
-            (c[t][n.locale] = d._f.LOADED_SUCCESS);
+            null == d[t] && (d[t] = {}),
+            (d[t][n.locale] = u._f.LOADED_SUCCESS);
     },
     CHANGE_LOG_FETCH_FAILED: function (e) {
         let { id: t, locale: n } = e;
-        if (null != u[t] && null != u[t][n]) return !1;
-        null == c[t] && (c[t] = {}), (c[t][n] = d._f.LOADED_FAILURE);
+        if (null != c[t] && null != c[t][n]) return !1;
+        null == d[t] && (d[t] = {}), (d[t][n] = u._f.LOADED_FAILURE);
     },
     CHANGE_LOG_SET_OVERRIDE: function (e) {
         let { id: t } = e;
-        E = t;
+        f = t;
     },
     CHANGE_LOG_MARK_SEEN: function (e) {
         let { changelogDate: t } = e;
-        (g = new Date(t)), l.w.set(_, t);
+        (m = new Date(t)), r.w.set(p, t);
     },
 });

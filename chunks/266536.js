@@ -5,7 +5,7 @@ var i = s(627968),
     n = s.n(r),
     a = s(299855),
     c = s.n(a),
-    o = s(110259),
+    o = s(562708),
     d = s(141931),
     u = s(17928),
     f = s(364522),
@@ -22,7 +22,7 @@ var i = s(627968),
     y = s(793574),
     E = s(688810),
     _ = s(328153),
-    w = s(253932),
+    w = s(885386),
     N = s(51760),
     I = s(763827),
     O = s(287809),
@@ -59,7 +59,7 @@ var D = s(342952),
     er = s(279250),
     en = s(652215),
     ea = s(710787),
-    ec = s(985018),
+    ec = s(375708),
     eo = s(617335);
 function ed(e) {
     let { result: t, onSelectChannel: s } = e,
@@ -1398,7 +1398,7 @@ var eq = s(843402),
     eK = s(971276),
     eJ = s(639214),
     e1 = s(495163);
-function e2(e, t, s, i) {
+function e0(e, t, s, i) {
     let l = (0, M.isWindows)() ? (0, G.A)(_.Ay, R.A) : null,
         r = _.Ay.getRunningGames(),
         n = s?.split(":")[1],
@@ -1410,7 +1410,7 @@ function e2(e, t, s, i) {
     let c = i?.[a];
     return null != c && eB.F2.has(c) ? 2 : 1;
 }
-function e0(e) {
+function e2(e) {
     let { source: t } = e;
     return t.id.startsWith(d.fS.SCREEN)
         ? (0, i.jsx)(p.k, { size: "xs" })
@@ -1450,7 +1450,7 @@ function e5(e) {
             (0, i.jsxs)("div", {
                 className: e1.Uw,
                 children: [
-                    (0, i.jsx)(e0, { source: t }),
+                    (0, i.jsx)(e2, { source: t }),
                     (0, i.jsx)(F.E, { variant: "text-sm/medium", className: e1.VZ, children: a }),
                 ],
             }),
@@ -1495,7 +1495,7 @@ function e3(e) {
                 return null;
             }, [s, t, j, n]));
     l.useEffect(() => ((0, eq.a2)(), eq.e0), []);
-    let A = l.useMemo(() => [...n].sort((e, t) => e2(t, S?.source.id, p, v) - e2(e, S?.source.id, p, v)), [S, n, p, v]);
+    let A = l.useMemo(() => [...n].sort((e, t) => e0(t, S?.source.id, p, v) - e0(e, S?.source.id, p, v)), [S, n, p, v]);
     if (h) {
         if (!1 === m) {
             let e = !1;
@@ -1574,7 +1574,7 @@ var e7 = s(505312),
     e8 = s(922016),
     e9 = s(408278),
     e6 = s(403581),
-    te = s(550079),
+    te = s(980707),
     tt = s(477782),
     ts = s(270816),
     ti = s(498642),
@@ -1618,13 +1618,10 @@ let td = (e) => {
             s.e("21825"),
             s.e("98125"),
             s.e("18441"),
-            s.e("80527"),
-            s.e("22584"),
-            s.e("83429"),
-            s.e("76195"),
+            s.e("76640"),
+            s.e("14879"),
             s.e("86949"),
             s.e("43919"),
-            s.e("14879"),
             s.e("62827"),
             s.e("93475"),
             s.e("18630"),

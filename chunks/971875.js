@@ -1,13 +1,13 @@
-n.d(t, { dL: () => $, Ay: () => ee, oO: () => X }), n(321073);
+n.d(t, { dL: () => J, Ay: () => et, oO: () => Q }), n(321073);
 var l = n(627968),
-    i = n(64700),
-    a = n(575593),
+    a = n(64700),
+    i = n(575593),
     r = n(403581),
     s = n(262427),
     o = n(61572),
     u = n(725836),
-    c = n(69882),
-    d = n(93159),
+    c = n(164928),
+    d = n(474367),
     p = n(848584),
     m = n(241989),
     h = n(993408),
@@ -15,7 +15,7 @@ var l = n(627968),
     A = n(486020),
     E = n(927578),
     y = n(580630),
-    P = n(156312),
+    P = n(902958),
     S = n(284009),
     _ = n.n(S),
     T = n(997101),
@@ -26,27 +26,28 @@ var l = n(627968),
     g = n(46225),
     v = n(20015),
     M = n(364995),
-    b = n(666646),
-    R = n(427675),
-    j = n(94420),
+    j = n(666646),
+    b = n(427675),
+    R = n(94420),
     L = n(977445),
     O = n(778307),
     D = n(218075),
-    w = n(570221),
-    U = n(615405),
-    k = n(79387),
-    Y = n(45938),
-    G = n(937008),
-    F = n(566980),
-    B = n(367921),
-    W = n(908419),
-    H = n(652215);
-function V(e) {
+    w = n(987723),
+    U = n(570221),
+    k = n(615405),
+    Y = n(79387),
+    G = n(45938),
+    F = n(937008),
+    B = n(566980),
+    W = n(367921),
+    H = n(908419),
+    V = n(652215);
+function K(e) {
     let { paymentSourceType: t } = e,
-        { isGift: n } = (0, G.Pv)(),
-        { immediateDelivery: i } = (0, W.U)(),
-        a = (0, B.Ro)({
-            purchaseType: H.VVm.ONE_TIME,
+        { isGift: n } = (0, F.Pv)(),
+        { immediateDelivery: a } = (0, H.U)(),
+        i = (0, W.Ro)({
+            purchaseType: V.VVm.ONE_TIME,
             plan: null,
             premiumSubscription: null,
             isGift: n,
@@ -54,35 +55,35 @@ function V(e) {
             isPrepaidPaymentSource: !1,
         });
     return (0, l.jsx)(d._P, {
-        variant: n ? { type: d.I0.GiftShop, purchaseButtonText: a } : { type: d.I0.Shop, purchaseButtonText: a },
+        variant: n ? { type: d.I0.GiftShop, purchaseButtonText: i } : { type: d.I0.Shop, purchaseButtonText: i },
         paymentSourceType: t,
-        immediateDelivery: i,
+        immediateDelivery: a,
     });
 }
-var K = n(985018),
-    Z = n(666995),
-    q = n(319820),
-    z = n(327105);
+var Z = n(375708),
+    q = n(666995),
+    z = n(319820),
+    $ = n(327105);
 n(594387);
-let $ = (e) => e.name,
-    J = {
-        [a.R.BUNDLE]: () => K.intl.string(z.default["jM8/71"]),
-        [a.R.AVATAR_DECORATION]: () => K.intl.string(z.default.r29Oel),
-        [a.R.PROFILE_EFFECT]: () => K.intl.string(z.default.eTYAvF),
-        [a.R.NAMEPLATE]: () => K.intl.string(z.default.of9bom),
-        [a.R.PROFILE_FRAME]: () => K.intl.string(z.default.HzDn6w),
-    },
-    X = (e) => {
-        let t = K.intl.string(z.default.iZe9Wy);
-        if (null == e);
-        else if (e.type in J) return (0, J[e.type])();
-        return t;
+let J = (e) => e.name,
+    X = {
+        [i.R.BUNDLE]: () => Z.intl.string($.default["jM8/71"]),
+        [i.R.AVATAR_DECORATION]: () => Z.intl.string($.default.r29Oel),
+        [i.R.PROFILE_EFFECT]: () => Z.intl.string($.default.eTYAvF),
+        [i.R.NAMEPLATE]: () => Z.intl.string($.default.of9bom),
+        [i.R.PROFILE_FRAME]: () => Z.intl.string($.default.HzDn6w),
     },
     Q = (e) => {
+        let t = Z.intl.string($.default.iZe9Wy);
+        if (null == e);
+        else if (e.type in X) return (0, X[e.type])();
+        return t;
+    },
+    ee = (e) => {
         let {
                 application: t,
                 sku: n,
-                skuPricePreview: a,
+                skuPricePreview: i,
                 paymentSelectContent: o,
                 legalContent: d,
                 isGift: P,
@@ -90,53 +91,53 @@ let $ = (e) => e.name,
                 upperInlineNoticeProps: _,
                 footerInlineNoticeProps: T,
             } = e,
-            { product: N, isSocialLayerGameItem: x } = (0, q.AO)({ sku: n }),
-            { unifiedInvoiceSummaryProps: I, priceText: g } = i.useMemo(
+            { product: N, isSocialLayerGameItem: x } = (0, z.AO)({ sku: n }),
+            { unifiedInvoiceSummaryProps: I, priceText: g } = a.useMemo(
                 () =>
                     ((e) => {
                         let { sku: t, skuPricePreview: n } = e,
                             l = [];
                         if (null != n) {
-                            let { discount: e, basePrice: i, showTaxes: a } = (0, q.yh)({ skuPricePreview: n });
+                            let { discount: e, basePrice: a, showTaxes: i } = (0, z.yh)({ skuPricePreview: n });
                             return (
-                                l.push({ id: "sku", label: $(t), amount: i }),
+                                l.push({ id: "sku", label: J(t), amount: a }),
                                 null != e &&
                                     l.push({
                                         id: "discount",
                                         label: e.description,
                                         amount: e.amount > 0 ? -1 * e.amount : e.amount,
                                     }),
-                                a && l.push({ id: "tax", label: K.intl.string(K.t["/I8zmP"]), amount: n.tax }),
+                                i && l.push({ id: "tax", label: Z.intl.string(Z.t["/I8zmP"]), amount: n.tax }),
                                 {
                                     unifiedInvoiceSummaryProps: {
                                         lineItems: l,
-                                        label: K.intl.string(z.default.eoXh7B),
+                                        label: Z.intl.string($.default.eoXh7B),
                                         currency: n.currency,
                                     },
-                                    priceText: (0, y.$g)(i, n.currency),
+                                    priceText: (0, y.$g)(a, n.currency),
                                     discount: e,
                                 }
                             );
                         }
                         return { unifiedInvoiceSummaryProps: null, priceText: "", discount: null };
-                    })({ sku: n, skuPricePreview: a }),
-                [n, a],
+                    })({ sku: n, skuPricePreview: i }),
+                [n, i],
             ),
-            v = i.useMemo(() => (null != I ? (0, l.jsx)(p.Vm, { ...I }) : null), [I]),
-            M = i.useMemo(
+            v = a.useMemo(() => (null != I ? (0, l.jsx)(p.Vm, { ...I }) : null), [I]),
+            M = a.useMemo(
                 () =>
                     ((e) => {
-                        let { sku: t, product: n, application: i, isSocialLayerGameItem: a, giftRecipient: s } = e,
-                            o = K.intl.string(z.default.iZe9Wy);
-                        a
-                            ? (o = K.intl.string(z.default.qwSlCO))
+                        let { sku: t, product: n, application: a, isSocialLayerGameItem: i, giftRecipient: s } = e,
+                            o = Z.intl.string($.default.iZe9Wy);
+                        i
+                            ? (o = Z.intl.string($.default.qwSlCO))
                             : null != n
-                              ? (o = X(n))
-                              : t.productLine === H.EZt.GUILD_PRODUCT && (o = K.intl.string(z.default.hewwdA));
-                        let u = a
+                              ? (o = Q(n))
+                              : t.productLine === V.EZt.GUILD_PRODUCT && (o = Z.intl.string($.default.hewwdA));
+                        let u = i
                                 ? {
-                                      header: i.name,
-                                      headerIconSrc: A.Ay.getApplicationIconURL({ id: i.id, icon: i.icon, size: 16 }),
+                                      header: a.name,
+                                      headerIconSrc: A.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 16 }),
                                   }
                                 : {},
                             c = (0, l.jsx)(m.WH, { sku: t, product: n }),
@@ -147,10 +148,10 @@ let $ = (e) => e.name,
                                     let t = C.default.getCurrentUser(),
                                         n = E.Ay.canUseShopDiscounts(t),
                                         l = (0, h.xM)(t),
-                                        i = (0, h.WD)(e, { hasShopDiscount: n, discount: (0, h.fT)(e, n) });
-                                    if (null != i && !i.showDefaultPriceOnly && i.showDiscountPrice) {
+                                        a = (0, h.WD)(e, { hasShopDiscount: n, discount: (0, h.fT)(e, n) });
+                                    if (null != a && !a.showDefaultPriceOnly && a.showDiscountPrice) {
                                         if (l === h.D0.NITRO)
-                                            return { PriceIcon: r.t, priceTooltip: K.intl.string(z.default.YUNJJa) };
+                                            return { PriceIcon: r.t, priceTooltip: Z.intl.string($.default.YUNJJa) };
                                         h.D0.THIRDPARTY;
                                     }
                                     return {};
@@ -158,7 +159,7 @@ let $ = (e) => e.name,
                             {
                                 ...u,
                                 ...d,
-                                label: $(t),
+                                label: J(t),
                                 description: o,
                                 graphic: c,
                                 target: null != s ? { type: "gift", user: s } : void 0,
@@ -167,43 +168,43 @@ let $ = (e) => e.name,
                     })({ sku: n, product: N, application: t, isSocialLayerGameItem: x, giftRecipient: S }),
                 [n, N, t, x, S],
             ),
-            [b, R] = i.useMemo(
-                () => [K.intl.string(z.default.Zxav97), null != a ? (0, y.$g)(a.amount, a.currency) : void 0],
-                [a],
+            [j, b] = a.useMemo(
+                () => [Z.intl.string($.default.Zxav97), null != i ? (0, y.$g)(i.amount, i.currency) : void 0],
+                [i],
             ),
-            j = i.useMemo(() => {
+            R = a.useMemo(() => {
                 let e = ((e, t) => {
                     let { isGift: n } = t;
                     if (null == e) return null;
                     let l = e.orbs_reward;
                     if (null != l && l > 0) {
-                        let e = n ? K.t["ZV+aS9"] : K.t["0StwHe"];
-                        return { Icon: f.C, text: K.intl.format(e, { orbCount: l }) };
+                        let e = n ? Z.t["ZV+aS9"] : Z.t["0StwHe"];
+                        return { Icon: f.C, text: Z.intl.format(e, { orbCount: l }) };
                     }
-                })(a, { isGift: P });
+                })(i, { isGift: P });
                 return null != e ? (0, l.jsx)(s.J, { ...e }) : null;
-            }, [a, P]),
+            }, [i, P]),
             { setCheckoutHeaderConfigs: L, checkoutHeaderConfigs: O } = (0, u.ck)();
         return (
-            i.useEffect(() => {
-                null != j && null == O.headerBadgeText && L({ ...O, headerBadgeText: K.intl.string(z.default.Fjpyfj) });
-            }, [j, L, O]),
-            (0, l.jsx)(c.T_, {
+            a.useEffect(() => {
+                null != R && null == O.headerBadgeText && L({ ...O, headerBadgeText: Z.intl.string($.default.Fjpyfj) });
+            }, [R, L, O]),
+            (0, l.jsx)(c.T, {
                 shouldShowGlobalNotices: !0,
                 purchaseItemContent: (0, l.jsx)(m.f7, { ...M, price: g }),
                 invoiceSummaryContent: v,
                 paymentSelectContent: o,
                 legalContent: d,
-                promotionalNoticeContent: j,
+                promotionalNoticeContent: R,
                 upperInlineNoticeProps: _,
                 footerInlineNoticeProps: T,
-                invoiceTotalDueLabel: b,
-                invoiceTotalDueValue: R,
+                invoiceTotalDueLabel: j,
+                invoiceTotalDueValue: b,
             })
         );
     };
-function ee(e) {
-    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: a } = e,
+function et(e) {
+    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: i } = e,
         {
             sku: r,
             application: s,
@@ -217,13 +218,17 @@ function ee(e) {
             disabled: y,
         } = ((e) => {
             let { hasLegalTermsFlash: t, legalTermsNodeRef: n } = e,
-                { selectedSkuId: a, setHasAcceptedTerms: r } = (0, j.t4)((e) => ({
+                {
+                    selectedSkuId: i,
+                    setHasAcceptedTerms: r,
+                    purchaseState: s,
+                } = (0, R.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
                     setHasAcceptedTerms: e.setHasAcceptedTerms,
+                    purchaseState: e.purchaseState,
                 })),
                 {
-                    application: s,
-                    purchaseState: o,
+                    application: o,
                     paymentSourceId: u,
                     isEmbeddedIAP: c,
                     purchaseType: d,
@@ -232,111 +237,113 @@ function ee(e) {
                     hasPaymentSources: h,
                 } = (0, P.P5)(),
                 { checkoutPaymentSources: C, hasInvoiceOrderContextLoaded: A } = (0, M.t6)(),
-                E = (0, R.gU)(),
-                y = (0, R.RR)(),
-                { isGift: S, giftRecipient: f } = (0, G.Pv)(),
-                B = S && (0, Y.Ik)(f),
-                { fetched: W, hasAlreadyLinked: q } = (0, g.RD)(s);
-            _()(null != a, "Expected selectedSkuId");
-            let z = E[a],
-                $ = z?.eligiblePaymentGateways,
-                J = y[a],
-                X = u ?? k.B,
-                Q = C.length > 0,
-                ee = null != J ? (J[X] ?? (Q ? J[k.B] : null)) : null,
-                et = i.useMemo(() => (null == ee ? null : w.A.createFromOTPPreview(ee)), [ee]);
-            (0, b.F0)(et, p ?? null),
-                _()(null != z, "SKU must exist and be fetched."),
-                _()(null != s, "Application must exist.");
-            let en = (0, L.u)(s.id),
-                el = T.M.EEA_COUNTRIES.has(U.A.ipCountryCodeWithFallback),
-                ei = o === F.h.PURCHASING || o === F.h.COMPLETED,
-                ea = C.find((e) => e.id === u) ?? null,
-                er = null != ea ? ea.type : null,
-                es = null != $ && $.length > 0 && (u === k.B || null === er) && h ? D.fU.SELECT_PAYMENT_METHOD : void 0,
-                eo = z.productLine === H.EZt.SOCIAL_LAYER_GAME_ITEM,
-                eu = B && !eo,
-                ec = i.useMemo(
+                E = (0, b.gU)(),
+                y = (0, b.RR)(),
+                { isGift: S, giftRecipient: f } = (0, F.Pv)(),
+                W = S && (0, G.Ik)(f),
+                { fetched: H, hasAlreadyLinked: z } = (0, g.RD)(o);
+            _()(null != i, "Expected selectedSkuId");
+            let $ = E[i],
+                J = $?.eligiblePaymentGateways,
+                X = y[i],
+                Q = u ?? Y.B,
+                ee = C.length > 0,
+                et = null != X ? (X[Q] ?? (ee ? X[Y.B] : null)) : null,
+                en = a.useMemo(() => (null == et ? null : U.A.createFromOTPPreview(et)), [et]);
+            (0, j.F0)(en, p ?? null),
+                _()(null != $, "SKU must exist and be fetched."),
+                _()(null != o, "Application must exist.");
+            let el = (0, L.u)(o.id),
+                ea = T.M.EEA_COUNTRIES.has(k.A.ipCountryCodeWithFallback),
+                ei = s === B.h.PURCHASING || s === B.h.COMPLETED,
+                er = C.find((e) => e.id === u) ?? null,
+                es = null != er ? er.type : null,
+                eo = null != J && J.length > 0 && (u === Y.B || null === es) && h ? D.fU.SELECT_PAYMENT_METHOD : void 0,
+                eu = $.productLine === V.EZt.SOCIAL_LAYER_GAME_ITEM,
+                ec = W && !eu,
+                ed = a.useMemo(
                     () => ({
-                        testModeWarning: en ? K.intl.string(K.t.OvMyMd) : null,
+                        testModeWarning: el ? Z.intl.string(Z.t.OvMyMd) : null,
                         devShelfError:
-                            (0, v.n)(s, H.gfo.EMBEDDED) && m === I.$.ERROR ? K.intl.string(K.t.tAmECt) : null,
-                        socialLayerGameItemDisclaimer: eo && W && !q && !S ? K.intl.string(K.t["3pLGHL"]) : null,
+                            (0, v.n)(o, V.gfo.EMBEDDED) && m === I.$.ERROR ? Z.intl.string(Z.t.tAmECt) : null,
+                        socialLayerGameItemDisclaimer:
+                            eu && H && !z && !S ? (0, w.k3)(o, { location: "OneTimePurchaseReviewState" }) : null,
                     }),
-                    [en, s, m, eo, W, q, S],
+                    [el, o, m, eu, H, z, S],
                 ),
-                ed = i.useMemo(
+                ep = a.useMemo(
                     () =>
-                        z.productLine === H.EZt.COLLECTIBLES
-                            ? (0, l.jsx)(V, { paymentSourceType: er })
+                        $.productLine === V.EZt.COLLECTIBLES
+                            ? (0, l.jsx)(K, { paymentSourceType: es })
                             : (0, l.jsx)(O.A, {
                                   isActive: t,
                                   ref: n,
                                   children: (0, l.jsx)(x.A, {
                                       onChange: r,
                                       forceShow: !0,
-                                      showWithdrawalWaiver: el,
+                                      showWithdrawalWaiver: ea,
                                       disabled: ei,
                                       subscriptionPlan: null,
-                                      finePrintClassname: Z.i,
+                                      finePrintClassname: q.i,
                                       purchaseType: d,
                                       isGift: S,
                                       finePrint: (0, l.jsx)(N.A, {
-                                          paymentSourceType: er,
+                                          paymentSourceType: es,
                                           isEmbeddedIAP: c,
                                           purchaseType: d,
-                                          productLine: z.productLine,
+                                          productLine: $.productLine,
                                           isGift: S,
-                                          applicationName: s.name,
-                                          hasAlreadyLinked: !W || q,
+                                          applicationName: o.name,
+                                          applicationId: o.id,
+                                          hasAlreadyLinked: !H || z,
                                       }),
                                   }),
                               }),
-                    [t, n, r, el, ei, d, S, er, c, z.productLine, s.name, W, q],
+                    [t, n, r, ea, ei, d, S, es, c, $.productLine, o.name, o.id, H, z],
                 );
             return {
-                sku: z,
-                application: s,
+                sku: $,
+                application: o,
                 giftRecipient: f,
                 isGift: S,
-                skuPricePreview: ee,
+                skuPricePreview: et,
                 isEmbeddedIAP: c,
-                shouldShowPurchaseReviewImage: eu,
-                paymentRestrictionBannerType: es,
+                shouldShowPurchaseReviewImage: ec,
+                paymentRestrictionBannerType: eo,
                 devShelfFetchState: m,
                 isStepLoading: !A && null == p,
                 purchasePreviewError: p,
-                warningAndErrorMessages: ec,
-                purchaseTermsAndLegalContent: ed,
-                eligiblePaymentGateways: $,
+                warningAndErrorMessages: ed,
+                purchaseTermsAndLegalContent: ep,
+                eligiblePaymentGateways: J,
                 disabled: ei,
             };
         })({ hasLegalTermsFlash: t, legalTermsNodeRef: n }),
-        { currencies: S, displayCurrency: f, setCurrency: B, priceOptions: W } = (0, P.P5)(),
-        q = i.useMemo(
+        { currencies: S, displayCurrency: f, setCurrency: W, priceOptions: H } = (0, P.P5)(),
+        z = a.useMemo(
             () =>
                 (0, l.jsx)(d.qX, {
-                    label: K.intl.string(K.t["/AAR02"]),
-                    selectedCurrency: W.currency ?? f,
+                    label: Z.intl.string(Z.t["/AAR02"]),
+                    selectedCurrency: H.currency ?? f,
                     currencies: S,
-                    onChange: B,
+                    onChange: W,
                 }),
-            [W.currency, f, S, B],
+            [H.currency, f, S, W],
         ),
-        z = i.useMemo(() => ({ paymentGatewayRestrictions: m, shouldUseUnifiedCheckoutUI: !0 }), [m]),
-        $ = (0, l.jsxs)(l.Fragment, {
+        $ = a.useMemo(() => ({ paymentGatewayRestrictions: m, shouldUseUnifiedCheckoutUI: !0 }), [m]),
+        J = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(o.N, {
-                    label: K.intl.string(K.t["u+Cw58"]),
+                    label: Z.intl.string(Z.t["u+Cw58"]),
                     location: "OneTimeUnifiedCheckoutPurchaseReview",
-                    onPaymentSourceAdd: a,
-                    additionalPaymentSourceDropdownProps: z,
+                    onPaymentSourceAdd: i,
+                    additionalPaymentSourceDropdownProps: $,
                     disabled: y,
                 }),
-                q,
+                z,
             ],
         }),
-        J = i.useMemo(() => {
+        X = a.useMemo(() => {
             let e = [];
             return (
                 null != E.testModeWarning &&
@@ -346,7 +353,7 @@ function ee(e) {
                 e.length > 0 ? e : null
             );
         }, [E.testModeWarning, E.devShelfError]),
-        X = i.useMemo(() => {
+        Q = a.useMemo(() => {
             let e = [];
             return (
                 null != E.socialLayerGameItemDisclaimer &&
@@ -359,16 +366,16 @@ function ee(e) {
             );
         }, [E.socialLayerGameItemDisclaimer]);
     return C
-        ? (0, l.jsx)(c.Ed, {})
-        : (0, l.jsx)(Q, {
+        ? (0, l.jsx)(c.E, {})
+        : (0, l.jsx)(ee, {
               application: s,
               giftRecipient: A,
               isGift: p,
               sku: r,
               skuPricePreview: u,
-              paymentSelectContent: $,
+              paymentSelectContent: J,
               legalContent: h,
-              upperInlineNoticeProps: J,
-              footerInlineNoticeProps: X,
+              upperInlineNoticeProps: X,
+              footerInlineNoticeProps: Q,
           });
 }

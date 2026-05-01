@@ -1,12 +1,13 @@
-n.d(t, { A: () => _ });
+"use strict";
+n.d(t, { A: () => d });
 var i,
-    a = n(627968);
+    r = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
-    l = n(953727),
-    o = n(89406),
-    d =
+var s = n(503698),
+    a = n.n(s),
+    o = n(953727),
+    l = n(89406),
+    u =
         (((i = {}).LEFT = "LEFT"),
         (i.RIGHT = "RIGHT"),
         (i.UP = "UP"),
@@ -19,42 +20,42 @@ let c = (e) => {
         width: t = 24,
         height: n = 24,
         color: i = "currentColor",
-        direction: r,
-        foreground: d,
+        direction: s,
+        foreground: u,
         className: c,
-        title: _,
-        ...E
+        title: d,
+        ..._
     } = e;
-    return (0, a.jsxs)("svg", {
-        ...(0, l.A)(E),
+    return (0, r.jsxs)("svg", {
+        ...(0, o.A)(_),
         width: t,
         height: n,
-        className: s()(
+        className: a()(
             c,
             (function (e) {
                 switch (e) {
                     case "LEFT":
-                        return o.kb;
+                        return l.kb;
                     case "RIGHT":
-                        return o.pG;
+                        return l.pG;
                     case "UP":
                         return null;
                     case "DOWN":
-                        return o.TR;
+                        return l.TR;
                     case "UP_LEFT":
-                        return o.l0;
+                        return l.l0;
                     case "DOWN_RIGHT":
-                        return o.Nu;
+                        return l.Nu;
                     default:
                         throw Error(`Invalid Direction ${e}`);
                 }
-            })(r),
+            })(s),
         ),
         viewBox: "0 0 24 24",
         children: [
-            null != _ ? (0, a.jsx)("title", { children: _ }) : null,
-            (0, a.jsx)("polygon", {
-                className: d,
+            null != d ? (0, r.jsx)("title", { children: d }) : null,
+            (0, r.jsx)("polygon", {
+                className: u,
                 fill: i,
                 fillRule: "nonzero",
                 points: "13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8",
@@ -62,5 +63,5 @@ let c = (e) => {
         ],
     });
 };
-c.Directions = d;
-let _ = c;
+c.Directions = u;
+let d = c;

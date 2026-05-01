@@ -1,4 +1,4 @@
-n.d(t, { A: () => t8 }), n(321073);
+n.d(t, { A: () => t1 }), n(321073);
 var i,
     l = n(627968),
     s = n(64700),
@@ -29,7 +29,7 @@ var i,
     k = n(39619),
     L = n(821609),
     w = n(157559),
-    R = n(997509),
+    R = n(468689),
     M = n(633018),
     _ = n(503698),
     P = n.n(_),
@@ -65,7 +65,7 @@ var Y = n(261958),
     Z = n(885574),
     Q = n(442433),
     J = n(200662),
-    $ = n(985018),
+    $ = n(375708),
     X = n(870807);
 function ee(e) {
     let { applicationIcon: t, applicationName: i, canNavigate: a, command: r, guildId: o } = e,
@@ -341,7 +341,7 @@ function eA(e) {
 }
 var ep = n(136722),
     ef = n(452027),
-    eb = n(686956),
+    eb = n(66834),
     ej = n(417454),
     eN = n(595738),
     eE = n(709066),
@@ -991,9 +991,9 @@ function e2(e) {
 }
 var e3 = n(573648);
 n(323874), n(14289), n(35956);
-var e1 = n(989349),
-    e8 = n.n(e1),
-    e7 = n(788373),
+var e7 = n(989349),
+    e1 = n.n(e7),
+    e8 = n(788373),
     e6 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
@@ -1030,9 +1030,9 @@ function tr(e) {
         }, [i, g]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e7.F.KICK) {
+                if (b || i.expire_behavior !== e8.F.KICK) {
                     let e =
-                        i.expire_behavior === e7.F.REMOVE_ROLE
+                        i.expire_behavior === e8.F.REMOVE_ROLE
                             ? $.intl.string($.t["6kpw4i"])
                             : $.intl.string($.t.fQUQIJ);
                     (0, eR.A)({
@@ -1096,7 +1096,7 @@ function tr(e) {
                 syncDescriptionText:
                     i.revoked && null != t
                         ? $.intl.formatToPlainString($.t.G16Wji, { user: i.user, platformName: t.name })
-                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e8()(i.synced_at).calendar() }),
+                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e1()(i.synced_at).calendar() }),
             };
         }, [_, C, i.revoked, i.synced_at, i.type, i.user]),
         D = (0, o.bG)([eI.A], () => eI.A.getSortedRoles(n.id)),
@@ -1276,12 +1276,12 @@ function tr(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e7.F.REMOVE_ROLE.toString(),
+                                                value: e8.F.REMOVE_ROLE.toString(),
                                                 label: $.intl.string($.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e7.F.KICK.toString(),
+                                                value: e8.F.KICK.toString(),
                                                 label: $.intl.string($.t.fQUQIJ),
                                             },
                                         ],
@@ -1321,7 +1321,7 @@ function tr(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e7.F.KICK &&
+                        a.expire_behavior === e8.F.KICK &&
                         (0, l.jsx)(S.E, {
                             className: ts.Ce,
                             color: "text-feedback-critical",
@@ -1533,11 +1533,11 @@ var tA = n(22231),
     tj = n(887501),
     tN = n(514810),
     tE = n(43105),
-    tC = n(340351),
+    tC = n(528265),
     tv = n(320448),
-    tT = n(58149),
+    tT = n(95561),
     tI = n(264322),
-    tS = n(954571),
+    tS = n(174459),
     ty = n(320426),
     tO = n(338652);
 function tk(e) {
@@ -2249,7 +2249,7 @@ function t2(e) {
     });
 }
 var t3 = n(458203);
-function t1(e, t) {
+function t7(e, t) {
     switch (e) {
         case eD.wLn.APPLICATION:
             return t?.application.name ?? "";
@@ -2269,7 +2269,7 @@ function t1(e, t) {
             return "";
     }
 }
-let t8 = s.memo(function (e) {
+let t1 = s.memo(function (e) {
     let {
             section: t,
             sectionId: n,
@@ -2481,10 +2481,10 @@ let t8 = s.memo(function (e) {
                 className: t3.jD,
                 children:
                     t === eD.wLn.OVERVIEW
-                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t1(eD.wLn.OVERVIEW) })
+                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t7(eD.wLn.OVERVIEW) })
                         : (0, l.jsx)(d.A, {
                               activeId: t.toString(),
-                              breadcrumbs: [eD.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t1(e, D[M]) })),
+                              breadcrumbs: [eD.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t7(e, D[M]) })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && W(parseInt(e.id));
                               },

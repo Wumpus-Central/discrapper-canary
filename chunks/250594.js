@@ -1,5 +1,6 @@
-var n = e(321727),
-    o = Object;
-r.exports = function (r) {
-    return o(n(r));
+"use strict";
+var i = n(321727),
+    r = Object;
+e.exports = function (e) {
+    return r(i(e));
 };

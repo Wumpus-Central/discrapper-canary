@@ -7,4 +7,6 @@ e.exports = {
     XG: "scroller_b08638",
     Os: "group_b08638",
     AM: "groupLabel_b08638",
+    i_: "groupLabelHeading_b08638",
+    l3: "groupLabelIcon_b08638",
 };

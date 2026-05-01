@@ -1,8 +1,9 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(265690);
-let a = { isSorting: !1 },
-    r = (0, i.h)()((e, t) => ({
-        ...a,
+let r = { isSorting: !1 },
+    s = (0, i.h)()((e, t) => ({
+        ...r,
         startSorting: () => e({ isSorting: !0 }),
         stopSorting: () => e({ isSorting: !1 }),
     }));

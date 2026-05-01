@@ -1,62 +1,63 @@
-n.d(e, { A: () => h });
+"use strict";
+n.d(t, { A: () => f });
 var i = n(284009),
     r = n.n(i),
-    a = n(17928),
-    u = n(228366),
+    s = n(17928),
+    a = n(228366),
     o = n(970278),
-    s = n(734057),
-    d = n(222823);
-let l = {},
-    A = new Set();
-class c extends a.Ay.Store {
+    l = n(734057),
+    u = n(222823);
+let c = {},
+    d = new Set();
+class _ extends s.Ay.Store {
     static displayName = "ForumPostUnreadCountStore";
     initialize() {
-        this.waitFor(o.A, s.A, d.Ay);
+        this.waitFor(o.A, l.A, u.Ay);
     }
-    getCount(t) {
-        return l[t];
+    getCount(e) {
+        return c[e];
     }
-    getThreadIdsMissingCounts(t, e) {
+    getThreadIdsMissingCounts(e, t) {
         return (
-            r()(o.A.hasLoaded(t), "must wait for THREAD_LIST_SYNC before calling this"),
-            e.filter((t) => !(t in l) && !A.has(t))
+            r()(o.A.hasLoaded(e), "must wait for THREAD_LIST_SYNC before calling this"),
+            t.filter((e) => !(e in c) && !d.has(e))
         );
     }
 }
-let h = new c(u.h, {
+let f = new _(a.h, {
     CONNECTION_OPEN: function () {
-        (l = {}), (A = new Set());
+        (c = {}), (d = new Set());
     },
-    THREAD_CREATE: function (t) {
-        let { channel: e, isNewlyCreated: n } = t;
-        if (!n || !o.A.hasLoaded(e.guild_id)) return !1;
-        l[e.id] = 0;
+    THREAD_CREATE: function (e) {
+        let { channel: t, isNewlyCreated: n } = e;
+        if (!n || !o.A.hasLoaded(t.guild_id)) return !1;
+        c[t.id] = 0;
     },
-    MESSAGE_CREATE: function (t) {
-        let { channelId: e, optimistic: n, isPushNotification: i } = t;
-        if (n || i || !(e in l)) return !1;
-        l[e]++;
+    MESSAGE_CREATE: function (e) {
+        let { channelId: t, optimistic: n, isPushNotification: i } = e;
+        if (n || i || !(t in c)) return !1;
+        c[t]++;
     },
-    FORUM_UNREADS: function (t) {
-        let { threads: e } = t;
-        e.forEach((t) => {
-            null != t.count && (l[t.threadId] = t.count);
+    FORUM_UNREADS: function (e) {
+        let { threads: t } = e;
+        t.forEach((e) => {
+            null != e.count && (c[e.threadId] = e.count);
         });
     },
-    MESSAGE_ACK: function (t) {
-        let { channelId: e } = t;
-        if (!(e in l)) {
-            let t = s.A.getChannel(e),
-                n = s.A.getChannel(t?.parent_id);
+    MESSAGE_ACK: function (e) {
+        let { channelId: t } = e;
+        if (!(t in c)) {
+            let e = l.A.getChannel(t),
+                n = l.A.getChannel(e?.parent_id);
             if (!n?.isForumLikeChannel()) return !1;
         }
-        l[e] = d.Ay.getUnreadCount(e);
+        c[t] = u.Ay.getUnreadCount(t);
     },
-    REQUEST_FORUM_UNREADS: function (t) {
-        let { threads: e } = t;
-        e.forEach((t) => {
-            let { threadId: e } = t;
-            return A.add(e);
+    REQUEST_FORUM_UNREADS: function (e) {
+        let { threads: t } = e;
+        t.forEach((e) => {
+            let { threadId: t } = e;
+            return d.add(t);
         });
     },
 });

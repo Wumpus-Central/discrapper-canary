@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"jSrqR2":["Colores predeterminados"],"zry4l5":["Previsualizar el tema"],"/6NbRv":["Tema del servidor"]}',
+    '{"odtr7f":["Elige un tema preestablecido o crea el tuyo. Todos los miembros ver\xe1n este tema cuando abran el servidor, y se adapta a su modo claro u oscuro. ",[8,"$link",["M\xe1s informaci\xf3n"],[[1,"articleUrl"]]]],"XhiIAu":["Esto cambia c\xf3mo se ve tu servidor para todos los miembros."],"aZpFFn":["Activar el tema del servidor"],"jSrqR2":["Colores predeterminados"],"HkvkHP":["La preferencia de modo claro u oscuro de cada miembro se mostrar\xe1 para ellos."],"zry4l5":["Previsualizar el tema"],"Ck5zxP":["Selecciona tu tema"],"/6NbRv":["Tema del servidor"]}',
 );

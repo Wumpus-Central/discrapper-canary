@@ -1,26 +1,27 @@
-l.d(t, { A: () => E });
-var n = l(17928),
-    i = l(228366),
-    r = l(927813),
-    s = l(935208),
-    a = l(495544),
-    u = l(994500);
-let o = 180 * r.A.Millis.DAY,
+"use strict";
+n.d(t, { A: () => _ });
+var i = n(17928),
+    r = n(228366),
+    s = n(927813),
+    a = n(935208),
+    o = n(495544),
+    l = n(994500);
+let u = 180 * s.A.Millis.DAY,
     c = !1;
-class d extends n.Ay.Store {
+class d extends i.Ay.Store {
     static displayName = "PremiumPromoStore";
     initialize() {
-        this.waitFor(u.A, a.default);
+        this.waitFor(l.A, o.default);
     }
     isEligible() {
         return c;
     }
 }
-let E = new d(i.h, {
+let _ = new d(r.h, {
     CONNECTION_OPEN: function () {
         return (
             c !==
-            (c = u.A.getFriendIDs().length >= 10 && s.default.extractTimestamp(a.default.getId()) < Date.now() - o)
+            (c = l.A.getFriendIDs().length >= 10 && a.default.extractTimestamp(o.default.getId()) < Date.now() - u)
         );
     },
 });

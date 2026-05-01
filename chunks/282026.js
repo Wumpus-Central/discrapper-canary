@@ -1,6 +1,7 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(839214);
-let a = Object.freeze({
+let r = Object.freeze({
         query: "",
         languageCode: null,
         categoryId: n(324580).Iq,
@@ -9,4 +10,4 @@ let a = Object.freeze({
         resultsInitialCategoryId: null,
         scrollPosition: null,
     }),
-    r = (0, i.D)(() => a);
+    s = (0, i.D)(() => r);

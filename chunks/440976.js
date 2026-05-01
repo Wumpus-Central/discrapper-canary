@@ -1,30 +1,31 @@
-r.d(t, { A: () => u }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
-var E = r(17928),
-    n = r(228366);
-let i = new Map();
-class l extends E.Ay.Store {
+"use strict";
+n.d(t, { A: () => o }), n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
+var i = n(17928),
+    r = n(228366);
+let s = new Map();
+class a extends i.Ay.Store {
     static displayName = "TransientKeyStore";
     getUsers() {
-        return i;
+        return s;
     }
     isKeyVerified(e, t) {
-        let r = i.get(e);
-        if (null == t || null == r || r.length !== t.length) return !1;
-        for (let e = 0; e < t.length; e++) if (t[e] !== r[e]) return !1;
+        let n = s.get(e);
+        if (null == t || null == n || n.length !== t.length) return !1;
+        for (let e = 0; e < t.length; e++) if (t[e] !== n[e]) return !1;
         return !0;
     }
 }
-let u = new l(n.h, {
+let o = new a(r.h, {
     CONNECTION_OPEN: function () {
-        i.clear();
+        s.clear();
     },
     SECURE_FRAMES_TRANSIENT_KEY_CREATE: function (e) {
-        let { userId: t, key: r } = e,
-            E = new Uint8Array(r);
-        i.set(t, E);
+        let { userId: t, key: n } = e,
+            i = new Uint8Array(n);
+        s.set(t, i);
     },
     SECURE_FRAMES_TRANSIENT_KEY_DELETE: function (e) {
         let { userId: t } = e;
-        return i.delete(t);
+        return s.delete(t);
     },
 });

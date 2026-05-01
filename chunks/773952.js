@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
 var r = n(192308),
@@ -7,14 +7,14 @@ var r = n(192308),
     a = n(76843),
     o = n(738104),
     l = n(652215);
-function _(e) {
-    var t, _, d, u;
-    let { platformType: c, location: E, overrideUrl: h, successRedirect: m } = e;
-    (c === l.fg2.LEAGUE_OF_LEGENDS && (c = l.fg2.RIOT_GAMES), c === l.fg2.CRUNCHYROLL)
-        ? ((t = [E ?? "unknown"]),
+function u(e) {
+    var t, u, c, d;
+    let { platformType: _, location: f, overrideUrl: h, successRedirect: p } = e;
+    (_ === l.fg2.LEAGUE_OF_LEGENDS && (_ = l.fg2.RIOT_GAMES), _ === l.fg2.CRUNCHYROLL)
+        ? ((t = [f ?? "unknown"]),
           (0, r.openModalLazy)(async () => {
               let { default: e } = await Promise.all([
-                  n.e("40841"),
+                  n.e("6305"),
                   n.e("9504"),
                   n.e("61935"),
                   n.e("36335"),
@@ -24,14 +24,14 @@ function _(e) {
               ]).then(n.bind(n, 840241));
               return (n) => (0, i.jsx)(e, { analyticsLocation: t, ...n });
           }))
-        : c === l.fg2.XBOX
-          ? ((_ = [E ?? "unknown"]),
+        : _ === l.fg2.XBOX
+          ? ((u = [f ?? "unknown"]),
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("40841"),
+                    n.e("6305"),
                     n.e("46232"),
                     n.e("95429"),
-                    n.e("6515"),
+                    n.e("24009"),
                     n.e("98965"),
                     n.e("30221"),
                     n.e("48370"),
@@ -41,14 +41,14 @@ function _(e) {
                     n.e("5674"),
                     n.e("51593"),
                 ]).then(n.bind(n, 858128));
-                return (t) => (0, i.jsx)(e, { analyticsLocation: _, ...t });
+                return (t) => (0, i.jsx)(e, { analyticsLocation: u, ...t });
             }))
-          : c === l.fg2.PLAYSTATION || c === l.fg2.PLAYSTATION_STAGING
-            ? ((d = [E ?? "unknown"]),
-              (u = c),
+          : _ === l.fg2.PLAYSTATION || _ === l.fg2.PLAYSTATION_STAGING
+            ? ((c = [f ?? "unknown"]),
+              (d = _),
               (0, r.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
-                      n.e("40841"),
+                      n.e("6305"),
                       n.e("98965"),
                       n.e("36335"),
                       n.e("64610"),
@@ -56,30 +56,30 @@ function _(e) {
                       n.e("5674"),
                       n.e("45629"),
                   ]).then(n.bind(n, 10060));
-                  return (t) => (0, i.jsx)(e, { analyticsLocation: d, platformType: u, ...t });
+                  return (t) => (0, i.jsx)(e, { analyticsLocation: c, platformType: d, ...t });
               }))
-            : c === l.fg2.DOMAIN
+            : _ === l.fg2.DOMAIN
               ? (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("42105"),
+                        n.e("25310"),
                         n.e("97893"),
                         n.e("37687"),
                         n.e("94048"),
                     ]).then(n.bind(n, 110819));
-                    return (t) => (0, i.jsx)(e, { analyticsLocation: [E ?? "unknown"], ...t });
+                    return (t) => (0, i.jsx)(e, { analyticsLocation: [f ?? "unknown"], ...t });
                 })
-              : s.A.get(c)?.isFederated === !0
+              : s.A.get(_)?.isFederated === !0
                 ? (0, r.openModalLazy)(async () => {
                       let { default: e } = await n.e("10645").then(n.bind(n, 61492));
-                      return (t) => (0, i.jsx)(e, { platformType: c, location: E, successRedirect: m, ...t });
+                      return (t) => (0, i.jsx)(e, { platformType: _, location: f, successRedirect: p, ...t });
                   })
                 : null != h
                   ? (0, a.h)({
                         shouldConfirm: !0,
                         href: h,
                         onConfirm: () => {
-                            (0, o.d)(c, { location: E, successRedirect: m }, h);
+                            (0, o.d)(_, { location: f, successRedirect: p }, h);
                         },
                     })
-                  : (0, o.d)(c, { location: E, successRedirect: m });
+                  : (0, o.d)(_, { location: f, successRedirect: p });
 }

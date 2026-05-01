@@ -1,38 +1,39 @@
-t.d(a, { c: () => c });
-var h = t(627968);
-t(64700);
-var i = t(661531),
-    e = t(996682),
-    l = t(27989);
-let c = (s) => {
+"use strict";
+n.d(t, { c: () => o });
+var i = n(627968);
+n(64700);
+var r = n(661531),
+    s = n(996682),
+    a = n(27989);
+let o = (e) => {
     let {
-            size: a = "md",
-            width: t,
-            height: c,
-            color: p = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: r = "",
-            ...d
-        } = s,
-        n = (0, l.J)(a),
-        o = n?.width ?? t,
-        w = n?.height ?? c;
-    return (0, h.jsxs)("svg", {
-        ...(0, e.A)(d),
+            size: t = "md",
+            width: n,
+            height: o,
+            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: u = "",
+            ...c
+        } = e,
+        d = (0, a.J)(t),
+        _ = d?.width ?? n,
+        f = d?.height ?? o;
+    return (0, i.jsxs)("svg", {
+        ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: w,
+        width: _,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, h.jsx)("path", {
-                fill: "string" == typeof p ? p : p.css,
+            (0, i.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
                 d: "M12 2a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4Z",
-                className: r,
+                className: u,
             }),
-            (0, h.jsx)("path", {
-                fill: "string" == typeof p ? p : p.css,
+            (0, i.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
                 d: "M6 10a1 1 0 0 0-2 0 8 8 0 0 0 7 7.94V20H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-2v-2.06A8 8 0 0 0 20 10a1 1 0 1 0-2 0 6 6 0 0 1-12 0Z",
-                className: r,
+                className: u,
             }),
         ],
     });

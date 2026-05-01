@@ -1,22 +1,23 @@
-n.d(t, { A: () => o }), n(323874), n(14289), n(35956);
+"use strict";
+n.d(t, { A: () => l }), n(323874), n(14289), n(35956);
 var i = n(877227),
-    a = n(839214),
-    r = n(890687),
-    s = n(652215);
-let l = Object.freeze({ tab: r.NC.ALL }),
-    o = (0, a.D)((e) => ({
-        ...l,
+    r = n(839214),
+    s = n(31587),
+    a = n(652215);
+let o = Object.freeze({ tab: s.NC.ALL }),
+    l = (0, r.D)((e) => ({
+        ...o,
         initializeFromUrl: (t, n) => {
-            let i = new URLSearchParams(t).get(r.L1.TAB);
-            (i !== r.NC.PREVIEW_TOOL || n) && null != i && Object.values(r.NC).includes(i)
+            let i = new URLSearchParams(t).get(s.L1.TAB);
+            (i !== s.NC.PREVIEW_TOOL || n) && null != i && Object.values(s.NC).includes(i)
                 ? e({ tab: i })
-                : e({ tab: r.NC.ALL });
+                : e({ tab: s.NC.ALL });
         },
         setTab: (t) => {
             e({ tab: t });
             let n = new URLSearchParams();
-            n.set(r.L1.TAB, t);
-            let a = `${s.BVt.QUEST_HOME}?${n.toString()}`;
-            (0, i.pX)(a.toString());
+            n.set(s.L1.TAB, t);
+            let r = `${a.BVt.QUEST_HOME}?${n.toString()}`;
+            (0, i.pX)(r.toString());
         },
     }));

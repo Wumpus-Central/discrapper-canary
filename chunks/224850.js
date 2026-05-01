@@ -1,59 +1,60 @@
-i.d(t, { A: () => _, n: () => m });
-var n = i(627968),
-    a = i(64700),
-    s = i(503698),
-    r = i.n(s),
-    c = i(834730),
-    l = i(534514),
-    h = i(97808),
-    f = i(854627),
-    I = i(286320),
-    d = i(778712),
-    u = i(985018),
-    o = i(526081);
-function _(e) {
-    let { smallerText: t, className: i, textColor: s, isApplicationHome: h, enablePremiumBrandRefresh: f } = e,
-        _ = (0, I.b)().slice(0, 3).reverse(),
-        E = _.map((e, t) =>
-            (0, n.jsx)(m, { affinity: e, applyMask: t !== _.length - 1, size: f ? d._3.SIZE_24 : d._3.SIZE_32 }, e.id),
+"use strict";
+n.d(t, { A: () => p, n: () => E });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(834730),
+    l = n(534514),
+    u = n(97808),
+    c = n(854627),
+    d = n(286320),
+    _ = n(778712),
+    f = n(375708),
+    h = n(526081);
+function p(e) {
+    let { smallerText: t, className: n, textColor: s, isApplicationHome: u, enablePremiumBrandRefresh: c } = e,
+        p = (0, d.b)().slice(0, 3).reverse(),
+        m = p.map((e, t) =>
+            (0, i.jsx)(E, { affinity: e, applyMask: t !== p.length - 1, size: c ? _._3.SIZE_24 : _._3.SIZE_32 }, e.id),
         ),
-        F = (e) => (null != e.globalName ? e.globalName : e.username),
-        g = a.useMemo(
+        g = (e) => (null != e.globalName ? e.globalName : e.username),
+        A = r.useMemo(
             () =>
-                3 === _.length
-                    ? u.intl.formatToPlainString(u.t.c7ETJH, { username: F(_[2]) })
-                    : 2 === _.length
-                      ? u.intl.formatToPlainString(u.t["st8Rh/"], { username: F(_[1]), otherUsername: F(_[0]) })
-                      : 1 === _.length
-                        ? u.intl.formatToPlainString(u.t.dpjXPL, { username: F(_[0]) })
+                3 === p.length
+                    ? f.intl.formatToPlainString(f.t.c7ETJH, { username: g(p[2]) })
+                    : 2 === p.length
+                      ? f.intl.formatToPlainString(f.t["st8Rh/"], { username: g(p[1]), otherUsername: g(p[0]) })
+                      : 1 === p.length
+                        ? f.intl.formatToPlainString(f.t.dpjXPL, { username: g(p[0]) })
                         : "",
-            [_],
+            [p],
         );
-    return 0 === _.length
+    return 0 === p.length
         ? null
-        : (0, n.jsxs)("div", {
-              className: r()(f ? o.bD : o.kL, i, { [o.gr]: !f && h }),
+        : (0, i.jsxs)("div", {
+              className: a()(c ? h.bD : h.kL, n, { [h.gr]: !c && u }),
               children: [
-                  (0, n.jsx)("div", { className: o.zc, children: E }),
-                  (0, n.jsx)("div", {
-                      className: o.FS,
-                      children: (0, n.jsx)(function () {
-                          return f
-                              ? (0, n.jsx)(c.E, { variant: "text-sm/medium", color: s, children: g })
-                              : t || h
-                                ? (0, n.jsx)(c.E, {
-                                      variant: h ? "text-sm/normal" : "text-lg/medium",
+                  (0, i.jsx)("div", { className: h.zc, children: m }),
+                  (0, i.jsx)("div", {
+                      className: h.FS,
+                      children: (0, i.jsx)(function () {
+                          return c
+                              ? (0, i.jsx)(o.E, { variant: "text-sm/medium", color: s, children: A })
+                              : t || u
+                                ? (0, i.jsx)(o.E, {
+                                      variant: u ? "text-sm/normal" : "text-lg/medium",
                                       color: s,
-                                      children: g,
+                                      children: A,
                                   })
-                                : (0, n.jsx)(l.D, { variant: "heading-xl/medium", color: s, children: g });
+                                : (0, i.jsx)(l.D, { variant: "heading-xl/medium", color: s, children: A });
                       }, {}),
                   }),
               ],
           });
 }
-function m(e) {
-    let { affinity: t, applyMask: i, size: a } = e,
-        { avatarSrc: s, eventHandlers: c } = (0, f.A)({ userId: t?.id, size: a, animateOnHover: !0 });
-    return (0, n.jsx)(h.eu, { className: r()(o.Kk, { [o.dK]: i }), src: s, "aria-label": t.username, size: a, ...c });
+function E(e) {
+    let { affinity: t, applyMask: n, size: r } = e,
+        { avatarSrc: s, eventHandlers: o } = (0, c.A)({ userId: t?.id, size: r, animateOnHover: !0 });
+    return (0, i.jsx)(u.eu, { className: a()(h.Kk, { [h.dK]: n }), src: s, "aria-label": t.username, size: r, ...o });
 }

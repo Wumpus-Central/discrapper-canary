@@ -1,5 +1,6 @@
-n.d(t, { $: () => l });
-let l = (0, n(945810).mj)({
+"use strict";
+n.d(t, { $: () => i });
+let i = (0, n(945810).mj)({
     kind: "user",
     name: "2026-04-clips-primary-entry-point",
     defaultConfig: { topBarButton: !1, userStatusMenu: !1 },

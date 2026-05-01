@@ -1,5 +1,6 @@
-i.d(t, { A: () => l });
-var n = i(378570);
-function l(e) {
-    (0, n.iN)(e.channelId);
+"use strict";
+n.d(t, { A: () => r });
+var i = n(378570);
+function r(e) {
+    (0, i.iN)(e.channelId);
 }

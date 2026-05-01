@@ -1,4 +1,5 @@
-var i = r(101968);
+"use strict";
+var i = n(101968);
 e.exports = function () {
     var e = i(this),
         t = "";

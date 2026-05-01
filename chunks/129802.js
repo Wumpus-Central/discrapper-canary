@@ -18,7 +18,7 @@ var l = a(627968),
     _ = a(736056),
     b = a(763827),
     I = a(773371),
-    A = a(954571),
+    A = a(174459),
     N = a(220478),
     S = a(9302),
     x = a(41984),
@@ -29,7 +29,7 @@ a(321073);
 var w = a(328153),
     D = a(760751),
     j = a(935208),
-    T = a(833551),
+    T = a(296027),
     P = a(243612);
 let O = new j.SnowflakeSequence(),
     M = {};
@@ -145,13 +145,14 @@ function W(e) {
                 : a(null);
         },
         placeholder: n,
+        analyticsSurface: "overlay_game_selection",
     });
 }
 var U = a(489277),
     B = a(127242),
-    R = a(680243),
+    R = a(614455),
     H = a(652215),
-    K = a(985018),
+    K = a(375708),
     z = a(988787);
 function q(e, t) {
     return r()(e, t);

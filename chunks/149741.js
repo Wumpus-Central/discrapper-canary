@@ -27,7 +27,7 @@ var c = n(503698),
     C = n(545059),
     R = n(290863),
     D = n(994500),
-    b = n(256415),
+    b = n(184809),
     j = n(996439),
     k = n(320448),
     M = n(847374);
@@ -50,7 +50,7 @@ var w = n(172218),
     z = n(566903),
     X = n(397244),
     B = n(714114),
-    Z = n(729551),
+    Z = n(394871),
     W = n(864436),
     $ = n(835072),
     Q = n(87664),
@@ -153,14 +153,14 @@ var e_ = n(220884),
     eF = n(833349),
     eL = n(672979),
     eG = n(498642),
-    eU = n(375492),
+    eU = n(480595),
     eP = n(576705),
     eV = n(977997),
     eH = n(689168),
     eY = n(935208),
     eK = n(67103),
     ez = n(652215),
-    eX = n(985018);
+    eX = n(375708);
 function eB(e) {
     return e.find((e) => (0, eF.A)(e, ez.jUm.JOIN));
 }
@@ -331,7 +331,7 @@ var e$ = n(808380),
     e1 = n(266080),
     e3 = n(70191);
 let e2 = { [e$.Y.XBOX]: e1.A, [e$.Y.PLAYSTATION]: e0.A };
-function e4(e) {
+function e6(e) {
     let { activities: t, gameProfileEntry: n, gameIconSize: l, platformIconSizePx: s } = e,
         a = (0, d.b4)(),
         u = r.useMemo(() => {
@@ -358,7 +358,7 @@ function e4(e) {
               return (0, i.jsx)(es.A, { game: n, size: l, unknownGameIconFallback: u ?? d });
           })({ gameProfileEntry: n, gameApplication: o, gameIconSize: l, platformIconSizePx: s });
 }
-let e6 = F._3.SIZE_32,
+let e4 = F._3.SIZE_32,
     e5 = [ee.iq, ee.tR, ee.K7, ee.sp, ee.MK];
 function e9(e) {
     let t,
@@ -457,7 +457,7 @@ function e7(e) {
             avatarDecorationSrc: m,
             avatarSrc: I,
             eventHandlers: E,
-        } = (0, ec.A)({ userId: g, size: e6, animateOnHover: !0, guildId: null }),
+        } = (0, ec.A)({ userId: g, size: e4, animateOnHover: !0, guildId: null }),
         A = r.useMemo(() => {
             let e = h ?? "no-group",
                 t = l ?? "no-relationship",
@@ -645,7 +645,7 @@ let te = r.memo((e) => {
                                 "div",
                                 {
                                     className: ex.im,
-                                    children: (0, i.jsx)(e4, {
+                                    children: (0, i.jsx)(e6, {
                                         activities: n,
                                         gameProfileEntry: N,
                                         gameIconSize: es.M.SMALL,
@@ -670,7 +670,7 @@ let te = r.memo((e) => {
         onContextMenu: D,
         avatar: (0, i.jsx)(G.eu, {
             ...S,
-            size: e6,
+            size: e4,
             src: p,
             isMobile: _,
             isTyping: !1,
@@ -803,7 +803,7 @@ let tt = r.memo((e) => {
         onContextMenu: _,
         avatar: (0, i.jsx)(G.eu, {
             ...I,
-            size: e6,
+            size: e4,
             src: m,
             isMobile: S,
             isTyping: !1,
@@ -826,7 +826,7 @@ let tt = r.memo((e) => {
                     L
                         ? (0, i.jsx)("div", {
                               className: ex.im,
-                              children: (0, i.jsx)(e4, {
+                              children: (0, i.jsx)(e6, {
                                   activities: n,
                                   gameProfileEntry: A,
                                   gameIconSize: es.M.XSMALL,
@@ -1715,7 +1715,7 @@ var tP = n(687966),
     tK = n(410540),
     tz = n(302223),
     tX = n(853390),
-    tB = n(253932),
+    tB = n(885386),
     tZ = n(763827),
     tW = n(741961),
     t$ = n(486020),
@@ -1897,7 +1897,7 @@ function t2(e) {
         ],
     });
 }
-function t4(e) {
+function t6(e) {
     let { currentUser: t, activity: n, currentGameName: l, activeTab: u, onTabChange: d } = e,
         {
             friendsHasUnreadFavorites: c,
@@ -1959,7 +1959,7 @@ function t4(e) {
                         l = !0 === E[t],
                         r = !0 === f[t];
                     return (0, i.jsx)(
-                        t6,
+                        t4,
                         {
                             tab: t,
                             label: eX.intl.formatToPlainString(n, {}),
@@ -1975,7 +1975,7 @@ function t4(e) {
         ],
     });
 }
-function t6(e) {
+function t4(e) {
     let {
             tab: t,
             label: n,
@@ -2007,7 +2007,7 @@ var t5 = n(141157),
     nn = n(439372),
     nl = n(723176),
     ni = n(626584),
-    nr = n(446458);
+    nr = n(587626);
 n(95701);
 var ns = n(495544),
     na = n(973153);
@@ -2221,7 +2221,7 @@ var ng = n(172491),
     nv = n(313961),
     nC = n(806931),
     nR = n(427930),
-    nD = n(77350),
+    nD = n(59318),
     nb = n(944052),
     nj = n(763754),
     nk = n(861464),
@@ -3166,8 +3166,8 @@ function n0() {
 var n1 = n(776096),
     n3 = n(607567),
     n2 = n(377802),
-    n4 = n(342952),
-    n6 = n(676923),
+    n6 = n(342952),
+    n4 = n(676923),
     n5 = n(342296),
     n9 = n(481947),
     n7 = n(567346);
@@ -3297,7 +3297,7 @@ function ln(e) {
         ? null
         : (0, i.jsx)("div", {
               className: n7.X0,
-              children: (0, i.jsx)(n4.A, {
+              children: (0, i.jsx)(n6.A, {
                   users: l,
                   guildId: n ?? void 0,
                   maxUsers: Math.min(l.length, 4),
@@ -3410,7 +3410,7 @@ function ll(e) {
                 n = f ? H : nN._;
             return (0, i.jsx)("div", {
                 onDoubleClick: lt,
-                children: (0, i.jsx)(n6.S, {
+                children: (0, i.jsx)(n4.S, {
                     tooltipText: e,
                     onClick: f ? b : D,
                     onMouseEnter: Y,
@@ -3858,8 +3858,8 @@ var lo = n(308368),
     lc = n(442433),
     lh = n(780907),
     lg = n(684013),
-    lm = n(49229),
-    lI = n(956793),
+    lm = n(717398),
+    lI = n(730852),
     lE = n(428249),
     lA = n(975732),
     lf = n(145567),
@@ -3901,7 +3901,7 @@ function lT() {
     return (0, i.jsxs)("div", {
         className: lx.kL,
         children: [
-            (0, i.jsx)(t4, {
+            (0, i.jsx)(t6, {
                 currentUser: h,
                 activity: E,
                 currentGameName: n?.name ?? null,
@@ -4157,17 +4157,17 @@ let l_ = r.memo(function (e) {
                             e.event,
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("90738"),
-                                    n.e("98944"),
+                                    n.e("1195"),
+                                    n.e("39431"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
                                     n.e("34552"),
                                     n.e("8757"),
                                     n.e("89673"),
-                                    n.e("68403"),
                                     n.e("85968"),
                                     n.e("60195"),
+                                    n.e("68403"),
                                     n.e("29787"),
                                     n.e("97558"),
                                     n.e("94000"),
@@ -4222,38 +4222,36 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("90738"),
-                                    n.e("80848"),
-                                    n.e("23551"),
-                                    n.e("98944"),
+                                    n.e("1195"),
+                                    n.e("65086"),
+                                    n.e("39431"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
                                     n.e("34552"),
-                                    n.e("55411"),
                                     n.e("93103"),
                                     n.e("8757"),
                                     n.e("91763"),
                                     n.e("89673"),
-                                    n.e("68403"),
                                     n.e("85968"),
                                     n.e("60195"),
-                                    n.e("91007"),
+                                    n.e("68403"),
                                     n.e("29787"),
-                                    n.e("88342"),
+                                    n.e("91007"),
                                     n.e("97558"),
                                     n.e("94000"),
+                                    n.e("88342"),
                                     n.e("91994"),
                                     n.e("38730"),
                                     n.e("42451"),
-                                    n.e("98965"),
                                     n.e("76665"),
+                                    n.e("98965"),
                                     n.e("35313"),
                                     n.e("76273"),
                                     n.e("36564"),
+                                    n.e("45996"),
                                     n.e("52229"),
                                     n.e("792"),
-                                    n.e("45996"),
                                     n.e("92822"),
                                     n.e("23427"),
                                     n.e("29422"),
@@ -4362,10 +4360,9 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("13520"),
+                                    n.e("71561"),
                                     n.e("26132"),
                                     n.e("46652"),
-                                    n.e("55411"),
                                     n.e("93103"),
                                     n.e("91763"),
                                     n.e("38730"),
@@ -4375,11 +4372,9 @@ let l_ = r.memo(function (e) {
                                     n.e("43266"),
                                     n.e("9004"),
                                     n.e("44058"),
-                                    n.e("94138"),
-                                    n.e("11295"),
                                     n.e("81609"),
-                                    n.e("14479"),
-                                    n.e("88881"),
+                                    n.e("94138"),
+                                    n.e("58262"),
                                     n.e("18663"),
                                     n.e("21905"),
                                 ]).then(n.bind(n, 769192));
@@ -4398,18 +4393,18 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: l } = await Promise.all([
-                                    n.e("98944"),
+                                    n.e("39431"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
                                     n.e("34552"),
                                     n.e("8757"),
                                     n.e("89673"),
-                                    n.e("68403"),
                                     n.e("85968"),
-                                    n.e("76418"),
                                     n.e("60195"),
                                     n.e("21921"),
+                                    n.e("68403"),
+                                    n.e("76418"),
                                     n.e("97558"),
                                     n.e("94000"),
                                     n.e("82263"),

@@ -1,28 +1,29 @@
-n.d(t, { dx: () => u, UF: () => c, Sc: () => h, Lg: () => E }), n(938796);
+"use strict";
+n.d(t, { dx: () => c, UF: () => d, Sc: () => _, Lg: () => f }), n(938796);
 var i = n(665260),
-    l = n(17928),
-    a = n(626584),
-    r = n(677413),
-    s = n(287809);
-let o = (0, n(945810).mj)({
+    r = n(17928),
+    s = n(626584),
+    a = n(677413),
+    o = n(287809);
+let l = (0, n(945810).mj)({
     name: "2026-04-scheduled-messages-ui-backup",
     kind: "user",
     defaultConfig: !1,
     variations: { 0: !1, 1: !0 },
 });
-var d = n(652215);
-let u = new a.A("Scheduled Messages");
-function c(e) {
+var u = n(652215);
+let c = new s.A("Scheduled Messages");
+function d(e) {
     let { content: t, flags: n } = e,
-        [l, a] = (0, r.A)(t);
-    return l ? [a, (0, i.UI)(n ?? 0, d.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
+        [r, s] = (0, a.A)(t);
+    return r ? [s, (0, i.UI)(n ?? 0, u.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
 }
-function h() {
-    let e = (0, l.bG)([s.default], () => s.default.getCurrentUser()?.isStaff() ?? !1),
-        t = o.useConfig({ location: "useCanUseScheduledMessages" });
+function _() {
+    let e = (0, r.bG)([o.default], () => o.default.getCurrentUser()?.isStaff() ?? !1),
+        t = l.useConfig({ location: "useCanUseScheduledMessages" });
     return e || t;
 }
-function E(e) {
+function f(e) {
     var t;
     return {
         userId: e.user_id,

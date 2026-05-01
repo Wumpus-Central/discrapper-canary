@@ -5,7 +5,7 @@ var i,
     r = n(32880),
     a = n(347704),
     o = n(376728),
-    c = n(49229),
+    c = n(717398),
     d = n(631670),
     u = n(812633),
     p = n(837057),
@@ -16,7 +16,7 @@ var i,
     h = n(834730),
     j = n(975571),
     v = n(652215),
-    C = n(985018);
+    C = n(375708);
 function N() {
     let t = j.A.getArticleURL(v.MVz.GUILD_GETTING_STARTED);
     return (0, l.jsxs)(l.Fragment, {
@@ -34,8 +34,8 @@ function N() {
 var y = n(873298),
     f = n(331322),
     k = n(534514),
-    w = n(692798),
-    E = n(253932),
+    w = n(487245),
+    E = n(885386),
     S = n(578673);
 function A() {
     let t = (function (t) {

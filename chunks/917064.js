@@ -1,46 +1,47 @@
-i.d(t, { A: () => x, s: () => g });
-var s = i(627968);
-i(64700);
-var l = i(503698),
-    a = i.n(l),
-    n = i(104510),
-    r = i(179866),
-    c = i(926268),
-    o = i(534514),
-    d = i(834730),
-    u = i(985018),
-    m = i(502997),
-    T = i(93364);
-let g = [
-    { icon: n._, getText: () => u.intl.string(u.t.TZigSO) },
+"use strict";
+n.d(t, { A: () => p, s: () => h });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(104510),
+    o = n(179866),
+    l = n(926268),
+    u = n(534514),
+    c = n(834730),
+    d = n(375708),
+    _ = n(502997),
+    f = n(93364);
+let h = [
+    { icon: a._, getText: () => d.intl.string(d.t.TZigSO) },
     {
         icon: function (e) {
             let { className: t } = e;
-            return (0, s.jsx)("img", { className: a()(t, m.Dp), src: T, alt: "" });
+            return (0, i.jsx)("img", { className: s()(t, _.Dp), src: f, alt: "" });
         },
-        getText: () => u.intl.string(u.t.hjQuV2),
+        getText: () => d.intl.string(d.t.hjQuV2),
     },
-    { icon: r.i, getText: () => u.intl.string(u.t["2RUcaM"]) },
-    { icon: c.C, getText: () => u.intl.string(u.t.bJoZKV) },
+    { icon: o.i, getText: () => d.intl.string(d.t["2RUcaM"]) },
+    { icon: l.C, getText: () => d.intl.string(d.t.bJoZKV) },
 ];
-function x(e) {
+function p(e) {
     let { className: t } = e;
-    return (0, s.jsxs)("div", {
-        className: a()(m.iE, t),
+    return (0, i.jsxs)("div", {
+        className: s()(_.iE, t),
         children: [
-            (0, s.jsx)(o.D, { className: m.R_, variant: "heading-xxl/semibold", children: u.intl.string(u.t.IzKs3o) }),
-            (0, s.jsx)("div", {
-                className: m.kR,
-                children: g.map((e, t) => {
-                    let i = e.icon;
-                    return (0, s.jsxs)(
+            (0, i.jsx)(u.D, { className: _.R_, variant: "heading-xxl/semibold", children: d.intl.string(d.t.IzKs3o) }),
+            (0, i.jsx)("div", {
+                className: _.kR,
+                children: h.map((e, t) => {
+                    let n = e.icon;
+                    return (0, i.jsxs)(
                         "div",
                         {
-                            className: m.Nr,
+                            className: _.Nr,
                             children: [
-                                (0, s.jsx)(i, { className: m.Kk }),
-                                (0, s.jsx)(d.E, {
-                                    className: m.h_,
+                                (0, i.jsx)(n, { className: _.Kk }),
+                                (0, i.jsx)(c.E, {
+                                    className: _.h_,
                                     color: "text-muted",
                                     variant: "text-md/medium",
                                     children: e.getText(),

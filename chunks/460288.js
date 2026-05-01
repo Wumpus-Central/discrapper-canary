@@ -1,4 +1,5 @@
-function o(e, t) {
+"use strict";
+function i(e, t) {
     return 0 !== e.length && (e[Math.floor(t / 8)] & (1 << (t % 8))) != 0;
 }
 function r(e, t) {
@@ -9,21 +10,21 @@ function r(e, t) {
     }
     return (e[n] |= 1 << (t % 8)), e;
 }
-function i(e, t) {
-    if (o(e, t)) {
+function s(e, t) {
+    if (i(e, t)) {
         let n = Math.floor(t / 8),
-            o = t % 8;
-        e[n] &= ~(1 << o);
+            i = t % 8;
+        e[n] &= ~(1 << i);
     }
     return e;
 }
 function a(e) {
     return e instanceof Uint8Array;
 }
-function l(e) {
+function o(e) {
     return null != e && "object" == typeof e && "uint8array" === e.__tag__;
 }
-n.d(t, { I: () => l, Vf: () => r, We: () => i, c0: () => o, mg: () => a }),
+n.d(t, { I: () => o, Vf: () => r, We: () => s, c0: () => i, mg: () => a }),
     n(393431),
     n(532706),
     n(42231),

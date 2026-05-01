@@ -1,33 +1,34 @@
-i.d(t, { Jp: () => a, qo: () => s });
-var n,
-    l = i(860689),
-    r = i(652215),
-    s = (((n = {}).PUBLIC = "PUBLIC"), (n.INVITE_ONLY = "INVITE_ONLY"), (n.APPLY_TO_JOIN = "APPLY_TO_JOIN"), n);
-function a(e) {
+"use strict";
+n.d(t, { Jp: () => o, qo: () => a });
+var i,
+    r = n(860689),
+    s = n(652215),
+    a = (((i = {}).PUBLIC = "PUBLIC"), (i.INVITE_ONLY = "INVITE_ONLY"), (i.APPLY_TO_JOIN = "APPLY_TO_JOIN"), i);
+function o(e) {
     var t;
-    let i = new Set(e.features),
-        n = "INVITE_ONLY";
-    i.has(r.GuildFeatures.COMMUNITY) && i.has(r.GuildFeatures.DISCOVERABLE)
-        ? (n = "PUBLIC")
-        : i.has(r.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
-          i.has(r.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
-          (n = "APPLY_TO_JOIN");
-    let s =
+    let n = new Set(e.features),
+        i = "INVITE_ONLY";
+    n.has(s.GuildFeatures.COMMUNITY) && n.has(s.GuildFeatures.DISCOVERABLE)
+        ? (i = "PUBLIC")
+        : n.has(s.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+          n.has(s.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
+          (i = "APPLY_TO_JOIN");
+    let a =
             null != (t = e) &&
-            ((0, l.fh)(t)
-                ? t.premiumSubscriberCount > 0 || t.premiumTier > r.TVA.NONE
+            ((0, r.fh)(t)
+                ? t.premiumSubscriberCount > 0 || t.premiumTier > s.TVA.NONE
                 : null != t.premiumSubscriptionCount && t.premiumSubscriptionCount > 0),
-        a = 0;
-    s && (a = ((0, l.fh)(e) ? e.premiumSubscriberCount : e.premiumSubscriptionCount) ?? 0);
-    let u = (0, l.fh)(e) ? e.premiumTier : r.TVA.NONE;
+        o = 0;
+    a && (o = ((0, r.fh)(e) ? e.premiumSubscriberCount : e.premiumSubscriptionCount) ?? 0);
+    let l = (0, r.fh)(e) ? e.premiumTier : s.TVA.NONE;
     return {
-        verified: i.has(r.GuildFeatures.VERIFIED),
-        partnered: i.has(r.GuildFeatures.PARTNERED),
-        community: i.has(r.GuildFeatures.COMMUNITY),
-        staff: i.has(r.GuildFeatures.INTERNAL_EMPLOYEE_ONLY),
-        visibility: n,
-        premium: s,
-        premiumSubscriberCount: a,
-        premiumTier: u,
+        verified: n.has(s.GuildFeatures.VERIFIED),
+        partnered: n.has(s.GuildFeatures.PARTNERED),
+        community: n.has(s.GuildFeatures.COMMUNITY),
+        staff: n.has(s.GuildFeatures.INTERNAL_EMPLOYEE_ONLY),
+        visibility: i,
+        premium: a,
+        premiumSubscriberCount: o,
+        premiumTier: l,
     };
 }

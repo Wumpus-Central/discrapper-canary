@@ -1,20 +1,21 @@
-n.d(t, { A: () => c, I: () => d });
+"use strict";
+n.d(t, { A: () => c, I: () => u });
 var i = n(17928),
-    a = n(495544),
-    r = n(696451),
-    s = n(317525),
-    l = n(71393),
-    o = n(652215);
-function d(e, t) {
+    r = n(495544),
+    s = n(696451),
+    a = n(317525),
+    o = n(71393),
+    l = n(652215);
+function u(e, t) {
     let n =
             arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : null == e
                   ? null
-                  : r.Ay.getMember(e, a.default.getId()),
-        [i] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [l.A],
-        s = i.getGuild(e);
-    if (null == s || null == n || !s.features.has(o.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) return !1;
+                  : s.Ay.getMember(e, r.default.getId()),
+        [i] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [o.A],
+        a = i.getGuild(e);
+    if (null == a || null == n || !a.features.has(l.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) return !1;
     for (let e of n.roles) {
         let n = t?.[e];
         if (n?.tags?.subscription_listing_id != null) return !0;
@@ -22,6 +23,6 @@ function d(e, t) {
     return !1;
 }
 function c(e) {
-    let t = (0, i.bG)([a.default, r.Ay], () => (null == e ? null : r.Ay.getMember(e, a.default.getId())));
-    return (0, i.bG)([l.A, s.A], () => d(e, null != e ? s.A.getRolesSnapshot(e) : void 0, t, [l.A]), [e, t]);
+    let t = (0, i.bG)([r.default, s.Ay], () => (null == e ? null : s.Ay.getMember(e, r.default.getId())));
+    return (0, i.bG)([o.A, a.A], () => u(e, null != e ? a.A.getRolesSnapshot(e) : void 0, t, [o.A]), [e, t]);
 }

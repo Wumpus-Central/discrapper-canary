@@ -1,6 +1,7 @@
-var n = e(120394),
-    o = Math.min;
-r.exports = function (r) {
-    var t = n(r);
-    return t > 0 ? o(t, 0x1fffffffffffff) : 0;
+"use strict";
+var i = n(120394),
+    r = Math.min;
+e.exports = function (e) {
+    var t = i(e);
+    return t > 0 ? r(t, 0x1fffffffffffff) : 0;
 };

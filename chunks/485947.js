@@ -1,11 +1,12 @@
-n.d(t, { A: () => o });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    r = n.n(l),
-    s = n(707554),
-    a = n(320388);
-let o = (e) => {
-    let { className: t, children: n, "aria-label": l, id: o } = e;
-    return (0, i.jsx)(s.H, { className: r()(t, a.kL, a.wx), "aria-label": l, id: o, children: n });
+var r = n(503698),
+    s = n.n(r),
+    a = n(707554),
+    o = n(320388);
+let l = (e) => {
+    let { className: t, children: n, "aria-label": r, id: l } = e;
+    return (0, i.jsx)(a.H, { className: s()(t, o.kL, o.wx), "aria-label": r, id: l, children: n });
 };

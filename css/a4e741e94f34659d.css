@@ -1,0 +1,145 @@
+.scroller_fb04e1 {
+    background: var(--background-gradient-chat, var(--background-base-low));
+    contain: layout size
+}
+
+.body_fb04e1 {
+    margin: 0 auto;
+    max-width: 660px;
+    padding: 40px 0
+}
+
+.hiddenLibraryApplications_fb04e1 {
+    margin-top: 60px
+}
+
+.hiddenLibraryApplications_fb04e1:first-child {
+    margin-top: 20px
+}
+
+.hiddenLibraryApplicationContent_fb04e1 {
+    z-index: 1
+}
+
+.hiddenLibraryApplicationsTitle_fb04e1 {
+    margin-bottom: 8px
+}
+
+.hiddenLibraryApplication_fb04e1 {
+    align-items: center;
+    border-top: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative
+}
+
+.hiddenLibraryApplication_fb04e1:last-of-type {
+    border-bottom: 1px solid
+}
+
+.hiddenLibraryApplication_fb04e1:last-of-type:hover {
+    border-bottom-color: transparent
+}
+
+.hiddenLibraryApplication_fb04e1:first-of-type,
+.hiddenLibraryApplication_fb04e1:hover,
+.hiddenLibraryApplication_fb04e1:hover+.hiddenLibraryApplication_fb04e1 {
+    border-top-color: transparent
+}
+
+.hiddenLibraryApplication_fb04e1:hover .restoreButton_fb04e1 {
+    opacity: 1
+}
+
+.restoreButton_fb04e1 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    inset-inline-end: -31px;
+    justify-content: center;
+    min-height: 0;
+    min-width: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: -12px;
+    transition: opacity .1s ease;
+    width: 24px
+}
+
+.restoreButton_fb04e1:hover {
+    background: var(--background-base-lower)
+}
+
+.restoreIcon_fb04e1 {
+    color: var(--icon-feedback-critical);
+    height: 11px;
+    width: 11px
+}
+
+.applicationName_fb04e1 {
+    color: var(--text-strong);
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 22px
+}
+
+.applicationSubText_fb04e1 {
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 16px;
+    margin-top: 2px
+}
+
+.theme-dark .applicationSubText_fb04e1 {
+    color: var(--primary-400)
+}
+
+.theme-dark .hiddenLibraryApplication_fb04e1 {
+    border-color: var(--primary-500)
+}
+
+.theme-dark .hiddenLibraryApplication_fb04e1:before {
+    background: hsl(var(--primary-700-hsl)/.3);
+    border-color: var(--primary-700)
+}
+
+.theme-dark .restoreButton_fb04e1 {
+    box-shadow: 0 0 0 1px hsl(var(--primary-700-hsl)/.6), 0 1px 5px 0 var(--opacity-black-28)
+}
+
+.theme-dark .restoreButton_fb04e1:hover {
+    box-shadow: 0 0 0 1px hsl(var(--primary-700-hsl)/.6), 0 2px 10px 0 var(--opacity-black-20)
+}
+
+.theme-light .applicationSubText_fb04e1 {
+    color: hsl(var(--primary-400-hsl)/.6)
+}
+
+.theme-light .hiddenLibraryApplication_fb04e1 {
+    border-color: hsl(var(--primary-300-hsl)/.3)
+}
+
+.theme-light .hiddenLibraryApplication_fb04e1:before {
+    background-color: hsl(var(--primary-100-hsl)/.6);
+    border-color: var(--primary-200)
+}
+
+.theme-light .restoreButton_fb04e1 {
+    box-shadow: 0 0 0 1px hsl(var(--primary-300-hsl)/.3), 0 2px 5px 0 var(--opacity-black-20)
+}
+
+.theme-light .restoreButton_fb04e1:hover {
+    box-shadow: 0 0 0 1px hsl(var(--primary-300-hsl)/.3), 0 2px 10px 0 var(--opacity-black-8)
+}
+
+.container_ad5cdf {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    overflow: hidden
+}

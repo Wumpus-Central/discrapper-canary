@@ -9,15 +9,15 @@ var i = n(702841),
     s = n(71393),
     d = n(576705),
     c = n(977997),
-    f = n(147036),
+    f = n(871237),
     u = n(818348),
     g = n(763827),
     p = n(284009),
     y = n.n(p),
     h = n(827343),
-    T = n(956793),
+    T = n(730852),
     I = n(51760),
-    S = n(108713),
+    S = n(469802),
     b = n(350701),
     G = n(857253),
     N = n(30370),
@@ -31,7 +31,7 @@ var i = n(702841),
 function C(e) {
     return null != e ? (0, v.k)(e === m.f$.XBOX ? X.A : L.A) : k.q;
 }
-var Y = n(985018);
+var Y = n(375708);
 function w(e) {
     let t = (0, i.bG)([g.A], () => g.A.getChannelId() === e.id),
         p = (0, G.A)(),
@@ -97,10 +97,10 @@ function w(e) {
                               : i.type === P.fg2.XBOX
                                 ? (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("40841"),
+                                          n.e("6305"),
                                           n.e("76962"),
                                           n.e("95429"),
-                                          n.e("6515"),
+                                          n.e("24009"),
                                           n.e("48370"),
                                           n.e("24227"),
                                       ]).then(n.bind(n, 832910));
@@ -109,7 +109,7 @@ function w(e) {
                                 : (i.type === P.fg2.PLAYSTATION || i.type === P.fg2.PLAYSTATION_STAGING) &&
                                   (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("23551"),
+                                          n.e("1195"),
                                           n.e("25861"),
                                           n.e("91007"),
                                           n.e("38035"),

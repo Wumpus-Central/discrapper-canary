@@ -1,26 +1,27 @@
-n.d(t, { W: () => h });
-var r = n(713125),
-    i = n(473529),
-    a = n(871123),
-    l = n(734057),
-    s = n(808728),
-    o = n(309010),
+"use strict";
+n.d(t, { W: () => _ });
+var i = n(713125),
+    r = n(473529),
+    s = n(871123),
+    a = n(734057),
+    o = n(808728),
+    l = n(309010),
     u = n(567761),
-    d = n(652215),
-    c = n(746080);
-function h(e) {
-    let t = o.A.getChannelId(e),
+    c = n(652215),
+    d = n(746080);
+function _(e) {
+    let t = l.A.getChannelId(e),
         n =
-            s.Ay.getDefaultChannel(e)?.id ??
+            o.Ay.getDefaultChannel(e)?.id ??
             (function (e) {
-                if (e !== d.ME) return;
+                if (e !== c.ME) return;
                 let t = u.default.getPrivateChannelIds();
                 return t.length > 0 ? t[0] : void 0;
             })(e);
-    return (t !== c.VV.GUILD_ONBOARDING || r.Ay.shouldShowOnboarding(e)) && (t !== c.VV.GUILD_HOME || (0, i.K)(e))
-        ? t === c.VV.GAME_SHOP && (0, a.Ye)(e)
+    return (t !== d.VV.GUILD_ONBOARDING || i.Ay.shouldShowOnboarding(e)) && (t !== d.VV.GUILD_HOME || (0, r.K)(e))
+        ? t === d.VV.GAME_SHOP && (0, s.Ye)(e)
             ? t
-            : null == l.A.getChannel(t)
+            : null == a.A.getChannel(t)
               ? n
               : t
         : n;

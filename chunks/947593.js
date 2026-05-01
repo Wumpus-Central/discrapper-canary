@@ -1,13 +1,14 @@
-n.d(t, { D: () => s, I: () => l });
-var i = n(954571),
-    a = n(424994),
-    r = n(652215);
-let s = i.default.track,
-    l = (e, t) => {
-        s(r.HAw.RANKING_ITEM_INTERACTED_MUST_BE_SAMPLED, {
+"use strict";
+n.d(t, { D: () => a, I: () => o });
+var i = n(174459),
+    r = n(424994),
+    s = n(652215);
+let a = i.default.track,
+    o = (e, t) => {
+        a(s.HAw.RANKING_ITEM_INTERACTED_MUST_BE_SAMPLED, {
             request_id: t.requestId,
             item_id: t.entry.id,
-            surface_type: a.UG.GUILD_MEMBER_LIST,
+            surface_type: r.UG.GUILD_MEMBER_LIST,
             channel_id: t.channelId,
             guild_id: t.guildId,
             interaction_type: e,

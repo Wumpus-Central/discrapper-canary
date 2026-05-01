@@ -1,28 +1,29 @@
+"use strict";
 n.d(t, { A: () => c });
 var i = n(17928),
-    a = n(228366),
-    r = n(823448),
-    s = n(351022);
-let l = [];
-function o() {
-    l = [];
+    r = n(228366),
+    s = n(823448),
+    a = n(351022);
+let o = [];
+function l() {
+    o = [];
 }
-class d extends i.Ay.Store {
+class u extends i.Ay.Store {
     static displayName = "GlobalDiscoveryServersSearchLayoutStore";
     initialize() {
-        this.waitFor(r.A, s.A);
+        this.waitFor(s.A, a.A);
     }
     getVisibleTabs() {
-        return l;
+        return o;
     }
 }
-let c = new d(a.h, {
-    CONNECTION_OPEN: o,
-    GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: o,
+let c = new u(r.h, {
+    CONNECTION_OPEN: l,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_LAYOUT_RESET: l,
     GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
         let { query: t } = e,
-            n = r.A.getCounts(t);
+            n = s.A.getCounts(t);
         if (null == n) return !1;
-        l = n;
+        o = n;
     },
 });

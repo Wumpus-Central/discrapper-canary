@@ -1,114 +1,116 @@
 "use strict";
-n.d(t, { Cp: () => N, Gf: () => v, Sw: () => b, V4: () => T, ak: () => S, dK: () => I, dZ: () => y }), n(321073);
-var l = n(735438),
-    i = n.n(l),
+n.d(t, { Cp: () => v, Gf: () => y, Sw: () => D, V4: () => b, ak: () => C, dK: () => S, dZ: () => N }), n(321073);
+var i = n(735438),
+    r = n.n(i),
     s = n(636537),
     a = n(406935),
-    r = n(765178),
-    o = n(228366),
-    c = n(181658),
-    u = n(159273),
-    d = n(7584),
-    h = n(635222),
-    m = n(446458),
+    o = n(765178),
+    l = n(228366),
+    u = n(181658),
+    c = n(77257),
+    d = n(159273),
+    _ = n(7584),
+    f = n(635222),
+    h = n(587626),
     p = n(594061),
-    f = n(919638),
-    g = n(403362),
-    x = n(157559),
-    C = n(652215),
-    A = n(355097),
-    E = n(985018);
-function I(e) {
+    E = n(919638),
+    m = n(403362),
+    g = n(157559),
+    A = n(652215),
+    I = n(355097),
+    T = n(375708);
+function S(e) {
     p.wc.updateAsync(
         "textAndImages",
         (t) => {
             (t.diversitySurrogate = a.hU.create()), (t.diversitySurrogate.value = e);
         },
-        A.Sb.FREQUENT_USER_ACTION,
+        I.Sb.FREQUENT_USER_ACTION,
     );
 }
-function y(e) {
-    o.h.dispatch({ type: "EMOJI_FETCH", guildId: e }),
-        s.Bo.get({ url: C.Rsh.GUILD_EMOJIS(e), oldFormErrors: !0, rejectWithError: !0 }).then(
-            (t) => o.h.dispatch({ type: "EMOJI_FETCH_SUCCESS", guildId: e, emojis: t.body }),
-            () => o.h.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId: e }),
+function N(e) {
+    l.h.dispatch({ type: "EMOJI_FETCH", guildId: e }),
+        s.Bo.get({ url: A.Rsh.GUILD_EMOJIS(e), oldFormErrors: !0, rejectWithError: !0 }).then(
+            (t) => l.h.dispatch({ type: "EMOJI_FETCH_SUCCESS", guildId: e, emojis: t.body }),
+            () => l.h.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId: e }),
         );
 }
-function v(e) {
-    let { guildId: t, image: n, name: l, roles: i, analyticsLocation: a } = e;
+function y(e) {
+    let { guildId: t, image: n, name: i, roles: r, analyticsLocation: a, originalMd5: o } = e;
     return (
-        o.h.dispatch({ type: "EMOJI_UPLOAD_START", guildId: t }),
+        l.h.dispatch({ type: "EMOJI_UPLOAD_START", guildId: t }),
         s.Bo.post({
-            url: C.Rsh.GUILD_EMOJIS(t),
-            body: { image: n, name: l, roles: i },
+            url: A.Rsh.GUILD_EMOJIS(t),
+            body: { image: n, name: i, roles: r },
+            headers: c.A.buildHeadersForMd5(o),
             context: { client_event_source: a?.page },
             oldFormErrors: !0,
             rejectWithError: !1,
         }).then(
-            (e) => (o.h.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId: t }), e.body),
-            (e) => (o.h.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId: t }), Promise.reject(e)),
+            (e) => (l.h.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId: t }), e.body),
+            (e) => (l.h.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId: t }), Promise.reject(e)),
         )
     );
 }
-function S(e, t, n) {
+function C(e, t, n) {
     return (
-        o.h.dispatch({ type: "EMOJI_DELETE", guildId: e, emojiId: t }),
+        l.h.dispatch({ type: "EMOJI_DELETE", guildId: e, emojiId: t }),
         s.Bo.del({
-            url: C.Rsh.GUILD_EMOJI(e, t),
+            url: A.Rsh.GUILD_EMOJI(e, t),
             body: null != n ? { replaced_by: n } : void 0,
             oldFormErrors: !0,
             rejectWithError: !1,
         }).then(() => {
-            r.O.announce(E.intl.string(E.t.L3UUha));
+            o.O.announce(T.intl.string(T.t.L3UUha));
         })
     );
 }
-async function N(e) {
-    let { guildId: t, emojiId: n, name: l, roles: i } = e;
+async function v(e) {
+    let { guildId: t, emojiId: n, name: i, roles: r } = e;
     try {
         return await s.Bo.patch({
-            url: C.Rsh.GUILD_EMOJI(t, n),
-            body: { name: l, roles: i },
+            url: A.Rsh.GUILD_EMOJI(t, n),
+            body: { name: i, roles: r },
             oldFormErrors: !0,
             rejectWithError: !0,
         });
     } catch (e) {
-        throw new c.A(e);
+        throw new u.A(e);
     }
 }
-function j(e) {
-    if (f.A.totalUnavailableGuilds > 0 || !m.A.isConnected()) return e;
-    let t = e.map((e) => u.Ay.getCustomEmojiById(e) ?? d.Ay.getByName(e)).filter(g.Vq);
-    return [...(0, h.A)(t).keys()];
+function O(e) {
+    if (E.A.totalUnavailableGuilds > 0 || !h.A.isConnected()) return e;
+    let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? _.Ay.getByName(e)).filter(m.Vq);
+    return [...(0, f.A)(t).keys()];
 }
-function _(e) {
-    return null == e ? null : (e.id ?? d.Ay.convertSurrogateToBase(e.surrogates)?.name ?? e.name);
+function R(e) {
+    return null == e ? null : (e.id ?? _.Ay.convertSurrogateToBase(e.surrogates)?.name ?? e.name);
 }
-function T(e) {
-    let t = _(e);
+function b(e) {
+    let t = R(e);
     null != t &&
         p.bW.updateAsync(
             "favoriteEmojis",
             (e) =>
-                ((e.emojis = j(e.emojis)), i().size(e.emojis) >= 250)
-                    ? (x.A.show({
-                          title: E.intl.string(E.t["+XYXtZ"]),
-                          body: E.intl.formatToPlainString(E.t.JaIyFi, { count: 250 }),
+                ((e.emojis = O(e.emojis)), r().size(e.emojis) >= 250)
+                    ? (g.A.show({
+                          title: T.intl.string(T.t["+XYXtZ"]),
+                          body: T.intl.formatToPlainString(T.t.JaIyFi, { count: 250 }),
                       }),
                       !1)
                     : !e.emojis.includes(t) && void e.emojis.push(t),
-            A.Sb.INFREQUENT_USER_ACTION,
+            I.Sb.INFREQUENT_USER_ACTION,
         );
 }
-function b(e) {
-    let t = _(e);
+function D(e) {
+    let t = R(e);
     null != t &&
         p.bW.updateAsync(
             "favoriteEmojis",
             (e) => {
-                if (((e.emojis = j(e.emojis)), !e.emojis.includes(t))) return !1;
+                if (((e.emojis = O(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
-            A.Sb.INFREQUENT_USER_ACTION,
+            I.Sb.INFREQUENT_USER_ACTION,
         );
 }

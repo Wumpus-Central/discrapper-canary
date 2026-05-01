@@ -7,8 +7,8 @@ var r = l(627968),
     o = l(927385),
     i = l(635377),
     p = l.n(i),
-    h = l(181370),
-    m = l.n(h),
+    m = l(181370),
+    h = l.n(m),
     u = l(52133);
 async function j(e) {
     let s = o.pb[e];
@@ -190,18 +190,18 @@ function S(e) {
         ? (0, r.jsx)(M, { code: s, ...t })
         : (0, r.jsx)(n.Suspense, {
               fallback: (0, r.jsx)(M, { code: s, ...t }),
-              children: "ansi" === a ? (0, r.jsx)($, { code: s, ...t }) : (0, r.jsx)(I, { code: s, lang: a, ...t }),
+              children: "ansi" === a ? (0, r.jsx)(I, { code: s, ...t }) : (0, r.jsx)($, { code: s, lang: a, ...t }),
           });
 }
 function M(e) {
     let { code: s, ...l } = e;
     return (0, r.jsx)("code", { ...l, children: s });
 }
-function I(e) {
-    let { code: s, lang: l, ...t } = e,
-        a = (function (e, s) {
+function $(e) {
+    let { code: s, lang: l, className: t, ...a } = e,
+        o = (function (e, s) {
             let l = n.use(v(e)),
-                t = n.useMemo(() => m()(`${e}\0${s}`), [e, s]),
+                t = n.useMemo(() => h()(`${e}\0${s}`), [e, s]),
                 r = n.useCallback(
                     function () {
                         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -262,9 +262,11 @@ function I(e) {
                 a?.html ?? null
             );
         })(l, s);
-    return null == a ? (0, r.jsx)(M, { code: s, ...t }) : (0, r.jsx)(_, { html: a, ...t });
+    return null == o
+        ? (0, r.jsx)(M, { code: s, className: t, ...a })
+        : (0, r.jsx)(_, { html: o, className: c()(t, `language-${l}`), ...a });
 }
-function $(e) {
+function I(e) {
     let { code: s, className: t, ...a } = e,
         o = (function (e) {
             k ??= l.e("1180").then(l.t.bind(l, 628759, 23));

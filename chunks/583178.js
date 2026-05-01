@@ -1,6 +1,7 @@
-var n = e(635896),
-    o = e(753891),
-    i = n("keys");
-r.exports = function (r) {
-    return i[r] || (i[r] = o(r));
+"use strict";
+var i = n(635896),
+    r = n(753891),
+    s = i("keys");
+e.exports = function (e) {
+    return s[e] || (s[e] = r(e));
 };

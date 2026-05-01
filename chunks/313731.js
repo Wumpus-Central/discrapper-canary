@@ -1,13 +1,14 @@
-n.d(t, { A: () => l });
+"use strict";
+n.d(t, { A: () => o });
 var i = n(735438),
-    a = n.n(i),
-    r = n(636401),
-    s = n(652215);
-class l {
+    r = n.n(i),
+    s = n(636401),
+    a = n(652215);
+class o {
     transport;
     version;
     encoding;
-    id = a().uniqueId();
+    id = r().uniqueId();
     authorization = { authing: !1, scopes: [], accessToken: null, expires: new Date(0) };
     application = { id: null, name: null, icon: null };
     abortController = new AbortController();
@@ -15,7 +16,7 @@ class l {
         (this.transport = e), (this.version = t), (this.encoding = n), this.checkRpcVersion(t);
     }
     checkRpcVersion(e) {
-        if (null == e || e > s.dL4 || e < 1)
-            throw new r.A({ closeCode: s.YI$.INVALID_VERSION }, `Invalid Version: ${e}`);
+        if (null == e || e > a.dL4 || e < 1)
+            throw new s.A({ closeCode: a.YI$.INVALID_VERSION }, `Invalid Version: ${e}`);
     }
 }

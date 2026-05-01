@@ -1,19 +1,20 @@
-n.d(t, { $: () => s, A: () => r });
+"use strict";
+n.d(t, { $: () => a, A: () => s });
 var i = n(444927),
-    a = n(964486);
-function r() {
+    r = n(964486);
+function s() {
     let e = (0, i.A)(() => new AbortController());
     return (
-        (0, a.l0)(() => {
+        (0, r.l0)(() => {
             e.abort();
         }),
         e.signal
     );
 }
-function s(e) {
+function a(e) {
     let t = (0, i.A)(() => new AbortController());
     return (
-        (0, a.l0)(() => {
+        (0, r.l0)(() => {
             setTimeout(() => {
                 t.abort();
             }, e);
