@@ -81,6 +81,7 @@ async function Module(moduleArg = {}) {
         _ts_query_cursor_new,
         _ts_query_cursor_delete,
         _ts_query_cursor_exec,
+        _ts_query_cursor_exec_with_options,
         _ts_query_cursor_next_match,
         _ts_tree_copy,
         _ts_tree_delete,
@@ -167,6 +168,7 @@ async function Module(moduleArg = {}) {
         _ts_query_matches_wasm,
         _ts_query_captures_wasm,
         _memset,
+        _clock_gettime,
         _memcpy,
         _memmove,
         _getcwd,
@@ -224,7 +226,7 @@ async function Module(moduleArg = {}) {
             throw _;
         },
         _scriptName =
-            "file:///ci/build/discord/discord/node_modules/.pnpm/@discord+arborium-rt@https+++github.com+discord+arborium-rt+releases+download+v0.1.4+discord-arborium-rt-0.1.4.tgz/node_modules/@discord/arborium-rt/dist/host/web-tree-sitter.mjs",
+            "file:///ci/build/discord/discord/node_modules/.pnpm/@discord+arborium-rt@https+++github.com+discord+arborium-rt+releases+download+v0.1.6+discord-arborium-rt-0.1.6.tgz/node_modules/@discord/arborium-rt/dist/host/web-tree-sitter.mjs",
         scriptDirectory = "";
     function locateFile(e) {
         return Module.locateFile ? Module.locateFile(e, scriptDirectory) : scriptDirectory + e;
@@ -303,7 +305,7 @@ async function Module(moduleArg = {}) {
     function findWasmBinary() {
         return Module.locateFile
             ? locateFile("web-tree-sitter.wasm")
-            : new URL(__webpack_require__(344525), __webpack_require__.b).href;
+            : new URL(__webpack_require__(793189), __webpack_require__.b).href;
     }
     function getBinarySync(e) {
         if (e == wasmBinaryFile && wasmBinary) return new Uint8Array(wasmBinary);
@@ -935,6 +937,26 @@ async function Module(moduleArg = {}) {
     var ___table_base = new WebAssembly.Global({ value: "i32", mutable: !1 }, 1),
         __abort_js = () => abort("");
     __abort_js.sig = "v";
+    var _emscripten_get_now = () => performance.now();
+    _emscripten_get_now.sig = "d";
+    var _emscripten_date_now = () => Date.now();
+    _emscripten_date_now.sig = "d";
+    var nowIsMonotonic = 1,
+        checkWasiClock = (e) => e >= 0 && e <= 3,
+        INT53_MAX = 0x20000000000000,
+        INT53_MIN = -0x20000000000000,
+        bigintToI53Checked = (e) => (e < INT53_MIN || e > INT53_MAX ? NaN : Number(e));
+    function _clock_time_get(e, _, t) {
+        var r;
+        if (((_ = bigintToI53Checked(_)), !checkWasiClock(e))) return 28;
+        if (0 === e) r = _emscripten_date_now();
+        else {
+            if (!nowIsMonotonic) return 52;
+            r = _emscripten_get_now();
+        }
+        return LE_HEAP_STORE_I64((t >> 3) * 8, BigInt(Math.round(1e3 * r * 1e3))), 0;
+    }
+    _clock_time_get.sig = "iijp";
     var getHeapMax = () => 0x80000000,
         growMemory = (e) => {
             var _ = ((e - wasmMemory.buffer.byteLength + 65535) / 65536) | 0;
@@ -1028,14 +1050,10 @@ async function Module(moduleArg = {}) {
     var _fd_close = (e) => 52;
     _fd_close.sig = "ii";
     var _fd_read = (e, _, t, r) => 52;
-    _fd_read.sig = "iippp";
-    var INT53_MAX = 0x20000000000000,
-        INT53_MIN = -0x20000000000000,
-        bigintToI53Checked = (e) => (e < INT53_MIN || e > INT53_MAX ? NaN : Number(e));
     function _fd_seek(e, _, t, r) {
         return (_ = bigintToI53Checked(_)), 70;
     }
-    _fd_seek.sig = "iijip";
+    (_fd_read.sig = "iippp"), (_fd_seek.sig = "iijip");
     var printCharBuffers = [null, [], []],
         printChar = (e, _) => {
             var t = printCharBuffers[e];
@@ -1208,6 +1226,8 @@ async function Module(moduleArg = {}) {
             (Module._ts_query_cursor_new = _ts_query_cursor_new = e.ts_query_cursor_new),
             (Module._ts_query_cursor_delete = _ts_query_cursor_delete = e.ts_query_cursor_delete),
             (Module._ts_query_cursor_exec = _ts_query_cursor_exec = e.ts_query_cursor_exec),
+            (Module._ts_query_cursor_exec_with_options = _ts_query_cursor_exec_with_options =
+                e.ts_query_cursor_exec_with_options),
             (Module._ts_query_cursor_next_match = _ts_query_cursor_next_match = e.ts_query_cursor_next_match),
             (Module._ts_tree_copy = _ts_tree_copy = e.ts_tree_copy),
             (Module._ts_tree_delete = _ts_tree_delete = e.ts_tree_delete),
@@ -1335,6 +1355,7 @@ async function Module(moduleArg = {}) {
             (Module._ts_query_matches_wasm = _ts_query_matches_wasm = e.ts_query_matches_wasm),
             (Module._ts_query_captures_wasm = _ts_query_captures_wasm = e.ts_query_captures_wasm),
             (Module._memset = _memset = e.memset),
+            (Module._clock_gettime = _clock_gettime = e.clock_gettime),
             (Module._memcpy = _memcpy = e.memcpy),
             (Module._memmove = _memmove = e.memmove),
             (Module._getcwd = _getcwd = e.getcwd),
@@ -1390,6 +1411,7 @@ async function Module(moduleArg = {}) {
         __syscall_ioctl: ___syscall_ioctl,
         __table_base: ___table_base,
         _abort_js: __abort_js,
+        clock_time_get: _clock_time_get,
         emscripten_resize_heap: _emscripten_resize_heap,
         environ_get: _environ_get,
         environ_sizes_get: _environ_sizes_get,
