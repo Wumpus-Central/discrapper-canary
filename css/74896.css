@@ -2725,16 +2725,6 @@
     border-width: 1px
 }
 
-.spinner__8a394 {
-    margin-top: 20px
-}
-
-.markdown__8a394 {
-    font-size: 12px;
-    line-height: 16px;
-    padding-bottom: 30px
-}
-
 .imageInputContainer__4cc0e {
     height: 0;
     position: relative;
@@ -4811,6 +4801,15 @@
 
 .footerInlineNoticeContainer_bb5449 {
     margin-top: var(--space-12)
+}
+
+.framePreviewGraphic__6d898 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 48px;
+    overflow: hidden;
+    position: relative;
+    width: 48px
 }
 
 .paymentNote__56a21 {

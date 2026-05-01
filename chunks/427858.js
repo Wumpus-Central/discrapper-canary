@@ -1,4 +1,4 @@
-n.d(t, { A: () => eA });
+n.d(t, { A: () => ey });
 var l = n(627968),
     a = n(64700),
     i = n(503698),
@@ -413,8 +413,10 @@ function ec(e) {
 }
 n(321073);
 var ed = n(164928),
-    ep = n(134638);
-let em = (e) => {
+    ep = n(755880),
+    em = n(134638),
+    eh = n(906234);
+let eC = (e) => {
     let {
             disabled: t,
             showFractionalPremiumBanner: n,
@@ -454,11 +456,14 @@ let em = (e) => {
         }, [r, s, o, n, i]),
         N = a.useMemo(() => (0, R.l6)(A, c?.checkoutContext?.available_plans), [A, c]),
         v = a.useMemo(() => (p ? (0, l.jsx)(x.P, { planSkuId: h.skuId }) : null), [p, h.skuId]),
-        M = (0, R.J$)(A.paymentSourceId),
-        j = null,
-        b = null;
+        M = (0, eh.G)(C),
+        j = a.useMemo(() => (M ? (0, l.jsx)(ep.a, {}) : null), [M]),
+        b = a.useMemo(() => (null != v ? v : null != j ? j : null), [v, j]),
+        L = (0, R.J$)(A.paymentSourceId),
+        O = null,
+        D = null;
     p
-        ? (b = (0, l.jsx)(g.XH, {
+        ? (D = (0, l.jsx)(g.XH, {
               disabled: t,
               headingSubText: u,
               planOptions: E,
@@ -467,33 +472,33 @@ let em = (e) => {
               priceOptions: N,
           }))
         : null != c &&
-          (j = (0, l.jsx)(ep._, {
+          (O = (0, l.jsx)(em._, {
               type: k.N$.PREMIUM_SWITCH_PLAN,
               invoicePreview: c,
               subscriptionPlan: h,
-              isPrepaidPaymentSource: M,
+              isPrepaidPaymentSource: L,
               isPremiumGroupPurchase: r,
               bottomSubText: u,
           }));
-    let L = m ? d : (0, l.jsx)("div", { ref: y }),
-        O = m ? null : d;
+    let U = m ? d : (0, l.jsx)("div", { ref: y }),
+        Y = m ? null : d;
     return (0, l.jsx)(ed.T, {
         shouldShowGlobalNotices: !0,
         upperInlineNoticeProps: f,
         paymentSelectContent: (0, l.jsxs)(l.Fragment, { children: [S, _] }),
-        subscriptionDetailsContent: L,
-        purchaseItemContent: j,
-        planSelectContent: b,
-        invoiceSummaryContent: O,
+        subscriptionDetailsContent: U,
+        purchaseItemContent: O,
+        planSelectContent: D,
+        invoiceSummaryContent: Y,
         legalContent: T,
         invoiceTotalDueLabel: P ? $.intl.string(J.default.R0cZsM) : $.intl.string(J.default["11g67A"]),
         invoiceTotalDueValue: null != c ? (0, Z.U5)(c) : void 0,
-        promotionalNoticeContent: v,
+        promotionalNoticeContent: b,
     });
 };
-var eh = n(88001),
-    eC = n(466919);
-function eA(e) {
+var eA = n(88001),
+    eE = n(466919);
+function ey(e) {
     let t,
         {
             premiumSubscription: n,
@@ -521,12 +526,12 @@ function eA(e) {
             hasPaymentSources: ei,
             enablePremiumBrandRefresh: ed,
             isPremiumGroupPurchase: ep,
-            paymentSourceId: eA,
-            displayCurrency: eE,
+            paymentSourceId: em,
+            displayCurrency: eh,
         } = (0, T.P5)(),
         ey = (0, y.sw)(),
         { isGift: eP } = (0, _.Pv)(),
-        eS = (0, v.g)(i, eA),
+        eS = (0, v.g)(i, em),
         e_ = a.useMemo(() => (0, R.l6)(s, ey?.checkoutContext?.available_plans), [ey, s]),
         eT = (0, c.bG)([j.A], () => j.A.get(G));
     o()(null != eT, "Missing newPlan");
@@ -551,7 +556,7 @@ function eA(e) {
         Z || eM
             ? $.intl.string($.t.nyzoFb)
             : ep
-              ? $.intl.formatToPlainString(eC.default["3m9DJK"], { premiumGroupProductName: (0, eh.DP)() })
+              ? $.intl.formatToPlainString(eE.default["3m9DJK"], { premiumGroupProductName: (0, eA.DP)() })
               : (0, R.ys)(G)
                 ? (0, R.ff)(n, eT)
                 : $.intl.formatToPlainString($.t["sBpy9/"], { planName: eT.name });
@@ -647,16 +652,16 @@ function eA(e) {
               )
             : { content: null, isInvoiceBilledImmediately: !0, shouldRenderToUnifiedSubscriptionDetailsDirectly: !1 },
         eG = n?.eligiblePaymentGateways,
-        eF = null != eG && eG.length > 0 && (eA === b.B || null === eS) && ei ? w.fU.SELECT_PAYMENT_METHOD : void 0,
+        eF = null != eG && eG.length > 0 && (em === b.B || null === eS) && ei ? w.fU.SELECT_PAYMENT_METHOD : void 0,
         eB = a.useMemo(
             () => ({
                 label: $.intl.string($.t["/AAR02"]),
-                selectedCurrency: s.currency ?? eE,
+                selectedCurrency: s.currency ?? eh,
                 currencies: V,
                 onChange: K,
                 disabled: eg,
             }),
-            [V, K, s, eE, eg],
+            [V, K, s, eh, eg],
         ),
         eW = a.useMemo(
             () => ({
@@ -730,7 +735,7 @@ function eA(e) {
         eZ = !eM && ev && !ep,
         eq = a.useMemo(() => (eZ ? (0, l.jsx)(x.P, { planSkuId: eT.skuId }) : null), [eZ, eT.skuId]);
     return X
-        ? (0, l.jsx)(em, {
+        ? (0, l.jsx)(eC, {
               disabled: eg,
               showFractionalPremiumBanner: ef,
               fractionalPremiumInfo: eN,

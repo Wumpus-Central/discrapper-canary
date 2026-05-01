@@ -551,7 +551,7 @@ function eJ(e) {
                                                         n.e("65086"),
                                                         n.e("45650"),
                                                         n.e("76007"),
-                                                        n.e("25310"),
+                                                        n.e("74896"),
                                                         n.e("93880"),
                                                         n.e("57767"),
                                                         n.e("90261"),
@@ -629,6 +629,7 @@ function eJ(e) {
                                                         n.e("1354"),
                                                         n.e("834"),
                                                         n.e("78412"),
+                                                        n.e("63213"),
                                                         n.e("95444"),
                                                         n.e("9662"),
                                                         n.e("97659"),
@@ -636,10 +637,10 @@ function eJ(e) {
                                                         n.e("80239"),
                                                         n.e("75016"),
                                                         n.e("59880"),
-                                                        n.e("63213"),
                                                         n.e("76087"),
                                                         n.e("84150"),
                                                         n.e("33134"),
+                                                        n.e("80112"),
                                                         n.e("54791"),
                                                         n.e("48786"),
                                                         n.e("39286"),
@@ -831,8 +832,8 @@ var e4 = n(34188),
     e7 = n(700623),
     e9 = n(177953),
     e3 = n(825484),
-    e2 = n(512950),
-    e6 = n(900797),
+    e6 = n(512950),
+    e2 = n(900797),
     e5 = n(847374),
     te = n(10716),
     tt = n(702841),
@@ -1215,9 +1216,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, j.Ag)(n)
-              ? (0, r.jsx)(e2.p, {
+              ? (0, r.jsx)(e6.p, {
                     className: ty.ai,
-                    messageType: e2.Y.WARNING,
+                    messageType: e6.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1280,7 +1281,7 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e6.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e2.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1393,10 +1394,10 @@ var tQ = n(111042),
     t7 = n(594061),
     t9 = n(935208),
     t3 = n(630248),
-    t2 = n(355097);
-function t6(e, t) {
+    t6 = n(355097);
+function t2(e, t) {
     o.useEffect(() => {
-        t7.bW.loadIfUncached(t2.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t7.bW.loadIfUncached(t6.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2118,15 +2119,15 @@ function n9(e, t) {
 }
 n(827669);
 var n3 = n(562708),
-    n2 = n(139286),
-    n6 = n(520117);
+    n6 = n(139286),
+    n2 = n(520117);
 function n5(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
         s = (0, A.bG)([p.A], () => p.A.entrypoint());
     return {
-        trackSearchResultsItemImpressionRef: (0, n6.A)({
+        trackSearchResultsItemImpressionRef: (0, n2.A)({
             onVisible: () => {
-                (0, n2.x)({
+                (0, n6.x)({
                     type: n3.ImpressionTypes.VIEW,
                     name: n3.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
@@ -3032,7 +3033,7 @@ function lj(e) {
                             let e = [];
                             return c && e.push(ni.gq), e;
                         }, [c]),
-                        u = t6(r, a);
+                        u = t2(r, a);
                     return o.useMemo(
                         () =>
                             l
@@ -3207,7 +3208,7 @@ function lv(e) {
                         }, new Set()),
                     [i],
                 ),
-                r = t6(
+                r = t2(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
