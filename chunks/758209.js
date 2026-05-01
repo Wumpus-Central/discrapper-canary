@@ -1,18 +1,24 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => _ });
 var i = n(64700),
-    r = n(975807),
-    s = n(276666),
-    a = n(985603),
-    o = n(777376);
-function l(e) {
-    let t = (0, a.A)();
+    r = n(17928),
+    s = n(975807),
+    a = n(927813),
+    o = n(276666),
+    l = n(545600),
+    u = n(985603),
+    c = n(777376);
+let d = 5 * a.A.Millis.MINUTE;
+function _(e) {
+    let t = (0, r.bG)([l.A], () => l.A.getLastFetchTime()),
+        n = (0, u.A)();
     return i.useCallback(async () => {
-        if (null != e && (0, o.Nk)(e)) (0, r.A)(e.url, !0);
+        var i;
+        if (null != e && null != (i = t) && Date.now() - i < d) (0, s.A)(e.url, !0);
         else {
-            let e = await (0, s.aB)(o.n9.XGPP);
-            e?.redirect != null && (0, r.A)(e.redirect.url, !0);
+            let e = await (0, o.aB)(c.n9.XGPP);
+            e?.redirect != null && (0, s.A)(e.redirect.url, !0);
         }
-        t(a.xf.CLAIM);
-    }, [e, t]);
+        n(u.xf.CLAIM);
+    }, [e, t, n]);
 }

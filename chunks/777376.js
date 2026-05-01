@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Nk: () => d, Px: () => l, gR: () => c, n9: () => u, p1: () => o });
+n.d(t, { Px: () => l, gR: () => c, n9: () => u, p1: () => o });
 var i,
     r,
     s,
@@ -25,6 +25,3 @@ var i,
         (a[(a.EXPIRED = 5)] = "EXPIRED"),
         (a[(a.CANCELLATION_PENDING = 6)] = "CANCELLATION_PENDING"),
         a);
-function d(e) {
-    return null != e && new Date(e.expires_at).getTime() > Date.now();
-}
