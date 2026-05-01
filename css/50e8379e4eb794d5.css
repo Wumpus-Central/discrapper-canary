@@ -52,6 +52,12 @@
     width: 252px
 }
 
+.containerInteractive__10737 {
+    border-end-end-radius: var(--radius-sm);
+    border-end-start-radius: var(--radius-sm);
+    cursor: pointer
+}
+
 .container__10737:before {
     background: #c6cdf4;
     content: "";

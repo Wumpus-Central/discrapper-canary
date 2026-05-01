@@ -1,102 +1,112 @@
-n.d(t, { A: () => _ });
-var i = n(627968),
-    l = n(64700),
-    s = n(17928),
-    a = n(793574),
-    r = n(70730),
-    o = n(275759),
-    d = n(110259),
-    c = n(408278),
-    u = n(789645),
-    h = n(834730),
-    A = n(730134),
-    x = n(139286),
-    v = n(287809),
-    m = n(45787),
-    g = n(788868),
-    p = n(778712),
-    f = n(985018),
-    E = n(212583);
-function j(e) {
-    let { profileUserId: t } = e,
-        n = (0, s.bG)([v.default], () => v.default.getUser(t), [t]),
-        a = (0, s.bG)([v.default], () => v.default.getCurrentUser()),
-        r = (0, s.bG)([o.Ay], () => o.Ay.getFriendAnniversaryYears(t), [t]);
-    return (
-        l.useEffect(() => {
-            (0, x.x)({
-                name: d.ImpressionNames.GIFT_INTENT_USER_PROFILE_POPOUT,
-                type: d.ImpressionTypes.VIEW,
-                properties: { gift_intent_type: g.np.FRIEND_ANNIVERSARY },
-            });
-        }, []),
-        (0, i.jsxs)("div", {
-            className: E.kL,
+l.d(s, { A: () => D });
+var i = l(627968),
+    n = l(64700),
+    t = l(17928),
+    a = l(793574),
+    r = l(70730),
+    o = l(275759),
+    d = l(503698),
+    c = l.n(d),
+    u = l(562708),
+    h = l(408278),
+    A = l(789645),
+    p = l(834730),
+    x = l(939249),
+    m = l(308528),
+    v = l(982168),
+    g = l(730134),
+    C = l(139286),
+    f = l(287809),
+    E = l(45787),
+    j = l(788868),
+    I = l(778712),
+    N = l(375708),
+    _ = l(212583);
+function b(e) {
+    let { profileUserId: s, shouldBannerBeClickable: l = !1, onClose: a } = e,
+        r = (0, t.bG)([f.default], () => f.default.getUser(s), [s]),
+        d = (0, t.bG)([f.default], () => f.default.getCurrentUser()),
+        b = (0, t.bG)([o.Ay], () => o.Ay.getFriendAnniversaryYears(s), [s]);
+    n.useEffect(() => {
+        (0, C.x)({
+            name: u.ImpressionNames.GIFT_INTENT_USER_PROFILE_POPOUT,
+            type: u.ImpressionTypes.VIEW,
+            properties: { gift_intent_type: j.np.FRIEND_ANNIVERSARY },
+        });
+    }, []);
+    let R = n.useCallback(() => {
+            m.A.openPrivateChannel({ recipientIds: s }), a?.(), v.A.popAll();
+        }, [a, s]),
+        P = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("div", {
-                    className: E.b,
-                    children: (0, i.jsx)(c.K, {
-                        icon: u.P,
+                    className: _.b,
+                    children: (0, i.jsx)(h.K, {
+                        icon: A.P,
                         size: "sm",
                         variant: "icon-only",
-                        "aria-label": f.intl.string(f.t.cpT0Cq),
-                        onClick: () => (0, m.CK)(t),
+                        "aria-label": N.intl.string(N.t.cpT0Cq),
+                        onClick: (e) => {
+                            e.stopPropagation(), (0, E.CK)(s);
+                        },
                     }),
                 }),
-                (0, i.jsx)(h.E, {
+                (0, i.jsx)(p.E, {
                     variant: "text-sm/semibold",
                     color: "text-strong",
-                    children: f.intl.string(f.t.icDVNb),
+                    children: N.intl.string(N.t.icDVNb),
                 }),
                 (0, i.jsxs)("div", {
-                    className: E.SC,
+                    className: _.SC,
                     children: [
-                        null != n && (0, i.jsx)(A.A, { size: p._3.SIZE_16, user: n }),
-                        null != a && (0, i.jsx)(A.A, { className: E.GM, size: p._3.SIZE_16, user: a }),
-                        (0, i.jsx)(h.E, {
+                        null != r && (0, i.jsx)(g.A, { size: I._3.SIZE_16, user: r }),
+                        null != d && (0, i.jsx)(g.A, { className: _.GM, size: I._3.SIZE_16, user: d }),
+                        (0, i.jsx)(p.E, {
                             variant: "text-xs/normal",
                             color: "text-strong",
-                            children: f.intl.formatToPlainString(f.t.PpG27s, { numberOfYears: r }),
+                            children: N.intl.formatToPlainString(N.t.PpG27s, { numberOfYears: b }),
                         }),
                     ],
                 }),
             ],
-        })
-    );
+        });
+    return l
+        ? (0, i.jsx)(x.D, { className: c()(_.kL, _.Wk), onClick: R, children: P })
+        : (0, i.jsx)("div", { className: _.kL, children: P });
 }
-var C = n(880528),
-    I = n(570287),
-    N = n(822775),
-    R = n(904290),
-    b = n(656884);
-function S(e) {
-    let { user: t, guildId: n, channelId: l, onClose: s, disableAutoFocus: a, upsellEligible: r } = e,
-        o = (0, C.x)().hideDMInput;
+var R = l(880528),
+    P = l(570287),
+    y = l(822775),
+    S = l(904290),
+    T = l(656884);
+function k(e) {
+    let { user: s, guildId: l, channelId: n, onClose: t, disableAutoFocus: a, upsellEligible: r } = e,
+        o = (0, R.x)().hideDMInput;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            r && (0, i.jsx)(j, { profileUserId: t.id }),
-            !o && (0, i.jsx)(R.A, { user: t, guildId: n, channelId: l, onClose: s, disableAutoFocus: a, upsell: r }),
+            r && (0, i.jsx)(b, { profileUserId: s.id, shouldBannerBeClickable: o, onClose: t }),
+            !o && (0, i.jsx)(S.A, { user: s, guildId: l, channelId: n, onClose: t, disableAutoFocus: a, upsell: r }),
         ],
     });
 }
-function _(e) {
-    let { user: t, guildId: n, channelId: l, onClose: d, appContext: c, disableAutoFocus: u = !1 } = e,
-        h = (0, I.A)(t.id, n),
+function D(e) {
+    let { user: s, guildId: l, channelId: n, onClose: d, appContext: c, disableAutoFocus: u = !1 } = e,
+        h = (0, P.A)(s.id, l),
         A = (0, r.p)(a.A.USER_PROFILE_POPOUT),
-        x = (0, s.bG)([o.Ay], () => o.Ay.canShowProfilePopoutGiftIntents(t.id), [t.id]);
+        p = (0, t.bG)([o.Ay], () => o.Ay.canShowProfilePopoutGiftIntents(s.id), [s.id]);
     return (0, i.jsxs)("div", {
-        className: b.qr,
+        className: T.qr,
         children: [
             h &&
-                (0, i.jsx)(S, {
-                    user: t,
-                    guildId: n,
-                    channelId: l,
+                (0, i.jsx)(k, {
+                    user: s,
+                    guildId: l,
+                    channelId: n,
                     onClose: d,
                     disableAutoFocus: u,
-                    upsellEligible: A && x,
+                    upsellEligible: A && p,
                 }),
-            !h && (0, i.jsx)(N.A, { user: t, guildId: n, onClose: d, fullWidth: !0, appContext: c }),
+            !h && (0, i.jsx)(y.A, { user: s, guildId: l, onClose: d, fullWidth: !0, appContext: c }),
         ],
     });
 }
