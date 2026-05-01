@@ -1,7 +1,7 @@
 l.r(t), l.d(t, { default: () => tm });
 var s = l(627968),
     n = l(64700),
-    r = l(110259),
+    r = l(562708),
     i = l(17928),
     o = l(688810),
     a = l(139286),
@@ -17,14 +17,14 @@ var m = l(503698),
     A = l(104510),
     h = l(364522),
     E = l(534514),
-    I = l(834730),
-    v = l(793574),
-    j = l(932001),
+    v = l(834730),
+    I = l(793574),
+    j = l(131607),
     S = l(742589),
     _ = l(488803),
     y = l(289704),
     b = l(821609),
-    w = l(369174),
+    w = l(146793),
     R = l(661531);
 function L(e) {
     return e
@@ -42,7 +42,7 @@ function G(e) {
     }, [t?.entitlements]);
 }
 var O = l(853513),
-    k = l(985018),
+    k = l(375708),
     T = l(843095),
     D = l(568065),
     V = l(800007),
@@ -76,7 +76,7 @@ function B(e) {
               badge: D.ys[V.W5],
               isActive: d?.type === "active",
               isWarning: d?.type === "expiring",
-              onClick: () => (0, T.A)({ guildId: r, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }),
+              onClick: () => (0, T.A)({ guildId: r, analyticsLocation: I.A.GUILD_POWERUPS_OVERVIEW }),
               children: [
                   (0, s.jsx)("div", {
                       className: g()(W.ZS, M.Sl),
@@ -92,7 +92,7 @@ function B(e) {
                       title: k.intl.string(U.default["B3OfL/"]),
                       textColor: m,
                       footer: (0, s.jsx)(w.$L, { cost: u ?? 0, costDecorator: "+", status: d }),
-                      children: (0, s.jsx)(I.E, {
+                      children: (0, s.jsx)(v.E, {
                           className: M.h_,
                           color: m,
                           variant: "text-sm/medium",
@@ -109,7 +109,7 @@ function B(e) {
                                   : k.intl.string(U.default.b62EHM),
                           onClick: (e) => {
                               e.stopPropagation(),
-                                  (0, T.A)({ guildId: r, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW });
+                                  (0, T.A)({ guildId: r, analyticsLocation: I.A.GUILD_POWERUPS_OVERVIEW });
                           },
                       }),
                   }),
@@ -117,9 +117,9 @@ function B(e) {
           });
 }
 var F = l(645619),
-    K = l(941030),
-    J = l(665171),
-    z = l(942975);
+    K = l(842846),
+    J = l(396748),
+    z = l(868652);
 l(667532);
 var X = l(512750);
 let $ = { guildTagsBadgePacks: [X.tv, X.OJ, X.Ht, X.jF] },
@@ -280,7 +280,7 @@ function eA(e) {
                         className: ex.perkRow,
                         children: [
                             (0, s.jsx)(n, { color: i, size: "sm" }),
-                            (0, s.jsx)(I.E, {
+                            (0, s.jsx)(v.E, {
                                 className: ex.perkText,
                                 color: r,
                                 variant: "text-sm/medium",
@@ -298,7 +298,7 @@ function eA(e) {
             o,
             (0, s.jsx)("div", {
                 className: ex.perkRow,
-                children: (0, s.jsx)(I.E, {
+                children: (0, s.jsx)(v.E, {
                     color: r,
                     variant: "text-sm/medium",
                     children: k.intl.string(O.default.nIj3LZ),
@@ -335,8 +335,8 @@ function eh(e) {
     });
 }
 var eE = l(990078),
-    eI = l(775602),
-    ev = l(997509),
+    ev = l(775602),
+    eI = l(468689),
     ej = l(915667);
 function eS(e, t) {
     let r = (0, p.A)(t) ?? !1,
@@ -359,12 +359,11 @@ function eS(e, t) {
                               h = n
                                   ? () => {
                                         d
-                                            ? ev.A.open(t, em.BEX.TAG, em.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
+                                            ? eI.A.open(t, em.BEX.TAG, em.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
                                             : null != u && (0, ej.A)(t, u),
                                             (0, f.closeAllModals)();
                                     }
-                                  : void 0,
-                              E = D.m_;
+                                  : void 0;
                           return {
                               title: o,
                               description: a,
@@ -381,7 +380,6 @@ function eS(e, t) {
                                                   title: o,
                                                   description: k.intl.string(O.default.BBRFRd),
                                                   powerups: e,
-                                                  newPowerupSkuIdSet: E,
                                                   forceStaticImages: !0,
                                                   footerInfoText: m,
                                                   footerAction:
@@ -401,8 +399,6 @@ function eS(e, t) {
                               },
                               viewCta: c,
                               viewCtaTooltip: p,
-                              badge: "new",
-                              newPowerupSkuIdSet: E,
                               image: {
                                   staticUrl:
                                       "https://cdn.discordapp.com/assets/content/8dd1f75ba9ef2e0587c9963de0964edc7577f98385e85372e9dc600d353dd3b1.png",
@@ -425,7 +421,7 @@ var e_ = l(401996);
 function ey(e) {
     let { guildId: t, group: l, powerups: r } = e,
         [o, a] = n.useState(!1),
-        u = (0, i.bG)([eI.A], () => eI.A.useReducedMotion),
+        u = (0, i.bG)([ev.A], () => ev.A.useReducedMotion),
         d = eS([l], t)[l],
         c = !u && o ? d?.image?.animatedUrl : d?.image?.staticUrl,
         p = (function (e) {
@@ -486,7 +482,7 @@ function ey(e) {
                 title: d.title,
                 textColor: m,
                 footer: (0, s.jsx)(w.$L, { status: g, cost: x, costDecorator: f }),
-                children: (0, s.jsx)(I.E, {
+                children: (0, s.jsx)(v.E, {
                     className: e_.h,
                     color: m,
                     variant: "text-sm/medium",
@@ -525,7 +521,7 @@ function ew(e) {
                 title: l.title,
                 textColor: d,
                 footer: (0, s.jsx)(ed, { guildId: t, powerup: l }),
-                children: (0, s.jsx)(I.E, {
+                children: (0, s.jsx)(v.E, {
                     className: M.h_,
                     color: d,
                     variant: "text-sm/medium",
@@ -550,12 +546,12 @@ function eT(e) {
         className: ek.kL,
         children: [
             (0, s.jsx)("img", { alt: "", className: ek.Sl, src: "/assets/73b70c7aab95c776.svg" }),
-            (0, s.jsx)(I.E, {
+            (0, s.jsx)(v.E, {
                 color: "always-white",
                 variant: "text-md/semibold",
                 children: k.intl.string(O.default.diMhWc),
             }),
-            (0, s.jsx)(I.E, {
+            (0, s.jsx)(v.E, {
                 color: "always-white",
                 variant: "text-sm/medium",
                 children: k.intl.string(O.default.pycxTr),
@@ -611,14 +607,14 @@ function eB(e) {
               className: eW.kL,
               children: [
                   (0, s.jsx)(eV.E, { color: R.A.colors.TEXT_FEEDBACK_WARNING, className: eW.Kk }),
-                  (0, s.jsx)(I.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: a }),
-                  (0, s.jsxs)(I.E, {
+                  (0, s.jsx)(v.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: a }),
+                  (0, s.jsxs)(v.E, {
                       variant: "text-sm/medium",
                       children: [
                           u,
                           r?.map((e, t) =>
                               (0, s.jsx)(
-                                  I.E,
+                                  v.E,
                                   {
                                       variant: "text-sm/medium",
                                       color: "text-feedback-warning",
@@ -639,7 +635,7 @@ function eK(e) {
     let { text: t } = e;
     return (0, s.jsx)("div", {
         className: eF.ac,
-        children: (0, s.jsx)(I.E, { variant: "text-sm/medium", children: t }),
+        children: (0, s.jsx)(v.E, { variant: "text-sm/medium", children: t }),
     });
 }
 function eJ(e) {
@@ -683,7 +679,7 @@ function eJ(e) {
         ? (0, s.jsxs)("div", {
               className: eF.kL,
               children: [
-                  (0, s.jsx)(I.E, {
+                  (0, s.jsx)(v.E, {
                       variant: "eyebrow",
                       color: "text-subtle",
                       children: k.intl.string(O.default["3FRirU"]),
@@ -727,7 +723,7 @@ function eX(e) {
                     }),
                 ],
             }),
-            (0, s.jsx)(I.E, {
+            (0, s.jsx)(v.E, {
                 color: "text-muted",
                 variant: "text-sm/medium",
                 children: (function (e, t) {
@@ -756,12 +752,12 @@ function eH(e) {
                 (0, s.jsxs)("div", {
                     className: e$.N1,
                     children: [
-                        (0, s.jsx)(I.E, {
+                        (0, s.jsx)(v.E, {
                             variant: "eyebrow",
                             color: "text-subtle",
                             children: k.intl.string(O.default.hjvcLO),
                         }),
-                        (0, s.jsx)(I.E, {
+                        (0, s.jsx)(v.E, {
                             className: e$.C2,
                             variant: "text-xs/semibold",
                             children: k.intl.format(O.default.fXE30d, {
@@ -803,28 +799,28 @@ var eQ = l(97808),
     eY = l(730134),
     e0 = l(509536),
     e1 = l(319756),
-    e9 = l(854627),
-    e5 = l(696451),
-    e6 = l(317525),
-    e8 = l(287809),
-    e3 = l(562153),
+    e6 = l(854627),
+    e8 = l(696451),
+    e5 = l(317525),
+    e3 = l(287809),
+    e9 = l(562153),
     e7 = l(19575),
     e2 = l(32746);
 let e4 = e7.Ay.getEnableHardwareAcceleration() ? eQ.Js : eY.A;
 function te(e) {
     let { guildId: t } = e,
         l = (0, i.bG)([c.A], () => c.A.getGuild(t)),
-        n = (0, i.bG)([e6.A], () => e6.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
-        r = (0, i.bG)([e8.default], () => e8.default.getCurrentUser()),
+        n = (0, i.bG)([e5.A], () => e5.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
+        r = (0, i.bG)([e3.default], () => e3.default.getCurrentUser()),
         o = r?.id,
-        a = (0, i.bG)([e5.Ay], () => (null != o ? e5.Ay.getMember(t, o) : void 0), [o, t]),
+        a = (0, i.bG)([e8.Ay], () => (null != o ? e8.Ay.getMember(t, o) : void 0), [o, t]),
         u = a?.premiumSince != null,
-        d = (0, i.bG)([eI.A], () => eI.A.useReducedMotion),
+        d = (0, i.bG)([ev.A], () => ev.A.useReducedMotion),
         {
             avatarDecorationSrc: p,
             avatarSrc: m,
             eventHandlers: x,
-        } = (0, e9.A)({ userId: r?.id, guildId: t, size: eq._3.SIZE_40, animateOnHover: !d });
+        } = (0, e6.A)({ userId: r?.id, guildId: t, size: eq._3.SIZE_40, animateOnHover: !d });
     return null == l || null == a || null == r
         ? null
         : (0, s.jsxs)("div", {
@@ -833,11 +829,11 @@ function te(e) {
                   (0, s.jsxs)("div", {
                       className: e2.FS,
                       children: [
-                          (0, s.jsx)(I.E, {
+                          (0, s.jsx)(v.E, {
                               variant: "text-md/semibold",
                               children: k.intl.string(u ? O.default.KSWK1U : O.default.XXXX5l),
                           }),
-                          (0, s.jsx)(I.E, {
+                          (0, s.jsx)(v.E, {
                               variant: "text-sm/medium",
                               children: k.intl.format(u ? O.default["7fWTg4"] : O.default["7PXeeQ"], {
                                   onClick: () => {
@@ -867,7 +863,7 @@ function te(e) {
                           }),
                           username: (0, s.jsx)(eZ.g, {
                               variant: "text-md/semibold",
-                              name: e3.Ay.getName(t, null, r),
+                              name: e9.Ay.getName(t, null, r),
                               colorString: n.colorString,
                               colorStrings: n.colorStrings,
                           }),
@@ -913,10 +909,10 @@ function ta(e) {
                     username: l,
                     roleColor: s,
                     roleColorStrings: n,
-                } = (0, i.cf)([e5.Ay], () => {
-                    let t = e5.Ay.getMember(e.guildId, e.userId);
+                } = (0, i.cf)([e8.Ay], () => {
+                    let t = e8.Ay.getMember(e.guildId, e.userId);
                     return {
-                        username: e5.Ay.getNick(e.guildId, e.userId) ?? e.user?.username,
+                        username: e8.Ay.getNick(e.guildId, e.userId) ?? e.user?.username,
                         roleColor: t?.colorString ?? null,
                         roleColorStrings: t?.colorStrings ?? null,
                     };
@@ -930,7 +926,7 @@ function ta(e) {
             (0, s.jsx)(A._, { className: to.Kk, color: "currentColor", size: "sm" }),
             (0, s.jsx)("span", {
                 className: to.x$,
-                children: (0, s.jsxs)(I.E, {
+                children: (0, s.jsxs)(v.E, {
                     tag: "span",
                     variant: "text-md/medium",
                     lineClamp: 1,
@@ -975,11 +971,11 @@ function td(e) {
                         .slice(0, void 0),
                 [t, void 0],
             )),
-            (r = (0, i.yK)([e5.Ay], () => {
+            (r = (0, i.yK)([e8.Ay], () => {
                 let e = new Set();
                 return (
                     l.forEach((t) => {
-                        null == e5.Ay.getMember(u, t.userId) && e.add(t.userId);
+                        null == e8.Ay.getMember(u, t.userId) && e.add(t.userId);
                     }),
                     Array.from(e)
                 );
@@ -1119,7 +1115,7 @@ function tp(e) {
                         return;
                     }
                     if ("gameServer" === t.type && a === V.W5) {
-                        (0, T.A)({ guildId: o, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }), (y.current = !0);
+                        (0, T.A)({ guildId: o, analyticsLocation: I.A.GUILD_POWERUPS_OVERVIEW }), (y.current = !0);
                         return;
                     }
                 }
@@ -1187,7 +1183,7 @@ function tp(e) {
                                                           variant: "heading-lg/semibold",
                                                           children: n,
                                                       }),
-                                                      (0, s.jsx)(I.E, {
+                                                      (0, s.jsx)(v.E, {
                                                           color: "text-muted",
                                                           variant: "text-sm/medium",
                                                           children: r,
