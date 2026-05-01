@@ -951,13 +951,12 @@
 
 .frameRounded_aa7162 {
     background-color: var(--background-surface-high);
-    border-radius: 4px;
-    position: relative
+    border-radius: var(--radius-md)
 }
 
 .frameRounded_aa7162:after {
     border: 1px solid var(--border-subtle);
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     content: "";
     inset: 0;
     position: absolute

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { CN: () => h, Kk: () => f, Lx: () => p, Oj: () => E, Tb: () => d, fO: () => g, iY: () => m, xo: () => _ });
+n.d(t, { CN: () => f, Kk: () => _, Lx: () => h, Tb: () => c, fO: () => E, iY: () => p, xo: () => d });
 var i = n(95561),
     r = n(89381),
     s = n(885386),
@@ -7,25 +7,23 @@ var i = n(95561),
     o = n(71393),
     l = n(625494),
     u = n(652215);
-n(375708);
-let c = 864e5 * u.n83;
-function d() {
+function c() {
     let e = s.$s.getSetting();
     return 0 === a.A.totalUnavailableGuilds && (e = e.filter((e) => null != o.A.getGuild(e))), new Set(e);
 }
-function _() {
+function d() {
     let e = s.Zr.getSetting();
     return 0 === a.A.totalUnavailableGuilds && (e = e.filter((e) => null != o.A.getGuild(e))), new Set(e);
 }
-function f() {
+function _() {
     let e = s.JG.getSetting();
     return 0 === a.A.totalUnavailableGuilds && (e = e.filter((e) => null != o.A.getGuild(e))), new Set(e);
 }
-function h() {
+function f() {
     let e = s.pE.getSetting();
     return 0 === a.A.totalUnavailableGuilds && (e = e.filter((e) => null != o.A.getGuild(e))), new Set(e);
 }
-function p(e) {
+function h(e) {
     return (e & u.yKI) === u.yKI
         ? { all: !0, mutualFriends: !0, mutualGuilds: !0 }
         : {
@@ -34,10 +32,7 @@ function p(e) {
               mutualGuilds: (e & u.dzt.MUTUAL_GUILDS) === u.dzt.MUTUAL_GUILDS,
           };
 }
-function E(e, t) {
-    return !!(!t.verified || t.isStaff()) || (null != e && c > Date.now() - new Date(e.created_at).getTime());
-}
-function m(e) {
+function p(e) {
     let { destinationPane: t, originPane: n, source: s, subsection: a, locationStack: o, applicationId: l } = e;
     i.Ay.trackWithMetadata(u.HAw.SETTINGS_PANE_VIEWED, {
         settings_type: "user",
@@ -50,6 +45,7 @@ function m(e) {
         search_session_id: r.A.getSearchSessionId(),
     });
 }
-function g(e) {
+function E(e) {
     l._.dispatch(u.jej.SHAKE_SETTINGS_MODAL, e);
 }
+n(375708);

@@ -90,23 +90,25 @@ function S(e) {
             useSubtitle: a,
             useVariant: c,
             useDisabled: o,
-            useTrailingContent: u,
-            onClick: d,
+            useLoading: u,
+            useTrailingContent: d,
+            onClick: j,
         } = n,
-        [j, m] = r.useState(!1),
-        g = N(n),
-        y = s(),
-        v = a?.(),
-        b = t(),
-        k = i?.(),
-        E = c?.(),
-        S = o?.(),
-        A = u?.();
+        m = N(n),
+        g = u?.() ?? !1,
+        [y, v] = r.useState(!1),
+        b = s(),
+        k = a?.(),
+        E = t(),
+        S = i?.(),
+        A = c?.(),
+        C = o?.(),
+        I = d?.();
     return (0, l.jsx)(h, {
         children: (0, l.jsx)(f.D, {
-            label: y,
-            description: v,
-            disabled: S,
+            label: b,
+            description: k,
+            disabled: C,
             layout: "horizontal",
             children: (0, l.jsxs)(x.B, {
                 direction: "horizontal",
@@ -114,18 +116,18 @@ function S(e) {
                 justify: "end",
                 gap: "md",
                 children: [
-                    null != A && (0, l.jsx)(T, { trailingContent: A }),
+                    null != I && (0, l.jsx)(T, { trailingContent: I }),
                     (0, l.jsx)(p.$, {
                         onClick: () => {
-                            g();
-                            let e = d();
-                            e instanceof Promise && (m(!0), e.finally(() => m(!1)));
+                            m();
+                            let e = j();
+                            e instanceof Promise && (v(!0), e.finally(() => v(!1)));
                         },
-                        text: b,
-                        "aria-label": k,
-                        variant: E,
-                        disabled: S,
-                        loading: j,
+                        text: E,
+                        "aria-label": S,
+                        variant: A,
+                        disabled: C,
+                        loading: y || g,
                     }),
                 ],
             }),
