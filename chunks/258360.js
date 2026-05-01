@@ -5,20 +5,20 @@ var a = n(627968),
     i = n(670482),
     s = n(17928),
     o = n(477782),
-    c = n(550079),
+    c = n(980707),
     u = n(442433),
     d = n(955572),
     m = n(775602),
     g = n(316254),
-    b = n(253932),
-    f = n(954571),
+    b = n(885386),
+    f = n(174459),
     p = n(723702),
     S = n(19575),
     T = n(820066),
     y = n(636537),
-    C = n(691540),
-    h = n(857250),
-    x = n(97483),
+    x = n(691540),
+    C = n(857250),
+    h = n(97483),
     A = n(152367),
     j = n(192308),
     D = n(869388),
@@ -27,7 +27,7 @@ var a = n(627968),
     _ = n(186306),
     M = n(323350),
     N = n(652215),
-    P = n(985018),
+    P = n(375708),
     I = n(27013);
 function O(t) {
     let { text: e, editor: O, target: R, onHeightUpdate: X, onSelect: U } = t,
@@ -43,15 +43,15 @@ function O(t) {
         v = r.useCallback(() => {
             (0, u.Z_)(L);
         }, [L]),
-        V = r.useCallback(() => {
+        w = r.useCallback(() => {
             let t = S.Ay.readClipboard();
             0 !== t.length &&
                 L(() => {
                     l.gB.insertText(O, t);
                 });
         }, [L, O]),
-        [w, F] = (0, g.A)({ text: e, target: R, onHeightUpdate: X }),
-        G = (function (t) {
+        [F, G] = (0, g.A)({ text: e, target: R, onHeightUpdate: X }),
+        K = (function (t) {
             let e = (0, k.b)(),
                 l = (0, s.bG)([D.A], () => D.A.getTransforms()),
                 { selection: c } = t,
@@ -72,7 +72,7 @@ function O(t) {
                     let [n, l] = r.useState(!1),
                         i = r.useCallback(async () => {
                             if (!n) {
-                                l(!0), (0, C.P0)((0, h.o)(P.intl.string(P.t.p54KYY), x.Ck.AI));
+                                l(!0), (0, x.P0)((0, C.o)(P.intl.string(P.t.p54KYY), h.Ck.AI));
                                 try {
                                     let n = await y.Bo.post({
                                         url: N.Rsh.AI_FIX_GRAMMAR,
@@ -82,7 +82,7 @@ function O(t) {
                                     n.ok &&
                                         n.body &&
                                         (e(n.body.content),
-                                        (0, C.P0)((0, h.o)(P.intl.string(P.t.mxQpUY), x.Ck.SUCCESS)));
+                                        (0, x.P0)((0, C.o)(P.intl.string(P.t.mxQpUY), h.Ck.SUCCESS)));
                                 } finally {
                                     l(!1);
                                 }
@@ -105,8 +105,8 @@ function O(t) {
                                 let r = n ?? c;
                                 i(!0);
                                 let s = a ?? r;
-                                (0, C.P0)(
-                                    (0, h.o)(P.intl.formatToPlainString(P.t.Znl8Z8, { targetLanguage: s }), x.Ck.AI),
+                                (0, x.P0)(
+                                    (0, C.o)(P.intl.formatToPlainString(P.t.Znl8Z8, { targetLanguage: s }), h.Ck.AI),
                                 );
                                 try {
                                     let n = await y.Bo.post({
@@ -117,10 +117,10 @@ function O(t) {
                                     n.ok &&
                                         n.body &&
                                         (e(n.body.content),
-                                        (0, C.P0)(
-                                            (0, h.o)(
+                                        (0, x.P0)(
+                                            (0, C.o)(
                                                 P.intl.formatToPlainString(P.t.FtVUqm, { targetLanguage: s }),
-                                                x.Ck.SUCCESS,
+                                                h.Ck.SUCCESS,
                                             ),
                                         ));
                                 } finally {
@@ -163,10 +163,10 @@ function O(t) {
                             async (t) => {
                                 if (null == l) {
                                     i(t.id),
-                                        (0, C.P0)(
-                                            (0, h.o)(
+                                        (0, x.P0)(
+                                            (0, C.o)(
                                                 P.intl.formatToPlainString(P.t.rrf7Kf, { transformName: t.name }),
-                                                x.Ck.AI,
+                                                h.Ck.AI,
                                             ),
                                         );
                                     try {
@@ -178,10 +178,10 @@ function O(t) {
                                         a.ok &&
                                             a.body &&
                                             (n(a.body.content),
-                                            (0, C.P0)(
-                                                (0, h.o)(
+                                            (0, x.P0)(
+                                                (0, C.o)(
                                                     P.intl.formatToPlainString(P.t.qe4KvQ, { transformName: t.name }),
-                                                    x.Ck.SUCCESS,
+                                                    h.Ck.SUCCESS,
                                                 ),
                                             ));
                                     } finally {
@@ -236,7 +236,7 @@ function O(t) {
                   })
                 : null;
         })(O),
-        K = (0, s.bG)([m.A], () => m.A.isSubmitButtonEnabled),
+        V = (0, s.bG)([m.A], () => m.A.isSubmitButtonEnabled),
         W = b._3.useSetting();
     if (!p.isPlatformEmbedded) return null;
     let Y = O.chatInputType?.commands?.enabled ?? !1,
@@ -294,13 +294,13 @@ function O(t) {
                 (0, a.jsx)(o.sL, {
                     id: "submit-button",
                     label: P.intl.string(P.t.G8XDyj),
-                    checked: K,
+                    checked: V,
                     action: () => {
                         (0, d.Xt)();
                     },
                 }),
-            (0, a.jsx)(o.rX, { children: w }),
-            (0, a.jsxs)(o.rX, { children: [F, G] }),
+            (0, a.jsx)(o.rX, { children: F }),
+            (0, a.jsxs)(o.rX, { children: [G, K] }),
             (0, a.jsxs)(o.rX, {
                 children: [
                     Q,
@@ -310,13 +310,7 @@ function O(t) {
                         shortcut: (0, p.isMac)() ? "⌘V" : "Ctrl+V",
                         action: () => S.Ay.paste(),
                     }),
-                    H &&
-                        (0, a.jsx)(o.Dr, {
-                            id: "paste-as-plain-text",
-                            label: P.intl.string(P.t.X92Qnr),
-                            shortcut: (0, p.isMac)() ? "⌘⇧V" : "Ctrl+Shift+V",
-                            action: V,
-                        }),
+                    H && (0, a.jsx)(o.Dr, { id: "paste-as-plain-text", label: P.intl.string(P.t.X92Qnr), action: w }),
                 ],
             }),
         ],
