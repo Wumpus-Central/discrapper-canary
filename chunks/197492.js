@@ -1,1 +1,3 @@
-e.exports = JSON.parse('{"jSrqR2":["Forudindstillinger"],"zry4l5":["Se eksempel p\xe5 tema"],"/6NbRv":["Servertema"]}');
+e.exports = JSON.parse(
+    '{"odtr7f":["V\xe6lg et forudindstillet tema, eller skab dit eget. Hvert medlem ser dette tema, n\xe5r de hopper p\xe5 serveren, og det tilpasser sig deres indstilling for Lys eller M\xf8rk tilstand. ",[8,"$link",["F\xe5 mere at vide"],[[1,"articleUrl"]]]],"XhiIAu":["Dette \xe6ndrer, hvordan din server ser ud for alle medlemmer."],"aZpFFn":["Aktiv\xe9r servertema"],"jSrqR2":["Forudindstillinger"],"HkvkHP":["Temaet tilpasser sig hvert medlems pr\xe6ference for Lys eller M\xf8rk tilstand."],"zry4l5":["Se eksempel p\xe5 tema"],"Ck5zxP":["V\xe6lg dit tema"],"/6NbRv":["Servertema"]}',
+);

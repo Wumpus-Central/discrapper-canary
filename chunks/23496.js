@@ -1,3 +1,3 @@
 a.exports = JSON.parse(
-    '{"u72Prd":["Nitro ile HD \xe7\xf6z\xfcn\xfcrl\xfckte yayın yap"],"3wwZ/Q":["Yayını Başlat"],"OsS9Ll":["Yayını Durdur"],"j+eAMQ":["Yayın Sesi"],"/XSr8v":["Yayın modu"],"2qmQ8N":["Varsayılan"],"CrNjqp":["Yayın Ayarları"]}',
+    '{"u72Prd":["Nitro ile HD \xe7\xf6z\xfcn\xfcrl\xfckte yayın yap"],"uwMBDo":["Uygulama Sesini Paylaş"],"3wwZ/Q":["Yayını Başlat"],"OsS9Ll":["Yayını Durdur"],"j+eAMQ":["Yayın Sesi"],"/XSr8v":["Yayın modu"],"ibH7vy":["Dengeli kalite ve performans (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"2qmQ8N":["Varsayılan"],"q4gYBi":["Video ve oyun i\xe7in (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"nMcXo1":["Y\xfcksek Kalite"],"fN0UQY":["Daha yavaş cihazlar i\xe7in optimize edildi (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"5eO4/m":["Performans"],"CrNjqp":["Yayın Ayarları"]}',
 );
