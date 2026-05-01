@@ -211,22 +211,33 @@ function eU(e) {
     });
 }
 function ek(e) {
-    let { action: t, onClick: n, icon: s, label: a, sublabel: o, trailing: l, renderSubmenu: u, ref: c } = e,
-        d = null != n,
-        _ = (0, eP.rE)({ action: t, onClick: n }),
-        [f, h] = r.useState(!1),
-        m = r.useRef(null),
-        g = c ?? m,
-        I = null != u,
-        T = I && d,
-        S = { offset: { top: -8, left: -8, right: -8, bottom: -8 } },
-        N = r.useCallback(() => {
-            h(!0);
+    let {
+            action: t,
+            onClick: n,
+            icon: s,
+            label: a,
+            sublabel: o,
+            trailing: l,
+            renderSubmenu: u,
+            ref: c,
+            submenuTargetElementRef: d,
+            submenuAlign: _,
+        } = e,
+        f = null != n,
+        h = (0, eP.rE)({ action: t, onClick: n }),
+        [m, g] = r.useState(!1),
+        I = r.useRef(null),
+        T = c ?? I,
+        S = null != u,
+        N = S && f,
+        y = { offset: { top: -8, left: -8, right: -8, bottom: -8 } },
+        C = r.useCallback(() => {
+            g(!0);
         }, []),
-        y = r.useCallback(() => {
-            (0, A.hasAnyModalOpen)() || h(!1);
+        v = r.useCallback(() => {
+            (0, A.hasAnyModalOpen)() || g(!1);
         }, []),
-        C = () =>
+        O = () =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)("div", {
@@ -252,61 +263,62 @@ function ek(e) {
                     }),
                 ],
             }),
-        v = (e) => {
+        R = (e) => {
             let t;
             return (
-                (t = T
+                (t = N
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(E.D, {
                                   className: ex.ef,
-                                  onClick: _,
-                                  focusProps: { offset: { ...S.offset, right: 0 } },
-                                  children: C(),
+                                  onClick: h,
+                                  focusProps: { offset: { ...y.offset, right: 0 } },
+                                  children: O(),
                               }),
                               (0, i.jsx)(E.D, {
                                   className: ex.ap,
                                   "aria-label": ef.intl.string(ef.t.PdRCRg),
                                   ...e,
-                                  onClick: N,
-                                  focusProps: S,
+                                  onClick: C,
+                                  focusProps: y,
                                   children: (0, i.jsx)(eM._, { size: "xs", color: "currentColor" }),
                               }),
                           ],
                       })
-                    : I
+                    : S
                       ? (0, i.jsxs)(E.D, {
                             className: ex.ef,
                             ...e,
-                            onClick: N,
-                            focusProps: S,
+                            onClick: C,
+                            focusProps: y,
                             children: [
-                                C(),
+                                O(),
                                 (0, i.jsx)("div", {
                                     className: ex.ap,
                                     children: (0, i.jsx)(eM._, { size: "xs", color: "currentColor" }),
                                 }),
                             ],
                         })
-                      : (0, i.jsx)(E.D, { className: ex.ef, onClick: _, focusProps: S, children: C() })),
-                (0, i.jsx)("div", { ref: g, className: ex.jG, children: t })
+                      : (0, i.jsx)(E.D, { className: ex.ef, onClick: h, focusProps: y, children: O() })),
+                (0, i.jsx)("div", { ref: T, className: ex.jG, children: t })
             );
         };
-    return I
+    return S
         ? (0, i.jsx)("li", {
               className: ex.j$,
-              onMouseEnter: N,
-              onMouseLeave: y,
+              onMouseEnter: C,
+              onMouseLeave: v,
               children: (0, i.jsx)(p.Y, {
-                  targetElementRef: g,
+                  targetElementRef: d ?? T,
+                  align: _,
                   spacing: 0,
                   renderPopout: u,
-                  shouldShow: f,
-                  onRequestClose: y,
-                  children: v,
+                  shouldShow: m,
+                  onRequestClose: v,
+                  children: R,
               }),
           })
-        : (0, i.jsx)("li", { className: ex.j$, children: v() });
+        : (0, i.jsx)("li", { className: ex.j$, children: R() });
 }
 function eG(e) {
     let { children: t, "aria-label": n } = e;
@@ -547,27 +559,29 @@ function tu(e) {
     });
 }
 function tc(e) {
-    let { onClose: t } = e,
-        n = (0, eF.sw)(),
-        { userStatusMenu: s } = eB.$.useConfig({ location: "ClipsUserStatusMenuItem" }),
-        a = (0, c.bG)([eV.A], () => eV.A.getNewClipIds().length),
-        o = r.useCallback(
+    let { onClose: t, popoutContainerRef: n } = e,
+        s = (0, eF.sw)(),
+        { userStatusMenu: a } = eB.$.useConfig({ location: "ClipsUserStatusMenuItem" }),
+        o = (0, c.bG)([eV.A], () => eV.A.getNewClipIds().length),
+        l = r.useCallback(
             (e) => {
                 t(), (0, eH.p)({ initialEditingClipId: e });
             },
             [t],
         ),
-        l = r.useCallback(() => {
+        u = r.useCallback(() => {
             t(), (0, er.openUserSettings)(ei.X.CLIPS_PANEL);
         }, [t]);
-    return n && s
+    return s && a
         ? (0, i.jsx)(ek, {
               action: "PRESS_CLIPS",
               icon: eL.x,
               label: ef.intl.string(ef.t.z2jK6X),
-              trailing: a > 0 ? (0, i.jsx)(ew.hV, { count: a }) : null,
-              onClick: () => o(),
-              renderSubmenu: (e) => (0, i.jsx)(tl, { ...e, onOpenGallery: o, onOpenSettings: l, onClose: t }),
+              trailing: o > 0 ? (0, i.jsx)(ew.hV, { count: o }) : null,
+              onClick: () => l(),
+              submenuTargetElementRef: n,
+              submenuAlign: "bottom",
+              renderSubmenu: (e) => (0, i.jsx)(tl, { ...e, onOpenGallery: l, onOpenSettings: u, onClose: t }),
           })
         : null;
 }
@@ -1515,7 +1529,7 @@ function nK(e) {
                                                                           }
                                                                         : void 0,
                                                                 }),
-                                                                (0, i.jsx)(tc, { onClose: g }),
+                                                                (0, i.jsx)(tc, { onClose: g, popoutContainerRef: R }),
                                                             ],
                                                         }),
                                                     }),
@@ -2485,7 +2499,7 @@ class rm extends r.PureComponent {
                     n.e("99961"),
                     n.e("31688"),
                     n.e("69273"),
-                    n.e("24953"),
+                    n.e("97893"),
                     n.e("77083"),
                     n.e("63009"),
                     n.e("16933"),
