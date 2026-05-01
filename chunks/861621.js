@@ -1,32 +1,33 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(652215);
-let a = "<removed>";
-function r(e) {
+let r = "<removed>";
+function s(e) {
     var t, n;
-    let r = { ...e };
+    let s = { ...e };
     return (
-        "object" == typeof (t = r).args &&
+        "object" == typeof (t = s).args &&
             "string" == typeof t.cmd &&
-            (r = (function (e) {
+            (s = (function (e) {
                 switch (e.cmd) {
                     case i.e$_.AUTHENTICATE:
                     case i.e$_.GET_PROVIDER_ACCESS_TOKEN:
-                        return { ...e, args: { ...e.args, access_token: a } };
+                        return { ...e, args: { ...e.args, access_token: r } };
                     default:
                         return { ...e };
                 }
-            })(r)),
-        "object" == typeof (n = r).data &&
+            })(s)),
+        "object" == typeof (n = s).data &&
             "string" == typeof n.cmd &&
-            (r = (function (e) {
+            (s = (function (e) {
                 switch (e.cmd) {
                     case i.e$_.AUTHENTICATE:
                     case i.e$_.GET_PROVIDER_ACCESS_TOKEN:
-                        return { ...e, data: { ...e.data, access_token: a } };
+                        return { ...e, data: { ...e.data, access_token: r } };
                     default:
                         return { ...e };
                 }
-            })(r)),
-        r
+            })(s)),
+        s
     );
 }

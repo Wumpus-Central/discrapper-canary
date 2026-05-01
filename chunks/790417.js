@@ -13,39 +13,39 @@ var l = i(17928),
     m = i(489379),
     h = i(402857),
     x = i(353394),
-    p = i(842241),
+    p = i(64622),
     j = i(986712),
     A = i(782505),
     f = i(83013),
     I = i(515054),
     S = i(518477),
-    v = i(985018),
-    b = i(740620);
+    v = i(375708),
+    E = i(740620);
 function y(e) {
-    let { user: t, currentUser: i, displayProfile: y, guildId: E, channelId: N, onClose: T } = e,
-        { live: C, recent: w, stream: R } = (0, g.A)(t.id),
-        { voiceChannel: O, voiceActivity: k } = (0, m.A)({ userId: t.id, guildId: E }),
+    let { user: t, currentUser: i, displayProfile: y, guildId: b, channelId: T, onClose: C } = e,
+        { live: N, recent: w, stream: R } = (0, g.A)(t.id),
+        { voiceChannel: O, voiceActivity: k } = (0, m.A)({ userId: t.id, guildId: b }),
         L = (0, l.bG)([r.A], () => r.A.isFetchingUserOutbox(t.id)),
         G = t.id === i.id,
-        P = (0, l.bG)([c.A, o.A], () => {
+        _ = (0, l.bG)([c.A, o.A], () => {
             let e = G ? c.A.getStatus() : o.A.getStatus(t.id);
             return e === s.clD.OFFLINE || e === s.clD.INVISIBLE;
         }),
-        _ = C.length > 0 || null != R,
+        P = N.length > 0 || null != R,
         M = y?.private !== !0 && null == R && null == k && null != O,
-        D = !P && (_ || M),
+        D = !_ && (P || M),
         U = w.length > 0;
     return D || U || !L
         ? D || U || L
             ? (0, n.jsxs)(I.K, {
-                  className: b.XG,
+                  className: E.XG,
                   fade: !0,
                   children: [
                       D
                           ? (0, n.jsx)(f.A, {
                                 heading: v.intl.string(v.t.J6STd9),
                                 children: (0, n.jsxs)("ul", {
-                                    className: b.kR,
+                                    className: E.kR,
                                     children: [
                                         null != R &&
                                             (0, n.jsx)("li", {
@@ -53,10 +53,10 @@ function y(e) {
                                                     user: t,
                                                     currentUser: i,
                                                     stream: R,
-                                                    onClose: T,
+                                                    onClose: C,
                                                 }),
                                             }),
-                                        C.map((e, l) =>
+                                        N.map((e, l) =>
                                             (0, n.jsx)(
                                                 "li",
                                                 {
@@ -64,7 +64,7 @@ function y(e) {
                                                         user: t,
                                                         currentUser: i,
                                                         activity: e,
-                                                        onClose: T,
+                                                        onClose: C,
                                                     }),
                                                 },
                                                 `live-${l}`,
@@ -76,7 +76,7 @@ function y(e) {
                                                     user: t,
                                                     currentUser: i,
                                                     voiceChannel: O,
-                                                    onClose: T,
+                                                    onClose: C,
                                                 }),
                                             }),
                                     ],
@@ -101,11 +101,11 @@ function y(e) {
                                     : void 0,
                                 scrollTargetId: S.bk.RECENT_ACTIVITY,
                                 children: (0, n.jsx)("ul", {
-                                    className: b.kR,
+                                    className: E.kR,
                                     children: w.map((e) =>
                                         (0, n.jsx)(
                                             "li",
-                                            { children: (0, n.jsx)(x.A, { user: t, entry: e, onClose: T }) },
+                                            { children: (0, n.jsx)(x.A, { user: t, entry: e, onClose: C }) },
                                             e.id,
                                         ),
                                     ),
@@ -115,15 +115,15 @@ function y(e) {
                   ],
               })
             : G
-              ? (0, n.jsx)(A.qv, { onClose: T })
-              : (0, n.jsx)(A.zf, { user: t, guildId: y?.guildId ?? E, channelId: N, onClose: T })
+              ? (0, n.jsx)(A.qv, { onClose: C })
+              : (0, n.jsx)(A.zf, { user: t, guildId: y?.guildId ?? b, channelId: T, onClose: C })
         : (0, n.jsx)("div", {
-              className: b.kR,
+              className: E.kR,
               children: Array.from({ length: 8 }).map((e, t) =>
                   (0, n.jsxs)(
                       "div",
                       {
-                          className: b.kr,
+                          className: E.kr,
                           children: [
                               (0, n.jsx)(d.FQ, { width: 60, opacity: 0.08 }),
                               (0, n.jsx)(d.FQ, { width: 135, opacity: 0.08 }),

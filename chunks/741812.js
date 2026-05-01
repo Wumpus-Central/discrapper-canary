@@ -1,56 +1,57 @@
-n.d(t, { A: () => _ });
+"use strict";
+n.d(t, { A: () => p });
 var i = n(17928),
-    l = n(228366),
-    a = n(994500),
-    r = n(977997),
-    s = n(514581);
-let o = {},
-    d = {},
-    u = new Set();
-function c() {
-    (o = {}), (d = {});
+    r = n(228366),
+    s = n(994500),
+    a = n(977997),
+    o = n(514581);
+let l = {},
+    u = {},
+    c = new Set();
+function d() {
+    (l = {}), (u = {});
 }
-function h(e) {
+function _(e) {
     let { relationship: t } = e,
-        n = r.A.getVoiceStateForUser(t.id);
-    return null != n && null != n.channelId && E(n.channelId, t.id);
+        n = a.A.getVoiceStateForUser(t.id);
+    return null != n && null != n.channelId && f(n.channelId, t.id);
 }
-function E(e, t) {
+function f(e, t) {
     let n = !1,
         i = !1,
-        l = new Set(o[e]),
-        r = a.A.isBlocked(t);
-    r && !l.has(t) ? (l.add(t), (i = !0), (n = !0)) : r || (n = l.delete(t)),
-        0 === l.size && n ? delete o[e] : n && (o[e] = l);
-    let u = new Set(d[e]),
-        c = a.A.isIgnored(t);
+        r = new Set(l[e]),
+        a = s.A.isBlocked(t);
+    a && !r.has(t) ? (r.add(t), (i = !0), (n = !0)) : a || (n = r.delete(t)),
+        0 === r.size && n ? delete l[e] : n && (l[e] = r);
+    let c = new Set(u[e]),
+        d = s.A.isIgnored(t);
     return (
-        c && !u.has(t) ? (u.add(t), (i = !0), (n = !0)) : c || (n = u.delete(t)),
-        0 === u.size && n ? delete d[e] : n && (d[e] = u),
-        i && s.Ay.handleBlockedOrIgnoredUserVoiceChannelJoin(e, t),
+        d && !c.has(t) ? (c.add(t), (i = !0), (n = !0)) : d || (n = c.delete(t)),
+        0 === c.size && n ? delete u[e] : n && (u[e] = c),
+        i && o.Ay.handleBlockedOrIgnoredUserVoiceChannelJoin(e, t),
         n
     );
 }
-class A extends i.Ay.Store {
+class h extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.A, r.A);
+        this.waitFor(s.A, a.A);
     }
     getBlockedUsersForVoiceChannel(e) {
-        return o[e] ?? u;
+        return l[e] ?? c;
     }
     getIgnoredUsersForVoiceChannel(e) {
-        return d[e] ?? u;
+        return u[e] ?? c;
     }
 }
-let _ = new A(l.h, {
-    CONNECTION_OPEN: c,
-    LOGOUT: c,
+let p = new h(r.h, {
+    CONNECTION_OPEN: d,
+    LOGOUT: d,
     OVERLAY_INITIALIZE: function () {
-        c();
-        let e = r.A.getAllVoiceStates(),
+        d();
+        let e = a.A.getAllVoiceStates(),
             t = !1;
         for (let n of Object.values(e))
-            for (let e of Object.values(n)) null != e.channelId && (t = E(e.channelId, e.userId) || t);
+            for (let e of Object.values(n)) null != e.channelId && (t = f(e.channelId, e.userId) || t);
         return t;
     },
     VOICE_STATE_UPDATES: function (e) {
@@ -59,14 +60,14 @@ let _ = new A(l.h, {
         return (
             t.forEach((e) => {
                 null != e.oldChannelId &&
-                    (null != o[e.oldChannelId] && (o[e.oldChannelId]?.delete(e.userId), (n = !0)),
-                    null != d[e.oldChannelId] && (d[e.oldChannelId]?.delete(e.userId), (n = !0))),
-                    null != e.channelId && (n = E(e.channelId, e.userId) || n);
+                    (null != l[e.oldChannelId] && (l[e.oldChannelId]?.delete(e.userId), (n = !0)),
+                    null != u[e.oldChannelId] && (u[e.oldChannelId]?.delete(e.userId), (n = !0))),
+                    null != e.channelId && (n = f(e.channelId, e.userId) || n);
             }),
             n
         );
     },
-    RELATIONSHIP_ADD: h,
-    RELATIONSHIP_REMOVE: h,
-    RELATIONSHIP_UPDATE: h,
+    RELATIONSHIP_ADD: _,
+    RELATIONSHIP_REMOVE: _,
+    RELATIONSHIP_UPDATE: _,
 });

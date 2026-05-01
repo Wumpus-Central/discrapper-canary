@@ -1,27 +1,28 @@
-n.d(t, { A: () => s });
-var r = n(64700),
-    u = n(17928),
-    a = n(253932),
-    l = n(403362),
+"use strict";
+n.d(t, { A: () => u });
+var i = n(64700),
+    r = n(17928),
+    s = n(885386),
+    a = n(403362),
     o = n(382483),
-    i = n(385113);
-function s(e) {
-    let t = a.Q_.useSetting(),
-        n = (0, u.bG)([i.A], () => i.A.getFeaturedFetchState()),
-        s = (0, u.bG)([i.A], () => i.A.getDeveloperFetchState()),
-        c = (0, u.yK)([i.A], () => e.filter((e) => i.A.getFetchState(e) === i.e.NOT_FETCHED)),
-        d = (0, u.yK)([i.A], () => e.map((e) => i.A.getConfig(e)).filter(l.Vq));
+    l = n(385113);
+function u(e) {
+    let t = s.Q_.useSetting(),
+        n = (0, r.bG)([l.A], () => l.A.getFeaturedFetchState()),
+        u = (0, r.bG)([l.A], () => l.A.getDeveloperFetchState()),
+        c = (0, r.yK)([l.A], () => e.filter((e) => l.A.getFetchState(e) === l.e.NOT_FETCHED)),
+        d = (0, r.yK)([l.A], () => e.map((e) => l.A.getConfig(e)).filter(a.Vq));
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             (0, o.Wq)();
         }, []),
-        r.useEffect(() => {
+        i.useEffect(() => {
             t && (0, o.i$)();
         }, [t]),
-        r.useEffect(() => {
-            if (n !== i.e.NOT_FETCHED && n !== i.e.FETCHING && (!t || (s !== i.e.NOT_FETCHED && s !== i.e.FETCHING)))
+        i.useEffect(() => {
+            if (n !== l.e.NOT_FETCHED && n !== l.e.FETCHING && (!t || (u !== l.e.NOT_FETCHED && u !== l.e.FETCHING)))
                 for (let e of c) (0, o.un)(e);
-        }, [s, n, c, t]),
+        }, [u, n, c, t]),
         d
     );
 }

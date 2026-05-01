@@ -1,18 +1,19 @@
-n.d(t, { B: () => u }), n(142703), n(321073);
+"use strict";
+n.d(t, { B: () => c }), n(142703), n(321073);
 var i = n(228366),
-    l = n(426620),
-    a = n(446458);
-let r = [];
-function s() {
-    return null != l.A.getType();
-}
+    r = n(426620),
+    s = n(587626);
+let a = [];
 function o() {
-    s() || (r.forEach((e) => d(e)), (r = []));
+    return null != r.A.getType();
 }
-function d(e) {
-    setImmediate(() => e());
+function l() {
+    o() || (a.forEach((e) => u(e)), (a = []));
 }
 function u(e) {
-    a.A.isConnectedOrOverlay() && !s() ? d(e) : r.push(e);
+    setImmediate(() => e());
 }
-i.h.subscribe("CONNECTION_OPEN", o), i.h.subscribe("CONNECTION_RESUMED", o), i.h.subscribe("NUF_COMPLETE", o);
+function c(e) {
+    s.A.isConnectedOrOverlay() && !o() ? u(e) : a.push(e);
+}
+i.h.subscribe("CONNECTION_OPEN", l), i.h.subscribe("CONNECTION_RESUMED", l), i.h.subscribe("NUF_COMPLETE", l);

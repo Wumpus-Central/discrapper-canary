@@ -1,14 +1,15 @@
-i.d(t, { Ok: () => a, Zc: () => s, _u: () => u, gk: () => o });
-var n = i(540185),
-    l = i(587895),
-    r = i(985018);
-let s = [n.x.APPLICATION, n.x.FAVORITE_GAMES, n.x.PLAYED_GAMES, n.x.CURRENT_GAMES, n.x.WANT_TO_PLAY_GAMES],
-    a = {
-        [n.x.FAVORITE_GAMES]: () => r.intl.string(r.t.sUQar8),
-        [n.x.CURRENT_GAMES]: () => r.intl.string(r.t.SqNnus),
-        [n.x.WANT_TO_PLAY_GAMES]: () => r.intl.string(r.t.bWSQwW),
-        [n.x.PLAYED_GAMES]: () => r.intl.string(r.t.scOKET),
-        [n.x.APPLICATION]: (e) => l.A.getApplication(e.applicationId)?.name ?? "",
+"use strict";
+n.d(t, { Ok: () => o, Zc: () => a, _u: () => l, gk: () => u });
+var i = n(540185),
+    r = n(587895),
+    s = n(375708);
+let a = [i.x.APPLICATION, i.x.FAVORITE_GAMES, i.x.PLAYED_GAMES, i.x.CURRENT_GAMES, i.x.WANT_TO_PLAY_GAMES],
+    o = {
+        [i.x.FAVORITE_GAMES]: () => s.intl.string(s.t.sUQar8),
+        [i.x.CURRENT_GAMES]: () => s.intl.string(s.t.SqNnus),
+        [i.x.WANT_TO_PLAY_GAMES]: () => s.intl.string(s.t.bWSQwW),
+        [i.x.PLAYED_GAMES]: () => s.intl.string(s.t.scOKET),
+        [i.x.APPLICATION]: (e) => r.A.getApplication(e.applicationId)?.name ?? "",
     },
-    u = [n.x.FAVORITE_GAMES],
-    o = [n.x.CURRENT_GAMES, n.x.FAVORITE_GAMES];
+    l = [i.x.FAVORITE_GAMES],
+    u = [i.x.CURRENT_GAMES, i.x.FAVORITE_GAMES];

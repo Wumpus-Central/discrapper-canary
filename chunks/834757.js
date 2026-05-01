@@ -1,23 +1,24 @@
-n.d(t, { AO: () => _, Ee: () => d, nr: () => o });
+"use strict";
+n.d(t, { AO: () => d, Ee: () => u, nr: () => l });
 var i = n(17928),
-    a = n(52133),
-    r = n(290863),
-    s = n(652215);
-function l(e) {
-    return e.type === s.$pd.PLAYING;
+    r = n(52133),
+    s = n(290863),
+    a = n(652215);
+function o(e) {
+    return e.type === a.$pd.PLAYING;
 }
-function o(e, t) {
+function l(e, t) {
     var n;
-    return null != e ? ((n = e.ownerId), t.findActivity(n, l)) : null;
+    return null != e ? ((n = e.ownerId), t.findActivity(n, o)) : null;
 }
-function d(e, t) {
+function u(e, t) {
     if (null == e) return null;
-    let n = o(e, t);
+    let n = l(e, t);
     return null == n ? null : { id: n.application_id, name: n.name };
 }
 function c(e, t) {
-    return e === t || (null != e && null != t && (0, a.A)(e, t));
+    return e === t || (null != e && null != t && (0, r.A)(e, t));
 }
-function _(e) {
-    return (0, i.bG)([r.A], () => d(e, r.A), [e], c);
+function d(e) {
+    return (0, i.bG)([s.A], () => u(e, s.A), [e], c);
 }

@@ -1,6 +1,7 @@
-n.r(t), n.d(t, { default: () => r });
+"use strict";
+n.r(t), n.d(t, { default: () => s });
 var i = n(192308),
-    a = n(858897);
-function r() {
-    return (0, i.closeModal)(a.USER_SETTINGS_MODAL_KEY);
+    r = n(858897);
+function s() {
+    return (0, i.closeModal)(r.USER_SETTINGS_MODAL_KEY);
 }

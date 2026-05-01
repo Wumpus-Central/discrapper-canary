@@ -1,11 +1,12 @@
-i.d(t, { MU: () => d, oO: () => c, ow: () => o, wr: () => u }), i(516773);
-var n = i(159273),
-    l = i(7584),
-    r = i(403362),
-    s = i(348943);
-let a = { label: "" };
-function u(e) {
-    var t, i;
+"use strict";
+n.d(t, { MU: () => c, oO: () => d, ow: () => u, wr: () => l }), n(516773);
+var i = n(159273),
+    r = n(7584),
+    s = n(403362),
+    a = n(348943);
+let o = { label: "" };
+function l(e) {
+    var t, n;
     return {
         id: e.id,
         name: e.name,
@@ -17,32 +18,32 @@ function u(e) {
         brandColorPrimary: null == (t = e.brand_color_primary) || "" === t ? null : t,
         visibility: e.visibility,
         traits: (function (e, t) {
-            let i = [, , , , ,].fill(a);
-            for (let r of t)
-                r.position < 0 ||
-                    r.position >= 5 ||
-                    (i[r.position] = {
-                        label: r.label,
+            let n = [, , , , ,].fill(o);
+            for (let s of t)
+                s.position < 0 ||
+                    s.position >= 5 ||
+                    (n[s.position] = {
+                        label: s.label,
                         emoji:
                             (function (e) {
-                                let { guildId: t, emojiId: i, emojiName: r } = e,
-                                    s = n.o2.get(t);
-                                if (null == i && null == r) return null;
-                                if (null != i)
-                                    if (null != s) return s.getById(i);
+                                let { guildId: t, emojiId: n, emojiName: s } = e,
+                                    a = i.o2.get(t);
+                                if (null == n && null == s) return null;
+                                if (null != n)
+                                    if (null != a) return a.getById(n);
                                     else return null;
-                                return null != r ? l.Ay.getByName(r) : null;
-                            })({ guildId: e, emojiId: r.emoji_id, emojiName: r.emoji_name }) ?? void 0,
+                                return null != s ? r.Ay.getByName(s) : null;
+                            })({ guildId: e, emojiId: s.emoji_id, emojiName: s.emoji_name }) ?? void 0,
                     });
-            return i;
+            return n;
         })(e.id, e.traits ?? []),
         gameApplicationIds: e.game_application_ids ?? [],
         gameActivity:
-            null == (i = e.game_activity)
+            null == (n = e.game_activity)
                 ? {}
-                : Object.entries(i).reduce((e, t) => {
-                      let [i, n] = t;
-                      return (e[i.toString()] = { level: n.activity_level, score: n.activity_score }), e;
+                : Object.entries(n).reduce((e, t) => {
+                      let [n, i] = t;
+                      return (e[n.toString()] = { level: i.activity_level, score: i.activity_score }), e;
                   }, {}),
         features: e.features ?? [],
         tag: e.tag,
@@ -54,7 +55,7 @@ function u(e) {
         premiumTier: e.premium_tier,
     };
 }
-function o(e) {
+function u(e) {
     let t = {};
     return (
         null != e.name && (t.name = e.name),
@@ -76,7 +77,7 @@ function o(e) {
                               emoji_animated: e.emoji?.animated,
                           },
                 )
-                .filter(r.Vq)),
+                .filter(s.Vq)),
         null != e.gameApplicationIds && (t.game_application_ids = e.gameApplicationIds),
         void 0 !== e.tag && (t.tag = e.tag),
         void 0 !== e.badge && (t.badge = e.badge),
@@ -85,17 +86,17 @@ function o(e) {
         t
     );
 }
-function d(e) {
+function c(e) {
     return e.reduce(
         (e, t) => ((e[t.game_application_id] = { level: t.activity_level, score: t.activity_score }), e),
         {},
     );
 }
-function c(e) {
-    let { guild: t, profile: i } = e,
-        n = null != i ? u(i) : null;
-    return null != n
-        ? n
+function d(e) {
+    let { guild: t, profile: n } = e,
+        i = null != n ? l(n) : null;
+    return null != i
+        ? i
         : null == t
           ? null
           : {
@@ -106,7 +107,7 @@ function c(e) {
                 customBanner: t.banner,
                 onlineCount: t.approximate_presence_count ?? e.approximate_presence_count ?? 0,
                 memberCount: t.approximate_member_count ?? e.approximate_member_count ?? 0,
-                visibility: s.n.NOT_SPECIFIED,
+                visibility: a.n.NOT_SPECIFIED,
                 traits: [],
                 gameApplicationIds: [],
                 gameActivity: {},

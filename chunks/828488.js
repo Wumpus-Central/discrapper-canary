@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { LX: () => s, W$: () => a, ac: () => d, fw: () => l, uJ: () => _ });
+n.d(t, { LX: () => s, W$: () => a, ac: () => c, fw: () => l, uJ: () => u });
 var i = n(945810),
-    r = n(36200);
+    r = n(880006);
 let s = (0, i.mj)({
         kind: "user",
         name: "2026-03-conversation-highlighting-utility",
@@ -24,7 +24,7 @@ let s = (0, i.mj)({
 function l(e) {
     return s.getConfig({ location: e }).enabled;
 }
-function _(e, t) {
+function u(e, t) {
     let n,
         i,
         r = l(t),
@@ -34,6 +34,6 @@ function _(e, t) {
             n || i);
     return r || s;
 }
-function d(e) {
+function c(e) {
     return s.useConfig({ location: e }).enabled;
 }

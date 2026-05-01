@@ -1,10 +1,11 @@
-n.d(i, { PW: () => u, mD: () => o, md: () => l });
-var e = n(665260),
+"use strict";
+n.d(t, { PW: () => a, mD: () => o, md: () => s });
+var i = n(665260),
     r = n(355097);
-function l(t, i) {
-    return e.UI(e.iE(t, r.n3.UNREADS_ALL_MESSAGES, r.n3.UNREADS_ONLY_MENTIONS), i);
+function s(e, t) {
+    return i.UI(i.iE(e, r.n3.UNREADS_ALL_MESSAGES, r.n3.UNREADS_ONLY_MENTIONS), t);
 }
-let u = (t) => e.iE(t, r.vv.UNREADS_ALL_MESSAGES, r.vv.UNREADS_ONLY_MENTIONS);
-function o(t, i) {
-    return e.UI(u(t), i);
+let a = (e) => i.iE(e, r.vv.UNREADS_ALL_MESSAGES, r.vv.UNREADS_ONLY_MENTIONS);
+function o(e, t) {
+    return i.UI(a(e), t);
 }

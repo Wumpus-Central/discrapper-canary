@@ -1,43 +1,44 @@
-n.d(t, { GP: () => A, R: () => o, Ts: () => u, XC: () => l, _c: () => _, t2: () => E, tV: () => c });
+"use strict";
+n.d(t, { GP: () => h, R: () => l, Ts: () => f, XC: () => o, _c: () => d, t2: () => _, tV: () => c });
 var i = n(735438),
-    a = n(228366),
-    r = n(475815),
-    s = n(365971);
-function l(e, t) {
-    a.h.dispatch({ type: "WINDOW_FOCUS", windowId: (0, s.Q2)(e), focused: t });
+    r = n(228366),
+    s = n(475815),
+    a = n(365971);
+function o(e, t) {
+    r.h.dispatch({ type: "WINDOW_FOCUS", windowId: (0, a.Q2)(e), focused: t });
 }
-function o(e) {
-    a.h.dispatch({ type: "WINDOW_HIDDEN", windowId: (0, s.Q2)(e) });
+function l(e) {
+    r.h.dispatch({ type: "WINDOW_HIDDEN", windowId: (0, a.Q2)(e) });
 }
-let d = (0, i.memoize)((e) =>
+let u = (0, i.memoize)((e) =>
     (0, i.debounce)((t, n) => {
-        a.h.dispatch({ type: "WINDOW_RESIZED", windowId: e, width: t, height: n });
+        r.h.dispatch({ type: "WINDOW_RESIZED", windowId: e, width: t, height: n });
     }, 100),
 );
 function c(e) {
-    d((0, s.Q2)(e))(e.innerWidth, e.innerHeight);
+    u((0, a.Q2)(e))(e.innerWidth, e.innerHeight);
+}
+function d(e) {
+    let t = (0, a.Q2)(e);
+    r.h.dispatch({ type: "WINDOW_FULLSCREEN_CHANGE", windowId: t, isElementFullscreen: (0, s._U)(null, e.document) });
 }
 function _(e) {
-    let t = (0, s.Q2)(e);
-    a.h.dispatch({ type: "WINDOW_FULLSCREEN_CHANGE", windowId: t, isElementFullscreen: (0, r._U)(null, e.document) });
+    let t = (0, a.Q2)(e);
+    r.h.dispatch({ type: "WINDOW_VISIBILITY_CHANGE", windowId: t, visible: "visible" === e.document.visibilityState });
 }
-function E(e) {
-    let t = (0, s.Q2)(e);
-    a.h.dispatch({ type: "WINDOW_VISIBILITY_CHANGE", windowId: t, visible: "visible" === e.document.visibilityState });
-}
-function u(e) {
-    let t = (0, s.Q2)(e),
+function f(e) {
+    let t = (0, a.Q2)(e),
         n = e.document;
-    a.h.dispatch({
+    r.h.dispatch({
         type: "WINDOW_INIT",
         windowId: t,
-        isElementFullscreen: (0, r._U)(null, n),
+        isElementFullscreen: (0, s._U)(null, n),
         focused: n.hasFocus(),
         width: e.innerWidth,
         height: e.innerHeight,
         visible: "visible" === n.visibilityState,
     });
 }
-function A(e) {
-    a.h.dispatch({ type: "WINDOW_UNLOAD", windowId: (0, s.Q2)(e) });
+function h(e) {
+    r.h.dispatch({ type: "WINDOW_UNLOAD", windowId: (0, a.Q2)(e) });
 }

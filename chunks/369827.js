@@ -1,43 +1,44 @@
-n.d(t, { A: () => l });
-var o = n(64700),
+"use strict";
+n.d(t, { A: () => o });
+var i = n(64700),
     r = n(17928),
-    i = n(323082),
+    s = n(753390),
     a = n(295405);
-function l(e) {
-    let { isGift: t, activeSubscription: n, eligiblePaymentGateways: l } = e,
+function o(e) {
+    let { isGift: t, activeSubscription: n, eligiblePaymentGateways: o } = e,
         {
-            defaultPaymentSourceId: s,
+            defaultPaymentSourceId: l,
             paymentSources: u,
-            hasFetchedPaymentSources: _,
+            hasFetchedPaymentSources: c,
         } = (0, r.cf)([a.A], () => ({
             defaultPaymentSourceId: a.A.defaultPaymentSourceId,
             paymentSources: a.A.paymentSources,
             hasFetchedPaymentSources: a.A.hasFetchedPaymentSources,
         })),
-        d = (e, t, n, o) => {
+        d = (e, t, n, i) => {
             if (!e && t?.paymentSourceId != null) return t.paymentSourceId;
-            if (null != o && o.length > 0) {
-                if (null != n && o.includes(u[n].paymentGateway)) return n;
+            if (null != i && i.length > 0) {
+                if (null != n && i.includes(u[n].paymentGateway)) return n;
                 for (let e in u) {
                     let t = u[e];
-                    if (o.includes(t.paymentGateway)) return e;
+                    if (i.includes(t.paymentGateway)) return e;
                 }
                 return null;
             }
             return n;
         },
-        [C, E] = o.useState(() => d(t, n, s, l));
+        [_, f] = i.useState(() => d(t, n, l, o));
     return (
-        o.useEffect(() => {
-            _ ? E(d(t, n, s, l)) : (0, i.$o)();
-        }, [_, t, n, s, l]),
+        i.useEffect(() => {
+            c ? f(d(t, n, l, o)) : (0, s.$o)();
+        }, [c, t, n, l, o]),
         {
             paymentSources: u,
             hasPaymentSources: Object.keys(u).length > 0,
-            paymentSourceId: C,
-            setPaymentSourceId: E,
-            hasFetchedPaymentSources: _,
-            defaultPaymentSource: null != s ? u[s] : null,
+            paymentSourceId: _,
+            setPaymentSourceId: f,
+            hasFetchedPaymentSources: c,
+            defaultPaymentSource: null != l ? u[l] : null,
         }
     );
 }

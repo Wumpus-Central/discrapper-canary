@@ -1,192 +1,193 @@
-n.d(t, { VZ: () => j, Ay: () => E, FX: () => v }), n(938796);
+"use strict";
+n.d(t, { VZ: () => y, Ay: () => C, FX: () => N }), n(938796);
 var i = n(627968),
-    l = n(64700),
-    r = n(665260),
+    r = n(64700),
+    s = n(665260),
     a = n(958742),
     o = n(731068),
-    s = n(619517),
-    d = n(248643),
-    u = n(803316),
-    h = n(34337),
-    c = n(644447),
-    m = n(587481),
-    p = n(998218),
-    g = n(454290),
-    x = n(925747),
-    A = n(765671),
-    f = n(700331);
-function y(e) {
-    let { width: t, height: n, offset: i, delta: l } = e,
-        r = t > window.innerWidth,
+    l = n(619517),
+    u = n(248643),
+    c = n(803316),
+    d = n(34337),
+    _ = n(644447),
+    f = n(587481),
+    h = n(998218),
+    p = n(454290),
+    E = n(785651),
+    m = n(765671),
+    g = n(700331);
+function A(e) {
+    let { width: t, height: n, offset: i, delta: r } = e,
+        s = t > window.innerWidth,
         a = n > window.innerHeight,
         o = (window.innerWidth - t) / 2 + i.x,
-        s = (window.innerHeight - n) / 2 + i.y,
-        d = (window.innerWidth + t) / 2 + i.x,
-        u = (window.innerHeight + n) / 2 + i.y,
-        { x: h, y: c } = i;
+        l = (window.innerHeight - n) / 2 + i.y,
+        u = (window.innerWidth + t) / 2 + i.x,
+        c = (window.innerHeight + n) / 2 + i.y,
+        { x: d, y: _ } = i;
     return (
-        r &&
-            ((h += l.x),
-            o + l.x > 0 && (h = (t - window.innerWidth) / 2),
-            d + l.x < window.innerWidth && (h = (window.innerWidth - t) / 2)),
+        s &&
+            ((d += r.x),
+            o + r.x > 0 && (d = (t - window.innerWidth) / 2),
+            u + r.x < window.innerWidth && (d = (window.innerWidth - t) / 2)),
         a &&
-            ((c += l.y),
-            s + l.y > 0 && (c = (n - window.innerHeight) / 2),
-            u + l.y < window.innerHeight && (c = (window.innerHeight - n) / 2)),
-        { x: h, y: c }
+            ((_ += r.y),
+            l + r.y > 0 && (_ = (n - window.innerHeight) / 2),
+            c + r.y < window.innerHeight && (_ = (window.innerHeight - n) / 2)),
+        { x: d, y: _ }
     );
 }
-let w = l.memo(function (e) {
+let I = r.memo(function (e) {
     let { children: t } = e,
-        { scale: n, x: r, y: a, setOffset: o, zoomed: s, setZoomed: d } = (0, g.Q)(),
-        { ref: u, width: h, height: c } = (0, A.Ay)(),
-        [m, p] = [h ?? 0, c ?? 0],
-        w = l.useRef(!1),
-        [C, I] = l.useState({ x: 0, y: 0 }),
-        v = (e, t) => {
-            let i = y({
-                width: m * n.goal,
-                height: p * n.goal,
-                offset: { x: r.goal, y: a.goal },
+        { scale: n, x: s, y: a, setOffset: o, zoomed: l, setZoomed: u } = (0, p.Q)(),
+        { ref: c, width: d, height: _ } = (0, m.Ay)(),
+        [f, h] = [d ?? 0, _ ?? 0],
+        I = r.useRef(!1),
+        [T, S] = r.useState({ x: 0, y: 0 }),
+        N = (e, t) => {
+            let i = A({
+                width: f * n.goal,
+                height: h * n.goal,
+                offset: { x: s.goal, y: a.goal },
                 delta: { x: e, y: t },
             });
             o(i.x, i.y, { immediate: !0 });
         };
-    return (0, i.jsx)(x.animated.div, {
-        ref: u,
+    return (0, i.jsx)(E.animated.div, {
+        ref: c,
         onMouseDown: (e) => {
-            s && 0 === e.button && (e.preventDefault(), (w.current = !0), I({ x: e.clientX, y: e.clientY }));
+            l && 0 === e.button && (e.preventDefault(), (I.current = !0), S({ x: e.clientX, y: e.clientY }));
         },
         onMouseUp: (e) => {
-            if (!s) {
+            if (!l) {
                 if (0 === e.button) {
-                    f.l.markActionPerformed(f.N.ZOOM_IN_IMAGE_PRESSED), d(!0);
+                    g.l.markActionPerformed(g.N.ZOOM_IN_IMAGE_PRESSED), u(!0);
                     let t = e.clientX - window.innerWidth / 2,
                         i = e.clientY - window.innerHeight / 2,
-                        l = y({
-                            width: m * n.goal,
-                            height: p * n.goal,
+                        r = A({
+                            width: f * n.goal,
+                            height: h * n.goal,
                             offset: { x: 0, y: 0 },
                             delta: { x: -t * (n.goal - 1), y: -i * (n.goal - 1) },
                         });
-                    o(l.x, l.y);
+                    o(r.x, r.y);
                 }
                 return;
             }
-            (e.clientX - C.x) ** 2 + (e.clientY - C.y) ** 2 < 400 &&
-                (f.l.markActionPerformed(f.N.ZOOM_OUT_IMAGE_PRESSED), d(!1)),
-                (w.current = !1);
+            (e.clientX - T.x) ** 2 + (e.clientY - T.y) ** 2 < 400 &&
+                (g.l.markActionPerformed(g.N.ZOOM_OUT_IMAGE_PRESSED), u(!1)),
+                (I.current = !1);
         },
-        onMouseMove: (e) => w.current && v(e.movementX, e.movementY),
-        onWheel: (e) => !e.ctrlKey && v(-e.deltaX, -e.deltaY),
-        onMouseLeave: () => (w.current = !1),
+        onMouseMove: (e) => I.current && N(e.movementX, e.movementY),
+        onWheel: (e) => !e.ctrlKey && N(-e.deltaX, -e.deltaY),
+        onMouseLeave: () => (I.current = !1),
         onClick: (e) => e.stopPropagation(),
-        style: { scale: n, x: r, y: a, cursor: s ? "zoom-out" : "zoom-in" },
+        style: { scale: n, x: s, y: a, cursor: l ? "zoom-out" : "zoom-in" },
         children: t,
     });
 });
-var C = n(652215),
-    I = n(610995);
-function v(e, t) {
+var T = n(652215),
+    S = n(610995);
+function N(e, t) {
     return {
         ...e,
         type: (0, o.FE)(e),
         original: e.url,
-        srcIsAnimated: (0, r.Lt)(e.flags, o.e5.IS_ANIMATED),
+        srcIsAnimated: (0, s.Lt)(e.flags, o.e5.IS_ANIMATED),
         sourceMetadata: { message: t },
     };
 }
-function j(e) {
-    let t = p.A.toURLSafe(e);
+function y(e) {
+    let t = h.A.toURLSafe(e);
     return null == t ? null : (t.searchParams.append("format", "webp"), t.toString());
 }
-let E = l.memo(function (e) {
-    var t, n, l, o, x;
-    let A,
-        { media: f, obscured: y = !1, maxWidth: v, maxHeight: E, onContextMenu: M } = e,
-        { width: S, height: _, url: N, proxyUrl: O, alt: b, type: P, maxWidth: V, maxHeight: T, ...D } = f,
-        { zoomed: L } = (0, g.Q)(),
-        U = (function (e) {
+let C = r.memo(function (e) {
+    var t, n, r, o, E;
+    let m,
+        { media: g, obscured: A = !1, maxWidth: N, maxHeight: C, onContextMenu: v } = e,
+        { width: O, height: R, url: b, proxyUrl: D, alt: L, type: w, maxWidth: M, maxHeight: P, ...x } = g,
+        { zoomed: U } = (0, p.Q)(),
+        k = (function (e) {
             if (e?.identifier?.type !== "attachment" || null == e.message) return null;
             let t = e.identifier.attachmentId,
                 n = e.message.attachments.find((e) => e.id === t);
-            return null != n && (0, r.Lt)(n.flags ?? 0, C.sbO.IS_CLIP) ? n : null;
-        })(f.sourceMetadata),
-        R =
-            ((t = L),
-            (n = N),
-            (l = O),
-            (o = f.contentType),
-            (x = f.originalContentType),
-            t && p.A.isDiscordAssetUrl(n, o, x) ? (0, u.XW)(n, o, x) : (0, c.E)({ proxyURL: l, url: n })),
-        k = null != S && 0 !== S && null != _ && 0 !== _;
-    if ("VIDEO" === P && k && null != O) {
-        let e = f.poster ?? j(O);
+            return null != n && (0, s.Lt)(n.flags ?? 0, T.sbO.IS_CLIP) ? n : null;
+        })(g.sourceMetadata),
+        G =
+            ((t = U),
+            (n = b),
+            (r = D),
+            (o = g.contentType),
+            (E = g.originalContentType),
+            t && h.A.isDiscordAssetUrl(n, o, E) ? (0, c.XW)(n, o, E) : (0, _.E)({ proxyURL: r, url: n })),
+        F = null != O && 0 !== O && null != R && 0 !== R;
+    if ("VIDEO" === w && F && null != D) {
+        let e = g.poster ?? y(D);
         if (null == e) return null;
-        if (null != U)
+        if (null != k)
             return (0, i.jsx)(a.A, {
-                attachment: U,
-                src: R,
+                attachment: k,
+                src: G,
                 posterUrl: e,
-                channelId: f.sourceMetadata?.message?.channel_id,
-                maxWidth: v,
-                maxHeight: E,
+                channelId: g.sourceMetadata?.message?.channel_id,
+                maxWidth: N,
+                maxHeight: C,
                 active: !0,
-                messageId: f.sourceMetadata?.message?.id,
-                autoPlay: f.autoPlay ?? !y,
-                autoMute: "function" == typeof f.autoMute ? f.autoMute() : (f.autoMute ?? (0, m.uj)()),
-                volume: (0, m.v1)(),
-                onContextMenu: M,
-                onVolumeChange: m.ls,
-                onMutedChange: m.y5,
+                messageId: g.sourceMetadata?.message?.id,
+                autoPlay: g.autoPlay ?? !A,
+                autoMute: "function" == typeof g.autoMute ? g.autoMute() : (g.autoMute ?? (0, f.uj)()),
+                volume: (0, f.v1)(),
+                onContextMenu: v,
+                onVolumeChange: f.ls,
+                onMutedChange: f.y5,
             });
-        let t = f.renderLinkComponent ?? h.bU;
-        return (0, i.jsx)(d.A, {
-            ...D,
-            src: R,
-            width: S,
-            height: _,
-            maxWidth: v,
-            maxHeight: E,
+        let t = g.renderLinkComponent ?? d.bU;
+        return (0, i.jsx)(u.A, {
+            ...x,
+            src: G,
+            width: O,
+            height: R,
+            maxWidth: N,
+            maxHeight: C,
             poster: e,
-            naturalWidth: S,
-            naturalHeight: _,
-            volume: m.v1,
-            autoMute: f.autoMute ?? m.uj,
-            onVolumeChange: m.ls,
-            onMute: m.y5,
+            naturalWidth: O,
+            naturalHeight: R,
+            volume: f.v1,
+            autoMute: g.autoMute ?? f.uj,
+            onVolumeChange: f.ls,
+            onMute: f.y5,
             renderLinkComponent: t,
-            autoPlay: f.autoPlay ?? !y,
-            alt: b,
-            onContextMenu: M,
+            autoPlay: g.autoPlay ?? !A,
+            alt: L,
+            onContextMenu: v,
             disableArrowKeySeek: !0,
         });
     }
     return (
-        "IMAGE" === P &&
-            (A = k
-                ? (0, i.jsx)(s.Ay, {
-                      ...D,
-                      src: R,
-                      width: S,
-                      height: _,
-                      maxWidth: v,
-                      maxHeight: E,
+        "IMAGE" === w &&
+            (m = F
+                ? (0, i.jsx)(l.Ay, {
+                      ...x,
+                      src: G,
+                      width: O,
+                      height: R,
+                      maxWidth: N,
+                      maxHeight: C,
                       useFullWidth: !0,
                       shouldLink: !1,
-                      className: I.$_,
-                      animated: !y && f.animated,
-                      autoPlay: !y,
-                      alt: b,
-                      onContextMenu: M,
+                      className: S.$_,
+                      animated: !A && g.animated,
+                      autoPlay: !A,
+                      alt: L,
+                      onContextMenu: v,
                   })
                 : (0, i.jsx)("img", {
-                      src: R,
-                      alt: b,
-                      onContextMenu: M,
-                      className: I.xx,
-                      style: { maxWidth: v, maxHeight: E },
+                      src: G,
+                      alt: L,
+                      onContextMenu: v,
+                      className: S.xx,
+                      style: { maxWidth: N, maxHeight: C },
                   })),
-        null != A ? (0, i.jsx)(w, { children: A }) : null
+        null != m ? (0, i.jsx)(I, { children: m }) : null
     );
 });

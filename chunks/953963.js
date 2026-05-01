@@ -3,7 +3,7 @@ var n = i(627968),
     l = i(64700),
     s = i(503698),
     a = i.n(s),
-    r = i(925747),
+    r = i(785651),
     d = i(17928),
     o = i(866323),
     c = i(765178),
@@ -19,13 +19,13 @@ var n = i(627968),
     I = i(183555),
     S = i(289173),
     v = i(836602),
-    b = i(958805),
+    E = i(958805),
     y = i(61881),
-    E = i(624826),
-    N = i(606758),
-    T = i(518477),
-    C = i(652215),
-    w = i(985018),
+    b = i(624826),
+    T = i(606758),
+    C = i(518477),
+    N = i(652215),
+    w = i(375708),
     R = i(381280);
 let O = "user-profile-save-reset-toolbar-label";
 function k(e) {
@@ -33,7 +33,7 @@ function k(e) {
         { trackUserProfileEditSaved: s } = (0, I.NJ)(),
         k = (0, d.bG)([h.A], () => h.A.useReducedMotion),
         [L, G] = l.useState(!1),
-        [P, _] = l.useState(!1),
+        [_, P] = l.useState(!1),
         {
             widgetsToSave: M,
             changedWidgets: D,
@@ -51,18 +51,18 @@ function k(e) {
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: i, hasUnsavedWidgets: n, canSaveWidgets: l };
         })(),
         H = (0, d.bG)([v.A], () => v.A.hasUnsavedChanges()),
-        V = F || H,
-        B = !(F && !W),
-        z = (0, o.p)(V, {
+        B = F || H,
+        V = !(F && !W),
+        z = (0, o.p)(B, {
             from: { opacity: 0, y: 80 * !k },
             enter: { opacity: 1, y: 0 },
             leave: { opacity: 0, y: 80 * !k },
         }),
         Y = l.useCallback(() => {
-            b.A.clearPendingWidgets(), (0, f.XQ)();
+            E.A.clearPendingWidgets(), (0, f.XQ)();
         }, []),
         X = l.useCallback(async () => {
-            _(!0);
+            P(!0);
             let e = !0;
             if (H)
                 try {
@@ -76,7 +76,7 @@ function k(e) {
                             (e = n?.ok ?? !1),
                                 n?.ok &&
                                     (void 0 !== t.pendingAvatar &&
-                                        (0, E.t)({
+                                        (0, b.t)({
                                             avatarHash: n.body.avatar,
                                             avatarId: i.avatarId,
                                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
@@ -84,8 +84,9 @@ function k(e) {
                                     (0, m.pZ)());
                         }
                         if (Object.keys(n).length > 0) {
-                            let t = await (0, f.gi)(n);
-                            (e = e && (t?.ok ?? !1)), t?.ok && (0, f.RE)();
+                            let { bannerOriginalMd5: t, ...i } = n,
+                                l = await (0, f.gi)(i, void 0, t);
+                            (e = e && (l?.ok ?? !1)), l?.ok && (0, f.RE)();
                         }
                         if (Object.keys(l).length > 0) {
                             let { primaryGuildId: t } = l;
@@ -103,7 +104,7 @@ function k(e) {
                             (e = l?.ok ?? !1),
                                 l?.ok &&
                                     (void 0 !== t.pendingAvatar &&
-                                        (0, E.t)({
+                                        (0, b.t)({
                                             isGuildProfile: !0,
                                             avatarHash: l.body.avatar,
                                             avatarId: n.avatarId,
@@ -112,8 +113,9 @@ function k(e) {
                                     (0, m.pZ)());
                         }
                         if (Object.keys(l).length > 0) {
-                            let t = await (0, f.gi)(l, i);
-                            (e = e && (t?.ok ?? !1)), t?.ok && (0, f.RE)();
+                            let { bannerOriginalMd5: t, ...n } = l,
+                                s = await (0, f.gi)(n, i, t);
+                            (e = e && (s?.ok ?? !1)), s?.ok && (0, f.RE)();
                         }
                     }
                 } catch {
@@ -121,7 +123,7 @@ function k(e) {
                 }
             if (F)
                 try {
-                    for (let e of (await b.A.savePendingWidgets(M), D)) {
+                    for (let e of (await E.A.savePendingWidgets(M), D)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                         (0, S.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.applicationId)),
@@ -133,7 +135,7 @@ function k(e) {
                 } catch {
                     e = !1;
                 }
-            e ? (0, m.x8)() : (0, N.XA)(T.jM.PROFILE_SAVE_GENERIC_FAILURE), _(!1);
+            e ? (0, m.x8)() : (0, T.XA)(C.jM.PROFILE_SAVE_GENERIC_FAILURE), P(!1);
         }, [H, F, M, D, U, s, i]);
     return (
         l.useEffect(() => {
@@ -142,15 +144,15 @@ function k(e) {
                 G(!0), (e = setTimeout(() => G(!1), 500));
             }
             return (
-                j._.subscribe(C.jej.EMPHASIZE_NOTICE, t),
+                j._.subscribe(N.jej.EMPHASIZE_NOTICE, t),
                 () => {
-                    j._.unsubscribe(C.jej.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
+                    j._.unsubscribe(N.jej.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
                 }
             );
         }, []),
         l.useEffect(() => {
-            V && c.O.announce(w.intl.string(w.t["0Y/qkL"]));
-        }, [V]),
+            B && c.O.announce(w.intl.string(w.t["0Y/qkL"]));
+        }, [B]),
         z((e, i) =>
             i
                 ? (0, n.jsx)(r.animated.div, {
@@ -175,15 +177,15 @@ function k(e) {
                                           variant: "secondary",
                                           text: w.intl.string(w.t.yBZMsQ),
                                           onClick: Y,
-                                          disabled: !V || P,
+                                          disabled: !B || _,
                                       }),
                                       (0, n.jsx)(g.$, {
                                           size: "sm",
                                           variant: "primary",
                                           text: w.intl.string(w.t["R3BPH+"]),
                                           onClick: X,
-                                          loading: P,
-                                          disabled: !B || !V,
+                                          loading: _,
+                                          disabled: !V || !B,
                                       }),
                                   ],
                               }),

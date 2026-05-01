@@ -1,27 +1,28 @@
-n.d(t, { A: () => o });
-var r = n(17928),
-    i = n(228366);
-let a = null;
-class l extends r.Ay.PersistedStore {
+"use strict";
+n.d(t, { A: () => l });
+var i = n(17928),
+    r = n(228366);
+let s = null;
+class a extends i.Ay.PersistedStore {
     static displayName = "NewUserStore";
     static persistKey = "nuf";
     initialize(e) {
-        a = e?.type ?? null;
+        s = e?.type ?? null;
     }
     getType() {
-        return a;
+        return s;
     }
     getState() {
-        return { type: a };
+        return { type: s };
     }
 }
-let s = new l(i.h, {
+let o = new a(r.h, {
         NUF_NEW_USER: function (e) {
             let { newUserType: t } = e;
-            (a = t), s.persist();
+            (s = t), o.persist();
         },
         NUF_COMPLETE: function () {
-            (a = null), s.persist();
+            (s = null), o.persist();
         },
     }),
-    o = s;
+    l = o;

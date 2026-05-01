@@ -1,26 +1,27 @@
-e.d(t, { A: () => h });
-var l = e(64700),
-    c = e(688810),
-    i = e(399925),
-    n = e(74847),
-    r = e(602902);
-let h = (a) => {
-    let { analyticsLocations: t } = (0, c.Ay)();
+"use strict";
+n.d(t, { A: () => l });
+var i = n(64700),
+    r = n(688810),
+    s = n(948138),
+    a = n(74847),
+    o = n(602902);
+let l = (e) => {
+    let { analyticsLocations: t } = (0, r.Ay)();
     return {
-        onShareClick: l.useCallback(
-            async (e) => {
-                let { clips: l, onShareComplete: c, messageReference: h } = e;
-                if (0 === l.length) return;
-                let s = (0, n.t)(a);
-                (0, i.H1)(l.map((a) => a.id));
+        onShareClick: i.useCallback(
+            async (n) => {
+                let { clips: i, onShareComplete: r, messageReference: l } = n;
+                if (0 === i.length) return;
+                let u = (0, a.t)(e);
+                (0, s.H1)(i.map((e) => e.id));
                 try {
-                    await (0, r.K)(l, { channelId: s ? a : void 0, analyticsLocations: t, messageReference: h });
-                } catch (a) {
+                    await (0, o.K)(i, { channelId: u ? e : void 0, analyticsLocations: t, messageReference: l });
+                } catch (e) {
                 } finally {
-                    (0, i.H1)(null), c?.();
+                    (0, s.H1)(null), r?.();
                 }
             },
-            [a, t],
+            [e, t],
         ),
     };
 };

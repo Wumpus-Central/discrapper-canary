@@ -1,102 +1,112 @@
-s.d(i, { A: () => P });
-var n = s(627968),
-    l = s(64700),
-    t = s(17928),
-    r = s(793574),
-    a = s(70730),
-    o = s(275759),
-    d = s(110259),
-    u = s(408278),
-    c = s(789645),
-    A = s(834730),
-    x = s(730134),
-    p = s(139286),
-    h = s(287809),
-    m = s(45787),
-    E = s(788868),
-    f = s(778712),
-    C = s(985018),
-    v = s(212583);
-function I(e) {
-    let { profileUserId: i } = e,
-        s = (0, t.bG)([h.default], () => h.default.getUser(i), [i]),
-        r = (0, t.bG)([h.default], () => h.default.getCurrentUser()),
-        a = (0, t.bG)([o.Ay], () => o.Ay.getFriendAnniversaryYears(i), [i]);
-    return (
-        l.useEffect(() => {
-            (0, p.x)({
-                name: d.ImpressionNames.GIFT_INTENT_USER_PROFILE_POPOUT,
-                type: d.ImpressionTypes.VIEW,
-                properties: { gift_intent_type: E.np.FRIEND_ANNIVERSARY },
-            });
-        }, []),
-        (0, n.jsxs)("div", {
-            className: v.kL,
+l.d(s, { A: () => D });
+var i = l(627968),
+    n = l(64700),
+    t = l(17928),
+    a = l(793574),
+    r = l(70730),
+    o = l(275759),
+    d = l(503698),
+    c = l.n(d),
+    u = l(562708),
+    h = l(408278),
+    A = l(789645),
+    p = l(834730),
+    x = l(939249),
+    m = l(308528),
+    v = l(982168),
+    g = l(730134),
+    C = l(139286),
+    f = l(287809),
+    E = l(45787),
+    j = l(788868),
+    I = l(778712),
+    N = l(375708),
+    _ = l(212583);
+function b(e) {
+    let { profileUserId: s, shouldBannerBeClickable: l = !1, onClose: a } = e,
+        r = (0, t.bG)([f.default], () => f.default.getUser(s), [s]),
+        d = (0, t.bG)([f.default], () => f.default.getCurrentUser()),
+        b = (0, t.bG)([o.Ay], () => o.Ay.getFriendAnniversaryYears(s), [s]);
+    n.useEffect(() => {
+        (0, C.x)({
+            name: u.ImpressionNames.GIFT_INTENT_USER_PROFILE_POPOUT,
+            type: u.ImpressionTypes.VIEW,
+            properties: { gift_intent_type: j.np.FRIEND_ANNIVERSARY },
+        });
+    }, []);
+    let R = n.useCallback(() => {
+            m.A.openPrivateChannel({ recipientIds: s }), a?.(), v.A.popAll();
+        }, [a, s]),
+        P = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, n.jsx)("div", {
-                    className: v.b,
-                    children: (0, n.jsx)(u.K, {
-                        icon: c.P,
+                (0, i.jsx)("div", {
+                    className: _.b,
+                    children: (0, i.jsx)(h.K, {
+                        icon: A.P,
                         size: "sm",
                         variant: "icon-only",
-                        "aria-label": C.intl.string(C.t.cpT0Cq),
-                        onClick: () => (0, m.CK)(i),
+                        "aria-label": N.intl.string(N.t.cpT0Cq),
+                        onClick: (e) => {
+                            e.stopPropagation(), (0, E.CK)(s);
+                        },
                     }),
                 }),
-                (0, n.jsx)(A.E, {
+                (0, i.jsx)(p.E, {
                     variant: "text-sm/semibold",
                     color: "text-strong",
-                    children: C.intl.string(C.t.icDVNb),
+                    children: N.intl.string(N.t.icDVNb),
                 }),
-                (0, n.jsxs)("div", {
-                    className: v.SC,
+                (0, i.jsxs)("div", {
+                    className: _.SC,
                     children: [
-                        null != s && (0, n.jsx)(x.A, { size: f._3.SIZE_16, user: s }),
-                        null != r && (0, n.jsx)(x.A, { className: v.GM, size: f._3.SIZE_16, user: r }),
-                        (0, n.jsx)(A.E, {
+                        null != r && (0, i.jsx)(g.A, { size: I._3.SIZE_16, user: r }),
+                        null != d && (0, i.jsx)(g.A, { className: _.GM, size: I._3.SIZE_16, user: d }),
+                        (0, i.jsx)(p.E, {
                             variant: "text-xs/normal",
                             color: "text-strong",
-                            children: C.intl.formatToPlainString(C.t.PpG27s, { numberOfYears: a }),
+                            children: N.intl.formatToPlainString(N.t.PpG27s, { numberOfYears: b }),
                         }),
                     ],
                 }),
             ],
-        })
-    );
+        });
+    return l
+        ? (0, i.jsx)(x.D, { className: c()(_.kL, _.Wk), onClick: R, children: P })
+        : (0, i.jsx)("div", { className: _.kL, children: P });
 }
-var g = s(880528),
-    j = s(570287),
-    _ = s(822775),
-    b = s(904290),
-    N = s(656884);
-function R(e) {
-    let { user: i, guildId: s, channelId: l, onClose: t, disableAutoFocus: r, upsellEligible: a } = e,
-        o = (0, g.x)().hideDMInput;
-    return (0, n.jsxs)(n.Fragment, {
+var R = l(880528),
+    P = l(570287),
+    y = l(822775),
+    S = l(904290),
+    T = l(656884);
+function k(e) {
+    let { user: s, guildId: l, channelId: n, onClose: t, disableAutoFocus: a, upsellEligible: r } = e,
+        o = (0, R.x)().hideDMInput;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            a && (0, n.jsx)(I, { profileUserId: i.id }),
-            !o && (0, n.jsx)(b.A, { user: i, guildId: s, channelId: l, onClose: t, disableAutoFocus: r, upsell: a }),
+            r && (0, i.jsx)(b, { profileUserId: s.id, shouldBannerBeClickable: o, onClose: t }),
+            !o && (0, i.jsx)(S.A, { user: s, guildId: l, channelId: n, onClose: t, disableAutoFocus: a, upsell: r }),
         ],
     });
 }
-function P(e) {
-    let { user: i, guildId: s, channelId: l, onClose: d, appContext: u, disableAutoFocus: c = !1 } = e,
-        A = (0, j.A)(i.id, s),
-        x = (0, a.p)(r.A.USER_PROFILE_POPOUT),
-        p = (0, t.bG)([o.Ay], () => o.Ay.canShowProfilePopoutGiftIntents(i.id), [i.id]);
-    return (0, n.jsxs)("div", {
-        className: N.qr,
+function D(e) {
+    let { user: s, guildId: l, channelId: n, onClose: d, appContext: c, disableAutoFocus: u = !1 } = e,
+        h = (0, P.A)(s.id, l),
+        A = (0, r.p)(a.A.USER_PROFILE_POPOUT),
+        p = (0, t.bG)([o.Ay], () => o.Ay.canShowProfilePopoutGiftIntents(s.id), [s.id]);
+    return (0, i.jsxs)("div", {
+        className: T.qr,
         children: [
-            A &&
-                (0, n.jsx)(R, {
-                    user: i,
-                    guildId: s,
-                    channelId: l,
+            h &&
+                (0, i.jsx)(k, {
+                    user: s,
+                    guildId: l,
+                    channelId: n,
                     onClose: d,
-                    disableAutoFocus: c,
-                    upsellEligible: x && p,
+                    disableAutoFocus: u,
+                    upsellEligible: A && p,
                 }),
-            !A && (0, n.jsx)(_.A, { user: i, guildId: s, onClose: d, fullWidth: !0, appContext: u }),
+            !h && (0, i.jsx)(y.A, { user: s, guildId: l, onClose: d, fullWidth: !0, appContext: c }),
         ],
     });
 }

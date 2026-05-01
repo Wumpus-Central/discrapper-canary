@@ -1,20 +1,21 @@
-t.d(s, { A: () => e });
-var h = t(627968);
-t(64700);
-var r = t(953727);
-function e(i) {
-    let { width: s = 32, height: t = 32, color: e = "currentColor", ...d } = i;
-    return (0, h.jsxs)("svg", {
-        ...(0, r.A)(d),
-        width: s,
-        height: t,
+"use strict";
+n.d(t, { A: () => s });
+var i = n(627968);
+n(64700);
+var r = n(953727);
+function s(e) {
+    let { width: t = 32, height: n = 32, color: s = "currentColor", ...a } = e;
+    return (0, i.jsxs)("svg", {
+        ...(0, r.A)(a),
+        width: t,
+        height: n,
         viewBox: "0 0 12 12",
         fill: "none",
         children: [
-            (0, h.jsx)("path", { d: "M7.25 1H4.75V7.25H7.25V1Z", fill: e }),
-            (0, h.jsx)("path", {
+            (0, i.jsx)("path", { d: "M7.25 1H4.75V7.25H7.25V1Z", fill: s }),
+            (0, i.jsx)("path", {
                 d: "M4.75 9.75C4.75 10.4167 5.33333 11 6 11C6.66667 11 7.25 10.4167 7.25 9.75C7.25 9.08333 6.66667 8.5 6 8.5C5.33333 8.5 4.75 9.08333 4.75 9.75Z",
-                fill: e,
+                fill: s,
             }),
         ],
     });

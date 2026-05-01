@@ -1,4 +1,5 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(839214);
-let a = { selectedTab: n(488995).GlobalDiscoveryTab.SERVERS },
-    r = (0, i.D)(() => a);
+let r = { selectedTab: n(488995).GlobalDiscoveryTab.SERVERS },
+    s = (0, i.D)(() => r);

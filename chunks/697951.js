@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => u });
 var i = n(439372),
-    r = n(22007),
+    r = n(741231),
     s = n(14509),
     a = n(276041),
     o = n(652215);
@@ -12,4 +12,4 @@ class l extends i.A {
     }
     actions = { CHANNEL_CREATE: this.handleChannelCreate };
 }
-let _ = new l();
+let u = new l();

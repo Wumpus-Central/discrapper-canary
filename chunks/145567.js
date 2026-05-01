@@ -1,74 +1,75 @@
-n.d(t, { $p: () => h, D$: () => I, Ml: () => E, S$: () => S, bB: () => u, lu: () => T });
+"use strict";
+n.d(t, { $p: () => m, D$: () => p, Ml: () => _, S$: () => g, bB: () => f, lu: () => E });
 var i,
-    a = n(228366),
-    r = n(308528),
-    s = n(684013),
-    l = n(495544),
-    o = n(734057),
-    d = n(810412),
-    c = n(1193),
-    _ = n(41984);
-function E(e) {
-    let { channelId: t, source: n, lastActivityAtMs: i = Date.now(), lastMessageId: r } = e;
-    return a.h.dispatch({
+    r = n(228366),
+    s = n(308528),
+    a = n(684013),
+    o = n(495544),
+    l = n(734057),
+    u = n(810412),
+    c = n(140069),
+    d = n(41984);
+function _(e) {
+    let { channelId: t, source: n, lastActivityAtMs: i = Date.now(), lastMessageId: s } = e;
+    return r.h.dispatch({
         type: "OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL",
         channelId: t,
         source: n,
         lastActivityAtMs: i,
-        lastMessageId: r,
+        lastMessageId: s,
     });
 }
-var u = (((i = {}).CHANNEL = "CHANNEL"), (i.DM_USER = "DM_USER"), i);
-async function A(e) {
+var f = (((i = {}).CHANNEL = "CHANNEL"), (i.DM_USER = "DM_USER"), i);
+async function h(e) {
     let { userId: t, existingChannelId: n } = e,
-        i = n ?? o.A.getDMFromUserId(t) ?? null;
+        i = n ?? l.A.getDMFromUserId(t) ?? null;
     if (null != i) return i;
-    if (t === l.default.getId()) return null;
+    if (t === o.default.getId()) return null;
     try {
-        let e = await r.A.getDMChannel(t);
+        let e = await s.A.getDMChannel(t);
         if (null != e) return e;
     } catch {}
     try {
-        let e = await r.A.ensurePrivateChannel(t);
+        let e = await s.A.ensurePrivateChannel(t);
         if (null != e) return e;
     } catch {}
     return null;
 }
-async function I(e) {
+async function p(e) {
     let { target: t, source: n, widgetType: i } = e,
-        r = "CHANNEL" === t.kind ? t.channelId : await A(t);
-    if (null == r) return null;
-    let l = "CHANNEL" === t.kind ? t.guildId : null,
-        o = t.messageId ?? null,
-        E = c.A.getSelectedChannelId();
+        s = "CHANNEL" === t.kind ? t.channelId : await h(t);
+    if (null == s) return null;
+    let o = "CHANNEL" === t.kind ? t.guildId : null,
+        l = t.messageId ?? null,
+        _ = c.A.getSelectedChannelId();
     return (
         null != i &&
-            n !== _.B9.AUTOMATIC_CHANNEL_SELECT &&
-            (null == E
-                ? (0, d.YX)(i, { type: d.Z5.TEXT_CHAT, value: d.IP.OPENED_TEXT_CHAT, secondaryValue: n })
-                : E !== r && (0, d.YX)(i, { type: d.Z5.TEXT_CHAT, value: d.IP.CHANNEL_SELECTED, secondaryValue: n })),
-        null != E && s.A.ackTextChatChannel(E),
-        await a.h.dispatch({
+            n !== d.B9.AUTOMATIC_CHANNEL_SELECT &&
+            (null == _
+                ? (0, u.YX)(i, { type: u.Z5.TEXT_CHAT, value: u.IP.OPENED_TEXT_CHAT, secondaryValue: n })
+                : _ !== s && (0, u.YX)(i, { type: u.Z5.TEXT_CHAT, value: u.IP.CHANNEL_SELECTED, secondaryValue: n })),
+        null != _ && a.A.ackTextChatChannel(_),
+        await r.h.dispatch({
             type: "OVERLAY_TEXT_CHAT_SELECT_CHANNEL",
-            channelId: r,
+            channelId: s,
             source: n,
-            guildId: l,
-            messageId: o,
+            guildId: o,
+            messageId: l,
         }),
-        r
+        s
     );
 }
-function T(e) {
+function E(e) {
     let { channelId: t, widgetType: n, secondaryValue: i = "remove_channel" } = e;
     return (
-        (0, d.YX)(n, { type: d.Z5.TEXT_CHAT, value: d.IP.CLOSED_TEXT_CHAT, secondaryValue: i }),
-        a.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_CHANNEL", channelId: t })
+        (0, u.YX)(n, { type: u.Z5.TEXT_CHAT, value: u.IP.CLOSED_TEXT_CHAT, secondaryValue: i }),
+        r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_CHANNEL", channelId: t })
     );
 }
-function h() {
-    return a.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS" });
+function m() {
+    return r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS" });
 }
-function S(e) {
+function g(e) {
     let { minimized: t } = e;
-    return a.h.dispatch({ type: "OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED", minimized: t });
+    return r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED", minimized: t });
 }

@@ -1,64 +1,65 @@
-i.d(t, { H: () => u });
-var s = i(627968),
-    l = i(64700),
-    c = i(477782),
-    n = i(827343),
-    d = i(74848),
-    r = i(731854),
-    a = i(985018);
-function u(e) {
+"use strict";
+n.d(t, { H: () => c });
+var i = n(627968),
+    r = n(64700),
+    s = n(477782),
+    a = n(827343),
+    o = n(74848),
+    l = n(731854),
+    u = n(375708);
+function c(e) {
     let {
             deviceType: t,
-            analyticsLocations: i,
-            asSubmenu: u = !1,
-            onDeviceSelect: b,
-            selectedDeviceId: p,
-            menuGroupOverrideProps: D,
+            analyticsLocations: n,
+            asSubmenu: c = !1,
+            onDeviceSelect: d,
+            selectedDeviceId: _,
+            menuGroupOverrideProps: f,
             menuItemOverrideProps: h,
-            computeMenuRadioItemOverrideProps: o,
+            computeMenuRadioItemOverrideProps: p,
         } = e,
-        { setDevice: v, getLabel: I } = {
-            [r.oh.AUDIO_INPUT]: { setDevice: n.A.setInputDevice, getLabel: () => a.intl.string(a.t.ElbIXN) },
-            [r.oh.AUDIO_OUTPUT]: { setDevice: n.A.setOutputDevice, getLabel: () => a.intl.string(a.t["6Ww0iH"]) },
-            [r.oh.VIDEO_INPUT]: { setDevice: n.A.setVideoDevice, getLabel: () => a.intl.string(a.t.F122Gz) },
+        { setDevice: E, getLabel: m } = {
+            [l.oh.AUDIO_INPUT]: { setDevice: a.A.setInputDevice, getLabel: () => u.intl.string(u.t.ElbIXN) },
+            [l.oh.AUDIO_OUTPUT]: { setDevice: a.A.setOutputDevice, getLabel: () => u.intl.string(u.t["6Ww0iH"]) },
+            [l.oh.VIDEO_INPUT]: { setDevice: a.A.setVideoDevice, getLabel: () => u.intl.string(u.t.F122Gz) },
         }[t],
-        g = (0, d.tR)(t),
-        { id: x, name: U } = (0, d.x5)(t),
-        $ = p ?? x,
-        k = l.useMemo(
+        g = (0, o.tR)(t),
+        { id: A, name: I } = (0, o.x5)(t),
+        T = _ ?? A,
+        S = r.useMemo(
             () =>
                 g.find((e) => {
                     let { id: t } = e;
-                    return t === $;
+                    return t === T;
                 }),
-            [g, $],
+            [g, T],
         ),
-        m = g.map((e) => {
-            let l,
-                { id: n, disabled: r, name: a } = e,
-                u = a,
-                p = (0, d.d)(a);
+        N = g.map((e) => {
+            let r,
+                { id: a, disabled: l, name: u } = e,
+                c = u,
+                _ = (0, o.d)(u);
             return (
-                null != p && ((u = p.prefix), (l = p.subName)),
-                (0, s.jsx)(
-                    c.iD,
+                null != _ && ((c = _.prefix), (r = _.subName)),
+                (0, i.jsx)(
+                    s.iD,
                     {
-                        id: `${t}-${n}`,
+                        id: `${t}-${a}`,
                         group: `${t}-devices`,
-                        disabled: r,
-                        label: u,
-                        subtext: l,
-                        checked: n === $,
+                        disabled: l,
+                        label: c,
+                        subtext: r,
+                        checked: a === T,
                         action: () => {
-                            (b?.(n) ?? !0) && v(n, { analyticsLocations: i });
+                            (d?.(a) ?? !0) && E(a, { analyticsLocations: n });
                         },
-                        ...o?.(n),
+                        ...p?.(a),
                     },
-                    `${t}-${n}`,
+                    `${t}-${a}`,
                 )
             );
         });
-    return u
-        ? (0, s.jsx)(c.Dr, { id: `${t}-devices`, label: I(), subtext: k?.name ?? U, ...h, children: m })
-        : (0, s.jsx)(c.rX, { label: I(), ...D, children: m });
+    return c
+        ? (0, i.jsx)(s.Dr, { id: `${t}-devices`, label: m(), subtext: S?.name ?? I, ...h, children: N })
+        : (0, i.jsx)(s.rX, { label: m(), ...f, children: N });
 }

@@ -1,4 +1,5 @@
-i.d(t, { Fe: () => n.Fe, c2: () => n.c2, sq: () => n.sq });
-var n = i(156828),
-    l = i(209489);
-(0, n.Cu)(l.A.awaitOnline);
+"use strict";
+n.d(t, { Fe: () => i.Fe, c2: () => i.c2, sq: () => i.sq });
+var i = n(156828),
+    r = n(209489);
+(0, i.Cu)(r.A.awaitOnline);

@@ -1,3 +1,3 @@
 i.exports = JSON.parse(
-    '{"u72Prd":["Transmituj w rozdzielczości HD dzięki subskrypcji Nitro"],"3wwZ/Q":["Rozpocznij streamowanie"],"OsS9Ll":["Zakończ streamowanie"],"j+eAMQ":["Audio streamu"],"/XSr8v":["Tryb streamowania"],"2qmQ8N":["Domyślny"],"CrNjqp":["Ustawienia streamu"]}',
+    '{"u72Prd":["Transmituj w rozdzielczości HD dzięki subskrypcji Nitro"],"uwMBDo":["Udostępnij dźwięk aplikacji"],"3wwZ/Q":["Rozpocznij streamowanie"],"OsS9Ll":["Zakończ streamowanie"],"j+eAMQ":["Audio streamu"],"/XSr8v":["Tryb streamowania"],"ibH7vy":["Zr\xf3wnoważona jakość i wydajność (",[1,"resolution"],"p, ",[1,"fps"]," kl./s)"],"2qmQ8N":["Domyślne"],"q4gYBi":["Do film\xf3w i gier (",[1,"resolution"],"p, ",[1,"fps"]," kl./s)"],"nMcXo1":["Wysoka jakość"],"fN0UQY":["Zoptymalizowane dla wolniejszych urządzeń (",[1,"resolution"],"p, ",[1,"fps"]," kl./s)"],"5eO4/m":["Wydajność"],"CrNjqp":["Ustawienia streamu"]}',
 );

@@ -1,4 +1,5 @@
-var n = e(121536);
-r.exports = function (r, t) {
-    return n[r] || (n[r] = t || {});
+"use strict";
+var i = n(121536);
+e.exports = function (e, t) {
+    return i[e] || (i[e] = t || {});
 };

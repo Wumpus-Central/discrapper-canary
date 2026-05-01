@@ -1,3 +1,3 @@
 p.exports = JSON.parse(
-    '{"u72Prd":["Nitro를 이용해 HD 해상도로 방송하세요"],"3wwZ/Q":["방송 시작"],"OsS9Ll":["방송 중지"],"j+eAMQ":["방송 오디오"],"/XSr8v":["방송 모드"],"2qmQ8N":["기본"],"CrNjqp":["방송 설정"]}',
+    '{"u72Prd":["Nitro를 이용해 HD 해상도로 방송하세요"],"uwMBDo":["앱 오디오 공유"],"3wwZ/Q":["방송 시작"],"OsS9Ll":["방송 중지"],"j+eAMQ":["방송 오디오"],"/XSr8v":["방송 모드"],"ibH7vy":["품질 및 성능 균형(",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"2qmQ8N":["기본"],"q4gYBi":["동영상 및 게임용(",[1,"resolution"],"p, ",[1,"fps"],"fps)용"],"nMcXo1":["고품질"],"fN0UQY":["저사양 기기 최적화(",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"5eO4/m":["성능 우선"],"CrNjqp":["방송 설정"]}',
 );

@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"jSrqR2":["Mẫu"],"zry4l5":["Xem Trước Chủ Đề"],"/6NbRv":["Chủ Đề M\xe1y Chủ"]}');
+h.exports = JSON.parse(
+    '{"odtr7f":["Chọn một chủ đề c\xf3 sẵn hoặc tự x\xe2y dựng. Mọi th\xe0nh vi\xean đều thấy chủ đề n\xe0y khi họ mở m\xe1y chủ v\xe0 n\xf3 th\xedch ứng với chế độ s\xe1ng hoặc tối của họ. ",[8,"$link",["T\xecm hiểu th\xeam"],[[1,"articleUrl"]]]],"XhiIAu":["C\xe0i đặt n\xe0y thay đổi giao diện m\xe1y chủ của bạn đối với tất cả th\xe0nh vi\xean."],"aZpFFn":["Bật Chủ Đề M\xe1y Chủ"],"jSrqR2":["Mẫu"],"HkvkHP":["T\xf9y chọn chế độ s\xe1ng hoặc tối của mỗi th\xe0nh vi\xean sẽ được hiển thị cho họ."],"zry4l5":["Xem Trước Chủ Đề"],"Ck5zxP":["Chọn chủ đề của bạn"],"/6NbRv":["Chủ Đề M\xe1y Chủ"]}',
+);

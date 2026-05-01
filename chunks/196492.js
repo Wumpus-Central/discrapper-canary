@@ -1,50 +1,51 @@
-n.d(t, { A: () => I });
+"use strict";
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
-var a = n(189213),
-    r = n(231723),
-    s = n(192308),
-    l = n(834730),
-    o = n(228366),
-    d = n(272355),
+var r = n(189213),
+    s = n(231723),
+    a = n(192308),
+    o = n(834730),
+    l = n(228366),
+    u = n(272355),
     c = n(652215),
-    _ = n(985018);
-let E = "ActivityInviteManager",
-    u = () => {
-        o.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
+    d = n(375708);
+let _ = "ActivityInviteManager",
+    f = () => {
+        l.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
     };
-class A extends d.A {
+class h extends u.A {
     _initialize() {
-        o.h.subscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
-            o.h.subscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
+        l.h.subscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
+            l.h.subscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
     }
     _terminate() {
-        o.h.unsubscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
-            o.h.unsubscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
+        l.h.unsubscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),
+            l.h.unsubscribe("ACTIVITY_INVITE_MODAL_CLOSE", this.handleModalClose);
     }
     handleModalOpen(e) {
-        let { activity: t, isPrivate: o, context: d } = e,
-            A = d === c.BRT.POPOUT ? r.KX : r.SY;
-        o
-            ? (0, s.openModal)(
+        let { activity: t, isPrivate: l, context: u } = e,
+            h = u === c.BRT.POPOUT ? s.KX : s.SY;
+        l
+            ? (0, a.openModal)(
                   (e) =>
-                      (0, i.jsx)(a.Modal, {
-                          title: _.intl.formatToPlainString(_.t["2tN7ih"], { name: t.name }),
+                      (0, i.jsx)(r.Modal, {
+                          title: d.intl.formatToPlainString(d.t["2tN7ih"], { name: t.name }),
                           actions: [
                               {
                                   variant: "primary",
-                                  text: _.intl.string(_.t.BddRzS),
+                                  text: d.intl.string(d.t.BddRzS),
                                   onClick: e.onClose,
                                   autoFocus: !0,
                               },
                           ],
                           ...e,
-                          children: (0, i.jsx)(l.E, { variant: "text-md/normal", children: _.intl.string(_.t.MAxtks) }),
+                          children: (0, i.jsx)(o.E, { variant: "text-md/normal", children: d.intl.string(d.t.MAxtks) }),
                       }),
-                  { onCloseCallback: u, modalKey: E },
-                  A,
+                  { onCloseCallback: f, modalKey: _ },
+                  h,
               )
-            : (0, s.openModalLazy)(
+            : (0, a.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
                           n.e("24092"),
@@ -55,11 +56,11 @@ class A extends d.A {
                       ]).then(n.bind(n, 555570));
                       return (t) => (0, i.jsx)(e, { ...t });
                   },
-                  { onCloseCallback: u, modalKey: E, contextKey: A },
+                  { onCloseCallback: f, modalKey: _, contextKey: h },
               );
     }
     handleModalClose(e) {
-        (0, s.closeModal)(E);
+        (0, a.closeModal)(_);
     }
 }
-let I = new A();
+let p = new h();

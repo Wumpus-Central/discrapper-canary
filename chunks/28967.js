@@ -1,40 +1,41 @@
-let r;
-E.d(t, { n: () => _ });
-var S = E(973117);
+"use strict";
+let i;
+n.d(t, { n: () => s });
+var r = n(973117);
 try {
-    r = window.sessionStorage;
+    i = window.sessionStorage;
 } catch (e) {}
 try {
     delete window.sessionStorage;
 } catch (e) {}
-let _ = !(function () {
+let s = !(function () {
     let e = "test";
     try {
-        return r.setItem(e, e), r.removeItem(e), !0;
+        return i.setItem(e, e), i.removeItem(e), !0;
     } catch (e) {
         return !1;
     }
 })()
-    ? new S.J()
+    ? new r.J()
     : new (class {
           get(e, t) {
-              let E = r.getItem(e);
-              if (null != E)
+              let n = i.getItem(e);
+              if (null != n)
                   try {
-                      E = JSON.parse(E);
+                      n = JSON.parse(n);
                   } catch (e) {
-                      E = t;
+                      n = t;
                   }
-              else E = t;
-              return E;
+              else n = t;
+              return n;
           }
           set(e, t) {
-              r.setItem(e, JSON.stringify(t));
+              i.setItem(e, JSON.stringify(t));
           }
           remove(e) {
-              r.removeItem(e);
+              i.removeItem(e);
           }
           clear() {
-              r.clear();
+              i.clear();
           }
       })();

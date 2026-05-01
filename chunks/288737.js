@@ -1,6 +1,7 @@
-n.d(t, { A: () => l });
+"use strict";
+n.d(t, { A: () => r });
 var i = n(315069);
-class l extends i.A {
+class r extends i.A {
     userId;
     channelId;
     sessionId;

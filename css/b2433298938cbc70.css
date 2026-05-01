@@ -1,0 +1,113 @@
+.container__85bea {
+    border-radius: var(--radius-md);
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, .08);
+    color: var(--white);
+    cursor: grab;
+    position: relative;
+    width: -moz-min-content;
+    width: min-content
+}
+
+.card__85bea {
+    background-color: var(--background-surface-highest)
+}
+
+.card__85bea:after {
+    border: 1px solid var(--border-muted)
+}
+
+.custom-user-profile-theme.theme-light .card__85bea {
+    background-color: var(--opacity-white-24)
+}
+
+.custom-user-profile-theme.theme-dark .card__85bea {
+    background-color: var(--background-mod-normal)
+}
+
+.dragHandle__85bea {
+    color: inherit;
+    z-index: 2
+}
+
+.collectiblesCardHover__85bea {
+    transform: translateY(-14px)
+}
+
+.full-motion .skuPreview__85bea {
+    transition: transform .2s ease
+}
+
+.skuPreview__85bea.isOwned__85bea {
+    cursor: default;
+    opacity: .5
+}
+
+.gameCover__1a3d6 {
+    aspect-ratio: 3/4;
+    border-radius: 8px;
+    box-sizing: border-box
+}
+
+.coverContainer__1a3d6 {
+    background-color: var(--background-mod-muted);
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .16);
+    overflow: hidden;
+    position: relative;
+    z-index: 0
+}
+
+.coverContainer__1a3d6:before {
+    background: linear-gradient(150deg, hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, 0) 40%);
+    border-radius: 8px;
+    box-shadow: inset 0 0 13px 0 hsla(0, 0%, 100%, .06), inset 0 0 0 1px var(--border-muted);
+    content: "";
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    transition: background 50ms ease-in;
+    width: 100%;
+    z-index: 1
+}
+
+.gameCoverImage__1a3d6 {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    width: 100%
+}
+
+.fallback__1a3d6 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+    text-align: center;
+    word-break: break-word
+}
+
+.clickable__1a3d6 {
+    cursor: pointer
+}
+
+.clickable__1a3d6:hover:before {
+    background: linear-gradient(150deg, hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, 0) 40%), linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2));
+    transition: background .15s ease-out
+}
+
+.loadingCover__1a3d6 {}
+
+.full-motion .hoverActiveEffect__1a3d6 {
+    transition: transform .15s ease-in-out;
+    will-change: transform
+}
+
+.full-motion .hoverActiveEffect__1a3d6:hover {
+    transform: scale(1.0225)
+}
+
+.full-motion .hoverActiveEffect__1a3d6:active {
+    transform: scale(.9775)
+}

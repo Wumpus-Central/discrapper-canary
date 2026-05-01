@@ -1,0 +1,30 @@
+.previewContainer_c9911d {
+    border: 2px solid transparent;
+    gap: var(--space-12);
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+    width: 276px
+}
+
+.previewBox_c9911d,
+.previewContainer_c9911d {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.previewBox_c9911d {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    height: 190px;
+    width: 100%
+}
+
+.previewContents_c9911d {
+    height: 100%;
+    position: relative;
+    top: -10px;
+    width: 224px
+}

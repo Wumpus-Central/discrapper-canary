@@ -1,50 +1,51 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(203632);
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(203632);
 n(881106);
-var o = n(480335),
-    d = n(621395),
-    u = n(778765);
-let c = (e) => {
+var l = n(480335),
+    u = n(621395),
+    c = n(778765);
+let d = (e) => {
     let {
             skuId: t,
             isHighlighted: n,
-            removeSetHeight: a = !1,
-            withScaleAnimation: c = !1,
-            delayProfileEffectIntro: h = !1,
-            hideBackground: E = !1,
+            removeSetHeight: s = !1,
+            withScaleAnimation: d = !1,
+            delayProfileEffectIntro: _ = !1,
+            hideBackground: f = !1,
         } = e,
-        [A, _] = l.useState(!0);
-    return (l.useEffect(() => {
-        if (!0 !== c) _(!1);
+        [h, p] = r.useState(!0);
+    return (r.useEffect(() => {
+        if (!0 !== d) p(!1);
         else {
             let e = setTimeout(() => {
-                _(!1);
+                p(!1);
             }, 500);
             return () => {
                 clearTimeout(e);
             };
         }
-    }, [c]),
+    }, [d]),
     null == t)
         ? null
         : (0, i.jsxs)("div", {
-              className: r()(d.i1, { [d.qy]: c, [d.pE]: !a, [d.JQ]: E }),
+              className: a()(u.i1, { [u.qy]: d, [u.pE]: !s, [u.JQ]: f }),
               children: [
-                  (0, i.jsx)("img", { src: u.A, alt: "", className: d.VH, "aria-hidden": !0, draggable: !1 }),
-                  !A &&
-                      (0, i.jsx)(o.A, {
+                  (0, i.jsx)("img", { src: c.A, alt: "", className: u.VH, "aria-hidden": !0, draggable: !1 }),
+                  !h &&
+                      (0, i.jsx)(l.A, {
                           skuId: t,
                           useThumbnail: !0,
-                          autoPlay: c,
-                          restartMethod: s.HL.FromStart,
+                          autoPlay: d,
+                          restartMethod: o.HL.FromStart,
                           resetOnHover: !0,
                           isHovering: n,
                           useOpacityOnHover: !1,
-                          delayIntro: h,
+                          delayIntro: _,
                           shopPreview: !0,
                       }),
               ],

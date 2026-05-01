@@ -1,16 +1,17 @@
-n.d(t, { QR: () => p, b: () => E, oc: () => C });
-var o,
+"use strict";
+n.d(t, { QR: () => h, b: () => f, oc: () => _ });
+var i,
     r = n(64700),
-    i = n(17928),
+    s = n(17928),
     a = n(451988),
-    l = n(323082),
-    s = n(446458),
+    o = n(753390),
+    l = n(587626),
     u = n(166532),
-    _ = n(566980),
+    c = n(566980),
     d = n(153084),
-    C = (((o = {})[(o.PENDING = 1)] = "PENDING"), (o[(o.ERROR = 2)] = "ERROR"), (o[(o.NONE = 3)] = "NONE"), o);
-function E(e, t, n, o) {
-    let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+    _ = (((i = {})[(i.PENDING = 1)] = "PENDING"), (i[(i.ERROR = 2)] = "ERROR"), (i[(i.NONE = 3)] = "NONE"), i);
+function f(e, t, n, i) {
+    let s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         a = arguments.length > 5 ? arguments[5] : void 0;
     r.useEffect(() => {
         null != e &&
@@ -19,14 +20,14 @@ function E(e, t, n, o) {
                 : e === u.pn.AWAITING_AUTHENTICATION &&
                   (2 === t
                       ? n(u.pn.REVIEW)
-                      : 3 === t && (i ? (null != a ? a() : n(u.pn.REVIEW)) : (o(_.h.COMPLETED), n(u.pn.CONFIRM)))));
-    }, [e, t, n, o, i, a]);
+                      : 3 === t && (s ? (null != a ? a() : n(u.pn.REVIEW)) : (i(c.h.COMPLETED), n(u.pn.CONFIRM)))));
+    }, [e, t, n, i, s, a]);
 }
-function p(e) {
-    let t = (0, i.bG)([d.A], () => d.A.awaitingPaymentId),
-        n = (0, i.bG)([s.A], () => s.A.isConnected()),
-        o = r.useRef(new a.IX());
+function h(e) {
+    let t = (0, s.bG)([d.A], () => d.A.awaitingPaymentId),
+        n = (0, s.bG)([l.A], () => l.A.isConnected()),
+        i = r.useRef(new a.IX());
     r.useEffect(() => {
-        n || null == t || 1 !== e ? o.current.stop() : o.current.start(5e3, () => (0, l.TK)(t));
+        n || null == t || 1 !== e ? i.current.stop() : i.current.start(5e3, () => (0, o.TK)(t));
     }, [t, e, n]);
 }

@@ -1,4 +1,5 @@
-r.exports = !e(503628)(function () {
+"use strict";
+e.exports = !n(503628)(function () {
     return (
         7 !==
         Object.defineProperty({}, 1, {

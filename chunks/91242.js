@@ -1,90 +1,91 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => h });
 var i = n(17928),
     r = n(228366),
-    a = n(956518),
-    l = n(165610),
-    s = n(5867);
-let E = null,
-    _ = new Map(),
-    o = new Map(),
+    s = n(956518),
+    a = n(165610),
+    o = n(5867);
+let l = null,
     u = new Map(),
-    A = new Map();
-class d extends i.Ay.Store {
+    c = new Map(),
+    d = new Map(),
+    _ = new Map();
+class f extends i.Ay.Store {
     static displayName = "FramesStore";
     getConnectedFrame() {
-        return E;
+        return l;
     }
     getFrameLayoutMode() {
-        return E?.layoutMode;
+        return l?.layoutMode;
     }
     getActivityPanelMode() {
-        return E?.activityPanelMode ?? s.Gd.DISCONNECTED;
+        return l?.activityPanelMode ?? o.Gd.DISCONNECTED;
     }
     isFrameActive() {
-        return null != E;
+        return null != l;
     }
     isLaunchingFrame(e) {
-        return null != e ? (_.get(e) ?? !1) : _.size > 0;
+        return null != e ? (u.get(e) ?? !1) : u.size > 0;
     }
     isProxyTicketRefreshing(e) {
-        return o.has(e);
+        return c.has(e);
     }
     getOrientationLockStateForApp(e) {
-        return u.get(e);
+        return d.get(e);
     }
     getPipOrientationLockStateForApp(e) {
-        return A.get(e) ?? this.getOrientationLockStateForApp(e);
+        return _.get(e) ?? this.getOrientationLockStateForApp(e);
     }
 }
-let c = new d(r.h, {
+let h = new f(r.h, {
     FRAME_LAUNCH_START: function (e) {
         let { applicationId: t } = e;
-        _.set(t, !0);
+        u.set(t, !0);
     },
     FRAME_LAUNCH: function (e) {
         let { applicationId: t, proxyTicket: n } = e,
-            i = (0, a.Ay)(t);
+            i = (0, s.Ay)(t);
         null == i
-            ? _.delete(t)
-            : (_.delete(t),
-              (E = {
+            ? u.delete(t)
+            : (u.delete(t),
+              (l = {
                   applicationId: t,
                   url: i,
                   connectedSince: Date.now(),
-                  layoutMode: l.y.FOCUSED,
-                  activityPanelMode: s.Gd.PANEL,
+                  layoutMode: a.y.FOCUSED,
+                  activityPanelMode: o.Gd.PANEL,
                   proxyTicket: n,
               }));
     },
     FRAME_LAUNCH_FAIL: function (e) {
         let { applicationId: t } = e;
-        _.delete(t);
+        u.delete(t);
     },
     FRAME_STOP: function (e) {
         let { applicationId: t } = e;
-        E?.applicationId === t && (E = null);
+        l?.applicationId === t && (l = null);
     },
     FRAME_UPDATE_LAYOUT_MODE: function (e) {
         let { applicationId: t, layoutMode: n } = e;
-        E?.applicationId === t && (E = { ...E, layoutMode: n });
+        l?.applicationId === t && (l = { ...l, layoutMode: n });
     },
     FRAME_SET_PANEL_MODE: function (e) {
         let { activityPanelMode: t } = e;
-        null != E && (E = { ...E, activityPanelMode: t });
+        null != l && (l = { ...l, activityPanelMode: t });
     },
     FRAME_SET_ORIENTATION_LOCK_STATE: function (e) {
         let { applicationId: t, lockState: n, pictureInPictureLockState: i } = e;
-        null == n ? u.delete(t) : u.set(t, n), null === i ? A.delete(t) : void 0 !== i && A.set(t, i);
+        null == n ? d.delete(t) : d.set(t, n), null === i ? _.delete(t) : void 0 !== i && _.set(t, i);
     },
     FRAME_SET_PROXY_TICKET_REFRESHING: function (e) {
         let { applicationId: t, refreshing: n } = e;
-        n ? o.set(t, !0) : o.delete(t);
+        n ? c.set(t, !0) : c.delete(t);
     },
     FRAME_UPDATE_PROXY_TICKET: function (e) {
         let { applicationId: t, proxyTicket: n } = e;
-        E?.applicationId === t && (E = { ...E, proxyTicket: n });
+        l?.applicationId === t && (l = { ...l, proxyTicket: n });
     },
     CHANNEL_SELECT: function (e) {
-        return null != E && E.layoutMode !== l.y.PIP && ((E = { ...E, layoutMode: l.y.PIP }), !0);
+        return null != l && l.layoutMode !== a.y.PIP && ((l = { ...l, layoutMode: a.y.PIP }), !0);
     },
 });

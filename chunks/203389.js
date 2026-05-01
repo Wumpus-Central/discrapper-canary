@@ -1,3 +1,4 @@
-n.d(t, { L: () => a });
+"use strict";
+n.d(t, { L: () => r });
 var i = n(287809);
-let a = () => i.default.getCurrentUser()?.nsfwAllowed === !1;
+let r = () => i.default.getCurrentUser()?.nsfwAllowed === !1;

@@ -1,6 +1,7 @@
-n.d(t, { Ay: () => l, X3: () => a, n2: () => r });
+"use strict";
+n.d(t, { Ay: () => r, X3: () => s, n2: () => a });
 var i = n(136722);
-function l(e) {
+function r(e) {
     for (let { permissionOverwrites_: t } of e)
         if (null != t)
             for (let e in t) {
@@ -8,10 +9,10 @@ function l(e) {
                 (n.allow = i.iu(n.allow)), (n.deny = i.iu(n.deny));
             }
 }
-function a(e) {
-    for (let [t, n] of e) l(n);
+function s(e) {
+    for (let [t, n] of e) r(n);
 }
-function r(e) {
+function a(e) {
     let { permissionOverwrites_: t } = e;
     if (null != t)
         for (let e in t) {

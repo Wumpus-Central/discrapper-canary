@@ -1,6 +1,7 @@
-t.d(C, { T: () => S, g: () => E }), t(64700);
+"use strict";
+n.d(t, { T: () => s, g: () => r }), n(64700);
 var i,
-    E =
+    r =
         (((i = {})[(i.WHAT_YOU_LOSE = 1)] = "WHAT_YOU_LOSE"),
         (i[(i.CONFIRM = 2)] = "CONFIRM"),
         (i[(i.PREVIEW = 3)] = "PREVIEW"),
@@ -9,7 +10,7 @@ var i,
         (i[(i.PAUSE_SELECT = 6)] = "PAUSE_SELECT"),
         (i[(i.PAUSE_CONFIRM = 7)] = "PAUSE_CONFIRM"),
         i);
-let S = {
+let s = {
     1: "What You're Losing",
     2: "Confirm Cancellation",
     3: "Preview Updated Subscription",

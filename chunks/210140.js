@@ -1,8 +1,9 @@
-var n = e(410323),
-    o = e(250594),
-    i = n({}.hasOwnProperty);
-r.exports =
+"use strict";
+var i = n(410323),
+    r = n(250594),
+    s = i({}.hasOwnProperty);
+e.exports =
     Object.hasOwn ||
-    function (r, t) {
-        return i(o(r), t);
+    function (e, t) {
+        return s(r(e), t);
     };

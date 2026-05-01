@@ -1,13 +1,14 @@
 "use strict";
-n.d(t, { Ni: () => s, t4: () => o, y$: () => l });
+n.d(t, { Ni: () => a, t4: () => l, y$: () => u });
 var i = n(942381),
-    r = n(265690);
-let [s, a] = (0, n(786300).A)();
-function o(e) {
+    r = n(265690),
+    s = n(566980);
+let [a, o] = (0, n(786300).A)();
+function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return a()(e, t);
+    return o()(e, t);
 }
-function l() {
+function u() {
     return (0, r.h)(
         (e) => ({
             selectedSkuId: void 0,
@@ -31,6 +32,8 @@ function l() {
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
             hasAcceptedTerms: !1,
             setHasAcceptedTerms: (t) => e({ hasAcceptedTerms: t }),
+            purchaseState: s.h.WAITING,
+            setPurchaseState: (t) => e({ purchaseState: t }),
         }),
         i.x,
     );

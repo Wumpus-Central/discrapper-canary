@@ -1,105 +1,106 @@
-l.d(t, { A: () => N });
-var n = l(17928),
-    i = l(228366),
-    r = l(884384),
-    s = l(320095),
-    a = l(734057),
-    u = l(232835),
-    o = l(935208),
-    c = l(753738),
-    d = l(877133),
-    E = l(652215);
-let h = {},
-    _ = 0,
-    T = {},
-    A = {},
-    S = (e) => {
-        null != h[e] && delete h[e], _++;
+"use strict";
+n.d(t, { A: () => T });
+var i = n(17928),
+    r = n(228366),
+    s = n(779185),
+    a = n(320095),
+    o = n(734057),
+    l = n(232835),
+    u = n(935208),
+    c = n(753738),
+    d = n(877133),
+    _ = n(652215);
+let f = {},
+    h = 0,
+    p = {},
+    E = {},
+    m = (e) => {
+        null != f[e] && delete f[e], h++;
     };
-function I(e) {
+function g(e) {
     let t,
-        l,
-        { messageData: n, errorResponseBody: i } = e;
+        n,
+        { messageData: i, errorResponseBody: r } = e;
     return (
-        (l = { id: (t = (0, r.cR)(n)), isBlockedEdit: (0, r.Qn)(n), messageData: n, errorMessage: (0, c.PD)(n, i) }),
-        (h[t] = l),
-        _++,
+        (n = { id: (t = (0, s.cR)(i)), isBlockedEdit: (0, s.Qn)(i), messageData: i, errorMessage: (0, c.PD)(i, r) }),
+        (f[t] = n),
+        h++,
         !0
     );
 }
-function p(e) {
-    let { channelId: t, messages: l } = e,
-        n = a.A.getChannel(t)?.getGuildId();
-    if (null == n) return !1;
-    let i = A[n],
-        r = l.reduce(
+function A(e) {
+    let { channelId: t, messages: n } = e,
+        i = o.A.getChannel(t)?.getGuildId();
+    if (null == i) return !1;
+    let r = E[i],
+        s = n.reduce(
             (e, t) =>
-                t.type === E.lAJ.AUTO_MODERATION_ACTION &&
+                t.type === _.lAJ.AUTO_MODERATION_ACTION &&
                 t.embeds?.some((e) => {
                     let { type: t } = e;
-                    return t === E.Auw.AUTO_MODERATION_NOTIFICATION;
+                    return t === _.Auw.AUTO_MODERATION_NOTIFICATION;
                 })
-                    ? null == e || -1 === o.default.compare(e, t.id)
+                    ? null == e || -1 === u.default.compare(e, t.id)
                         ? t.id
                         : void 0
                     : e,
-            i,
+            r,
         );
-    return null != r && A[n] !== r && ((A[n] = r), !0);
+    return null != s && E[i] !== s && ((E[i] = s), !0);
 }
-class f extends n.Ay.PersistedStore {
+class I extends i.Ay.PersistedStore {
     static displayName = "GuildAutomodMessageStore";
     static persistKey = "GuildAutomodMessages";
     initialize(e) {
-        this.waitFor(a.A, u.A), null != e && ((h = e.automodFailedMessages), (T = e.mentionRaidDetectionByGuild));
+        this.waitFor(o.A, l.A), null != e && ((f = e.automodFailedMessages), (p = e.mentionRaidDetectionByGuild));
     }
     getState() {
-        return { automodFailedMessages: h, mentionRaidDetectionByGuild: T, lastIncidentAlertMessage: A };
+        return { automodFailedMessages: f, mentionRaidDetectionByGuild: p, lastIncidentAlertMessage: E };
     }
     getMessage(e) {
-        return null == e ? null : (h[e] ?? null);
+        return null == e ? null : (f[e] ?? null);
     }
     getMessagesVersion() {
-        return _;
+        return h;
     }
     getMentionRaidDetected(e) {
-        return T[e] ?? null;
+        return p[e] ?? null;
     }
     getLastIncidentAlertMessage(e) {
-        return A[e] ?? null;
+        return E[e] ?? null;
     }
 }
-let N = new f(i.h, {
+let T = new I(r.h, {
     CONNECTION_OPEN: function (e) {
-        return 0 !== Object.keys(h).length && ((h = {}), _++, !0);
+        return 0 !== Object.keys(f).length && ((f = {}), h++, !0);
     },
-    LOAD_MESSAGES_SUCCESS: p,
-    LOCAL_MESSAGES_LOADED: p,
+    LOAD_MESSAGES_SUCCESS: A,
+    LOCAL_MESSAGES_LOADED: A,
     MESSAGE_CREATE: function (e) {
-        let { guildId: t, message: l } = e;
-        if (null == t || l.type !== E.lAJ.AUTO_MODERATION_ACTION) return !1;
-        let n = (0, s.rh)(l);
-        return !!(0, d.ER)(n) && !!(0, d.de)(n) && ((A[t] = n.id), !0);
+        let { guildId: t, message: n } = e;
+        if (null == t || n.type !== _.lAJ.AUTO_MODERATION_ACTION) return !1;
+        let i = (0, a.rh)(n);
+        return !!(0, d.ER)(i) && !!(0, d.de)(i) && ((E[t] = i.id), !0);
     },
-    MESSAGE_SEND_FAILED_AUTOMOD: I,
-    MESSAGE_EDIT_FAILED_AUTOMOD: I,
+    MESSAGE_SEND_FAILED_AUTOMOD: g,
+    MESSAGE_EDIT_FAILED_AUTOMOD: g,
     REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
         let { messageId: t } = e;
-        return S(t), !0;
+        return m(t), !0;
     },
     MESSAGE_END_EDIT: function (e) {
         let { response: t } = e;
-        if (t?.body == null || t.body.code === E.t02.AUTOMOD_MESSAGE_BLOCKED) return !1;
-        let l = t.body.id;
-        if (null == l) return !1;
-        S(l);
+        if (t?.body == null || t.body.code === _.t02.AUTOMOD_MESSAGE_BLOCKED) return !1;
+        let n = t.body.id;
+        if (null == n) return !1;
+        m(n);
     },
     AUTO_MODERATION_MENTION_RAID_DETECTION: function (e) {
-        let { guildId: t, decisionId: l, suspiciousMentionActivityUntil: n } = e;
-        return (T[t] = { guildId: t, decisionId: l, suspiciousMentionActivityUntil: n }), !0;
+        let { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i } = e;
+        return (p[t] = { guildId: t, decisionId: n, suspiciousMentionActivityUntil: i }), !0;
     },
     AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS: function (e) {
         let { guildId: t } = e;
-        return delete T[t], !0;
+        return delete p[t], !0;
     },
 });

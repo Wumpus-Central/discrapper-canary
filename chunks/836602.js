@@ -1,34 +1,34 @@
 "use strict";
 let i;
-n.d(t, { A: () => O, _: () => E });
+n.d(t, { A: () => y, _: () => f });
 var r = n(17928),
     s = n(228366),
     a = n(652215),
     o = n(349828),
     l = n(849077),
-    _ = n(901123);
-let d = {},
-    u = {},
-    c = {},
-    E = new Set([..._.Cr, o.Vc, l.Hy]),
+    u = n(901123);
+let c = {},
+    d = {},
+    _ = {},
+    f = new Set([...u.Cr, o.Vc, l.Hy]),
     h = {},
-    m = u,
-    f = a.XlH.CLOSED,
-    g = {};
+    p = d,
+    E = a.XlH.CLOSED,
+    m = {};
+function g() {
+    (E = a.XlH.OPEN), (m = {});
+}
 function A() {
-    (f = a.XlH.OPEN), (g = {});
+    (E = a.XlH.CLOSED), (m = {});
 }
 function I() {
-    (f = a.XlH.CLOSED), (g = {});
-}
-function p() {
-    m = u;
+    p = d;
 }
 function T() {
-    (h = {}), (g = {});
+    (h = {}), (m = {});
 }
 function S() {
-    T(), p(), I();
+    T(), I(), A();
 }
 class N extends r.Ay.Store {
     static displayName = "UserProfileSettingsStore";
@@ -36,16 +36,16 @@ class N extends r.Ay.Store {
         return i;
     }
     getFormState() {
-        return f;
+        return E;
     }
     getErrors(e) {
-        return g[e ?? a.ME] ?? c;
+        return m[e ?? a.ME] ?? _;
     }
     getPendingChanges(e) {
-        return h[e ?? a.ME] ?? d;
+        return h[e ?? a.ME] ?? c;
     }
     getTryItOutChanges() {
-        return m;
+        return p;
     }
     hasUnsavedChanges() {
         return Object.values(h).some((e) => Object.values(e).some((e) => void 0 !== e));
@@ -64,36 +64,36 @@ class N extends r.Ay.Store {
         return !0;
     }
 }
-let O = new N(s.h, {
-    USER_SETTINGS_MODAL_INIT: A,
-    USER_SETTINGS_MODAL_OPEN: A,
+let y = new N(s.h, {
+    USER_SETTINGS_MODAL_INIT: g,
+    USER_SETTINGS_MODAL_OPEN: g,
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {
         let { section: t } = e;
         if (t !== a.nc_.ACCOUNT) return !1;
-        (f = a.XlH.OPEN), (g = {});
+        (E = a.XlH.OPEN), (m = {});
     },
     USER_PROFILE_SETTINGS_INIT: function (e) {
         let { guildId: t } = e;
-        (i = null == t || E.has(t) ? void 0 : t), (f = a.XlH.OPEN), (g = {});
+        (i = null == t || f.has(t) ? void 0 : t), (E = a.XlH.OPEN), (m = {});
     },
     USER_PROFILE_SETTINGS_SET_GUILD: function (e) {
         let { guildId: t } = e;
-        (i = null == t || E.has(t) ? void 0 : t), (g = {});
+        (i = null == t || f.has(t) ? void 0 : t), (m = {});
     },
-    USER_PROFILE_SETTINGS_CLOSE: I,
+    USER_PROFILE_SETTINGS_CLOSE: A,
     USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: S,
     USER_PROFILE_SETTINGS_SUBMIT: function () {
-        (f = a.XlH.SUBMITTING), (g = {});
+        (E = a.XlH.SUBMITTING), (m = {});
     },
     USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function (e) {
         let { guildId: t } = e;
-        if (f !== a.XlH.SUBMITTING) return !1;
-        (f = a.XlH.OPEN), (g[t ?? a.ME] = c);
+        if (E !== a.XlH.SUBMITTING) return !1;
+        (E = a.XlH.OPEN), (m[t ?? a.ME] = _);
     },
     USER_PROFILE_SETTINGS_SUBMIT_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        if (f !== a.XlH.SUBMITTING) return !1;
-        (f = a.XlH.OPEN), (g[t ?? a.ME] = n ?? c);
+        if (E !== a.XlH.SUBMITTING) return !1;
+        (E = a.XlH.OPEN), (m[t ?? a.ME] = n ?? _);
     },
     USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function (e) {
         let { type: t, guildId: n, ...i } = e;
@@ -101,32 +101,32 @@ let O = new N(s.h, {
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function (e) {
         let { avatar: t } = e;
-        m = { ...m, tryItOutAvatar: t };
+        p = { ...p, tryItOutAvatar: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION: function (e) {
         let { avatarDecoration: t } = e;
-        m = { ...m, tryItOutAvatarDecoration: t };
+        p = { ...p, tryItOutAvatarDecoration: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT: function (e) {
         let { profileEffect: t } = e;
-        m = { ...m, tryItOutProfileEffect: t };
+        p = { ...p, tryItOutProfileEffect: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER: function (e) {
         let { banner: t } = e;
-        m = { ...m, tryItOutBanner: t };
+        p = { ...p, tryItOutBanner: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS: function (e) {
         let { themeColors: t } = e;
-        m = { ...m, tryItOutThemeColors: t };
+        p = { ...p, tryItOutThemeColors: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: function (e) {
         let { displayNameStyles: t } = e;
-        m = { ...m, tryItOutDisplayNameStyles: t };
+        p = { ...p, tryItOutDisplayNameStyles: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function (e) {
         let { banner: t, themeColors: n, avatarDecoration: i, displayNameStyles: r } = e;
-        m = {
-            ...m,
+        p = {
+            ...p,
             tryItOutBanner: t,
             tryItOutThemeColors: n,
             tryItOutAvatarDecoration: i,
@@ -134,7 +134,7 @@ let O = new N(s.h, {
         };
     },
     USER_PROFILE_SETTINGS_CLEAR_ERRORS: function () {
-        g = {};
+        m = {};
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function () {
         h = Object.fromEntries(
@@ -167,6 +167,7 @@ let O = new N(s.h, {
                         pendingProfileEffect: void 0,
                         pendingProfileFrame: void 0,
                         pendingBanner: void 0,
+                        pendingBannerOriginalMd5: void 0,
                         pendingAccentColor: void 0,
                         pendingThemeColors: void 0,
                         pendingBio: void 0,
@@ -176,7 +177,7 @@ let O = new N(s.h, {
         );
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: T,
-    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: p,
+    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: I,
     USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function () {
         if ((h[a.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
         h[a.ME] = { ...h[a.ME], pendingLegacyUsernameDisabled: void 0 };
@@ -187,14 +188,14 @@ let O = new N(s.h, {
     },
     USER_PROFILE_UPDATE_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        (f = a.XlH.OPEN),
-            (g[t ?? a.ME] =
+        (E = a.XlH.OPEN),
+            (m[t ?? a.ME] =
                 Object.fromEntries(
                     Object.entries(n).map((e) => {
                         let [t, n] = e;
                         return [t, [n]];
                     }),
-                ) ?? c);
+                ) ?? _);
     },
     LOGOUT: S,
 });

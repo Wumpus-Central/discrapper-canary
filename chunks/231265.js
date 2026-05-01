@@ -1,17 +1,18 @@
-e.d(t, { C: () => c, _: () => l });
-var a = e(40185),
-    o = e(478097),
-    i = e(196042),
-    u = e(374200),
-    r = e(985018);
-async function c() {
-    let n = u.A.bogoPromotion,
-        t = null != n && new Date(n.endDate).valueOf() >= Date.now() && new Date(n.startDate).valueOf() <= Date.now(),
-        e = await (0, a.nq)(),
-        r = (0, i.RK)("bogo announcement modal eligibility"),
-        c = (0, o.BI)("bogo announcement modal marketing");
-    return t && c && r && e;
+"use strict";
+n.d(t, { C: () => l, _: () => u });
+var i = n(960851),
+    r = n(478097),
+    s = n(196042),
+    a = n(374200),
+    o = n(375708);
+async function l() {
+    let e = a.A.bogoPromotion,
+        t = null != e && new Date(e.endDate).valueOf() >= Date.now() && new Date(e.startDate).valueOf() <= Date.now(),
+        n = await (0, i.nq)(),
+        o = (0, s.RK)("bogo announcement modal eligibility"),
+        l = (0, r.BI)("bogo announcement modal marketing");
+    return t && l && o && n;
 }
-function l() {
-    return r.intl.string(r.t.iQTfWx);
+function u() {
+    return o.intl.string(o.t.iQTfWx);
 }

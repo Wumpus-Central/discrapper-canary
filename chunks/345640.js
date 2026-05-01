@@ -1,8 +1,9 @@
-t.d(d, { b: () => s });
-var e = t(17928),
-    i = t(495544),
-    n = t(977997);
-function s(a) {
-    var d;
-    return (d = a?.id), (0, e.bG)([n.A, i.default], () => n.A.isInChannel(d, i.default.getId()));
+"use strict";
+n.d(t, { b: () => a });
+var i = n(17928),
+    r = n(495544),
+    s = n(977997);
+function a(e) {
+    var t;
+    return (t = e?.id), (0, i.bG)([s.A, r.default], () => s.A.isInChannel(t, r.default.getId()));
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { e: () => u });
+n.d(t, { e: () => d });
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -7,7 +7,7 @@ var r = n(503698),
     a = n(574381),
     o = n(460890),
     l = n(562429);
-function _(e) {
+function u(e) {
     let { direction: t = "up" } = e;
     return (0, i.jsx)("svg", {
         width: "10",
@@ -23,97 +23,97 @@ function _(e) {
         }),
     });
 }
-function d(e) {
+function c(e) {
     let { children: t, text: n, macText: r, label: s, macLabel: o } = e,
-        _ = (0, a.cX)() || (0, a.Sn)(),
-        d = _ && null != r ? l.systemFont : void 0,
-        u = _ && null != o ? o : s,
-        c = _ && null != r ? r : (t ?? n);
+        u = (0, a.cX)() || (0, a.Sn)(),
+        c = u && null != r ? l.systemFont : void 0,
+        d = u && null != o ? o : s,
+        _ = u && null != r ? r : (t ?? n);
     return (0, i.jsx)("span", {
-        className: d,
-        role: null != u ? "img" : void 0,
-        "aria-label": u ?? void 0,
-        children: c,
+        className: c,
+        role: null != d ? "img" : void 0,
+        "aria-label": d ?? void 0,
+        children: _,
     });
 }
-function u(e) {
+function d(e) {
     let { shortcut: t, dim: n = !1, className: r, keyClassName: a } = e,
-        { i18n: u } = (0, o.G9)(),
-        c = {
-            ctrl: () => (0, i.jsx)(d, { macText: "⌃", text: "ctrl", label: u.KEY_CTRL_A11Y_LABEL }),
-            cmd: () => (0, i.jsx)(d, { macText: "⌘", text: "cmd", label: u.KEY_CMD_A11Y_LABEL }),
+        { i18n: d } = (0, o.G9)(),
+        _ = {
+            ctrl: () => (0, i.jsx)(c, { macText: "⌃", text: "ctrl", label: d.KEY_CTRL_A11Y_LABEL }),
+            cmd: () => (0, i.jsx)(c, { macText: "⌘", text: "cmd", label: d.KEY_CMD_A11Y_LABEL }),
             mod: () =>
-                (0, i.jsx)(d, {
+                (0, i.jsx)(c, {
                     macText: "⌘",
                     text: "ctrl",
-                    label: u.KEY_CTRL_A11Y_LABEL,
-                    macLabel: u.KEY_CMD_A11Y_LABEL,
+                    label: d.KEY_CTRL_A11Y_LABEL,
+                    macLabel: d.KEY_CMD_A11Y_LABEL,
                 }),
             alt: () =>
-                (0, i.jsx)(d, {
+                (0, i.jsx)(c, {
                     macText: "⌥",
                     text: "alt",
-                    label: u.KEY_ALT_A11Y_LABEL,
-                    macLabel: u.KEY_OPTION_A11Y_LABEL,
+                    label: d.KEY_ALT_A11Y_LABEL,
+                    macLabel: d.KEY_OPTION_A11Y_LABEL,
                 }),
-            shift: () => (0, i.jsx)(d, { macText: "⇧", text: u.KEY_SHIFT, label: u.KEY_SHIFT_A11Y_LABEL }),
+            shift: () => (0, i.jsx)(c, { macText: "⇧", text: d.KEY_SHIFT, label: d.KEY_SHIFT_A11Y_LABEL }),
             up: () =>
-                (0, i.jsx)(d, {
-                    label: u.KEY_UP_A11Y_LABEL,
+                (0, i.jsx)(c, {
+                    label: d.KEY_UP_A11Y_LABEL,
                     macText: "▲",
-                    children: (0, i.jsx)(_, { direction: "up" }),
+                    children: (0, i.jsx)(u, { direction: "up" }),
                 }),
             down: () =>
-                (0, i.jsx)(d, {
-                    label: u.KEY_DOWN_A11Y_LABEL,
+                (0, i.jsx)(c, {
+                    label: d.KEY_DOWN_A11Y_LABEL,
                     macText: "▼",
-                    children: (0, i.jsx)(_, { direction: "down" }),
+                    children: (0, i.jsx)(u, { direction: "down" }),
                 }),
             left: () =>
-                (0, i.jsx)(d, {
-                    label: u.KEY_LEFT_A11Y_LABEL,
+                (0, i.jsx)(c, {
+                    label: d.KEY_LEFT_A11Y_LABEL,
                     macText: "◀",
-                    children: (0, i.jsx)(_, { direction: "left" }),
+                    children: (0, i.jsx)(u, { direction: "left" }),
                 }),
             right: () =>
-                (0, i.jsx)(d, {
-                    label: u.KEY_RIGHT_A11Y_LABEL,
+                (0, i.jsx)(c, {
+                    label: d.KEY_RIGHT_A11Y_LABEL,
                     macText: "▶",
-                    children: (0, i.jsx)(_, { direction: "right" }),
+                    children: (0, i.jsx)(u, { direction: "right" }),
                 }),
-            pageup: () => u.KEY_PAGEUP,
-            pagedown: () => u.KEY_PAGEDOWN,
-            "any-character": () => u.KEY_ANY,
+            pageup: () => d.KEY_PAGEUP,
+            pagedown: () => d.KEY_PAGEDOWN,
+            "any-character": () => d.KEY_ANY,
             plus: () => "+",
             return: () =>
-                (0, i.jsx)(d, {
+                (0, i.jsx)(c, {
                     macText: "⏎",
-                    text: u.KEY_ENTER,
-                    label: u.KEY_ENTER_A11Y_LABEL,
-                    macLabel: u.KEY_RETURN_A11Y_LABEL,
+                    text: d.KEY_ENTER,
+                    label: d.KEY_ENTER_A11Y_LABEL,
+                    macLabel: d.KEY_RETURN_A11Y_LABEL,
                 }),
             enter: () =>
-                (0, i.jsx)(d, {
+                (0, i.jsx)(c, {
                     macText: "⏎",
-                    text: u.KEY_ENTER,
-                    label: u.KEY_ENTER_A11Y_LABEL,
-                    macLabel: u.KEY_RETURN_A11Y_LABEL,
+                    text: d.KEY_ENTER,
+                    label: d.KEY_ENTER_A11Y_LABEL,
+                    macLabel: d.KEY_RETURN_A11Y_LABEL,
                 }),
-            escape: () => (0, i.jsx)(d, { text: u.KEY_ESCAPE, label: u.KEY_ESCAPE_A11Y_LABEL }),
-            esc: () => (0, i.jsx)(d, { text: u.KEY_ESCAPE, label: u.KEY_ESCAPE_A11Y_LABEL }),
+            escape: () => (0, i.jsx)(c, { text: d.KEY_ESCAPE, label: d.KEY_ESCAPE_A11Y_LABEL }),
+            esc: () => (0, i.jsx)(c, { text: d.KEY_ESCAPE, label: d.KEY_ESCAPE_A11Y_LABEL }),
             backspace: () =>
-                (0, i.jsx)(d, {
+                (0, i.jsx)(c, {
                     macText: "⌫",
-                    text: u.KEY_BACKSPACE,
-                    label: u.KEY_BACKSPACE_A11Y_LABEL,
-                    macLabel: u.KEY_DELETE_A11Y_LABEL,
+                    text: d.KEY_BACKSPACE,
+                    label: d.KEY_BACKSPACE_A11Y_LABEL,
+                    macLabel: d.KEY_DELETE_A11Y_LABEL,
                 }),
         },
-        E = Array.isArray(t) ? t : t.split("+");
+        f = Array.isArray(t) ? t : t.split("+");
     return (0, i.jsx)("div", {
         className: s()(l.combo, r, { [l.dim]: n }),
-        children: E.map((e) => (null != c[e] ? c[e]() : e)).map((e, t) =>
-            (0, i.jsx)("span", { className: s()(l.key, a), children: e }, t),
-        ),
+        children: f
+            .map((e) => (null != _[e] ? _[e]() : e))
+            .map((e, t) => (0, i.jsx)("span", { className: s()(l.key, a), children: e }, t)),
     });
 }

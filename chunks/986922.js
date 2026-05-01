@@ -19,12 +19,12 @@ var g = l(944791),
     E = l(915089),
     N = l(742589),
     p = l(363195),
-    T = l(253932),
+    T = l(885386),
     S = l(178241),
     y = l(899847),
     C = l(695515),
     _ = l(438732),
-    I = l(954571),
+    I = l(174459),
     b = l(191627),
     L = l(652215);
 let R = {
@@ -124,7 +124,7 @@ let eh = (e) => {
     );
 };
 var em = l(602339),
-    ej = l(985018),
+    ej = l(375708),
     eg = l(751406);
 let ef = [18, 18, 16, 16, 14, 12, 10],
     ev = i.memo((e) => {
@@ -530,7 +530,7 @@ function e0(e) {
         ],
     });
 }
-let e1 = () => {
+let e3 = () => {
         let e = (0, _.A)(),
             t = (0, D.vx)(),
             l = (0, $.y)(
@@ -548,7 +548,7 @@ let e1 = () => {
                   ],
               });
     },
-    e3 = i.memo((e) => {
+    e1 = i.memo((e) => {
         let { userId: t, subText: l, avatarSize: i = M._3.SIZE_40, hideUserTag: s = !1 } = e,
             a = (0, z.F7)(t);
         return void 0 === a
@@ -569,13 +569,13 @@ let e1 = () => {
                   ],
               });
     });
-e3.displayName = "FamilyCenterActivityCardAccountRow";
+e1.displayName = "FamilyCenterActivityCardAccountRow";
 let e2 = () => {
         let e = (0, D.GR)(),
             t = (0, d.bG)([C.A], () => C.A.getSelectedTeenId()),
             { selectTeenUser: l } = (0, V.A)({}),
             s = e.map((e) => ({ label: e.id, value: e.id })),
-            a = i.useCallback((e) => (0, n.jsx)(e3, { userId: e.value, avatarSize: M._3.SIZE_24 }), []);
+            a = i.useCallback((e) => (0, n.jsx)(e1, { userId: e.value, avatarSize: M._3.SIZE_24 }), []);
         return (0, n.jsx)(U.Pw, {
             className: eJ.Lt,
             renderOptionLabel: a,
@@ -598,7 +598,7 @@ let e2 = () => {
             l = (0, D.vx)(),
             i = (0, Q.cV)(!!t),
             s = (0, D.v4)(i);
-        return null === e ? null : t && 1 !== l.length ? (0, n.jsx)(e2, {}) : (0, n.jsx)(e3, { userId: e, subText: s });
+        return null === e ? null : t && 1 !== l.length ? (0, n.jsx)(e2, {}) : (0, n.jsx)(e1, { userId: e, subText: s });
     },
     e9 = () => {
         let e = (0, Q.Mo)(),
@@ -608,7 +608,7 @@ let e2 = () => {
         return (0, n.jsxs)("div", {
             className: eJ.kL,
             children: [
-                (0, n.jsxs)("div", { className: eJ.vF, children: [(0, n.jsx)(e1, {}), (0, n.jsx)(e$, {})] }),
+                (0, n.jsxs)("div", { className: eJ.vF, children: [(0, n.jsx)(e3, {}), (0, n.jsx)(e$, {})] }),
                 (0, n.jsxs)("div", {
                     className: eQ.a,
                     children: [
@@ -655,7 +655,7 @@ let e4 = () => {
             { selectTeenUser: l } = (0, V.A)({}),
             s = e.map((e) => ({ label: e, value: e })),
             r = i.useCallback(
-                (e) => (0, n.jsx)(e3, { userId: e.value, avatarSize: M._3.SIZE_24, hideUserTag: !0 }),
+                (e) => (0, n.jsx)(e1, { userId: e.value, avatarSize: M._3.SIZE_24, hideUserTag: !0 }),
                 [],
             );
         return 0 === e.length
@@ -678,7 +678,7 @@ let e4 = () => {
                                 options: s,
                                 "data-migration-pending": !0,
                             })
-                          : (0, n.jsx)(e3, { userId: e[0], avatarSize: M._3.SIZE_24, hideUserTag: !0 }),
+                          : (0, n.jsx)(e1, { userId: e[0], avatarSize: M._3.SIZE_24, hideUserTag: !0 }),
               });
     },
     e7 = () => {
@@ -1035,10 +1035,10 @@ function tP() {
         onClick: () => {
             (0, q.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    l.e("40841"),
+                    l.e("6305"),
                     l.e("30244"),
                     l.e("95429"),
-                    l.e("6515"),
+                    l.e("24009"),
                     l.e("48370"),
                     l.e("72875"),
                 ]).then(l.bind(l, 320742));
@@ -1167,8 +1167,8 @@ var tq = l(847374),
     tQ = l(219893),
     t$ = l(936926),
     t0 = l(534654),
-    t1 = l(550079),
-    t3 = l(477782),
+    t3 = l(980707),
+    t1 = l(477782),
     t2 = l(943255),
     t8 = l(922016),
     t9 = l(408278),
@@ -1178,15 +1178,15 @@ var tq = l(847374),
     t6 = l(624411);
 function le(e) {
     let { closePopout: t, onEdit: l, onDelete: i } = e;
-    return (0, n.jsxs)(t1.W, {
+    return (0, n.jsxs)(t3.W, {
         "data-menu-migrated": !0,
         "aria-label": ej.intl.string(ej.t["UKOtz+"]),
         navId: "schedule-actions",
         onClose: t,
         onSelect: t,
         children: [
-            (0, n.jsx)(t3.Dr, { id: "edit", label: ej.intl.string(em.default.b3DPqg), action: l }),
-            (0, n.jsx)(t3.Dr, { id: "delete", label: ej.intl.string(em.default.d8pizZ), color: "danger", action: i }),
+            (0, n.jsx)(t1.Dr, { id: "edit", label: ej.intl.string(em.default.b3DPqg), action: l }),
+            (0, n.jsx)(t1.Dr, { id: "delete", label: ej.intl.string(em.default.d8pizZ), color: "danger", action: i }),
         ],
     });
 }
@@ -1951,8 +1951,8 @@ var lY = l(936504),
     lQ = l(100406),
     l$ = l(878460),
     l0 = l(431144),
-    l1 = l(192280);
-let l3 = () => {
+    l3 = l(192280);
+let l1 = () => {
     let e = T.dm.useSetting(),
         { categories: t, initialized: l } = (0, lK.cf)([l$.A], () => l$.A.getEmailSettings());
     return (
@@ -1960,7 +1960,7 @@ let l3 = () => {
             null == l && (0, lQ.cR)();
         }, [l]),
         (0, n.jsx)("div", {
-            className: l1.kL,
+            className: l3.kL,
             children: (0, n.jsxs)(lX.n, {
                 label: ej.intl.string(em.default.USIXU7),
                 children: [
@@ -1972,7 +1972,7 @@ let l3 = () => {
                     }),
                     e
                         ? (0, n.jsx)(lW.Z, {
-                              className: l1.MT,
+                              className: l3.MT,
                               type: lW.Z.Types.CUSTOM,
                               outline: !0,
                               children: (0, n.jsxs)(lZ.s, {
@@ -1992,7 +1992,7 @@ let l3 = () => {
                                               children: ej.intl.string(em.default.cUIXFY),
                                           }),
                                       }),
-                                      (0, n.jsx)(x.fk, { icon: lJ.E, className: l1.UE, disableColor: !0 }),
+                                      (0, n.jsx)(x.fk, { icon: lJ.E, className: l3.UE, disableColor: !0 }),
                                   ],
                               }),
                           })
@@ -2013,7 +2013,7 @@ let l3 = () => {
 var l2 = l(731738),
     l8 = l(964486),
     l9 = l(612200),
-    l5 = l(831062),
+    l5 = l(807393),
     l4 = l(210714),
     l7 = l(33666),
     l6 = l(204925);
@@ -2062,10 +2062,10 @@ var nt = l(556493);
 let nl = {
         [b.u9.REQUESTS]: lq,
         [b.u9.ACTIVITY]: lc,
-        [b.u9.SETTINGS]: l3,
+        [b.u9.SETTINGS]: l1,
         [b.u9.CONTENT_AND_SOCIAL]: t_,
         [b.u9.DATA_AND_PRIVACY]: tk,
-        [b.u9.SCREEN_TIME_CONTROLS]: l3,
+        [b.u9.SCREEN_TIME_CONTROLS]: l1,
     },
     nn = { [b.u9.REQUESTS]: lq, [b.u9.ACTIVITY]: lc, [b.u9.CONTENT_AND_SOCIAL]: t_, [b.u9.DATA_AND_PRIVACY]: tk };
 function ni() {

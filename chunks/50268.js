@@ -1,30 +1,31 @@
-e.d(n, { A: () => s });
-var i = e(627968);
-e(64700);
-var l = e(284009),
-    r = e.n(l),
-    a = e(477782),
-    u = e(473935),
-    c = e(253932),
-    d = e(957565);
-function s(t) {
-    let { id: n, label: e, onSuccess: l, shiftId: s, showIconFirst: o, showWithoutDeveloperMode: p } = t,
-        A = c.Q_.useSetting();
-    if (__OVERLAY__ || !(p || A) || !d.p5 || null == n) return null;
-    let y = `devmode-copy-id-${n}`;
+"use strict";
+n.d(t, { A: () => c });
+var i = n(627968);
+n(64700);
+var r = n(284009),
+    s = n.n(r),
+    a = n(477782),
+    o = n(473935),
+    l = n(885386),
+    u = n(957565);
+function c(e) {
+    let { id: t, label: n, onSuccess: r, shiftId: c, showIconFirst: d, showWithoutDeveloperMode: _ } = e,
+        f = l.Q_.useSetting();
+    if (__OVERLAY__ || !(_ || f) || !u.p5 || null == t) return null;
+    let h = `devmode-copy-id-${t}`;
     return (0, i.jsx)(
         a.Dr,
         {
-            id: y,
-            label: e,
-            action: function (t) {
-                let e = null != s && t.shiftKey ? s : n;
-                r()(null != e, "cannot copy null text"), (0, d.C)(e, l);
+            id: h,
+            label: n,
+            action: function (e) {
+                let n = null != c && e.shiftKey ? c : t;
+                s()(null != n, "cannot copy null text"), (0, u.C)(n, r);
             },
-            icon: o ? void 0 : u.L,
-            iconLeft: o ? u.L : void 0,
-            leadingAccessory: { type: "icon", icon: u.L },
+            icon: d ? void 0 : o.L,
+            iconLeft: d ? o.L : void 0,
+            leadingAccessory: { type: "icon", icon: o.L },
         },
-        y,
+        h,
     );
 }

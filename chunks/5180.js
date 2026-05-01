@@ -1,13 +1,14 @@
-n.d(t, { IF: () => o, YC: () => s, ai: () => l });
+"use strict";
+n.d(t, { IF: () => l, YC: () => a, ai: () => o });
 var i = n(349828),
-    a = n(652215),
-    r = n(985018);
-function s(e) {
-    if (null != e) return l(e.id) ? r.intl.string(r.t.wMWyci) : e.name;
+    r = n(652215),
+    s = n(375708);
+function a(e) {
+    if (null != e) return o(e.id) ? s.intl.string(s.t.wMWyci) : e.name;
 }
-function l(e) {
-    return e === i.Vc || e === a.YYv;
+function o(e) {
+    return e === i.Vc || e === r.YYv;
 }
-function o(e, t) {
+function l(e, t) {
     return !e.isThread() || t;
 }

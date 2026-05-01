@@ -1,6 +1,7 @@
-n.d(t, { A: () => i });
-var o = n(315069);
-class r extends o.A {
+"use strict";
+n.d(t, { A: () => s });
+var i = n(315069);
+class r extends i.A {
     id;
     subscriptionId;
     premiumGuildSubscription;
@@ -36,4 +37,4 @@ class r extends o.A {
             (this.subscription = e.subscription);
     }
 }
-let i = r;
+let s = r;

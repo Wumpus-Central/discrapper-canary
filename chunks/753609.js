@@ -1,4 +1,5 @@
-r.exports = {
+"use strict";
+e.exports = {
     IndexSizeError: { s: "INDEX_SIZE_ERR", c: 1, m: 1 },
     DOMStringSizeError: { s: "DOMSTRING_SIZE_ERR", c: 2, m: 0 },
     HierarchyRequestError: { s: "HIERARCHY_REQUEST_ERR", c: 3, m: 1 },

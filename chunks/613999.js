@@ -1,26 +1,27 @@
-n.d(t, { $l: () => l, Ay: () => c, O_: () => d, xx: () => o }), n(321073);
+"use strict";
+n.d(t, { $l: () => o, Ay: () => c, O_: () => u, xx: () => l }), n(321073);
 var i = n(543531),
-    a = n(407689),
-    r = n(853742),
-    s = n(759735);
-function l(e) {
-    return `${a.mG.FORUM_CHANNEL}_${e}`;
+    r = n(407689),
+    s = n(853742),
+    a = n(935505);
+function o(e) {
+    return `${r.mG.FORUM_CHANNEL}_${e}`;
 }
-function o(e, t, n) {
-    (0, i.wR)(l(e), t, n);
+function l(e, t, n) {
+    (0, i.wR)(o(e), t, n);
 }
-function d(e, t, n) {
-    (0, i.zK)(l(e), t, n);
+function u(e, t, n) {
+    (0, i.zK)(o(e), t, n);
 }
-class c extends a.id {
+class c extends r.id {
     guildId;
     channelId;
     sessionId;
     constructor({ guildId: e, channelId: t, windowId: n, isPaused: i }) {
-        super({ windowId: n, isPaused: i, id: l(t) }),
+        super({ windowId: n, isPaused: i, id: o(t) }),
             (this.guildId = e),
             (this.channelId = t),
-            (this.sessionId = (0, s.cr)(t));
+            (this.sessionId = (0, a.cr)(t));
     }
     createFlushSeenItemsFunction = (e) => {
         let t = this.trackedFeedItems,
@@ -34,14 +35,14 @@ class c extends a.id {
             };
         return () =>
             (function (e) {
-                let { guildId: t, channelId: n, sessionId: i, trackedFeedItems: a, isForcedFlush: s } = e,
-                    l = [],
-                    o = [];
-                for (let e of Object.keys(a)) {
-                    let t = a[e].computeSeenTimeDestructive(s);
-                    t > 0 && (l.push(e), o.push(t));
+                let { guildId: t, channelId: n, sessionId: i, trackedFeedItems: r, isForcedFlush: a } = e,
+                    o = [],
+                    l = [];
+                for (let e of Object.keys(r)) {
+                    let t = r[e].computeSeenTimeDestructive(a);
+                    t > 0 && (o.push(e), l.push(t));
                 }
-                0 !== l.length && (0, r.Z_)({ guildId: t, channelId: n, sessionId: i, postIds: l, additionalTimes: o });
+                0 !== o.length && (0, s.Z_)({ guildId: t, channelId: n, sessionId: i, postIds: o, additionalTimes: l });
             })(i);
     };
 }
