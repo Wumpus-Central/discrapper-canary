@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => f });
 var i = n(29583),
     r = n(618027),
     s = n(439372),
@@ -7,10 +7,12 @@ var i = n(29583),
     o = n(961250),
     l = n(532309),
     u = n(636592);
-let c = 5 * a.A.Millis.MINUTE;
-class d extends s.A {
+let c = 5 * a.A.Millis.MINUTE,
+    d = 30 * a.A.Millis.SECOND;
+class _ extends s.A {
     intervalId;
     newSubscriptionTimeoutId;
+    virtualCurrencyUpdateTimeoutId;
     actions = {
         POST_CONNECTION_OPEN: () => this._initializeProgramRewards(),
         BILLING_SUBSCRIPTION_UPDATE_SUCCESS: () => (0, o.uM)(),
@@ -18,8 +20,14 @@ class d extends s.A {
         PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: () => this._handleNewSubscription(),
         BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: () => (0, o.uM)(),
         BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: () => (0, o.uM)(),
-        VIRTUAL_CURRENCY_BALANCE_UPDATE: () => (0, o.uM)(),
+        VIRTUAL_CURRENCY_BALANCE_UPDATE: () => this._handleVirtualCurrencyUpdate(),
     };
+    _handleVirtualCurrencyUpdate() {
+        null != this.virtualCurrencyUpdateTimeoutId && clearTimeout(this.virtualCurrencyUpdateTimeoutId),
+            (this.virtualCurrencyUpdateTimeoutId = setTimeout(() => {
+                (0, o.uM)(), (this.virtualCurrencyUpdateTimeoutId = void 0);
+            }, d));
+    }
     _handleNewSubscription() {
         (0, o.uM)(),
             null != this.newSubscriptionTimeoutId && clearTimeout(this.newSubscriptionTimeoutId),
@@ -45,7 +53,9 @@ class d extends s.A {
     _terminate() {
         null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0)),
             null != this.newSubscriptionTimeoutId &&
-                (clearTimeout(this.newSubscriptionTimeoutId), (this.newSubscriptionTimeoutId = void 0));
+                (clearTimeout(this.newSubscriptionTimeoutId), (this.newSubscriptionTimeoutId = void 0)),
+            null != this.virtualCurrencyUpdateTimeoutId &&
+                (clearTimeout(this.virtualCurrencyUpdateTimeoutId), (this.virtualCurrencyUpdateTimeoutId = void 0));
     }
 }
-let _ = new d();
+let f = new _();
