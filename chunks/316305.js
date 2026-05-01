@@ -4,5 +4,4 @@ e.exports = {
     Ad: "newBadge__40caf",
     E_: "bottomRow__40caf",
     mY: "topRow__40caf",
-    OI: "shareButton__40caf",
 };
