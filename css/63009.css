@@ -587,8 +587,8 @@ body .headerAnimation_b54a5b {
 }
 
 .card_ac86f6.giftSelectionModalContext_ac86f6 .cardTitle_ac86f6 {
-    font-size: 1.875rem;
-    line-height: 1.5625rem
+    font-size: 30px;
+    line-height: 25px
 }
 
 .card_ac86f6.borderGradient_ac86f6 {
@@ -803,9 +803,9 @@ body .headerAnimation_b54a5b {
 }
 
 .cardTitle_ac86f6 {
-    font-size: 2rem;
+    font-size: 32px;
     font-style: italic;
-    line-height: 1.6875rem;
+    line-height: 27px;
     text-transform: uppercase
 }
 

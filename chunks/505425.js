@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 537905, Version Hash: dc828772029ec7b25d93220fd6475be244465b81`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 537973, Version Hash: 8a4fac39f7e73f516410b2e74c8bfa3427d4f01e`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18229,7 +18229,7 @@ let SC = "isHideDevBanner",
                     className: t2()(Sy.Wz, Sy.mr),
                     children: [
                         (0, k.jsx)(SN, { className: Sy.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "537905" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "537973" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -37248,9 +37248,10 @@ class UF {
         switch (e.type) {
             case UU.STREAM:
                 if ((null != t && (0, oM.TZ)(t, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId)) {
-                    let t = e.sourceId.split(":")[1];
+                    let t = e.sourceId.indexOf(":") + 1,
+                        i = e.sourceId.substring(t);
                     is.A.setGoLiveSource({
-                        cameraSettings: { videoDeviceGuid: t, audioDeviceGuid: e.audioSourceId },
+                        cameraSettings: { videoDeviceGuid: i, audioDeviceGuid: e.audioSourceId },
                         qualityOptions: { preset: n.preset, resolution: n.resolution, frameRate: n.fps },
                         context: il.x.STREAM,
                     });
