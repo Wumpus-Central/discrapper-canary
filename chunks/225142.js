@@ -1,96 +1,95 @@
-"use strict";
-n.d(t, { aW: () => m, ag: () => E, bN: () => g, eC: () => I, qo: () => A });
+n.d(t, { aW: () => h, ag: () => T, bN: () => S, eC: () => f, qo: () => N });
 var i = n(636537),
-    r = n(228366),
-    s = n(720149),
-    a = n(56562),
-    o = n(164956),
-    l = n(378570),
-    u = n(734057),
-    c = n(174459),
-    d = n(935208),
-    _ = n(701785),
-    f = n(374084),
-    h = n(65995),
-    p = n(652215);
-let E = async (e) => {
-        r.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_START", guildId: e });
+    a = n(228366),
+    r = n(720149),
+    s = n(56562),
+    l = n(164956),
+    o = n(378570),
+    d = n(734057),
+    c = n(954571),
+    _ = n(935208),
+    E = n(701785),
+    u = n(374084),
+    A = n(65995),
+    I = n(652215);
+let T = async (e) => {
+        a.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_START", guildId: e });
         try {
-            let t = await i.Bo.get({ url: p.Rsh.GUILD_HOME_SETTINGS(e), oldFormErrors: !0, rejectWithError: !0 }),
-                n = (0, f.Xu)(t.body);
-            return r.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: e, homeSettings: n }), n;
+            let t = await i.Bo.get({ url: I.Rsh.GUILD_HOME_SETTINGS(e), oldFormErrors: !0, rejectWithError: !0 }),
+                n = (0, u.Xu)(t.body);
+            return a.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: e, homeSettings: n }), n;
         } catch (t) {
-            r.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: e });
+            a.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: e });
         }
     },
-    m = async (e) => {
-        if (!o.A.isFullServerPreview(e)) {
-            r.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START", guildId: e });
+    h = async (e) => {
+        if (!l.A.isFullServerPreview(e)) {
+            a.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START", guildId: e });
             try {
-                let t = await i.Bo.get({ url: p.Rsh.GUILD_MEMBER_ACTIONS(e), oldFormErrors: !0, rejectWithError: !0 }),
-                    n = (0, f.xr)(t.body);
+                let t = await i.Bo.get({ url: I.Rsh.GUILD_MEMBER_ACTIONS(e), oldFormErrors: !0, rejectWithError: !0 }),
+                    n = (0, u.xr)(t.body);
                 return (
-                    r.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: e, memberActions: n }), n
+                    a.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: e, memberActions: n }), n
                 );
             } catch (t) {
-                r.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL", guildId: e });
+                a.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL", guildId: e });
             }
         }
     },
-    g = function (e, t) {
+    S = function (e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         if (null == t) return;
-        let i = u.A.getChannel(t),
-            r = _.h.getResourceForChannel(e, t);
+        let i = d.A.getChannel(t),
+            a = E.h.getResourceForChannel(e, t);
         null == e ||
-            o.A.isFullServerPreview(e) ||
+            l.A.isFullServerPreview(e) ||
             null == i ||
-            null == r ||
-            c.default.track(p.HAw.SERVER_GUIDE_CHANNEL_SELECTED, {
+            null == a ||
+            c.default.track(I.HAw.SERVER_GUIDE_CHANNEL_SELECTED, {
                 guild_id: e,
                 channel_id: i.id,
                 server_guide_channel_type: "resource",
                 channel_action_type: -1,
             }),
-            n && (0, l.iN)(t, { navigationReplace: !1 }),
-            s.A.jumpToMessage({
+            n && (0, o.iN)(t, { navigationReplace: !1 }),
+            r.A.jumpToMessage({
                 channelId: t,
-                messageId: d.default.castChannelIdAsMessageId(t),
+                messageId: _.default.castChannelIdAsMessageId(t),
                 flash: !1,
-                jumpType: a.US.INSTANT,
+                jumpType: s.US.INSTANT,
             });
     },
-    A = (e, t) => {
-        let n = u.A.getChannel(t),
-            i = _.h.getActionForChannel(e, t);
+    N = (e, t) => {
+        let n = d.A.getChannel(t),
+            i = E.h.getActionForChannel(e, t);
         null == e ||
-            o.A.isFullServerPreview(e) ||
+            l.A.isFullServerPreview(e) ||
             null == n ||
             null == i ||
-            c.default.track(p.HAw.SERVER_GUIDE_CHANNEL_SELECTED, {
+            c.default.track(I.HAw.SERVER_GUIDE_CHANNEL_SELECTED, {
                 guild_id: e,
                 channel_id: n.id,
                 server_guide_channel_type: "member action",
                 channel_action_type: i.actionType,
             }),
-            (0, l.iN)(t);
+            (0, o.iN)(t);
     },
-    I = (e, t) => {
+    f = (e, t) => {
         if (
-            (r.h.dispatch({ type: "COMPLETE_NEW_MEMBER_ACTION", guildId: e, channelId: t }), o.A.isFullServerPreview(e))
+            (a.h.dispatch({ type: "COMPLETE_NEW_MEMBER_ACTION", guildId: e, channelId: t }), l.A.isFullServerPreview(e))
         )
             return;
-        let n = u.A.getChannel(t),
-            s = _.h.getActionForChannel(e, t);
-        if (null != n && null != s) {
-            let t = d.default.keys(h.A.getCompletedActions(e) ?? {}),
-                i = _.h.getNewMemberActions(e) ?? [];
-            c.default.track(p.HAw.SERVER_GUIDE_ACTION_COMPLETED, {
+        let n = d.A.getChannel(t),
+            r = E.h.getActionForChannel(e, t);
+        if (null != n && null != r) {
+            let t = _.default.keys(A.A.getCompletedActions(e) ?? {}),
+                i = E.h.getNewMemberActions(e) ?? [];
+            c.default.track(I.HAw.SERVER_GUIDE_ACTION_COMPLETED, {
                 guild_id: n.guild_id,
                 channel_id: n.id,
-                channel_action_type: s.actionType,
+                channel_action_type: r.actionType,
                 has_completed_all: i.reduce((e, n) => e && t.includes(n.channelId), !0),
             });
         }
-        i.Bo.post({ url: p.Rsh.GUILD_MEMBER_ACTION_UPDATE(e, t), rejectWithError: !0 });
+        i.Bo.post({ url: I.Rsh.GUILD_MEMBER_ACTION_UPDATE(e, t), rejectWithError: !0 });
     };

@@ -1,59 +1,58 @@
-"use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => E });
 var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(319354),
-    l = n(990078),
-    u = n(939249),
+    a = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    l = n(319354),
+    o = n(990078),
+    d = n(939249),
     c = n(573435),
-    d = n(99553);
-let _ = r.forwardRef(function (e, t) {
+    _ = n(99553);
+let E = a.forwardRef(function (e, t) {
     let {
             icon: n,
-            onClick: r,
-            selected: s = !1,
-            showBadge: _ = !1,
-            disabled: f = !1,
-            color: h,
-            colorClass: p,
-            tooltip: E,
-            "aria-label": m,
-            "aria-expanded": g,
-            "aria-haspopup": A,
-            "data-jump-section": I,
+            onClick: a,
+            selected: r = !1,
+            showBadge: E = !1,
+            disabled: u = !1,
+            color: A,
+            colorClass: I,
+            tooltip: T,
+            "aria-label": h,
+            "aria-expanded": S,
+            "aria-haspopup": N,
+            "data-jump-section": f,
         } = e,
-        T = (0, i.jsx)(n, { size: "sm", color: h ?? "currentColor", colorClass: p });
-    return (0, i.jsx)(l.m, {
+        p = (0, i.jsx)(n, { size: "sm", color: A ?? "currentColor", colorClass: I });
+    return (0, i.jsx)(o.m, {
         position: "bottom",
-        text: E,
+        text: T,
         ariaHidden: !0,
-        children: (0, i.jsx)(u.D, {
+        children: (0, i.jsx)(d.D, {
             innerRef: t,
             tag: "div",
-            onClick: f ? void 0 : r,
-            className: a()(d.vk, { [d.wH]: s, [d.r9]: f }),
+            onClick: u ? void 0 : a,
+            className: s()(_.vk, { [_.wH]: r, [_.r9]: u }),
             role: "button",
-            "aria-label": null != m ? m : E,
-            "aria-haspopup": A,
-            "aria-expanded": g,
-            "data-jump-section": I,
-            "aria-disabled": f,
-            children: _
+            "aria-label": null != h ? h : T,
+            "aria-haspopup": N,
+            "aria-expanded": S,
+            "data-jump-section": f,
+            "aria-disabled": u,
+            children: E
                 ? (0, i.jsxs)("div", {
-                      className: d.fC,
+                      className: _.fC,
                       children: [
                           (0, i.jsx)(c.Ay, {
                               mask: c.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
-                              height: o.E.sm,
-                              width: o.E.sm,
-                              children: T,
+                              height: l.E.sm,
+                              width: l.E.sm,
+                              children: p,
                           }),
-                          (0, i.jsx)("span", { className: d.qS }),
+                          (0, i.jsx)("span", { className: _.qS }),
                       ],
                   })
-                : T,
+                : p,
         }),
     });
 });

@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { Bw: () => o, mZ: () => l, tq: () => a });
+n.d(t, { Bw: () => s, mZ: () => E, tq: () => l });
 var i = n(353640),
     r = n(121894);
-let s = (0, i.v)(() => ({ required: !1, checked: !1, preChecked: !1 })),
-    a = (e) => {
-        (0, r.r)(() => s.setState(e));
+let a = (0, i.v)(() => ({ required: !1, checked: !1, preChecked: !1 })),
+    l = (e) => {
+        (0, r.r)(() => a.setState(e));
     },
-    o = (e) => {
-        (0, r.r)(() => s.setState({ checked: e }));
+    s = (e) => {
+        (0, r.r)(() => a.setState({ checked: e }));
     },
-    l = s;
+    E = a;

@@ -1,0 +1,76 @@
+.striked_e77b99 {
+    opacity: .7;
+    text-decoration: line-through
+}
+
+.priceTagsContainer_f73e93 {
+    align-items: flex-end;
+    display: inline-flex
+}
+
+.price_f73e93 {
+    margin-inline-end: 8px
+}
+
+.premiumIcon_f73e93 {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.premiumIcon_f73e93.fullPrice_f73e93 {
+    margin-inline-end: 2px
+}
+
+.subscribeNow_f5ae75 {
+    cursor: pointer;
+    display: inline;
+    text-decoration: underline
+}
+
+.container_f284f6 {
+    align-items: center;
+    color: var(--text-default);
+    display: flex;
+    flex: 1;
+    margin-inline-end: 8px;
+    opacity: .7;
+    white-space: nowrap
+}
+
+.nitroIcon_f284f6 {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.container__3a77d {
+    background: linear-gradient(180deg, #000 -17.38%, #36266d 109.68%);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    z-index: 1
+}
+
+.headerAsset__3a77d {
+    height: 157px;
+    margin-bottom: 24px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 211px
+}
+
+.benefits__3a77d {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px
+}
+
+.benefitRow__3a77d {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}

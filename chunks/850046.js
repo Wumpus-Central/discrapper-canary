@@ -1,70 +1,69 @@
-"use strict";
-n.d(t, { A: () => p, M: () => h });
+n.d(t, { A: () => f, M: () => m });
 var i = n(64700),
-    r = n(205338),
-    s = n(87075),
-    a = n(429913),
-    o = n(201718),
-    l = n(207803),
+    l = n(205338),
+    r = n(87075),
+    s = n(429913),
+    a = n(201718),
+    o = n(207803),
     u = n(403362),
-    c = n(789069),
-    d = n(385771);
-let _ = {
-    [r.A.MARVEL_RIVALS]: (e) => {
+    d = n(789069),
+    c = n(385771);
+let h = {
+    [l.A.MARVEL_RIVALS]: (e) => {
         let t = e.data?.primary?.season,
             n = e.data?.primary?.rank_name,
-            i = (0, c.a)(e.data?.primary?.rank_image),
-            r = (0, c.a)(e.data?.primary?.featured_played_character_image);
-        return null == t || null == n || null == r
+            i = (0, d.a)(e.data?.primary?.rank_image),
+            l = (0, d.a)(e.data?.primary?.featured_played_character_image);
+        return null == t || null == n || null == l
             ? null
-            : { previewText: `${t}: ${n}`, previewTextShort: n, previewIcon: i, previewImage: r };
+            : { previewText: `${t}: ${n}`, previewTextShort: n, previewIcon: i, previewImage: l };
     },
-    [r.A.WUTHERING_WAVES]: (e, t) => {
+    [l.A.WUTHERING_WAVES]: (e, t) => {
         var n;
         let i,
-            r = e.username,
-            a =
-                ((n = s.f.NUMBER),
+            l = e.username,
+            s =
+                ((n = r.f.NUMBER),
                 null == (i = e.data?.dynamic?.find((e) => "union_level" === e.name)) || i.type !== n ? null : i.value),
-            o = (0, c.a)(e.data?.primary?.featured_played_character_image);
-        return null == r || null == a || null == o
+            a = (0, d.a)(e.data?.primary?.featured_played_character_image);
+        return null == l || null == s || null == a
             ? null
             : {
-                  previewText: `${r}: Level ${t.format(a)}`,
-                  previewTextShort: `Level ${t.format(a)}`,
+                  previewText: `${l}: Level ${t.format(s)}`,
+                  previewTextShort: `Level ${t.format(s)}`,
                   previewIcon: null,
-                  previewImage: o,
+                  previewImage: a,
               };
     },
 };
-function f(e, t, n, i) {
-    let r = t.getIconURL(16);
-    if (null == r) return null;
-    let s = _[e.widgetTemplateId](n, i);
-    return null == s ? null : { application: { id: t.id, name: t.name, icon: r }, ...s };
+function p(e, t, n, i) {
+    let l = t.getIconURL(16);
+    if (null == l) return null;
+    let r = h[e.widgetTemplateId](n, i);
+    return null == r ? null : { application: { id: t.id, name: t.name, icon: l }, ...r };
 }
-function h(e, t, n, i) {
-    return f(e, t, n, i);
+function m(e, t, n, i) {
+    return p(e, t, n, i);
 }
-function p(e, t) {
-    let n = (0, a.A)(t),
-        { data: r } = (0, l.FY)(),
-        { data: s } = (0, o.P)(e),
-        c = (0, d.A)();
+function f(e, t) {
+    let n = (0, s.A)(t),
+        { data: l } = (0, o.FY)(),
+        { data: r } = (0, a.P)(e),
+        d = (0, c.A)();
     return i.useMemo(
         () =>
             Object.fromEntries(
                 t
                     .map((e) => {
-                        let t = r?.find((t) => t.applicationId === e),
+                        let t = l?.find((t) => t.applicationId === e),
                             i = n.find((t) => t?.id === e),
-                            a = s?.find((t) => t.application_id === e)?.profile;
-                        if (null == t || null == i || null == a) return null;
-                        let o = f(t, i, a, c);
-                        return null == o ? null : [e, o];
+                            s = r?.find((t) => t.application_id === e)?.profile;
+                        if (null == t || null == i || null == s) return null;
+                        let a = p(t, i, s, d);
+                        return null == a ? null : [e, a];
                     })
                     .filter(u.Vq),
             ),
-        [n, r, s, c, t],
+        [n, l, r, d, t],
     );
 }

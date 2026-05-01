@@ -1,5 +1,4 @@
-"use strict";
-e.exports = !n(503628)(function () {
-    var e = function () {}.bind();
-    return "function" != typeof e || e.hasOwnProperty("prototype");
+r.exports = !e(503628)(function () {
+    var r = function () {}.bind();
+    return "function" != typeof r || r.hasOwnProperty("prototype");
 });

@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { g: () => i });
-let i = (e) => {
+r.d(t, { g: () => n });
+let n = (e) => {
     switch (e) {
         case "top":
             return "bottom";

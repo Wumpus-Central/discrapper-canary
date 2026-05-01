@@ -1,41 +1,40 @@
-"use strict";
 n.d(t, {
-    C8: () => _,
-    G1: () => u,
-    N$: () => o.Key,
-    Nu: () => h,
-    RX: () => m,
-    V8: () => f,
+    C8: () => E,
+    G1: () => d,
+    N$: () => l.Key,
+    Nu: () => A,
+    RX: () => h,
+    V8: () => u,
     Yy: () => c,
-    dh: () => E,
-    g$: () => p,
-    mi: () => l,
-    zY: () => d,
+    dh: () => T,
+    g$: () => I,
+    mi: () => o,
+    zY: () => _,
 });
 var i,
+    a,
     r,
     s,
-    a,
-    o = n(16336);
-let l = o.Key.F6,
-    u = new Map([
-        [o.Key.F6, "f6"],
-        [o.Key.Tab, "tab"],
-        [o.Key.ArrowDown, "down"],
-        [o.Key.ArrowUp, "up"],
-        [o.Key.ArrowLeft, "left"],
-        [o.Key.ArrowRight, "right"],
-        [o.Key.Home, "home"],
-        [o.Key.End, "end"],
+    l = n(16336);
+let o = l.Key.F6,
+    d = new Map([
+        [l.Key.F6, "f6"],
+        [l.Key.Tab, "tab"],
+        [l.Key.ArrowDown, "down"],
+        [l.Key.ArrowUp, "up"],
+        [l.Key.ArrowLeft, "left"],
+        [l.Key.ArrowRight, "right"],
+        [l.Key.Home, "home"],
+        [l.Key.End, "end"],
     ]),
     c = new Set(["tab", "shift+tab", "down", "up", "left", "right", "home", "end"]);
-var d =
+var _ =
     (((i = {})[(i.KEYBOARD_KEY = 0)] = "KEYBOARD_KEY"),
     (i[(i.MOUSE_BUTTON = 1)] = "MOUSE_BUTTON"),
     (i[(i.KEYBOARD_MODIFIER_KEY = 2)] = "KEYBOARD_MODIFIER_KEY"),
     (i[(i.GAMEPAD_BUTTON = 3)] = "GAMEPAD_BUTTON"),
     i);
-let _ = Object.freeze({
+let E = Object.freeze({
         esc: 9,
         f1: 67,
         f2: 68,
@@ -154,7 +153,7 @@ let _ = Object.freeze({
         "track back": 173,
         "track skip": 171,
     }),
-    f = Object.freeze({
+    u = Object.freeze({
         a: 4,
         s: 22,
         d: 7,
@@ -269,7 +268,7 @@ let _ = Object.freeze({
         down: 81,
         up: 82,
     }),
-    h = Object.freeze({
+    A = Object.freeze({
         a: 65,
         s: 83,
         d: 68,
@@ -404,32 +403,32 @@ let _ = Object.freeze({
             "'": 222,
         }),
     });
-var p =
-        (((r = {})[(r.WINDOWS = 1)] = "WINDOWS"),
-        (r[(r.MACOS = 2)] = "MACOS"),
-        (r[(r.LINUX = 3)] = "LINUX"),
-        (r[(r.BROWSER = 4)] = "BROWSER"),
+var I =
+        (((a = {})[(a.WINDOWS = 1)] = "WINDOWS"),
+        (a[(a.MACOS = 2)] = "MACOS"),
+        (a[(a.LINUX = 3)] = "LINUX"),
+        (a[(a.BROWSER = 4)] = "BROWSER"),
+        a),
+    T =
+        (((r = {}).ENTER = "Enter"),
+        (r.TAB = "Tab"),
+        (r.SPACE = " "),
+        (r.ESCAPE = "Escape"),
+        (r.SHIFT = "Shift"),
+        (r.ARROW_UP = "ArrowUp"),
+        (r.ARROW_DOWN = "ArrowDown"),
+        (r.ARROW_LEFT = "ArrowLeft"),
+        (r.ARROW_RIGHT = "ArrowRight"),
+        (r.HOME = "Home"),
+        (r.END = "End"),
+        (r.BACKSPACE = "Backspace"),
+        (r.DELETE = "Delete"),
+        (r.COMMA = ","),
         r),
-    E =
-        (((s = {}).ENTER = "Enter"),
-        (s.TAB = "Tab"),
-        (s.SPACE = " "),
-        (s.ESCAPE = "Escape"),
-        (s.SHIFT = "Shift"),
-        (s.ARROW_UP = "ArrowUp"),
-        (s.ARROW_DOWN = "ArrowDown"),
-        (s.ARROW_LEFT = "ArrowLeft"),
-        (s.ARROW_RIGHT = "ArrowRight"),
-        (s.HOME = "Home"),
-        (s.END = "End"),
-        (s.BACKSPACE = "Backspace"),
-        (s.DELETE = "Delete"),
-        (s.COMMA = ","),
-        s),
-    m =
-        (((a = {})[(a.Left = 0)] = "Left"),
-        (a[(a.Right = 1)] = "Right"),
-        (a[(a.Center = 2)] = "Center"),
-        (a[(a.Back = 3)] = "Back"),
-        (a[(a.Forward = 4)] = "Forward"),
-        a);
+    h =
+        (((s = {})[(s.Left = 0)] = "Left"),
+        (s[(s.Right = 1)] = "Right"),
+        (s[(s.Center = 2)] = "Center"),
+        (s[(s.Back = 3)] = "Back"),
+        (s[(s.Forward = 4)] = "Forward"),
+        s);

@@ -1,43 +1,42 @@
-"use strict";
 n.d(t, { A: () => s });
-var i = n(652215),
-    r = n(375708);
+var l = n(652215),
+    i = n(985018);
 let s = {
     getStatus: function (e) {
         let t,
             n,
             s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (e) {
-            case i.S7L.CONNECTING:
-                (t = i.vkP.CONNECTING), (n = r.intl.string(r.t.MzW9sN));
+            case l.S7L.CONNECTING:
+                (t = l.vkP.CONNECTING), (n = i.intl.string(i.t.MzW9sN));
                 break;
-            case i.S7L.AUTHENTICATING:
-                (t = i.vkP.CONNECTING), (n = r.intl.string(r.t.GxXwE2));
+            case l.S7L.AUTHENTICATING:
+                (t = l.vkP.CONNECTING), (n = i.intl.string(i.t.GxXwE2));
                 break;
-            case i.S7L.AWAITING_ENDPOINT:
-                (t = i.vkP.CONNECTING), (n = r.intl.string(r.t.xEbu0Q));
+            case l.S7L.AWAITING_ENDPOINT:
+                (t = l.vkP.CONNECTING), (n = i.intl.string(i.t.xEbu0Q));
                 break;
-            case i.S7L.RTC_CONNECTED:
-                (t = i.vkP.CONNECTED), (n = s ? r.intl.string(r.t.HtVOdd) : r.intl.string(r.t.daXg45));
+            case l.S7L.RTC_CONNECTED:
+                (t = l.vkP.CONNECTED), (n = s ? i.intl.string(i.t.HtVOdd) : i.intl.string(i.t.daXg45));
                 break;
-            case i.S7L.RTC_CONNECTING:
-                (t = i.vkP.CONNECTING), (n = r.intl.string(r.t.Gp51dl));
+            case l.S7L.RTC_CONNECTING:
+                (t = l.vkP.CONNECTING), (n = i.intl.string(i.t.Gp51dl));
                 break;
-            case i.S7L.ICE_CHECKING:
-                (t = i.vkP.CONNECTING), (n = r.intl.string(r.t["rdCyA/"]));
+            case l.S7L.ICE_CHECKING:
+                (t = l.vkP.CONNECTING), (n = i.intl.string(i.t["rdCyA/"]));
                 break;
-            case i.S7L.DTLS_CONNECTING:
-                (t = i.vkP.CONNECTING), (n = r.intl.string(r.t.UvB3gV));
+            case l.S7L.DTLS_CONNECTING:
+                (t = l.vkP.CONNECTING), (n = i.intl.string(i.t.UvB3gV));
                 break;
-            case i.S7L.NO_ROUTE:
-                (t = i.vkP.ERROR), (n = r.intl.string(r.t.mGhOIi));
+            case l.S7L.NO_ROUTE:
+                (t = l.vkP.ERROR), (n = i.intl.string(i.t.mGhOIi));
                 break;
-            case i.S7L.RTC_DISCONNECTED:
-                (t = i.vkP.ERROR), (n = r.intl.string(r.t.M7LDmE));
+            case l.S7L.RTC_DISCONNECTED:
+                (t = l.vkP.ERROR), (n = i.intl.string(i.t.M7LDmE));
                 break;
-            case i.S7L.DISCONNECTED:
+            case l.S7L.DISCONNECTED:
             default:
-                (t = i.vkP.ERROR), (n = r.intl.string(r.t.NLKQbx));
+                (t = l.vkP.ERROR), (n = i.intl.string(i.t.NLKQbx));
         }
         return { connectionStatus: t, connectionStatusText: n };
     },

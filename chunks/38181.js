@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(17928),
-    r = n(228366);
-let s = [],
-    a = null;
-class o extends i.Ay.Store {
+    a = n(228366);
+let r = [],
+    s = null;
+class l extends i.Ay.Store {
     static displayName = "ApplicationDirectoryCategoriesStore";
     getLastFetchTimeMs() {
-        return a;
-    }
-    getCategories() {
         return s;
     }
+    getCategories() {
+        return r;
+    }
     getCategory(e) {
-        return s.find((t) => t.id === e);
+        return r.find((t) => t.id === e);
     }
 }
-let l = new o(r.h, {
+let o = new l(a.h, {
     APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS: function (e) {
         let { categories: t } = e;
-        (s = t), (a = Date.now());
+        (r = t), (s = Date.now());
     },
 });

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => l });
 var i = n(972347),
-    r = n(459838),
+    r = n(205693),
     s = n(731854);
 function a(e) {
     return null;
@@ -29,7 +29,6 @@ class l extends i.A {
     enable() {
         return Promise.resolve();
     }
-    setAudioMixerOptions(e) {}
     setInputVolume(e) {}
     setOutputVolume(e) {}
     getAudioInputDevices() {

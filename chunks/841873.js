@@ -1,136 +1,135 @@
-"use strict";
-let i;
+let _;
 function r(e) {
-    i = e;
+    _ = e;
 }
 n.d(t, {
-    BF: () => ti,
-    CF: () => ta,
-    CI: () => tg,
+    BF: () => t_,
+    CF: () => to,
+    CI: () => ty,
     DS: () => e0,
-    Dn: () => eY,
-    E1: () => eq,
-    EH: () => eV,
-    FH: () => Q,
-    FP: () => em,
-    Fs: () => eT,
-    GQ: () => tf,
-    GZ: () => k,
-    Gu: () => tM,
-    HB: () => e4,
-    HS: () => eg,
-    Hz: () => eS,
-    Jp: () => J,
-    LC: () => tS,
-    LM: () => tE,
-    M2: () => eP,
-    Mo: () => eA,
-    N8: () => tG,
-    ND: () => ea,
+    Dn: () => eJ,
+    E1: () => e$,
+    EH: () => eM,
+    FH: () => K,
+    FP: () => eh,
+    Fs: () => eR,
+    GQ: () => tl,
+    GZ: () => B,
+    Gu: () => tq,
+    HB: () => e2,
+    HS: () => ey,
+    Hz: () => ex,
+    Jp: () => Y,
+    LC: () => tx,
+    LM: () => td,
+    M2: () => eH,
+    Mo: () => ep,
+    N8: () => tD,
+    ND: () => eo,
     NG: () => e1,
-    NJ: () => e6,
-    Ng: () => tm,
-    Nh: () => e8,
-    O$: () => eu,
-    Oy: () => K,
+    NJ: () => e7,
+    Ng: () => th,
+    Nh: () => e3,
+    O$: () => ea,
+    Oy: () => P,
     PJ: () => te,
-    PR: () => tD,
-    Ph: () => S,
-    Py: () => tU,
-    QH: () => ed,
-    QR: () => tL,
-    Qg: () => tI,
-    Qn: () => tB,
-    RG: () => ek,
-    RK: () => eE,
-    RR: () => eD,
-    RX: () => ef,
-    Rj: () => tO,
-    Ry: () => eR,
-    SJ: () => eN,
-    Sc: () => tC,
-    Tb: () => q,
-    Tp: () => tp,
-    U8: () => tx,
-    Ux: () => es,
-    Vr: () => eG,
-    Xb: () => ec,
+    PR: () => tC,
+    Ph: () => x,
+    Py: () => tj,
+    QH: () => es,
+    QR: () => tz,
+    Qg: () => tm,
+    Qn: () => tE,
+    RG: () => eB,
+    RK: () => ed,
+    RR: () => eC,
+    RX: () => el,
+    Rj: () => tS,
+    Ry: () => eA,
+    SJ: () => ev,
+    Sc: () => tk,
+    Tb: () => $,
+    Tp: () => tw,
+    U8: () => tO,
+    Ux: () => ei,
+    Vr: () => eD,
+    Xb: () => ef,
     Xc: () => en,
-    Y6: () => t_,
-    YN: () => eb,
-    ZA: () => j,
-    ZJ: () => F,
-    _U: () => X,
+    Y6: () => tb,
+    YN: () => eI,
+    ZA: () => G,
+    ZJ: () => L,
+    _U: () => Z,
     _h: () => tn,
-    _i: () => Z,
-    _m: () => eZ,
-    aI: () => eM,
-    bL: () => tb,
-    c6: () => eL,
-    cV: () => W,
-    ce: () => tA,
+    _i: () => X,
+    _m: () => eX,
+    aI: () => eq,
+    bL: () => tI,
+    c6: () => ez,
+    cV: () => Q,
+    ce: () => tp,
     cy: () => et,
-    dS: () => eJ,
-    dz: () => ep,
-    eF: () => tT,
-    eI: () => eO,
-    eT: () => x,
-    eW: () => ev,
-    fb: () => tu,
-    gG: () => eI,
-    gM: () => $,
-    gR: () => e_,
-    hI: () => eF,
-    he: () => eB,
+    dS: () => eY,
+    dz: () => ew,
+    eF: () => tR,
+    eI: () => eS,
+    eT: () => O,
+    eW: () => eT,
+    fb: () => ta,
+    gG: () => em,
+    gM: () => W,
+    gR: () => eb,
+    hI: () => eL,
+    he: () => eE,
     iA: () => e5,
-    ii: () => to,
-    j1: () => eK,
-    jn: () => ez,
-    ju: () => e2,
-    k2: () => eX,
-    k4: () => eH,
-    kK: () => td,
+    ii: () => tc,
+    j1: () => eP,
+    jn: () => eV,
+    ju: () => e8,
+    k2: () => eZ,
+    k4: () => eU,
+    kK: () => ts,
     l0: () => tr,
     lI: () => r,
-    n8: () => z,
-    ni: () => tN,
-    nv: () => ty,
-    nx: () => M,
-    o: () => eo,
-    p8: () => e3,
-    pD: () => eW,
-    qN: () => tF,
-    qv: () => tw,
-    rf: () => C,
+    n8: () => V,
+    ni: () => tv,
+    nv: () => tF,
+    nx: () => q,
+    o: () => ec,
+    p8: () => e6,
+    pD: () => eQ,
+    qN: () => tL,
+    qv: () => tN,
+    rf: () => k,
     rk: () => tt,
-    rl: () => tv,
-    s5: () => eh,
-    sQ: () => el,
-    sW: () => tk,
-    ss: () => ts,
-    t7: () => y,
-    tZ: () => e$,
-    uo: () => eC,
+    rl: () => tT,
+    s5: () => eg,
+    sQ: () => eu,
+    sW: () => tB,
+    ss: () => ti,
+    t7: () => F,
+    tZ: () => eW,
+    uo: () => ek,
     uw: () => e9,
-    v: () => ew,
-    v2: () => B,
-    vF: () => ey,
-    vU: () => tP,
-    vV: () => ex,
-    vb: () => N,
-    w2: () => e7,
-    w6: () => tl,
+    v: () => eN,
+    v2: () => E,
+    vF: () => eF,
+    vU: () => tH,
+    vV: () => eO,
+    vb: () => v,
+    w2: () => e4,
+    w6: () => tu,
     w9: () => er,
-    wH: () => ei,
-    wJ: () => eQ,
-    wd: () => eU,
-    x0: () => tc,
+    wH: () => e_,
+    wJ: () => eK,
+    wd: () => ej,
+    x0: () => tf,
     x6: () => ee,
-    xV: () => th,
-    xy: () => T,
-    yc: () => tV,
-    yq: () => ej,
-    zE: () => tR,
+    xV: () => tg,
+    xy: () => R,
+    yc: () => tM,
+    yq: () => eG,
+    zE: () => tA,
 }),
     n(393431),
     n(532706),
@@ -141,373 +140,373 @@ n.d(t, {
     n(65162),
     n(321073),
     (e = n.hmd(e));
-let s = 0,
-    a = null;
-function o() {
-    return (null === a || 0 === a.byteLength) && (a = new Uint8Array(i.memory.buffer)), a;
+let i = 0,
+    o = null;
+function c() {
+    return (null === o || 0 === o.byteLength) && (o = new Uint8Array(_.memory.buffer)), o;
 }
-let l = new ("u" < typeof TextEncoder ? (0, e.require)("util").TextEncoder : TextEncoder)("utf-8"),
-    u =
-        "function" == typeof l.encodeInto
+let u = new ("u" < typeof TextEncoder ? (0, e.require)("util").TextEncoder : TextEncoder)("utf-8"),
+    a =
+        "function" == typeof u.encodeInto
             ? function (e, t) {
-                  return l.encodeInto(e, t);
+                  return u.encodeInto(e, t);
               }
             : function (e, t) {
-                  let n = l.encode(e);
+                  let n = u.encode(e);
                   return t.set(n), { read: e.length, written: n.length };
               };
-function c(e, t, n) {
+function f(e, t, n) {
     if (void 0 === n) {
-        let n = l.encode(e),
-            i = t(n.length, 1) >>> 0;
+        let n = u.encode(e),
+            _ = t(n.length, 1) >>> 0;
         return (
-            o()
-                .subarray(i, i + n.length)
+            c()
+                .subarray(_, _ + n.length)
                 .set(n),
-            (s = n.length),
-            i
+            (i = n.length),
+            _
         );
     }
-    let i = e.length,
-        r = t(i, 1) >>> 0,
-        a = o(),
-        c = 0;
-    for (; c < i; c++) {
-        let t = e.charCodeAt(c);
+    let _ = e.length,
+        r = t(_, 1) >>> 0,
+        o = c(),
+        f = 0;
+    for (; f < _; f++) {
+        let t = e.charCodeAt(f);
         if (t > 127) break;
-        a[r + c] = t;
+        o[r + f] = t;
     }
-    if (c !== i) {
-        0 !== c && (e = e.slice(c)), (r = n(r, i, (i = c + 3 * e.length), 1) >>> 0);
-        let t = u(e, o().subarray(r + c, r + i));
-        (c += t.written), (r = n(r, i, c, 1) >>> 0);
+    if (f !== _) {
+        0 !== f && (e = e.slice(f)), (r = n(r, _, (_ = f + 3 * e.length), 1) >>> 0);
+        let t = a(e, c().subarray(r + f, r + _));
+        (f += t.written), (r = n(r, _, f, 1) >>> 0);
     }
-    return (s = c), r;
+    return (i = f), r;
 }
-let d = null;
-function _() {
+let s = null;
+function b() {
     return (
-        (null === d || !0 === d.buffer.detached || (void 0 === d.buffer.detached && d.buffer !== i.memory.buffer)) &&
-            (d = new DataView(i.memory.buffer)),
-        d
+        (null === s || !0 === s.buffer.detached || (void 0 === s.buffer.detached && s.buffer !== _.memory.buffer)) &&
+            (s = new DataView(_.memory.buffer)),
+        s
     );
 }
-let f = new ("u" < typeof TextDecoder ? (0, e.require)("util").TextDecoder : TextDecoder)("utf-8", {
+let l = new ("u" < typeof TextDecoder ? (0, e.require)("util").TextDecoder : TextDecoder)("utf-8", {
     ignoreBOM: !0,
     fatal: !0,
 });
-function h(e, t) {
-    return (e >>>= 0), f.decode(o().subarray(e, e + t));
+function g(e, t) {
+    return (e >>>= 0), l.decode(c().subarray(e, e + t));
 }
-function p(e) {
-    let t = i.__externref_table_alloc();
-    return i.__wbindgen_export_4.set(t, e), t;
+function w(e) {
+    let t = _.__externref_table_alloc();
+    return _.__wbindgen_export_4.set(t, e), t;
 }
-function E(e, t) {
+function d(e, t) {
     try {
         return e.apply(this, t);
     } catch (t) {
-        let e = p(t);
-        i.__wbindgen_exn_store(e);
+        let e = w(t);
+        _.__wbindgen_exn_store(e);
     }
 }
-function m(e) {
+function h(e) {
     return null == e;
 }
-f.decode();
-let g =
+l.decode();
+let y =
     "u" < typeof FinalizationRegistry
         ? { register: () => {}, unregister: () => {} }
         : new FinalizationRegistry((e) => {
-              i.__wbindgen_export_5.get(e.dtor)(e.a, e.b);
+              _.__wbindgen_export_5.get(e.dtor)(e.a, e.b);
           });
-function A(e, t, n, r) {
-    let s = { a: e, b: t, cnt: 1, dtor: n },
-        a = function () {
+function p(e, t, n, r) {
+    let i = { a: e, b: t, cnt: 1, dtor: n },
+        o = function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            s.cnt++;
-            let a = s.a;
-            s.a = 0;
+            i.cnt++;
+            let o = i.a;
+            i.a = 0;
             try {
-                return r(a, s.b, ...t);
+                return r(o, i.b, ...t);
             } finally {
-                0 == --s.cnt ? (i.__wbindgen_export_5.get(s.dtor)(a, s.b), g.unregister(s)) : (s.a = a);
+                0 == --i.cnt ? (_.__wbindgen_export_5.get(i.dtor)(o, i.b), y.unregister(i)) : (i.a = o);
             }
         };
-    return (a.original = s), g.register(a, s, s), a;
+    return (o.original = i), y.register(o, i, i), o;
 }
-function I(e) {
-    let t = i.__wbindgen_export_4.get(e);
-    return i.__externref_table_dealloc(e), t;
+function m(e) {
+    let t = _.__wbindgen_export_4.get(e);
+    return _.__externref_table_dealloc(e), t;
 }
-function T(e) {
+function R(e) {
     let t, n;
     try {
-        let r = i.generateLaunchSignature(e);
-        return (t = r[0]), (n = r[1]), h(r[0], r[1]);
+        let r = _.generateLaunchSignature(e);
+        return (t = r[0]), (n = r[1]), g(r[0], r[1]);
     } finally {
-        i.__wbindgen_free(t, n, 1);
+        _.__wbindgen_free(t, n, 1);
     }
 }
-function S() {
-    return i.initLibdiscore();
+function x() {
+    return _.initLibdiscore();
 }
-function N() {
-    i.crash();
+function v() {
+    _.crash();
 }
-function y(e, t) {
-    return i.rustMultiply(e, t);
+function F(e, t) {
+    return _.rustMultiply(e, t);
 }
-function C(e, t, n, r, s) {
-    i.installLogCallback(e, t, n, r, s);
+function k(e, t, n, r, i) {
+    _.installLogCallback(e, t, n, r, i);
 }
-function v(e, t) {
-    i._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h075cb6f1f85a8e52(
+function T(e, t) {
+    _._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h075cb6f1f85a8e52(
         e,
         t,
     );
 }
-function O(e, t) {
-    i._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hd39d17064ed9c408(
+function S(e, t) {
+    _._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hd39d17064ed9c408(
         e,
         t,
     );
 }
-function R(e, t, n) {
-    i.closure736_externref_shim(e, t, n);
+function A(e, t, n) {
+    _.closure736_externref_shim(e, t, n);
 }
-let b = ["bytes"],
-    D = ["omit", "same-origin", "include"],
-    L = ["same-origin", "no-cors", "cors", "navigate"],
-    w =
+let I = ["bytes"],
+    C = ["omit", "same-origin", "include"],
+    z = ["same-origin", "no-cors", "cors", "navigate"],
+    N =
         "u" < typeof FinalizationRegistry
             ? { register: () => {}, unregister: () => {} }
-            : new FinalizationRegistry((e) => i.__wbg_blockeddomainsstore_free(e >>> 0, 1));
-class M {
+            : new FinalizationRegistry((e) => _.__wbg_blockeddomainsstore_free(e >>> 0, 1));
+class q {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), w.unregister(this), e;
+        return (this.__wbg_ptr = 0), N.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
-        i.__wbg_blockeddomainsstore_free(e, 0);
+        _.__wbg_blockeddomainsstore_free(e, 0);
     }
     static isBlockedDomain(e) {
         let t,
-            n = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
-            r = s,
-            a = i.blockeddomainsstore_isBlockedDomain(n, r);
-        if (a[3]) throw I(a[2]);
-        return 0 !== a[0] && ((t = h(a[0], a[1]).slice()), i.__wbindgen_free(a[0], +a[1], 1)), t;
+            n = f(e, _.__wbindgen_malloc, _.__wbindgen_realloc),
+            r = i,
+            o = _.blockeddomainsstore_isBlockedDomain(n, r);
+        if (o[3]) throw m(o[2]);
+        return 0 !== o[0] && ((t = g(o[0], o[1]).slice()), _.__wbindgen_free(o[0], +o[1], 1)), t;
     }
     static startFetchingBlockedDomains(e) {
-        let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
-            n = s,
-            r = i.blockeddomainsstore_startFetchingBlockedDomains(t, n);
-        if (r[1]) throw I(r[0]);
-    }
-}
-let P =
-    "u" < typeof FinalizationRegistry
-        ? { register: () => {}, unregister: () => {} }
-        : new FinalizationRegistry((e) => i.__wbg_experimentcacher_free(e >>> 0, 1));
-class x {
-    __destroy_into_raw() {
-        let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), P.unregister(this), e;
-    }
-    free() {
-        let e = this.__destroy_into_raw();
-        i.__wbg_experimentcacher_free(e, 0);
-    }
-    static getConfig(e) {
-        let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
-            n = s,
-            r = i.experimentcacher_getConfig(t, n);
-        if (r[2]) throw I(r[1]);
-        return 0 === r[0] ? void 0 : W.__wrap(r[0]);
-    }
-    static clearCache() {
-        let e = i.experimentcacher_clearCache();
-        if (e[1]) throw I(e[0]);
-    }
-    static flushToCache(e) {
-        let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
-            n = s,
-            r = i.experimentcacher_flushToCache(t, n);
-        if (r[1]) throw I(r[0]);
-    }
-}
-let U =
-    "u" < typeof FinalizationRegistry
-        ? { register: () => {}, unregister: () => {} }
-        : new FinalizationRegistry((e) => i.__wbg_fluxapi_free(e >>> 0, 1));
-class k {
-    __destroy_into_raw() {
-        let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), U.unregister(this), e;
-    }
-    free() {
-        let e = this.__destroy_into_raw();
-        i.__wbg_fluxapi_free(e, 0);
-    }
-    connectStore(e) {
-        let t = i.fluxapi_connectStore(this.__wbg_ptr, e);
-        if (t[2]) throw I(t[1]);
-        return I(t[0]);
-    }
-    dispatchAction(e, t) {
-        let n = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
-            r = s;
-        return i.fluxapi_dispatchAction(this.__wbg_ptr, n, r, t);
-    }
-    flushReplicationStates() {
-        return i.fluxapi_flushReplicationStates(this.__wbg_ptr);
-    }
-    getRegisteredActionTypes() {
-        return i.fluxapi_getRegisteredActionTypes(this.__wbg_ptr);
-    }
-    findStoresThatCanHandleActionType(e) {
-        let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
-            n = s;
-        return i.fluxapi_findStoresThatCanHandleActionType(this.__wbg_ptr, t, n);
-    }
-    constructor() {
-        const e = i.fluxapi_new();
-        return (this.__wbg_ptr = e >>> 0), U.register(this, this.__wbg_ptr, this), this;
-    }
-}
-let G =
-    "u" < typeof FinalizationRegistry
-        ? { register: () => {}, unregister: () => {} }
-        : new FinalizationRegistry((e) => i.__wbg_intounderlyingbytesource_free(e >>> 0, 1));
-class F {
-    __destroy_into_raw() {
-        let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), G.unregister(this), e;
-    }
-    free() {
-        let e = this.__destroy_into_raw();
-        i.__wbg_intounderlyingbytesource_free(e, 0);
-    }
-    get autoAllocateChunkSize() {
-        return i.intounderlyingbytesource_autoAllocateChunkSize(this.__wbg_ptr) >>> 0;
-    }
-    pull(e) {
-        return i.intounderlyingbytesource_pull(this.__wbg_ptr, e);
-    }
-    start(e) {
-        i.intounderlyingbytesource_start(this.__wbg_ptr, e);
-    }
-    get type() {
-        return b[i.intounderlyingbytesource_type(this.__wbg_ptr)];
-    }
-    cancel() {
-        let e = this.__destroy_into_raw();
-        i.intounderlyingbytesource_cancel(e);
-    }
-}
-let V =
-    "u" < typeof FinalizationRegistry
-        ? { register: () => {}, unregister: () => {} }
-        : new FinalizationRegistry((e) => i.__wbg_intounderlyingsink_free(e >>> 0, 1));
-class B {
-    __destroy_into_raw() {
-        let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), V.unregister(this), e;
-    }
-    free() {
-        let e = this.__destroy_into_raw();
-        i.__wbg_intounderlyingsink_free(e, 0);
-    }
-    abort(e) {
-        let t = this.__destroy_into_raw();
-        return i.intounderlyingsink_abort(t, e);
-    }
-    close() {
-        let e = this.__destroy_into_raw();
-        return i.intounderlyingsink_close(e);
-    }
-    write(e) {
-        return i.intounderlyingsink_write(this.__wbg_ptr, e);
+        let t = f(e, _.__wbindgen_malloc, _.__wbindgen_realloc),
+            n = i,
+            r = _.blockeddomainsstore_startFetchingBlockedDomains(t, n);
+        if (r[1]) throw m(r[0]);
     }
 }
 let H =
     "u" < typeof FinalizationRegistry
         ? { register: () => {}, unregister: () => {} }
-        : new FinalizationRegistry((e) => i.__wbg_intounderlyingsource_free(e >>> 0, 1));
-class j {
+        : new FinalizationRegistry((e) => _.__wbg_experimentcacher_free(e >>> 0, 1));
+class O {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
         return (this.__wbg_ptr = 0), H.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
-        i.__wbg_intounderlyingsource_free(e, 0);
+        _.__wbg_experimentcacher_free(e, 0);
     }
-    pull(e) {
-        return i.intounderlyingsource_pull(this.__wbg_ptr, e);
+    static getConfig(e) {
+        let t = f(e, _.__wbindgen_malloc, _.__wbindgen_realloc),
+            n = i,
+            r = _.experimentcacher_getConfig(t, n);
+        if (r[2]) throw m(r[1]);
+        return 0 === r[0] ? void 0 : Q.__wrap(r[0]);
     }
-    cancel() {
-        let e = this.__destroy_into_raw();
-        i.intounderlyingsource_cancel(e);
+    static clearCache() {
+        let e = _.experimentcacher_clearCache();
+        if (e[1]) throw m(e[0]);
+    }
+    static flushToCache(e) {
+        let t = f(e, _.__wbindgen_malloc, _.__wbindgen_realloc),
+            n = i,
+            r = _.experimentcacher_flushToCache(t, n);
+        if (r[1]) throw m(r[0]);
     }
 }
-let Y =
+let j =
     "u" < typeof FinalizationRegistry
         ? { register: () => {}, unregister: () => {} }
-        : new FinalizationRegistry((e) => i.__wbg_wasmcacheableexperimentconfig_free(e >>> 0, 1));
-class W {
-    static __wrap(e) {
-        e >>>= 0;
-        let t = Object.create(W.prototype);
-        return (t.__wbg_ptr = e), Y.register(t, t.__wbg_ptr, t), t;
-    }
+        : new FinalizationRegistry((e) => _.__wbg_fluxapi_free(e >>> 0, 1));
+class B {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), Y.unregister(this), e;
+        return (this.__wbg_ptr = 0), j.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
-        i.__wbg_wasmcacheableexperimentconfig_free(e, 0);
+        _.__wbg_fluxapi_free(e, 0);
+    }
+    connectStore(e) {
+        let t = _.fluxapi_connectStore(this.__wbg_ptr, e);
+        if (t[2]) throw m(t[1]);
+        return m(t[0]);
+    }
+    dispatchAction(e, t) {
+        let n = f(e, _.__wbindgen_malloc, _.__wbindgen_realloc),
+            r = i;
+        return _.fluxapi_dispatchAction(this.__wbg_ptr, n, r, t);
+    }
+    flushReplicationStates() {
+        return _.fluxapi_flushReplicationStates(this.__wbg_ptr);
+    }
+    getRegisteredActionTypes() {
+        return _.fluxapi_getRegisteredActionTypes(this.__wbg_ptr);
+    }
+    findStoresThatCanHandleActionType(e) {
+        let t = f(e, _.__wbindgen_malloc, _.__wbindgen_realloc),
+            n = i;
+        return _.fluxapi_findStoresThatCanHandleActionType(this.__wbg_ptr, t, n);
+    }
+    constructor() {
+        const e = _.fluxapi_new();
+        return (this.__wbg_ptr = e >>> 0), j.register(this, this.__wbg_ptr, this), this;
+    }
+}
+let D =
+    "u" < typeof FinalizationRegistry
+        ? { register: () => {}, unregister: () => {} }
+        : new FinalizationRegistry((e) => _.__wbg_intounderlyingbytesource_free(e >>> 0, 1));
+class L {
+    __destroy_into_raw() {
+        let e = this.__wbg_ptr;
+        return (this.__wbg_ptr = 0), D.unregister(this), e;
+    }
+    free() {
+        let e = this.__destroy_into_raw();
+        _.__wbg_intounderlyingbytesource_free(e, 0);
+    }
+    get autoAllocateChunkSize() {
+        return _.intounderlyingbytesource_autoAllocateChunkSize(this.__wbg_ptr) >>> 0;
+    }
+    pull(e) {
+        return _.intounderlyingbytesource_pull(this.__wbg_ptr, e);
+    }
+    start(e) {
+        _.intounderlyingbytesource_start(this.__wbg_ptr, e);
+    }
+    get type() {
+        return I[_.intounderlyingbytesource_type(this.__wbg_ptr)];
+    }
+    cancel() {
+        let e = this.__destroy_into_raw();
+        _.intounderlyingbytesource_cancel(e);
+    }
+}
+let M =
+    "u" < typeof FinalizationRegistry
+        ? { register: () => {}, unregister: () => {} }
+        : new FinalizationRegistry((e) => _.__wbg_intounderlyingsink_free(e >>> 0, 1));
+class E {
+    __destroy_into_raw() {
+        let e = this.__wbg_ptr;
+        return (this.__wbg_ptr = 0), M.unregister(this), e;
+    }
+    free() {
+        let e = this.__destroy_into_raw();
+        _.__wbg_intounderlyingsink_free(e, 0);
+    }
+    abort(e) {
+        let t = this.__destroy_into_raw();
+        return _.intounderlyingsink_abort(t, e);
+    }
+    close() {
+        let e = this.__destroy_into_raw();
+        return _.intounderlyingsink_close(e);
+    }
+    write(e) {
+        return _.intounderlyingsink_write(this.__wbg_ptr, e);
+    }
+}
+let U =
+    "u" < typeof FinalizationRegistry
+        ? { register: () => {}, unregister: () => {} }
+        : new FinalizationRegistry((e) => _.__wbg_intounderlyingsource_free(e >>> 0, 1));
+class G {
+    __destroy_into_raw() {
+        let e = this.__wbg_ptr;
+        return (this.__wbg_ptr = 0), U.unregister(this), e;
+    }
+    free() {
+        let e = this.__destroy_into_raw();
+        _.__wbg_intounderlyingsource_free(e, 0);
+    }
+    pull(e) {
+        return _.intounderlyingsource_pull(this.__wbg_ptr, e);
+    }
+    cancel() {
+        let e = this.__destroy_into_raw();
+        _.intounderlyingsource_cancel(e);
+    }
+}
+let J =
+    "u" < typeof FinalizationRegistry
+        ? { register: () => {}, unregister: () => {} }
+        : new FinalizationRegistry((e) => _.__wbg_wasmcacheableexperimentconfig_free(e >>> 0, 1));
+class Q {
+    static __wrap(e) {
+        e >>>= 0;
+        let t = Object.create(Q.prototype);
+        return (t.__wbg_ptr = e), J.register(t, t.__wbg_ptr, t), t;
+    }
+    __destroy_into_raw() {
+        let e = this.__wbg_ptr;
+        return (this.__wbg_ptr = 0), J.unregister(this), e;
+    }
+    free() {
+        let e = this.__destroy_into_raw();
+        _.__wbg_wasmcacheableexperimentconfig_free(e, 0);
     }
     get treatmentId() {
-        return i.__wbg_get_wasmcacheableexperimentconfig_treatmentId(this.__wbg_ptr);
+        return _.__wbg_get_wasmcacheableexperimentconfig_treatmentId(this.__wbg_ptr);
     }
     set treatmentId(e) {
-        i.__wbg_set_wasmcacheableexperimentconfig_treatmentId(this.__wbg_ptr, e);
+        _.__wbg_set_wasmcacheableexperimentconfig_treatmentId(this.__wbg_ptr, e);
     }
 }
-function K(e, t) {
-    let n = c(String(t), i.__wbindgen_malloc, i.__wbindgen_realloc),
-        r = s;
-    _().setInt32(e + 4, r, !0), _().setInt32(e + 0, n, !0);
+function P(e, t) {
+    let n = f(String(t), _.__wbindgen_malloc, _.__wbindgen_realloc),
+        r = i;
+    b().setInt32(e + 4, r, !0), b().setInt32(e + 0, n, !0);
 }
-function z(e, t) {
+function V(e, t) {
     e.abort(t);
 }
-function $(e) {
+function W(e) {
     e.abort();
 }
-function q() {
-    return E(function (e, t, n, i, r) {
-        e.append(h(t, n), h(i, r));
+function $() {
+    return d(function (e, t, n, _, r) {
+        e.append(g(t, n), g(_, r));
     }, arguments);
 }
-function Z() {
-    return E(function (e) {
+function X() {
+    return d(function (e) {
         return e.arrayBuffer();
     }, arguments);
 }
-function X(e) {
+function Z(e) {
     return e.buffer;
 }
-function Q(e) {
+function K(e) {
     return e.buffer;
 }
-function J(e) {
+function Y(e) {
     let t = e.byobRequest;
-    return m(t) ? 0 : p(t);
+    return h(t) ? 0 : w(t);
 }
 function ee(e) {
     return e.byteLength;
@@ -516,79 +515,79 @@ function et(e) {
     return e.byteOffset;
 }
 function en() {
-    return E(function (e) {
+    return d(function (e) {
         return e.caches;
     }, arguments);
 }
-function ei() {
-    return E(function (e, t) {
+function e_() {
+    return d(function (e, t) {
         return e.call(t);
     }, arguments);
 }
 function er() {
-    return E(function (e, t, n) {
+    return d(function (e, t, n) {
         return e.call(t, n);
     }, arguments);
 }
-function es(e) {
+function ei(e) {
     return clearTimeout(e);
 }
-function ea(e) {
+function eo(e) {
     return clearTimeout(e);
 }
-function eo() {
-    return E(function (e) {
+function ec() {
+    return d(function (e) {
         e.close();
     }, arguments);
 }
-function el() {
-    return E(function (e) {
+function eu() {
+    return d(function (e) {
         e.close();
     }, arguments);
 }
-function eu(e, t) {
+function ea(e, t) {
     return e.delete(t);
 }
-function ec(e) {
+function ef(e) {
     return e.done;
 }
-function ed() {
-    return E(function (e, t) {
+function es() {
+    return d(function (e, t) {
         e.enqueue(t);
     }, arguments);
 }
-function e_(e, t) {
+function eb(e, t) {
     return e.fetch(t);
 }
-function ef(e) {
+function el(e) {
     return fetch(e);
 }
-function eh() {
-    return E(function (e, t) {
+function eg() {
+    return d(function (e, t) {
         var n;
-        globalThis.crypto.getRandomValues(((n = e >>> 0), o().subarray(n / 1, n / 1 + t)));
+        globalThis.crypto.getRandomValues(((n = e >>> 0), c().subarray(n / 1, n / 1 + t)));
     }, arguments);
 }
-function ep() {
-    return E(function (e, t) {
+function ew() {
+    return d(function (e, t) {
         return Reflect.get(e, t);
     }, arguments);
 }
-function eE(e, t) {
+function ed(e, t) {
     return e[t >>> 0];
 }
-function em(e, t) {
+function eh(e, t) {
     return e[t];
 }
-function eg() {
-    return E(function (e, t) {
+function ey() {
+    return d(function (e, t) {
         return Reflect.has(e, t);
     }, arguments);
 }
-function eA(e) {
+function ep(e) {
     return e.headers;
 }
-function eI(e) {
+function em(e) {
     let t;
     try {
         t = e instanceof ArrayBuffer;
@@ -597,7 +596,7 @@ function eI(e) {
     }
     return t;
 }
-function eT(e) {
+function eR(e) {
     let t;
     try {
         t = e instanceof Cache;
@@ -606,7 +605,7 @@ function eT(e) {
     }
     return t;
 }
-function eS(e) {
+function ex(e) {
     let t;
     try {
         t = e instanceof Response;
@@ -615,7 +614,7 @@ function eS(e) {
     }
     return t;
 }
-function eN(e) {
+function ev(e) {
     let t;
     try {
         t = e instanceof Uint8Array;
@@ -624,7 +623,7 @@ function eN(e) {
     }
     return t;
 }
-function ey(e) {
+function eF(e) {
     let t;
     try {
         t = e instanceof Window;
@@ -633,35 +632,35 @@ function ey(e) {
     }
     return t;
 }
-function eC(e) {
+function ek(e) {
     return Array.isArray(e);
 }
-function ev() {
+function eT() {
     return Symbol.iterator;
 }
-function eO(e) {
+function eS(e) {
     return e.length;
 }
-function eR(e) {
+function eA(e) {
     return e.length;
 }
-function eb(e, t) {
+function eI(e, t) {
     return e.match(t);
 }
-function eD() {
-    return E(function () {
+function eC() {
+    return d(function () {
         return new Headers();
     }, arguments);
 }
-function eL(e, t) {
+function ez(e, t) {
     try {
         var n = { a: e, b: t };
         return new Promise((e, t) => {
             let r = n.a;
             n.a = 0;
             try {
-                var s;
-                return (s = n.b), void i.closure775_externref_shim(r, s, e, t);
+                var i;
+                return (i = n.b), void _.closure775_externref_shim(r, i, e, t);
             } finally {
                 n.a = r;
             }
@@ -670,82 +669,82 @@ function eL(e, t) {
         n.a = n.b = 0;
     }
 }
-function ew() {
+function eN() {
     return {};
 }
-function eM() {
+function eq() {
     return new Map();
 }
-function eP() {
+function eH() {
     return [];
 }
-function ex(e) {
+function eO(e) {
     return new Uint8Array(e);
 }
-function eU(e, t) {
-    return Error(h(e, t));
+function ej(e, t) {
+    return Error(g(e, t));
 }
-function ek() {
-    return E(function () {
+function eB() {
+    return d(function () {
         return new AbortController();
     }, arguments);
 }
-function eG(e, t) {
-    return Function(h(e, t));
+function eD(e, t) {
+    return Function(g(e, t));
 }
-function eF(e, t, n) {
+function eL(e, t, n) {
     return new Uint8Array(e, t >>> 0, n >>> 0);
 }
-function eV() {
-    return E(function (e, t) {
+function eM() {
+    return d(function (e, t) {
         return new Response(e, t);
     }, arguments);
 }
-function eB() {
-    return E(function (e, t, n) {
-        return new Request(h(e, t), n);
+function eE() {
+    return d(function (e, t, n) {
+        return new Request(g(e, t), n);
     }, arguments);
 }
-function eH() {
-    return E(function (e) {
+function eU() {
+    return d(function (e) {
         return new Blob(e);
     }, arguments);
 }
-function ej(e) {
+function eG(e) {
     return e.next;
 }
-function eY() {
-    return E(function (e) {
+function eJ() {
+    return d(function (e) {
         return e.next();
     }, arguments);
 }
-function eW(e) {
+function eQ(e) {
     return e.now();
 }
-function eK(e, t, n) {
-    return e.open(h(t, n));
+function eP(e, t, n) {
+    return e.open(g(t, n));
 }
-function ez(e) {
+function eV(e) {
     let t = e.performance;
-    return m(t) ? 0 : p(t);
+    return h(t) ? 0 : w(t);
 }
-function e$(e, t) {
+function eW(e, t) {
     return e.push(t);
 }
-function eq(e, t, n) {
+function e$(e, t, n) {
     return e.put(t, n);
 }
-function eZ(e) {
+function eX(e) {
     queueMicrotask(e);
 }
-function eX(e) {
+function eZ(e) {
     return e.queueMicrotask;
 }
-function eQ(e) {
+function eK(e) {
     return Promise.resolve(e);
 }
-function eJ() {
-    return E(function (e, t) {
+function eY() {
+    return d(function (e, t) {
         e.respond(t >>> 0);
     }, arguments);
 }
@@ -753,37 +752,37 @@ function e0(e, t) {
     return setTimeout(e, t);
 }
 function e1() {
-    return E(function (e, t) {
+    return d(function (e, t) {
         return setTimeout(e, t);
     }, arguments);
 }
-function e2() {
-    return E(function (e, t, n, i, r) {
-        e.set(h(t, n), h(i, r));
+function e8() {
+    return d(function (e, t, n, _, r) {
+        e.set(g(t, n), g(_, r));
     }, arguments);
 }
-function e3(e, t, n) {
+function e6(e, t, n) {
     e[t >>> 0] = n;
 }
-function e6(e, t, n) {
+function e7(e, t, n) {
     e[t] = n;
 }
-function e4(e, t, n) {
+function e2(e, t, n) {
     e.set(t, n >>> 0);
 }
 function e5(e, t, n) {
     return e.set(t, n);
 }
-function e7() {
-    return E(function (e, t, n) {
+function e4() {
+    return d(function (e, t, n) {
         return Reflect.set(e, t, n);
     }, arguments);
 }
-function e8(e, t) {
+function e3(e, t) {
     e.body = t;
 }
 function e9(e, t) {
-    e.credentials = D[t];
+    e.credentials = C[t];
 }
 function te(e, t) {
     e.headers = t;
@@ -792,108 +791,108 @@ function tt(e, t) {
     e.headers = t;
 }
 function tn(e, t, n) {
-    e.method = h(t, n);
+    e.method = g(t, n);
 }
-function ti(e, t) {
-    e.mode = L[t];
+function t_(e, t) {
+    e.mode = z[t];
 }
 function tr(e, t) {
     e.signal = t;
 }
-function ts(e, t) {
+function ti(e, t) {
     e.status = t;
 }
-function ta(e) {
+function to(e) {
     return e.signal;
 }
-function to() {
+function tc() {
     let e = void 0 === n.g ? null : n.g;
-    return m(e) ? 0 : p(e);
-}
-function tl() {
-    let e = "u" < typeof globalThis ? null : globalThis;
-    return m(e) ? 0 : p(e);
+    return h(e) ? 0 : w(e);
 }
 function tu() {
+    let e = "u" < typeof globalThis ? null : globalThis;
+    return h(e) ? 0 : w(e);
+}
+function ta() {
     let e = "u" < typeof self ? null : self;
-    return m(e) ? 0 : p(e);
+    return h(e) ? 0 : w(e);
 }
-function tc() {
+function tf() {
     let e = "u" < typeof window ? null : window;
-    return m(e) ? 0 : p(e);
+    return h(e) ? 0 : w(e);
 }
-function td(e) {
+function ts(e) {
     return e.status;
 }
-function t_() {
-    return E(function (e) {
+function tb() {
+    return d(function (e) {
         return JSON.stringify(e);
     }, arguments);
 }
-function tf(e, t) {
+function tl(e, t) {
     return e.then(t);
 }
-function th(e, t, n) {
+function tg(e, t, n) {
     return e.then(t, n);
 }
-function tp(e, t) {
-    let n = c(t.url, i.__wbindgen_malloc, i.__wbindgen_realloc),
-        r = s;
-    _().setInt32(e + 4, r, !0), _().setInt32(e + 0, n, !0);
+function tw(e, t) {
+    let n = f(t.url, _.__wbindgen_malloc, _.__wbindgen_realloc),
+        r = i;
+    b().setInt32(e + 4, r, !0), b().setInt32(e + 0, n, !0);
 }
-function tE(e) {
+function td(e) {
     return e.value;
 }
-function tm(e) {
+function th(e) {
     let t = e.view;
-    return m(t) ? 0 : p(t);
+    return h(t) ? 0 : w(t);
 }
-function tg(e, t) {
-    console.warn(h(e, t));
+function ty(e, t) {
+    console.warn(g(e, t));
 }
-function tA(e) {
+function tp(e) {
     return e;
 }
-function tI(e) {
+function tm(e) {
     return BigInt.asUintN(64, e);
 }
-function tT(e) {
+function tR(e) {
     return "boolean" == typeof e ? +!!e : 2;
 }
-function tS(e) {
+function tx(e) {
     let t = e.original;
     return 1 == t.cnt-- && ((t.a = 0), !0);
 }
-function tN(e, t, n) {
-    return A(e, t, 553, v);
+function tv(e, t, n) {
+    return p(e, t, 553, T);
 }
-function ty(e, t, n) {
-    return A(e, t, 593, O);
+function tF(e, t, n) {
+    return p(e, t, 593, S);
 }
-function tC(e, t, n) {
-    return A(e, t, 737, R);
+function tk(e, t, n) {
+    return p(e, t, 737, A);
 }
-function tv(e, t) {
-    let n = c(
+function tT(e, t) {
+    let n = f(
             (function e(t) {
                 let n,
-                    i = typeof t;
-                if ("number" == i || "boolean" == i || null == t) return `${t}`;
-                if ("string" == i) return `"${t}"`;
-                if ("symbol" == i) {
+                    _ = typeof t;
+                if ("number" == _ || "boolean" == _ || null == t) return `${t}`;
+                if ("string" == _) return `"${t}"`;
+                if ("symbol" == _) {
                     let e = t.description;
                     return null == e ? "Symbol" : `Symbol(${e})`;
                 }
-                if ("function" == i) {
+                if ("function" == _) {
                     let e = t.name;
                     return "string" == typeof e && e.length > 0 ? `Function(${e})` : "Function";
                 }
                 if (Array.isArray(t)) {
                     let n = t.length,
-                        i = "[";
-                    n > 0 && (i += e(t[0]));
-                    for (let r = 1; r < n; r++) i += ", " + e(t[r]);
-                    return i + "]";
+                        _ = "[";
+                    n > 0 && (_ += e(t[0]));
+                    for (let r = 1; r < n; r++) _ += ", " + e(t[r]);
+                    return _ + "]";
                 }
                 let r = /\[object ([^\]]+)\]/.exec(toString.call(t));
                 if (!r || !(r.length > 1)) return toString.call(t);
@@ -908,60 +907,60 @@ function tv(e, t) {
 ${t.stack}`
                     : n;
             })(t),
-            i.__wbindgen_malloc,
-            i.__wbindgen_realloc,
+            _.__wbindgen_malloc,
+            _.__wbindgen_realloc,
         ),
-        r = s;
-    _().setInt32(e + 4, r, !0), _().setInt32(e + 0, n, !0);
+        r = i;
+    b().setInt32(e + 4, r, !0), b().setInt32(e + 0, n, !0);
 }
-function tO(e, t) {
-    return Error(h(e, t));
+function tS(e, t) {
+    return Error(g(e, t));
 }
-function tR(e, t) {
+function tA(e, t) {
     return e in t;
 }
-function tb() {
-    let e = i.__wbindgen_export_4,
+function tI() {
+    let e = _.__wbindgen_export_4,
         t = e.grow(4);
     e.set(0, void 0), e.set(t + 0, void 0), e.set(t + 1, null), e.set(t + 2, !0), e.set(t + 3, !1);
 }
-function tD(e) {
+function tC(e) {
     return "function" == typeof e;
 }
-function tL(e) {
+function tz(e) {
     return null === e;
 }
-function tw(e) {
+function tN(e) {
     return "object" == typeof e && null !== e;
 }
-function tM(e) {
+function tq(e) {
     return "string" == typeof e;
 }
-function tP(e) {
+function tH(e) {
     return void 0 === e;
 }
-function tx(e, t) {
+function tO(e, t) {
     return e == t;
 }
-function tU() {
-    return i.memory;
-}
-function tk(e, t) {
-    let n = "number" == typeof t ? t : void 0;
-    _().setFloat64(e + 8, m(n) ? 0 : n, !0), _().setInt32(e + 0, !m(n), !0);
-}
-function tG(e) {
-    return e;
-}
-function tF(e, t) {
-    let n = "string" == typeof t ? t : void 0;
-    var r = m(n) ? 0 : c(n, i.__wbindgen_malloc, i.__wbindgen_realloc),
-        a = s;
-    _().setInt32(e + 4, a, !0), _().setInt32(e + 0, r, !0);
-}
-function tV(e, t) {
-    return h(e, t);
+function tj() {
+    return _.memory;
 }
 function tB(e, t) {
-    throw Error(h(e, t));
+    let n = "number" == typeof t ? t : void 0;
+    b().setFloat64(e + 8, h(n) ? 0 : n, !0), b().setInt32(e + 0, !h(n), !0);
+}
+function tD(e) {
+    return e;
+}
+function tL(e, t) {
+    let n = "string" == typeof t ? t : void 0;
+    var r = h(n) ? 0 : f(n, _.__wbindgen_malloc, _.__wbindgen_realloc),
+        o = i;
+    b().setInt32(e + 4, o, !0), b().setInt32(e + 0, r, !0);
+}
+function tM(e, t) {
+    return g(e, t);
+}
+function tE(e, t) {
+    throw Error(g(e, t));
 }

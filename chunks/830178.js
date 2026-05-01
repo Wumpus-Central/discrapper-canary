@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { W: () => o, t: () => l });
+n.d(t, { W: () => a, t: () => l });
 var i = n(627968),
-    r = n(64700),
-    s = n(121894);
-class a {
+    s = n(64700),
+    r = n(121894);
+class o {
     registeredNodes = new Map();
     visibleComponents = new Set();
     animatingComponents = new Set();
@@ -12,7 +11,7 @@ class a {
         if (e) return;
         this.observer = new window.IntersectionObserver(
             (e) => {
-                (0, s.r)(() => {
+                (0, r.r)(() => {
                     e.forEach((e) => {
                         let t = this.registeredNodes.get(e.target);
                         null == t ||
@@ -86,22 +85,22 @@ class a {
         this.observer?.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear();
     }
 }
-let o = r.createContext({
-    manager: new a(!0),
+let a = s.createContext({
+    manager: new o(!0),
     useThoughtfullyAnimated: () => ({ animate: !0, registerRef: () => {} }),
 });
 function l(e) {
     let { children: t } = e,
-        [n] = r.useState(() => {
-            let e = new a();
+        [n] = s.useState(() => {
+            let e = new o();
             return {
                 manager: e,
                 useThoughtfullyAnimated() {
-                    let t = r.useRef(null),
-                        [n, i] = r.useState(!1);
+                    let t = s.useRef(null),
+                        [n, i] = s.useState(!1);
                     return {
                         animate: n,
-                        registerRef: r.useCallback((n) => {
+                        registerRef: s.useCallback((n) => {
                             null != t.current && e.unregisterNode(t.current),
                                 (t.current = n),
                                 null != t.current && e.registerNode(t.current, i);
@@ -110,5 +109,5 @@ function l(e) {
                 },
             };
         });
-    return r.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(o.Provider, { value: n, children: t });
+    return s.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(a.Provider, { value: n, children: t });
 }

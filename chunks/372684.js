@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { Gy: () => o, k9: () => l, nQ: () => u, rb: () => c });
+n.d(t, { Gy: () => l, k9: () => o, nQ: () => d, rb: () => c });
 var i,
+    a,
     r,
     s,
-    a,
-    o =
+    l =
         (((i = {}).MANUAL = "manual"),
         (i.DISTRIBUTED = "distributed"),
         (i.PHRASE = "phrase"),
@@ -14,22 +13,22 @@ var i,
         (i.SPEAKING = "speaking"),
         (i.SOUNDBOARD = "soundboard"),
         i),
-    l =
-        (((r = {}).UNKNOWN = "unknown"),
-        (r.BELOW_MINIMUM = "below_minimum"),
-        (r.MEETS_MINIMUM = "meets_minimum"),
-        (r.MEETS_AUTO_ENABLE = "meets_auto_enable"),
-        r),
-    u = (((s = {}).CLIP = "clip"), (s.SCREENSHOT = "screenshot"), (s.VOICE_CLIP = "voice_clip"), s),
+    o =
+        (((a = {}).UNKNOWN = "unknown"),
+        (a.BELOW_MINIMUM = "below_minimum"),
+        (a.MEETS_MINIMUM = "meets_minimum"),
+        (a.MEETS_AUTO_ENABLE = "meets_auto_enable"),
+        a),
+    d = (((r = {}).CLIP = "clip"), (r.SCREENSHOT = "screenshot"), (r.VOICE_CLIP = "voice_clip"), r),
     c =
-        (((a = {}).KILL = "kill"),
-        (a.MULTIKILL = "multikill"),
-        (a.DEATH = "death"),
-        (a.ASSIST = "assist"),
-        (a.ITEM = "item"),
-        (a.VICTORY = "victory"),
-        (a.DEFEAT = "defeat"),
-        (a.LEVEL_UP = "level_up"),
-        (a.TREASURE = "treasure"),
-        (a.OBJECTIVE_KILL = "objective_kill"),
-        a);
+        (((s = {}).KILL = "kill"),
+        (s.MULTIKILL = "multikill"),
+        (s.DEATH = "death"),
+        (s.ASSIST = "assist"),
+        (s.ITEM = "item"),
+        (s.VICTORY = "victory"),
+        (s.DEFEAT = "defeat"),
+        (s.LEVEL_UP = "level_up"),
+        (s.TREASURE = "treasure"),
+        (s.OBJECTIVE_KILL = "objective_kill"),
+        s);

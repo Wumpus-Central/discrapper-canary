@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { p: () => u });
-var i = n(17928),
-    r = n(166403),
-    s = n(354670),
-    a = n(694080),
-    o = n(313246),
-    l = n(788868);
-function u() {
-    let e = (0, i.bG)([r.A], () => r.A.getPremiumTypeSubscription()),
-        t = s.A.isFetchingOffer(),
-        n = s.A.hasFetchedOffer(),
-        u = (0, o.A)(l.q),
-        c = (0, o.A)(l.EG),
-        d = u ?? c ?? null;
-    return e?.canceledAt == null ? null : null != d ? d : (t || n || (0, a.Vn)(), null);
+u.d(n, { p: () => s });
+var l = u(17928),
+    t = u(166403),
+    c = u(354670),
+    i = u(694080),
+    p = u(313246),
+    r = u(788868);
+function s() {
+    let e = (0, l.bG)([t.A], () => t.A.getPremiumTypeSubscription()),
+        n = c.A.isFetchingOffer(),
+        u = c.A.hasFetchedOffer(),
+        s = (0, p.A)(r.q),
+        h = (0, p.A)(r.EG),
+        a = s ?? h ?? null;
+    return e?.canceledAt == null ? null : null != a ? a : (n || u || (0, i.Vn)(), null);
 }

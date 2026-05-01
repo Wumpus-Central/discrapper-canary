@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { Q: () => u, t: () => l });
+n.d(t, { Q: () => d, t: () => o });
 var i = n(17928),
-    r = n(734057),
-    s = n(71393),
-    a = n(309010),
-    o = n(652215);
-let l = () => {
-        let e = a.A.getVoiceChannelId();
+    a = n(734057),
+    r = n(71393),
+    s = n(309010),
+    l = n(652215);
+let o = () => {
+        let e = s.A.getVoiceChannelId();
         if (null == e) return !1;
-        let t = r.A.getChannel(e);
+        let t = a.A.getChannel(e);
         if (null == t) return !1;
-        let n = s.A.getGuild(t.getGuildId());
-        return null != n && n.features.has(o.GuildFeatures.HUB);
+        let n = r.A.getGuild(t.getGuildId());
+        return null != n && n.features.has(l.GuildFeatures.HUB);
     },
-    u = (e) =>
-        (0, i.bG)([a.A, r.A, s.A], () => {
-            let t = a.A.getVoiceChannelId();
+    d = (e) =>
+        (0, i.bG)([s.A, a.A, r.A], () => {
+            let t = s.A.getVoiceChannelId();
             if (null == t) return !1;
-            let n = r.A.getChannel(t);
+            let n = a.A.getChannel(t);
             if (null == n) return !1;
-            let i = s.A.getGuild(n.getGuildId());
+            let i = r.A.getGuild(n.getGuildId());
             return null != i && i.id === e;
         });

@@ -1,51 +1,50 @@
-"use strict";
-n.d(t, { w: () => p });
+n.d(t, { w: () => I });
 var i = n(17928),
-    r = n(228366),
-    s = n(736056),
-    a = n(174459),
-    o = n(723702),
-    l = n(19575),
-    u = n(652215);
+    a = n(228366),
+    r = n(736056),
+    s = n(954571),
+    l = n(723702),
+    o = n(19575),
+    d = n(652215);
 let c = { hashes: {} };
-async function d() {
-    if (!o.isPlatformEmbedded || !(0, o.isWindows)()) return [];
-    await l.Ay.ensureModule("discord_media");
-    let e = l.Ay.requireModule("discord_media");
+async function _() {
+    if (!l.isPlatformEmbedded || !(0, l.isWindows)()) return [];
+    await o.Ay.ensureModule("discord_media");
+    let e = o.Ay.requireModule("discord_media");
     return (await e.getSystemAnalyticsBlob()) ?? [];
 }
-async function _() {
+async function E() {
     try {
-        let e = (await d()).filter((e) => c.hashes[e.name] !== e.hash);
+        let e = (await _()).filter((e) => c.hashes[e.name] !== e.hash);
         for (let { name: t, hash: n, data: i } of e) {
             let e = { ...i, gpus: i.gpus?.map((e) => JSON.stringify(e)) };
-            a.default.track(u.HAw.HARDWARE_DETECTED, e), ((c = { hashes: { ...c.hashes } }).hashes[t] = n);
+            s.default.track(d.HAw.HARDWARE_DETECTED, e), ((c = { hashes: { ...c.hashes } }).hashes[t] = n);
         }
-        e.length > 0 && h.emitChange();
+        e.length > 0 && A.emitChange();
     } catch (e) {}
 }
-class f extends i.Ay.PersistedStore {
+class u extends i.Ay.PersistedStore {
     static displayName = "SystemAnalyticsStore";
     static persistKey = "SystemAnalyticsStore";
     initialize(e) {
-        (c = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.A);
+        (c = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(r.A);
     }
     getState() {
         return c;
     }
     async info() {
         try {
-            let e = (await d()).find((e) => "hardware_detected" === e.name);
+            let e = (await _()).find((e) => "hardware_detected" === e.name);
             if (null == e) return null;
             return e.data;
         } catch (e) {}
     }
 }
-let h = new f(r.h, {
+let A = new u(a.h, {
     START_SESSION: function () {
-        return _(), !1;
+        return E(), !1;
     },
 });
-function p() {
-    return h.info();
+function I() {
+    return A.info();
 }

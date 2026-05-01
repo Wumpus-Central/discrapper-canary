@@ -1,67 +1,66 @@
-"use strict";
-let i, r;
-n.d(t, { A: () => p });
-var s = n(17928),
-    a = n(636537),
-    o = n(228366),
-    l = n(723702),
-    u = n(652215);
-let c = null,
-    d = null,
-    _ = null;
-(0, l.isDesktop)() &&
+let n, l;
+i.d(t, { A: () => E });
+var r = i(17928),
+    s = i(636537),
+    a = i(228366),
+    u = i(723702),
+    o = i(652215);
+let d = null,
+    c = null,
+    p = null;
+(0, u.isDesktop)() &&
     (window.popupBridge = {
         getReturnUrlPrefix: () => {
-            if (null == i) throw Error("popupBridgeState is unset");
-            return (0, a.TP)() + u.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.kM_.BRAINTREE, i);
+            if (null == n) throw Error("popupBridgeState is unset");
+            return (0, s.TP)() + o.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(o.kM_.BRAINTREE, n);
         },
         open: (e) => {
-            (r = e), window.open(e), h.emitChange();
+            (l = e), window.open(e), h.emitChange();
         },
     });
-class f extends s.Ay.Store {
+class A extends r.Ay.Store {
     static displayName = "BraintreeStore";
     getClient() {
-        return c;
-    }
-    getPayPalClient() {
         return d;
     }
+    getPayPalClient() {
+        return c;
+    }
     getVenmoClient() {
-        return _;
+        return p;
     }
     getLastURL() {
-        return r;
+        return l;
     }
 }
-let h = new f(o.h, {
+let h = new A(a.h, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: function (e) {
             let { client: t } = e;
-            c = t;
+            d = t;
         },
         BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS: function (e) {
             let { paypalClient: t } = e;
-            d = t;
+            c = t;
         },
         BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
-            let { paymentSourceType: t, state: n, path: r, query: s } = e;
-            if (t !== u.hes.PAYPAL || n !== i) return;
-            let a = window.popupBridge.onComplete;
-            "function" == typeof a && a(null, { path: r, queryItems: s });
+            let { paymentSourceType: t, state: i, path: l, query: r } = e;
+            if (t !== o.hes.PAYPAL || i !== n) return;
+            let s = window.popupBridge.onComplete;
+            "function" == typeof s && s(null, { path: l, queryItems: r });
         },
         BILLING_POPUP_BRIDGE_STATE_UPDATE: function (e) {
-            let { paymentSourceType: t, state: n } = e;
-            t === u.hes.PAYPAL && (i = n);
+            let { paymentSourceType: t, state: i } = e;
+            t === o.hes.PAYPAL && (n = i);
         },
         BRAINTREE_TEARDOWN_PAYPAL_CLIENT: function () {
-            d = null;
+            c = null;
         },
         BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: function (e) {
             let { venmoClient: t } = e;
-            _ = t;
+            p = t;
         },
         BRAINTREE_TEARDOWN_VENMO_CLIENT: function () {
-            _ = null;
+            p = null;
         },
     }),
-    p = h;
+    E = h;

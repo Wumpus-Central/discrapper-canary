@@ -3,77 +3,77 @@ var l = n(627968),
     i = n(64700),
     s = n(17928),
     a = n(811893),
-    r = n(717398),
+    r = n(49229),
     o = n(256311),
     c = n(773669),
     d = n(222823),
-    u = n(174459),
+    u = n(954571),
     h = n(883600),
     m = n(232835),
-    A = n(343328),
-    g = n(652215),
+    g = n(343328),
+    A = n(652215),
     p = n(994500),
     f = n(975571),
     C = n(786051),
     E = n(559868),
-    x = n(375708);
+    x = n(985018);
 function S(e) {
     var t, S;
     let _,
         I,
-        T,
-        y,
-        N,
         j,
+        y,
         b,
-        M,
-        { channel: v, children: R } = e,
-        D = (0, s.bG)([p.A], () => p.A.isBlocked(v.getRecipientId()));
-    (S = t = v.id),
+        T,
+        N,
+        v,
+        { channel: M, children: R } = e,
+        D = (0, s.bG)([p.A], () => p.A.isBlocked(M.getRecipientId()));
+    (S = t = M.id),
         (_ = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
         (I = _?.changelogId),
-        (T = (0, s.bG)([c.default], () => c.default.locale)),
-        (y = (0, s.bG)([h.A], () => h.A.getChangelog(I ?? "", T), [I, T])),
-        (N = (0, A.A)(t)),
-        (j = i.useRef(N ? Date.now() : null)),
-        (b = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
-        (M = i.useRef(b)),
+        (j = (0, s.bG)([c.default], () => c.default.locale)),
+        (y = (0, s.bG)([h.A], () => h.A.getChangelog(I ?? "", j), [I, j])),
+        (b = (0, g.A)(t)),
+        (T = i.useRef(b ? Date.now() : null)),
+        (N = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
+        (v = i.useRef(N)),
         i.useEffect(() => {
-            M.current = b;
+            v.current = N;
         }),
         i.useEffect(() => {
-            j.current = Date.now();
-        }, [N]),
+            T.current = Date.now();
+        }, [b]),
         i.useEffect(() => {
-            N && null != I && o.A.fetchChangelog(I, T, !0);
-        }, [I, T, N]),
+            b && null != I && o.A.fetchChangelog(I, j, !0);
+        }, [I, j, b]),
         i.useEffect(() => {
-            N &&
+            b &&
                 null != y &&
-                u.default.track(g.HAw.CHANGE_LOG_OPENED, {
+                u.default.track(A.HAw.CHANGE_LOG_OPENED, {
                     change_log_id: `${y.date}:${y.revision}`,
-                    unread_count: M.current,
+                    unread_count: v.current,
                 });
-        }, [N, y]),
+        }, [b, y]),
         i.useEffect(() => {
-            let e = j.current;
+            let e = T.current;
             return () => {
-                N &&
+                b &&
                     null != y &&
                     null != e &&
-                    (u.default.track(g.HAw.CHANGE_LOG_CLOSED, {
+                    (u.default.track(A.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                         change_log_id: `${y.date}:${y.revision}`,
-                        unread_count: M.current,
+                        unread_count: v.current,
                     }),
-                    (j.current = 0));
+                    (T.current = 0));
             };
-        }, [N, y]);
-    let L = (0, A.A)(v.id),
-        P = v.isSystemDM(),
-        k = D && !P && !v.isMultiUserDM(),
+        }, [b, y]);
+    let L = (0, g.A)(M.id),
+        k = M.isSystemDM(),
+        P = D && !k && !M.isMultiUserDM(),
         G = {};
-    if (P) {
+    if (k) {
         let e = L ? x.intl.string(x.t["+KSnWX"]) : x.intl.string(x.t.hvVgAZ);
         (G.message = x.intl.string(x.t.Bt2N7D)),
             (G.subtitle = x.intl.string(x.t["n/Vzkw"])),
@@ -82,18 +82,18 @@ function S(e) {
             (G.onButtonClick = () => {
                 if (L) {
                     open(E.Do),
-                        u.default.track(g.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: E.Do });
+                        u.default.track(A.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: E.Do });
                     return;
                 }
-                open(f.A.getArticleURL(g.MVz.SYSTEM_DMS));
+                open(f.A.getArticleURL(A.MVz.SYSTEM_DMS));
             }),
             (G.imageSrc = n(388668));
     } else
-        k &&
+        P &&
             ((G.message = x.intl.string(x.t["9T6N5/"])),
             (G.buttonText = x.intl.string(x.t.XyHpKH)),
             (G.onButtonClick = () => {
-                r.A.unblockUser(v.getRecipientId());
+                r.A.unblockUser(M.getRecipientId());
             }));
     return (0, l.jsx)(C.A, { ...G, children: R });
 }

@@ -448,6 +448,7 @@
     inset-inline: var(--space-8) var(--space-16);
     min-height: 24px;
     position: absolute;
+    text-transform: capitalize;
     transition: opacity .15s;
     z-index: 2
 }

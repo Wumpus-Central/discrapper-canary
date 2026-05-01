@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { c$: () => o, Nh: () => l, kQ: () => u });
-var i,
+n.d(t, { c$: () => l, Nh: () => s, kQ: () => u });
+var o,
     r = n(136722),
-    s = n(441574),
+    i = n(441574),
     a =
-        (((i = {})[(i.INCREASED_FILE_UPLOAD_SIZE = 0)] = "INCREASED_FILE_UPLOAD_SIZE"),
-        (i[(i.INCREASED_GUILD_LIMIT = 1)] = "INCREASED_GUILD_LIMIT"),
-        i);
-function o(e) {
+        (((o = {})[(o.INCREASED_FILE_UPLOAD_SIZE = 0)] = "INCREASED_FILE_UPLOAD_SIZE"),
+        (o[(o.INCREASED_GUILD_LIMIT = 1)] = "INCREASED_GUILD_LIMIT"),
+        o);
+function l(e) {
     if (null == e) return null;
     let t = {};
-    for (let [n, i] of Object.entries(e.config_by_perk))
+    for (let [n, o] of Object.entries(e.config_by_perk))
         t[n] = {
-            source: i.source,
+            source: o.source,
             kind: (function (e) {
                 if (null != e.kind)
                     switch (e.kind.type) {
@@ -23,18 +22,18 @@ function o(e) {
                         default:
                             return;
                     }
-            })(i),
+            })(o),
         };
     return { activePerksBitmask: e.active_perks_bitmask, configByPerk: t, rulesVersion: e.rules_version };
 }
-function l(e, t) {
+function s(e, t) {
     if (null == e) return !1;
     let n = e.activePerksBitmask,
-        i = Math.floor(t / 64);
-    return !(i >= n.length) && r.zy(r.iu(n[i]), r.jB(t % 64));
+        o = Math.floor(t / 64);
+    return !(o >= n.length) && r.zy(r.iu(n[o]), r.jB(t % 64));
 }
 function u(e, t) {
     if (null == e) return;
     let n = e.configByPerk[String(t)];
-    return n?.source != null ? n.source : l(e, t) ? [s.g$.SOURCE_NITRO] : void 0;
+    return n?.source != null ? n.source : s(e, t) ? [i.g$.SOURCE_NITRO] : void 0;
 }

@@ -1,9 +1,9 @@
-n.d(t, { A: () => T }), n(321073);
+n.d(t, { A: () => y }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
-    r = n.n(s),
-    a = n(868285),
+    a = n.n(s),
+    r = n(73939),
     o = n(939249),
     d = n(834730),
     c = n(191226),
@@ -11,77 +11,77 @@ var i = n(627968),
     m = n(960538),
     h = n(860227),
     g = n(172218),
-    p = n(317097),
-    A = n(565645),
+    A = n(317097),
+    p = n(565645),
     x = n(114166),
     f = n(891734),
-    E = n(831688),
-    I = n(347353),
-    C = n(866661);
-let v = l.memo(function (e) {
+    C = n(831688),
+    E = n(347353),
+    v = n(866661);
+let I = l.memo(function (e) {
         let t,
             n,
             {
                 useChatFontScaling: l,
                 hideEmoji: s,
-                emoji: a,
+                emoji: r,
                 className: o,
                 count: d,
                 me: c,
                 me_burst: m,
                 burst_count: h,
                 burst_colors: g,
-                readOnly: v,
+                readOnly: I,
                 isLurking: _,
                 isPendingMember: j,
                 type: N,
-                emojiSize: y,
+                emojiSize: T,
             } = e,
-            T = N === u.v.BURST,
-            S = (0, E.IN)(c, m, N),
-            b = (0, f.g)(T && null != g ? g : []),
-            L = l ? C : I,
-            R = T ? h : d,
-            k = (0, x.x)(R, E.$Z),
-            M = {};
-        if (T && null != b) {
+            y = N === u.v.BURST,
+            S = (0, C.IN)(c, m, N),
+            b = (0, f.g)(y && null != g ? g : []),
+            k = l ? v : E,
+            L = y ? h : d,
+            R = (0, x.x)(L, C.$Z),
+            P = {};
+        if (y && null != b) {
             let { accentColor: e, backgroundColor: i, opacity: l } = b,
-                s = (0, p.xp)(i ?? "", l) ?? "";
-            S && (M.borderColor = i), (M.background = s), (t = e), (n = e);
+                s = (0, A.xp)(i ?? "", l) ?? "";
+            S && (P.borderColor = i), (P.background = s), (t = e), (n = e);
         }
-        let P = { minWidth: k, color: t, borderColor: n };
+        let M = { minWidth: R, color: t, borderColor: n };
         return (0, i.jsxs)("div", {
-            className: r()(L.reaction, L.reactionInner, o, { [L.reactionMe]: S, [L.reactionReadOnly]: v && !_ && !j }),
-            style: M,
+            className: a()(k.reaction, k.reactionInner, o, { [k.reactionMe]: S, [k.reactionReadOnly]: I && !_ && !j }),
+            style: P,
             children: [
-                (0, i.jsx)(A.A, {
-                    className: r()({ [L.hideEmoji]: s }),
-                    emojiId: a.id,
-                    emojiName: a.name,
-                    size: y,
-                    animated: T && a.animated,
+                (0, i.jsx)(p.A, {
+                    className: a()({ [k.hideEmoji]: s }),
+                    emojiId: r.id,
+                    emojiName: r.name,
+                    size: T,
+                    animated: y && r.animated,
                 }),
-                (0, i.jsx)("div", { className: L.reactionCount, style: P, children: R }),
+                (0, i.jsx)("div", { className: k.reactionCount, style: M, children: L }),
             ],
         });
     }),
     _ = l.memo(function (e) {
         let { showImmediate: t, reactions: n, ...s } = e,
-            [r, a] = l.useState(!1),
+            [a, r] = l.useState(!1),
             [o, d] = l.useTransition(),
             c = l.useCallback(
                 (e) => {
                     !e ||
-                        r ||
+                        a ||
                         o ||
                         d(() => {
-                            a(!0);
+                            r(!0);
                         });
                 },
-                [r, o],
+                [a, o],
             ),
             m = (0, g.K)(c),
-            h = (r && !o) || t ? E.qT : v;
+            h = (a && !o) || t ? C.qT : I;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("div", { ref: m }),
@@ -95,9 +95,9 @@ let v = l.memo(function (e) {
             ],
         });
     });
-var j = n(375708);
+var j = n(985018);
 let N = (e, t) => (null == e && null == t) || e === t;
-class y extends l.PureComponent {
+class T extends l.PureComponent {
     state = { disableTransitionAppear: !0, reactionsCount: this.props.message.reactions.length, isHovered: !1 };
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
@@ -116,24 +116,24 @@ class y extends l.PureComponent {
                 isPendingMember: s,
                 isForumToolbar: u,
                 channel: g,
-                className: p,
-                forceAddReactions: A,
+                className: A,
+                forceAddReactions: p,
                 reactionClassName: x,
                 useChatFontScaling: f,
-                forceHideReactionCreates: E,
-                remainingReactions: v,
+                forceHideReactionCreates: C,
+                remainingReactions: I,
                 combinedReactions: N,
-                visibleReactionsCount: y,
+                visibleReactionsCount: T,
             } = this.props,
-            { disableTransitionAppear: T } = this.state,
-            S = f ? C : I,
-            b = y > 0;
-        if (!b && !A) return null;
-        let L = A || b;
-        return (0, i.jsxs)(a.F, {
+            { disableTransitionAppear: y } = this.state,
+            S = f ? v : E,
+            b = T > 0;
+        if (!b && !p) return null;
+        let k = p || b;
+        return (0, i.jsxs)(r.F, {
             component: "div",
-            className: r()(S.reactions, p),
-            transitionAppear: !T,
+            className: a()(S.reactions, A),
+            transitionAppear: !y,
             role: "group",
             transitionLeave: !1,
             id: (0, h.JH)(e),
@@ -150,38 +150,38 @@ class y extends l.PureComponent {
                     useChatFontScaling: f,
                     className: x,
                 }),
-                v > 0 &&
+                I > 0 &&
                     (0, i.jsx)(o.D, {
                         onClick: (t) => {
                             t.stopPropagation(), (0, c.$)(e);
                         },
-                        className: r()(S.reaction, x, S.remainingReactions),
+                        className: a()(S.reaction, x, S.remainingReactions),
                         "aria-label": j.intl.string(j.t.lfIHs4),
                         children: (0, i.jsxs)(d.E, {
                             className: S.reactionInner,
                             variant: "text-sm/normal",
-                            children: ["+", v],
+                            children: ["+", I],
                         }),
                     }),
                 !t &&
-                    !E &&
+                    !C &&
                     (0, i.jsx)(m.t, {
-                        tabIndex: L || this.state.isHovered ? 0 : -1,
+                        tabIndex: k || this.state.isHovered ? 0 : -1,
                         message: e,
                         channel: g,
                         useChatFontScaling: f,
                         isHovered: this.state.isHovered,
-                        className: r()({ [S.forceShow]: L }),
+                        className: a()({ [S.forceShow]: k }),
                     }),
             ],
         });
     }
 }
-let T = (e) => {
+let y = (e) => {
     let { message: t, maxReactions: n, hoistReaction: s } = e,
         {
-            combinedReactions: r,
-            remainingReactions: a,
+            combinedReactions: a,
+            remainingReactions: r,
             visibleReactionsCount: o,
         } = l.useMemo(() => {
             let e = [],
@@ -191,16 +191,16 @@ let T = (e) => {
                     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
                 })(t.reactions, s),
                 l = null != n && n < i.length ? i.slice(0, n) : i,
-                r = i.length - l.length,
-                a = i.length;
+                a = i.length - l.length,
+                r = i.length;
             return (
                 l.forEach((t) => {
                     t.burst_count > 0 && e.push({ ...t, type: u.v.BURST }),
                         t.count > 0 && e.push({ ...t, type: u.v.NORMAL }),
-                        null != t.me_vote && --a;
+                        null != t.me_vote && --r;
                 }),
-                { combinedReactions: e, visibleReactionsCount: a, remainingReactions: r }
+                { combinedReactions: e, visibleReactionsCount: r, remainingReactions: a }
             );
         }, [s, n, t.reactions]);
-    return (0, i.jsx)(y, { ...e, visibleReactionsCount: o, combinedReactions: r, remainingReactions: a });
+    return (0, i.jsx)(T, { ...e, visibleReactionsCount: o, combinedReactions: a, remainingReactions: r });
 };

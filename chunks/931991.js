@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { ie: () => p, nr: () => h, p_: () => f });
-var i = n(64700),
-    r = n(136722),
-    s = n(17928),
-    a = n(576705),
-    o = n(287809),
-    l = n(860689),
-    u = n(219935),
-    c = n(818348);
+E.d(n, { ie: () => C, nr: () => _, p_: () => N });
+var a = E(64700),
+    l = E(136722),
+    r = E(17928),
+    i = E(576705),
+    t = E(287809),
+    u = E(860689),
+    c = E(219935),
+    s = E(818348);
 let d = {
         canCreateExpressions: !1,
         canCreateGuildEvent: !1,
@@ -16,61 +15,61 @@ let d = {
         canManageGuildExpression: () => !1,
         canManageGuildEvent: () => !1,
     },
-    _ = (e, t, n, i) =>
+    A = (e, n, E, a) =>
         null != e &&
-        (!!n ||
+        (!!E ||
             ("creator_id" in e
-                ? i && null != t && e.creator_id === t.id
+                ? a && null != n && e.creator_id === n.id
                 : "userId" in e
-                  ? i && null != t && e.userId === t.id
-                  : "user" in e && i && null != t && e.user?.id === t.id)),
-    f = (e) => {
-        if (null == e) return [c.xB.CREATE_EVENTS, c.xB.MANAGE_EVENTS];
-        let t = u.d5;
+                  ? a && null != n && e.userId === n.id
+                  : "user" in e && a && null != n && e.user?.id === n.id)),
+    N = (e) => {
+        if (null == e) return [s.xB.CREATE_EVENTS, s.xB.MANAGE_EVENTS];
+        let n = c.d5;
         return (
-            e.isGuildStageVoice() ? (t = u.Ou) : e.isGuildVoice() && (t = u.EN),
-            [r.kg(t, c.xB.CREATE_EVENTS), r.kg(t, c.xB.MANAGE_EVENTS)]
+            e.isGuildStageVoice() ? (n = c.Ou) : e.isGuildVoice() && (n = c.EN),
+            [l.kg(n, s.xB.CREATE_EVENTS), l.kg(n, s.xB.MANAGE_EVENTS)]
         );
     },
-    h = (e) => {
-        let [t, n] = (0, l.fh)(e) ? [c.xB.CREATE_EVENTS, c.xB.MANAGE_EVENTS] : f(e),
-            [r, u, h, p] = (0, s.yK)([a.A], () => [
-                a.A.can(c.xB.CREATE_GUILD_EXPRESSIONS, e),
-                a.A.can(c.xB.MANAGE_GUILD_EXPRESSIONS, e),
-                a.A.can(t, e),
-                a.A.can(n, e),
+    _ = (e) => {
+        let [n, E] = (0, u.fh)(e) ? [s.xB.CREATE_EVENTS, s.xB.MANAGE_EVENTS] : N(e),
+            [l, c, _, C] = (0, r.yK)([i.A], () => [
+                i.A.can(s.xB.CREATE_GUILD_EXPRESSIONS, e),
+                i.A.can(s.xB.MANAGE_GUILD_EXPRESSIONS, e),
+                i.A.can(n, e),
+                i.A.can(E, e),
             ]),
-            E = (0, s.bG)([o.default], () => o.default.getCurrentUser()),
-            m = i.useCallback((e) => _(e, E, u, r), [r, u, E]),
-            g = i.useCallback((e) => _(e, E, p, h), [p, h, E]);
+            S = (0, r.bG)([t.default], () => t.default.getCurrentUser()),
+            x = a.useCallback((e) => A(e, S, c, l), [l, c, S]),
+            G = a.useCallback((e) => A(e, S, C, _), [C, _, S]);
+        return null == e
+            ? d
+            : {
+                  canCreateExpressions: l,
+                  canCreateGuildEvent: _,
+                  canManageAllExpressions: c,
+                  canManageAllEvents: C,
+                  canManageGuildExpression: x,
+                  canManageGuildEvent: G,
+              };
+    },
+    C = function (e) {
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.A,
+            E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : t.default,
+            [a, l] = (0, u.fh)(e) ? [s.xB.CREATE_EVENTS, s.xB.MANAGE_EVENTS] : N(e),
+            r = n.can(s.xB.CREATE_GUILD_EXPRESSIONS, e),
+            c = n.can(s.xB.MANAGE_GUILD_EXPRESSIONS, e),
+            _ = n.can(a, e),
+            C = n.can(l, e),
+            S = E.getCurrentUser();
         return null == e
             ? d
             : {
                   canCreateExpressions: r,
-                  canCreateGuildEvent: h,
-                  canManageAllExpressions: u,
-                  canManageAllEvents: p,
-                  canManageGuildExpression: m,
-                  canManageGuildEvent: g,
-              };
-    },
-    p = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.A,
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
-            [i, r] = (0, l.fh)(e) ? [c.xB.CREATE_EVENTS, c.xB.MANAGE_EVENTS] : f(e),
-            s = t.can(c.xB.CREATE_GUILD_EXPRESSIONS, e),
-            u = t.can(c.xB.MANAGE_GUILD_EXPRESSIONS, e),
-            h = t.can(i, e),
-            p = t.can(r, e),
-            E = n.getCurrentUser();
-        return null == e
-            ? d
-            : {
-                  canCreateExpressions: s,
-                  canCreateGuildEvent: h,
-                  canManageAllExpressions: u,
-                  canManageAllEvents: p,
-                  canManageGuildExpression: (e) => _(e, E, u, s),
-                  canManageGuildEvent: (e) => _(e, E, p, h),
+                  canCreateGuildEvent: _,
+                  canManageAllExpressions: c,
+                  canManageAllEvents: C,
+                  canManageGuildExpression: (e) => A(e, S, c, r),
+                  canManageGuildEvent: (e) => A(e, S, C, _),
               };
     };

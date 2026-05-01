@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => r });
-var i = n(228366);
-let r = {
+l.d(t, { A: () => i });
+var n = l(228366);
+let i = {
     setEnabled(e) {
         this.update({ enabled: e });
     },
     update(e) {
-        for (let t of Object.keys(e)) i.h.dispatch({ type: "STREAMER_MODE_UPDATE", key: t, value: e[t] });
+        for (let t of Object.keys(e)) n.h.dispatch({ type: "STREAMER_MODE_UPDATE", key: t, value: e[t] });
     },
 };

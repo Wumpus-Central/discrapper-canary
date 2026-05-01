@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { A: () => r });
-var i = n(228366);
-let r = {
+t.d(l, { A: () => s });
+var e = t(228366);
+let s = {
     toggleMembersSection() {
-        i.h.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
+        e.h.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
     },
     toggleUserProfileSidebarSection() {
-        i.h.dispatch({ type: "USER_PROFILE_SIDEBAR_TOGGLE_SECTION" });
+        e.h.dispatch({ type: "USER_PROFILE_SIDEBAR_TOGGLE_SECTION" });
     },
     toggleSummariesSection() {
-        i.h.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
+        e.h.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
     },
     toggleConversationsSection() {
-        i.h.dispatch({ type: "CHANNEL_TOGGLE_CONVERSATIONS_SECTION" });
+        e.h.dispatch({ type: "CHANNEL_TOGGLE_CONVERSATIONS_SECTION" });
     },
     openConversationsSection() {
-        i.h.dispatch({ type: "CHANNEL_OPEN_CONVERSATIONS_SECTION" });
+        e.h.dispatch({ type: "CHANNEL_OPEN_CONVERSATIONS_SECTION" });
     },
 };

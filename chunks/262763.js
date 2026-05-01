@@ -1,47 +1,47 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
 var r = n(192308),
-    s = n(730852),
+    s = n(956793),
     a = n(134047),
     o = n(643501),
     l = n(976860),
-    u = n(514581),
-    c = n(741812),
-    d = n(152007),
-    _ = n(867455),
-    f = n(495544),
+    _ = n(514581),
+    d = n(741812),
+    u = n(152007),
+    c = n(867455),
+    E = n(495544),
     h = n(309010),
-    p = n(977997),
-    E = n(174459),
-    m = n(389234),
-    g = n(652215),
-    A = n(64175);
-let I = {
+    m = n(977997),
+    f = n(954571),
+    g = n(389234),
+    A = n(652215),
+    I = n(64175);
+let p = {
     async handleVoiceConnect(e) {
         let {
             channel: t,
-            connected: I,
+            connected: p,
             needSubscriptionToAccess: T,
             locked: S = !1,
             routeDirectlyToChannel: N = !1,
-            bypassChangeModal: y,
-            bypassBlockedWarningModal: C,
-            bypassGuildIdCheck: v = !1,
-            transitionExtras: O,
+            bypassChangeModal: O,
+            bypassBlockedWarningModal: R,
+            bypassGuildIdCheck: C = !1,
+            transitionExtras: y,
         } = e;
         t.isThread() &&
-            (await _.A.unarchiveThreadIfNecessary(t.id),
-            d.A.hasJoined(t.id) || (await _.A.joinThread(t, "Join Voice")));
-        let R = o.default.getRemoteSessionId(),
-            b = p.A.getVoiceStateForSession(f.default.getId(), R),
-            D = b?.channelId === t.id || h.A.getChannelId() === p.A.getCurrentClientVoiceChannelId(t.guild_id),
-            L = c.A.getBlockedUsersForVoiceChannel(t.id),
-            w = c.A.getIgnoredUsersForVoiceChannel(t.id),
-            { autoNavigateChannel: M } = a.M.getConfig({ location: "handleVoiceChannelSelect" });
-        return ((0, u.oE)(new Set([...L, ...w])) && (C = !0), C || S || I || (!(L.size > 0) && !(w.size > 0)))
-            ? !y && !S && (0, m.H)(t)
+            (await c.A.unarchiveThreadIfNecessary(t.id),
+            u.A.hasJoined(t.id) || (await c.A.joinThread(t, "Join Voice")));
+        let D = o.default.getRemoteSessionId(),
+            L = m.A.getVoiceStateForSession(E.default.getId(), D),
+            v = L?.channelId === t.id || h.A.getChannelId() === m.A.getCurrentClientVoiceChannelId(t.guild_id),
+            w = d.A.getBlockedUsersForVoiceChannel(t.id),
+            P = d.A.getIgnoredUsersForVoiceChannel(t.id),
+            { autoNavigateChannel: b } = a.M.getConfig({ location: "handleVoiceChannelSelect" });
+        return ((0, _.oE)(new Set([...w, ...P])) && (R = !0), R || S || p || (!(w.size > 0) && !(P.size > 0)))
+            ? !O && !S && (0, g.H)(t)
                 ? new Promise((e) => {
                       (0, r.openModalLazy)(async () => {
                           let { default: r } = await n.e("12963").then(n.bind(n, 24814));
@@ -52,7 +52,7 @@ let I = {
                                       e(
                                           this.handleVoiceConnect({
                                               channel: t,
-                                              connected: I,
+                                              connected: p,
                                               needSubscriptionToAccess: T,
                                               routeDirectlyToChannel: N,
                                               locked: S,
@@ -63,24 +63,24 @@ let I = {
                               });
                       });
                   })
-                : (S || I || s.default.selectVoiceChannel(t.id),
+                : (S || p || s.default.selectVoiceChannel(t.id),
                   !__OVERLAY__ &&
-                      (I || D || T || N || M) &&
+                      (p || v || T || N || b) &&
                       (function (e) {
                           let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                               n = arguments.length > 2 ? arguments[2] : void 0,
                               i = e.getGuildId();
                           if (null == i && !t)
                               throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");
-                          (0, l.pX)(g.BVt.CHANNEL(i, e.id), n);
-                      })(t, v, O),
+                          (0, l.pX)(A.BVt.CHANNEL(i, e.id), n);
+                      })(t, C, y),
                   !0)
             : new Promise((e) => {
                   (0, r.openModalLazy)(
                       async () => {
                           let { default: r } = await Promise.all([
-                              n.e("65086"),
-                              n.e("4469"),
+                              n.e("80848"),
+                              n.e("42105"),
                               n.e("21537"),
                               n.e("18943"),
                               n.e("42234"),
@@ -93,15 +93,15 @@ let I = {
                               let { onClose: s, transitionState: a } = n;
                               return (0, i.jsx)(r, {
                                   channelId: t.id,
-                                  blockedUserIds: L,
-                                  ignoredUserIds: w,
+                                  blockedUserIds: w,
+                                  ignoredUserIds: P,
                                   transitionState: a,
                                   onClose: s,
                                   onJoin: () =>
                                       e(
                                           this.handleVoiceConnect({
                                               channel: t,
-                                              connected: I,
+                                              connected: p,
                                               needSubscriptionToAccess: T,
                                               routeDirectlyToChannel: N,
                                               locked: S,
@@ -114,12 +114,12 @@ let I = {
                       },
                       {
                           onCloseCallback: () => {
-                              E.default.track(g.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                                  action: A.Qi.DISMISS,
+                              f.default.track(A.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                                  action: I.Qi.DISMISS,
                                   channel_id: t.id,
-                                  blocked_user_ids: Array.from(L),
-                                  ignored_user_ids: Array.from(w),
-                                  warning_surface: A.gD.PRE_JOIN_MODAL,
+                                  blocked_user_ids: Array.from(w),
+                                  ignored_user_ids: Array.from(P),
+                                  warning_surface: I.gD.PRE_JOIN_MODAL,
                               });
                           },
                       },

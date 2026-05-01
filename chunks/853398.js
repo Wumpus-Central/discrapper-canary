@@ -1,44 +1,43 @@
-"use strict";
 n.d(t, { A: () => u });
-var i = n(64700),
+var o = n(64700),
     r = n(17928),
-    s = n(97352),
+    i = n(97352),
     a = n(83617),
-    o = n(788868),
-    l = n(818348);
+    l = n(788868),
+    s = n(818348);
 function u(e) {
     let {
         activeSubscription: t,
         skuIDs: n,
         paymentSourceId: u,
-        isGift: c,
+        isGift: _,
         excludeSubscriptionPlansBySKU: d,
-        checkoutInvoicePreview: _,
+        checkoutInvoicePreview: C,
     } = e;
-    n = n.filter((e) => e !== o.pe.NONE);
-    let f = (0, r.bG)([s.A], () => {
-            let e = s.A.getPlanIdsForSkus(n).filter((e) => !c || o.JM.has(e));
-            return e.length > 0 ? s.A.get(e[0]) : null;
+    n = n.filter((e) => e !== l.pe.NONE);
+    let E = (0, r.bG)([i.A], () => {
+            let e = i.A.getPlanIdsForSkus(n).filter((e) => !_ || l.JM.has(e));
+            return e.length > 0 ? i.A.get(e[0]) : null;
         }),
-        h = null == f ? [] : (0, a._w)(f.id, u, c),
-        p = h.find((e) => e === t?.currency) ?? h[0] ?? l.Yr.USD,
-        E = (0, a.Yk)({
-            initialCurrency: p,
-            subscriptionPlanId: f?.id,
+        p = null == E ? [] : (0, a._w)(E.id, u, _),
+        h = p.find((e) => e === t?.currency) ?? p[0] ?? s.Yr.USD,
+        c = (0, a.Yk)({
+            initialCurrency: h,
+            subscriptionPlanId: E?.id,
             paymentSourceId: u,
-            isGift: c,
+            isGift: _,
             skuIDs: n,
             excludeSubscriptionPlansBySKU: d,
         }),
-        { allowedCurrencies: m, invoiceCurrency: g } = i.useMemo(
+        { allowedCurrencies: A, invoiceCurrency: I } = o.useMemo(
             () =>
-                null == _
+                null == C
                     ? { allowedCurrencies: [], invoiceCurrency: void 0 }
-                    : { allowedCurrencies: _.checkoutContext?.allowed_currencies ?? [], invoiceCurrency: _.currency },
-            [_],
+                    : { allowedCurrencies: C.checkoutContext?.allowed_currencies ?? [], invoiceCurrency: C.currency },
+            [C],
         ),
-        A = m.length > 0 ? m : h,
-        I = E.priceOptions.currency,
-        T = i.useMemo(() => (null != I ? I : null != g ? g : A.length > 0 ? A[0] : void 0), [I, g, A]);
-    return { ...E, currencies: A, displayCurrency: T };
+        y = A.length > 0 ? A : p,
+        m = c.priceOptions.currency,
+        T = o.useMemo(() => (null != m ? m : null != I ? I : y.length > 0 ? y[0] : void 0), [m, I, y]);
+    return { ...c, currencies: y, displayCurrency: T };
 }

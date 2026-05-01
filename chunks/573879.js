@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { Gl: () => r, JE: () => s, ov: () => i });
+n.d(t, { Gl: () => a, JE: () => r, ov: () => i });
 let i = "switch-accounts-modal",
-    r = "multiaccount-login-modal",
-    s = "multiaccount_cta_tooltip_seen";
+    a = "multiaccount-login-modal",
+    r = "multiaccount_cta_tooltip_seen";

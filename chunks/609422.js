@@ -5,9 +5,9 @@ var i = e(627968),
     s = e(331322),
     r = e(292666),
     u = e(123292),
-    o = e(717398),
+    o = e(49229),
     c = e(427262),
-    d = e(375708);
+    d = e(985018);
 function p(t) {
     let { user: n, nickname: e, transitionState: p, onClose: h } = t,
         [g, x] = a.useState(!1),

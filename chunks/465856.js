@@ -1,4 +1,4 @@
-"use strict";
+n.d(t, { A: () => i });
 function i(e) {
     if (null != e.title && null != e.filename) {
         let t = e.filename.lastIndexOf("."),
@@ -7,4 +7,3 @@ function i(e) {
     }
     return e.filename;
 }
-n.d(t, { A: () => i });

@@ -1,83 +1,82 @@
-"use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => _ });
 var i = n(735438),
-    r = n.n(i),
-    s = n(228366),
-    a = n(736130),
-    o = n(594061),
-    l = n(822382),
-    u = n(23667),
+    a = n.n(i),
+    r = n(228366),
+    s = n(736130),
+    l = n(594061),
+    o = n(822382),
+    d = n(23667),
     c = n(956467);
-let d = {
+let _ = {
     fetchTabMessages: function (e) {
         let {
                 searchContext: t,
                 searchTabs: n,
                 searchQueryString: i,
-                pagination: o,
-                trackExactTotalHits: u,
-                getId: d,
-                getLimit: _,
-                onFetchStart: f,
-                onFetchSuccess: h,
-                searchMode: p,
+                pagination: l,
+                trackExactTotalHits: d,
+                getId: _,
+                getLimit: E,
+                onFetchStart: u,
+                onFetchSuccess: A,
+                searchMode: I,
             } = e,
-            E = (0, l._o)(i),
-            m = (0, l.Zf)(E);
+            T = (0, o._o)(i),
+            h = (0, o.Zf)(T);
         !(function (e) {
             if (!Array.isArray(e.pinned)) return;
             let t = e.pinned.some((e) => !0 === e);
             e.pinned = t;
-        })(m);
-        let g = (0, l.nm)(p),
-            A = { ...m, ...g },
-            I = (0, l.mt)(t);
-        null != I && (0, l.L5)(A, I);
-        let T = c.A.create({
-            id: (0, l.bS)(t),
+        })(h);
+        let S = (0, o.nm)(I),
+            N = { ...h, ...S },
+            f = (0, o.mt)(t);
+        null != f && (0, o.L5)(N, f);
+        let p = c.A.create({
+            id: (0, o.bS)(t),
             searchContext: t,
-            searchQuery: A,
+            searchQuery: N,
             searchTabs: n,
-            getLimit: _,
-            pagination: o,
-            trackExactTotalHits: u,
+            getLimit: E,
+            pagination: l,
+            trackExactTotalHits: d,
         });
-        f?.({ searchContext: t, searchQueryString: i, searchQuery: A });
-        let S = n.map((e) => d(e));
+        u?.({ searchContext: t, searchQueryString: i, searchQuery: N });
+        let m = n.map((e) => _(e));
         return (
-            s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: S }),
-            T.fetch(
+            r.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: m }),
+            p.fetch(
                 (e) => {
                     let { body: n } = e,
                         i = Object.entries(n.tabs);
-                    s.h.dispatch({
+                    r.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: I,
+                        guildId: f,
                         data: i.map((e) => {
                             let [t, i] = e,
-                                s = d(t),
-                                o = i.cursor;
+                                r = _(t),
+                                l = i.cursor;
                             return {
-                                id: s,
+                                id: r,
                                 analyticsId: n.analytics_id,
                                 totalResults: i.total_results,
-                                cursor: null != o && r().isEmpty(o) ? null : o,
+                                cursor: null != l && a().isEmpty(l) ? null : l,
                                 messages: i.messages,
                                 channels: i.channels ?? [],
                                 threads: i.threads ?? [],
-                                members: (i.members ?? []).map((e) => (0, a.A)(e)),
+                                members: (i.members ?? []).map((e) => (0, s.A)(e)),
                                 doingHistoricalIndex: n.doing_deep_historical_index,
                                 documentsIndexed: n.documents_indexed,
                             };
                         }),
                     }),
-                        h?.({ searchContext: t, tabEntries: i });
+                        A?.({ searchContext: t, tabEntries: i });
                 },
                 () => {
-                    s.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: S });
+                    r.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: m });
                 },
                 (e) => {
-                    s.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: S, error: e });
+                    r.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: m, error: e });
                 },
             ),
             !0
@@ -88,33 +87,33 @@ let d = {
                 searchContext: t,
                 searchQueryString: n,
                 pagination: i,
-                searchMode: r,
-                searchEverywhere: o,
+                searchMode: a,
+                searchEverywhere: l,
                 onFetchStart: c,
             } = e,
-            d = (0, l._o)(n),
-            _ = (0, l.Zf)(d),
-            f = (0, l.nm)(r),
-            h = { ..._, ...f, offset: i.offset },
-            p = (0, l.mt)(t);
-        null != p && (0, l.L5)(h, p), o && (h.search_everywhere = !0);
-        let E = (0, l.bS)(t),
-            m = u.A.create({ id: E, searchType: t.type, searchQuery: h });
-        c?.({ searchContext: t, searchQueryString: n, searchQuery: h }),
-            s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [E] }),
-            m.fetch(
+            _ = (0, o._o)(n),
+            E = (0, o.Zf)(_),
+            u = (0, o.nm)(a),
+            A = { ...E, ...u, offset: i.offset },
+            I = (0, o.mt)(t);
+        null != I && (0, o.L5)(A, I), l && (A.search_everywhere = !0);
+        let T = (0, o.bS)(t),
+            h = d.A.create({ id: T, searchType: t.type, searchQuery: A });
+        c?.({ searchContext: t, searchQueryString: n, searchQuery: A }),
+            r.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [T] }),
+            h.fetch(
                 (e) => {
-                    s.h.dispatch({
+                    r.h.dispatch({
                         type: "SEARCH_MESSAGES_SUCCESS",
-                        guildId: p,
+                        guildId: I,
                         data: [
                             {
-                                id: E,
+                                id: T,
                                 analyticsId: e.body.analytics_id,
                                 totalResults: e.body.total_results,
                                 messages: e.body.messages,
                                 threads: e.body.threads ?? [],
-                                members: (e.body.members ?? []).map((e) => (0, a.A)(e)),
+                                members: (e.body.members ?? []).map((e) => (0, s.A)(e)),
                                 doingHistoricalIndex: e.body.doing_deep_historical_index,
                                 documentsIndexed: e.body.documents_indexed,
                                 channels: e.body.channels ?? [],
@@ -124,31 +123,31 @@ let d = {
                     });
                 },
                 () => {
-                    s.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: [E] });
+                    r.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: [T] });
                 },
                 (e) => {
-                    s.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: [E], error: e });
+                    r.h.dispatch({ type: "SEARCH_MESSAGES_FAILURE", ids: [T], error: e });
                 },
             );
     },
     clearSearchRecentMessages: function () {
-        s.h.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
+        r.h.dispatch({ type: "SEARCH_RECENT_MESSAGES_CLEAR" });
     },
     clearAllSearchMesssages: function () {
-        s.h.dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
+        r.h.dispatch({ type: "SEARCH_MESSAGES_CLEAR_ALL" });
     },
     clearSearchMessages: function (e) {
-        s.h.dispatch({ type: "SEARCH_MESSAGES_CLEAR", id: e });
+        r.h.dispatch({ type: "SEARCH_MESSAGES_CLEAR", id: e });
     },
     initializeAutocomplete: function (e) {
-        s.h.dispatch({ type: "SEARCH_AUTOCOMPLETE_INITIALIZE", searchContext: e });
+        r.h.dispatch({ type: "SEARCH_AUTOCOMPLETE_INITIALIZE", searchContext: e });
     },
     updateAutocompleteQuery: function (e) {
-        let { searchContext: t, tokens: n, queryString: i, cursorScope: r } = e;
-        i.trim().length > 0 && o.bW.loadIfNecessary(),
-            s.h.dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext: t, tokens: n, cursorScope: r });
+        let { searchContext: t, tokens: n, queryString: i, cursorScope: a } = e;
+        i.trim().length > 0 && l.bW.loadIfNecessary(),
+            r.h.dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext: t, tokens: n, cursorScope: a });
     },
     markSearchTokensRefreshed: function () {
-        s.h.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
+        r.h.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
     },
 };

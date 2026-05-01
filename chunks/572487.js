@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(17928),
-    r = n(228366),
+n.d(t, { A: () => d });
+var l = n(17928),
+    i = n(228366),
     s = n(652215);
-let a = {};
-function o(e) {
-    let t = a[(e = e ?? "null")];
+let r = {};
+function a(e) {
+    let t = r[(e = e ?? "null")];
     return (
         null == t &&
-            (t = a[e] =
+            (t = r[e] =
                 { state: s.S7L.DISCONNECTED, quality: s.bFR.UNKNOWN, pings: [], hostname: null, lossRate: null }),
         t
     );
 }
-function l(e, t, n) {
-    let i = a[(e = e ?? "null")];
-    return null != i ? t(i) : n;
+function o(e, t, n) {
+    let l = r[(e = e ?? "null")];
+    return null != l ? t(l) : n;
 }
-class u extends i.Ay.Store {
+class c extends l.Ay.Store {
     static displayName = "OverlayRTCConnectionStore";
     getConnectionState(e) {
-        return l(
+        return o(
             e,
             (e) => {
                 let { state: t } = e;
@@ -30,7 +29,7 @@ class u extends i.Ay.Store {
         );
     }
     getQuality(e) {
-        return l(
+        return o(
             e,
             (e) => {
                 let { quality: t } = e;
@@ -40,7 +39,7 @@ class u extends i.Ay.Store {
         );
     }
     getHostname(e) {
-        return l(
+        return o(
             e,
             (e) => {
                 let { hostname: t } = e;
@@ -50,7 +49,7 @@ class u extends i.Ay.Store {
         );
     }
     getPings(e) {
-        return l(
+        return o(
             e,
             (e) => {
                 let { pings: t } = e;
@@ -68,7 +67,7 @@ class u extends i.Ay.Store {
         return 0 === t.length ? 0 : t[t.length - 1]?.value;
     }
     getOutboundLossRate(e) {
-        return l(
+        return o(
             e,
             (e) => {
                 let { lossRate: t } = e;
@@ -78,20 +77,20 @@ class u extends i.Ay.Store {
         );
     }
 }
-let c = new u(r.h, {
+let d = new c(i.h, {
     OVERLAY_INITIALIZE: function (e) {
-        a = e.rtcConnectionStates;
+        r = e.rtcConnectionStates;
     },
     RTC_CONNECTION_STATE: function (e) {
         if (null != e.streamKey) return !1;
-        let t = o(e.lobbyId);
+        let t = a(e.lobbyId);
         (t.state = e.state), (t.hostname = e.hostname);
     },
     RTC_CONNECTION_PING: function (e) {
-        let t = o(e.lobbyId);
+        let t = a(e.lobbyId);
         (t.pings = e.pings), (t.quality = e.quality);
     },
     RTC_CONNECTION_LOSS_RATE: function (e) {
-        o(e.lobbyId).lossRate = e.lossRate;
+        a(e.lobbyId).lossRate = e.lossRate;
     },
 });

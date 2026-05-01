@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { A: () => o, j: () => l });
+n.d(t, { A: () => l, j: () => o });
 var i = n(17928),
-    r = n(967198),
-    s = n(181079),
-    a = n(652215);
-function o(e) {
-    let t = (0, i.bG)([r.A], () => r.A.getGuildId());
+    a = n(967198),
+    r = n(181079),
+    s = n(652215);
+function l(e) {
+    let t = (0, i.bG)([a.A], () => a.A.getGuildId());
     return null != t ? t : e.getGuildId();
 }
-function l(e) {
-    return r.A.getGuildId() !== a.YYv
+function o(e) {
+    return a.A.getGuildId() !== s.YYv
         ? e.getGuildId()
-        : s.A.isFavorite(e.id) || (e.isThread() && s.A.isFavorite(e.parent_id))
-          ? a.YYv
+        : r.A.isFavorite(e.id) || (e.isThread() && r.A.isFavorite(e.parent_id))
+          ? s.YYv
           : e.getGuildId();
 }

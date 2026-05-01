@@ -1,20 +1,20 @@
 s.d(t, { default: () => b });
 var l = s(627968),
     a = s(64700),
-    n = s(189213),
-    i = s(331322),
-    r = s(292666),
-    o = s(452027),
+    i = s(189213),
+    n = s(331322),
+    o = s(292666),
+    r = s(452027),
     h = s(817281),
     d = s(268218),
     p = s(711014),
     u = s(652215),
     c = s(114329),
-    m = s(375708),
+    m = s(985018),
     C = s(818486);
 let g = (0, d.Fe)({
     createPromise: () =>
-        Promise.all([s.e("4469"), s.e("76664"), s.e("3930"), s.e("3663"), s.e("66147")]).then(s.bind(s, 48736)),
+        Promise.all([s.e("42105"), s.e("51507"), s.e("3930"), s.e("3663"), s.e("66147")]).then(s.bind(s, 48736)),
     webpackId: 48736,
 });
 class x extends a.PureComponent {
@@ -40,15 +40,15 @@ class x extends a.PureComponent {
             { name: s, color: a } = this.state;
         return (0, l.jsx)("form", {
             onSubmit: this.handleSubmit,
-            children: (0, l.jsx)(n.Modal, {
+            children: (0, l.jsx)(i.Modal, {
                 title: m.intl.string(m.t.Dx7im5),
                 actions: [{ variant: "primary", text: m.intl.string(m.t.i4jeWR), type: "submit" }],
                 transitionState: e,
                 onClose: t,
-                children: (0, l.jsxs)(i.B, {
+                children: (0, l.jsxs)(n.B, {
                     gap: 16,
                     children: [
-                        (0, l.jsx)(r.k, {
+                        (0, l.jsx)(o.k, {
                             label: m.intl.string(m.t.tGRbjA),
                             maxLength: u.F05,
                             value: s,
@@ -56,7 +56,7 @@ class x extends a.PureComponent {
                             placeholder: m.intl.string(m.t.xV9hVh),
                             autoFocus: !0,
                         }),
-                        (0, l.jsx)(o.D, {
+                        (0, l.jsx)(r.D, {
                             label: m.intl.string(m.t.xpurRF),
                             children: (0, l.jsx)(g, {
                                 className: C.E,

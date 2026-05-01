@@ -1,8 +1,7 @@
-"use strict";
-var i = n(120394),
-    r = Math.max,
-    s = Math.min;
-e.exports = function (e, t) {
-    var n = i(e);
-    return n < 0 ? r(n + t, 0) : s(n, t);
+var n = e(120394),
+    o = Math.max,
+    i = Math.min;
+r.exports = function (r, t) {
+    var e = n(r);
+    return e < 0 ? o(e + t, 0) : i(e, t);
 };

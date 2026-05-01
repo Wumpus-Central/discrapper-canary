@@ -1,12 +1,11 @@
-"use strict";
-var i = n(630017),
-    r = Function.prototype,
-    s = r.call,
-    a = i && r.bind.bind(s, s);
-e.exports = i
-    ? a
-    : function (e) {
+var n = e(630017),
+    o = Function.prototype,
+    i = o.call,
+    u = n && o.bind.bind(i, i);
+r.exports = n
+    ? u
+    : function (r) {
           return function () {
-              return s.apply(e, arguments);
+              return i.apply(r, arguments);
           };
       };

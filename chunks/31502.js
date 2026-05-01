@@ -1,1 +1,15 @@
-s.d(t,{Q:()=>l,l:()=>r});let a=(0,s(945810).mj)({name:"2026-03-croissant",kind:"user",defaultConfig:{enabled:!1},variations:{0:{enabled:!1},1:{enabled:!0}}});function r(e){let{enabled:t}=a.useConfig({location:e});return t}function l(e){let{enabled:t}=a.getConfig({location:e});return t}e});return t}
+s.d(t, { Q: () => l, l: () => r });
+let a = (0, s(945810).mj)({
+    name: "2026-03-croissant",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+function r(e) {
+    let { enabled: t } = a.useConfig({ location: e });
+    return t;
+}
+function l(e) {
+    let { enabled: t } = a.getConfig({ location: e });
+    return t;
+}

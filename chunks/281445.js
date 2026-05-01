@@ -1,4 +1,3 @@
-"use strict";
-n.d(t, { X: () => r });
+n.d(t, { X: () => a });
 var i,
-    r = (((i = {}).SHOCKBYTE = "shockbyte"), i);
+    a = (((i = {}).SHOCKBYTE = "shockbyte"), i);

@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(17928),
-    r = n(228366),
-    s = n(235079);
-let a = { soundpack: s.i.CLASSIC, lastSoundpackExperimentId: null };
-class o extends i.Ay.PersistedStore {
+    l = n(228366),
+    a = n(235079);
+let r = { soundpack: a.i.CLASSIC, lastSoundpackExperimentId: null };
+class s extends i.Ay.PersistedStore {
     static displayName = "SoundpackStore";
     static persistKey = "SoundpackStore";
     initialize(e) {
-        null != e && ((a = e), Object.values(s.i).includes(a.soundpack) || (a.soundpack = s.i.CLASSIC));
+        null != e && ((r = e), Object.values(a.i).includes(r.soundpack) || (r.soundpack = a.i.CLASSIC));
     }
     getState() {
-        return a;
+        return r;
     }
     getSoundpack() {
-        return a.soundpack;
+        return r.soundpack;
     }
     getLastSoundpackExperimentId() {
-        return a.lastSoundpackExperimentId;
+        return r.lastSoundpackExperimentId;
     }
 }
-let l = new o(r.h, {
+let o = new s(l.h, {
     SET_SOUNDPACK: function (e) {
         let { soundpack: t, forExperimentId: n } = e;
-        a = { soundpack: t, lastSoundpackExperimentId: void 0 !== n ? n : a.lastSoundpackExperimentId };
+        r = { soundpack: t, lastSoundpackExperimentId: void 0 !== n ? n : r.lastSoundpackExperimentId };
     },
 });

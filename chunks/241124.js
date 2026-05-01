@@ -1,78 +1,77 @@
-"use strict";
-n.d(t, { Gk: () => p, Sn: () => h, jY: () => f });
-var i = n(627968),
-    r = n(64700),
-    s = n(158390),
+n.d(t, { Gk: () => _, Sn: () => f, jY: () => v });
+var r = n(627968),
+    l = n(64700),
+    u = n(158390),
     a = n(621466),
-    o = n(174459),
-    l = n(38405),
-    u = n(652215);
-let c = r.createContext({ registerAsset: () => () => {}, unregisterAsset: () => {}, hasError: !1, isLoading: !0 });
-function d(e) {
+    s = n(954571),
+    i = n(38405),
+    o = n(652215);
+let d = l.createContext({ registerAsset: () => () => {}, unregisterAsset: () => {}, hasError: !1, isLoading: !0 });
+function c(e) {
     return (0, a.vq)(e, HTMLImageElement)
         ? e.complete
         : (0, a.vq)(e, HTMLVideoElement)
           ? e.readyState >= 2
           : !!(0, a.vq)(e, HTMLDivElement) || !0;
 }
-function _(e) {
+function E(e) {
     return (0, a.vq)(e, HTMLImageElement)
         ? e.getAttribute("src")
         : (0, a.vq)(e, HTMLVideoElement)
           ? (e.querySelectorAll("source")[0]?.getAttribute("src") ?? "video")
           : ((0, a.vq)(e, HTMLDivElement), e.tagName);
 }
-function f(e) {
-    let { children: t, isPreview: n = !1, source: f, questId: h } = e,
-        [p, E] = r.useState(!1),
-        [m, g] = r.useState(new Set()),
-        [A, I] = r.useState(!1),
-        T = r.useRef(!1);
-    r.useEffect(() => {
+function v(e) {
+    let { children: t, isPreview: n = !1, source: v, questId: f } = e,
+        [_, m] = l.useState(!1),
+        [T, g] = l.useState(new Set()),
+        [H, L] = l.useState(!1),
+        p = l.useRef(!1);
+    l.useEffect(() => {
         let e = new Set();
-        for (let t of m) d(t) || e.add(t);
-        e.size !== m.size && g(e);
-    }, [m]);
-    let S = r.useCallback(
+        for (let t of T) c(t) || e.add(t);
+        e.size !== T.size && g(e);
+    }, [T]);
+    let S = l.useCallback(
             (e) => {
-                let { assetNode: t, nodeId: i, errorPrefix: r, errorMessage: s } = e;
-                if (n || null == f) return;
-                let c = (0, a.vq)(t, HTMLVideoElement) ? t.networkState : void 0;
-                o.default.track(u.HAw.QUEST_ASSET_LOADING_FAILURE, {
-                    source: f,
-                    quest_id: h,
-                    asset_id: _(t),
-                    video_network_state: c,
+                let { assetNode: t, nodeId: r, errorPrefix: l, errorMessage: u } = e;
+                if (n || null == v) return;
+                let d = (0, a.vq)(t, HTMLVideoElement) ? t.networkState : void 0;
+                s.default.track(o.HAw.QUEST_ASSET_LOADING_FAILURE, {
+                    source: v,
+                    quest_id: f,
+                    asset_id: E(t),
+                    video_network_state: d,
                 }),
-                    l.A.captureException(Error(`${r}: ${null != s ? `${s}, ` : ""}${_(t)}, ${i}`), {
-                        tags: { source: f },
+                    i.A.captureException(Error(`${l}: ${null != u ? `${u}, ` : ""}${E(t)}, ${r}`), {
+                        tags: { source: v },
                     }),
-                    E(!0);
+                    m(!0);
             },
-            [n, f, h],
+            [n, v, f],
         ),
-        N = r.useCallback((e) => {
+        A = l.useCallback((e) => {
             g((t) => {
                 let n = new Set(t);
                 return n.delete(e), n;
             });
         }, []),
-        y = r.useCallback(
+        M = l.useCallback(
             (e, t) => {
-                I(!0);
+                L(!0);
                 let n = (0, a.vq)(e, HTMLImageElement)
                         ? "load"
                         : (0, a.vq)(e, HTMLVideoElement)
                           ? "canplaythrough"
                           : ((0, a.vq)(e, HTMLDivElement), "load"),
-                    i = new AbortController(),
-                    r = new s.A();
-                function o() {
-                    r.succeed(), N(e), e.removeEventListener(n, o);
+                    r = new AbortController(),
+                    l = new u.A();
+                function s() {
+                    l.succeed(), A(e), e.removeEventListener(n, s);
                 }
-                function l(n) {
-                    c(),
-                        N(e),
+                function i(n) {
+                    d(),
+                        A(e),
                         S({
                             assetNode: e,
                             nodeId: t,
@@ -80,73 +79,73 @@ function f(e) {
                             errorMessage: "message" in n ? n.message : null,
                         });
                 }
-                function u(t) {
-                    r.fails < 3 && (0, a.vq)(e, HTMLVideoElement)
-                        ? r.fail(() => {
+                function o(t) {
+                    l.fails < 3 && (0, a.vq)(e, HTMLVideoElement)
+                        ? l.fail(() => {
                               e.load();
                           })
-                        : l(t);
+                        : i(t);
                 }
                 if (
-                    (d(e) ||
+                    (c(e) ||
                         (g((t) => {
                             let n = new Set(t);
                             return n.add(e), n;
                         }),
-                        e.addEventListener(n, o)),
-                    e.addEventListener("error", l, { signal: i.signal }),
+                        e.addEventListener(n, s)),
+                    e.addEventListener("error", i, { signal: r.signal }),
                     (0, a.vq)(e, HTMLVideoElement))
                 ) {
                     let t = e.querySelectorAll("source"),
                         n = t[t.length - 1];
-                    n?.addEventListener("error", u, { signal: i.signal });
+                    n?.addEventListener("error", o, { signal: r.signal });
                 }
-                function c() {
+                function d() {
                     if (
-                        (r.cancel(),
-                        i.abort(),
-                        e.removeEventListener(n, o),
-                        e.removeEventListener("error", l),
+                        (l.cancel(),
+                        r.abort(),
+                        e.removeEventListener(n, s),
+                        e.removeEventListener("error", i),
                         (0, a.vq)(e, HTMLVideoElement))
                     ) {
                         let t = e.querySelectorAll("source"),
                             n = t[t.length - 1];
-                        n?.removeEventListener("error", u);
+                        n?.removeEventListener("error", o);
                     }
                 }
-                return c;
+                return d;
             },
-            [S, N],
+            [S, A],
         ),
-        C = r.useMemo(() => m.size > 0 || !A, [A, m]);
-    r.useEffect(() => {
-        C || (T.current = !0);
+        C = l.useMemo(() => T.size > 0 || !H, [H, T]);
+    l.useEffect(() => {
+        C || (p.current = !0);
     }, [C]);
-    let v = r.useMemo(
-        () => ({ registerAsset: y, unregisterAsset: N, hasError: p, isLoading: C && !T.current }),
-        [y, N, p, C],
+    let k = l.useMemo(
+        () => ({ registerAsset: M, unregisterAsset: A, hasError: _, isLoading: C && !p.current }),
+        [M, A, _, C],
     );
-    return (0, i.jsx)(c.Provider, { value: v, children: t });
+    return (0, r.jsx)(d.Provider, { value: k, children: t });
 }
-function h(e) {
+function f(e) {
     let { id: t, children: n } = e,
-        { registerAsset: i, unregisterAsset: s } = r.useContext(c),
-        a = r.useRef(null);
+        { registerAsset: r, unregisterAsset: u } = l.useContext(d),
+        a = l.useRef(null);
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             let e,
                 n = a.current;
             return (
-                null != n && (e = i(n, t)),
+                null != n && (e = r(n, t)),
                 () => {
-                    e?.(), null != n && s(n);
+                    e?.(), null != n && u(n);
                 }
             );
-        }, [i, s, t]),
+        }, [r, u, t]),
         n(a)
     );
 }
-function p() {
-    let { hasError: e, isLoading: t } = r.useContext(c);
+function _() {
+    let { hasError: e, isLoading: t } = l.useContext(d);
     return { hasError: e, isLoading: t };
 }

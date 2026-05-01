@@ -6,7 +6,7 @@ var r = n(17928),
     l = n(477782),
     c = n(576705),
     d = n(652215),
-    s = n(375708);
+    s = n(985018);
 function u(e, t) {
     let u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
         h = (0, r.bG)([c.A], () => c.A.can(d.xBc.MANAGE_CHANNELS, e), [e]);
@@ -14,7 +14,7 @@ function u(e, t) {
     let o = () => {
         (0, i.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("65086"),
+                n.e("80848"),
                 n.e("11585"),
                 n.e("3589"),
                 n.e("89916"),
@@ -24,8 +24,8 @@ function u(e, t) {
                 n.e("19193"),
                 n.e("7775"),
                 n.e("58608"),
-                n.e("9431"),
                 n.e("37038"),
+                n.e("9431"),
             ]).then(n.bind(n, 113194));
             return (n) => (0, a.jsx)(t, { ...n, channelType: u, guildId: e.guild_id, categoryId: e.parent_id });
         });

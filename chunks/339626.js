@@ -1,10 +1,9 @@
-"use strict";
 var t = "object" == typeof document && document.all;
-e.exports =
+r.exports =
     void 0 === t && void 0 !== t
-        ? function (e) {
-              return "function" == typeof e || e === t;
+        ? function (r) {
+              return "function" == typeof r || r === t;
           }
-        : function (e) {
-              return "function" == typeof e;
+        : function (r) {
+              return "function" == typeof r;
           };

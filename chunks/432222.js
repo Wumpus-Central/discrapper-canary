@@ -1,42 +1,41 @@
-"use strict";
-n.d(t, { A: () => T, w: () => I });
-var i = n(64700),
-    r = n(989349),
-    s = n.n(r),
-    a = n(17928),
-    o = n(691540),
-    l = n(857250),
-    u = n(97483),
-    c = n(720149),
-    d = n(976860),
-    _ = n(74114),
-    f = n(994500),
-    h = n(58703),
-    p = n(935208),
-    E = n(330001),
-    m = n(652215),
-    g = n(381941),
-    A = n(375708);
-let I = "749054660769218631";
-function T(e, t) {
-    let [n, r] = i.useState(!1),
-        T = i.useCallback(async () => {
-            if (!n) {
-                r(!0), (0, E.W)({ channelId: e.id, source: "DM Channel" }), (0, d.pX)(m.BVt.CHANNEL(m.ME, e.id));
+a.d(i, { A: () => j, w: () => E });
+var t = a(64700),
+    n = a(989349),
+    l = a.n(n),
+    s = a(17928),
+    c = a(691540),
+    r = a(857250),
+    o = a(97483),
+    p = a(720149),
+    d = a(976860),
+    u = a(74114),
+    m = a(994500),
+    f = a(58703),
+    h = a(935208),
+    g = a(330001),
+    I = a(652215),
+    x = a(381941),
+    A = a(985018);
+let E = "749054660769218631";
+function j(e, i) {
+    let [a, n] = t.useState(!1),
+        j = t.useCallback(async () => {
+            if (!a) {
+                n(!0), (0, g.W)({ channelId: e.id, source: "DM Channel" }), (0, d.pX)(I.BVt.CHANNEL(I.ME, e.id));
                 try {
-                    await c.A.sendStickers(e.id, [I], "", { location: g.Hx.SEND_WAVE });
+                    await p.A.sendStickers(e.id, [E], "", { location: x.Hx.SEND_WAVE });
                 } catch (e) {
-                    e.ok || 429 !== e.status || (0, o.P0)((0, l.o)(A.intl.string(A.t.Whhv4w), u.Ck.FAILURE));
+                    e.ok || 429 !== e.status || (0, c.P0)((0, r.o)(A.intl.string(A.t.Whhv4w), o.Ck.FAILURE));
                 }
-                r(!1);
+                n(!1);
             }
-        }, [e.id, n]),
-        S = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot),
-        N = S ? e.getRecipientId() : null,
-        y = (0, a.bG)([f.A], () => null != N && f.A.isFriend(N)),
-        C = (0, a.bG)([f.A], () => null != N && f.A.isIgnored(N)),
-        v = p.default.extractTimestamp(e.id),
-        O = (0, h.v0)(s()(), s()(v), 18144e5),
-        R = (0, _.l)(e.id);
-    return { waveShouldShow: S && y && !C && null == t && O && null == R, wavePressed: T };
+        }, [e.id, a]),
+        v = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot),
+        w = v ? e.getRecipientId() : null,
+        C = (0, s.bG)([m.A], () => null != w && m.A.isFriend(w)),
+        N = (0, s.bG)([m.A], () => null != w && m.A.isIgnored(w)),
+        R = h.default.extractTimestamp(e.id),
+        b = (0, f.v0)(l()(), l()(R), 18144e5),
+        P = (0, u.l)(e.id);
+    return { waveShouldShow: v && C && !N && null == i && b && null == P, wavePressed: j };
 }

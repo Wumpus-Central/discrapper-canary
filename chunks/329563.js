@@ -1,16 +1,15 @@
-"use strict";
 var i = n(626584),
-    r = n(279234);
-let s = new i.A("libdiscore");
+    a = n(279234);
+let r = new i.A("libdiscore");
 !(async function () {
     try {
-        __OVERLAY__ || (await (0, r.P)());
+        __OVERLAY__ || (await (0, a.P)());
     } catch (e) {
-        s.error("Failed to initialize libdiscore", e);
+        r.error("Failed to initialize libdiscore", e);
     }
     setTimeout(() => {
         try {
-            n(505425);
+            n(325091);
         } finally {
             n(19575).Ay.indexLoadedAsync();
         }

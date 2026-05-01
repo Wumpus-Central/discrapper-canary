@@ -7,14 +7,14 @@ var n = l(627968),
     u = l(80682),
     c = l(267102),
     d = l(206835),
-    A = l(903209),
+    A = l(576622),
     o = l(495544),
     g = l(696451),
     h = l(71393),
     p = l(576705),
     G = l(287809),
     M = l(652215),
-    y = l(375708);
+    y = l(985018);
 function N(e) {
     let { guildId: t, userId: N, analyticsLocation: f, analyticsLocations: C, context: E, icon: b } = e,
         I = h.A.getGuild(t),
@@ -47,7 +47,7 @@ function N(e) {
                   (0, r.closeAllModals)())
                 : (0, r.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          l.e("6305"),
+                          l.e("40841"),
                           l.e("52318"),
                           l.e("54975"),
                           l.e("48635"),

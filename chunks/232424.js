@@ -1,40 +1,39 @@
-"use strict";
-var i = n(860511),
-    r = n(446474),
-    s = n(739305),
-    a = n(503199),
-    o = n(777718),
-    l = n(250594),
-    u = n(503628),
-    c = i.RangeError,
-    d = i.Int8Array,
-    _ = d && d.prototype,
-    f = _ && _.set,
-    h = s.aTypedArray,
-    p = s.exportTypedArrayMethod,
-    E = !u(function () {
-        var e = new Uint8ClampedArray(2);
-        return r(f, e, { length: 1, 0: 3 }, 1), 3 !== e[1];
+var n = e(860511),
+    o = e(446474),
+    a = e(739305),
+    i = e(503199),
+    p = e(777718),
+    u = e(250594),
+    y = e(503628),
+    f = n.RangeError,
+    c = n.Int8Array,
+    s = c && c.prototype,
+    d = s && s.set,
+    v = a.aTypedArray,
+    A = a.exportTypedArrayMethod,
+    h = !y(function () {
+        var r = new Uint8ClampedArray(2);
+        return o(d, r, { length: 1, 0: 3 }, 1), 3 !== r[1];
     }),
-    m =
-        E &&
-        s.NATIVE_ARRAY_BUFFER_VIEWS &&
-        u(function () {
-            var e = new d(2);
-            return e.set(1), e.set("2", 1), 0 !== e[0] || 2 !== e[1];
+    g =
+        h &&
+        a.NATIVE_ARRAY_BUFFER_VIEWS &&
+        y(function () {
+            var r = new c(2);
+            return r.set(1), r.set("2", 1), 0 !== r[0] || 2 !== r[1];
         });
-p(
+A(
     "set",
-    function (e) {
-        h(this);
-        var t = o(arguments.length > 1 ? arguments[1] : void 0, 1),
-            n = l(e);
-        if (E) return r(f, this, n, t);
-        var i = this.length,
-            s = a(n),
-            u = 0;
-        if (s + t > i) throw new c("Wrong length");
-        for (; u < s; ) this[t + u] = n[u++];
+    function (r) {
+        v(this);
+        var t = p(arguments.length > 1 ? arguments[1] : void 0, 1),
+            e = u(r);
+        if (h) return o(d, this, e, t);
+        var n = this.length,
+            a = i(e),
+            y = 0;
+        if (a + t > n) throw new f("Wrong length");
+        for (; y < a; ) this[t + y] = e[y++];
     },
-    !E || m,
+    !h || g,
 );

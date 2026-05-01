@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(835245),
-    r = n(174459),
-    s = n(652215);
-let a = new (class {
+i.d(t, { A: () => r });
+var s = i(132500),
+    n = i(954571),
+    a = i(652215);
+let r = new (class {
     searchSessionId = null;
     searchSessionStartTime = null;
     isQueryEnteredTracked = !1;
@@ -14,13 +13,13 @@ let a = new (class {
         return null != this.searchSessionId;
     }
     initialize() {
-        (this.searchSessionId = (0, i.A)()),
+        (this.searchSessionId = (0, s.A)()),
             (this.searchSessionStartTime = Date.now()),
             (this.isQueryEnteredTracked = !1);
     }
     maybeTrackQueryEntered() {
         this.isQueryEnteredTracked ||
-            (r.default.track(s.HAw.USER_SETTINGS_SEARCH_QUERY_ENTERED, { search_session_id: a.getSearchSessionId() }),
+            (n.default.track(a.HAw.USER_SETTINGS_SEARCH_QUERY_ENTERED, { search_session_id: r.getSearchSessionId() }),
             (this.isQueryEnteredTracked = !0));
     }
     terminate() {
@@ -28,8 +27,8 @@ let a = new (class {
             null != this.searchSessionStartTime &&
             (!(function (e) {
                 let { searchSessionDuration: t } = e;
-                r.default.track(s.HAw.USER_SETTINGS_SEARCH_CLOSED, {
-                    search_session_id: a.getSearchSessionId(),
+                n.default.track(a.HAw.USER_SETTINGS_SEARCH_CLOSED, {
+                    search_session_id: r.getSearchSessionId(),
                     search_session_duration_ms: t,
                 });
             })({ searchSessionDuration: Date.now() - this.searchSessionStartTime }),

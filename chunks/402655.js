@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { M: () => s });
+n.d(t, { M: () => r });
 var i = n(136722),
-    r = n(652215);
-let s = i.kg(
-    r.xBc.ADMINISTRATOR,
-    r.xBc.MANAGE_GUILD,
-    r.xBc.BAN_MEMBERS,
-    r.xBc.KICK_MEMBERS,
-    r.xBc.MODERATE_MEMBERS,
-    r.xBc.MANAGE_ROLES,
-    r.xBc.MANAGE_NICKNAMES,
+    a = n(652215);
+let r = i.kg(
+    a.xBc.ADMINISTRATOR,
+    a.xBc.MANAGE_GUILD,
+    a.xBc.BAN_MEMBERS,
+    a.xBc.KICK_MEMBERS,
+    a.xBc.MODERATE_MEMBERS,
+    a.xBc.MANAGE_ROLES,
+    a.xBc.MANAGE_NICKNAMES,
 );

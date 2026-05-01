@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { AU: () => r, kC: () => a, kP: () => s, pr: () => o, zU: () => l });
-var i = n(228366);
-function r(e, t, n, r, s) {
-    i.h.dispatch({ type: "SPEAK_TEXT", text: e, interrupt: t, maxLength: n, onStart: r, onEnd: s });
+c.d(p, { AU: () => i, kC: () => E, kP: () => s, pr: () => n, zU: () => S });
+var h = c(228366);
+function i(t, p, c, i, s) {
+    h.h.dispatch({ type: "SPEAK_TEXT", text: t, interrupt: p, maxLength: c, onStart: i, onEnd: s });
 }
-function s(e, t) {
-    i.h.dispatch({ type: "SPEAK_MESSAGE", channel: e, message: t });
+function s(t, p) {
+    h.h.dispatch({ type: "SPEAK_MESSAGE", channel: t, message: p });
 }
-function a(e, t) {
-    i.h.dispatch({ type: "SPEAKING_MESSAGE", channelId: e, messageId: t });
+function E(t, p) {
+    h.h.dispatch({ type: "SPEAKING_MESSAGE", channelId: t, messageId: p });
 }
-function o() {
-    i.h.dispatch({ type: "STOP_SPEAKING" });
+function n() {
+    h.h.dispatch({ type: "STOP_SPEAKING" });
 }
-function l(e) {
-    i.h.dispatch({ type: "SET_TTS_SPEECH_RATE", speechRate: e });
+function S(t) {
+    h.h.dispatch({ type: "SET_TTS_SPEECH_RATE", speechRate: t });
 }

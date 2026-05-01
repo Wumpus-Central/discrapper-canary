@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => r });
 var i,
-    r =
-        (((i = r || {})[(i.UNKNOWN = 1)] = "UNKNOWN"),
+    a =
+        (((i = a || {})[(i.UNKNOWN = 1)] = "UNKNOWN"),
         (i[(i.TIMEOUT = 2)] = "TIMEOUT"),
         (i[(i.ACTIVITY_LAUNCH_UNKNOWN_APPLICATION = 3)] = "ACTIVITY_LAUNCH_UNKNOWN_APPLICATION"),
         (i[(i.ACTIVITY_LAUNCH_UNKNOWN_CHANNEL = 4)] = "ACTIVITY_LAUNCH_UNKNOWN_CHANNEL"),
@@ -29,9 +28,9 @@ var i,
         (i[(i.ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION = 20)] =
             "ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION"),
         i);
-class s {
+class r {
     reason;
-    static ReasonCodes = r;
+    static ReasonCodes = a;
     constructor(e) {
         this.reason = e;
     }
