@@ -13,7 +13,6 @@ let c = (0, r.mj)({
     defaultConfig: {
         enableClips: !1,
         ignorePlatformRestriction: !1,
-        showClipsHeaderEntrypoint: !1,
         enableScreenshotKeybind: !1,
         enableVoiceOnlyClips: !1,
         enableSpeakingIndicators: !1,
@@ -23,7 +22,6 @@ let c = (0, r.mj)({
         1: {
             enableClips: !0,
             ignorePlatformRestriction: !1,
-            showClipsHeaderEntrypoint: !0,
             enableScreenshotKeybind: !1,
             enableVoiceOnlyClips: !1,
             enableSpeakingIndicators: !1,
@@ -32,7 +30,6 @@ let c = (0, r.mj)({
         2: {
             enableClips: !0,
             ignorePlatformRestriction: !0,
-            showClipsHeaderEntrypoint: !0,
             enableScreenshotKeybind: !1,
             enableVoiceOnlyClips: !0,
             enableSpeakingIndicators: !0,
@@ -41,7 +38,6 @@ let c = (0, r.mj)({
         3: {
             enableClips: !0,
             ignorePlatformRestriction: !0,
-            showClipsHeaderEntrypoint: !1,
             enableScreenshotKeybind: !1,
             enableVoiceOnlyClips: !1,
             enableSpeakingIndicators: !1,
