@@ -460,8 +460,8 @@ let eD = s.memo(function (e) {
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("3215"),
-                    n.e("22471"),
-                    n.e("89324"),
+                    n.e("71104"),
+                    n.e("52046"),
                     n.e("13922"),
                     n.e("83952"),
                     n.e("81202"),
@@ -471,8 +471,8 @@ let eD = s.memo(function (e) {
                     n.e("37715"),
                     n.e("80559"),
                     n.e("74049"),
-                    n.e("74068"),
-                ]).then(n.bind(n, 867487));
+                    n.e("8028"),
+                ]).then(n.bind(n, 376471));
                 return (t) => (0, i.jsx)(e, { ...t, channelId: l.id, onClipClick: (e) => X({ clips: [e] }) });
             },
             { modalKey: ev.nm },

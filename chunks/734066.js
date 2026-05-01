@@ -16,6 +16,7 @@ let c = (0, r.mj)({
         showClipsHeaderEntrypoint: !1,
         enableScreenshotKeybind: !1,
         enableVoiceOnlyClips: !1,
+        enableSpeakingIndicators: !1,
         enableAdvancedSignals: !1,
     },
     variations: {
@@ -25,6 +26,7 @@ let c = (0, r.mj)({
             showClipsHeaderEntrypoint: !0,
             enableScreenshotKeybind: !1,
             enableVoiceOnlyClips: !1,
+            enableSpeakingIndicators: !1,
             enableAdvancedSignals: !1,
         },
         2: {
@@ -33,6 +35,7 @@ let c = (0, r.mj)({
             showClipsHeaderEntrypoint: !0,
             enableScreenshotKeybind: !1,
             enableVoiceOnlyClips: !0,
+            enableSpeakingIndicators: !0,
             enableAdvancedSignals: !0,
         },
         3: {
@@ -41,6 +44,7 @@ let c = (0, r.mj)({
             showClipsHeaderEntrypoint: !1,
             enableScreenshotKeybind: !1,
             enableVoiceOnlyClips: !1,
+            enableSpeakingIndicators: !1,
             enableAdvancedSignals: !1,
         },
     },

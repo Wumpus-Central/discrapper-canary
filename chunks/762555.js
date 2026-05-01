@@ -1,9 +1,39 @@
 "use strict";
-n.d(t, { U: () => i, g: () => s });
-var r = n(696016);
-function i(e) {
+n.d(t, { Uq: () => o, gD: () => l, lz: () => u }), n(321073);
+var i = n(734066),
+    r = n(372684),
+    s = n(696016),
+    a = n(731854);
+function o(e) {
     return new Date(e).toISOString();
 }
-function s(e) {
-    return e.slice(0, r.GU);
+function l(e) {
+    return e.slice(0, s.GU);
+}
+function u(e) {
+    let { enableSpeakingIndicators: t } = i.L_.getConfig({ location: "getClipEventsTimeline" });
+    if (!t || (e.timeline?.length ?? 0) === 0 || e.decision?.timestamp == null) return;
+    let n = e.editMetadata ?? { start: 0, end: e.length / 1e3 },
+        s = e.decision.timestamp - e.length,
+        o = s + 1e3 * n.start,
+        l = s + 1e3 * n.end,
+        u = e.timeline.filter((e) => e.signal.type === r.Gy.SPEAKING).sort((e, t) => e.timestamp - t.timestamp);
+    if (0 === u.length) return;
+    let c = new Map(),
+        d = [];
+    for (let e of u) {
+        if (e.timestamp >= o) break;
+        let t = (e.signal.speakingFlags & a.ME.VOICE) === a.ME.VOICE;
+        c.set(e.signal.userId, t);
+    }
+    for (let [e, t] of c) t && d.push({ timestamp_ms: 0, speaking: { user_id: e, speaking_flags: a.ME.VOICE } });
+    for (let e of u)
+        if (!(e.timestamp < o)) {
+            if (e.timestamp > l) break;
+            d.push({
+                timestamp_ms: Math.round(e.timestamp - o),
+                speaking: { user_id: e.signal.userId, speaking_flags: e.signal.speakingFlags },
+            });
+        }
+    return d.length > 0 ? d : void 0;
 }

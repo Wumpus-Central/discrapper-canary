@@ -109,7 +109,7 @@ function w(e) {
                                 : (i.type === P.fg2.PLAYSTATION || i.type === P.fg2.PLAYSTATION_STAGING) &&
                                   (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("1195"),
+                                          n.e("41159"),
                                           n.e("25861"),
                                           n.e("91007"),
                                           n.e("38035"),

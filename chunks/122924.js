@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => l });
-var r = n(284009),
-    i = n.n(r),
+var i = n(284009),
+    r = n.n(i),
     s = n(735438),
     a = n.n(s),
     o = n(762555);
@@ -9,7 +9,7 @@ let l = {
     getUploadPayload: function (e) {
         let t = e.item.file;
         return (
-            i()(null != t, "file data must not be empty"),
+            r()(null != t, "file data must not be empty"),
             {
                 filename: t.name,
                 file_size: t.size,
@@ -17,9 +17,10 @@ let l = {
                 is_clip: null != e.clip,
                 title: e.clip?.name,
                 application_id: e.clip?.applicationId,
-                clip_created_at: null != e.clip ? (0, o.U)(e.clip.createdAt) : void 0,
-                clip_participant_ids: null != e.clip ? (0, o.g)(e.clip.users) : void 0,
+                clip_created_at: null != e.clip ? (0, o.Uq)(e.clip.createdAt) : void 0,
+                clip_participant_ids: null != e.clip ? (0, o.gD)(e.clip.users) : void 0,
                 clip_remote_id: e.clip?.remoteClipId,
+                clip_events_timeline: null != e.clip ? (0, o.lz)(e.clip) : void 0,
                 original_content_type: e.mimeType,
             }
         );

@@ -57,7 +57,7 @@ function I(e) {
                       null != b
                           ? (0, o.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("1195"),
+                                    n.e("41159"),
                                     n.e("65086"),
                                     n.e("6305"),
                                     n.e("39431"),
@@ -135,10 +135,10 @@ function I(e) {
                           : R.isDM() &&
                             (0, o.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("71561"),
+                                    n.e("57767"),
                                     n.e("39431"),
                                     n.e("65086"),
-                                    n.e("1195"),
+                                    n.e("41159"),
                                     n.e("6305"),
                                     n.e("26692"),
                                     n.e("26132"),

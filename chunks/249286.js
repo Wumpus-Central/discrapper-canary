@@ -1,4 +1,4 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => P });
 var u = n(64700),
     l = n(17928),
     r = n(192308),
@@ -6,8 +6,8 @@ var u = n(64700),
     o = n(987144),
     s = n(71393),
     E = n(403362),
-    A = n(645619),
-    _ = n(864310),
+    _ = n(645619),
+    A = n(864310),
     a = n(568065),
     d = n(181940),
     G = n(627968),
@@ -17,7 +17,8 @@ function I(e, t, u) {
         null != t &&
             (0, r.openModalLazy)(async () => {
                 let { default: u } = await Promise.all([
-                    n.e("82519"),
+                    n.e("52046"),
+                    n.e("67567"),
                     n.e("64827"),
                     n.e("84569"),
                     n.e("22455"),
@@ -32,14 +33,14 @@ function I(e, t, u) {
                 return (n) => (0, G.jsx)(u, { guildId: e, powerup: t, ...n });
             });
 }
-function c(e, t) {
+function P(e, t) {
     let { analyticsLocations: n } = (0, i.Ay)(),
-        { onToggle: r, isLoading: G, error: c } = (0, d.A)(e, t),
-        P = (0, l.bG)([s.A], () => s.A.getGuild(e)),
-        S = (function (e, t) {
+        { onToggle: r, isLoading: G, error: P } = (0, d.A)(e, t),
+        S = (0, l.bG)([s.A], () => s.A.getGuild(e)),
+        c = (function (e, t) {
             let n = (0, l.bG)([s.A], () => s.A.getGuild(e)),
-                r = (0, l.bG)([A.A], () => A.A.getStateForGuild(e)),
-                { spent: i } = (0, _.A)(e),
+                r = (0, l.bG)([_.A], () => _.A.getStateForGuild(e)),
+                { spent: i } = (0, A.A)(e),
                 o = u.useMemo(() => {
                     if (null == t || t.type !== a.o9.LEVEL || null == r) return [];
                     let e = a.y7[t.skuId];
@@ -64,29 +65,29 @@ function c(e, t) {
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     { shouldCloseAllModals: u = !0 } = e;
-                if (null != P && null != t)
-                    return S < t.cost
+                if (null != S && null != t)
+                    return c < t.cost
                         ? void (0, o.g)({
                               analyticsLocation: {
                                   page: R.liQ.GUILD_POWERUPS_OVERVIEW,
                                   section: R.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
                               },
-                              numberOfBoostsToAdd: t.cost - S,
+                              numberOfBoostsToAdd: t.cost - c,
                               analyticsLocations: n,
-                              guild: P,
+                              guild: S,
                               intent: t.type === a.o9.LEVEL ? a.Pn.LEVEL : a.Pn.PERK,
                               onSubscribeComplete: () =>
                                   r(!0)?.then(() => {
-                                      I(P.id, t, u);
+                                      I(S.id, t, u);
                                   }),
                           })
                         : r(!0)?.then(() => {
-                              I(P.id, t, u);
+                              I(S.id, t, u);
                           });
             },
-            [r, t, S, n, P],
+            [r, t, c, n, S],
         ),
         isLoading: G,
-        error: c,
+        error: P,
     };
 }

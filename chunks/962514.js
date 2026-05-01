@@ -16,8 +16,8 @@ var i = n(284009),
     x = n(567231),
     f = n(505527),
     E = n(9842),
-    I = n(495544),
-    C = n(734057),
+    C = n(495544),
+    I = n(734057),
     v = n(31717),
     _ = n(834942),
     j = n(232835),
@@ -70,7 +70,7 @@ function D(e) {
 }
 function O(e) {
     let { channelId: t, messageId: i, answerId: l } = e,
-        s = C.A.getChannel(t);
+        s = I.A.getChannel(t);
     if (null == s) return;
     if (A.A.isLurking(s.guild_id))
         return void D({ guildId: s.guild_id, title: P.intl.string(P.t["7LpysO"]), body: P.intl.string(P.t["5sHHoy"]) });
@@ -80,7 +80,7 @@ function O(e) {
     !(function (e) {
         let { message: t, initialAnswerId: i } = e;
         (0, T.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("1195"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
+            let { default: e } = await Promise.all([n.e("41159"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
                 n.bind(n, 716936),
             );
             return (n) => (0, y.jsx)(e, { ...n, message: t, initialAnswerId: i });
@@ -107,7 +107,7 @@ async function V(e) {
         l = G({ channelId: t, messageId: n }),
         s = r().difference(l, i),
         a = r().difference(i, l),
-        d = I.default.getId(),
+        d = C.default.getId(),
         u = [
             ...s.map((e) => ({ type: "MESSAGE_REACTION_REMOVE", id: e })),
             ...a.map((e) => ({ type: "MESSAGE_REACTION_ADD", id: e })),
@@ -130,7 +130,7 @@ async function V(e) {
 }
 async function B(e) {
     let { channelId: t, messageId: n } = e,
-        i = C.A.getChannel(t);
+        i = I.A.getChannel(t);
     if (null == i) return;
     if (A.A.isLurking(i.guild_id))
         return void D({ guildId: i.guild_id, title: P.intl.string(P.t.Qic1FD), body: P.intl.string(P.t["5sHHoy"]) });
@@ -166,7 +166,7 @@ async function B(e) {
 }
 async function H(e) {
     let { channelId: t, messageId: n } = e,
-        i = C.A.getChannel(t);
+        i = I.A.getChannel(t);
     if (null != i)
         return A.A.isLurking(i.guild_id)
             ? void D({ guildId: i.guild_id, title: P.intl.string(P.t.B9QnBp), body: P.intl.string(P.t.BVZCTn) })

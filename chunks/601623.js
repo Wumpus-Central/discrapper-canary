@@ -91,7 +91,7 @@ let el = (e) => {
                                 onClick: () => {
                                     (0, m.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("81013"),
+                                            n.e("74926"),
                                             n.e("44602"),
                                             n.e("25280"),
                                         ]).then(n.bind(n, 987482));
@@ -1329,23 +1329,22 @@ let t8 = r.memo(function () {
                                 let { openIAPPurchaseModal: e } = await Promise.all([
                                     n.e("6305"),
                                     n.e("69273"),
-                                    n.e("24953"),
+                                    n.e("19051"),
                                     n.e("77083"),
                                     n.e("63009"),
                                     n.e("16933"),
-                                    n.e("88205"),
+                                    n.e("7293"),
                                     n.e("65086"),
                                     n.e("45650"),
-                                    n.e("22894"),
+                                    n.e("76007"),
                                     n.e("25310"),
                                     n.e("93880"),
                                     n.e("29946"),
-                                    n.e("1195"),
+                                    n.e("41159"),
                                     n.e("22995"),
                                     n.e("79705"),
                                     n.e("23924"),
                                     n.e("71470"),
-                                    n.e("20287"),
                                     n.e("28367"),
                                     n.e("10471"),
                                     n.e("35429"),
@@ -1493,7 +1492,7 @@ let t8 = r.memo(function () {
                         noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER,
                         onClick: () => {
                             (0, m.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("81013"), n.e("44602"), n.e("25280")]).then(
+                                let { default: e } = await Promise.all([n.e("74926"), n.e("44602"), n.e("25280")]).then(
                                     n.bind(n, 987482),
                                 );
                                 return (t) => (0, i.jsx)(e, { source: "Video unsupported browser", ...t });
