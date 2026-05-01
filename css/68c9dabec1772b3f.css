@@ -215,6 +215,21 @@
     background-color: var(--background-mod-subtle)
 }
 
+.inboxHeading_f37cb1 {
+    cursor: default
+}
+
+.inboxHeading_f37cb1:hover {
+    background-color: transparent
+}
+
+.inboxFilterButtons_f37cb1 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 2px
+}
+
 .refresh-fast-follow-distinct-borders .header_f37cb1 {
     border-bottom-color: var(--app-frame-border)
 }

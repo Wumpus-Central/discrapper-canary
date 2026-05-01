@@ -17,5 +17,4 @@ e.exports = {
     Zm: "unreadDot_cb862a",
     gE: "actionIcon_cb862a",
     XI: "action_cb862a",
-    gD: "overflowText_cb862a",
 };

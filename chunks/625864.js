@@ -1,59 +1,61 @@
-t.d(n, { A: () => b });
-var s = t(627968),
-    i = t(64700),
-    o = t(922016),
-    a = t(305866),
-    l = t(228366),
-    r = t(964486),
-    c = t(625494),
-    u = t(851109);
-let d = (0, t(353640).v)((e) => ({ isOpen: !1, setIsOpen: (n) => e({ isOpen: n }) }));
-var h = t(276523),
-    p = t(652215),
-    _ = t(985018),
-    m = t(243415);
-function b(e) {
-    let { children: n, popoutPosition: t, popoutAlign: h, targetElementRef: m, spacing: b = 0 } = e,
-        { isOpen: g, setIsOpen: x } = d(),
-        E = i.useCallback(() => {
-            x(!1);
-        }, [x]),
-        T = i.useCallback(() => {
-            x(!g);
-        }, [g, x]);
-    (0, r.Ay)(() => {
+t.d(n, { A: () => p });
+var i = t(627968),
+    s = t(64700),
+    a = t(922016),
+    o = t(305866),
+    r = t(228366),
+    l = t(964486),
+    u = t(625494),
+    d = t(851109),
+    c = t(706341);
+let h = (0, t(353640).v)((e) => ({ isOpen: !1, setIsOpen: (n) => e({ isOpen: n }) }));
+var b = t(320080),
+    g = t(849077),
+    T = t(652215),
+    m = t(375708),
+    E = t(243415);
+function p(e) {
+    let { children: n, popoutPosition: t, popoutAlign: b, targetElementRef: E, spacing: p = 0 } = e,
+        { isOpen: A, setIsOpen: f } = h(),
+        x = s.useCallback(() => {
+            f(!1);
+        }, [f]),
+        L = s.useCallback(() => {
+            A || c.A.loadMoreInbox({ loadingTrigger: g.VA.ON_OPEN }), f(!A);
+        }, [A, f]);
+    (0, l.Ay)(() => {
         let e = () => {
-            x(!1);
+            f(!1);
         };
-        return l.h.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => l.h.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
+        return r.h.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => r.h.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
     }),
-        i.useEffect(
-            () => (c._.subscribe(p.jej.TOGGLE_INBOX, T), () => void c._.unsubscribe(p.jej.TOGGLE_INBOX, T)),
-            [T],
+        s.useEffect(
+            () => (u._.subscribe(T.jej.TOGGLE_INBOX, L), () => void u._.unsubscribe(T.jej.TOGGLE_INBOX, L)),
+            [L],
         );
-    let { entrypoint: A } = (0, u.X8)({ location: "NotificationsInboxPopout" });
-    return (0, s.jsx)(o.Y, {
-        targetElementRef: m,
-        shouldShow: g,
-        align: h,
-        animation: A === u.RK.TITLE_BAR_LEFT ? o.Y.Animation.TRANSLATE : o.Y.Animation.FADE,
-        animationPosition: A === u.RK.TITLE_BAR_LEFT ? "bottom" : "left",
+    let { entrypoint: N } = (0, d.X8)({ location: "NotificationsInboxPopout" });
+    return (0, i.jsx)(a.Y, {
+        targetElementRef: E,
+        shouldShow: A,
+        align: b,
+        animation: N === d.RK.TITLE_BAR_LEFT ? a.Y.Animation.TRANSLATE : a.Y.Animation.FADE,
+        animationPosition: N === d.RK.TITLE_BAR_LEFT ? "bottom" : "left",
         position: t,
-        onRequestClose: E,
-        spacing: b,
-        renderPopout: () => (0, s.jsx)(a.l, { "aria-label": _.intl.string(_.t.GSmTKJ), children: (0, s.jsx)(f, {}) }),
+        onRequestClose: x,
+        spacing: p,
+        renderPopout: () => (0, i.jsx)(o.l, { "aria-label": m.intl.string(m.t.GSmTKJ), children: (0, i.jsx)(_, {}) }),
         children: (e, t) => {
-            let { isShown: s } = t;
-            return n(T, s, e);
+            let { isShown: i } = t;
+            return n(L, i, e);
         },
     });
 }
-function f() {
-    return (0, s.jsxs)("div", {
-        className: m.kL,
+function _() {
+    return (0, i.jsxs)("div", {
+        className: E.kL,
         children: [
-            (0, s.jsx)("div", { className: m._Q, children: (0, s.jsx)("span", { className: m.Tp }) }),
-            (0, s.jsx)(h.default, {}),
+            (0, i.jsx)("div", { className: E._Q, children: (0, i.jsx)("span", { className: E.Tp }) }),
+            (0, i.jsx)(b.default, {}),
         ],
     });
 }

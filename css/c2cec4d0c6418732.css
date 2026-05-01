@@ -71,7 +71,7 @@
 }
 
 .messageClickableContainer_cb862a.selected_cb862a {
-    background: var(--interactive-background-selected)
+    background: var(--background-mod-subtle)
 }
 
 .messageClickableContainer_cb862a.selected_cb862a .mentionBadge_cb862a,
@@ -194,10 +194,15 @@
 
 .action_cb862a {
     align-items: center;
+    color: var(--icon-muted);
     display: flex;
     height: 18px;
     justify-content: center;
     width: 18px
+}
+
+.action_cb862a:hover {
+    color: var(--icon-strong)
 }
 
 .action_cb862a:hover .actionIcon_cb862a {
@@ -279,6 +284,10 @@
     padding-inline: 8px 0
 }
 
+.messagesPopout__0aee3.ungroupedPadding__0aee3 {
+    padding-block-start: var(--space-xs)
+}
+
 .scrollingFooterWrap__0aee3 {
     position: relative
 }
@@ -340,10 +349,6 @@
 
 .messagesGroupHeaderWrap__0aee3:hover .messagesGroupHeader__0aee3 {
     color: var(--text-strong) !important
-}
-
-.messagesGroupHeaderWrap__0aee3:nth-last-child(2) {
-    padding-bottom: 8px
 }
 
 .messagesGroupHeader__0aee3 {

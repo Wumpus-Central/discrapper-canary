@@ -34,16 +34,19 @@ let h = "Notifications Inbox",
     g = 50,
     A = "notifications-inbox";
 function I(e) {
-    return (0, d.yF)({
-        id: _.gNP,
-        name: "bookmarks" === e ? f.intl.string(f.t["2pAkDA"]) : f.intl.string(f.t.HcoRu0),
-        description: "",
-        icon: void 0,
-        features: [],
-    });
+    let t;
+    return (
+        (t =
+            "bookmarks" === e
+                ? f.intl.string(f.t["2pAkDA"])
+                : "mentions" === e
+                  ? f.intl.string(f.t.jbV6MM)
+                  : f.intl.string(f.t.HcoRu0)),
+        (0, d.yF)({ id: _.gNP, name: t, description: "", icon: void 0, features: [] })
+    );
 }
 var T = (((i = {}).UNREAD = "UNREAD"), (i.TODAY = "TODAY"), (i.YESTERDAY = "YESTERDAY"), (i.OLDER = "OLDER"), i),
-    S = (((r = {}).ALL = "all"), (r.BOOKMARKS = "bookmarks"), r),
+    S = (((r = {}).ALL = "all"), (r.MENTIONS = "mentions"), (r.BOOKMARKS = "bookmarks"), r),
     N =
         (((s = {}).ALL_MESSAGES_CHANNEL = "ALL_MESSAGES_CHANNEL"),
         (s.MENTION = "MENTION"),
