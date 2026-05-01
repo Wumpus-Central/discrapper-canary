@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => Ie, SB: () => f8 }), n(321073);
+n.d(t, { Ay: () => Ii, SB: () => In }), n(321073);
 var i,
     l,
     s,
@@ -14320,7 +14320,7 @@ let mF = function (e) {
                         ? et.A.saveGuild(t.id, { homeHeader: null })
                         : (0, v.openModalLazy)(async () => {
                               let { default: l } = await Promise.all([
-                                  n.e("73873"),
+                                  n.e("71018"),
                                   n.e("93513"),
                                   n.e("79149"),
                                   n.e("7406"),
@@ -19697,7 +19697,7 @@ function El(e) {
     } = e;
     (0, v.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("73873"),
+            n.e("71018"),
             n.e("93513"),
             n.e("79149"),
             n.e("90017"),
@@ -25795,13 +25795,16 @@ function fC(e) {
         error: s,
     });
 }
-var fv = n(383329),
-    fS = n(109112),
-    f_ = n(201438),
-    fT = n(461565);
-function fb(e) {
+var fv = n(111956),
+    fS = n.n(fv),
+    f_ = n(896170),
+    fT = n(383329),
+    fb = n(109112),
+    fy = n(201438),
+    fR = n(461565);
+function fL(e) {
     let { applicationId: t, selected: n, onClick: i, disabled: l } = e,
-        { coverImageUrl: s, gameName: r, isLoading: a } = (0, f_.A)(t, void 0, 256),
+        { coverImageUrl: s, gameName: r, isLoading: a } = (0, fy.A)(t, void 0, 256),
         o = R.useCallback(() => {
             i?.(t);
         }, [t, i]),
@@ -25810,49 +25813,49 @@ function fb(e) {
                 a
                     ? null
                     : null == s
-                      ? (0, A.jsx)("div", { className: fT.gP, children: (0, A.jsx)(fS._, { size: "lg" }) })
-                      : (0, A.jsx)("img", { className: fT.Su, alt: r, src: s }),
+                      ? (0, A.jsx)("div", { className: fR.gP, children: (0, A.jsx)(fb._, { size: "lg" }) })
+                      : (0, A.jsx)("img", { className: fR.Su, alt: r, src: s }),
             [s, a, r],
         );
     return (0, A.jsxs)("div", {
-        className: k()(fT.id, { [fT.rX]: !n, [fT.r9]: l }),
+        className: k()(fR.id, { [fR.rX]: !n, [fR.r9]: l }),
         children: [
             (0, A.jsxs)(ey.D, {
                 "aria-disabled": l,
                 tabIndex: l ? -1 : 0,
                 onClick: l ? void 0 : o,
-                className: k()(fT.a8, { [fT.AL]: a, [fT.r9]: l }),
-                children: [n && (0, A.jsx)("div", { className: fT.jK, children: (0, A.jsx)(ty.P, { checked: n }) }), d],
+                className: k()(fR.a8, { [fR.AL]: a, [fR.r9]: l }),
+                children: [n && (0, A.jsx)("div", { className: fR.jK, children: (0, A.jsx)(ty.P, { checked: n }) }), d],
             }),
-            (0, A.jsx)(G.E, { className: fT.mO, variant: "text-xs/medium", color: "text-strong", children: r }),
+            (0, A.jsx)(G.E, { className: fR.mO, variant: "text-xs/medium", color: "text-strong", children: r }),
         ],
     });
 }
-var fy = n(353640),
-    fR = n(121894);
-let fL = new Map(),
-    fG = (0, fy.v)((e, t) => ({
+var fG = n(353640),
+    fO = n(121894);
+let fD = new Map(),
+    fM = (0, fG.v)((e, t) => ({
         topGames: new Map(),
         tryFetchTopGames: async (n) => {
             let i = t().topGames,
-                l = fL.get(n);
+                l = fD.get(n);
             if (null != l && Date.now() - l < 36e5) return i.get(n) ?? {};
             let s = await (0, NK.U7)(n),
                 r = new Map(i);
             return (
                 r.set(n, s),
-                (0, fR.r)(() => {
+                (0, fO.r)(() => {
                     e({ topGames: r });
                 }),
-                fL.set(n, Date.now()),
+                fD.set(n, Date.now()),
                 s
             );
         },
     }));
-var fO = n(847955);
-function fD(e) {
+var fk = n(847955);
+function fP(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: i, disabled: l } = e,
-        { topGames: s, tryFetchTopGames: r } = fG(),
+        { topGames: s, tryFetchTopGames: r } = fM(),
         a = s.get(t),
         [o, d] = R.useState(!1);
     R.useEffect(() => {
@@ -25882,9 +25885,9 @@ function fD(e) {
           ? null
           : (0, A.jsxs)(A.Fragment, {
                 children: [
-                    (0, A.jsx)("div", { className: fO.me }),
+                    (0, A.jsx)("div", { className: fk.me }),
                     (0, A.jsxs)("div", {
-                        className: fO.rS,
+                        className: fk.rS,
                         children: [
                             (0, A.jsx)(G.E, {
                                 variant: "text-xs/semibold",
@@ -25892,9 +25895,9 @@ function fD(e) {
                                 children: el.intl.string(el.t.bFGpua),
                             }),
                             (0, A.jsx)("div", {
-                                className: fO.CW,
+                                className: fk.CW,
                                 children: c.map((e) =>
-                                    (0, A.jsx)(fb, { applicationId: e, selected: !1, onClick: u, disabled: l }, e),
+                                    (0, A.jsx)(fL, { applicationId: e, selected: !1, onClick: u, disabled: l }, e),
                                 ),
                             }),
                         ],
@@ -25902,10 +25905,33 @@ function fD(e) {
                 ],
             });
 }
-var fM = n(785252);
-function fk(e) {
+var fU = n(785252);
+function fw(e) {
     let { gameApplicationIds: t, handleChange: n, disabled: i } = e,
-        { options: l, matchSorterOptions: s } = (0, fv.R)();
+        { options: l, matchSorterOptions: s } = (0, fT.R)(),
+        r = R.useMemo(
+            () =>
+                fS()((e, t) => {
+                    let n = e.trim();
+                    0 !== n.length &&
+                        l7.default.track(ei.HAw.DETECTABLE_GAME_SEARCHED, {
+                            surface: "guild_profile",
+                            query_length: n.length,
+                            result_count: t,
+                        });
+                }, 1e3),
+            [],
+        );
+    R.useEffect(() => () => r.cancel(), [r]);
+    let a = R.useCallback(
+        (e) => {
+            let t = e.target.value;
+            if (0 === t.trim().length) return;
+            let n = (0, f_.Ht)(l, t, s).length;
+            r(t, n);
+        },
+        [l, s, r],
+    );
     return (0, A.jsx)(eU.Z, {
         selectionMode: "multiple",
         hideTags: !0,
@@ -25913,24 +25939,25 @@ function fk(e) {
         value: t,
         placeholder: el.intl.string(el.t.JTLolO),
         onSelectionChange: n,
+        onQueryChange: a,
         disabled: 20 === t.length || i,
         matchSorterOptions: s,
     });
 }
-function fP(e) {
+function fF(e) {
     let { gameApplicationIds: t, onRemoveGame: n, disabled: i } = e;
     return 0 === t.length
         ? null
         : (0, A.jsx)("div", {
-              className: fM.Rh,
-              children: t.map((e) => (0, A.jsx)(fb, { applicationId: e, selected: !0, onClick: n, disabled: i }, e)),
+              className: fU.Rh,
+              children: t.map((e) => (0, A.jsx)(fL, { applicationId: e, selected: !0, onClick: n, disabled: i }, e)),
           });
 }
-let fU = [];
-function fw(e) {
+let fB = [];
+function fH(e) {
     let { profile: t, canManageGuild: n } = e,
         i = t.id,
-        l = t?.gameApplicationIds ?? fU,
+        l = t?.gameApplicationIds ?? fB,
         s = R.useCallback(
             (e) => {
                 et.A.updateGuildProfile(i, { gameApplicationIds: e });
@@ -25950,14 +25977,14 @@ function fw(e) {
         label: el.intl.string(el.t.BR68vK),
         description: el.intl.string(el.t.MobxiB),
         children: [
-            (0, A.jsx)(fk, { gameApplicationIds: l, handleChange: s, disabled: !n }),
-            (0, A.jsx)(fP, { gameApplicationIds: o, onRemoveGame: r, disabled: !n }),
-            (0, A.jsx)(fD, { guildId: i, selectedGameApplicationIds: l, onUpdateGames: s, disabled: !n }),
+            (0, A.jsx)(fw, { gameApplicationIds: l, handleChange: s, disabled: !n }),
+            (0, A.jsx)(fF, { gameApplicationIds: o, onRemoveGame: r, disabled: !n }),
+            (0, A.jsx)(fP, { guildId: i, selectedGameApplicationIds: l, onUpdateGames: s, disabled: !n }),
         ],
     });
 }
-var fF = n(695291);
-function fB(e) {
+var fV = n(695291);
+function fz(e) {
     let { profile: t, handleIconChange: i, canManageGuild: l } = e,
         s = R.useCallback(() => {
             i(null);
@@ -25966,7 +25993,7 @@ function fB(e) {
             (e, t) => {
                 (0, v.openModalLazy)(async () => {
                     let { default: l } = await Promise.all([
-                        n.e("73873"),
+                        n.e("71018"),
                         n.e("93513"),
                         n.e("79149"),
                         n.e("7406"),
@@ -25992,12 +26019,12 @@ function fB(e) {
             [i],
         );
     return (0, A.jsxs)("div", {
-        className: fF.Uo,
+        className: fV.Uo,
         children: [
             (0, A.jsx)(sC.vN, {
                 within: !0,
                 children: (0, A.jsxs)("div", {
-                    className: fF.UD,
+                    className: fV.UD,
                     children: [
                         (0, A.jsx)(eg.$, {
                             tabIndex: -1,
@@ -26022,20 +26049,20 @@ function fB(e) {
         ],
     });
 }
-function fH(e) {
+function fY(e) {
     let { profile: t, canManageGuild: n, onIconChange: i } = e,
         l = (0, L.bG)([D.A], () => D.A.getError("icon"));
     return (0, A.jsx)("section", {
-        className: fF.kL,
+        className: fV.kL,
         children: (0, A.jsx)(iU.D, {
             label: el.intl.string(el.t.FkQnxJ),
             description: el.intl.string(el.t.KjkA0W),
             errorMessage: l,
-            children: (0, A.jsx)(fB, { profile: t, canManageGuild: n, handleIconChange: i }),
+            children: (0, A.jsx)(fz, { profile: t, canManageGuild: n, handleIconChange: i }),
         }),
     });
 }
-function fV(e) {
+function fW(e) {
     let { profile: t, canManageGuild: n } = e,
         i = t.id,
         l = (0, L.bG)([D.A], () => D.A.getError("name")),
@@ -26055,14 +26082,14 @@ function fV(e) {
         error: l,
     });
 }
-var fz = n(605582);
-function fY(e) {
+var fK = n(605582);
+function fX(e) {
     let { forceFetchGuildProfile: t } = e;
     return (0, A.jsxs)("main", {
-        className: fz.k,
+        className: fK.k,
         children: [
             (0, A.jsxs)("div", {
-                className: fz.G,
+                className: fK.G,
                 children: [
                     (0, A.jsx)(O.D, { variant: "heading-xl/semibold", children: el.intl.string(el.t["/n9BoR"]) }),
                     (0, A.jsx)(G.E, { variant: "text-md/normal", children: el.intl.string(el.t.DwKFKd) }),
@@ -26072,9 +26099,9 @@ function fY(e) {
         ],
     });
 }
-var fW = n(946964);
-let fK = { label: "" };
-function fX(e) {
+var fq = n(946964);
+let fJ = { label: "" };
+function fZ(e) {
     let { emoji: t, disabled: n, handleSelectEmoji: i } = e,
         l = R.useRef(null),
         s = R.useMemo(
@@ -26106,7 +26133,7 @@ function fX(e) {
               },
           });
 }
-function fq(e) {
+function fQ(e) {
     let { guildId: t, trait: n, index: i, onTraitUpdate: l, disabled: s } = e,
         r = R.useCallback(() => {
             l(t, i, { emoji: void 0, label: "" });
@@ -26127,20 +26154,20 @@ function fq(e) {
         d = R.useMemo(() => n.emoji, [n.emoji]),
         c = (null != n.label && n.label.length > 0) || null != n.emoji;
     return (0, A.jsx)("div", {
-        className: fW.II,
+        className: fq.II,
         children: (0, A.jsx)(nH.k, {
             disabled: s,
             value: n.label,
             onChange: o,
             maxLength: 24,
-            leading: { type: "emoji", button: (0, A.jsx)(fX, { emoji: d, disabled: s, handleSelectEmoji: a }) },
+            leading: { type: "emoji", button: (0, A.jsx)(fZ, { emoji: d, disabled: s, handleSelectEmoji: a }) },
             clearable: { show: c },
             onClear: r,
         }),
     });
 }
-let fJ = [0, 1, 2, 3, 4];
-function fZ(e) {
+let f$ = [0, 1, 2, 3, 4];
+function f0(e) {
     let { profile: t, canManageGuild: n } = e,
         i = R.useMemo(() => t.traits, [t]),
         l = R.useCallback(
@@ -26154,42 +26181,42 @@ function fZ(e) {
         label: el.intl.string(el.t.S6JNrh),
         description: el.intl.string(el.t.l7Ig5Z),
         children: (0, A.jsx)("div", {
-            className: fW.Vg,
-            children: fJ.map((e) =>
+            className: fq.Vg,
+            children: f$.map((e) =>
                 (0, A.jsx)(
-                    fq,
-                    { guildId: t.id, trait: i[e] ?? fK, index: e, onTraitUpdate: l, disabled: !n },
+                    fQ,
+                    { guildId: t.id, trait: i[e] ?? fJ, index: e, onTraitUpdate: l, disabled: !n },
                     `trait-${e}`,
                 ),
             ),
         }),
     });
 }
-var fQ = n(348943),
-    f$ = n(576055),
-    f0 = n(613928);
-function f1(e) {
+var f1 = n(348943),
+    f2 = n(576055),
+    f3 = n(613928);
+function f5(e) {
     let { profile: t, canManageGuild: n } = e,
         i = t.id,
         l = Nh.i.VISIBLE.has(t.visibility),
-        s = (0, L.bG)([Nj.A], () => Nj.A.getProfile(i)?.visibility === fQ.n.PUBLIC_WITH_RECRUITMENT, [i]),
+        s = (0, L.bG)([Nj.A], () => Nj.A.getProfile(i)?.visibility === f1.n.PUBLIC_WITH_RECRUITMENT, [i]),
         r = R.useRef(null);
     EC(r, ei.nd0.PROFILE_VISIBILITY);
     let a = R.useCallback(() => {
             l
-                ? et.A.updateGuildProfile(i, { visibility: fQ.n.RESTRICTED })
-                : et.A.updateGuildProfile(i, { visibility: s ? fQ.n.PUBLIC_WITH_RECRUITMENT : fQ.n.PUBLIC });
+                ? et.A.updateGuildProfile(i, { visibility: f1.n.RESTRICTED })
+                : et.A.updateGuildProfile(i, { visibility: s ? f1.n.PUBLIC_WITH_RECRUITMENT : f1.n.PUBLIC });
         }, [i, s, l]),
         o = R.useCallback(() => {
             et.A.setSection(ei.BEX.ACCESS, ei.nd0.ACCESS_DISCOVERABLE);
         }, []),
         d = t.features?.includes(ei.GuildFeatures.DISCOVERABLE);
     return (0, A.jsxs)("div", {
-        className: f0.Im,
+        className: f3.Im,
         ref: r,
         children: [
             (0, A.jsxs)("div", {
-                className: f0.fi,
+                className: f3.fi,
                 children: [
                     (0, A.jsx)(V.d, {
                         label: el.intl.string(el.t.fjHWen),
@@ -26209,14 +26236,14 @@ function f1(e) {
                 ],
             }),
             (0, A.jsx)("div", {
-                className: k()(f0.fi, { [f0.Rl]: l }),
-                children: (0, A.jsx)(f$.A, { guildId: i, name: null }),
+                className: k()(f3.fi, { [f3.Rl]: l }),
+                children: (0, A.jsx)(f2.A, { guildId: i, name: null }),
             }),
         ],
     });
 }
-var f2 = n(786513);
-let f3 = function () {
+var f6 = n(786513);
+let f4 = function () {
     let { analyticsLocations: e } = (0, aq.Ay)(aB.A.GUILD_SETTINGS_PROFILE_PAGE),
         t = (0, L.bG)([D.A], () => D.A.getGuild(), []),
         n = t?.id,
@@ -26245,18 +26272,18 @@ let f3 = function () {
         fx.Ay.getDetectableGames();
     }, []),
     l === Nj.X.FETCHED && null == s)
-        ? (0, A.jsx)(fY, { forceFetchGuildProfile: d })
+        ? (0, A.jsx)(fX, { forceFetchGuildProfile: d })
         : l === Nj.X.NOT_FETCHED || l === Nj.X.FETCHING
-          ? (0, A.jsx)("main", { className: f2.u1, children: (0, A.jsx)(eb.y, {}) })
+          ? (0, A.jsx)("main", { className: f6.u1, children: (0, A.jsx)(eb.y, {}) })
           : null == t || null == s
             ? null
             : (0, A.jsx)(aq.f5, {
                   value: e,
                   children: (0, A.jsxs)("main", {
-                      className: f2.Qs,
+                      className: f6.Qs,
                       children: [
                           (0, A.jsxs)("div", {
-                              className: f2.Cd,
+                              className: f6.Cd,
                               children: [
                                   (0, A.jsxs)("div", {
                                       children: [
@@ -26268,32 +26295,32 @@ let f3 = function () {
                                           (0, A.jsx)(G.E, {
                                               variant: "text-sm/medium",
                                               color: "text-default",
-                                              className: f2.h_,
+                                              className: f6.h_,
                                               children: el.intl.string(el.t["5PGZWS"]),
                                           }),
                                       ],
                                   }),
-                                  (0, A.jsx)(fV, { profile: s, canManageGuild: r }),
-                                  (0, A.jsx)("div", { className: f2.yF }),
-                                  (0, A.jsx)(fH, { profile: s, canManageGuild: r, onIconChange: a }),
-                                  (0, A.jsx)("div", { className: f2.yF }),
+                                  (0, A.jsx)(fW, { profile: s, canManageGuild: r }),
+                                  (0, A.jsx)("div", { className: f6.yF }),
+                                  (0, A.jsx)(fY, { profile: s, canManageGuild: r, onIconChange: a }),
+                                  (0, A.jsx)("div", { className: f6.yF }),
                                   (0, A.jsx)(fI, { profile: s, onCustomBannerChange: o, canManageGuild: r }),
-                                  (0, A.jsx)("div", { className: f2.yF }),
-                                  (0, A.jsx)(fZ, { profile: s, canManageGuild: r }),
-                                  (0, A.jsx)("div", { className: f2.yF }),
+                                  (0, A.jsx)("div", { className: f6.yF }),
+                                  (0, A.jsx)(f0, { profile: s, canManageGuild: r }),
+                                  (0, A.jsx)("div", { className: f6.yF }),
                                   (0, A.jsx)(fC, { profile: s, canManageGuild: r }),
-                                  (0, A.jsx)("div", { className: f2.yF }),
-                                  (0, A.jsx)(fw, { profile: s, canManageGuild: r }),
-                                  (0, A.jsx)("div", { className: f2.yF }),
-                                  (0, A.jsx)(f1, { profile: s, canManageGuild: r }),
+                                  (0, A.jsx)("div", { className: f6.yF }),
+                                  (0, A.jsx)(fH, { profile: s, canManageGuild: r }),
+                                  (0, A.jsx)("div", { className: f6.yF }),
+                                  (0, A.jsx)(f5, { profile: s, canManageGuild: r }),
                               ],
                           }),
                           (0, A.jsx)("div", {
-                              className: f2.DK,
+                              className: f6.DK,
                               children: (0, A.jsx)(sI.Ip, {
-                                  className: f2.ti,
+                                  className: f6.ti,
                                   children: (0, A.jsx)(Am.Ay, {
-                                      className: f2.q5,
+                                      className: f6.q5,
                                       profile: s,
                                       disableCTA: !0,
                                       onIconChange: r ? a : void 0,
@@ -26305,7 +26332,7 @@ let f3 = function () {
                   }),
               });
 };
-function f5() {
+function f9() {
     let e = (0, L.bG)([D.A], () => D.A.getGuild()),
         t = e?.id,
         n = (0, L.bG)([D.A], () => D.A.getProfileError()),
@@ -26331,8 +26358,8 @@ function f5() {
         }, [t]);
     return (0, A.jsx)(ta.A, { submitting: l, errorMessage: s, onSave: r, onReset: a });
 }
-var f6 = n(486072);
-let { getSectionDefinition: f4 } = {
+var f7 = n(486072);
+let { getSectionDefinition: f8 } = {
         getSectionDefinition: function (e, t) {
             let i = (0, n8.$)(t.guild.id),
                 l =
@@ -26341,11 +26368,11 @@ let { getSectionDefinition: f4 } = {
                 s =
                     i && l
                         ? {
-                              label: (0, A.jsx)("div", { className: f6.vf, children: el.intl.string(el.t.Tn7Koo) }),
+                              label: (0, A.jsx)("div", { className: f7.vf, children: el.intl.string(el.t.Tn7Koo) }),
                               ariaLabel: el.intl.string(el.t.Tn7Koo),
                           }
                         : {
-                              label: (0, A.jsx)("div", { className: f6.vf, children: el.intl.string(el.t["KzCF/6"]) }),
+                              label: (0, A.jsx)("div", { className: f7.vf, children: el.intl.string(el.t["KzCF/6"]) }),
                               ariaLabel: el.intl.string(el.t["KzCF/6"]),
                           },
                 r = t.guild.features.has(ei.GuildFeatures.COMMUNITY) && t.canViewGuildAnalytics;
@@ -26356,9 +26383,9 @@ let { getSectionDefinition: f4 } = {
                         impressionName: f.ImpressionNames.GUILD_SETTINGS_PROFILE,
                         label: el.intl.string(el.t.txdaxf),
                         ariaLabel: el.intl.string(el.t.txdaxf),
-                        element: f3,
+                        element: f4,
                         type: T.Py.SCROLLABLE_CUSTOM,
-                        notice: { stores: [D.A], element: f5 },
+                        notice: { stores: [D.A], element: f9 },
                     };
                 case ei.BEX.TAG:
                     return {
@@ -26524,7 +26551,7 @@ let { getSectionDefinition: f4 } = {
                 case ei.BEX.GUILD_AUTOMOD:
                     return {
                         section: ei.BEX.GUILD_AUTOMOD,
-                        label: (0, A.jsx)("div", { className: f6.o2, children: el.intl.string(el.t.uRelgx) }),
+                        label: (0, A.jsx)("div", { className: f7.o2, children: el.intl.string(el.t.uRelgx) }),
                         ariaLabel: el.intl.string(el.t.uRelgx),
                         element: n4,
                         newIndicatorDismissibleContentTypes: null,
@@ -26603,7 +26630,7 @@ let { getSectionDefinition: f4 } = {
                         section: ei.BEX.DISCOVERY_LANDING_PAGE,
                         impressionName: f.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
                         label: (0, A.jsxs)("div", {
-                            className: f6.o2,
+                            className: f7.o2,
                             children: [el.intl.string(el.t.kGlQGF), " ", (0, A.jsx)(y.A, {})],
                         }),
                         ariaLabel: el.intl.string(el.t.kGlQGF),
@@ -26743,9 +26770,9 @@ let { getSectionDefinition: f4 } = {
             }
         },
     },
-    f9 = "HEADER",
-    f7 = "DIVIDER";
-function f8(e) {
+    Ie = "HEADER",
+    It = "DIVIDER";
+function In(e) {
     let {
             guild: t,
             canManageGuild: n,
@@ -26768,57 +26795,57 @@ function f8(e) {
             }),
         m = { ...e, monetizationPredicate: u },
         g = [];
-    g.push({ section: f9, label: "" !== t.name ? t.name : el.intl.string(el.t["154/bL"]) }),
-        g.push(f4(ei.BEX.PROFILE, m)),
-        g.push(f4(ei.BEX.TAG, m)),
-        g.push(f4(ei.BEX.GUILD_THEME, m)),
-        g.push(f4(ei.BEX.ENGAGEMENT, m)),
-        g.push(f4(ei.BEX.BOOST_PERKS, m));
+    g.push({ section: Ie, label: "" !== t.name ? t.name : el.intl.string(el.t["154/bL"]) }),
+        g.push(f8(ei.BEX.PROFILE, m)),
+        g.push(f8(ei.BEX.TAG, m)),
+        g.push(f8(ei.BEX.GUILD_THEME, m)),
+        g.push(f8(ei.BEX.ENGAGEMENT, m)),
+        g.push(f8(ei.BEX.BOOST_PERKS, m));
     let A = n && (0, N.GP)(t, "generateSections");
     (c || A) &&
-        (g.push({ section: f7 }),
-        g.push({ section: f9, label: el.intl.string(el.t.m6lkGy) }),
-        g.push(f4(ei.BEX.EMOJI, m)),
-        g.push(f4(ei.BEX.STICKERS, m)),
-        g.push(f4(ei.BEX.SOUNDBOARD, m)),
-        g.push(f4(ei.BEX.OFFICIAL_MESSAGES, m))),
+        (g.push({ section: It }),
+        g.push({ section: Ie, label: el.intl.string(el.t.m6lkGy) }),
+        g.push(f8(ei.BEX.EMOJI, m)),
+        g.push(f8(ei.BEX.STICKERS, m)),
+        g.push(f8(ei.BEX.SOUNDBOARD, m)),
+        g.push(f8(ei.BEX.OFFICIAL_MESSAGES, m))),
         (n || l || r || d) &&
-            (g.push({ section: f7 }),
-            g.push({ section: f9, label: el.intl.string(el.t.bMAKMK) }),
-            g.push(f4(ei.BEX.MEMBERS, m)),
-            g.push(f4(ei.BEX.ROLES, m)),
-            g.push(f4(ei.BEX.INVITES, m)),
-            g.push(f4(ei.BEX.ACCESS, m))),
-        g.push({ section: f7 }),
-        g.push({ section: f9, label: el.intl.string(el.t.wF3KJy) }),
-        g.push(f4(ei.BEX.INTEGRATIONS, m)),
-        g.push(f4(ei.BEX.APP_DIRECTORY, m));
+            (g.push({ section: It }),
+            g.push({ section: Ie, label: el.intl.string(el.t.bMAKMK) }),
+            g.push(f8(ei.BEX.MEMBERS, m)),
+            g.push(f8(ei.BEX.ROLES, m)),
+            g.push(f8(ei.BEX.INVITES, m)),
+            g.push(f8(ei.BEX.ACCESS, m))),
+        g.push({ section: It }),
+        g.push({ section: Ie, label: el.intl.string(el.t.wF3KJy) }),
+        g.push(f8(ei.BEX.INTEGRATIONS, m)),
+        g.push(f8(ei.BEX.APP_DIRECTORY, m));
     let f = !t.features.has(ei.GuildFeatures.COMMUNITY) && ((0, E.hX)(t.id) || (0, E.i_)(t.id));
     (n || i || s || f) &&
-        (g.push({ section: f7 }),
-        g.push({ section: f9, label: el.intl.string(el.t["5tbTdV"]) }),
-        g.push(f4(ei.BEX.SAFETY, m)),
-        g.push(f4(ei.BEX.MODERATION, m)),
-        g.push(f4(ei.BEX.AUDIT_LOG, m)),
-        g.push(f4(ei.BEX.BANS, m)),
-        g.push(f4(ei.BEX.GUILD_AUTOMOD, m)));
+        (g.push({ section: It }),
+        g.push({ section: Ie, label: el.intl.string(el.t["5tbTdV"]) }),
+        g.push(f8(ei.BEX.SAFETY, m)),
+        g.push(f8(ei.BEX.MODERATION, m)),
+        g.push(f8(ei.BEX.AUDIT_LOG, m)),
+        g.push(f8(ei.BEX.BANS, m)),
+        g.push(f8(ei.BEX.GUILD_AUTOMOD, m)));
     let I = t.features.has(ei.GuildFeatures.COMMUNITY) && a,
         C = u();
     return (
         (n || I || C) &&
-            (g.push({ section: f7 }),
-            g.push(f4(ei.BEX.COMMUNITY, m)),
-            g.push(f4(ei.BEX.ONBOARDING, m)),
-            g.push(f4(ei.BEX.ANALYTICS, m)),
-            g.push(f4(ei.BEX.COMMUNITY_WELCOME, m)),
-            g.push(f4(ei.BEX.DISCOVERY_LANDING_PAGE, m)),
-            g.push(f4(ei.BEX.ROLE_SUBSCRIPTIONS, m)),
-            g.push(f4(ei.BEX.GUILD_PRODUCTS, m)),
-            g.push(f4(ei.BEX.ROLE_SUBSCRIPTIONS_STORE_PAGE, m))),
-        g.push({ section: f7 }),
-        g.push(f4(ei.BEX.GUILD_TEMPLATES, m)),
-        g.push(f4(ei.BEX.DELETE, m)),
+            (g.push({ section: It }),
+            g.push(f8(ei.BEX.COMMUNITY, m)),
+            g.push(f8(ei.BEX.ONBOARDING, m)),
+            g.push(f8(ei.BEX.ANALYTICS, m)),
+            g.push(f8(ei.BEX.COMMUNITY_WELCOME, m)),
+            g.push(f8(ei.BEX.DISCOVERY_LANDING_PAGE, m)),
+            g.push(f8(ei.BEX.ROLE_SUBSCRIPTIONS, m)),
+            g.push(f8(ei.BEX.GUILD_PRODUCTS, m)),
+            g.push(f8(ei.BEX.ROLE_SUBSCRIPTIONS_STORE_PAGE, m))),
+        g.push({ section: It }),
+        g.push(f8(ei.BEX.GUILD_TEMPLATES, m)),
+        g.push(f8(ei.BEX.DELETE, m)),
         g.filter(p.Vq)
     );
 }
-let Ie = { generateSections: f8 };
+let Ii = { generateSections: In };

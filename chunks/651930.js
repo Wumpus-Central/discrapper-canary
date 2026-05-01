@@ -1,50 +1,52 @@
-n.d(t, { default: () => j, i: () => G }), n(321073);
+n.d(t, { default: () => M, i: () => N }), n(321073);
 var a = n(627968),
     l = n(64700),
-    r = n(110259),
-    i = n(189213),
-    s = n(17928),
-    o = n(783878),
-    u = n(834730),
-    d = n(144228),
-    c = n(260598),
-    m = n(587895),
-    g = n(429913),
-    f = n(328153),
-    p = n(137177),
-    h = n(409626),
-    v = n(379078),
-    y = n(704554),
-    x = n(760751),
-    b = n(954571),
-    _ = n(486020),
-    A = n(21241),
-    N = n(652215),
-    I = n(985018),
+    i = n(111956),
+    s = n.n(i),
+    r = n(562708),
+    o = n(189213),
+    c = n(17928),
+    u = n(783878),
+    d = n(834730),
+    m = n(773812),
+    g = n(260598),
+    p = n(587895),
+    h = n(429913),
+    _ = n(328153),
+    x = n(137177),
+    A = n(409626),
+    f = n(379078),
+    v = n(704554),
+    b = n(760751),
+    j = n(174459),
+    k = n(486020),
+    C = n(21241),
+    E = n(652215),
+    S = n(375708),
     w = n(247947);
-let S = l.memo(function (e) {
+let G = l.memo(function (e) {
         let { game: t } = e,
-            n = (0, s.bG)([m.A], () => m.A.getApplicationByName(t.name) ?? m.A.getApplication(t.id), [t.id, t.name]),
-            l = (0, s.bG)([f.Ay], () => {
-                let e = f.Ay.getVisibleGame(),
-                    n = null != e ? f.Ay.getGameOrTransformedSubgameForPID(e.pid) : null;
-                return n?.name?.toLowerCase() === t.name.toLowerCase() ? n : f.Ay.getGameForName(t.name);
+            n = (0, c.bG)([p.A], () => p.A.getApplicationByName(t.name) ?? p.A.getApplication(t.id), [t.id, t.name]),
+            l = (0, c.bG)([_.Ay], () => {
+                let e = _.Ay.getVisibleGame(),
+                    n = null != e ? _.Ay.getGameOrTransformedSubgameForPID(e.pid) : null;
+                return n?.name?.toLowerCase() === t.name.toLowerCase() ? n : _.Ay.getGameForName(t.name);
             }, [t]),
-            [r] = (0, g.A)([
+            [i] = (0, h.A)([
                 (function () {
                     if (null != t.id) return t.id;
                     if (null != t.name) {
-                        let e = m.A.getApplicationByName(t.name);
+                        let e = p.A.getApplicationByName(t.name);
                         if (null != e) return e.id;
                     }
                     if (null != l) return l.id;
                 })(),
             ]);
-        return (0, a.jsx)(p.A, { pid: l?.pid, game: r ?? n ?? t, size: p.M.XSMALL, className: w.Gt });
+        return (0, a.jsx)(x.A, { pid: l?.pid, game: i ?? n ?? t, size: x.M.XSMALL, className: w.Gt });
     }),
-    E = {
-        searchType: v.n.FUZZY,
-        sortType: v.r.JARO_WINKLER,
+    y = {
+        searchType: f.n.FUZZY,
+        sortType: f.r.JARO_WINKLER,
         searchStringGenerator: (e) => {
             let { game: t, label: n } = e,
                 a = [t.name, n, t.id.toString()];
@@ -54,7 +56,7 @@ let S = l.memo(function (e) {
                 null != t.linkedApplications)
             )
                 for (let e of t.linkedApplications) {
-                    let t = m.A.getApplication(e.application_id);
+                    let t = p.A.getApplication(e.application_id);
                     null != t && a.push(t.name);
                 }
             return a;
@@ -62,107 +64,128 @@ let S = l.memo(function (e) {
         throttleMs: 100,
         maxSearchResults: 20,
     },
-    G = l.memo(function (e) {
-        let { games: t, selectedGame: n, onGameSelected: r, onGameSearchQueryChange: i, placeholder: s } = e,
-            [u, d] = l.useState(""),
-            c = l.useCallback(
+    N = l.memo(function (e) {
+        let {
+                games: t,
+                selectedGame: n,
+                onGameSelected: i,
+                onGameSearchQueryChange: r,
+                placeholder: o,
+                analyticsSurface: c,
+            } = e,
+            [d, m] = l.useState(""),
+            g = l.useCallback(
                 (e) => {
-                    d(e), i?.(e);
+                    m(e), r?.(e);
                 },
-                [i],
+                [r],
             ),
-            m = l.useMemo(() => {
+            p = l.useMemo(() => {
                 let e = [];
                 for (let l of (null != n &&
-                    e.push({ id: n.id, value: n.id, label: n.name, game: n, leading: (0, a.jsx)(S, { game: n }) }),
+                    e.push({ id: n.id, value: n.id, label: n.name, game: n, leading: (0, a.jsx)(G, { game: n }) }),
                 t))
                     (null == n || (n.id !== l.id && n.name.toLowerCase() !== l.name.toLowerCase())) &&
-                        e.push({ id: l.id, value: l.id, label: l.name, game: l, leading: (0, a.jsx)(S, { game: l }) });
+                        e.push({ id: l.id, value: l.id, label: l.name, game: l, leading: (0, a.jsx)(G, { game: l }) });
                 return e;
             }, [t, n]),
-            g = l.useMemo(() => m.reduce((e, t) => (null != e[t.value] || (e[t.value] = t), e), {}), [m]),
-            [f, p] = l.useState(m),
-            h = l.useCallback((e) => {
-                p(e);
+            h = l.useMemo(() => p.reduce((e, t) => (null != e[t.value] || (e[t.value] = t), e), {}), [p]),
+            [_, x] = l.useState(p),
+            A = l.useCallback((e) => {
+                x(e);
             }, []),
-            v = l.useCallback(
+            f = l.useMemo(
+                () =>
+                    s()((e, t, n) => {
+                        let a = e.trim();
+                        0 !== a.length &&
+                            j.default.track(E.HAw.DETECTABLE_GAME_SEARCHED, {
+                                surface: n,
+                                query_length: a.length,
+                                result_count: t,
+                            });
+                    }, 1e3),
+                [],
+            );
+        l.useEffect(() => () => f.cancel(), [f]);
+        let b = l.useCallback(
                 (e) => {
-                    let t = g[e];
+                    let t = h[e];
                     if (null == t) return;
                     let n = t.game;
-                    r(n ?? null), c(n?.name ?? "");
+                    i(n ?? null), g(n?.name ?? "");
                 },
-                [g, r, c],
+                [h, i, g],
             ),
-            x = l.useCallback(
+            k = l.useCallback(
                 (e) => {
                     let t = e.target.value;
-                    c(t), null != n && t !== n.name && r(null);
+                    g(t), null != n && t !== n.name && i(null), null != c && f(t, _.length, c);
                 },
-                [n, r, c],
+                [n, i, g, c, _, f],
             );
         return (
-            (0, y.RT)(u, m, h, E),
-            (0, a.jsx)(o.Z, {
-                options: f,
+            (0, v.RT)(d, p, A, y),
+            (0, a.jsx)(u.Z, {
+                options: _,
                 selectionMode: "single",
                 value: n?.id ?? void 0,
-                onSelectionChange: v,
-                onQueryChange: x,
-                placeholder: s,
+                onSelectionChange: b,
+                onQueryChange: k,
+                placeholder: o,
                 clearable: !0,
                 maxOptionsVisible: 5,
             })
         );
     });
-function j(e) {
-    let { onClose: t, transitionState: n, onSubmitted: o, detectedActivity: g, defaultStep: f = "issue_selection" } = e,
-        [p, v] = l.useState(f),
-        [y, S] = l.useState(null),
-        [E, j] = l.useState(""),
-        [k, C] = l.useState(null),
-        [M, D] = l.useState(""),
-        T = l.useMemo(() => (0, h.u9)(), []),
-        P = (0, s.bG)([x.A], () => x.A.games),
-        L = null != g,
-        O = (0, s.bG)([m.A], () => (g?.application_id != null ? m.A.getApplication(g.application_id) : null)),
-        R = () => {
-            (0, h.K6)({
-                viewId: T,
-                applicationId: g?.application_id ?? "",
-                suggestedGameName: "" !== E.trim() ? E.trim() : void 0,
-                suggestedGameApplicationId: k?.id ?? null,
-                feedback: "" !== M.trim() ? M.trim() : void 0,
+function M(e) {
+    let { onClose: t, transitionState: n, onSubmitted: i, detectedActivity: s, defaultStep: u = "issue_selection" } = e,
+        [h, _] = l.useState(u),
+        [x, f] = l.useState(null),
+        [v, G] = l.useState(""),
+        [y, M] = l.useState(null),
+        [T, D] = l.useState(""),
+        L = l.useMemo(() => (0, A.u9)(), []),
+        I = (0, c.bG)([b.A], () => b.A.games),
+        R = null != s,
+        O = (0, c.bG)([p.A], () => (s?.application_id != null ? p.A.getApplication(s.application_id) : null)),
+        Z = () => {
+            (0, A.K6)({
+                viewId: L,
+                applicationId: s?.application_id ?? "",
+                suggestedGameName: "" !== v.trim() ? v.trim() : void 0,
+                suggestedGameApplicationId: y?.id ?? null,
+                feedback: "" !== T.trim() ? T.trim() : void 0,
                 submitted: !0,
             }),
-                o?.(k ?? null),
+                i?.(y ?? null),
                 t();
         },
-        F = (() => {
-            switch (p) {
+        K = (() => {
+            switch (h) {
                 case "issue_selection":
-                    return { title: I.intl.string(I.t["6tnjbD"]), actions: [] };
+                    return { title: S.intl.string(S.t["6tnjbD"]), actions: [] };
                 case "game_search":
                     return {
-                        title: L ? I.intl.string(I.t.TZgkxY) : I.intl.string(I.t["+ie+wX"]),
+                        title: R ? S.intl.string(S.t.TZgkxY) : S.intl.string(S.t["+ie+wX"]),
                         actions: [
                             {
-                                text: I.intl.string(I.t.geKm7t),
-                                onClick: R,
+                                text: S.intl.string(S.t.geKm7t),
+                                onClick: Z,
                                 variant: "primary",
-                                disabled: "" === E.trim(),
+                                disabled: "" === v.trim(),
                             },
                         ],
                     };
                 case "other_feedback":
                     return {
-                        title: I.intl.string(I.t.tdDpJj),
+                        title: S.intl.string(S.t.tdDpJj),
                         actions: [
                             {
-                                text: I.intl.string(I.t.geKm7t),
-                                onClick: R,
+                                text: S.intl.string(S.t.geKm7t),
+                                onClick: Z,
                                 variant: "primary",
-                                disabled: "" === M.trim(),
+                                disabled: "" === T.trim(),
                             },
                         ],
                     };
@@ -170,46 +193,46 @@ function j(e) {
                     return { title: "", actions: [] };
             }
         })();
-    return (0, a.jsx)(i.Modal, {
-        ...F,
+    return (0, a.jsx)(o.Modal, {
+        ...K,
         transitionState: n,
         onClose: t,
         trackingProps: { impression: { impressionName: r.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
         children: (() => {
-            switch (p) {
+            switch (h) {
                 case "issue_selection":
                     return (0, a.jsxs)("div", {
                         className: w.Qs,
                         children: [
-                            (0, a.jsx)(u.E, {
+                            (0, a.jsx)(d.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: I.intl.string(I.t.IQHicr),
+                                children: S.intl.string(S.t.IQHicr),
                             }),
                             (0, a.jsx)("div", {
                                 className: w.R$,
-                                children: (0, a.jsx)(d.z, {
-                                    value: y ?? void 0,
+                                children: (0, a.jsx)(m.z, {
+                                    value: x ?? void 0,
                                     onChange: (e) => {
-                                        S(e),
-                                            b.default.track(N.HAw.GAME_DETECTION_FEEDBACK_MODAL, {
+                                        f(e),
+                                            j.default.track(E.HAw.GAME_DETECTION_FEEDBACK_MODAL, {
                                                 selected_option: e,
-                                                application_id: g?.application_id ?? null,
+                                                application_id: s?.application_id ?? null,
                                             }),
                                             setTimeout(() => {
                                                 "game_not_detected" === e || "wrong_game_shown" === e
-                                                    ? v("game_search")
-                                                    : v("other_feedback");
+                                                    ? _("game_search")
+                                                    : _("other_feedback");
                                             }, 100);
                                     },
-                                    options: L
+                                    options: R
                                         ? [
-                                              { name: I.intl.string(I.t.TZgkxY), value: "wrong_game_shown" },
-                                              { name: I.intl.string(I.t.tdDpJj), value: "other_feedback" },
+                                              { name: S.intl.string(S.t.TZgkxY), value: "wrong_game_shown" },
+                                              { name: S.intl.string(S.t.tdDpJj), value: "other_feedback" },
                                           ]
                                         : [
-                                              { name: I.intl.string(I.t["+ie+wX"]), value: "game_not_detected" },
-                                              { name: I.intl.string(I.t.tdDpJj), value: "other_feedback" },
+                                              { name: S.intl.string(S.t["+ie+wX"]), value: "game_not_detected" },
+                                              { name: S.intl.string(S.t.tdDpJj), value: "other_feedback" },
                                           ],
                                 }),
                             }),
@@ -220,27 +243,27 @@ function j(e) {
                     return (0, a.jsxs)("div", {
                         className: w.Qs,
                         children: [
-                            (0, a.jsx)(u.E, {
+                            (0, a.jsx)(d.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: L ? I.intl.string(I.t["79o/iq"]) : I.intl.string(I.t["r/2pZy"]),
+                                children: R ? S.intl.string(S.t["79o/iq"]) : S.intl.string(S.t["r/2pZy"]),
                             }),
-                            L &&
+                            R &&
                                 (0, a.jsxs)(a.Fragment, {
                                     children: [
                                         (0, a.jsxs)("div", {
                                             className: w.Gr,
                                             children: [
                                                 null !=
-                                                (e = _.Ay.getApplicationIconURL({
-                                                    id: g.application_id ?? "",
+                                                (e = k.Ay.getApplicationIconURL({
+                                                    id: s.application_id ?? "",
                                                     icon: O?.icon ?? null,
                                                 }))
                                                     ? (0, a.jsx)("img", {
                                                           src: e,
                                                           alt:
-                                                              null != g.name && "" !== g.name
-                                                                  ? g.name
+                                                              null != s.name && "" !== s.name
+                                                                  ? s.name
                                                                   : (O?.name ?? ""),
                                                           className: w.q_,
                                                       })
@@ -256,22 +279,23 @@ function j(e) {
                                                               children: "?",
                                                           }),
                                                       }),
-                                                (0, a.jsx)(u.E, {
+                                                (0, a.jsx)(d.E, {
                                                     variant: "text-md/semibold",
                                                     color: "text-strong",
-                                                    children: null != g.name && "" !== g.name ? g.name : O?.name,
+                                                    children: null != s.name && "" !== s.name ? s.name : O?.name,
                                                 }),
                                             ],
                                         }),
-                                        (0, a.jsx)(A.A, {}),
+                                        (0, a.jsx)(C.A, {}),
                                     ],
                                 }),
-                            (0, a.jsx)(G, {
-                                games: P,
-                                selectedGame: k,
-                                onGameSelected: C,
-                                onGameSearchQueryChange: j,
-                                placeholder: L ? I.intl.string(I.t["/SGi7v"]) : I.intl.string(I.t.ss9Zwa),
+                            (0, a.jsx)(N, {
+                                games: I,
+                                selectedGame: y,
+                                onGameSelected: M,
+                                onGameSearchQueryChange: G,
+                                placeholder: R ? S.intl.string(S.t["/SGi7v"]) : S.intl.string(S.t.ss9Zwa),
+                                analyticsSurface: "game_detection_report",
                             }),
                         ],
                     });
@@ -279,15 +303,15 @@ function j(e) {
                     return (0, a.jsxs)("div", {
                         className: w.Qs,
                         children: [
-                            (0, a.jsx)(u.E, {
+                            (0, a.jsx)(d.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: I.intl.string(I.t.IblYEw),
+                                children: S.intl.string(S.t.IblYEw),
                             }),
-                            (0, a.jsx)(c.f, {
-                                value: M,
+                            (0, a.jsx)(g.f, {
+                                value: T,
                                 onChange: D,
-                                placeholder: I.intl.string(I.t.aiPKV4),
+                                placeholder: S.intl.string(S.t.aiPKV4),
                                 maxLength: 300,
                                 rows: 4,
                             }),
