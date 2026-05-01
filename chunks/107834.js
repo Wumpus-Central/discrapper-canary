@@ -1,70 +1,62 @@
-s.d(t, { A: () => v });
-var a = s(627968),
-    r = s(64700),
-    i = s(503698),
-    n = s.n(i),
-    l = s(17928),
-    o = s(462887),
-    c = s(43990),
-    d = s(403581),
-    m = s(661531),
-    u = s(820284),
-    _ = s(490415),
-    x = s(736653),
-    p = s(793574),
-    g = s(742589),
-    h = s(876587),
-    f = s(65470),
-    C = s(400669),
-    b = s(909536),
+s.d(t, { A: () => E });
+var i = s(627968),
+    l = s(64700),
+    n = s(17928),
+    a = s(43990),
+    r = s(403581),
+    c = s(820284),
+    o = s(490415),
+    d = s(736653),
+    u = s(793574),
+    m = s(742589),
+    x = s(876587),
+    p = s(65470),
+    h = s(400669),
+    g = s(909536),
     j = s(287809),
-    A = s(927578),
+    f = s(927578),
     N = s(652215),
-    I = s(788868),
-    T = s(985018),
-    E = s(50596);
-let v = l.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser() }))(
-    (0, _.A)((e) => {
+    A = s(788868),
+    _ = s(375708),
+    C = s(50596);
+let E = n.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser() }))(
+    (0, o.A)((e) => {
         let { isAuthenticated: t, user: s } = e,
-            i = (0, A.TW)(s, I.PremiumTypes.TIER_2),
-            l = (0, x.Ay)(),
-            _ = (0, b.Gh)("nitro_home_header"),
-            j = r.useRef(null);
-        return (0, a.jsx)(u.A, {
+            n = (0, f.TW)(s, A.PremiumTypes.TIER_2),
+            o = (0, d.Ay)(),
+            j = (0, g.Gh)("nitro_home_header"),
+            E = l.useRef(null);
+        return (0, i.jsx)(c.A, {
             section: N.JJy.NAVIGATION,
-            children: (0, a.jsx)(c.N, {
-                theme: l,
+            children: (0, i.jsx)(a.N, {
+                theme: o,
                 children: (e) =>
-                    (0, a.jsxs)(a.Fragment, {
+                    (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, a.jsxs)(g.A, {
+                            (0, i.jsxs)(m.A, {
                                 isAuthenticated: t,
-                                className: n()(e, { [E.xD]: !i && !(0, o.M)(l), [E.lO]: !i && (0, o.M)(l) }),
-                                toolbar: _
-                                    ? (0, a.jsxs)("div", {
-                                          className: E.fI,
+                                className: e,
+                                toolbar: j
+                                    ? (0, i.jsxs)("div", {
+                                          className: C.fI,
                                           children: [
-                                              (0, a.jsx)(C.l, {
-                                                  ref: j,
+                                              (0, i.jsx)(h.l, {
+                                                  ref: E,
                                                   size: "sm",
                                                   variant: "secondary",
-                                                  location: p.A.PREMIUM_WISHLIST_NITRO_MEMBER_HUB,
+                                                  location: u.A.PREMIUM_WISHLIST_NITRO_MEMBER_HUB,
                                               }),
-                                              (0, a.jsx)(f.A, { variant: "secondary", size: "sm" }),
+                                              (0, i.jsx)(p.A, { variant: "secondary", size: "sm" }),
                                           ],
                                       })
                                     : void 0,
                                 role: "navigation",
                                 children: [
-                                    (0, a.jsx)(g.A.Icon, {
-                                        icon: d.t,
-                                        "aria-hidden": !0,
-                                        color: i ? void 0 : m.A.unsafe_rawColors.PREMIUM_TIER_2_PINK.css,
-                                    }),
-                                    (0, a.jsx)(g.A.Title, { children: T.intl.string(T.t.Ipxkog) }),
+                                    (0, i.jsx)(m.A.Icon, { icon: r.t, "aria-hidden": !0 }),
+                                    (0, i.jsx)(m.A.Title, { children: _.intl.string(_.t.Ipxkog) }),
                                 ],
                             }),
-                            _ && i && (0, a.jsx)(h.O, { targetElementRef: j }),
+                            j && n && (0, i.jsx)(x.O, { targetElementRef: E }),
                         ],
                     }),
             }),

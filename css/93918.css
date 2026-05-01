@@ -2725,6 +2725,16 @@
     border-width: 1px
 }
 
+.spinner__8a394 {
+    margin-top: 20px
+}
+
+.markdown__8a394 {
+    font-size: 12px;
+    line-height: 16px;
+    padding-bottom: 30px
+}
+
 .imageInputContainer__4cc0e {
     height: 0;
     position: relative;
@@ -6405,14 +6415,6 @@
 
 .viewAllGames__0920e {
     color: var(--text-strong)
-}
-
-.headerBarV2LightBackground__0920e {
-    background: var(--white) !important
-}
-
-.headerBarV2DarkBackground__0920e {
-    background: var(--black) !important
 }
 
 .headerToolbar__0920e {
