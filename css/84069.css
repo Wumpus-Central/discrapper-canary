@@ -684,6 +684,46 @@
     width: 100%
 }
 
+.selectableItem_eb626b {
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--text-strong);
+    cursor: pointer;
+    height: 34px;
+    margin: 2px 0;
+    margin-inline-end: 4px;
+    padding: 8px 10px
+}
+
+.selectableItem_eb626b.selected_eb626b {
+    cursor: default
+}
+
+.selectableItemLabel_eb626b {
+    font-size: 16px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    top: 1px;
+    white-space: nowrap
+}
+
+.theme-light .selectableItem_eb626b:focus,
+.theme-light .selectableItem_eb626b:hover {
+    background-color: var(--primary-200)
+}
+
+.theme-dark .selectableItem_eb626b:focus,
+.theme-dark .selectableItem_eb626b:hover {
+    background-color: hsl(var(--primary-700-hsl)/.6)
+}
+
+.enable-forced-colors .selectableItem_eb626b:focus,
+.enable-forced-colors .selectableItem_eb626b:hover {
+    outline: 1px solid Highlight;
+    outline-offset: -1px
+}
+
 .base_e42a84 {
     background-position: 0;
     display: block;
@@ -3252,51 +3292,6 @@
 
 .headerCentered_a2cab2 {
     text-align: center
-}
-
-.badgeContainer__98c7b {
-    display: flex;
-    flex-direction: row;
-    position: relative
-}
-
-.newBadge__98c7b {
-    align-items: center;
-    background-image: linear-gradient(to right, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-pink-for-gradients));
-    border-radius: 19px;
-    display: flex;
-    justify-content: center;
-    margin-inline-start: auto;
-    padding: 0 6px;
-    pointer-events: all;
-    text-transform: uppercase
-}
-
-.newBadge__98c7b,
-.star__98c7b {
-    color: var(--white)
-}
-
-.star__98c7b {
-    position: relative
-}
-
-.starLeft__98c7b {
-    bottom: -6px;
-    inset-inline-start: -6px
-}
-
-.starRight__98c7b {
-    bottom: 0;
-    inset-inline-start: -4px
-}
-
-.theme-light .starLeft__98c7b {
-    color: var(--premium-tier-2-purple-for-gradients)
-}
-
-.theme-light .starRight__98c7b {
-    color: var(--premium-tier-2-pink-for-gradients)
 }
 
 .clipThumbContainer_b492ef {
@@ -7228,12 +7223,6 @@ div.nagbar_d74ef8 {
 
 .boostButtonIcon__58c46 {
     margin-inline-end: 2px
-}
-
-.riveHoverTarget__438ba {
-    height: 100%;
-    pointer-events: auto;
-    width: 100%
 }
 
 .container_fe18a9 {
