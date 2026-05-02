@@ -1,38 +1,27 @@
-s.d(t, { A: () => r });
+s.d(t, { A: () => c });
 var l = s(64700),
-    a = s(429913),
-    i = s(569926),
-    n = s(403362);
-function r(e) {
-    let t,
-        s,
-        r,
-        c = e.gameActivity,
-        d =
-            ((t = (0, a.A)(e.gameApplicationIds)),
-            (s = l.useMemo(
-                () =>
-                    t
-                        .filter(n.Vq)
-                        .map((e) => e.getCanonicalGameId())
-                        .filter(n.Vq),
-                [t],
-            )),
-            (0, i.x)(s),
-            (r = (0, a.A)(s)),
-            l.useMemo(() => r.filter(n.Vq), [r])),
-        m = l.useMemo(() => {
-            let e = (e, t) => {
-                let s = c[e.id]?.score ?? 0,
-                    l = c[t.id]?.score ?? 0;
-                return s !== l ? l - s : 0;
-            };
-            return d.sort(e), d;
-        }, [d, c]),
-        o = l.useMemo(() => m.slice(0, 5), [m]);
+    a = s(17928),
+    i = s(311043),
+    n = s(569926),
+    r = s(403362);
+function c(e) {
+    let t = e.gameActivity,
+        s =
+            ((0, n.x)(e.gameApplicationIds),
+            (0, a.yK)([i.A], () => e.gameApplicationIds.map((e) => i.A.getGame(e)).filter(r.Vq))),
+        c = l.useMemo(
+            () =>
+                [...s].sort((e, s) => {
+                    let l = t[e.id]?.score ?? 0,
+                        a = t[s.id]?.score ?? 0;
+                    return l !== a ? a - l : 0;
+                }),
+            [s, t],
+        ),
+        d = l.useMemo(() => c.slice(0, 5), [c]);
     return {
-        gamesToDisplay: o,
-        lastGameToDisplay: l.useMemo(() => m[5] ?? null, [m]),
-        remainingGames: l.useMemo(() => m.slice(5), [m]),
+        gamesToDisplay: d,
+        lastGameToDisplay: l.useMemo(() => c[5] ?? null, [c]),
+        remainingGames: l.useMemo(() => c.slice(5), [c]),
     };
 }

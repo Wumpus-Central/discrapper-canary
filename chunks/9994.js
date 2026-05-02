@@ -43,7 +43,7 @@ function l(e) {
                 ? {}
                 : Object.entries(n).reduce((e, t) => {
                       let [n, i] = t;
-                      return (e[n.toString()] = { level: i.activity_level, score: i.activity_score }), e;
+                      return (e[n] = { level: i.activity_level, score: i.activity_score }), e;
                   }, {}),
         features: e.features ?? [],
         tag: e.tag,
