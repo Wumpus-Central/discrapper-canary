@@ -3115,11 +3115,6 @@
     background: var(--background-gradient-app-frame, var(--background-base-lowest))
 }
 
-.rootPopout_b5970a {
-    height: 100%;
-    width: 100%
-}
-
 .container__2baeb {
     height: calc(100% - 32px/(var(--custom-zoom)/100));
     position: relative;
@@ -3543,6 +3538,7 @@
 }
 
 .header_b0da80,
+.headerActions_b0da80,
 .title_b0da80 {
     align-items: center;
     display: flex

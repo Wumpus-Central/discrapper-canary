@@ -1,33 +1,35 @@
 "use strict";
 n.d(t, {
     pM: () => eg,
-    Su: () => el,
     yT: () => ei,
-    $N: () => eI,
-    YK: () => eu,
-    yO: () => z,
-    eQ: () => K,
     h$: () => Q,
-    PW: () => eE,
     MI: () => er,
     Fb: () => ec,
-    w7: () => eS,
-    K7: () => ed,
-    HU: () => Z,
     VO: () => ef,
-    Mt: () => q,
     GS: () => X,
     fd: () => $,
     Ts: () => eA,
+    e6: () => ep,
+    H1: () => eh,
+    jA: () => eo,
+    yd: () => en,
+    l0: () => eT,
+    Of: () => eS,
+    Su: () => el,
+    yO: () => z,
+    $N: () => eI,
+    YK: () => eu,
+    eQ: () => K,
+    PW: () => eE,
+    Cr: () => eN,
+    w7: () => ey,
+    K7: () => ed,
+    HU: () => Z,
+    Mt: () => q,
     dR: () => em,
     oH: () => e_,
-    jA: () => eo,
-    l0: () => eT,
-    yd: () => en,
-    H1: () => eh,
-    XK: () => ea,
     Yy: () => es,
-    e6: () => ep,
+    XK: () => ea,
 }),
     n(321073);
 var i = n(636537),
@@ -679,6 +681,12 @@ function eI(e) {
 function eT() {
     eA({ type: R.Gy.MANUAL });
 }
-async function eS(e) {
+function eS(e) {
+    a.h.dispatch({ type: "CLIPS_SNOOZE_REMINDERS", until: Date.now() + e });
+}
+function eN() {
+    a.h.dispatch({ type: "CLIPS_CLEAR_REMINDER_SNOOZE" });
+}
+async function ey(e) {
     await es(e, { isTemporary: !1 });
 }

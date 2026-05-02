@@ -885,7 +885,7 @@ var eT = n(495544),
     eK = n(287809),
     eO = n(152056),
     e_ = n(780964),
-    eB = n(44343),
+    eB = n(602934),
     eL = n(980707),
     eP = n(477782),
     eD = n(349288),
@@ -905,8 +905,8 @@ var eT = n(495544),
 function eJ() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "538080",
-        l = "3310581fa3c3f08b0d49a52ad526e3e5c62cea61".substring(0, 7),
+        n = "538432",
+        l = "c6249812dbe5a5a246bbf060220fda356ec09dac".substring(0, 7),
         s = e$.A?.app.getVersion(),
         i = e$.A?.app.getBuildNumber(),
         u = e$.A?.app.getAppArch(),
@@ -1074,9 +1074,9 @@ function e7() {
         ],
     });
 }
-var e5 = n(175665),
+var e2 = n(175665),
     e9 = n(178241),
-    e2 = n(779733),
+    e5 = n(779733),
     e8 = n(298859);
 let e3 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
     e6 = new Map([
@@ -1092,12 +1092,12 @@ function e4(e) {
         [m, g] = l.useState(!1);
     return (l.useLayoutEffect(() => {
         let e = () => {
-            null == eK.default.getCurrentUser() && (g(!0), (0, e2.default)());
+            null == eK.default.getCurrentUser() && (g(!0), (0, e5.default)());
         };
         return (
             eT.default.addChangeListener(e),
             () => {
-                eT.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
+                eT.default.removeChangeListener(e), e2.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
             }
         );
     }, []),
@@ -1115,9 +1115,9 @@ function e4(e) {
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e5.A.getField("source") },
+                          properties: { source: e2.A.getField("source") },
                       }),
-                      e5.A.setState({ source: void 0 });
+                      e2.A.setState({ source: void 0 });
               },
               target: t,
               defaultTarget: e_.X.ACCOUNT_PANEL,
