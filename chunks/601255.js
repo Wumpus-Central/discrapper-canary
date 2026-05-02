@@ -1,27 +1,28 @@
-a.d(t, { A: () => i });
-var r = a(64700),
-    n = a(451988),
-    l = a(821956),
-    o = a(652215);
-function i(e) {
-    let [t, a] = r.useState(!1),
-        i = r.useRef(null);
+"use strict";
+n.d(t, { A: () => o });
+var i = n(64700),
+    r = n(451988),
+    s = n(821956),
+    a = n(652215);
+function o(e) {
+    let [t, n] = i.useState(!1),
+        o = i.useRef(null);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             let t = () => {
-                if (null == e || !("expiresAt" in e) || null == e.expiresAt) return void a(!1);
-                let r = (0, l.bS)(e);
-                a(r);
-                let s = 1e3 * e.expiresAt - Date.now();
-                if (!r && s > 0) {
-                    let e = new n.Ep();
-                    e.start(Math.min(o.mnr, s), () => t()), (i.current = e);
+                if (null == e || !("expiresAt" in e) || null == e.expiresAt) return void n(!1);
+                let i = (0, s.bS)(e);
+                n(i);
+                let l = 1e3 * e.expiresAt - Date.now();
+                if (!i && l > 0) {
+                    let e = new r.Ep();
+                    e.start(Math.min(a.mnr, l), () => t()), (o.current = e);
                 }
             };
-            return t(), () => i.current?.stop();
+            return t(), () => o.current?.stop();
         }, [e]),
-        r.useEffect(() => {
-            t && i.current?.stop();
+        i.useEffect(() => {
+            t && o.current?.stop();
         }, [t]),
         t ? void 0 : e
     );

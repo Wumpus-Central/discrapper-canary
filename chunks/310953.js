@@ -1,55 +1,56 @@
-n.d(t, { A: () => h, W: () => A }), n(321073);
+"use strict";
+n.d(t, { A: () => _, W: () => f }), n(321073);
 var i = n(64700),
-    l = n(17928),
-    r = n(5180),
-    s = n(960755),
-    a = n(866842),
-    o = n(95701),
-    d = n(924985),
+    r = n(17928),
+    s = n(5180),
+    a = n(960755),
+    o = n(866842),
+    l = n(95701),
+    u = n(924985),
     c = n(458294),
-    u = n(309010);
-function h(e) {
+    d = n(309010);
+function _(e) {
     let { withVoiceChannels: t = !1, withCurrentVoiceChannel: n = !1 } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = arguments.length > 2 ? arguments[2] : void 0;
-    return E(
-        (0, r.ai)(e) ? (0, a.g)() : s.A.getGuildWithoutChangingGuildActionRows(e).guildChannels,
-        { currentVoiceChannelId: u.A.getVoiceChannelId(), selectedChannelId: u.A.getChannelId() },
+    return h(
+        (0, s.ai)(e) ? (0, o.g)() : a.A.getGuildWithoutChangingGuildActionRows(e).guildChannels,
+        { currentVoiceChannelId: d.A.getVoiceChannelId(), selectedChannelId: d.A.getChannelId() },
         { withVoiceChannels: t, withCurrentVoiceChannel: n },
         i,
     );
 }
-function A(e, t, n) {
-    let { withVoiceChannels: r = !1, withCurrentVoiceChannel: s = !1 } =
+function f(e, t, n) {
+    let { withVoiceChannels: s = !1, withCurrentVoiceChannel: a = !1 } =
             arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        a = arguments.length > 4 ? arguments[4] : void 0,
-        o = (0, l.bG)([c.default], () => c.default.getGuildChangeSentinel(e)),
-        h = (0, l.bG)([d.A], () => d.A.version),
-        { currentVoiceChannelId: A, selectedChannelId: g } = (0, l.cf)([u.A], () => ({
-            currentVoiceChannelId: u.A.getVoiceChannelId(),
-            selectedChannelId: u.A.getChannelId(),
+        o = arguments.length > 4 ? arguments[4] : void 0,
+        l = (0, r.bG)([c.default], () => c.default.getGuildChangeSentinel(e)),
+        _ = (0, r.bG)([u.A], () => u.A.version),
+        { currentVoiceChannelId: f, selectedChannelId: p } = (0, r.cf)([d.A], () => ({
+            currentVoiceChannelId: d.A.getVoiceChannelId(),
+            selectedChannelId: d.A.getChannelId(),
         }));
     return (0, i.useMemo)(
         () =>
-            E(
+            h(
                 t,
-                { currentVoiceChannelId: A, selectedChannelId: g },
-                { withVoiceChannels: r, withCurrentVoiceChannel: s },
-                a,
+                { currentVoiceChannelId: f, selectedChannelId: p },
+                { withVoiceChannels: s, withCurrentVoiceChannel: a },
+                o,
             ).map((e) => e.id),
-        [t, n, o, h],
+        [t, n, l, _],
     );
 }
-function E(e, t) {
+function h(e, t) {
     let { currentVoiceChannelId: n, selectedChannelId: i } = t,
-        { withVoiceChannels: l, withCurrentVoiceChannel: r } =
+        { withVoiceChannels: r, withCurrentVoiceChannel: s } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        s = arguments.length > 3 ? arguments[3] : void 0,
-        a = [];
+        a = arguments.length > 3 ? arguments[3] : void 0,
+        o = [];
     return (
         e.forEachShownChannel((e) => {
-            ((0, o.tr)(e.type) || (l && (0, o.ay)(e.type)) || (r && (e.id === n || e.id === i))) && a.push(e);
-        }, s),
-        a
+            ((0, l.tr)(e.type) || (r && (0, l.ay)(e.type)) || (s && (e.id === n || e.id === i))) && o.push(e);
+        }, a),
+        o
     );
 }

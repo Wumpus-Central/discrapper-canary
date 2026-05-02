@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { $: () => C, o: () => S });
+n.d(t, { $: () => y, o: () => S });
 var i = n(627968),
     r = n(64700),
     s = n(985623),
     a = n.n(s),
     o = n(296489),
     l = n.n(o),
-    d = n(340287),
-    _ = n(621466),
-    u = n(707554),
-    c = n(83379),
-    E = n(623646),
+    u = n(340287),
+    c = n(621466),
+    d = n(707554),
+    _ = n(83379),
+    f = n(623646),
     h = n(451988),
-    m = n(192308),
-    f = n(750506),
-    g = n(267102),
-    p = n(712687),
+    p = n(192308),
+    E = n(750506),
+    m = n(267102),
+    g = n(712687),
     A = n(38405),
     I = n(292036),
     T = n(652215);
 let S = Symbol("POPOUT_PREVENT_CLOSE"),
     N = new Set(["Spacebar", " ", "Enter"]);
-class C extends r.Component {
+class y extends r.Component {
     static defaultProps = {
         autoInvert: !1,
         nudgeAlignIntoViewport: !1,
@@ -37,7 +37,7 @@ class C extends r.Component {
     loadingTimeout = new h.Ep();
     validClickTimeout = new h.Ep();
     isValidClickStart = !1;
-    static contextType = g.Ay;
+    static contextType = m.Ay;
     state = {
         renderedPosition: this.props.position,
         shouldShowPopout: !1,
@@ -73,7 +73,7 @@ class C extends r.Component {
     }
     getDomElement() {
         let e = this.props.targetElementRef?.current;
-        if (!(0, _.vq)(e)) {
+        if (!(0, c.vq)(e)) {
             let e = Error("Popout cannot find DOM node");
             return console.error(e), A.A.captureException(e), null;
         }
@@ -129,7 +129,7 @@ class C extends r.Component {
                     },
                     { isShown: n, position: this.state.renderedPosition },
                 ),
-                (0, i.jsx)(u.F, { forceLevel: 2, children: this.renderLayer() }),
+                (0, i.jsx)(d.F, { forceLevel: 2, children: this.renderLayer() }),
             ],
         });
     }
@@ -139,22 +139,23 @@ class C extends r.Component {
                 position: e,
                 align: t,
                 nudgeAlignIntoViewport: n,
-                useRawTargetDimensions: r,
-                spacing: s,
-                offset: a,
-                autoInvert: o,
-                fixed: l,
-                positionKey: d,
-                disablePointerEvents: _,
-                layerContext: u,
-                clickTrap: h = !1,
+                avoidancePadding: r,
+                useRawTargetDimensions: s,
+                spacing: a,
+                offset: o,
+                autoInvert: l,
+                fixed: u,
+                positionKey: c,
+                disablePointerEvents: d,
+                layerContext: h,
+                clickTrap: p = !1,
             } = this.props,
-            { resizeKey: m, isLoading: g, shouldShowLoadingState: p } = this.state;
-        return g && !p
+            { resizeKey: m, isLoading: g, shouldShowLoadingState: A } = this.state;
+        return g && !A
             ? null
-            : (0, i.jsx)(c.Wd, {
-                  layerContext: u ?? f.uY,
-                  children: (0, i.jsx)(E.Q, {
+            : (0, i.jsx)(_.Wd, {
+                  layerContext: h ?? E.uY,
+                  children: (0, i.jsx)(f.Q, {
                       ref: this.layerRef,
                       onMount: this.handlePopoutShow,
                       onUnmount: this.handlePopoutHide,
@@ -163,15 +164,16 @@ class C extends r.Component {
                       position: e,
                       align: t,
                       nudgeAlignIntoViewport: n,
-                      useRawTargetDimensions: r,
-                      spacing: s,
-                      offset: a,
-                      autoInvert: o,
-                      fixed: l,
-                      positionKey: d ?? String(m),
-                      disablePointerEvents: _,
+                      avoidancePadding: r,
+                      useRawTargetDimensions: s,
+                      spacing: a,
+                      offset: o,
+                      autoInvert: l,
+                      fixed: u,
+                      positionKey: c ?? String(m),
+                      disablePointerEvents: d,
                       onPositionChange: this.handlePopoutPositionChange,
-                      clickTrap: h,
+                      clickTrap: p,
                       children: this.renderPopout,
                   }),
               });
@@ -189,7 +191,7 @@ class C extends r.Component {
             ((this.popoutRef.current = e),
             this.resizeObserver?.disconnect(),
             (this.resizeObserver = new t.ResizeObserver(() => {
-                d.flushSync(() => {
+                u.flushSync(() => {
                     this.setState({ resizeKey: this.state.resizeKey + 1 });
                 });
             })),
@@ -244,7 +246,7 @@ class C extends r.Component {
         let i = e.target,
             r = this.domElementRef.current;
         if (null != r) {
-            if ((0, E.H)(r, i) || p.A.isOpen() || (t && (0, m.hasAnyModalOpen)())) return;
+            if ((0, f.H)(r, i) || g.A.isOpen() || (t && (0, p.hasAnyModalOpen)())) return;
             this.isValidClickStart = !0;
         }
     };
@@ -266,11 +268,11 @@ class C extends r.Component {
             let e = this.popoutRef.current;
             null == e ||
                 (this.shouldShowPopout(this.props, this.state) &&
-                    (R(e) || this.close(void 0, "system:viewport_exit"), this.layerRef.current?.updatePosition()));
+                    (C(e) || this.close(void 0, "system:viewport_exit"), this.layerRef.current?.updatePosition()));
         });
     }, 1e3 / 60);
 }
-let R = (e) => {
+let C = (e) => {
     let t = e.getBoundingClientRect(),
         n = e.ownerDocument?.defaultView?.innerHeight ?? 0,
         i = e.ownerDocument?.defaultView?.innerWidth ?? 0;

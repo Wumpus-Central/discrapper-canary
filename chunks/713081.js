@@ -1,48 +1,49 @@
-s.d(t, { A: () => g });
-var n = s(627968);
-s(64700);
-var l = s(17928),
-    i = s(661531),
-    a = s(990078),
-    o = s(242644),
-    r = s(821609),
-    u = s(775602),
-    c = s(31587),
-    d = s(801365),
-    m = s(792620),
-    x = s(793683),
-    h = s(375708);
-function g(e) {
-    let { quest: t, questContent: s, sourceQuestContent: g, onClose: p, size: C = "md" } = e,
-        S = (0, c.LS)(t),
-        A = (0, l.bG)([u.A], () => u.A.useReducedMotion),
-        v = null != (0, d._Z)(t.config),
-        f = (0, m.vv)(t),
-        j = (0, x.v)({
+"use strict";
+n.d(t, { A: () => p });
+var i = n(627968);
+n(64700);
+var r = n(17928),
+    s = n(661531),
+    a = n(990078),
+    o = n(242644),
+    l = n(821609),
+    u = n(775602),
+    c = n(31587),
+    d = n(801365),
+    _ = n(792620),
+    f = n(793683),
+    h = n(375708);
+function p(e) {
+    let { quest: t, questContent: n, sourceQuestContent: p, onClose: E, size: m = "md" } = e,
+        g = (0, c.LS)(t),
+        A = (0, r.bG)([u.A], () => u.A.useReducedMotion),
+        I = null != (0, d._Z)(t.config),
+        T = (0, _.vv)(t),
+        S = (0, f.v)({
             quest: t,
-            questContent: s,
-            sourceQuestContent: g,
-            onCloseModal: p,
+            questContent: n,
+            sourceQuestContent: p,
+            onCloseModal: E,
             shouldShowShopIfAlreadyClaimed: !0,
         }),
         N =
             t.userStatus?.claimedAt != null
-                ? v
+                ? I
                     ? h.intl.string(h.t.WYchde)
                     : h.intl.string(h.t.vTgCWx)
                 : h.intl.string(h.t.cfY4PE),
-        O =
+        y =
             t.userStatus?.completedAt == null
-                ? S
+                ? g
                     ? h.intl.string(h.t.NJ6Bnm)
-                    : f
+                    : T
                       ? h.intl.string(h.t.USNO1K)
                       : void 0
                 : void 0;
-    return (0, n.jsx)(a.m, {
-        text: O,
-        children: (0, n.jsx)("div", {
-            children: (0, n.jsx)(r.$, {
+    return (0, i.jsx)(a.m, {
+        text: y,
+        children: (0, i.jsx)("div", {
+            children: (0, i.jsx)(l.$, {
                 variant: "secondary",
                 fullWidth: !0,
                 icon: ((e, t) => {
@@ -54,16 +55,16 @@ function g(e) {
                                 withReducedMotion: "play",
                                 dataBinding: {
                                     locked: e.userStatus?.completedAt === null,
-                                    fill: i.A.colors.ICON_STRONG,
+                                    fill: s.A.colors.ICON_STRONG,
                                     reducedMotion: t,
                                 },
                             },
                         };
                 })(t, A),
-                onClick: j,
+                onClick: S,
                 text: N,
                 disabled: t.userStatus?.completedAt == null,
-                size: C,
+                size: m,
             }),
         }),
     });

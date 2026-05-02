@@ -1,5 +1,6 @@
-function n(e) {
-    return (n =
+"use strict";
+function i(e) {
+    return (i =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -10,7 +11,7 @@ function n(e) {
                       : typeof e;
               })(e);
 }
-function i(e) {
-    return null !== e && "object" === n(e) && Object.prototype.hasOwnProperty.call(e, "current");
+function r(e) {
+    return null !== e && "object" === i(e) && Object.prototype.hasOwnProperty.call(e, "current");
 }
-r.d(t, { i: () => i });
+n.d(t, { i: () => r });

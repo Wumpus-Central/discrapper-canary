@@ -1,31 +1,32 @@
-a.d(t, { A: () => c });
-var e = a(627968),
-    i = a(64700),
-    l = a(130147),
-    h = a(344346),
-    d = a(101206);
-let c = i.memo(function (s) {
-    let { user: t, nameplate: a, isHighlighted: i, size: c = "default" } = s,
-        o = "small" === c ? 62 : 94,
-        u = "small" === c ? 72 : 110;
-    return (0, e.jsx)("div", {
-        className: d.Dz,
-        children: (0, e.jsxs)("div", {
-            className: d.ur,
+"use strict";
+n.d(t, { A: () => l });
+var i = n(627968),
+    r = n(64700),
+    s = n(130147),
+    a = n(344346),
+    o = n(101206);
+let l = r.memo(function (e) {
+    let { user: t, nameplate: n, isHighlighted: r, size: l = "default" } = e,
+        u = "small" === l ? 62 : 94,
+        c = "small" === l ? 72 : 110;
+    return (0, i.jsx)("div", {
+        className: o.Dz,
+        children: (0, i.jsxs)("div", {
+            className: o.ur,
             children: [
-                (0, e.jsx)(l._, { showStatus: !0, width: o, opacity: 0.7, size: c }),
-                (0, e.jsx)(l._, { showStatus: !0, width: u, opacity: 0.85, size: c }),
-                (0, e.jsx)(h.A, {
+                (0, i.jsx)(s._, { showStatus: !0, width: u, opacity: 0.7, size: l }),
+                (0, i.jsx)(s._, { showStatus: !0, width: c, opacity: 0.85, size: l }),
+                (0, i.jsx)(a.A, {
                     user: t,
-                    nameplate: a,
-                    className: d.tZ,
-                    isHighlighted: i,
-                    showPlaceholderUser: !i,
+                    nameplate: n,
+                    className: o.tZ,
+                    isHighlighted: r,
+                    showPlaceholderUser: !r,
                     showStatus: !0,
-                    nameplatePreviewSize: "small" === c ? "small" : "default",
+                    nameplatePreviewSize: "small" === l ? "small" : "default",
                 }),
-                (0, e.jsx)(l._, { showStatus: !0, width: u, opacity: 0.85, size: c }),
-                (0, e.jsx)(l._, { showStatus: !0, width: o, opacity: 0.7, size: c }),
+                (0, i.jsx)(s._, { showStatus: !0, width: c, opacity: 0.85, size: l }),
+                (0, i.jsx)(s._, { showStatus: !0, width: u, opacity: 0.7, size: l }),
             ],
         }),
     });

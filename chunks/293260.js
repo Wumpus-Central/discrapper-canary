@@ -1,38 +1,39 @@
-t.d(l, { Ay: () => f, CB: () => h, c0: () => g });
-var a = t(627968);
-t(64700);
-var i = t(17928),
-    n = t(231723),
-    s = t(192308);
-if (21552 == t.j) var o = t(477782);
-if (21552 == t.j) var r = t(173936);
-var c = t(317525),
-    d = t(370480),
-    u = t(375708);
-let h = "guild-connection-roles";
-function g(e) {
-    (0, s.openModalLazy)(
+"use strict";
+n.d(t, { Ay: () => h, CB: () => _, c0: () => f });
+var i = n(627968);
+n(64700);
+var r = n(17928),
+    s = n(231723),
+    a = n(192308),
+    o = n(477782),
+    l = n(173936),
+    u = n(317525),
+    c = n(370480),
+    d = n(375708);
+let _ = "guild-connection-roles";
+function f(e) {
+    (0, a.openModalLazy)(
         async () => {
-            let { default: l } = await Promise.all([t.e("15251"), t.e("92837")]).then(t.bind(t, 480900));
-            return (t) => (0, a.jsx)(l, { ...t, guildId: e });
+            let { default: t } = await Promise.all([n.e("15251"), n.e("92837")]).then(n.bind(n, 480900));
+            return (n) => (0, i.jsx)(t, { ...n, guildId: e });
         },
         {
-            modalKey: h,
-            contextKey: n.SY,
+            modalKey: _,
+            contextKey: s.SY,
             onCloseRequest: () => {
-                (0, s.closeModal)(h, n.SY);
+                (0, a.closeModal)(_, s.SY);
             },
         },
     );
 }
-function f(e) {
-    return (0, i.bG)([c.A], () => (0, d.N8)(c.A.getSortedRoles(e.id)), [e])
-        ? (0, a.jsx)(o.Dr, {
+function h(e) {
+    return (0, r.bG)([u.A], () => (0, c.N8)(u.A.getSortedRoles(e.id)), [e])
+        ? (0, i.jsx)(o.Dr, {
               id: "guild-connection-roles",
-              label: u.intl.string(u.t.ghtnss),
-              icon: r.q,
-              leadingAccessory: { type: "icon", icon: r.q },
-              action: () => g(e.id),
+              label: d.intl.string(d.t.ghtnss),
+              icon: l.q,
+              leadingAccessory: { type: "icon", icon: l.q },
+              action: () => f(e.id),
           })
         : null;
 }

@@ -6,47 +6,47 @@ var i,
     a = n(64700),
     o = n(289873),
     l = n(964486),
-    d = n(453903),
-    _ = n(503698),
-    u = n.n(_),
-    c = n(844222),
-    E = n(451988),
+    u = n(453903),
+    c = n(503698),
+    d = n.n(c),
+    _ = n(844222),
+    f = n(451988),
     h = n(10185),
-    m = (((i = m || {})[(i.TRANSLATE = 1)] = "TRANSLATE"), (i[(i.SCALE = 2)] = "SCALE"), (i[(i.FADE = 3)] = "FADE"), i);
-let f = Object.freeze({ 1: h.Tl, 2: h.hs, 3: h.Rv }),
-    g = Object.freeze({ top: h.ZR, bottom: h.XI, left: h.Hn, right: h.sS, center: h.pm, window_center: h.pm });
-function p(e) {
+    p = (((i = p || {})[(i.TRANSLATE = 1)] = "TRANSLATE"), (i[(i.SCALE = 2)] = "SCALE"), (i[(i.FADE = 3)] = "FADE"), i);
+let E = Object.freeze({ 1: h.Tl, 2: h.hs, 3: h.Rv }),
+    m = Object.freeze({ top: h.ZR, bottom: h.XI, left: h.Hn, right: h.sS, center: h.pm, window_center: h.pm });
+function g(e) {
     let { position: t, type: n, children: i } = e,
-        { reducedMotion: r } = a.useContext(c.C),
+        { reducedMotion: r } = a.useContext(_.C),
         o = r.enabled ? 3 : n,
-        [l, d] = a.useState(null != t),
-        [_] = a.useState(() => new E.Ep()),
-        [m, p] = a.useState(!0),
+        [l, u] = a.useState(null != t),
+        [c] = a.useState(() => new f.Ep()),
+        [p, g] = a.useState(!0),
         A = a.useRef(null);
     return (
         a.useLayoutEffect(() => {
             A.current?.addEventListener("transitionend", () => {
-                p(!1);
+                g(!1);
             }),
                 setTimeout(() => {
-                    p(!1);
+                    g(!1);
                 }, 200);
         }, []),
-        a.useEffect(() => () => _.stop(), [_]),
+        a.useEffect(() => () => c.stop(), [c]),
         a.useEffect(() => {
-            null != t && _.start(10, () => d(!0));
-        }, [t, _]),
+            null != t && c.start(10, () => u(!0));
+        }, [t, c]),
         (0, s.jsx)("div", {
-            "data-popout-animating": m,
-            className: u()(null != t ? g[t] : null, { [f[o]]: null != t, [h.Wr]: l }),
+            "data-popout-animating": p,
+            className: d()(null != t ? m[t] : null, { [E[o]]: null != t, [h.Wr]: l }),
             children: i,
         })
     );
 }
-p.Types = m;
+g.Types = p;
 var A = n(677771),
     I = (((r = I || {}).NONE = "1"), (r.TRANSLATE = "2"), (r.SCALE = "3"), (r.FADE = "4"), r);
-let T = Object.freeze({ 2: p.Types.TRANSLATE, 3: p.Types.SCALE, 4: p.Types.FADE });
+let T = Object.freeze({ 2: g.Types.TRANSLATE, 3: g.Types.SCALE, 4: g.Types.FADE });
 class S extends a.Component {
     static Animation = I;
     ref = a.createRef();
@@ -60,27 +60,28 @@ class S extends a.Component {
             fixed: a,
             useRawTargetDimensions: o,
             onShiftClick: l,
-            positionKey: _,
-            popoutKey: u,
-            preload: c,
-            loadingComponent: E,
+            positionKey: c,
+            popoutKey: d,
+            preload: _,
+            loadingComponent: f,
             disablePointerEvents: h,
-            ignoreModalClicks: m,
-            scrollBehavior: f,
-            useMouseEnter: g,
-            renderPopout: p,
+            ignoreModalClicks: p,
+            scrollBehavior: E,
+            useMouseEnter: m,
+            renderPopout: g,
             layerContext: A,
             position: I = "right",
             autoInvert: T = !0,
             nudgeAlignIntoViewport: S = !0,
-            spacing: N = 8,
+            avoidancePadding: N,
+            spacing: y = 8,
             clickTrap: C = !1,
         } = this.props;
-        return (0, s.jsx)(d.$, {
+        return (0, s.jsx)(u.$, {
             ref: this.ref,
             targetElementRef: this.props.targetElementRef,
-            preload: c,
-            loadingComponent: E,
+            preload: _,
+            loadingComponent: f,
             position: I,
             align:
                 null != r
@@ -102,19 +103,20 @@ class S extends a.Component {
             autoInvert: T,
             fixed: a,
             nudgeAlignIntoViewport: S,
+            avoidancePadding: N,
             useRawTargetDimensions: o,
             renderPopout: this.renderPopout,
-            spacing: N,
-            shouldShow: null != p && t,
+            spacing: y,
+            shouldShow: null != g && t,
             onRequestOpen: n,
             onRequestClose: i,
             onShiftClick: l,
-            positionKey: _,
-            popoutKey: u,
+            positionKey: c,
+            popoutKey: d,
             disablePointerEvents: h,
-            ignoreModalClicks: m,
-            scrollBehavior: f,
-            useMouseEnter: g,
+            ignoreModalClicks: p,
+            scrollBehavior: E,
+            useMouseEnter: m,
             layerContext: A,
             clickTrap: C,
             children: e,
@@ -126,7 +128,7 @@ class S extends a.Component {
             case "2":
             case "3":
             case "4":
-                return (0, s.jsx)(p, { position: e.position, type: T[n], children: t(e) });
+                return (0, s.jsx)(g, { position: e.position, type: T[n], children: t(e) });
             case "1":
                 return t(e);
         }
@@ -136,9 +138,9 @@ class S extends a.Component {
 function N(e) {
     let { renderPopout: t, ...n } = e,
         i = a.useRef(null),
-        [r, d] = a.useState(0);
-    function _() {
-        return c(), (0, s.jsx)(s.Fragment, {});
+        [r, u] = a.useState(0);
+    function c() {
+        return _(), (0, s.jsx)(s.Fragment, {});
     }
     a.useLayoutEffect(() => {
         r > 0 && i.current?.ref?.current?.layerRef?.current?.updatePosition();
@@ -147,34 +149,34 @@ function N(e) {
             let e = setTimeout(t, 20 + 20 * Math.random());
             return () => clearTimeout(e);
         });
-    let u = a.useRef(!1);
-    async function c() {
-        if (!u.current) {
-            u.current = !0;
+    let d = a.useRef(!1);
+    async function _() {
+        if (!d.current) {
+            d.current = !0;
             let e = setTimeout(() => {
-                    m(() => E), d((e) => e + 1);
+                    p(() => f), u((e) => e + 1);
                 }, 300),
                 n = await t();
-            m(() => n), d((e) => e + 1), clearTimeout(e);
+            p(() => n), u((e) => e + 1), clearTimeout(e);
         }
     }
-    function E() {
+    function f() {
         let e = i.current?.ref?.current?.domElementRef?.current,
             t = Math.max(100, null == e ? 100 : e.offsetWidth - 20);
         return (0, s.jsx)("div", { className: A.w, style: { width: t }, children: (0, s.jsx)(o.y, {}) });
     }
-    let [h, m] = a.useState(() => _),
-        f = a.useRef(_);
+    let [h, p] = a.useState(() => c),
+        E = a.useRef(c);
     return (
         a.useEffect(() => {
-            f.current = _;
+            E.current = c;
         }),
         a.useEffect(() => {
-            u.current
+            d.current
                 ? t().then((e) => {
-                      m(() => e), d((e) => e + 1);
+                      p(() => e), u((e) => e + 1);
                   })
-                : m(() => f.current);
+                : p(() => E.current);
         }, [t]),
         (0, s.jsx)(S, { ref: i, ...n, renderPopout: h })
     );

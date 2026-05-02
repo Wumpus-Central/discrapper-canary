@@ -1,21 +1,22 @@
-t.d(r, { E: () => h, U: () => c });
-var l = t(627968),
-    n = t(64700),
-    u = t(677313),
-    o = t(363195);
-let s = n.createContext({
-    theme: o.A.themePreferenceForSystemTheme((0, u.A)()),
+"use strict";
+n.d(t, { E: () => u, U: () => l });
+var i = n(627968),
+    r = n(64700),
+    s = n(677313),
+    a = n(363195);
+let o = r.createContext({
+    theme: a.A.themePreferenceForSystemTheme((0, s.A)()),
     themeType: null,
     primaryColor: null,
     secondaryColor: null,
     userId: null,
 });
-function c(e) {
-    let { theme: r, themeType: t, primaryColor: u, secondaryColor: o, userId: c, children: h } = e,
-        a = n.useMemo(
-            () => ({ theme: r, themeType: t, primaryColor: u, secondaryColor: o, userId: c }),
-            [r, t, u, o, c],
+function l(e) {
+    let { theme: t, themeType: n, primaryColor: s, secondaryColor: a, userId: l, children: u } = e,
+        c = r.useMemo(
+            () => ({ theme: t, themeType: n, primaryColor: s, secondaryColor: a, userId: l }),
+            [t, n, s, a, l],
         );
-    return (0, l.jsx)(s.Provider, { value: a, children: h });
+    return (0, i.jsx)(o.Provider, { value: c, children: u });
 }
-let h = () => n.useContext(s);
+let u = () => r.useContext(o);

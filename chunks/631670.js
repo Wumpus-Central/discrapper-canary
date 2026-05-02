@@ -1,127 +1,128 @@
-e.d(t, {
-    $I: () => c,
-    Cw: () => l,
-    F7: () => A,
-    IM: () => I,
+"use strict";
+n.d(t, {
+    $I: () => E,
+    Cw: () => d,
+    F7: () => I,
+    IM: () => A,
     KD: () => h,
-    U_: () => p,
-    Uo: () => s,
-    _L: () => T,
-    _e: () => N,
-    fw: () => U,
-    pZ: () => u,
-    x8: () => R,
+    U_: () => f,
+    Uo: () => _,
+    _L: () => p,
+    _e: () => T,
+    fw: () => S,
+    pZ: () => g,
+    x8: () => m,
 });
-var E = e(636537),
-    i = e(506774),
-    S = e(228366),
-    n = e(77257),
-    a = e(976860);
-e(624826);
-var d = e(830215);
-e(252452);
-var o = e(652215),
-    r = e(516780);
-function l() {
-    S.h.dispatch({ type: "USER_PROFILE_SETTINGS_INIT" });
+var i = n(636537),
+    r = n(506774),
+    s = n(228366),
+    a = n(77257),
+    o = n(976860);
+n(624826);
+var l = n(830215);
+n(252452);
+var u = n(652215),
+    c = n(516780);
+function d() {
+    s.h.dispatch({ type: "USER_PROFILE_SETTINGS_INIT" });
 }
-function s() {
-    S.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLOSE" });
+function _() {
+    s.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLOSE" });
 }
-function p(_, t) {
-    let e = t ? o.Rsh.DELETE_ACCOUNT : o.Rsh.DISABLE_ACCOUNT;
-    return E.Bo.post({ url: e, body: { password: _ }, oldFormErrors: !0, rejectWithError: !1 }).then(() => {
-        d.A.logoutInternal(), (0, a.pX)(o.BVt.DEFAULT_LOGGED_OUT);
+function f(e, t) {
+    let n = t ? u.Rsh.DELETE_ACCOUNT : u.Rsh.DISABLE_ACCOUNT;
+    return i.Bo.post({ url: n, body: { password: e }, oldFormErrors: !0, rejectWithError: !1 }).then(() => {
+        l.A.logoutInternal(), (0, o.pX)(u.BVt.DEFAULT_LOGGED_OUT);
     });
 }
-async function h(_) {
+async function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        e = await E.Bo.patch({ url: o.Rsh.ME, oldFormErrors: !0, body: _, headers: t.headers, rejectWithError: !1 }),
-        i = e.body;
-    if (i.token) {
-        let t = i.token;
-        delete i.token,
-            S.h.dispatch({ type: "UPDATE_TOKEN", token: t, userId: i.id }),
-            _?.password != null && _?.new_password != null && S.h.dispatch({ type: "PASSWORD_UPDATED", userId: i.id });
+        n = await i.Bo.patch({ url: u.Rsh.ME, oldFormErrors: !0, body: e, headers: t.headers, rejectWithError: !1 }),
+        r = n.body;
+    if (r.token) {
+        let t = r.token;
+        delete r.token,
+            s.h.dispatch({ type: "UPDATE_TOKEN", token: t, userId: r.id }),
+            e?.password != null && e?.new_password != null && s.h.dispatch({ type: "PASSWORD_UPDATED", userId: r.id });
     }
-    return S.h.dispatch({ type: "CURRENT_USER_UPDATE", user: i }), e;
+    return s.h.dispatch({ type: "CURRENT_USER_UPDATE", user: r }), n;
 }
-function T(_) {
+function p(e) {
     let {
         username: t,
-        discriminator: e,
-        email: E,
-        emailToken: a,
-        password: d,
-        avatar: l,
-        avatarDescription: s,
-        avatarId: p,
-        avatarDecoration: T,
-        newPassword: c,
-        globalName: R,
-        legacyUsername: u,
-        nameplate: I,
-        primaryGuildId: A,
-        displayNameStyles: N,
-        avatarOriginalMd5: U,
-    } = _;
-    S.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
-    let y = {
+        discriminator: n,
+        email: i,
+        emailToken: o,
+        password: l,
+        avatar: d,
+        avatarDescription: _,
+        avatarId: f,
+        avatarDecoration: p,
+        newPassword: E,
+        globalName: m,
+        legacyUsername: g,
+        nameplate: A,
+        primaryGuildId: I,
+        displayNameStyles: T,
+        avatarOriginalMd5: S,
+    } = e;
+    s.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
+    let N = {
         username: t,
-        email: E,
-        email_token: a,
-        password: d,
-        avatar: l,
-        avatar_description: s,
-        avatar_id: p,
-        discriminator: e,
-        global_name: R,
-        legacy_username: u,
-        new_password: c,
+        email: i,
+        email_token: o,
+        password: l,
+        avatar: d,
+        avatar_description: _,
+        avatar_id: f,
+        discriminator: n,
+        global_name: m,
+        legacy_username: g,
+        new_password: E,
     };
-    void 0 !== T && (y.avatar_decoration_sku_id = T?.skuId ?? null),
-        void 0 !== I && (y.nameplate_sku_id = I?.skuId ?? null),
-        void 0 !== A && (y.primary_guild_id = A),
-        null != N
-            ? ((y.display_name_font_id = N.fontId),
-              (y.display_name_effect_id = N.effectId),
-              (y.display_name_colors = N.colors))
-            : null === N &&
-              ((y.display_name_font_id = null), (y.display_name_effect_id = null), (y.display_name_colors = null));
-    let L = i.w.get(o.Xlh),
-        O = (0, r.oH)();
-    null != O && null != L && ((y.push_provider = O), (y.push_token = L));
-    let D = i.w.get(o.Ahp);
+    void 0 !== p && (N.avatar_decoration_sku_id = p?.skuId ?? null),
+        void 0 !== A && (N.nameplate_sku_id = A?.skuId ?? null),
+        void 0 !== I && (N.primary_guild_id = I),
+        null != T
+            ? ((N.display_name_font_id = T.fontId),
+              (N.display_name_effect_id = T.effectId),
+              (N.display_name_colors = T.colors))
+            : null === T &&
+              ((N.display_name_font_id = null), (N.display_name_effect_id = null), (N.display_name_colors = null));
+    let y = r.w.get(u.Xlh),
+        C = (0, c.oH)();
+    null != C && null != y && ((N.push_provider = C), (N.push_token = y));
+    let v = r.w.get(u.Ahp);
     return (
-        null != r.vz && null != D && ((y.push_voip_provider = r.vz), (y.push_voip_token = D)),
-        h(y, { headers: n.A.buildHeadersForMd5(U) }).then(
-            (_) => (
-                S.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" }),
-                (null != l || null != p) && S.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
-                _
+        null != c.vz && null != v && ((N.push_voip_provider = c.vz), (N.push_voip_token = v)),
+        h(N, { headers: a.A.buildHeadersForMd5(S) }).then(
+            (e) => (
+                s.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" }),
+                (null != d || null != f) && s.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+                e
             ),
-            (_) => (S.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", errors: _.body }), _),
+            (e) => (s.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", errors: e.body }), e),
         )
     );
 }
-function c(_) {
-    return E.Bo.post({ url: o.Rsh.USER_HARVEST, body: { backends: _ }, oldFormErrors: !0, rejectWithError: !1 });
+function E(e) {
+    return i.Bo.post({ url: u.Rsh.USER_HARVEST, body: { backends: e }, oldFormErrors: !0, rejectWithError: !1 });
 }
-function R() {
-    S.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
+function m() {
+    s.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
 }
-function u() {
-    S.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
-}
-function I() {
-    S.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
+function g() {
+    s.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 }
 function A() {
-    S.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM" });
+    s.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 }
-function N() {
-    S.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
+function I() {
+    s.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM" });
 }
-function U() {
-    S.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
+function T() {
+    s.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
+}
+function S() {
+    s.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 }

@@ -1,12 +1,13 @@
-a.d(t, { C: () => p, JE: () => u, NE: () => _, VU: () => E, mb: () => A }), a(323874), a(14289), a(35956);
-var r = a(64700),
-    n = a(735438),
-    l = a(353640),
-    o = a(121894),
-    i = a(816866),
-    s = a(87558),
-    c = a(559474);
-let u = (0, l.v)((e) => ({
+"use strict";
+n.d(t, { C: () => f, JE: () => c, NE: () => d, VU: () => h, mb: () => _ }), n(323874), n(14289), n(35956);
+var i = n(64700),
+    r = n(735438),
+    s = n(353640),
+    a = n(121894),
+    o = n(816866),
+    l = n(87558),
+    u = n(559474);
+let c = (0, s.v)((e) => ({
         previewEnabled: !1,
         collectionAssets: {},
         avatarDecorationAssets: {},
@@ -17,55 +18,55 @@ let u = (0, l.v)((e) => ({
         setPreviewEnabled: (t) => e({ previewEnabled: t }),
         setHeroLogoMaxHeight: (t) => e({ heroLogoMaxHeight: t }),
         setHeroResponsive: (t) => e({ heroResponsive: t }),
-        upsertCollectionAsset: (t, a) =>
-            (0, o.r)(() => {
+        upsertCollectionAsset: (t, n) =>
+            (0, a.r)(() => {
                 e((e) => {
-                    let r = e.collectionAssets[t];
-                    null != r && URL.revokeObjectURL(r.src);
-                    let n = URL.createObjectURL(a),
-                        l = { ...e.collectionAssets };
+                    let i = e.collectionAssets[t];
+                    null != i && URL.revokeObjectURL(i.src);
+                    let r = URL.createObjectURL(n),
+                        s = { ...e.collectionAssets };
                     return (
-                        (l[t] = { type: t, name: a.name, src: n }), { ...e, collectionAssets: l, previewEnabled: !0 }
+                        (s[t] = { type: t, name: n.name, src: r }), { ...e, collectionAssets: s, previewEnabled: !0 }
                     );
                 });
             }),
         deleteCollectionAsset: (t) =>
-            (0, o.r)(() => {
+            (0, a.r)(() => {
                 e((e) => {
-                    let a = e.collectionAssets[t];
-                    if (null == a) return e;
-                    URL.revokeObjectURL(a.src);
-                    let { [t]: r, ...n } = e.collectionAssets,
-                        l = Object.keys(n).length > 0 || Object.keys(e.avatarDecorationAssets).length > 0;
-                    return { ...e, collectionAssets: n, previewEnabled: l };
+                    let n = e.collectionAssets[t];
+                    if (null == n) return e;
+                    URL.revokeObjectURL(n.src);
+                    let { [t]: i, ...r } = e.collectionAssets,
+                        s = Object.keys(r).length > 0 || Object.keys(e.avatarDecorationAssets).length > 0;
+                    return { ...e, collectionAssets: r, previewEnabled: s };
                 });
             }),
         upsertAvatarDecorationAsset: (t) =>
-            (0, o.r)(() => {
+            (0, a.r)(() => {
                 e((e) => {
-                    let a = e.avatarDecorationAssets[t.name];
-                    null != a && URL.revokeObjectURL(a.src);
-                    let r = URL.createObjectURL(t),
-                        n = { ...e.avatarDecorationAssets };
+                    let n = e.avatarDecorationAssets[t.name];
+                    null != n && URL.revokeObjectURL(n.src);
+                    let i = URL.createObjectURL(t),
+                        r = { ...e.avatarDecorationAssets };
                     return (
-                        (n[t.name] = { type: c.Jn.AVATAR_DECORATION, name: t.name, src: r }),
-                        { ...e, avatarDecorationAssets: n, previewEnabled: !0 }
+                        (r[t.name] = { type: u.Jn.AVATAR_DECORATION, name: t.name, src: i }),
+                        { ...e, avatarDecorationAssets: r, previewEnabled: !0 }
                     );
                 });
             }),
         deleteAvatarDecorationAsset: (t) =>
-            (0, o.r)(() => {
+            (0, a.r)(() => {
                 e((e) => {
-                    let a = e.avatarDecorationAssets[t];
-                    if (null == a) return e;
-                    URL.revokeObjectURL(a.src);
-                    let { [t]: r, ...n } = e.avatarDecorationAssets,
-                        l = Object.keys(n).length > 0 || Object.keys(e.collectionAssets).length > 0;
-                    return { ...e, avatarDecorationAssets: n, previewEnabled: l };
+                    let n = e.avatarDecorationAssets[t];
+                    if (null == n) return e;
+                    URL.revokeObjectURL(n.src);
+                    let { [t]: i, ...r } = e.avatarDecorationAssets,
+                        s = Object.keys(r).length > 0 || Object.keys(e.collectionAssets).length > 0;
+                    return { ...e, avatarDecorationAssets: r, previewEnabled: s };
                 });
             }),
         clearAssets: () =>
-            (0, o.r)(() => {
+            (0, a.r)(() => {
                 e(
                     (e) => (
                         Object.values(e.collectionAssets).forEach((e) => URL.revokeObjectURL(e.src)),
@@ -83,14 +84,14 @@ let u = (0, l.v)((e) => ({
                 );
             }),
         setPreviewProfileEffectSkuId: (t) =>
-            (0, o.r)(() => e({ previewProfileEffectSkuId: t, previewEnabled: null != t })),
+            (0, a.r)(() => e({ previewProfileEffectSkuId: t, previewEnabled: null != t })),
         setPreviewAvatarDecorationKey: (t) =>
-            (0, o.r)(() => e({ previewAvatarDecorationKey: t, previewEnabled: null != t })),
+            (0, a.r)(() => e({ previewAvatarDecorationKey: t, previewEnabled: null != t })),
     })),
-    _ = () => {
-        let e = u((e) => e.collectionAssets),
-            t = u((e) => e.avatarDecorationAssets);
-        return r.useMemo(
+    d = () => {
+        let e = c((e) => e.collectionAssets),
+            t = c((e) => e.avatarDecorationAssets);
+        return i.useMemo(
             () => ({
                 collectionAssets: Object.values(e).sort((e, t) => e.name.localeCompare(t.name)),
                 avatarDecorationAssets: Object.values(t).sort((e, t) => e.name.localeCompare(t.name)),
@@ -98,35 +99,35 @@ let u = (0, l.v)((e) => ({
             [e, t],
         );
     },
-    A = (e) => u((t) => (t.previewEnabled ? t.collectionAssets[e]?.src : null)),
-    p = (e) => {
-        let { previewEnabled: t, previewProfileEffectSkuId: a } = u(),
-            l = (0, i.ZK)(t ? a : null);
-        return r.useMemo(() => {
-            if (null == l || null == e) return null;
-            let { effects: t, stillFrames: a } = l,
-                r = null != a && Object.keys(a).length > 0;
-            if (0 === t.length && !r) return null;
-            let o = (0, n.cloneDeep)(e);
+    _ = (e) => c((t) => (t.previewEnabled ? t.collectionAssets[e]?.src : null)),
+    f = (e) => {
+        let { previewEnabled: t, previewProfileEffectSkuId: n } = c(),
+            s = (0, o.ZK)(t ? n : null);
+        return i.useMemo(() => {
+            if (null == s || null == e) return null;
+            let { effects: t, stillFrames: n } = s,
+                i = null != n && Object.keys(n).length > 0;
+            if (0 === t.length && !i) return null;
+            let a = (0, r.cloneDeep)(e);
             return (
-                (o.title = l.name),
-                (o.effects = t.map((e) => {
-                    let { base64: t, ...a } = e;
-                    return a;
+                (a.title = s.name),
+                (a.effects = t.map((e) => {
+                    let { base64: t, ...n } = e;
+                    return n;
                 })),
-                r &&
-                    ((o.reducedMotionSrc = a[s.qH.REDUCED_MOTION]?.src ?? ""),
-                    (o.staticFrameSrc = a[s.qH.STATIC]?.src ?? ""),
-                    (o.thumbnailPreviewSrc = a[s.qH.THUMBNAIL]?.src ?? "")),
-                o
+                i &&
+                    ((a.reducedMotionSrc = n[l.qH.REDUCED_MOTION]?.src ?? ""),
+                    (a.staticFrameSrc = n[l.qH.STATIC]?.src ?? ""),
+                    (a.thumbnailPreviewSrc = n[l.qH.THUMBNAIL]?.src ?? "")),
+                a
             );
-        }, [l, e]);
+        }, [s, e]);
     },
-    E = () =>
-        u((e) => {
+    h = () =>
+        c((e) => {
             if (!e.previewEnabled) return null;
             let t = e.previewAvatarDecorationKey;
             if (null != t) return e.avatarDecorationAssets[t]?.src ?? null;
-            let a = Object.values(e.avatarDecorationAssets);
-            return a[0]?.src;
+            let n = Object.values(e.avatarDecorationAssets);
+            return n[0]?.src;
         });

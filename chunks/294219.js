@@ -1,13 +1,14 @@
-s.d(t, { G: () => n }), s(321073);
-var a = s(64700),
-    r = s(398523),
-    l = s(881373),
-    i = s(852218);
-function n(e) {
+"use strict";
+n.d(t, { G: () => o }), n(321073);
+var i = n(64700),
+    r = n(398523),
+    s = n(881373),
+    a = n(852218);
+function o(e) {
     let { enabled: t } = r.Ay.useConfig({ location: "useRecurring3PModalEligiblePartnerIds" }),
-        s = (0, l.YS)({ location: "useRecurring3PModalEligiblePartnerIds" }).functionalityEnabled;
-    return a.useMemo(() => {
-        let a = [];
-        return t && a.push(i.KS, i.Cs), s && a.push(i.XY), null != e ? e.filter((e) => a.includes(e)) : a;
-    }, [t, s, e]);
+        n = (0, s.YS)({ location: "useRecurring3PModalEligiblePartnerIds" }).functionalityEnabled;
+    return i.useMemo(() => {
+        let i = [];
+        return t && i.push(a.KS, a.Cs), n && i.push(a.XY), null != e ? e.filter((e) => i.includes(e)) : i;
+    }, [t, n, e]);
 }

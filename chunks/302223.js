@@ -1,39 +1,40 @@
-n.d(t, { A: () => o });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    s = n.n(l),
-    r = n(51183),
-    a = n(729688);
-function o(e) {
+var r = n(503698),
+    s = n.n(r),
+    a = n(51183),
+    o = n(729688);
+function l(e) {
     let {
         activity: t,
         className: n,
-        emojiClassName: l,
-        textClassName: o,
+        emojiClassName: r,
+        textClassName: l,
         placeholderText: u,
-        soloEmojiClassName: d,
-        animate: c = !0,
-        hideTooltip: h = !1,
-        hideEmoji: g = !1,
-        children: A,
+        soloEmojiClassName: c,
+        animate: d = !0,
+        hideTooltip: _ = !1,
+        hideEmoji: f = !1,
+        children: h,
     } = e;
     if (null == t) return null;
-    let { emoji: f } = t,
+    let { emoji: p } = t,
         E = null != t.state && "" !== t.state ? t.state : u;
     return (0, i.jsxs)("div", {
-        className: s()(a.__invalid_container, n),
+        className: s()(o.__invalid_container, n),
         children: [
-            g || null == f
+            f || null == p
                 ? null
-                : (0, i.jsx)(r.A, {
-                      emoji: f,
-                      className: s()(a.Z, l, null != d ? { [d]: null == E || "" === E } : null),
-                      animate: c,
-                      hideTooltip: h,
+                : (0, i.jsx)(a.A, {
+                      emoji: p,
+                      className: s()(o.Z, r, null != c ? { [c]: null == E || "" === E } : null),
+                      animate: d,
+                      hideTooltip: _,
                   }),
-            null != E && E.length > 0 ? (0, i.jsx)("span", { className: o, children: E }) : null,
-            A,
+            null != E && E.length > 0 ? (0, i.jsx)("span", { className: l, children: E }) : null,
+            h,
         ],
     });
 }
