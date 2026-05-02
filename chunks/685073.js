@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { Rg: () => d, Wb: () => p, Zo: () => f, gC: () => _, gS: () => h, q0: () => c });
-var i = n(17928),
-    r = n(229527),
-    s = n(696451),
-    a = n(71393),
-    o = n(287809),
-    l = n(743981),
-    u = n(652215);
-function c(e) {
+r.d(a, { Rg: () => E, Wb: () => S, Zo: () => f, gC: () => o, gS: () => A, q0: () => u });
+var l = r(17928),
+    t = r(229527),
+    n = r(696451),
+    i = r(71393),
+    d = r(287809),
+    s = r(743981),
+    c = r(652215);
+function u(e) {
     return e?.profile?.tag != null;
 }
-function d(e) {
-    return e.features.has(u.GuildFeatures.GUILD_TAGS);
+function E(e) {
+    return e.features.has(c.GuildFeatures.GUILD_TAGS);
 }
-function _(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.Sl.SIZE_12;
-    if (null == t) return;
-    let { CDN_HOST: i } = window.GLOBAL_ENV;
-    if (null == i) return;
-    let r = l.lv[n];
-    return `https://${i}/clan-badges/${e}/${t}.png?size=${r}`;
+function o(e, a) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Sl.SIZE_12;
+    if (null == a) return;
+    let { CDN_HOST: l } = window.GLOBAL_ENV;
+    if (null == l) return;
+    let t = s.lv[r];
+    return `https://${l}/clan-badges/${e}/${a}.png?size=${t}`;
 }
 function f(e) {
     return null != e && e.identityEnabled ? { guildId: e.identityGuildId, tag: e.tag, badge: e.badge } : {};
 }
-function h(e) {
-    let t = (0, i.bG)([a.A], () => a.A.getGuild(e), [e]);
+function A(e) {
+    let a = (0, l.bG)([i.A], () => i.A.getGuild(e), [e]);
     return null == e
         ? e
-        : null == t
-          ? t
+        : null == a
+          ? a
           : {
-                identityGuildId: t.id,
+                identityGuildId: a.id,
                 identityEnabled: !0,
-                tag: t.profile?.tag ?? void 0,
-                badge: t.profile?.badge ?? void 0,
+                tag: a.profile?.tag ?? void 0,
+                badge: a.profile?.badge ?? void 0,
             };
 }
-function p(e, t, n) {
-    let a = (0, i.bG)([o.default], () => o.default.getUser(e), [e]),
-        l = (0, i.bG)([s.Ay], () => {
-            if (null == t || null == e) return null;
-            let n = s.Ay.getMember(t, e);
-            return (0, r.TR)(n);
-        }, [t, e]),
-        { tag: u, guildId: c } = f(void 0 !== n ? n : a?.primaryGuild);
-    return null != c && null != u && !l;
+function S(e, a, r) {
+    let i = (0, l.bG)([d.default], () => d.default.getUser(e), [e]),
+        s = (0, l.bG)([n.Ay], () => {
+            if (null == a || null == e) return null;
+            let r = n.Ay.getMember(a, e);
+            return (0, t.TR)(r);
+        }, [a, e]),
+        { tag: c, guildId: u } = f(void 0 !== r ? r : i?.primaryGuild);
+    return null != u && null != c && !s;
 }

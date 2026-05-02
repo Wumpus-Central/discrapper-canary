@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { MM: () => o, Wi: () => a, X8: () => s });
-var i = n(913290),
-    r = n(777376);
-let s = "1476683556242718862";
-function a() {
+i.d(t, { MM: () => l, Wi: () => r, X8: () => n });
+var s = i(913290),
+    a = i(777376);
+let n = "1476683556242718862";
+function r() {
     return "#";
 }
-function o(e) {
-    if (e.sku_id !== s || e.deleted) return null;
-    if (null == e.ends_at || new Date(e.ends_at) > new Date()) return r.gR.ACTIVATED;
+function l(e) {
+    if (e.sku_id !== n || e.deleted) return null;
+    if (null == e.ends_at || new Date(e.ends_at) > new Date()) return a.gR.ACTIVATED;
     let t = e.fulfillment_status;
-    return t === i.w.FULFILLED || t === i.w.UNFULFILLMENT_NEEDED || t === i.w.UNFULFILLMENT_NEEDED_MANUAL
-        ? r.gR.CANCELLATION_PENDING
+    return t === s.w.FULFILLED || t === s.w.UNFULFILLMENT_NEEDED || t === s.w.UNFULFILLMENT_NEEDED_MANUAL
+        ? a.gR.CANCELLATION_PENDING
         : null;
 }

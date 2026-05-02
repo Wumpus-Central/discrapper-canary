@@ -1,69 +1,68 @@
-"use strict";
-n.d(t, { A: () => f });
-var i = n(562708),
-    r = n(933681),
-    s = n(228366),
-    a = n(568185),
-    o = n(543465),
-    l = n(477427),
-    u = n(499785),
-    c = n(832712),
-    d = n(652215),
-    _ = n(355097);
-let f = {
+r.d(t, { A: () => _ });
+var i = r(562708),
+    n = r(933681),
+    a = r(228366),
+    o = r(568185),
+    p = r(543465),
+    d = r(477427),
+    s = r(499785),
+    l = r(832712),
+    c = r(652215),
+    h = r(355097);
+let _ = {
     createChannel(e) {
         let {
             guildId: t,
-            type: n,
-            name: f,
-            permissionOverwrites: h = [],
-            bitrate: p,
-            userLimit: E,
-            parentId: m,
-            skuId: g,
-            branchId: A,
+            type: r,
+            name: _,
+            permissionOverwrites: A = [],
+            bitrate: E,
+            userLimit: N,
+            parentId: y,
+            skuId: u,
+            branchId: C,
         } = e;
-        s.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId: t, channelType: n });
-        let I = { type: n, name: f, permission_overwrites: h };
+        a.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId: t, channelType: r });
+        let b = { type: r, name: _, permission_overwrites: A };
         if (
-            (null != p && p !== d.gp3 && (I.bitrate = p),
-            null != E && E > 0 && (I.user_limit = E),
-            null != m && (I.parent_id = m),
-            n === d.rbe.GUILD_STORE)
+            (null != E && E !== c.gp3 && (b.bitrate = E),
+            null != N && N > 0 && (b.user_limit = N),
+            null != y && (b.parent_id = y),
+            r === c.rbe.GUILD_STORE)
         ) {
-            if (null == g) throw Error("Unexpected missing SKU");
-            (I.sku_id = g), (I.branch_id = A);
+            if (null == u) throw Error("Unexpected missing SKU");
+            (b.sku_id = u), (b.branch_id = C);
         }
-        return u.A.post({
-            url: d.Rsh.GUILD_CHANNELS(t),
-            body: I,
+        return s.A.post({
+            url: c.Rsh.GUILD_CHANNELS(t),
+            body: b,
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.CHANNEL_CREATE,
                 properties: (e) =>
-                    (0, r.e0)({ is_private: h.length > 0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
+                    (0, n.e0)({ is_private: A.length > 0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
             },
             rejectWithError: !1,
         }).then(
             (e) => (
-                o.Ay.isOptInEnabled(t) &&
-                    c.A.updateChannelOverrideSettings(t, e.body.id, { flags: _.vv.OPT_IN_ENABLED }, l.fd.OptedIn),
-                a.A.checkGuildTemplateDirty(t),
+                p.Ay.isOptInEnabled(t) &&
+                    l.A.updateChannelOverrideSettings(t, e.body.id, { flags: h.vv.OPT_IN_ENABLED }, d.fd.OptedIn),
+                o.A.checkGuildTemplateDirty(t),
                 e
             ),
             (e) => {
-                throw (s.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: e.body }), e);
+                throw (a.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE", errors: e.body }), e);
             },
         );
     },
-    createRoleSubscriptionTemplateChannel: (e, t, n, s) =>
-        u.A.post({
-            url: d.Rsh.GUILD_CHANNELS(e),
-            body: { name: t, type: n, topic: s },
+    createRoleSubscriptionTemplateChannel: (e, t, r, a) =>
+        s.A.post({
+            url: c.Rsh.GUILD_CHANNELS(e),
+            body: { name: t, type: r, topic: a },
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.CHANNEL_CREATE,
-                properties: (e) => (0, r.e0)({ is_private: !0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
+                properties: (e) => (0, n.e0)({ is_private: !0, channel_id: e?.body?.id, channel_type: e?.body?.type }),
             },
             rejectWithError: !1,
         }),

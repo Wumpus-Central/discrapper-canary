@@ -1,67 +1,66 @@
-"use strict";
-n.d(t, { A: () => T, D: () => S });
+n.d(t, { A: () => C, D: () => P });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(284009),
-    o = n.n(a),
-    l = n(554146),
-    u = n(417098),
-    c = n(736653),
-    d = n(573648),
-    _ = n(619006),
-    f = n(145643),
-    h = n(826673),
-    p = n(468689),
-    E = n(967198),
-    m = n(652215),
-    g = n(452832),
-    A = n(375708),
-    I = n(448759);
-function T(e) {
+var l = n(503698),
+    r = n.n(l),
+    s = n(284009),
+    a = n.n(s),
+    E = n(554146);
+if (21552 == n.j) var o = n(417098);
+var c = n(736653),
+    _ = n(573648),
+    u = n(619006),
+    A = n(145643),
+    T = n(826673),
+    d = n(468689),
+    I = n(967198),
+    N = n(652215),
+    R = n(452832),
+    S = n(375708),
+    O = n(448759);
+function C(e) {
     let { markAsDismissed: t } = e,
-        n = E.A.getGuildId(),
-        r = (0, c.DP)();
-    o()(n, "Guild Id must be defined");
-    let a = d.A.get(m.fg2.RIOT_GAMES);
-    return (0, i.jsxs)(u.$T, {
-        color: u.Hv.WARNING,
+        n = I.A.getGuildId(),
+        l = (0, c.DP)();
+    a()(n, "Guild Id must be defined");
+    let s = _.A.get(N.fg2.RIOT_GAMES);
+    return (0, i.jsxs)(o.$T, {
+        color: o.Hv.WARNING,
         children: [
-            (0, i.jsx)(u.PM, {
-                onClick: () => (0, h.Dr)(l.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE),
-                noticeType: m.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+            (0, i.jsx)(o.PM, {
+                onClick: () => (0, T.Dr)(E.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE),
+                noticeType: N.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
             }),
             (0, i.jsx)("img", {
-                src: "light" === r ? a.icon.blackSVG : a.icon.whiteSVG,
-                alt: A.intl.string(g.default["1S6oAo"]),
-                className: s()(I.tV, I._R),
+                src: "light" === l ? s.icon.blackSVG : s.icon.whiteSVG,
+                alt: S.intl.string(R.default["1S6oAo"]),
+                className: r()(O.tV, O._R),
             }),
-            A.intl.format(g.default["/Xhh40"], {
+            S.intl.format(R.default["/Xhh40"], {
                 settingsLink: () => `https://discord.com/guilds/${n}/settings/roles`,
             }),
-            (0, i.jsx)(u.Z_, {
+            (0, i.jsx)(o.Z_, {
                 onClick: () => {
-                    t(), p.A.open(n, m.BEX.ROLES);
+                    t(), d.A.open(n, N.BEX.ROLES);
                 },
-                noticeType: m.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
-                className: I.HE,
-                children: A.intl.string(g.default.spsZYI),
+                noticeType: N.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+                className: O.HE,
+                children: S.intl.string(R.default.spsZYI),
             }),
-            (0, i.jsx)(u.zr, { onClick: () => t(), className: I.wX, children: A.intl.string(g.default["MVB/Ab"]) }),
+            (0, i.jsx)(o.zr, { onClick: () => t(), className: O.wX, children: S.intl.string(R.default["MVB/Ab"]) }),
         ],
     });
 }
-function S(e) {
+function P(e) {
     e.forEach((e) => {
-        null == f.A.getGuildRoleConnectionsConfiguration(e.id) && (0, _.os)(e.guildId, e.id);
+        null == A.A.getGuildRoleConnectionsConfiguration(e.id) && (0, u.os)(e.guildId, e.id);
     });
-    let t = e.map((e) => f.A.getGuildRoleConnectionsConfiguration(e.id));
+    let t = e.map((e) => A.A.getGuildRoleConnectionsConfiguration(e.id));
     return (
         null != t &&
         t.some((e) =>
             e?.some((e) =>
-                e.some((e) => e.connectionType === m.fg2.RIOT_GAMES || e.connectionType === m.fg2.LEAGUE_OF_LEGENDS),
+                e.some((e) => e.connectionType === N.fg2.RIOT_GAMES || e.connectionType === N.fg2.LEAGUE_OF_LEGENDS),
             ),
         )
     );

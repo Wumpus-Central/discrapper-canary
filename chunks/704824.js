@@ -1,35 +1,34 @@
-"use strict";
-n.d(t, { U: () => u, j: () => l });
-var i = n(64700),
+n.d(t, { U: () => c, j: () => a });
+var l = n(64700),
     r = n(17928),
-    s = n(824552),
-    a = n(546183),
+    i = n(824552),
+    u = n(546183),
     o = n(403362);
-function l(e, t) {
+function a(e, t) {
     let { disableFetch: n = !1 } = t ?? {},
-        l = (0, r.yK)([a.default], () => e?.map((e) => a.default.getNewestTokenForApplication(e)).filter(o.Vq) ?? [], [
+        a = (0, r.yK)([u.default], () => e?.map((e) => u.default.getNewestTokenForApplication(e)).filter(o.Vq) ?? [], [
             e,
         ]),
-        u = (0, r.bG)(
-            [a.default],
-            () => e?.every((e) => a.default.getFetchStateForApplication(e) === a.FetchState.FETCHED) ?? !1,
+        c = (0, r.bG)(
+            [u.default],
+            () => e?.every((e) => u.default.getFetchStateForApplication(e) === u.FetchState.FETCHED) ?? !1,
             [e],
         ),
-        c = (0, r.yK)(
-            [a.default],
-            () => e?.filter((e) => a.default.getFetchStateForApplication(e) === a.FetchState.NOT_FETCHED) ?? [],
+        s = (0, r.yK)(
+            [u.default],
+            () => e?.filter((e) => u.default.getFetchStateForApplication(e) === u.FetchState.NOT_FETCHED) ?? [],
             [e],
         );
     return (
-        i.useEffect(() => {
-            n || 0 === c.length || s.A.fetch(c);
-        }, [n, c]),
-        { tokens: l, fetched: u }
+        l.useEffect(() => {
+            n || 0 === s.length || i.A.fetch(s);
+        }, [n, s]),
+        { tokens: a, fetched: c }
     );
 }
-function u(e, t) {
-    let { tokens: n, fetched: r } = l(
-        i.useMemo(() => (null != e ? [e] : null), [e]),
+function c(e, t) {
+    let { tokens: n, fetched: r } = a(
+        l.useMemo(() => (null != e ? [e] : null), [e]),
         t,
     );
     return { token: n.length > 0 ? n[0] : null, fetched: r };

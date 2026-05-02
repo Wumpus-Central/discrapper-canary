@@ -14,7 +14,7 @@
 .stepsContainer__2ff9f {
     flex: 1;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 0 var(--space-32)
 }
 

@@ -1,66 +1,65 @@
-"use strict";
-n.d(t, { E: () => g, QuestRewardModalUnverified: () => m });
-var i = n(627968),
-    r = n(64700),
-    s = n(772707),
-    a = n(17928),
-    o = n(289873),
-    l = n(885574),
-    u = n(834730),
+n.d(e, { E: () => E, QuestRewardModalUnverified: () => v });
+var s = n(627968),
+    i = n(64700),
+    r = n(772707),
+    l = n(17928),
+    u = n(289873),
+    o = n(885574),
+    a = n(834730),
     c = n(192308),
     d = n(830215),
-    _ = n(287809),
+    C = n(287809),
     f = n(710969),
-    h = n(375708),
-    p = n(105247),
-    E = n(37229);
-function m(e) {
-    let { transitionState: t, onClose: n } = e,
-        c = (0, a.bG)([_.default], () => _.default.getCurrentUser()?.email),
-        [m, g] = r.useState({ status: "unknown" });
-    r.useEffect(() => {
-        g({ status: "loading" }),
+    A = n(375708),
+    g = n(105247),
+    T = n(37229);
+function v(t) {
+    let { transitionState: e, onClose: n } = t,
+        c = (0, l.bG)([C.default], () => C.default.getCurrentUser()?.email),
+        [v, E] = i.useState({ status: "unknown" });
+    i.useEffect(() => {
+        E({ status: "loading" }),
             d.A.verifyResend().then(
-                () => g({ status: "success" }),
-                (e) => {
-                    g({ status: "error" }), (0, f.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } });
+                () => E({ status: "success" }),
+                (t) => {
+                    E({ status: "error" }), (0, f.RF)(t, { tags: { location: "QuestsRewardModalUnverified" } });
                 },
             );
     }, []);
-    let A =
-        "error" === m.status
-            ? h.intl.string(h.t.vjying)
-            : "success" === m.status
-              ? h.intl.format(h.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
+    let _ =
+        "error" === v.status
+            ? A.intl.string(A.t.vjying)
+            : "success" === v.status
+              ? A.intl.format(A.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
               : void 0;
-    return (0, i.jsxs)(s.k, {
-        transitionState: t,
+    return (0, s.jsxs)(r.k, {
+        transitionState: e,
         onClose: n,
-        graphic: "loading" === m.status ? void 0 : { type: "image", src: E },
-        title: "loading" === m.status ? void 0 : h.intl.string(h.t.c8eASM),
-        subtitle: A,
+        graphic: "loading" === v.status ? void 0 : { type: "image", src: T },
+        title: "loading" === v.status ? void 0 : A.intl.string(A.t.c8eASM),
+        subtitle: _,
         actions:
-            "loading" === m.status ? void 0 : [{ variant: "secondary", text: h.intl.string(h.t.cpT0Cq), onClick: n }],
+            "loading" === v.status ? void 0 : [{ variant: "secondary", text: A.intl.string(A.t.cpT0Cq), onClick: n }],
         children: [
-            "loading" === m.status && (0, i.jsx)(o.y, {}),
-            "success" === m.status &&
-                (0, i.jsxs)("div", {
-                    className: p.d,
+            "loading" === v.status && (0, s.jsx)(u.y, {}),
+            "success" === v.status &&
+                (0, s.jsxs)("div", {
+                    className: g.d,
                     children: [
-                        (0, i.jsx)(l.m, { size: "xs", color: "currentColor", className: p.q }),
-                        (0, i.jsx)(u.E, {
+                        (0, s.jsx)(o.m, { size: "xs", color: "currentColor", className: g.q }),
+                        (0, s.jsx)(a.E, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            children: h.intl.string(h.t.yb7itQ),
+                            children: A.intl.string(A.t.yb7itQ),
                         }),
                     ],
                 }),
         ],
     });
 }
-function g() {
+function E() {
     (0, c.openModalLazy)(async () => {
-        let { QuestRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 175248));
-        return (t) => (0, i.jsx)(e, { ...t });
+        let { QuestRewardModalUnverified: t } = await Promise.resolve().then(n.bind(n, 175248));
+        return (e) => (0, s.jsx)(t, { ...e });
     });
 }

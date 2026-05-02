@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { A: () => _ });
-var i,
-    r = n(627968);
-n(64700);
-var s = n(503698),
-    a = n.n(s),
-    o = n(990078),
-    l = n(939249),
-    u = n(909800),
-    c = (((i = c || {})[(i.ACCEPT = 0)] = "ACCEPT"), (i[(i.DENY = 1)] = "DENY"), (i[(i.DEFAULT = 2)] = "DEFAULT"), i);
-function d(e) {
-    let { icon: t, tooltip: n, onClick: i, actionType: s = 2, shouldHighlight: c, loading: d = !1 } = e;
-    return (0, r.jsx)(o.m, {
-        text: n,
-        children: (0, r.jsx)(l.D, {
+i.d(t, { A: () => d });
+var s,
+    n = i(627968);
+i(64700);
+var a = i(503698),
+    r = i.n(a),
+    l = i(990078),
+    o = i(939249),
+    u = i(909800),
+    c = (((s = c || {})[(s.ACCEPT = 0)] = "ACCEPT"), (s[(s.DENY = 1)] = "DENY"), (s[(s.DEFAULT = 2)] = "DEFAULT"), s);
+function h(e) {
+    let { icon: t, tooltip: i, onClick: s, actionType: a = 2, shouldHighlight: c, loading: h = !1 } = e;
+    return (0, n.jsx)(l.m, {
+        text: i,
+        children: (0, n.jsx)(o.D, {
             tag: "div",
-            "aria-label": n,
-            onClick: d ? void 0 : i,
-            className: a()(u.hP, { [u.Jj]: 0 === s, [u.Bs]: 1 === s, [u.Zt]: c, [u.r9]: d }),
-            children: (0, r.jsx)(t, { className: u.Kk, color: "currentColor" }),
+            "aria-label": i,
+            onClick: h ? void 0 : s,
+            className: r()(u.hP, { [u.Jj]: 0 === a, [u.Bs]: 1 === a, [u.Zt]: c, [u.r9]: h }),
+            children: (0, n.jsx)(t, { className: u.Kk, color: "currentColor" }),
         }),
     });
 }
-d.ActionTypes = c;
-let _ = d;
+h.ActionTypes = c;
+let d = h;

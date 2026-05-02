@@ -1,236 +1,235 @@
-"use strict";
-n.d(t, { default: () => k });
-var i = n(627968),
-    r = n(64700),
-    s = n(835245),
-    a = n(772707),
-    o = n(554146),
-    l = n(834730),
-    u = n(123292),
-    c = n(331322),
-    d = n(885574),
-    _ = n(821609),
-    f = n(131607),
-    h = n(632738),
-    p = n(627575),
-    E = n(393033),
-    m = n(732061),
-    g = n(975571),
-    A = n(139716),
-    I = n(847599),
-    T = n(295972),
-    S = n(36149),
-    N = n(731738),
-    y = n(17928),
-    C = n(807393),
-    v = n(787301);
-let O = (0, n(945810).mj)({
+i.d(t, { default: () => j });
+var n = i(627968),
+    l = i(64700),
+    r = i(835245),
+    a = i(772707),
+    o = i(554146),
+    s = i(834730),
+    E = i(123292),
+    c = i(331322),
+    u = i(885574),
+    d = i(821609),
+    _ = i(131607),
+    A = i(632738),
+    f = i(627575),
+    m = i(393033),
+    g = i(732061),
+    R = i(975571),
+    L = i(139716),
+    S = i(847599),
+    h = i(295972),
+    p = i(36149),
+    O = i(731738),
+    T = i(17928),
+    x = i(807393),
+    I = i(787301);
+let v = (0, i(945810).mj)({
     kind: "user",
     name: "2026-03-age-verification-google-wallet",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var R = n(40449),
-    b = n(375708);
-let D = function (e) {
-    let { onClose: t, onMethodClick: n, classificationId: i, onGoogleWalletSelect: s } = e,
-        { methods: a, loading: o } = (0, y.cf)([v.A], () => ({ methods: v.A.methods, loading: v.A.loading })),
-        { initiateAgeVerification: l } = (0, S.nn)({
+var C = i(40449),
+    M = i(375708);
+let P = function (e) {
+    let { onClose: t, onMethodClick: i, classificationId: n, onGoogleWalletSelect: r } = e,
+        { methods: a, loading: o } = (0, T.cf)([I.A], () => ({ methods: I.A.methods, loading: I.A.loading })),
+        { initiateAgeVerification: s } = (0, p.nn)({
             onComplete: t,
-            entryPoint: I.q1.EXPRESSIVE_GET_STARTED,
+            entryPoint: S.q1.EXPRESSIVE_GET_STARTED,
             shouldShowExpressiveModal: !0,
-            classificationId: i,
+            classificationId: n,
         }),
-        u = O.useConfig({ location: "age_verification_methods" }).enabled,
-        [c, d] = r.useState(!1);
+        E = v.useConfig({ location: "age_verification_methods" }).enabled,
+        [c, u] = l.useState(!1);
     return (
-        r.useEffect(() => {
-            u &&
+        l.useEffect(() => {
+            E &&
                 Promise.resolve(!1).then((e) => {
-                    C.A.increment({ name: N.K.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: [`available:${e}`] }), d(e);
+                    x.A.increment({ name: O.K.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: [`available:${e}`] }), u(e);
                 });
-        }, [u]),
-        r.useEffect(() => {
-            null == a && (0, T.DJ)();
+        }, [E]),
+        l.useEffect(() => {
+            null == a && (0, h.DJ)();
         }, [a]),
         {
-            ageVerificationMethods: r.useMemo(() => {
+            ageVerificationMethods: l.useMemo(() => {
                 let e =
                     a
-                        ?.filter((e) => e !== R.VF.GOOGLE_WALLET)
+                        ?.filter((e) => e !== C.VF.GOOGLE_WALLET)
                         .map((e) => {
-                            let t = R.uv[e];
+                            let t = C.uv[e];
                             if (null == t) return null;
-                            let { title: i, description: r } = t;
+                            let { title: n, description: l } = t;
                             return {
                                 id: e,
-                                title: b.intl.string(i),
-                                description: b.intl.string(r),
+                                title: M.intl.string(n),
+                                description: M.intl.string(l),
                                 onClick: async (t) => {
-                                    (0, I.St)(t, I.WU.EXPRESSIVE_PRIMARY, I._7.METHOD_SELECT, e), n?.(), await l(e);
+                                    (0, S.St)(t, S.WU.EXPRESSIVE_PRIMARY, S._7.METHOD_SELECT, e), i?.(), await s(e);
                                 },
                             };
                         })
                         .filter((e) => null != e) ?? [];
-                if (u && c && null != s) {
-                    let t = R.uv[R.VF.GOOGLE_WALLET];
+                if (E && c && null != r) {
+                    let t = C.uv[C.VF.GOOGLE_WALLET];
                     if (null != t)
                         return [
                             {
-                                id: R.VF.GOOGLE_WALLET,
-                                title: b.intl.string(t.title),
-                                description: b.intl.string(t.description),
+                                id: C.VF.GOOGLE_WALLET,
+                                title: M.intl.string(t.title),
+                                description: M.intl.string(t.description),
                                 onClick: (e) => {
-                                    C.A.increment({ name: N.K.GOOGLE_WALLET_METHOD_SELECTED }),
-                                        (0, I.St)(e, I.WU.EXPRESSIVE_PRIMARY, I._7.METHOD_SELECT, R.VF.GOOGLE_WALLET),
-                                        n?.(),
-                                        s();
+                                    x.A.increment({ name: O.K.GOOGLE_WALLET_METHOD_SELECTED }),
+                                        (0, S.St)(e, S.WU.EXPRESSIVE_PRIMARY, S._7.METHOD_SELECT, C.VF.GOOGLE_WALLET),
+                                        i?.(),
+                                        r();
                                 },
                             },
                             ...e,
                         ];
                 }
                 return e;
-            }, [a, u, c, s, n, l]),
+            }, [a, E, c, r, i, s]),
             loading: o,
         }
     );
 };
-var L = n(652215),
-    w = n(239093),
-    M = n(516761),
-    P = n(548416),
-    x = n(700129);
+var G = i(652215),
+    V = i(239093),
+    W = i(516761),
+    b = i(548416),
+    k = i(700129);
 function U(e) {
-    let { modalSessionId: t, entryPoint: n } = e;
-    return (0, E.W$)()
-        ? (0, i.jsx)(l.E, {
+    let { modalSessionId: t, entryPoint: i } = e;
+    return (0, m.W$)()
+        ? (0, n.jsx)(s.E, {
               variant: "text-xs/medium",
-              children: b.intl.format(M.default.htWh1G, {
+              children: M.intl.format(W.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
-                      A.A.openUrl(w.d$.LEARN_MORE_UU_APPEAL_LINK),
-                          (0, I.St)(t, I.WU.EXPRESSIVE_PRIMARY, I._7.LEARN_MORE);
+                      L.A.openUrl(V.d$.LEARN_MORE_UU_APPEAL_LINK),
+                          (0, S.St)(t, S.WU.EXPRESSIVE_PRIMARY, S._7.LEARN_MORE);
                   },
               }),
           })
-        : n === I.q1.SAFETY_FLOWS
-          ? (0, i.jsx)(u.Q, {
+        : i === S.q1.SAFETY_FLOWS
+          ? (0, n.jsx)(E.Q, {
                 size: "sm",
                 textVariant: "text-sm/medium",
-                text: b.intl.string(b.t["2jxGer"]),
+                text: M.intl.string(M.t["2jxGer"]),
                 onClick: () => {
-                    (0, I.St)(t, I.WU.EXPRESSIVE_PRIMARY, I._7.LOG_OUT), (0, p.k)("age_verification_get_started_modal");
+                    (0, S.St)(t, S.WU.EXPRESSIVE_PRIMARY, S._7.LOG_OUT), (0, f.k)("age_verification_get_started_modal");
                 },
             })
           : null;
 }
-let k = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: p, dismissable: N, classificationId: y } = e,
-        [C, v] = r.useState(o.M.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        O = r.useRef(C),
-        [R, w] = (0, f.kn)([C], void 0, !0),
-        k = r.useMemo(() => (0, s.A)(), []),
-        G = r.useRef(!1),
-        F = (0, E.W$)();
-    r.useEffect(() => {
-        O.current = R;
-    }, [R]);
-    let { loading: V, ageVerificationMethods: B } = D({
+let j = function (e) {
+    let { transitionState: t, entryPoint: i, onClose: E, onComplete: f, dismissable: O, classificationId: T } = e,
+        [x, I] = l.useState(o.M.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        v = l.useRef(x),
+        [C, V] = (0, _.kn)([x], void 0, !0),
+        j = l.useMemo(() => (0, r.A)(), []),
+        D = l.useRef(!1),
+        Y = (0, m.W$)();
+    l.useEffect(() => {
+        v.current = C;
+    }, [C]);
+    let { loading: F, ageVerificationMethods: B } = P({
         onClose: () => {
-            p?.(), u();
+            f?.(), E();
         },
         onMethodClick: () => {
-            v(o.M.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            I(o.M.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
-        classificationId: y,
+        classificationId: T,
     });
     return (
-        r.useLayoutEffect(
+        l.useLayoutEffect(
             () => () => {
-                if (G.current) return;
-                let e = O.current;
+                if (D.current) return;
+                let e = v.current;
                 null != e &&
-                    ((G.current = !0),
-                    m.A.maybeOpenAgeVerificationUserFeedback({
+                    ((D.current = !0),
+                    g.A.maybeOpenAgeVerificationUserFeedback({
                         location: "age_verification_get_started_modal",
                         visibleContent: e,
                     }));
             },
             [],
         ),
-        r.useEffect(() => {
-            (0, I.Bs)(k, I.WU.EXPRESSIVE_PRIMARY, n);
-        }, [k, n]),
-        (0, i.jsx)(a.k, {
+        l.useEffect(() => {
+            (0, S.Bs)(j, S.WU.EXPRESSIVE_PRIMARY, i);
+        }, [j, i]),
+        (0, n.jsx)(a.k, {
             transitionState: t,
-            onClose: u,
+            onClose: E,
             gradientColor: "blue",
-            dismissable: N,
-            graphic: { type: "image", src: x.A },
-            title: (0, S.ST)(n),
-            subtitle: (0, S.mK)(
-                n,
+            dismissable: O,
+            graphic: { type: "image", src: k.A },
+            title: (0, p.ST)(i),
+            subtitle: (0, p.mK)(
+                i,
                 () => {
-                    A.A.openUrl(g.A.getArticleURL(L.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, I.St)(k, I.WU.EXPRESSIVE_PRIMARY, I._7.LEARN_MORE);
+                    L.A.openUrl(R.A.getArticleURL(G.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                        (0, S.St)(j, S.WU.EXPRESSIVE_PRIMARY, S._7.LEARN_MORE);
                 },
-                F,
+                Y,
             ),
-            actionBarInput: (0, i.jsx)(U, { modalSessionId: k, entryPoint: n }),
-            children: (0, i.jsxs)(c.B, {
+            actionBarInput: (0, n.jsx)(U, { modalSessionId: j, entryPoint: i }),
+            children: (0, n.jsxs)(c.B, {
                 direction: "vertical",
                 gap: 16,
                 children: [
-                    (0, i.jsxs)(c.B, {
+                    (0, n.jsxs)(c.B, {
                         fullWidth: !1,
                         direction: "horizontal",
                         gap: 8,
                         padding: { top: 8, bottom: 8, left: 12, right: 12 },
                         align: "center",
-                        className: P.W,
+                        className: b.W,
                         children: [
-                            (0, i.jsx)(d.m, { size: "lg", color: "currentColor" }),
-                            (0, i.jsx)(l.E, {
+                            (0, n.jsx)(u.m, { size: "lg", color: "currentColor" }),
+                            (0, n.jsx)(s.E, {
                                 variant: "text-sm/medium",
                                 color: "text-feedback-info",
-                                children: b.intl.string(M.default.ar3a3q),
+                                children: M.intl.string(W.default.ar3a3q),
                             }),
                         ],
                     }),
                     null == B || 0 === B.length
-                        ? (0, i.jsxs)(c.B, {
+                        ? (0, n.jsxs)(c.B, {
                               direction: "vertical",
                               align: "center",
                               gap: 16,
                               children: [
-                                  (0, i.jsx)(l.E, {
+                                  (0, n.jsx)(s.E, {
                                       variant: "text-xs/medium",
                                       color: "text-subtle",
-                                      children: b.intl.string(M.default.cR6336),
+                                      children: M.intl.string(W.default.cR6336),
                                   }),
-                                  (0, i.jsx)(_.$, {
+                                  (0, n.jsx)(d.$, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: b.intl.string(M.default.hDvmYP),
+                                      text: M.intl.string(W.default.hDvmYP),
                                       onClick: () => {
-                                          (0, T.DJ)();
+                                          (0, h.DJ)();
                                       },
                                   }),
                               ],
                           })
-                        : (0, i.jsx)(c.B, {
+                        : (0, n.jsx)(c.B, {
                               direction: "vertical",
                               gap: 8,
                               children: B.map((e) => {
-                                  let { title: t, description: n, onClick: r } = e;
-                                  return (0, i.jsx)(
-                                      h.PQ,
+                                  let { title: t, description: i, onClick: l } = e;
+                                  return (0, n.jsx)(
+                                      A.PQ,
                                       {
                                           variant: "clickable",
                                           title: t,
-                                          description: n,
-                                          buttonDisabled: V,
-                                          onButtonPress: () => r(k),
+                                          description: i,
+                                          buttonDisabled: F,
+                                          onButtonPress: () => l(j),
                                       },
                                       t,
                                   );

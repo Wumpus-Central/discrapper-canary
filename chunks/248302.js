@@ -1,102 +1,101 @@
-"use strict";
-n.d(t, { A: () => h });
-var i = n(360469),
-    r = n(652215);
-function s(e) {
-    return e?.application_id === i.D4 && (e?.platform === r.yTV.ANDROID || e?.platform === r.yTV.IOS);
+e.d(n, { A: () => p });
+var i = e(360469),
+    l = e(652215);
+function a(t) {
+    return t?.application_id === i.D4 && (t?.platform === l.yTV.ANDROID || t?.platform === l.yTV.IOS);
 }
-var a = n(82149),
-    o = n(573648),
-    l = n(541806),
-    u = n(90644),
-    c = n(141639),
-    d = n(61330);
-let _ = new Set([r.fg2.LEAGUE_OF_LEGENDS, r.fg2.ROBLOX, r.fg2.TWITCH, r.fg2.YOUTUBE]);
-var f = n(375708);
-function h(e) {
-    let t = (function (e) {
-            if ((0, u.A)(e)) return o.A.get(r.fg2.SPOTIFY);
-            if ((0, l.A)(e)) return o.A.get(r.fg2.CRUNCHYROLL);
-            if ((0, d.A)(e)) return o.A.get(r.fg2.XBOX);
-            if ((0, c.A)(e)) return o.A.get(r.fg2.PLAYSTATION);
-            if (e?.platform === r.yTV.META_QUEST || s(e)) return o.A.get(r.fg2.META_QUEST_OR_HORIZON);
-            let t = o.A.find((t) => {
-                let { name: n } = t;
-                return n === e.name;
+var r = e(82149),
+    s = e(573648),
+    o = e(541806),
+    c = e(90644),
+    u = e(141639),
+    d = e(61330);
+let A = new Set([l.fg2.LEAGUE_OF_LEGENDS, l.fg2.ROBLOX, l.fg2.TWITCH, l.fg2.YOUTUBE]);
+var x = e(375708);
+function p(t) {
+    let n = (function (t) {
+            if ((0, c.A)(t)) return s.A.get(l.fg2.SPOTIFY);
+            if ((0, o.A)(t)) return s.A.get(l.fg2.CRUNCHYROLL);
+            if ((0, d.A)(t)) return s.A.get(l.fg2.XBOX);
+            if ((0, u.A)(t)) return s.A.get(l.fg2.PLAYSTATION);
+            if (t?.platform === l.yTV.META_QUEST || a(t)) return s.A.get(l.fg2.META_QUEST_OR_HORIZON);
+            let n = s.A.find((n) => {
+                let { name: e } = n;
+                return e === t.name;
             });
-            return null != t && _.has(t.type) ? t : null;
-        })(e),
-        n = t?.icon,
-        i = t?.name ?? "";
-    return e.type === r.$pd.PLAYING && t?.type === r.fg2.XBOX
+            return null != n && A.has(n.type) ? n : null;
+        })(t),
+        e = n?.icon,
+        i = n?.name ?? "";
+    return t.type === l.$pd.PLAYING && n?.type === l.fg2.XBOX
         ? {
-              text: f.intl.formatToPlainString(f.t.A17aM8, { platform: f.intl.string(f.t.Nfvo72) }),
-              platformIcon: n,
+              text: x.intl.formatToPlainString(x.t.A17aM8, { platform: x.intl.string(x.t.Nfvo72) }),
+              platformIcon: e,
               platformLabel: i,
           }
-        : e.type === r.$pd.PLAYING && t?.type === r.fg2.PLAYSTATION
+        : t.type === l.$pd.PLAYING && n?.type === l.fg2.PLAYSTATION
           ? {
-                text: f.intl.formatToPlainString(f.t.A17aM8, { platform: f.intl.string(f.t.fFl4jo) }),
-                platformIcon: n,
+                text: x.intl.formatToPlainString(x.t.A17aM8, { platform: x.intl.string(x.t.fFl4jo) }),
+                platformIcon: e,
                 platformLabel: i,
             }
-          : e.type === r.$pd.PLAYING && t?.type === r.fg2.META_QUEST_OR_HORIZON
+          : t.type === l.$pd.PLAYING && n?.type === l.fg2.META_QUEST_OR_HORIZON
             ? {
-                  text: f.intl.formatToPlainString(f.t.A17aM8, {
-                      platform: s(e) ? f.intl.string(f.t.BrHQaq) : f.intl.string(f.t.p6vL0e),
+                  text: x.intl.formatToPlainString(x.t.A17aM8, {
+                      platform: a(t) ? x.intl.string(x.t.BrHQaq) : x.intl.string(x.t.p6vL0e),
                   }),
-                  platformIcon: n,
+                  platformIcon: e,
                   platformLabel: i,
               }
-            : e.type === r.$pd.WATCHING && t?.type === r.fg2.META_QUEST_OR_HORIZON
+            : t.type === l.$pd.WATCHING && n?.type === l.fg2.META_QUEST_OR_HORIZON
               ? {
-                    text: f.intl.formatToPlainString(f.t.ENbTKQ, {
-                        platform: s(e) ? f.intl.string(f.t.BrHQaq) : f.intl.string(f.t.p6vL0e),
+                    text: x.intl.formatToPlainString(x.t.ENbTKQ, {
+                        platform: a(t) ? x.intl.string(x.t.BrHQaq) : x.intl.string(x.t.p6vL0e),
                     }),
-                    platformIcon: n,
+                    platformIcon: e,
                     platformLabel: i,
                 }
-              : e.type === r.$pd.STREAMING && t?.type === r.fg2.TWITCH
+              : t.type === l.$pd.STREAMING && n?.type === l.fg2.TWITCH
                 ? {
-                      text: f.intl.formatToPlainString(f.t["4CQq9Q"], { name: f.intl.string(f.t.q4pBG3) }),
-                      platformIcon: n,
+                      text: x.intl.formatToPlainString(x.t["4CQq9Q"], { name: x.intl.string(x.t.q4pBG3) }),
+                      platformIcon: e,
                       platformLabel: i,
                   }
-                : e.type === r.$pd.STREAMING && t?.type === r.fg2.YOUTUBE
+                : t.type === l.$pd.STREAMING && n?.type === l.fg2.YOUTUBE
                   ? {
-                        text: f.intl.formatToPlainString(f.t["4CQq9Q"], { name: f.intl.string(f.t.aS6cK4) }),
-                        platformIcon: n,
+                        text: x.intl.formatToPlainString(x.t["4CQq9Q"], { name: x.intl.string(x.t.aS6cK4) }),
+                        platformIcon: e,
                         platformLabel: i,
                     }
-                  : e.type === r.$pd.PLAYING
-                    ? { text: f.intl.string(f.t.BMTj28), platformIcon: n, platformLabel: i }
-                    : e.type === r.$pd.STREAMING
-                      ? { text: f.intl.string(f.t["Jpkr/q"]), platformIcon: n, platformLabel: i }
-                      : (0, a.Cy)(e)
-                        ? { text: f.intl.formatToPlainString(f.t.pW3Ip3, { name: e.name }) }
-                        : e.type === r.$pd.LISTENING && null != e.details
+                  : t.type === l.$pd.PLAYING
+                    ? { text: x.intl.string(x.t.BMTj28), platformIcon: e, platformLabel: i }
+                    : t.type === l.$pd.STREAMING
+                      ? { text: x.intl.string(x.t["Jpkr/q"]), platformIcon: e, platformLabel: i }
+                      : (0, r.Cy)(t)
+                        ? { text: x.intl.formatToPlainString(x.t.pW3Ip3, { name: t.name }) }
+                        : t.type === l.$pd.LISTENING && null != t.details
                           ? {
-                                text: f.intl.formatToPlainString(f.t["b+lA5+"], { name: e.name }),
-                                platformIcon: n,
+                                text: x.intl.formatToPlainString(x.t["b+lA5+"], { name: t.name }),
+                                platformIcon: e,
                                 platformLabel: i,
                             }
-                          : e.type === r.$pd.LISTENING
-                            ? { text: f.intl.string(f.t.dBISa6), platformIcon: n, platformLabel: i }
-                            : e.type === r.$pd.WATCHING && null != e.details
+                          : t.type === l.$pd.LISTENING
+                            ? { text: x.intl.string(x.t.dBISa6), platformIcon: e, platformLabel: i }
+                            : t.type === l.$pd.WATCHING && null != t.details
                               ? {
-                                    text: f.intl.formatToPlainString(f.t.mqdfDc, { name: e.name }),
-                                    platformIcon: n,
+                                    text: x.intl.formatToPlainString(x.t.mqdfDc, { name: t.name }),
+                                    platformIcon: e,
                                     platformLabel: i,
                                 }
-                              : e.type === r.$pd.WATCHING
-                                ? { text: f.intl.string(f.t.GpNXjC), platformIcon: n, platformLabel: i }
-                                : e.type === r.$pd.COMPETING && null != e.details
+                              : t.type === l.$pd.WATCHING
+                                ? { text: x.intl.string(x.t.GpNXjC), platformIcon: e, platformLabel: i }
+                                : t.type === l.$pd.COMPETING && null != t.details
                                   ? {
-                                        text: f.intl.formatToPlainString(f.t.oHF7Ch, { name: e.name }),
-                                        platformIcon: n,
+                                        text: x.intl.formatToPlainString(x.t.oHF7Ch, { name: t.name }),
+                                        platformIcon: e,
                                         platformLabel: i,
                                     }
-                                  : e.type === r.$pd.COMPETING
-                                    ? { text: f.intl.string(f.t.OzCsIA), platformIcon: n, platformLabel: i }
-                                    : { text: void 0, platformIcon: n, platformLabel: i };
+                                  : t.type === l.$pd.COMPETING
+                                    ? { text: x.intl.string(x.t.OzCsIA), platformIcon: e, platformLabel: i }
+                                    : { text: void 0, platformIcon: e, platformLabel: i };
 }

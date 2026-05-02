@@ -1,123 +1,122 @@
-"use strict";
-n.d(t, { A: () => g });
+n.d(e, { A: () => T });
 var i = n(17928),
-    r = n(228366),
-    s = n(294857),
-    a = n(427358),
+    l = n(228366),
+    a = n(294857),
+    r = n(427358),
     o = n(290863),
-    l = n(287809),
-    u = n(652215);
-let c = !1,
-    d = {},
-    _ = {};
-function f(e) {
-    let t = !1;
+    u = n(287809),
+    s = n(652215);
+let d = !1,
+    c = {},
+    f = {};
+function A(t) {
+    let e = !1;
     return (
-        e.forEach((e) => {
-            t = !1 !== p(e) || t;
+        t.forEach((t) => {
+            e = !1 !== E(t) || e;
         }),
-        t
+        e
     );
 }
-function h(e) {
-    let t = _[e];
-    if (null == t) return !1;
-    let n = t.gameId;
+function _(t) {
+    let e = f[t];
+    if (null == e) return !1;
+    let n = e.gameId;
     return (
-        null != d[n] && ((d = { ...d }), delete d[n][e], 0 === Object.values(d[n]).length && delete d[n]),
-        (_ = { ..._ }),
-        delete _[e],
+        null != c[n] && ((c = { ...c }), delete c[n][t], 0 === Object.values(c[n]).length && delete c[n]),
+        (f = { ...f }),
+        delete f[t],
         !0
     );
 }
-function p(e) {
-    let { user: t, activities: n } = e;
-    if (null == t) return !1;
-    let i = n.filter((e) => e.type !== u.$pd.CUSTOM_STATUS);
-    if (0 === i.length) return h(t.id);
-    let r = !1;
+function E(t) {
+    let { user: e, activities: n } = t;
+    if (null == e) return !1;
+    let i = n.filter((t) => t.type !== s.$pd.CUSTOM_STATUS);
+    if (0 === i.length) return _(e.id);
+    let l = !1;
     return (
-        i.forEach((e) => {
-            (function (e, t) {
-                let n = (0, s.A)(e);
-                if (null == n) return h(t.id);
-                let i = _[t.id];
-                null != i && i.gameId !== n && h(t.id);
-                let r = e.timestamps?.start ?? Date.now(),
-                    a = { userId: t.id, activity: e, startedPlaying: r };
+        i.forEach((t) => {
+            (function (t, e) {
+                let n = (0, a.A)(t);
+                if (null == n) return _(e.id);
+                let i = f[e.id];
+                null != i && i.gameId !== n && _(e.id);
+                let l = t.timestamps?.start ?? Date.now(),
+                    r = { userId: e.id, activity: t, startedPlaying: l };
                 return (
-                    (d = { ...d, [n]: { ...d[n], [a.userId]: a } }),
-                    (_ = { ..._, [a.userId]: { gameId: n, startedPlaying: a.startedPlaying } }),
+                    (c = { ...c, [n]: { ...c[n], [r.userId]: r } }),
+                    (f = { ...f, [r.userId]: { gameId: n, startedPlaying: r.startedPlaying } }),
                     !0
                 );
-            })(e, t) && (r = !0);
+            })(t, e) && (l = !0);
         }),
-        r
+        l
     );
 }
-function E() {
-    let e,
-        t = !1;
+function N() {
+    let t,
+        e = !1;
     return (
-        a.A.shouldFetch() ||
-            c ||
-            ((d = {}),
-            (_ = {}),
-            (e = !1),
-            o.A.getUserIds().forEach((t) => {
-                let n = l.default.getUser(t);
-                null != n && (e = p({ user: n, activities: o.A.getActivities(t) }) || e);
+        r.A.shouldFetch() ||
+            d ||
+            ((c = {}),
+            (f = {}),
+            (t = !1),
+            o.A.getUserIds().forEach((e) => {
+                let n = u.default.getUser(e);
+                null != n && (t = E({ user: n, activities: o.A.getActivities(e) }) || t);
             }),
-            (t = e)),
-        (c = !a.A.shouldFetch()),
-        t
+            (e = t)),
+        (d = !r.A.shouldFetch()),
+        e
     );
 }
-class m extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "NowPlayingStore";
     initialize() {
-        this.waitFor(o.A, a.A, l.default), this.syncWith([a.A], E);
+        this.waitFor(o.A, r.A, u.default), this.syncWith([r.A], N);
     }
     get games() {
-        return d;
+        return c;
     }
     get usersPlaying() {
-        return _;
+        return f;
     }
     get gameIds() {
-        return Object.keys(d);
+        return Object.keys(c);
     }
-    getNowPlaying(e) {
-        return d[e];
+    getNowPlaying(t) {
+        return c[t];
     }
-    getUserGame(e) {
-        return _[e];
+    getUserGame(t) {
+        return f[t];
     }
 }
-let g = new m(r.h, {
+let T = new g(l.h, {
     CONNECTION_OPEN: function () {
-        (d = {}), (_ = {});
+        (c = {}), (f = {});
     },
-    CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
-        let { guilds: t, presences: n } = e,
+    CONNECTION_OPEN_SUPPLEMENTAL: function (t) {
+        let { guilds: e, presences: n } = t,
             i = !1;
         return (
-            t.forEach((e) => {
-                f(e.presences) && (i = !0);
+            e.forEach((t) => {
+                A(t.presences) && (i = !0);
             }),
-            f(n) && (i = !0),
+            A(n) && (i = !0),
             i
         );
     },
     LOGOUT: function () {
-        (d = {}), (_ = {});
+        (c = {}), (f = {});
     },
-    PRESENCE_UPDATES: function (e) {
-        let { updates: t } = e;
-        return t.map((e) => p(e)).some((e) => e);
+    PRESENCE_UPDATES: function (t) {
+        let { updates: e } = t;
+        return e.map((t) => E(t)).some((t) => t);
     },
-    PRESENCES_REPLACE: function (e) {
-        let { presences: t } = e;
-        return f(t);
+    PRESENCES_REPLACE: function (t) {
+        let { presences: e } = t;
+        return A(e);
     },
 });

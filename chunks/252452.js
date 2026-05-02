@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { A: () => r });
-var i = n(228366);
-let r = {
+e.d(t, { A: () => i });
+var E = e(228366);
+let i = {
     close() {
-        i.h.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" });
+        E.h.dispatch({ type: "USER_SETTINGS_MODAL_CLOSE" });
     },
-    setSection(e) {
+    setSection(_) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        i.h.dispatch({ type: "USER_SETTINGS_MODAL_SET_SECTION", section: e, subsection: t, ...n });
+            e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        E.h.dispatch({ type: "USER_SETTINGS_MODAL_SET_SECTION", section: _, subsection: t, ...e });
     },
-    clearSubsection(e) {
-        i.h.dispatch({ type: "USER_SETTINGS_MODAL_CLEAR_SUBSECTION", forSection: e });
+    clearSubsection(_) {
+        E.h.dispatch({ type: "USER_SETTINGS_MODAL_CLEAR_SUBSECTION", forSection: _ });
     },
     clearLocation() {
-        i.h.dispatch({ type: "USER_SETTINGS_MODAL_CLEAR_LOCATION" });
+        E.h.dispatch({ type: "USER_SETTINGS_MODAL_CLEAR_LOCATION" });
     },
 };

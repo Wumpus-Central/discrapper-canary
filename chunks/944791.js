@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { I: () => r });
+n.d(t, { I: () => l });
 var i = n(228366);
-function r(e) {
+function l(e) {
     i.h.dispatch({ type: "APP_VIEW_SET_HOME_LINK", link: e });
 }

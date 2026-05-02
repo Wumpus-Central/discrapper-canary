@@ -1,46 +1,45 @@
-"use strict";
-n.d(t, { e: () => E });
+n.d(t, { e: () => C });
 var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(885574),
-    l = n(834730),
-    u = n(349288),
-    c = n(939249),
-    d = n(789645),
-    _ = n(558001),
-    f = n(835002),
-    h = n(375708),
-    p = n(751530);
-function E(e) {
-    let { label: t, labelHook: n, count: s, dismissNotice: E, className: m, noticeType: g } = e,
-        A = null != E;
-    r.useEffect(() => {
-        (0, _.N)(g, f.YX.VIEWED);
-    }, [g]);
-    let I = r.useCallback(() => {
-            null != E && (E(), (0, _.N)(g, f.YX.DISMISS));
-        }, [g, E]),
-        T = r.useCallback(() => {
-            n(), (0, _.N)(g, f.YX.LEARN_MORE);
-        }, [g, n]);
+    l = n(64700),
+    r = n(503698),
+    s = n.n(r);
+if (21552 == n.j) var a = n(885574);
+if (21552 == n.j) var o = n(834730);
+if (21552 == n.j) var d = n(349288);
+if (21552 == n.j) var c = n(939249);
+if (21552 == n.j) var u = n(789645);
+var h = n(558001),
+    A = n(835002),
+    E = n(375708),
+    g = n(751530);
+function C(e) {
+    let { label: t, labelHook: n, count: r, dismissNotice: C, className: _, noticeType: I } = e,
+        T = null != C;
+    l.useEffect(() => {
+        (0, h.N)(I, A.YX.VIEWED);
+    }, [I]);
+    let p = l.useCallback(() => {
+            null != C && (C(), (0, h.N)(I, A.YX.DISMISS));
+        }, [I, C]),
+        S = l.useCallback(() => {
+            n(), (0, h.N)(I, A.YX.LEARN_MORE);
+        }, [I, n]);
     return (0, i.jsxs)("div", {
-        className: a()(p.I, m),
+        className: s()(g.I, _),
         children: [
-            (0, i.jsx)(o.m, { size: "md" }),
-            (0, i.jsx)(l.E, {
+            (0, i.jsx)(a.m, { size: "md" }),
+            (0, i.jsx)(o.E, {
                 variant: "text-sm/medium",
                 color: "interactive-text-active",
                 children:
-                    null != s
-                        ? h.intl.format(t, {
-                              hook: (e, t) => (0, i.jsx)(u.Anchor, { onClick: T, children: e }, t),
-                              count: s,
+                    null != r
+                        ? E.intl.format(t, {
+                              hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: S, children: e }, t),
+                              count: r,
                           })
-                        : h.intl.format(t, { hook: (e, t) => (0, i.jsx)(u.Anchor, { onClick: T, children: e }, t) }),
+                        : E.intl.format(t, { hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: S, children: e }, t) }),
             }),
-            A && (0, i.jsx)(c.D, { className: p.b, onClick: I, children: (0, i.jsx)(d.P, {}) }),
+            T && (0, i.jsx)(c.D, { className: g.b, onClick: p, children: (0, i.jsx)(u.P, {}) }),
         ],
     });
 }

@@ -1,218 +1,217 @@
-"use strict";
-n.d(t, { A: () => $ });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(17928),
-    l = n(554146),
-    u = n(862482),
-    c = n(939249),
-    d = n(789645),
-    _ = n(403581),
-    f = n(34188),
-    h = n(534514),
-    p = n(688810),
-    E = n(859040),
-    m = n(915089),
-    g = n(558845),
-    A = n(826673),
-    I = n(281678),
-    T = n(725807),
-    S = n(976860),
-    N = n(967198),
-    y = n(183555),
-    C = n(873298),
-    v = n(834730),
-    O = n(349288),
-    R = n(131607),
-    b = n(840387),
-    D = n(885386),
-    L = n(780964),
-    w = n(858897),
-    M = n(21973),
-    P = n(49999),
-    x = n(375708),
-    U = n(737923);
-function k() {
-    let e = (0, M.lX)("UserProfilePrivacyNotice"),
-        t = (0, b.Z)(),
-        n = D.KP.useSetting();
-    return r.useMemo(
-        () => (e && t && n !== C.KP.FRIENDS_AND_ALL_GUILDS ? [l.M.PRIVATE_PROFILE_INLINE_NOTICE] : []),
-        [e, t, n],
+i.d(t, { A: () => q });
+var n = i(627968),
+    s = i(64700),
+    r = i(503698),
+    l = i.n(r),
+    a = i(17928),
+    c = i(554146),
+    o = i(862482),
+    d = i(939249),
+    u = i(789645),
+    I = i(403581),
+    _ = i(34188),
+    E = i(534514),
+    N = i(688810),
+    P = i(859040),
+    S = i(915089),
+    A = i(558845),
+    R = i(826673),
+    x = i(281678),
+    h = i(725807),
+    m = i(976860),
+    L = i(967198),
+    M = i(183555),
+    v = i(873298),
+    O = i(834730),
+    f = i(349288),
+    j = i(131607),
+    D = i(840387),
+    T = i(885386),
+    U = i(780964),
+    F = i(858897),
+    k = i(21973),
+    p = i(49999),
+    C = i(375708),
+    g = i(737923);
+function b() {
+    let e = (0, k.lX)("UserProfilePrivacyNotice"),
+        t = (0, D.Z)(),
+        i = T.KP.useSetting();
+    return s.useMemo(
+        () => (e && t && i !== v.KP.FRIENDS_AND_ALL_GUILDS ? [c.M.PRIVATE_PROFILE_INLINE_NOTICE] : []),
+        [e, t, i],
     );
 }
-function G(e) {
+function y(e) {
     let { className: t } = e,
-        n = k(),
-        [r, s] = (0, R.kn)(n),
-        o = D.KP.useSetting();
-    if (r !== l.M.PRIVATE_PROFILE_INLINE_NOTICE) return null;
-    let u = (function (e) {
+        i = b(),
+        [s, r] = (0, j.kn)(i),
+        a = T.KP.useSetting();
+    if (s !== c.M.PRIVATE_PROFILE_INLINE_NOTICE) return null;
+    let o = (function (e) {
         switch (e) {
-            case C.KP.FRIENDS_ONLY:
-                return x.t["0UBDvq"];
-            case C.KP.FRIENDS_AND_SMALL_GUILDS:
-                return x.t["9AvQO/"];
-            case C.KP.FRIENDS_AND_ALL_GUILDS:
+            case v.KP.FRIENDS_ONLY:
+                return C.t["0UBDvq"];
+            case v.KP.FRIENDS_AND_SMALL_GUILDS:
+                return C.t["9AvQO/"];
+            case v.KP.FRIENDS_AND_ALL_GUILDS:
             default:
-                return x.t.dqQ7AN;
+                return C.t.dqQ7AN;
         }
-    })(o);
-    return (0, i.jsxs)("div", {
-        className: a()(U.kL, t),
+    })(a);
+    return (0, n.jsxs)("div", {
+        className: l()(g.kL, t),
         children: [
-            (0, i.jsx)(v.E, {
+            (0, n.jsx)(O.E, {
                 variant: "text-sm/normal",
-                className: U.Qq,
-                children: x.intl.format(u, {
+                className: g.Qq,
+                children: C.intl.format(o, {
                     privacySettingsLink: (e, t) =>
-                        (0, i.jsx)(
-                            O.Anchor,
-                            { onClick: () => (0, w.openUserSettings)(L.X.PROFILE_PRIVACY_CATEGORY), children: e },
+                        (0, n.jsx)(
+                            f.Anchor,
+                            { onClick: () => (0, F.openUserSettings)(U.X.PROFILE_PRIVACY_CATEGORY), children: e },
                             t,
                         ),
                 }),
             }),
-            (0, i.jsx)(c.D, {
-                "aria-label": x.intl.string(x.t.WAI6xu),
-                onClick: () => s(P.i.USER_DISMISS),
-                className: U.b,
-                children: (0, i.jsx)(d.P, { size: "sm", color: "currentColor" }),
+            (0, n.jsx)(d.D, {
+                "aria-label": C.intl.string(C.t.WAI6xu),
+                onClick: () => r(p.i.USER_DISMISS),
+                className: g.b,
+                children: (0, n.jsx)(u.P, { size: "sm", color: "currentColor" }),
             }),
         ],
     });
 }
-var F = n(939496),
-    V = n(993401),
-    B = n(518477),
-    H = n(652215),
-    j = n(788868),
-    Y = n(996988),
-    W = n(738585);
-function K(e) {
+var V = i(939496),
+    Y = i(993401),
+    z = i(518477),
+    G = i(652215),
+    w = i(788868),
+    K = i(996988),
+    W = i(738585);
+function H(e) {
     let { onClose: t } = e;
-    return (0, i.jsx)(c.D, {
-        "aria-label": x.intl.string(x.t.WAI6xu),
+    return (0, n.jsx)(d.D, {
+        "aria-label": C.intl.string(C.t.WAI6xu),
         onClick: t,
         className: W.Sc,
-        children: (0, i.jsx)(d.P, { size: "xs", className: W.Nk, color: "currentColor" }),
+        children: (0, n.jsx)(u.P, { size: "xs", className: W.Nk, color: "currentColor" }),
     });
 }
-function z(e) {
-    let { tiny: t, isPremiumUser: n, onInteraction: r } = e,
-        { analyticsLocations: s, newestAnalyticsLocation: a } = (0, p.Ay)(),
-        { trackUserProfileAction: o } = (0, y.NJ)();
-    return (0, i.jsxs)("div", {
+function J(e) {
+    let { tiny: t, isPremiumUser: i, onInteraction: s } = e,
+        { analyticsLocations: r, newestAnalyticsLocation: l } = (0, N.Ay)(),
+        { trackUserProfileAction: a } = (0, M.NJ)();
+    return (0, n.jsxs)("div", {
         className: W.JO,
         children: [
-            (0, i.jsx)("div", {
+            (0, n.jsx)("div", {
                 className: W.xB,
-                children: n
-                    ? (0, i.jsx)(V.FD, {
-                          action: B.pt.VIEW_PREMIUM_PERKS,
+                children: i
+                    ? (0, n.jsx)(Y.FD, {
+                          action: z.pt.VIEW_PREMIUM_PERKS,
                           fullWidth: !0,
                           size: "sm",
                           variant: "secondary",
-                          icon: _.t,
-                          text: x.intl.string(x.t["0Q61kF"]),
+                          icon: I.t,
+                          text: C.intl.string(C.t["0Q61kF"]),
                           onClick: () => {
-                              (0, S.pX)(H.BVt.APPLICATION_STORE), r?.();
+                              (0, m.pX)(G.BVt.APPLICATION_STORE), s?.();
                           },
                       })
-                    : (0, i.jsx)(T.A, {
+                    : (0, n.jsx)(h.A, {
                           onClick: () => {
-                              o({ action: B.pt.GET_PREMIUM }), r?.();
+                              a({ action: z.pt.GET_PREMIUM }), s?.();
                           },
-                          textOptions: { textOverride: x.intl.string(x.t.x6rkDp) },
-                          subscriptionTier: j.pe.TIER_2,
-                          premiumModalAnalyticsLocation: { section: H.JJy.USER_PROFILE },
+                          textOptions: { textOverride: C.intl.string(C.t.x6rkDp) },
+                          subscriptionTier: w.pe.TIER_2,
+                          premiumModalAnalyticsLocation: { section: G.JJy.USER_PROFILE },
                           className: W.Js,
-                          size: t ? u.$n.Sizes.TINY : u.$n.Sizes.SMALL,
-                          look: u.$n.Looks.FILLED,
-                          color: u.$n.Colors.PRIMARY,
+                          size: t ? o.$n.Sizes.TINY : o.$n.Sizes.SMALL,
+                          look: o.$n.Looks.FILLED,
+                          color: o.$n.Colors.PRIMARY,
                           onlyShineOnHover: !0,
                           fullWidth: !0,
                       }),
             }),
-            (0, i.jsx)("div", {
+            (0, n.jsx)("div", {
                 className: W.xB,
-                children: (0, i.jsx)(V.FD, {
-                    action: B.pt.VISIT_SHOP,
+                children: (0, n.jsx)(Y.FD, {
+                    action: z.pt.VISIT_SHOP,
                     fullWidth: !0,
-                    icon: f.U,
-                    text: x.intl.string(x.t.b2d0N0),
+                    icon: _.U,
+                    text: C.intl.string(C.t.b2d0N0),
                     size: "sm",
                     variant: "secondary",
                     onClick: () => {
-                        (0, E.Cz)({ analyticsLocations: s, analyticsSource: a }), r?.();
+                        (0, P.Cz)({ analyticsLocations: r, analyticsSource: l }), s?.();
                     },
                 }),
             }),
         ],
     });
 }
-function $(e) {
-    let { isPremiumUser: t, onInteraction: n, className: s } = e,
-        u = (function () {
-            let e = k(),
-                [t] = (0, R.kn)(e);
-            return t === l.M.PRIVATE_PROFILE_INLINE_NOTICE;
+function q(e) {
+    let { isPremiumUser: t, onInteraction: i, className: r } = e,
+        o = (function () {
+            let e = b(),
+                [t] = (0, j.kn)(e);
+            return t === c.M.PRIVATE_PROFILE_INLINE_NOTICE;
         })(),
-        c = (0, m.GV)(),
-        { themeType: d } = (0, F.E)(),
-        _ = d === Y.d.MODAL,
-        f = (0, A.JZ)(l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
-        p = (0, o.bG)([N.A], () => N.A.getGuildId());
+        d = (0, S.GV)(),
+        { themeType: u } = (0, V.E)(),
+        I = u === K.d.MODAL,
+        _ = (0, R.JZ)(c.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
+        N = (0, a.bG)([L.A], () => L.A.getGuildId());
     if (
-        (r.useEffect(() => {
-            if (!f && !u)
+        (s.useEffect(() => {
+            if (!_ && !o)
                 return (
-                    (0, I.Vh)(l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
+                    (0, x.Vh)(c.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
                     () => {
-                        (0, g.pd)({ content: l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS }, !1);
+                        (0, A.pd)({ content: c.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS }, !1);
                     }
                 );
-        }, [f, u]),
-        u)
+        }, [_, o]),
+        o)
     )
-        return (0, i.jsx)(G, { className: s });
-    if (f) return null;
-    let E = (0, i.jsx)(h.D, { variant: "text-sm/normal", id: c, children: x.intl.string(x.t.EIYbj6) }),
-        T = (0, i.jsx)(K, {
+        return (0, n.jsx)(y, { className: r });
+    if (_) return null;
+    let P = (0, n.jsx)(E.D, { variant: "text-sm/normal", id: d, children: C.intl.string(C.t.EIYbj6) }),
+        h = (0, n.jsx)(H, {
             onClose: () => {
-                (0, A.Dr)(l.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS, {
-                    dismissAction: P.i.USER_DISMISS,
-                    guildId: p,
+                (0, R.Dr)(c.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS, {
+                    dismissAction: p.i.USER_DISMISS,
+                    guildId: N,
                     forceTrack: !0,
                 });
             },
         }),
-        S = (0, i.jsx)(z, { isPremiumUser: t, onInteraction: n, tiny: _ });
-    return _
-        ? (0, i.jsx)("aside", {
-              className: a()(W.Zj, s),
-              "aria-labelledby": c,
-              children: (0, i.jsxs)("div", {
-                  className: a()(W.xw, W.xq),
+        m = (0, n.jsx)(J, { isPremiumUser: t, onInteraction: i, tiny: I });
+    return I
+        ? (0, n.jsx)("aside", {
+              className: l()(W.Zj, r),
+              "aria-labelledby": d,
+              children: (0, n.jsxs)("div", {
+                  className: l()(W.xw, W.xq),
                   children: [
-                      E,
-                      (0, i.jsxs)("div", {
+                      P,
+                      (0, n.jsxs)("div", {
                           className: W.A_,
-                          children: [(0, i.jsx)("div", { children: S }), (0, i.jsx)("div", { children: T })],
+                          children: [(0, n.jsx)("div", { children: m }), (0, n.jsx)("div", { children: h })],
                       }),
                   ],
               }),
           })
-        : (0, i.jsx)("aside", {
-              className: a()(W.Zj, s),
-              "aria-labelledby": c,
-              children: (0, i.jsxs)("div", {
-                  className: a()(W.xw, W.K1),
+        : (0, n.jsx)("aside", {
+              className: l()(W.Zj, r),
+              "aria-labelledby": d,
+              children: (0, n.jsxs)("div", {
+                  className: l()(W.xw, W.K1),
                   children: [
-                      (0, i.jsxs)("div", { className: W.$P, children: [E, (0, i.jsx)("div", { children: T })] }),
-                      S,
+                      (0, n.jsxs)("div", { className: W.$P, children: [P, (0, n.jsx)("div", { children: h })] }),
+                      m,
                   ],
               }),
           });

@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => r });
+n.d(t, { A: () => l });
 var i = n(228366);
-let r = {
+let l = {
     setEnabled(e) {
         this.update({ enabled: e });
     },

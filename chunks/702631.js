@@ -1,6 +1,5 @@
-"use strict";
-function i(e) {
-    let { partySize: t, maxPartySize: n } = e;
-    return t > -1 && n > 0 && t >= n;
+n.d(e, { U: () => i });
+function i(t) {
+    let { partySize: e, maxPartySize: n } = t;
+    return e > -1 && n > 0 && e >= n;
 }
-n.d(t, { U: () => i });
