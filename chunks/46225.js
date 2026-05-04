@@ -12,7 +12,7 @@ let d = Symbol();
 var _ = n(942370),
     f = n(652215);
 let h = "AUTHORIZE_REQUEST",
-    p = [_._.RPC, _._.WEB];
+    p = [_._M.RPC, _._M.WEB];
 function E(e) {
     var t, n;
     let r,
@@ -86,25 +86,25 @@ function g(e, t) {
             g.map((e) => {
                 let t = [];
                 if (
-                    (E.includes(_._.RPC) &&
+                    (E.includes(_._M.RPC) &&
                         e.isSubscribedToAuthorizeRequest &&
                         t.push({
-                            type: _._.RPC,
+                            type: _._M.RPC,
                             initiate(t) {
                                 a.A.dispatchToSubscriptions(h, (t) => t.socket.application.id === e.application.id, {}),
                                     t.onConfirm?.(),
                                     o.default.track(f.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
                                         location_stack: t.analyticsLocations,
                                         application_id: e.application.id,
-                                        flow_type: _._.RPC,
+                                        flow_type: _._M.RPC,
                                     });
                             },
                         }),
-                    E.includes(_._.WEB) && null != e.application.connectionEntrypointUrl)
+                    E.includes(_._M.WEB) && null != e.application.connectionEntrypointUrl)
                 ) {
                     let n = e.application.connectionEntrypointUrl;
                     t.push({
-                        type: _._.WEB,
+                        type: _._M.WEB,
                         initiate(t) {
                             (0, l.h)({
                                 href: n,
@@ -115,7 +115,7 @@ function g(e, t) {
                                 o.default.track(f.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
                                     location_stack: t.analyticsLocations,
                                     application_id: e.application.id,
-                                    flow_type: _._.WEB,
+                                    flow_type: _._M.WEB,
                                 });
                         },
                     });

@@ -1,100 +1,100 @@
-n.r(t), n.d(t, { default: () => V });
+n.r(t), n.d(t, { default: () => G });
 var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
     d = n(284009),
     r = n.n(d),
     o = n(534514),
     c = n(289873),
-    h = n(408278),
-    u = n(807072),
-    x = n(834730),
-    m = n(821609),
-    b = n(707554),
-    f = n(17928),
-    A = n(761508),
-    _ = n(824552),
-    g = n(933958),
+    u = n(408278),
+    h = n(807072),
+    m = n(834730),
+    x = n(821609),
+    f = n(707554),
+    p = n(17928),
+    g = n(761508),
+    A = n(824552),
+    v = n(933958),
     j = n(869003),
-    p = n(793574),
-    v = n(688810),
-    O = n(429913),
-    E = n(793943),
-    N = n(409626),
-    L = n(692969),
-    C = n(134861),
-    D = n(147964),
-    I = n(46225),
-    W = n(487431),
+    b = n(793574),
+    O = n(688810),
+    W = n(429913),
+    L = n(793943),
+    D = n(409626),
+    k = n(692969),
+    y = n(134861),
+    N = n(147964),
+    E = n(46225),
+    _ = n(487431),
     R = n(942370),
-    k = n(311350),
-    y = n(985018),
-    B = n(564741);
-function V() {
-    let e = (0, O.h)(D.A.testModeApplicationId),
-        { analyticsLocations: t } = (0, v.Ay)(p.A.SDK_DEBUG_TOOLS),
-        n = (0, E.fy)().metadata,
-        l = s.useRef(!1),
+    V = n(311350),
+    C = n(375708),
+    w = n(564741);
+function G() {
+    let e = (0, W.h)(N.A.testModeApplicationId),
+        { analyticsLocations: t } = (0, O.Ay)(b.A.SDK_DEBUG_TOOLS),
+        n = (0, L.fy)().metadata,
+        a = l.useRef(!1),
         {
             canStartAuthorization: d,
-            hasAlreadyLinked: V,
-            startAuthorization: w,
-            chosenFlow: T,
-            connectionApp: G,
-            debug: { isSubscribedToAuthorizeRequest: S, oauth2Token: K, hasConnectionEntrypointUrl: F, validFlows: U },
-        } = (0, I.RD)(e, { debug: !0 }),
-        z = (0, f.bG)([C.A], () => null != e && C.A.isConnected(e.id)),
-        M = (0, f.bG)([g.Ay], () => g.Ay.getSelfEmbeddedActivities()),
+            hasAlreadyLinked: G,
+            startAuthorization: S,
+            chosenFlow: B,
+            connectionApp: I,
+            debug: { isSubscribedToAuthorizeRequest: F, oauth2Token: K, hasConnectionEntrypointUrl: M, validFlows: z },
+        } = (0, E.RD)(e, { debug: !0 }),
+        T = (0, p.bG)([y.A], () => null != e && y.A.isConnected(e.id)),
+        J = (0, p.bG)([v.Ay], () => v.Ay.getSelfEmbeddedActivities()),
         P = e?.id ?? "",
-        H = (0, L.A)({ applicationId: P, source: N.Ob.DevTools, trackEntryPointImpression: !1, forceV2: !0 });
-    s.useEffect(() => {
-        n?.shouldAutoOpenGameProfile !== !0 || null == H || l.current || ((l.current = !0), H());
-    }, [n, H]);
-    let J = "authorization_debug",
-        $ = [{ id: "authorization_debug", name: y.intl.string(k.default.vR0zs6) }];
+        U = (0, k.A)({ applicationId: P, source: D.Ob.DevTools, trackEntryPointImpression: !1, forceV2: !0 });
+    l.useEffect(() => {
+        n?.shouldAutoOpenGameProfile !== !0 || null == U || a.current || ((a.current = !0), U());
+    }, [n, U]);
+    let $ = "authorization_debug",
+        H = [{ id: "authorization_debug", name: C.intl.string(V.default.vR0zs6) }];
     return (0, i.jsx)("div", {
         "data-app-right-panel": !0,
-        className: B.nE,
-        children: (0, i.jsx)(b.F, {
+        className: w.nE,
+        children: (0, i.jsx)(f.F, {
             children:
                 null != e
                     ? (r()(null != e, "Application should be defined when rendering the test mode panel"),
                       (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsxs)("div", {
-                                  className: B.wx,
+                                  className: w.wx,
                                   children: [
                                       (0, i.jsx)("div", {
-                                          className: B.if,
+                                          className: w.if,
                                           children: (0, i.jsx)(o.D, {
                                               variant: "heading-lg/extrabold",
-                                              children: y.intl.format(k.default.KoK4J9, { appName: e.name }),
+                                              children: C.intl.format(V.default.KoK4J9, { appName: e.name }),
                                           }),
                                       }),
-                                      (0, i.jsx)(h.K, {
+                                      (0, i.jsx)(u.K, {
                                           variant: "icon-only",
-                                          icon: u.U,
+                                          icon: h.U,
                                           "aria-label": "Close",
-                                          onClick: () => (0, E.Jp)(),
+                                          onClick: () => (0, L.Jp)(),
                                       }),
                                   ],
                               }),
                               (0, i.jsxs)("div", {
-                                  className: B.rf,
+                                  className: w.rf,
                                   children: [
-                                      (0, i.jsx)(A.V, {
-                                          className: B.$H,
-                                          selectedItem: J,
+                                      (0, i.jsx)(g.V, {
+                                          className: w.$H,
+                                          selectedItem: $,
                                           onItemSelect: () => {},
                                           orientation: "horizontal",
                                           type: "top",
                                           look: "brand",
-                                          children: $.map((e) =>
+                                          children: H.map((e) =>
                                               (0, i.jsx)(
-                                                  A.V.Item,
+                                                  g.V.Item,
                                                   {
-                                                      className: a()(B.Mf, { [B.wH]: e.id === J }),
+                                                      className: s()(w.Mf, { [w.wH]: e.id === $ }),
                                                       id: e.id,
                                                       "aria-label": e.name,
                                                       children: e.name,
@@ -103,79 +103,79 @@ function V() {
                                               ),
                                           ),
                                       }),
-                                      (0, i.jsx)(x.E, {
+                                      (0, i.jsx)(m.E, {
                                           variant: "text-md/medium",
                                           color: "text-subtle",
-                                          children: y.intl.string(k.default["no+FQS"]),
+                                          children: C.intl.string(V.default["no+FQS"]),
                                       }),
-                                      (0, i.jsx)(W.VT, {
-                                          overallStatus: S ? W.nW.OVERALL_GOOD : z ? W.nW.WARN : W.nW.OVERALL_BAD,
-                                          name: y.intl.string(k.default.AGLx00),
+                                      (0, i.jsx)(_.VT, {
+                                          overallStatus: F ? _.nW.OVERALL_GOOD : T ? _.nW.WARN : _.nW.OVERALL_BAD,
+                                          name: C.intl.string(V.default.AGLx00),
                                           steps: [
                                               {
-                                                  status: z ? W.nW.GOOD : W.nW.BAD,
-                                                  text: y.intl.string(k.default.kxF9br),
-                                                  description: z ? null : y.intl.string(k.default.PFxxJa),
-                                                  learnMoreLink: z
+                                                  status: T ? _.nW.GOOD : _.nW.BAD,
+                                                  text: C.intl.string(V.default.kxF9br),
+                                                  description: T ? null : C.intl.string(V.default.PFxxJa),
+                                                  learnMoreLink: T
                                                       ? null
                                                       : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                               },
                                               {
-                                                  status: S ? W.nW.GOOD : z ? W.nW.WARN : W.nW.BAD,
-                                                  text: y.intl.string(k.default.S94dzs),
-                                                  description: S || !z ? null : y.intl.string(k.default.aTULMB),
+                                                  status: F ? _.nW.GOOD : T ? _.nW.WARN : _.nW.BAD,
+                                                  text: C.intl.string(V.default.S94dzs),
+                                                  description: F || !T ? null : C.intl.string(V.default.aTULMB),
                                                   learnMoreLink:
-                                                      S || !z
+                                                      F || !T
                                                           ? null
                                                           : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                               },
                                           ],
-                                          isChosen: T === R._.RPC,
+                                          isChosen: B === R._M.RPC,
                                       }),
-                                      (0, i.jsx)(W.VT, {
-                                          overallStatus: F ? W.nW.OVERALL_GOOD : W.nW.OVERALL_BAD,
-                                          name: y.intl.string(k.default.K3ObrU),
+                                      (0, i.jsx)(_.VT, {
+                                          overallStatus: M ? _.nW.OVERALL_GOOD : _.nW.OVERALL_BAD,
+                                          name: C.intl.string(V.default.K3ObrU),
                                           steps: [
                                               {
-                                                  status: F ? W.nW.GOOD : W.nW.BAD,
-                                                  text: y.intl.string(k.default["8a7IrV"]),
-                                                  description: F
-                                                      ? y.intl.formatToPlainString(k.default["9iLeL2"], {
-                                                            url: G?.connectionEntrypointUrl,
+                                                  status: M ? _.nW.GOOD : _.nW.BAD,
+                                                  text: C.intl.string(V.default["8a7IrV"]),
+                                                  description: M
+                                                      ? C.intl.formatToPlainString(V.default["9iLeL2"], {
+                                                            url: I?.connectionEntrypointUrl,
                                                         })
                                                       : null,
                                               },
                                           ],
-                                          isChosen: T === R._.WEB,
+                                          isChosen: B === R._M.WEB,
                                       }),
                                   ],
                               }),
                               (0, i.jsxs)("div", {
-                                  className: B.qr,
+                                  className: w.qr,
                                   children: [
-                                      (0, i.jsx)(W.Sy, {
-                                          status: V ? W.nW.OVERALL_GOOD : W.nW.OVERALL_BAD,
-                                          text: y.intl.string(y.t["Vu/zmQ"]),
+                                      (0, i.jsx)(_.Sy, {
+                                          status: G ? _.nW.OVERALL_GOOD : _.nW.OVERALL_BAD,
+                                          text: C.intl.string(C.t["Vu/zmQ"]),
                                       }),
-                                      0 === U.length &&
-                                          (0, i.jsx)(x.E, {
+                                      0 === z.length &&
+                                          (0, i.jsx)(m.E, {
                                               style: { minWidth: 0, overflow: "hidden" },
                                               variant: "text-md/medium",
-                                              children: y.intl.string(k.default.eg0mNa),
+                                              children: C.intl.string(V.default.eg0mNa),
                                           }),
-                                      (0, i.jsx)(m.$, {
+                                      (0, i.jsx)(x.$, {
                                           variant: "secondary",
-                                          disabled: !d || V,
-                                          onClick: () => w({ analyticsLocations: t }),
-                                          text: y.intl.string(k.default.w0pN4R),
+                                          disabled: !d || G,
+                                          onClick: () => S({ analyticsLocations: t }),
+                                          text: C.intl.string(V.default.w0pN4R),
                                           fullWidth: !0,
                                       }),
                                       null != K &&
-                                          (0, i.jsx)(m.$, {
+                                          (0, i.jsx)(x.$, {
                                               variant: "secondary",
                                               onClick: () => {
-                                                  _.A.delete(K.id);
-                                                  let t = M.get(e.id);
+                                                  A.A.delete(K.id);
+                                                  let t = J.get(e.id);
                                                   null != t &&
                                                       j.A.leaveActivity({
                                                           location: t.location,
@@ -183,14 +183,14 @@ function V() {
                                                           showFeedback: !1,
                                                       });
                                               },
-                                              text: y.intl.string(k.default.tkIymA),
+                                              text: C.intl.string(V.default.tkIymA),
                                               fullWidth: !0,
                                           }),
-                                      (0, i.jsx)(m.$, {
+                                      (0, i.jsx)(x.$, {
                                           variant: "secondary",
-                                          onClick: H ?? void 0,
-                                          disabled: null == H,
-                                          text: y.intl.string(k.default.cCvdJy),
+                                          onClick: U ?? void 0,
+                                          disabled: null == U,
+                                          text: C.intl.string(V.default.cCvdJy),
                                           fullWidth: !0,
                                       }),
                                   ],
@@ -200,16 +200,16 @@ function V() {
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)("div", {
-                                  className: B.wx,
+                                  className: w.wx,
                                   children: (0, i.jsx)("div", {
-                                      className: B.if,
+                                      className: w.if,
                                       children: (0, i.jsx)(o.D, {
                                           variant: "heading-lg/extrabold",
-                                          children: y.intl.format(k.default.KoK4J9, { appName: "" }),
+                                          children: C.intl.format(V.default.KoK4J9, { appName: "" }),
                                       }),
                                   }),
                               }),
-                              (0, i.jsx)("div", { className: B.rf, children: (0, i.jsx)(c.y, { className: B.u1 }) }),
+                              (0, i.jsx)("div", { className: w.rf, children: (0, i.jsx)(c.y, { className: w.u1 }) }),
                           ],
                       }),
         }),

@@ -2603,7 +2603,7 @@ var aN = a(824552),
     ak = a(975460),
     aD = a(46225),
     aI = a(487431),
-    aT = a(328153),
+    aT = a(952818),
     aR = a(905552),
     aO = a(546183),
     aw = a(134861),
@@ -2632,8 +2632,8 @@ function aV() {
             [tE.A],
             () => j?.linkedGames?.map((e) => tE.A.getApplication(e.id)).filter((e) => null != e) ?? [],
         ),
-        y = (0, aD.RD)(j, { allowedFlows: [aU._.RPC], debug: !0 }),
-        _ = (0, aD.RD)(j, { allowedFlows: [aU._.WEB], debug: !0 }),
+        y = (0, aD.RD)(j, { allowedFlows: [aU._M.RPC], debug: !0 }),
+        _ = (0, aD.RD)(j, { allowedFlows: [aU._M.WEB], debug: !0 }),
         C = (0, d.bG)([aw.A], () => null != b && aw.A.isConnected(b.id)),
         E = (0, aD.RD)(j, { debug: !0 }),
         { canDeauthorize: N, deauthorize: k } =
@@ -2747,7 +2747,7 @@ function aV() {
                                         : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                             },
                         ],
-                        isChosen: E.chosenFlow === aU._.RPC,
+                        isChosen: E.chosenFlow === aU._M.RPC,
                     }),
                     (0, r.jsx)(aI.VT, {
                         overallStatus: _.debug.hasConnectionEntrypointUrl ? aI.nW.OVERALL_GOOD : aI.nW.OVERALL_BAD,
@@ -2763,7 +2763,7 @@ function aV() {
                                     : null,
                             },
                         ],
-                        isChosen: E.chosenFlow === aU._.WEB,
+                        isChosen: E.chosenFlow === aU._M.WEB,
                     }),
                     (0, r.jsx)(aI.Sy, {
                         status: E.hasAlreadyLinked ? aI.nW.OVERALL_GOOD : aI.nW.OVERALL_BAD,
@@ -7242,7 +7242,7 @@ let ro = {
                     a.e("76007"),
                     a.e("87845"),
                     a.e("71018"),
-                    a.e("69536"),
+                    a.e("38896"),
                     a.e("61175"),
                     a.e("56574"),
                     a.e("79785"),
@@ -7453,7 +7453,7 @@ let ro = {
             return null == t ? () => null : () => (0, r.jsx)(e, { guildId: t.id, onClose: ri.Z_ });
         },
         MembersTableJoinTypeContextMenu: async () => {
-            let { default: e } = await Promise.all([a.e("69536"), a.e("71719"), a.e("14878"), a.e("66016")]).then(
+            let { default: e } = await Promise.all([a.e("38896"), a.e("71719"), a.e("14878"), a.e("66016")]).then(
                     a.bind(a, 316173),
                 ),
                 t = Object.values(aM.A.getGuilds())[0];

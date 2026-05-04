@@ -409,7 +409,7 @@ let ey = (0, el.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var eC = n(328153);
+var eC = n(952818);
 let ev = eC.Ay.getRunningGames(),
     eO = [];
 class eR extends _.Ay.Store {
@@ -733,7 +733,7 @@ let tz = s.memo(function (e) {
             W = s.useCallback(() => {
                 (0, ti.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("65086"),
+                        n.e("31483"),
                         n.e("17918"),
                         n.e("76171"),
                         n.e("86672"),
@@ -879,7 +879,7 @@ let tz = s.memo(function (e) {
                     : (0, r.jsx)(t$, {
                           runningGame: d,
                           startAuthorization: () => {
-                              S({ analyticsLocations: R }) === tY._.RPC &&
+                              S({ analyticsLocations: R }) === tY._M.RPC &&
                                   (Q(!0),
                                   null != Z.current && clearTimeout(Z.current),
                                   (Z.current = setTimeout(() => {
@@ -1296,7 +1296,7 @@ function na(e) {
             let { connectionApp: t } = e,
                 { enabled: n } = ed.A.useConfig({ location: "ActivityPanelGameCard" }),
                 { data: i } = (0, ef.YY)(t?.parentId ?? t?.id);
-            return { isEligible: n && null != t && tY.Y.has(t.id), displayedApp: i };
+            return { isEligible: n && null != t && tY.YJ.has(t.id), displayedApp: i };
         })({ connectionApp: a }),
         { rewarded: S } = (function (e) {
             let { isEligible: t, hasAlreadyLinked: n, didStartAuthorization: i, application: r } = e,
@@ -1549,7 +1549,7 @@ let nd = (0, N.A)(function (e) {
             canStartAuthorization: Y,
             connectionApp: W,
             startAuthorization: K,
-        } = (0, e_.RD)(b, { allowedFlows: [tY._.RPC, tY._.WEB] }),
+        } = (0, e_.RD)(b, { allowedFlows: [tY._M.RPC, tY._M.WEB] }),
         [z, $] = s.useState(null),
         q = null != z,
         Z = s.useCallback(
