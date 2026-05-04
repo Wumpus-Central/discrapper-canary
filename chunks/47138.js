@@ -11858,6 +11858,7 @@ let cq = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                                                                                         );
                                                                                     },
                                                                                     disabled: !s,
+                                                                                    fullWidth: !0,
                                                                                 }),
                                                                                 (0, A.jsx)(nH.k, {
                                                                                     value: e.replace(u ?? "", ""),

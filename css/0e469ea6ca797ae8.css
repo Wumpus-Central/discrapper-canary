@@ -534,8 +534,10 @@
 }
 
 .socialLinksContainer_bbb935 {
+    -moz-column-gap: var(--space-8);
+    column-gap: var(--space-8);
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 175px 1fr;
     margin-bottom: 16px
 }
 
