@@ -32,23 +32,15 @@ let h = new f(c.h, {
             d.ignoreTimestamps[t] = n;
         },
     }),
-    p = (0, n(600975).C)({
+    p = (0, n(240921).Ay)({
+        name: "2026-05-ignore-user-feedback",
         kind: "user",
-        id: "2025-04_ignore_user_feedback",
-        label: "Ignore User Feedback Experiment",
         defaultConfig: { enabled: !1, shouldGetShorterIgnoreDuration: !1 },
-        treatments: [
-            {
-                id: 1,
-                label: "Enable Ignore User Feedback Survey",
-                config: { enabled: !0, shouldGetShorterIgnoreDuration: !1 },
-            },
-            {
-                id: 2,
-                label: "Enable Ignore User Feedback Survey w/ shorter duration for testing",
-                config: { enabled: !0, shouldGetShorterIgnoreDuration: !0 },
-            },
-        ],
+        variations: {
+            0: { enabled: !1, shouldGetShorterIgnoreDuration: !1 },
+            1: { enabled: !0, shouldGetShorterIgnoreDuration: !1 },
+            2: { enabled: !0, shouldGetShorterIgnoreDuration: !0 },
+        },
     });
 var E = n(14594),
     m = n(652215);
@@ -67,10 +59,7 @@ let g = 3 * o.A.Millis.DAY,
         a.default.track(m.HAw.BLOCK_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
     },
     N = () => {
-        let { enabled: e, shouldGetShorterIgnoreDuration: t } = p.getCurrentConfig(
-            { location: "ignore_user_feedback_utils" },
-            { autoTrackExposure: !0 },
-        );
+        let { enabled: e, shouldGetShorterIgnoreDuration: t } = p.getConfig({ location: "ignore_user_feedback_utils" });
         if (!e) return !1;
         let { isDismissed: n } = (0, r.FZ)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: E.aH });
         if (n) return !1;
