@@ -1,73 +1,74 @@
 "use strict";
-n.d(t, { rB: () => es, Ay: () => em }), n(321073);
-var l = n(627968),
-    i = n(64700),
+n.d(t, { rB: () => ea, Ay: () => eh }), n(321073);
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(735438),
-    o = n.n(r),
-    c = n(615300),
-    u = n(621466),
+    o = n(735438),
+    l = n.n(o),
+    u = n(615300),
+    c = n(621466),
     d = n(933681),
-    h = n(939249),
-    m = n(113494),
-    p = n(782134),
-    f = n(43990),
-    g = n(607470),
-    _ = n(384015),
-    x = n(945810),
-    C = n(953051),
-    A = n(201181),
-    E = n(544180),
-    I = n(953727);
-function v(e) {
-    let { width: t = 16, height: n = 16, color: i = "currentColor", foreground: s, ...a } = e;
-    return (0, l.jsx)("svg", {
-        ...(0, I.A)(a),
+    _ = n(939249),
+    f = n(113494),
+    h = n(782134),
+    p = n(187322),
+    E = n(43990),
+    m = n(607470),
+    g = n(384015),
+    A = n(945810),
+    I = n(953051),
+    T = n(423562),
+    S = n(544180),
+    N = n(953727);
+function y(e) {
+    let { width: t = 16, height: n = 16, color: r = "currentColor", foreground: s, ...a } = e;
+    return (0, i.jsx)("svg", {
+        ...(0, N.A)(a),
         width: t,
         height: n,
         viewBox: "0 0 24 24",
-        children: (0, l.jsx)("path", {
+        children: (0, i.jsx)("path", {
             className: s,
-            fill: i,
+            fill: r,
             d: "M12,5 L12,1 L7,6 L12,11 L12,7 C15.31,7 18,9.69 18,13 C18,16.31 15.31,19 12,19 C8.69,19 6,16.31 6,13 L4,13 C4,17.42 7.58,21 12,21 C16.42,21 20,17.42 20,13 C20,8.58 16.42,5 12,5 L12,5 Z",
         }),
     });
 }
-var y = n(954571),
-    b = n(927813),
-    S = n(824744),
-    N = n(475815),
-    j = n(953584),
-    T = n(122641),
-    w = n(692051),
-    R = n(985018),
-    L = n(83699);
-function k(e) {
+var C = n(174459),
+    v = n(927813),
+    O = n(824744),
+    R = n(475815),
+    b = n(953584),
+    D = n(122641),
+    L = n(692051),
+    w = n(375708),
+    M = n(83699);
+function P(e) {
     let { onPlay: t, className: n, inactive: s } = e,
-        r = i.useRef(null),
-        o = (0, l.jsx)("div", {
-            className: L.P0,
-            ref: r,
-            children: (0, l.jsx)(p.u, { size: "xs", color: "currentColor", className: L.Kk }),
+        o = r.useRef(null),
+        l = (0, i.jsx)("div", {
+            className: M.P0,
+            ref: o,
+            children: (0, i.jsx)(h.u, { size: "xs", color: "currentColor", className: M.Kk }),
         });
-    return (0, l.jsx)(w.Y.Consumer, {
+    return (0, i.jsx)(L.Y.Consumer, {
         children: (e) =>
             s || null == t
-                ? (0, l.jsx)("div", { className: L.Iv, children: o })
-                : (0, l.jsx)(h.D, {
-                      className: a()(n, L.Iv, { [L.vu]: !e.disableInteractions }),
+                ? (0, i.jsx)("div", { className: M.Iv, children: l })
+                : (0, i.jsx)(_.D, {
+                      className: a()(n, M.Iv, { [M.vu]: !e.disableInteractions }),
                       onClick: t,
                       tabIndex: 0,
-                      "aria-label": R.intl.string(R.t.RscU7I),
-                      focusProps: { ringTarget: r },
-                      children: o,
+                      "aria-label": w.intl.string(w.t.RscU7I),
+                      focusProps: { ringTarget: o },
+                      children: l,
                   }),
     });
 }
-var O = n(821209);
-let M = new (n(626584).A)("mp4box"),
-    P = {
+var x = n(821209);
+let U = new (n(626584).A)("mp4box"),
+    k = {
         videoCodec: null,
         audioCodec: null,
         videoCodecDescription: null,
@@ -83,7 +84,7 @@ let M = new (n(626584).A)("mp4box"),
         isFragmented: null,
         containerFormat: null,
     };
-function D(e) {
+function G(e) {
     return null === e
         ? "N/A"
         : e < 1e3
@@ -92,49 +93,49 @@ function D(e) {
             ? `${(e / 1e3).toFixed(1)} Kbps`
             : `${(e / 1e6).toFixed(2)} Mbps`;
 }
-async function U(e) {
+async function F(e) {
     try {
         let t;
-        if ("u" < typeof fetch) return P;
-        let { default: l } = await n.e("25777").then(n.t.bind(n, 293384, 19)),
-            i = null;
+        if ("u" < typeof fetch) return k;
+        let { default: i } = await n.e("25777").then(n.t.bind(n, 293384, 19)),
+            r = null;
         try {
             let t = await fetch(e, { method: "HEAD" });
             if (t.ok) {
                 let e = t.headers.get("Content-Length");
-                null != e && (i = parseInt(e, 10));
+                null != e && (r = parseInt(e, 10));
             }
         } catch {}
         try {
             t = await fetch(e, { method: "GET", headers: { Range: "bytes=0-524287" } });
         } catch (e) {
-            return M.warn("Range request failed, likely CORS issue:", e), P;
+            return U.warn("Range request failed, likely CORS issue:", e), k;
         }
-        if (!t.ok && 206 !== t.status) return M.warn("Unexpected response status:", t.status), P;
-        if ("opaque" === t.type) return M.warn("Opaque response, CORS headers may be missing"), P;
+        if (!t.ok && 206 !== t.status) return U.warn("Unexpected response status:", t.status), k;
+        if ("opaque" === t.type) return U.warn("Opaque response, CORS headers may be missing"), k;
         let s = await t.arrayBuffer(),
-            a = l.createFile();
+            a = i.createFile();
         return new Promise((t) => {
             let n = !1,
-                l = !1,
-                r = null,
+                i = !1,
                 o = null,
-                c = () => {
-                    n || ((n = !0), clearTimeout(u), null != o && clearTimeout(o), t(P));
+                l = null,
+                u = () => {
+                    n || ((n = !0), clearTimeout(c), null != l && clearTimeout(l), t(k));
                 },
-                u = setTimeout(() => {
-                    M.warn("Timeout after", 5e3, "ms, moov atom not found"), c();
+                c = setTimeout(() => {
+                    U.warn("Timeout after", 5e3, "ms, moov atom not found"), u();
                 }, 5e3);
             (a.onReady = (e) => {
                 if (n) return;
-                (n = !0), clearTimeout(u), null != o && clearTimeout(o);
-                let l = e.videoTracks[0],
-                    i = e.audioTracks[0],
+                (n = !0), clearTimeout(c), null != l && clearTimeout(l);
+                let i = e.videoTracks[0],
+                    r = e.audioTracks[0],
                     s = {
-                        videoCodec: l?.codec ?? null,
-                        audioCodec: i?.codec ?? null,
+                        videoCodec: i?.codec ?? null,
+                        audioCodec: r?.codec ?? null,
                         videoCodecDescription:
-                            null != l
+                            null != i
                                 ? (function (e) {
                                       if (e.startsWith("avc1")) return "H.264/AVC";
                                       if (e.startsWith("hev1") || e.startsWith("hvc1")) return "H.265/HEVC";
@@ -142,10 +143,10 @@ async function U(e) {
                                       if (e.startsWith("vp09")) return "VP9";
                                       if (e.startsWith("av01")) return "AV1";
                                       return e;
-                                  })(l.codec)
+                                  })(i.codec)
                                 : null,
                         audioCodecDescription:
-                            null != i
+                            null != r
                                 ? (function (e) {
                                       if (e.startsWith("mp4a.40.2")) return "AAC-LC";
                                       if (e.startsWith("mp4a.40.5")) return "HE-AAC";
@@ -154,14 +155,14 @@ async function U(e) {
                                       if ("opus" === e) return "Opus";
                                       else if ("vorbis" === e) return "Vorbis";
                                       return e;
-                                  })(i.codec)
+                                  })(r.codec)
                                 : null,
-                        videoBitrate: l?.bitrate ?? null,
-                        audioBitrate: i?.bitrate ?? null,
-                        audioChannels: i?.audio?.channel_count ?? null,
-                        audioSampleRate: i?.audio?.sample_rate ?? null,
+                        videoBitrate: i?.bitrate ?? null,
+                        audioBitrate: r?.bitrate ?? null,
+                        audioChannels: r?.audio?.channel_count ?? null,
+                        audioSampleRate: r?.audio?.sample_rate ?? null,
                         frameRate:
-                            null != l
+                            null != i
                                 ? (function (e) {
                                       if (
                                           null != e.nb_samples &&
@@ -173,10 +174,10 @@ async function U(e) {
                                           if (t > 0) return Math.round(e.nb_samples / t);
                                       }
                                       return null;
-                                  })(l)
+                                  })(i)
                                 : null,
-                        videoWidth: l?.video?.width ?? null,
-                        videoHeight: l?.video?.height ?? null,
+                        videoWidth: i?.video?.width ?? null,
+                        videoHeight: i?.video?.height ?? null,
                         isProgressive: e.isProgressive ?? null,
                         isFragmented: e.isFragmented ?? null,
                         containerFormat: (function (e) {
@@ -197,59 +198,59 @@ async function U(e) {
                 t(s);
             }),
                 (a.onError = () => {
-                    c();
+                    u();
                 }),
                 (a.onSeek = async (t) => {
-                    if (n || l || null == i || !(i > 524288)) {
-                        if (l) {
-                            if (null != r && performance.now() - r < 5e3) return;
-                            c();
+                    if (n || i || null == r || !(r > 524288)) {
+                        if (i) {
+                            if (null != o && performance.now() - o < 5e3) return;
+                            u();
                             return;
                         }
                     } else {
-                        (l = !0), M.log("Fetching end chunk for moov atom");
+                        (i = !0), U.log("Fetching end chunk for moov atom");
                         try {
                             let t = await fetch(e, {
                                 method: "GET",
-                                headers: { Range: `bytes=${i - 524288}-${i - 1}` },
+                                headers: { Range: `bytes=${r - 524288}-${r - 1}` },
                             });
                             if (t.ok || 206 === t.status) {
                                 let e,
                                     n = await t.arrayBuffer();
-                                200 === t.status && n.byteLength === i
-                                    ? ((n = n.slice(i - 524288)), (e = Math.max(0, i - 524288)))
-                                    : (e = 206 === t.status ? Math.max(0, i - 524288) : 0);
-                                let l = n;
-                                l.fileStart = e;
+                                200 === t.status && n.byteLength === r
+                                    ? ((n = n.slice(r - 524288)), (e = Math.max(0, r - 524288)))
+                                    : (e = 206 === t.status ? Math.max(0, r - 524288) : 0);
+                                let i = n;
+                                i.fileStart = e;
                                 try {
-                                    a.appendBuffer(l), a.flush(), (r = performance.now());
+                                    a.appendBuffer(i), a.flush(), (o = performance.now());
                                     return;
                                 } catch (e) {
-                                    M.warn("Failed to append end chunk:", e), c();
+                                    U.warn("Failed to append end chunk:", e), u();
                                     return;
                                 }
                             }
                         } catch (e) {
-                            M.warn("Failed to fetch end chunk:", e);
+                            U.warn("Failed to fetch end chunk:", e);
                         }
-                        c();
+                        u();
                         return;
                     }
-                    (null == i || i <= 524288) && c();
+                    (null == r || r <= 524288) && u();
                 }),
                 (s.fileStart = 0);
             try {
                 a.appendBuffer(s),
                     a.flush(),
-                    (o = setTimeout(() => {
-                        n || l || null == a.onSeek || a.onSeek({ offset: 0, isLast: !1 });
+                    (l = setTimeout(() => {
+                        n || i || null == a.onSeek || a.onSeek({ offset: 0, isLast: !1 });
                     }, 500));
             } catch (e) {
-                c();
+                u();
             }
         });
     } catch (e) {
-        return P;
+        return k;
     }
 }
 class V {
@@ -273,7 +274,7 @@ class V {
         let e = "" !== this.videoElement.src ? this.videoElement.src : this.videoElement.currentSrc;
         if (null == e || "" === e || null != this.codecInfoPromise) return;
         let t = this.codecInfoFetchId;
-        this.codecInfoPromise = U(e);
+        this.codecInfoPromise = F(e);
         let n = await this.codecInfoPromise;
         this.codecInfoFetchId === t && (this.cachedCodecInfo = n);
     }
@@ -294,79 +295,79 @@ class V {
         let e,
             t,
             n,
-            l = this.videoElement;
+            i = this.videoElement;
         this.cachedCodecInfo?.videoWidth != null && this.cachedCodecInfo?.videoHeight != null
             ? ((e = this.cachedCodecInfo.videoWidth), (t = this.cachedCodecInfo.videoHeight), (n = `${e}x${t}`))
-            : ((e = 0 !== l.videoWidth ? l.videoWidth : 0),
-              (t = 0 !== l.videoHeight ? l.videoHeight : 0),
+            : ((e = 0 !== i.videoWidth ? i.videoWidth : 0),
+              (t = 0 !== i.videoHeight ? i.videoHeight : 0),
               (n = e > 0 && t > 0 ? `${e}x${t}` : "Unknown"));
-        let i = Math.round(l.clientWidth),
-            s = Math.round(l.clientHeight),
+        let r = Math.round(i.clientWidth),
+            s = Math.round(i.clientHeight),
             a = [],
-            r = 0,
-            o = l.currentTime;
-        for (let e = 0; e < l.buffered.length; e++) {
-            let t = l.buffered.start(e),
-                n = l.buffered.end(e);
-            a.push({ start: t, end: n }), n > o && (t <= o ? (r += n - o) : (r += n - t));
+            o = 0,
+            l = i.currentTime;
+        for (let e = 0; e < i.buffered.length; e++) {
+            let t = i.buffered.start(e),
+                n = i.buffered.end(e);
+            a.push({ start: t, end: n }), n > l && (t <= l ? (o += n - l) : (o += n - t));
         }
-        let c = 0,
-            u = 0,
+        let u = 0,
+            c = 0,
             d = 0,
-            h = null;
-        if ("function" == typeof l.getVideoPlaybackQuality) {
-            let e = l.getVideoPlaybackQuality();
-            (c = e.droppedVideoFrames), (d = (u = e.totalVideoFrames) > 0 ? (c / u) * 100 : 0);
+            _ = null;
+        if ("function" == typeof i.getVideoPlaybackQuality) {
+            let e = i.getVideoPlaybackQuality();
+            (u = e.droppedVideoFrames), (d = (c = e.totalVideoFrames) > 0 ? (u / c) * 100 : 0);
         }
-        if (this.cachedCodecInfo?.frameRate != null) h = this.cachedCodecInfo.frameRate;
-        else if ("function" == typeof l.getVideoPlaybackQuality) {
-            if (null !== this.lockedFrameRate) h = this.lockedFrameRate;
-            else if (Math.abs(l.currentTime - this.lastCurrentTime) > 1.5 && this.lastCurrentTime > 0)
+        if (this.cachedCodecInfo?.frameRate != null) _ = this.cachedCodecInfo.frameRate;
+        else if ("function" == typeof i.getVideoPlaybackQuality) {
+            if (null !== this.lockedFrameRate) _ = this.lockedFrameRate;
+            else if (Math.abs(i.currentTime - this.lastCurrentTime) > 1.5 && this.lastCurrentTime > 0)
                 if (this.recentFrameRates.length >= 3) {
                     let e = this.recentFrameRates.reduce((e, t) => e + t, 0) / this.recentFrameRates.length;
                     (this.lockedFrameRate = Math.round(e)),
-                        (h = this.lockedFrameRate),
+                        (_ = this.lockedFrameRate),
                         (this.lastKnownFrameRate = this.lockedFrameRate);
                 } else
-                    (this.baselineFrames = u),
-                        (this.baselineTime = l.currentTime),
+                    (this.baselineFrames = c),
+                        (this.baselineTime = i.currentTime),
                         (this.recentFrameRates = []),
-                        (h = this.lastKnownFrameRate);
+                        (_ = this.lastKnownFrameRate);
             else {
-                let e = u - this.baselineFrames,
-                    t = l.currentTime - this.baselineTime;
+                let e = c - this.baselineFrames,
+                    t = i.currentTime - this.baselineTime;
                 t >= 1 && e > 0
                     ? (this.recentFrameRates.push(e / t),
                       this.recentFrameRates.length > 5 && this.recentFrameRates.shift(),
-                      (h = Math.round(this.recentFrameRates.reduce((e, t) => e + t, 0) / this.recentFrameRates.length)),
-                      (this.lastKnownFrameRate = h))
-                    : null !== this.lastKnownFrameRate && (h = this.lastKnownFrameRate);
+                      (_ = Math.round(this.recentFrameRates.reduce((e, t) => e + t, 0) / this.recentFrameRates.length)),
+                      (this.lastKnownFrameRate = _))
+                    : null !== this.lastKnownFrameRate && (_ = this.lastKnownFrameRate);
             }
-            this.lastCurrentTime = l.currentTime;
+            this.lastCurrentTime = i.currentTime;
         }
-        let m = l.error?.code ?? null,
-            p = l.error?.message ?? null;
+        let f = i.error?.code ?? null,
+            h = i.error?.message ?? null;
         return (
             null == this.codecInfoPromise && this.fetchCodecInfo(),
             {
                 resolution: n,
                 videoWidth: e,
                 videoHeight: t,
-                viewportWidth: i,
+                viewportWidth: r,
                 viewportHeight: s,
-                currentTime: l.currentTime,
-                duration: l.duration,
+                currentTime: i.currentTime,
+                duration: i.duration,
                 bufferedRanges: a,
-                bufferedSeconds: r,
-                droppedFrames: c,
-                totalFrames: u,
+                bufferedSeconds: o,
+                droppedFrames: u,
+                totalFrames: c,
                 droppedFramesPercent: d,
-                frameRate: h,
-                src: l.src,
+                frameRate: _,
+                src: i.src,
                 fileSizeBytes: this.fileSizeBytes,
                 codecInfo: this.cachedCodecInfo,
-                errorCode: m,
-                errorMessage: p,
+                errorCode: f,
+                errorMessage: h,
             }
         );
     }
@@ -385,204 +386,204 @@ class V {
         this.stopTracking();
     }
 }
-var G = n(990078),
-    F = n(624479),
-    B = n(789645),
-    H = n(957565),
+var B = n(990078),
+    H = n(624479),
+    j = n(789645),
+    Y = n(957565),
     W = n(239957);
 let K = "Close",
     z = "Copy to JSON",
-    Z = "Copied!";
+    $ = "Copied!";
 function q(e) {
-    var t, n, s, a, r;
-    let o,
-        { stats: c, onClose: u } = e,
-        [d, m] = i.useState(!1),
-        p = i.useRef(null);
-    i.useEffect(
+    var t, n, s, a, o;
+    let l,
+        { stats: u, onClose: c } = e,
+        [d, f] = r.useState(!1),
+        h = r.useRef(null);
+    r.useEffect(
         () => () => {
-            null != p.current && clearTimeout(p.current);
+            null != h.current && clearTimeout(h.current);
         },
         [],
     );
-    let f = i.useCallback(() => {
+    let p = r.useCallback(() => {
         let e = JSON.stringify(
             {
                 media: {
                     video: {
-                        codec: c.codecInfo?.videoCodecDescription ?? c.codecInfo?.videoCodec,
-                        codecRaw: c.codecInfo?.videoCodec,
-                        bitRate: c.codecInfo?.videoBitrate != null ? Math.round(c.codecInfo.videoBitrate) : null,
-                        frameRate: c.frameRate,
-                        width: c.videoWidth,
-                        height: c.videoHeight,
+                        codec: u.codecInfo?.videoCodecDescription ?? u.codecInfo?.videoCodec,
+                        codecRaw: u.codecInfo?.videoCodec,
+                        bitRate: u.codecInfo?.videoBitrate != null ? Math.round(u.codecInfo.videoBitrate) : null,
+                        frameRate: u.frameRate,
+                        width: u.videoWidth,
+                        height: u.videoHeight,
                     },
                     audio: {
-                        codec: c.codecInfo?.audioCodecDescription ?? c.codecInfo?.audioCodec,
-                        codecRaw: c.codecInfo?.audioCodec,
-                        bitRate: c.codecInfo?.audioBitrate != null ? Math.round(c.codecInfo.audioBitrate) : null,
-                        channels: c.codecInfo?.audioChannels,
-                        sampleRate: c.codecInfo?.audioSampleRate,
+                        codec: u.codecInfo?.audioCodecDescription ?? u.codecInfo?.audioCodec,
+                        codecRaw: u.codecInfo?.audioCodec,
+                        bitRate: u.codecInfo?.audioBitrate != null ? Math.round(u.codecInfo.audioBitrate) : null,
+                        channels: u.codecInfo?.audioChannels,
+                        sampleRate: u.codecInfo?.audioSampleRate,
                     },
-                    fileSizeBytes: c.fileSizeBytes,
-                    durationSeconds: c.duration,
-                    containerFormat: c.codecInfo?.containerFormat,
-                    isProgressive: c.codecInfo?.isProgressive,
-                    isFragmented: c.codecInfo?.isFragmented,
+                    fileSizeBytes: u.fileSizeBytes,
+                    durationSeconds: u.duration,
+                    containerFormat: u.codecInfo?.containerFormat,
+                    isProgressive: u.codecInfo?.isProgressive,
+                    isFragmented: u.codecInfo?.isFragmented,
                 },
                 playback: {
-                    viewportWidth: c.viewportWidth,
-                    viewportHeight: c.viewportHeight,
-                    currentTimeSeconds: c.currentTime,
-                    bufferedSeconds: c.bufferedSeconds,
-                    droppedFrames: c.droppedFrames,
-                    totalDecodedFrames: c.totalFrames,
+                    viewportWidth: u.viewportWidth,
+                    viewportHeight: u.viewportHeight,
+                    currentTimeSeconds: u.currentTime,
+                    bufferedSeconds: u.bufferedSeconds,
+                    droppedFrames: u.droppedFrames,
+                    totalDecodedFrames: u.totalFrames,
                     droppedFramesPercent:
-                        null != c.droppedFramesPercent ? parseFloat(c.droppedFramesPercent.toFixed(2)) : null,
-                    errorCode: c.errorCode,
-                    errorMessage: c.errorMessage,
+                        null != u.droppedFramesPercent ? parseFloat(u.droppedFramesPercent.toFixed(2)) : null,
+                    errorCode: u.errorCode,
+                    errorMessage: u.errorMessage,
                 },
             },
             null,
             2,
         );
-        (0, H.C)(
+        (0, Y.C)(
             e,
             () => {
-                m(!0),
-                    null != p.current && clearTimeout(p.current),
-                    (p.current = window.setTimeout(() => {
-                        m(!1), (p.current = null);
+                f(!0),
+                    null != h.current && clearTimeout(h.current),
+                    (h.current = window.setTimeout(() => {
+                        f(!1), (h.current = null);
                     }, 2e3));
             },
             () => {},
         );
-    }, [c]);
-    return (0, l.jsxs)("div", {
+    }, [u]);
+    return (0, i.jsxs)("div", {
         className: W.gP,
         children: [
-            (0, l.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: W.wx,
                 children: [
-                    (0, l.jsx)("div", { className: W.DD, children: "Stats for Nerds" }),
-                    (0, l.jsxs)("div", {
+                    (0, i.jsx)("div", { className: W.DD, children: "Stats for Nerds" }),
+                    (0, i.jsxs)("div", {
                         className: W.Pz,
                         children: [
-                            (0, l.jsx)(G.m, {
-                                text: d ? Z : z,
-                                children: (0, l.jsx)(h.D, {
+                            (0, i.jsx)(B.m, {
+                                text: d ? $ : z,
+                                children: (0, i.jsx)(_.D, {
                                     className: W.cL,
-                                    onClick: f,
-                                    "aria-label": d ? Z : z,
+                                    onClick: p,
+                                    "aria-label": d ? $ : z,
                                     focusProps: { offset: 2 },
-                                    children: (0, l.jsx)(F.T, { size: "md", color: "currentColor" }),
+                                    children: (0, i.jsx)(H.T, { size: "md", color: "currentColor" }),
                                 }),
                             }),
-                            (0, l.jsx)(G.m, {
+                            (0, i.jsx)(B.m, {
                                 text: K,
-                                children: (0, l.jsx)(h.D, {
+                                children: (0, i.jsx)(_.D, {
                                     className: W.b,
-                                    onClick: u,
+                                    onClick: c,
                                     "aria-label": K,
                                     focusProps: { offset: 2 },
-                                    children: (0, l.jsx)(B.P, { size: "md", color: "currentColor" }),
+                                    children: (0, i.jsx)(j.P, { size: "md", color: "currentColor" }),
                                 }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, l.jsxs)("div", {
+            (0, i.jsxs)("div", {
                 className: W.Qs,
                 children: [
-                    c.codecInfo?.containerFormat != null &&
-                        (0, l.jsxs)("div", {
+                    u.codecInfo?.containerFormat != null &&
+                        (0, i.jsxs)("div", {
                             className: W.N8,
                             children: [
-                                (0, l.jsx)("span", { className: W.Zh, children: "Container" }),
-                                (0, l.jsx)("span", { className: W.cR, children: c.codecInfo.containerFormat }),
+                                (0, i.jsx)("span", { className: W.Zh, children: "Container" }),
+                                (0, i.jsx)("span", { className: W.cR, children: u.codecInfo.containerFormat }),
                             ],
                         }),
-                    (c.codecInfo?.isProgressive != null || c.codecInfo?.isFragmented != null) &&
-                        (0, l.jsxs)("div", {
+                    (u.codecInfo?.isProgressive != null || u.codecInfo?.isFragmented != null) &&
+                        (0, i.jsxs)("div", {
                             className: W.N8,
                             children: [
-                                (0, l.jsx)("span", { className: W.Zh, children: "Format" }),
-                                (0, l.jsx)("span", {
+                                (0, i.jsx)("span", { className: W.Zh, children: "Format" }),
+                                (0, i.jsx)("span", {
                                     className: W.cR,
                                     children:
-                                        ((t = c.codecInfo.isProgressive ?? null),
-                                        (n = c.codecInfo.isFragmented ?? null),
-                                        (o = []),
-                                        (!0 === t && o.push("Progressive"),
-                                        !0 === n && o.push("Fragmented"),
-                                        0 === o.length)
+                                        ((t = u.codecInfo.isProgressive ?? null),
+                                        (n = u.codecInfo.isFragmented ?? null),
+                                        (l = []),
+                                        (!0 === t && l.push("Progressive"),
+                                        !0 === n && l.push("Fragmented"),
+                                        0 === l.length)
                                             ? "Standard"
-                                            : o.join(", ")),
+                                            : l.join(", ")),
                                 }),
                             ],
                         }),
-                    null != c.codecInfo &&
-                        (0, l.jsxs)("div", {
+                    null != u.codecInfo &&
+                        (0, i.jsxs)("div", {
                             className: W.N8,
                             children: [
-                                (0, l.jsx)("span", { className: W.Zh, children: "Resolution" }),
-                                (0, l.jsxs)("span", {
+                                (0, i.jsx)("span", { className: W.Zh, children: "Resolution" }),
+                                (0, i.jsxs)("span", {
                                     className: W.cR,
                                     children: [
-                                        c.resolution,
+                                        u.resolution,
                                         " @ ",
-                                        null === (s = c.frameRate) ? "N/A" : `${s} fps`,
-                                        c.droppedFrames > 0 && ` (${c.droppedFrames} dropped)`,
+                                        null === (s = u.frameRate) ? "N/A" : `${s} fps`,
+                                        u.droppedFrames > 0 && ` (${u.droppedFrames} dropped)`,
                                     ],
                                 }),
                             ],
                         }),
-                    null != c.codecInfo &&
-                        (0, l.jsxs)("div", {
+                    null != u.codecInfo &&
+                        (0, i.jsxs)("div", {
                             className: W.N8,
                             children: [
-                                (0, l.jsx)("span", { className: W.Zh, children: "Viewport" }),
-                                (0, l.jsxs)("span", {
+                                (0, i.jsx)("span", { className: W.Zh, children: "Viewport" }),
+                                (0, i.jsxs)("span", {
                                     className: W.cR,
-                                    children: [c.viewportWidth, "x", c.viewportHeight],
+                                    children: [u.viewportWidth, "x", u.viewportHeight],
                                 }),
                             ],
                         }),
-                    c.codecInfo?.videoCodec != null &&
-                        (0, l.jsxs)("div", {
+                    u.codecInfo?.videoCodec != null &&
+                        (0, i.jsxs)("div", {
                             className: W.N8,
                             children: [
-                                (0, l.jsx)("span", { className: W.Zh, children: "Video" }),
-                                (0, l.jsxs)("span", {
-                                    className: W.cR,
-                                    children: [
-                                        c.codecInfo.videoCodecDescription ?? c.codecInfo.videoCodec ?? "Unknown",
-                                        null != c.codecInfo.videoBitrate && ` @ ${D(c.codecInfo.videoBitrate)}`,
-                                    ],
-                                }),
-                            ],
-                        }),
-                    c.codecInfo?.audioCodec != null &&
-                        (0, l.jsxs)("div", {
-                            className: W.N8,
-                            children: [
-                                (0, l.jsx)("span", { className: W.Zh, children: "Audio" }),
-                                (0, l.jsxs)("span", {
+                                (0, i.jsx)("span", { className: W.Zh, children: "Video" }),
+                                (0, i.jsxs)("span", {
                                     className: W.cR,
                                     children: [
-                                        c.codecInfo.audioCodecDescription ?? c.codecInfo.audioCodec ?? "Unknown",
-                                        null != c.codecInfo.audioBitrate && ` @ ${D(c.codecInfo.audioBitrate)}`,
+                                        u.codecInfo.videoCodecDescription ?? u.codecInfo.videoCodec ?? "Unknown",
+                                        null != u.codecInfo.videoBitrate && ` @ ${G(u.codecInfo.videoBitrate)}`,
                                     ],
                                 }),
                             ],
                         }),
-                    c.codecInfo?.audioChannels != null &&
-                        (0, l.jsxs)("div", {
+                    u.codecInfo?.audioCodec != null &&
+                        (0, i.jsxs)("div", {
                             className: W.N8,
                             children: [
-                                (0, l.jsx)("span", { className: W.Zh, children: "Audio Channels" }),
-                                (0, l.jsxs)("span", {
+                                (0, i.jsx)("span", { className: W.Zh, children: "Audio" }),
+                                (0, i.jsxs)("span", {
+                                    className: W.cR,
+                                    children: [
+                                        u.codecInfo.audioCodecDescription ?? u.codecInfo.audioCodec ?? "Unknown",
+                                        null != u.codecInfo.audioBitrate && ` @ ${G(u.codecInfo.audioBitrate)}`,
+                                    ],
+                                }),
+                            ],
+                        }),
+                    u.codecInfo?.audioChannels != null &&
+                        (0, i.jsxs)("div", {
+                            className: W.N8,
+                            children: [
+                                (0, i.jsx)("span", { className: W.Zh, children: "Audio Channels" }),
+                                (0, i.jsxs)("span", {
                                     className: W.cR,
                                     children: [
                                         (function (e) {
@@ -599,33 +600,33 @@ function q(e) {
                                                 default:
                                                     return `${e} channels`;
                                             }
-                                        })(c.codecInfo.audioChannels),
-                                        null != c.codecInfo.audioSampleRate &&
-                                            ` @ ${null === ((a = c.codecInfo.audioSampleRate)) ? "N/A" : a < 1e3 ? `${a} Hz` : `${(a / 1e3).toFixed(1)} kHz`}`,
+                                        })(u.codecInfo.audioChannels),
+                                        null != u.codecInfo.audioSampleRate &&
+                                            ` @ ${null === ((a = u.codecInfo.audioSampleRate)) ? "N/A" : a < 1e3 ? `${a} Hz` : `${(a / 1e3).toFixed(1)} kHz`}`,
                                     ],
                                 }),
                             ],
                         }),
-                    (0, l.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         className: W.N8,
                         children: [
-                            (0, l.jsx)("span", { className: W.Zh, children: "Buffer Health" }),
-                            (0, l.jsx)("span", {
+                            (0, i.jsx)("span", { className: W.Zh, children: "Buffer Health" }),
+                            (0, i.jsx)("span", {
                                 className: W.cR,
-                                children: isFinite((r = c.bufferedSeconds)) ? r.toFixed(1) + "s" : "Live",
+                                children: isFinite((o = u.bufferedSeconds)) ? o.toFixed(1) + "s" : "Live",
                             }),
                         ],
                     }),
-                    null !== c.errorCode &&
-                        (0, l.jsx)("div", {
+                    null !== u.errorCode &&
+                        (0, i.jsx)("div", {
                             className: W.K6,
-                            children: (0, l.jsxs)("div", {
+                            children: (0, i.jsxs)("div", {
                                 className: W.N8,
                                 children: [
-                                    (0, l.jsx)("span", { className: W.Zh, children: "Error" }),
-                                    (0, l.jsxs)("span", {
+                                    (0, i.jsx)("span", { className: W.Zh, children: "Error" }),
+                                    (0, i.jsxs)("span", {
                                         className: W.cR,
-                                        children: [c.errorCode, null !== c.errorMessage && `: ${c.errorMessage}`],
+                                        children: [u.errorCode, null !== u.errorMessage && `: ${u.errorMessage}`],
                                     }),
                                 ],
                             }),
@@ -635,40 +636,40 @@ function q(e) {
         ],
     });
 }
-var J = n(20504),
-    Y = n(652215),
-    $ = n(838541),
-    X = n(650583),
-    Q = n(277446),
-    ee = n(653307);
-let et = "-:--",
-    en = { friction: 14, tension: 200 },
-    el = { VIDEO: "VIDEO", AUDIO: "AUDIO" },
-    ei = { width: "100%", height: "100%", backgroundColor: "black" };
-function es(e) {
+var Z = n(20504),
+    X = n(652215),
+    Q = n(838541),
+    J = n(650583),
+    ee = n(277446),
+    et = n(653307);
+let en = "-:--",
+    ei = { friction: 14, tension: 200 },
+    er = { VIDEO: "VIDEO", AUDIO: "AUDIO" },
+    es = { width: "100%", height: "100%", backgroundColor: "black" };
+function ea(e) {
     let t = 0 | e,
         n = t % 60;
     return `${(t - n) / 60}:${String(n).padStart(2, "0")}`;
 }
-let ea = (e) => {
+let eo = (e) => {
     let { current: t, duration: n } = e,
-        i = null != t ? es(t) : et,
-        s = null != n ? es(n) : et;
+        r = null != t ? ea(t) : en,
+        s = null != n ? ea(n) : en;
     return (
-        (i = i.padStart(s.length, "0")),
-        (0, l.jsxs)("div", {
-            className: Q.d$,
+        (r = r.padStart(s.length, "0")),
+        (0, i.jsxs)("div", {
+            className: ee.d$,
             children: [
-                (0, l.jsx)("span", { className: Q.Ue, children: i }),
-                (0, l.jsx)("span", { className: Q.zO, children: "/" }),
-                (0, l.jsx)("span", { className: Q.Ue, children: s }),
+                (0, i.jsx)("span", { className: ee.Ue, children: r }),
+                (0, i.jsx)("span", { className: ee.zO, children: "/" }),
+                (0, i.jsx)("span", { className: ee.Ue, children: s }),
             ],
         })
     );
 };
-class er extends i.Component {
+class el extends r.Component {
     static defaultProps = { disabled: !1 };
-    state = { translateY: new c.A.Value(0) };
+    state = { translateY: new u.A.Value(0) };
     volumeButton;
     durationBar;
     componentDidMount() {
@@ -687,7 +688,7 @@ class er extends i.Component {
     }
     animateControls(e, t) {
         let { translateY: n } = this.state;
-        t ? c.A.spring(n, { toValue: e, ...en }).start() : n.setValue(e);
+        t ? u.A.spring(n, { toValue: e, ...ei }).start() : n.setValue(e);
     }
     setDurationRef = (e) => {
         this.durationBar = e;
@@ -700,29 +701,29 @@ class er extends i.Component {
         return { transform: [{ translateY: e.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) }] };
     }
     renderPlayIcon() {
-        let { playing: e, currentTime: t, duration: n, onPause: i, onPlay: s, disabled: a } = this.props;
+        let { playing: e, currentTime: t, duration: n, onPause: r, onPlay: s, disabled: a } = this.props;
         return e
-            ? (0, l.jsx)(h.D, {
-                  className: Q.CY,
-                  onClick: i,
+            ? (0, i.jsx)(_.D, {
+                  className: ee.CY,
+                  onClick: r,
                   tabIndex: a ? -1 : 0,
-                  "aria-label": R.intl.string(R.t.ZcgDJX),
-                  children: (0, l.jsx)(m.E, { size: "xs", color: "currentColor", className: Q.pd }, "pause"),
+                  "aria-label": w.intl.string(w.t.ZcgDJX),
+                  children: (0, i.jsx)(f.E, { size: "xs", color: "currentColor", className: ee.pd }, "pause"),
               })
             : null != t && t === n
-              ? (0, l.jsx)(h.D, {
-                    className: Q.CY,
+              ? (0, i.jsx)(_.D, {
+                    className: ee.CY,
                     onClick: s,
                     tabIndex: a ? -1 : 0,
-                    "aria-label": R.intl.string(R.t.hsvh0i),
-                    children: (0, l.jsx)(v, { className: Q.pd }, "replay"),
+                    "aria-label": w.intl.string(w.t.hsvh0i),
+                    children: (0, i.jsx)(y, { className: ee.pd }, "replay"),
                 })
-              : (0, l.jsx)(h.D, {
-                    className: Q.CY,
+              : (0, i.jsx)(_.D, {
+                    className: ee.CY,
                     onClick: s,
                     tabIndex: a ? -1 : 0,
-                    "aria-label": R.intl.string(R.t.RscU7I),
-                    children: (0, l.jsx)(p.u, { size: "xs", color: "currentColor", className: Q.pd }, "play"),
+                    "aria-label": w.intl.string(w.t.RscU7I),
+                    children: (0, i.jsx)(h.u, { size: "xs", color: "currentColor", className: ee.pd }, "play"),
                 });
     }
     render() {
@@ -730,51 +731,51 @@ class er extends i.Component {
             buffers: e,
             children: t,
             currentTime: n,
-            duration: i,
+            duration: r,
             muted: s,
             onDrag: a,
-            onDragEnd: r,
-            onDragStart: o,
-            onToggleMuted: u,
+            onDragEnd: o,
+            onDragStart: l,
+            onToggleMuted: c,
             onVolumeShow: d,
-            onVolumeHide: h,
-            width: m,
-            volume: p,
-            type: f,
+            onVolumeHide: _,
+            width: f,
+            volume: h,
+            type: p,
         } = this.props;
-        return (0, l.jsxs)(c.A.div, {
-            className: f === el.VIDEO ? Q._v : Q.dH,
+        return (0, i.jsxs)(u.A.div, {
+            className: p === er.VIDEO ? ee._v : ee.dH,
             onClick: (e) => e.stopPropagation(),
             onDoubleClick: (e) => e.stopPropagation(),
             style: this.getAnimatedStyle(),
             children: [
                 this.renderPlayIcon(),
-                "string" == typeof m || m > 250 ? (0, l.jsx)(ea, { current: n, duration: i }) : null,
-                (0, l.jsx)(T.A, {
+                "string" == typeof f || f > 250 ? (0, i.jsx)(eo, { current: n, duration: r }) : null,
+                (0, i.jsx)(D.A, {
                     buffers: e,
-                    value: i ?? 0,
+                    value: r ?? 0,
                     onDrag: a,
-                    onDragEnd: r,
-                    onDragStart: o,
-                    type: T.A.Types.DURATION,
+                    onDragEnd: o,
+                    onDragStart: l,
+                    type: D.A.Types.DURATION,
                     ref: this.setDurationRef,
                 }),
-                (0, l.jsx)("div", {
-                    className: ee.Uu,
-                    children: (0, l.jsx)(J.A, {
+                (0, i.jsx)("div", {
+                    className: et.Uu,
+                    children: (0, i.jsx)(Z.A, {
                         ref: this.setVolumeButtonRef,
                         muted: s,
-                        value: p,
+                        value: h,
                         minValue: 0,
                         maxValue: 1,
                         currentWindow: window,
-                        onValueChange: (e) => a(e, T.A.Types.VOLUME),
-                        onToggleMute: u,
+                        onValueChange: (e) => a(e, D.A.Types.VOLUME),
+                        onToggleMute: c,
                         onVolumeShow: d,
-                        onVolumeHide: h,
-                        iconClassName: Q.pd,
+                        onVolumeHide: _,
+                        iconClassName: ee.pd,
                         iconColor: "currentColor",
-                        sliderWrapperClassName: Q.L9,
+                        sliderWrapperClassName: ee.L9,
                     }),
                 }),
                 t,
@@ -782,26 +783,32 @@ class er extends i.Component {
         });
     }
 }
-function eo(e) {
-    let { fileName: t, fileSize: n, src: i, disabled: s, mimeType: a, hideDownloadButton: r } = e;
-    return (0, l.jsxs)("div", {
-        className: Q.WU,
+function eu(e) {
+    let { fileName: t, fileSize: n, src: r, disabled: s, mimeType: a, hideDownloadButton: o } = e;
+    return (0, i.jsxs)("div", {
+        className: ee.WU,
         children: [
-            (0, l.jsxs)("div", {
-                className: Q.xe,
+            (0, i.jsxs)("div", {
+                className: ee.xe,
                 children: [
                     s
                         ? t
-                        : (0, l.jsx)(_.A, { href: i, className: Q.kH, iconClassName: Q.XR, mimeType: a, fileName: t }),
-                    (0, l.jsx)("div", { className: Q.fL, children: n }),
+                        : (0, i.jsx)(g.A, {
+                              href: r,
+                              className: ee.kH,
+                              iconClassName: ee.XR,
+                              mimeType: a,
+                              fileName: t,
+                          }),
+                    (0, i.jsx)("div", { className: ee.fL, children: n }),
                 ],
             }),
-            !r && (0, l.jsx)(_.A, { href: i, className: Q.kH, iconClassName: Q.XR, mimeType: a }),
+            !o && (0, i.jsx)(g.A, { href: r, className: ee.kH, iconClassName: ee.XR, mimeType: a }),
         ],
     });
 }
-class ec extends i.Component {
-    state = { play: !1, scale: new c.A.Value(0), opacity: new c.A.Value(0) };
+class ec extends r.Component {
+    state = { play: !1, scale: new u.A.Value(0), opacity: new u.A.Value(0) };
     pop() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         this.setState({ play: e }, this.popAnimation);
@@ -810,38 +817,38 @@ class ec extends i.Component {
         let { opacity: e, scale: t } = this.state;
         t.setValue(0),
             e.setValue(0),
-            c.A.parallel([
-                c.A.sequence([
-                    c.A.timing(e, { toValue: 1, duration: 200 }),
-                    c.A.timing(e, { toValue: 0, duration: 200 }),
+            u.A.parallel([
+                u.A.sequence([
+                    u.A.timing(e, { toValue: 1, duration: 200 }),
+                    u.A.timing(e, { toValue: 0, duration: 200 }),
                 ]),
-                c.A.spring(t, { toValue: 1.5, ...en, friction: 80 }),
+                u.A.spring(t, { toValue: 1.5, ...ei, friction: 80 }),
             ]).start();
     };
     getAnimatedStyle() {
         let { opacity: e, scale: t } = this.state;
-        return c.A.accelerate({
+        return u.A.accelerate({
             opacity: e.interpolate({ inputRange: [0, 1], outputRange: [0, 0.8] }),
             transform: [{ scale: t.interpolate({ inputRange: [0, 1], outputRange: [1, 2] }) }],
         });
     }
     render() {
         let { play: e } = this.state,
-            t = e ? p.u : m.E;
-        return (0, l.jsx)(c.A.div, {
-            className: Q.kO,
+            t = e ? h.u : f.E;
+        return (0, i.jsx)(u.A.div, {
+            className: ee.kO,
             style: this.getAnimatedStyle(),
-            children: (0, l.jsx)(t, { className: Q.PK }),
+            children: (0, i.jsx)(t, { className: ee.PK }),
         });
     }
 }
-let eu = (0, x.mj)({
+let ed = (0, A.mj)({
     name: "2026-03-media-play-metrics",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-class ed {
+class e_ {
     metadata;
     playTimeSec = 0;
     playWallTimeMs = 0;
@@ -858,7 +865,7 @@ class ed {
     lastPlayingTime;
     analyticsEnabled;
     constructor(e) {
-        (this.metadata = e), (this.analyticsEnabled = eu.getConfig({ location: "media_player" }).enabled);
+        (this.metadata = e), (this.analyticsEnabled = ed.getConfig({ location: "media_player" }).enabled);
     }
     moveToState(e) {
         (this.stateTime = performance.now()), (this.currentState = e);
@@ -873,7 +880,7 @@ class ed {
                 !1 === this.metadata.hasValidFrame &&
                 ((this.errorCode = 4),
                 (this.errorMessage = "No valid video frames detected - codec may be unsupported")),
-            y.default.track(Y.HAw.MEDIA_PLAY_FINISHED, {
+            C.default.track(X.HAw.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
                 play_wall_time_ms: this.playWallTimeMs,
                 first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -885,9 +892,9 @@ class ed {
                 mime_type: this.metadata.mimeType,
                 file_size: this.metadata.fileSize,
                 file_duration_sec: this.metadata.fileDurationSec,
-                connection_type: E.A.getType(),
-                effective_connection_speed: E.A.getEffectiveConnectionSpeed(),
-                service_provider: E.A.getServiceProvider(),
+                connection_type: S.A.getType(),
+                effective_connection_speed: S.A.getEffectiveConnectionSpeed(),
+                service_provider: S.A.getServiceProvider(),
                 error_message: this.errorMessage,
                 error_code: this.errorCode,
             })),
@@ -1034,8 +1041,8 @@ class ed {
         this.metadata.fileDurationSec = e.currentTarget.duration;
     };
 }
-class eh extends i.PureComponent {
-    static Types = el;
+class ef extends r.PureComponent {
+    static Types = er;
     static defaultProps = {
         width: 400,
         height: 300,
@@ -1053,20 +1060,21 @@ class eh extends i.PureComponent {
     _analytics;
     _statsCollector = null;
     _hasStatsListener = !1;
-    mediaRef = i.createRef();
-    controlsRef = i.createRef();
+    mediaRef = r.createRef();
+    controlsRef = r.createRef();
     handleVideoRef = (e) => {
         (this.mediaRef.current = e), null != this.props.videoRef && (this.props.videoRef.current = e);
     };
-    playPausePopRef = i.createRef();
+    playPausePopRef = r.createRef();
+    containerRef = r.createRef();
     static getDerivedStateFromProps(e, t) {
         return !e.playable && t.playing ? { playing: !1, hideControls: !1 } : null;
     }
     constructor(e) {
         super(e),
-            (this._analytics = new ed({ src: e.src, mimeType: e.mimeType?.join("/"), fileSize: e.fileSizeBytes }));
-        const { autoPlay: t, autoMute: n, volume: l, playable: i } = this.props,
-            s = "function" == typeof l ? l() : l,
+            (this._analytics = new e_({ src: e.src, mimeType: e.mimeType?.join("/"), fileSize: e.fileSizeBytes }));
+        const { autoPlay: t, autoMute: n, volume: i, playable: r } = this.props,
+            s = "function" == typeof i ? i() : i,
             a = "function" == typeof n ? n() : n;
         this.state = {
             buffers: [],
@@ -1076,13 +1084,13 @@ class eh extends i.PureComponent {
             fullscreen: !1,
             hasClickedPlay: !1,
             hasLoadedMetadata: !1,
-            hideControls: !i,
+            hideControls: !r,
             muted: a,
             volume: s,
             playing: t,
             preload: "none",
-            width: eh.minWidth,
-            height: eh.minHeight,
+            width: ef.minWidth,
+            height: ef.minHeight,
             hovering: !1,
             showStats: !1,
             videoStats: null,
@@ -1090,94 +1098,94 @@ class eh extends i.PureComponent {
     }
     componentDidMount() {
         let { playing: e, muted: t, volume: n } = this.state,
-            { type: l, src: i } = this.props;
+            { type: i, src: r } = this.props;
         if (
-            l === el.VIDEO &&
-            (j.Ay.addChangeListener(this.handleStatsStoreChange),
+            i === er.VIDEO &&
+            (b.Ay.addChangeListener(this.handleStatsStoreChange),
             (this._hasStatsListener = !0),
-            j.Ay.isVideoStatsEnabled(i) && !this.state.showStats)
+            b.Ay.isVideoStatsEnabled(r) && !this.state.showStats)
         )
             try {
                 this.toggleStats();
             } catch (e) {
-                j.Ay.setVideoStats(i, !1);
+                b.Ay.setVideoStats(r, !1);
             }
         let { current: s } = this.mediaRef;
         null != s && (t && (s.muted = t), e && (this.play(!0), this.handleUIUpdate()), (s.volume = n));
     }
     componentDidUpdate(e, t) {
         let {
-            props: { onPause: n, onVolumeChange: l, onMute: i, src: s, type: a },
-            state: { playing: r, fullscreen: o, muted: c, dragging: u, volume: d, showStats: h },
+            props: { onPause: n, onVolumeChange: i, onMute: r, src: s, type: a },
+            state: { playing: o, fullscreen: l, muted: u, dragging: c, volume: d, showStats: _ },
         } = this;
-        if (s !== e.src && a === el.VIDEO) {
+        if (s !== e.src && a === er.VIDEO) {
             null != this._statsCollector && this._statsCollector.resetCodecInfo(this.props.fileSizeBytes),
-                j.Ay.clearVideoStats(e.src);
-            let t = j.Ay.isVideoStatsEnabled(s);
-            h !== t && (t ? this.toggleStats() : h && this.toggleStats());
+                b.Ay.clearVideoStats(e.src);
+            let t = b.Ay.isVideoStatsEnabled(s);
+            _ !== t && (t ? this.toggleStats() : _ && this.toggleStats());
         }
-        let { current: m } = this.mediaRef,
-            { current: p } = this.playPausePopRef;
-        if (null == m) return;
-        r && !t.playing
-            ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && p?.pop(r))
-            : !r && t.playing && (m.pause(), p?.pop(r), n?.()),
-            r && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability();
-        let f = (0, N.qf)(m.parentNode, m);
-        o && !t.fullscreen && null != f
-            ? ((0, N.tl)(f), f.addEventListener(N.Wb, this.handleFullScreenExit))
-            : !o &&
+        let { current: f } = this.mediaRef,
+            { current: h } = this.playPausePopRef;
+        if (null == f) return;
+        o && !t.playing
+            ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && h?.pop(o))
+            : !o && t.playing && (f.pause(), h?.pop(o), n?.()),
+            o && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability();
+        let p = (0, R.qf)(f.parentNode, f);
+        l && !t.fullscreen && null != p
+            ? ((0, R.tl)(p), p.addEventListener(R.Wb, this.handleFullScreenExit))
+            : !l &&
               t.fullscreen &&
-              null != f &&
-              (f.removeEventListener(N.Wb, this.handleFullScreenExit), (0, N.sP)(f, f.ownerDocument)),
-            u === T.A.Types.DURATION && t.dragging !== T.A.Types.DURATION && r
-                ? m.pause()
-                : u !== T.A.Types.DURATION && t.dragging === T.A.Types.DURATION && r && m.play(),
-            c !== t.muted && ((m.muted = c), i?.(c)),
-            d !== t.volume && ((m.volume = d), l?.(d));
+              null != p &&
+              (p.removeEventListener(R.Wb, this.handleFullScreenExit), (0, R.sP)(p, p.ownerDocument)),
+            c === D.A.Types.DURATION && t.dragging !== D.A.Types.DURATION && o
+                ? f.pause()
+                : c !== D.A.Types.DURATION && t.dragging === D.A.Types.DURATION && o && f.play(),
+            u !== t.muted && ((f.muted = u), r?.(u)),
+            d !== t.volume && ((f.volume = d), i?.(d));
     }
     componentWillUnmount() {
         (this._unmounted = !0),
             null != this._statsCollector && (this._statsCollector.destroy(), (this._statsCollector = null)),
             this._hasStatsListener &&
-                (j.Ay.removeChangeListener(this.handleStatsStoreChange),
+                (b.Ay.removeChangeListener(this.handleStatsStoreChange),
                 (this._hasStatsListener = !1),
-                this.props.type === el.VIDEO && j.Ay.clearVideoStats(this.props.src));
+                this.props.type === er.VIDEO && b.Ay.clearVideoStats(this.props.src));
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, N.qf)(e.parentNode, e);
-        null != t && (t.removeEventListener(N.Wb, this.handleFullScreenExit), (0, N.sP)(t));
+        let t = (0, R.qf)(e.parentNode, e);
+        null != t && (t.removeEventListener(R.Wb, this.handleFullScreenExit), (0, R.sP)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            { onPlay: t, volume: n, autoMute: l } = this.props,
-            { current: i } = this.mediaRef;
-        if (null != i) {
+            { onPlay: t, volume: n, autoMute: i } = this.props,
+            { current: r } = this.mediaRef;
+        if (null != r) {
             let s = {};
             if ("function" == typeof n) {
                 let e = n();
-                e !== this.state.volume && ((i.volume = e), (s.volume = e));
+                e !== this.state.volume && ((r.volume = e), (s.volume = e));
             }
-            if ("function" == typeof l) {
-                let e = l();
-                e !== this.state.muted && ((i.muted = e), (s.muted = e));
+            if ("function" == typeof i) {
+                let e = i();
+                e !== this.state.muted && ((r.muted = e), (s.muted = e));
             }
-            this.setState(s), i.play(), t?.(e, i.currentTime * b.A.Millis.SECOND, i.duration * b.A.Millis.SECOND);
+            this.setState(s), r.play(), t?.(e, r.currentTime * v.A.Millis.SECOND, r.duration * v.A.Millis.SECOND);
         }
     }
     getWidth() {
         let { width: e } = this.props;
-        return "100%" === e ? e : Math.max(e, eh.minWidth);
+        return "100%" === e ? e : Math.max(e, ef.minWidth);
     }
     getHeight() {
         let { height: e } = this.props;
-        return "100%" === e ? e : Math.max(e, eh.minHeight);
+        return "100%" === e ? e : Math.max(e, ef.minHeight);
     }
     handleFullScreenExit = () => {
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, N.qf)(e.parentNode, e);
-        (null != t && (0, N._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
+        let t = (0, R.qf)(e.parentNode, e);
+        (null != t && (0, R._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
     };
     toggleFullscreen = () => {
         if (null != this.props.onFullscreenChange) return void this.props.onFullscreenChange(!this.state.fullscreen);
@@ -1194,11 +1202,11 @@ class eh extends i.PureComponent {
         var e = this;
         return function (t) {
             let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                { current: l } = e.mediaRef;
-            null != l &&
-                isFinite(l.duration) &&
-                isFinite(l.currentTime) &&
-                ((l.currentTime = t), e.updateValue(t / l.duration, n), e.updateTime(t, l.duration));
+                { current: i } = e.mediaRef;
+            null != i &&
+                isFinite(i.duration) &&
+                isFinite(i.currentTime) &&
+                ((i.currentTime = t), e.updateValue(t / i.duration, n), e.updateTime(t, i.duration));
         };
     })();
     updateValue(e) {
@@ -1208,8 +1216,8 @@ class eh extends i.PureComponent {
     }
     updateTime(e, t) {
         let n = 0 | e,
-            l = 0 | t;
-        (this.state.currentTime !== n || this.state.duration !== l) && this.setState({ currentTime: n, duration: l });
+            i = 0 | t;
+        (this.state.currentTime !== n || this.state.duration !== i) && this.setState({ currentTime: n, duration: i });
     }
     updateControlsVisibility() {
         let { dragging: e, fullscreen: t } = this.state,
@@ -1227,9 +1235,9 @@ class eh extends i.PureComponent {
     };
     handleDrag = (e, t) => {
         let { current: n } = this.mediaRef;
-        if (t === T.A.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
-        else if (t === T.A.Types.VOLUME) {
-            let t = (0, S.w)(e, 1);
+        if (t === D.A.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
+        else if (t === D.A.Types.VOLUME) {
+            let t = (0, O.w)(e, 1);
             0 === t
                 ? this.setState({ muted: !0, volume: t })
                 : this.state.muted && t > 0
@@ -1251,7 +1259,7 @@ class eh extends i.PureComponent {
         let { current: e } = this.mediaRef;
         null != e && (this.updateTime(e.currentTime, e.duration), this.setState({ duration: e.duration }));
     };
-    handleBuffer = o().debounce(() => {
+    handleBuffer = l().debounce(() => {
         let { current: e } = this.mediaRef;
         null == e
             ? this.setState({ buffers: [] })
@@ -1259,13 +1267,13 @@ class eh extends i.PureComponent {
                   buffers: (function (e) {
                       let t = [],
                           { duration: n } = e;
-                      for (let l = 0; l < e.buffered.length; l++) {
-                          let i = e.buffered.start(l),
-                              s = e.buffered.end(l);
-                          if (s - i < 1) continue;
-                          let a = (s - i) / n,
-                              r = i / n;
-                          t.push([r, a]);
+                      for (let i = 0; i < e.buffered.length; i++) {
+                          let r = e.buffered.start(i),
+                              s = e.buffered.end(i);
+                          if (s - r < 1) continue;
+                          let a = (s - r) / n,
+                              o = r / n;
+                          t.push([o, a]);
                       }
                       return t;
                   })(e),
@@ -1287,23 +1295,23 @@ class eh extends i.PureComponent {
     handleVideoClick = (e) => {
         let {
             state: { hasClickedPlay: t, playing: n },
-            props: { onClick: l, autoPlay: i, autoMute: s },
+            props: { onClick: i, autoPlay: r, autoMute: s },
         } = this;
-        null != l
-            ? l(e)
+        null != i
+            ? i(e)
             : (e.stopPropagation(),
-              i && !t && n && s && this.state.muted
+              r && !t && n && s && this.state.muted
                   ? this.setState({ muted: !1, hasClickedPlay: !0 })
                   : this.setPlay(!this.state.playing));
     };
     setPlay = (e) => {
         let {
             props: { autoMute: t },
-            state: { hasClickedPlay: n, muted: l },
+            state: { hasClickedPlay: n, muted: i },
         } = this;
         e !== this.state.playing &&
             (e
-                ? this.setState({ playing: e, hasClickedPlay: !0, muted: (!!n || !t || !l) && l })
+                ? this.setState({ playing: e, hasClickedPlay: !0, muted: (!!n || !t || !i) && i })
                 : this.setState({ playing: !1, hideControls: !1 }));
     };
     handleDragStart = (e) => {
@@ -1315,10 +1323,10 @@ class eh extends i.PureComponent {
     handleKeyDown = (e) => {
         let { current: t } = this.mediaRef,
             { disableArrowKeySeek: n } = this.props;
-        if (e.key === X.dh.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
-        else if (e.key !== X.dh.ARROW_LEFT || null == t || n)
-            if (e.key !== X.dh.ARROW_RIGHT || null == t || n) {
-                if ((0, C.A)(e.key) && null != t) {
+        if (e.key === J.dh.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
+        else if (e.key !== J.dh.ARROW_LEFT || null == t || n)
+            if (e.key !== J.dh.ARROW_RIGHT || null == t || n) {
+                if ((0, I.A)(e.key) && null != t) {
                     e.preventDefault(), e.stopPropagation();
                     let n = Number(e.key) / 10;
                     (t.currentTime = t.duration * n), this.setPlay(!0);
@@ -1349,59 +1357,59 @@ class eh extends i.PureComponent {
             null != this._statsCollector && this._statsCollector.stopTracking(),
                 (this._isUpdatingStats = !0),
                 this.setState({ showStats: !1 }, () => {
-                    (this._isUpdatingStats = !1), this._unmounted || j.Ay.setVideoStats(this.props.src, !1);
+                    (this._isUpdatingStats = !1), this._unmounted || b.Ay.setVideoStats(this.props.src, !1);
                 });
-        else if (null != t && (0, u.vq)(t, HTMLVideoElement))
+        else if (null != t && (0, c.vq)(t, HTMLVideoElement))
             try {
                 null == this._statsCollector && (this._statsCollector = new V(t, this.props.fileSizeBytes)),
                     this._statsCollector.startTracking(this.handleStatsUpdate),
                     (this._isUpdatingStats = !0),
                     this.setState({ showStats: !0, videoStats: this._statsCollector.getStats() }, () => {
-                        (this._isUpdatingStats = !1), this._unmounted || j.Ay.setVideoStats(this.props.src, !0);
+                        (this._isUpdatingStats = !1), this._unmounted || b.Ay.setVideoStats(this.props.src, !0);
                     });
             } catch (e) {
                 null != this._statsCollector && (this._statsCollector.destroy(), (this._statsCollector = null)),
                     (this._isUpdatingStats = !1),
-                    this._unmounted || j.Ay.setVideoStats(this.props.src, !1);
+                    this._unmounted || b.Ay.setVideoStats(this.props.src, !1);
             }
-        else j.Ay.setVideoStats(n, !1);
+        else b.Ay.setVideoStats(n, !1);
     };
     handleStatsUpdate = (e) => {
         this.setState({ videoStats: e });
     };
     handleStatsStoreChange = () => {
         let { src: e, type: t } = this.props;
-        t !== el.VIDEO ||
+        t !== er.VIDEO ||
             this._isUpdatingStats ||
-            (j.Ay.isVideoStatsEnabled(e) !== this.state.showStats && this.toggleStats());
+            (b.Ay.isVideoStatsEnabled(e) !== this.state.showStats && this.toggleStats());
     };
     renderVideo() {
-        let { alt: e, src: t, poster: n, forceExternal: i, responsive: s, mediaLayoutType: a } = this.props,
-            { playing: r, fullscreen: o } = this.state,
-            c = this.getWidth(),
-            u = this.getHeight();
-        return i
-            ? (0, l.jsx)(g.A, {
+        let { alt: e, src: t, poster: n, forceExternal: r, responsive: s, mediaLayoutType: a } = this.props,
+            { playing: o, fullscreen: l } = this.state,
+            u = this.getWidth(),
+            c = this.getHeight();
+        return r
+            ? (0, i.jsx)(m.A, {
                   alt: e,
-                  className: Q.Ki,
+                  className: ee.Ki,
                   controls: !1,
-                  height: u,
+                  height: c,
                   poster: n,
-                  width: c,
-                  responsive: s && !o,
+                  width: u,
+                  responsive: s && !l,
                   mediaLayoutType: a,
                   playsInline: !0,
-                  autoPlay: r,
+                  autoPlay: o,
               })
-            : (0, l.jsx)(g.A, {
+            : (0, i.jsx)(m.A, {
                   alt: e,
-                  className: Q.Ki,
+                  className: ee.Ki,
                   controls: !1,
                   playsInline: !0,
-                  autoPlay: r,
-                  height: u,
-                  responsive: s && !o,
-                  mediaLayoutType: o ? $.dG.STATIC : a,
+                  autoPlay: o,
+                  height: c,
+                  responsive: s && !l,
+                  mediaLayoutType: l ? Q.dG.STATIC : a,
                   onClick: this.handleVideoClick,
                   onEnded: this.handleEnded,
                   onError: this.handleError,
@@ -1416,13 +1424,13 @@ class eh extends i.PureComponent {
                   poster: n,
                   preload: this.state.preload,
                   ref: this.handleVideoRef,
-                  width: c,
+                  width: u,
                   src: t,
               });
     }
     renderAudio() {
-        return (0, l.jsx)("audio", {
-            className: Q.z7,
+        return (0, i.jsx)("audio", {
+            className: ee.z7,
             controls: !1,
             onClick: this.handleVideoClick,
             onEnded: this.handleEnded,
@@ -1430,7 +1438,7 @@ class eh extends i.PureComponent {
             onProgress: this.handleBuffer,
             preload: this.state.preload,
             ref: this.mediaRef,
-            children: (0, l.jsx)("source", { src: this.props.src }),
+            children: (0, i.jsx)("source", { src: this.props.src }),
         });
     }
     renderControls() {
@@ -1439,34 +1447,34 @@ class eh extends i.PureComponent {
                 props: {
                     type: t,
                     autoPlay: n,
-                    playable: i = !0,
+                    playable: r = !0,
                     onVolumeShow: s,
                     onVolumeHide: a,
-                    onControlsHide: r,
-                    onControlsShow: o,
+                    onControlsHide: o,
+                    onControlsShow: l,
                 },
                 state: {
-                    buffers: c,
-                    currentTime: u,
+                    buffers: u,
+                    currentTime: c,
                     duration: d,
-                    hasClickedPlay: h,
-                    hideControls: m,
-                    muted: p,
-                    playing: f,
-                    fullscreen: g,
-                    volume: _,
-                    dragging: x,
+                    hasClickedPlay: _,
+                    hideControls: f,
+                    muted: h,
+                    playing: p,
+                    fullscreen: E,
+                    volume: m,
+                    dragging: g,
                 },
             } = this,
-            C = this.getWidth();
-        return h || n || t === el.AUDIO
-            ? (0, l.jsx)(er, {
-                  buffers: c,
-                  currentTime: u,
+            A = this.getWidth();
+        return _ || n || t === er.AUDIO
+            ? (0, i.jsx)(el, {
+                  buffers: u,
+                  currentTime: c,
                   duration: d,
-                  volume: (0, S.M)(_, 1),
-                  hide: t === el.VIDEO && m,
-                  muted: p,
+                  volume: (0, O.M)(m, 1),
+                  hide: t === er.VIDEO && f,
+                  muted: h,
                   autoPlay: n,
                   onDrag: this.handleDrag,
                   onDragEnd: this.handleDragEnd,
@@ -1476,121 +1484,125 @@ class eh extends i.PureComponent {
                   onToggleMuted: this.toggleMuted,
                   onVolumeShow: s,
                   onVolumeHide: a,
-                  onControlsShow: o,
-                  onControlsHide: r,
-                  playing: f,
-                  dragging: x,
+                  onControlsShow: l,
+                  onControlsHide: o,
+                  playing: p,
+                  dragging: g,
                   type: t,
                   ref: this.controlsRef,
-                  width: g ? window.screen.width : C,
-                  disabled: !i,
+                  width: E ? window.screen.width : A,
+                  disabled: !r,
                   children:
-                      t === el.VIDEO
-                          ? (0, l.jsx)(A.A, {
-                                "aria-label": R.intl.string(R.t["2nM3Pk"]),
-                                className: Q.CY,
-                                iconClassName: Q.pd,
+                      t === er.VIDEO
+                          ? (0, i.jsx)(T.A, {
+                                "aria-label": w.intl.string(w.t["2nM3Pk"]),
+                                className: ee.CY,
+                                iconClassName: ee.pd,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
-                                node: (0, N.qf)(e?.parentNode, e),
+                                node: (0, R.qf)(e?.parentNode, e),
                             })
                           : null,
               })
-            : (0, l.jsx)(k, { onPlay: this.handleVideoClick, inactive: !i });
+            : (0, i.jsx)(P, { onPlay: this.handleVideoClick, inactive: !r });
     }
     renderMetadata() {
-        let { fileName: e, fileSize: t, src: n, type: i, playable: s, mimeType: a } = this.props;
+        let { fileName: e, fileSize: t, src: n, type: r, playable: s, mimeType: a } = this.props;
         return null == e || null == t
             ? null
-            : i === el.AUDIO
-              ? (0, l.jsx)(eo, { fileName: e, fileSize: t, src: n, disabled: !s, mimeType: a, hideDownloadButton: !0 })
+            : r === er.AUDIO
+              ? (0, i.jsx)(eu, { fileName: e, fileSize: t, src: n, disabled: !s, mimeType: a, hideDownloadButton: !0 })
               : null;
     }
     renderPlayPausePop() {
-        return (0, l.jsx)(ec, { ref: this.playPausePopRef });
+        return (0, i.jsx)(ec, { ref: this.playPausePopRef });
     }
     getMediaStyle() {
         let { responsive: e, type: t, height: n } = this.props,
-            { fullscreen: l } = this.state,
-            i = this.getWidth();
-        return l ? ei : t === el.AUDIO ? { width: void 0, height: "auto" } : e ? void 0 : { width: i, height: n };
+            { fullscreen: i } = this.state,
+            r = this.getWidth();
+        return i ? es : t === er.AUDIO ? { width: void 0, height: "auto" } : e ? void 0 : { width: r, height: n };
     }
     render() {
         let {
                 height: e,
                 type: t,
                 src: n,
-                forceExternal: i,
+                forceExternal: r,
                 className: s,
-                renderLinkComponent: r,
-                responsive: o,
-                mediaLayoutType: c,
-                renderOverlayContent: u,
+                renderLinkComponent: o,
+                responsive: l,
+                mediaLayoutType: u,
+                renderOverlayContent: c,
             } = this.props,
-            { fullscreen: d, hideControls: h, playing: m } = this.state,
-            p = Q.ub;
-        if ((t === el.AUDIO ? (p = Q._X) : h ? (p = Q.CX) : m && (p = Q.sw), i && t === el.VIDEO)) {
+            { fullscreen: d, hideControls: _, playing: f } = this.state,
+            h = ee.ub;
+        if ((t === er.AUDIO ? (h = ee._X) : _ ? (h = ee.CX) : f && (h = ee.sw), r && t === er.VIDEO)) {
             let t = this.getWidth();
-            return (0, l.jsxs)("div", {
-                className: a()(p, { [Q.mE]: c === $.dG.MOSAIC }),
-                style: o ? void 0 : { width: t, height: e },
+            return (0, i.jsxs)("div", {
+                className: a()(h, { [ee.mE]: u === Q.dG.MOSAIC }),
+                style: l ? void 0 : { width: t, height: e },
                 onKeyDown: this.handleKeyDown,
                 tabIndex: 0,
                 children: [
                     this.renderMetadata(),
                     this.renderVideo(),
-                    (0, l.jsx)("div", {
-                        className: Q.s4,
-                        children: (0, l.jsx)(O.A, {
-                            className: Q.__invalid_playButton,
+                    (0, i.jsx)("div", {
+                        className: ee.s4,
+                        children: (0, i.jsx)(x.A, {
+                            className: ee.__invalid_playButton,
                             externalURL: n,
-                            renderLinkComponent: r,
+                            renderLinkComponent: o,
                         }),
                     }),
                 ],
             });
         }
-        return (0, l.jsxs)("div", {
-            className: a()(p, Q.mr, s, { [Q.mE]: c === $.dG.MOSAIC }),
+        return (0, i.jsx)("div", {
+            ref: this.containerRef,
+            className: a()(h, ee.mr, s, { [ee.mE]: u === Q.dG.MOSAIC }),
             "data-fullscreen": d,
             onMouseEnter: this.handleMouseEnter,
             onMouseLeave: this.handleMouseLeave,
-            onMouseMove: m ? this.handleMouseMove : void 0,
+            onMouseMove: f ? this.handleMouseMove : void 0,
             onKeyDown: this.handleKeyDown,
             tabIndex: 0,
             style: this.getMediaStyle(),
-            children: [
-                this.renderMetadata(),
-                t === el.AUDIO ? this.renderAudio() : this.renderVideo(),
-                (0, l.jsx)(f.N, {
-                    theme: Y.NJ8.MIDNIGHT,
-                    children: (e) => (0, l.jsx)("div", { className: e, children: this.renderControls() }),
-                }),
-                t === el.VIDEO ? this.renderPlayPausePop() : null,
-                null != u ? (0, l.jsx)("div", { className: a()({ [Q.eM]: m || d }), children: u() }) : null,
-                t === el.VIDEO && this.state.showStats && null != this.state.videoStats
-                    ? (0, l.jsx)(q, { stats: this.state.videoStats, onClose: this.toggleStats })
-                    : null,
-            ],
+            children: (0, i.jsxs)(p.xp, {
+                containerRef: this.containerRef,
+                children: [
+                    this.renderMetadata(),
+                    t === er.AUDIO ? this.renderAudio() : this.renderVideo(),
+                    (0, i.jsx)(E.N, {
+                        theme: X.NJ8.MIDNIGHT,
+                        children: (e) => (0, i.jsx)("div", { className: e, children: this.renderControls() }),
+                    }),
+                    t === er.VIDEO ? this.renderPlayPausePop() : null,
+                    null != c ? (0, i.jsx)("div", { className: a()({ [ee.eM]: f || d }), children: c() }) : null,
+                    t === er.VIDEO && this.state.showStats && null != this.state.videoStats
+                        ? (0, i.jsx)(q, { stats: this.state.videoStats, onClose: this.toggleStats })
+                        : null,
+                ],
+            }),
         });
     }
     checkVideoDecodability() {
         let { current: e } = this.mediaRef;
-        if (null == e || !(0, u.vq)(e, HTMLVideoElement)) return;
-        if (this.props.type !== el.VIDEO) {
+        if (null == e || !(0, c.vq)(e, HTMLVideoElement)) return;
+        if (this.props.type !== er.VIDEO) {
             this._analytics.metadata.hasValidFrame = !0;
             return;
         }
         if (null != this._analytics.metadata.hasValidFrame) return;
         let t = e.videoHeight,
             n = e.currentTime,
-            l = e.readyState;
-        if (0 === t && l >= 2)
+            i = e.readyState;
+        if (0 === t && i >= 2)
             return void setTimeout(() => {
                 if (null == e) return;
                 let t = e.videoHeight,
-                    l = e.currentTime;
-                if (0 === t && l > n + 0.5) {
+                    i = e.currentTime;
+                if (0 === t && i > n + 0.5) {
                     this._analytics.metadata.hasValidFrame = !1;
                     return;
                 }
@@ -1605,4 +1617,4 @@ class eh extends i.PureComponent {
         }
     }
 }
-let em = eh;
+let eh = ef;
