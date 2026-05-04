@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 538787, Version Hash: 12d7c262aba8845e27ee42af3d6be2bd51762054`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 538922, Version Hash: e1ad380aee5e1c240a2f81bb4e89876e52b2ec75`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18173,7 +18173,7 @@ let SI = "isHideDevBanner",
                     className: t2()(SA.Wz, SA.mr),
                     children: [
                         (0, k.jsx)(Sg, { className: SA.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "538787" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "538922" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -34538,7 +34538,6 @@ let PY = (0, ny.Fe)({
             n.e("90664"),
             n.e("64850"),
             n.e("32756"),
-            n.e("49697"),
             n.e("70104"),
             n.e("52617"),
             n.e("71133"),
@@ -34564,6 +34563,7 @@ let PY = (0, ny.Fe)({
             n.e("80230"),
             n.e("86243"),
             n.e("32209"),
+            n.e("49697"),
             n.e("39171"),
             n.e("37021"),
             n.e("66376"),
@@ -34685,8 +34685,8 @@ let PY = (0, ny.Fe)({
             n.e("22261"),
             n.e("78046"),
             n.e("80093"),
-            n.e("12965"),
             n.e("21060"),
+            n.e("12965"),
             n.e("83420"),
             n.e("203"),
             n.e("36149"),
