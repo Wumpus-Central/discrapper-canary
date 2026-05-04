@@ -131,19 +131,23 @@ function F(e) {
             handleClose: V,
         } = e,
         K = (0, d.D7)({ location: "payment_modal_review_step" }),
-        { selectedSkuId: Z, setEntitlementsGranted: q } = (0, A.t4)((e) => ({
+        {
+            selectedSkuId: Z,
+            setEntitlementsGranted: q,
+            setAppliedUserDiscounts: z,
+        } = (0, A.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setEntitlementsGranted: e.setEntitlementsGranted,
+            setAppliedUserDiscounts: e.setAppliedUserDiscounts,
         })),
         {
-            activeSubscription: z,
-            setUpdatedSubscription: $,
-            contextMetadata: J,
-            purchaseError: X,
-            setCurrency: Q,
-            isPremium: ee,
-            purchaseType: et,
-            setAppliedUserDiscounts: en,
+            activeSubscription: $,
+            setUpdatedSubscription: J,
+            contextMetadata: X,
+            purchaseError: Q,
+            setCurrency: ee,
+            isPremium: et,
+            purchaseType: en,
             startedPaymentFlowWithPaymentSourcesRef: el,
             disablePurchasesForStorybook: ea,
             isPremiumGroupPurchase: ei,
@@ -219,31 +223,31 @@ function F(e) {
             let { trialId: t, referralTrialOfferId: n, isPremium: l, selectedSkuId: a } = e,
                 i = t ?? n ?? null;
             return { verifiedTrialId: null != i && (!l || U.TP[i].skus.includes(a)) ? i : null, originalTrialId: t };
-        })({ trialId: i, referralTrialOfferId: B, isPremium: ee, selectedSkuId: Z }),
+        })({ trialId: i, referralTrialOfferId: B, isPremium: et, selectedSkuId: Z }),
         eT = { user_trial_offer_id: es?.id };
     a.useEffect(() => {
-        null != X && null != eh.current && eh.current.scrollIntoView({ behavior: "smooth" });
-    }, [X]);
+        null != Q && null != eh.current && eh.current.scrollIntoView({ behavior: "smooth" });
+    }, [Q]);
     let ef = a.useCallback(
             (e, t, l) => {
-                $(e),
+                J(e),
                     null != t && q(t),
-                    null != l && en(l),
+                    null != l && z(l),
                     n(x.pn.CONFIRM, { fulfillment: { subscription: e, entitlements: t } });
             },
-            [n, $, q, en],
+            [n, J, q, z],
         ),
         eN = a.useRef(null),
         ex = (0, m.mx)(),
         eI = ec && (0, _.Ik)(ep),
-        eg = null == W && null == H && et === k.VV.SUBSCRIPTION,
+        eg = null == W && null == H && en === k.VV.SUBSCRIPTION,
         ev = (0, j.vT)({ isTrial: er, isGift: ec, selectedSkuId: Z, startedPaymentFlowWithPaymentSources: el.current }),
-        eM = ec && et === k.VV.ONE_TIME,
-        ej = eM || (ev ? eg && ee : ee),
+        eM = ec && en === k.VV.ONE_TIME,
+        ej = eM || (ev ? eg && et : et),
         eb = (0, E.px)(eo, ec, em),
         eR = a.useCallback(
             () =>
-                (Q(void 0), ev)
+                (ee(void 0), ev)
                     ? void n(x.pn.SKU_SELECT)
                     : ei
                       ? void n(x.pn.ADD_PAYMENT_STEPS)
@@ -252,7 +256,7 @@ function F(e) {
                         : eM
                           ? n(x.pn.GIFT_CUSTOMIZATION)
                           : n(x.pn.PLAN_SELECT),
-            [Q, n, ev, eM, eb, ei],
+            [ee, n, ev, eM, eb, ei],
         ),
         eL = ey;
     ea && (eL = !0);
@@ -272,11 +276,11 @@ function F(e) {
             [V, R, P, S, B],
         ),
         ek = a.useMemo(
-            () => t(et, { isUnifiedCheckoutUIEnabled: K, handlePaymentSourceAdd: eO }, ew, eU, eD),
-            [t, ew, eU, eO, K, eD, et],
+            () => t(en, { isUnifiedCheckoutUIEnabled: K, handlePaymentSourceAdd: eO }, ew, eU, eD),
+            [t, ew, eU, eO, K, eD, en],
         ),
         eY = (0, l.jsx)(D.A, {
-            premiumSubscription: z ?? null,
+            premiumSubscription: $ ?? null,
             invoiceError: ex,
             onBack: eR,
             onNext: ef,
@@ -285,7 +289,7 @@ function F(e) {
             analyticsLocation: F,
             baseAnalyticsData: G,
             openInvoiceId: R,
-            flowStartTime: J.startTime,
+            flowStartTime: X.startTime,
             isTrial: er,
             trialId: eS,
             planGroup: eP,

@@ -53,23 +53,18 @@ var R = n(284009),
 function V(e) {
     let { handleClose: t, analyticsLocations: n } = e,
         l = (0, M.t4)((e) => e.selectedSkuId),
-        {
-            application: r,
-            paymentError: s,
-            purchaseError: a,
-            purchasePreviewError: o,
-            appliedUserDiscounts: u,
-        } = (0, _.P5)(),
+        r = (0, M.t4)((e) => e.appliedUserDiscounts),
+        { application: s, paymentError: a, purchaseError: o, purchasePreviewError: u } = (0, _.P5)(),
         c = (0, k.gU)(),
         d = (0, L.bG)([U.A], () => U.A.getProduct(l)),
         p = C.useRef(!1);
-    v()(null != l, "Expected selectedSkuId"), v()(null != r, "Expected application");
+    v()(null != l, "Expected selectedSkuId"), v()(null != s, "Expected application");
     let m = c[l];
     v()(null != m, "Expected sku");
-    let E = null != s || null != a || null != o,
+    let E = null != a || null != o || null != u,
         T =
-            u.length > 0
-                ? W.intl.formatToPlainString(W.t.VuV3Td, { discountOfferAmount: u[0].discount.amount })
+            r.length > 0
+                ? W.intl.formatToPlainString(W.t.VuV3Td, { discountOfferAmount: r[0].discount.amount })
                 : void 0;
     return (C.useEffect(() => {
         null == d ||

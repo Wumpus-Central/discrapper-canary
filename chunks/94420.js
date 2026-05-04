@@ -34,6 +34,8 @@ function u() {
             setHasAcceptedTerms: (t) => e({ hasAcceptedTerms: t }),
             purchaseState: s.h.WAITING,
             setPurchaseState: (t) => e({ purchaseState: t }),
+            appliedUserDiscounts: [],
+            setAppliedUserDiscounts: (t) => e({ appliedUserDiscounts: t }),
         }),
         i.x,
     );

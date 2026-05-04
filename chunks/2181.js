@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => k });
+n.d(t, { A: () => M });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
-    a = n.n(s),
-    r = n(508770),
+    r = n.n(s),
+    a = n(508770),
     o = n(462824),
     c = n(315629),
     u = n(935462),
@@ -14,42 +14,42 @@ var l = n(627968),
     p = n(821609),
     f = n(398590),
     g = n(523527),
-    _ = n(976860),
-    x = n(954571),
+    x = n(976860),
+    A = n(174459),
     C = n(676279),
-    A = n(927578),
-    E = n(802705),
-    I = n(234419),
-    v = n(612669),
-    y = n(632150),
-    b = n(792656),
-    S = n(818415),
-    N = n(788868),
+    E = n(927578),
+    I = n(802705),
+    y = n(234419),
+    S = n(39423),
+    v = n(632150),
+    N = n(792656),
+    _ = n(818415),
+    T = n(788868),
     j = n(652215),
-    T = n(466919),
-    w = n(985018),
-    R = n(311779),
+    b = n(466919),
+    R = n(375708),
+    O = n(311779),
     L = n(967744);
-function k(e) {
+function M(e) {
     let t,
         {
             title: n,
             description: s,
-            analyticsLocationSection: k,
-            upsellViewedTrackingData: O,
-            onClose: M,
+            analyticsLocationSection: M,
+            upsellViewedTrackingData: w,
+            onClose: k,
             onDisplay: P,
             onUpsellClicked: D,
             isEmojiPickerOverlay: U = !1,
         } = e;
     i.useEffect(() => {
-        x.default.track(j.HAw.PREMIUM_UPSELL_VIEWED, O), P?.();
-    }, [P, O]);
-    let V = (0, I.V)(),
-        G = i.useCallback(() => (0, A.LE)(V, N.pe.TIER_2) ?? w.intl.string(w.t.pj0XBN), [V]),
-        F = (0, S.A)(N.pe.TIER_2),
-        B = (0, E.M)({ location: "premium_upsell_picker_overlay" }),
-        H = (0, v.O9)();
+        A.default.track(j.HAw.PREMIUM_UPSELL_VIEWED, w), P?.();
+    }, [P, w]);
+    let G = (0, y.V)(),
+        V = i.useCallback(() => (0, E.LE)(G, T.pe.TIER_2) ?? R.intl.string(R.t.pj0XBN), [G]),
+        F = (0, _.A)(T.pe.TIER_2),
+        H = (0, I.M)({ location: "premium_upsell_picker_overlay" }),
+        W = (0, S.O9)();
     return (
         (t = U
             ? (0, C.TM)()
@@ -60,25 +60,25 @@ function k(e) {
               : "https://cdn.discordapp.com/assets/content/c6188b952b5f1901da6986f4f06d690db24c805dfed5df35db3537ed5efb35a5.webm"),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(o.p, { onClick: M, isVisible: !0 }),
+                (0, l.jsx)(o.p, { onClick: k, isVisible: !0 }),
                 (0, l.jsxs)(c.h, {
                     color: U ? "nitro-pink" : "green",
-                    className: R.kL,
+                    className: O.kL,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: R.Qs,
+                            className: O.Qs,
                             children: [
-                                (0, l.jsx)(u.s_, { "data-migration-pending": !0, onClick: M, className: R.b }),
+                                (0, l.jsx)(u.s_, { "data-migration-pending": !0, onClick: k, className: O.b }),
                                 (0, l.jsxs)("div", {
-                                    className: R.hQ,
+                                    className: O.hQ,
                                     children: [
                                         (0, l.jsx)("div", {
                                             className: L.headerGraphic,
                                             children: (0, l.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
-                                        null != F && (0, l.jsx)(r.E, { type: { text: F }, variant: "brand" }),
+                                        null != F && (0, l.jsx)(a.E, { type: { text: F }, variant: "brand" }),
                                         (0, l.jsx)(h.D, {
-                                            className: a()(R.DD, { [R.GU]: null != F }),
+                                            className: r()(O.DD, { [O.GU]: null != F }),
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
                                             children: n,
@@ -86,48 +86,48 @@ function k(e) {
                                         (0, l.jsx)(m.E, {
                                             variant: "text-md/medium",
                                             color: "text-subtle",
-                                            className: R.rf,
+                                            className: O.rf,
                                             children: s,
                                         }),
                                     ],
                                 }),
                                 U &&
-                                    B &&
                                     H &&
+                                    W &&
                                     (0, l.jsx)("div", {
-                                        className: R.Zr,
-                                        children: (0, l.jsx)(y.A, { subtitle: w.intl.string(T.default.BkJYQ5) }),
+                                        className: O.Zr,
+                                        children: (0, l.jsx)(v.A, { subtitle: R.intl.string(b.default.BkJYQ5) }),
                                     }),
                             ],
                         }),
                         (0, l.jsx)("div", {
-                            className: R.qr,
+                            className: O.qr,
                             children: (0, l.jsxs)("div", {
-                                className: R.UD,
+                                className: O.UD,
                                 children: [
                                     (0, l.jsx)(p.$, {
                                         variant: "secondary",
                                         onClick: () => {
-                                            x.default.track(j.HAw.PREMIUM_PROMOTION_OPENED, {
-                                                location_section: k,
+                                            A.default.track(j.HAw.PREMIUM_PROMOTION_OPENED, {
+                                                location_section: M,
                                                 location_object: j.ZSU.NAVIGATION_LINK,
                                             }),
                                                 D?.(),
                                                 (0, g.A)(),
-                                                M(),
+                                                k(),
                                                 (0, f.jH)(),
-                                                (0, _.pX)(j.BVt.APPLICATION_STORE);
+                                                (0, x.pX)(j.BVt.APPLICATION_STORE);
                                         },
-                                        text: w.intl.string(w.t.ZnqyZ2),
+                                        text: R.intl.string(R.t.ZnqyZ2),
                                         fullWidth: !0,
                                     }),
-                                    (0, l.jsx)(b.A, {
-                                        premiumModalAnalyticsLocation: { section: k, object: j.ZSU.BUTTON_CTA },
-                                        subscriptionTier: N.pe.TIER_2,
+                                    (0, l.jsx)(N.A, {
+                                        premiumModalAnalyticsLocation: { section: M, object: j.ZSU.BUTTON_CTA },
+                                        subscriptionTier: T.pe.TIER_2,
                                         onClick: () => {
-                                            M(), D?.();
+                                            k(), D?.();
                                         },
-                                        defaultTextOverride: G(),
+                                        defaultTextOverride: V(),
                                         fullWidth: !0,
                                     }),
                                 ],
