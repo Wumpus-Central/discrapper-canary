@@ -61,21 +61,22 @@
     background-color: var(--opacity-4);
     border-start-end-radius: var(--radius-md);
     border-start-start-radius: var(--radius-md);
-    justify-content: space-between;
-    padding: var(--space-sm)
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+    padding-inline: var(--space-md)
 }
 
 .durationContainer_d7bc5d,
-.user_d7bc5d {
+.text_d7bc5d {
     align-items: center;
     display: flex;
-    gap: var(--space-xs)
+    justify-content: space-between
 }
 
-.user_d7bc5d {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
+.text_d7bc5d {
+    flex-grow: 1;
+    gap: var(--space-sm);
+    overflow: hidden
 }
 
 .avatar_d7bc5d {

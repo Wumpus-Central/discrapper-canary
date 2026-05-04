@@ -9422,6 +9422,7 @@
     --mobile-channel-safe-area-bottom-background: background-base-low;
     --mobile-chat-input-action-button-gap: 0px;
     --mobile-chat-input-action-button-margin: 4px;
+    --mobile-chat-input-action-button-min-touch-target-size: 44px;
     --mobile-chat-input-action-button-size: 40px;
     --mobile-chat-input-action-icon-active-tint: text-brand;
     --mobile-chat-input-action-icon-pixel-size: 24px;
