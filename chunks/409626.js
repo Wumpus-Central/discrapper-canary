@@ -1,5 +1,15 @@
 "use strict";
-n.d(t, { HV: () => f, K6: () => g, Ob: () => _, Tn: () => m, V_: () => E, Ws: () => d, rw: () => p, u9: () => h });
+n.d(t, {
+    HV: () => f,
+    K6: () => g,
+    Ob: () => _,
+    Tn: () => m,
+    VO: () => A,
+    V_: () => E,
+    Ws: () => d,
+    rw: () => p,
+    u9: () => h,
+});
 var i,
     r,
     s,
@@ -21,7 +31,7 @@ var i,
         (i[(i.YouTubeLink = 9)] = "YouTubeLink"),
         (i[(i.ShowMore = 10)] = "ShowMore"),
         (i[(i.ShowLess = 11)] = "ShowLess"),
-        (i[(i.JoinOfficialServer = 12)] = "JoinOfficialServer"),
+        (i[(i.JoinServer = 12)] = "JoinServer"),
         (i[(i.ClickImage = 13)] = "ClickImage"),
         (i[(i.GameShop = 14)] = "GameShop"),
         (i[(i.LinkAccount = 15)] = "LinkAccount"),
@@ -96,7 +106,8 @@ let h = () => (0, a.A)(),
             playedFriendIds: r,
             playedFriendsData: s,
             similarGames: a,
-            officialGuildId: d,
+            guildId: d,
+            isVerified: _,
         } = e;
         l.default.track(u.HAw.GAME_PROFILE_CLOSE, {
             view_id: t,
@@ -106,7 +117,8 @@ let h = () => (0, a.A)(),
             played_friends_data: s,
             similar_games: a,
             request_id: o.A.getFeedRequestId(c.X1.GLOBAL_FEED),
-            official_guild_id: d,
+            official_guild_id: _ ? d : void 0,
+            guild_id: d,
         });
     },
     m = (e) => {
@@ -117,8 +129,9 @@ let h = () => (0, a.A)(),
             recipientUserId: r,
             similarGameId: s,
             viewId: a,
-            officialGuildId: o,
-            source: c,
+            guildId: o,
+            isVerified: c,
+            source: d,
         } = e;
         l.default.track(u.HAw.GAME_PROFILE_ACTION, {
             game_name: t,
@@ -127,8 +140,9 @@ let h = () => (0, a.A)(),
             recipient_user_id: r,
             similar_game_id: s,
             view_id: a,
-            official_guild_id: o,
-            source: c,
+            official_guild_id: c ? o : void 0,
+            guild_id: o,
+            source: d,
         });
     },
     g = (e) => {
@@ -149,3 +163,6 @@ let h = () => (0, a.A)(),
             submitted: a,
         });
     };
+function A(e) {
+    return { guildId: e?.guild?.id ?? null, isVerified: e?.guild?.features.includes(u.GuildFeatures.VERIFIED) ?? !1 };
+}

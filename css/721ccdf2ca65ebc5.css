@@ -480,6 +480,132 @@
     text-align: center
 }
 
+.inviteInfo__04bc3 {
+    margin-bottom: 16px
+}
+
+.guildIcon__04bc3 {
+    border-radius: 4px;
+    height: 32px;
+    width: 32px
+}
+
+.guildNameContainer__04bc3 {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.section__86033 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    position: relative
+}
+
+.sectionTitle__86033 {
+    padding-inline: var(--space-8)
+}
+
+.container__86033 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg)
+}
+
+.guildIconContainer__86033 {
+    height: var(--size-12);
+    position: relative
+}
+
+.guildIconInnerContainer__86033 {
+    position: absolute;
+    transform: translateY(-75%)
+}
+
+.guildIcon__86033 {
+    border: var(--size-4) solid var(--background-surface-high);
+    border-radius: var(--radius-md);
+    height: var(--size-48);
+    width: var(--size-48)
+}
+
+.contentContainer__86033 {
+    padding-inline: var(--space-16);
+    padding-bottom: var(--space-16);
+    padding-top: var(--space-16)
+}
+
+.contentContainer__86033,
+.iconTextContainer__86033 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.iconTextContainerCondensed__86033 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16)
+}
+
+.textContainer__86033 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.textContainerCondensed__86033 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs)
+}
+
+.guildNameContainer__86033 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}
+
+.pillIcon__86033 {
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    width: 8px
+}
+
+.pillIconTotal__86033 {
+    background-color: var(--text-default)
+}
+
+.pillIconOnline__86033 {
+    background-color: var(--icon-feedback-positive)
+}
+
+.memberContainer__86033 {
+    gap: var(--space-16)
+}
+
+.memberContainer__86033,
+.memberCountContainer__86033 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.memberCountContainer__86033 {
+    gap: var(--space-4)
+}
+
+.inviteSplash__86033 {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    height: 112px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
 .compactBarContainer__8e688 {
     align-items: center;
     display: flex;
