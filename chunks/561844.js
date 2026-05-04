@@ -19,13 +19,14 @@ var i = n(835245),
     A = n(652215);
 let I = new Set([A.HAw.QUEST_CONTENT_VIEWED, A.HAw.QUEST_CONTENT_CLICKED]);
 function T(e, t, n, i) {
-    let r = (0, a.sN)(i).uuid;
+    let r = (0, a.sN)(i).uuid,
+        s = (0, p.Kc)(e, t);
     return {
         client_ad_session_id: r,
         billing_session_id: (0, p.xn)(t) ? r : ((0, o.Vc)()?.uuid ?? null),
         ad_content_id: e,
-        creative_type: n,
-        ...(0, p.Kc)(e, t),
+        ...s,
+        creative_type: s.creative_type ?? n,
     };
 }
 function S(e, t) {
