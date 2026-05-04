@@ -1,29 +1,25 @@
-t.d(e, { H: () => p });
+t.d(e, { H: () => c });
 var a = t(64700),
-    d = t(574381),
     s = t(17928),
-    u = t(919638),
-    r = t(52074),
-    l = t(869180),
-    c = t(725613),
-    n = t(652215);
-function p(i) {
+    d = t(919638),
+    u = t(52074),
+    r = t(725613),
+    l = t(652215);
+function c(i) {
     let {
             hasRequestedStartTimes: e,
             startTime: t,
-            isGuildUnavailable: p,
-        } = (0, s.cf)([c.A, u.A], () => ({
-            hasRequestedStartTimes: c.A.hasRequestedStartTimes(i.guild_id),
-            startTime: c.A.getStartTime(i),
-            isGuildUnavailable: u.A.isUnavailable(i.guild_id),
+            isGuildUnavailable: c,
+        } = (0, s.cf)([r.A, d.A], () => ({
+            hasRequestedStartTimes: r.A.hasRequestedStartTimes(i.guild_id),
+            startTime: r.A.getStartTime(i),
+            isGuildUnavailable: d.A.isUnavailable(i.guild_id),
         })),
-        _ = (0, l.a)(i.guild_id, "useStartTime"),
-        h = ((0, d.un)() || (0, d.m0)()) && !_,
-        g = i.type === n.rbe.GUILD_VOICE;
+        p = i.type === l.rbe.GUILD_VOICE;
     return (
         a.useEffect(() => {
-            e || !g || h || p || (0, r.U)(i.guild_id);
-        }, [g, i.guild_id, e, h, p]),
+            e || !p || c || (0, u.U)(i.guild_id);
+        }, [p, i.guild_id, e, c]),
         t
     );
 }
