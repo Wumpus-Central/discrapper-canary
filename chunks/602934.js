@@ -598,7 +598,7 @@ var eH = i(812729),
     eW = i(587895),
     eZ = i(429913),
     eq = i(616356),
-    eQ = i(328153);
+    eQ = i(952818);
 function eJ(e, t) {
     return null != e && null != e.id ? e.id : null != t && null != t.id ? t.id : void 0;
 }
@@ -2581,11 +2581,8 @@ let nZ = (e) => `${e.toFixed(0)}px`,
         minValue: nW.qh["0"],
         maxValue: nW.qh[nW.qh.length - 1],
         useDefaultValue: () => (c.hH.useSetting() ? nW.y5 : nW.ES),
-        getInitialValue: () => {
-            let e = iW.A.messageGroupSpacing,
-                t = c.hH.getSetting();
-            return null != e ? e : t ? nW.y5 : nW.ES;
-        },
+        useExternalValue: () => (0, O.bG)([iW.A], () => iW.A.messageGroupSpacing),
+        getInitialValue: () => iW.A.messageGroupSpacing,
         onValueRender: nZ,
         onMarkerRender: nZ,
         asValueChanges: (e) => {
