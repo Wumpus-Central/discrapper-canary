@@ -26,8 +26,8 @@ class N extends i.Component {
         let n = e.target;
         if ((0, a.vq)(n)) {
             if (g(n)) return;
-            let e = n.parentNode;
-            if ((0, a.vq)(e) && g(e)) return;
+            let t = n.parentNode;
+            if (((0, a.vq)(t) && g(t)) || !e.currentTarget.contains(n)) return;
         }
         (0, c.openModalLazy)(async () => {
             let { default: e } = await Promise.all([t.e("45988"), t.e("8939")]).then(t.bind(t, 181094));
