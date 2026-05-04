@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { b3: () => c, i6: () => f, jq: () => _, mb: () => d, n4: () => m, sn: () => p, vp: () => h });
-var r = n(7584),
-    i = n(253932),
-    a = n(961350),
-    s = n(954571),
+n.d(t, { b3: () => c, i6: () => h, is: () => f, jq: () => _, mb: () => d, n4: () => m, sn: () => p, vp: () => E });
+var i = n(7584),
+    r = n(885386),
+    s = n(495544),
+    a = n(174459),
     o = n(652215),
     l = n(406535),
-    u = n(985018);
+    u = n(375708);
 function c(e) {
-    return null == e.id ? r.Ay.convertSurrogateToName(e.name) : `:${e.name}:`;
+    return null == e.id ? i.Ay.convertSurrogateToName(e.name) : `:${e.name}:`;
 }
-function d(e, t, n, r) {
-    let i;
+function d(e, t, n, i) {
+    let r;
     return (
-        (i = r ? (e ? u.t.i9DXqM : u.t["Z/l+qu"]) : e ? u.t.CLuzw5 : u.t.PirBBE),
-        u.intl.formatToPlainString(i, { reactions: t, emojiName: c(n)?.replace(/[:_]/g, " ")?.trim() ?? "" })
+        (r = i ? (e ? u.t.i9DXqM : u.t["Z/l+qu"]) : e ? u.t.CLuzw5 : u.t.PirBBE),
+        u.intl.formatToPlainString(r, { reactions: t, emojiName: c(n)?.replace(/[:_]/g, " ")?.trim() ?? "" })
     );
 }
 function _(e) {
@@ -24,7 +24,10 @@ function _(e) {
         animated: !!e.animated,
     };
 }
-function f(e, t) {
+function f(e) {
+    return null != e && "" !== e && ("number" == typeof e ? 0 !== e : "0" !== String(e));
+}
+function h(e, t) {
     if (null != t.id) {
         let n = null != e.id ? `${e.id}` : e.id;
         return `${t.id}` === n;
@@ -40,14 +43,14 @@ function p(e) {
             ? o.JJy.TEXT_IN_VOICE
             : o.JJy.CHANNEL_TEXT_AREA;
 }
-function h(e) {
+function E(e) {
     let { userId: t, optimistic: n } = e,
-        r = a.default.getId() === t;
-    return !n || !!r;
+        i = s.default.getId() === t;
+    return !n || !!i;
 }
 function m(e, t) {
-    i.Zp.updateSetting(e),
-        s.default.track(o.HAw.NOTIFICATION_SETTINGS_UPDATED, {
+    r.Zp.updateSetting(e),
+        a.default.track(o.HAw.NOTIFICATION_SETTINGS_UPDATED, {
             update_type: l.Y.ACCOUNT,
             reaction_notifications: e,
             reaction_notifications_old: t,
