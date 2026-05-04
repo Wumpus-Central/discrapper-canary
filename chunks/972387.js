@@ -19,7 +19,7 @@ let _ = {
             inviteKey: e.code,
             context: { ...n, ...(null != t ? { invite_instance_id: t } : {}) },
             callback: (e) => {
-                null == e || null == e.guild || null == e.channel || __OVERLAY__ || r.Ay.transitionToInvite(e);
+                null == e || null == e.guild || null == e.channel || __OVERLAY__ || r.Ay.transitionToInviteSync(e);
             },
         }).then(
             () => {
