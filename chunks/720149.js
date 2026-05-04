@@ -290,12 +290,15 @@ let eK = {
         },
         [D.t02.INVALID_MESSAGE_SEND_NO_MUTUAL_GUILDS]: {
             messageName: "INVALID_MESSAGE_SEND_NO_MUTUAL_GUILDS",
-            messageGetter: () => {
-                let e = ew.A.getArticleURL(D.MVz.DM_COULD_NOT_BE_DELIVERED),
-                    { enabled: t } = Y.getConfig({ location: "sendClydeError" });
-                return t
-                    ? eV.intl.formatToPlainString(eV.t.llTkqr, { helpUrl: e })
-                    : eV.intl.formatToPlainString(eV.t.SkGL7l, { helpUrl: e });
+            messageGetter: (e) => {
+                let t = ew.A.getArticleURL(D.MVz.DM_COULD_NOT_BE_DELIVERED),
+                    n = e.rawRecipients ?? [];
+                if (e.isDM() && 1 === n.length && n.some((e) => e.bot))
+                    return eV.intl.formatToPlainString(eV.t.SkGL7l, { helpUrl: t });
+                let { enabled: i } = Y.getConfig({ location: "sendClydeError" });
+                return i
+                    ? eV.intl.formatToPlainString(eV.t.llTkqr, { helpUrl: t })
+                    : eV.intl.formatToPlainString(eV.t.SkGL7l, { helpUrl: t });
             },
         },
         [D.t02.INVALID_MESSAGE_SEND_USER]: {
