@@ -4,6 +4,5 @@ e.exports = {
     dt: "upsellFooter__73000",
     Tn: "upsellImage__73000",
     $P: "upsellHeader__73000",
-    Oy: "upsellButton__73000",
     kz: "upsellClose__73000",
 };

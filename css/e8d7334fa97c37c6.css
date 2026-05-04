@@ -190,22 +190,10 @@
     margin-bottom: 8px
 }
 
-.upsellButton__73000 {
-    margin: 0
-}
-
 .upsellClose__73000 {
-    color: var(--interactive-text-default);
-    cursor: pointer;
     inset-inline-end: 12px;
-    opacity: .5;
     position: absolute;
     top: 12px
-}
-
-.upsellClose__73000:hover {
-    color: var(--interactive-text-hover);
-    opacity: 1
 }
 
 .enableContainer__5ea8c {
