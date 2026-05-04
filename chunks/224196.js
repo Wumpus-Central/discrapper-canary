@@ -676,8 +676,9 @@ function tw() {
                 (r.prevBadge = (0, tN.e0)(e)), (r.prevBadgeTextGradient = t ? n?.dark : n?.light);
             }
             return r;
-        })();
-    return e || !t || null == n ? null : (0, i.jsx)(tM, { levelUpData: n });
+        })(),
+        [s, a] = r.useState(null);
+    return (null != n && null == s && a(n), e || !t || null == s) ? null : (0, i.jsx)(tM, { levelUpData: s });
 }
 function tM(e) {
     let { levelUpData: t } = e,
@@ -685,31 +686,28 @@ function tM(e) {
         s = r.useCallback(() => {
             tI.A.setState({ shouldRenderTenureLevelUp: !1 });
         }, []);
-    return (
-        r.useEffect(() => s, [s]),
-        (0, i.jsx)(eY.O, {
-            containerRef: n,
-            children: (0, i.jsxs)("div", {
-                className: tD.i,
-                children: [
-                    (0, i.jsx)("div", {
-                        className: tD.b,
-                        children: (0, i.jsx)(ej.m, {
-                            text: ef.intl.string(ef.t.cpT0Cq),
-                            children: (0, i.jsx)(eK.K, {
-                                icon: ee.P,
-                                variant: "secondary",
-                                size: "sm",
-                                onClick: s,
-                                "aria-label": ef.intl.string(ef.t.cpT0Cq),
-                            }),
+    return (0, i.jsx)(eY.O, {
+        containerRef: n,
+        children: (0, i.jsxs)("div", {
+            className: tD.i,
+            children: [
+                (0, i.jsx)("div", {
+                    className: tD.b,
+                    children: (0, i.jsx)(ej.m, {
+                        text: ef.intl.string(ef.t.cpT0Cq),
+                        children: (0, i.jsx)(eK.K, {
+                            icon: ee.P,
+                            variant: "secondary",
+                            size: "sm",
+                            onClick: s,
+                            "aria-label": ef.intl.string(ef.t.cpT0Cq),
                         }),
                     }),
-                    (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(tL, { levelUpData: t }) }),
-                ],
-            }),
-        })
-    );
+                }),
+                (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(tL, { levelUpData: t }) }),
+            ],
+        }),
+    });
 }
 var tP = n(206835),
     tx = n(183555),
@@ -2493,7 +2491,7 @@ class rg extends r.PureComponent {
                     n.e("25610"),
                     n.e("17956"),
                     n.e("51404"),
-                    n.e("84069"),
+                    n.e("38896"),
                     n.e("83721"),
                     n.e("93918"),
                     n.e("99961"),
@@ -2879,7 +2877,7 @@ class rg extends r.PureComponent {
                     n.e("31828"),
                     n.e("71790"),
                     n.e("81754"),
-                    n.e("76871"),
+                    n.e("62577"),
                     n.e("33049"),
                     n.e("36474"),
                     n.e("28638"),
