@@ -4631,7 +4631,7 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
 
 .banner__4325e {
     border-radius: var(--radius-sm);
-    height: 240px;
+    height: clamp(100px, 30vh, 240px);
     margin: var(--space-8) var(--space-24) 0
 }
 
