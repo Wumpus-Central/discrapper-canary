@@ -12,6 +12,8 @@ _.exports = {
     lj: "infoRow__6b102",
     _3: "accountLabel__6b102",
     Ik: "actionContainer__6b102",
+    a6: "openInterviewButton__6b102",
+    $I: "actionInfo__6b102",
     Ay: "actionedInfo__6b102",
     Om: "dot__6b102",
 };

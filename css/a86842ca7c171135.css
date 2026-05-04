@@ -3,7 +3,7 @@
     padding: 1px
 }
 
-.disabledQuestionContainer__0a749 {
+.disabledQuestionContainer__0a749:not(:last-child) {
     margin-bottom: 24px
 }
 

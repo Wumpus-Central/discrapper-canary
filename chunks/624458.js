@@ -46,6 +46,13 @@ let h = {
             }
         }
     },
+    fetchGuildJoinRequestsForUser: async (e, t) => {
+        let n = await i.Bo.get({ url: _.Rsh.GUILD_JOIN_REQUESTS_FOR_USER(e, t), rejectWithError: !1 }),
+            s = (n.body ?? []).map(d.j);
+        return (
+            r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS", guildId: e, userId: t, requests: s }), n
+        );
+    },
     ackUserGuildJoinRequest: async (e, t) => {
         try {
             return await i.Bo.post({ url: _.Rsh.GUILD_JOIN_REQUEST_ACK(e, t), rejectWithError: !1 });

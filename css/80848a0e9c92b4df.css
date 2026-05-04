@@ -16,7 +16,8 @@
 .innerContainer__6b102 {
     flex: 1;
     gap: 8px;
-    padding: 8px;
+    padding-block: 8px;
+    padding-inline: 8px 1px;
     position: relative
 }
 
@@ -24,6 +25,7 @@
     background-color: var(--background-mod-subtle);
     border-radius: var(--radius-sm);
     box-shadow: var(--elevation-low);
+    container-type: inline-size;
     display: flex;
     flex-direction: column
 }
@@ -105,22 +107,39 @@
 }
 
 .actionContainer__6b102 {
+    align-items: center;
     background-color: var(--background-mod-subtle);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 12px;
     margin: 8px 16px 16px;
     padding: 12px
 }
 
-.actionContainer__6b102,
-.actionedInfo__6b102 {
+.openInterviewButton__6b102 {
+    margin-inline-start: auto
+}
+
+@container (max-width: 420px) {
+    .openInterviewButton__6b102 {
+        flex-basis: 100%;
+        margin-inline-start: 0
+    }
+}
+
+.actionInfo__6b102 {
     display: flex;
-    flex-direction: row
+    flex-direction: column;
+    gap: 4px
 }
 
 .actionedInfo__6b102 {
     align-items: center;
+    display: flex;
+    flex-direction: row;
     gap: 8px
 }
 
