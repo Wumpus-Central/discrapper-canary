@@ -1,36 +1,37 @@
-t.d(l, { w: () => r });
-var n = t(627968);
-t(64700);
-var a = t(661531),
-    s = t(996682),
-    i = t(27989);
-let r = (e) => {
+"use strict";
+n.d(t, { w: () => o });
+var i = n(627968);
+n(64700);
+var r = n(661531),
+    s = n(996682),
+    a = n(27989);
+let o = (e) => {
     let {
-            size: l = "md",
-            width: t,
-            height: r,
-            color: u = a.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: o = "",
-            ...d
+            size: t = "md",
+            width: n,
+            height: o,
+            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: u = "",
+            ...c
         } = e,
-        c = (0, i.J)(l),
-        m = c?.width ?? t,
-        f = c?.height ?? r;
-    return (0, n.jsx)("svg", {
-        ...(0, s.A)(d),
+        d = (0, a.J)(t),
+        _ = d?.width ?? n,
+        f = d?.height ?? o;
+    return (0, i.jsx)("svg", {
+        ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: m,
+        width: _,
         height: f,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, n.jsx)("rect", {
+        children: (0, i.jsx)("rect", {
             width: "18",
             height: "18",
             x: "3",
             y: "3",
-            fill: "string" == typeof u ? u : u.css,
+            fill: "string" == typeof l ? l : l.css,
             rx: "3",
-            className: o,
+            className: u,
         }),
     });
 };
