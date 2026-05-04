@@ -6517,13 +6517,13 @@ var uY = i(360669),
     uq = i(753390),
     uQ = i(99696),
     uJ = i(202613),
-    u$ = i(580630),
-    u0 = i(83617),
-    u1 = i(935208),
-    u2 = i(607399),
-    u3 = i(150934),
-    u6 = i(256006),
-    u4 = i(615405),
+    u$ = i(615405),
+    u0 = i(580630),
+    u1 = i(83617),
+    u2 = i(935208),
+    u3 = i(607399),
+    u6 = i(150934),
+    u4 = i(256006),
     u5 = i(198970),
     u8 = i(71532);
 let u7 = /[^0-9/]/g,
@@ -6703,7 +6703,7 @@ class du extends N.PureComponent {
     renderBillingAddressSection() {
         let { billingAddress: e } = this.state,
             { updateError: t, paymentSource: i } = this.props,
-            n = (0, u6.g)(i);
+            n = (0, u4.g)(i);
         return (0, p.jsxs)("div", {
             className: dr.yV,
             children: [
@@ -6763,8 +6763,8 @@ class du extends N.PureComponent {
                                     loading: t,
                                     onClick: this.handleDelete,
                                     variant: "critical-secondary",
-                                    size: u2.Fr ? "sm" : "md",
-                                    text: u2.Fr ? g.intl.string(g.t.oyYWHE) : g.intl.string(g.t.yk5qfb),
+                                    size: u3.Fr ? "sm" : "md",
+                                    text: u3.Fr ? g.intl.string(g.t.oyYWHE) : g.intl.string(g.t.yk5qfb),
                                 }),
                             ],
                         }),
@@ -6776,7 +6776,7 @@ class du extends N.PureComponent {
                                 disabled: e || t,
                                 onClick: this.handleCancel,
                                 variant: "secondary",
-                                size: u2.Fr ? "sm" : "md",
+                                size: u3.Fr ? "sm" : "md",
                                 text: g.intl.string(g.t["ETE/oC"]),
                             }),
                             (0, p.jsx)(eh.$, {
@@ -6784,7 +6784,7 @@ class du extends N.PureComponent {
                                 disabled: !n || t || !s,
                                 type: "submit",
                                 variant: "active",
-                                size: u2.Fr ? "sm" : "md",
+                                size: u3.Fr ? "sm" : "md",
                                 text: g.intl.string(g.t["R3BPH+"]),
                             }),
                         ],
@@ -6831,7 +6831,7 @@ class du extends N.PureComponent {
                     this.renderBillingAddressSection(),
                     (0, p.jsx)("div", {
                         className: dr.D5,
-                        children: (0, p.jsx)(u3.S, {
+                        children: (0, p.jsx)(u6.S, {
                             value: da,
                             checked: l,
                             onChange: (e) => this.handleFieldChange(e, da),
@@ -6846,7 +6846,7 @@ class du extends N.PureComponent {
         });
     }
 }
-let dd = O.Ay.connectStores([u4.A], () => ({ updateError: u4.A.editSourceError, removeError: u4.A.removeSourceError }))(
+let dd = O.Ay.connectStores([u$.A], () => ({ updateError: u$.A.editSourceError, removeError: u$.A.removeSourceError }))(
     du,
 );
 var dc = i(95322);
@@ -6911,15 +6911,17 @@ class dg extends N.PureComponent {
 let dm = N.memo(function (e) {
     let { paymentSource: t, hideDivider: i, isForSubscription: n, locale: s, onRedeemClick: l } = e,
         [r, a] = N.useState(null),
-        o = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()?.storeCountry?.country ?? null);
+        o = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()?.storeCountry?.country ?? null),
+        u = (0, O.bG)([u$.A], () => u$.A.ipCountryCode),
+        d = N.useMemo(() => (0, uW.TW)(`-${o ?? u ?? "US"}`), [o, u]);
     return (
         N.useEffect(() => {
             void 0 === t
-                ? a({ amount: 0, currency: null != o ? (0, uW.TW)(`-${o}`) : (0, oK.Rr)() })
+                ? a({ amount: 0, currency: d })
                 : uq.YP(t.id).then((e) => {
                       a(e);
                   });
-        }, [t, o]),
+        }, [t, d]),
         (0, p.jsxs)(p.Fragment, {
             children: [
                 i ? null : (0, p.jsx)(eE.c, { className: dc.__invalid_sourceDivider }),
@@ -6949,9 +6951,11 @@ let dm = N.memo(function (e) {
                                                   variant: "text-sm/medium",
                                                   children: (() => {
                                                       let { amount: e, currency: t } = r ?? {},
-                                                          i = t ?? (0, oK.Rr)(),
+                                                          i = t ?? d,
                                                           n = String(i).toUpperCase(),
-                                                          s = (0, u$.$g)(e ?? 0, i);
+                                                          s = (0, u0.$g)(e ?? 0, i, {
+                                                              currencyDisplay: "narrowSymbol",
+                                                          });
                                                       return `${n} ${s}`;
                                                   })(),
                                               }),
@@ -6992,7 +6996,7 @@ class dA extends N.PureComponent {
             } catch (e) {}
     };
     handlePaymentSourceAdded = async (e) => {
-        await (0, u0.c_)(e.id);
+        await (0, u1.c_)(e.id);
     };
     handleAddPaymentMethod = () => {
         (0, C.openModalLazy)(
@@ -7040,7 +7044,7 @@ class dA extends N.PureComponent {
             } = this.props,
             u = eR()
                 .values(n)
-                .sort((e, t) => (e.id === i ? -1 : t.id === i ? 1 : u1.default.compare(e.id, t.id))),
+                .sort((e, t) => (e.id === i ? -1 : t.id === i ? 1 : u2.default.compare(e.id, t.id))),
             d = u.filter((e) => !(e instanceof uJ.LQ)),
             c = u.filter((e) => e instanceof uJ.LQ),
             m = this.state.editingPayment,
@@ -7127,13 +7131,13 @@ var dh = i(459357),
 let dp = (0, o.E2)(u.X.BILLING_PAYMENT_METHODS, {
         Component: function (e) {
             let { showHeader: t = !1 } = e,
-                i = (0, O.bG)([u4.A], () => u4.A.isSyncing),
+                i = (0, O.bG)([u$.A], () => u$.A.isSyncing),
                 n = (0, O.bG)([dE.A], () => dE.A.paymentSources),
                 s = (0, O.bG)([dE.A], () => dE.A.defaultPaymentSourceId),
                 l = (0, O.bG)([dx.default], () => dx.default.locale),
                 r = (0, O.bG)([dT.A], () => dT.A.getPremiumTypeSubscription()),
-                a = (0, O.bG)([u4.A], () => u4.A.isRemovingPaymentSource),
-                o = (0, O.bG)([u4.A], () => u4.A.isUpdatingPaymentSource),
+                a = (0, O.bG)([u$.A], () => u$.A.isRemovingPaymentSource),
+                o = (0, O.bG)([u$.A], () => u$.A.isUpdatingPaymentSource),
                 { enabled: u } = (0, dh.c)({ location: "UserSettingsBilling" });
             return (N.useEffect(() => {
                 uq.$o(), uq.hP();
@@ -8726,7 +8730,7 @@ function gT(e) {
                     l.isPausedForFractionalPremium && (e = r.endsAt.toDate()), g.intl.format(g.t.Z4ULRD, { date: e })
                 );
             }
-            let e = null != i.premiumGuildSubscription ? u1.default.extractTimestamp(i.premiumGuildSubscription.id) : 0;
+            let e = null != i.premiumGuildSubscription ? u2.default.extractTimestamp(i.premiumGuildSubscription.id) : 0;
             return g.intl.formatToPlainString(g.t.lY2Bur, { date: new Date(e) });
         }, [i, s, l, r]),
         o = N.useMemo(
@@ -8868,17 +8872,17 @@ function gS(e) {
 function gp(e) {
     let { guildId: t, appliedGuildBoosts: i, premiumSubscription: n } = e,
         s = (0, uy.bG)([H.A], () => H.A.getGuild(t), [t]),
-        l = u1.default.fromTimestamp(Date.now());
+        l = u2.default.fromTimestamp(Date.now());
     if (
         (i.forEach((e) => {
-            (null == l || 0 > u1.default.compare(e.id, l)) && (l = e.id);
+            (null == l || 0 > u2.default.compare(e.id, l)) && (l = e.id);
         }),
         null == l)
     )
         return null;
     let r = gn.A.createFromServer(
         {
-            id: u1.default.fromTimestamp(Date.now()),
+            id: u2.default.fromTimestamp(Date.now()),
             subscription_id: n.id,
             canceled: !1,
             premium_guild_subscription: { id: l, guild_id: t },
@@ -8926,7 +8930,7 @@ function gN(e) {
               children: [
                   (0, p.jsx)("div", {
                       className: gE.kL,
-                      children: u1.default
+                      children: u2.default
                           .keys(n)
                           .map((e) =>
                               (0, p.jsx)(gp, { guildId: e, premiumSubscription: i, appliedGuildBoosts: n[e] }, e),
@@ -8972,7 +8976,7 @@ function gf(e) {
         children: [
             (0, p.jsx)("div", {
                 className: gE.kL,
-                children: u1.default
+                children: u2.default
                     .keys(l)
                     .map((e) =>
                         (0, p.jsx)(
@@ -9196,7 +9200,7 @@ let gU = function (e) {
                 };
             let l = sf.hd[sf.gD.PREMIUM_MONTH_GUILD],
                 r = oK.Ay.getDefaultPrice(l.id, i),
-                a = (0, u$.CE)((0, u$.$g)(r.amount, r.currency), l.interval, l.intervalCount);
+                a = (0, u0.CE)((0, u0.$g)(r.amount, r.currency), l.interval, l.intervalCount);
             return {
                 subtitle: i ? g.intl.string(g.t.bhPzXR) : g.intl.string(g.t.Zs9h9Z),
                 flavor: g.intl.formatToPlainString(g.t.PGgTdA, { monthlyGuildBoostPrice: a }),
@@ -9652,7 +9656,7 @@ function g1(e) {
         ),
         m = N.useMemo(() => {
             if ("" !== c) return c;
-            let e = null != t.premiumGuildSubscription ? u1.default.extractTimestamp(t.premiumGuildSubscription.id) : 0;
+            let e = null != t.premiumGuildSubscription ? u2.default.extractTimestamp(t.premiumGuildSubscription.id) : 0;
             return g.intl.formatToPlainString(g.t.lY2Bur, { date: new Date(e) });
         }, [c, t.premiumGuildSubscription]),
         A = N.useMemo(
@@ -9830,7 +9834,7 @@ function g3(e) {
     let a = r > oK.Ay.getNumIncludedPremiumGuildSubscriptionSlots(i.planId);
     return (0, p.jsx)("div", {
         className: g$.kR,
-        children: u1.default
+        children: u2.default
             .keys(l)
             .map((e) => (0, p.jsx)(g2, { guildId: e, slots: l[e], premiumSubscription: i, hasCancelableSlots: a }, e)),
     });
@@ -10683,7 +10687,7 @@ let mQ = (e) => {
                         : (function (e) {
                               let { subscription: t } = e,
                                   i = rj()(t.currentPeriodEnd).format("M/D/YY"),
-                                  n = null != t.price ? (0, u$.$g)(t.price, t.currency) : "",
+                                  n = null != t.price ? (0, u0.$g)(t.price, t.currency) : "",
                                   s = rj()(t.createdAt).format("M/D/YY"),
                                   l = t.status === q.Dmq.CANCELED,
                                   r = t.status === q.Dmq.PAST_DUE,
@@ -10908,7 +10912,7 @@ let m2 = (e) => {
             );
         })(),
         { loading: n } = (0, mO.eb)(i);
-    return ((0, my.A)(u2.Fr ? "role-subscriptions-user-setting" : void 0), n)
+    return ((0, my.A)(u3.Fr ? "role-subscriptions-user-setting" : void 0), n)
         ? (0, p.jsx)(uK.y, {})
         : 0 === i.length
           ? null
@@ -11195,10 +11199,10 @@ function Ap(e) {
 function AN(e) {
     let { subscriptionPlan: t, invoicePreview: i } = e;
     if (null == t) return (0, p.jsx)(AC, { title: g.intl.string(g.t.KI7ERx), content: "" });
-    let n = (0, u$.CE)((0, u$.$g)(t.price, t.currency), t.interval, t.intervalCount),
+    let n = (0, u0.CE)((0, u0.$g)(t.price, t.currency), t.interval, t.intervalCount),
         s = i?.findInvoiceItemByPlanId(t.id);
     if (null == s) return (0, p.jsx)(AC, { title: g.intl.string(g.t.KI7ERx), content: n });
-    let l = (0, u$.CE)((0, u$.$g)(s.subscriptionPlanPrice, t.currency), t.interval, t.intervalCount);
+    let l = (0, u0.CE)((0, u0.$g)(s.subscriptionPlanPrice, t.currency), t.interval, t.intervalCount);
     return (0, p.jsx)(AC, {
         title: g.intl.string(g.t.KI7ERx),
         content: (0, p.jsxs)(p.Fragment, {
@@ -11221,7 +11225,7 @@ function AN(e) {
 function Af(e) {
     let { isCancelled: t, subscriptionPeriodEnd: i, renewalPlan: n } = e;
     if (null != n) {
-        let e = (0, u$.CE)((0, u$.$g)(n.price, n.currency), n.interval, n.intervalCount);
+        let e = (0, u0.CE)((0, u0.$g)(n.price, n.currency), n.interval, n.intervalCount);
         return (0, p.jsx)(AC, {
             title: g.intl.string(g.t.hIhAM3),
             content: (0, p.jsxs)(p.Fragment, {
@@ -11480,7 +11484,7 @@ function AU(e) {
         u = N.useMemo(() => {
             if (null == o || 0 === o.length) return null;
             let e = o[0];
-            return (0, u$._J)(e);
+            return (0, u0._J)(e);
         }, [o]);
     return null == u
         ? null
@@ -12017,7 +12021,7 @@ function A2(e) {
     let o = a.subscriptionPlanId,
         u = cl.A.get(o);
     ty()(null != u, "Missing plan");
-    let d = (0, u$.$g)(l.total, l.currency);
+    let d = (0, u0.$g)(l.total, l.currency);
     return (
         u.interval === sf.WT.YEAR
             ? (t = g.intl.format(g.t["jPz/39"], {
@@ -12098,7 +12102,7 @@ let he = function () {
                 [t],
             ),
             r = (0, O.bG)([dT.A], () => dT.A.hasFetchedSubscriptions()),
-            a = (0, O.bG)([u4.A], () => u4.A.isBusy),
+            a = (0, O.bG)([u$.A], () => u$.A.isBusy),
             o = (0, cR.Y)(),
             d = mw.A.useField("subsection");
         N.useEffect(() => {
@@ -12832,8 +12836,8 @@ let hk = new Date("2018-01-01"),
         useTitle: () => "Clear Change Log",
         useSubtitle: () => "Resets the change log state so that it will show again on the next startup.",
         useLabel: () => "Clear",
-        useDisabled: () => c.pK.useSetting() === u1.default.fromTimestamp(hk.getTime()),
-        onClick: () => (hV.w.set("lastChangeLogDate", hk), c.pK.updateSetting(u1.default.fromTimestamp(hk.getTime()))),
+        useDisabled: () => c.pK.useSetting() === u2.default.fromTimestamp(hk.getTime()),
+        onClick: () => (hV.w.set("lastChangeLogDate", hk), c.pK.updateSetting(u2.default.fromTimestamp(hk.getTime()))),
     }),
     hB = (0, o.zD)(u.X.DISABLE_APP_COLLECTIONS_CACHE, {
         useTitle: () => "Disable Application Collections Cache",
@@ -19198,7 +19202,7 @@ i(650832);
 var f8 = i(628736);
 function f7(e) {
     let { applications: t } = e,
-        i = N.useMemo(() => t.sort((e, t) => u1.default.compare(t.id, e.id)), [t]),
+        i = N.useMemo(() => t.sort((e, t) => u2.default.compare(t.id, e.id)), [t]),
         n = N.useMemo(() => {
             let e = [];
             for (let t = 0; t < 3; t++) {
