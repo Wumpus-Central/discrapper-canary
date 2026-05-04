@@ -2248,7 +2248,7 @@ function iQ(e) {
                 className: o()(eY.nM, eY.Dl),
                 children: [
                     n
-                        ? (0, r.jsx)(ij.A, { guild: t, className: eY.WX })
+                        ? (0, r.jsx)(ij.A, { disableBoostClick: !0, guild: t, className: eY.WX })
                         : (0, r.jsx)(iH.A, { guild: t, size: 20, className: eY.aL }),
                     (0, r.jsx)("span", { className: o()(eY.cN, eY.NT), children: t.name }),
                 ],
@@ -2292,7 +2292,7 @@ let i0 = { analyticsSource: { page: eH.liQ.GUILD_CHANNEL, section: eH.JJy.CHANNE
 function i1(e, t) {
     (0, ty.L3)(e, async () => {
         let { default: e } = await Promise.all([
-            n.e("89423"),
+            n.e("38896"),
             n.e("93918"),
             n.e("28149"),
             n.e("90261"),
