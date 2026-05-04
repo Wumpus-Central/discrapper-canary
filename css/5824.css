@@ -1,3 +1,37 @@
+.container_ad8aad {
+    gap: 8px;
+    width: 100%
+}
+
+.container_ad8aad,
+.orbContainer_ad8aad {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.orbContainer_ad8aad {
+    flex-shrink: 0
+}
+
+.value_ad8aad {
+    font-style: italic;
+    text-align: center
+}
+
+.graphicSection_a2cab2 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: var(--space-16) auto var(--space-20);
+    max-width: 232px;
+    width: 100%
+}
+
+.headerCentered_a2cab2 {
+    text-align: center
+}
+
 .wrapper__553bf {
     isolation: isolate;
     position: relative

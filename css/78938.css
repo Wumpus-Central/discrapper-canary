@@ -1,26 +1,3 @@
-.popoutList__92efc {
-    background: var(--background-mod-normal);
-    border-radius: 5px;
-    padding: 10px 10px 0
-}
-
-.popoutListEmpty__92efc {
-    box-sizing: border-box;
-    color: var(--text-strong);
-    cursor: default;
-    margin-block: 2px;
-    margin-inline: 0 4px;
-    padding: 8px 10px 0
-}
-
-.divider__92efc {
-    margin: 8px 0
-}
-
-.enable-forced-colors .popoutList__92efc {
-    border: 2px solid CanvasText
-}
-
 .phoneFieldPopout__61a01 {
     height: 240px;
     inset-inline-start: 0;
