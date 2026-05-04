@@ -87,7 +87,7 @@ let T = function (e) {
         })(t, s, a, h.o.VIDEO.has(n) ? E.Cy.WATCH_VIDEO : (0, m.vA)(t) ? E.Cy.START_QUEST : E.Cy.ACCEPT_QUEST),
         d = (0, A.Oz)(t),
         _ = (function (e, t) {
-            if ((0, f.K$)(e)) return o.intl.string(o.t.IsH2Sp);
+            if ((0, f.K$)(e)) return o.intl.string(o.t["/cXIc6"]);
             if ((0, f.IO)(e)) return (0, g.WM)(t);
             if ((0, m.vA)(e))
                 return (0, f.Ov)(e)

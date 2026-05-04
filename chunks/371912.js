@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(857250),
     d = n(97483),
     _ = n(59520);
-n(328153);
+n(952818);
 var f = n(87719),
     h = n(287809),
     p = n(166403),
@@ -221,7 +221,7 @@ function Y(e) {
                     };
                 if ((0, M.K$)(t))
                     return {
-                        text: F.intl.string(F.t.IsH2Sp),
+                        text: F.intl.string(F.t["/cXIc6"]),
                         tooltipText: null,
                         onClick: () => {
                             (0, k.Fy)(t);
