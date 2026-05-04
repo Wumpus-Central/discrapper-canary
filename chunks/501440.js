@@ -5193,7 +5193,7 @@ let aD = (0, u.animated)(S),
                                 children: [
                                     er,
                                     (0, r.jsxs)("ol", {
-                                        className: d()(aR.bv, { [aR.FD]: u.isModeratorReportChannel() }),
+                                        className: aR.bv,
                                         "aria-label": tp.intl.formatToPlainString(tp.t.XarRiL, {
                                             channelName: U ?? "",
                                         }),

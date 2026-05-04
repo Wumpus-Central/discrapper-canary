@@ -3,7 +3,6 @@ e.exports = {
     gT: "scrollerContent__36d07",
     XG: "scroller__36d07",
     bv: "scrollerInner__36d07",
-    FD: "scrollerAllowSticky__36d07",
     lB: "scrollerSpacer__36d07",
     Ie: "empty__36d07",
     Fb: "emptyForum__36d07",

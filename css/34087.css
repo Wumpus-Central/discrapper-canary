@@ -155,11 +155,7 @@
 
 .scrollerInner__36d07 {
     min-height: 0;
-    overflow: hidden
-}
-
-.scrollerInner__36d07.scrollerAllowSticky__36d07 {
-    overflow: unset
+    overflow: clip
 }
 
 .scrollerInner__36d07:focus {
