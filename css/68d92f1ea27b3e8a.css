@@ -3832,6 +3832,7 @@
     --mobile-legacy-button-secondary-background-default: #5c5e66;
     --mobile-legacy-button-secondary-border-default: #5966f2;
     --mobile-legacy-button-secondary-text-default: #fff;
+    --mobile-searchbar-gradient-background: #2b2e33;
     --mobile-segmented-control-background: rgba(0, 0, 0, .08);
     --mobile-segmented-control-indicator-background: #29292e;
     --mobile-text-heading-primary: #fff;
@@ -4449,6 +4450,7 @@
     --mobile-legacy-button-secondary-background-default: #6e7078;
     --mobile-legacy-button-secondary-border-default: #5966f2;
     --mobile-legacy-button-secondary-text-default: #fff;
+    --mobile-searchbar-gradient-background: #f2f2f5;
     --mobile-segmented-control-background: rgba(0, 0, 0, .02);
     --mobile-segmented-control-indicator-background: #fff;
     --mobile-text-heading-primary: #29292e;
@@ -5066,6 +5068,7 @@
     --mobile-legacy-button-secondary-background-default: #2b2e36;
     --mobile-legacy-button-secondary-border-default: #5966f2;
     --mobile-legacy-button-secondary-text-default: #fff;
+    --mobile-searchbar-gradient-background: #000;
     --mobile-segmented-control-background: rgba(0, 0, 0, .12);
     --mobile-segmented-control-indicator-background: #2b2e36;
     --mobile-text-heading-primary: #e3e3e6;
@@ -5683,6 +5686,7 @@
     --mobile-legacy-button-secondary-background-default: #383b42;
     --mobile-legacy-button-secondary-border-default: #5966f2;
     --mobile-legacy-button-secondary-text-default: #fff;
+    --mobile-searchbar-gradient-background: #121214;
     --mobile-segmented-control-background: rgba(0, 0, 0, .12);
     --mobile-segmented-control-indicator-background: #30333b;
     --mobile-text-heading-primary: #fafafa;

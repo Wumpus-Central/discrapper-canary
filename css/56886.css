@@ -955,6 +955,7 @@
     --mobile-background-scrim-opaque: var(--black);
     --mobile-expression-picker-background-default: var(--neutral-69);
     --mobile-guildbar-icon-default: var(--neutral-16);
+    --mobile-searchbar-gradient-background: var(--neutral-73);
     --mobile-text-heading-primary: var(--neutral-1);
     --modal-background: var(--neutral-64);
     --modal-footer-background: var(--neutral-64);
@@ -1310,6 +1311,7 @@
         --mobile-background-scrim-opaque: color-mix(in oklab, var(--black) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-expression-picker-background-default: color-mix(in oklab, var(--neutral-69) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-guildbar-icon-default: color-mix(in oklab, var(--neutral-16) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --mobile-searchbar-gradient-background: color-mix(in oklab, var(--neutral-73) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --modal-background: color-mix(in oklab, var(--neutral-64) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --modal-footer-background: color-mix(in oklab, var(--neutral-64) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -1797,6 +1799,7 @@
     --mobile-background-scrim-opaque: var(--black);
     --mobile-expression-picker-background-default: var(--neutral-2);
     --mobile-guildbar-icon-default: var(--neutral-47);
+    --mobile-searchbar-gradient-background: var(--neutral-4);
     --mobile-text-heading-primary: var(--neutral-76);
     --modal-background: var(--neutral-1);
     --modal-footer-background: var(--neutral-1);
@@ -2152,6 +2155,7 @@
         --mobile-background-scrim-opaque: color-mix(in oklab, var(--black) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-expression-picker-background-default: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-guildbar-icon-default: color-mix(in oklab, var(--neutral-47) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --mobile-searchbar-gradient-background: color-mix(in oklab, var(--neutral-4) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-76) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --modal-background: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --modal-footer-background: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -2639,6 +2643,7 @@
     --mobile-background-scrim-opaque: var(--plum-19);
     --mobile-expression-picker-background-default: var(--neutral-97);
     --mobile-guildbar-icon-default: var(--neutral-27);
+    --mobile-searchbar-gradient-background: var(--neutral-100);
     --mobile-text-heading-primary: var(--neutral-8);
     --modal-background: var(--neutral-91);
     --modal-footer-background: var(--neutral-91);
@@ -2994,6 +2999,7 @@
         --mobile-background-scrim-opaque: color-mix(in oklab, var(--plum-19) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-expression-picker-background-default: color-mix(in oklab, var(--neutral-97) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-guildbar-icon-default: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --mobile-searchbar-gradient-background: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --modal-background: color-mix(in oklab, var(--neutral-91) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --modal-footer-background: color-mix(in oklab, var(--neutral-91) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -3481,6 +3487,7 @@
     --mobile-background-scrim-opaque: var(--black);
     --mobile-expression-picker-background-default: var(--neutral-86);
     --mobile-guildbar-icon-default: var(--neutral-23);
+    --mobile-searchbar-gradient-background: var(--neutral-92);
     --mobile-text-heading-primary: var(--neutral-2);
     --modal-background: var(--neutral-79);
     --modal-footer-background: var(--neutral-79);
@@ -3836,6 +3843,7 @@
         --mobile-background-scrim-opaque: color-mix(in oklab, var(--black) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-expression-picker-background-default: color-mix(in oklab, var(--neutral-86) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-guildbar-icon-default: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --mobile-searchbar-gradient-background: color-mix(in oklab, var(--neutral-92) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --mobile-text-heading-primary: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --modal-background: color-mix(in oklab, var(--neutral-79) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --modal-footer-background: color-mix(in oklab, var(--neutral-79) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
@@ -9499,6 +9507,7 @@
     --mobile-messages-header-button-gap: 8px;
     --mobile-messages-header-button-layout: row;
     --mobile-messages-header-padding-bottom: 16px;
+    --mobile-messages-item-channel-avatar-margin-end: 8px;
     --mobile-messages-item-channel-avatar-size: 32px;
     --mobile-messages-item-channel-name-text-style: redesign/channel-title/semibold;
     --mobile-messages-item-happening-now-padding-bottom: 8px;
@@ -9625,8 +9634,8 @@
     --mobile-messages-header-button-gap: 12px;
     --mobile-messages-header-button-layout: row-reverse;
     --mobile-messages-header-padding-bottom: 12px;
-    --mobile-messages-item-channel-avatar-size: 40px;
-    --mobile-messages-item-channel-name-text-style: redesign/heading-18/semibold;
+    --mobile-messages-item-channel-avatar-margin-end: 12px;
+    --mobile-messages-item-channel-name-text-style: text-md/medium;
     --mobile-messages-item-happening-now-padding-bottom: 16px;
     --mobile-segmented-control-border-radius: 8px;
     --mobile-settings-padding-top: 24px;
@@ -9644,7 +9653,7 @@
     --mobile-table-row-content-height: 32px;
     --mobile-table-row-group-helper-text-style: text-sm/normal;
     --mobile-table-row-height: 56px;
-    --mobile-user-profile-about-me-heading-text-style: text-md/medium;
+    --mobile-user-profile-about-me-heading-text-style: text-sm/medium;
     --mobile-user-row-label-line-height-ios: 20px;
     --mobile-voice-channel-user-limit-border-width: 1px;
     --mobile-voice-message-duration-line-height-android: 9px;

@@ -2723,6 +2723,13 @@ let { Themes: c } = u.zv,
             [c.MIDNIGHT]: { raw: "NEUTRAL_27", opacity: 1 },
             [c.DARKER]: { raw: "NEUTRAL_23", opacity: 1 },
         },
+        MOBILE_SEARCHBAR_GRADIENT_BACKGROUND: {
+            category: "generic",
+            [c.DARK]: { raw: "NEUTRAL_73", opacity: 1 },
+            [c.LIGHT]: { raw: "NEUTRAL_4", opacity: 1 },
+            [c.MIDNIGHT]: { raw: "NEUTRAL_100", opacity: 1 },
+            [c.DARKER]: { raw: "NEUTRAL_92", opacity: 1 },
+        },
         MOBILE_TEXT_HEADING_PRIMARY: {
             category: "generic",
             [c.DARK]: { raw: "NEUTRAL_1", opacity: 1 },
@@ -8051,19 +8058,20 @@ let { Themes: c } = u.zv,
                         return 16;
                     },
                 },
-                MESSAGES_ITEM_CHANNEL_AVATAR_SIZE: {
+                MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return 32;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 40;
-                        return 32;
+                        if (0 === t.length) return 8;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                        return 8;
                     },
                 },
+                MESSAGES_ITEM_CHANNEL_AVATAR_SIZE: { resolve: () => 32 },
                 MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return "redesign/channel-title/semibold";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "redesign/heading-18/semibold";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-md/medium";
                         return "redesign/channel-title/semibold";
                     },
                 },
@@ -8212,7 +8220,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return "text-sm/semibold";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-md/medium";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-sm/medium";
                         return "text-sm/semibold";
                     },
                 },
