@@ -3174,7 +3174,7 @@
     width: 14px
 }
 
-.premiumBadge__6d7da {
+.premiumBadge__83f7d {
     align-items: center;
     border-radius: var(--radius-md);
     display: flex;
@@ -3184,19 +3184,11 @@
     text-transform: uppercase
 }
 
-.premiumAcknowledgedBadge__6d7da {
+.acknowledged__83f7d {
     background-color: var(--background-mod-strong)
 }
 
-.premiumUnacknowledgedBadge__6d7da {
-    background-color: var(--badge-expressive-background-default)
-}
-
-.premiumUnacknowledgedBadgeCopy__6d7da {
-    color: var(--badge-expressive-text-default)
-}
-
-.BadgeClockIcon__6d7da {
+.icon__83f7d {
     color: var(--icon-subtle);
     margin-inline-end: 4px
 }
@@ -3823,6 +3815,15 @@
 
 .notAppAsidePanel_a3002d:has(~[data-app-right-panel=true]) .app_a3002d {
     position: relative
+}
+
+.textArea_d19bc9 {
+    background-color: var(--input-background-default);
+    border-color: var(--input-border-default)
+}
+
+.textAreaInner_d19bc9 {
+    padding-bottom: 36px
 }
 
 .container_db0ccb {
@@ -7213,6 +7214,12 @@ div.nagbar_d74ef8 {
 
 .boostButtonIcon__58c46 {
     margin-inline-end: 2px
+}
+
+.riveHoverTarget__438ba {
+    height: 100%;
+    pointer-events: auto;
+    width: 100%
 }
 
 .container_fe18a9 {
