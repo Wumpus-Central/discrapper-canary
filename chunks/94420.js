@@ -26,8 +26,6 @@ function u() {
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
             checkoutInvoiceError: null,
             renewalInvoiceError: null,
-            standaloneInvoiceOrderContext: null,
-            standaloneInvoiceOrderCheckoutSessionId: null,
             entitlementsGranted: [],
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
             hasAcceptedTerms: !1,

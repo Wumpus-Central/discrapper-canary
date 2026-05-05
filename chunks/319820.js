@@ -1,54 +1,54 @@
-t.d(e, { AO: () => _, r$: () => p, yh: () => v });
-var i = t(627968);
-t(64700);
-var l = t(503698),
-    n = t.n(l),
-    s = t(284009),
-    r = t.n(s),
-    L = t(575593),
-    c = t(17928),
-    d = t(590180),
-    u = t(14702);
-t(735164), t(980094);
-var o = t(366523);
-t(773669), t(252424), t(580630);
-var h = t(652215);
-t(985018);
-var a = t(251321);
-let p = (C) => {
-        let { sku: e, slayerProductPreviewClassName: t } = C,
-            l = (0, c.bG)([d.A], () => d.A.getProduct(e.id));
-        return null != l && e.productLine === h.EZt.COLLECTIBLES && l.type !== L.R.BUNDLE
-            ? (0, i.jsx)(u.O, { sku: e })
-            : e.productLine === h.EZt.SOCIAL_LAYER_GAME_ITEM
-              ? (0, i.jsx)(o.e, { containerClassName: n()(a.oC, t), sku: e, shape: "square" })
+l.d(t, { AO: () => p, r$: () => f, yh: () => g });
+var n = l(627968);
+l(64700);
+var r = l(503698),
+    a = l.n(r),
+    i = l(284009),
+    s = l.n(i),
+    u = l(575593),
+    c = l(17928),
+    o = l(590180),
+    d = l(14702);
+l(735164), l(980094);
+var m = l(366523);
+l(773669), l(252424), l(580630);
+var x = l(652215);
+l(375708);
+var h = l(251321);
+let f = (e) => {
+        let { sku: t, slayerProductPreviewClassName: l } = e,
+            r = (0, c.bG)([o.A], () => o.A.getProduct(t.id));
+        return null != r && t.productLine === x.EZt.COLLECTIBLES && r.type !== u.R.BUNDLE
+            ? (0, n.jsx)(d.O, { sku: t })
+            : t.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM
+              ? (0, n.jsx)(m.e, { containerClassName: a()(h.oC, l), sku: t, shape: "square" })
               : null;
     },
-    _ = (C) => {
-        let e,
-            t,
-            { sku: i } = C,
-            l = (0, c.bG)([d.A], () => d.A.getProduct(i.id));
+    p = (e) => {
+        let t,
+            l,
+            { sku: n } = e,
+            r = (0, c.bG)([o.A], () => o.A.getProduct(n.id));
         return {
             tableLayout:
-                ((e = null != l && i.productLine === h.EZt.COLLECTIBLES && l.type !== L.R.BUNDLE),
-                (t = i.productLine === h.EZt.SOCIAL_LAYER_GAME_ITEM),
-                e || t ? "THREE_COLUMN" : "TWO_COLUMN"),
-            isSocialLayerGameItem: i.productLine === h.EZt.SOCIAL_LAYER_GAME_ITEM,
-            product: l,
+                ((t = null != r && n.productLine === x.EZt.COLLECTIBLES && r.type !== u.R.BUNDLE),
+                (l = n.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM),
+                t || l ? "THREE_COLUMN" : "TWO_COLUMN"),
+            isSocialLayerGameItem: n.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
+            product: r,
         };
     },
-    v = (C) => {
-        let { skuPricePreview: e } = C;
-        r()(null != e.amount, "SKU must have a price set."),
-            r()(null != e.invoice_items && 1 === e.invoice_items.length, "SKU preview must have single line item");
-        let t = e.invoice_items[0],
-            i = t.unit_price.amount,
-            l = !e.tax_inclusive && e.tax > 0,
-            n = ((C) => {
-                if (null == C.discounts || 0 === C.discounts.length) return null;
-                let e = C.discounts[0];
-                return 0 === e.amount ? null : e;
-            })(t);
-        return { showSeparateTotal: i !== e.amount, discount: n, basePrice: i, showTaxes: l };
+    g = (e) => {
+        let { invoicePreview: t } = e;
+        s()(null != t.total, "SKU must have a price set."),
+            s()(null != t.invoiceItems && 1 === t.invoiceItems.length, "SKU preview must have single line item");
+        let l = t.invoiceItems[0],
+            n = l.unitPrice?.amount ?? l.amount,
+            r = !t.taxInclusive && t.tax > 0,
+            a = ((e) => {
+                if (null == e.discounts || 0 === e.discounts.length) return null;
+                let t = e.discounts[0];
+                return 0 === t.amount ? null : t;
+            })(l);
+        return { showSeparateTotal: n !== t.total, discount: a, basePrice: n, showTaxes: r };
     };

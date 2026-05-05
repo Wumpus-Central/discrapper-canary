@@ -11,7 +11,7 @@ n(321073);
 var d = n(546605),
     p = n(364995),
     m = n(900730),
-    h = n(902958),
+    h = n(278521),
     C = n(921925),
     A = n(506120),
     E = n(474367),
@@ -43,7 +43,7 @@ let T = (e) => {
                     n = (function () {
                         let e = (0, d.vg)("StatefulCheckoutStoreRelocationNotice"),
                             { paymentSourceId: t } = (0, h.P5)(),
-                            { checkoutPaymentSources: n } = (0, p.t6)(),
+                            { checkoutPaymentSources: n } = (0, p.t)(),
                             {
                                 relocationCountry: i,
                                 relocationCurrencyCode: r,

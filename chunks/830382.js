@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Aj: () => T, EX: () => m, O1: () => g, QX: () => A, T3: () => y, XU: () => S, lo: () => N });
+n.d(t, { Aj: () => T, EX: () => m, NY: () => A, O1: () => g, T3: () => y, XU: () => S, lo: () => N });
 var i = n(635358),
     r = n(636537),
     s = n(228366),
@@ -38,30 +38,23 @@ async function g(e) {
     let n = (await (0, p.aP)({ url: E.Rsh.APPLICATION_SKUS(e), rejectWithError: !1 })).body;
     return s.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: n }), n;
 }
-async function A(e, t, n, i) {
-    let r,
-        l = { payment_source_id: n, gift: i?.isGift, currency: i?.currency };
-    (0, c.F)(e) && (l.test_mode = !0), s.h.dispatch({ type: "SKU_PURCHASE_PREVIEW_FETCH", skuId: t });
+async function A(e) {
+    let { applicationId: t, skuId: n, paymentSourceId: i, isGift: r, currency: s } = e,
+        l = { payment_source_id: i, gift: r, currency: s };
+    (0, c.F)(t) && (l.test_mode = !0);
     try {
-        (r = await (0, p.aP)({ url: E.Rsh.STORE_SKU_PURCHASE(t), query: l, oldFormErrors: !0, rejectWithError: !1 })),
-            s.h.dispatch({
-                type: "SKU_PURCHASE_PREVIEW_FETCH_SUCCESS",
-                skuId: t,
-                paymentSourceId: n,
-                price: r.body,
-                checkoutSessionId: i?.loadId,
-            });
-    } catch (n) {
-        s.h.dispatch({ type: "SKU_PURCHASE_PREVIEW_FETCH_FAILURE", skuId: t });
-        let e = n instanceof a.Ey ? n : new a.Ey(n);
+        return (await (0, p.aP)({ url: E.Rsh.STORE_SKU_PURCHASE(n), query: l, oldFormErrors: !0, rejectWithError: !1 }))
+            .body;
+    } catch (t) {
+        let e = t instanceof a.Ey ? t : new a.Ey(t);
         if (
             e.code === o.tG.BILLING_BUNDLE_ALREADY_PURCHASED ||
             e.code === o.tG.BILLING_BUNDLE_PARTIALLY_OWNED ||
             e.code === o.tG.INVALID_BILLING_ADDRESS
         )
             throw e;
+        return null;
     }
-    return r;
 }
 let I = { isGift: !1 };
 async function T(e, t, n, i, o) {

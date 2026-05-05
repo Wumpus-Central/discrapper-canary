@@ -1,50 +1,50 @@
 t.d(n, { default: () => Y });
-var r = t(627968),
-    l = t(64700),
+var l = t(627968),
+    r = t(64700),
     s = t(793574),
     i = t(688810),
     a = t(75304),
     u = t(937008),
-    c = t(902958),
+    o = t(278521),
     d = t(166532),
-    o = t(491057),
+    c = t(491057),
     p = t(546042),
     x = t(735305),
-    P = t(343834),
-    C = t(926795),
-    A = t(623020),
+    C = t(343834),
+    A = t(926795),
+    P = t(623020),
     j = t(766734),
     h = t(295405),
     I = t(284009),
-    k = t.n(I),
-    y = t(964486),
-    N = t(427675),
-    S = t(192308),
-    T = t(17928),
-    _ = t(871109);
-let E = l.createContext(void 0);
-function f() {
-    let e = l.useContext(E);
-    return k()(null != e, "GuildProductPurchaseContext not found"), e;
+    y = t.n(I),
+    N = t(964486),
+    T = t(666646),
+    _ = t(192308),
+    k = t(17928),
+    S = t(871109);
+let E = r.createContext(void 0);
+function g() {
+    let e = r.useContext(E);
+    return y()(null != e, "GuildProductPurchaseContext not found"), e;
 }
-function g(e) {
-    let { children: n, guildProductListingId: t, ...l } = e,
-        s = (0, T.bG)([_.A], () => _.A.getGuildProduct(t));
+function f(e) {
+    let { children: n, guildProductListingId: t, ...r } = e,
+        s = (0, k.bG)([S.A], () => S.A.getGuildProduct(t));
     return (
-        k()(null != s, "guildProductListing cannot be null"),
-        (0, r.jsx)(E.Provider, { value: { guildProductListing: s, ...l }, children: n })
+        y()(null != s, "guildProductListing cannot be null"),
+        (0, l.jsx)(E.Provider, { value: { guildProductListing: s, ...r }, children: n })
     );
 }
 function m(e) {
     let { handleClose: n } = e,
-        { guildProductListing: l, guildId: s } = f(),
-        i = (0, N.Hf)();
+        { guildProductListing: r, guildId: s } = g(),
+        i = (0, T.sw)();
     return (
-        (0, y.Ay)(() => {
+        (0, N.Ay)(() => {
             var e;
-            k()(null != i, "selectedSkuPricePreview cannot be null"),
-                (e = { guildId: s, guildProductListingId: l.id, skuPricePreview: i }),
-                (0, S.openModalLazy)(async () => {
+            y()(null != i, "invoicePreview cannot be null"),
+                (e = { guildId: s, guildProductListingId: r.id, invoicePreview: i }),
+                (0, _.openModalLazy)(async () => {
                     let { default: n } = await Promise.all([
                         t.e("62170"),
                         t.e("35778"),
@@ -52,7 +52,7 @@ function m(e) {
                         t.e("13583"),
                         t.e("28090"),
                     ]).then(t.bind(t, 779457));
-                    return (t) => (0, r.jsx)(n, { ...e, ...t });
+                    return (t) => (0, l.jsx)(n, { ...e, ...t });
                 }),
                 n();
         }),
@@ -69,38 +69,38 @@ var v = t(503698),
     L = t(575650);
 function R(e) {
     let { className: n, onClose: t } = e;
-    return (0, r.jsx)(O.D, {
+    return (0, l.jsx)(O.D, {
         className: D()(w.cG, n),
         onClick: t,
-        children: (0, r.jsx)(b.P, { size: "xs", color: "currentColor", className: w.yP }),
+        children: (0, l.jsx)(b.P, { size: "xs", color: "currentColor", className: w.yP }),
     });
 }
 function U(e) {
-    let { guildProductListing: n, onClose: t, className: l } = e;
-    return (0, r.jsxs)(G.rQ, {
-        className: D()(w.wx, L.GI, l),
+    let { guildProductListing: n, onClose: t, className: r } = e;
+    return (0, l.jsxs)(G.rQ, {
+        className: D()(w.wx, L.GI, r),
         separator: !1,
         "data-migration-pending": !0,
         children: [
-            (0, r.jsx)(M.A, { className: w.F0, listing: n, imageSize: 500, alt: "" }),
-            (0, r.jsx)(R, { className: w.b, onClose: t }),
+            (0, l.jsx)(M.A, { className: w.F0, listing: n, imageSize: 500, alt: "" }),
+            (0, l.jsx)(R, { className: w.b, onClose: t }),
         ],
     });
 }
-var H = t(196617);
-function F(e) {
+var F = t(196617);
+function H(e) {
     let { onClose: n } = e,
-        { guildProductListing: t } = f();
-    return (0, r.jsx)(U, { guildProductListing: t, className: H.w, onClose: n });
+        { guildProductListing: t } = g();
+    return (0, l.jsx)(U, { guildProductListing: t, className: F.w, onClose: n });
 }
-let V = (e, n, t) => (t === d.pn.CONFIRM ? null : (0, r.jsx)(F, { onClose: () => n(!1) }));
+let V = (e, n, t) => (t === d.pn.CONFIRM ? null : (0, l.jsx)(H, { onClose: () => n(!1) }));
 var W = t(818348);
 let z = [
-    { key: null, renderStep: (e) => (0, r.jsx)(j.B, { ...e }) },
+    { key: null, renderStep: (e) => (0, l.jsx)(j.B, { ...e }) },
     {
         key: d.pn.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
-            (0, r.jsx)(x.x, {
+            (0, l.jsx)(x.x, {
                 ...e,
                 onReturn: () => {
                     0 === Object.keys(h.A.paymentSources).length
@@ -109,28 +109,28 @@ let z = [
                 },
             }),
     },
-    { key: d.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, r.jsx)(C.A, {}) },
-    { key: d.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, r.jsx)(P.A, {}) },
-    { key: d.pn.REVIEW, renderStep: (e) => (0, r.jsx)(A._, { ...e }) },
-    { key: d.pn.CONFIRM, renderStep: (e) => (0, r.jsx)(m, { ...e }) },
+    { key: d.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(A.A, {}) },
+    { key: d.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(C.A, {}) },
+    { key: d.pn.REVIEW, renderStep: (e) => (0, l.jsx)(P._, { ...e }) },
+    { key: d.pn.CONFIRM, renderStep: (e) => (0, l.jsx)(m, { ...e }) },
 ];
 function Y(e) {
-    let { guildProductContext: n, sourceAnalyticsLocations: t, applicationId: l, ...d } = e,
+    let { guildProductContext: n, sourceAnalyticsLocations: t, applicationId: r, ...d } = e,
         { analyticsLocations: x } = (0, i.Ay)(t, s.A.GUILD_PRODUCT_PAYMENT_MODAL);
-    return (0, r.jsx)(g, {
+    return (0, l.jsx)(f, {
         ...n,
-        children: (0, r.jsx)(i.f5, {
+        children: (0, l.jsx)(i.f5, {
             value: x,
-            children: (0, r.jsx)(c.PaymentContextProvider, {
+            children: (0, l.jsx)(o.PaymentContextProvider, {
                 stepConfigs: z,
-                applicationId: l,
+                applicationId: r,
                 skuIDs: [d.skuId],
                 activeSubscription: null,
                 purchaseType: W.VV.ONE_TIME,
                 unifiedCheckoutFlow: a.C.GUILD_PRODUCT_CHECKOUT,
-                children: (0, r.jsx)(o.Qt, {
-                    children: (0, r.jsx)(u.dX, {
-                        children: (0, r.jsx)(p.PaymentModal, {
+                children: (0, l.jsx)(c.Qt, {
+                    children: (0, l.jsx)(u.dX, {
+                        children: (0, l.jsx)(p.PaymentModal, {
                             initialPlanId: null,
                             analyticsLocations: x,
                             renderHeader: V,

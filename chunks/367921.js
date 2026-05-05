@@ -1,8 +1,8 @@
 n.d(t, { Ay: () => g, Ke: () => x, Ro: () => f, X1: () => I });
 var l = n(627968);
 n(64700);
-var i = n(284009),
-    a = n.n(i),
+var a = n(284009),
+    i = n.n(a),
     r = n(990078),
     s = n(403581),
     o = n(821609),
@@ -13,19 +13,19 @@ var i = n(284009),
     m = n(364995),
     h = n(558620),
     C = n(94420),
-    A = n(156312),
+    A = n(278521),
     E = n(927578),
     y = n(615396),
     P = n(652215),
     S = n(818348),
-    _ = n(985018),
+    _ = n(375708),
     T = n(327105);
 function f(e) {
     let {
         purchaseType: t,
         plan: n,
         premiumSubscription: l,
-        productLine: i,
+        productLine: a,
         isGift: r,
         planGroup: s,
         isPrepaidPaymentSource: o,
@@ -36,7 +36,7 @@ function f(e) {
     if (null === u && c) return _.intl.string(_.t.CpOiEO);
     if (d) return _.intl.string(T.default["7r4HPu"]);
     if (t === S.VV.ONE_TIME) return r ? _.intl.string(_.t.ouo4FK) : _.intl.string(_.t.ExD0Ng);
-    if ((a()(null != n, "Subscription plan must be selected to render PaymentModalReviewButton"), i === P.EZt.BOOST))
+    if ((i()(null != n, "Subscription plan must be selected to render PaymentModalReviewButton"), a === P.EZt.BOOST))
         return _.intl.string(_.t.eUEeCt);
     if (r) return _.intl.string(_.t.ouo4FK);
     if ((0, E.ys)(n.id))
@@ -55,8 +55,8 @@ function N(e, t) {
     null != e.current && (e.current.scrollIntoView({ behavior: "smooth" }), t());
 }
 let x = (e) => {
-        let { premiumSubscription: t, isGift: n, planGroup: l, isPrepaid: i } = e,
-            { checkoutPaymentSources: a } = (0, m.t6)(),
+        let { premiumSubscription: t, isGift: n, planGroup: l, isPrepaid: a } = e,
+            { checkoutPaymentSources: i } = (0, m.t)(),
             r = (0, C.t4)((e) => e.hasAcceptedTerms),
             {
                 application: s,
@@ -70,14 +70,14 @@ let x = (e) => {
             S =
                 (0, p.vg)("PaymentModalReviewButton") &&
                 null != u &&
-                a.some((e) => e.id === u && null != e.relocationCountry),
+                i.some((e) => e.id === u && null != e.relocationCountry),
             _ = f({
                 purchaseType: o,
                 plan: P,
                 premiumSubscription: t,
                 isGift: n,
                 planGroup: l,
-                isPrepaidPaymentSource: i,
+                isPrepaidPaymentSource: a,
                 paymentSourceId: u,
                 hasPaymentSources: y,
                 willRelocateStoreCountry: S,
@@ -97,8 +97,8 @@ let x = (e) => {
     I = (e, t) => {
         let {
                 invoiceError: n,
-                planError: i,
-                disablePurchase: a,
+                planError: a,
+                disablePurchase: i,
                 needsPaymentSource: r,
                 onPaymentSourceAdd: o,
                 isTrial: c,
@@ -108,7 +108,7 @@ let x = (e) => {
                 isSubmitting: C,
             } = e,
             { buttonLabel: A, hasAcceptedTerms: E, application: y, devShelfFetchState: S, hasPaymentSources: T } = t;
-        if (null != n || null != i || a) return { variant: "active", text: A, disabled: !0 };
+        if (null != n || null != a || i) return { variant: "active", text: A, disabled: !0 };
         if (r && T)
             return {
                 text: A,
@@ -158,7 +158,7 @@ let x = (e) => {
         else return { variant: "active", text: A, dataTestId: "purchase", onClick: p, loading: C };
     };
 function g(e) {
-    let { premiumSubscription: t, isGift: n, planGroup: i, isPrepaid: a } = e,
+    let { premiumSubscription: t, isGift: n, planGroup: a, isPrepaid: i } = e,
         {
             buttonLabel: s,
             analyticsLocations: u,
@@ -168,7 +168,7 @@ function g(e) {
             activeSubscription: m,
             devShelfFetchState: h,
             hasPaymentSources: C,
-        } = x({ premiumSubscription: t, isGift: n, planGroup: i, isPrepaid: a }),
+        } = x({ premiumSubscription: t, isGift: n, planGroup: a, isPrepaid: i }),
         {
             tooltipText: A,
             dataTestId: E,
