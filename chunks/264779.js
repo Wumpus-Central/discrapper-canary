@@ -53,13 +53,20 @@ async function N() {
 }
 async function y(e) {
     let t,
-        { promotionId: n, analyticsLocations: i } = e,
-        s = await r.Bo.post({ url: A.Rsh.CLAIM_OUTBOUND_PROMOTION_CODE(n), rejectWithError: !1 }),
-        a = s.body;
+        { promotionId: n, promotionTitle: i, partnerId: s, analyticsLocations: a } = e,
+        o = await r.Bo.post({ url: A.Rsh.CLAIM_OUTBOUND_PROMOTION_CODE(n), rejectWithError: !1 }),
+        l = o.body;
     return (
         (t = I.vu.DESKTOP),
-        f.default.track(A.HAw.OUTBOUND_PROMOTION_CLAIMED, { platform: t, status: s.status, location_stack: i }),
-        S(a)
+        f.default.track(A.HAw.OUTBOUND_PROMOTION_CLAIMED, {
+            platform: t,
+            status: o.status,
+            location_stack: a,
+            promotion_id: n,
+            name: i ?? null,
+            partner: s ?? null,
+        }),
+        S(l)
     );
 }
 function C(e, t) {

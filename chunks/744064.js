@@ -65,9 +65,10 @@ let b = (e) => {
                 (0, o.debounce)(() => {
                     S.default.track(v.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                         card_type: (0, o.snakeCase)(n),
+                        partner: Q?.thirdPartyPartner ?? null,
                     });
                 }, 800),
-            [n],
+            [Q?.thirdPartyPartner, n],
         ),
         ei = r.useCallback(() => {
             null != H &&

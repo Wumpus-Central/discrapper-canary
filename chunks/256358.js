@@ -47,6 +47,7 @@ function g() {
                           src: "https://cdn.discordapp.com/assets/content/bc7282fb45c16d6041f35bf9534fd40d9a9ec5383fd2088793ecc4e916c00f7d.svg",
                           alt: "Logitech",
                       }),
+                      analyticsOptions: { thirdPartyPartner: _.XY },
                   }
                 : null,
             steelseriesCard: n
@@ -63,6 +64,7 @@ function g() {
                       ctaText: m.intl.string(m.t.w7s5Qr),
                       onCtaClick: () => (0, f.u)({ analyticsLocations: e, partnerIds: [_.KS, _.Cs] }),
                       blurTint: "#2E213D",
+                      analyticsOptions: { thirdPartyPartner: _.KS },
                   }
                 : null,
         };

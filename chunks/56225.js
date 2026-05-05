@@ -252,9 +252,9 @@ let G = () => {
         return (0, i.jsx)("div", { className: x.oP, children: (0, i.jsx)("div", { className: x.t0, children: t }) });
     },
     V = (e) => {
-        let { recurrence: t } = e,
-            n = (0, i.jsx)(o.r, { color: p.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
-            a = (0, i.jsx)("span", {
+        let { recurrence: t, analyticsLocations: n = [] } = e,
+            a = (0, i.jsx)(o.r, { color: p.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
+            d = (0, i.jsx)("span", {
                 className: x.nP,
                 children: (0, i.jsx)(l.K, {
                     icon: u.T,
@@ -262,11 +262,18 @@ let G = () => {
                     variant: "icon-only",
                     "aria-label": "",
                     onClick: () => {
-                        navigator.clipboard.writeText(t.code), _(n);
+                        navigator.clipboard.writeText(t.code),
+                            f(a),
+                            I.default.track(w.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                                partner: t.partnerId,
+                                cta_type: "copy code",
+                                promotion: t.title,
+                                location_stack: n,
+                            });
                     },
                 }),
             }),
-            [d, _] = r.useState(() => a);
+            [_, f] = r.useState(() => d);
         if (null != t.code)
             return (0, i.jsx)("div", {
                 className: x.oP,
@@ -281,14 +288,21 @@ let G = () => {
                                 children: t.code,
                             }),
                         }),
-                        d,
+                        _,
                         (0, i.jsx)(c.$, {
                             variant: "secondary",
                             size: "sm",
                             text: P.intl.formatToPlainString(P.t.DF68t7, { redemptionURL: t.redemptionURL }),
                             onClick: () => {
                                 window.open(t.redemptionURL, "_blank"),
-                                    I.default.track(w.HAw.RECURRING_PROMOTION_CLAIMED);
+                                    I.default.track(w.HAw.RECURRING_PROMOTION_CLAIMED),
+                                    I.default.track(w.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                                        partner: t.partnerId,
+                                        cta_type: "visit store",
+                                        promotion: t.title,
+                                        url: t.redemptionURL,
+                                        location_stack: n,
+                                    });
                             },
                         }),
                     ],
@@ -325,7 +339,12 @@ let G = () => {
                           size: "sm",
                           text: P.intl.string(P.t.vwASIl),
                           onClick: () => {
-                              (0, v.kd)({ promotionId: t.id, analyticsLocations: l })
+                              (0, v.kd)({
+                                  promotionId: t.id,
+                                  promotionTitle: t.title,
+                                  partnerId: t.partnerId,
+                                  analyticsLocations: l,
+                              })
                                   .then((e) => {
                                       s(e.code);
                                   })
@@ -416,7 +435,7 @@ let G = () => {
                     ],
                 }),
                 _ && (0, i.jsx)(G, {}),
-                null != m && (0, i.jsx)(V, { recurrence: { ...o, code: m } }),
+                null != m && (0, i.jsx)(V, { recurrence: { ...o, code: m }, analyticsLocations: p }),
                 _ &&
                     null == m &&
                     (0, i.jsx)(F, {
