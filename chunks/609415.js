@@ -1,13 +1,11 @@
 "use strict";
-n.d(t, { Bv: () => i });
-let r = (0, n(600975).C)({
+n.d(t, { Bv: () => r });
+let i = (0, n(240921).Ay)({
+    name: "2026-05-block-user-feedback",
     kind: "user",
-    id: "2024-10_block_user_feedback",
-    label: "Block User Feedback Experiment",
     defaultConfig: { enabled: !1 },
-    treatments: [{ id: 1, label: "Enable Block User Feedback Survey", config: { enabled: !0 } }],
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-function i(e) {
-    let { enabled: t } = r.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
-    return t;
+function r(e) {
+    return i.getConfig({ location: e }).enabled;
 }
