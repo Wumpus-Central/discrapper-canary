@@ -5760,6 +5760,11 @@
 }
 
 .container_ba8a2f {
+    height: 100%;
+    width: 100%
+}
+
+.clamp_ba8a2f {
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
