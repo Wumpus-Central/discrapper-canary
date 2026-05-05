@@ -1383,7 +1383,6 @@ function tQ() {
                           id: tT.NITRO_ORBS_REWARDS_CARD_ID,
                           title: M.intl.string(tM.default.hx5AFp),
                           description: M.intl.format(tM.default["Pz+6Ix"], { orbsCount: R.reward_amount }),
-                          pillText: v ? M.intl.string(M.t.y2b7CA) : M.intl.string(M.t.oW0eUd),
                           primaryAsset: "/assets/8f530451dce1ccc0.svg",
                           primaryAssetClassName: o()(tz.lH, tz.yK),
                           footerContent: (0, r.jsx)(tx, {}),
