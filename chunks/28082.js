@@ -763,7 +763,7 @@ let ey = (e) => {
                             (0, l.jsx)(_.E, {
                                 ref: e,
                                 className: eR.FZ,
-                                color: "text-muted",
+                                color: "text-subtle",
                                 variant: "text-xs/normal",
                                 children: m,
                             }),
