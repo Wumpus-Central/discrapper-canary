@@ -755,6 +755,7 @@ class H extends T.A {
                                 e.targetWindowElevated,
                                 e.pipewireFrames,
                                 e.x11Frames,
+                                e.videohookBackend,
                             )
                           : "video_state" === e.type
                             ? this.emit(c.yq.VideoState, e.state)
