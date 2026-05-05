@@ -89,6 +89,11 @@ let r = {
         inlineRequire: () => n(788768).A,
         hasStoreChangeListeners: !0,
     },
+    DesktopTTIUpdateBackoffExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(516562).A,
+        hasStoreChangeListeners: !0,
+    },
     FriendOnlineTimerManager: {
         actions: [
             "POST_CONNECTION_OPEN",
