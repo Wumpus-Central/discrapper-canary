@@ -24,11 +24,11 @@ function c() {
                 return;
             }
         }
-        null != e && (0, r.V2)(e.id);
+        null != e && (0, r.V2)(e.id),
+            l.A.setState({ subsection: null != e ? u.Eq.GUILD : u.Eq.USER_PROFILE, scrollPosition: t });
         {
-            let { openUserSettings: i } = n(858897);
-            l.A.setState({ subsection: null != e ? u.Eq.GUILD : u.Eq.USER_PROFILE, scrollPosition: t }),
-                i(a.X.PROFILE_PANEL, { analyticsLocations: c });
+            let { openUserSettings: e } = n(858897);
+            e(a.X.PROFILE_PANEL, { analyticsLocations: c });
         }
     }, [e, t, c, d]);
 }

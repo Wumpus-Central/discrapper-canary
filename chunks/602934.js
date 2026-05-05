@@ -1,4 +1,4 @@
-i.d(t, { D: () => bd });
+i.d(t, { D: () => bu });
 var n,
     s,
     l,
@@ -10619,7 +10619,7 @@ let mQ = (e) => {
     mJ = (e) => {
         let { subscription: t } = e,
             { analyticsLocations: i } = (0, nU.Ay)(),
-            [n] = (0, mV.Kq)({
+            [n] = (0, mV.YV)({
                 subscriptionId: t.id,
                 renewal: !0,
                 analyticsLocations: i,
@@ -11077,7 +11077,7 @@ function Ap(e) {
         f = null != m && (0, Ah.Se)(m),
         C = t.status === q.Dmq.PAST_DUE,
         { analyticsLocations: _ } = (0, nU.Ay)(),
-        [I] = (0, mV.Kq)({
+        [I] = (0, mV.YV)({
             subscriptionId: t.id,
             renewal: !0,
             analyticsLocations: _,
@@ -12007,7 +12007,7 @@ function A2(e) {
     let t,
         { subscription: i, withOverheadSeparator: n } = e,
         { analyticsLocations: s } = (0, nU.Ay)(),
-        [l] = (0, mV.Kq)({
+        [l] = (0, mV.YV)({
             subscriptionId: i.id,
             renewal: !0,
             analyticsLocations: s,
@@ -13646,25 +13646,24 @@ let Ex = (0, o.E2)(u.X.EXPERIMENTS_SETTING, {
         buildLayout: () => [EN, h9],
     });
 var EC = i(631670),
-    E_ = i(252452),
-    EI = i(47360),
-    Eb = i(836602),
-    Ev = i(591179),
-    Ej = i(854627),
-    Ey = i(975732),
-    EO = i(761508),
-    ER = i(83257),
-    EL = i(159001),
-    ED = i(344346),
-    EP = i(919395),
-    EG = i(233641);
-function EU(e) {
+    E_ = i(47360),
+    EI = i(836602),
+    Eb = i(591179),
+    Ev = i(854627),
+    Ej = i(975732),
+    Ey = i(761508),
+    EO = i(83257),
+    ER = i(159001),
+    EL = i(344346),
+    ED = i(919395),
+    EP = i(233641);
+function EG(e) {
     let { title: t, children: i } = e;
     return (0, p.jsxs)("div", {
-        children: [(0, p.jsx)(eA.D, { variant: "text-md/medium", className: EG.Vf, children: t }), i],
+        children: [(0, p.jsx)(eA.D, { variant: "text-md/medium", className: EP.Vf, children: t }), i],
     });
 }
-function EM(e) {
+function EU(e) {
     let {
         children: t,
         className: i,
@@ -13675,43 +13674,43 @@ function EM(e) {
         stickyPreview: a = !0,
     } = e;
     return (0, p.jsx)("div", {
-        className: ew()(EG.UA, i),
+        className: ew()(EP.UA, i),
         children: (0, p.jsxs)("div", {
-            className: ew()(EG.yt, n),
+            className: ew()(EP.yt, n),
             children: [
                 (0, p.jsx)("div", {
-                    className: ew()(EG.Fp, a && EG.Oz),
+                    className: ew()(EP.Fp, a && EP.Oz),
                     children: (0, p.jsxs)(p.Fragment, {
                         children: [
-                            (0, p.jsx)(EU, { title: l ?? g.intl.string(g.t.Zb06yP), children: s }),
-                            null != r ? (0, p.jsx)(EU, { title: g.intl.string(g.t.x5CoXR), children: r }) : null,
+                            (0, p.jsx)(EG, { title: l ?? g.intl.string(g.t.Zb06yP), children: s }),
+                            null != r ? (0, p.jsx)(EG, { title: g.intl.string(g.t.x5CoXR), children: r }) : null,
                         ],
                     }),
                 }),
-                (0, p.jsx)("div", { className: EG.oB, children: t }),
+                (0, p.jsx)("div", { className: EP.oB, children: t }),
             ],
         }),
     });
 }
-var EV = i(986687),
-    Ek = i(101058),
-    Ew = i(841595),
-    EB = i(696451),
-    EF = i(10478);
-function Ez() {
+var EM = i(986687),
+    EV = i(101058),
+    Ek = i(841595),
+    Ew = i(696451),
+    EB = i(10478);
+function EF() {
     return (0, p.jsxs)("div", {
-        className: EF.p$,
+        className: EB.p$,
         children: [
-            (0, p.jsx)("img", { src: "/assets/b3b15f93f9f43174.svg", alt: "", className: EF.Sl }),
+            (0, p.jsx)("img", { src: "/assets/b3b15f93f9f43174.svg", alt: "", className: EB.Sl }),
             (0, p.jsx)(eA.D, {
-                className: EF.h8,
+                className: EB.h8,
                 variant: "heading-lg/extrabold",
                 children: g.intl.string(g.t.Z1OZCV),
             }),
-            (0, p.jsx)(V.E, { className: EF.h8, variant: "text-md/normal", children: g.intl.string(g.t.ZSt4Tt) }),
+            (0, p.jsx)(V.E, { className: EB.h8, variant: "text-md/normal", children: g.intl.string(g.t.ZSt4Tt) }),
             (0, p.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: EF.h8,
+                className: EB.h8,
                 children: (0, p.jsx)(eh.$, {
                     variant: "primary",
                     text: g.intl.string(g.t.jQ3pqt),
@@ -13723,17 +13722,17 @@ function Ez() {
         ],
     });
 }
-var EY = i(81400),
-    EX = i(757036),
-    EH = i(252732),
-    EK = i(355622),
-    EW = i(408018),
-    EZ = i(201349),
-    Eq = i(158983);
-let EQ = (0, sp.Ld)(),
-    EJ = (0, t0.createChannelRecord)({ id: "1", type: q.rbe.DM }),
-    E$ = (0, sp.Ld)();
-function E0(e) {
+var Ez = i(81400),
+    EY = i(757036),
+    EX = i(252732),
+    EH = i(355622),
+    EK = i(408018),
+    EW = i(201349),
+    EZ = i(158983);
+let Eq = (0, sp.Ld)(),
+    EQ = (0, t0.createChannelRecord)({ id: "1", type: q.rbe.DM }),
+    EJ = (0, sp.Ld)();
+function E$(e) {
     let {
             sectionTitle: t,
             errors: i,
@@ -13744,43 +13743,43 @@ function E0(e) {
             disabled: a = !1,
         } = e,
         [o, u] = N.useState(s ?? r),
-        [d, c] = N.useState((0, EW.x7)(o)),
+        [d, c] = N.useState((0, EK.x7)(o)),
         m = N.useRef(r),
         A = N.useRef(!1);
     return (
         N.useEffect(() => {
             if (m.current !== r) {
-                let e = (0, EW.x7)(r);
+                let e = (0, EK.x7)(r);
                 u(r), c(e);
             }
             m.current = r;
         }, [r]),
         N.useEffect(() => {
-            void 0 !== s || o === r || A.current || (u(r), c((0, EW.x7)(r)));
+            void 0 !== s || o === r || A.current || (u(r), c((0, EK.x7)(r)));
         }, [s, r, o]),
         (0, p.jsxs)(oB.A, {
             title: t,
-            titleId: EQ,
+            titleId: Eq,
             description: g.intl.string(g.t.Bbw6Ac),
             errors: i,
             disabled: a,
             children: [
-                (0, p.jsx)(EZ.Ay, {
-                    "aria-describedby": E$,
-                    "aria-labelledby": EQ,
-                    className: Eq.i,
-                    innerClassName: Eq.Z,
+                (0, p.jsx)(EW.Ay, {
+                    "aria-describedby": EJ,
+                    "aria-labelledby": Eq,
+                    className: EZ.i,
+                    innerClassName: EZ.Z,
                     maxCharacterCount: q.NA2,
                     onChange: function (e, t, i) {
                         t !== o && (u(t), c(i), n(t));
                     },
                     placeholder: l,
-                    channel: EJ,
+                    channel: EQ,
                     textValue: o,
                     richValue: d,
                     emojiPickerCloseOnModalOuterClick: !0,
                     parentModalKey: ej.USER_SETTINGS_MODAL_KEY,
-                    type: EK.oU.PROFILE_BIO_INPUT,
+                    type: EH.oU.PROFILE_BIO_INPUT,
                     onBlur: () => {
                         A.current = !1;
                     },
@@ -13794,22 +13793,22 @@ function E0(e) {
                         });
                     },
                 }),
-                (0, p.jsx)(F.A, { id: E$, children: g.intl.format(g.t["+DFxLc"], { maxLength: q.NA2 }) }),
+                (0, p.jsx)(F.A, { id: EJ, children: g.intl.format(g.t["+DFxLc"], { maxLength: q.NA2 }) }),
             ],
         })
     );
 }
-var E1 = i(930861),
-    E2 = i(821956),
-    E3 = i(562819),
-    E6 = i(84540),
-    E4 = i(408919);
-function E5(e) {
+var E0 = i(930861),
+    E1 = i(821956),
+    E2 = i(562819),
+    E3 = i(84540),
+    E6 = i(408919);
+function E4(e) {
     let { user: t, guild: i, className: n, sectionTitle: s, forcedDivider: l = !1, withTutorial: r = !1 } = e,
         { analyticsLocations: a } = (0, nU.Ay)(),
-        o = (0, EP.a4)({ user: t, guildId: i?.id }),
-        { pendingAvatarDecoration: u, errors: d } = (0, EP.CP)(i?.id),
-        c = r ? E1.wL : ay.$n;
+        o = (0, ED.a4)({ user: t, guildId: i?.id }),
+        { pendingAvatarDecoration: u, errors: d } = (0, ED.CP)(i?.id),
+        c = r ? E0.wL : ay.$n;
     return (0, p.jsx)(oB.A, {
         className: n,
         forcedDivider: l,
@@ -13817,26 +13816,26 @@ function E5(e) {
         title: s,
         errors: d,
         children: (0, p.jsxs)("div", {
-            className: E4.NC,
+            className: E6.NC,
             children: [
                 (0, p.jsx)(c, {
                     size: ay.$n.Sizes.SMALL,
                     onClick: () => {
-                        (0, E3.L)({ analyticsLocations: a, guild: i });
+                        (0, E2.L)({ analyticsLocations: a, guild: i });
                     },
-                    className: ew()({ [E4.yj]: r }),
+                    className: ew()({ [E6.yj]: r }),
                     children: g.intl.string(g.t.BVcYCx),
                 }),
                 (void 0 === u ? null != o : null != u) &&
                     (0, p.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: E4.DT,
+                        className: E6.DT,
                         children: (0, p.jsx)(eh.$, {
                             variant: "secondary",
                             size: "sm",
-                            text: (0, E2.uZ)(t, i) ? g.intl.string(g.t.CHf9iJ) : g.intl.string(g.t.OrokWm),
+                            text: (0, E1.uZ)(t, i) ? g.intl.string(g.t.CHf9iJ) : g.intl.string(g.t.OrokWm),
                             onClick: () => {
-                                (0, E6.p)({ guildId: i?.id, avatarDecoration: null });
+                                (0, E3.p)({ guildId: i?.id, avatarDecoration: null });
                             },
                         }),
                     }),
@@ -13844,10 +13843,10 @@ function E5(e) {
         }),
     });
 }
-var E7 = i(339984),
-    E8 = i(114077);
-let E9 = [{ name: "gif", extensions: ["gif"] }];
-function Te(e) {
+var E5 = i(339984),
+    E7 = i(114077);
+let E8 = [{ name: "gif", extensions: ["gif"] }];
+function E9(e) {
     let {
             showRemoveAvatarButton: t,
             errors: i,
@@ -13862,12 +13861,12 @@ function Te(e) {
             withHighlight: c = !1,
         } = e,
         { newestAnalyticsLocation: m } = (0, nU.Ay)(),
-        A = c ? E1.wL : ay.$n,
+        A = c ? E0.wL : ay.$n,
         h = N.useCallback(() => {
-            (0, EH.XD)({
-                uploadType: E7.HL.AVATAR,
+            (0, EX.XD)({
+                uploadType: E5.HL.AVATAR,
                 analyticsSource: m,
-                filters: u ? E9 : void 0,
+                filters: u ? E8 : void 0,
                 guildId: r,
                 isTryItOut: u,
             });
@@ -13879,10 +13878,10 @@ function Te(e) {
         disabled: o,
         forcedDivider: d,
         children: (0, p.jsxs)("div", {
-            className: E8.NC,
+            className: E7.NC,
             children: [
                 (0, p.jsx)(A, {
-                    className: ew()({ [E8.yj]: c }),
+                    className: ew()({ [E7.yj]: c }),
                     size: ay.$n.Sizes.SMALL,
                     onClick: h,
                     children: l ?? g.intl.string(g.t["4OynCD"]),
@@ -13890,7 +13889,7 @@ function Te(e) {
                 t &&
                     (0, p.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: E8.DT,
+                        className: E7.DT,
                         children: (0, p.jsx)(eh.$, {
                             variant: "secondary",
                             size: "sm",
@@ -13902,8 +13901,8 @@ function Te(e) {
         }),
     });
 }
-var Tt = i(152103);
-function Ti(e) {
+var Te = i(152103);
+function Tt(e) {
     let { user: t, guildId: i, className: n } = e,
         s = oK.Ay.canUsePremiumProfileCustomization(t),
         { analyticsLocations: l } = (0, nU.Ay)(),
@@ -13912,15 +13911,15 @@ function Ti(e) {
             guildDisplayNameStyles: a,
             pendingDisplayNameStyles: o,
             pendingErrors: u,
-        } = (0, EP.B0)(t, i),
+        } = (0, ED.B0)(t, i),
         d = (0, N.useCallback)(() => {
             Y.default.track(q.HAw.DISPLAY_NAME_STYLES_FROM_SETTINGS), (0, nM.L)({ analyticsLocations: l, guildId: i });
         }, [l, i]),
         c = (0, N.useCallback)(() => {
-            (0, E6.p)({ displayNameStyles: null }), Y.default.track(q.HAw.DISPLAY_NAME_STYLES_REMOVED);
+            (0, E3.p)({ displayNameStyles: null }), Y.default.track(q.HAw.DISPLAY_NAME_STYLES_REMOVED);
         }, []),
         m = (0, N.useCallback)(() => {
-            (0, E6.p)({ guildId: i, displayNameStyles: null });
+            (0, E3.p)({ guildId: i, displayNameStyles: null });
         }, [i]),
         A = void 0 !== o || (null != i ? null != a : null != r);
     return (0, p.jsx)(oB.A, {
@@ -13929,7 +13928,7 @@ function Ti(e) {
         showPremiumIcon: s,
         errors: u,
         children: (0, p.jsxs)("div", {
-            className: Tt.N,
+            className: Te.N,
             children: [
                 (0, p.jsx)(eh.$, {
                     variant: "primary",
@@ -13957,25 +13956,25 @@ function Ti(e) {
         }),
     });
 }
-var Tn = i(637193),
-    Ts = i(727369);
-function Tl(e) {
+var Ti = i(637193),
+    Tn = i(727369);
+function Ts(e) {
     let { user: t, guild: i, titleIcon: n } = e,
         { analyticsLocations: s } = (0, nU.Ay)(),
         l = null != i,
-        { userNameplate: r, guildNameplate: a, pendingNameplate: o, pendingErrors: u } = (0, EP.rv)(t, i?.id),
+        { userNameplate: r, guildNameplate: a, pendingNameplate: o, pendingErrors: u } = (0, ED.rv)(t, i?.id),
         d = N.useCallback(() => {
-            (0, Tn.p)({ analyticsLocations: s, guildId: i?.id });
+            (0, Ti.p)({ analyticsLocations: s, guildId: i?.id });
         }, [s, i?.id]),
         c = N.useCallback(() => {
-            (0, E6.p)({ guildId: i?.id, nameplate: null });
+            (0, E3.p)({ guildId: i?.id, nameplate: null });
         }, [i?.id]);
     return (0, p.jsx)(oB.A, {
         title: g.intl.string(g.t.x5CoXR),
         titleIcon: n,
         errors: u,
         children: (0, p.jsxs)("div", {
-            className: Ts.u,
+            className: Tn.u,
             children: [
                 (0, p.jsx)(eh.$, { variant: "primary", size: "sm", text: g.intl.string(g.t.BwdeM1), onClick: d }),
                 (void 0 === o ? (l ? a : r) != null : null != o) &&
@@ -13989,8 +13988,8 @@ function Tl(e) {
         }),
     });
 }
-var Tr = i(33023);
-function Ta(e) {
+var Tl = i(33023);
+function Tr(e) {
     let {
             showRemoveBannerButton: t,
             errors: i,
@@ -14004,7 +14003,7 @@ function Ta(e) {
             withHighlight: d = !1,
         } = e,
         { newestAnalyticsLocation: c } = (0, nU.Ay)(),
-        m = d ? E1.wL : ay.$n;
+        m = d ? E0.wL : ay.$n;
     return (0, p.jsx)(oB.A, {
         className: l,
         title: g.intl.string(g.t.Vgdusv),
@@ -14013,19 +14012,19 @@ function Ta(e) {
         disabled: r,
         forcedDivider: u,
         children: (0, p.jsxs)("div", {
-            className: Tr.NC,
+            className: Tl.NC,
             children: [
                 (0, p.jsx)(m, {
-                    className: ew()({ [Tr.yj]: d }),
+                    className: ew()({ [Tl.yj]: d }),
                     size: ay.$n.Sizes.SMALL,
                     onClick: () =>
-                        (0, EH.XD)({ uploadType: E7.HL.BANNER, analyticsSource: c, guildId: s, isTryItOut: o }),
+                        (0, EX.XD)({ uploadType: E5.HL.BANNER, analyticsSource: c, guildId: s, isTryItOut: o }),
                     children: g.intl.string(g.t.N0bC3P),
                 }),
                 t &&
                     (0, p.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: Tr.DT,
+                        className: Tl.DT,
                         children: (0, p.jsx)(eh.$, {
                             variant: "secondary",
                             size: "sm",
@@ -14037,9 +14036,9 @@ function Ta(e) {
         }),
     });
 }
-var To = i(617061),
-    Tu = i(872246);
-function Td(e) {
+var Ta = i(617061),
+    To = i(872246);
+function Tu(e) {
     let {
             user: t,
             guild: i,
@@ -14052,8 +14051,8 @@ function Td(e) {
         } = e,
         { analyticsLocations: u } = (0, nU.Ay)(),
         d = oK.Ay.canUsePremiumProfileCustomization(t),
-        c = (0, EP.N2)({ user: t, guildId: i?.id }),
-        { pendingProfileEffect: m, errors: A } = (0, EP.nZ)(i?.id);
+        c = (0, ED.N2)({ user: t, guildId: i?.id }),
+        { pendingProfileEffect: m, errors: A } = (0, ED.nZ)(i?.id);
     N.useEffect(() => {
         d &&
             Y.default.track(q.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -14061,7 +14060,7 @@ function Td(e) {
                 location_stack: u,
             });
     }, [d, u]);
-    let h = a ? E1.wL : ay.$n;
+    let h = a ? E0.wL : ay.$n;
     return (0, p.jsx)(oB.A, {
         forcedDivider: r,
         borderType: d3.i.PREMIUM,
@@ -14071,26 +14070,26 @@ function Td(e) {
         errors: A,
         className: s,
         children: (0, p.jsxs)("div", {
-            className: Tu.NC,
+            className: To.NC,
             children: [
                 (0, p.jsx)(h, {
                     size: ay.$n.Sizes.SMALL,
                     onClick: () => {
-                        (0, To.W)({ analyticsLocations: u, guild: i, initialSelectedEffect: n });
+                        (0, Ta.W)({ analyticsLocations: u, guild: i, initialSelectedEffect: n });
                     },
-                    className: ew()({ [Tu.yj]: a }),
+                    className: ew()({ [To.yj]: a }),
                     children: g.intl.string(g.t["/dRfCf"]),
                 }),
                 (void 0 === m ? null != c : null != m) &&
                     (0, p.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: Tu.DT,
+                        className: To.DT,
                         children: (0, p.jsx)(eh.$, {
                             variant: "secondary",
                             size: "sm",
                             text: null != i ? g.intl.string(g.t.CHf9iJ) : g.intl.string(g.t.uMuafO),
                             onClick: () => {
-                                (0, E6.p)({ guildId: i?.id, profileEffect: null });
+                                (0, E3.p)({ guildId: i?.id, profileEffect: null });
                             },
                         }),
                     }),
@@ -14098,15 +14097,15 @@ function Td(e) {
         }),
     });
 }
-var Tc = i(13875),
-    Tg = i(515727),
-    Tm = i(238780);
-function TA(e) {
+var Td = i(13875),
+    Tc = i(515727),
+    Tg = i(238780);
+function Tm(e) {
     let { user: t, guild: i, sectionTitle: n } = e,
         { analyticsLocations: s } = (0, nU.Ay)(),
-        l = (0, Tc.sk)("ProfileFrameSection"),
-        r = (0, EP.Xf)({ user: t, guildId: i?.id }),
-        { pendingProfileFrame: a, errors: o } = (0, EP.Tu)(i?.id),
+        l = (0, Td.sk)("ProfileFrameSection"),
+        r = (0, ED.Xf)({ user: t, guildId: i?.id }),
+        { pendingProfileFrame: a, errors: o } = (0, ED.Tu)(i?.id),
         [u, d] = (0, ex.kn)([eT.M.PROFILE_FRAME_USER_PROFILE_NEW_BADGE]),
         c = u === eT.M.PROFILE_FRAME_USER_PROFILE_NEW_BADGE;
     return l
@@ -14115,30 +14114,30 @@ function TA(e) {
               borderType: c ? d3.i.NEW_UPSELL : d3.i.PREMIUM,
               hasBackground: c,
               title: n,
-              titleBadge: c ? (0, p.jsx)(n8.Lp, { text: g.intl.string(g.t.y2b7CA), className: Tm.Ad }) : void 0,
+              titleBadge: c ? (0, p.jsx)(n8.Lp, { text: g.intl.string(g.t.y2b7CA), className: Tg.Ad }) : void 0,
               description: c ? g.intl.string(g.t.yMoMAt) : void 0,
               errors: o,
               children: (0, p.jsxs)("div", {
-                  className: Tm.NC,
+                  className: Tg.NC,
                   children: [
                       (0, p.jsx)(eh.$, {
                           variant: "primary",
                           size: "sm",
                           text: g.intl.string(g.t["9/hmle"]),
                           onClick: () => {
-                              (0, Tg.w)({ analyticsLocations: s, guild: i }), d(t8.i.TAKE_ACTION);
+                              (0, Tc.w)({ analyticsLocations: s, guild: i }), d(t8.i.TAKE_ACTION);
                           },
                       }),
                       (void 0 === a ? null != r : null != a) &&
                           (0, p.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
-                              className: Tm.DT,
+                              className: Tg.DT,
                               children: (0, p.jsx)(eh.$, {
                                   variant: "secondary",
                                   size: "sm",
                                   text: null != i ? g.intl.string(g.t.CHf9iJ) : g.intl.string(g.t.nQBruk),
                                   onClick: () => {
-                                      (0, E6.p)({ guildId: i?.id, profileFrame: null });
+                                      (0, E3.p)({ guildId: i?.id, profileFrame: null });
                                   },
                               }),
                           }),
@@ -14147,18 +14146,18 @@ function TA(e) {
           })
         : null;
 }
-var Th = i(33851),
-    TE = i.n(Th),
-    TT = i(602853),
-    Tx = i(654107),
-    TS = i(999291),
-    Tp = i(101928),
-    TN = i(835245),
-    Tf = i(317097),
-    TC = i(508274),
-    T_ = i(919796),
-    TI = i(773431);
-function Tb(e) {
+var TA = i(33851),
+    Th = i.n(TA),
+    TE = i(602853),
+    TT = i(654107),
+    Tx = i(999291),
+    TS = i(101928),
+    Tp = i(835245),
+    TN = i(317097),
+    Tf = i(508274),
+    TC = i(919796),
+    T_ = i(773431);
+function TI(e) {
     let {
             onChange: t,
             onClose: i,
@@ -14171,24 +14170,24 @@ function Tb(e) {
             showEyeDropper: u,
         } = e,
         d = N.useRef(null),
-        c = (0, TT.r)(w.A.colors.BACKGROUND_BASE_LOW).hex(),
+        c = (0, TE.r)(w.A.colors.BACKGROUND_BASE_LOW).hex(),
         m = w.A.colors.BACKGROUND_MOD_MUTED.css,
-        A = (0, EH.sN)(n),
-        h = (0, Tf.Hl)(n),
+        A = (0, EX.sN)(n),
+        h = (0, TN.Hl)(n),
         E = h === c ? m : h,
         T = A ? w.A.unsafe_rawColors.WHITE.css : w.A.unsafe_rawColors.PRIMARY_530.css,
-        x = (0, T_.A)(a),
-        S = (0, T_.A)(o),
-        [f, C] = N.useState((0, TN.A)());
+        x = (0, TC.A)(a),
+        S = (0, TC.A)(o),
+        [f, C] = N.useState((0, Tp.A)());
     return (
         N.useEffect(() => {
-            (x !== a || S !== o) && C((0, TN.A)());
+            (x !== a || S !== o) && C((0, Tp.A)());
         }, [o, a, S, x]),
         (0, p.jsx)(P.Y, {
             targetElementRef: d,
             positionKey: f,
             renderPopout: (e) =>
-                (0, p.jsx)(TC.VN, {
+                (0, p.jsx)(Tf.VN, {
                     ...e,
                     value: n,
                     onChange: t,
@@ -14202,19 +14201,19 @@ function Tb(e) {
                 let { onClick: t, ...i } = e;
                 return (0, p.jsxs)("div", {
                     ref: d,
-                    className: ew()(TI.oP, { [TI.r9]: l }),
+                    className: ew()(T_.oP, { [T_.r9]: l }),
                     children: [
                         (0, p.jsx)(M.D, {
                             ...i,
                             tabIndex: l ? -1 : 0,
                             onClick: l ? q.tEg : t,
                             style: { backgroundColor: h, borderColor: E },
-                            className: TI.nf,
+                            className: T_.nf,
                             "aria-label": g.intl.string(g.t.Qp04hK),
                             focusProps: { ringTarget: d },
                             children: (0, p.jsx)(oH.R, {
                                 size: "custom",
-                                className: TI.BW,
+                                className: T_.BW,
                                 width: 14,
                                 height: 14,
                                 color: T,
@@ -14227,8 +14226,8 @@ function Tb(e) {
         })
     );
 }
-var Tv = i(362656);
-function Tj(e) {
+var Tb = i(362656);
+function Tv(e) {
     let {
             user: t,
             pendingAvatarSrc: i,
@@ -14241,8 +14240,8 @@ function Tj(e) {
             showResetThemeButton: u = !1,
             forcedDivider: d,
         } = e,
-        c = (0, TS.Ay)(t.id, r),
-        { primaryColor: m, secondaryColor: A } = (0, Tp.A)({
+        c = (0, Tx.Ay)(t.id, r),
+        { primaryColor: m, secondaryColor: A } = (0, TS.A)({
             user: t,
             displayProfile: c,
             pendingThemeColors: n,
@@ -14250,30 +14249,30 @@ function Tj(e) {
         }),
         h = oK.Ay.canUsePremiumProfileCustomization(t),
         E = null != i ? i : t.getAvatarURL(r, 80),
-        T = (0, TT.r)(w.A.unsafe_rawColors.PRIMARY_530).hex(),
-        x = (0, Tx.rh)(E, T, !1);
+        T = (0, TE.r)(w.A.unsafe_rawColors.PRIMARY_530).hex(),
+        x = (0, TT.rh)(E, T, !1);
     if (null == m || null == A) return null;
     let S = (e) => {
-        s(TE()(e, c?.themeColors) ? void 0 : e);
+        s(Th()(e, c?.themeColors) ? void 0 : e);
     };
     return (0, p.jsx)(oB.A, {
         title: g.intl.string(g.t.DMeO2X),
         disabled: !h && !l,
-        className: ew()(Tv.__invalid_profileThemesSection, a),
+        className: ew()(Tb.__invalid_profileThemesSection, a),
         showPremiumIcon: o,
         forcedDivider: d,
         children: (0, p.jsxs)("div", {
-            className: Tv.hd,
+            className: Tb.hd,
             children: [
                 (0, p.jsx)("div", {
-                    className: Tv.YX,
-                    children: (0, p.jsx)(Tb, {
+                    className: Tb.YX,
+                    children: (0, p.jsx)(TI, {
                         onChange: (e) => S([e, A]),
                         color: m,
                         suggestedColors: x,
                         showEyeDropper: !0,
                         label: (0, p.jsx)(V.E, {
-                            className: Tv.yz,
+                            className: Tb.yz,
                             color: "text-default",
                             variant: "text-xs/normal",
                             "aria-hidden": !0,
@@ -14282,14 +14281,14 @@ function Tj(e) {
                     }),
                 }),
                 (0, p.jsx)("div", {
-                    className: Tv.YX,
-                    children: (0, p.jsx)(Tb, {
+                    className: Tb.YX,
+                    children: (0, p.jsx)(TI, {
                         onChange: (e) => S([m, e]),
                         color: A,
                         suggestedColors: x,
                         showEyeDropper: !0,
                         label: (0, p.jsx)(V.E, {
-                            className: Tv.yz,
+                            className: Tb.yz,
                             color: "text-default",
                             variant: "text-xs/normal",
                             "aria-hidden": !0,
@@ -14301,7 +14300,7 @@ function Tj(e) {
                     null != r &&
                     (0, p.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
-                        className: Tv.WA,
+                        className: Tb.WA,
                         children: (0, p.jsx)(eh.$, {
                             variant: "secondary",
                             size: "sm",
@@ -14313,7 +14312,7 @@ function Tj(e) {
         }),
     });
 }
-function Ty(e) {
+function Tj(e) {
     let {
         sectionTitle: t,
         errors: i,
@@ -14338,13 +14337,13 @@ function Ty(e) {
         }),
     });
 }
-var TO = i(427262),
-    TR = i(576705),
-    TL = i(376294);
-function TD(e) {
+var Ty = i(427262),
+    TO = i(576705),
+    TR = i(376294);
+function TL(e) {
     let { errors: t, pendingNick: i, currentNick: n, username: s, user: l, guild: r } = e,
-        a = (0, O.bG)([TR.A], () => TR.A.can(q.xBc.CHANGE_NICKNAME, r) || TR.A.can(q.xBc.MANAGE_NICKNAMES, r)),
-        o = (0, EX.L)(sf.PremiumTypes.TIER_2);
+        a = (0, O.bG)([TO.A], () => TO.A.can(q.xBc.CHANGE_NICKNAME, r) || TO.A.can(q.xBc.MANAGE_NICKNAMES, r)),
+        o = (0, EY.L)(sf.PremiumTypes.TIER_2);
     return (0, p.jsxs)(oB.A, {
         title: g.intl.string(g.t.me1lRk),
         errors: t,
@@ -14354,18 +14353,18 @@ function TD(e) {
                 placeholder: s,
                 maxLength: q.d0r,
                 onChange: function (e) {
-                    (0, E6.p)({ guildId: r.id, nickname: e });
+                    (0, E3.p)({ guildId: r.id, nickname: e });
                 },
                 disabled: !a,
                 helperText: a ? void 0 : g.intl.string(g.t.gzjxQi),
             }),
-            o && (0, p.jsx)(Ti, { user: l, guildId: r.id, className: TL.F }),
+            o && (0, p.jsx)(Tt, { user: l, guildId: r.id, className: TR.F }),
         ],
     });
 }
-var TP = i(574173);
-let TG = "/assets/b25da78aa7949feb.png";
-function TU(e) {
+var TD = i(574173);
+let TP = "/assets/b25da78aa7949feb.png";
+function TG(e) {
     let { user: t, showOverlay: i, children: n } = e,
         s = (0, dW.Ay)(),
         { analyticsLocations: l } = (0, nU.Ay)(eM.A.PREMIUM_UPSELL_OVERLAY);
@@ -14378,30 +14377,30 @@ function TU(e) {
     }, [i, l]),
     i)
         ? (0, p.jsxs)("div", {
-              className: TP.ry,
+              className: TD.ry,
               children: [
                   (0, p.jsx)("div", { children: n }),
                   (0, p.jsxs)("div", {
-                      className: TP.Wc,
+                      className: TD.Wc,
                       children: [
                           (0, p.jsx)("img", {
-                              className: TP.Tn,
+                              className: TD.Tn,
                               alt: g.intl.string(g.t.LHFZQy),
                               src: (function (e) {
                                   switch (e) {
                                       case q.NJ8.DARK:
                                       case q.NJ8.DARKER:
                                       case q.NJ8.MIDNIGHT:
-                                          return TG;
+                                          return TP;
                                       case q.NJ8.LIGHT:
                                           return "/assets/a98f1410707fafea.png";
                                       default:
-                                          return TG;
+                                          return TP;
                                   }
                               })(s),
                           }),
                           (0, p.jsxs)("div", {
-                              className: TP._9,
+                              className: TD._9,
                               children: [
                                   (0, p.jsx)(V.E, {
                                       variant: "text-lg/semibold",
@@ -14431,15 +14430,15 @@ function TU(e) {
           })
         : n;
 }
-var TM = i(887267);
-function TV() {
+var TU = i(887267);
+function TM() {
     var e;
     let t = (0, O.bG)([t3.default], () => {
             let e = t3.default.getCurrentUser();
             return ty()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        i = (0, EX.L)(sf.PremiumTypes.TIER_2),
-        n = (0, O.bG)([Eb.A, H.A], () => H.A.getGuild(Eb.A.selectedGuildId));
+        i = (0, EY.L)(sf.PremiumTypes.TIER_2),
+        n = (0, O.bG)([EI.A, H.A], () => H.A.getGuild(EI.A.selectedGuildId));
     ty()(null != n, "guild should not be null");
     let {
             pendingAvatar: s,
@@ -14449,25 +14448,25 @@ function TV() {
             pendingPronouns: o,
             pendingThemeColors: u,
             errors: d,
-        } = (0, O.cf)([Eb.A], () => ({ ...Eb.A.getPendingChanges(n.id), errors: Eb.A.getErrors(n.id) })),
-        c = (0, Ek.V7)({ userId: t.id, image: s }),
-        m = (0, EY.EC)(n.id),
-        A = (0, O.bG)([EB.Ay], () => (null == n.id ? null : EB.Ay.getMember(n.id, t.id))),
-        h = (0, O.bG)([Ew.A], () => Ew.A.getGuildMemberProfile(t.id, n.id)),
+        } = (0, O.cf)([EI.A], () => ({ ...EI.A.getPendingChanges(n.id), errors: EI.A.getErrors(n.id) })),
+        c = (0, EV.V7)({ userId: t.id, image: s }),
+        m = (0, Ez.EC)(n.id),
+        A = (0, O.bG)([Ew.Ay], () => (null == n.id ? null : Ew.Ay.getMember(n.id, t.id))),
+        h = (0, O.bG)([Ek.A], () => Ek.A.getGuildMemberProfile(t.id, n.id)),
         E = oK.Ay.canUsePremiumProfileCustomization(t),
-        T = (0, EP.z5)(s, A?.avatar),
-        x = (0, EP.Ac)(r, h?.banner),
+        T = (0, ED.z5)(s, A?.avatar),
+        x = (0, ED.Ac)(r, h?.banner),
         S = ((e = h?.themeColors), void 0 === u ? null != e : u?.[0] != null && u?.[1] != null),
         N = h?.bio ?? "",
         f = h?.pronouns ?? "";
     return (0, p.jsxs)("div", {
-        className: TM.Q,
+        className: TU.Q,
         children: [
             (0, p.jsx)(
-                TD,
+                TL,
                 {
                     errors: d?.nick ?? m?.nick,
-                    username: TO.Ay.getName(t),
+                    username: Ty.Ay.getName(t),
                     pendingNick: l,
                     currentNick: A?.nick,
                     user: t,
@@ -14476,22 +14475,22 @@ function TV() {
                 "nick",
             ),
             (0, p.jsx)(
-                Ty,
+                Tj,
                 {
                     sectionTitle: g.intl.string(g.t["+T3RI/"]),
                     errors: d?.pronouns,
-                    onPronounsChange: (e) => (0, E6.p)({ guildId: n.id, pronouns: e }),
+                    onPronounsChange: (e) => (0, E3.p)({ guildId: n.id, pronouns: e }),
                     pendingPronouns: o,
                     currentPronouns: f,
                 },
                 "pronouns",
             ),
-            (0, p.jsxs)(TU, {
+            (0, p.jsxs)(TG, {
                 user: t,
                 showOverlay: !E,
                 children: [
                     (0, p.jsx)(
-                        Te,
+                        E9,
                         {
                             sectionTitle: (0, p.jsxs)(p.Fragment, {
                                 children: [
@@ -14501,14 +14500,14 @@ function TV() {
                                         children: (0, p.jsx)(oV.t, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: TM.a,
+                                            className: TU.a,
                                         }),
                                     }),
                                 ],
                             }),
                             showRemoveAvatarButton: T,
                             onAvatarChange: (e) =>
-                                (0, EH.rM)(e, A?.avatar, (e) => (0, E6.p)({ guildId: n.id, avatar: e })),
+                                (0, EX.rM)(e, A?.avatar, (e) => (0, E3.p)({ guildId: n.id, avatar: e })),
                             errors: d?.avatar,
                             guildId: n.id,
                             disabled: !E,
@@ -14516,7 +14515,7 @@ function TV() {
                         "avatar",
                     ),
                     (0, p.jsx)(
-                        E5,
+                        E4,
                         {
                             sectionTitle: (0, p.jsxs)(p.Fragment, {
                                 children: [
@@ -14526,7 +14525,7 @@ function TV() {
                                         children: (0, p.jsx)(oV.t, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: TM.a,
+                                            className: TU.a,
                                         }),
                                     }),
                                 ],
@@ -14536,21 +14535,21 @@ function TV() {
                         },
                         "decoration",
                     ),
-                    !i && (0, p.jsx)(Ti, { user: t, guildId: n.id }),
+                    !i && (0, p.jsx)(Tt, { user: t, guildId: n.id }),
                     (0, p.jsx)(
-                        Tl,
+                        Ts,
                         {
                             user: t,
                             guild: n,
                             titleIcon: (0, p.jsx)(e0.m, {
                                 text: g.intl.string(g.t["5AFxuK"]),
-                                children: (0, p.jsx)(oV.t, { size: "md", color: "currentColor", className: TM.a }),
+                                children: (0, p.jsx)(oV.t, { size: "md", color: "currentColor", className: TU.a }),
                             }),
                         },
                         "nameplate",
                     ),
                     (0, p.jsx)(
-                        Td,
+                        Tu,
                         {
                             sectionTitle: (0, p.jsxs)(p.Fragment, {
                                 children: [
@@ -14560,7 +14559,7 @@ function TV() {
                                         children: (0, p.jsx)(oV.t, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: TM.a,
+                                            className: TU.a,
                                         }),
                                     }),
                                 ],
@@ -14570,29 +14569,29 @@ function TV() {
                         },
                         "effect",
                     ),
-                    (0, p.jsx)(TA, { user: t, guild: n, sectionTitle: g.intl.string(g.t.GWrZOd) }, "frame"),
+                    (0, p.jsx)(Tm, { user: t, guild: n, sectionTitle: g.intl.string(g.t.GWrZOd) }, "frame"),
                     (0, p.jsx)(
-                        Ta,
+                        Tr,
                         {
                             showRemoveBannerButton: x,
                             errors: d?.banner,
                             onBannerChange: (e) =>
-                                (0, EH.rM)(e, h?.banner, (e) => (0, E6.p)({ guildId: n.id, banner: e })),
+                                (0, EX.rM)(e, h?.banner, (e) => (0, E3.p)({ guildId: n.id, banner: e })),
                             guildId: n.id,
                             disabled: !E,
                         },
                         "banner",
                     ),
-                    (0, p.jsx)(Tj, {
+                    (0, p.jsx)(Tv, {
                         user: t,
                         pendingAvatarSrc: c,
                         pendingColors: u,
-                        onThemeColorsChange: (e) => (0, E6.p)({ guildId: n.id, themeColors: e }),
+                        onThemeColorsChange: (e) => (0, E3.p)({ guildId: n.id, themeColors: e }),
                         guildId: n.id,
                         showResetThemeButton: S,
                     }),
                     (0, p.jsx)(
-                        E0,
+                        E$,
                         {
                             placeholder: g.intl.string(g.t["/7NKgv"]),
                             sectionTitle: (0, p.jsxs)(p.Fragment, {
@@ -14603,12 +14602,12 @@ function TV() {
                                         children: (0, p.jsx)(oV.t, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: TM.a,
+                                            className: TU.a,
                                         }),
                                     }),
                                 ],
                             }),
-                            onBioChange: (e) => (0, E6.p)({ guildId: n.id, bio: e }),
+                            onBioChange: (e) => (0, E3.p)({ guildId: n.id, bio: e }),
                             errors: d?.bio ?? m?.bio,
                             pendingBio: a,
                             currentBio: N,
@@ -14621,33 +14620,33 @@ function TV() {
         ],
     });
 }
-var Tk = i(405318);
-function Tw(e) {
+var TV = i(405318);
+function Tk(e) {
     (0, C.openModalLazy)(async () => {
         let { default: t } = await Promise.all([i.e("2125"), i.e("66901"), i.e("61129")]).then(i.bind(i, 475312));
         return (i) => (0, p.jsx)(t, { source: { ...e, page: q.liQ.GUILD_MEMBER_PROFILE_SETTINGS }, ...i });
     });
 }
-function TB(e) {
+function Tw(e) {
     let { selectedGuild: t, onGuildChange: i } = e,
         { analyticsLocations: n } = (0, nU.Ay)(eM.A.USER_SETTINGS_GUILD_PROFILE),
         s = (0, O.bG)([t3.default], () => {
             let e = t3.default.getCurrentUser();
             return ty()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
-        l = (0, O.bG)([EB.Ay], () => (null != t ? EB.Ay.getMember(t.id, s.id) : null)),
-        r = (0, O.bG)([Ew.A], () => !Ew.A.isFetchingProfile(s.id, t?.id)),
+        l = (0, O.bG)([Ew.Ay], () => (null != t ? Ew.Ay.getMember(t.id, s.id) : null)),
+        r = (0, O.bG)([Ek.A], () => !Ek.A.isFetchingProfile(s.id, t?.id)),
         a = (0, O.bG)([eC.A], () => eC.A.hidePersonalInformation),
-        { pendingAvatar: o, pendingNameplate: u, ...d } = (0, O.cf)([Eb.A], () => Eb.A.getPendingChanges(t?.id)),
-        c = (0, Ek.V7)({ userId: s.id, image: o }),
-        m = (0, EP.lw)({
+        { pendingAvatar: o, pendingNameplate: u, ...d } = (0, O.cf)([EI.A], () => EI.A.getPendingChanges(t?.id)),
+        c = (0, EV.V7)({ userId: s.id, image: o }),
+        m = (0, ED.lw)({
             pendingValue: u,
             userValue: s?.collectibles?.nameplate,
             guildValue: l?.collectibles?.nameplate,
             guildId: t?.id,
         }),
-        { pendingDisplayNameStyles: A } = (0, EP.B0)(s, t?.id);
-    return (N.useEffect(() => () => n6.h.wait(EL.IM), []), a)
+        { pendingDisplayNameStyles: A } = (0, ED.B0)(s, t?.id);
+    return (N.useEffect(() => () => n6.h.wait(ER.IM), []), a)
         ? (0, p.jsx)(uX.A, {})
         : r
           ? (0, p.jsxs)(nU.f5, {
@@ -14663,56 +14662,56 @@ function TB(e) {
                         ? (0, p.jsxs)(p.Fragment, {
                               children: [
                                   (0, p.jsx)(ow.A, { guildId: t.id, onChange: i }),
-                                  (0, p.jsx)(EM, {
+                                  (0, p.jsx)(EU, {
                                       profilePreviewTitle: (0, p.jsx)(eA.D, {
                                           variant: "heading-md/medium",
-                                          className: Tk.YV,
+                                          className: TV.YV,
                                           children: g.intl.formatToPlainString(g.t.Tc0slG, { guildName: t?.name }),
                                       }),
-                                      profilePreview: (0, p.jsx)(EV.A, {
+                                      profilePreview: (0, p.jsx)(EM.A, {
                                           ...d,
                                           pendingAvatar: c,
                                           pendingDisplayNameStyles: A,
                                           user: s,
                                           guild: t,
                                           canUsePremiumCustomization: oK.Ay.canUsePremiumProfileCustomization(s),
-                                          onUpsellClick: Tw,
-                                          containerClassName: Tk.ti,
+                                          onUpsellClick: Tk,
+                                          containerClassName: TV.ti,
                                       }),
-                                      nameplatePreview: (0, p.jsx)(ED.A, {
+                                      nameplatePreview: (0, p.jsx)(EL.A, {
                                           ...d,
                                           pendingDisplayNameStyles: A,
                                           user: s,
                                           guildId: t?.id,
                                           nameplate: m,
-                                          className: null == m ? Tk.tJ : void 0,
+                                          className: null == m ? TV.tJ : void 0,
                                           isHighlighted: !0,
                                       }),
-                                      children: (0, p.jsx)(TV, {}),
+                                      children: (0, p.jsx)(TM, {}),
                                   }),
                               ],
                           })
-                        : (0, p.jsx)(Ez, {}),
+                        : (0, p.jsx)(EF, {}),
                 ],
             })
           : (0, p.jsx)(uK.y, {});
 }
-var TF = i(903209),
-    Tz = i(913403);
-let TY = (e) => {
+var TB = i(903209),
+    TF = i(913403);
+let Tz = (e) => {
     let { children: t, notice: i } = e;
-    return (0, p.jsxs)("div", { className: Tz.r, children: [i, (0, p.jsx)("div", { children: t })] });
+    return (0, p.jsxs)("div", { className: TF.r, children: [i, (0, p.jsx)("div", { children: t })] });
 };
-var TX = i(269115),
-    TH = i(823092),
-    TK = i(859040),
-    TW = i(379197),
-    TZ = i(488430),
-    Tq = i(457421),
-    TQ = i(940622),
-    TJ = i(559474),
-    T$ = i(144030);
-let T0 = () => {
+var TY = i(269115),
+    TX = i(823092),
+    TH = i(859040),
+    TK = i(379197),
+    TW = i(488430),
+    TZ = i(457421),
+    Tq = i(940622),
+    TQ = i(559474),
+    TJ = i(144030);
+let T$ = () => {
     let e,
         t,
         i,
@@ -14726,9 +14725,9 @@ let T0 = () => {
             body: u,
             version: d,
             revertTextColor: c,
-        } = ((e = (0, TQ.mb)(TJ.RN.UPSELL_BANNER)),
-        (t = (0, TQ.mb)(TJ.RN.UPSELL_BANNER_POPOUT)),
-        (i = (0, O.bG)([Tq.A], () => Tq.A.getMarketingBySurface(TW.R.EDIT_PROFILE_SETTINGS))),
+        } = ((e = (0, Tq.mb)(TQ.RN.UPSELL_BANNER)),
+        (t = (0, Tq.mb)(TQ.RN.UPSELL_BANNER_POPOUT)),
+        (i = (0, O.bG)([TZ.A], () => TZ.A.getMarketingBySurface(TK.R.EDIT_PROFILE_SETTINGS))),
         (n = N.useMemo(
             () =>
                 null != i
@@ -14744,10 +14743,10 @@ let T0 = () => {
             [i],
         )),
         N.useMemo(
-            () => ({ ...n, type: TZ.G.BANNER, asset: e ?? n.asset, popoutAsset: t ?? n.popoutAsset }),
+            () => ({ ...n, type: TW.G.BANNER, asset: e ?? n.asset, popoutAsset: t ?? n.popoutAsset }),
             [e, t, n],
         )),
-        { navigateWithValidation: m } = (0, TH.L_)();
+        { navigateWithValidation: m } = (0, TX.L_)();
     return (
         N.useEffect(() => {
             Y.default.track(q.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -14758,22 +14757,22 @@ let T0 = () => {
         }, [s, d]),
         (0, p.jsxs)("div", {
             ref: l,
-            className: T$.kL,
+            className: TJ.kL,
             style: { backgroundImage: `url(${r})` },
             children: [
                 (0, p.jsx)("div", {
-                    className: T$.JS,
+                    className: TJ.JS,
                     "aria-hidden": !0,
                     role: "presentation",
-                    children: (0, p.jsx)("img", { src: a, className: T$.Qw, alt: "" }),
+                    children: (0, p.jsx)("img", { src: a, className: TJ.Qw, alt: "" }),
                 }),
                 (0, p.jsxs)("div", {
-                    className: T$.Em,
+                    className: TJ.Em,
                     children: [
                         (0, p.jsx)(eA.D, {
                             variant: "heading-lg/extrabold",
                             color: c ? "text-overlay-dark" : "currentColor",
-                            className: T$.DD,
+                            className: TJ.DD,
                             children: o,
                         }),
                         (0, p.jsx)(V.E, {
@@ -14786,7 +14785,7 @@ let T0 = () => {
                 (0, p.jsx)(eh.$, {
                     onClick: () => {
                         m(() =>
-                            (0, TK.Cz)({
+                            (0, TH.Cz)({
                                 analyticsLocations: s,
                                 analyticsSource: eM.A.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                             }),
@@ -14799,23 +14798,23 @@ let T0 = () => {
         })
     );
 };
-var T1 = i(451909),
-    T2 = i(959249),
-    T3 = i(400669),
-    T6 = i(835071),
-    T4 = i(422936),
-    T5 = i(234419),
-    T7 = i(590180),
-    T8 = i(898461),
-    T9 = i(207803),
-    xe = i(508425),
-    xt = i(559949);
-let xi = {
+var T0 = i(451909),
+    T1 = i(959249),
+    T2 = i(400669),
+    T3 = i(835071),
+    T6 = i(422936),
+    T4 = i(234419),
+    T5 = i(590180),
+    T7 = i(898461),
+    T8 = i(207803),
+    T9 = i(508425),
+    xe = i(559949);
+let xt = {
         above_the_clouds: {
             preset: "above_the_clouds",
             themeColors: [752280, 9215590],
             avatarDecorationSkuId: "1144059132517826601",
-            displayNameStyles: { fontId: xt.x.CHICLE, effectId: xe.z.POP, colors: [959694] },
+            displayNameStyles: { fontId: xe.x.CHICLE, effectId: T9.z.POP, colors: [959694] },
             getName: () => g.intl.string(g.t["TFc+iF"]),
             getHeaderSrc: () => i(702051).A,
             getBannerSrc: (e) => (e ? i(735161).A : i(887e3).A),
@@ -14824,7 +14823,7 @@ let xi = {
             preset: "cyberpunk",
             themeColors: [1967991, 742532],
             avatarDecorationSkuId: null,
-            displayNameStyles: { fontId: xt.x.PIXELIFY, effectId: xe.z.NEON, colors: [2949343] },
+            displayNameStyles: { fontId: xe.x.PIXELIFY, effectId: T9.z.NEON, colors: [2949343] },
             getName: () => g.intl.string(g.t["4g+5bq"]),
             getHeaderSrc: () => i(272017).A,
             getBannerSrc: (e) => (e ? i(735271).A : i(208574).A),
@@ -14833,7 +14832,7 @@ let xi = {
             preset: "shadow_realm",
             themeColors: [0, 4458504],
             avatarDecorationSkuId: "1144058522808614923",
-            displayNameStyles: { fontId: xt.x.NEO_CASTEL, effectId: xe.z.TOON, colors: [0xff0000] },
+            displayNameStyles: { fontId: xe.x.NEO_CASTEL, effectId: T9.z.TOON, colors: [0xff0000] },
             getName: () => g.intl.string(g.t.ycg1xj),
             getHeaderSrc: () => i(863653).A,
             getBannerSrc: (e) => (e ? i(538263).A : i(576974).A),
@@ -14842,7 +14841,7 @@ let xi = {
             preset: "starlit_dream",
             themeColors: [5123751, 590625],
             avatarDecorationSkuId: "1144058844004233369",
-            displayNameStyles: { fontId: xt.x.CHERRY_BOMB, effectId: xe.z.TOON, colors: [3343795] },
+            displayNameStyles: { fontId: xe.x.CHERRY_BOMB, effectId: T9.z.TOON, colors: [3343795] },
             getName: () => g.intl.string(g.t["9WLHvr"]),
             getHeaderSrc: () => i(434361).A,
             getBannerSrc: (e) => (e ? i(700309).A : i(135572).A),
@@ -14851,36 +14850,36 @@ let xi = {
             preset: "neon_space",
             themeColors: [6094952, 1007678],
             avatarDecorationSkuId: null,
-            displayNameStyles: { fontId: xt.x.MUSEO_MODERNO, effectId: xe.z.NEON, colors: [28737] },
+            displayNameStyles: { fontId: xe.x.MUSEO_MODERNO, effectId: T9.z.NEON, colors: [28737] },
             getName: () => g.intl.string(g.t.UdNuqi),
             getHeaderSrc: () => i(301928).A,
             getBannerSrc: (e) => (e ? i(285974).A : i(775627).A),
         },
     },
-    xn = (e) => xi[e],
-    xs = Object.keys(xi),
-    xl = (e) => {
-        let t = null == e ? xs : xs.filter((t) => t !== e);
+    xi = (e) => xt[e],
+    xn = Object.keys(xt),
+    xs = (e) => {
+        let t = null == e ? xn : xn.filter((t) => t !== e);
         return t[Math.floor(Math.random() * t.length)];
     };
-var xr = i(371912),
-    xa = i(674253);
-function xo(e) {
+var xl = i(371912),
+    xr = i(674253);
+function xa(e) {
     let { preset: t, onShuffle: i } = e,
         n = (0, O.bG)([iW.A], () => iW.A.useReducedMotion),
-        s = (0, xr.Xf)({ useReducedMotion: n }),
+        s = (0, xl.Xf)({ useReducedMotion: n }),
         { name: l, header: r } = N.useMemo(() => {
-            let e = xn(t);
+            let e = xi(t);
             return { name: e.getName(), header: e.getHeaderSrc() };
         }, [t]);
     return (0, p.jsxs)("div", {
-        className: xa.kL,
+        className: xr.kL,
         children: [
             (0, p.jsx)(M.D, {
                 onClick: () => {
                     i(), s.startAnimation(!1);
                 },
-                className: xa.x6,
+                className: xr.x6,
                 "aria-label": g.intl.string(g.t["44yJxh"]),
                 children: s.render(),
             }),
@@ -14889,36 +14888,36 @@ function xo(e) {
                     i(), s.startAnimation(!1);
                 },
                 "aria-label": `${l}: ${g.intl.string(g.t["44yJxh"])}`,
-                className: xa.Lt,
+                className: xr.Lt,
                 children: [
-                    (0, p.jsx)("img", { alt: "", "aria-hidden": !0, src: r, className: xa.L_ }),
-                    (0, p.jsx)(V.E, { className: xa._e, variant: "text-sm/bold", color: "always-white", children: l }),
+                    (0, p.jsx)("img", { alt: "", "aria-hidden": !0, src: r, className: xr.L_ }),
+                    (0, p.jsx)(V.E, { className: xr._e, variant: "text-sm/bold", color: "always-white", children: l }),
                 ],
             }),
         ],
     });
 }
-var xu = i(511484),
-    xd = i(811611),
-    xc = i(515718),
-    xg = i(507553);
-function xm(e, t) {
-    let i = xg.A.useField("scrollPosition"),
+var xo = i(511484),
+    xu = i(811611),
+    xd = i(515718),
+    xc = i(507553);
+function xg(e, t) {
+    let i = xc.A.useField("scrollPosition"),
         n = (0, O.bG)([iW.A], () => iW.A.useReducedMotion);
     (0, N.useEffect)(() => {
         let s = e.current;
         if (null == s || i !== t) return;
         let l = requestAnimationFrame(() => {
-            s.scrollIntoView({ behavior: n ? "auto" : "smooth" }), xg.A.setState({ scrollPosition: null });
+            s.scrollIntoView({ behavior: n ? "auto" : "smooth" }), xc.A.setState({ scrollPosition: null });
         });
         return () => cancelAnimationFrame(l);
     }, [e, t, i, n]);
 }
-var xA = i(844222),
-    xh = i(314649);
-function xE(e) {
+var xm = i(844222),
+    xA = i(314649);
+function xh(e) {
     let { user: t } = e,
-        { reducedMotion: n } = N.useContext(xA.C),
+        { reducedMotion: n } = N.useContext(xm.C),
         {
             pendingAvatar: s,
             pendingBanner: l,
@@ -14933,13 +14932,13 @@ function xE(e) {
             tryItOutBanner: A,
             tryItOutAvatarDecoration: h,
             tryItOutDisplayNameStyles: E,
-        } = (0, O.cf)([Eb.A], () => {
-            let e = Eb.A.getPendingChanges(),
-                t = Eb.A.getTryItOutChanges();
+        } = (0, O.cf)([EI.A], () => {
+            let e = EI.A.getPendingChanges(),
+                t = EI.A.getTryItOutChanges();
             return { ...e, ...t };
         }),
-        T = (0, Ek.V7)({ userId: t.id, image: m ?? s });
-    return (0, p.jsx)(EV.A, {
+        T = (0, EV.V7)({ userId: t.id, image: m ?? s });
+    return (0, p.jsx)(EM.A, {
         user: t,
         pendingPronouns: d,
         pendingBio: c,
@@ -14949,15 +14948,15 @@ function xE(e) {
         pendingThemeColors: g ?? u,
         pendingAvatarDecoration: void 0 !== h ? h : r,
         pendingProfileEffect: a,
-        avatarClassName: null != m || null != s || n.enabled ? void 0 : xh.WX,
-        containerClassName: xh.ti,
+        avatarClassName: null != m || null != s || n.enabled ? void 0 : xA.WX,
+        containerClassName: xA.ti,
         canUsePremiumCustomization: !0,
         isTryItOut: !0,
         hideExampleButton: !0,
     });
 }
-var xT = i(461414);
-function xx(e) {
+var xE = i(461414);
+function xT(e) {
     let { user: t, isVisible: i, shouldShow: n } = e,
         s = oK.Ay.isPremium(t),
         l = oK.Ay.canUseAnimatedAvatar(t),
@@ -14967,22 +14966,22 @@ function xx(e) {
             tryItOutThemeColors: o,
             tryItOutAvatar: u,
             tryItOutBanner: d,
-        } = (0, O.cf)([Eb.A], () => {
-            let e = Eb.A.getPendingChanges(),
-                t = Eb.A.getErrors(),
-                i = Eb.A.getTryItOutChanges();
+        } = (0, O.cf)([EI.A], () => {
+            let e = EI.A.getPendingChanges(),
+                t = EI.A.getErrors(),
+                i = EI.A.getTryItOutChanges();
             return { ...e, ...i, errors: t };
         }),
         { preset: c, onShuffle: m } = (function () {
             let e = (0, O.bG)([iW.A], () => iW.A.useReducedMotion),
-                [t, i] = (0, N.useState)(xl()),
+                [t, i] = (0, N.useState)(xs()),
                 {
                     banner: n,
                     themeColors: s,
                     avatarDecorationSkuId: l,
                     displayNameStyles: r,
                 } = (0, N.useMemo)(() => {
-                    let i = xn(t);
+                    let i = xi(t);
                     return {
                         banner: i.getBannerSrc(e),
                         themeColors: i.themeColors,
@@ -14990,37 +14989,37 @@ function xx(e) {
                         displayNameStyles: i.displayNameStyles,
                     };
                 }, [t, e]),
-                a = (0, O.bG)([T7.A], () => {
-                    let e = T7.A.getProduct(l);
-                    return (0, T8.T)(e?.items[0]) ? e.items[0] : null;
+                a = (0, O.bG)([T5.A], () => {
+                    let e = T5.A.getProduct(l);
+                    return (0, T7.T)(e?.items[0]) ? e.items[0] : null;
                 });
             (0, N.useEffect)(() => {
-                (0, T9.w5)({ banner: n, themeColors: s, avatarDecoration: a, displayNameStyles: r });
+                (0, T8.w5)({ banner: n, themeColors: s, avatarDecoration: a, displayNameStyles: r });
             }, [n, s, a, r]);
             let o = (0, N.useCallback)(() => {
-                let e = xl(t);
+                let e = xs(t);
                 i(e), Y.default.track(q.HAw.TRY_IT_OUT_PRESET_SHUFFLED, { preset: e });
             }, [t]);
             return { preset: t, onShuffle: o };
         })(),
         A = N.useRef(null);
-    xm(A, nv._F.TRY_IT_OUT);
+    xg(A, nv._F.TRY_IT_OUT);
     let { analyticsLocations: h, sourceAnalyticsLocations: E } = (0, nU.Ay)(eM.A.USER_SETTINGS_TRY_OUT_PREMIUM),
         T = (e) => {
             e &&
                 (d?.startsWith("https:") === !0
                     ? fetch(d)
                           .then((e) => e.blob())
-                          .then((e) => (0, xc.We)(e))
+                          .then((e) => (0, xd.We)(e))
                           .then((e) => {
-                              (0, E6.p)({ avatar: u, themeColors: o, banner: e });
+                              (0, E3.p)({ avatar: u, themeColors: o, banner: e });
                           })
                           .catch(() => {
-                              (0, E6.p)({ avatar: u, themeColors: o });
+                              (0, E3.p)({ avatar: u, themeColors: o });
                           })
                     : null != d
-                      ? (0, E6.p)({ avatar: u, themeColors: o, banner: d })
-                      : (0, E6.p)({ avatar: u, themeColors: o }),
+                      ? (0, E3.p)({ avatar: u, themeColors: o, banner: d })
+                      : (0, E3.p)({ avatar: u, themeColors: o }),
                 Y.default.track(q.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: c }));
         };
     N.useEffect(() => {
@@ -15031,30 +15030,30 @@ function xx(e) {
                 location_stack: E,
             });
     }, [E, t, i]);
-    let x = (0, T5.V)()?.subscription_trial?.sku_id === sf.pe.TIER_2,
-        S = (0, T4.O)(),
-        f = (0, xu.U9)(S, sf.pe.TIER_2);
+    let x = (0, T4.V)()?.subscription_trial?.sku_id === sf.pe.TIER_2,
+        S = (0, T6.O)(),
+        f = (0, xo.U9)(S, sf.pe.TIER_2);
     return n
         ? (0, p.jsx)(nU.f5, {
               value: h,
               children: (0, p.jsxs)(d3.A, {
                   ref: A,
-                  className: xT.MT,
+                  className: xE.MT,
                   type: d3.i.PREMIUM,
                   isShown: !0,
                   hasBackground: !0,
                   children: [
-                      (0, p.jsx)(EM, {
+                      (0, p.jsx)(EU, {
                           stickyPreview: !1,
-                          layoutClassName: xT.th,
+                          layoutClassName: xE.th,
                           profilePreviewTitle: (0, p.jsxs)(p.Fragment, {
                               children: [
-                                  (0, p.jsx)(oV.t, { size: "md", color: "currentColor", className: xT.PC }),
+                                  (0, p.jsx)(oV.t, { size: "md", color: "currentColor", className: xE.PC }),
                                   g.intl.string(g.t.gMlDNd),
                               ],
                           }),
                           profilePreview: (0, p.jsxs)(p.Fragment, {
-                              children: [(0, p.jsx)(xo, { preset: c, onShuffle: m }), (0, p.jsx)(xE, { user: t })],
+                              children: [(0, p.jsx)(xa, { preset: c, onShuffle: m }), (0, p.jsx)(xh, { user: t })],
                           }),
                           children: (0, p.jsxs)("div", {
                               children: [
@@ -15065,38 +15064,38 @@ function xx(e) {
                                               children: g.intl.string(g.t["2zGdAW"]),
                                           }),
                                           (0, p.jsx)(V.E, {
-                                              className: xT.h_,
+                                              className: xE.h_,
                                               variant: "text-sm/normal",
                                               children: g.intl.string(g.t.xeEC20),
                                           }),
                                       ],
                                   }),
-                                  (0, p.jsx)(Tj, {
-                                      className: xT.fz,
+                                  (0, p.jsx)(Tv, {
+                                      className: xE.fz,
                                       user: t,
-                                      pendingAvatarSrc: (0, Ek.V7)({ userId: t.id, image: u ?? r }),
+                                      pendingAvatarSrc: (0, EV.V7)({ userId: t.id, image: u ?? r }),
                                       pendingColors: o ?? a,
-                                      onThemeColorsChange: T9.a,
+                                      onThemeColorsChange: T8.a,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0,
                                   }),
-                                  (0, p.jsx)(Ta, {
-                                      className: xT.fz,
+                                  (0, p.jsx)(Tr, {
+                                      className: xE.fz,
                                       isTryItOut: !0,
                                       showRemoveBannerButton: null != d,
-                                      onBannerChange: T9.xe,
+                                      onBannerChange: T8.xe,
                                       showPremiumIcon: !1,
                                   }),
                                   !l &&
-                                      (0, p.jsx)(Te, {
-                                          className: xT.fz,
+                                      (0, p.jsx)(E9, {
+                                          className: xE.fz,
                                           isTryItOut: !0,
-                                          onAvatarChange: T9.e$,
+                                          onAvatarChange: T8.e$,
                                           showRemoveAvatarButton: !1,
                                           changeAvatarButtonText: g.intl.string(g.t["7z0D1c"]),
                                           sectionTitle: g.intl.string(g.t.vtFfPX),
                                       }),
-                                  (0, p.jsx)(Ti, { user: t, className: xT.fz }),
+                                  (0, p.jsx)(Tt, { user: t, className: xE.fz }),
                                   !x &&
                                       (0, p.jsx)(V.E, {
                                           variant: "text-sm/normal",
@@ -15106,13 +15105,13 @@ function xx(e) {
                           }),
                       }),
                       !x &&
-                          (0, p.jsx)(T2.d, {
+                          (0, p.jsx)(T1.d, {
                               onSubscribeModalClose: T,
-                              className: xT.Kv,
+                              className: xE.Kv,
                               showUpsell: !0,
                               text: g.intl.format(g.t.TmfgI2, {
                                   onClick: () => {
-                                      (0, T6.K)({ onSubscribeFinish: T });
+                                      (0, T3.K)({ onSubscribeFinish: T });
                                   },
                               }),
                               button: s
@@ -15125,8 +15124,8 @@ function xx(e) {
                       x &&
                           (0, p.jsxs)("div", {
                               children: [
-                                  (0, p.jsx)("div", { className: xT.BU }),
-                                  (0, p.jsx)(xd.Ay, {
+                                  (0, p.jsx)("div", { className: xE.BU }),
+                                  (0, p.jsx)(xu.Ay, {
                                       type: sf.e.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: sf.pe.TIER_2,
                                   }),
@@ -15137,20 +15136,20 @@ function xx(e) {
           })
         : null;
 }
-var xS = i(814390),
-    xp = i(909536),
-    xN = i(843282),
-    xf = i(145497),
-    xC = i(685073),
-    x_ = i(534400),
-    xI = i(581781),
-    xb = i(743981),
-    xv = i(51358);
-let xj = (0, sp.Ld)(),
-    xy = N.memo(function (e) {
+var xx = i(814390),
+    xS = i(909536),
+    xp = i(843282),
+    xN = i(145497),
+    xf = i(685073),
+    xC = i(534400),
+    x_ = i(581781),
+    xI = i(743981),
+    xb = i(51358);
+let xv = (0, sp.Ld)(),
+    xj = N.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: i, onChange: n } = e,
             s = N.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            l = (0, O.bG)([t3.default], () => (0, xC.Zo)(t3.default.getCurrentUser()?.primaryGuild).guildId),
+            l = (0, O.bG)([t3.default], () => (0, xf.Zo)(t3.default.getCurrentUser()?.primaryGuild).guildId),
             r = void 0 !== i ? i : l,
             a = N.useMemo(
                 () => t.reduce((e, t) => (t.profile?.tag != null && e.push({ label: t.name, value: t.id }), e), []),
@@ -15164,7 +15163,7 @@ let xj = (0, sp.Ld)(),
                     let i = t.profile?.tag;
                     return null == i
                         ? null
-                        : (0, p.jsx)(xI.A, {
+                        : (0, p.jsx)(x_.A, {
                               guildTag: i,
                               guildBadge: t.profile?.badge ?? void 0,
                               guildId: t.id,
@@ -15181,7 +15180,7 @@ let xj = (0, sp.Ld)(),
                     let t = s.get(e.value);
                     return null == t || null == t.profile?.tag
                         ? null
-                        : (0, p.jsx)(xf.j, {
+                        : (0, p.jsx)(xN.j, {
                               guildId: t.id,
                               guildName: t.name,
                               guildIcon: t.icon,
@@ -15199,11 +15198,11 @@ let xj = (0, sp.Ld)(),
                     let i = t.profile?.tag;
                     return null == i
                         ? null
-                        : (0, p.jsx)(x_.o9, {
+                        : (0, p.jsx)(xC.o9, {
                               guildId: t.id,
                               guildTag: i,
                               guildBadge: t.profile?.badge ?? void 0,
-                              badgeSize: xb.Sl.SIZE_16,
+                              badgeSize: xI.Sl.SIZE_16,
                               textColor: "interactive-text-default",
                               textVariant: "text-sm/semibold",
                           });
@@ -15230,20 +15229,20 @@ let xj = (0, sp.Ld)(),
             }, [n]),
             T = N.useRef(null);
         return (
-            xm(T, nv._F.GUILD_TAG),
+            xg(T, nv._F.GUILD_TAG),
             (0, p.jsxs)(oB.A, {
                 title: g.intl.string(g.t.Pdd1nd),
-                titleId: xj,
+                titleId: xv,
                 ref: T,
                 children: [
                     (0, p.jsx)(V.E, {
-                        className: xv.VA,
+                        className: xb.VA,
                         variant: "text-sm/normal",
                         children: g.intl.string(g.t.mlZ6Jx),
                     }),
-                    (0, p.jsx)(xN.Pw, {
-                        className: xv.Lt,
-                        optionClassName: xv.S0,
+                    (0, p.jsx)(xp.Pw, {
+                        className: xb.Lt,
+                        optionClassName: xb.S0,
                         isSelected: A,
                         options: a,
                         select: m,
@@ -15260,9 +15259,9 @@ let xj = (0, sp.Ld)(),
             })
         );
     });
-var xO = i(556729);
-function xR(e) {
-    let t = (0, EX.L)(sf.PremiumTypes.TIER_2);
+var xy = i(556729);
+function xO(e) {
+    let t = (0, EY.L)(sf.PremiumTypes.TIER_2);
     return (0, p.jsxs)(oB.A, {
         errors: e.errors,
         disabled: e.disabled,
@@ -15276,11 +15275,11 @@ function xR(e) {
                     value: e.pendingGlobalName ?? e.currentGlobalName ?? "",
                 }),
             }),
-            t && (0, p.jsx)(Ti, { user: e.user, className: xO.F }),
+            t && (0, p.jsx)(Tt, { user: e.user, className: xy.F }),
         ],
     });
 }
-function xL(e) {
+function xR(e) {
     let { legacyUsername: t, pendingLegacyUsernameDisabled: i } = e,
         n = c.m$.useSetting(),
         s = void 0 !== i ? i : n;
@@ -15289,47 +15288,47 @@ function xL(e) {
         description: s ? null : g.intl.formatToPlainString(g.t.aYhclf, { username: t }),
         checked: !s,
         onChange: (e) => {
-            !e === n ? (0, EC._e)() : (0, E6.p)({ legacyUsernameDisabled: !e });
+            !e === n ? (0, EC._e)() : (0, E3.p)({ legacyUsernameDisabled: !e });
         },
     });
 }
-function xD(e) {
+function xL(e) {
     let { user: t, savedUserColor: i, pendingColor: n, setPendingAccentColor: s } = e,
         l = t.getAvatarURL(null, 80),
-        r = (0, TT.r)(w.A.unsafe_rawColors.PRIMARY_530).hex(),
-        a = (0, Tx.rh)(l, r, !1),
-        o = (0, Tf.LX)(a[0]);
+        r = (0, TE.r)(w.A.unsafe_rawColors.PRIMARY_530).hex(),
+        a = (0, TT.rh)(l, r, !1),
+        o = (0, TN.LX)(a[0]);
     return (0, p.jsx)(oB.A, {
         title: g.intl.string(g.t["/X3fkf"]),
-        children: (0, p.jsx)(Tb, { onChange: (e) => s(e), color: n ?? i ?? o, suggestedColors: a, showEyeDropper: !0 }),
+        children: (0, p.jsx)(TI, { onChange: (e) => s(e), color: n ?? i ?? o, suggestedColors: a, showEyeDropper: !0 }),
     });
 }
-var xP = i(518477);
-let xG = () => {
+var xD = i(518477);
+let xP = () => {
     let e = (0, O.bG)([cn.default], () => cn.default.getId());
     return (0, p.jsx)(oB.A, {
         title: g.intl.string(g.t.Jzj9q4),
         children: (0, p.jsx)(eh.$, {
             text: g.intl.string(g.t.Geikwq),
             onClick: () => {
-                (0, Ey.openUserProfileModal)({
+                (0, Ej.openUserProfileModal)({
                     userId: e,
                     sourceAnalyticsLocations: [eM.A.USER_SETTINGS_USER_PROFILE],
                     hideRestrictedProfile: !0,
-                    tabSection: xP.RP.WIDGETS,
+                    tabSection: xD.RP.WIDGETS,
                 });
             },
             size: "sm",
         }),
     });
 };
-var xU = i(289299);
-function xM() {
+var xG = i(289299);
+function xU() {
     let e = (0, O.bG)([t3.default], () => {
             let e = t3.default.getCurrentUser();
             return ty()(null != e, "DefaultCustomizationSections: user cannot be undefined"), e;
         }),
-        t = (0, O.bG)([Ew.A], () => Ew.A.getUserProfile(e.id)),
+        t = (0, O.bG)([Ek.A], () => Ek.A.getUserProfile(e.id)),
         {
             pendingAvatar: i,
             pendingGlobalName: n,
@@ -15341,53 +15340,53 @@ function xM() {
             pendingLegacyUsernameDisabled: u,
             pendingPrimaryGuildId: d,
             errors: c,
-        } = (0, O.cf)([Eb.A], () => {
-            let e = Eb.A.getPendingChanges(),
-                t = Eb.A.getErrors();
+        } = (0, O.cf)([EI.A], () => {
+            let e = EI.A.getPendingChanges(),
+                t = EI.A.getErrors();
             return { ...e, errors: t };
         }),
-        m = (0, Ek.V7)({ userId: e.id, image: i }),
-        A = (0, EY.EC)(),
+        m = (0, EV.V7)({ userId: e.id, image: i }),
+        A = (0, Ez.EC)(),
         h = oK.Ay.canUsePremiumProfileCustomization(e),
-        E = (0, EP.z5)(i, e.avatar),
-        T = (0, EP.Ac)(s, t?.banner),
-        x = (0, TS.Ay)(e.id),
+        E = (0, ED.z5)(i, e.avatar),
+        T = (0, ED.Ac)(s, t?.banner),
+        x = (0, Tx.Ay)(e.id),
         S = x?.getLegacyUsername(),
         N = (c.global_name?.length ?? 0) > 0 ? c.global_name : (A?.nick ?? []),
         f = (c.bio?.length ?? 0) > 0 ? c.bio : (A?.bio ?? []),
-        C = (0, O.yK)([H.A, EB.Ay], () =>
+        C = (0, O.yK)([H.A, Ew.Ay], () =>
             H.A.getGuildsArray().filter(
-                (e) => (0, xC.Rg)(e) && EB.Ay.getSelfMember(e.id)?.joinedAt != null && e.profile?.tag != null,
+                (e) => (0, xf.Rg)(e) && Ew.Ay.getSelfMember(e.id)?.joinedAt != null && e.profile?.tag != null,
             ),
         );
     return (0, p.jsxs)("div", {
-        className: xU.Q,
+        className: xG.Q,
         children: [
-            (0, p.jsx)(xR, {
+            (0, p.jsx)(xO, {
                 placeholder: e.username,
                 errors: N,
                 currentGlobalName: e.globalName,
                 pendingGlobalName: n,
-                onGlobalNameChange: (e) => (0, E6.p)({ globalName: e }),
+                onGlobalNameChange: (e) => (0, E3.p)({ globalName: e }),
                 user: e,
             }),
             (0, p.jsx)(
-                Ty,
+                Tj,
                 {
                     sectionTitle: g.intl.string(g.t["+T3RI/"]),
                     errors: c.pronouns,
-                    onPronounsChange: (e) => (0, E6.p)({ pronouns: e }),
+                    onPronounsChange: (e) => (0, E3.p)({ pronouns: e }),
                     pendingPronouns: r,
                     currentPronouns: t?.pronouns ?? "",
                 },
                 "pronouns",
             ),
-            (0, p.jsx)(xG, {}),
+            (0, p.jsx)(xP, {}),
             (0, p.jsx)(
-                Te,
+                E9,
                 {
                     onAvatarChange: (e) => {
-                        (0, E6.p)({ avatar: e }), (0, EP.WU)(null == e ? "remove" : "set");
+                        (0, E3.p)({ avatar: e }), (0, ED.WU)(null == e ? "remove" : "set");
                     },
                     showRemoveAvatarButton: E,
                     errors: c.avatar,
@@ -15396,64 +15395,64 @@ function xM() {
                 },
                 "avatar",
             ),
-            (0, p.jsx)(E5, { user: e, sectionTitle: g.intl.string(g.t["7v0T9P"]) }, "decoration"),
-            (0, p.jsx)(Tl, { user: e }),
-            (0, p.jsx)(Td, { user: e, sectionTitle: g.intl.string(g.t.wR5wOo) }, "effect"),
-            (0, p.jsx)(TA, { user: e, sectionTitle: g.intl.string(g.t.GWrZOd) }, "frame"),
+            (0, p.jsx)(E4, { user: e, sectionTitle: g.intl.string(g.t["7v0T9P"]) }, "decoration"),
+            (0, p.jsx)(Ts, { user: e }),
+            (0, p.jsx)(Tu, { user: e, sectionTitle: g.intl.string(g.t.wR5wOo) }, "effect"),
+            (0, p.jsx)(Tm, { user: e, sectionTitle: g.intl.string(g.t.GWrZOd) }, "frame"),
             h
                 ? (0, p.jsxs)(p.Fragment, {
                       children: [
                           (0, p.jsx)(
-                              Ta,
+                              Tr,
                               {
                                   showRemoveBannerButton: T,
                                   errors: c.banner,
-                                  onBannerChange: (e) => (0, E6.p)({ banner: e }),
+                                  onBannerChange: (e) => (0, E3.p)({ banner: e }),
                                   forcedDivider: !0,
                               },
                               "banner",
                           ),
-                          (0, p.jsx)(Tj, {
+                          (0, p.jsx)(Tv, {
                               user: e,
                               pendingAvatarSrc: m,
                               pendingColors: o,
-                              onThemeColorsChange: (e) => (0, E6.p)({ themeColors: e }),
+                              onThemeColorsChange: (e) => (0, E3.p)({ themeColors: e }),
                               forcedDivider: !0,
                           }),
                       ],
                   })
                 : (0, p.jsx)(
-                      xD,
+                      xL,
                       {
                           user: e,
                           savedUserColor: t?.accentColor,
                           pendingColor: a,
-                          setPendingAccentColor: (e) => (0, E6.p)({ accentColor: e }),
+                          setPendingAccentColor: (e) => (0, E3.p)({ accentColor: e }),
                       },
                       "color",
                   ),
             (0, p.jsx)(
-                E0,
+                E$,
                 {
                     sectionTitle: g.intl.string(g.t.ZzAR2Y),
                     errors: f,
-                    onBioChange: (e) => (0, E6.p)({ bio: e }),
+                    onBioChange: (e) => (0, E3.p)({ bio: e }),
                     pendingBio: l,
                     currentBio: t?.bio ?? "",
                 },
                 "bio",
             ),
             C.length > 0 &&
-                (0, p.jsx)(xy, {
+                (0, p.jsx)(xj, {
                     availablePrimaryGuilds: C,
                     pendingPrimaryGuildId: d,
-                    onChange: (e) => (0, E6.p)({ primaryGuildId: e }),
+                    onChange: (e) => (0, E3.p)({ primaryGuildId: e }),
                 }),
-            null != S && (0, p.jsx)(xL, { legacyUsername: S, pendingLegacyUsernameDisabled: u }, "legacy_username"),
+            null != S && (0, p.jsx)(xR, { legacyUsername: S, pendingLegacyUsernameDisabled: u }, "legacy_username"),
         ],
     });
 }
-function xV() {
+function xM() {
     (0, C.openModalLazy)(async () => {
         let { default: e } = await Promise.all([i.e("2125"), i.e("66901"), i.e("41704")]).then(i.bind(i, 562011));
         return (t) =>
@@ -15468,8 +15467,8 @@ function xV() {
             });
     });
 }
-var xk = i(482549);
-function xw() {
+var xV = i(482549);
+function xk() {
     let e = (0, O.bG)([t3.default], () => {
             let e = t3.default.getCurrentUser();
             return ty()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
@@ -15481,12 +15480,12 @@ function xw() {
             pendingNameplate: s,
             showNotice: l,
             ...r
-        } = (0, O.cf)([Eb.A], () => ({ ...Eb.A.getPendingChanges(), showNotice: Eb.A.showNotice() })),
-        a = (0, Ek.V7)({ userId: e.id, image: n }),
-        o = (0, EP.lw)({ pendingValue: s, userValue: e?.collectibles?.nameplate }),
-        u = (0, xS.A)() && null != i ? T1.Ay.parse(void 0, i).content : i,
+        } = (0, O.cf)([EI.A], () => ({ ...EI.A.getPendingChanges(), showNotice: EI.A.showNotice() })),
+        a = (0, EV.V7)({ userId: e.id, image: n }),
+        o = (0, ED.lw)({ pendingValue: s, userValue: e?.collectibles?.nameplate }),
+        u = (0, xx.A)() && null != i ? T0.Ay.parse(void 0, i).content : i,
         d = oK.Ay.canUsePremiumProfileCustomization(e),
-        c = (0, xp.St)("edit-profile-upsell"),
+        c = (0, xS.St)("edit-profile-upsell"),
         { analyticsLocations: m } = (0, nU.Ay)(eM.A.USER_SETTINGS_USER_PROFILE);
     N.useEffect(() => () => n6.h.wait(EC.IM), []);
     let [A, h] = N.useState(!1),
@@ -15497,49 +15496,49 @@ function xw() {
         : (0, p.jsxs)(nU.f5, {
               value: m,
               children: [
-                  (0, p.jsx)(T0, {}),
-                  (0, p.jsx)(EM, {
-                      profilePreview: (0, p.jsx)(EV.A, {
+                  (0, p.jsx)(T$, {}),
+                  (0, p.jsx)(EU, {
+                      profilePreview: (0, p.jsx)(EM.A, {
                           user: e,
                           canUsePremiumCustomization: d,
-                          onUpsellClick: xV,
+                          onUpsellClick: xM,
                           pendingBio: u,
                           ...r,
                           pendingAvatar: a,
-                          containerClassName: xk.ti,
+                          containerClassName: xV.ti,
                       }),
-                      nameplatePreview: (0, p.jsx)(ED.A, {
+                      nameplatePreview: (0, p.jsx)(EL.A, {
                           user: e,
                           nameplate: o,
                           ...r,
-                          className: null == o ? xk.tJ : void 0,
+                          className: null == o ? xV.tJ : void 0,
                           isHighlighted: !0,
                       }),
-                      children: (0, p.jsx)(xM, {}),
+                      children: (0, p.jsx)(xU, {}),
                   }),
-                  (0, p.jsx)(TX.L, {
+                  (0, p.jsx)(TY.L, {
                       innerRef: T,
                       onChange: (e) => h(e),
                       threshold: 0.25,
                       active: E,
                       children: (0, p.jsx)("div", {
                           ref: T,
-                          children: (0, p.jsx)(xx, { user: e, shouldShow: E, isVisible: A }),
+                          children: (0, p.jsx)(xT, { user: e, shouldShow: E, isVisible: A }),
                       }),
                   }),
                   E &&
                       !l &&
-                      (0, p.jsx)(T2.d, {
-                          className: xk.EL,
+                      (0, p.jsx)(T1.d, {
+                          className: xV.EL,
                           showUpsell: !A,
-                          text: g.intl.format(g.t.TmfgI2, { onClick: () => (0, T6.K)({}) }),
+                          text: g.intl.format(g.t.TmfgI2, { onClick: () => (0, T3.K)({}) }),
                           textVariant: "heading-md/medium",
                           useUpdatedStyling: !0,
                           leadingAction: c
-                              ? (0, p.jsx)(T3.l, { size: "md", location: eM.A.PREMIUM_WISHLIST_EDIT_PROFILE_UPSELL })
+                              ? (0, p.jsx)(T2.l, { size: "md", location: eM.A.PREMIUM_WISHLIST_EDIT_PROFILE_UPSELL })
                               : void 0,
                           button: (0, p.jsx)("div", {
-                              className: xk.Xl,
+                              className: xV.Xl,
                               children: (0, p.jsx)(eh.$, {
                                   variant: "overlay-primary",
                                   onClick: () => {
@@ -15556,58 +15555,58 @@ function xw() {
               ],
           });
 }
-var xB = i(625494),
-    xF = i(454078);
-let xz = { [nv.Eq.USER_PROFILE]: "main_profile_tab", [nv.Eq.GUILD]: "guild_profile_tab" },
-    xY = (0, o.E2)(u.X.PROFILE_SETTING, {
+var xw = i(625494),
+    xB = i(454078);
+let xF = { [nv.Eq.USER_PROFILE]: "main_profile_tab", [nv.Eq.GUILD]: "guild_profile_tab" },
+    xz = (0, o.E2)(u.X.PROFILE_SETTING, {
         Component: function () {
-            let e = (0, O.bG)([lw.A, K.Ay, Eb.A], () => {
-                    let e = Eb.A.selectedGuildId ?? lw.A.getGuildId();
-                    return null == e || Eb._.has(e) ? K.Ay.getFlattenedGuildIds().find((e) => !Eb._.has(e)) : e;
+            let e = (0, O.bG)([lw.A, K.Ay, EI.A], () => {
+                    let e = EI.A.selectedGuildId ?? lw.A.getGuildId();
+                    return null == e || EI._.has(e) ? K.Ay.getFlattenedGuildIds().find((e) => !EI._.has(e)) : e;
                 }),
                 t = (0, O.bG)([H.A], () => H.A.getGuild(e)),
-                i = (0, O.bG)([Eb.A], () => Eb.A.showNotice()),
+                i = (0, O.bG)([EI.A], () => EI.A.showNotice()),
                 n = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()),
-                s = xg.A.useField("subsection");
+                s = xc.A.useField("subsection");
             return (
                 N.useEffect(() => {
-                    (0, rp._)(xz[s]);
+                    (0, rp._)(xF[s]);
                 }, [s]),
                 N.useEffect(() => {
-                    null != n && t?.id != null && (0, TF.A)(n.id, n.getAvatarURL(t?.id, 80), { guildId: t?.id });
+                    null != n && t?.id != null && (0, TB.A)(n.id, n.getAvatarURL(t?.id, 80), { guildId: t?.id });
                 }, [t?.id, n]),
-                (0, p.jsxs)(TY, {
+                (0, p.jsxs)(Tz, {
                     children: [
-                        (0, p.jsxs)(EO.V, {
-                            className: xF.$H,
+                        (0, p.jsxs)(Ey.V, {
+                            className: xB.$H,
                             type: "top",
                             look: "brand",
                             selectedItem: s,
                             onItemSelect: function (e) {
                                 if (s !== e) {
                                     if (i) {
-                                        (0, rN.fO)({ duration: 300, intensity: ER.n3 }),
-                                            xB._.dispatch(q.jej.EMPHASIZE_NOTICE);
+                                        (0, rN.fO)({ duration: 300, intensity: EO.n3 }),
+                                            xw._.dispatch(q.jej.EMPHASIZE_NOTICE);
                                         return;
                                     }
-                                    e === nv.Eq.GUILD && null != t && (0, EL.V2)(t.id),
-                                        xg.A.setState({ subsection: e });
+                                    e === nv.Eq.GUILD && null != t && (0, ER.V2)(t.id),
+                                        xc.A.setState({ subsection: e });
                                 }
                             },
                             children: [
                                 (0, p.jsx)(
-                                    EO.V.Item,
+                                    Ey.V.Item,
                                     {
-                                        className: xF.YU,
+                                        className: xB.YU,
                                         id: nv.Eq.USER_PROFILE,
                                         children: g.intl.string(g.t["2p07FR"]),
                                     },
                                     nv.Eq.USER_PROFILE,
                                 ),
                                 (0, p.jsx)(
-                                    EO.V.Item,
+                                    Ey.V.Item,
                                     {
-                                        className: ew()(xF.YU, xF.HY),
+                                        className: ew()(xB.YU, xB.HY),
                                         "aria-label": g.intl.string(g.t.kPHroX),
                                         id: nv.Eq.GUILD,
                                         children: g.intl.string(g.t.kPHroX),
@@ -15617,18 +15616,18 @@ let xz = { [nv.Eq.USER_PROFILE]: "main_profile_tab", [nv.Eq.GUILD]: "guild_profi
                             ],
                         }),
                         s === nv.Eq.GUILD
-                            ? (0, p.jsx)(TB, {
+                            ? (0, p.jsx)(Tw, {
                                   selectedGuild: t,
                                   onGuildChange: function (e) {
                                       if (i) {
-                                          (0, rN.fO)({ duration: 300, intensity: ER.n3 }),
-                                              xB._.dispatch(q.jej.EMPHASIZE_NOTICE);
+                                          (0, rN.fO)({ duration: 300, intensity: EO.n3 }),
+                                              xw._.dispatch(q.jej.EMPHASIZE_NOTICE);
                                           return;
                                       }
-                                      null != e && (0, EL.JJ)(e.id);
+                                      null != e && (0, ER.JJ)(e.id);
                                   },
                               })
-                            : (0, p.jsx)(xw, {}),
+                            : (0, p.jsx)(xk, {}),
                     ],
                 })
             );
@@ -15644,15 +15643,15 @@ let xz = { [nv.Eq.USER_PROFILE]: "main_profile_tab", [nv.Eq.GUILD]: "guild_profi
             g.intl.string(g.t.DMeO2X),
         ],
     }),
-    xX = (0, o.zZ)(u.X.PROFILE_CATEGORY, { buildLayout: () => [xY] });
-var xH = i(881324);
-let xK = () => {
+    xY = (0, o.zZ)(u.X.PROFILE_CATEGORY, { buildLayout: () => [xz] });
+var xX = i(881324);
+let xH = () => {
         let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()),
-            { avatarSrc: t, avatarDecorationSrc: i } = (0, Ej.A)({ userId: e?.id, size: iK._3.SIZE_48 });
+            { avatarSrc: t, avatarDecorationSrc: i } = (0, Ev.A)({ userId: e?.id, size: iK._3.SIZE_48 });
         return null == e
             ? null
             : (0, p.jsxs)("div", {
-                  className: xH.a5,
+                  className: xX.a5,
                   children: [
                       (0, p.jsx)(iH.eu, {
                           src: t,
@@ -15661,7 +15660,7 @@ let xK = () => {
                           "aria-label": g.intl.string(g.t.lqaIxI),
                       }),
                       (0, p.jsxs)("div", {
-                          className: xH.FS,
+                          className: xX.FS,
                           children: [
                               (0, p.jsx)(V.E, {
                                   color: "text-strong",
@@ -15670,7 +15669,7 @@ let xK = () => {
                                   children: e.globalName ?? e.username,
                               }),
                               (0, p.jsxs)("div", {
-                                  className: xH.Fk,
+                                  className: xX.Fk,
                                   children: [
                                       (0, p.jsx)(V.E, {
                                           variant: "text-sm/normal",
@@ -15686,60 +15685,60 @@ let xK = () => {
                   ],
               });
     },
-    xW = (0, o.t_)(u.X.PROFILE_PANEL, {
+    xK = (0, o.t_)(u.X.PROFILE_PANEL, {
         useTitle: () => g.intl.string(g.t["vi7f+q"]),
-        notice: { stores: [Eb.A], element: EI.A },
+        notice: { stores: [EI.A], element: E_.A },
         initialize: () => () =>
             n6.h.wait(() => {
-                (0, EC.F7)(), E_.A.clearSubsection(q.nc_.PROFILE_CUSTOMIZATION);
+                (0, EC.F7)();
             }),
-        buildLayout: () => [xX],
+        buildLayout: () => [xY],
     }),
-    xZ = (0, o.i4)(u.X.PROFILE_SIDEBAR_ITEM, {
+    xW = (0, o.i4)(u.X.PROFILE_SIDEBAR_ITEM, {
         useTitle: () => g.intl.string(g.t["vi7f+q"]),
-        icon: xQ,
-        StronglyDiscouragedCustomComponent: xK,
-        usePredicate: () => !(0, Ev.X)("user_settings_sidebar"),
-        buildLayout: () => [xW],
+        icon: xq,
+        StronglyDiscouragedCustomComponent: xH,
+        usePredicate: () => !(0, Eb.X)("user_settings_sidebar"),
+        buildLayout: () => [xK],
     }),
-    xq = (0, o.i4)(u.X.PROFILE_SIDEBAR_ITEM_WYSIWYG, {
+    xZ = (0, o.i4)(u.X.PROFILE_SIDEBAR_ITEM_WYSIWYG, {
         useTitle: () => g.intl.string(g.t["vi7f+q"]),
-        icon: xQ,
-        StronglyDiscouragedCustomComponent: xK,
-        usePredicate: () => (0, Ev.X)("user_settings_sidebar"),
+        icon: xq,
+        StronglyDiscouragedCustomComponent: xH,
+        usePredicate: () => (0, Eb.X)("user_settings_sidebar"),
         onClick: () => {
             let e = cn.default.getId();
-            (0, Ey.openUserProfileModal)({ userId: e });
+            (0, Ej.openUserProfileModal)({ userId: e });
         },
         buildLayout: () => [],
     });
-function xQ() {
+function xq() {
     let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()),
-        { avatarSrc: t, avatarDecorationSrc: i } = (0, Ej.A)({ userId: e?.id, size: iK._3.SIZE_48 });
+        { avatarSrc: t, avatarDecorationSrc: i } = (0, Ev.A)({ userId: e?.id, size: iK._3.SIZE_48 });
     return (0, p.jsx)(iH.eu, { src: t, avatarDecoration: i, size: iK._3.SIZE_20, "aria-hidden": !0 });
 }
-let xJ = (0, o.WI)(u.X.PROFILE_SECTION, { hoisted: !0, buildLayout: () => [xZ, xq] });
-var x$ = i(98207);
-function x0() {
+let xQ = (0, o.WI)(u.X.PROFILE_SECTION, { hoisted: !0, buildLayout: () => [xW, xZ] });
+var xJ = i(98207);
+function x$() {
     return (0, p.jsx)(tr.p, { icon: uH.X, messageType: tr.Y.POSITIVE, children: g.intl.string(g.t.FsmBy4) });
 }
-var x1 = i(670492),
-    x2 = i(579872),
-    x3 = i(900686),
-    x6 = i(518142),
-    x4 = i(662758),
-    x5 = i(407186);
-function x7(e) {
+var x0 = i(670492),
+    x1 = i(579872),
+    x2 = i(900686),
+    x3 = i(518142),
+    x6 = i(662758),
+    x4 = i(407186);
+function x5(e) {
     let { backupCodes: t, hasTOTPEnabled: i, currentUser: n } = e,
         s = N.useCallback((e) => {
-            (0, C.openModal)((t) => (0, p.jsx)(x6.default, { ...t, password: e }), { stackingBehavior: "stack" });
+            (0, C.openModal)((t) => (0, p.jsx)(x3.default, { ...t, password: e }), { stackingBehavior: "stack" });
         }, []),
         l = N.useCallback(() => {
             (0, C.openModal)((e) =>
-                (0, p.jsx)(x4.default, {
+                (0, p.jsx)(x6.default, {
                     ...e,
                     handleSubmit: (e) =>
-                        x$.A.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
+                        xJ.A.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
                             s(e);
                         }),
                     title: g.intl.string(g.t.PsQmzU),
@@ -15762,7 +15761,7 @@ ${e}`;
         a = N.useMemo(
             () =>
                 t.length > 0
-                    ? (0, p.jsx)(x3.A, {
+                    ? (0, p.jsx)(x2.A, {
                           fileContents: r,
                           contentType: "text/plain",
                           fileName: "discord_backup_codes.txt",
@@ -15776,11 +15775,11 @@ ${e}`;
             [t.length, r, l],
         ),
         o = N.useCallback(() => {
-            x2.A.show({
+            x1.A.show({
                 title: g.intl.string(g.t["D+aE7g"]),
                 body: g.intl.string(g.t.EA4ZEk),
                 cancelText: g.intl.string(g.t["ETE/oC"]),
-                onConfirm: () => x$.A.disable(),
+                onConfirm: () => xJ.A.disable(),
             });
         }, []);
     return (0, p.jsx)(sO.D, {
@@ -15802,19 +15801,19 @@ ${e}`;
                         variant: "primary",
                         size: "sm",
                         text: g.intl.string(g.t.cDgKte),
-                        onClick: x5.Ay.enableMFA,
+                        onClick: x4.Ay.enableMFA,
                     }),
             ],
         }),
     });
 }
-var x8 = i(464477);
-function x9() {
-    return !x8.K7;
+var x7 = i(464477);
+function x8() {
+    return !x7.K7;
 }
-let Se = (0, o.E2)(u.X.ACCOUNT_TWO_FACTOR_CRYPTO_NOTICE, {
+let x9 = (0, o.E2)(u.X.ACCOUNT_TWO_FACTOR_CRYPTO_NOTICE, {
     useSearchTerms: () => [g.intl.string(g.t.m0FidJ)],
-    usePredicate: x9,
+    usePredicate: x8,
     Component: function () {
         return (0, p.jsx)(sO.D, {
             label: g.intl.string(g.t.EPVq00),
@@ -15822,17 +15821,17 @@ let Se = (0, o.E2)(u.X.ACCOUNT_TWO_FACTOR_CRYPTO_NOTICE, {
         });
     },
 });
-function St() {
-    let e = x9(),
+function Se() {
+    let e = x8(),
         t = (0, O.bG)([t3.default], () => {
             let e = t3.default.getCurrentUser();
             return null != e && !e.verified;
         });
     return !e && t;
 }
-let Si = (0, o.E2)(u.X.ACCOUNT_UNVERIFIED_USER_NOTICE, {
+let St = (0, o.E2)(u.X.ACCOUNT_UNVERIFIED_USER_NOTICE, {
     useSearchTerms: () => [g.intl.string(g.t.m0FidJ)],
-    usePredicate: St,
+    usePredicate: Se,
     Component: function () {
         return (0, p.jsx)(sO.D, {
             label: g.intl.string(g.t.EPVq00),
@@ -15840,34 +15839,34 @@ let Si = (0, o.E2)(u.X.ACCOUNT_UNVERIFIED_USER_NOTICE, {
         });
     },
 });
-function Sn() {
+function Si() {
     return (0, O.bG)([t3.default], () => {
         let e = t3.default.getCurrentUser();
         return null != e && e.mfaEnabled;
     });
 }
-let Ss = (0, o.E2)(u.X.ACCOUNT_AUTHENTICATOR_APP_SETTING, {
+let Sn = (0, o.E2)(u.X.ACCOUNT_AUTHENTICATOR_APP_SETTING, {
     useSearchTerms: function () {
         let e = (0, O.bG)([cn.default], () => cn.default.hasTOTPEnabled()),
             t = [g.intl.string(g.t.m0FidJ), g.intl.string(g.t.xZEzbu)];
         return e ? t.push(g.intl.string(g.t["D+aE7g"])) : t.push(g.intl.string(g.t.cDgKte)), t;
     },
     usePredicate: function () {
-        let e = x9(),
-            t = St(),
-            i = Sn();
+        let e = x8(),
+            t = Se(),
+            i = Si();
         return !e && !t && i;
     },
     Component: function () {
         let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()),
-            t = (0, O.bG)([x1.A], () => x1.A.getBackupCodes()),
+            t = (0, O.bG)([x0.A], () => x0.A.getBackupCodes()),
             i = (0, O.bG)([cn.default], () => cn.default.hasTOTPEnabled());
-        return null == e ? null : (0, p.jsx)(x7, { backupCodes: t, currentUser: e, hasTOTPEnabled: i });
+        return null == e ? null : (0, p.jsx)(x5, { backupCodes: t, currentUser: e, hasTOTPEnabled: i });
     },
 });
-var Sl = i(658675),
-    Sr = i(103579);
-function Sa(e) {
+var Ss = i(658675),
+    Sl = i(103579);
+function Sr(e) {
     let {
             code: { code: t, consumed: i },
         } = e,
@@ -15886,18 +15885,18 @@ function Sa(e) {
         className: i_.SX,
         children: (0, p.jsxs)(M.D, {
             innerRef: s,
-            className: Sr.Uc,
+            className: Sl.Uc,
             onKeyDown: l,
-            children: [(0, p.jsx)(Sl.P, { checked: i }), (0, p.jsx)("span", { className: Sr.aY, children: n })],
+            children: [(0, p.jsx)(Ss.P, { checked: i }), (0, p.jsx)("span", { className: Sl.aY, children: n })],
         }),
     });
 }
-function So(e) {
+function Sa(e) {
     let { backupCodes: t } = e,
-        i = N.useCallback((e) => e.map((e) => (0, p.jsx)(Sa, { code: e }, e.code)), []),
+        i = N.useCallback((e) => e.map((e) => (0, p.jsx)(Sr, { code: e }, e.code)), []),
         n = N.useCallback(async () => {
-            let e = x1.A.getVerificationKey();
-            await x$.A.confirmViewBackupCodes(e, !0);
+            let e = x0.A.getVerificationKey();
+            await xJ.A.confirmViewBackupCodes(e, !0);
         }, []);
     return (0, p.jsxs)(sO.D, {
         label: g.intl.string(g.t.GfqHPn),
@@ -15906,10 +15905,10 @@ function So(e) {
             (0, p.jsxs)(lU.A, {
                 children: [
                     (0, p.jsx)(lU.A.Child, {
-                        children: (0, p.jsx)("ul", { className: Sr.Pm, children: i(t.slice(0, t.length / 2)) }),
+                        children: (0, p.jsx)("ul", { className: Sl.Pm, children: i(t.slice(0, t.length / 2)) }),
                     }),
                     (0, p.jsx)(lU.A.Child, {
-                        children: (0, p.jsx)("ul", { className: Sr.Pm, children: i(t.slice(t.length / 2)) }),
+                        children: (0, p.jsx)("ul", { className: Sl.Pm, children: i(t.slice(t.length / 2)) }),
                     }),
                 ],
             }),
@@ -15917,25 +15916,25 @@ function So(e) {
         ],
     });
 }
-let Su = (0, o.E2)(u.X.ACCOUNT_BACKUP_CODES_SETTING, {
+let So = (0, o.E2)(u.X.ACCOUNT_BACKUP_CODES_SETTING, {
         useSearchTerms: () => [g.intl.string(g.t.m0FidJ), g.intl.string(g.t.xZEzbu)],
         usePredicate: function () {
-            let e = x9(),
-                t = St(),
-                i = Sn(),
-                n = (0, O.bG)([x1.A], () => x1.A.getBackupCodes().length > 0);
+            let e = x8(),
+                t = Se(),
+                i = Si(),
+                n = (0, O.bG)([x0.A], () => x0.A.getBackupCodes().length > 0);
             return !e && !t && i && n;
         },
         Component: function () {
-            let e = (0, O.bG)([x1.A], () => x1.A.getBackupCodes());
-            return (0, p.jsx)(So, { backupCodes: e });
+            let e = (0, O.bG)([x0.A], () => x0.A.getBackupCodes());
+            return (0, p.jsx)(Sa, { backupCodes: e });
         },
     }),
-    Sd = (0, o.E2)(u.X.ACCOUNT_ENABLE_MFA_SETTING, {
+    Su = (0, o.E2)(u.X.ACCOUNT_ENABLE_MFA_SETTING, {
         useSearchTerms: () => [g.intl.string(g.t.m0FidJ)],
         usePredicate: function () {
-            let e = x9(),
-                t = St();
+            let e = x8(),
+                t = Se();
             return (0, O.bG)([t3.default], () => {
                 let i = t3.default.getCurrentUser();
                 return null != i && !i.mfaEnabled && !e && !t;
@@ -15949,35 +15948,35 @@ let Su = (0, o.E2)(u.X.ACCOUNT_BACKUP_CODES_SETTING, {
                     variant: "primary",
                     size: "sm",
                     text: g.intl.string(g.t.cDgKte),
-                    onClick: x5.Ay.enableMFA,
+                    onClick: x4.Ay.enableMFA,
                 }),
             });
         },
     });
-var Sc = i(846017);
-let Sg = (0, o.Tf)(u.X.ACCOUNT_CHANGE_PASSWORD_SETTING, {
+var Sd = i(846017);
+let Sc = (0, o.Tf)(u.X.ACCOUNT_CHANGE_PASSWORD_SETTING, {
         useTitle: () => g.intl.string(g.t["CIGa+7"]),
         useLabel: () => g.intl.string(g.t.bt75uw),
         useAriaLabel: () => g.intl.string(g.t["FRep5/"]),
         useVariant: () => "secondary",
         onClick: () => {
-            (0, C.openModal)((e) => (0, p.jsx)(Sc.default, { ...e, onSuccess: () => e.onClose() }));
+            (0, C.openModal)((e) => (0, p.jsx)(Sd.default, { ...e, onSuccess: () => e.onClose() }));
         },
     }),
-    Sm = (0, o.E2)(u.X.ACCOUNT_CHANGE_PASSWORD_SETTING, {
+    Sg = (0, o.E2)(u.X.ACCOUNT_CHANGE_PASSWORD_SETTING, {
         useSearchTerms: () => [g.intl.string(g.t["FRep5/"])],
         Component: function () {
             return (0, p.jsx)(eh.$, {
                 variant: "primary",
                 size: "sm",
                 text: g.intl.string(g.t["FRep5/"]),
-                onClick: () => (0, C.openModal)((e) => (0, p.jsx)(Sc.default, { ...e, onSuccess: e.onClose })),
+                onClick: () => (0, C.openModal)((e) => (0, p.jsx)(Sd.default, { ...e, onSuccess: e.onClose })),
             });
         },
     });
-var SA = i(557722),
-    Sh = i(615715);
-function SE(e) {
+var Sm = i(557722),
+    SA = i(615715);
+function Sh(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null == e
         ? null
@@ -15995,18 +15994,18 @@ function SE(e) {
                   : g.intl.string(g.t.LfCBZG)
               : null;
 }
-var ST =
+var SE =
     (((r = {}).AVAILABLE = "available"),
     (r.UNAVAILABLE_NO_CRYPTO = "unavailable_no_crypto"),
     (r.UNAVAILABLE_UNVERIFIED = "unavailable_unverified"),
     r);
-function Sx() {
+function ST() {
     let e = (0, uy.bG)([t3.default], () => t3.default.getCurrentUser()?.verified);
-    return x8.K7 ? (!1 === e ? "unavailable_unverified" : "available") : "unavailable_no_crypto";
+    return x7.K7 ? (!1 === e ? "unavailable_unverified" : "available") : "unavailable_no_crypto";
 }
-function SS() {
+function Sx() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return (0, uy.bG)([H.A, TR.A, t3.default], () =>
+    return (0, uy.bG)([H.A, TO.A, t3.default], () =>
         t3.default.getCurrentUser()?.hasAnyStaffLevel()
             ? e
                 ? g.intl.string(g.t.hxf9fX)
@@ -16014,7 +16013,7 @@ function SS() {
             : H.A.getGuildsArray().some(
                     (e) =>
                         e.features.has(q.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) &&
-                        TR.A.can(q.xBc.ADMINISTRATOR, e),
+                        TO.A.can(q.xBc.ADMINISTRATOR, e),
                 )
               ? e
                   ? g.intl.string(g.t.OYTCUh)
@@ -16022,8 +16021,8 @@ function SS() {
               : null,
     );
 }
-var Sp = i(53516);
-function SN(e) {
+var SS = i(53516);
+function Sp(e) {
     let t,
         i,
         { currentUser: n, togglingSMS: s } = e,
@@ -16036,21 +16035,21 @@ function SN(e) {
         ),
         o = N.useCallback(function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            (0, C.openModal)((t) => (0, p.jsx)(Sh.default, { reason: SA.d.USER_SETTINGS_UPDATE, ...t, ...e }), {
-                modalKey: Sp.V,
+            (0, C.openModal)((t) => (0, p.jsx)(SA.default, { reason: Sm.d.USER_SETTINGS_UPDATE, ...t, ...e }), {
+                modalKey: SS.V,
             });
         }, []),
         u = N.useCallback(() => {
             o();
         }, [o]),
         d = N.useCallback(() => {
-            null == n.phone ? o({ onAddedPhone: x$.A.enableSMS }) : x$.A.enableSMS();
+            null == n.phone ? o({ onAddedPhone: xJ.A.enableSMS }) : xJ.A.enableSMS();
         }, [n, o]),
         c = N.useCallback(() => {
             (0, C.openModal)((e) =>
-                (0, p.jsx)(x4.default, {
+                (0, p.jsx)(x6.default, {
                     ...e,
-                    handleSubmit: x$.A.disableSMS,
+                    handleSubmit: xJ.A.disableSMS,
                     title: g.intl.string(g.t.KLWnit),
                     children: g.intl.string(g.t["W0/Duf"]),
                 }),
@@ -16067,7 +16066,7 @@ function SN(e) {
                 g.intl.format(g.t.PXVoEO, { phoneNumber: e }),
                 (0, p.jsx)(uO.Anchor, {
                     onClick: a,
-                    className: Sr.vN,
+                    className: Sl.vN,
                     children: l ? g.intl.string(g.t.FfltIN) : g.intl.string(g.t.llArAg),
                 }),
             ],
@@ -16082,7 +16081,7 @@ function SN(e) {
             onClick: c,
         });
     else {
-        let e = SE(n);
+        let e = Sh(n);
         t = (0, p.jsxs)(aR.e, {
             size: "sm",
             children: [
@@ -16111,39 +16110,39 @@ function SN(e) {
         children: [i, t],
     });
 }
-let Sf = (0, o.E2)(u.X.ACCOUNT_SMS_BACKUP_AUTHENTICATION_SETTING, {
+let SN = (0, o.E2)(u.X.ACCOUNT_SMS_BACKUP_AUTHENTICATION_SETTING, {
     useSearchTerms: () => [g.intl.string(g.t.uHAJ5v)],
     usePredicate: function () {
-        let e = x9(),
-            t = St(),
-            i = Sn(),
+        let e = x8(),
+            t = Se(),
+            i = Si(),
             n = (0, O.bG)([cn.default], () => cn.default.hasTOTPEnabled());
         return !e && !t && i && n;
     },
     Component: function () {
         let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()),
-            t = (0, O.bG)([x1.A], () => x1.A.togglingSMS);
-        return null == e ? null : (0, p.jsx)(SN, { currentUser: e, togglingSMS: t });
+            t = (0, O.bG)([x0.A], () => x0.A.togglingSMS);
+        return null == e ? null : (0, p.jsx)(Sp, { currentUser: e, togglingSMS: t });
     },
 });
-var SC = i(328009);
-let S_ = (0, o.E2)(u.X.ACCOUNT_SECURITY_KEYS_SETTING, {
+var Sf = i(328009);
+let SC = (0, o.E2)(u.X.ACCOUNT_SECURITY_KEYS_SETTING, {
     useSearchTerms: () => [g.intl.string(g.t.vrOCCk), g.intl.string(g.t.y7SXYX)],
     usePredicate: function () {
-        let e = x9(),
-            t = St();
+        let e = x8(),
+            t = Se();
         return !e && !t;
     },
-    Component: SC.A,
+    Component: Sf.A,
 });
-var SI = i(200921),
-    Sb = i(390310),
-    Sv = i(766928),
-    Sj = i(568385),
-    Sy = i(791606),
-    SO = i(646270),
-    SR = i(738678);
-function SL(e, t) {
+var S_ = i(200921),
+    SI = i(390310),
+    Sb = i(766928),
+    Sv = i(568385),
+    Sj = i(791606),
+    Sy = i(646270),
+    SO = i(738678);
+function SR(e, t) {
     let i = e.client_info?.location ?? e.client_info?.ip,
         n = e.client_info?.platform,
         { text: s, icon: l } = (function (e) {
@@ -16154,33 +16153,33 @@ function SL(e, t) {
                     return { text: g.intl.string(g.t.cDHCNY), icon: e2.k };
                 case "ios":
                 case "android":
-                    return { text: e, icon: SO.u };
+                    return { text: e, icon: Sy.u };
                 case "horizon os":
-                    return { text: e, icon: SR.G };
+                    return { text: e, icon: SO.G };
                 default:
                     return { text: e, icon: e2.k };
             }
         })(e.client_info?.os);
-    return { location: i, platform: n, os: s, Icon: l, lastActive: t ? null : (0, Sb.Y)(e.approx_last_used_time) };
+    return { location: i, platform: n, os: s, Icon: l, lastActive: t ? null : (0, SI.Y)(e.approx_last_used_time) };
 }
-var SD = i(405814);
+var SL = i(405814);
+function SD() {
+    return (0, p.jsx)(V.E, { variant: "text-sm/normal", className: SL.h_, children: g.intl.string(g.t.zZp618) });
+}
 function SP() {
-    return (0, p.jsx)(V.E, { variant: "text-sm/normal", className: SD.h_, children: g.intl.string(g.t.zZp618) });
-}
-function SG() {
-    let { currentSession: e } = (0, Sb.r)();
+    let { currentSession: e } = (0, SI.r)();
     return null == e
-        ? (0, p.jsx)("div", { className: SD.Lq, children: (0, p.jsx)(uK.y, {}) })
-        : (0, p.jsx)(ia.n, { label: g.intl.string(g.t.LLS19o), children: (0, p.jsx)(SV, { session: e, current: !0 }) });
+        ? (0, p.jsx)("div", { className: SL.Lq, children: (0, p.jsx)(uK.y, {}) })
+        : (0, p.jsx)(ia.n, { label: g.intl.string(g.t.LLS19o), children: (0, p.jsx)(SM, { session: e, current: !0 }) });
 }
-function SU(e) {
+function SG(e) {
     let { checked: t, otherSessions: i } = e;
     return (0, p.jsx)(sO.D, {
         label: t.size > 0 ? g.intl.string(g.t.mMEmRO) : g.intl.string(g.t.Vij32M),
         description: g.intl.string(g.t.OTXyaf),
         children: (0, p.jsx)("div", {
             "data-button-hoisted-classname-wrapper": !0,
-            className: SD.Cn,
+            className: SL.Cn,
             children: (0, p.jsx)(eh.$, {
                 variant: "critical-secondary",
                 size: "sm",
@@ -16189,14 +16188,14 @@ function SU(e) {
                         ? g.intl.formatToPlainString(g.t["83CPLj"], { count: t.size })
                         : g.intl.string(g.t.cLmmeY),
                 onClick: () => {
-                    t.size > 0 ? (0, SI.U0)(Array.from(t)) : (0, SI.U0)(i.map((e) => e.id_hash));
+                    t.size > 0 ? (0, S_.U0)(Array.from(t)) : (0, S_.U0)(i.map((e) => e.id_hash));
                 },
             }),
         }),
     });
 }
-function SM() {
-    let { currentSession: e, otherSessions: t } = (0, Sb.r)(),
+function SU() {
+    let { currentSession: e, otherSessions: t } = (0, SI.r)(),
         i = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()),
         [n, s] = N.useState(new Set());
     return (null == e && 0 === t.length) || (0 === t.length && i?.mfaEnabled)
@@ -16209,7 +16208,7 @@ function SM() {
                         children: [
                             t.map((e) =>
                                 (0, p.jsx)(
-                                    SV,
+                                    SM,
                                     {
                                         session: e,
                                         useChecks: n.size > 0,
@@ -16222,41 +16221,41 @@ function SM() {
                                     e.id_hash,
                                 ),
                             ),
-                            i?.mfaEnabled ? null : (0, p.jsx)(Sk, {}),
+                            i?.mfaEnabled ? null : (0, p.jsx)(SV, {}),
                         ],
                     }),
                     t.length > 0 &&
                         (0, p.jsx)("div", {
-                            className: SD.wq,
-                            children: (0, p.jsx)(SU, { checked: n, otherSessions: t }),
+                            className: SL.wq,
+                            children: (0, p.jsx)(SG, { checked: n, otherSessions: t }),
                         }),
                 ],
             })
           : null;
 }
-function SV(e) {
+function SM(e) {
     let { session: t, current: i, setChecked: n, checked: s, useChecks: l } = e,
-        { location: r, platform: a, os: o, Icon: u, lastActive: d } = SL(t, i),
+        { location: r, platform: a, os: o, Icon: u, lastActive: d } = SR(t, i),
         c = [o, a].filter(t6.Vq),
         m = [r, d].filter(t6.Vq);
     return (0, p.jsxs)(
         "div",
         {
-            className: ew()(SD.dZ, { [SD.gg]: i }),
+            className: ew()(SL.dZ, { [SL.gg]: i }),
             children: [
                 (0, p.jsxs)("div", {
-                    className: SD.OC,
+                    className: SL.OC,
                     children: [
                         (0, p.jsx)("div", {
-                            className: SD.km,
+                            className: SL.km,
                             children: (0, p.jsx)(u, { size: "md", color: "currentColor" }),
                         }),
                         (0, p.jsxs)("div", {
-                            className: SD.F3,
+                            className: SL.F3,
                             children: [
                                 (0, p.jsxs)(V.E, {
                                     variant: "eyebrow",
-                                    className: SD.nT,
+                                    className: SL.nT,
                                     children: [
                                         (0, p.jsx)("span", { children: c[0] }),
                                         c.length > 1 &&
@@ -16270,7 +16269,7 @@ function SV(e) {
                                 }),
                                 (0, p.jsxs)(V.E, {
                                     variant: "text-sm/medium",
-                                    className: SD.nT,
+                                    className: SL.nT,
                                     children: [
                                         (0, p.jsx)("span", { children: m[0] }),
                                         m.length > 1 &&
@@ -16288,8 +16287,8 @@ function SV(e) {
                             ? null
                             : l
                               ? (0, p.jsx)("div", {
-                                    className: SD.GR,
-                                    children: (0, p.jsx)(Sj.J, {
+                                    className: SL.GR,
+                                    children: (0, p.jsx)(Sv.J, {
                                         onChange: (e) => {
                                             n?.(e);
                                         },
@@ -16297,41 +16296,41 @@ function SV(e) {
                                     }),
                                 })
                               : (0, p.jsx)(M.D, {
-                                    className: SD.ux,
+                                    className: SL.ux,
                                     onClick: (e) => {
-                                        e.shiftKey ? n?.(!0) : (0, SI.U0)(t.id_hash);
+                                        e.shiftKey ? n?.(!0) : (0, S_.U0)(t.id_hash);
                                     },
                                     "aria-label": g.intl.string(g.t.E4MJNt),
                                     children: (0, p.jsx)(cZ.P, { size: "md", color: "currentColor" }),
                                 }),
                     ],
                 }),
-                !i && (0, p.jsx)(eE.c, { className: SD.O9 }),
+                !i && (0, p.jsx)(eE.c, { className: SL.O9 }),
             ],
         },
         t.id_hash,
     );
 }
-function Sk() {
+function SV() {
     return (0, p.jsxs)("div", {
-        className: ew()(SD.dZ, SD.EC),
+        className: ew()(SL.dZ, SL.EC),
         children: [
             (0, p.jsxs)("div", {
-                className: SD.OC,
+                className: SL.OC,
                 children: [
-                    (0, p.jsx)("div", { className: SD.km, children: (0, p.jsx)(Sy.A, { width: "32", height: "32" }) }),
+                    (0, p.jsx)("div", { className: SL.km, children: (0, p.jsx)(Sj.A, { width: "32", height: "32" }) }),
                     (0, p.jsxs)("div", {
-                        className: SD.F3,
+                        className: SL.F3,
                         children: [
                             (0, p.jsx)(V.E, {
                                 variant: "eyebrow",
-                                className: SD.nT,
+                                className: SL.nT,
                                 color: "text-muted",
                                 children: (0, p.jsx)("span", { children: g.intl.string(g.t.iUa0sn) }),
                             }),
                             (0, p.jsx)(V.E, {
                                 variant: "text-sm/medium",
-                                className: SD.nT,
+                                className: SL.nT,
                                 color: "text-muted",
                                 children: (0, p.jsx)("span", {
                                     children: g.intl.format(g.t["044+8i"], {
@@ -16346,13 +16345,13 @@ function Sk() {
                     }),
                 ],
             }),
-            (0, p.jsx)("div", { className: SD.O9 }),
+            (0, p.jsx)("div", { className: SL.O9 }),
         ],
     });
 }
-var Sw = i(176524),
-    SB = i(583133);
-function SF(e) {
+var Sk = i(176524),
+    Sw = i(583133);
+function SB(e) {
     let { icon: t, label: i, subLabel: n, description: s, children: l, muted: r } = e;
     return (0, p.jsxs)(R.B, {
         direction: "horizontal",
@@ -16360,7 +16359,7 @@ function SF(e) {
         gap: "sm",
         role: "listitem",
         children: [
-            (0, p.jsx)(Sw.A, { Icon: t, color: r ? w.A.colors.ICON_MUTED : "currentColor" }),
+            (0, p.jsx)(Sk.A, { Icon: t, color: r ? w.A.colors.ICON_MUTED : "currentColor" }),
             (0, p.jsxs)(R.B, {
                 direction: "vertical",
                 gap: "xxs",
@@ -16389,11 +16388,11 @@ function SF(e) {
         ],
     });
 }
-function Sz(e) {
+function SF(e) {
     let { session: t, current: i } = e,
-        { location: n, platform: s, os: l, Icon: r, lastActive: a } = SL(t, i),
+        { location: n, platform: s, os: l, Icon: r, lastActive: a } = SR(t, i),
         o = [n, a].filter(t6.Vq);
-    return (0, p.jsx)(SF, {
+    return (0, p.jsx)(SB, {
         icon: r,
         label: l,
         subLabel: s,
@@ -16401,14 +16400,14 @@ function Sz(e) {
         children:
             !i &&
             (0, p.jsx)(M.D, {
-                className: SB.X,
-                onClick: () => (0, SI.U0)(t.id_hash),
+                className: Sw.X,
+                onClick: () => (0, S_.U0)(t.id_hash),
                 "aria-label": g.intl.string(g.t.E4MJNt),
                 children: (0, p.jsx)(cZ.P, { size: "md", color: "currentColor" }),
             }),
     });
 }
-function SY(e) {
+function Sz(e) {
     let { title: t, children: i } = e,
         n = N.useId();
     return (0, p.jsxs)(R.B, {
@@ -16422,26 +16421,26 @@ function SY(e) {
         ],
     });
 }
-function SX() {
-    let { currentSession: e } = (0, Sb.r)();
+function SY() {
+    let { currentSession: e } = (0, SI.r)();
     return null == e
         ? (0, p.jsx)(uK.y, {})
-        : (0, p.jsx)(SY, { title: g.intl.string(g.t.LLS19o), children: (0, p.jsx)(Sz, { session: e, current: !0 }) });
+        : (0, p.jsx)(Sz, { title: g.intl.string(g.t.LLS19o), children: (0, p.jsx)(SF, { session: e, current: !0 }) });
 }
-let SH = (0, o.E2)(u.X.SESSIONS_CURRENT_SESSION_SETTING, {
+let SX = (0, o.E2)(u.X.SESSIONS_CURRENT_SESSION_SETTING, {
         Component: function () {
-            return (0, iz._A)("CurrentSessionSetting") ? (0, p.jsx)(SX, {}) : (0, p.jsx)(SG, {});
+            return (0, iz._A)("CurrentSessionSetting") ? (0, p.jsx)(SY, {}) : (0, p.jsx)(SP, {});
         },
         useSearchTerms: () => [],
     }),
-    SK = (0, o.E2)(u.X.SESSIONS_LOGOUT_ALL_SESSIONS_SETTING, {
+    SH = (0, o.E2)(u.X.SESSIONS_LOGOUT_ALL_SESSIONS_SETTING, {
         Component: function () {
-            let { otherSessions: e } = (0, Sb.r)();
+            let { otherSessions: e } = (0, SI.r)();
             return (0, p.jsx)(sO.D, {
                 label: g.intl.string(g.t.Vij32M),
                 description: g.intl.string(g.t.OTXyaf),
                 children: (0, p.jsx)(eh.$, {
-                    onClick: () => (0, SI.U0)(e.map((e) => e.id_hash)),
+                    onClick: () => (0, S_.U0)(e.map((e) => e.id_hash)),
                     variant: "critical-primary",
                     size: "sm",
                     text: g.intl.string(g.t.cLmmeY),
@@ -16450,13 +16449,13 @@ let SH = (0, o.E2)(u.X.SESSIONS_CURRENT_SESSION_SETTING, {
         },
         useSearchTerms: () => [g.intl.string(g.t.Vij32M)],
         usePredicate: () => {
-            let { otherSessions: e } = (0, Sb.r)();
+            let { otherSessions: e } = (0, SI.r)();
             return e.length > 0;
         },
     });
-function SW() {
-    return (0, p.jsx)(SF, {
-        icon: Sv.W,
+function SK() {
+    return (0, p.jsx)(SB, {
+        icon: Sb.W,
         label: g.intl.string(g.t.iUa0sn),
         description: g.intl.format(g.t["044+8i"], {
             onClick: () =>
@@ -16465,32 +16464,32 @@ function SW() {
         muted: !0,
     });
 }
-function SZ() {
-    let { otherSessions: e } = (0, Sb.r)(),
+function SW() {
+    let { otherSessions: e } = (0, SI.r)(),
         t = (0, O.bG)([t3.default], () => t3.default.getCurrentUser());
-    return (0, p.jsxs)(SY, {
+    return (0, p.jsxs)(Sz, {
         title: g.intl.string(g.t.xx1MWc),
-        children: [e.map((e) => (0, p.jsx)(Sz, { session: e }, e.id_hash)), t?.mfaEnabled ? null : (0, p.jsx)(SW, {})],
+        children: [e.map((e) => (0, p.jsx)(SF, { session: e }, e.id_hash)), t?.mfaEnabled ? null : (0, p.jsx)(SK, {})],
     });
 }
-let Sq = (0, o.E2)(u.X.SESSIONS_OTHER_SESSIONS_SETTING, {
+let SZ = (0, o.E2)(u.X.SESSIONS_OTHER_SESSIONS_SETTING, {
         Component: function () {
-            return (0, iz._A)("OtherSessionsSetting") ? (0, p.jsx)(SZ, {}) : (0, p.jsx)(SM, {});
+            return (0, iz._A)("OtherSessionsSetting") ? (0, p.jsx)(SW, {}) : (0, p.jsx)(SU, {});
         },
         useSearchTerms: () => [g.intl.string(g.t.Vij32M)],
         usePredicate: () => {
-            let { otherSessions: e } = (0, Sb.r)(),
+            let { otherSessions: e } = (0, SI.r)(),
                 t = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()?.mfaEnabled);
             return e.length > 0 || !t;
         },
     }),
-    SQ = (0, o.zZ)(u.X.SESSIONS_CATEGORY, {
+    Sq = (0, o.zZ)(u.X.SESSIONS_CATEGORY, {
         useTitle: () => g.intl.string(g.t.mEndXM),
         useSubtitle: () => g.intl.string(g.t.b7ZpTM),
         initialize: () => {
-            (0, SI.GY)();
+            (0, S_.GY)();
         },
-        buildLayout: () => [SH, Sq, SK],
+        buildLayout: () => [SX, SZ, SH],
         useSearchTerms: () => [
             g.intl.string(g.t["+1h0k/"]),
             g.intl.string(g.t.LLS19o),
@@ -16498,7 +16497,7 @@ let Sq = (0, o.E2)(u.X.SESSIONS_OTHER_SESSIONS_SETTING, {
             g.intl.string(g.t.lSWsrd),
         ],
     }),
-    SJ = (0, o.zZ)(u.X.SESSIONS_CATEGORY, {
+    SQ = (0, o.zZ)(u.X.SESSIONS_CATEGORY, {
         useSearchTerms: () => [
             g.intl.string(g.t["+1h0k/"]),
             g.intl.string(g.t.LLS19o),
@@ -16506,65 +16505,65 @@ let Sq = (0, o.E2)(u.X.SESSIONS_OTHER_SESSIONS_SETTING, {
             g.intl.string(g.t.Vij32M),
             g.intl.string(g.t.lSWsrd),
         ],
-        buildLayout: () => [SH, Sq],
+        buildLayout: () => [SX, SZ],
         initialize: () => (
-            (0, SI.GY)(),
+            (0, S_.GY)(),
             () => {
-                (0, SI.ZQ)();
+                (0, S_.ZQ)();
             }
         ),
         useInlineNotice: function () {
-            return N.useMemo(() => ({ type: ef.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: SP }), []);
+            return N.useMemo(() => ({ type: ef.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: SD }), []);
         },
     }),
-    S$ = (0, o.t_)(u.X.SESSIONS_PANEL, {
+    SJ = (0, o.t_)(u.X.SESSIONS_PANEL, {
         useTitle: () => ((0, iz._A)("SessionsPanel") ? g.intl.string(g.t.mEndXM) : g.intl.string(g.t["+1h0k/"])),
         useObscuredNotice: uX.L,
-        buildLayout: () => ((0, iz.pC)("SessionsPanel") ? [SQ] : [SJ]),
+        buildLayout: () => ((0, iz.pC)("SessionsPanel") ? [Sq] : [SQ]),
     }),
-    S0 = (0, o.i4)(u.X.SESSIONS_SIDEBAR_ITEM, {
+    S$ = (0, o.i4)(u.X.SESSIONS_SIDEBAR_ITEM, {
         useTitle: () => g.intl.string(g.t["+1h0k/"]),
-        icon: Sv.W,
+        icon: Sb.W,
         usePredicate: () => !(0, iz._A)("SessionsPanel"),
-        buildLayout: () => [S$],
+        buildLayout: () => [SJ],
     }),
-    S1 = (0, o.t0)(u.X.ACCOUNT_SESSIONS_NESTED_PANEL, {
-        buildLayout: () => [S$],
+    S0 = (0, o.t0)(u.X.ACCOUNT_SESSIONS_NESTED_PANEL, {
+        buildLayout: () => [SJ],
         usePredicate: () => (0, iz._A)("AccountSessionsNestedPanel"),
         initialize: () => {
-            (0, SI.GY)();
+            (0, S_.GY)();
         },
         useTrailingDecoration: () => ({
             type: ef.xn.TEXT,
             useText: () => {
-                let { currentSession: e, otherSessions: t } = (0, Sb.r)(),
+                let { currentSession: e, otherSessions: t } = (0, SI.r)(),
                     i = t.length + +(null != e);
                 return i > 0 ? g.intl.formatToPlainString(g.t.G7zwOk, { count: i }) : g.intl.string(g.t.MKDeyL);
             },
         }),
     }),
-    S2 = (0, o.zZ)(u.X.ACCOUNT_AUTHENTICATION_CATEGORY, {
+    S1 = (0, o.zZ)(u.X.ACCOUNT_AUTHENTICATION_CATEGORY, {
         useTitle: () => g.intl.string(g.t.pKSjEj),
         useInlineNotice: function () {
             return (0, O.bG)([t3.default], () => t3.default.getCurrentUser()?.mfaEnabled ?? !1)
-                ? { type: ef.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: x0 }
+                ? { type: ef.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: x$ }
                 : null;
         },
         buildLayout: () => [
-            Sm,
-            Se,
-            Si,
-            Sd,
-            Ss,
+            Sg,
+            x9,
+            St,
             Su,
-            Sf,
-            S_,
-            ...((0, iz.pC)("AccountAuthenticationCategory") ? [S1] : []),
+            Sn,
+            So,
+            SN,
+            SC,
+            ...((0, iz.pC)("AccountAuthenticationCategory") ? [S0] : []),
         ],
     });
 i(204925);
-var S3 = i(818348);
-let S6 = function () {
+var S2 = i(818348);
+let S3 = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 ? arguments[1] : void 0;
     (0, C.openModalLazy)(
@@ -16572,17 +16571,17 @@ let S6 = function () {
             let { default: t } = await Promise.all([i.e("40933"), i.e("19623"), i.e("21007")]).then(i.bind(i, 888363));
             return (i) => (0, p.jsx)(t, { claimRequired: e, ...i });
         },
-        { onCloseRequest: e ? S3.tE : null, onCloseCallback: t },
+        { onCloseRequest: e ? S2.tE : null, onCloseCallback: t },
     );
 };
-var S4 = i(876696),
-    S5 = i(36149),
-    S7 = i(207560);
-function S8(e) {
-    let t = (0, S7.fk)(),
-        i = (0, S5.b8)(),
-        n = (0, S5.yM)(),
-        s = (0, S5.Y2)();
+var S6 = i(876696),
+    S4 = i(36149),
+    S5 = i(207560);
+function S7(e) {
+    let t = (0, S5.fk)(),
+        i = (0, S4.b8)(),
+        n = (0, S4.yM)(),
+        s = (0, S4.Y2)();
     if (!t) return !1;
     let l = !i || n;
     switch (e) {
@@ -16596,24 +16595,24 @@ function S8(e) {
             return !1;
     }
 }
-var S9 = i(516761);
-function pe() {
+var S8 = i(516761);
+function S9() {
     let e = g.intl.string(g.t.XxRj7f);
     return (0, p.jsxs)(V.E, {
         variant: "text-md/medium",
         children: [
             `${e} • `,
-            g.intl.format(S9.default.WM5adV, {
+            g.intl.format(S8.default.WM5adV, {
                 handleOnHelpUrlHook: () => window.open(ta.A.getArticleURL(q.MVz.TIGGER_PAWTECT_LEARN_MORE), "_blank"),
             }),
         ],
     });
 }
-let pt = (0, o.Tf)(u.X.ACCOUNT_INFO_AGE_GROUP_EDIT_SETTING, {
-        usePredicate: () => S8("edit"),
+let pe = (0, o.Tf)(u.X.ACCOUNT_INFO_AGE_GROUP_EDIT_SETTING, {
+        usePredicate: () => S7("edit"),
         useTitle: () => g.intl.string(g.t["/52UYy"]),
         useVariant: () => "secondary",
-        useTrailingContent: () => ({ type: ef._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: pe }),
+        useTrailingContent: () => ({ type: ef._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: S9 }),
         useLabel: () => g.intl.string(g.t.bt75uw),
         onClick: function () {
             (0, C.openModalLazy)(async () => {
@@ -16622,8 +16621,8 @@ let pt = (0, o.Tf)(u.X.ACCOUNT_INFO_AGE_GROUP_EDIT_SETTING, {
             });
         },
     }),
-    pi = (0, o.E2)(u.X.ACCOUNT_INFO_AGE_GROUP_INFO_SETTING, {
-        usePredicate: () => S8("info"),
+    pt = (0, o.E2)(u.X.ACCOUNT_INFO_AGE_GROUP_INFO_SETTING, {
+        usePredicate: () => S7("info"),
         useSearchTerms: () => [g.intl.string(g.t["/52UYy"])],
         Component: function () {
             return (0, p.jsx)(sO.D, {
@@ -16639,7 +16638,7 @@ let pt = (0, o.Tf)(u.X.ACCOUNT_INFO_AGE_GROUP_EDIT_SETTING, {
                         (0, p.jsx)("div", {
                             style: { visibility: "hidden" },
                             children: (0, p.jsx)(eh.$, {
-                                onClick: S3.tE,
+                                onClick: S2.tE,
                                 text: g.intl.string(g.t.bt75uw),
                                 "aria-hidden": !0,
                             }),
@@ -16649,22 +16648,22 @@ let pt = (0, o.Tf)(u.X.ACCOUNT_INFO_AGE_GROUP_EDIT_SETTING, {
             });
         },
     });
-var pn = i(139716),
-    ps = i(847599);
-function pl() {
-    return (0, S5.yM)() ? g.intl.string(g.t.sK0dmH) : g.intl.string(g.t.lKDPGA);
+var pi = i(139716),
+    pn = i(847599);
+function ps() {
+    return (0, S4.yM)() ? g.intl.string(g.t.sK0dmH) : g.intl.string(g.t.lKDPGA);
 }
-let pr = (0, o.Tf)(u.X.ACCOUNT_INFO_AGE_GROUP_VERIFY_SETTING, {
-        usePredicate: () => S8("verify"),
+let pl = (0, o.Tf)(u.X.ACCOUNT_INFO_AGE_GROUP_VERIFY_SETTING, {
+        usePredicate: () => S7("verify"),
         useTitle: () => g.intl.string(g.t["/52UYy"]),
         useVariant: () => "secondary",
-        useTrailingContent: () => ({ type: ef._1.TEXT, useText: pl }),
+        useTrailingContent: () => ({ type: ef._1.TEXT, useText: ps }),
         useLabel: function () {
-            return (0, S5.yM)() ? g.intl.string(g.t["9KiIz6"]) : g.intl.string(g.t.DVywUB);
+            return (0, S4.yM)() ? g.intl.string(g.t["9KiIz6"]) : g.intl.string(g.t.DVywUB);
         },
-        onClick: () => pn.A.showAgeVerificationGetStartedModal({ entryPoint: ps.q1.ACCOUNT_AGE_GROUP }),
+        onClick: () => pi.A.showAgeVerificationGetStartedModal({ entryPoint: pn.q1.ACCOUNT_AGE_GROUP }),
     }),
-    pa = (0, o.Tf)(u.X.ACCOUNT_INFO_CLAIM_ACCOUNT_SETTING, {
+    pr = (0, o.Tf)(u.X.ACCOUNT_INFO_CLAIM_ACCOUNT_SETTING, {
         usePredicate: () => {
             let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser());
             return null != e && !e.isClaimed();
@@ -16673,16 +16672,16 @@ let pr = (0, o.Tf)(u.X.ACCOUNT_INFO_AGE_GROUP_VERIFY_SETTING, {
         useVariant: () => "secondary",
         useTrailingContent: () => ({ type: ef._1.TEXT, useText: () => g.intl.string(g.t.qxk9zo) }),
         useLabel: () => g.intl.string(g.t.BleMPB),
-        onClick: () => S6(),
+        onClick: () => S3(),
     });
-function po(e) {
+function pa(e) {
     return `${"*".repeat(e.length - 4)}${e.slice(-4)}`;
 }
-function pu(e) {
+function po(e) {
     let [t, i] = e.split("@");
     return `${"*".repeat(t.length)}@${i}`;
 }
-function pd(e) {
+function pu(e) {
     let { text: t, censor: i, revealLabel: n, hideLabel: s, redesign: l = !1 } = e,
         [r, a] = N.useState(!1),
         o = r ? t : i(t);
@@ -16703,23 +16702,23 @@ function pd(e) {
         ],
     });
 }
-function pc() {
+function pd() {
     let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()?.email);
     return null == e
         ? (0, p.jsx)(V.E, { variant: "text-md/medium", children: g.intl.string(g.t["8SfTN/"]) })
-        : (0, p.jsx)(pd, {
+        : (0, p.jsx)(pu, {
               text: e,
-              censor: pu,
+              censor: po,
               revealLabel: g.intl.string(g.t["Zvx+yV"]),
               hideLabel: g.intl.string(g.t.nqTD4d),
               redesign: !0,
           });
 }
-let pg = (0, o.Tf)(u.X.ACCOUNT_INFO_EMAIL_SETTING, {
+let pc = (0, o.Tf)(u.X.ACCOUNT_INFO_EMAIL_SETTING, {
     usePredicate: () => (0, O.bG)([t3.default], () => t3.default.getCurrentUser()?.isClaimed()) ?? !1,
     useTitle: () => g.intl.string(g.t.tlZllC),
     useVariant: () => "secondary",
-    useTrailingContent: () => ({ type: ef._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: pc }),
+    useTrailingContent: () => ({ type: ef._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: pd }),
     useLabel: function () {
         return null == (0, O.bG)([t3.default], () => t3.default.getCurrentUser()?.email)
             ? g.intl.string(g.t.OYkgVk)
@@ -16737,7 +16736,7 @@ let pg = (0, o.Tf)(u.X.ACCOUNT_INFO_EMAIL_SETTING, {
         });
     },
 });
-function pm() {
+function pg() {
     let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()),
         t = e?.phone ?? null;
     return null == e || null == t
@@ -16747,16 +16746,16 @@ function pm() {
               align: "center",
               justify: "end",
               gap: "md",
-              children: (0, p.jsx)(pd, {
+              children: (0, p.jsx)(pu, {
                   text: t,
-                  censor: po,
+                  censor: pa,
                   revealLabel: g.intl.string(g.t.eY3xlT),
                   hideLabel: g.intl.string(g.t["jllbv+"]),
                   redesign: !0,
               }),
           });
 }
-let pA = (0, o.Tf)(u.X.ACCOUNT_INFO_PHONE_SETTING, {
+let pm = (0, o.Tf)(u.X.ACCOUNT_INFO_PHONE_SETTING, {
     usePredicate: () => (0, O.bG)([t3.default], () => t3.default.getCurrentUser()?.isClaimed()) ?? !1,
     useTitle: () => g.intl.string(g.t.kerONq),
     useAriaLabel: function () {
@@ -16765,7 +16764,7 @@ let pA = (0, o.Tf)(u.X.ACCOUNT_INFO_PHONE_SETTING, {
             : g.intl.string(g.t.YDabSe);
     },
     useVariant: () => "secondary",
-    useTrailingContent: () => ({ type: ef._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: pm }),
+    useTrailingContent: () => ({ type: ef._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: pg }),
     useLabel: function () {
         return null == (0, O.bG)([t3.default], () => t3.default.getCurrentUser()?.phone)
             ? g.intl.string(g.t.OYkgVk)
@@ -16776,9 +16775,9 @@ let pA = (0, o.Tf)(u.X.ACCOUNT_INFO_PHONE_SETTING, {
             ? (0, C.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.resolve().then(i.bind(i, 615715));
-                      return (t) => (0, p.jsx)(e, { reason: SA.d.USER_SETTINGS_UPDATE, ...t });
+                      return (t) => (0, p.jsx)(e, { reason: Sm.d.USER_SETTINGS_UPDATE, ...t });
                   },
-                  { modalKey: Sp.V },
+                  { modalKey: SS.V },
               )
             : (0, C.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([i.e("36874"), i.e("89061")]).then(i.bind(i, 359012));
@@ -16786,12 +16785,12 @@ let pA = (0, o.Tf)(u.X.ACCOUNT_INFO_PHONE_SETTING, {
               });
     },
 });
-function ph() {
+function pA() {
     let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser());
     return null != e && !e.isClaimed();
 }
-function pE() {
-    let e = (0, EY.EC)(),
+function ph() {
+    let e = (0, Ez.EC)(),
         t = e?.nick?.[0] ?? null,
         i = (0, O.bG)([t3.default], () => t3.default.getCurrentUser());
     if (null == i) return null;
@@ -16813,14 +16812,14 @@ function pE() {
         ],
     });
 }
-let pT = (0, o.Tf)(u.X.ACCOUNT_INFO_USERNAME_SETTING, {
+let pE = (0, o.Tf)(u.X.ACCOUNT_INFO_USERNAME_SETTING, {
         useTitle: () => g.intl.string(g.t.qqhR3L),
-        useTrailingContent: () => ({ type: ef._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: pE }),
+        useTrailingContent: () => ({ type: ef._1.STRONGLY_DISCOURAGED_CUSTOM, StronglyDiscouragedCustomComponent: ph }),
         useLabel: () => g.intl.string(g.t.bt75uw),
         useAriaLabel: () => g.intl.string(g.t.JECa91),
-        useSubtitle: () => (ph() ? g.intl.string(g.t["7Ngnyr"]) : void 0),
+        useSubtitle: () => (pA() ? g.intl.string(g.t["7Ngnyr"]) : void 0),
         useVariant: () => "secondary",
-        useDisabled: ph,
+        useDisabled: pA,
         onClick: function () {
             (0, C.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([i.e("2888"), i.e("20429"), i.e("13161")]).then(
@@ -16830,7 +16829,7 @@ let pT = (0, o.Tf)(u.X.ACCOUNT_INFO_USERNAME_SETTING, {
             });
         },
     }),
-    px = (0, o.zZ)(u.X.ACCOUNT_INFO_CATEGORY, {
+    pT = (0, o.zZ)(u.X.ACCOUNT_INFO_CATEGORY, {
         usePredicate: () => (0, O.bG)([t3.default], () => null != t3.default.getCurrentUser()),
         useTitle: () => g.intl.string(g.t.apNo4l),
         useInlineNotice: function () {
@@ -16845,27 +16844,27 @@ let pT = (0, o.Tf)(u.X.ACCOUNT_INFO_USERNAME_SETTING, {
                             noticeType: "warning",
                             useTitle: () => g.intl.string(g.t.tuGzBT),
                             useText: () => g.intl.string(g.t.NAzplE),
-                            button: { useText: () => g.intl.string(g.t.lm1UKt), onClick: () => (0, S4.S)(e) },
+                            button: { useText: () => g.intl.string(g.t.lm1UKt), onClick: () => (0, S6.S)(e) },
                         }
                   : {
                         type: ef.lT.INLINE_NOTICE,
                         noticeType: "critical",
                         useTitle: () => g.intl.string(g.t["/3qnL/"]),
                         useText: () => g.intl.string(g.t.qKs3vg),
-                        button: { useText: () => g.intl.string(g.t["7psymi"]), onClick: () => S6() },
+                        button: { useText: () => g.intl.string(g.t["7psymi"]), onClick: () => S3() },
                     };
         },
-        buildLayout: () => [pT, pa, pg, pA, pr, pt, pi],
+        buildLayout: () => [pE, pr, pc, pm, pl, pe, pt],
     }),
-    pS = (0, o.Tf)(u.X.AUTHENTICATOR_APP_DISABLE_BUTTON, {
+    px = (0, o.Tf)(u.X.AUTHENTICATOR_APP_DISABLE_BUTTON, {
         useTitle: () => g.intl.string(g.t.lQsY7B),
-        useSubtitle: () => SS(!0),
-        useDisabled: () => null !== SS(!0),
+        useSubtitle: () => Sx(!0),
+        useDisabled: () => null !== Sx(!0),
         useLabel: () => g.intl.string(g.t.N86XcP),
         useVariant: () => "critical-secondary",
         usePredicate: () => {
             let e = (0, O.bG)([cn.default], () => cn.default.hasTOTPEnabled()),
-                t = Sx() === ST.AVAILABLE;
+                t = ST() === SE.AVAILABLE;
             return e && t;
         },
         onClick: () =>
@@ -16874,15 +16873,15 @@ let pT = (0, o.Tf)(u.X.ACCOUNT_INFO_USERNAME_SETTING, {
                 subtitle: g.intl.string(g.t.EA4ZEk),
                 variant: "critical",
                 confirmText: g.intl.string(g.t.N86XcP),
-                onConfirm: () => x$.A.disable(),
+                onConfirm: () => xJ.A.disable(),
             }),
     }),
-    pp = (0, o.zZ)(u.X.AUTHENTICATOR_APP_CATEGORY, {
+    pS = (0, o.zZ)(u.X.AUTHENTICATOR_APP_CATEGORY, {
         useTitle: () => g.intl.string(g.t.RumMFo),
         useSubtitle: () => g.intl.string(g.t.iTbTo7),
         useHeaderDecoration: function () {
             let e = (0, O.bG)([cn.default], () => cn.default.hasTOTPEnabled()),
-                t = Sx() === ST.AVAILABLE;
+                t = ST() === SE.AVAILABLE;
             if (!e && t)
                 return {
                     type: ef.WX.BUTTON_GROUP,
@@ -16891,38 +16890,38 @@ let pT = (0, o.Tf)(u.X.ACCOUNT_INFO_USERNAME_SETTING, {
                             type: ef.UV.BUTTON,
                             id: "mfa-setup-button",
                             text: g.intl.string(g.t.cTNUeD),
-                            onClick: x5.Ay.enableMFA,
+                            onClick: x4.Ay.enableMFA,
                         },
                     ],
                 };
         },
         useInlineNotice: function () {
-            switch (Sx()) {
-                case ST.UNAVAILABLE_NO_CRYPTO:
+            switch (ST()) {
+                case SE.UNAVAILABLE_NO_CRYPTO:
                     return { type: ef.lT.INLINE_NOTICE, noticeType: "info", useText: () => g.intl.string(g.t.PhHhsj) };
-                case ST.UNAVAILABLE_UNVERIFIED:
+                case SE.UNAVAILABLE_UNVERIFIED:
                     return {
                         type: ef.lT.INLINE_NOTICE,
                         noticeType: "warning",
                         useText: () => g.intl.string(g.t.uggF7o),
                     };
-                case ST.AVAILABLE:
+                case SE.AVAILABLE:
                     return;
             }
         },
         collapseOnEmpty: !1,
-        buildLayout: () => [pS],
+        buildLayout: () => [px],
     });
-var pN = i(32880),
-    pf = i(663417);
-function pC() {
+var pp = i(32880),
+    pN = i(663417);
+function pf() {
     (0, C.openModalLazy)(async () => {
         let { default: e } = await Promise.resolve().then(i.bind(i, 662758));
         return (t) =>
             (0, p.jsx)(e, {
                 ...t,
                 handleSubmit: (e) =>
-                    x$.A.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
+                    xJ.A.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
                         var t;
                         return (
                             (t = e),
@@ -16940,14 +16939,14 @@ function pC() {
             });
     });
 }
-var p_ = i(526122);
-function pI(e) {
+var pC = i(526122);
+function p_(e) {
     return `${e.slice(0, 4)}-${e.slice(4)}`;
 }
-async function pb() {
-    let e = x1.A.getVerificationKey();
+async function pI() {
+    let e = x0.A.getVerificationKey();
     try {
-        await x$.A.confirmViewBackupCodes(e, !0);
+        await xJ.A.confirmViewBackupCodes(e, !0);
     } catch (e) {
         (0, En.P0)({
             message: e.body?.message ?? g.intl.string(g.t.F8FvUy),
@@ -16956,19 +16955,19 @@ async function pb() {
         });
     }
 }
-function pv(e) {
+function pb(e) {
     let {
             code: { code: t, consumed: i },
         } = e,
-        n = pI(t),
+        n = p_(t),
         s = N.useRef(null),
         l = (0, p.jsxs)(p.Fragment, {
-            children: [(0, p.jsx)(Sl.P, { checked: i }), (0, p.jsx)(V.E, { variant: "text-md/normal", children: n })],
+            children: [(0, p.jsx)(Ss.P, { checked: i }), (0, p.jsx)(V.E, { variant: "text-md/normal", children: n })],
         });
     return co.p5
         ? (0, p.jsx)(M.D, {
               tag: "li",
-              className: ew()(p_.aY, p_.vk),
+              className: ew()(pC.aY, pC.vk),
               innerRef: s,
               onKeyDown: (e) => {
                   "c" === e.key &&
@@ -16981,57 +16980,57 @@ function pv(e) {
               },
               children: l,
           })
-        : (0, p.jsx)("li", { className: p_.aY, children: l });
+        : (0, p.jsx)("li", { className: pC.aY, children: l });
 }
-let pj = (0, o.zZ)(u.X.BACKUP_CODES_CATEGORY, {
+let pv = (0, o.zZ)(u.X.BACKUP_CODES_CATEGORY, {
         useTitle: () => g.intl.string(g.t.fC9qV0),
         useSubtitle: () =>
-            (0, O.bG)([x1.A], () => x1.A.getBackupCodes().length > 0)
+            (0, O.bG)([x0.A], () => x0.A.getBackupCodes().length > 0)
                 ? g.intl.format(g.t.tp7zEK, {})
                 : g.intl.string(g.t.LoOi4S),
-        usePredicate: Sn,
-        buildLayout: () => [py],
+        usePredicate: Si,
+        buildLayout: () => [pj],
     }),
-    py = (0, o.E2)(u.X.BACKUP_CODES_SETTING, {
+    pj = (0, o.E2)(u.X.BACKUP_CODES_SETTING, {
         useSearchTerms: () => [g.intl.string(g.t.fC9qV0)],
         Component: function () {
-            let e = (0, O.bG)([x1.A], () => x1.A.getBackupCodes()),
+            let e = (0, O.bG)([x0.A], () => x0.A.getBackupCodes()),
                 t = N.useMemo(
                     () =>
                         e
                             .map((e) => {
                                 let { code: t, consumed: i } = e;
-                                return `* ${pI(t)}` + (i ? ` (${g.intl.string(g.t["ycME+9"])})` : "");
+                                return `* ${p_(t)}` + (i ? ` (${g.intl.string(g.t["ycME+9"])})` : "");
                             })
                             .join("\r\n"),
                     [e],
                 );
             return 0 === e.length
-                ? (0, p.jsx)(eh.$, { text: g.intl.string(g.t.Jc2myK), size: "sm", variant: "secondary", onClick: pC })
+                ? (0, p.jsx)(eh.$, { text: g.intl.string(g.t.Jc2myK), size: "sm", variant: "secondary", onClick: pf })
                 : (0, p.jsxs)(p.Fragment, {
                       children: [
                           (0, p.jsx)("ul", {
-                              className: p_.E5,
-                              children: e.map((e) => (0, p.jsx)(pv, { code: e }, e.code)),
+                              className: pC.E5,
+                              children: e.map((e) => (0, p.jsx)(pb, { code: e }, e.code)),
                           }),
                           (0, p.jsxs)(aR.e, {
                               size: "sm",
                               children: [
-                                  (0, p.jsx)(x3.A, {
+                                  (0, p.jsx)(x2.A, {
                                       fileContents: t,
                                       contentType: "text/plain",
                                       fileName: "discord_backup_codes.txt",
                                       children: (0, p.jsx)(eh.$, {
                                           text: g.intl.string(g.t["OO+Nib"]),
                                           variant: "secondary",
-                                          icon: pN.s,
+                                          icon: pp.s,
                                       }),
                                   }),
                                   (0, p.jsx)(eh.$, {
                                       text: g.intl.string(g.t["3x962E"]),
                                       variant: "secondary",
-                                      icon: pf.f,
-                                      onClick: pb,
+                                      icon: pN.f,
+                                      onClick: pI,
                                   }),
                               ],
                           }),
@@ -17039,7 +17038,7 @@ let pj = (0, o.zZ)(u.X.BACKUP_CODES_CATEGORY, {
                   });
         },
     }),
-    pO = (0, o.Tf)(u.X.SMS_AUTH_DISABLE_BUTTON, {
+    py = (0, o.Tf)(u.X.SMS_AUTH_DISABLE_BUTTON, {
         useTitle: () => g.intl.string(g.t.lQsY7B),
         useSubtitle: function () {
             let [e, t] = N.useState(!1),
@@ -17064,18 +17063,18 @@ let pj = (0, o.zZ)(u.X.BACKUP_CODES_CATEGORY, {
                 return (t) =>
                     (0, p.jsx)(e, {
                         ...t,
-                        handleSubmit: x$.A.disableSMS,
+                        handleSubmit: xJ.A.disableSMS,
                         title: g.intl.string(g.t.KLWnit),
                         children: g.intl.string(g.t["W0/Duf"]),
                     });
             }),
     }),
-    pR = (0, o.zZ)(u.X.SMS_AUTH_CATEGORY, {
+    pO = (0, o.zZ)(u.X.SMS_AUTH_CATEGORY, {
         useTitle: () => g.intl.string(g.t.wuHuI5),
-        useSubtitle: () => (0, O.bG)([t3.default], () => SE(t3.default.getCurrentUser(), !0)),
+        useSubtitle: () => (0, O.bG)([t3.default], () => Sh(t3.default.getCurrentUser(), !0)),
         useHeaderDecoration: () => {
             let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()?.hasFlag(q.nhx.MFA_SMS) ?? !1),
-                t = (0, O.bG)([t3.default], () => null != SE(t3.default.getCurrentUser()));
+                t = (0, O.bG)([t3.default], () => null != Sh(t3.default.getCurrentUser()));
             if (!e)
                 return {
                     type: ef.WX.BUTTON_GROUP,
@@ -17084,7 +17083,7 @@ let pj = (0, o.zZ)(u.X.BACKUP_CODES_CATEGORY, {
                             type: ef.UV.BUTTON,
                             id: "sms-setup-button",
                             text: g.intl.string(g.t.Age7yU),
-                            onClick: pL,
+                            onClick: pR,
                             disabled: t,
                         },
                     ],
@@ -17092,37 +17091,37 @@ let pj = (0, o.zZ)(u.X.BACKUP_CODES_CATEGORY, {
         },
         collapseOnEmpty: !1,
         usePredicate: () => {
-            let e = Sx(),
-                t = Sn(),
+            let e = ST(),
+                t = Si(),
                 i = (0, O.bG)([cn.default], () => cn.default.hasTOTPEnabled());
-            return e === ST.AVAILABLE && t && i;
+            return e === SE.AVAILABLE && t && i;
         },
-        buildLayout: () => [pO],
+        buildLayout: () => [py],
     });
-function pL() {
+function pR() {
     let e = t3.default.getCurrentUser();
     if (null != e)
         if (null == e.phone) {
             var t;
-            (t = { reason: SA.d.USER_SETTINGS_UPDATE, onAddedPhone: x$.A.enableSMS }),
+            (t = { reason: Sm.d.USER_SETTINGS_UPDATE, onAddedPhone: xJ.A.enableSMS }),
                 (0, C.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(i.bind(i, 615715));
                         return (i) => (0, p.jsx)(e, { ...i, ...t });
                     },
-                    { modalKey: Sp.V },
+                    { modalKey: SS.V },
                 );
-        } else x$.A.enableSMS();
+        } else xJ.A.enableSMS();
 }
-var pD = i(665671),
-    pP = i(442433),
-    pG = i(917136),
-    pU = i(976910),
-    pM = i(551386);
-function pV(e) {
+var pL = i(665671),
+    pD = i(442433),
+    pP = i(917136),
+    pG = i(976910),
+    pU = i(551386);
+function pM(e) {
     let { credential: t } = e;
     return (0, p.jsxs)("li", {
-        className: pM.e,
+        className: pU.e,
         children: [
             (0, p.jsxs)("div", {
                 children: [
@@ -17131,7 +17130,7 @@ function pV(e) {
                         (0, p.jsx)(V.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            children: g.intl.format(g.t["7JgxF5"], { lastUsed: (0, Sb.Y)(t.last_used) }),
+                            children: g.intl.format(g.t["7JgxF5"], { lastUsed: (0, SI.Y)(t.last_used) }),
                         }),
                 ],
             }),
@@ -17141,7 +17140,7 @@ function pV(e) {
                 size: "sm",
                 "aria-label": g.intl.string(g.t["+nrTbK"]),
                 onClick: (e) => {
-                    (0, pP.L3)(e, async () => {
+                    (0, pD.L3)(e, async () => {
                         let { default: e } = await i.e("32529").then(i.bind(i, 41e3));
                         return (i) => (0, p.jsx)(e, { credential: t, ...i });
                     });
@@ -17150,11 +17149,11 @@ function pV(e) {
         ],
     });
 }
-let pk = (0, o.zZ)(u.X.SECURITY_KEYS_CATEGORY, {
+let pV = (0, o.zZ)(u.X.SECURITY_KEYS_CATEGORY, {
         useTitle: () => g.intl.string(g.t.IBq4Y3),
         useSubtitle: () => g.intl.string(g.t.yK9edS),
         useHeaderDecoration: function () {
-            if (Sx() === ST.AVAILABLE)
+            if (ST() === SE.AVAILABLE)
                 return {
                     type: ef.WX.BUTTON_GROUP,
                     buttons: [
@@ -17163,68 +17162,68 @@ let pk = (0, o.zZ)(u.X.SECURITY_KEYS_CATEGORY, {
                             id: "add-security-key-button",
                             text: g.intl.string(g.t["Tzs/fw"]),
                             icon: cz.j,
-                            onClick: pD.A,
+                            onClick: pL.A,
                         },
                     ],
                 };
         },
         useInlineNotice: () =>
             (function () {
-                switch (Sx()) {
-                    case ST.UNAVAILABLE_NO_CRYPTO:
+                switch (ST()) {
+                    case SE.UNAVAILABLE_NO_CRYPTO:
                         return {
                             type: ef.lT.INLINE_NOTICE,
                             noticeType: "info",
                             useText: () => g.intl.string(g.t.bWCGI9),
                         };
-                    case ST.UNAVAILABLE_UNVERIFIED:
+                    case SE.UNAVAILABLE_UNVERIFIED:
                         return {
                             type: ef.lT.INLINE_NOTICE,
                             noticeType: "warning",
                             useText: () => g.intl.string(g.t.uggF7o),
                         };
-                    case ST.AVAILABLE:
+                    case SE.AVAILABLE:
                         return;
                 }
             })(),
-        buildLayout: () => [pw],
+        buildLayout: () => [pk],
     }),
-    pw = (0, o.E2)(u.X.SECURITY_KEYS_LIST, {
+    pk = (0, o.E2)(u.X.SECURITY_KEYS_LIST, {
         useSearchTerms: () => [g.intl.string(g.t.y7SXYX)],
         Component: function () {
-            let { credentials: e, hasFetchedCredentials: t } = (0, O.cf)([pU.A], () => ({
-                hasFetchedCredentials: pU.A.hasFetchedCredentials(),
-                credentials: pU.A.getCredentials(),
+            let { credentials: e, hasFetchedCredentials: t } = (0, O.cf)([pG.A], () => ({
+                hasFetchedCredentials: pG.A.hasFetchedCredentials(),
+                credentials: pG.A.getCredentials(),
             }));
             return (N.useEffect(() => {
-                t || pG.JQ();
+                t || pP.JQ();
             }, [t]),
             t)
                 ? (0, p.jsx)(R.B, {
                       direction: "vertical",
                       gap: "sm",
                       as: "ul",
-                      children: e.map((e) => (0, p.jsx)(pV, { credential: e }, e.id)),
+                      children: e.map((e) => (0, p.jsx)(pM, { credential: e }, e.id)),
                   })
                 : (0, p.jsx)(uK.y, {});
         },
     }),
-    pB = (0, o.t_)(u.X.MULTI_FACTOR_AUTHENTICATION, {
+    pw = (0, o.t_)(u.X.MULTI_FACTOR_AUTHENTICATION, {
         useTitle: () => g.intl.string(g.t.m0FidJ),
-        buildLayout: () => [pk, pp, pR, pj],
+        buildLayout: () => [pV, pS, pO, pv],
     }),
-    pF = (0, o.t0)(u.X.ACCOUNT_MFA_NESTED_PANEL, {
+    pB = (0, o.t0)(u.X.ACCOUNT_MFA_NESTED_PANEL, {
         useTrailingDecoration: () => ({
             type: ef.xn.TEXT,
-            useText: () => (Sn() ? g.intl.string(g.t.lQsY7B) : g.intl.string(g.t.WsUuTt)),
+            useText: () => (Si() ? g.intl.string(g.t.lQsY7B) : g.intl.string(g.t.WsUuTt)),
         }),
-        buildLayout: () => [pB],
+        buildLayout: () => [pw],
     }),
-    pz = (0, o.zZ)(u.X.ACCOUNT_PASSWORD_SECURITY_CATEGORY, {
+    pF = (0, o.zZ)(u.X.ACCOUNT_PASSWORD_SECURITY_CATEGORY, {
         useTitle: () => g.intl.string(g.t["0iH2vc"]),
-        buildLayout: () => [Sg, pF, S1],
+        buildLayout: () => [Sc, pB, S0],
     });
-function pY(e) {
+function pz(e) {
     let { currentUser: t } = e;
     return t.isClaimed()
         ? null == t.email
@@ -17237,44 +17236,44 @@ function pY(e) {
                         (0, p.jsx)(eA.D, { variant: "heading-md/medium", children: g.intl.string(g.t.tuGzBT) }),
                         (0, p.jsx)(V.E, {
                             variant: "text-sm/normal",
-                            className: Sr.PA,
+                            className: Sl.PA,
                             children: g.intl.string(g.t.NAzplE),
                         }),
-                        (0, p.jsx)(S4.A, { size: "sm", variant: "secondary" }),
+                        (0, p.jsx)(S6.A, { size: "sm", variant: "secondary" }),
                     ],
                 })
         : (0, p.jsxs)(y.w, {
               type: "critical",
               children: [
                   (0, p.jsx)(eA.D, { variant: "heading-md/medium", children: g.intl.string(g.t["/3qnL/"]) }),
-                  (0, p.jsx)(V.E, { variant: "text-sm/normal", className: Sr.PA, children: g.intl.string(g.t.qKs3vg) }),
+                  (0, p.jsx)(V.E, { variant: "text-sm/normal", className: Sl.PA, children: g.intl.string(g.t.qKs3vg) }),
                   (0, p.jsx)(eh.$, {
                       variant: "secondary",
                       size: "sm",
                       text: g.intl.string(g.t["7psymi"]),
-                      onClick: () => S6(),
+                      onClick: () => S3(),
                   }),
               ],
           });
 }
-var pX = i(297413),
-    pH = i(50268),
-    pK = i(922301),
-    pW = i(262),
-    pZ = i(68085),
-    pq = i(915614),
-    pQ = i(475543);
-let pJ = si.Ay.getEnableHardwareAcceleration() ? iH.Js : iH.eu;
-function p$(e) {
-    let t = (0, Ev.X)("UserSettingsAccountProfileCard");
+var pY = i(297413),
+    pX = i(50268),
+    pH = i(922301),
+    pK = i(262),
+    pW = i(68085),
+    pZ = i(915614),
+    pq = i(475543);
+let pQ = si.Ay.getEnableHardwareAcceleration() ? iH.Js : iH.eu;
+function pJ(e) {
+    let t = (0, Eb.X)("UserSettingsAccountProfileCard");
     return N.useCallback(() => {
-        t ? (0, Ey.openUserProfileModal)({ userId: e }) : (0, ej.openUserSettings)(u.X.PROFILE_PANEL);
+        t ? (0, Ej.openUserProfileModal)({ userId: e }) : (0, ej.openUserSettings)(u.X.PROFILE_PANEL);
     }, [t, e]);
 }
-function p0(e) {
+function p$(e) {
     let { className: t, user: n } = e,
         s = N.useRef(null),
-        l = (0, EY.EC)(),
+        l = (0, Ez.EC)(),
         r = l?.nick?.[0] ?? null,
         [a, o] = N.useState(!1);
     N.useEffect(() => {
@@ -17283,20 +17282,20 @@ function p0(e) {
     let u = !n.isClaimed(),
         d = u ? g.intl.string(g.t["7Ngnyr"]) : void 0;
     return (0, p.jsxs)("div", {
-        className: ew()(pQ.ZZ, t),
+        className: ew()(pq.ZZ, t),
         children: [
             (0, p.jsx)("div", {
-                className: pQ.NQ,
+                className: pq.NQ,
                 children: (0, p.jsxs)("div", {
-                    className: pQ.Fj,
+                    className: pq.Fj,
                     children: [
                         (0, p.jsx)(V.E, {
                             variant: "text-md/medium",
-                            className: pQ.p9,
+                            className: pq.p9,
                             children: g.intl.string(g.t.qqhR3L),
                         }),
                         (0, p.jsxs)("div", {
-                            className: pQ.HR,
+                            className: pq.HR,
                             ref: s,
                             children: [
                                 (0, p.jsx)(V.E, {
@@ -17319,7 +17318,7 @@ function p0(e) {
             }),
             null != r &&
                 (0, p.jsx)("div", {
-                    className: pQ.a$,
+                    className: pq.a$,
                     children: (0, p.jsx)(e0.m, {
                         __unsupportedReactNodeAsText: r,
                         "aria-label": !1,
@@ -17335,7 +17334,7 @@ function p0(e) {
                 text: d,
                 children: (0, p.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: pQ.pr,
+                    className: pq.pr,
                     children: (0, p.jsx)(eh.$, {
                         variant: "secondary",
                         size: "sm",
@@ -17355,12 +17354,12 @@ function p0(e) {
         ],
     });
 }
-function p1(e) {
+function p0(e) {
     let { user: t, className: i } = e,
-        n = p$(t.id),
-        s = (0, EY.EC)(),
+        n = pJ(t.id),
+        s = (0, Ez.EC)(),
         l = s?.nick?.[0] ?? null,
-        r = TO.Ay.getGlobalName(t),
+        r = Ty.Ay.getGlobalName(t),
         a = N.useRef(null),
         [o, u] = N.useState(!1);
     return (
@@ -17368,20 +17367,20 @@ function p1(e) {
             u(null != a.current && a.current.scrollWidth > a.current.clientWidth);
         }, [r]),
         (0, p.jsxs)("div", {
-            className: ew()(pQ.ZZ, i),
+            className: ew()(pq.ZZ, i),
             children: [
                 (0, p.jsx)("div", {
-                    className: pQ.NQ,
+                    className: pq.NQ,
                     children: (0, p.jsxs)("div", {
-                        className: pQ.Fj,
+                        className: pq.Fj,
                         children: [
                             (0, p.jsx)(V.E, {
                                 variant: "text-md/medium",
-                                className: pQ.p9,
+                                className: pq.p9,
                                 children: g.intl.string(g.t["9AjdkD"]),
                             }),
                             (0, p.jsx)("div", {
-                                className: pQ.HR,
+                                className: pq.HR,
                                 ref: a,
                                 children: (0, p.jsx)(V.E, {
                                     tag: "span",
@@ -17395,7 +17394,7 @@ function p1(e) {
                 }),
                 null != l &&
                     (0, p.jsx)("div", {
-                        className: pQ.a$,
+                        className: pq.a$,
                         children: (0, p.jsx)(e0.m, {
                             __unsupportedReactNodeAsText: l,
                             "aria-label": !1,
@@ -17409,7 +17408,7 @@ function p1(e) {
                     }),
                 (0, p.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: pQ.pr,
+                    className: pq.pr,
                     children: (0, p.jsx)(eh.$, {
                         variant: "secondary",
                         size: "sm",
@@ -17422,7 +17421,7 @@ function p1(e) {
         })
     );
 }
-function p2(e) {
+function p1(e) {
     let t,
         { className: n, user: s } = e;
     if (s.isClaimed())
@@ -17444,9 +17443,9 @@ function p2(e) {
             t = {
                 buttonText: g.intl.string(g.t.bt75uw),
                 buttonAriaLabel: g.intl.string(g.t["8peUT0"]),
-                valueMessage: (0, p.jsx)(pd, {
+                valueMessage: (0, p.jsx)(pu, {
                     text: e,
-                    censor: pu,
+                    censor: po,
                     revealLabel: g.intl.string(g.t["Zvx+yV"]),
                     hideLabel: g.intl.string(g.t.nqTD4d),
                 }),
@@ -17464,18 +17463,18 @@ function p2(e) {
             buttonText: g.intl.string(g.t.BleMPB),
             buttonAriaLabel: g.intl.string(g.t.BleMPB),
             valueMessage: g.intl.string(g.t.qxk9zo),
-            handleClick: () => S6(),
+            handleClick: () => S3(),
         };
     return (0, p.jsxs)("div", {
-        className: ew()(pQ.ZZ, n),
+        className: ew()(pq.ZZ, n),
         children: [
             (0, p.jsx)("div", {
-                className: pQ.NQ,
+                className: pq.NQ,
                 children: (0, p.jsxs)("div", {
                     children: [
                         (0, p.jsx)(V.E, {
                             variant: "text-md/medium",
-                            className: pQ.p9,
+                            className: pq.p9,
                             children: g.intl.string(g.t.tlZllC),
                         }),
                         (0, p.jsx)("div", {
@@ -17491,7 +17490,7 @@ function p2(e) {
             }),
             (0, p.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: pQ.pr,
+                className: pq.pr,
                 children: (0, p.jsx)(eh.$, {
                     variant: "secondary",
                     size: "sm",
@@ -17503,7 +17502,7 @@ function p2(e) {
         ],
     });
 }
-function p3(e) {
+function p2(e) {
     let t,
         { className: n, user: s } = e;
     if (!s.isClaimed()) return null;
@@ -17511,23 +17510,23 @@ function p3(e) {
         a = null != l;
     return (
         (t = a
-            ? (0, p.jsx)(pd, {
+            ? (0, p.jsx)(pu, {
                   text: l,
-                  censor: po,
+                  censor: pa,
                   revealLabel: g.intl.string(g.t.eY3xlT),
                   hideLabel: g.intl.string(g.t["jllbv+"]),
               })
             : g.intl.string(g.t.I5kDqj)),
         (0, p.jsxs)("div", {
-            className: ew()(pQ.ZZ, n),
+            className: ew()(pq.ZZ, n),
             children: [
                 (0, p.jsx)("div", {
-                    className: pQ.NQ,
+                    className: pq.NQ,
                     children: (0, p.jsxs)("div", {
                         children: [
                             (0, p.jsx)(V.E, {
                                 variant: "text-md/medium",
-                                className: pQ.p9,
+                                className: pq.p9,
                                 children: g.intl.string(g.t.kerONq),
                             }),
                             (0, p.jsx)("div", {
@@ -17542,11 +17541,11 @@ function p3(e) {
                     }),
                 }),
                 (0, p.jsxs)("div", {
-                    className: pQ.PU,
+                    className: pq.PU,
                     children: [
                         a && null != r
                             ? (0, p.jsx)("div", {
-                                  className: ew()(pQ.pr, pQ.DT),
+                                  className: ew()(pq.pr, pq.DT),
                                   children: (0, p.jsx)(B.Q, {
                                       textVariant: "text-sm/medium",
                                       variant: "secondary",
@@ -17554,14 +17553,14 @@ function p3(e) {
                                       "aria-label": g.intl.string(g.t.Rpn4A3),
                                       onClick: function () {
                                           (0, C.openModal)((e) =>
-                                              (0, p.jsx)(x4.default, {
+                                              (0, p.jsx)(x6.default, {
                                                   ...e,
                                                   title: g.intl.string(g.t["3CTiKi"]),
                                                   children: s.hasFlag(q.nhx.MFA_SMS)
                                                       ? g.intl.string(g.t.jrhJyo)
                                                       : void 0,
                                                   actionText: g.intl.string(g.t.N86XcP),
-                                                  handleSubmit: (e) => SA.A.removePhone(e, SA.d.USER_SETTINGS_UPDATE),
+                                                  handleSubmit: (e) => Sm.A.removePhone(e, Sm.d.USER_SETTINGS_UPDATE),
                                               }),
                                           );
                                       },
@@ -17570,7 +17569,7 @@ function p3(e) {
                             : null,
                         (0, p.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: pQ.pr,
+                            className: pq.pr,
                             children: (0, p.jsx)(eh.$, {
                                 variant: "secondary",
                                 size: "sm",
@@ -17580,9 +17579,9 @@ function p3(e) {
                                     (0, C.openModalLazy)(
                                         async () => {
                                             let { default: e } = await Promise.resolve().then(i.bind(i, 615715));
-                                            return (t) => (0, p.jsx)(e, { reason: SA.d.USER_SETTINGS_UPDATE, ...t });
+                                            return (t) => (0, p.jsx)(e, { reason: Sm.d.USER_SETTINGS_UPDATE, ...t });
                                         },
-                                        { modalKey: Sp.V },
+                                        { modalKey: SS.V },
                                     );
                                 },
                             }),
@@ -17593,9 +17592,9 @@ function p3(e) {
         })
     );
 }
-function p6(e) {
+function p3(e) {
     let { user: t } = e,
-        i = (0, pH.A)({ id: t.id, label: g.intl.string(g.t["/AXYnE"]) }),
+        i = (0, pX.A)({ id: t.id, label: g.intl.string(g.t["/AXYnE"]) }),
         n = c.Q_.useSetting(),
         s = N.useRef(null);
     return n && co.p5
@@ -17616,18 +17615,18 @@ function p6(e) {
                   (0, p.jsx)(M.D, {
                       ...e,
                       innerRef: s,
-                      className: pQ.SI,
+                      className: pq.SI,
                       "aria-label": g.intl.string(g.t.DEoVWZ),
-                      children: (0, p.jsx)(gZ.j, { size: "md", color: "currentColor", className: pQ.D$ }),
+                      children: (0, p.jsx)(gZ.j, { size: "md", color: "currentColor", className: pq.D$ }),
                   }),
           })
         : null;
 }
-function p4(e) {
+function p6(e) {
     let { className: t } = e,
-        n = (0, S5.b8)(),
-        s = (0, S5.yM)(),
-        l = (0, S5.Y2)(),
+        n = (0, S4.b8)(),
+        s = (0, S4.yM)(),
+        l = (0, S4.Y2)(),
         r = !n || s,
         a = g.intl.string(g.t["9KiIz6"]),
         o = g.intl.string(g.t.DVywUB),
@@ -17647,22 +17646,22 @@ function p4(e) {
                     ? s
                         ? g.intl.string(g.t.sK0dmH)
                         : l
-                          ? g.intl.format(S9.default.WM5adV, { handleOnHelpUrlHook: d })
+                          ? g.intl.format(S8.default.WM5adV, { handleOnHelpUrlHook: d })
                           : g.intl.string(g.t.XxRj7f)
                     : u,
             [n, s, l, u, d],
         ),
         A = n && !s && l;
     return (0, p.jsxs)("div", {
-        className: ew()(pQ.ZZ, t),
+        className: ew()(pq.ZZ, t),
         children: [
             (0, p.jsx)("div", {
-                className: pQ.NQ,
+                className: pq.NQ,
                 children: (0, p.jsxs)("div", {
                     children: [
                         (0, p.jsx)(V.E, {
                             variant: "text-md/medium",
-                            className: pQ.p9,
+                            className: pq.p9,
                             children: g.intl.string(g.t["/52UYy"]),
                         }),
                         (0, p.jsx)("div", {
@@ -17679,7 +17678,7 @@ function p4(e) {
             A &&
                 (0, p.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: pQ.pr,
+                    className: pq.pr,
                     children: (0, p.jsx)(eh.$, {
                         variant: "secondary",
                         size: "sm",
@@ -17692,32 +17691,32 @@ function p4(e) {
                 !A &&
                 (0, p.jsx)("div", {
                     "data-button-hoisted-classname-wrapper": !0,
-                    className: pQ.pr,
+                    className: pq.pr,
                     children: (0, p.jsx)(eh.$, {
                         variant: "secondary",
                         size: "sm",
                         text: s ? a : o,
                         "aria-label": s ? a : o,
-                        onClick: () => pn.A.showAgeVerificationGetStartedModal({ entryPoint: ps.q1.ACCOUNT_AGE_GROUP }),
+                        onClick: () => pi.A.showAgeVerificationGetStartedModal({ entryPoint: pn.q1.ACCOUNT_AGE_GROUP }),
                     }),
                 }),
         ],
     });
 }
-function p5(e) {
+function p4(e) {
     let { currentUser: t } = e,
-        i = p$(t.id),
-        n = (0, TS.Ay)(t.id),
-        s = (0, pW.A)(n),
+        i = pJ(t.id),
+        n = (0, Tx.Ay)(t.id),
+        s = (0, pK.A)(n),
         l = c.jP.useSetting(),
-        r = (0, O.bG)([Eb.A], () => Eb.A.getErrors()),
+        r = (0, O.bG)([EI.A], () => EI.A.getErrors()),
         a = r?.avatar?.[0],
-        { avatarSrc: o, avatarDecorationSrc: u } = (0, Ej.A)({ userId: t?.id, size: iK._3.SIZE_80 }),
-        d = (0, S7.fk)();
+        { avatarSrc: o, avatarDecorationSrc: u } = (0, Ev.A)({ userId: t?.id, size: iK._3.SIZE_80 }),
+        d = (0, S5.fk)();
     return (0, p.jsxs)("div", {
-        className: pQ.DM,
+        className: pq.DM,
         children: [
-            (0, p.jsx)(pq.o, {
+            (0, p.jsx)(pZ.o, {
                 user: t,
                 displayProfile: n,
                 avatarSize: iK._3.SIZE_80,
@@ -17728,10 +17727,10 @@ function p5(e) {
                 themePadding: 0,
             }),
             (0, p.jsxs)("div", {
-                className: pQ.eF,
+                className: pq.eF,
                 children: [
-                    (0, p.jsx)(pJ, {
-                        className: pQ.my,
+                    (0, p.jsx)(pQ, {
+                        className: pq.my,
                         src: o,
                         avatarDecoration: u,
                         status: l,
@@ -17741,18 +17740,18 @@ function p5(e) {
                     (0, p.jsxs)("div", {
                         children: [
                             (0, p.jsxs)("div", {
-                                className: pQ.Ib,
+                                className: pq.Ib,
                                 children: [
-                                    (0, p.jsx)(pX.A, {
+                                    (0, p.jsx)(pY.A, {
                                         user: t,
-                                        className: pQ.a1,
-                                        discriminatorClass: pQ.D2,
-                                        displayNameStylesType: pK.G.STATIC,
+                                        className: pq.a1,
+                                        discriminatorClass: pq.D2,
+                                        displayNameStylesType: pH.G.STATIC,
                                     }),
-                                    (0, p.jsx)(p6, { user: t }),
+                                    (0, p.jsx)(p3, { user: t }),
                                 ],
                             }),
-                            (0, p.jsx)(pZ.A, { badges: s, className: pQ.C_, badgeClassName: pQ.qS }),
+                            (0, p.jsx)(pW.A, { badges: s, className: pq.C_, badgeClassName: pq.qS }),
                         ],
                     }),
                     (0, p.jsx)(eh.$, {
@@ -17764,24 +17763,24 @@ function p5(e) {
                 ],
             }),
             (0, p.jsxs)("div", {
-                className: pQ.Tp,
+                className: pq.Tp,
                 children: [
                     null != a
                         ? (0, p.jsx)(V.E, {
-                              className: pQ.mx,
+                              className: pq.mx,
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
                               children: a,
                           })
                         : null,
                     (0, p.jsxs)("div", {
-                        className: pQ.FL,
+                        className: pq.FL,
                         children: [
-                            (0, p.jsx)(p1, { className: pQ.mS, user: t }),
-                            (0, p.jsx)(p0, { user: t }),
-                            (0, p.jsx)(p2, { className: pQ.Zr, user: t }),
-                            (0, p.jsx)(p3, { className: pQ.Zr, user: t }),
-                            d && (0, p.jsx)(p4, { className: pQ.Zr }),
+                            (0, p.jsx)(p0, { className: pq.mS, user: t }),
+                            (0, p.jsx)(p$, { user: t }),
+                            (0, p.jsx)(p1, { className: pq.Zr, user: t }),
+                            (0, p.jsx)(p2, { className: pq.Zr, user: t }),
+                            d && (0, p.jsx)(p6, { className: pq.Zr }),
                         ],
                     }),
                 ],
@@ -17789,7 +17788,7 @@ function p5(e) {
         ],
     });
 }
-let p7 = (0, o.E2)(u.X.ACCOUNT_PROFILE_SETTING, {
+let p5 = (0, o.E2)(u.X.ACCOUNT_PROFILE_SETTING, {
         useSearchTerms: function () {
             let e = [
                     g.intl.string(g.t.LYju5J),
@@ -17798,8 +17797,8 @@ let p7 = (0, o.E2)(u.X.ACCOUNT_PROFILE_SETTING, {
                     g.intl.string(g.t.oP5zGA),
                     g.intl.string(g.t.Ulqq6K),
                 ],
-                t = (0, S7.fk)(),
-                i = (0, S5.Y2)();
+                t = (0, S5.fk)(),
+                i = (0, S4.Y2)();
             return (
                 t &&
                     (e.push(g.intl.string(g.t["/52UYy"])),
@@ -17808,9 +17807,9 @@ let p7 = (0, o.E2)(u.X.ACCOUNT_PROFILE_SETTING, {
                     e.push(g.intl.string(g.t.DVywUB)),
                     e.push(g.intl.string(g.t["9KiIz6"])),
                     i &&
-                        (e.push(g.intl.string(S9.default.FTawSP)),
-                        e.push(g.intl.string(S9.default["bD//cU"])),
-                        e.push(g.intl.string(S9.default.SH6Tcv)))),
+                        (e.push(g.intl.string(S8.default.FTawSP)),
+                        e.push(g.intl.string(S8.default["bD//cU"])),
+                        e.push(g.intl.string(S8.default.SH6Tcv)))),
                 e
             );
         },
@@ -17819,15 +17818,15 @@ let p7 = (0, o.E2)(u.X.ACCOUNT_PROFILE_SETTING, {
             return (0, p.jsxs)(R.B, {
                 gap: "md",
                 children: [
-                    null != e && (0, p.jsx)(pY, { currentUser: e }),
-                    null != e && (0, p.jsx)(p5, { currentUser: e }),
+                    null != e && (0, p.jsx)(pz, { currentUser: e }),
+                    null != e && (0, p.jsx)(p4, { currentUser: e }),
                 ],
             });
         },
     }),
-    p8 = (0, o.zZ)(u.X.ACCOUNT_PROFILE_CATEGORY, { buildLayout: () => [p7] });
-var p9 = i(656161);
-function Ne(e) {
+    p7 = (0, o.zZ)(u.X.ACCOUNT_PROFILE_CATEGORY, { buildLayout: () => [p5] });
+var p8 = i(656161);
+function p9(e) {
     let { currentUser: t, disabled: i, handleDisableAccount: n, handleDeleteAccount: s } = e,
         l = t.isClaimed();
     return (0, p.jsx)(sO.D, {
@@ -17835,7 +17834,7 @@ function Ne(e) {
         description: l ? g.intl.string(g.t.TIh3Yj) : g.intl.string(g.t.czsGA8),
         children: (0, p.jsxs)(aR.e, {
             size: "sm",
-            className: p9.U,
+            className: p8.U,
             children: [
                 l
                     ? (0, p.jsx)(eh.$, {
@@ -17857,18 +17856,18 @@ function Ne(e) {
         }),
     });
 }
-var Nt = i(425587);
-function Ni(e) {
+var Ne = i(425587);
+function Nt(e) {
     if (e.body.code === q.t02.INVALID_PASSWORD) throw e;
     (0, aj.A)({ title: g.intl.string(g.t.LX0nT8), subtitle: e.body.message });
 }
-async function Nn() {
+async function Ni() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = t3.default.getCurrentUser();
     if (null == t) return;
     let i = [];
     try {
-        i = (await Nt.A.fetchTeams(!0)).body;
+        i = (await Ne.A.fetchTeams(!0)).body;
     } catch {}
     i.filter((e) => e.owner_user_id === t.id).length > 0
         ? (0, aj.A)({
@@ -17879,9 +17878,9 @@ async function Nn() {
           ? (0, aj.A)({ title: g.intl.string(g.t.I5UrbV), subtitle: g.intl.string(g.t.UyVVan) })
           : t.isClaimed()
             ? (0, C.openModal)((t) =>
-                  (0, p.jsx)(x4.default, {
+                  (0, p.jsx)(x6.default, {
                       ...t,
-                      handleSubmit: (t) => (0, EC.U_)(t, e).then(q.tEg, Ni),
+                      handleSubmit: (t) => (0, EC.U_)(t, e).then(q.tEg, Nt),
                       title: e ? g.intl.string(g.t["8lQ2rR"]) : g.intl.string(g.t.jf5GGb),
                       actionText: e ? g.intl.string(g.t["8lQ2rR"]) : g.intl.string(g.t.jf5GGb),
                       variant: "critical-primary",
@@ -17895,229 +17894,229 @@ async function Nn() {
                   onConfirm: () => (0, EC.U_)("", !0),
               });
 }
-let Ns = (0, o.Tf)(u.X.ACCOUNT_DELETE_SETTING, {
+let Nn = (0, o.Tf)(u.X.ACCOUNT_DELETE_SETTING, {
         useTitle: () => g.intl.string(g.t["gIpzR+"]),
         useSubtitle: () => g.intl.string(g.t.Bd6dOf),
         useLabel: () => g.intl.string(g.t["8lQ2rR"]),
         useVariant: () => "critical-primary",
-        onClick: () => Nn(!0),
+        onClick: () => Ni(!0),
     }),
-    Nl = (0, o.Tf)(u.X.ACCOUNT_DISABLE_SETTING, {
+    Ns = (0, o.Tf)(u.X.ACCOUNT_DISABLE_SETTING, {
         useTitle: () => g.intl.string(g.t["p/Tjtp"]),
         useSubtitle: () => g.intl.string(g.t.YvDmKb),
         useLabel: () => g.intl.string(g.t.jf5GGb),
         useVariant: () => "critical-secondary",
-        onClick: () => Nn(!1),
+        onClick: () => Ni(!1),
         usePredicate: () => {
             let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser());
             return e?.isClaimed() ?? !1;
         },
     }),
-    Nr = (0, o.zZ)(u.X.ACCOUNT_REMOVAL_CATEGORY, { buildLayout: () => [Nl, Ns] }),
-    Na = (0, o.E2)(u.X.ACCOUNT_REMOVAL_SETTING, {
+    Nl = (0, o.zZ)(u.X.ACCOUNT_REMOVAL_CATEGORY, { buildLayout: () => [Ns, Nn] }),
+    Nr = (0, o.E2)(u.X.ACCOUNT_REMOVAL_SETTING, {
         useSearchTerms: () => [g.intl.string(g.t.ZKsIks), g.intl.string(g.t.jf5GGb), g.intl.string(g.t["8lQ2rR"])],
         Component: function () {
             let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser());
             return null == e
                 ? null
-                : (0, p.jsx)(Ne, {
+                : (0, p.jsx)(p9, {
                       currentUser: e,
-                      handleDisableAccount: () => Nn(!1),
-                      handleDeleteAccount: () => Nn(!0),
+                      handleDisableAccount: () => Ni(!1),
+                      handleDeleteAccount: () => Ni(!0),
                   });
         },
     }),
-    No = (0, o.zZ)(u.X.ACCOUNT_REMOVAL_CATEGORY, { buildLayout: () => [Na] });
-var Nu = i(308645),
-    Nd = i(271995),
-    Nc = i(855267);
-let Ng = (0, o.E2)(u.X.ACCOUNT_STANDING_SETTING, {
+    Na = (0, o.zZ)(u.X.ACCOUNT_REMOVAL_CATEGORY, { buildLayout: () => [Nr] });
+var No = i(308645),
+    Nu = i(271995),
+    Nd = i(855267);
+let Nc = (0, o.E2)(u.X.ACCOUNT_STANDING_SETTING, {
         useSearchTerms: () => [g.intl.string(g.t["16r9jm"])],
-        Component: Nc.A,
+        Component: Nd.A,
     }),
-    Nm = (0, o.zZ)(u.X.ACCOUNT_STANDING_NESTED_CATEGORY, { buildLayout: () => [Ng] }),
-    NA = (0, o.t_)(u.X.ACCOUNT_STANDING_PANEL, {
+    Ng = (0, o.zZ)(u.X.ACCOUNT_STANDING_NESTED_CATEGORY, { buildLayout: () => [Nc] }),
+    Nm = (0, o.t_)(u.X.ACCOUNT_STANDING_PANEL, {
         useTitle: () => g.intl.string(g.t["16r9jm"]),
-        buildLayout: () => [Nm],
+        buildLayout: () => [Ng],
     }),
-    Nh = (0, o.t0)(u.X.ACCOUNT_STANDING_NESTED_PANEL, {
-        useTitle: Nd.$b,
-        useSubtitle: Nd.bh,
+    NA = (0, o.t0)(u.X.ACCOUNT_STANDING_NESTED_PANEL, {
+        useTitle: Nu.$b,
+        useSubtitle: Nu.bh,
         useLeadingDecoration: function () {
-            let { color: e, backgroundColor: t, Icon: i } = (0, Nd._k)();
+            let { color: e, backgroundColor: t, Icon: i } = (0, Nu._k)();
             return { type: ef.Xy.ICON, icon: i, color: e, backgroundColor: t };
         },
         initialize: () => {
-            Nu.Yn();
+            No.Yn();
         },
+        buildLayout: () => [Nm],
+    }),
+    Nh = (0, o.zZ)(u.X.ACCOUNT_STANDING_CATEGORY, {
+        useTitle: () => g.intl.string(g.t["16r9jm"]),
         buildLayout: () => [NA],
     }),
-    NE = (0, o.zZ)(u.X.ACCOUNT_STANDING_CATEGORY, {
-        useTitle: () => g.intl.string(g.t["16r9jm"]),
-        buildLayout: () => [Nh],
-    }),
-    NT = (0, o.zZ)(u.X.ACCOUNT_STANDING_CATEGORY, { buildLayout: () => [Ng] });
-var Nx = i(834981),
-    NS = i(840387),
-    Np = i(177953),
-    NN = i(986922),
-    Nf = i(602339);
-let NC = (0, o.E2)(u.X.FAMILY_CENTER_SETTING, {
-        Component: NN.p,
+    NE = (0, o.zZ)(u.X.ACCOUNT_STANDING_CATEGORY, { buildLayout: () => [Nc] });
+var NT = i(834981),
+    Nx = i(840387),
+    NS = i(177953),
+    Np = i(986922),
+    NN = i(602339);
+let Nf = (0, o.E2)(u.X.FAMILY_CENTER_SETTING, {
+        Component: Np.p,
         useSearchTerms: () => [
-            g.intl.string(Nf.default.RZqaJn),
-            g.intl.string(Nf.default.bdBmqy),
-            g.intl.string(Nf.default["gVWG+6"]),
-            g.intl.string(Nf.default.ahKIJO),
-            g.intl.string(Nf.default["8SLtqb"]),
+            g.intl.string(NN.default.RZqaJn),
+            g.intl.string(NN.default.bdBmqy),
+            g.intl.string(NN.default["gVWG+6"]),
+            g.intl.string(NN.default.ahKIJO),
+            g.intl.string(NN.default["8SLtqb"]),
         ],
     }),
-    N_ = (0, o.zZ)(u.X.FAMILY_CENTER_CATEGORY, { buildLayout: () => [NC] }),
-    NI = (0, o.t_)(u.X.FAMILY_CENTER_PANEL, {
-        useTitle: () => g.intl.string(Nf.default.RZqaJn),
-        buildLayout: () => [N_],
+    NC = (0, o.zZ)(u.X.FAMILY_CENTER_CATEGORY, { buildLayout: () => [Nf] }),
+    N_ = (0, o.t_)(u.X.FAMILY_CENTER_PANEL, {
+        useTitle: () => g.intl.string(NN.default.RZqaJn),
+        buildLayout: () => [NC],
     }),
-    Nb = (0, o.i4)(u.X.FAMILY_CENTER_SIDEBAR_ITEM, {
-        useTitle: () => g.intl.string(Nf.default.RZqaJn),
-        icon: Np.n,
+    NI = (0, o.i4)(u.X.FAMILY_CENTER_SIDEBAR_ITEM, {
+        useTitle: () => g.intl.string(NN.default.RZqaJn),
+        icon: NS.n,
         usePersistentBadge: function () {
-            return N.useMemo(() => ({ badgeType: ef.Xi.COUNT, useCount: Nx.VT }), []);
+            return N.useMemo(() => ({ badgeType: ef.Xi.COUNT, useCount: NT.VT }), []);
         },
         getDismissibleBadges: function () {
             return [{ badgeType: ef.Xi.NEW, dismissibleContent: eT.M.FAMILY_CENTER_NEW_BADGE }];
         },
-        buildLayout: () => [NI],
+        buildLayout: () => [N_],
     }),
-    Nv = (0, o.zZ)(u.X.ACCOUNT_FAMILY_CENTER_CATEGORY, {
-        useTitle: () => g.intl.string(Nf.default.RZqaJn),
-        buildLayout: () => [Nj],
+    Nb = (0, o.zZ)(u.X.ACCOUNT_FAMILY_CENTER_CATEGORY, {
+        useTitle: () => g.intl.string(NN.default.RZqaJn),
+        buildLayout: () => [Nv],
     }),
-    Nj = (0, o.t0)(u.X.ACCOUNT_FAMILY_CENTER_NESTED_PANEL, {
-        useTitle: () => ((0, Nx.Li)() ? g.intl.string(Nf.default.IcMQUP) : g.intl.string(Nf.default["n8wrn/"])),
+    Nv = (0, o.t0)(u.X.ACCOUNT_FAMILY_CENTER_NESTED_PANEL, {
+        useTitle: () => ((0, NT.Li)() ? g.intl.string(NN.default.IcMQUP) : g.intl.string(NN.default["n8wrn/"])),
         useSubtitle: () => {
-            let e = (0, NS.Z)(),
-                t = (0, Nx.Li)();
+            let e = (0, Nx.Z)(),
+                t = (0, NT.Li)();
             return e
                 ? t
-                    ? g.intl.string(Nf.default.G8lHFU)
-                    : g.intl.string(Nf.default.uOLNEZ)
-                : g.intl.string(Nf.default.Z53oSM);
+                    ? g.intl.string(NN.default.G8lHFU)
+                    : g.intl.string(NN.default.uOLNEZ)
+                : g.intl.string(NN.default.Z53oSM);
         },
-        buildLayout: () => [NI],
+        buildLayout: () => [N_],
     });
-var Ny = (((a = {}).SECURITY = "SECURITY"), (a.STANDING = "STANDING"), a);
-let NO = (0, o.dT)(u.X.ACCOUNT_STANDING_TAB, {
+var Nj = (((a = {}).SECURITY = "SECURITY"), (a.STANDING = "STANDING"), a);
+let Ny = (0, o.dT)(u.X.ACCOUNT_STANDING_TAB, {
         getTitle: () => g.intl.string(g.t["Vov/9o"]),
         onItemSelect: () => {
-            Y.default.track(q.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: Ny.STANDING });
+            Y.default.track(q.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: Nj.STANDING });
         },
-        buildLayout: () => [NT],
+        buildLayout: () => [NE],
     }),
-    NR = (0, o.dT)(u.X.ACCOUNT_SECURITY_TAB, {
+    NO = (0, o.dT)(u.X.ACCOUNT_SECURITY_TAB, {
         getTitle: () => g.intl.string(g.t.Am9YHi),
         onItemSelect: () => {
-            Y.default.track(q.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: Ny.SECURITY });
+            Y.default.track(q.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, { target_tab_name: Nj.SECURITY });
         },
-        buildLayout: () => [p8, S2, No],
+        buildLayout: () => [p7, S1, Na],
     });
-function NL() {
+function NR() {
     let e = t3.default.getCurrentUser();
     return (
-        null == e || (0, iz.pC)("Account") || (0, TF.A)(e.id, e.getAvatarURL(void 0, 80)),
+        null == e || (0, iz.pC)("Account") || (0, TB.A)(e.id, e.getAvatarURL(void 0, 80)),
         () => {
-            x$.A.clearBackupCodes(), (0, EC.Uo)();
+            xJ.A.clearBackupCodes(), (0, EC.Uo)();
         }
     );
 }
-let ND = (0, o.t_)(u.X.ACCOUNT_PANEL, {
+let NL = (0, o.t_)(u.X.ACCOUNT_PANEL, {
         useTitle: () => g.intl.string(g.t["JAIM/m"]),
-        initialize: NL,
+        initialize: NR,
         useObscuredNotice: uX.L,
-        buildLayout: () => [NR, NO],
+        buildLayout: () => [NO, Ny],
     }),
-    NP = (0, o.t_)(u.X.ACCOUNT_PANEL, {
+    ND = (0, o.t_)(u.X.ACCOUNT_PANEL, {
         useTitle: () => g.intl.string(g.t["ldCE/p"]),
-        initialize: NL,
+        initialize: NR,
         useObscuredNotice: uX.L,
-        buildLayout: () => [px, pz, NE, Nv, Nr],
+        buildLayout: () => [pT, pF, Nh, Nb, Nl],
     }),
-    NG = (0, o.i4)(u.X.ACCOUNT_SIDEBAR_ITEM, {
+    NP = (0, o.i4)(u.X.ACCOUNT_SIDEBAR_ITEM, {
         useTitle: () => ((0, iz.pC)("Account") ? g.intl.string(g.t["ldCE/p"]) : g.intl.string(g.t["JAIM/m"])),
         icon: Al.n,
-        buildLayout: () => ((0, iz.pC)("Account") ? [NP] : [ND]),
+        buildLayout: () => ((0, iz.pC)("Account") ? [ND] : [NL]),
     });
-var NU = i(323384),
-    NM = i(824552),
-    NV = i(161236);
-let Nk = (0, o.E2)(u.X.AUTHORIZED_APPS_LIST_SETTING, {
-        Component: NV.Ay,
+var NG = i(323384),
+    NU = i(824552),
+    NM = i(161236);
+let NV = (0, o.E2)(u.X.AUTHORIZED_APPS_LIST_SETTING, {
+        Component: NM.Ay,
         useSearchTerms: () => [g.intl.string(g.t["f6kk+r"])],
     }),
-    Nw = (0, o.zZ)(u.X.AUTHORIZED_APPS_CATEGORY, {
-        buildLayout: () => [Nk],
+    Nk = (0, o.zZ)(u.X.AUTHORIZED_APPS_CATEGORY, {
+        buildLayout: () => [NV],
         initialize: () => (
-            NM.A.fetch(),
+            NU.A.fetch(),
             () => {
-                NV.iU.setState({ searchQuery: "" });
+                NM.iU.setState({ searchQuery: "" });
             }
         ),
     }),
-    NB = (0, o.t_)(u.X.AUTHORIZED_APPS_PANEL, {
+    Nw = (0, o.t_)(u.X.AUTHORIZED_APPS_PANEL, {
         useTitle: () => g.intl.string(g.t["f6kk+r"]),
         useObscuredNotice: uX.L,
-        buildLayout: () => [Nw],
+        buildLayout: () => [Nk],
     }),
-    NF = (0, o.i4)(u.X.AUTHORIZED_APPS_SIDEBAR_ITEM, {
+    NB = (0, o.i4)(u.X.AUTHORIZED_APPS_SIDEBAR_ITEM, {
         useTitle: () => g.intl.string(g.t["f6kk+r"]),
-        icon: NU.k,
-        buildLayout: () => [NB],
+        icon: NG.k,
+        buildLayout: () => [Nw],
     });
-var Nz = i(176781),
-    NY = i(611371);
-let NX = () =>
-    (0, p.jsx)(e0.m, { asContainer: !0, text: g.intl.string(g.t["/fgfWh"]), children: (0, p.jsx)(NY.A, {}) });
-var NH = i(274372),
-    NK = i(948138),
-    NW = i(696016);
-let NZ = (() => {
-        let e = [NW.wN];
-        for (let t = 10; t <= NW.qh; t += 10) e.push(t);
-        return e[e.length - 1] !== NW.qh && e.push(NW.qh), e;
+var NF = i(176781),
+    Nz = i(611371);
+let NY = () =>
+    (0, p.jsx)(e0.m, { asContainer: !0, text: g.intl.string(g.t["/fgfWh"]), children: (0, p.jsx)(Nz.A, {}) });
+var NX = i(274372),
+    NH = i(948138),
+    NK = i(696016);
+let NW = (() => {
+        let e = [NK.wN];
+        for (let t = 10; t <= NK.qh; t += 10) e.push(t);
+        return e[e.length - 1] !== NK.qh && e.push(NK.qh), e;
     })(),
-    Nq = (0, o.sN)(u.X.CLIPS_AUTO_CLIP_STORAGE_LIMIT, {
+    NZ = (0, o.sN)(u.X.CLIPS_AUTO_CLIP_STORAGE_LIMIT, {
         useTitle: () => g.intl.string(g.t.yfsrDI),
         useSubtitle: () => g.intl.string(g.t.vlDHdC),
-        minValue: NW.wN,
-        maxValue: NW.qh,
-        getInitialValue: () => NH.A.getSettings().maxAutoClips,
+        minValue: NK.wN,
+        maxValue: NK.qh,
+        getInitialValue: () => NX.A.getSettings().maxAutoClips,
         onValueRender: (e) => `${Math.floor(e)}`,
-        asValueChanges: (e) => NK.e6(Math.floor(e)),
-        markers: NZ,
+        asValueChanges: (e) => NH.e6(Math.floor(e)),
+        markers: NW,
         onMarkerRender: (e) => `${Math.floor(e)}`,
     }),
-    NQ = (0, o.zD)(u.X.CLIPS_ENABLE_GAME_SIGNALS, {
+    Nq = (0, o.zD)(u.X.CLIPS_ENABLE_GAME_SIGNALS, {
         useTitle: () => g.intl.string(g.t.iV6KcI),
         useSubtitle: () => g.intl.string(g.t["dJ2tX+"]),
-        useValue: () => (0, O.bG)([NH.A], () => NH.A.getSettings().clipSignals.enableGameSignals),
+        useValue: () => (0, O.bG)([NX.A], () => NX.A.getSettings().clipSignals.enableGameSignals),
         setValue: (e) => {
-            let t = NH.A.getSettings().clipSignals;
-            NK.PW({ ...t, enableGameSignals: e });
+            let t = NX.A.getSettings().clipSignals;
+            NH.PW({ ...t, enableGameSignals: e });
         },
     }),
-    NJ = (0, o.zD)(u.X.CLIPS_ENABLE_PHRASE_SIGNALS, {
+    NQ = (0, o.zD)(u.X.CLIPS_ENABLE_PHRASE_SIGNALS, {
         useTitle: () => g.intl.string(g.t.nHsilt),
         useSubtitle: () => g.intl.string(g.t["s6wq+m"]),
-        useValue: () => (0, O.bG)([NH.A], () => NH.A.getSettings().clipSignals.enablePhraseSignals),
+        useValue: () => (0, O.bG)([NX.A], () => NX.A.getSettings().clipSignals.enablePhraseSignals),
         setValue: (e) => {
-            let t = NH.A.getSettings().clipSignals;
-            NK.PW({ ...t, enablePhraseSignals: e });
+            let t = NX.A.getSettings().clipSignals;
+            NH.PW({ ...t, enablePhraseSignals: e });
         },
     }),
-    N$ = (0, o.E2)(u.X.CLIPS_PHRASES, {
+    NJ = (0, o.E2)(u.X.CLIPS_PHRASES, {
         useSearchTerms: () => [g.intl.string(g.t.JIze0o)],
-        usePredicate: () => (0, O.bG)([NH.A], () => NH.A.getSettings().clipSignals).enablePhraseSignals,
+        usePredicate: () => (0, O.bG)([NX.A], () => NX.A.getSettings().clipSignals).enablePhraseSignals,
         Component: function () {
-            let e = (0, O.bG)([NH.A], () => NH.A.getSettings().autoClipPhrases),
+            let e = (0, O.bG)([NX.A], () => NX.A.getSettings().autoClipPhrases),
                 [t, i] = N.useState(""),
                 n = N.useMemo(() => e.map((e) => ({ id: e, label: e })), [e]),
                 s = N.useCallback((e) => {
@@ -18128,10 +18127,10 @@ let NZ = (() => {
                         if ("Enter" === n.key || "," === n.key) {
                             n.preventDefault();
                             let s = t.trim().toLowerCase();
-                            s.length > 0 && !e.includes(s) && (NK.pM([...e, s]), i(""));
+                            s.length > 0 && !e.includes(s) && (NH.pM([...e, s]), i(""));
                         } else if ("Backspace" === n.key && "" === t && e.length > 0) {
                             let t = e.slice(0, -1);
-                            NK.pM(t);
+                            NH.pM(t);
                         }
                     },
                     [t, e],
@@ -18140,7 +18139,7 @@ let NZ = (() => {
                     (t) => {
                         let i = Array.from(t)[0],
                             n = e.filter((e) => e !== i);
-                        NK.pM(n);
+                        NH.pM(n);
                     },
                     [e],
                 );
@@ -18153,58 +18152,58 @@ let NZ = (() => {
             });
         },
     }),
-    N0 = (0, o.zZ)(u.X.CLIPS_AUTOMATIC_CLIPPING_CATEGORY, {
+    N$ = (0, o.zZ)(u.X.CLIPS_AUTOMATIC_CLIPPING_CATEGORY, {
         useTitle: () => g.intl.string(g.t.sA0WKL),
         usePredicate: () => {
             let { enableAdvancedSignals: e } = lQ.L_.useConfig({ location: "ClipsAutomaticClippingCategory" });
             return e;
         },
-        buildLayout: () => [Nq, NQ, NJ, N$],
+        buildLayout: () => [NZ, Nq, NQ, NJ],
     });
-var N1 = i(150616),
-    N2 = i(16590);
-let N3 = (0, o.Tf)(u.X.CLIPS_CLEAR_REMINDER_SNOOZE, {
-    useTitle: () => g.intl.string(N2.default.S0H8in),
+var N0 = i(150616),
+    N1 = i(16590);
+let N2 = (0, o.Tf)(u.X.CLIPS_CLEAR_REMINDER_SNOOZE, {
+    useTitle: () => g.intl.string(N1.default.S0H8in),
     useSubtitle: () =>
-        (0, O.bG)([NH.A], () => {
-            let { remindersDismissedUntil: e } = NH.A.getUserAgnosticState();
-            if (null == e || Date.now() >= e) return g.intl.string(N2.default.I8u5xw);
+        (0, O.bG)([NX.A], () => {
+            let { remindersDismissedUntil: e } = NX.A.getUserAgnosticState();
+            if (null == e || Date.now() >= e) return g.intl.string(N1.default.I8u5xw);
             let t = new Date(e).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-            return g.intl.formatToPlainString(N2.default.iJ0azr, { time: t });
+            return g.intl.formatToPlainString(N1.default.iJ0azr, { time: t });
         }),
-    useLabel: () => g.intl.string(N2.default.QtW1Nc),
+    useLabel: () => g.intl.string(N1.default.QtW1Nc),
     useVariant: () => "secondary",
-    usePredicate: () => N1.Z.useConfig({ location: "ClearReminderSnooze" }).enableReminderSidebar,
+    usePredicate: () => N0.Z.useConfig({ location: "ClearReminderSnooze" }).enableReminderSidebar,
     useDisabled: () =>
-        (0, O.bG)([NH.A], () => {
-            let { remindersDismissedUntil: e } = NH.A.getUserAgnosticState();
+        (0, O.bG)([NX.A], () => {
+            let { remindersDismissedUntil: e } = NX.A.getUserAgnosticState();
             return null == e || Date.now() >= e;
         }),
-    onClick: NK.Cr,
+    onClick: NH.Cr,
 });
-var N6 = i(753070);
-let N4 = (0, o.Hn)(u.X.CLIPS_FRAME_RATE, {
+var N3 = i(753070);
+let N6 = (0, o.Hn)(u.X.CLIPS_FRAME_RATE, {
     useTitle: () => g.intl.string(g.t["2wScL1"]),
     useSubtitle: () => g.intl.string(g.t["Rf9+fy"]),
-    useValue: () => (0, O.bG)([NH.A], () => NH.A.getSettings().clipsQuality.frameRate),
+    useValue: () => (0, O.bG)([NX.A], () => NX.A.getSettings().clipsQuality.frameRate),
     setValue: (e) => {
-        let { clipsQuality: t } = NH.A.getSettings();
-        NK.GS({ resolution: t.resolution, frameRate: e });
+        let { clipsQuality: t } = NX.A.getSettings();
+        NH.GS({ resolution: t.resolution, frameRate: e });
     },
     useOptions: () => [
-        { id: "15", value: N6.kn.FPS_15, label: g.intl.formatToPlainString(g.t.Qb44XH, { fps: N6.kn.FPS_15 }) },
-        { id: "30", value: N6.kn.FPS_30, label: g.intl.formatToPlainString(g.t.Qb44XH, { fps: N6.kn.FPS_30 }) },
-        { id: "60", value: N6.kn.FPS_60, label: g.intl.formatToPlainString(g.t.Qb44XH, { fps: N6.kn.FPS_60 }) },
+        { id: "15", value: N3.kn.FPS_15, label: g.intl.formatToPlainString(g.t.Qb44XH, { fps: N3.kn.FPS_15 }) },
+        { id: "30", value: N3.kn.FPS_30, label: g.intl.formatToPlainString(g.t.Qb44XH, { fps: N3.kn.FPS_30 }) },
+        { id: "60", value: N3.kn.FPS_60, label: g.intl.formatToPlainString(g.t.Qb44XH, { fps: N3.kn.FPS_60 }) },
     ],
 });
-var N5 = i(372684);
-let N7 = (0, o.E2)(u.X.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
+var N4 = i(372684);
+let N5 = (0, o.E2)(u.X.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
     useSearchTerms: () => [g.intl.string(g.t.SIxrIF)],
-    usePredicate: () => (0, O.bG)([NH.A], () => NH.A.getHardwareClassification()) === N5.k9.BELOW_MINIMUM,
+    usePredicate: () => (0, O.bG)([NX.A], () => NX.A.getHardwareClassification()) === N4.k9.BELOW_MINIMUM,
     Component: () => (0, p.jsx)(sn.A, { look: sn.k.WARNING, children: g.intl.string(g.t.SIxrIF) }),
 });
-var N8 = i(239892);
-let N9 = (0, o.E2)(u.X.CLIPS_KEYBIND, {
+var N7 = i(239892);
+let N8 = (0, o.E2)(u.X.CLIPS_KEYBIND, {
         useSearchTerms: () => [g.intl.string(g.t.pf54EU), g.intl.string(g.t["QyB/jK"])],
         Component: () => {
             let e = (0, O.bG)([e_.Ay], () => e_.Ay.getKeybindForAction(q.hCu.SAVE_CLIP, !0));
@@ -18220,60 +18219,60 @@ let N9 = (0, o.E2)(u.X.CLIPS_KEYBIND, {
                 description: g.intl.string(g.t["QyB/jK"]),
                 layout: "horizontal",
                 children: (0, p.jsx)("div", {
-                    className: N8.g,
+                    className: N7.g,
                     children: (0, p.jsx)(tR.A, { defaultValue: e.shortcut, onChange: t }),
                 }),
             });
         },
     }),
-    fe = (0, o.Hn)(u.X.CLIPS_LENGTH, {
+    N9 = (0, o.Hn)(u.X.CLIPS_LENGTH, {
         useTitle: () => g.intl.string(g.t.OgfUio),
         useSubtitle: () => g.intl.string(g.t.H7j4tY),
-        useValue: () => (0, O.bG)([NH.A], () => NH.A.getSettings().clipsLength),
-        setValue: (e) => NK.h$(e),
+        useValue: () => (0, O.bG)([NX.A], () => NX.A.getSettings().clipsLength),
+        setValue: (e) => NH.h$(e),
         useOptions: () => [
-            { id: "30s", value: NW.LX.SECONDS_30, label: g.intl.formatToPlainString(g.t["bTFv/3"], { count: 30 }) },
-            { id: "1m", value: NW.LX.MINUTES_1, label: g.intl.formatToPlainString(g.t.ICo9Nk, { count: 1 }) },
-            { id: "2m", value: NW.LX.MINUTES_2, label: g.intl.formatToPlainString(g.t.ICo9Nk, { count: 2 }) },
+            { id: "30s", value: NK.LX.SECONDS_30, label: g.intl.formatToPlainString(g.t["bTFv/3"], { count: 30 }) },
+            { id: "1m", value: NK.LX.MINUTES_1, label: g.intl.formatToPlainString(g.t.ICo9Nk, { count: 1 }) },
+            { id: "2m", value: NK.LX.MINUTES_2, label: g.intl.formatToPlainString(g.t.ICo9Nk, { count: 2 }) },
         ],
     }),
-    ft = (0, o.E2)(u.X.CLIPS_QUALITY_INFOBOX, {
+    fe = (0, o.E2)(u.X.CLIPS_QUALITY_INFOBOX, {
         useSearchTerms: () => [g.intl.string(g.t["Z+MfqT"])],
         Component: () => (0, p.jsx)(sn.A, { look: sn.k.INFO, children: g.intl.string(g.t["Z+MfqT"]) }),
     }),
-    fi = (0, o.Hn)(u.X.CLIPS_RESOLUTION, {
+    ft = (0, o.Hn)(u.X.CLIPS_RESOLUTION, {
         useTitle: () => g.intl.string(g.t.aFudZJ),
         useSubtitle: () => g.intl.string(g.t.nIrkW5),
-        useValue: () => (0, O.bG)([NH.A], () => NH.A.getSettings().clipsQuality.resolution),
+        useValue: () => (0, O.bG)([NX.A], () => NX.A.getSettings().clipsQuality.resolution),
         setValue: (e) => {
-            let { clipsQuality: t } = NH.A.getSettings();
-            NK.GS({ resolution: e, frameRate: t.frameRate });
+            let { clipsQuality: t } = NX.A.getSettings();
+            NH.GS({ resolution: e, frameRate: t.frameRate });
         },
         useOptions: () => [
             {
                 id: "480p",
-                value: N6.on.RESOLUTION_480,
-                label: g.intl.formatToPlainString(g.t.TEOC0I, { resolution: N6.on.RESOLUTION_480 }),
+                value: N3.on.RESOLUTION_480,
+                label: g.intl.formatToPlainString(g.t.TEOC0I, { resolution: N3.on.RESOLUTION_480 }),
             },
             {
                 id: "720p",
-                value: N6.on.RESOLUTION_720,
-                label: g.intl.formatToPlainString(g.t.TEOC0I, { resolution: N6.on.RESOLUTION_720 }),
+                value: N3.on.RESOLUTION_720,
+                label: g.intl.formatToPlainString(g.t.TEOC0I, { resolution: N3.on.RESOLUTION_720 }),
             },
             {
                 id: "1080p",
-                value: N6.on.RESOLUTION_1080,
-                label: g.intl.formatToPlainString(g.t.TEOC0I, { resolution: N6.on.RESOLUTION_1080 }),
+                value: N3.on.RESOLUTION_1080,
+                label: g.intl.formatToPlainString(g.t.TEOC0I, { resolution: N3.on.RESOLUTION_1080 }),
             },
             {
                 id: "1440p",
-                value: N6.on.RESOLUTION_1440,
-                label: g.intl.formatToPlainString(g.t.TEOC0I, { resolution: N6.on.RESOLUTION_1440 }),
+                value: N3.on.RESOLUTION_1440,
+                label: g.intl.formatToPlainString(g.t.TEOC0I, { resolution: N3.on.RESOLUTION_1440 }),
             },
-            { id: "source", value: N6.on.RESOLUTION_SOURCE, label: g.intl.string(g.t.XjXqzh) },
+            { id: "source", value: N3.on.RESOLUTION_SOURCE, label: g.intl.string(g.t.XjXqzh) },
         ],
     }),
-    fn = (0, o.E2)(u.X.CLIPS_SCREENSHOT_KEYBIND, {
+    fi = (0, o.E2)(u.X.CLIPS_SCREENSHOT_KEYBIND, {
         useSearchTerms: () => [g.intl.string(g.t["0U/hj7"]), g.intl.string(g.t["5zxkdo"])],
         usePredicate: lQ.BW,
         Component: () => {
@@ -18291,16 +18290,16 @@ let N9 = (0, o.E2)(u.X.CLIPS_KEYBIND, {
                 description: g.intl.string(g.t["5zxkdo"]),
                 layout: "horizontal",
                 children: (0, p.jsx)("div", {
-                    className: N8.g,
+                    className: N7.g,
                     children: (0, p.jsx)(tR.A, { defaultValue: t.shortcut, onChange: i }),
                 }),
             });
         },
     }),
-    fs = (0, o.E2)(u.X.CLIPS_STORAGE_LOCATION, {
+    fn = (0, o.E2)(u.X.CLIPS_STORAGE_LOCATION, {
         useSearchTerms: () => [g.intl.string(g.t.s4773E), g.intl.string(g.t.svjwGh)],
         Component: () => {
-            let e = (0, O.bG)([NH.A], () => NH.A.getSettings().storageLocation),
+            let e = (0, O.bG)([NX.A], () => NX.A.getSettings().storageLocation),
                 t = N.useRef(!1),
                 i = async () => {
                     if (!t.current) {
@@ -18309,7 +18308,7 @@ let N9 = (0, o.E2)(u.X.CLIPS_KEYBIND, {
                             let e = await s3.A.fileManager.showOpenDialog({
                                 properties: ["openDirectory", "createDirectory"],
                             });
-                            e.length > 0 && NK.HU(e[0]);
+                            e.length > 0 && NH.HU(e[0]);
                         } finally {
                             t.current = !1;
                         }
@@ -18327,96 +18326,96 @@ let N9 = (0, o.E2)(u.X.CLIPS_KEYBIND, {
             });
         },
     });
-var fl = i(572164);
-let fr = (0, o.zD)(u.X.CLIPS_ENABLE, {
+var fs = i(572164);
+let fl = (0, o.zD)(u.X.CLIPS_ENABLE, {
     useTitle: () => g.intl.string(g.t.h8rgrK),
     useSubtitle: () => g.intl.string(g.t["4Qw3NO"]),
-    useValue: () => (0, fl.Et)(),
-    setValue: (e) => NK.yO({ clipsEnabled: e, trackAnalytics: !0 }),
+    useValue: () => (0, fs.Et)(),
+    setValue: (e) => NH.yO({ clipsEnabled: e, trackAnalytics: !0 }),
 });
-var fa = i(915618);
-let fo = (0, o.zD)(u.X.CLIPS_ENABLE_DECOUPLED_CLIPPING, {
+var fr = i(915618);
+let fa = (0, o.zD)(u.X.CLIPS_ENABLE_DECOUPLED_CLIPPING, {
         useTitle: () => g.intl.string(g.t.yXvykv),
         useSubtitle: () => g.intl.string(g.t.YP3ujk),
-        useValue: fl.XT,
-        setValue: (e) => NK.fd({ enabled: e, trackAnalytics: !0 }),
+        useValue: fs.XT,
+        setValue: (e) => NH.fd({ enabled: e, trackAnalytics: !0 }),
         usePredicate: () => {
             let e = (0, ev.isWindows)(),
-                t = (0, fa.A)(lb.Ay);
+                t = (0, fr.A)(lb.Ay);
             return e && t;
         },
     }),
-    fu = (0, o.zD)(u.X.CLIPS_ENABLE_REMINDERS, {
+    fo = (0, o.zD)(u.X.CLIPS_ENABLE_REMINDERS, {
         useTitle: () => g.intl.string(g.t["3zwNf6"]),
         useSubtitle: () => g.intl.string(g.t.m4Cjj9),
-        useValue: () => (0, O.bG)([NH.A], () => NH.A.getSettings().remindersEnabled),
-        setValue: (e) => NK.Mt(e),
+        useValue: () => (0, O.bG)([NX.A], () => NX.A.getSettings().remindersEnabled),
+        setValue: (e) => NH.Mt(e),
     }),
-    fd = (0, o.zZ)(u.X.CLIPS_RECORDING_CATEGORY, {
+    fu = (0, o.zZ)(u.X.CLIPS_RECORDING_CATEGORY, {
         useTitle: () => g.intl.string(g.t.iIwmV5),
-        buildLayout: () => [ft, N7, fr, fo, fu, N3, fe, fi, N4, N9, fn, fs],
+        buildLayout: () => [fe, N5, fl, fa, fo, N2, N9, ft, N6, N8, fi, fn],
     }),
-    fc = (0, o.t_)(u.X.CLIPS_PANEL, {
+    fd = (0, o.t_)(u.X.CLIPS_PANEL, {
         useTitle: () => g.intl.string(g.t.z2jK6X),
         usePersistentBadge: () => ({
             badgeType: ef.Xi.STRONGLY_DISCOURAGED_CUSTOM,
-            useCustomBadge: () => (0, p.jsx)(NX, {}),
+            useCustomBadge: () => (0, p.jsx)(NY, {}),
         }),
         usePredicate: lQ.sw,
-        buildLayout: () => [fd, N0],
+        buildLayout: () => [fu, N$],
     }),
-    fg = (0, o.i4)(u.X.CLIPS_SIDEBAR_ITEM, {
+    fc = (0, o.i4)(u.X.CLIPS_SIDEBAR_ITEM, {
         useTitle: () => g.intl.string(g.t.z2jK6X),
-        icon: Nz.x,
-        buildLayout: () => [fc],
+        icon: NF.x,
+        buildLayout: () => [fd],
     });
-var fm = i(187322),
-    fA = i(77468),
-    fh = i(289498),
-    fE = i(573648),
-    fT = i(941314),
-    fx = i(874490),
-    fS = i(370480),
-    fp = i(773952);
-let fN = new Set([q.fg2.XBOX, q.fg2.PLAYSTATION, q.fg2.PLAYSTATION_STAGING, q.fg2.CRUNCHYROLL]);
-var ff = i(169869),
-    fC = i(30370);
-let f_ = (0, E.mj)({
+var fg = i(187322),
+    fm = i(77468),
+    fA = i(289498),
+    fh = i(573648),
+    fE = i(941314),
+    fT = i(874490),
+    fx = i(370480),
+    fS = i(773952);
+let fp = new Set([q.fg2.XBOX, q.fg2.PLAYSTATION, q.fg2.PLAYSTATION_STAGING, q.fg2.CRUNCHYROLL]);
+var fN = i(169869),
+    ff = i(30370);
+let fC = (0, E.mj)({
     name: "2026-03-crepe",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var fI = i(674567),
-    fb = i(237146);
+var f_ = i(674567),
+    fI = i(237146);
 i(594387);
-var fv = i(34934);
-function fj() {
+var fb = i(34934);
+function fv() {
     let e,
         t,
         n,
         s,
         { variant: l, showFooter: r } =
-            ((e = (0, fI.V)()),
+            ((e = (0, f_.V)()),
             (t = (function (e) {
-                let { enabled: t } = f_.useConfig({ location: e });
+                let { enabled: t } = fC.useConfig({ location: e });
                 return t;
             })("connectedAccountsBannerFooter")),
-            (s = null != (n = (0, O.bG)([fC.A], () => fC.A.getAccount(null, q.fg2.XBOX))) && !n.revoked),
-            e === fI.s.NONE || e === fI.s.FREE_FRACTIONAL_NITRO || (e === fI.s.NON_NITRO && 0)
-                ? { variant: fI.s.NONE, showFooter: !1 }
-                : { variant: e, showFooter: t && e === fI.s.NON_NITRO && !s }),
+            (s = null != (n = (0, O.bG)([ff.A], () => ff.A.getAccount(null, q.fg2.XBOX))) && !n.revoked),
+            e === f_.s.NONE || e === f_.s.FREE_FRACTIONAL_NITRO || (e === f_.s.NON_NITRO && 0)
+                ? { variant: f_.s.NONE, showFooter: !1 }
+                : { variant: e, showFooter: t && e === f_.s.NON_NITRO && !s }),
         { analyticsLocations: a } = (0, nU.Ay)(eM.A.XBOX_CONNECTED_ACCOUNTS_BANNER);
-    if (l === fI.s.NONE) return null;
+    if (l === f_.s.NONE) return null;
     let o = "",
         u = null;
     return (
-        l === fI.s.NITRO
-            ? ((o = g.intl.string(fb.default["+QAvQz"])),
+        l === f_.s.NITRO
+            ? ((o = g.intl.string(fI.default["+QAvQz"])),
               (u = (0, p.jsx)(eh.$, {
                   variant: "secondary",
                   size: "sm",
-                  text: g.intl.string(fb.default.CubeLC),
+                  text: g.intl.string(fI.default.CubeLC),
                   onClick: () => {
                       (0, C.openModalLazy)(async () => {
                           let { default: e } = await Promise.all([i.e("16848"), i.e("77632")]).then(i.bind(i, 836291));
@@ -18424,11 +18423,11 @@ function fj() {
                       });
                   },
               })))
-            : l === fI.s.NON_NITRO &&
-              ((o = g.intl.string(fb.default.NwkRTZ)),
+            : l === f_.s.NON_NITRO &&
+              ((o = g.intl.string(fI.default.NwkRTZ)),
               (u = (0, p.jsx)(sE.A, {
                   fullWidth: !0,
-                  defaultTextOverride: g.intl.string(fb.default["0vY+ie"]),
+                  defaultTextOverride: g.intl.string(fI.default["0vY+ie"]),
                   variantOverride: "overlay-primary",
                   size: "sm",
                   subscriptionTier: sf.pe.TIER_2,
@@ -18437,7 +18436,7 @@ function fj() {
             value: a,
             children: [
                 (0, p.jsxs)("div", {
-                    className: fv.bV,
+                    className: fb.bV,
                     children: [
                         (0, p.jsx)(eA.D, {
                             variant: "heading-md/semibold",
@@ -18453,29 +18452,29 @@ function fj() {
                         (0, p.jsx)("div", {
                             className: e,
                             children: (0, p.jsxs)("div", {
-                                className: fv.Nr,
+                                className: fb.Nr,
                                 style: {
                                     backgroundImage:
                                         "url(https://cdn.discordapp.com/assets/content/6f39ba0aa00a9877bcb4bc67862335d29c21749762ec29fd0248ba734bc2c4b8.png)",
                                 },
                                 children: [
-                                    (0, p.jsx)("div", { className: fv.$h }),
-                                    (0, p.jsx)("div", { className: fv.Lw }),
+                                    (0, p.jsx)("div", { className: fb.$h }),
+                                    (0, p.jsx)("div", { className: fb.Lw }),
                                     (0, p.jsxs)("div", {
-                                        className: fv.Qs,
+                                        className: fb.Qs,
                                         children: [
                                             (0, p.jsx)("img", {
-                                                className: fv.wm,
+                                                className: fb.wm,
                                                 src: "https://cdn.discordapp.com/assets/content/f3a967ffa662e944346571ea7f2b30b2e40745e2edca294519fbddf971e81fb1.png",
                                                 alt: "Xbox Game Pass",
                                             }),
                                             (0, p.jsx)(V.E, {
                                                 variant: "text-sm/semibold",
                                                 color: "text-strong",
-                                                className: fv.DD,
+                                                className: fb.DD,
                                                 children: o,
                                             }),
-                                            (0, p.jsx)("div", { className: fv.lO, children: u }),
+                                            (0, p.jsx)("div", { className: fb.lO, children: u }),
                                         ],
                                     }),
                                     !1,
@@ -18487,36 +18486,36 @@ function fj() {
         })
     );
 }
-var fy = i(201718),
-    fO = i(321078),
-    fR = i(672130),
-    fL = i(546183),
-    fD = i(379848),
-    fP = i(950018);
-let fG = (e) => {
+var fj = i(201718),
+    fy = i(321078),
+    fO = i(672130),
+    fR = i(546183),
+    fL = i(379848),
+    fD = i(950018);
+let fP = (e) => {
         let { markAsDismissed: t } = e;
         return (
             N.useEffect(() => t(t8.i.UNKNOWN), [t]),
-            (0, p.jsx)(n8.Lp, { className: fP.Ad, text: g.intl.string(g.t.y2b7CA) })
+            (0, p.jsx)(n8.Lp, { className: fD.Ad, text: g.intl.string(g.t.y2b7CA) })
         );
     },
-    fU = (e) => {
+    fG = (e) => {
         let { title: t, body: i, img: n, newIndicatorDismissibleContent: s, onClick: l } = e;
         return (0, p.jsxs)("div", {
-            className: fP.kL,
+            className: fD.kL,
             children: [
                 n,
                 (0, p.jsxs)("div", {
-                    className: fP.FS,
+                    className: fD.FS,
                     children: [
                         (0, p.jsxs)("div", {
-                            className: fP.TK,
+                            className: fD.TK,
                             children: [
-                                (0, p.jsx)(fD.Ay, {
+                                (0, p.jsx)(fL.Ay, {
                                     contentTypes: [s],
                                     children: (e) => {
                                         let { visibleContent: t, markAsDismissed: i } = e;
-                                        return t === s ? (0, p.jsx)(fG, { markAsDismissed: i }) : null;
+                                        return t === s ? (0, p.jsx)(fP, { markAsDismissed: i }) : null;
                                     },
                                 }),
                                 (0, p.jsx)(V.E, { variant: "text-md/semibold", children: t }),
@@ -18529,30 +18528,30 @@ let fG = (e) => {
             ],
         });
     },
-    fM = () => {
+    fU = () => {
         let e = ta.A.getArticleURL(q.MVz.PS_CONNECTION);
-        return (0, p.jsx)(fU, {
+        return (0, p.jsx)(fG, {
             title: g.intl.string(g.t.v20wwm),
             body: g.intl.format(g.t.lTZBit, { help_article: e }),
             img: (0, p.jsx)("img", { src: "/assets/88954903b6a5b9cc.svg", width: "82", height: "auto", alt: "" }),
             newIndicatorDismissibleContent: eT.M.PS_ONE_WAY_RECONNECT,
-            onClick: () => (0, fp.A)({ platformType: q.fg2.PLAYSTATION, location: "PS two way upsell" }),
+            onClick: () => (0, fS.A)({ platformType: q.fg2.PLAYSTATION, location: "PS two way upsell" }),
         });
     },
-    fV = () => {
+    fM = () => {
         let e = ta.A.getArticleURL(q.MVz.XBOX_CONNECTION);
-        return (0, p.jsx)(fU, {
+        return (0, p.jsx)(fG, {
             title: g.intl.string(g.t["2okkZV"]),
             body: g.intl.format(g.t.OnERSS, { help_article: e }),
             img: (0, p.jsx)("img", { src: "/assets/9df988a227916145.png", width: "auto", height: "45", alt: "" }),
             newIndicatorDismissibleContent: eT.M.XBOX_ONE_WAY_RECONNECT,
-            onClick: () => (0, fp.A)({ platformType: q.fg2.XBOX, location: "Xbox two way upsell" }),
+            onClick: () => (0, fS.A)({ platformType: q.fg2.XBOX, location: "Xbox two way upsell" }),
         });
     };
-var fk = i(783419),
-    fw = i(534952),
-    fB = i(838251);
-let fF = (e) => {
+var fV = i(783419),
+    fk = i(534952),
+    fw = i(838251);
+let fB = (e) => {
     let t,
         { integration: i } = e,
         {
@@ -18560,12 +18559,12 @@ let fF = (e) => {
             joinErrorMessage: s,
             showJoinErrorMessage: l,
         } = (0, O.cf)(
-            [fC.A],
+            [ff.A],
             () => ({
-                isJoining: fC.A.isJoining(i.id),
+                isJoining: ff.A.isJoining(i.id),
                 joinErrorMessage:
-                    "" === fC.A.joinErrorMessage(i.id) ? g.intl.string(g.t.j2d6Km) : fC.A.joinErrorMessage(i.id),
-                showJoinErrorMessage: void 0 !== fC.A.joinErrorMessage(i.id),
+                    "" === ff.A.joinErrorMessage(i.id) ? g.intl.string(g.t.j2d6Km) : ff.A.joinErrorMessage(i.id),
+                showJoinErrorMessage: void 0 !== ff.A.joinErrorMessage(i.id),
             }),
             [i.id],
         );
@@ -18574,21 +18573,21 @@ let fF = (e) => {
             (t = (0, p.jsx)(eh.$, {
                 size: "sm",
                 onClick: function () {
-                    fA.A.joinServer(i.id, () => {});
+                    fm.A.joinServer(i.id, () => {});
                 },
                 disabled: n,
                 variant: "primary",
                 text: n ? g.intl.string(g.t.RXvQQu) : g.intl.string(g.t.XpeFYr),
             })),
         (0, p.jsxs)("div", {
-            className: fB.iA,
+            className: fw.iA,
             children: [
                 (0, p.jsxs)("div", {
-                    className: fB.XX,
+                    className: fw.XX,
                     children: [
-                        (0, p.jsx)(gd.Ay, { size: gd.Ay.Sizes.SMALL, guild: i.guild, className: fB.$f }),
+                        (0, p.jsx)(gd.Ay, { size: gd.Ay.Sizes.SMALL, guild: i.guild, className: fw.$f }),
                         (0, p.jsxs)("div", {
-                            className: fB.Vn,
+                            className: fw.Vn,
                             children: [
                                 (0, p.jsx)(V.E, {
                                     variant: "text-md/semibold",
@@ -18596,7 +18595,7 @@ let fF = (e) => {
                                     children: i.guild.name,
                                 }),
                                 (0, p.jsx)(uO.Anchor, {
-                                    href: fE.A.get(i.type)?.getPlatformUserUrl?.(i.account),
+                                    href: fh.A.get(i.type)?.getPlatformUserUrl?.(i.account),
                                     children: (0, p.jsx)(V.E, {
                                         variant: "text-xs/normal",
                                         color: "text-default",
@@ -18612,14 +18611,14 @@ let fF = (e) => {
                     (0, p.jsx)(V.E, {
                         variant: "text-xs/normal",
                         color: "text-feedback-critical",
-                        className: fB.R,
+                        className: fw.R,
                         children: s,
                     }),
             ],
         })
     );
 };
-function fz(e) {
+function fF(e) {
     let t,
         i,
         n,
@@ -18636,8 +18635,8 @@ function fz(e) {
         [b, v] = N.useState(null),
         [j, y] = N.useState(!1),
         [O, R] = N.useState([]),
-        D = (0, fx.ML)(u.type),
-        P = fE.A.get(D);
+        D = (0, fT.ML)(u.type),
+        P = fh.A.get(D);
     N.useEffect(() => {
         A(u.friendSync), E(u.visibility), x(u.metadataVisibility), f(u.showActivity);
     }, [u]);
@@ -18650,15 +18649,15 @@ function fz(e) {
         N.useEffect(() => {
             if (!1 === u.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = U.current;
-            null != e && (E(e), fA.A.setVisibility(u.type, u.id, e), I(null)),
-                null != t && (x(t), fA.A.setMetadataVisibility(u.type, u.id, t), v(null));
+            null != e && (E(e), fm.A.setVisibility(u.type, u.id, e), I(null)),
+                null != t && (x(t), fm.A.setMetadataVisibility(u.type, u.id, t), v(null));
         }, [u]),
         (0, p.jsxs)("div", {
-            className: fB.FI,
+            className: fw.FI,
             children: [
-                ((t = fE.A.get(u.type)),
-                (i = fE.A.get(D)),
-                (n = "1" === (u.metadata ?? {})[fk.pK.TWITTER_VERIFIED]),
+                ((t = fh.A.get(u.type)),
+                (i = fh.A.get(D)),
+                (n = "1" === (u.metadata ?? {})[fV.pK.TWITTER_VERIFIED]),
                 (s = null),
                 t.type === q.fg2.TWITTER &&
                     n &&
@@ -18670,39 +18669,39 @@ function fz(e) {
                         }),
                     })),
                 (0, p.jsxs)("div", {
-                    className: fB.Il,
+                    className: fw.Il,
                     children: [
                         (0, p.jsx)("img", {
                             alt: i.name,
-                            className: fB.gj,
+                            className: fw.gj,
                             src: (0, cK.M)(d) ? i.icon.darkSVG : i.icon.lightSVG,
                         }),
                         (0, p.jsxs)("div", {
                             children: [
                                 (0, p.jsxs)("div", {
-                                    className: fB.$p,
+                                    className: fw.$p,
                                     children: [
                                         (0, p.jsx)(V.E, {
                                             color: "text-strong",
                                             variant: "text-md/semibold",
-                                            className: fB.RW,
+                                            className: fw.RW,
                                             children: u.name,
                                         }),
-                                        null != s && (0, p.jsx)("div", { className: fB.cG, children: s }),
+                                        null != s && (0, p.jsx)("div", { className: fw.cG, children: s }),
                                     ],
                                 }),
                                 (0, p.jsx)(V.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    className: fB.Au,
+                                    className: fw.Au,
                                     children: i.name,
                                 }),
                             ],
                         }),
                         (0, p.jsx)(M.D, {
-                            className: fB.uH,
+                            className: fw.uH,
                             onClick: function () {
-                                let e = fE.A.get(u.type);
+                                let e = fh.A.get(u.type);
                                 (0, C.openModal)((t) =>
                                     (0, p.jsx)(lR.Modal, {
                                         title: g.intl.formatToPlainString(g.t.U5x12f, { name: e.name }),
@@ -18723,7 +18722,7 @@ function fz(e) {
                                         ],
                                         ...t,
                                         children:
-                                            fN.has(u.type) &&
+                                            fp.has(u.type) &&
                                             u.twoWayLink &&
                                             (0, p.jsx)(sn.A, {
                                                 children: g.intl.format(g.t.COW3Xn, { platformName: e.name }),
@@ -18740,34 +18739,34 @@ function fz(e) {
                 u.twoWayLink
                     ? null
                     : u.type === q.fg2.XBOX
-                      ? (0, p.jsx)(fV, {})
+                      ? (0, p.jsx)(fM, {})
                       : u.type === q.fg2.PLAYSTATION
-                        ? (0, p.jsx)(fM, {})
+                        ? (0, p.jsx)(fU, {})
                         : null,
                 (function (e) {
                     let t = e.metadata ?? {},
                         i = null,
-                        n = (0, fS.An)(t[fk.pK.CREATED_AT], c);
+                        n = (0, fx.An)(t[fV.pK.CREATED_AT], c);
                     switch (e.type) {
                         case q.fg2.REDDIT:
-                            i = (0, ff.xE)(t, fB.Nz);
+                            i = (0, fN.xE)(t, fw.Nz);
                             break;
                         case q.fg2.STEAM:
-                            i = (0, ff.dy)(t, fB.Nz);
+                            i = (0, fN.dy)(t, fw.Nz);
                             break;
                         case q.fg2.BLUESKY:
                         case q.fg2.TWITTER:
                         case q.fg2.MASTODON:
-                            i = (0, ff.ED)(t, fB.Nz);
+                            i = (0, fN.ED)(t, fw.Nz);
                             break;
                         case q.fg2.EBAY:
-                            i = (0, ff.ub)(t, fB.Nz);
+                            i = (0, fN.ub)(t, fw.Nz);
                             break;
                         case q.fg2.PAYPAL:
-                            i = (0, ff.gZ)(t, fB.Nz);
+                            i = (0, fN.gZ)(t, fw.Nz);
                             break;
                         case q.fg2.TIKTOK:
-                            i = (0, ff.HU)(t, fB.Nz);
+                            i = (0, fN.HU)(t, fw.Nz);
                     }
                     null !== n &&
                         (null == i && (i = []),
@@ -18777,7 +18776,7 @@ function fz(e) {
                                 {
                                     variant: "text-xs/normal",
                                     color: "text-subtle",
-                                    className: fB.M4,
+                                    className: fw.M4,
                                     children: g.intl.format(g.t["9rfonh"], { date: n }),
                                 },
                                 "member-since",
@@ -18786,15 +18785,15 @@ function fz(e) {
                     let s = O.includes(e.id),
                         l = g.intl.string(g.t.wzzjk9);
                     if (null == i || 0 === i.length)
-                        if (!0 !== fE.A.get(e.type).hasMetadata) return null;
+                        if (!0 !== fh.A.get(e.type).hasMetadata) return null;
                         else
                             (i = [
-                                (0, p.jsx)(n8.Lp, { className: fB.Z3, text: g.intl.string(g.t.y2b7CA) }, "badge"),
+                                (0, p.jsx)(n8.Lp, { className: fw.Z3, text: g.intl.string(g.t.y2b7CA) }, "badge"),
                                 (0, p.jsx)(
                                     V.E,
                                     {
                                         variant: "text-xs/normal",
-                                        className: fB.vt,
+                                        className: fw.vt,
                                         children: g.intl.format(g.t.Up2ni7, {
                                             helpdeskUrl: ta.A.getArticleURL(q.MVz.CONNECTION_DETAILS),
                                         }),
@@ -18809,7 +18808,7 @@ function fz(e) {
                             (0, p.jsx)(
                                 "div",
                                 {
-                                    className: fB.jy,
+                                    className: fw.jy,
                                     children: (0, p.jsx)(eh.$, {
                                         text: l,
                                         variant: "secondary",
@@ -18821,7 +18820,7 @@ function fz(e) {
                                             ? void 0
                                             : () => {
                                                   y(!0),
-                                                      fA.A.refresh(e.type, e.id).finally(() => {
+                                                      fm.A.refresh(e.type, e.id).finally(() => {
                                                           setTimeout(() => {
                                                               O.push(e.id), R(O), y(!1);
                                                           }, 2e3);
@@ -18832,7 +18831,7 @@ function fz(e) {
                                 "refresh-button",
                             ),
                         ),
-                        (0, p.jsx)("div", { className: fB.tJ, children: i })
+                        (0, p.jsx)("div", { className: fw.tJ, children: i })
                     );
                 })(u),
                 (q.txh.has(u.type) &&
@@ -18840,7 +18839,7 @@ function fz(e) {
                         label: g.intl.string(g.t["+KCMSi"]),
                         checked: m,
                         onChange: function (e) {
-                            A(e), fA.A.setFriendSync(u.type, u.id, e);
+                            A(e), fm.A.setFriendSync(u.type, u.id, e);
                         },
                     })),
                 q.ewM.has(u.type) &&
@@ -18848,10 +18847,10 @@ function fz(e) {
                         label: g.intl.format(g.t["6u6J0q"], { platform: P.name }),
                         checked: S,
                         onChange: function (e) {
-                            f(e), fA.A.setShowActivity(u.type, u.id, e);
+                            f(e), fm.A.setShowActivity(u.type, u.id, e);
                         },
                     })),
-                fE.A.get(u.type)?.hasMetadata === !0 &&
+                fh.A.get(u.type)?.hasMetadata === !0 &&
                     (a = (0, p.jsx)(L.d, {
                         label: g.intl.string(g.t.FYKGsL),
                         checked: 1 === T,
@@ -18859,15 +18858,15 @@ function fz(e) {
                             let { verified: t } = u,
                                 i = +!!e;
                             if (e && !t) {
-                                v(i), (0, fp.A)({ platformType: u.type, location: "User Settings" });
+                                v(i), (0, fS.A)({ platformType: u.type, location: "User Settings" });
                                 return;
                             }
-                            x(i), fA.A.setMetadataVisibility(u.type, u.id, i);
+                            x(i), fm.A.setMetadataVisibility(u.type, u.id, i);
                         },
                         disabled: 1 !== h || null == u.metadata,
                     })),
                 (0, p.jsxs)("div", {
-                    className: fB.HZ,
+                    className: fw.HZ,
                     children: [
                         (0, p.jsx)(L.d, {
                             label: g.intl.string(g.t.f7yOAX),
@@ -18876,10 +18875,10 @@ function fz(e) {
                                 let { verified: t } = u,
                                     i = +!!e;
                                 if (e && !t) {
-                                    I(i), (0, fp.A)({ platformType: u.type, location: "User Settings" });
+                                    I(i), (0, fS.A)({ platformType: u.type, location: "User Settings" });
                                     return;
                                 }
-                                E(i), fA.A.setVisibility(u.type, u.id, i);
+                                E(i), fm.A.setVisibility(u.type, u.id, i);
                             },
                         }),
                         a,
@@ -18895,14 +18894,14 @@ function fz(e) {
                           messageType: tr.Y.INFO,
                           children: g.intl.format(g.t["6C4lgA"], {
                               onReconnect: function () {
-                                  (0, fp.A)({ platformType: u.type, location: "User Settings" });
+                                  (0, fS.A)({ platformType: u.type, location: "User Settings" });
                               },
                           }),
                       })
                     : u.integrations.length > 0
                       ? (0, p.jsx)(sO.D, {
                             label: g.intl.string(g.t.fOe3fZ),
-                            children: u.integrations.map((e) => (0, p.jsx)(fF, { integration: e }, e.id)),
+                            children: u.integrations.map((e) => (0, p.jsx)(fB, { integration: e }, e.id)),
                         })
                       : void 0,
                 null,
@@ -18910,44 +18909,44 @@ function fz(e) {
         })
     );
 }
-function fY(e) {
+function fz(e) {
     let { appIdentity: t, oauth2Token: i } = e;
     return null == i
         ? null
         : (0, p.jsxs)("div", {
-              className: fB.FI,
+              className: fw.FI,
               children: [
                   (function (e, t) {
                       let { application: i } = t,
                           n = i$.Ay.getApplicationIconURL({ id: i.id, icon: i.icon });
                       return (0, p.jsxs)("div", {
-                          className: fB.Il,
+                          className: fw.Il,
                           children: [
-                              (0, p.jsx)("img", { alt: i.name, className: ew()(fB.gj, fB.sN), src: n }),
+                              (0, p.jsx)("img", { alt: i.name, className: ew()(fw.gj, fw.sN), src: n }),
                               (0, p.jsxs)("div", {
                                   children: [
                                       (0, p.jsx)("div", {
-                                          className: fB.$p,
+                                          className: fw.$p,
                                           children: (0, p.jsx)(V.E, {
                                               color: "text-strong",
                                               variant: "text-md/semibold",
-                                              className: fB.RW,
+                                              className: fw.RW,
                                               children: e.profile.username,
                                           }),
                                       }),
                                       (0, p.jsx)(V.E, {
                                           variant: "text-xs/normal",
                                           color: "text-strong",
-                                          className: fB.Au,
+                                          className: fw.Au,
                                           children: i.name,
                                       }),
                                   ],
                               }),
                               (0, p.jsx)(M.D, {
-                                  className: fB.uH,
+                                  className: fw.uH,
                                   onClick: () =>
-                                      (0, NV.d1)(i, () => {
-                                          NM.A.delete(t.id);
+                                      (0, NM.d1)(i, () => {
+                                          NU.A.delete(t.id);
                                       }),
                                   "aria-label": g.intl.string(g.t.ppppRJ),
                                   focusProps: { offset: { top: -4, left: -4, right: -4 } },
@@ -18957,12 +18956,12 @@ function fY(e) {
                       });
                   })(t, i),
                   (0, p.jsx)("div", {
-                      className: fB.HZ,
+                      className: fw.HZ,
                       children: (0, p.jsx)(L.d, {
                           label: g.intl.string(g.t.f7yOAX),
                           checked: t.profile?.connection_visible ?? !1,
                           onChange: (e) => {
-                              fy.A.updateApplicationIdentityConfig(i.application.id, t.provider_issued_user_id, {
+                              fj.A.updateApplicationIdentityConfig(i.application.id, t.provider_issued_user_id, {
                                   connection_visible: e,
                               });
                           },
@@ -18971,28 +18970,28 @@ function fY(e) {
               ],
           });
 }
-function fX(e) {
-    let t = fE.A.get(e);
-    (0, fp.A)({ platformType: t.type }),
+function fY(e) {
+    let t = fh.A.get(e);
+    (0, fS.A)({ platformType: t.type }),
         Y.default.track(q.HAw.ACCOUNT_LINK_STEP, {
             previous_step: "desktop connections",
             current_step: "desktop oauth",
             platform_type: t.type,
         });
 }
-function fH() {
-    let e = (0, fx.gn)(),
-        t = fT.A.useConfig({ location: "User Settings Connections" }),
-        i = (0, eZ.A)(t.enabled ? fw.tX : []);
+function fX() {
+    let e = (0, fT.gn)(),
+        t = fE.A.useConfig({ location: "User Settings Connections" }),
+        i = (0, eZ.A)(t.enabled ? fk.tX : []);
     return (0, p.jsxs)("div", {
-        className: fB.lA,
+        className: fw.lA,
         children: [
             i.map(
                 (e) =>
                     null != e &&
                     (0, p.jsx)(
-                        fR.A,
-                        { application: e, className: fB.__invalid_accountButton, innerClassName: fB.U$ },
+                        fO.A,
+                        { application: e, className: fw.__invalid_accountButton, innerClassName: fw.U$ },
                         e.id,
                     ),
             ),
@@ -19000,21 +18999,21 @@ function fH() {
                 .slice(0, 10 - i.length)
                 .map((e) =>
                     (0, p.jsx)(
-                        fh.A,
-                        { type: e.type, className: fB.__invalid_accountButton, innerClassName: fB.U$ },
+                        fA.A,
+                        { type: e.type, className: fw.__invalid_accountButton, innerClassName: fw.U$ },
                         e.type,
                     ),
                 ),
             (0, p.jsx)(e0.m, {
                 text: g.intl.string(g.t.QqTz8b),
                 children: (0, p.jsx)("div", {
-                    className: ew()(fB.ej, fB.__invalid_accountButton),
-                    children: (0, p.jsx)(fm.vN, {
+                    className: ew()(fw.ej, fw.__invalid_accountButton),
+                    children: (0, p.jsx)(fg.vN, {
                         children: (0, p.jsx)("button", {
-                            className: ew()(fB.R8, fB.U$),
+                            className: ew()(fw.R8, fw.U$),
                             type: "button",
                             onClick: function () {
-                                n6.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_SHOW", onComplete: fX });
+                                n6.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_SHOW", onComplete: fY });
                             },
                             "aria-label": g.intl.string(g.t.Zhcj9X),
                             children: (0, p.jsx)(th._, {
@@ -19029,7 +19028,7 @@ function fH() {
         ],
     });
 }
-function fK(e) {
+function fH(e) {
     let t,
         { fetching: i, accounts: n, appIdentities: s, authorizedApps: l, theme: r, locale: a } = e;
     return (
@@ -19047,16 +19046,16 @@ function fK(e) {
                     children: [
                         s.map((e, t) =>
                             (0, p.jsx)(
-                                fY,
+                                fz,
                                 { appIdentity: e, oauth2Token: l.find((t) => t.application.id === e.application_id) },
                                 `app-${t}`,
                             ),
                         ),
                         n
-                            .filter((e) => fE.A.isSupported(e.type))
+                            .filter((e) => fh.A.isSupported(e.type))
                             .map((e, t) =>
                                 (0, p.jsx)(
-                                    fz,
+                                    fF,
                                     {
                                         theme: r,
                                         account: e,
@@ -19064,7 +19063,7 @@ function fK(e) {
                                         onDisconnect: () =>
                                             (function (e) {
                                                 let { type: t, id: i } = e;
-                                                fA.A.disconnect(t, i);
+                                                fm.A.disconnect(t, i);
                                             })(e),
                                     },
                                     `connection-${t}`,
@@ -19072,15 +19071,15 @@ function fK(e) {
                             ),
                     ],
                 })),
-        (0, p.jsx)("div", { className: fB.V, children: t })
+        (0, p.jsx)("div", { className: fw.V, children: t })
     );
 }
-let fW = (0, o.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
+let fK = (0, o.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
         Component: function () {
             return (0, p.jsx)(sO.D, {
                 label: g.intl.string(g.t.ZeDrUf),
                 description: g.intl.format(g.t["oYc+Gz"], { privacyPolicyUrl: q.X7G.PRIVACY }),
-                children: (0, p.jsx)(fH, {}),
+                children: (0, p.jsx)(fX, {}),
             });
         },
         useSearchTerms: () => [
@@ -19094,30 +19093,30 @@ let fW = (0, o.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
             g.intl.string(g.t["+KCMSi"]),
         ],
     }),
-    fZ = (0, o.E2)(u.X.CONNECTIONS_CONNECTED_ACCOUNTS_SETTING, {
+    fW = (0, o.E2)(u.X.CONNECTIONS_CONNECTED_ACCOUNTS_SETTING, {
         Component: function () {
             let e = (0, O.bG)([eC.A], () => eC.A.hidePersonalInformation),
-                t = (0, O.bG)([fC.A], () => fC.A.isFetching()),
-                i = (0, O.bG)([fC.A], () => fC.A.getAccounts()),
-                { authorizedAppsFetchState: n, authorizedApps: s } = (0, O.cf)([fL.default], () => ({
-                    authorizedAppsFetchState: fL.default.getFetchState(),
-                    authorizedApps: fL.default.getNewestTokensForNonChildrenApplications(),
+                t = (0, O.bG)([ff.A], () => ff.A.isFetching()),
+                i = (0, O.bG)([ff.A], () => ff.A.getAccounts()),
+                { authorizedAppsFetchState: n, authorizedApps: s } = (0, O.cf)([fR.default], () => ({
+                    authorizedAppsFetchState: fR.default.getFetchState(),
+                    authorizedApps: fR.default.getNewestTokensForNonChildrenApplications(),
                 })),
-                { isLoading: l, filteredAppIdentities: r } = (0, fO.A)(t3.default.getCurrentUser().id, {
+                { isLoading: l, filteredAppIdentities: r } = (0, fy.A)(t3.default.getCurrentUser().id, {
                     includeHidden: !0,
                 }),
                 a = (0, dW.Ay)(),
                 o = (0, O.bG)([dx.default], () => dx.default.locale);
             return (N.useEffect(() => {
-                n === fL.FetchState.NOT_FETCHED && NM.A.fetch();
+                n === fR.FetchState.NOT_FETCHED && NU.A.fetch();
             }, [n]),
             e)
                 ? null
                 : (0, p.jsxs)(p.Fragment, {
                       children: [
-                          (0, p.jsx)(fj, {}),
-                          (0, p.jsx)(fK, {
-                              fetching: t || l || (r.length > 0 && n !== fL.FetchState.FETCHED),
+                          (0, p.jsx)(fv, {}),
+                          (0, p.jsx)(fH, {
+                              fetching: t || l || (r.length > 0 && n !== fR.FetchState.FETCHED),
                               accounts: i,
                               appIdentities: r,
                               authorizedApps: s,
@@ -19128,7 +19127,7 @@ let fW = (0, o.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
                   });
         },
         initialize: () => {
-            fA.A.fetch();
+            fm.A.fetch();
         },
         useSearchTerms: () => [
             g.intl.string(g.t["+/hZM/"]),
@@ -19138,19 +19137,19 @@ let fW = (0, o.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
             g.intl.string(g.t["+KCMSi"]),
         ],
     });
-var fq = i(46225),
-    fQ = i(452832);
-let fJ = [q.fg2.LEAGUE_OF_LEGENDS, q.fg2.RIOT_GAMES],
-    f$ = [{ badgeType: ef.Xi.NEW, dismissibleContent: eT.M.NEW_CRUNCHYROLL_CONNECTION }],
-    f0 = (0, o.zZ)(u.X.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, {
-        buildLayout: () => [fW],
+var fZ = i(46225),
+    fq = i(452832);
+let fQ = [q.fg2.LEAGUE_OF_LEGENDS, q.fg2.RIOT_GAMES],
+    fJ = [{ badgeType: ef.Xi.NEW, dismissibleContent: eT.M.NEW_CRUNCHYROLL_CONNECTION }],
+    f$ = (0, o.zZ)(u.X.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, {
+        buildLayout: () => [fK],
         useInlineNotice: function () {
-            let e = (0, O.bG)([fC.A], () => fC.A.getAccounts().find((e) => fJ.includes(e.type))?.type),
-                t = null != e ? fE.A.get(e) : null,
+            let e = (0, O.bG)([ff.A], () => ff.A.getAccounts().find((e) => fQ.includes(e.type))?.type),
+                t = null != e ? fh.A.get(e) : null,
                 i = (0, eZ.h)(t?.replacedBy),
-                { canStartAuthorization: n, hasAlreadyLinked: s, fetched: l } = (0, fq.RD)(i),
-                r = g.intl.string(fQ.default["1S6oAo"]),
-                a = fT.A.useConfig({ location: "RiotDeprecationInlineNotice" }).enabled;
+                { canStartAuthorization: n, hasAlreadyLinked: s, fetched: l } = (0, fZ.RD)(i),
+                r = g.intl.string(fq.default["1S6oAo"]),
+                a = fE.A.useConfig({ location: "RiotDeprecationInlineNotice" }).enabled;
             return N.useMemo(
                 () =>
                     a && null != t && n && i?.connectionEntrypointUrl != null && !s && l
@@ -19158,7 +19157,7 @@ let fJ = [q.fg2.LEAGUE_OF_LEGENDS, q.fg2.RIOT_GAMES],
                               type: ef.lT.INLINE_NOTICE,
                               noticeType: "info",
                               useText: () =>
-                                  g.intl.format(fQ.default.DeOsIl, {
+                                  g.intl.format(fq.default.DeOsIl, {
                                       connectionName: t.name,
                                       applicationName: r,
                                       connectionEntrypointUrl: i.connectionEntrypointUrl,
@@ -19169,40 +19168,40 @@ let fJ = [q.fg2.LEAGUE_OF_LEGENDS, q.fg2.RIOT_GAMES],
             );
         },
     }),
-    f1 = (0, o.zZ)(u.X.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [fZ] }),
-    f2 = (0, o.t_)(u.X.CONNECTIONS_PANEL, {
+    f0 = (0, o.zZ)(u.X.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [fW] }),
+    f1 = (0, o.t_)(u.X.CONNECTIONS_PANEL, {
         useTitle: () => g.intl.string(g.t["3fe7U5"]),
         useObscuredNotice: uX.L,
-        buildLayout: () => [f0, f1],
+        buildLayout: () => [f$, f0],
     }),
-    f3 = (0, o.i4)(u.X.CONNECTIONS_SIDEBAR_ITEM, {
+    f2 = (0, o.i4)(u.X.CONNECTIONS_SIDEBAR_ITEM, {
         useTitle: () => g.intl.string(g.t["3fe7U5"]),
         icon: hN.q,
-        getDismissibleBadges: () => f$,
-        buildLayout: () => [f2],
+        getDismissibleBadges: () => fJ,
+        buildLayout: () => [f1],
     });
-var f6 = i(875444);
-function f4(e, t) {
-    let i = (0, O.bG)([fL.default], () => fL.default.getFetchState()),
-        n = (0, O.bG)([fL.default], () =>
-            e ? fL.default.getNewestTokensForNonChildrenApplications() : fL.default.getNewestTokens(),
+var f3 = i(875444);
+function f6(e, t) {
+    let i = (0, O.bG)([fR.default], () => fR.default.getFetchState()),
+        n = (0, O.bG)([fR.default], () =>
+            e ? fR.default.getNewestTokensForNonChildrenApplications() : fR.default.getNewestTokens(),
         ),
         s = N.useMemo(
-            () => (null == n ? [] : n.filter((e) => (0, f6.A)(e.application)).map((e) => e.application)),
+            () => (null == n ? [] : n.filter((e) => (0, f3.A)(e.application)).map((e) => e.application)),
             [n],
         );
     return (
         N.useEffect(() => {
-            t || NM.A.fetch();
+            t || NU.A.fetch();
         }, [t]),
-        { showLoadingIndicator: i !== fL.FetchState.FETCHED && (null == n || 0 === n.length), slayerSdkApplications: s }
+        { showLoadingIndicator: i !== fR.FetchState.FETCHED && (null == n || 0 === n.length), slayerSdkApplications: s }
     );
 }
 i(505653);
-var f5 = i(106148);
+var f4 = i(106148);
 i(650832);
-var f7 = i(628736);
-function f8(e) {
+var f5 = i(628736);
+function f7(e) {
     let { applications: t } = e,
         i = N.useMemo(() => t.sort((e, t) => u2.default.compare(t.id, e.id)), [t]),
         n = N.useMemo(() => {
@@ -19243,7 +19242,7 @@ function f8(e) {
                         e0.m,
                         {
                             __unsupportedReactNodeAsText: l,
-                            children: (0, p.jsx)("img", { src: a, "aria-label": l, className: f7.Kk }),
+                            children: (0, p.jsx)("img", { src: a, "aria-label": l, className: f5.Kk }),
                         },
                         r,
                     ),
@@ -19256,7 +19255,7 @@ function f8(e) {
                         (0, p.jsx)(
                             "div",
                             {
-                                className: f7.lK,
+                                className: f5.lK,
                                 children: (0, p.jsx)(V.E, {
                                     variant: "text-xs/medium",
                                     color: "text-default",
@@ -19270,17 +19269,17 @@ function f8(e) {
             );
         }, [i]);
     return (0, p.jsxs)("div", {
-        className: f7.wx,
+        className: f5.wx,
         children: [
             (0, p.jsxs)("div", {
-                className: f7.kX,
+                className: f5.kX,
                 children: [
                     (0, p.jsx)(V.E, { variant: "text-md/normal", color: "text-strong", children: n }),
                     (0, p.jsxs)(M.D, {
                         onClick: () => {
                             (0, ej.openUserSettings)(u.X.AUTHORIZED_APPS_PANEL);
                         },
-                        className: f7.bJ,
+                        className: f5.bJ,
                         children: [
                             (0, p.jsx)(V.E, {
                                 variant: "text-xs/normal",
@@ -19290,25 +19289,25 @@ function f8(e) {
                             (0, p.jsx)(th._, {
                                 size: "xxs",
                                 color: w.A.colors.INTERACTIVE_TEXT_DEFAULT,
-                                className: f7.g7,
+                                className: f5.g7,
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, p.jsx)("div", { className: f7.yF }),
-            (0, p.jsx)("div", { className: f7.lJ, children: s }),
+            (0, p.jsx)("div", { className: f5.yF }),
+            (0, p.jsx)("div", { className: f5.lJ, children: s }),
         ],
     });
 }
-function f9() {
+function f8() {
     return (0, p.jsxs)("div", {
-        className: f7.do,
+        className: f5.do,
         children: [
             (0, p.jsx)(V.E, {
                 variant: "text-md/medium",
                 color: "text-strong",
-                className: f7.xV,
+                className: f5.xV,
                 children: g.intl.string(g.t["+0U77d"]),
             }),
             (0, p.jsx)(V.E, {
@@ -19321,31 +19320,31 @@ function f9() {
         ],
     });
 }
-function Ce(e) {
+function f9(e) {
     let { applications: t } = e;
-    return t.length > 0 ? (0, p.jsx)(f8, { applications: t }) : (0, p.jsx)(f9, {});
+    return t.length > 0 ? (0, p.jsx)(f7, { applications: t }) : (0, p.jsx)(f8, {});
 }
-let Ct = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES, {
+let Ce = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES, {
     useSearchTerms: () => [g.intl.string(g.t.YpCiMt)],
     Component: function () {
-        let { showLoadingIndicator: e, slayerSdkApplications: t } = f4(!0);
-        return e ? (0, p.jsx)(uK.y, {}) : (0, p.jsx)(Ce, { applications: t });
+        let { showLoadingIndicator: e, slayerSdkApplications: t } = f6(!0);
+        return e ? (0, p.jsx)(uK.y, {}) : (0, p.jsx)(f9, { applications: t });
     },
 });
-function Ci() {
-    let { showLoadingIndicator: e, slayerSdkApplications: t } = f4(!0, !0);
+function Ct() {
+    let { showLoadingIndicator: e, slayerSdkApplications: t } = f6(!0, !0);
     return !e && t.length > 0;
 }
-let Cn = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_ALLOW_GAME_FRIEND_DMS_SETTING, {
+let Ci = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_ALLOW_GAME_FRIEND_DMS_SETTING, {
         useTitle: () => g.intl.string(g.t.XpBObB),
         useSubtitle: () =>
             g.intl.format(g.t.oZsHTD, { helpdeskArticle: ta.A.getArticleURL(q.MVz.SLAYER_GAME_FRIENDS) }),
         useSearchTerms: () => [g.intl.string(g.t["Uv/eTx"])],
         useValue: () => c.Zk.useSetting(),
         setValue: (e) => c.Zk.updateSetting(e),
-        usePredicate: Ci,
+        usePredicate: Ct,
     }),
-    Cs = (0, o.Qx)(u.X.CONTENT_AND_SOCIAL_IN_GAME_DMS_SETTING, {
+    Cn = (0, o.Qx)(u.X.CONTENT_AND_SOCIAL_IN_GAME_DMS_SETTING, {
         useTitle: () => g.intl.string(g.t["ms+Tme"]),
         useSubtitle: () => g.intl.string(g.t["4NN4+/"]),
         useOptions: () => [
@@ -19358,28 +19357,28 @@ let Cn = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_ALLOW_GAME_FRIEND_DMS_SETTING, {
             return e === f.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? f.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e;
         },
         setValue: (e) => c.TA.updateSetting(e),
-        usePredicate: Ci,
+        usePredicate: Ct,
     }),
-    Cl = (0, o.zZ)(u.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY, {
+    Cs = (0, o.zZ)(u.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY, {
         useSearchTerms: () => [g.intl.string(g.t.YpCiMt)],
-        buildLayout: () => [Ct, Cn, Cs],
+        buildLayout: () => [Ce, Ci, Cn],
     });
-var Cr = i(687123),
-    Ca = i(444802),
-    Co = i(558001);
+var Cl = i(687123),
+    Cr = i(444802),
+    Ca = i(558001);
 i(866945);
-var Cu = i(835002);
-function Cd() {
-    let e = (0, Ca.WX)();
+var Co = i(835002);
+function Cu() {
+    let e = (0, Cr.WX)();
     N.useEffect(() => {
-        (0, Co.N)(Cu.YA.AGE_CONFIRMATION_NOTICE, Cu.YX.VIEWED);
+        (0, Ca.N)(Co.YA.AGE_CONFIRMATION_NOTICE, Co.YX.VIEWED);
     }, []);
     let t = N.useCallback(() => {
-            window.open(ta.A.getArticleURL(e), "_blank"), (0, Co.N)(Cu.YA.AGE_CONFIRMATION_NOTICE, Cu.YX.LEARN_MORE);
+            window.open(ta.A.getArticleURL(e), "_blank"), (0, Ca.N)(Co.YA.AGE_CONFIRMATION_NOTICE, Co.YX.LEARN_MORE);
         }, [e]),
         i = N.useCallback(() => {
-            pn.A.showAgeVerificationGetStartedModal({ entryPoint: ps.q1.CONTENT_AND_SOCIAL_NOTICE }),
-                (0, Co.N)(Cu.YA.AGE_CONFIRMATION_NOTICE, Cu.YX.CONFIRM_AGE);
+            pi.A.showAgeVerificationGetStartedModal({ entryPoint: pn.q1.CONTENT_AND_SOCIAL_NOTICE }),
+                (0, Ca.N)(Co.YA.AGE_CONFIRMATION_NOTICE, Co.YX.CONFIRM_AGE);
         }, []);
     return (0, p.jsx)(tr.p, {
         messageType: tr.Y.INFO,
@@ -19393,25 +19392,25 @@ function Cd() {
         children: g.intl.format(g.t.mFgsfg, { hook: (e, i) => (0, p.jsx)(uO.Anchor, { onClick: t, children: e }, i) }),
     });
 }
-function Cc() {
-    let e = (0, S7.aX)(Cr.t.REACTIVE_CHECK),
-        t = (0, S5.b8)();
+function Cd() {
+    let e = (0, S5.aX)(Cl.t.REACTIVE_CHECK),
+        t = (0, S4.b8)();
     return N.useMemo(() => {
-        if (e && !t) return { type: ef.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: Cd };
+        if (e && !t) return { type: ef.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: Cu };
     }, [e, t]);
 }
-var Cg = i(308528),
-    Cm = i(171316);
-function CA() {
-    let e = (0, Cm.uM)(),
-        t = (0, Nx.vx)(),
+var Cc = i(308528),
+    Cg = i(171316);
+function Cm() {
+    let e = (0, Cg.uM)(),
+        t = (0, NT.vx)(),
         i = N.useCallback(() => {
             (0, sT.default)(),
-                Cg.A.openPrivateChannel({ recipientIds: t }),
-                (0, Co.N)(Cu.YA.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE, Cu.YX.LEARN_MORE);
+                Cc.A.openPrivateChannel({ recipientIds: t }),
+                (0, Ca.N)(Co.YA.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE, Co.YX.LEARN_MORE);
         }, [t]),
         n = N.useCallback(() => {
-            (0, Co.N)(Cu.YA.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE, Cu.YX.VIEWED);
+            (0, Ca.N)(Co.YA.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE, Co.YX.VIEWED);
         }, []);
     return N.useMemo(() => {
         if (e)
@@ -19420,74 +19419,74 @@ function CA() {
                 noticeType: "info",
                 trackView: n,
                 useText: () =>
-                    g.intl.format(Nf.default.i284fU, {
+                    g.intl.format(NN.default.i284fU, {
                         hook: (e, t) => (0, p.jsx)(uO.Anchor, { onClick: i, children: e }, t),
                         count: t.length,
                     }),
             };
     }, [i, e, t.length, n]);
 }
-var Ch = i(323073),
-    CE = i(264249),
-    CT = i(406274);
-let Cx = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_AGE_RESTRICTED_DM_SETTING, {
+var CA = i(323073),
+    Ch = i(264249),
+    CE = i(406274);
+let CT = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_AGE_RESTRICTED_DM_SETTING, {
         useTitle: () => g.intl.string(g.t.XahVjj),
         useSubtitle: () => g.intl.string(g.t.R9fXyS),
-        useValue: CE.hT,
+        useValue: Ch.hT,
         useDisabled: () => {
-            let e = (0, CT.A)() ?? !0,
-                t = (0, Ch.sP)(),
-                i = (0, S5.yM)();
+            let e = (0, CE.A)() ?? !0,
+                t = (0, CA.sP)(),
+                i = (0, S4.yM)();
             return (!t || !!i) && !e;
         },
         setValue: (e) => {
-            (0, Ch.p5)() && e
-                ? pn.A.showAgeVerificationGetStartedModal({ entryPoint: ps.q1.AGE_RESTRICTED_DM_COMMANDS_SETTINGS })
+            (0, CA.p5)() && e
+                ? pi.A.showAgeVerificationGetStartedModal({ entryPoint: pn.q1.AGE_RESTRICTED_DM_COMMANDS_SETTINGS })
                 : c.Qe.updateSetting(e);
         },
     }),
-    CS = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_AGE_RESTRICTED_IOS_SETTING, {
+    Cx = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_AGE_RESTRICTED_IOS_SETTING, {
         useTitle: () => g.intl.string(g.t["L+yTsa"]),
         useSubtitle: () => g.intl.string(g.t.hiM8pU),
-        useValue: CE.tI,
+        useValue: Ch.tI,
         useDisabled: () => {
-            let e = (0, CT.A)() ?? !0,
-                t = (0, Ch.sP)(),
-                i = (0, S5.yM)();
+            let e = (0, CE.A)() ?? !0,
+                t = (0, CA.sP)(),
+                i = (0, S4.yM)();
             return N.useMemo(() => (!t || !!i) && !e, [t, e, i]);
         },
         setValue: (e) => {
-            (0, Ch.p5)() && e
-                ? pn.A.showAgeVerificationGetStartedModal({ entryPoint: ps.q1.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS })
+            (0, CA.p5)() && e
+                ? pi.A.showAgeVerificationGetStartedModal({ entryPoint: pn.q1.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS })
                 : c.Kg.updateSetting(e);
         },
     });
 i(667532);
-var Cp = i(390248),
-    CN = i(632119),
-    Cf = i(945276),
-    CC = i(562783),
-    C_ = i(533517);
-function CI() {
+var CS = i(390248),
+    Cp = i(632119),
+    CN = i(945276),
+    Cf = i(562783),
+    CC = i(533517);
+function C_() {
     let e,
-        t = (0, Cf.A)() ?? !0,
-        i = (0, Cm.uM)(),
-        n = (0, Cm.uM)(),
+        t = (0, CN.A)() ?? !0,
+        i = (0, Cg.uM)(),
+        n = (0, Cg.uM)(),
         {
             explicitContentGuilds: s,
             explicitContentFriendDm: l,
             explicitContentNonFriendDm: r,
-        } = ((e = (0, uy.cf)([o2.A], () => o2.A.settings.textAndImages?.explicitContentSettings ?? (0, CN.C$)())),
+        } = ((e = (0, uy.cf)([o2.A], () => o2.A.settings.textAndImages?.explicitContentSettings ?? (0, Cp.C$)())),
         {
-            explicitContentGuilds: (0, CN.Ys)({ setting: e?.explicitContentGuilds }),
-            explicitContentNonFriendDm: (0, CN.Ys)({ setting: e?.explicitContentNonFriendDm, isDm: !0 }),
-            explicitContentFriendDm: (0, CN.Ys)({ setting: e?.explicitContentFriendDm, isDm: !0, isFriend: !0 }),
+            explicitContentGuilds: (0, Cp.Ys)({ setting: e?.explicitContentGuilds }),
+            explicitContentNonFriendDm: (0, Cp.Ys)({ setting: e?.explicitContentNonFriendDm, isDm: !0 }),
+            explicitContentFriendDm: (0, Cp.Ys)({ setting: e?.explicitContentFriendDm, isDm: !0, isFriend: !0 }),
         }),
         a = (e) => {
             let t = Object.values(e);
-            (0, Cp.hK)() && t.includes(f.TO.SHOW)
-                ? pn.A.showAgeVerificationGetStartedModal({ entryPoint: ps.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
-                : (0, CN.Jz)(e);
+            (0, CS.hK)() && t.includes(f.TO.SHOW)
+                ? pi.A.showAgeVerificationGetStartedModal({ entryPoint: pn.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
+                : (0, Cp.Jz)(e);
         },
         o = [
             { value: f.TO.BLUR, label: g.intl.string(g.t.S49Uad) },
@@ -19496,55 +19495,55 @@ function CI() {
         u = [{ value: f.TO.BLUR, label: g.intl.string(g.t.S49Uad) }],
         d = { value: f.TO.SHOW, label: g.intl.string(g.t["5k5OFp"]) };
     t && (o.unshift(d), u.unshift(d));
-    let c = { isDisabled: n, tooltipText: i ? g.intl.string(Nf.default["6Af/cw"]) : void 0 };
-    return (0, p.jsxs)(CC.E, {
+    let c = { isDisabled: n, tooltipText: i ? g.intl.string(NN.default["6Af/cw"]) : void 0 };
+    return (0, p.jsxs)(Cf.E, {
         description: g.intl.string(g.t.Wnojv1),
         children: [
-            (0, p.jsx)(C_.A, {
+            (0, p.jsx)(CC.A, {
                 title: g.intl.string(g.t["+uI23H"]),
                 value: l,
                 onChange: (e) => a({ explicitContentFriendDm: e }),
                 options: o,
                 ...c,
             }),
-            (0, p.jsx)(C_.A, {
+            (0, p.jsx)(CC.A, {
                 title: g.intl.string(g.t["Yh+HX1"]),
                 value: r,
                 onChange: (e) => a({ explicitContentNonFriendDm: e }),
                 options: o,
                 ...c,
             }),
-            (0, p.jsx)(C_.A, {
+            (0, p.jsx)(CC.A, {
                 title: g.intl.string(g.t["FP+a42"]),
                 value: s,
                 onChange: (e) => a({ explicitContentGuilds: e }),
                 isDisabled: !t || n,
-                tooltipText: i ? g.intl.string(Nf.default["6Af/cw"]) : void 0,
+                tooltipText: i ? g.intl.string(NN.default["6Af/cw"]) : void 0,
                 options: u,
             }),
         ],
     });
 }
-function Cb() {
+function CI() {
     let e,
-        t = (0, Cf.A)() ?? !0,
-        i = (0, Cm.uM)(),
-        n = (0, Cm.uM)(),
+        t = (0, CN.A)() ?? !0,
+        i = (0, Cg.uM)(),
+        n = (0, Cg.uM)(),
         {
             goreContentGuilds: s,
             goreContentFriendDm: l,
             goreContentNonFriendDm: r,
-        } = ((e = (0, uy.cf)([o2.A], () => o2.A.settings.textAndImages?.goreContentSettings ?? (0, Ca.T4)())),
+        } = ((e = (0, uy.cf)([o2.A], () => o2.A.settings.textAndImages?.goreContentSettings ?? (0, Cr.T4)())),
         {
-            goreContentGuilds: (0, Ca.gC)({ setting: e?.goreContentGuilds }),
-            goreContentNonFriendDm: (0, Ca.gC)({ setting: e?.goreContentNonFriendDm, isDm: !0 }),
-            goreContentFriendDm: (0, Ca.gC)({ setting: e?.goreContentFriendDm, isDm: !0, isFriend: !0 }),
+            goreContentGuilds: (0, Cr.gC)({ setting: e?.goreContentGuilds }),
+            goreContentNonFriendDm: (0, Cr.gC)({ setting: e?.goreContentNonFriendDm, isDm: !0 }),
+            goreContentFriendDm: (0, Cr.gC)({ setting: e?.goreContentFriendDm, isDm: !0, isFriend: !0 }),
         }),
         a = (e) => {
             let t = Object.values(e);
-            (0, Cp.hK)() && t.includes(f.TO.SHOW)
-                ? pn.A.showAgeVerificationGetStartedModal({ entryPoint: ps.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
-                : (0, Ca.qY)(e);
+            (0, CS.hK)() && t.includes(f.TO.SHOW)
+                ? pi.A.showAgeVerificationGetStartedModal({ entryPoint: pn.q1.SENSITIVE_MEDIA_FILTER_SETTINGS })
+                : (0, Cr.qY)(e);
         },
         o = [
             { value: f.TO.BLUR, label: g.intl.string(g.t.S49Uad) },
@@ -19553,67 +19552,64 @@ function Cb() {
         u = [{ value: f.TO.BLUR, label: g.intl.string(g.t.S49Uad) }],
         d = { value: f.TO.SHOW, label: g.intl.string(g.t["5k5OFp"]) };
     t && (o.unshift(d), u.unshift(d));
-    let c = { isDisabled: n, tooltipText: i ? g.intl.string(Nf.default["6Af/cw"]) : void 0 };
-    return (0, p.jsxs)(CC.E, {
+    let c = { isDisabled: n, tooltipText: i ? g.intl.string(NN.default["6Af/cw"]) : void 0 };
+    return (0, p.jsxs)(Cf.E, {
         description: g.intl.string(g.t.XgH9eh),
         children: [
-            (0, p.jsx)(C_.A, {
+            (0, p.jsx)(CC.A, {
                 title: g.intl.string(g.t["+uI23H"]),
                 value: l,
                 onChange: (e) => a({ goreContentFriendDm: e }),
                 options: o,
                 ...c,
             }),
-            (0, p.jsx)(C_.A, {
+            (0, p.jsx)(CC.A, {
                 title: g.intl.string(g.t["Yh+HX1"]),
                 value: r,
                 onChange: (e) => a({ goreContentNonFriendDm: e }),
                 options: o,
                 ...c,
             }),
-            (0, p.jsx)(C_.A, {
+            (0, p.jsx)(CC.A, {
                 title: g.intl.string(g.t["FP+a42"]),
                 value: s,
                 onChange: (e) => a({ goreContentGuilds: e }),
                 isDisabled: !t || n,
                 options: u,
-                tooltipText: i ? g.intl.string(Nf.default["6Af/cw"]) : void 0,
+                tooltipText: i ? g.intl.string(NN.default["6Af/cw"]) : void 0,
             }),
         ],
     });
 }
-var Cv = i(397620),
-    Cj = i(759049);
-let Cy = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING, {
+var Cb = i(397620),
+    Cv = i(759049);
+let Cj = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING, {
     Component: function () {
-        let e = (0, Ca.WX)(),
+        let e = (0, Cr.WX)(),
             t = N.useMemo(
                 () => [
                     {
                         id: "explicit-media-redaction",
                         title: g.intl.string(g.t.GYpoAq),
-                        component: CI,
+                        component: C_,
                         orientation: "vertical",
                     },
                     {
                         id: "gore-media-redaction",
                         title: g.intl.string(g.t["16/3Bi"]),
-                        component: Cb,
+                        component: CI,
                         orientation: "vertical",
                     },
                 ],
                 [],
-            ),
-            i = N.useCallback((e) => {
-                E_.A.setSection(q.nc_.CONTENT_AND_SOCIAL, e);
-            }, []);
-        return (0, p.jsxs)(f5.h, {
+            );
+        return (0, p.jsxs)(f4.h, {
             children: [
-                (0, p.jsx)(f5._, {
+                (0, p.jsx)(f4._, {
                     header: g.intl.string(g.t["Hj/But"]),
                     description: g.intl.format(g.t.dliU4j, { learnMoreLink: ta.A.getArticleURL(e) }),
                 }),
-                (0, p.jsx)(Cv.A, { tabs: t, onTabChange: i, orientation: "vertical", tabsClassName: Cj.v }),
+                (0, p.jsx)(Cb.A, { tabs: t, orientation: "vertical", tabsClassName: Cv.v }),
             ],
         });
     },
@@ -19626,54 +19622,54 @@ let Cy = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING, {
         g.intl.string(g.t["K0OWP+"]),
     ],
 });
-var CO = i(639555),
-    CR = i(617641),
-    CL = i(546140),
-    CD = i(406935),
-    CP = i(594061);
-let CG = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_DM_SAFETY_ALERTS_SETTING, {
+var Cy = i(639555),
+    CO = i(617641),
+    CR = i(546140),
+    CL = i(406935),
+    CD = i(594061);
+let CP = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_DM_SAFETY_ALERTS_SETTING, {
     useTitle: () => g.intl.string(g.t.qFsx5q),
     useSubtitle: () => g.intl.format(g.t.lunaRv, { learnMoreLink: ta.A.getArticleURL(q.MVz.SAFETY_ALERTS) }),
-    useValue: CL.L,
+    useValue: CR.L,
     setValue: (e) =>
-        CP.wc.updateAsync(
+        CD.wc.updateAsync(
             "privacy",
             (t) => {
-                t.inappropriateConversationWarnings = CD._t.create({ value: e });
+                t.inappropriateConversationWarnings = CL._t.create({ value: e });
             },
-            CP.Sb.INFREQUENT_USER_ACTION,
+            CD.Sb.INFREQUENT_USER_ACTION,
         ),
     usePredicate: function () {
-        let e = (0, CR.Lc)({ location: "DMSafetyAlertsSetting" }),
-            t = (0, CO.Rv)({ location: "DMSafetyAlertsSetting" }),
-            i = (0, Cf.A)() ?? !0;
+        let e = (0, CO.Lc)({ location: "DMSafetyAlertsSetting" }),
+            t = (0, Cy.Rv)({ location: "DMSafetyAlertsSetting" }),
+            i = (0, CN.A)() ?? !0;
         return e && !i && !t;
     },
 });
-var CU = i(809505),
-    CM = i(923457),
-    CV = i(656402);
-let Ck = (0, o.Qx)(u.X.CONTENT_AND_SOCIAL_DM_SPAM_SETTING, {
+var CG = i(809505),
+    CU = i(923457),
+    CM = i(656402);
+let CV = (0, o.Qx)(u.X.CONTENT_AND_SOCIAL_DM_SPAM_SETTING, {
         useTitle: () => g.intl.string(g.t.tiCXaH),
         useSubtitle: () => g.intl.format(g.t.RvjRRI, { appealLink: ta.A.getArticleURL(q.MVz.SAFE_DIRECT_MESSAGING) }),
         useValue: function () {
             let e = c.he.useSetting(),
                 t = c.cj.useSetting(),
                 i = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()),
-                n = (0, S7.yv)(CM.p.SPAM_FILTERS);
+                n = (0, S5.yv)(CU.p.SPAM_FILTERS);
             return e !== f.he.DEFAULT_UNSET
                 ? e
                 : i?.nsfwAllowed === !1 && n
                   ? f.he.FRIENDS_AND_NON_FRIENDS
-                  : (CV.xY.get(t) ?? f.he.NON_FRIENDS);
+                  : (CM.xY.get(t) ?? f.he.NON_FRIENDS);
         },
         setValue: (e) => c.he.updateSetting(e),
         useOptions: function () {
-            return N.useMemo(() => (0, CU.YS)(), []);
+            return N.useMemo(() => (0, CG.YS)(), []);
         },
         useSearchTerms: () => [g.intl.string(g.t.JzaP4h), g.intl.string(g.t.H9XOl3), g.intl.string(g.t.k4W40P)],
     }),
-    Cw = (0, o.zZ)(u.X.CONTENT_AND_SOCIAL_CONTENT_CATEGORY, {
+    Ck = (0, o.zZ)(u.X.CONTENT_AND_SOCIAL_CONTENT_CATEGORY, {
         useTitle: () => g.intl.string(g.t.xVRG4P),
         useInlineNotice: function () {
             let e,
@@ -19685,16 +19681,16 @@ let Ck = (0, o.Qx)(u.X.CONTENT_AND_SOCIAL_DM_SPAM_SETTING, {
                 r,
                 a,
                 o,
-                u = CA(),
+                u = Cm(),
                 d =
-                    ((e = (0, NS.Z)()),
-                    (t = (0, Ca.WX)()),
+                    ((e = (0, Nx.Z)()),
+                    (t = (0, Cr.WX)()),
                     (i = N.useCallback(() => {
                         window.open(ta.A.getArticleURL(t), "_blank"),
-                            (0, Co.N)(Cu.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, Cu.YX.LEARN_MORE);
+                            (0, Ca.N)(Co.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, Co.YX.LEARN_MORE);
                     }, [t])),
                     (n = N.useCallback(() => {
-                        (0, Co.N)(Cu.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, Cu.YX.VIEWED);
+                        (0, Ca.N)(Co.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, Co.YX.VIEWED);
                     }, [])),
                     N.useMemo(() => {
                         if (e)
@@ -19709,15 +19705,15 @@ let Ck = (0, o.Qx)(u.X.CONTENT_AND_SOCIAL_DM_SPAM_SETTING, {
                             };
                     }, [i, e, n])),
                 c =
-                    ((s = (0, S7.SJ)()),
-                    (l = (0, S5.b8)()),
+                    ((s = (0, S5.SJ)()),
+                    (l = (0, S4.b8)()),
                     (r = s && !l),
                     (a = N.useCallback(() => {
-                        pn.A.showAgeVerificationGetStartedModal({ entryPoint: ps.q1.CONTENT_AND_SOCIAL_NOTICE }),
-                            (0, Co.N)(Cu.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, Cu.YX.LEARN_MORE);
+                        pi.A.showAgeVerificationGetStartedModal({ entryPoint: pn.q1.CONTENT_AND_SOCIAL_NOTICE }),
+                            (0, Ca.N)(Co.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, Co.YX.LEARN_MORE);
                     }, [])),
                     (o = N.useCallback(() => {
-                        (0, Co.N)(Cu.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, Cu.YX.VIEWED);
+                        (0, Ca.N)(Co.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, Co.YX.VIEWED);
                     }, [])),
                     N.useMemo(() => {
                         if (r)
@@ -19731,12 +19727,12 @@ let Ck = (0, o.Qx)(u.X.CONTENT_AND_SOCIAL_DM_SPAM_SETTING, {
                                     }),
                             };
                     }, [a, r, o])),
-                m = Cc();
+                m = Cd();
             return u ?? m ?? c ?? d;
         },
-        buildLayout: () => [Cy, Ck, CG, Cx, CS],
+        buildLayout: () => [Cj, CV, CP, CT, Cx],
     }),
-    CB = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_EVERYONE_SETTING, {
+    Cw = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_EVERYONE_SETTING, {
         useTitle: () => g.intl.string(g.t["7x9dyE"]),
         useValue: () => {
             let e = c.FA.useSetting();
@@ -19745,10 +19741,10 @@ let Ck = (0, o.Qx)(u.X.CONTENT_AND_SOCIAL_DM_SPAM_SETTING, {
         setValue: (e) => {
             c.FA.updateSetting(e ? q.yKI : q.yKI & ~q.dzt.NO_RELATION);
         },
-        useDisabled: () => (0, Cm.uM)(),
+        useDisabled: () => (0, Cg.uM)(),
     });
-var CF = i(665260);
-let Cz = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_MUTUAL_FRIENDS_SETTING, {
+var CB = i(665260);
+let CF = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_MUTUAL_FRIENDS_SETTING, {
         useTitle: () => g.intl.string(g.t.NfeuZ3),
         useValue: () => {
             let e = c.FA.useSetting(),
@@ -19757,11 +19753,11 @@ let Cz = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_MUTUAL_FRIENDS_SETTING
         },
         setValue: (e) => {
             let t = c.FA.getSetting();
-            c.FA.updateSetting(e ? CF.UI(t, q.dzt.MUTUAL_FRIENDS) : CF.iE(t, q.dzt.MUTUAL_FRIENDS, q.dzt.NO_RELATION));
+            c.FA.updateSetting(e ? CB.UI(t, q.dzt.MUTUAL_FRIENDS) : CB.iE(t, q.dzt.MUTUAL_FRIENDS, q.dzt.NO_RELATION));
         },
-        useDisabled: () => (0, Cm.uM)(),
+        useDisabled: () => (0, Cg.uM)(),
     }),
-    CY = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_MUTUAL_GUILDS_SETTING, {
+    Cz = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_MUTUAL_GUILDS_SETTING, {
         useTitle: () => g.intl.string(g.t.qsMfsH),
         useValue: () => {
             let e = c.FA.useSetting(),
@@ -19770,29 +19766,29 @@ let Cz = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_MUTUAL_FRIENDS_SETTING
         },
         setValue: (e) => {
             let t = c.FA.getSetting();
-            c.FA.updateSetting(e ? CF.UI(t, q.dzt.MUTUAL_GUILDS) : CF.iE(t, q.dzt.MUTUAL_GUILDS, q.dzt.NO_RELATION));
+            c.FA.updateSetting(e ? CB.UI(t, q.dzt.MUTUAL_GUILDS) : CB.iE(t, q.dzt.MUTUAL_GUILDS, q.dzt.NO_RELATION));
         },
-        useDisabled: () => (0, Cm.uM)(),
+        useDisabled: () => (0, Cg.uM)(),
     }),
-    CX = (0, o.zZ)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_CATEGORY, {
+    CY = (0, o.zZ)(u.X.CONTENT_AND_SOCIAL_FRIEND_REQUESTS_CATEGORY, {
         useTitle: () => g.intl.string(g.t.MNaVwq),
-        useInlineNotice: CA,
-        buildLayout: () => [CB, Cz, CY],
+        useInlineNotice: Cm,
+        buildLayout: () => [Cw, CF, Cz],
     });
-var CH = i(994500),
-    CK = i(428678),
-    CW = i(717398),
-    CZ = i(730134),
-    Cq = i(741304);
-function CQ(e) {
+var CX = i(994500),
+    CH = i(428678),
+    CK = i(717398),
+    CW = i(730134),
+    CZ = i(741304);
+function Cq(e) {
     let { listType: t, numberOfUsers: i } = e,
         n = "blocked" === t;
     return (0, p.jsxs)("div", {
-        className: Cq.wx,
+        className: CZ.wx,
         children: [
-            (0, p.jsx)("div", { className: Cq.zc, children: n ? (0, p.jsx)(CK.K, {}) : (0, p.jsx)(ig.G, {}) }),
+            (0, p.jsx)("div", { className: CZ.zc, children: n ? (0, p.jsx)(CH.K, {}) : (0, p.jsx)(ig.G, {}) }),
             (0, p.jsxs)("div", {
-                className: Cq.Qq,
+                className: CZ.Qq,
                 children: [
                     (0, p.jsx)(V.E, {
                         variant: "text-md/semibold",
@@ -19811,32 +19807,32 @@ function CQ(e) {
         ],
     });
 }
-function CJ(e) {
+function CQ(e) {
     let { userId: t, last: i } = e,
-        n = (0, O.bG)([CH.A], () => CH.A.isBlocked(t)),
+        n = (0, O.bG)([CX.A], () => CX.A.isBlocked(t)),
         s = (0, O.bG)([t3.default], () => t3.default.getUser(t)),
         [l, r] = N.useState(!1),
         a = N.useCallback(() => {
             r(!0),
                 n
-                    ? CW.A.unblockUser(t).catch(() => {
+                    ? CK.A.unblockUser(t).catch(() => {
                           r(!1);
                       })
-                    : CW.A.unignoreUser(t, eM.A.USER_SETTINGS).catch(() => {
+                    : CK.A.unignoreUser(t, eM.A.USER_SETTINGS).catch(() => {
                           r(!1);
                       });
         }, [n, t]);
     return null == s
         ? null
         : (0, p.jsxs)("div", {
-              className: ew()(Cq.nM, { [Cq.fW]: i }),
+              className: ew()(CZ.nM, { [CZ.fW]: i }),
               children: [
                   (0, p.jsxs)("div", {
-                      className: Cq.eF,
+                      className: CZ.eF,
                       children: [
-                          (0, p.jsx)(CZ.A, { user: s, size: iK._3.SIZE_40 }),
+                          (0, p.jsx)(CW.A, { user: s, size: iK._3.SIZE_40 }),
                           (0, p.jsxs)("div", {
-                              className: Cq.Qq,
+                              className: CZ.Qq,
                               children: [
                                   (0, p.jsx)(V.E, {
                                       variant: "text-md/semibold",
@@ -19861,26 +19857,26 @@ function CJ(e) {
               ],
           });
 }
-function C$(e) {
+function CJ(e) {
     let { userIds: t, listType: i } = e,
         [n, s] = N.useState(5);
-    return (0, p.jsx)(f5.h, {
+    return (0, p.jsx)(f4.h, {
         children: (0, p.jsxs)("div", {
-            className: Cq.Nr,
+            className: CZ.Nr,
             children: [
-                (0, p.jsx)(CQ, { listType: i, numberOfUsers: t.length }),
+                (0, p.jsx)(Cq, { listType: i, numberOfUsers: t.length }),
                 (0, p.jsx)("div", {
-                    className: Cq.jS,
-                    children: t.slice(0, n).map((e, i) => (0, p.jsx)(CJ, { userId: e, last: i === t.length - 1 }, e)),
+                    className: CZ.jS,
+                    children: t.slice(0, n).map((e, i) => (0, p.jsx)(CQ, { userId: e, last: i === t.length - 1 }, e)),
                 }),
                 n < t.length
                     ? (0, p.jsx)("div", {
-                          className: Cq.vM,
+                          className: CZ.vM,
                           children: (0, p.jsx)(M.D, {
                               onClick: () => {
                                   s((e) => e + 5);
                               },
-                              className: Cq.Qf,
+                              className: CZ.Qf,
                               children: (0, p.jsx)(V.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
@@ -19895,108 +19891,108 @@ function C$(e) {
         }),
     });
 }
-let C0 = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_BLOCKED_USERS, {
+let C$ = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_BLOCKED_USERS, {
         useSearchTerms: () => [g.intl.string(g.t.PFOUKW)],
-        usePredicate: () => (0, O.bG)([CH.A], () => CH.A.getBlockedIDs().length > 0),
+        usePredicate: () => (0, O.bG)([CX.A], () => CX.A.getBlockedIDs().length > 0),
         Component: function () {
-            let e = (0, O.yK)([CH.A], () => CH.A.getBlockedIDs());
-            return (0, p.jsx)(C$, { userIds: e, listType: "blocked" });
+            let e = (0, O.yK)([CX.A], () => CX.A.getBlockedIDs());
+            return (0, p.jsx)(CJ, { userIds: e, listType: "blocked" });
         },
     }),
-    C1 = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_IGNORED_USERS, {
+    C0 = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_IGNORED_USERS, {
         useSearchTerms: () => [g.intl.string(g.t["93ZDWE"])],
-        usePredicate: () => (0, O.bG)([CH.A], () => CH.A.getIgnoredIDs().length > 0),
+        usePredicate: () => (0, O.bG)([CX.A], () => CX.A.getIgnoredIDs().length > 0),
         Component: function () {
-            let e = (0, O.yK)([CH.A], () => CH.A.getIgnoredIDs());
-            return (0, p.jsx)(C$, { userIds: e, listType: "ignored" });
+            let e = (0, O.yK)([CX.A], () => CX.A.getIgnoredIDs());
+            return (0, p.jsx)(CJ, { userIds: e, listType: "ignored" });
         },
     }),
-    C2 = (0, o.zZ)(u.X.CONTENT_AND_SOCIAL_RESTRICTED_USERS_CATEGORY, {
+    C1 = (0, o.zZ)(u.X.CONTENT_AND_SOCIAL_RESTRICTED_USERS_CATEGORY, {
         useTitle: () => g.intl.string(g.t.LVwR56),
         useSubtitle: () =>
             g.intl.format(g.t["0aNQo9"], { helpArticle: ta.A.getArticleURL(q.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE) }),
-        buildLayout: () => [C0, C1],
+        buildLayout: () => [C$, C0],
         usePredicate: () => {
-            let { hasBlockedUsers: e, hasIgnoredUsers: t } = (0, O.cf)([CH.A], () => ({
-                hasBlockedUsers: CH.A.getBlockedIDs().length > 0,
-                hasIgnoredUsers: CH.A.getIgnoredIDs().length > 0,
+            let { hasBlockedUsers: e, hasIgnoredUsers: t } = (0, O.cf)([CX.A], () => ({
+                hasBlockedUsers: CX.A.getBlockedIDs().length > 0,
+                hasIgnoredUsers: CX.A.getIgnoredIDs().length > 0,
             }));
             return t || e;
         },
     });
-var C3 = i(612025),
-    C6 = i(112469),
-    C4 = i(111159),
-    C5 = i(152056),
-    C7 = i(321880);
-let C8 = { label: () => g.intl.string(g.t["32u1Dx"]), value: C3.YG };
-var C9 = i(542457);
-let _e = () => (0, C6.Tx)() !== C3.YG;
-function _t() {
+var C2 = i(612025),
+    C3 = i(112469),
+    C6 = i(111159),
+    C4 = i(152056),
+    C5 = i(321880);
+let C7 = { label: () => g.intl.string(g.t["32u1Dx"]), value: C2.YG };
+var C8 = i(542457);
+let C9 = () => (0, C3.Tx)() !== C2.YG;
+function _e() {
     return g.intl.string(g.t["T+nevN"]);
 }
-let _i = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_ACTIVITY_JOIN_SETTING, {
-        useTitle: _t,
+let _t = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_ACTIVITY_JOIN_SETTING, {
+        useTitle: _e,
         useSubtitle: () =>
             g.intl.format(g.t.jXKQCu, { helpdeskArticle: ta.A.getArticleURL(q.MVz.ACTIVITY_STATUS_SETTINGS) }),
         useValue: () => {
-            let e = (0, C6.Tx)();
+            let e = (0, C3.Tx)();
             return !c.pE.useSetting().includes(e);
         },
         setValue: (e) => {
-            let t = C3.xk.getState().selectedGuildId,
+            let t = C2.xk.getState().selectedGuildId,
                 i = (0, rN.CN)();
             e ? i.delete(t) : i.add(t),
                 c.pE.updateSetting([...i]),
                 Y.default.track(q.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                    action: C9.m.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
+                    action: C8.m.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
                     ingress: nv.bf.USER_SETTINGS_PRIVACY_SAFETY,
                     guild_id: t,
                 });
         },
-        usePredicate: _e,
+        usePredicate: C9,
     }),
-    _n = () => (0, C6.Tx)() !== C3.YG;
-function _s() {
+    _i = () => (0, C3.Tx)() !== C2.YG;
+function _n() {
     return g.intl.string(m.default.WhdCGP);
 }
-let _l = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_ACTIVITY_SHARE_SETTING, {
-    useTitle: _s,
+let _s = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_ACTIVITY_SHARE_SETTING, {
+    useTitle: _n,
     useSubtitle: () => g.intl.string(m.default.UQ9RHJ),
     useValue: () => {
-        let e = (0, C6.Tx)();
+        let e = (0, C3.Tx)();
         return !c.JG.useSetting().includes(e);
     },
     setValue: (e) => {
-        let t = C3.xk.getState().selectedGuildId,
+        let t = C2.xk.getState().selectedGuildId,
             i = (0, rN.Kk)();
         e ? i.delete(t) : i.add(t),
             c.JG.updateSetting([...i]),
             Y.default.track(q.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                action: C9.m.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
+                action: C8.m.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
                 ingress: nv.bf.USER_SETTINGS_PRIVACY_SAFETY,
                 guild_id: t,
             });
     },
-    usePredicate: _n,
+    usePredicate: _i,
 });
-var _r = i(762183),
-    _a = i(445176),
-    _o = i(137675);
-let _u = () => ((0, _a.e)() ? g.intl.string(g.t.PMsfcH) : g.intl.string(g.t.RAQUSN)),
-    _d = (e, t) => {
+var _l = i(762183),
+    _r = i(445176),
+    _a = i(137675);
+let _o = () => ((0, _r.e)() ? g.intl.string(g.t.PMsfcH) : g.intl.string(g.t.RAQUSN)),
+    _u = (e, t) => {
         Y.default.track(q.HAw.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t,
         });
     },
-    _c = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_DMS_SETTING, {
-        useTitle: _u,
+    _d = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_DMS_SETTING, {
+        useTitle: _o,
         useSubtitle: () => {
-            let e = (0, C6.Tx)(),
-                t = (0, C6.q9)(),
-                i = (0, _a.e)();
-            return e === C3.YG
+            let e = (0, C3.Tx)(),
+                t = (0, C3.q9)(),
+                i = (0, _r.e)();
+            return e === C2.YG
                 ? i
                     ? g.intl.string(g.t.XXGmuB)
                     : g.intl.string(g.t.wbYDfT)
@@ -20007,31 +20003,31 @@ let _u = () => ((0, _a.e)() ? g.intl.string(g.t.PMsfcH) : g.intl.string(g.t.RAQU
                     : g.intl.string(g.t.G7c3Xo);
         },
         useValue: () => {
-            let e = (0, C6.Tx)(),
+            let e = (0, C3.Tx)(),
                 t = c.$s.useSetting().includes(e),
-                i = (0, _r.K)();
-            return e === C3.YG ? !i : !t;
+                i = (0, _l.K)();
+            return e === C2.YG ? !i : !t;
         },
         useDisabled: () => {
-            let e = (0, Cm.uM)();
-            return (0, C6.Tx)() === C3.YG && e;
+            let e = (0, Cg.uM)();
+            return (0, C3.Tx)() === C2.YG && e;
         },
         setValue: (e) => {
-            let t = C3.xk.getState().selectedGuildId;
-            if (t === C3.YG) {
+            let t = C2.xk.getState().selectedGuildId;
+            if (t === C2.YG) {
                 var i;
                 (i = !e),
-                    (0, _o.O)({
+                    (0, _a.O)({
                         header: g.intl.string(g.t["uUr+GR"]),
                         body: g.intl.string(g.t.hjGJBp),
                         confirmText: g.intl.string(g.t.gm1Vej),
                         cancelText: g.intl.string(g.t.p89ACt),
                         confirmButtonColor: ay.$n.Colors.BRAND,
                         onConfirm: () => {
-                            c.n6.updateSetting(i), _d(i, !1);
+                            c.n6.updateSetting(i), _u(i, !1);
                         },
                         onCancel: () => {
-                            c.n6.updateSetting(i), c.$s.updateSetting(i ? H.A.getGuildIds() : []), _d(i, !0);
+                            c.n6.updateSetting(i), c.$s.updateSetting(i ? H.A.getGuildIds() : []), _u(i, !0);
                         },
                     });
             } else {
@@ -20039,62 +20035,62 @@ let _u = () => ((0, _a.e)() ? g.intl.string(g.t.PMsfcH) : g.intl.string(g.t.RAQU
                 e ? i.delete(t) : i.add(t),
                     c.$s.updateSetting(Array.from(i)),
                     Y.default.track(q.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: C9.m.DIRECT_MESSAGES_TOGGLE,
+                        action: C8.m.DIRECT_MESSAGES_TOGGLE,
                         ingress: nv.bf.USER_SETTINGS_PRIVACY_SAFETY,
                         guild_id: t,
                     });
             }
         },
     });
-var _g = i(152076);
-let _m = (e, t) => {
+var _c = i(152076);
+let _g = (e, t) => {
     Y.default.track(q.HAw.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
         default_guilds_restricted: e,
         applied_to_existing_guilds: t,
     });
 };
-function _A() {
+function _m() {
     return g.intl.string(g.t["3o2ojh"]);
 }
-let _h = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
-        useTitle: _A,
+let _A = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING, {
+        useTitle: _m,
         useSubtitle: () =>
-            (0, C6.q9)()
+            (0, C3.q9)()
                 ? g.intl.format(g.t.WpnWLc, { helpdeskArticle: ta.A.getArticleURL(q.MVz.MESSAGE_REQUESTS) })
                 : g.intl.format(g.t.wkm9a3, { helpdeskArticle: ta.A.getArticleURL(q.MVz.MESSAGE_REQUESTS) }),
         useValue: () => {
-            let e = (0, C6.Tx)(),
-                t = (0, _r.K)(),
+            let e = (0, C3.Tx)(),
+                t = (0, _l.K)(),
                 i = c.$s.useSetting().includes(e),
                 n = c.YX.useSetting(),
                 s = c.Zr.useSetting().includes(e);
-            return e === C3.YG ? !t && !n : !i && !s;
+            return e === C2.YG ? !t && !n : !i && !s;
         },
         useDisabled: () => {
-            let e = (0, C6.Tx)(),
-                t = (0, Cm.uM)(),
-                i = (0, _r.K)(),
+            let e = (0, C3.Tx)(),
+                t = (0, Cg.uM)(),
+                i = (0, _l.K)(),
                 n = c.$s.useSetting().includes(e);
-            return e === C3.YG ? i || t : n;
+            return e === C2.YG ? i || t : n;
         },
         setValue: (e) => {
-            let t = C3.xk.getState().selectedGuildId;
-            if (!e && (0, _g.w)())
-                return void pn.A.showAgeVerificationGetStartedModal({ entryPoint: ps.q1.MESSAGE_REQUESTS_SETTINGS });
-            if (t === C3.YG) {
+            let t = C2.xk.getState().selectedGuildId;
+            if (!e && (0, _c.w)())
+                return void pi.A.showAgeVerificationGetStartedModal({ entryPoint: pn.q1.MESSAGE_REQUESTS_SETTINGS });
+            if (t === C2.YG) {
                 var i;
                 (i = !e),
-                    (0, _o.O)({
+                    (0, _a.O)({
                         header: g.intl.string(g.t.yAfu1p),
                         body: g.intl.string(g.t.Ry2z74),
                         confirmText: g.intl.string(g.t.gm1Vej),
                         cancelText: g.intl.string(g.t.p89ACt),
                         confirmButtonColor: ay.$n.Colors.BRAND,
                         onConfirm: () => {
-                            c.YX.updateSetting(i), _m(i, !1);
+                            c.YX.updateSetting(i), _g(i, !1);
                         },
                         onCancel: () => {
-                            c.YX.updateSetting(i), c.Zr.updateSetting(i ? H.A.getGuildIds() : []), _m(i, !0);
+                            c.YX.updateSetting(i), c.Zr.updateSetting(i ? H.A.getGuildIds() : []), _g(i, !0);
                         },
                     });
             } else {
@@ -20102,38 +20098,38 @@ let _h = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING, 
                 e ? i.delete(t) : i.add(t),
                     c.Zr.updateSetting(Array.from(i)),
                     Y.default.track(q.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: C9.m.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
+                        action: C8.m.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
                         ingress: nv.bf.USER_SETTINGS_PRIVACY_SAFETY,
                         guild_id: t,
                     });
             }
         },
     }),
-    _E = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_GUILD_SELECTOR, {
+    _h = (0, o.E2)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_GUILD_SELECTOR, {
         useSearchTerms: function () {
-            let e = [_u(), _A()],
-                t = _s();
-            _n() && e.push(t);
-            let i = _t();
-            return _e() && e.push(i), e;
+            let e = [_o(), _m()],
+                t = _n();
+            _i() && e.push(t);
+            let i = _e();
+            return C9() && e.push(i), e;
         },
         Component: function () {
-            let { selectedGuildId: e, setSelectedGuildId: t } = (0, C3.xk)(),
+            let { selectedGuildId: e, setSelectedGuildId: t } = (0, C2.xk)(),
                 i = (0, O.bG)([K.Ay], () => K.Ay.getFlattenedGuildIds()),
                 n = (0, O.bG)([H.A], () => H.A.getGuilds()),
                 s = i[0];
             N.useEffect(
                 () =>
-                    C5.A.subscribe(
+                    C4.A.subscribe(
                         (e) => {
                             let { query: t } = e;
                             return t.trim();
                         },
                         (e, i) => {
-                            let n = C3.xk.getState().selectedGuildId;
-                            "" === i && "" !== e && n === C3.YG && null != s
+                            let n = C2.xk.getState().selectedGuildId;
+                            "" === i && "" !== e && n === C2.YG && null != s
                                 ? t(s)
-                                : "" === e && n !== C3.YG && t(C3.YG);
+                                : "" === e && n !== C2.YG && t(C2.YG);
                         },
                         { equalityFn: (e, t) => e === t },
                     ),
@@ -20143,16 +20139,16 @@ let _h = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING, 
                 let e = [];
                 return (
                     e.push({
-                        ...C8,
-                        id: C8.value,
-                        label: C8.label(),
+                        ...C7,
+                        id: C7.value,
+                        label: C7.label(),
                         leading: (0, p.jsx)("div", {
-                            className: C7.KP,
-                            children: (0, p.jsx)(C4.p, {
+                            className: C5.KP,
+                            children: (0, p.jsx)(C6.p, {
                                 size: "sm",
                                 color: "white",
                                 "aria-hidden": !0,
-                                className: C7.cl,
+                                className: C5.cl,
                             }),
                         }),
                     }),
@@ -20164,7 +20160,7 @@ let _h = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING, 
                                 label: i.name,
                                 value: i.id,
                                 leading: (0, p.jsx)(gd.Ay, {
-                                    className: C7.cl,
+                                    className: C5.cl,
                                     guild: i,
                                     size: gd.Ay.Sizes.SMALLER,
                                     active: !0,
@@ -20184,37 +20180,37 @@ let _h = (0, o.zD)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_MESSAGE_REQUESTS_SETTING, 
             });
         },
     }),
-    _T = (0, o.zZ)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_CATEGORY, {
+    _E = (0, o.zZ)(u.X.CONTENT_AND_SOCIAL_PERMISSIONS_CATEGORY, {
         useTitle: () => g.intl.string(g.t.eYaT7L),
         useInlineNotice: function () {
-            let e = CA(),
-                t = Cc();
-            if ((0, C6.Tx)() === C3.YG) return e ?? t;
+            let e = Cm(),
+                t = Cd();
+            if ((0, C3.Tx)() === C2.YG) return e ?? t;
         },
-        buildLayout: () => [_E, _c, _h, _l, _i],
+        buildLayout: () => [_h, _d, _A, _s, _t],
     }),
-    _x = (0, o.dT)(u.X.CONTENT_AND_SOCIAL_MAIN_TAB, {
+    _T = (0, o.dT)(u.X.CONTENT_AND_SOCIAL_MAIN_TAB, {
         getTitle: () => g.intl.string(g.t["/7xJCF"]),
-        buildLayout: () => [Cw, _T, CX, C2],
+        buildLayout: () => [Ck, _E, CY, C1],
     }),
-    _S = (0, o.dT)(u.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_TAB, {
+    _x = (0, o.dT)(u.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_TAB, {
         initialize: () => {
-            NM.A.fetch();
+            NU.A.fetch();
         },
         getTitle: () => g.intl.string(g.t.YpCiMt),
-        buildLayout: () => [Cl],
+        buildLayout: () => [Cs],
     }),
-    _p = (0, o.t_)(u.X.CONTENT_AND_SOCIAL_PANEL, {
+    _S = (0, o.t_)(u.X.CONTENT_AND_SOCIAL_PANEL, {
         useTitle: () => g.intl.string(g.t["+o1pDZ"]),
-        buildLayout: () => [_x, _S],
+        buildLayout: () => [_T, _x],
     }),
-    _N = (0, o.i4)(u.X.CONTENT_AND_SOCIAL_SIDEBAR_ITEM, {
+    _p = (0, o.i4)(u.X.CONTENT_AND_SOCIAL_SIDEBAR_ITEM, {
         useTitle: () => g.intl.string(g.t["+o1pDZ"]),
         icon: cU.i,
-        buildLayout: () => [_p],
+        buildLayout: () => [_S],
     });
-var _f = i(254138);
-function _C() {
+var _N = i(254138);
+function _f() {
     return (
         n6.h.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_START" }),
         n3.Bo.get({ url: q.Rsh.USER_HARVEST, oldFormErrors: !0, rejectWithError: !1 })
@@ -20226,18 +20222,18 @@ function _C() {
             })
     );
 }
-function __(e) {
+function _C(e) {
     return (0, EC.$I)(e).then(
         (e) => (
             null != e && null != e.body && n6.h.dispatch({ type: "UPDATE_DATA_HARVEST_TYPE", harvestType: e.body }), e
         ),
     );
 }
-var _I = i(157559),
-    _b = i(331887);
-function _v() {
+var __ = i(157559),
+    _I = i(331887);
+function _b() {
     let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()),
-        t = (0, O.bG)([_b.A], () => _b.A.harvestType),
+        t = (0, O.bG)([_I.A], () => _I.A.harvestType),
         [i, n] = N.useState(() => Date.now()),
         s = null == t ? i : new Date(t.created_at).getTime() + 2592e6,
         l = N.useRef(null);
@@ -20259,21 +20255,21 @@ function _v() {
                 : { allowed: !0 }
         : { allowed: !1, reason: "not_verified" };
 }
-function _j(e) {
+function _v(e) {
     let { onConfirm: t, ...n } = e;
     (0, C.openModalLazy)(async () => {
         let { default: e } = await i.e("92063").then(i.bind(i, 970018));
         return (i) => (0, p.jsx)(e, { modalProps: i, onConfirm: t });
     }, n);
 }
-var _y = i(837245);
-let _O = (0, o.E2)(u.X.DATA_HARVEST_REQUEST_SETTING, {
+var _j = i(837245);
+let _y = (0, o.E2)(u.X.DATA_HARVEST_REQUEST_SETTING, {
         useSearchTerms: () => [g.intl.string(g.t.dmBSKo)],
         Component: function () {
             let e = (0, O.bG)([t3.default], () => t3.default.getCurrentUser()),
-                { currentHarvestType: t, awaitingInitialRequest: i } = (0, O.cf)([_b.A], () => ({
-                    currentHarvestType: _b.A.harvestType,
-                    awaitingInitialRequest: _b.A.requestingHarvest,
+                { currentHarvestType: t, awaitingInitialRequest: i } = (0, O.cf)([_I.A], () => ({
+                    currentHarvestType: _I.A.harvestType,
+                    awaitingInitialRequest: _I.A.requestingHarvest,
                 })),
                 [n, s] = N.useState(!1);
             if (null == e) return null;
@@ -20285,9 +20281,9 @@ let _O = (0, o.E2)(u.X.DATA_HARVEST_REQUEST_SETTING, {
                 a = l && r,
                 o = e.isStaff(),
                 u = !e.verified;
-            return (0, p.jsxs)(f5.h, {
+            return (0, p.jsxs)(f4.h, {
                 children: [
-                    (0, p.jsx)(f5._, {
+                    (0, p.jsx)(f4._, {
                         header: g.intl.string(g.t.XAHCgJ),
                         description: g.intl.format(g.t.P3kNfr, {
                             helpdeskArticle: ta.A.getArticleURL(q.MVz.GDPR_REQUEST_DATA),
@@ -20295,7 +20291,7 @@ let _O = (0, o.E2)(u.X.DATA_HARVEST_REQUEST_SETTING, {
                     }),
                     a
                         ? (0, p.jsx)(er.Z, {
-                              className: _y.N,
+                              className: _j.N,
                               children: (0, p.jsx)(V.E, {
                                   variant: "text-md/normal",
                                   children: g.intl.format(g.t.RNDlV9, {
@@ -20305,7 +20301,7 @@ let _O = (0, o.E2)(u.X.DATA_HARVEST_REQUEST_SETTING, {
                           })
                         : o
                           ? (0, p.jsx)(er.Z, {
-                                className: _y.N,
+                                className: _j.N,
                                 children: (0, p.jsx)(V.E, {
                                     variant: "text-md/normal",
                                     children: g.intl.string(g.t.ZPQLH2),
@@ -20315,7 +20311,7 @@ let _O = (0, o.E2)(u.X.DATA_HARVEST_REQUEST_SETTING, {
                                 children: [
                                     u
                                         ? (0, p.jsx)(er.Z, {
-                                              className: _y.N,
+                                              className: _j.N,
                                               children: (0, p.jsx)(V.E, {
                                                   variant: "text-md/normal",
                                                   children: g.intl.string(g.t.c1f88z),
@@ -20323,24 +20319,24 @@ let _O = (0, o.E2)(u.X.DATA_HARVEST_REQUEST_SETTING, {
                                           })
                                         : null,
                                     (0, p.jsx)("div", {
-                                        className: _y.x,
+                                        className: _j.x,
                                         children: (0, p.jsx)(eh.$, {
                                             variant: "primary",
                                             text: g.intl.string(g.t.dmBSKo),
                                             disabled: l,
                                             onClick: () => {
-                                                _j({
+                                                _v({
                                                     onConfirm: (e) => {
                                                         s(!0),
-                                                            __(e)
+                                                            _C(e)
                                                                 .then(
                                                                     (e) => {
                                                                         null != e && null != e.body
-                                                                            ? _I.A.show({
+                                                                            ? __.A.show({
                                                                                   title: g.intl.string(g.t.i2iul5),
                                                                                   body: g.intl.string(g.t["6Nmv4i"]),
                                                                               })
-                                                                            : _I.A.show({
+                                                                            : __.A.show({
                                                                                   title: g.intl.string(g.t.OjbtDm),
                                                                                   body: g.intl.string(g.t["0F5Jyt"]),
                                                                               });
@@ -20350,7 +20346,7 @@ let _O = (0, o.E2)(u.X.DATA_HARVEST_REQUEST_SETTING, {
                                                                             e?.message ||
                                                                             e?.body?.message ||
                                                                             g.intl.string(g.t["0F5Jyt"]);
-                                                                        _I.A.show({
+                                                                        __.A.show({
                                                                             title: g.intl.string(g.t.OjbtDm),
                                                                             body: t,
                                                                         });
@@ -20369,25 +20365,25 @@ let _O = (0, o.E2)(u.X.DATA_HARVEST_REQUEST_SETTING, {
             });
         },
     }),
-    _R = (0, o.zZ)(u.X.DATA_REQUEST_CATEGORY, {
+    _O = (0, o.zZ)(u.X.DATA_REQUEST_CATEGORY, {
         useTitle: () => g.intl.string(g.t.VjDjpb),
         initialize: () => {
-            _C();
+            _f();
         },
-        buildLayout: () => [_O],
+        buildLayout: () => [_y],
     });
-var _L = i(290595),
-    _D = i(153488);
-let _P = (0, o.zD)(u.X.CLIPS_ALLOW_VOICE_RECORDING_SETTING, {
+var _R = i(290595),
+    _L = i(153488);
+let _D = (0, o.zD)(u.X.CLIPS_ALLOW_VOICE_RECORDING_SETTING, {
         useTitle: () => g.intl.string(g.t.AGDDkH),
         useSubtitle: () => g.intl.string(g.t["wW9/zQ"]),
         useValue: () => c.Q$.useSetting(),
-        setValue: (e) => NK.eQ({ allowVoiceRecording: e }),
+        setValue: (e) => NH.eQ({ allowVoiceRecording: e }),
     }),
-    _G = (0, o.Tf)(u.X.DATA_HARVEST_REQUEST_SETTING, {
+    _P = (0, o.Tf)(u.X.DATA_HARVEST_REQUEST_SETTING, {
         useTitle: () => g.intl.string(g.t.qfFFos),
         useSubtitle: function () {
-            let e = _v();
+            let e = _b();
             if (e.allowed) return g.intl.format(g.t.NRI6vt, { article: ta.A.getArticleURL(q.MVz.GDPR_REQUEST_DATA) });
             if ("staff" === e.reason) return g.intl.string(g.t.hIbRso);
             if ("not_verified" === e.reason)
@@ -20409,34 +20405,34 @@ let _P = (0, o.zD)(u.X.CLIPS_ALLOW_VOICE_RECORDING_SETTING, {
             }
         },
         initialize: () => {
-            _C();
+            _f();
         },
-        useDisabled: () => !_v().allowed,
-        useLoading: () => (0, O.bG)([_b.A], () => _b.A.requestingHarvest),
+        useDisabled: () => !_b().allowed,
+        useLoading: () => (0, O.bG)([_I.A], () => _I.A.requestingHarvest),
         useVariant: () => "secondary",
         useLabel: () => g.intl.string(g.t.dmBSKo),
         onClick: function () {
             return new Promise((e) => {
                 let t = !0;
-                _j({
+                _v({
                     onConfirm: (i) => {
                         (t = !1),
-                            __(i)
+                            _C(i)
                                 .then(
                                     (e) => {
                                         null != e && null != e.body
-                                            ? _I.A.show({
+                                            ? __.A.show({
                                                   title: g.intl.string(g.t.i2iul5),
                                                   body: g.intl.string(g.t["6Nmv4i"]),
                                               })
-                                            : _I.A.show({
+                                            : __.A.show({
                                                   title: g.intl.string(g.t.OjbtDm),
                                                   body: g.intl.string(g.t["0F5Jyt"]),
                                               });
                                     },
                                     (e) => {
                                         let t = e?.message || e?.body?.message || g.intl.string(g.t["0F5Jyt"]);
-                                        _I.A.show({ title: g.intl.string(g.t.OjbtDm), body: t });
+                                        __.A.show({ title: g.intl.string(g.t.OjbtDm), body: t });
                                     },
                                 )
                                 .finally(e);
@@ -20448,7 +20444,7 @@ let _P = (0, o.zD)(u.X.CLIPS_ALLOW_VOICE_RECORDING_SETTING, {
             });
         },
     }),
-    _U = (0, o.v_)(u.X.DATA_USAGE_DISCLAIMER_SETTING, {
+    _G = (0, o.v_)(u.X.DATA_USAGE_DISCLAIMER_SETTING, {
         useTitle: () => g.intl.string(g.t.D60Gfj),
         useSubtitle: () =>
             g.intl.format(g.t.R5N31P, {
@@ -20458,29 +20454,29 @@ let _P = (0, o.zD)(u.X.CLIPS_ALLOW_VOICE_RECORDING_SETTING, {
                     ),
             }),
     }),
-    _M = (0, o.zD)(u.X.DATA_USAGE_PERSONALIZATION_SETTING, {
+    _U = (0, o.zD)(u.X.DATA_USAGE_PERSONALIZATION_SETTING, {
         useTitle: () => g.intl.string(g.t.MNKzyg),
         useSubtitle: () =>
             g.intl.format(g.t["eQL/Mr"], { helpdeskArticle: ta.A.getArticleURL(q.MVz.DATA_USED_FOR_RECOMMENDED) }),
         useValue: function () {
-            return (0, O.bG)([_D.A], () => _D.A.hasConsented(q.YAq.PERSONALIZATION));
+            return (0, O.bG)([_L.A], () => _L.A.hasConsented(q.YAq.PERSONALIZATION));
         },
         setValue: function (e) {
             e
-                ? (0, _L.U)([q.YAq.PERSONALIZATION], []).catch(_o.i)
-                : (0, _o.O)({
+                ? (0, _R.U)([q.YAq.PERSONALIZATION], []).catch(_a.i)
+                : (0, _a.O)({
                       header: g.intl.string(g.t["9SNpzv"]),
                       confirmText: g.intl.string(g.t["9g5UGw"]),
                       cancelText: g.intl.string(g.t["+ZLPw9"]),
                       onConfirm: () => {
-                          (0, _L.U)([], [q.YAq.PERSONALIZATION]).catch(_o.i);
+                          (0, _R.U)([], [q.YAq.PERSONALIZATION]).catch(_a.i);
                       },
                       body: g.intl.string(g.t.gJvDDh),
                   });
         },
-        useDisabled: Cm.uM,
+        useDisabled: Cg.uM,
     }),
-    _V = (0, o.zD)(u.X.DATA_USAGE_QUESTS_3P_SETTING, {
+    _M = (0, o.zD)(u.X.DATA_USAGE_QUESTS_3P_SETTING, {
         useTitle: () => g.intl.string(g.t.CyLYKZ),
         useSubtitle: () =>
             g.intl.format(g.t["2QFDU/"], { helpdeskArticle: ta.A.getArticleURL(q.MVz.QUESTS_PRIVACY_CONTROLS) }),
@@ -20492,12 +20488,12 @@ let _P = (0, o.zD)(u.X.CLIPS_ALLOW_VOICE_RECORDING_SETTING, {
         },
         useDisabled: function () {
             let e = c.H1.useSetting(),
-                t = (0, Cm.uM)();
+                t = (0, Cg.uM)();
             return e || t;
         },
         useSearchTerms: () => [g.intl.string(g.t.CyLYKZ)],
     }),
-    _k = (0, o.zD)(u.X.DATA_USAGE_QUESTS_SETTING, {
+    _V = (0, o.zD)(u.X.DATA_USAGE_QUESTS_SETTING, {
         useTitle: () => g.intl.string(g.t.sJYh5t),
         useSubtitle: () =>
             g.intl.format(g.t.cf9mvV, { helpdeskArticle: ta.A.getArticleURL(q.MVz.QUESTS_PRIVACY_CONTROLS) }),
@@ -20508,9 +20504,9 @@ let _P = (0, o.zD)(u.X.CLIPS_ALLOW_VOICE_RECORDING_SETTING, {
             c.H1.updateSetting(!e);
         },
         useSearchTerms: () => [g.intl.string(g.t.VkS7Yd)],
-        useDisabled: Cm.uM,
+        useDisabled: Cg.uM,
     }),
-    _w = (0, o.AK)(u.X.DATA_USAGE_ACTIVITY_PRIVACY_NAVIGATOR, {
+    _k = (0, o.AK)(u.X.DATA_USAGE_ACTIVITY_PRIVACY_NAVIGATOR, {
         destinationKey: u.X.REGISTERED_GAMES_PANEL,
         useSubtitle: function () {
             let { gameHistory: e } = iC(),
@@ -20521,12 +20517,12 @@ let _P = (0, o.zD)(u.X.CLIPS_ALLOW_VOICE_RECORDING_SETTING, {
                     .toArray();
             return g.intl.format(g.t.GaTAYM, { count: e.length, nameCount: t.length, game1: t[0], game2: t[1] });
         },
-        useTrailingDecoration: () => ({ type: ef.wF.STACKED_ICONS, useIcons: _F }),
+        useTrailingDecoration: () => ({ type: ef.wF.STACKED_ICONS, useIcons: _B }),
         usePredicate: () =>
             (0, O.bG)([eQ.Ay], () => eQ.Ay.getGamesSeen(!1).some((e) => !(0, tN.n1)(e))) && (0, se.xl)(),
     }),
-    _B = (0, o.gN)(u.X.DATA_USAGE_RELATED_SETTINGS, { buildLayout: () => [_w] });
-function _F() {
+    _w = (0, o.gN)(u.X.DATA_USAGE_RELATED_SETTINGS, { buildLayout: () => [_k] });
+function _B() {
     let { gameHistory: e } = iC(),
         [t, i] = N.useMemo(
             () =>
@@ -20550,47 +20546,47 @@ function _F() {
                   null != i ? { icon: (0, p.jsx)(e7.A, { game: s, size: e7.M.MEDIUM }), shape: ef.NF.ROUNDED } : null,
           };
 }
-let _z = (0, o.zD)(u.X.DATA_USAGE_STATISTICS_SETTING, {
+let _F = (0, o.zD)(u.X.DATA_USAGE_STATISTICS_SETTING, {
         useTitle: () => g.intl.string(g.t.XuADY2),
         useSubtitle: () =>
             g.intl.format(g.t["igTSG/"], { helpdeskArticle: ta.A.getArticleURL(q.MVz.DATA_PRIVACY_CONTROLS) }),
         useValue: function () {
-            return (0, O.bG)([_D.A], () => _D.A.hasConsented(q.YAq.USAGE_STATISTICS));
+            return (0, O.bG)([_L.A], () => _L.A.hasConsented(q.YAq.USAGE_STATISTICS));
         },
         setValue: function (e) {
             e
-                ? (0, _L.U)([q.YAq.USAGE_STATISTICS], []).catch(_o.i)
-                : (0, _o.O)({
+                ? (0, _R.U)([q.YAq.USAGE_STATISTICS], []).catch(_a.i)
+                : (0, _a.O)({
                       header: g.intl.string(g.t.OdPCbN),
                       body: g.intl.string(g.t.MGWabA),
                       confirmText: g.intl.string(g.t["D3+rU4"]),
                       cancelText: g.intl.string(g.t.kYpG0u),
-                      onConfirm: () => (0, _L.U)([], [q.YAq.USAGE_STATISTICS]).catch(_o.i),
+                      onConfirm: () => (0, _R.U)([], [q.YAq.USAGE_STATISTICS]).catch(_a.i),
                   });
         },
         useSearchTerms: () => [g.intl.string(g.t.XuADY2)],
-        useDisabled: Cm.uM,
+        useDisabled: Cg.uM,
     }),
-    _Y = (0, o.zZ)(u.X.DATA_USAGE_CATEGORY, {
+    _z = (0, o.zZ)(u.X.DATA_USAGE_CATEGORY, {
         useTitle: () => ((0, iz.ri)("DataUsageCategory") ? g.intl.string(g.t.QDAriI) : g.intl.string(g.t.bvw42E)),
-        useInlineNotice: CA,
+        useInlineNotice: Cm,
         initialize: () => {
-            _D.A.fetchedConsents || (0, _L.Q)();
+            _L.A.fetchedConsents || (0, _R.Q)();
         },
         buildLayout: () =>
-            (0, iz.SB)("DataUsageCategory") ? [_U, _z, _M, _k, _V, _P, _G, _B] : [_z, _k, _V, _M, _P, _U],
+            (0, iz.SB)("DataUsageCategory") ? [_G, _F, _U, _V, _M, _D, _P, _w] : [_F, _V, _M, _U, _D, _G],
     });
-function _X() {
+function _Y() {
     let e = c.JG.useSetting();
     return (0, O.bG)([K.Ay, H.A], () => {
         let t = new Set(e);
         return K.Ay.getFlattenedGuildIds().filter((e) => null != H.A.getGuild(e) && !t.has(e));
     }, [e]);
 }
-let _H = {
+let _X = {
         type: ef.wF.STACKED_ICONS,
         useIcons: function () {
-            let e = _X(),
+            let e = _Y(),
                 t = (0, O.bG)(
                     [H.A],
                     () =>
@@ -20610,9 +20606,9 @@ let _H = {
                   : { frontIcon: { icon: (0, p.jsx)(X.$, { guild: t[0], size: 48 }), shape: ef.NF.SQUIRCLE } };
         },
     },
-    _K = (0, o.AK)(u.X.PROFILE_PRIVACY_TO_ACTIVITY_PRIVACY_NAVIGATOR, {
+    _H = (0, o.AK)(u.X.PROFILE_PRIVACY_TO_ACTIVITY_PRIVACY_NAVIGATOR, {
         useSubtitle: function () {
-            let e = _X();
+            let e = _Y();
             if (0 === e.length) return g.intl.format(g.t.QJIJ5p, {});
             let t = H.A.getGuild(e[0]),
                 i = t?.name ?? "",
@@ -20622,12 +20618,12 @@ let _H = {
                 : g.intl.format(g.t["3JyODQ"], { guildName: i, count: n });
         },
         useTrailingDecoration: function () {
-            return _H;
+            return _X;
         },
         destinationKey: u.X.ACTIVITY_PRIVACY_PANEL,
     }),
-    _W = (0, o.gN)(u.X.PROFILE_PRIVACY_RELATED_SETTINGS, { buildLayout: () => [_K] }),
-    _Z = (0, o.Qx)(u.X.PROFILE_PRIVACY_SETTING, {
+    _K = (0, o.gN)(u.X.PROFILE_PRIVACY_RELATED_SETTINGS, { buildLayout: () => [_H] }),
+    _W = (0, o.Qx)(u.X.PROFILE_PRIVACY_SETTING, {
         useTitle: () => g.intl.string(g.t.Qnf32C),
         useOptions: () => [
             { name: g.intl.string(g.t.Boxc8R), desc: g.intl.string(g.t["nLj+nc"]), value: f.KP.FRIENDS_AND_ALL_GUILDS },
@@ -20659,54 +20655,54 @@ let _H = {
         },
         useSearchTerms: () => [g.intl.string(g.t.Qnf32C)],
     }),
-    _q = (0, o.zZ)(u.X.PROFILE_PRIVACY_CATEGORY, {
+    _Z = (0, o.zZ)(u.X.PROFILE_PRIVACY_CATEGORY, {
         usePredicate: () => (0, T.lX)("ProfilePrivacyCategory"),
         useTitle: () => g.intl.string(g.t.ul884f),
         useSubtitle: () => g.intl.string(g.t.J0SFL2),
-        buildLayout: () => [_Z, _W],
+        buildLayout: () => [_W, _K],
     });
-var _Q = i(814278),
-    _J = i(936388),
-    _$ = i(714763);
-let _0 = (0, o.zD)(u.X.PERSISTENT_VERIFICATION_CODES_SETTING, {
+var _q = i(814278),
+    _Q = i(936388),
+    _J = i(714763);
+let _$ = (0, o.zD)(u.X.PERSISTENT_VERIFICATION_CODES_SETTING, {
     useTitle: () => g.intl.string(g.t["opi/XK"]),
-    useSubtitle: () => g.intl.format(g.t["/T+ZlP"], { helpArticle: (0, _Q.Lu)() }),
+    useSubtitle: () => g.intl.format(g.t["/T+ZlP"], { helpArticle: (0, _q.Lu)() }),
     useValue: function () {
-        return (0, O.bG)([_$.A], () => _$.A.getPersistentCodesEnabled());
+        return (0, O.bG)([_J.A], () => _J.A.getPersistentCodesEnabled());
     },
     setValue: function (e) {
-        _J.A.updatePersistentCodesEnabled(e);
+        _Q.A.updatePersistentCodesEnabled(e);
     },
 });
-var _1 = i(787392);
-function _2() {
-    return (0, O.yK)([_1.A], () => _1.A.getUserIds());
+var _0 = i(787392);
+function _1() {
+    return (0, O.yK)([_0.A], () => _0.A.getUserIds());
 }
-var _3 = i(803306),
-    _6 = i(966327),
-    _4 = i(882129);
-function _5(e) {
+var _2 = i(803306),
+    _3 = i(966327),
+    _6 = i(882129);
+function _4(e) {
     let { userId: t, count: i } = e,
         { analyticsLocations: n } = (0, nU.Ay)(),
         s = (0, O.bG)([t3.default], () => t3.default.getUser(t)),
-        l = TO.Ay.getFormattedName(s),
+        l = Ty.Ay.getFormattedName(s),
         r = N.useCallback(() => {
-            (0, _Q.kj)(t);
+            (0, _q.kj)(t);
         }, [t]),
-        a = N.useCallback(() => (0, Ey.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: n }), [t, n]);
+        a = N.useCallback(() => (0, Ej.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: n }), [t, n]);
     return (
         N.useEffect(() => {
-            (0, _3.wz)(t);
+            (0, _2.wz)(t);
         }, [t]),
         (0, p.jsxs)("div", {
-            className: _4.uW,
+            className: _6.uW,
             children: [
-                null != s && (0, p.jsx)(_6.A, { className: _4.my, user: s, size: iK._3.SIZE_40 }),
+                null != s && (0, p.jsx)(_3.A, { className: _6.my, user: s, size: iK._3.SIZE_40 }),
                 (0, p.jsxs)("div", {
-                    className: _4.Qq,
+                    className: _6.Qq,
                     children: [
                         (0, p.jsx)(M.D, {
-                            className: _4.Xh,
+                            className: _6.Xh,
                             onClick: a,
                             children: (0, p.jsx)(V.E, {
                                 variant: "text-md/semibold",
@@ -20721,22 +20717,22 @@ function _5(e) {
                         }),
                     ],
                 }),
-                (0, p.jsx)(M.D, { onClick: r, className: _4.Qz, children: (0, p.jsx)(lp.u, { size: "xs" }) }),
+                (0, p.jsx)(M.D, { onClick: r, className: _6.Qz, children: (0, p.jsx)(lp.u, { size: "xs" }) }),
             ],
         })
     );
 }
-function _7(e) {
+function _5(e) {
     let { className: t, userId: i, verification: n, index: s } = e,
-        l = (0, _Q.tC)(n.timestamp),
+        l = (0, _q.tC)(n.timestamp),
         r = N.useCallback(() => {
-            (0, _Q.W0)(i, n.verifiedKey);
+            (0, _q.W0)(i, n.verifiedKey);
         }, [n.verifiedKey, i]);
     return (0, p.jsxs)("div", {
         className: t,
         children: [
             (0, p.jsxs)("div", {
-                className: _4.Qq,
+                className: _6.Qq,
                 children: [
                     (0, p.jsx)(V.E, {
                         variant: "text-sm/semibold",
@@ -20747,17 +20743,17 @@ function _7(e) {
                 ],
             }),
             (0, p.jsx)(M.D, {
-                className: _4.Kk,
+                className: _6.Kk,
                 onClick: r,
                 children: (0, p.jsx)(cZ.P, { size: "md", color: w.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             }),
         ],
     });
 }
-function _8(e) {
+function _7(e) {
     let { userId: t } = e,
-        i = (0, O.yK)([_1.A], () =>
-            eR()(_1.A.getUserVerifiedKeys(t))
+        i = (0, O.yK)([_0.A], () =>
+            eR()(_0.A.getUserVerifiedKeys(t))
                 .entries()
                 .map((e) => {
                     let [t, i] = e;
@@ -20768,14 +20764,14 @@ function _8(e) {
         );
     return (0, p.jsxs)(p.Fragment, {
         children: [
-            (0, p.jsx)(_5, { userId: t, count: i.length }),
+            (0, p.jsx)(_4, { userId: t, count: i.length }),
             i.map((e, n) =>
                 (0, p.jsxs)(
                     N.Fragment,
                     {
                         children: [
-                            (0, p.jsx)(_7, { className: _4.nM, userId: t, index: n, verification: e }),
-                            n !== i.length - 1 && (0, p.jsx)("div", { className: _4.yF }),
+                            (0, p.jsx)(_5, { className: _6.nM, userId: t, index: n, verification: e }),
+                            n !== i.length - 1 && (0, p.jsx)("div", { className: _6.yF }),
                         ],
                     },
                     `${n}-${e.timestamp}`,
@@ -20784,27 +20780,27 @@ function _8(e) {
         ],
     });
 }
-var _9 = i(691263);
-let Ie = (0, o.E2)(u.X.USERS_VERIFIED_KEYS_LIST_SETTING, {
+var _8 = i(691263);
+let _9 = (0, o.E2)(u.X.USERS_VERIFIED_KEYS_LIST_SETTING, {
         useSearchTerms: () => [g.intl.string(g.t["5b3FNI"])],
         usePredicate: function () {
-            let e = _2();
+            let e = _1();
             return null != e && e.length > 0;
         },
         Component: function () {
-            let e = _2();
-            return (0, p.jsxs)(f5.h, {
+            let e = _1();
+            return (0, p.jsxs)(f4.h, {
                 children: [
-                    (0, p.jsx)(f5._, {
+                    (0, p.jsx)(f4._, {
                         header: g.intl.string(g.t["5b3FNI"]),
-                        description: g.intl.format(g.t.jrTSWU, { helpArticle: (0, _Q.dc)() }),
+                        description: g.intl.format(g.t.jrTSWU, { helpArticle: (0, _q.dc)() }),
                     }),
-                    e.map((e) => (0, p.jsx)("div", { className: _9.A, children: (0, p.jsx)(_8, { userId: e }) }, e)),
+                    e.map((e) => (0, p.jsx)("div", { className: _8.A, children: (0, p.jsx)(_7, { userId: e }) }, e)),
                 ],
             });
         },
     }),
-    It = (0, o.zZ)(u.X.VOICE_SECURITY_CATEGORY, {
+    Ie = (0, o.zZ)(u.X.VOICE_SECURITY_CATEGORY, {
         useTitle: () => ((0, iz.ri)("VoiceSecurityCategory") ? g.intl.string(g.t.bTwjaz) : g.intl.string(g.t.xVk85F)),
         useInlineNotice: function () {
             let e = (0, iz.ri)("VoiceSecurityCategory");
@@ -20815,25 +20811,25 @@ let Ie = (0, o.E2)(u.X.USERS_VERIFIED_KEYS_LIST_SETTING, {
                         : {
                               type: ef.lT.INLINE_NOTICE,
                               noticeType: "info",
-                              useText: () => g.intl.format(g.t["/6sFWa"], { helpArticle: (0, _Q.aW)() }),
+                              useText: () => g.intl.format(g.t["/6sFWa"], { helpArticle: (0, _q.aW)() }),
                           },
                 [e],
             );
         },
         usePredicate: () => (0, ev.isDesktop)(),
-        buildLayout: () => [_0, Ie],
+        buildLayout: () => [_$, _9],
     }),
-    Ii = (0, o.t_)(u.X.DATA_AND_PRIVACY_PANEL, {
+    It = (0, o.t_)(u.X.DATA_AND_PRIVACY_PANEL, {
         useTitle: () => g.intl.string(g.t.OAuOHD),
-        buildLayout: () => ((0, iz.SB)("DataAndPrivacyPanel") ? [_Y, _q, It] : [_Y, _q, _R, It]),
+        buildLayout: () => ((0, iz.SB)("DataAndPrivacyPanel") ? [_z, _Z, Ie] : [_z, _Z, _O, Ie]),
     }),
-    In = (0, o.i4)(u.X.DATA_AND_PRIVACY_SIDEBAR_ITEM, {
+    Ii = (0, o.i4)(u.X.DATA_AND_PRIVACY_SIDEBAR_ITEM, {
         useTitle: () => g.intl.string(g.t.OAuOHD),
-        icon: _f.m,
-        buildLayout: () => [Ii],
+        icon: _N.m,
+        buildLayout: () => [It],
     });
-var Is = i(782603);
-let Il = (0, o.Hn)(u.X.MOBILE_NOTIFICATION_DELAY, {
+var In = i(782603);
+let Is = (0, o.Hn)(u.X.MOBILE_NOTIFICATION_DELAY, {
         useTitle: () => g.intl.string(g.t["8rHeOr"]),
         useSubtitle: () => g.intl.string(g.t["eJE6+J"]),
         useValue: c.cU.useSetting,
@@ -20847,14 +20843,14 @@ let Il = (0, o.Hn)(u.X.MOBILE_NOTIFICATION_DELAY, {
                     label: g.intl.formatToPlainString(g.t.iXLF9W, { minutes: e }),
                 })),
     }),
-    Ir = (0, o.zD)(u.X.TEXT_TO_SPEECH_COMMAND, {
+    Il = (0, o.zD)(u.X.TEXT_TO_SPEECH_COMMAND, {
         useTitle: () => g.intl.string(g.t["btbS+Z"]),
         useSubtitle: () =>
             g.intl.format(g.t.Q5crhR, { onClick: () => (0, ej.openUserSettings)(u.X.TTS_PLAYBACK_RATE) }),
         useValue: c.on.useSetting,
         setValue: c.on.updateSetting,
     }),
-    Ia = (0, o.Qx)(u.X.TEXT_TO_SPEECH_NOTIFICATIONS, {
+    Ir = (0, o.Qx)(u.X.TEXT_TO_SPEECH_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t.JZxxGx),
         useSubtitle: () => g.intl.string(g.t.HDLtJl),
         useValue: () => (0, O.bG)([ui.A], () => ui.A.getTTSType()),
@@ -20866,11 +20862,11 @@ let Il = (0, o.Hn)(u.X.MOBILE_NOTIFICATION_DELAY, {
         ],
         usePredicate: () => i7.$j,
     }),
-    Io = u.X.NOTIFICATIONS_ADVANCED_ACCORDION,
-    Iu = (0, o.bd)(Io, {
+    Ia = u.X.NOTIFICATIONS_ADVANCED_ACCORDION,
+    Io = (0, o.bd)(Ia, {
         useTitle: (e) => (e ? g.intl.string(g.t.RyimDk) : g.intl.string(g.t.CUICbO)),
         useCollapsedSubtitle: function () {
-            return a8(Io, {
+            return a8(Ia, {
                 formatter: (e) => {
                     let { title: t, index: i } = e;
                     return "string" != typeof t
@@ -20881,190 +20877,190 @@ let Il = (0, o.Hn)(u.X.MOBILE_NOTIFICATION_DELAY, {
                 },
             });
         },
-        buildLayout: () => [Il, Ir, Ia],
+        buildLayout: () => [Is, Il, Ir],
     }),
-    Id = (0, o.zZ)(u.X.NOTIFICATIONS_ADVANCED_CATEGORY, {
+    Iu = (0, o.zZ)(u.X.NOTIFICATIONS_ADVANCED_CATEGORY, {
         useTitle: () => g.intl.string(g.t["31DySj"]),
-        buildLayout: () => [Iu],
+        buildLayout: () => [Io],
     }),
-    Ic = (0, o.zD)(u.X.ENABLE_UNREAD_MESSAGE_BADGE, {
+    Id = (0, o.zD)(u.X.ENABLE_UNREAD_MESSAGE_BADGE, {
         useTitle: () => g.intl.string(g.t.VH8AIJ),
         useSubtitle: () => g.intl.string(g.t["9K4qwX"]),
         useValue: () => (0, O.bG)([ui.A], () => !ui.A.getDisableUnreadBadge()),
         setValue: (e) => ua.default.setDisableUnreadBadge(!e),
     }),
-    Ig = (0, o.zZ)(u.X.NOTIFICATIONS_BADGES_CATEGORY, {
+    Ic = (0, o.zZ)(u.X.NOTIFICATIONS_BADGES_CATEGORY, {
         useTitle: () => g.intl.string(g.t.l6w3Vj),
-        buildLayout: () => [Ic],
+        buildLayout: () => [Id],
     });
-var Im = i(100406),
-    IA = i(878460),
-    Ih = i(431144);
-let IE = Ih.px.map((e) =>
+var Ig = i(100406),
+    Im = i(878460),
+    IA = i(431144);
+let Ih = IA.px.map((e) =>
         (0, o.zD)(`${u.X.EMAIL_LIST_ITEM_PREFIX}${e.category}`, {
             useTitle: e.label,
             useSubtitle: e.subLabel,
             useValue: () =>
                 ((e) => {
-                    let { categories: t } = (0, O.cf)([IA.A], () => IA.A.getEmailSettings());
+                    let { categories: t } = (0, O.cf)([Im.A], () => Im.A.getEmailSettings());
                     return !!t[e];
                 })(e.category),
-            setValue: (t) => (0, Im.CA)(e.category, t),
+            setValue: (t) => (0, Ig.CA)(e.category, t),
         }),
     ),
-    IT = (0, o.Tf)(u.X.UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS, {
+    IE = (0, o.Tf)(u.X.UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS, {
         useTitle: () => g.intl.string(g.t.Ra9Pwk),
         useSubtitle: () => g.intl.string(g.t.iYjQ8X),
         useLabel: () => g.intl.string(g.t.KT1pBA),
         useDisabled: () => {
-            let { categories: e } = (0, O.cf)([IA.A], () => IA.A.getEmailSettings());
-            return Ih.Zk.every((t) => !e[t]);
+            let { categories: e } = (0, O.cf)([Im.A], () => Im.A.getEmailSettings());
+            return IA.Zk.every((t) => !e[t]);
         },
-        onClick: () => (0, Im.NI)(),
+        onClick: () => (0, Ig.NI)(),
         useVariant: () => "critical-secondary",
     }),
-    Ix = (0, o.zZ)(u.X.NOTIFICATIONS_EMAIL_CATEGORY, {
+    IT = (0, o.zZ)(u.X.NOTIFICATIONS_EMAIL_CATEGORY, {
         useTitle: () => g.intl.string(g.t["w/qqKK"]),
         initialize: function () {
-            let { initialized: e } = IA.A.getEmailSettings();
-            e || (0, Im.cR)();
+            let { initialized: e } = Im.A.getEmailSettings();
+            e || (0, Ig.cR)();
         },
-        buildLayout: () => [...IE, IT],
+        buildLayout: () => [...Ih, IE],
     }),
-    IS = (0, o.zD)(u.X.DESKTOP_NOTIFICATIONS, {
+    Ix = (0, o.zD)(u.X.DESKTOP_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t["/0WCll"]),
         useSubtitle: () => g.intl.string(g.t.wF9ih3),
         useValue: () => (0, O.bG)([ui.A], () => ui.A.getDesktopType()) !== q.nRU.NEVER,
         setValue: (e) => ua.default.setDesktopType(e ? q.nRU.ALL : q.nRU.NEVER),
     });
-var Ip = i(832712),
-    IN = i(543465),
-    If = i(406535),
-    IC = i(790782);
-let I_ = (0, o.zD)(u.X.EXPERIMENTAL_UNREADS, {
+var IS = i(832712),
+    Ip = i(543465),
+    IN = i(406535),
+    If = i(790782);
+let IC = (0, o.zD)(u.X.EXPERIMENTAL_UNREADS, {
     useTitle: () => g.intl.string(g.t["k6m/si"]),
     useSubtitle: () => g.intl.string(g.t.LGynPs),
-    useValue: () => (0, O.bG)([IN.Ay], () => IN.Ay.useNewNotifications),
+    useValue: () => (0, O.bG)([Ip.Ay], () => Ip.Ay.useNewNotifications),
     setValue: function (e) {
-        Ip.A.setAccountFlag(If.i.USE_NEW_NOTIFICATIONS, e),
+        IS.A.setAccountFlag(IN.i.USE_NEW_NOTIFICATIONS, e),
             e ||
                 (hV.w.set("turnedOffNewNotifications", !0),
                 Y.default.track(q.HAw.NOTIFICATION_MIGRATION_OPTOUT, {
                     num_guilds_with_new_setting: H.A.getGuildsArray().filter(
-                        (e) => IN.Ay.resolveGuildUnreadSetting(e) === IC.e.ONLY_MENTIONS,
+                        (e) => Ip.Ay.resolveGuildUnreadSetting(e) === If.e.ONLY_MENTIONS,
                     ).length,
                 }));
     },
     usePredicate: () =>
         (0, O.bG)(
-            [t3.default, IN.Ay],
+            [t3.default, Ip.Ay],
             () =>
                 t3.default.getCurrentUser()?.isStaff() ||
                 t3.default.getCurrentUser()?.isStaffPersonal() ||
-                IN.Ay.useNewNotifications,
+                Ip.Ay.useNewNotifications,
         ),
 });
-var II = i(70730);
-let Ib = (0, o.zD)(u.X.FRIEND_ANNIVERSARY_NOTIFICATIONS, {
+var I_ = i(70730);
+let II = (0, o.zD)(u.X.FRIEND_ANNIVERSARY_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t.NjOMvh),
         usePersistentBadge: () => ({ badgeType: ef.Xi.BETA }),
         useValue: c.oz.useSetting,
         setValue: function (e) {
             c.oz.updateSetting(e),
                 Y.default.track(q.HAw.NOTIFICATION_SETTINGS_UPDATED, {
-                    update_type: If.Y.ACCOUNT,
+                    update_type: IN.Y.ACCOUNT,
                     friend_anniversary_notifications: e,
                 });
         },
         useSearchTerms: () => [g.intl.string(g.t.hi4dSk)],
         usePredicate: () => {
-            let { enabled: e, showDmPrompts: t } = II.u.getConfig({ location: "FriendAnniversaryNotifications" });
+            let { enabled: e, showDmPrompts: t } = I_.u.getConfig({ location: "FriendAnniversaryNotifications" });
             return e && t;
         },
     }),
-    Iv = (0, E.mj)({
+    Ib = (0, E.mj)({
         kind: "user",
         name: "2026-03-friend-is-online-v3",
         defaultConfig: { showSettingsToggle: !1 },
         variations: { 1: { showSettingsToggle: !0 }, 2: { showSettingsToggle: !0 } },
     }),
-    Ij = (0, o.zD)(u.X.FRIEND_ONLINE_NOTIFICATIONS, {
+    Iv = (0, o.zD)(u.X.FRIEND_ONLINE_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t.sQQgFj),
         useValue: c.NR.useSetting,
         setValue: function (e) {
             c.NR.updateSetting(e),
                 Y.default.track(q.HAw.NOTIFICATION_SETTINGS_UPDATED, {
-                    update_type: If.Y.ACCOUNT,
+                    update_type: IN.Y.ACCOUNT,
                     friend_online_notifications: e,
                 });
         },
-        usePredicate: () => Iv.useConfig({ location: "FriendOnlineNotifications" }).showSettingsToggle,
+        usePredicate: () => Ib.useConfig({ location: "FriendOnlineNotifications" }).showSettingsToggle,
     }),
-    Iy = (0, E.mj)({
+    Ij = (0, E.mj)({
         name: "2026-03-game-update-notification",
         kind: "user",
         defaultConfig: { showToggle: !1 },
         variations: { 0: { showToggle: !1 }, 1: { showToggle: !0 } },
     });
-var IO = i(275007);
-let IR = (0, o.zD)(u.X.GAME_UPDATE_NOTIFICATIONS, {
-    useTitle: () => g.intl.string(IO.default["ZZIP+o"]),
+var Iy = i(275007);
+let IO = (0, o.zD)(u.X.GAME_UPDATE_NOTIFICATIONS, {
+    useTitle: () => g.intl.string(Iy.default["ZZIP+o"]),
     useValue: c.JV.useSetting,
     setValue: function (e) {
         c.JV.updateSetting(e),
             Y.default.track(q.HAw.NOTIFICATION_SETTINGS_UPDATED, {
-                update_type: If.Y.ACCOUNT,
+                update_type: IN.Y.ACCOUNT,
                 game_update_notifications: e,
             });
     },
-    usePredicate: () => Iy.useConfig({ location: "SettingsRendererConfig" }).showToggle,
+    usePredicate: () => Ij.useConfig({ location: "SettingsRendererConfig" }).showToggle,
 });
-var IL = i(571524);
-let ID = (0, o.zD)(u.X.GDM_ALL_REACTION_NOTIFICATIONS, {
+var IR = i(571524);
+let IL = (0, o.zD)(u.X.GDM_ALL_REACTION_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t.nvkXtr),
         useValue: c.c3.useSetting,
         setValue: function (e) {
             c.c3.updateSetting(e),
                 Y.default.track(q.HAw.NOTIFICATION_SETTINGS_UPDATED, {
-                    update_type: If.Y.ACCOUNT,
+                    update_type: IN.Y.ACCOUNT,
                     gdm_all_reaction_notifications: e,
                 });
         },
         usePredicate: function () {
-            return (0, IL.h)("GdmAllReactionNotification").showSettingsToggle;
+            return (0, IR.h)("GdmAllReactionNotification").showSettingsToggle;
         },
     }),
-    IP = (0, o.zD)(u.X.GO_LIVE_NOTIFICATIONS, {
+    ID = (0, o.zD)(u.X.GO_LIVE_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t.FSNIvs),
         useValue: c.Yh.useSetting,
         setValue: function (e) {
             c.Yh.updateSetting(e),
                 Y.default.track(q.HAw.NOTIFICATION_SETTINGS_UPDATED, {
-                    update_type: If.Y.ACCOUNT,
+                    update_type: IN.Y.ACCOUNT,
                     go_live_notifications: e,
                 });
         },
     }),
-    IG = (0, E.mj)({
+    IP = (0, E.mj)({
         kind: "user",
         name: "2026-01-profile-updates-notification",
         defaultConfig: { showSettingsToggle: !1 },
         variations: { 0: { showSettingsToggle: !1 }, 1: { showSettingsToggle: !0 }, 2: { showSettingsToggle: !0 } },
     }),
-    IU = (0, o.zD)(u.X.PROFILE_UPDATES_NOTIFICATIONS, {
+    IG = (0, o.zD)(u.X.PROFILE_UPDATES_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t.xBLMhQ),
         useValue: c.T3.useSetting,
         setValue: function (e) {
             c.T3.updateSetting(e),
                 Y.default.track(q.HAw.NOTIFICATION_SETTINGS_UPDATED, {
-                    update_type: If.Y.ACCOUNT,
+                    update_type: IN.Y.ACCOUNT,
                     profile_updates_notifications: e,
                 });
         },
-        usePredicate: () => IG.useConfig({ location: "user_settings.ProfileUpdatesNotifications" }).showSettingsToggle,
+        usePredicate: () => IP.useConfig({ location: "user_settings.ProfileUpdatesNotifications" }).showSettingsToggle,
     });
-var IM = i(815807);
-let IV = (0, o.Hn)(u.X.REACTION_NOTIFICATIONS, {
+var IU = i(815807);
+let IM = (0, o.Hn)(u.X.REACTION_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t.Wxj9Hp),
         useOptions: () => [
             { id: "enabled", label: g.intl.string(g.t["9x/RtT"]), value: f.Tz.NOTIFICATIONS_ENABLED },
@@ -21072,82 +21068,82 @@ let IV = (0, o.Hn)(u.X.REACTION_NOTIFICATIONS, {
             { id: "disabled", label: g.intl.string(g.t["xu+UDU"]), value: f.Tz.NOTIFICATIONS_DISABLED },
         ],
         useValue: c.Zp.useSetting,
-        setValue: (e) => (0, IM.n4)(e, c.Zp.getSetting()),
+        setValue: (e) => (0, IU.n4)(e, c.Zp.getSetting()),
     }),
-    Ik = (0, o.zD)(u.X.SERVER_TRENDING_NOTIFICATIONS, {
+    IV = (0, o.zD)(u.X.SERVER_TRENDING_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t["k51K1+"]),
         useValue: c.Qr.useSetting,
         setValue: function (e) {
             c.Qr.updateSetting(e),
                 Y.default.track(q.HAw.NOTIFICATION_SETTINGS_UPDATED, {
-                    update_type: If.Y.ACCOUNT,
+                    update_type: IN.Y.ACCOUNT,
                     server_trending_notifications: e,
                 });
         },
         usePredicate: () => !1,
     }),
-    Iw = (0, E.mj)({
+    Ik = (0, E.mj)({
         kind: "user",
         name: "2026-04-upcoming-server-event",
         defaultConfig: { showSettingsToggle: !1 },
         variations: { 1: { showSettingsToggle: !0 }, 2: { showSettingsToggle: !0 }, 3: { showSettingsToggle: !0 } },
     }),
-    IB = (0, o.zD)(u.X.UPCOMING_SERVER_EVENT_NOTIFICATIONS, {
+    Iw = (0, o.zD)(u.X.UPCOMING_SERVER_EVENT_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t.G8NPz6),
         useValue: c.zS.useSetting,
         setValue: function (e) {
             c.zS.updateSetting(e),
                 Y.default.track(q.HAw.NOTIFICATION_SETTINGS_UPDATED, {
-                    update_type: If.Y.ACCOUNT,
+                    update_type: IN.Y.ACCOUNT,
                     upcoming_server_event_notifications: e,
                 });
         },
-        usePredicate: () => Iw.useConfig({ location: "UpcomingServerEventNotifications" }).showSettingsToggle,
+        usePredicate: () => Ik.useConfig({ location: "UpcomingServerEventNotifications" }).showSettingsToggle,
     }),
-    IF = (0, o.FW)(u.X.NOTIFICATION_SELECTION_FIELD_SET, {
+    IB = (0, o.FW)(u.X.NOTIFICATION_SELECTION_FIELD_SET, {
         variant: "compact",
         useTitle: () => g.intl.string(g.t.FEVRDV),
-        buildLayout: () => [IP, Ib, Ij, Ik, IB, IR, IU, IV, ID],
+        buildLayout: () => [ID, II, Iv, IV, Iw, IO, IG, IM, IL],
     }),
-    Iz = (0, o.zD)(u.X.TASK_BAR_FLASHING, {
+    IF = (0, o.zD)(u.X.TASK_BAR_FLASHING, {
         useTitle: () => g.intl.string(g.t.xSmFQG),
         useSubtitle: () => g.intl.string(g.t.bd4j4x),
         useValue: () => (0, O.bG)([ui.A], () => ui.A.taskbarFlash),
         setValue: (e) => ua.default.setTaskbarFlash(e),
         usePredicate: () => (0, se.uF)(),
     }),
-    IY = (0, o.zZ)(u.X.NOTIFICATIONS_OVERVIEW_CATEGORY, {
+    Iz = (0, o.zZ)(u.X.NOTIFICATIONS_OVERVIEW_CATEGORY, {
         useTitle: () => g.intl.string(g.t["/dp6yY"]),
-        buildLayout: () => [IS, Iz, IF, I_],
+        buildLayout: () => [Ix, IF, IB, IC],
     });
-var IX = i(965957),
-    IH = i(312671),
-    IK = i(235079);
-let IW = (0, o.zD)(u.X.NOTIFICATION_HOLIDAY_SOUNDPACK, {
+var IY = i(965957),
+    IX = i(312671),
+    IH = i(235079);
+let IK = (0, o.zD)(u.X.NOTIFICATION_HOLIDAY_SOUNDPACK, {
     useTitle: () => {
         let e = un.A.useHolidaySoundpack();
         return null == e ? "" : g.intl.format(g.t["E/OyBr"], { soundpack: g.intl.string(e.soundpackLabel) });
     },
     useValue: function () {
-        let e = (0, O.bG)([IH.A], () => IH.A.getSoundpack()),
+        let e = (0, O.bG)([IX.A], () => IX.A.getSoundpack()),
             t = un.A.useHolidaySoundpack();
         return e === t?.soundpack;
     },
     setValue: function (e) {
         let t = un.A.getHolidaySoundpack();
-        ty()(null != t, "predicate should fail if no soundpack is available"), (0, IX.p)(e ? t : IK.i.CLASSIC);
+        ty()(null != t, "predicate should fail if no soundpack is available"), (0, IY.p)(e ? t : IH.i.CLASSIC);
     },
     usePredicate: un.A.useIsEligible,
 });
-var IZ = i(970931);
-let Iq = {
+var IW = i(970931);
+let IZ = {
         useTitle: () => g.intl.string(g.t.jD1qzM),
         sound: "message1",
-        useDisabled: IZ.kB,
-        useDisabledMessage: () => ((0, IZ.kB)() ? g.intl.string(g.t.cIRG0s) : void 0),
+        useDisabled: IW.kB,
+        useDisabledMessage: () => ((0, IW.kB)() ? g.intl.string(g.t.cIRG0s) : void 0),
     },
-    IQ = { useTitle: () => g.intl.string(g.t.XBrJT6), sound: "call_ringing" },
-    IJ = (0, o.zD)(u.X.SELECTED_CHANNEL_NOTIFICATIONS, {
+    Iq = { useTitle: () => g.intl.string(g.t.XBrJT6), sound: "call_ringing" },
+    IQ = (0, o.zD)(u.X.SELECTED_CHANNEL_NOTIFICATIONS, {
         useTitle: () => g.intl.string(g.t.TzjwV9),
         useSubtitle: () => g.intl.format(g.t.OOiGCM, { onClick: () => ud("message3") }),
         useValue: () =>
@@ -21155,97 +21151,97 @@ let Iq = {
         setValue: (e) => ua.default.setNotifyMessagesInSelectedChannel(e),
         useDisabled: () => (0, O.bG)([ui.A], () => ui.A.getDisableAllSounds()),
     }),
-    I$ = (0, o.zD)(u.X.DISABLE_ALL_NOTIFICATION_SOUNDS, {
+    IJ = (0, o.zD)(u.X.DISABLE_ALL_NOTIFICATION_SOUNDS, {
         useTitle: () => g.intl.string(g.t["2ZhCOd"]),
         useSubtitle: () => g.intl.string(g.t.EAKdPr),
         useValue: () => (0, O.bG)([ui.A], () => ui.A.getDisableAllSounds()),
         setValue: (e) => ua.default.toggleDisableAllSounds(e),
     }),
-    I0 = (0, o.D1)(u.X.NOTIFICATION_SOUNDS_LIST, {
+    I$ = (0, o.D1)(u.X.NOTIFICATION_SOUNDS_LIST, {
         initialize: function () {
             return () => {
                 uu();
             };
         },
-        buildLayout: () => [uc(Iq), IJ, uc(IQ), I$],
+        buildLayout: () => [uc(IZ), IQ, uc(Iq), IJ],
     }),
-    I1 = (0, o.AK)(u.X.NOTIFICATIONS_TO_VOICE_AND_VIDEO_SOUNDS_NAVIGATOR, {
+    I0 = (0, o.AK)(u.X.NOTIFICATIONS_TO_VOICE_AND_VIDEO_SOUNDS_NAVIGATOR, {
         useSubtitle: () => g.intl.string(g.t["MMy+lm"]),
         useSearchTerms: () => [g.intl.string(g.t["MMy+lm"])],
         destinationKey: u.X.SOUNDS_CATEGORY,
     }),
-    I2 = (0, o.gN)(u.X.NOTIFICATIONS_SOUNDS_RELATED_SETTINGS, { buildLayout: () => [I1] }),
-    I3 = (0, o.zZ)(u.X.NOTIFICATIONS_SOUNDS_CATEGORY, {
+    I1 = (0, o.gN)(u.X.NOTIFICATIONS_SOUNDS_RELATED_SETTINGS, { buildLayout: () => [I0] }),
+    I2 = (0, o.zZ)(u.X.NOTIFICATIONS_SOUNDS_CATEGORY, {
         useTitle: () => g.intl.string(g.t.LweOYy),
-        buildLayout: () => [IW, I0, I2],
+        buildLayout: () => [IK, I$, I1],
     }),
-    I6 = (0, o.t_)(u.X.NOTIFICATIONS_PANEL, {
+    I3 = (0, o.t_)(u.X.NOTIFICATIONS_PANEL, {
         useTitle: () => g.intl.string(g.t.HcoRu0),
-        buildLayout: () => [IY, I3, Ig, Ix, Id],
+        buildLayout: () => [Iz, I2, Ic, IT, Iu],
     }),
-    I4 = (0, o.i4)(u.X.NOTIFICATIONS_SIDEBAR_ITEM, {
+    I6 = (0, o.i4)(u.X.NOTIFICATIONS_SIDEBAR_ITEM, {
         useTitle: () => g.intl.string(g.t.HcoRu0),
-        icon: Is.X,
-        buildLayout: () => [I6],
+        icon: In.X,
+        buildLayout: () => [I3],
     }),
-    I5 = (0, o.WI)(u.X.USER_SECTION, {
+    I4 = (0, o.WI)(u.X.USER_SECTION, {
         useTitle: () => g.intl.string(g.t.cduTBL),
         buildLayout: () => [
-            NG,
-            _N,
-            In,
-            ...((0, iz.pC)("UserSection") ? [] : [Nb]),
-            NF,
-            ...((0, iz.pC)("UserSection") ? [] : [S0]),
-            f3,
-            I4,
-            fg,
+            NP,
+            _p,
+            Ii,
+            ...((0, iz.pC)("UserSection") ? [] : [NI]),
+            NB,
+            ...((0, iz.pC)("UserSection") ? [] : [S$]),
+            f2,
+            I6,
+            fc,
         ],
     });
-var I7 = i(387758),
-    I8 = i(271866),
-    I9 = i(147964),
-    be = i(867099);
-let bt = (0, o.zD)(u.X.APPLICATION_TEST_MODE, {
+var I5 = i(387758),
+    I7 = i(271866),
+    I8 = i(147964),
+    I9 = i(867099);
+let be = (0, o.zD)(u.X.APPLICATION_TEST_MODE, {
         useTitle: () => g.intl.string(g.t.erOqlh),
         useSubtitle: () => g.intl.string(g.t["52hMnD"]),
         usePredicate: c.Q_.useSetting,
-        useValue: () => (0, O.bG)([I9.A], () => null != I9.A.testModeApplicationId),
+        useValue: () => (0, O.bG)([I8.A], () => null != I8.A.testModeApplicationId),
         setValue: (e) => {
-            e ? (0, C.openModal)((e) => (0, p.jsx)(be.A, { ...e })) : I8.cL();
+            e ? (0, C.openModal)((e) => (0, p.jsx)(I9.A, { ...e })) : I7.cL();
         },
     }),
-    bi = (0, o.zD)(u.X.DEVELOPER_MODE, {
+    bt = (0, o.zD)(u.X.DEVELOPER_MODE, {
         useTitle: () => g.intl.string(g.t.ObIb1Q),
         useSubtitle: () => g.intl.format(g.t["CY6q/Q"], { apiDocsUrl: q.X7G.API_DOCS }),
         useValue: c.Q_.useSetting,
         setValue: c.Q_.updateSetting,
         usePredicate: () => co.p5,
     }),
-    bn = (0, o.zZ)(u.X.DEVELOPER_CATEGORY, { buildLayout: () => [bi, bt] }),
-    bs = (0, o.t_)(u.X.DEVELOPER_PANEL, { useTitle: () => g.intl.string(g.t["0BRxRp"]), buildLayout: () => [bn] }),
-    bl = (0, o.i4)(u.X.DEVELOPER_SIDEBAR_ITEM, {
-        icon: I7.G,
+    bi = (0, o.zZ)(u.X.DEVELOPER_CATEGORY, { buildLayout: () => [bt, be] }),
+    bn = (0, o.t_)(u.X.DEVELOPER_PANEL, { useTitle: () => g.intl.string(g.t["0BRxRp"]), buildLayout: () => [bi] }),
+    bs = (0, o.i4)(u.X.DEVELOPER_SIDEBAR_ITEM, {
+        icon: I5.G,
         useTitle: () => g.intl.string(g.t["0BRxRp"]),
-        buildLayout: () => [bs],
+        buildLayout: () => [bn],
     });
-var br = i(70688),
-    ba = i(830215);
-let bo = (0, o.i4)(u.X.LOGOUT_SIDEBAR_ITEM, {
+var bl = i(70688),
+    br = i(830215);
+let ba = (0, o.i4)(u.X.LOGOUT_SIDEBAR_ITEM, {
         variant: "destructive",
         useTitle: () => g.intl.string(g.t["2jxGer"]),
-        icon: br.o,
+        icon: bl.o,
         onClick: () => {
             (0, st.A)({
                 title: g.intl.string(g.t["2jxGer"]),
                 subtitle: g.intl.string(g.t.SUnWBB),
                 confirmText: g.intl.string(g.t["2jxGer"]),
                 onConfirm: () => {
-                    ba.A.logout("settings");
+                    br.A.logout("settings");
                 },
             });
         },
         buildLayout: () => [],
     }),
-    bu = (0, o.WI)(u.X.UTILITY_SECTION, { buildLayout: () => [bl, bo].filter(t6.Vq) }),
-    bd = (0, o.Hr)({ buildLayout: () => [xJ, I5, hl, uz, iF, Ef, bu], analyticsKey: "user_settings" });
+    bo = (0, o.WI)(u.X.UTILITY_SECTION, { buildLayout: () => [bs, ba].filter(t6.Vq) }),
+    bu = (0, o.Hr)({ buildLayout: () => [xQ, I4, hl, uz, iF, Ef, bo], analyticsKey: "user_settings" });
