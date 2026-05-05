@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, { BV: () => d, Cr: () => u, ME: () => s, YY: () => a, c$: () => l, gN: () => o });
-var r = n(323125);
+var i = n(323125);
 n(436317);
-var i = n(435220);
+var r = n(435220);
 let s = "@me",
     a = "@favorites",
     o = "@inbox",
@@ -39,16 +39,16 @@ let s = "@me",
         ME: "/channels/@me",
         MESSAGE_REQUESTS: "/message-requests",
         CHANNEL: (e, t, n) => {
-            let r = null == t ? `/channels/${e || s}` : `/channels/${e || s}/${t}`;
-            return null == n ? r : `${r}/${n}`;
+            let i = null == t ? `/channels/${e || s}` : `/channels/${e || s}/${t}`;
+            return null == n ? i : `${i}/${n}`;
         },
-        CHANNEL_THREAD_VIEW: (e, t, n, r) => {
-            let i = `/channels/${e}/${t}/threads/${n}`;
-            return null == r ? i : `${i}/${r}`;
+        CHANNEL_THREAD_VIEW: (e, t, n, i) => {
+            let r = `/channels/${e}/${t}/threads/${n}`;
+            return null == i ? r : `${r}/${i}`;
         },
         VOICE_CHAT_CHANNEL_PARTIAL: (e, t, n) => {
-            let r = `/voice/${e}/${t}`;
-            return null == n ? r : `${r}/${n}`;
+            let i = `/voice/${e}/${t}`;
+            return null == n ? i : `${i}/${n}`;
         },
         LOGIN: "/login",
         LOGIN_HANDOFF: "/login/handoff",
@@ -114,7 +114,7 @@ let s = "@me",
         GLOBAL_DISCOVERY_APPS_PROFILE: (e) => `/discovery/applications/${e}`,
         GLOBAL_DISCOVERY_APPS_PROFILE_SECTION: (e, t) => `/discovery/applications/${e}/${t}`,
         GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) =>
-            `/discovery/applications/${e}/${i.GlobalDiscoveryAppsSections.STORE}/${t}`,
+            `/discovery/applications/${e}/${r.GlobalDiscoveryAppsSections.STORE}/${t}`,
         GLOBAL_DISCOVERY_APPS_SEARCH: "/discovery/applications/search",
         GUILD_MEMBER_VERIFICATION: (e) => `/member-verification/${e}`,
         GUILD_MEMBER_VERIFICATION_FOR_HUB: (e, t) => `/member-verification-for-hub/${e}${null != t ? `/${t}` : ""}`,
@@ -127,19 +127,19 @@ let s = "@me",
             `/billing/premium/manage?deep_link_type=${e}${null != t ? `&load_id=${t}` : ""}`,
         BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE: (e, t) =>
             `/billing/premium/manage?flow_type=${e}${null != t ? `&load_id=${t}` : ""}`,
-        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r, i, s, a) =>
-            `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${n}${null != r ? `&payment_method_type=${r}` : ""}${null != i ? `&deep_link_type=${i}` : ""}${null != s ? `&use_preset_offer=${s}` : ""}${null != a ? `&flow_type=${a}` : ""}`,
-        BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t, n, r) =>
-            `/billing/guild-subscriptions/purchase?guild_id=${e}${null != t ? `&deep_link_type=${t}` : ""}${null != n ? `&load_id=${n}` : ""}${null != r ? `&flow_type=${r}` : ""}`,
+        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, i, r, s, a) =>
+            `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${n}${null != i ? `&payment_method_type=${i}` : ""}${null != r ? `&deep_link_type=${r}` : ""}${null != s ? `&use_preset_offer=${s}` : ""}${null != a ? `&flow_type=${a}` : ""}`,
+        BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t, n, i) =>
+            `/billing/guild-subscriptions/purchase?guild_id=${e}${null != t ? `&deep_link_type=${t}` : ""}${null != n ? `&load_id=${n}` : ""}${null != i ? `&flow_type=${i}` : ""}`,
         GUILD_BOOSTING_MARKETING: (e) => `/guilds/${e}/premium-guild-subscriptions`,
         GUILD_SETTINGS: (e, t, n) => {
-            let r = `/guilds/${e}/settings${null != t ? `/${t}` : ""}`;
-            return null == n ? r : `${r}/${n}`;
+            let i = `/guilds/${e}/settings${null != t ? `/${t}` : ""}`;
+            return null == n ? i : `${i}/${n}`;
         },
         PICK_GUILD_SETTINGS: (e, t, n) => {
-            let r = `/guilds/settings${null != e ? `/${e}` : ""}`,
-                i = null == t ? r : `${r}/${t}`;
-            return `${i}${null != n ? `?feature=${n}` : ""}`;
+            let i = `/guilds/settings${null != e ? `/${e}` : ""}`,
+                r = null == t ? i : `${i}/${t}`;
+            return `${r}${null != n ? `?feature=${n}` : ""}`;
         },
         GUILD_EVENT_DETAILS: (e, t, n) => `/events/${e}/${t}` + (null != n ? `/${n}` : ""),
         FEATURE: (e) => `/feature/${e}`,
@@ -150,17 +150,17 @@ let s = "@me",
         APPLICATION_DIRECTORY_PROFILE: (e) => `/application-directory/${e}`,
         APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => `/application-directory/${e}/${t}`,
         APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) =>
-            `/application-directory/${e}/${i.ApplicationDirectoryProfileSections.STORE}/${t}`,
+            `/application-directory/${e}/${r.ApplicationDirectoryProfileSections.STORE}/${t}`,
         APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
         FAMILY_CENTER: "/family-center",
         SERVER_SHOP: (e) => `/channels/${e}/shop`,
-        CHANNELS_GAME_SHOP: (e, t, n, r) => {
-            let i = `/channels/${e}/game-shop`;
-            return (i += `/${t ?? 0}`), null != n && ((i += `/${n}`), null != r && (i += `/${r}`)), i;
+        CHANNELS_GAME_SHOP: (e, t, n, i) => {
+            let r = `/channels/${e}/game-shop`;
+            return (r += `/${t ?? 0}`), null != n && ((r += `/${n}`), null != i && (r += `/${i}`)), r;
         },
         GAME_SHOP: (e, t, n) => {
-            let r = `/game-shop/${e}`;
-            return null != t && ((r += `/${t}`), null != n && (r += `/${n}`)), r;
+            let i = `/game-shop/${e}`;
+            return null != t && ((i += `/${t}`), null != n && (i += `/${n}`)), i;
         },
         GUILD_PRODUCT: (e, t) => `/channels/${e}/shop/${t}`,
         REPORT: "/report",
@@ -176,6 +176,7 @@ let s = "@me",
         CHANNEL_SUMMARY: (e, t) => `/channels/${e}/summaries/${t}`,
         USER_SUMMARIES: "/users/@me/summaries",
         QUESTS: (e) => `/quests/${e}`,
+        GAME_PROFILE: (e) => `/games/${e}`,
         ACCOUNT_REVERT: (e) => `/wasntme/${e}`,
         POWERUP_STORE: (e) => `/channels/${e}/boosts`,
         CONFERENCE_MODE: "/conference-mode",
@@ -184,4 +185,4 @@ let s = "@me",
         QUEST_PREVIEW_TOOL_2: (e) => `/quest-home?tab=preview_tool&quest_id=${e}`,
         ICYMI: "/icymi",
     }),
-    d = (0, r.dN)(c, [":", "?", "@"]);
+    d = (0, i.dN)(c, [":", "?", "@"]);

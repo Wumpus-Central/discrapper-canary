@@ -78,7 +78,7 @@ var Z = t(44724),
     el = t(510022),
     et = t(317560),
     es = t(429635),
-    en = t(99161),
+    en = t(533406),
     ea = t(964421);
 function er(e) {
     let { mediaItems: l, labels: t, selectedIndex: n, onSelectIndex: a } = e;
