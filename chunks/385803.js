@@ -327,6 +327,7 @@ let u = [
     a.F.STANDARD_BACKGROUND_THEME,
     o.NJ.DARKER,
     a.F.STANDARD_BACKGROUND_THEME,
-    o.NJ.MIDNIGHT;
+    o.NJ.MIDNIGHT,
+    a.F.STANDARD_BACKGROUND_THEME;
 let f = (0, r.keyBy)(_, "id");
 var h = (((i = {})[(i.SIZE_48 = 48)] = "SIZE_48"), (i[(i.SIZE_60 = 60)] = "SIZE_60"), i);
