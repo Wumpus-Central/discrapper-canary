@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eb, x: () => ev });
+n.d(t, { A: () => ev });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -179,15 +179,7 @@ var eI = n(881140),
     eT = n(746080),
     eS = n(992595),
     eN = n(429128);
-let ey = { display: "inline" },
-    eC = (e) => e.stopPropagation();
-function ev(e) {
-    return {
-        ...e,
-        react: (t, n, r) => (0, i.jsx)("span", { style: ey, onClick: eC, children: e.react(t, n, r) }, r.key),
-    };
-}
-function eO(e) {
+function ey(e) {
     let { text: t } = e,
         [n, s] = r.useState(!1);
     return (0, i.jsx)(l.D, {
@@ -203,7 +195,7 @@ function eO(e) {
             : (0, i.jsx)(c.T, { size: "xs", color: "currentColor" }),
     });
 }
-let eR = {
+let eC = {
     blockQuote: {
         react: (e, t, n) =>
             (0, i.jsxs)(
@@ -232,7 +224,7 @@ let eR = {
                         className: eS.Hy,
                         children: [
                             w.p5
-                                ? (0, i.jsx)("div", { className: eS.lB, children: (0, i.jsx)(eO, { text: e.content }) })
+                                ? (0, i.jsx)("div", { className: eS.lB, children: (0, i.jsx)(ey, { text: e.content }) })
                                 : null,
                             (0, i.jsx)(R.l, {
                                 location: "MarkupReactRules",
@@ -403,11 +395,9 @@ let eR = {
                 : (0, i.jsx)("span", { children: t(e.content, n) }, n.key),
     },
 };
-function eb(e) {
-    let { shouldStopPropagation: t } = e,
-        s = (e) => (!0 === t ? ev(e) : e);
+function ev(e) {
     return {
-        ...eR,
+        ...eC,
         link: (0, eI.A)(e),
         devLink: {
             match: (e, t) => (t.allowLinks && t.allowDevLinks ? eA.exec(e) : null),
@@ -452,43 +442,39 @@ function eb(e) {
             },
             order: 6,
         },
-        emoji: s(
-            (function (e) {
-                let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
-                return {
-                    react(e, r, s) {
-                        let { key: a, channelId: o, messageId: l } = s;
-                        return e.src
-                            ? (0, i.jsx)(
-                                  C.H,
-                                  { node: e, tooltipPosition: t, enableClick: n, channelId: o, messageId: l },
-                                  a,
-                              )
-                            : (0, i.jsx)("span", { children: e.surrogate }, a);
-                    },
-                };
-            })(e),
-        ),
-        customEmoji: s(
-            (function (e) {
-                let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
-                return {
-                    react(e, r, s) {
-                        let { key: a, guildId: o, channelId: l, messageId: u } = s,
-                            c = p.Ay.getDisambiguatedEmojiContext(o).getById(e.emojiId);
-                        if (null != c) {
-                            let t = c.require_colons;
-                            e = { ...e, name: t ? `:${c.name}:` : c.name };
-                        }
-                        return (0, i.jsx)(
-                            C.X,
-                            { node: e, tooltipPosition: t, enableClick: n, channelId: l, messageId: u },
-                            a,
-                        );
-                    },
-                };
-            })(e),
-        ),
+        emoji: (function (e) {
+            let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
+            return {
+                react(e, r, s) {
+                    let { key: a, channelId: o, messageId: l } = s;
+                    return e.src
+                        ? (0, i.jsx)(
+                              C.H,
+                              { node: e, tooltipPosition: t, enableClick: n, channelId: o, messageId: l },
+                              a,
+                          )
+                        : (0, i.jsx)("span", { children: e.surrogate }, a);
+                },
+            };
+        })(e),
+        customEmoji: (function (e) {
+            let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
+            return {
+                react(e, r, s) {
+                    let { key: a, guildId: o, channelId: l, messageId: u } = s,
+                        c = p.Ay.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+                    if (null != c) {
+                        let t = c.require_colons;
+                        e = { ...e, name: t ? `:${c.name}:` : c.name };
+                    }
+                    return (0, i.jsx)(
+                        C.X,
+                        { node: e, tooltipPosition: t, enableClick: n, channelId: l, messageId: u },
+                        a,
+                    );
+                },
+            };
+        })(e),
         channelMention: (0, Y.A)(e),
         commandMention: (0, W.Ay)(e),
         attachmentLink: {
@@ -532,6 +518,5 @@ function eb(e) {
                 );
             },
         },
-        soundboard: s(eR.soundboard),
     };
 }
