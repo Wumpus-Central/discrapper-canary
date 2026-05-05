@@ -5,7 +5,11 @@
     display: flex;
     inset: 0;
     position: absolute;
-    z-index: 101
+    z-index: 101;
+    --custom-sidebar-scroller-margin-start: 40px;
+    --custom-sidebar-scroller-margin-end: 97px;
+    --custom-sidebar-scroller-max-width: 660px;
+    --custom-sidebar-scroller-min-width: 404px
 }
 
 .standardSidebarView__23e6b,
@@ -59,8 +63,7 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    overflow-x: hidden;
-    position: static
+    overflow-x: hidden
 }
 
 .contentRegionScroller__23e6b .toolsContainer__23e6b {
@@ -130,6 +133,12 @@
     position: absolute
 }
 
+.customContent__23e6b {
+    margin-inline: var(--custom-sidebar-scroller-margin-start) var(--custom-sidebar-scroller-margin-end);
+    max-width: var(--custom-sidebar-scroller-max-width);
+    min-width: var(--custom-sidebar-scroller-min-width)
+}
+
 .customScroller__23e6b {
     box-sizing: border-box;
     display: block;
@@ -137,9 +146,9 @@
 }
 
 .customScroller__23e6b>div {
-    margin-inline: 40px 97px;
-    max-width: 660px;
-    min-width: 404px
+    margin-inline: var(--custom-sidebar-scroller-margin-start) var(--custom-sidebar-scroller-margin-end);
+    max-width: var(--custom-sidebar-scroller-max-width);
+    min-width: var(--custom-sidebar-scroller-min-width)
 }
 
 .noticeRegion__23e6b {
@@ -2725,16 +2734,6 @@
     border-width: 1px
 }
 
-.spinner__8a394 {
-    margin-top: 20px
-}
-
-.markdown__8a394 {
-    font-size: 12px;
-    line-height: 16px;
-    padding-bottom: 30px
-}
-
 .imageInputContainer__4cc0e {
     height: 0;
     position: relative;
@@ -4158,34 +4157,6 @@
     margin-top: var(--space-8);
     padding-inline-start: var(--space-32);
     width: 100%
-}
-
-.mainContainer_c38e9f {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-16)
-}
-
-.pauseContainer_c38e9f {
-    align-items: flex-start;
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    justify-content: space-between;
-    padding: var(--space-12)
-}
-
-.pauseContainer_c38e9f,
-.pauseText_c38e9f {
-    display: flex;
-    gap: var(--space-8)
-}
-
-.pauseText_c38e9f {
-    flex-direction: column
-}
-
-.toggle_c38e9f {
-    flex-shrink: 0
 }
 
 .markdownContainer__48344 {
@@ -6421,12 +6392,6 @@
     align-items: center;
     display: flex;
     gap: var(--space-8)
-}
-
-.fields__12532 {
-    display: flex;
-    flex-direction: column;
-    gap: 16px
 }
 
 .profileCustomizationSection__44061 {

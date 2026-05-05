@@ -20,6 +20,7 @@ a.r(
         contentColumnScrollable: "contentColumnScrollable__23e6b",
         customHeader: "customHeader__23e6b",
         customContainer: "customContainer__23e6b",
+        customContent: "customContent__23e6b",
         customScroller: "customScroller__23e6b",
         noticeRegion: "noticeRegion__23e6b",
         noticeRegionHiddenSidebar: "noticeRegionHiddenSidebar__23e6b",

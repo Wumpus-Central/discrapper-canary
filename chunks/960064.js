@@ -49,7 +49,8 @@ let U = (0, d.A)(
                                   (0, p.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
                                           n.e("5877"),
-                                          n.e("25310"),
+                                          n.e("37572"),
+                                          n.e("20980"),
                                           n.e("40258"),
                                           n.e("8891"),
                                           n.e("73669"),

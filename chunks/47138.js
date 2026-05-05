@@ -14304,7 +14304,7 @@ let mB = function (e) {
                         ? et.A.saveGuild(t.id, { homeHeader: null })
                         : (0, v.openModalLazy)(async () => {
                               let { default: l } = await Promise.all([
-                                  n.e("71018"),
+                                  n.e("96326"),
                                   n.e("93513"),
                                   n.e("79149"),
                                   n.e("7406"),
@@ -18847,7 +18847,8 @@ function hO(e) {
         a = R.useCallback(() => {
             i(n.id);
         }, [i, n.id]);
-    return (0, A.jsx)(T.gJ, {
+    return (0, A.jsx)("div", {
+        className: dP.customContent,
         children: (0, A.jsxs)("div", {
             className: hy.uW,
             children: [
@@ -19690,7 +19691,7 @@ function Er(e) {
     } = e;
     (0, v.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("71018"),
+            n.e("96326"),
             n.e("93513"),
             n.e("79149"),
             n.e("90017"),
@@ -20524,7 +20525,7 @@ function jr(e) {
                       let { default: e } = await Promise.all([
                           n.e("60909"),
                           n.e("15251"),
-                          n.e("76007"),
+                          n.e("22894"),
                           n.e("8979"),
                           n.e("20643"),
                           n.e("98913"),
@@ -20671,7 +20672,7 @@ function ja(e) {
                                           let { default: e } = await Promise.all([
                                               n.e("60909"),
                                               n.e("15251"),
-                                              n.e("76007"),
+                                              n.e("22894"),
                                               n.e("8979"),
                                               n.e("20643"),
                                               n.e("98913"),
@@ -25986,7 +25987,7 @@ function fW(e) {
             (e, t) => {
                 (0, v.openModalLazy)(async () => {
                     let { default: l } = await Promise.all([
-                        n.e("71018"),
+                        n.e("96326"),
                         n.e("93513"),
                         n.e("79149"),
                         n.e("7406"),

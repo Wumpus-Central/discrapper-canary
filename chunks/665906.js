@@ -10,7 +10,7 @@ var e = i(189213),
     d = i(241326),
     u = i(98278),
     m = i(869388),
-    h = i(985018),
+    h = i(375708),
     x = i(734627);
 function p(t) {
     let { transform: n } = t;
@@ -31,9 +31,12 @@ function p(t) {
                         icon: o.R,
                         onClick: function () {
                             (0, l.openModalLazy)(async () => {
-                                let { default: t } = await Promise.all([i.e("42105"), i.e("8891"), i.e("91373")]).then(
-                                    i.bind(i, 183036),
-                                );
+                                let { default: t } = await Promise.all([
+                                    i.e("37572"),
+                                    i.e("93480"),
+                                    i.e("8891"),
+                                    i.e("91373"),
+                                ]).then(i.bind(i, 183036));
                                 return (i) => (0, a.jsx)(t, { ...i, existingTransform: n });
                             });
                         },
@@ -82,9 +85,12 @@ function T(t) {
                 text: h.intl.string(h.t.y7x0kp),
                 onClick: function () {
                     (0, l.openModalLazy)(async () => {
-                        let { default: t } = await Promise.all([i.e("42105"), i.e("8891"), i.e("91373")]).then(
-                            i.bind(i, 183036),
-                        );
+                        let { default: t } = await Promise.all([
+                            i.e("37572"),
+                            i.e("93480"),
+                            i.e("8891"),
+                            i.e("91373"),
+                        ]).then(i.bind(i, 183036));
                         return (n) => (0, a.jsx)(t, { ...n });
                     });
                 },
