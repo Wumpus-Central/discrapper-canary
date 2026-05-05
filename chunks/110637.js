@@ -8572,6 +8572,7 @@ class cR extends a.Component {
                         });
                     },
                     gifFavoriteButton: cL(a),
+                    allowFullScreen: !this.props.disableComponentInteractivity,
                 },
                 d = (0, sY.E)({ proxyURL: r.proxy_url, url: r.url });
             return d in g && A && ((o.onClick = g[d]), (o.handlePreloadImage = p[d])), o;

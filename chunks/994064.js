@@ -1493,7 +1493,7 @@ class ef extends r.PureComponent {
                   width: E ? window.screen.width : A,
                   disabled: !r,
                   children:
-                      t === er.VIDEO
+                      t === er.VIDEO && !1 !== this.props.allowFullScreen
                           ? (0, i.jsx)(T.A, {
                                 "aria-label": w.intl.string(w.t["2nM3Pk"]),
                                 className: ee.CY,

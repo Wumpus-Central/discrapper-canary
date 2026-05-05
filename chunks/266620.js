@@ -1,8 +1,8 @@
 i.d(t, { Cr: () => h, I1: () => f, Nj: () => I, R6: () => A, SX: () => _, UB: () => S }), i(938796);
 var a = i(627968),
     n = i(64700),
-    r = i(665260),
-    l = i(958742),
+    l = i(665260),
+    r = i(163281),
     s = i(713021),
     o = i(121489),
     c = i(644447),
@@ -22,7 +22,7 @@ function h(e) {
         placeholderVersion: t.placeholder_version,
         contentType: t.content_type,
         originalContentType: t.original_content_type,
-        srcIsAnimated: (0, r.Lt)(t.flags ?? 0, g.sbO.IS_ANIMATED),
+        srcIsAnimated: (0, l.Lt)(t.flags ?? 0, g.sbO.IS_ANIMATED),
         sourceMetadata: {
             message: e.message,
             identifier: { type: "attachment", attachmentId: t.id, filename: t.filename, title: t.title, size: t.size },
@@ -32,14 +32,14 @@ function h(e) {
 }
 function f(e) {
     let t = e.item.originalItem,
-        i = (0, r.Lt)(t.flags ?? 0, g.sbO.IS_CLIP),
+        i = (0, l.Lt)(t.flags ?? 0, g.sbO.IS_CLIP),
         n = d.A.toURLSafe(t.proxy_url);
     return null == n
         ? null
         : (n.searchParams.append("format", "webp"), i)
           ? (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsx)(l.A, {
+                    (0, a.jsx)(r.A, {
                         attachment: t,
                         src: t.url,
                         posterUrl: n.toString(),
@@ -53,6 +53,7 @@ function f(e) {
                         maxWidth: e.maxWidth,
                         maxHeight: e.maxHeight ?? p.Rk,
                         showParticipants: e.isSingleMosaicItem,
+                        allowFullScreen: e.allowFullScreen,
                     }),
                     e.renderAdjacentContent?.(),
                 ],
@@ -66,7 +67,7 @@ function f(e) {
                 src: t.url,
                 placeholder: t.placeholder,
                 placeholderVersion: t.placeholder_version,
-                srcIsAnimated: (0, r.Lt)(t.flags ?? 0, g.sbO.IS_ANIMATED),
+                srcIsAnimated: (0, l.Lt)(t.flags ?? 0, g.sbO.IS_ANIMATED),
                 sourceMetadata: {
                     message: e.message,
                     identifier: { type: "attachment", attachmentId: t.id, filename: t.filename, size: t.size },
@@ -80,8 +81,8 @@ function I(e) {
 function _(e) {
     let { message: t, item: i } = e,
         a = i.originalItem,
-        r = (0, s.dx)(s.k0.VOICE_MESSAGE, a.id),
-        l = n.useCallback(
+        l = (0, s.dx)(s.k0.VOICE_MESSAGE, a.id),
+        r = n.useCallback(
             (e, i, n) => {
                 (0, o.wQ)(t.id, a.duration_secs ?? null, i, t.author.id);
             },
@@ -106,10 +107,10 @@ function _(e) {
         src: a.url,
         durationSecs: a.duration_secs,
         waveform: a.waveform,
-        onPlay: l,
+        onPlay: r,
         onPause: c,
         onError: d,
-        playbackCacheKey: r,
+        playbackCacheKey: l,
     });
 }
 function A(e) {
