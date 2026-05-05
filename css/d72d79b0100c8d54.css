@@ -1,0 +1,18 @@
+.scroller__44cf4 {
+    padding: var(--space-16)
+}
+
+.formDivider__44cf4 {
+    margin: 10px 0
+}
+
+.loader__44cf4 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.balanceWidgetPillContainer__44cf4 {
+    margin-top: 4px
+}

@@ -1,7 +1,7 @@
 e.exports = {
     iE: "wrapper_a99139",
-    Mj: "headingWrapper_a99139",
     lp: "stepsWrapper_a99139",
+    Mj: "headingWrapper_a99139",
     R_: "heading_a99139",
     gY: "stepWrapper_a99139",
     M7: "stepContent_a99139",

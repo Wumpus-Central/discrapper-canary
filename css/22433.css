@@ -447,12 +447,12 @@
     display: flex;
     inset-inline: var(--space-8) var(--space-16);
     min-height: 24px;
+    opacity: 1;
     position: absolute;
     transition: opacity .15s;
     z-index: 2
 }
 
-.barBase__0f481,
 .barBase__0f481:hover {
     opacity: 1
 }
@@ -1148,6 +1148,7 @@
 }
 
 .topicsPillText__0f481 {
+    color: var(--interactive-text-active);
     cursor: pointer;
     display: flex;
     flex: 1;
@@ -1157,7 +1158,6 @@
     text-align: center
 }
 
-.topicsPillText__0f481,
 .topicsPillText__0f481:hover .topicsPillDropdownCaret__0f481 {
     color: var(--interactive-text-active)
 }

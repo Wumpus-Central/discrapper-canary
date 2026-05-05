@@ -486,8 +486,11 @@
     display: block
 }
 
-.channel__5dec7:hover,
 .underlineOnHover__5dec7:hover {
+    text-decoration: underline
+}
+
+.channel__5dec7:hover {
     text-decoration: underline
 }
 

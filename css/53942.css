@@ -183,27 +183,25 @@
     paint-order: stroke fill;
     position: relative;
     vertical-align: top;
+    -webkit-text-stroke-width: var(--custom-pop-stroke-width);
     -webkit-text-stroke-color: var(--custom-display-name-styles-dark-2-color);
     margin-bottom: calc(var(--custom-pop-stroke-width)*-1 - var(--custom-pop-bottom-translate_3d));
+    margin-inline-start: calc(var(--custom-pop-stroke-width)*-1);
     padding-bottom: calc(var(--custom-pop-stroke-width) + var(--custom-pop-bottom-translate_3d));
     padding-inline-start: var(--custom-pop-stroke-width)
-}
-
-.showEffect_dfb989.container_dfb989 .pop_dfb989,
-.showEffect_dfb989.container_dfb989 .pop_dfb989:before {
-    -webkit-text-stroke-width: var(--custom-pop-stroke-width);
-    margin-inline-start: calc(var(--custom-pop-stroke-width)*-1)
 }
 
 .showEffect_dfb989.container_dfb989 .pop_dfb989:before {
     bottom: calc(var(--custom-pop-bottom-translate_3d)*-1 - var(--custom-pop-stroke-width));
     color: var(--custom-display-name-styles-main-color);
     content: attr(data-username-with-effects);
+    margin-inline-start: calc(var(--custom-pop-stroke-width)*-1);
     padding-inline-start: var(--custom-pop-stroke-width);
     position: absolute;
     top: 0;
     width: calc(100% - var(--custom-pop-stroke-width));
     z-index: -1;
+    -webkit-text-stroke-width: var(--custom-pop-stroke-width);
     -webkit-text-stroke-color: transparent;
     background: linear-gradient(to bottom left, var(--custom-display-name-styles-light-1-color) 0, var(--custom-display-name-styles-light-1-color) 6%, var(--custom-display-name-styles-main-color) 20%, var(--custom-display-name-styles-main-color) 50%, var(--custom-display-name-styles-light-1-color) 56%, var(--custom-display-name-styles-main-color) 70%, var(--custom-display-name-styles-main-color) 100%);
     background-clip: text;
@@ -224,7 +222,10 @@
     text-underline-offset: calc(var(--custom-pop-bottom-translate_3d))
 }
 
-.animated_dfb989.loop_dfb989.loop_dfb989>*,
+.animated_dfb989.loop_dfb989.loop_dfb989>* {
+    animation-iteration-count: infinite
+}
+
 .animated_dfb989.loop_dfb989.loop_dfb989>:before {
     animation-iteration-count: infinite
 }

@@ -568,7 +568,10 @@ screen and (max-width:485px) {
     padding: 6px 8px
 }
 
-.experimentOverlayTitle__2f4f7.idle__2f4f7,
+.experimentOverlayTitle__2f4f7.idle__2f4f7 {
+    opacity: 0
+}
+
 .experimentOverlayTitle__2f4f7:empty {
     opacity: 0
 }

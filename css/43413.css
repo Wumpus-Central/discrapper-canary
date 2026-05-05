@@ -17,12 +17,17 @@
 }
 
 .progressBar_ef0e9b:after {
+    background-color: currentColor;
+    border-radius: 4px;
     content: "";
+    height: 100%;
+    inset-inline-start: 0;
     opacity: .2;
+    position: absolute;
+    top: 0;
     width: 100%
 }
 
-.progressBar_ef0e9b:after,
 .progressBarFill_ef0e9b {
     background-color: currentColor;
     border-radius: 4px;

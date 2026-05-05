@@ -44,12 +44,12 @@
     width: var(--guildbar-avatar-size)
 }
 
-.circleIconButton__5bc7e.selected__5bc7e,
 .circleIconButton__5bc7e:hover:not(.disabled__5bc7e) {
     background-color: var(--background-brand)
 }
 
 .circleIconButton__5bc7e.selected__5bc7e {
+    background-color: var(--background-brand);
     color: var(--white)
 }
 
@@ -114,12 +114,15 @@
     border-inline-start-color: var(--background-surface-highest)
 }
 
+&.topArrow__22234:before,
+.topArrow__22234:before {
+    border-bottom-color: var(--background-surface-highest)
+}
+
 &.contentNarrowMedia__22234.topArrow__22234:before,
 &.contentWideNoMedia__22234.topArrow__22234:before,
-&.topArrow__22234:before,
 .contentNarrowNoMedia__22234.topArrow__22234:before,
-.contentWideNoMedia__22234.topArrow__22234:before,
-.topArrow__22234:before {
+.contentWideNoMedia__22234.topArrow__22234:before {
     border-bottom-color: var(--background-surface-highest)
 }
 

@@ -1,0 +1,131 @@
+.modalHeader_e6fa8e {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.modalFooter_e6fa8e {
+    border-top: 1px solid var(--border-subtle)
+}
+
+.modalImage_e6fa8e {
+    margin-bottom: 16px;
+    width: 160px
+}
+
+.infoContent_e6fa8e {
+    padding: 24px
+}
+
+.updateContent_e6fa8e {
+    padding: 24px 16px 16px
+}
+
+.infoList_e6fa8e {
+    display: flex;
+    flex-direction: column;
+    gap: 24px
+}
+
+.infoListItem_e6fa8e {
+    color: var(--text-default);
+    display: flex;
+    gap: 16px
+}
+
+.iconWrapper_e6fa8e {
+    background-color: var(--background-base-lowest);
+    border-radius: 50%;
+    height: 24px;
+    padding: 8px;
+    width: 24px
+}
+
+.deprivateTableBody_e6fa8e {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    margin: 0 0 8px;
+    overflow: hidden
+}
+
+.deprivateExplainer_e6fa8e {
+    display: flex;
+    gap: 2px;
+    margin: 8px 0 24px
+}
+
+.selectableChannelCellFirst_e6fa8e {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    max-width: 340px
+}
+
+.selectableChannelCellSecond_e6fa8e {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0
+}
+
+.channelName_e6fa8e {
+    text-overflow: ellipsis
+}
+
+.channelIcon_e6fa8e {
+    color: var(--text-default);
+    flex-shrink: 0;
+    margin-inline-end: 4px
+}
+
+.selectableChannelRow_e6fa8e {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 16px
+}
+
+.selectableChannelRow_e6fa8e:after {
+    background-color: var(--border-subtle);
+    content: "";
+    height: 1px;
+    margin-top: 54px;
+    position: absolute;
+    width: calc(100% - 64px)
+}
+
+.selectableChannelRow_e6fa8e:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.selectableChannelRow_e6fa8e:hover:after {
+    display: none
+}
+
+.selectableChannelRow_e6fa8e:last-child:after {
+    display: none
+}
+
+.selectAllContainer_e6fa8e {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px
+}
+
+.selectAllCheckbox_e6fa8e,
+.selectAllContainer_e6fa8e {
+    align-items: center;
+    display: flex
+}
+
+.selectAllTitle_e6fa8e {
+    text-transform: uppercase
+}
+
+.selectAllButton_e6fa8e {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}

@@ -959,12 +959,12 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .lookFilled__201d5.colorPrimary__201d5:disabled,
-.lookFilled__201d5.colorPrimary__201d5[aria-disabled=true],
-.lookFilled__201d5.colorTransparent__201d5 {
+.lookFilled__201d5.colorPrimary__201d5[aria-disabled=true] {
     background-color: var(--control-secondary-background-default)
 }
 
 .lookFilled__201d5.colorTransparent__201d5 {
+    background-color: var(--control-secondary-background-default);
     border-color: var(--border-muted);
     color: var(--control-secondary-text-default)
 }
@@ -2840,13 +2840,13 @@ screen and (max-width:485px) {
     padding-right: calc(var(--custom-modal-padding) - var(--space-16))
 }
 
-.bodyControls__8a031+.body__8a031 .bodyInner__8a031,
-.bodyInnerShouldScroll__8a031 {
+.bodyControls__8a031+.body__8a031 .bodyInner__8a031 {
     padding-top: var(--space-12)
 }
 
 .bodyInnerShouldScroll__8a031 {
-    padding-bottom: var(--space-12)
+    padding-bottom: var(--space-12);
+    padding-top: var(--space-12)
 }
 
 .footer__8a031 {

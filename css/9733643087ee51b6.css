@@ -1,0 +1,137 @@
+.content_d9185c {
+    align-items: center;
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: calc(var(--custom-modal-padding-bottom)*-1);
+    margin-top: calc(var(--custom-modal-padding-top)*-1);
+    padding: 24px;
+    position: relative;
+    text-align: center;
+    width: auto
+}
+
+.content_d9185c:before {
+    background: var(--background-base-low);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    content: "";
+    inset: 0;
+    margin-bottom: calc(-1px - var(--custom-modal-padding-bottom));
+    margin-top: calc(-1px - var(--custom-modal-padding-top));
+    margin-inline: -1px;
+    position: absolute;
+    z-index: -2
+}
+
+.content_d9185c:after {
+    background: url(https://cdn.discordapp.com/assets/content/1d7af7dacdba453b6fa4a773c5c3ff829f2eff26bde9f036ef61cb3c2f984ba9.png) top/contain no-repeat;
+    content: "";
+    inset: 0;
+    -webkit-mask-composite: source-in, xor;
+    mask-composite: intersect;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 15%), linear-gradient(180deg, #000 25%, transparent 45%);
+    mask-image: linear-gradient(180deg, transparent 0, #000 15%), linear-gradient(180deg, #000 25%, transparent 45%);
+    pointer-events: none;
+    position: absolute;
+    z-index: -1
+}
+
+.closeButton_d9185c {
+    inset-inline-end: 20px;
+    position: absolute;
+    top: 20px
+}
+
+.logo_d9185c {
+    height: 28px;
+    inset-inline-start: 50%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    position: absolute;
+    top: var(--space-16);
+    transform: translateX(-50%)
+}
+
+.artwork_d9185c {
+    border-radius: var(--radius-md);
+    height: 216px;
+    margin-bottom: 8px;
+    width: 112px
+}
+
+.titleContainer_d9185c {
+    width: -moz-min-content;
+    width: min-content
+}
+
+.title_d9185c {
+    white-space: nowrap
+}
+
+.subtitle_d9185c {
+    margin-top: var(--space-8);
+    margin-inline-end: -10px;
+    margin-inline-start: -10px
+}
+
+.features_d9185c {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 16px;
+    margin-top: 16px
+}
+
+.feature_d9185c {
+    align-items: center;
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+    padding: 20px
+}
+
+.iconLabel_d9185c {
+    bottom: 0;
+    inset-inline-start: 50%;
+    position: absolute;
+    transform: translate(-50%, 50%)
+}
+
+.featureCopy_d9185c {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center
+}
+
+.featureCopy_d9185c,
+.featureIcon_d9185c {
+    align-items: center;
+    display: flex
+}
+
+.featureIcon_d9185c {
+    justify-content: center;
+    position: relative;
+    width: 100%
+}
+
+.featureIcon_d9185c img {
+    max-height: 100px;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.buttonContainer_d9185c {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 60%
+}

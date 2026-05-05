@@ -3947,7 +3947,11 @@ svg.radioIcon_c1e9c4 {
     cursor: pointer
 }
 
-.radioGroupOption__64e61[data-selected]:not([data-disabled]):hover .outerRadioBase__64e61,
+.radioGroupOption__64e61[data-selected]:not([data-disabled]):hover .outerRadioBase__64e61 {
+    fill: var(--radio-background-selected-hover);
+    stroke: var(--radio-border-selected-hover)
+}
+
 .radioGroupOption__64e61[data-selected]:not([data-disabled]):hover .outerRadioFill__64e61 {
     fill: var(--radio-background-selected-hover);
     stroke: var(--radio-border-selected-hover)
@@ -5179,13 +5183,13 @@ svg.radioIcon_c1e9c4 {
     overflow: hidden
 }
 
-.buttonShine__6a443,
 .shinyButton__6a443>* {
     pointer-events: none
 }
 
 .buttonShine__6a443 {
-    color: var(--opacity-white-8)
+    color: var(--opacity-white-8);
+    pointer-events: none
 }
 
 .full-motion .buttonShine__6a443 {

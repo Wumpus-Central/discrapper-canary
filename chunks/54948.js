@@ -19,7 +19,7 @@ var i = t(627968),
     E = t(22231),
     y = t(241326),
     P = t(828208),
-    w = t(985018),
+    w = t(375708),
     R = t(637671);
 function b(e) {
     let { type: n } = e,
@@ -315,7 +315,8 @@ function _(e, n, l) {
         case s.rX.TERMS:
             return (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("17764"),
+                    t.e("981"),
+                    t.e("98560"),
                     t.e("83013"),
                     t.e("90152"),
                     t.e("78618"),
@@ -351,7 +352,8 @@ function z(e, n, l) {
         case s.rX.TERMS:
             return (0, a.openModalLazy)(async () => {
                 let { default: r } = await Promise.all([
-                    t.e("17764"),
+                    t.e("981"),
+                    t.e("98560"),
                     t.e("83013"),
                     t.e("90152"),
                     t.e("78618"),

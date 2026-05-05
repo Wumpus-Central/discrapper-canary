@@ -286,7 +286,10 @@
     display: inline-block
 }
 
-.sectionHeader__61424:hover,
+.sectionHeader__61424:hover {
+    color: var(--interactive-text-active)
+}
+
 .sectionHeader__61424:hover .sectionTitle__61424 {
     color: var(--interactive-text-active)
 }

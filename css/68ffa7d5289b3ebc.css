@@ -1,0 +1,47 @@
+.modalContent__2bb83 {
+    padding-bottom: var(--space-24)
+}
+
+.spamRequest__2bb83:not(:nth-last-of-type(2)) {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.spamRequest__2bb83:not(:nth-last-of-type(2)):hover {
+    border-color: transparent
+}
+
+.spamRequest__2bb83:not(:nth-last-of-type(2)):has(+.spamRequest__2bb83:hover) {
+    border-color: transparent
+}
+
+.listItem__2bb83 {
+    border-top: 0;
+    margin: 0;
+    padding: 0
+}
+
+.listItem__2bb83.active__2bb83,
+.listItem__2bb83:hover {
+    margin: 0;
+    padding: 0
+}
+
+.listItemContents__2bb83 {
+    padding: 0 var(--space-8);
+    width: 100%
+}
+
+.listItemContents__2bb83,
+.userInfo__2bb83 {
+    align-items: center;
+    display: flex
+}
+
+.userInfo__2bb83 {
+    justify-content: space-between
+}
+
+.actions__2bb83 {
+    display: flex;
+    margin-inline-start: auto
+}

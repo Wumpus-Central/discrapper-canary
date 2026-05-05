@@ -27,8 +27,8 @@ var n = i(627968),
     b = i(793574),
     T = i(688810),
     O = i(139286),
-    k = i(47167),
-    G = i(713517),
+    G = i(47167),
+    k = i(713517),
     V = i(854627),
     w = i(10862),
     R = i(164891),
@@ -48,7 +48,7 @@ let W = "VoiceInviteSuggestionsPopover";
 function $(e) {
     let { channel: t, onHoverOrFocus: s, setPopoutRef: r, closePopout: u } = e,
         c = l.useRef(null),
-        p = (0, G.A)(c),
+        p = (0, k.A)(c),
         x = (0, z.kt)({ channel: t }),
         { enabled: v } = R.A.useExperiment({ guildId: t.guild_id, location: "VoiceInviteSuggestionsPopover" }),
         { analyticsLocations: f } = (0, T.Ay)(b.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
@@ -68,8 +68,8 @@ function $(e) {
         d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, m.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
-                    i.e("99332"),
-                    i.e("76664"),
+                    i.e("7017"),
+                    i.e("981"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -125,7 +125,7 @@ function Z(e) {
         r = t.guild_id,
         d = l.useRef(null),
         o = (0, u.bG)([P.Ay], () => P.Ay.getMember(r, i.id), [r, i.id]),
-        { isHoveringOrFocusing: m } = (0, G.A)(d),
+        { isHoveringOrFocusing: m } = (0, k.A)(d),
         [A, b] = l.useState(null),
         {
             icon: T,
@@ -153,7 +153,7 @@ function Z(e) {
             return { activityStatusText: (0, S.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, j.f)(e) };
         }, [J]),
         { voiceChannel: ee } = (0, y.A)({ userId: i.id }),
-        et = (0, k.Ay)(ee),
+        et = (0, G.Ay)(ee),
         ei = (0, p.S3)(I.clD.ONLINE),
         en = "success" === A || "sending" === A,
         el = l.useCallback(

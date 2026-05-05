@@ -1,8 +1,8 @@
 e.exports = {
     nM: "row__93d4a",
-    vu: "active__93d4a",
-    Ns: "soundPreviewIcon__93d4a",
     vO: "soundEditContainer__93d4a",
+    Ns: "soundPreviewIcon__93d4a",
+    vu: "active__93d4a",
     jA: "tableTitle__93d4a",
     c7: "boostingIconWrapper__93d4a",
     TW: "soundName__93d4a",

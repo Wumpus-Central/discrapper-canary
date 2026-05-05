@@ -28,8 +28,8 @@ var n = i(627968),
 i(281405);
 var T = i(375708),
     O = i(89682),
-    k = i(80442);
-let G = (e) => 1 - Math.pow(1 - e, 4);
+    G = i(80442);
+let k = (e) => 1 - Math.pow(1 - e, 4);
 function V(e) {
     let { channel: t, onClose: s } = e,
         V = l.useRef(null),
@@ -70,8 +70,8 @@ function V(e) {
             null != z &&
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("99332"),
-                        i.e("76664"),
+                        i.e("7017"),
+                        i.e("981"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -83,7 +83,7 @@ function V(e) {
         [ee, et] = (0, m.z)(() => ({
             from: { height: "0px" },
             to: { height: "32px" },
-            config: { duration: 200, easing: G, clamp: !0 },
+            config: { duration: 200, easing: k, clamp: !0 },
         })),
         ei = l.useCallback(
             (e) => {
@@ -146,14 +146,14 @@ function V(e) {
                       style: ee,
                       children: (0, n.jsx)(g.D, {
                           innerRef: V,
-                          className: a()({ [O.vk]: !q }, k.q7, k.L9, k.vk),
+                          className: a()({ [O.vk]: !q }, G.q7, G.L9, G.vk),
                           "aria-disabled": q,
                           "aria-label": T.intl.string(T.t.F3qiJr),
                           onClick: Q,
                           ignoreKeyPress: Z,
                           ...i,
                           children: (0, n.jsxs)("div", {
-                              className: a()(O.Qs, k.Qs),
+                              className: a()(O.Qs, G.Qs),
                               children: [
                                   (0, n.jsxs)("div", {
                                       className: O.R4,

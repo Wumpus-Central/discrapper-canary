@@ -565,7 +565,10 @@
     justify-content: flex-start
 }
 
-.accessory__09bc1:hover,
+.accessory__09bc1:hover {
+    color: var(--interactive-text-hover)
+}
+
 .accessory__09bc1:hover .accessoryText__09bc1 {
     color: var(--interactive-text-hover)
 }

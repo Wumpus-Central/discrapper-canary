@@ -14,7 +14,7 @@ function u(e) {
         ? ((t = [f ?? "unknown"]),
           (0, r.openModalLazy)(async () => {
               let { default: e } = await Promise.all([
-                  n.e("6305"),
+                  n.e("8103"),
                   n.e("9504"),
                   n.e("61935"),
                   n.e("36335"),
@@ -28,7 +28,7 @@ function u(e) {
           ? ((u = [f ?? "unknown"]),
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("6305"),
+                    n.e("8103"),
                     n.e("46232"),
                     n.e("95429"),
                     n.e("24009"),
@@ -48,7 +48,7 @@ function u(e) {
               (d = _),
               (0, r.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
-                      n.e("6305"),
+                      n.e("8103"),
                       n.e("98965"),
                       n.e("36335"),
                       n.e("64610"),
@@ -60,12 +60,9 @@ function u(e) {
               }))
             : _ === l.fg2.DOMAIN
               ? (0, r.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([
-                        n.e("25310"),
-                        n.e("97893"),
-                        n.e("37687"),
-                        n.e("94048"),
-                    ]).then(n.bind(n, 110819));
+                    let { default: e } = await Promise.all([n.e("981"), n.e("97893"), n.e("37687"), n.e("94048")]).then(
+                        n.bind(n, 110819),
+                    );
                     return (t) => (0, i.jsx)(e, { analyticsLocation: [f ?? "unknown"], ...t });
                 })
               : s.A.get(_)?.isFederated === !0

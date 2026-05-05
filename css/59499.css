@@ -10,7 +10,6 @@
     flex-shrink: 0
 }
 
-.raisedHandCount__15cd2,
 .raisedHandIcon__15cd2:hover {
     color: var(--white)
 }
@@ -20,6 +19,7 @@
     border-radius: 999px;
     bottom: -3px;
     box-sizing: border-box;
+    color: var(--white);
     flex-shrink: 0;
     height: 16px;
     inset-inline-start: 50%;
