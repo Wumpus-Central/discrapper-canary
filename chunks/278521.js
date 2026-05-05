@@ -455,7 +455,6 @@ function ef(e) {
             devShelfFetchState: tp,
             referralCode: eT,
             inReverseTrial: tI,
-            enablePremiumBrandRefresh: tr,
             isDisplayingWowMomentConfirmation: tT,
             wasTier2PremiumBeforePurchase: ey,
             customCheckoutFlow: tN,

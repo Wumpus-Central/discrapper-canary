@@ -1,31 +1,31 @@
-s.d(t, { A: () => c });
-var i = s(627968);
-s(64700);
-var n = s(503698),
-    a = s.n(n),
-    l = s(40474),
-    r = s(156312),
-    o = s(166532),
-    p = s(615310),
-    d = s(756925);
-function c(e) {
-    let { className: t, isEligibleForTrial: s = !1 } = e,
-        { step: n, breadcrumbsData: c } = (0, p.Ay)(),
-        { startedPaymentFlowWithPaymentSourcesRef: h, enablePremiumBrandRefresh: u } = (0, r.P5)();
-    if (u || null == c || 0 === c.length) return null;
-    let m = c.flatMap((e) => {
-        let t = e.useBreadcrumbLabel(s);
-        return null != t ? { id: e.id, label: t } : [];
+n.d(l, { A: () => u });
+var r = n(627968);
+n(64700);
+var s = n(503698),
+    t = n.n(s),
+    i = n(40474),
+    a = n(278521),
+    d = n(166532),
+    o = n(615310),
+    c = n(756925);
+function u(e) {
+    let { className: l, isEligibleForTrial: n = !1 } = e,
+        { step: s, breadcrumbsData: u } = (0, o.Ay)(),
+        { startedPaymentFlowWithPaymentSourcesRef: p, isPremium: N } = (0, a.P5)();
+    if (N || null == u || 0 === u.length) return null;
+    let A = u.flatMap((e) => {
+        let l = e.useBreadcrumbLabel(n);
+        return null != l ? { id: e.id, label: l } : [];
     });
-    return 0 === m.length
+    return 0 === A.length
         ? null
-        : ((m = m.filter((e) => {
-              let t = e.id !== o.pn.ADD_PAYMENT_STEPS,
-                  i = e.id === o.pn.ADD_PAYMENT_STEPS && !h.current;
-              return !s || t || i;
+        : ((A = A.filter((e) => {
+              let l = e.id !== d.pn.ADD_PAYMENT_STEPS,
+                  r = e.id === d.pn.ADD_PAYMENT_STEPS && !p.current;
+              return !n || l || r;
           })),
-          (0, i.jsx)("div", {
-              className: a()("breadcrumb", d.i, t),
-              children: (0, i.jsx)(l.A, { activeId: n, breadcrumbs: m }),
+          (0, r.jsx)("div", {
+              className: t()("breadcrumb", c.i, l),
+              children: (0, r.jsx)(i.A, { activeId: s, breadcrumbs: A }),
           }));
 }

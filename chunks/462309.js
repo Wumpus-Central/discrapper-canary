@@ -35,7 +35,7 @@ function P(e) {
         {
             purchaseType: O,
             paymentSourceId: k,
-            enablePremiumBrandRefresh: b,
+            isPremium: b,
             isDisplayingWowMomentConfirmation: B,
             isPremiumGroupPurchase: U,
             isEligibleForTrial: w,
