@@ -24444,6 +24444,8 @@
   "Q2RQka": "New evolving gifting badge",
   "hHKjHF": "Your badge progresses as you gift. Exceptions include when a gift is refunded or when fraud is detected.",
   "qvx9E4": "Gifted !!{count}!!x",
+  "k9sNVH": "Your badge will evolve as you gift.",
+  "0MB2C6": "Celebrate Your Gifting Milestones in Style",
   "rIK0E2": "{giftsToNextTier, plural, one { gift} other { gifts} } from !!{nextTierName}!!",
   "QsbVMM": "{count, plural, one { gift} other { gifts} }",
   "LnsdbK": "You unlocked !!{currentTier}!!!",
