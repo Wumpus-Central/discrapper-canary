@@ -3389,6 +3389,8 @@ img.thumbnail__0f2e8 {
 }
 
 .filenameLinkWrapper__0ccae {
+    color: var(--text-link);
+    line-height: 1.25;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -3400,10 +3402,6 @@ img.thumbnail__0f2e8 {
 
 .filename__0ccae {
     color: var(--interactive-text-active)
-}
-
-.filenameLinkWrapper__0ccae {
-    color: var(--text-link)
 }
 
 .size__0ccae {
