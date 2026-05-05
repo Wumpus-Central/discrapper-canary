@@ -874,7 +874,7 @@ function eJ(e) {
     t.useEffect(() => {
         !__OVERLAY__ &&
             e$.isPlatformEmbedded &&
-            ((0, e$.isWindows)() ? eQ.Ay.minimize() : eQ.Ay.restore(), eQ.Ay.focus());
+            (document.hasFocus() || ((0, e$.isWindows)() ? eQ.Ay.minimize() : eQ.Ay.restore(), eQ.Ay.focus()));
     }, []),
         (0, v.Ay)(() => {
             H.default.track(ei.HAw.OPEN_MODAL, { type: "Accept Invite", invite_code: f?.code, guild_id: f?.guild?.id });
