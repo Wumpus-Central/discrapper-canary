@@ -331,101 +331,101 @@ let eR = (e) => {
 };
 var eb = n(473702),
     eD = n(505559),
-    eL = n(725807),
-    ew = n(774774),
-    eM = n(695661);
-let eP = () => {
+    eL = n(103733),
+    ew = n(702841),
+    eM = n(608416),
+    eP = n(384601),
+    ex = n(447764),
+    eU = n(180894);
+let ek = (e) => {
+    let { containerVisibilityPercentage: t } = e,
+        n = (0, ew.bG)([Y.A], () => Y.A.useReducedMotion);
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)("div", {
+                className: ex.BI,
+                children: (0, r.jsx)(eM.Ay, {
+                    scaleAnimationData: { startScale: 0.9, endScale: 1, duration: eM.$G },
+                    yAxisAnimationData: { range: 20, duration: eM.Mp, path: eM.aV.SINE },
+                    animateXAxisWiggle: !0,
+                    isMotionReduced: n,
+                    parallaxAnimationData: {
+                        pathDirection: eM.MN.UP,
+                        range: 125,
+                        containerVisibilityPercentage: t,
+                        changeOpacity: !0,
+                    },
+                    animationSpeedScale: 2,
+                    children: (0, r.jsx)("img", { src: eU.A, alt: "", className: ex.Q }),
+                }),
+            }),
+            (0, r.jsx)(eP.A, {
+                isMotionReduced: n,
+                containerVisibilityPercentage: t,
+                hammerContainerClassName: ex.Gj,
+                keyContainerClassName: ex.FV,
+                starContainerClassName: ex.E1,
+                hammerAssetClassName: ex.Wv,
+                keyAssetClassName: ex.rs,
+                starAssetClassName: ex.OY,
+                animationSpeedScale: 2,
+            }),
+        ],
+    });
+};
+var eG = n(218199);
+let eF = (e) => {
+    let { className: t, color: n = "text-strong", responsive: i = !0, children: s } = e;
+    return (0, r.jsx)(D.D, { className: o()(eG.w, t, i && eG.n), variant: "display-md", color: n, children: s });
+};
+var eV = n(725807),
+    eB = n(774774),
+    eH = n(975916);
+let ej = () => {
     let e = { section: eE.JJy.REVERSE_TRIAL_BANNER };
     return (0, r.jsxs)("div", {
-        className: eM.vK,
+        className: eH.vK,
         children: [
-            (0, r.jsx)(ew.e4, { text: M.intl.string(M.t.qYKftX), className: eM.Io }),
+            (0, r.jsx)(eB.e4, { text: M.intl.string(M.t.qYKftX), className: eH.Io }),
             (0, r.jsx)("img", {
                 src: "/assets/b40444acfe4d521c.svg",
                 width: 64,
                 height: 64,
                 alt: "",
-                className: eM._u,
+                className: eH._u,
             }),
             (0, r.jsx)("div", {
-                className: eM.IP,
+                className: eH.IP,
                 children: (0, r.jsx)(L.E, {
                     color: "text-subtle",
                     variant: "text-sm/normal",
                     children: M.intl.format(M.t.uu1WAa, { weeks: 1 }),
                 }),
             }),
-            (0, r.jsx)(eL.A, {
+            (0, r.jsx)(eV.A, {
                 premiumModalAnalyticsLocation: e,
                 showGradient: !0,
-                className: eM.aA,
-                shinyButtonClassName: eM.Xp,
+                className: eH.aA,
+                shinyButtonClassName: eH.Xp,
             }),
         ],
     });
 };
-var ex = n(103733),
-    eU = n(702841),
-    ek = n(384601),
-    eG = n(584151);
-let eF = () => {
-    let e = (0, eU.bG)([Y.A], () => Y.A.useReducedMotion);
-    return (0, r.jsx)(ek.A, {
+var eY = n(18671);
+let eW = () => {
+    let e = (0, ew.bG)([Y.A], () => Y.A.useReducedMotion);
+    return (0, r.jsx)(eP.A, {
         isMotionReduced: e,
         blurScale: 0.4,
-        starContainerClassName: eG.cI,
-        hammerContainerClassName: eG.qg,
-        keyContainerClassName: eG.h2,
-        boltContainerClassName: eG.Bz,
-        starAssetClassName: eG.ks,
-        hammerAssetClassName: eG.GY,
-        keyAssetClassName: eG.p4,
-        boltAssetClassName: eG.vy,
+        starContainerClassName: eY.cI,
+        hammerContainerClassName: eY.qg,
+        keyContainerClassName: eY.h2,
+        boltContainerClassName: eY.Bz,
+        starAssetClassName: eY.ks,
+        hammerAssetClassName: eY.GY,
+        keyAssetClassName: eY.p4,
+        boltAssetClassName: eY.vy,
     });
-};
-var eV = n(608416),
-    eB = n(447764),
-    eH = n(180894);
-let ej = (e) => {
-    let { containerVisibilityPercentage: t } = e,
-        n = (0, eU.bG)([Y.A], () => Y.A.useReducedMotion);
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsx)("div", {
-                className: eB.BI,
-                children: (0, r.jsx)(eV.Ay, {
-                    scaleAnimationData: { startScale: 0.9, endScale: 1, duration: eV.$G },
-                    yAxisAnimationData: { range: 20, duration: eV.Mp, path: eV.aV.SINE },
-                    animateXAxisWiggle: !0,
-                    isMotionReduced: n,
-                    parallaxAnimationData: {
-                        pathDirection: eV.MN.UP,
-                        range: 125,
-                        containerVisibilityPercentage: t,
-                        changeOpacity: !0,
-                    },
-                    animationSpeedScale: 2,
-                    children: (0, r.jsx)("img", { src: eH.A, alt: "", className: eB.Q }),
-                }),
-            }),
-            (0, r.jsx)(ek.A, {
-                isMotionReduced: n,
-                containerVisibilityPercentage: t,
-                hammerContainerClassName: eB.Gj,
-                keyContainerClassName: eB.FV,
-                starContainerClassName: eB.E1,
-                hammerAssetClassName: eB.Wv,
-                keyAssetClassName: eB.rs,
-                starAssetClassName: eB.OY,
-                animationSpeedScale: 2,
-            }),
-        ],
-    });
-};
-var eY = n(218199);
-let eW = (e) => {
-    let { className: t, color: n = "text-strong", responsive: i = !0, children: s } = e;
-    return (0, r.jsx)(D.D, { className: o()(eY.w, t, i && eY.n), variant: "display-md", color: n, children: s });
 };
 var eK = n(788868),
     ez = n(97584);
@@ -448,7 +448,7 @@ let e$ = (e) => {
                                 gap: 12,
                                 className: ez.rG,
                                 children: [
-                                    (0, r.jsx)(eW, { children: M.intl.format(M.t.FwjP6W, { days: s }) }),
+                                    (0, r.jsx)(eF, { children: M.intl.format(M.t.FwjP6W, { days: s }) }),
                                     (0, r.jsx)(L.E, {
                                         variant: "text-md/medium",
                                         color: "text-subtle",
@@ -479,7 +479,7 @@ let e$ = (e) => {
                     }),
                     (0, r.jsxs)("div", {
                         className: ez.Hk,
-                        children: [(0, r.jsx)(G, { alt: "", width: "100%", height: "auto" }), (0, r.jsx)(eF, {})],
+                        children: [(0, r.jsx)(G, { alt: "", width: "100%", height: "auto" }), (0, r.jsx)(eW, {})],
                     }),
                 ],
             }),
@@ -506,7 +506,7 @@ let e$ = (e) => {
             : i
               ? (A = (0, r.jsx)(er.A, { variant: er.c.SUBSCRIBER_HOME }))
               : s
-                ? (A = (0, r.jsx)(eP, {}))
+                ? (A = (0, r.jsx)(ej, {}))
                 : a && (A = (0, r.jsx)(eS, {}));
         let I = (0, u.bG)([N.A], () => N.A.getPremiumTypeSubscription()),
             T = null != I && I.status === eE.Dmq.CANCELED && null != _,
@@ -517,7 +517,7 @@ let e$ = (e) => {
             O = (0, K.A)(),
             b = O.isFractionalPremiumActive && !v && null == A && !T,
             D = (0, u.bG)([Y.A], () => Y.A.useReducedMotion),
-            { visibilityPercentageRef: P, visibilityPercentage: x } = (0, ex.U)(!D);
+            { visibilityPercentageRef: P, visibilityPercentage: x } = (0, eL.U)(!D);
         return s
             ? (0, r.jsx)(e$, { fpEndsAt: O.currentEntitlementEndsAt, className: t, buttonVisibilityRef: h })
             : (0, r.jsx)("div", {
@@ -532,11 +532,11 @@ let e$ = (e) => {
                           (0, r.jsxs)("div", {
                               className: ez.N1,
                               children: [
-                                  (0, r.jsx)(ej, { containerVisibilityPercentage: x }),
+                                  (0, r.jsx)(ek, { containerVisibilityPercentage: x }),
                                   T &&
                                       null != _.expires_at &&
                                       (0, r.jsx)(eR, { expiresAt: _.expires_at, className: ez.IZ }),
-                                  (0, r.jsx)(eW, {
+                                  (0, r.jsx)(eF, {
                                       children: T ? M.intl.format(M.t["3yZP0G"], { percent: _.discount.amount }) : l,
                                   }),
                                   T &&
@@ -596,7 +596,7 @@ let e$ = (e) => {
                                                               n.e("15251"),
                                                               n.e("57767"),
                                                               n.e("71934"),
-                                                              n.e("38896"),
+                                                              n.e("67397"),
                                                               n.e("7053"),
                                                               n.e("86483"),
                                                               n.e("39995"),
@@ -604,7 +604,7 @@ let e$ = (e) => {
                                                               n.e("32260"),
                                                               n.e("40153"),
                                                               n.e("68953"),
-                                                              n.e("76007"),
+                                                              n.e("22894"),
                                                               n.e("77083"),
                                                               n.e("63009"),
                                                               n.e("16581"),
@@ -625,7 +625,7 @@ let e$ = (e) => {
                                                               n.e("30938"),
                                                               n.e("19551"),
                                                               n.e("74016"),
-                                                              n.e("50689"),
+                                                              n.e("95657"),
                                                               n.e("88941"),
                                                               n.e("61379"),
                                                               n.e("43039"),
@@ -674,8 +674,8 @@ let e$ = (e) => {
                                                               n.e("31825"),
                                                               n.e("36320"),
                                                               n.e("20320"),
-                                                              n.e("43919"),
                                                               n.e("31390"),
+                                                              n.e("43919"),
                                                               n.e("57906"),
                                                               n.e("90889"),
                                                               n.e("51243"),
@@ -873,7 +873,7 @@ let e3 = function (e) {
                                 n.e("15251"),
                                 n.e("57767"),
                                 n.e("71934"),
-                                n.e("38896"),
+                                n.e("67397"),
                                 n.e("7053"),
                                 n.e("86483"),
                                 n.e("39995"),
@@ -881,7 +881,7 @@ let e3 = function (e) {
                                 n.e("32260"),
                                 n.e("40153"),
                                 n.e("68953"),
-                                n.e("76007"),
+                                n.e("22894"),
                                 n.e("77083"),
                                 n.e("63009"),
                                 n.e("16581"),
@@ -902,7 +902,7 @@ let e3 = function (e) {
                                 n.e("30938"),
                                 n.e("19551"),
                                 n.e("74016"),
-                                n.e("50689"),
+                                n.e("95657"),
                                 n.e("88941"),
                                 n.e("61379"),
                                 n.e("43039"),
@@ -951,8 +951,8 @@ let e3 = function (e) {
                                 n.e("31825"),
                                 n.e("36320"),
                                 n.e("20320"),
-                                n.e("43919"),
                                 n.e("31390"),
+                                n.e("43919"),
                                 n.e("57906"),
                                 n.e("90889"),
                                 n.e("51243"),
@@ -1022,7 +1022,7 @@ let e3 = function (e) {
     });
 };
 var e6 = n(761508),
-    e4 = n(951707),
+    e4 = n(449543),
     e5 = n(744064);
 function e7(e) {
     let { alt: t, ariaLabel: n, ariaHidden: i, role: s, width: a = 288, height: o = 192 } = e;

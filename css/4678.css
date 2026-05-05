@@ -4106,58 +4106,6 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     width: max-content
 }
 
-.banner__4524c {
-    align-items: center;
-    background: var(--background-surface-high);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    height: 80px;
-    justify-content: center;
-    margin: auto auto 40px;
-    padding: 16px 24px;
-    position: relative;
-    width: 624px
-}
-
-.bodyContainer__4524c {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    text-align: start;
-    width: 400px
-}
-
-.trialPill__4524c {
-    justify-content: center;
-    position: absolute;
-    top: -13px
-}
-
-.promoNitroButton__4524c {
-    margin-inline-start: auto;
-    min-height: 40px;
-    min-width: 110px
-}
-
-.bannerArt__4524c {
-    margin-inline-end: 16px
-}
-
-.pill__4524c {
-    inset-inline-start: 20px;
-    position: absolute;
-    top: -8px
-}
-
-.buttonGradient__4524c {
-    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
-    background-clip: padding-box;
-    border-radius: var(--radius-sm);
-    color: var(--white)
-}
-
 .boltContainer__24d89,
 .carContainer__24d89,
 .hammerContainer__24d89,
@@ -4169,50 +4117,6 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 .carContainer__24d89,
 .hammerContainer__24d89 {
     z-index: -1
-}
-
-.rtBoltContainer__283dc,
-.rtHammerContainer__283dc,
-.rtKeyContainer__283dc,
-.rtStarContainer__283dc {
-    pointer-events: none;
-    position: absolute
-}
-
-.rtStarContainer__283dc {
-    inset-inline-start: 70px;
-    top: 50px
-}
-
-.rtHammerContainer__283dc {
-    inset-inline-end: 65px;
-    top: 55px
-}
-
-.rtKeyContainer__283dc {
-    bottom: 50px;
-    inset-inline-start: 60px
-}
-
-.rtBoltContainer__283dc {
-    bottom: 40px;
-    inset-inline-end: 70px
-}
-
-.rtStarTrinket__283dc {
-    height: 78px
-}
-
-.rtHammerTrinket__283dc {
-    height: 64px
-}
-
-.rtKeyTrinket__283dc {
-    height: 70px
-}
-
-.rtBoltTrinket__283dc {
-    height: 60px
 }
 
 .jumpingWumpusContainer__13b73 {
@@ -4311,6 +4215,102 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
         font-size: 38px;
         letter-spacing: -.76px
     }
+}
+
+.banner__262c8 {
+    align-items: center;
+    background: var(--background-surface-high);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: center;
+    margin: auto auto 40px;
+    padding: 16px 24px;
+    position: relative;
+    width: 624px
+}
+
+.bodyContainer__262c8 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-align: start;
+    width: 400px
+}
+
+.trialPill__262c8 {
+    justify-content: center;
+    position: absolute;
+    top: -13px
+}
+
+.promoNitroButton__262c8 {
+    margin-inline-start: auto;
+    min-height: 40px;
+    min-width: 110px
+}
+
+.bannerArt__262c8 {
+    margin-inline-end: 16px
+}
+
+.pill__262c8 {
+    inset-inline-start: 20px;
+    position: absolute;
+    top: -8px
+}
+
+.buttonGradient__262c8 {
+    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
+    background-clip: padding-box;
+    border-radius: var(--radius-sm);
+    color: var(--white)
+}
+
+.rtBoltContainer_b99bd6,
+.rtHammerContainer_b99bd6,
+.rtKeyContainer_b99bd6,
+.rtStarContainer_b99bd6 {
+    pointer-events: none;
+    position: absolute
+}
+
+.rtStarContainer_b99bd6 {
+    inset-inline-start: 70px;
+    top: 50px
+}
+
+.rtHammerContainer_b99bd6 {
+    inset-inline-end: 65px;
+    top: 55px
+}
+
+.rtKeyContainer_b99bd6 {
+    bottom: 50px;
+    inset-inline-start: 60px
+}
+
+.rtBoltContainer_b99bd6 {
+    bottom: 40px;
+    inset-inline-end: 70px
+}
+
+.rtStarTrinket_b99bd6 {
+    height: 78px
+}
+
+.rtHammerTrinket_b99bd6 {
+    height: 64px
+}
+
+.rtKeyTrinket_b99bd6 {
+    height: 70px
+}
+
+.rtBoltTrinket_b99bd6 {
+    height: 60px
 }
 
 .flexCentered__101ad {
@@ -5285,19 +5285,19 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     color: var(--white)
 }
 
-.circleContainer_c1b44f {
+.circleContainer_b7ad60 {
     overflow: visible;
     position: relative
 }
 
-.childrenContainer_c1b44f,
-.circleContainer_c1b44f {
+.childrenContainer_b7ad60,
+.circleContainer_b7ad60 {
     align-items: center;
     display: flex;
     justify-content: center
 }
 
-.childrenContainer_c1b44f {
+.childrenContainer_b7ad60 {
     height: 100%;
     inset-inline-start: 0;
     position: absolute;
@@ -5305,42 +5305,42 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     width: 100%
 }
 
-.theme-light .baseProgressCircle_c1b44f {
+.theme-light .baseProgressCircle_b7ad60 {
     stroke: var(--white)
 }
 
-.circleSVG_c1b44f {
+.circleSVG_b7ad60 {
     height: 100%;
     overflow: visible;
     width: 100%
 }
 
-.nitroGemAnimation__7d30a {
-    animation: gemGlow__7d30a 5s ease-in-out infinite
+.nitroGemAnimation_ba269a {
+    animation: gemGlow_ba269a 5s ease-in-out infinite
 }
 
-.nitroGemContainer__7d30a {
+.nitroGemContainer_ba269a {
     overflow: visible
 }
 
-.gemBackgroundFill__7d30a {
+.gemBackgroundFill_ba269a {
     fill: var(--background-base-low)
 }
 
-.theme-light .gemBackgroundFill__7d30a {
+.theme-light .gemBackgroundFill_ba269a {
     fill: var(--white)
 }
 
-.progressCircle__7d30a {
+.progressCircle_ba269a {
     margin-inline: auto;
     width: 80%
 }
 
-.progressCricleBottomMargin__7d30a {
+.progressCricleBottomMargin_ba269a {
     margin-bottom: 15px
 }
 
-@keyframes gemGlow__7d30a {
+@keyframes gemGlow_ba269a {
 
     0%,
     50%,
@@ -5354,18 +5354,18 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     }
 }
 
-.activeProgressCircle__7d30a {
+.activeProgressCircle_ba269a {
     fill: transparent;
     transform: rotate(-90deg);
     transform-origin: center
 }
 
-.activeProgressCircleAnimation__7d30a {
-    animation: glow__7d30a 5s ease-in-out infinite, pulse__7d30a 5s ease-in-out infinite;
+.activeProgressCircleAnimation_ba269a {
+    animation: glow_ba269a 5s ease-in-out infinite, pulse_ba269a 5s ease-in-out infinite;
     transition: stroke-dashoffset .5s ease-out
 }
 
-@keyframes glow__7d30a {
+@keyframes glow_ba269a {
 
     0%,
     50%,
@@ -5379,7 +5379,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     }
 }
 
-@keyframes pulse__7d30a {
+@keyframes pulse_ba269a {
 
     0%,
     50%,
@@ -5393,7 +5393,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     }
 }
 
-.avatarDecoContainer__7d30a {
+.avatarDecoContainer_ba269a {
     align-items: center;
     display: flex;
     height: 100%;
@@ -5402,11 +5402,11 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     width: 100%
 }
 
-.avatarDecoContainer__7d30a img:before {
+.avatarDecoContainer_ba269a img:before {
     background-color: transparent
 }
 
-.avatarDeco__7d30a {
+.avatarDeco_ba269a {
     align-items: center;
     background: var(--background-base-low);
     border-radius: 50%;
@@ -5415,7 +5415,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     padding: 15%
 }
 
-.avatarDecoImage__7d30a {
+.avatarDecoImage_ba269a {
     height: 100%;
     width: 100%
 }

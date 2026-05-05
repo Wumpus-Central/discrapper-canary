@@ -28,7 +28,7 @@ var i,
     M = s(174459),
     y = s(474090),
     S = s(694080),
-    P = s(332732),
+    P = s(354475),
     D = s(286320),
     O = s(422936),
     G = s(234419),
@@ -41,8 +41,8 @@ var i,
     H = s(636592),
     z = s(26508),
     V = s(927578),
-    K = s(960851),
-    W = s(994763),
+    W = s(960851),
+    K = s(994763),
     Y = s(949964),
     Z = s(77964),
     Q = s(366010),
@@ -556,22 +556,22 @@ let eV = () => {
         ],
     });
 };
-var eK = s(296725);
-let eW = n.forwardRef((e, t) => {
+var eW = s(296725);
+let eK = n.forwardRef((e, t) => {
     let { analyticsLocations: s } = (0, g.Ay)(h.A.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, l.jsx)(g.f5, {
         value: s,
         children: (0, l.jsx)("div", {
             ref: t,
-            className: eK.kL,
+            className: eW.kL,
             children: (0, l.jsxs)("div", {
-                className: eK.hQ,
+                className: eW.hQ,
                 children: [
                     (0, l.jsx)(eV, {}),
                     (0, l.jsx)(ex.D, {
                         variant: "display-md",
                         color: "text-strong",
-                        className: eK.RH,
+                        className: eW.RH,
                         children: eb.intl.string(eb.t.lEw32m),
                     }),
                 ],
@@ -579,7 +579,7 @@ let eW = n.forwardRef((e, t) => {
         }),
     });
 });
-eW.displayName = "PremiumMarketingFooter";
+eK.displayName = "PremiumMarketingFooter";
 var eY = s(939249),
     eZ = s(742589),
     eQ = s(909536),
@@ -656,10 +656,10 @@ var e0 = s(990078),
     e8 = s(500060),
     e5 = s(885574),
     e7 = s(406860),
-    e4 = s(985603),
-    e6 = s(56598);
+    e6 = s(985603),
+    e4 = s(56598);
 function e9() {
-    let { sectionRef: e, handleVisibilityChange: t } = (0, e7.A)({ boxType: e4.XQ, thirdPartyPartner: e4.FZ }),
+    let { sectionRef: e, handleVisibilityChange: t } = (0, e7.A)({ boxType: e6.XQ, thirdPartyPartner: e6.FZ }),
         s = [
             { icon: e1.B, text: eb.intl.string(eM.default.MUypiB) },
             { icon: e2.h, text: eb.intl.string(eM.default.ec5Rdd) },
@@ -672,31 +672,31 @@ function e9() {
         threshold: 0.5,
         children: (0, l.jsx)("div", {
             ref: e,
-            className: e6.iE,
+            className: e4.iE,
             children: (0, l.jsxs)("div", {
-                className: e6.Nr,
+                className: e4.Nr,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: e6.j,
+                        className: e4.j,
                         children: [
-                            (0, l.jsx)("div", { className: e6._g }),
-                            (0, l.jsx)("div", { className: e6.$h }),
-                            (0, l.jsx)("div", { className: e6.Rv }),
-                            (0, l.jsx)("div", { className: e6.Lw }),
+                            (0, l.jsx)("div", { className: e4._g }),
+                            (0, l.jsx)("div", { className: e4.$h }),
+                            (0, l.jsx)("div", { className: e4.Rv }),
+                            (0, l.jsx)("div", { className: e4.Lw }),
                         ],
                     }),
                     (0, l.jsxs)("div", {
-                        className: e6.CT,
+                        className: e4.CT,
                         children: [
                             (0, l.jsxs)("div", {
-                                className: e6.Qs,
+                                className: e4.Qs,
                                 children: [
                                     (0, l.jsxs)("div", {
                                         children: [
                                             (0, l.jsx)(ex.D, {
                                                 variant: "heading-xxl/bold",
                                                 color: "text-strong",
-                                                className: e6.R_,
+                                                className: e4.R_,
                                                 children: eb.intl.string(eM.default.rkt1aw),
                                             }),
                                             (0, l.jsxs)("div", {
@@ -706,7 +706,7 @@ function e9() {
                                                         return (0, l.jsxs)(
                                                             "div",
                                                             {
-                                                                className: e6.yf,
+                                                                className: e4.yf,
                                                                 children: [
                                                                     (0, l.jsx)(t, {
                                                                         size: "sm",
@@ -719,7 +719,7 @@ function e9() {
                                                                     }),
                                                                     null != i &&
                                                                         (0, l.jsx)("div", {
-                                                                            className: e6.Jn,
+                                                                            className: e4.Jn,
                                                                             children: (0, l.jsx)(e0.m, {
                                                                                 text: eb.intl.string(i),
                                                                                 position: "top",
@@ -735,7 +735,7 @@ function e9() {
                                                         );
                                                     }),
                                                     (0, l.jsx)("div", {
-                                                        className: e6.xF,
+                                                        className: e4.xF,
                                                         children: (0, l.jsx)(el.A, {
                                                             variantOverride: "secondary",
                                                             size: "md",
@@ -746,7 +746,7 @@ function e9() {
                                         ],
                                     }),
                                     (0, l.jsx)("div", {
-                                        className: e6.WE,
+                                        className: e4.WE,
                                         children: (0, l.jsx)(em.E, {
                                             variant: "text-xs/medium",
                                             color: "text-link",
@@ -756,9 +756,9 @@ function e9() {
                                 ],
                             }),
                             (0, l.jsx)("div", {
-                                className: e6.r1,
+                                className: e4.r1,
                                 children: (0, l.jsx)("img", {
-                                    className: e6.wm,
+                                    className: e4.wm,
                                     src: "https://cdn.discordapp.com/assets/content/183a222feae2555e7a057002bbcae445e70efa78fb204d353c9c93b4a1f210d4.png",
                                     alt: "Xbox Game Pass",
                                 }),
@@ -870,19 +870,19 @@ function th(e) {
     });
 }
 var tg = s(224850),
-    tj = s(97352);
-function tf() {
-    let e = (0, o.bG)([tj.A], () => tj.A.getForSkuAndInterval((0, V.mH)(eI.pe.TIER_0), eI.WT.MONTH));
+    tj = s(818415),
+    tf = s(505559);
+let tN = () => {
+    let e = (0, tj.A)();
+    return null == e ? null : (0, l.jsx)(tf.A, { text: e });
+};
+var tA = s(103733),
+    t_ = s(97352);
+function tC() {
+    let e = (0, o.bG)([t_.A], () => t_.A.getForSkuAndInterval((0, V.mH)(eI.pe.TIER_0), eI.WT.MONTH));
     return null != e ? (0, V.sS)(e) : "…";
 }
-var tN = s(818415),
-    tA = s(505559);
-let t_ = () => {
-    let e = (0, tN.A)();
-    return null == e ? null : (0, l.jsx)(tA.A, { text: e });
-};
-var tC = s(103733),
-    tE = s(607470);
+var tE = s(607470);
 let tI =
         "https://cdn.discordapp.com/assets/content/a3e8e17987398023e2afd61ec5078a9bce18b2832f2f1775a1ba3c033ce13270.webm",
     tv = (e) => {
@@ -971,11 +971,11 @@ let tM = n.memo(
         n.forwardRef((e, t) => {
             let { className: s, subscriptionTier: i, isEligibleForBogoPromotion: n } = e,
                 { analyticsLocations: a } = (0, g.Ay)(h.A.PREMIUM_MARKETING_HERO_CTA),
-                c = tf(),
+                c = tC(),
                 d = (0, tc.A)(),
                 u = null != d,
                 m = (0, o.bG)([B.A], () => B.A.useReducedMotion),
-                { visibilityPercentageRef: x, visibilityPercentage: p } = (0, tC.U)(!m),
+                { visibilityPercentageRef: x, visibilityPercentage: p } = (0, tA.U)(!m),
                 j = (0, D.b)(),
                 f = !u && j.length > 0,
                 N = (0, to.c)(ta.C.MARKETING_PAGE_BANNER),
@@ -993,7 +993,7 @@ let tM = n.memo(
                             className: tb.hQ,
                             children: [
                                 (0, l.jsx)(tT, { containerVisibilityPercentage: p }),
-                                _ && (0, l.jsx)("div", { className: tb.XN, children: (0, l.jsx)(t_, {}) }),
+                                _ && (0, l.jsx)("div", { className: tb.XN, children: (0, l.jsx)(tN, {}) }),
                                 (0, l.jsx)("div", {
                                     className: tb.s8,
                                     children: (0, l.jsx)(ex.D, {
@@ -1144,7 +1144,7 @@ let tD = () => {
         y = null != T ? (0, V.EL)(T) : null,
         S = null != y ? V.Ay.getSkuIdForPlan(y.planId) : null,
         P = null !== S && S !== eI.pe.TIER_2 ? eI.pe.TIER_2 : null,
-        D = (0, K.cg)(),
+        D = (0, W.cg)(),
         { analyticsLocations: O } = (0, g.Ay)(h.A.PREMIUM_MARKETING);
     n.useEffect(() => {
         R(!0);
@@ -1153,7 +1153,7 @@ let tD = () => {
         { shouldShowBonusOrbsUX: w } = (0, F.Dl)(ev.rE.NITRO_HOME_MARKETING),
         Q = G && w ? tt.NI.COMBINED_ORBS : w ? tt.NI.ORB_MULTIPLIER : G ? tt.NI.ORB_REWARDS : null,
         X = n.useMemo(() => null != Q && "orbs" === new URLSearchParams(e.search).get("section"), [e.search, Q]);
-    (0, W.z)(Q ?? tt.NI.COMBINED_ORBS, X);
+    (0, K.z)(Q ?? tt.NI.COMBINED_ORBS, X);
     let { navBarSections: J, activeSectionId: q } = ty([ee.HOME, ee.WHATS_NEW, ee.BEST_OF_NITRO, ee.PLANS, ee.COMPARE]),
         { home: et, whatsNew: es, bestOfNitro: ei, plans: el, compare: ea } = J,
         ec = (0, l.jsxs)("div", {
@@ -1220,7 +1220,7 @@ let tD = () => {
                     },
                     children: (0, l.jsx)("div", { ref: d, className: tP._Z }),
                 }),
-                (0, l.jsx)(eW, { ref: u }),
+                (0, l.jsx)(eK, { ref: u }),
                 (0, l.jsx)(er, { isVisible: !j && !N && v, subscriptionTier: P, isEligibleForBogoPromotion: D }),
                 (0, l.jsx)($, { className: tP.MF }),
             ],
@@ -1295,7 +1295,7 @@ let tV = (e) => {
             u = t && a ? null : (0, l.jsx)(tL.A, { className: r()(tz.x6, n), color: a ? void 0 : tw.XD.WHITE });
         return (0, l.jsxs)("div", { className: r()(tz.UD, i), children: [d, " ", u] });
     },
-    tK = () =>
+    tW = () =>
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(tF.p, { className: tz.zd }),
@@ -1304,9 +1304,9 @@ let tV = (e) => {
                 (0, l.jsx)(tF.p, { className: tz.GX }),
             ],
         });
-function tW(e) {
+function tK(e) {
     let { variant: t = "text-lg/normal", withBottomMargin: s = !0, isApplicationHome: i } = e,
-        n = tf();
+        n = tC();
     return (0, l.jsx)(em.E, {
         variant: t,
         color: i ? "text-subtle" : "always-white",
@@ -1319,7 +1319,7 @@ let tY = n.forwardRef((e, t) => {
         { analyticsLocations: c } = (0, g.Ay)(h.A.PREMIUM_MARKETING_HERO_CTA),
         o = (0, tH.QQ)(),
         d = (0, tr.ar)(),
-        u = (0, K.cg)(),
+        u = (0, W.cg)(),
         m = (0, D.b)().length > 0,
         x = eb.intl.string(eb.t.YCZldK);
     return (0, l.jsx)(g.f5, {
@@ -1342,7 +1342,7 @@ let tY = n.forwardRef((e, t) => {
                                   className: tz.DF,
                                   children: (0, l.jsx)(tg.A, { textColor: "always-white", smallerText: !d }),
                               })
-                            : (0, l.jsx)(tW, {}),
+                            : (0, l.jsx)(tK, {}),
                         u || o
                             ? (0, l.jsx)("div", {
                                   className: tz.UD,
@@ -1354,17 +1354,17 @@ let tY = n.forwardRef((e, t) => {
                                   buttonClassName: i,
                                   isDarkMode: a,
                               }),
-                        m && (0, l.jsx)(tW, { variant: "text-md/normal", withBottomMargin: !1 }),
+                        m && (0, l.jsx)(tK, { variant: "text-md/normal", withBottomMargin: !1 }),
                     ],
                 }),
-                !d && (0, l.jsx)(tK, {}),
+                !d && (0, l.jsx)(tW, {}),
             ],
         }),
     });
 });
 var tZ = s(374200),
     tQ = s(988399),
-    tX = s(422253),
+    tX = s(815846),
     tJ = s(359778),
     tq = s(695366),
     t$ = s(780964),
@@ -1451,11 +1451,11 @@ let t8 = (e) => {
 };
 var t5 = s(900797),
     t7 = s(847374),
-    t4 = s(777666),
-    t6 = s(464769);
+    t6 = s(777666),
+    t4 = s(464769);
 function t9(e) {
     let { className: t } = e;
-    return (0, l.jsx)(t4.Lp, { className: r()(t6.T, t), text: eb.intl.string(eb.t.EYxi0o) });
+    return (0, l.jsx)(t6.Lp, { className: r()(t4.T, t), text: eb.intl.string(eb.t.EYxi0o) });
 }
 var se = s(507553),
     st = s(591179),
@@ -1734,7 +1734,7 @@ let sj = (e) => {
             v = (0, G.V)(),
             R = v?.subscription_trial?.sku_id,
             T = (0, tr.ar)(),
-            y = (0, K.cg)(),
+            y = (0, W.cg)(),
             S = (0, eQ.Gh)("premium-marketing-settings-page"),
             P = y ?? !1,
             D = (0, o.bG)([tZ.A], () => {
@@ -1896,14 +1896,14 @@ let s_ = function (e) {
         F = (0, O.O)(),
         H = (0, N.Y)(eI.T7),
         [z, V] = n.useState(!0),
-        K = n.useRef(0),
-        W = (0, y.YE)(k, eI.PremiumTypes.TIER_2);
+        W = n.useRef(0),
+        K = (0, y.YE)(k, eI.PremiumTypes.TIER_2);
     (0, D.b)(),
         n.useEffect(() => {
             u.h.wait(async () => {
                 let e = Date.now();
                 await Promise.all([j.hP(), j.$o(), (0, m.zS)(null, null, en.tF5.DISCOVERY)]),
-                    (K.current = Date.now() - e),
+                    (W.current = Date.now() - e),
                     V(!1);
             });
         }, []),
@@ -1911,7 +1911,7 @@ let s_ = function (e) {
             z ||
                 M.default.track(en.HAw.PREMIUM_MARKETING_PAGE_VIEWED, {
                     location_stack: i,
-                    load_duration_ms: K.current,
+                    load_duration_ms: W.current,
                 });
         }, [i, z]),
         n.useEffect(() => {
@@ -1938,7 +1938,7 @@ let s_ = function (e) {
             ? (0, l.jsx)(x.A, {})
             : s
               ? (0, l.jsx)(A.uK, {})
-              : $ && W
+              : $ && K
                 ? (0, l.jsx)(g.f5, { value: a, children: (0, l.jsx)(P.Ay, { userId: U }) })
                 : X
                   ? null
