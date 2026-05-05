@@ -968,3 +968,9 @@ let e9 = E(
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: e }),
     );
+E(
+    "privacy",
+    "hideFriendRequestNotes",
+    (e) => e?.value ?? !1,
+    (e) => o._t.create({ value: e }),
+);

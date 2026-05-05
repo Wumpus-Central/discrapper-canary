@@ -2206,6 +2206,7 @@ class eV extends b.G {
                 kind: "enum",
                 T: () => ["discord_protos.discord_users.v1.ProfileVisibility", W, "PROFILE_VISIBILITY_"],
             },
+            { no: 33, name: "hide_friend_request_notes", kind: "message", T: () => D._t },
         ]);
     }
     create(e) {
@@ -2365,6 +2366,9 @@ class eV extends b.G {
                 case 32:
                     r.profileVisibility = e.int32();
                     break;
+                case 33:
+                    r.hideFriendRequestNotes = D._t.internalBinaryRead(e, e.uint32(), n, r.hideFriendRequestNotes);
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -2462,7 +2466,9 @@ class eV extends b.G {
                 D._t.internalBinaryWrite(e.quests3PDataOptedOut, t.tag(30, v.O0.LengthDelimited).fork(), n).join(),
             e.showLocalTime &&
                 D._t.internalBinaryWrite(e.showLocalTime, t.tag(31, v.O0.LengthDelimited).fork(), n).join(),
-            0 !== e.profileVisibility && t.tag(32, v.O0.Varint).int32(e.profileVisibility);
+            0 !== e.profileVisibility && t.tag(32, v.O0.Varint).int32(e.profileVisibility),
+            e.hideFriendRequestNotes &&
+                D._t.internalBinaryWrite(e.hideFriendRequestNotes, t.tag(33, v.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? v.f$.onWrite : i)(this.typeName, e, t), t;
     }
