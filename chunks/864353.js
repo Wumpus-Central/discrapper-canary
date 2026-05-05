@@ -26,7 +26,7 @@ var l = n(627968),
     R = n(735305),
     C = n(343834),
     b = n(926795),
-    N = n(623020),
+    N = n(862241),
     k = n(615310),
     y = n(811656),
     O = n(284009),
@@ -976,7 +976,7 @@ let tp = function () {
             { key: T.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(C.A, {}) },
             {
                 key: T.pn.REVIEW,
-                renderStep: (e) => (0, l.jsx)(N._, { ...e }),
+                renderStep: (e) => (0, l.jsx)(N._M, { ...e }),
                 options: {
                     renderHeader: !0,
                     useBreadcrumbLabel: (e) =>

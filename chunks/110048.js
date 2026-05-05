@@ -14,7 +14,7 @@ var i = n(627968),
     m = n(688810),
     _ = n(937008),
     E = n(278521),
-    T = n(623020),
+    T = n(862241),
     A = n(503698),
     h = n.n(A),
     O = n(106778),
@@ -443,7 +443,7 @@ let eR = (0, C.createContext)({
                     primaryCTAButtonProps: u,
                 });
             },
-            [a.pn.REVIEW]: T._,
+            [a.pn.REVIEW]: T._M,
         },
         TENANT_PROVIDER_CONFIGS: {
             tenantProvidesPaymentContext: !0,
@@ -899,7 +899,7 @@ let tr = {
                 primaryCTAButtonProps: a,
             });
         },
-        [a.pn.REVIEW]: T._,
+        [a.pn.REVIEW]: T._M,
     },
     CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, i.jsx)(eY, { ...e }) },
     TENANT_PROVIDER_CONFIGS: {

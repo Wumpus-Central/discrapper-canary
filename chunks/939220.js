@@ -1,77 +1,77 @@
-n.d(t, { zX: () => P, kJ: () => O, r2: () => b, zK: () => y, hh: () => L });
+n.d(t, { zX: () => R, kJ: () => g, r2: () => v, zK: () => P, hh: () => L });
 var l = n(627968);
 n(64700);
-var r = n(295405),
-    i = n(166532),
-    a = n(735305),
-    s = n(343834),
+var i = n(295405),
+    r = n(166532),
+    s = n(735305),
+    a = n(343834),
     o = n(926795),
     u = n(284009),
-    d = n.n(u),
-    c = n(821609),
+    c = n.n(u),
+    d = n(821609),
     C = n(534514),
     p = n(834730),
     m = n(427675),
-    h = n(94420),
-    _ = n(937008),
-    E = n(156312),
+    _ = n(94420),
+    E = n(937008),
+    T = n(278521),
     A = n(921925),
-    g = n(482132),
-    f = n(985018),
-    T = n(989553);
-function S(e) {
+    h = n(482132),
+    O = n(375708),
+    S = n(989553);
+function I(e) {
     let { handleClose: t } = e,
-        n = (0, h.t4)((e) => e.selectedSkuId),
-        { application: r } = (0, E.P5)(),
-        i = (0, m.gU)(),
-        { isGift: a, giftRecipient: s } = (0, _.Pv)();
-    d()(null != n, "Expected selectedSkuId"), d()(null != r, "Expected application");
-    let o = i[n];
-    d()(null != o, "Expected sku");
-    let u = a
-        ? f.intl.formatToPlainString(f.t["2VjPTw"], {
+        n = (0, _.t4)((e) => e.selectedSkuId),
+        { application: i } = (0, T.P5)(),
+        r = (0, m.gU)(),
+        { isGift: s, giftRecipient: a } = (0, E.Pv)();
+    c()(null != n, "Expected selectedSkuId"), c()(null != i, "Expected application");
+    let o = r[n];
+    c()(null != o, "Expected sku");
+    let u = s
+        ? O.intl.formatToPlainString(O.t["2VjPTw"], {
               itemName: o.name,
-              giftRecipient: s?.username ?? "your recipient",
+              giftRecipient: a?.username ?? "your recipient",
           })
-        : f.intl.formatToPlainString(f.t.wK0IbP, { applicationName: r.name, itemName: o.name });
-    return (0, l.jsxs)(g.dZ, {
+        : O.intl.formatToPlainString(O.t.wK0IbP, { applicationName: i.name, itemName: o.name });
+    return (0, l.jsxs)(h.dZ, {
         children: [
             (0, l.jsx)(A.A, {}),
             (0, l.jsxs)("div", {
-                className: T.EL,
+                className: S.EL,
                 children: [
-                    (0, l.jsx)(C.D, { variant: "heading-xxl/bold", className: T.RS, children: "Success!" }),
+                    (0, l.jsx)(C.D, { variant: "heading-xxl/bold", className: S.RS, children: "Success!" }),
                     (0, l.jsx)(p.E, { variant: "text-md/normal", children: u }),
-                    (0, l.jsx)("div", { className: T.yF }),
-                    (0, l.jsx)(c.$, { onClick: t, text: f.intl.string(f.t.cpT0Cq), fullWidth: !0 }),
+                    (0, l.jsx)("div", { className: S.yF }),
+                    (0, l.jsx)(d.$, { onClick: t, text: O.intl.string(O.t.cpT0Cq), fullWidth: !0 }),
                 ],
             }),
         ],
     });
 }
-var I = n(623020),
+var f = n(862241),
     x = n(766734);
-let O = { key: null, renderStep: (e) => (0, l.jsx)(x.B, { ...e }), options: { modalSizeGetter: () => "md" } },
-    y = {
-        key: i.pn.ADD_PAYMENT_STEPS,
+let g = { key: null, renderStep: (e) => (0, l.jsx)(x.B, { ...e }), options: { modalSizeGetter: () => "md" } },
+    P = {
+        key: r.pn.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
-            (0, l.jsx)(a.x, {
+            (0, l.jsx)(s.x, {
                 ...e,
-                breadcrumbSteps: [i.pn.ADD_PAYMENT_STEPS, i.pn.REVIEW, i.pn.CONFIRM],
+                breadcrumbSteps: [r.pn.ADD_PAYMENT_STEPS, r.pn.REVIEW, r.pn.CONFIRM],
                 onReturn: () => {
-                    0 === Object.keys(r.A.paymentSources).length
+                    0 === Object.keys(i.A.paymentSources).length
                         ? e.handleClose()
-                        : e.handleStepChange(i.pn.REVIEW, { trackedFromStep: i.pn.ADD_PAYMENT_STEPS });
+                        : e.handleStepChange(r.pn.REVIEW, { trackedFromStep: r.pn.ADD_PAYMENT_STEPS });
                 },
             }),
         options: { renderHeader: !0 },
     },
-    R = { key: i.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(o.A, {}) },
-    N = { key: i.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(s.A, {}), options: { renderHeader: !0 } },
-    b = {
-        key: i.pn.REVIEW,
-        renderStep: (e) => (0, l.jsx)(I._, { ...e }),
-        options: { useBreadcrumbLabel: () => f.intl.string(f.t.QBnNHq) },
+    N = { key: r.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(o.A, {}) },
+    y = { key: r.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(a.A, {}), options: { renderHeader: !0 } },
+    v = {
+        key: r.pn.REVIEW,
+        renderStep: (e) => (0, l.jsx)(f._M, { ...e }),
+        options: { useBreadcrumbLabel: () => O.intl.string(O.t.QBnNHq) },
     },
-    P = { key: i.pn.CONFIRM, renderStep: (e) => (0, l.jsx)(S, { ...e }) },
-    L = [R, N];
+    R = { key: r.pn.CONFIRM, renderStep: (e) => (0, l.jsx)(I, { ...e }) },
+    L = [N, y];

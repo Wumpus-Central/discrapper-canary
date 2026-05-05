@@ -1,9 +1,9 @@
 l.r(t),
     l.d(t, {
-        nitroCollection: () => l3,
+        nitroCollection: () => l6,
         virtualCurrencyCollection: () => l2,
         playgroundConfig: () => l8,
-        identityCollection: () => l6,
+        identityCollection: () => l3,
         RevenuePlaygroundCollectionId: () => lZ,
         paymentsCollection: () => l1,
     });
@@ -28,7 +28,7 @@ var a,
     E = l(830382),
     S = l(73825),
     C = l(937008),
-    j = l(902958),
+    j = l(278521),
     T = l(491057),
     P = l(546042),
     A = l(97352),
@@ -135,8 +135,8 @@ let k = (e) => {
             g,
         );
     };
-var D = l(652215);
-let M = [
+var M = l(652215);
+let D = [
         {
             key: m.pn.ADD_PAYMENT_STEPS,
             renderStep: (e) => (0, s.jsx)(h.x, { ...e, breadcrumbSteps: [m.pn.ADD_PAYMENT_STEPS], onReturn: () => {} }),
@@ -163,15 +163,15 @@ let M = [
                     return (0, s.jsx)(
                         N,
                         {
-                            stepConfigs: M,
+                            stepConfigs: D,
                             analyticsLocations: l,
-                            applicationId: D.FYj,
+                            applicationId: M.FYj,
                             initialPlanId: void 0,
                             skuId: null,
                             isGift: !1,
                             hideErrors: !1,
                             loadId: a,
-                            purchaseType: D.VVm.ONE_TIME,
+                            purchaseType: M.VVm.ONE_TIME,
                             disablePurchases: !0,
                             excludeSubscriptionPlansBySKU: !0,
                             renderHeader: () => null,
@@ -201,7 +201,7 @@ let G = {
             children: (0, s.jsx)(w.SS, {
                 className: U.oz,
                 ctaText: (0, V.uJ)(t) ? B.intl.string(B.t["J+vlIR"]) : t,
-                ctaOnClick: D.tEg,
+                ctaOnClick: M.tEg,
                 showNotificationBadge: a,
                 cardAlignment: n,
                 linkText: (0, V.uJ)(l) ? B.intl.string(B.t.XRdyjz) : l,
@@ -388,12 +388,12 @@ let e_ = {
                     [E, C] = u.useState(r.length > 0 ? r[0].value : null),
                     { analyticsLocations: j } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
                     [T, P] = u.useState(""),
-                    [A, I] = u.useState(D.dJq),
+                    [A, I] = u.useState(M.dJq),
                     { balance: _, isFetching: k, error: R } = (0, ev.W)(),
-                    { isSubmitting: N, responseMessage: M, redeemVirtualCurrency: O } = (0, ev.Q)(),
-                    [L, w] = u.useState(D.dJq),
+                    { isSubmitting: N, responseMessage: D, redeemVirtualCurrency: O } = (0, ev.Q)(),
+                    [L, w] = u.useState(M.dJq),
                     [V, B] = u.useState(""),
-                    [G, W] = u.useState(D.dJq);
+                    [G, W] = u.useState(M.dJq);
                 return (0, s.jsx)(p.f5, {
                     value: j,
                     children: (0, s.jsx)(Z.Ip, {
@@ -500,7 +500,7 @@ let e_ = {
                                                         text: "Open Link",
                                                         disabled: h.length < 1,
                                                         onClick: () => {
-                                                            window.open(D.BVt.BILLING_PROMOTION_REDEMPTION(h));
+                                                            window.open(M.BVt.BILLING_PROMOTION_REDEMPTION(h));
                                                         },
                                                     }),
                                                 }),
@@ -557,7 +557,7 @@ let e_ = {
                                         text: "Open Link",
                                         disabled: v,
                                         onClick: () => {
-                                            window.open(D.BVt.BILLING_PREMIUM_SUBSCRIBE + "?" + Y.stringify({ ...x }));
+                                            window.open(M.BVt.BILLING_PREMIUM_SUBSCRIBE + "?" + Y.stringify({ ...x }));
                                         },
                                     }),
                                 }),
@@ -610,7 +610,7 @@ let e_ = {
                                             loading: N,
                                             onClick: () => O(L, (0, d.A)()),
                                         }),
-                                        null != M && (0, s.jsx)(y.E, { variant: "text-sm/normal", children: M }),
+                                        null != D && (0, s.jsx)(y.E, { variant: "text-sm/normal", children: D }),
                                     ],
                                 }),
                                 (0, s.jsx)(el.c, {}),
@@ -666,8 +666,8 @@ let e_ = {
                                                     skuId: A,
                                                     openPremiumPaymentModal: () => !0,
                                                     analyticsLocations: [],
-                                                    analyticsLocationObject: { page: D.liQ.IN_APP },
-                                                    context: D.BRT.APP,
+                                                    analyticsLocationObject: { page: M.liQ.IN_APP },
+                                                    context: M.BRT.APP,
                                                 }),
                                         }),
                                     ],
@@ -865,29 +865,29 @@ let e_ = {
         },
     ],
 };
-var ek = l(623020),
+var ek = l(862241),
     eR = l(927578),
     eN = l(492518),
-    eD = l(758836);
-let eM = () => ({
+    eM = l(758836);
+let eD = () => ({
         options: [
-            { value: eD.ck["0"], label: `${eD.ck["0"]} (Cat Ears)` },
-            { value: eD.ck["1"], label: `${eD.ck["1"]} (Angry)` },
-            { value: eD.ck["2"], label: `${eD.ck["2"]} (Aurora Bundle)` },
-            { value: eD.ck["3"], label: `${eD.ck["3"]} (Heartbloom)` },
-            { value: eD.ck["4"], label: `${eD.ck["4"]} (Aurora Dreams)` },
-            { value: eD.ck["5"], label: `${eD.ck["5"]} (Sakura Ink)` },
-            { value: eD.ck["6"], label: `${eD.ck["6"]} (Of Ink and Steel)` },
-            { value: eD.ck["7"], label: `${eD.ck["7"]} (Twilight)` },
-            { value: eD.ck["8"], label: `${eD.ck["8"]} (Red Dragon)` },
-            { value: eD.ck["9"], label: `${eD.ck["9"]} (Aurora)` },
+            { value: eM.ck["0"], label: `${eM.ck["0"]} (Cat Ears)` },
+            { value: eM.ck["1"], label: `${eM.ck["1"]} (Angry)` },
+            { value: eM.ck["2"], label: `${eM.ck["2"]} (Aurora Bundle)` },
+            { value: eM.ck["3"], label: `${eM.ck["3"]} (Heartbloom)` },
+            { value: eM.ck["4"], label: `${eM.ck["4"]} (Aurora Dreams)` },
+            { value: eM.ck["5"], label: `${eM.ck["5"]} (Sakura Ink)` },
+            { value: eM.ck["6"], label: `${eM.ck["6"]} (Of Ink and Steel)` },
+            { value: eM.ck["7"], label: `${eM.ck["7"]} (Twilight)` },
+            { value: eM.ck["8"], label: `${eM.ck["8"]} (Red Dragon)` },
+            { value: eM.ck["9"], label: `${eM.ck["9"]} (Aurora)` },
         ],
-        defaultValue: eD.ck["0"],
+        defaultValue: eM.ck["0"],
     }),
     eO = [
         {
             key: m.pn.REVIEW,
-            renderStep: (e) => (0, s.jsx)(ek._, { ...e }),
+            renderStep: (e) => (0, s.jsx)(ek._M, { ...e }),
             options: { useBreadcrumbLabel: () => B.intl.string(B.t.QBnNHq) },
         },
         {
@@ -917,7 +917,7 @@ let eM = () => ({
         isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 },
         hideErrors: { label: "Hide Errors", type: "boolean", defaultValue: !0 },
     },
-    eV = eM(),
+    eV = eD(),
     eB = {
         name: "Collectibles Review Step",
         id: "collectibles-checkout-review-step",
@@ -930,7 +930,7 @@ let eM = () => ({
                     handleComplete: o,
                     isFetching: u,
                     sku: d,
-                } = k({ skuId: t, isGift: l, applicationId: D.FYj }),
+                } = k({ skuId: t, isGift: l, applicationId: M.FYj }),
                 c = eR.Ay.isPremiumSku(t);
             return u || null == d || c
                 ? (0, s.jsx)(eN.k, {})
@@ -940,13 +940,13 @@ let eM = () => ({
                           (0, s.jsx)(N, {
                               stepConfigs: eO,
                               analyticsLocations: n,
-                              applicationId: D.FYj,
+                              applicationId: M.FYj,
                               initialPlanId: void 0,
                               skuId: t,
                               isGift: l,
                               hideErrors: a,
                               loadId: i,
-                              purchaseType: D.VVm.ONE_TIME,
+                              purchaseType: M.VVm.ONE_TIME,
                               disablePurchases: !0,
                               excludeSubscriptionPlansBySKU: !0,
                               onClose: r,
@@ -1005,7 +1005,7 @@ let eM = () => ({
                               isGift: l,
                               hideErrors: a,
                               loadId: i,
-                              purchaseType: D.VVm.SUBSCRIPTION,
+                              purchaseType: M.VVm.SUBSCRIPTION,
                               disablePurchases: !0,
                               onClose: r,
                               onComplete: o,
@@ -1163,7 +1163,7 @@ function e1() {
 function e2() {
     return (0, s.jsx)("div", { style: { width: "60%", height: "60%", borderRadius: "50%", background: "red" } });
 }
-let e3 = {
+let e6 = {
         label: "Variant",
         type: "select",
         defaultValue: "square",
@@ -1172,7 +1172,7 @@ let e3 = {
             { label: "Bar", value: "bar" },
         ],
     },
-    e6 = {
+    e3 = {
         title: "Editable Tile Button",
         stories: [
             {
@@ -1199,7 +1199,7 @@ let e3 = {
                 },
                 id: "add-tile-button",
                 controls: {
-                    variant: e3,
+                    variant: e6,
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                 },
             },
@@ -1229,7 +1229,7 @@ let e3 = {
                 },
                 id: "edit-tile-button",
                 controls: {
-                    variant: e3,
+                    variant: e6,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                 },
@@ -1269,7 +1269,7 @@ let e3 = {
                 },
                 id: "deletable-edit-tile-button",
                 controls: {
-                    variant: e3,
+                    variant: e6,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                     deleteType: {
@@ -1827,7 +1827,7 @@ let tA = {
 };
 function tI() {
     let [e, t] = (0, u.useState)("customSounds"),
-        l = `${D.BVt.NITRO_HOME}?perk=${e}`;
+        l = `${M.BVt.NITRO_HOME}?perk=${e}`;
     return (0, s.jsxs)("div", {
         style: { marginTop: 64, display: "flex", flexDirection: "column", gap: 10 },
         children: [
@@ -1837,7 +1837,7 @@ function tI() {
                 variant: "primary",
                 size: "sm",
                 onClick: () => {
-                    (0, tC.jH)(), (0, tP.pX)(D.BVt.ME), setTimeout(() => (0, tP.pX)(l), 200);
+                    (0, tC.jH)(), (0, tP.pX)(M.BVt.ME), setTimeout(() => (0, tP.pX)(l), 200);
                 },
             }),
             (0, s.jsxs)(y.E, {
@@ -1876,11 +1876,11 @@ let tR = [
             body: "Show off your style with a custom nameplate, available with Nitro.",
         },
     },
-    tD = [
-        { id: "near_limit", label: "Near Limit (99 guilds)", value: 99 },
-        { id: "at_limit", label: "At Limit (100 guilds)", value: D.qlD },
-    ],
     tM = [
+        { id: "near_limit", label: "Near Limit (99 guilds)", value: 99 },
+        { id: "at_limit", label: "At Limit (100 guilds)", value: M.qlD },
+    ],
+    tD = [
         { id: "avatar", label: "Avatar", value: tk.HL.AVATAR },
         { id: "banner", label: "Banner", value: tk.HL.BANNER },
     ];
@@ -1978,16 +1978,16 @@ var tW = l(636537),
     tF = l(192087),
     tz = l(295405),
     tY = l(71532);
-let tq = eM();
+let tq = eD();
 async function tK(e) {
-    return (await tW.Bo.post({ url: D.Rsh.ORDER_SIGN(e), rejectWithError: !0 })).body;
+    return (await tW.Bo.post({ url: M.Rsh.ORDER_SIGN(e), rejectWithError: !0 })).body;
 }
 async function tX(e) {
-    return (await tW.Bo.get({ url: D.Rsh.ORDER_UPDATE(e), rejectWithError: !0 })).body;
+    return (await tW.Bo.get({ url: M.Rsh.ORDER_UPDATE(e), rejectWithError: !0 })).body;
 }
 async function tJ(e, t) {
     await tW.Bo.patch({
-        url: D.Rsh.ORDER_UPDATE(e),
+        url: M.Rsh.ORDER_UPDATE(e),
         body: { billing_facet: { payment_source_id: t } },
         rejectWithError: !0,
     });
@@ -2049,7 +2049,7 @@ Payment source changed.`);
         ),
         v = async () => {
             if (null == p || "" === p) return void i("Please select a payment source first.");
-            if (null == d || "" === d || d === D.dJq) return void i("Please select a SKU ID.");
+            if (null == d || "" === d || d === M.dJq) return void i("Please select a SKU ID.");
             t(!0), i(null), o(null);
             try {
                 let e = await (0, E.Aj)(d, p, "US", !1, {
@@ -2267,7 +2267,7 @@ Error: ${t}`);
                                 size: "sm",
                                 text: e ? "Creating Order..." : "Create Order",
                                 onClick: v,
-                                disabled: e || null == p || "" === p || null == d || "" === d || d === D.dJq,
+                                disabled: e || null == p || "" === p || null == d || "" === d || d === M.dJq,
                             }),
                             (0, s.jsx)(H.$, {
                                 variant: "secondary",
@@ -2323,7 +2323,7 @@ function t2(e) {
           ? (0, s.jsx)(tZ.Mv, { ...l, ...e })
           : (0, s.jsx)(tZ.dP, { ...l, ...e });
 }
-function t3(e) {
+function t6(e) {
     let { paymentRequestWallet: t } = e,
         l = u.useRef(null),
         [a, n] = u.useState(!1);
@@ -2344,7 +2344,7 @@ function t3(e) {
         }),
     });
 }
-var t6 = l(150934),
+var t3 = l(150934),
     t8 = l(36167),
     t9 = l(26279);
 let t7 = [
@@ -2419,7 +2419,7 @@ function lt(e) {
         i = u.useCallback(() => {
             if (null == t) return;
             let e = (0, d.A)(),
-                l = D.BVt.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(t, e);
+                l = M.BVt.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(t, e);
             (0, t8.xq)(l, a, n);
         }, [t, a, n]);
     return (0, s.jsxs)(t_.Hq, {
@@ -2444,7 +2444,7 @@ function ll(e) {
         o = u.useCallback(() => {
             if (0 === l.length || null == t) return;
             let e = (0, d.A)(),
-                a = D.BVt.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(l, void 0, e, t);
+                a = M.BVt.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(l, void 0, e, t);
             (0, t8.xq)(a, i, r);
         }, [l, i, r, t]);
     return (0, s.jsxs)(t_.Hq, {
@@ -2646,7 +2646,7 @@ let lp = {
                             gap: 8,
                             align: "end",
                             children: [
-                                (0, s.jsx)(t6.S, { label: "Enable Flow Type", checked: e, onChange: n }),
+                                (0, s.jsx)(t3.S, { label: "Enable Flow Type", checked: e, onChange: n }),
                                 (0, s.jsx)(et.l, {
                                     label: "Flow Type",
                                     value: l,
@@ -2704,7 +2704,7 @@ let lp = {
                             }),
                             (0, s.jsx)(t_.Hq, {
                                 label: "Add Payment Step Body Connector View",
-                                children: (0, s.jsx)(t3, { paymentRequestWallet: t }),
+                                children: (0, s.jsx)(t6, { paymentRequestWallet: t }),
                             }),
                         ],
                     }),
@@ -2901,8 +2901,8 @@ let lA = new lg.A("PaymentElement.web.stories"),
             o = (0, lf.A)(),
             { stripePaymentElementProps: u, stripeAddressElementProps: d } = (0, ly.wD)({
                 step: m.pn.PAYMENT_ELEMENT,
-                handleStepChange: D.tEg,
-                onBillingAddressChange: D.tEg,
+                handleStepChange: M.tEg,
+                onBillingAddressChange: M.tEg,
                 paymentElementsEnabled: !0,
                 logger: lA,
                 shouldLogOnChangeEvents: !0,
@@ -3020,14 +3020,14 @@ let lA = new lg.A("PaymentElement.web.stories"),
         component: (e) => (0, s.jsx)(l_, { ...e, storyType: "stripe-payment-element" }),
         controls: { ...lk },
     },
-    lD = {
+    lM = {
         name: "Stripe Address Element",
         id: "stripe-address-element",
         component: (e) => (0, s.jsx)(l_, { ...e, storyType: "stripe-address-element" }),
         controls: { ...lk },
     };
 l(321073);
-var lM = l(735438),
+var lD = l(735438),
     lO = l(96337),
     lL = l(997101),
     lw = l(597770),
@@ -3226,7 +3226,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
-        currency: D.Yri.USD,
+        currency: M.Yri.USD,
         interval: eC.WT.MONTH,
         intervalCount: 1,
         startDate: new Date(),
@@ -3263,7 +3263,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                         l && a && n.push({ id: 3, label: "Discount Applied", amount: -100 }),
                         (0, s.jsx)("div", {
                             className: U.SG,
-                            children: (0, s.jsx)(lG.Vm, { label: t, lineItems: n, currency: D.Yri.USD }),
+                            children: (0, s.jsx)(lG.Vm, { label: t, lineItems: n, currency: M.Yri.USD }),
                         })
                     );
                 },
@@ -3298,7 +3298,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                             lineItems: a,
                             intervalType: eC.WT.MONTH,
                             intervalCount: 1,
-                            currency: D.Yri.USD,
+                            currency: M.Yri.USD,
                         }),
                     });
                 },
@@ -3393,7 +3393,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                                 value: i,
                                 options: n,
                                 onChange: r,
-                                onNew: lM.noop,
+                                onNew: lD.noop,
                                 disabled: t,
                                 error: l ? a : void 0,
                             }),
@@ -3434,7 +3434,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                     return (0, s.jsx)(lG._P, {
                         variant: lJ[t],
                         immediateDelivery: l ? { value: n, onChange: i } : void 0,
-                        paymentSourceType: a ? D.hes.PAYSAFE_CARD : D.hes.CARD,
+                        paymentSourceType: a ? M.hes.PAYSAFE_CARD : M.hes.CARD,
                     });
                 },
                 controls: {
@@ -3463,10 +3463,10 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                     return (0, s.jsxs)("div", {
                         children: [
                             (0, s.jsx)(y.E, { variant: "text-sm/normal", children: "Stateless Component:" }),
-                            (0, s.jsx)(lG.y, { onClick: D.tEg }),
+                            (0, s.jsx)(lG.y, { onClick: M.tEg }),
                             (0, s.jsx)("br", {}),
                             (0, s.jsx)(y.E, { variant: "text-sm/normal", children: "Link with Modal:" }),
-                            (0, s.jsx)(lG.Z4, { onComplete: D.tEg }),
+                            (0, s.jsx)(lG.Z4, { onComplete: M.tEg }),
                         ],
                     });
                 },
@@ -3592,7 +3592,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                         onClick: () =>
                                             (0, te.cV)({
                                                 amountRedeemed: 5e3,
-                                                currencyCode: D.Yri.USD,
+                                                currencyCode: M.Yri.USD,
                                                 onClose: () => {},
                                             }),
                                     }),
@@ -3602,7 +3602,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
             },
-            { title: "Payment Elements", stories: [lN, lD, lR] },
+            { title: "Payment Elements", stories: [lN, lM, lR] },
             O,
             { title: "Checkout Review Step", stories: [eB, eU] },
             lp,
@@ -3627,7 +3627,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                 ctaText: (0, V.uJ)(t) ? B.intl.string(B.t.H57f41) : t,
                                 linkText: (0, V.uJ)(l) ? B.intl.string(B.t["7f4H7D"]) : l,
                                 linkPreText: (0, V.uJ)(a) ? void 0 : a,
-                                ctaOnClick: D.tEg,
+                                ctaOnClick: M.tEg,
                             });
                         },
                         controls: {
@@ -3669,7 +3669,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
         tags: l0,
         IconComponent: i.C,
     },
-    l3 = {
+    l6 = {
         id: "nitro",
         name: "Nitro",
         groups: [
@@ -3869,7 +3869,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                             placeholder: "Select state",
                                             onSelectionChange: (e) => t(e),
                                             value: e,
-                                            options: tD,
+                                            options: tM,
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
@@ -3908,7 +3908,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                             placeholder: "Select type",
                                             onSelectionChange: (e) => t(e),
                                             value: e,
-                                            options: tM,
+                                            options: tD,
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
@@ -4058,11 +4058,11 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
         tags: l0,
         IconComponent: r.t,
     },
-    l6 = {
+    l3 = {
         id: "identity",
         name: "Identity",
         groups: [
-            e6,
+            e3,
             {
                 title: "Editable Tile Button Examples",
                 stories: [
@@ -4156,4 +4156,4 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
         tags: l0,
         IconComponent: o.n,
     },
-    l8 = { playgroundBaseUrl: "revenue", collections: [l1, l2, l3, l6] };
+    l8 = { playgroundBaseUrl: "revenue", collections: [l1, l2, l6, l3] };

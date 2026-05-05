@@ -184,7 +184,7 @@ function B(e) {
             baseAnalyticsData: R,
             flowStartTime: L,
             trialId: D,
-            planGroup: B,
+            planGroup: B = [],
             analyticsLocation: W,
             openInvoiceId: V,
             metadata: H,

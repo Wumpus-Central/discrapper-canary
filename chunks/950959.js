@@ -12,7 +12,7 @@ var l = t(627968),
     x = t(735305),
     C = t(343834),
     A = t(926795),
-    P = t(623020),
+    P = t(862241),
     j = t(766734),
     h = t(295405),
     I = t(284009),
@@ -61,28 +61,28 @@ function m(e) {
 }
 var v = t(503698),
     D = t.n(v),
-    O = t(939249),
-    b = t(789645),
-    G = t(935462),
-    M = t(303612),
+    M = t(939249),
+    O = t(789645),
+    b = t(935462),
+    G = t(303612),
     w = t(916261),
     L = t(575650);
 function R(e) {
     let { className: n, onClose: t } = e;
-    return (0, l.jsx)(O.D, {
+    return (0, l.jsx)(M.D, {
         className: D()(w.cG, n),
         onClick: t,
-        children: (0, l.jsx)(b.P, { size: "xs", color: "currentColor", className: w.yP }),
+        children: (0, l.jsx)(O.P, { size: "xs", color: "currentColor", className: w.yP }),
     });
 }
 function U(e) {
     let { guildProductListing: n, onClose: t, className: r } = e;
-    return (0, l.jsxs)(G.rQ, {
+    return (0, l.jsxs)(b.rQ, {
         className: D()(w.wx, L.GI, r),
         separator: !1,
         "data-migration-pending": !0,
         children: [
-            (0, l.jsx)(M.A, { className: w.F0, listing: n, imageSize: 500, alt: "" }),
+            (0, l.jsx)(G.A, { className: w.F0, listing: n, imageSize: 500, alt: "" }),
             (0, l.jsx)(R, { className: w.b, onClose: t }),
         ],
     });
@@ -111,7 +111,7 @@ let z = [
     },
     { key: d.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(A.A, {}) },
     { key: d.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(C.A, {}) },
-    { key: d.pn.REVIEW, renderStep: (e) => (0, l.jsx)(P._, { ...e }) },
+    { key: d.pn.REVIEW, renderStep: (e) => (0, l.jsx)(P._M, { ...e }) },
     { key: d.pn.CONFIRM, renderStep: (e) => (0, l.jsx)(m, { ...e }) },
 ];
 function Y(e) {

@@ -1,0 +1,70 @@
+.platform-win .splashBackground_eb4069:before {
+    background: var(--opacity-black-28);
+    border-end-start-radius: 3px;
+    content: "";
+    height: 22px;
+    inset-inline-end: 0;
+    position: fixed;
+    top: 0;
+    transition: background .4s ease .4s;
+    width: 84px;
+    z-index: 1
+}
+
+.platform-win .theme-dark .splashBackground_eb4069.loggingIn_eb4069:before,
+.platform-win .theme-light .splashBackground_eb4069.loggingIn_eb4069:before {
+    background: transparent
+}
+
+.characterBackground_eb4069 {
+    min-height: 100vh;
+    overflow: auto;
+    position: relative;
+    width: 100vw
+}
+
+.characterBackground_eb4069 .artwork_eb4069 {
+    height: 100%;
+    inset-inline-start: 0;
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.characterBackground_eb4069 .logoWithText_eb4069 {
+    inset-inline-start: 48px;
+    position: relative;
+    top: 48px
+}
+
+.characterBackground_eb4069 .logo_eb4069 {
+    display: block
+}
+
+.characterBackground_eb4069 .logo_eb4069,
+.splashBackground_eb4069 .logo_eb4069 {
+    inset-inline-start: 50%;
+    margin-inline-start: -65px;
+    margin-top: 0;
+    position: fixed;
+    top: 24px
+}
+
+@media (min-width:830px) {
+    .characterBackground_eb4069 .logo_eb4069 {
+        inset-inline-start: 48px;
+        margin: 0;
+        top: 53px
+    }
+
+    .splashBackground_eb4069 .logo_eb4069 {
+        inset-inline-start: 24px;
+        margin: 0;
+        position: fixed;
+        top: 24px
+    }
+
+    .platform-osx .splashBackground_eb4069 .logo_eb4069 {
+        top: 40px
+    }
+}
