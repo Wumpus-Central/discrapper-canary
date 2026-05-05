@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 539341, Version Hash: 34af377fa6a29597c3e9d5f6ec6b8b82eeedf927`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 539344, Version Hash: ce5d9155f453b94455cac414916b520d52aa256a`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -7602,8 +7602,8 @@ class u9 extends e8.PureComponent {
     }
     openPrivateChannel = () => {
         let { user: e } = this.props,
-            t = im().find(ib.A.getMutablePrivateChannels(), (t) => t.type === eL.rbe.DM && t.getRecipientId() === e.id);
-        null != t ? (0, ub.pX)(eL.BVt.CHANNEL(eL.ME, t.id)) : l6.A.openPrivateChannel({ recipientIds: e.id });
+            t = ib.A.getDMFromUserId(e.id);
+        null != t ? (0, ub.pX)(eL.BVt.CHANNEL(eL.ME, t)) : l6.A.openPrivateChannel({ recipientIds: e.id });
     };
     handleRowClick = (e) => {
         e.stopPropagation(),
@@ -18173,7 +18173,7 @@ let SI = "isHideDevBanner",
                     className: t2()(SA.Wz, SA.mr),
                     children: [
                         (0, k.jsx)(Sg, { className: SA.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "539341" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "539344" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
