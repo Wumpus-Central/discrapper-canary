@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { I: () => c, Av: () => d, hs: () => u, QO: () => h }), n(321073);
+n.d(t, { I: () => c, Av: () => d, hs: () => u, QO: () => p }), n(321073);
 var r = n(919523),
     s = n(874373),
     a = n(265690),
@@ -90,6 +90,7 @@ async function d(e) {
         null != i && (i.setLocale(e), s.push(i.loadPromise)),
         s.push(_(e)),
         s.push(f(e)),
+        s.push(h(e)),
         s.push(
             (function (e) {
                 let { setTags: t } = n(38405).A;
@@ -110,7 +111,8 @@ async function _(e) {
     }
     t.setLocaleData(r);
 }
-async function f(e) {
+async function f(e) {}
+async function h(e) {
     let t = n(608998).W[e];
     null != t && (await t());
     let i = [],
@@ -118,6 +120,6 @@ async function f(e) {
     for (; r.length > 0; ) i.push(r.join("-")), r.pop();
     i.push("en-US"), n(989349).locale(i);
 }
-function h() {
+function p() {
     return u((e) => e.localeData) ?? s.default;
 }

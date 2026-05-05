@@ -1,0 +1,42 @@
+a.r(d),
+    Intl.ListFormat && "function" == typeof Intl.ListFormat.__addLocaleData
+        ? Intl.ListFormat.__addLocaleData({
+              data: {
+                  conjunction: {
+                      long: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+                      narrow: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+                      short: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+                  },
+                  disjunction: {
+                      long: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+                      narrow: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+                      short: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+                  },
+                  unit: {
+                      long: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+                      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+                      short: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+                  },
+              },
+              locale: "it",
+          })
+        : (globalThis.__FORMATJS_LISTFORMAT_DATA__ = globalThis.__FORMATJS_LISTFORMAT_DATA__ || []).push({
+              data: {
+                  conjunction: {
+                      long: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+                      narrow: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+                      short: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+                  },
+                  disjunction: {
+                      long: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+                      narrow: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+                      short: { end: "{0} o {1}", middle: "{0}, {1}", pair: "{0} o {1}", start: "{0}, {1}" },
+                  },
+                  unit: {
+                      long: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+                      narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+                      short: { end: "{0} e {1}", middle: "{0}, {1}", pair: "{0} e {1}", start: "{0}, {1}" },
+                  },
+              },
+              locale: "it",
+          });
