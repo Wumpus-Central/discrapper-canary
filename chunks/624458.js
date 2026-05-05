@@ -12,11 +12,6 @@ var i = n(636537),
     _ = n(652215),
     f = n(375708);
 let h = {
-    fetchGuildJoinRequest: async (e) => {
-        let t = await i.Bo.get({ url: _.Rsh.GUILD_JOIN_REQUEST_BY_ID(e), rejectWithError: !1 }),
-            n = (0, d.j)(t.body);
-        return r.h.dispatch({ type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS", joinRequest: n }), t;
-    },
     fetchGuildJoinRequests: async (e) => {
         let { guildId: t, status: n = c.B5.SUBMITTED, before: s, after: a, limit: o = 25, force: l = !1 } = e,
             f = l || !u.A.hasFetched(t);
@@ -74,7 +69,7 @@ let h = {
             o = arguments.length > 4 ? arguments[4] : void 0;
         (0, l.iN)({ guildId: e, actionType: a, applicationUserId: t });
         let u = await i.Bo.patch({
-            url: _.Rsh.GUILD_JOIN_REQUEST_ID(e, n),
+            url: _.Rsh.GUILD_JOIN_REQUEST(e, n),
             body: { action: a, rejection_reason: o },
             rejectWithError: !1,
         }).catch(
@@ -93,10 +88,6 @@ let h = {
             request: u.body,
         });
     },
-    actionAllPendingJoinRequests: async (e, t) => {
-        let n = await i.Bo.patch({ url: _.Rsh.GUILD_JOIN_REQUESTS(e), body: { action: t }, rejectWithError: !1 });
-        return r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_BULK_ACTION", guildId: e, action: t }), n.body;
-    },
     resetGuildJoinRequest: async (e) => {
         try {
             let { body: t } = await i.Bo.post({ url: _.Rsh.GUILD_MEMBER_REQUEST_TO_JOIN(e), rejectWithError: !1 });
@@ -112,28 +103,22 @@ let h = {
     setSelectedApplicationTab: (e, t) => {
         r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB", guildId: e, applicationTab: t });
     },
-    setSelectedSortOrder: (e, t) => {
-        r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER", guildId: e, sortOrder: t });
+    setSelectedSortOrder: (e, t, n) => {
+        r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_SET_SORT_ORDER", guildId: e, sortOrder: t, applicationStatus: n });
     },
     setSelectedGuildJoinRequest: (e, t) => {
         null != t && (0, l.gH)({ guildId: e, applicationStatus: t.applicationStatus, applicationUserId: t.userId }),
             r.h.dispatch({ type: "GUILD_JOIN_REQUESTS_SET_SELECTED", guildId: e, request: t });
     },
+    fetchJoinRequestForInterview: async (e) => {
+        let t = await i.Bo.get({ url: _.Rsh.JOIN_REQUEST(e), rejectWithError: !1 }),
+            n = (0, d.j)(t.body);
+        return r.h.dispatch({ type: "GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS", joinRequest: n }), t;
+    },
     createOrEnterJoinRequestInterview: async function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = await i.Bo.post({ url: _.Rsh.GUILD_JOIN_REQUEST_INTERVIEW(e), rejectWithError: !1 }),
+            n = await i.Bo.post({ url: _.Rsh.JOIN_REQUEST_INTERVIEW(e), rejectWithError: !1 }),
             s = (0, o.UE)(n.body);
         return r.h.dispatch({ type: "CHANNEL_CREATE", channel: s }), t && a.default.selectPrivateChannel(s.id), s.id;
-    },
-    fetchJoinRequestCooldown: async (e) => {
-        try {
-            let t = await i.Bo.get({ url: _.Rsh.GUILD_MEMBER_JOIN_REQUEST_COOLDOWN(e), rejectWithError: !1 });
-            return (
-                r.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH", guildId: e, cooldown: t.body.cooldown }),
-                t
-            );
-        } catch (t) {
-            throw (r.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH", guildId: e, cooldown: null }), t);
-        }
     },
 };

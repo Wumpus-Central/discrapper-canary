@@ -122,13 +122,6 @@ let M = new w(o.h, {
     GUILD_JOIN_REQUESTS_FETCH_FAILURE: function () {
         g = !1;
     },
-    GUILD_JOIN_REQUESTS_BULK_ACTION: function (e) {
-        let { guildId: t, action: n } = e;
-        T.values(A(t, d.B5.SUBMITTED)).forEach((e) => {
-            C({ ...e, applicationStatus: n });
-        }),
-            p(t, 0);
-    },
     GUILD_JOIN_REQUEST_CREATE: v,
     GUILD_JOIN_REQUEST_UPDATE: v,
     GUILD_JOIN_REQUEST_DELETE: function (e) {
@@ -141,11 +134,8 @@ let M = new w(o.h, {
         n !== O[t] && (O[t] = n);
     },
     GUILD_JOIN_REQUESTS_SET_SORT_ORDER: function (e) {
-        let { guildId: t, sortOrder: n } = e;
-        if (n === R[t]) return;
-        R[t] = n;
-        let i = O[t] ?? d.B5.SUBMITTED;
-        "REVIEW_APPLICATION" !== i && ((0, c.mf)(i) && N.clear(), (0, c.ar)(i) && S.clear());
+        let { guildId: t, sortOrder: n, applicationStatus: i } = e;
+        n !== R[t] && ((R[t] = n), (0, c.mf)(i) && N.clear(), (0, c.ar)(i) && S.clear());
     },
     GUILD_JOIN_REQUESTS_SET_SELECTED: function (e) {
         let { guildId: t, request: n } = e;
