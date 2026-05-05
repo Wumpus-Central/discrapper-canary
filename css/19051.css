@@ -967,6 +967,11 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
     background-color: var(--background-mod-muted)
 }
 
+.infoIcon__63de2 {
+    align-self: flex-start;
+    margin-inline-start: calc(var(--space-8)*-1)
+}
+
 .paymentSourceLabel_f38e43 {
     line-height: 22px;
     margin-inline-start: 8px;
