@@ -18,15 +18,15 @@ var l = a(627968),
     _ = a(736056),
     b = a(763827),
     I = a(773371),
-    A = a(174459),
-    N = a(220478),
+    N = a(174459),
+    A = a(220478),
     S = a(9302),
     x = a(41984),
     G = a(181435),
-    k = a(78878),
-    E = a(651930);
+    E = a(78878),
+    k = a(651930);
 a(321073);
-var w = a(328153),
+var w = a(952818),
     D = a(760751),
     j = a(935208),
     T = a(296027),
@@ -99,7 +99,6 @@ function L(e) {
         supportsOutOfProcessOverlay: !1,
         thirdPartySkus: [],
         themes: [],
-        linkedApplications: void 0,
     };
 }
 function W(e) {
@@ -122,7 +121,7 @@ function W(e) {
             ];
         }, []),
         r = (0, u.bG)([D.A], () => (null == t ? null : L(t, [D.A])), [t]);
-    return (0, l.jsx)(E.i, {
+    return (0, l.jsx)(k.i, {
         games: i,
         selectedGame: r ?? null,
         onGameSelected: (e) => {
@@ -187,7 +186,7 @@ function X(e) {
     let t,
         i,
         r,
-        E,
+        k,
         D,
         { onClose: j, transitionState: O, location: M, appContext: L } = e,
         X = (0, u.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)(),
@@ -198,7 +197,7 @@ function X(e) {
             ((t = (0, P.b4)()),
             (i = (0, u.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)()),
             (r = (0, u.bG)([T.default], () => T.default.getTrackedGameByPid(i), [i])),
-            (E = (0, u.bG)([w.Ay], () => w.Ay.getVisibleGame())),
+            (k = (0, u.bG)([w.Ay], () => w.Ay.getVisibleGame())),
             (D = (0, u.bG)([w.Ay], () => w.Ay.getGamesSeen(!1)[0])),
             (0, u.bG)([w.Ay, T.default], () => {
                 switch (!0) {
@@ -229,7 +228,7 @@ function X(e) {
                                 trackedGame: null != n ? (a.getTrackedGameByPid(n) ?? void 0) : void 0,
                             };
                         })(t, [w.Ay, T.default]);
-                    case null != E:
+                    case null != k:
                         return (function (e) {
                             let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [T.default];
                             return {
@@ -240,13 +239,13 @@ function X(e) {
                                 trackedGame: C(e, [t]) ?? void 0,
                                 runningGame: e,
                             };
-                        })(E, [T.default]);
+                        })(k, [T.default]);
                     case null != D:
                         return F(D, [w.Ay, T.default]);
                     default:
                         return null;
                 }
-            }, [t, r, E, D])),
+            }, [t, r, k, D])),
         [ea, el] = n.useState(et?.fullscreenType ?? $?.fullscreenType ?? null),
         [en, ei] = n.useState(et),
         [er, eo] = n.useState(!1),
@@ -318,8 +317,8 @@ function X(e) {
                         }
                     return !0;
                 }),
-                u = k.A.getRecentActions(10),
-                m = N.A.getRecentExperimentBuckets(_.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
+                u = E.A.getRecentActions(10),
+                m = A.A.getRecentExperimentBuckets(_.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
                 c =
                     t?.fullscreenHistory == null
                         ? null
@@ -353,7 +352,7 @@ function X(e) {
                     recent_experiment_buckets: JSON.stringify(m),
                     location: M,
                 };
-            await A.default.track(H.HAw.OVERLAY_BUG_REPORT, g),
+            await N.default.track(H.HAw.OVERLAY_BUG_REPORT, g),
                 await (0, d.yy)(1e3),
                 eo(!1),
                 j?.(),
@@ -367,7 +366,7 @@ function X(e) {
         };
     return (
         (0, v.Ay)(() => {
-            A.default.track(H.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: M });
+            N.default.track(H.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: M });
         }),
         (0, l.jsx)(o.Modal, {
             transitionState: O,

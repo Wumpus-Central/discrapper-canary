@@ -1,8 +1,7 @@
-e.exports = {
+_.exports = {
     $H: "tabBar__66057",
     YU: "tabBarItem__66057",
     xR: "selectedTab__66057",
-    XG: "scroller__66057",
     OW: "guildList__66057",
     _S: "guildRow__66057",
     y5: "clickableGuildRow__66057 guildRow__66057",

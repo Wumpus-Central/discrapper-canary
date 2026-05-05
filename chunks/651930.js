@@ -5,29 +5,29 @@ var a = n(627968),
     s = n.n(i),
     r = n(562708),
     o = n(189213),
-    c = n(17928),
-    u = n(783878),
-    d = n(834730),
-    m = n(773812),
+    u = n(17928),
+    c = n(783878),
+    m = n(834730),
+    d = n(773812),
     g = n(260598),
     p = n(587895),
     h = n(429913),
-    _ = n(328153),
+    _ = n(952818),
     x = n(137177),
     A = n(409626),
-    f = n(379078),
-    v = n(704554),
-    b = n(760751),
+    v = n(379078),
+    b = n(704554),
+    f = n(760751),
     j = n(174459),
-    k = n(486020),
-    C = n(21241),
-    E = n(652215),
+    C = n(486020),
+    E = n(21241),
+    k = n(652215),
     S = n(375708),
     w = n(247947);
 let G = l.memo(function (e) {
         let { game: t } = e,
-            n = (0, c.bG)([p.A], () => p.A.getApplicationByName(t.name) ?? p.A.getApplication(t.id), [t.id, t.name]),
-            l = (0, c.bG)([_.Ay], () => {
+            n = (0, u.bG)([p.A], () => p.A.getApplicationByName(t.name) ?? p.A.getApplication(t.id), [t.id, t.name]),
+            l = (0, u.bG)([_.Ay], () => {
                 let e = _.Ay.getVisibleGame(),
                     n = null != e ? _.Ay.getGameOrTransformedSubgameForPID(e.pid) : null;
                 return n?.name?.toLowerCase() === t.name.toLowerCase() ? n : _.Ay.getGameForName(t.name);
@@ -45,21 +45,12 @@ let G = l.memo(function (e) {
         return (0, a.jsx)(x.A, { pid: l?.pid, game: i ?? n ?? t, size: x.M.XSMALL, className: w.Gt });
     }),
     y = {
-        searchType: f.n.FUZZY,
-        sortType: f.r.JARO_WINKLER,
+        searchType: v.n.FUZZY,
+        sortType: v.r.JARO_WINKLER,
         searchStringGenerator: (e) => {
             let { game: t, label: n } = e,
                 a = [t.name, n, t.id.toString()];
-            if (
-                (t.aliases.length > 0 && a.push(...t.aliases),
-                null != t.description && a.push(t.description),
-                null != t.linkedApplications)
-            )
-                for (let e of t.linkedApplications) {
-                    let t = p.A.getApplication(e.application_id);
-                    null != t && a.push(t.name);
-                }
-            return a;
+            return t.aliases.length > 0 && a.push(...t.aliases), null != t.description && a.push(t.description), a;
         },
         throttleMs: 100,
         maxSearchResults: 20,
@@ -71,12 +62,12 @@ let G = l.memo(function (e) {
                 onGameSelected: i,
                 onGameSearchQueryChange: r,
                 placeholder: o,
-                analyticsSurface: c,
+                analyticsSurface: u,
             } = e,
-            [d, m] = l.useState(""),
+            [m, d] = l.useState(""),
             g = l.useCallback(
                 (e) => {
-                    m(e), r?.(e);
+                    d(e), r?.(e);
                 },
                 [r],
             ),
@@ -94,12 +85,12 @@ let G = l.memo(function (e) {
             A = l.useCallback((e) => {
                 x(e);
             }, []),
-            f = l.useMemo(
+            v = l.useMemo(
                 () =>
                     s()((e, t, n) => {
                         let a = e.trim();
                         0 !== a.length &&
-                            j.default.track(E.HAw.DETECTABLE_GAME_SEARCHED, {
+                            j.default.track(k.HAw.DETECTABLE_GAME_SEARCHED, {
                                 surface: n,
                                 query_length: a.length,
                                 result_count: t,
@@ -107,8 +98,8 @@ let G = l.memo(function (e) {
                     }, 1e3),
                 [],
             );
-        l.useEffect(() => () => f.cancel(), [f]);
-        let b = l.useCallback(
+        l.useEffect(() => () => v.cancel(), [v]);
+        let f = l.useCallback(
                 (e) => {
                     let t = h[e];
                     if (null == t) return;
@@ -117,21 +108,21 @@ let G = l.memo(function (e) {
                 },
                 [h, i, g],
             ),
-            k = l.useCallback(
+            C = l.useCallback(
                 (e) => {
                     let t = e.target.value;
-                    g(t), null != n && t !== n.name && i(null), null != c && f(t, _.length, c);
+                    g(t), null != n && t !== n.name && i(null), null != u && v(t, _.length, u);
                 },
-                [n, i, g, c, _, f],
+                [n, i, g, u, _, v],
             );
         return (
-            (0, v.RT)(d, p, A, y),
-            (0, a.jsx)(u.Z, {
+            (0, b.RT)(m, p, A, y),
+            (0, a.jsx)(c.Z, {
                 options: _,
                 selectionMode: "single",
                 value: n?.id ?? void 0,
-                onSelectionChange: b,
-                onQueryChange: k,
+                onSelectionChange: f,
+                onQueryChange: C,
                 placeholder: o,
                 clearable: !0,
                 maxOptionsVisible: 5,
@@ -139,21 +130,21 @@ let G = l.memo(function (e) {
         );
     });
 function M(e) {
-    let { onClose: t, transitionState: n, onSubmitted: i, detectedActivity: s, defaultStep: u = "issue_selection" } = e,
-        [h, _] = l.useState(u),
-        [x, f] = l.useState(null),
-        [v, G] = l.useState(""),
+    let { onClose: t, transitionState: n, onSubmitted: i, detectedActivity: s, defaultStep: c = "issue_selection" } = e,
+        [h, _] = l.useState(c),
+        [x, v] = l.useState(null),
+        [b, G] = l.useState(""),
         [y, M] = l.useState(null),
         [T, D] = l.useState(""),
         L = l.useMemo(() => (0, A.u9)(), []),
-        I = (0, c.bG)([b.A], () => b.A.games),
+        I = (0, u.bG)([f.A], () => f.A.games),
         R = null != s,
-        O = (0, c.bG)([p.A], () => (s?.application_id != null ? p.A.getApplication(s.application_id) : null)),
+        O = (0, u.bG)([p.A], () => (s?.application_id != null ? p.A.getApplication(s.application_id) : null)),
         Z = () => {
             (0, A.K6)({
                 viewId: L,
                 applicationId: s?.application_id ?? "",
-                suggestedGameName: "" !== v.trim() ? v.trim() : void 0,
+                suggestedGameName: "" !== b.trim() ? b.trim() : void 0,
                 suggestedGameApplicationId: y?.id ?? null,
                 feedback: "" !== T.trim() ? T.trim() : void 0,
                 submitted: !0,
@@ -173,7 +164,7 @@ function M(e) {
                                 text: S.intl.string(S.t.geKm7t),
                                 onClick: Z,
                                 variant: "primary",
-                                disabled: "" === v.trim(),
+                                disabled: "" === b.trim(),
                             },
                         ],
                     };
@@ -204,18 +195,18 @@ function M(e) {
                     return (0, a.jsxs)("div", {
                         className: w.Qs,
                         children: [
-                            (0, a.jsx)(d.E, {
+                            (0, a.jsx)(m.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 children: S.intl.string(S.t.IQHicr),
                             }),
                             (0, a.jsx)("div", {
                                 className: w.R$,
-                                children: (0, a.jsx)(m.z, {
+                                children: (0, a.jsx)(d.z, {
                                     value: x ?? void 0,
                                     onChange: (e) => {
-                                        f(e),
-                                            j.default.track(E.HAw.GAME_DETECTION_FEEDBACK_MODAL, {
+                                        v(e),
+                                            j.default.track(k.HAw.GAME_DETECTION_FEEDBACK_MODAL, {
                                                 selected_option: e,
                                                 application_id: s?.application_id ?? null,
                                             }),
@@ -243,7 +234,7 @@ function M(e) {
                     return (0, a.jsxs)("div", {
                         className: w.Qs,
                         children: [
-                            (0, a.jsx)(d.E, {
+                            (0, a.jsx)(m.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 children: R ? S.intl.string(S.t["79o/iq"]) : S.intl.string(S.t["r/2pZy"]),
@@ -255,7 +246,7 @@ function M(e) {
                                             className: w.Gr,
                                             children: [
                                                 null !=
-                                                (e = k.Ay.getApplicationIconURL({
+                                                (e = C.Ay.getApplicationIconURL({
                                                     id: s.application_id ?? "",
                                                     icon: O?.icon ?? null,
                                                 }))
@@ -279,14 +270,14 @@ function M(e) {
                                                               children: "?",
                                                           }),
                                                       }),
-                                                (0, a.jsx)(d.E, {
+                                                (0, a.jsx)(m.E, {
                                                     variant: "text-md/semibold",
                                                     color: "text-strong",
                                                     children: null != s.name && "" !== s.name ? s.name : O?.name,
                                                 }),
                                             ],
                                         }),
-                                        (0, a.jsx)(C.A, {}),
+                                        (0, a.jsx)(E.A, {}),
                                     ],
                                 }),
                             (0, a.jsx)(N, {
@@ -303,7 +294,7 @@ function M(e) {
                     return (0, a.jsxs)("div", {
                         className: w.Qs,
                         children: [
-                            (0, a.jsx)(d.E, {
+                            (0, a.jsx)(m.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 children: S.intl.string(S.t.IblYEw),
