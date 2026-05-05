@@ -1,24 +1,26 @@
-a.r(t), a.d(t, { default: () => b }), a(321073);
+a.r(t), a.d(t, { default: () => _ }), a(321073);
 var i,
     l,
-    s = a(205693),
+    s = a(459838),
     o = a(626584),
     n = a(51760),
     d = a(274372),
     r = a(372684),
-    c = a(399925),
-    h = a(723702),
-    f = a(19575),
-    M = a(572164),
-    u = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i),
-    p =
+    c = a(948138),
+    h = a(710195),
+    M = a(723702),
+    u = a(19575),
+    f = a(974293),
+    p = a(572164),
+    L = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i),
+    m =
         (((l = {}).UNINITIALIZED = "uninitialized"),
         (l.UNSUPPORTED = "unsupported"),
         (l.LOADING = "loading"),
         (l.LOADED = "loaded"),
         (l.FAILED = "failed"),
         l);
-let L = [
+let g = [
         ["Speech-Emotion-Classification.onnx", "5e29cab15162f74f42c1afc3d5577497861758c7acd6e4da3d1f70977bd9e1b7"],
         ["melspectrogram.onnx", "ba2b0e0f8b7b875369a2c89cb13360ff53bac436f2895cced9f479fa65eb176f"],
         ["embedding_model.onnx", "70d164290c1d095d1d4ee149bc5e00543250a7316b59f31d056cff7bd3075c1f"],
@@ -28,10 +30,10 @@ let L = [
         ["burr_burr_patta_pim.onnx", "3c1049fd33241f380028fe5c58798adc820e06b9b036ad62bf8dc7a7e55115ca"],
         ["ggml-tiny.en.bin", "921e4cf8686fdd993dcd081a5da5b6c365bfde1162e72b08d75ac75289920b1f"],
     ],
-    m = new o.A("MLNativeModuleManager");
-class g {
+    y = new o.A("MLNativeModuleManager");
+class w {
     state = {
-        nativeMLModuleState: p.UNINITIALIZED,
+        nativeMLModuleState: m.UNINITIALIZED,
         models: {},
         modelState: {},
         catalogLastFetchTime: void 0,
@@ -41,18 +43,28 @@ class g {
     mlCatalogRefreshing = !1;
     onMLResult = null;
     onMLModuleLoaded = null;
+    constructor() {
+        h.A.addChangeListener(() => this.handleClipsV3ExperimentChanged());
+    }
     start(e, t) {
-        (this.onMLResult = e),
-            (this.onMLModuleLoaded = t),
-            m.info("ML signal manager started"),
-            (0, M.TD)() &&
-                (m.info("Clips enabled on startup, initializing ML module"), this.maybeSetupMLModulePrefetchModels());
+        if (((this.onMLResult = e), (this.onMLModuleLoaded = t), y.info("ML signal manager started"), (0, f.qi)())) {
+            y.info("clips v3 enabled; skipping v1/v2 ML module setup"),
+                (this.state.nativeMLModuleState = m.UNSUPPORTED);
+            return;
+        }
+        (0, p.TD)() &&
+            (y.info("Clips enabled on startup, initializing ML module"), this.maybeSetupMLModulePrefetchModels());
+    }
+    handleClipsV3ExperimentChanged() {
+        !(null == this.onMLResult || (0, f.qi)()) &&
+            (this.state.nativeMLModuleState === m.UNSUPPORTED && (this.state.nativeMLModuleState = m.UNINITIALIZED),
+            (0, p.TD)() && this.maybeSetupMLModulePrefetchModels());
     }
     stop() {
         (this.onMLResult = null),
             (this.onMLModuleLoaded = null),
             this.activeDownloads.clear(),
-            m.info("ML signal manager stopped");
+            y.info("ML signal manager stopped");
     }
     getNativeModuleState() {
         return this.state.nativeMLModuleState;
@@ -64,40 +76,40 @@ class g {
         return this.state.models;
     }
     isNativeModuleLoaded() {
-        return this.state.nativeMLModuleState === p.LOADED;
+        return this.state.nativeMLModuleState === m.LOADED;
     }
     isNativeModuleLoading() {
-        return this.state.nativeMLModuleState === p.LOADING;
+        return this.state.nativeMLModuleState === m.LOADING;
     }
     async maybeSetupMLModulePrefetchModels() {
         if (!(this.isNativeModuleLoaded() || this.isNativeModuleLoading()) && !__OVERLAY__) {
-            if (!((0, h.isWindows)() || (0, h.isMac)())) {
-                this.state.nativeMLModuleState = p.UNSUPPORTED;
+            if (!((0, M.isWindows)() || (0, M.isMac)())) {
+                this.state.nativeMLModuleState = m.UNSUPPORTED;
                 return;
             }
             try {
-                (this.state.nativeMLModuleState = p.LOADING),
+                (this.state.nativeMLModuleState = m.LOADING),
                     await this.refreshMLCatalog(),
                     await this.prefetchMLModels(),
                     await this.loadMLNativeModule();
             } catch (e) {
-                m.warn(`Failed to load Clips ML module: ${e.message}`), (this.state.nativeMLModuleState = p.FAILED);
+                y.warn(`Failed to load Clips ML module: ${e.message}`), (this.state.nativeMLModuleState = m.FAILED);
             }
         }
     }
     async loadMLNativeModule() {
         try {
-            await f.Ay.ensureModule("discord_ml");
-            let e = f.Ay.requireModule("discord_ml");
-            await e.setupResources(), await f.Ay.ensureModule("discord_voice");
-            let t = f.Ay.requireModule("discord_voice");
+            await u.Ay.ensureModule("discord_ml");
+            let e = u.Ay.requireModule("discord_ml");
+            await e.setupResources(), await u.Ay.ensureModule("discord_voice");
+            let t = u.Ay.requireModule("discord_voice");
             t.setupMLPath?.(),
                 await e.setMLResultCallback((e) => {
                     let t;
                     try {
                         t = JSON.parse(e);
                     } catch (e) {
-                        m.warn(`Failed to parse ML result: ${e.message}`);
+                        y.warn(`Failed to parse ML result: ${e.message}`);
                         return;
                     }
                     "string" == typeof t.type &&
@@ -106,7 +118,7 @@ class g {
                         this.onMLResult({ type: t.type, payload: t.payload });
                 }),
                 this.onMLModuleLoaded?.(),
-                (this.state.nativeMLModuleState = p.LOADED);
+                (this.state.nativeMLModuleState = m.LOADED);
             let a = n.Ay.getMediaEngine();
             a.setClipsMLPipelineEnabled(!0);
             let i = d.A.getSettings()?.mlPipelinesEnabled ?? {
@@ -121,9 +133,9 @@ class g {
                 a.setClipsMLPipelineTypeEnabled("yell_detector", i.yellDetector),
                 a.setClipsMLPipelineTypeEnabled("whisper_transcription", i.whisperTranscription),
                 a.setClipsMLPipelineTypeEnabled("laughter_shouting", i.laughterDetector),
-                m.info("ML native module loaded successfully");
+                y.info("ML native module loaded successfully");
         } catch (e) {
-            m.warn(`Failed to load Clips ML module: ${e.message}`), (this.state.nativeMLModuleState = p.FAILED);
+            y.warn(`Failed to load Clips ML module: ${e.message}`), (this.state.nativeMLModuleState = m.FAILED);
         }
     }
     async refreshMLCatalog() {
@@ -135,24 +147,24 @@ class g {
                     (this.state.models = e.models),
                     (this.state.catalogLastFetchTime = new Date()),
                     (this.state.catalogFetchFailed = !1),
-                    m.info("ML catalog refreshed successfully");
+                    y.info("ML catalog refreshed successfully");
             } catch (e) {
-                m.warn(`Failed to refresh Clips ML catalog: ${e.message}`), (this.state.catalogFetchFailed = !0);
+                y.warn(`Failed to refresh Clips ML catalog: ${e.message}`), (this.state.catalogFetchFailed = !0);
             } finally {
                 this.mlCatalogRefreshing = !1;
             }
     }
     loadMLCatalog() {
         let e = { version: "1.0.0", models: {} };
-        for (let [t, a] of L)
+        for (let [t, a] of g)
             e.models[t] = { url: `https://cdn.discordapp.com/assets/content/${a}.onnx`, version: "1.0.0" };
-        return m.info("Loaded mock ML catalog with models:", Object.keys(e.models)), Promise.resolve(e);
+        return y.info("Loaded mock ML catalog with models:", Object.keys(e.models)), Promise.resolve(e);
     }
     async scanModelState(e) {
-        if (!f.Ay.canCheckMLModelFilesExist()) return;
+        if (!u.Ay.canCheckMLModelFilesExist()) return;
         let t = Object.keys(e.models).map((e) => ({ id: e, fileName: e }));
-        for (let { id: e, exists: a } of await f.Ay.checkMLModelFilesExist(t))
-            this.state.modelState[e] = { status: a ? u.DOWNLOADED : u.MISSING };
+        for (let { id: e, exists: a } of await u.Ay.checkMLModelFilesExist(t))
+            this.state.modelState[e] = { status: a ? L.DOWNLOADED : L.MISSING };
     }
     async prefetchMLModels() {
         if (__OVERLAY__) return;
@@ -160,34 +172,34 @@ class g {
             t = [];
         for (let [a, i] of Object.entries(e)) {
             let e = this.state.modelState[a];
-            e?.status !== u.DOWNLOADED &&
-                e?.status !== u.DOWNLOADING &&
+            e?.status !== L.DOWNLOADED &&
+                e?.status !== L.DOWNLOADING &&
                 t.push(this.downloadMLModel({ modelId: a, url: i.url, fileName: a }));
         }
-        m.info("Waiting for ML model downloads", t), await Promise.all(t), m.info("Finished downloading all ML models");
+        y.info("Waiting for ML model downloads", t), await Promise.all(t), y.info("Finished downloading all ML models");
     }
     downloadMLModel(e) {
         let { url: t, modelId: a, fileName: i } = e,
             l = this.state.modelState[a],
             s = this.activeDownloads.get(a);
         if (null != s) return s;
-        if (l?.status === u.DOWNLOADED) return Promise.resolve();
-        if (l?.status === u.DOWNLOADING)
+        if (l?.status === L.DOWNLOADED) return Promise.resolve();
+        if (l?.status === L.DOWNLOADING)
             return Promise.reject(Error("ML model is downloading but not in active downloads map"));
-        this.state.modelState[a] = { status: u.DOWNLOADING, downloadedBytes: 0 };
-        let o = f.Ay.downloadMLModelFile(t, i, (e) => {
+        this.state.modelState[a] = { status: L.DOWNLOADING, downloadedBytes: 0 };
+        let o = u.Ay.downloadMLModelFile(t, i, (e) => {
             let { downloadedBytes: t, totalBytes: i } = e;
             this.state.modelState[a] = { ...this.state.modelState[a], downloadedBytes: t, totalBytes: i };
         })
             .then((e) => {
-                e.fetchedFromNetwork && m.info("Downloaded ML model from network:", a),
-                    (this.state.modelState[a] = { status: u.DOWNLOADED, downloadedBytes: void 0 });
+                e.fetchedFromNetwork && y.info("Downloaded ML model from network:", a),
+                    (this.state.modelState[a] = { status: L.DOWNLOADED, downloadedBytes: void 0 });
             })
             .catch((t) => {
                 t?.USER_CANCELED_DOWNLOAD
-                    ? m.info("User canceled the download for ML model", e)
-                    : m.error("Failed to download ML model", { reason: t, ...e }),
-                    (this.state.modelState[a] = { status: u.MISSING });
+                    ? y.info("User canceled the download for ML model", e)
+                    : y.error("Failed to download ML model", { reason: t, ...e }),
+                    (this.state.modelState[a] = { status: L.MISSING });
             })
             .finally(() => {
                 this.activeDownloads.delete(a);
@@ -195,9 +207,9 @@ class g {
         return this.activeDownloads.set(a, o), o;
     }
 }
-let y = new g(),
-    w = new o.A("MLSignalHandler");
-class D {
+let D = new w(),
+    b = new o.A("MLSignalHandler");
+class S {
     emitSignal;
     emotionHistory = [];
     yellHistory = [];
@@ -205,16 +217,16 @@ class D {
         this.emitSignal = e;
     }
     start() {
-        w.info("ML signal handler started"),
-            y.start(this.handleMLResult, () => {}),
+        b.info("ML signal handler started"),
+            D.start(this.handleMLResult, () => {}),
             n.Ay.getMediaEngine().on(s.bg.ClipsMlDetection, this.handleV3MlDetection);
     }
     stop() {
-        y.stop(),
+        D.stop(),
             n.Ay.getMediaEngine().off(s.bg.ClipsMlDetection, this.handleV3MlDetection),
             (this.emotionHistory = []),
             (this.yellHistory = []),
-            w.info("ML signal handler stopped");
+            b.info("ML signal handler stopped");
     }
     getState() {
         return { emotionHistory: [...this.emotionHistory], yellHistory: [...this.yellHistory] };
@@ -237,7 +249,7 @@ class D {
                 this.handleWhisperTranscription(e.payload);
                 break;
             default:
-                w.warn(`Unknown ML result type: ${e.type}`);
+                b.warn(`Unknown ML result type: ${e.type}`);
         }
     };
     handleYellClassification(e) {
@@ -259,7 +271,7 @@ class D {
                     return `${t}: |${s}${o}| (${i.toFixed(3)})`;
                 })
                 .join("  ");
-        window.__CLIPS_DEBUG__?.wakeWord && w.info(`Wake word: ${t}: ${l}`);
+        window.__CLIPS_DEBUG__?.wakeWord && b.info(`Wake word: ${t}: ${l}`);
         let s = d.A.getSettings().autoClipPhrases;
         for (let [e, t] of Object.entries(a))
             if (("number" == typeof t ? t : 0) >= 0.5 && s.includes(e)) {
@@ -271,11 +283,11 @@ class D {
         let { userId: t, emotions: a, timestamp: i } = e;
         this.emotionHistory.push({ timestamp: i, userId: t, emotions: a }),
             this.emotionHistory.length > 10 && this.emotionHistory.shift(),
-            window.__CLIPS_DEBUG__?.emotion && w.info(`Emotion classification: ${t}: ${JSON.stringify(a)}`);
+            window.__CLIPS_DEBUG__?.emotion && b.info(`Emotion classification: ${t}: ${JSON.stringify(a)}`);
     }
     handleWhisperTranscription(e) {
         let { userId: t, transcription: a, timestamp: i } = e;
-        window.__CLIPS_DEBUG__?.whisper && w.info(`Whisper transcription: ${t}: ${JSON.stringify(a)}`);
+        window.__CLIPS_DEBUG__?.whisper && b.info(`Whisper transcription: ${t}: ${JSON.stringify(a)}`);
         let l = d.A.getSettings().autoClipPhrases;
         if (0 === l.length) return;
         let s = (e) =>
@@ -308,4 +320,4 @@ class D {
             }
     }
 }
-let b = (e) => new D(e);
+let _ = (e) => new S(e);

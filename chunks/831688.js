@@ -556,26 +556,27 @@ class eG extends l.PureComponent {
                 isForumToolbar: r,
                 ctaRef: s,
                 userHasPremium: u,
+                isMe: d,
             } = this.props,
-            d = ex.A.getChannel(t.getChannelId());
+            c = ex.A.getChannel(t.getChannelId());
         if (a) return void s.current?.focus();
-        let c = t.getChannelId(),
-            h = r ? z.qN.FORUM_TOOLBAR : z.qN.MESSAGE_INLINE_BUTTON;
+        let h = t.getChannelId(),
+            p = r ? z.qN.FORUM_TOOLBAR : z.qN.MESSAGE_INLINE_BUTTON;
         l && !u
             ? (0, W.z)({
                   analytics: {
                       type: eg.e.BURST_REACTION_UPSELL,
-                      page: d?.getGuildId() != null ? e_.liQ.GUILD_CHANNEL : e_.liQ.DM_CHANNEL,
-                      section: null != d ? (0, F.sn)(d) : void 0,
+                      page: c?.getGuildId() != null ? e_.liQ.GUILD_CHANNEL : e_.liQ.DM_CHANNEL,
+                      section: null != c ? (0, F.sn)(c) : void 0,
                       object: e_.ZSU.EMOJI_REACTION_UPSELL,
                   },
               })
             : o
               ? this.handleShowVerificationGate()
               : i ||
-                (this.isMe()
-                    ? (0, z.et)({ channelId: c, messageId: t.id, emoji: n, location: h, options: { burst: l } })
-                    : (0, z.BB)(c, t.id, n, h, { burst: l }));
+                (d
+                    ? (0, z.et)({ channelId: h, messageId: t.id, emoji: n, location: p, options: { burst: l } })
+                    : (0, z.BB)(h, t.id, n, p, { burst: l }));
     };
     handleEnter = (e) => {
         let {
@@ -634,10 +635,6 @@ class eG extends l.PureComponent {
     hideTooltip = () => {
         let { setShowingMoreEmojis: e, setShouldShowTooltip: t, hasShownTooltipRef: n, nonce: i } = this.props;
         t(!1), e(!1), n.current && eR.default.track(e_.HAw.CLOSE_POPOUT, { nonce: i });
-    };
-    isMe = () => {
-        let { me: e, me_burst: t, type: n } = this.props;
-        return eV(e, t, n);
     };
     updateTooltipText = () => {
         let { message: e, emoji: t, type: n, isKeyboardNavigationRef: i } = this.props,
@@ -747,31 +744,32 @@ class eG extends l.PureComponent {
                 hideEmoji: R,
                 animationStartPosition: I,
                 emojiSize: j,
+                isMe: N,
             } = this.props,
             {
-                shouldShowTooltip: N,
-                tooltipTextAria: v,
-                reactionRef: S,
-                showingMoreEmojis: b,
-                upsellPopoutTargetRef: C,
+                shouldShowTooltip: v,
+                tooltipTextAria: S,
+                reactionRef: b,
+                showingMoreEmojis: C,
+                upsellPopoutTargetRef: y,
             } = this.props,
-            y = x ? eP : ek,
-            L = {},
-            M = r ? l : n;
+            L = x ? eP : ek,
+            M = {},
+            w = r ? l : n;
         if (r && null != o) {
             let { accentColor: n, backgroundColor: i, opacity: l } = o,
                 a = (0, d.xp)(i ?? "", l) ?? "";
-            this.isMe() && (L.borderColor = i), (L.background = a), (e = n), (t = n);
+            N && (M.borderColor = i), (M.background = a), (e = n), (t = n);
         }
-        let w = S?.getBoundingClientRect(),
-            _ = null != I && null != w,
-            k = null == I;
+        let _ = b?.getBoundingClientRect(),
+            k = null != I && null != _,
+            P = null == I;
         return (0, i.jsx)(h.Y, {
-            targetElementRef: { current: S },
-            shouldShow: N,
-            "aria-label": v ?? !1,
+            targetElementRef: { current: b },
+            shouldShow: v,
+            "aria-label": S ?? !1,
             renderPopout: this.renderTooltip,
-            avoidancePadding: b ? void 0 : { top: 120 },
+            avoidancePadding: C ? void 0 : { top: 120 },
             nudgeAlignIntoViewport: !0,
             position: "top",
             align: "center",
@@ -781,28 +779,28 @@ class eG extends l.PureComponent {
                     onMouseLeave: this.handleLeave,
                     ref: this.handleSetReactionRef,
                     children: (0, i.jsx)("div", {
-                        className: a()(y.reaction, T, {
-                            [y.reactionMe]: this.isMe(),
-                            [y.reactionReadOnly]: c && !g && !A,
-                            [y.shakeReaction]: R && null == I,
+                        className: a()(L.reaction, T, {
+                            [L.reactionMe]: N,
+                            [L.reactionReadOnly]: c && !g && !A,
+                            [L.shakeReaction]: R && null == I,
                         }),
-                        style: L,
+                        style: M,
                         children: (0, i.jsx)(h.Y, {
-                            targetElementRef: C,
+                            targetElementRef: y,
                             renderPopout: this.renderLurkerModeUpsellPopout,
                             position: "top",
                             children: (n) =>
                                 (0, i.jsxs)(p.D, {
                                     ...n,
-                                    innerRef: C,
-                                    className: y.reactionInner,
+                                    innerRef: y,
+                                    className: L.reactionInner,
                                     onClick: this.handleClick,
                                     "aria-disabled": c,
-                                    "aria-label": (0, F.mb)(this.isMe(), M, u, r),
-                                    "aria-pressed": this.isMe(),
+                                    "aria-label": (0, F.mb)(N, w, u, r),
+                                    "aria-pressed": N,
                                     children: [
                                         (0, i.jsx)("div", {
-                                            className: a()({ [y.burstGlow]: r }),
+                                            className: a()({ [L.burstGlow]: r }),
                                             style: { boxShadow: `0 0 16px ${t}` },
                                         }),
                                         (0, i.jsxs)("div", {
@@ -810,14 +808,14 @@ class eG extends l.PureComponent {
                                                 r
                                                     ? (0, i.jsxs)(i.Fragment, {
                                                           children: [
-                                                              _ &&
+                                                              k &&
                                                                   (0, i.jsx)(O, {
                                                                       messageId: E.id,
                                                                       emoji: u,
                                                                       startPosition: I,
-                                                                      targetPosition: w,
+                                                                      targetPosition: _,
                                                                   }),
-                                                              k &&
+                                                              P &&
                                                                   (0, i.jsx)(ew, {
                                                                       count: l,
                                                                       emoji: u,
@@ -831,7 +829,7 @@ class eG extends l.PureComponent {
                                                       })
                                                     : null,
                                                 (0, i.jsx)(m.A, {
-                                                    className: a()({ [y.hideEmoji]: R }),
+                                                    className: a()({ [L.hideEmoji]: R }),
                                                     emojiId: u.id,
                                                     emojiName: u.name,
                                                     size: j,
@@ -842,12 +840,12 @@ class eG extends l.PureComponent {
                                         s
                                             ? null
                                             : (0, i.jsx)(f.A, {
-                                                  className: y.reactionCount,
-                                                  value: M,
+                                                  className: L.reactionCount,
+                                                  value: w,
                                                   color: e,
                                                   digitWidth: eU,
                                               }),
-                                        (0, i.jsx)($, { count: M, reactionRef: S }),
+                                        (0, i.jsx)($, { count: w, reactionRef: b }),
                                     ],
                                 }),
                         }),
@@ -857,55 +855,57 @@ class eG extends l.PureComponent {
     }
 }
 let eD = l.memo((e) => {
-    let { type: t, burst_colors: n, message: o, emoji: a } = e,
-        r = t === Q.v.BURST,
-        s = (0, L.g)(r && null != n ? n : []),
-        d = (0, c.bG)([eI.A], () => void 0 !== eI.A.getEffectForEmojiId(o.getChannelId(), o.id, a)),
-        h = (0, c.bG)([g.A], () => g.A.useReducedMotion),
-        p = eT.Sf.useSetting(),
-        m = K.default.getCurrentUser(),
-        f = (0, q.TW)(m),
-        A = (0, c.bG)([eI.A], () => eI.A.getReactionPickerAnimation(o.id, a.name, a.id)),
-        T = r && (d || null != A),
-        [x, E] = l.useState(null),
-        [R, I] = l.useState(null),
-        [j, N] = l.useState(!1),
-        [v, S] = l.useState(null),
-        [b, C] = l.useState(!1),
-        y = l.useRef(null),
-        O = l.useRef(null),
-        M = l.useRef(null),
+    let { type: t, burst_colors: n, message: o, emoji: a, me: r, me_burst: s } = e,
+        d = t === Q.v.BURST,
+        h = eV(r, s, t),
+        p = (0, L.g)(d && null != n ? n : []),
+        m = (0, c.bG)([eI.A], () => void 0 !== eI.A.getEffectForEmojiId(o.getChannelId(), o.id, a)),
+        f = (0, c.bG)([g.A], () => g.A.useReducedMotion),
+        A = eT.Sf.useSetting(),
+        T = K.default.getCurrentUser(),
+        x = (0, q.TW)(T),
+        E = (0, c.bG)([eI.A], () => eI.A.getReactionPickerAnimation(o.id, a.name, a.id)),
+        R = d && (m || null != E),
+        [I, j] = l.useState(null),
+        [N, v] = l.useState(null),
+        [S, b] = l.useState(!1),
+        [C, y] = l.useState(null),
+        [O, M] = l.useState(!1),
         w = l.useRef(null),
-        _ = l.useRef(!1),
-        k = l.useRef(!1),
-        P = l.useRef(!1),
-        [U] = l.useState(() => (0, u.A)());
+        _ = l.useRef(null),
+        k = l.useRef(null),
+        P = l.useRef(null),
+        U = l.useRef(!1),
+        V = l.useRef(!1),
+        G = l.useRef(!1),
+        [D] = l.useState(() => (0, u.A)());
     return (0, i.jsx)(eG, {
         ...e,
-        colors: s,
-        isBurstReaction: r,
-        hideEmoji: T,
-        userHasPremium: f,
-        reduceMotion: h,
-        animateEmoji: p,
-        animationStartPosition: A,
-        tooltipText: x,
-        tooltipTextAria: R,
-        shouldShowTooltip: j,
-        reactionRef: v,
-        showingMoreEmojis: b,
-        setTooltipText: E,
-        setTooltipTextAria: I,
-        setShouldShowTooltip: N,
-        setReactionRef: S,
-        setShowingMoreEmojis: C,
-        ctaRef: y,
-        upsellPopoutTargetRef: O,
-        timeoutRef: M,
-        hideTimeoutRef: w,
-        nonce: U,
-        isReactionEventActiveRef: _,
-        isKeyboardNavigationRef: k,
-        hasShownTooltipRef: P,
+        isMe: h,
+        colors: p,
+        isBurstReaction: d,
+        hideEmoji: R,
+        userHasPremium: x,
+        reduceMotion: f,
+        animateEmoji: A,
+        animationStartPosition: E,
+        tooltipText: I,
+        tooltipTextAria: N,
+        shouldShowTooltip: S,
+        reactionRef: C,
+        showingMoreEmojis: O,
+        setTooltipText: j,
+        setTooltipTextAria: v,
+        setShouldShowTooltip: b,
+        setReactionRef: y,
+        setShowingMoreEmojis: M,
+        ctaRef: w,
+        upsellPopoutTargetRef: _,
+        timeoutRef: k,
+        hideTimeoutRef: P,
+        nonce: D,
+        isReactionEventActiveRef: U,
+        isKeyboardNavigationRef: V,
+        hasShownTooltipRef: G,
     });
 });

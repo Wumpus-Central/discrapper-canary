@@ -23,6 +23,9 @@ class r {
                 Object.entries(this.actions).forEach((e) => {
                     let [t, n] = e;
                     i.h.unsubscribe(t, "function" == typeof n ? n : n.callback);
+                }),
+                this.stores.forEach((e, t) => {
+                    t.removeChangeListener(e);
                 })));
     }
     actions = {};

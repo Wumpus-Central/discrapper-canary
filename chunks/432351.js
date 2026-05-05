@@ -83,6 +83,8 @@ class l extends i.A {
     }
     setClipsModulePath(e) {}
     setClipsDataPath(e) {}
+    setClipsV3Enabled(e) {}
+    setClipsV3MLEnabled(e) {}
     setClipBufferLength(e) {}
     setClipsMLPipelineEnabled(e) {}
     setClipsMLPipelineTypeEnabled(e, t) {}

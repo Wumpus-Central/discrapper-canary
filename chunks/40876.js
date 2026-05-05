@@ -528,6 +528,7 @@ let r = {
     },
     GuestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(921037).A },
     ClipsManager: {
+        hasStoreChangeListeners: !0,
         actions: [
             "RTC_CONNECTION_FLAGS",
             "RTC_CONNECTION_STATE",

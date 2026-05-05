@@ -442,7 +442,6 @@ var G =
         (r.FIRST_FRAME_CALLBACK = "first_frame_callback"),
         (r.REMOTE_USER_MULTI_STREAM = "remote_user_multi_stream"),
         (r.CLIPS = "clips"),
-        (r.CLIPS_V3 = "clips_v3"),
         (r.GO_LIVE_HARDWARE = "go_live_hardware"),
         (r.IMAGE_QUALITY_MEASUREMENT = "image_quality_measurement"),
         (r.SCREEN_CAPTURE_KIT = "screen_capture_kit"),
@@ -1919,8 +1918,6 @@ class er extends l.A {
                 return (0, b.$b)(G.SCREEN_PREVIEWS);
             case N.O5.CLIPS:
                 return (0, b.$b)(G.CLIPS);
-            case N.O5.CLIPS_V3:
-                return (0, b.$b)(G.CLIPS_V3);
             case N.O5.WINDOW_PREVIEWS:
                 return (0, b.$b)(G.WINDOW_PREVIEWS);
             case N.O5.AUDIO_DEBUG_STATE:
@@ -2179,6 +2176,12 @@ class er extends l.A {
     }
     setClipsDataPath(e) {
         (0, b.lE)().setClipsDataPath?.(e);
+    }
+    setClipsV3Enabled(e) {
+        (0, b.lE)().setClipsV3Enabled?.(e);
+    }
+    setClipsV3MLEnabled(e) {
+        (0, b.lE)().setClipsV3MLEnabled?.(e);
     }
     setClipBufferLength(e) {
         (0, b.lE)().setClipBufferLength?.(e);
