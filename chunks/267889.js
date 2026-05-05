@@ -772,14 +772,15 @@ let tM = (0, tD.Ld)(),
                 height: (tx + 14) * (eQ.W$.length + 1),
                 from: { height: tx + 14 },
                 config: { duration: 125 },
-            });
+            }),
+            l = a.useRef(r);
         a.useEffect(() => {
-            r.focusFirstVisibleItem();
-        }, [r]);
-        let l = ["", ...eQ.W$];
+            l.current.focusFirstVisibleItem();
+        }, []);
+        let u = ["", ...eQ.W$];
         return (
-            eD().remove(l, (e) => e === n),
-            l.unshift(n),
+            eD().remove(u, (e) => e === n),
+            u.unshift(n),
             (0, s.jsx)(eL.hD, {
                 navigator: r,
                 children: (0, s.jsx)(eL.PR, {
@@ -792,7 +793,7 @@ let tM = (0, tD.Ld)(),
                             className: tw.J6,
                             style: o,
                             role: "listbox",
-                            children: l.map((e, t) =>
+                            children: u.map((e, t) =>
                                 (0, s.jsx)(tU, { index: t, fade: 0 !== t, delay: 20 * t, surrogate: e, onClick: i }, t),
                             ),
                         });
@@ -827,8 +828,9 @@ let tM = (0, tD.Ld)(),
                 o
                     ? (0, s.jsx)("div", {
                           onKeyDown: (e) => {
-                              e.key === tL.dh.ESCAPE &&
-                                  (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
+                              e.key === tL.dh.ESCAPE
+                                  ? (e.stopPropagation(), u(!1), null != d.current && d.current.focus())
+                                  : "Tab" === e.key && u(!1);
                           },
                           children: (0, s.jsx)(tk, {
                               id: tM,
