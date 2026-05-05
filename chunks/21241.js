@@ -1,10 +1,11 @@
-e.d(n, { A: () => s });
-var i = e(627968);
-e(64700);
-var l = e(503698),
-    r = e.n(l),
-    a = e(623686);
-function s(t) {
-    let { className: n } = t;
-    return (0, i.jsx)("div", { className: r()(a.y, n) });
+"use strict";
+n.d(t, { A: () => o });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(623686);
+function o(e) {
+    let { className: t } = e;
+    return (0, i.jsx)("div", { className: s()(a.y, t) });
 }
