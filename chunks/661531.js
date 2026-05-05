@@ -7987,18 +7987,9 @@ let { Themes: c } = u.zv,
                 MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-default";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "icon-strong";
-                        return "text-default";
-                    },
-                },
-                MEDIA_KEYBOARD_BUTTON_ICON_COLOR_DISABLED: { resolve: () => "text-muted" },
-                MEDIA_KEYBOARD_BUTTON_ICON_COLOR_INACTIVE: {
-                    resolve(e) {
-                        let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-default";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "icon-subtle";
-                        return "text-default";
+                        if (0 === t.length) return "icon-default";
+                        for (let e of t) if ("mobile-visual-refresh" === e) break;
+                        return "icon-default";
                     },
                 },
                 MEDIA_KEYBOARD_BUTTON_PADDING: {
@@ -8013,16 +8004,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return "text-default";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-strong";
-                        return "text-default";
-                    },
-                },
-                MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_DISABLED: { resolve: () => "text-muted" },
-                MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_INACTIVE: {
-                    resolve(e) {
-                        let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "text-default";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-subtle";
+                        for (let e of t) if ("mobile-visual-refresh" === e) break;
                         return "text-default";
                     },
                 },

@@ -9496,13 +9496,9 @@
     --mobile-media-keyboard-bar-margin-horizontal: 16px;
     --mobile-media-keyboard-bar-padding-horizontal: 0px;
     --mobile-media-keyboard-button-border-radius: 0px;
-    --mobile-media-keyboard-button-icon-color-active: text-default;
-    --mobile-media-keyboard-button-icon-color-disabled: text-muted;
-    --mobile-media-keyboard-button-icon-color-inactive: text-default;
+    --mobile-media-keyboard-button-icon-color-active: icon-default;
     --mobile-media-keyboard-button-padding: 0px;
     --mobile-media-keyboard-button-text-color-active: text-default;
-    --mobile-media-keyboard-button-text-color-disabled: text-muted;
-    --mobile-media-keyboard-button-text-color-inactive: text-default;
     --mobile-media-keyboard-button-text-variant: text-xs/semibold;
     --mobile-messages-header-button-gap: 8px;
     --mobile-messages-header-button-layout: row;
@@ -9625,11 +9621,9 @@
     --mobile-media-keyboard-bar-margin-horizontal: 12px;
     --mobile-media-keyboard-bar-padding-horizontal: 8px;
     --mobile-media-keyboard-button-border-radius: 8px;
-    --mobile-media-keyboard-button-icon-color-active: icon-strong;
-    --mobile-media-keyboard-button-icon-color-inactive: icon-subtle;
+    --mobile-media-keyboard-button-icon-color-active: icon-default;
     --mobile-media-keyboard-button-padding: 4px;
-    --mobile-media-keyboard-button-text-color-active: text-strong;
-    --mobile-media-keyboard-button-text-color-inactive: text-subtle;
+    --mobile-media-keyboard-button-text-color-active: text-default;
     --mobile-media-keyboard-button-text-variant: text-xs/medium;
     --mobile-messages-header-button-gap: 12px;
     --mobile-messages-header-button-layout: row-reverse;
