@@ -39,13 +39,14 @@ function S(e) {
         b = f.Ay.useName(t.guild_id, t.id, j),
         T = (0, p.A)({ userId: j?.id, guildId: t.guild_id }),
         O = (0, I.a)({ displayNameStyles: T }),
-        k = (e) => {
+        G = (e) => {
             e.preventDefault(),
                 null != j &&
                     (0, A.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            i.e("65086"),
-                            i.e("41159"),
+                            i.e("31483"),
+                            i.e("30421"),
+                            i.e("18570"),
                             i.e("39431"),
                             i.e("26132"),
                             i.e("46652"),
@@ -93,7 +94,7 @@ function S(e) {
                         return (i) => (0, n.jsx)(e, { ...i, user: j, guildId: t.guild_id, channel: t });
                     });
         },
-        G = () => {
+        k = () => {
             clearTimeout(C.current), (C.current = setTimeout(() => S(!0), 100));
         },
         V = () => {
@@ -105,20 +106,20 @@ function S(e) {
               targetElementRef: y,
               position: "right",
               shouldShow: s,
-              onRequestOpen: G,
+              onRequestOpen: k,
               onRequestClose: V,
               useMouseEnter: !0,
               spacing: 17,
               renderPopout: () =>
-                  (0, n.jsx)(_.A, { channel: t, source: "ghost_user", onMouseEnter: G, onMouseLeave: V }),
+                  (0, n.jsx)(_.A, { channel: t, source: "ghost_user", onMouseEnter: k, onMouseLeave: V }),
               children: (e) => {
                   let { onClick: i, ...l } = e;
                   return (0, n.jsxs)(o.D, {
                       innerRef: y,
                       className: N.nM,
                       "aria-haspopup": "dialog",
-                      onClick: G,
-                      onContextMenu: k,
+                      onClick: k,
+                      onContextMenu: G,
                       ...l,
                       onMouseLeave: V,
                       children: [

@@ -1,4 +1,4 @@
-n.d(t, { R: () => a, j: () => u });
+n.d(t, { R: () => a, j: () => o });
 var l = n(627968),
     r = n(192308);
 let i = "social-layer-storefront-product-details-modal",
@@ -6,8 +6,8 @@ let i = "social-layer-storefront-product-details-modal",
         let {
             skuId: t,
             applicationId: a,
-            isStorefront: u,
-            giftRecipient: o,
+            isStorefront: o,
+            giftRecipient: u,
             giftingOrigin: s,
             analyticsLocations: d,
             analyticsContext: c,
@@ -17,11 +17,11 @@ let i = "social-layer-storefront-product-details-modal",
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("46438"),
-                    n.e("83721"),
-                    n.e("68495"),
+                    n.e("18570"),
+                    n.e("94925"),
+                    n.e("33861"),
                     n.e("90261"),
                     n.e("89553"),
-                    n.e("96326"),
                     n.e("9233"),
                     n.e("86814"),
                     n.e("52617"),
@@ -46,29 +46,30 @@ let i = "social-layer-storefront-product-details-modal",
                     n.e("52212"),
                     n.e("76361"),
                     n.e("36768"),
-                    n.e("63335"),
-                ]).then(n.bind(n, 138266));
+                    n.e("9935"),
+                    n.e("71000"),
+                ]).then(n.bind(n, 283627));
                 return (n) =>
                     (0, l.jsx)(e, {
                         ...n,
                         skuId: t,
                         applicationId: a,
-                        isStorefront: u,
+                        isStorefront: o,
                         analyticsLocations: d,
                         analyticsContext: c,
-                        giftRecipient: o,
+                        giftRecipient: u,
                         giftingOrigin: s,
                     });
             },
             {
                 modalKey: i,
-                allowsNavigation: u,
+                allowsNavigation: o,
                 onCloseCallback: () => {
                     A?.();
                 },
             },
         );
     };
-function u() {
+function o() {
     (0, r.hasModalOpen)(i) && (0, r.closeModal)(i);
 }

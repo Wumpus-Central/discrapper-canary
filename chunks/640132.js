@@ -79,7 +79,7 @@ var G = t(503698),
     ee = t(722260),
     en = t(563312),
     et = t(794782),
-    el = t(847494),
+    el = t(937050),
     es = t(620018),
     er = t(103355),
     ei = t(167630),
@@ -430,9 +430,8 @@ function eR(e) {
                       onContextMenu: function (e, n) {
                           (0, o.L3)(e, async () => {
                               let { default: e } = await Promise.all([
-                                  t.e("57767"),
+                                  t.e("18570"),
                                   t.e("39431"),
-                                  t.e("41159"),
                                   t.e("26132"),
                                   t.e("46652"),
                                   t.e("93190"),

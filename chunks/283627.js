@@ -1,0 +1,1490 @@
+t.d(l, { L: () => e3, default: () => ll }), t(321073);
+var n = t(627968),
+    s = t(64700),
+    a = t(310784),
+    r = t.n(a),
+    i = t(503698),
+    o = t.n(i),
+    c = t(17928),
+    u = t(534514),
+    d = t(192308),
+    m = t(834730),
+    x = t(821609),
+    h = t(318254),
+    b = t(825484),
+    C = t(34188),
+    j = t(597770),
+    g = t(939249),
+    f = t(366010),
+    p = t(289873),
+    v = t(935462),
+    A = t(358618),
+    _ = t(983851),
+    E = t(972213),
+    k = t(262427),
+    N = t(964486),
+    I = t(736653),
+    S = t(793574),
+    T = t(688810),
+    R = t(429913),
+    y = t(654107),
+    O = t(427209),
+    L = t(723090),
+    U = t(801228),
+    D = t(309954),
+    M = t(652165),
+    P = t(561794),
+    w = t(495544),
+    Y = t(328968),
+    B = t(174459),
+    H = t(371794),
+    F = t(871123),
+    q = t(733391),
+    G = t(832163),
+    $ = t(945810);
+let J = (0, $.mj)({
+    name: "2026-04-slayer-storefront-orbs",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+function z(e) {
+    let { location: l } = e;
+    return J.useConfig({ location: l }).enabled;
+}
+let W = (0, $.mj)({
+    name: "2026-04-slayer-storefront-pdp-redesign",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+var V = t(989349),
+    X = t.n(V),
+    K = t(375708);
+function Q() {
+    let e,
+        l =
+            ((e = (0, c.bG)([G.A], () => G.A.getConfig()?.promotionEndDatetime, [])),
+            s.useMemo(() => {
+                if (null == e) return null;
+                let l = X()(),
+                    t = X()(e).diff(l, "days");
+                return t <= 0 ? null : t;
+            }, [e]));
+    return s.useMemo(() => (null == l ? null : K.intl.formatToPlainString(K.t.BXpdIg, { days: Math.max(l, 1) })), [l]);
+}
+var Z = t(44724),
+    ee = t(345938),
+    el = t(510022),
+    et = t(317560),
+    en = t(429635),
+    es = t(533406),
+    ea = t(964421);
+function er(e) {
+    let { mediaItems: l, labels: t, selectedIndex: s, onSelectIndex: a } = e;
+    return l.length <= 1
+        ? null
+        : (0, n.jsxs)("div", {
+              className: ea.kL,
+              children: [
+                  (0, n.jsx)(m.E, {
+                      variant: "text-xs/semibold",
+                      color: "text-subtle",
+                      children: K.intl.string(K.t.U7DAV9),
+                  }),
+                  (0, n.jsx)("div", {
+                      className: ea.Vg,
+                      children: l.map((e, l) =>
+                          (0, n.jsx)(
+                              g.D,
+                              {
+                                  className: o()(ea.xn, { [ea.Y4]: l === s }),
+                                  onClick: () => a(l),
+                                  "aria-label": t?.[l],
+                                  "aria-pressed": l === s,
+                                  children: (0, n.jsx)("img", {
+                                      className: ea.q_,
+                                      src:
+                                          null != e.thumbnailSrc
+                                              ? e.thumbnailSrc
+                                              : "video" === e.type
+                                                ? e.videoThumbnailSrc
+                                                : e.src,
+                                      alt: "",
+                                      draggable: !1,
+                                  }),
+                              },
+                              l,
+                          ),
+                      ),
+                  }),
+              ],
+          });
+}
+var ei = t(263911),
+    eo = t(971146),
+    ec = t(696292),
+    eu = t(554146),
+    ed = t(43105),
+    em = t(403581),
+    ex = t(131607),
+    eh = t(532794),
+    eb = t(617986),
+    eC = t(441574),
+    ej = t(287809),
+    eg = t(474090),
+    ef = t(788868),
+    ep = t(49999),
+    ev = t(530066),
+    eA = t(942460);
+function e_(e) {
+    let { sku: l, location: t, analyticsLocations: a, onCheckout: r } = e,
+        i = (0, L.JL)({ sku: l }),
+        o = (function (e) {
+            let { orbPriceAmount: l, location: t } = e,
+                n = z({ location: t }),
+                s = (0, c.bG)([ej.default], () => {
+                    let e = ej.default.getCurrentUser();
+                    return (
+                        (0, eg.YE)(e, ef.PremiumTypes.TIER_2) &&
+                        e?.premiumState?.premiumSubscriptionType === eC.jK.TIER_2
+                    );
+                }),
+                { balance: a } = (0, D.W)({ disableFetch: !n || null == l || !s });
+            return n && null != l
+                ? s
+                    ? null == a || a < l
+                        ? "NOT_ENOUGH_ORBS"
+                        : "CAN_CHECKOUT"
+                    : "NEEDS_NITRO"
+                : "HIDDEN";
+        })({ orbPriceAmount: i?.amount, location: t }),
+        u = s.useRef(null),
+        [d, m] = (0, ex.kn)("NEEDS_NITRO" === o ? [eu.M.SLAYER_STOREFRONT_ORBS_PURCHASE_COACHMARK] : []),
+        b = d === eu.M.SLAYER_STOREFRONT_ORBS_PURCHASE_COACHMARK,
+        {
+            isOpen: C,
+            onMouseEnter: j,
+            onMouseLeave: g,
+            popoverRef: f,
+            close: p,
+        } = (function (e) {
+            let { forcedOpen: l } = e,
+                [t, n] = s.useState(!1),
+                [a, r] = s.useState(null),
+                i = s.useRef(null),
+                o = s.useRef(null),
+                c = s.useCallback((e) => {
+                    r(e);
+                }, []),
+                u = s.useCallback(() => {
+                    null != o.current && (clearTimeout(o.current), (o.current = null)),
+                        t ||
+                            null != i.current ||
+                            (i.current = setTimeout(() => {
+                                (i.current = null), n(!0);
+                            }, 350));
+                }, [t]),
+                d = s.useCallback(() => {
+                    null != i.current && (clearTimeout(i.current), (i.current = null)),
+                        t &&
+                            !l &&
+                            null == o.current &&
+                            (o.current = setTimeout(() => {
+                                (o.current = null), n(!1);
+                            }, 150));
+                }, [t, l]);
+            return (
+                s.useEffect(
+                    () => () => {
+                        null != i.current && clearTimeout(i.current), null != o.current && clearTimeout(o.current);
+                    },
+                    [],
+                ),
+                s.useEffect(() => {
+                    if (null != a)
+                        return (
+                            a.addEventListener("mouseenter", u),
+                            a.addEventListener("mouseleave", d),
+                            () => {
+                                a.removeEventListener("mouseenter", u), a.removeEventListener("mouseleave", d);
+                            }
+                        );
+                }, [a, u, d]),
+                {
+                    isOpen: l || t,
+                    onMouseEnter: u,
+                    onMouseLeave: d,
+                    popoverRef: c,
+                    close: s.useCallback(() => {
+                        null != i.current && (clearTimeout(i.current), (i.current = null)),
+                            null != o.current && (clearTimeout(o.current), (o.current = null)),
+                            n(!1);
+                    }, []),
+                }
+            );
+        })({ forcedOpen: b }),
+        v = s.useMemo(
+            () =>
+                "NEEDS_NITRO" === o
+                    ? {
+                          title: K.intl.string(ev.default["1OBZN2"]),
+                          body: K.intl.string(ev.default.FDywIe),
+                          ctaText: K.intl.string(ev.default["Mt/ukE"]),
+                          ctaIcon: em.t,
+                          ctaVariant: "expressive",
+                          onCtaClick: () => {
+                              b && m(ep.i.TAKE_ACTION),
+                                  p(),
+                                  (0, eh.A)({
+                                      subscriptionTier: ef.pe.TIER_2,
+                                      analyticsLocations: a,
+                                      applicationId: l.applicationId,
+                                  });
+                          },
+                      }
+                    : "NOT_ENOUGH_ORBS" === o
+                      ? {
+                            title: K.intl.string(ev.default.Xo6oAV),
+                            body: K.intl.string(ev.default.fkdIdV),
+                            ctaText: K.intl.string(ev.default.d525FQ),
+                            ctaIcon: h.C,
+                            ctaVariant: "primary",
+                            onCtaClick: () => {
+                                p(), (0, eb.navigateToQuestHome)({ fromContent: ec.u.ORBS_BALANCE_MENU });
+                            },
+                        }
+                      : null,
+            [o, b, m, p, a, l.applicationId],
+        ),
+        A = null != v && C,
+        _ = s.useCallback(() => {
+            b && m(ep.i.USER_DISMISS), p();
+        }, [b, m, p]);
+    return "HIDDEN" === o || null == i
+        ? null
+        : (0, n.jsxs)(n.Fragment, {
+              children: [
+                  (0, n.jsx)("div", {
+                      ref: u,
+                      onMouseEnter: j,
+                      onMouseLeave: g,
+                      children: (0, n.jsx)(x.$, {
+                          onClick: r,
+                          disabled: null != v,
+                          variant: "secondary",
+                          text: (0, n.jsx)("span", {
+                              className: eA.Y,
+                              children: K.intl.format(K.t.lOtBOI, {
+                                  orbPrice: i.amount,
+                                  orbIconHook: () =>
+                                      (0, n.jsx)(h.C, { size: "xs", color: "currentColor" }, "orbs-icon"),
+                              }),
+                          }),
+                          fullWidth: !0,
+                      }),
+                  }),
+                  null != v &&
+                      (0, n.jsx)(ed.A, {
+                          targetElementRef: u,
+                          popoverRef: f,
+                          shouldShow: A,
+                          position: "right",
+                          alignmentStrategy: "edge",
+                          align: "bottom",
+                          caretConfig: { align: "end" },
+                          size: "md",
+                          title: v.title,
+                          body: v.body,
+                          actions: [{ text: v.ctaText, variant: v.ctaVariant, onClick: v.onCtaClick, icon: v.ctaIcon }],
+                          onRequestClose: _,
+                      }),
+              ],
+          });
+}
+var eE = t(775602),
+    ek = t(175671),
+    eN = t(619517),
+    eI = t(34337),
+    eS = t(172079);
+let eT = (e) => (0, eI.$o)({ ...e, className: eS.tN, mediaPlayerClassName: eS.yf }),
+    eR = (e) => (0, n.jsx)(eN.Ay, { ...e });
+function ey(e) {
+    let { item: l, isMuted: t, className: a, alt: i = "" } = e,
+        o = (function (e) {
+            let l = null != e ? ("videoThumbnailSrc" in e ? e.videoThumbnailSrc : e.src) : null,
+                [t] = (0, y.rh)(l, "#000000");
+            return s.useMemo(() => {
+                if (null == l || "#000000" === t) return;
+                let e = r()(t).darken(1);
+                return `radial-gradient(circle, ${e.alpha(0.2).hex()} 0%, transparent 100%)`;
+            }, [l, t]);
+        })(l),
+        u = (0, c.bG)([eE.A], () => eE.A.useReducedMotion),
+        [d, m] = s.useState(null),
+        [x, h] = s.useState(l);
+    x !== l && (h(l), x?.type === "image" && l?.type === "image" && x.src !== l.src ? m(x.src) : m(null));
+    let b = s.useCallback(() => m(null), []);
+    if (null == l) return null;
+    let C = {
+        background: o,
+        backgroundImage: null != l.backgroundSrc ? `url(${l.backgroundSrc})` : void 0,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+    };
+    return "video" === l.type
+        ? (0, n.jsx)("div", {
+              className: a ?? eS.kL,
+              children: (0, n.jsx)(
+                  "div",
+                  {
+                      className: `${eS.h4} ${eS.nR}`,
+                      style: C,
+                      children: (0, n.jsx)(
+                          ek.rr,
+                          {
+                              href: null,
+                              thumbnail: { url: l.videoThumbnailSrc, width: 747, height: 560 },
+                              video: { url: l.src, proxyURL: l.src, width: 747, height: 560 },
+                              provider: void 0,
+                              allowFullScreen: !0,
+                              maxHeight: 560,
+                              maxWidth: 747,
+                              playable: !0,
+                              className: eS.Ki,
+                              volume: 1,
+                              autoMute: t,
+                              autoPlay: !0,
+                              renderVideoComponent: eT,
+                              renderImageComponent: eR,
+                              renderLinkComponent: eI.bU,
+                          },
+                          `${l.src}-${t ? "muted" : "unmuted"}`,
+                      ),
+                  },
+                  l.src,
+              ),
+          })
+        : (0, n.jsx)("div", {
+              className: a ?? eS.kL,
+              children: (0, n.jsxs)("div", {
+                  className: eS.h4,
+                  style: C,
+                  children: [
+                      (0, n.jsx)("img", { src: l.src, alt: i, className: eS.Sl }, l.src),
+                      null != d && !u && (0, n.jsx)("img", { src: d, alt: "", className: eS.Ve, onAnimationEnd: b }, d),
+                  ],
+              }),
+          });
+}
+var eO = t(743693),
+    eL = t(995393),
+    eU = t(188275),
+    eD = t(652215),
+    eM = t(334588);
+function eP(e) {
+    let { sku: l } = e;
+    return null == l
+        ? null
+        : (0, n.jsxs)("div", {
+              className: eM.AX,
+              children: [
+                  (0, n.jsx)(u.D, { variant: "heading-lg/bold", color: "text-strong", children: l.name }),
+                  (0, n.jsx)(m.E, { variant: "text-sm/normal", color: "text-subtle", children: l.description }),
+              ],
+          });
+}
+function ew(e) {
+    let { sku: l } = e,
+        { normalPrice: t, discountedPrice: s, discountPercent: a } = (0, L.CD)({ sku: l });
+    if (null == t) return null;
+    let r = null != l.orbsReward && l.orbsReward > 0;
+    return (0, n.jsxs)("div", {
+        className: eM.sj,
+        children: [
+            (0, n.jsx)(eo.V, { textColor: "text-subtle" }),
+            (0, n.jsxs)("div", {
+                className: eM.hO,
+                children: [
+                    null != a && null != s
+                        ? (0, n.jsxs)(n.Fragment, {
+                              children: [
+                                  (0, n.jsx)(m.E, { variant: "text-md/medium", className: eM.Jb, children: t }),
+                                  (0, n.jsx)(m.E, { variant: "text-md/semibold", color: "text-strong", children: s }),
+                                  (0, n.jsx)(m.E, { variant: "text-md/bold", className: eM.Fi, children: a }),
+                              ],
+                          })
+                        : (0, n.jsx)(m.E, { variant: "text-md/semibold", color: "text-strong", children: t }),
+                    r &&
+                        (0, n.jsx)("div", {
+                            className: eM.pt,
+                            children: (0, n.jsx)(m.E, {
+                                variant: "text-sm/semibold",
+                                color: "currentColor",
+                                children: K.intl.format(K.t.GiVd2Q, {
+                                    orbCount: l.orbsReward,
+                                    orbIconHook: () =>
+                                        (0, n.jsx)(h.C, { size: "xs", color: "currentColor" }, "orbs-icon"),
+                                }),
+                            }),
+                        }),
+                ],
+            }),
+        ],
+    });
+}
+function eY(e) {
+    let {
+            sku: l,
+            guildId: t,
+            shouldShowShopLink: a,
+            giftRecipient: r,
+            giftingOrigin: i,
+            trackPDPClick: o,
+            analyticsLocations: u,
+        } = e,
+        h = l.id,
+        b = (0, c.bG)([G.A], () => G.A.getNormalizedSKUEligibility(h), [h]),
+        f = s.useCallback(() => {
+            null != t &&
+                (o(eL.Jq.BUY_BUTTON),
+                (0, es.a)(
+                    l,
+                    { isGift: !1 },
+                    {
+                        analyticsLocations: [...u, S.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON],
+                        guildId: t,
+                    },
+                ));
+        }, [l, o, t, u]),
+        p = s.useCallback(() => {
+            null != t && (0, Z.X)({ guildId: t });
+        }, [t]),
+        v = s.useCallback(() => {
+            null != t && (o(eL.Jq.VISIT_SHOP), (0, d.closeAllModals)(), (0, Z.default)({ guildId: t }));
+        }, [t, o]),
+        A = s.useCallback(() => {
+            o(eL.Jq.GIFT_BUTTON),
+                (0, es.a)(
+                    l,
+                    { isGift: !0, giftRecipient: r, giftingOrigin: i },
+                    { analyticsLocations: [...u, S.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON] },
+                );
+        }, [l, o, r, i, u]),
+        _ = (0, R.h)(l.applicationId),
+        E = s.useMemo(() => [...u, S.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON], [u]),
+        k = s.useCallback(() => {
+            null != _ &&
+                (o(eL.Jq.BUY_WITH_ORBS_BUTTON),
+                (0, M.B4)({
+                    skuId: l.id,
+                    applicationId: l.applicationId,
+                    onComplete: () => {
+                        (0, et.j)(), (0, el.n)({ sku: l, application: _, analyticsLocations: E });
+                    },
+                    analyticsLocations: E,
+                }));
+        }, [l, _, E, o]);
+    return (0, n.jsxs)("div", {
+        className: eM.NC,
+        children: [
+            !b &&
+                (0, n.jsx)(m.E, {
+                    variant: "text-xxs/normal",
+                    color: "text-subtle",
+                    children: K.intl.string(K.t.IqlPbQ),
+                }),
+            b
+                ? (0, n.jsxs)("div", {
+                      className: eM.mr,
+                      children: [
+                          (0, n.jsx)(x.$, {
+                              variant: "primary",
+                              onClick: f,
+                              text: K.intl.string(K.t.boqtTA),
+                              fullWidth: !0,
+                          }),
+                          (0, n.jsx)(g.D, {
+                              className: eM.xP,
+                              onClick: A,
+                              "aria-label": K.intl.string(K.t.QAZA5f),
+                              role: "button",
+                              children: (0, n.jsx)(j.o, { size: "refresh_sm", color: "currentColor" }),
+                          }),
+                      ],
+                  })
+                : (0, n.jsx)(x.$, {
+                      icon: j.o,
+                      variant: "secondary",
+                      onClick: A,
+                      text: K.intl.string(K.t.QAZA5f),
+                      fullWidth: !0,
+                  }),
+            a &&
+                (0, n.jsx)(x.$, {
+                    icon: C.U,
+                    variant: "secondary",
+                    onMouseDown: p,
+                    onClick: v,
+                    text: K.intl.string(K.t["2QW9nR"]),
+                    fullWidth: !0,
+                }),
+            b && (0, n.jsx)(e_, { sku: l, location: "product_details_modal", analyticsLocations: E, onCheckout: k }),
+        ],
+    });
+}
+function eB(e) {
+    let { selectedCarouselItem: l, applicationId: t } = e;
+    if (null == l) return null;
+    let s = null != l.labelIconAssetId ? (0, H.YE)(t, l.labelIconAssetId) : null;
+    return (0, n.jsxs)("div", {
+        className: eM.HI,
+        children: [
+            null != s && (0, n.jsx)("img", { className: eM.IX, src: s, alt: "" }, s),
+            (0, n.jsx)(m.E, { variant: "text-xs/medium", color: "text-subtle", children: l.label }),
+        ],
+    });
+}
+function eH(e) {
+    let { onClick: l, children: t, ariaLabel: s } = e;
+    return (0, n.jsx)(g.D, { onClick: l, className: eM.jU, "aria-label": s, role: "button", children: t });
+}
+function eF(e) {
+    let { selectedCarouselItem: l, title: t, description: s, applicationId: a, className: r } = e;
+    return (0, n.jsxs)("div", {
+        className: r,
+        children: [
+            null != t && (0, n.jsx)(u.D, { variant: "heading-md/semibold", color: "text-strong", children: t }),
+            (0, n.jsx)(eB, { applicationId: a, selectedCarouselItem: l }),
+            null != s && (0, n.jsx)(m.E, { variant: "text-sm/normal", color: "text-subtle", children: s }),
+        ],
+    });
+}
+function eq(e) {
+    let {
+            transitionState: l,
+            returnRef: t,
+            skuId: a,
+            applicationId: r,
+            isStorefront: i,
+            giftRecipient: u,
+            giftingOrigin: d,
+            analyticsLocations: m,
+            analyticsContext: x,
+            onClose: h,
+        } = e,
+        { analyticsLocations: b } = (0, T.Ay)(m ?? []),
+        { guildId: C } = (0, F.nG)(r),
+        j = (0, c.bG)([w.default], () => w.default.getId());
+    s.useEffect(() => {
+        null != C && null != a && (0, q.iR)(C, a);
+    }, [C, a]);
+    let g = (0, en.A)({ guildId: C }),
+        k = (0, c.bG)([G.A], () => G.A.getSkuAssets()),
+        S = (0, c.bG)([Y.A], () => Y.A.isFetchingForSKU(a)),
+        R = (0, f.M)((0, I.Ay)()),
+        [y, L] = s.useState(!0),
+        D = (0, U.A)({ skuId: a, location: "SocialLayerStorefrontProductDetailsModal" }),
+        [M, $] = s.useState(0),
+        [J, z] = s.useMemo(() => e3(D?.tenantMetadata?.socialLayer?.carouselItems ?? [], r, k), [D, r, k]),
+        [W, V] = s.useState(null),
+        [X, Z] = s.useState(!1);
+    s.useEffect(() => {
+        if (null == W) return;
+        let e = new ResizeObserver(() => {
+            Z(W.scrollHeight > W.clientHeight);
+        });
+        return e.observe(W), () => e.disconnect();
+    }, [W]);
+    let el = M < z.length ? M : 0,
+        et = J[el] ?? null,
+        es = z.length > 1,
+        ea = z.some((e) => "video" === e.type);
+    (0, P.pE)(),
+        (0, N.Ay)(() => {
+            B.default.track(eD.HAw.OPEN_MODAL, { location_stack: b, type: eU.Nh, sku_id: a, application_id: r }),
+                (0, q.Xw)();
+        });
+    let eo = s.useCallback(
+            (e) => {
+                B.default.track(eD.HAw.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED, {
+                    slayer_storefront_session_id: x?.sessionId,
+                    sku_id: a,
+                    guild_id: x?.guildId,
+                    cta_type: e,
+                    location_stack: b,
+                });
+            },
+            [x, a, b],
+        ),
+        ec = s.useCallback(
+            (e) => {
+                $(e), eo(eL.Jq.CAROUSEL_ITEM);
+            },
+            [eo],
+        );
+    s.useEffect(() => {
+        null == C || null == a || Y.A.isFetchingForSKU(a) || (0, q.qf)(C, a);
+    }, [C, a]);
+    let eu = s.useCallback(() => {
+            null != D &&
+                null != C &&
+                (eo(eL.Jq.FORWARD_BUTTON),
+                (0, ee.d)({
+                    sku: D,
+                    guildId: C,
+                    source: "social-layer-storefront-pdp",
+                    analyticsLocations: b,
+                    analyticsContext: x,
+                }));
+        }, [D, C, eo, b, x]),
+        ed = s.useCallback(() => {
+            eo(eL.Jq.WISHLIST_BUTTON);
+        }, [eo]),
+        em = s.useCallback(() => {
+            L(!y), eo(eL.Jq.MUTE_BUTTON);
+        }, [y, eo]),
+        ex = Q(),
+        eh = D?.tenantMetadata?.socialLayer;
+    if (null == D || null == eh) return S ? (0, n.jsx)(p.y, {}) : null;
+    let eb = g?.storefront,
+        eC = eb?.logoAssetId != null ? (0, H.YE)(eb.applicationId, eb.logoAssetId, 256) : null,
+        ej = eb?.lightThemeLogoAssetId != null ? (0, H.YE)(eb.applicationId, eb.lightThemeLogoAssetId, 256) : null,
+        eg = null;
+    eg = R ? (eC ?? ej) : (ej ?? eC);
+    let ef = null != D.orbsReward && D.orbsReward > 0;
+    return (0, n.jsx)(v.EO, {
+        transitionState: l,
+        "hide-shadow": !0,
+        parentComponent: "SocialLayerStorefrontProductDetailsModal",
+        className: eM.CR,
+        size: v.rI.DYNAMIC,
+        returnRef: t,
+        children: (0, n.jsxs)(v.$m, {
+            className: eM.jE,
+            children: [
+                ef &&
+                    (0, n.jsx)(eG, {
+                        timeRemaining: ex ?? void 0,
+                        text: K.intl.format(K.t.d3njXi, { orbCount: D.orbsReward }),
+                    }),
+                (0, n.jsxs)("div", {
+                    className: eM.nr,
+                    children: [
+                        (0, n.jsxs)("div", {
+                            className: eM.op,
+                            children: [
+                                (0, n.jsx)("div", {
+                                    className: eM.r$,
+                                    children:
+                                        null != eg
+                                            ? (0, n.jsx)("img", { className: eM.wm, src: eg, alt: eb?.title ?? "" })
+                                            : null,
+                                }),
+                                (0, n.jsxs)("div", {
+                                    ref: V,
+                                    className: eM.zD,
+                                    children: [
+                                        D.exclusive &&
+                                            (0, n.jsx)("div", { className: eM.K3, children: (0, n.jsx)(ei.I, {}) }),
+                                        es
+                                            ? (0, n.jsxs)(n.Fragment, {
+                                                  children: [
+                                                      (0, n.jsx)(eP, { sku: D }),
+                                                      (0, n.jsx)("div", {
+                                                          className: eM._D,
+                                                          children: (0, n.jsx)(er, {
+                                                              mediaItems: z,
+                                                              labels: J.map((e) => e.label),
+                                                              selectedIndex: el,
+                                                              onSelectIndex: ec,
+                                                          }),
+                                                      }),
+                                                      (0, n.jsx)(eF, {
+                                                          selectedCarouselItem: et,
+                                                          title: et?.title,
+                                                          description: et?.description,
+                                                          applicationId: r,
+                                                          className: eM.Jv,
+                                                      }),
+                                                  ],
+                                              })
+                                            : (0, n.jsx)(eF, {
+                                                  selectedCarouselItem: et,
+                                                  title: D.name,
+                                                  description: D.description,
+                                                  applicationId: r,
+                                                  className: eM.cP,
+                                              }),
+                                    ],
+                                }),
+                                (0, n.jsxs)("div", {
+                                    className: o()(eM.Td, { [eM.t7]: X }),
+                                    children: [
+                                        (0, n.jsx)(ew, { sku: D }),
+                                        (0, n.jsx)(eY, {
+                                            sku: D,
+                                            guildId: C,
+                                            shouldShowShopLink: !i,
+                                            giftRecipient: u?.id !== j ? u : void 0,
+                                            giftingOrigin: u?.id !== j ? d : void 0,
+                                            trackPDPClick: eo,
+                                            analyticsLocations: b,
+                                        }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                        (0, n.jsxs)("div", {
+                            className: eM.il,
+                            children: [
+                                (0, n.jsx)(ey, { item: z[el], isMuted: y, alt: et?.label ?? D.name }),
+                                (0, n.jsxs)("div", {
+                                    className: eM.V7,
+                                    children: [
+                                        null != D &&
+                                            (0, n.jsx)(eO._, {
+                                                sku: D,
+                                                isCardHovered: !0,
+                                                className: o()(eM.jU, eM.ij),
+                                                trackButtonClick: ed,
+                                                variant: "overlay-secondary",
+                                                location: "social_layer_storefront_product_details_modal",
+                                            }),
+                                        (0, n.jsx)(eH, {
+                                            onClick: eu,
+                                            ariaLabel: K.intl.string(K.t.Ej3B3Y),
+                                            children: (0, n.jsx)(O.A, { size: "refresh_sm", color: "currentColor" }),
+                                        }),
+                                        ea &&
+                                            (0, n.jsx)(eH, {
+                                                onClick: em,
+                                                ariaLabel: y ? K.intl.string(K.t.YqAjXy) : K.intl.string(K.t.w4m945),
+                                                children: y
+                                                    ? (0, n.jsx)(A._, { size: "refresh_sm", color: "currentColor" })
+                                                    : (0, n.jsx)(_.H, { size: "refresh_sm", color: "currentColor" }),
+                                            }),
+                                        (0, n.jsx)(eH, {
+                                            onClick: h,
+                                            ariaLabel: K.intl.string(K.t.cpT0Cq),
+                                            children: (0, n.jsx)(E.d, { size: "refresh_sm", color: "currentColor" }),
+                                        }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            ],
+        }),
+    });
+}
+function eG(e) {
+    let { timeRemaining: l, text: t } = e;
+    return (0, n.jsxs)("div", {
+        className: eM.pP,
+        children: [
+            (0, n.jsxs)("div", {
+                className: eM.Wi,
+                children: [
+                    (0, n.jsx)(h.C, { size: "refresh_sm", color: "currentColor" }),
+                    (0, n.jsx)(m.E, { variant: "text-sm/semibold", color: "currentColor", children: t }),
+                ],
+            }),
+            null != l && (0, n.jsx)(m.E, { variant: "text-sm/medium", color: "currentColor", children: l }),
+        ],
+    });
+}
+var e$ = t(615300),
+    eJ = t(456412),
+    ez = t(133296),
+    eW = t(848752),
+    eV = t(452282),
+    eX = t(625494),
+    eK = t(55607);
+let eQ = (e) => (0, eI.$o)({ ...e, className: eK.tN, mediaPlayerClassName: eK.yf }),
+    eZ = (e) => (0, n.jsx)(eN.Ay, { ...e });
+function e0(e) {
+    let l = "videoThumbnailSrc" in e ? e.videoThumbnailSrc : e.src,
+        [t, n] = (0, y.rh)(l, "#000000"),
+        a = s.useMemo(() => {
+            let e = r()(t).darken(1);
+            return `radial-gradient(circle, ${e.alpha(0.2).hex()} 0%, transparent 100%)`;
+        }, [t]);
+    return null != l && "#000000" !== t ? a : void 0;
+}
+function e1(e) {
+    let { item: l, onPlay: t, onEnded: s, onClick: a, playable: r, isMuted: i } = e,
+        o = e0(l),
+        c = (0, n.jsx)(
+            ek.rr,
+            {
+                href: null,
+                thumbnail: { url: l.videoThumbnailSrc, width: 747, height: 560 },
+                video: { url: l.src, proxyURL: l.src, width: 747, height: 560 },
+                provider: void 0,
+                allowFullScreen: !0,
+                maxHeight: 560,
+                maxWidth: 747,
+                onPlay: t,
+                onEnded: s,
+                playable: r,
+                className: eK.Ki,
+                volume: 1,
+                autoMute: i,
+                autoPlay: r,
+                renderVideoComponent: eQ,
+                renderImageComponent: eZ,
+                renderLinkComponent: eI.bU,
+            },
+            i ? "player-muted" : "player-unmuted",
+        ),
+        u = { background: o };
+    return r
+        ? (0, n.jsx)("div", { className: eK.AU, style: u, children: c })
+        : (0, n.jsx)(g.D, { className: eK.AU, onClick: a, style: u, children: c });
+}
+function e4(e) {
+    let { item: l, setHasInteracted: t, onSetItem: s, isCurrentItem: a, itemIndex: r } = e,
+        i = { background: e0(l) };
+    return a
+        ? (0, n.jsx)(g.D, {
+              onClick: () => t(!0),
+              className: eK.AU,
+              style: i,
+              children: (0, n.jsx)("img", { src: l.src, alt: "", className: eK.NP }),
+          })
+        : (0, n.jsx)(g.D, {
+              onClick: () => s(r),
+              className: eK.AU,
+              style: i,
+              children: (0, n.jsx)("img", { alt: "", className: eK.tv, src: l.src, draggable: !1 }),
+          });
+}
+let e7 = (0, eJ.A)((e) => {
+    let {
+            items: l,
+            className: t,
+            paused: a = !1,
+            autoplayInterval: r = 8e3,
+            onItemChange: i,
+            isMuted: c = !0,
+            onTrackClick: u,
+        } = e,
+        d = (0, s.useRef)(0),
+        [m, x] = (0, s.useState)(0),
+        [h, b] = (0, s.useState)(0),
+        C = (0, s.useRef)(0),
+        j = (0, s.useRef)(l.length),
+        [g, f] = (0, s.useState)(!0),
+        [p, v] = (0, s.useState)(!1),
+        [A, _] = (0, s.useState)(!1),
+        [E, k] = (0, s.useState)(!1),
+        [N, I] = (0, s.useState)(!1),
+        S = (0, s.useCallback)(
+            (e, t) => {
+                let n = l[e]?.backgroundSrc,
+                    s = t.interpolate({ inputRange: [0, 1], outputRange: [1, 0], extrapolate: e$.A.Extrapolate.CLAMP });
+                return {
+                    opacity: t.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [0.3, 1],
+                        extrapolate: e$.A.Extrapolate.CLAMP,
+                    }),
+                    filter: e$.A.template`grayscale(${s})`,
+                    backgroundImage: null != n ? `url(${n})` : void 0,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                };
+            },
+            [l],
+        ),
+        T = (0, s.useCallback)(function (e) {
+            let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+            v(!1), _(l);
+            let t = j.current,
+                n = (0, eV.U3)(C.current, t),
+                s = (0, eV.U3)(e, t);
+            (C.current = s),
+                b(s),
+                d.current++,
+                x(d.current),
+                f(1 === Math.abs(s - n) || (s === t - 1 && 0 === n) || (0 === s && n === t - 1));
+        }, []),
+        R = (0, s.useCallback)(() => {
+            T(C.current + 1, !1);
+        }, [T]),
+        y = (0, s.useCallback)(() => {
+            u?.(eL.Jq.CAROUSEL_NEXT), T(C.current + 1);
+        }, [T, u]),
+        O = (0, s.useCallback)(() => {
+            u?.(eL.Jq.CAROUSEL_PREV), T(C.current - 1);
+        }, [T, u]),
+        L = (0, s.useCallback)((e) => {
+            v(!0), _(!e);
+        }, []),
+        U = (0, s.useCallback)(() => {
+            A || R();
+        }, [A, R]),
+        D = (0, s.useCallback)((e) => {
+            let l = C.current;
+            e < l ? k(!0) : e > l && I(!0);
+        }, []),
+        M = (0, s.useCallback)(() => {
+            k(!1), I(!1);
+        }, []),
+        P = (0, s.useCallback)(
+            (e, l, t) =>
+                (0, n.jsx)(e4, {
+                    item: e,
+                    itemIndex: l,
+                    isCurrentItem: t,
+                    onSetItem: (e) => {
+                        u?.(eL.Jq.CAROUSEL_ITEM), T(e);
+                    },
+                    setHasInteracted: _,
+                }),
+            [T, u],
+        ),
+        w = (0, s.useCallback)(
+            (e, t, s) => {
+                let a = t === (0, eV.U3)(h, l.length);
+                return (0, n.jsx)(e$.A.div, {
+                    className: o()(eK.AS, { [eK.Xt]: a }),
+                    style: null != s ? S(t, s) : null,
+                    onMouseEnter: a ? null : () => D(t),
+                    onMouseLeave: a ? null : M,
+                    children:
+                        "video" === e.type
+                            ? (0, n.jsx)(
+                                  e1,
+                                  {
+                                      item: e,
+                                      onPlay: L,
+                                      onEnded: U,
+                                      playable: a,
+                                      isMuted: c,
+                                      onClick: () => {
+                                          u?.(eL.Jq.CAROUSEL_ITEM), T(t);
+                                      },
+                                  },
+                                  m,
+                              )
+                            : P(e, t, a),
+                });
+            },
+            [h, l.length, S, D, M, L, U, T, P, c, u, m],
+        ),
+        Y = (0, s.useCallback)(() => {
+            let e = (0, n.jsx)(eV.Ay, {
+                className: eK.Dk,
+                items: l,
+                itemSize: { width: 747, margin: 0 },
+                renderItem: w,
+                currentIndex: h,
+                animate: g,
+                edgeItems: 2,
+            });
+            return l.length <= 1
+                ? e
+                : (0, n.jsxs)("div", {
+                      className: eK.HY,
+                      children: [
+                          e,
+                          (0, n.jsx)(eW.Q8, { onClick: O, className: o()(eK.UE, { [eK.h_]: E }) }),
+                          (0, n.jsx)(eW.Oj, { onClick: y, className: o()(eK.UE, { [eK.h_]: N }) }),
+                      ],
+                  });
+        }, [l, w, h, g, O, y, E, N]),
+        B = (0, s.useCallback)(
+            (e, l) => {
+                let t = h === l;
+                return (0, n.jsx)(
+                    "div",
+                    {
+                        className: o()(eK.Yw, t ? eK.sM : eK.N7),
+                        children: (0, n.jsx)("img", {
+                            alt: "",
+                            className: eK.Pr,
+                            src:
+                                null != e.thumbnailSrc
+                                    ? e.thumbnailSrc
+                                    : "image" === e.type
+                                      ? e.src
+                                      : "video" === e.type
+                                        ? e.videoThumbnailSrc
+                                        : void 0,
+                            draggable: !1,
+                        }),
+                    },
+                    `page-${l}`,
+                );
+            },
+            [h],
+        );
+    (0, s.useEffect)(
+        () => (
+            eX._.subscribe(eD.jej.CAROUSEL_PREV, O),
+            eX._.subscribe(eD.jej.CAROUSEL_NEXT, y),
+            () => {
+                eX._.unsubscribe(eD.jej.CAROUSEL_PREV, O), eX._.unsubscribe(eD.jej.CAROUSEL_NEXT, y);
+            }
+        ),
+        [O, y],
+    ),
+        (0, s.useEffect)(() => {
+            j.current = l.length;
+        }, [l]),
+        (0, s.useEffect)(() => {
+            i?.(l[h], h);
+        }, [h, l, i]);
+    let H = (0, s.useCallback)(
+        (e) => {
+            u?.(eL.Jq.CAROUSEL_ITEM), T(e);
+        },
+        [T, u],
+    );
+    return (0, n.jsxs)(ez.A, {
+        pauseOnHover: !0,
+        onInterval: R,
+        interval: r,
+        className: t,
+        disable: p || A || a,
+        children: [
+            Y(),
+            (0, n.jsx)("div", {
+                className: eK.X$,
+                children: (0, n.jsx)(eW.Ay, {
+                    renderItem: B,
+                    scrollToPadding: 40,
+                    items: l,
+                    selectedIndex: h,
+                    onSetItem: H,
+                    paginationContainerClass: eK.XG,
+                    align: eW.Ay.Align.CENTER,
+                }),
+            }),
+        ],
+    });
+});
+var e2 = t(199138);
+function e3(e, l, t) {
+    let n = [],
+        s = [];
+    if (null == e || 0 === e.length) return [n, s];
+    for (let a of e) {
+        let e = null != a.assetId ? t[a.assetId] : null;
+        null != e &&
+            (n.push(a),
+            e.mime_type.startsWith("video/")
+                ? s.push({
+                      type: "video",
+                      src: (0, H.YE)(l, e, 747, "mp4"),
+                      videoThumbnailSrc: (0, H.YE)(l, e, 747, "webp"),
+                      thumbnailSrc: null != a.thumbnailAssetId ? (0, H.YE)(l, a.thumbnailAssetId, 112, "webp") : void 0,
+                      backgroundSrc:
+                          null != a.backgroundAssetId ? (0, H.YE)(l, a.backgroundAssetId, 747, F.pV) : void 0,
+                  })
+                : s.push({
+                      type: "image",
+                      src: (0, H.YE)(l, e, 747, "webp"),
+                      thumbnailSrc: null != a.thumbnailAssetId ? (0, H.YE)(l, a.thumbnailAssetId, 112, "webp") : void 0,
+                      backgroundSrc:
+                          null != a.backgroundAssetId ? (0, H.YE)(l, a.backgroundAssetId, 747, F.pV) : void 0,
+                  }));
+    }
+    return [n, s];
+}
+function e5(e) {
+    let { sku: l } = e,
+        { normalPrice: t, discountedPrice: s, discountPercent: a } = (0, L.CD)({ sku: l });
+    return null == t
+        ? null
+        : null != a && null != s
+          ? (0, n.jsxs)("div", {
+                className: e2.TS,
+                children: [
+                    (0, n.jsx)(u.D, {
+                        className: e2.of,
+                        variant: "heading-md/medium",
+                        color: "text-muted",
+                        lineClamp: 1,
+                        children: t,
+                    }),
+                    (0, n.jsx)(u.D, { variant: "heading-md/bold", color: "text-strong", children: s }),
+                    (0, n.jsxs)(u.D, {
+                        variant: "heading-md/bold",
+                        color: "text-feedback-positive",
+                        lineClamp: 1,
+                        children: ["(", a, ")"],
+                    }),
+                ],
+            })
+          : (0, n.jsx)(u.D, { variant: "heading-md/semibold", color: "text-strong", children: t });
+}
+function e9(e) {
+    let {
+            sku: l,
+            guildId: t,
+            shouldShowShopLink: a,
+            giftRecipient: r,
+            giftingOrigin: i,
+            trackPDPClick: o,
+            analyticsLocations: g,
+        } = e,
+        f = l?.id,
+        p = (0, c.bG)([G.A], () => (null != f ? G.A.getNormalizedSKUEligibility(f) : void 0), [f]),
+        v = Q(),
+        A = z({ location: "product_details_modal" }),
+        _ = (0, L.JL)({ sku: l });
+    (0, D.W)({ disableFetch: !A });
+    let E = (0, R.h)(l?.applicationId),
+        k = s.useCallback(() => {
+            null != l &&
+                null != t &&
+                (o(eL.Jq.BUY_BUTTON),
+                (0, es.a)(
+                    l,
+                    { isGift: !1 },
+                    {
+                        analyticsLocations: [...g, S.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON],
+                        guildId: t,
+                    },
+                ));
+        }, [l, o, t, g]),
+        N = s.useCallback(() => {
+            null != t && (0, Z.X)({ guildId: t });
+        }, [t]),
+        I = s.useCallback(() => {
+            null != t && (o(eL.Jq.VISIT_SHOP), (0, d.closeAllModals)(), (0, Z.default)({ guildId: t }));
+        }, [t, o]),
+        T = s.useCallback(() => {
+            null != l &&
+                (o(eL.Jq.GIFT_BUTTON),
+                (0, es.a)(
+                    l,
+                    { isGift: !0, giftRecipient: r, giftingOrigin: i },
+                    { analyticsLocations: [...g, S.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON] },
+                ));
+        }, [l, o, r, i, g]),
+        y = s.useCallback(() => {
+            if (null == l || null == E || !A) return;
+            o(eL.Jq.BUY_WITH_ORBS_BUTTON);
+            let e = [...g, S.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON];
+            (0, M.B4)({
+                skuId: l.id,
+                applicationId: l.applicationId,
+                onComplete: () => {
+                    (0, et.j)(), (0, el.n)({ sku: l, application: E, analyticsLocations: e });
+                },
+                analyticsLocations: e,
+            });
+        }, [l, o, g, E, A]);
+    return null == l
+        ? null
+        : (0, n.jsxs)("div", {
+              className: e2.wt,
+              children: [
+                  l.exclusive && (0, n.jsx)("div", { className: e2.K3, children: (0, n.jsx)(ei.I, {}) }),
+                  (0, n.jsxs)("div", {
+                      className: e2.AX,
+                      children: [
+                          (0, n.jsx)(u.D, { variant: "heading-xl/bold", color: "text-strong", children: l.name }),
+                          (0, n.jsx)(m.E, { variant: "text-sm/medium", color: "text-subtle", children: l.description }),
+                      ],
+                  }),
+                  (0, n.jsxs)("div", {
+                      className: e2.sj,
+                      children: [
+                          (0, n.jsx)(eo.V, {}),
+                          (0, n.jsx)(e5, { sku: l }),
+                          null != l.orbsReward &&
+                              l.orbsReward > 0 &&
+                              (0, n.jsx)(ln, {
+                                  timeRemaining: v ?? void 0,
+                                  text: K.intl.format(K.t.d3njXi, { orbCount: l.orbsReward }),
+                              }),
+                      ],
+                  }),
+                  (0, n.jsxs)("div", {
+                      className: e2.NC,
+                      children: [
+                          !p &&
+                              (0, n.jsx)(m.E, {
+                                  variant: "text-sm/normal",
+                                  color: "text-subtle",
+                                  children: K.intl.string(K.t.IqlPbQ),
+                              }),
+                          p &&
+                              (0, n.jsx)(x.$, {
+                                  variant: "primary",
+                                  onClick: k,
+                                  text: K.intl.string(K.t.boqtTA),
+                                  fullWidth: !0,
+                              }),
+                          A &&
+                              p &&
+                              null != _ &&
+                              (0, n.jsx)(x.$, {
+                                  icon: h.C,
+                                  variant: "secondary",
+                                  onClick: y,
+                                  text: K.intl.format(K.t.lOtBOI, {
+                                      orbPrice: _.amount,
+                                      orbIconHook: () =>
+                                          (0, n.jsx)(h.C, { size: "xs", color: "currentColor" }, "orbs-icon"),
+                                  }),
+                                  fullWidth: !0,
+                              }),
+                          (0, n.jsxs)(b.e, {
+                              wrap: !1,
+                              fullWidth: !0,
+                              children: [
+                                  a
+                                      ? (0, n.jsx)(x.$, {
+                                            icon: C.U,
+                                            variant: "secondary",
+                                            onMouseDown: N,
+                                            onClick: I,
+                                            text: K.intl.string(K.t["2QW9nR"]),
+                                            fullWidth: !0,
+                                        })
+                                      : null,
+                                  (0, n.jsx)(x.$, {
+                                      icon: j.o,
+                                      variant: "secondary",
+                                      onClick: T,
+                                      text: K.intl.string(K.t.QAZA5f),
+                                      fullWidth: !0,
+                                  }),
+                              ],
+                          }),
+                      ],
+                  }),
+              ],
+          });
+}
+function e6(e) {
+    let { sku: l, applicationId: t, assets: a, onSelectedCarouselItemChange: r, isMuted: i, trackPDPClick: o } = e,
+        [c, u] = s.useState([]),
+        [d, m] = s.useState([]),
+        x = s.useCallback(
+            (e) => {
+                let l = d.findIndex((l) => l === e);
+                r?.(c[l] ?? null);
+            },
+            [r, c, d],
+        );
+    return (s.useEffect(() => {
+        let [e, n] = e3(l?.tenantMetadata?.socialLayer?.carouselItems ?? [], t, a);
+        u(e), m(n);
+    }, [l, a, t]),
+    0 === d.length)
+        ? null
+        : (0, n.jsx)(e7, { className: e2.Dk, items: d, onItemChange: x, isMuted: i, onTrackClick: o });
+}
+function e8(e) {
+    let { selectedCarouselItem: l, applicationId: t } = e;
+    if (null == l) return null;
+    let s = null != l.labelIconAssetId ? (0, H.YE)(t, l.labelIconAssetId) : null;
+    return (0, n.jsxs)("div", {
+        className: e2.HI,
+        children: [
+            null != s && (0, n.jsx)("img", { className: e2.IX, src: s, alt: l.label }, s),
+            (0, n.jsx)(m.E, { variant: "text-xs/medium", color: "text-strong", children: l.label }),
+        ],
+    });
+}
+function le(e) {
+    let { onClick: l, children: t, ariaLabel: s } = e;
+    return (0, n.jsx)(g.D, { onClick: l, className: e2.jU, "aria-label": s, role: "button", children: t });
+}
+function ll(e) {
+    return !(function (e) {
+        let { location: l } = e;
+        return W.useConfig({ location: l }).enabled;
+    })({ location: "product_details_modal" })
+        ? (0, n.jsx)(lt, { ...e })
+        : (0, n.jsx)(eq, { ...e });
+}
+function lt(e) {
+    let {
+            transitionState: l,
+            returnRef: t,
+            skuId: a,
+            applicationId: i,
+            isStorefront: u,
+            giftRecipient: d,
+            giftingOrigin: m,
+            analyticsLocations: x,
+            analyticsContext: h,
+            onClose: b,
+        } = e,
+        { analyticsLocations: C } = (0, T.Ay)(x ?? []),
+        { guildId: j } = (0, F.nG)(i),
+        g = (0, c.bG)([w.default], () => w.default.getId());
+    s.useEffect(() => {
+        null != j && null != a && (0, q.iR)(j, a);
+    }, [j, a]);
+    let k = (0, c.bG)([G.A], () => G.A.getStorefrontMetadata(i), [i]),
+        S = (0, c.bG)([G.A], () => G.A.getSkuAssets()),
+        R = (0, c.bG)([Y.A], () => Y.A.isFetchingForSKU(a)),
+        L = (0, f.M)((0, I.Ay)()),
+        [D, M] = s.useState(!0),
+        $ = (0, U.A)({ skuId: a, location: "SocialLayerStorefrontProductDetailsModal" }),
+        [J, z] = s.useState(null),
+        W = (function (e, l) {
+            let t = l?.labelIconAssetId != null ? (0, H.YE)(e, l?.labelIconAssetId) : null,
+                [n, a] = (0, y.rh)(t, "#000000"),
+                i = s.useMemo(() => {
+                    let e = r()(n).darken(1);
+                    return `radial-gradient(181.07% 122.33% at -20.89% -23.8%, ${e.alpha(0.25).hex()} 0%, transparent 100%)`;
+                }, [n]);
+            return null != t && "#000000" !== n ? i : void 0;
+        })(i, J);
+    (0, P.pE)(),
+        (0, N.Ay)(() => {
+            B.default.track(eD.HAw.OPEN_MODAL, { location_stack: C, type: eU.Nh, sku_id: a, application_id: i }),
+                (0, q.Xw)();
+        });
+    let V = s.useCallback(
+        (e) => {
+            B.default.track(eD.HAw.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED, {
+                slayer_storefront_session_id: h?.sessionId,
+                sku_id: a,
+                guild_id: h?.guildId,
+                cta_type: e,
+                location_stack: C,
+            });
+        },
+        [h, a, C],
+    );
+    s.useEffect(() => {
+        null == j || null == a || Y.A.isFetchingForSKU(a) || (0, q.qf)(j, a);
+    }, [j, a]);
+    let X = s.useCallback(() => {
+            null != $ &&
+                null != j &&
+                (V(eL.Jq.FORWARD_BUTTON),
+                (0, ee.d)({
+                    sku: $,
+                    guildId: j,
+                    source: "social-layer-storefront-pdp",
+                    analyticsLocations: C,
+                    analyticsContext: h,
+                }));
+        }, [$, j, V, C, h]),
+        Q = s.useCallback(() => {
+            V(eL.Jq.WISHLIST_BUTTON);
+        }, [V]),
+        Z = s.useCallback(() => {
+            M(!D), V(eL.Jq.MUTE_BUTTON);
+        }, [D, V]);
+    if (null == $?.tenantMetadata?.socialLayer) return R ? (0, n.jsx)(p.y, {}) : null;
+    let el = k?.logoAssetId != null ? (0, H.YE)(i, k.logoAssetId, 256) : null,
+        et = k?.lightThemeLogoAssetId != null ? (0, H.YE)(i, k.lightThemeLogoAssetId, 256) : null,
+        en = null;
+    return (
+        (en = L ? (el ?? et) : (et ?? el)),
+        (0, n.jsx)(v.EO, {
+            transitionState: l,
+            "hide-shadow": !0,
+            parentComponent: "SocialLayerStorefrontProductDetailsModal",
+            className: e2.CR,
+            size: v.rI.DYNAMIC,
+            returnRef: t,
+            children: (0, n.jsxs)(v.$m, {
+                className: e2.jE,
+                children: [
+                    (0, n.jsxs)("div", {
+                        className: e2.op,
+                        style: { background: W },
+                        children: [
+                            (0, n.jsx)("div", {
+                                className: e2.r$,
+                                children: null != en ? (0, n.jsx)("img", { className: e2.wm, src: en, alt: "" }) : null,
+                            }),
+                            (0, n.jsx)(e8, { applicationId: i, selectedCarouselItem: J }),
+                            (0, n.jsx)(e9, {
+                                sku: $,
+                                guildId: j,
+                                shouldShowShopLink: !u,
+                                giftRecipient: d?.id !== g ? d : void 0,
+                                giftingOrigin: d?.id !== g ? m : void 0,
+                                trackPDPClick: V,
+                                analyticsLocations: C,
+                            }),
+                        ],
+                    }),
+                    (0, n.jsxs)("div", {
+                        className: e2.Cf,
+                        children: [
+                            (0, n.jsx)(e6, {
+                                sku: $,
+                                applicationId: i,
+                                assets: S,
+                                onSelectedCarouselItemChange: z,
+                                isMuted: D,
+                                trackPDPClick: V,
+                            }),
+                            (0, n.jsxs)("div", {
+                                className: e2.V7,
+                                children: [
+                                    null != $ &&
+                                        (0, n.jsx)(eO._, {
+                                            sku: $,
+                                            isCardHovered: !0,
+                                            className: o()(e2.jU, e2.ij),
+                                            trackButtonClick: Q,
+                                            variant: "overlay-secondary",
+                                            location: "social_layer_storefront_product_details_modal",
+                                        }),
+                                    (0, n.jsx)(le, {
+                                        onClick: X,
+                                        ariaLabel: K.intl.string(K.t.Ej3B3Y),
+                                        children: (0, n.jsx)(O.A, { size: "refresh_sm", color: "currentColor" }),
+                                    }),
+                                    (0, n.jsx)(le, {
+                                        onClick: Z,
+                                        ariaLabel: D ? K.intl.string(K.t.YqAjXy) : K.intl.string(K.t.w4m945),
+                                        children: D
+                                            ? (0, n.jsx)(A._, { size: "refresh_sm", color: "currentColor" })
+                                            : (0, n.jsx)(_.H, { size: "refresh_sm", color: "currentColor" }),
+                                    }),
+                                    (0, n.jsx)(le, {
+                                        onClick: b,
+                                        ariaLabel: K.intl.string(K.t.cpT0Cq),
+                                        children: (0, n.jsx)(E.d, { size: "refresh_sm", color: "currentColor" }),
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        })
+    );
+}
+function ln(e) {
+    let { timeRemaining: l, text: t } = e;
+    return (0, n.jsx)(k.A, {
+        className: e2.qw,
+        Icon: h.C,
+        children: (0, n.jsxs)("div", {
+            className: e2.Yu,
+            children: [
+                (0, n.jsxs)(m.E, {
+                    variant: "text-xs/bold",
+                    color: "currentColor",
+                    children: [K.intl.string(K.t.yYEZGi), null != l && ` (${l})`],
+                }),
+                (0, n.jsx)("div", {
+                    className: e2.fb,
+                    children: (0, n.jsx)(m.E, { variant: "text-xs/medium", color: "currentColor", children: t }),
+                }),
+            ],
+        }),
+    });
+}
