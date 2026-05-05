@@ -4335,7 +4335,6 @@
   "4rMiHy": "Slowmode is enabled. You can send another message in this channel in {seconds, plural, one { second} other { seconds} }.",
   "IWntYg": "Slowmode is enabled. Members can send one message every {seconds, plural, one { second} other { seconds} }.",
   "3hz51F": "Slowmode is enabled. Members can send one message every {hours, plural, one { hour} other { hours} } {minutes, plural, =0 {} one { minute} other { minutes} } {seconds, plural, =0 {} one { second} other { seconds} }",
-  "SSzXvQ": "Slowmode is enabled, but you are immune. Amazing!",
   "8+NidX": "Slowmode Immune",
   "sY3wlG": "Slowmode is enabled. Members can send one message every {minutes, plural, one { minute} other { minutes} } {seconds, plural, =0 {} one { second} other { seconds} }",
   "Icu3bf": "Slowmode is enabled.",

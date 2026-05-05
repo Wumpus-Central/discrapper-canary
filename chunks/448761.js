@@ -85,4 +85,5 @@ let s = {
     AUTOMOD_INCIDENT_ACTIONS: new Set([36, 37, 38, 39]),
     SELF_MENTIONABLE_SYSTEM: new Set([46]),
     SCHEDULABLE: new Set([0, 19]),
+    SILENTLY_CREATABLE: new Set([67]),
 };
