@@ -1,0 +1,13 @@
+.child__8d0ee {
+    align-items: center;
+    background: pink;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    font-size: 24px;
+    height: 100px;
+    justify-content: center;
+    padding: 12px;
+    width: 100px
+}
