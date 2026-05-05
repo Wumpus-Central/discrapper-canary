@@ -3964,7 +3964,7 @@
     width: 100%
 }
 
-.selectOption__28e94 {
+.selectOption__28e94.selectOption__28e94 {
     padding: 8px
 }
 
@@ -5676,12 +5676,6 @@
     color: var(--input-placeholder-text-default)
 }
 
-.fields__12532 {
-    display: flex;
-    flex-direction: column;
-    gap: 16px
-}
-
 .container__71cd5 {
     margin-top: 16px
 }
@@ -5711,6 +5705,10 @@
 .clearButton__7796e {
     font-size: 16px;
     margin-inline-start: -16px
+}
+
+.spacing_a5537d {
+    margin-bottom: var(--space-16)
 }
 
 .button__66b20 {
