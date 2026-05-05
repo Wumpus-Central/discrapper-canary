@@ -287,7 +287,7 @@ function eo(e) {
                         b({ action: "PRESS_BADGE" }), (0, Z.R9)({ badge: e.id, analyticsLocations: O, ...R });
                         let i = e.id.startsWith("staff") && !_;
                         if (F && !i) {
-                            t.preventDefault(), h({ initialBadgeId: (0, ei.P)(e.id) });
+                            t.preventDefault(), h({ initialBadgeId: (0, ei.P3)(e.id) });
                             return;
                         }
                         if (n) {
