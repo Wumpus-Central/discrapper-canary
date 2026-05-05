@@ -21243,5 +21243,5 @@ let ba = (0, o.i4)(u.X.LOGOUT_SIDEBAR_ITEM, {
         },
         buildLayout: () => [],
     }),
-    bo = (0, o.WI)(u.X.UTILITY_SECTION, { buildLayout: () => [bs, ba].filter(t6.Vq) }),
+    bo = (0, o.WI)(u.X.UTILITY_SECTION, { buildLayout: () => [bs, ba] }),
     bu = (0, o.Hr)({ buildLayout: () => [xQ, I4, hl, uz, iF, Ef, bo], analyticsKey: "user_settings" });
