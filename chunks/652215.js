@@ -5919,6 +5919,7 @@ let si = Object.freeze({
         [tw.D.UPLAY]: "Uplay",
         [tw.D.BATTLENET]: "Battle.net",
         [tw.D.ORIGIN]: "Origin",
+        [tw.D.EAPLAY]: "EA Play",
         [tw.D.GOG]: "GOG",
         [tw.D.GLYPH]: "Glyph",
         [tw.D.TWITCH]: "Twitch",
