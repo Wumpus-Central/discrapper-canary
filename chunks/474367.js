@@ -2,12 +2,12 @@ n.d(t, {
     ch: () => D.c,
     DH: () => u.DH,
     Z4: () => R,
-    qX: () => w,
+    qX: () => G,
     v7: () => o.v,
     y: () => N,
     _D: () => s._,
     I0: () => c.I,
-    s7: () => C.s,
+    s7: () => L.s,
     Lo: () => a.Lo,
     me: () => l.m,
     Vm: () => r.Vm,
@@ -15,7 +15,7 @@ n.d(t, {
     a6: () => u.a6,
     JW: () => u.JW,
     nL: () => k.n,
-    vW: () => L,
+    vW: () => S,
     q7: () => a.q7,
     _P: () => c._,
     f7: () => u.f7,
@@ -41,9 +41,9 @@ var r = n(848584),
     b = n(857250),
     h = n(97483),
     I = n(459357),
-    j = n(902958),
-    A = n(99696),
-    y = n(580630),
+    y = n(99696),
+    j = n(580630),
+    A = n(94420),
     E = n(327105),
     P = n(375708),
     T = n(513857);
@@ -61,15 +61,15 @@ let N = (e) => {
     R = (e) => {
         let { onComplete: t, onClose: n, text: r, className: a, initialCode: l, stackingBehavior: i } = e,
             { enabled: s } = (0, I.c)({ location: "StatefulCheckoutGiftCardRedemptionModalLink" }),
-            { contextMetadata: u } = (0, j.P5)();
+            u = (0, A.t4)((e) => e.contextMetadata);
         return s
             ? (0, d.jsx)(N, {
                   text: r,
                   onClick: () => {
-                      (0, A.HF)({
+                      (0, y.HF)({
                           initialCode: l ?? "",
                           onComplete: (e) => {
-                              let n = (0, y.$g)(e.amount, e.currency);
+                              let n = (0, j.$g)(e.amount, e.currency);
                               (0, _.P0)(
                                   (0, b.o)(
                                       P.intl.formatToPlainString(E.default["66Wi6B"], { price: n }),
@@ -90,8 +90,8 @@ let N = (e) => {
             : null;
     };
 var M = n(452027),
-    S = n(91774);
-let L = (e) => {
+    C = n(91774);
+let S = (e) => {
     let {
         fieldLabel: t = P.intl.string(P.t["u+Cw58"]),
         label: n,
@@ -102,14 +102,14 @@ let L = (e) => {
     return (0, d.jsx)(M.D, {
         label: t,
         children: (0, d.jsxs)("div", {
-            className: S.nQ,
+            className: C.nQ,
             children: [
-                (0, d.jsx)(f.E, { className: S.OL, variant: "text-md/normal", children: n }),
+                (0, d.jsx)(f.E, { className: C.OL, variant: "text-md/normal", children: n }),
                 (0, d.jsx)("span", {
-                    className: S.OL,
+                    className: C.OL,
                     children: (0, d.jsxs)(f.E, {
                         variant: "text-md/normal",
-                        className: S.Kk,
+                        className: C.Kk,
                         children: [(0, d.jsx)(a, { color: l, size: "sm" }), r],
                     }),
                 }),
@@ -117,17 +117,17 @@ let L = (e) => {
         }),
     });
 };
-var C = n(454666);
+var L = n(454666);
 n(87730);
 var k = n(70433),
     D = n(900730),
     U = n(457287),
-    G = n(97803);
-let w = (e) => {
+    w = n(97803);
+let G = (e) => {
     let { className: t, currencies: n, onChange: r, selectedCurrency: a, ...l } = e;
     return (0, d.jsx)(U.f, {
         currencies: n,
-        className: p()(G.p, t),
+        className: p()(w.p, t),
         children: (0, d.jsx)(U.A, {
             label: P.intl.string(P.t["/AAR02"]),
             selectedCurrency: a,

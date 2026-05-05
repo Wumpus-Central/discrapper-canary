@@ -8,9 +8,11 @@ function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
     return o()(e, t);
 }
-function u() {
+function u(e) {
+    let { contextMetadata: t } = e;
     return (0, r.h)(
         (e) => ({
+            contextMetadata: t,
             selectedSkuId: void 0,
             selectedPlanId: void 0,
             setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),

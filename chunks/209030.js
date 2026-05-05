@@ -20,8 +20,8 @@ var l = n(627968),
     _ = n(284009),
     T = n.n(_),
     f = n(937008),
-    N = n(278521),
-    x = n(566980),
+    x = n(278521),
+    N = n(566980),
     I = n(800471),
     g = n(543767),
     v = n(299301),
@@ -73,7 +73,7 @@ let Q = (e) => {
             isPremiumGroupPurchase: D,
             isEligibleForDiscount: w,
             displayCurrency: k,
-        } = (0, N.P5)(),
+        } = (0, x.P5)(),
         { checkoutPaymentSources: B } = (0, S.t)(),
         { isGift: W, giftRecipient: V, selectedGiftStyle: H } = (0, f.Pv)(),
         K = d ?? "",
@@ -98,13 +98,11 @@ let Q = (e) => {
                     isInOneStepSubscriptionCheckout: r = !1,
                     isTrial: s = !1,
                 } = e,
-                u = (0, j.t4)((e) => e.selectedSkuId),
-                {
-                    activeSubscription: c,
-                    contextMetadata: d,
-                    setPurchasePreviewError: p,
-                    isEligibleForDiscount: m,
-                } = (0, N.P5)(),
+                { selectedSkuId: u, contextMetadata: c } = (0, j.t4)((e) => ({
+                    selectedSkuId: e.selectedSkuId,
+                    contextMetadata: e.contextMetadata,
+                })),
+                { activeSubscription: d, setPurchasePreviewError: p, isEligibleForDiscount: m } = (0, x.P5)(),
                 { isGift: h } = (0, f.Pv)(),
                 {
                     subscriptionPlan: C,
@@ -116,7 +114,7 @@ let Q = (e) => {
                         l = (0, o.bG)([M.A], () => M.A.get(t));
                     T()(null != l, "Missing plan");
                     let a = [{ planId: l.id, quantity: 1 }],
-                        i = n === x.h.PURCHASING || n === x.h.COMPLETED;
+                        i = n === N.h.PURCHASING || n === N.h.COMPLETED;
                     return { subscriptionPlan: l, purchaseState: n, purchaseDisabled: i, newItems: a };
                 })({ selectedPlanId: t }),
                 [y, P] = (0, g.YV)({
@@ -133,7 +131,7 @@ let Q = (e) => {
                     if (s && null != y) return y;
                 }, [s, y]),
                 [_, O] = (0, g.YV)({
-                    subscriptionId: c?.id,
+                    subscriptionId: d?.id,
                     items: E,
                     renewal: !0,
                     preventFetch: h || A,
@@ -148,7 +146,7 @@ let Q = (e) => {
                     subscriptionPlanId: t,
                     currency: n.currency,
                     preventFetch: !h || A,
-                    loadId: d.loadId,
+                    loadId: c.loadId,
                 }),
                 { checkoutInvoicePreview: U, checkoutInvoiceError: k } = a.useMemo(
                     () =>
@@ -283,8 +281,8 @@ function ee(e) {
             setHasAcceptedTerms: _,
             legalTermsNodeRef: T,
             hasLegalTermsFlash: f,
-            trialId: N,
-            trialFooterMessageOverride: x,
+            trialId: x,
+            trialFooterMessageOverride: N,
             reviewWarningMessage: I,
             metadata: g,
             hideSubscriptionDetails: M,
@@ -325,7 +323,7 @@ function ee(e) {
             selectedPlanId: t,
             paymentSources: i,
             priceOptions: o,
-            trialId: N,
+            trialId: x,
             metadata: g,
             isTrial: b,
             currencies: y,
@@ -334,10 +332,10 @@ function ee(e) {
         ef = a.useMemo(() => (0, F.l6)(o, ep?.checkoutContext?.available_plans), [o, ep]);
     if (null != ed && ed.type === v.N$.LOADING)
         return (0, l.jsx)("div", { className: X.zp, children: (0, l.jsx)(c.y, {}) });
-    let eN = (0, l.jsx)(v.eb, {
+    let ex = (0, l.jsx)(v.eb, {
             invoiceSummaryTypeWithPreview: ed,
             priceOptions: o,
-            trialFooterMessageOverride: x,
+            trialFooterMessageOverride: N,
             hideSubscriptionDetails: M,
             referralTrialOfferId: j,
             isTrial: b,
@@ -349,7 +347,7 @@ function ee(e) {
             isCustomGift: eA,
             enablePremiumBrandRefresh: eE,
         }),
-        ex = s.M.EEA_COUNTRIES.has(k.A.ipCountryCodeWithFallback),
+        eN = s.M.EEA_COUNTRIES.has(k.A.ipCountryCodeWithFallback),
         eI = J.intl.formatToPlainString(J.t["sBpy9/"], { planName: eu.name });
     ec && !eA
         ? (eI = J.intl.string(J.t.J5a0eb))
@@ -412,7 +410,7 @@ function ee(e) {
                         (0, l.jsx)(z.Z, { giftRecipient: q }),
                     ],
                 }),
-            eN,
+            ex,
             (0, l.jsxs)("div", {
                 className: X.LC,
                 children: [
@@ -446,7 +444,7 @@ function ee(e) {
                     onChange: _,
                     forceShow: !0,
                     finePrint:
-                        x ??
+                        N ??
                         (0, l.jsx)(A.A, {
                             hide: b || R,
                             subscriptionPlan: eu,
@@ -458,9 +456,9 @@ function ee(e) {
                             willRelocateStoreCountry: null != eT,
                         }),
                     showPricingLink: eu.currency !== $.Yr.USD,
-                    showWithdrawalWaiver: ex,
+                    showWithdrawalWaiver: eN,
                     disabled: U,
-                    isTrial: b && null == x,
+                    isTrial: b && null == N,
                     isDiscount: R,
                     subscriptionPlan: eu,
                     isGift: ec,

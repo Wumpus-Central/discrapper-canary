@@ -1107,17 +1107,17 @@ let tk = (0, C.createContext)({
                                                 analyticsLocations: l,
                                                 analyticsSourceLocation: i,
                                             } = e,
+                                            { activitySessionId: r, hasPaymentSources: s } = (0, E.P5)(),
                                             {
-                                                activitySessionId: r,
-                                                hasPaymentSources: s,
-                                                contextMetadata: o,
-                                            } = (0, E.P5)(),
-                                            { loadId: u, startTime: p, discoverySessionId: m } = o,
-                                            _ = (0, C.useMemo)(() => {
+                                                loadId: o,
+                                                startTime: u,
+                                                discoverySessionId: p,
+                                            } = (0, M.t4)((e) => e.contextMetadata),
+                                            m = (0, C.useMemo)(() => {
                                                 let e;
                                                 return {
-                                                    load_id: u,
-                                                    discovery_session_id: m,
+                                                    load_id: o,
+                                                    discovery_session_id: p,
                                                     application_id: (0, c.P)(t),
                                                     location: l,
                                                     location_stack: l,
@@ -1143,43 +1143,43 @@ let tk = (0, C.createContext)({
                                                         checkout_flow: tT.C.ORB_CHECKOUT,
                                                     }),
                                                 };
-                                            }, [u, m, r, t, l, i, n]);
+                                            }, [o, p, r, t, l, i, n]);
                                         return {
                                             emitOrbCheckoutPaymentFlowEvent: (0, C.useCallback)(
                                                 (e, t) => {
-                                                    let n = Date.now() - p;
+                                                    let n = Date.now() - u;
                                                     e === eP.HAw.PAYMENT_FLOW_STARTED
                                                         ? d.default.track(eP.HAw.PAYMENT_FLOW_STARTED, {
-                                                              ..._,
+                                                              ...m,
                                                               has_saved_payment_source: s,
                                                               payment_gateway: ev.ps.VIRTUAL_CURRENCY,
                                                               continue_session_initial_step: null,
                                                           })
                                                         : e === eP.HAw.PAYMENT_FLOW_LOADED
                                                           ? d.default.track(eP.HAw.PAYMENT_FLOW_LOADED, {
-                                                                ..._,
+                                                                ...m,
                                                                 has_saved_payment_source: s,
                                                                 initial_step: a.pn.REVIEW,
                                                                 duration_ms: n,
                                                             })
                                                           : e === eP.HAw.PAYMENT_FLOW_CANCELED
                                                             ? d.default.track(eP.HAw.PAYMENT_FLOW_CANCELED, {
-                                                                  ..._,
+                                                                  ...m,
                                                                   duration_ms: n,
                                                               })
                                                             : e === eP.HAw.PAYMENT_FLOW_COMPLETED
                                                               ? d.default.track(eP.HAw.PAYMENT_FLOW_COMPLETED, {
-                                                                    ..._,
+                                                                    ...m,
                                                                     duration_ms: n,
                                                                 })
                                                               : e === eP.HAw.PAYMENT_FLOW_SUCCEEDED
                                                                 ? d.default.track(eP.HAw.PAYMENT_FLOW_SUCCEEDED, {
-                                                                      ..._,
+                                                                      ...m,
                                                                       duration_ms: n,
                                                                   })
                                                                 : e === eP.HAw.PAYMENT_FLOW_FAILED &&
                                                                   d.default.track(eP.HAw.PAYMENT_FLOW_FAILED, {
-                                                                      ..._,
+                                                                      ...m,
                                                                       duration_ms: n,
                                                                       ...(null != t
                                                                           ? {
@@ -1189,7 +1189,7 @@ let tk = (0, C.createContext)({
                                                                           : {}),
                                                                   });
                                                 },
-                                                [p, _, s],
+                                                [u, m, s],
                                             ),
                                         };
                                     })({
