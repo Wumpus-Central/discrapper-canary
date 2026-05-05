@@ -16,52 +16,45 @@ var i = n(627968),
     x = n(114166),
     f = n(891734),
     E = n(831688),
-    I = n(347353),
-    C = n(866661);
+    C = n(347353),
+    I = n(866661);
 let v = l.memo(function (e) {
         let t,
             n,
             {
                 useChatFontScaling: l,
-                hideEmoji: s,
-                emoji: a,
-                className: o,
-                count: d,
-                me: c,
-                me_burst: m,
-                burst_count: h,
-                burst_colors: g,
-                readOnly: v,
-                isLurking: _,
-                isPendingMember: j,
-                type: N,
-                emojiSize: y,
+                emoji: s,
+                className: a,
+                count: o,
+                me: d,
+                me_burst: c,
+                burst_count: m,
+                burst_colors: h,
+                readOnly: g,
+                isLurking: v,
+                isPendingMember: _,
+                type: j,
+                emojiSize: N,
             } = e,
-            T = N === u.v.BURST,
-            S = (0, E.IN)(c, m, N),
-            b = (0, f.g)(T && null != g ? g : []),
-            L = l ? C : I,
-            R = T ? h : d,
-            k = (0, x.x)(R, E.$Z),
-            M = {};
-        if (T && null != b) {
-            let { accentColor: e, backgroundColor: i, opacity: l } = b,
+            y = j === u.v.BURST,
+            T = (0, E.IN)(d, c, j),
+            S = (0, f.g)(y && null != h ? h : []),
+            b = l ? I : C,
+            L = y ? m : o,
+            R = (0, x.x)(L, E.$Z),
+            k = {};
+        if (y && null != S) {
+            let { accentColor: e, backgroundColor: i, opacity: l } = S,
                 s = (0, p.xp)(i ?? "", l) ?? "";
-            S && (M.borderColor = i), (M.background = s), (t = e), (n = e);
+            T && (k.borderColor = i), (k.background = s), (t = e), (n = e);
         }
-        let P = { minWidth: k, color: t, borderColor: n };
+        let M = { minWidth: R, color: t, borderColor: n };
         return (0, i.jsxs)("div", {
-            className: r()(L.reaction, L.reactionInner, o, { [L.reactionMe]: S, [L.reactionReadOnly]: v && !_ && !j }),
-            style: M,
+            className: r()(b.reaction, b.reactionInner, a, { [b.reactionMe]: T, [b.reactionReadOnly]: g && !v && !_ }),
+            style: k,
             children: [
-                (0, i.jsx)(A.A, {
-                    className: r()({ [L.hideEmoji]: s }),
-                    emojiId: a.id,
-                    emojiName: a.name,
-                    size: y,
-                    animated: T && a.animated,
-                }),
-                (0, i.jsx)("div", { className: L.reactionCount, style: P, children: R }),
+                (0, i.jsx)(A.A, { emojiId: s.id, emojiName: s.name, size: N, animated: y && s.animated }),
+                (0, i.jsx)("div", { className: b.reactionCount, style: M, children: L }),
             ],
         });
     }),
@@ -126,7 +119,7 @@ class y extends l.PureComponent {
                 visibleReactionsCount: y,
             } = this.props,
             { disableTransitionAppear: T } = this.state,
-            S = f ? C : I,
+            S = f ? I : C,
             b = y > 0;
         if (!b && !A) return null;
         let L = A || b;
