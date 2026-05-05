@@ -1,1 +1,26 @@
-c.d(a,{D:()=>b});var d=c(627968),s=c(192308),t=c(174459),n=c(652215);let b=e=>{let{analyticsLocations:a,displayProfile:b,location:f}=e;null==f&&(f=a[a.length-1]),t.default.track(n.HAw.OPEN_MODAL,{type:"Tiered Tenure Badge Details",location_stack:a,location:f,source:f}),(0,s.openModalLazy)(async()=>{let{default:e}=await Promise.all([c.e("25189"),c.e("49092"),c.e("77333"),c.e("63874"),c.e("77641")]).then(c.bind(c,384048));return a=>(0,d.jsx)(e,{...a,displayProfile:b})})}rofile:o})})}
+"use strict";
+n.d(t, { D: () => o });
+var i = n(627968),
+    r = n(192308),
+    s = n(174459),
+    a = n(652215);
+let o = (e) => {
+    let { analyticsLocations: t, displayProfile: o, location: l } = e;
+    null == l && (l = t[t.length - 1]),
+        s.default.track(a.HAw.OPEN_MODAL, {
+            type: "Tiered Tenure Badge Details",
+            location_stack: t,
+            location: l,
+            source: l,
+        }),
+        (0, r.openModalLazy)(async () => {
+            let { default: e } = await Promise.all([
+                n.e("25189"),
+                n.e("49092"),
+                n.e("77333"),
+                n.e("63874"),
+                n.e("77641"),
+            ]).then(n.bind(n, 384048));
+            return (t) => (0, i.jsx)(e, { ...t, displayProfile: o });
+        });
+};
