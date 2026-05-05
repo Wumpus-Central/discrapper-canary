@@ -360,9 +360,9 @@
     border-radius: 3px;
     color: var(--white);
     cursor: pointer;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: var(--font-weight-bold);
-    line-height: 1.8125rem;
+    line-height: 29px;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase
@@ -2566,6 +2566,16 @@
 .enable-forced-colors .scrollbar__506b3::-webkit-scrollbar-thumb {
     background-color: CanvasText;
     border-width: 1px
+}
+
+.spinner__8a394 {
+    margin-top: 20px
+}
+
+.markdown__8a394 {
+    font-size: 12px;
+    line-height: 16px;
+    padding-bottom: 30px
 }
 
 .keywordsTextArea__6a631 {
@@ -5677,12 +5687,6 @@
 .hiddenMessage_fffc15::placeholder,
 .inputDefault_fffc15::placeholder {
     color: var(--input-placeholder-text-default)
-}
-
-.fields__12532 {
-    display: flex;
-    flex-direction: column;
-    gap: 16px
 }
 
 .header__3633a {
