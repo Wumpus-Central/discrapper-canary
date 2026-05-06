@@ -315,6 +315,7 @@ function ek(e) {
             if (m.length > 0)
                 return (0, i.jsx)(X.A, {
                     distributorCTAConfigs: m,
+                    buttonVariant: "secondary",
                     fullWidth: l !== es.d.MODAL_V2,
                     stopPropagation: !0,
                     onAction: r,

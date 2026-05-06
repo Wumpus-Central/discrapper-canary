@@ -14,7 +14,7 @@ var i = n(627968),
 function h(e) {
     let {
             distributorCTAConfigs: t,
-            buttonVariant: n = "secondary",
+            buttonVariant: n,
             fullWidth: h = !0,
             stopPropagation: p = !1,
             onAction: E,

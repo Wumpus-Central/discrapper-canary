@@ -1,4 +1,4 @@
-l.d(t, { A: () => eh });
+l.d(t, { A: () => ep });
 var n = l(627968);
 l(64700);
 var i = l(503698),
@@ -40,8 +40,8 @@ function N(e) {
 }
 var T = l(82149),
     S = l(734057),
-    I = l(287809),
-    C = l(874546),
+    C = l(287809),
+    I = l(874546),
     P = l(90644),
     E = l(61330),
     _ = l(205390),
@@ -230,8 +230,9 @@ var el = l(648246),
     ec = l(279250),
     eo = l(267102),
     ed = l(616356),
-    eu = l(625494);
-function em(e) {
+    eu = l(625494),
+    em = l(925932);
+function eA(e) {
     let { isCurrentUser: t, applicationStream: l, onAction: i } = e,
         { activeStream: s, watchingOtherStream: a } = (0, c.cf)([ed.A], () => ({
             activeStream: ed.A.getActiveStreamForApplicationStream(l),
@@ -259,7 +260,8 @@ function em(e) {
     let h = (0, ec.CT)(d);
     return (
         t ? (h = j.intl.string(j.t.XvBdeT)) : m && (h = j.intl.string(j.t["JH1SJ+"])),
-        (0, n.jsxs)(n.Fragment, {
+        (0, n.jsxs)("div", {
+            className: em.w,
             children: [
                 (0, n.jsx)(x.$, {
                     size: "sm",
@@ -288,8 +290,8 @@ function em(e) {
         })
     );
 }
-var eA = l(708727);
-let eh = (0, m.A)((e) => {
+var eh = l(708727);
+let ep = (0, m.A)((e) => {
     let {
             activity: t,
             embeddedActivity: l,
@@ -303,13 +305,13 @@ let eh = (0, m.A)((e) => {
             type: v,
             onAction: j,
         } = e,
-        L = (0, c.bG)([I.default], () => {
-            let e = I.default.getCurrentUser();
+        L = (0, c.bG)([C.default], () => {
+            let e = C.default.getCurrentUser();
             return r()(null != e, "UserActivityActions: currentUser cannot be undefined"), e;
         }),
         O = v === b.O.STREAM_PREVIEW || null != a,
         k = (0, P.A)(t),
-        z = k || O ? h.A.Direction.HORIZONTAL : h.A.Direction.VERTICAL,
+        z = k ? h.A.Direction.HORIZONTAL : h.A.Direction.VERTICAL,
         M = (0, c.bG)([S.A], () => (null != g ? S.A.getChannel(g) : null), [g]),
         D = null != M && (0, p.F9)(t),
         V = (0, _.A)("voice_channel_activity_actions", t?.application_id),
@@ -319,15 +321,14 @@ let eh = (0, m.A)((e) => {
         align: h.A.Align.STRETCH,
         direction: z,
         wrap: R ? h.A.Wrap.WRAP : h.A.Wrap.NO_WRAP,
-        className: s()(m, eA.jx, R ? eA.Vd : eA.xM),
+        className: s()(m, eh.jx, R ? eh.Vd : eh.xM),
         children: (() => {
-            if (!(0, C.Ay)(t)) {
+            if (!(0, I.Ay)(t)) {
                 if ((0, E.A)(t))
                     return (0, n.jsx)(G, { platform: A.A.get(H.fg2.XBOX), variant: f, onAction: j, icon: o.Y });
                 if (t?.platform === H.yTV.PS4 || t?.platform === H.yTV.PS5)
                     return (0, n.jsx)(G, { variant: f, platform: A.A.get(H.fg2.PLAYSTATION), onAction: j, icon: d.X });
             }
-            if (V.length > 0) return (0, n.jsx)(Y.A, { distributorCTAConfigs: V, buttonVariant: "overlay-primary" });
             if (k) {
                 let e = (0, n.jsx)(et, { activity: t, user: i, guildId: x, channelId: g, source: y, onAction: j }),
                     l = (0, n.jsx)(K, { activity: t, user: i, source: y, onAction: j });
@@ -340,7 +341,14 @@ let eh = (0, m.A)((e) => {
                     : (0, n.jsx)(w, { guildId: e.guildId, channelId: e.channelId, variant: f, onAction: j });
             }
             return O
-                ? (0, n.jsx)(em, { isCurrentUser: L.id === i.id, applicationStream: a, onAction: j })
+                ? (0, n.jsxs)(n.Fragment, {
+                      children: [
+                          (0, n.jsx)(eA, { isCurrentUser: L.id === i.id, applicationStream: a, onAction: j }),
+                          V.length > 0
+                              ? (0, n.jsx)(Y.A, { distributorCTAConfigs: V, buttonVariant: "secondary" })
+                              : null,
+                      ],
+                  })
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
                           D && (0, n.jsx)(N, { userId: i.id, channel: M, onAction: j }),
@@ -354,6 +362,9 @@ let eh = (0, m.A)((e) => {
                           }),
                           (0, n.jsx)(F, { activity: t, user: i, variant: D ? "secondary" : f, onAction: j }),
                           (0, n.jsx)(U, { user: i, activity: t, variant: D ? "secondary" : f, onAction: j }),
+                          V.length > 0
+                              ? (0, n.jsx)(Y.A, { distributorCTAConfigs: V, buttonVariant: "secondary" })
+                              : null,
                       ],
                   });
         })(),
