@@ -7,4 +7,4 @@ let i = (0, n(945810).mj)({
         variations: { 0: { enableProfileFrames: !1 }, 1: { enableProfileFrames: !0 } },
     }),
     r = (e) => i.useConfig({ location: e }).enableProfileFrames,
-    s = i;
+    s = iull;
