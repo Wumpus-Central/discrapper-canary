@@ -8,19 +8,11 @@
     height: 48px
 }
 
-.inputWrapper_ba2c2e [data-error]>:last-child {
-    background: transparent
-}
-
-.confirmCountryContainer_ba2c2e {
+.redemptionFormContainer_ba2c2e {
     display: flex;
     flex-direction: column;
-    gap: var(--space-16);
+    gap: var(--space-12);
     width: 100%
-}
-
-.confirmCountryContainer_ba2c2e input[data-mana-component=text-input] {
-    background-color: var(--input-background-default)
 }
 
 .headerFlag_ba2c2e {
@@ -56,4 +48,14 @@
 
 .giftCodeInputWrapper_ba2c2e [data-error]>:last-child {
     background: transparent
+}
+
+.legalText_ba2c2e {
+    color: var(--text-muted);
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: var(--font-weight-normal, 400);
+    line-height: 16px;
+    margin: 0
 }
