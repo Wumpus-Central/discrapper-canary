@@ -1577,7 +1577,7 @@ function nt(e) {
         )
     );
 }
-var nn = n(913948),
+var nn = n(601007),
     ni = n(648246),
     nr = n(308335),
     ns = n(790381),
@@ -1697,13 +1697,15 @@ let n_ = [...t2.n, ed.Yq],
             { streamPreviewUrl: I, stream: T } = (0, tC.A)(n),
             { displayParticipants: S, participant1: R, participant2: U, numOtherParticipants: k } = (0, P.A)(n, 3),
             G = n.extra.platform,
-            F = null != G ? nf[G] : null,
-            V = nc(G === t3.Y.XBOX ? eY.fg2.XBOX : G === t3.Y.PLAYSTATION ? eY.fg2.PLAYSTATION : void 0),
-            { data: B } = (0, b.YY)(n.extra.application_id),
-            H = (0, t7.A)("member_list_gaming_content_popout", n.extra.application_id),
-            j = (0, C.J)(B),
-            Y = (0, nr.o)(p?.application_id ?? E?.applicationId ?? B?.id),
-            W = r.useCallback(
+            F = n.extra.application_id,
+            V = null != G ? nf[G] : null,
+            B = nc(G === t3.Y.XBOX ? eY.fg2.XBOX : G === t3.Y.PLAYSTATION ? eY.fg2.PLAYSTATION : void 0),
+            { data: H } = (0, b.YY)(F),
+            j = (0, t7.A)("member_list_gaming_content_popout", F),
+            { analyticsLocations: Y } = (0, t9.Ay)(O.A.MEMBER_LIST_GAMING_CONTENT_POPOUT),
+            W = (0, C.J)(H),
+            K = (0, nr.o)(p?.application_id ?? E?.applicationId ?? H?.id),
+            z = r.useCallback(
                 (e) => {
                     let i, r, s, a;
                     if (d?.src == null || null == t || null == _) return;
@@ -1745,83 +1747,93 @@ let n_ = [...t2.n, ed.Yq],
                 [d?.src, t, S, n, A, k, R, U, m, g, _],
             );
         if (null == _) return null;
-        let K = (0, i.jsx)(ed.mG, {
+        let $ = (0, i.jsx)(ed.mG, {
                 location: null == I ? ed.N5.POPOUT : ed.N5.STREAMING_POPOUT,
                 children: n_.map((e, t) => (0, i.jsx)(e, { entry: n }, t)),
             }),
-            z =
+            q =
                 null == T
                     ? (0, i.jsx)(tQ, {
                           channel: t,
                           headerIcons:
-                              null == F
+                              null == V
                                   ? null
                                   : (0, i.jsx)(nd.A, {
-                                        onClick: V,
-                                        Icon: F,
+                                        onClick: B,
+                                        Icon: V,
                                         "aria-label": eu.intl.string(eu.t.YR4cHH),
                                     }),
                           userDescription: (0, x.JM)(n) ? eu.t.vPg1JT : eu.t.rPqqts,
                           title: h,
                           subtitle: f,
-                          badges: K,
+                          badges: $,
                           entry: n,
                           disableGameProfileLinks: s,
                           onUserPopoutClosed: l,
                           trackRankingItemInteraction: c,
                           children:
-                              H.length > 0
-                                  ? (0, i.jsx)(nn.A, { distributorCTAConfigs: H, buttonVariant: "overlay-primary" })
+                              j.length > 0
+                                  ? (0, i.jsx)(nn.A, {
+                                        distributorCTAConfigs: j,
+                                        applicationId: F,
+                                        analyticsLocations: Y,
+                                        buttonVariant: "overlay-primary",
+                                    })
                                   : null,
                       })
                     : (0, i.jsx)(tJ, {
                           channel: t,
                           title: n.extra.game_name,
                           subtitle: f,
-                          badges: K,
+                          badges: $,
                           userDescription: eu.t["6oWFUN"],
                           entry: n,
                           stream: T,
                           onUserPopoutClosed: l,
                           trackRankingItemInteraction: c,
                           children:
-                              H.length > 0
-                                  ? (0, i.jsx)(nn.A, { distributorCTAConfigs: H, buttonVariant: "overlay-primary" })
+                              j.length > 0
+                                  ? (0, i.jsx)(nn.A, {
+                                        distributorCTAConfigs: j,
+                                        applicationId: F,
+                                        analyticsLocations: Y,
+                                        buttonVariant: "overlay-primary",
+                                    })
                                   : null,
                       }),
-            $ =
-                !Y && j
+            Z =
+                !K && W
                     ? (0, i.jsx)(
                           nt,
-                          { application: B, analyticsLocation: O.A.MEMBER_LIST_GAMING_CONTENT_POPOUT },
+                          { application: H, analyticsLocation: O.A.MEMBER_LIST_GAMING_CONTENT_POPOUT },
                           "cloud-play",
                       )
                     : null,
-            q = [
-                null == $ && ((0, N.A)(p, eY.jUm.JOIN) || (0, y.A)(p))
+            Q = [
+                null == Z && ((0, N.A)(p, eY.jUm.JOIN) || (0, y.A)(p))
                     ? (0, i.jsx)(v.A, { activity: p, user: _, variant: "primary", size: "md", icon: t6._ }, "join")
                     : null,
                 (0, t5.A)(p)
                     ? (0, i.jsx)(ni.A, { activity: p, size: "md", variant: "primary", icon: t4.b }, "watch")
                     : null,
-                $,
+                Z,
             ].filter(L.Vq);
         return (0, i.jsxs)(tW, {
             children: [
-                z,
+                q,
                 (0, i.jsx)(tz, {
                     children: (0, i.jsx)(t$, {
                         onReaction: a,
                         onVoiceChannelPreview: o,
                         user: _,
                         channel: t,
-                        generateReactionImage: W,
+                        generateReactionImage: z,
                         reactionImageAltText: eu.intl.formatToPlainString(eu.t.tAwI1k, {
                             username: _.username,
                             activity: n.extra.game_name,
                         }),
                         entry: n,
-                        buttons: q,
+                        buttons: Q,
                     }),
                 }),
             ],

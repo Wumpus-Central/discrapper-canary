@@ -81,7 +81,7 @@ function Z(e) {
         );
     return u ? (0, i.jsx)(W.FD, { text: q.intl.string(q.t.BjYzmC), onClick: c, fullWidth: !0 }) : null;
 }
-var X = n(913948),
+var X = n(601007),
     Q = n(46225),
     J = n(308335),
     ee = n(790381),
@@ -315,6 +315,8 @@ function ek(e) {
             if (m.length > 0)
                 return (0, i.jsx)(X.A, {
                     distributorCTAConfigs: m,
+                    applicationId: n?.application_id ?? "",
+                    analyticsLocations: f,
                     buttonVariant: "secondary",
                     fullWidth: l !== es.d.MODAL_V2,
                     stopPropagation: !0,

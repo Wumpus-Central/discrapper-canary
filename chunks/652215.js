@@ -4407,6 +4407,9 @@ var rD =
         (ex.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED =
             "premium_application_subscription_manage_cta_clicked"),
         (ex.CLOUD_PLAY_CTA_CLICKED = "cloud_play_cta_clicked"),
+        (ex.PLAY_CTA_DISPLAYED = "play_cta_displayed"),
+        (ex.PLAY_CTA_IMPRESSION = "play_cta_impression"),
+        (ex.PLAY_CTA_CLICKED = "play_cta_clicked"),
         (ex.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED = "channel_attach_menu_use_apps_clicked"),
         (ex.FORTNITE_GFNJOIN_CLICKED = "fortnite_gfnjoin_clicked"),
         (ex.FORTNITE_DOWNLOAD_CLICKED = "fortnite_download_clicked"),
