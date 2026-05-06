@@ -1,3 +1,95 @@
+.wrapper_e45a82 {
+    align-items: center;
+    justify-content: flex-end
+}
+
+.partyMembers_e45a82,
+.wrapper_e45a82 {
+    display: flex
+}
+
+.partyMember_e45a82,
+.partyMembers_e45a82,
+.wrapper_e45a82 {
+    height: var(--custom-party-avatars-avatar-diameter)
+}
+
+.partyMember_e45a82 {
+    display: inline-block;
+    margin-inline-start: -2px;
+    -webkit-mask: url(/assets/eae6388e2d5a721a.svg);
+    mask: url(/assets/eae6388e2d5a721a.svg);
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    mask-type: luminance;
+    width: var(--custom-party-avatars-avatar-diameter)
+}
+
+.partyMemberKnown_e45a82 {
+    cursor: pointer
+}
+
+.partyMember_e45a82:first-child {
+    margin-inline-start: 0
+}
+
+.partyMember_e45a82:last-child,
+.partyMember_e45a82:last-child>.partyMember_e45a82 {
+    -webkit-mask: none;
+    mask: none
+}
+
+.partyMemberEmpty_e45a82,
+.partyMemberUnknown_e45a82 {}
+
+.partyMemberUnknown_e45a82 {
+    align-items: center;
+    border-radius: 50%;
+    display: inline-flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.partyMemberUnknownIcon_e45a82 {
+    border-radius: 50%;
+    color: var(--text-muted);
+    height: 16px;
+    width: 16px
+}
+
+.partyMemberOverflow_e45a82 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 12px;
+    color: var(--text-default);
+    display: flex;
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    height: var(--custom-party-avatars-avatar-diameter);
+    justify-content: center;
+    line-height: 16px;
+    margin-inline-start: -2px;
+    min-width: var(--custom-party-avatars-avatar-diameter);
+    padding: 0 4px
+}
+
+.theme-dark .partyMemberBackground_e45a82 {
+    background-color: var(--primary-500)
+}
+
+.theme-dark .partyMemberUnknown_e45a82 {
+    background-color: var(--primary-500)
+}
+
+.theme-light .partyMemberBackground_e45a82 {
+    background-color: var(--primary-160)
+}
+
+.theme-light .partyMemberUnknown_e45a82 {
+    background-color: var(--primary-160)
+}
+
 .memberItem__5017b {
     align-items: center;
     display: flex;

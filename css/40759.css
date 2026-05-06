@@ -1,0 +1,84 @@
+.scroller__44cf4 {
+    padding: var(--space-16)
+}
+
+.formDivider__44cf4 {
+    margin: 10px 0
+}
+
+.loader__44cf4 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.balanceWidgetPillContainer__44cf4 {
+    margin-top: 4px
+}
+
+.descriptionWrapper__43963 {
+    margin-inline-start: 14px
+}
+
+.subText__43963 {
+    margin-top: 4px
+}
+
+.indicator__43963 {
+    align-items: center;
+    border-radius: 3px;
+    display: flex;
+    font-size: 11px;
+    font-weight: var(--font-weight-bold);
+    height: 14px;
+    letter-spacing: .4px;
+    margin-inline-start: 8px;
+    padding: 0 4px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.defaultIndicator__43963 {
+    background-color: var(--primary-500)
+}
+
+.defaultIndicator__43963,
+.premiumIndicator__43963 {
+    color: var(--white)
+}
+
+.premiumIndicator__43963 {
+    background-color: var(--brand-500)
+}
+
+.invalidIndicator__43963 {
+    background-color: var(--red-400);
+    color: var(--white)
+}
+
+.giftCardIcon__43963 {
+    align-items: center;
+    background-color: var(--brand-500);
+    border-radius: 2px;
+    color: var(--white);
+    display: flex;
+    height: 22px;
+    justify-content: center;
+    width: 32px
+}
+
+.countryOption_b9da6a:has(.header_b9da6a) {
+    background-color: var(--background-base-lowest);
+    cursor: default
+}
+
+.countryContainer_b9da6a {
+    align-items: center;
+    display: flex
+}
+
+.countryFlagEmoji_b9da6a {
+    height: 25px;
+    margin-inline-end: 5px
+}

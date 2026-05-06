@@ -91,7 +91,7 @@ let el = (e) => {
                                 onClick: () => {
                                     (0, m.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("81013"),
+                                            n.e("74926"),
                                             n.e("44602"),
                                             n.e("25280"),
                                         ]).then(n.bind(n, 987482));
@@ -1492,7 +1492,7 @@ let t8 = r.memo(function () {
                         noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER,
                         onClick: () => {
                             (0, m.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("81013"), n.e("44602"), n.e("25280")]).then(
+                                let { default: e } = await Promise.all([n.e("74926"), n.e("44602"), n.e("25280")]).then(
                                     n.bind(n, 987482),
                                 );
                                 return (t) => (0, i.jsx)(e, { source: "Video unsupported browser", ...t });
@@ -1605,7 +1605,7 @@ let t8 = r.memo(function () {
                             t7(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, m.openModalLazy)(async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("85094"),
+                                        n.e("9377"),
                                         n.e("77083"),
                                         n.e("84698"),
                                         n.e("981"),

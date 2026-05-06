@@ -16,11 +16,11 @@ n(456647);
 var x = n(633075),
     f = n(451395),
     E = n(716804),
-    T = n(688807),
-    y = n(990078),
+    y = n(688807),
+    T = n(990078),
     j = n(939249),
-    I = n(772838),
-    v = n(140735),
+    v = n(772838),
+    I = n(140735),
     A = n(834730),
     _ = n(192308),
     R = n(922016),
@@ -31,9 +31,9 @@ var x = n(633075),
     P = n(775602),
     L = n(606758),
     w = n(518477),
-    G = n(375708),
+    S = n(375708),
     O = n(184390);
-function S(e) {
+function G(e) {
     let { widget: t, className: n, buttonRef: l, additionalMenuItems: a } = e,
         s = (0, m.L)(t),
         o = (0, c.GV)();
@@ -47,13 +47,13 @@ function S(e) {
                     innerRef: l,
                     className: r()(O.x6, n),
                     "data-dnd-name": s,
-                    "aria-label": G.intl.formatToPlainString(G.t.HWNJJN, { widgetTitle: s }),
+                    "aria-label": S.intl.formatToPlainString(S.t.HWNJJN, { widgetTitle: s }),
                     "aria-describedby": o,
                     "aria-keyshortcuts": "Control+D, Meta+D",
                     ...e,
                     children: [
-                        (0, i.jsx)(I.W, { size: "sm" }),
-                        (0, i.jsx)(v.A, { id: o, children: G.intl.string(G.t.bsuqFn) }),
+                        (0, i.jsx)(v.W, { size: "sm" }),
+                        (0, i.jsx)(I.A, { id: o, children: S.intl.string(S.t.bsuqFn) }),
                     ],
                 }),
             }),
@@ -62,22 +62,22 @@ function S(e) {
 let X = (e) => {
         let { children: t } = e,
             n = (0, o.bG)([P.A], () => P.A.keyboardModeEnabled),
-            { isDragging: l } = (0, T.V)((e) => ({ isDragging: e.isDragging() }));
-        return (0, i.jsx)(y.m, {
+            { isDragging: l } = (0, y.V)((e) => ({ isDragging: e.isDragging() }));
+        return (0, i.jsx)(T.m, {
             __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
                 className: O.HE,
                 children: [
                     (0, i.jsx)(A.E, {
                         variant: "text-sm/normal",
                         color: "none",
-                        children: G.intl.format(n ? G.t["zvln/l"] : G.t["7cdwhg"], {
+                        children: S.intl.format(n ? S.t["zvln/l"] : S.t["7cdwhg"], {
                             emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                         }),
                     }),
                     (0, i.jsx)(A.E, {
                         variant: "text-sm/normal",
                         color: "none",
-                        children: G.intl.format(G.t["4e0rM4"], {
+                        children: S.intl.format(S.t["4e0rM4"], {
                             emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                         }),
                     }),
@@ -105,7 +105,7 @@ let X = (e) => {
                             n.e("981"),
                             n.e("276"),
                             n.e("186"),
-                            n.e("85094"),
+                            n.e("9377"),
                             n.e("24195"),
                             n.e("49476"),
                             n.e("54718"),
@@ -167,14 +167,14 @@ let X = (e) => {
                         (0, C.Z_)(), t();
                     },
                     onSelect: () => {},
-                    "aria-label": G.intl.string(G.t.xpSHSk),
+                    "aria-label": S.intl.string(S.t.xpSHSk),
                     className: O.MK,
                     children: (0, i.jsxs)(N.rX, {
                         children: [
                             r,
                             (0, i.jsx)(N.Dr, {
                                 id: "remove-widget",
-                                label: G.intl.string(G.t.Mm07Yc),
+                                label: S.intl.string(S.t.Mm07Yc),
                                 action: o,
                                 color: "danger",
                                 icon: b.u,
@@ -212,7 +212,7 @@ function Y(e) {
                     (0, C.Z_)(), t();
                 },
                 onSelect: () => {},
-                "aria-label": G.intl.string(G.t.xpSHSk),
+                "aria-label": S.intl.string(S.t.xpSHSk),
                 children: (0, i.jsxs)(N.rX, {
                     children: [
                         s,
@@ -220,7 +220,7 @@ function Y(e) {
                             N.Dr,
                             {
                                 id: "flag-widget",
-                                label: G.intl.string(G.t.D4GvHE),
+                                label: S.intl.string(S.t.D4GvHE),
                                 action: c,
                                 color: "danger",
                                 icon: M.i,
@@ -236,7 +236,7 @@ function Y(e) {
             (0, i.jsx)(j.D, {
                 ...e,
                 innerRef: o,
-                "aria-label": G.intl.string(G.t.xpSHSk),
+                "aria-label": S.intl.string(S.t.xpSHSk),
                 className: r()(U.x, a),
                 children: (0, i.jsx)(F.j, { size: "sm", color: "currentColor" }),
             }),
@@ -302,14 +302,14 @@ function Z(e) {
             onReorder: m.R_,
             onEnd: () => h(n.type),
         }),
-        T = null != E,
-        y = T && t < E,
-        j = T && t > E;
+        y = null != E,
+        T = y && t < E,
+        j = y && t > E;
     return (0, i.jsxs)("div", {
         ref: u,
-        className: r()(q.wX, { [q.A]: y, [q.Ze]: j, [q.Id]: x }),
-        "aria-label": G.intl.formatToPlainString(G.t.YLczh4, { positionNumber: t + 1 }),
-        children: [(0, i.jsx)(S, { buttonRef: d, widget: n, className: q.vn, additionalMenuItems: a }), s],
+        className: r()(q.wX, { [q.A]: T, [q.Ze]: j, [q.Id]: x }),
+        "aria-label": S.intl.formatToPlainString(S.t.YLczh4, { positionNumber: t + 1 }),
+        children: [(0, i.jsx)(G, { buttonRef: d, widget: n, className: q.vn, additionalMenuItems: a }), s],
     });
 }
 function J(e) {
@@ -319,11 +319,11 @@ function J(e) {
             children: a,
             disableInteraction: m,
             className: f,
-            index: T,
-            trailingContent: y,
+            index: y,
+            trailingContent: T,
             headerTitle: j,
-            headerSubtitle: I,
-            headerActionButtons: v,
+            headerSubtitle: v,
+            headerActionButtons: I,
             headerClassName: A,
             additionalManageWidgetMenuItems: _,
         } = e,
@@ -347,8 +347,8 @@ function J(e) {
         })({ widget: n, onAction: C }),
         L = b === n.type;
     (0, p.A)(P, L);
-    let w = N && null != T && !m,
-        G = () =>
+    let w = N && null != y && !m,
+        S = () =>
             (0, i.jsxs)("div", {
                 ref: D,
                 className: r()(q.kL, f),
@@ -357,13 +357,13 @@ function J(e) {
                         userId: t,
                         headingId: R,
                         title: j,
-                        subtitle: I,
-                        actionButtons: v,
+                        subtitle: v,
+                        actionButtons: I,
                         widget: n,
                         disableInteraction: m,
                         className: A,
                     }),
-                    (0, i.jsxs)(s.F, { children: [a, y] }),
+                    (0, i.jsxs)(s.F, { children: [a, T] }),
                 ],
             });
     return (0, i.jsx)("section", {
@@ -371,12 +371,12 @@ function J(e) {
         "aria-labelledby": R,
         children: w
             ? (0, i.jsx)(Z, {
-                  index: T ?? 0,
+                  index: y ?? 0,
                   widget: n,
                   getWidth: () => D.current?.offsetWidth,
                   additionalManageWidgetMenuItems: _,
-                  children: G(),
+                  children: S(),
               })
-            : G(),
+            : S(),
     });
 }
