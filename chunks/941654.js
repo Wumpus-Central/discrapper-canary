@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"IraH2Q":[[1,"discountOfferAmount"],"% 折扣"],"WBMEcr":["前往 Rust 商店"],"7mIXs6":["用新裝備迎接新的重設週期。5 月 21 日前可享 8 折優惠。"],"C+RsW7":["Discord 專屬 8 折優惠。"],"RMafGC":["直接用 Discord 贈送好友 Rust 物品，且無需包裝。"],"5aC9+e":["犒賞一下團隊"],"me6trO":["在 Discord 上購買 Rust 商品，立即進入遊戲裝備。"],"2FKQ2n":["在 Discord 上購買。"],"JN38wW":["在 Rust 中取得。"]}',
+a.exports = JSON.parse(
+    '{"5h8p5P":["{計數，複數，一個不支援 {",[1,"platforms"],"。} 不支援其他 {",[1,"platforms"],"。}}"],"vyAtfo":["連接您的 ",[1,"applicationName"]," 與 Discord 帳號，以接受此禮物。",[1,"platforms_info"]],"yqAKVO":["帳號已連結 ",[1,"applicationName"],"。 在下方領取您的禮物。",[1,"platforms_info"]],"3ah/a2":[[8,"$b",["從 ",[1,"applicationName"]," 遊戲商店購買物品，表示您\\\\正在購買一個有限授權，讓在所列遊戲中使用該物品。"]]," 本購買不退款。 此物品將由開發者在遊戲中直接傳送。",[1,"platforms_info"]],"fO4b1C":["連接您的 ",[1,"applicationName"]," 與 Discord 帳號，以接受此購買。",[1,"platforms_info"]],"IraH2Q":[[1,"discountOfferAmount"],"% 折扣"],"WBMEcr":["前往 Rust 商店"],"7mIXs6":["用新裝備迎接新的重設週期。5 月 21 日前可享 8 折優惠。"],"C+RsW7":["Discord 專屬 8 折優惠。"],"RMafGC":["直接用 Discord 贈送好友 Rust 物品，且無需包裝。"],"5aC9+e":["犒賞一下團隊"],"me6trO":["在 Discord 上購買 Rust 商品，立即進入遊戲裝備。"],"2FKQ2n":["在 Discord 上購買。"],"JN38wW":["在 Rust 中取得。"]}',
 );
