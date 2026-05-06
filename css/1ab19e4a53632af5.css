@@ -224,7 +224,8 @@
     margin-inline-end: var(--space-4);
     padding-bottom: var(--space-16);
     padding-top: var(--space-12);
-    padding-inline: var(--space-4) var(--space-12)
+    padding-inline: var(--space-4) var(--space-12);
+    scroll-padding-top: var(--space-20)
 }
 
 .nav__409aa,
@@ -273,6 +274,7 @@
     position: absolute;
     top: 100%;
     inset-inline: 0 var(--space-16);
+    pointer-events: none;
     z-index: 1
 }
 
