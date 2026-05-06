@@ -108,8 +108,8 @@
     position: relative
 }
 
-.profilePreviewContainerWithChat_c50f62.custom-profile-frame-bottom {
-    padding-block-end: 0 !important
+.profilePreviewContainerWithChat_c50f62 .custom-profile-frame-bottom {
+    margin-block-end: 0 !important
 }
 
 .collectiblePreviewsContainerNoChat_c50f62 {
