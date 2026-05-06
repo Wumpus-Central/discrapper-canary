@@ -1,3 +1,2 @@
-s.exports = JSON.parse(
-    '{"yfwZuy":["Προβολή του εμβλήματός μου"],"UnPGii":["Το έμβλημα προστέθηκε στο προφίλ σου."],"nvaTQq":["Πήρες το έμβλημα προφίλ Orbs!"]}',
-);
+"use strict";
+e.exports = "/assets/5ffa7131c334ec6d.svg";

@@ -785,7 +785,7 @@ n(457421), n(295811);
 let el = (e) => {
         let { tab: t, ...i } = e;
         {
-            let { default: e } = n(779733),
+            let { default: e } = n(2114),
                 { default: r } = n(408166);
             eu(i), e(), r(), (0, d.pX)(null != t ? B.BVt.COLLECTIBLES_SHOP_WITH_TAB(t) : B.BVt.COLLECTIBLES_SHOP);
         }

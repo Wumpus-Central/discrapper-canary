@@ -2,7 +2,7 @@
 var n,
     o,
     s = e(308227),
-    i = e(791553),
+    i = e(13934),
     u = s.process,
     c = s.Deno,
     a = (u && u.versions) || (c && c.version),

@@ -1,4 +1,4 @@
-n.d(t, { default: () => e4 });
+n.d(t, { default: () => e6 });
 var r = n(627968),
     l = n(64700),
     s = n(562708),
@@ -30,7 +30,7 @@ var p = n(503698),
     R = n(963935),
     I = n(894858),
     T = n(272053),
-    K = n(121881),
+    K = n(246179),
     O = n(939249),
     _ = n(508770),
     B = n(777666),
@@ -198,7 +198,7 @@ let el = function (e) {
 };
 var es = n(284009),
     ei = n.n(es),
-    ea = n(785651),
+    ea = n(873174),
     eu = n(935399),
     eo = n(319354),
     ec = n(717421),
@@ -905,8 +905,8 @@ var eT = n(495544),
 function eJ() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "538432",
-        l = "c6249812dbe5a5a246bbf060220fda356ec09dac".substring(0, 7),
+        n = "540513",
+        l = "6bbe17f9d535703021024775c2d6ce1a17fb982e".substring(0, 7),
         s = e$.A?.app.getVersion(),
         i = e$.A?.app.getBuildNumber(),
         u = e$.A?.app.getAppArch(),
@@ -1074,16 +1074,16 @@ function e7() {
         ],
     });
 }
-var e2 = n(175665),
-    e9 = n(178241),
-    e5 = n(779733),
+var e9 = n(175665),
+    e2 = n(178241),
+    e5 = n(2114),
     e8 = n(298859);
 let e3 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
-    e6 = new Map([
+    e4 = new Map([
         [e_.X.CONNECTIONS_PANEL, s.ImpressionNames.USER_SETTINGS_CONNECTIONS],
         [e_.X.SESSIONS_PANEL, s.ImpressionNames.USER_SETTINGS_SESSIONS],
     ]);
-function e4(e) {
+function e6(e) {
     let { target: t, ...n } = e,
         i = eO.A.useField("query"),
         a = l.useCallback(() => {
@@ -1097,7 +1097,7 @@ function e4(e) {
         return (
             eT.default.addChangeListener(e),
             () => {
-                eT.default.removeChangeListener(e), e2.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
+                eT.default.removeChangeListener(e), e9.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
             }
         );
     }, []),
@@ -1109,15 +1109,15 @@ function e4(e) {
               emptyState: tt,
               sidebarFooter: e7,
               onViewChange: (e) => {
-                  e3.has(e) || (0, e9._)(e);
-                  let t = e6.get(e);
+                  e3.has(e) || (0, e2._)(e);
+                  let t = e4.get(e);
                   null != t &&
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e2.A.getField("source") },
+                          properties: { source: e9.A.getField("source") },
                       }),
-                      e2.A.setState({ source: void 0 });
+                      e9.A.setState({ source: void 0 });
               },
               target: t,
               defaultTarget: e_.X.ACCOUNT_PANEL,

@@ -1,2 +1,1 @@
-"use strict";
-e.exports = "/assets/953ede156f374d89.svg";
+e.exports = { q: "footer_bb3ce8", G: "buttonGroup_bb3ce8" };

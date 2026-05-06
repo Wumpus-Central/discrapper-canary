@@ -1,2 +1,7 @@
 "use strict";
-e.exports = "/assets/c7ecdd297bfef4d3.svg";
+var n = r(954055),
+    i = r(869639);
+t.exports = function (t) {
+    var e = n.splitBlock(t.getCurrentContent(), t.getSelection());
+    return i.push(t, e, "split-block");
+};

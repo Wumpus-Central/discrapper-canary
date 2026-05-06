@@ -1,1 +1,2 @@
-e.exports = { kL: "container_ddf599", Kk: "icon_ddf599", Pf: "label_ddf599" };
+"use strict";
+e.exports = "/assets/f3d6166586697f68.svg";

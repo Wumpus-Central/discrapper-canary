@@ -1,2 +1,1 @@
-"use strict";
-e.exports = "/assets/f8079bedd0a91ef8.svg";
+e.exports = { x: "sliderContainer__65039", a: "slider__65039" };

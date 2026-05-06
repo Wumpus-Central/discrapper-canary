@@ -374,7 +374,7 @@ var eq = n(724511),
     eX = n(770335),
     eQ = n(7584),
     eJ = n(367319),
-    e0 = n(704591),
+    e0 = n(926972),
     e1 = n(711014),
     e2 =
         (((i = {})[(i.EMOJI = 0)] = "EMOJI"),
@@ -626,7 +626,7 @@ let t_ = (e) => {
         ],
     });
 };
-var tf = n(785651),
+var tf = n(873174),
     th = n(459192),
     tp = n(717421),
     tE = n(343032),
@@ -723,7 +723,7 @@ function tv(e) {
     });
 }
 n(667532);
-var tO = n(838677),
+var tO = n(833272),
     tR = n(82495),
     tb = n(260762),
     tD = n(915089),
@@ -1177,10 +1177,10 @@ let nI = eD().memoize(
                         if (!e.useSpriteSheet) return;
                         let o = null != e.index ? e.index : 0;
                         e.hasDiversity
-                            ? ((r = n(983660)(`./spritesheet-${t}-${i}.png`)),
+                            ? ((r = n(12303)(`./spritesheet-${t}-${i}.png.js`).default),
                               (s = nT(i)),
                               (a = eE.EmojiSprites.DiversityPerRow))
-                            : ((r = n(883740)(`./spritesheet-emoji-${i}.png`)),
+                            : ((r = n(145519)(`./spritesheet-emoji-${i}.png.js`).default),
                               (s = nI(i)),
                               (a = eE.EmojiSprites.NonDiversityPerRow));
                         let l = (-o % a) * i,

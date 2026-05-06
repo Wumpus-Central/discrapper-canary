@@ -1,1 +1,2 @@
-e.exports = { rh: "fullbleedContent__49d5b" };
+"use strict";
+e.exports = "/assets/350d1a6013837974.svg";

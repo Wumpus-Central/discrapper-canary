@@ -13,7 +13,7 @@ let o = () => {
     l = (e) => {
         e?.(), (0, i.jH)();
         {
-            let { default: e } = n(779733);
+            let { default: e } = n(2114);
             e();
         }
         (0, r.pX)(a.BVt.APPLICATION_STORE);

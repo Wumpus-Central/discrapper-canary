@@ -1,4 +1,4 @@
-i.d(e, { Ay: () => tp, ru: () => tf }), i(321073);
+i.d(e, { Ay: () => tm, ru: () => tf }), i(321073);
 var n = i(627968),
     l = i(64700),
     a = i(284009),
@@ -11,18 +11,18 @@ var n = i(627968),
     A = i(534890),
     f = i(820081),
     y = i(241541),
-    p = i(559647),
-    m = i(408278),
+    m = i(559647),
+    p = i(408278),
     I = i(297152),
-    g = i(834730),
-    E = i(821609),
-    N = i(308368),
-    _ = i(298990),
-    T = i(308528),
-    S = i(684013),
+    E = i(834730),
+    g = i(821609),
+    _ = i(308368),
+    N = i(298990),
+    S = i(308528),
+    T = i(684013),
     C = i(730134),
     h = i(964486),
-    v = i(833349),
+    v = i(55730),
     O = i(429913),
     x = i(20015),
     L = i(402216),
@@ -31,9 +31,9 @@ var n = i(627968),
     R = i(205184),
     k = i(427358),
     U = i(927813),
-    M = i(935208),
-    V = i(20805),
-    j = i(583846);
+    V = i(935208),
+    j = i(20805),
+    M = i(832384);
 let P = U.A.Millis.WEEK;
 function w(t) {
     let e = (0, R.s)(t),
@@ -44,7 +44,7 @@ function w(t) {
                 ? []
                 : e
                       .filter(
-                          (e) => (0, V.zD)(e) && (0, V.P)(e) && e.extra.application_id === t && M.default.age(e.id) < P,
+                          (e) => (0, j.zD)(e) && (0, j.P)(e) && e.extra.application_id === t && V.default.age(e.id) < P,
                       )
                       .sort((t, e) => Y(i, e) - Y(i, t)),
         [e, t, i],
@@ -60,13 +60,13 @@ function Y(t, e) {
                 return (i?.communicationProbability ?? 0) + 1e-4;
             }),
         ),
-        l = Math.exp(-((M.default.age(e.id) / 1e3 / K) * 0.01)),
+        l = Math.exp(-((V.default.age(e.id) / 1e3 / K) * 0.01)),
         a = e.traits.some((t) => t.type !== u.K.DURATION_SECONDS),
-        r = (0, j.I5)(e);
+        r = (0, M.I5)(e);
     return n * l * (1 + 0.6 * (a && !r ? 1 : 0));
 }
-var G = i(474397),
-    F = i(279877),
+var F = i(474397),
+    G = i(279877),
     H = i(976860),
     J = i(219271),
     z = i(580763),
@@ -76,23 +76,23 @@ var G = i(474397),
     q = i(994500),
     Q = i(287809),
     Z = i(943577),
-    $ = i(256415),
+    $ = i(184809),
     tt = i(562153),
     te = i(810412),
     ti = i(243612),
     tn = i(652215),
     tl = i(381941),
-    ta = i(985018),
+    ta = i(375708),
     tr = i(575322);
 function ts(t) {
     let e,
         { entry: i, currentUserActivity: a, idx: s, variant: o } = t,
         u = (0, c.bG)([Q.default], () => Q.default.getUser(i.author_id)),
-        [I, g] = l.useState("unsent"),
-        [E, _] = l.useState(!1);
+        [I, E] = l.useState("unsent"),
+        [g, N] = l.useState(!1);
     l.useEffect(() => {
         if ("sent" === I) {
-            let t = setTimeout(() => _(!0), 2e3);
+            let t = setTimeout(() => N(!0), 2e3);
             return () => clearTimeout(t);
         }
     }, [I]);
@@ -102,19 +102,19 @@ function ts(t) {
             if (null != u && "unsent" === I) {
                 t.stopPropagation();
                 try {
-                    if ((g("sending"), h && null != C))
-                        await N.A.sendActivityInviteUser({
+                    if ((E("sending"), h && null != C))
+                        await _.A.sendActivityInviteUser({
                             type: tn.xL.JOIN,
                             userId: u.id,
                             activity: C,
                             location: tn.ThZ.UNLOCKED_OVERLAY,
                         });
                     else {
-                        let t = await T.A.getOrEnsurePrivateChannel(u.id),
+                        let t = await S.A.getOrEnsurePrivateChannel(u.id),
                             e = X.A.getChannel(t) ?? null;
                         r()(null != e, "Send channel must be defined"),
                             (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
-                            (0, G.A)(tn.BRT.OVERLAY, !0),
+                            (0, F.A)(tn.BRT.OVERLAY, !0),
                             !0 === i.extra.fake_inventory_item
                                 ? await (0, b.J)({
                                       channel: e,
@@ -134,38 +134,38 @@ function ts(t) {
                                       location: tl.Hx.OVERLAY,
                                   });
                     }
-                    S.A.track(tn.HAw.OVERLAY_GAME_INVITE_SENT, {
+                    T.A.track(tn.HAw.OVERLAY_GAME_INVITE_SENT, {
                         target_user_id: u.id,
                         target_content_entry_id: i.id,
                         target_index: s,
                     }),
                         (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.INVITE_SENT, userId: u.id }),
-                        g("sent");
+                        E("sent");
                 } catch (t) {
-                    g("unsent");
+                    E("unsent");
                 }
             }
         },
         O = async () => {
             if (null == u) return;
-            let t = await T.A.getOrEnsurePrivateChannel(u.id),
+            let t = await S.A.getOrEnsurePrivateChannel(u.id),
                 e = X.A.getChannel(t) ?? null;
             r()(null != e, "Send channel must be defined"),
                 (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
-                (0, G.A)(tn.BRT.OVERLAY, !0),
+                (0, F.A)(tn.BRT.OVERLAY, !0),
                 (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.REDIRECT, value: te.IP.CHAT, userId: u.id });
         },
         x = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === I ? (E ? A.o : f.B) : h ? y.D : p.l),
+        (e = "sent" === I ? (g ? A.o : f.B) : h ? y.D : m.l),
         (0, n.jsx)(d.m, {
             text: x,
             "aria-label": x,
-            children: (0, n.jsx)(m.K, {
+            children: (0, n.jsx)(p.K, {
                 icon: e,
                 "aria-label": x,
                 loading: "sending" === I,
-                onClick: E ? O : v,
+                onClick: g ? O : v,
                 variant: "subtle" === o ? "icon-only" : "secondary",
                 size: "sm",
             }),
@@ -184,7 +184,7 @@ function to(t) {
                 t.stopPropagation();
                 try {
                     A("sending"),
-                        await N.A.sendActivityInviteUser({
+                        await _.A.sendActivityInviteUser({
                             type: tn.xL.JOIN_REQUEST,
                             userId: r.id,
                             activity: o,
@@ -201,13 +201,13 @@ function to(t) {
                 }
             }
         },
-        p = ta.intl.string(ta.t.OKsSCR);
+        m = ta.intl.string(ta.t.OKsSCR);
     return (0, n.jsx)(d.m, {
-        text: p,
-        "aria-label": p,
-        children: (0, n.jsx)(m.K, {
+        text: m,
+        "aria-label": m,
+        children: (0, n.jsx)(p.K, {
             icon: "sent" === u ? f.B : I.E,
-            "aria-label": p,
+            "aria-label": m,
             loading: "sending" === u,
             onClick: y,
             variant: "subtle" === a ? "icon-only" : "secondary",
@@ -247,7 +247,7 @@ function tu(t) {
                           (0, n.jsxs)("div", {
                               className: tr.Yn,
                               children: [
-                                  (0, n.jsx)(g.E, {
+                                  (0, n.jsx)(E.E, {
                                       className: tr.Xh,
                                       variant: "text-md/medium",
                                       color: "text-strong",
@@ -317,7 +317,7 @@ function td(t) {
                   !r &&
                       (0, n.jsx)("div", {
                           className: tr.v4,
-                          children: (0, n.jsx)(g.E, {
+                          children: (0, n.jsx)(E.E, {
                               variant: "text-xs/medium",
                               color: "subtle" === s ? "text-subtle" : "text-default",
                               tag: "div",
@@ -372,7 +372,7 @@ function tA(t) {
                 });
         }, [e, n]);
     return (
-        (0, h.Ay)(() => (F.O(), () => F.v())),
+        (0, h.Ay)(() => (G.O(), () => G.v())),
         {
             entries: l.useMemo(() => {
                 let t = a.filter((t) => !d.some((e) => e.activityUser.id === t.author_id)),
@@ -382,7 +382,7 @@ function tA(t) {
                             return (
                                 (e = t.activity?.timestamps?.start ?? Date.now()),
                                 {
-                                    id: M.default.fromTimestamp(e),
+                                    id: V.default.fromTimestamp(e),
                                     author_id: t.activityUser.id,
                                     extra: {
                                         type: "played_game_extra",
@@ -428,12 +428,12 @@ function ty(t) {
                   null != a && !s && l
                       ? (0, n.jsx)("div", {
                             className: tr.DJ,
-                            children: (0, n.jsx)(E.$, {
+                            children: (0, n.jsx)(g.$, {
                                 text: ta.intl.string(ta.t["6Qgrev"]),
                                 size: "sm",
                                 variant: "secondary",
                                 onClick: () => {
-                                    (0, _.qf)(a, !1, tn.BRT.POPOUT),
+                                    (0, N.qf)(a, !1, tn.BRT.POPOUT),
                                         (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.PANEL_OPENED });
                                 },
                             }),
@@ -442,7 +442,7 @@ function ty(t) {
               ],
           });
 }
-function tp(t) {
+function tm(t) {
     let { locked: e } = t,
         i = (0, ti.b4)(),
         l = i?.id,
@@ -451,7 +451,7 @@ function tp(t) {
         s = (0, c.bG)([Q.default], () => Q.default.getCurrentUser()),
         o = null != a ? a : l,
         u = (0, ti.xl)(o);
-    (0, h.Ay)(() => (F.O(), () => F.v()));
+    (0, h.Ay)(() => (G.O(), () => G.v()));
     let d = tA({ gamingId: o, userAffinityThresholdV2: 0.00145, maxUserShowCount: 12 });
     return e || (0 === r.length && null == u)
         ? null

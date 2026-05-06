@@ -1,2 +1,5 @@
-"use strict";
-e.exports = "/assets/0831b4a6a8b9c512.svg";
+(e.exports = function (e) {
+    return e && e.__esModule ? e : { default: e };
+}),
+    (e.exports.__esModule = !0),
+    (e.exports.default = e.exports);

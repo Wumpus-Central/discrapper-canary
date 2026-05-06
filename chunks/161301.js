@@ -1,1 +1,2 @@
-e.exports = n(342802)(Object.keys, Object);
+"use strict";
+e.exports = "/assets/e86346e19b94a9a6.svg";

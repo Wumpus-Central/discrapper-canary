@@ -1,2 +1,4 @@
 "use strict";
-e.exports = "/assets/f69581c3595b17de.svg";
+var n = e(308227).navigator,
+    o = n && n.userAgent;
+t.exports = o ? String(o) : "";

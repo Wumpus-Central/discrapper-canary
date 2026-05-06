@@ -1,2 +1,5 @@
 "use strict";
-e.exports = "/assets/133a90fbcf5616ca.svg";
+var n = e(407057);
+t.exports = function (t) {
+    return n(t) || null === t;
+};
