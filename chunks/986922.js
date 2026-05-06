@@ -53,8 +53,8 @@ var D = l(834981),
     z = l(153739),
     H = l(284009),
     B = l.n(H),
-    q = l(192308),
-    Y = l(885574),
+    Y = l(192308),
+    q = l(885574),
     Z = l(691540),
     K = l(857250),
     X = l(97483),
@@ -260,6 +260,8 @@ let eR = (e) => {
                                     return ej.intl.string(em.default.nNGEHk);
                                 case eA.R.BUNDLE:
                                     return ej.intl.string(em.default.VS1fKo);
+                                case eA.R.PROFILE_FRAME:
+                                    return ej.intl.string(em.default.JiIY1l);
                                 default:
                                     return "";
                             }
@@ -320,7 +322,7 @@ eV.displayName = "FamilyCenterActivityUserRow";
 var ez = l(475833),
     eH = l(768869),
     eB = l(818050);
-let eq = (e) => {
+let eY = (e) => {
     let { text: t, className: l } = e;
     return (0, n.jsxs)("div", {
         className: a()(l, eH.I),
@@ -330,14 +332,14 @@ let eq = (e) => {
         ],
     });
 };
-var eY = l(459192),
+var eq = l(459192),
     eZ = l(494596);
 let eK = (e) => {
     let { userId: t, dmsSent: l, callCount: i } = e,
         s = (0, d.bG)([eO.default], () => eO.default.getUser(t));
     return void 0 === s
         ? null
-        : (0, n.jsx)(eY.u, {
+        : (0, n.jsx)(eq.u, {
               title: s.username,
               body: (0, Q.fq)(l, i),
               asContainer: !0,
@@ -405,7 +407,7 @@ let eW = () => {
                                             let t = C.A.getGuild(e.guild_id),
                                                 l = t?.name ?? "Unknown Server";
                                             return (0, n.jsx)(
-                                                eY.u,
+                                                eq.u,
                                                 {
                                                     title: l,
                                                     body: (0, Q.fq)(e.messages_sent, e.call_count) ?? null,
@@ -425,7 +427,7 @@ var eJ = l(990021),
     eQ = l(453287);
 function e$() {
     let e = i.useCallback(() => {
-        (0, q.openModalLazy)(async () => {
+        (0, Y.openModalLazy)(async () => {
             let { default: e } = await Promise.all([l.e("3083"), l.e("60106")]).then(l.bind(l, 853809));
             return (t) => (0, n.jsx)(e, { ...t });
         });
@@ -433,7 +435,7 @@ function e$() {
     return (0, n.jsx)(P.D, {
         className: eJ.YL,
         onClick: e,
-        children: (0, n.jsx)(Y.m, { size: "custom", color: "currentColor", className: eJ.Kk, width: 15, height: 15 }),
+        children: (0, n.jsx)(q.m, { size: "custom", color: "currentColor", className: eJ.Kk, width: 15, height: 15 }),
     });
 }
 function e0(e) {
@@ -638,7 +640,7 @@ let e2 = () => {
                                                   let [t] = e;
                                                   return (0, n.jsx)(e0, { displayType: t }, `${t}-list`);
                                               })
-                                            : (0, n.jsx)(eq, { className: eJ.RL, text: i ?? "" }),
+                                            : (0, n.jsx)(eY, { className: eJ.RL, text: i ?? "" }),
                                     ],
                                 }),
                             ],
@@ -1033,12 +1035,12 @@ function tP() {
         variant: "primary",
         text: e,
         onClick: () => {
-            (0, q.openModalLazy)(async () => {
+            (0, Y.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    l.e("6305"),
+                    l.e("8103"),
                     l.e("30244"),
                     l.e("95429"),
-                    l.e("24009"),
+                    l.e("60413"),
                     l.e("48370"),
                     l.e("72875"),
                 ]).then(l.bind(l, 320742));
@@ -1157,8 +1159,8 @@ let tB = (e) => {
         ],
     });
 };
-var tq = l(847374),
-    tY = l(349288),
+var tY = l(847374),
+    tq = l(349288),
     tZ = l(308528),
     tK = l(922529),
     tX = l(780964),
@@ -1197,7 +1199,7 @@ function lt(e) {
         u = (0, tQ.li)(t),
         o = (0, tQ.n1)(t.days),
         x = () => {
-            (0, q.openModalLazy)(async () => {
+            (0, Y.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([l.e("76035"), l.e("39231")]).then(l.bind(l, 154434));
                 return (l) => (0, n.jsx)(e, { ...l, teenId: s, rule: t });
             });
@@ -1295,7 +1297,7 @@ let ln = (e) => {
             d.length > 0 && o(!0);
         }, [d.length]);
         let x = () => {
-            (0, q.openModalLazy)(async () => {
+            (0, Y.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([l.e("76035"), l.e("39231")]).then(l.bind(l, 154434));
                 return (l) => (0, n.jsx)(e, { ...l, teenId: t });
             });
@@ -1337,7 +1339,7 @@ let ln = (e) => {
                               }),
                               (0, n.jsx)("div", {
                                   className: ll.pt,
-                                  children: (0, n.jsx)(tq.a, {
+                                  children: (0, n.jsx)(tY.a, {
                                       size: "sm",
                                       color: "currentColor",
                                       className: `${ll.ai} ${u ? ll.hg : ""}`,
@@ -1395,7 +1397,7 @@ let ln = (e) => {
                                     color: "text-muted",
                                     children: ej.intl.format(em.default.X9rW0j, {
                                         openSettingsHook: (e, t) =>
-                                            (0, n.jsx)(tY.Anchor, { onClick: i, children: e }, t),
+                                            (0, n.jsx)(tq.Anchor, { onClick: i, children: e }, t),
                                     }),
                                 }),
                             ],
@@ -1579,7 +1581,7 @@ function lC(e) {
         s = (0, d.bG)([eO.default], () => eO.default.getCurrentUser()),
         a = i.useCallback(() => {
             B()(void 0 !== s, "User must be logged in to accept a link request"),
-                (0, q.openModalLazy)(async () => {
+                (0, Y.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([l.e("53385"), l.e("55738"), l.e("43139")]).then(
                         l.bind(l, 179950),
                     );
@@ -1605,7 +1607,7 @@ function lI(e) {
         r = (0, d.bG)([eO.default], () => eO.default.getCurrentUser()),
         c = i.useCallback(() => {
             B()(void 0 !== r, "User must be logged in to accept a link request"),
-                (0, q.openModalLazy)(async () => {
+                (0, Y.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([l.e("53385"), l.e("55738"), l.e("31385")]).then(
                         l.bind(l, 58144),
                     );
@@ -1614,7 +1616,7 @@ function lI(e) {
         }, [r, t]),
         u = i.useCallback(() => {
             B()(void 0 !== r, "User must be logged in to decline a link request"),
-                (0, q.openModalLazy)(async () => {
+                (0, Y.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([l.e("53385"), l.e("55738"), l.e("84811")]).then(
                         l.bind(l, 389094),
                     );
@@ -1623,7 +1625,7 @@ function lI(e) {
         }, [r, t]),
         o = i.useCallback(() => {
             B()(void 0 !== r, "User must be logged in to decline a link request"),
-                (0, q.openModalLazy)(async () => {
+                (0, Y.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([l.e("53385"), l.e("55738"), l.e("17219")]).then(
                         l.bind(l, 187278),
                     );
@@ -1877,7 +1879,7 @@ let lV = () => {
                       (0, n.jsx)(w.E, { className: eB.QB, variant: "eyebrow", color: "text-default", children: s }),
                       (0, n.jsx)("div", {
                           className: lM.aP,
-                          children: (0, n.jsx)(eq, { text: ej.intl.string(em.default.C4ScLD) }),
+                          children: (0, n.jsx)(eY, { text: ej.intl.string(em.default.C4ScLD) }),
                       }),
                   ],
               });
@@ -1929,7 +1931,7 @@ let lV = () => {
             );
         return 0 === e.length ? null : (0, n.jsx)(lF, { sectionType: b.Ef.PENDING, sectionTitle: t, requests: e });
     },
-    lq = () => {
+    lY = () => {
         let e = (0, _.A)();
         return (0, n.jsxs)("div", {
             className: lM.kL,
@@ -1942,7 +1944,7 @@ let lV = () => {
             ],
         });
     };
-var lY = l(936504),
+var lq = l(936504),
     lZ = l(946015),
     lK = l(17928),
     lX = l(270003),
@@ -1986,7 +1988,7 @@ let l1 = () => {
                                           }),
                                       }),
                                       (0, n.jsx)(P.D, {
-                                          children: (0, n.jsx)(lY.N_, {
+                                          children: (0, n.jsx)(lq.N_, {
                                               onClick: tW.default,
                                               to: { pathname: L.BVt.FAMILY_CENTER, state: { scrollRestoration: !1 } },
                                               children: ej.intl.string(em.default.cUIXFY),
@@ -2060,14 +2062,14 @@ function ne(e) {
 }
 var nt = l(556493);
 let nl = {
-        [b.u9.REQUESTS]: lq,
+        [b.u9.REQUESTS]: lY,
         [b.u9.ACTIVITY]: lc,
         [b.u9.SETTINGS]: l1,
         [b.u9.CONTENT_AND_SOCIAL]: t_,
         [b.u9.DATA_AND_PRIVACY]: tk,
         [b.u9.SCREEN_TIME_CONTROLS]: l1,
     },
-    nn = { [b.u9.REQUESTS]: lq, [b.u9.ACTIVITY]: lc, [b.u9.CONTENT_AND_SOCIAL]: t_, [b.u9.DATA_AND_PRIVACY]: tk };
+    nn = { [b.u9.REQUESTS]: lY, [b.u9.ACTIVITY]: lc, [b.u9.CONTENT_AND_SOCIAL]: t_, [b.u9.DATA_AND_PRIVACY]: tk };
 function ni() {
     return (0, n.jsx)(c.B, { justify: "center", align: "center", className: nt.g4, children: (0, n.jsx)(u.y, {}) });
 }
