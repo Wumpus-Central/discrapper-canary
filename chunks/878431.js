@@ -2691,27 +2691,23 @@ let ix = s.memo(function (e) {
         r = (0, A.bG)([im.A], () => im.A.can(er.xBc.CONNECT, n)),
         { needSubscriptionToAccess: d } = (0, lr.A)(n.id),
         o = (0, ig.Id)(n),
-        c = s.useCallback(() => {
+        { enabled: c } = ig.io.useExperiment({ guildId: n.guild_id, location: "63250c_1" }, { autoTrackExposure: !1 }),
+        h = s.useCallback(() => {
             iA.A.handleVoiceConnect({ channel: n, connected: l, needSubscriptionToAccess: d, locked: !1 });
         }, [n, l, d]);
-    return (s.useEffect(
-        () => (
-            et._.subscribe(er.jej.CALL_START, c),
-            () => {
-                et._.unsubscribe(er.jej.CALL_START, c);
-            }
-        ),
-        [c],
-    ),
-    ig.io.useExperiment({ guildId: n.guild_id, location: "63250c_1" }, { autoTrackExposure: !1 }).enabled &&
-        !t &&
-        !l &&
-        r &&
-        o &&
-        n.isVocalThread())
+    return (s.useEffect(() => {
+        if (c)
+            return (
+                et._.subscribe(er.jej.CALL_START, h),
+                () => {
+                    et._.unsubscribe(er.jej.CALL_START, h);
+                }
+            );
+    }, [h, c]),
+    c && !t && !l && r && o && n.isVocalThread())
         ? (0, i.jsx)(tx.Ay.Icon, {
               icon: lK._,
-              onClick: c,
+              onClick: h,
               tooltip: a ? Y.intl.string(Y.t.fdEeb5) : Y.intl.string(Y.t.focH1t),
           })
         : null;
