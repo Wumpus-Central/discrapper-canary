@@ -356,7 +356,9 @@ function H(e) {
                               let s = r[t.value],
                                   a = t.presentation_type;
                               return null != s && p[a]?.includes(s.type) && n.includes(s.type)
-                                  ? { ...s, presentationType: a }
+                                  ? "playtime_hours" === t.value && "number" === s.type && a === _.DURATION
+                                      ? { type: s.type, value: Math.floor(60 * s.value * 6e4), presentationType: a }
+                                      : { ...s, presentationType: a }
                                   : "fallback" in t && null != t.fallback
                                     ? e(t.fallback, n, i)
                                     : null;
