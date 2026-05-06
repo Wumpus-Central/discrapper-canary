@@ -6,7 +6,7 @@ var s,
     o = n(64700),
     c = n(503698),
     d = n.n(c),
-    u = n(785651),
+    u = n(873174),
     h = n(837381),
     m = n(17928),
     A = n(446837),
@@ -187,7 +187,7 @@ var eS = n(830178),
     eF = n(9842),
     eH = n(734057),
     eB = n(540999),
-    eV = n(780574),
+    eV = n(521427),
     eK = n(143413),
     ez = n(763754),
     eW = n(33453);
@@ -1506,7 +1506,7 @@ let nG = o.memo(function (e) {
         em = (0, ts.A)({ message: i, channel: a }),
         eA = o.useRef(window),
         eg = null != eu,
-        ep = (0, eV.Nd)(a.guild_id, a, "ChatMessage");
+        ep = (0, eV.bW)(a.guild_id, "ChatMessage");
     (n =
         i.type === eh.lAJ.CUSTOM_GIFT
             ? ""
