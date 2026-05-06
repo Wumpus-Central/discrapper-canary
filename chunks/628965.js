@@ -1,18 +1,17 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(17928),
     r = n(228366),
     s = n(287809);
-let a = null,
-    o = [];
-function l(e) {
-    if (null == s.default.getCurrentUser()) return u();
-    (a = e.section ?? a), (o = e.analyticsLocations ?? []);
+let a = null;
+function o(e) {
+    if (null == s.default.getCurrentUser()) return l();
+    a = e.section ?? a;
 }
-function u() {
-    (a = null), (o = []);
+function l() {
+    a = null;
 }
-class c extends i.Ay.Store {
+class u extends i.Ay.Store {
     static displayName = "UserSettingsModalStore";
     initialize() {
         this.waitFor(s.default);
@@ -20,21 +19,15 @@ class c extends i.Ay.Store {
     getSection() {
         return a;
     }
-    getAnalyticsLocations() {
-        return o;
-    }
 }
-let d = new c(r.h, {
+let c = new u(r.h, {
     USER_SETTINGS_MODAL_OPEN: function (e) {
-        l(e);
+        o(e);
     },
-    USER_SETTINGS_MODAL_INIT: l,
-    USER_SETTINGS_MODAL_CLOSE: u,
-    LOGOUT: u,
+    USER_SETTINGS_MODAL_INIT: o,
+    USER_SETTINGS_MODAL_CLOSE: l,
+    LOGOUT: l,
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {
-        (a = e.section), (o = e.analyticsLocations ?? []);
-    },
-    USER_SETTINGS_MODAL_CLEAR_LOCATION: function () {
-        o = [];
+        a = e.section;
     },
 });

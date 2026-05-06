@@ -21,7 +21,7 @@ async function h(e) {
     if (u.default.isAuthenticated()) {
         if (
             (null != t && t === _.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && o.A.setState({ subsection: _.nR }),
-            c.A.setState({ source: p.searchParams?.source }),
+            c.A.setState({ source: p.searchParams?.source, analyticsLocations: p.analyticsLocations ?? [] }),
             a.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN", ...p }),
             (0, d.f)())
         ) {
@@ -781,7 +781,7 @@ async function h(e) {
                         n.e("97354"),
                         n.e("84861"),
                         n.e("88878"),
-                        n.e("81250"),
+                        n.e("85280"),
                         n.e("98279"),
                         n.e("84846"),
                         n.e("93341"),

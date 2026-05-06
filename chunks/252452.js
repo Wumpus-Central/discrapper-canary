@@ -8,7 +8,4 @@ let r = {
     setSection(e) {
         i.h.dispatch({ type: "USER_SETTINGS_MODAL_SET_SECTION", section: e });
     },
-    clearLocation() {
-        i.h.dispatch({ type: "USER_SETTINGS_MODAL_CLEAR_LOCATION" });
-    },
 };
