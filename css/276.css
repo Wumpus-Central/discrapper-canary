@@ -2071,7 +2071,6 @@ screen and (max-width:485px) {
     -o-object-position: center;
     object-position: center;
     position: absolute;
-    top: 4px;
     transform: scale(100%);
     width: 100%
 }
