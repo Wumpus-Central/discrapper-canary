@@ -46,7 +46,6 @@
 }
 
 .decorationWrapper__6131a {
-    padding: 0 var(--space-12);
     z-index: 1
 }
 
@@ -73,13 +72,10 @@
 }
 
 .divider__6131a {
-    --custom-divider-margin: calc(var(--space-xxl) + var(--space-xs));
-    margin-bottom: var(--custom-divider-margin);
-    margin-top: var(--custom-divider-margin)
+    margin: calc(var(--space-xxl) + var(--space-xs)) 0
 }
 
 .title__28f6b {
-    margin-inline: var(--space-12);
     margin-bottom: var(--space-4)
 }
 

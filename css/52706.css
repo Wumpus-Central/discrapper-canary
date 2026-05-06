@@ -4469,6 +4469,7 @@ screen and (max-width:485px) {
     max-width: 200px;
     padding: var(--space-8) var(--space-12);
     position: relative;
+    text-align: center;
     width: auto;
     will-change: opacity, transform
 }
@@ -4480,6 +4481,7 @@ screen and (max-width:485px) {
 .richTooltip__4e35b {
     max-width: none;
     padding: 0;
+    text-align: initial;
     width: auto
 }
 

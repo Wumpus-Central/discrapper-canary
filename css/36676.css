@@ -228,15 +228,15 @@
 .container__75920 {
     background: transparent;
     border-radius: var(--radius-md);
-    margin: calc(var(--space-xs)*-1) 0;
+    margin: calc(var(--space-xs)*-1) calc(var(--space-sm)*-1);
     outline: none;
-    padding: var(--space-xs) 0;
+    padding: var(--space-xs) var(--space-sm);
     scroll-margin-bottom: var(--space-16);
     scroll-margin-top: var(--space-16);
     transition: background .4s ease-out .75s
 }
 
-.flash__75920 {
+.container__75920.flash__75920 {
     background: var(--message-highlight-background-default);
     transition: background 0s ease-in-out
 }
@@ -2237,6 +2237,7 @@ html.disable-forced-colors * {
     flex-direction: row;
     flex-grow: 1;
     gap: var(--space-12);
+    margin: 0 calc(var(--space-12)*-1);
     min-height: 48px;
     padding: var(--space-12);
     transition: background-color .15s ease
@@ -2354,7 +2355,7 @@ html.disable-forced-colors * {
 .panel__64c86 {
     height: var(--disclosure-panel-height);
     margin-bottom: calc(var(--space-12)*-1);
-    overflow: clip;
+    overflow-y: clip;
     padding-bottom: var(--space-12)
 }
 
@@ -2380,11 +2381,6 @@ html.disable-forced-colors * {
 
 .title__3c320 {
     padding-top: var(--space-xs)
-}
-
-.subtitle__3c320,
-.title__3c320 {
-    padding-inline: var(--space-sm)
 }
 
 .withSubtitle__3c320 {
