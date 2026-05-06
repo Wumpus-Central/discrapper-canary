@@ -40,6 +40,7 @@ function w(e, t) {
             n.e("60235"),
             n.e("53984"),
             n.e("38042"),
+            n.e("69178"),
             n.e("17460"),
             n.e("53203"),
             n.e("73566"),
@@ -105,6 +106,7 @@ let M = function (e) {
                                         : null;
                             } else {
                                 let t = g.A.get(e.connection_type);
+                                if (null == t) continue;
                                 s = (0, i.jsx)("img", {
                                     src: (0, u.q)(G) ? t.icon.lightSVG : t.icon.darkSVG,
                                     alt: "",

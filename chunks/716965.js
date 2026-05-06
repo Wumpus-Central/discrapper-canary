@@ -40,7 +40,8 @@ async function c(e) {
             guildId: E,
             channelId: m,
             integrationType: g,
-            nonce: A,
+            connectedAccountProvider: A,
+            nonce: I,
         } = e;
     return (
         await r.Bo.post({
@@ -53,7 +54,7 @@ async function c(e) {
                 code_challenge_method: f,
                 scope: u.join(" "),
                 state: h,
-                nonce: A,
+                nonce: I,
             },
             body: {
                 guild_id: E,
@@ -62,6 +63,7 @@ async function c(e) {
                 permissions: p,
                 authorize: i,
                 integration_type: g,
+                connected_account_provider: A,
                 location_context:
                     ((t = o.A.getChannelId()),
                     (n = a.A.getBasicChannel(t)),
@@ -86,8 +88,9 @@ async function d(e) {
         codeChallengeMethod: o,
         state: u,
         integrationType: c,
-        nonce: d,
-        signal: _,
+        connectedAccountProvider: d,
+        nonce: _,
+        signal: f,
     } = e;
     return (
         await r.Bo.get({
@@ -101,9 +104,10 @@ async function d(e) {
                 scope: n.join(" "),
                 state: u,
                 integration_type: c,
-                nonce: d,
+                connected_account_provider: d,
+                nonce: _,
             },
-            signal: _,
+            signal: f,
             retries: 3,
             oldFormErrors: !0,
             rejectWithError: !1,
