@@ -13,7 +13,7 @@ var i = n(92077),
     a = n(989349),
     o = n.n(a),
     l = n(17928),
-    u = n(862482),
+    u = n(939249),
     c = n(935462),
     d = n(821609),
     _ = n(534514),
@@ -50,21 +50,24 @@ class y extends s.PureComponent {
         e.type === I.VX0.CONFLICT && this.handlePlay(!0, e.next.hash);
     };
     renderConflictButton(e, t, n, i) {
-        return (0, r.jsxs)(u.$n, {
+        return (0, r.jsx)(u.D, {
             className: S.fe,
-            innerClassName: S.tm,
             onClick: i,
-            children: [
-                (0, r.jsx)("div", { className: n }),
-                (0, r.jsxs)("div", {
-                    className: S.fn,
-                    children: [
-                        (0, r.jsx)("div", { className: S.Pc, children: e }),
-                        (0, r.jsx)("div", { children: T.intl.string(T.t.gflHO6) }),
-                        (0, r.jsx)("div", { className: S.vE, children: o()(t).calendar() }),
-                    ],
-                }),
-            ],
+            "aria-label": e,
+            children: (0, r.jsxs)("div", {
+                className: S.tm,
+                children: [
+                    (0, r.jsx)("div", { className: n }),
+                    (0, r.jsxs)("div", {
+                        className: S.fn,
+                        children: [
+                            (0, r.jsx)("div", { className: S.Pc, children: e }),
+                            (0, r.jsx)("div", { children: T.intl.string(T.t.gflHO6) }),
+                            (0, r.jsx)("div", { className: S.vE, children: o()(t).calendar() }),
+                        ],
+                    }),
+                ],
+            }),
         });
     }
     renderError() {
@@ -87,13 +90,10 @@ class y extends s.PureComponent {
                     children: (0, r.jsxs)(m.A, {
                         justify: m.A.Justify.BETWEEN,
                         children: [
-                            (0, r.jsx)(u.$n, {
-                                className: S.$J,
-                                size: S.UD,
-                                look: u.$n.Looks.LINK,
-                                color: u.$n.Colors.PRIMARY,
+                            (0, r.jsx)(d.$, {
+                                variant: "secondary",
+                                text: T.intl.string(T.t["ETE/oC"]),
                                 onClick: this.onClose,
-                                children: T.intl.string(T.t["ETE/oC"]),
                             }),
                             (0, r.jsxs)(m.A, {
                                 direction: m.A.Direction.HORIZONTAL,
@@ -212,7 +212,7 @@ function M(e, t, s, a, o) {
         ? (0, f.openModalLazy)(async () => {
               let { default: i } = await Promise.all([
                   n.e("276"),
-                  n.e("31483"),
+                  n.e("49476"),
                   n.e("19573"),
                   n.e("28866"),
                   n.e("34530"),

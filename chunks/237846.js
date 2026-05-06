@@ -3,8 +3,6 @@ e.exports = {
     Qw: "art__47998",
     h_: "description__47998",
     fe: "conflictButton__47998",
-    UD: "linkButtonSize__47998",
-    $J: "linkButton__47998",
     ft: "retryButton__47998",
     tm: "conflictButtonInner__47998",
     DD: "title__47998",
