@@ -28,7 +28,7 @@ function _() {
             });
             return;
         }
-        s.h.dispatch({ type: e === a ? "CURRENT_USER_UPDATE" : "USER_UPDATE", user: n.body }),
+        e !== a && s.h.dispatch({ type: "USER_UPDATE", user: n.body }),
             s.h.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS", userId: a });
     });
 }
