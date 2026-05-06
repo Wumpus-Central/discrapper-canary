@@ -1,7 +1,8 @@
-_.exports = {
+e.exports = {
     f3: "cardsArea__250d5",
     zI: "cardBody__250d5",
     cG: "mainCard__250d5",
+    jI: "mainCardTextOnly__250d5 mainCard__250d5",
     GT: "mainCardBody__250d5 cardBody__250d5",
     _v: "mainCardImageContainer__250d5",
     fk: "mainCardImage__250d5",
@@ -13,6 +14,13 @@ _.exports = {
     _N: "smallTitle__250d5",
     h_: "description__250d5",
     fm: "descriptionFade__250d5",
+    _d: "embedContentArea__250d5",
+    Tu: "embedAuthorRow__250d5",
+    SG: "embedAuthorIcon__250d5",
+    Cd: "embedProviderIcon__250d5",
+    ax: "embedImageContainer__250d5",
+    Lw: "embedImage__250d5",
+    Ow: "embedSourceUrl__250d5",
     ov: "metadataRow__250d5",
     a5: "reactionInfo__250d5",
 };

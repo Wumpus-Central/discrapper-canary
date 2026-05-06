@@ -1,3 +1,3 @@
 a.exports = JSON.parse(
-    '{"u72Prd":["Streamuj v\xa0HD rozlišen\xed s\xa0Nitrem"],"3wwZ/Q":["Zah\xe1jit streamov\xe1n\xed"],"OsS9Ll":["Zastavit streamov\xe1n\xed"],"j+eAMQ":["Streamovat zvuk"],"/XSr8v":["Režim streamov\xe1n\xed"],"2qmQ8N":["V\xfdchoz\xed"],"CrNjqp":["Nastaven\xed streamu"]}',
+    '{"u72Prd":["Streamuj v\xa0HD rozlišen\xed s\xa0Nitrem"],"uwMBDo":["Sd\xedlet zvuk aplikace"],"3wwZ/Q":["Zah\xe1jit streamov\xe1n\xed"],"OsS9Ll":["Zastavit streamov\xe1n\xed"],"j+eAMQ":["Streamovat zvuk"],"/XSr8v":["Režim streamov\xe1n\xed"],"ibH7vy":["Vyv\xe1žen\xe1 kvalita a\xa0v\xfdkon (",[1,"resolution"],"p, ",[1,"fps"],"\xa0fps)"],"2qmQ8N":["V\xfdchoz\xed"],"q4gYBi":["Pro video a\xa0hran\xed (",[1,"resolution"],"p, ",[1,"fps"],"\xa0fps)"],"nMcXo1":["Vysok\xe1 kvalita"],"fN0UQY":["Optimalizov\xe1no pro pomalejš\xed zař\xedzen\xed (",[1,"resolution"],"p, ",[1,"fps"],"\xa0fps)"],"5eO4/m":["V\xfdkon"],"CrNjqp":["Nastaven\xed streamu"]}',
 );

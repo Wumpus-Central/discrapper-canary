@@ -1723,10 +1723,19 @@
     align-items: center;
     -moz-column-gap: 8px;
     column-gap: 8px;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     row-gap: 4px
+}
+
+.ctaButtons__24e2c,
+.instructionRow__24e2c {
+    display: flex;
+    flex-direction: row
+}
+
+.ctaButtons__24e2c {
+    align-items: end;
+    gap: 8px
 }
 
 .wrapper__0d616 {

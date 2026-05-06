@@ -888,7 +888,7 @@ function ti(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("65086"),
+                                                l.e("49476"),
                                                 l.e("11585"),
                                                 l.e("89916"),
                                                 l.e("20379"),
@@ -1007,7 +1007,7 @@ function ts(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("65086"),
+                                                            l.e("49476"),
                                                             l.e("89916"),
                                                             l.e("20379"),
                                                             l.e("19193"),
@@ -1211,10 +1211,10 @@ var ty = l(371444),
     tO = l(123292),
     t_ = l(691885),
     tG = l(270003),
-    tk = l(106236),
-    tD = l(331322),
-    tU = l(773812),
-    tP = l(292666),
+    tk = l(331322),
+    tD = l(773812),
+    tU = l(292666),
+    tP = l(106236),
     tV = l(534963),
     tB = l(820284),
     tH = l(432371),
@@ -1379,34 +1379,33 @@ let la = (0, l(600975).C)({
 });
 var lr = l(818050);
 function lo(e) {
-    let { label: t, helperText: l, hideLabel: s, channel: a, onChange: r } = e,
-        [o, d] = i.useState(null),
-        c = a.rateLimitPerUser,
+    let { label: t, helperText: l, hideLabel: s, disabled: a, value: r, onChange: o } = e,
+        [d, c] = i.useState(null),
         u = i.useMemo(() => {
-            let e = [...(o ?? eP.s_7)];
+            let e = [...(d ?? eP.s_7)];
             return (
-                e.includes(c) || e.unshift(c), e.map((e) => ({ id: e.toString(), label: (0, ls.$)(e, !1), value: e }))
+                e.includes(r) || e.unshift(r), e.map((e) => ({ id: e.toString(), label: (0, ls.$)(e, !1), value: e }))
             );
-        }, [o, c]),
+        }, [d, r]),
         h = i.useCallback(
             (e) => {
-                r(e), d(null);
+                o(e), c(null);
             },
-            [r],
+            [o],
         ),
         g = i.useCallback((e) => {
-            if ("" === e) return void d(null);
+            if ("" === e) return void c(null);
             let t = [],
                 l = parseInt(e, 10);
-            if (Number.isNaN(l)) return void d(null);
+            if (Number.isNaN(l)) return void c(null);
             l <= eP.WA1 && t.push(l);
             let n = l * li.A.Seconds.MINUTE;
             n <= eP.WA1 && t.push(n);
             let i = l * li.A.Seconds.HOUR;
-            i <= eP.WA1 && t.push(i), d(t);
+            i <= eP.WA1 && t.push(i), c(t);
         }, []),
         m = i.useCallback(() => {
-            d(null);
+            c(null);
         }, []);
     return (0, n.jsx)("div", {
         className: lr.QB,
@@ -1415,7 +1414,8 @@ function lo(e) {
             label: t,
             hideLabel: s,
             helperText: l,
-            value: c,
+            disabled: a,
+            value: r,
             onSelectionChange: h,
             onQueryChange: (e) => g(e.target.value),
             options: u,
@@ -1839,9 +1839,6 @@ class lb extends i.PureComponent {
               ? eV.intl.string(eV.t.OMmNCv)
               : eV.intl.string(eV.t["HEA/DU"]);
     }
-    getCooldownSliderLabel(e) {
-        return (0, ls.$)(e, !0);
-    }
     getAutoArchiveDurationSliderMarker(e) {
         return (0, ls.$)(e * li.A.Seconds.MINUTE, !0);
     }
@@ -2030,41 +2027,41 @@ class lb extends i.PureComponent {
                   })
                 : null,
             y = g ? r : s,
-            S = (0, n.jsx)(lo, {
-                label: eV.intl.string(eV.t.tTHx98),
-                helperText: this.getSlowmodeHelpText(),
-                channel: e,
-                onChange: this.handleChangeSlowmode,
-            }),
-            M = th.nb.has(e.type)
+            S = th.nb.has(e.type)
                 ? m
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)(L.c, {}),
                               (0, n.jsxs)(tG.n, {
-                                  label: eV.intl.string(eV.t.O1c02q),
+                                  label: eV.intl.string(eV.t.tTHx98),
                                   children: [
-                                      S,
-                                      (0, n.jsx)(tk.A, {
+                                      (0, n.jsx)(lo, {
+                                          label: eV.intl.string(eV.t.O1c02q),
+                                          helperText: this.getSlowmodeHelpText(),
+                                          value: e.rateLimitPerUser,
+                                          onChange: this.handleChangeSlowmode,
+                                          disabled: !y,
+                                      }),
+                                      (0, n.jsx)(lo, {
                                           label: eV.intl.string(eV.t["fkY5+l"]),
                                           helperText: eV.intl.string(eV.t.kdZU6H),
-                                          initialValue: e.defaultThreadRateLimitPerUser ?? 0,
-                                          markers: eP.s_7,
-                                          stickToMarkers: !0,
-                                          onValueChange: this.handleChangeThreadMessageSlowmode,
-                                          onMarkerRender: this.getCooldownSliderLabel,
-                                          getAriaValueText: this.getCooldownSliderLabel,
+                                          value: e.defaultThreadRateLimitPerUser ?? 0,
+                                          onChange: this.handleChangeThreadMessageSlowmode,
                                           disabled: !y,
-                                          equidistant: !0,
                                       }),
                                   ],
                               }),
-                              (0, n.jsx)(L.c, {}),
                           ],
                       })
-                    : S
+                    : (0, n.jsx)(lo, {
+                          label: eV.intl.string(eV.t.tTHx98),
+                          helperText: this.getSlowmodeHelpText(),
+                          value: e.rateLimitPerUser,
+                          onChange: this.handleChangeSlowmode,
+                          disabled: !y,
+                      })
                 : null,
-            R =
+            M =
                 g && null != e.threadMetadata
                     ? (0, n.jsx)(tB.A, {
                           page: eP.liQ.CHANNEL_SETTINGS,
@@ -2076,7 +2073,7 @@ class lb extends i.PureComponent {
                           }),
                       })
                     : null,
-            w =
+            R =
                 e.type === eP.rbe.PRIVATE_THREAD && null != e.threadMetadata
                     ? (0, n.jsx)("div", {
                           children: (0, n.jsx)(e5.d, {
@@ -2088,27 +2085,27 @@ class lb extends i.PureComponent {
                           }),
                       })
                     : null,
-            O = (0, tF.Gc)(e),
-            _ = null != d && (0, eR.wh)(d),
-            G = "none";
-        O ? (G = "nsfw") : e.isSpoilerChannel() && (G = "spoiler");
-        let k = [
+            w = (0, tF.Gc)(e),
+            O = null != d && (0, eR.wh)(d),
+            _ = "none";
+        w ? (_ = "nsfw") : e.isSpoilerChannel() && (_ = "spoiler");
+        let G = [
                 { value: "none", name: eV.intl.string(eV.t.OtnNJE), desc: eV.intl.string(eV.t["a5/7hX"]) },
                 { value: "spoiler", name: eV.intl.string(eV.t.TvUHTb), desc: eV.intl.string(eV.t.ddWXHa) },
                 { value: "nsfw", name: eV.intl.string(eV.t.Es25Yf), desc: eV.intl.string(eV.t["9eUgwR"]) },
             ],
-            D =
+            k =
                 h && th.LE.has(e.type)
-                    ? (0, n.jsxs)(tD.B, {
+                    ? (0, n.jsxs)(tk.B, {
                           gap: 4,
                           padding: { top: 8, bottom: 8 },
                           children: [
-                              (0, n.jsx)(tU.z, {
+                              (0, n.jsx)(tD.z, {
                                   label: eV.intl.string(eV.t.yLB4y2),
                                   onChange: (e) => this.handleChannelRestrictionChange(e),
-                                  options: k,
-                                  value: G,
-                                  disabled: !s || null != e.linkedLobby || _,
+                                  options: G,
+                                  value: _,
+                                  disabled: !s || null != e.linkedLobby || O,
                               }),
                               null != e.linkedLobby
                                   ? (0, n.jsx)(I.p, { messageType: I.Y.WARNING, children: eV.intl.string(eV.t.EvavKG) })
@@ -2116,7 +2113,7 @@ class lb extends i.PureComponent {
                           ],
                       })
                     : th.LE.has(e.type)
-                      ? (0, n.jsxs)(tD.B, {
+                      ? (0, n.jsxs)(tk.B, {
                             gap: 4,
                             children: [
                                 (0, n.jsx)(e5.d, {
@@ -2124,7 +2121,7 @@ class lb extends i.PureComponent {
                                     description: eV.intl.string(eV.t["9eUgwR"]),
                                     onChange: this.handleNSFWChange,
                                     checked: (0, tF.Gc)(e),
-                                    disabled: !s || null != e.linkedLobby || _,
+                                    disabled: !s || null != e.linkedLobby || O,
                                 }),
                                 null != e.linkedLobby
                                     ? (0, n.jsx)(I.p, {
@@ -2135,13 +2132,13 @@ class lb extends i.PureComponent {
                             ],
                         })
                       : null,
-            U =
+            D =
                 th.xR.has(e.type) &&
                 null != d &&
                 d.features.has(eP.GuildFeatures.NEWS) &&
                 e.id !== d?.rulesChannelId &&
                 e.id !== d?.publicUpdatesChannelId
-                    ? (0, n.jsxs)(tD.B, {
+                    ? (0, n.jsxs)(tk.B, {
                           gap: 4,
                           children: [
                               (0, n.jsx)(e5.d, {
@@ -2157,7 +2154,7 @@ class lb extends i.PureComponent {
                           ],
                       })
                     : null,
-            P = th.wE.has(e.type)
+            U = th.wE.has(e.type)
                 ? (0, n.jsx)(tB.A, {
                       page: eP.liQ.CHANNEL_SETTINGS,
                       children: (0, n.jsx)(le, {
@@ -2170,7 +2167,7 @@ class lb extends i.PureComponent {
                       }),
                   })
                 : null,
-            V = this.props.showChannelSummariesSettings
+            P = this.props.showChannelSummariesSettings
                 ? (0, n.jsx)(e5.d, {
                       label: eV.intl.string(eV.t.id3ozj),
                       description: eV.intl.format(eV.t.feJW1z, {
@@ -2184,7 +2181,7 @@ class lb extends i.PureComponent {
                       disabled: !s || !d?.features.has(eP.GuildFeatures.SUMMARIES_ENABLED_BY_USER),
                   })
                 : null,
-            B = e.isMediaChannel()
+            V = e.isMediaChannel()
                 ? (0, n.jsx)(e5.d, {
                       label: eV.intl.string(eV.t.u8LZOt),
                       description: eV.intl.string(eV.t.J4wCc7),
@@ -2200,11 +2197,11 @@ class lb extends i.PureComponent {
               : g
                 ? ((i = eV.intl.string(eV.t.j3XWjD)), (l = "thread-name"))
                 : ((i = eV.intl.string(eV.t.PVbHDl)), (l = "channel-name"));
-        let H = u ? a : s;
-        return (0, n.jsxs)(tD.B, {
+        let B = u ? a : s;
+        return (0, n.jsxs)(tk.B, {
             gap: 24,
             children: [
-                (0, n.jsx)(tP.k, {
+                (0, n.jsx)(tU.k, {
                     label: i,
                     fullWidth: !0,
                     inputRef: this.nameInputRef,
@@ -2214,9 +2211,9 @@ class lb extends i.PureComponent {
                     error: this.getError("name"),
                     name: l,
                     autoFocus: !0,
-                    disabled: !H,
+                    disabled: !B,
                     maxLength: eP.Ign,
-                    trailing: H
+                    trailing: B
                         ? {
                               type: "emoji",
                               button: (0, n.jsx)(lj, {
@@ -2231,17 +2228,17 @@ class lb extends i.PureComponent {
                 C,
                 j,
                 b,
+                S,
                 M,
-                R,
                 N,
                 E,
                 v,
-                w,
+                R,
+                k,
                 D,
+                P,
                 U,
                 V,
-                P,
-                B,
             ],
         });
     }
@@ -2253,7 +2250,7 @@ class lb extends i.PureComponent {
         if (!this.showVoiceSettings()) return null;
         let i = (0, ln.Jz)(t, e),
             s = this.getError("bitrate");
-        return (0, n.jsx)(tk.A, {
+        return (0, n.jsx)(tP.A, {
             label: eV.intl.string(eV.t.w2d0vU),
             errorMessage: "" !== s ? s : void 0,
             helperText: i > eP.gp3 ? eV.intl.format(eV.t.SbQJk5, { bitrate: eP.gp3 / 1e3 }) : void 0,
@@ -2284,7 +2281,7 @@ class lb extends i.PureComponent {
             { value: eP.K3c.AUTO, name: eV.intl.string(eV.t.jjKYpu) },
             { value: eP.K3c.FULL, name: eV.intl.string(eV.t["7jOoJE"]) },
         ];
-        return (0, n.jsx)(tU.z, {
+        return (0, n.jsx)(tD.z, {
             label: eV.intl.string(eV.t.jhJEJs),
             helperText: eV.intl.format(eV.t.c5W7Ss, {}),
             onChange: (e) => this.handleVideoQualityModeChange(e),
@@ -2303,7 +2300,7 @@ class lb extends i.PureComponent {
         if (!this.showVoiceSettings()) return null;
         let l = this.getError("user_limit"),
             i = e.isGuildStageVoice() ? eP.RCc : eP.cSc;
-        return (0, n.jsx)(tk.A, {
+        return (0, n.jsx)(tP.A, {
             label: eV.intl.string(eV.t["/AoSGN"]),
             errorMessage: "" !== l ? l : void 0,
             helperText: eV.intl.format(e.isGuildStageVoice() ? eV.t.OqZI8D : eV.t["8yb3JT"], {}),

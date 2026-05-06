@@ -1,6 +1,7 @@
 .notice__29487 {
     align-items: center;
     background: linear-gradient(90deg, var(--color-scoped-expressive-background-nitro-1-start, rgba(179, 38, 156, .7)) 0, var(--color-scoped-expressive-background-nitro-1-end, rgba(20, 20, 203, .7)) 100%), var(--background-base-lowest);
+    border-radius: 8px 0 0;
     display: flex;
     height: 54px;
     position: relative;

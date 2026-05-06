@@ -1,1 +1,3 @@
-e.exports = JSON.parse('{"jSrqR2":["Presetate"],"zry4l5":["Previzualizează tema"],"/6NbRv":["Tema serverului"]}');
+e.exports = JSON.parse(
+    '{"odtr7f":["Alege o temă prestabilită sau creează una personalizată. Toți membrii o vor vedea c\xe2nd intră pe server. \xcen plus, tema se adaptează automat la modul luminos sau \xeentunecat. ",[8,"$link",["Află mai multe"],[[1,"articleUrl"]]]],"XhiIAu":["Această acțiune modifică aspectul serverului pentru toți membrii."],"aZpFFn":["Activează tema serverului"],"jSrqR2":["Presetate"],"HkvkHP":["Tema respectă preferința fiecărui membru pentru modul luminos sau \xeentunecat."],"zry4l5":["Previzualizează tema"],"Ck5zxP":["Selectează-ți tema"],"/6NbRv":["Tema serverului"]}',
+);

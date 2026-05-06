@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"jSrqR2":["Přednastaven\xe9"],"zry4l5":["N\xe1hled motivu"],"/6NbRv":["Motiv serveru"]}');
+e.exports = JSON.parse(
+    '{"odtr7f":["Vyber si přednastaven\xfd motiv nebo si vytvoř svůj vlastn\xed. Každ\xfd člen uvid\xed tento motiv, když otevře server. Motiv se přizpůsob\xed světl\xe9mu nebo tmav\xe9mu režimu dan\xe9ho člena. ",[8,"$link",["Zjistit v\xedce"],[[1,"articleUrl"]]]],"XhiIAu":["T\xedm změn\xedš vzhled sv\xe9ho serveru pro všechny uživatele."],"aZpFFn":["Povolit motiv serveru"],"jSrqR2":["Přednastaven\xe9"],"HkvkHP":["Každ\xe9mu členovi se zobraz\xed jeho preferovan\xfd světl\xfd nebo tmav\xfd režim."],"zry4l5":["N\xe1hled motivu"],"Ck5zxP":["Vyber si motiv"],"/6NbRv":["Motiv serveru"]}',
+);

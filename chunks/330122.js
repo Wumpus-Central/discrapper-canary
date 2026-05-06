@@ -1,3 +1,3 @@
 s.exports = JSON.parse(
-    '{"u72Prd":["Transliuok HD raiška su Nitro"],"3wwZ/Q":["Pradėti transliuoti"],"OsS9Ll":["Nebetransliuoti"],"j+eAMQ":["Transliacijos garsas"],"/XSr8v":["Transliavimo režimas"],"2qmQ8N":["Numatytasis"],"CrNjqp":["Transliacijos nustatymai"]}',
+    '{"u72Prd":["Transliuok HD raiška su Nitro"],"uwMBDo":["Bendrinti programėlių garsą"],"3wwZ/Q":["Pradėti transliuoti"],"OsS9Ll":["Nebetransliuoti"],"j+eAMQ":["Transliacijos garsas"],"/XSr8v":["Transliavimo režimas"],"ibH7vy":["Subalansuota kokybė ir našumas (",[1,"resolution"]," p, ",[1,"fps"]," fps)"],"2qmQ8N":["Numatytasis"],"q4gYBi":["Vaizdo transliacijoms ir žaidimams (",[1,"resolution"]," p, ",[1,"fps"]," fps)"],"nMcXo1":["Aukštos kokybės"],"fN0UQY":["Optimizuotas lėtesniems įrenginiams (",[1,"resolution"]," p, ",[1,"fps"]," fps)"],"5eO4/m":["Našumas"],"CrNjqp":["Transliacijos nustatymai"]}',
 );

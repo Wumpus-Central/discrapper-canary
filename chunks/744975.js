@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"IraH2Q":[[1,"discountOfferAmount"],"% की छूट"]}');
+s.exports = JSON.parse(
+    '{"IraH2Q":[[1,"discountOfferAmount"],"% की छूट"],"WBMEcr":["Rust शॉप पर जाएं"],"7mIXs6":["नया वाइप, नया गियर. 21 मई तक 20% की छूट पाएं."],"C+RsW7":["20% की बचत करें, सिर्फ़ Discord पर."],"RMafGC":["Discord से ही फ़्रेंड्स को Rust आइटम दें. रैपिंग की ज़रूरत नहीं है."],"5aC9+e":["अपने स्क्वाड का ख्याल रखें"],"me6trO":["Discord पर Rust आइटम खरीदें और उन्हें गेम में तुरंत इक्विप करें."],"2FKQ2n":["Discord पर इसे खरीदें."],"JN38wW":["इसे Rust में पाएं."]}',
+);

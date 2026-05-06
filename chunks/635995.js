@@ -19,7 +19,7 @@ let p = (e) => {
     },
     E = (e) => {
         let { text: t, onClick: n } = e;
-        return (0, i.jsx)(a.$, { onClick: n, text: t, size: "sm", icon: l.t, variant: "secondary" });
+        return (0, i.jsx)(a.$, { onClick: n, text: t, size: "sm", icon: l.t, variant: "overlay-primary" });
     };
 function m(e) {
     let { className: t, ref: n, children: r, onClick: a } = e;

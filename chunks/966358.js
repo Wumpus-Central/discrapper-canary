@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"jSrqR2":["Esiasetukset"],"zry4l5":["Esikatsele teemaa"]}');
+a.exports = JSON.parse(
+    '{"odtr7f":["Valitse valmiiksi m\xe4\xe4ritetty teema tai luo oma teemasi. Jokainen j\xe4sen n\xe4kee t\xe4m\xe4n teeman palvelimen avatessaan j\xe4senen vaalean tai tumman tilan valinnan mukaisena. ",[8,"$link",["Lue lis\xe4\xe4"],[[1,"articleUrl"]]]],"XhiIAu":["T\xe4m\xe4 muuttaa palvelimesi ulkon\xe4k\xf6\xe4 kaikille j\xe4senille."],"aZpFFn":["Ota palvelimen teema k\xe4ytt\xf6\xf6n"],"jSrqR2":["Esiasetukset"],"HkvkHP":["Kukin j\xe4sen n\xe4kee teeman oman vaalean tai tumman tilan valintansa mukaisena."],"zry4l5":["Esikatsele teemaa"],"Ck5zxP":["Valitse teemasi"],"/6NbRv":["Palvelimen teema"]}',
+);

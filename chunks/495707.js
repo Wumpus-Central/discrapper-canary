@@ -28,4 +28,5 @@ e.exports = {
     LC: "contentCollapsedBackground__24e2c",
     Ge: "blur__24e2c",
     zf: "instructionRow__24e2c",
+    oG: "ctaButtons__24e2c",
 };
