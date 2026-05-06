@@ -6340,7 +6340,7 @@ let ug = [
     }),
     uf = (0, o.zZ)(u.X.STREAMING_CATEGORY, { useTitle: () => g.intl.string(g.t.KDdjou), buildLayout: () => [uh, uN] }),
     u_ = (0, o.E2)(u.X.VOICE_MICROPHONE_INPUT_SELECT, {
-        useSearchTerms: () => [g.intl.string(g.t.hHMYbb), g.intl.string(g.t.nuFtHH)],
+        useSearchTerms: () => [],
         Component: function () {
             return (0, p.jsx)(ah.U, {
                 label: g.intl.string(g.t.UTM8VP),
@@ -6351,7 +6351,7 @@ let ug = [
         },
     }),
     uC = (0, o.E2)(u.X.VOICE_SPEAKER_OUTPUT_SELECT, {
-        useSearchTerms: () => [g.intl.string(g.t.dl18zb), g.intl.string(g.t["3182VD"]), g.intl.string(g.t["DGq/PR"])],
+        useSearchTerms: () => [],
         Component: function () {
             return (0, p.jsx)(ah.U, {
                 label: g.intl.string(g.t.xuYQ0n),
@@ -6364,7 +6364,6 @@ let ug = [
     uI = (0, o.zC)(u.X.VOICE_INPUT_OUTPUT_DEVICE_SPLIT, { buildLayout: () => [u_, uC] }),
     ub = (0, o.sN)(u.X.VOICE_INPUT_VOLUME_SETTING, {
         useTitle: () => g.intl.string(g.t.Rtsr6w),
-        useSearchTerms: () => [g.intl.string(g.t.eATD2B), g.intl.string(g.t["3182VD"]), g.intl.string(g.t["DGq/PR"])],
         minValue: 0,
         maxValue: 100,
         getInitialValue: function () {
@@ -6379,7 +6378,6 @@ let ug = [
     }),
     uv = (0, o.sN)(u.X.VOICE_OUTPUT_VOLUME_SETTING, {
         useTitle: () => g.intl.string(g.t.aUJ062),
-        useSearchTerms: () => [g.intl.string(g.t.eATD2B), g.intl.string(g.t["3182VD"]), g.intl.string(g.t["DGq/PR"])],
         minValue: 0,
         maxValue: 200,
         getInitialValue: function () {
@@ -6448,6 +6446,16 @@ function uU(e) {
 }
 let uM = (0, o.zZ)(u.X.VOICE_CATEGORY, {
         useTitle: () => g.intl.string(g.t.K3lovD),
+        useSearchTerms: () => [
+            g.intl.string(g.t.hHMYbb),
+            g.intl.string(g.t.nuFtHH),
+            g.intl.string(g.t.dl18zb),
+            g.intl.string(g.t["3182VD"]),
+            g.intl.string(g.t["DGq/PR"]),
+            g.intl.string(g.t.eATD2B),
+            g.intl.string(g.t.Rtsr6w),
+            g.intl.string(g.t.aUJ062),
+        ],
         useInlineNotice: function () {
             let e = ly("voice"),
                 t = (0, aE.x5)(aS.oh.AUDIO_INPUT),
