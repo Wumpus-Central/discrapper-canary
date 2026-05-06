@@ -78,7 +78,7 @@ var w = s(375708),
     W = s(23161),
     K = (((n = {}).HOME = "home"), (n.CATALOG = "catalog"), (n.ORBS = "orbs"), n),
     Y = s(775602),
-    $ = s(287344),
+    $ = s(578797),
     Z = s(38405),
     q = s(4227),
     J = s(856686),
@@ -123,7 +123,7 @@ let en = (e, t, s, l) => {
         };
     };
 var er = s(354328),
-    ei = s(785330),
+    ei = s(356118),
     eo = s(641150),
     ec = s(534514);
 function eu() {
@@ -505,8 +505,8 @@ var eq =
     e9 = s(785866),
     e3 = s(373846),
     e7 = s(308323),
-    e8 = s(608599),
-    e6 = s(685761),
+    e6 = s(608599),
+    e8 = s(685761),
     te = s(157225),
     tt = s(413249),
     ts = s(510241),
@@ -712,12 +712,12 @@ let tu = (e) => {
                     },
                     {
                         name: w.intl.string(w.t.TlhOQC),
-                        icon: (0, c.jsx)(e8.L, { size: "xs", color: r(eJ.FOOD_DRINKS) }),
+                        icon: (0, c.jsx)(e6.L, { size: "xs", color: r(eJ.FOOD_DRINKS) }),
                         enum: eJ.FOOD_DRINKS,
                     },
                     {
                         name: w.intl.string(w.t["4IaUIM"]),
-                        icon: (0, c.jsx)(e6.f, { size: "xs", color: r(eJ.FANTASY) }),
+                        icon: (0, c.jsx)(e8.f, { size: "xs", color: r(eJ.FANTASY) }),
                         enum: eJ.FANTASY,
                     },
                     {
@@ -909,7 +909,7 @@ function t_(e) {
     (0, W.S)(r);
     let i = u.useRef(null),
         { handleScroll: o } = ea(i, t),
-        d = (0, $.f)("Shop Browse"),
+        d = (0, $.U)("Shop Browse"),
         { setCategoryRef: g, handleScrollToCategory: m } = (0, ez.k0)(i.current),
         [h, E] = u.useState(n),
         [x, p] = u.useState(!1);
@@ -1103,7 +1103,7 @@ let tA = (e) => {
 var tL = s(599062),
     tj = s(651162),
     tb = s(554146),
-    tv = s(281678);
+    tv = s(367727);
 let tI = u.createContext(null);
 function tO(e) {
     let { blockType: t, children: s } = e,
@@ -1114,7 +1114,7 @@ var tN = s(755172),
     tk = s(325595),
     ty = s(893998),
     tT = s(110629),
-    tR = s(785651),
+    tR = s(873174),
     tB = s(607399),
     tM = s(946015),
     tP = s(717421),
@@ -1619,9 +1619,9 @@ let t3 = (e) => {
               }),
           });
 };
-var t7 = s(951707),
-    t8 = s(622697);
-let t6 = (e) => {
+var t7 = s(449543),
+    t6 = s(622697);
+let t8 = (e) => {
     let { block: t, handleTransition: s, tab: l } = e,
         n = (0, O.bG)([j.default], () => j.default.getCurrentUser()),
         a = (0, em.W)("FramesProductShelfBlock"),
@@ -1640,18 +1640,18 @@ let t6 = (e) => {
         : (0, c.jsx)(f.f5, {
               value: o,
               children: (0, c.jsxs)("div", {
-                  className: g()(t8.kL, tV.YB),
+                  className: g()(t6.kL, tV.YB),
                   children: [
                       null != t.backgroundImage &&
-                          (0, c.jsx)("img", { className: t8.iL, src: t.backgroundImage, alt: "", "aria-hidden": !0 }),
+                          (0, c.jsx)("img", { className: t6.iL, src: t.backgroundImage, alt: "", "aria-hidden": !0 }),
                       (0, c.jsxs)("div", {
-                          className: t8.Qs,
+                          className: t6.Qs,
                           children: [
                               (0, c.jsxs)("div", {
-                                  className: t8.wx,
+                                  className: t6.wx,
                                   children: [
                                       (0, c.jsxs)("div", {
-                                          className: t8.Jb,
+                                          className: t6.Jb,
                                           children: [
                                               (0, c.jsx)(tT.A, { location: "FramesProductShelfBlock" }),
                                               (0, c.jsx)(ec.D, {
@@ -3037,7 +3037,7 @@ let s1 = (e) => {
                                     );
                                     break;
                                 case tj.g.FRAMES_PRODUCT_SHELF:
-                                    u = (0, c.jsx)(t6, { block: e, handleTransition: t, tab: n }, r);
+                                    u = (0, c.jsx)(t8, { block: e, handleTransition: t, tab: n }, r);
                                     break;
                                 case tj.g.SHELF:
                                     u = (0, c.jsx)(sN, { handleTransition: t, shelf: e, tab: n }, r);
@@ -3204,7 +3204,10 @@ let s3 = () =>
             [s, l, n] = (0, O.yK)([T.A], () => [T.A.getLayout(t), T.A.isFetchingLayout(t), T.A.getLayoutFetchError(t)]),
             a = (0, O.bG)([s5.A], () => s5.A.get("shop_include_unpublished")),
             r = (0, O.bG)([v.A], () => v.A.skipNumCategories),
-            i = u.useMemo(() => ({ include_unpublished: a ?? !1, skip_num_categories: r ?? 0 }), [a, r]),
+            i = u.useMemo(() => {
+                let e = {};
+                return !0 === a && (e.include_unpublished = !0), null != r && r > 0 && (e.skip_num_categories = r), e;
+            }, [a, r]),
             o = null == s && !l && n?.status !== 404 && n?.status !== 429;
         return (u.useEffect(() => {
             o && (0, s_.T2)({ tab: t });
@@ -3217,7 +3220,7 @@ let s3 = () =>
                   children: [t === K.ORBS && (0, c.jsx)(s3, {}), (0, c.jsx)(ei.Qs, { tenantId: B.FYj, layoutId: s })],
               });
     },
-    s8 = (e) => {
+    s6 = (e) => {
         let { url: t } = e,
             [s, l] = u.useState(null);
         return (u.useEffect(() => {
@@ -3235,7 +3238,7 @@ let s3 = () =>
             ? null
             : (0, c.jsx)(ei.Ay, { layout: s });
     },
-    s6 = (e) => {
+    s8 = (e) => {
         let { handleTransition: t, tab: s, transitionState: l } = e,
             n = (0, b.uM)(),
             a = (0, O.bG)([s9.A], () => s9.A.getShopLayoutUrlOverride()),
@@ -3270,7 +3273,7 @@ let s3 = () =>
                         (0, c.jsxs)("div", {
                             className: g()(tV.rb, tV.GS),
                             children: [
-                                null != a && "" !== a ? (0, c.jsx)(s8, { url: a }) : (0, c.jsx)(s7, { tab: s }),
+                                null != a && "" !== a ? (0, c.jsx)(s6, { url: a }) : (0, c.jsx)(s7, { tab: s }),
                                 s !== K.CATALOG &&
                                     o >= 36 &&
                                     (0, c.jsxs)("div", {
@@ -3344,7 +3347,7 @@ function ll(e) {
                 ),
             [s],
         ),
-        x = (0, $.f)("CollectiblesContent"),
+        x = (0, $.U)("CollectiblesContent"),
         p = u.useCallback(
             (e) => {
                 let {
@@ -3367,9 +3370,9 @@ function ll(e) {
         : null != i
           ? (0, c.jsx)(tL.h, { onRetry: r, errorMessage: i, errorOrigin: tL.A.SHOP_PAGE })
           : t === R.G2.HOME && x
-            ? (0, c.jsx)(s6, { tab: K.HOME, transitionState: n, handleTransition: p })
+            ? (0, c.jsx)(s8, { tab: K.HOME, transitionState: n, handleTransition: p })
             : t === R.G2.ORBS && x
-              ? (0, c.jsx)(s6, { tab: K.ORBS, transitionState: n, handleTransition: p })
+              ? (0, c.jsx)(s8, { tab: K.ORBS, transitionState: n, handleTransition: p })
               : ls.includes(t)
                 ? (0, c.jsx)(s4, { handleTransition: p, tab: t, transitionState: n })
                 : (0, c.jsx)(t_, {
