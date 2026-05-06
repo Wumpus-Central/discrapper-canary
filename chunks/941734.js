@@ -32,6 +32,7 @@ e.exports = {
     $6: "blockHeader__08415",
     LD: "headerLeft__08415",
     IE: "headerRight__08415",
+    gd: "sortGroup__08415",
     w: "feedblockInteractiveBackground__08415",
     pI: "sortSelect__08415",
     DD: "title__08415",
