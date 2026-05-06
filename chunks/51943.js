@@ -28,7 +28,7 @@ function C(e) {
         onContextMenu: (e) => {
             (0, f.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("99025"),
+                    i.e("66029"),
                     i.e("98560"),
                     i.e("94864"),
                     i.e("24195"),
@@ -335,7 +335,7 @@ function C(e) {
                     i.e("16237"),
                     i.e("16373"),
                     i.e("81398"),
-                    i.e("50007"),
+                    i.e("3050"),
                     i.e("24484"),
                     i.e("44943"),
                     i.e("32347"),
