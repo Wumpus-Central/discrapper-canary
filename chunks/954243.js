@@ -194,7 +194,12 @@ class L {
                         adContentId: e,
                         adCreativeType: this.entity.adCreativeType,
                         event: b.HAw.QUEST_CONTENT_VIEWED,
-                        properties: { ...n, metadata_sealed: r ?? null, ...this.commonProperties() },
+                        properties: {
+                            ...n,
+                            metadata_sealed: r ?? null,
+                            traffic_metadata_sealed: (0, E.Gp)(this.questContent, void 0, e) ?? null,
+                            ...this.commonProperties(),
+                        },
                     });
             }
         }),
@@ -315,7 +320,12 @@ class L {
                         adContentId: n,
                         adCreativeType: this.entity.adCreativeType,
                         event: b.HAw.QUEST_CONTENT_LOADED,
-                        properties: { ...t, metadata_sealed: r ?? null, ...this.commonProperties() },
+                        properties: {
+                            ...t,
+                            metadata_sealed: r ?? null,
+                            traffic_metadata_sealed: (0, E.Gp)(this.questContent, void 0, n) ?? null,
+                            ...this.commonProperties(),
+                        },
                     });
             }
         }),
