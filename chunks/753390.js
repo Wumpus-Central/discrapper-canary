@@ -45,6 +45,7 @@ n.d(t, {
     re: () => eO,
     uZ: () => ew,
     ge: () => eT,
+    x: () => ex,
     bl: () => eL,
     QP: () => eI,
 });
@@ -979,9 +980,18 @@ function eM(e) {
 async function eP(e, t) {
     try {
         let n = await s.Bo.post({ url: S.Rsh.REACTIVATION_OFFER_REDEEM(e.id, t.id), rejectWithError: !1 });
-        a.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: n.body });
+        a.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: n.body }),
+            a.h.dispatch({ type: "BILLING_USER_OFFER_REDEEMED", offerId: t.id });
     } catch (t) {
         let e = t instanceof o.Ey ? t : new o.Ey(t);
-        a.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: e });
+        throw (a.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_FAIL", error: e }), e);
+    }
+}
+async function ex(e) {
+    try {
+        await s.Bo.post({ url: S.Rsh.USER_OFFER_REDEEM, body: { user_discount_offer_id: e.id }, rejectWithError: !0 }),
+            a.h.dispatch({ type: "BILLING_USER_OFFER_REDEEMED", offerId: e.id });
+    } catch (e) {
+        throw e instanceof o.Ey ? e : new o.Ey(e);
     }
 }

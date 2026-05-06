@@ -14,11 +14,11 @@ function l(e) {
     let { location: t } = e;
     return o.getConfig({ location: t }).enabled;
 }
-var d = n(287809),
-    _ = n(469778),
-    u = n(927578),
-    c = n(166403),
-    E = n(788868);
+var u = n(287809),
+    c = n(469778),
+    d = n(927578),
+    _ = n(166403),
+    f = n(788868);
 let h = {
         userOffersLastFetchedAtDate: void 0,
         userTrialOffers: {},
@@ -27,37 +27,37 @@ let h = {
         isFetching: !1,
         lastFetchSuccessful: !1,
     },
-    m = h;
-function f() {
-    (m.userTrialOffers = {}),
-        (m.userDiscountOffers = {}),
-        (m.userOffersLastFetchedAtDate = void 0),
-        (m.isFetching = !1);
+    p = h;
+function E() {
+    (p.userTrialOffers = {}),
+        (p.userDiscountOffers = {}),
+        (p.userOffersLastFetchedAtDate = void 0),
+        (p.isFetching = !1);
 }
-let g = () => !0;
-function p() {
+let m = () => !0;
+function g() {
     return (
-        null != c.A.getPremiumTypeSubscription() &&
-        (null != m.userDiscountOffers[E.q]
-            ? (m.userDiscountOffers = { [E.q]: m.userDiscountOffers[E.q] })
-            : null != m.userDiscountOffers[E.EG]
-              ? (m.userDiscountOffers = { [E.EG]: m.userDiscountOffers[E.EG] })
-              : (m.userDiscountOffers = {}),
-        (m.userTrialOffers = {}),
+        null != _.A.getPremiumTypeSubscription() &&
+        (null != p.userDiscountOffers[f.q]
+            ? (p.userDiscountOffers = { [f.q]: p.userDiscountOffers[f.q] })
+            : null != p.userDiscountOffers[f.EG]
+              ? (p.userDiscountOffers = { [f.EG]: p.userDiscountOffers[f.EG] })
+              : (p.userDiscountOffers = {}),
+        (p.userTrialOffers = {}),
         !0)
     );
 }
 function A() {
-    let e = d.default.getCurrentUser();
-    !(0, u.TW)(e) && Object.keys(m.userDiscountOffers).length > 0 && (0, a._D)("UserOfferStore", !0);
+    let e = u.default.getCurrentUser();
+    !(0, d.TW)(e) && Object.keys(p.userDiscountOffers).length > 0 && (0, a._D)("UserOfferStore", !0);
 }
 function I() {
-    let e = d.default.getCurrentUser()?.id;
+    let e = u.default.getCurrentUser()?.id;
     if (null == e) return !1;
     let t = s.A.getAllRelevantReferralTrialOffers().filter((t) => t.user_id === e);
     if (t.length > 0) {
         let e = t[0];
-        return (m.userTrialOffers[e.trial_id] = e), !0;
+        return (p.userTrialOffers[e.trial_id] = e), !0;
     }
     return !1;
 }
@@ -80,157 +80,164 @@ class T extends i.Ay.PersistedStore {
         },
     ];
     initialize(e) {
-        (m = e ?? h),
-            this.waitFor(_.A, s.A, c.A, d.default),
-            this.syncWith([d.default], g),
-            this.syncWith([c.A], p),
+        (p = e ?? h),
+            this.waitFor(c.A, s.A, _.A, u.default),
+            this.syncWith([u.default], m),
+            this.syncWith([_.A], g),
             this.syncWith([s.A], I);
     }
     getUserTrialOffer(e) {
-        if (null !== e) return m.userTrialOffers[e];
+        if (null !== e) return p.userTrialOffers[e];
     }
     getUserDiscountOffer(e) {
-        if (null !== e) return m.userDiscountOffers[e];
+        if (null !== e) return p.userDiscountOffers[e];
     }
     getAnyOfUserTrialOfferId(e) {
-        for (let t of e) if (null != m.userTrialOffers[t]) return t;
+        for (let t of e) if (null != p.userTrialOffers[t]) return t;
         return null;
     }
     isFetchingOffer() {
-        return m.isFetching ?? !1;
+        return p.isFetching ?? !1;
     }
     hasFetchedOffer() {
-        return null != m.userOffersLastFetchedAtDate;
+        return null != p.userOffersLastFetchedAtDate;
     }
     shouldFetchReferralOffer(e) {
-        let t = m.userOffersLastFetchedAtDate,
-            n = m.isFetching ?? !1;
+        let t = p.userOffersLastFetchedAtDate,
+            n = p.isFetching ?? !1;
         if (null == t) return !n;
         let i = Date.now() - 6e5 > t;
         return !n && (i || (e ?? 0) > t);
     }
     shouldShowTrialOfferReminder(e) {
-        return !E.Pn.includes(e.trial_id) || l({ location: "user_offer_store" });
+        return !f.Pn.includes(e.trial_id) || l({ location: "user_offer_store" });
     }
     getAlmostExpiringTrialOffersForReminder(e) {
-        let t = Object.values(E.TP).map((e) => e.id),
-            n = d.default.getCurrentUser();
-        return (0, u.TW)(n) && !this.canFractionalPremiumUserUseOffer()
+        let t = Object.values(f.TP).map((e) => e.id),
+            n = u.default.getCurrentUser();
+        return (0, d.TW)(n) && !this.canFractionalPremiumUserUseOffer()
             ? []
-            : Object.values(m.userTrialOffers).filter(
+            : Object.values(p.userTrialOffers).filter(
                   (n) =>
                       t.includes(n.trial_id) &&
                       null != n.expires_at &&
                       null != n.subscription_trial &&
                       e.includes(n.subscription_trial.sku_id) &&
-                      Date.parse(n.expires_at) < Date.now() + (0, u.e1)(n) &&
+                      Date.parse(n.expires_at) < Date.now() + (0, d.e1)(n) &&
                       this.shouldShowTrialOfferReminder(n),
               );
     }
     shouldShowDiscountOfferReminder(e) {
-        return !E.ON.includes(e.discount_id) || l({ location: "user_offer_store" });
+        return !f.ON.includes(e.discount_id) || l({ location: "user_offer_store" });
     }
     getAlmostExpiringDiscountOffersForReminder(e) {
-        let t = d.default.getCurrentUser();
-        return (0, u.TW)(t) && !this.canFractionalPremiumUserUseOffer()
+        let t = u.default.getCurrentUser();
+        return (0, d.TW)(t) && !this.canFractionalPremiumUserUseOffer()
             ? []
-            : Object.values(m.userDiscountOffers).filter(
+            : Object.values(p.userDiscountOffers).filter(
                   (t) =>
                       null != t.expires_at &&
                       null != t.discount &&
-                      t.discount.plan_ids.some((t) => e.includes(E.hd[t].skuId)) &&
-                      Date.parse(t.expires_at) < Date.now() + (0, u.e1)(t) &&
+                      t.discount.plan_ids.some((t) => e.includes(f.hd[t].skuId)) &&
+                      Date.parse(t.expires_at) < Date.now() + (0, d.e1)(t) &&
                       this.shouldShowDiscountOfferReminder(t),
               );
     }
     getAcknowledgedOffers(e) {
-        let t = d.default.getCurrentUser();
-        return (0, u.TW)(t) && !this.canFractionalPremiumUserUseOffer()
+        let t = u.default.getCurrentUser();
+        return (0, d.TW)(t) && !this.canFractionalPremiumUserUseOffer()
             ? []
-            : Object.values(m.userTrialOffers).filter((t) => e.includes(t.trial_id) && null != t.expires_at);
+            : Object.values(p.userTrialOffers).filter((t) => e.includes(t.trial_id) && null != t.expires_at);
     }
     getUnacknowledgedDiscountOffers() {
-        let e = d.default.getCurrentUser();
-        return (0, u.TW)(e) && !this.canFractionalPremiumUserUseOffer()
+        let e = u.default.getCurrentUser();
+        return (0, d.TW)(e) && !this.canFractionalPremiumUserUseOffer()
             ? []
-            : Object.values(m.userDiscountOffers ?? {}).filter(
-                  (e) => null == e.expires_at && !E.ly.includes(e.discount_id),
+            : Object.values(p.userDiscountOffers ?? {}).filter(
+                  (e) => null == e.expires_at && !f.ly.includes(e.discount_id),
               );
     }
     getUnacknowledgedOffers(e) {
-        let t = d.default.getCurrentUser();
-        return (0, u.TW)(t) && !this.canFractionalPremiumUserUseOffer()
+        let t = u.default.getCurrentUser();
+        return (0, d.TW)(t) && !this.canFractionalPremiumUserUseOffer()
             ? []
-            : Object.values(m.userTrialOffers).filter((t) => e.includes(t.trial_id) && null == t.expires_at);
+            : Object.values(p.userTrialOffers).filter((t) => e.includes(t.trial_id) && null == t.expires_at);
     }
     hasAnyUnexpiredOffer() {
-        return Object.values(m.userTrialOffers).some(
+        return Object.values(p.userTrialOffers).some(
             (e) => null == e.expires_at || Date.parse(e.expires_at) > Date.now(),
         );
     }
     hasAnyUnexpiredDiscountOffer() {
-        return Object.values(m.userDiscountOffers).some(
+        return Object.values(p.userDiscountOffers).some(
             (e) => null == e.expires_at || Date.parse(e.expires_at) > Date.now(),
         );
     }
     canFractionalPremiumUserUseOffer() {
-        return _.A.isFractionalPremiumActive({ excludeReverseTrial: !0 }) && null == c.A.getPremiumTypeSubscription();
+        return c.A.isFractionalPremiumActive({ excludeReverseTrial: !0 }) && null == _.A.getPremiumTypeSubscription();
     }
     getReferrer(e) {
-        return null == e ? null : m.userTrialOffers[e]?.referrer;
+        return null == e ? null : p.userTrialOffers[e]?.referrer;
     }
     getState() {
-        return m;
+        return p;
     }
     forceReset() {
-        f();
+        E();
     }
     lastFetchSuccessful() {
-        return m.lastFetchSuccessful;
+        return p.lastFetchSuccessful;
     }
 }
 let S = new T(r.h, {
     BILLING_USER_OFFER_FETCH_START: function () {
-        m.isFetching = !0;
+        p.isFetching = !0;
     },
     BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: function (e) {
         let { userTrialOffer: t } = e;
-        null != t ? (m.userTrialOffers[t.trial_id] = t) : f(),
-            (m.userOffersLastFetchedAtDate = Date.now()),
-            (m.isFetching = !1);
+        null != t ? (p.userTrialOffers[t.trial_id] = t) : E(),
+            (p.userOffersLastFetchedAtDate = Date.now()),
+            (p.isFetching = !1);
     },
     BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: function (e) {
         let { userTrialOffer: t } = e;
-        null != t ? (m.userTrialOffers[t.trial_id] = t) : (m.userTrialOffers = {}),
-            (m.userOffersLastFetchedAtDate = Date.now());
+        null != t ? (p.userTrialOffers[t.trial_id] = t) : (p.userTrialOffers = {}),
+            (p.userOffersLastFetchedAtDate = Date.now());
     },
     BILLING_USER_OFFER_FETCH_SUCCESS: function (e) {
         let { userTrialOffer: t, userDiscount: n, userDiscountOffer: i } = e;
-        null == t && null == n && null == i && f(),
+        null == t && null == n && null == i && E(),
             null != t
-                ? ((m.userTrialOffers[t.trial_id] = t), (m.userDiscountOffers = {}))
+                ? ((p.userTrialOffers[t.trial_id] = t), (p.userDiscountOffers = {}))
                 : null != n
-                  ? ((m.userDiscountOffers[n.discount_id] = n), (m.userTrialOffers = {}))
-                  : null != i && ((m.userDiscountOffers[i.discount_id] = i), (m.userTrialOffers = {})),
-            (m.userOffersLastFetchedAtDate = Date.now()),
-            (m.isFetching = !1),
-            (m.lastFetchSuccessful = !0);
+                  ? ((p.userDiscountOffers[n.discount_id] = n), (p.userTrialOffers = {}))
+                  : null != i && ((p.userDiscountOffers[i.discount_id] = i), (p.userTrialOffers = {})),
+            (p.userOffersLastFetchedAtDate = Date.now()),
+            (p.isFetching = !1),
+            (p.lastFetchSuccessful = !0);
     },
     BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: function (e) {
         let { userTrialOffer: t, userDiscount: n, userDiscountOffer: i } = e;
-        null != t ? (m.userTrialOffers[t.trial_id] = t) : (m.userTrialOffers = {}),
+        null != t ? (p.userTrialOffers[t.trial_id] = t) : (p.userTrialOffers = {}),
             null != n
-                ? (m.userDiscountOffers[n.discount_id] = n)
+                ? (p.userDiscountOffers[n.discount_id] = n)
                 : null != i
-                  ? (m.userDiscountOffers[i.discount_id] = i)
-                  : (m.userDiscountOffers = {}),
-            (m.userOffersLastFetchedAtDate = Date.now());
+                  ? (p.userDiscountOffers[i.discount_id] = i)
+                  : (p.userDiscountOffers = {}),
+            (p.userOffersLastFetchedAtDate = Date.now());
     },
     BILLING_USER_OFFER_FETCH_FAIL: function () {
-        f(), (m.userOffersLastFetchedAtDate = Date.now()), (m.isFetching = !1), (m.lastFetchSuccessful = !1);
+        E(), (p.userOffersLastFetchedAtDate = Date.now()), (p.isFetching = !1), (p.lastFetchSuccessful = !1);
+    },
+    BILLING_USER_OFFER_REDEEMED: function (e) {
+        let { offerId: t } = e,
+            n = Object.keys(p.userDiscountOffers).find((e) => p.userDiscountOffers[e].id === t);
+        null != n && delete p.userDiscountOffers[n];
+        let i = Object.keys(p.userTrialOffers).find((e) => p.userTrialOffers[e].id === t);
+        return null != i && delete p.userTrialOffers[i], !0;
     },
     BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: A,
     BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: A,
     BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: A,
-    LOGOUT: f,
+    LOGOUT: E,
 });
