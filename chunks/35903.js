@@ -333,13 +333,6 @@ let eg = (0, m.A)((e) => {
                 if (t?.platform === F.yTV.PS4 || t?.platform === F.yTV.PS5)
                     return (0, n.jsx)(z, { variant: j, platform: A.A.get(F.fg2.PLAYSTATION), onAction: T, icon: d.X });
             }
-            if (H.length > 0)
-                return (0, n.jsx)(X.A, {
-                    distributorCTAConfigs: H,
-                    applicationId: R ?? "",
-                    analyticsLocations: Y,
-                    buttonVariant: "overlay-primary",
-                });
             if (D) {
                 let e = (0, n.jsx)(en, { activity: t, user: i, guildId: y, channelId: f, source: v, onAction: T }),
                     l = (0, n.jsx)(q, { activity: t, user: i, source: v, onAction: T });
