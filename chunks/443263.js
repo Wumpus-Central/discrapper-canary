@@ -9,4 +9,5 @@ e.exports = {
     a9: "sectionLabel__409aa",
     Pf: "label__409aa",
     gM: "fixedContent__409aa",
+    to: "withShadow__409aa",
 };

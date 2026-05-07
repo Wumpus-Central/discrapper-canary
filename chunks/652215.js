@@ -1830,7 +1830,6 @@ let nw = "",
         APPLICATION_DIRECTORY_COLLECTIONS: "/application-directory-static/collections",
         APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE: (e, t, n) =>
             `/application-directory/collection-items/${e}/${t}.${n}`,
-        APP_RECOMMENDATIONS: "/app-recommendations",
         GUILD_FEED: (e) => `/guilds/${e}/guild-feed`,
         USER_EMAIL: "/users/@me/email",
         USER_EMAIL_VERIFY_CODE: "/users/@me/email/verify-code",

@@ -224,8 +224,7 @@
     margin-inline-end: var(--space-4);
     padding-bottom: var(--space-16);
     padding-top: var(--space-12);
-    padding-inline: var(--space-4) var(--space-12);
-    scroll-padding-top: var(--space-20)
+    padding-inline: var(--space-4) var(--space-12)
 }
 
 .nav__409aa,
@@ -270,12 +269,18 @@
 .fixedContent__409aa:after {
     background: linear-gradient(to bottom, var(--background-base-lower), transparent);
     content: "";
-    height: var(--space-20);
+    height: var(--space-40);
     position: absolute;
     top: 100%;
     inset-inline: 0 var(--space-16);
+    opacity: 0;
     pointer-events: none;
+    transition: opacity .2s ease-out;
     z-index: 1
+}
+
+.fixedContent__409aa.withShadow__409aa:after {
+    opacity: 1
 }
 
 .container_abd9a8 {
