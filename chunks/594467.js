@@ -20361,6 +20361,9 @@ var Ez = n(412848),
 let EW = function () {
     return (
         (0, el.useSyncMessages)(Ez.messagesLoader),
+        R.useEffect(() => {
+            (0, sv.Dr)(I.M.GUILD_SETTINGS_GUILD_THEME_NEW_BADGE, { dismissAction: uI.i.AUTO });
+        }, []),
         (0, A.jsx)("main", {
             className: EY.k,
             children: (0, A.jsxs)("div", {
@@ -26432,6 +26435,7 @@ let { getSectionDefinition: Ii } = {
                         label: el.intl.string(Ez.default["/6NbRv"]),
                         ariaLabel: el.intl.string(Ez.default["/6NbRv"]),
                         element: EW,
+                        newIndicatorDismissibleContentTypes: [I.M.GUILD_SETTINGS_GUILD_THEME_NEW_BADGE],
                         predicate: () => t.canManageGuild && (0, o8.Qs)(t.guild.id, "getSectionDefinition"),
                     };
                 case ei.BEX.ENGAGEMENT:
