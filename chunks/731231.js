@@ -23,7 +23,7 @@ var i = n(627968),
     N = n(622142),
     y = n(750506),
     C = n(267102),
-    v = n(704591),
+    v = n(926972),
     O = n(334348),
     R = n(256449),
     b = n(750385),
@@ -585,9 +585,10 @@ let te = r.memo(function (e) {
                                         }),
                                         (0, f.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("90466"),
+                                                n.e("73109"),
                                                 n.e("7017"),
-                                                n.e("97027"),
+                                                n.e("60909"),
+                                                n.e("62229"),
                                                 n.e("31232"),
                                                 n.e("8891"),
                                                 n.e("83952"),
@@ -1381,9 +1382,10 @@ let tx = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 W.default.track(e_.HAw.OPEN_MODAL, { type: e_.JJy.CREATE_STICKER_MODAL, location: c }),
                                     (0, f.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("90466"),
+                                            n.e("73109"),
                                             n.e("7017"),
-                                            n.e("97027"),
+                                            n.e("60909"),
+                                            n.e("62229"),
                                             n.e("31232"),
                                             n.e("8891"),
                                             n.e("83952"),
@@ -1496,7 +1498,7 @@ let tx = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             })
         ),
     );
-var tK = n(964404),
+var tK = n(742023),
     tz = n(712687),
     t$ = n(625494);
 let tq = (0, tT.mj)({

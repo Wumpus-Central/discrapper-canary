@@ -50,13 +50,13 @@ var b = e(975732),
     D = e(174459),
     H = e(427262),
     F = e(413074),
-    B = e(77964),
-    U = e(672525),
+    B = e(672525),
+    U = e(226830),
     Q = e(788868),
     V = e(652215),
     X = e(518477),
     Z = e(699976),
-    J = e(79304),
+    J = e(115599),
     K = e(273944);
 function $(i) {
     let { onSelectSku: t, priceOptions: e, showPromotionalGiftBanner: s } = i;
@@ -67,15 +67,15 @@ function $(i) {
             (0, n.jsxs)("div", {
                 className: K.u6,
                 children: [
-                    (0, n.jsx)(U.D3, {
+                    (0, n.jsx)(B.D3, {
                         onClick: () => t(Q.pe.TIER_2),
                         isGift: !0,
                         priceOptions: e,
                         showPromotionalGiftBanner: s,
-                        wumpusPosition: B.Rf.GIFT_SELECTION_MODAL,
+                        wumpusPosition: U.Rf.GIFT_SELECTION_MODAL,
                         className: J.giftSelectionModalContext,
                     }),
-                    (0, n.jsx)(U.Ls, {
+                    (0, n.jsx)(B.Ls, {
                         onClick: () => t(Q.pe.TIER_0),
                         isGift: !0,
                         priceOptions: e,

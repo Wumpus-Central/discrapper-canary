@@ -1,0 +1,277 @@
+.body__6da2d {
+    padding: 10px
+}
+
+.streamPreviewWrapper__6da2d {
+    opacity: 0;
+    position: relative;
+    transform: translate3d(8px, 0, 0) scale(.98);
+    transform-origin: 50% 50%
+}
+
+.full-motion .streamPreviewWrapper__6da2d {
+    transition: opacity .15s ease, transform 125ms ease-in
+}
+
+.streamPreviewWrapper__6da2d.mounted__6da2d {
+    opacity: 1;
+    transform: translateZ(0) scale(1)
+}
+
+.previewContainer__6da2d {
+    background-color: var(--background-mod-normal);
+    box-sizing: border-box;
+    height: 142px;
+    position: relative;
+    width: 100%
+}
+
+.previewContainer__6da2d:hover .previewHover__6da2d {
+    opacity: 1
+}
+
+.previewHover__6da2d {
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    font-weight: var(--font-weight-semibold);
+    justify-content: center;
+    line-height: 18px;
+    transition: opacity .2s ease-in-out
+}
+
+.previewImage__6da2d {
+    height: 100%;
+    width: 100%
+}
+
+.applicationName__6da2d {
+    color: var(--text-default);
+    font-size: 14px;
+    inset-inline-start: 12px;
+    line-height: 18px;
+    position: absolute;
+    top: 8px
+}
+
+.liveIcon__6da2d {
+    margin-inline-end: 8px
+}
+
+.activityActions__6da2d {
+    margin-top: 0
+}
+
+.protip__6da2d {
+    margin-top: 10px;
+    text-align: center
+}
+
+.white__6da2d {
+    color: var(--white)
+}
+
+.theme-dark .applicationName__6da2d {
+    color: var(--primary-100)
+}
+
+.theme-dark .previewHover__6da2d {
+    background: var(--opacity-black-60)
+}
+
+.theme-light .previewHover__6da2d {
+    background: hsl(var(--primary-500-hsl)/.6)
+}
+
+.effect_adebba {
+    position: absolute
+}
+
+.username_adebba {
+    align-items: center;
+    background-color: rgba(19, 19, 24, .8);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-border) var(--shadow-high);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 1;
+    gap: 8px;
+    height: 24px;
+    justify-content: center;
+    margin-inline-start: var(--space-4);
+    max-width: 100%;
+    opacity: .8;
+    overflow: hidden;
+    padding: var(--space-4) var(--space-8);
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.username_adebba.streaming_adebba {
+    padding-inline-end: var(--space-4)
+}
+
+.voiceUserContainer_adebba {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.voiceUser_adebba {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    opacity: .4;
+    position: relative;
+    transition: opacity .1s ease-in-out
+}
+
+.voiceUser_adebba.flipped_adebba {
+    flex-direction: row;
+    justify-content: flex-end
+}
+
+.voiceUser_adebba.flipped_adebba .avatar_adebba {
+    margin-inline: 0
+}
+
+.voiceUser_adebba.flipped_adebba .username_adebba {
+    margin-inline: 0 var(--space-4);
+    padding-inline-start: var(--space-4)
+}
+
+.voiceUser_adebba.flipped_adebba .voiceIcons_adebba {
+    margin-inline-end: var(--space-4) !important
+}
+
+.clanTag_adebba {
+    margin-inline-start: var(--space-4)
+}
+
+.voiceIcons_adebba {
+    margin-inline: 0 !important
+}
+
+.voiceIcon_adebba {
+    color: var(--white) !important;
+    display: block;
+    flex-shrink: 0;
+    margin-inline-start: 0 !important;
+    opacity: .5
+}
+
+.interactive_adebba {
+    opacity: 1 !important
+}
+
+.speaking_adebba {
+    opacity: .9
+}
+
+.speaking_adebba .avatarSpeakingOutline_adebba {
+    outline: 1px solid var(--green-300);
+    outline-offset: 2px
+}
+
+.justConnected_adebba {
+    opacity: .6
+}
+
+.connectedAnimationContainer_adebba {
+    background-color: #131318;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    bottom: 4px;
+    inset-inline-start: 36px;
+    overflow: hidden;
+    position: absolute;
+    top: 4px;
+    z-index: 100
+}
+
+.connectedAnimationContainer_adebba.right_adebba {
+    inset-inline-end: 36px;
+    inset-inline-start: unset
+}
+
+.emptySpace_adebba {
+    height: 0;
+    width: 0
+}
+
+.connectedAnimationInnerContainer_adebba {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    height: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
+    white-space: nowrap;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.connectedAnimationInnerContainer_adebba.exiting_adebba {
+    max-width: 100%
+}
+
+.connectedAnimationInnerContainer_adebba.left_adebba {
+    padding-inline-start: 8px;
+    text-align: start
+}
+
+.connectedAnimationInnerContainer_adebba.right_adebba {
+    padding-inline-end: 4px;
+    text-align: end
+}
+
+.animation_adebba {
+    height: 24px;
+    width: 24px
+}
+
+.hiddenVoiceStates_adebba {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    opacity: 1
+}
+
+.hiddenVoiceStates_adebba.locked_adebba {
+    opacity: .4
+}
+
+.hiddenVoiceStates_adebba.flipped_adebba {
+    flex-direction: row-reverse
+}
+
+.hiddenVoiceStatesAvatar_adebba {
+    justify-content: center
+}
+
+.hiddenVoiceStatesAvatar_adebba,
+.hiddenVoiceStatesText_adebba {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.hiddenVoiceStatesText_adebba {
+    background-color: rgba(19, 19, 24, .8);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-border) var(--shadow-high);
+    cursor: pointer;
+    flex-shrink: 1;
+    opacity: .8;
+    padding: var(--space-4) var(--space-8)
+}
