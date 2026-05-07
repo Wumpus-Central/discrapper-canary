@@ -7,7 +7,7 @@ var l = n(627968),
     o = n(17928),
     u = n(289873),
     c = n(228366),
-    d = n(902958),
+    d = n(49960),
     p = n(166532),
     m = n(287809),
     h = n(174459),
@@ -20,8 +20,8 @@ var l = n(627968),
     _ = n(648335),
     T = n(652215),
     f = n(818348),
-    N = n(235301);
-let x = [p.pn.PAYMENT_ELEMENT],
+    x = n(235301);
+let N = [p.pn.PAYMENT_ELEMENT],
     I = [
         p.pn.PAYPAL_INFORMATION,
         p.pn.VENMO_INFORMATION,
@@ -82,7 +82,7 @@ let x = [p.pn.PAYMENT_ELEMENT],
                 () => ({ billingDetails: { ...(null != A && { email: A }), ...(null != E && { name: E }) } }),
                 [A, E],
             ),
-            N = a.useMemo(
+            x = a.useMemo(
                 () => ({
                     id: "stripe-payment-element",
                     options: { layout: { type: "tabs" }, wallets: P, defaultValues: S, paymentMethodOrder: t, ...u },
@@ -91,7 +91,7 @@ let x = [p.pn.PAYMENT_ELEMENT],
                 }),
                 [P, S, u, C, y, t],
             );
-        return (0, l.jsx)(i.PaymentElement, { ...N });
+        return (0, l.jsx)(i.PaymentElement, { ...x });
     }),
     M = (e) => {
         let { children: t } = e,
@@ -148,7 +148,7 @@ let x = [p.pn.PAYMENT_ELEMENT],
             ? (0, l.jsxs)(M, {
                   children: [
                       (0, l.jsx)("div", {
-                          className: N.R,
+                          className: x.R,
                           children: (0, l.jsx)(i.PaymentElement, { id: "stripe-payment-element" }),
                       }),
                       h,
@@ -180,20 +180,20 @@ let x = [p.pn.PAYMENT_ELEMENT],
             excludeBodySpacing: S,
         } = a.useMemo(
             () => ({
-                shouldShowPaymentElement: x.includes(t),
+                shouldShowPaymentElement: N.includes(t),
                 shouldShowAddressElement: t === p.pn.ADDRESS,
                 excludeBodySpacing: I.includes(t),
             }),
             [t],
         );
         return (0, l.jsxs)("div", {
-            className: s()(N.kL, { [N.rf]: !S }),
+            className: s()(x.kL, { [x.rf]: !S }),
             children: [
                 (0, l.jsxs)("div", {
-                    className: s()(y ? N.RK : [N.R, N.$u], {
-                        [N.df]: null == d,
-                        [N._m]: d === f.he.CARD,
-                        [N.JD]: d === f.he.PAYPAL,
+                    className: s()(y ? x.RK : [x.R, x.$u], {
+                        [x.df]: null == d,
+                        [x._m]: d === f.he.CARD,
+                        [x.JD]: d === f.he.PAYPAL,
                     }),
                     children: [
                         (0, l.jsx)(v, {
@@ -207,7 +207,7 @@ let x = [p.pn.PAYMENT_ELEMENT],
                     ],
                 }),
                 (0, l.jsx)("div", {
-                    className: s()(N.K_, P ? N.RK : [N.R, N.vg]),
+                    className: s()(x.K_, P ? x.RK : [x.R, x.vg]),
                     children: (0, l.jsx)(b, {
                         ...u,
                         internalKey: h,
@@ -220,7 +220,7 @@ let x = [p.pn.PAYMENT_ELEMENT],
     },
     L = () =>
         (0, l.jsx)("div", {
-            className: s()(N.kL, N.rf, N.g4),
+            className: s()(x.kL, x.rf, x.g4),
             children: (0, l.jsx)(u.y, { type: u.y.Type.PULSING_ELLIPSIS }),
         }),
     O = (e) => {
@@ -257,7 +257,7 @@ let x = [p.pn.PAYMENT_ELEMENT],
             [h, E] = a.useState(!1),
             [y, P] = a.useState(u === p.pn.CREDIT_CARD_INFORMATION ? f.he.CARD : null),
             T = l && g.has(t),
-            [N, x] = a.useState(!1),
+            [x, N] = a.useState(!1),
             [I, v] = a.useState(void 0),
             M = a.useCallback(() => {
                 v(Date.now().toString());
@@ -276,7 +276,7 @@ let x = [p.pn.PAYMENT_ELEMENT],
             ),
             R = a.useMemo(
                 () => ({
-                    addressElementOnChangeFired: N,
+                    addressElementOnChangeFired: x,
                     onChange: (e) => {
                         let {
                                 complete: t,
@@ -289,10 +289,10 @@ let x = [p.pn.PAYMENT_ELEMENT],
                                 complete: t,
                                 address: n,
                                 name: l,
-                                addressElementOnChangeFired: N,
+                                addressElementOnChangeFired: x,
                                 isAddressSubstantial: a,
                             }),
-                            x(!0);
+                            N(!0);
                         let i = {
                                 name: l,
                                 country: n.country,
@@ -329,7 +329,7 @@ let x = [p.pn.PAYMENT_ELEMENT],
                             s(i, u && t);
                     },
                 }),
-                [s, o, r, N, x],
+                [s, o, r, x, N],
             ),
             L = a.useCallback(() => {
                 let e;
@@ -344,7 +344,7 @@ let x = [p.pn.PAYMENT_ELEMENT],
             O = a.useCallback(
                 function (e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                    void 0 !== e && P(e), n(p.pn.PAYMENT_ELEMENT, t), x(!1), null != y && (0, _.R8)(y) && L();
+                    void 0 !== e && P(e), n(p.pn.PAYMENT_ELEMENT, t), N(!1), null != y && (0, _.R8)(y) && L();
                 },
                 [n, L, y],
             );

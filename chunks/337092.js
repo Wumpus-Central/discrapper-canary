@@ -30,8 +30,8 @@ var l = n(627968),
     _ = n(509536),
     T = n(663066),
     f = n(976860),
-    N = n(859040),
-    x = n(652215),
+    x = n(859040),
+    N = n(652215),
     I = n(375708),
     g = n(456508);
 let v = (e) => {
@@ -39,8 +39,8 @@ let v = (e) => {
         { analyticsLocations: n } = (0, S.Ay)(),
         a = () => {
             t(),
-                (0, f.pX)(x.BVt.COLLECTIBLES_SHOP),
-                (0, N.Cz)({ analyticsSource: P.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
+                (0, f.pX)(N.BVt.COLLECTIBLES_SHOP),
+                (0, x.Cz)({ analyticsSource: P.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
                 (0, y.jH)(),
                 (0, T.dF)(_.Zt);
         };
@@ -61,7 +61,7 @@ let v = (e) => {
     });
 };
 var M = n(937008),
-    j = n(902958),
+    j = n(49960),
     b = n(222707),
     R = n(773669),
     L = n(561794),
@@ -80,8 +80,8 @@ let F = (0, n(945810).mj)({
 });
 var B = n(380619),
     W = n(477421),
-    H = n(422936),
-    V = n(735164),
+    V = n(422936),
+    H = n(735164),
     K = n(363476),
     Z = n(531506),
     q = n(871181),
@@ -176,58 +176,58 @@ let el = () => {
                 giftRecipient: _,
                 selectedGiftStyle: T,
                 customGiftMessage: f,
-                setCustomGiftMessage: N,
-                claimableRewards: x,
+                setCustomGiftMessage: x,
+                claimableRewards: N,
                 setSelectedGiftingPromotionReward: I,
             } = (0, M.Pv)(),
             g = (0, p.A)(),
-            v = (0, B.kz)(g, S && (0, D.Ik)(_), x),
+            v = (0, B.kz)(g, S && (0, D.Ik)(_), N),
             b = (0, L.tA)({ giftRecipient: _, isGift: S });
         r()(void 0 !== C, "should not be undefined");
         let [R, w] = (0, s.yK)([O.A], () => [null != C ? O.A.get(C.planId) : null, null != t ? O.A.get(t) : null]),
             k = E?.subscription_trial,
             G = (0, Y.cg)(),
             F = w ?? g,
-            H = a.useCallback(
+            V = a.useCallback(
                 (e) => {
                     d(e);
                 },
                 [d],
             ),
-            V = n ?? A;
-        r()(null != V, "Price option has to be set");
+            H = n ?? A;
+        r()(null != H, "Price option has to be set");
         let K = P?.discount?.plan_ids,
             Z = null != P && l.some((e) => K?.includes(e)) && null != P.discount,
-            q = l.includes(X.gD.PREMIUM_MONTH_TIER_2) ? (0, U.y8)(X.gD.PREMIUM_MONTH_TIER_2, !1, S, V) : void 0,
+            q = l.includes(X.gD.PREMIUM_MONTH_TIER_2) ? (0, U.y8)(X.gD.PREMIUM_MONTH_TIER_2, !1, S, H) : void 0,
             z = F?.id != null && l.includes(F.id);
         a.useEffect(() => {
             if (!z) {
-                if (null == R || S) H(l[0]);
+                if (null == R || S) V(l[0]);
                 else if (null != R) {
                     let e = l.find((e) => e !== R.id);
-                    null != e && H(e);
+                    null != e && V(e);
                 }
             }
-        }, [z, S, l, R, H]),
+        }, [z, S, l, R, V]),
             a.useEffect(() => {
-                v && null != x && x.length > 0 && I(x[0]);
-            }, [x, I, v]);
+                v && null != N && N.length > 0 && I(N[0]);
+            }, [N, I, v]);
         let { ref: $, ...J } = (0, o._u)(),
-            ee = F?.id != null ? (0, U.y8)(F.id, !1, S, V) : void 0,
+            ee = F?.id != null ? (0, U.y8)(F.id, !1, S, H) : void 0,
             { ipCountryCode: et } = (0, W.A)(),
             en = "HR" === et && null != ee && ee.currency === Q.Yr.EUR,
-            ea = (0, U.J$)(V.paymentSourceId),
+            ea = (0, U.J$)(H.paymentSourceId),
             ei = !S && (Z || (null != k && y && null != i)),
             { discountAmountOff: er } = (0, m.J)(X.gD.PREMIUM_MONTH_TIER_2),
             { copy: es } = el();
         return {
             skuId: c,
-            setPlanId: H,
+            setPlanId: V,
             selectedPlan: F,
             selectedPlanPrice: ee,
             premiumSubscriptionPlan: R,
             premiumSubscription: C,
-            thePriceOptions: V,
+            thePriceOptions: H,
             hasSeenCollectiblesInSkuSelect: b,
             shouldShowUpdatedPaymentModal: ei,
             shouldShowHRKEuroWarning: en,
@@ -239,7 +239,7 @@ let el = () => {
             isGift: S,
             giftRecipient: _,
             customGiftMessage: f,
-            setCustomGiftMessage: N,
+            setCustomGiftMessage: x,
             selectedGiftStyle: T,
             isEligibleForBOGOPromotion: G,
             isEligibleForTrial: y,
@@ -257,7 +257,7 @@ let el = () => {
             className: r,
             children: [
                 (0, l.jsx)("div", { className: ee.T }),
-                (0, l.jsx)(V.Sd, {
+                (0, l.jsx)(H.Sd, {
                     label: I.intl.string(I.t.txajQG),
                     value: (0, l.jsx)(K.A, {
                         price: a.amount,
@@ -358,7 +358,7 @@ let el = () => {
             isGift: d,
             isCustomGift: m,
             shouldUseCalculatedDiscount: h,
-            discountOffer: (0, H.O)(),
+            discountOffer: (0, V.O)(),
             isEligibleForBOGOPromotion: (0, Y.cg)(),
         };
     },
@@ -435,7 +435,7 @@ let el = () => {
                     s &&
                     (0, l.jsx)(d.A, {
                         message: I.intl.format(I.t.Om31w8, {
-                            documentationLink: w.A.getArticleURL(x.MVz.LOCALIZED_PRICING),
+                            documentationLink: w.A.getArticleURL(N.MVz.LOCALIZED_PRICING),
                         }),
                     }),
             ],
@@ -466,8 +466,8 @@ function em(e) {
             giftRecipient: _,
             customGiftMessage: T,
             setCustomGiftMessage: f,
-            selectedGiftStyle: N,
-            discountOffer: x,
+            selectedGiftStyle: x,
+            discountOffer: N,
             isPlansEligibleForDiscount: g,
             discountedPlanRegularPrice: v,
             hasSeenCollectiblesInSkuSelect: M,
@@ -483,8 +483,8 @@ function em(e) {
             canContinue: B,
             trialPeriodCopy: W,
         } = ea({ selectedPlanId: n, priceOptions: i, planOptions: r, subscriptionPeriodEnd: s, showTotal: o }),
-        H = (0, G.ds)(),
-        V = () =>
+        V = (0, G.ds)(),
+        H = () =>
             (0, l.jsx)(eu, {
                 disabled: t,
                 planOptions: r,
@@ -517,7 +517,7 @@ function em(e) {
             giftRecipient: _,
             customGiftMessage: T,
             setCustomGiftMessage: f,
-            selectedGiftStyle: N,
+            selectedGiftStyle: x,
             hasSeenCollectiblesInSkuSelect: M,
             isPrepaid: O,
             canContinue: B,
@@ -526,15 +526,15 @@ function em(e) {
             useCompactGiftComponents: u,
             handleClose: d,
             showTotal: o,
-            switchPlanSelectComponent: V(),
+            switchPlanSelectComponent: H(),
             warningComponent: ed({ shouldShowHRKEuroWarning: Y, selectedPlanPrice: U }),
         });
-    let z = !(S && K && !H),
+    let z = !(S && K && !V),
         $ = et(A, { isEligibleForBOGOPromotion: E });
     return (0, l.jsxs)("div", {
         children: [
             K &&
-                !H &&
+                !V &&
                 (0, l.jsx)(Z.vi, {
                     fractionalPremiumInfo: q,
                     enablePremiumBrandRefresh: !0,
@@ -563,7 +563,7 @@ function em(e) {
                                         variant: "text-sm/normal",
                                         className: ee.Tz,
                                         children: I.intl.format(I.t["nG7g/E"], {
-                                            numMonths: x?.discount.user_usage_limit ?? "",
+                                            numMonths: N?.discount.user_usage_limit ?? "",
                                             discountedPrice: (0, k.$g)(v.amount - L, v.currency),
                                             regularPrice: (0, k.$g)(v.amount, v.currency),
                                         }),
@@ -573,7 +573,7 @@ function em(e) {
                             })
                           : void 0
                     : (0, l.jsx)("div", { className: ee.VZ, children: I.intl.string(I.t.a19jpU) })),
-            V(),
+            H(),
             ep({
                 selectedPlan: h,
                 selectedPlanPrice: U,

@@ -36,7 +36,7 @@ var l = i(627968),
     M = i(976860),
     U = i(734057),
     F = i(977997),
-    w = i(721592),
+    w = i(499211),
     V = i(652215);
 function z(e, t) {
     let i = (0, r.bG)([U.A], () => U.A.getChannel(t)),
@@ -691,7 +691,7 @@ let eK = (e) => {
                             } = e;
                             (0, ef.openModalLazy)(
                                 async () => {
-                                    let { PaymentContextProvider: e } = await Promise.resolve().then(i.bind(i, 278521)),
+                                    let { PaymentContextProvider: e } = await Promise.resolve().then(i.bind(i, 49960)),
                                         { PaymentModal: v } = await Promise.resolve().then(i.bind(i, 546042)),
                                         { STEPS: p } = await Promise.all([
                                             i.e("49476"),

@@ -14,14 +14,14 @@ var l = n(627968),
     C = n(692440),
     A = n(367921),
     E = n(299301),
-    y = n(278521),
+    y = n(49960),
     P = n(908419),
     S = n(888751),
     _ = n(652215),
     T = n(788868),
     f = n(375708),
-    N = n(327105),
-    x = n(299279);
+    x = n(327105),
+    N = n(299279);
 let I = (e) => {
         let {
                 invoiceSummaryTypeWithPreview: t,
@@ -42,7 +42,7 @@ let I = (e) => {
                       subscriptionTrial: a,
                   }).lineItems;
         let c = (0, o.lp)(s, { manualLineItems: u, includeTaxLineItem: !0 });
-        return (0, l.jsx)(d.Vm, { label: f.intl.string(N.default.eoXh7B), lineItems: c, currency: s.currency });
+        return (0, l.jsx)(d.Vm, { label: f.intl.string(x.default.eoXh7B), lineItems: c, currency: s.currency });
     },
     g = (e) => {
         let {
@@ -70,7 +70,7 @@ let I = (e) => {
                 shouldShowTotalInSubscriptionFlow: P,
                 shouldShowUpdatedPaymentModal: _,
                 userTrialOffer: f,
-                trialPeriodCopy: N,
+                trialPeriodCopy: x,
                 isEligibleForTrial: I,
                 isEligibleForBOGOPromotion: g,
                 premiumSubscriptionPlan: v,
@@ -84,8 +84,8 @@ let I = (e) => {
                 };
             }, [v, g, M]),
             R = a.useMemo(
-                () => (d && I ? (0, h.Ct)(f, { subscriptionPeriodEnd: s, trialPeriodCopy: N }) : p),
-                [d, I, f, s, N, p],
+                () => (d && I ? (0, h.Ct)(f, { subscriptionPeriodEnd: s, trialPeriodCopy: x }) : p),
+                [d, I, f, s, x, p],
             ),
             {
                 selectPlan: L,
@@ -144,7 +144,7 @@ let I = (e) => {
                           (0, l.jsx)(i.E, {
                               variant: "text-md/medium",
                               color: "text-subtle",
-                              className: x.S,
+                              className: N.S,
                               children: b,
                           }),
                       (0, l.jsx)(c.me, {
@@ -163,7 +163,7 @@ let I = (e) => {
                                 shouldShowUpdatedPaymentModal: _,
                                 showTotal: d,
                                 shouldShowTotalInSubscriptionFlow: P,
-                                previewTotalSectionClassName: x.$,
+                                previewTotalSectionClassName: N.$,
                             })
                           : null,
                   ],
@@ -204,15 +204,15 @@ function M(e) {
             hideLegalContent: T,
             isInvoiceBilledImmediately: f = !0,
         } = e,
-        { immediateDelivery: N } = (0, P.U)(),
-        { discountOffer: x, paymentSourceId: I } = (0, y.P5)(),
+        { immediateDelivery: x } = (0, P.U)(),
+        { discountOffer: N, paymentSourceId: I } = (0, y.P5)(),
         { checkoutPaymentSources: g } = (0, u.t)(),
         v = (0, s.vg)("PremiumUnifiedCheckoutLegal");
     if (d.type === E.N$.LOADING) return null;
     let { invoicePreview: M } = d,
         j = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? M,
         b = j.invoiceItems.find((e) => e.subscriptionPlanId === a.id),
-        R = null != b ? (0, S.Re)(b, x).amount : j.subtotal;
+        R = null != b ? (0, S.Re)(b, N).amount : j.subtotal;
     if (T) return null;
     let L = v && null != I && g?.some((e) => e.id === I && null != e.relocationCountry),
         O = {
@@ -242,6 +242,6 @@ function M(e) {
     return (0, l.jsx)(c._P, {
         variant: { type: i ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...O },
         paymentSourceType: r,
-        immediateDelivery: N,
+        immediateDelivery: x,
     });
 }

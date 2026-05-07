@@ -11,7 +11,7 @@ n(321073);
 var d = n(546605),
     p = n(364995),
     m = n(900730),
-    h = n(278521),
+    h = n(49960),
     C = n(921925),
     A = n(506120),
     E = n(474367),
@@ -30,8 +30,8 @@ let T = (e) => {
         null != e && "object" == typeof e && "message" in e && "type" in e
             ? (0, l.jsx)(s.w, { type: e.type, hidden: e.hidden, children: e.message }, e.key)
             : (0, l.jsx)(a.Fragment, { children: e.directContent }, e.key),
-    N = (e) => null == e || "" === e,
-    x = (e) => {
+    x = (e) => null == e || "" === e,
+    N = (e) => {
         let { children: t } = e,
             {
                 errorMessage: n,
@@ -82,13 +82,13 @@ let T = (e) => {
             })();
         return a.useMemo(
             () =>
-                N(n) && N(i) && !(r.length > 0) && null == t
+                x(n) && x(i) && !(r.length > 0) && null == t
                     ? null
                     : (0, l.jsxs)("div", {
                           className: _.dD,
                           children: [
-                              N(n) ? null : (0, l.jsx)(s.w, { type: "critical", children: n }),
-                              N(i) ? null : (0, l.jsx)(s.w, { type: "warning", children: i }),
+                              x(n) ? null : (0, l.jsx)(s.w, { type: "critical", children: n }),
+                              x(i) ? null : (0, l.jsx)(s.w, { type: "warning", children: i }),
                               r.map(f),
                               t,
                           ],
@@ -118,8 +118,8 @@ let T = (e) => {
                 null != i || n
                     ? n
                         ? null != i
-                            ? (0, l.jsx)(x, { children: i })
-                            : (0, l.jsx)(x, {})
+                            ? (0, l.jsx)(N, { children: i })
+                            : (0, l.jsx)(N, {})
                         : (0, l.jsx)("div", { className: _.dD, children: i })
                     : null,
             [n, i],
@@ -140,16 +140,16 @@ let T = (e) => {
                 invoiceTotalDueValue: C,
                 shouldShowGlobalNotices: A,
                 footerInlineNoticeProps: f,
-                className: N,
+                className: x,
             } = e,
-            { enabled: x } = (0, u.c)({ location: "UnifiedReviewStep" }),
+            { enabled: N } = (0, u.c)({ location: "UnifiedReviewStep" }),
             v = I(f);
         return s
-            ? (0, l.jsx)(T, { className: N })
+            ? (0, l.jsx)(T, { className: x })
             : (0, l.jsxs)(l.Fragment, {
                   children: [
                       (0, l.jsxs)("div", {
-                          className: r()(N, { [_.pg]: null == d }),
+                          className: r()(x, { [_.pg]: null == d }),
                           children: [
                               (0, l.jsx)(g, { upperInlineNoticeProps: t, shouldShowGlobalNotices: A }),
                               n,
@@ -158,7 +158,7 @@ let T = (e) => {
                               null != i && (0, l.jsx)("div", { className: _.P3, children: i }),
                               (0, l.jsxs)("div", {
                                   className: _.Jv,
-                                  children: [o, x ? (0, l.jsx)(E.Z4, { className: _.KX }) : null],
+                                  children: [o, N ? (0, l.jsx)(E.Z4, { className: _.KX }) : null],
                               }),
                               null != d && (0, l.jsx)("div", { className: _.ZF, children: d }),
                           ],

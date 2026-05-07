@@ -1,60 +1,60 @@
-n.d(t, { B: () => T });
+n.d(t, { B: () => S });
 var l = n(627968),
-    r = n(64700),
-    i = n(702841),
-    a = n(545075),
-    s = n(427675),
+    i = n(64700),
+    r = n(702841),
+    s = n(545075),
+    a = n(427675),
     o = n(94420),
     u = n(590180),
-    d = n(937008),
-    c = n(156312),
+    c = n(937008),
+    d = n(49960),
     C = n(166532),
     p = n(20742),
     m = n(430993),
-    h = n(315949),
-    _ = n(599062),
-    E = n(985018);
+    _ = n(315949),
+    E = n(599062),
+    T = n(375708);
 function A() {
-    let { refreshCategories: e } = (0, h.A)();
+    let { refreshCategories: e } = (0, _.A)();
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(p.rQ, { title: E.intl.string(E.t["p8+qtU"]) }),
-            (0, l.jsx)(m.c, { children: (0, l.jsx)(_.h, { onRetry: e, errorOrigin: _.A.GIFT_MODAL }) }),
+            (0, l.jsx)(p.rQ, { title: T.intl.string(T.t["p8+qtU"]) }),
+            (0, l.jsx)(m.c, { children: (0, l.jsx)(E.h, { onRetry: e, errorOrigin: E.A.GIFT_MODAL }) }),
         ],
     });
 }
-var g = n(534479),
-    f = n(652215);
-function T(e) {
+var h = n(534479),
+    O = n(652215);
+function S(e) {
     let { handleStepChange: t } = e,
         n = (0, o.t4)((e) => e.selectedSkuId),
-        { blockedPayments: p, paymentSources: m, hasFetchedPaymentSources: h, application: _ } = (0, c.P5)(),
-        E = (0, s.gU)(),
-        T = (0, s.Hu)(),
-        { isGift: S } = (0, d.Pv)(),
-        [I, x] = r.useState(!0),
-        [O, y] = (0, i.yK)([u.A], () => [u.A.isFetchingCategories, u.A.error]);
-    return (r.useEffect(() => {
-        let e = null != _;
-        T && h && e && x(O);
-    }, [T, h, _, O]),
-    r.useEffect(() => {
-        if (I || p || null == n) return;
-        let e = E[n];
-        S &&
-        (e?.productLine === f.EZt.COLLECTIBLES ||
-            e?.productLine === f.EZt.APPLICATION ||
-            e?.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM)
+        { blockedPayments: p, paymentSources: m, hasFetchedPaymentSources: _, application: E } = (0, d.P5)(),
+        T = (0, a.gU)(),
+        S = (0, a.Hu)(),
+        { isGift: I } = (0, c.Pv)(),
+        [f, x] = i.useState(!0),
+        [g, P] = (0, r.yK)([u.A], () => [u.A.isFetchingCategories, u.A.error]);
+    return (i.useEffect(() => {
+        let e = null != E;
+        S && _ && e && x(g);
+    }, [S, _, E, g]),
+    i.useEffect(() => {
+        if (f || p || null == n) return;
+        let e = T[n];
+        I &&
+        (e?.productLine === O.EZt.COLLECTIBLES ||
+            e?.productLine === O.EZt.APPLICATION ||
+            e?.productLine === O.EZt.SOCIAL_LAYER_GAME_ITEM)
             ? t(C.pn.GIFT_CUSTOMIZATION)
             : 0 === Object.keys(m).length
               ? t(C.pn.ADD_PAYMENT_STEPS)
               : t(C.pn.REVIEW);
-    }, [I, p, t, m, S, E, n]),
-    I)
-        ? (0, l.jsx)(g.A, {})
+    }, [f, p, t, m, I, T, n]),
+    f)
+        ? (0, l.jsx)(h.A, {})
         : p
-          ? (0, l.jsx)(a.oO, {})
-          : null != y
+          ? (0, l.jsx)(s.oO, {})
+          : null != P
             ? (0, l.jsx)(A, {})
             : null;
 }

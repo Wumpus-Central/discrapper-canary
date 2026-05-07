@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => g, Ke: () => x, Ro: () => f, X1: () => I });
+n.d(t, { Ay: () => g, Ke: () => N, Ro: () => f, X1: () => I });
 var l = n(627968);
 n(64700);
 var a = n(284009),
@@ -13,7 +13,7 @@ var a = n(284009),
     m = n(364995),
     h = n(558620),
     C = n(94420),
-    A = n(278521),
+    A = n(49960),
     E = n(927578),
     y = n(615396),
     P = n(652215),
@@ -51,10 +51,10 @@ function f(e) {
               : (0, E.ff)(null, n);
     return _.intl.string(_.t.YScQSF);
 }
-function N(e, t) {
+function x(e, t) {
     null != e.current && (e.current.scrollIntoView({ behavior: "smooth" }), t());
 }
-let x = (e) => {
+let N = (e) => {
         let { premiumSubscription: t, isGift: n, planGroup: l, isPrepaid: a } = e,
             { checkoutPaymentSources: i } = (0, m.t)(),
             r = (0, C.t4)((e) => e.hasAcceptedTerms),
@@ -140,7 +140,7 @@ let x = (e) => {
             return {
                 variant: "expressive",
                 text: A,
-                onClick: E ? p : () => N(m, h),
+                onClick: E ? p : () => x(m, h),
                 loading: C,
                 iconPosition: "start",
                 icon: () => (0, l.jsx)(s.t, { color: "currentColor" }),
@@ -152,7 +152,7 @@ let x = (e) => {
                 variant: "active",
                 text: A,
                 type: "submit",
-                onClick: () => N(m, h),
+                onClick: () => x(m, h),
                 dataTestId: "submitButton",
             };
         else return { variant: "active", text: A, dataTestId: "purchase", onClick: p, loading: C };
@@ -168,7 +168,7 @@ function g(e) {
             activeSubscription: m,
             devShelfFetchState: h,
             hasPaymentSources: C,
-        } = x({ premiumSubscription: t, isGift: n, planGroup: a, isPrepaid: i }),
+        } = N({ premiumSubscription: t, isGift: n, planGroup: a, isPrepaid: i }),
         {
             tooltipText: A,
             dataTestId: E,
