@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 540303, Version Hash: 53fb34e2b9de192c5a417f91e0de699d32665bd0`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 540550, Version Hash: c250daa131fa1ef0fe5863e17de7034a965d983d`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -1833,7 +1833,7 @@ var tY = n(507240),
     t$ = n(481613),
     tq = n.n(t$),
     tZ = n(422998),
-    tX = n(838677),
+    tX = n(833272),
     tQ = n(112834),
     tJ = n(821609),
     t0 = n(565645),
@@ -4353,8 +4353,8 @@ let sJ = (0, rs.Fe)({
                 n.e("79593"),
                 n.e("33771"),
                 n.e("14875"),
-                n.e("69059"),
                 n.e("73611"),
+                n.e("69059"),
                 n.e("41706"),
                 n.e("62175"),
                 n.e("94888"),
@@ -4473,7 +4473,7 @@ let sJ = (0, rs.Fe)({
                 n.e("76064"),
                 n.e("56153"),
                 n.e("96428"),
-                n.e("81250"),
+                n.e("85280"),
                 n.e("24805"),
                 n.e("14124"),
                 n.e("14093"),
@@ -4602,7 +4602,7 @@ var s5 = n(920814),
     ao = n(95561),
     al = n(429913),
     au = n(982484),
-    ac = n(964404),
+    ac = n(742023),
     ad = n(204651),
     a_ = n(520006),
     af = n(128286),
@@ -5075,7 +5075,7 @@ let oN = (0, eM.mj)({
         6: { use_api_call: !0 },
     },
 });
-var oy = n(31587),
+var oy = n(124366),
     oC = n(710969),
     ov = n(639214),
     oO = n(814793),
@@ -14335,7 +14335,7 @@ var mr = n(405433),
     ms = n(626900),
     ma = n(231483),
     mo = n(254138),
-    ml = n(179866);
+    ml = n(957485);
 let mu = (e) => {
         let {
                 size: t = "md",
@@ -15389,7 +15389,7 @@ let gI = (e) => {
 var gS = n(241326),
     gN = n(796140),
     gy = n(369606),
-    gC = n(526181),
+    gC = n(748562),
     gv = n(454346);
 let gO = (e) => {
         let {
@@ -16426,7 +16426,7 @@ let Io = (0, eM.mj)({
 });
 var Il = n(674567),
     Iu = (((p = {})[(p.NONE = 0)] = "NONE"), (p[(p.POPOVER = 1)] = "POPOVER"), p),
-    Ic = n(245853),
+    Ic = n(192444),
     Id = n(366505),
     I_ = n(909536),
     If = n(166403),
@@ -17237,7 +17237,7 @@ let TD = new Set([oo.M.PREMIUM_WISHLIST_COACHMARK]),
             } = (function () {
                 let e = (0, nC.useHasAnyModalOpen)(),
                     t = (0, Aj.Ay)((e) => e.postConnectionOpen),
-                    { shouldShowBonusOrbsUX: n, multiplier: i } = (0, Ic.Dl)(aW.rE.NITRO_HOME_TAB),
+                    { shouldShowBonusOrbsUX: n, multiplier: i } = (0, Ic.lk)(aW.rE.NITRO_HOME_TAB),
                     [r, s] = (0, rh.kn)(
                         !e && n && t ? [oo.M.NITRO_TAB_QUEST_ORB_MULTIPLIER_TOOLTIP] : [],
                         rE.m.PRIVATE_CHANNELS_LIST,
@@ -18228,7 +18228,7 @@ let SN = "isHideDevBanner",
                     className: t2()(SS.Wz, SS.mr),
                     children: [
                         (0, k.jsx)(ST, { className: SS.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "540303" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "540550" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -34995,8 +34995,8 @@ let PW = (0, ny.Fe)({
             n.e("33771"),
             n.e("27752"),
             n.e("14875"),
-            n.e("69059"),
             n.e("73611"),
+            n.e("69059"),
             n.e("41706"),
             n.e("62175"),
             n.e("84586"),
@@ -35225,7 +35225,7 @@ let PW = (0, ny.Fe)({
             n.e("88878"),
             n.e("56153"),
             n.e("96428"),
-            n.e("81250"),
+            n.e("85280"),
             n.e("3370"),
             n.e("24805"),
             n.e("65529"),
