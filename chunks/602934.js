@@ -18431,7 +18431,7 @@ function fj() {
                   onClick: () => {
                       (0, _.openModalLazy)(async () => {
                           let { default: e } = await Promise.all([i.e("16848"), i.e("77632")]).then(i.bind(i, 836291));
-                          return (t) => (0, p.jsx)(e, { ...t });
+                          return (t) => (0, p.jsx)(e, { ...t, sourceAnalyticsLocations: a });
                       });
                   },
               })))

@@ -587,5 +587,8 @@ var i,
         (i.FAVORITES_GUILD_BUTTON = "favorites guild button"),
         (i.FAVORITES_GUILD_MENU_ITEM = "favorites guild menu item"),
         (i.ACTION_SHEET = "action sheet"),
+        (i.CROISSANT_PREMIUM_HERO_CARD = "xgpp hero card"),
+        (i.CROISSANT_PREMIUM_PERK_CARD = "xgpp perk card"),
+        (i.CROISSANT_REWARD_MODAL = "xgpp reward modal"),
         i);
 let s = r;

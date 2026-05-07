@@ -14,7 +14,7 @@ var i,
     h = n(228366),
     p = n(793574),
     E = n(688810),
-    m = n(726649),
+    m = n(949030),
     g = n(611924),
     A = n(961250),
     I = n(366505),
@@ -47,31 +47,24 @@ var i,
     z = n(237146),
     $ = n(375708),
     q = n(74776);
-function Z() {
-    (0, w.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e("16848"), n.e("30221"), n.e("10622"), n.e("77632")]).then(
-            n.bind(n, 836291),
-        );
-        return (t) => (0, r.jsx)(e, { ...t });
-    });
-}
-function X() {
-    let e = (0, Y.F)();
-    if (e.kind === Y.L.SUBSCRIBE)
+function Z(e) {
+    let { openRewardModal: t } = e,
+        n = (0, Y.F)();
+    if (n.kind === Y.L.SUBSCRIBE)
         return (0, r.jsxs)("div", {
             className: q.R$,
             children: [
                 (0, r.jsx)(B.A, {
-                    defaultTextOverride: e.text,
+                    defaultTextOverride: n.text,
                     variantOverride: "overlay-primary",
                     size: "md",
                     subscriptionTier: K.pe.TIER_2,
                 }),
-                (0, r.jsx)(M.$, { variant: "secondary", size: "md", text: $.intl.string($.t.hvVgAZ), onClick: Z }),
+                (0, r.jsx)(M.$, { variant: "secondary", size: "md", text: $.intl.string($.t.hvVgAZ), onClick: t }),
             ],
         });
-    let t =
-        e.claimStatus === j.p1.CLAIMED
+    let i =
+        n.claimStatus === j.p1.CLAIMED
             ? { text: $.intl.string(z.default.Plwzgf) }
             : { text: $.intl.string($.t.hvVgAZ) };
     return (0, r.jsxs)(r.Fragment, {
@@ -82,23 +75,23 @@ function X() {
                     (0, r.jsx)(M.$, {
                         variant: "overlay-primary",
                         size: "md",
-                        text: e.text,
-                        icon: e.icon,
-                        iconPosition: e.iconPosition,
-                        onClick: e.onClick,
-                        disabled: e.disabled,
-                        loading: e.loading,
+                        text: n.text,
+                        icon: n.icon,
+                        iconPosition: n.iconPosition,
+                        onClick: n.onClick,
+                        disabled: n.disabled,
+                        loading: n.loading,
                     }),
                     (0, r.jsx)(M.$, {
                         variant: "secondary",
                         size: "md",
-                        ...t,
-                        onClick: Z,
-                        disabled: e.requestInProgress,
+                        ...i,
+                        onClick: t,
+                        disabled: n.requestInProgress,
                     }),
                 ],
             }),
-            e.claimStatus === j.p1.CLAIM_IN_PROGRESS &&
+            n.claimStatus === j.p1.CLAIM_IN_PROGRESS &&
                 (0, r.jsxs)("div", {
                     className: q.ed,
                     children: [
@@ -113,18 +106,28 @@ function X() {
         ],
     });
 }
-function Q(e) {
+function X(e) {
     let { glowing: t = !1 } = e;
-    return (
-        (0, G.A)({
-            type: L.ImpressionTypes.VIEW,
-            name: L.ImpressionNames.PERK_DISCOVERABILITY_CARD,
-            properties: { name: V.XBOX_PREMIUM_PERK_HERO_ID, third_party_partner: H.FZ },
-        }),
-        (0, r.jsx)(U.N, {
-            theme: W.NJ8.DARKER,
-            children: (e) =>
-                (0, r.jsx)("div", {
+    (0, G.A)({
+        type: L.ImpressionTypes.VIEW,
+        name: L.ImpressionNames.PERK_DISCOVERABILITY_CARD,
+        properties: { name: V.XBOX_PREMIUM_PERK_HERO_ID, third_party_partner: H.FZ },
+    });
+    let { analyticsLocations: i } = (0, E.Ay)(p.A.CROISSANT_PREMIUM_HERO_CARD),
+        a = s.useCallback(() => {
+            (0, w.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([n.e("16848"), n.e("30221"), n.e("10622"), n.e("77632")]).then(
+                    n.bind(n, 836291),
+                );
+                return (t) => (0, r.jsx)(e, { ...t, sourceAnalyticsLocations: i });
+            });
+        }, [i]);
+    return (0, r.jsx)(U.N, {
+        theme: W.NJ8.DARKER,
+        children: (e) =>
+            (0, r.jsx)(E.f5, {
+                value: i,
+                children: (0, r.jsx)("div", {
                     className: o()(e, q.kL),
                     children: (0, r.jsx)(F.A, {
                         cardType: k.s.CUSTOM,
@@ -166,18 +169,18 @@ function Q(e) {
                                             className: q.h_,
                                             children: $.intl.string(z.default["+pTnsf"]),
                                         }),
-                                        (0, r.jsx)(X, {}),
+                                        (0, r.jsx)(Z, { openRewardModal: a }),
                                     ],
                                 }),
                             ],
                         }),
                     }),
                 }),
-        })
-    );
+            }),
+    });
 }
-var J = n(744064);
-function ee(e) {
+var Q = n(744064);
+function J(e) {
     let { className: t, containerClassName: n } = e,
         i = (0, Y.F)(),
         s =
@@ -191,7 +194,7 @@ function ee(e) {
                       ctaLoading: i.loading,
                       onCtaClick: i.onClick,
                   };
-    return (0, r.jsx)(J.S, {
+    return (0, r.jsx)(Q.S, {
         id: V.XBOX_PREMIUM_PERK_CARD_ID,
         title: $.intl.string(z.default.UVL9tD),
         description: $.intl.string(z.default["I+IXr0"]),
@@ -209,6 +212,10 @@ function ee(e) {
         blurTint: "#054B16",
         analyticsOptions: { thirdPartyPartner: H.FZ },
     });
+}
+function ee(e) {
+    let { analyticsLocations: t } = (0, E.Ay)(p.A.CROISSANT_PREMIUM_PERK_CARD);
+    return (0, r.jsx)(E.f5, { value: t, children: (0, r.jsx)(J, { ...e }) });
 }
 var et = n(367791),
     en = n(672193);
@@ -303,13 +310,13 @@ function eh(e) {
             className: o()(en.R_, et.U6),
             children: $.intl.string($.t.NG1e6l),
         }),
-        beforeGrid: (0, r.jsx)("div", { className: et.JE, children: (0, r.jsx)(Q, { glowing: t === ef }) }),
+        beforeGrid: (0, r.jsx)("div", { className: et.JE, children: (0, r.jsx)(X, { glowing: t === ef }) }),
         grid: a
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(ee, { containerClassName: en.Nr }),
-                      null != i && (0, r.jsx)(J.S, { ...i, containerClassName: en.Nr }),
-                      null != s && (0, r.jsx)(J.S, { ...s, containerClassName: en.Nr }),
+                      null != i && (0, r.jsx)(Q.S, { ...i, containerClassName: en.Nr }),
+                      null != s && (0, r.jsx)(Q.S, { ...s, containerClassName: en.Nr }),
                   ],
               })
             : null,
@@ -1466,7 +1473,7 @@ var tB = n(462887),
     tQ = n(793943),
     tJ = n(95035),
     t0 = n(532794),
-    t1 = n(245853),
+    t1 = n(192444),
     t2 = n(39423),
     t3 = n(892227),
     t6 = n(81466),
@@ -1649,7 +1656,7 @@ function nh() {
                 );
             }, [i, l, a, r, u, n, c, d, e]);
         })(e),
-        { shouldShowBonusOrbsUX: y, multiplier: C } = (0, t1.Dl)(no.rE.NITRO_HOME_MARKETING),
+        { shouldShowBonusOrbsUX: y, multiplier: C } = (0, t1.lk)(no.rE.NITRO_HOME_MARKETING),
         v = (0, D.l)("useWhatsNewPerkCards"),
         { isEligible: O, programReward: R } = (0, I.F)({ location: "useWhatsNewPerkCards" }),
         b = O && null != R && null != R.reward_amount && R.reward_amount > 0;
@@ -1970,7 +1977,7 @@ function nT(e) {
                     className: nI.jG,
                     children: l.map((e) => {
                         if (null != e)
-                            return (0, r.jsx)(J.S, { ...e, glowing: t === e.id, containerClassName: nI.Ui }, e.id);
+                            return (0, r.jsx)(Q.S, { ...e, glowing: t === e.id, containerClassName: nI.Ui }, e.id);
                     }),
                 },
                 a,
@@ -1989,7 +1996,7 @@ function nS(e) {
                 if (null == e) return;
                 let i = 0 === n && !0 === e.featured;
                 return (0, r.jsx)(
-                    J.S,
+                    Q.S,
                     { ...e, glowing: t === e.id, featured: i, containerClassName: o()(en.Nr, { [en.Nq]: i }) },
                     e.id,
                 );
