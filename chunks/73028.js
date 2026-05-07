@@ -4,7 +4,7 @@ n(64700);
 var a = n(192308),
     l = n(157559),
     s = n(818348),
-    o = n(985018);
+    o = n(375708);
 let r = (t, e) => {
     let r = `group-dm-edit-modal-${t}`,
         c = !1,
@@ -26,7 +26,7 @@ let r = (t, e) => {
         };
     (0, a.openModalLazy)(
         async () => {
-            let { default: a } = await Promise.all([n.e("80848"), n.e("41567"), n.e("95067"), n.e("42455")]).then(
+            let { default: a } = await Promise.all([n.e("758"), n.e("41567"), n.e("95067"), n.e("42455")]).then(
                 n.bind(n, 66442),
             );
             return (n) =>

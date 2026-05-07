@@ -888,7 +888,7 @@ function ti(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("49476"),
+                                                l.e("758"),
                                                 l.e("11585"),
                                                 l.e("89916"),
                                                 l.e("20379"),
@@ -1007,7 +1007,7 @@ function ts(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("49476"),
+                                                            l.e("758"),
                                                             l.e("89916"),
                                                             l.e("20379"),
                                                             l.e("19193"),

@@ -5,7 +5,7 @@ var l = e(17928),
     a = e(477782),
     d = e(192308),
     r = e(994500),
-    s = e(985018);
+    s = e(375708);
 function o(n) {
     let { user: t, onAction: o, appContext: u } = n,
         c = t.id,
@@ -19,7 +19,7 @@ function o(n) {
             o?.(),
                 (0, d.openModalLazy)(
                     async () => {
-                        let { default: n } = await Promise.all([e.e("80848"), e.e("88941"), e.e("59139")]).then(
+                        let { default: n } = await Promise.all([e.e("758"), e.e("88941"), e.e("59139")]).then(
                             e.bind(e, 609422),
                         );
                         return (e) => (0, i.jsx)(n, { user: t, nickname: b, ...e });

@@ -3,7 +3,7 @@ var n = i(627968),
     l = i(64700),
     s = i(192308),
     a = i(885377),
-    r = i(985018);
+    r = i(375708);
 class c extends l.Component {
     cancel = () => {
         let { onClose: t } = this.props;
@@ -14,7 +14,7 @@ class c extends l.Component {
         t?.(),
             (0, s.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
-                    i.e("80848"),
+                    i.e("758"),
                     i.e("40933"),
                     i.e("88941"),
                     i.e("62680"),

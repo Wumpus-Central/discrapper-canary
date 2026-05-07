@@ -14,12 +14,12 @@ var n = i(627968),
     m = i(734057),
     p = i(71393),
     I = i(51760),
-    g = i(576705),
-    E = i(309010),
+    E = i(576705),
+    g = i(309010),
     _ = i(287809),
     N = i(652215),
     S = i(753070),
-    T = i(985018);
+    T = i(375708);
 function C(t) {
     let {
             pid: e,
@@ -29,11 +29,11 @@ function C(t) {
             onOneClickGoLive: s,
             appContext: o,
         } = t,
-        u = (0, a.bG)([E.A], () => E.A.getVoiceChannelId()),
+        u = (0, a.bG)([g.A], () => g.A.getVoiceChannelId()),
         c = (0, a.bG)([m.A], () => m.A.getChannel(u), [u]),
         f = (0, a.bG)([_.default], () => _.default.getCurrentUser()),
         y = (0, a.bG)([I.Ay], () => (0, A.A)(I.Ay)),
-        N = (0, a.bG)([p.A, g.A], () => null != c && (0, d.vz)(c, p.A, g.A));
+        N = (0, a.bG)([p.A, E.A], () => null != c && (0, d.vz)(c, p.A, E.A));
     return l.useCallback(async () => {
         await v({
             pid: e,
@@ -58,10 +58,10 @@ async function h(t) {
             onOneClickGoLive: a,
             appContext: r,
         } = t,
-        s = E.A.getVoiceChannelId(),
+        s = g.A.getVoiceChannelId(),
         o = m.A.getChannel(s),
         u = _.default.getCurrentUser(),
-        c = null != o && (0, d.vz)(o, p.A, g.A),
+        c = null != o && (0, d.vz)(o, p.A, E.A),
         f = (0, A.A)(I.Ay);
     await v({
         pid: e,
@@ -86,7 +86,7 @@ async function v(t) {
         allowOneClickGoLive: m,
         onBeforeShowModal: p,
         onOneClickGoLive: I,
-        appContext: g,
+        appContext: E,
     } = t;
     if (d && A) {
         if (m && null !== l) {
@@ -104,15 +104,15 @@ async function v(t) {
             (0, u.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
-                        i.e("80848"),
+                        i.e("758"),
                         i.e("17918"),
-                        i.e("98552"),
+                        i.e("76171"),
                         i.e("38601"),
                         i.e("36946"),
                         i.e("6809"),
                         i.e("44801"),
-                        i.e("25241"),
                         i.e("44727"),
+                        i.e("25241"),
                         i.e("6565"),
                         i.e("14304"),
                         i.e("82001"),
@@ -121,7 +121,7 @@ async function v(t) {
                     ]).then(i.bind(i, 266536));
                     return (i) => (0, n.jsx)(t, { ...i, sourcePID: e, selectSource: !1 });
                 },
-                { contextKey: null != g ? (0, u.modalContextFromAppContext)(g) : void 0 },
+                { contextKey: null != E ? (0, u.modalContextFromAppContext)(E) : void 0 },
             );
     }
 }

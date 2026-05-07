@@ -1,17 +1,17 @@
 i.d(e, { d: () => a });
 var n = i(627968),
-    _ = i(192308),
-    s = i(294454);
+    s = i(192308),
+    _ = i(294454);
 let a = (t) => {
     let { sku: e, guildId: a, source: u, analyticsLocations: r, analyticsContext: o } = t;
-    (0, _.openModalLazy)(
+    (0, s.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([
                 i.e("24092"),
                 i.e("30708"),
-                i.e("57750"),
+                i.e("25907"),
                 i.e("21530"),
-                i.e("49476"),
+                i.e("758"),
                 i.e("52703"),
                 i.e("76602"),
                 i.e("28229"),
@@ -34,6 +34,6 @@ let a = (t) => {
             return (i) =>
                 (0, n.jsx)(t, { ...i, sku: e, guildId: a, source: u, analyticsLocations: r, analyticsContext: o });
         },
-        { stackingBehavior: "stack", modalKey: s.aU },
+        { stackingBehavior: "stack", modalKey: _.aU },
     );
 };

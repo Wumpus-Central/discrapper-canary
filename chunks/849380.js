@@ -455,8 +455,8 @@ var e3 = n(787541),
     e5 = n(769022),
     e7 = n(95701),
     e6 = n(72314),
-    e4 = n(808728),
-    e8 = n(967198),
+    e8 = n(808728),
+    e4 = n(967198),
     te = n(297469),
     tt = n(960755),
     tn = n(866842),
@@ -613,10 +613,10 @@ let tK = "DRAGGABLE_GUILD_CHANNEL";
 function tz(e, t) {
     if (null == e || null == t) return null;
     if (!(0, y.ai)(e)) return eq.A.getChannel(t);
-    let n = e4.Ay.getChannels(e),
+    let n = e8.Ay.getChannels(e),
         l =
-            n[e4.I6].find((e) => e.channel.id === t) ??
-            n[e4.vM].find((e) => e.channel.id === t) ??
+            n[e8.I6].find((e) => e.channel.id === t) ??
+            n[e8.vM].find((e) => e.channel.id === t) ??
             n[F.rbe.GUILD_CATEGORY].find((e) => e.channel.id === t);
     return l?.channel;
 }
@@ -626,7 +626,7 @@ function tW(e) {
         {
             drop(e, t) {
                 let n,
-                    l = e8.A.getGuildId(),
+                    l = e4.A.getGuildId(),
                     i = t.getItem(),
                     r = tk(tz(l, i.id), i.position, e.channel, e.position, i.channelList);
                 if (null == r) return;
@@ -745,7 +745,7 @@ function tW(e) {
                 if (null == l) return !1;
                 let i = tk(eq.A.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
                 if (null == i) return !1;
-                if ((0, y.ai)(e8.A.getGuildId())) return !0;
+                if ((0, y.ai)(e4.A.getGuildId())) return !0;
                 let s = tA.A.getGuild(n.guildId);
                 if (null == s) return !1;
                 let r = eq.A.getChannel(i.parentId),
@@ -780,7 +780,7 @@ function tW(e) {
             {
                 canDrag(e) {
                     let { channel: t } = e;
-                    if ((0, y.ai)(e8.A.getGuildId())) return !0;
+                    if ((0, y.ai)(e4.A.getGuildId())) return !0;
                     let l = tA.A.getGuild(t.getGuildId());
                     if (null == l) return !1;
                     if ((0, $.WW)(l.id) && B.A.can(F.xBc.MANAGE_CHANNELS, l))
@@ -806,7 +806,7 @@ function tW(e) {
                             channel: { id: t, parent_id: n, guild_id: l, type: i },
                             position: s,
                         } = e,
-                        r = e8.A.getGuildId(),
+                        r = e4.A.getGuildId(),
                         a = tP.A.getCategories(r);
                     return {
                         isChannelDrag: !0,
@@ -892,7 +892,7 @@ let tQ = tW(
                     null != t &&
                         (0, J.openModalLazy)(async () => {
                             let { default: i } = await Promise.all([
-                                n.e("49476"),
+                                n.e("758"),
                                 n.e("11585"),
                                 n.e("3589"),
                                 n.e("89916"),
@@ -1062,7 +1062,7 @@ var t9 = n(728321),
     t5 = n(244083);
 let t7 = { origin: { x: -36, y: 7 }, targetWidth: 232, targetHeight: 40, offset: { x: 0, y: 0 } };
 var t6 = n(121880);
-let t4 = r.memo(function (e) {
+let t8 = r.memo(function (e) {
     let {
             sectionIndex: t,
             guild: n,
@@ -1120,7 +1120,7 @@ let t4 = r.memo(function (e) {
         }
     }
 });
-var t8 = n(104171),
+var t4 = n(104171),
     ne = n(186369),
     nt = n(970812),
     nn = n(871237),
@@ -1193,7 +1193,7 @@ let ns = r.memo(function (e) {
                   children: [
                       (0, s.jsx)("div", {
                           className: t6.qz,
-                          children: (0, s.jsx)(t8.Ay, {
+                          children: (0, s.jsx)(t4.Ay, {
                               renderIcon: !0,
                               users: C,
                               max: 8,
@@ -1227,10 +1227,10 @@ function nf(e, t) {
 function nC(e) {
     let { channel: t, disableManageChannels: n, tabIndex: l, forceShowButtons: i, hasChannelInfo: r = !1 } = e;
     return (0, u.bG)(
-        [B.A, e8.A],
+        [B.A, e4.A],
         () =>
             n ||
-            (0, y.ai)(e8.A.getGuildId()) ||
+            (0, y.ai)(e4.A.getGuildId()) ||
             (!B.A.can(F.xBc.MANAGE_CHANNELS, t) &&
                 !B.A.can(F.xBc.MANAGE_ROLES, t) &&
                 !B.A.can(F.xBc.MANAGE_WEBHOOKS, t)) ||
@@ -1387,8 +1387,8 @@ let nb = tW(function (e) {
             connectChannelDropTarget: A,
             tabIndex: g,
         } = e,
-        m = (0, u.bG)([eq.A, e4.Ay], () => {
-            let e = e4.Ay.getDirectoryChannelIds(t.id);
+        m = (0, u.bG)([eq.A, e8.Ay], () => {
+            let e = e8.Ay.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : eq.A.getChannel(e[0]);
         }),
         p = (0, u.bG)([eq.A], () => eq.A.getChannel(m?.parent_id)),
@@ -1773,13 +1773,13 @@ var n2 = n(506774),
     n5 = n(289397),
     n7 = n(486418),
     n6 = n(575926),
-    n4 = n(440293),
-    n8 = n(174459),
+    n8 = n(440293),
+    n4 = n(174459),
     le = n(634654),
     lt = n(391277);
 function ln(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
-        i = (0, n4.w)(t),
+        i = (0, n8.w)(t),
         r = (0, ti.bG)([tA.A], () => tA.A.getGuild(t)),
         a = r?.features.has(F.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) === !0,
         o = "false" === n2.w.get(le.bJ, "false"),
@@ -1812,11 +1812,11 @@ function ln(e) {
                         onClick: (e) => {
                             e.stopPropagation(),
                                 (0, nk.Dr)(T.M.SERVER_SHOP_PHANTOM_PREVIEW),
-                                n8.default.track(F.HAw.GUILD_SHOP_PREVIEW_CLICK, {
+                                n4.default.track(F.HAw.GUILD_SHOP_PREVIEW_CLICK, {
                                     ...(0, n9.H$)(t),
                                     action_taken: le.hN.DISMISS_CHANNEL_ROW,
                                 }),
-                                (i && a) || (0, ei.bG)(F.BVt.CHANNEL(t, e4.Ay.getDefaultChannel(t)?.id));
+                                (i && a) || (0, ei.bG)(F.BVt.CHANNEL(t, e8.Ay.getDefaultChannel(t)?.id));
                         },
                         "aria-label": K.intl.string(K.t.cpT0Cq),
                         children: (0, s.jsx)(tG.a, { size: "xs", color: "currentColor" }),
@@ -2280,25 +2280,25 @@ function l9(e) {
 var l5 = n(695633),
     l7 = n(669715),
     l6 = n(137177),
-    l4 = n(999436);
-function l8(e) {
+    l8 = n(999436);
+function l4(e) {
     let { className: t, embeddedApps: n, muted: l } = e;
     if (n.length <= 0) return null;
     {
         if (1 === n.length)
             return (0, s.jsx)("div", {
-                className: ef()(l4.kL, t, l && l4.F4),
-                children: (0, s.jsx)(l6.A, { game: n[0].application, className: l4.wK }),
+                className: ef()(l8.kL, t, l && l8.F4),
+                children: (0, s.jsx)(l6.A, { game: n[0].application, className: l8.wK }),
             });
         let e = n.length - 1;
         return (0, s.jsxs)("div", {
-            className: ef()(l4.kL, t, l && l4.F4),
+            className: ef()(l8.kL, t, l && l8.F4),
             children: [
-                (0, s.jsx)(l6.A, { game: n[0].application, className: l4.wK }),
+                (0, s.jsx)(l6.A, { game: n[0].application, className: l8.wK }),
                 2 === n.length
-                    ? (0, s.jsx)(l6.A, { game: n[1].application, className: l4.wK })
+                    ? (0, s.jsx)(l6.A, { game: n[1].application, className: l8.wK })
                     : (0, s.jsx)(N.E, {
-                          className: l4.ju,
+                          className: l8.ju,
                           variant: "text-xs/bold",
                           color: "interactive-text-active",
                           children: `+${e}`,
@@ -2367,7 +2367,7 @@ function ie(e) {
           : null != E
             ? (0, s.jsx)(l0.z, { textColor: "text-feedback-positive", entry: { start: E } })
             : null != a && a && f.length > 0
-              ? (0, s.jsx)(l8, { embeddedApps: f, muted: A })
+              ? (0, s.jsx)(l4, { embeddedApps: f, muted: A })
               : null;
 }
 var it = n(582630);
@@ -2785,10 +2785,11 @@ function iG(e) {
                                     ? (0, lK.iN)(t.id)
                                     : (0, J.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
-                                              n.e("73109"),
+                                              n.e("36992"),
                                               n.e("30708"),
                                               n.e("25907"),
-                                              n.e("11095"),
+                                              n.e("9848"),
+                                              n.e("56402"),
                                               n.e("76602"),
                                               n.e("28229"),
                                               n.e("39970"),
@@ -2866,7 +2867,7 @@ var iR = n(364522),
     iy = n(970928),
     iT = n(427262),
     iL = n(456644);
-let iU = t8.DN.SIZE_24;
+let iU = t4.DN.SIZE_24;
 function iD(e) {
     let { activity: t, embeddedApp: n } = e,
         l = t?.assets,
@@ -2923,14 +2924,14 @@ function iP(e) {
                                 children: t.state,
                             }),
                         i.length > 0 &&
-                            (0, s.jsx)(t8.Ay, {
+                            (0, s.jsx)(t4.Ay, {
                                 className: iL.TN,
                                 guildId: l.guild_id,
                                 users: r,
                                 size: iU,
                                 max: 7,
                                 renderUser: (e) => {
-                                    if (null == e || e === t8.mt) return null;
+                                    if (null == e || e === t4.mt) return null;
                                     let t = iT.Ay.getName(e);
                                     return (0, s.jsx)(
                                         Q.m,
@@ -3111,10 +3112,11 @@ class iK extends nS {
             null != l &&
                 (0, eT.L3)(e, async () => {
                     let { default: e } = await Promise.all([
-                        n.e("63240"),
+                        n.e("36992"),
                         n.e("25907"),
-                        n.e("49476"),
-                        n.e("40110"),
+                        n.e("758"),
+                        n.e("12284"),
+                        n.e("24086"),
                         n.e("26132"),
                         n.e("46652"),
                         n.e("93190"),
@@ -3488,14 +3490,14 @@ function i6(e) {
         n = tA.A.getGuild(t);
     return null != n && !!n.features.has(F.GuildFeatures.COMMUNITY) && i7(t);
 }
-function i4(e) {
+function i8(e) {
     let { id: t } = e,
         n = eq.A.getChannel(t);
     if (null == n) return !1;
     let l = tA.A.getGuild(n.guild_id);
     return null != l && !!l.features.has(F.GuildFeatures.COMMUNITY) && i7(n.guild_id);
 }
-function i8(e) {
+function i4(e) {
     let { channel: t } = e,
         n = eq.A.getChannel(t.id);
     if (null == n) return !1;
@@ -3508,7 +3510,7 @@ function se(e) {
     if (null == n) return !1;
     let l = tA.A.getGuild(n.guild_id);
     return (
-        null != l && !!l.features.has(F.GuildFeatures.COMMUNITY) && e8.A.getGuildId() === n.guild_id && i7(n.guild_id)
+        null != l && !!l.features.has(F.GuildFeatures.COMMUNITY) && e4.A.getGuildId() === n.guild_id && i7(n.guild_id)
     );
 }
 function st(e) {
@@ -3518,7 +3520,7 @@ function st(e) {
 class sn extends u.Ay.Store {
     static displayName = "ChannelListUnreadsStore";
     initialize() {
-        this.waitFor(tt.A, eq.A, tA.A, ls.A, nW.Ay, e8.A, eX.Ay, eQ.A, tX.Ay);
+        this.waitFor(tt.A, eq.A, tA.A, ls.A, nW.Ay, e4.A, eX.Ay, eQ.A, tX.Ay);
     }
     getUnreadStateForGuildId(e) {
         return i0[e] ?? iQ;
@@ -3555,7 +3557,7 @@ let sl = new sn(eU.h, {
         );
     },
     CHANNEL_ACK: se,
-    CHANNEL_DELETE: i8,
+    CHANNEL_DELETE: i4,
     CHANNEL_LOCAL_ACK: se,
     MESSAGE_ACK: se,
     MESSAGE_CREATE: se,
@@ -3566,18 +3568,18 @@ let sl = new sn(eU.h, {
         return !!(e.channels.length > 0 && null != t && t.features.has(F.GuildFeatures.COMMUNITY)) && i7(e.guildId);
     },
     RESORT_THREADS: se,
-    THREAD_CREATE: i8,
-    THREAD_DELETE: i8,
+    THREAD_CREATE: i4,
+    THREAD_DELETE: i4,
     THREAD_LIST_SYNC: i6,
-    THREAD_MEMBER_UPDATE: i4,
-    THREAD_MEMBERS_UPDATE: i4,
-    THREAD_UPDATE: i8,
+    THREAD_MEMBER_UPDATE: i8,
+    THREAD_MEMBERS_UPDATE: i8,
+    THREAD_UPDATE: i4,
     BULK_CLEAR_RECENTS: i6,
     CATEGORY_COLLAPSE_ALL: i6,
     CATEGORY_EXPAND_ALL: i6,
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,
-            n = e8.A.getGuildId();
+            n = e4.A.getGuildId();
         if (null == n || !new Set(t.map((e) => e.guildId)).has(n)) return !1;
         let l = i0[n];
         return null != l && "voice-channels" === l.bottomBar.mode && i7(n);
@@ -3918,7 +3920,7 @@ function sH(e) {
         A = null != i && i.length > 0;
     if (
         (r.useEffect(() => {
-            u && n8.default.track(F.HAw.VOICE_CHANNEL_TOPIC_VIEWED, { channel_id: t.id, guild_id: t.guild_id });
+            u && n4.default.track(F.HAw.VOICE_CHANNEL_TOPIC_VIEWED, { channel_id: t.id, guild_id: t.guild_id });
         }, [u, t.id, t.guild_id]),
         null == t.guild_id)
     )
@@ -4653,7 +4655,7 @@ class sW extends r.PureComponent {
                 disableManageChannels: a,
             } = this.props;
         return (0, s.jsx)(
-            t4,
+            t8,
             {
                 sectionIndex: t,
                 guild: i,
@@ -4706,7 +4708,7 @@ class sW extends r.PureComponent {
                 case tx.n.GUILD_HUB_HEADER_OPTIONS:
                     return (0, s.jsx)(
                         q.A,
-                        { guild: l, channel: e4.Ay.getDefaultChannel(l.id) },
+                        { guild: l, channel: e8.Ay.getDefaultChannel(l.id) },
                         tx.n.GUILD_HUB_HEADER_OPTIONS,
                     );
                 case tx.n.GUILD_PREMIUM_PROGRESS_BAR:
@@ -5052,7 +5054,7 @@ let sY = (e) => {
         { analyticsLocations: a } = (0, j.Ay)(R.A.GUILD_CHANNEL_LIST),
         o = (0, u.bG)([eq.A], () => eq.A.getChannel(n)),
         h = (0, u.bG)([eq.A], () => eq.A.getChannel(l)),
-        A = (0, u.bG)([e8.A], () => e8.A.getGuildId()),
+        A = (0, u.bG)([e4.A], () => e4.A.getGuildId()),
         g = (0, $.jN)(t),
         m = r.useRef(null),
         p = r.useCallback((e, t) => {

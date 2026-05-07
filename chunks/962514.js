@@ -1,9 +1,9 @@
-n.d(t, { A: () => z, e: () => O });
+n.d(t, { A: () => Y, e: () => O });
 var i = n(284009),
     l = n.n(i),
     s = n(735438),
     r = n.n(s),
-    a = n(966974),
+    a = n(744593),
     o = n(17928),
     d = n(765178),
     c = n(228366),
@@ -80,7 +80,7 @@ function O(e) {
     !(function (e) {
         let { message: t, initialAnswerId: i } = e;
         (0, T.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("41159"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
+            let { default: e } = await Promise.all([n.e("9848"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
                 n.bind(n, 716936),
             );
             return (n) => (0, y.jsx)(e, { ...n, message: t, initialAnswerId: i });
@@ -223,7 +223,7 @@ async function F(e) {
             l()(!1, `Unknown poll action type: ${i}`);
     }
 }
-let z = {
+let Y = {
     handlePollAnswerTapped: function (e) {
         let { answerId: t, ...n } = e,
             {
