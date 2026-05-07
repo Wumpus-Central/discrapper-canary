@@ -8,7 +8,7 @@ e.exports = {
     Vg: "grid_ab4223",
     qr: "footer_ab4223",
     p$: "emptyState_ab4223",
-    Dw: "emptyIcon_ab4223",
+    hd: "emptyImage_ab4223",
     qO: "emptyDescription_ab4223",
     CZ: "emptyProtip_ab4223",
     pi: "emptyActions_ab4223",

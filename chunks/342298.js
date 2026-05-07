@@ -13,8 +13,8 @@ var n = a(627968),
     x = a(240248),
     p = a(946274),
     N = a(652215),
-    j = a(985018),
-    v = a(792751);
+    j = a(375708),
+    v = a(15132);
 function f(e) {
     let { className: l, icon: a = null } = e;
     return (0, n.jsx)(d.N, {

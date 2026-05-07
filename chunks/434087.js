@@ -218,7 +218,7 @@ function ee(e) {
     let { stream: t, popoutType: n } = e,
         { reducedMotion: s } = i.useContext(U.C),
         a = (0, i.useRef)(null),
-        o = B.K.getState().clipsButtonRef,
+        o = (0, B.K)((e) => e.clipsButtonRef),
         u = (0, Y._z)(t),
         c = (0, r.bG)([W.A], () => W.A.getActiveAnimation()),
         d = (0, r.yK)([W.A], () => W.A.getStreamClipAnimations(u)),
@@ -261,7 +261,7 @@ function ee(e) {
                           })()),
                 }),
                 enter: (e) => [{ opacity: 1, visibility: "visible", ...p(e) }],
-                leave: {
+                leave: () => ({
                     opacity: 0,
                     ...(!s.enabled && {
                         height: 0,
@@ -270,7 +270,7 @@ function ee(e) {
                             if (null != m.current) return { top: m.current.top + 12, left: m.current.left + 12 };
                         })(),
                     }),
-                },
+                }),
                 config: s.enabled ? J : q,
                 onRest: (e, t) => {
                     null != t.item &&
