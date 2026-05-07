@@ -9,15 +9,15 @@ var n = i(627968),
     u = i(231723),
     d = i(507107),
     m = i(73473),
-    f = i(545986),
+    f = i(617986),
     x = i(731355),
     g = i(366010),
     C = i(534514),
     N = i(825484),
     h = i(408278),
     j = i(173936),
-    p = i(821609),
-    A = i(743368),
+    A = i(821609),
+    p = i(743368),
     T = i(990078),
     _ = i(736653),
     E = i(859387),
@@ -28,7 +28,7 @@ var n = i(627968),
     R = i(814793),
     L = i(241124),
     k = i(918338),
-    D = i(201805),
+    D = i(371912),
     M = i(17928),
     b = i(793574),
     w = i(532794),
@@ -37,10 +37,10 @@ var n = i(627968),
     q = i(975571),
     S = i(474090),
     H = i(561844),
-    Y = i(654487),
+    Y = i(190107),
     G = i(652215),
     Q = i(788868),
-    z = i(985018),
+    z = i(375708),
     V = i(237146),
     F = i(818348),
     K = i(970197);
@@ -224,12 +224,12 @@ function U(t) {
                                     variant: "secondary",
                                 }),
                             }),
-                        (0, n.jsx)(p.$, {
+                        (0, n.jsx)(A.$, {
                             variant: Z.ctaVariant,
                             text: Z.ctaText,
                             onClick: Z.onClickCta,
                             fullWidth: !0,
-                            icon: A.W,
+                            icon: p.W,
                             iconPosition: Z.ctaIconPosition,
                         }),
                     ],
@@ -270,11 +270,15 @@ function X(t) {
             location: N,
         } = t,
         h = d.uF.REWARD_MODAL,
-        [j, p] = s.useState(!0),
-        A = e.config.features.some((t) => Y.Tz.has(t)),
+        [j, A] = s.useState(!0),
+        p = e.config.features.some((t) => Y.Tz.has(t)),
         T = s.useCallback(async () => {
-            A ? r() : (await (0, f.f7)(e.config.ctaConfig?.link)) && (r(), (0, l.closeAllModals)());
-        }, [e.config.ctaConfig?.link, r, A]);
+            if (p) {
+                r(), (0, l.closeAllModals)();
+                return;
+            }
+            (await (0, f.f7)(e.config.ctaConfig?.link)) && (r(), (0, l.closeAllModals)());
+        }, [e.config.ctaConfig?.link, r, p]);
     if (C) return (0, n.jsx)(J, { onClose: r, transitionState: a });
     let _ = g || j;
     return (0, n.jsx)(m.R, {
@@ -310,7 +314,7 @@ function X(t) {
                                             children: (0, n.jsx)(Z, {
                                                 quest: e,
                                                 sourceQuestContent: i,
-                                                onLoadComplete: () => p(!1),
+                                                onLoadComplete: () => A(!1),
                                                 preCtaClick: T,
                                                 location: N,
                                             }),
