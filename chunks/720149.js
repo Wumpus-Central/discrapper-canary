@@ -73,7 +73,7 @@ let Y = (0, n(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var W = n(780574),
+var W = n(521427),
     K = n(17928),
     z = n(69114),
     $ = n(322683),
@@ -885,9 +885,9 @@ ${s}`),
             if (null != a)
                 return (
                     eH.info("Converting channel to a private channel"),
-                    a.then((e) => {
-                        eH.info("Finished converting channel to a private channel"), ez._sendMessage(e, t, n);
-                    })
+                    a.then(
+                        (e) => (eH.info("Finished converting channel to a private channel"), ez._sendMessage(e, t, n)),
+                    )
                 );
             let o = t.content,
                 { invalidEmojis: u, validNonShortcutEmojis: c, tts: f = !1 } = t,
