@@ -31,6 +31,7 @@ n.d(t, {
     Hu: () => ti,
     gs: () => b,
     _6: () => eD,
+    Zd: () => ts,
     hD: () => eP,
     ML: () => O,
     pE: () => eq,
@@ -967,10 +968,10 @@ let e9 = E(
         "enableDmReplyNudgeReminders",
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: e }),
+    ),
+    ts = E(
+        "privacy",
+        "hideFriendRequestNotes",
+        (e) => e?.value ?? !1,
+        (e) => o._t.create({ value: e }),
     );
-E(
-    "privacy",
-    "hideFriendRequestNotes",
-    (e) => e?.value ?? !1,
-    (e) => o._t.create({ value: e }),
-);
