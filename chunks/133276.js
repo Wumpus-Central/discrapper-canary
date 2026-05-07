@@ -2043,11 +2043,14 @@ function sw(e) {
 function sP(e) {
     let { onAssetLoad: t, onQuestCtaClick: s } = e,
         { questHomeHero: n, isLoading: a } = (0, Y.lg)();
-    return a
-        ? (0, l.jsx)(sR, {})
-        : null != n
-          ? (0, l.jsx)(sA, { hero: n, onQuestCtaClick: s })
-          : (0, l.jsx)(sw, { onAssetLoad: t });
+    return (0, l.jsx)("div", {
+        className: sH.iS,
+        children: a
+            ? (0, l.jsx)(sR, {})
+            : null != n
+              ? (0, l.jsx)(sA, { hero: n, onQuestCtaClick: s })
+              : (0, l.jsx)(sw, { onAssetLoad: t }),
+    });
 }
 function sD(e) {
     let { onLoadComplete: t } = e;
