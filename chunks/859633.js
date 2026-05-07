@@ -2,6 +2,7 @@ o.r(
     (e.exports = {
         wishlistButton: "wishlistButton__979b1",
         disabled: "disabled__979b1",
+        visuallyHidden: "visuallyHidden__979b1",
         xs: "xs__979b1",
         sm: "sm__979b1",
         md: "md__979b1",

@@ -1,0 +1,89 @@
+.body__6da2d {
+    padding: 10px
+}
+
+.streamPreviewWrapper__6da2d {
+    opacity: 0;
+    position: relative;
+    transform: translate3d(8px, 0, 0) scale(.98);
+    transform-origin: 50% 50%
+}
+
+.full-motion .streamPreviewWrapper__6da2d {
+    transition: opacity .15s ease, transform 125ms ease-in
+}
+
+.streamPreviewWrapper__6da2d.mounted__6da2d {
+    opacity: 1;
+    transform: translateZ(0) scale(1)
+}
+
+.previewContainer__6da2d {
+    background-color: var(--background-mod-normal);
+    box-sizing: border-box;
+    height: 142px;
+    position: relative;
+    width: 100%
+}
+
+.previewContainer__6da2d:hover .previewHover__6da2d {
+    opacity: 1
+}
+
+.previewHover__6da2d {
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    font-weight: var(--font-weight-semibold);
+    justify-content: center;
+    line-height: 18px;
+    transition: opacity .2s ease-in-out
+}
+
+.previewImage__6da2d {
+    height: 100%;
+    width: 100%
+}
+
+.applicationName__6da2d {
+    color: var(--text-default);
+    font-size: 14px;
+    inset-inline-start: 12px;
+    line-height: 18px;
+    position: absolute;
+    top: 8px
+}
+
+.liveIcon__6da2d {
+    margin-inline-end: 8px
+}
+
+.activityActions__6da2d {
+    margin-top: 0
+}
+
+.protip__6da2d {
+    margin-top: 10px;
+    text-align: center
+}
+
+.white__6da2d {
+    color: var(--white)
+}
+
+.theme-dark .applicationName__6da2d {
+    color: var(--primary-100)
+}
+
+.theme-dark .previewHover__6da2d {
+    background: var(--opacity-black-60)
+}
+
+.theme-light .previewHover__6da2d {
+    background: hsl(var(--primary-500-hsl)/.6)
+}

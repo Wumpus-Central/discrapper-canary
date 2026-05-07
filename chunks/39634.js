@@ -1,37 +1,38 @@
-r.d(t, { JO: () => k, Cm: () => p, dN: () => b, $b: () => C, mf: () => h, h6: () => f });
-var i = r(554146),
-    n = r(367727),
-    s = r(994500),
-    o = r(174459),
-    a = r(927813),
-    l = r(609415),
-    u = r(17928),
-    E = r(228366);
-let _ = d();
-function d() {
+"use strict";
+n.d(t, { JO: () => C, Cm: () => T, dN: () => v, $b: () => S, mf: () => y, h6: () => N });
+var i = n(554146),
+    r = n(367727),
+    s = n(994500),
+    a = n(174459),
+    o = n(927813),
+    l = n(609415),
+    u = n(17928),
+    c = n(228366);
+let d = _();
+function _() {
     return { ignoreTimestamps: {} };
 }
-class A extends u.Ay.PersistedStore {
+class f extends u.Ay.PersistedStore {
     static displayName = "IgnoreNoticeStore";
     static persistKey = "IgnoreNoticeStore";
     initialize(e) {
         let t = e?.ignoreTimestamps ?? {};
-        _ = { ...d(), ignoreTimestamps: t };
+        d = { ..._(), ignoreTimestamps: t };
     }
     getState() {
-        return _;
+        return d;
     }
     getIgnoreTimestamps() {
-        return _.ignoreTimestamps;
+        return d.ignoreTimestamps;
     }
 }
-let c = new A(E.h, {
+let h = new f(c.h, {
         RELATIONSHIP_IGNORE_USER_SUCCESS: function (e) {
-            let { userId: t, timestamp: r } = e;
-            _.ignoreTimestamps[t] = r;
+            let { userId: t, timestamp: n } = e;
+            d.ignoreTimestamps[t] = n;
         },
     }),
-    I = (0, r(240921).Ay)({
+    p = (0, n(240921).Ay)({
         name: "2026-05-ignore-user-feedback",
         kind: "user",
         defaultConfig: { enabled: !1, shouldGetShorterIgnoreDuration: !1 },
@@ -41,44 +42,44 @@ let c = new A(E.h, {
             2: { enabled: !0, shouldGetShorterIgnoreDuration: !0 },
         },
     });
-var S = r(14594),
-    g = r(652215);
-let m = 3 * a.A.Millis.DAY,
-    D = a.A.Millis.WEEK,
-    T = a.A.Millis.DAYS_30,
-    p = () => {
+var E = n(14594),
+    m = n(652215);
+let g = 3 * o.A.Millis.DAY,
+    A = o.A.Millis.WEEK,
+    I = o.A.Millis.DAYS_30,
+    T = () => {
         if (!(0, l.Bv)("block_user_feedback_utils")) return !1;
         let e = s.A.getSinces();
         return Object.keys(e).some((t) => {
-            let r = Date.now() - Date.parse(e[t]);
-            return s.A.isBlocked(t) && r > D && r < T;
+            let n = Date.now() - Date.parse(e[t]);
+            return s.A.isBlocked(t) && n > A && n < I;
         });
     },
-    C = (e, t, r, i) => {
-        o.default.track(g.HAw.BLOCK_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: r, skipped: i });
+    S = (e, t, n, i) => {
+        a.default.track(m.HAw.BLOCK_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
     },
-    f = () => {
-        let { enabled: e, shouldGetShorterIgnoreDuration: t } = I.getConfig({ location: "ignore_user_feedback_utils" });
+    N = () => {
+        let { enabled: e, shouldGetShorterIgnoreDuration: t } = p.getConfig({ location: "ignore_user_feedback_utils" });
         if (!e) return !1;
-        let { isDismissed: r } = (0, n.FZ)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: S.aH });
-        if (r) return !1;
-        let o = t ? m : D,
-            a = c.getIgnoreTimestamps();
-        return Object.keys(a).some((e) => {
-            let t = Date.now() - Number(a[e]);
-            return s.A.isIgnored(e) && t > o && t < T;
+        let { isDismissed: n } = (0, r.FZ)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: E.aH });
+        if (n) return !1;
+        let a = t ? g : A,
+            o = h.getIgnoreTimestamps();
+        return Object.keys(o).some((e) => {
+            let t = Date.now() - Number(o[e]);
+            return s.A.isIgnored(e) && t > a && t < I;
         });
     },
-    h = (e, t, r, i) => {
-        o.default.track(g.HAw.IGNORE_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: r, skipped: i });
+    y = (e, t, n, i) => {
+        a.default.track(m.HAw.IGNORE_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
     },
-    k = (e) => (e === i.M.AGE_VERIFICATION_SURVEY_MODAL_CLOSE ? S.mg.KID_STARTED : S.mg.GET_STARTED),
-    b = (e, t, r, i, n) => {
-        o.default.track(g.HAw.AGE_VERIFICATION_FEEDBACK_SUBMITTED, {
+    C = (e) => (e === i.M.AGE_VERIFICATION_SURVEY_MODAL_CLOSE ? E.mg.KID_STARTED : E.mg.GET_STARTED),
+    v = (e, t, n, i, r) => {
+        a.default.track(m.HAw.AGE_VERIFICATION_FEEDBACK_SUBMITTED, {
             rating: e,
             feedback: t,
-            reason: r,
+            reason: n,
             skipped: i,
-            entrypoint: n,
+            entrypoint: r,
         });
     };

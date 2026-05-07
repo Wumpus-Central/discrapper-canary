@@ -39,9 +39,8 @@ let I = { xs: "xxs", sm: "xs", md: "refresh_sm" },
             } = (0, E.z)({ userId: d, product: t, selectedVariantIndex: n, location: s, onError: a }),
             N = r.useCallback(() => {
                 u?.(_ ? m.sH.REMOVE_FROM_WISHLIST : m.sH.ADD_TO_WISHLIST), A();
-            }, [_, A, u]),
-            y = l || _;
-        return T || !y
+            }, [_, A, u]);
+        return T
             ? null
             : (0, i.jsx)(S, {
                   skuId: I.skuId,
@@ -50,6 +49,7 @@ let I = { xs: "xxs", sm: "xs", md: "refresh_sm" },
                   isWishlisted: _,
                   isBusy: f,
                   isFirstTimeWishlister: g,
+                  isVisuallyHidden: !l && !_,
                   onClick: N,
                   ...c,
               });
@@ -65,34 +65,35 @@ function S(e) {
             isWishlisted: E,
             isBusy: m,
             isFirstTimeWishlister: T,
-            onClick: S,
-            shouldShowTooltip: N,
-            tooltipConfig: y = {},
+            isVisuallyHidden: S,
+            onClick: N,
+            shouldShowTooltip: y,
+            tooltipConfig: C = {},
         } = e,
-        C = I[p],
-        { reducedMotion: v } = r.useContext(c.C),
-        O = r.useRef(null),
-        [R, b] = r.useState(!1),
-        D = E && !R,
-        L = D ? d.C : _.y,
-        w = a()(A.normalIconColor, D && A.wishlistedOrAnimating);
+        v = I[p],
+        { reducedMotion: O } = r.useContext(c.C),
+        R = r.useRef(null),
+        [b, D] = r.useState(!1),
+        L = E && !b,
+        w = L ? d.C : _.y,
+        M = a()(A.normalIconColor, L && A.wishlistedOrAnimating);
     r.useEffect(() => {
-        b(!1);
+        D(!1);
     }, [t]);
-    let M = r.useCallback(
+    let P = r.useCallback(
             (e) => {
-                e.stopPropagation(), o || (E || v.enabled ? E && R && b(!1) : b(!0), S());
+                e.stopPropagation(), o || (E || O.enabled ? E && b && D(!1) : D(!0), N());
             },
-            [o, E, v.enabled, R, S],
+            [o, E, O.enabled, b, N],
         ),
-        P = !o && !E && !R,
-        x = r.useCallback(
+        x = !o && !E && !b,
+        U = r.useCallback(
             (e) => {
-                e.target === e.currentTarget && R && requestAnimationFrame(() => b(!1));
+                e.target === e.currentTarget && b && requestAnimationFrame(() => D(!1));
             },
-            [R],
+            [b],
         ),
-        U = () => {
+        k = () => {
             var e;
             let t = g.intl.formatToPlainString(g.t["7kFjeK"], { productName: n });
             return (0, i.jsx)(f.D, {
@@ -104,42 +105,43 @@ function S(e) {
                         [A.variantSecondary]: "secondary" === h,
                         [A.variantSecondaryOverlay]: "overlay-secondary" === h,
                         [A.disabled]: o,
+                        [A.visuallyHidden]: S,
                     },
                     s,
                 ),
-                innerRef: O,
-                onClick: M,
+                innerRef: R,
+                onClick: P,
                 "aria-label": t,
                 "aria-pressed": E,
                 "aria-busy": m,
                 "aria-disabled": o,
-                children: v.enabled
-                    ? (0, i.jsx)(L, { colorClass: e ?? w, size: C })
+                children: O.enabled
+                    ? (0, i.jsx)(w, { colorClass: e ?? M, size: v })
                     : (0, i.jsxs)("div", {
-                          className: a()(A.iconContainer, P && A.canAnimate),
+                          className: a()(A.iconContainer, x && A.canAnimate),
                           children: [
                               (0, i.jsx)("span", {
-                                  className: a()(A.iconWrapper, P && A.canHover),
-                                  children: (0, i.jsx)(L, { colorClass: e ?? w, size: C }),
+                                  className: a()(A.iconWrapper, x && A.canHover),
+                                  children: (0, i.jsx)(w, { colorClass: e ?? M, size: v }),
                               }),
                               (0, i.jsx)("span", {
-                                  className: a()(A.animationOverlay, R && A.clickAnimation),
-                                  onAnimationEnd: x,
-                                  children: (0, i.jsx)(d.C, { size: C }),
+                                  className: a()(A.animationOverlay, b && A.clickAnimation),
+                                  onAnimationEnd: U,
+                                  children: (0, i.jsx)(d.C, { size: v }),
                               }),
                           ],
                       }),
             });
         };
     if (T && !o) {
-        let e = y.firstTimeTitle ?? g.intl.string(g.t["47Rhc3"]),
-            t = y.firstTimeBody ?? g.intl.string(g.t.PXjA0b);
-        return (0, i.jsx)(l.u, { title: e, body: t, shouldShow: N, children: U() });
+        let e = C.firstTimeTitle ?? g.intl.string(g.t["47Rhc3"]),
+            t = C.firstTimeBody ?? g.intl.string(g.t.PXjA0b);
+        return (0, i.jsx)(l.u, { title: e, body: t, shouldShow: y, children: k() });
     }
-    let k = o
-        ? (y.disabled ?? g.intl.string(g.t["50TX9k"]))
+    let G = o
+        ? (C.disabled ?? g.intl.string(g.t["50TX9k"]))
         : E
-          ? (y.remove ?? g.intl.string(g.t.yr9TTf))
-          : (y.add ?? g.intl.string(g.t["8DkMEQ"]));
-    return (0, i.jsx)(u.m, { text: k, ariaHidden: !o, shouldShow: N, children: U() });
+          ? (C.remove ?? g.intl.string(g.t.yr9TTf))
+          : (C.add ?? g.intl.string(g.t["8DkMEQ"]));
+    return (0, i.jsx)(u.m, { text: G, ariaHidden: !o, shouldShow: y, children: k() });
 }

@@ -88,7 +88,8 @@ let ec = es.Ay.getEnableHardwareAcceleration(),
                     null != h &&
                         (0, I.L3)(e, async () => {
                             let { default: e } = await Promise.all([
-                                t.e("70652"),
+                                t.e("63240"),
+                                t.e("40110"),
                                 t.e("26132"),
                                 t.e("46652"),
                                 t.e("93190"),
@@ -1197,7 +1198,7 @@ let nH = (e) => {
             (0, m.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     t.e("7017"),
-                    t.e("23089"),
+                    t.e("25907"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
@@ -1766,7 +1767,7 @@ let tu = (e) => {
                     ? () => {
                           (0, m.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
-                                  t.e("97500"),
+                                  t.e("6772"),
                                   t.e("13754"),
                                   t.e("72891"),
                                   t.e("54046"),
@@ -2792,7 +2793,8 @@ function iD(e) {
         m = (e) => {
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("70652"),
+                    t.e("63240"),
+                    t.e("40110"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),
@@ -4737,7 +4739,10 @@ let rq = () => (0, i.jsx)("div", { className: rz.wG, children: (0, i.jsx)(x.y, {
     rK = (0, nL.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("94461"),
+                t.e("11095"),
+                t.e("64801"),
+                t.e("8386"),
+                t.e("40110"),
                 t.e("49681"),
                 t.e("21044"),
                 t.e("33097"),
@@ -4754,20 +4759,20 @@ let rq = () => (0, i.jsx)("div", { className: rz.wG, children: (0, i.jsx)(x.y, {
     rX = () =>
         Promise.all([
             t.e("59499"),
-            t.e("70652"),
+            t.e("40110"),
             t.e("67683"),
             t.e("49476"),
             t.e("4981"),
-            t.e("23089"),
-            t.e("78753"),
+            t.e("25907"),
+            t.e("4592"),
             t.e("74748"),
-            t.e("49721"),
-            t.e("98560"),
+            t.e("36704"),
+            t.e("11095"),
+            t.e("90578"),
             t.e("17094"),
             t.e("5677"),
             t.e("11491"),
-            t.e("84328"),
-            t.e("30889"),
+            t.e("64112"),
             t.e("68201"),
             t.e("85755"),
             t.e("792"),
@@ -4805,16 +4810,16 @@ let rq = () => (0, i.jsx)("div", { className: rz.wG, children: (0, i.jsx)(x.y, {
     rQ = (0, nL.Fe)({ createPromise: rX, webpackId: 540462, name: "ChannelCall", renderLoader: rq }),
     r$ = () =>
         Promise.all([
-            t.e("98560"),
-            t.e("10611"),
+            t.e("11095"),
+            t.e("54747"),
             t.e("49476"),
             t.e("4981"),
-            t.e("23089"),
-            t.e("78753"),
+            t.e("25907"),
+            t.e("4592"),
             t.e("74748"),
-            t.e("49721"),
+            t.e("36704"),
             t.e("59499"),
-            t.e("70652"),
+            t.e("40110"),
             t.e("67683"),
             t.e("68201"),
             t.e("792"),
@@ -4851,10 +4856,11 @@ let rq = () => (0, i.jsx)("div", { className: rz.wG, children: (0, i.jsx)(x.y, {
     rJ = (0, nL.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("94461"),
+                t.e("40110"),
                 t.e("11394"),
+                t.e("37082"),
                 t.e("73109"),
-                t.e("44311"),
+                t.e("95780"),
                 t.e("63982"),
                 t.e("49681"),
                 t.e("38939"),
@@ -4876,7 +4882,7 @@ let rq = () => (0, i.jsx)("div", { className: rz.wG, children: (0, i.jsx)(x.y, {
             Promise.all([
                 t.e("73109"),
                 t.e("76822"),
-                t.e("44311"),
+                t.e("95780"),
                 t.e("56574"),
                 t.e("49681"),
                 t.e("28136"),
@@ -4989,7 +4995,8 @@ class r1 extends s.PureComponent {
         o()(null != l, "Missing user in Channel.openDMContextMenu"),
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("70652"),
+                    t.e("63240"),
+                    t.e("40110"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),
