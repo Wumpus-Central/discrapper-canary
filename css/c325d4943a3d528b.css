@@ -402,8 +402,9 @@
 .logo__1afd8 {
     box-sizing: content-box;
     flex-shrink: 0;
+    max-width: 480px;
     padding: var(--space-8);
-    width: 480px
+    width: 100%
 }
 
 .heading__1afd8 {
@@ -467,9 +468,10 @@
     }
 
     .content__1afd8 {
-        min-width: 500px;
-        padding: 30px 36px 24px;
-        width: 500px
+        max-width: 500px;
+        padding-block: 30px 24px;
+        padding-inline: 36px 0;
+        width: 60%
     }
 
     .logoSection__1afd8 {
