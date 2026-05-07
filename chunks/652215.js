@@ -5541,6 +5541,7 @@ var rH = (((eH = {}).ALL = "ALL"), (eH.CREATE = "CREATE"), (eH.UPDATE = "UPDATE"
         (eK.RATE_LIMIT_PER_USER = "rate_limit_per_user"),
         (eK.VIDEO_QUALITY_MODE = "video_quality_mode"),
         (eK.DEFAULT_AUTO_ARCHIVE_DURATION = "default_auto_archive_duration"),
+        (eK.DEFAULT_THREAD_RATE_LIMIT_PER_USER = "default_thread_rate_limit_per_user"),
         (eK.ARCHIVED = "archived"),
         (eK.LOCKED = "locked"),
         (eK.INVITABLE = "invitable"),
