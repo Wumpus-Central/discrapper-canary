@@ -1,4 +1,4 @@
-i.d(e, { Ay: () => tm, ru: () => tf }), i(321073);
+i.d(e, { Ay: () => tp, ru: () => tf }), i(321073);
 var n = i(627968),
     l = i(64700),
     a = i(284009),
@@ -11,8 +11,8 @@ var n = i(627968),
     A = i(534890),
     f = i(820081),
     y = i(241541),
-    m = i(559647),
-    p = i(408278),
+    p = i(559647),
+    m = i(408278),
     I = i(297152),
     E = i(834730),
     g = i(821609),
@@ -157,11 +157,11 @@ function ts(t) {
         },
         x = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === I ? (g ? A.o : f.B) : h ? y.D : m.l),
+        (e = "sent" === I ? (g ? A.o : f.B) : h ? y.D : p.l),
         (0, n.jsx)(d.m, {
             text: x,
             "aria-label": x,
-            children: (0, n.jsx)(p.K, {
+            children: (0, n.jsx)(m.K, {
                 icon: e,
                 "aria-label": x,
                 loading: "sending" === I,
@@ -201,13 +201,13 @@ function to(t) {
                 }
             }
         },
-        m = ta.intl.string(ta.t.OKsSCR);
+        p = ta.intl.string(ta.t.OKsSCR);
     return (0, n.jsx)(d.m, {
-        text: m,
-        "aria-label": m,
-        children: (0, n.jsx)(p.K, {
+        text: p,
+        "aria-label": p,
+        children: (0, n.jsx)(m.K, {
             icon: "sent" === u ? f.B : I.E,
-            "aria-label": m,
+            "aria-label": p,
             loading: "sending" === u,
             onClick: y,
             variant: "subtle" === a ? "icon-only" : "secondary",
@@ -344,7 +344,7 @@ function tA(t) {
                     if (i.type !== tn.ZzC.USER) return t;
                     let n = i.party.currentActivities;
                     if (0 === n.length) return t;
-                    for (let i of n) i.game.id === e && null != i.activity && t.push(i);
+                    for (let i of n) i.application.id === e && null != i.activity && t.push(i);
                     return t;
                 }, [])
                 .filter((t) => {
@@ -386,8 +386,8 @@ function tA(t) {
                                     author_id: t.activityUser.id,
                                     extra: {
                                         type: "played_game_extra",
-                                        game_name: t.activity?.name ?? t.game.name,
-                                        application_id: t.activity?.application_id ?? t.game.id,
+                                        game_name: t.activity?.name ?? t.application.name,
+                                        application_id: t.activity?.application_id ?? t.application.id,
                                         fake_inventory_item: !0,
                                     },
                                     content_type: o.ContentInventoryEntryType.PLAYED_GAME,
@@ -442,7 +442,7 @@ function ty(t) {
               ],
           });
 }
-function tm(t) {
+function tp(t) {
     let { locked: e } = t,
         i = (0, ti.b4)(),
         l = i?.id,

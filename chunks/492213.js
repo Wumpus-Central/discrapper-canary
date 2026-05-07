@@ -28,8 +28,6 @@ e.exports = {
     q_: "applicationStreamingPreviewWrapper__00943",
     Er: "applicationStreamingHoverText__00943",
     IN: "applicationStreamingPreviewSize__00943",
-    oc: "xboxSection__00943",
-    Ai: "xboxSectionIcon__00943",
     SM: "twitchSectionHeader__00943",
     x5: "twitchSectionSimple__00943 twitchSectionHeader__00943",
     Qh: "twitchSectionFull__00943 twitchSectionHeader__00943",
