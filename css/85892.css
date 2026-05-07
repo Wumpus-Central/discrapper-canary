@@ -442,7 +442,8 @@
     max-width: 196px;
     word-wrap: break-word;
     color: var(--text-default);
-    pointer-events: none
+    pointer-events: none;
+    text-align: start
 }
 
 .favoriteIcon_c9fddf {

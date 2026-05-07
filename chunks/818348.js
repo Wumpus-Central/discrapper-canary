@@ -555,6 +555,7 @@ let ey = 250,
         CHANNEL: (e, t) => `/channels/${e}/${t}`,
         REPORT: `${P}/report`,
         QUEST_PREVIEW_TOOL_2: (e) => `${P}/quest-preview/${e}`,
+        QUEST_HOME_PREVIEW: (e) => `${P}/quest-home?ad_creative_ids=${e}`,
     });
 var eL =
     (((I = eL || {}).INDEX = "/"),

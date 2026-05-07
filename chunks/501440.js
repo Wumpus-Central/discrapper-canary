@@ -3426,17 +3426,20 @@ function i2(e) {
         o = (0, m.bG)([nS.A], () => nS.A.getRelationshipType(l.id), [l.id]),
         c = n.id === s,
         d = !0 === l.bot,
-        u = i1.n;
+        u = l.isNonUserBot(),
+        h = i1.n;
     return (
-        a || c
-            ? (t = (0, r.jsx)(i0, { channel: n, user: l }))
-            : d
-              ? (t = (0, r.jsx)(iv, { channel: n, user: l }))
-              : ((t = (0, r.jsx)(iq, { channel: n, user: l, showingBanner: i })),
-                o === eh.eA$.PENDING_INCOMING && (u = i1.O)),
+        u
+            ? (t = null)
+            : a || c
+              ? (t = (0, r.jsx)(i0, { channel: n, user: l }))
+              : d
+                ? (t = (0, r.jsx)(iv, { channel: n, user: l }))
+                : ((t = (0, r.jsx)(iq, { channel: n, user: l, showingBanner: i })),
+                  o === eh.eA$.PENDING_INCOMING && (h = i1.O)),
         (0, r.jsxs)("div", {
-            className: u,
-            children: [(0, r.jsx)(iO, { userId: l.id, channelId: n.id, showDivider: u !== i1.O }), t],
+            className: h,
+            children: [(0, r.jsx)(iO, { userId: l.id, channelId: n.id, showDivider: h !== i1.O }), t],
         })
     );
 }
