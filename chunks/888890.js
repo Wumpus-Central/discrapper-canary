@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"+utqaz":["ギフト背景オプション：",[1,"giftStyle"]],"B9XqQk":["ボックス"],"AJ4iir":["ケーキ"],"P5keo3":["宝箱"],"w84vET":["コーヒー"],"6dCq/u":["カップ"],"+HMF8k":["Nitroween"],"vd1fu/":["ホリデーボックス"],"aubYGR":["ホリデーケーキ"],"vjxYqU":["ホリデー宝箱"],"bHuJLa":["ホリデーコーヒー"],"M6cPwB":["スノードーム"],"GzPel1":["ボックス"]}',
+    '{"+utqaz":["\u30AE\u30D5\u30C8\u80CC\u666F\u30AA\u30D7\u30B7\u30E7\u30F3\uFF1A",[1,"giftStyle"]],"B9XqQk":["\u30DC\u30C3\u30AF\u30B9"],"AJ4iir":["\u30B1\u30FC\u30AD"],"P5keo3":["\u5B9D\u7BB1"],"w84vET":["\u30B3\u30FC\u30D2\u30FC"],"6dCq/u":["\u30AB\u30C3\u30D7"],"+HMF8k":["Nitroween"],"vd1fu/":["\u30DB\u30EA\u30C7\u30FC\u30DC\u30C3\u30AF\u30B9"],"aubYGR":["\u30DB\u30EA\u30C7\u30FC\u30B1\u30FC\u30AD"],"vjxYqU":["\u30DB\u30EA\u30C7\u30FC\u5B9D\u7BB1"],"bHuJLa":["\u30DB\u30EA\u30C7\u30FC\u30B3\u30FC\u30D2\u30FC"],"M6cPwB":["\u30B9\u30CE\u30FC\u30C9\u30FC\u30E0"],"GzPel1":["\u30DC\u30C3\u30AF\u30B9"]}',
 );

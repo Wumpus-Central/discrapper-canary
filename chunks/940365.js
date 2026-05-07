@@ -1,3 +1,3 @@
 i.exports = JSON.parse(
-    '{"+utqaz":["선물 배경 옵션: ",[1,"giftStyle"]],"B9XqQk":["상자"],"AJ4iir":["케이크"],"P5keo3":["보물 상자"],"w84vET":["커피"],"6dCq/u":["컵"],"+HMF8k":["Nitro 할로윈"],"vd1fu/":["휴일 상자"],"aubYGR":["휴일 케이크"],"vjxYqU":["연말 보물 상자"],"bHuJLa":["휴일 커피"],"M6cPwB":["스노 글로브"],"GzPel1":["상자"]}',
+    '{"+utqaz":["\uC120\uBB3C \uBC30\uACBD \uC635\uC158: ",[1,"giftStyle"]],"B9XqQk":["\uC0C1\uC790"],"AJ4iir":["\uCF00\uC774\uD06C"],"P5keo3":["\uBCF4\uBB3C \uC0C1\uC790"],"w84vET":["\uCEE4\uD53C"],"6dCq/u":["\uCEF5"],"+HMF8k":["Nitro \uD560\uB85C\uC708"],"vd1fu/":["\uD734\uC77C \uC0C1\uC790"],"aubYGR":["\uD734\uC77C \uCF00\uC774\uD06C"],"vjxYqU":["\uC5F0\uB9D0 \uBCF4\uBB3C \uC0C1\uC790"],"bHuJLa":["\uD734\uC77C \uCEE4\uD53C"],"M6cPwB":["\uC2A4\uB178 \uAE00\uB85C\uBE0C"],"GzPel1":["\uC0C1\uC790"]}',
 );

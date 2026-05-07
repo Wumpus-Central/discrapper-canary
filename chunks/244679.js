@@ -203,7 +203,7 @@ let h = {
     localize: m,
     match: {
         ordinalNumber: (0, u.A)({
-            matchPattern: /^(\d+)(º)?/i,
+            matchPattern: /^(\d+)(\xba)?/i,
             parsePattern: /\d+/i,
             valueCallback: function (e) {
                 return parseInt(e, 10);
@@ -213,17 +213,20 @@ let h = {
             matchPatterns: {
                 narrow: /^(ac|dc|a|d)/i,
                 abbreviated: /^(a\.?\s?c\.?|a\.?\s?e\.?\s?c\.?|d\.?\s?c\.?|e\.?\s?c\.?)/i,
-                wide: /^(antes de cristo|antes de la era com[uú]n|despu[eé]s de cristo|era com[uú]n)/i,
+                wide: /^(antes de cristo|antes de la era com[u\xfa]n|despu[e\xe9]s de cristo|era com[u\xfa]n)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {
                 any: [/^ac/i, /^dc/i],
-                wide: [/^(antes de cristo|antes de la era com[uú]n)/i, /^(despu[eé]s de cristo|era com[uú]n)/i],
+                wide: [
+                    /^(antes de cristo|antes de la era com[u\xfa]n)/i,
+                    /^(despu[e\xe9]s de cristo|era com[u\xfa]n)/i,
+                ],
             },
             defaultParseWidth: "any",
         }),
         quarter: (0, l.A)({
-            matchPatterns: { narrow: /^[1234]/i, abbreviated: /^T[1234]/i, wide: /^[1234](º)? trimestre/i },
+            matchPatterns: { narrow: /^[1234]/i, abbreviated: /^T[1234]/i, wide: /^[1234](\xba)? trimestre/i },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
             defaultParseWidth: "any",
@@ -260,9 +263,9 @@ let h = {
         day: (0, l.A)({
             matchPatterns: {
                 narrow: /^[dlmjvs]/i,
-                short: /^(do|lu|ma|mi|ju|vi|s[áa])/i,
-                abbreviated: /^(dom|lun|mar|mi[ée]|jue|vie|s[áa]b)/i,
-                wide: /^(domingo|lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado)/i,
+                short: /^(do|lu|ma|mi|ju|vi|s[\xe1a])/i,
+                abbreviated: /^(dom|lun|mar|mi[\xe9e]|jue|vie|s[\xe1a]b)/i,
+                wide: /^(domingo|lunes|martes|mi[\xe9e]rcoles|jueves|viernes|s[\xe1a]bado)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {
@@ -273,8 +276,8 @@ let h = {
         }),
         dayPeriod: (0, l.A)({
             matchPatterns: {
-                narrow: /^(a|p|mn|md|(de la|a las) (mañana|tarde|noche))/i,
-                any: /^([ap]\.?\s?m\.?|medianoche|mediodia|(de la|a las) (mañana|tarde|noche))/i,
+                narrow: /^(a|p|mn|md|(de la|a las) (ma\xf1ana|tarde|noche))/i,
+                any: /^([ap]\.?\s?m\.?|medianoche|mediodia|(de la|a las) (ma\xf1ana|tarde|noche))/i,
             },
             defaultMatchWidth: "any",
             parsePatterns: {
@@ -283,7 +286,7 @@ let h = {
                     pm: /^p/i,
                     midnight: /^mn/i,
                     noon: /^md/i,
-                    morning: /mañana/i,
+                    morning: /ma\xf1ana/i,
                     afternoon: /tarde/i,
                     evening: /tarde/i,
                     night: /noche/i,

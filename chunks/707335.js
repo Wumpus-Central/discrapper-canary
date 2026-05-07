@@ -45,7 +45,7 @@ function L(e) {
         className: K.W$,
         variant: "text-sm/normal",
         color: "text-default",
-        children: [k.intl.string(k.t.Jmh6n9), "\xa0 • \xa0", (0, G.aK)(a)],
+        children: [k.intl.string(k.t.Jmh6n9), "\xa0 \u2022 \xa0", (0, G.aK)(a)],
     });
 }
 function W(e) {
@@ -78,7 +78,7 @@ function W(e) {
             (0, l.jsx)(v.g, { name: i, colorString: d, colorStrings: u, className: K.fh }),
             ":\xa0",
             h,
-            "\xa0 • \xa0",
+            "\xa0 \u2022 \xa0",
             (0, G.aK)(F.default.extractTimestamp(a.id)),
         ],
     });
@@ -126,7 +126,7 @@ function D(e) {
                                       t,
                                   ),
                           }),
-                          (0, l.jsx)("span", { className: K.xE, children: "•" }),
+                          (0, l.jsx)("span", { className: K.xE, children: "\u2022" }),
                           k.intl.format(k.t["5Wk9+o"], { time: (0, G.aK)(s) }),
                       ],
                   }),

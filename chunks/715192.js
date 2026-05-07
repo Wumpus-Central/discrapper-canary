@@ -1,9 +1,9 @@
 a.r(i), a.d(i, { default: () => u });
 var t = {
-        lessThanXSeconds: { one: "moins d’une seconde", other: "moins de {{count}} secondes" },
+        lessThanXSeconds: { one: "moins d\u2019une seconde", other: "moins de {{count}} secondes" },
         xSeconds: { one: "1 seconde", other: "{{count}} secondes" },
         halfAMinute: "30 secondes",
-        lessThanXMinutes: { one: "moins d’une minute", other: "moins de {{count}} minutes" },
+        lessThanXMinutes: { one: "moins d\u2019une minute", other: "moins de {{count}} minutes" },
         xMinutes: { one: "1 minute", other: "{{count}} minutes" },
         aboutXHours: { one: "environ 1 heure", other: "environ {{count}} heures" },
         xHours: { one: "1 heure", other: "{{count}} heures" },
@@ -14,8 +14,8 @@ var t = {
         xMonths: { one: "1 mois", other: "{{count}} mois" },
         aboutXYears: { one: "environ 1 an", other: "environ {{count}} ans" },
         xYears: { one: "1 an", other: "{{count}} ans" },
-        overXYears: { one: "plus d’un an", other: "plus de {{count}} ans" },
-        almostXYears: { one: "presqu’un an", other: "presque {{count}} ans" },
+        overXYears: { one: "plus d\u2019un an", other: "plus de {{count}} ans" },
+        almostXYears: { one: "presqu\u2019un an", other: "presque {{count}} ans" },
     },
     n = a(385987),
     r = {
@@ -40,7 +40,7 @@ var t = {
     o = {
         lastWeek: "eeee 'dernier \xe0' p",
         yesterday: "'hier \xe0' p",
-        today: "'aujourd’hui \xe0' p",
+        today: "'aujourd\u2019hui \xe0' p",
         tomorrow: "'demain \xe0' p'",
         nextWeek: "eeee 'prochain \xe0' p",
         other: "P",
@@ -151,7 +151,7 @@ var t = {
                     midnight: "minuit",
                     noon: "midi",
                     morning: "du matin",
-                    afternoon: "de l’apr\xe8s-midi",
+                    afternoon: "de l\u2019apr\xe8s-midi",
                     evening: "du soir",
                     night: "du matin",
                 },
@@ -180,7 +180,7 @@ let u = {
     localize: m,
     match: {
         ordinalNumber: (0, a(722023).A)({
-            matchPattern: /^(\d+)(ième|ère|ème|er|e)?/i,
+            matchPattern: /^(\d+)(i\xe8me|\xe8re|\xe8me|er|e)?/i,
             parsePattern: /\d+/i,
             valueCallback: function (e) {
                 return parseInt(e);
@@ -190,7 +190,7 @@ let u = {
             matchPatterns: {
                 narrow: /^(av\.J\.C|ap\.J\.C|ap\.J\.-C)/i,
                 abbreviated: /^(av\.J\.-C|av\.J-C|apr\.J\.-C|apr\.J-C|ap\.J-C)/i,
-                wide: /^(avant Jésus-Christ|après Jésus-Christ)/i,
+                wide: /^(avant J\xe9sus-Christ|apr\xe8s J\xe9sus-Christ)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/^av/i, /^ap/i] },
@@ -199,8 +199,8 @@ let u = {
         quarter: (0, s.A)({
             matchPatterns: {
                 narrow: /^T?[1234]/i,
-                abbreviated: /^[1234](er|ème|e)? trim\.?/i,
-                wide: /^[1234](er|ème|e)? trimestre/i,
+                abbreviated: /^[1234](er|\xe8me|e)? trim\.?/i,
+                wide: /^[1234](er|\xe8me|e)? trimestre/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
@@ -212,8 +212,8 @@ let u = {
         month: (0, s.A)({
             matchPatterns: {
                 narrow: /^[jfmasond]/i,
-                abbreviated: /^(janv|févr|mars|avr|mai|juin|juill|juil|août|sept|oct|nov|déc)\.?/i,
-                wide: /^(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)/i,
+                abbreviated: /^(janv|f\xe9vr|mars|avr|mai|juin|juill|juil|ao\xfbt|sept|oct|nov|d\xe9c)\.?/i,
+                wide: /^(janvier|f\xe9vrier|mars|avril|mai|juin|juillet|ao\xfbt|septembre|octobre|novembre|d\xe9cembre)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {
@@ -239,7 +239,7 @@ let u = {
         dayPeriod: (0, s.A)({
             matchPatterns: {
                 narrow: /^(a|p|minuit|midi|mat\.?|ap\.?m\.?|soir|nuit)/i,
-                any: /^([ap]\.?\s?m\.?|du matin|de l'après[-\s]midi|du soir|de la nuit)/i,
+                any: /^([ap]\.?\s?m\.?|du matin|de l'apr\xe8s[-\s]midi|du soir|de la nuit)/i,
             },
             defaultMatchWidth: "any",
             parsePatterns: {

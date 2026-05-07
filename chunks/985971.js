@@ -158,7 +158,7 @@ class s {
             : ((this.cachedPrimaryTimePattern =
                   ((e = this.primaryPatternLeftBoundary()),
                   RegExp(
-                      `${e}${t}(\\d{1,4})(?:(?:\\.|:|：)(\\d{1,2})(?:(?::|：)(\\d{2})(?:\\.(\\d{1,6}))?)?)?(?:\\s*(a\\.m\\.|p\\.m\\.|am?|pm?))?${r}`,
+                      `${e}${t}(\\d{1,4})(?:(?:\\.|:|\u{FF1A})(\\d{1,2})(?:(?::|\u{FF1A})(\\d{2})(?:\\.(\\d{1,6}))?)?)?(?:\\s*(a\\.m\\.|p\\.m\\.|am?|pm?))?${r}`,
                       this.patternFlags(),
                   ))),
               (this.cachedPrimaryPrefix = t),
@@ -174,7 +174,7 @@ class s {
         return this.cachedFollowingPhase === e && this.cachedFollowingSuffix === t
             ? this.cachedFollowingTimePatten
             : ((this.cachedFollowingTimePatten = RegExp(
-                  `^(${e})(\\d{1,4})(?:(?:\\.|\\:|\\：)(\\d{1,2})(?:(?:\\.|\\:|\\：)(\\d{1,2})(?:\\.(\\d{1,6}))?)?)?(?:\\s*(a\\.m\\.|p\\.m\\.|am?|pm?))?${t}`,
+                  `^(${e})(\\d{1,4})(?:(?:\\.|\\:|\\\u{FF1A})(\\d{1,2})(?:(?:\\.|\\:|\\\u{FF1A})(\\d{1,2})(?:\\.(\\d{1,6}))?)?)?(?:\\s*(a\\.m\\.|p\\.m\\.|am?|pm?))?${t}`,
                   "i",
               )),
               (this.cachedFollowingPhase = e),

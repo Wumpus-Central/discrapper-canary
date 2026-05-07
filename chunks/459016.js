@@ -31,7 +31,7 @@ let u = {
     "es-ES": { group: ".", decimal: "," },
     "es-419": { group: ".", decimal: "," },
     fi: { group: " ", decimal: "," },
-    fr: { group: " ", decimal: "," },
+    fr: { group: "\u202F", decimal: "," },
     hi: { group: ",", decimal: "." },
     hr: { group: ".", decimal: "," },
     hu: { group: " ", decimal: "," },

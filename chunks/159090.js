@@ -1,21 +1,34 @@
 n(989349).defineLocale("ka", {
     months: {
         standalone:
-            "იანვარი_თებერვალი_მარტი_აპრილი_მაისი_ივნისი_ივლისი_აგვისტო_სექტემბერი_ოქტომბერი_ნოემბერი_დეკემბერი".split(
+            "\u10D8\u10D0\u10DC\u10D5\u10D0\u10E0\u10D8_\u10D7\u10D4\u10D1\u10D4\u10E0\u10D5\u10D0\u10DA\u10D8_\u10DB\u10D0\u10E0\u10E2\u10D8_\u10D0\u10DE\u10E0\u10D8\u10DA\u10D8_\u10DB\u10D0\u10D8\u10E1\u10D8_\u10D8\u10D5\u10DC\u10D8\u10E1\u10D8_\u10D8\u10D5\u10DA\u10D8\u10E1\u10D8_\u10D0\u10D2\u10D5\u10D8\u10E1\u10E2\u10DD_\u10E1\u10D4\u10E5\u10E2\u10D4\u10DB\u10D1\u10D4\u10E0\u10D8_\u10DD\u10E5\u10E2\u10DD\u10DB\u10D1\u10D4\u10E0\u10D8_\u10DC\u10DD\u10D4\u10DB\u10D1\u10D4\u10E0\u10D8_\u10D3\u10D4\u10D9\u10D4\u10DB\u10D1\u10D4\u10E0\u10D8".split(
                 "_",
             ),
-        format: "იანვარს_თებერვალს_მარტს_აპრილის_მაისს_ივნისს_ივლისს_აგვისტს_სექტემბერს_ოქტომბერს_ნოემბერს_დეკემბერს".split(
+        format: "\u10D8\u10D0\u10DC\u10D5\u10D0\u10E0\u10E1_\u10D7\u10D4\u10D1\u10D4\u10E0\u10D5\u10D0\u10DA\u10E1_\u10DB\u10D0\u10E0\u10E2\u10E1_\u10D0\u10DE\u10E0\u10D8\u10DA\u10D8\u10E1_\u10DB\u10D0\u10D8\u10E1\u10E1_\u10D8\u10D5\u10DC\u10D8\u10E1\u10E1_\u10D8\u10D5\u10DA\u10D8\u10E1\u10E1_\u10D0\u10D2\u10D5\u10D8\u10E1\u10E2\u10E1_\u10E1\u10D4\u10E5\u10E2\u10D4\u10DB\u10D1\u10D4\u10E0\u10E1_\u10DD\u10E5\u10E2\u10DD\u10DB\u10D1\u10D4\u10E0\u10E1_\u10DC\u10DD\u10D4\u10DB\u10D1\u10D4\u10E0\u10E1_\u10D3\u10D4\u10D9\u10D4\u10DB\u10D1\u10D4\u10E0\u10E1".split(
             "_",
         ),
     },
-    monthsShort: "იან_თებ_მარ_აპრ_მაი_ივნ_ივლ_აგვ_სექ_ოქტ_ნოე_დეკ".split("_"),
+    monthsShort:
+        "\u10D8\u10D0\u10DC_\u10D7\u10D4\u10D1_\u10DB\u10D0\u10E0_\u10D0\u10DE\u10E0_\u10DB\u10D0\u10D8_\u10D8\u10D5\u10DC_\u10D8\u10D5\u10DA_\u10D0\u10D2\u10D5_\u10E1\u10D4\u10E5_\u10DD\u10E5\u10E2_\u10DC\u10DD\u10D4_\u10D3\u10D4\u10D9".split(
+            "_",
+        ),
     weekdays: {
-        standalone: "კვირა_ორშაბათი_სამშაბათი_ოთხშაბათი_ხუთშაბათი_პარასკევი_შაბათი".split("_"),
-        format: "კვირას_ორშაბათს_სამშაბათს_ოთხშაბათს_ხუთშაბათს_პარასკევს_შაბათს".split("_"),
-        isFormat: /(წინა|შემდეგ)/,
+        standalone:
+            "\u10D9\u10D5\u10D8\u10E0\u10D0_\u10DD\u10E0\u10E8\u10D0\u10D1\u10D0\u10D7\u10D8_\u10E1\u10D0\u10DB\u10E8\u10D0\u10D1\u10D0\u10D7\u10D8_\u10DD\u10D7\u10EE\u10E8\u10D0\u10D1\u10D0\u10D7\u10D8_\u10EE\u10E3\u10D7\u10E8\u10D0\u10D1\u10D0\u10D7\u10D8_\u10DE\u10D0\u10E0\u10D0\u10E1\u10D9\u10D4\u10D5\u10D8_\u10E8\u10D0\u10D1\u10D0\u10D7\u10D8".split(
+                "_",
+            ),
+        format: "\u10D9\u10D5\u10D8\u10E0\u10D0\u10E1_\u10DD\u10E0\u10E8\u10D0\u10D1\u10D0\u10D7\u10E1_\u10E1\u10D0\u10DB\u10E8\u10D0\u10D1\u10D0\u10D7\u10E1_\u10DD\u10D7\u10EE\u10E8\u10D0\u10D1\u10D0\u10D7\u10E1_\u10EE\u10E3\u10D7\u10E8\u10D0\u10D1\u10D0\u10D7\u10E1_\u10DE\u10D0\u10E0\u10D0\u10E1\u10D9\u10D4\u10D5\u10E1_\u10E8\u10D0\u10D1\u10D0\u10D7\u10E1".split(
+            "_",
+        ),
+        isFormat: /(\u10ec\u10d8\u10dc\u10d0|\u10e8\u10d4\u10db\u10d3\u10d4\u10d2)/,
     },
-    weekdaysShort: "კვი_ორშ_სამ_ოთხ_ხუთ_პარ_შაბ".split("_"),
-    weekdaysMin: "კვ_ორ_სა_ოთ_ხუ_პა_შა".split("_"),
+    weekdaysShort:
+        "\u10D9\u10D5\u10D8_\u10DD\u10E0\u10E8_\u10E1\u10D0\u10DB_\u10DD\u10D7\u10EE_\u10EE\u10E3\u10D7_\u10DE\u10D0\u10E0_\u10E8\u10D0\u10D1".split(
+            "_",
+        ),
+    weekdaysMin: "\u10D9\u10D5_\u10DD\u10E0_\u10E1\u10D0_\u10DD\u10D7_\u10EE\u10E3_\u10DE\u10D0_\u10E8\u10D0".split(
+        "_",
+    ),
     longDateFormat: {
         LT: "h:mm A",
         LTS: "h:mm:ss A",
@@ -25,46 +38,52 @@ n(989349).defineLocale("ka", {
         LLLL: "dddd, D MMMM YYYY h:mm A",
     },
     calendar: {
-        sameDay: "[დღეს] LT[-ზე]",
-        nextDay: "[ხვალ] LT[-ზე]",
-        lastDay: "[გუშინ] LT[-ზე]",
-        nextWeek: "[შემდეგ] dddd LT[-ზე]",
-        lastWeek: "[წინა] dddd LT-ზე",
+        sameDay: "[\u10D3\u10E6\u10D4\u10E1] LT[-\u10D6\u10D4]",
+        nextDay: "[\u10EE\u10D5\u10D0\u10DA] LT[-\u10D6\u10D4]",
+        lastDay: "[\u10D2\u10E3\u10E8\u10D8\u10DC] LT[-\u10D6\u10D4]",
+        nextWeek: "[\u10E8\u10D4\u10DB\u10D3\u10D4\u10D2] dddd LT[-\u10D6\u10D4]",
+        lastWeek: "[\u10EC\u10D8\u10DC\u10D0] dddd LT-\u10D6\u10D4",
         sameElse: "L",
     },
     relativeTime: {
         future: function (e) {
-            return /(წამი|წუთი|საათი|წელი)/.test(e) ? e.replace(/ი$/, "ში") : e + "ში";
+            return /(\u10ec\u10d0\u10db\u10d8|\u10ec\u10e3\u10d7\u10d8|\u10e1\u10d0\u10d0\u10d7\u10d8|\u10ec\u10d4\u10da\u10d8)/.test(
+                e,
+            )
+                ? e.replace(/\u10d8$/, "\u10E8\u10D8")
+                : e + "\u10E8\u10D8";
         },
         past: function (e) {
-            return /(წამი|წუთი|საათი|დღე|თვე)/.test(e)
-                ? e.replace(/(ი|ე)$/, "ის წინ")
-                : /წელი/.test(e)
-                  ? e.replace(/წელი$/, "წლის წინ")
+            return /(\u10ec\u10d0\u10db\u10d8|\u10ec\u10e3\u10d7\u10d8|\u10e1\u10d0\u10d0\u10d7\u10d8|\u10d3\u10e6\u10d4|\u10d7\u10d5\u10d4)/.test(
+                e,
+            )
+                ? e.replace(/(\u10d8|\u10d4)$/, "\u10D8\u10E1 \u10EC\u10D8\u10DC")
+                : /\u10ec\u10d4\u10da\u10d8/.test(e)
+                  ? e.replace(/\u10ec\u10d4\u10da\u10d8$/, "\u10EC\u10DA\u10D8\u10E1 \u10EC\u10D8\u10DC")
                   : void 0;
         },
-        s: "რამდენიმე წამი",
-        ss: "%d წამი",
-        m: "წუთი",
-        mm: "%d წუთი",
-        h: "საათი",
-        hh: "%d საათი",
-        d: "დღე",
-        dd: "%d დღე",
-        M: "თვე",
-        MM: "%d თვე",
-        y: "წელი",
-        yy: "%d წელი",
+        s: "\u10E0\u10D0\u10DB\u10D3\u10D4\u10DC\u10D8\u10DB\u10D4 \u10EC\u10D0\u10DB\u10D8",
+        ss: "%d \u10EC\u10D0\u10DB\u10D8",
+        m: "\u10EC\u10E3\u10D7\u10D8",
+        mm: "%d \u10EC\u10E3\u10D7\u10D8",
+        h: "\u10E1\u10D0\u10D0\u10D7\u10D8",
+        hh: "%d \u10E1\u10D0\u10D0\u10D7\u10D8",
+        d: "\u10D3\u10E6\u10D4",
+        dd: "%d \u10D3\u10E6\u10D4",
+        M: "\u10D7\u10D5\u10D4",
+        MM: "%d \u10D7\u10D5\u10D4",
+        y: "\u10EC\u10D4\u10DA\u10D8",
+        yy: "%d \u10EC\u10D4\u10DA\u10D8",
     },
-    dayOfMonthOrdinalParse: /0|1-ლი|მე-\d{1,2}|\d{1,2}-ე/,
+    dayOfMonthOrdinalParse: /0|1-\u10da\u10d8|\u10db\u10d4-\d{1,2}|\d{1,2}-\u10d4/,
     ordinal: function (e) {
         return 0 === e
             ? e
             : 1 === e
-              ? e + "-ლი"
+              ? e + "-\u10DA\u10D8"
               : e < 20 || (e <= 100 && e % 20 == 0) || e % 100 == 0
-                ? "მე-" + e
-                : e + "-ე";
+                ? "\u10DB\u10D4-" + e
+                : e + "-\u10D4";
     },
     week: { dow: 1, doy: 7 },
 });

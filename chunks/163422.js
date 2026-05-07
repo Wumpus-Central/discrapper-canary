@@ -2,7 +2,7 @@ o.r(t), o.d(t, { videoQuestCollection: () => X, playgroundConfig: () => Z });
 var a = o(782134),
     i = o(627968),
     n = o(64700),
-    l = o(785651),
+    l = o(873174),
     r = o(831544),
     s = o(231723),
     d = o(717421),
@@ -496,7 +496,7 @@ let B = {
         controls: { ...B, orientation: { ...B.orientation, defaultValue: "portrait" } },
     },
     q =
-        'Quest completion is server-driven. In the playground, crossing the reward indicator won\'t flip to the completed state — toggle "Quest Completed" to preview that UI.',
+        'Quest completion is server-driven. In the playground, crossing the reward indicator won\'t flip to the completed state \u2014 toggle "Quest Completed" to preview that UI.',
     H = {
         marginTop: "12px",
         padding: "8px 12px",
@@ -631,7 +631,7 @@ let { useNewStyling: K, ...Y } = B,
                         },
                     },
                     {
-                        name: "Landscape — Autoplay",
+                        name: "Landscape \u2014 Autoplay",
                         id: "landscape-video-composed-autoplay",
                         component: W,
                         controls: {
@@ -643,7 +643,7 @@ let { useNewStyling: K, ...Y } = B,
                         },
                     },
                     {
-                        name: "Landscape — Progress Persistence",
+                        name: "Landscape \u2014 Progress Persistence",
                         id: "landscape-video-composed-persistence",
                         component: function (e) {
                             let {

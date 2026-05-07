@@ -65,7 +65,7 @@ let H = r.memo(function (e) {
                     children: [
                         (0, i.jsxs)("div", {
                             className: V.wx,
-                            children: [(0, i.jsxs)("span", { children: [s, " — ", l] }), (0, i.jsx)(U.A, {})],
+                            children: [(0, i.jsxs)("span", { children: [s, " \u2014 ", l] }), (0, i.jsx)(U.A, {})],
                         }),
                         l <= 3 && !u
                             ? null
@@ -356,7 +356,7 @@ let eM = eL.Ay.getEnableHardwareAcceleration(),
                                     })
                                   : null,
                               (0, i.jsx)("span", { className: B.iy, children: s }),
-                              null == c ? null : (0, i.jsxs)("span", { children: ["\xa0— ", c] }),
+                              null == c ? null : (0, i.jsxs)("span", { children: ["\xa0\u2014 ", c] }),
                           ],
                       }),
                   ],

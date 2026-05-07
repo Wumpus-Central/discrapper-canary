@@ -24,7 +24,7 @@ let l = {
         segunda: 1,
         "segunda-feira": 1,
         seg: 1,
-        terça: 2,
+        "ter\xe7a": 2,
         "ter\xe7a-feira": 2,
         ter: 2,
         quarta: 3,
@@ -36,7 +36,7 @@ let l = {
         sexta: 5,
         "sexta-feira": 5,
         sex: 5,
-        sábado: 6,
+        "s\xe1bado": 6,
         sabado: 6,
         sab: 6,
     },
@@ -47,7 +47,7 @@ let l = {
         fevereiro: 2,
         fev: 2,
         "fev.": 2,
-        março: 3,
+        "mar\xe7o": 3,
         mar: 3,
         "mar.": 3,
         abril: 4,
@@ -82,7 +82,7 @@ var m = r(476858),
     d = r(355418),
     c = r(1673);
 let g = RegExp(
-    `(?:(?:\\,|\\(|\\（)\\s*)?(?:(este|esta|passado|pr[o\xf3]ximo)\\s*)?(${(0, m.uJ)(l)})(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(este|esta|passado|pr[\xf3o]ximo)\\s*semana)?(?=\\W|\\d|$)`,
+    `(?:(?:\\,|\\(|\\\u{FF08})\\s*)?(?:(este|esta|passado|pr[o\xf3]ximo)\\s*)?(${(0, m.uJ)(l)})(?:\\s*(?:\\,|\\)|\\\u{FF09}))?(?:\\s*(este|esta|passado|pr[\xf3o]ximo)\\s*semana)?(?=\\W|\\d|$)`,
     "i",
 );
 class h extends d.c {
@@ -113,7 +113,7 @@ class p extends f.B {
         return "(?:(?:ao?|\xe0s?|das|da|de|do)\\s*)?";
     }
     followingPhase() {
-        return "\\s*(?:\\-|\\–|\\~|\\〜|a(?:o)?|\\?)\\s*";
+        return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:o)?|\\?)\\s*";
     }
 }
 var y = r(230205);
@@ -130,7 +130,7 @@ class D extends w.A {
 }
 var P = r(364242);
 let F = RegExp(
-    `([0-9]{1,2})(?:\xba|\xaa|\xb0)?(?:\\s*(?:desde|de|\\-|\\–|ao?|\\s)\\s*([0-9]{1,2})(?:\xba|\xaa|\xb0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(${(0, m.uJ)(u)})(?:\\s*(?:de|,)?\\s*([0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?))?(?=\\W|$)`,
+    `([0-9]{1,2})(?:\xba|\xaa|\xb0)?(?:\\s*(?:desde|de|\\-|\\\u{2013}|ao?|\\s)\\s*([0-9]{1,2})(?:\xba|\xaa|\xb0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(${(0, m.uJ)(u)})(?:\\s*(?:de|,)?\\s*([0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?))?(?=\\W|$)`,
     "i",
 );
 class C extends d.c {
@@ -165,7 +165,7 @@ class C extends d.c {
 var T = r(996483);
 class v extends d.c {
     innerPattern(e) {
-        return /(agora|hoje|amanha|amanhã|ontem)(?=\W|$)/i;
+        return /(agora|hoje|amanha|amanh\xe3|ontem)(?=\W|$)/i;
     }
     innerExtract(e, t) {
         let r = t[0].toLowerCase(),
@@ -184,10 +184,10 @@ class v extends d.c {
         return n;
     }
 }
-var M = r(658809);
+var M = r(881190);
 class $ extends d.c {
     innerPattern() {
-        return /(?:esta\s*)?(manha|manhã|tarde|meia-noite|meio-dia|noite)(?=\W|$)/i;
+        return /(?:esta\s*)?(manha|manh\xe3|tarde|meia-noite|meio-dia|noite)(?=\W|$)/i;
     }
     innerExtract(e, t) {
         let r = e.refDate,

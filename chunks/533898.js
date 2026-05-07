@@ -35,7 +35,7 @@ var s = {
             one: "p\xe4iv\xe4",
             other: "{{count}} p\xe4iv\xe4\xe4",
             futureTense: function (a) {
-                return a.replace(/päivää?/, "p\xe4iv\xe4n");
+                return a.replace(/p\xe4iv\xe4\xe4?/, "p\xe4iv\xe4n");
             },
         },
         aboutXWeeks: { one: "noin viikko", other: "noin {{count}} viikkoa", futureTense: r },
@@ -226,7 +226,7 @@ let b = {
             matchPatterns: {
                 narrow: /^(e|j)/i,
                 abbreviated: /^(eaa.|jaa.)/i,
-                wide: /^(ennen ajanlaskun alkua|jälkeen ajanlaskun alun)/i,
+                wide: /^(ennen ajanlaskun alkua|j\xe4lkeen ajanlaskun alun)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/^e/i, /^j/i] },
@@ -244,8 +244,8 @@ let b = {
         month: (0, w.A)({
             matchPatterns: {
                 narrow: /^[thmkeslj]/i,
-                abbreviated: /^(tammi|helmi|maalis|huhti|touko|kesä|heinä|elo|syys|loka|marras|joulu)/i,
-                wide: /^(tammikuu|helmikuu|maaliskuu|huhtikuu|toukokuu|kesäkuu|heinäkuu|elokuu|syyskuu|lokakuu|marraskuu|joulukuu)(ta)?/i,
+                abbreviated: /^(tammi|helmi|maalis|huhti|touko|kes\xe4|hein\xe4|elo|syys|loka|marras|joulu)/i,
+                wide: /^(tammikuu|helmikuu|maaliskuu|huhtikuu|toukokuu|kes\xe4kuu|hein\xe4kuu|elokuu|syyskuu|lokakuu|marraskuu|joulukuu)(ta)?/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {
@@ -270,20 +270,20 @@ let b = {
         }),
         dayPeriod: (0, w.A)({
             matchPatterns: {
-                narrow: /^(ap|ip|keskiyö|keskipäivä|aamupäivällä|iltapäivällä|illalla|yöllä)/i,
-                any: /^(ap|ip|keskiyöllä|keskipäivällä|aamupäivällä|iltapäivällä|illalla|yöllä)/i,
+                narrow: /^(ap|ip|keskiy\xf6|keskip\xe4iv\xe4|aamup\xe4iv\xe4ll\xe4|iltap\xe4iv\xe4ll\xe4|illalla|y\xf6ll\xe4)/i,
+                any: /^(ap|ip|keskiy\xf6ll\xe4|keskip\xe4iv\xe4ll\xe4|aamup\xe4iv\xe4ll\xe4|iltap\xe4iv\xe4ll\xe4|illalla|y\xf6ll\xe4)/i,
             },
             defaultMatchWidth: "any",
             parsePatterns: {
                 any: {
                     am: /^ap/i,
                     pm: /^ip/i,
-                    midnight: /^keskiyö/i,
-                    noon: /^keskipäivä/i,
-                    morning: /aamupäivällä/i,
-                    afternoon: /iltapäivällä/i,
+                    midnight: /^keskiy\xf6/i,
+                    noon: /^keskip\xe4iv\xe4/i,
+                    morning: /aamup\xe4iv\xe4ll\xe4/i,
+                    afternoon: /iltap\xe4iv\xe4ll\xe4/i,
                     evening: /illalla/i,
-                    night: /yöllä/i,
+                    night: /y\xf6ll\xe4/i,
                 },
             },
             defaultParseWidth: "any",

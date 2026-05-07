@@ -1,80 +1,88 @@
 n(989349).defineLocale("zh-tw", {
-    months: "一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月".split("_"),
-    monthsShort: "1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月".split("_"),
-    weekdays: "星期日_星期一_星期二_星期三_星期四_星期五_星期六".split("_"),
-    weekdaysShort: "週日_週一_週二_週三_週四_週五_週六".split("_"),
-    weekdaysMin: "日_一_二_三_四_五_六".split("_"),
+    months: "\u4E00\u6708_\u4E8C\u6708_\u4E09\u6708_\u56DB\u6708_\u4E94\u6708_\u516D\u6708_\u4E03\u6708_\u516B\u6708_\u4E5D\u6708_\u5341\u6708_\u5341\u4E00\u6708_\u5341\u4E8C\u6708".split(
+        "_",
+    ),
+    monthsShort:
+        "1\u6708_2\u6708_3\u6708_4\u6708_5\u6708_6\u6708_7\u6708_8\u6708_9\u6708_10\u6708_11\u6708_12\u6708".split("_"),
+    weekdays:
+        "\u661F\u671F\u65E5_\u661F\u671F\u4E00_\u661F\u671F\u4E8C_\u661F\u671F\u4E09_\u661F\u671F\u56DB_\u661F\u671F\u4E94_\u661F\u671F\u516D".split(
+            "_",
+        ),
+    weekdaysShort: "\u9031\u65E5_\u9031\u4E00_\u9031\u4E8C_\u9031\u4E09_\u9031\u56DB_\u9031\u4E94_\u9031\u516D".split(
+        "_",
+    ),
+    weekdaysMin: "\u65E5_\u4E00_\u4E8C_\u4E09_\u56DB_\u4E94_\u516D".split("_"),
     longDateFormat: {
         LT: "HH:mm",
         LTS: "HH:mm:ss",
         L: "YYYY/MM/DD",
-        LL: "YYYY年M月D日",
-        LLL: "YYYY年M月D日 HH:mm",
-        LLLL: "YYYY年M月D日dddd HH:mm",
+        LL: "YYYY\u5E74M\u6708D\u65E5",
+        LLL: "YYYY\u5E74M\u6708D\u65E5 HH:mm",
+        LLLL: "YYYY\u5E74M\u6708D\u65E5dddd HH:mm",
         l: "YYYY/M/D",
-        ll: "YYYY年M月D日",
-        lll: "YYYY年M月D日 HH:mm",
-        llll: "YYYY年M月D日dddd HH:mm",
+        ll: "YYYY\u5E74M\u6708D\u65E5",
+        lll: "YYYY\u5E74M\u6708D\u65E5 HH:mm",
+        llll: "YYYY\u5E74M\u6708D\u65E5dddd HH:mm",
     },
-    meridiemParse: /凌晨|早上|上午|中午|下午|晚上/,
+    meridiemParse: /\u51cc\u6668|\u65e9\u4e0a|\u4e0a\u5348|\u4e2d\u5348|\u4e0b\u5348|\u665a\u4e0a/,
     meridiemHour: function (e, t) {
-        return (12 === e && (e = 0), "凌晨" === t || "早上" === t || "上午" === t)
+        return (12 === e && (e = 0), "\u51CC\u6668" === t || "\u65E9\u4E0A" === t || "\u4E0A\u5348" === t)
             ? e
-            : "中午" === t
+            : "\u4E2D\u5348" === t
               ? e >= 11
                   ? e
                   : e + 12
-              : "下午" === t || "晚上" === t
+              : "\u4E0B\u5348" === t || "\u665A\u4E0A" === t
                 ? e + 12
                 : void 0;
     },
     meridiem: function (e, t, n) {
-        var r = 100 * e + t;
-        if (r < 600) return "凌晨";
-        if (r < 900) return "早上";
-        if (r < 1130) return "上午";
-        if (r < 1230) return "中午";
-        if (r < 1800) return "下午";
-        else return "晚上";
+        var i = 100 * e + t;
+        if (i < 600) return "\u51CC\u6668";
+        if (i < 900) return "\u65E9\u4E0A";
+        if (i < 1130) return "\u4E0A\u5348";
+        if (i < 1230) return "\u4E2D\u5348";
+        if (i < 1800) return "\u4E0B\u5348";
+        else return "\u665A\u4E0A";
     },
     calendar: {
-        sameDay: "[今天] LT",
-        nextDay: "[明天] LT",
-        nextWeek: "[下]dddd LT",
-        lastDay: "[昨天] LT",
-        lastWeek: "[上]dddd LT",
+        sameDay: "[\u4ECA\u5929] LT",
+        nextDay: "[\u660E\u5929] LT",
+        nextWeek: "[\u4E0B]dddd LT",
+        lastDay: "[\u6628\u5929] LT",
+        lastWeek: "[\u4E0A]dddd LT",
         sameElse: "L",
     },
-    dayOfMonthOrdinalParse: /\d{1,2}(日|月|週)/,
+    dayOfMonthOrdinalParse: /\d{1,2}(\u65e5|\u6708|\u9031)/,
     ordinal: function (e, t) {
         switch (t) {
             case "d":
             case "D":
             case "DDD":
-                return e + "日";
+                return e + "\u65E5";
             case "M":
-                return e + "月";
+                return e + "\u6708";
             case "w":
             case "W":
-                return e + "週";
+                return e + "\u9031";
             default:
                 return e;
         }
     },
     relativeTime: {
-        future: "%s內",
-        past: "%s前",
-        s: "幾秒",
-        ss: "%d 秒",
-        m: "1 分鐘",
-        mm: "%d 分鐘",
-        h: "1 小時",
-        hh: "%d 小時",
-        d: "1 天",
-        dd: "%d 天",
-        M: "1 個月",
-        MM: "%d 個月",
-        y: "1 年",
-        yy: "%d 年",
+        future: "%s\u5167",
+        past: "%s\u524D",
+        s: "\u5E7E\u79D2",
+        ss: "%d \u79D2",
+        m: "1 \u5206\u9418",
+        mm: "%d \u5206\u9418",
+        h: "1 \u5C0F\u6642",
+        hh: "%d \u5C0F\u6642",
+        d: "1 \u5929",
+        dd: "%d \u5929",
+        M: "1 \u500B\u6708",
+        MM: "%d \u500B\u6708",
+        y: "1 \u5E74",
+        yy: "%d \u5E74",
     },
 });

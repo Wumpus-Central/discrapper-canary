@@ -25,8 +25,8 @@ e.exports = !r(function () {
             !t[s] ||
             "a" !== new URL("https://a@b").username ||
             "b" !== new URLSearchParams(new URLSearchParams("a=b")).get("a") ||
-            "xn--e1aybc" !== new URL("https://тест").host ||
-            "#%D0%B1" !== new URL("https://a#б").hash ||
+            "xn--e1aybc" !== new URL("https://\u0442\u0435\u0441\u0442").host ||
+            "#%D0%B1" !== new URL("https://a#\u0431").hash ||
             "a1c3" !== r ||
             "x" !== new URL("https://x", void 0).host
     );

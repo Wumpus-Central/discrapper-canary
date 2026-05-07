@@ -271,7 +271,7 @@ let u = l(a(367019)),
         priority(t) {
             if (void 0 === t) return this.data.priority;
             if (null === t) return (this.data.priority = null), this;
-            if (t < 0 || t > 9) throw Error("`priority` is invalid, musst be 0 ≤ priority ≤ 9.");
+            if (t < 0 || t > 9) throw Error("`priority` is invalid, musst be 0 \u2264 priority \u2264 9.");
             return (this.data.priority = Math.round(t)), this;
         }
         url(t) {

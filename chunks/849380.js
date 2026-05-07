@@ -2848,7 +2848,7 @@ function iv(e) {
                 className: ib.Pf,
                 children: [
                     (0, s.jsx)(N.E, { className: ib.UU, variant: "text-sm/normal", color: "none", children: t.name }),
-                    (0, s.jsx)(N.E, { variant: "text-sm/normal", color: "text-muted", children: "•" }),
+                    (0, s.jsx)(N.E, { variant: "text-sm/normal", color: "text-muted", children: "\u2022" }),
                     (0, s.jsx)(N.E, {
                         className: ib.vE,
                         variant: "text-sm/normal",

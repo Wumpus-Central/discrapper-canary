@@ -13,15 +13,15 @@ var n = r(476858),
 let a = {
         domenica: 0,
         dom: 0,
-        lunedì: 1,
+        "luned\xec": 1,
         lun: 1,
-        martedì: 2,
+        "marted\xec": 2,
         mar: 2,
-        mercoledì: 3,
+        "mercoled\xec": 3,
         merc: 3,
-        giovedì: 4,
+        "gioved\xec": 4,
         giov: 4,
-        venerdì: 5,
+        "venerd\xec": 5,
         ven: 5,
         sabato: 6,
         sab: 6,
@@ -169,7 +169,7 @@ function w(e) {
                 if (void 0 !== l[t]) return l[t];
                 if ("un" === t || "una" === t) return 1;
                 if (t.match(/alcuni/)) return 3;
-                if (t.match(/metá/)) return 0.5;
+                if (t.match(/met\xe1/)) return 0.5;
                 if (t.match(/paio/)) return 2;
                 else if (t.match(/molti/)) return 7;
                 return parseFloat(t);
@@ -197,7 +197,7 @@ class T extends P.c {
     }
 }
 let v = RegExp(
-    `(?:on\\s{0,3})?(${c})(?:\\s{0,3}(?:al|\\-|\\–|fino|alle|allo)?\\s{0,3}(${c}))?(?:-|/|\\s{0,3}(?:dal)?\\s{0,3})(${(0, n.uJ)(o)})(?:(?:-|/|,?\\s{0,3})(${h}(?![^\\s]\\d)))?(?=\\W|$)`,
+    `(?:on\\s{0,3})?(${c})(?:\\s{0,3}(?:al|\\-|\\\u{2013}|fino|alle|allo)?\\s{0,3}(${c}))?(?:-|/|\\s{0,3}(?:dal)?\\s{0,3})(${(0, n.uJ)(o)})(?:(?:-|/|,?\\s{0,3})(${h}(?![^\\s]\\d)))?(?=\\W|$)`,
     "i",
 );
 class M extends P.c {
@@ -300,7 +300,7 @@ class I extends S.B {
         super(e);
     }
     followingPhase() {
-        return "\\s*(?:\\-|\\–|\\~|\\〜|to|\\?)\\s*";
+        return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|\\?)\\s*";
     }
     primaryPrefix() {
         return "(?:(?:alle|dalle)\\s*)??";
@@ -373,7 +373,7 @@ class G extends U.A {
     }
 }
 var Z = r(132588),
-    K = r(658809),
+    K = r(881190),
     _ = r(996483);
 let X = /(ora|oggi|stasera|questa sera|domani|dmn|ieri\s*sera)(?=\W|$)/i;
 class Q extends P.c {
@@ -445,7 +445,7 @@ class et extends P.c {
 }
 var er = r(1673);
 let en = RegExp(
-    `(?:(?:\\,|\\(|\\（)\\s*)?(?:il\\s*?)?(?:(questa|l'ultima|scorsa|prossima)\\s*)?(${(0, n.uJ)(a)})(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(questa|l'ultima|scorsa|prossima)\\s*settimana)?(?=\\W|$)`,
+    `(?:(?:\\,|\\(|\\\u{FF08})\\s*)?(?:il\\s*?)?(?:(questa|l'ultima|scorsa|prossima)\\s*)?(${(0, n.uJ)(a)})(?:\\s*(?:\\,|\\)|\\\u{FF09}))?(?:\\s*(questa|l'ultima|scorsa|prossima)\\s*settimana)?(?=\\W|$)`,
     "i",
 );
 class es extends P.c {

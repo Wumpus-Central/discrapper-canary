@@ -1,7 +1,7 @@
 r.r(t), r.d(t, { default: () => a });
 var a = {
     payButton: "Betala",
-    "payButton.redirecting": "Omdirigerar…",
+    "payButton.redirecting": "Omdirigerar\u2026",
     "payButton.with": "Betala %{value} med %{maskedData}",
     close: "St\xe4ng",
     storeDetails: "Spara till min n\xe4sta betalning",
@@ -41,7 +41,7 @@ var a = {
     "idealIssuer.selectField.title": "Bank",
     "idealIssuer.selectField.placeholder": "V\xe4lj din bank",
     "creditCard.success": "Betalning lyckades",
-    loading: "Laddar…",
+    loading: "Laddar\u2026",
     continue: "Forts\xe4tt",
     continueTo: "Forts\xe4tt till",
     "wechatpay.timetopay": "Du har %@ att betala",
@@ -155,10 +155,10 @@ var a = {
     "select.provinceOrTerritory": "V\xe4lj provins eller territorium",
     "select.country": "V\xe4lj land",
     "select.noOptionsFound": "Inga alternativ hittades",
-    "select.filter.placeholder": "S\xf6k efter…",
+    "select.filter.placeholder": "S\xf6k efter\u2026",
     "telephoneNumber.invalid": "Ogiltigt telefonnummer",
     qrCodeOrApp: "eller",
-    "paypal.processingPayment": "Behandlar betalning…",
+    "paypal.processingPayment": "Behandlar betalning\u2026",
     generateQRCode: "Generera QR-kod",
     "await.waitForConfirmation": "V\xe4ntar p\xe5 bekr\xe4ftelse",
     "mbway.confirmPayment": "Bekr\xe4fta din betalning i appen MB WAY",
@@ -274,7 +274,7 @@ var a = {
     "ctp.cards.expiredCard": "Utg\xe5ngna",
     "ctp.manualCardEntry": "Manuell kortinmatning",
     "ctp.aria.infoModalButton": "Vad \xe4r Click to Pay?",
-    "ctp.infoPopup.title": "Click to Pay – lika enkelt som kontaktl\xf6s betalning, fast online",
+    "ctp.infoPopup.title": "Click to Pay \u2013 lika enkelt som kontaktl\xf6s betalning, fast online",
     "ctp.infoPopup.subtitle":
         "En snabb och s\xe4ker betalningsmetod som st\xf6ds av Mastercard, Visa och andra betalkort.",
     "ctp.infoPopup.benefit1":

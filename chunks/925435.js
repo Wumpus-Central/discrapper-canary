@@ -36,7 +36,8 @@ function a(n) {
                     (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(s.E, { variant: "heading-xl/bold", tag: "div", children: e }),
-                            null != i && (0, t.jsxs)(s.E, { variant: "text-sm/normal", children: ["“", i, "”"] }),
+                            null != i &&
+                                (0, t.jsxs)(s.E, { variant: "text-sm/normal", children: ["\u201C", i, "\u201D"] }),
                         ],
                     }),
                 ],
@@ -307,7 +308,7 @@ function J(n) {
                   ? () => {
                         (0, v.openModalLazy)(async () => {
                             let { SubscriptionDetailsModal: n } = await Promise.all([
-                                i.e("11243"),
+                                i.e("33997"),
                                 i.e("53917"),
                                 i.e("15186"),
                                 i.e("80830"),
@@ -357,7 +358,7 @@ function X(n) {
                         : () => {
                               (0, v.openModalLazy)(async () => {
                                   let { ItemDetailsModal: n } = await Promise.all([
-                                      i.e("11243"),
+                                      i.e("33997"),
                                       i.e("53917"),
                                       i.e("15186"),
                                       i.e("80830"),

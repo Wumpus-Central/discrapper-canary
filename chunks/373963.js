@@ -11,7 +11,7 @@ function l(n, i) {
         ? (0, t.jsx)(c.Dr, {
               id: "copy",
               label: s.intl.string(s.t.OpuAlK),
-              shortcut: (0, a.isMac)() ? "⌘C" : "Ctrl+C",
+              shortcut: (0, a.isMac)() ? "\u2318C" : "Ctrl+C",
               leadingAccessory: { type: "icon", icon: r.T },
               action: () => {
                   o.Ay.copy(n), i?.focus();

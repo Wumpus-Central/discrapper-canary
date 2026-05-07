@@ -867,9 +867,9 @@ function e8() {
         : null;
 }
 var e5 = n(815021),
-    e6 = n(935063),
-    e9 = n(378939),
-    e4 = n(964486),
+    e4 = n(935063),
+    e6 = n(378939),
+    e9 = n(964486),
     te = n(475743),
     tt = n(323073),
     tn = n(202803),
@@ -1011,7 +1011,7 @@ function tL(e) {
         o = (0, tC.gU)(t, l),
         d = (0, tI.Ay)(t, !1),
         u = (0, tI.Ay)(a),
-        h = null == a ? l?.name : `${l?.name} › ${u}`,
+        h = null == a ? l?.name : `${l?.name} \u{203A} ${u}`,
         A = t.isMultiUserDM()
             ? $.intl.formatToPlainString($.t.CxSA5N, { members: t.recipients.length + 1 })
             : t.isPrivate()
@@ -1118,7 +1118,7 @@ function tH(e, t, n) {
         a = t ? R.Ay.everyoneFilter : null,
         i = null;
     null != e && null != s && (i = s === M.KE7.ALL_SERVERS ? null : e.getGuildId()),
-        e9.A.fetchRecentMentions({ before: n, limit: M.Ue3, guildId: i, roles: l, everyone: a });
+        e6.A.fetchRecentMentions({ before: n, limit: M.Ue3, guildId: i, roles: l, everyone: a });
 }
 function tB(e) {
     let { onJump: t } = e,
@@ -1147,12 +1147,12 @@ function tB(e) {
             ? ((null != A && o !== A) || (null != m && d !== m) || (null != E && u !== E)) && tH(n, !0)
             : tH(n, !0);
     }, [A, o, m, d, E, u, n, !0]),
-        (0, e4.Ay)(() => {
-            s?.some(tn.$r) && (e9.A.clearMentions(), tH(n, !0));
+        (0, e9.Ay)(() => {
+            s?.some(tn.$r) && (e6.A.clearMentions(), tH(n, !0));
         }),
         r.useEffect(
             () => () => {
-                e9.A.truncateMentions(M.Ue3);
+                e6.A.truncateMentions(M.Ue3);
             },
             [],
         );
@@ -1163,7 +1163,7 @@ function tB(e) {
         onFetch: () => null,
         onJump: t,
         onCloseMessage: function (e) {
-            e9.A.deleteRecentMention(e.id);
+            e6.A.deleteRecentMention(e.id);
         },
         channel: n,
         messages: s,
@@ -1198,7 +1198,7 @@ function tJ(e) {
                 channel: l,
                 gotoChannel: n,
                 children:
-                    null != s ? (0, i.jsx)(e5.J, { size: "sm", onClick: () => e9.A.deleteRecentMention(t.id) }) : null,
+                    null != s ? (0, i.jsx)(e5.J, { size: "sm", onClick: () => e6.A.deleteRecentMention(t.id) }) : null,
             }),
             (0, i.jsxs)("div", {
                 className: tP.zC,
@@ -1224,7 +1224,7 @@ function tJ(e) {
     });
 }
 function tY() {
-    return (0, i.jsx)(tw, { Icon: e6.X, header: $.intl.string($.t.bgDz74), tip: $.intl.string($.t.NS15vk) });
+    return (0, i.jsx)(tw, { Icon: e4.X, header: $.intl.string($.t.bgDz74), tip: $.intl.string($.t.NS15vk) });
 }
 var tX = n(702841),
     tQ = n(912592),
@@ -1234,7 +1234,7 @@ var tX = n(702841),
     tq = n(214947),
     tZ = n(711950),
     t0 = n(912309),
-    t1 = n(911933);
+    t1 = n(134314);
 function t3(e) {
     let { closePopout: t } = e,
         n = (0, t0.kX)();
@@ -1279,7 +1279,7 @@ function t7(e) {
                 id: "Everyone",
                 label: $.intl.string($.t.cdyUsV),
                 action: function () {
-                    e9.A.setGuildFilter({ everyoneFilter: !l });
+                    e6.A.setGuildFilter({ everyoneFilter: !l });
                 },
                 checked: l,
             }),
@@ -1287,7 +1287,7 @@ function t7(e) {
                 id: "Roles",
                 label: $.intl.string($.t.lZejCq),
                 action: function () {
-                    e9.A.setGuildFilter({ roleFilter: !a });
+                    e6.A.setGuildFilter({ roleFilter: !a });
                 },
                 checked: a,
             }),
@@ -1297,7 +1297,7 @@ function t7(e) {
                       id: "All Servers",
                       label: $.intl.string($.t.GWMA6s),
                       action: function () {
-                          e9.A.setGuildFilter({
+                          e6.A.setGuildFilter({
                               guildFilter: r === M.KE7.THIS_SERVER ? M.KE7.ALL_SERVERS : M.KE7.THIS_SERVER,
                           });
                       },
@@ -1334,9 +1334,9 @@ function t8() {
     });
 }
 var t5 = n(481613),
-    t6 = n.n(t5),
-    t9 = n(775602),
-    t4 = n(625494),
+    t4 = n.n(t5),
+    t6 = n(775602),
+    t9 = n(625494),
     ne = n(723702),
     nt = n(862482),
     nn = n(640238);
@@ -1388,7 +1388,7 @@ function nl(e) {
 var na = n(735438),
     ni = n.n(na),
     nr = n(749314),
-    no = n(785651),
+    no = n(873174),
     nc = n(311283),
     nd = n(717421),
     nu = n(933832),
@@ -1517,7 +1517,7 @@ var nx = n(989349),
     nK = n(467073),
     nH = n(491182),
     nB = n(860227),
-    nz = n(110637),
+    nz = n(474463),
     nJ = n(375199),
     nY = n(522871),
     nX = n(715628),
@@ -1648,9 +1648,9 @@ var n2 = n(495544),
     n7 = n(58703),
     n8 = n(143236),
     n5 = n(720149),
-    n6 = n(181079),
-    n9 = n(567035),
-    n4 = n(455234),
+    n4 = n(181079),
+    n6 = n(567035),
+    n9 = n(455234),
     se = n(695633),
     st = n(152007),
     sn = n(607508),
@@ -1744,7 +1744,7 @@ class sA extends n8.EventEmitter {
         (null != s && this.undoStack.push(s), 1 === this.state.channels.length)
             ? this.deleteChannel(t)
             : (this.setState({ channels: this.updateChannel(t, (e) => ({ ...e, deleted: !0 })) }),
-              t9.A.useReducedMotion && this.deleteChannel(t),
+              t6.A.useReducedMotion && this.deleteChannel(t),
               this.maybeLoadMore());
     };
     undoMarkChannelRead = () => {
@@ -1763,7 +1763,7 @@ class sA extends n8.EventEmitter {
         t < 0 ? n.push(e) : n.splice(t, 0, e), this.setState({ scrollToChannelIndex: t, channels: n });
     };
     markGuildRead = (e) => {
-        j.h.wait(() => (0, n9.A)([e], M.JJy.INBOX)),
+        j.h.wait(() => (0, n6.A)([e], M.JJy.INBOX)),
             this.setState({ channels: this.state.channels.filter((t) => t.guildId !== e) }),
             this.maybeLoadMore();
     };
@@ -1946,7 +1946,7 @@ function sE(e, t, n, s) {
     if (null == l || (!sa.Le.has(l.type) && sd.Ay.isGuildOrCategoryOrChannelMuted(n, l.id))) return;
     if (l.isPrivate()) {
         if (0 === tT.Ay.getMentionCount(s)) return;
-    } else if (!(0, n4.Y)(l) && 0 === tT.Ay.getMentionCount(s)) return;
+    } else if (!(0, n9.Y)(l) && 0 === tT.Ay.getMentionCount(s)) return;
     if ((!l.isPrivate() && !so.A.can(M.xBc.READ_MESSAGE_HISTORY, l)) || (0, tt.qR)(l)) return;
     let a = tT.Ay.ackMessageId(s);
     if (null == a) {
@@ -1974,7 +1974,7 @@ function sE(e, t, n, s) {
         mentionCount: o,
         sortOrder: (function (e, t, n) {
             let s = ti.A.getChannel(t);
-            if (n6.A.isFavorite(t)) return 0;
+            if (n4.A.isFavorite(t)) return 0;
             if (s.isPrivate()) return 1;
             if (tT.Ay.getMentionCount(t) > 0) return tT.Ay.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
@@ -2280,7 +2280,7 @@ function sO(e) {
         })(m),
         { loadState: N, channels: f } = E,
         { maybeLoadMore: I } = _,
-        C = (0, g.bG)([t9.A], () => t9.A.messageGroupSpacing);
+        C = (0, g.bG)([t6.A], () => t6.A.messageGroupSpacing);
     (t = m),
         (n = E),
         (s = _),
@@ -2304,9 +2304,9 @@ function sO(e) {
                 null != e && a.markChannelRead(e);
             };
             return (
-                t4._.subscribe(M.jej.MARK_TOP_INBOX_CHANNEL_READ, e),
+                t9._.subscribe(M.jej.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    t4._.unsubscribe(M.jej.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    t9._.unsubscribe(M.jej.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
         }, [a, l.channels]),
@@ -2338,11 +2338,11 @@ function sO(e) {
             ),
             [A],
         ),
-        (0, e4.Ay)(
+        (0, e9.Ay)(
             () => (
-                t4._.subscribe(M.jej.INBOX_MARK_ALL_UNREADS_READ, _.markAllRead),
+                t9._.subscribe(M.jej.INBOX_MARK_ALL_UNREADS_READ, _.markAllRead),
                 () => {
-                    t4._.unsubscribe(M.jej.INBOX_MARK_ALL_UNREADS_READ, _.markAllRead);
+                    t9._.unsubscribe(M.jej.INBOX_MARK_ALL_UNREADS_READ, _.markAllRead);
                 }
             ),
         );
@@ -2351,7 +2351,7 @@ function sO(e) {
         ? (0, i.jsx)(tw, {
               Icon: tQ.K,
               header: $.intl.string($.t["6XMM+D"]),
-              tip: t6().os?.family === "OS X" ? $.intl.string($.t.w9uDOW) : $.intl.string($.t.BiUJC6),
+              tip: t4().os?.family === "OS X" ? $.intl.string($.t.w9uDOW) : $.intl.string($.t.BiUJC6),
           })
         : (0, i.jsx)(Y.hD, {
               navigator: S,
@@ -2474,7 +2474,7 @@ function sv() {
         tip: $.intl.string($.t.cvcKzX),
     });
 }
-let sb = () => (0, i.jsx)(ns, { onClick: () => t4._.dispatch(M.jej.INBOX_MARK_ALL_UNREADS_READ) });
+let sb = () => (0, i.jsx)(ns, { onClick: () => t9._.dispatch(M.jej.INBOX_MARK_ALL_UNREADS_READ) });
 var sF = n(716030);
 function sL(e) {
     let { tab: t, setTab: n, badgeState: s, closePopout: l } = e,

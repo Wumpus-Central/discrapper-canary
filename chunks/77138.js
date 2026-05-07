@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { a: () => R });
+n.d(t, { a: () => C });
 var i = n(636537),
     r = n(306173),
     s = n(845584),
     a = n(626584),
     o = n(51760),
     l = n(453771),
-    _ = n(77729),
-    d = n(652215);
-let u = new a.A("uploadRtcLogFiles");
-async function c(e, t) {
+    u = n(77729),
+    c = n(652215);
+let d = new a.A("uploadRtcLogFiles");
+async function _(e, t) {
     let n;
-    if (null == _.A.fileManager.readLogFiles) throw new s._(s.ct.GENERAL);
+    if (null == u.A.fileManager.readLogFiles) throw new s._(s.ct.GENERAL);
     let r = [];
     try {
-        r = (r = await _.A.fileManager.readLogFiles(e)).map((e) => (0, l.ww)(e, "application/octet-stream"));
+        r = (r = await u.A.fileManager.readLogFiles(e)).map((e) => (0, l.ww)(e, "application/octet-stream"));
     } catch (e) {
-        throw (u.error(`uploadDebugFiles: read error '${e}'`), new s._(s.ct.READ));
+        throw (d.error(`uploadDebugFiles: read error '${e}'`), new s._(s.ct.READ));
     }
     if (0 === r.length) throw new s._(s.ct.NO_FILE);
     let a = { extraInfo: t, mediaEngineState: o.Ay.getState() },
-        c = [
+        _ = [
             ...r.map((e) => ({ name: e.name, file: e, filename: e.name })),
             {
                 name: "media_engine_state.json",
@@ -28,12 +28,12 @@ async function c(e, t) {
                 file: new Blob([JSON.stringify(a, void 0, 2)]),
             },
         ],
-        E = new Set();
+        f = new Set();
     try {
         n = await i.Bo.post({
-            url: d.Rsh.DEBUG_LOGS(d.Umv.RTC),
+            url: c.Rsh.DEBUG_LOGS(c.Umv.RTC),
             attachments: [
-                ...c.map((e) => {
+                ..._.map((e) => {
                     let t = (function (e, t) {
                         let n = t.split("."),
                             i = n.length > 1 ? n.pop() : "",
@@ -42,7 +42,7 @@ async function c(e, t) {
                             a = 1;
                         for (; e.has(s); ) (s = `${r}_${a}.${i}`), (a += 1);
                         return e.add(s), s;
-                    })(E, e.name);
+                    })(f, e.name);
                     return { name: t, file: e.file, filename: t };
                 }),
             ],
@@ -50,11 +50,11 @@ async function c(e, t) {
         });
     } catch (e) {
         if (429 === e.status) throw new s._(s.ct.PROGRESS);
-        throw (u.error(`Debug log upload error: status: ${e.status}, message: ${e.message}`), new s._(s.ct.UPLOAD));
+        throw (d.error(`Debug log upload error: status: ${e.status}, message: ${e.message}`), new s._(s.ct.UPLOAD));
     }
-    if ("success_count" in n.body && n.body.success_count !== c.length)
+    if ("success_count" in n.body && n.body.success_count !== _.length)
         throw (
-            (u.error(`Debug log upload: stored files ${n.body.success_count} !== ${c.length}`), new s._(s.ct.GENERAL))
+            (d.error(`Debug log upload: stored files ${n.body.success_count} !== ${_.length}`), new s._(s.ct.GENERAL))
         );
     if (
         ("store_success" in n.body && !n.body.store_success) ||
@@ -62,25 +62,25 @@ async function c(e, t) {
         ("all_success" in n.body && !n.body.all_success)
     )
         throw (
-            (u.error(
+            (d.error(
                 `Debug log upload: store_success: ${n.body.store_success} / id_match: ${n.body.id_match} / all_success: ${n.body.all_success}`,
             ),
             new s._(s.ct.GENERAL))
         );
 }
-var E = n(487329);
+var f = n(487329);
 n(627968), n(64700);
 let h = {};
-function m(e, t) {
+function p(e, t) {
     let n = e.length > t ? t : e.length;
     return e.substring(0, n).padEnd(t, " ");
 }
-var f = n(734057),
-    g = n(53943);
+var E = n(734057),
+    m = n(53943);
 n(321073);
-var I = n(735438),
-    A = n.n(I),
-    p = n(61090),
+var g = n(735438),
+    A = n.n(g),
+    I = n(61090),
     T = n(707539);
 function S(e) {
     let t = null == e.tag ? e.label : `${e.label} ${e.tag}`;
@@ -91,10 +91,10 @@ function S(e) {
     );
 }
 var N = n(506774);
-let O = new a.A("DebugUploadManager");
-async function R(e, t) {
+let y = new a.A("DebugUploadManager");
+async function C(e, t) {
     try {
-        await C(e), await c(0xe00000, t);
+        await v(e), await _(0xe00000, t);
     } catch (t) {
         let e;
         throw (
@@ -102,29 +102,29 @@ async function R(e, t) {
                 (e = (function (e) {
                     switch (e.code) {
                         case s.ct.GENERAL:
-                            return E.B6.UploadErrorGeneral;
+                            return f.B6.UploadErrorGeneral;
                         case s.ct.NO_FILE:
-                            return E.B6.UploadErrorNoFile;
+                            return f.B6.UploadErrorNoFile;
                         case s.ct.PROGRESS:
-                            return E.B6.UploadErrorProgress;
+                            return f.B6.UploadErrorProgress;
                         case s.ct.UPLOAD:
-                            return E.B6.UploadErrorUpload;
+                            return f.B6.UploadErrorUpload;
                         case s.ct.READ:
-                            return E.B6.UploadErrorRead;
+                            return f.B6.UploadErrorRead;
                         default:
                             return;
                     }
                 })(t)),
-            (0, E.QW)({ type: E.iy.DEBUG_LOG_UPLOAD_FAILED, underlyingError: e, errorMessage: t.message }),
+            (0, f.QW)({ type: f.iy.DEBUG_LOG_UPLOAD_FAILED, underlyingError: e, errorMessage: t.message }),
             t)
         );
     }
 }
-async function C(e) {
+async function v(e) {
     try {
         let t, n, s, a;
         try {
-            t = g.As();
+            t = m.As();
         } catch (e) {
             t = `Logs failed: ${e}`;
         }
@@ -137,8 +137,8 @@ async function C(e) {
             s = await Promise.resolve([]).then((e) =>
                 (function (e, t) {
                     if (0 === e.length) return "No logs";
-                    let n = N.w.get(d.Xlh),
-                        i = N.w.get(d.Ahp),
+                    let n = N.w.get(c.Xlh),
+                        i = N.w.get(c.Ahp),
                         r = null != n ? `Device Token: ${n}` : "",
                         s = null != i ? `Device Voip Token: ${i}` : "",
                         a = e
@@ -174,28 +174,28 @@ ${a}`;
     ${(function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        return p.A.logGroups
+        return I.A.logGroups
             .map((i) => {
-                var r, s, a, o, l, _;
-                let d,
-                    u,
-                    c,
-                    E,
-                    h,
-                    m,
+                var r, s, a, o, l, u;
+                let c,
+                    d,
+                    _,
                     f,
-                    { index: g, timestamp: I, logs: p, nativeLogs: N, serverTrace: O } = i,
-                    R = 0 === g ? (A().find(p, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : I,
-                    C =
+                    h,
+                    p,
+                    E,
+                    { index: m, timestamp: g, logs: I, nativeLogs: N, serverTrace: y } = i,
+                    C = 0 === m ? (A().find(I, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : g,
+                    v =
                         ((l =
-                            ((r = p),
+                            ((r = I),
                             (s = N),
                             (a = t),
                             (o = n),
                             (r = r.slice()),
-                            (d = new Set(s.map(S))),
-                            (u = ""),
-                            (c = []),
+                            (c = new Set(s.map(S))),
+                            (d = ""),
+                            (_ = []),
                             s.forEach((e) => {
                                 let t = S(e),
                                     n = 0,
@@ -203,15 +203,15 @@ ${a}`;
                                     s =
                                         t.startsWith("Start ") &&
                                         !t.includes("RUN_JS_BUNDLE") &&
-                                        d.has(t.replace("Start ", "Finish "));
+                                        c.has(t.replace("Start ", "Finish "));
                                 if (
                                     t.startsWith("Finish ") &&
                                     !t.includes("RUN_JS_BUNDLE") &&
-                                    d.has(t.replace("Finish ", "Start "))
+                                    c.has(t.replace("Finish ", "Start "))
                                 ) {
                                     var o;
-                                    u = u.substring(2);
-                                    let r = c.pop();
+                                    d = d.substring(2);
+                                    let r = _.pop();
                                     null != r &&
                                         ((n = e.timestamp - r.timestamp),
                                         (i =
@@ -222,10 +222,10 @@ ${a}`;
                                         (r.shouldKeep = r.shouldKeep || i));
                                 }
                                 let l = {
-                                    emoji: "☕",
+                                    emoji: "\u2615",
                                     timestamp: e.timestamp,
                                     delta: n > 0 ? n : void 0,
-                                    prefix: u,
+                                    prefix: d,
                                     log: t,
                                     shouldKeep: i,
                                 };
@@ -237,15 +237,15 @@ ${a}`;
                                     }
                                     e.splice(n, 0, t);
                                 })(r, l),
-                                    s && ((u += "| "), c.push(l));
+                                    s && ((d += "| "), _.push(l));
                             }),
-                            (E = !1),
+                            (f = !1),
                             r.filter(
                                 (e) =>
-                                    !(E && e.log.includes("↪")) &&
-                                    !(E = (!o && e.emoji === `🎨`) || !1 === e.shouldKeep),
+                                    !(f && e.log.includes("\u21AA")) &&
+                                    !(f = (!o && e.emoji === `\u{1F3A8}`) || !1 === e.shouldKeep),
                             ))),
-                        (_ = R),
+                        (u = C),
                         (h = (function (e) {
                             let t = [];
                             for (let n = 0; n < e.length; n++) {
@@ -257,26 +257,26 @@ ${a}`;
                             }
                             return t;
                         })(l).map((e) => ({
-                            totalTime: null == e.timestamp ? "" : ((e.timestamp - _) / 1e3).toFixed(3),
+                            totalTime: null == e.timestamp ? "" : ((e.timestamp - u) / 1e3).toFixed(3),
                             deltaTime: null == e.delta ? "" : String(Math.round(e.delta)),
                             log: `${e.emoji.length > 0 ? `${e.emoji} ` : ""}${e.prefix}${e.log}
 `,
                         }))),
-                        (m = A().max(h.map((e) => e.totalTime.length)) ?? 0),
-                        (f = A().max(h.map((e) => e.deltaTime.length)) ?? 0),
+                        (p = A().max(h.map((e) => e.totalTime.length)) ?? 0),
+                        (E = A().max(h.map((e) => e.deltaTime.length)) ?? 0),
                         h
                             .map((e) => {
                                 let { totalTime: t, deltaTime: n, log: i } = e;
-                                return `${A().padStart(t, m)} ${A().padStart(n, f)} ${i}`;
+                                return `${A().padStart(t, p)} ${A().padStart(n, E)} ${i}`;
                             })
                             .join("")),
-                    y = `Trace #${g + 1} started ${(0, T.aK)(I)}
-${C}`;
+                    O = `Trace #${m + 1} started ${(0, T.aK)(g)}
+${v}`;
                 return (
-                    null != O &&
-                        (y += `
- Server trace for trace #${g + 1}${O}`),
-                    y
+                    null != y &&
+                        (O += `
+ Server trace for trace #${m + 1}${y}`),
+                    O
                 );
             })
             .join("\n\n");
@@ -286,24 +286,24 @@ ${C}`;
         if (0 === Object.keys(h).length) return "";
         let e = `Component Render Stats (microseconds):
 `,
-            t = `|${m("id", 20)}|${m("Mounts", 8)}|${m("Mount Mean", 20)}|${m("Updates", 8)}|${m("Update Mean", 20)}|${m("Nested", 8)}|${m("Nested Mean", 20)}|
+            t = `|${p("id", 20)}|${p("Mounts", 8)}|${p("Mount Mean", 20)}|${p("Updates", 8)}|${p("Update Mean", 20)}|${p("Nested", 8)}|${p("Nested Mean", 20)}|
 `;
         return (
             e +
             t +
             Object.entries(h).map((e) => {
                 let [t, n] = e;
-                return `|${m(t, 20)}|${m(n.mount.count.toString(), 8)}|${m(n.mount.mean.toString(), 20)}|${m(n.update.count.toString(), 8)}|${m(n.update.mean.toString(), 20)}|${m(n.nestedUpdate.count.toString(), 8)}|${m(n.nestedUpdate.mean.toString(), 20)}|
+                return `|${p(t, 20)}|${p(n.mount.count.toString(), 8)}|${p(n.mount.mean.toString(), 20)}|${p(n.update.count.toString(), 8)}|${p(n.update.mean.toString(), 20)}|${p(n.nestedUpdate.count.toString(), 8)}|${p(n.nestedUpdate.mean.toString(), 20)}|
 `;
             })
         );
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "536797", versionHash: "b97073eec0b197e4983614d5cc478be731af45d0" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "540902", versionHash: "481aabd124ae35310423b4051c24b82a55881670" }, void 0, 2)}
 
     ChannelStore:
-    ${JSON.stringify(f.A.getDebugInfo(), void 0, 2)}
+    ${JSON.stringify(E.A.getDebugInfo(), void 0, 2)}
 
     Logs:
     ${t}
@@ -317,10 +317,10 @@ ${C}`;
     Push Notifications:
     ${s}
     `;
-        g.IU();
-        let _ = d.Rsh.DEBUG_LOG(e, "discord_app_logs");
+        m.IU();
+        let u = c.Rsh.DEBUG_LOG(e, "discord_app_logs");
         await i.Bo.post({
-            url: _,
+            url: u,
             body: l,
             retries: 3,
             headers: { "Content-Type": "text/plain" },
@@ -328,6 +328,6 @@ ${C}`;
             rejectWithError: !1,
         });
     } catch (e) {
-        O.error(`uploadAppLogFiles: upload app log files error ${e.message}`);
+        y.error(`uploadAppLogFiles: upload app log files error ${e.message}`);
     }
 }

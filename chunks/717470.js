@@ -13,8 +13,21 @@ r.r(t),
         createConfiguration: () => O,
         parse: () => z,
     });
-let n = { 零: 0, 〇: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9, 十: 10 },
-    s = { 日: 0, 月: 1, 火: 2, 水: 3, 木: 4, 金: 5, 土: 6 };
+let n = {
+        \u96F6: 0,
+        \u3007: 0,
+        \u4E00: 1,
+        \u4E8C: 2,
+        \u4E09: 3,
+        \u56DB: 4,
+        \u4E94: 5,
+        \u516D: 6,
+        \u4E03: 7,
+        \u516B: 8,
+        \u4E5D: 9,
+        \u5341: 10,
+    },
+    s = { \u65E5: 0, \u6708: 1, \u706B: 2, \u6C34: 3, \u6728: 4, \u91D1: 5, \u571F: 6 };
 function a(e) {
     return String(e)
         .replace(/\u2019/g, "'")
@@ -33,12 +46,13 @@ function o(e) {
     let t = 0;
     for (let r = 0; r < e.length; r++) {
         let s = e[r];
-        "十" === s ? (t = 0 === t ? n[s] : t * n[s]) : (t += n[s]);
+        "\u5341" === s ? (t = 0 === t ? n[s] : t * n[s]) : (t += n[s]);
     }
     return t;
 }
 var l = r(364242);
-let u = /(?:(?:([同今本])|((昭和|平成|令和)?([0-9０-９]{1,4}|元)))年\s*)?([0-9０-９]{1,2})月\s*([0-9０-９]{1,2})日/i;
+let u =
+    /(?:(?:([\u540c\u4eca\u672c])|((\u662d\u548c|\u5e73\u6210|\u4ee4\u548c)?([0-9\uff10-\uff19]{1,4}|\u5143)))\u5e74\s*)?([0-9\uff10-\uff19]{1,2})\u6708\s*([0-9\uff10-\uff19]{1,2})\u65e5/i;
 class m {
     pattern() {
         return u;
@@ -49,13 +63,17 @@ class m {
             s = e.createParsingComponents({ day: n, month: r });
         if (
             (t[1] &&
-                t[1].match("同|今|本") &&
+                t[1].match("\u540C|\u4ECA|\u672C") &&
                 s.assign("year", e.reference.getDateWithAdjustedTimezone().getFullYear()),
             t[2])
         ) {
             let e = t[4],
-                r = "元" == e ? 1 : parseInt(a(e));
-            "令和" == t[3] ? (r += 2018) : "平成" == t[3] ? (r += 1988) : "昭和" == t[3] && (r += 1925),
+                r = "\u5143" == e ? 1 : parseInt(a(e));
+            "\u4EE4\u548C" == t[3]
+                ? (r += 2018)
+                : "\u5E73\u6210" == t[3]
+                  ? (r += 1988)
+                  : "\u662D\u548C" == t[3] && (r += 1925),
                 s.assign("year", r);
         } else {
             let t = (0, l.Y)(e.refDate, n, r);
@@ -67,12 +85,13 @@ class m {
 var d = r(172609);
 class c extends d.A {
     patternBetween() {
-        return /^\s*(から|－|ー|-|～|~)\s*$/i;
+        return /^\s*(\u304b\u3089|\uff0d|\u30fc|-|\uff5e|~)\s*$/i;
     }
 }
 var g = r(322811),
     h = r(996483);
-let f = /今日|きょう|本日|ほんじつ|昨日|きのう|明日|あした|今夜|こんや|今夕|こんゆう|今晩|こんばん|今朝|けさ/i;
+let f =
+    /\u4eca\u65e5|\u304d\u3087\u3046|\u672c\u65e5|\u307b\u3093\u3058\u3064|\u6628\u65e5|\u304d\u306e\u3046|\u660e\u65e5|\u3042\u3057\u305f|\u4eca\u591c|\u3053\u3093\u3084|\u4eca\u5915|\u3053\u3093\u3086\u3046|\u4eca\u6669|\u3053\u3093\u3070\u3093|\u4eca\u671d|\u3051\u3055/i;
 class p {
     pattern() {
         return f;
@@ -80,45 +99,50 @@ class p {
     extract(e, t) {
         let r = (function (e) {
                 switch (e) {
-                    case "きょう":
-                        return "今日";
-                    case "ほんじつ":
-                        return "本日";
-                    case "きのう":
-                        return "昨日";
-                    case "あした":
-                        return "明日";
-                    case "こんや":
-                        return "今夜";
-                    case "こんゆう":
-                        return "今夕";
-                    case "こんばん":
-                        return "今晩";
-                    case "けさ":
-                        return "今朝";
+                    case "\u304D\u3087\u3046":
+                        return "\u4ECA\u65E5";
+                    case "\u307B\u3093\u3058\u3064":
+                        return "\u672C\u65E5";
+                    case "\u304D\u306E\u3046":
+                        return "\u6628\u65E5";
+                    case "\u3042\u3057\u305F":
+                        return "\u660E\u65E5";
+                    case "\u3053\u3093\u3084":
+                        return "\u4ECA\u591C";
+                    case "\u3053\u3093\u3086\u3046":
+                        return "\u4ECA\u5915";
+                    case "\u3053\u3093\u3070\u3093":
+                        return "\u4ECA\u6669";
+                    case "\u3051\u3055":
+                        return "\u4ECA\u671D";
                     default:
                         return e;
                 }
             })(t[0]),
             n = e.createParsingComponents();
         switch (r) {
-            case "昨日":
+            case "\u6628\u65E5":
                 return h.jI(e.reference);
-            case "明日":
+            case "\u660E\u65E5":
                 return h.uf(e.reference);
-            case "本日":
-            case "今日":
+            case "\u672C\u65E5":
+            case "\u4ECA\u65E5":
                 return h.Ec(e.reference);
         }
-        "今夜" == r || "今夕" == r || "今晩" == r
+        "\u4ECA\u591C" == r || "\u4ECA\u5915" == r || "\u4ECA\u6669" == r
             ? (n.imply("hour", 22), n.assign("meridiem", g.FF.PM))
-            : r.match("今朝") && (n.imply("hour", 6), n.assign("meridiem", g.FF.AM));
+            : r.match("\u4ECA\u671D") && (n.imply("hour", 6), n.assign("meridiem", g.FF.AM));
         let s = e.refDate;
         return n.assign("day", s.getDate()), n.assign("month", s.getMonth() + 1), n.assign("year", s.getFullYear()), n;
     }
 }
 var y = r(1673);
-let x = RegExp("((?<prefix>前の|次の|今週))?(?<weekday>" + Object.keys(s).join("|") + ")(?:曜日|曜)", "i");
+let x = RegExp(
+    "((?<prefix>\u524D\u306E|\u6B21\u306E|\u4ECA\u9031))?(?<weekday>" +
+        Object.keys(s).join("|") +
+        ")(?:\u66DC\u65E5|\u66DC)",
+    "i",
+);
 class w {
     pattern() {
         return x;
@@ -129,13 +153,17 @@ class w {
         let n = t.groups.prefix || "",
             a = null;
         return (
-            n.match(/前の/) ? (a = "last") : n.match(/次の/) ? (a = "next") : n.match(/今週/) && (a = "this"),
+            n.match(/\u524d\u306e/)
+                ? (a = "last")
+                : n.match(/\u6b21\u306e/)
+                  ? (a = "next")
+                  : n.match(/\u4eca\u9031/) && (a = "this"),
             (0, y.Y5)(e.reference, r, a)
         );
     }
 }
 let D = RegExp(
-    "([0-9０-９]{4}[\\/|\\／])?([0-1０-１]{0,1}[0-9０-９]{1})(?:[\\/|\\／]([0-3０-３]{0,1}[0-9０-９]{1}))",
+    "([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))",
     "i",
 );
 class P {
@@ -160,23 +188,23 @@ class P {
 }
 var F = r(355418);
 let C = RegExp(
-        "(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[" +
+        "(?:(\u5348\u524D|\u5348\u5F8C|A.M.|P.M.|AM|PM))?(?:[\\s,\uFF0C\u3001]*)(?:([0-9\uFF10-\uFF19]+|[" +
             Object.keys(n).join("") +
-            "]+)(?:\\s*)(?:時(?!間)|:|：)(?:\\s*)([0-9０-９]+|半|[" +
+            "]+)(?:\\s*)(?:\u6642(?!\u9593)|:|\uFF1A)(?:\\s*)([0-9\uFF10-\uFF19]+|\u534A|[" +
             Object.keys(n).join("") +
-            "]+)?(?:\\s*)(?:分|:|：)?(?:\\s*)([0-9０-９]+|[" +
+            "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)([0-9\uFF10-\uFF19]+|[" +
             Object.keys(n).join("") +
-            "]+)?(?:\\s*)(?:秒)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
+            "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
         "i",
     ),
     T = RegExp(
-        "(?:^\\s*(?:から|\\-|\\–|\\－|\\~|\\〜)\\s*)(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[" +
+        "(?:^\\s*(?:\u304B\u3089|\\-|\\\u2013|\\\uFF0D|\\~|\\\u301C)\\s*)(?:(\u5348\u524D|\u5348\u5F8C|A.M.|P.M.|AM|PM))?(?:[\\s,\uFF0C\u3001]*)(?:([0-9\uFF10-\uFF19]+|[" +
             Object.keys(n).join("") +
-            "]+)(?:\\s*)(?:時|:|：)(?:\\s*)([0-9０-９]+|半|[" +
+            "]+)(?:\\s*)(?:\u6642|:|\uFF1A)(?:\\s*)([0-9\uFF10-\uFF19]+|\u534A|[" +
             Object.keys(n).join("") +
-            "]+)?(?:\\s*)(?:分|:|：)?(?:\\s*)([0-9０-９]+|[" +
+            "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)([0-9\uFF10-\uFF19]+|[" +
             Object.keys(n).join("") +
-            "]+)?(?:\\s*)(?:秒)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
+            "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
         "i",
     );
 class v extends F.c {
@@ -210,7 +238,7 @@ function M(e, t, r, n, s) {
     if ((isNaN((i = parseInt(a(t)))) && (i = o(t)), i > 24)) return null;
     if (r) {
         let e;
-        if (("半" === r ? (e = 30) : isNaN((e = parseInt(a(r)))) && (e = o(r)), e >= 60)) return null;
+        if (("\u534A" === r ? (e = 30) : isNaN((e = parseInt(a(r)))) && (e = o(r)), e >= 60)) return null;
         u.assign("minute", e);
     }
     if (n) {
@@ -220,9 +248,9 @@ function M(e, t, r, n, s) {
     }
     if (s) {
         if (i > 12) return null;
-        "午前" === s || "a" === s[0].toLowerCase()
+        "\u5348\u524D" === s || "a" === s[0].toLowerCase()
             ? ((l = g.FF.AM), 12 === i && (i = 0))
-            : ("午後" === s || "p" === s[0].toLowerCase()) && ((l = g.FF.PM), 12 != i && (i += 12));
+            : ("\u5348\u5F8C" === s || "p" === s[0].toLowerCase()) && ((l = g.FF.PM), 12 != i && (i += 12));
     }
     return (
         u.assign("hour", i),
@@ -233,7 +261,7 @@ function M(e, t, r, n, s) {
 var $ = r(230205);
 class R extends $.A {
     patternBetween() {
-        return /^\s*(の)?\s*$/i;
+        return /^\s*(\u306e)?\s*$/i;
     }
 }
 var E = r(880683),
@@ -254,11 +282,11 @@ class k extends A.X {
             t.start.isCertain("day") &&
             r.start.isOnlyWeekdayComponent() &&
             !r.start.isCertain("hour") &&
-            null !== e.match(/^[,、の]?\s*$/)
+            null !== e.match(/^[,\u3001\u306e]?\s*$/)
         );
     }
 }
-let j = RegExp("(?:\\(|\\（)(?<weekday>" + Object.keys(s).join("|") + ")(?:\\)|\\）)", "i");
+let j = RegExp("(?:\\(|\\\uFF08)(?<weekday>" + Object.keys(s).join("|") + ")(?:\\)|\\\uFF09)", "i");
 class B {
     pattern() {
         return j;

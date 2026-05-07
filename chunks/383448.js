@@ -46,7 +46,7 @@ function f(t) {
                                       (0, i.jsx)(a.E, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
-                                          children: "•",
+                                          children: "\u2022",
                                       }),
                                       (0, i.jsx)(a.E, {
                                           variant: "text-sm/semibold",

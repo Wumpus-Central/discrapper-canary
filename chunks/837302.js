@@ -1,10 +1,12 @@
 n(989349).defineLocale("se", {
-    months: "ođđajagem\xe1nnu_guovvam\xe1nnu_njukčam\xe1nnu_cuoŋom\xe1nnu_miessem\xe1nnu_geassem\xe1nnu_suoidnem\xe1nnu_borgem\xe1nnu_čakčam\xe1nnu_golggotm\xe1nnu_sk\xe1bmam\xe1nnu_juovlam\xe1nnu".split(
+    months: "o\u0111\u0111ajagem\xe1nnu_guovvam\xe1nnu_njuk\u010Dam\xe1nnu_cuo\u014Bom\xe1nnu_miessem\xe1nnu_geassem\xe1nnu_suoidnem\xe1nnu_borgem\xe1nnu_\u010Dak\u010Dam\xe1nnu_golggotm\xe1nnu_sk\xe1bmam\xe1nnu_juovlam\xe1nnu".split(
         "_",
     ),
-    monthsShort: "ođđj_guov_njuk_cuo_mies_geas_suoi_borg_čakč_golg_sk\xe1b_juov".split("_"),
-    weekdays: "sotnabeaivi_vuoss\xe1rga_maŋŋeb\xe1rga_gaskavahkku_duorastat_bearjadat_l\xe1vvardat".split("_"),
-    weekdaysShort: "sotn_vuos_maŋ_gask_duor_bear_l\xe1v".split("_"),
+    monthsShort: "o\u0111\u0111j_guov_njuk_cuo_mies_geas_suoi_borg_\u010Dak\u010D_golg_sk\xe1b_juov".split("_"),
+    weekdays: "sotnabeaivi_vuoss\xe1rga_ma\u014B\u014Beb\xe1rga_gaskavahkku_duorastat_bearjadat_l\xe1vvardat".split(
+        "_",
+    ),
+    weekdaysShort: "sotn_vuos_ma\u014B_gask_duor_bear_l\xe1v".split("_"),
     weekdaysMin: "s_v_m_g_d_b_L".split("_"),
     longDateFormat: {
         LT: "HH:mm",
@@ -23,8 +25,8 @@ n(989349).defineLocale("se", {
         sameElse: "L",
     },
     relativeTime: {
-        future: "%s geažes",
-        past: "maŋit %s",
+        future: "%s gea\u017Ees",
+        past: "ma\u014Bit %s",
         s: "moadde sekunddat",
         ss: "%d sekunddat",
         m: "okta minuhta",

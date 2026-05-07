@@ -88,7 +88,7 @@ function P(e) {
                         className: S.iO,
                         variant: "text-sm/medium",
                         color: "text-strong",
-                        children: ["•", (0, l.jsx)("img", { alt: "", src: a, className: S.NB }), i.name],
+                        children: ["\u2022", (0, l.jsx)("img", { alt: "", src: a, className: S.NB }), i.name],
                     }),
                 ],
             }),

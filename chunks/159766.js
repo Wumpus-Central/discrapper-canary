@@ -2,7 +2,7 @@
     "use strict";
     var t = "ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.".split("_"),
         n = "ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic".split("_"),
-        r = [
+        i = [
             /^ene/i,
             /^feb/i,
             /^mar/i,
@@ -16,22 +16,22 @@
             /^nov/i,
             /^dic/i,
         ],
-        i =
+        r =
             /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
     e.defineLocale("es-do", {
         months: "enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre".split("_"),
-        monthsShort: function (e, r) {
-            return e ? (/-MMM-/.test(r) ? n[e.month()] : t[e.month()]) : t;
+        monthsShort: function (e, i) {
+            return e ? (/-MMM-/.test(i) ? n[e.month()] : t[e.month()]) : t;
         },
-        monthsRegex: i,
-        monthsShortRegex: i,
+        monthsRegex: r,
+        monthsShortRegex: r,
         monthsStrictRegex:
             /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
         monthsShortStrictRegex:
             /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
-        monthsParse: r,
-        longMonthsParse: r,
-        shortMonthsParse: r,
+        monthsParse: i,
+        longMonthsParse: i,
+        shortMonthsParse: i,
         weekdays: "domingo_lunes_martes_mi\xe9rcoles_jueves_viernes_s\xe1bado".split("_"),
         weekdaysShort: "dom._lun._mar._mi\xe9._jue._vie._s\xe1b.".split("_"),
         weekdaysMin: "do_lu_ma_mi_ju_vi_s\xe1".split("_"),
@@ -78,7 +78,7 @@
             y: "un a\xf1o",
             yy: "%d a\xf1os",
         },
-        dayOfMonthOrdinalParse: /\d{1,2}º/,
+        dayOfMonthOrdinalParse: /\d{1,2}\xba/,
         ordinal: "%d\xba",
         week: { dow: 1, doy: 4 },
     });

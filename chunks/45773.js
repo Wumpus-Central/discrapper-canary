@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(17928),
-    r = n(519551),
+    r = n(412198),
     s = n(228366),
     a = n(626584),
     o = n(495544);
 let l = new a.A("DatabaseManager");
-class d extends i.Ay.Store {
+class u extends i.Ay.Store {
     databases = new Map();
     activeUserId = null;
     preventWritingCachesAgainThisSession = !1;
@@ -41,7 +41,7 @@ class d extends i.Ay.Store {
             ? (l.verbose("Not opening database because caches have been manually cleared."), null)
             : (null == e ||
                   this.databases.has(e) ||
-                  (l.verbose(`added database (${e} → null)`), this.databases.set(e, null), this.emitChange()),
+                  (l.verbose(`added database (${e} \u{2192} null)`), this.databases.set(e, null), this.emitChange()),
               this.database(e));
     }
     replaceDisableAllDatabases(e) {
@@ -83,14 +83,16 @@ class d extends i.Ay.Store {
         if (this.preventWritingCachesAgainThisSession)
             return void l.verbose("Not opening database because caches have been manually cleared.");
         if (null != e) {
-            let t = await _(e);
+            let t = await c(e);
             null == t || this.databases.has(e)
-                ? (l.verbose(`discarding speculative database (${e} → ${t})`), t?.close())
-                : (l.verbose(`added speculative database (${e} → ${t})`), this.databases.set(e, t), this.emitChange());
+                ? (l.verbose(`discarding speculative database (${e} \u{2192} ${t})`), t?.close())
+                : (l.verbose(`added speculative database (${e} \u{2192} ${t})`),
+                  this.databases.set(e, t),
+                  this.emitChange());
         }
     }
 }
-async function _(e) {
+async function c(e) {
     return null;
 }
-let u = new d();
+let d = new u();

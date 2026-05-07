@@ -13493,7 +13493,7 @@ class af {
             let e = "";
             if ("INITIAL" === t.state) {
                 if (!/\r\n|\n/.test(t.buffer)) return this;
-                let r = (e = i()).match(/^(ï»¿)?WEBVTT([ \t].*)?$/);
+                let r = (e = i()).match(/^(\xef\xbb\xbf)?WEBVTT([ \t].*)?$/);
                 if (!(null != r && r[0])) throw Error("Malformed WebVTT signature.");
                 t.state = "HEADER";
             }

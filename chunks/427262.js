@@ -16,7 +16,7 @@ var i = n(17928),
     s = n(287809),
     a = n(652215),
     o = n(375708);
-let l = (e) => `${e[0]}…`,
+let l = (e) => `${e[0]}\u{2026}`,
     u = { mode: "full", decoration: "never", identifiable: "auto" };
 function c(e) {
     return !!(null != e && e.length > 0);
@@ -106,7 +106,7 @@ function S() {
 let N = {
     getName: _,
     useName: f,
-    isNameConcealed: (e) => 2 === e.length && e.endsWith("…"),
+    isNameConcealed: (e) => 2 === e.length && e.endsWith("\u2026"),
     getUserTag: I,
     useUserTag: function (e, t) {
         return A(

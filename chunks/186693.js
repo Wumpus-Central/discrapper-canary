@@ -25,7 +25,7 @@ class m extends u.B {
         return "(?:(?:um|von)\\s*)?";
     }
     followingPhase() {
-        return "\\s*(?:\\-|\\–|\\~|\\〜|bis)\\s*";
+        return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|bis)\\s*";
     }
     extractPrimaryTimeComponents(e, t) {
         return t[0].match(/^\s*\d{4}\s*$/) ? null : super.extractPrimaryTimeComponents(e, t);
@@ -51,7 +51,7 @@ let g = {
     },
     h = {
         januar: 1,
-        jänner: 1,
+        "j\xe4nner": 1,
         janner: 1,
         jan: 1,
         "jan.": 1,
@@ -59,9 +59,9 @@ let g = {
         feber: 2,
         feb: 2,
         "feb.": 2,
-        märz: 3,
+        "m\xe4rz": 3,
         maerz: 3,
-        mär: 3,
+        "m\xe4r": 3,
         "m\xe4r.": 3,
         mrz: 3,
         "mrz.": 3,
@@ -102,7 +102,7 @@ let g = {
         zwei: 2,
         drei: 3,
         vier: 4,
-        fünf: 5,
+        "f\xfcnf": 5,
         fuenf: 5,
         sechs: 6,
         sieben: 7,
@@ -110,7 +110,7 @@ let g = {
         neun: 9,
         zehn: 10,
         elf: 11,
-        zwölf: 12,
+        "zw\xf6lf": 12,
         zwoelf: 12,
     },
     p = {
@@ -162,7 +162,7 @@ let w = `(${y})\\s{0,5}(${(0, d.uJ)(p)})\\s{0,5}`,
 var F = r(355418),
     C = r(1673);
 let T = RegExp(
-    `(?:(?:\\,|\\(|\\（)\\s*)?(?:a[mn]\\s*?)?(?:(diese[mn]|letzte[mn]|n(?:\xe4|ae)chste[mn])\\s*)?(${(0, d.uJ)(g)})(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(diese|letzte|n(?:\xe4|ae)chste)\\s*woche)?(?=\\W|$)`,
+    `(?:(?:\\,|\\(|\\\u{FF08})\\s*)?(?:a[mn]\\s*?)?(?:(diese[mn]|letzte[mn]|n(?:\xe4|ae)chste[mn])\\s*)?(${(0, d.uJ)(g)})(?:\\s*(?:\\,|\\)|\\\u{FF09}))?(?:\\s*(diese|letzte|n(?:\xe4|ae)chste)\\s*woche)?(?=\\W|$)`,
     "i",
 );
 class v extends F.c {
@@ -187,7 +187,7 @@ let M = RegExp(
         "i",
     ),
     $ = RegExp(
-        "^\\s*(\\-|\\–|\\~|\\〜|bis(?:\\s+um)?|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)",
+        "^\\s*(\\-|\\\u2013|\\~|\\\u301C|bis(?:\\s+um)?|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)",
         "i",
     );
 class R {
@@ -240,7 +240,7 @@ class k extends A.A {
         return RegExp("^\\s*(T|um|am|,|-)?\\s*$");
     }
 }
-var j = r(658809);
+var j = r(881190);
 class B extends F.c {
     innerPattern(e) {
         return /(diesen)?\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht)(?=\W|$)/i;
@@ -325,7 +325,7 @@ class Y extends F.c {
     }
 }
 let z = RegExp(
-    `(?:am\\s*?)?(?:den\\s*?)?([0-9]{1,2})\\.(?:\\s*(?:bis(?:\\s*(?:am|zum))?|\\-|\\–|\\s)\\s*([0-9]{1,2})\\.?)?\\s*(${(0, d.uJ)(h)})(?:(?:-|/|,?\\s*)((?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)(?![^\\s]\\d)))?(?=\\W|$)`,
+    `(?:am\\s*?)?(?:den\\s*?)?([0-9]{1,2})\\.(?:\\s*(?:bis(?:\\s*(?:am|zum))?|\\-|\\\u{2013}|\\s)\\s*([0-9]{1,2})\\.?)?\\s*(${(0, d.uJ)(h)})(?:(?:-|/|,?\\s*)((?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)(?![^\\s]\\d)))?(?=\\W|$)`,
     "i",
 );
 class L extends F.c {

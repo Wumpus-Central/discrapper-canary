@@ -252,7 +252,7 @@ function O(t) {
                           {
                               id: "cut",
                               label: P.intl.string(P.t.pNPVhe),
-                              shortcut: (0, p.isMac)() ? "⌘X" : "Ctrl+X",
+                              shortcut: (0, p.isMac)() ? "\u2318X" : "Ctrl+X",
                               action: () => S.Ay.cut(),
                           },
                           "cut",
@@ -262,7 +262,7 @@ function O(t) {
                           {
                               id: "copy",
                               label: P.intl.string(P.t.OpuAlK),
-                              shortcut: (0, p.isMac)() ? "⌘C" : "Ctrl+C",
+                              shortcut: (0, p.isMac)() ? "\u2318C" : "Ctrl+C",
                               action: () => S.Ay.copy(),
                           },
                           "copy",
@@ -307,7 +307,7 @@ function O(t) {
                     (0, a.jsx)(o.Dr, {
                         id: "paste",
                         label: P.intl.string(P.t.lMUxVi),
-                        shortcut: (0, p.isMac)() ? "⌘V" : "Ctrl+V",
+                        shortcut: (0, p.isMac)() ? "\u2318V" : "Ctrl+V",
                         action: () => S.Ay.paste(),
                     }),
                     H && (0, a.jsx)(o.Dr, { id: "paste-as-plain-text", label: P.intl.string(P.t.X92Qnr), action: w }),

@@ -591,7 +591,7 @@ var ex = a(835245),
     eI = a(231723),
     eT = a(900686),
     eR = a(986687),
-    eO = a(776135),
+    eO = a(400778),
     ew = a(735438),
     eM = a.n(ew),
     eL = a(219220),
@@ -2265,7 +2265,7 @@ function t8(e) {
         { data: a, isLoading: n } = (0, t0.I)(t),
         l = (0, d.bG)([tZ.A], () => tZ.A.hasNoData(t), [t]);
     return n || (null == a && !l)
-        ? (0, r.jsx)(A.E, { variant: "text-sm/normal", color: "text-muted", children: "Loading…" })
+        ? (0, r.jsx)(A.E, { variant: "text-sm/normal", color: "text-muted", children: "Loading\u2026" })
         : null == a
           ? (0, r.jsxs)(A.E, {
                 variant: "text-sm/normal",
@@ -2335,7 +2335,7 @@ function t3() {
                         (0, r.jsx)(tQ.Z, {
                             label: "Search games",
                             hideLabel: !0,
-                            placeholder: "Search for a game…",
+                            placeholder: "Search for a game\u2026",
                             options: s,
                             value: m.length > 0 ? void 0 : (e ?? void 0),
                             onSelectionChange: c,
@@ -2505,11 +2505,11 @@ function al() {
                 (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(T.D, { variant: "heading-lg/semibold", children: "Store State" }),
-                        (0, r.jsxs)("div", { children: ["Is Loading: ", a ? "✅" : "❌"] }),
-                        (0, r.jsxs)("div", { children: ["Has Preloaded: ", l ? "✅" : "❌"] }),
-                        (0, r.jsxs)("div", { children: ["Has Loaded Ever: ", n ? "✅" : "❌"] }),
-                        (0, r.jsxs)("div", { children: ["Has More To Load: ", s ? "✅" : "❌"] }),
-                        (0, r.jsxs)("div", { children: ["Is Loading Complete: ", i ? "✅" : "❌"] }),
+                        (0, r.jsxs)("div", { children: ["Is Loading: ", a ? "\u2705" : "\u274C"] }),
+                        (0, r.jsxs)("div", { children: ["Has Preloaded: ", l ? "\u2705" : "\u274C"] }),
+                        (0, r.jsxs)("div", { children: ["Has Loaded Ever: ", n ? "\u2705" : "\u274C"] }),
+                        (0, r.jsxs)("div", { children: ["Has More To Load: ", s ? "\u2705" : "\u274C"] }),
+                        (0, r.jsxs)("div", { children: ["Is Loading Complete: ", i ? "\u2705" : "\u274C"] }),
                         (0, r.jsxs)("div", { children: ["Last Loading Trigger: ", o?.loadingTrigger] }),
                     ],
                 }),
@@ -6274,7 +6274,7 @@ function iU() {
                         (0, r.jsx)(A.E, {
                             variant: "text-sm/normal",
                             children:
-                                "Use the hex field to paste in a hex color — it will snap to the closest allowed token and show the deltaE distance.",
+                                "Use the hex field to paste in a hex color \u2014 it will snap to the closest allowed token and show the deltaE distance.",
                         }),
                         (0, r.jsxs)(A.E, {
                             variant: "text-sm/normal",
@@ -6357,7 +6357,7 @@ function iU() {
                                                 name: `opacity-${t}`,
                                                 value: f.opacities[t],
                                                 onChange: (e) => y((a) => ({ ...a, opacities: ik(a.opacities, t, e) })),
-                                                placeholder: "0–1",
+                                                placeholder: "0\u20131",
                                             }),
                                             (0, r.jsx)(g.k, {
                                                 label: `Hex${a && null != u[t] ? ` (dE: ${u[t]})` : ""}`,
@@ -6507,8 +6507,8 @@ function iU() {
                                                   (0, r.jsxs)(k.w, {
                                                       type: n.passes ? "success" : "critical",
                                                       children: [
-                                                          n.passes ? "✓ Passes" : "✗ Fails",
-                                                          " WCAG AA — Min contrast: ",
+                                                          n.passes ? "\u2713 Passes" : "\u2717 Fails",
+                                                          " WCAG AA \u2014 Min contrast: ",
                                                           n.minContrastRatio,
                                                           " : 1",
                                                       ],
@@ -6530,7 +6530,7 @@ function iU() {
                                                                       (0, r.jsx)("strong", {
                                                                           children: n.suggestion.suggestedColor,
                                                                       }),
-                                                                      " →",
+                                                                      " \u2192",
                                                                       " ",
                                                                       n.suggestion.resultingMinContrast,
                                                                       " : 1",
@@ -7350,11 +7350,11 @@ let rh = {
                     a.e("99149"),
                     a.e("70652"),
                     a.e("7017"),
-                    a.e("21850"),
+                    a.e("33997"),
                     a.e("98560"),
                     a.e("10889"),
                     a.e("76822"),
-                    a.e("57750"),
+                    a.e("23089"),
                     a.e("93329"),
                     a.e("87845"),
                     a.e("94461"),
@@ -7516,7 +7516,7 @@ let rh = {
             return () => (0, r.jsx)(e, { entry: s, requestId: "mock-request-123" });
         },
         AddQuestionsContextMenu: async () => {
-            let { AddQuestionsContextMenu: e } = await Promise.all([a.e("57750"), a.e("11810"), a.e("14656")]).then(
+            let { AddQuestionsContextMenu: e } = await Promise.all([a.e("23089"), a.e("11810"), a.e("14656")]).then(
                     a.bind(a, 892921),
                 ),
                 t = Object.values(a$.A.getGuilds())[0];
@@ -8240,22 +8240,22 @@ let rL = {
                                     (0, r.jsxs)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        children: ["• ", o, " emoji slots"],
+                                        children: ["\u2022 ", o, " emoji slots"],
                                     }),
                                     (0, r.jsxs)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        children: ["• ", d, " sticker slots"],
+                                        children: ["\u2022 ", d, " sticker slots"],
                                     }),
                                     (0, r.jsxs)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        children: ["• ", c, " sound slots"],
+                                        children: ["\u2022 ", c, " sound slots"],
                                     }),
                                     (0, r.jsx)(t, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        children: "• Custom server banner",
+                                        children: "\u2022 Custom server banner",
                                     }),
                                 ],
                             }),
@@ -8275,7 +8275,11 @@ let rL = {
                                 color: "text-feedback-critical",
                                 className: "mb-2",
                                 children: [
-                                    (0, r.jsx)("span", { role: "img", "aria-label": "Warning", children: "⚠️" }),
+                                    (0, r.jsx)("span", {
+                                        role: "img",
+                                        "aria-label": "Warning",
+                                        children: "\u26A0\uFE0F",
+                                    }),
                                     " ",
                                     "Warning",
                                 ],
@@ -8730,7 +8734,7 @@ let rL = {
         return (t) => (0, r.jsx)(e, { ...t });
     },
     UserAgreementsModal: async () => {
-        let { default: e } = await Promise.all([a.e("57750"), a.e("82911"), a.e("22220")]).then(a.bind(a, 639719));
+        let { default: e } = await Promise.all([a.e("23089"), a.e("82911"), a.e("22220")]).then(a.bind(a, 639719));
         return (t) => (0, r.jsx)(e, { ...t });
     },
     DisableRiskyPermsModal: async () => {
@@ -12129,18 +12133,18 @@ let dC = [
     ],
     dE = [
         { id: "none", value: "none", label: "No Override (use server assignment)" },
-        { id: "0", value: "0", label: "Control (0) — Legacy checkout" },
-        { id: "1", value: "1", label: "Treatment (1) — Unified checkout" },
+        { id: "0", value: "0", label: "Control (0) \u2014 Legacy checkout" },
+        { id: "1", value: "1", label: "Treatment (1) \u2014 Unified checkout" },
     ],
     dS = [
         { id: "none", value: "none", label: "No Override (use server assignment)" },
-        { id: "0", value: "0", label: "Control (0) — Gift cards disabled" },
-        { id: "1", value: "1", label: "Treatment (1) — Gift cards enabled" },
+        { id: "0", value: "0", label: "Control (0) \u2014 Gift cards disabled" },
+        { id: "1", value: "1", label: "Treatment (1) \u2014 Gift cards enabled" },
     ],
     dN = [
         { id: "none", value: "none", label: "No Override (use server assignment)" },
-        { id: "0", value: "0", label: "Control (0) — Payment elements disabled" },
-        { id: "1", value: "1", label: "Treatment (1) — Payment elements enabled" },
+        { id: "0", value: "0", label: "Control (0) \u2014 Payment elements disabled" },
+        { id: "1", value: "1", label: "Treatment (1) \u2014 Payment elements enabled" },
     ];
 function dA(e) {
     let { experimentName: t, options: a = dC } = e,
@@ -12220,7 +12224,7 @@ function dT() {
                         onSelectionChange: t,
                     }),
                     (0, r.jsx)(g.k, {
-                        label: "Amount (500–5000)",
+                        label: "Amount (500\u20135000)",
                         type: "number",
                         value: a,
                         onChange: n,
@@ -17124,7 +17128,13 @@ function hU(e) {
     let { isUploading: t, isSuccess: a, errorMessage: n, onClick: l, title: s } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(x.$, { variant: "primary", onClick: l, loading: t, disabled: t, text: t ? "Uploading…" : s }),
+            (0, r.jsx)(x.$, {
+                variant: "primary",
+                onClick: l,
+                loading: t,
+                disabled: t,
+                text: t ? "Uploading\u2026" : s,
+            }),
             null != n &&
                 (0, r.jsx)(A.E, {
                     variant: "text-sm/normal",
@@ -17621,7 +17631,7 @@ function hY(e) {
                             className: hP.J1,
                             children: (0, r.jsx)(A.E, {
                                 variant: "text-sm/normal",
-                                children: `global name: ${n.globalName ?? "—"}`,
+                                children: `global name: ${n.globalName ?? "\u2014"}`,
                             }),
                         }),
                         (0, r.jsx)("div", {

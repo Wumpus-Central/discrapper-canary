@@ -278,7 +278,7 @@ let er = {
         accelerateRate: X,
         audioDetected: Y,
         audioLevel: function (e) {
-            return e <= 0 ? "-∞ dB" : `${Z(e).toFixed(2)} dB`;
+            return e <= 0 ? "-\u221E dB" : `${Z(e).toFixed(2)} dB`;
         },
         availableOutgoingBitrate: K,
         averageDecodeTime: Q,
@@ -400,7 +400,7 @@ function ep(e) {
         F = (0, o.bG)([b.Ay], () => (u && null != g && null != s ? b.Ay.getNick(g, s) : null));
     if (null == t || (u && null == s) || 0 === t.length) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
     let E = d;
-    u && null != A && (E = `${d} — ${F ?? D.Ay.getName(A)}`);
+    u && null != A && (E = `${d} \u{2014} ${F ?? D.Ay.getName(A)}`);
     let j = t.map((e, t) => {
             let r, i;
             return (0, n.jsx)(
@@ -512,7 +512,7 @@ function ep(e) {
         ],
     });
 }
-var eh = r(985018);
+var eh = r(375708);
 function ey(e) {
     let { camera: t } = e;
     if (null == t) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });

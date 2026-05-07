@@ -1,315 +1,503 @@
 a.r(r), a.d(r, { default: () => t });
 var t = {
-    payButton: "Πληρωμή",
-    "payButton.redirecting": "Ανακατεύθυνση...",
-    "payButton.with": "Πληρωμή %{value} με %{maskedData}",
-    close: "Κλείσιμο",
-    storeDetails: "Αποθήκευση για την επόμενη πληρωμή μου",
-    "creditCard.holderName": "Όνομα στην κάρτα",
-    "creditCard.holderName.placeholder": "Γ. Παπαδάκης",
-    "creditCard.holderName.invalid": "Εισαγάγετε το όνομα όπως αναγράφεται στην κάρτα",
-    "creditCard.numberField.title": "Αριθμός κάρτας",
+    payButton: "\u03A0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE",
+    "payButton.redirecting": "\u0391\u03BD\u03B1\u03BA\u03B1\u03C4\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7...",
+    "payButton.with": "\u03A0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE %{value} \u03BC\u03B5 %{maskedData}",
+    close: "\u039A\u03BB\u03B5\u03AF\u03C3\u03B9\u03BC\u03BF",
+    storeDetails:
+        "\u0391\u03C0\u03BF\u03B8\u03AE\u03BA\u03B5\u03C5\u03C3\u03B7 \u03B3\u03B9\u03B1 \u03C4\u03B7\u03BD \u03B5\u03C0\u03CC\u03BC\u03B5\u03BD\u03B7 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE \u03BC\u03BF\u03C5",
+    "creditCard.holderName": "\u038C\u03BD\u03BF\u03BC\u03B1 \u03C3\u03C4\u03B7\u03BD \u03BA\u03AC\u03C1\u03C4\u03B1",
+    "creditCard.holderName.placeholder": "\u0393. \u03A0\u03B1\u03C0\u03B1\u03B4\u03AC\u03BA\u03B7\u03C2",
+    "creditCard.holderName.invalid":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF \u03CC\u03BD\u03BF\u03BC\u03B1 \u03CC\u03C0\u03C9\u03C2 \u03B1\u03BD\u03B1\u03B3\u03C1\u03AC\u03C6\u03B5\u03C4\u03B1\u03B9 \u03C3\u03C4\u03B7\u03BD \u03BA\u03AC\u03C1\u03C4\u03B1",
+    "creditCard.numberField.title": "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
     "creditCard.numberField.placeholder": "1234 5678 9012 3456",
-    "creditCard.expiryDateField.title": "Ημερομηνία λήξης",
-    "creditCard.expiryDateField.placeholder": "ΜΜ/ΕΕ",
-    "creditCard.expiryDateField.month": "Μήνας",
-    "creditCard.expiryDateField.month.placeholder": "ΜΜ",
-    "creditCard.expiryDateField.year.placeholder": "ΕΕ",
-    "creditCard.expiryDateField.year": "Έτος",
-    "creditCard.cvcField.title": "Κωδικός ασφαλείας",
+    "creditCard.expiryDateField.title":
+        "\u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "creditCard.expiryDateField.placeholder": "\u039C\u039C/\u0395\u0395",
+    "creditCard.expiryDateField.month": "\u039C\u03AE\u03BD\u03B1\u03C2",
+    "creditCard.expiryDateField.month.placeholder": "\u039C\u039C",
+    "creditCard.expiryDateField.year.placeholder": "\u0395\u0395",
+    "creditCard.expiryDateField.year": "\u0388\u03C4\u03BF\u03C2",
+    "creditCard.cvcField.title":
+        "\u039A\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03B1\u03C3\u03C6\u03B1\u03BB\u03B5\u03AF\u03B1\u03C2",
     "creditCard.cvcField.placeholder": "123",
-    "creditCard.storeDetailsButton": "Απομνημόνευση για την επόμενη φορά",
-    "creditCard.cvcField.placeholder.4digits": "4ψήφιος",
-    "creditCard.cvcField.placeholder.3digits": "3ψήφιος",
-    "creditCard.taxNumber.placeholder": "ΕΕΜΜΗΗ / 0123456789",
-    installments: "Αριθμός δόσεων",
+    "creditCard.storeDetailsButton":
+        "\u0391\u03C0\u03BF\u03BC\u03BD\u03B7\u03BC\u03CC\u03BD\u03B5\u03C5\u03C3\u03B7 \u03B3\u03B9\u03B1 \u03C4\u03B7\u03BD \u03B5\u03C0\u03CC\u03BC\u03B5\u03BD\u03B7 \u03C6\u03BF\u03C1\u03AC",
+    "creditCard.cvcField.placeholder.4digits": "4\u03C8\u03AE\u03C6\u03B9\u03BF\u03C2",
+    "creditCard.cvcField.placeholder.3digits": "3\u03C8\u03AE\u03C6\u03B9\u03BF\u03C2",
+    "creditCard.taxNumber.placeholder": "\u0395\u0395\u039C\u039C\u0397\u0397 / 0123456789",
+    installments: "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03B4\u03CC\u03C3\u03B5\u03C9\u03BD",
     installmentOption: "%{times}x %{partialValue}",
-    installmentOptionMonths: "%{times} μήνες",
-    "installments.oneTime": "Εφάπαξ πληρωμή",
-    "installments.installments": "Πληρωμή με δόσεις",
-    "installments.revolving": "Ανακυκλούμενη πληρωμή",
-    "sepaDirectDebit.ibanField.invalid": "Μη έγκυρος αριθμός λογαριασμού",
-    "sepaDirectDebit.nameField.placeholder": "Γ. Παπαδάκης",
-    "sepa.ownerName": "Όνομα κατόχου",
-    "sepa.ibanNumber": "Αριθμός λογαριασμού (IBAN)",
-    "error.title": "Σφάλμα",
-    "error.subtitle.redirect": "Η ανακατεύθυνση απέτυχε",
-    "error.subtitle.payment": "Η πληρωμή απέτυχε",
-    "error.subtitle.refused": "Η πληρωμή απορρίφθηκε",
-    "error.message.unknown": "Προέκυψε άγνωστο σφάλμα",
-    "errorPanel.title": "Υπάρχοντα σφάλματα",
-    "idealIssuer.selectField.title": "Τράπεζα",
-    "idealIssuer.selectField.placeholder": "Επιλέξτε την τράπεζά σας",
-    "creditCard.success": "Η πληρωμή ολοκληρώθηκε επιτυχώς",
-    loading: "Φόρτωση...",
-    continue: "Συνέχεια",
-    continueTo: "Μετάβαση στην",
-    "wechatpay.timetopay": "Έχετε στη διάθεσή σας %@ για την πληρωμή",
-    "sr.wechatpay.timetopay": "Έχετε %#λεπτά%# %#δευτερόλεπτα%# για να πληρώσετε",
-    "wechatpay.scanqrcode": "Σάρωση κωδικού QR",
-    personalDetails: "Προσωπικά στοιχεία",
-    companyDetails: "Στοιχεία εταιρείας",
-    "companyDetails.name": "Όνομα εταιρείας",
-    "companyDetails.registrationNumber": "Αριθμός μητρώου",
-    socialSecurityNumber: "Αριθμός φορολογικού μητρώου",
-    firstName: "Όνομα",
-    "firstName.invalid": "Πληκτρολογήστε το όνομά σας",
-    infix: "Πρόθεμα",
-    lastName: "Επώνυμο",
-    "lastName.invalid": "Πληκτρολογήστε το επώνυμό σας",
-    mobileNumber: "Αριθμός κινητού",
-    "mobileNumber.invalid": "Μη έγκυρος αριθμός κινητού",
-    city: "Πόλη",
-    postalCode: "Ταχυδρομικός κωδικός",
-    "postalCode.optional": "Ταχυδρομικός κωδικός (προαιρετικό)",
-    countryCode: "Κωδικός χώρας",
-    telephoneNumber: "Αριθμός τηλεφώνου",
-    dateOfBirth: "Ημερομηνία γέννησης",
-    shopperEmail: "Διεύθυνση email",
-    gender: "Φύλο",
-    "gender.notselected": "Επιλέξτε φύλο",
-    male: "Άντρας",
-    female: "Γυναίκα",
-    billingAddress: "Διεύθυνση τιμολόγησης",
-    street: "Οδός",
-    stateOrProvince: "Πολιτεία ή επαρχία",
-    country: "Χώρα",
-    houseNumberOrName: "Αριθμός οικίας",
-    separateDeliveryAddress: "Καθορίστε μια ξεχωριστή διεύθυνση παράδοσης",
-    deliveryAddress: "Διεύθυνση παράδοσης",
-    zipCode: "Ταχυδρομικός κώδικας",
-    apartmentSuite: "Διαμέρισμα/Γραφείο",
-    provinceOrTerritory: "Επαρχία ή περιφέρεια",
-    cityTown: "Πόλη / Κοινότητα",
-    address: "Διεύθυνση",
-    "address.placeholder": "Βρείτε τη διεύθυνσή σας",
-    "address.errors.incomplete": "Εισαγάγετε μια διεύθυνση για να συνεχίσετε",
-    "address.enterManually": "Εισαγάγετε τη διεύθυνση μη αυτόματα",
-    state: "Πολιτεία",
-    "field.title.optional": "(προαιρετικό)",
-    "creditCard.cvcField.title.optional": "Κωδικός ασφαλείας (προαιρετικό)",
-    "issuerList.wallet.placeholder": "Επιλέξτε το πορτοφόλι σας",
-    privacyPolicy: "Πολιτική απορρήτου",
-    "afterPay.agreement": "Αποδέχομαι τους %@ του AfterPay",
-    paymentConditions: "όρους πληρωμής",
-    openApp: "Άνοιγμα της εφαρμογής",
-    "voucher.readInstructions": "Διαβάστε τις οδηγίες",
+    installmentOptionMonths: "%{times} \u03BC\u03AE\u03BD\u03B5\u03C2",
+    "installments.oneTime": "\u0395\u03C6\u03AC\u03C0\u03B1\u03BE \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE",
+    "installments.installments":
+        "\u03A0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE \u03BC\u03B5 \u03B4\u03CC\u03C3\u03B5\u03B9\u03C2",
+    "installments.revolving":
+        "\u0391\u03BD\u03B1\u03BA\u03C5\u03BA\u03BB\u03BF\u03CD\u03BC\u03B5\u03BD\u03B7 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE",
+    "sepaDirectDebit.ibanField.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF\u03C2 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "sepaDirectDebit.nameField.placeholder": "\u0393. \u03A0\u03B1\u03C0\u03B1\u03B4\u03AC\u03BA\u03B7\u03C2",
+    "sepa.ownerName": "\u038C\u03BD\u03BF\u03BC\u03B1 \u03BA\u03B1\u03C4\u03CC\u03C7\u03BF\u03C5",
+    "sepa.ibanNumber":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD (IBAN)",
+    "error.title": "\u03A3\u03C6\u03AC\u03BB\u03BC\u03B1",
+    "error.subtitle.redirect":
+        "\u0397 \u03B1\u03BD\u03B1\u03BA\u03B1\u03C4\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 \u03B1\u03C0\u03AD\u03C4\u03C5\u03C7\u03B5",
+    "error.subtitle.payment":
+        "\u0397 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE \u03B1\u03C0\u03AD\u03C4\u03C5\u03C7\u03B5",
+    "error.subtitle.refused":
+        "\u0397 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE \u03B1\u03C0\u03BF\u03C1\u03C1\u03AF\u03C6\u03B8\u03B7\u03BA\u03B5",
+    "error.message.unknown":
+        "\u03A0\u03C1\u03BF\u03AD\u03BA\u03C5\u03C8\u03B5 \u03AC\u03B3\u03BD\u03C9\u03C3\u03C4\u03BF \u03C3\u03C6\u03AC\u03BB\u03BC\u03B1",
+    "errorPanel.title":
+        "\u03A5\u03C0\u03AC\u03C1\u03C7\u03BF\u03BD\u03C4\u03B1 \u03C3\u03C6\u03AC\u03BB\u03BC\u03B1\u03C4\u03B1",
+    "idealIssuer.selectField.title": "\u03A4\u03C1\u03AC\u03C0\u03B5\u03B6\u03B1",
+    "idealIssuer.selectField.placeholder":
+        "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03C4\u03B7\u03BD \u03C4\u03C1\u03AC\u03C0\u03B5\u03B6\u03AC \u03C3\u03B1\u03C2",
+    "creditCard.success":
+        "\u0397 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE \u03BF\u03BB\u03BF\u03BA\u03BB\u03B7\u03C1\u03CE\u03B8\u03B7\u03BA\u03B5 \u03B5\u03C0\u03B9\u03C4\u03C5\u03C7\u03CE\u03C2",
+    loading: "\u03A6\u03CC\u03C1\u03C4\u03C9\u03C3\u03B7...",
+    continue: "\u03A3\u03C5\u03BD\u03AD\u03C7\u03B5\u03B9\u03B1",
+    continueTo: "\u039C\u03B5\u03C4\u03AC\u03B2\u03B1\u03C3\u03B7 \u03C3\u03C4\u03B7\u03BD",
+    "wechatpay.timetopay":
+        "\u0388\u03C7\u03B5\u03C4\u03B5 \u03C3\u03C4\u03B7 \u03B4\u03B9\u03AC\u03B8\u03B5\u03C3\u03AE \u03C3\u03B1\u03C2 %@ \u03B3\u03B9\u03B1 \u03C4\u03B7\u03BD \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE",
+    "sr.wechatpay.timetopay":
+        "\u0388\u03C7\u03B5\u03C4\u03B5 %#\u03BB\u03B5\u03C0\u03C4\u03AC%# %#\u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1%# \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03C4\u03B5",
+    "wechatpay.scanqrcode": "\u03A3\u03AC\u03C1\u03C9\u03C3\u03B7 \u03BA\u03C9\u03B4\u03B9\u03BA\u03BF\u03CD QR",
+    personalDetails:
+        "\u03A0\u03C1\u03BF\u03C3\u03C9\u03C0\u03B9\u03BA\u03AC \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03AF\u03B1",
+    companyDetails:
+        "\u03A3\u03C4\u03BF\u03B9\u03C7\u03B5\u03AF\u03B1 \u03B5\u03C4\u03B1\u03B9\u03C1\u03B5\u03AF\u03B1\u03C2",
+    "companyDetails.name": "\u038C\u03BD\u03BF\u03BC\u03B1 \u03B5\u03C4\u03B1\u03B9\u03C1\u03B5\u03AF\u03B1\u03C2",
+    "companyDetails.registrationNumber":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BC\u03B7\u03C4\u03C1\u03CE\u03BF\u03C5",
+    socialSecurityNumber:
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03C6\u03BF\u03C1\u03BF\u03BB\u03BF\u03B3\u03B9\u03BA\u03BF\u03CD \u03BC\u03B7\u03C4\u03C1\u03CE\u03BF\u03C5",
+    firstName: "\u038C\u03BD\u03BF\u03BC\u03B1",
+    "firstName.invalid":
+        "\u03A0\u03BB\u03B7\u03BA\u03C4\u03C1\u03BF\u03BB\u03BF\u03B3\u03AE\u03C3\u03C4\u03B5 \u03C4\u03BF \u03CC\u03BD\u03BF\u03BC\u03AC \u03C3\u03B1\u03C2",
+    infix: "\u03A0\u03C1\u03CC\u03B8\u03B5\u03BC\u03B1",
+    lastName: "\u0395\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF",
+    "lastName.invalid":
+        "\u03A0\u03BB\u03B7\u03BA\u03C4\u03C1\u03BF\u03BB\u03BF\u03B3\u03AE\u03C3\u03C4\u03B5 \u03C4\u03BF \u03B5\u03C0\u03CE\u03BD\u03C5\u03BC\u03CC \u03C3\u03B1\u03C2",
+    mobileNumber: "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BA\u03B9\u03BD\u03B7\u03C4\u03BF\u03CD",
+    "mobileNumber.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF\u03C2 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BA\u03B9\u03BD\u03B7\u03C4\u03BF\u03CD",
+    city: "\u03A0\u03CC\u03BB\u03B7",
+    postalCode:
+        "\u03A4\u03B1\u03C7\u03C5\u03B4\u03C1\u03BF\u03BC\u03B9\u03BA\u03CC\u03C2 \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2",
+    "postalCode.optional":
+        "\u03A4\u03B1\u03C7\u03C5\u03B4\u03C1\u03BF\u03BC\u03B9\u03BA\u03CC\u03C2 \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 (\u03C0\u03C1\u03BF\u03B1\u03B9\u03C1\u03B5\u03C4\u03B9\u03BA\u03CC)",
+    countryCode: "\u039A\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03C7\u03CE\u03C1\u03B1\u03C2",
+    telephoneNumber:
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03C4\u03B7\u03BB\u03B5\u03C6\u03CE\u03BD\u03BF\u03C5",
+    dateOfBirth:
+        "\u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2",
+    shopperEmail: "\u0394\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 email",
+    gender: "\u03A6\u03CD\u03BB\u03BF",
+    "gender.notselected": "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03C6\u03CD\u03BB\u03BF",
+    male: "\u0386\u03BD\u03C4\u03C1\u03B1\u03C2",
+    female: "\u0393\u03C5\u03BD\u03B1\u03AF\u03BA\u03B1",
+    billingAddress:
+        "\u0394\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 \u03C4\u03B9\u03BC\u03BF\u03BB\u03CC\u03B3\u03B7\u03C3\u03B7\u03C2",
+    street: "\u039F\u03B4\u03CC\u03C2",
+    stateOrProvince:
+        "\u03A0\u03BF\u03BB\u03B9\u03C4\u03B5\u03AF\u03B1 \u03AE \u03B5\u03C0\u03B1\u03C1\u03C7\u03AF\u03B1",
+    country: "\u03A7\u03CE\u03C1\u03B1",
+    houseNumberOrName: "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BF\u03B9\u03BA\u03AF\u03B1\u03C2",
+    separateDeliveryAddress:
+        "\u039A\u03B1\u03B8\u03BF\u03C1\u03AF\u03C3\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03BE\u03B5\u03C7\u03C9\u03C1\u03B9\u03C3\u03C4\u03AE \u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 \u03C0\u03B1\u03C1\u03AC\u03B4\u03BF\u03C3\u03B7\u03C2",
+    deliveryAddress:
+        "\u0394\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 \u03C0\u03B1\u03C1\u03AC\u03B4\u03BF\u03C3\u03B7\u03C2",
+    zipCode:
+        "\u03A4\u03B1\u03C7\u03C5\u03B4\u03C1\u03BF\u03BC\u03B9\u03BA\u03CC\u03C2 \u03BA\u03CE\u03B4\u03B9\u03BA\u03B1\u03C2",
+    apartmentSuite:
+        "\u0394\u03B9\u03B1\u03BC\u03AD\u03C1\u03B9\u03C3\u03BC\u03B1/\u0393\u03C1\u03B1\u03C6\u03B5\u03AF\u03BF",
+    provinceOrTerritory:
+        "\u0395\u03C0\u03B1\u03C1\u03C7\u03AF\u03B1 \u03AE \u03C0\u03B5\u03C1\u03B9\u03C6\u03AD\u03C1\u03B5\u03B9\u03B1",
+    cityTown: "\u03A0\u03CC\u03BB\u03B7 / \u039A\u03BF\u03B9\u03BD\u03CC\u03C4\u03B7\u03C4\u03B1",
+    address: "\u0394\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7",
+    "address.placeholder":
+        "\u0392\u03C1\u03B5\u03AF\u03C4\u03B5 \u03C4\u03B7 \u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03AE \u03C3\u03B1\u03C2",
+    "address.errors.incomplete":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03C3\u03C5\u03BD\u03B5\u03C7\u03AF\u03C3\u03B5\u03C4\u03B5",
+    "address.enterManually":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03B7 \u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 \u03BC\u03B7 \u03B1\u03C5\u03C4\u03CC\u03BC\u03B1\u03C4\u03B1",
+    state: "\u03A0\u03BF\u03BB\u03B9\u03C4\u03B5\u03AF\u03B1",
+    "field.title.optional": "(\u03C0\u03C1\u03BF\u03B1\u03B9\u03C1\u03B5\u03C4\u03B9\u03BA\u03CC)",
+    "creditCard.cvcField.title.optional":
+        "\u039A\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03B1\u03C3\u03C6\u03B1\u03BB\u03B5\u03AF\u03B1\u03C2 (\u03C0\u03C1\u03BF\u03B1\u03B9\u03C1\u03B5\u03C4\u03B9\u03BA\u03CC)",
+    "issuerList.wallet.placeholder":
+        "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03C4\u03BF \u03C0\u03BF\u03C1\u03C4\u03BF\u03C6\u03CC\u03BB\u03B9 \u03C3\u03B1\u03C2",
+    privacyPolicy:
+        "\u03A0\u03BF\u03BB\u03B9\u03C4\u03B9\u03BA\u03AE \u03B1\u03C0\u03BF\u03C1\u03C1\u03AE\u03C4\u03BF\u03C5",
+    "afterPay.agreement":
+        "\u0391\u03C0\u03BF\u03B4\u03AD\u03C7\u03BF\u03BC\u03B1\u03B9 \u03C4\u03BF\u03C5\u03C2 %@ \u03C4\u03BF\u03C5 AfterPay",
+    paymentConditions: "\u03CC\u03C1\u03BF\u03C5\u03C2 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2",
+    openApp:
+        "\u0386\u03BD\u03BF\u03B9\u03B3\u03BC\u03B1 \u03C4\u03B7\u03C2 \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE\u03C2",
+    "voucher.readInstructions":
+        "\u0394\u03B9\u03B1\u03B2\u03AC\u03C3\u03C4\u03B5 \u03C4\u03B9\u03C2 \u03BF\u03B4\u03B7\u03B3\u03AF\u03B5\u03C2",
     "voucher.introduction":
-        "Σας ευχαριστούμε για την αγορά. Χρησιμοποιήστε το παρακάτω κουπόνι για να ολοκληρώσετε την πληρωμή.",
-    "voucher.expirationDate": "Ημερομηνία λήξης",
-    "voucher.alternativeReference": "Εναλλακτική αναφορά",
-    "dragonpay.voucher.non.bank.selectField.placeholder": "Επιλέξτε τον πάροχό σας",
-    "dragonpay.voucher.bank.selectField.placeholder": "Επιλέξτε την τράπεζά σας",
-    "voucher.paymentReferenceLabel": "Αναφορά πληρωμής",
-    "voucher.surcharge": "Περιλαμβάνεται πρόσθετη χρέωση %@",
+        "\u03A3\u03B1\u03C2 \u03B5\u03C5\u03C7\u03B1\u03C1\u03B9\u03C3\u03C4\u03BF\u03CD\u03BC\u03B5 \u03B3\u03B9\u03B1 \u03C4\u03B7\u03BD \u03B1\u03B3\u03BF\u03C1\u03AC. \u03A7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03BF \u03C0\u03B1\u03C1\u03B1\u03BA\u03AC\u03C4\u03C9 \u03BA\u03BF\u03C5\u03C0\u03CC\u03BD\u03B9 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03BF\u03BB\u03BF\u03BA\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE.",
+    "voucher.expirationDate":
+        "\u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "voucher.alternativeReference":
+        "\u0395\u03BD\u03B1\u03BB\u03BB\u03B1\u03BA\u03C4\u03B9\u03BA\u03AE \u03B1\u03BD\u03B1\u03C6\u03BF\u03C1\u03AC",
+    "dragonpay.voucher.non.bank.selectField.placeholder":
+        "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03C4\u03BF\u03BD \u03C0\u03AC\u03C1\u03BF\u03C7\u03CC \u03C3\u03B1\u03C2",
+    "dragonpay.voucher.bank.selectField.placeholder":
+        "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03C4\u03B7\u03BD \u03C4\u03C1\u03AC\u03C0\u03B5\u03B6\u03AC \u03C3\u03B1\u03C2",
+    "voucher.paymentReferenceLabel":
+        "\u0391\u03BD\u03B1\u03C6\u03BF\u03C1\u03AC \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2",
+    "voucher.surcharge":
+        "\u03A0\u03B5\u03C1\u03B9\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03B5\u03C4\u03B1\u03B9 \u03C0\u03C1\u03CC\u03C3\u03B8\u03B5\u03C4\u03B7 \u03C7\u03C1\u03AD\u03C9\u03C3\u03B7 %@",
     "voucher.introduction.doku":
-        "Σας ευχαριστούμε για την αγορά. Χρησιμοποιήστε τις ακόλουθες πληροφορίες για να ολοκληρώσετε την πληρωμή.",
-    "voucher.shopperName": "Όνομα αγοραστή",
-    "voucher.merchantName": "Έμπορος",
+        "\u03A3\u03B1\u03C2 \u03B5\u03C5\u03C7\u03B1\u03C1\u03B9\u03C3\u03C4\u03BF\u03CD\u03BC\u03B5 \u03B3\u03B9\u03B1 \u03C4\u03B7\u03BD \u03B1\u03B3\u03BF\u03C1\u03AC. \u03A7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03B9\u03C2 \u03B1\u03BA\u03CC\u03BB\u03BF\u03C5\u03B8\u03B5\u03C2 \u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03AF\u03B5\u03C2 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03BF\u03BB\u03BF\u03BA\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE.",
+    "voucher.shopperName": "\u038C\u03BD\u03BF\u03BC\u03B1 \u03B1\u03B3\u03BF\u03C1\u03B1\u03C3\u03C4\u03AE",
+    "voucher.merchantName": "\u0388\u03BC\u03C0\u03BF\u03C1\u03BF\u03C2",
     "voucher.introduction.econtext":
-        "Σας ευχαριστούμε για την αγορά. Χρησιμοποιήστε τις ακόλουθες πληροφορίες για να ολοκληρώσετε την πληρωμή.",
-    "voucher.telephoneNumber": "Αριθμός τηλεφώνου",
-    "voucher.shopperReference": "Αναφορά αγοραστή",
-    "voucher.collectionInstitutionNumber": "Αριθμός πρακτορείου εισπράξεων",
-    "voucher.econtext.telephoneNumber.invalid": "Ο αριθμός τηλεφώνου πρέπει να περιέχει 10 ή 11 ψηφία",
-    "boletobancario.btnLabel": "Δημιουργία Boleto",
-    "boleto.sendCopyToEmail": "Αποστολή αντιγράφου στη διεύθυνση email μου",
-    "button.copy": "Αντιγραφή",
-    "button.download": "Λήψη",
-    "boleto.socialSecurityNumber.invalid": "Το πεδίο δεν είναι έγκυρο",
-    "creditCard.storedCard.description.ariaLabel": "Η αποθηκευμένη κάρτα τελειώνει σε %@",
-    "voucher.entity": "Οντότητα",
-    donateButton: "Δωρεά",
-    notNowButton: "Όχι τώρα",
-    thanksForYourSupport: "Σας ευχαριστούμε για την υποστήριξη!",
-    preauthorizeWith: "Προεξουσιοδότηση με",
-    confirmPreauthorization: "Επιβεβαίωση προεξουσιοδότησης",
-    confirmPurchase: "Επιβεβαίωση αγοράς",
-    applyGiftcard: "Εξαργύρωση",
-    giftcardBalance: "Υπόλοιπο δωροκάρτας",
-    deductedBalance: "Υπόλοιπο που αφαιρέθηκε",
-    "creditCard.pin.title": "Κωδικός PIN",
-    "creditCard.encryptedPassword.label": "Τα πρώτα 2 ψηφία του κωδικού πρόσβασης της κάρτας",
+        "\u03A3\u03B1\u03C2 \u03B5\u03C5\u03C7\u03B1\u03C1\u03B9\u03C3\u03C4\u03BF\u03CD\u03BC\u03B5 \u03B3\u03B9\u03B1 \u03C4\u03B7\u03BD \u03B1\u03B3\u03BF\u03C1\u03AC. \u03A7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03B9\u03C2 \u03B1\u03BA\u03CC\u03BB\u03BF\u03C5\u03B8\u03B5\u03C2 \u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03AF\u03B5\u03C2 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03BF\u03BB\u03BF\u03BA\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE.",
+    "voucher.telephoneNumber":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03C4\u03B7\u03BB\u03B5\u03C6\u03CE\u03BD\u03BF\u03C5",
+    "voucher.shopperReference":
+        "\u0391\u03BD\u03B1\u03C6\u03BF\u03C1\u03AC \u03B1\u03B3\u03BF\u03C1\u03B1\u03C3\u03C4\u03AE",
+    "voucher.collectionInstitutionNumber":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03C0\u03C1\u03B1\u03BA\u03C4\u03BF\u03C1\u03B5\u03AF\u03BF\u03C5 \u03B5\u03B9\u03C3\u03C0\u03C1\u03AC\u03BE\u03B5\u03C9\u03BD",
+    "voucher.econtext.telephoneNumber.invalid":
+        "\u039F \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03C4\u03B7\u03BB\u03B5\u03C6\u03CE\u03BD\u03BF\u03C5 \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03C0\u03B5\u03C1\u03B9\u03AD\u03C7\u03B5\u03B9 10 \u03AE 11 \u03C8\u03B7\u03C6\u03AF\u03B1",
+    "boletobancario.btnLabel": "\u0394\u03B7\u03BC\u03B9\u03BF\u03C5\u03C1\u03B3\u03AF\u03B1 Boleto",
+    "boleto.sendCopyToEmail":
+        "\u0391\u03C0\u03BF\u03C3\u03C4\u03BF\u03BB\u03AE \u03B1\u03BD\u03C4\u03B9\u03B3\u03C1\u03AC\u03C6\u03BF\u03C5 \u03C3\u03C4\u03B7 \u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 email \u03BC\u03BF\u03C5",
+    "button.copy": "\u0391\u03BD\u03C4\u03B9\u03B3\u03C1\u03B1\u03C6\u03AE",
+    "button.download": "\u039B\u03AE\u03C8\u03B7",
+    "boleto.socialSecurityNumber.invalid":
+        "\u03A4\u03BF \u03C0\u03B5\u03B4\u03AF\u03BF \u03B4\u03B5\u03BD \u03B5\u03AF\u03BD\u03B1\u03B9 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF",
+    "creditCard.storedCard.description.ariaLabel":
+        "\u0397 \u03B1\u03C0\u03BF\u03B8\u03B7\u03BA\u03B5\u03C5\u03BC\u03AD\u03BD\u03B7 \u03BA\u03AC\u03C1\u03C4\u03B1 \u03C4\u03B5\u03BB\u03B5\u03B9\u03CE\u03BD\u03B5\u03B9 \u03C3\u03B5 %@",
+    "voucher.entity": "\u039F\u03BD\u03C4\u03CC\u03C4\u03B7\u03C4\u03B1",
+    donateButton: "\u0394\u03C9\u03C1\u03B5\u03AC",
+    notNowButton: "\u038C\u03C7\u03B9 \u03C4\u03CE\u03C1\u03B1",
+    thanksForYourSupport:
+        "\u03A3\u03B1\u03C2 \u03B5\u03C5\u03C7\u03B1\u03C1\u03B9\u03C3\u03C4\u03BF\u03CD\u03BC\u03B5 \u03B3\u03B9\u03B1 \u03C4\u03B7\u03BD \u03C5\u03C0\u03BF\u03C3\u03C4\u03AE\u03C1\u03B9\u03BE\u03B7!",
+    preauthorizeWith:
+        "\u03A0\u03C1\u03BF\u03B5\u03BE\u03BF\u03C5\u03C3\u03B9\u03BF\u03B4\u03CC\u03C4\u03B7\u03C3\u03B7 \u03BC\u03B5",
+    confirmPreauthorization:
+        "\u0395\u03C0\u03B9\u03B2\u03B5\u03B2\u03B1\u03AF\u03C9\u03C3\u03B7 \u03C0\u03C1\u03BF\u03B5\u03BE\u03BF\u03C5\u03C3\u03B9\u03BF\u03B4\u03CC\u03C4\u03B7\u03C3\u03B7\u03C2",
+    confirmPurchase:
+        "\u0395\u03C0\u03B9\u03B2\u03B5\u03B2\u03B1\u03AF\u03C9\u03C3\u03B7 \u03B1\u03B3\u03BF\u03C1\u03AC\u03C2",
+    applyGiftcard: "\u0395\u03BE\u03B1\u03C1\u03B3\u03CD\u03C1\u03C9\u03C3\u03B7",
+    giftcardBalance:
+        "\u03A5\u03C0\u03CC\u03BB\u03BF\u03B9\u03C0\u03BF \u03B4\u03C9\u03C1\u03BF\u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    deductedBalance:
+        "\u03A5\u03C0\u03CC\u03BB\u03BF\u03B9\u03C0\u03BF \u03C0\u03BF\u03C5 \u03B1\u03C6\u03B1\u03B9\u03C1\u03AD\u03B8\u03B7\u03BA\u03B5",
+    "creditCard.pin.title": "\u039A\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 PIN",
+    "creditCard.encryptedPassword.label":
+        "\u03A4\u03B1 \u03C0\u03C1\u03CE\u03C4\u03B1 2 \u03C8\u03B7\u03C6\u03AF\u03B1 \u03C4\u03BF\u03C5 \u03BA\u03C9\u03B4\u03B9\u03BA\u03BF\u03CD \u03C0\u03C1\u03CC\u03C3\u03B2\u03B1\u03C3\u03B7\u03C2 \u03C4\u03B7\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
     "creditCard.encryptedPassword.placeholder": "12",
-    "creditCard.encryptedPassword.invalid": "Μη έγκυρος κωδικός πρόσβασης",
-    "creditCard.taxNumber": "Ημερομηνία γέννησης κατόχου κάρτας ή αριθμός μητρώου εταιρειών",
-    "creditCard.taxNumber.label": "Ημερομηνία γέννησης κατόχου κάρτας (YYMMDD) ή αριθμός μητρώου εταιρειών (10 ψηφία)",
-    "creditCard.taxNumber.labelAlt": "Αριθμός μητρώου εταιρειών (10 ψηφία)",
-    "creditCard.taxNumber.invalid": "Μη έγκυρη ημερομηνία γέννησης κατόχου κάρτας ή αριθμός μητρώου εταιρειών",
-    "storedPaymentMethod.disable.button": "Αφαίρεση",
-    "storedPaymentMethod.disable.confirmation": "Αφαίρεση αποθηκευμένου τρόπου πληρωμής",
-    "storedPaymentMethod.disable.confirmButton": "Ναι, αφαίρεση",
-    "storedPaymentMethod.disable.cancelButton": "Άκυρο",
-    "ach.bankAccount": "Τραπεζικός λογαριασμός",
-    "ach.accountHolderNameField.title": "Όνομα κατόχου λογαριασμού",
-    "ach.accountHolderNameField.placeholder": "Γ. Παπαδάκης",
-    "ach.accountHolderNameField.invalid": "Μη έγκυρο όνομα κατόχου λογαριασμού",
-    "ach.accountNumberField.title": "Αριθμός λογαριασμού",
-    "ach.accountNumberField.invalid": "Μη έγκυρος αριθμός λογαριασμού",
-    "ach.accountLocationField.title": "Αριθμός δρομολόγησης ABA",
-    "ach.accountLocationField.invalid": "Μη έγκυρος αριθμός δρομολόγησης ABA",
-    "ach.savedBankAccount": "Αποθηκευμένος τραπεζικός λογαριασμός",
-    "select.state": "Επιλέξτε πολιτεία",
-    "select.stateOrProvince": "Επιλέξτε πολιτεία ή επαρχία",
-    "select.provinceOrTerritory": "Επιλέξτε επαρχία ή περιφέρεια",
-    "select.country": "Επιλέξτε χώρα",
-    "select.noOptionsFound": "Δεν βρέθηκαν επιλογές",
-    "select.filter.placeholder": "Αναζήτηση...",
-    "telephoneNumber.invalid": "Μη έγκυρος αριθμός τηλεφώνου",
-    qrCodeOrApp: "ή",
-    "paypal.processingPayment": "Επεξεργασία πληρωμής...",
-    generateQRCode: "Δημιουργία κωδικού QR",
-    "await.waitForConfirmation": "Αναμονή για επιβεβαίωση…",
-    "mbway.confirmPayment": "Επιβεβαιώστε την πληρωμή στην εφαρμογή MB WAY",
-    "shopperEmail.invalid": "Μη έγκυρη διεύθυνση email",
-    "dateOfBirth.format": "ΗΗ/ΜΜ/ΕΕΕΕ",
-    "dateOfBirth.invalid": "Πρέπει να είστε τουλάχιστον 18 ετών",
-    "blik.confirmPayment": "Ανοίξτε την εφαρμογή τραπεζικής σας για να επιβεβαιώσετε την πληρωμή.",
-    "blik.invalid": "Εισαγάγετε 6 ψηφία",
-    "blik.code": "6ψήφιος κωδικός",
-    "blik.help": "Λάβετε τον κωδικό από την εφαρμογή τραπεζικής σας.",
+    "creditCard.encryptedPassword.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF\u03C2 \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03C0\u03C1\u03CC\u03C3\u03B2\u03B1\u03C3\u03B7\u03C2",
+    "creditCard.taxNumber":
+        "\u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2 \u03BA\u03B1\u03C4\u03CC\u03C7\u03BF\u03C5 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2 \u03AE \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BC\u03B7\u03C4\u03C1\u03CE\u03BF\u03C5 \u03B5\u03C4\u03B1\u03B9\u03C1\u03B5\u03B9\u03CE\u03BD",
+    "creditCard.taxNumber.label":
+        "\u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2 \u03BA\u03B1\u03C4\u03CC\u03C7\u03BF\u03C5 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2 (YYMMDD) \u03AE \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BC\u03B7\u03C4\u03C1\u03CE\u03BF\u03C5 \u03B5\u03C4\u03B1\u03B9\u03C1\u03B5\u03B9\u03CE\u03BD (10 \u03C8\u03B7\u03C6\u03AF\u03B1)",
+    "creditCard.taxNumber.labelAlt":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BC\u03B7\u03C4\u03C1\u03CE\u03BF\u03C5 \u03B5\u03C4\u03B1\u03B9\u03C1\u03B5\u03B9\u03CE\u03BD (10 \u03C8\u03B7\u03C6\u03AF\u03B1)",
+    "creditCard.taxNumber.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B7\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2 \u03BA\u03B1\u03C4\u03CC\u03C7\u03BF\u03C5 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2 \u03AE \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BC\u03B7\u03C4\u03C1\u03CE\u03BF\u03C5 \u03B5\u03C4\u03B1\u03B9\u03C1\u03B5\u03B9\u03CE\u03BD",
+    "storedPaymentMethod.disable.button": "\u0391\u03C6\u03B1\u03AF\u03C1\u03B5\u03C3\u03B7",
+    "storedPaymentMethod.disable.confirmation":
+        "\u0391\u03C6\u03B1\u03AF\u03C1\u03B5\u03C3\u03B7 \u03B1\u03C0\u03BF\u03B8\u03B7\u03BA\u03B5\u03C5\u03BC\u03AD\u03BD\u03BF\u03C5 \u03C4\u03C1\u03CC\u03C0\u03BF\u03C5 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2",
+    "storedPaymentMethod.disable.confirmButton": "\u039D\u03B1\u03B9, \u03B1\u03C6\u03B1\u03AF\u03C1\u03B5\u03C3\u03B7",
+    "storedPaymentMethod.disable.cancelButton": "\u0386\u03BA\u03C5\u03C1\u03BF",
+    "ach.bankAccount":
+        "\u03A4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03CC\u03C2 \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03CC\u03C2",
+    "ach.accountHolderNameField.title":
+        "\u038C\u03BD\u03BF\u03BC\u03B1 \u03BA\u03B1\u03C4\u03CC\u03C7\u03BF\u03C5 \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "ach.accountHolderNameField.placeholder": "\u0393. \u03A0\u03B1\u03C0\u03B1\u03B4\u03AC\u03BA\u03B7\u03C2",
+    "ach.accountHolderNameField.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF \u03CC\u03BD\u03BF\u03BC\u03B1 \u03BA\u03B1\u03C4\u03CC\u03C7\u03BF\u03C5 \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "ach.accountNumberField.title":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "ach.accountNumberField.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF\u03C2 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "ach.accountLocationField.title":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03B4\u03C1\u03BF\u03BC\u03BF\u03BB\u03CC\u03B3\u03B7\u03C3\u03B7\u03C2 ABA",
+    "ach.accountLocationField.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF\u03C2 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03B4\u03C1\u03BF\u03BC\u03BF\u03BB\u03CC\u03B3\u03B7\u03C3\u03B7\u03C2 ABA",
+    "ach.savedBankAccount":
+        "\u0391\u03C0\u03BF\u03B8\u03B7\u03BA\u03B5\u03C5\u03BC\u03AD\u03BD\u03BF\u03C2 \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03CC\u03C2 \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03CC\u03C2",
+    "select.state": "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03C0\u03BF\u03BB\u03B9\u03C4\u03B5\u03AF\u03B1",
+    "select.stateOrProvince":
+        "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03C0\u03BF\u03BB\u03B9\u03C4\u03B5\u03AF\u03B1 \u03AE \u03B5\u03C0\u03B1\u03C1\u03C7\u03AF\u03B1",
+    "select.provinceOrTerritory":
+        "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03B5\u03C0\u03B1\u03C1\u03C7\u03AF\u03B1 \u03AE \u03C0\u03B5\u03C1\u03B9\u03C6\u03AD\u03C1\u03B5\u03B9\u03B1",
+    "select.country": "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03C7\u03CE\u03C1\u03B1",
+    "select.noOptionsFound":
+        "\u0394\u03B5\u03BD \u03B2\u03C1\u03AD\u03B8\u03B7\u03BA\u03B1\u03BD \u03B5\u03C0\u03B9\u03BB\u03BF\u03B3\u03AD\u03C2",
+    "select.filter.placeholder": "\u0391\u03BD\u03B1\u03B6\u03AE\u03C4\u03B7\u03C3\u03B7...",
+    "telephoneNumber.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF\u03C2 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03C4\u03B7\u03BB\u03B5\u03C6\u03CE\u03BD\u03BF\u03C5",
+    qrCodeOrApp: "\u03AE",
+    "paypal.processingPayment":
+        "\u0395\u03C0\u03B5\u03BE\u03B5\u03C1\u03B3\u03B1\u03C3\u03AF\u03B1 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2...",
+    generateQRCode:
+        "\u0394\u03B7\u03BC\u03B9\u03BF\u03C5\u03C1\u03B3\u03AF\u03B1 \u03BA\u03C9\u03B4\u03B9\u03BA\u03BF\u03CD QR",
+    "await.waitForConfirmation":
+        "\u0391\u03BD\u03B1\u03BC\u03BF\u03BD\u03AE \u03B3\u03B9\u03B1 \u03B5\u03C0\u03B9\u03B2\u03B5\u03B2\u03B1\u03AF\u03C9\u03C3\u03B7\u2026",
+    "mbway.confirmPayment":
+        "\u0395\u03C0\u03B9\u03B2\u03B5\u03B2\u03B1\u03B9\u03CE\u03C3\u03C4\u03B5 \u03C4\u03B7\u03BD \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE \u03C3\u03C4\u03B7\u03BD \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE MB WAY",
+    "shopperEmail.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 email",
+    "dateOfBirth.format": "\u0397\u0397/\u039C\u039C/\u0395\u0395\u0395\u0395",
+    "dateOfBirth.invalid":
+        "\u03A0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03B5\u03AF\u03C3\u03C4\u03B5 \u03C4\u03BF\u03C5\u03BB\u03AC\u03C7\u03B9\u03C3\u03C4\u03BF\u03BD 18 \u03B5\u03C4\u03CE\u03BD",
+    "blik.confirmPayment":
+        "\u0391\u03BD\u03BF\u03AF\u03BE\u03C4\u03B5 \u03C4\u03B7\u03BD \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03AE\u03C2 \u03C3\u03B1\u03C2 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03B5\u03C0\u03B9\u03B2\u03B5\u03B2\u03B1\u03B9\u03CE\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE.",
+    "blik.invalid": "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 6 \u03C8\u03B7\u03C6\u03AF\u03B1",
+    "blik.code": "6\u03C8\u03AE\u03C6\u03B9\u03BF\u03C2 \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2",
+    "blik.help":
+        "\u039B\u03AC\u03B2\u03B5\u03C4\u03B5 \u03C4\u03BF\u03BD \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC \u03B1\u03C0\u03CC \u03C4\u03B7\u03BD \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03AE\u03C2 \u03C3\u03B1\u03C2.",
     "swish.pendingMessage":
-        "Μετά τη σάρωση, η κατάσταση μπορεί να είναι εκκρεμής για έως 10 λεπτά. Η απόπειρα εκ νέου πληρωμής εντός αυτού του χρονικού διαστήματος ενδέχεται να προκαλέσει πρόσθετη χρέωση.",
-    "field.valid": "Το πεδίο είναι έγκυρο",
-    "field.invalid": "Το πεδίο δεν είναι έγκυρο",
-    "error.va.gen.01": "Ελλιπές πεδίο",
-    "error.va.gen.02": "Το πεδίο δεν είναι έγκυρο",
-    "error.va.sf-cc-num.01": "Εισαγάγετε έγκυρο αριθμό κάρτας",
-    "error.va.sf-cc-num.02": "Εισαγάγετε τον αριθμό της κάρτας",
-    "error.va.sf-cc-num.03": "Εισαγάγετε μια υποστηριζόμενη επωνυμία κάρτας",
-    "error.va.sf-cc-num.04": "Εισαγάγετε τον πλήρη αριθμό της κάρτας",
-    "error.va.sf-cc-dat.01": "Εισαγάγετε έγκυρη ημερομηνία λήξης",
-    "error.va.sf-cc-dat.02": "Εισαγάγετε έγκυρη ημερομηνία λήξης",
-    "error.va.sf-cc-dat.03": "Η πιστωτική κάρτα πρόκειται να λήξει σύντομα",
-    "error.va.sf-cc-dat.04": "Εισαγάγετε την ημερομηνία λήξης",
-    "error.va.sf-cc-dat.05": "Εισαγάγετε την πλήρη ημερομηνία λήξης",
-    "error.va.sf-cc-mth.01": "Εισαγάγετε τον μήνα λήξης",
-    "error.va.sf-cc-yr.01": "Εισαγάγετε το έτος λήξης",
-    "error.va.sf-cc-yr.02": "Εισαγάγετε το πλήρες έτος λήξης",
-    "error.va.sf-cc-cvc.01": "Εισαγάγετε τον κωδικό ασφαλείας",
-    "error.va.sf-cc-cvc.02": "Εισαγάγετε τον πλήρη κωδικό ασφαλείας",
-    "error.va.sf-ach-num.01": "Το πεδίο αριθμού τραπεζικού λογαριασμού είναι κενό",
-    "error.va.sf-ach-num.02": "Ο αριθμός τραπεζικού λογαριασμού δεν περιέχει τον σωστό αριθμό χαρακτήρων",
-    "error.va.sf-ach-loc.01": "Το πεδίο αριθμού δρομολόγησης τράπεζας είναι κενό",
-    "error.va.sf-ach-loc.02": "Ο αριθμός δρομολόγησης τράπεζας δεν περιέχει τον σωστό αριθμό χαρακτήρων",
-    "error.va.sf-kcp-pwd.01": "Το πεδίο κωδικού πρόσβασης είναι κενό",
-    "error.va.sf-kcp-pwd.02": "Ο κωδικός πρόσβασης δεν περιέχει τον σωστό αριθμό χαρακτήρων",
-    "error.giftcard.no-balance": "Η συγκεκριμένη δωροκάρτα έχει μηδενικό υπόλοιπο",
-    "error.giftcard.card-error": "Στα αρχεία μας δεν υπάρχει δωροκάρτα με αυτόν τον αριθμό",
-    "error.giftcard.currency-error": "Οι δωροκάρτες ισχύουν μόνο για το νόμισμα στο οποίο εκδόθηκαν",
-    "amazonpay.signout": "Αποσύνδεση από το Amazon",
-    "amazonpay.changePaymentDetails": "Αλλαγή στοιχείων πληρωμής",
-    "partialPayment.warning": "Επιλέξτε έναν άλλο τρόπο πληρωμής για καταβολή του εναπομείναντος ποσού",
-    "partialPayment.remainingBalance": "Το υπόλοιπο θα είναι %{amount}",
-    "bankTransfer.beneficiary": "Δικαιούχος",
-    "bankTransfer.iban": "ΙΒΑΝ",
+        "\u039C\u03B5\u03C4\u03AC \u03C4\u03B7 \u03C3\u03AC\u03C1\u03C9\u03C3\u03B7, \u03B7 \u03BA\u03B1\u03C4\u03AC\u03C3\u03C4\u03B1\u03C3\u03B7 \u03BC\u03C0\u03BF\u03C1\u03B5\u03AF \u03BD\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03B5\u03BA\u03BA\u03C1\u03B5\u03BC\u03AE\u03C2 \u03B3\u03B9\u03B1 \u03AD\u03C9\u03C2 10 \u03BB\u03B5\u03C0\u03C4\u03AC. \u0397 \u03B1\u03C0\u03CC\u03C0\u03B5\u03B9\u03C1\u03B1 \u03B5\u03BA \u03BD\u03AD\u03BF\u03C5 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2 \u03B5\u03BD\u03C4\u03CC\u03C2 \u03B1\u03C5\u03C4\u03BF\u03CD \u03C4\u03BF\u03C5 \u03C7\u03C1\u03BF\u03BD\u03B9\u03BA\u03BF\u03CD \u03B4\u03B9\u03B1\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03BF\u03C2 \u03B5\u03BD\u03B4\u03AD\u03C7\u03B5\u03C4\u03B1\u03B9 \u03BD\u03B1 \u03C0\u03C1\u03BF\u03BA\u03B1\u03BB\u03AD\u03C3\u03B5\u03B9 \u03C0\u03C1\u03CC\u03C3\u03B8\u03B5\u03C4\u03B7 \u03C7\u03C1\u03AD\u03C9\u03C3\u03B7.",
+    "field.valid":
+        "\u03A4\u03BF \u03C0\u03B5\u03B4\u03AF\u03BF \u03B5\u03AF\u03BD\u03B1\u03B9 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF",
+    "field.invalid":
+        "\u03A4\u03BF \u03C0\u03B5\u03B4\u03AF\u03BF \u03B4\u03B5\u03BD \u03B5\u03AF\u03BD\u03B1\u03B9 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF",
+    "error.va.gen.01": "\u0395\u03BB\u03BB\u03B9\u03C0\u03AD\u03C2 \u03C0\u03B5\u03B4\u03AF\u03BF",
+    "error.va.gen.02":
+        "\u03A4\u03BF \u03C0\u03B5\u03B4\u03AF\u03BF \u03B4\u03B5\u03BD \u03B5\u03AF\u03BD\u03B1\u03B9 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF",
+    "error.va.sf-cc-num.01":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "error.va.sf-cc-num.02":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF\u03BD \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03C4\u03B7\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "error.va.sf-cc-num.03":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03C5\u03C0\u03BF\u03C3\u03C4\u03B7\u03C1\u03B9\u03B6\u03CC\u03BC\u03B5\u03BD\u03B7 \u03B5\u03C0\u03C9\u03BD\u03C5\u03BC\u03AF\u03B1 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "error.va.sf-cc-num.04":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF\u03BD \u03C0\u03BB\u03AE\u03C1\u03B7 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03C4\u03B7\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "error.va.sf-cc-dat.01":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B7\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "error.va.sf-cc-dat.02":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B7\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "error.va.sf-cc-dat.03":
+        "\u0397 \u03C0\u03B9\u03C3\u03C4\u03C9\u03C4\u03B9\u03BA\u03AE \u03BA\u03AC\u03C1\u03C4\u03B1 \u03C0\u03C1\u03CC\u03BA\u03B5\u03B9\u03C4\u03B1\u03B9 \u03BD\u03B1 \u03BB\u03AE\u03BE\u03B5\u03B9 \u03C3\u03CD\u03BD\u03C4\u03BF\u03BC\u03B1",
+    "error.va.sf-cc-dat.04":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03B7\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "error.va.sf-cc-dat.05":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03C0\u03BB\u03AE\u03C1\u03B7 \u03B7\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "error.va.sf-cc-mth.01":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF\u03BD \u03BC\u03AE\u03BD\u03B1 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "error.va.sf-cc-yr.01":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF \u03AD\u03C4\u03BF\u03C2 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "error.va.sf-cc-yr.02":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF \u03C0\u03BB\u03AE\u03C1\u03B5\u03C2 \u03AD\u03C4\u03BF\u03C2 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "error.va.sf-cc-cvc.01":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF\u03BD \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC \u03B1\u03C3\u03C6\u03B1\u03BB\u03B5\u03AF\u03B1\u03C2",
+    "error.va.sf-cc-cvc.02":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF\u03BD \u03C0\u03BB\u03AE\u03C1\u03B7 \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC \u03B1\u03C3\u03C6\u03B1\u03BB\u03B5\u03AF\u03B1\u03C2",
+    "error.va.sf-ach-num.01":
+        "\u03A4\u03BF \u03C0\u03B5\u03B4\u03AF\u03BF \u03B1\u03C1\u03B9\u03B8\u03BC\u03BF\u03CD \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03BF\u03CD \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD \u03B5\u03AF\u03BD\u03B1\u03B9 \u03BA\u03B5\u03BD\u03CC",
+    "error.va.sf-ach-num.02":
+        "\u039F \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03BF\u03CD \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD \u03B4\u03B5\u03BD \u03C0\u03B5\u03C1\u03B9\u03AD\u03C7\u03B5\u03B9 \u03C4\u03BF\u03BD \u03C3\u03C9\u03C3\u03C4\u03CC \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03C7\u03B1\u03C1\u03B1\u03BA\u03C4\u03AE\u03C1\u03C9\u03BD",
+    "error.va.sf-ach-loc.01":
+        "\u03A4\u03BF \u03C0\u03B5\u03B4\u03AF\u03BF \u03B1\u03C1\u03B9\u03B8\u03BC\u03BF\u03CD \u03B4\u03C1\u03BF\u03BC\u03BF\u03BB\u03CC\u03B3\u03B7\u03C3\u03B7\u03C2 \u03C4\u03C1\u03AC\u03C0\u03B5\u03B6\u03B1\u03C2 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03BA\u03B5\u03BD\u03CC",
+    "error.va.sf-ach-loc.02":
+        "\u039F \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03B4\u03C1\u03BF\u03BC\u03BF\u03BB\u03CC\u03B3\u03B7\u03C3\u03B7\u03C2 \u03C4\u03C1\u03AC\u03C0\u03B5\u03B6\u03B1\u03C2 \u03B4\u03B5\u03BD \u03C0\u03B5\u03C1\u03B9\u03AD\u03C7\u03B5\u03B9 \u03C4\u03BF\u03BD \u03C3\u03C9\u03C3\u03C4\u03CC \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03C7\u03B1\u03C1\u03B1\u03BA\u03C4\u03AE\u03C1\u03C9\u03BD",
+    "error.va.sf-kcp-pwd.01":
+        "\u03A4\u03BF \u03C0\u03B5\u03B4\u03AF\u03BF \u03BA\u03C9\u03B4\u03B9\u03BA\u03BF\u03CD \u03C0\u03C1\u03CC\u03C3\u03B2\u03B1\u03C3\u03B7\u03C2 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03BA\u03B5\u03BD\u03CC",
+    "error.va.sf-kcp-pwd.02":
+        "\u039F \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03C0\u03C1\u03CC\u03C3\u03B2\u03B1\u03C3\u03B7\u03C2 \u03B4\u03B5\u03BD \u03C0\u03B5\u03C1\u03B9\u03AD\u03C7\u03B5\u03B9 \u03C4\u03BF\u03BD \u03C3\u03C9\u03C3\u03C4\u03CC \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03C7\u03B1\u03C1\u03B1\u03BA\u03C4\u03AE\u03C1\u03C9\u03BD",
+    "error.giftcard.no-balance":
+        "\u0397 \u03C3\u03C5\u03B3\u03BA\u03B5\u03BA\u03C1\u03B9\u03BC\u03AD\u03BD\u03B7 \u03B4\u03C9\u03C1\u03BF\u03BA\u03AC\u03C1\u03C4\u03B1 \u03AD\u03C7\u03B5\u03B9 \u03BC\u03B7\u03B4\u03B5\u03BD\u03B9\u03BA\u03CC \u03C5\u03C0\u03CC\u03BB\u03BF\u03B9\u03C0\u03BF",
+    "error.giftcard.card-error":
+        "\u03A3\u03C4\u03B1 \u03B1\u03C1\u03C7\u03B5\u03AF\u03B1 \u03BC\u03B1\u03C2 \u03B4\u03B5\u03BD \u03C5\u03C0\u03AC\u03C1\u03C7\u03B5\u03B9 \u03B4\u03C9\u03C1\u03BF\u03BA\u03AC\u03C1\u03C4\u03B1 \u03BC\u03B5 \u03B1\u03C5\u03C4\u03CC\u03BD \u03C4\u03BF\u03BD \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC",
+    "error.giftcard.currency-error":
+        "\u039F\u03B9 \u03B4\u03C9\u03C1\u03BF\u03BA\u03AC\u03C1\u03C4\u03B5\u03C2 \u03B9\u03C3\u03C7\u03CD\u03BF\u03C5\u03BD \u03BC\u03CC\u03BD\u03BF \u03B3\u03B9\u03B1 \u03C4\u03BF \u03BD\u03CC\u03BC\u03B9\u03C3\u03BC\u03B1 \u03C3\u03C4\u03BF \u03BF\u03C0\u03BF\u03AF\u03BF \u03B5\u03BA\u03B4\u03CC\u03B8\u03B7\u03BA\u03B1\u03BD",
+    "amazonpay.signout":
+        "\u0391\u03C0\u03BF\u03C3\u03CD\u03BD\u03B4\u03B5\u03C3\u03B7 \u03B1\u03C0\u03CC \u03C4\u03BF Amazon",
+    "amazonpay.changePaymentDetails":
+        "\u0391\u03BB\u03BB\u03B1\u03B3\u03AE \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03AF\u03C9\u03BD \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2",
+    "partialPayment.warning":
+        "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03AD\u03BD\u03B1\u03BD \u03AC\u03BB\u03BB\u03BF \u03C4\u03C1\u03CC\u03C0\u03BF \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2 \u03B3\u03B9\u03B1 \u03BA\u03B1\u03C4\u03B1\u03B2\u03BF\u03BB\u03AE \u03C4\u03BF\u03C5 \u03B5\u03BD\u03B1\u03C0\u03BF\u03BC\u03B5\u03AF\u03BD\u03B1\u03BD\u03C4\u03BF\u03C2 \u03C0\u03BF\u03C3\u03BF\u03CD",
+    "partialPayment.remainingBalance":
+        "\u03A4\u03BF \u03C5\u03C0\u03CC\u03BB\u03BF\u03B9\u03C0\u03BF \u03B8\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9 %{amount}",
+    "bankTransfer.beneficiary": "\u0394\u03B9\u03BA\u03B1\u03B9\u03BF\u03CD\u03C7\u03BF\u03C2",
+    "bankTransfer.iban": "\u0399\u0392\u0391\u039D",
     "bankTransfer.bic": "BIC",
-    "bankTransfer.reference": "Αναφορά",
+    "bankTransfer.reference": "\u0391\u03BD\u03B1\u03C6\u03BF\u03C1\u03AC",
     "bankTransfer.introduction":
-        "Συνεχίστε για να δημιουργήσετε νέα πληρωμή μέσω τραπεζικής μεταφοράς. Μπορείτε να χρησιμοποιήσετε τα στοιχεία στην ακόλουθη οθόνη για να ολοκληρώσετε αυτήν την πληρωμή.",
+        "\u03A3\u03C5\u03BD\u03B5\u03C7\u03AF\u03C3\u03C4\u03B5 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03B4\u03B7\u03BC\u03B9\u03BF\u03C5\u03C1\u03B3\u03AE\u03C3\u03B5\u03C4\u03B5 \u03BD\u03AD\u03B1 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE \u03BC\u03AD\u03C3\u03C9 \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03AE\u03C2 \u03BC\u03B5\u03C4\u03B1\u03C6\u03BF\u03C1\u03AC\u03C2. \u039C\u03C0\u03BF\u03C1\u03B5\u03AF\u03C4\u03B5 \u03BD\u03B1 \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B1 \u03C3\u03C4\u03BF\u03B9\u03C7\u03B5\u03AF\u03B1 \u03C3\u03C4\u03B7\u03BD \u03B1\u03BA\u03CC\u03BB\u03BF\u03C5\u03B8\u03B7 \u03BF\u03B8\u03CC\u03BD\u03B7 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03BF\u03BB\u03BF\u03BA\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03C4\u03B5 \u03B1\u03C5\u03C4\u03AE\u03BD \u03C4\u03B7\u03BD \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE.",
     "bankTransfer.instructions":
-        "Σας ευχαριστούμε για την αγορά. Χρησιμοποιήστε τις ακόλουθες πληροφορίες για να ολοκληρώσετε την πληρωμή.",
-    "bacs.accountHolderName": "Όνομα δικαιούχου τραπεζικού λογαριασμού",
-    "bacs.accountHolderName.invalid": "Μη έγκυρο όνομα δικαιούχου τραπεζικού λογαριασμού",
-    "bacs.accountNumber": "Αριθμός τραπεζικού λογαριασμού",
-    "bacs.accountNumber.invalid": "Μη έγκυρος αριθμός τραπεζικού λογαριασμού",
-    "bacs.bankLocationId": "Κωδικός τράπεζας",
-    "bacs.bankLocationId.invalid": "Μη έγκυρος κωδικός τράπεζας",
-    "bacs.consent.amount": "Αποδέχομαι ότι το πιο πάνω ποσό θα αφαιρεθεί από τον τραπεζικό λογαριασμό μου.",
+        "\u03A3\u03B1\u03C2 \u03B5\u03C5\u03C7\u03B1\u03C1\u03B9\u03C3\u03C4\u03BF\u03CD\u03BC\u03B5 \u03B3\u03B9\u03B1 \u03C4\u03B7\u03BD \u03B1\u03B3\u03BF\u03C1\u03AC. \u03A7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03B9\u03C2 \u03B1\u03BA\u03CC\u03BB\u03BF\u03C5\u03B8\u03B5\u03C2 \u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03AF\u03B5\u03C2 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03BF\u03BB\u03BF\u03BA\u03BB\u03B7\u03C1\u03CE\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE.",
+    "bacs.accountHolderName":
+        "\u038C\u03BD\u03BF\u03BC\u03B1 \u03B4\u03B9\u03BA\u03B1\u03B9\u03BF\u03CD\u03C7\u03BF\u03C5 \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03BF\u03CD \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "bacs.accountHolderName.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF \u03CC\u03BD\u03BF\u03BC\u03B1 \u03B4\u03B9\u03BA\u03B1\u03B9\u03BF\u03CD\u03C7\u03BF\u03C5 \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03BF\u03CD \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "bacs.accountNumber":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03BF\u03CD \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "bacs.accountNumber.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF\u03C2 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03BF\u03CD \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "bacs.bankLocationId":
+        "\u039A\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03C4\u03C1\u03AC\u03C0\u03B5\u03B6\u03B1\u03C2",
+    "bacs.bankLocationId.invalid":
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF\u03C2 \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03C4\u03C1\u03AC\u03C0\u03B5\u03B6\u03B1\u03C2",
+    "bacs.consent.amount":
+        "\u0391\u03C0\u03BF\u03B4\u03AD\u03C7\u03BF\u03BC\u03B1\u03B9 \u03CC\u03C4\u03B9 \u03C4\u03BF \u03C0\u03B9\u03BF \u03C0\u03AC\u03BD\u03C9 \u03C0\u03BF\u03C3\u03CC \u03B8\u03B1 \u03B1\u03C6\u03B1\u03B9\u03C1\u03B5\u03B8\u03B5\u03AF \u03B1\u03C0\u03CC \u03C4\u03BF\u03BD \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03CC \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03CC \u03BC\u03BF\u03C5.",
     "bacs.consent.account":
-        "Επιβεβαιώνω ότι ο λογαριασμός είναι στο όνομά μου και πως είμαι ο/η μοναδικός/μοναδική υπογράφων/υπογράφουσα που απαιτείται για εξουσιοδότηση της Άμεσης Χρέωσης σε αυτόν τον λογαριασμό.",
-    edit: "Επεξεργασία",
-    "bacs.confirm": "Επιβεβαίωση και πληρωμή",
-    "bacs.result.introduction": "Κατεβάστε την Εντολή Άμεσης Χρέωσης (DDI/Εντολή)",
-    "download.pdf": "Λήψη PDF",
-    "creditCard.encryptedCardNumber.aria.iframeTitle": "Iframe για αριθμό κάρτας",
-    "creditCard.encryptedCardNumber.aria.label": "Αριθμός κάρτας",
-    "creditCard.encryptedExpiryDate.aria.iframeTitle": "Iframe για ημερομηνία λήξης",
-    "creditCard.encryptedExpiryDate.aria.label": "Ημερομηνία λήξης",
-    "creditCard.encryptedExpiryMonth.aria.iframeTitle": "Iframe για μήνα λήξης",
-    "creditCard.encryptedExpiryMonth.aria.label": "Μήνας λήξης",
-    "creditCard.encryptedExpiryYear.aria.iframeTitle": "Iframe για έτος λήξης",
-    "creditCard.encryptedExpiryYear.aria.label": "Έτος λήξης",
-    "creditCard.encryptedSecurityCode.aria.iframeTitle": "Iframe για κωδικό ασφαλείας",
-    "creditCard.encryptedSecurityCode.aria.label": "Κωδικός ασφαλείας",
-    "creditCard.encryptedPassword.aria.iframeTitle": "Iframe για κωδικό πρόσβασης",
-    "creditCard.encryptedPassword.aria.label": "Τα πρώτα 2 ψηφία του κωδικού πρόσβασης της κάρτας",
-    "giftcard.encryptedCardNumber.aria.iframeTitle": "Iframe για αριθμό κάρτας",
-    "giftcard.encryptedCardNumber.aria.label": "Αριθμός κάρτας",
-    "giftcard.encryptedSecurityCode.aria.iframeTitle": "Iframe για PIN",
-    "giftcard.encryptedSecurityCode.aria.label": "Κωδικός PIN",
-    giftcardTransactionLimit: "Το μέγιστο επιτρεπόμενο ποσό ανά συναλλαγή σε αυτήν τη δωροκάρτα είναι %{amount}",
-    "ach.encryptedBankAccountNumber.aria.iframeTitle": "Iframe για αριθμό τραπεζικού λογαριασμού",
-    "ach.encryptedBankAccountNumber.aria.label": "Αριθμός λογαριασμού",
-    "ach.encryptedBankLocationId.aria.iframeTitle": "Iframe για αριθμό κωδικού υποκαταστήματος τράπεζας",
-    "ach.encryptedBankLocationId.aria.label": "Αριθμός δρομολόγησης ABA",
-    "twint.saved": "αποθηκεύτηκε",
-    orPayWith: "ή πληρώστε με",
-    invalidFormatExpects: "Μη έγκυρη μορφή. Αναμενόμενη μορφή: %{format}",
+        "\u0395\u03C0\u03B9\u03B2\u03B5\u03B2\u03B1\u03B9\u03CE\u03BD\u03C9 \u03CC\u03C4\u03B9 \u03BF \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03CC\u03C2 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03C3\u03C4\u03BF \u03CC\u03BD\u03BF\u03BC\u03AC \u03BC\u03BF\u03C5 \u03BA\u03B1\u03B9 \u03C0\u03C9\u03C2 \u03B5\u03AF\u03BC\u03B1\u03B9 \u03BF/\u03B7 \u03BC\u03BF\u03BD\u03B1\u03B4\u03B9\u03BA\u03CC\u03C2/\u03BC\u03BF\u03BD\u03B1\u03B4\u03B9\u03BA\u03AE \u03C5\u03C0\u03BF\u03B3\u03C1\u03AC\u03C6\u03C9\u03BD/\u03C5\u03C0\u03BF\u03B3\u03C1\u03AC\u03C6\u03BF\u03C5\u03C3\u03B1 \u03C0\u03BF\u03C5 \u03B1\u03C0\u03B1\u03B9\u03C4\u03B5\u03AF\u03C4\u03B1\u03B9 \u03B3\u03B9\u03B1 \u03B5\u03BE\u03BF\u03C5\u03C3\u03B9\u03BF\u03B4\u03CC\u03C4\u03B7\u03C3\u03B7 \u03C4\u03B7\u03C2 \u0386\u03BC\u03B5\u03C3\u03B7\u03C2 \u03A7\u03C1\u03AD\u03C9\u03C3\u03B7\u03C2 \u03C3\u03B5 \u03B1\u03C5\u03C4\u03CC\u03BD \u03C4\u03BF\u03BD \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03CC.",
+    edit: "\u0395\u03C0\u03B5\u03BE\u03B5\u03C1\u03B3\u03B1\u03C3\u03AF\u03B1",
+    "bacs.confirm":
+        "\u0395\u03C0\u03B9\u03B2\u03B5\u03B2\u03B1\u03AF\u03C9\u03C3\u03B7 \u03BA\u03B1\u03B9 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE",
+    "bacs.result.introduction":
+        "\u039A\u03B1\u03C4\u03B5\u03B2\u03AC\u03C3\u03C4\u03B5 \u03C4\u03B7\u03BD \u0395\u03BD\u03C4\u03BF\u03BB\u03AE \u0386\u03BC\u03B5\u03C3\u03B7\u03C2 \u03A7\u03C1\u03AD\u03C9\u03C3\u03B7\u03C2 (DDI/\u0395\u03BD\u03C4\u03BF\u03BB\u03AE)",
+    "download.pdf": "\u039B\u03AE\u03C8\u03B7 PDF",
+    "creditCard.encryptedCardNumber.aria.iframeTitle":
+        "Iframe \u03B3\u03B9\u03B1 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "creditCard.encryptedCardNumber.aria.label":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "creditCard.encryptedExpiryDate.aria.iframeTitle":
+        "Iframe \u03B3\u03B9\u03B1 \u03B7\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "creditCard.encryptedExpiryDate.aria.label":
+        "\u0397\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "creditCard.encryptedExpiryMonth.aria.iframeTitle":
+        "Iframe \u03B3\u03B9\u03B1 \u03BC\u03AE\u03BD\u03B1 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "creditCard.encryptedExpiryMonth.aria.label": "\u039C\u03AE\u03BD\u03B1\u03C2 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "creditCard.encryptedExpiryYear.aria.iframeTitle":
+        "Iframe \u03B3\u03B9\u03B1 \u03AD\u03C4\u03BF\u03C2 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "creditCard.encryptedExpiryYear.aria.label": "\u0388\u03C4\u03BF\u03C2 \u03BB\u03AE\u03BE\u03B7\u03C2",
+    "creditCard.encryptedSecurityCode.aria.iframeTitle":
+        "Iframe \u03B3\u03B9\u03B1 \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC \u03B1\u03C3\u03C6\u03B1\u03BB\u03B5\u03AF\u03B1\u03C2",
+    "creditCard.encryptedSecurityCode.aria.label":
+        "\u039A\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03B1\u03C3\u03C6\u03B1\u03BB\u03B5\u03AF\u03B1\u03C2",
+    "creditCard.encryptedPassword.aria.iframeTitle":
+        "Iframe \u03B3\u03B9\u03B1 \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC \u03C0\u03C1\u03CC\u03C3\u03B2\u03B1\u03C3\u03B7\u03C2",
+    "creditCard.encryptedPassword.aria.label":
+        "\u03A4\u03B1 \u03C0\u03C1\u03CE\u03C4\u03B1 2 \u03C8\u03B7\u03C6\u03AF\u03B1 \u03C4\u03BF\u03C5 \u03BA\u03C9\u03B4\u03B9\u03BA\u03BF\u03CD \u03C0\u03C1\u03CC\u03C3\u03B2\u03B1\u03C3\u03B7\u03C2 \u03C4\u03B7\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "giftcard.encryptedCardNumber.aria.iframeTitle":
+        "Iframe \u03B3\u03B9\u03B1 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "giftcard.encryptedCardNumber.aria.label":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "giftcard.encryptedSecurityCode.aria.iframeTitle": "Iframe \u03B3\u03B9\u03B1 PIN",
+    "giftcard.encryptedSecurityCode.aria.label": "\u039A\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 PIN",
+    giftcardTransactionLimit:
+        "\u03A4\u03BF \u03BC\u03AD\u03B3\u03B9\u03C3\u03C4\u03BF \u03B5\u03C0\u03B9\u03C4\u03C1\u03B5\u03C0\u03CC\u03BC\u03B5\u03BD\u03BF \u03C0\u03BF\u03C3\u03CC \u03B1\u03BD\u03AC \u03C3\u03C5\u03BD\u03B1\u03BB\u03BB\u03B1\u03B3\u03AE \u03C3\u03B5 \u03B1\u03C5\u03C4\u03AE\u03BD \u03C4\u03B7 \u03B4\u03C9\u03C1\u03BF\u03BA\u03AC\u03C1\u03C4\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9 %{amount}",
+    "ach.encryptedBankAccountNumber.aria.iframeTitle":
+        "Iframe \u03B3\u03B9\u03B1 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03BF\u03CD \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "ach.encryptedBankAccountNumber.aria.label":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03BF\u03CD",
+    "ach.encryptedBankLocationId.aria.iframeTitle":
+        "Iframe \u03B3\u03B9\u03B1 \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03BA\u03C9\u03B4\u03B9\u03BA\u03BF\u03CD \u03C5\u03C0\u03BF\u03BA\u03B1\u03C4\u03B1\u03C3\u03C4\u03AE\u03BC\u03B1\u03C4\u03BF\u03C2 \u03C4\u03C1\u03AC\u03C0\u03B5\u03B6\u03B1\u03C2",
+    "ach.encryptedBankLocationId.aria.label":
+        "\u0391\u03C1\u03B9\u03B8\u03BC\u03CC\u03C2 \u03B4\u03C1\u03BF\u03BC\u03BF\u03BB\u03CC\u03B3\u03B7\u03C3\u03B7\u03C2 ABA",
+    "twint.saved": "\u03B1\u03C0\u03BF\u03B8\u03B7\u03BA\u03B5\u03CD\u03C4\u03B7\u03BA\u03B5",
+    orPayWith: "\u03AE \u03C0\u03BB\u03B7\u03C1\u03CE\u03C3\u03C4\u03B5 \u03BC\u03B5",
+    invalidFormatExpects:
+        "\u039C\u03B7 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03BC\u03BF\u03C1\u03C6\u03AE. \u0391\u03BD\u03B1\u03BC\u03B5\u03BD\u03CC\u03BC\u03B5\u03BD\u03B7 \u03BC\u03BF\u03C1\u03C6\u03AE: %{format}",
     "upi.qrCodeWaitingMessage":
-        "Σαρώστε τον κωδικό QR χρησιμοποιώντας την προτιμώμενη εφαρμογή UPI για ολοκλήρωση της πληρωμής",
-    "upi.vpaWaitingMessage": "Ανοίξτε την εφαρμογή UPI για επιβεβαίωση της πληρωμής",
-    "upi.modeSelection": "Επιλέξτε μια ρύθμιση για τον τρόπο χρήσης του UPI.",
-    "onlineBanking.termsAndConditions": "Αν συνεχίσετε, συνεπάγεται ότι αποδέχεστε τους %#Όρους και προϋποθέσεις%#",
+        "\u03A3\u03B1\u03C1\u03CE\u03C3\u03C4\u03B5 \u03C4\u03BF\u03BD \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC QR \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03CE\u03BD\u03C4\u03B1\u03C2 \u03C4\u03B7\u03BD \u03C0\u03C1\u03BF\u03C4\u03B9\u03BC\u03CE\u03BC\u03B5\u03BD\u03B7 \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE UPI \u03B3\u03B9\u03B1 \u03BF\u03BB\u03BF\u03BA\u03BB\u03AE\u03C1\u03C9\u03C3\u03B7 \u03C4\u03B7\u03C2 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2",
+    "upi.vpaWaitingMessage":
+        "\u0391\u03BD\u03BF\u03AF\u03BE\u03C4\u03B5 \u03C4\u03B7\u03BD \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE UPI \u03B3\u03B9\u03B1 \u03B5\u03C0\u03B9\u03B2\u03B5\u03B2\u03B1\u03AF\u03C9\u03C3\u03B7 \u03C4\u03B7\u03C2 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2",
+    "upi.modeSelection":
+        "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03C1\u03CD\u03B8\u03BC\u03B9\u03C3\u03B7 \u03B3\u03B9\u03B1 \u03C4\u03BF\u03BD \u03C4\u03C1\u03CC\u03C0\u03BF \u03C7\u03C1\u03AE\u03C3\u03B7\u03C2 \u03C4\u03BF\u03C5 UPI.",
+    "onlineBanking.termsAndConditions":
+        "\u0391\u03BD \u03C3\u03C5\u03BD\u03B5\u03C7\u03AF\u03C3\u03B5\u03C4\u03B5, \u03C3\u03C5\u03BD\u03B5\u03C0\u03AC\u03B3\u03B5\u03C4\u03B1\u03B9 \u03CC\u03C4\u03B9 \u03B1\u03C0\u03BF\u03B4\u03AD\u03C7\u03B5\u03C3\u03C4\u03B5 \u03C4\u03BF\u03C5\u03C2 %#\u038C\u03C1\u03BF\u03C5\u03C2 \u03BA\u03B1\u03B9 \u03C0\u03C1\u03BF\u03CB\u03C0\u03BF\u03B8\u03AD\u03C3\u03B5\u03B9\u03C2%#",
     "onlineBankingPL.termsAndConditions":
-        "Συνεχίζοντας, συμφωνείτε με τους %#κανονισμούς%# και την %#υποχρέωση ενημέρωσης%# της Przelewy24",
-    "ctp.loading.poweredByCtp": "Με την υποστήριξη του Click to Pay",
-    "ctp.loading.intro": "Έλεγχος για να διαπιστωθεί αν υπάρχουν αποθηκευμένες κάρτες με Click to Pay...",
-    "ctp.login.title": "Συνέχεια στο Click to Pay",
-    "ctp.login.subtitle": "Εισαγάγετε τη διεύθυνση email που είναι συνδεδεμένη με το Click to Pay για να συνεχίσετε.",
+        "\u03A3\u03C5\u03BD\u03B5\u03C7\u03AF\u03B6\u03BF\u03BD\u03C4\u03B1\u03C2, \u03C3\u03C5\u03BC\u03C6\u03C9\u03BD\u03B5\u03AF\u03C4\u03B5 \u03BC\u03B5 \u03C4\u03BF\u03C5\u03C2 %#\u03BA\u03B1\u03BD\u03BF\u03BD\u03B9\u03C3\u03BC\u03BF\u03CD\u03C2%# \u03BA\u03B1\u03B9 \u03C4\u03B7\u03BD %#\u03C5\u03C0\u03BF\u03C7\u03C1\u03AD\u03C9\u03C3\u03B7 \u03B5\u03BD\u03B7\u03BC\u03AD\u03C1\u03C9\u03C3\u03B7\u03C2%# \u03C4\u03B7\u03C2 Przelewy24",
+    "ctp.loading.poweredByCtp":
+        "\u039C\u03B5 \u03C4\u03B7\u03BD \u03C5\u03C0\u03BF\u03C3\u03C4\u03AE\u03C1\u03B9\u03BE\u03B7 \u03C4\u03BF\u03C5 Click to Pay",
+    "ctp.loading.intro":
+        "\u0388\u03BB\u03B5\u03B3\u03C7\u03BF\u03C2 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03B4\u03B9\u03B1\u03C0\u03B9\u03C3\u03C4\u03C9\u03B8\u03B5\u03AF \u03B1\u03BD \u03C5\u03C0\u03AC\u03C1\u03C7\u03BF\u03C5\u03BD \u03B1\u03C0\u03BF\u03B8\u03B7\u03BA\u03B5\u03C5\u03BC\u03AD\u03BD\u03B5\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B5\u03C2 \u03BC\u03B5 Click to Pay...",
+    "ctp.login.title": "\u03A3\u03C5\u03BD\u03AD\u03C7\u03B5\u03B9\u03B1 \u03C3\u03C4\u03BF Click to Pay",
+    "ctp.login.subtitle":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03B7 \u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 email \u03C0\u03BF\u03C5 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03C3\u03C5\u03BD\u03B4\u03B5\u03B4\u03B5\u03BC\u03AD\u03BD\u03B7 \u03BC\u03B5 \u03C4\u03BF Click to Pay \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03C3\u03C5\u03BD\u03B5\u03C7\u03AF\u03C3\u03B5\u03C4\u03B5.",
     "ctp.login.inputLabel": "Email",
-    "ctp.logout.notYou": "Δεν είστε εσείς αυτό το άτομο;",
-    "ctp.logout.notYourCards": "Αυτές δεν είναι οι κάρτες σας;",
-    "ctp.logout.notYourCard": "Δεν είναι η κάρτα σας;",
-    "ctp.logout.notYourProfile": "Δεν είναι το προφίλ σας;",
-    "ctp.otp.fieldLabel": "Κωδικός μιας χρήσης",
-    "ctp.otp.resendCode": "Εκ νέου αποστολή κωδικού",
-    "ctp.otp.codeResent": "Ο κωδικός στάλθηκε εκ νέου",
-    "ctp.otp.title": "Πρόσβαση στις κάρτες Click to Pay σας",
-    "ctp.otp.subtitle": "Εισαγάγετε τον κωδικό %@ που στάλθηκε στο %@ για να επαληθεύσετε ότι είστε εσείς.",
-    "ctp.emptyProfile.message": "Δεν υπάρχουν καταχωρισμένες κάρτες σε αυτό το προφίλ Click to Pay",
-    "ctp.separatorText": "ή χρησιμοποιήστε το",
-    "ctp.cards.title": "Ολοκληρώστε την πληρωμή με το Click to Pay",
-    "ctp.cards.subtitle": "Επιλέξτε μια κάρτα προς χρήση.",
-    "ctp.cards.expiredCard": "Έληξε",
-    "ctp.manualCardEntry": "Χειροκίνητη καταχώριση κάρτας",
-    "ctp.aria.infoModalButton": "Τι είναι το Click to Pay",
-    "ctp.infoPopup.title": "Το Click to Pay προσφέρει την ευκολία ανέπαφων διαδικτυακών",
+    "ctp.logout.notYou":
+        "\u0394\u03B5\u03BD \u03B5\u03AF\u03C3\u03C4\u03B5 \u03B5\u03C3\u03B5\u03AF\u03C2 \u03B1\u03C5\u03C4\u03CC \u03C4\u03BF \u03AC\u03C4\u03BF\u03BC\u03BF;",
+    "ctp.logout.notYourCards":
+        "\u0391\u03C5\u03C4\u03AD\u03C2 \u03B4\u03B5\u03BD \u03B5\u03AF\u03BD\u03B1\u03B9 \u03BF\u03B9 \u03BA\u03AC\u03C1\u03C4\u03B5\u03C2 \u03C3\u03B1\u03C2;",
+    "ctp.logout.notYourCard":
+        "\u0394\u03B5\u03BD \u03B5\u03AF\u03BD\u03B1\u03B9 \u03B7 \u03BA\u03AC\u03C1\u03C4\u03B1 \u03C3\u03B1\u03C2;",
+    "ctp.logout.notYourProfile":
+        "\u0394\u03B5\u03BD \u03B5\u03AF\u03BD\u03B1\u03B9 \u03C4\u03BF \u03C0\u03C1\u03BF\u03C6\u03AF\u03BB \u03C3\u03B1\u03C2;",
+    "ctp.otp.fieldLabel":
+        "\u039A\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03BC\u03B9\u03B1\u03C2 \u03C7\u03C1\u03AE\u03C3\u03B7\u03C2",
+    "ctp.otp.resendCode":
+        "\u0395\u03BA \u03BD\u03AD\u03BF\u03C5 \u03B1\u03C0\u03BF\u03C3\u03C4\u03BF\u03BB\u03AE \u03BA\u03C9\u03B4\u03B9\u03BA\u03BF\u03CD",
+    "ctp.otp.codeResent":
+        "\u039F \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03C3\u03C4\u03AC\u03BB\u03B8\u03B7\u03BA\u03B5 \u03B5\u03BA \u03BD\u03AD\u03BF\u03C5",
+    "ctp.otp.title":
+        "\u03A0\u03C1\u03CC\u03C3\u03B2\u03B1\u03C3\u03B7 \u03C3\u03C4\u03B9\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B5\u03C2 Click to Pay \u03C3\u03B1\u03C2",
+    "ctp.otp.subtitle":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF\u03BD \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC %@ \u03C0\u03BF\u03C5 \u03C3\u03C4\u03AC\u03BB\u03B8\u03B7\u03BA\u03B5 \u03C3\u03C4\u03BF %@ \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03B5\u03C0\u03B1\u03BB\u03B7\u03B8\u03B5\u03CD\u03C3\u03B5\u03C4\u03B5 \u03CC\u03C4\u03B9 \u03B5\u03AF\u03C3\u03C4\u03B5 \u03B5\u03C3\u03B5\u03AF\u03C2.",
+    "ctp.emptyProfile.message":
+        "\u0394\u03B5\u03BD \u03C5\u03C0\u03AC\u03C1\u03C7\u03BF\u03C5\u03BD \u03BA\u03B1\u03C4\u03B1\u03C7\u03C9\u03C1\u03B9\u03C3\u03BC\u03AD\u03BD\u03B5\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B5\u03C2 \u03C3\u03B5 \u03B1\u03C5\u03C4\u03CC \u03C4\u03BF \u03C0\u03C1\u03BF\u03C6\u03AF\u03BB Click to Pay",
+    "ctp.separatorText":
+        "\u03AE \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03BF",
+    "ctp.cards.title":
+        "\u039F\u03BB\u03BF\u03BA\u03BB\u03B7\u03C1\u03CE\u03C3\u03C4\u03B5 \u03C4\u03B7\u03BD \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE \u03BC\u03B5 \u03C4\u03BF Click to Pay",
+    "ctp.cards.subtitle":
+        "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03BA\u03AC\u03C1\u03C4\u03B1 \u03C0\u03C1\u03BF\u03C2 \u03C7\u03C1\u03AE\u03C3\u03B7.",
+    "ctp.cards.expiredCard": "\u0388\u03BB\u03B7\u03BE\u03B5",
+    "ctp.manualCardEntry":
+        "\u03A7\u03B5\u03B9\u03C1\u03BF\u03BA\u03AF\u03BD\u03B7\u03C4\u03B7 \u03BA\u03B1\u03C4\u03B1\u03C7\u03CE\u03C1\u03B9\u03C3\u03B7 \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "ctp.aria.infoModalButton": "\u03A4\u03B9 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03C4\u03BF Click to Pay",
+    "ctp.infoPopup.title":
+        "\u03A4\u03BF Click to Pay \u03C0\u03C1\u03BF\u03C3\u03C6\u03AD\u03C1\u03B5\u03B9 \u03C4\u03B7\u03BD \u03B5\u03C5\u03BA\u03BF\u03BB\u03AF\u03B1 \u03B1\u03BD\u03AD\u03C0\u03B1\u03C6\u03C9\u03BD \u03B4\u03B9\u03B1\u03B4\u03B9\u03BA\u03C4\u03C5\u03B1\u03BA\u03CE\u03BD",
     "ctp.infoPopup.subtitle":
-        "Ένας γρήγορος, ασφαλής τρόπος πληρωμής που υποστηρίζεται από τις κάρτες Mastercard, Visa και άλλες κάρτες πληρωμών.",
-    "ctp.infoPopup.benefit1": "Το Click to Pay χρησιμοποιεί κρυπτογράφηση για να διατηρεί τις πληροφορίες σας ασφαλείς",
-    "ctp.infoPopup.benefit2": "Χρησιμοποιήστε τη δυνατότητα σε εμπόρους ανά τον κόσμο",
-    "ctp.infoPopup.benefit3": "Εύκολη διαμόρφωση για άνετες πληρωμές ανά πάσα στιγμή",
-    "ctp.errors.AUTH_INVALID": "Ο έλεγχος ταυτότητας δεν ήταν έγκυρος",
+        "\u0388\u03BD\u03B1\u03C2 \u03B3\u03C1\u03AE\u03B3\u03BF\u03C1\u03BF\u03C2, \u03B1\u03C3\u03C6\u03B1\u03BB\u03AE\u03C2 \u03C4\u03C1\u03CC\u03C0\u03BF\u03C2 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2 \u03C0\u03BF\u03C5 \u03C5\u03C0\u03BF\u03C3\u03C4\u03B7\u03C1\u03AF\u03B6\u03B5\u03C4\u03B1\u03B9 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B5\u03C2 Mastercard, Visa \u03BA\u03B1\u03B9 \u03AC\u03BB\u03BB\u03B5\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B5\u03C2 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03CE\u03BD.",
+    "ctp.infoPopup.benefit1":
+        "\u03A4\u03BF Click to Pay \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03B5\u03AF \u03BA\u03C1\u03C5\u03C0\u03C4\u03BF\u03B3\u03C1\u03AC\u03C6\u03B7\u03C3\u03B7 \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03B4\u03B9\u03B1\u03C4\u03B7\u03C1\u03B5\u03AF \u03C4\u03B9\u03C2 \u03C0\u03BB\u03B7\u03C1\u03BF\u03C6\u03BF\u03C1\u03AF\u03B5\u03C2 \u03C3\u03B1\u03C2 \u03B1\u03C3\u03C6\u03B1\u03BB\u03B5\u03AF\u03C2",
+    "ctp.infoPopup.benefit2":
+        "\u03A7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03B7 \u03B4\u03C5\u03BD\u03B1\u03C4\u03CC\u03C4\u03B7\u03C4\u03B1 \u03C3\u03B5 \u03B5\u03BC\u03C0\u03CC\u03C1\u03BF\u03C5\u03C2 \u03B1\u03BD\u03AC \u03C4\u03BF\u03BD \u03BA\u03CC\u03C3\u03BC\u03BF",
+    "ctp.infoPopup.benefit3":
+        "\u0395\u03CD\u03BA\u03BF\u03BB\u03B7 \u03B4\u03B9\u03B1\u03BC\u03CC\u03C1\u03C6\u03C9\u03C3\u03B7 \u03B3\u03B9\u03B1 \u03AC\u03BD\u03B5\u03C4\u03B5\u03C2 \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AD\u03C2 \u03B1\u03BD\u03AC \u03C0\u03AC\u03C3\u03B1 \u03C3\u03C4\u03B9\u03B3\u03BC\u03AE",
+    "ctp.errors.AUTH_INVALID":
+        "\u039F \u03AD\u03BB\u03B5\u03B3\u03C7\u03BF\u03C2 \u03C4\u03B1\u03C5\u03C4\u03CC\u03C4\u03B7\u03C4\u03B1\u03C2 \u03B4\u03B5\u03BD \u03AE\u03C4\u03B1\u03BD \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF\u03C2",
     "ctp.errors.NOT_FOUND":
-        "Δεν βρέθηκε λογαριασμός, εισαγάγετε μια έγκυρη διεύθυνση email ή συνεχίστε για χειροκίνητη εισαγωγή κάρτας",
-    "ctp.errors.ID_FORMAT_UNSUPPORTED": "Η μορφή δεν υποστηρίζεται",
-    "ctp.errors.FRAUD": "Ο λογαριασμός χρήστη κλειδώθηκε ή απενεργοποιήθηκε",
-    "ctp.errors.CONSUMER_ID_MISSING": "Η ταυτότητα καταναλωτή λείπει στο αίτημα",
-    "ctp.errors.ACCT_INACCESSIBLE": "Αυτός ο λογαριασμός δεν είναι διαθέσιμος τώρα, π.χ. είναι κλειδωμένος",
-    "ctp.errors.CODE_INVALID": "Λανθασμένος κωδικός επαλήθευσης",
-    "ctp.errors.CODE_EXPIRED": "Αυτός ο κωδικός έχει λήξει",
-    "ctp.errors.RETRIES_EXCEEDED": "Σημειώθηκε υπέρβαση του αριθμού νέων αποπειρών δημιουργίας OTP",
-    "ctp.errors.OTP_SEND_FAILED": "Δεν ήταν δυνατή η αποστολή του OTP στον παραλήπτη",
+        "\u0394\u03B5\u03BD \u03B2\u03C1\u03AD\u03B8\u03B7\u03BA\u03B5 \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03CC\u03C2, \u03B5\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 email \u03AE \u03C3\u03C5\u03BD\u03B5\u03C7\u03AF\u03C3\u03C4\u03B5 \u03B3\u03B9\u03B1 \u03C7\u03B5\u03B9\u03C1\u03BF\u03BA\u03AF\u03BD\u03B7\u03C4\u03B7 \u03B5\u03B9\u03C3\u03B1\u03B3\u03C9\u03B3\u03AE \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "ctp.errors.ID_FORMAT_UNSUPPORTED":
+        "\u0397 \u03BC\u03BF\u03C1\u03C6\u03AE \u03B4\u03B5\u03BD \u03C5\u03C0\u03BF\u03C3\u03C4\u03B7\u03C1\u03AF\u03B6\u03B5\u03C4\u03B1\u03B9",
+    "ctp.errors.FRAUD":
+        "\u039F \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03CC\u03C2 \u03C7\u03C1\u03AE\u03C3\u03C4\u03B7 \u03BA\u03BB\u03B5\u03B9\u03B4\u03CE\u03B8\u03B7\u03BA\u03B5 \u03AE \u03B1\u03C0\u03B5\u03BD\u03B5\u03C1\u03B3\u03BF\u03C0\u03BF\u03B9\u03AE\u03B8\u03B7\u03BA\u03B5",
+    "ctp.errors.CONSUMER_ID_MISSING":
+        "\u0397 \u03C4\u03B1\u03C5\u03C4\u03CC\u03C4\u03B7\u03C4\u03B1 \u03BA\u03B1\u03C4\u03B1\u03BD\u03B1\u03BB\u03C9\u03C4\u03AE \u03BB\u03B5\u03AF\u03C0\u03B5\u03B9 \u03C3\u03C4\u03BF \u03B1\u03AF\u03C4\u03B7\u03BC\u03B1",
+    "ctp.errors.ACCT_INACCESSIBLE":
+        "\u0391\u03C5\u03C4\u03CC\u03C2 \u03BF \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03CC\u03C2 \u03B4\u03B5\u03BD \u03B5\u03AF\u03BD\u03B1\u03B9 \u03B4\u03B9\u03B1\u03B8\u03AD\u03C3\u03B9\u03BC\u03BF\u03C2 \u03C4\u03CE\u03C1\u03B1, \u03C0.\u03C7. \u03B5\u03AF\u03BD\u03B1\u03B9 \u03BA\u03BB\u03B5\u03B9\u03B4\u03C9\u03BC\u03AD\u03BD\u03BF\u03C2",
+    "ctp.errors.CODE_INVALID":
+        "\u039B\u03B1\u03BD\u03B8\u03B1\u03C3\u03BC\u03AD\u03BD\u03BF\u03C2 \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03B5\u03C0\u03B1\u03BB\u03AE\u03B8\u03B5\u03C5\u03C3\u03B7\u03C2",
+    "ctp.errors.CODE_EXPIRED":
+        "\u0391\u03C5\u03C4\u03CC\u03C2 \u03BF \u03BA\u03C9\u03B4\u03B9\u03BA\u03CC\u03C2 \u03AD\u03C7\u03B5\u03B9 \u03BB\u03AE\u03BE\u03B5\u03B9",
+    "ctp.errors.RETRIES_EXCEEDED":
+        "\u03A3\u03B7\u03BC\u03B5\u03B9\u03CE\u03B8\u03B7\u03BA\u03B5 \u03C5\u03C0\u03AD\u03C1\u03B2\u03B1\u03C3\u03B7 \u03C4\u03BF\u03C5 \u03B1\u03C1\u03B9\u03B8\u03BC\u03BF\u03CD \u03BD\u03AD\u03C9\u03BD \u03B1\u03C0\u03BF\u03C0\u03B5\u03B9\u03C1\u03CE\u03BD \u03B4\u03B7\u03BC\u03B9\u03BF\u03C5\u03C1\u03B3\u03AF\u03B1\u03C2 OTP",
+    "ctp.errors.OTP_SEND_FAILED":
+        "\u0394\u03B5\u03BD \u03AE\u03C4\u03B1\u03BD \u03B4\u03C5\u03BD\u03B1\u03C4\u03AE \u03B7 \u03B1\u03C0\u03BF\u03C3\u03C4\u03BF\u03BB\u03AE \u03C4\u03BF\u03C5 OTP \u03C3\u03C4\u03BF\u03BD \u03C0\u03B1\u03C1\u03B1\u03BB\u03AE\u03C0\u03C4\u03B7",
     "ctp.errors.REQUEST_TIMEOUT":
-        "Παρουσιάστηκε κάποιο πρόβλημα, δοκιμάστε ξανά ή χρησιμοποιήστε τη χειροκίνητη εισαγωγή κάρτας",
+        "\u03A0\u03B1\u03C1\u03BF\u03C5\u03C3\u03B9\u03AC\u03C3\u03C4\u03B7\u03BA\u03B5 \u03BA\u03AC\u03C0\u03BF\u03B9\u03BF \u03C0\u03C1\u03CC\u03B2\u03BB\u03B7\u03BC\u03B1, \u03B4\u03BF\u03BA\u03B9\u03BC\u03AC\u03C3\u03C4\u03B5 \u03BE\u03B1\u03BD\u03AC \u03AE \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03B7 \u03C7\u03B5\u03B9\u03C1\u03BF\u03BA\u03AF\u03BD\u03B7\u03C4\u03B7 \u03B5\u03B9\u03C3\u03B1\u03B3\u03C9\u03B3\u03AE \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
     "ctp.errors.UNKNOWN_ERROR":
-        "Παρουσιάστηκε κάποιο πρόβλημα, δοκιμάστε ξανά ή χρησιμοποιήστε τη χειροκίνητη εισαγωγή κάρτας",
+        "\u03A0\u03B1\u03C1\u03BF\u03C5\u03C3\u03B9\u03AC\u03C3\u03C4\u03B7\u03BA\u03B5 \u03BA\u03AC\u03C0\u03BF\u03B9\u03BF \u03C0\u03C1\u03CC\u03B2\u03BB\u03B7\u03BC\u03B1, \u03B4\u03BF\u03BA\u03B9\u03BC\u03AC\u03C3\u03C4\u03B5 \u03BE\u03B1\u03BD\u03AC \u03AE \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03B7 \u03C7\u03B5\u03B9\u03C1\u03BF\u03BA\u03AF\u03BD\u03B7\u03C4\u03B7 \u03B5\u03B9\u03C3\u03B1\u03B3\u03C9\u03B3\u03AE \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
     "ctp.errors.SERVICE_ERROR":
-        "Παρουσιάστηκε κάποιο πρόβλημα, δοκιμάστε ξανά ή χρησιμοποιήστε τη χειροκίνητη εισαγωγή κάρτας",
+        "\u03A0\u03B1\u03C1\u03BF\u03C5\u03C3\u03B9\u03AC\u03C3\u03C4\u03B7\u03BA\u03B5 \u03BA\u03AC\u03C0\u03BF\u03B9\u03BF \u03C0\u03C1\u03CC\u03B2\u03BB\u03B7\u03BC\u03B1, \u03B4\u03BF\u03BA\u03B9\u03BC\u03AC\u03C3\u03C4\u03B5 \u03BE\u03B1\u03BD\u03AC \u03AE \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03B7 \u03C7\u03B5\u03B9\u03C1\u03BF\u03BA\u03AF\u03BD\u03B7\u03C4\u03B7 \u03B5\u03B9\u03C3\u03B1\u03B3\u03C9\u03B3\u03AE \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
     "ctp.errors.SERVER_ERROR":
-        "Παρουσιάστηκε κάποιο πρόβλημα, δοκιμάστε ξανά ή χρησιμοποιήστε τη χειροκίνητη εισαγωγή κάρτας",
+        "\u03A0\u03B1\u03C1\u03BF\u03C5\u03C3\u03B9\u03AC\u03C3\u03C4\u03B7\u03BA\u03B5 \u03BA\u03AC\u03C0\u03BF\u03B9\u03BF \u03C0\u03C1\u03CC\u03B2\u03BB\u03B7\u03BC\u03B1, \u03B4\u03BF\u03BA\u03B9\u03BC\u03AC\u03C3\u03C4\u03B5 \u03BE\u03B1\u03BD\u03AC \u03AE \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03B7 \u03C7\u03B5\u03B9\u03C1\u03BF\u03BA\u03AF\u03BD\u03B7\u03C4\u03B7 \u03B5\u03B9\u03C3\u03B1\u03B3\u03C9\u03B3\u03AE \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
     "ctp.errors.INVALID_PARAMETER":
-        "Παρουσιάστηκε κάποιο πρόβλημα, δοκιμάστε ξανά ή χρησιμοποιήστε τη χειροκίνητη εισαγωγή κάρτας",
+        "\u03A0\u03B1\u03C1\u03BF\u03C5\u03C3\u03B9\u03AC\u03C3\u03C4\u03B7\u03BA\u03B5 \u03BA\u03AC\u03C0\u03BF\u03B9\u03BF \u03C0\u03C1\u03CC\u03B2\u03BB\u03B7\u03BC\u03B1, \u03B4\u03BF\u03BA\u03B9\u03BC\u03AC\u03C3\u03C4\u03B5 \u03BE\u03B1\u03BD\u03AC \u03AE \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03B7 \u03C7\u03B5\u03B9\u03C1\u03BF\u03BA\u03AF\u03BD\u03B7\u03C4\u03B7 \u03B5\u03B9\u03C3\u03B1\u03B3\u03C9\u03B3\u03AE \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
     "ctp.errors.AUTH_ERROR":
-        "Παρουσιάστηκε κάποιο πρόβλημα, δοκιμάστε ξανά ή χρησιμοποιήστε τη χειροκίνητη εισαγωγή κάρτας",
-    "paymentMethodsList.aria.label": "Επιλέξτε έναν τρόπο πληρωμής",
-    "companyDetails.name.invalid": "Εισαγάγετε το όνομα της εταιρείας",
-    "companyDetails.registrationNumber.invalid": "Εισαγάγετε τον αριθμό μητρώου",
-    "consent.checkbox.invalid": "Πρέπει να συμφωνήσετε με τους όρους και τις προϋποθέσεις",
-    "form.instruction": "Όλα τα πεδία είναι υποχρεωτικά, εκτός εάν επισημαίνεται διαφορετικά.",
-    "trustly.descriptor": "Άμεση τραπεζική πληρωμή",
+        "\u03A0\u03B1\u03C1\u03BF\u03C5\u03C3\u03B9\u03AC\u03C3\u03C4\u03B7\u03BA\u03B5 \u03BA\u03AC\u03C0\u03BF\u03B9\u03BF \u03C0\u03C1\u03CC\u03B2\u03BB\u03B7\u03BC\u03B1, \u03B4\u03BF\u03BA\u03B9\u03BC\u03AC\u03C3\u03C4\u03B5 \u03BE\u03B1\u03BD\u03AC \u03AE \u03C7\u03C1\u03B7\u03C3\u03B9\u03BC\u03BF\u03C0\u03BF\u03B9\u03AE\u03C3\u03C4\u03B5 \u03C4\u03B7 \u03C7\u03B5\u03B9\u03C1\u03BF\u03BA\u03AF\u03BD\u03B7\u03C4\u03B7 \u03B5\u03B9\u03C3\u03B1\u03B3\u03C9\u03B3\u03AE \u03BA\u03AC\u03C1\u03C4\u03B1\u03C2",
+    "paymentMethodsList.aria.label":
+        "\u0395\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03AD\u03BD\u03B1\u03BD \u03C4\u03C1\u03CC\u03C0\u03BF \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE\u03C2",
+    "companyDetails.name.invalid":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF \u03CC\u03BD\u03BF\u03BC\u03B1 \u03C4\u03B7\u03C2 \u03B5\u03C4\u03B1\u03B9\u03C1\u03B5\u03AF\u03B1\u03C2",
+    "companyDetails.registrationNumber.invalid":
+        "\u0395\u03B9\u03C3\u03B1\u03B3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03C4\u03BF\u03BD \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03BC\u03B7\u03C4\u03C1\u03CE\u03BF\u03C5",
+    "consent.checkbox.invalid":
+        "\u03A0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03C3\u03C5\u03BC\u03C6\u03C9\u03BD\u03AE\u03C3\u03B5\u03C4\u03B5 \u03BC\u03B5 \u03C4\u03BF\u03C5\u03C2 \u03CC\u03C1\u03BF\u03C5\u03C2 \u03BA\u03B1\u03B9 \u03C4\u03B9\u03C2 \u03C0\u03C1\u03BF\u03CB\u03C0\u03BF\u03B8\u03AD\u03C3\u03B5\u03B9\u03C2",
+    "form.instruction":
+        "\u038C\u03BB\u03B1 \u03C4\u03B1 \u03C0\u03B5\u03B4\u03AF\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03C5\u03C0\u03BF\u03C7\u03C1\u03B5\u03C9\u03C4\u03B9\u03BA\u03AC, \u03B5\u03BA\u03C4\u03CC\u03C2 \u03B5\u03AC\u03BD \u03B5\u03C0\u03B9\u03C3\u03B7\u03BC\u03B1\u03AF\u03BD\u03B5\u03C4\u03B1\u03B9 \u03B4\u03B9\u03B1\u03C6\u03BF\u03C1\u03B5\u03C4\u03B9\u03BA\u03AC.",
+    "trustly.descriptor":
+        "\u0386\u03BC\u03B5\u03C3\u03B7 \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03AE \u03C0\u03BB\u03B7\u03C1\u03C9\u03BC\u03AE",
     "trustly.description1":
-        "Πληρώστε απευθείας από οποιονδήποτε τραπεζικό λογαριασμό σας, με ασφάλεια τραπεζικού επιπέδου",
-    "trustly.description2": "Χωρίς κάρτες, χωρίς λήψη εφαρμογής, χωρίς εγγραφή",
+        "\u03A0\u03BB\u03B7\u03C1\u03CE\u03C3\u03C4\u03B5 \u03B1\u03C0\u03B5\u03C5\u03B8\u03B5\u03AF\u03B1\u03C2 \u03B1\u03C0\u03CC \u03BF\u03C0\u03BF\u03B9\u03BF\u03BD\u03B4\u03AE\u03C0\u03BF\u03C4\u03B5 \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03CC \u03BB\u03BF\u03B3\u03B1\u03C1\u03B9\u03B1\u03C3\u03BC\u03CC \u03C3\u03B1\u03C2, \u03BC\u03B5 \u03B1\u03C3\u03C6\u03AC\u03BB\u03B5\u03B9\u03B1 \u03C4\u03C1\u03B1\u03C0\u03B5\u03B6\u03B9\u03BA\u03BF\u03CD \u03B5\u03C0\u03B9\u03C0\u03AD\u03B4\u03BF\u03C5",
+    "trustly.description2":
+        "\u03A7\u03C9\u03C1\u03AF\u03C2 \u03BA\u03AC\u03C1\u03C4\u03B5\u03C2, \u03C7\u03C9\u03C1\u03AF\u03C2 \u03BB\u03AE\u03C8\u03B7 \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE\u03C2, \u03C7\u03C9\u03C1\u03AF\u03C2 \u03B5\u03B3\u03B3\u03C1\u03B1\u03C6\u03AE",
 };

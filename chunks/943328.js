@@ -7,7 +7,7 @@ e.exports = function (e) {
         scope: { 1: "keyword", 3: "title.class" },
     };
     return {
-        name: "Cap’n Proto",
+        name: "Cap\u2019n Proto",
         aliases: ["capnp"],
         keywords: {
             keyword: [

@@ -14,18 +14,18 @@
         correctGrammaticalCase: function (e, t) {
             return 1 === e ? t[0] : e >= 2 && e <= 4 ? t[1] : t[2];
         },
-        translate: function (e, n, r) {
-            var i = t.words[r];
-            return 1 === r.length ? (n ? i[0] : i[1]) : e + " " + t.correctGrammaticalCase(e, i);
+        translate: function (e, n, i) {
+            var r = t.words[i];
+            return 1 === i.length ? (n ? r[0] : r[1]) : e + " " + t.correctGrammaticalCase(e, r);
         },
     };
     e.defineLocale("me", {
         months: "januar_februar_mart_april_maj_jun_jul_avgust_septembar_oktobar_novembar_decembar".split("_"),
         monthsShort: "jan._feb._mar._apr._maj_jun_jul_avg._sep._okt._nov._dec.".split("_"),
         monthsParseExact: !0,
-        weekdays: "nedjelja_ponedjeljak_utorak_srijeda_četvrtak_petak_subota".split("_"),
-        weekdaysShort: "ned._pon._uto._sri._čet._pet._sub.".split("_"),
-        weekdaysMin: "ne_po_ut_sr_če_pe_su".split("_"),
+        weekdays: "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split("_"),
+        weekdaysShort: "ned._pon._uto._sri._\u010Det._pet._sub.".split("_"),
+        weekdaysMin: "ne_po_ut_sr_\u010De_pe_su".split("_"),
         weekdaysParseExact: !0,
         longDateFormat: {
             LT: "H:mm",
@@ -53,16 +53,16 @@
                         return "[u] dddd [u] LT";
                 }
             },
-            lastDay: "[juče u] LT",
+            lastDay: "[ju\u010De u] LT",
             lastWeek: function () {
                 return [
-                    "[prošle] [nedjelje] [u] LT",
-                    "[prošlog] [ponedjeljka] [u] LT",
-                    "[prošlog] [utorka] [u] LT",
-                    "[prošle] [srijede] [u] LT",
-                    "[prošlog] [četvrtka] [u] LT",
-                    "[prošlog] [petka] [u] LT",
-                    "[prošle] [subote] [u] LT",
+                    "[pro\u0161le] [nedjelje] [u] LT",
+                    "[pro\u0161log] [ponedjeljka] [u] LT",
+                    "[pro\u0161log] [utorka] [u] LT",
+                    "[pro\u0161le] [srijede] [u] LT",
+                    "[pro\u0161log] [\u010Detvrtka] [u] LT",
+                    "[pro\u0161log] [petka] [u] LT",
+                    "[pro\u0161le] [subote] [u] LT",
                 ][this.day()];
             },
             sameElse: "L",

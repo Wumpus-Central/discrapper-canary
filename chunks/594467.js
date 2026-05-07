@@ -9203,7 +9203,7 @@ let dD = R.forwardRef((e, t) => {
     n =
         j === N
             ? (0, A.jsx)(G.E, { className: dG.timestamp, variant: "text-sm/normal", children: j })
-            : (0, A.jsxs)(G.E, { className: dG.timestamp, variant: "text-sm/normal", children: [j, "—", N] });
+            : (0, A.jsxs)(G.E, { className: dG.timestamp, variant: "text-sm/normal", children: [j, "\u2014", N] });
     let p = h ? c : ei.tEg;
     return (0, A.jsx)(dp.tG, {
         id: i.id,
@@ -15545,7 +15545,7 @@ function gx(e) {
     });
 }
 function gh() {
-    let e = "• ";
+    let e = "\u2022 ";
     return (0, A.jsxs)("div", {
         className: gm.lm,
         children: [
@@ -18736,7 +18736,7 @@ function hR(e) {
                     (0, A.jsxs)(G.E, {
                         color: "none",
                         variant: "text-xs/normal",
-                        children: [t.name, " • ", el.intl.string(el.t.JwYI3O)],
+                        children: [t.name, " \u2022 ", el.intl.string(el.t.JwYI3O)],
                     }),
                 ],
             }),

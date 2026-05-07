@@ -26,17 +26,17 @@ let u = {
         lun: 1,
         martes: 2,
         mar: 2,
-        miércoles: 3,
+        "mi\xe9rcoles": 3,
         miercoles: 3,
-        mié: 3,
+        "mi\xe9": 3,
         mie: 3,
         jueves: 4,
         jue: 4,
         viernes: 5,
         vie: 5,
-        sábado: 6,
+        "s\xe1bado": 6,
         sabado: 6,
-        sáb: 6,
+        "s\xe1b": 6,
         sab: 6,
     },
     m = {
@@ -106,16 +106,16 @@ let u = {
         hrs: "hour",
         hora: "hour",
         horas: "hour",
-        día: "day",
-        días: "day",
+        "d\xeda": "day",
+        "d\xedas": "day",
         semana: "week",
         semanas: "week",
         mes: "month",
         meses: "month",
         cuarto: "quarter",
         cuartos: "quarter",
-        año: "year",
-        años: "year",
+        "a\xf1o": "year",
+        "a\xf1os": "year",
     },
     g = `(?:${(0, l.uJ)(d)}|[0-9]+|[0-9]+\\.[0-9]+|un?|uno?|una?|algunos?|unos?|demi-?)`,
     h = `(${g})\\s{0,5}(${(0, l.uJ)(c)})\\s{0,5}`,
@@ -124,7 +124,7 @@ let u = {
 var y = r(355418),
     x = r(1673);
 let w = RegExp(
-    `(?:(?:\\,|\\(|\\（)\\s*)?(?:(este|esta|pasado|pr[o\xf3]ximo)\\s*)?(${(0, l.uJ)(u)})(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(este|esta|pasado|pr[\xf3o]ximo)\\s*semana)?(?=\\W|\\d|$)`,
+    `(?:(?:\\,|\\(|\\\u{FF08})\\s*)?(?:(este|esta|pasado|pr[o\xf3]ximo)\\s*)?(${(0, l.uJ)(u)})(?:\\s*(?:\\,|\\)|\\\u{FF09}))?(?:\\s*(este|esta|pasado|pr[\xf3o]ximo)\\s*semana)?(?=\\W|\\d|$)`,
     "i",
 );
 class D extends y.c {
@@ -155,7 +155,7 @@ class F extends P.B {
         return "(?:(?:aslas|deslas|las?|al?|de|del)\\s*)?";
     }
     followingPhase() {
-        return "\\s*(?:\\-|\\–|\\~|\\〜|a(?:l)?|\\?)\\s*";
+        return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:l)?|\\?)\\s*";
     }
 }
 var C = r(230205);
@@ -172,7 +172,7 @@ class M extends v.A {
 }
 var $ = r(364242);
 let R = RegExp(
-    `([0-9]{1,2})(?:\xba|\xaa|\xb0)?(?:\\s*(?:desde|de|\\-|\\–|ao?|\\s)\\s*([0-9]{1,2})(?:\xba|\xaa|\xb0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(${(0, l.uJ)(m)})(?:\\s*(?:de|,)?\\s*([0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?))?(?=\\W|$)`,
+    `([0-9]{1,2})(?:\xba|\xaa|\xb0)?(?:\\s*(?:desde|de|\\-|\\\u{2013}|ao?|\\s)\\s*([0-9]{1,2})(?:\xba|\xaa|\xb0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(${(0, l.uJ)(m)})(?:\\s*(?:de|,)?\\s*([0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?))?(?=\\W|$)`,
     "i",
 );
 class E extends y.c {
@@ -207,7 +207,7 @@ class E extends y.c {
 var b = r(996483);
 class A extends y.c {
     innerPattern(e) {
-        return /(ahora|hoy|mañana|ayer)(?=\W|$)/i;
+        return /(ahora|hoy|ma\xf1ana|ayer)(?=\W|$)/i;
     }
     innerExtract(e, t) {
         let r = t[0].toLowerCase(),
@@ -225,10 +225,10 @@ class A extends y.c {
         return n;
     }
 }
-var k = r(658809);
+var k = r(881190);
 class j extends y.c {
     innerPattern() {
-        return /(?:esta\s*)?(mañana|tarde|medianoche|mediodia|mediodía|noche)(?=\W|$)/i;
+        return /(?:esta\s*)?(ma\xf1ana|tarde|medianoche|mediodia|mediod\xeda|noche)(?=\W|$)/i;
     }
     innerExtract(e, t) {
         let r = e.refDate,

@@ -73,7 +73,7 @@ function N(e) {
         color: S.A.unsafe_rawColors.BRAND_345.css,
     });
 }
-var y = n(526181),
+var y = n(748562),
     C = n(47167),
     v = n(734057),
     O = n(864436),
@@ -196,7 +196,7 @@ function G(e) {
 }
 function F(e) {
     let { textVariant: t, className: n } = e;
-    return (0, i.jsx)(l.E, { variant: t, className: a()(g.Om, n), "aria-hidden": !0, children: "•" });
+    return (0, i.jsx)(l.E, { variant: t, className: a()(g.Om, n), "aria-hidden": !0, children: "\u2022" });
 }
 function V(e) {
     let {

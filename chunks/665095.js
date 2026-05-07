@@ -115,7 +115,7 @@ class M extends r.PureComponent {
                                     className: L.qr,
                                     children: D.intl.format(D.t.WL51ZR, { supportURL: R.A.getSubmitRequestURL() }),
                                 }),
-                                (0, i.jsx)("div", { className: T()(L.qr, L.mf), children: "•" }),
+                                (0, i.jsx)("div", { className: T()(L.qr, L.mf), children: "\u2022" }),
                                 (0, i.jsx)(v.E, {
                                     variant: "text-sm/semibold",
                                     className: L.qr,

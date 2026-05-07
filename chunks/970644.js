@@ -212,7 +212,7 @@ let u = {
             matchPatterns: {
                 narrow: /^(fKr|fvt|eKr|vt)/i,
                 abbreviated: /^(f\.Kr\.?|f\.v\.t\.?|e\.Kr\.?|v\.t\.)/i,
-                wide: /^(f.Kr.|før vesterlandsk tidsregning|e.Kr.|vesterlandsk tidsregning)/i,
+                wide: /^(f.Kr.|f\xf8r vesterlandsk tidsregning|e.Kr.|vesterlandsk tidsregning)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/^f/i, /^(v|e)/i] },
@@ -243,9 +243,9 @@ let u = {
         day: (0, s.A)({
             matchPatterns: {
                 narrow: /^[smtofl]/i,
-                short: /^(søn.|man.|tir.|ons.|tor.|fre.|lør.)/i,
-                abbreviated: /^(søn|man|tir|ons|tor|fre|lør)/i,
-                wide: /^(søndag|mandag|tirsdag|onsdag|torsdag|fredag|lørdag)/i,
+                short: /^(s\xf8n.|man.|tir.|ons.|tor.|fre.|l\xf8r.)/i,
+                abbreviated: /^(s\xf8n|man|tir|ons|tor|fre|l\xf8r)/i,
+                wide: /^(s\xf8ndag|mandag|tirsdag|onsdag|torsdag|fredag|l\xf8rdag)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {

@@ -1,36 +1,36 @@
 !(function (e) {
     "use strict";
-    var t = "vas\xe1rnap h\xe9tfőn kedden szerd\xe1n cs\xfct\xf6rt\xf6k\xf6n p\xe9nteken szombaton".split(" ");
-    function n(e, t, n, r) {
+    var t = "vas\xe1rnap h\xe9tf\u0151n kedden szerd\xe1n cs\xfct\xf6rt\xf6k\xf6n p\xe9nteken szombaton".split(" ");
+    function n(e, t, n, i) {
         switch (n) {
             case "s":
-                return r || t ? "n\xe9h\xe1ny m\xe1sodperc" : "n\xe9h\xe1ny m\xe1sodperce";
+                return i || t ? "n\xe9h\xe1ny m\xe1sodperc" : "n\xe9h\xe1ny m\xe1sodperce";
             case "ss":
-                return e + (r || t) ? " m\xe1sodperc" : " m\xe1sodperce";
+                return e + (i || t) ? " m\xe1sodperc" : " m\xe1sodperce";
             case "m":
-                return "egy" + (r || t ? " perc" : " perce");
+                return "egy" + (i || t ? " perc" : " perce");
             case "mm":
-                return e + (r || t ? " perc" : " perce");
+                return e + (i || t ? " perc" : " perce");
             case "h":
-                return "egy" + (r || t ? " \xf3ra" : " \xf3r\xe1ja");
+                return "egy" + (i || t ? " \xf3ra" : " \xf3r\xe1ja");
             case "hh":
-                return e + (r || t ? " \xf3ra" : " \xf3r\xe1ja");
+                return e + (i || t ? " \xf3ra" : " \xf3r\xe1ja");
             case "d":
-                return "egy" + (r || t ? " nap" : " napja");
+                return "egy" + (i || t ? " nap" : " napja");
             case "dd":
-                return e + (r || t ? " nap" : " napja");
+                return e + (i || t ? " nap" : " napja");
             case "M":
-                return "egy" + (r || t ? " h\xf3nap" : " h\xf3napja");
+                return "egy" + (i || t ? " h\xf3nap" : " h\xf3napja");
             case "MM":
-                return e + (r || t ? " h\xf3nap" : " h\xf3napja");
+                return e + (i || t ? " h\xf3nap" : " h\xf3napja");
             case "y":
-                return "egy" + (r || t ? " \xe9v" : " \xe9ve");
+                return "egy" + (i || t ? " \xe9v" : " \xe9ve");
             case "yy":
-                return e + (r || t ? " \xe9v" : " \xe9ve");
+                return e + (i || t ? " \xe9v" : " \xe9ve");
         }
         return "";
     }
-    function r(e) {
+    function i(e) {
         return (e ? "" : "[m\xfalt] ") + "[" + t[this.day()] + "] LT[-kor]";
     }
     e.defineLocale("hu", {
@@ -38,7 +38,7 @@
             "_",
         ),
         monthsShort: "jan_feb_m\xe1rc_\xe1pr_m\xe1j_j\xfan_j\xfal_aug_szept_okt_nov_dec".split("_"),
-        weekdays: "vas\xe1rnap_h\xe9tfő_kedd_szerda_cs\xfct\xf6rt\xf6k_p\xe9ntek_szombat".split("_"),
+        weekdays: "vas\xe1rnap_h\xe9tf\u0151_kedd_szerda_cs\xfct\xf6rt\xf6k_p\xe9ntek_szombat".split("_"),
         weekdaysShort: "vas_h\xe9t_kedd_sze_cs\xfct_p\xe9n_szo".split("_"),
         weekdaysMin: "v_h_k_sze_cs_p_szo".split("_"),
         longDateFormat: {
@@ -60,11 +60,11 @@
             sameDay: "[ma] LT[-kor]",
             nextDay: "[holnap] LT[-kor]",
             nextWeek: function () {
-                return r.call(this, !0);
+                return i.call(this, !0);
             },
             lastDay: "[tegnap] LT[-kor]",
             lastWeek: function () {
-                return r.call(this, !1);
+                return i.call(this, !1);
             },
             sameElse: "L",
         },

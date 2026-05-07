@@ -1536,10 +1536,10 @@ let tY = (e) => {
                         className: eD.gA,
                         contentEditable: !1,
                         onClick: T,
-                        children: [s.optionDisplayName, "​"],
+                        children: [s.optionDisplayName, "\u200B"],
                     }),
                     t,
-                    (0, i.jsx)("span", { contentEditable: !1, children: "​" }),
+                    (0, i.jsx)("span", { contentEditable: !1, children: "\u200B" }),
                 ],
             })
         );
@@ -1559,9 +1559,9 @@ let tY = (e) => {
             ...n,
             className: l,
             children: [
-                (0, i.jsxs)("span", { className: eD.gA, contentEditable: !1, children: ["@time", "​"] }),
+                (0, i.jsxs)("span", { className: eD.gA, contentEditable: !1, children: ["@time", "\u200B"] }),
                 d,
-                (0, i.jsx)("span", { contentEditable: !1, children: "​" }),
+                (0, i.jsx)("span", { contentEditable: !1, children: "\u200B" }),
             ],
         });
     };
@@ -3446,7 +3446,7 @@ class tZ extends r.Component {
         let { textValue: t } = this.props,
             n = this.ref.current;
         if (null != e && null != n) {
-            let i = t.length > 0 ? e.replace(/([_`´*])/g, "\\$1") : e;
+            let i = t.length > 0 ? e.replace(/([_`\xb4*])/g, "\\$1") : e;
             t.length > 0 && !t.endsWith(" ") && n.insertText(" ", void 0, !1), n.insertText(i, void 0, !0);
         }
     }

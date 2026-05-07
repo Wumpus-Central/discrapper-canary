@@ -23,7 +23,7 @@ var n = r(321287),
 class u extends l.c {
     innerPattern(e) {
         return RegExp(
-            "(现在|立(?:刻|即)|即刻)|(今|明|前|大前|后|大后|昨)(早|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s|,|，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?",
+            "(\u73B0\u5728|\u7ACB(?:\u523B|\u5373)|\u5373\u523B)|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u540E|\u5927\u540E|\u6628)(\u65E9|\u665A)|(\u4E0A(?:\u5348)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668))|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u540E|\u5927\u540E|\u6628)(?:\u65E5|\u5929)(?:[\\s|,|\uFF0C]*)(?:(\u4E0A(?:\u5348)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668)))?",
             "i",
         );
     }
@@ -40,56 +40,56 @@ class u extends l.c {
         else if (t[2]) {
             let e = t[2],
                 r = t[3];
-            "明" == e
+            "\u660E" == e
                 ? s.getHours() > 1 && a.setDate(a.getDate() + 1)
-                : "昨" == e
+                : "\u6628" == e
                   ? a.setDate(a.getDate() - 1)
-                  : "前" == e
+                  : "\u524D" == e
                     ? a.setDate(a.getDate() - 2)
-                    : "大前" == e
+                    : "\u5927\u524D" == e
                       ? a.setDate(a.getDate() - 3)
-                      : "后" == e
+                      : "\u540E" == e
                         ? a.setDate(a.getDate() + 2)
-                        : "大后" == e && a.setDate(a.getDate() + 3),
-                "早" == r
+                        : "\u5927\u540E" == e && a.setDate(a.getDate() + 3),
+                "\u65E9" == r
                     ? n.start.imply("hour", 6)
-                    : "晚" == r && (n.start.imply("hour", 22), n.start.imply("meridiem", 1));
+                    : "\u665A" == r && (n.start.imply("hour", 22), n.start.imply("meridiem", 1));
         } else if (t[4]) {
             let e = t[4][0];
-            "早" == e || "上" == e
+            "\u65E9" == e || "\u4E0A" == e
                 ? n.start.imply("hour", 6)
-                : "下" == e
+                : "\u4E0B" == e
                   ? (n.start.imply("hour", 15), n.start.imply("meridiem", 1))
-                  : "中" == e
+                  : "\u4E2D" == e
                     ? (n.start.imply("hour", 12), n.start.imply("meridiem", 1))
-                    : "夜" == e || "晚" == e
+                    : "\u591C" == e || "\u665A" == e
                       ? (n.start.imply("hour", 22), n.start.imply("meridiem", 1))
-                      : "凌" == e && n.start.imply("hour", 0);
+                      : "\u51CC" == e && n.start.imply("hour", 0);
         } else if (t[5]) {
             let e = t[5];
-            "明" == e
+            "\u660E" == e
                 ? s.getHours() > 1 && a.setDate(a.getDate() + 1)
-                : "昨" == e
+                : "\u6628" == e
                   ? a.setDate(a.getDate() - 1)
-                  : "前" == e
+                  : "\u524D" == e
                     ? a.setDate(a.getDate() - 2)
-                    : "大前" == e
+                    : "\u5927\u524D" == e
                       ? a.setDate(a.getDate() - 3)
-                      : "后" == e
+                      : "\u540E" == e
                         ? a.setDate(a.getDate() + 2)
-                        : "大后" == e && a.setDate(a.getDate() + 3);
+                        : "\u5927\u540E" == e && a.setDate(a.getDate() + 3);
             let r = t[6];
             if (r) {
                 let e = r[0];
-                "早" == e || "上" == e
+                "\u65E9" == e || "\u4E0A" == e
                     ? n.start.imply("hour", 6)
-                    : "下" == e
+                    : "\u4E0B" == e
                       ? (n.start.imply("hour", 15), n.start.imply("meridiem", 1))
-                      : "中" == e
+                      : "\u4E2D" == e
                         ? (n.start.imply("hour", 12), n.start.imply("meridiem", 1))
-                        : "夜" == e || "晚" == e
+                        : "\u591C" == e || "\u665A" == e
                           ? (n.start.imply("hour", 22), n.start.imply("meridiem", 1))
-                          : "凌" == e && n.start.imply("hour", 0);
+                          : "\u51CC" == e && n.start.imply("hour", 0);
             }
         }
         return (
@@ -100,13 +100,27 @@ class u extends l.c {
         );
     }
 }
-let m = { 零: 0, 〇: 0, 一: 1, 二: 2, 两: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9, 十: 10 },
-    d = { 天: 0, 日: 0, 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6 };
+let m = {
+        \u96F6: 0,
+        \u3007: 0,
+        \u4E00: 1,
+        \u4E8C: 2,
+        \u4E24: 2,
+        \u4E09: 3,
+        \u56DB: 4,
+        \u4E94: 5,
+        \u516D: 6,
+        \u4E03: 7,
+        \u516B: 8,
+        \u4E5D: 9,
+        \u5341: 10,
+    },
+    d = { \u5929: 0, \u65E5: 0, \u4E00: 1, \u4E8C: 2, \u4E09: 3, \u56DB: 4, \u4E94: 5, \u516D: 6 };
 function c(e) {
     let t = 0;
     for (let r = 0; r < e.length; r++) {
         let n = e[r];
-        "十" === n ? (t = 0 === t ? m[n] : t * m[n]) : (t += m[n]);
+        "\u5341" === n ? (t = 0 === t ? m[n] : t * m[n]) : (t += m[n]);
     }
     return t;
 }
@@ -117,11 +131,11 @@ class g extends l.c {
                 Object.keys(m).join("") +
                 "]{4}|[" +
                 Object.keys(m).join("") +
-                "]{2})?(?:\\s*)(?:年)?(?:[\\s|,|，]*)(\\d{1,2}|[" +
+                "]{2})?(?:\\s*)(?:\u5E74)?(?:[\\s|,|\uFF0C]*)(\\d{1,2}|[" +
                 Object.keys(m).join("") +
-                "]{1,3})(?:\\s*)(?:月)(?:\\s*)(\\d{1,2}|[" +
+                "]{1,3})(?:\\s*)(?:\u6708)(?:\\s*)(\\d{1,2}|[" +
                 Object.keys(m).join("") +
-                "]{1,3})?(?:\\s*)(?:日|号)?",
+                "]{1,3})?(?:\\s*)(?:\u65E5|\u53F7)?",
         );
     }
     innerExtract(e, t) {
@@ -148,7 +162,7 @@ var h = r(632434);
 let f = RegExp(
     "(\\d+|[" +
         Object.keys(m).join("") +
-        "]+|半|几)(?:\\s*)(?:个)?(秒(?:钟)?|分钟|小时|钟|日|天|星期|礼拜|月|年)(?:(?:之|过)?后|(?:之)?内)",
+        "]+|\u534A|\u51E0)(?:\\s*)(?:\u4E2A)?(\u79D2(?:\u949F)?|\u5206\u949F|\u5C0F\u65F6|\u949F|\u65E5|\u5929|\u661F\u671F|\u793C\u62DC|\u6708|\u5E74)(?:(?:\u4E4B|\u8FC7)?\u540E|(?:\u4E4B)?\u5185)",
     "i",
 );
 class p extends l.c {
@@ -160,22 +174,22 @@ class p extends l.c {
             n = parseInt(t[1]);
         if ((isNaN(n) && (n = c(t[1])), isNaN(n))) {
             let e = t[1];
-            if ("几" === e) n = 3;
+            if ("\u51E0" === e) n = 3;
             else {
-                if ("半" !== e) return null;
+                if ("\u534A" !== e) return null;
                 n = 0.5;
             }
         }
         let s = {},
             a = t[2][0];
-        if (a.match(/[日天星礼月年]/)) {
-            "日" == a || "天" == a
+        if (a.match(/[\u65e5\u5929\u661f\u793c\u6708\u5e74]/)) {
+            "\u65E5" == a || "\u5929" == a
                 ? (s.day = n)
-                : "星" == a || "礼" == a
+                : "\u661F" == a || "\u793C" == a
                   ? (s.week = n)
-                  : "月" == a
+                  : "\u6708" == a
                     ? (s.month = n)
-                    : "年" == a && (s.year = n);
+                    : "\u5E74" == a && (s.year = n);
             let t = (0, h.Gw)(e.refDate, s);
             return (
                 r.start.assign("year", t.getFullYear()),
@@ -184,7 +198,11 @@ class p extends l.c {
                 r
             );
         }
-        "秒" == a ? (s.second = n) : "分" == a ? (s.minute = n) : ("小" == a || "钟" == a) && (s.hour = n);
+        "\u79D2" == a
+            ? (s.second = n)
+            : "\u5206" == a
+              ? (s.minute = n)
+              : ("\u5C0F" == a || "\u949F" == a) && (s.hour = n);
         let i = (0, h.Gw)(e.refDate, s);
         return (
             r.start.imply("year", i.getFullYear()),
@@ -197,7 +215,11 @@ class p extends l.c {
         );
     }
 }
-let y = RegExp("(?<prefix>上|下|这)(?:个)?(?:星期|礼拜|周)(?<weekday>" + Object.keys(d).join("|") + ")");
+let y = RegExp(
+    "(?<prefix>\u4E0A|\u4E0B|\u8FD9)(?:\u4E2A)?(?:\u661F\u671F|\u793C\u62DC|\u5468)(?<weekday>" +
+        Object.keys(d).join("|") +
+        ")",
+);
 class x extends l.c {
     innerPattern() {
         return y;
@@ -208,7 +230,7 @@ class x extends l.c {
         if (void 0 === n) return null;
         let s = null,
             a = t.groups.prefix;
-        "上" == a ? (s = "last") : "下" == a ? (s = "next") : "这" == a && (s = "this");
+        "\u4E0A" == a ? (s = "last") : "\u4E0B" == a ? (s = "next") : "\u8FD9" == a && (s = "this");
         let i = new Date(e.refDate.getTime()),
             o = !1,
             l = i.getDay();
@@ -235,23 +257,23 @@ class x extends l.c {
     }
 }
 let w = RegExp(
-        "(?:从|自)?(?:(今|明|前|大前|后|大后|昨)(早|朝|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s,，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[" +
+        "(?:\u4ECE|\u81EA)?(?:(\u4ECA|\u660E|\u524D|\u5927\u524D|\u540E|\u5927\u540E|\u6628)(\u65E9|\u671D|\u665A)|(\u4E0A(?:\u5348)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668))|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u540E|\u5927\u540E|\u6628)(?:\u65E5|\u5929)(?:[\\s,\uFF0C]*)(?:(\u4E0A(?:\u5348)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668)))?)?(?:[\\s,\uFF0C]*)(?:(\\d+|[" +
             Object.keys(m).join("") +
-            "]+)(?:\\s*)(?:点|时|:|：)(?:\\s*)(\\d+|半|正|整|[" +
+            "]+)(?:\\s*)(?:\u70B9|\u65F6|:|\uFF1A)(?:\\s*)(\\d+|\u534A|\u6B63|\u6574|[" +
             Object.keys(m).join("") +
-            "]+)?(?:\\s*)(?:分|:|：)?(?:\\s*)(\\d+|[" +
+            "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)(\\d+|[" +
             Object.keys(m).join("") +
-            "]+)?(?:\\s*)(?:秒)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
+            "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
         "i",
     ),
     D = RegExp(
-        "(?:^\\s*(?:到|至|\\-|\\–|\\~|\\〜)\\s*)(?:(今|明|前|大前|后|大后|昨)(早|朝|晚)|(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨))|(今|明|前|大前|后|大后|昨)(?:日|天)(?:[\\s,，]*)(?:(上(?:午)|早(?:上)|下(?:午)|晚(?:上)|夜(?:晚)?|中(?:午)|凌(?:晨)))?)?(?:[\\s,，]*)(?:(\\d+|[" +
+        "(?:^\\s*(?:\u5230|\u81F3|\\-|\\\u2013|\\~|\\\u301C)\\s*)(?:(\u4ECA|\u660E|\u524D|\u5927\u524D|\u540E|\u5927\u540E|\u6628)(\u65E9|\u671D|\u665A)|(\u4E0A(?:\u5348)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668))|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u540E|\u5927\u540E|\u6628)(?:\u65E5|\u5929)(?:[\\s,\uFF0C]*)(?:(\u4E0A(?:\u5348)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668)))?)?(?:[\\s,\uFF0C]*)(?:(\\d+|[" +
             Object.keys(m).join("") +
-            "]+)(?:\\s*)(?:点|时|:|：)(?:\\s*)(\\d+|半|正|整|[" +
+            "]+)(?:\\s*)(?:\u70B9|\u65F6|:|\uFF1A)(?:\\s*)(\\d+|\u534A|\u6B63|\u6574|[" +
             Object.keys(m).join("") +
-            "]+)?(?:\\s*)(?:分|:|：)?(?:\\s*)(\\d+|[" +
+            "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)(\\d+|[" +
             Object.keys(m).join("") +
-            "]+)?(?:\\s*)(?:秒)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
+            "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
         "i",
     );
 class P extends l.c {
@@ -264,33 +286,33 @@ class P extends l.c {
             n = new Date(e.refDate.getTime());
         if (t[1]) {
             let s = t[1];
-            "明" == s
+            "\u660E" == s
                 ? e.refDate.getHours() > 1 && n.setDate(n.getDate() + 1)
-                : "昨" == s
+                : "\u6628" == s
                   ? n.setDate(n.getDate() - 1)
-                  : "前" == s
+                  : "\u524D" == s
                     ? n.setDate(n.getDate() - 2)
-                    : "大前" == s
+                    : "\u5927\u524D" == s
                       ? n.setDate(n.getDate() - 3)
-                      : "后" == s
+                      : "\u540E" == s
                         ? n.setDate(n.getDate() + 2)
-                        : "大后" == s && n.setDate(n.getDate() + 3),
+                        : "\u5927\u540E" == s && n.setDate(n.getDate() + 3),
                 r.start.assign("day", n.getDate()),
                 r.start.assign("month", n.getMonth() + 1),
                 r.start.assign("year", n.getFullYear());
         } else if (t[4]) {
             let e = t[4];
-            "明" == e
+            "\u660E" == e
                 ? n.setDate(n.getDate() + 1)
-                : "昨" == e
+                : "\u6628" == e
                   ? n.setDate(n.getDate() - 1)
-                  : "前" == e
+                  : "\u524D" == e
                     ? n.setDate(n.getDate() - 2)
-                    : "大前" == e
+                    : "\u5927\u524D" == e
                       ? n.setDate(n.getDate() - 3)
-                      : "后" == e
+                      : "\u540E" == e
                         ? n.setDate(n.getDate() + 2)
-                        : "大后" == e && n.setDate(n.getDate() + 3),
+                        : "\u5927\u540E" == e && n.setDate(n.getDate() + 3),
                 r.start.assign("day", n.getDate()),
                 r.start.assign("month", n.getMonth() + 1),
                 r.start.assign("year", n.getFullYear());
@@ -309,9 +331,9 @@ class P extends l.c {
         if (
             (isNaN((s = parseInt(t[6]))) && (s = c(t[6])),
             t[7]
-                ? "半" == t[7]
+                ? "\u534A" == t[7]
                     ? (a = 30)
-                    : "正" == t[7] || "整" == t[7]
+                    : "\u6B63" == t[7] || "\u6574" == t[7]
                       ? (a = 0)
                       : isNaN((a = parseInt(t[7]))) && (a = c(t[7]))
                 : s > 100 && ((a = s % 100), (s = Math.floor(s / 100))),
@@ -324,17 +346,17 @@ class P extends l.c {
             "a" == e && ((i = 0), 12 == s && (s = 0)), "p" == e && ((i = 1), 12 != s && (s += 12));
         } else if (t[2]) {
             let e = t[2][0];
-            "早" == e ? ((i = 0), 12 == s && (s = 0)) : "晚" == e && ((i = 1), 12 != s && (s += 12));
+            "\u65E9" == e ? ((i = 0), 12 == s && (s = 0)) : "\u665A" == e && ((i = 1), 12 != s && (s += 12));
         } else if (t[3]) {
             let e = t[3][0];
-            "上" == e || "早" == e || "凌" == e
+            "\u4E0A" == e || "\u65E9" == e || "\u51CC" == e
                 ? ((i = 0), 12 == s && (s = 0))
-                : ("下" == e || "晚" == e) && ((i = 1), 12 != s && (s += 12));
+                : ("\u4E0B" == e || "\u665A" == e) && ((i = 1), 12 != s && (s += 12));
         } else if (t[5]) {
             let e = t[5][0];
-            "上" == e || "早" == e || "凌" == e
+            "\u4E0A" == e || "\u65E9" == e || "\u51CC" == e
                 ? ((i = 0), 12 == s && (s = 0))
-                : ("下" == e || "晚" == e) && ((i = 1), 12 != s && (s += 12));
+                : ("\u4E0B" == e || "\u665A" == e) && ((i = 1), 12 != s && (s += 12));
         }
         r.start.assign("hour", s),
             r.start.assign("minute", a),
@@ -348,33 +370,33 @@ class P extends l.c {
         let l = new Date(n.getTime());
         if (((r.end = e.createParsingComponents()), o[1])) {
             let t = o[1];
-            "明" == t
+            "\u660E" == t
                 ? e.refDate.getHours() > 1 && l.setDate(l.getDate() + 1)
-                : "昨" == t
+                : "\u6628" == t
                   ? l.setDate(l.getDate() - 1)
-                  : "前" == t
+                  : "\u524D" == t
                     ? l.setDate(l.getDate() - 2)
-                    : "大前" == t
+                    : "\u5927\u524D" == t
                       ? l.setDate(l.getDate() - 3)
-                      : "后" == t
+                      : "\u540E" == t
                         ? l.setDate(l.getDate() + 2)
-                        : "大后" == t && l.setDate(l.getDate() + 3),
+                        : "\u5927\u540E" == t && l.setDate(l.getDate() + 3),
                 r.end.assign("day", l.getDate()),
                 r.end.assign("month", l.getMonth() + 1),
                 r.end.assign("year", l.getFullYear());
         } else if (o[4]) {
             let e = o[4];
-            "明" == e
+            "\u660E" == e
                 ? l.setDate(l.getDate() + 1)
-                : "昨" == e
+                : "\u6628" == e
                   ? l.setDate(l.getDate() - 1)
-                  : "前" == e
+                  : "\u524D" == e
                     ? l.setDate(l.getDate() - 2)
-                    : "大前" == e
+                    : "\u5927\u524D" == e
                       ? l.setDate(l.getDate() - 3)
-                      : "后" == e
+                      : "\u540E" == e
                         ? l.setDate(l.getDate() + 2)
-                        : "大后" == e && l.setDate(l.getDate() + 3),
+                        : "\u5927\u540E" == e && l.setDate(l.getDate() + 3),
                 r.end.assign("day", l.getDate()),
                 r.end.assign("month", l.getMonth() + 1),
                 r.end.assign("year", l.getFullYear());
@@ -390,9 +412,9 @@ class P extends l.c {
         if (
             (isNaN((s = parseInt(o[6]))) && (s = c(o[6])),
             o[7]
-                ? "半" == o[7]
+                ? "\u534A" == o[7]
                     ? (a = 30)
-                    : "正" == o[7] || "整" == o[7]
+                    : "\u6B63" == o[7] || "\u6574" == o[7]
                       ? (a = 0)
                       : isNaN((a = parseInt(o[7]))) && (a = c(o[7]))
                 : s > 100 && ((a = s % 100), (s = Math.floor(s / 100))),
@@ -411,17 +433,17 @@ class P extends l.c {
                           12 != r.start.get("hour") && r.start.assign("hour", r.start.get("hour") + 12)));
         } else if (o[2]) {
             let e = o[2][0];
-            "早" == e ? ((i = 0), 12 == s && (s = 0)) : "晚" == e && ((i = 1), 12 != s && (s += 12));
+            "\u65E9" == e ? ((i = 0), 12 == s && (s = 0)) : "\u665A" == e && ((i = 1), 12 != s && (s += 12));
         } else if (o[3]) {
             let e = o[3][0];
-            "上" == e || "早" == e || "凌" == e
+            "\u4E0A" == e || "\u65E9" == e || "\u51CC" == e
                 ? ((i = 0), 12 == s && (s = 0))
-                : ("下" == e || "晚" == e) && ((i = 1), 12 != s && (s += 12));
+                : ("\u4E0B" == e || "\u665A" == e) && ((i = 1), 12 != s && (s += 12));
         } else if (o[5]) {
             let e = o[5][0];
-            "上" == e || "早" == e || "凌" == e
+            "\u4E0A" == e || "\u65E9" == e || "\u51CC" == e
                 ? ((i = 0), 12 == s && (s = 0))
-                : ("下" == e || "晚" == e) && ((i = 1), 12 != s && (s += 12));
+                : ("\u4E0B" == e || "\u665A" == e) && ((i = 1), 12 != s && (s += 12));
         }
         return (
             (r.text = r.text + o[0]),
@@ -437,7 +459,7 @@ class P extends l.c {
         );
     }
 }
-let F = RegExp("(?:星期|礼拜|周)(?<weekday>" + Object.keys(d).join("|") + ")");
+let F = RegExp("(?:\u661F\u671F|\u793C\u62DC|\u5468)(?<weekday>" + Object.keys(d).join("|") + ")");
 class C extends l.c {
     innerPattern() {
         return F;
@@ -463,7 +485,7 @@ class C extends l.c {
 var T = r(172609);
 class v extends T.A {
     patternBetween() {
-        return /^\s*(至|到|-|~|～|－|ー)\s*$/i;
+        return /^\s*(\u81f3|\u5230|-|~|\uff5e|\uff0d|\u30fc)\s*$/i;
     }
 }
 var M = r(230205);

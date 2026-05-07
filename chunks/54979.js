@@ -3,14 +3,44 @@ d.r(t),
         ? Intl.ListFormat.__addLocaleData({
               data: {
                   conjunction: {
-                      long: { end: "{0}、{1}", middle: "{0}、{1}", pair: "{0}、{1}", start: "{0}、{1}" },
-                      narrow: { end: "{0}、{1}", middle: "{0}、{1}", pair: "{0}、{1}", start: "{0}、{1}" },
-                      short: { end: "{0}、{1}", middle: "{0}、{1}", pair: "{0}、{1}", start: "{0}、{1}" },
+                      long: {
+                          end: "{0}\u3001{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u3001{1}",
+                          start: "{0}\u3001{1}",
+                      },
+                      narrow: {
+                          end: "{0}\u3001{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u3001{1}",
+                          start: "{0}\u3001{1}",
+                      },
+                      short: {
+                          end: "{0}\u3001{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u3001{1}",
+                          start: "{0}\u3001{1}",
+                      },
                   },
                   disjunction: {
-                      long: { end: "{0}、または{1}", middle: "{0}、{1}", pair: "{0}または{1}", start: "{0}、{1}" },
-                      narrow: { end: "{0}、または{1}", middle: "{0}、{1}", pair: "{0}または{1}", start: "{0}、{1}" },
-                      short: { end: "{0}、または{1}", middle: "{0}、{1}", pair: "{0}または{1}", start: "{0}、{1}" },
+                      long: {
+                          end: "{0}\u3001\u307E\u305F\u306F{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u307E\u305F\u306F{1}",
+                          start: "{0}\u3001{1}",
+                      },
+                      narrow: {
+                          end: "{0}\u3001\u307E\u305F\u306F{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u307E\u305F\u306F{1}",
+                          start: "{0}\u3001{1}",
+                      },
+                      short: {
+                          end: "{0}\u3001\u307E\u305F\u306F{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u307E\u305F\u306F{1}",
+                          start: "{0}\u3001{1}",
+                      },
                   },
                   unit: {
                       long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
@@ -23,14 +53,44 @@ d.r(t),
         : (globalThis.__FORMATJS_LISTFORMAT_DATA__ = globalThis.__FORMATJS_LISTFORMAT_DATA__ || []).push({
               data: {
                   conjunction: {
-                      long: { end: "{0}、{1}", middle: "{0}、{1}", pair: "{0}、{1}", start: "{0}、{1}" },
-                      narrow: { end: "{0}、{1}", middle: "{0}、{1}", pair: "{0}、{1}", start: "{0}、{1}" },
-                      short: { end: "{0}、{1}", middle: "{0}、{1}", pair: "{0}、{1}", start: "{0}、{1}" },
+                      long: {
+                          end: "{0}\u3001{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u3001{1}",
+                          start: "{0}\u3001{1}",
+                      },
+                      narrow: {
+                          end: "{0}\u3001{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u3001{1}",
+                          start: "{0}\u3001{1}",
+                      },
+                      short: {
+                          end: "{0}\u3001{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u3001{1}",
+                          start: "{0}\u3001{1}",
+                      },
                   },
                   disjunction: {
-                      long: { end: "{0}、または{1}", middle: "{0}、{1}", pair: "{0}または{1}", start: "{0}、{1}" },
-                      narrow: { end: "{0}、または{1}", middle: "{0}、{1}", pair: "{0}または{1}", start: "{0}、{1}" },
-                      short: { end: "{0}、または{1}", middle: "{0}、{1}", pair: "{0}または{1}", start: "{0}、{1}" },
+                      long: {
+                          end: "{0}\u3001\u307E\u305F\u306F{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u307E\u305F\u306F{1}",
+                          start: "{0}\u3001{1}",
+                      },
+                      narrow: {
+                          end: "{0}\u3001\u307E\u305F\u306F{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u307E\u305F\u306F{1}",
+                          start: "{0}\u3001{1}",
+                      },
+                      short: {
+                          end: "{0}\u3001\u307E\u305F\u306F{1}",
+                          middle: "{0}\u3001{1}",
+                          pair: "{0}\u307E\u305F\u306F{1}",
+                          start: "{0}\u3001{1}",
+                      },
                   },
                   unit: {
                       long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },

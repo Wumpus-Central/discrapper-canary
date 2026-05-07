@@ -1,7 +1,7 @@
 r.r(n), r.d(n, { default: () => t });
 var t = {
     payButton: "Zahlen",
-    "payButton.redirecting": "Umleiten…",
+    "payButton.redirecting": "Umleiten\u2026",
     "payButton.with": "%{value} mit %{maskedData} zahlen",
     close: "Schlie\xdfen",
     storeDetails: "F\xfcr zuk\xfcnftige Zahlvorg\xe4nge speichern",
@@ -41,7 +41,7 @@ var t = {
     "idealIssuer.selectField.title": "Bank",
     "idealIssuer.selectField.placeholder": "Bank ausw\xe4hlen",
     "creditCard.success": "Zahlung erfolgreich",
-    loading: "Laden…",
+    loading: "Laden\u2026",
     continue: "Weiter",
     continueTo: "Weiter zu",
     "wechatpay.timetopay": "Sie haben noch %@ um zu zahlen",
@@ -156,10 +156,10 @@ var t = {
     "select.provinceOrTerritory": "Provinz oder Territorium ausw\xe4hlen",
     "select.country": "Land ausw\xe4hlen",
     "select.noOptionsFound": "Keine Optionen gefunden",
-    "select.filter.placeholder": "Suche…",
+    "select.filter.placeholder": "Suche\u2026",
     "telephoneNumber.invalid": "Ung\xfcltige Telefonnummer",
     qrCodeOrApp: "oder",
-    "paypal.processingPayment": "Zahlung wird verarbeitet…",
+    "paypal.processingPayment": "Zahlung wird verarbeitet\u2026",
     generateQRCode: "QR-Code generieren",
     "await.waitForConfirmation": "Warten auf Best\xe4tigung",
     "mbway.confirmPayment": "Best\xe4tigen Sie Ihre Zahlung in der MB WAY-App",
@@ -171,7 +171,7 @@ var t = {
     "blik.code": "6-stelliger Code",
     "blik.help": "Rufen Sie den Code \xfcber Ihre Banking-App ab.",
     "swish.pendingMessage":
-        "Es kann sein, dass der Status bis zu 10 Minuten nach dem Scan „ausstehend“ lautet. Wenn Sie w\xe4hrenddessen einen neuen Zahlungsversuch unternehmen, kann es sein, dass Ihnen mehrere Betr\xe4ge in Rechnung gestellt werden.",
+        "Es kann sein, dass der Status bis zu 10 Minuten nach dem Scan \u201Eausstehend\u201C lautet. Wenn Sie w\xe4hrenddessen einen neuen Zahlungsversuch unternehmen, kann es sein, dass Ihnen mehrere Betr\xe4ge in Rechnung gestellt werden.",
     "field.valid": "Feld g\xfcltig",
     "field.invalid": "Feld ung\xfcltig",
     "error.va.gen.01": "Feld nicht ausgef\xfcllt",
@@ -260,7 +260,7 @@ var t = {
     "onlineBankingPL.termsAndConditions":
         "Indem Sie fortfahren, stimmen Sie den %#Vorschriften%# und der %#Auskunftspflicht%# von Przelewy24 zu",
     "ctp.loading.poweredByCtp": "Unterst\xfctzt von Click to Pay",
-    "ctp.loading.intro": "Wir \xfcberpr\xfcfen gerade, ob Sie bereits gespeicherte Click-to-Pay-Karten haben…",
+    "ctp.loading.intro": "Wir \xfcberpr\xfcfen gerade, ob Sie bereits gespeicherte Click-to-Pay-Karten haben\u2026",
     "ctp.login.title": "Weiter zu Click to Pay",
     "ctp.login.subtitle": "Geben Sie die mit Click to Pay verbundene E-Mail-Adresse ein, um fortzufahren.",
     "ctp.login.inputLabel": "E-Mail-Adresse",

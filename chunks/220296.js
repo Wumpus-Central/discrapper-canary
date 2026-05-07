@@ -1,15 +1,15 @@
 n(989349).defineLocale("mi", {
-    months: "Kohi-tāte_Hui-tanguru_Poutū-te-rangi_Paenga-whāwhā_Haratua_Pipiri_Hōngoingoi_Here-turi-kōkā_Mahuru_Whiringa-ā-nuku_Whiringa-ā-rangi_Hakihea".split(
+    months: "Kohi-t\u0101te_Hui-tanguru_Pout\u016B-te-rangi_Paenga-wh\u0101wh\u0101_Haratua_Pipiri_H\u014Dngoingoi_Here-turi-k\u014Dk\u0101_Mahuru_Whiringa-\u0101-nuku_Whiringa-\u0101-rangi_Hakihea".split(
         "_",
     ),
-    monthsShort: "Kohi_Hui_Pou_Pae_Hara_Pipi_Hōngoi_Here_Mahu_Whi-nu_Whi-ra_Haki".split("_"),
+    monthsShort: "Kohi_Hui_Pou_Pae_Hara_Pipi_H\u014Dngoi_Here_Mahu_Whi-nu_Whi-ra_Haki".split("_"),
     monthsRegex: /(?:['a-z\u0101\u014D\u016B]+\-?){1,3}/i,
     monthsStrictRegex: /(?:['a-z\u0101\u014D\u016B]+\-?){1,3}/i,
     monthsShortRegex: /(?:['a-z\u0101\u014D\u016B]+\-?){1,3}/i,
     monthsShortStrictRegex: /(?:['a-z\u0101\u014D\u016B]+\-?){1,2}/i,
-    weekdays: "Rātapu_Mane_Tūrei_Wenerei_Tāite_Paraire_Hātarei".split("_"),
-    weekdaysShort: "Ta_Ma_Tū_We_Tāi_Pa_Hā".split("_"),
-    weekdaysMin: "Ta_Ma_Tū_We_Tāi_Pa_Hā".split("_"),
+    weekdays: "R\u0101tapu_Mane_T\u016Brei_Wenerei_T\u0101ite_Paraire_H\u0101tarei".split("_"),
+    weekdaysShort: "Ta_Ma_T\u016B_We_T\u0101i_Pa_H\u0101".split("_"),
+    weekdaysMin: "Ta_Ma_T\u016B_We_T\u0101i_Pa_H\u0101".split("_"),
     longDateFormat: {
         LT: "HH:mm",
         LTS: "HH:mm:ss",
@@ -29,8 +29,8 @@ n(989349).defineLocale("mi", {
     relativeTime: {
         future: "i roto i %s",
         past: "%s i mua",
-        s: "te hēkona ruarua",
-        ss: "%d hēkona",
+        s: "te h\u0113kona ruarua",
+        ss: "%d h\u0113kona",
         m: "he meneti",
         mm: "%d meneti",
         h: "te haora",
@@ -42,7 +42,7 @@ n(989349).defineLocale("mi", {
         y: "he tau",
         yy: "%d tau",
     },
-    dayOfMonthOrdinalParse: /\d{1,2}º/,
+    dayOfMonthOrdinalParse: /\d{1,2}\xba/,
     ordinal: "%d\xba",
     week: { dow: 1, doy: 4 },
 });

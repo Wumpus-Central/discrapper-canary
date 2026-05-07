@@ -1,13 +1,13 @@
 !(function (e) {
     "use strict";
-    var t = "pagh_wa’_cha’_wej_loS_vagh_jav_Soch_chorgh_Hut".split("_");
-    function n(e, n, r, i) {
+    var t = "pagh_wa\u2019_cha\u2019_wej_loS_vagh_jav_Soch_chorgh_Hut".split("_");
+    function n(e, n, i, r) {
         var s,
             a,
             o,
             l,
             u,
-            d =
+            c =
                 ((a = Math.floor(((s = e) % 1e3) / 100)),
                 (o = Math.floor((s % 100) / 10)),
                 (l = s % 10),
@@ -16,27 +16,27 @@
                 o > 0 && (u += ("" !== u ? " " : "") + t[o] + "maH"),
                 l > 0 && (u += ("" !== u ? " " : "") + t[l]),
                 "" === u ? "pagh" : u);
-        switch (r) {
+        switch (i) {
             case "ss":
-                return d + " lup";
+                return c + " lup";
             case "mm":
-                return d + " tup";
+                return c + " tup";
             case "hh":
-                return d + " rep";
+                return c + " rep";
             case "dd":
-                return d + " jaj";
+                return c + " jaj";
             case "MM":
-                return d + " jar";
+                return c + " jar";
             case "yy":
-                return d + " DIS";
+                return c + " DIS";
         }
     }
     e.defineLocale("tlh", {
-        months: "tera’ jar wa’_tera’ jar cha’_tera’ jar wej_tera’ jar loS_tera’ jar vagh_tera’ jar jav_tera’ jar Soch_tera’ jar chorgh_tera’ jar Hut_tera’ jar wa’maH_tera’ jar wa’maH wa’_tera’ jar wa’maH cha’".split(
+        months: "tera\u2019 jar wa\u2019_tera\u2019 jar cha\u2019_tera\u2019 jar wej_tera\u2019 jar loS_tera\u2019 jar vagh_tera\u2019 jar jav_tera\u2019 jar Soch_tera\u2019 jar chorgh_tera\u2019 jar Hut_tera\u2019 jar wa\u2019maH_tera\u2019 jar wa\u2019maH wa\u2019_tera\u2019 jar wa\u2019maH cha\u2019".split(
             "_",
         ),
         monthsShort:
-            "jar wa’_jar cha’_jar wej_jar loS_jar vagh_jar jav_jar Soch_jar chorgh_jar Hut_jar wa’maH_jar wa’maH wa’_jar wa’maH cha’".split(
+            "jar wa\u2019_jar cha\u2019_jar wej_jar loS_jar vagh_jar jav_jar Soch_jar chorgh_jar Hut_jar wa\u2019maH_jar wa\u2019maH wa\u2019_jar wa\u2019maH cha\u2019".split(
                 "_",
             ),
         monthsParseExact: !0,
@@ -53,9 +53,9 @@
         },
         calendar: {
             sameDay: "[DaHjaj] LT",
-            nextDay: "[wa’leS] LT",
+            nextDay: "[wa\u2019leS] LT",
             nextWeek: "LLL",
-            lastDay: "[wa’Hu’] LT",
+            lastDay: "[wa\u2019Hu\u2019] LT",
             lastWeek: "LLL",
             sameElse: "L",
         },
@@ -73,7 +73,7 @@
             past: function (e) {
                 var t = e;
                 return -1 !== e.indexOf("jaj")
-                    ? t.slice(0, -3) + "Hu’"
+                    ? t.slice(0, -3) + "Hu\u2019"
                     : -1 !== e.indexOf("jar")
                       ? t.slice(0, -3) + "wen"
                       : -1 !== e.indexOf("DIS")
@@ -82,15 +82,15 @@
             },
             s: "puS lup",
             ss: n,
-            m: "wa’ tup",
+            m: "wa\u2019 tup",
             mm: n,
-            h: "wa’ rep",
+            h: "wa\u2019 rep",
             hh: n,
-            d: "wa’ jaj",
+            d: "wa\u2019 jaj",
             dd: n,
-            M: "wa’ jar",
+            M: "wa\u2019 jar",
             MM: n,
-            y: "wa’ DIS",
+            y: "wa\u2019 DIS",
             yy: n,
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,

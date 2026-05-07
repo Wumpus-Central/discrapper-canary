@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { V: () => o, A: () => _ });
-var i = n(838677),
+n.d(t, { V: () => o, A: () => c });
+var i = n(833272),
     r = n(486020),
     s = n(998304),
     a = n(515718);
-let o = new Set(["™", "™️", "\xa9", "\xa9️", "\xae", "\xae️"]);
+let o = new Set(["\u2122", "\u2122\uFE0F", "\xa9", "\xa9\uFE0F", "\xae", "\xae\uFE0F"]);
 function l(e) {
     if (o.has(e)) return "";
     try {
-        let t = 0 > e.indexOf("‍") ? e.replace("️", "") : e;
-        return n(256628)(`./${i.A.convert.toCodePoint(t)}.svg`);
+        let t = 0 > e.indexOf("\u200D") ? e.replace("\uFE0F", "") : e;
+        return n(874629)(`./${i.A.convert.toCodePoint(t)}.svg`);
     } catch (t) {
         return console.warn(t, "no emoji for", e), "";
     }
 }
-async function d(e) {
+async function u(e) {
     let t,
         { id: n, name: i } = e;
     t = null != n ? r.Ay.getEmojiURL({ id: n, size: 32, animated: !1 }) : l(i);
@@ -24,7 +24,7 @@ async function d(e) {
         return (0, s.Ob)(t, n, i);
     });
 }
-let _ = {
+let c = {
     getURL: {
         makeMemoizer: function (e) {
             let t = new Map();
@@ -41,7 +41,7 @@ let _ = {
         let { palette: t, shouldProcessMobileColors: n = !1 } = e;
         return t;
     },
-    getEmojiColors: d,
+    getEmojiColors: u,
     triggerFullscreenAnimation: function (e) {
         let { channelId: t, messageId: n, emoji: i } = e;
     },

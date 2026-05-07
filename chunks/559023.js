@@ -110,8 +110,8 @@ class p {
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "539882",
-            built_at: "1778033198379",
+            build_number: "540902",
+            built_at: "1778182802975",
             release_channel: n.y ?? "unknown",
             meticulous_perf_version: 4,
             tags: this.getTags(),
@@ -263,8 +263,8 @@ class y {
                 branch_name: e.branchName,
                 commit_date: e.commitDate,
                 timestamp: i,
-                build_number: "539882",
-                built_at: "1778033198379",
+                build_number: "540902",
+                built_at: "1778182802975",
                 release_channel: n.y ?? "unknown",
                 meticulous_perf_version: 4,
                 tags: { platform: (0, a.getNativePlatform)(), release_channel: n.y ?? "unknown", uptime_bucket: m(o) },
@@ -447,7 +447,7 @@ class v {
                 ),
             }),
             this.start(),
-            g.log(`🔧 Performance reporter initialized [${this.mode.name}] - entries will be logged to console`),
+            g.log(`\u{1F527} Performance reporter initialized [${this.mode.name}] - entries will be logged to console`),
             !0)
         );
     }

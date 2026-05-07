@@ -1,9 +1,11 @@
 n(989349).defineLocale("eo", {
-    months: "januaro_februaro_marto_aprilo_majo_junio_julio_aŭgusto_septembro_oktobro_novembro_decembro".split("_"),
-    monthsShort: "jan_feb_mar_apr_maj_jun_jul_aŭg_sep_okt_nov_dec".split("_"),
-    weekdays: "dimanĉo_lundo_mardo_merkredo_ĵaŭdo_vendredo_sabato".split("_"),
-    weekdaysShort: "dim_lun_mard_merk_ĵaŭ_ven_sab".split("_"),
-    weekdaysMin: "di_lu_ma_me_ĵa_ve_sa".split("_"),
+    months: "januaro_februaro_marto_aprilo_majo_junio_julio_a\u016Dgusto_septembro_oktobro_novembro_decembro".split(
+        "_",
+    ),
+    monthsShort: "jan_feb_mar_apr_maj_jun_jul_a\u016Dg_sep_okt_nov_dec".split("_"),
+    weekdays: "diman\u0109o_lundo_mardo_merkredo_\u0135a\u016Ddo_vendredo_sabato".split("_"),
+    weekdaysShort: "dim_lun_mard_merk_\u0135a\u016D_ven_sab".split("_"),
+    weekdaysMin: "di_lu_ma_me_\u0135a_ve_sa".split("_"),
     longDateFormat: {
         LT: "HH:mm",
         LTS: "HH:mm:ss",
@@ -20,16 +22,16 @@ n(989349).defineLocale("eo", {
         return e > 11 ? (n ? "p.t.m." : "P.T.M.") : n ? "a.t.m." : "A.T.M.";
     },
     calendar: {
-        sameDay: "[Hodiaŭ je] LT",
-        nextDay: "[Morgaŭ je] LT",
+        sameDay: "[Hodia\u016D je] LT",
+        nextDay: "[Morga\u016D je] LT",
         nextWeek: "dddd [je] LT",
-        lastDay: "[Hieraŭ je] LT",
+        lastDay: "[Hiera\u016D je] LT",
         lastWeek: "[pasinta] dddd [je] LT",
         sameElse: "L",
     },
     relativeTime: {
         future: "post %s",
-        past: "antaŭ %s",
+        past: "anta\u016D %s",
         s: "sekundoj",
         ss: "%d sekundoj",
         m: "minuto",

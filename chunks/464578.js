@@ -13,7 +13,7 @@ function l(e, t) {
     let n = t - e;
     return n < 0 || n > 1e6 ? null : n;
 }
-class d {
+class u {
     emoji;
     name;
     start_ = 0;
@@ -85,7 +85,7 @@ class d {
         return i.A.mark(this.emoji, `Finish ${this.name}`, Date.now() - t), this.recordEnd_(), a(), n;
     }
 }
-class _ {
+class c {
     emoji;
     name;
     onlyOnce;
@@ -121,7 +121,7 @@ class _ {
         return l(e, this.time_);
     }
 }
-class u {
+class d {
     time_ = 0;
     get time() {
         return this.time_;
@@ -130,56 +130,56 @@ class u {
         0 === this.time_ && (this.time_ = o());
     }
 }
-class c {
-    loadIndex = new d("❗", "Load index.tsx");
-    loadFastConnectNativeModule = new d("\uD83D\uDCBE", "Load fast_connect native module");
-    beginFastConnect = new d("\uD83C\uDF10", "Fast Connect IDENTIFY");
-    loadImports = new d("\uD83C\uDFC3", "Load Imports");
-    init = new d("\uD83C\uDFC3", "Initial Initialization");
-    loadStorage = new d("\uD83D\uDCBE", "Load Storage");
-    parseStorage = new d("\uD83D\uDCBE", "Parse Storage");
-    loadMiniCache = new d("\uD83D\uDCBE", "Load Mini Cache");
-    fetchGuildCache = new d("\uD83D\uDCBE", "Fetch Guild Cache");
-    fetchGuildChannelsCache = new d("\uD83D\uDCBE", "Fetch Initial Guild Channels Cache");
-    loadCachedMessages = new d("\uD83D\uDCBE", "Load Cached Messages");
-    renderApp = new _("\uD83C\uDFA8", "First React Render");
-    renderAppEffect = new _("\uD83C\uDFA8", "First React Render useEffect");
-    firstContentfulPaint = new _("\uD83C\uDFA8", "First Contentful Paint", !1, !0);
-    renderMessages = new _("\uD83C\uDFA8", "React Render Messages", !0);
-    renderMessagesWithCache = new _("\uD83C\uDFA8", "React Render Cached Messages", !0);
-    firstRowGenerator = new d("\uD83C\uDFA8", "RowGenerator.generate()");
-    displayMessagesWithCache = new _("\uD83D\uDDA5️", "Display Cached Messages", !1, !0);
-    firstRenderAfterReadyPayload = new _("\uD83C\uDFA8", "First Render after Ready Payload", !0);
-    renderLatestMessages = new _("\uD83C\uDFA8", "React Render Latest Messages");
-    displayLatestMessages = new _("\uD83D\uDDA5️", "Display Latest Messages");
-    initialGuild = new d("\uD83C\uDF10", "Initial Guild");
-    loadLazyCache = new d("\uD83D\uDCBE", "Load Lazy Cache");
-    fetchLazyCache = new d("\uD83D\uDCBE", "Fetch Lazy Cache");
-    parseLazyCache = new d("\uD83D\uDCBE", "Parse Lazy Cache");
-    fetchStaleChannels = new d("\uD83D\uDCBE", "Fetch Stale Channels");
-    deserializeCache = new d("\uD83D\uDCBE", "Deserialize Cache");
-    dispatchLazyCache = new d("\uD83D\uDCBE", "Dispatch Lazy Cache");
-    parseReady = new d("\uD83C\uDF10", "Parse READY");
-    ready = new d("\uD83C\uDF10", "READY");
-    hydrateReady = new d("\uD83C\uDF10", "Hydrate READY");
-    dispatchReady = new d("\uD83C\uDF10", "Dispatch READY");
-    parseReadySupplemental = new d("\uD83C\uDF10", "Parse READY Supplemental");
-    readySupplemental = new d("\uD83C\uDF10", "READY Supplemental");
-    hydrateReadySupplemental = new d("\uD83C\uDF10", "Hydrate READY Supplemental");
-    dispatchReadySupplemental = new d("\uD83C\uDF10", "Dispatch READY Supplemental");
-    fetchMessages = new d("\uD83C\uDF10", "Fetch messages");
-    dispatchMessages = new d("\uD83C\uDF10", "Dispatch messages");
+class _ {
+    loadIndex = new u("\u2757", "Load index.tsx");
+    loadFastConnectNativeModule = new u("\uD83D\uDCBE", "Load fast_connect native module");
+    beginFastConnect = new u("\uD83C\uDF10", "Fast Connect IDENTIFY");
+    loadImports = new u("\uD83C\uDFC3", "Load Imports");
+    init = new u("\uD83C\uDFC3", "Initial Initialization");
+    loadStorage = new u("\uD83D\uDCBE", "Load Storage");
+    parseStorage = new u("\uD83D\uDCBE", "Parse Storage");
+    loadMiniCache = new u("\uD83D\uDCBE", "Load Mini Cache");
+    fetchGuildCache = new u("\uD83D\uDCBE", "Fetch Guild Cache");
+    fetchGuildChannelsCache = new u("\uD83D\uDCBE", "Fetch Initial Guild Channels Cache");
+    loadCachedMessages = new u("\uD83D\uDCBE", "Load Cached Messages");
+    renderApp = new c("\uD83C\uDFA8", "First React Render");
+    renderAppEffect = new c("\uD83C\uDFA8", "First React Render useEffect");
+    firstContentfulPaint = new c("\uD83C\uDFA8", "First Contentful Paint", !1, !0);
+    renderMessages = new c("\uD83C\uDFA8", "React Render Messages", !0);
+    renderMessagesWithCache = new c("\uD83C\uDFA8", "React Render Cached Messages", !0);
+    firstRowGenerator = new u("\uD83C\uDFA8", "RowGenerator.generate()");
+    displayMessagesWithCache = new c("\uD83D\uDDA5\uFE0F", "Display Cached Messages", !1, !0);
+    firstRenderAfterReadyPayload = new c("\uD83C\uDFA8", "First Render after Ready Payload", !0);
+    renderLatestMessages = new c("\uD83C\uDFA8", "React Render Latest Messages");
+    displayLatestMessages = new c("\uD83D\uDDA5\uFE0F", "Display Latest Messages");
+    initialGuild = new u("\uD83C\uDF10", "Initial Guild");
+    loadLazyCache = new u("\uD83D\uDCBE", "Load Lazy Cache");
+    fetchLazyCache = new u("\uD83D\uDCBE", "Fetch Lazy Cache");
+    parseLazyCache = new u("\uD83D\uDCBE", "Parse Lazy Cache");
+    fetchStaleChannels = new u("\uD83D\uDCBE", "Fetch Stale Channels");
+    deserializeCache = new u("\uD83D\uDCBE", "Deserialize Cache");
+    dispatchLazyCache = new u("\uD83D\uDCBE", "Dispatch Lazy Cache");
+    parseReady = new u("\uD83C\uDF10", "Parse READY");
+    ready = new u("\uD83C\uDF10", "READY");
+    hydrateReady = new u("\uD83C\uDF10", "Hydrate READY");
+    dispatchReady = new u("\uD83C\uDF10", "Dispatch READY");
+    parseReadySupplemental = new u("\uD83C\uDF10", "Parse READY Supplemental");
+    readySupplemental = new u("\uD83C\uDF10", "READY Supplemental");
+    hydrateReadySupplemental = new u("\uD83C\uDF10", "Hydrate READY Supplemental");
+    dispatchReadySupplemental = new u("\uD83C\uDF10", "Dispatch READY Supplemental");
+    fetchMessages = new u("\uD83C\uDF10", "Fetch messages");
+    dispatchMessages = new u("\uD83C\uDF10", "Dispatch messages");
     imports = {
-        polyfillsEnd: new u(),
-        sentryEnd: new u(),
-        appStateChangeStart: new u(),
-        appStateChangeEnd: new u(),
-        loadMiniCacheStart: new u(),
-        loadStorageStart: new u(),
-        loadStorageEnd: new u(),
+        polyfillsEnd: new d(),
+        sentryEnd: new d(),
+        appStateChangeStart: new d(),
+        appStateChangeEnd: new d(),
+        loadMiniCacheStart: new d(),
+        loadStorageStart: new d(),
+        loadStorageEnd: new d(),
     };
 }
-class E extends c {
+class f extends _ {
     readyProperties = {};
     didBackgroundApp = !1;
     wasEverActive = !1;
@@ -525,4 +525,4 @@ class E extends c {
         };
     }
 }
-let h = new E();
+let h = new f();

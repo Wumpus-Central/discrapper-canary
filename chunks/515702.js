@@ -1,6 +1,6 @@
-t.d(a, { p: () => n });
-let r = new Map();
-class n {
+t.d(a, { p: () => r });
+let n = new Map();
+class r {
     format(e) {
         return this.formatter.format(e);
     }
@@ -16,38 +16,38 @@ class n {
         if ("function" == typeof this.formatter.formatRangeToParts) return this.formatter.formatRangeToParts(e, a);
         if (a < e) throw RangeError("End date must be >= start date");
         let t = this.formatter.formatToParts(e),
-            r = this.formatter.formatToParts(a);
+            n = this.formatter.formatToParts(a);
         return [
             ...t.map((e) => ({ ...e, source: "startRange" })),
-            { type: "literal", value: " – ", source: "shared" },
-            ...r.map((e) => ({ ...e, source: "endRange" })),
+            { type: "literal", value: " \u2013 ", source: "shared" },
+            ...n.map((e) => ({ ...e, source: "endRange" })),
         ];
     }
     resolvedOptions() {
         let e = this.formatter.resolvedOptions();
         return (
-            null == l &&
-                (l =
+            null == u &&
+                (u =
                     "h12" ===
                     new Intl.DateTimeFormat("fr", { hour: "numeric", hour12: !1 }).resolvedOptions().hourCycle),
-            l &&
+            u &&
                 (this.resolvedHourCycle ||
                     (this.resolvedHourCycle = (function (e, a) {
                         if (!a.timeStyle && !a.hour) return;
                         e = e.replace(/(-u-)?-nu-[a-zA-Z0-9]+/, "");
-                        let t = o((e += (e.includes("-u-") ? "" : "-u") + "-nu-latn"), { ...a, timeZone: void 0 }),
-                            r = parseInt(
+                        let t = l((e += (e.includes("-u-") ? "" : "-u") + "-nu-latn"), { ...a, timeZone: void 0 }),
+                            n = parseInt(
                                 t.formatToParts(new Date(2020, 2, 3, 0)).find((e) => "hour" === e.type).value,
                                 10,
                             ),
-                            n = parseInt(
+                            r = parseInt(
                                 t.formatToParts(new Date(2020, 2, 3, 23)).find((e) => "hour" === e.type).value,
                                 10,
                             );
-                        if (0 === r && 23 === n) return "h23";
-                        if (24 === r && 23 === n) return "h24";
-                        if (0 === r && 11 === n) return "h11";
-                        if (12 === r && 11 === n) return "h12";
+                        if (0 === n && 23 === r) return "h23";
+                        if (24 === n && 23 === r) return "h24";
+                        if (0 === n && 11 === r) return "h11";
+                        if (12 === n && 11 === r) return "h12";
                         throw Error("Unexpected hour cycle result");
                     })(e.locale, this.options)),
                 (e.hourCycle = this.resolvedHourCycle),
@@ -57,22 +57,22 @@ class n {
         );
     }
     constructor(e, a = {}) {
-        (this.formatter = o(e, a)), (this.options = a);
+        (this.formatter = l(e, a)), (this.options = a);
     }
 }
 let i = { true: { ja: "h11" }, false: {} };
-function o(e, a = {}) {
+function l(e, a = {}) {
     if (
         "boolean" == typeof a.hour12 &&
-        (null == u &&
-            (u =
+        (null == o &&
+            (o =
                 "24" ===
                 new Intl.DateTimeFormat("en-US", { hour: "numeric", hour12: !1 }).format(new Date(2020, 2, 3, 0))),
-        u)
+        o)
     ) {
         let t = i[String((a = { ...a }).hour12)][e.split("-")[0]],
-            r = a.hour12 ? "h12" : "h23";
-        (a.hourCycle = null != t ? t : r), delete a.hour12;
+            n = a.hour12 ? "h12" : "h23";
+        (a.hourCycle = null != t ? t : n), delete a.hour12;
     }
     let t =
         e +
@@ -81,9 +81,9 @@ function o(e, a = {}) {
                   .sort((e, a) => (e[0] < a[0] ? -1 : 1))
                   .join()
             : "");
-    if (r.has(t)) return r.get(t);
-    let n = new Intl.DateTimeFormat(e, a);
-    return r.set(t, n), n;
+    if (n.has(t)) return n.get(t);
+    let r = new Intl.DateTimeFormat(e, a);
+    return n.set(t, r), r;
 }
-let u = null,
-    l = null;
+let o = null,
+    u = null;

@@ -1,9 +1,22 @@
 n(989349).defineLocale("bg", {
-    months: "януари_февруари_март_април_май_юни_юли_август_септември_октомври_ноември_декември".split("_"),
-    monthsShort: "янр_фев_мар_апр_май_юни_юли_авг_сеп_окт_ное_дек".split("_"),
-    weekdays: "неделя_понеделник_вторник_сряда_четвъртък_петък_събота".split("_"),
-    weekdaysShort: "нед_пон_вто_сря_чет_пет_съб".split("_"),
-    weekdaysMin: "нд_пн_вт_ср_чт_пт_сб".split("_"),
+    months: "\u044F\u043D\u0443\u0430\u0440\u0438_\u0444\u0435\u0432\u0440\u0443\u0430\u0440\u0438_\u043C\u0430\u0440\u0442_\u0430\u043F\u0440\u0438\u043B_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433\u0443\u0441\u0442_\u0441\u0435\u043F\u0442\u0435\u043C\u0432\u0440\u0438_\u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438_\u043D\u043E\u0435\u043C\u0432\u0440\u0438_\u0434\u0435\u043A\u0435\u043C\u0432\u0440\u0438".split(
+        "_",
+    ),
+    monthsShort:
+        "\u044F\u043D\u0440_\u0444\u0435\u0432_\u043C\u0430\u0440_\u0430\u043F\u0440_\u043C\u0430\u0439_\u044E\u043D\u0438_\u044E\u043B\u0438_\u0430\u0432\u0433_\u0441\u0435\u043F_\u043E\u043A\u0442_\u043D\u043E\u0435_\u0434\u0435\u043A".split(
+            "_",
+        ),
+    weekdays:
+        "\u043D\u0435\u0434\u0435\u043B\u044F_\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A_\u0432\u0442\u043E\u0440\u043D\u0438\u043A_\u0441\u0440\u044F\u0434\u0430_\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A_\u043F\u0435\u0442\u044A\u043A_\u0441\u044A\u0431\u043E\u0442\u0430".split(
+            "_",
+        ),
+    weekdaysShort:
+        "\u043D\u0435\u0434_\u043F\u043E\u043D_\u0432\u0442\u043E_\u0441\u0440\u044F_\u0447\u0435\u0442_\u043F\u0435\u0442_\u0441\u044A\u0431".split(
+            "_",
+        ),
+    weekdaysMin: "\u043D\u0434_\u043F\u043D_\u0432\u0442_\u0441\u0440_\u0447\u0442_\u043F\u0442_\u0441\u0431".split(
+        "_",
+    ),
     longDateFormat: {
         LT: "H:mm",
         LTS: "H:mm:ss",
@@ -13,52 +26,52 @@ n(989349).defineLocale("bg", {
         LLLL: "dddd, D MMMM YYYY H:mm",
     },
     calendar: {
-        sameDay: "[Днес в] LT",
-        nextDay: "[Утре в] LT",
-        nextWeek: "dddd [в] LT",
-        lastDay: "[Вчера в] LT",
+        sameDay: "[\u0414\u043D\u0435\u0441 \u0432] LT",
+        nextDay: "[\u0423\u0442\u0440\u0435 \u0432] LT",
+        nextWeek: "dddd [\u0432] LT",
+        lastDay: "[\u0412\u0447\u0435\u0440\u0430 \u0432] LT",
         lastWeek: function () {
             switch (this.day()) {
                 case 0:
                 case 3:
                 case 6:
-                    return "[В изминалата] dddd [в] LT";
+                    return "[\u0412 \u0438\u0437\u043C\u0438\u043D\u0430\u043B\u0430\u0442\u0430] dddd [\u0432] LT";
                 case 1:
                 case 2:
                 case 4:
                 case 5:
-                    return "[В изминалия] dddd [в] LT";
+                    return "[\u0412 \u0438\u0437\u043C\u0438\u043D\u0430\u043B\u0438\u044F] dddd [\u0432] LT";
             }
         },
         sameElse: "L",
     },
     relativeTime: {
-        future: "след %s",
-        past: "преди %s",
-        s: "няколко секунди",
-        ss: "%d секунди",
-        m: "минута",
-        mm: "%d минути",
-        h: "час",
-        hh: "%d часа",
-        d: "ден",
-        dd: "%d дни",
-        M: "месец",
-        MM: "%d месеца",
-        y: "година",
-        yy: "%d години",
+        future: "\u0441\u043B\u0435\u0434 %s",
+        past: "\u043F\u0440\u0435\u0434\u0438 %s",
+        s: "\u043D\u044F\u043A\u043E\u043B\u043A\u043E \u0441\u0435\u043A\u0443\u043D\u0434\u0438",
+        ss: "%d \u0441\u0435\u043A\u0443\u043D\u0434\u0438",
+        m: "\u043C\u0438\u043D\u0443\u0442\u0430",
+        mm: "%d \u043C\u0438\u043D\u0443\u0442\u0438",
+        h: "\u0447\u0430\u0441",
+        hh: "%d \u0447\u0430\u0441\u0430",
+        d: "\u0434\u0435\u043D",
+        dd: "%d \u0434\u043D\u0438",
+        M: "\u043C\u0435\u0441\u0435\u0446",
+        MM: "%d \u043C\u0435\u0441\u0435\u0446\u0430",
+        y: "\u0433\u043E\u0434\u0438\u043D\u0430",
+        yy: "%d \u0433\u043E\u0434\u0438\u043D\u0438",
     },
-    dayOfMonthOrdinalParse: /\d{1,2}-(ев|ен|ти|ви|ри|ми)/,
+    dayOfMonthOrdinalParse: /\d{1,2}-(\u0435\u0432|\u0435\u043d|\u0442\u0438|\u0432\u0438|\u0440\u0438|\u043c\u0438)/,
     ordinal: function (e) {
         var t = e % 10,
             n = e % 100;
-        if (0 === e) return e + "-ев";
-        if (0 === n) return e + "-ен";
-        if (n > 10 && n < 20) return e + "-ти";
-        if (1 === t) return e + "-ви";
-        if (2 === t) return e + "-ри";
-        else if (7 === t || 8 === t) return e + "-ми";
-        else return e + "-ти";
+        if (0 === e) return e + "-\u0435\u0432";
+        if (0 === n) return e + "-\u0435\u043D";
+        if (n > 10 && n < 20) return e + "-\u0442\u0438";
+        if (1 === t) return e + "-\u0432\u0438";
+        if (2 === t) return e + "-\u0440\u0438";
+        else if (7 === t || 8 === t) return e + "-\u043C\u0438";
+        else return e + "-\u0442\u0438";
     },
     week: { dow: 1, doy: 7 },
 });

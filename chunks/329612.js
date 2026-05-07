@@ -1,9 +1,9 @@
-var r = n(557431),
-    i = n(914549),
-    l = n(696472),
-    s = RegExp("['’]", "g");
-e.exports = function (e) {
-    return function (t) {
-        return r(l(i(t).replace(s, "")), e, "");
+var r = e(557431),
+    t = e(914549),
+    n = e(251710),
+    o = RegExp("['\u2019]", "g");
+u.exports = function (u) {
+    return function (f) {
+        return r(n(t(f).replace(o, "")), u, "");
     };
 };

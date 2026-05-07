@@ -437,7 +437,7 @@ function ec(e, t) {
         }
         let a = t.variables[l];
         null == a
-            ? (i += "––")
+            ? (i += "\u2013\u2013")
             : "unfurled_media" === a.type
               ? (i += a.media.url)
               : "number" === a.type

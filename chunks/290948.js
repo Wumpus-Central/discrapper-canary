@@ -572,7 +572,7 @@ function eP(e) {
                             value: o,
                             onChange: (e) =>
                                 ((e) => {
-                                    let t = e.replace(/°/g, "").trim();
+                                    let t = e.replace(/\xb0/g, "").trim();
                                     if ("" === t) return void c("");
                                     let n = parseInt(t, 10);
                                     if (isNaN(n)) return;

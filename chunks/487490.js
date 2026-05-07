@@ -15,7 +15,7 @@ var i = n(989349),
     p = n(587895),
     E = n(145643),
     m = n(826673),
-    g = n(281678),
+    g = n(367727),
     A = n(587054),
     I = n(487329),
     T = n(161518),
@@ -72,7 +72,7 @@ var K = n(859703),
     $ = n(655116),
     q = n(105530),
     Z = n(935671),
-    X = n(964404),
+    X = n(742023),
     Q = n(617617),
     J = n(499156),
     ee = n(976910),
@@ -259,7 +259,7 @@ function tn() {
     if (null != tt) return tt;
     try {
         let e = document.createElement("canvas").getContext("2d"),
-            t = "";
+            t = "\uE700\uE701\uE702\uE703\uE704\uE705\uE706\uE707";
         e.font = "16px monospace";
         let n = e.measureText(t).width;
         (e.font = '16px "Segoe MDL2 Assets", monospace'), (tt = e.measureText(t).width !== n);

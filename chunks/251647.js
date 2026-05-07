@@ -1,9 +1,14 @@
 n(989349).defineLocale("tzm-latn", {
-    months: "innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir".split("_"),
-    monthsShort: "innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir".split("_"),
-    weekdays: "asamas_aynas_asinas_akras_akwas_asimwas_asiḍyas".split("_"),
-    weekdaysShort: "asamas_aynas_asinas_akras_akwas_asimwas_asiḍyas".split("_"),
-    weekdaysMin: "asamas_aynas_asinas_akras_akwas_asimwas_asiḍyas".split("_"),
+    months: "innayr_br\u02E4ayr\u02E4_mar\u02E4s\u02E4_ibrir_mayyw_ywnyw_ywlywz_\u0263w\u0161t_\u0161wtanbir_kt\u02E4wbr\u02E4_nwwanbir_dwjnbir".split(
+        "_",
+    ),
+    monthsShort:
+        "innayr_br\u02E4ayr\u02E4_mar\u02E4s\u02E4_ibrir_mayyw_ywnyw_ywlywz_\u0263w\u0161t_\u0161wtanbir_kt\u02E4wbr\u02E4_nwwanbir_dwjnbir".split(
+            "_",
+        ),
+    weekdays: "asamas_aynas_asinas_akras_akwas_asimwas_asi\u1E0Dyas".split("_"),
+    weekdaysShort: "asamas_aynas_asinas_akras_akwas_asimwas_asi\u1E0Dyas".split("_"),
+    weekdaysMin: "asamas_aynas_asinas_akras_akwas_asimwas_asi\u1E0Dyas".split("_"),
     longDateFormat: {
         LT: "HH:mm",
         LTS: "HH:mm:ss",
@@ -25,10 +30,10 @@ n(989349).defineLocale("tzm-latn", {
         past: "yan %s",
         s: "imik",
         ss: "%d imik",
-        m: "minuḍ",
-        mm: "%d minuḍ",
-        h: "saɛa",
-        hh: "%d tassaɛin",
+        m: "minu\u1E0D",
+        mm: "%d minu\u1E0D",
+        h: "sa\u025Ba",
+        hh: "%d tassa\u025Bin",
         d: "ass",
         dd: "%d ossan",
         M: "ayowr",

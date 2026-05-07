@@ -251,7 +251,7 @@ class E extends v.c {
     }
 }
 let b = RegExp(
-    `(?:on\\s{0,3})?(${g})(?:\\s{0,3}(?:to|\\-|\\–|until|through|till)?\\s{0,3}(${g}))?(?:-|/|\\s{0,3}(?:of)?\\s{0,3})(${(0, n.uJ)(o)})(?:(?:-|/|,?\\s{0,3})(${f}(?!\\w)))?(?=\\W|$)`,
+    `(?:on\\s{0,3})?(${g})(?:\\s{0,3}(?:to|\\-|\\\u{2013}|until|through|till)?\\s{0,3}(${g}))?(?:-|/|\\s{0,3}(?:of)?\\s{0,3})(${(0, n.uJ)(o)})(?:(?:-|/|,?\\s{0,3})(${f}(?!\\w)))?(?=\\W|$)`,
     "i",
 );
 class A extends v.c {
@@ -366,7 +366,7 @@ class O extends N.B {
         super(e);
     }
     followingPhase() {
-        return "\\s*(?:\\-|\\–|\\~|\\〜|to|until|through|till|\\?)\\s*";
+        return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|until|through|till|\\?)\\s*";
     }
     primaryPrefix() {
         return "(?:(?:at|from)\\s*)??";
@@ -433,17 +433,17 @@ class Z extends v.c {
 var K = r(172609);
 class _ extends K.A {
     patternBetween() {
-        return /^\s*(to|-|–|until|through|till)\s*$/i;
+        return /^\s*(to|-|\u2013|until|through|till)\s*$/i;
     }
 }
 var X = r(230205);
 class Q extends X.A {
     patternBetween() {
-        return RegExp("^\\s*(T|at|after|before|on|of|,|-|\\.|∙|:)?\\s*$");
+        return RegExp("^\\s*(T|at|after|before|on|of|,|-|\\.|\u2219|:)?\\s*$");
     }
 }
 var ee = r(132588),
-    et = r(658809),
+    et = r(881190),
     er = r(996483);
 let en = /(now|today|tonight|tomorrow|overmorrow|tmr|tmrw|yesterday|last\s*night)(?=\W|$)/i;
 class es extends v.c {
@@ -517,7 +517,7 @@ class ei extends v.c {
 }
 var eo = r(1673);
 let el = RegExp(
-    `(?:(?:\\,|\\(|\\（)\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(${(0, n.uJ)(a)}|weekend|weekday)(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)`,
+    `(?:(?:\\,|\\(|\\\u{FF08})\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(${(0, n.uJ)(a)}|weekend|weekday)(?:\\s*(?:\\,|\\)|\\\u{FF09}))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)`,
     "i",
 );
 class eu extends v.c {

@@ -57,7 +57,7 @@ n(989349).defineLocale("ca", {
         y: "un any",
         yy: "%d anys",
     },
-    dayOfMonthOrdinalParse: /\d{1,2}(r|n|t|è|a)/,
+    dayOfMonthOrdinalParse: /\d{1,2}(r|n|t|\xe8|a)/,
     ordinal: function (e, t) {
         var n = 1 === e ? "r" : 2 === e ? "n" : 3 === e ? "r" : 4 === e ? "t" : "\xe8";
         return ("w" === t || "W" === t) && (n = "a"), e + n;

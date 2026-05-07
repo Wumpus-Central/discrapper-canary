@@ -672,10 +672,10 @@ let ee = {
             if (9 === e) return "Fine weather";
             else if (10 === e) return "Cloudy weather";
             else if (11 === e) return "Shade";
-            else if (12 === e) return "Daylight fluorescent (D 5700 – 7100K)";
-            else if (13 === e) return "Day white fluorescent (N 4600 – 5400K)";
-            else if (14 === e) return "Cool white fluorescent (W 3900 – 4500K)";
-            else if (15 === e) return "White fluorescent (WW 3200 – 3700K)";
+            else if (12 === e) return "Daylight fluorescent (D 5700 \u2013 7100K)";
+            else if (13 === e) return "Day white fluorescent (N 4600 \u2013 5400K)";
+            else if (14 === e) return "Cool white fluorescent (W 3900 \u2013 4500K)";
+            else if (15 === e) return "White fluorescent (WW 3200 \u2013 3700K)";
             else if (17 === e) return "Standard light A";
             else if (18 === e) return "Standard light B";
             else if (19 === e) return "Standard light C";

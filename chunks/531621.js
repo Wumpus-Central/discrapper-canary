@@ -197,7 +197,7 @@ let c = {
     localize: g,
     match: {
         ordinalNumber: (0, a(722023).A)({
-            matchPattern: /^(\d+)(º)?/i,
+            matchPattern: /^(\d+)(\xba)?/i,
             parsePattern: /\d+/i,
             valueCallback: function (e) {
                 return parseInt(e, 10);
@@ -214,7 +214,7 @@ let c = {
             defaultParseWidth: "any",
         }),
         quarter: (0, l.A)({
-            matchPatterns: { narrow: /^[1234]/i, abbreviated: /^t[1234]/i, wide: /^[1234](º)? trimestre/i },
+            matchPatterns: { narrow: /^[1234]/i, abbreviated: /^t[1234]/i, wide: /^[1234](\xba)? trimestre/i },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
             defaultParseWidth: "any",
@@ -240,7 +240,7 @@ let c = {
                 narrow: /^[dlmgvs]/i,
                 short: /^(do|lu|ma|me|gi|ve|sa)/i,
                 abbreviated: /^(dom|lun|mar|mer|gio|ven|sab)/i,
-                wide: /^(domenica|luned[i|ì]|marted[i|ì]|mercoled[i|ì]|gioved[i|ì]|venerd[i|ì]|sabato)/i,
+                wide: /^(domenica|luned[i|\xec]|marted[i|\xec]|mercoled[i|\xec]|gioved[i|\xec]|venerd[i|\xec]|sabato)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {

@@ -18,7 +18,7 @@ var n = r(132588),
     a = r(374372),
     i = r(322811),
     o = r(355418),
-    l = r(658809),
+    l = r(881190),
     u = r(996483);
 class m extends o.c {
     innerPattern(e) {
@@ -49,7 +49,7 @@ class m extends o.c {
 }
 class d extends o.c {
     innerPattern(e) {
-        return /(cet?)?\s*(matin|soir|après-midi|aprem|a midi|à minuit)(?=\W|$)/i;
+        return /(cet?)?\s*(matin|soir|apr\xe8s-midi|aprem|a midi|\xe0 minuit)(?=\W|$)/i;
     }
     innerExtract(e, t) {
         let r = t[2].toLowerCase(),
@@ -81,7 +81,7 @@ class h extends g.B {
         return "(?:(?:[\xe0a])\\s*)?";
     }
     followingPhase() {
-        return "\\s*(?:\\-|\\–|\\~|\\〜|[\xe0a]|\\?)\\s*";
+        return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|[\xe0a]|\\?)\\s*";
     }
     extractPrimaryTimeComponents(e, t) {
         return t[0].match(/^\s*\d{4}\s*$/) ? null : super.extractPrimaryTimeComponents(e, t);
@@ -96,7 +96,7 @@ class p extends f.A {
 var y = r(172609);
 class x extends y.A {
     patternBetween() {
-        return /^\s*(à|a|au|-)\s*$/i;
+        return /^\s*(\xe0|a|au|-)\s*$/i;
     }
 }
 var w = r(476858);
@@ -120,8 +120,8 @@ let D = {
         janvier: 1,
         jan: 1,
         "jan.": 1,
-        février: 2,
-        fév: 2,
+        "f\xe9vrier": 2,
+        "f\xe9v": 2,
         "f\xe9v.": 2,
         fevrier: 2,
         fev: 2,
@@ -139,7 +139,7 @@ let D = {
         juil: 7,
         jul: 7,
         "jul.": 7,
-        août: 8,
+        "ao\xfbt": 8,
         aout: 8,
         septembre: 9,
         sep: 9,
@@ -152,7 +152,7 @@ let D = {
         novembre: 11,
         nov: 11,
         "nov.": 11,
-        décembre: 12,
+        "d\xe9cembre": 12,
         decembre: 12,
         dec: 12,
         "dec.": 12,
@@ -193,8 +193,8 @@ let D = {
         trimestre: "quarter",
         trimestres: "quarter",
         ans: "year",
-        année: "year",
-        années: "year",
+        "ann\xe9e": "year",
+        "ann\xe9es": "year",
     },
     T = `(?:${(0, w.uJ)(F)}|[0-9]+|[0-9]+\\.[0-9]+|une?\\b|quelques?|demi-?)`;
 function v(e) {
@@ -232,7 +232,7 @@ function A(e) {
 }
 var k = r(1673);
 let j = RegExp(
-    `(?:(?:\\,|\\(|\\（)\\s*)?(?:(?:ce)\\s*)?(${(0, w.uJ)(D)})(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(dernier|prochain)\\s*)?(?=\\W|\\d|$)`,
+    `(?:(?:\\,|\\(|\\\u{FF08})\\s*)?(?:(?:ce)\\s*)?(${(0, w.uJ)(D)})(?:\\s*(?:\\,|\\)|\\\u{FF09}))?(?:\\s*(dernier|prochain)\\s*)?(?=\\W|\\d|$)`,
     "i",
 );
 class B extends o.c {
@@ -253,7 +253,7 @@ let W = RegExp(
         "i",
     ),
     S = RegExp(
-        "^\\s*(\\-|\\–|\\~|\\〜|[\xe0a]|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)",
+        "^\\s*(\\-|\\\u2013|\\~|\\\u301C|[\xe0a]|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)",
         "i",
     );
 class I {
@@ -293,7 +293,7 @@ class I {
 }
 var Y = r(364242);
 let z = RegExp(
-    `(?:on\\s*?)?(${M})(?:\\s*(?:au|\\-|\\–|jusqu'au?|\\s)\\s*(${M}))?(?:-|/|\\s*(?:de)?\\s*)(${(0, w.uJ)(P)})(?:(?:-|/|,?\\s*)((?:[1-9][0-9]{0,3}\\s*(?:AC|AD|p\\.\\s*C(?:hr?)?\\.\\s*n\\.)|[1-2][0-9]{3}|[5-9][0-9])(?![^\\s]\\d)))?(?=\\W|$)`,
+    `(?:on\\s*?)?(${M})(?:\\s*(?:au|\\-|\\\u{2013}|jusqu'au?|\\s)\\s*(${M}))?(?:-|/|\\s*(?:de)?\\s*)(${(0, w.uJ)(P)})(?:(?:-|/|,?\\s*)((?:[1-9][0-9]{0,3}\\s*(?:AC|AD|p\\.\\s*C(?:hr?)?\\.\\s*n\\.)|[1-2][0-9]{3}|[5-9][0-9])(?![^\\s]\\d)))?(?=\\W|$)`,
     "i",
 );
 class L extends o.c {
@@ -365,7 +365,7 @@ class q extends o.c {
         let i = t[2] || t[4] || "";
         if ((i = i.toLowerCase()))
             return (
-                (/derni[eè]re?s?/.test(i) || /pass[ée]e?s?/.test(i) || /pr[ée]c[ée]dents?/.test(i)) &&
+                (/derni[e\xe8]re?s?/.test(i) || /pass[\xe9e]e?s?/.test(i) || /pr[\xe9e]c[\xe9e]dents?/.test(i)) &&
                     (s = (0, N.x4)(s)),
                 a.BP.createRelativeFromReference(e.reference, s)
             );

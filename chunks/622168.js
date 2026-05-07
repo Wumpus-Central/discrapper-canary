@@ -823,7 +823,7 @@ let nd = a.memo(function (e) {
                                     className: no.hY,
                                     color: "none",
                                     variant: "text-xs/normal",
-                                    children: "•",
+                                    children: "\u2022",
                                 }),
                                 a,
                                 (0, l.jsx)(e5.E, {
@@ -1212,7 +1212,9 @@ function nR(e) {
         o = (0, nS.z)({ maxHeight: 300 * !s, overflow: "hidden", delay: 400 });
     return (0, l.jsx)(r.animated.div, {
         style: o,
-        children: i ? (0, l.jsx)(np, { channel: t, guild: n }) : (0, l.jsx)(nO, { name: `📚☕ ${a}`, channel: t }),
+        children: i
+            ? (0, l.jsx)(np, { channel: t, guild: n })
+            : (0, l.jsx)(nO, { name: `\u{1F4DA}\u{2615} ${a}`, channel: t }),
     });
 }
 let nx = function (e) {

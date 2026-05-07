@@ -3,27 +3,27 @@ function n(e) {
         var t = e.which || e.keyCode || e.charCode;
         t && (e = t);
     }
-    if ("number" == typeof e) return s[e];
+    if ("number" == typeof e) return a[e];
     var n = String(e),
-        a = r[n.toLowerCase()];
-    if (a) return a;
-    var a = i[n.toLowerCase()];
-    return a || (1 === n.length ? n.charCodeAt(0) : void 0);
+        s = i[n.toLowerCase()];
+    if (s) return s;
+    var s = r[n.toLowerCase()];
+    return s || (1 === n.length ? n.charCodeAt(0) : void 0);
 }
 n.isEventKey = function (e, t) {
     if (e && "object" == typeof e) {
         var n = e.which || e.keyCode || e.charCode;
         if (null == n) return !1;
         if ("string" == typeof t) {
-            var a = r[t.toLowerCase()];
-            if (a) return a === n;
-            var a = i[t.toLowerCase()];
-            if (a) return a === n;
+            var s = i[t.toLowerCase()];
+            if (s) return s === n;
+            var s = r[t.toLowerCase()];
+            if (s) return s === n;
         } else if ("number" == typeof t) return t === n;
         return !1;
     }
 };
-var r =
+var i =
         ((t = e.exports = n).code =
         t.codes =
             {
@@ -71,12 +71,12 @@ var r =
                 "]": 221,
                 "'": 222,
             }),
-    i = (t.aliases = {
+    r = (t.aliases = {
         windows: 91,
-        "⇧": 16,
-        "⌥": 18,
-        "⌃": 17,
-        "⌘": 91,
+        "\u21E7": 16,
+        "\u2325": 18,
+        "\u2303": 17,
+        "\u2318": 91,
         ctl: 17,
         control: 17,
         option: 18,
@@ -93,10 +93,10 @@ var r =
         del: 46,
         cmd: 91,
     });
-for (a = 97; a < 123; a++) r[String.fromCharCode(a)] = a - 32;
-for (var a = 48; a < 58; a++) r[a - 48] = a;
-for (a = 1; a < 13; a++) r["f" + a] = a + 111;
-for (a = 0; a < 10; a++) r["numpad " + a] = a + 96;
-var s = (t.names = t.title = {});
-for (a in r) s[r[a]] = a;
-for (var o in i) r[o] = i[o];
+for (s = 97; s < 123; s++) i[String.fromCharCode(s)] = s - 32;
+for (var s = 48; s < 58; s++) i[s - 48] = s;
+for (s = 1; s < 13; s++) i["f" + s] = s + 111;
+for (s = 0; s < 10; s++) i["numpad " + s] = s + 96;
+var a = (t.names = t.title = {});
+for (s in i) a[i[s]] = s;
+for (var o in r) i[o] = r[o];

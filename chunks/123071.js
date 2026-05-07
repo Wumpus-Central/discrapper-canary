@@ -3,7 +3,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(785651),
+    a = n(873174),
     o = n(17928),
     d = n(866323),
     c = n(534514),
@@ -168,7 +168,7 @@ function U(e) {
                                           onClick: g,
                                           text: x
                                               ? l
-                                                  ? `${q.intl.string(q.t["8SuVoE"])} 🎉`
+                                                  ? `${q.intl.string(q.t["8SuVoE"])} \u{1F389}`
                                                   : q.intl.string(q.t.PDTjLN)
                                               : q.intl.string(q.t["5Wxrcd"]),
                                           disabled: r,
@@ -323,7 +323,7 @@ function ei(e) {
                                         variant: j ? "secondary" : "primary",
                                         size: "md",
                                         text: l
-                                            ? `${q.intl.string(q.t["8SuVoE"])} 🎉`
+                                            ? `${q.intl.string(q.t["8SuVoE"])} \u{1F389}`
                                             : j
                                               ? q.intl.string(q.t["5Wxrcd"])
                                               : q.intl.string(q.t.PDTjLN),
@@ -460,7 +460,7 @@ function es(e) {
                                         variant: j ? "secondary" : "primary",
                                         size: "md",
                                         text: l
-                                            ? `${q.intl.string(q.t["8SuVoE"])} 🎉`
+                                            ? `${q.intl.string(q.t["8SuVoE"])} \u{1F389}`
                                             : j
                                               ? q.intl.string(q.t["5Wxrcd"])
                                               : q.intl.string(q.t.PDTjLN),
@@ -718,7 +718,7 @@ function eo(e) {
                                       (0, i.jsx)(P.$, {
                                           variant: "primary",
                                           size: "md",
-                                          text: `${q.intl.string(q.t["8SuVoE"])} 🎉`,
+                                          text: `${q.intl.string(q.t["8SuVoE"])} \u{1F389}`,
                                           onClick: j,
                                           disabled: !m || g,
                                           loading: g,

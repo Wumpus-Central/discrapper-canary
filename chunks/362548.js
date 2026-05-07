@@ -1,45 +1,45 @@
 !(function (e) {
     "use strict";
     function t(e, t, n) {
-        var r = e + " ";
+        var i = e + " ";
         switch (n) {
             case "ss":
                 return (
-                    1 === e ? (r += "sekunda") : 2 === e || 3 === e || 4 === e ? (r += "sekunde") : (r += "sekundi"), r
+                    1 === e ? (i += "sekunda") : 2 === e || 3 === e || 4 === e ? (i += "sekunde") : (i += "sekundi"), i
                 );
             case "m":
                 return t ? "jedna minuta" : "jedne minute";
             case "mm":
-                return 1 === e ? (r += "minuta") : 2 === e || 3 === e || 4 === e ? (r += "minute") : (r += "minuta"), r;
+                return 1 === e ? (i += "minuta") : 2 === e || 3 === e || 4 === e ? (i += "minute") : (i += "minuta"), i;
             case "h":
                 return t ? "jedan sat" : "jednog sata";
             case "hh":
-                return 1 === e ? (r += "sat") : 2 === e || 3 === e || 4 === e ? (r += "sata") : (r += "sati"), r;
+                return 1 === e ? (i += "sat") : 2 === e || 3 === e || 4 === e ? (i += "sata") : (i += "sati"), i;
             case "dd":
-                return 1 === e ? (r += "dan") : (r += "dana"), r;
+                return 1 === e ? (i += "dan") : (i += "dana"), i;
             case "MM":
                 return (
-                    1 === e ? (r += "mjesec") : 2 === e || 3 === e || 4 === e ? (r += "mjeseca") : (r += "mjeseci"), r
+                    1 === e ? (i += "mjesec") : 2 === e || 3 === e || 4 === e ? (i += "mjeseca") : (i += "mjeseci"), i
                 );
             case "yy":
-                return 1 === e ? (r += "godina") : 2 === e || 3 === e || 4 === e ? (r += "godine") : (r += "godina"), r;
+                return 1 === e ? (i += "godina") : 2 === e || 3 === e || 4 === e ? (i += "godine") : (i += "godina"), i;
         }
     }
     e.defineLocale("hr", {
         months: {
-            format: "siječnja_veljače_ožujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split(
+            format: "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split(
                 "_",
             ),
             standalone:
-                "siječanj_veljača_ožujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split(
+                "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split(
                     "_",
                 ),
         },
-        monthsShort: "sij._velj._ožu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_"),
+        monthsShort: "sij._velj._o\u017Eu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_"),
         monthsParseExact: !0,
-        weekdays: "nedjelja_ponedjeljak_utorak_srijeda_četvrtak_petak_subota".split("_"),
-        weekdaysShort: "ned._pon._uto._sri._čet._pet._sub.".split("_"),
-        weekdaysMin: "ne_po_ut_sr_če_pe_su".split("_"),
+        weekdays: "nedjelja_ponedjeljak_utorak_srijeda_\u010Detvrtak_petak_subota".split("_"),
+        weekdaysShort: "ned._pon._uto._sri._\u010Det._pet._sub.".split("_"),
+        weekdaysMin: "ne_po_ut_sr_\u010De_pe_su".split("_"),
         weekdaysParseExact: !0,
         longDateFormat: {
             LT: "H:mm",
@@ -67,19 +67,19 @@
                         return "[u] dddd [u] LT";
                 }
             },
-            lastDay: "[jučer u] LT",
+            lastDay: "[ju\u010Der u] LT",
             lastWeek: function () {
                 switch (this.day()) {
                     case 0:
                     case 3:
-                        return "[prošlu] dddd [u] LT";
+                        return "[pro\u0161lu] dddd [u] LT";
                     case 6:
-                        return "[prošle] [subote] [u] LT";
+                        return "[pro\u0161le] [subote] [u] LT";
                     case 1:
                     case 2:
                     case 4:
                     case 5:
-                        return "[prošli] dddd [u] LT";
+                        return "[pro\u0161li] dddd [u] LT";
                 }
             },
             sameElse: "L",

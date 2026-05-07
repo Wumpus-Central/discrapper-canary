@@ -294,7 +294,10 @@ let eD = (e) => {
                 o ? (0, n.jsx)(eO, { subscriptionPlanId: l }) : (0, n.jsx)(eG, { displayName: c, product: d ?? null }),
                 (0, n.jsxs)("div", {
                     children: [
-                        (0, n.jsx)(F.E, { variant: "text-md/semibold", children: null != u ? `${c} • ${u}` : c }),
+                        (0, n.jsx)(F.E, {
+                            variant: "text-md/semibold",
+                            children: null != u ? `${c} \u{2022} ${u}` : c,
+                        }),
                         (0, n.jsx)(F.E, { variant: "text-sm/medium", color: "text-subtle", children: x }),
                     ],
                 }),

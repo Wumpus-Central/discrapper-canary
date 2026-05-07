@@ -1362,13 +1362,13 @@ function ef() {
     return (0, r.jsx)("div", { className: o()(b.menu, b.loader, b.flexible), children: (0, r.jsx)(S.y, {}) });
 }
 function eh() {
-    let e = "♫ (つ｡◕‿‿◕｡)つ ♪",
+    let e = "\u266B (\u3064\uFF61\u25D5\u203F\u203F\u25D5\uFF61)\u3064 \u266A",
         [t, n] = s.useState(e);
     return (
         s.useEffect(() => {
             if (y.A.useReducedMotion) return;
             let t = setInterval(() => {
-                n((t) => (t === e ? "♫ ⊂(｡◕‿‿◕｡⊂) ♪" : e));
+                n((t) => (t === e ? "\u266B \u2282(\uFF61\u25D5\u203F\u203F\u25D5\uFF61\u2282) \u266A" : e));
             }, 700);
             return () => clearInterval(t);
         }, []),

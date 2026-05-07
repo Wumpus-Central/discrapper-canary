@@ -39,6 +39,6 @@ n(989349).defineLocale("pt-br", {
         y: "um ano",
         yy: "%d anos",
     },
-    dayOfMonthOrdinalParse: /\d{1,2}º/,
+    dayOfMonthOrdinalParse: /\d{1,2}\xba/,
     ordinal: "%d\xba",
 });

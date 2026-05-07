@@ -76,7 +76,7 @@ let L = n(743361).A,
             ],
             execute: (e) => {
                 let t = w(e, "message") ?? "";
-                return { content: `${t} \xaf\\_(ツ)_/\xaf`.trim() };
+                return { content: `${t} \xaf\\_(\u{30C4})_/\xaf`.trim() };
             },
         },
         {
@@ -107,7 +107,7 @@ let L = n(743361).A,
             ],
             execute: (e) => {
                 let t = w(e, "message") ?? "";
-                return { content: `${t} (╯\xb0□\xb0)╯︵ ┻━┻`.trim() };
+                return { content: `${t} (\u{256F}\xb0\u{25A1}\xb0)\u{256F}\u{FE35} \u{253B}\u{2501}\u{253B}`.trim() };
             },
         },
         {
@@ -138,7 +138,7 @@ let L = n(743361).A,
             ],
             execute: (e) => {
                 let t = w(e, "message") ?? "";
-                return { content: `${t} ┬─┬ノ( \xba _ \xbaノ)`.trim() };
+                return { content: `${t} \u{252C}\u{2500}\u{252C}\u{30CE}( \xba _ \xba\u{30CE})`.trim() };
             },
         },
         {

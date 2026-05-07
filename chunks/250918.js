@@ -1,6 +1,6 @@
 e.exports = function (e) {
     return {
-        name: "Backus–Naur Form",
+        name: "Backus\u2013Naur Form",
         contains: [
             { className: "attribute", begin: /</, end: />/ },
             {

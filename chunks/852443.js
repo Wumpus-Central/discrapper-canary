@@ -1,47 +1,73 @@
 n(989349).defineLocale("ml", {
-    months: "ജനുവരി_ഫെബ്രുവരി_മാർച്ച്_ഏപ്രിൽ_മേയ്_ജൂൺ_ജൂലൈ_ഓഗസ്റ്റ്_സെപ്റ്റംബർ_ഒക്ടോബർ_നവംബർ_ഡിസംബർ".split("_"),
-    monthsShort: "ജനു._ഫെബ്രു._മാർ._ഏപ്രി._മേയ്_ജൂൺ_ജൂലൈ._ഓഗ._സെപ്റ്റ._ഒക്ടോ._നവം._ഡിസം.".split("_"),
+    months: "\u0D1C\u0D28\u0D41\u0D35\u0D30\u0D3F_\u0D2B\u0D46\u0D2C\u0D4D\u0D30\u0D41\u0D35\u0D30\u0D3F_\u0D2E\u0D3E\u0D7C\u0D1A\u0D4D\u0D1A\u0D4D_\u0D0F\u0D2A\u0D4D\u0D30\u0D3F\u0D7D_\u0D2E\u0D47\u0D2F\u0D4D_\u0D1C\u0D42\u0D7A_\u0D1C\u0D42\u0D32\u0D48_\u0D13\u0D17\u0D38\u0D4D\u0D31\u0D4D\u0D31\u0D4D_\u0D38\u0D46\u0D2A\u0D4D\u0D31\u0D4D\u0D31\u0D02\u0D2C\u0D7C_\u0D12\u0D15\u0D4D\u0D1F\u0D4B\u0D2C\u0D7C_\u0D28\u0D35\u0D02\u0D2C\u0D7C_\u0D21\u0D3F\u0D38\u0D02\u0D2C\u0D7C".split(
+        "_",
+    ),
+    monthsShort:
+        "\u0D1C\u0D28\u0D41._\u0D2B\u0D46\u0D2C\u0D4D\u0D30\u0D41._\u0D2E\u0D3E\u0D7C._\u0D0F\u0D2A\u0D4D\u0D30\u0D3F._\u0D2E\u0D47\u0D2F\u0D4D_\u0D1C\u0D42\u0D7A_\u0D1C\u0D42\u0D32\u0D48._\u0D13\u0D17._\u0D38\u0D46\u0D2A\u0D4D\u0D31\u0D4D\u0D31._\u0D12\u0D15\u0D4D\u0D1F\u0D4B._\u0D28\u0D35\u0D02._\u0D21\u0D3F\u0D38\u0D02.".split(
+            "_",
+        ),
     monthsParseExact: !0,
-    weekdays: "ഞായറാഴ്ച_തിങ്കളാഴ്ച_ചൊവ്വാഴ്ച_ബുധനാഴ്ച_വ്യാഴാഴ്ച_വെള്ളിയാഴ്ച_ശനിയാഴ്ച".split("_"),
-    weekdaysShort: "ഞായർ_തിങ്കൾ_ചൊവ്വ_ബുധൻ_വ്യാഴം_വെള്ളി_ശനി".split("_"),
-    weekdaysMin: "ഞാ_തി_ചൊ_ബു_വ്യാ_വെ_ശ".split("_"),
+    weekdays:
+        "\u0D1E\u0D3E\u0D2F\u0D31\u0D3E\u0D34\u0D4D\u0D1A_\u0D24\u0D3F\u0D19\u0D4D\u0D15\u0D33\u0D3E\u0D34\u0D4D\u0D1A_\u0D1A\u0D4A\u0D35\u0D4D\u0D35\u0D3E\u0D34\u0D4D\u0D1A_\u0D2C\u0D41\u0D27\u0D28\u0D3E\u0D34\u0D4D\u0D1A_\u0D35\u0D4D\u0D2F\u0D3E\u0D34\u0D3E\u0D34\u0D4D\u0D1A_\u0D35\u0D46\u0D33\u0D4D\u0D33\u0D3F\u0D2F\u0D3E\u0D34\u0D4D\u0D1A_\u0D36\u0D28\u0D3F\u0D2F\u0D3E\u0D34\u0D4D\u0D1A".split(
+            "_",
+        ),
+    weekdaysShort:
+        "\u0D1E\u0D3E\u0D2F\u0D7C_\u0D24\u0D3F\u0D19\u0D4D\u0D15\u0D7E_\u0D1A\u0D4A\u0D35\u0D4D\u0D35_\u0D2C\u0D41\u0D27\u0D7B_\u0D35\u0D4D\u0D2F\u0D3E\u0D34\u0D02_\u0D35\u0D46\u0D33\u0D4D\u0D33\u0D3F_\u0D36\u0D28\u0D3F".split(
+            "_",
+        ),
+    weekdaysMin:
+        "\u0D1E\u0D3E_\u0D24\u0D3F_\u0D1A\u0D4A_\u0D2C\u0D41_\u0D35\u0D4D\u0D2F\u0D3E_\u0D35\u0D46_\u0D36".split("_"),
     longDateFormat: {
-        LT: "A h:mm -നു",
-        LTS: "A h:mm:ss -നു",
+        LT: "A h:mm -\u0D28\u0D41",
+        LTS: "A h:mm:ss -\u0D28\u0D41",
         L: "DD/MM/YYYY",
         LL: "D MMMM YYYY",
-        LLL: "D MMMM YYYY, A h:mm -നു",
-        LLLL: "dddd, D MMMM YYYY, A h:mm -നു",
+        LLL: "D MMMM YYYY, A h:mm -\u0D28\u0D41",
+        LLLL: "dddd, D MMMM YYYY, A h:mm -\u0D28\u0D41",
     },
     calendar: {
-        sameDay: "[ഇന്ന്] LT",
-        nextDay: "[നാളെ] LT",
+        sameDay: "[\u0D07\u0D28\u0D4D\u0D28\u0D4D] LT",
+        nextDay: "[\u0D28\u0D3E\u0D33\u0D46] LT",
         nextWeek: "dddd, LT",
-        lastDay: "[ഇന്നലെ] LT",
-        lastWeek: "[കഴിഞ്ഞ] dddd, LT",
+        lastDay: "[\u0D07\u0D28\u0D4D\u0D28\u0D32\u0D46] LT",
+        lastWeek: "[\u0D15\u0D34\u0D3F\u0D1E\u0D4D\u0D1E] dddd, LT",
         sameElse: "L",
     },
     relativeTime: {
-        future: "%s കഴിഞ്ഞ്",
-        past: "%s മുൻപ്",
-        s: "അൽപ നിമിഷങ്ങൾ",
-        ss: "%d സെക്കൻഡ്",
-        m: "ഒരു മിനിറ്റ്",
-        mm: "%d മിനിറ്റ്",
-        h: "ഒരു മണിക്കൂർ",
-        hh: "%d മണിക്കൂർ",
-        d: "ഒരു ദിവസം",
-        dd: "%d ദിവസം",
-        M: "ഒരു മാസം",
-        MM: "%d മാസം",
-        y: "ഒരു വർഷം",
-        yy: "%d വർഷം",
+        future: "%s \u0D15\u0D34\u0D3F\u0D1E\u0D4D\u0D1E\u0D4D",
+        past: "%s \u0D2E\u0D41\u0D7B\u0D2A\u0D4D",
+        s: "\u0D05\u0D7D\u0D2A \u0D28\u0D3F\u0D2E\u0D3F\u0D37\u0D19\u0D4D\u0D19\u0D7E",
+        ss: "%d \u0D38\u0D46\u0D15\u0D4D\u0D15\u0D7B\u0D21\u0D4D",
+        m: "\u0D12\u0D30\u0D41 \u0D2E\u0D3F\u0D28\u0D3F\u0D31\u0D4D\u0D31\u0D4D",
+        mm: "%d \u0D2E\u0D3F\u0D28\u0D3F\u0D31\u0D4D\u0D31\u0D4D",
+        h: "\u0D12\u0D30\u0D41 \u0D2E\u0D23\u0D3F\u0D15\u0D4D\u0D15\u0D42\u0D7C",
+        hh: "%d \u0D2E\u0D23\u0D3F\u0D15\u0D4D\u0D15\u0D42\u0D7C",
+        d: "\u0D12\u0D30\u0D41 \u0D26\u0D3F\u0D35\u0D38\u0D02",
+        dd: "%d \u0D26\u0D3F\u0D35\u0D38\u0D02",
+        M: "\u0D12\u0D30\u0D41 \u0D2E\u0D3E\u0D38\u0D02",
+        MM: "%d \u0D2E\u0D3E\u0D38\u0D02",
+        y: "\u0D12\u0D30\u0D41 \u0D35\u0D7C\u0D37\u0D02",
+        yy: "%d \u0D35\u0D7C\u0D37\u0D02",
     },
-    meridiemParse: /രാത്രി|രാവിലെ|ഉച്ച കഴിഞ്ഞ്|വൈകുന്നേരം|രാത്രി/i,
+    meridiemParse:
+        /\u0d30\u0d3e\u0d24\u0d4d\u0d30\u0d3f|\u0d30\u0d3e\u0d35\u0d3f\u0d32\u0d46|\u0d09\u0d1a\u0d4d\u0d1a \u0d15\u0d34\u0d3f\u0d1e\u0d4d\u0d1e\u0d4d|\u0d35\u0d48\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d47\u0d30\u0d02|\u0d30\u0d3e\u0d24\u0d4d\u0d30\u0d3f/i,
     meridiemHour: function (e, t) {
-        return (12 === e && (e = 0), ("രാത്രി" === t && e >= 4) || "ഉച്ച കഴിഞ്ഞ്" === t || "വൈകുന്നേരം" === t) ? e + 12 : e;
+        return (12 === e && (e = 0),
+        ("\u0D30\u0D3E\u0D24\u0D4D\u0D30\u0D3F" === t && e >= 4) ||
+            "\u0D09\u0D1A\u0D4D\u0D1A \u0D15\u0D34\u0D3F\u0D1E\u0D4D\u0D1E\u0D4D" === t ||
+            "\u0D35\u0D48\u0D15\u0D41\u0D28\u0D4D\u0D28\u0D47\u0D30\u0D02" === t)
+            ? e + 12
+            : e;
     },
     meridiem: function (e, t, n) {
-        return e < 4 ? "രാത്രി" : e < 12 ? "രാവിലെ" : e < 17 ? "ഉച്ച കഴിഞ്ഞ്" : e < 20 ? "വൈകുന്നേരം" : "രാത്രി";
+        return e < 4
+            ? "\u0D30\u0D3E\u0D24\u0D4D\u0D30\u0D3F"
+            : e < 12
+              ? "\u0D30\u0D3E\u0D35\u0D3F\u0D32\u0D46"
+              : e < 17
+                ? "\u0D09\u0D1A\u0D4D\u0D1A \u0D15\u0D34\u0D3F\u0D1E\u0D4D\u0D1E\u0D4D"
+                : e < 20
+                  ? "\u0D35\u0D48\u0D15\u0D41\u0D28\u0D4D\u0D28\u0D47\u0D30\u0D02"
+                  : "\u0D30\u0D3E\u0D24\u0D4D\u0D30\u0D3F";
     },
 });

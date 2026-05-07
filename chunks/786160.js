@@ -880,7 +880,7 @@ var tA = s(103733),
     t_ = s(97352);
 function tC() {
     let e = (0, o.bG)([t_.A], () => t_.A.getForSkuAndInterval((0, V.mH)(eI.pe.TIER_0), eI.WT.MONTH));
-    return null != e ? (0, V.sS)(e) : "…";
+    return null != e ? (0, V.sS)(e) : "\u2026";
 }
 var tE = s(607470);
 let tI =

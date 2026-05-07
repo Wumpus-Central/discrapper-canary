@@ -6,9 +6,9 @@ var i = n(17928),
     a = n(357758),
     o = n(39304),
     l = n(52133),
-    d = n(954571),
-    _ = n(652215);
-function u(e, t) {
+    u = n(174459),
+    c = n(652215);
+function d(e, t) {
     return (function e(t, n, i, r) {
         if (t === n || (r && void 0 === t && null === n)) return !0;
         if ("object" != typeof t || "object" != typeof n || null === t || null === n) return !1;
@@ -28,17 +28,17 @@ function u(e, t) {
         return !0;
     })(e, t, new Map(), !0);
 }
-function c(e) {
+function _(e) {
     return "object" == typeof e && null !== e && !Array.isArray(e) && !(e instanceof Date) && !(e instanceof Set);
 }
-let E = new Map();
+let f = new Map();
 function h(e) {
     return null === e ? "null" : "object" != typeof e ? typeof e : Array.isArray(e) ? "array" : "object";
 }
-let m = Symbol("version"),
-    f = Object.freeze({}),
-    g = new s.A("LibdiscoreStore"),
-    p = (e) => e;
+let p = Symbol("version"),
+    E = Object.freeze({}),
+    m = new s.A("LibdiscoreStore"),
+    g = (e) => e;
 class A {
     type;
     kkvDatabase;
@@ -138,7 +138,7 @@ class T {
     }
     getPartition(e) {
         let t = this.state.root[e];
-        return null != t ? t.root : f;
+        return null != t ? t.root : E;
     }
     getAllPartitions() {
         return this.state.root;
@@ -161,8 +161,8 @@ class T {
         return null == t ? null : t.root;
     }
     _derivedVersion(e) {
-        let t = e[m];
-        return null == t && (e[m] = t = this.nextVersion()), t;
+        let t = e[p];
+        return null == t && (e[p] = t = this.nextVersion()), t;
     }
     mapPartitions(e) {
         let t = [],
@@ -186,7 +186,7 @@ class T {
     }
     memoizedSinglePartition(e, t, n) {
         let i = Symbol(),
-            r = void 0 !== n ? n : t(f);
+            r = void 0 !== n ? n : t(E);
         return () => {
             let n = this.state.root[e];
             if (null == n) return r;
@@ -354,11 +354,11 @@ class S extends i.il {
                     let r = this.state.databases[i],
                         s = n[i];
                     if (null == s) {
-                        g.warn(`Shadow database ${i} not found for dual-read validation`);
+                        m.warn(`Shadow database ${i} not found for dual-read validation`);
                         continue;
                     }
                     let a = r.getAllPartitions(),
-                        m = s.getAllPartitions();
+                        p = s.getAllPartitions();
                     !(function (e, t) {
                         let n = [];
                         t((e, t) => {
@@ -386,7 +386,7 @@ class S extends i.il {
                                                     continue;
                                                 }
                                                 let s = n[e];
-                                                u(r, s) ||
+                                                d(r, s) ||
                                                     i.push({
                                                         type: "value-mismatch",
                                                         field: e,
@@ -424,7 +424,7 @@ class S extends i.il {
                                         switch ((r++, e.type)) {
                                             case "length-mismatch":
                                                 console.info(
-                                                    `Length mismatch → primary = ${e.primaryLength}, shadow = ${e.shadowLength}`,
+                                                    `Length mismatch \u{2192} primary = ${e.primaryLength}, shadow = ${e.shadowLength}`,
                                                 );
                                                 break;
                                             case "missing-record":
@@ -448,7 +448,7 @@ class S extends i.il {
                                                                 (n = e.shadowValue),
                                                                 (i = new Map()),
                                                                 (function e(t, n) {
-                                                                    if (!u(t, n)) {
+                                                                    if (!d(t, n)) {
                                                                         if (
                                                                             "object" == typeof t &&
                                                                             null !== t &&
@@ -481,7 +481,7 @@ class S extends i.il {
                                                                         if (Array.isArray(t) && Array.isArray(n)) {
                                                                             let i = Math.min(t.length, n.length);
                                                                             for (let r = 0; r < i; r++)
-                                                                                u(t[r], n[r]) ||
+                                                                                d(t[r], n[r]) ||
                                                                                     (console.group(
                                                                                         `Array index ${r} mismatch:`,
                                                                                     ),
@@ -499,7 +499,7 @@ class S extends i.il {
                                                                                   );
                                                                             return;
                                                                         }
-                                                                        if (c(t) && c(n)) {
+                                                                        if (_(t) && _(n)) {
                                                                             let i = new Set(Object.keys(t)),
                                                                                 r = new Set(Object.keys(n));
                                                                             for (let s of Array.from(
@@ -507,7 +507,7 @@ class S extends i.il {
                                                                             ).sort())
                                                                                 i.has(s)
                                                                                     ? r.has(s)
-                                                                                        ? u(t[s], n[s]) ||
+                                                                                        ? d(t[s], n[s]) ||
                                                                                           (console.group(
                                                                                               `Field ${s} mismatch:`,
                                                                                           ),
@@ -549,13 +549,13 @@ class S extends i.il {
                                     return console.error(
                                         "Trying to log mismatches, but no last dispatched action found",
                                     );
-                                let i = E.get(e) ?? {
+                                let i = f.get(e) ?? {
                                     mismatchesReported: 0,
                                     mismatchesByLastAction: new Map(),
                                     visitedEntries: new WeakSet(),
                                     seenMismatches: new Set(),
                                 };
-                                if ((E.set(e, i), i.mismatchesReported >= 15)) return;
+                                if ((f.set(e, i), i.mismatchesReported >= 15)) return;
                                 let r = i.mismatchesByLastAction.get(n) ?? 0;
                                 if (r >= 3) return;
                                 let s = (function (e, t) {
@@ -596,7 +596,7 @@ class S extends i.il {
                                                                                   : new Set();
                                                                           for (let o of Object.keys(n)) {
                                                                               let l = `${t}.${o}`,
-                                                                                  d = n[o];
+                                                                                  u = n[o];
                                                                               if (
                                                                                   !Object.prototype.hasOwnProperty.call(
                                                                                       s,
@@ -605,26 +605,26 @@ class S extends i.il {
                                                                               ) {
                                                                                   i({
                                                                                       fieldName: l,
-                                                                                      primaryType: h(d),
+                                                                                      primaryType: h(u),
                                                                                       shadowType: "missing",
                                                                                   });
                                                                                   continue;
                                                                               }
-                                                                              let _ = s[o];
-                                                                              d !== _ &&
-                                                                                  ("object" == typeof d &&
-                                                                                  "object" == typeof _
-                                                                                      ? Array.isArray(d) &&
-                                                                                        Array.isArray(_)
-                                                                                          ? r(l, d, _)
-                                                                                          : null == d ||
-                                                                                            null == _ ||
-                                                                                            a.has(d) ||
-                                                                                            (a.add(d), e(l, d, _, a))
+                                                                              let c = s[o];
+                                                                              u !== c &&
+                                                                                  ("object" == typeof u &&
+                                                                                  "object" == typeof c
+                                                                                      ? Array.isArray(u) &&
+                                                                                        Array.isArray(c)
+                                                                                          ? r(l, u, c)
+                                                                                          : null == u ||
+                                                                                            null == c ||
+                                                                                            a.has(u) ||
+                                                                                            (a.add(u), e(l, u, c, a))
                                                                                       : i({
                                                                                             fieldName: l,
-                                                                                            primaryType: h(d),
-                                                                                            shadowType: h(_),
+                                                                                            primaryType: h(u),
+                                                                                            shadowType: h(c),
                                                                                         }));
                                                                           }
                                                                       })(e, t.primaryValue, t.shadowValue)
@@ -662,7 +662,7 @@ class S extends i.il {
                                 null != s &&
                                     (i.mismatchesByLastAction.set(n, r + 1),
                                     i.mismatchesReported++,
-                                    d.default.track(_.HAw.LIBDISCORE_KV_DUAL_READ_ERROR, {
+                                    u.default.track(c.HAw.LIBDISCORE_KV_DUAL_READ_ERROR, {
                                         store_name: e,
                                         action_type: n,
                                         num_missing_keys: s.numMissingKeys,
@@ -672,40 +672,40 @@ class S extends i.il {
                             })(e, n);
                     })(`${this.getName()}:${i}`, (n) => {
                         let i = Object.keys(a),
-                            r = Object.keys(m);
+                            r = Object.keys(p);
                         for (let r of i) {
                             let i = a[r];
-                            if (!Object.prototype.hasOwnProperty.call(m, r)) {
+                            if (!Object.prototype.hasOwnProperty.call(p, r)) {
                                 n(i, t);
                                 continue;
                             }
-                            let s = m[r],
+                            let s = p[r],
                                 o = i.derived.memoized[e],
                                 l = s.derived.memoized[e];
                             if (null != o && o === l) continue;
                             n(i, s);
-                            let d = {};
-                            (i.derived.memoized[e] = d), (s.derived.memoized[e] = d);
+                            let u = {};
+                            (i.derived.memoized[e] = u), (s.derived.memoized[e] = u);
                         }
-                        for (let e of r) Object.prototype.hasOwnProperty.call(a, e) || n(t, m[e]);
+                        for (let e of r) Object.prototype.hasOwnProperty.call(a, e) || n(t, p[e]);
                     });
                 }
         });
     }
     addKKVDatabase(e, t) {
         let n = new T(this.nextVersion.bind(this));
-        if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? p), null != this.shadowDatabases)) {
+        if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? g), null != this.shadowDatabases)) {
             let n = new T(this.nextVersion.bind(this));
-            (this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? p);
+            (this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? g);
         }
         return n;
     }
     addKVDatabase(e, t) {
         let n = new T(this.nextVersion.bind(this)),
             i = n.intoKV();
-        if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? p), null != this.shadowDatabases)) {
+        if (((this.state.databases[e] = n), this.recordCreators.set(e, t ?? g), null != this.shadowDatabases)) {
             let n = new T(this.nextVersion.bind(this));
-            (this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? p);
+            (this.shadowDatabases[e] = n), this.shadowRecordCreators.set(e, t ?? g);
         }
         return i;
     }

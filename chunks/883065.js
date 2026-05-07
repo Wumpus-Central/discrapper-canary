@@ -177,7 +177,7 @@ function et(e) {
                               color: "currentColor",
                               children: [B.intl.string(B.t.yYEZGi), null != n && ` (${n})`],
                           }),
-                          (0, s.jsx)(b.E, { variant: "text-sm/bold", color: "currentColor", children: "—" }),
+                          (0, s.jsx)(b.E, { variant: "text-sm/bold", color: "currentColor", children: "\u2014" }),
                           (0, s.jsx)(b.E, {
                               variant: "text-sm/medium",
                               color: "currentColor",

@@ -1,29 +1,29 @@
 i.r(n), i.d(n, { default: () => d });
 var e = {
-        lessThanXSeconds: { one: "dưới 1 gi\xe2y", other: "dưới {{count}} gi\xe2y" },
+        lessThanXSeconds: { one: "d\u01B0\u1EDBi 1 gi\xe2y", other: "d\u01B0\u1EDBi {{count}} gi\xe2y" },
         xSeconds: { one: "1 gi\xe2y", other: "{{count}} gi\xe2y" },
-        halfAMinute: "nửa ph\xfat",
-        lessThanXMinutes: { one: "dưới 1 ph\xfat", other: "dưới {{count}} ph\xfat" },
+        halfAMinute: "n\u1EEDa ph\xfat",
+        lessThanXMinutes: { one: "d\u01B0\u1EDBi 1 ph\xfat", other: "d\u01B0\u1EDBi {{count}} ph\xfat" },
         xMinutes: { one: "1 ph\xfat", other: "{{count}} ph\xfat" },
-        aboutXHours: { one: "khoảng 1 giờ", other: "khoảng {{count}} giờ" },
-        xHours: { one: "1 giờ", other: "{{count}} giờ" },
+        aboutXHours: { one: "kho\u1EA3ng 1 gi\u1EDD", other: "kho\u1EA3ng {{count}} gi\u1EDD" },
+        xHours: { one: "1 gi\u1EDD", other: "{{count}} gi\u1EDD" },
         xDays: { one: "1 ng\xe0y", other: "{{count}} ng\xe0y" },
-        aboutXWeeks: { one: "khoảng 1 tuần", other: "khoảng {{count}} tuần" },
-        xWeeks: { one: "1 tuần", other: "{{count}} tuần" },
-        aboutXMonths: { one: "khoảng 1 th\xe1ng", other: "khoảng {{count}} th\xe1ng" },
+        aboutXWeeks: { one: "kho\u1EA3ng 1 tu\u1EA7n", other: "kho\u1EA3ng {{count}} tu\u1EA7n" },
+        xWeeks: { one: "1 tu\u1EA7n", other: "{{count}} tu\u1EA7n" },
+        aboutXMonths: { one: "kho\u1EA3ng 1 th\xe1ng", other: "kho\u1EA3ng {{count}} th\xe1ng" },
         xMonths: { one: "1 th\xe1ng", other: "{{count}} th\xe1ng" },
-        aboutXYears: { one: "khoảng 1 năm", other: "khoảng {{count}} năm" },
-        xYears: { one: "1 năm", other: "{{count}} năm" },
-        overXYears: { one: "hơn 1 năm", other: "hơn {{count}} năm" },
-        almostXYears: { one: "gần 1 năm", other: "gần {{count}} năm" },
+        aboutXYears: { one: "kho\u1EA3ng 1 n\u0103m", other: "kho\u1EA3ng {{count}} n\u0103m" },
+        xYears: { one: "1 n\u0103m", other: "{{count}} n\u0103m" },
+        overXYears: { one: "h\u01A1n 1 n\u0103m", other: "h\u01A1n {{count}} n\u0103m" },
+        almostXYears: { one: "g\u1EA7n 1 n\u0103m", other: "g\u1EA7n {{count}} n\u0103m" },
     },
     a = i(385987),
     h = {
         date: (0, a.A)({
             formats: {
-                full: "EEEE, 'ng\xe0y' d MMMM 'năm' y",
-                long: "'ng\xe0y' d MMMM 'năm' y",
-                medium: "d MMM 'năm' y",
+                full: "EEEE, 'ng\xe0y' d MMMM 'n\u0103m' y",
+                long: "'ng\xe0y' d MMMM 'n\u0103m' y",
+                medium: "d MMM 'n\u0103m' y",
                 short: "dd/MM/y",
             },
             defaultWidth: "full",
@@ -43,11 +43,11 @@ var e = {
         }),
     },
     r = {
-        lastWeek: "eeee 'tuần trước v\xe0o l\xfac' p",
+        lastWeek: "eeee 'tu\u1EA7n tr\u01B0\u1EDBc v\xe0o l\xfac' p",
         yesterday: "'h\xf4m qua v\xe0o l\xfac' p",
         today: "'h\xf4m nay v\xe0o l\xfac' p",
         tomorrow: "'ng\xe0y mai v\xe0o l\xfac' p",
-        nextWeek: "eeee 'tới v\xe0o l\xfac' p",
+        nextWeek: "eeee 't\u1EDBi v\xe0o l\xfac' p",
         other: "P",
     },
     o = i(981737),
@@ -69,33 +69,33 @@ var e = {
             else if ("day" === e)
                 switch (i) {
                     case 1:
-                        return "thứ 2";
+                        return "th\u1EE9 2";
                     case 2:
-                        return "thứ 3";
+                        return "th\u1EE9 3";
                     case 3:
-                        return "thứ 4";
+                        return "th\u1EE9 4";
                     case 4:
-                        return "thứ 5";
+                        return "th\u1EE9 5";
                     case 5:
-                        return "thứ 6";
+                        return "th\u1EE9 6";
                     case 6:
-                        return "thứ 7";
+                        return "th\u1EE9 7";
                     case 7:
-                        return "chủ nhật";
+                        return "ch\u1EE7 nh\u1EADt";
                 }
             else if ("week" === e)
-                if (1 === i) return "thứ nhất";
-                else return "thứ " + i;
+                if (1 === i) return "th\u1EE9 nh\u1EA5t";
+                else return "th\u1EE9 " + i;
             else if ("dayOfYear" === e)
-                if (1 === i) return "đầu ti\xean";
-                else return "thứ " + i;
+                if (1 === i) return "\u0111\u1EA7u ti\xean";
+                else return "th\u1EE9 " + i;
             return String(i);
         },
         era: (0, o.A)({
             values: {
                 narrow: ["TCN", "SCN"],
-                abbreviated: ["trước CN", "sau CN"],
-                wide: ["trước C\xf4ng Nguy\xean", "sau C\xf4ng Nguy\xean"],
+                abbreviated: ["tr\u01B0\u1EDBc CN", "sau CN"],
+                wide: ["tr\u01B0\u1EDBc C\xf4ng Nguy\xean", "sau C\xf4ng Nguy\xean"],
             },
             defaultWidth: "wide",
         }),
@@ -134,18 +134,18 @@ var e = {
                     "Thg 12",
                 ],
                 wide: [
-                    "Th\xe1ng Một",
+                    "Th\xe1ng M\u1ED9t",
                     "Th\xe1ng Hai",
                     "Th\xe1ng Ba",
-                    "Th\xe1ng Tư",
-                    "Th\xe1ng Năm",
+                    "Th\xe1ng T\u01B0",
+                    "Th\xe1ng N\u0103m",
                     "Th\xe1ng S\xe1u",
-                    "Th\xe1ng Bảy",
+                    "Th\xe1ng B\u1EA3y",
                     "Th\xe1ng T\xe1m",
                     "Th\xe1ng Ch\xedn",
-                    "Th\xe1ng Mười",
-                    "Th\xe1ng Mười Một",
-                    "Th\xe1ng Mười Hai",
+                    "Th\xe1ng M\u01B0\u1EDDi",
+                    "Th\xe1ng M\u01B0\u1EDDi M\u1ED9t",
+                    "Th\xe1ng M\u01B0\u1EDDi Hai",
                 ],
             },
             defaultWidth: "wide",
@@ -186,8 +186,16 @@ var e = {
             values: {
                 narrow: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
                 short: ["CN", "Th 2", "Th 3", "Th 4", "Th 5", "Th 6", "Th 7"],
-                abbreviated: ["CN", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"],
-                wide: ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ S\xe1u", "Thứ Bảy"],
+                abbreviated: ["CN", "Th\u1EE9 2", "Th\u1EE9 3", "Th\u1EE9 4", "Th\u1EE9 5", "Th\u1EE9 6", "Th\u1EE9 7"],
+                wide: [
+                    "Ch\u1EE7 Nh\u1EADt",
+                    "Th\u1EE9 Hai",
+                    "Th\u1EE9 Ba",
+                    "Th\u1EE9 T\u01B0",
+                    "Th\u1EE9 N\u0103m",
+                    "Th\u1EE9 S\xe1u",
+                    "Th\u1EE9 B\u1EA3y",
+                ],
             },
             defaultWidth: "wide",
         }),
@@ -196,32 +204,32 @@ var e = {
                 narrow: {
                     am: "am",
                     pm: "pm",
-                    midnight: "nửa đ\xeam",
+                    midnight: "n\u1EEDa \u0111\xeam",
                     noon: "tr",
                     morning: "sg",
                     afternoon: "ch",
-                    evening: "tối",
-                    night: "đ\xeam",
+                    evening: "t\u1ED1i",
+                    night: "\u0111\xeam",
                 },
                 abbreviated: {
                     am: "AM",
                     pm: "PM",
-                    midnight: "nửa đ\xeam",
-                    noon: "trưa",
+                    midnight: "n\u1EEDa \u0111\xeam",
+                    noon: "tr\u01B0a",
                     morning: "s\xe1ng",
-                    afternoon: "chiều",
-                    evening: "tối",
-                    night: "đ\xeam",
+                    afternoon: "chi\u1EC1u",
+                    evening: "t\u1ED1i",
+                    night: "\u0111\xeam",
                 },
                 wide: {
                     am: "SA",
                     pm: "CH",
-                    midnight: "nửa đ\xeam",
-                    noon: "trưa",
+                    midnight: "n\u1EEDa \u0111\xeam",
+                    noon: "tr\u01B0a",
                     morning: "s\xe1ng",
-                    afternoon: "chiều",
-                    evening: "tối",
-                    night: "đ\xeam",
+                    afternoon: "chi\u1EC1u",
+                    evening: "t\u1ED1i",
+                    night: "\u0111\xeam",
                 },
             },
             defaultWidth: "wide",
@@ -229,32 +237,32 @@ var e = {
                 narrow: {
                     am: "am",
                     pm: "pm",
-                    midnight: "nửa đ\xeam",
+                    midnight: "n\u1EEDa \u0111\xeam",
                     noon: "tr",
                     morning: "sg",
                     afternoon: "ch",
-                    evening: "tối",
-                    night: "đ\xeam",
+                    evening: "t\u1ED1i",
+                    night: "\u0111\xeam",
                 },
                 abbreviated: {
                     am: "AM",
                     pm: "PM",
-                    midnight: "nửa đ\xeam",
-                    noon: "trưa",
+                    midnight: "n\u1EEDa \u0111\xeam",
+                    noon: "tr\u01B0a",
                     morning: "s\xe1ng",
-                    afternoon: "chiều",
-                    evening: "tối",
-                    night: "đ\xeam",
+                    afternoon: "chi\u1EC1u",
+                    evening: "t\u1ED1i",
+                    night: "\u0111\xeam",
                 },
                 wide: {
                     am: "SA",
                     pm: "CH",
-                    midnight: "nửa đ\xeam",
-                    noon: "giữa trưa",
-                    morning: "v\xe0o buổi s\xe1ng",
-                    afternoon: "v\xe0o buổi chiều",
-                    evening: "v\xe0o buổi tối",
-                    night: "v\xe0o ban đ\xeam",
+                    midnight: "n\u1EEDa \u0111\xeam",
+                    noon: "gi\u1EEFa tr\u01B0a",
+                    morning: "v\xe0o bu\u1ED5i s\xe1ng",
+                    afternoon: "v\xe0o bu\u1ED5i chi\u1EC1u",
+                    evening: "v\xe0o bu\u1ED5i t\u1ED1i",
+                    night: "v\xe0o ban \u0111\xeam",
                 },
             },
             defaultFormattingWidth: "wide",
@@ -270,8 +278,8 @@ let d = {
             ((a = "string" == typeof h ? h : 1 === n ? h.one : h.other.replace("{{count}}", String(n))),
             null != i && i.addSuffix)
         )
-            if (i.comparison && i.comparison > 0) return a + " nữa";
-            else return a + " trước";
+            if (i.comparison && i.comparison > 0) return a + " n\u1EEFa";
+            else return a + " tr\u01B0\u1EDBc";
         return a;
     },
     formatLong: h,
@@ -290,8 +298,8 @@ let d = {
         era: (0, u.A)({
             matchPatterns: {
                 narrow: /^(tcn|scn)/i,
-                abbreviated: /^(trước CN|sau CN)/i,
-                wide: /^(trước Công Nguyên|sau Công Nguyên)/i,
+                abbreviated: /^(tr\u01b0\u1edbc CN|sau CN)/i,
+                wide: /^(tr\u01b0\u1edbc C\xf4ng Nguy\xean|sau C\xf4ng Nguy\xean)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/^t/i, /^s/i] },
@@ -301,7 +309,7 @@ let d = {
             matchPatterns: {
                 narrow: /^([1234]|i{1,3}v?)/i,
                 abbreviated: /^q([1234]|i{1,3}v?)/i,
-                wide: /^quý ([1234]|i{1,3}v?)/i,
+                wide: /^qu\xfd ([1234]|i{1,3}v?)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/(1|i)$/i, /(2|ii)$/i, /(3|iii)$/i, /(4|iv)$/i] },
@@ -314,7 +322,7 @@ let d = {
             matchPatterns: {
                 narrow: /^(0?[2-9]|10|11|12|0?1)/i,
                 abbreviated: /^thg[ _]?(0?[1-9](?!\d)|10|11|12)/i,
-                wide: /^tháng ?(Một|Hai|Ba|Tư|Năm|Sáu|Bảy|Tám|Chín|Mười|Mười ?Một|Mười ?Hai|0?[1-9](?!\d)|10|11|12)/i,
+                wide: /^th\xe1ng ?(M\u1ed9t|Hai|Ba|T\u01b0|N\u0103m|S\xe1u|B\u1ea3y|T\xe1m|Ch\xedn|M\u01b0\u1eddi|M\u01b0\u1eddi ?M\u1ed9t|M\u01b0\u1eddi ?Hai|0?[1-9](?!\d)|10|11|12)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {
@@ -334,18 +342,18 @@ let d = {
                     /^thg[ _]?12/i,
                 ],
                 wide: [
-                    /^tháng ?(Một|0?1(?!\d))/i,
-                    /^tháng ?(Hai|0?2)/i,
-                    /^tháng ?(Ba|0?3)/i,
-                    /^tháng ?(Tư|0?4)/i,
-                    /^tháng ?(Năm|0?5)/i,
-                    /^tháng ?(Sáu|0?6)/i,
-                    /^tháng ?(Bảy|0?7)/i,
-                    /^tháng ?(Tám|0?8)/i,
-                    /^tháng ?(Chín|0?9)/i,
-                    /^tháng ?(Mười|10)/i,
-                    /^tháng ?(Mười ?Một|11)/i,
-                    /^tháng ?(Mười ?Hai|12)/i,
+                    /^th\xe1ng ?(M\u1ed9t|0?1(?!\d))/i,
+                    /^th\xe1ng ?(Hai|0?2)/i,
+                    /^th\xe1ng ?(Ba|0?3)/i,
+                    /^th\xe1ng ?(T\u01b0|0?4)/i,
+                    /^th\xe1ng ?(N\u0103m|0?5)/i,
+                    /^th\xe1ng ?(S\xe1u|0?6)/i,
+                    /^th\xe1ng ?(B\u1ea3y|0?7)/i,
+                    /^th\xe1ng ?(T\xe1m|0?8)/i,
+                    /^th\xe1ng ?(Ch\xedn|0?9)/i,
+                    /^th\xe1ng ?(M\u01b0\u1eddi|10)/i,
+                    /^th\xe1ng ?(M\u01b0\u1eddi ?M\u1ed9t|11)/i,
+                    /^th\xe1ng ?(M\u01b0\u1eddi ?Hai|12)/i,
                 ],
             },
             defaultParseWidth: "wide",
@@ -355,34 +363,43 @@ let d = {
                 narrow: /^(CN|T2|T3|T4|T5|T6|T7)/i,
                 short: /^(CN|Th ?2|Th ?3|Th ?4|Th ?5|Th ?6|Th ?7)/i,
                 abbreviated: /^(CN|Th ?2|Th ?3|Th ?4|Th ?5|Th ?6|Th ?7)/i,
-                wide: /^(Chủ ?Nhật|Chúa ?Nhật|thứ ?Hai|thứ ?Ba|thứ ?Tư|thứ ?Năm|thứ ?Sáu|thứ ?Bảy)/i,
+                wide: /^(Ch\u1ee7 ?Nh\u1eadt|Ch\xfaa ?Nh\u1eadt|th\u1ee9 ?Hai|th\u1ee9 ?Ba|th\u1ee9 ?T\u01b0|th\u1ee9 ?N\u0103m|th\u1ee9 ?S\xe1u|th\u1ee9 ?B\u1ea3y)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {
                 narrow: [/CN/i, /2/i, /3/i, /4/i, /5/i, /6/i, /7/i],
                 short: [/CN/i, /2/i, /3/i, /4/i, /5/i, /6/i, /7/i],
                 abbreviated: [/CN/i, /2/i, /3/i, /4/i, /5/i, /6/i, /7/i],
-                wide: [/(Chủ|Chúa) ?Nhật/i, /Hai/i, /Ba/i, /Tư/i, /Năm/i, /Sáu/i, /Bảy/i],
+                wide: [
+                    /(Ch\u1ee7|Ch\xfaa) ?Nh\u1eadt/i,
+                    /Hai/i,
+                    /Ba/i,
+                    /T\u01b0/i,
+                    /N\u0103m/i,
+                    /S\xe1u/i,
+                    /B\u1ea3y/i,
+                ],
             },
             defaultParseWidth: "wide",
         }),
         dayPeriod: (0, u.A)({
             matchPatterns: {
-                narrow: /^(a|p|nửa đêm|trưa|(giờ) (sáng|chiều|tối|đêm))/i,
-                abbreviated: /^(am|pm|nửa đêm|trưa|(giờ) (sáng|chiều|tối|đêm))/i,
-                wide: /^(ch[^i]*|sa|nửa đêm|trưa|(giờ) (sáng|chiều|tối|đêm))/i,
+                narrow: /^(a|p|n\u1eeda \u0111\xeam|tr\u01b0a|(gi\u1edd) (s\xe1ng|chi\u1ec1u|t\u1ed1i|\u0111\xeam))/i,
+                abbreviated:
+                    /^(am|pm|n\u1eeda \u0111\xeam|tr\u01b0a|(gi\u1edd) (s\xe1ng|chi\u1ec1u|t\u1ed1i|\u0111\xeam))/i,
+                wide: /^(ch[^i]*|sa|n\u1eeda \u0111\xeam|tr\u01b0a|(gi\u1edd) (s\xe1ng|chi\u1ec1u|t\u1ed1i|\u0111\xeam))/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {
                 any: {
                     am: /^(a|sa)/i,
                     pm: /^(p|ch[^i]*)/i,
-                    midnight: /nửa đêm/i,
-                    noon: /trưa/i,
-                    morning: /sáng/i,
-                    afternoon: /chiều/i,
-                    evening: /tối/i,
-                    night: /^đêm/i,
+                    midnight: /n\u1eeda \u0111\xeam/i,
+                    noon: /tr\u01b0a/i,
+                    morning: /s\xe1ng/i,
+                    afternoon: /chi\u1ec1u/i,
+                    evening: /t\u1ed1i/i,
+                    night: /^\u0111\xeam/i,
                 },
             },
             defaultParseWidth: "any",

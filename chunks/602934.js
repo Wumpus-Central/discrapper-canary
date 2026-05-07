@@ -4190,7 +4190,7 @@ let rd = new Set(["failure", "unknown"]),
                                                     variant: "text-md/medium",
                                                     color: "text-strong",
                                                     "aria-hidden": !0,
-                                                    children: "•",
+                                                    children: "\u2022",
                                                 }),
                                                 (0, p.jsx)(V.E, {
                                                     variant: "text-md/medium",
@@ -7567,7 +7567,7 @@ class cg extends N.PureComponent {
                             ? (0, p.jsxs)(N.Fragment, {
                                   children: [
                                       g.intl.format(g.t.ltVZcJ, { hours: t.expiresAt.diff(rj()(), "h") }),
-                                      " —\xa0",
+                                      " \u2014\xa0",
                                   ],
                               })
                             : null,
@@ -11582,7 +11582,7 @@ function Aw(e) {
                                     null != A &&
                                         (0, p.jsxs)(p.Fragment, {
                                             children: [
-                                                (0, p.jsx)(V.E, { variant: "text-md/normal", children: "•" }),
+                                                (0, p.jsx)(V.E, { variant: "text-md/normal", children: "\u2022" }),
                                                 (0, p.jsxs)("span", {
                                                     className: Ak.vP,
                                                     children: [
@@ -16387,7 +16387,7 @@ function SB(e) {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
                                     "aria-hidden": !0,
-                                    children: "•",
+                                    children: "\u2022",
                                 }),
                             null != n &&
                                 (0, p.jsx)(V.E, { variant: "text-md/medium", color: "text-subtle", children: n }),
@@ -16613,7 +16613,7 @@ function pe() {
     return (0, p.jsxs)(V.E, {
         variant: "text-md/medium",
         children: [
-            `${e} • `,
+            `${e} \u{2022} `,
             g.intl.format(S9.default.WM5adV, {
                 handleOnHelpUrlHook: () => window.open(ta.A.getArticleURL(q.MVz.TIGGER_PAWTECT_LEARN_MORE), "_blank"),
             }),
@@ -17681,7 +17681,7 @@ function p4(e) {
                                 tag: "span",
                                 color: "text-strong",
                                 variant: "text-md/normal",
-                                children: [l && n && !s ? `${g.intl.string(g.t.XxRj7f)} • ` : null, m],
+                                children: [l && n && !s ? `${g.intl.string(g.t.XxRj7f)} \u{2022} ` : null, m],
                             }),
                         }),
                     ],

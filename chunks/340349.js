@@ -1,83 +1,83 @@
 !(function (e) {
     "use strict";
-    function t(e, t, n, r) {
-        var i = e + " ";
+    function t(e, t, n, i) {
+        var r = e + " ";
         switch (n) {
             case "s":
-                return t || r ? "nekaj sekund" : "nekaj sekundami";
+                return t || i ? "nekaj sekund" : "nekaj sekundami";
             case "ss":
                 return (
                     1 === e
-                        ? (i += t ? "sekundo" : "sekundi")
+                        ? (r += t ? "sekundo" : "sekundi")
                         : 2 === e
-                          ? (i += t || r ? "sekundi" : "sekundah")
+                          ? (r += t || i ? "sekundi" : "sekundah")
                           : e < 5
-                            ? (i += t || r ? "sekunde" : "sekundah")
-                            : (i += "sekund"),
-                    i
+                            ? (r += t || i ? "sekunde" : "sekundah")
+                            : (r += "sekund"),
+                    r
                 );
             case "m":
                 return t ? "ena minuta" : "eno minuto";
             case "mm":
                 return (
                     1 === e
-                        ? (i += t ? "minuta" : "minuto")
+                        ? (r += t ? "minuta" : "minuto")
                         : 2 === e
-                          ? (i += t || r ? "minuti" : "minutama")
+                          ? (r += t || i ? "minuti" : "minutama")
                           : e < 5
-                            ? (i += t || r ? "minute" : "minutami")
-                            : (i += t || r ? "minut" : "minutami"),
-                    i
+                            ? (r += t || i ? "minute" : "minutami")
+                            : (r += t || i ? "minut" : "minutami"),
+                    r
                 );
             case "h":
                 return t ? "ena ura" : "eno uro";
             case "hh":
                 return (
                     1 === e
-                        ? (i += t ? "ura" : "uro")
+                        ? (r += t ? "ura" : "uro")
                         : 2 === e
-                          ? (i += t || r ? "uri" : "urama")
+                          ? (r += t || i ? "uri" : "urama")
                           : e < 5
-                            ? (i += t || r ? "ure" : "urami")
-                            : (i += t || r ? "ur" : "urami"),
-                    i
+                            ? (r += t || i ? "ure" : "urami")
+                            : (r += t || i ? "ur" : "urami"),
+                    r
                 );
             case "d":
-                return t || r ? "en dan" : "enim dnem";
+                return t || i ? "en dan" : "enim dnem";
             case "dd":
                 return (
                     1 === e
-                        ? (i += t || r ? "dan" : "dnem")
+                        ? (r += t || i ? "dan" : "dnem")
                         : 2 === e
-                          ? (i += t || r ? "dni" : "dnevoma")
-                          : (i += t || r ? "dni" : "dnevi"),
-                    i
+                          ? (r += t || i ? "dni" : "dnevoma")
+                          : (r += t || i ? "dni" : "dnevi"),
+                    r
                 );
             case "M":
-                return t || r ? "en mesec" : "enim mesecem";
+                return t || i ? "en mesec" : "enim mesecem";
             case "MM":
                 return (
                     1 === e
-                        ? (i += t || r ? "mesec" : "mesecem")
+                        ? (r += t || i ? "mesec" : "mesecem")
                         : 2 === e
-                          ? (i += t || r ? "meseca" : "mesecema")
+                          ? (r += t || i ? "meseca" : "mesecema")
                           : e < 5
-                            ? (i += t || r ? "mesece" : "meseci")
-                            : (i += t || r ? "mesecev" : "meseci"),
-                    i
+                            ? (r += t || i ? "mesece" : "meseci")
+                            : (r += t || i ? "mesecev" : "meseci"),
+                    r
                 );
             case "y":
-                return t || r ? "eno leto" : "enim letom";
+                return t || i ? "eno leto" : "enim letom";
             case "yy":
                 return (
                     1 === e
-                        ? (i += t || r ? "leto" : "letom")
+                        ? (r += t || i ? "leto" : "letom")
                         : 2 === e
-                          ? (i += t || r ? "leti" : "letoma")
+                          ? (r += t || i ? "leti" : "letoma")
                           : e < 5
-                            ? (i += t || r ? "leta" : "leti")
-                            : (i += t || r ? "let" : "leti"),
-                    i
+                            ? (r += t || i ? "leta" : "leti")
+                            : (r += t || i ? "let" : "leti"),
+                    r
                 );
         }
     }
@@ -85,9 +85,9 @@
         months: "januar_februar_marec_april_maj_junij_julij_avgust_september_oktober_november_december".split("_"),
         monthsShort: "jan._feb._mar._apr._maj._jun._jul._avg._sep._okt._nov._dec.".split("_"),
         monthsParseExact: !0,
-        weekdays: "nedelja_ponedeljek_torek_sreda_četrtek_petek_sobota".split("_"),
-        weekdaysShort: "ned._pon._tor._sre._čet._pet._sob.".split("_"),
-        weekdaysMin: "ne_po_to_sr_če_pe_so".split("_"),
+        weekdays: "nedelja_ponedeljek_torek_sreda_\u010Detrtek_petek_sobota".split("_"),
+        weekdaysShort: "ned._pon._tor._sre._\u010Det._pet._sob.".split("_"),
+        weekdaysMin: "ne_po_to_sr_\u010De_pe_so".split("_"),
         weekdaysParseExact: !0,
         longDateFormat: {
             LT: "H:mm",
@@ -115,26 +115,26 @@
                         return "[v] dddd [ob] LT";
                 }
             },
-            lastDay: "[včeraj ob] LT",
+            lastDay: "[v\u010Deraj ob] LT",
             lastWeek: function () {
                 switch (this.day()) {
                     case 0:
-                        return "[prejšnjo] [nedeljo] [ob] LT";
+                        return "[prej\u0161njo] [nedeljo] [ob] LT";
                     case 3:
-                        return "[prejšnjo] [sredo] [ob] LT";
+                        return "[prej\u0161njo] [sredo] [ob] LT";
                     case 6:
-                        return "[prejšnjo] [soboto] [ob] LT";
+                        return "[prej\u0161njo] [soboto] [ob] LT";
                     case 1:
                     case 2:
                     case 4:
                     case 5:
-                        return "[prejšnji] dddd [ob] LT";
+                        return "[prej\u0161nji] dddd [ob] LT";
                 }
             },
             sameElse: "L",
         },
         relativeTime: {
-            future: "čez %s",
+            future: "\u010Dez %s",
             past: "pred %s",
             s: t,
             ss: t,

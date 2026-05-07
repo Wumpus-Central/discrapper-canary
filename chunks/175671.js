@@ -188,7 +188,7 @@ function b(e) {
 }
 var D = n(619517),
     L = n(821209),
-    w = n(269849),
+    w = n(492230),
     M = n(114212),
     P = n(343552),
     x = n(302031);
@@ -918,7 +918,7 @@ class es extends r.PureComponent {
                                   children: [
                                       t.text,
                                       null != t.text && null != n
-                                          ? (0, i.jsx)("span", { className: g.i8, children: "•" })
+                                          ? (0, i.jsx)("span", { className: g.i8, children: "\u2022" })
                                           : null,
                                       null != n ? (0, j.mk)(n) : null,
                                   ],

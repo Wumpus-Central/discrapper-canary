@@ -2241,7 +2241,7 @@ class tC extends tf {
                     (this.webSocket = e), this.compressionHandler.bindWebSocket(e);
                 },
                 onOpen: (e) => {
-                    U.A.mark(`🌐`, `GatewaySocket.onOpen ${e}`);
+                    U.A.mark(`\u{1F310}`, `GatewaySocket.onOpen ${e}`);
                     let t = Date.now() - this.connectionStartTime;
                     tm.info(`[CONNECTED] ${u.toString()} in ${t} ms`),
                         (this.isFastConnect = e),
@@ -2254,7 +2254,7 @@ class tC extends tf {
                         let n = Date.now(),
                             { op: i, s: r, t: s, d: a } = tg.unpack(e);
                         if (
-                            (i !== t_.DISPATCH && U.A.mark(`🌐`, `GatewaySocket.onMessage ${i} ${t_[i]}`),
+                            (i !== t_.DISPATCH && U.A.mark(`\u{1F310}`, `GatewaySocket.onMessage ${i} ${t_[i]}`),
                             Q.default.isLoggingGatewayEvents)
                         ) {
                             let e = [i];
@@ -2782,7 +2782,7 @@ class tb extends tR {
 }
 var tD = n(665260),
     tL = n(572164),
-    tw = n(328153),
+    tw = n(952818),
     tM = n(885386),
     tP = n(616356),
     tx = n(469177);

@@ -22,7 +22,7 @@ var l = n(627968),
     N = n(465364),
     S = n(291812),
     y = n(34337),
-    E = n(253932),
+    E = n(885386),
     k = n(816350);
 function D(e) {
     let { previewMessage: t } = e,
@@ -86,7 +86,7 @@ var M = n(503698),
     ee = n(427262),
     et = n(652215),
     en = n(790782),
-    el = n(985018),
+    el = n(375708),
     ei = n(236167);
 function ea(e) {
     let {
@@ -192,7 +192,7 @@ function eo(e) {
                                   className: ei.Ql,
                                   variant: "text-xs/medium",
                                   color: "text-subtle",
-                                  children: "•",
+                                  children: "\u2022",
                               }),
                               (0, l.jsx)(d.E, {
                                   variant: "text-xs/medium",

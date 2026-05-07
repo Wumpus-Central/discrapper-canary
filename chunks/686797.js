@@ -1,3 +1,3 @@
 p.exports = JSON.parse(
-    '{"klSpfs":["設定を編集"],"NzUuLD":["+",[1,"count"],"件のメッセージ"],"O+racd":["通知はありません。"],"5H2Jd6":["全て表示"],"Ko8NGn":["ブックマークを表示"],"dcpdhC":["メッセージを選択すると、そのメッセージに移動します。"],"VAK+h9":["通知センターにようこそ！"]}',
+    '{"klSpfs":["\u8A2D\u5B9A\u3092\u7DE8\u96C6"],"NzUuLD":["+",[1,"count"],"\u4EF6\u306E\u30E1\u30C3\u30BB\u30FC\u30B8"],"O+racd":["\u901A\u77E5\u306F\u3042\u308A\u307E\u305B\u3093\u3002"],"5H2Jd6":["\u5168\u3066\u8868\u793A"],"Ko8NGn":["\u30D6\u30C3\u30AF\u30DE\u30FC\u30AF\u3092\u8868\u793A"],"dcpdhC":["\u30E1\u30C3\u30BB\u30FC\u30B8\u3092\u9078\u629E\u3059\u308B\u3068\u3001\u305D\u306E\u30E1\u30C3\u30BB\u30FC\u30B8\u306B\u79FB\u52D5\u3057\u307E\u3059\u3002"],"VAK+h9":["\u901A\u77E5\u30BB\u30F3\u30BF\u30FC\u306B\u3088\u3046\u3053\u305D\uFF01"]}',
 );

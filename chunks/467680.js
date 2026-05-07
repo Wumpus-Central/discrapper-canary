@@ -73,7 +73,7 @@ let k = (e) => {
                     style: { marginTop: 16 },
                     children: (0, s.jsx)(g.Anchor, {
                         onClick: () => e.handleStepChange(e.originStep),
-                        children: "← Go Back",
+                        children: "\u2190 Go Back",
                     }),
                 }),
             ],
@@ -345,7 +345,7 @@ let eP = "checkout-error-boundary-test-modal",
                     (0, s.jsx)(y.E, {
                         variant: "text-sm/normal",
                         children:
-                            "PaymentModal Step within PaymentContext loaded. Click below to navigate to a mock error step that will throw — the CheckoutErrorBoundary baked into PaymentContextProvider will catch it.",
+                            "PaymentModal Step within PaymentContext loaded. Click below to navigate to a mock error step that will throw \u2014 the CheckoutErrorBoundary baked into PaymentContextProvider will catch it.",
                     }),
                     (0, s.jsx)(H.$, {
                         variant: "primary",
@@ -1692,7 +1692,7 @@ let tE = { none: void 0, nitroWheel: r.t },
             description: {
                 label: "Description",
                 type: "text",
-                defaultValue: "Use any emoji anywhere — even in servers that don't have them unlocked.",
+                defaultValue: "Use any emoji anywhere \u2014 even in servers that don't have them unlocked.",
             },
             ctaMode: {
                 label: "CTA Mode",

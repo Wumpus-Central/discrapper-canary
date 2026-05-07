@@ -1,128 +1,161 @@
 !(function (e) {
     "use strict";
-    var t = { 1: "१", 2: "२", 3: "३", 4: "४", 5: "५", 6: "६", 7: "७", 8: "८", 9: "९", 0: "०" },
-        n = { "१": "1", "२": "2", "३": "3", "४": "4", "५": "5", "६": "6", "७": "7", "८": "8", "९": "9", "०": "0" };
-    function r(e, t, n, r) {
-        var i = "";
+    var t = {
+            1: "\u0967",
+            2: "\u0968",
+            3: "\u0969",
+            4: "\u096A",
+            5: "\u096B",
+            6: "\u096C",
+            7: "\u096D",
+            8: "\u096E",
+            9: "\u096F",
+            0: "\u0966",
+        },
+        n = {
+            "\u0967": "1",
+            "\u0968": "2",
+            "\u0969": "3",
+            "\u096A": "4",
+            "\u096B": "5",
+            "\u096C": "6",
+            "\u096D": "7",
+            "\u096E": "8",
+            "\u096F": "9",
+            "\u0966": "0",
+        };
+    function i(e, t, n, i) {
+        var r = "";
         if (t)
             switch (n) {
                 case "s":
-                    i = "काही सेकंद";
+                    r = "\u0915\u093E\u0939\u0940 \u0938\u0947\u0915\u0902\u0926";
                     break;
                 case "ss":
-                    i = "%d सेकंद";
+                    r = "%d \u0938\u0947\u0915\u0902\u0926";
                     break;
                 case "m":
-                    i = "एक मिनिट";
+                    r = "\u090F\u0915 \u092E\u093F\u0928\u093F\u091F";
                     break;
                 case "mm":
-                    i = "%d मिनिटे";
+                    r = "%d \u092E\u093F\u0928\u093F\u091F\u0947";
                     break;
                 case "h":
-                    i = "एक तास";
+                    r = "\u090F\u0915 \u0924\u093E\u0938";
                     break;
                 case "hh":
-                    i = "%d तास";
+                    r = "%d \u0924\u093E\u0938";
                     break;
                 case "d":
-                    i = "एक दिवस";
+                    r = "\u090F\u0915 \u0926\u093F\u0935\u0938";
                     break;
                 case "dd":
-                    i = "%d दिवस";
+                    r = "%d \u0926\u093F\u0935\u0938";
                     break;
                 case "M":
-                    i = "एक महिना";
+                    r = "\u090F\u0915 \u092E\u0939\u093F\u0928\u093E";
                     break;
                 case "MM":
-                    i = "%d महिने";
+                    r = "%d \u092E\u0939\u093F\u0928\u0947";
                     break;
                 case "y":
-                    i = "एक वर्ष";
+                    r = "\u090F\u0915 \u0935\u0930\u094D\u0937";
                     break;
                 case "yy":
-                    i = "%d वर्षे";
+                    r = "%d \u0935\u0930\u094D\u0937\u0947";
             }
         else
             switch (n) {
                 case "s":
-                    i = "काही सेकंदां";
+                    r = "\u0915\u093E\u0939\u0940 \u0938\u0947\u0915\u0902\u0926\u093E\u0902";
                     break;
                 case "ss":
-                    i = "%d सेकंदां";
+                    r = "%d \u0938\u0947\u0915\u0902\u0926\u093E\u0902";
                     break;
                 case "m":
-                    i = "एका मिनिटा";
+                    r = "\u090F\u0915\u093E \u092E\u093F\u0928\u093F\u091F\u093E";
                     break;
                 case "mm":
-                    i = "%d मिनिटां";
+                    r = "%d \u092E\u093F\u0928\u093F\u091F\u093E\u0902";
                     break;
                 case "h":
-                    i = "एका तासा";
+                    r = "\u090F\u0915\u093E \u0924\u093E\u0938\u093E";
                     break;
                 case "hh":
-                    i = "%d तासां";
+                    r = "%d \u0924\u093E\u0938\u093E\u0902";
                     break;
                 case "d":
-                    i = "एका दिवसा";
+                    r = "\u090F\u0915\u093E \u0926\u093F\u0935\u0938\u093E";
                     break;
                 case "dd":
-                    i = "%d दिवसां";
+                    r = "%d \u0926\u093F\u0935\u0938\u093E\u0902";
                     break;
                 case "M":
-                    i = "एका महिन्या";
+                    r = "\u090F\u0915\u093E \u092E\u0939\u093F\u0928\u094D\u092F\u093E";
                     break;
                 case "MM":
-                    i = "%d महिन्यां";
+                    r = "%d \u092E\u0939\u093F\u0928\u094D\u092F\u093E\u0902";
                     break;
                 case "y":
-                    i = "एका वर्षा";
+                    r = "\u090F\u0915\u093E \u0935\u0930\u094D\u0937\u093E";
                     break;
                 case "yy":
-                    i = "%d वर्षां";
+                    r = "%d \u0935\u0930\u094D\u0937\u093E\u0902";
             }
-        return i.replace(/%d/i, e);
+        return r.replace(/%d/i, e);
     }
     e.defineLocale("mr", {
-        months: "जानेवारी_फेब्रुवारी_मार्च_एप्रिल_मे_जून_जुलै_ऑगस्ट_सप्टेंबर_ऑक्टोबर_नोव्हेंबर_डिसेंबर".split("_"),
-        monthsShort: "जाने._फेब्रु._मार्च._एप्रि._मे._जून._जुलै._ऑग._सप्टें._ऑक्टो._नोव्हें._डिसें.".split("_"),
+        months: "\u091C\u093E\u0928\u0947\u0935\u093E\u0930\u0940_\u092B\u0947\u092C\u094D\u0930\u0941\u0935\u093E\u0930\u0940_\u092E\u093E\u0930\u094D\u091A_\u090F\u092A\u094D\u0930\u093F\u0932_\u092E\u0947_\u091C\u0942\u0928_\u091C\u0941\u0932\u0948_\u0911\u0917\u0938\u094D\u091F_\u0938\u092A\u094D\u091F\u0947\u0902\u092C\u0930_\u0911\u0915\u094D\u091F\u094B\u092C\u0930_\u0928\u094B\u0935\u094D\u0939\u0947\u0902\u092C\u0930_\u0921\u093F\u0938\u0947\u0902\u092C\u0930".split(
+            "_",
+        ),
+        monthsShort:
+            "\u091C\u093E\u0928\u0947._\u092B\u0947\u092C\u094D\u0930\u0941._\u092E\u093E\u0930\u094D\u091A._\u090F\u092A\u094D\u0930\u093F._\u092E\u0947._\u091C\u0942\u0928._\u091C\u0941\u0932\u0948._\u0911\u0917._\u0938\u092A\u094D\u091F\u0947\u0902._\u0911\u0915\u094D\u091F\u094B._\u0928\u094B\u0935\u094D\u0939\u0947\u0902._\u0921\u093F\u0938\u0947\u0902.".split(
+                "_",
+            ),
         monthsParseExact: !0,
-        weekdays: "रविवार_सोमवार_मंगळवार_बुधवार_गुरूवार_शुक्रवार_शनिवार".split("_"),
-        weekdaysShort: "रवि_सोम_मंगळ_बुध_गुरू_शुक्र_शनि".split("_"),
-        weekdaysMin: "र_सो_मं_बु_गु_शु_श".split("_"),
+        weekdays:
+            "\u0930\u0935\u093F\u0935\u093E\u0930_\u0938\u094B\u092E\u0935\u093E\u0930_\u092E\u0902\u0917\u0933\u0935\u093E\u0930_\u092C\u0941\u0927\u0935\u093E\u0930_\u0917\u0941\u0930\u0942\u0935\u093E\u0930_\u0936\u0941\u0915\u094D\u0930\u0935\u093E\u0930_\u0936\u0928\u093F\u0935\u093E\u0930".split(
+                "_",
+            ),
+        weekdaysShort:
+            "\u0930\u0935\u093F_\u0938\u094B\u092E_\u092E\u0902\u0917\u0933_\u092C\u0941\u0927_\u0917\u0941\u0930\u0942_\u0936\u0941\u0915\u094D\u0930_\u0936\u0928\u093F".split(
+                "_",
+            ),
+        weekdaysMin: "\u0930_\u0938\u094B_\u092E\u0902_\u092C\u0941_\u0917\u0941_\u0936\u0941_\u0936".split("_"),
         longDateFormat: {
-            LT: "A h:mm वाजता",
-            LTS: "A h:mm:ss वाजता",
+            LT: "A h:mm \u0935\u093E\u091C\u0924\u093E",
+            LTS: "A h:mm:ss \u0935\u093E\u091C\u0924\u093E",
             L: "DD/MM/YYYY",
             LL: "D MMMM YYYY",
-            LLL: "D MMMM YYYY, A h:mm वाजता",
-            LLLL: "dddd, D MMMM YYYY, A h:mm वाजता",
+            LLL: "D MMMM YYYY, A h:mm \u0935\u093E\u091C\u0924\u093E",
+            LLLL: "dddd, D MMMM YYYY, A h:mm \u0935\u093E\u091C\u0924\u093E",
         },
         calendar: {
-            sameDay: "[आज] LT",
-            nextDay: "[उद्या] LT",
+            sameDay: "[\u0906\u091C] LT",
+            nextDay: "[\u0909\u0926\u094D\u092F\u093E] LT",
             nextWeek: "dddd, LT",
-            lastDay: "[काल] LT",
-            lastWeek: "[मागील] dddd, LT",
+            lastDay: "[\u0915\u093E\u0932] LT",
+            lastWeek: "[\u092E\u093E\u0917\u0940\u0932] dddd, LT",
             sameElse: "L",
         },
         relativeTime: {
-            future: "%sमध्ये",
-            past: "%sपूर्वी",
-            s: r,
-            ss: r,
-            m: r,
-            mm: r,
-            h: r,
-            hh: r,
-            d: r,
-            dd: r,
-            M: r,
-            MM: r,
-            y: r,
-            yy: r,
+            future: "%s\u092E\u0927\u094D\u092F\u0947",
+            past: "%s\u092A\u0942\u0930\u094D\u0935\u0940",
+            s: i,
+            ss: i,
+            m: i,
+            mm: i,
+            h: i,
+            hh: i,
+            d: i,
+            dd: i,
+            M: i,
+            MM: i,
+            y: i,
+            yy: i,
         },
         preparse: function (e) {
-            return e.replace(/[१२३४५६७८९०]/g, function (e) {
+            return e.replace(/[\u0967\u0968\u0969\u096a\u096b\u096c\u096d\u096e\u096f\u0966]/g, function (e) {
                 return n[e];
             });
         },
@@ -131,24 +164,33 @@
                 return t[e];
             });
         },
-        meridiemParse: /रात्री|सकाळी|दुपारी|सायंकाळी/,
+        meridiemParse:
+            /\u0930\u093e\u0924\u094d\u0930\u0940|\u0938\u0915\u093e\u0933\u0940|\u0926\u0941\u092a\u093e\u0930\u0940|\u0938\u093e\u092f\u0902\u0915\u093e\u0933\u0940/,
         meridiemHour: function (e, t) {
-            return (12 === e && (e = 0), "रात्री" === t)
+            return (12 === e && (e = 0), "\u0930\u093E\u0924\u094D\u0930\u0940" === t)
                 ? e < 4
                     ? e
                     : e + 12
-                : "सकाळी" === t
+                : "\u0938\u0915\u093E\u0933\u0940" === t
                   ? e
-                  : "दुपारी" === t
+                  : "\u0926\u0941\u092A\u093E\u0930\u0940" === t
                     ? e >= 10
                         ? e
                         : e + 12
-                    : "सायंकाळी" === t
+                    : "\u0938\u093E\u092F\u0902\u0915\u093E\u0933\u0940" === t
                       ? e + 12
                       : void 0;
         },
         meridiem: function (e, t, n) {
-            return e < 4 ? "रात्री" : e < 10 ? "सकाळी" : e < 17 ? "दुपारी" : e < 20 ? "सायंकाळी" : "रात्री";
+            return e < 4
+                ? "\u0930\u093E\u0924\u094D\u0930\u0940"
+                : e < 10
+                  ? "\u0938\u0915\u093E\u0933\u0940"
+                  : e < 17
+                    ? "\u0926\u0941\u092A\u093E\u0930\u0940"
+                    : e < 20
+                      ? "\u0938\u093E\u092F\u0902\u0915\u093E\u0933\u0940"
+                      : "\u0930\u093E\u0924\u094D\u0930\u0940";
         },
         week: { dow: 0, doy: 6 },
     });

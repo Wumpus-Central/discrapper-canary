@@ -117,28 +117,28 @@ var t = {
         lastWeek: function (o) {
             switch (o.getUTCDay()) {
                 case 0:
-                    return "'prošlu nedjelju u' p";
+                    return "'pro\u0161lu nedjelju u' p";
                 case 3:
-                    return "'prošlu srijedu u' p";
+                    return "'pro\u0161lu srijedu u' p";
                 case 6:
-                    return "'prošlu subotu u' p";
+                    return "'pro\u0161lu subotu u' p";
                 default:
-                    return "'prošli' EEEE 'u' p";
+                    return "'pro\u0161li' EEEE 'u' p";
             }
         },
-        yesterday: "'jučer u' p",
+        yesterday: "'ju\u010Der u' p",
         today: "'danas u' p",
         tomorrow: "'sutra u' p",
         nextWeek: function (o) {
             switch (o.getUTCDay()) {
                 case 0:
-                    return "'iduću nedjelju u' p";
+                    return "'idu\u0107u nedjelju u' p";
                 case 3:
-                    return "'iduću srijedu u' p";
+                    return "'idu\u0107u srijedu u' p";
                 case 6:
-                    return "'iduću subotu u' p";
+                    return "'idu\u0107u subotu u' p";
                 default:
-                    return "'prošli' EEEE 'u' p";
+                    return "'pro\u0161li' EEEE 'u' p";
             }
         },
         other: "P",
@@ -170,11 +170,11 @@ var t = {
         month: (0, u.A)({
             values: {
                 narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."],
-                abbreviated: ["sij", "velj", "ožu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"],
+                abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"],
                 wide: [
-                    "siječanj",
-                    "veljača",
-                    "ožujak",
+                    "sije\u010Danj",
+                    "velja\u010Da",
+                    "o\u017Eujak",
                     "travanj",
                     "svibanj",
                     "lipanj",
@@ -189,11 +189,11 @@ var t = {
             defaultWidth: "wide",
             formattingValues: {
                 narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."],
-                abbreviated: ["sij", "velj", "ožu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"],
+                abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"],
                 wide: [
-                    "siječnja",
-                    "veljače",
-                    "ožujka",
+                    "sije\u010Dnja",
+                    "velja\u010De",
+                    "o\u017Eujka",
                     "travnja",
                     "svibnja",
                     "lipnja",
@@ -209,10 +209,10 @@ var t = {
         }),
         day: (0, u.A)({
             values: {
-                narrow: ["N", "P", "U", "S", "Č", "P", "S"],
-                short: ["ned", "pon", "uto", "sri", "čet", "pet", "sub"],
-                abbreviated: ["ned", "pon", "uto", "sri", "čet", "pet", "sub"],
-                wide: ["nedjelja", "ponedjeljak", "utorak", "srijeda", "četvrtak", "petak", "subota"],
+                narrow: ["N", "P", "U", "S", "\u010C", "P", "S"],
+                short: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"],
+                abbreviated: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"],
+                wide: ["nedjelja", "ponedjeljak", "utorak", "srijeda", "\u010Detvrtak", "petak", "subota"],
             },
             defaultWidth: "wide",
         }),
@@ -221,32 +221,32 @@ var t = {
                 narrow: {
                     am: "AM",
                     pm: "PM",
-                    midnight: "ponoć",
+                    midnight: "pono\u0107",
                     noon: "podne",
                     morning: "ujutro",
                     afternoon: "popodne",
-                    evening: "navečer",
-                    night: "noću",
+                    evening: "nave\u010Der",
+                    night: "no\u0107u",
                 },
                 abbreviated: {
                     am: "AM",
                     pm: "PM",
-                    midnight: "ponoć",
+                    midnight: "pono\u0107",
                     noon: "podne",
                     morning: "ujutro",
                     afternoon: "popodne",
-                    evening: "navečer",
-                    night: "noću",
+                    evening: "nave\u010Der",
+                    night: "no\u0107u",
                 },
                 wide: {
                     am: "AM",
                     pm: "PM",
-                    midnight: "ponoć",
+                    midnight: "pono\u0107",
                     noon: "podne",
                     morning: "ujutro",
                     afternoon: "poslije podne",
-                    evening: "navečer",
-                    night: "noću",
+                    evening: "nave\u010Der",
+                    night: "no\u0107u",
                 },
             },
             defaultWidth: "wide",
@@ -254,32 +254,32 @@ var t = {
                 narrow: {
                     am: "AM",
                     pm: "PM",
-                    midnight: "ponoć",
+                    midnight: "pono\u0107",
                     noon: "podne",
                     morning: "ujutro",
                     afternoon: "popodne",
-                    evening: "navečer",
-                    night: "noću",
+                    evening: "nave\u010Der",
+                    night: "no\u0107u",
                 },
                 abbreviated: {
                     am: "AM",
                     pm: "PM",
-                    midnight: "ponoć",
+                    midnight: "pono\u0107",
                     noon: "podne",
                     morning: "ujutro",
                     afternoon: "popodne",
-                    evening: "navečer",
-                    night: "noću",
+                    evening: "nave\u010Der",
+                    night: "no\u0107u",
                 },
                 wide: {
                     am: "AM",
                     pm: "PM",
-                    midnight: "ponoć",
+                    midnight: "pono\u0107",
                     noon: "podne",
                     morning: "ujutro",
                     afternoon: "poslije podne",
-                    evening: "navečer",
-                    night: "noću",
+                    evening: "nave\u010Der",
+                    night: "no\u0107u",
                 },
             },
             defaultFormattingWidth: "wide",
@@ -346,8 +346,8 @@ let p = {
         month: (0, d.A)({
             matchPatterns: {
                 narrow: /^(10|11|12|[123456789])\./i,
-                abbreviated: /^(sij|velj|(ožu|ozu)|tra|svi|lip|srp|kol|ruj|lis|stu|pro)/i,
-                wide: /^((siječanj|siječnja|sijecanj|sijecnja)|(veljača|veljače|veljaca|veljace)|(ožujak|ožujka|ozujak|ozujka)|(travanj|travnja)|(svibanj|svibnja)|(lipanj|lipnja)|(srpanj|srpnja)|(kolovoz|kolovoza)|(rujan|rujna)|(listopad|listopada)|(studeni|studenog)|(prosinac|prosinca))/i,
+                abbreviated: /^(sij|velj|(o\u017eu|ozu)|tra|svi|lip|srp|kol|ruj|lis|stu|pro)/i,
+                wide: /^((sije\u010danj|sije\u010dnja|sijecanj|sijecnja)|(velja\u010da|velja\u010de|veljaca|veljace)|(o\u017eujak|o\u017eujka|ozujak|ozujka)|(travanj|travnja)|(svibanj|svibnja)|(lipanj|lipnja)|(srpanj|srpnja)|(kolovoz|kolovoza)|(rujan|rujna)|(listopad|listopada)|(studeni|studenog)|(prosinac|prosinca))/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {
@@ -355,7 +355,7 @@ let p = {
                 abbreviated: [
                     /^sij/i,
                     /^velj/i,
-                    /^(ožu|ozu)/i,
+                    /^(o\u017eu|ozu)/i,
                     /^tra/i,
                     /^svi/i,
                     /^lip/i,
@@ -369,7 +369,7 @@ let p = {
                 wide: [
                     /^sij/i,
                     /^velj/i,
-                    /^(ožu|ozu)/i,
+                    /^(o\u017eu|ozu)/i,
                     /^tra/i,
                     /^svi/i,
                     /^lip/i,
@@ -385,10 +385,10 @@ let p = {
         }),
         day: (0, d.A)({
             matchPatterns: {
-                narrow: /^[npusčc]/i,
-                short: /^(ned|pon|uto|sri|(čet|cet)|pet|sub)/i,
-                abbreviated: /^(ned|pon|uto|sri|(čet|cet)|pet|sub)/i,
-                wide: /^(nedjelja|ponedjeljak|utorak|srijeda|(četvrtak|cetvrtak)|petak|subota)/i,
+                narrow: /^[npus\u010dc]/i,
+                short: /^(ned|pon|uto|sri|(\u010det|cet)|pet|sub)/i,
+                abbreviated: /^(ned|pon|uto|sri|(\u010det|cet)|pet|sub)/i,
+                wide: /^(nedjelja|ponedjeljak|utorak|srijeda|(\u010detvrtak|cetvrtak)|petak|subota)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: {
@@ -398,7 +398,9 @@ let p = {
             defaultParseWidth: "any",
         }),
         dayPeriod: (0, d.A)({
-            matchPatterns: { any: /^(am|pm|ponoc|ponoć|(po)?podne|navecer|navečer|noću|poslije podne|ujutro)/i },
+            matchPatterns: {
+                any: /^(am|pm|ponoc|pono\u0107|(po)?podne|navecer|nave\u010der|no\u0107u|poslije podne|ujutro)/i,
+            },
             defaultMatchWidth: "any",
             parsePatterns: {
                 any: {
@@ -408,8 +410,8 @@ let p = {
                     noon: /^pod/i,
                     morning: /jutro/i,
                     afternoon: /(poslije\s|po)+podne/i,
-                    evening: /(navece|naveče)/i,
-                    night: /(nocu|noću)/i,
+                    evening: /(navece|nave\u010de)/i,
+                    night: /(nocu|no\u0107u)/i,
                 },
             },
             defaultParseWidth: "any",

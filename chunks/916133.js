@@ -3,17 +3,52 @@ a.r(d),
         ? Intl.ListFormat.__addLocaleData({
               data: {
                   conjunction: {
-                      long: { end: "{0}, और {1}", middle: "{0}, {1}", pair: "{0} और {1}", start: "{0}, {1}" },
-                      narrow: { end: "{0} और {1}", middle: "{0}, {1}", pair: "{0} और {1}", start: "{0}, {1}" },
-                      short: { end: "{0} और {1}", middle: "{0}, {1}", pair: "{0} और {1}", start: "{0}, {1}" },
+                      long: {
+                          end: "{0}, \u0914\u0930 {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u0914\u0930 {1}",
+                          start: "{0}, {1}",
+                      },
+                      narrow: {
+                          end: "{0} \u0914\u0930 {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u0914\u0930 {1}",
+                          start: "{0}, {1}",
+                      },
+                      short: {
+                          end: "{0} \u0914\u0930 {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u0914\u0930 {1}",
+                          start: "{0}, {1}",
+                      },
                   },
                   disjunction: {
-                      long: { end: "{0} या {1}", middle: "{0}, {1}", pair: "{0} या {1}", start: "{0}, {1}" },
-                      narrow: { end: "{0} या {1}", middle: "{0}, {1}", pair: "{0} या {1}", start: "{0}, {1}" },
-                      short: { end: "{0} या {1}", middle: "{0}, {1}", pair: "{0} या {1}", start: "{0}, {1}" },
+                      long: {
+                          end: "{0} \u092F\u093E {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u092F\u093E {1}",
+                          start: "{0}, {1}",
+                      },
+                      narrow: {
+                          end: "{0} \u092F\u093E {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u092F\u093E {1}",
+                          start: "{0}, {1}",
+                      },
+                      short: {
+                          end: "{0} \u092F\u093E {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u092F\u093E {1}",
+                          start: "{0}, {1}",
+                      },
                   },
                   unit: {
-                      long: { end: "{0}, और {1}", middle: "{0}, {1}", pair: "{0} और {1}", start: "{0}, {1}" },
+                      long: {
+                          end: "{0}, \u0914\u0930 {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u0914\u0930 {1}",
+                          start: "{0}, {1}",
+                      },
                       narrow: { end: "{0} {1}", middle: "{0}, {1}", pair: "{0} {1}", start: "{0}, {1}" },
                       short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
                   },
@@ -23,17 +58,52 @@ a.r(d),
         : (globalThis.__FORMATJS_LISTFORMAT_DATA__ = globalThis.__FORMATJS_LISTFORMAT_DATA__ || []).push({
               data: {
                   conjunction: {
-                      long: { end: "{0}, और {1}", middle: "{0}, {1}", pair: "{0} और {1}", start: "{0}, {1}" },
-                      narrow: { end: "{0} और {1}", middle: "{0}, {1}", pair: "{0} और {1}", start: "{0}, {1}" },
-                      short: { end: "{0} और {1}", middle: "{0}, {1}", pair: "{0} और {1}", start: "{0}, {1}" },
+                      long: {
+                          end: "{0}, \u0914\u0930 {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u0914\u0930 {1}",
+                          start: "{0}, {1}",
+                      },
+                      narrow: {
+                          end: "{0} \u0914\u0930 {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u0914\u0930 {1}",
+                          start: "{0}, {1}",
+                      },
+                      short: {
+                          end: "{0} \u0914\u0930 {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u0914\u0930 {1}",
+                          start: "{0}, {1}",
+                      },
                   },
                   disjunction: {
-                      long: { end: "{0} या {1}", middle: "{0}, {1}", pair: "{0} या {1}", start: "{0}, {1}" },
-                      narrow: { end: "{0} या {1}", middle: "{0}, {1}", pair: "{0} या {1}", start: "{0}, {1}" },
-                      short: { end: "{0} या {1}", middle: "{0}, {1}", pair: "{0} या {1}", start: "{0}, {1}" },
+                      long: {
+                          end: "{0} \u092F\u093E {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u092F\u093E {1}",
+                          start: "{0}, {1}",
+                      },
+                      narrow: {
+                          end: "{0} \u092F\u093E {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u092F\u093E {1}",
+                          start: "{0}, {1}",
+                      },
+                      short: {
+                          end: "{0} \u092F\u093E {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u092F\u093E {1}",
+                          start: "{0}, {1}",
+                      },
                   },
                   unit: {
-                      long: { end: "{0}, और {1}", middle: "{0}, {1}", pair: "{0} और {1}", start: "{0}, {1}" },
+                      long: {
+                          end: "{0}, \u0914\u0930 {1}",
+                          middle: "{0}, {1}",
+                          pair: "{0} \u0914\u0930 {1}",
+                          start: "{0}, {1}",
+                      },
                       narrow: { end: "{0} {1}", middle: "{0}, {1}", pair: "{0} {1}", start: "{0}, {1}" },
                       short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
                   },

@@ -1,18 +1,49 @@
 !(function (e) {
     "use strict";
-    var t = { 1: "༡", 2: "༢", 3: "༣", 4: "༤", 5: "༥", 6: "༦", 7: "༧", 8: "༨", 9: "༩", 0: "༠" },
-        n = { "༡": "1", "༢": "2", "༣": "3", "༤": "4", "༥": "5", "༦": "6", "༧": "7", "༨": "8", "༩": "9", "༠": "0" };
+    var t = {
+            1: "\u0F21",
+            2: "\u0F22",
+            3: "\u0F23",
+            4: "\u0F24",
+            5: "\u0F25",
+            6: "\u0F26",
+            7: "\u0F27",
+            8: "\u0F28",
+            9: "\u0F29",
+            0: "\u0F20",
+        },
+        n = {
+            "\u0F21": "1",
+            "\u0F22": "2",
+            "\u0F23": "3",
+            "\u0F24": "4",
+            "\u0F25": "5",
+            "\u0F26": "6",
+            "\u0F27": "7",
+            "\u0F28": "8",
+            "\u0F29": "9",
+            "\u0F20": "0",
+        };
     e.defineLocale("bo", {
-        months: "ཟླ་བ་དང་པོ_ཟླ་བ་གཉིས་པ_ཟླ་བ་གསུམ་པ_ཟླ་བ་བཞི་པ_ཟླ་བ་ལྔ་པ_ཟླ་བ་དྲུག་པ_ཟླ་བ་བདུན་པ_ཟླ་བ་བརྒྱད་པ_ཟླ་བ་དགུ་པ_ཟླ་བ་བཅུ་པ_ཟླ་བ་བཅུ་གཅིག་པ_ཟླ་བ་བཅུ་གཉིས་པ".split(
+        months: "\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F51\u0F44\u0F0B\u0F54\u0F7C_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F42\u0F49\u0F72\u0F66\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F42\u0F66\u0F74\u0F58\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F5E\u0F72\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F63\u0F94\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F51\u0FB2\u0F74\u0F42\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F51\u0F74\u0F53\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F62\u0F92\u0FB1\u0F51\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F51\u0F42\u0F74\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F45\u0F74\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F45\u0F74\u0F0B\u0F42\u0F45\u0F72\u0F42\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F45\u0F74\u0F0B\u0F42\u0F49\u0F72\u0F66\u0F0B\u0F54".split(
             "_",
         ),
         monthsShort:
-            "ཟླ་བ་དང་པོ_ཟླ་བ་གཉིས་པ_ཟླ་བ་གསུམ་པ_ཟླ་བ་བཞི་པ_ཟླ་བ་ལྔ་པ_ཟླ་བ་དྲུག་པ_ཟླ་བ་བདུན་པ_ཟླ་བ་བརྒྱད་པ_ཟླ་བ་དགུ་པ_ཟླ་བ་བཅུ་པ_ཟླ་བ་བཅུ་གཅིག་པ_ཟླ་བ་བཅུ་གཉིས་པ".split(
+            "\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F51\u0F44\u0F0B\u0F54\u0F7C_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F42\u0F49\u0F72\u0F66\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F42\u0F66\u0F74\u0F58\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F5E\u0F72\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F63\u0F94\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F51\u0FB2\u0F74\u0F42\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F51\u0F74\u0F53\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F62\u0F92\u0FB1\u0F51\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F51\u0F42\u0F74\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F45\u0F74\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F45\u0F74\u0F0B\u0F42\u0F45\u0F72\u0F42\u0F0B\u0F54_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F56\u0F45\u0F74\u0F0B\u0F42\u0F49\u0F72\u0F66\u0F0B\u0F54".split(
                 "_",
             ),
-        weekdays: "གཟའ་ཉི་མ་_གཟའ་ཟླ་བ་_གཟའ་མིག་དམར་_གཟའ་ལྷག་པ་_གཟའ་ཕུར་བུ_གཟའ་པ་སངས་_གཟའ་སྤེན་པ་".split("_"),
-        weekdaysShort: "ཉི་མ་_ཟླ་བ་_མིག་དམར་_ལྷག་པ་_ཕུར་བུ_པ་སངས་_སྤེན་པ་".split("_"),
-        weekdaysMin: "ཉི་མ་_ཟླ་བ་_མིག་དམར་_ལྷག་པ་_ཕུར་བུ_པ་སངས་_སྤེན་པ་".split("_"),
+        weekdays:
+            "\u0F42\u0F5F\u0F60\u0F0B\u0F49\u0F72\u0F0B\u0F58\u0F0B_\u0F42\u0F5F\u0F60\u0F0B\u0F5F\u0FB3\u0F0B\u0F56\u0F0B_\u0F42\u0F5F\u0F60\u0F0B\u0F58\u0F72\u0F42\u0F0B\u0F51\u0F58\u0F62\u0F0B_\u0F42\u0F5F\u0F60\u0F0B\u0F63\u0FB7\u0F42\u0F0B\u0F54\u0F0B_\u0F42\u0F5F\u0F60\u0F0B\u0F55\u0F74\u0F62\u0F0B\u0F56\u0F74_\u0F42\u0F5F\u0F60\u0F0B\u0F54\u0F0B\u0F66\u0F44\u0F66\u0F0B_\u0F42\u0F5F\u0F60\u0F0B\u0F66\u0FA4\u0F7A\u0F53\u0F0B\u0F54\u0F0B".split(
+                "_",
+            ),
+        weekdaysShort:
+            "\u0F49\u0F72\u0F0B\u0F58\u0F0B_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B_\u0F58\u0F72\u0F42\u0F0B\u0F51\u0F58\u0F62\u0F0B_\u0F63\u0FB7\u0F42\u0F0B\u0F54\u0F0B_\u0F55\u0F74\u0F62\u0F0B\u0F56\u0F74_\u0F54\u0F0B\u0F66\u0F44\u0F66\u0F0B_\u0F66\u0FA4\u0F7A\u0F53\u0F0B\u0F54\u0F0B".split(
+                "_",
+            ),
+        weekdaysMin:
+            "\u0F49\u0F72\u0F0B\u0F58\u0F0B_\u0F5F\u0FB3\u0F0B\u0F56\u0F0B_\u0F58\u0F72\u0F42\u0F0B\u0F51\u0F58\u0F62\u0F0B_\u0F63\u0FB7\u0F42\u0F0B\u0F54\u0F0B_\u0F55\u0F74\u0F62\u0F0B\u0F56\u0F74_\u0F54\u0F0B\u0F66\u0F44\u0F66\u0F0B_\u0F66\u0FA4\u0F7A\u0F53\u0F0B\u0F54\u0F0B".split(
+                "_",
+            ),
         longDateFormat: {
             LT: "A h:mm",
             LTS: "A h:mm:ss",
@@ -22,31 +53,32 @@
             LLLL: "dddd, D MMMM YYYY, A h:mm",
         },
         calendar: {
-            sameDay: "[དི་རིང] LT",
-            nextDay: "[སང་ཉིན] LT",
-            nextWeek: "[བདུན་ཕྲག་རྗེས་མ], LT",
-            lastDay: "[ཁ་སང] LT",
-            lastWeek: "[བདུན་ཕྲག་མཐའ་མ] dddd, LT",
+            sameDay: "[\u0F51\u0F72\u0F0B\u0F62\u0F72\u0F44] LT",
+            nextDay: "[\u0F66\u0F44\u0F0B\u0F49\u0F72\u0F53] LT",
+            nextWeek:
+                "[\u0F56\u0F51\u0F74\u0F53\u0F0B\u0F55\u0FB2\u0F42\u0F0B\u0F62\u0F97\u0F7A\u0F66\u0F0B\u0F58], LT",
+            lastDay: "[\u0F41\u0F0B\u0F66\u0F44] LT",
+            lastWeek: "[\u0F56\u0F51\u0F74\u0F53\u0F0B\u0F55\u0FB2\u0F42\u0F0B\u0F58\u0F50\u0F60\u0F0B\u0F58] dddd, LT",
             sameElse: "L",
         },
         relativeTime: {
-            future: "%s ལ་",
-            past: "%s སྔན་ལ",
-            s: "ལམ་སང",
-            ss: "%d སྐར་ཆ།",
-            m: "སྐར་མ་གཅིག",
-            mm: "%d སྐར་མ",
-            h: "ཆུ་ཚོད་གཅིག",
-            hh: "%d ཆུ་ཚོད",
-            d: "ཉིན་གཅིག",
-            dd: "%d ཉིན་",
-            M: "ཟླ་བ་གཅིག",
-            MM: "%d ཟླ་བ",
-            y: "ལོ་གཅིག",
-            yy: "%d ལོ",
+            future: "%s \u0F63\u0F0B",
+            past: "%s \u0F66\u0F94\u0F53\u0F0B\u0F63",
+            s: "\u0F63\u0F58\u0F0B\u0F66\u0F44",
+            ss: "%d \u0F66\u0F90\u0F62\u0F0B\u0F46\u0F0D",
+            m: "\u0F66\u0F90\u0F62\u0F0B\u0F58\u0F0B\u0F42\u0F45\u0F72\u0F42",
+            mm: "%d \u0F66\u0F90\u0F62\u0F0B\u0F58",
+            h: "\u0F46\u0F74\u0F0B\u0F5A\u0F7C\u0F51\u0F0B\u0F42\u0F45\u0F72\u0F42",
+            hh: "%d \u0F46\u0F74\u0F0B\u0F5A\u0F7C\u0F51",
+            d: "\u0F49\u0F72\u0F53\u0F0B\u0F42\u0F45\u0F72\u0F42",
+            dd: "%d \u0F49\u0F72\u0F53\u0F0B",
+            M: "\u0F5F\u0FB3\u0F0B\u0F56\u0F0B\u0F42\u0F45\u0F72\u0F42",
+            MM: "%d \u0F5F\u0FB3\u0F0B\u0F56",
+            y: "\u0F63\u0F7C\u0F0B\u0F42\u0F45\u0F72\u0F42",
+            yy: "%d \u0F63\u0F7C",
         },
         preparse: function (e) {
-            return e.replace(/[༡༢༣༤༥༦༧༨༩༠]/g, function (e) {
+            return e.replace(/[\u0f21\u0f22\u0f23\u0f24\u0f25\u0f26\u0f27\u0f28\u0f29\u0f20]/g, function (e) {
                 return n[e];
             });
         },
@@ -55,14 +87,26 @@
                 return t[e];
             });
         },
-        meridiemParse: /མཚན་མོ|ཞོགས་ཀས|ཉིན་གུང|དགོང་དག|མཚན་མོ/,
+        meridiemParse:
+            /\u0f58\u0f5a\u0f53\u0f0b\u0f58\u0f7c|\u0f5e\u0f7c\u0f42\u0f66\u0f0b\u0f40\u0f66|\u0f49\u0f72\u0f53\u0f0b\u0f42\u0f74\u0f44|\u0f51\u0f42\u0f7c\u0f44\u0f0b\u0f51\u0f42|\u0f58\u0f5a\u0f53\u0f0b\u0f58\u0f7c/,
         meridiemHour: function (e, t) {
-            return (12 === e && (e = 0), ("མཚན་མོ" === t && e >= 4) || ("ཉིན་གུང" === t && e < 5) || "དགོང་དག" === t)
+            return (12 === e && (e = 0),
+            ("\u0F58\u0F5A\u0F53\u0F0B\u0F58\u0F7C" === t && e >= 4) ||
+                ("\u0F49\u0F72\u0F53\u0F0B\u0F42\u0F74\u0F44" === t && e < 5) ||
+                "\u0F51\u0F42\u0F7C\u0F44\u0F0B\u0F51\u0F42" === t)
                 ? e + 12
                 : e;
         },
         meridiem: function (e, t, n) {
-            return e < 4 ? "མཚན་མོ" : e < 10 ? "ཞོགས་ཀས" : e < 17 ? "ཉིན་གུང" : e < 20 ? "དགོང་དག" : "མཚན་མོ";
+            return e < 4
+                ? "\u0F58\u0F5A\u0F53\u0F0B\u0F58\u0F7C"
+                : e < 10
+                  ? "\u0F5E\u0F7C\u0F42\u0F66\u0F0B\u0F40\u0F66"
+                  : e < 17
+                    ? "\u0F49\u0F72\u0F53\u0F0B\u0F42\u0F74\u0F44"
+                    : e < 20
+                      ? "\u0F51\u0F42\u0F7C\u0F44\u0F0B\u0F51\u0F42"
+                      : "\u0F58\u0F5A\u0F53\u0F0B\u0F58\u0F7C";
         },
         week: { dow: 0, doy: 6 },
     });

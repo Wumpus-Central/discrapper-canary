@@ -72,7 +72,7 @@ function T(e) {
                       children: [
                           null != E && "left" === l ? (0, a.jsxs)(a.Fragment, { children: [E, " "] }) : null,
                           null != f && "" !== f.value && `${f.value}: `,
-                          null != _ && "" !== _.value ? _.value : "–",
+                          null != _ && "" !== _.value ? _.value : "\u2013",
                           null != E && "right" === l ? (0, a.jsxs)(a.Fragment, { children: [" ", E] }) : null,
                       ],
                   }),

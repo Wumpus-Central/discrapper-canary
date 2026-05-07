@@ -1,5 +1,5 @@
 "use strict";
-r.d(t, { d: () => eO });
+r.d(t, { d: () => ek });
 var a = r(1139),
     n = r(299146);
 function o(e, t) {
@@ -74,7 +74,7 @@ function y(e, t) {
 var v = r(64700),
     w = r(223108),
     M = r.n(w);
-function O(e) {
+function k(e) {
     return (
         (function (e) {
             if (Array.isArray(e)) return g(e);
@@ -90,7 +90,7 @@ function O(e) {
         })()
     );
 }
-var k = function (e) {
+var O = function (e) {
     var t = e.styling,
         r = e.arrowStyle,
         n = e.expanded,
@@ -102,8 +102,8 @@ var k = function (e) {
         v.createElement(
             "div",
             t(["arrow", "arrowSign"], o, n, r),
-            "▶",
-            "double" === r && v.createElement("div", t(["arrowSign", "arrowSignInner"]), "▶"),
+            "\u25B6",
+            "double" === r && v.createElement("div", t(["arrowSign", "arrowSignInner"]), "\u25B6"),
         ),
     );
 };
@@ -112,7 +112,7 @@ function C(e, t) {
     for (var r = 0, a = Array(t); r < t; r++) a[r] = e[r];
     return a;
 }
-function A(e, t, r) {
+function x(e, t, r) {
     var a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
         n = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1 / 0;
     if ("Object" === e) {
@@ -220,20 +220,20 @@ function A(e, t, r) {
     }
     return s;
 }
-function E(e, t, r) {
+function A(e, t, r) {
     for (var a = []; t - e > r * r; ) r *= r;
     for (var n = e; n <= t; n += r) a.push({ from: n, to: Math.min(t, n + r - 1) });
     return a;
 }
-(k.propTypes = {
+(O.propTypes = {
     styling: M().func.isRequired,
     arrowStyle: M().oneOf(["single", "double"]),
     expanded: M().bool.isRequired,
     nodeType: M().string.isRequired,
     onClick: M().func.isRequired,
 }),
-    (k.defaultProps = { arrowStyle: "single" });
-var x = (function (e) {
+    (O.defaultProps = { arrowStyle: "single" });
+var E = (function (e) {
     f(n, e);
     var t,
         r =
@@ -282,7 +282,7 @@ var x = (function (e) {
                         : v.createElement(
                               "div",
                               (0, a.A)({}, t("itemRange", this.state.expanded), { onClick: this.handleClick }),
-                              v.createElement(k, {
+                              v.createElement(O, {
                                   nodeType: s,
                                   styling: t,
                                   expanded: !1,
@@ -297,7 +297,7 @@ var x = (function (e) {
         n
     );
 })(v.Component);
-function R(e, t) {
+function j(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
@@ -309,32 +309,32 @@ function R(e, t) {
     }
     return r;
 }
-function j(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? R(Object(r), !0).forEach(function (t) {
+            ? j(Object(r), !0).forEach(function (t) {
                   (0, m.A)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : R(Object(r)).forEach(function (t) {
+              : j(Object(r)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                 });
     }
     return e;
 }
-function S(e) {
+function R(e) {
     return { expanded: !e.isCircular && e.shouldExpandNode(e.keyPath, e.data, e.level) };
 }
-(0, m.A)(x, "propTypes", {
+(0, m.A)(E, "propTypes", {
     styling: M().func.isRequired,
     from: M().number.isRequired,
     to: M().number.isRequired,
     renderChildNodes: M().func.isRequired,
     nodeType: M().string.isRequired,
 });
-var _ = (function (e) {
+var S = (function (e) {
     f(n, e);
     var t,
         r =
@@ -363,7 +363,7 @@ var _ = (function (e) {
             (0, m.A)((0, h.A)(t), "handleClick", function () {
                 t.props.expandable && t.setState({ expanded: !t.state.expanded });
             }),
-            (t.state = S(e)),
+            (t.state = R(e)),
             t
         );
     }
@@ -372,8 +372,8 @@ var _ = (function (e) {
             {
                 key: "UNSAFE_componentWillReceiveProps",
                 value: function (e) {
-                    var t = S(e);
-                    S(this.props).expanded !== t.expanded && this.setState(t);
+                    var t = R(e);
+                    R(this.props).expanded !== t.expanded && this.setState(t);
                 },
             },
             {
@@ -428,7 +428,7 @@ var _ = (function (e) {
                                                       arguments.length > 5 && void 0 !== arguments[5]
                                                           ? arguments[5]
                                                           : 1 / 0,
-                                                  i = A.bind(null, e, t, r);
+                                                  i = x.bind(null, e, t, r);
                                               if (!a) return i().entries;
                                               var l = s < 1 / 0,
                                                   c = Math.min(
@@ -446,21 +446,21 @@ var _ = (function (e) {
                                                   var u = i(o, o + a - 1),
                                                       f = u.hasMore,
                                                       b = u.entries;
-                                                  n = f ? [].concat(O(b), O(E(o + a, o + 2 * a - 1, a))) : b;
+                                                  n = f ? [].concat(k(b), k(A(o + a, o + 2 * a - 1, a))) : b;
                                               } else
                                                   n = l
-                                                      ? E(o, s, a)
+                                                      ? A(o, s, a)
                                                       : [].concat(
-                                                            O(i(0, a - 5).entries),
-                                                            O(E(a - 4, c - 5, a)),
-                                                            O(i(c - 4, c - 1).entries),
+                                                            k(i(0, a - 5).entries),
+                                                            k(A(a - 4, c - 5, a)),
+                                                            k(i(c - 4, c - 1).entries),
                                                         );
                                               return n;
                                           })(o, s, f, i, r, n).forEach(function (r) {
                                               if (void 0 !== r.to)
                                                   b.push(
                                                       v.createElement(
-                                                          x,
+                                                          E,
                                                           (0, a.A)({}, t, {
                                                               key: "ItemRange--".concat(r.from, "-").concat(r.to),
                                                               from: r.from,
@@ -480,9 +480,9 @@ var _ = (function (e) {
                                                               postprocessValue: u,
                                                               collectionLimit: i,
                                                               key: "Node--".concat(n),
-                                                              keyPath: [n].concat(O(c)),
+                                                              keyPath: [n].concat(k(c)),
                                                               value: u(o),
-                                                              circularCache: [].concat(O(l), [o]),
+                                                              circularCache: [].concat(k(l), [o]),
                                                               isCircular: s,
                                                               hideRoot: !1,
                                                           }),
@@ -492,7 +492,7 @@ var _ = (function (e) {
                                           }),
                                           b
                                       );
-                                  })(j(j({}, this.props), {}, { level: this.props.level + 1 }))
+                                  })(_(_({}, this.props), {}, { level: this.props.level + 1 }))
                                 : null,
                         p = t(n, o, v.createElement("span", l("nestedNodeItemType", h), r), i(o, c), u),
                         m = [u, n, h, b];
@@ -506,7 +506,7 @@ var _ = (function (e) {
                               "li",
                               l.apply(void 0, ["nestedNode"].concat(m)),
                               b &&
-                                  v.createElement(k, {
+                                  v.createElement(O, {
                                       styling: l,
                                       nodeType: n,
                                       expanded: h,
@@ -534,7 +534,7 @@ var _ = (function (e) {
         n
     );
 })(v.Component);
-(0, m.A)(_, "propTypes", {
+(0, m.A)(S, "propTypes", {
     getItemString: M().func.isRequired,
     nodeTypeIndicator: M().any,
     nodeType: M().string.isRequired,
@@ -551,17 +551,17 @@ var _ = (function (e) {
     isCircular: M().bool,
     expandable: M().bool,
 }),
-    (0, m.A)(_, "defaultProps", { data: [], circularCache: [], level: 0, expandable: !0 });
+    (0, m.A)(S, "defaultProps", { data: [], circularCache: [], level: 0, expandable: !0 });
 var B = ["data"];
 function N(e) {
     var t = Object.getOwnPropertyNames(e).length;
     return "".concat(t, " ").concat(1 !== t ? "keys" : "key");
 }
-var D = function (e) {
+var P = function (e) {
     var t = e.data,
         r = o(e, B);
     return v.createElement(
-        _,
+        S,
         (0, a.A)({}, r, {
             data: t,
             nodeType: "Object",
@@ -571,16 +571,16 @@ var D = function (e) {
         }),
     );
 };
-D.propTypes = { data: M().object, nodeType: M().string.isRequired };
-var P = ["data"];
+P.propTypes = { data: M().object, nodeType: M().string.isRequired };
+var D = ["data"];
 function I(e) {
     return "".concat(e.length, " ").concat(1 !== e.length ? "items" : "item");
 }
-var T = function (e) {
+var L = function (e) {
     var t = e.data,
-        r = o(e, P);
+        r = o(e, D);
     return v.createElement(
-        _,
+        S,
         (0, a.A)({}, r, {
             data: t,
             nodeType: "Array",
@@ -590,7 +590,7 @@ var T = function (e) {
         }),
     );
 };
-function L(e, t) {
+function T(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, a = Array(t); r < t; r++) a[r] = e[r];
     return a;
@@ -608,7 +608,7 @@ function F(e, t) {
                         Array.isArray(e) ||
                         (t = (function (e) {
                             if (e) {
-                                if ("string" == typeof e) return L(e, void 0);
+                                if ("string" == typeof e) return T(e, void 0);
                                 var t = Object.prototype.toString.call(e).slice(8, -1);
                                 if (
                                     ("Object" === t && e.constructor && (t = e.constructor.name),
@@ -616,7 +616,7 @@ function F(e, t) {
                                 )
                                     return Array.from(e);
                                 if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t))
-                                    return L(e, void 0);
+                                    return T(e, void 0);
                             }
                         })(e))
                     ) {
@@ -680,10 +680,10 @@ function F(e, t) {
         .concat(r, " ")
         .concat(1 !== r ? "entries" : "entry");
 }
-T.propTypes = { data: M().array };
+L.propTypes = { data: M().array };
 let z = function (e) {
     var t = (0, a.A)({}, e);
-    return v.createElement(_, (0, a.A)({}, t, { nodeType: "Iterable", nodeTypeIndicator: "()", createItemString: F }));
+    return v.createElement(S, (0, a.A)({}, t, { nodeType: "Iterable", nodeTypeIndicator: "()", createItemString: F }));
 };
 var q = function (e) {
     var t = e.nodeType,
@@ -709,7 +709,7 @@ var q = function (e) {
                           }
                         : i)(s),
                     s,
-                ].concat(O(n)),
+                ].concat(k(n)),
             ),
         ),
     );
@@ -736,7 +736,7 @@ function U(e, t) {
     }
     return r;
 }
-function W(e) {
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
@@ -751,7 +751,7 @@ function W(e) {
     }
     return e;
 }
-var G = function (e) {
+var W = function (e) {
     var t,
         r = e.getItemString,
         n = e.keyPath,
@@ -779,15 +779,15 @@ var G = function (e) {
             value: l,
             valueRenderer: c,
         },
-        d = W(W(W({}, f), h), {}, { data: l, isCustomNode: u });
+        d = G(G(G({}, f), h), {}, { data: l, isCustomNode: u });
     switch (b) {
         case "Object":
         case "Error":
         case "WeakMap":
         case "WeakSet":
-            return v.createElement(D, d);
+            return v.createElement(P, d);
         case "Array":
-            return v.createElement(T, d);
+            return v.createElement(L, d);
         case "Iterable":
         case "Map":
         case "Set":
@@ -861,7 +861,7 @@ var G = function (e) {
             );
     }
 };
-G.propTypes = {
+W.propTypes = {
     getItemString: M().func.isRequired,
     keyPath: M().arrayOf(M().oneOfType([M().string, M().number]).isRequired).isRequired,
     labelRenderer: M().func.isRequired,
@@ -870,7 +870,7 @@ G.propTypes = {
     valueRenderer: M().func.isRequired,
     isCustomNode: M().func.isRequired,
 };
-let H = G;
+let H = W;
 function Z(e) {
     return (Z =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -883,12 +883,12 @@ function Z(e) {
                       : typeof e;
               })(e);
 }
-function Y(e, t) {
+function X(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var r = 0, a = Array(t); r < t; r++) a[r] = e[r];
     return a;
 }
-function X(e, t) {
+function Y(e, t) {
     return (
         (function (e) {
             if (Array.isArray(e)) return e;
@@ -922,14 +922,14 @@ function X(e, t) {
         })(e, t) ||
         (function (e, t) {
             if (e) {
-                if ("string" == typeof e) return Y(e, t);
+                if ("string" == typeof e) return X(e, t);
                 var r = {}.toString.call(e).slice(8, -1);
                 return (
                     "Object" === r && e.constructor && (r = e.constructor.name),
                     "Map" === r || "Set" === r
                         ? Array.from(e)
                         : "Arguments" === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-                          ? Y(e, t)
+                          ? X(e, t)
                           : void 0
                 );
             }
@@ -1002,7 +1002,7 @@ var ea = J.default,
             c,
             u,
             f,
-            b = X(
+            b = Y(
                 ((r = (t = K()(e).array())[0] / 255),
                 [
                     0.299 * r + 0.587 * (a = t[1] / 255) + 0.114 * (n = t[2] / 255),
@@ -1157,7 +1157,7 @@ var ea = J.default,
     },
     eh = function (e, t) {
         if ((e && eb(e) && e.extend && (e = e.extend), "string" == typeof e)) {
-            var r = X(e.split(":"), 2),
+            var r = Y(e.split(":"), 2),
                 a = r[0],
                 n = r[1];
             (e = t ? t[a] : J[a]), "inverted" === n && (e = eu(e));
@@ -1458,7 +1458,7 @@ function eM(e) {
         { styling: em(o) }
     );
 }
-var eO = (function (e) {
+var ek = (function (e) {
     f(n, e);
     var t,
         r =
@@ -1530,7 +1530,7 @@ var eO = (function (e) {
         n
     );
 })(v.Component);
-(0, m.A)(eO, "propTypes", {
+(0, m.A)(ek, "propTypes", {
     data: M().any,
     hideRoot: M().bool,
     theme: M().oneOfType([M().object, M().string]),
@@ -1539,7 +1539,7 @@ var eO = (function (e) {
     postprocessValue: M().func,
     sortObjectKeys: M().oneOfType([M().func, M().bool]),
 }),
-    (0, m.A)(eO, "defaultProps", {
+    (0, m.A)(ek, "defaultProps", {
         shouldExpandNode: function (e, t, r) {
             return 0 === r;
         },

@@ -468,7 +468,7 @@ function tc(e) {
                 variant: "text-sm/medium",
                 color: "text-muted",
                 className: tu.P6,
-                children: [g, A, I].join(" • "),
+                children: [g, A, I].join(" \u2022 "),
             }),
             (0, i.jsx)(e$.c, {}),
             p.length > 0

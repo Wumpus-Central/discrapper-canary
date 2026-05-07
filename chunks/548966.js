@@ -228,7 +228,7 @@ let l = {
             matchPatterns: {
                 narrow: /^(f\.? ?Kr\.?|f\.? ?v\.? ?t\.?|e\.? ?Kr\.?|v\.? ?t\.?)/i,
                 abbreviated: /^(f\.? ?Kr\.?|f\.? ?v\.? ?t\.?|e\.? ?Kr\.?|v\.? ?t\.?)/i,
-                wide: /^(före Kristus|före vår tid|efter Kristus|vår tid)/i,
+                wide: /^(f\xf6re Kristus|f\xf6re v\xe5r tid|efter Kristus|v\xe5r tid)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/^f/i, /^[ev]/i] },
@@ -259,9 +259,9 @@ let l = {
         day: (0, u.A)({
             matchPatterns: {
                 narrow: /^[smtofl]/i,
-                short: /^(sö|må|ti|on|to|fr|lö)/i,
-                abbreviated: /^(sön|mån|tis|ons|tors|fre|lör)/i,
-                wide: /^(söndag|måndag|tisdag|onsdag|torsdag|fredag|lördag)/i,
+                short: /^(s\xf6|m\xe5|ti|on|to|fr|l\xf6)/i,
+                abbreviated: /^(s\xf6n|m\xe5n|tis|ons|tors|fre|l\xf6r)/i,
+                wide: /^(s\xf6ndag|m\xe5ndag|tisdag|onsdag|torsdag|fredag|l\xf6rdag)/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i] },
@@ -269,7 +269,7 @@ let l = {
         }),
         dayPeriod: (0, u.A)({
             matchPatterns: {
-                any: /^([fe]\.?\s?m\.?|midn(att)?|midd(ag)?|(på) (morgonen|eftermiddagen|kvällen|natten))/i,
+                any: /^([fe]\.?\s?m\.?|midn(att)?|midd(ag)?|(p\xe5) (morgonen|eftermiddagen|kv\xe4llen|natten))/i,
             },
             defaultMatchWidth: "any",
             parsePatterns: {
@@ -280,7 +280,7 @@ let l = {
                     noon: /^midd/i,
                     morning: /morgon/i,
                     afternoon: /eftermiddag/i,
-                    evening: /kväll/i,
+                    evening: /kv\xe4ll/i,
                     night: /natt/i,
                 },
             },

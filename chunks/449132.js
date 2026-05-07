@@ -41,7 +41,7 @@ var n = {
     "idealIssuer.selectField.title": "Bank",
     "idealIssuer.selectField.placeholder": "V\xe6lg din bank",
     "creditCard.success": "Betaling gennemf\xf8rt",
-    loading: "Indl\xe6ser…",
+    loading: "Indl\xe6ser\u2026",
     continue: "Forts\xe6t",
     continueTo: "Forts\xe6t til",
     "wechatpay.timetopay": "Du har %@ at betale",

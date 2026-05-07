@@ -16,5 +16,5 @@ var a = o(t(319448)),
             );
         };
 e.default = function (r) {
-    return (r >= 55296 && r <= 57343) || r > 1114111 ? "�" : (r in a.default && (r = a.default[r]), n(r));
+    return (r >= 55296 && r <= 57343) || r > 1114111 ? "\uFFFD" : (r in a.default && (r = a.default[r]), n(r));
 };

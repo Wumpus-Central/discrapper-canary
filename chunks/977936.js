@@ -52,7 +52,7 @@ class g extends d.c {
         return n;
     }
 }
-var h = r(658809);
+var h = r(881190);
 class f extends d.c {
     innerPattern() {
         return /(deze)?\s*(namiddag|avond|middernacht|ochtend|middag|'s middags|'s avonds|'s ochtends)(?=\W|$)/i;
@@ -209,7 +209,7 @@ let w = {
         negentiende: 19,
         twintigste: 20,
         eenentwintigste: 21,
-        tweeëntwintigste: 22,
+        "twee\xebntwintigste": 22,
         drieentwintigste: 23,
         vierentwintigste: 24,
         vijfentwintigste: 25,
@@ -295,7 +295,7 @@ class j extends d.c {
 }
 var B = r(1673);
 let W = RegExp(
-    `(?:(?:\\,|\\(|\\（)\\s*)?(?:op\\s*?)?(?:(deze|vorige|volgende)\\s*(?:week\\s*)?)?(${(0, y.uJ)(w)})(?=\\W|$)`,
+    `(?:(?:\\,|\\(|\\\u{FF08})\\s*)?(?:op\\s*?)?(?:(deze|vorige|volgende)\\s*(?:week\\s*)?)?(${(0, y.uJ)(w)})(?=\\W|$)`,
     "i",
 );
 class S extends d.c {
@@ -316,7 +316,7 @@ class S extends d.c {
     }
 }
 let I = RegExp(
-    `(?:on\\s*?)?(${v})(?:\\s*(?:tot|\\-|\\–|until|through|till|\\s)\\s*(${v}))?(?:-|/|\\s*(?:of)?\\s*)(` +
+    `(?:on\\s*?)?(${v})(?:\\s*(?:tot|\\-|\\\u{2013}|until|through|till|\\s)\\s*(${v}))?(?:-|/|\\s*(?:of)?\\s*)(` +
         (0, y.uJ)(D) +
         ")(?:(?:-|/|,?\\s*)" +
         `(${$}(?![^\\s]\\d))` +
@@ -381,7 +381,7 @@ class q extends J.B {
         return "(?:(?:om)\\s*)?";
     }
     followingPhase() {
-        return "\\s*(?:\\-|\\–|\\~|\\〜|om|\\?)\\s*";
+        return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|om|\\?)\\s*";
     }
     primarySuffix() {
         return "(?:\\s*(?:uur))?(?!/)(?=\\W|$)";

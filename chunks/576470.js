@@ -45,7 +45,7 @@ class u extends r.PureComponent {
     render() {
         let { deadline: e, children: t, className: n, stopAtOneSec: r } = this.props;
         if (e === 1 / 0)
-            return (0, i.jsx)("span", { className: n, "aria-label": l.intl.string(l.t.PqEzn8), children: "∞" });
+            return (0, i.jsx)("span", { className: n, "aria-label": l.intl.string(l.t.PqEzn8), children: "\u221E" });
         let s = (0, o.Tf)(Date.now(), e, r);
         return null != t ? t(s, this.defaultRender.bind(this, s)) : this.defaultRender(s);
     }

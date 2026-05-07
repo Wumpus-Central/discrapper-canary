@@ -1,40 +1,45 @@
 n.r(t), n.d(t, { default: () => c });
 var a = {
         lessThanXSeconds: {
-            one: "1秒未満",
-            other: "{{count}}秒未満",
-            oneWithSuffix: "約1秒",
-            otherWithSuffix: "約{{count}}秒",
+            one: "1\u79D2\u672A\u6E80",
+            other: "{{count}}\u79D2\u672A\u6E80",
+            oneWithSuffix: "\u7D041\u79D2",
+            otherWithSuffix: "\u7D04{{count}}\u79D2",
         },
-        xSeconds: { one: "1秒", other: "{{count}}秒" },
-        halfAMinute: "30秒",
+        xSeconds: { one: "1\u79D2", other: "{{count}}\u79D2" },
+        halfAMinute: "30\u79D2",
         lessThanXMinutes: {
-            one: "1分未満",
-            other: "{{count}}分未満",
-            oneWithSuffix: "約1分",
-            otherWithSuffix: "約{{count}}分",
+            one: "1\u5206\u672A\u6E80",
+            other: "{{count}}\u5206\u672A\u6E80",
+            oneWithSuffix: "\u7D041\u5206",
+            otherWithSuffix: "\u7D04{{count}}\u5206",
         },
-        xMinutes: { one: "1分", other: "{{count}}分" },
-        aboutXHours: { one: "約1時間", other: "約{{count}}時間" },
-        xHours: { one: "1時間", other: "{{count}}時間" },
-        xDays: { one: "1日", other: "{{count}}日" },
-        aboutXWeeks: { one: "約1週間", other: "約{{count}}週間" },
-        xWeeks: { one: "1週間", other: "{{count}}週間" },
-        aboutXMonths: { one: "約1か月", other: "約{{count}}か月" },
-        xMonths: { one: "1か月", other: "{{count}}か月" },
-        aboutXYears: { one: "約1年", other: "約{{count}}年" },
-        xYears: { one: "1年", other: "{{count}}年" },
-        overXYears: { one: "1年以上", other: "{{count}}年以上" },
-        almostXYears: { one: "1年近く", other: "{{count}}年近く" },
+        xMinutes: { one: "1\u5206", other: "{{count}}\u5206" },
+        aboutXHours: { one: "\u7D041\u6642\u9593", other: "\u7D04{{count}}\u6642\u9593" },
+        xHours: { one: "1\u6642\u9593", other: "{{count}}\u6642\u9593" },
+        xDays: { one: "1\u65E5", other: "{{count}}\u65E5" },
+        aboutXWeeks: { one: "\u7D041\u9031\u9593", other: "\u7D04{{count}}\u9031\u9593" },
+        xWeeks: { one: "1\u9031\u9593", other: "{{count}}\u9031\u9593" },
+        aboutXMonths: { one: "\u7D041\u304B\u6708", other: "\u7D04{{count}}\u304B\u6708" },
+        xMonths: { one: "1\u304B\u6708", other: "{{count}}\u304B\u6708" },
+        aboutXYears: { one: "\u7D041\u5E74", other: "\u7D04{{count}}\u5E74" },
+        xYears: { one: "1\u5E74", other: "{{count}}\u5E74" },
+        overXYears: { one: "1\u5E74\u4EE5\u4E0A", other: "{{count}}\u5E74\u4EE5\u4E0A" },
+        almostXYears: { one: "1\u5E74\u8FD1\u304F", other: "{{count}}\u5E74\u8FD1\u304F" },
     },
     r = n(385987),
     i = {
         date: (0, r.A)({
-            formats: { full: "y年M月d日EEEE", long: "y年M月d日", medium: "y/MM/dd", short: "y/MM/dd" },
+            formats: {
+                full: "y\u5E74M\u6708d\u65E5EEEE",
+                long: "y\u5E74M\u6708d\u65E5",
+                medium: "y/MM/dd",
+                short: "y/MM/dd",
+            },
             defaultWidth: "full",
         }),
         time: (0, r.A)({
-            formats: { full: "H時mm分ss秒 zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" },
+            formats: { full: "H\u6642mm\u5206ss\u79D2 zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" },
             defaultWidth: "full",
         }),
         dateTime: (0, r.A)({
@@ -48,11 +53,11 @@ var a = {
         }),
     },
     o = {
-        lastWeek: "先週のeeeeのp",
-        yesterday: "昨日のp",
-        today: "今日のp",
-        tomorrow: "明日のp",
-        nextWeek: "翌週のeeeeのp",
+        lastWeek: "\u5148\u9031\u306Eeeee\u306Ep",
+        yesterday: "\u6628\u65E5\u306Ep",
+        today: "\u4ECA\u65E5\u306Ep",
+        tomorrow: "\u660E\u65E5\u306Ep",
+        nextWeek: "\u7FCC\u9031\u306Eeeee\u306Ep",
         other: "P",
     },
     d = n(981737),
@@ -61,34 +66,43 @@ var a = {
             var n = Number(e);
             switch (String(null == t ? void 0 : t.unit)) {
                 case "year":
-                    return "".concat(n, "年");
+                    return "".concat(n, "\u5E74");
                 case "quarter":
-                    return "第".concat(n, "四半期");
+                    return "\u7B2C".concat(n, "\u56DB\u534A\u671F");
                 case "month":
-                    return "".concat(n, "月");
+                    return "".concat(n, "\u6708");
                 case "week":
-                    return "第".concat(n, "週");
+                    return "\u7B2C".concat(n, "\u9031");
                 case "date":
-                    return "".concat(n, "日");
+                    return "".concat(n, "\u65E5");
                 case "hour":
-                    return "".concat(n, "時");
+                    return "".concat(n, "\u6642");
                 case "minute":
-                    return "".concat(n, "分");
+                    return "".concat(n, "\u5206");
                 case "second":
-                    return "".concat(n, "秒");
+                    return "".concat(n, "\u79D2");
                 default:
                     return "".concat(n);
             }
         },
         era: (0, d.A)({
-            values: { narrow: ["BC", "AC"], abbreviated: ["紀元前", "西暦"], wide: ["紀元前", "西暦"] },
+            values: {
+                narrow: ["BC", "AC"],
+                abbreviated: ["\u7D00\u5143\u524D", "\u897F\u66A6"],
+                wide: ["\u7D00\u5143\u524D", "\u897F\u66A6"],
+            },
             defaultWidth: "wide",
         }),
         quarter: (0, d.A)({
             values: {
                 narrow: ["1", "2", "3", "4"],
                 abbreviated: ["Q1", "Q2", "Q3", "Q4"],
-                wide: ["第1四半期", "第2四半期", "第3四半期", "第4四半期"],
+                wide: [
+                    "\u7B2C1\u56DB\u534A\u671F",
+                    "\u7B2C2\u56DB\u534A\u671F",
+                    "\u7B2C3\u56DB\u534A\u671F",
+                    "\u7B2C4\u56DB\u534A\u671F",
+                ],
             },
             defaultWidth: "wide",
             argumentCallback: function (e) {
@@ -98,84 +112,118 @@ var a = {
         month: (0, d.A)({
             values: {
                 narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-                abbreviated: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
-                wide: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+                abbreviated: [
+                    "1\u6708",
+                    "2\u6708",
+                    "3\u6708",
+                    "4\u6708",
+                    "5\u6708",
+                    "6\u6708",
+                    "7\u6708",
+                    "8\u6708",
+                    "9\u6708",
+                    "10\u6708",
+                    "11\u6708",
+                    "12\u6708",
+                ],
+                wide: [
+                    "1\u6708",
+                    "2\u6708",
+                    "3\u6708",
+                    "4\u6708",
+                    "5\u6708",
+                    "6\u6708",
+                    "7\u6708",
+                    "8\u6708",
+                    "9\u6708",
+                    "10\u6708",
+                    "11\u6708",
+                    "12\u6708",
+                ],
             },
             defaultWidth: "wide",
         }),
         day: (0, d.A)({
             values: {
-                narrow: ["日", "月", "火", "水", "木", "金", "土"],
-                short: ["日", "月", "火", "水", "木", "金", "土"],
-                abbreviated: ["日", "月", "火", "水", "木", "金", "土"],
-                wide: ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"],
+                narrow: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"],
+                short: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"],
+                abbreviated: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"],
+                wide: [
+                    "\u65E5\u66DC\u65E5",
+                    "\u6708\u66DC\u65E5",
+                    "\u706B\u66DC\u65E5",
+                    "\u6C34\u66DC\u65E5",
+                    "\u6728\u66DC\u65E5",
+                    "\u91D1\u66DC\u65E5",
+                    "\u571F\u66DC\u65E5",
+                ],
             },
             defaultWidth: "wide",
         }),
         dayPeriod: (0, d.A)({
             values: {
                 narrow: {
-                    am: "午前",
-                    pm: "午後",
-                    midnight: "深夜",
-                    noon: "正午",
-                    morning: "朝",
-                    afternoon: "午後",
-                    evening: "夜",
-                    night: "深夜",
+                    am: "\u5348\u524D",
+                    pm: "\u5348\u5F8C",
+                    midnight: "\u6DF1\u591C",
+                    noon: "\u6B63\u5348",
+                    morning: "\u671D",
+                    afternoon: "\u5348\u5F8C",
+                    evening: "\u591C",
+                    night: "\u6DF1\u591C",
                 },
                 abbreviated: {
-                    am: "午前",
-                    pm: "午後",
-                    midnight: "深夜",
-                    noon: "正午",
-                    morning: "朝",
-                    afternoon: "午後",
-                    evening: "夜",
-                    night: "深夜",
+                    am: "\u5348\u524D",
+                    pm: "\u5348\u5F8C",
+                    midnight: "\u6DF1\u591C",
+                    noon: "\u6B63\u5348",
+                    morning: "\u671D",
+                    afternoon: "\u5348\u5F8C",
+                    evening: "\u591C",
+                    night: "\u6DF1\u591C",
                 },
                 wide: {
-                    am: "午前",
-                    pm: "午後",
-                    midnight: "深夜",
-                    noon: "正午",
-                    morning: "朝",
-                    afternoon: "午後",
-                    evening: "夜",
-                    night: "深夜",
+                    am: "\u5348\u524D",
+                    pm: "\u5348\u5F8C",
+                    midnight: "\u6DF1\u591C",
+                    noon: "\u6B63\u5348",
+                    morning: "\u671D",
+                    afternoon: "\u5348\u5F8C",
+                    evening: "\u591C",
+                    night: "\u6DF1\u591C",
                 },
             },
             defaultWidth: "wide",
             formattingValues: {
                 narrow: {
-                    am: "午前",
-                    pm: "午後",
-                    midnight: "深夜",
-                    noon: "正午",
-                    morning: "朝",
-                    afternoon: "午後",
-                    evening: "夜",
-                    night: "深夜",
+                    am: "\u5348\u524D",
+                    pm: "\u5348\u5F8C",
+                    midnight: "\u6DF1\u591C",
+                    noon: "\u6B63\u5348",
+                    morning: "\u671D",
+                    afternoon: "\u5348\u5F8C",
+                    evening: "\u591C",
+                    night: "\u6DF1\u591C",
                 },
                 abbreviated: {
-                    am: "午前",
-                    pm: "午後",
-                    midnight: "深夜",
-                    noon: "正午",
-                    morning: "朝",
-                    afternoon: "午後",
-                    evening: "夜",
-                    night: "深夜",
+                    am: "\u5348\u524D",
+                    pm: "\u5348\u5F8C",
+                    midnight: "\u6DF1\u591C",
+                    noon: "\u6B63\u5348",
+                    morning: "\u671D",
+                    afternoon: "\u5348\u5F8C",
+                    evening: "\u591C",
+                    night: "\u6DF1\u591C",
                 },
                 wide: {
-                    am: "午前",
-                    pm: "午後",
-                    midnight: "深夜",
-                    noon: "正午",
-                    morning: "朝",
-                    afternoon: "午後",
-                    evening: "夜",
-                    night: "深夜",
+                    am: "\u5348\u524D",
+                    pm: "\u5348\u5F8C",
+                    midnight: "\u6DF1\u591C",
+                    noon: "\u6B63\u5348",
+                    morning: "\u671D",
+                    afternoon: "\u5348\u5F8C",
+                    evening: "\u591C",
+                    night: "\u6DF1\u591C",
                 },
             },
             defaultFormattingWidth: "wide",
@@ -202,8 +250,8 @@ let c = {
                         : i.other.replace("{{count}}", String(t))),
             n.addSuffix)
         )
-            if (n.comparison && n.comparison > 0) return r + "後";
-            else return r + "前";
+            if (n.comparison && n.comparison > 0) return r + "\u5F8C";
+            else return r + "\u524D";
         return r;
     },
     formatLong: i,
@@ -213,7 +261,7 @@ let c = {
     localize: u,
     match: {
         ordinalNumber: (0, h.A)({
-            matchPattern: /^第?\d+(年|四半期|月|週|日|時|分|秒)?/i,
+            matchPattern: /^\u7b2c?\d+(\u5e74|\u56db\u534a\u671f|\u6708|\u9031|\u65e5|\u6642|\u5206|\u79d2)?/i,
             parsePattern: /\d+/i,
             valueCallback: function (e) {
                 return parseInt(e, 10);
@@ -222,17 +270,26 @@ let c = {
         era: (0, s.A)({
             matchPatterns: {
                 narrow: /^(B\.?C\.?|A\.?D\.?)/i,
-                abbreviated: /^(紀元[前後]|西暦)/i,
-                wide: /^(紀元[前後]|西暦)/i,
+                abbreviated: /^(\u7d00\u5143[\u524d\u5f8c]|\u897f\u66a6)/i,
+                wide: /^(\u7d00\u5143[\u524d\u5f8c]|\u897f\u66a6)/i,
             },
             defaultMatchWidth: "wide",
-            parsePatterns: { narrow: [/^B/i, /^A/i], any: [/^(紀元前)/i, /^(西暦|紀元後)/i] },
+            parsePatterns: {
+                narrow: [/^B/i, /^A/i],
+                any: [/^(\u7d00\u5143\u524d)/i, /^(\u897f\u66a6|\u7d00\u5143\u5f8c)/i],
+            },
             defaultParseWidth: "any",
         }),
         quarter: (0, s.A)({
-            matchPatterns: { narrow: /^[1234]/i, abbreviated: /^Q[1234]/i, wide: /^第[1234一二三四１２３４]四半期/i },
+            matchPatterns: {
+                narrow: /^[1234]/i,
+                abbreviated: /^Q[1234]/i,
+                wide: /^\u7b2c[1234\u4e00\u4e8c\u4e09\u56db\uff11\uff12\uff13\uff14]\u56db\u534a\u671f/i,
+            },
             defaultMatchWidth: "wide",
-            parsePatterns: { any: [/(1|一|１)/i, /(2|二|２)/i, /(3|三|３)/i, /(4|四|４)/i] },
+            parsePatterns: {
+                any: [/(1|\u4e00|\uff11)/i, /(2|\u4e8c|\uff12)/i, /(3|\u4e09|\uff13)/i, /(4|\u56db|\uff14)/i],
+            },
             defaultParseWidth: "any",
             valueCallback: function (e) {
                 return e + 1;
@@ -241,8 +298,8 @@ let c = {
         month: (0, s.A)({
             matchPatterns: {
                 narrow: /^([123456789]|1[012])/,
-                abbreviated: /^([123456789]|1[012])月/i,
-                wide: /^([123456789]|1[012])月/i,
+                abbreviated: /^([123456789]|1[012])\u6708/i,
+                wide: /^([123456789]|1[012])\u6708/i,
             },
             defaultMatchWidth: "wide",
             parsePatterns: { any: [/^1\D/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/] },
@@ -250,28 +307,30 @@ let c = {
         }),
         day: (0, s.A)({
             matchPatterns: {
-                narrow: /^[日月火水木金土]/,
-                short: /^[日月火水木金土]/,
-                abbreviated: /^[日月火水木金土]/,
-                wide: /^[日月火水木金土]曜日/,
+                narrow: /^[\u65e5\u6708\u706b\u6c34\u6728\u91d1\u571f]/,
+                short: /^[\u65e5\u6708\u706b\u6c34\u6728\u91d1\u571f]/,
+                abbreviated: /^[\u65e5\u6708\u706b\u6c34\u6728\u91d1\u571f]/,
+                wide: /^[\u65e5\u6708\u706b\u6c34\u6728\u91d1\u571f]\u66dc\u65e5/,
             },
             defaultMatchWidth: "wide",
-            parsePatterns: { any: [/^日/, /^月/, /^火/, /^水/, /^木/, /^金/, /^土/] },
+            parsePatterns: { any: [/^\u65e5/, /^\u6708/, /^\u706b/, /^\u6c34/, /^\u6728/, /^\u91d1/, /^\u571f/] },
             defaultParseWidth: "any",
         }),
         dayPeriod: (0, s.A)({
-            matchPatterns: { any: /^(AM|PM|午前|午後|正午|深夜|真夜中|夜|朝)/i },
+            matchPatterns: {
+                any: /^(AM|PM|\u5348\u524d|\u5348\u5f8c|\u6b63\u5348|\u6df1\u591c|\u771f\u591c\u4e2d|\u591c|\u671d)/i,
+            },
             defaultMatchWidth: "any",
             parsePatterns: {
                 any: {
-                    am: /^(A|午前)/i,
-                    pm: /^(P|午後)/i,
-                    midnight: /^深夜|真夜中/i,
-                    noon: /^正午/i,
-                    morning: /^朝/i,
-                    afternoon: /^午後/i,
-                    evening: /^夜/i,
-                    night: /^深夜/i,
+                    am: /^(A|\u5348\u524d)/i,
+                    pm: /^(P|\u5348\u5f8c)/i,
+                    midnight: /^\u6df1\u591c|\u771f\u591c\u4e2d/i,
+                    noon: /^\u6b63\u5348/i,
+                    morning: /^\u671d/i,
+                    afternoon: /^\u5348\u5f8c/i,
+                    evening: /^\u591c/i,
+                    night: /^\u6df1\u591c/i,
                 },
             },
             defaultParseWidth: "any",

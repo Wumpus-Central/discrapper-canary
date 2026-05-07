@@ -17,7 +17,7 @@ var e = n(627968),
     N = n(534514),
     p = n(534890),
     f = n(782603),
-    S = n(985018);
+    S = n(375708);
 let C = "/assets/8b9e0ddc76afa526.png",
     P = "/assets/16b25e0cf166698d.png",
     y = "/assets/6011f35d14cdcf7f.png",
@@ -51,7 +51,7 @@ function I(t) {
                             null != n &&
                                 (0, e.jsxs)(e.Fragment, {
                                     children: [
-                                        (0, e.jsx)("span", { className: k.xE, children: "•" }),
+                                        (0, e.jsx)("span", { className: k.xE, children: "\u2022" }),
                                         (0, e.jsx)(j.E, {
                                             color: "text-strong",
                                             variant: "text-xxs/medium",
@@ -80,7 +80,7 @@ function I(t) {
                             r > 0 &&
                                 (0, e.jsxs)(e.Fragment, {
                                     children: [
-                                        (0, e.jsx)("span", { className: k.xE, children: "•" }),
+                                        (0, e.jsx)("span", { className: k.xE, children: "\u2022" }),
                                         (0, e.jsxs)(j.E, {
                                             color: "text-default",
                                             variant: "text-xs/medium",
@@ -90,14 +90,14 @@ function I(t) {
                                                     role: "img",
                                                     "aria-label": S.intl.string(S.t.gHp0C4),
                                                     className: k.Kk,
-                                                    children: "❤️",
+                                                    children: "\u2764\uFE0F",
                                                 }),
                                                 r,
                                             ],
                                         }),
                                     ],
                                 }),
-                            (0, e.jsx)("span", { className: k.xE, children: "•" }),
+                            (0, e.jsx)("span", { className: k.xE, children: "\u2022" }),
                             (0, e.jsx)(j.E, { color: "text-default", variant: "text-xs/medium", children: l }),
                         ],
                     }),
@@ -167,7 +167,7 @@ function E(t) {
                                                                 role: "img",
                                                                 "aria-label": S.intl.string(S.t.gHp0C4),
                                                                 className: k.Kk,
-                                                                children: "❤️",
+                                                                children: "\u2764\uFE0F",
                                                             }),
                                                             "17",
                                                         ],
@@ -436,7 +436,7 @@ function O(t) {
                 onClick: () => {
                     (0, d.openModalLazy)(async () => {
                         let { default: t } = await Promise.all([
-                            n.e("80848"),
+                            n.e("49476"),
                             n.e("11585"),
                             n.e("3589"),
                             n.e("89916"),

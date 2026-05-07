@@ -4571,7 +4571,7 @@ let ta = [
         uk: { nu: ["latn"] },
         und: { nu: ["latn"] },
         ur: { nu: ["latn"] },
-        "ur-IN": { nu: ["arabext"], separator: { arabext: "٫" } },
+        "ur-IN": { nu: ["arabext"], separator: { arabext: "\u066B" } },
         uz: { nu: ["latn"] },
         "uz-Arab": { nu: ["arabext"] },
         "uz-Cyrl": { nu: ["latn"] },

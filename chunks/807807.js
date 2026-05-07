@@ -1,4 +1,4 @@
-n.d(t, { default: () => e4 });
+n.d(t, { default: () => e6 });
 var r = n(627968),
     l = n(64700),
     s = n(562708),
@@ -912,8 +912,8 @@ var eT = n(495544),
 function eJ() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "540866",
-        l = "a82e11d8eecd6013098c53dc9029190abb97478a".substring(0, 7),
+        n = "540902",
+        l = "481aabd124ae35310423b4051c24b82a55881670".substring(0, 7),
         s = e$.A?.app.getVersion(),
         i = e$.A?.app.getBuildNumber(),
         u = e$.A?.app.getAppArch(),
@@ -1024,7 +1024,7 @@ function e1(e) {
         }),
     });
 }
-function e9() {
+function e2() {
     let e = l.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
@@ -1041,7 +1041,7 @@ function e9() {
                             children: G.intl.string(G.t["Knf/f/"]),
                         }),
                     }),
-                    (0, r.jsx)("span", { className: e0.xE, "aria-hidden": "true", children: "•" }),
+                    (0, r.jsx)("span", { className: e0.xE, "aria-hidden": "true", children: "\u2022" }),
                     (0, r.jsx)(eD.Anchor, {
                         href: eR.X7G.TERMS,
                         children: (0, r.jsx)(a.E, {
@@ -1051,7 +1051,7 @@ function e9() {
                             children: G.intl.string(G.t.uFSTGq),
                         }),
                     }),
-                    (0, r.jsx)("span", { className: e0.xE, "aria-hidden": "true", children: "•" }),
+                    (0, r.jsx)("span", { className: e0.xE, "aria-hidden": "true", children: "\u2022" }),
                     (0, r.jsx)(eF.Y, {
                         targetElementRef: e,
                         position: "top",
@@ -1082,15 +1082,15 @@ function e9() {
     });
 }
 var e7 = n(175665),
-    e2 = n(178241),
+    e9 = n(178241),
     e5 = n(2114),
     e8 = n(298859);
 let e3 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
-    e6 = new Map([
+    e4 = new Map([
         [e_.X.CONNECTIONS_PANEL, s.ImpressionNames.USER_SETTINGS_CONNECTIONS],
         [e_.X.SESSIONS_PANEL, s.ImpressionNames.USER_SETTINGS_SESSIONS],
     ]);
-function e4(e) {
+function e6(e) {
     let { target: t, ...n } = e,
         i = eO.A.useField("query"),
         a = l.useCallback(() => {
@@ -1114,10 +1114,10 @@ function e4(e) {
               partialRoot: eB.D,
               searchBar: te,
               emptyState: tt,
-              sidebarFooter: e9,
+              sidebarFooter: e2,
               onViewChange: (e) => {
-                  e3.has(e) || (0, e2._)(e);
-                  let t = e6.get(e);
+                  e3.has(e) || (0, e9._)(e);
+                  let t = e4.get(e);
                   null != t &&
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,

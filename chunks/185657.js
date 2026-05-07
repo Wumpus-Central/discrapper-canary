@@ -168,7 +168,7 @@ function w(e) {
                                 _ = o.toLowerCase();
                             if ("IN_GAME" === r) {
                                 let e,
-                                    t = (e = s?.trim().toLowerCase() ?? "").length > 0 ? e : "￿";
+                                    t = (e = s?.trim().toLowerCase() ?? "").length > 0 ? e : "\uFFFF";
                                 return `FRD\0${u}\0${c}\0${d}\0${t}\0${O(a)}\0${_}\0${l}`;
                             }
                             return `FRD\0${u}\0${c}\0${d}\0${O(a)}\0${_}\0${l}`;

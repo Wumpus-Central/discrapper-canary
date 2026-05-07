@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, { G9: () => l, GE: () => c, VO: () => o, y6: () => u });
-var r = n(627968),
-    i = n(64700),
-    s = n(853590);
+var i = n(627968),
+    r = n(64700),
+    s = n(402112);
 let a = {
         i18n: {
             CANCEL: "Cancel",
@@ -21,7 +21,7 @@ let a = {
             BILLING_TRIAL_FREE_TRIAL_TEXT: "Free Trial",
             MODAL_DONT_SHOW_AGAIN: "Don't show again",
             LISTBOX_EMPTY_STATE: "No items to show",
-            LISTBOX_EMPTY_STATE_WITH_QUERY: (e) => `No results for ‘${e}’`,
+            LISTBOX_EMPTY_STATE_WITH_QUERY: (e) => `No results for \u{2018}${e}\u{2019}`,
             KEY_CTRL_A11Y_LABEL: "Ctrl",
             KEY_CMD_A11Y_LABEL: "Cmd",
             KEY_ALT_A11Y_LABEL: "Alt",
@@ -61,9 +61,9 @@ let a = {
         isWindowFocused: void 0,
         dynamicGraphicComponents: void 0,
     },
-    o = i.createContext(a);
+    o = r.createContext(a);
 function l() {
-    let e = i.useContext(o);
+    let e = r.useContext(o);
     return e === a && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
 }
 function u(e) {
@@ -72,5 +72,5 @@ function u(e) {
 }
 function c(e) {
     let { children: t, value: n } = e;
-    return (0, r.jsx)(o.Provider, { value: n, children: (0, r.jsx)(s.C, { locale: n.locale, children: t }) });
+    return (0, i.jsx)(o.Provider, { value: n, children: (0, i.jsx)(s.C, { locale: n.locale, children: t }) });
 }

@@ -78,7 +78,7 @@ class k extends l.PureComponent {
         return a({ pages: this.getPageList(), hasMultiplePages: e > 1 });
     }
 }
-var N = t(985018),
+var N = t(375708),
     x = t(374089);
 function C(e) {
     let { page: a, totalPageCount: t, disabled: n, onPageChange: r } = e,
@@ -86,7 +86,11 @@ function C(e) {
         [u, p] = l.useState(null),
         P = null != u && u >= 1 && u <= t;
     return n
-        ? (0, s.jsx)(d.D, { className: x.rQ, "aria-hidden": !0, variant: "heading-sm/semibold", children: "…" }, a.key)
+        ? (0, s.jsx)(
+              d.D,
+              { className: x.rQ, "aria-hidden": !0, variant: "heading-sm/semibold", children: "\u2026" },
+              a.key,
+          )
         : o
           ? (0, s.jsx)("div", {
                 className: x.mF,
@@ -119,7 +123,7 @@ function C(e) {
                         className: i()(x.hJ, x.rQ),
                         "aria-hidden": !0,
                         variant: "heading-sm/semibold",
-                        children: "…",
+                        children: "\u2026",
                     }),
                 },
                 a.key,

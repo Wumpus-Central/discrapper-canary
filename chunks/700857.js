@@ -1,6 +1,6 @@
 r(321073);
 var a,
-    o = r(118356),
+    o = r(941426),
     n = r(677623);
 let i = new (r.n(n)())(5e3),
     l = Date.now(),
@@ -8,9 +8,9 @@ let i = new (r.n(n)())(5e3),
 (0, o.$o)(function (e, t, r) {
     for (var a = arguments.length, n = Array(a > 3 ? a - 3 : 0), d = 3; d < a; d++) n[d - 3] = arguments[d];
     let u = Date.now(),
-        f = ((u - l) / 1e3).toFixed(3),
-        c = ((u - s) / 1e3).toFixed(3),
-        p = `Σ:${f}s, Δ:${c}s`;
+        c = ((u - l) / 1e3).toFixed(3),
+        f = ((u - s) / 1e3).toFixed(3),
+        p = `\u{3A3}:${c}s, \u{394}:${f}s`;
     (s = u),
         (function (e) {
             for (var t = arguments.length, r = Array(t > 1 ? t - 1 : 0), a = 1; a < t; a++) r[a - 1] = arguments[a];
@@ -52,7 +52,7 @@ Object.freeze({ SECOND: 1, MINUTE: 60, HOUR: 3600, DAY: 86400, WEEK: 604800, DAY
     (a[(a.MINUTES_1 = u.MINUTE)] = "MINUTES_1"),
     (a[(a.MINUTES_2 = 2 * u.MINUTE)] = "MINUTES_2"),
     u.SECOND;
-let f = new d("Clips");
+let c = new d("Clips");
 u.DAY,
     self.addEventListener("message", async (e) => {
         let t,
@@ -109,14 +109,14 @@ u.DAY,
                 }
                 (n.onSamples = (e, r, a) => {
                     let o = i[e];
-                    if (null == o) return void f.warn(`No output file found for track ${e}`);
+                    if (null == o) return void c.warn(`No output file found for track ${e}`);
                     for (let t of a) o.addSample(e, t.data, t), d.addSample(e, t.data, t);
                     n.releaseUsedSamples(e, a.length);
                     let s = o.getTrackById(e),
                         u = d.getTrackById(e),
-                        c = n.getTrackById(e);
-                    if (null != c.edts) {
-                        let e = c.edts.elst;
+                        f = n.getTrackById(e);
+                    if (null != f.edts) {
+                        let e = f.edts.elst;
                         s.add("edts").boxes.push(e), u.add("edts").boxes.push(e);
                     }
                     delete l[e], 0 === Object.keys(l).length && t?.();
@@ -126,13 +126,13 @@ u.DAY,
             n.appendBuffer(a),
             n.flush(),
             await u;
-        let c = [],
+        let f = [],
             p = d.getBuffer(),
             m = [a, p];
         for (let [e, t] of Object.entries(i)) {
             let r = parseInt(e, 10),
                 a = t.getBuffer();
-            c.push({ trackId: r, trackName: s[r], buffer: a }), m.push(a);
+            f.push({ trackId: r, trackName: s[r], buffer: a }), m.push(a);
         }
-        self.postMessage({ videoBuffer: a, audioTracks: c, audioBuffer: p }, m);
+        self.postMessage({ videoBuffer: a, audioTracks: f, audioBuffer: p }, m);
     });

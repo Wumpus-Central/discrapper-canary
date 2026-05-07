@@ -565,7 +565,7 @@ let e9 = u.memo(
                                                 variant: "text-xs/normal",
                                                 color: "text-muted",
                                                 lineClamp: 1,
-                                                children: M && ` • ${eR.intl.string(eR.t.sURrjb)}`,
+                                                children: M && ` \u{2022} ${eR.intl.string(eR.t.sURrjb)}`,
                                             }),
                                         ],
                                     }),

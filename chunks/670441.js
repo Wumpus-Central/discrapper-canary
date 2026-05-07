@@ -22,12 +22,12 @@ var n = r(132588),
     u = r(476858),
     m = r(364242);
 let d = {
-        söndag: 0,
-        sön: 0,
+        "s\xf6ndag": 0,
+        "s\xf6n": 0,
         so: 0,
-        måndag: 1,
-        mån: 1,
-        må: 1,
+        "m\xe5ndag": 1,
+        "m\xe5n": 1,
+        "m\xe5": 1,
         tisdag: 2,
         tis: 2,
         ti: 2,
@@ -40,9 +40,9 @@ let d = {
         fredag: 5,
         fre: 5,
         fr: 5,
-        lördag: 6,
-        lör: 6,
-        lö: 6,
+        "l\xf6rdag": 6,
+        "l\xf6r": 6,
+        "l\xf6": 6,
     },
     c = {
         januari: 1,
@@ -84,13 +84,13 @@ let d = {
     g = {
         en: 1,
         ett: 1,
-        två: 2,
+        "tv\xe5": 2,
         tre: 3,
         fyra: 4,
         fem: 5,
         sex: 6,
         sju: 7,
-        åtta: 8,
+        "\xe5tta": 8,
         nio: 9,
         tio: 10,
         elva: 11,
@@ -103,12 +103,12 @@ let d = {
         arton: 18,
         nitton: 19,
         tjugo: 20,
-        trettiо: 30,
+        tretti\u043E: 30,
         fyrtio: 40,
         femtio: 50,
         sextio: 60,
         sjuttio: 70,
-        åttio: 80,
+        "\xe5ttio": 80,
         nittio: 90,
         hundra: 100,
         tusen: 1e3,
@@ -127,23 +127,23 @@ let d = {
         dagar: "day",
         vecka: "week",
         veckor: "week",
-        mån: "month",
-        månad: "month",
-        månader: "month",
-        år: "year",
-        kvartаl: "quarter",
+        "m\xe5n": "month",
+        "m\xe5nad": "month",
+        "m\xe5nader": "month",
+        "\xe5r": "year",
+        kvart\u0430l: "quarter",
         kvartal: "quarter",
     },
     f = `(?:${(0, u.uJ)(g)}|\\d+)`;
 (0, u.uJ)({
-    första: 1,
+    "f\xf6rsta": 1,
     andra: 2,
     tredje: 3,
-    fjärde: 4,
+    "fj\xe4rde": 4,
     femte: 5,
-    sjätte: 6,
+    "sj\xe4tte": 6,
     sjunde: 7,
-    åttonde: 8,
+    "\xe5ttonde": 8,
     nionde: 9,
     tionde: 10,
     elfte: 11,
@@ -156,28 +156,28 @@ let d = {
     artonde: 18,
     nittonde: 19,
     tjugonde: 20,
-    tjugoförsta: 21,
+    "tjugof\xf6rsta": 21,
     tjugoandra: 22,
     tjugotredje: 23,
-    tjugofjärde: 24,
+    "tjugofj\xe4rde": 24,
     tjugofemte: 25,
-    tjugosjätte: 26,
+    "tjugosj\xe4tte": 26,
     tjugosjunde: 27,
-    tjugoåttonde: 28,
+    "tjugo\xe5ttonde": 28,
     tjugonionde: 29,
     trettionde: 30,
-    trettioförsta: 31,
+    "trettiof\xf6rsta": 31,
 }),
     (0, u.uJ)(h);
 let p = `(${f})\\s{0,5}(${(0, u.uJ)(h)})\\s{0,5}`,
     y = RegExp(p, "i"),
-    x = `(${f})\\s{0,5}(${(0, u.uJ)({ sekund: "second", sekunder: "second", minut: "minute", minuter: "minute", timme: "hour", timmar: "hour", dag: "day", dagar: "day", vecka: "week", veckor: "week", månad: "month", månader: "month", år: "year", kvartal: "quarter" })})\\s{0,5}`,
+    x = `(${f})\\s{0,5}(${(0, u.uJ)({ sekund: "second", sekunder: "second", minut: "minute", minuter: "minute", timme: "hour", timmar: "hour", dag: "day", dagar: "day", vecka: "week", veckor: "week", "m\xe5nad": "month", "m\xe5nader": "month", "\xe5r": "year", kvartal: "quarter" })})\\s{0,5}`,
     w = (0, u.mb)("", p),
     D = (0, u.mb)("", x);
 var P = r(355418),
     F = r(1673);
 let C = RegExp(
-    `(?:(?:\\,|\\(|\\（)\\s*)?(?:p\xe5\\s*?)?(?:(f\xf6rra|senaste|n\xe4sta|kommande)\\s*)?(${(0, u.uJ)(d)})(?:\\s*(?:\\,|\\)|\\）))?(?:\\s*(f\xf6rra|senaste|n\xe4sta|kommande)\\s*vecka)?(?=\\W|$)`,
+    `(?:(?:\\,|\\(|\\\u{FF08})\\s*)?(?:p\xe5\\s*?)?(?:(f\xf6rra|senaste|n\xe4sta|kommande)\\s*)?(${(0, u.uJ)(d)})(?:\\s*(?:\\,|\\)|\\\u{FF09}))?(?:\\s*(f\xf6rra|senaste|n\xe4sta|kommande)\\s*vecka)?(?=\\W|$)`,
     "i",
 );
 class T extends P.c {
@@ -192,13 +192,13 @@ class T extends P.c {
         a = (a = a || "").toLowerCase();
         let i = null;
         return (
-            a.match(/förra|senaste/) ? (i = "last") : a.match(/nästa|kommande/) && (i = "next"),
+            a.match(/f\xf6rra|senaste/) ? (i = "last") : a.match(/n\xe4sta|kommande/) && (i = "next"),
             (0, F.Y5)(e.reference, r, i)
         );
     }
 }
 let v = RegExp(
-    `(?:den\\s*?)?([0-9]{1,2})(?:\\s*(?:till|\\-|\\–|\\s)\\s*([0-9]{1,2}))?\\s*(${(0, u.uJ)(c)})(?:(?:-|/|,?\\s*)([0-9]{4}(?![^\\s]\\d)))?(?=\\W|$)`,
+    `(?:den\\s*?)?([0-9]{1,2})(?:\\s*(?:till|\\-|\\\u{2013}|\\s)\\s*([0-9]{1,2}))?\\s*(${(0, u.uJ)(c)})(?:(?:-|/|,?\\s*)([0-9]{4}(?![^\\s]\\d)))?(?=\\W|$)`,
     "i",
 );
 class M extends P.c {
@@ -270,7 +270,7 @@ class b extends P.c {
         return a.BP.createRelativeFromReference(e.reference, n);
     }
 }
-var A = r(658809),
+var A = r(881190),
     k = r(996483);
 let j = RegExp(
     "(nu|idag|imorgon|\xf6vermorgon|ig\xe5r|f\xf6rrg\xe5r|i\\s*f\xf6rrg\xe5r)(?:\\s*(?:p\xe5\\s*)?(morgonen?|f\xf6rmiddagen?|middagen?|eftermiddagen?|kv\xe4llen?|natten?|midnatt))?(?=\\W|$)",

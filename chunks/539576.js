@@ -1,303 +1,457 @@
 a.r(r), a.d(r, { default: () => t });
 var t = {
-    payButton: "دفع",
-    "payButton.redirecting": "جارِ إعادة التوجيه...",
-    "payButton.with": "ادفع %{value} باستخدام %{maskedData}",
-    close: "إغلاق",
-    storeDetails: "حفظ لمدفوعاتي القادمة",
-    "creditCard.holderName": "الاسم على البطاقة",
-    "creditCard.holderName.placeholder": "جميل سعيد",
-    "creditCard.holderName.invalid": "أدخل الاسم كما هو موضح على البطاقة",
-    "creditCard.numberField.title": "رقم البطاقة",
+    payButton: "\u062F\u0641\u0639",
+    "payButton.redirecting":
+        "\u062C\u0627\u0631\u0650 \u0625\u0639\u0627\u062F\u0629 \u0627\u0644\u062A\u0648\u062C\u064A\u0647...",
+    "payButton.with":
+        "\u0627\u062F\u0641\u0639 %{value} \u0628\u0627\u0633\u062A\u062E\u062F\u0627\u0645 %{maskedData}",
+    close: "\u0625\u063A\u0644\u0627\u0642",
+    storeDetails:
+        "\u062D\u0641\u0638 \u0644\u0645\u062F\u0641\u0648\u0639\u0627\u062A\u064A \u0627\u0644\u0642\u0627\u062F\u0645\u0629",
+    "creditCard.holderName":
+        "\u0627\u0644\u0627\u0633\u0645 \u0639\u0644\u0649 \u0627\u0644\u0628\u0637\u0627\u0642\u0629",
+    "creditCard.holderName.placeholder": "\u062C\u0645\u064A\u0644 \u0633\u0639\u064A\u062F",
+    "creditCard.holderName.invalid":
+        "\u0623\u062F\u062E\u0644 \u0627\u0644\u0627\u0633\u0645 \u0643\u0645\u0627 \u0647\u0648 \u0645\u0648\u0636\u062D \u0639\u0644\u0649 \u0627\u0644\u0628\u0637\u0627\u0642\u0629",
+    "creditCard.numberField.title": "\u0631\u0642\u0645 \u0627\u0644\u0628\u0637\u0627\u0642\u0629",
     "creditCard.numberField.placeholder": "3456 9012 5678 1234",
-    "creditCard.expiryDateField.title": "تاريخ الانتهاء",
-    "creditCard.expiryDateField.placeholder": "شهر/سنة",
-    "creditCard.expiryDateField.month": "شهر",
-    "creditCard.expiryDateField.month.placeholder": "شهر",
-    "creditCard.expiryDateField.year.placeholder": "سنة",
-    "creditCard.expiryDateField.year": "سنة",
-    "creditCard.cvcField.title": "رمز الأمان",
+    "creditCard.expiryDateField.title":
+        "\u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "creditCard.expiryDateField.placeholder": "\u0634\u0647\u0631/\u0633\u0646\u0629",
+    "creditCard.expiryDateField.month": "\u0634\u0647\u0631",
+    "creditCard.expiryDateField.month.placeholder": "\u0634\u0647\u0631",
+    "creditCard.expiryDateField.year.placeholder": "\u0633\u0646\u0629",
+    "creditCard.expiryDateField.year": "\u0633\u0646\u0629",
+    "creditCard.cvcField.title": "\u0631\u0645\u0632 \u0627\u0644\u0623\u0645\u0627\u0646",
     "creditCard.cvcField.placeholder": "123",
-    "creditCard.storeDetailsButton": "احتفظ بالبيانات للمرة القادمة",
-    "creditCard.cvcField.placeholder.4digits": "4 أرقام",
-    "creditCard.cvcField.placeholder.3digits": "3 أرقام",
-    "creditCard.taxNumber.placeholder": "يوم شهر سنة / 0123456789",
-    installments: "عدد الأقساط",
+    "creditCard.storeDetailsButton":
+        "\u0627\u062D\u062A\u0641\u0638 \u0628\u0627\u0644\u0628\u064A\u0627\u0646\u0627\u062A \u0644\u0644\u0645\u0631\u0629 \u0627\u0644\u0642\u0627\u062F\u0645\u0629",
+    "creditCard.cvcField.placeholder.4digits": "4 \u0623\u0631\u0642\u0627\u0645",
+    "creditCard.cvcField.placeholder.3digits": "3 \u0623\u0631\u0642\u0627\u0645",
+    "creditCard.taxNumber.placeholder": "\u064A\u0648\u0645 \u0634\u0647\u0631 \u0633\u0646\u0629 / 0123456789",
+    installments: "\u0639\u062F\u062F \u0627\u0644\u0623\u0642\u0633\u0627\u0637",
     installmentOption: "%{times} x %{partialValue}",
-    installmentOptionMonths: "%{times} أشهر",
-    "installments.oneTime": "الدفع مرة واحدة",
-    "installments.installments": "الدفع على أقساط",
-    "installments.revolving": "الدفع الدوري",
-    "sepaDirectDebit.ibanField.invalid": "رقم حساب غير صحيح",
-    "sepaDirectDebit.nameField.placeholder": "جميل سعيد",
-    "sepa.ownerName": "صاحب الحساب",
-    "sepa.ibanNumber": "رقم الحساب (IBAN)",
-    "error.title": "خطأ",
-    "error.subtitle.redirect": "فشل إعادة التوجيه",
-    "error.subtitle.payment": "فشل الدفع",
-    "error.subtitle.refused": "تم رفض الدفع",
-    "error.message.unknown": "حدث خطأ غير معروف",
-    "errorPanel.title": "الأخطاء الموجودة",
-    "idealIssuer.selectField.title": "البنك",
-    "idealIssuer.selectField.placeholder": "حدد البنك الذي تتعامل معه",
-    "creditCard.success": "نجح الدفع",
-    loading: "جارِ التحميل...",
-    continue: "متابعة",
-    continueTo: "متابعة إلى",
-    "wechatpay.timetopay": "لديك %@ للدفع",
-    "sr.wechatpay.timetopay": "لديك %#دقائق%# %#ثوان%# للدفع",
-    "wechatpay.scanqrcode": "مسح رمز الاستجابة السريعة",
-    personalDetails: "البيانات الشخصية",
-    companyDetails: "بيانات الشركة",
-    "companyDetails.name": "اسم الشركة",
-    "companyDetails.registrationNumber": "رقم التسجيل",
-    socialSecurityNumber: "رقم الضمان الاجتماعي",
-    firstName: "الاسم الأول",
-    "firstName.invalid": "أدخل اسمك الأول",
-    infix: "بادئة",
-    lastName: "الاسم الأخير",
-    "lastName.invalid": "أدخل اسمك الأخير",
-    mobileNumber: "رقم الجوال",
-    "mobileNumber.invalid": "رقم جوال غير صحيح",
-    city: "المدينة",
-    postalCode: "الرمز البريدي",
-    "postalCode.optional": "الرمز البريدي (اختياري)",
-    countryCode: "رمز البلد",
-    telephoneNumber: "رقم الهاتف",
-    dateOfBirth: "تاريخ الميلاد",
-    shopperEmail: "عنوان البريد الإلكتروني",
-    gender: "النوع",
-    "gender.notselected": "تحديد نوع",
-    male: "ذكر",
-    female: "أنثى",
-    billingAddress: "عنوان الفواتير",
-    street: "الشارع",
-    stateOrProvince: "الولاية أو المقاطعة",
-    country: "البلد",
-    houseNumberOrName: "رقم المنزل",
-    separateDeliveryAddress: "حدد عنوان تسليم منفصل",
-    deliveryAddress: "عنوان التسليم",
-    zipCode: "الرمز البريدي",
-    apartmentSuite: "الشقة / الجناح",
-    provinceOrTerritory: "المقاطعة أو الإقليم",
-    cityTown: "المدينة / البلدة",
-    address: "العنوان",
-    "address.placeholder": "ابحث عن عنوانك",
-    "address.errors.incomplete": "أدخل عنوانًا للمتابعة",
-    "address.enterManually": "أدخل العنوان يدويًا",
-    state: "الولاية",
-    "field.title.optional": "(اختياري)",
-    "creditCard.cvcField.title.optional": "رمز الأمان (اختياري)",
-    "issuerList.wallet.placeholder": "حدد محفظتك",
-    privacyPolicy: "سياسة الخصوصية",
-    "afterPay.agreement": "أوافق على %@ لشركة AfterPay",
-    paymentConditions: "شروط الدفع",
-    openApp: "فتح التطبيق",
-    "voucher.readInstructions": "قراءة التعليمات",
-    "voucher.introduction": "شكرًا لك على شرائك، يرجى استخدام القسيمة التالية لإتمام عملية الدفع.",
-    "voucher.expirationDate": "تاريخ الانتهاء",
-    "voucher.alternativeReference": "المرجع البديل",
-    "dragonpay.voucher.non.bank.selectField.placeholder": "حدد مقدم الخدمة",
-    "dragonpay.voucher.bank.selectField.placeholder": "حدد البنك الذي تتعامل معه",
-    "voucher.paymentReferenceLabel": "مرجع الدفع",
-    "voucher.surcharge": "بما في ذلك %@ رسمًا إضافيًا",
-    "voucher.introduction.doku": "شكرًا لك على شرائك، يرجى استخدام المعلومات التالية لإتمام عملية الدفع.",
-    "voucher.shopperName": "اسم المتسوق",
-    "voucher.merchantName": "التاجر",
-    "voucher.introduction.econtext": "شكرًا لك على شرائك، يرجى استخدام المعلومات التالية لإتمام عملية الدفع.",
-    "voucher.telephoneNumber": "رقم الهاتف",
-    "voucher.shopperReference": "مرجع المتسوق",
-    "voucher.collectionInstitutionNumber": "رقم المؤسسة المكلفة بالتحصيل",
-    "voucher.econtext.telephoneNumber.invalid": "يجب أن يكون رقم الهاتف بطول 10 أو 11 رقمًا",
-    "boletobancario.btnLabel": "إنشاء طريقة دفع Boleto",
-    "boleto.sendCopyToEmail": "إرسال نسخة إلى بريدي الإلكتروني",
-    "button.copy": "نسخ",
-    "button.download": "تنزيل",
-    "boleto.socialSecurityNumber.invalid": "الحقل غير صحيح",
-    "creditCard.storedCard.description.ariaLabel": "تنتهي البطاقة المخزنة في %@",
-    "voucher.entity": "الكيان",
-    donateButton: "التبرع",
-    notNowButton: "ليس الآن",
-    thanksForYourSupport: "شكرًا على دعمك!",
-    preauthorizeWith: "تفويض مسبق باستخدام",
-    confirmPreauthorization: "تأكيد التفويض المسبق",
-    confirmPurchase: "تأكيد الشراء",
-    applyGiftcard: "استرداد",
-    giftcardBalance: "رصيد بطاقة الهدايا",
-    deductedBalance: "الرصيد المخصوم",
-    "creditCard.pin.title": "رقم التعريف الشخصي",
-    "creditCard.encryptedPassword.label": "أول رقمان من كلمة مرور البطاقة",
+    installmentOptionMonths: "%{times} \u0623\u0634\u0647\u0631",
+    "installments.oneTime": "\u0627\u0644\u062F\u0641\u0639 \u0645\u0631\u0629 \u0648\u0627\u062D\u062F\u0629",
+    "installments.installments": "\u0627\u0644\u062F\u0641\u0639 \u0639\u0644\u0649 \u0623\u0642\u0633\u0627\u0637",
+    "installments.revolving": "\u0627\u0644\u062F\u0641\u0639 \u0627\u0644\u062F\u0648\u0631\u064A",
+    "sepaDirectDebit.ibanField.invalid":
+        "\u0631\u0642\u0645 \u062D\u0633\u0627\u0628 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "sepaDirectDebit.nameField.placeholder": "\u062C\u0645\u064A\u0644 \u0633\u0639\u064A\u062F",
+    "sepa.ownerName": "\u0635\u0627\u062D\u0628 \u0627\u0644\u062D\u0633\u0627\u0628",
+    "sepa.ibanNumber": "\u0631\u0642\u0645 \u0627\u0644\u062D\u0633\u0627\u0628 (IBAN)",
+    "error.title": "\u062E\u0637\u0623",
+    "error.subtitle.redirect":
+        "\u0641\u0634\u0644 \u0625\u0639\u0627\u062F\u0629 \u0627\u0644\u062A\u0648\u062C\u064A\u0647",
+    "error.subtitle.payment": "\u0641\u0634\u0644 \u0627\u0644\u062F\u0641\u0639",
+    "error.subtitle.refused": "\u062A\u0645 \u0631\u0641\u0636 \u0627\u0644\u062F\u0641\u0639",
+    "error.message.unknown": "\u062D\u062F\u062B \u062E\u0637\u0623 \u063A\u064A\u0631 \u0645\u0639\u0631\u0648\u0641",
+    "errorPanel.title": "\u0627\u0644\u0623\u062E\u0637\u0627\u0621 \u0627\u0644\u0645\u0648\u062C\u0648\u062F\u0629",
+    "idealIssuer.selectField.title": "\u0627\u0644\u0628\u0646\u0643",
+    "idealIssuer.selectField.placeholder":
+        "\u062D\u062F\u062F \u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0630\u064A \u062A\u062A\u0639\u0627\u0645\u0644 \u0645\u0639\u0647",
+    "creditCard.success": "\u0646\u062C\u062D \u0627\u0644\u062F\u0641\u0639",
+    loading: "\u062C\u0627\u0631\u0650 \u0627\u0644\u062A\u062D\u0645\u064A\u0644...",
+    continue: "\u0645\u062A\u0627\u0628\u0639\u0629",
+    continueTo: "\u0645\u062A\u0627\u0628\u0639\u0629 \u0625\u0644\u0649",
+    "wechatpay.timetopay": "\u0644\u062F\u064A\u0643 %@ \u0644\u0644\u062F\u0641\u0639",
+    "sr.wechatpay.timetopay":
+        "\u0644\u062F\u064A\u0643 %#\u062F\u0642\u0627\u0626\u0642%# %#\u062B\u0648\u0627\u0646%# \u0644\u0644\u062F\u0641\u0639",
+    "wechatpay.scanqrcode":
+        "\u0645\u0633\u062D \u0631\u0645\u0632 \u0627\u0644\u0627\u0633\u062A\u062C\u0627\u0628\u0629 \u0627\u0644\u0633\u0631\u064A\u0639\u0629",
+    personalDetails: "\u0627\u0644\u0628\u064A\u0627\u0646\u0627\u062A \u0627\u0644\u0634\u062E\u0635\u064A\u0629",
+    companyDetails: "\u0628\u064A\u0627\u0646\u0627\u062A \u0627\u0644\u0634\u0631\u0643\u0629",
+    "companyDetails.name": "\u0627\u0633\u0645 \u0627\u0644\u0634\u0631\u0643\u0629",
+    "companyDetails.registrationNumber": "\u0631\u0642\u0645 \u0627\u0644\u062A\u0633\u062C\u064A\u0644",
+    socialSecurityNumber:
+        "\u0631\u0642\u0645 \u0627\u0644\u0636\u0645\u0627\u0646 \u0627\u0644\u0627\u062C\u062A\u0645\u0627\u0639\u064A",
+    firstName: "\u0627\u0644\u0627\u0633\u0645 \u0627\u0644\u0623\u0648\u0644",
+    "firstName.invalid": "\u0623\u062F\u062E\u0644 \u0627\u0633\u0645\u0643 \u0627\u0644\u0623\u0648\u0644",
+    infix: "\u0628\u0627\u062F\u0626\u0629",
+    lastName: "\u0627\u0644\u0627\u0633\u0645 \u0627\u0644\u0623\u062E\u064A\u0631",
+    "lastName.invalid": "\u0623\u062F\u062E\u0644 \u0627\u0633\u0645\u0643 \u0627\u0644\u0623\u062E\u064A\u0631",
+    mobileNumber: "\u0631\u0642\u0645 \u0627\u0644\u062C\u0648\u0627\u0644",
+    "mobileNumber.invalid": "\u0631\u0642\u0645 \u062C\u0648\u0627\u0644 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    city: "\u0627\u0644\u0645\u062F\u064A\u0646\u0629",
+    postalCode: "\u0627\u0644\u0631\u0645\u0632 \u0627\u0644\u0628\u0631\u064A\u062F\u064A",
+    "postalCode.optional":
+        "\u0627\u0644\u0631\u0645\u0632 \u0627\u0644\u0628\u0631\u064A\u062F\u064A (\u0627\u062E\u062A\u064A\u0627\u0631\u064A)",
+    countryCode: "\u0631\u0645\u0632 \u0627\u0644\u0628\u0644\u062F",
+    telephoneNumber: "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062A\u0641",
+    dateOfBirth: "\u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0645\u064A\u0644\u0627\u062F",
+    shopperEmail:
+        "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A",
+    gender: "\u0627\u0644\u0646\u0648\u0639",
+    "gender.notselected": "\u062A\u062D\u062F\u064A\u062F \u0646\u0648\u0639",
+    male: "\u0630\u0643\u0631",
+    female: "\u0623\u0646\u062B\u0649",
+    billingAddress: "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0641\u0648\u0627\u062A\u064A\u0631",
+    street: "\u0627\u0644\u0634\u0627\u0631\u0639",
+    stateOrProvince:
+        "\u0627\u0644\u0648\u0644\u0627\u064A\u0629 \u0623\u0648 \u0627\u0644\u0645\u0642\u0627\u0637\u0639\u0629",
+    country: "\u0627\u0644\u0628\u0644\u062F",
+    houseNumberOrName: "\u0631\u0642\u0645 \u0627\u0644\u0645\u0646\u0632\u0644",
+    separateDeliveryAddress:
+        "\u062D\u062F\u062F \u0639\u0646\u0648\u0627\u0646 \u062A\u0633\u0644\u064A\u0645 \u0645\u0646\u0641\u0635\u0644",
+    deliveryAddress: "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u062A\u0633\u0644\u064A\u0645",
+    zipCode: "\u0627\u0644\u0631\u0645\u0632 \u0627\u0644\u0628\u0631\u064A\u062F\u064A",
+    apartmentSuite: "\u0627\u0644\u0634\u0642\u0629 / \u0627\u0644\u062C\u0646\u0627\u062D",
+    provinceOrTerritory:
+        "\u0627\u0644\u0645\u0642\u0627\u0637\u0639\u0629 \u0623\u0648 \u0627\u0644\u0625\u0642\u0644\u064A\u0645",
+    cityTown: "\u0627\u0644\u0645\u062F\u064A\u0646\u0629 / \u0627\u0644\u0628\u0644\u062F\u0629",
+    address: "\u0627\u0644\u0639\u0646\u0648\u0627\u0646",
+    "address.placeholder": "\u0627\u0628\u062D\u062B \u0639\u0646 \u0639\u0646\u0648\u0627\u0646\u0643",
+    "address.errors.incomplete":
+        "\u0623\u062F\u062E\u0644 \u0639\u0646\u0648\u0627\u0646\u064B\u0627 \u0644\u0644\u0645\u062A\u0627\u0628\u0639\u0629",
+    "address.enterManually":
+        "\u0623\u062F\u062E\u0644 \u0627\u0644\u0639\u0646\u0648\u0627\u0646 \u064A\u062F\u0648\u064A\u064B\u0627",
+    state: "\u0627\u0644\u0648\u0644\u0627\u064A\u0629",
+    "field.title.optional": "(\u0627\u062E\u062A\u064A\u0627\u0631\u064A)",
+    "creditCard.cvcField.title.optional":
+        "\u0631\u0645\u0632 \u0627\u0644\u0623\u0645\u0627\u0646 (\u0627\u062E\u062A\u064A\u0627\u0631\u064A)",
+    "issuerList.wallet.placeholder": "\u062D\u062F\u062F \u0645\u062D\u0641\u0638\u062A\u0643",
+    privacyPolicy: "\u0633\u064A\u0627\u0633\u0629 \u0627\u0644\u062E\u0635\u0648\u0635\u064A\u0629",
+    "afterPay.agreement":
+        "\u0623\u0648\u0627\u0641\u0642 \u0639\u0644\u0649 %@ \u0644\u0634\u0631\u0643\u0629 AfterPay",
+    paymentConditions: "\u0634\u0631\u0648\u0637 \u0627\u0644\u062F\u0641\u0639",
+    openApp: "\u0641\u062A\u062D \u0627\u0644\u062A\u0637\u0628\u064A\u0642",
+    "voucher.readInstructions": "\u0642\u0631\u0627\u0621\u0629 \u0627\u0644\u062A\u0639\u0644\u064A\u0645\u0627\u062A",
+    "voucher.introduction":
+        "\u0634\u0643\u0631\u064B\u0627 \u0644\u0643 \u0639\u0644\u0649 \u0634\u0631\u0627\u0626\u0643\u060C \u064A\u0631\u062C\u0649 \u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u0627\u0644\u0642\u0633\u064A\u0645\u0629 \u0627\u0644\u062A\u0627\u0644\u064A\u0629 \u0644\u0625\u062A\u0645\u0627\u0645 \u0639\u0645\u0644\u064A\u0629 \u0627\u0644\u062F\u0641\u0639.",
+    "voucher.expirationDate": "\u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "voucher.alternativeReference": "\u0627\u0644\u0645\u0631\u062C\u0639 \u0627\u0644\u0628\u062F\u064A\u0644",
+    "dragonpay.voucher.non.bank.selectField.placeholder":
+        "\u062D\u062F\u062F \u0645\u0642\u062F\u0645 \u0627\u0644\u062E\u062F\u0645\u0629",
+    "dragonpay.voucher.bank.selectField.placeholder":
+        "\u062D\u062F\u062F \u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0630\u064A \u062A\u062A\u0639\u0627\u0645\u0644 \u0645\u0639\u0647",
+    "voucher.paymentReferenceLabel": "\u0645\u0631\u062C\u0639 \u0627\u0644\u062F\u0641\u0639",
+    "voucher.surcharge":
+        "\u0628\u0645\u0627 \u0641\u064A \u0630\u0644\u0643 %@ \u0631\u0633\u0645\u064B\u0627 \u0625\u0636\u0627\u0641\u064A\u064B\u0627",
+    "voucher.introduction.doku":
+        "\u0634\u0643\u0631\u064B\u0627 \u0644\u0643 \u0639\u0644\u0649 \u0634\u0631\u0627\u0626\u0643\u060C \u064A\u0631\u062C\u0649 \u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062A \u0627\u0644\u062A\u0627\u0644\u064A\u0629 \u0644\u0625\u062A\u0645\u0627\u0645 \u0639\u0645\u0644\u064A\u0629 \u0627\u0644\u062F\u0641\u0639.",
+    "voucher.shopperName": "\u0627\u0633\u0645 \u0627\u0644\u0645\u062A\u0633\u0648\u0642",
+    "voucher.merchantName": "\u0627\u0644\u062A\u0627\u062C\u0631",
+    "voucher.introduction.econtext":
+        "\u0634\u0643\u0631\u064B\u0627 \u0644\u0643 \u0639\u0644\u0649 \u0634\u0631\u0627\u0626\u0643\u060C \u064A\u0631\u062C\u0649 \u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062A \u0627\u0644\u062A\u0627\u0644\u064A\u0629 \u0644\u0625\u062A\u0645\u0627\u0645 \u0639\u0645\u0644\u064A\u0629 \u0627\u0644\u062F\u0641\u0639.",
+    "voucher.telephoneNumber": "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062A\u0641",
+    "voucher.shopperReference": "\u0645\u0631\u062C\u0639 \u0627\u0644\u0645\u062A\u0633\u0648\u0642",
+    "voucher.collectionInstitutionNumber":
+        "\u0631\u0642\u0645 \u0627\u0644\u0645\u0624\u0633\u0633\u0629 \u0627\u0644\u0645\u0643\u0644\u0641\u0629 \u0628\u0627\u0644\u062A\u062D\u0635\u064A\u0644",
+    "voucher.econtext.telephoneNumber.invalid":
+        "\u064A\u062C\u0628 \u0623\u0646 \u064A\u0643\u0648\u0646 \u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062A\u0641 \u0628\u0637\u0648\u0644 10 \u0623\u0648 11 \u0631\u0642\u0645\u064B\u0627",
+    "boletobancario.btnLabel":
+        "\u0625\u0646\u0634\u0627\u0621 \u0637\u0631\u064A\u0642\u0629 \u062F\u0641\u0639 Boleto",
+    "boleto.sendCopyToEmail":
+        "\u0625\u0631\u0633\u0627\u0644 \u0646\u0633\u062E\u0629 \u0625\u0644\u0649 \u0628\u0631\u064A\u062F\u064A \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A",
+    "button.copy": "\u0646\u0633\u062E",
+    "button.download": "\u062A\u0646\u0632\u064A\u0644",
+    "boleto.socialSecurityNumber.invalid": "\u0627\u0644\u062D\u0642\u0644 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "creditCard.storedCard.description.ariaLabel":
+        "\u062A\u0646\u062A\u0647\u064A \u0627\u0644\u0628\u0637\u0627\u0642\u0629 \u0627\u0644\u0645\u062E\u0632\u0646\u0629 \u0641\u064A %@",
+    "voucher.entity": "\u0627\u0644\u0643\u064A\u0627\u0646",
+    donateButton: "\u0627\u0644\u062A\u0628\u0631\u0639",
+    notNowButton: "\u0644\u064A\u0633 \u0627\u0644\u0622\u0646",
+    thanksForYourSupport: "\u0634\u0643\u0631\u064B\u0627 \u0639\u0644\u0649 \u062F\u0639\u0645\u0643!",
+    preauthorizeWith:
+        "\u062A\u0641\u0648\u064A\u0636 \u0645\u0633\u0628\u0642 \u0628\u0627\u0633\u062A\u062E\u062F\u0627\u0645",
+    confirmPreauthorization:
+        "\u062A\u0623\u0643\u064A\u062F \u0627\u0644\u062A\u0641\u0648\u064A\u0636 \u0627\u0644\u0645\u0633\u0628\u0642",
+    confirmPurchase: "\u062A\u0623\u0643\u064A\u062F \u0627\u0644\u0634\u0631\u0627\u0621",
+    applyGiftcard: "\u0627\u0633\u062A\u0631\u062F\u0627\u062F",
+    giftcardBalance:
+        "\u0631\u0635\u064A\u062F \u0628\u0637\u0627\u0642\u0629 \u0627\u0644\u0647\u062F\u0627\u064A\u0627",
+    deductedBalance: "\u0627\u0644\u0631\u0635\u064A\u062F \u0627\u0644\u0645\u062E\u0635\u0648\u0645",
+    "creditCard.pin.title":
+        "\u0631\u0642\u0645 \u0627\u0644\u062A\u0639\u0631\u064A\u0641 \u0627\u0644\u0634\u062E\u0635\u064A",
+    "creditCard.encryptedPassword.label":
+        "\u0623\u0648\u0644 \u0631\u0642\u0645\u0627\u0646 \u0645\u0646 \u0643\u0644\u0645\u0629 \u0645\u0631\u0648\u0631 \u0627\u0644\u0628\u0637\u0627\u0642\u0629",
     "creditCard.encryptedPassword.placeholder": "12",
-    "creditCard.encryptedPassword.invalid": "كلمة مرور غير صحيحة",
-    "creditCard.taxNumber": "تاريخ ميلاد حامل البطاقة أو رقم تسجيل الشركة",
-    "creditCard.taxNumber.label": "تاريخ ميلاد حامل البطاقة (يوم شهر سنة) أو رقم تسجيل الشركة (10 أرقام)",
-    "creditCard.taxNumber.labelAlt": "رقم تسجيل الشركة (10 أرقام)",
-    "creditCard.taxNumber.invalid": "تاريخ ميلاد حامل البطاقة أو رقم تسجيل الشركة غير صحيح",
-    "storedPaymentMethod.disable.button": "إزالة",
-    "storedPaymentMethod.disable.confirmation": "إزالة طريقة الدفع المخزنة",
-    "storedPaymentMethod.disable.confirmButton": "نعم، أرغب في إزالتها",
-    "storedPaymentMethod.disable.cancelButton": "إلغاء",
-    "ach.bankAccount": "الحساب البنكي",
-    "ach.accountHolderNameField.title": "اسم صاحب الحساب",
-    "ach.accountHolderNameField.placeholder": "جميل سعيد",
-    "ach.accountHolderNameField.invalid": "اسم صاحب حساب غير صحيح",
-    "ach.accountNumberField.title": "رقم الحساب",
-    "ach.accountNumberField.invalid": "رقم حساب غير صحيح",
-    "ach.accountLocationField.title": "رقم توجيه ABA",
-    "ach.accountLocationField.invalid": "رقم توجيه ABA غير صحيح",
-    "ach.savedBankAccount": "الحساب البنكي المحفوظ",
-    "select.state": "حدد الولاية",
-    "select.stateOrProvince": "حدد الولاية أو المقاطعة",
-    "select.provinceOrTerritory": "حدد المقاطعة أو الإقليم",
-    "select.country": "حدد البلد",
-    "select.noOptionsFound": "لا توجد خيارات",
-    "select.filter.placeholder": "بحث...",
-    "telephoneNumber.invalid": "رقم هاتف غير صحيح",
-    qrCodeOrApp: "أو",
-    "paypal.processingPayment": "جارِ معالجة المدفوعات...",
-    generateQRCode: "إنشاء رمز استجابة سريعة",
-    "await.waitForConfirmation": "في انتظار التأكيد",
-    "mbway.confirmPayment": "تأكيد الدفع على تطبيق MB WAY",
-    "shopperEmail.invalid": "عنوان بريد إلكتروني غير صحيح",
-    "dateOfBirth.format": "يوم/شهر/سنة",
-    "dateOfBirth.invalid": "يجب ألا يقل عمرك عن 18 عامًا",
-    "blik.confirmPayment": "افتح تطبيقك البنكي لتأكيد الدفع.",
-    "blik.invalid": "أدخل 6 أرقام",
-    "blik.code": "رمز مكون من 6 أرقام",
-    "blik.help": "احصل على الرمز من تطبيقك البنكي.",
+    "creditCard.encryptedPassword.invalid":
+        "\u0643\u0644\u0645\u0629 \u0645\u0631\u0648\u0631 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D\u0629",
+    "creditCard.taxNumber":
+        "\u062A\u0627\u0631\u064A\u062E \u0645\u064A\u0644\u0627\u062F \u062D\u0627\u0645\u0644 \u0627\u0644\u0628\u0637\u0627\u0642\u0629 \u0623\u0648 \u0631\u0642\u0645 \u062A\u0633\u062C\u064A\u0644 \u0627\u0644\u0634\u0631\u0643\u0629",
+    "creditCard.taxNumber.label":
+        "\u062A\u0627\u0631\u064A\u062E \u0645\u064A\u0644\u0627\u062F \u062D\u0627\u0645\u0644 \u0627\u0644\u0628\u0637\u0627\u0642\u0629 (\u064A\u0648\u0645 \u0634\u0647\u0631 \u0633\u0646\u0629) \u0623\u0648 \u0631\u0642\u0645 \u062A\u0633\u062C\u064A\u0644 \u0627\u0644\u0634\u0631\u0643\u0629 (10 \u0623\u0631\u0642\u0627\u0645)",
+    "creditCard.taxNumber.labelAlt":
+        "\u0631\u0642\u0645 \u062A\u0633\u062C\u064A\u0644 \u0627\u0644\u0634\u0631\u0643\u0629 (10 \u0623\u0631\u0642\u0627\u0645)",
+    "creditCard.taxNumber.invalid":
+        "\u062A\u0627\u0631\u064A\u062E \u0645\u064A\u0644\u0627\u062F \u062D\u0627\u0645\u0644 \u0627\u0644\u0628\u0637\u0627\u0642\u0629 \u0623\u0648 \u0631\u0642\u0645 \u062A\u0633\u062C\u064A\u0644 \u0627\u0644\u0634\u0631\u0643\u0629 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "storedPaymentMethod.disable.button": "\u0625\u0632\u0627\u0644\u0629",
+    "storedPaymentMethod.disable.confirmation":
+        "\u0625\u0632\u0627\u0644\u0629 \u0637\u0631\u064A\u0642\u0629 \u0627\u0644\u062F\u0641\u0639 \u0627\u0644\u0645\u062E\u0632\u0646\u0629",
+    "storedPaymentMethod.disable.confirmButton":
+        "\u0646\u0639\u0645\u060C \u0623\u0631\u063A\u0628 \u0641\u064A \u0625\u0632\u0627\u0644\u062A\u0647\u0627",
+    "storedPaymentMethod.disable.cancelButton": "\u0625\u0644\u063A\u0627\u0621",
+    "ach.bankAccount": "\u0627\u0644\u062D\u0633\u0627\u0628 \u0627\u0644\u0628\u0646\u0643\u064A",
+    "ach.accountHolderNameField.title":
+        "\u0627\u0633\u0645 \u0635\u0627\u062D\u0628 \u0627\u0644\u062D\u0633\u0627\u0628",
+    "ach.accountHolderNameField.placeholder": "\u062C\u0645\u064A\u0644 \u0633\u0639\u064A\u062F",
+    "ach.accountHolderNameField.invalid":
+        "\u0627\u0633\u0645 \u0635\u0627\u062D\u0628 \u062D\u0633\u0627\u0628 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "ach.accountNumberField.title": "\u0631\u0642\u0645 \u0627\u0644\u062D\u0633\u0627\u0628",
+    "ach.accountNumberField.invalid":
+        "\u0631\u0642\u0645 \u062D\u0633\u0627\u0628 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "ach.accountLocationField.title": "\u0631\u0642\u0645 \u062A\u0648\u062C\u064A\u0647 ABA",
+    "ach.accountLocationField.invalid":
+        "\u0631\u0642\u0645 \u062A\u0648\u062C\u064A\u0647 ABA \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "ach.savedBankAccount":
+        "\u0627\u0644\u062D\u0633\u0627\u0628 \u0627\u0644\u0628\u0646\u0643\u064A \u0627\u0644\u0645\u062D\u0641\u0648\u0638",
+    "select.state": "\u062D\u062F\u062F \u0627\u0644\u0648\u0644\u0627\u064A\u0629",
+    "select.stateOrProvince":
+        "\u062D\u062F\u062F \u0627\u0644\u0648\u0644\u0627\u064A\u0629 \u0623\u0648 \u0627\u0644\u0645\u0642\u0627\u0637\u0639\u0629",
+    "select.provinceOrTerritory":
+        "\u062D\u062F\u062F \u0627\u0644\u0645\u0642\u0627\u0637\u0639\u0629 \u0623\u0648 \u0627\u0644\u0625\u0642\u0644\u064A\u0645",
+    "select.country": "\u062D\u062F\u062F \u0627\u0644\u0628\u0644\u062F",
+    "select.noOptionsFound": "\u0644\u0627 \u062A\u0648\u062C\u062F \u062E\u064A\u0627\u0631\u0627\u062A",
+    "select.filter.placeholder": "\u0628\u062D\u062B...",
+    "telephoneNumber.invalid":
+        "\u0631\u0642\u0645 \u0647\u0627\u062A\u0641 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    qrCodeOrApp: "\u0623\u0648",
+    "paypal.processingPayment":
+        "\u062C\u0627\u0631\u0650 \u0645\u0639\u0627\u0644\u062C\u0629 \u0627\u0644\u0645\u062F\u0641\u0648\u0639\u0627\u062A...",
+    generateQRCode:
+        "\u0625\u0646\u0634\u0627\u0621 \u0631\u0645\u0632 \u0627\u0633\u062A\u062C\u0627\u0628\u0629 \u0633\u0631\u064A\u0639\u0629",
+    "await.waitForConfirmation":
+        "\u0641\u064A \u0627\u0646\u062A\u0638\u0627\u0631 \u0627\u0644\u062A\u0623\u0643\u064A\u062F",
+    "mbway.confirmPayment":
+        "\u062A\u0623\u0643\u064A\u062F \u0627\u0644\u062F\u0641\u0639 \u0639\u0644\u0649 \u062A\u0637\u0628\u064A\u0642 MB WAY",
+    "shopperEmail.invalid":
+        "\u0639\u0646\u0648\u0627\u0646 \u0628\u0631\u064A\u062F \u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "dateOfBirth.format": "\u064A\u0648\u0645/\u0634\u0647\u0631/\u0633\u0646\u0629",
+    "dateOfBirth.invalid":
+        "\u064A\u062C\u0628 \u0623\u0644\u0627 \u064A\u0642\u0644 \u0639\u0645\u0631\u0643 \u0639\u0646 18 \u0639\u0627\u0645\u064B\u0627",
+    "blik.confirmPayment":
+        "\u0627\u0641\u062A\u062D \u062A\u0637\u0628\u064A\u0642\u0643 \u0627\u0644\u0628\u0646\u0643\u064A \u0644\u062A\u0623\u0643\u064A\u062F \u0627\u0644\u062F\u0641\u0639.",
+    "blik.invalid": "\u0623\u062F\u062E\u0644 6 \u0623\u0631\u0642\u0627\u0645",
+    "blik.code": "\u0631\u0645\u0632 \u0645\u0643\u0648\u0646 \u0645\u0646 6 \u0623\u0631\u0642\u0627\u0645",
+    "blik.help":
+        "\u0627\u062D\u0635\u0644 \u0639\u0644\u0649 \u0627\u0644\u0631\u0645\u0632 \u0645\u0646 \u062A\u0637\u0628\u064A\u0642\u0643 \u0627\u0644\u0628\u0646\u0643\u064A.",
     "swish.pendingMessage":
-        "بعد قيامك بمسح رمز الاستجابة السريعة ضوئيًا، يمكن أن تظل الحالة معلقة لمدة تصل إلى 10 دقائق. قد تؤدي محاولة الدفع مرة أخرى خلال هذا الوقت إلى فرض رسوم متعددة.",
-    "field.valid": "حقل صحيح",
-    "field.invalid": "حقل غير صحيح",
-    "error.va.gen.01": "حقل غير مكتمل",
-    "error.va.gen.02": "حقل غير صحيح",
-    "error.va.sf-cc-num.01": "أدخل رقم بطاقة صحيح",
-    "error.va.sf-cc-num.02": "أدخل رقم البطاقة",
-    "error.va.sf-cc-num.03": "أدخل علامة تجارية لبطاقة مدعومة",
-    "error.va.sf-cc-num.04": "أدخل رقم البطاقة بالكامل",
-    "error.va.sf-cc-dat.01": "أدخل تاريخ انتهاء صحيح",
-    "error.va.sf-cc-dat.02": "أدخل تاريخ انتهاء صحيح",
-    "error.va.sf-cc-dat.03": "بطاقة الائتمان على وشك الانتهاء",
-    "error.va.sf-cc-dat.04": "أدخل تاريخ الانتهاء",
-    "error.va.sf-cc-dat.05": "أدخل تاريخ الانتهاء بالكامل",
-    "error.va.sf-cc-mth.01": "أدخل شهر الانتهاء",
-    "error.va.sf-cc-yr.01": "أدخل سنة الانتهاء",
-    "error.va.sf-cc-yr.02": "أدخل سنة الانتهاء بالكامل",
-    "error.va.sf-cc-cvc.01": "أدخل رمز الأمان",
-    "error.va.sf-cc-cvc.02": "أدخل رمز الأمان بالكامل",
-    "error.va.sf-ach-num.01": "حقل رقم الحساب المصرفي فارغ",
-    "error.va.sf-ach-num.02": "طول رقم الحساب المصرفي خطأ",
-    "error.va.sf-ach-loc.01": "حقل رقم التوجيه البنكي فارغ",
-    "error.va.sf-ach-loc.02": "طول رقم التوجيه البنكي خطأ",
-    "error.va.sf-kcp-pwd.01": "حقل كلمة المرور فارغ",
-    "error.va.sf-kcp-pwd.02": "طول كلمة المرور خطأ",
-    "error.giftcard.no-balance": "لا يوجد رصيد ببطاقة الهدايا هذه",
-    "error.giftcard.card-error": "لا توجد بسجلاتنا بطاقة هدايا تحمل هذا الرقم",
-    "error.giftcard.currency-error": "لا تسري بطاقات الهدايا إلا بالعملة التي صدرت بها",
-    "amazonpay.signout": "تسجيل الخروج من موقع Amazon",
-    "amazonpay.changePaymentDetails": "تغيير بيانات الدفع",
-    "partialPayment.warning": "تحديد طريقة دفع أخرى لتسديد المبلغ المتبقي",
-    "partialPayment.remainingBalance": "سيبلغ الرصيد المتبقي %{amount}",
-    "bankTransfer.beneficiary": "المستفيد",
+        "\u0628\u0639\u062F \u0642\u064A\u0627\u0645\u0643 \u0628\u0645\u0633\u062D \u0631\u0645\u0632 \u0627\u0644\u0627\u0633\u062A\u062C\u0627\u0628\u0629 \u0627\u0644\u0633\u0631\u064A\u0639\u0629 \u0636\u0648\u0626\u064A\u064B\u0627\u060C \u064A\u0645\u0643\u0646 \u0623\u0646 \u062A\u0638\u0644 \u0627\u0644\u062D\u0627\u0644\u0629 \u0645\u0639\u0644\u0642\u0629 \u0644\u0645\u062F\u0629 \u062A\u0635\u0644 \u0625\u0644\u0649 10 \u062F\u0642\u0627\u0626\u0642. \u0642\u062F \u062A\u0624\u062F\u064A \u0645\u062D\u0627\u0648\u0644\u0629 \u0627\u0644\u062F\u0641\u0639 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649 \u062E\u0644\u0627\u0644 \u0647\u0630\u0627 \u0627\u0644\u0648\u0642\u062A \u0625\u0644\u0649 \u0641\u0631\u0636 \u0631\u0633\u0648\u0645 \u0645\u062A\u0639\u062F\u062F\u0629.",
+    "field.valid": "\u062D\u0642\u0644 \u0635\u062D\u064A\u062D",
+    "field.invalid": "\u062D\u0642\u0644 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "error.va.gen.01": "\u062D\u0642\u0644 \u063A\u064A\u0631 \u0645\u0643\u062A\u0645\u0644",
+    "error.va.gen.02": "\u062D\u0642\u0644 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "error.va.sf-cc-num.01":
+        "\u0623\u062F\u062E\u0644 \u0631\u0642\u0645 \u0628\u0637\u0627\u0642\u0629 \u0635\u062D\u064A\u062D",
+    "error.va.sf-cc-num.02": "\u0623\u062F\u062E\u0644 \u0631\u0642\u0645 \u0627\u0644\u0628\u0637\u0627\u0642\u0629",
+    "error.va.sf-cc-num.03":
+        "\u0623\u062F\u062E\u0644 \u0639\u0644\u0627\u0645\u0629 \u062A\u062C\u0627\u0631\u064A\u0629 \u0644\u0628\u0637\u0627\u0642\u0629 \u0645\u062F\u0639\u0648\u0645\u0629",
+    "error.va.sf-cc-num.04":
+        "\u0623\u062F\u062E\u0644 \u0631\u0642\u0645 \u0627\u0644\u0628\u0637\u0627\u0642\u0629 \u0628\u0627\u0644\u0643\u0627\u0645\u0644",
+    "error.va.sf-cc-dat.01":
+        "\u0623\u062F\u062E\u0644 \u062A\u0627\u0631\u064A\u062E \u0627\u0646\u062A\u0647\u0627\u0621 \u0635\u062D\u064A\u062D",
+    "error.va.sf-cc-dat.02":
+        "\u0623\u062F\u062E\u0644 \u062A\u0627\u0631\u064A\u062E \u0627\u0646\u062A\u0647\u0627\u0621 \u0635\u062D\u064A\u062D",
+    "error.va.sf-cc-dat.03":
+        "\u0628\u0637\u0627\u0642\u0629 \u0627\u0644\u0627\u0626\u062A\u0645\u0627\u0646 \u0639\u0644\u0649 \u0648\u0634\u0643 \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "error.va.sf-cc-dat.04":
+        "\u0623\u062F\u062E\u0644 \u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "error.va.sf-cc-dat.05":
+        "\u0623\u062F\u062E\u0644 \u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621 \u0628\u0627\u0644\u0643\u0627\u0645\u0644",
+    "error.va.sf-cc-mth.01":
+        "\u0623\u062F\u062E\u0644 \u0634\u0647\u0631 \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "error.va.sf-cc-yr.01":
+        "\u0623\u062F\u062E\u0644 \u0633\u0646\u0629 \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "error.va.sf-cc-yr.02":
+        "\u0623\u062F\u062E\u0644 \u0633\u0646\u0629 \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621 \u0628\u0627\u0644\u0643\u0627\u0645\u0644",
+    "error.va.sf-cc-cvc.01": "\u0623\u062F\u062E\u0644 \u0631\u0645\u0632 \u0627\u0644\u0623\u0645\u0627\u0646",
+    "error.va.sf-cc-cvc.02":
+        "\u0623\u062F\u062E\u0644 \u0631\u0645\u0632 \u0627\u0644\u0623\u0645\u0627\u0646 \u0628\u0627\u0644\u0643\u0627\u0645\u0644",
+    "error.va.sf-ach-num.01":
+        "\u062D\u0642\u0644 \u0631\u0642\u0645 \u0627\u0644\u062D\u0633\u0627\u0628 \u0627\u0644\u0645\u0635\u0631\u0641\u064A \u0641\u0627\u0631\u063A",
+    "error.va.sf-ach-num.02":
+        "\u0637\u0648\u0644 \u0631\u0642\u0645 \u0627\u0644\u062D\u0633\u0627\u0628 \u0627\u0644\u0645\u0635\u0631\u0641\u064A \u062E\u0637\u0623",
+    "error.va.sf-ach-loc.01":
+        "\u062D\u0642\u0644 \u0631\u0642\u0645 \u0627\u0644\u062A\u0648\u062C\u064A\u0647 \u0627\u0644\u0628\u0646\u0643\u064A \u0641\u0627\u0631\u063A",
+    "error.va.sf-ach-loc.02":
+        "\u0637\u0648\u0644 \u0631\u0642\u0645 \u0627\u0644\u062A\u0648\u062C\u064A\u0647 \u0627\u0644\u0628\u0646\u0643\u064A \u062E\u0637\u0623",
+    "error.va.sf-kcp-pwd.01":
+        "\u062D\u0642\u0644 \u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631 \u0641\u0627\u0631\u063A",
+    "error.va.sf-kcp-pwd.02":
+        "\u0637\u0648\u0644 \u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631 \u062E\u0637\u0623",
+    "error.giftcard.no-balance":
+        "\u0644\u0627 \u064A\u0648\u062C\u062F \u0631\u0635\u064A\u062F \u0628\u0628\u0637\u0627\u0642\u0629 \u0627\u0644\u0647\u062F\u0627\u064A\u0627 \u0647\u0630\u0647",
+    "error.giftcard.card-error":
+        "\u0644\u0627 \u062A\u0648\u062C\u062F \u0628\u0633\u062C\u0644\u0627\u062A\u0646\u0627 \u0628\u0637\u0627\u0642\u0629 \u0647\u062F\u0627\u064A\u0627 \u062A\u062D\u0645\u0644 \u0647\u0630\u0627 \u0627\u0644\u0631\u0642\u0645",
+    "error.giftcard.currency-error":
+        "\u0644\u0627 \u062A\u0633\u0631\u064A \u0628\u0637\u0627\u0642\u0627\u062A \u0627\u0644\u0647\u062F\u0627\u064A\u0627 \u0625\u0644\u0627 \u0628\u0627\u0644\u0639\u0645\u0644\u0629 \u0627\u0644\u062A\u064A \u0635\u062F\u0631\u062A \u0628\u0647\u0627",
+    "amazonpay.signout":
+        "\u062A\u0633\u062C\u064A\u0644 \u0627\u0644\u062E\u0631\u0648\u062C \u0645\u0646 \u0645\u0648\u0642\u0639 Amazon",
+    "amazonpay.changePaymentDetails":
+        "\u062A\u063A\u064A\u064A\u0631 \u0628\u064A\u0627\u0646\u0627\u062A \u0627\u0644\u062F\u0641\u0639",
+    "partialPayment.warning":
+        "\u062A\u062D\u062F\u064A\u062F \u0637\u0631\u064A\u0642\u0629 \u062F\u0641\u0639 \u0623\u062E\u0631\u0649 \u0644\u062A\u0633\u062F\u064A\u062F \u0627\u0644\u0645\u0628\u0644\u063A \u0627\u0644\u0645\u062A\u0628\u0642\u064A",
+    "partialPayment.remainingBalance":
+        "\u0633\u064A\u0628\u0644\u063A \u0627\u0644\u0631\u0635\u064A\u062F \u0627\u0644\u0645\u062A\u0628\u0642\u064A %{amount}",
+    "bankTransfer.beneficiary": "\u0627\u0644\u0645\u0633\u062A\u0641\u064A\u062F",
     "bankTransfer.iban": "IBAN",
-    "bankTransfer.bic": "كود التعريف البنكي",
-    "bankTransfer.reference": "المرجع",
+    "bankTransfer.bic":
+        "\u0643\u0648\u062F \u0627\u0644\u062A\u0639\u0631\u064A\u0641 \u0627\u0644\u0628\u0646\u0643\u064A",
+    "bankTransfer.reference": "\u0627\u0644\u0645\u0631\u062C\u0639",
     "bankTransfer.introduction":
-        "قم بالمتابعة لإنشاء مدفوعات تحويل بنكية جديدة. يمكنك استخدام البيانات الواردة في الشاشة التالية لإتمام عملية الدفع.",
-    "bankTransfer.instructions": "شكرًا لك على شرائك، يرجى استخدام المعلومات التالية لإتمام عملية الدفع.",
-    "bacs.accountHolderName": "اسم صاحب الحساب البنكي",
-    "bacs.accountHolderName.invalid": "اسم صاحب حساب بنكي غير صحيح",
-    "bacs.accountNumber": "رقم الحساب البنكي",
-    "bacs.accountNumber.invalid": "رقم حساب بنكي غير صحيح",
-    "bacs.bankLocationId": "رمز تعريف البنك",
-    "bacs.bankLocationId.invalid": "رمز تعريف بنك غير صحيح",
-    "bacs.consent.amount": "أوافق على خصم المبلغ أعلاه من حسابي البنكي.",
-    "bacs.consent.account": "أؤكد أن الحساب باسمي وأنا وحدي صاحب التوقيع المطالب بالإذن بالخصم المباشر في هذا الحساب.",
-    edit: "تحرير",
-    "bacs.confirm": "تأكيد ودفع",
-    "bacs.result.introduction": "تنزيل تعليمات الخصم المباشر (تعليمات / تفويض DDI)",
-    "download.pdf": "تنزيل ملف PDF",
-    "creditCard.encryptedCardNumber.aria.iframeTitle": "الإطار المضمن لرقم البطاقة",
-    "creditCard.encryptedCardNumber.aria.label": "رقم البطاقة",
-    "creditCard.encryptedExpiryDate.aria.iframeTitle": "الإطار المضمن لتاريخ الانتهاء",
-    "creditCard.encryptedExpiryDate.aria.label": "تاريخ الانتهاء",
-    "creditCard.encryptedExpiryMonth.aria.iframeTitle": "الإطار المضمن لشهر الانتهاء",
-    "creditCard.encryptedExpiryMonth.aria.label": "شهر الانتهاء",
-    "creditCard.encryptedExpiryYear.aria.iframeTitle": "الإطار المضمن لسنة الانتهاء",
-    "creditCard.encryptedExpiryYear.aria.label": "سنة الانتهاء",
-    "creditCard.encryptedSecurityCode.aria.iframeTitle": "الإطار المضمن لرمز الأمان",
-    "creditCard.encryptedSecurityCode.aria.label": "رمز الأمان",
-    "creditCard.encryptedPassword.aria.iframeTitle": "الإطار المضمن لكلمة المرور",
-    "creditCard.encryptedPassword.aria.label": "أول رقمان من كلمة مرور البطاقة",
-    "giftcard.encryptedCardNumber.aria.iframeTitle": "الإطار المضمن لرقم البطاقة",
-    "giftcard.encryptedCardNumber.aria.label": "رقم البطاقة",
-    "giftcard.encryptedSecurityCode.aria.iframeTitle": "الإطار المضمن لرقم التعريف الشخصي",
-    "giftcard.encryptedSecurityCode.aria.label": "رقم التعريف الشخصي",
-    giftcardTransactionLimit: "يسمح فقط بحد أقصى %{amount} لكل معاملة على بطاقة الهدايا هذه",
-    "ach.encryptedBankAccountNumber.aria.iframeTitle": "الإطار المضمن لرقم الحساب البنكي",
-    "ach.encryptedBankAccountNumber.aria.label": "رقم الحساب",
-    "ach.encryptedBankLocationId.aria.iframeTitle": "الإطار المضمن لرقم التوجيه البنكي",
-    "ach.encryptedBankLocationId.aria.label": "رقم توجيه ABA",
+        "\u0642\u0645 \u0628\u0627\u0644\u0645\u062A\u0627\u0628\u0639\u0629 \u0644\u0625\u0646\u0634\u0627\u0621 \u0645\u062F\u0641\u0648\u0639\u0627\u062A \u062A\u062D\u0648\u064A\u0644 \u0628\u0646\u0643\u064A\u0629 \u062C\u062F\u064A\u062F\u0629. \u064A\u0645\u0643\u0646\u0643 \u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u0627\u0644\u0628\u064A\u0627\u0646\u0627\u062A \u0627\u0644\u0648\u0627\u0631\u062F\u0629 \u0641\u064A \u0627\u0644\u0634\u0627\u0634\u0629 \u0627\u0644\u062A\u0627\u0644\u064A\u0629 \u0644\u0625\u062A\u0645\u0627\u0645 \u0639\u0645\u0644\u064A\u0629 \u0627\u0644\u062F\u0641\u0639.",
+    "bankTransfer.instructions":
+        "\u0634\u0643\u0631\u064B\u0627 \u0644\u0643 \u0639\u0644\u0649 \u0634\u0631\u0627\u0626\u0643\u060C \u064A\u0631\u062C\u0649 \u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062A \u0627\u0644\u062A\u0627\u0644\u064A\u0629 \u0644\u0625\u062A\u0645\u0627\u0645 \u0639\u0645\u0644\u064A\u0629 \u0627\u0644\u062F\u0641\u0639.",
+    "bacs.accountHolderName":
+        "\u0627\u0633\u0645 \u0635\u0627\u062D\u0628 \u0627\u0644\u062D\u0633\u0627\u0628 \u0627\u0644\u0628\u0646\u0643\u064A",
+    "bacs.accountHolderName.invalid":
+        "\u0627\u0633\u0645 \u0635\u0627\u062D\u0628 \u062D\u0633\u0627\u0628 \u0628\u0646\u0643\u064A \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "bacs.accountNumber":
+        "\u0631\u0642\u0645 \u0627\u0644\u062D\u0633\u0627\u0628 \u0627\u0644\u0628\u0646\u0643\u064A",
+    "bacs.accountNumber.invalid":
+        "\u0631\u0642\u0645 \u062D\u0633\u0627\u0628 \u0628\u0646\u0643\u064A \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "bacs.bankLocationId": "\u0631\u0645\u0632 \u062A\u0639\u0631\u064A\u0641 \u0627\u0644\u0628\u0646\u0643",
+    "bacs.bankLocationId.invalid":
+        "\u0631\u0645\u0632 \u062A\u0639\u0631\u064A\u0641 \u0628\u0646\u0643 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "bacs.consent.amount":
+        "\u0623\u0648\u0627\u0641\u0642 \u0639\u0644\u0649 \u062E\u0635\u0645 \u0627\u0644\u0645\u0628\u0644\u063A \u0623\u0639\u0644\u0627\u0647 \u0645\u0646 \u062D\u0633\u0627\u0628\u064A \u0627\u0644\u0628\u0646\u0643\u064A.",
+    "bacs.consent.account":
+        "\u0623\u0624\u0643\u062F \u0623\u0646 \u0627\u0644\u062D\u0633\u0627\u0628 \u0628\u0627\u0633\u0645\u064A \u0648\u0623\u0646\u0627 \u0648\u062D\u062F\u064A \u0635\u0627\u062D\u0628 \u0627\u0644\u062A\u0648\u0642\u064A\u0639 \u0627\u0644\u0645\u0637\u0627\u0644\u0628 \u0628\u0627\u0644\u0625\u0630\u0646 \u0628\u0627\u0644\u062E\u0635\u0645 \u0627\u0644\u0645\u0628\u0627\u0634\u0631 \u0641\u064A \u0647\u0630\u0627 \u0627\u0644\u062D\u0633\u0627\u0628.",
+    edit: "\u062A\u062D\u0631\u064A\u0631",
+    "bacs.confirm": "\u062A\u0623\u0643\u064A\u062F \u0648\u062F\u0641\u0639",
+    "bacs.result.introduction":
+        "\u062A\u0646\u0632\u064A\u0644 \u062A\u0639\u0644\u064A\u0645\u0627\u062A \u0627\u0644\u062E\u0635\u0645 \u0627\u0644\u0645\u0628\u0627\u0634\u0631 (\u062A\u0639\u0644\u064A\u0645\u0627\u062A / \u062A\u0641\u0648\u064A\u0636 DDI)",
+    "download.pdf": "\u062A\u0646\u0632\u064A\u0644 \u0645\u0644\u0641 PDF",
+    "creditCard.encryptedCardNumber.aria.iframeTitle":
+        "\u0627\u0644\u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0636\u0645\u0646 \u0644\u0631\u0642\u0645 \u0627\u0644\u0628\u0637\u0627\u0642\u0629",
+    "creditCard.encryptedCardNumber.aria.label": "\u0631\u0642\u0645 \u0627\u0644\u0628\u0637\u0627\u0642\u0629",
+    "creditCard.encryptedExpiryDate.aria.iframeTitle":
+        "\u0627\u0644\u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0636\u0645\u0646 \u0644\u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "creditCard.encryptedExpiryDate.aria.label":
+        "\u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "creditCard.encryptedExpiryMonth.aria.iframeTitle":
+        "\u0627\u0644\u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0636\u0645\u0646 \u0644\u0634\u0647\u0631 \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "creditCard.encryptedExpiryMonth.aria.label": "\u0634\u0647\u0631 \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "creditCard.encryptedExpiryYear.aria.iframeTitle":
+        "\u0627\u0644\u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0636\u0645\u0646 \u0644\u0633\u0646\u0629 \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "creditCard.encryptedExpiryYear.aria.label": "\u0633\u0646\u0629 \u0627\u0644\u0627\u0646\u062A\u0647\u0627\u0621",
+    "creditCard.encryptedSecurityCode.aria.iframeTitle":
+        "\u0627\u0644\u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0636\u0645\u0646 \u0644\u0631\u0645\u0632 \u0627\u0644\u0623\u0645\u0627\u0646",
+    "creditCard.encryptedSecurityCode.aria.label": "\u0631\u0645\u0632 \u0627\u0644\u0623\u0645\u0627\u0646",
+    "creditCard.encryptedPassword.aria.iframeTitle":
+        "\u0627\u0644\u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0636\u0645\u0646 \u0644\u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631",
+    "creditCard.encryptedPassword.aria.label":
+        "\u0623\u0648\u0644 \u0631\u0642\u0645\u0627\u0646 \u0645\u0646 \u0643\u0644\u0645\u0629 \u0645\u0631\u0648\u0631 \u0627\u0644\u0628\u0637\u0627\u0642\u0629",
+    "giftcard.encryptedCardNumber.aria.iframeTitle":
+        "\u0627\u0644\u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0636\u0645\u0646 \u0644\u0631\u0642\u0645 \u0627\u0644\u0628\u0637\u0627\u0642\u0629",
+    "giftcard.encryptedCardNumber.aria.label": "\u0631\u0642\u0645 \u0627\u0644\u0628\u0637\u0627\u0642\u0629",
+    "giftcard.encryptedSecurityCode.aria.iframeTitle":
+        "\u0627\u0644\u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0636\u0645\u0646 \u0644\u0631\u0642\u0645 \u0627\u0644\u062A\u0639\u0631\u064A\u0641 \u0627\u0644\u0634\u062E\u0635\u064A",
+    "giftcard.encryptedSecurityCode.aria.label":
+        "\u0631\u0642\u0645 \u0627\u0644\u062A\u0639\u0631\u064A\u0641 \u0627\u0644\u0634\u062E\u0635\u064A",
+    giftcardTransactionLimit:
+        "\u064A\u0633\u0645\u062D \u0641\u0642\u0637 \u0628\u062D\u062F \u0623\u0642\u0635\u0649 %{amount} \u0644\u0643\u0644 \u0645\u0639\u0627\u0645\u0644\u0629 \u0639\u0644\u0649 \u0628\u0637\u0627\u0642\u0629 \u0627\u0644\u0647\u062F\u0627\u064A\u0627 \u0647\u0630\u0647",
+    "ach.encryptedBankAccountNumber.aria.iframeTitle":
+        "\u0627\u0644\u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0636\u0645\u0646 \u0644\u0631\u0642\u0645 \u0627\u0644\u062D\u0633\u0627\u0628 \u0627\u0644\u0628\u0646\u0643\u064A",
+    "ach.encryptedBankAccountNumber.aria.label": "\u0631\u0642\u0645 \u0627\u0644\u062D\u0633\u0627\u0628",
+    "ach.encryptedBankLocationId.aria.iframeTitle":
+        "\u0627\u0644\u0625\u0637\u0627\u0631 \u0627\u0644\u0645\u0636\u0645\u0646 \u0644\u0631\u0642\u0645 \u0627\u0644\u062A\u0648\u062C\u064A\u0647 \u0627\u0644\u0628\u0646\u0643\u064A",
+    "ach.encryptedBankLocationId.aria.label": "\u0631\u0642\u0645 \u062A\u0648\u062C\u064A\u0647 ABA",
     "pix.instructions":
-        "افتح التطبيق باستخدام مفتاح PIX المسجل، واختر الدفع باستخدام PIX وامسح رمز الاستجابة السريعة ضوئيًا أو انسخ الرمز والصقه",
-    "twint.saved": "المحفوظة",
-    orPayWith: "أو الدفع باستخدام",
-    invalidFormatExpects: "تنسيق غير صالح. التنسيق المتوقع: %{format}",
-    "upi.qrCodeWaitingMessage": "امسح رمز الاستجابة السريعة باستخدام تطبيق UPI الذي تُفضله لإتمام الدفع",
-    "upi.vpaWaitingMessage": "افتح تطبيق UPI لتأكيد الدفع",
-    "upi.modeSelection": "حدد كيف ترغب في استخدام تطبيق UPI.",
-    "onlineBanking.termsAndConditions": "بالمتابعة، فإنك توافق على %#الشروط و الأحكام%#",
+        "\u0627\u0641\u062A\u062D \u0627\u0644\u062A\u0637\u0628\u064A\u0642 \u0628\u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u0645\u0641\u062A\u0627\u062D PIX \u0627\u0644\u0645\u0633\u062C\u0644\u060C \u0648\u0627\u062E\u062A\u0631 \u0627\u0644\u062F\u0641\u0639 \u0628\u0627\u0633\u062A\u062E\u062F\u0627\u0645 PIX \u0648\u0627\u0645\u0633\u062D \u0631\u0645\u0632 \u0627\u0644\u0627\u0633\u062A\u062C\u0627\u0628\u0629 \u0627\u0644\u0633\u0631\u064A\u0639\u0629 \u0636\u0648\u0626\u064A\u064B\u0627 \u0623\u0648 \u0627\u0646\u0633\u062E \u0627\u0644\u0631\u0645\u0632 \u0648\u0627\u0644\u0635\u0642\u0647",
+    "twint.saved": "\u0627\u0644\u0645\u062D\u0641\u0648\u0638\u0629",
+    orPayWith: "\u0623\u0648 \u0627\u0644\u062F\u0641\u0639 \u0628\u0627\u0633\u062A\u062E\u062F\u0627\u0645",
+    invalidFormatExpects:
+        "\u062A\u0646\u0633\u064A\u0642 \u063A\u064A\u0631 \u0635\u0627\u0644\u062D. \u0627\u0644\u062A\u0646\u0633\u064A\u0642 \u0627\u0644\u0645\u062A\u0648\u0642\u0639: %{format}",
+    "upi.qrCodeWaitingMessage":
+        "\u0627\u0645\u0633\u062D \u0631\u0645\u0632 \u0627\u0644\u0627\u0633\u062A\u062C\u0627\u0628\u0629 \u0627\u0644\u0633\u0631\u064A\u0639\u0629 \u0628\u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u062A\u0637\u0628\u064A\u0642 UPI \u0627\u0644\u0630\u064A \u062A\u064F\u0641\u0636\u0644\u0647 \u0644\u0625\u062A\u0645\u0627\u0645 \u0627\u0644\u062F\u0641\u0639",
+    "upi.vpaWaitingMessage":
+        "\u0627\u0641\u062A\u062D \u062A\u0637\u0628\u064A\u0642 UPI \u0644\u062A\u0623\u0643\u064A\u062F \u0627\u0644\u062F\u0641\u0639",
+    "upi.modeSelection":
+        "\u062D\u062F\u062F \u0643\u064A\u0641 \u062A\u0631\u063A\u0628 \u0641\u064A \u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u062A\u0637\u0628\u064A\u0642 UPI.",
+    "onlineBanking.termsAndConditions":
+        "\u0628\u0627\u0644\u0645\u062A\u0627\u0628\u0639\u0629\u060C \u0641\u0625\u0646\u0643 \u062A\u0648\u0627\u0641\u0642 \u0639\u0644\u0649 %#\u0627\u0644\u0634\u0631\u0648\u0637 \u0648 \u0627\u0644\u0623\u062D\u0643\u0627\u0645%#",
     "onlineBankingPL.termsAndConditions":
-        "بالاستمرار، فإنك توافق على %#القواعد%# و%#الالتزامات المعلوماتية%# لمؤسسة Przelewy24",
-    "ctp.loading.poweredByCtp": "بدعم من Click to Pay",
-    "ctp.loading.intro": "نتحقق لمعرفة ما إذا كان لديك أي بطاقات محفوظة باستخدام Click to Pay...",
-    "ctp.login.title": "تابع إلى Click to Pay",
-    "ctp.login.subtitle": "أدخل عنوان البريد الإلكتروني المقترن بطريقة Click to Pay للمتابعة.",
-    "ctp.login.inputLabel": "البريد الإلكتروني",
-    "ctp.logout.notYou": "ليس أنت؟",
-    "ctp.logout.notYourCards": "ليست بطاقاتك؟",
-    "ctp.logout.notYourCard": "ليست بطاقتك؟",
-    "ctp.logout.notYourProfile": "ليس ملفك التعريفي؟",
-    "ctp.otp.fieldLabel": "رمز يستخدم لمرة واحدة",
-    "ctp.otp.resendCode": "إعادة إرسال الرمز",
-    "ctp.otp.codeResent": "تم إرسال الرمز",
-    "ctp.otp.title": "تمتع بالوصول إلى بطاقات Click to Pay الخاصة بك",
-    "ctp.otp.subtitle": "أدخل الرمز %@ الذي أرسلناه إلى ٪@ للتحقق من هويتك.",
-    "ctp.emptyProfile.message": "لا توجد بطاقات مسجلة في هذا الملف التعريفي على Click to Pay",
-    "ctp.separatorText": "أو استخدم",
-    "ctp.cards.title": "أكمل الدفع باستخدام بطاقة Click to Pay",
-    "ctp.cards.subtitle": "حدد بطاقة لاستخدامها.",
-    "ctp.cards.expiredCard": "منتهي الصلاحية",
-    "ctp.manualCardEntry": "الإدخال اليدوي للبطاقة",
-    "ctp.aria.infoModalButton": "ما المقصود ببطاقة Click to Pay؟",
-    "ctp.infoPopup.title": "تتيح بطاقات Click to Pay سهولة البطاقات اللاتلامسية عبر الإنترنت",
-    "ctp.infoPopup.subtitle": "طريقة دفع سريعة وآمنة مدعومة من Mastercard وVisa وبطاقات الدفع الأخرى.",
-    "ctp.infoPopup.benefit1": "تستخدم بطاقات Click to Pay التشفير للحفاظ على أمن معلوماتك وسلامتها",
-    "ctp.infoPopup.benefit2": "استخدمها للدفع للتجار في جميع أنحاء العالم",
-    "ctp.infoPopup.benefit3": "قم بالإعداد مرة واحدة لإجراء مدفوعات دون تعقيدات في المستقبل",
-    "ctp.errors.AUTH_INVALID": "المصادقة غير صحيحة",
+        "\u0628\u0627\u0644\u0627\u0633\u062A\u0645\u0631\u0627\u0631\u060C \u0641\u0625\u0646\u0643 \u062A\u0648\u0627\u0641\u0642 \u0639\u0644\u0649 %#\u0627\u0644\u0642\u0648\u0627\u0639\u062F%# \u0648%#\u0627\u0644\u0627\u0644\u062A\u0632\u0627\u0645\u0627\u062A \u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062A\u064A\u0629%# \u0644\u0645\u0624\u0633\u0633\u0629 Przelewy24",
+    "ctp.loading.poweredByCtp": "\u0628\u062F\u0639\u0645 \u0645\u0646 Click to Pay",
+    "ctp.loading.intro":
+        "\u0646\u062A\u062D\u0642\u0642 \u0644\u0645\u0639\u0631\u0641\u0629 \u0645\u0627 \u0625\u0630\u0627 \u0643\u0627\u0646 \u0644\u062F\u064A\u0643 \u0623\u064A \u0628\u0637\u0627\u0642\u0627\u062A \u0645\u062D\u0641\u0648\u0638\u0629 \u0628\u0627\u0633\u062A\u062E\u062F\u0627\u0645 Click to Pay...",
+    "ctp.login.title": "\u062A\u0627\u0628\u0639 \u0625\u0644\u0649 Click to Pay",
+    "ctp.login.subtitle":
+        "\u0623\u062F\u062E\u0644 \u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A \u0627\u0644\u0645\u0642\u062A\u0631\u0646 \u0628\u0637\u0631\u064A\u0642\u0629 Click to Pay \u0644\u0644\u0645\u062A\u0627\u0628\u0639\u0629.",
+    "ctp.login.inputLabel":
+        "\u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A",
+    "ctp.logout.notYou": "\u0644\u064A\u0633 \u0623\u0646\u062A\u061F",
+    "ctp.logout.notYourCards": "\u0644\u064A\u0633\u062A \u0628\u0637\u0627\u0642\u0627\u062A\u0643\u061F",
+    "ctp.logout.notYourCard": "\u0644\u064A\u0633\u062A \u0628\u0637\u0627\u0642\u062A\u0643\u061F",
+    "ctp.logout.notYourProfile":
+        "\u0644\u064A\u0633 \u0645\u0644\u0641\u0643 \u0627\u0644\u062A\u0639\u0631\u064A\u0641\u064A\u061F",
+    "ctp.otp.fieldLabel":
+        "\u0631\u0645\u0632 \u064A\u0633\u062A\u062E\u062F\u0645 \u0644\u0645\u0631\u0629 \u0648\u0627\u062D\u062F\u0629",
+    "ctp.otp.resendCode":
+        "\u0625\u0639\u0627\u062F\u0629 \u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0645\u0632",
+    "ctp.otp.codeResent": "\u062A\u0645 \u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0645\u0632",
+    "ctp.otp.title":
+        "\u062A\u0645\u062A\u0639 \u0628\u0627\u0644\u0648\u0635\u0648\u0644 \u0625\u0644\u0649 \u0628\u0637\u0627\u0642\u0627\u062A Click to Pay \u0627\u0644\u062E\u0627\u0635\u0629 \u0628\u0643",
+    "ctp.otp.subtitle":
+        "\u0623\u062F\u062E\u0644 \u0627\u0644\u0631\u0645\u0632 %@ \u0627\u0644\u0630\u064A \u0623\u0631\u0633\u0644\u0646\u0627\u0647 \u0625\u0644\u0649 \u066A@ \u0644\u0644\u062A\u062D\u0642\u0642 \u0645\u0646 \u0647\u0648\u064A\u062A\u0643.",
+    "ctp.emptyProfile.message":
+        "\u0644\u0627 \u062A\u0648\u062C\u062F \u0628\u0637\u0627\u0642\u0627\u062A \u0645\u0633\u062C\u0644\u0629 \u0641\u064A \u0647\u0630\u0627 \u0627\u0644\u0645\u0644\u0641 \u0627\u0644\u062A\u0639\u0631\u064A\u0641\u064A \u0639\u0644\u0649 Click to Pay",
+    "ctp.separatorText": "\u0623\u0648 \u0627\u0633\u062A\u062E\u062F\u0645",
+    "ctp.cards.title":
+        "\u0623\u0643\u0645\u0644 \u0627\u0644\u062F\u0641\u0639 \u0628\u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u0628\u0637\u0627\u0642\u0629 Click to Pay",
+    "ctp.cards.subtitle":
+        "\u062D\u062F\u062F \u0628\u0637\u0627\u0642\u0629 \u0644\u0627\u0633\u062A\u062E\u062F\u0627\u0645\u0647\u0627.",
+    "ctp.cards.expiredCard": "\u0645\u0646\u062A\u0647\u064A \u0627\u0644\u0635\u0644\u0627\u062D\u064A\u0629",
+    "ctp.manualCardEntry":
+        "\u0627\u0644\u0625\u062F\u062E\u0627\u0644 \u0627\u0644\u064A\u062F\u0648\u064A \u0644\u0644\u0628\u0637\u0627\u0642\u0629",
+    "ctp.aria.infoModalButton":
+        "\u0645\u0627 \u0627\u0644\u0645\u0642\u0635\u0648\u062F \u0628\u0628\u0637\u0627\u0642\u0629 Click to Pay\u061F",
+    "ctp.infoPopup.title":
+        "\u062A\u062A\u064A\u062D \u0628\u0637\u0627\u0642\u0627\u062A Click to Pay \u0633\u0647\u0648\u0644\u0629 \u0627\u0644\u0628\u0637\u0627\u0642\u0627\u062A \u0627\u0644\u0644\u0627\u062A\u0644\u0627\u0645\u0633\u064A\u0629 \u0639\u0628\u0631 \u0627\u0644\u0625\u0646\u062A\u0631\u0646\u062A",
+    "ctp.infoPopup.subtitle":
+        "\u0637\u0631\u064A\u0642\u0629 \u062F\u0641\u0639 \u0633\u0631\u064A\u0639\u0629 \u0648\u0622\u0645\u0646\u0629 \u0645\u062F\u0639\u0648\u0645\u0629 \u0645\u0646 Mastercard \u0648Visa \u0648\u0628\u0637\u0627\u0642\u0627\u062A \u0627\u0644\u062F\u0641\u0639 \u0627\u0644\u0623\u062E\u0631\u0649.",
+    "ctp.infoPopup.benefit1":
+        "\u062A\u0633\u062A\u062E\u062F\u0645 \u0628\u0637\u0627\u0642\u0627\u062A Click to Pay \u0627\u0644\u062A\u0634\u0641\u064A\u0631 \u0644\u0644\u062D\u0641\u0627\u0638 \u0639\u0644\u0649 \u0623\u0645\u0646 \u0645\u0639\u0644\u0648\u0645\u0627\u062A\u0643 \u0648\u0633\u0644\u0627\u0645\u062A\u0647\u0627",
+    "ctp.infoPopup.benefit2":
+        "\u0627\u0633\u062A\u062E\u062F\u0645\u0647\u0627 \u0644\u0644\u062F\u0641\u0639 \u0644\u0644\u062A\u062C\u0627\u0631 \u0641\u064A \u062C\u0645\u064A\u0639 \u0623\u0646\u062D\u0627\u0621 \u0627\u0644\u0639\u0627\u0644\u0645",
+    "ctp.infoPopup.benefit3":
+        "\u0642\u0645 \u0628\u0627\u0644\u0625\u0639\u062F\u0627\u062F \u0645\u0631\u0629 \u0648\u0627\u062D\u062F\u0629 \u0644\u0625\u062C\u0631\u0627\u0621 \u0645\u062F\u0641\u0648\u0639\u0627\u062A \u062F\u0648\u0646 \u062A\u0639\u0642\u064A\u062F\u0627\u062A \u0641\u064A \u0627\u0644\u0645\u0633\u062A\u0642\u0628\u0644",
+    "ctp.errors.AUTH_INVALID":
+        "\u0627\u0644\u0645\u0635\u0627\u062F\u0642\u0629 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D\u0629",
     "ctp.errors.NOT_FOUND":
-        "لم يتم العثور على حساب، أدخل بريدًا إلكترونيًا صحيحًا أو استمر في استخدام الإدخال اليدوي للبطاقة",
-    "ctp.errors.ID_FORMAT_UNSUPPORTED": "التنسيق غير مدعوم",
-    "ctp.errors.FRAUD": "تم إغلاق حساب المستخدم أو تعطيله",
-    "ctp.errors.CONSUMER_ID_MISSING": "هوية المستهلك غير موجودة في الطلب",
-    "ctp.errors.ACCT_INACCESSIBLE": "هذا الحساب غير متاح حاليًا، على سبيل المثال، الحساب مغلق",
-    "ctp.errors.CODE_INVALID": "رمز التحقق غير صحيح",
-    "ctp.errors.CODE_EXPIRED": "انتهت صلاحية هذا الرمز",
-    "ctp.errors.RETRIES_EXCEEDED": "تم تجاوز الحد الأقصى لعدد عمليات إعادة المحاولة لإنشاء كلمة مرور لمرة واحدة",
-    "ctp.errors.OTP_SEND_FAILED": "تعذر إرسال كلمة المرور لمرة واحدة إلى المستلم",
-    "ctp.errors.REQUEST_TIMEOUT": "حدث خطأ ما، حاول مرة أخرى أو استخدم الإدخال اليدوي للبطاقة",
-    "ctp.errors.UNKNOWN_ERROR": "حدث خطأ ما، حاول مرة أخرى أو استخدم الإدخال اليدوي للبطاقة",
-    "ctp.errors.SERVICE_ERROR": "حدث خطأ ما، حاول مرة أخرى أو استخدم الإدخال اليدوي للبطاقة",
-    "ctp.errors.SERVER_ERROR": "حدث خطأ ما، حاول مرة أخرى أو استخدم الإدخال اليدوي للبطاقة",
-    "ctp.errors.INVALID_PARAMETER": "حدث خطأ ما، حاول مرة أخرى أو استخدم الإدخال اليدوي للبطاقة",
-    "ctp.errors.AUTH_ERROR": "حدث خطأ ما، حاول مرة أخرى أو استخدم الإدخال اليدوي للبطاقة",
-    "paymentMethodsList.aria.label": "اختر طريقة دفع",
-    "companyDetails.name.invalid": "أدخل اسم الشركة",
-    "companyDetails.registrationNumber.invalid": "أدخل رقم التسجيل",
-    "consent.checkbox.invalid": "يجب أن توافق على الشروط والأحكام",
-    "form.instruction": "جميع الحقول مطلوبة ما لم يتم وضع علامة خلاف ذلك.",
-    "trustly.descriptor": "الدفع المصرفي الفوري",
-    "trustly.description1": "ادفع مباشرة من أي من حساباتك المصرفية، مدعومًا بأمان على مستوى البنك",
-    "trustly.description2": "لا توجد حاجة للبطاقات أو تحميل التطبيقات أو التسجيل",
+        "\u0644\u0645 \u064A\u062A\u0645 \u0627\u0644\u0639\u062B\u0648\u0631 \u0639\u0644\u0649 \u062D\u0633\u0627\u0628\u060C \u0623\u062F\u062E\u0644 \u0628\u0631\u064A\u062F\u064B\u0627 \u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A\u064B\u0627 \u0635\u062D\u064A\u062D\u064B\u0627 \u0623\u0648 \u0627\u0633\u062A\u0645\u0631 \u0641\u064A \u0627\u0633\u062A\u062E\u062F\u0627\u0645 \u0627\u0644\u0625\u062F\u062E\u0627\u0644 \u0627\u0644\u064A\u062F\u0648\u064A \u0644\u0644\u0628\u0637\u0627\u0642\u0629",
+    "ctp.errors.ID_FORMAT_UNSUPPORTED":
+        "\u0627\u0644\u062A\u0646\u0633\u064A\u0642 \u063A\u064A\u0631 \u0645\u062F\u0639\u0648\u0645",
+    "ctp.errors.FRAUD":
+        "\u062A\u0645 \u0625\u063A\u0644\u0627\u0642 \u062D\u0633\u0627\u0628 \u0627\u0644\u0645\u0633\u062A\u062E\u062F\u0645 \u0623\u0648 \u062A\u0639\u0637\u064A\u0644\u0647",
+    "ctp.errors.CONSUMER_ID_MISSING":
+        "\u0647\u0648\u064A\u0629 \u0627\u0644\u0645\u0633\u062A\u0647\u0644\u0643 \u063A\u064A\u0631 \u0645\u0648\u062C\u0648\u062F\u0629 \u0641\u064A \u0627\u0644\u0637\u0644\u0628",
+    "ctp.errors.ACCT_INACCESSIBLE":
+        "\u0647\u0630\u0627 \u0627\u0644\u062D\u0633\u0627\u0628 \u063A\u064A\u0631 \u0645\u062A\u0627\u062D \u062D\u0627\u0644\u064A\u064B\u0627\u060C \u0639\u0644\u0649 \u0633\u0628\u064A\u0644 \u0627\u0644\u0645\u062B\u0627\u0644\u060C \u0627\u0644\u062D\u0633\u0627\u0628 \u0645\u063A\u0644\u0642",
+    "ctp.errors.CODE_INVALID":
+        "\u0631\u0645\u0632 \u0627\u0644\u062A\u062D\u0642\u0642 \u063A\u064A\u0631 \u0635\u062D\u064A\u062D",
+    "ctp.errors.CODE_EXPIRED":
+        "\u0627\u0646\u062A\u0647\u062A \u0635\u0644\u0627\u062D\u064A\u0629 \u0647\u0630\u0627 \u0627\u0644\u0631\u0645\u0632",
+    "ctp.errors.RETRIES_EXCEEDED":
+        "\u062A\u0645 \u062A\u062C\u0627\u0648\u0632 \u0627\u0644\u062D\u062F \u0627\u0644\u0623\u0642\u0635\u0649 \u0644\u0639\u062F\u062F \u0639\u0645\u0644\u064A\u0627\u062A \u0625\u0639\u0627\u062F\u0629 \u0627\u0644\u0645\u062D\u0627\u0648\u0644\u0629 \u0644\u0625\u0646\u0634\u0627\u0621 \u0643\u0644\u0645\u0629 \u0645\u0631\u0648\u0631 \u0644\u0645\u0631\u0629 \u0648\u0627\u062D\u062F\u0629",
+    "ctp.errors.OTP_SEND_FAILED":
+        "\u062A\u0639\u0630\u0631 \u0625\u0631\u0633\u0627\u0644 \u0643\u0644\u0645\u0629 \u0627\u0644\u0645\u0631\u0648\u0631 \u0644\u0645\u0631\u0629 \u0648\u0627\u062D\u062F\u0629 \u0625\u0644\u0649 \u0627\u0644\u0645\u0633\u062A\u0644\u0645",
+    "ctp.errors.REQUEST_TIMEOUT":
+        "\u062D\u062F\u062B \u062E\u0637\u0623 \u0645\u0627\u060C \u062D\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649 \u0623\u0648 \u0627\u0633\u062A\u062E\u062F\u0645 \u0627\u0644\u0625\u062F\u062E\u0627\u0644 \u0627\u0644\u064A\u062F\u0648\u064A \u0644\u0644\u0628\u0637\u0627\u0642\u0629",
+    "ctp.errors.UNKNOWN_ERROR":
+        "\u062D\u062F\u062B \u062E\u0637\u0623 \u0645\u0627\u060C \u062D\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649 \u0623\u0648 \u0627\u0633\u062A\u062E\u062F\u0645 \u0627\u0644\u0625\u062F\u062E\u0627\u0644 \u0627\u0644\u064A\u062F\u0648\u064A \u0644\u0644\u0628\u0637\u0627\u0642\u0629",
+    "ctp.errors.SERVICE_ERROR":
+        "\u062D\u062F\u062B \u062E\u0637\u0623 \u0645\u0627\u060C \u062D\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649 \u0623\u0648 \u0627\u0633\u062A\u062E\u062F\u0645 \u0627\u0644\u0625\u062F\u062E\u0627\u0644 \u0627\u0644\u064A\u062F\u0648\u064A \u0644\u0644\u0628\u0637\u0627\u0642\u0629",
+    "ctp.errors.SERVER_ERROR":
+        "\u062D\u062F\u062B \u062E\u0637\u0623 \u0645\u0627\u060C \u062D\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649 \u0623\u0648 \u0627\u0633\u062A\u062E\u062F\u0645 \u0627\u0644\u0625\u062F\u062E\u0627\u0644 \u0627\u0644\u064A\u062F\u0648\u064A \u0644\u0644\u0628\u0637\u0627\u0642\u0629",
+    "ctp.errors.INVALID_PARAMETER":
+        "\u062D\u062F\u062B \u062E\u0637\u0623 \u0645\u0627\u060C \u062D\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649 \u0623\u0648 \u0627\u0633\u062A\u062E\u062F\u0645 \u0627\u0644\u0625\u062F\u062E\u0627\u0644 \u0627\u0644\u064A\u062F\u0648\u064A \u0644\u0644\u0628\u0637\u0627\u0642\u0629",
+    "ctp.errors.AUTH_ERROR":
+        "\u062D\u062F\u062B \u062E\u0637\u0623 \u0645\u0627\u060C \u062D\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649 \u0623\u0648 \u0627\u0633\u062A\u062E\u062F\u0645 \u0627\u0644\u0625\u062F\u062E\u0627\u0644 \u0627\u0644\u064A\u062F\u0648\u064A \u0644\u0644\u0628\u0637\u0627\u0642\u0629",
+    "paymentMethodsList.aria.label": "\u0627\u062E\u062A\u0631 \u0637\u0631\u064A\u0642\u0629 \u062F\u0641\u0639",
+    "companyDetails.name.invalid": "\u0623\u062F\u062E\u0644 \u0627\u0633\u0645 \u0627\u0644\u0634\u0631\u0643\u0629",
+    "companyDetails.registrationNumber.invalid":
+        "\u0623\u062F\u062E\u0644 \u0631\u0642\u0645 \u0627\u0644\u062A\u0633\u062C\u064A\u0644",
+    "consent.checkbox.invalid":
+        "\u064A\u062C\u0628 \u0623\u0646 \u062A\u0648\u0627\u0641\u0642 \u0639\u0644\u0649 \u0627\u0644\u0634\u0631\u0648\u0637 \u0648\u0627\u0644\u0623\u062D\u0643\u0627\u0645",
+    "form.instruction":
+        "\u062C\u0645\u064A\u0639 \u0627\u0644\u062D\u0642\u0648\u0644 \u0645\u0637\u0644\u0648\u0628\u0629 \u0645\u0627 \u0644\u0645 \u064A\u062A\u0645 \u0648\u0636\u0639 \u0639\u0644\u0627\u0645\u0629 \u062E\u0644\u0627\u0641 \u0630\u0644\u0643.",
+    "trustly.descriptor":
+        "\u0627\u0644\u062F\u0641\u0639 \u0627\u0644\u0645\u0635\u0631\u0641\u064A \u0627\u0644\u0641\u0648\u0631\u064A",
+    "trustly.description1":
+        "\u0627\u062F\u0641\u0639 \u0645\u0628\u0627\u0634\u0631\u0629 \u0645\u0646 \u0623\u064A \u0645\u0646 \u062D\u0633\u0627\u0628\u0627\u062A\u0643 \u0627\u0644\u0645\u0635\u0631\u0641\u064A\u0629\u060C \u0645\u062F\u0639\u0648\u0645\u064B\u0627 \u0628\u0623\u0645\u0627\u0646 \u0639\u0644\u0649 \u0645\u0633\u062A\u0648\u0649 \u0627\u0644\u0628\u0646\u0643",
+    "trustly.description2":
+        "\u0644\u0627 \u062A\u0648\u062C\u062F \u062D\u0627\u062C\u0629 \u0644\u0644\u0628\u0637\u0627\u0642\u0627\u062A \u0623\u0648 \u062A\u062D\u0645\u064A\u0644 \u0627\u0644\u062A\u0637\u0628\u064A\u0642\u0627\u062A \u0623\u0648 \u0627\u0644\u062A\u0633\u062C\u064A\u0644",
 };

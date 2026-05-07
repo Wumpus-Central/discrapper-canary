@@ -1,302 +1,464 @@
 a.r(r), a.d(r, { default: () => t });
 var t = {
-    payButton: "Заплатить",
-    "payButton.redirecting": "Перенаправление...",
-    "payButton.with": "Оплатить %{value} %{maskedData}",
-    close: "Закрыть",
-    storeDetails: "Сохранить для следующего платежа",
-    "creditCard.holderName": "Имя на карте",
-    "creditCard.holderName.placeholder": "И. Петров",
-    "creditCard.holderName.invalid": "Введите имя, как оно указано на карте",
-    "creditCard.numberField.title": "Номер карты",
+    payButton: "\u0417\u0430\u043F\u043B\u0430\u0442\u0438\u0442\u044C",
+    "payButton.redirecting":
+        "\u041F\u0435\u0440\u0435\u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435...",
+    "payButton.with": "\u041E\u043F\u043B\u0430\u0442\u0438\u0442\u044C %{value} %{maskedData}",
+    close: "\u0417\u0430\u043A\u0440\u044B\u0442\u044C",
+    storeDetails:
+        "\u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C \u0434\u043B\u044F \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E \u043F\u043B\u0430\u0442\u0435\u0436\u0430",
+    "creditCard.holderName": "\u0418\u043C\u044F \u043D\u0430 \u043A\u0430\u0440\u0442\u0435",
+    "creditCard.holderName.placeholder": "\u0418. \u041F\u0435\u0442\u0440\u043E\u0432",
+    "creditCard.holderName.invalid":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0438\u043C\u044F, \u043A\u0430\u043A \u043E\u043D\u043E \u0443\u043A\u0430\u0437\u0430\u043D\u043E \u043D\u0430 \u043A\u0430\u0440\u0442\u0435",
+    "creditCard.numberField.title": "\u041D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B",
     "creditCard.numberField.placeholder": "1234 5678 9012 3456",
-    "creditCard.expiryDateField.title": "Срок действия",
-    "creditCard.expiryDateField.placeholder": "ММ/ГГ",
-    "creditCard.expiryDateField.month": "Месяц",
-    "creditCard.expiryDateField.month.placeholder": "ММ",
-    "creditCard.expiryDateField.year.placeholder": "ГГ",
-    "creditCard.expiryDateField.year": "Год",
-    "creditCard.cvcField.title": "Защитный код",
+    "creditCard.expiryDateField.title": "\u0421\u0440\u043E\u043A \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "creditCard.expiryDateField.placeholder": "\u041C\u041C/\u0413\u0413",
+    "creditCard.expiryDateField.month": "\u041C\u0435\u0441\u044F\u0446",
+    "creditCard.expiryDateField.month.placeholder": "\u041C\u041C",
+    "creditCard.expiryDateField.year.placeholder": "\u0413\u0413",
+    "creditCard.expiryDateField.year": "\u0413\u043E\u0434",
+    "creditCard.cvcField.title": "\u0417\u0430\u0449\u0438\u0442\u043D\u044B\u0439 \u043A\u043E\u0434",
     "creditCard.cvcField.placeholder": "123",
-    "creditCard.storeDetailsButton": "Запомнить на следующий раз",
-    "creditCard.cvcField.placeholder.4digits": "4 цифры",
-    "creditCard.cvcField.placeholder.3digits": "3 цифры",
-    "creditCard.taxNumber.placeholder": "ГГММДД / 0123456789",
-    installments: "Количество платежей",
+    "creditCard.storeDetailsButton":
+        "\u0417\u0430\u043F\u043E\u043C\u043D\u0438\u0442\u044C \u043D\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u0440\u0430\u0437",
+    "creditCard.cvcField.placeholder.4digits": "4 \u0446\u0438\u0444\u0440\u044B",
+    "creditCard.cvcField.placeholder.3digits": "3 \u0446\u0438\u0444\u0440\u044B",
+    "creditCard.taxNumber.placeholder": "\u0413\u0413\u041C\u041C\u0414\u0414 / 0123456789",
+    installments:
+        "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043F\u043B\u0430\u0442\u0435\u0436\u0435\u0439",
     installmentOption: "%{times}\xd7 %{partialValue}",
-    installmentOptionMonths: "%{times} мес.",
-    "installments.oneTime": "Одноразовый платеж",
-    "installments.installments": "Рассрочка",
-    "installments.revolving": "Повторяющаяся оплата",
-    "sepaDirectDebit.ibanField.invalid": "Недействительный номер счета",
-    "sepaDirectDebit.nameField.placeholder": "И. Петров",
-    "sepa.ownerName": "Имя владельца",
-    "sepa.ibanNumber": "Номер счета (IBAN)",
-    "error.title": "Ошибка",
-    "error.subtitle.redirect": "Сбой перенаправления",
-    "error.subtitle.payment": "Сбой оплаты",
-    "error.subtitle.refused": "Оплата отклонена",
-    "error.message.unknown": "Возникла неизвестная ошибка",
-    "errorPanel.title": "Имеющиеся ошибки",
-    "idealIssuer.selectField.title": "Банк",
-    "idealIssuer.selectField.placeholder": "Выберите банк",
-    "creditCard.success": "Платеж успешно завершен",
-    loading: "Загрузка…",
-    continue: "Продолжить",
-    continueTo: "Перейти к",
-    "wechatpay.timetopay": "У вас %@ на оплату",
-    "sr.wechatpay.timetopay": "У вас есть %#мин.%# %#сек.%# для оплаты",
-    "wechatpay.scanqrcode": "Сканировать QR-код",
-    personalDetails: "Личные данные",
-    companyDetails: "Данные компании",
-    "companyDetails.name": "Название компании",
-    "companyDetails.registrationNumber": "Регистрационный номер",
-    socialSecurityNumber: "Номер социального страхования или ИНН",
-    firstName: "Имя",
-    "firstName.invalid": "Введите имя",
-    infix: "Приставка",
-    lastName: "Фамилия",
-    "lastName.invalid": "Введите фамилию",
-    mobileNumber: "Мобильный телефон",
-    "mobileNumber.invalid": "Недействительной номер мобильного",
-    city: "Город",
-    postalCode: "Почтовый индекс",
-    "postalCode.optional": "Почтовый индекс (необязательно)",
-    countryCode: "Код страны",
-    telephoneNumber: "Номер телефона",
-    dateOfBirth: "Дата рождения",
-    shopperEmail: "Адрес эл. почты",
-    gender: "Пол",
-    "gender.notselected": "Выберите пол",
-    male: "Мужчина",
-    female: "Женщина",
-    billingAddress: "Платежный адрес",
-    street: "Улица",
-    stateOrProvince: "Регион",
-    country: "Страна",
-    houseNumberOrName: "Номер дома",
-    separateDeliveryAddress: "Укажите отдельный адрес доставки",
-    deliveryAddress: "Адрес доставки",
-    zipCode: "Почтовый индекс",
-    apartmentSuite: "Квартира / помещение",
-    provinceOrTerritory: "Провинция или территория",
-    cityTown: "Город",
-    address: "Адрес",
-    "address.placeholder": "Найти свой адрес",
-    "address.errors.incomplete": "Для продолжения укажите адрес",
-    "address.enterManually": "Ввести адрес вручную",
-    state: "Штат",
-    "field.title.optional": "(необязательно)",
-    "creditCard.cvcField.title.optional": "Защитный код (необязательно)",
-    "issuerList.wallet.placeholder": "Выберите кошелек",
-    privacyPolicy: "Политика конфиденциальности",
-    "afterPay.agreement": "Я принимаю %@ AfterPay",
-    paymentConditions: "условия оплаты",
-    openApp: "Открыть приложение",
-    "voucher.readInstructions": "Прочитайте инструкции",
-    "voucher.introduction": "Благодарим за покупку. Для завершения оплаты используйте следующий купон.",
-    "voucher.expirationDate": "Срок действия",
-    "voucher.alternativeReference": "Другой код",
-    "dragonpay.voucher.non.bank.selectField.placeholder": "Выберите своего оператора",
-    "dragonpay.voucher.bank.selectField.placeholder": "Выберите банк",
-    "voucher.paymentReferenceLabel": "Код оплаты",
-    "voucher.surcharge": "Вкл. комиссию %@",
-    "voucher.introduction.doku": "Благодарим за покупку. Для завершения оплаты используйте следующие сведения.",
-    "voucher.shopperName": "Имя покупателя",
-    "voucher.merchantName": "Продавец",
-    "voucher.introduction.econtext": "Благодарим за покупку. Для завершения оплаты используйте следующие сведения.",
-    "voucher.telephoneNumber": "Номер телефона",
-    "voucher.shopperReference": "Идентификатор покупателя",
-    "voucher.collectionInstitutionNumber": "Номер получателя средств",
-    "voucher.econtext.telephoneNumber.invalid": "Номер телефона должен быть длиной 10 или 11 цифр",
-    "boletobancario.btnLabel": "Создать Boleto",
-    "boleto.sendCopyToEmail": "Отправить мне копию на эл. почту",
-    "button.copy": "Копия",
-    "button.download": "Загрузить",
-    "boleto.socialSecurityNumber.invalid": "Недействительное поле",
-    "creditCard.storedCard.description.ariaLabel": "Сохраненная карта заканчивается на %@",
-    "voucher.entity": "Объект",
-    donateButton: "Пожертвовать",
-    notNowButton: "Позже",
-    thanksForYourSupport: "Благодарим за поддержку!",
-    preauthorizeWith: "Предавторизация в",
-    confirmPreauthorization: "Подтвердить предавторизацию",
-    confirmPurchase: "Подтвердить покупку",
-    applyGiftcard: "Использовать",
-    giftcardBalance: "Баланс подарочной карты",
-    deductedBalance: "Баланс списаний",
-    "creditCard.pin.title": "PIN-код",
-    "creditCard.encryptedPassword.label": "Первые 2 цифры пароля карты",
-    "creditCard.encryptedPassword.invalid": "Неверный пароль",
-    "creditCard.taxNumber": "Дата рождения владельца карты или регистрационный номер предприятия",
+    installmentOptionMonths: "%{times} \u043C\u0435\u0441.",
+    "installments.oneTime":
+        "\u041E\u0434\u043D\u043E\u0440\u0430\u0437\u043E\u0432\u044B\u0439 \u043F\u043B\u0430\u0442\u0435\u0436",
+    "installments.installments": "\u0420\u0430\u0441\u0441\u0440\u043E\u0447\u043A\u0430",
+    "installments.revolving":
+        "\u041F\u043E\u0432\u0442\u043E\u0440\u044F\u044E\u0449\u0430\u044F\u0441\u044F \u043E\u043F\u043B\u0430\u0442\u0430",
+    "sepaDirectDebit.ibanField.invalid":
+        "\u041D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u0441\u0447\u0435\u0442\u0430",
+    "sepaDirectDebit.nameField.placeholder": "\u0418. \u041F\u0435\u0442\u0440\u043E\u0432",
+    "sepa.ownerName": "\u0418\u043C\u044F \u0432\u043B\u0430\u0434\u0435\u043B\u044C\u0446\u0430",
+    "sepa.ibanNumber": "\u041D\u043E\u043C\u0435\u0440 \u0441\u0447\u0435\u0442\u0430 (IBAN)",
+    "error.title": "\u041E\u0448\u0438\u0431\u043A\u0430",
+    "error.subtitle.redirect":
+        "\u0421\u0431\u043E\u0439 \u043F\u0435\u0440\u0435\u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F",
+    "error.subtitle.payment": "\u0421\u0431\u043E\u0439 \u043E\u043F\u043B\u0430\u0442\u044B",
+    "error.subtitle.refused":
+        "\u041E\u043F\u043B\u0430\u0442\u0430 \u043E\u0442\u043A\u043B\u043E\u043D\u0435\u043D\u0430",
+    "error.message.unknown":
+        "\u0412\u043E\u0437\u043D\u0438\u043A\u043B\u0430 \u043D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u0430\u044F \u043E\u0448\u0438\u0431\u043A\u0430",
+    "errorPanel.title": "\u0418\u043C\u0435\u044E\u0449\u0438\u0435\u0441\u044F \u043E\u0448\u0438\u0431\u043A\u0438",
+    "idealIssuer.selectField.title": "\u0411\u0430\u043D\u043A",
+    "idealIssuer.selectField.placeholder": "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0431\u0430\u043D\u043A",
+    "creditCard.success":
+        "\u041F\u043B\u0430\u0442\u0435\u0436 \u0443\u0441\u043F\u0435\u0448\u043D\u043E \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D",
+    loading: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430\u2026",
+    continue: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C",
+    continueTo: "\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u043A",
+    "wechatpay.timetopay": "\u0423 \u0432\u0430\u0441 %@ \u043D\u0430 \u043E\u043F\u043B\u0430\u0442\u0443",
+    "sr.wechatpay.timetopay":
+        "\u0423 \u0432\u0430\u0441 \u0435\u0441\u0442\u044C %#\u043C\u0438\u043D.%# %#\u0441\u0435\u043A.%# \u0434\u043B\u044F \u043E\u043F\u043B\u0430\u0442\u044B",
+    "wechatpay.scanqrcode": "\u0421\u043A\u0430\u043D\u0438\u0440\u043E\u0432\u0430\u0442\u044C QR-\u043A\u043E\u0434",
+    personalDetails: "\u041B\u0438\u0447\u043D\u044B\u0435 \u0434\u0430\u043D\u043D\u044B\u0435",
+    companyDetails: "\u0414\u0430\u043D\u043D\u044B\u0435 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438",
+    "companyDetails.name":
+        "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438",
+    "companyDetails.registrationNumber":
+        "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440",
+    socialSecurityNumber:
+        "\u041D\u043E\u043C\u0435\u0440 \u0441\u043E\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0441\u0442\u0440\u0430\u0445\u043E\u0432\u0430\u043D\u0438\u044F \u0438\u043B\u0438 \u0418\u041D\u041D",
+    firstName: "\u0418\u043C\u044F",
+    "firstName.invalid": "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0438\u043C\u044F",
+    infix: "\u041F\u0440\u0438\u0441\u0442\u0430\u0432\u043A\u0430",
+    lastName: "\u0424\u0430\u043C\u0438\u043B\u0438\u044F",
+    "lastName.invalid": "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0444\u0430\u043C\u0438\u043B\u0438\u044E",
+    mobileNumber: "\u041C\u043E\u0431\u0438\u043B\u044C\u043D\u044B\u0439 \u0442\u0435\u043B\u0435\u0444\u043E\u043D",
+    "mobileNumber.invalid":
+        "\u041D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439 \u043D\u043E\u043C\u0435\u0440 \u043C\u043E\u0431\u0438\u043B\u044C\u043D\u043E\u0433\u043E",
+    city: "\u0413\u043E\u0440\u043E\u0434",
+    postalCode: "\u041F\u043E\u0447\u0442\u043E\u0432\u044B\u0439 \u0438\u043D\u0434\u0435\u043A\u0441",
+    "postalCode.optional":
+        "\u041F\u043E\u0447\u0442\u043E\u0432\u044B\u0439 \u0438\u043D\u0434\u0435\u043A\u0441 (\u043D\u0435\u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E)",
+    countryCode: "\u041A\u043E\u0434 \u0441\u0442\u0440\u0430\u043D\u044B",
+    telephoneNumber: "\u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430",
+    dateOfBirth: "\u0414\u0430\u0442\u0430 \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F",
+    shopperEmail: "\u0410\u0434\u0440\u0435\u0441 \u044D\u043B. \u043F\u043E\u0447\u0442\u044B",
+    gender: "\u041F\u043E\u043B",
+    "gender.notselected": "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043F\u043E\u043B",
+    male: "\u041C\u0443\u0436\u0447\u0438\u043D\u0430",
+    female: "\u0416\u0435\u043D\u0449\u0438\u043D\u0430",
+    billingAddress: "\u041F\u043B\u0430\u0442\u0435\u0436\u043D\u044B\u0439 \u0430\u0434\u0440\u0435\u0441",
+    street: "\u0423\u043B\u0438\u0446\u0430",
+    stateOrProvince: "\u0420\u0435\u0433\u0438\u043E\u043D",
+    country: "\u0421\u0442\u0440\u0430\u043D\u0430",
+    houseNumberOrName: "\u041D\u043E\u043C\u0435\u0440 \u0434\u043E\u043C\u0430",
+    separateDeliveryAddress:
+        "\u0423\u043A\u0430\u0436\u0438\u0442\u0435 \u043E\u0442\u0434\u0435\u043B\u044C\u043D\u044B\u0439 \u0430\u0434\u0440\u0435\u0441 \u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0438",
+    deliveryAddress: "\u0410\u0434\u0440\u0435\u0441 \u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0438",
+    zipCode: "\u041F\u043E\u0447\u0442\u043E\u0432\u044B\u0439 \u0438\u043D\u0434\u0435\u043A\u0441",
+    apartmentSuite:
+        "\u041A\u0432\u0430\u0440\u0442\u0438\u0440\u0430 / \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u0435",
+    provinceOrTerritory:
+        "\u041F\u0440\u043E\u0432\u0438\u043D\u0446\u0438\u044F \u0438\u043B\u0438 \u0442\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u044F",
+    cityTown: "\u0413\u043E\u0440\u043E\u0434",
+    address: "\u0410\u0434\u0440\u0435\u0441",
+    "address.placeholder": "\u041D\u0430\u0439\u0442\u0438 \u0441\u0432\u043E\u0439 \u0430\u0434\u0440\u0435\u0441",
+    "address.errors.incomplete":
+        "\u0414\u043B\u044F \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0435\u043D\u0438\u044F \u0443\u043A\u0430\u0436\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441",
+    "address.enterManually":
+        "\u0412\u0432\u0435\u0441\u0442\u0438 \u0430\u0434\u0440\u0435\u0441 \u0432\u0440\u0443\u0447\u043D\u0443\u044E",
+    state: "\u0428\u0442\u0430\u0442",
+    "field.title.optional": "(\u043D\u0435\u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E)",
+    "creditCard.cvcField.title.optional":
+        "\u0417\u0430\u0449\u0438\u0442\u043D\u044B\u0439 \u043A\u043E\u0434 (\u043D\u0435\u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u043E)",
+    "issuerList.wallet.placeholder":
+        "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043A\u043E\u0448\u0435\u043B\u0435\u043A",
+    privacyPolicy:
+        "\u041F\u043E\u043B\u0438\u0442\u0438\u043A\u0430 \u043A\u043E\u043D\u0444\u0438\u0434\u0435\u043D\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0438",
+    "afterPay.agreement": "\u042F \u043F\u0440\u0438\u043D\u0438\u043C\u0430\u044E %@ AfterPay",
+    paymentConditions: "\u0443\u0441\u043B\u043E\u0432\u0438\u044F \u043E\u043F\u043B\u0430\u0442\u044B",
+    openApp: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435",
+    "voucher.readInstructions":
+        "\u041F\u0440\u043E\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u0438",
+    "voucher.introduction":
+        "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0437\u0430 \u043F\u043E\u043A\u0443\u043F\u043A\u0443. \u0414\u043B\u044F \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0438\u044F \u043E\u043F\u043B\u0430\u0442\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u043A\u0443\u043F\u043E\u043D.",
+    "voucher.expirationDate": "\u0421\u0440\u043E\u043A \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "voucher.alternativeReference": "\u0414\u0440\u0443\u0433\u043E\u0439 \u043A\u043E\u0434",
+    "dragonpay.voucher.non.bank.selectField.placeholder":
+        "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0432\u043E\u0435\u0433\u043E \u043E\u043F\u0435\u0440\u0430\u0442\u043E\u0440\u0430",
+    "dragonpay.voucher.bank.selectField.placeholder":
+        "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0431\u0430\u043D\u043A",
+    "voucher.paymentReferenceLabel": "\u041A\u043E\u0434 \u043E\u043F\u043B\u0430\u0442\u044B",
+    "voucher.surcharge": "\u0412\u043A\u043B. \u043A\u043E\u043C\u0438\u0441\u0441\u0438\u044E %@",
+    "voucher.introduction.doku":
+        "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0437\u0430 \u043F\u043E\u043A\u0443\u043F\u043A\u0443. \u0414\u043B\u044F \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0438\u044F \u043E\u043F\u043B\u0430\u0442\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435 \u0441\u0432\u0435\u0434\u0435\u043D\u0438\u044F.",
+    "voucher.shopperName": "\u0418\u043C\u044F \u043F\u043E\u043A\u0443\u043F\u0430\u0442\u0435\u043B\u044F",
+    "voucher.merchantName": "\u041F\u0440\u043E\u0434\u0430\u0432\u0435\u0446",
+    "voucher.introduction.econtext":
+        "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0437\u0430 \u043F\u043E\u043A\u0443\u043F\u043A\u0443. \u0414\u043B\u044F \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0438\u044F \u043E\u043F\u043B\u0430\u0442\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435 \u0441\u0432\u0435\u0434\u0435\u043D\u0438\u044F.",
+    "voucher.telephoneNumber": "\u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430",
+    "voucher.shopperReference":
+        "\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u043F\u043E\u043A\u0443\u043F\u0430\u0442\u0435\u043B\u044F",
+    "voucher.collectionInstitutionNumber":
+        "\u041D\u043E\u043C\u0435\u0440 \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u0435\u043B\u044F \u0441\u0440\u0435\u0434\u0441\u0442\u0432",
+    "voucher.econtext.telephoneNumber.invalid":
+        "\u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430 \u0434\u043E\u043B\u0436\u0435\u043D \u0431\u044B\u0442\u044C \u0434\u043B\u0438\u043D\u043E\u0439 10 \u0438\u043B\u0438 11 \u0446\u0438\u0444\u0440",
+    "boletobancario.btnLabel": "\u0421\u043E\u0437\u0434\u0430\u0442\u044C Boleto",
+    "boleto.sendCopyToEmail":
+        "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u043C\u043D\u0435 \u043A\u043E\u043F\u0438\u044E \u043D\u0430 \u044D\u043B. \u043F\u043E\u0447\u0442\u0443",
+    "button.copy": "\u041A\u043E\u043F\u0438\u044F",
+    "button.download": "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C",
+    "boleto.socialSecurityNumber.invalid":
+        "\u041D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435 \u043F\u043E\u043B\u0435",
+    "creditCard.storedCard.description.ariaLabel":
+        "\u0421\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u043D\u0430\u044F \u043A\u0430\u0440\u0442\u0430 \u0437\u0430\u043A\u0430\u043D\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u043D\u0430 %@",
+    "voucher.entity": "\u041E\u0431\u044A\u0435\u043A\u0442",
+    donateButton: "\u041F\u043E\u0436\u0435\u0440\u0442\u0432\u043E\u0432\u0430\u0442\u044C",
+    notNowButton: "\u041F\u043E\u0437\u0436\u0435",
+    thanksForYourSupport:
+        "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0437\u0430 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0443!",
+    preauthorizeWith:
+        "\u041F\u0440\u0435\u0434\u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044F \u0432",
+    confirmPreauthorization:
+        "\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044C \u043F\u0440\u0435\u0434\u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u044E",
+    confirmPurchase:
+        "\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044C \u043F\u043E\u043A\u0443\u043F\u043A\u0443",
+    applyGiftcard: "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C",
+    giftcardBalance:
+        "\u0411\u0430\u043B\u0430\u043D\u0441 \u043F\u043E\u0434\u0430\u0440\u043E\u0447\u043D\u043E\u0439 \u043A\u0430\u0440\u0442\u044B",
+    deductedBalance: "\u0411\u0430\u043B\u0430\u043D\u0441 \u0441\u043F\u0438\u0441\u0430\u043D\u0438\u0439",
+    "creditCard.pin.title": "PIN-\u043A\u043E\u0434",
+    "creditCard.encryptedPassword.label":
+        "\u041F\u0435\u0440\u0432\u044B\u0435 2 \u0446\u0438\u0444\u0440\u044B \u043F\u0430\u0440\u043E\u043B\u044F \u043A\u0430\u0440\u0442\u044B",
+    "creditCard.encryptedPassword.invalid":
+        "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u043F\u0430\u0440\u043E\u043B\u044C",
+    "creditCard.taxNumber":
+        "\u0414\u0430\u0442\u0430 \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F \u0432\u043B\u0430\u0434\u0435\u043B\u044C\u0446\u0430 \u043A\u0430\u0440\u0442\u044B \u0438\u043B\u0438 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u044F",
     "creditCard.taxNumber.label":
-        "Дата рождения владельца карты (ГГММДД) или регистрационный номер предприятия (10 цифр)",
-    "creditCard.taxNumber.labelAlt": "Регистрационный номер предприятия (10 цифр)",
-    "creditCard.taxNumber.invalid": "Неверная дата рождения владельца карты или регистрационный номер предприятия",
-    "storedPaymentMethod.disable.button": "Удалить",
-    "storedPaymentMethod.disable.confirmation": "Удалить сохраненный способ оплаты",
-    "storedPaymentMethod.disable.confirmButton": "Да, удалить",
-    "storedPaymentMethod.disable.cancelButton": "Отменить",
-    "ach.bankAccount": "Банковский счет",
-    "ach.accountHolderNameField.title": "Имя владельца карты",
-    "ach.accountHolderNameField.placeholder": "И. Петров",
-    "ach.accountHolderNameField.invalid": "Недействительное имя владельца карты",
-    "ach.accountNumberField.title": "Номер счета",
-    "ach.accountNumberField.invalid": "Недействительный номер счета",
-    "ach.accountLocationField.title": "Маршрутный номер ABA",
-    "ach.accountLocationField.invalid": "Недействительный маршрутный номер ABA",
-    "ach.savedBankAccount": "Сохраненный банковский счет",
-    "select.state": "Выберите штат",
-    "select.stateOrProvince": "Выберите штат или область",
-    "select.provinceOrTerritory": "Выберите провинцию или территорию",
-    "select.country": "Выберите страну",
-    "select.noOptionsFound": "Вариантов не найдено",
-    "select.filter.placeholder": "Поиск…",
-    "telephoneNumber.invalid": "Недействительный номер телефона",
-    qrCodeOrApp: "или",
-    "paypal.processingPayment": "Платеж обрабатывается…",
-    generateQRCode: "Создать QR-код",
-    "await.waitForConfirmation": "Ожидание подтверждения",
-    "mbway.confirmPayment": "Подтвердите оплату в приложении MB WAY",
-    "shopperEmail.invalid": "Недействительный адрес эл. почты",
-    "dateOfBirth.format": "ДД/ММ/ГГГГ",
-    "dateOfBirth.invalid": "Вам должно быть 18 лет или больше",
-    "blik.confirmPayment": "Для подтверждения оплаты откройте приложение банка.",
-    "blik.invalid": "Введите 6 цифр",
-    "blik.code": "6-значный код",
-    "blik.help": "Получите код из приложения вашего банка.",
+        "\u0414\u0430\u0442\u0430 \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F \u0432\u043B\u0430\u0434\u0435\u043B\u044C\u0446\u0430 \u043A\u0430\u0440\u0442\u044B (\u0413\u0413\u041C\u041C\u0414\u0414) \u0438\u043B\u0438 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u044F (10 \u0446\u0438\u0444\u0440)",
+    "creditCard.taxNumber.labelAlt":
+        "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u044F (10 \u0446\u0438\u0444\u0440)",
+    "creditCard.taxNumber.invalid":
+        "\u041D\u0435\u0432\u0435\u0440\u043D\u0430\u044F \u0434\u0430\u0442\u0430 \u0440\u043E\u0436\u0434\u0435\u043D\u0438\u044F \u0432\u043B\u0430\u0434\u0435\u043B\u044C\u0446\u0430 \u043A\u0430\u0440\u0442\u044B \u0438\u043B\u0438 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u044F",
+    "storedPaymentMethod.disable.button": "\u0423\u0434\u0430\u043B\u0438\u0442\u044C",
+    "storedPaymentMethod.disable.confirmation":
+        "\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u043D\u044B\u0439 \u0441\u043F\u043E\u0441\u043E\u0431 \u043E\u043F\u043B\u0430\u0442\u044B",
+    "storedPaymentMethod.disable.confirmButton": "\u0414\u0430, \u0443\u0434\u0430\u043B\u0438\u0442\u044C",
+    "storedPaymentMethod.disable.cancelButton": "\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C",
+    "ach.bankAccount": "\u0411\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u0438\u0439 \u0441\u0447\u0435\u0442",
+    "ach.accountHolderNameField.title":
+        "\u0418\u043C\u044F \u0432\u043B\u0430\u0434\u0435\u043B\u044C\u0446\u0430 \u043A\u0430\u0440\u0442\u044B",
+    "ach.accountHolderNameField.placeholder": "\u0418. \u041F\u0435\u0442\u0440\u043E\u0432",
+    "ach.accountHolderNameField.invalid":
+        "\u041D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435 \u0438\u043C\u044F \u0432\u043B\u0430\u0434\u0435\u043B\u044C\u0446\u0430 \u043A\u0430\u0440\u0442\u044B",
+    "ach.accountNumberField.title": "\u041D\u043E\u043C\u0435\u0440 \u0441\u0447\u0435\u0442\u0430",
+    "ach.accountNumberField.invalid":
+        "\u041D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u0441\u0447\u0435\u0442\u0430",
+    "ach.accountLocationField.title":
+        "\u041C\u0430\u0440\u0448\u0440\u0443\u0442\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 ABA",
+    "ach.accountLocationField.invalid":
+        "\u041D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043C\u0430\u0440\u0448\u0440\u0443\u0442\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 ABA",
+    "ach.savedBankAccount":
+        "\u0421\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u043D\u044B\u0439 \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u0438\u0439 \u0441\u0447\u0435\u0442",
+    "select.state": "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0448\u0442\u0430\u0442",
+    "select.stateOrProvince":
+        "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0448\u0442\u0430\u0442 \u0438\u043B\u0438 \u043E\u0431\u043B\u0430\u0441\u0442\u044C",
+    "select.provinceOrTerritory":
+        "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043F\u0440\u043E\u0432\u0438\u043D\u0446\u0438\u044E \u0438\u043B\u0438 \u0442\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u044E",
+    "select.country": "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0443",
+    "select.noOptionsFound":
+        "\u0412\u0430\u0440\u0438\u0430\u043D\u0442\u043E\u0432 \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u043E",
+    "select.filter.placeholder": "\u041F\u043E\u0438\u0441\u043A\u2026",
+    "telephoneNumber.invalid":
+        "\u041D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430",
+    qrCodeOrApp: "\u0438\u043B\u0438",
+    "paypal.processingPayment":
+        "\u041F\u043B\u0430\u0442\u0435\u0436 \u043E\u0431\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u0435\u0442\u0441\u044F\u2026",
+    generateQRCode: "\u0421\u043E\u0437\u0434\u0430\u0442\u044C QR-\u043A\u043E\u0434",
+    "await.waitForConfirmation":
+        "\u041E\u0436\u0438\u0434\u0430\u043D\u0438\u0435 \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043D\u0438\u044F",
+    "mbway.confirmPayment":
+        "\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u0435 \u043E\u043F\u043B\u0430\u0442\u0443 \u0432 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0438 MB WAY",
+    "shopperEmail.invalid":
+        "\u041D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u0430\u0434\u0440\u0435\u0441 \u044D\u043B. \u043F\u043E\u0447\u0442\u044B",
+    "dateOfBirth.format": "\u0414\u0414/\u041C\u041C/\u0413\u0413\u0413\u0413",
+    "dateOfBirth.invalid":
+        "\u0412\u0430\u043C \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C 18 \u043B\u0435\u0442 \u0438\u043B\u0438 \u0431\u043E\u043B\u044C\u0448\u0435",
+    "blik.confirmPayment":
+        "\u0414\u043B\u044F \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043D\u0438\u044F \u043E\u043F\u043B\u0430\u0442\u044B \u043E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u0431\u0430\u043D\u043A\u0430.",
+    "blik.invalid": "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 6 \u0446\u0438\u0444\u0440",
+    "blik.code": "6-\u0437\u043D\u0430\u0447\u043D\u044B\u0439 \u043A\u043E\u0434",
+    "blik.help":
+        "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u043A\u043E\u0434 \u0438\u0437 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0432\u0430\u0448\u0435\u0433\u043E \u0431\u0430\u043D\u043A\u0430.",
     "swish.pendingMessage":
-        "Обработка оплаты после сканирования может занять 10 минут. Попытка провести оплату повторно в течение указанного времени может привести к нескольким списаниям со счета.",
-    "field.valid": "Действительное поле",
-    "field.invalid": "Недействительное поле",
-    "error.va.gen.01": "Незаполненное поле",
-    "error.va.gen.02": "Недействительное поле",
-    "error.va.sf-cc-num.01": "Введите номер действительной карты",
-    "error.va.sf-cc-num.02": "Введите номер карты",
-    "error.va.sf-cc-num.03": "Введите поддерживаемую марку карты",
-    "error.va.sf-cc-num.04": "Введите номер карты полностью",
-    "error.va.sf-cc-dat.01": "Введите действительную дату окончания срока действия",
-    "error.va.sf-cc-dat.02": "Введите действительную дату окончания срока действия",
-    "error.va.sf-cc-dat.03": "Скоро истекает срок действия кредитной карты",
-    "error.va.sf-cc-dat.04": "Введите срок годности",
-    "error.va.sf-cc-dat.05": "Введите полную дату истечения срока действия",
-    "error.va.sf-cc-mth.01": "Введите месяц истечения срока действия",
-    "error.va.sf-cc-yr.01": "Введите год истечения срока действия",
-    "error.va.sf-cc-yr.02": "Введите год истечения срока действия полностью",
-    "error.va.sf-cc-cvc.01": "Введите защитный код",
-    "error.va.sf-cc-cvc.02": "Введите защитный код полностью",
-    "error.va.sf-ach-num.01": "Поле номера банковского счета не заполнено",
-    "error.va.sf-ach-num.02": "Номер банковского счета имеет неправильную длину",
-    "error.va.sf-ach-loc.01": "Поле маршрутного номера банка не заполнено",
-    "error.va.sf-ach-loc.02": "Маршрутный номер банка имеет неправильную длину",
-    "error.va.sf-kcp-pwd.01": "Поле пароля не заполнено",
-    "error.va.sf-kcp-pwd.02": "Пароль имеет неправильную длину",
-    "error.giftcard.no-balance": "На этой подарочной карте нет средств",
-    "error.giftcard.card-error": "У нас не зарегистрирована карта с таким номером",
-    "error.giftcard.currency-error": "Принимаются только подарочные карты соответствующей валюты",
-    "amazonpay.signout": "Выйти из Amazon",
-    "amazonpay.changePaymentDetails": "Изменить информацию об оплате",
-    "partialPayment.warning": "Выбрать другой способ оплаты остатка",
-    "partialPayment.remainingBalance": "Остаток на балансе составит %{amount}",
-    "bankTransfer.beneficiary": "Получатель",
-    "bankTransfer.reference": "Ссылка",
+        "\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043E\u043F\u043B\u0430\u0442\u044B \u043F\u043E\u0441\u043B\u0435 \u0441\u043A\u0430\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F \u043C\u043E\u0436\u0435\u0442 \u0437\u0430\u043D\u044F\u0442\u044C 10 \u043C\u0438\u043D\u0443\u0442. \u041F\u043E\u043F\u044B\u0442\u043A\u0430 \u043F\u0440\u043E\u0432\u0435\u0441\u0442\u0438 \u043E\u043F\u043B\u0430\u0442\u0443 \u043F\u043E\u0432\u0442\u043E\u0440\u043D\u043E \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 \u0443\u043A\u0430\u0437\u0430\u043D\u043D\u043E\u0433\u043E \u0432\u0440\u0435\u043C\u0435\u043D\u0438 \u043C\u043E\u0436\u0435\u0442 \u043F\u0440\u0438\u0432\u0435\u0441\u0442\u0438 \u043A \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u0438\u043C \u0441\u043F\u0438\u0441\u0430\u043D\u0438\u044F\u043C \u0441\u043E \u0441\u0447\u0435\u0442\u0430.",
+    "field.valid":
+        "\u0414\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435 \u043F\u043E\u043B\u0435",
+    "field.invalid":
+        "\u041D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435 \u043F\u043E\u043B\u0435",
+    "error.va.gen.01":
+        "\u041D\u0435\u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u043D\u043E\u0435 \u043F\u043E\u043B\u0435",
+    "error.va.gen.02":
+        "\u041D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435 \u043F\u043E\u043B\u0435",
+    "error.va.sf-cc-num.01":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u043E\u043C\u0435\u0440 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439 \u043A\u0430\u0440\u0442\u044B",
+    "error.va.sf-cc-num.02":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B",
+    "error.va.sf-cc-num.03":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u043C\u0443\u044E \u043C\u0430\u0440\u043A\u0443 \u043A\u0430\u0440\u0442\u044B",
+    "error.va.sf-cc-num.04":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E",
+    "error.va.sf-cc-dat.01":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u0443\u044E \u0434\u0430\u0442\u0443 \u043E\u043A\u043E\u043D\u0447\u0430\u043D\u0438\u044F \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "error.va.sf-cc-dat.02":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u0443\u044E \u0434\u0430\u0442\u0443 \u043E\u043A\u043E\u043D\u0447\u0430\u043D\u0438\u044F \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "error.va.sf-cc-dat.03":
+        "\u0421\u043A\u043E\u0440\u043E \u0438\u0441\u0442\u0435\u043A\u0430\u0435\u0442 \u0441\u0440\u043E\u043A \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u043A\u0440\u0435\u0434\u0438\u0442\u043D\u043E\u0439 \u043A\u0430\u0440\u0442\u044B",
+    "error.va.sf-cc-dat.04":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0441\u0440\u043E\u043A \u0433\u043E\u0434\u043D\u043E\u0441\u0442\u0438",
+    "error.va.sf-cc-dat.05":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043F\u043E\u043B\u043D\u0443\u044E \u0434\u0430\u0442\u0443 \u0438\u0441\u0442\u0435\u0447\u0435\u043D\u0438\u044F \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "error.va.sf-cc-mth.01":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043C\u0435\u0441\u044F\u0446 \u0438\u0441\u0442\u0435\u0447\u0435\u043D\u0438\u044F \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "error.va.sf-cc-yr.01":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0433\u043E\u0434 \u0438\u0441\u0442\u0435\u0447\u0435\u043D\u0438\u044F \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "error.va.sf-cc-yr.02":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0433\u043E\u0434 \u0438\u0441\u0442\u0435\u0447\u0435\u043D\u0438\u044F \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E",
+    "error.va.sf-cc-cvc.01":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0437\u0430\u0449\u0438\u0442\u043D\u044B\u0439 \u043A\u043E\u0434",
+    "error.va.sf-cc-cvc.02":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0437\u0430\u0449\u0438\u0442\u043D\u044B\u0439 \u043A\u043E\u0434 \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E",
+    "error.va.sf-ach-num.01":
+        "\u041F\u043E\u043B\u0435 \u043D\u043E\u043C\u0435\u0440\u0430 \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0441\u0447\u0435\u0442\u0430 \u043D\u0435 \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u043E",
+    "error.va.sf-ach-num.02":
+        "\u041D\u043E\u043C\u0435\u0440 \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0441\u0447\u0435\u0442\u0430 \u0438\u043C\u0435\u0435\u0442 \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0443\u044E \u0434\u043B\u0438\u043D\u0443",
+    "error.va.sf-ach-loc.01":
+        "\u041F\u043E\u043B\u0435 \u043C\u0430\u0440\u0448\u0440\u0443\u0442\u043D\u043E\u0433\u043E \u043D\u043E\u043C\u0435\u0440\u0430 \u0431\u0430\u043D\u043A\u0430 \u043D\u0435 \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u043E",
+    "error.va.sf-ach-loc.02":
+        "\u041C\u0430\u0440\u0448\u0440\u0443\u0442\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u0431\u0430\u043D\u043A\u0430 \u0438\u043C\u0435\u0435\u0442 \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0443\u044E \u0434\u043B\u0438\u043D\u0443",
+    "error.va.sf-kcp-pwd.01":
+        "\u041F\u043E\u043B\u0435 \u043F\u0430\u0440\u043E\u043B\u044F \u043D\u0435 \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u043E",
+    "error.va.sf-kcp-pwd.02":
+        "\u041F\u0430\u0440\u043E\u043B\u044C \u0438\u043C\u0435\u0435\u0442 \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0443\u044E \u0434\u043B\u0438\u043D\u0443",
+    "error.giftcard.no-balance":
+        "\u041D\u0430 \u044D\u0442\u043E\u0439 \u043F\u043E\u0434\u0430\u0440\u043E\u0447\u043D\u043E\u0439 \u043A\u0430\u0440\u0442\u0435 \u043D\u0435\u0442 \u0441\u0440\u0435\u0434\u0441\u0442\u0432",
+    "error.giftcard.card-error":
+        "\u0423 \u043D\u0430\u0441 \u043D\u0435 \u0437\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u043D\u0430 \u043A\u0430\u0440\u0442\u0430 \u0441 \u0442\u0430\u043A\u0438\u043C \u043D\u043E\u043C\u0435\u0440\u043E\u043C",
+    "error.giftcard.currency-error":
+        "\u041F\u0440\u0438\u043D\u0438\u043C\u0430\u044E\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u043E\u0434\u0430\u0440\u043E\u0447\u043D\u044B\u0435 \u043A\u0430\u0440\u0442\u044B \u0441\u043E\u043E\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0435\u0439 \u0432\u0430\u043B\u044E\u0442\u044B",
+    "amazonpay.signout": "\u0412\u044B\u0439\u0442\u0438 \u0438\u0437 Amazon",
+    "amazonpay.changePaymentDetails":
+        "\u0418\u0437\u043C\u0435\u043D\u0438\u0442\u044C \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u043E\u0431 \u043E\u043F\u043B\u0430\u0442\u0435",
+    "partialPayment.warning":
+        "\u0412\u044B\u0431\u0440\u0430\u0442\u044C \u0434\u0440\u0443\u0433\u043E\u0439 \u0441\u043F\u043E\u0441\u043E\u0431 \u043E\u043F\u043B\u0430\u0442\u044B \u043E\u0441\u0442\u0430\u0442\u043A\u0430",
+    "partialPayment.remainingBalance":
+        "\u041E\u0441\u0442\u0430\u0442\u043E\u043A \u043D\u0430 \u0431\u0430\u043B\u0430\u043D\u0441\u0435 \u0441\u043E\u0441\u0442\u0430\u0432\u0438\u0442 %{amount}",
+    "bankTransfer.beneficiary": "\u041F\u043E\u043B\u0443\u0447\u0430\u0442\u0435\u043B\u044C",
+    "bankTransfer.reference": "\u0421\u0441\u044B\u043B\u043A\u0430",
     "bankTransfer.introduction":
-        "Для создания нового банковского перечисления перейдите далее. Для окончательного оформления платежа используйте сведения на следующем экране.",
-    "bankTransfer.instructions": "Благодарим за покупку. Для завершения оплаты используйте следующие сведения.",
-    "bacs.accountHolderName": "Имя владельца банковского счета",
-    "bacs.accountHolderName.invalid": "Неверное имя владельца банковского счета",
-    "bacs.accountNumber": "Номер банковского счета",
-    "bacs.accountNumber.invalid": "Неверный номер банковского счета",
-    "bacs.bankLocationId": "Код банка",
-    "bacs.bankLocationId.invalid": "Неверный код банка",
-    "bacs.consent.amount": "Выражаю согласие на списание вышеуказанной суммы с моего банковского счета.",
+        "\u0414\u043B\u044F \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F \u043D\u043E\u0432\u043E\u0433\u043E \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u043F\u0435\u0440\u0435\u0447\u0438\u0441\u043B\u0435\u043D\u0438\u044F \u043F\u0435\u0440\u0435\u0439\u0434\u0438\u0442\u0435 \u0434\u0430\u043B\u0435\u0435. \u0414\u043B\u044F \u043E\u043A\u043E\u043D\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E \u043E\u0444\u043E\u0440\u043C\u043B\u0435\u043D\u0438\u044F \u043F\u043B\u0430\u0442\u0435\u0436\u0430 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0441\u0432\u0435\u0434\u0435\u043D\u0438\u044F \u043D\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u043C \u044D\u043A\u0440\u0430\u043D\u0435.",
+    "bankTransfer.instructions":
+        "\u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u0438\u043C \u0437\u0430 \u043F\u043E\u043A\u0443\u043F\u043A\u0443. \u0414\u043B\u044F \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0438\u044F \u043E\u043F\u043B\u0430\u0442\u044B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435 \u0441\u0432\u0435\u0434\u0435\u043D\u0438\u044F.",
+    "bacs.accountHolderName":
+        "\u0418\u043C\u044F \u0432\u043B\u0430\u0434\u0435\u043B\u044C\u0446\u0430 \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0441\u0447\u0435\u0442\u0430",
+    "bacs.accountHolderName.invalid":
+        "\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0438\u043C\u044F \u0432\u043B\u0430\u0434\u0435\u043B\u044C\u0446\u0430 \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0441\u0447\u0435\u0442\u0430",
+    "bacs.accountNumber":
+        "\u041D\u043E\u043C\u0435\u0440 \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0441\u0447\u0435\u0442\u0430",
+    "bacs.accountNumber.invalid":
+        "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0441\u0447\u0435\u0442\u0430",
+    "bacs.bankLocationId": "\u041A\u043E\u0434 \u0431\u0430\u043D\u043A\u0430",
+    "bacs.bankLocationId.invalid":
+        "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u043A\u043E\u0434 \u0431\u0430\u043D\u043A\u0430",
+    "bacs.consent.amount":
+        "\u0412\u044B\u0440\u0430\u0436\u0430\u044E \u0441\u043E\u0433\u043B\u0430\u0441\u0438\u0435 \u043D\u0430 \u0441\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u0432\u044B\u0448\u0435\u0443\u043A\u0430\u0437\u0430\u043D\u043D\u043E\u0439 \u0441\u0443\u043C\u043C\u044B \u0441 \u043C\u043E\u0435\u0433\u043E \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0441\u0447\u0435\u0442\u0430.",
     "bacs.consent.account":
-        "Подтверждаю, что счет оформлен на мое имя и что я – единственное лицо, имеющее право подписи, разрешающей прямое дебетование средств со счета.",
-    edit: "Изменить",
-    "bacs.confirm": "Подтвердить и оплатить",
-    "bacs.result.introduction": "Загрузить распоряжение прямого дебетования (DDI / поручение)",
-    "download.pdf": "Загрузить PDF",
-    "creditCard.encryptedCardNumber.aria.iframeTitle": "Iframe для номера карты",
-    "creditCard.encryptedCardNumber.aria.label": "Номер карты",
-    "creditCard.encryptedExpiryDate.aria.iframeTitle": "Iframe для даты истечения срока действия",
-    "creditCard.encryptedExpiryDate.aria.label": "Срок действия",
-    "creditCard.encryptedExpiryMonth.aria.iframeTitle": "Iframe для месяца истечения срока действия",
-    "creditCard.encryptedExpiryMonth.aria.label": "Месяц срока действия",
-    "creditCard.encryptedExpiryYear.aria.iframeTitle": "Iframe для года истечения срока действия",
-    "creditCard.encryptedExpiryYear.aria.label": "Год срока действия",
-    "creditCard.encryptedSecurityCode.aria.iframeTitle": "Iframe для защитного кода",
-    "creditCard.encryptedSecurityCode.aria.label": "Защитный код",
-    "creditCard.encryptedPassword.aria.iframeTitle": "Iframe для пароля",
-    "creditCard.encryptedPassword.aria.label": "Первые 2 цифры пароля карты",
-    "giftcard.encryptedCardNumber.aria.iframeTitle": "Iframe для номера карты",
-    "giftcard.encryptedCardNumber.aria.label": "Номер карты",
-    "giftcard.encryptedSecurityCode.aria.iframeTitle": "Iframe для PIN-кода",
-    "giftcard.encryptedSecurityCode.aria.label": "PIN-код",
-    giftcardTransactionLimit: "Максимальная сумма операции по этой подарочной карте: %{amount}",
-    "ach.encryptedBankAccountNumber.aria.iframeTitle": "Iframe для номера банковского счета",
-    "ach.encryptedBankAccountNumber.aria.label": "Номер счета",
-    "ach.encryptedBankLocationId.aria.iframeTitle": "Iframe для маршрутного номера банка",
-    "ach.encryptedBankLocationId.aria.label": "Маршрутный номер ABA",
-    "twint.saved": "сохранено",
-    orPayWith: "или заплатите через",
-    invalidFormatExpects: "Неверный формат. Ожидаемый формат: %{format}",
-    "upi.qrCodeWaitingMessage": "Для завершения платежа отсканируйте QR-код с помощью предпочитаемого приложения UPI",
-    "upi.vpaWaitingMessage": "Откройте приложение UPI для подтверждения платежа",
-    "upi.modeSelection": "Укажите, как вы собираетесь использовать UPI.",
-    "onlineBanking.termsAndConditions": "Продолжая, вы тем самым соглашаетесь с %#условиями%#",
+        "\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0430\u044E, \u0447\u0442\u043E \u0441\u0447\u0435\u0442 \u043E\u0444\u043E\u0440\u043C\u043B\u0435\u043D \u043D\u0430 \u043C\u043E\u0435 \u0438\u043C\u044F \u0438 \u0447\u0442\u043E \u044F \u2013 \u0435\u0434\u0438\u043D\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435 \u043B\u0438\u0446\u043E, \u0438\u043C\u0435\u044E\u0449\u0435\u0435 \u043F\u0440\u0430\u0432\u043E \u043F\u043E\u0434\u043F\u0438\u0441\u0438, \u0440\u0430\u0437\u0440\u0435\u0448\u0430\u044E\u0449\u0435\u0439 \u043F\u0440\u044F\u043C\u043E\u0435 \u0434\u0435\u0431\u0435\u0442\u043E\u0432\u0430\u043D\u0438\u0435 \u0441\u0440\u0435\u0434\u0441\u0442\u0432 \u0441\u043E \u0441\u0447\u0435\u0442\u0430.",
+    edit: "\u0418\u0437\u043C\u0435\u043D\u0438\u0442\u044C",
+    "bacs.confirm":
+        "\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044C \u0438 \u043E\u043F\u043B\u0430\u0442\u0438\u0442\u044C",
+    "bacs.result.introduction":
+        "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0440\u0430\u0441\u043F\u043E\u0440\u044F\u0436\u0435\u043D\u0438\u0435 \u043F\u0440\u044F\u043C\u043E\u0433\u043E \u0434\u0435\u0431\u0435\u0442\u043E\u0432\u0430\u043D\u0438\u044F (DDI / \u043F\u043E\u0440\u0443\u0447\u0435\u043D\u0438\u0435)",
+    "download.pdf": "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C PDF",
+    "creditCard.encryptedCardNumber.aria.iframeTitle":
+        "Iframe \u0434\u043B\u044F \u043D\u043E\u043C\u0435\u0440\u0430 \u043A\u0430\u0440\u0442\u044B",
+    "creditCard.encryptedCardNumber.aria.label": "\u041D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B",
+    "creditCard.encryptedExpiryDate.aria.iframeTitle":
+        "Iframe \u0434\u043B\u044F \u0434\u0430\u0442\u044B \u0438\u0441\u0442\u0435\u0447\u0435\u043D\u0438\u044F \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "creditCard.encryptedExpiryDate.aria.label":
+        "\u0421\u0440\u043E\u043A \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "creditCard.encryptedExpiryMonth.aria.iframeTitle":
+        "Iframe \u0434\u043B\u044F \u043C\u0435\u0441\u044F\u0446\u0430 \u0438\u0441\u0442\u0435\u0447\u0435\u043D\u0438\u044F \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "creditCard.encryptedExpiryMonth.aria.label":
+        "\u041C\u0435\u0441\u044F\u0446 \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "creditCard.encryptedExpiryYear.aria.iframeTitle":
+        "Iframe \u0434\u043B\u044F \u0433\u043E\u0434\u0430 \u0438\u0441\u0442\u0435\u0447\u0435\u043D\u0438\u044F \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "creditCard.encryptedExpiryYear.aria.label":
+        "\u0413\u043E\u0434 \u0441\u0440\u043E\u043A\u0430 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F",
+    "creditCard.encryptedSecurityCode.aria.iframeTitle":
+        "Iframe \u0434\u043B\u044F \u0437\u0430\u0449\u0438\u0442\u043D\u043E\u0433\u043E \u043A\u043E\u0434\u0430",
+    "creditCard.encryptedSecurityCode.aria.label":
+        "\u0417\u0430\u0449\u0438\u0442\u043D\u044B\u0439 \u043A\u043E\u0434",
+    "creditCard.encryptedPassword.aria.iframeTitle": "Iframe \u0434\u043B\u044F \u043F\u0430\u0440\u043E\u043B\u044F",
+    "creditCard.encryptedPassword.aria.label":
+        "\u041F\u0435\u0440\u0432\u044B\u0435 2 \u0446\u0438\u0444\u0440\u044B \u043F\u0430\u0440\u043E\u043B\u044F \u043A\u0430\u0440\u0442\u044B",
+    "giftcard.encryptedCardNumber.aria.iframeTitle":
+        "Iframe \u0434\u043B\u044F \u043D\u043E\u043C\u0435\u0440\u0430 \u043A\u0430\u0440\u0442\u044B",
+    "giftcard.encryptedCardNumber.aria.label": "\u041D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B",
+    "giftcard.encryptedSecurityCode.aria.iframeTitle": "Iframe \u0434\u043B\u044F PIN-\u043A\u043E\u0434\u0430",
+    "giftcard.encryptedSecurityCode.aria.label": "PIN-\u043A\u043E\u0434",
+    giftcardTransactionLimit:
+        "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0441\u0443\u043C\u043C\u0430 \u043E\u043F\u0435\u0440\u0430\u0446\u0438\u0438 \u043F\u043E \u044D\u0442\u043E\u0439 \u043F\u043E\u0434\u0430\u0440\u043E\u0447\u043D\u043E\u0439 \u043A\u0430\u0440\u0442\u0435: %{amount}",
+    "ach.encryptedBankAccountNumber.aria.iframeTitle":
+        "Iframe \u0434\u043B\u044F \u043D\u043E\u043C\u0435\u0440\u0430 \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0441\u0447\u0435\u0442\u0430",
+    "ach.encryptedBankAccountNumber.aria.label": "\u041D\u043E\u043C\u0435\u0440 \u0441\u0447\u0435\u0442\u0430",
+    "ach.encryptedBankLocationId.aria.iframeTitle":
+        "Iframe \u0434\u043B\u044F \u043C\u0430\u0440\u0448\u0440\u0443\u0442\u043D\u043E\u0433\u043E \u043D\u043E\u043C\u0435\u0440\u0430 \u0431\u0430\u043D\u043A\u0430",
+    "ach.encryptedBankLocationId.aria.label":
+        "\u041C\u0430\u0440\u0448\u0440\u0443\u0442\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440 ABA",
+    "twint.saved": "\u0441\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u043E",
+    orPayWith:
+        "\u0438\u043B\u0438 \u0437\u0430\u043F\u043B\u0430\u0442\u0438\u0442\u0435 \u0447\u0435\u0440\u0435\u0437",
+    invalidFormatExpects:
+        "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u0444\u043E\u0440\u043C\u0430\u0442. \u041E\u0436\u0438\u0434\u0430\u0435\u043C\u044B\u0439 \u0444\u043E\u0440\u043C\u0430\u0442: %{format}",
+    "upi.qrCodeWaitingMessage":
+        "\u0414\u043B\u044F \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0438\u044F \u043F\u043B\u0430\u0442\u0435\u0436\u0430 \u043E\u0442\u0441\u043A\u0430\u043D\u0438\u0440\u0443\u0439\u0442\u0435 QR-\u043A\u043E\u0434 \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E \u043F\u0440\u0435\u0434\u043F\u043E\u0447\u0438\u0442\u0430\u0435\u043C\u043E\u0433\u043E \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F UPI",
+    "upi.vpaWaitingMessage":
+        "\u041E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 UPI \u0434\u043B\u044F \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043D\u0438\u044F \u043F\u043B\u0430\u0442\u0435\u0436\u0430",
+    "upi.modeSelection":
+        "\u0423\u043A\u0430\u0436\u0438\u0442\u0435, \u043A\u0430\u043A \u0432\u044B \u0441\u043E\u0431\u0438\u0440\u0430\u0435\u0442\u0435\u0441\u044C \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C UPI.",
+    "onlineBanking.termsAndConditions":
+        "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u044F, \u0432\u044B \u0442\u0435\u043C \u0441\u0430\u043C\u044B\u043C \u0441\u043E\u0433\u043B\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044C \u0441 %#\u0443\u0441\u043B\u043E\u0432\u0438\u044F\u043C\u0438%#",
     "onlineBankingPL.termsAndConditions":
-        "Продолжая, вы соглашаетесь с %#правилами%# и %#обязательствами в отношении данных%# Przelewy24",
-    "ctp.loading.poweredByCtp": "На платформе Click to Pay",
-    "ctp.loading.intro": "Проверка наличия сохраненных карт Click to Pay…",
-    "ctp.login.title": "Перейти на Click to Pay",
-    "ctp.login.subtitle": "Для продолжения введите адрес эл. почты, связанный с Click to Pay.",
-    "ctp.login.inputLabel": "Эл. почта",
-    "ctp.logout.notYou": "Это не вы?",
-    "ctp.logout.notYourCards": "Не ваши платежные карты?",
-    "ctp.logout.notYourCard": "Не ваша карта?",
-    "ctp.logout.notYourProfile": "Не ваш профиль?",
-    "ctp.otp.fieldLabel": "Одноразовый код",
-    "ctp.otp.resendCode": "Отправить код повторно",
-    "ctp.otp.codeResent": "Код отправлен повторно",
-    "ctp.otp.title": "Получите доступ к своим картам Click to Pay",
-    "ctp.otp.subtitle": "Для подтверждения своей личности введите код %@, отправленный %@.",
-    "ctp.emptyProfile.message": "В данном профиле Click to Pay нет зарегистрированных карт",
-    "ctp.separatorText": "или используйте",
-    "ctp.cards.title": "Оформите оплату с помощью Click to Pay",
-    "ctp.cards.subtitle": "Выберите карту.",
-    "ctp.cards.expiredCard": "Просрочена",
-    "ctp.manualCardEntry": "Ввод данных карты вручную",
-    "ctp.aria.infoModalButton": "Что такое Click to Pay",
-    "ctp.infoPopup.title": "Click to Pay – удобная бесконтактная оплата онлайн",
+        "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u044F, \u0432\u044B \u0441\u043E\u0433\u043B\u0430\u0448\u0430\u0435\u0442\u0435\u0441\u044C \u0441 %#\u043F\u0440\u0430\u0432\u0438\u043B\u0430\u043C\u0438%# \u0438 %#\u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430\u043C\u0438 \u0432 \u043E\u0442\u043D\u043E\u0448\u0435\u043D\u0438\u0438 \u0434\u0430\u043D\u043D\u044B\u0445%# Przelewy24",
+    "ctp.loading.poweredByCtp": "\u041D\u0430 \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0435 Click to Pay",
+    "ctp.loading.intro":
+        "\u041F\u0440\u043E\u0432\u0435\u0440\u043A\u0430 \u043D\u0430\u043B\u0438\u0447\u0438\u044F \u0441\u043E\u0445\u0440\u0430\u043D\u0435\u043D\u043D\u044B\u0445 \u043A\u0430\u0440\u0442 Click to Pay\u2026",
+    "ctp.login.title": "\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 Click to Pay",
+    "ctp.login.subtitle":
+        "\u0414\u043B\u044F \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0435\u043D\u0438\u044F \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u044D\u043B. \u043F\u043E\u0447\u0442\u044B, \u0441\u0432\u044F\u0437\u0430\u043D\u043D\u044B\u0439 \u0441 Click to Pay.",
+    "ctp.login.inputLabel": "\u042D\u043B. \u043F\u043E\u0447\u0442\u0430",
+    "ctp.logout.notYou": "\u042D\u0442\u043E \u043D\u0435 \u0432\u044B?",
+    "ctp.logout.notYourCards":
+        "\u041D\u0435 \u0432\u0430\u0448\u0438 \u043F\u043B\u0430\u0442\u0435\u0436\u043D\u044B\u0435 \u043A\u0430\u0440\u0442\u044B?",
+    "ctp.logout.notYourCard": "\u041D\u0435 \u0432\u0430\u0448\u0430 \u043A\u0430\u0440\u0442\u0430?",
+    "ctp.logout.notYourProfile": "\u041D\u0435 \u0432\u0430\u0448 \u043F\u0440\u043E\u0444\u0438\u043B\u044C?",
+    "ctp.otp.fieldLabel": "\u041E\u0434\u043D\u043E\u0440\u0430\u0437\u043E\u0432\u044B\u0439 \u043A\u043E\u0434",
+    "ctp.otp.resendCode":
+        "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u043A\u043E\u0434 \u043F\u043E\u0432\u0442\u043E\u0440\u043D\u043E",
+    "ctp.otp.codeResent":
+        "\u041A\u043E\u0434 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u043F\u043E\u0432\u0442\u043E\u0440\u043D\u043E",
+    "ctp.otp.title":
+        "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u0434\u043E\u0441\u0442\u0443\u043F \u043A \u0441\u0432\u043E\u0438\u043C \u043A\u0430\u0440\u0442\u0430\u043C Click to Pay",
+    "ctp.otp.subtitle":
+        "\u0414\u043B\u044F \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043D\u0438\u044F \u0441\u0432\u043E\u0435\u0439 \u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438 \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u043A\u043E\u0434 %@, \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043D\u044B\u0439 %@.",
+    "ctp.emptyProfile.message":
+        "\u0412 \u0434\u0430\u043D\u043D\u043E\u043C \u043F\u0440\u043E\u0444\u0438\u043B\u0435 Click to Pay \u043D\u0435\u0442 \u0437\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0445 \u043A\u0430\u0440\u0442",
+    "ctp.separatorText": "\u0438\u043B\u0438 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435",
+    "ctp.cards.title":
+        "\u041E\u0444\u043E\u0440\u043C\u0438\u0442\u0435 \u043E\u043F\u043B\u0430\u0442\u0443 \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E Click to Pay",
+    "ctp.cards.subtitle": "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043A\u0430\u0440\u0442\u0443.",
+    "ctp.cards.expiredCard": "\u041F\u0440\u043E\u0441\u0440\u043E\u0447\u0435\u043D\u0430",
+    "ctp.manualCardEntry":
+        "\u0412\u0432\u043E\u0434 \u0434\u0430\u043D\u043D\u044B\u0445 \u043A\u0430\u0440\u0442\u044B \u0432\u0440\u0443\u0447\u043D\u0443\u044E",
+    "ctp.aria.infoModalButton": "\u0427\u0442\u043E \u0442\u0430\u043A\u043E\u0435 Click to Pay",
+    "ctp.infoPopup.title":
+        "Click to Pay \u2013 \u0443\u0434\u043E\u0431\u043D\u0430\u044F \u0431\u0435\u0441\u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043D\u0430\u044F \u043E\u043F\u043B\u0430\u0442\u0430 \u043E\u043D\u043B\u0430\u0439\u043D",
     "ctp.infoPopup.subtitle":
-        "Быстрый безопасный способ оплаты, поддерживаемый Mastercard, Visa и другими платежными картами.",
-    "ctp.infoPopup.benefit1": "Для обеспечения безопасности ваших данных Click to Pay использует шифрование",
-    "ctp.infoPopup.benefit2": "Используйте его в магазинах по всему миру",
-    "ctp.infoPopup.benefit3": "Беспроблемные платежи в будущем — настройка требуется только один раз",
-    "ctp.errors.AUTH_INVALID": "Аутентификация недействительна",
+        "\u0411\u044B\u0441\u0442\u0440\u044B\u0439 \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u044B\u0439 \u0441\u043F\u043E\u0441\u043E\u0431 \u043E\u043F\u043B\u0430\u0442\u044B, \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u043C\u044B\u0439 Mastercard, Visa \u0438 \u0434\u0440\u0443\u0433\u0438\u043C\u0438 \u043F\u043B\u0430\u0442\u0435\u0436\u043D\u044B\u043C\u0438 \u043A\u0430\u0440\u0442\u0430\u043C\u0438.",
+    "ctp.infoPopup.benefit1":
+        "\u0414\u043B\u044F \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u044F \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438 \u0432\u0430\u0448\u0438\u0445 \u0434\u0430\u043D\u043D\u044B\u0445 Click to Pay \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442 \u0448\u0438\u0444\u0440\u043E\u0432\u0430\u043D\u0438\u0435",
+    "ctp.infoPopup.benefit2":
+        "\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0439\u0442\u0435 \u0435\u0433\u043E \u0432 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430\u0445 \u043F\u043E \u0432\u0441\u0435\u043C\u0443 \u043C\u0438\u0440\u0443",
+    "ctp.infoPopup.benefit3":
+        "\u0411\u0435\u0441\u043F\u0440\u043E\u0431\u043B\u0435\u043C\u043D\u044B\u0435 \u043F\u043B\u0430\u0442\u0435\u0436\u0438 \u0432 \u0431\u0443\u0434\u0443\u0449\u0435\u043C \u2014 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430 \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0434\u0438\u043D \u0440\u0430\u0437",
+    "ctp.errors.AUTH_INVALID":
+        "\u0410\u0443\u0442\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u044F \u043D\u0435\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u0430",
     "ctp.errors.NOT_FOUND":
-        "Учетная запись не найдена. Введите действительный адрес эл. почты или продолжите ввод карты вручную",
-    "ctp.errors.ID_FORMAT_UNSUPPORTED": "Формат не поддерживается",
-    "ctp.errors.FRAUD": "Уч. запись пользователя заблокирована или отключена",
-    "ctp.errors.CONSUMER_ID_MISSING": "Идентификатор потребителя отсутствует в запросе",
-    "ctp.errors.ACCT_INACCESSIBLE": "Эта учетная запись сейчас недоступна (она может быть, например, заблокирована)",
-    "ctp.errors.CODE_INVALID": "Неверный код подтверждения",
-    "ctp.errors.CODE_EXPIRED": "Срок действия кода истек",
-    "ctp.errors.RETRIES_EXCEEDED": "Превышен лимит попыток создания одноразового пароля",
-    "ctp.errors.OTP_SEND_FAILED": "Не удалось отправить получателю одноразовый пароль",
-    "ctp.errors.REQUEST_TIMEOUT": "Возник сбой. Повторите попытку или введите номер карты вручную",
-    "ctp.errors.UNKNOWN_ERROR": "Возник сбой. Повторите попытку или введите номер карты вручную",
-    "ctp.errors.SERVICE_ERROR": "Возник сбой. Повторите попытку или введите номер карты вручную",
-    "ctp.errors.SERVER_ERROR": "Возник сбой. Повторите попытку или введите номер карты вручную",
-    "ctp.errors.INVALID_PARAMETER": "Возник сбой. Повторите попытку или введите номер карты вручную",
-    "ctp.errors.AUTH_ERROR": "Возник сбой. Повторите попытку или введите номер карты вручную",
-    "paymentMethodsList.aria.label": "Выберите способ оплаты",
-    "companyDetails.name.invalid": "Введите название компании",
-    "companyDetails.registrationNumber.invalid": "Введите регистрационный номер",
-    "consent.checkbox.invalid": "Требуется выразить согласие с условиями",
-    "form.instruction": "Все поля обязательны для заполнения, если не указано иное.",
-    "trustly.descriptor": "Мгновенный банковский платеж",
+        "\u0423\u0447\u0435\u0442\u043D\u0430\u044F \u0437\u0430\u043F\u0438\u0441\u044C \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u0430. \u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u0430\u0434\u0440\u0435\u0441 \u044D\u043B. \u043F\u043E\u0447\u0442\u044B \u0438\u043B\u0438 \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u0435 \u0432\u0432\u043E\u0434 \u043A\u0430\u0440\u0442\u044B \u0432\u0440\u0443\u0447\u043D\u0443\u044E",
+    "ctp.errors.ID_FORMAT_UNSUPPORTED":
+        "\u0424\u043E\u0440\u043C\u0430\u0442 \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442\u0441\u044F",
+    "ctp.errors.FRAUD":
+        "\u0423\u0447. \u0437\u0430\u043F\u0438\u0441\u044C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u0430 \u0438\u043B\u0438 \u043E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0430",
+    "ctp.errors.CONSUMER_ID_MISSING":
+        "\u0418\u0434\u0435\u043D\u0442\u0438\u0444\u0438\u043A\u0430\u0442\u043E\u0440 \u043F\u043E\u0442\u0440\u0435\u0431\u0438\u0442\u0435\u043B\u044F \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442 \u0432 \u0437\u0430\u043F\u0440\u043E\u0441\u0435",
+    "ctp.errors.ACCT_INACCESSIBLE":
+        "\u042D\u0442\u0430 \u0443\u0447\u0435\u0442\u043D\u0430\u044F \u0437\u0430\u043F\u0438\u0441\u044C \u0441\u0435\u0439\u0447\u0430\u0441 \u043D\u0435\u0434\u043E\u0441\u0442\u0443\u043F\u043D\u0430 (\u043E\u043D\u0430 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C, \u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440, \u0437\u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u0430)",
+    "ctp.errors.CODE_INVALID":
+        "\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u043A\u043E\u0434 \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043D\u0438\u044F",
+    "ctp.errors.CODE_EXPIRED":
+        "\u0421\u0440\u043E\u043A \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u043A\u043E\u0434\u0430 \u0438\u0441\u0442\u0435\u043A",
+    "ctp.errors.RETRIES_EXCEEDED":
+        "\u041F\u0440\u0435\u0432\u044B\u0448\u0435\u043D \u043B\u0438\u043C\u0438\u0442 \u043F\u043E\u043F\u044B\u0442\u043E\u043A \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F \u043E\u0434\u043D\u043E\u0440\u0430\u0437\u043E\u0432\u043E\u0433\u043E \u043F\u0430\u0440\u043E\u043B\u044F",
+    "ctp.errors.OTP_SEND_FAILED":
+        "\u041D\u0435 \u0443\u0434\u0430\u043B\u043E\u0441\u044C \u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u0435\u043B\u044E \u043E\u0434\u043D\u043E\u0440\u0430\u0437\u043E\u0432\u044B\u0439 \u043F\u0430\u0440\u043E\u043B\u044C",
+    "ctp.errors.REQUEST_TIMEOUT":
+        "\u0412\u043E\u0437\u043D\u0438\u043A \u0441\u0431\u043E\u0439. \u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u043E\u043F\u044B\u0442\u043A\u0443 \u0438\u043B\u0438 \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B \u0432\u0440\u0443\u0447\u043D\u0443\u044E",
+    "ctp.errors.UNKNOWN_ERROR":
+        "\u0412\u043E\u0437\u043D\u0438\u043A \u0441\u0431\u043E\u0439. \u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u043E\u043F\u044B\u0442\u043A\u0443 \u0438\u043B\u0438 \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B \u0432\u0440\u0443\u0447\u043D\u0443\u044E",
+    "ctp.errors.SERVICE_ERROR":
+        "\u0412\u043E\u0437\u043D\u0438\u043A \u0441\u0431\u043E\u0439. \u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u043E\u043F\u044B\u0442\u043A\u0443 \u0438\u043B\u0438 \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B \u0432\u0440\u0443\u0447\u043D\u0443\u044E",
+    "ctp.errors.SERVER_ERROR":
+        "\u0412\u043E\u0437\u043D\u0438\u043A \u0441\u0431\u043E\u0439. \u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u043E\u043F\u044B\u0442\u043A\u0443 \u0438\u043B\u0438 \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B \u0432\u0440\u0443\u0447\u043D\u0443\u044E",
+    "ctp.errors.INVALID_PARAMETER":
+        "\u0412\u043E\u0437\u043D\u0438\u043A \u0441\u0431\u043E\u0439. \u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u043E\u043F\u044B\u0442\u043A\u0443 \u0438\u043B\u0438 \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B \u0432\u0440\u0443\u0447\u043D\u0443\u044E",
+    "ctp.errors.AUTH_ERROR":
+        "\u0412\u043E\u0437\u043D\u0438\u043A \u0441\u0431\u043E\u0439. \u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u043E\u043F\u044B\u0442\u043A\u0443 \u0438\u043B\u0438 \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u043E\u043C\u0435\u0440 \u043A\u0430\u0440\u0442\u044B \u0432\u0440\u0443\u0447\u043D\u0443\u044E",
+    "paymentMethodsList.aria.label":
+        "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u043F\u043E\u0441\u043E\u0431 \u043E\u043F\u043B\u0430\u0442\u044B",
+    "companyDetails.name.invalid":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438",
+    "companyDetails.registrationNumber.invalid":
+        "\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440",
+    "consent.checkbox.invalid":
+        "\u0422\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F \u0432\u044B\u0440\u0430\u0437\u0438\u0442\u044C \u0441\u043E\u0433\u043B\u0430\u0441\u0438\u0435 \u0441 \u0443\u0441\u043B\u043E\u0432\u0438\u044F\u043C\u0438",
+    "form.instruction":
+        "\u0412\u0441\u0435 \u043F\u043E\u043B\u044F \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B \u0434\u043B\u044F \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F, \u0435\u0441\u043B\u0438 \u043D\u0435 \u0443\u043A\u0430\u0437\u0430\u043D\u043E \u0438\u043D\u043E\u0435.",
+    "trustly.descriptor":
+        "\u041C\u0433\u043D\u043E\u0432\u0435\u043D\u043D\u044B\u0439 \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u0438\u0439 \u043F\u043B\u0430\u0442\u0435\u0436",
     "trustly.description1":
-        "Платите непосредственно со своего банковского счета под такой же надежной защитой, как в банках",
-    "trustly.description2": "Без карт, загрузки приложений и регистрации",
+        "\u041F\u043B\u0430\u0442\u0438\u0442\u0435 \u043D\u0435\u043F\u043E\u0441\u0440\u0435\u0434\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u0441\u043E \u0441\u0432\u043E\u0435\u0433\u043E \u0431\u0430\u043D\u043A\u043E\u0432\u0441\u043A\u043E\u0433\u043E \u0441\u0447\u0435\u0442\u0430 \u043F\u043E\u0434 \u0442\u0430\u043A\u043E\u0439 \u0436\u0435 \u043D\u0430\u0434\u0435\u0436\u043D\u043E\u0439 \u0437\u0430\u0449\u0438\u0442\u043E\u0439, \u043A\u0430\u043A \u0432 \u0431\u0430\u043D\u043A\u0430\u0445",
+    "trustly.description2":
+        "\u0411\u0435\u0437 \u043A\u0430\u0440\u0442, \u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0438 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439 \u0438 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438",
 };

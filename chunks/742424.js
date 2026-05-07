@@ -224,7 +224,7 @@ let ec = async (e) => {
                                     let e = eu.intl.formatToPlainString(eu.t.C0AxoR, {
                                         hours: Math.round(t / q.A.Seconds.HOUR),
                                     });
-                                    return [{ iconPath: et, text: `${eu.intl.string(eu.t["/50eHi"])} — ${e}` }];
+                                    return [{ iconPath: et, text: `${eu.intl.string(eu.t["/50eHi"])} \u{2014} ${e}` }];
                                 }
                             }
                             return n;
@@ -588,10 +588,10 @@ let tY = (0, eQ.Fe)({
             n.e("5959"),
             n.e("46461"),
             n.e("70829"),
-            n.e("21850"),
+            n.e("33997"),
             n.e("45650"),
             n.e("94461"),
-            n.e("57750"),
+            n.e("23089"),
             n.e("54718"),
             n.e("55990"),
             n.e("9712"),
@@ -1640,7 +1640,7 @@ let no = async (e) => {
                                     let e = eu.intl.formatToPlainString(eu.t.C0AxoR, {
                                         hours: Math.round(t / q.A.Seconds.HOUR),
                                     });
-                                    return [{ iconPath: et, text: `${eu.intl.string(eu.t["/50eHi"])} — ${e}` }];
+                                    return [{ iconPath: et, text: `${eu.intl.string(eu.t["/50eHi"])} \u{2014} ${e}` }];
                                 }
                             }
                             return n;

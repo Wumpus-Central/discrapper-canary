@@ -457,7 +457,7 @@ function eT(e) {
                         variant: "text-xs/medium",
                         color: s,
                         scaleFontToUserSetting: !0,
-                        children: [R.intl.string(R.t.ufIDIx), " • ", r, "%"],
+                        children: [R.intl.string(R.t.ufIDIx), " \u2022 ", r, "%"],
                     }),
                 ],
             });

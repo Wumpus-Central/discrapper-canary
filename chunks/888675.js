@@ -1,8 +1,8 @@
 t.d(s, { A: () => m });
-var a = t(627968);
+var n = t(627968);
 t(64700);
-var l = t(503698),
-    n = t.n(l),
+var a = t(503698),
+    l = t.n(a),
     i = t(349288),
     r = t(606049),
     o = t(632194);
@@ -10,37 +10,37 @@ function c(e) {
     let {
         icon: s,
         iconNode: t,
-        timestamp: l,
+        timestamp: a,
         timestampFormat: i,
         className: c,
         children: m,
-        contentClassName: d,
-        iconClassName: u,
+        contentClassName: u,
+        iconClassName: d,
         iconContainerClassName: h,
         timestampClassName: g,
         compact: x = !1,
-        additionalContent: A,
+        additionalContent: N,
     } = e;
-    return (0, a.jsxs)("div", {
-        className: n()(c, { [o.kL]: !0, [o.oE]: x, [o.E]: !x }),
+    return (0, n.jsxs)("div", {
+        className: l()(c, { [o.kL]: !0, [o.oE]: x, [o.E]: !x }),
         children: [
-            null != t && (0, a.jsx)("div", { className: n()(o.zc, h), children: t }),
+            null != t && (0, n.jsx)("div", { className: l()(o.zc, h), children: t }),
             null != s &&
-                (0, a.jsx)("div", {
+                (0, n.jsx)("div", {
                     className: o.zc,
-                    children: (0, a.jsx)("div", {
+                    children: (0, n.jsx)("div", {
                         "data-accessibility": "desaturate",
-                        className: n()(o.Kk, o.RK, u),
+                        className: l()(o.Kk, o.RK, d),
                         style: { backgroundImage: `url('${s}')` },
                     }),
                 }),
-            (0, a.jsxs)("div", {
-                className: n()(d, o.Qs),
+            (0, n.jsxs)("div", {
+                className: l()(u, o.Qs),
                 children: [
-                    (0, a.jsxs)("div", {
-                        children: [m, null != l && (0, a.jsx)(r.A, { timestamp: l, timestampFormat: i, className: g })],
+                    (0, n.jsxs)("div", {
+                        children: [m, null != a && (0, n.jsx)(r.A, { timestamp: a, timestampFormat: i, className: g })],
                     }),
-                    A,
+                    N,
                 ],
             }),
         ],
@@ -48,9 +48,9 @@ function c(e) {
 }
 c.Action = (e) => {
     let { onClick: s, children: t } = e;
-    return (0, a.jsxs)("span", {
+    return (0, n.jsxs)("span", {
         className: o.XI,
-        children: ["—", (0, a.jsx)(i.Anchor, { onClick: s, className: o.si, children: t })],
+        children: ["\u2014", (0, n.jsx)(i.Anchor, { onClick: s, className: o.si, children: t })],
     });
 };
 let m = c;

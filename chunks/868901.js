@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 540890, Version Hash: 099b8feed6666ea4c1b8de81a530219df6e335ed`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 540902, Version Hash: 481aabd124ae35310423b4051c24b82a55881670`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -2849,7 +2849,7 @@ else if (i6.has(tq().layout)) {
     let e = new (iX())({ animation: "none" });
     i4 = (t) => {
         try {
-            (0, i3.sF)(t), e.badge(-1 === t ? "•" : t);
+            (0, i3.sF)(t), e.badge(-1 === t ? "\u2022" : t);
         } catch (e) {}
     };
 }
@@ -18325,7 +18325,7 @@ let Sv = "isHideDevBanner",
                     className: t2()(SC.Wz, SC.mr),
                     children: [
                         (0, k.jsx)(Sy, { className: SC.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "540890" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "540902" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -24457,7 +24457,8 @@ class vL extends e8.PureComponent {
     handleReady = () => {
         this.setState({ ready: !0 }),
             (0, ek.isDesktop)() &&
-                (tS.Ay.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), tS.Ay.send("UPDATE_OPEN_ON_STARTUP"));
+                (tS.Ay.send("UPDATED_QUOTES", ["Hold Tight \u2014 Loading Discord"]),
+                tS.Ay.send("UPDATE_OPEN_ON_STARTUP"));
     };
     setVideoRef = (e) => {
         this.videoRef = e;

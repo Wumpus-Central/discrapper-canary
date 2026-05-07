@@ -1,10 +1,10 @@
 n(989349).defineLocale("el", {
     monthsNominativeEl:
-        "Ιανουάριος_Φεβρουάριος_Μάρτιος_Απρίλιος_Μάιος_Ιούνιος_Ιούλιος_Αύγουστος_Σεπτέμβριος_Οκτώβριος_Νοέμβριος_Δεκέμβριος".split(
+        "\u0399\u03B1\u03BD\u03BF\u03C5\u03AC\u03C1\u03B9\u03BF\u03C2_\u03A6\u03B5\u03B2\u03C1\u03BF\u03C5\u03AC\u03C1\u03B9\u03BF\u03C2_\u039C\u03AC\u03C1\u03C4\u03B9\u03BF\u03C2_\u0391\u03C0\u03C1\u03AF\u03BB\u03B9\u03BF\u03C2_\u039C\u03AC\u03B9\u03BF\u03C2_\u0399\u03BF\u03CD\u03BD\u03B9\u03BF\u03C2_\u0399\u03BF\u03CD\u03BB\u03B9\u03BF\u03C2_\u0391\u03CD\u03B3\u03BF\u03C5\u03C3\u03C4\u03BF\u03C2_\u03A3\u03B5\u03C0\u03C4\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2_\u039F\u03BA\u03C4\u03CE\u03B2\u03C1\u03B9\u03BF\u03C2_\u039D\u03BF\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2_\u0394\u03B5\u03BA\u03AD\u03BC\u03B2\u03C1\u03B9\u03BF\u03C2".split(
             "_",
         ),
     monthsGenitiveEl:
-        "Ιανουαρίου_Φεβρουαρίου_Μαρτίου_Απριλίου_Μαΐου_Ιουνίου_Ιουλίου_Αυγούστου_Σεπτεμβρίου_Οκτωβρίου_Νοεμβρίου_Δεκεμβρίου".split(
+        "\u0399\u03B1\u03BD\u03BF\u03C5\u03B1\u03C1\u03AF\u03BF\u03C5_\u03A6\u03B5\u03B2\u03C1\u03BF\u03C5\u03B1\u03C1\u03AF\u03BF\u03C5_\u039C\u03B1\u03C1\u03C4\u03AF\u03BF\u03C5_\u0391\u03C0\u03C1\u03B9\u03BB\u03AF\u03BF\u03C5_\u039C\u03B1\u0390\u03BF\u03C5_\u0399\u03BF\u03C5\u03BD\u03AF\u03BF\u03C5_\u0399\u03BF\u03C5\u03BB\u03AF\u03BF\u03C5_\u0391\u03C5\u03B3\u03BF\u03CD\u03C3\u03C4\u03BF\u03C5_\u03A3\u03B5\u03C0\u03C4\u03B5\u03BC\u03B2\u03C1\u03AF\u03BF\u03C5_\u039F\u03BA\u03C4\u03C9\u03B2\u03C1\u03AF\u03BF\u03C5_\u039D\u03BF\u03B5\u03BC\u03B2\u03C1\u03AF\u03BF\u03C5_\u0394\u03B5\u03BA\u03B5\u03BC\u03B2\u03C1\u03AF\u03BF\u03C5".split(
             "_",
         ),
     months: function (e, t) {
@@ -14,17 +14,28 @@ n(989349).defineLocale("el", {
                 : this._monthsNominativeEl[e.month()]
             : this._monthsNominativeEl;
     },
-    monthsShort: "Ιαν_Φεβ_Μαρ_Απρ_Μαϊ_Ιουν_Ιουλ_Αυγ_Σεπ_Οκτ_Νοε_Δεκ".split("_"),
-    weekdays: "Κυριακή_Δευτέρα_Τρίτη_Τετάρτη_Πέμπτη_Παρασκευή_Σάββατο".split("_"),
-    weekdaysShort: "Κυρ_Δευ_Τρι_Τετ_Πεμ_Παρ_Σαβ".split("_"),
-    weekdaysMin: "Κυ_Δε_Τρ_Τε_Πε_Πα_Σα".split("_"),
+    monthsShort:
+        "\u0399\u03B1\u03BD_\u03A6\u03B5\u03B2_\u039C\u03B1\u03C1_\u0391\u03C0\u03C1_\u039C\u03B1\u03CA_\u0399\u03BF\u03C5\u03BD_\u0399\u03BF\u03C5\u03BB_\u0391\u03C5\u03B3_\u03A3\u03B5\u03C0_\u039F\u03BA\u03C4_\u039D\u03BF\u03B5_\u0394\u03B5\u03BA".split(
+            "_",
+        ),
+    weekdays:
+        "\u039A\u03C5\u03C1\u03B9\u03B1\u03BA\u03AE_\u0394\u03B5\u03C5\u03C4\u03AD\u03C1\u03B1_\u03A4\u03C1\u03AF\u03C4\u03B7_\u03A4\u03B5\u03C4\u03AC\u03C1\u03C4\u03B7_\u03A0\u03AD\u03BC\u03C0\u03C4\u03B7_\u03A0\u03B1\u03C1\u03B1\u03C3\u03BA\u03B5\u03C5\u03AE_\u03A3\u03AC\u03B2\u03B2\u03B1\u03C4\u03BF".split(
+            "_",
+        ),
+    weekdaysShort:
+        "\u039A\u03C5\u03C1_\u0394\u03B5\u03C5_\u03A4\u03C1\u03B9_\u03A4\u03B5\u03C4_\u03A0\u03B5\u03BC_\u03A0\u03B1\u03C1_\u03A3\u03B1\u03B2".split(
+            "_",
+        ),
+    weekdaysMin: "\u039A\u03C5_\u0394\u03B5_\u03A4\u03C1_\u03A4\u03B5_\u03A0\u03B5_\u03A0\u03B1_\u03A3\u03B1".split(
+        "_",
+    ),
     meridiem: function (e, t, n) {
-        return e > 11 ? (n ? "μμ" : "ΜΜ") : n ? "πμ" : "ΠΜ";
+        return e > 11 ? (n ? "\u03BC\u03BC" : "\u039C\u039C") : n ? "\u03C0\u03BC" : "\u03A0\u039C";
     },
     isPM: function (e) {
-        return "μ" === (e + "").toLowerCase()[0];
+        return "\u03BC" === (e + "").toLowerCase()[0];
     },
-    meridiemParse: /[ΠΜ]\.?Μ?\.?/i,
+    meridiemParse: /[\u03a0\u039c]\.?\u039c?\.?/i,
     longDateFormat: {
         LT: "h:mm A",
         LTS: "h:mm:ss A",
@@ -34,42 +45,44 @@ n(989349).defineLocale("el", {
         LLLL: "dddd, D MMMM YYYY h:mm A",
     },
     calendarEl: {
-        sameDay: "[Σήμερα {}] LT",
-        nextDay: "[Αύριο {}] LT",
+        sameDay: "[\u03A3\u03AE\u03BC\u03B5\u03C1\u03B1 {}] LT",
+        nextDay: "[\u0391\u03CD\u03C1\u03B9\u03BF {}] LT",
         nextWeek: "dddd [{}] LT",
-        lastDay: "[Χθες {}] LT",
+        lastDay: "[\u03A7\u03B8\u03B5\u03C2 {}] LT",
         lastWeek: function () {
-            return 6 === this.day() ? "[το προηγούμενο] dddd [{}] LT" : "[την προηγούμενη] dddd [{}] LT";
+            return 6 === this.day()
+                ? "[\u03C4\u03BF \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03BF] dddd [{}] LT"
+                : "[\u03C4\u03B7\u03BD \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03B7] dddd [{}] LT";
         },
         sameElse: "L",
     },
     calendar: function (e, t) {
         var n,
-            r = this._calendarEl[e],
-            i = t && t.hours();
+            i = this._calendarEl[e],
+            r = t && t.hours();
         return (
-            ((n = r) instanceof Function || "[object Function]" === Object.prototype.toString.call(n)) &&
-                (r = r.apply(t)),
-            r.replace("{}", i % 12 == 1 ? "στη" : "στις")
+            ((n = i) instanceof Function || "[object Function]" === Object.prototype.toString.call(n)) &&
+                (i = i.apply(t)),
+            i.replace("{}", r % 12 == 1 ? "\u03C3\u03C4\u03B7" : "\u03C3\u03C4\u03B9\u03C2")
         );
     },
     relativeTime: {
-        future: "σε %s",
-        past: "%s πριν",
-        s: "λίγα δευτερόλεπτα",
-        ss: "%d δευτερόλεπτα",
-        m: "ένα λεπτό",
-        mm: "%d λεπτά",
-        h: "μία ώρα",
-        hh: "%d ώρες",
-        d: "μία μέρα",
-        dd: "%d μέρες",
-        M: "ένας μήνας",
-        MM: "%d μήνες",
-        y: "ένας χρόνος",
-        yy: "%d χρόνια",
+        future: "\u03C3\u03B5 %s",
+        past: "%s \u03C0\u03C1\u03B9\u03BD",
+        s: "\u03BB\u03AF\u03B3\u03B1 \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1",
+        ss: "%d \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1",
+        m: "\u03AD\u03BD\u03B1 \u03BB\u03B5\u03C0\u03C4\u03CC",
+        mm: "%d \u03BB\u03B5\u03C0\u03C4\u03AC",
+        h: "\u03BC\u03AF\u03B1 \u03CE\u03C1\u03B1",
+        hh: "%d \u03CE\u03C1\u03B5\u03C2",
+        d: "\u03BC\u03AF\u03B1 \u03BC\u03AD\u03C1\u03B1",
+        dd: "%d \u03BC\u03AD\u03C1\u03B5\u03C2",
+        M: "\u03AD\u03BD\u03B1\u03C2 \u03BC\u03AE\u03BD\u03B1\u03C2",
+        MM: "%d \u03BC\u03AE\u03BD\u03B5\u03C2",
+        y: "\u03AD\u03BD\u03B1\u03C2 \u03C7\u03C1\u03CC\u03BD\u03BF\u03C2",
+        yy: "%d \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1",
     },
-    dayOfMonthOrdinalParse: /\d{1,2}η/,
-    ordinal: "%dη",
+    dayOfMonthOrdinalParse: /\d{1,2}\u03b7/,
+    ordinal: "%d\u03B7",
     week: { dow: 1, doy: 4 },
 });

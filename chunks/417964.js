@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { El: () => c, Fd: () => o, nK: () => f, sJ: () => l });
-var r = n(998218);
-let i = ["͏", "឴", "឵", "ᅠ", "ㅤ", "ﾠ"],
-    s = RegExp(`${/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n]|[^\P{Zs} ]/gu.source}|${i.join("|")}`, "gu"),
-    a = RegExp(`${/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n\t]|[^\P{Zs} ]/gu.source}|${i.join("|")}`, "gu");
+n.d(t, { El: () => d, Fd: () => o, nK: () => f, sJ: () => l });
+var i = n(998218);
+let r = ["\u034F", "\u17B4", "\u17B5", "\u1160", "\u3164", "\uFFA0"],
+    s = RegExp(`${/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n]|[^\P{Zs} ]/gu.source}|${r.join("|")}`, "gu"),
+    a = RegExp(`${/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n\t]|[^\P{Zs} ]/gu.source}|${r.join("|")}`, "gu");
 function o(e) {
     return e.replace(s, "");
 }
@@ -13,12 +13,12 @@ function l(e) {
 let u = [
     {
         character: "h",
-        matcher: d([
+        matcher: c([
             "H",
-            "һ",
-            "հ",
-            "Ꮒ",
-            "ℎ",
+            "\u04BB",
+            "\u0570",
+            "\u13C2",
+            "\u210E",
             "\uD835\uDC21",
             "\uD835\uDC89",
             "\uD835\uDCBD",
@@ -31,12 +31,12 @@ let u = [
             "\uD835\uDE29",
             "\uD835\uDE5D",
             "\uD835\uDE91",
-            "ｈ",
+            "\uFF48",
         ]),
     },
     {
         character: "t",
-        matcher: d([
+        matcher: c([
             "T",
             "\uD835\uDC2D",
             "\uD835\uDC61",
@@ -55,13 +55,13 @@ let u = [
     },
     {
         character: "p",
-        matcher: d([
+        matcher: c([
             "P",
-            "ρ",
-            "ϱ",
-            "р",
-            "⍴",
-            "ⲣ",
+            "\u03C1",
+            "\u03F1",
+            "\u0440",
+            "\u2374",
+            "\u2CA3",
             "\uD835\uDC29",
             "\uD835\uDC5D",
             "\uD835\uDC91",
@@ -85,18 +85,18 @@ let u = [
             "\uD835\uDF8E",
             "\uD835\uDFBA",
             "\uD835\uDFC8",
-            "ｐ",
-            "ҏ",
+            "\uFF50",
+            "\u048F",
         ]),
     },
     {
         character: "s",
-        matcher: d([
+        matcher: c([
             "S",
-            "ƽ",
-            "ѕ",
-            "ꜱ",
-            "ꮪ",
+            "\u01BD",
+            "\u0455",
+            "\uA731",
+            "\uABAA",
             "\uD801\uDC48",
             "\uD806\uDCC1",
             "\uD835\uDC2C",
@@ -112,22 +112,57 @@ let u = [
             "\uD835\uDE34",
             "\uD835\uDE68",
             "\uD835\uDE9C",
-            "ｓ",
+            "\uFF53",
         ]),
     },
     {
         character: ":",
-        matcher: d(["ː", "˸", "։", "׃", "܃", "܄", "ः", "ઃ", "᛬", "᠃", "᠉", "⁚", "∶", "ꓽ", "꞉", "︰", "：", ";", ";"]),
+        matcher: c([
+            "\u02D0",
+            "\u02F8",
+            "\u0589",
+            "\u05C3",
+            "\u0703",
+            "\u0704",
+            "\u0903",
+            "\u0A83",
+            "\u16EC",
+            "\u1803",
+            "\u1809",
+            "\u205A",
+            "\u2236",
+            "\uA4FD",
+            "\uA789",
+            "\uFE30",
+            "\uFF1A",
+            ";",
+            "\u037E",
+        ]),
     },
     {
         character: "/",
-        matcher: d(["᜵", "⁁", "⁄", "∕", "╱", "⟋", "⧸", "Ⳇ", "⼃", "〳", "ノ", "㇓", "丿", "\uD834\uDE3A"]),
+        matcher: c([
+            "\u1735",
+            "\u2041",
+            "\u2044",
+            "\u2215",
+            "\u2571",
+            "\u27CB",
+            "\u29F8",
+            "\u2CC6",
+            "\u2F03",
+            "\u3033",
+            "\u30CE",
+            "\u31D3",
+            "\u4E3F",
+            "\uD834\uDE3A",
+        ]),
     },
 ];
-function d(e) {
+function c(e) {
     return RegExp(e.join("|"), "gu");
 }
-function c(e) {
+function d(e) {
     let t = e;
     return (
         u.forEach((e) => {
@@ -150,25 +185,25 @@ function f(e) {
         let n = "//" === e.href.substr(e.protocol.length, 2);
         return `${e.protocol}${n ? "//" : ""}${t}${e.host}`;
     })(e);
-    return (t += E(e.pathname)), (t += E(e.search)), (t += E(e.hash));
+    return (t += h(e.pathname)), (t += h(e.search)), (t += h(e.hash));
 }
-function E(e) {
-    let t = r.A.safeDecodeURIComponent(e);
+function h(e) {
+    let t = i.A.safeDecodeURIComponent(e);
     if (null == t) return e;
     let n = "",
-        i = e,
+        r = e,
         s = t;
-    for (; i.length > 0; ) {
-        let e = i.codePointAt(0),
+    for (; r.length > 0; ) {
+        let e = r.codePointAt(0),
             t = s.codePointAt(0);
         if (e === t) {
             let t = String.fromCodePoint(e);
-            (n += t), (i = i.substring(t.length)), (s = s.substring(t.length));
+            (n += t), (r = r.substring(t.length)), (s = s.substring(t.length));
             continue;
         }
-        let r = String.fromCodePoint(t),
-            a = encodeURIComponent(r),
-            o = a === r ? 3 : a.length;
+        let i = String.fromCodePoint(t),
+            a = encodeURIComponent(i),
+            o = a === i ? 3 : a.length;
         (n += (
             t >= 0 && t < 128
                 ? 1 !== _[t]
@@ -248,9 +283,9 @@ function E(e) {
                   (t >= 917504 && t <= 921599)
         )
             ? a
-            : r),
-            (i = i.substring(o)),
-            (s = s.substring(r.length));
+            : i),
+            (r = r.substring(o)),
+            (s = s.substring(i.length));
     }
     return n;
 }

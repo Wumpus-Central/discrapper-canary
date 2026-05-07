@@ -62,7 +62,7 @@ function E() {
                         .join(" | "),
                     i = (function (e) {
                         let { notificationCount: t } = e;
-                        return null == t || 0 === t ? "" : t < 0 ? "• " : `(${t}) `;
+                        return null == t || 0 === t ? "" : t < 0 ? "\u2022 " : `(${t}) `;
                     })(e);
                 return [`${i}${n}`, t[0]];
             }, r.x),

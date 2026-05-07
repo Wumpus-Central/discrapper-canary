@@ -15,7 +15,7 @@ n(989349).defineLocale("fr-ch", {
         LLLL: "dddd D MMMM YYYY HH:mm",
     },
     calendar: {
-        sameDay: "[Aujourd’hui \xe0] LT",
+        sameDay: "[Aujourd\u2019hui \xe0] LT",
         nextDay: "[Demain \xe0] LT",
         nextWeek: "dddd [\xe0] LT",
         lastDay: "[Hier \xe0] LT",

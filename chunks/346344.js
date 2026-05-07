@@ -910,124 +910,124 @@ var s,
                                                     this.slice_from$esjava$1("9");
                                                     break;
                                                 case 16:
-                                                    this.slice_from$esjava$1("ء");
+                                                    this.slice_from$esjava$1("\u0621");
                                                     break;
                                                 case 17:
-                                                    this.slice_from$esjava$1("أ");
+                                                    this.slice_from$esjava$1("\u0623");
                                                     break;
                                                 case 18:
-                                                    this.slice_from$esjava$1("إ");
+                                                    this.slice_from$esjava$1("\u0625");
                                                     break;
                                                 case 19:
-                                                    this.slice_from$esjava$1("ئ");
+                                                    this.slice_from$esjava$1("\u0626");
                                                     break;
                                                 case 20:
-                                                    this.slice_from$esjava$1("آ");
+                                                    this.slice_from$esjava$1("\u0622");
                                                     break;
                                                 case 21:
-                                                    this.slice_from$esjava$1("ؤ");
+                                                    this.slice_from$esjava$1("\u0624");
                                                     break;
                                                 case 22:
-                                                    this.slice_from$esjava$1("ا");
+                                                    this.slice_from$esjava$1("\u0627");
                                                     break;
                                                 case 23:
-                                                    this.slice_from$esjava$1("ب");
+                                                    this.slice_from$esjava$1("\u0628");
                                                     break;
                                                 case 24:
-                                                    this.slice_from$esjava$1("ة");
+                                                    this.slice_from$esjava$1("\u0629");
                                                     break;
                                                 case 25:
-                                                    this.slice_from$esjava$1("ت");
+                                                    this.slice_from$esjava$1("\u062A");
                                                     break;
                                                 case 26:
-                                                    this.slice_from$esjava$1("ث");
+                                                    this.slice_from$esjava$1("\u062B");
                                                     break;
                                                 case 27:
-                                                    this.slice_from$esjava$1("ج");
+                                                    this.slice_from$esjava$1("\u062C");
                                                     break;
                                                 case 28:
-                                                    this.slice_from$esjava$1("ح");
+                                                    this.slice_from$esjava$1("\u062D");
                                                     break;
                                                 case 29:
-                                                    this.slice_from$esjava$1("خ");
+                                                    this.slice_from$esjava$1("\u062E");
                                                     break;
                                                 case 30:
-                                                    this.slice_from$esjava$1("د");
+                                                    this.slice_from$esjava$1("\u062F");
                                                     break;
                                                 case 31:
-                                                    this.slice_from$esjava$1("ذ");
+                                                    this.slice_from$esjava$1("\u0630");
                                                     break;
                                                 case 32:
-                                                    this.slice_from$esjava$1("ر");
+                                                    this.slice_from$esjava$1("\u0631");
                                                     break;
                                                 case 33:
-                                                    this.slice_from$esjava$1("ز");
+                                                    this.slice_from$esjava$1("\u0632");
                                                     break;
                                                 case 34:
-                                                    this.slice_from$esjava$1("س");
+                                                    this.slice_from$esjava$1("\u0633");
                                                     break;
                                                 case 35:
-                                                    this.slice_from$esjava$1("ش");
+                                                    this.slice_from$esjava$1("\u0634");
                                                     break;
                                                 case 36:
-                                                    this.slice_from$esjava$1("ص");
+                                                    this.slice_from$esjava$1("\u0635");
                                                     break;
                                                 case 37:
-                                                    this.slice_from$esjava$1("ض");
+                                                    this.slice_from$esjava$1("\u0636");
                                                     break;
                                                 case 38:
-                                                    this.slice_from$esjava$1("ط");
+                                                    this.slice_from$esjava$1("\u0637");
                                                     break;
                                                 case 39:
-                                                    this.slice_from$esjava$1("ظ");
+                                                    this.slice_from$esjava$1("\u0638");
                                                     break;
                                                 case 40:
-                                                    this.slice_from$esjava$1("ع");
+                                                    this.slice_from$esjava$1("\u0639");
                                                     break;
                                                 case 41:
-                                                    this.slice_from$esjava$1("غ");
+                                                    this.slice_from$esjava$1("\u063A");
                                                     break;
                                                 case 42:
-                                                    this.slice_from$esjava$1("ف");
+                                                    this.slice_from$esjava$1("\u0641");
                                                     break;
                                                 case 43:
-                                                    this.slice_from$esjava$1("ق");
+                                                    this.slice_from$esjava$1("\u0642");
                                                     break;
                                                 case 44:
-                                                    this.slice_from$esjava$1("ك");
+                                                    this.slice_from$esjava$1("\u0643");
                                                     break;
                                                 case 45:
-                                                    this.slice_from$esjava$1("ل");
+                                                    this.slice_from$esjava$1("\u0644");
                                                     break;
                                                 case 46:
-                                                    this.slice_from$esjava$1("م");
+                                                    this.slice_from$esjava$1("\u0645");
                                                     break;
                                                 case 47:
-                                                    this.slice_from$esjava$1("ن");
+                                                    this.slice_from$esjava$1("\u0646");
                                                     break;
                                                 case 48:
-                                                    this.slice_from$esjava$1("ه");
+                                                    this.slice_from$esjava$1("\u0647");
                                                     break;
                                                 case 49:
-                                                    this.slice_from$esjava$1("و");
+                                                    this.slice_from$esjava$1("\u0648");
                                                     break;
                                                 case 50:
-                                                    this.slice_from$esjava$1("ى");
+                                                    this.slice_from$esjava$1("\u0649");
                                                     break;
                                                 case 51:
-                                                    this.slice_from$esjava$1("ي");
+                                                    this.slice_from$esjava$1("\u064A");
                                                     break;
                                                 case 52:
-                                                    this.slice_from$esjava$1("لا");
+                                                    this.slice_from$esjava$1("\u0644\u0627");
                                                     break;
                                                 case 53:
-                                                    this.slice_from$esjava$1("لأ");
+                                                    this.slice_from$esjava$1("\u0644\u0623");
                                                     break;
                                                 case 54:
-                                                    this.slice_from$esjava$1("لإ");
+                                                    this.slice_from$esjava$1("\u0644\u0625");
                                                     break;
                                                 case 55:
-                                                    this.slice_from$esjava$1("لآ");
+                                                    this.slice_from$esjava$1("\u0644\u0622");
                                             }
                                             break e;
                                         } while (!1);
@@ -1060,7 +1060,7 @@ var s,
                                         case 1:
                                         case 2:
                                         case 3:
-                                            this.slice_from$esjava$1("ء");
+                                            this.slice_from$esjava$1("\u0621");
                                     }
                                     this.cursor = this.limit_backward;
                                 } while (!1);
@@ -1079,13 +1079,13 @@ var s,
                                                     case 0:
                                                         break t;
                                                     case 1:
-                                                        this.slice_from$esjava$1("ا");
+                                                        this.slice_from$esjava$1("\u0627");
                                                         break;
                                                     case 2:
-                                                        this.slice_from$esjava$1("و");
+                                                        this.slice_from$esjava$1("\u0648");
                                                         break;
                                                     case 3:
-                                                        this.slice_from$esjava$1("ي");
+                                                        this.slice_from$esjava$1("\u064A");
                                                 }
                                                 break s;
                                             } while (!1);
@@ -1136,19 +1136,19 @@ var s,
                                     case 1:
                                     case 3:
                                         if (!(this.I_word_len > 3)) return !1;
-                                        this.slice_from$esjava$1("أ");
+                                        this.slice_from$esjava$1("\u0623");
                                         break;
                                     case 2:
                                         if (!(this.I_word_len > 3)) return !1;
-                                        this.slice_from$esjava$1("آ");
+                                        this.slice_from$esjava$1("\u0622");
                                         break;
                                     case 4:
                                         if (!(this.I_word_len > 3)) return !1;
-                                        this.slice_from$esjava$1("ا");
+                                        this.slice_from$esjava$1("\u0627");
                                         break;
                                     case 5:
                                         if (!(this.I_word_len > 3)) return !1;
-                                        this.slice_from$esjava$1("إ");
+                                        this.slice_from$esjava$1("\u0625");
                                 }
                                 return !0;
                             },
@@ -1161,12 +1161,12 @@ var s,
                                     s = void 0;
                                 (this.I_word_len = this.current.length()), (i = this.cursor);
                                 do {
-                                    if (!this.eq_s$esjava$1("فا")) break;
+                                    if (!this.eq_s$esjava$1("\u0641\u0627")) break;
                                     return !1;
                                 } while (!1);
                                 (this.cursor = i), (s = this.cursor);
                                 do {
-                                    if (!this.eq_s$esjava$1("وا")) break;
+                                    if (!this.eq_s$esjava$1("\u0648\u0627")) break;
                                     return !1;
                                 } while (!1);
                                 if (
@@ -1217,7 +1217,7 @@ var s,
                                     i = void 0;
                                 (this.I_word_len = this.current.length()), (i = this.cursor);
                                 do {
-                                    if (!this.eq_s$esjava$1("با")) break;
+                                    if (!this.eq_s$esjava$1("\u0628\u0627")) break;
                                     return !1;
                                 } while (!1);
                                 if (
@@ -1235,11 +1235,11 @@ var s,
                                         break;
                                     case 2:
                                         if (!(this.I_word_len > 3)) return !1;
-                                        this.slice_from$esjava$1("ب");
+                                        this.slice_from$esjava$1("\u0628");
                                         break;
                                     case 3:
                                         if (!(this.I_word_len > 3)) return !1;
-                                        this.slice_from$esjava$1("ك");
+                                        this.slice_from$esjava$1("\u0643");
                                 }
                                 return !0;
                             },
@@ -1259,19 +1259,19 @@ var s,
                                         return !1;
                                     case 1:
                                         if (!(this.I_word_len > 4)) return !1;
-                                        this.slice_from$esjava$1("ي");
+                                        this.slice_from$esjava$1("\u064A");
                                         break;
                                     case 2:
                                         if (!(this.I_word_len > 4)) return !1;
-                                        this.slice_from$esjava$1("ت");
+                                        this.slice_from$esjava$1("\u062A");
                                         break;
                                     case 3:
                                         if (!(this.I_word_len > 4)) return !1;
-                                        this.slice_from$esjava$1("ن");
+                                        this.slice_from$esjava$1("\u0646");
                                         break;
                                     case 4:
                                         if (!(this.I_word_len > 4)) return !1;
-                                        this.slice_from$esjava$1("أ");
+                                        this.slice_from$esjava$1("\u0623");
                                 }
                                 return !0;
                             },
@@ -1291,7 +1291,9 @@ var s,
                                         return !1;
                                     case 1:
                                         if (!(this.I_word_len > 4)) return !1;
-                                        (this.B_is_verb = !0), (this.B_is_noun = !1), this.slice_from$esjava$1("است");
+                                        (this.B_is_verb = !0),
+                                            (this.B_is_noun = !1),
+                                            this.slice_from$esjava$1("\u0627\u0633\u062A");
                                 }
                                 return !0;
                             },
@@ -1563,7 +1565,7 @@ var s,
                                     case 0:
                                         return !1;
                                     case 1:
-                                        this.slice_from$esjava$1("ي");
+                                        this.slice_from$esjava$1("\u064A");
                                 }
                                 return !0;
                             },
@@ -1865,156 +1867,156 @@ var s,
                                         new u(";", -1, 3),
                                         new u("?", -1, 3),
                                         new u("\\", -1, 3),
-                                        new u("،", -1, 4),
-                                        new u("؛", -1, 4),
-                                        new u("؟", -1, 4),
-                                        new u("ـ", -1, 2),
-                                        new u("ً", -1, 1),
-                                        new u("ٌ", -1, 1),
-                                        new u("ٍ", -1, 1),
-                                        new u("َ", -1, 1),
-                                        new u("ُ", -1, 1),
-                                        new u("ِ", -1, 1),
-                                        new u("ّ", -1, 1),
-                                        new u("ْ", -1, 1),
-                                        new u("٠", -1, 5),
-                                        new u("١", -1, 6),
-                                        new u("٢", -1, 7),
-                                        new u("٣", -1, 8),
-                                        new u("٤", -1, 9),
-                                        new u("٥", -1, 10),
-                                        new u("٦", -1, 11),
-                                        new u("٧", -1, 12),
-                                        new u("٨", -1, 13),
-                                        new u("٩", -1, 14),
-                                        new u("٪", -1, 15),
-                                        new u("٫", -1, 15),
-                                        new u("٬", -1, 15),
-                                        new u("ﺀ", -1, 16),
-                                        new u("ﺁ", -1, 20),
-                                        new u("ﺂ", -1, 20),
-                                        new u("ﺃ", -1, 17),
-                                        new u("ﺄ", -1, 17),
-                                        new u("ﺅ", -1, 21),
-                                        new u("ﺆ", -1, 21),
-                                        new u("ﺇ", -1, 18),
-                                        new u("ﺈ", -1, 18),
-                                        new u("ﺉ", -1, 19),
-                                        new u("ﺊ", -1, 19),
-                                        new u("ﺋ", -1, 19),
-                                        new u("ﺌ", -1, 19),
-                                        new u("ﺍ", -1, 22),
-                                        new u("ﺎ", -1, 22),
-                                        new u("ﺏ", -1, 23),
-                                        new u("ﺐ", -1, 23),
-                                        new u("ﺑ", -1, 23),
-                                        new u("ﺒ", -1, 23),
-                                        new u("ﺓ", -1, 24),
-                                        new u("ﺔ", -1, 24),
-                                        new u("ﺕ", -1, 25),
-                                        new u("ﺖ", -1, 25),
-                                        new u("ﺗ", -1, 25),
-                                        new u("ﺘ", -1, 25),
-                                        new u("ﺙ", -1, 26),
-                                        new u("ﺚ", -1, 26),
-                                        new u("ﺛ", -1, 26),
-                                        new u("ﺜ", -1, 26),
-                                        new u("ﺝ", -1, 27),
-                                        new u("ﺞ", -1, 27),
-                                        new u("ﺟ", -1, 27),
-                                        new u("ﺠ", -1, 27),
-                                        new u("ﺡ", -1, 28),
-                                        new u("ﺢ", -1, 28),
-                                        new u("ﺣ", -1, 28),
-                                        new u("ﺤ", -1, 28),
-                                        new u("ﺥ", -1, 29),
-                                        new u("ﺦ", -1, 29),
-                                        new u("ﺧ", -1, 29),
-                                        new u("ﺨ", -1, 29),
-                                        new u("ﺩ", -1, 30),
-                                        new u("ﺪ", -1, 30),
-                                        new u("ﺫ", -1, 31),
-                                        new u("ﺬ", -1, 31),
-                                        new u("ﺭ", -1, 32),
-                                        new u("ﺮ", -1, 32),
-                                        new u("ﺯ", -1, 33),
-                                        new u("ﺰ", -1, 33),
-                                        new u("ﺱ", -1, 34),
-                                        new u("ﺲ", -1, 34),
-                                        new u("ﺳ", -1, 34),
-                                        new u("ﺴ", -1, 34),
-                                        new u("ﺵ", -1, 35),
-                                        new u("ﺶ", -1, 35),
-                                        new u("ﺷ", -1, 35),
-                                        new u("ﺸ", -1, 35),
-                                        new u("ﺹ", -1, 36),
-                                        new u("ﺺ", -1, 36),
-                                        new u("ﺻ", -1, 36),
-                                        new u("ﺼ", -1, 36),
-                                        new u("ﺽ", -1, 37),
-                                        new u("ﺾ", -1, 37),
-                                        new u("ﺿ", -1, 37),
-                                        new u("ﻀ", -1, 37),
-                                        new u("ﻁ", -1, 38),
-                                        new u("ﻂ", -1, 38),
-                                        new u("ﻃ", -1, 38),
-                                        new u("ﻄ", -1, 38),
-                                        new u("ﻅ", -1, 39),
-                                        new u("ﻆ", -1, 39),
-                                        new u("ﻇ", -1, 39),
-                                        new u("ﻈ", -1, 39),
-                                        new u("ﻉ", -1, 40),
-                                        new u("ﻊ", -1, 40),
-                                        new u("ﻋ", -1, 40),
-                                        new u("ﻌ", -1, 40),
-                                        new u("ﻍ", -1, 41),
-                                        new u("ﻎ", -1, 41),
-                                        new u("ﻏ", -1, 41),
-                                        new u("ﻐ", -1, 41),
-                                        new u("ﻑ", -1, 42),
-                                        new u("ﻒ", -1, 42),
-                                        new u("ﻓ", -1, 42),
-                                        new u("ﻔ", -1, 42),
-                                        new u("ﻕ", -1, 43),
-                                        new u("ﻖ", -1, 43),
-                                        new u("ﻗ", -1, 43),
-                                        new u("ﻘ", -1, 43),
-                                        new u("ﻙ", -1, 44),
-                                        new u("ﻚ", -1, 44),
-                                        new u("ﻛ", -1, 44),
-                                        new u("ﻜ", -1, 44),
-                                        new u("ﻝ", -1, 45),
-                                        new u("ﻞ", -1, 45),
-                                        new u("ﻟ", -1, 45),
-                                        new u("ﻠ", -1, 45),
-                                        new u("ﻡ", -1, 46),
-                                        new u("ﻢ", -1, 46),
-                                        new u("ﻣ", -1, 46),
-                                        new u("ﻤ", -1, 46),
-                                        new u("ﻥ", -1, 47),
-                                        new u("ﻦ", -1, 47),
-                                        new u("ﻧ", -1, 47),
-                                        new u("ﻨ", -1, 47),
-                                        new u("ﻩ", -1, 48),
-                                        new u("ﻪ", -1, 48),
-                                        new u("ﻫ", -1, 48),
-                                        new u("ﻬ", -1, 48),
-                                        new u("ﻭ", -1, 49),
-                                        new u("ﻮ", -1, 49),
-                                        new u("ﻯ", -1, 50),
-                                        new u("ﻰ", -1, 50),
-                                        new u("ﻱ", -1, 51),
-                                        new u("ﻲ", -1, 51),
-                                        new u("ﻳ", -1, 51),
-                                        new u("ﻴ", -1, 51),
-                                        new u("ﻵ", -1, 55),
-                                        new u("ﻶ", -1, 55),
-                                        new u("ﻷ", -1, 53),
-                                        new u("ﻸ", -1, 53),
-                                        new u("ﻹ", -1, 54),
-                                        new u("ﻺ", -1, 54),
-                                        new u("ﻻ", -1, 52),
-                                        new u("ﻼ", -1, 52),
+                                        new u("\u060C", -1, 4),
+                                        new u("\u061B", -1, 4),
+                                        new u("\u061F", -1, 4),
+                                        new u("\u0640", -1, 2),
+                                        new u("\u064B", -1, 1),
+                                        new u("\u064C", -1, 1),
+                                        new u("\u064D", -1, 1),
+                                        new u("\u064E", -1, 1),
+                                        new u("\u064F", -1, 1),
+                                        new u("\u0650", -1, 1),
+                                        new u("\u0651", -1, 1),
+                                        new u("\u0652", -1, 1),
+                                        new u("\u0660", -1, 5),
+                                        new u("\u0661", -1, 6),
+                                        new u("\u0662", -1, 7),
+                                        new u("\u0663", -1, 8),
+                                        new u("\u0664", -1, 9),
+                                        new u("\u0665", -1, 10),
+                                        new u("\u0666", -1, 11),
+                                        new u("\u0667", -1, 12),
+                                        new u("\u0668", -1, 13),
+                                        new u("\u0669", -1, 14),
+                                        new u("\u066A", -1, 15),
+                                        new u("\u066B", -1, 15),
+                                        new u("\u066C", -1, 15),
+                                        new u("\uFE80", -1, 16),
+                                        new u("\uFE81", -1, 20),
+                                        new u("\uFE82", -1, 20),
+                                        new u("\uFE83", -1, 17),
+                                        new u("\uFE84", -1, 17),
+                                        new u("\uFE85", -1, 21),
+                                        new u("\uFE86", -1, 21),
+                                        new u("\uFE87", -1, 18),
+                                        new u("\uFE88", -1, 18),
+                                        new u("\uFE89", -1, 19),
+                                        new u("\uFE8A", -1, 19),
+                                        new u("\uFE8B", -1, 19),
+                                        new u("\uFE8C", -1, 19),
+                                        new u("\uFE8D", -1, 22),
+                                        new u("\uFE8E", -1, 22),
+                                        new u("\uFE8F", -1, 23),
+                                        new u("\uFE90", -1, 23),
+                                        new u("\uFE91", -1, 23),
+                                        new u("\uFE92", -1, 23),
+                                        new u("\uFE93", -1, 24),
+                                        new u("\uFE94", -1, 24),
+                                        new u("\uFE95", -1, 25),
+                                        new u("\uFE96", -1, 25),
+                                        new u("\uFE97", -1, 25),
+                                        new u("\uFE98", -1, 25),
+                                        new u("\uFE99", -1, 26),
+                                        new u("\uFE9A", -1, 26),
+                                        new u("\uFE9B", -1, 26),
+                                        new u("\uFE9C", -1, 26),
+                                        new u("\uFE9D", -1, 27),
+                                        new u("\uFE9E", -1, 27),
+                                        new u("\uFE9F", -1, 27),
+                                        new u("\uFEA0", -1, 27),
+                                        new u("\uFEA1", -1, 28),
+                                        new u("\uFEA2", -1, 28),
+                                        new u("\uFEA3", -1, 28),
+                                        new u("\uFEA4", -1, 28),
+                                        new u("\uFEA5", -1, 29),
+                                        new u("\uFEA6", -1, 29),
+                                        new u("\uFEA7", -1, 29),
+                                        new u("\uFEA8", -1, 29),
+                                        new u("\uFEA9", -1, 30),
+                                        new u("\uFEAA", -1, 30),
+                                        new u("\uFEAB", -1, 31),
+                                        new u("\uFEAC", -1, 31),
+                                        new u("\uFEAD", -1, 32),
+                                        new u("\uFEAE", -1, 32),
+                                        new u("\uFEAF", -1, 33),
+                                        new u("\uFEB0", -1, 33),
+                                        new u("\uFEB1", -1, 34),
+                                        new u("\uFEB2", -1, 34),
+                                        new u("\uFEB3", -1, 34),
+                                        new u("\uFEB4", -1, 34),
+                                        new u("\uFEB5", -1, 35),
+                                        new u("\uFEB6", -1, 35),
+                                        new u("\uFEB7", -1, 35),
+                                        new u("\uFEB8", -1, 35),
+                                        new u("\uFEB9", -1, 36),
+                                        new u("\uFEBA", -1, 36),
+                                        new u("\uFEBB", -1, 36),
+                                        new u("\uFEBC", -1, 36),
+                                        new u("\uFEBD", -1, 37),
+                                        new u("\uFEBE", -1, 37),
+                                        new u("\uFEBF", -1, 37),
+                                        new u("\uFEC0", -1, 37),
+                                        new u("\uFEC1", -1, 38),
+                                        new u("\uFEC2", -1, 38),
+                                        new u("\uFEC3", -1, 38),
+                                        new u("\uFEC4", -1, 38),
+                                        new u("\uFEC5", -1, 39),
+                                        new u("\uFEC6", -1, 39),
+                                        new u("\uFEC7", -1, 39),
+                                        new u("\uFEC8", -1, 39),
+                                        new u("\uFEC9", -1, 40),
+                                        new u("\uFECA", -1, 40),
+                                        new u("\uFECB", -1, 40),
+                                        new u("\uFECC", -1, 40),
+                                        new u("\uFECD", -1, 41),
+                                        new u("\uFECE", -1, 41),
+                                        new u("\uFECF", -1, 41),
+                                        new u("\uFED0", -1, 41),
+                                        new u("\uFED1", -1, 42),
+                                        new u("\uFED2", -1, 42),
+                                        new u("\uFED3", -1, 42),
+                                        new u("\uFED4", -1, 42),
+                                        new u("\uFED5", -1, 43),
+                                        new u("\uFED6", -1, 43),
+                                        new u("\uFED7", -1, 43),
+                                        new u("\uFED8", -1, 43),
+                                        new u("\uFED9", -1, 44),
+                                        new u("\uFEDA", -1, 44),
+                                        new u("\uFEDB", -1, 44),
+                                        new u("\uFEDC", -1, 44),
+                                        new u("\uFEDD", -1, 45),
+                                        new u("\uFEDE", -1, 45),
+                                        new u("\uFEDF", -1, 45),
+                                        new u("\uFEE0", -1, 45),
+                                        new u("\uFEE1", -1, 46),
+                                        new u("\uFEE2", -1, 46),
+                                        new u("\uFEE3", -1, 46),
+                                        new u("\uFEE4", -1, 46),
+                                        new u("\uFEE5", -1, 47),
+                                        new u("\uFEE6", -1, 47),
+                                        new u("\uFEE7", -1, 47),
+                                        new u("\uFEE8", -1, 47),
+                                        new u("\uFEE9", -1, 48),
+                                        new u("\uFEEA", -1, 48),
+                                        new u("\uFEEB", -1, 48),
+                                        new u("\uFEEC", -1, 48),
+                                        new u("\uFEED", -1, 49),
+                                        new u("\uFEEE", -1, 49),
+                                        new u("\uFEEF", -1, 50),
+                                        new u("\uFEF0", -1, 50),
+                                        new u("\uFEF1", -1, 51),
+                                        new u("\uFEF2", -1, 51),
+                                        new u("\uFEF3", -1, 51),
+                                        new u("\uFEF4", -1, 51),
+                                        new u("\uFEF5", -1, 55),
+                                        new u("\uFEF6", -1, 55),
+                                        new u("\uFEF7", -1, 53),
+                                        new u("\uFEF8", -1, 53),
+                                        new u("\uFEF9", -1, 54),
+                                        new u("\uFEFA", -1, 54),
+                                        new u("\uFEFB", -1, 52),
+                                        new u("\uFEFC", -1, 52),
                                     ])
                                 );
                             },
@@ -2025,11 +2027,11 @@ var s,
                                 return (
                                     delete t.a_1,
                                     (t.a_1 = [
-                                        new u("آ", -1, 1),
-                                        new u("أ", -1, 1),
-                                        new u("ؤ", -1, 2),
-                                        new u("إ", -1, 1),
-                                        new u("ئ", -1, 3),
+                                        new u("\u0622", -1, 1),
+                                        new u("\u0623", -1, 1),
+                                        new u("\u0624", -1, 2),
+                                        new u("\u0625", -1, 1),
+                                        new u("\u0626", -1, 3),
                                     ])
                                 );
                             },
@@ -2040,11 +2042,11 @@ var s,
                                 return (
                                     delete t.a_2,
                                     (t.a_2 = [
-                                        new u("آ", -1, 1),
-                                        new u("أ", -1, 1),
-                                        new u("ؤ", -1, 2),
-                                        new u("إ", -1, 1),
-                                        new u("ئ", -1, 3),
+                                        new u("\u0622", -1, 1),
+                                        new u("\u0623", -1, 1),
+                                        new u("\u0624", -1, 2),
+                                        new u("\u0625", -1, 1),
+                                        new u("\u0626", -1, 3),
                                     ])
                                 );
                             },
@@ -2055,10 +2057,10 @@ var s,
                                 return (
                                     delete t.a_3,
                                     (t.a_3 = [
-                                        new u("ال", -1, 2),
-                                        new u("بال", -1, 1),
-                                        new u("كال", -1, 1),
-                                        new u("لل", -1, 2),
+                                        new u("\u0627\u0644", -1, 2),
+                                        new u("\u0628\u0627\u0644", -1, 1),
+                                        new u("\u0643\u0627\u0644", -1, 1),
+                                        new u("\u0644\u0644", -1, 2),
                                     ])
                                 );
                             },
@@ -2069,11 +2071,11 @@ var s,
                                 return (
                                     delete t.a_4,
                                     (t.a_4 = [
-                                        new u("أآ", -1, 2),
-                                        new u("أأ", -1, 1),
-                                        new u("أؤ", -1, 3),
-                                        new u("أإ", -1, 5),
-                                        new u("أا", -1, 4),
+                                        new u("\u0623\u0622", -1, 2),
+                                        new u("\u0623\u0623", -1, 1),
+                                        new u("\u0623\u0624", -1, 3),
+                                        new u("\u0623\u0625", -1, 5),
+                                        new u("\u0623\u0627", -1, 4),
                                     ])
                                 );
                             },
@@ -2081,7 +2083,7 @@ var s,
                         {
                             key: "a_5",
                             get: function () {
-                                return delete t.a_5, (t.a_5 = [new u("ف", -1, 1), new u("و", -1, 2)]);
+                                return delete t.a_5, (t.a_5 = [new u("\u0641", -1, 1), new u("\u0648", -1, 2)]);
                             },
                         },
                         {
@@ -2090,10 +2092,10 @@ var s,
                                 return (
                                     delete t.a_6,
                                     (t.a_6 = [
-                                        new u("ال", -1, 2),
-                                        new u("بال", -1, 1),
-                                        new u("كال", -1, 1),
-                                        new u("لل", -1, 2),
+                                        new u("\u0627\u0644", -1, 2),
+                                        new u("\u0628\u0627\u0644", -1, 1),
+                                        new u("\u0643\u0627\u0644", -1, 1),
+                                        new u("\u0644\u0644", -1, 2),
                                     ])
                                 );
                             },
@@ -2102,7 +2104,12 @@ var s,
                             key: "a_7",
                             get: function () {
                                 return (
-                                    delete t.a_7, (t.a_7 = [new u("ب", -1, 1), new u("بب", 0, 2), new u("كك", -1, 3)])
+                                    delete t.a_7,
+                                    (t.a_7 = [
+                                        new u("\u0628", -1, 1),
+                                        new u("\u0628\u0628", 0, 2),
+                                        new u("\u0643\u0643", -1, 3),
+                                    ])
                                 );
                             },
                         },
@@ -2112,10 +2119,10 @@ var s,
                                 return (
                                     delete t.a_8,
                                     (t.a_8 = [
-                                        new u("سأ", -1, 4),
-                                        new u("ست", -1, 2),
-                                        new u("سن", -1, 3),
-                                        new u("سي", -1, 1),
+                                        new u("\u0633\u0623", -1, 4),
+                                        new u("\u0633\u062A", -1, 2),
+                                        new u("\u0633\u0646", -1, 3),
+                                        new u("\u0633\u064A", -1, 1),
                                     ])
                                 );
                             },
@@ -2125,7 +2132,11 @@ var s,
                             get: function () {
                                 return (
                                     delete t.a_9,
-                                    (t.a_9 = [new u("تست", -1, 1), new u("نست", -1, 1), new u("يست", -1, 1)])
+                                    (t.a_9 = [
+                                        new u("\u062A\u0633\u062A", -1, 1),
+                                        new u("\u0646\u0633\u062A", -1, 1),
+                                        new u("\u064A\u0633\u062A", -1, 1),
+                                    ])
                                 );
                             },
                         },
@@ -2135,16 +2146,16 @@ var s,
                                 return (
                                     delete t.a_10,
                                     (t.a_10 = [
-                                        new u("كما", -1, 3),
-                                        new u("هما", -1, 3),
-                                        new u("نا", -1, 2),
-                                        new u("ها", -1, 2),
-                                        new u("ك", -1, 1),
-                                        new u("كم", -1, 2),
-                                        new u("هم", -1, 2),
-                                        new u("هن", -1, 2),
-                                        new u("ه", -1, 1),
-                                        new u("ي", -1, 1),
+                                        new u("\u0643\u0645\u0627", -1, 3),
+                                        new u("\u0647\u0645\u0627", -1, 3),
+                                        new u("\u0646\u0627", -1, 2),
+                                        new u("\u0647\u0627", -1, 2),
+                                        new u("\u0643", -1, 1),
+                                        new u("\u0643\u0645", -1, 2),
+                                        new u("\u0647\u0645", -1, 2),
+                                        new u("\u0647\u0646", -1, 2),
+                                        new u("\u0647", -1, 1),
+                                        new u("\u064A", -1, 1),
                                     ])
                                 );
                             },
@@ -2152,39 +2163,40 @@ var s,
                         {
                             key: "a_11",
                             get: function () {
-                                return delete t.a_11, (t.a_11 = [new u("ن", -1, 1)]);
+                                return delete t.a_11, (t.a_11 = [new u("\u0646", -1, 1)]);
                             },
                         },
                         {
                             key: "a_12",
                             get: function () {
                                 return (
-                                    delete t.a_12, (t.a_12 = [new u("ا", -1, 1), new u("و", -1, 1), new u("ي", -1, 1)])
+                                    delete t.a_12,
+                                    (t.a_12 = [new u("\u0627", -1, 1), new u("\u0648", -1, 1), new u("\u064A", -1, 1)])
                                 );
                             },
                         },
                         {
                             key: "a_13",
                             get: function () {
-                                return delete t.a_13, (t.a_13 = [new u("ات", -1, 1)]);
+                                return delete t.a_13, (t.a_13 = [new u("\u0627\u062A", -1, 1)]);
                             },
                         },
                         {
                             key: "a_14",
                             get: function () {
-                                return delete t.a_14, (t.a_14 = [new u("ت", -1, 1)]);
+                                return delete t.a_14, (t.a_14 = [new u("\u062A", -1, 1)]);
                             },
                         },
                         {
                             key: "a_15",
                             get: function () {
-                                return delete t.a_15, (t.a_15 = [new u("ة", -1, 1)]);
+                                return delete t.a_15, (t.a_15 = [new u("\u0629", -1, 1)]);
                             },
                         },
                         {
                             key: "a_16",
                             get: function () {
-                                return delete t.a_16, (t.a_16 = [new u("ي", -1, 1)]);
+                                return delete t.a_16, (t.a_16 = [new u("\u064A", -1, 1)]);
                             },
                         },
                         {
@@ -2193,18 +2205,18 @@ var s,
                                 return (
                                     delete t.a_17,
                                     (t.a_17 = [
-                                        new u("كما", -1, 3),
-                                        new u("هما", -1, 3),
-                                        new u("نا", -1, 2),
-                                        new u("ها", -1, 2),
-                                        new u("ك", -1, 1),
-                                        new u("كم", -1, 2),
-                                        new u("هم", -1, 2),
-                                        new u("كن", -1, 2),
-                                        new u("هن", -1, 2),
-                                        new u("ه", -1, 1),
-                                        new u("كمو", -1, 3),
-                                        new u("ني", -1, 2),
+                                        new u("\u0643\u0645\u0627", -1, 3),
+                                        new u("\u0647\u0645\u0627", -1, 3),
+                                        new u("\u0646\u0627", -1, 2),
+                                        new u("\u0647\u0627", -1, 2),
+                                        new u("\u0643", -1, 1),
+                                        new u("\u0643\u0645", -1, 2),
+                                        new u("\u0647\u0645", -1, 2),
+                                        new u("\u0643\u0646", -1, 2),
+                                        new u("\u0647\u0646", -1, 2),
+                                        new u("\u0647", -1, 1),
+                                        new u("\u0643\u0645\u0648", -1, 3),
+                                        new u("\u0646\u064A", -1, 2),
                                     ])
                                 );
                             },
@@ -2215,17 +2227,17 @@ var s,
                                 return (
                                     delete t.a_18,
                                     (t.a_18 = [
-                                        new u("ا", -1, 2),
-                                        new u("تا", 0, 3),
-                                        new u("تما", 0, 5),
-                                        new u("نا", 0, 3),
-                                        new u("ت", -1, 1),
-                                        new u("ن", -1, 2),
-                                        new u("ان", 5, 4),
-                                        new u("تن", 5, 3),
-                                        new u("ون", 5, 4),
-                                        new u("ين", 5, 4),
-                                        new u("ي", -1, 2),
+                                        new u("\u0627", -1, 2),
+                                        new u("\u062A\u0627", 0, 3),
+                                        new u("\u062A\u0645\u0627", 0, 5),
+                                        new u("\u0646\u0627", 0, 3),
+                                        new u("\u062A", -1, 1),
+                                        new u("\u0646", -1, 2),
+                                        new u("\u0627\u0646", 5, 4),
+                                        new u("\u062A\u0646", 5, 3),
+                                        new u("\u0648\u0646", 5, 4),
+                                        new u("\u064A\u0646", 5, 4),
+                                        new u("\u064A", -1, 2),
                                     ])
                                 );
                             },
@@ -2233,19 +2245,25 @@ var s,
                         {
                             key: "a_19",
                             get: function () {
-                                return delete t.a_19, (t.a_19 = [new u("وا", -1, 1), new u("تم", -1, 1)]);
+                                return (
+                                    delete t.a_19,
+                                    (t.a_19 = [new u("\u0648\u0627", -1, 1), new u("\u062A\u0645", -1, 1)])
+                                );
                             },
                         },
                         {
                             key: "a_20",
                             get: function () {
-                                return delete t.a_20, (t.a_20 = [new u("و", -1, 1), new u("تمو", 0, 2)]);
+                                return (
+                                    delete t.a_20,
+                                    (t.a_20 = [new u("\u0648", -1, 1), new u("\u062A\u0645\u0648", 0, 2)])
+                                );
                             },
                         },
                         {
                             key: "a_21",
                             get: function () {
-                                return delete t.a_21, (t.a_21 = [new u("ى", -1, 1)]);
+                                return delete t.a_21, (t.a_21 = [new u("\u0649", -1, 1)]);
                             },
                         },
                     ],
@@ -2463,29 +2481,29 @@ var s,
                                 return (
                                     delete t.a_0,
                                     (t.a_0 = [
-                                        new u("րորդ", -1, 1),
-                                        new u("երորդ", 0, 1),
-                                        new u("ալի", -1, 1),
-                                        new u("ակի", -1, 1),
-                                        new u("որակ", -1, 1),
-                                        new u("եղ", -1, 1),
-                                        new u("ական", -1, 1),
-                                        new u("արան", -1, 1),
-                                        new u("են", -1, 1),
-                                        new u("եկեն", 8, 1),
-                                        new u("երեն", 8, 1),
-                                        new u("որէն", -1, 1),
-                                        new u("ին", -1, 1),
-                                        new u("գին", 12, 1),
-                                        new u("ովին", 12, 1),
-                                        new u("լայն", -1, 1),
-                                        new u("վուն", -1, 1),
-                                        new u("պես", -1, 1),
-                                        new u("իվ", -1, 1),
-                                        new u("ատ", -1, 1),
-                                        new u("ավետ", -1, 1),
-                                        new u("կոտ", -1, 1),
-                                        new u("բար", -1, 1),
+                                        new u("\u0580\u0578\u0580\u0564", -1, 1),
+                                        new u("\u0565\u0580\u0578\u0580\u0564", 0, 1),
+                                        new u("\u0561\u056C\u056B", -1, 1),
+                                        new u("\u0561\u056F\u056B", -1, 1),
+                                        new u("\u0578\u0580\u0561\u056F", -1, 1),
+                                        new u("\u0565\u0572", -1, 1),
+                                        new u("\u0561\u056F\u0561\u0576", -1, 1),
+                                        new u("\u0561\u0580\u0561\u0576", -1, 1),
+                                        new u("\u0565\u0576", -1, 1),
+                                        new u("\u0565\u056F\u0565\u0576", 8, 1),
+                                        new u("\u0565\u0580\u0565\u0576", 8, 1),
+                                        new u("\u0578\u0580\u0567\u0576", -1, 1),
+                                        new u("\u056B\u0576", -1, 1),
+                                        new u("\u0563\u056B\u0576", 12, 1),
+                                        new u("\u0578\u057E\u056B\u0576", 12, 1),
+                                        new u("\u056C\u0561\u0575\u0576", -1, 1),
+                                        new u("\u057E\u0578\u0582\u0576", -1, 1),
+                                        new u("\u057A\u0565\u057D", -1, 1),
+                                        new u("\u056B\u057E", -1, 1),
+                                        new u("\u0561\u057F", -1, 1),
+                                        new u("\u0561\u057E\u0565\u057F", -1, 1),
+                                        new u("\u056F\u0578\u057F", -1, 1),
+                                        new u("\u0562\u0561\u0580", -1, 1),
                                     ])
                                 );
                             },
@@ -2496,77 +2514,77 @@ var s,
                                 return (
                                     delete t.a_1,
                                     (t.a_1 = [
-                                        new u("ա", -1, 1),
-                                        new u("ացա", 0, 1),
-                                        new u("եցա", 0, 1),
-                                        new u("վե", -1, 1),
-                                        new u("ացրի", -1, 1),
-                                        new u("ացի", -1, 1),
-                                        new u("եցի", -1, 1),
-                                        new u("վեցի", 6, 1),
-                                        new u("ալ", -1, 1),
-                                        new u("ըալ", 8, 1),
-                                        new u("անալ", 8, 1),
-                                        new u("ենալ", 8, 1),
-                                        new u("ացնալ", 8, 1),
-                                        new u("ել", -1, 1),
-                                        new u("ըել", 13, 1),
-                                        new u("նել", 13, 1),
-                                        new u("ցնել", 15, 1),
-                                        new u("եցնել", 16, 1),
-                                        new u("չել", 13, 1),
-                                        new u("վել", 13, 1),
-                                        new u("ացվել", 19, 1),
-                                        new u("եցվել", 19, 1),
-                                        new u("տել", 13, 1),
-                                        new u("ատել", 22, 1),
-                                        new u("ոտել", 22, 1),
-                                        new u("կոտել", 24, 1),
-                                        new u("ված", -1, 1),
-                                        new u("ում", -1, 1),
-                                        new u("վում", 27, 1),
-                                        new u("ան", -1, 1),
-                                        new u("ցան", 29, 1),
-                                        new u("ացան", 30, 1),
-                                        new u("ացրին", -1, 1),
-                                        new u("ացին", -1, 1),
-                                        new u("եցին", -1, 1),
-                                        new u("վեցին", 34, 1),
-                                        new u("ալիս", -1, 1),
-                                        new u("ելիս", -1, 1),
-                                        new u("ավ", -1, 1),
-                                        new u("ացավ", 38, 1),
-                                        new u("եցավ", 38, 1),
-                                        new u("ալով", -1, 1),
-                                        new u("ելով", -1, 1),
-                                        new u("ար", -1, 1),
-                                        new u("ացար", 43, 1),
-                                        new u("եցար", 43, 1),
-                                        new u("ացրիր", -1, 1),
-                                        new u("ացիր", -1, 1),
-                                        new u("եցիր", -1, 1),
-                                        new u("վեցիր", 48, 1),
-                                        new u("աց", -1, 1),
-                                        new u("եց", -1, 1),
-                                        new u("ացրեց", 51, 1),
-                                        new u("ալուց", -1, 1),
-                                        new u("ելուց", -1, 1),
-                                        new u("ալու", -1, 1),
-                                        new u("ելու", -1, 1),
-                                        new u("աք", -1, 1),
-                                        new u("ցաք", 57, 1),
-                                        new u("ացաք", 58, 1),
-                                        new u("ացրիք", -1, 1),
-                                        new u("ացիք", -1, 1),
-                                        new u("եցիք", -1, 1),
-                                        new u("վեցիք", 62, 1),
-                                        new u("անք", -1, 1),
-                                        new u("ցանք", 64, 1),
-                                        new u("ացանք", 65, 1),
-                                        new u("ացրինք", -1, 1),
-                                        new u("ացինք", -1, 1),
-                                        new u("եցինք", -1, 1),
-                                        new u("վեցինք", 69, 1),
+                                        new u("\u0561", -1, 1),
+                                        new u("\u0561\u0581\u0561", 0, 1),
+                                        new u("\u0565\u0581\u0561", 0, 1),
+                                        new u("\u057E\u0565", -1, 1),
+                                        new u("\u0561\u0581\u0580\u056B", -1, 1),
+                                        new u("\u0561\u0581\u056B", -1, 1),
+                                        new u("\u0565\u0581\u056B", -1, 1),
+                                        new u("\u057E\u0565\u0581\u056B", 6, 1),
+                                        new u("\u0561\u056C", -1, 1),
+                                        new u("\u0568\u0561\u056C", 8, 1),
+                                        new u("\u0561\u0576\u0561\u056C", 8, 1),
+                                        new u("\u0565\u0576\u0561\u056C", 8, 1),
+                                        new u("\u0561\u0581\u0576\u0561\u056C", 8, 1),
+                                        new u("\u0565\u056C", -1, 1),
+                                        new u("\u0568\u0565\u056C", 13, 1),
+                                        new u("\u0576\u0565\u056C", 13, 1),
+                                        new u("\u0581\u0576\u0565\u056C", 15, 1),
+                                        new u("\u0565\u0581\u0576\u0565\u056C", 16, 1),
+                                        new u("\u0579\u0565\u056C", 13, 1),
+                                        new u("\u057E\u0565\u056C", 13, 1),
+                                        new u("\u0561\u0581\u057E\u0565\u056C", 19, 1),
+                                        new u("\u0565\u0581\u057E\u0565\u056C", 19, 1),
+                                        new u("\u057F\u0565\u056C", 13, 1),
+                                        new u("\u0561\u057F\u0565\u056C", 22, 1),
+                                        new u("\u0578\u057F\u0565\u056C", 22, 1),
+                                        new u("\u056F\u0578\u057F\u0565\u056C", 24, 1),
+                                        new u("\u057E\u0561\u056E", -1, 1),
+                                        new u("\u0578\u0582\u0574", -1, 1),
+                                        new u("\u057E\u0578\u0582\u0574", 27, 1),
+                                        new u("\u0561\u0576", -1, 1),
+                                        new u("\u0581\u0561\u0576", 29, 1),
+                                        new u("\u0561\u0581\u0561\u0576", 30, 1),
+                                        new u("\u0561\u0581\u0580\u056B\u0576", -1, 1),
+                                        new u("\u0561\u0581\u056B\u0576", -1, 1),
+                                        new u("\u0565\u0581\u056B\u0576", -1, 1),
+                                        new u("\u057E\u0565\u0581\u056B\u0576", 34, 1),
+                                        new u("\u0561\u056C\u056B\u057D", -1, 1),
+                                        new u("\u0565\u056C\u056B\u057D", -1, 1),
+                                        new u("\u0561\u057E", -1, 1),
+                                        new u("\u0561\u0581\u0561\u057E", 38, 1),
+                                        new u("\u0565\u0581\u0561\u057E", 38, 1),
+                                        new u("\u0561\u056C\u0578\u057E", -1, 1),
+                                        new u("\u0565\u056C\u0578\u057E", -1, 1),
+                                        new u("\u0561\u0580", -1, 1),
+                                        new u("\u0561\u0581\u0561\u0580", 43, 1),
+                                        new u("\u0565\u0581\u0561\u0580", 43, 1),
+                                        new u("\u0561\u0581\u0580\u056B\u0580", -1, 1),
+                                        new u("\u0561\u0581\u056B\u0580", -1, 1),
+                                        new u("\u0565\u0581\u056B\u0580", -1, 1),
+                                        new u("\u057E\u0565\u0581\u056B\u0580", 48, 1),
+                                        new u("\u0561\u0581", -1, 1),
+                                        new u("\u0565\u0581", -1, 1),
+                                        new u("\u0561\u0581\u0580\u0565\u0581", 51, 1),
+                                        new u("\u0561\u056C\u0578\u0582\u0581", -1, 1),
+                                        new u("\u0565\u056C\u0578\u0582\u0581", -1, 1),
+                                        new u("\u0561\u056C\u0578\u0582", -1, 1),
+                                        new u("\u0565\u056C\u0578\u0582", -1, 1),
+                                        new u("\u0561\u0584", -1, 1),
+                                        new u("\u0581\u0561\u0584", 57, 1),
+                                        new u("\u0561\u0581\u0561\u0584", 58, 1),
+                                        new u("\u0561\u0581\u0580\u056B\u0584", -1, 1),
+                                        new u("\u0561\u0581\u056B\u0584", -1, 1),
+                                        new u("\u0565\u0581\u056B\u0584", -1, 1),
+                                        new u("\u057E\u0565\u0581\u056B\u0584", 62, 1),
+                                        new u("\u0561\u0576\u0584", -1, 1),
+                                        new u("\u0581\u0561\u0576\u0584", 64, 1),
+                                        new u("\u0561\u0581\u0561\u0576\u0584", 65, 1),
+                                        new u("\u0561\u0581\u0580\u056B\u0576\u0584", -1, 1),
+                                        new u("\u0561\u0581\u056B\u0576\u0584", -1, 1),
+                                        new u("\u0565\u0581\u056B\u0576\u0584", -1, 1),
+                                        new u("\u057E\u0565\u0581\u056B\u0576\u0584", 69, 1),
                                     ])
                                 );
                             },
@@ -2577,46 +2595,46 @@ var s,
                                 return (
                                     delete t.a_2,
                                     (t.a_2 = [
-                                        new u("որդ", -1, 1),
-                                        new u("ույթ", -1, 1),
-                                        new u("ուհի", -1, 1),
-                                        new u("ցի", -1, 1),
-                                        new u("իլ", -1, 1),
-                                        new u("ակ", -1, 1),
-                                        new u("յակ", 5, 1),
-                                        new u("անակ", 5, 1),
-                                        new u("իկ", -1, 1),
-                                        new u("ուկ", -1, 1),
-                                        new u("ան", -1, 1),
-                                        new u("պան", 10, 1),
-                                        new u("ստան", 10, 1),
-                                        new u("արան", 10, 1),
-                                        new u("եղէն", -1, 1),
-                                        new u("յուն", -1, 1),
-                                        new u("ություն", 15, 1),
-                                        new u("ածո", -1, 1),
-                                        new u("իչ", -1, 1),
-                                        new u("ուս", -1, 1),
-                                        new u("ուստ", -1, 1),
-                                        new u("գար", -1, 1),
-                                        new u("վոր", -1, 1),
-                                        new u("ավոր", 22, 1),
-                                        new u("ոց", -1, 1),
-                                        new u("անօց", -1, 1),
-                                        new u("ու", -1, 1),
-                                        new u("ք", -1, 1),
-                                        new u("չեք", 27, 1),
-                                        new u("իք", 27, 1),
-                                        new u("ալիք", 29, 1),
-                                        new u("անիք", 29, 1),
-                                        new u("վածք", 27, 1),
-                                        new u("ույք", 27, 1),
-                                        new u("ենք", 27, 1),
-                                        new u("ոնք", 27, 1),
-                                        new u("ունք", 27, 1),
-                                        new u("մունք", 36, 1),
-                                        new u("իչք", 27, 1),
-                                        new u("արք", 27, 1),
+                                        new u("\u0578\u0580\u0564", -1, 1),
+                                        new u("\u0578\u0582\u0575\u0569", -1, 1),
+                                        new u("\u0578\u0582\u0570\u056B", -1, 1),
+                                        new u("\u0581\u056B", -1, 1),
+                                        new u("\u056B\u056C", -1, 1),
+                                        new u("\u0561\u056F", -1, 1),
+                                        new u("\u0575\u0561\u056F", 5, 1),
+                                        new u("\u0561\u0576\u0561\u056F", 5, 1),
+                                        new u("\u056B\u056F", -1, 1),
+                                        new u("\u0578\u0582\u056F", -1, 1),
+                                        new u("\u0561\u0576", -1, 1),
+                                        new u("\u057A\u0561\u0576", 10, 1),
+                                        new u("\u057D\u057F\u0561\u0576", 10, 1),
+                                        new u("\u0561\u0580\u0561\u0576", 10, 1),
+                                        new u("\u0565\u0572\u0567\u0576", -1, 1),
+                                        new u("\u0575\u0578\u0582\u0576", -1, 1),
+                                        new u("\u0578\u0582\u0569\u0575\u0578\u0582\u0576", 15, 1),
+                                        new u("\u0561\u056E\u0578", -1, 1),
+                                        new u("\u056B\u0579", -1, 1),
+                                        new u("\u0578\u0582\u057D", -1, 1),
+                                        new u("\u0578\u0582\u057D\u057F", -1, 1),
+                                        new u("\u0563\u0561\u0580", -1, 1),
+                                        new u("\u057E\u0578\u0580", -1, 1),
+                                        new u("\u0561\u057E\u0578\u0580", 22, 1),
+                                        new u("\u0578\u0581", -1, 1),
+                                        new u("\u0561\u0576\u0585\u0581", -1, 1),
+                                        new u("\u0578\u0582", -1, 1),
+                                        new u("\u0584", -1, 1),
+                                        new u("\u0579\u0565\u0584", 27, 1),
+                                        new u("\u056B\u0584", 27, 1),
+                                        new u("\u0561\u056C\u056B\u0584", 29, 1),
+                                        new u("\u0561\u0576\u056B\u0584", 29, 1),
+                                        new u("\u057E\u0561\u056E\u0584", 27, 1),
+                                        new u("\u0578\u0582\u0575\u0584", 27, 1),
+                                        new u("\u0565\u0576\u0584", 27, 1),
+                                        new u("\u0578\u0576\u0584", 27, 1),
+                                        new u("\u0578\u0582\u0576\u0584", 27, 1),
+                                        new u("\u0574\u0578\u0582\u0576\u0584", 36, 1),
+                                        new u("\u056B\u0579\u0584", 27, 1),
+                                        new u("\u0561\u0580\u0584", 27, 1),
                                     ])
                                 );
                             },
@@ -2627,63 +2645,63 @@ var s,
                                 return (
                                     delete t.a_3,
                                     (t.a_3 = [
-                                        new u("սա", -1, 1),
-                                        new u("վա", -1, 1),
-                                        new u("ամբ", -1, 1),
-                                        new u("դ", -1, 1),
-                                        new u("անդ", 3, 1),
-                                        new u("ությանդ", 4, 1),
-                                        new u("վանդ", 4, 1),
-                                        new u("ոջդ", 3, 1),
-                                        new u("երդ", 3, 1),
-                                        new u("ներդ", 8, 1),
-                                        new u("ուդ", 3, 1),
-                                        new u("ը", -1, 1),
-                                        new u("անը", 11, 1),
-                                        new u("ությանը", 12, 1),
-                                        new u("վանը", 12, 1),
-                                        new u("ոջը", 11, 1),
-                                        new u("երը", 11, 1),
-                                        new u("ները", 16, 1),
-                                        new u("ի", -1, 1),
-                                        new u("վի", 18, 1),
-                                        new u("երի", 18, 1),
-                                        new u("ների", 20, 1),
-                                        new u("անում", -1, 1),
-                                        new u("երում", -1, 1),
-                                        new u("ներում", 23, 1),
-                                        new u("ն", -1, 1),
-                                        new u("ան", 25, 1),
-                                        new u("ության", 26, 1),
-                                        new u("վան", 26, 1),
-                                        new u("ին", 25, 1),
-                                        new u("երին", 29, 1),
-                                        new u("ներին", 30, 1),
-                                        new u("ությանն", 25, 1),
-                                        new u("երն", 25, 1),
-                                        new u("ներն", 33, 1),
-                                        new u("ուն", 25, 1),
-                                        new u("ոջ", -1, 1),
-                                        new u("ությանս", -1, 1),
-                                        new u("վանս", -1, 1),
-                                        new u("ոջս", -1, 1),
-                                        new u("ով", -1, 1),
-                                        new u("անով", 40, 1),
-                                        new u("վով", 40, 1),
-                                        new u("երով", 40, 1),
-                                        new u("ներով", 43, 1),
-                                        new u("եր", -1, 1),
-                                        new u("ներ", 45, 1),
-                                        new u("ց", -1, 1),
-                                        new u("ից", 47, 1),
-                                        new u("վանից", 48, 1),
-                                        new u("ոջից", 48, 1),
-                                        new u("վից", 48, 1),
-                                        new u("երից", 48, 1),
-                                        new u("ներից", 52, 1),
-                                        new u("ցից", 48, 1),
-                                        new u("ոց", 47, 1),
-                                        new u("ուց", 47, 1),
+                                        new u("\u057D\u0561", -1, 1),
+                                        new u("\u057E\u0561", -1, 1),
+                                        new u("\u0561\u0574\u0562", -1, 1),
+                                        new u("\u0564", -1, 1),
+                                        new u("\u0561\u0576\u0564", 3, 1),
+                                        new u("\u0578\u0582\u0569\u0575\u0561\u0576\u0564", 4, 1),
+                                        new u("\u057E\u0561\u0576\u0564", 4, 1),
+                                        new u("\u0578\u057B\u0564", 3, 1),
+                                        new u("\u0565\u0580\u0564", 3, 1),
+                                        new u("\u0576\u0565\u0580\u0564", 8, 1),
+                                        new u("\u0578\u0582\u0564", 3, 1),
+                                        new u("\u0568", -1, 1),
+                                        new u("\u0561\u0576\u0568", 11, 1),
+                                        new u("\u0578\u0582\u0569\u0575\u0561\u0576\u0568", 12, 1),
+                                        new u("\u057E\u0561\u0576\u0568", 12, 1),
+                                        new u("\u0578\u057B\u0568", 11, 1),
+                                        new u("\u0565\u0580\u0568", 11, 1),
+                                        new u("\u0576\u0565\u0580\u0568", 16, 1),
+                                        new u("\u056B", -1, 1),
+                                        new u("\u057E\u056B", 18, 1),
+                                        new u("\u0565\u0580\u056B", 18, 1),
+                                        new u("\u0576\u0565\u0580\u056B", 20, 1),
+                                        new u("\u0561\u0576\u0578\u0582\u0574", -1, 1),
+                                        new u("\u0565\u0580\u0578\u0582\u0574", -1, 1),
+                                        new u("\u0576\u0565\u0580\u0578\u0582\u0574", 23, 1),
+                                        new u("\u0576", -1, 1),
+                                        new u("\u0561\u0576", 25, 1),
+                                        new u("\u0578\u0582\u0569\u0575\u0561\u0576", 26, 1),
+                                        new u("\u057E\u0561\u0576", 26, 1),
+                                        new u("\u056B\u0576", 25, 1),
+                                        new u("\u0565\u0580\u056B\u0576", 29, 1),
+                                        new u("\u0576\u0565\u0580\u056B\u0576", 30, 1),
+                                        new u("\u0578\u0582\u0569\u0575\u0561\u0576\u0576", 25, 1),
+                                        new u("\u0565\u0580\u0576", 25, 1),
+                                        new u("\u0576\u0565\u0580\u0576", 33, 1),
+                                        new u("\u0578\u0582\u0576", 25, 1),
+                                        new u("\u0578\u057B", -1, 1),
+                                        new u("\u0578\u0582\u0569\u0575\u0561\u0576\u057D", -1, 1),
+                                        new u("\u057E\u0561\u0576\u057D", -1, 1),
+                                        new u("\u0578\u057B\u057D", -1, 1),
+                                        new u("\u0578\u057E", -1, 1),
+                                        new u("\u0561\u0576\u0578\u057E", 40, 1),
+                                        new u("\u057E\u0578\u057E", 40, 1),
+                                        new u("\u0565\u0580\u0578\u057E", 40, 1),
+                                        new u("\u0576\u0565\u0580\u0578\u057E", 43, 1),
+                                        new u("\u0565\u0580", -1, 1),
+                                        new u("\u0576\u0565\u0580", 45, 1),
+                                        new u("\u0581", -1, 1),
+                                        new u("\u056B\u0581", 47, 1),
+                                        new u("\u057E\u0561\u0576\u056B\u0581", 48, 1),
+                                        new u("\u0578\u057B\u056B\u0581", 48, 1),
+                                        new u("\u057E\u056B\u0581", 48, 1),
+                                        new u("\u0565\u0580\u056B\u0581", 48, 1),
+                                        new u("\u0576\u0565\u0580\u056B\u0581", 52, 1),
+                                        new u("\u0581\u056B\u0581", 48, 1),
+                                        new u("\u0578\u0581", 47, 1),
+                                        new u("\u0578\u0582\u0581", 47, 1),
                                     ])
                                 );
                             },
@@ -4547,7 +4565,8 @@ var s,
                                             return !1;
                                         break;
                                     case 5:
-                                        if ((this.slice_from$esjava$1("ě"), !this.r_palatalise$esjava$0())) return !1;
+                                        if ((this.slice_from$esjava$1("\u011B"), !this.r_palatalise$esjava$0()))
+                                            return !1;
                                         break;
                                     case 6:
                                         if ((this.slice_from$esjava$1("\xed"), !this.r_palatalise$esjava$0()))
@@ -4640,7 +4659,8 @@ var s,
                                     case 0:
                                         return !1;
                                     case 1:
-                                        if ((this.slice_from$esjava$1("ě"), !this.r_palatalise$esjava$0())) return !1;
+                                        if ((this.slice_from$esjava$1("\u011B"), !this.r_palatalise$esjava$0()))
+                                            return !1;
                                         break;
                                     case 2:
                                         if ((this.slice_from$esjava$1("e"), !this.r_palatalise$esjava$0())) return !1;
@@ -4738,18 +4758,18 @@ var s,
                                     (t.a_0 = [
                                         new u("ce", -1, 1),
                                         new u("ze", -1, 2),
-                                        new u("že", -1, 2),
+                                        new u("\u017Ee", -1, 2),
                                         new u("ci", -1, 1),
-                                        new u("čti", -1, 3),
-                                        new u("šti", -1, 4),
+                                        new u("\u010Dti", -1, 3),
+                                        new u("\u0161ti", -1, 4),
                                         new u("zi", -1, 2),
-                                        new u("či", -1, 1),
-                                        new u("ži", -1, 2),
-                                        new u("čt\xe9", -1, 3),
-                                        new u("št\xe9", -1, 4),
-                                        new u("č", -1, 1),
-                                        new u("čtě", -1, 3),
-                                        new u("ště", -1, 4),
+                                        new u("\u010Di", -1, 1),
+                                        new u("\u017Ei", -1, 2),
+                                        new u("\u010Dt\xe9", -1, 3),
+                                        new u("\u0161t\xe9", -1, 4),
+                                        new u("\u010D", -1, 1),
+                                        new u("\u010Dt\u011B", -1, 3),
+                                        new u("\u0161t\u011B", -1, 4),
                                     ])
                                 );
                             },
@@ -4758,7 +4778,8 @@ var s,
                             key: "a_1",
                             get: function () {
                                 return (
-                                    delete t.a_1, (t.a_1 = [new u("in", -1, 2), new u("ov", -1, 1), new u("ův", -1, 1)])
+                                    delete t.a_1,
+                                    (t.a_1 = [new u("in", -1, 2), new u("ov", -1, 1), new u("\u016Fv", -1, 1)])
                                 );
                             },
                         },
@@ -4772,7 +4793,7 @@ var s,
                                         new u("ama", 0, 1),
                                         new u("ata", 0, 1),
                                         new u("e", -1, 2),
-                                        new u("ěte", 3, 2),
+                                        new u("\u011Bte", 3, 2),
                                         new u("ech", -1, 2),
                                         new u("atech", 5, 1),
                                         new u("ich", -1, 2),
@@ -4785,16 +4806,16 @@ var s,
                                         new u("emi", 12, 2),
                                         new u("\xedmi", 12, 2),
                                         new u("\xfdmi", 12, 1),
-                                        new u("ěmi", 12, 2),
-                                        new u("ěti", 11, 2),
+                                        new u("\u011Bmi", 12, 2),
+                                        new u("\u011Bti", 11, 2),
                                         new u("ovi", 11, 1),
                                         new u("em", -1, 3),
-                                        new u("ětem", 20, 1),
+                                        new u("\u011Btem", 20, 1),
                                         new u("\xe1m", -1, 1),
                                         new u("\xe9m", -1, 2),
                                         new u("\xedm", -1, 2),
                                         new u("\xfdm", -1, 1),
-                                        new u("atům", -1, 1),
+                                        new u("at\u016Fm", -1, 1),
                                         new u("o", -1, 1),
                                         new u("iho", 27, 2),
                                         new u("\xe9ho", 27, 2),
@@ -4814,8 +4835,8 @@ var s,
                                         new u("ov\xe9", 42, 1),
                                         new u("\xed", -1, 2),
                                         new u("\xfd", -1, 1),
-                                        new u("ě", -1, 2),
-                                        new u("ů", -1, 1),
+                                        new u("\u011B", -1, 2),
+                                        new u("\u016F", -1, 1),
                                     ])
                                 );
                             },
@@ -4844,17 +4865,17 @@ var s,
                                         new u("n\xedk", -1, 1),
                                         new u("ovn\xedk", 15, 1),
                                         new u("ov\xedk", -1, 1),
-                                        new u("čk", -1, 1),
-                                        new u("išk", -1, 2),
-                                        new u("ušk", -1, 1),
+                                        new u("\u010Dk", -1, 1),
+                                        new u("i\u0161k", -1, 2),
+                                        new u("u\u0161k", -1, 1),
                                         new u("dl", -1, 1),
                                         new u("itel", -1, 2),
                                         new u("ul", -1, 1),
                                         new u("an", -1, 1),
-                                        new u("čan", 24, 1),
+                                        new u("\u010Dan", 24, 1),
                                         new u("en", -1, 3),
                                         new u("in", -1, 2),
-                                        new u("štin", 27, 1),
+                                        new u("\u0161tin", 27, 1),
                                         new u("ovin", 27, 1),
                                         new u("teln", -1, 1),
                                         new u("\xe1rn", -1, 1),
@@ -4867,8 +4888,8 @@ var s,
                                         new u("\xe1n", -1, 1),
                                         new u("i\xe1n", 38, 2),
                                         new u("\xedn", -1, 6),
-                                        new u("čn", -1, 1),
-                                        new u("ěn", -1, 5),
+                                        new u("\u010Dn", -1, 1),
+                                        new u("\u011Bn", -1, 5),
                                         new u("as", -1, 1),
                                         new u("it", -1, 2),
                                         new u("ot", -1, 1),
@@ -4876,7 +4897,7 @@ var s,
                                         new u("ost", -1, 1),
                                         new u("nost", 47, 1),
                                         new u("out", -1, 1),
-                                        new u("ovišt", -1, 1),
+                                        new u("ovi\u0161t", -1, 1),
                                         new u("iv", -1, 2),
                                         new u("ov", -1, 1),
                                         new u("tv", -1, 1),
@@ -4884,16 +4905,16 @@ var s,
                                         new u("stv", 53, 1),
                                         new u("ovstv", 55, 1),
                                         new u("ovtv", 53, 1),
-                                        new u("ač", -1, 1),
-                                        new u("\xe1č", -1, 1),
-                                        new u("oň", -1, 1),
-                                        new u("\xe1ř", -1, 1),
-                                        new u("k\xe1ř", 61, 1),
-                                        new u("ion\xe1ř", 61, 2),
-                                        new u("\xe9ř", -1, 4),
-                                        new u("n\xe9ř", 64, 1),
-                                        new u("\xedř", -1, 6),
-                                        new u("ouš", -1, 1),
+                                        new u("a\u010D", -1, 1),
+                                        new u("\xe1\u010D", -1, 1),
+                                        new u("o\u0148", -1, 1),
+                                        new u("\xe1\u0159", -1, 1),
+                                        new u("k\xe1\u0159", 61, 1),
+                                        new u("ion\xe1\u0159", 61, 2),
+                                        new u("\xe9\u0159", -1, 4),
+                                        new u("n\xe9\u0159", 64, 1),
+                                        new u("\xed\u0159", -1, 6),
+                                        new u("ou\u0161", -1, 1),
                                     ])
                                 );
                             },
@@ -4909,7 +4930,7 @@ var s,
                                         new u("l", -1, 1),
                                         new u("n", -1, 1),
                                         new u("t", -1, 1),
-                                        new u("č", -1, 1),
+                                        new u("\u010D", -1, 1),
                                     ])
                                 );
                             },
@@ -4943,15 +4964,15 @@ var s,
                                         new u("onek", 2, 1),
                                         new u("unek", 2, 1),
                                         new u("\xe1nek", 2, 1),
-                                        new u("aček", 2, 1),
-                                        new u("eček", 2, 2),
-                                        new u("iček", 2, 4),
-                                        new u("oček", 2, 1),
-                                        new u("uček", 2, 1),
-                                        new u("\xe1ček", 2, 1),
-                                        new u("\xe9ček", 2, 3),
-                                        new u("\xedček", 2, 5),
-                                        new u("oušek", 2, 1),
+                                        new u("a\u010Dek", 2, 1),
+                                        new u("e\u010Dek", 2, 2),
+                                        new u("i\u010Dek", 2, 4),
+                                        new u("o\u010Dek", 2, 1),
+                                        new u("u\u010Dek", 2, 1),
+                                        new u("\xe1\u010Dek", 2, 1),
+                                        new u("\xe9\u010Dek", 2, 3),
+                                        new u("\xed\u010Dek", 2, 5),
+                                        new u("ou\u0161ek", 2, 1),
                                         new u("ik", 0, 4),
                                         new u("ank", 0, 1),
                                         new u("enk", 0, 1),
@@ -4967,15 +4988,15 @@ var s,
                                         new u("\xe1k", 0, 6),
                                         new u("\xe9k", 0, 3),
                                         new u("\xedk", 0, 5),
-                                        new u("ačk", 0, 1),
-                                        new u("ečk", 0, 1),
-                                        new u("ičk", 0, 1),
-                                        new u("očk", 0, 1),
-                                        new u("učk", 0, 1),
-                                        new u("\xe1čk", 0, 1),
-                                        new u("\xe9čk", 0, 1),
-                                        new u("\xedčk", 0, 1),
-                                        new u("ušk", 0, 1),
+                                        new u("a\u010Dk", 0, 1),
+                                        new u("e\u010Dk", 0, 1),
+                                        new u("i\u010Dk", 0, 1),
+                                        new u("o\u010Dk", 0, 1),
+                                        new u("u\u010Dk", 0, 1),
+                                        new u("\xe1\u010Dk", 0, 1),
+                                        new u("\xe9\u010Dk", 0, 1),
+                                        new u("\xed\u010Dk", 0, 1),
+                                        new u("u\u0161k", 0, 1),
                                     ])
                                 );
                             },
@@ -4983,7 +5004,9 @@ var s,
                         {
                             key: "a_7",
                             get: function () {
-                                return delete t.a_7, (t.a_7 = [new u("ejš", -1, 2), new u("ějš", -1, 1)]);
+                                return (
+                                    delete t.a_7, (t.a_7 = [new u("ej\u0161", -1, 2), new u("\u011Bj\u0161", -1, 1)])
+                                );
                             },
                         },
                         {
@@ -9582,9 +9605,9 @@ var s,
                                         new u("r\xf3l", -1, -1),
                                         new u("t\xf3l", -1, -1),
                                         new u("\xfcl", -1, -1),
-                                        new u("ből", -1, -1),
-                                        new u("ről", -1, -1),
-                                        new u("től", -1, -1),
+                                        new u("b\u0151l", -1, -1),
+                                        new u("r\u0151l", -1, -1),
+                                        new u("t\u0151l", -1, -1),
                                         new u("n", -1, -1),
                                         new u("an", 19, -1),
                                         new u("ban", 20, -1),
@@ -13023,7 +13046,7 @@ var s,
                                         this.slice_from$esjava$1("at");
                                         break;
                                     case 7:
-                                        this.slice_from$esjava$1("aţi");
+                                        this.slice_from$esjava$1("a\u0163i");
                                 }
                                 return !0;
                             },
@@ -13092,7 +13115,7 @@ var s,
                                         this.slice_del$esjava$0();
                                         break;
                                     case 2:
-                                        if (!this.eq_s_b$esjava$1("ţ")) return !1;
+                                        if (!this.eq_s_b$esjava$1("\u0163")) return !1;
                                         (this.bra = this.cursor), this.slice_from$esjava$1("t");
                                         break;
                                     case 3:
@@ -13275,10 +13298,10 @@ var s,
                                     delete t.a_1,
                                     (t.a_1 = [
                                         new u("ea", -1, 3),
-                                        new u("aţia", -1, 7),
+                                        new u("a\u0163ia", -1, 7),
                                         new u("aua", -1, 2),
                                         new u("iua", -1, 4),
-                                        new u("aţie", -1, 7),
+                                        new u("a\u0163ie", -1, 7),
                                         new u("ele", -1, 3),
                                         new u("ile", -1, 5),
                                         new u("iile", 6, 4),
@@ -13305,11 +13328,11 @@ var s,
                                         new u("ativa", -1, 5),
                                         new u("itiva", -1, 6),
                                         new u("icale", -1, 4),
-                                        new u("aţiune", -1, 5),
-                                        new u("iţiune", -1, 6),
+                                        new u("a\u0163iune", -1, 5),
+                                        new u("i\u0163iune", -1, 6),
                                         new u("atoare", -1, 5),
                                         new u("itoare", -1, 6),
-                                        new u("ătoare", -1, 5),
+                                        new u("\u0103toare", -1, 5),
                                         new u("icitate", -1, 4),
                                         new u("abilitate", -1, 1),
                                         new u("ibilitate", -1, 2),
@@ -13321,31 +13344,31 @@ var s,
                                         new u("atori", -1, 5),
                                         new u("icatori", 18, 4),
                                         new u("itori", -1, 6),
-                                        new u("ători", -1, 5),
+                                        new u("\u0103tori", -1, 5),
                                         new u("icitati", -1, 4),
                                         new u("abilitati", -1, 1),
                                         new u("ivitati", -1, 3),
                                         new u("icivi", -1, 4),
                                         new u("ativi", -1, 5),
                                         new u("itivi", -1, 6),
-                                        new u("icităi", -1, 4),
-                                        new u("abilităi", -1, 1),
-                                        new u("ivităi", -1, 3),
-                                        new u("icităţi", -1, 4),
-                                        new u("abilităţi", -1, 1),
-                                        new u("ivităţi", -1, 3),
+                                        new u("icit\u0103i", -1, 4),
+                                        new u("abilit\u0103i", -1, 1),
+                                        new u("ivit\u0103i", -1, 3),
+                                        new u("icit\u0103\u0163i", -1, 4),
+                                        new u("abilit\u0103\u0163i", -1, 1),
+                                        new u("ivit\u0103\u0163i", -1, 3),
                                         new u("ical", -1, 4),
                                         new u("ator", -1, 5),
                                         new u("icator", 35, 4),
                                         new u("itor", -1, 6),
-                                        new u("ător", -1, 5),
+                                        new u("\u0103tor", -1, 5),
                                         new u("iciv", -1, 4),
                                         new u("ativ", -1, 5),
                                         new u("itiv", -1, 6),
-                                        new u("icală", -1, 4),
-                                        new u("icivă", -1, 4),
-                                        new u("ativă", -1, 5),
-                                        new u("itivă", -1, 6),
+                                        new u("ical\u0103", -1, 4),
+                                        new u("iciv\u0103", -1, 4),
+                                        new u("ativ\u0103", -1, 5),
+                                        new u("itiv\u0103", -1, 6),
                                     ])
                                 );
                             },
@@ -13392,11 +13415,11 @@ var s,
                                         new u("anti", -1, 1),
                                         new u("isti", -1, 3),
                                         new u("uti", -1, 1),
-                                        new u("işti", -1, 3),
+                                        new u("i\u015Fti", -1, 3),
                                         new u("ivi", -1, 1),
-                                        new u("ităi", -1, 1),
-                                        new u("oşi", -1, 1),
-                                        new u("ităţi", -1, 1),
+                                        new u("it\u0103i", -1, 1),
+                                        new u("o\u015Fi", -1, 1),
+                                        new u("it\u0103\u0163i", -1, 1),
                                         new u("abil", -1, 1),
                                         new u("ibil", -1, 1),
                                         new u("ism", -1, 3),
@@ -13408,16 +13431,16 @@ var s,
                                         new u("ist", -1, 3),
                                         new u("ut", -1, 1),
                                         new u("iv", -1, 1),
-                                        new u("ică", -1, 1),
-                                        new u("abilă", -1, 1),
-                                        new u("ibilă", -1, 1),
-                                        new u("oasă", -1, 1),
-                                        new u("ată", -1, 1),
-                                        new u("ită", -1, 1),
-                                        new u("antă", -1, 1),
-                                        new u("istă", -1, 3),
-                                        new u("ută", -1, 1),
-                                        new u("ivă", -1, 1),
+                                        new u("ic\u0103", -1, 1),
+                                        new u("abil\u0103", -1, 1),
+                                        new u("ibil\u0103", -1, 1),
+                                        new u("oas\u0103", -1, 1),
+                                        new u("at\u0103", -1, 1),
+                                        new u("it\u0103", -1, 1),
+                                        new u("ant\u0103", -1, 1),
+                                        new u("ist\u0103", -1, 3),
+                                        new u("ut\u0103", -1, 1),
+                                        new u("iv\u0103", -1, 1),
                                     ])
                                 );
                             },
@@ -13431,7 +13454,7 @@ var s,
                                         new u("ea", -1, 1),
                                         new u("ia", -1, 1),
                                         new u("esc", -1, 1),
-                                        new u("ăsc", -1, 1),
+                                        new u("\u0103sc", -1, 1),
                                         new u("ind", -1, 1),
                                         new u("\xe2nd", -1, 1),
                                         new u("are", -1, 1),
@@ -13444,44 +13467,44 @@ var s,
                                         new u("ise", 10, 1),
                                         new u("use", 10, 1),
                                         new u("\xe2se", 10, 1),
-                                        new u("eşte", -1, 1),
-                                        new u("ăşte", -1, 1),
+                                        new u("e\u015Fte", -1, 1),
+                                        new u("\u0103\u015Fte", -1, 1),
                                         new u("eze", -1, 1),
                                         new u("ai", -1, 1),
                                         new u("eai", 19, 1),
                                         new u("iai", 19, 1),
                                         new u("sei", -1, 2),
-                                        new u("eşti", -1, 1),
-                                        new u("ăşti", -1, 1),
+                                        new u("e\u015Fti", -1, 1),
+                                        new u("\u0103\u015Fti", -1, 1),
                                         new u("ui", -1, 1),
                                         new u("ezi", -1, 1),
                                         new u("\xe2i", -1, 1),
-                                        new u("aşi", -1, 1),
-                                        new u("seşi", -1, 2),
-                                        new u("aseşi", 29, 1),
-                                        new u("seseşi", 29, 2),
-                                        new u("iseşi", 29, 1),
-                                        new u("useşi", 29, 1),
-                                        new u("\xe2seşi", 29, 1),
-                                        new u("işi", -1, 1),
-                                        new u("uşi", -1, 1),
-                                        new u("\xe2şi", -1, 1),
-                                        new u("aţi", -1, 2),
-                                        new u("eaţi", 38, 1),
-                                        new u("iaţi", 38, 1),
-                                        new u("eţi", -1, 2),
-                                        new u("iţi", -1, 2),
-                                        new u("\xe2ţi", -1, 2),
-                                        new u("arăţi", -1, 1),
-                                        new u("serăţi", -1, 2),
-                                        new u("aserăţi", 45, 1),
-                                        new u("seserăţi", 45, 2),
-                                        new u("iserăţi", 45, 1),
-                                        new u("userăţi", 45, 1),
-                                        new u("\xe2serăţi", 45, 1),
-                                        new u("irăţi", -1, 1),
-                                        new u("urăţi", -1, 1),
-                                        new u("\xe2răţi", -1, 1),
+                                        new u("a\u015Fi", -1, 1),
+                                        new u("se\u015Fi", -1, 2),
+                                        new u("ase\u015Fi", 29, 1),
+                                        new u("sese\u015Fi", 29, 2),
+                                        new u("ise\u015Fi", 29, 1),
+                                        new u("use\u015Fi", 29, 1),
+                                        new u("\xe2se\u015Fi", 29, 1),
+                                        new u("i\u015Fi", -1, 1),
+                                        new u("u\u015Fi", -1, 1),
+                                        new u("\xe2\u015Fi", -1, 1),
+                                        new u("a\u0163i", -1, 2),
+                                        new u("ea\u0163i", 38, 1),
+                                        new u("ia\u0163i", 38, 1),
+                                        new u("e\u0163i", -1, 2),
+                                        new u("i\u0163i", -1, 2),
+                                        new u("\xe2\u0163i", -1, 2),
+                                        new u("ar\u0103\u0163i", -1, 1),
+                                        new u("ser\u0103\u0163i", -1, 2),
+                                        new u("aser\u0103\u0163i", 45, 1),
+                                        new u("seser\u0103\u0163i", 45, 2),
+                                        new u("iser\u0103\u0163i", 45, 1),
+                                        new u("user\u0103\u0163i", 45, 1),
+                                        new u("\xe2ser\u0103\u0163i", 45, 1),
+                                        new u("ir\u0103\u0163i", -1, 1),
+                                        new u("ur\u0103\u0163i", -1, 1),
+                                        new u("\xe2r\u0103\u0163i", -1, 1),
                                         new u("am", -1, 1),
                                         new u("eam", 54, 1),
                                         new u("iam", 54, 1),
@@ -13493,35 +13516,35 @@ var s,
                                         new u("\xe2sem", 57, 1),
                                         new u("im", -1, 2),
                                         new u("\xe2m", -1, 2),
-                                        new u("ăm", -1, 2),
-                                        new u("arăm", 65, 1),
-                                        new u("serăm", 65, 2),
-                                        new u("aserăm", 67, 1),
-                                        new u("seserăm", 67, 2),
-                                        new u("iserăm", 67, 1),
-                                        new u("userăm", 67, 1),
-                                        new u("\xe2serăm", 67, 1),
-                                        new u("irăm", 65, 1),
-                                        new u("urăm", 65, 1),
-                                        new u("\xe2răm", 65, 1),
+                                        new u("\u0103m", -1, 2),
+                                        new u("ar\u0103m", 65, 1),
+                                        new u("ser\u0103m", 65, 2),
+                                        new u("aser\u0103m", 67, 1),
+                                        new u("seser\u0103m", 67, 2),
+                                        new u("iser\u0103m", 67, 1),
+                                        new u("user\u0103m", 67, 1),
+                                        new u("\xe2ser\u0103m", 67, 1),
+                                        new u("ir\u0103m", 65, 1),
+                                        new u("ur\u0103m", 65, 1),
+                                        new u("\xe2r\u0103m", 65, 1),
                                         new u("au", -1, 1),
                                         new u("eau", 76, 1),
                                         new u("iau", 76, 1),
                                         new u("indu", -1, 1),
                                         new u("\xe2ndu", -1, 1),
                                         new u("ez", -1, 1),
-                                        new u("ească", -1, 1),
-                                        new u("ară", -1, 1),
-                                        new u("seră", -1, 2),
-                                        new u("aseră", 84, 1),
-                                        new u("seseră", 84, 2),
-                                        new u("iseră", 84, 1),
-                                        new u("useră", 84, 1),
-                                        new u("\xe2seră", 84, 1),
-                                        new u("iră", -1, 1),
-                                        new u("ură", -1, 1),
-                                        new u("\xe2ră", -1, 1),
-                                        new u("ează", -1, 1),
+                                        new u("easc\u0103", -1, 1),
+                                        new u("ar\u0103", -1, 1),
+                                        new u("ser\u0103", -1, 2),
+                                        new u("aser\u0103", 84, 1),
+                                        new u("seser\u0103", 84, 2),
+                                        new u("iser\u0103", 84, 1),
+                                        new u("user\u0103", 84, 1),
+                                        new u("\xe2ser\u0103", 84, 1),
+                                        new u("ir\u0103", -1, 1),
+                                        new u("ur\u0103", -1, 1),
+                                        new u("\xe2r\u0103", -1, 1),
+                                        new u("eaz\u0103", -1, 1),
                                     ])
                                 );
                             },
@@ -13536,7 +13559,7 @@ var s,
                                         new u("e", -1, 1),
                                         new u("ie", 1, 1),
                                         new u("i", -1, 1),
-                                        new u("ă", -1, 1),
+                                        new u("\u0103", -1, 1),
                                     ])
                                 );
                             },
@@ -13628,10 +13651,11 @@ var s,
                                         e: do {
                                             i = this.limit - this.cursor;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("а")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0430")) break;
                                                 break e;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - i), !this.eq_s_b$esjava$1("я"))) return !1;
+                                            if (((this.cursor = this.limit - i), !this.eq_s_b$esjava$1("\u044F")))
+                                                return !1;
                                         } while (!1);
                                         this.slice_del$esjava$0();
                                         break;
@@ -13677,10 +13701,10 @@ var s,
                                             i: do {
                                                 s = this.limit - this.cursor;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("а")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0430")) break;
                                                     break i;
                                                 } while (!1);
-                                                if (((this.cursor = this.limit - s), !this.eq_s_b$esjava$1("я"))) {
+                                                if (((this.cursor = this.limit - s), !this.eq_s_b$esjava$1("\u044F"))) {
                                                     this.cursor = this.limit - i;
                                                     break e;
                                                 }
@@ -13723,10 +13747,11 @@ var s,
                                         e: do {
                                             i = this.limit - this.cursor;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("а")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0430")) break;
                                                 break e;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - i), !this.eq_s_b$esjava$1("я"))) return !1;
+                                            if (((this.cursor = this.limit - i), !this.eq_s_b$esjava$1("\u044F")))
+                                                return !1;
                                         } while (!1);
                                         this.slice_del$esjava$0();
                                         break;
@@ -13783,14 +13808,14 @@ var s,
                                         if (
                                             (this.slice_del$esjava$0(),
                                             (this.ket = this.cursor),
-                                            !this.eq_s_b$esjava$1("н") ||
-                                                ((this.bra = this.cursor), !this.eq_s_b$esjava$1("н")))
+                                            !this.eq_s_b$esjava$1("\u043D") ||
+                                                ((this.bra = this.cursor), !this.eq_s_b$esjava$1("\u043D")))
                                         )
                                             return !1;
                                         this.slice_del$esjava$0();
                                         break;
                                     case 2:
-                                        if (!this.eq_s_b$esjava$1("н")) return !1;
+                                        if (!this.eq_s_b$esjava$1("\u043D")) return !1;
                                         this.slice_del$esjava$0();
                                         break;
                                     case 3:
@@ -13859,7 +13884,7 @@ var s,
                                 while (!1);
                                 (this.cursor = this.limit - t), (h = this.limit - this.cursor);
                                 do {
-                                    if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("и"))) {
+                                    if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("\u0438"))) {
                                         this.cursor = this.limit - h;
                                         break;
                                     }
@@ -13921,15 +13946,15 @@ var s,
                                 return (
                                     delete t.a_0,
                                     (t.a_0 = [
-                                        new u("в", -1, 1),
-                                        new u("ив", 0, 2),
-                                        new u("ыв", 0, 2),
-                                        new u("вши", -1, 1),
-                                        new u("ивши", 3, 2),
-                                        new u("ывши", 3, 2),
-                                        new u("вшись", -1, 1),
-                                        new u("ившись", 6, 2),
-                                        new u("ывшись", 6, 2),
+                                        new u("\u0432", -1, 1),
+                                        new u("\u0438\u0432", 0, 2),
+                                        new u("\u044B\u0432", 0, 2),
+                                        new u("\u0432\u0448\u0438", -1, 1),
+                                        new u("\u0438\u0432\u0448\u0438", 3, 2),
+                                        new u("\u044B\u0432\u0448\u0438", 3, 2),
+                                        new u("\u0432\u0448\u0438\u0441\u044C", -1, 1),
+                                        new u("\u0438\u0432\u0448\u0438\u0441\u044C", 6, 2),
+                                        new u("\u044B\u0432\u0448\u0438\u0441\u044C", 6, 2),
                                     ])
                                 );
                             },
@@ -13940,32 +13965,32 @@ var s,
                                 return (
                                     delete t.a_1,
                                     (t.a_1 = [
-                                        new u("ее", -1, 1),
-                                        new u("ие", -1, 1),
-                                        new u("ое", -1, 1),
-                                        new u("ые", -1, 1),
-                                        new u("ими", -1, 1),
-                                        new u("ыми", -1, 1),
-                                        new u("ей", -1, 1),
-                                        new u("ий", -1, 1),
-                                        new u("ой", -1, 1),
-                                        new u("ый", -1, 1),
-                                        new u("ем", -1, 1),
-                                        new u("им", -1, 1),
-                                        new u("ом", -1, 1),
-                                        new u("ым", -1, 1),
-                                        new u("его", -1, 1),
-                                        new u("ого", -1, 1),
-                                        new u("ему", -1, 1),
-                                        new u("ому", -1, 1),
-                                        new u("их", -1, 1),
-                                        new u("ых", -1, 1),
-                                        new u("ею", -1, 1),
-                                        new u("ою", -1, 1),
-                                        new u("ую", -1, 1),
-                                        new u("юю", -1, 1),
-                                        new u("ая", -1, 1),
-                                        new u("яя", -1, 1),
+                                        new u("\u0435\u0435", -1, 1),
+                                        new u("\u0438\u0435", -1, 1),
+                                        new u("\u043E\u0435", -1, 1),
+                                        new u("\u044B\u0435", -1, 1),
+                                        new u("\u0438\u043C\u0438", -1, 1),
+                                        new u("\u044B\u043C\u0438", -1, 1),
+                                        new u("\u0435\u0439", -1, 1),
+                                        new u("\u0438\u0439", -1, 1),
+                                        new u("\u043E\u0439", -1, 1),
+                                        new u("\u044B\u0439", -1, 1),
+                                        new u("\u0435\u043C", -1, 1),
+                                        new u("\u0438\u043C", -1, 1),
+                                        new u("\u043E\u043C", -1, 1),
+                                        new u("\u044B\u043C", -1, 1),
+                                        new u("\u0435\u0433\u043E", -1, 1),
+                                        new u("\u043E\u0433\u043E", -1, 1),
+                                        new u("\u0435\u043C\u0443", -1, 1),
+                                        new u("\u043E\u043C\u0443", -1, 1),
+                                        new u("\u0438\u0445", -1, 1),
+                                        new u("\u044B\u0445", -1, 1),
+                                        new u("\u0435\u044E", -1, 1),
+                                        new u("\u043E\u044E", -1, 1),
+                                        new u("\u0443\u044E", -1, 1),
+                                        new u("\u044E\u044E", -1, 1),
+                                        new u("\u0430\u044F", -1, 1),
+                                        new u("\u044F\u044F", -1, 1),
                                     ])
                                 );
                             },
@@ -13976,14 +14001,14 @@ var s,
                                 return (
                                     delete t.a_2,
                                     (t.a_2 = [
-                                        new u("ем", -1, 1),
-                                        new u("нн", -1, 1),
-                                        new u("вш", -1, 1),
-                                        new u("ивш", 2, 2),
-                                        new u("ывш", 2, 2),
-                                        new u("щ", -1, 1),
-                                        new u("ющ", 5, 1),
-                                        new u("ующ", 6, 2),
+                                        new u("\u0435\u043C", -1, 1),
+                                        new u("\u043D\u043D", -1, 1),
+                                        new u("\u0432\u0448", -1, 1),
+                                        new u("\u0438\u0432\u0448", 2, 2),
+                                        new u("\u044B\u0432\u0448", 2, 2),
+                                        new u("\u0449", -1, 1),
+                                        new u("\u044E\u0449", 5, 1),
+                                        new u("\u0443\u044E\u0449", 6, 2),
                                     ])
                                 );
                             },
@@ -13991,7 +14016,9 @@ var s,
                         {
                             key: "a_3",
                             get: function () {
-                                return delete t.a_3, (t.a_3 = [new u("сь", -1, 1), new u("ся", -1, 1)]);
+                                return (
+                                    delete t.a_3, (t.a_3 = [new u("\u0441\u044C", -1, 1), new u("\u0441\u044F", -1, 1)])
+                                );
                             },
                         },
                         {
@@ -14000,52 +14027,52 @@ var s,
                                 return (
                                     delete t.a_4,
                                     (t.a_4 = [
-                                        new u("ла", -1, 1),
-                                        new u("ила", 0, 2),
-                                        new u("ыла", 0, 2),
-                                        new u("на", -1, 1),
-                                        new u("ена", 3, 2),
-                                        new u("ете", -1, 1),
-                                        new u("ите", -1, 2),
-                                        new u("йте", -1, 1),
-                                        new u("ейте", 7, 2),
-                                        new u("уйте", 7, 2),
-                                        new u("ли", -1, 1),
-                                        new u("или", 10, 2),
-                                        new u("ыли", 10, 2),
-                                        new u("й", -1, 1),
-                                        new u("ей", 13, 2),
-                                        new u("уй", 13, 2),
-                                        new u("л", -1, 1),
-                                        new u("ил", 16, 2),
-                                        new u("ыл", 16, 2),
-                                        new u("ем", -1, 1),
-                                        new u("им", -1, 2),
-                                        new u("ым", -1, 2),
-                                        new u("н", -1, 1),
-                                        new u("ен", 22, 2),
-                                        new u("ло", -1, 1),
-                                        new u("ило", 24, 2),
-                                        new u("ыло", 24, 2),
-                                        new u("но", -1, 1),
-                                        new u("ено", 27, 2),
-                                        new u("нно", 27, 1),
-                                        new u("ет", -1, 1),
-                                        new u("ует", 30, 2),
-                                        new u("ит", -1, 2),
-                                        new u("ыт", -1, 2),
-                                        new u("ют", -1, 1),
-                                        new u("уют", 34, 2),
-                                        new u("ят", -1, 2),
-                                        new u("ны", -1, 1),
-                                        new u("ены", 37, 2),
-                                        new u("ть", -1, 1),
-                                        new u("ить", 39, 2),
-                                        new u("ыть", 39, 2),
-                                        new u("ешь", -1, 1),
-                                        new u("ишь", -1, 2),
-                                        new u("ю", -1, 2),
-                                        new u("ую", 44, 2),
+                                        new u("\u043B\u0430", -1, 1),
+                                        new u("\u0438\u043B\u0430", 0, 2),
+                                        new u("\u044B\u043B\u0430", 0, 2),
+                                        new u("\u043D\u0430", -1, 1),
+                                        new u("\u0435\u043D\u0430", 3, 2),
+                                        new u("\u0435\u0442\u0435", -1, 1),
+                                        new u("\u0438\u0442\u0435", -1, 2),
+                                        new u("\u0439\u0442\u0435", -1, 1),
+                                        new u("\u0435\u0439\u0442\u0435", 7, 2),
+                                        new u("\u0443\u0439\u0442\u0435", 7, 2),
+                                        new u("\u043B\u0438", -1, 1),
+                                        new u("\u0438\u043B\u0438", 10, 2),
+                                        new u("\u044B\u043B\u0438", 10, 2),
+                                        new u("\u0439", -1, 1),
+                                        new u("\u0435\u0439", 13, 2),
+                                        new u("\u0443\u0439", 13, 2),
+                                        new u("\u043B", -1, 1),
+                                        new u("\u0438\u043B", 16, 2),
+                                        new u("\u044B\u043B", 16, 2),
+                                        new u("\u0435\u043C", -1, 1),
+                                        new u("\u0438\u043C", -1, 2),
+                                        new u("\u044B\u043C", -1, 2),
+                                        new u("\u043D", -1, 1),
+                                        new u("\u0435\u043D", 22, 2),
+                                        new u("\u043B\u043E", -1, 1),
+                                        new u("\u0438\u043B\u043E", 24, 2),
+                                        new u("\u044B\u043B\u043E", 24, 2),
+                                        new u("\u043D\u043E", -1, 1),
+                                        new u("\u0435\u043D\u043E", 27, 2),
+                                        new u("\u043D\u043D\u043E", 27, 1),
+                                        new u("\u0435\u0442", -1, 1),
+                                        new u("\u0443\u0435\u0442", 30, 2),
+                                        new u("\u0438\u0442", -1, 2),
+                                        new u("\u044B\u0442", -1, 2),
+                                        new u("\u044E\u0442", -1, 1),
+                                        new u("\u0443\u044E\u0442", 34, 2),
+                                        new u("\u044F\u0442", -1, 2),
+                                        new u("\u043D\u044B", -1, 1),
+                                        new u("\u0435\u043D\u044B", 37, 2),
+                                        new u("\u0442\u044C", -1, 1),
+                                        new u("\u0438\u0442\u044C", 39, 2),
+                                        new u("\u044B\u0442\u044C", 39, 2),
+                                        new u("\u0435\u0448\u044C", -1, 1),
+                                        new u("\u0438\u0448\u044C", -1, 2),
+                                        new u("\u044E", -1, 2),
+                                        new u("\u0443\u044E", 44, 2),
                                     ])
                                 );
                             },
@@ -14056,42 +14083,42 @@ var s,
                                 return (
                                     delete t.a_5,
                                     (t.a_5 = [
-                                        new u("а", -1, 1),
-                                        new u("ев", -1, 1),
-                                        new u("ов", -1, 1),
-                                        new u("е", -1, 1),
-                                        new u("ие", 3, 1),
-                                        new u("ье", 3, 1),
-                                        new u("и", -1, 1),
-                                        new u("еи", 6, 1),
-                                        new u("ии", 6, 1),
-                                        new u("ами", 6, 1),
-                                        new u("ями", 6, 1),
-                                        new u("иями", 10, 1),
-                                        new u("й", -1, 1),
-                                        new u("ей", 12, 1),
-                                        new u("ией", 13, 1),
-                                        new u("ий", 12, 1),
-                                        new u("ой", 12, 1),
-                                        new u("ам", -1, 1),
-                                        new u("ем", -1, 1),
-                                        new u("ием", 18, 1),
-                                        new u("ом", -1, 1),
-                                        new u("ям", -1, 1),
-                                        new u("иям", 21, 1),
-                                        new u("о", -1, 1),
-                                        new u("у", -1, 1),
-                                        new u("ах", -1, 1),
-                                        new u("ях", -1, 1),
-                                        new u("иях", 26, 1),
-                                        new u("ы", -1, 1),
-                                        new u("ь", -1, 1),
-                                        new u("ю", -1, 1),
-                                        new u("ию", 30, 1),
-                                        new u("ью", 30, 1),
-                                        new u("я", -1, 1),
-                                        new u("ия", 33, 1),
-                                        new u("ья", 33, 1),
+                                        new u("\u0430", -1, 1),
+                                        new u("\u0435\u0432", -1, 1),
+                                        new u("\u043E\u0432", -1, 1),
+                                        new u("\u0435", -1, 1),
+                                        new u("\u0438\u0435", 3, 1),
+                                        new u("\u044C\u0435", 3, 1),
+                                        new u("\u0438", -1, 1),
+                                        new u("\u0435\u0438", 6, 1),
+                                        new u("\u0438\u0438", 6, 1),
+                                        new u("\u0430\u043C\u0438", 6, 1),
+                                        new u("\u044F\u043C\u0438", 6, 1),
+                                        new u("\u0438\u044F\u043C\u0438", 10, 1),
+                                        new u("\u0439", -1, 1),
+                                        new u("\u0435\u0439", 12, 1),
+                                        new u("\u0438\u0435\u0439", 13, 1),
+                                        new u("\u0438\u0439", 12, 1),
+                                        new u("\u043E\u0439", 12, 1),
+                                        new u("\u0430\u043C", -1, 1),
+                                        new u("\u0435\u043C", -1, 1),
+                                        new u("\u0438\u0435\u043C", 18, 1),
+                                        new u("\u043E\u043C", -1, 1),
+                                        new u("\u044F\u043C", -1, 1),
+                                        new u("\u0438\u044F\u043C", 21, 1),
+                                        new u("\u043E", -1, 1),
+                                        new u("\u0443", -1, 1),
+                                        new u("\u0430\u0445", -1, 1),
+                                        new u("\u044F\u0445", -1, 1),
+                                        new u("\u0438\u044F\u0445", 26, 1),
+                                        new u("\u044B", -1, 1),
+                                        new u("\u044C", -1, 1),
+                                        new u("\u044E", -1, 1),
+                                        new u("\u0438\u044E", 30, 1),
+                                        new u("\u044C\u044E", 30, 1),
+                                        new u("\u044F", -1, 1),
+                                        new u("\u0438\u044F", 33, 1),
+                                        new u("\u044C\u044F", 33, 1),
                                     ])
                                 );
                             },
@@ -14099,7 +14126,13 @@ var s,
                         {
                             key: "a_6",
                             get: function () {
-                                return delete t.a_6, (t.a_6 = [new u("ост", -1, 1), new u("ость", -1, 1)]);
+                                return (
+                                    delete t.a_6,
+                                    (t.a_6 = [
+                                        new u("\u043E\u0441\u0442", -1, 1),
+                                        new u("\u043E\u0441\u0442\u044C", -1, 1),
+                                    ])
+                                );
                             },
                         },
                         {
@@ -14108,10 +14141,10 @@ var s,
                                 return (
                                     delete t.a_7,
                                     (t.a_7 = [
-                                        new u("ейше", -1, 1),
-                                        new u("н", -1, 2),
-                                        new u("ейш", -1, 1),
-                                        new u("ь", -1, 3),
+                                        new u("\u0435\u0439\u0448\u0435", -1, 1),
+                                        new u("\u043D", -1, 2),
+                                        new u("\u0435\u0439\u0448", -1, 1),
+                                        new u("\u044C", -1, 3),
                                     ])
                                 );
                             },
@@ -14321,7 +14354,7 @@ var s,
                         {
                             key: "a_1",
                             get: function () {
-                                return delete t.a_1, (t.a_1 = [new u("stvo", -1, 1), new u("štvo", -1, 1)]);
+                                return delete t.a_1, (t.a_1 = [new u("stvo", -1, 1), new u("\u0161tvo", -1, 1)]);
                             },
                         },
                         {
@@ -14337,17 +14370,17 @@ var s,
                                         new u("vna", -1, 1),
                                         new u("ite", -1, 1),
                                         new u("ste", -1, 1),
-                                        new u("šče", -1, 1),
+                                        new u("\u0161\u010De", -1, 1),
                                         new u("ski", -1, 1),
-                                        new u("ški", -1, 1),
+                                        new u("\u0161ki", -1, 1),
                                         new u("iti", -1, 1),
                                         new u("ovi", -1, 1),
-                                        new u("ček", -1, 1),
+                                        new u("\u010Dek", -1, 1),
                                         new u("ovm", -1, 1),
-                                        new u("čan", -1, 1),
+                                        new u("\u010Dan", -1, 1),
                                         new u("len", -1, 1),
                                         new u("ven", -1, 1),
-                                        new u("šen", -1, 1),
+                                        new u("\u0161en", -1, 1),
                                         new u("ejo", -1, 1),
                                         new u("ijo", -1, 1),
                                         new u("ast", -1, 1),
@@ -14387,7 +14420,7 @@ var s,
                                         new u("ev", -1, 1),
                                         new u("iv", -1, 1),
                                         new u("ov", -1, 1),
-                                        new u("oč", -1, 1),
+                                        new u("o\u010D", -1, 1),
                                     ])
                                 );
                             },
@@ -14405,7 +14438,7 @@ var s,
                                         new u("m", -1, 1),
                                         new u("o", -1, 1),
                                         new u("u", -1, 1),
-                                        new u("š", -1, 1),
+                                        new u("\u0161", -1, 1),
                                     ])
                                 );
                             },
@@ -15621,54 +15654,70 @@ var s,
                                     do {
                                         (i = this.cursor), (s = this.cursor);
                                         do
-                                            if (!this.eq_s$esjava$1("வோ")) {
+                                            if (!this.eq_s$esjava$1("\u0BB5\u0BCB")) {
                                                 this.cursor = s;
                                                 break;
                                             }
                                         while (!1);
-                                        if (((this.cursor = i), (this.bra = this.cursor), !this.eq_s$esjava$1("வோ")))
+                                        if (
+                                            ((this.cursor = i),
+                                            (this.bra = this.cursor),
+                                            !this.eq_s$esjava$1("\u0BB5\u0BCB"))
+                                        )
                                             break;
-                                        (this.ket = this.cursor), this.slice_from$esjava$1("ஓ");
+                                        (this.ket = this.cursor), this.slice_from$esjava$1("\u0B93");
                                         break e;
                                     } while (!1);
                                     this.cursor = e;
                                     do {
                                         (t = this.cursor), (r = this.cursor);
                                         do
-                                            if (!this.eq_s$esjava$1("வொ")) {
+                                            if (!this.eq_s$esjava$1("\u0BB5\u0BCA")) {
                                                 this.cursor = r;
                                                 break;
                                             }
                                         while (!1);
-                                        if (((this.cursor = t), (this.bra = this.cursor), !this.eq_s$esjava$1("வொ")))
+                                        if (
+                                            ((this.cursor = t),
+                                            (this.bra = this.cursor),
+                                            !this.eq_s$esjava$1("\u0BB5\u0BCA"))
+                                        )
                                             break;
-                                        (this.ket = this.cursor), this.slice_from$esjava$1("ஒ");
+                                        (this.ket = this.cursor), this.slice_from$esjava$1("\u0B92");
                                         break e;
                                     } while (!1);
                                     this.cursor = e;
                                     do {
                                         (a = this.cursor), (n = this.cursor);
                                         do
-                                            if (!this.eq_s$esjava$1("வு")) {
+                                            if (!this.eq_s$esjava$1("\u0BB5\u0BC1")) {
                                                 this.cursor = n;
                                                 break;
                                             }
                                         while (!1);
-                                        if (((this.cursor = a), (this.bra = this.cursor), !this.eq_s$esjava$1("வு")))
+                                        if (
+                                            ((this.cursor = a),
+                                            (this.bra = this.cursor),
+                                            !this.eq_s$esjava$1("\u0BB5\u0BC1"))
+                                        )
                                             break;
-                                        (this.ket = this.cursor), this.slice_from$esjava$1("உ");
+                                        (this.ket = this.cursor), this.slice_from$esjava$1("\u0B89");
                                         break e;
                                     } while (!1);
                                     (this.cursor = e), (h = this.cursor), (o = this.cursor);
                                     do
-                                        if (!this.eq_s$esjava$1("வூ")) {
+                                        if (!this.eq_s$esjava$1("\u0BB5\u0BC2")) {
                                             this.cursor = o;
                                             break;
                                         }
                                     while (!1);
-                                    if (((this.cursor = h), (this.bra = this.cursor), !this.eq_s$esjava$1("வூ")))
+                                    if (
+                                        ((this.cursor = h),
+                                        (this.bra = this.cursor),
+                                        !this.eq_s$esjava$1("\u0BB5\u0BC2"))
+                                    )
                                         return !1;
-                                    (this.ket = this.cursor), this.slice_from$esjava$1("ஊ");
+                                    (this.ket = this.cursor), this.slice_from$esjava$1("\u0B8A");
                                 } while (!1);
                                 return !0;
                             },
@@ -15701,9 +15750,9 @@ var s,
                                 var e = void 0;
                                 if (
                                     ((this.bra = this.cursor),
-                                    !this.eq_s$esjava$1("எ") ||
+                                    !this.eq_s$esjava$1("\u0B8E") ||
                                         0 === this.find_among$esjava$1(t.a_0) ||
-                                        !this.eq_s$esjava$1("்"))
+                                        !this.eq_s$esjava$1("\u0BCD"))
                                 )
                                     return !1;
                                 (this.ket = this.cursor), this.slice_del$esjava$0(), (e = this.cursor);
@@ -15746,7 +15795,7 @@ var s,
                                     do {
                                         if (
                                             ((this.ket = this.cursor),
-                                            !this.eq_s_b$esjava$1("ய்") ||
+                                            !this.eq_s_b$esjava$1("\u0BAF\u0BCD") ||
                                                 ((i = this.limit - this.cursor),
                                                 0 === this.find_among_b$esjava$1(t.a_2)))
                                         )
@@ -15762,48 +15811,65 @@ var s,
                                         r: do {
                                             s = this.limit - this.cursor;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ட்ப்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0B9F\u0BCD\u0BAA\u0BCD")) break;
                                                 break r;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - s), !this.eq_s_b$esjava$1("ட்க்"))) break t;
+                                            if (
+                                                ((this.cursor = this.limit - s),
+                                                !this.eq_s_b$esjava$1("\u0B9F\u0BCD\u0B95\u0BCD"))
+                                            )
+                                                break t;
                                         } while (!1);
-                                        (this.bra = this.cursor), this.slice_from$esjava$1("ள்");
+                                        (this.bra = this.cursor), this.slice_from$esjava$1("\u0BB3\u0BCD");
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("ன்ற்"))) break;
-                                        (this.bra = this.cursor), this.slice_from$esjava$1("ல்");
+                                        if (
+                                            ((this.ket = this.cursor),
+                                            !this.eq_s_b$esjava$1("\u0BA9\u0BCD\u0BB1\u0BCD"))
+                                        )
+                                            break;
+                                        (this.bra = this.cursor), this.slice_from$esjava$1("\u0BB2\u0BCD");
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("ற்க்"))) break;
-                                        (this.bra = this.cursor), this.slice_from$esjava$1("ல்");
+                                        if (
+                                            ((this.ket = this.cursor),
+                                            !this.eq_s_b$esjava$1("\u0BB1\u0BCD\u0B95\u0BCD"))
+                                        )
+                                            break;
+                                        (this.bra = this.cursor), this.slice_from$esjava$1("\u0BB2\u0BCD");
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("ட்ட்"))) break;
-                                        (this.bra = this.cursor), this.slice_from$esjava$1("டு");
+                                        if (
+                                            ((this.ket = this.cursor),
+                                            !this.eq_s_b$esjava$1("\u0B9F\u0BCD\u0B9F\u0BCD"))
+                                        )
+                                            break;
+                                        (this.bra = this.cursor), this.slice_from$esjava$1("\u0B9F\u0BC1");
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     o: do {
                                         if (
                                             !this.B_found_vetrumai_urupu ||
-                                            ((this.ket = this.cursor), !this.eq_s_b$esjava$1("த்த்"))
+                                            ((this.ket = this.cursor),
+                                            !this.eq_s_b$esjava$1("\u0BA4\u0BCD\u0BA4\u0BCD"))
                                         )
                                             break;
                                         (r = this.limit - this.cursor), (a = this.limit - this.cursor);
                                         do {
-                                            if (!this.eq_s_b$esjava$1("ை")) break;
+                                            if (!this.eq_s_b$esjava$1("\u0BC8")) break;
                                             break o;
                                         } while (!1);
                                         (this.cursor = this.limit - a),
                                             (this.cursor = this.limit - r),
                                             (this.bra = this.cursor),
-                                            this.slice_from$esjava$1("ம்"),
+                                            this.slice_from$esjava$1("\u0BAE\u0BCD"),
                                             (this.bra = this.cursor);
                                         break e;
                                     } while (!1);
@@ -15813,21 +15879,25 @@ var s,
                                         C: do {
                                             n = this.limit - this.cursor;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ுக்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BC1\u0B95\u0BCD")) break;
                                                 break C;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - n), !this.eq_s_b$esjava$1("ுக்க்"))) break M;
+                                            if (
+                                                ((this.cursor = this.limit - n),
+                                                !this.eq_s_b$esjava$1("\u0BC1\u0B95\u0BCD\u0B95\u0BCD"))
+                                            )
+                                                break M;
                                         } while (!1);
-                                        (this.bra = this.cursor), this.slice_from$esjava$1("்");
+                                        (this.bra = this.cursor), this.slice_from$esjava$1("\u0BCD");
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     do {
                                         if (
                                             ((this.ket = this.cursor),
-                                            !this.eq_s_b$esjava$1("்") ||
+                                            !this.eq_s_b$esjava$1("\u0BCD") ||
                                                 0 === this.find_among_b$esjava$1(t.a_3) ||
-                                                !this.eq_s_b$esjava$1("்") ||
+                                                !this.eq_s_b$esjava$1("\u0BCD") ||
                                                 0 === this.find_among_b$esjava$1(t.a_4))
                                         )
                                             break;
@@ -15836,15 +15906,16 @@ var s,
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("ுக்"))) break;
-                                        (this.bra = this.cursor), this.slice_from$esjava$1("்");
+                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("\u0BC1\u0B95\u0BCD")))
+                                            break;
+                                        (this.bra = this.cursor), this.slice_from$esjava$1("\u0BCD");
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     do {
                                         if (
                                             ((this.ket = this.cursor),
-                                            !this.eq_s_b$esjava$1("்") || 0 === this.find_among_b$esjava$1(t.a_5))
+                                            !this.eq_s_b$esjava$1("\u0BCD") || 0 === this.find_among_b$esjava$1(t.a_5))
                                         )
                                             break;
                                         (this.bra = this.cursor), this.slice_del$esjava$0();
@@ -15852,7 +15923,7 @@ var s,
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     _: do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("்"))) break;
+                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("\u0BCD"))) break;
                                         H: do {
                                             h = this.limit - this.cursor;
                                             do {
@@ -15865,8 +15936,8 @@ var s,
                                             )
                                                 break _;
                                         } while (!1);
-                                        if (!this.eq_s_b$esjava$1("்")) break;
-                                        (this.bra = this.cursor), this.slice_from$esjava$1("்");
+                                        if (!this.eq_s_b$esjava$1("\u0BCD")) break;
+                                        (this.bra = this.cursor), this.slice_from$esjava$1("\u0BCD");
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
@@ -15877,7 +15948,7 @@ var s,
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     J: do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("னு"))) break;
+                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("\u0BA9\u0BC1"))) break;
                                         (o = this.limit - this.cursor), (u = this.limit - this.cursor);
                                         do {
                                             if (0 === this.find_among_b$esjava$1(t.a_9)) break;
@@ -15891,28 +15962,28 @@ var s,
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     w: do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("ங்"))) break;
+                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("\u0B99\u0BCD"))) break;
                                         (c = this.limit - this.cursor), (_ = this.limit - this.cursor);
                                         do {
-                                            if (!this.eq_s_b$esjava$1("ை")) break;
+                                            if (!this.eq_s_b$esjava$1("\u0BC8")) break;
                                             break w;
                                         } while (!1);
                                         (this.cursor = this.limit - _),
                                             (this.cursor = this.limit - c),
                                             (this.bra = this.cursor),
-                                            this.slice_from$esjava$1("ம்");
+                                            this.slice_from$esjava$1("\u0BAE\u0BCD");
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("ங்"))) break;
+                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("\u0B99\u0BCD"))) break;
                                         (this.bra = this.cursor), this.slice_del$esjava$0();
                                         break e;
                                     } while (!1);
                                     if (
                                         ((this.cursor = this.limit - e),
                                         (this.ket = this.cursor),
-                                        !this.eq_s_b$esjava$1("்"))
+                                        !this.eq_s_b$esjava$1("\u0BCD"))
                                     )
                                         return !1;
                                     l = this.limit - this.cursor;
@@ -15922,7 +15993,8 @@ var s,
                                             if (0 === this.find_among_b$esjava$1(t.a_10)) break;
                                             break K;
                                         } while (!1);
-                                        if (((this.cursor = this.limit - w), !this.eq_s_b$esjava$1("்"))) return !1;
+                                        if (((this.cursor = this.limit - w), !this.eq_s_b$esjava$1("\u0BCD")))
+                                            return !1;
                                     } while (!1);
                                     (this.cursor = this.limit - l), (this.bra = this.cursor), this.slice_del$esjava$0();
                                 } while (!1);
@@ -15938,7 +16010,7 @@ var s,
                                     (this.bra = this.cursor),
                                     0 === this.find_among$esjava$1(t.a_11) ||
                                         0 === this.find_among$esjava$1(t.a_12) ||
-                                        !this.eq_s$esjava$1("்"))
+                                        !this.eq_s$esjava$1("\u0BCD"))
                                 )
                                     return !1;
                                 (this.ket = this.cursor),
@@ -15962,7 +16034,11 @@ var s,
                                 e: do {
                                     e = this.limit - this.cursor;
                                     i: do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("ுங்கள்"))) break;
+                                        if (
+                                            ((this.ket = this.cursor),
+                                            !this.eq_s_b$esjava$1("\u0BC1\u0B99\u0BCD\u0B95\u0BB3\u0BCD"))
+                                        )
+                                            break;
                                         (i = this.limit - this.cursor), (s = this.limit - this.cursor);
                                         do {
                                             if (0 === this.find_among_b$esjava$1(t.a_13)) break;
@@ -15971,25 +16047,33 @@ var s,
                                         (this.cursor = this.limit - s),
                                             (this.cursor = this.limit - i),
                                             (this.bra = this.cursor),
-                                            this.slice_from$esjava$1("்");
+                                            this.slice_from$esjava$1("\u0BCD");
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("ற்கள்"))) break;
-                                        (this.bra = this.cursor), this.slice_from$esjava$1("ல்");
+                                        if (
+                                            ((this.ket = this.cursor),
+                                            !this.eq_s_b$esjava$1("\u0BB1\u0BCD\u0B95\u0BB3\u0BCD"))
+                                        )
+                                            break;
+                                        (this.bra = this.cursor), this.slice_from$esjava$1("\u0BB2\u0BCD");
                                         break e;
                                     } while (!1);
                                     this.cursor = this.limit - e;
                                     do {
-                                        if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("ட்கள்"))) break;
-                                        (this.bra = this.cursor), this.slice_from$esjava$1("ள்");
+                                        if (
+                                            ((this.ket = this.cursor),
+                                            !this.eq_s_b$esjava$1("\u0B9F\u0BCD\u0B95\u0BB3\u0BCD"))
+                                        )
+                                            break;
+                                        (this.bra = this.cursor), this.slice_from$esjava$1("\u0BB3\u0BCD");
                                         break e;
                                     } while (!1);
                                     if (
                                         ((this.cursor = this.limit - e),
                                         (this.ket = this.cursor),
-                                        !this.eq_s_b$esjava$1("கள்"))
+                                        !this.eq_s_b$esjava$1("\u0B95\u0BB3\u0BCD"))
                                     )
                                         return !1;
                                     (this.bra = this.cursor), this.slice_del$esjava$0();
@@ -16009,7 +16093,9 @@ var s,
                                     (e = this.limit - this.cursor);
                                 do {
                                     if (((this.ket = this.cursor), 0 === this.find_among_b$esjava$1(t.a_14))) break;
-                                    (this.bra = this.cursor), this.slice_from$esjava$1("்"), (this.B_found_a_match = !0);
+                                    (this.bra = this.cursor),
+                                        this.slice_from$esjava$1("\u0BCD"),
+                                        (this.B_found_a_match = !0);
                                 } while (!1);
                                 (this.cursor = this.limit - e), (this.cursor = this.limit_backward), (i = this.cursor);
                                 do if (!this.r_fix_endings$esjava$0()) break;
@@ -16045,11 +16131,11 @@ var s,
                                         ((this.limit_backward = this.cursor),
                                         (this.cursor = this.limit),
                                         (this.ket = this.cursor),
-                                        !this.eq_s_b$esjava$1("ும்")))
+                                        !this.eq_s_b$esjava$1("\u0BC1\u0BAE\u0BCD")))
                                 )
                                     return !1;
                                 (this.bra = this.cursor),
-                                    this.slice_from$esjava$1("்"),
+                                    this.slice_from$esjava$1("\u0BCD"),
                                     (this.B_found_a_match = !0),
                                     (this.cursor = this.limit_backward),
                                     (e = this.cursor);
@@ -16077,62 +16163,62 @@ var s,
                                         s: do {
                                             s = this.limit - this.cursor;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ுடன்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BC1\u0B9F\u0BA9\u0BCD")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ில்லை")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBF\u0BB2\u0BCD\u0BB2\u0BC8")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ிடம்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBF\u0B9F\u0BAE\u0BCD")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ின்றி")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBF\u0BA9\u0BCD\u0BB1\u0BBF")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ாகி")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBE\u0B95\u0BBF")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ாகிய")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBE\u0B95\u0BBF\u0BAF")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ென்று")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BC6\u0BA9\u0BCD\u0BB1\u0BC1")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ுள்ள")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BC1\u0BB3\u0BCD\u0BB3")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ுடைய")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BC1\u0B9F\u0BC8\u0BAF")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ுடை")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BC1\u0B9F\u0BC8")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ெனும்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BC6\u0BA9\u0BC1\u0BAE\u0BCD")) break;
                                                 break s;
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             u: do {
-                                                if (!this.eq_s_b$esjava$1("ல்ல")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BB2\u0BCD\u0BB2")) break;
                                                 (r = this.limit - this.cursor), (a = this.limit - this.cursor);
                                                 do {
                                                     if (0 === this.find_among_b$esjava$1(t.a_16)) break;
@@ -16143,13 +16229,17 @@ var s,
                                             } while (!1);
                                             this.cursor = this.limit - s;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ென")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BC6\u0BA9")) break;
                                                 break s;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - s), !this.eq_s_b$esjava$1("ாகி"))) break i;
+                                            if (
+                                                ((this.cursor = this.limit - s),
+                                                !this.eq_s_b$esjava$1("\u0BBE\u0B95\u0BBF"))
+                                            )
+                                                break i;
                                         } while (!1);
                                         (this.bra = this.cursor),
-                                            this.slice_from$esjava$1("்"),
+                                            this.slice_from$esjava$1("\u0BCD"),
                                             (this.B_found_a_match = !0),
                                             (this.cursor = this.limit - i);
                                         break e;
@@ -16209,7 +16299,7 @@ var s,
                                         if (
                                             ((i = this.limit - this.cursor),
                                             (this.ket = this.cursor),
-                                            !this.eq_s_b$esjava$1("னை"))
+                                            !this.eq_s_b$esjava$1("\u0BA9\u0BC8"))
                                         )
                                             break;
                                         (this.bra = this.cursor),
@@ -16226,10 +16316,13 @@ var s,
                                                 a: do {
                                                     a = this.limit - this.cursor;
                                                     do {
-                                                        if (!this.eq_s_b$esjava$1("ினை")) break;
+                                                        if (!this.eq_s_b$esjava$1("\u0BBF\u0BA9\u0BC8")) break;
                                                         break a;
                                                     } while (!1);
-                                                    if (((this.cursor = this.limit - a), !this.eq_s_b$esjava$1("ை")))
+                                                    if (
+                                                        ((this.cursor = this.limit - a),
+                                                        !this.eq_s_b$esjava$1("\u0BC8"))
+                                                    )
                                                         break r;
                                                 } while (!1);
                                                 (n = this.limit - this.cursor), (h = this.limit - this.cursor);
@@ -16242,16 +16335,16 @@ var s,
                                             } while (!1);
                                             if (
                                                 ((this.cursor = this.limit - r),
-                                                !this.eq_s_b$esjava$1("ை") ||
+                                                !this.eq_s_b$esjava$1("\u0BC8") ||
                                                     ((o = this.limit - this.cursor),
                                                     0 === this.find_among_b$esjava$1(t.a_19) ||
-                                                        !this.eq_s_b$esjava$1("்")))
+                                                        !this.eq_s_b$esjava$1("\u0BCD")))
                                             )
                                                 break s;
                                             this.cursor = this.limit - o;
                                         } while (!1);
                                         (this.bra = this.cursor),
-                                            this.slice_from$esjava$1("்"),
+                                            this.slice_from$esjava$1("\u0BCD"),
                                             (this.cursor = this.limit - s);
                                         break e;
                                     } while (!1);
@@ -16261,30 +16354,30 @@ var s,
                                         o: do {
                                             c = this.limit - this.cursor;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ொடு")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BCA\u0B9F\u0BC1")) break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ோடு")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BCB\u0B9F\u0BC1")) break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ில்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBF\u0BB2\u0BCD")) break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ிற்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBF\u0BB1\u0BCD")) break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             u: do {
-                                                if (!this.eq_s_b$esjava$1("ின்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBF\u0BA9\u0BCD")) break;
                                                 (_ = this.limit - this.cursor), (l = this.limit - this.cursor);
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ம")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BAE")) break;
                                                     break u;
                                                 } while (!1);
                                                 (this.cursor = this.limit - l), (this.cursor = this.limit - _);
@@ -16292,42 +16385,47 @@ var s,
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ின்று")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBF\u0BA9\u0BCD\u0BB1\u0BC1")) break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ிருந்து")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBF\u0BB0\u0BC1\u0BA8\u0BCD\u0BA4\u0BC1"))
+                                                    break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("விட")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BB5\u0BBF\u0B9F")) break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             do {
-                                                if (!(this.I_length >= 7) || !this.eq_s_b$esjava$1("ிடம்")) break;
+                                                if (
+                                                    !(this.I_length >= 7) ||
+                                                    !this.eq_s_b$esjava$1("\u0BBF\u0B9F\u0BAE\u0BCD")
+                                                )
+                                                    break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ால்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBE\u0BB2\u0BCD")) break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ுடை")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BC1\u0B9F\u0BC8")) break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("ாமல்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BBE\u0BAE\u0BB2\u0BCD")) break;
                                                 break o;
                                             } while (!1);
                                             this.cursor = this.limit - c;
                                             w: do {
-                                                if (!this.eq_s_b$esjava$1("ல்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BB2\u0BCD")) break;
                                                 (w = this.limit - this.cursor), ($ = this.limit - this.cursor);
                                                 do {
                                                     if (0 === this.find_among_b$esjava$1(t.a_20)) break;
@@ -16336,10 +16434,14 @@ var s,
                                                 (this.cursor = this.limit - $), (this.cursor = this.limit - w);
                                                 break o;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - c), !this.eq_s_b$esjava$1("ுள்"))) break D;
+                                            if (
+                                                ((this.cursor = this.limit - c),
+                                                !this.eq_s_b$esjava$1("\u0BC1\u0BB3\u0BCD"))
+                                            )
+                                                break D;
                                         } while (!1);
                                         (this.bra = this.cursor),
-                                            this.slice_from$esjava$1("்"),
+                                            this.slice_from$esjava$1("\u0BCD"),
                                             (this.cursor = this.limit - u);
                                         break e;
                                     } while (!1);
@@ -16349,35 +16451,36 @@ var s,
                                         K: do {
                                             f = this.limit - this.cursor;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("கண்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0B95\u0BA3\u0BCD")) break;
                                                 break K;
                                             } while (!1);
                                             this.cursor = this.limit - f;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("முன்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BAE\u0BC1\u0BA9\u0BCD")) break;
                                                 break K;
                                             } while (!1);
                                             this.cursor = this.limit - f;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("மேல்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BAE\u0BC7\u0BB2\u0BCD")) break;
                                                 break K;
                                             } while (!1);
                                             this.cursor = this.limit - f;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("மேற்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BAE\u0BC7\u0BB1\u0BCD")) break;
                                                 break K;
                                             } while (!1);
                                             this.cursor = this.limit - f;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("கீழ்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0B95\u0BC0\u0BB4\u0BCD")) break;
                                                 break K;
                                             } while (!1);
                                             this.cursor = this.limit - f;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("பின்")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0BAA\u0BBF\u0BA9\u0BCD")) break;
                                                 break K;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - f), !this.eq_s_b$esjava$1("து"))) break F;
+                                            if (((this.cursor = this.limit - f), !this.eq_s_b$esjava$1("\u0BA4\u0BC1")))
+                                                break F;
                                             (k = this.limit - this.cursor), (d = this.limit - this.cursor);
                                             do {
                                                 if (0 === this.find_among_b$esjava$1(t.a_21)) break;
@@ -16394,19 +16497,19 @@ var s,
                                         ((this.cursor = this.limit - e),
                                         (b = this.limit - this.cursor),
                                         (this.ket = this.cursor),
-                                        !this.eq_s_b$esjava$1("ீ"))
+                                        !this.eq_s_b$esjava$1("\u0BC0"))
                                     )
                                         return !1;
                                     (this.bra = this.cursor),
-                                        this.slice_from$esjava$1("ி"),
+                                        this.slice_from$esjava$1("\u0BBF"),
                                         (this.cursor = this.limit - b);
                                 } while (!1);
                                 (this.B_found_a_match = !0),
                                     (this.B_found_vetrumai_urupu = !0),
                                     (m = this.limit - this.cursor);
                                 do {
-                                    if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("ின்"))) break;
-                                    (this.bra = this.cursor), this.slice_from$esjava$1("்");
+                                    if (((this.ket = this.cursor), !this.eq_s_b$esjava$1("\u0BBF\u0BA9\u0BCD"))) break;
+                                    (this.bra = this.cursor), this.slice_from$esjava$1("\u0BCD");
                                 } while (!1);
                                 (this.cursor = this.limit - m), (this.cursor = this.limit_backward), (j = this.cursor);
                                 do if (!this.r_fix_endings$esjava$0()) break;
@@ -16483,37 +16586,37 @@ var s,
                                             r: do {
                                                 a = this.limit - this.cursor;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("மார்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BAE\u0BBE\u0BB0\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("மின்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BAE\u0BBF\u0BA9\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னன்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BA9\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னான்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BBE\u0BA9\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னாள்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BBE\u0BB3\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னார்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BBE\u0BB0\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 M: do {
-                                                    if (!this.eq_s_b$esjava$1("வன்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BB5\u0BA9\u0BCD")) break;
                                                     (n = this.limit - this.cursor), (h = this.limit - this.cursor);
                                                     do {
                                                         if (0 === this.find_among_b$esjava$1(t.a_23)) break;
@@ -16524,67 +16627,67 @@ var s,
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னள்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BB3\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("வள்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BB5\u0BB3\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னர்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BB0\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("வர்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BB5\u0BB0\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ன")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ப")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BAA")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("க")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0B95")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("த")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA4")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ய")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BAF")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("பன்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BAA\u0BA9\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("பள்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BAA\u0BB3\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("பர்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BAA\u0BB0\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 F: do {
-                                                    if (!this.eq_s_b$esjava$1("து")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA4\u0BC1")) break;
                                                     (o = this.limit - this.cursor), (u = this.limit - this.cursor);
                                                     do {
                                                         if (0 === this.find_among_b$esjava$1(t.a_24)) break;
@@ -16595,45 +16698,48 @@ var s,
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ிற்று")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BBF\u0BB1\u0BCD\u0BB1\u0BC1")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("பம்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BAA\u0BAE\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னம்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BAE\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("தும்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA4\u0BC1\u0BAE\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("றும்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BB1\u0BC1\u0BAE\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("கும்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0B95\u0BC1\u0BAE\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னென்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BC6\u0BA9\u0BCD")) break;
                                                     break r;
                                                 } while (!1);
                                                 this.cursor = this.limit - a;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னை")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BC8")) break;
                                                     break r;
                                                 } while (!1);
-                                                if (((this.cursor = this.limit - a), !this.eq_s_b$esjava$1("வை")))
+                                                if (
+                                                    ((this.cursor = this.limit - a),
+                                                    !this.eq_s_b$esjava$1("\u0BB5\u0BC8"))
+                                                )
                                                     break t;
                                             } while (!1);
                                             (this.bra = this.cursor),
@@ -16648,10 +16754,10 @@ var s,
                                             Z: do {
                                                 _ = this.limit - this.cursor;
                                                 ee: do {
-                                                    if (!this.eq_s_b$esjava$1("ான்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BBE\u0BA9\u0BCD")) break;
                                                     (l = this.limit - this.cursor), (w = this.limit - this.cursor);
                                                     do {
-                                                        if (!this.eq_s_b$esjava$1("ச")) break;
+                                                        if (!this.eq_s_b$esjava$1("\u0B9A")) break;
                                                         break ee;
                                                     } while (!1);
                                                     (this.cursor = this.limit - w), (this.cursor = this.limit - l);
@@ -16659,89 +16765,92 @@ var s,
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ாள்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BBE\u0BB3\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ார்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BBE\u0BB0\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ேன்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BC7\u0BA9\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ா")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BBE")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ாம்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BBE\u0BAE\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ெம்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BC6\u0BAE\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ேம்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BC7\u0BAE\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ோம்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BCB\u0BAE\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("கும்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0B95\u0BC1\u0BAE\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("தும்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA4\u0BC1\u0BAE\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("டும்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0B9F\u0BC1\u0BAE\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("றும்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BB1\u0BC1\u0BAE\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ாய்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BBE\u0BAF\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னென்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BC6\u0BA9\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("னிர்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BA9\u0BBF\u0BB0\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
                                                 this.cursor = this.limit - _;
                                                 do {
-                                                    if (!this.eq_s_b$esjava$1("ீர்")) break;
+                                                    if (!this.eq_s_b$esjava$1("\u0BC0\u0BB0\u0BCD")) break;
                                                     break Z;
                                                 } while (!1);
-                                                if (((this.cursor = this.limit - _), !this.eq_s_b$esjava$1("ீயர்")))
+                                                if (
+                                                    ((this.cursor = this.limit - _),
+                                                    !this.eq_s_b$esjava$1("\u0BC0\u0BAF\u0BB0\u0BCD"))
+                                                )
                                                     break Q;
                                             } while (!1);
                                             (this.bra = this.cursor),
-                                                this.slice_from$esjava$1("்"),
+                                                this.slice_from$esjava$1("\u0BCD"),
                                                 (this.B_found_a_match = !0),
                                                 (this.cursor = this.limit - c);
                                             break i;
@@ -16752,12 +16861,13 @@ var s,
                                         ei: do {
                                             v = this.limit - this.cursor;
                                             do {
-                                                if (!this.eq_s_b$esjava$1("கு")) break;
+                                                if (!this.eq_s_b$esjava$1("\u0B95\u0BC1")) break;
                                                 break ei;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - v), !this.eq_s_b$esjava$1("து"))) break e;
+                                            if (((this.cursor = this.limit - v), !this.eq_s_b$esjava$1("\u0BA4\u0BC1")))
+                                                break e;
                                         } while (!1);
-                                        if (((f = this.limit - this.cursor), !this.eq_s_b$esjava$1("்"))) break e;
+                                        if (((f = this.limit - this.cursor), !this.eq_s_b$esjava$1("\u0BCD"))) break e;
                                         (this.cursor = this.limit - f),
                                             (this.bra = this.cursor),
                                             this.slice_del$esjava$0(),
@@ -16887,16 +16997,16 @@ var s,
                                 return (
                                     delete t.a_0,
                                     (t.a_0 = [
-                                        new u("க", -1, -1),
-                                        new u("ங", -1, -1),
-                                        new u("ச", -1, -1),
-                                        new u("ஞ", -1, -1),
-                                        new u("த", -1, -1),
-                                        new u("ந", -1, -1),
-                                        new u("ப", -1, -1),
-                                        new u("ம", -1, -1),
-                                        new u("ய", -1, -1),
-                                        new u("வ", -1, -1),
+                                        new u("\u0B95", -1, -1),
+                                        new u("\u0B99", -1, -1),
+                                        new u("\u0B9A", -1, -1),
+                                        new u("\u0B9E", -1, -1),
+                                        new u("\u0BA4", -1, -1),
+                                        new u("\u0BA8", -1, -1),
+                                        new u("\u0BAA", -1, -1),
+                                        new u("\u0BAE", -1, -1),
+                                        new u("\u0BAF", -1, -1),
+                                        new u("\u0BB5", -1, -1),
                                     ])
                                 );
                             },
@@ -16906,7 +17016,11 @@ var s,
                             get: function () {
                                 return (
                                     delete t.a_1,
-                                    (t.a_1 = [new u("ந்த", -1, -1), new u("ந்த்", -1, -1), new u("ந்", -1, -1)])
+                                    (t.a_1 = [
+                                        new u("\u0BA8\u0BCD\u0BA4", -1, -1),
+                                        new u("\u0BA8\u0BCD\u0BA4\u0BCD", -1, -1),
+                                        new u("\u0BA8\u0BCD", -1, -1),
+                                    ])
                                 );
                             },
                         },
@@ -16914,7 +17028,12 @@ var s,
                             key: "a_2",
                             get: function () {
                                 return (
-                                    delete t.a_2, (t.a_2 = [new u("ி", -1, -1), new u("ீ", -1, -1), new u("ை", -1, -1)])
+                                    delete t.a_2,
+                                    (t.a_2 = [
+                                        new u("\u0BBF", -1, -1),
+                                        new u("\u0BC0", -1, -1),
+                                        new u("\u0BC8", -1, -1),
+                                    ])
                                 );
                             },
                         },
@@ -16924,12 +17043,12 @@ var s,
                                 return (
                                     delete t.a_3,
                                     (t.a_3 = [
-                                        new u("க", -1, -1),
-                                        new u("ச", -1, -1),
-                                        new u("ட", -1, -1),
-                                        new u("த", -1, -1),
-                                        new u("ப", -1, -1),
-                                        new u("ற", -1, -1),
+                                        new u("\u0B95", -1, -1),
+                                        new u("\u0B9A", -1, -1),
+                                        new u("\u0B9F", -1, -1),
+                                        new u("\u0BA4", -1, -1),
+                                        new u("\u0BAA", -1, -1),
+                                        new u("\u0BB1", -1, -1),
                                     ])
                                 );
                             },
@@ -16940,12 +17059,12 @@ var s,
                                 return (
                                     delete t.a_4,
                                     (t.a_4 = [
-                                        new u("க", -1, -1),
-                                        new u("ச", -1, -1),
-                                        new u("ட", -1, -1),
-                                        new u("த", -1, -1),
-                                        new u("ப", -1, -1),
-                                        new u("ற", -1, -1),
+                                        new u("\u0B95", -1, -1),
+                                        new u("\u0B9A", -1, -1),
+                                        new u("\u0B9F", -1, -1),
+                                        new u("\u0BA4", -1, -1),
+                                        new u("\u0BAA", -1, -1),
+                                        new u("\u0BB1", -1, -1),
                                     ])
                                 );
                             },
@@ -16956,12 +17075,12 @@ var s,
                                 return (
                                     delete t.a_5,
                                     (t.a_5 = [
-                                        new u("க", -1, -1),
-                                        new u("ச", -1, -1),
-                                        new u("ட", -1, -1),
-                                        new u("த", -1, -1),
-                                        new u("ப", -1, -1),
-                                        new u("ற", -1, -1),
+                                        new u("\u0B95", -1, -1),
+                                        new u("\u0B9A", -1, -1),
+                                        new u("\u0B9F", -1, -1),
+                                        new u("\u0BA4", -1, -1),
+                                        new u("\u0BAA", -1, -1),
+                                        new u("\u0BB1", -1, -1),
                                     ])
                                 );
                             },
@@ -16972,12 +17091,12 @@ var s,
                                 return (
                                     delete t.a_6,
                                     (t.a_6 = [
-                                        new u("ய", -1, -1),
-                                        new u("ர", -1, -1),
-                                        new u("ல", -1, -1),
-                                        new u("ள", -1, -1),
-                                        new u("ழ", -1, -1),
-                                        new u("வ", -1, -1),
+                                        new u("\u0BAF", -1, -1),
+                                        new u("\u0BB0", -1, -1),
+                                        new u("\u0BB2", -1, -1),
+                                        new u("\u0BB3", -1, -1),
+                                        new u("\u0BB4", -1, -1),
+                                        new u("\u0BB5", -1, -1),
                                     ])
                                 );
                             },
@@ -16988,12 +17107,12 @@ var s,
                                 return (
                                     delete t.a_7,
                                     (t.a_7 = [
-                                        new u("ங", -1, -1),
-                                        new u("ஞ", -1, -1),
-                                        new u("ண", -1, -1),
-                                        new u("ந", -1, -1),
-                                        new u("ன", -1, -1),
-                                        new u("ம", -1, -1),
+                                        new u("\u0B99", -1, -1),
+                                        new u("\u0B9E", -1, -1),
+                                        new u("\u0BA3", -1, -1),
+                                        new u("\u0BA8", -1, -1),
+                                        new u("\u0BA9", -1, -1),
+                                        new u("\u0BAE", -1, -1),
                                     ])
                                 );
                             },
@@ -17002,7 +17121,12 @@ var s,
                             key: "a_8",
                             get: function () {
                                 return (
-                                    delete t.a_8, (t.a_8 = [new u("ய", -1, -1), new u("வ", -1, -1), new u("வ்", -1, -1)])
+                                    delete t.a_8,
+                                    (t.a_8 = [
+                                        new u("\u0BAF", -1, -1),
+                                        new u("\u0BB5", -1, -1),
+                                        new u("\u0BB5\u0BCD", -1, -1),
+                                    ])
                                 );
                             },
                         },
@@ -17012,14 +17136,14 @@ var s,
                                 return (
                                     delete t.a_9,
                                     (t.a_9 = [
-                                        new u("ா", -1, -1),
-                                        new u("ி", -1, -1),
-                                        new u("ீ", -1, -1),
-                                        new u("ு", -1, -1),
-                                        new u("ூ", -1, -1),
-                                        new u("ெ", -1, -1),
-                                        new u("ே", -1, -1),
-                                        new u("ை", -1, -1),
+                                        new u("\u0BBE", -1, -1),
+                                        new u("\u0BBF", -1, -1),
+                                        new u("\u0BC0", -1, -1),
+                                        new u("\u0BC1", -1, -1),
+                                        new u("\u0BC2", -1, -1),
+                                        new u("\u0BC6", -1, -1),
+                                        new u("\u0BC7", -1, -1),
+                                        new u("\u0BC8", -1, -1),
                                     ])
                                 );
                             },
@@ -17030,14 +17154,14 @@ var s,
                                 return (
                                     delete t.a_10,
                                     (t.a_10 = [
-                                        new u("ா", -1, -1),
-                                        new u("ி", -1, -1),
-                                        new u("ீ", -1, -1),
-                                        new u("ு", -1, -1),
-                                        new u("ூ", -1, -1),
-                                        new u("ெ", -1, -1),
-                                        new u("ே", -1, -1),
-                                        new u("ை", -1, -1),
+                                        new u("\u0BBE", -1, -1),
+                                        new u("\u0BBF", -1, -1),
+                                        new u("\u0BC0", -1, -1),
+                                        new u("\u0BC1", -1, -1),
+                                        new u("\u0BC2", -1, -1),
+                                        new u("\u0BC6", -1, -1),
+                                        new u("\u0BC7", -1, -1),
+                                        new u("\u0BC8", -1, -1),
                                     ])
                                 );
                             },
@@ -17047,7 +17171,11 @@ var s,
                             get: function () {
                                 return (
                                     delete t.a_11,
-                                    (t.a_11 = [new u("அ", -1, -1), new u("இ", -1, -1), new u("உ", -1, -1)])
+                                    (t.a_11 = [
+                                        new u("\u0B85", -1, -1),
+                                        new u("\u0B87", -1, -1),
+                                        new u("\u0B89", -1, -1),
+                                    ])
                                 );
                             },
                         },
@@ -17057,16 +17185,16 @@ var s,
                                 return (
                                     delete t.a_12,
                                     (t.a_12 = [
-                                        new u("க", -1, -1),
-                                        new u("ங", -1, -1),
-                                        new u("ச", -1, -1),
-                                        new u("ஞ", -1, -1),
-                                        new u("த", -1, -1),
-                                        new u("ந", -1, -1),
-                                        new u("ப", -1, -1),
-                                        new u("ம", -1, -1),
-                                        new u("ய", -1, -1),
-                                        new u("வ", -1, -1),
+                                        new u("\u0B95", -1, -1),
+                                        new u("\u0B99", -1, -1),
+                                        new u("\u0B9A", -1, -1),
+                                        new u("\u0B9E", -1, -1),
+                                        new u("\u0BA4", -1, -1),
+                                        new u("\u0BA8", -1, -1),
+                                        new u("\u0BAA", -1, -1),
+                                        new u("\u0BAE", -1, -1),
+                                        new u("\u0BAF", -1, -1),
+                                        new u("\u0BB5", -1, -1),
                                     ])
                                 );
                             },
@@ -17077,12 +17205,12 @@ var s,
                                 return (
                                     delete t.a_13,
                                     (t.a_13 = [
-                                        new u("க", -1, -1),
-                                        new u("ச", -1, -1),
-                                        new u("ட", -1, -1),
-                                        new u("த", -1, -1),
-                                        new u("ப", -1, -1),
-                                        new u("ற", -1, -1),
+                                        new u("\u0B95", -1, -1),
+                                        new u("\u0B9A", -1, -1),
+                                        new u("\u0B9F", -1, -1),
+                                        new u("\u0BA4", -1, -1),
+                                        new u("\u0BAA", -1, -1),
+                                        new u("\u0BB1", -1, -1),
                                     ])
                                 );
                             },
@@ -17092,14 +17220,21 @@ var s,
                             get: function () {
                                 return (
                                     delete t.a_14,
-                                    (t.a_14 = [new u("ா", -1, -1), new u("ே", -1, -1), new u("ோ", -1, -1)])
+                                    (t.a_14 = [
+                                        new u("\u0BBE", -1, -1),
+                                        new u("\u0BC7", -1, -1),
+                                        new u("\u0BCB", -1, -1),
+                                    ])
                                 );
                             },
                         },
                         {
                             key: "a_15",
                             get: function () {
-                                return delete t.a_15, (t.a_15 = [new u("பி", -1, -1), new u("வி", -1, -1)]);
+                                return (
+                                    delete t.a_15,
+                                    (t.a_15 = [new u("\u0BAA\u0BBF", -1, -1), new u("\u0BB5\u0BBF", -1, -1)])
+                                );
                             },
                         },
                         {
@@ -17108,14 +17243,14 @@ var s,
                                 return (
                                     delete t.a_16,
                                     (t.a_16 = [
-                                        new u("ா", -1, -1),
-                                        new u("ி", -1, -1),
-                                        new u("ீ", -1, -1),
-                                        new u("ு", -1, -1),
-                                        new u("ூ", -1, -1),
-                                        new u("ெ", -1, -1),
-                                        new u("ே", -1, -1),
-                                        new u("ை", -1, -1),
+                                        new u("\u0BBE", -1, -1),
+                                        new u("\u0BBF", -1, -1),
+                                        new u("\u0BC0", -1, -1),
+                                        new u("\u0BC1", -1, -1),
+                                        new u("\u0BC2", -1, -1),
+                                        new u("\u0BC6", -1, -1),
+                                        new u("\u0BC7", -1, -1),
+                                        new u("\u0BC8", -1, -1),
                                     ])
                                 );
                             },
@@ -17126,19 +17261,19 @@ var s,
                                 return (
                                     delete t.a_17,
                                     (t.a_17 = [
-                                        new u("பட்ட", -1, -1),
-                                        new u("பட்டண", -1, -1),
-                                        new u("தான", -1, -1),
-                                        new u("படிதான", 2, -1),
-                                        new u("குரிய", -1, -1),
-                                        new u("படி", -1, -1),
-                                        new u("பற்றி", -1, -1),
-                                        new u("படு", -1, -1),
-                                        new u("விடு", -1, -1),
-                                        new u("பட்டு", -1, -1),
-                                        new u("விட்டு", -1, -1),
-                                        new u("பட்டது", -1, -1),
-                                        new u("ெல்லாம்", -1, -1),
+                                        new u("\u0BAA\u0B9F\u0BCD\u0B9F", -1, -1),
+                                        new u("\u0BAA\u0B9F\u0BCD\u0B9F\u0BA3", -1, -1),
+                                        new u("\u0BA4\u0BBE\u0BA9", -1, -1),
+                                        new u("\u0BAA\u0B9F\u0BBF\u0BA4\u0BBE\u0BA9", 2, -1),
+                                        new u("\u0B95\u0BC1\u0BB0\u0BBF\u0BAF", -1, -1),
+                                        new u("\u0BAA\u0B9F\u0BBF", -1, -1),
+                                        new u("\u0BAA\u0BB1\u0BCD\u0BB1\u0BBF", -1, -1),
+                                        new u("\u0BAA\u0B9F\u0BC1", -1, -1),
+                                        new u("\u0BB5\u0BBF\u0B9F\u0BC1", -1, -1),
+                                        new u("\u0BAA\u0B9F\u0BCD\u0B9F\u0BC1", -1, -1),
+                                        new u("\u0BB5\u0BBF\u0B9F\u0BCD\u0B9F\u0BC1", -1, -1),
+                                        new u("\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1", -1, -1),
+                                        new u("\u0BC6\u0BB2\u0BCD\u0BB2\u0BBE\u0BAE\u0BCD", -1, -1),
                                     ])
                                 );
                             },
@@ -17149,12 +17284,12 @@ var s,
                                 return (
                                     delete t.a_18,
                                     (t.a_18 = [
-                                        new u("க", -1, -1),
-                                        new u("ச", -1, -1),
-                                        new u("ட", -1, -1),
-                                        new u("த", -1, -1),
-                                        new u("ப", -1, -1),
-                                        new u("ற", -1, -1),
+                                        new u("\u0B95", -1, -1),
+                                        new u("\u0B9A", -1, -1),
+                                        new u("\u0B9F", -1, -1),
+                                        new u("\u0BA4", -1, -1),
+                                        new u("\u0BAA", -1, -1),
+                                        new u("\u0BB1", -1, -1),
                                     ])
                                 );
                             },
@@ -17165,12 +17300,12 @@ var s,
                                 return (
                                     delete t.a_19,
                                     (t.a_19 = [
-                                        new u("க", -1, -1),
-                                        new u("ச", -1, -1),
-                                        new u("ட", -1, -1),
-                                        new u("த", -1, -1),
-                                        new u("ப", -1, -1),
-                                        new u("ற", -1, -1),
+                                        new u("\u0B95", -1, -1),
+                                        new u("\u0B9A", -1, -1),
+                                        new u("\u0B9F", -1, -1),
+                                        new u("\u0BA4", -1, -1),
+                                        new u("\u0BAA", -1, -1),
+                                        new u("\u0BB1", -1, -1),
                                     ])
                                 );
                             },
@@ -17181,14 +17316,14 @@ var s,
                                 return (
                                     delete t.a_20,
                                     (t.a_20 = [
-                                        new u("ா", -1, -1),
-                                        new u("ி", -1, -1),
-                                        new u("ீ", -1, -1),
-                                        new u("ு", -1, -1),
-                                        new u("ூ", -1, -1),
-                                        new u("ெ", -1, -1),
-                                        new u("ே", -1, -1),
-                                        new u("ை", -1, -1),
+                                        new u("\u0BBE", -1, -1),
+                                        new u("\u0BBF", -1, -1),
+                                        new u("\u0BC0", -1, -1),
+                                        new u("\u0BC1", -1, -1),
+                                        new u("\u0BC2", -1, -1),
+                                        new u("\u0BC6", -1, -1),
+                                        new u("\u0BC7", -1, -1),
+                                        new u("\u0BC8", -1, -1),
                                     ])
                                 );
                             },
@@ -17199,14 +17334,14 @@ var s,
                                 return (
                                     delete t.a_21,
                                     (t.a_21 = [
-                                        new u("ா", -1, -1),
-                                        new u("ி", -1, -1),
-                                        new u("ீ", -1, -1),
-                                        new u("ு", -1, -1),
-                                        new u("ூ", -1, -1),
-                                        new u("ெ", -1, -1),
-                                        new u("ே", -1, -1),
-                                        new u("ை", -1, -1),
+                                        new u("\u0BBE", -1, -1),
+                                        new u("\u0BBF", -1, -1),
+                                        new u("\u0BC0", -1, -1),
+                                        new u("\u0BC1", -1, -1),
+                                        new u("\u0BC2", -1, -1),
+                                        new u("\u0BC6", -1, -1),
+                                        new u("\u0BC7", -1, -1),
+                                        new u("\u0BC8", -1, -1),
                                     ])
                                 );
                             },
@@ -17214,7 +17349,13 @@ var s,
                         {
                             key: "a_22",
                             get: function () {
-                                return delete t.a_22, (t.a_22 = [new u("படு", -1, -1), new u("கொண்டிர்", -1, -1)]);
+                                return (
+                                    delete t.a_22,
+                                    (t.a_22 = [
+                                        new u("\u0BAA\u0B9F\u0BC1", -1, -1),
+                                        new u("\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BCD", -1, -1),
+                                    ])
+                                );
                             },
                         },
                         {
@@ -17223,18 +17364,18 @@ var s,
                                 return (
                                     delete t.a_23,
                                     (t.a_23 = [
-                                        new u("அ", -1, -1),
-                                        new u("ஆ", -1, -1),
-                                        new u("இ", -1, -1),
-                                        new u("ஈ", -1, -1),
-                                        new u("உ", -1, -1),
-                                        new u("ஊ", -1, -1),
-                                        new u("எ", -1, -1),
-                                        new u("ஏ", -1, -1),
-                                        new u("ஐ", -1, -1),
-                                        new u("ஒ", -1, -1),
-                                        new u("ஓ", -1, -1),
-                                        new u("ஔ", -1, -1),
+                                        new u("\u0B85", -1, -1),
+                                        new u("\u0B86", -1, -1),
+                                        new u("\u0B87", -1, -1),
+                                        new u("\u0B88", -1, -1),
+                                        new u("\u0B89", -1, -1),
+                                        new u("\u0B8A", -1, -1),
+                                        new u("\u0B8E", -1, -1),
+                                        new u("\u0B8F", -1, -1),
+                                        new u("\u0B90", -1, -1),
+                                        new u("\u0B92", -1, -1),
+                                        new u("\u0B93", -1, -1),
+                                        new u("\u0B94", -1, -1),
                                     ])
                                 );
                             },
@@ -17245,14 +17386,14 @@ var s,
                                 return (
                                     delete t.a_24,
                                     (t.a_24 = [
-                                        new u("ா", -1, -1),
-                                        new u("ி", -1, -1),
-                                        new u("ீ", -1, -1),
-                                        new u("ு", -1, -1),
-                                        new u("ூ", -1, -1),
-                                        new u("ெ", -1, -1),
-                                        new u("ே", -1, -1),
-                                        new u("ை", -1, -1),
+                                        new u("\u0BBE", -1, -1),
+                                        new u("\u0BBF", -1, -1),
+                                        new u("\u0BC0", -1, -1),
+                                        new u("\u0BC1", -1, -1),
+                                        new u("\u0BC2", -1, -1),
+                                        new u("\u0BC6", -1, -1),
+                                        new u("\u0BC7", -1, -1),
+                                        new u("\u0BC8", -1, -1),
                                     ])
                                 );
                             },
@@ -17263,12 +17404,12 @@ var s,
                                 return (
                                     delete t.a_25,
                                     (t.a_25 = [
-                                        new u("கிற", -1, -1),
-                                        new u("கின்ற", -1, -1),
-                                        new u("ாநின்ற", -1, -1),
-                                        new u("கிற்", -1, -1),
-                                        new u("கின்ற்", -1, -1),
-                                        new u("ாநின்ற்", -1, -1),
+                                        new u("\u0B95\u0BBF\u0BB1", -1, -1),
+                                        new u("\u0B95\u0BBF\u0BA9\u0BCD\u0BB1", -1, -1),
+                                        new u("\u0BBE\u0BA8\u0BBF\u0BA9\u0BCD\u0BB1", -1, -1),
+                                        new u("\u0B95\u0BBF\u0BB1\u0BCD", -1, -1),
+                                        new u("\u0B95\u0BBF\u0BA9\u0BCD\u0BB1\u0BCD", -1, -1),
+                                        new u("\u0BBE\u0BA8\u0BBF\u0BA9\u0BCD\u0BB1\u0BCD", -1, -1),
                                     ])
                                 );
                             },
@@ -17347,7 +17488,7 @@ var s,
                                     } while (!1);
                                     this.cursor = this.limit - s;
                                     o: do {
-                                        if (!this.eq_s_b$esjava$1("ı")) break;
+                                        if (!this.eq_s_b$esjava$1("\u0131")) break;
                                         G: for (;;) {
                                             n = this.limit - this.cursor;
                                             do {
@@ -18647,11 +18788,12 @@ var s,
                                                 if (!this.eq_s_b$esjava$1("a")) break;
                                                 break n;
                                             } while (!1);
-                                            if (((this.cursor = this.limit - n), !this.eq_s_b$esjava$1("ı"))) break t;
+                                            if (((this.cursor = this.limit - n), !this.eq_s_b$esjava$1("\u0131")))
+                                                break t;
                                         } while (!1);
                                         this.cursor = this.limit - r;
                                         var f = this.cursor;
-                                        this.insert$esjava$3(this.cursor, this.cursor, "ı"), (this.cursor = f);
+                                        this.insert$esjava$3(this.cursor, this.cursor, "\u0131"), (this.cursor = f);
                                         break s;
                                     } while (!1);
                                     this.cursor = this.limit - s;
@@ -18898,8 +19040,8 @@ var s,
                                         new u("nuz", -1, -1),
                                         new u("m\xfcz", -1, -1),
                                         new u("n\xfcz", -1, -1),
-                                        new u("mız", -1, -1),
-                                        new u("nız", -1, -1),
+                                        new u("m\u0131z", -1, -1),
+                                        new u("n\u0131z", -1, -1),
                                     ])
                                 );
                             },
@@ -18907,7 +19049,7 @@ var s,
                         {
                             key: "a_1",
                             get: function () {
-                                return delete t.a_1, (t.a_1 = [new u("leri", -1, -1), new u("ları", -1, -1)]);
+                                return delete t.a_1, (t.a_1 = [new u("leri", -1, -1), new u("lar\u0131", -1, -1)]);
                             },
                         },
                         {
@@ -18919,7 +19061,7 @@ var s,
                                         new u("ni", -1, -1),
                                         new u("nu", -1, -1),
                                         new u("n\xfc", -1, -1),
-                                        new u("nı", -1, -1),
+                                        new u("n\u0131", -1, -1),
                                     ])
                                 );
                             },
@@ -18933,7 +19075,7 @@ var s,
                                         new u("in", -1, -1),
                                         new u("un", -1, -1),
                                         new u("\xfcn", -1, -1),
-                                        new u("ın", -1, -1),
+                                        new u("\u0131n", -1, -1),
                                     ])
                                 );
                             },
@@ -19011,7 +19153,7 @@ var s,
                                         new u("im", -1, -1),
                                         new u("um", -1, -1),
                                         new u("\xfcm", -1, -1),
-                                        new u("ım", -1, -1),
+                                        new u("\u0131m", -1, -1),
                                     ])
                                 );
                             },
@@ -19025,7 +19167,7 @@ var s,
                                         new u("sin", -1, -1),
                                         new u("sun", -1, -1),
                                         new u("s\xfcn", -1, -1),
-                                        new u("sın", -1, -1),
+                                        new u("s\u0131n", -1, -1),
                                     ])
                                 );
                             },
@@ -19039,7 +19181,7 @@ var s,
                                         new u("iz", -1, -1),
                                         new u("uz", -1, -1),
                                         new u("\xfcz", -1, -1),
-                                        new u("ız", -1, -1),
+                                        new u("\u0131z", -1, -1),
                                     ])
                                 );
                             },
@@ -19053,7 +19195,7 @@ var s,
                                         new u("siniz", -1, -1),
                                         new u("sunuz", -1, -1),
                                         new u("s\xfcn\xfcz", -1, -1),
-                                        new u("sınız", -1, -1),
+                                        new u("s\u0131n\u0131z", -1, -1),
                                     ])
                                 );
                             },
@@ -19073,7 +19215,7 @@ var s,
                                         new u("niz", -1, -1),
                                         new u("nuz", -1, -1),
                                         new u("n\xfcz", -1, -1),
-                                        new u("nız", -1, -1),
+                                        new u("n\u0131z", -1, -1),
                                     ])
                                 );
                             },
@@ -19090,8 +19232,8 @@ var s,
                                         new u("tur", -1, -1),
                                         new u("d\xfcr", -1, -1),
                                         new u("t\xfcr", -1, -1),
-                                        new u("dır", -1, -1),
-                                        new u("tır", -1, -1),
+                                        new u("d\u0131r", -1, -1),
+                                        new u("t\u0131r", -1, -1),
                                     ])
                                 );
                             },
@@ -19099,7 +19241,9 @@ var s,
                         {
                             key: "a_19",
                             get: function () {
-                                return delete t.a_19, (t.a_19 = [new u("casına", -1, -1), new u("cesine", -1, -1)]);
+                                return (
+                                    delete t.a_19, (t.a_19 = [new u("cas\u0131na", -1, -1), new u("cesine", -1, -1)])
+                                );
                             },
                         },
                         {
@@ -19116,30 +19260,30 @@ var s,
                                         new u("tuk", -1, -1),
                                         new u("d\xfck", -1, -1),
                                         new u("t\xfck", -1, -1),
-                                        new u("dık", -1, -1),
-                                        new u("tık", -1, -1),
+                                        new u("d\u0131k", -1, -1),
+                                        new u("t\u0131k", -1, -1),
                                         new u("dim", -1, -1),
                                         new u("tim", -1, -1),
                                         new u("dum", -1, -1),
                                         new u("tum", -1, -1),
                                         new u("d\xfcm", -1, -1),
                                         new u("t\xfcm", -1, -1),
-                                        new u("dım", -1, -1),
-                                        new u("tım", -1, -1),
+                                        new u("d\u0131m", -1, -1),
+                                        new u("t\u0131m", -1, -1),
                                         new u("din", -1, -1),
                                         new u("tin", -1, -1),
                                         new u("dun", -1, -1),
                                         new u("tun", -1, -1),
                                         new u("d\xfcn", -1, -1),
                                         new u("t\xfcn", -1, -1),
-                                        new u("dın", -1, -1),
-                                        new u("tın", -1, -1),
+                                        new u("d\u0131n", -1, -1),
+                                        new u("t\u0131n", -1, -1),
                                         new u("du", -1, -1),
                                         new u("tu", -1, -1),
                                         new u("d\xfc", -1, -1),
                                         new u("t\xfc", -1, -1),
-                                        new u("dı", -1, -1),
-                                        new u("tı", -1, -1),
+                                        new u("d\u0131", -1, -1),
+                                        new u("t\u0131", -1, -1),
                                     ])
                                 );
                             },
@@ -19168,10 +19312,10 @@ var s,
                                 return (
                                     delete t.a_22,
                                     (t.a_22 = [
-                                        new u("miş", -1, -1),
-                                        new u("muş", -1, -1),
-                                        new u("m\xfcş", -1, -1),
-                                        new u("mış", -1, -1),
+                                        new u("mi\u015F", -1, -1),
+                                        new u("mu\u015F", -1, -1),
+                                        new u("m\xfc\u015F", -1, -1),
+                                        new u("m\u0131\u015F", -1, -1),
                                     ])
                                 );
                             },
@@ -19185,7 +19329,7 @@ var s,
                                         new u("b", -1, 1),
                                         new u("c", -1, 2),
                                         new u("d", -1, 3),
-                                        new u("ğ", -1, 4),
+                                        new u("\u011F", -1, 4),
                                     ])
                                 );
                             },

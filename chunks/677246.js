@@ -1,16 +1,16 @@
 !(function (e) {
     "use strict";
     function t(e, t, n) {
-        var r, i, s;
+        var i, r, s;
         return (
             e +
             " " +
-            ((r = { mm: "munutenn", MM: "miz", dd: "devezh" }[n]),
+            ((i = { mm: "munutenn", MM: "miz", dd: "devezh" }[n]),
             2 === e
-                ? void 0 === (s = { m: "v", b: "v", d: "z" })[(i = r).charAt(0)]
-                    ? i
-                    : s[i.charAt(0)] + i.substring(1)
-                : r)
+                ? void 0 === (s = { m: "v", b: "v", d: "z" })[(r = i).charAt(0)]
+                    ? r
+                    : s[r.charAt(0)] + r.substring(1)
+                : i)
         );
     }
     e.defineLocale("br", {
@@ -67,7 +67,7 @@
                 }
             },
         },
-        dayOfMonthOrdinalParse: /\d{1,2}(añ|vet)/,
+        dayOfMonthOrdinalParse: /\d{1,2}(a\xf1|vet)/,
         ordinal: function (e) {
             return e + (1 === e ? "a\xf1" : "vet");
         },

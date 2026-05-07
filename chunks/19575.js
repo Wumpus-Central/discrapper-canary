@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Ay: () => j, UB: () => Y, kw: () => B, _0: () => x }), n(321073);
+n.d(t, { Ay: () => K, UB: () => j, kw: () => B, _0: () => G }), n(321073);
 var i,
     r,
     s,
     a = n(284009),
     o = n.n(a),
     l = n(279194),
-    _ = n(141931),
-    d =
+    u = n(141931),
+    c =
         (((i = {}).ACCESSIBILITY_GET_ENABLED = "DISCORD_ACCESSIBILITY_GET_ENABLED"),
         (i.APP_ASYNC_INDEX_TSX_LOADED = "DISCORD_APP_ASYNC_INDEX_TSX_LOADED"),
         (i.APP_BADGE_SET = "DISCORD_APP_BADGE_SET"),
@@ -160,32 +160,32 @@ var i,
         (i.WINDOW_SET_FRAME_RATE = "DISCORD_WINDOW_SET_FRAME_RATE"),
         (i.GET_MOUSE_COORDINATES = "DISCORD_GET_MOUSE_COORDINATES"),
         i),
-    u = n(636537),
-    c = n(118356),
-    E = n(506774),
+    d = n(636537),
+    _ = n(941426),
+    f = n(506774),
     h = n(56562),
-    m = n(223273),
-    f = n(723702),
-    g = n(998218),
-    I = n(652215),
+    p = n(223273),
+    E = n(723702),
+    m = n(998218),
+    g = n(652215),
     A = n(264572).Buffer;
-let p = window.DiscordNative,
+let I = window.DiscordNative,
     T = new Set(["jpg", "jpeg", "jfif", "png"]),
     S = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]),
     N = null,
-    O = null,
-    R = null,
-    C = {},
-    y = !1,
-    D = {};
-null != p &&
-    ((N = p.app
+    y = null,
+    C = null,
+    v = {},
+    O = !1,
+    R = {};
+null != I &&
+    ((N = I.app
         .getVersion()
         .split(".")
         .map((e) => parseInt(e))),
-    (R = p.app.getModuleVersions()),
-    (O = p.app.getBuildNumber()));
-let L = new Set([
+    (C = I.app.getModuleVersions()),
+    (y = I.app.getBuildNumber()));
+let b = new Set([
         "discord_erlpack",
         "discord_game_utils",
         "discord_rpc",
@@ -193,27 +193,27 @@ let L = new Set([
         "discord_utils",
         "discord_voice",
     ]),
-    v = !1,
-    w = null,
-    P = "lastImageSaveDirectory",
-    b = /[<>:"/\\|?*@]/g,
-    k = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    U = /(\.[a-zA-Z0-9]+)%3A.+$/,
-    M = /[^a-zA-Z0-9]/g,
-    G = /\.[^.]*$/;
-var x = (((r = {}).SAVED = "saved"), (r.CANCELED = "canceled"), (r.ERRORED = "errored"), r);
-function V(e) {
+    D = !1,
+    L = null,
+    w = "lastImageSaveDirectory",
+    M = /[<>:"/\\|?*@]/g,
+    P = /(\.[a-zA-Z0-9]+):[^.]*$/,
+    x = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    U = /[^a-zA-Z0-9]/g,
+    k = /\.[^.]*$/;
+var G = (((r = {}).SAVED = "saved"), (r.CANCELED = "canceled"), (r.ERRORED = "errored"), r);
+function F(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(k, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(b, "_");
+        return (t = (t = t.replace(P, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(M, "_");
     } catch {
         return e
-            .replace(U, "$1")
+            .replace(x, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
-            .replace(b, "_");
+            .replace(M, "_");
     }
 }
-async function F(e) {
+async function V(e) {
     let t = await fetch(new Request(e, { method: "GET", mode: "cors" }));
     o()(200 === t.status, "Data fetch unsuccessful");
     let n = await t.arrayBuffer();
@@ -227,7 +227,7 @@ var B =
     (s[(s.ScreenRecording = 4)] = "ScreenRecording"),
     s);
 function H(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : C;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v;
     return {
         id: t[e.id ?? ""],
         nativeProcessObserverId: parseInt(e.id ?? "", 10),
@@ -252,40 +252,40 @@ function H(e) {
         executableFingerprint: e.executableFingerprint,
     };
 }
-function Y(e, t) {
+function j(e, t) {
     if (null != t && t.startsWith("image/")) {
         let e = t.split("/")[1]?.toLowerCase();
         if ("jpeg" === e) return "jpg";
         if (null != e) return e;
     }
-    let n = g.A.toURLSafe(e);
+    let n = m.A.toURLSafe(e);
     if (null == n) return;
     let i = n.pathname?.split(".")?.pop()?.toLowerCase();
     return null != i && i.length <= 5 ? i : void 0;
 }
-function W(e) {
-    if ((0, f.isDesktop)())
+function Y(e) {
+    if ((0, E.isDesktop)())
         try {
-            K.sendIPC(e);
+            W.sendIPC(e);
         } catch (e) {}
 }
-let K = {
+let W = {
         requireModule(e) {
-            if (y && D.hasOwnProperty(e) && null != D[e]) return D[e];
-            let t = p.nativeModules.requireModule(e);
-            return y && (D[e] = t), t;
+            if (O && R.hasOwnProperty(e) && null != R[e]) return R[e];
+            let t = I.nativeModules.requireModule(e);
+            return O && (R[e] = t), t;
         },
         ensureModule: (e) =>
-            f.isPlatformEmbedded
-                ? __OVERLAY__ && L.has(e)
+            E.isPlatformEmbedded
+                ? __OVERLAY__ && b.has(e)
                     ? Promise.resolve()
-                    : p.nativeModules.ensureModule(e)
+                    : I.nativeModules.ensureModule(e)
                 : Promise.reject(Error("not embedded")),
         get canBootstrapNewUpdater() {
-            return p.nativeModules.canBootstrapNewUpdater || !1;
+            return I.nativeModules.canBootstrapNewUpdater || !1;
         },
-        getCrashReporterMetadata: () => p.crashReporter.getMetadata(),
-        getSetting: async (e, t) => await p.settings.get(e, t),
+        getCrashReporterMetadata: () => I.crashReporter.getMetadata(),
+        getSetting: async (e, t) => await I.settings.get(e, t),
         beforeUnload() {
             let e;
             try {
@@ -296,11 +296,11 @@ let K = {
                     e.disconnectAllProcesses &&
                     e.destroyHostProcess &&
                     (e.disconnectAllProcesses(), e.destroyHostProcess()),
-                p.powerMonitor.removeAllListeners(),
+                I.powerMonitor.removeAllListeners(),
                 window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN &&
-                    !0 !== E.w.get(l.qx) &&
-                    this.supportsFeature(I.BYE.USER_DATA_CACHE) &&
-                    p.userDataCache.cacheUserData(E.w.stringify());
+                    !0 !== f.w.get(l.qx) &&
+                    this.supportsFeature(g.BYE.USER_DATA_CACHE) &&
+                    I.userDataCache.cacheUserData(f.w.stringify());
         },
         inputEventRegister(e, t, n, i) {
             this.getDiscordUtils().inputEventRegister(
@@ -317,21 +317,21 @@ let K = {
             this.getDiscordUtils().inputEventUnregister(parseInt(e));
         },
         setOnInputEventCallback(e) {
-            f.isPlatformEmbedded && this.getDiscordUtils().inputWatchAll(e);
+            E.isPlatformEmbedded && this.getDiscordUtils().inputWatchAll(e);
         },
         setFocused(e) {
             this.getDiscordUtils().inputSetFocused(e);
         },
         setObservedGamesCallback(e, t, n, i) {
             try {
-                C = {};
+                v = {};
                 let r = 0,
                     s = this.getDiscordUtils(),
                     a = e.map((e) => {
                         let t = ++r;
-                        return null != e.id && (C[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
+                        return null != e.id && (v[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
                     }),
-                    o = C,
+                    o = v,
                     l = (e) => n(e.map((e) => H(e, o)));
                 null != i && null != s.setProcessObserverUserId && s.setProcessObserverUserId(i),
                     t && null != s.setObservedGamesCallback2
@@ -380,7 +380,7 @@ let K = {
             this.getDiscordUtils().setObserverDebugCallback((t) => e(t), t, n);
         },
         clearObserverDebugCallback() {
-            this.getDiscordUtils().setObserverDebugCallback(null, m.Lb.NONE, 0);
+            this.getDiscordUtils().setObserverDebugCallback(null, p.Lb.NONE, 0);
         },
         shouldDisplayNotifications() {
             return this.getDiscordUtils().shouldDisplayNotifications();
@@ -389,27 +389,27 @@ let K = {
             if (__OVERLAY__) throw Error("cannot require discord_voice in overlay");
             let e = this.requireModule("discord_voice");
             return (
-                v ||
-                    (0, c.si)((t, n, i) => {
+                D ||
+                    (0, _.si)((t, n, i) => {
                         e.consoleLog(n, `[${t}] ${i}`);
                     }),
-                (v = !0),
+                (D = !0),
                 e
             );
         },
         getDiscordUtils() {
-            if (!v)
+            if (!D)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}
             return this.requireModule("discord_utils");
         },
         isSystemDarkMode() {
-            return !!(0, f.isWindows)() && (this.getDiscordUtils().isSystemDarkMode?.() ?? !0);
+            return !!(0, E.isWindows)() && (this.getDiscordUtils().isSystemDarkMode?.() ?? !0);
         },
         getDiscordIsElevated() {
-            return (0, f.isWindows)() && null != this.getDiscordUtils().getDiscordIsElevated
-                ? (null === w && (w = this.getDiscordUtils().getDiscordIsElevated()), w)
+            return (0, E.isWindows)() && null != this.getDiscordUtils().getDiscordIsElevated
+                ? (null === L && (L = this.getDiscordUtils().getDiscordIsElevated()), L)
                 : null;
         },
         getGameUtils() {
@@ -422,23 +422,23 @@ let K = {
             return this.requireModule("discord_dispatch");
         },
         setBadge(e) {
-            if ("darwin" === (0, f.getPlatformName)()) {
+            if ("darwin" === (0, E.getPlatformName)()) {
                 let t = "";
-                -1 === e ? (t = "•") : e > 0 && (t = `${e}`), p.app.dock.setBadge(t);
+                -1 === e ? (t = "\u2022") : e > 0 && (t = `${e}`), I.app.dock.setBadge(t);
             } else
-                "win32" === (0, f.getPlatformName)()
-                    ? this.sendIPC(d.APP_BADGE_SET, e)
-                    : "linux" === (0, f.getPlatformName)() && p.app.setBadgeCount(e >= 0 ? e : 0);
+                "win32" === (0, E.getPlatformName)()
+                    ? this.sendIPC(c.APP_BADGE_SET, e)
+                    : "linux" === (0, E.getPlatformName)() && I.app.setBadgeCount(e >= 0 ? e : 0);
         },
         setSystemTrayIcon(e) {
-            f.isPlatformEmbedded && this.sendIPC(d.SYSTEM_TRAY_SET_ICON, e);
+            E.isPlatformEmbedded && this.sendIPC(c.SYSTEM_TRAY_SET_ICON, e);
         },
         setThumbarButtons(e) {
-            f.isPlatformEmbedded && p.thumbar?.setThumbarButtons?.(e, this.isSystemDarkMode());
+            E.isPlatformEmbedded && I.thumbar?.setThumbarButtons?.(e, this.isSystemDarkMode());
         },
         bounceDock(e) {
-            if (f.isPlatformEmbedded) {
-                let t = p.app;
+            if (E.isPlatformEmbedded) {
+                let t = I.app;
                 if (null != t.dock) {
                     let n = t.dock.bounce(e);
                     return async () => {
@@ -449,176 +449,176 @@ let K = {
             }
         },
         setSystemTrayApplications(e) {
-            f.isPlatformEmbedded && this.sendIPC(d.SYSTEM_TRAY_SET_APPLICATIONS, e);
+            E.isPlatformEmbedded && this.sendIPC(c.SYSTEM_TRAY_SET_APPLICATIONS, e);
         },
         get architecture() {
-            return f.isPlatformEmbedded ? p.process.arch : "";
+            return E.isPlatformEmbedded ? I.process.arch : "";
         },
         get releaseChannel() {
-            if (!f.isPlatformEmbedded) return "";
-            return p.app.getReleaseChannel();
+            if (!E.isPlatformEmbedded) return "";
+            return I.app.getReleaseChannel();
         },
         get version() {
             return N;
         },
         get buildNumber() {
-            return O;
+            return y;
         },
         get moduleVersions() {
-            return R;
+            return C;
         },
         get parsedOSRelease() {
-            if (!f.isPlatformEmbedded) return [];
-            return p.os.release.split(".").map((e) => parseInt(e, 10));
+            if (!E.isPlatformEmbedded) return [];
+            return I.os.release.split(".").map((e) => parseInt(e, 10));
         },
         copy(e) {
-            f.isPlatformEmbedded && p.clipboard.copy(e);
+            E.isPlatformEmbedded && I.clipboard.copy(e);
         },
         async copyImage(e, t) {
-            o()(f.isPlatformEmbedded, "Copy image method called outside native app"),
-                o()("function" == typeof p.clipboard.copyImage, "Copy image not supported");
-            let n = await F(e),
-                i = Y(e, t),
+            o()(E.isPlatformEmbedded, "Copy image method called outside native app"),
+                o()("function" == typeof I.clipboard.copyImage, "Copy image not supported");
+            let n = await V(e),
+                i = j(e, t),
                 r = null != i && T.has(i) ? `image.${i}` : e;
-            p.clipboard.copyImage(A.from(n), r);
+            I.clipboard.copyImage(A.from(n), r);
         },
         async copyImageBlob(e, t) {
             let n = await e.arrayBuffer();
-            p.clipboard.copyImage(A.from(n), t);
+            I.clipboard.copyImage(A.from(n), t);
         },
         canSaveImage(e, t) {
-            if (null == e || !f.isPlatformEmbedded) return !1;
-            let n = Y(e, t);
+            if (null == e || !E.isPlatformEmbedded) return !1;
+            let n = j(e, t);
             return null == n || S.has(n);
         },
         async saveImage(e, t, n) {
             let i, r;
-            o()(f.isPlatformEmbedded, "Save image method called outside native app");
-            let s = g.A.toURLSafe(e);
+            o()(E.isPlatformEmbedded, "Save image method called outside native app");
+            let s = m.A.toURLSafe(e);
             if (null == s) return "errored";
             let a = s.pathname.split("/").pop() ?? "unknown";
-            a = V(a);
+            a = F(a);
             let l = s.searchParams.get("format");
             if (null != l) {
-                let e = l.replace(M, "").toLowerCase();
+                let e = l.replace(U, "").toLowerCase();
                 if (e.length > 0) {
-                    let t = a.replace(G, "");
+                    let t = a.replace(k, "");
                     a = `${t}.${e}`;
                 }
             } else if (!a.includes(".")) {
-                let i = Y(e, t) ?? n ?? "png";
+                let i = j(e, t) ?? n ?? "png";
                 a = `${a}.${i}`;
             }
-            let _ = await F(e),
-                d = A.from(_),
-                u = E.w.get(P);
-            if (("string" != typeof u && (u = void 0), "function" == typeof p.fileManager.saveWithDialog2)) {
-                if (null == (i = await p.fileManager.saveWithDialog2(d, a, u ?? void 0))) return "errored";
+            let u = await V(e),
+                c = A.from(u),
+                d = f.w.get(w);
+            if (("string" != typeof d && (d = void 0), "function" == typeof I.fileManager.saveWithDialog2)) {
+                if (null == (i = await I.fileManager.saveWithDialog2(c, a, d ?? void 0))) return "errored";
                 if (i.canceledByUser) return "canceled";
                 r = i.directory;
             } else
                 try {
-                    r = await p.fileManager.saveWithDialog(d, a, u ?? void 0);
+                    r = await I.fileManager.saveWithDialog(c, a, d ?? void 0);
                 } catch (e) {
                     return "errored";
                 }
-            return null == r || "" === r ? "errored" : (E.w.set(P, r), "saved");
+            return null == r || "" === r ? "errored" : (f.w.set(w, r), "saved");
         },
         async saveFile(e, t) {
-            o()(f.isPlatformEmbedded, "Save file method called outside native app");
-            let n = g.A.toURLSafe(e);
+            o()(E.isPlatformEmbedded, "Save file method called outside native app");
+            let n = m.A.toURLSafe(e);
             if (null == n) return null;
             let i = t ?? n.pathname.split("/").pop() ?? "unknown";
-            null == t && (i = V(i));
-            let r = await F(e),
+            null == t && (i = F(i));
+            let r = await V(e),
                 s = A.from(r),
-                a = await p.fileManager.saveWithDialog(s, i, void 0);
+                a = await I.fileManager.saveWithDialog(s, i, void 0);
             return null == a ? null : a;
         },
         async downloadMLModelFile(e, t, n) {
-            o()(f.isPlatformEmbedded, "Download ML model file method called outside native app");
-            let i = g.A.toURLSafe(e);
+            o()(E.isPlatformEmbedded, "Download ML model file method called outside native app");
+            let i = m.A.toURLSafe(e);
             return (
                 o()(i, "Could not download ML model, fileSrc was not a valid path"),
-                await p.fileManager.maybeDownloadMLModelFile(e, t, n)
+                await I.fileManager.maybeDownloadMLModelFile(e, t, n)
             );
         },
         stopMLModelDownloads() {
-            p.fileManager.stopMLModelDownloads();
+            I.fileManager.stopMLModelDownloads();
         },
-        canCheckMLModelFilesExist: () => "function" == typeof p.fileManager.checkMLModelFilesExist,
-        checkMLModelFilesExist: async (e) => await p.fileManager.checkMLModelFilesExist(e),
-        cleanupUnusedMLModelFiles: async (e) => await p.fileManager.cleanupUnusedMLModelFiles(e),
+        canCheckMLModelFilesExist: () => "function" == typeof I.fileManager.checkMLModelFilesExist,
+        checkMLModelFilesExist: async (e) => await I.fileManager.checkMLModelFilesExist(e),
+        cleanupUnusedMLModelFiles: async (e) => await I.fileManager.cleanupUnusedMLModelFiles(e),
         async downloadClipsFile(e, t, n) {
-            o()(f.isPlatformEmbedded, "Download clips file method called outside native app");
-            let i = g.A.toURLSafe(e);
+            o()(E.isPlatformEmbedded, "Download clips file method called outside native app");
+            let i = m.A.toURLSafe(e);
             return (
                 o()(i, "Could not download clips file, fileSrc was not a valid path"),
-                await p.fileManager.maybeDownloadClipsFile(e, t, n)
+                await I.fileManager.maybeDownloadClipsFile(e, t, n)
             );
         },
         stopClipsDownloads() {
-            p.fileManager.stopClipsDownloads();
+            I.fileManager.stopClipsDownloads();
         },
-        canCheckClipsFilesExist: () => "function" == typeof p.fileManager.checkClipsFilesExist,
-        checkClipsFilesExist: async (e) => await p.fileManager.checkClipsFilesExist(e),
-        cleanupUnusedClipsFiles: async (e) => await p.fileManager.cleanupUnusedClipsFiles(e),
-        getClipsDataDirSync: () => p.fileManager.getClipsDataDirSync(),
+        canCheckClipsFilesExist: () => "function" == typeof I.fileManager.checkClipsFilesExist,
+        checkClipsFilesExist: async (e) => await I.fileManager.checkClipsFilesExist(e),
+        cleanupUnusedClipsFiles: async (e) => await I.fileManager.cleanupUnusedClipsFiles(e),
+        getClipsDataDirSync: () => I.fileManager.getClipsDataDirSync(),
         async downloadOpenH264(e, t, n, i) {
-            o()(f.isPlatformEmbedded, "Download OpenH264 file method called outside native app");
-            let r = g.A.toURLSafe(e);
+            o()(E.isPlatformEmbedded, "Download OpenH264 file method called outside native app");
+            let r = m.A.toURLSafe(e);
             return (
                 o()(r, "Could not download OpenH264, fileSrc was not a valid path"),
-                await p.fileManager.maybeDownloadOpenH264(e, t, n, i)
+                await I.fileManager.maybeDownloadOpenH264(e, t, n, i)
             );
         },
-        cleanupUnusedOpenH264Files: async (e) => await p.fileManager.cleanupUnusedOpenH264Files(e),
+        cleanupUnusedOpenH264Files: async (e) => await I.fileManager.cleanupUnusedOpenH264Files(e),
         getOpenH264LibraryPath() {
-            if (f.isPlatformEmbedded) return p.fileManager.getOpenH264LibraryPathSync?.();
+            if (E.isPlatformEmbedded) return I.fileManager.getOpenH264LibraryPathSync?.();
         },
         canCopyImage() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
-            if (!f.isPlatformEmbedded || "function" != typeof p.clipboard.copyImage) return !1;
+            if (!E.isPlatformEmbedded || "function" != typeof I.clipboard.copyImage) return !1;
             if (null != e) {
-                let t = Y(e, void 0);
+                let t = j(e, void 0);
                 if (null != t && !T.has(t)) return !1;
             }
             return !0;
         },
         cut() {
-            f.isPlatformEmbedded && p.clipboard.cut();
+            E.isPlatformEmbedded && I.clipboard.cut();
         },
         paste() {
-            f.isPlatformEmbedded && p.clipboard.paste();
+            E.isPlatformEmbedded && I.clipboard.paste();
         },
-        readClipboard: () => (f.isPlatformEmbedded ? p.clipboard.read() : ""),
-        clipboardHasMixedContent: () => !!f.isPlatformEmbedded && (p.clipboard.hasMixedContent?.() ?? !1),
+        readClipboard: () => (E.isPlatformEmbedded ? I.clipboard.read() : ""),
+        clipboardHasMixedContent: () => !!E.isPlatformEmbedded && (I.clipboard.hasMixedContent?.() ?? !1),
         on(e, t) {
-            p.ipc.on(e, t);
+            I.ipc.on(e, t);
         },
         onIPC(e, t) {
-            p.ipc.on(e, t);
+            I.ipc.on(e, t);
         },
         invoke(e) {
             for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
-            return p.ipc.invoke(e, ...n);
+            return I.ipc.invoke(e, ...n);
         },
         invokeIPC(e) {
             for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
-            return p.ipc.invoke(e, ...n);
+            return I.ipc.invoke(e, ...n);
         },
         send(e) {
             for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
-            p.ipc.send(e, ...n);
+            I.ipc.send(e, ...n);
         },
         sendIPC(e) {
             for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
-            p.ipc.send(e, ...n);
+            I.ipc.send(e, ...n);
         },
         isIPCReady() {
-            if (!f.isPlatformEmbedded) return !0;
+            if (!E.isPlatformEmbedded) return !0;
             try {
-                return p?.ipc != null && "function" == typeof p.ipc.send;
+                return I?.ipc != null && "function" == typeof I.ipc.send;
             } catch {
                 return !1;
             }
@@ -634,109 +634,109 @@ let K = {
             return !1;
         },
         flashFrame(e) {
-            p.window.flashFrame(e);
+            I.window.flashFrame(e);
         },
         webAuthnRegister: async (e) => (
-            await p.nativeModules.ensureModule("discord_webauthn"), await p.webAuthn.webAuthnRegister(e)
+            await I.nativeModules.ensureModule("discord_webauthn"), await I.webAuthn.webAuthnRegister(e)
         ),
         webAuthnAuthenticate: async (e) => (
-            await p.nativeModules.ensureModule("discord_webauthn"), await p.webAuthn.webAuthnAuthenticate(e)
+            await I.nativeModules.ensureModule("discord_webauthn"), await I.webAuthn.webAuthnAuthenticate(e)
         ),
         minimize(e) {
-            p.window.minimize(e);
+            I.window.minimize(e);
         },
         restore(e) {
-            p.window.restore(e);
+            I.window.restore(e);
         },
         maximize(e) {
-            p.window.maximize(e);
+            I.window.maximize(e);
         },
         focus(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            t && (0, f.isWindows)() && this.minimize(null), p.window.focus(t, e);
+            t && (0, E.isWindows)() && this.minimize(null), I.window.focus(t, e);
         },
         blur() {
-            f.isPlatformEmbedded && null != p.window.blur ? p.window.blur() : window.blur();
+            E.isPlatformEmbedded && null != I.window.blur ? I.window.blur() : window.blur();
         },
         fullscreen(e) {
-            p.window.fullscreen(e);
+            I.window.fullscreen(e);
         },
         close(e) {
-            p.window.close(e);
+            I.window.close(e);
         },
         clearNavigationHistory() {
-            W(d.NAVIGATION_HISTORY_CLEAR);
+            Y(c.NAVIGATION_HISTORY_CLEAR);
         },
         setAlwaysOnTop(e, t) {
-            "function" == typeof p.window.setAlwaysOnTop && p.window.setAlwaysOnTop(e, t);
+            "function" == typeof I.window.setAlwaysOnTop && I.window.setAlwaysOnTop(e, t);
         },
         async isAlwaysOnTop(e) {
             let t = !1;
-            return "function" == typeof p.window.isAlwaysOnTop && (t = await p.window.isAlwaysOnTop(e)), t;
+            return "function" == typeof I.window.isAlwaysOnTop && (t = await I.window.isAlwaysOnTop(e)), t;
         },
         showInactive(e) {
-            "function" == typeof p?.window?.showInactive && p.window.showInactive(e);
+            "function" == typeof I?.window?.showInactive && I.window.showInactive(e);
         },
         setMinimumSize(e, t) {
-            p?.window?.setMinimumSize?.(e, t);
+            I?.window?.setMinimumSize?.(e, t);
         },
         setTrafficLightPosition(e) {
-            if (f.isPlatformEmbedded && "darwin" === (0, f.getPlatformName)())
+            if (E.isPlatformEmbedded && "darwin" === (0, E.getPlatformName)())
                 try {
-                    this.sendIPC(d.WINDOW_SET_TRAFFIC_LIGHT_POSITION, e);
+                    this.sendIPC(c.WINDOW_SET_TRAFFIC_LIGHT_POSITION, e);
                 } catch (e) {}
         },
         purgeMemory() {
-            f.isPlatformEmbedded && p.processUtils.purgeMemory();
+            E.isPlatformEmbedded && I.processUtils.purgeMemory();
         },
         updateCrashReporter(e) {
-            p.crashReporter.updateCrashReporter(e);
+            I.crashReporter.updateCrashReporter(e);
         },
         triggerJSException(e) {
-            p.crashReporter.triggerJSException(e);
+            I.crashReporter.triggerJSException(e);
         },
         flushDNSCache() {
-            f.isPlatformEmbedded && p.processUtils.flushDNSCache();
+            E.isPlatformEmbedded && I.processUtils.flushDNSCache();
         },
-        supportsFeature: (e) => p.features.supports(e),
+        supportsFeature: (e) => I.features.supports(e),
         getEnableHardwareAcceleration: () =>
-            !f.isPlatformEmbedded || (!__OVERLAY__ && p.gpuSettings.getEnableHardwareAcceleration()),
+            !E.isPlatformEmbedded || (!__OVERLAY__ && I.gpuSettings.getEnableHardwareAcceleration()),
         setEnableHardwareAcceleration(e) {
-            p.gpuSettings.setEnableHardwareAcceleration(e);
+            I.gpuSettings.setEnableHardwareAcceleration(e);
         },
         setOpenH264Enabled(e) {
-            p?.settings?.set?.("openH264Enabled", e);
+            I?.settings?.set?.("openH264Enabled", e);
         },
         setChromiumSwitches(e) {
-            p.gpuSettings.setChromiumSwitches(e);
+            I.gpuSettings.setChromiumSwitches(e);
         },
         setSetting(e, t) {
-            p.gpuSettings.setSetting?.(e, t);
+            I.gpuSettings.setSetting?.(e, t);
         },
-        getOpenOnStart: async () => (await p.app.getOpenOnStart?.()) ?? (await p.settings.get("OPEN_ON_STARTUP", !0)),
+        getOpenOnStart: async () => (await I.app.getOpenOnStart?.()) ?? (await I.settings.get("OPEN_ON_STARTUP", !0)),
         getGPUDriverVersions() {
-            return (0, f.isWindows)() && null != this.getDiscordUtils().getGPUDriverVersions
+            return (0, E.isWindows)() && null != this.getDiscordUtils().getGPUDriverVersions
                 ? this.getDiscordUtils().getGPUDriverVersions()
                 : Promise.resolve(Object.freeze({}));
         },
-        setZoomFactor: (e) => !!f.isPlatformEmbedded && (p.window.setZoomFactor(e), !0),
+        setZoomFactor: (e) => !!E.isPlatformEmbedded && (I.window.setZoomFactor(e), !0),
         setBackgroundThrottling(e) {
-            null != p.window.setBackgroundThrottling
-                ? p.window.setBackgroundThrottling(e)
-                : p.window.webContents.setBackgroundThrottling(e);
+            null != I.window.setBackgroundThrottling
+                ? I.window.setBackgroundThrottling(e)
+                : I.window.webContents.setBackgroundThrottling(e);
         },
         setFocusable(e, t) {
-            "function" == typeof p.window.setFocusable && p.window.setFocusable(e, t);
+            "function" == typeof I.window.setFocusable && I.window.setFocusable(e, t);
         },
         pauseFrameEvictor() {
-            p.app.pauseFrameEvictor?.();
+            I.app.pauseFrameEvictor?.();
         },
         unpauseFrameEvictor() {
-            p.app.unpauseFrameEvictor?.();
+            I.app.unpauseFrameEvictor?.();
         },
-        getPreferredSystemLanguages: () => p.app.getPreferredSystemLanguages?.(),
+        getPreferredSystemLanguages: () => I.app.getPreferredSystemLanguages?.(),
         getPidFromDesktopSource(e) {
-            if (!(0, f.isDesktop)() || null == this.getDiscordUtils().getPidFromWindowHandle) return null;
+            if (!(0, E.isDesktop)() || null == this.getDiscordUtils().getPidFromWindowHandle) return null;
             let t = e?.split(":"),
                 n = t?.[0];
             if ("window" === n) {
@@ -747,7 +747,7 @@ let K = {
             return n.startsWith("screen") ? 1 : "prepicked" === n ? 1 : null;
         },
         getDesktopSourceFromPid(e) {
-            if (!(0, f.isWindows)() || null == this.getDiscordUtils().getWindowHandleFromPid || null == e) return null;
+            if (!(0, E.isWindows)() || null == this.getDiscordUtils().getWindowHandleFromPid || null == e) return null;
             let t = this.getDiscordUtils().getWindowHandleFromPid(e);
             return null == t || 0 === t.length ? null : ["window", t, "0"].join(":");
         },
@@ -814,43 +814,43 @@ let K = {
             let { gzipAndBase64Encode: t } = this.getDiscordUtils();
             return t?.(e) ?? Promise.resolve(null);
         },
-        showOpenDialog: (e) => p.fileManager.showOpenDialog({ properties: e }),
+        showOpenDialog: (e) => I.fileManager.showOpenDialog({ properties: e }),
         flushStorageData: () =>
-            f.isPlatformEmbedded
+            E.isPlatformEmbedded
                 ? new Promise((e, t) => {
-                      null != p.processUtils.flushStorageData
-                          ? p.processUtils.flushStorageData((n) => (null != n ? t(Error(n)) : e()))
+                      null != I.processUtils.flushStorageData
+                          ? I.processUtils.flushStorageData((n) => (null != n ? t(Error(n)) : e()))
                           : e();
                   })
                 : Promise.resolve(),
         flushCookies: () =>
-            f.isPlatformEmbedded
+            E.isPlatformEmbedded
                 ? new Promise((e, t) => {
-                      null != p.processUtils.flushCookies
-                          ? p.processUtils.flushCookies((n) => (null != n ? t(Error(n)) : e()))
+                      null != I.processUtils.flushCookies
+                          ? I.processUtils.flushCookies((n) => (null != n ? t(Error(n)) : e()))
                           : e();
                   })
                 : Promise.resolve(),
         setCrashInformation(e, t) {
-            f.isPlatformEmbedded &&
-                p?.processUtils?.setCrashInformation != null &&
-                p.processUtils.setCrashInformation(e, t);
+            E.isPlatformEmbedded &&
+                I?.processUtils?.setCrashInformation != null &&
+                I.processUtils.setCrashInformation(e, t);
         },
         blockDisplaySleep: () =>
-            f.isPlatformEmbedded && null != p.powerSaveBlocker ? p.powerSaveBlocker.blockDisplaySleep() : null,
+            E.isPlatformEmbedded && null != I.powerSaveBlocker ? I.powerSaveBlocker.blockDisplaySleep() : null,
         unblockDisplaySleep(e) {
-            f.isPlatformEmbedded && null != p.powerSaveBlocker && p.powerSaveBlocker.unblockDisplaySleep(e);
+            E.isPlatformEmbedded && null != I.powerSaveBlocker && I.powerSaveBlocker.unblockDisplaySleep(e);
         },
         cleanupDisplaySleep() {
-            f.isPlatformEmbedded && null != p.powerSaveBlocker && p.powerSaveBlocker.cleanupDisplaySleep();
+            E.isPlatformEmbedded && null != I.powerSaveBlocker && I.powerSaveBlocker.cleanupDisplaySleep();
         },
         relaunch() {
-            f.isPlatformEmbedded && p.app.relaunch();
+            E.isPlatformEmbedded && I.app.relaunch();
         },
         makeChunkedRequest(e, t, n) {
-            let i = `${(0, u.TP)()}${e}`;
-            if (!f.isPlatformEmbedded) return Promise.reject(Error("Not embedded!"));
-            if (null == p.http) return Promise.reject(Error("HTTP module not available"));
+            let i = `${(0, d.TP)()}${e}`;
+            if (!E.isPlatformEmbedded) return Promise.reject(Error("Not embedded!"));
+            if (null == I.http) return Promise.reject(Error("HTTP module not available"));
             let {
                     method: r,
                     maxBps: s,
@@ -858,29 +858,29 @@ let K = {
                     chunkInterval: o,
                     contentType: l,
                 } = { maxBps: 8e3, chunkInterval: 50, contentType: "application/json", ...n },
-                _ = t;
-            "application/json" === l && (_ = JSON.stringify(t));
-            let d = (o / 1e3) * s,
-                c = Math.ceil(_.length / d),
-                E = Array(c);
-            for (let e = 0; e < c; e++) {
-                let t = e * d;
-                E[e] = _.substring(t, t + d);
+                u = t;
+            "application/json" === l && (u = JSON.stringify(t));
+            let c = (o / 1e3) * s,
+                _ = Math.ceil(u.length / c),
+                f = Array(_);
+            for (let e = 0; e < _; e++) {
+                let t = e * c;
+                f[e] = u.substring(t, t + c);
             }
             return new Promise((e, t) => {
-                null != p.http &&
-                    p.http.makeChunkedRequest(
+                null != I.http &&
+                    I.http.makeChunkedRequest(
                         i,
-                        E,
+                        f,
                         { method: r, chunkInterval: o, contentType: l, token: a },
                         (n, i) => (null != n ? t(n) : i.status >= 400 ? t(Error(i.body)) : void e(i)),
                     );
             });
         },
         submitLiveCrashReport(e) {
-            if (!(0, f.isWindows)() || null == this.getDiscordUtils().submitLiveCrashReport) return Promise.resolve();
+            if (!(0, E.isWindows)() || null == this.getDiscordUtils().submitLiveCrashReport) return Promise.resolve();
             let t = this.getCrashReporterMetadata(),
-                n = p.app.getReleaseChannel(),
+                n = I.app.getReleaseChannel(),
                 i = t?.sentry;
             return this.getDiscordUtils().submitLiveCrashReport(n, { ...i, ...e });
         },
@@ -889,7 +889,7 @@ let K = {
             return null != t && (t(e), !0);
         },
         setApplicationBackgroundColor(e) {
-            this.sendIPC(d.SETTINGS_UPDATE_BACKGROUND_COLOR, e);
+            this.sendIPC(c.SETTINGS_UPDATE_BACKGROUND_COLOR, e);
         },
         initializeExitHook() {
             let { initializeExitHook: e } = this.getDiscordUtils();
@@ -939,7 +939,7 @@ let K = {
         GetSystemServicePerformanceMonitorSnapshot(e) {
             let t,
                 { getSystemServicePerformanceMonitorSnapshot: n } = this.getDiscordUtils();
-            if (null == n) return Promise.reject(new _.Fh());
+            if (null == n) return Promise.reject(new u.Fh());
             let i = new Promise((e, n) => {
                 t = setTimeout(() => n(Error("Timed out waiting for performance snapshot")), 1e3);
             });
@@ -1024,28 +1024,28 @@ let K = {
         },
         fetchRiotGamesLiveClientData(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            return f.isPlatformEmbedded
-                ? null == p.riotGames
+            return E.isPlatformEmbedded
+                ? null == I.riotGames
                     ? Promise.reject(Error("Riot Games module not available"))
-                    : p.riotGames.fetchLiveClientData(e, t)
+                    : I.riotGames.fetchLiveClientData(e, t)
                 : Promise.reject(Error("Not embedded!"));
         },
         appViewed() {
-            (0, f.isDesktop)() && (performance.mark("app_viewed"), this.sendIPC(d.APP_VIEWED));
+            (0, E.isDesktop)() && (performance.mark("app_viewed"), this.sendIPC(c.APP_VIEWED));
         },
         appFirstRenderAfterReadyPayload() {
-            (0, f.isDesktop)() &&
+            (0, E.isDesktop)() &&
                 (performance.mark("app_first_render_after_ready_payload"),
-                this.sendIPC(d.APP_FIRST_RENDER_AFTER_READY_PAYLOAD));
+                this.sendIPC(c.APP_FIRST_RENDER_AFTER_READY_PAYLOAD));
         },
         appLoaded() {
-            W(d.APP_LOADED);
+            Y(c.APP_LOADED);
         },
         indexLoadedAsync() {
-            W(d.APP_ASYNC_INDEX_TSX_LOADED);
+            Y(c.APP_ASYNC_INDEX_TSX_LOADED);
         },
         setUseRequireModuleCache(e) {
-            y = e;
+            O = e;
         },
     },
-    j = K;
+    K = W;

@@ -1013,7 +1013,7 @@ var th = n(997117),
         "idealIssuer.selectField.title": "Bank",
         "idealIssuer.selectField.placeholder": "Select your bank",
         "creditCard.success": "Payment Successful",
-        loading: "Loading…",
+        loading: "Loading\u2026",
         continue: "Continue",
         continueTo: "Continue to",
         "wechatpay.timetopay": "You have %@ to pay",
@@ -1240,7 +1240,7 @@ var th = n(997117),
         "ctp.otp.resendCode": "Resend code",
         "ctp.otp.codeResent": "Code resent",
         "ctp.otp.title": "Access your Click to Pay cards",
-        "ctp.otp.subtitle": "Enter the code %@ sent to %@ to verify it‘s you.",
+        "ctp.otp.subtitle": "Enter the code %@ sent to %@ to verify it\u2018s you.",
         "ctp.emptyProfile.message": "No cards registered in this Click to Pay profile",
         "ctp.separatorText": "or use",
         "ctp.cards.title": "Complete payment with Click to Pay",
@@ -16491,7 +16491,7 @@ var u5 = (function () {
                                             case 4:
                                                 (t = e.sent.maskedValidationChannel),
                                                     (this.identityValidationData = {
-                                                        maskedShopperContact: t.replace(/\*/g, "•"),
+                                                        maskedShopperContact: t.replace(/\*/g, "\u2022"),
                                                         selectedNetwork: uQ[this.validationSchemeSdk.schemeName],
                                                     }),
                                                     this.setState(u3.OneTimePassword);
@@ -17873,7 +17873,7 @@ var d_ = function (e) {
                     { className: tr()({ "adyen-checkout-ctp__card-list-single-card-expired": t.isExpired }) },
                     t.title,
                     " ",
-                    "•••• ".concat(t.panLastFour),
+                    "\u2022\u2022\u2022\u2022 ".concat(t.panLastFour),
                 ),
                 t.isExpired &&
                     eH("span", { className: "adyen-checkout-ctp__expired-label" }, r.get("ctp.cards.expiredCard")),
@@ -17902,7 +17902,11 @@ var d_ = function (e) {
                         var t;
                         return {
                             icon: e.artUri || i()(e.scheme),
-                            name: H()((t = "".concat(dC() ? "" : e.title, " •••• "))).call(t, e.panLastFour, " "),
+                            name: H()((t = "".concat(dC() ? "" : e.title, " \u2022\u2022\u2022\u2022 "))).call(
+                                t,
+                                e.panLastFour,
+                                " ",
+                            ),
                             secondaryText: e.isExpired && o.get("ctp.cards.expiredCard"),
                             id: e.srcDigitalCardId,
                             disabled: e.isExpired,
@@ -18066,7 +18070,9 @@ var dx = function (e) {
                                 : n.get("payButton.with", {
                                       values: {
                                           value: rs(n, o),
-                                          maskedData: "•••• ".concat(null == y ? void 0 : y.panLastFour),
+                                          maskedData: "\u2022\u2022\u2022\u2022 ".concat(
+                                              null == y ? void 0 : y.panLastFour,
+                                          ),
                                       },
                                   })
                             : n.get("payButton"),
@@ -18723,7 +18729,7 @@ var dD = (function () {
                 key: "displayName",
                 get: function () {
                     return this.props.storedPaymentMethodId
-                        ? "•••• ".concat(this.props.lastFour)
+                        ? "\u2022\u2022\u2022\u2022 ".concat(this.props.lastFour)
                         : this.props.name || n.type;
                 },
             },
@@ -19864,7 +19870,13 @@ function d1(e) {
             { className: "adyen-checkout__campaign-content" },
             i && eH("img", { src: i, className: "adyen-checkout__campaign-logo", alt: a }),
             a && eH("div", { className: "adyen-checkout__campaign-title" }, a),
-            n && eH("div", { className: "adyen-checkout__campaign-description" }, n, (void 0 === s ? "" : s) && " ›"),
+            n &&
+                eH(
+                    "div",
+                    { className: "adyen-checkout__campaign-description" },
+                    n,
+                    (void 0 === s ? "" : s) && " \u203A",
+                ),
         ),
     );
 }
@@ -20058,7 +20070,7 @@ function d6(e) {
                                     p("loading"), r({ data: { amount: v }, isValid: f });
                                 },
                                 disabled: "loading" === d,
-                                label: "".concat(s.get("notNowButton"), " ›"),
+                                label: "".concat(s.get("notNowButton"), " \u203A"),
                             }),
                     ),
                 )
@@ -21239,7 +21251,7 @@ function px(e) {
                             rel: "noopener noreferrer",
                         },
                         i.get("voucher.readInstructions"),
-                        " ›",
+                        " \u203A",
                     ),
             ),
             o.amount &&
@@ -27550,7 +27562,7 @@ var mp = function (e) {
                                   "div",
                                   { className: "adyen-checkout__payment-method__header__title" },
                                   eH(mi, { altDescription: e.name, type: e.type, src: o[e.type] || s()(e.type) }),
-                                  "•••• ",
+                                  "\u2022\u2022\u2022\u2022 ",
                                   e.lastFour,
                               ),
                               a &&
@@ -28886,7 +28898,7 @@ var mW = (function () {
                 get: function () {
                     var e;
                     return this.props.storedPaymentMethodId && this.props.bankAccountNumber
-                        ? "•••• ".concat(tc()((e = this.props.bankAccountNumber)).call(e, -4))
+                        ? "\u2022\u2022\u2022\u2022 ".concat(tc()((e = this.props.bankAccountNumber)).call(e, -4))
                         : this.props.name;
                 },
             },

@@ -75,58 +75,109 @@ let w = new WeakMap();
 var M = n(498430),
     P = {};
 P = {
-    "ar-AE": { removeButtonLabel: "إزالة", removeDescription: "اضغط على مفتاح DELETE لإزالة علامة." },
-    "bg-BG": { removeButtonLabel: "Премахване", removeDescription: "Натиснете Delete, за да премахнете маркера." },
-    "cs-CZ": { removeButtonLabel: "Odebrat", removeDescription: "Stisknut\xedm kl\xe1vesy Delete odeberete značku." },
+    "ar-AE": {
+        removeButtonLabel: "\u0625\u0632\u0627\u0644\u0629",
+        removeDescription:
+            "\u0627\u0636\u063A\u0637 \u0639\u0644\u0649 \u0645\u0641\u062A\u0627\u062D DELETE \u0644\u0625\u0632\u0627\u0644\u0629 \u0639\u0644\u0627\u0645\u0629.",
+    },
+    "bg-BG": {
+        removeButtonLabel: "\u041F\u0440\u0435\u043C\u0430\u0445\u0432\u0430\u043D\u0435",
+        removeDescription:
+            "\u041D\u0430\u0442\u0438\u0441\u043D\u0435\u0442\u0435 Delete, \u0437\u0430 \u0434\u0430 \u043F\u0440\u0435\u043C\u0430\u0445\u043D\u0435\u0442\u0435 \u043C\u0430\u0440\u043A\u0435\u0440\u0430.",
+    },
+    "cs-CZ": {
+        removeButtonLabel: "Odebrat",
+        removeDescription: "Stisknut\xedm kl\xe1vesy Delete odeberete zna\u010Dku.",
+    },
     "da-DK": { removeButtonLabel: "Fjern", removeDescription: "Tryk p\xe5 Slet for at fjerne tag." },
     "de-DE": {
         removeButtonLabel: "Entfernen",
-        removeDescription: "Auf „L\xf6schen“ dr\xfccken, um das Tag zu entfernen.",
+        removeDescription: "Auf \u201EL\xf6schen\u201C dr\xfccken, um das Tag zu entfernen.",
     },
-    "el-GR": { removeButtonLabel: "Κατάργηση", removeDescription: "Πατήστε Διαγραφή για να καταργήσετε την ετικέτα." },
+    "el-GR": {
+        removeButtonLabel: "\u039A\u03B1\u03C4\u03AC\u03C1\u03B3\u03B7\u03C3\u03B7",
+        removeDescription:
+            "\u03A0\u03B1\u03C4\u03AE\u03C3\u03C4\u03B5 \u0394\u03B9\u03B1\u03B3\u03C1\u03B1\u03C6\u03AE \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03BA\u03B1\u03C4\u03B1\u03C1\u03B3\u03AE\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03B5\u03C4\u03B9\u03BA\u03AD\u03C4\u03B1.",
+    },
     "en-US": { removeDescription: "Press Delete to remove tag.", removeButtonLabel: "Remove" },
     "es-ES": { removeButtonLabel: "Quitar", removeDescription: "Pulse Eliminar para quitar la etiqueta." },
     "et-EE": { removeButtonLabel: "Eemalda", removeDescription: "Sildi eemaldamiseks vajutage kustutusklahvi Delete." },
     "fi-FI": { removeButtonLabel: "Poista", removeDescription: "Poista tunniste painamalla Poista-painiketta." },
     "fr-FR": {
         removeButtonLabel: "Supprimer",
-        removeDescription: "Appuyez sur Supprimer pour supprimer l’\xe9tiquette.",
+        removeDescription: "Appuyez sur Supprimer pour supprimer l\u2019\xe9tiquette.",
     },
-    "he-IL": { removeButtonLabel: "הסר", removeDescription: "לחץ על מחק כדי להסיר תג." },
+    "he-IL": {
+        removeButtonLabel: "\u05D4\u05E1\u05E8",
+        removeDescription:
+            "\u05DC\u05D7\u05E5 \u05E2\u05DC \u05DE\u05D7\u05E7 \u05DB\u05D3\u05D9 \u05DC\u05D4\u05E1\u05D9\u05E8 \u05EA\u05D2.",
+    },
     "hr-HR": { removeButtonLabel: "Ukloni", removeDescription: "Pritisnite Delete za uklanjanje oznake." },
     "hu-HU": {
         removeButtonLabel: "Elt\xe1vol\xedt\xe1s",
-        removeDescription: "Nyomja meg a Delete billentyűt a c\xedmke elt\xe1vol\xedt\xe1s\xe1hoz.",
+        removeDescription: "Nyomja meg a Delete billenty\u0171t a c\xedmke elt\xe1vol\xedt\xe1s\xe1hoz.",
     },
     "it-IT": { removeButtonLabel: "Rimuovi", removeDescription: "Premi Elimina per rimuovere il tag." },
-    "ja-JP": { removeButtonLabel: "削除", removeDescription: "タグを削除するには、Delete キーを押します。" },
-    "ko-KR": { removeButtonLabel: "제거", removeDescription: "태그를 제거하려면 Delete 키를 누르십시오." },
-    "lt-LT": {
-        removeButtonLabel: "Pašalinti",
-        removeDescription: "Norėdami pašalinti žymą, paspauskite „Delete“ klavišą.",
+    "ja-JP": {
+        removeButtonLabel: "\u524A\u9664",
+        removeDescription:
+            "\u30BF\u30B0\u3092\u524A\u9664\u3059\u308B\u306B\u306F\u3001Delete \u30AD\u30FC\u3092\u62BC\u3057\u307E\u3059\u3002",
     },
-    "lv-LV": { removeButtonLabel: "Noņemt", removeDescription: "Nospiediet Delete [Dzēst], lai noņemtu tagu." },
+    "ko-KR": {
+        removeButtonLabel: "\uC81C\uAC70",
+        removeDescription:
+            "\uD0DC\uADF8\uB97C \uC81C\uAC70\uD558\uB824\uBA74 Delete \uD0A4\uB97C \uB204\uB974\uC2ED\uC2DC\uC624.",
+    },
+    "lt-LT": {
+        removeButtonLabel: "Pa\u0161alinti",
+        removeDescription:
+            "Nor\u0117dami pa\u0161alinti \u017Eym\u0105, paspauskite \u201EDelete\u201C klavi\u0161\u0105.",
+    },
+    "lv-LV": {
+        removeButtonLabel: "No\u0146emt",
+        removeDescription: "Nospiediet Delete [Dz\u0113st], lai no\u0146emtu tagu.",
+    },
     "nb-NO": { removeButtonLabel: "Fjern", removeDescription: "Trykk p\xe5 Slett for \xe5 fjerne taggen." },
     "nl-NL": { removeButtonLabel: "Verwijderen", removeDescription: "Druk op Verwijderen om de tag te verwijderen." },
-    "pl-PL": { removeButtonLabel: "Usuń", removeDescription: "Naciśnij Usuń, aby usunąć znacznik." },
+    "pl-PL": {
+        removeButtonLabel: "Usu\u0144",
+        removeDescription: "Naci\u015Bnij Usu\u0144, aby usun\u0105\u0107 znacznik.",
+    },
     "pt-BR": { removeButtonLabel: "Remover", removeDescription: "Pressione Delete para remover a tag." },
     "pt-PT": { removeButtonLabel: "Eliminar", removeDescription: "Prima Delete para eliminar a tag." },
     "ro-RO": {
-        removeButtonLabel: "\xcendepărtaţi",
-        removeDescription: "Apăsați pe Delete (Ștergere) pentru a elimina eticheta.",
+        removeButtonLabel: "\xcendep\u0103rta\u0163i",
+        removeDescription: "Ap\u0103sa\u021Bi pe Delete (\u0218tergere) pentru a elimina eticheta.",
     },
-    "ru-RU": { removeButtonLabel: "Удалить", removeDescription: "Нажмите DELETE, чтобы удалить тег." },
+    "ru-RU": {
+        removeButtonLabel: "\u0423\u0434\u0430\u043B\u0438\u0442\u044C",
+        removeDescription:
+            "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 DELETE, \u0447\u0442\u043E\u0431\u044B \u0443\u0434\u0430\u043B\u0438\u0442\u044C \u0442\u0435\u0433.",
+    },
     "sk-SK": {
-        removeButtonLabel: "Odstr\xe1niť",
-        removeDescription: "Ak chcete odstr\xe1niť značku, stlačte kl\xe1ves Delete.",
+        removeButtonLabel: "Odstr\xe1ni\u0165",
+        removeDescription: "Ak chcete odstr\xe1ni\u0165 zna\u010Dku, stla\u010Dte kl\xe1ves Delete.",
     },
     "sl-SI": { removeButtonLabel: "Odstrani", removeDescription: "Pritisnite Delete, da odstranite oznako." },
-    "sr-SP": { removeButtonLabel: "Ukloni", removeDescription: "Pritisnite Obriši da biste uklonili oznaku." },
+    "sr-SP": { removeButtonLabel: "Ukloni", removeDescription: "Pritisnite Obri\u0161i da biste uklonili oznaku." },
     "sv-SE": { removeButtonLabel: "Ta bort", removeDescription: "Tryck p\xe5 Radera f\xf6r att ta bort taggen." },
-    "tr-TR": { removeButtonLabel: "Kaldır", removeDescription: "Etiketi kaldırmak i\xe7in Sil tuşuna basın." },
-    "uk-UA": { removeButtonLabel: "Вилучити", removeDescription: "Натисніть Delete, щоб вилучити тег." },
-    "zh-CN": { removeButtonLabel: "删除", removeDescription: "按下“删除”以删除标记。" },
-    "zh-TW": { removeButtonLabel: "移除", removeDescription: "按 Delete 鍵以移除標記。" },
+    "tr-TR": {
+        removeButtonLabel: "Kald\u0131r",
+        removeDescription: "Etiketi kald\u0131rmak i\xe7in Sil tu\u015Funa bas\u0131n.",
+    },
+    "uk-UA": {
+        removeButtonLabel: "\u0412\u0438\u043B\u0443\u0447\u0438\u0442\u0438",
+        removeDescription:
+            "\u041D\u0430\u0442\u0438\u0441\u043D\u0456\u0442\u044C Delete, \u0449\u043E\u0431 \u0432\u0438\u043B\u0443\u0447\u0438\u0442\u0438 \u0442\u0435\u0433.",
+    },
+    "zh-CN": {
+        removeButtonLabel: "\u5220\u9664",
+        removeDescription: "\u6309\u4E0B\u201C\u5220\u9664\u201D\u4EE5\u5220\u9664\u6807\u8BB0\u3002",
+    },
+    "zh-TW": {
+        removeButtonLabel: "\u79FB\u9664",
+        removeDescription: "\u6309 Delete \u9375\u4EE5\u79FB\u9664\u6A19\u8A18\u3002",
+    },
 };
 var x = n(807177),
     U = n(132716),

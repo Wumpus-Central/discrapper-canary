@@ -1575,7 +1575,7 @@ function tt(e) {
                                 children: (0, a.jsx)(er.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
-                                    children: [k.activity.state, k.activity.details].filter(Boolean).join(" › "),
+                                    children: [k.activity.state, k.activity.details].filter(Boolean).join(" \u203A "),
                                 }),
                             }),
                     ],
@@ -1670,7 +1670,7 @@ let tN = function (e) {
                     : ("" !== L && null != L && e.push(L),
                       t.activity?.state != null && "" !== t.activity.state && e.push(t.activity.state),
                       t.activity?.details != null && "" !== t.activity.details && e.push(t.activity.details)),
-                e.join(" › ")
+                e.join(" \u203A ")
             );
         }, [L, h?.name, I, t.activity?.state, t.activity?.details, t.type]),
         R = n.useCallback(() => {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => V, M: () => k });
+n.d(e, { A: () => V, M: () => H });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -8,25 +8,25 @@ var i = n(627968),
     o = n(276293),
     c = n(56059),
     u = n(834730),
-    m = n(534514),
-    N = n(933832),
-    h = n(821609),
-    I = n(404778),
-    E = n(58149),
-    g = n(201991),
-    A = n(419354),
-    S = n(97808),
-    _ = n(778712),
-    f = n(518009),
-    x = n(408278),
-    T = n(477155),
-    D = n(935286),
-    j = n(717421),
-    p = n(985018),
-    O = n(926081);
-function G(e) {
-    let { testimonial: t, className: n } = e,
-        { message: l, profilePic: s, adminTitle: r, emphasisColor: a = "interactive-text-default" } = t;
+    E = n(534514),
+    I = n(933832),
+    N = n(821609),
+    S = n(404778),
+    m = n(95561),
+    _ = n(201991),
+    g = n(873174),
+    h = n(97808),
+    T = n(778712),
+    A = n(518009),
+    D = n(408278),
+    O = n(477155),
+    f = n(935286),
+    G = n(717421),
+    p = n(375708),
+    x = n(926081);
+function L(t) {
+    let { testimonial: e, className: n } = t,
+        { message: l, profilePic: s, adminTitle: r, emphasisColor: a = "interactive-text-default" } = e;
     return (0, i.jsxs)("div", {
         className: n,
         children: [
@@ -34,59 +34,59 @@ function G(e) {
                 variant: "text-sm/medium",
                 color: "text-default",
                 children: p.intl.format(l, {
-                    testimonialHook: (e, t) =>
-                        (0, i.jsx)(u.E, { tag: "span", variant: "text-sm/bold", color: a, children: e }, t),
+                    testimonialHook: (t, e) =>
+                        (0, i.jsx)(u.E, { tag: "span", variant: "text-sm/bold", color: a, children: t }, e),
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: O.f1,
+                className: x.f1,
                 children: [
-                    (0, i.jsx)(S.eu, { src: s, size: _._3.SIZE_16, "aria-hidden": !0 }),
+                    (0, i.jsx)(h.eu, { src: s, size: T._3.SIZE_16, "aria-hidden": !0 }),
                     (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-default", children: r }),
                 ],
             }),
         ],
     });
 }
-function v(e) {
-    let { testimonials: t } = e,
+function j(t) {
+    let { testimonials: e } = t,
         [[n, s], r] = l.useState([0, "right"]),
         a = l.useCallback(() => {
-            r((e) => {
-                let [n] = e;
-                return 0 === n ? [t.length - 1, "left"] : [n - 1, "left"];
+            r((t) => {
+                let [n] = t;
+                return 0 === n ? [e.length - 1, "left"] : [n - 1, "left"];
             });
-        }, [r, t.length]),
+        }, [r, e.length]),
         d = l.useCallback(() => {
-            r((e) => {
-                let [n] = e;
-                return [(n + 1) % t.length, "right"];
+            r((t) => {
+                let [n] = t;
+                return [(n + 1) % e.length, "right"];
             });
-        }, [r, t.length]),
-        o = t[n],
-        c = l.useCallback((e, t, n, l) => (0, i.jsx)(C, { item: t, state: n, cleanup: l, direction: s }, e), [s]);
+        }, [r, e.length]),
+        o = e[n],
+        c = l.useCallback((t, e, n, l) => (0, i.jsx)(C, { item: e, state: n, cleanup: l, direction: s }, t), [s]);
     return (0, i.jsxs)("div", {
-        className: O.FD,
+        className: x.FD,
         children: [
             (0, i.jsx)("div", {
-                className: O.nI,
-                children: (0, i.jsx)(f.F, { items: [o], renderItem: c, getItemKey: (e) => e.adminTitle }),
+                className: x.nI,
+                children: (0, i.jsx)(A.F, { items: [o], renderItem: c, getItemKey: (t) => t.adminTitle }),
             }),
-            (0, i.jsx)(u.E, { variant: "text-lg/bold", className: O.wV, children: "“" }),
+            (0, i.jsx)(u.E, { variant: "text-lg/bold", className: x.wV, children: "\u201C" }),
             (0, i.jsxs)("div", {
-                className: O.Jv,
+                className: x.Jv,
                 children: [
-                    (0, i.jsx)(x.K, {
+                    (0, i.jsx)(D.K, {
                         size: "sm",
                         variant: "secondary",
-                        icon: T.r,
+                        icon: O.r,
                         onClick: a,
                         "aria-label": p.intl.string(p.t["13/7kX"]),
                     }),
-                    (0, i.jsx)(x.K, {
+                    (0, i.jsx)(D.K, {
                         size: "sm",
                         variant: "secondary",
-                        icon: D.E,
+                        icon: f.E,
                         onClick: d,
                         "aria-label": p.intl.string(p.t.PDTjLN),
                     }),
@@ -95,17 +95,17 @@ function v(e) {
         ],
     });
 }
-function C(e) {
-    let { item: t, state: n, cleanup: l, direction: s } = e,
-        [r] = (0, j.z)(
+function C(t) {
+    let { item: e, state: n, cleanup: l, direction: s } = t,
+        [r] = (0, G.z)(
             () => {
                 switch (n) {
-                    case f.wL.ENTERED:
+                    case A.wL.ENTERED:
                         return {
                             from: { transform: "right" === s ? "translateX(150%)" : "translate(-150%)" },
                             to: { transform: "translateX(0%)" },
                         };
-                    case f.wL.YEETED:
+                    case A.wL.YEETED:
                         return {
                             from: { transform: "translateX(0%)" },
                             to: { transform: "right" === s ? "translateX(-150%)" : "translate(150%)" },
@@ -118,20 +118,20 @@ function C(e) {
             "respect-motion-settings",
             [n],
         );
-    return (0, i.jsx)(A.animated.div, { style: r, children: (0, i.jsx)(G, { className: O.EV, testimonial: t }) });
+    return (0, i.jsx)(g.animated.div, { style: r, children: (0, i.jsx)(L, { className: x.EV, testimonial: e }) });
 }
-var L = n(283012),
-    b = n(913423),
-    R = n(71393),
-    y = n(287809),
-    U = n(954571),
-    P = n(555337),
+var R = n(283012),
+    v = n(913423),
+    P = n(71393),
+    U = n(287809),
+    b = n(174459),
+    y = n(555337),
     M = n(527678),
     w = n(400812),
     B = n(652215),
-    H = n(174154);
-function k(e) {
-    let { isTooltip: t = !1 } = e,
+    F = n(174154);
+function H(t) {
+    let { isTooltip: e = !1 } = t,
         n = [
             {
                 emoji: "\uD83E\uDDD9",
@@ -152,44 +152,44 @@ function k(e) {
                 selected: !1,
             },
         ];
-    t && n.pop();
-    let l = t
+    e && n.pop();
+    let l = e
             ? (0, i.jsx)(u.E, {
                   variant: "text-sm/semibold",
                   color: "text-strong",
                   children: p.intl.string(p.t.nTI2mQ),
               })
-            : (0, i.jsx)(m.D, { variant: "heading-md/semibold", children: p.intl.string(p.t.g1OQtu) }),
-        s = t
+            : (0, i.jsx)(E.D, { variant: "heading-md/semibold", children: p.intl.string(p.t.g1OQtu) }),
+        s = e
             ? (0, i.jsx)(u.E, { variant: "text-xxs/normal", children: p.intl.format(p.t.hGwDPV, {}) })
             : (0, i.jsx)(u.E, { variant: "text-xs/normal", children: p.intl.format(p.t["8XLD3r"], {}) });
     return (0, i.jsxs)("div", {
-        className: r()(H.SI, H.f5, { [H.YL]: t }),
+        className: r()(F.SI, F.f5, { [F.YL]: e }),
         children: [
             l,
             (0, i.jsx)("div", {
-                className: H.Pf,
-                children: n.map((e, t) => {
-                    let { emoji: n, emojiDescription: l, title: s, selected: a } = e;
+                className: F.Pf,
+                children: n.map((t, e) => {
+                    let { emoji: n, emojiDescription: l, title: s, selected: a } = t;
                     return (0, i.jsxs)(
                         "div",
                         {
-                            className: r()(H.CQ, { [H.wH]: a }),
+                            className: r()(F.CQ, { [F.wH]: a }),
                             children: [
                                 (0, i.jsx)("span", { role: "img", "aria-label": l, children: n }),
                                 (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-strong", children: s }),
                                 a &&
                                     (0, i.jsx)("div", {
-                                        className: H.ct,
-                                        children: (0, i.jsx)(N.A, {
+                                        className: F.ct,
+                                        children: (0, i.jsx)(I.A, {
                                             size: "md",
                                             color: "currentColor",
-                                            className: H.AI,
+                                            className: F.AI,
                                         }),
                                     }),
                             ],
                         },
-                        t,
+                        e,
                     );
                 }),
             }),
@@ -197,8 +197,8 @@ function k(e) {
         ],
     });
 }
-function F() {
-    let e = [
+function k() {
+    let t = [
         {
             message: p.t.FUUXXk,
             profilePic:
@@ -224,32 +224,32 @@ function F() {
             adminTitle: p.intl.string(p.t["uvM+xc"]),
         },
     ];
-    return (0, i.jsx)(v, { testimonials: e });
+    return (0, i.jsx)(j, { testimonials: t });
 }
 function V() {
-    let e = (0, a.bG)([P.A], () => P.A.getGuildId()),
-        t = (0, a.bG)([R.A], () => R.A.getGuild(e)),
-        n = (0, a.bG)([y.default], () => y.default.getCurrentUser());
-    return null == e || null == t || null == n
+    let t = (0, a.bG)([y.A], () => y.A.getGuildId()),
+        e = (0, a.bG)([P.A], () => P.A.getGuild(t)),
+        n = (0, a.bG)([U.default], () => U.default.getCurrentUser());
+    return null == t || null == e || null == n
         ? null
         : (0, i.jsxs)("div", {
-              className: H.Zj,
+              className: F.Zj,
               children: [
                   (0, i.jsxs)("div", {
-                      className: H.$P,
+                      className: F.$P,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: H.tU,
+                              className: F.tU,
                               children: [
-                                  (0, i.jsx)(g.Mm, {}),
-                                  (0, i.jsx)(g.j5, { guild: t, mainIslandClassName: H.$h, balloonDogClassName: H.Sb }),
-                                  (0, i.jsx)(g.RA, {}),
+                                  (0, i.jsx)(_.Mm, {}),
+                                  (0, i.jsx)(_.j5, { guild: e, mainIslandClassName: F.$h, balloonDogClassName: F.Sb }),
+                                  (0, i.jsx)(_.RA, {}),
                               ],
                           }),
                           (0, i.jsxs)("div", {
-                              className: H.KF,
+                              className: F.KF,
                               children: [
-                                  (0, i.jsx)(m.D, {
+                                  (0, i.jsx)(E.D, {
                                       variant: "heading-xl/semibold",
                                       children: p.intl.string(p.t.GnKOAx),
                                   }),
@@ -257,37 +257,37 @@ function V() {
                               ],
                           }),
                           (0, i.jsx)("div", {
-                              className: H.JO,
-                              children: (0, i.jsx)(h.$, {
+                              className: F.JO,
+                              children: (0, i.jsx)(N.$, {
                                   variant: "primary",
                                   text: p.intl.string(p.t.RzWDqY),
                                   onClick: function () {
-                                      null != e &&
-                                          (U.default.track(
+                                      null != t &&
+                                          (b.default.track(
                                               B.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
-                                              { ...(0, E.H$)(e), step: w.Hy[w.Hy.LANDING], back: !1, skip: !1 },
+                                              { ...(0, m.H$)(t), step: w.Hy[w.Hy.LANDING], back: !1, skip: !1 },
                                           ),
-                                          (0, M._k)(e, w.Hy.LANDING));
+                                          (0, M._k)(t, w.Hy.LANDING));
                                   },
                                   disabled: !1,
                               }),
                           }),
                       ],
                   }),
-                  (0, i.jsx)(I.c, {}),
-                  (0, i.jsx)(F, {}),
-                  (0, i.jsx)(I.c, {}),
+                  (0, i.jsx)(S.c, {}),
+                  (0, i.jsx)(k, {}),
+                  (0, i.jsx)(S.c, {}),
                   (0, i.jsxs)("div", {
-                      className: H.a7,
+                      className: F.a7,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: H.fP,
+                              className: F.fP,
                               children: [
-                                  (0, i.jsx)(k, {}),
+                                  (0, i.jsx)(H, {}),
                                   (0, i.jsxs)("div", {
-                                      className: H.Ru,
+                                      className: F.Ru,
                                       children: [
-                                          (0, i.jsx)(m.D, {
+                                          (0, i.jsx)(E.D, {
                                               variant: "heading-md/semibold",
                                               children: p.intl.string(p.t.Z7kqKZ),
                                           }),
@@ -300,12 +300,12 @@ function V() {
                               ],
                           }),
                           (0, i.jsxs)("div", {
-                              className: H.fP,
+                              className: F.fP,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: H.Ru,
+                                      className: F.Ru,
                                       children: [
-                                          (0, i.jsx)(m.D, {
+                                          (0, i.jsx)(E.D, {
                                               variant: "heading-md/semibold",
                                               children: p.intl.string(p.t.O4jYEh),
                                           }),
@@ -316,20 +316,20 @@ function V() {
                                       ],
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: r()(H.SI, H.f5),
+                                      className: r()(F.SI, F.f5),
                                       children: [
-                                          (0, i.jsx)(b.A, {
-                                              guildId: e,
+                                          (0, i.jsx)(v.A, {
+                                              guildId: t,
                                               welcomeMessage: { authorIds: [n.id], message: p.intl.string(p.t.hIWAft) },
                                           }),
-                                          (0, i.jsx)(L.v, {
+                                          (0, i.jsx)(R.v, {
                                               title: p.intl.string(p.t["47zu7B"]),
                                               subtitle: p.intl.string(p.t["amoSN/"]),
                                               completed: !0,
                                               Icon: o.N,
                                               variant: "static",
                                           }),
-                                          (0, i.jsx)(L.v, {
+                                          (0, i.jsx)(R.v, {
                                               title: p.intl.string(p.t.EZfTKE),
                                               subtitle: p.intl.string(p.t["/sYelW"]),
                                               completed: !0,
@@ -341,17 +341,17 @@ function V() {
                               ],
                           }),
                           (0, i.jsxs)("div", {
-                              className: H.fP,
+                              className: F.fP,
                               children: [
                                   (0, i.jsx)("div", {
-                                      className: r()(H.SI, H.f5),
+                                      className: r()(F.SI, F.f5),
                                       children: [
                                           {
                                               channelIcon: () =>
                                                   (0, i.jsx)(d.k, {
                                                       size: "xs",
                                                       color: "currentColor",
-                                                      className: H.p,
+                                                      className: F.p,
                                                   }),
                                               channel: p.intl.string(p.t.MXJozL),
                                               selected: !0,
@@ -361,7 +361,7 @@ function V() {
                                                   (0, i.jsx)(o.N, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: H.p,
+                                                      className: F.p,
                                                   }),
                                               channel: p.intl.string(p.t.Pkj0f6),
                                               selected: !0,
@@ -371,7 +371,7 @@ function V() {
                                                   (0, i.jsx)(o.N, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: H.p,
+                                                      className: F.p,
                                                   }),
                                               channel: p.intl.string(p.t["imVD+u"]),
                                               selected: !1,
@@ -381,20 +381,20 @@ function V() {
                                                   (0, i.jsx)(c.b, {
                                                       size: "md",
                                                       color: "currentColor",
-                                                      className: H.p,
+                                                      className: F.p,
                                                   }),
                                               channel: p.intl.string(p.t["Pj/Wpt"]),
                                               selected: !0,
                                           },
-                                      ].map((e, t) => {
-                                          let { channelIcon: n, channel: l, selected: s } = e;
+                                      ].map((t, e) => {
+                                          let { channelIcon: n, channel: l, selected: s } = t;
                                           return (0, i.jsxs)(
                                               "div",
                                               {
-                                                  className: r()(H.CQ, H.p9, { [H.wH]: s }),
+                                                  className: r()(F.CQ, F.p9, { [F.wH]: s }),
                                                   children: [
                                                       (0, i.jsxs)("div", {
-                                                          className: H.Ix,
+                                                          className: F.Ix,
                                                           children: [
                                                               n(),
                                                               (0, i.jsx)(u.E, {
@@ -405,25 +405,25 @@ function V() {
                                                           ],
                                                       }),
                                                       (0, i.jsx)("div", {
-                                                          className: r()(H.kv, { [H.wH]: s }),
+                                                          className: r()(F.kv, { [F.wH]: s }),
                                                           children:
                                                               s &&
-                                                              (0, i.jsx)(N.A, {
+                                                              (0, i.jsx)(I.A, {
                                                                   size: "md",
                                                                   color: "currentColor",
-                                                                  className: H.AI,
+                                                                  className: F.AI,
                                                               }),
                                                       }),
                                                   ],
                                               },
-                                              t,
+                                              e,
                                           );
                                       }),
                                   }),
                                   (0, i.jsxs)("div", {
-                                      className: H.Ru,
+                                      className: F.Ru,
                                       children: [
-                                          (0, i.jsx)(m.D, {
+                                          (0, i.jsx)(E.D, {
                                               variant: "heading-md/semibold",
                                               children: p.intl.string(p.t["3T9aHG"]),
                                           }),
