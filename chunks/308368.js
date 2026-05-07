@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => _ });
 var i = n(636537),
     r = n(228366),
-    s = n(58149),
+    s = n(95561),
     a = n(451909),
     o = n(734057),
     l = n(308528),
-    d = n(720149),
-    _ = n(652215),
-    u = n(381941);
-let c = {
+    u = n(720149),
+    c = n(652215),
+    d = n(381941);
+let _ = {
     updateActivity(e) {
         let {
             applicationId: t,
@@ -18,14 +18,14 @@ let c = {
             token: a = null,
             duration: o = 0,
             closed: l = !1,
-            exePath: d = null,
-            voiceChannelId: u = null,
-            sessionId: c = null,
-            mediaSessionId: E = null,
+            exePath: u = null,
+            voiceChannelId: d = null,
+            sessionId: _ = null,
+            mediaSessionId: f = null,
         } = e;
         r.h.wait(() => r.h.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId: t, duration: o, distributor: n })),
             i.Bo.post({
-                url: _.Rsh.ACTIVITIES,
+                url: c.Rsh.ACTIVITIES,
                 body: {
                     application_id: t,
                     token: a,
@@ -33,10 +33,10 @@ let c = {
                     share_activity: s,
                     distributor: n,
                     closed: l,
-                    exePath: d,
-                    voice_channel_id: u,
-                    session_id: c,
-                    media_session_id: E,
+                    exePath: u,
+                    voice_channel_id: d,
+                    session_id: _,
+                    media_session_id: f,
                 },
                 retries: 1,
                 oldFormErrors: !0,
@@ -59,24 +59,24 @@ let c = {
                 });
     },
     sendActivityInvite(e) {
-        let { channelId: t, type: n, activity: i, content: r, targetUserId: l, location: c } = e,
-            E = o.A.getChannel(t);
-        if (null == E) return Promise.resolve(null);
-        let h = a.Ay.parse(E, r ?? "");
-        return d.A.sendMessage(E.id, h, !1, {
+        let { channelId: t, type: n, activity: i, content: r, targetUserId: l, location: _ } = e,
+            f = o.A.getChannel(t);
+        if (null == f) return Promise.resolve(null);
+        let h = a.Ay.parse(f, r ?? "");
+        return u.A.sendMessage(f.id, h, !1, {
             activityAction: { type: n, activity: i, targetUserId: l },
-            location: u.Hx.ACTIVITY_SHARE,
+            location: d.Hx.ACTIVITY_SHARE,
         }).then(
             (e) => (
-                s.Ay.trackWithMetadata(_.HAw.INVITE_SENT, {
-                    location: c,
-                    invite_type: i.type === _.$pd.LISTENING ? _.G2g.SPOTIFY : _.G2g.APPLICATION,
+                s.Ay.trackWithMetadata(c.HAw.INVITE_SENT, {
+                    location: _,
+                    invite_type: i.type === c.$pd.LISTENING ? c.G2g.SPOTIFY : c.G2g.APPLICATION,
                     application_id: i.application_id,
-                    guild_id: E.getGuildId(),
-                    channel_id: E.id,
+                    guild_id: f.getGuildId(),
+                    channel_id: f.id,
                     message_id: null != e ? e.body.id : null,
                 }),
-                Promise.resolve(E)
+                Promise.resolve(f)
             ),
             (e) => Promise.reject(e),
         );
@@ -89,12 +89,9 @@ let c = {
     },
     async getJoinSecret(e, t, n, r, s) {
         let a = {};
-        return (
-            null != r && (a.channel_id = r),
-            null != s && (a.message_id = s),
-            (await i.Bo.get({ url: _.Rsh.USER_ACTIVITY_JOIN(e, t, n), retries: 3, query: a, rejectWithError: !1 })).body
-                .secret
-        );
+        null != r && (a.channel_id = r), null != s && (a.message_id = s);
+        let o = await i.Bo.get({ url: c.Rsh.USER_ACTIVITY_JOIN(e, t, n), retries: 3, query: a, rejectWithError: !1 });
+        return { secret: o.body.secret, joinUrl: o.body.join_url };
     },
     async subscribeActivities(e) {
         let t = e.map((e) => {
@@ -103,7 +100,7 @@ let c = {
         });
         return (
             await i.Bo.post({
-                url: _.Rsh.USER_ACTIVITY_SUBSCRIBE,
+                url: c.Rsh.USER_ACTIVITY_SUBSCRIBE,
                 body: { subscriptions: t },
                 retries: 1,
                 rejectWithError: !1,

@@ -1,60 +1,73 @@
 "use strict";
 n.d(t, { Ay: () => H, xt: () => B });
 var i = n(488428),
-    r = n(110259),
+    r = n(562708),
     s = n(179771),
     a = n(665260),
     o = n(636537),
     l = n(933681),
-    d = n(228366),
-    _ = n(62583),
-    u = n(627363),
-    c = n(587895),
-    E = n(306044),
+    u = n(228366),
+    c = n(62583),
+    d = n(627363),
+    _ = n(587895),
+    f = n(306044),
     h = n(626584),
-    m = n(625180),
-    f = n(375802),
-    g = n(953384),
-    p = n(328153),
+    p = n(113854),
+    E = n(375802),
+    m = n(953384),
+    g = n(952818),
     A = n(773669),
     I = n(134861),
     T = n(760751),
     S = n(189081),
     N = n(340829),
-    C = n(954571),
-    R = n(738533),
-    O = n(723702),
-    y = n(499785),
-    v = n(308368),
-    D = n(59636),
-    L = n(912851),
-    b = n(652215),
+    y = n(174459),
+    C = n(738533),
+    v = n(723702),
+    O = n(499785),
+    R = n(308368),
+    b = n(59636),
+    D = n(912851),
+    L = n(652215),
     w = n(360469);
-let P = window.GLOBAL_ENV.CDN_HOST;
-function k(e, t) {
-    return null != P ? `https://${P}${e}` : t;
+let M = window.GLOBAL_ENV.CDN_HOST;
+function P(e, t) {
+    return null != M ? `https://${M}${e}` : t;
 }
-let M = k("/detectables/games.json", b.Rsh.GAMES_DETECTABLE),
-    U = k("/detectables/non-games.json", b.Rsh.NON_GAMES_DETECTABLE);
-var x = n(985018);
+let x = P("/detectables/games.json", L.Rsh.GAMES_DETECTABLE),
+    U = P("/detectables/non-games.json", L.Rsh.NON_GAMES_DETECTABLE);
+var k = n(375708);
 let G = new h.A("GamesActionCreators");
-function V(e) {
+function F(e) {
     let {
         applicationId: t,
         secret: n,
-        channelId: i,
-        intent: r = w.W9.PLAY,
-        embedded: s = !1,
-        source: a,
-        locationObject: o,
-        analyticsLocations: l,
-        preferDeepLink: _ = !1,
+        joinUrl: i,
+        channelId: r,
+        intent: s = w.W9.PLAY,
+        embedded: a = !1,
+        source: o,
+        locationObject: l,
+        analyticsLocations: c,
+        preferDeepLink: f = !1,
     } = e;
-    if (_) {
-        let e = c.A.getApplication(t);
+    if (null != i) {
+        try {
+            if (i.startsWith("http")) {
+                let e = window.open(i, "_blank");
+                (null == e || e.closed || void 0 === e.closed) && (window.location.href = i);
+            } else window.location.href = i;
+        } catch (e) {
+            G.warn("Failed to open join URL", { applicationId: t, error: e.message }),
+                u.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: t });
+        }
+        return Promise.resolve();
+    }
+    if (f) {
+        let e = _.A.getApplication(t);
         if (e?.deepLinkUri != null) {
             let i = e.deepLinkUri.replace(/\/+$/, ""),
-                r = `${i}${b.O3O.GAME_INVITE_FRAGMENT}${n}`;
+                r = `${i}${L.O3O.GAME_INVITE_FRAGMENT}${n}`;
             try {
                 if (r.startsWith("http")) {
                     let e = window.open(r, "_blank");
@@ -71,61 +84,61 @@ function V(e) {
             }
         }
     }
-    F({ applicationId: t, channelId: i, embedded: s, source: a, locationObject: o, analyticsLocations: l })
+    V({ applicationId: t, channelId: r, embedded: a, source: o, locationObject: l, analyticsLocations: c })
         .then(async (e) => {
             if (0 === e) return null;
-            null == c.A.getApplication(t) && (await (0, u.TA)(t));
-            let i = c.A.getApplication(t)?.parentId;
+            null == _.A.getApplication(t) && (await (0, d.TA)(t));
+            let i = _.A.getApplication(t)?.parentId;
             return (
                 null != i &&
-                    R.A.waitParentConnected(i)
-                        .then(() => R.A.waitParentSubscribed(i, b.ZE4.ACTIVITY_JOIN))
+                    C.A.waitParentConnected(i)
+                        .then(() => C.A.waitParentSubscribed(i, L.ZE4.ACTIVITY_JOIN))
                         .then(() => {
-                            d.h.dispatch({
+                            u.h.dispatch({
                                 type: "ACTIVITY_JOIN",
                                 applicationId: t,
                                 parentApplicationId: i,
                                 secret: n,
-                                intent: r,
-                                embedded: s,
+                                intent: s,
+                                embedded: a,
                             });
                         })
                         .catch(() => {}),
-                R.A.waitConnected(t).then(() => R.A.waitSubscribed(t, b.ZE4.ACTIVITY_JOIN))
+                C.A.waitConnected(t).then(() => C.A.waitSubscribed(t, L.ZE4.ACTIVITY_JOIN))
             );
         })
         .then(() => {
-            d.h.dispatch({
+            u.h.dispatch({
                 type: "ACTIVITY_JOIN",
                 applicationId: t,
                 parentApplicationId: null,
                 secret: n,
-                intent: r,
-                embedded: s,
+                intent: s,
+                embedded: a,
             });
         })
-        .catch(() => d.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: t }));
+        .catch(() => u.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: t }));
 }
-async function F(e) {
+async function V(e) {
     let {
         applicationId: t,
         branchId: n,
         channelId: r,
         embedded: a = !1,
         source: l,
-        locationObject: u = {},
-        analyticsLocations: E = [],
+        locationObject: d = {},
+        analyticsLocations: f = [],
     } = e;
     if (a) {
-        let e = c.A.getApplication(t);
-        return null != e && (0, f.x)(e)
-            ? (await m.A.launchFrame({ applicationId: t }), 0)
-            : (await (0, _.A)({
+        let e = _.A.getApplication(t);
+        return null != e && (0, E.x)(e)
+            ? (await p.A.launchFrame({ applicationId: t }), 0)
+            : (await (0, c.A)({
                     applicationId: t,
                     activityChannelId: r ?? void 0,
                     source: l,
-                    locationObject: u,
-                    analyticsLocations: E,
+                    locationObject: d,
+                    analyticsLocations: f,
                 }))
               ? 0
               : Promise.resolve();
@@ -143,7 +156,7 @@ async function F(e) {
         let a = S.A.getLibraryApplication(t, n);
         if (null == a) throw Error("Missing library application when launching");
         h = o.Bo.post({
-            url: b.Rsh.OAUTH2_AUTHORIZE,
+            url: L.Rsh.OAUTH2_AUTHORIZE,
             query: { client_id: t, response_type: "token", scope: [s.F.IDENTIFY].join(" ") },
             retries: 3,
             body: { authorize: !0 },
@@ -164,48 +177,48 @@ async function F(e) {
                     throw e;
                 },
             )
-            .then((t) => R.A.launchDispatchApplication(e, t, A.default.locale, a.getBranchName(), r));
+            .then((t) => C.A.launchDispatchApplication(e, t, A.default.locale, a.getBranchName(), r));
     } else {
-        let e = c.A.getApplication(t);
-        h = null != e ? R.A.launch(e) : R.A.launchGame(t);
+        let e = _.A.getApplication(t);
+        h = null != e ? C.A.launch(e) : C.A.launchGame(t);
     }
-    let g = Error("game not found");
+    let m = Error("game not found");
     return null != h
-        ? (d.h.dispatch({ type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE", applicationId: t, branchId: n }),
-          d.h.dispatch({ type: "GAME_LAUNCH_START", applicationId: t }),
+        ? (u.h.dispatch({ type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE", applicationId: t, branchId: n }),
+          u.h.dispatch({ type: "GAME_LAUNCH_START", applicationId: t }),
           h
               .then((e) => {
-                  d.h.dispatch({ type: "GAME_LAUNCH_SUCCESS", applicationId: t, pids: e });
+                  u.h.dispatch({ type: "GAME_LAUNCH_SUCCESS", applicationId: t, pids: e });
               })
               .catch((e) => {
-                  L.A.show(b.kqX.LAUNCH_GAME_FAILURE, x.intl.string(x.t.YZEBdj)),
-                      d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: g });
+                  D.A.show(L.kqX.LAUNCH_GAME_FAILURE, k.intl.string(k.t.YZEBdj)),
+                      u.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: m });
               }))
-        : (d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: g }), Promise.reject(g));
+        : (u.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: m }), Promise.reject(m));
 }
 function B(e) {
-    d.h.dispatch({ type: "RUNNING_GAME_SET_DEBUG_GAME", game: e });
+    u.h.dispatch({ type: "RUNNING_GAME_SET_DEBUG_GAME", game: e });
 }
 let H = {
     addGame(e, t) {
-        d.h.dispatch({ type: "RUNNING_GAME_ADD_OVERRIDE", pid: e }),
-            C.default.track(b.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
+        u.h.dispatch({ type: "RUNNING_GAME_ADD_OVERRIDE", pid: e }),
+            y.default.track(L.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
     },
     toggleOverlay(e, t, n) {
-        let i = (0, p.Zh)(e),
+        let i = (0, g.Zh)(e),
             r = T.A.findGame(i);
         if (null != r) {
             let e = S.A.getActiveLibraryApplication(r.id);
             if (null != e) {
                 let i = e.getFlags(),
-                    r = a.Lt(i, b.hM6.OVERLAY_DISABLED);
-                t && r !== t && (i = a.PQ(i, b.hM6.OVERLAY_DISABLED));
-                let s = a.Lt(i, b.hM6.OVERLAY_V3_DISABLED);
-                null != n && n !== s && (i = a.PQ(i, b.hM6.OVERLAY_V3_DISABLED)), D.V(e.id, e.branchId, i);
+                    r = a.Lt(i, L.hM6.OVERLAY_DISABLED);
+                t && r !== t && (i = a.PQ(i, L.hM6.OVERLAY_DISABLED));
+                let s = a.Lt(i, L.hM6.OVERLAY_V3_DISABLED);
+                null != n && n !== s && (i = a.PQ(i, L.hM6.OVERLAY_V3_DISABLED)), b.V(e.id, e.branchId, i);
                 return;
             }
         }
-        d.h.dispatch({
+        u.h.dispatch({
             type: "RUNNING_GAME_TOGGLE_OVERLAY",
             game: i,
             newLegacyOverlayEnabledValue: t,
@@ -213,13 +226,13 @@ let H = {
         });
     },
     toggleDetection(e) {
-        d.h.dispatch({ type: "RUNNING_GAME_TOGGLE_DETECTION", game: e });
+        u.h.dispatch({ type: "RUNNING_GAME_TOGGLE_DETECTION", game: e });
     },
     editName(e, t) {
-        d.h.dispatch({ type: "RUNNING_GAME_EDIT_NAME", game: e, newName: t });
+        u.h.dispatch({ type: "RUNNING_GAME_EDIT_NAME", game: e, newName: t });
     },
     identifyGame: (e, t) =>
-        (0, E.A)().then(
+        (0, f.A)().then(
             (t) =>
                 new Promise((n, i) => {
                     null == t
@@ -238,7 +251,7 @@ let H = {
                                   ? i(Error(`Error ${t} when fetching info on ${e}`))
                                   : null == r.icon || "" === r.icon || null == r.name || "" === r.name
                                     ? i(Error(`Did not find data on ${e}`))
-                                    : (d.h.dispatch({
+                                    : (u.h.dispatch({
                                           type: "GAME_ICON_UPDATE",
                                           gameName: r.name,
                                           icon: `data:image/png;base64,${r.icon}`,
@@ -250,10 +263,10 @@ let H = {
     getDetectableGames() {
         if (!T.A.canFetchDetectableGames()) return;
         let e = T.A.detectableGamesEtag;
-        d.h.wait(() => {
-            d.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
-                y.A.get({
-                    url: M,
+        u.h.wait(() => {
+            u.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
+                O.A.get({
+                    url: x,
                     headers: { "If-None-Match": e },
                     retries: 1,
                     oldFormErrors: !0,
@@ -268,13 +281,13 @@ let H = {
                             body: t,
                             headers: { etag: n },
                         } = e;
-                        d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: t, etag: n });
+                        u.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: t, etag: n });
                     },
                     (e) => {
                         let { status: t } = e;
                         304 === t
-                            ? d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: [], etag: T.A.detectableGamesEtag })
-                            : d.h.dispatch({ type: "GAMES_DATABASE_FETCH_FAIL" });
+                            ? u.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: [], etag: T.A.detectableGamesEtag })
+                            : u.h.dispatch({ type: "GAMES_DATABASE_FETCH_FAIL" });
                     },
                 );
         });
@@ -282,9 +295,9 @@ let H = {
     getDetectableBlocklist() {
         if (!T.A.canFetchExecutableBlocklist()) return;
         let e = T.A.blocklistEtag;
-        d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
+        u.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
             o.Bo.get({
-                url: b.Rsh.GAMES_BLOCKLIST,
+                url: L.Rsh.GAMES_BLOCKLIST,
                 headers: { "If-None-Match": e },
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -294,7 +307,7 @@ let H = {
                         body: t,
                         headers: { etag: n },
                     } = e;
-                    d.h.dispatch({
+                    u.h.dispatch({
                         type: "GAMES_BLOCKLIST_UPDATE",
                         executables: t.executables ?? [],
                         patterns: t.patterns ?? [],
@@ -304,23 +317,23 @@ let H = {
                 (e) => {
                     let { status: t } = e;
                     304 === t
-                        ? d.h.dispatch({
+                        ? u.h.dispatch({
                               type: "GAMES_BLOCKLIST_UPDATE",
                               executables: [],
                               patterns: [],
                               etag: T.A.blocklistEtag,
                           })
                         : (G.error("Failed to fetch games blocklist"),
-                          d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH_FAIL" }));
+                          u.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH_FAIL" }));
                 },
             );
     },
     getDetectableNonGames() {
-        if (!g.A.canFetch()) return;
-        let e = g.A.etag;
-        d.h.wait(() => {
-            d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
-                y.A.get({
+        if (!m.A.canFetch()) return;
+        let e = m.A.etag;
+        u.h.wait(() => {
+            u.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
+                O.A.get({
                     url: U,
                     headers: { "If-None-Match": e },
                     retries: 1,
@@ -335,20 +348,20 @@ let H = {
                             body: t,
                             headers: { etag: n },
                         } = e;
-                        d.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: t, etag: n });
+                        u.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: t, etag: n });
                     },
                     (e) => {
                         let { status: t } = e;
                         304 === t
-                            ? d.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: [], etag: g.A.etag })
-                            : d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH_FAIL" });
+                            ? u.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: [], etag: m.A.etag })
+                            : u.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH_FAIL" });
                     },
                 );
         });
     },
     reportUnverifiedGame(e) {
         let { name: t, iconHash: n, publisher: i, distributor: r, sku: s, executableName: a } = e,
-            l = (0, E.v)(a);
+            l = (0, f.v)(a);
         (G.log("Reporting unverified game: ", {
             name: t,
             executableName: a,
@@ -360,10 +373,10 @@ let H = {
         }),
         null != l) &&
             o.Bo.post({
-                url: b.Rsh.UNVERIFIED_APPLICATIONS,
+                url: L.Rsh.UNVERIFIED_APPLICATIONS,
                 body: {
                     name: t,
-                    os: (0, O.getPlatformName)(),
+                    os: (0, v.getPlatformName)(),
                     icon: n,
                     distributor_application: null == r || "" === r ? null : { distributor: r, sku: s },
                     executable: l,
@@ -377,12 +390,12 @@ let H = {
                 let {
                     body: { name: t, hash: n, missing_data: i },
                 } = e;
-                d.h.dispatch({ type: "UNVERIFIED_GAME_UPDATE", name: t, hash: n, missingData: i });
+                u.h.dispatch({ type: "UNVERIFIED_GAME_UPDATE", name: t, hash: n, missingData: i });
             });
     },
     uploadIcon(e, t, n) {
         o.Bo.post({
-            url: b.Rsh.UNVERIFIED_APPLICATIONS_ICONS,
+            url: L.Rsh.UNVERIFIED_APPLICATIONS_ICONS,
             body: { application_name: e, application_hash: t, icon: n },
             retries: 1,
             oldFormErrors: !0,
@@ -390,9 +403,9 @@ let H = {
         });
     },
     deleteEntry(e) {
-        d.h.dispatch({ type: "RUNNING_GAME_DELETE_ENTRY", game: e });
+        u.h.dispatch({ type: "RUNNING_GAME_DELETE_ENTRY", game: e });
     },
-    launch: F,
+    launch: V,
     async join(e) {
         let {
             userId: t,
@@ -403,13 +416,13 @@ let H = {
             intent: a = w.W9.PLAY,
             embedded: o = !1,
             source: l,
-            locationObject: _,
-            analyticsLocations: u,
-            remotePartyId: c,
+            locationObject: c,
+            analyticsLocations: d,
+            remotePartyId: _,
         } = e;
         if (__OVERLAY__)
             return (
-                d.h.dispatch({
+                u.h.dispatch({
                     type: "OVERLAY_JOIN_GAME",
                     userId: t,
                     sessionId: n,
@@ -419,28 +432,29 @@ let H = {
                 }),
                 Promise.resolve(!0)
             );
-        d.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: i, remotePartyId: c });
+        u.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: i, remotePartyId: _ });
         try {
-            let e = (0, O.platformPrefersDeepLink)(),
-                d = await v.A.getJoinSecret(t, n, i, r, s);
+            let e = (0, v.platformPrefersDeepLink)(),
+                { secret: u, joinUrl: f } = await R.A.getJoinSecret(t, n, i, r, s);
             return (
-                null == c &&
-                    V({
+                null == _ &&
+                    F({
                         applicationId: i,
-                        secret: d,
+                        secret: u,
+                        joinUrl: f,
                         channelId: r,
                         intent: a,
                         embedded: o,
                         source: l,
-                        locationObject: _,
-                        analyticsLocations: u,
+                        locationObject: c,
+                        analyticsLocations: d,
                         preferDeepLink: e,
                     }),
                 !0
             );
         } catch (e) {
-            return d.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: i }), !1;
+            return u.h.dispatch({ type: "ACTIVITY_JOIN_FAILED", applicationId: i }), !1;
         }
     },
-    joinWithSecret: V,
+    joinWithSecret: F,
 };
