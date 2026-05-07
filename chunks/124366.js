@@ -768,13 +768,13 @@ function e2(e) {
         return n.length <= 1 ? { shelfQuests: [], isShelfEnabled: !1 } : { shelfQuests: n, isShelfEnabled: !0 };
     }, [t, e.questIds]);
 }
-function e3() {
-    let { enabled: e } = j.rI.useConfig({ location: "useFetchQuestHomeHero" }),
-        [t, n] = o.useState(!0),
-        [i, r] = o.useState(!0),
-        [s, a] = o.useState(!1),
-        [l, u] = o.useState(!1),
-        { isFetching: c, questHomeHero: d } = (0, E.cf)([H.A], () => ({
+function e3(e) {
+    let { enabled: t } = j.rI.useConfig({ location: "useFetchQuestHomeHero" }),
+        [n, i] = o.useState(!0),
+        [r, s] = o.useState(!0),
+        [a, l] = o.useState(!1),
+        [u, c] = o.useState(!1),
+        { isFetching: d, questHomeHero: _ } = (0, E.cf)([H.A], () => ({
             isFetching: H.A.isFetchingQuestHomeHero(),
             questHomeHero: H.A.getQuestHomeHero(),
         }));
@@ -782,28 +782,28 @@ function e3() {
         o.useEffect(() => {
             !(async function () {
                 try {
-                    e ? await (0, B.Am)() : await (0, B.Yf)();
+                    null != e ? await (0, B.IV)(e) : t ? await (0, B.Am)() : await (0, B.Yf)();
                 } catch (e) {
-                    r(!1), a(!0);
+                    s(!1), l(!0);
                 } finally {
-                    n(!1);
+                    i(!1);
                 }
             })();
-        }, [e]),
+        }, [e, t]),
         o.useEffect(() => {
             !(async function () {
                 try {
-                    if (null == d) return;
-                    let e = [d.heroImage, d.sponsorImage].filter((e) => null != e);
+                    if (null == _) return;
+                    let e = [_.heroImage, _.sponsorImage].filter((e) => null != e);
                     await Promise.all(e.map(w.NN));
                 } catch (e) {
-                    u(!0);
+                    c(!0);
                 } finally {
-                    r(!1);
+                    s(!1);
                 }
             })();
-        }, [d]),
-        { questHomeHero: s || l ? null : d, isLoading: t || c || i }
+        }, [_]),
+        { questHomeHero: a || u ? null : _, isLoading: n || d || r }
     );
 }
 function e6(e) {
