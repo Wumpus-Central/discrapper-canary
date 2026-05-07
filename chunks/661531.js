@@ -7562,6 +7562,30 @@ let { Themes: c } = u.zv,
                         return 8;
                     },
                 },
+                CHAT_INPUT_CONTEXT_BAR_GAP: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 8;
+                        return 0;
+                    },
+                },
+                CHAT_INPUT_CONTEXT_BAR_PADDING_HORIZONTAL: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 12;
+                        return 0;
+                    },
+                },
+                CHAT_INPUT_CONTEXT_BAR_PADDING_VERTICAL: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 8;
+                        return 0;
+                    },
+                },
                 CHAT_INPUT_EXPRESSION_OFFSET_LEFT: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -7578,11 +7602,19 @@ let { Themes: c } = u.zv,
                         return 6;
                     },
                 },
+                CHAT_INPUT_FLOATING_CONTENT_GAP: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 8;
+                        return 0;
+                    },
+                },
                 CHAT_INPUT_FLOATING_CONTENT_PADDING_HORIZONTAL: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 12;
                         return 0;
                     },
                 },
@@ -7590,7 +7622,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 12;
                         return 0;
                     },
                 },
@@ -7656,6 +7688,36 @@ let { Themes: c } = u.zv,
                         if (0 === t.length) return 2;
                         for (let e of t) if ("mobile-visual-refresh" === e) return 0;
                         return 2;
+                    },
+                },
+                CHAT_INPUT_REPLY_MENTION_ICON_MARGIN_RIGHT: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 4;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
+                        return 4;
+                    },
+                },
+                CHAT_INPUT_REPLY_MENTION_ICON_SIZE: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 20;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 16;
+                        return 20;
+                    },
+                },
+                CHAT_INPUT_SEND_BUTTON_WIDTH: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 40;
+                        for (let e of t)
+                            switch (e) {
+                                case "mobile-visual-refresh":
+                                    return 32;
+                                case "mobile-visual-refresh-floating":
+                                    return 40;
+                            }
+                        return 40;
                     },
                 },
                 CHAT_INPUT_SPACE_BOTTOM: {
