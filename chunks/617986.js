@@ -91,7 +91,7 @@ function W(e) {
         let { default: e } = await Promise.all([
             n.e("25907"),
             n.e("6772"),
-            n.e("9848"),
+            n.e("60060"),
             n.e("17094"),
             n.e("80559"),
             n.e("26032"),

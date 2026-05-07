@@ -20,7 +20,7 @@ function o(e) {
                 let { ForwardModal: e } = await Promise.all([
                     n.e("17094"),
                     n.e("83004"),
-                    n.e("9848"),
+                    n.e("60060"),
                     n.e("60571"),
                     n.e("6772"),
                     n.e("80559"),

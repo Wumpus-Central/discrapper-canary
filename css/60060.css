@@ -6092,7 +6092,7 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
     font-size: .75rem
 }
 
-.topic__6ec1a {
+.topic__6ec1a.topic__6ec1a {
     flex: 1 1 auto;
     font-size: 14px;
     font-weight: var(--font-weight-medium);
@@ -6105,14 +6105,15 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
     position: relative;
     text-overflow: ellipsis;
     white-space: nowrap;
+    composes: text-sm\/normal;
     color: var(--text-muted)
 }
 
-.topic__6ec1a a {
+.topic__6ec1a.topic__6ec1a a {
     color: var(--text-link)
 }
 
-.topic__6ec1a a:hover {
+.topic__6ec1a.topic__6ec1a a:hover {
     text-decoration: underline
 }
 
@@ -6885,11 +6886,6 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
 
 .theme-dark .divider_a327d2 {
     border-color: var(--primary-630)
-}
-
-.obscuredIcon__43090 {
-    height: 32px;
-    width: 32px
 }
 
 .externalLink__900c6 {

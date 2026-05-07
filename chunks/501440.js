@@ -2972,9 +2972,8 @@ function ic(e) {
         if (null == a) return null;
         (0, il.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                n.e("63240"),
+                n.e("19960"),
                 n.e("25907"),
-                n.e("40110"),
                 n.e("26132"),
                 n.e("46652"),
                 n.e("93190"),
