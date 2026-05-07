@@ -1,5 +1,6 @@
 "use strict";
 n.d(t, {
+    m8: () => f,
     n6: () => I,
     Iq: () => c,
     jS: () => d,
@@ -11,7 +12,7 @@ n.d(t, {
     rI: () => E,
     lk: () => A,
     sy: () => h,
-    m8: () => f,
+    A8: () => S,
 });
 var i,
     r,
@@ -119,8 +120,14 @@ let I = (0, o.mj)({
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
 let T = (0, o.mj)({
-    name: "2026-04-quest-heartbeat-executable-fingerprint",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-});
+        name: "2026-04-quest-heartbeat-executable-fingerprint",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    }),
+    S = (0, o.mj)({
+        name: "2026-05-quest-home-new-layout",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    });

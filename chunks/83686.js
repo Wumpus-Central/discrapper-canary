@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 541090, Version Hash: 83b39a49e85240fa4fde227553cd6285f54a6fb9`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 541132, Version Hash: 319a9f62a118e7a05e1b06b11aef6274ecf46522`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -3819,7 +3819,7 @@ let s3 = (0, rs.Fe)({
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -4066,7 +4066,7 @@ let s3 = (0, rs.Fe)({
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("55719"),
                 n.e("57006"),
                 n.e("25610"),
@@ -6776,7 +6776,7 @@ let up = 15 * n5.A.Millis.MINUTE,
                             n.e("94864"),
                             n.e("6772"),
                             n.e("758"),
-                            n.e("5877"),
+                            n.e("86695"),
                             n.e("40110"),
                             n.e("7017"),
                             n.e("78220"),
@@ -18360,7 +18360,7 @@ let Sb = "isHideDevBanner",
                     className: t2()(SR.Wz, SR.mr),
                     children: [
                         (0, k.jsx)(SO, { className: SR.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "541090" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "541132" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -19966,7 +19966,7 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("30708"),
                 n.e("83928"),
                 n.e("92702"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -20245,7 +20245,7 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -20495,7 +20495,7 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("56574"),
                 n.e("95780"),
                 n.e("18934"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("9848"),
                 n.e("3402"),
                 n.e("6772"),
@@ -20734,7 +20734,7 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -21189,7 +21189,7 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("75804"),
                 n.e("33957"),
                 n.e("55719"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("23924"),
                 n.e("71470"),
                 n.e("28367"),
@@ -21329,7 +21329,7 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("33957"),
                 n.e("55719"),
                 n.e("99646"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("28367"),
                 n.e("34303"),
                 n.e("42724"),
@@ -21346,8 +21346,8 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("30003"),
                 n.e("33546"),
                 n.e("5468"),
-            ]).then(n.bind(n, 133276)),
-        webpackId: 133276,
+            ]).then(n.bind(n, 743650)),
+        webpackId: 743650,
         name: "QuestHomePage",
         renderLoader: ra.g4,
     }),
@@ -21377,7 +21377,7 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -21563,7 +21563,7 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -21823,7 +21823,7 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -22198,7 +22198,7 @@ let yA = () => (0, k.jsx)("div", { className: y_.wG, children: (0, k.jsx)(rn.y, 
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -23392,7 +23392,7 @@ let CB = (0, rs.Fe)({
                 n.e("76822"),
                 n.e("6772"),
                 n.e("7017"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("25907"),
                 n.e("17094"),
                 n.e("35598"),
@@ -23564,7 +23564,7 @@ let CB = (0, rs.Fe)({
                 n.e("94864"),
                 n.e("6772"),
                 n.e("758"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("40110"),
                 n.e("7017"),
                 n.e("78220"),
@@ -25426,7 +25426,7 @@ let Ro = (0, rs.Fe)({
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -25836,7 +25836,7 @@ let Ro = (0, rs.Fe)({
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -26149,7 +26149,7 @@ let Ro = (0, rs.Fe)({
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),
@@ -34385,43 +34385,45 @@ var Px = n(501280),
     PU = n(976634),
     Pk = n(866323),
     PG = n(235079);
-let PF = () =>
-        Promise.all([
-            n.e("17094"),
-            n.e("758"),
-            n.e("25610"),
-            n.e("6720"),
-            n.e("93019"),
-            n.e("34530"),
-            n.e("43039"),
-            n.e("48804"),
-            n.e("53729"),
-            n.e("72535"),
-            n.e("96123"),
-            n.e("31390"),
-            n.e("45421"),
-            n.e("21435"),
-            n.e("87079"),
-            n.e("3458"),
-            n.e("32823"),
-            n.e("95752"),
-            n.e("25486"),
-            n.e("97073"),
-            n.e("83420"),
-            n.e("58216"),
-            n.e("82178"),
-            n.e("6809"),
-            n.e("24240"),
-            n.e("62213"),
-            n.e("25241"),
-            n.e("61924"),
-            n.e("24553"),
-            n.e("24927"),
-        ]).then(n.bind(n, 710637)),
-    PV = (0, rs.Fe)({ createPromise: PF, webpackId: 710637 }),
-    PB = { transform: "scale(0.7)", opacity: 0 },
-    PH = { transform: "scale(1)", opacity: 1 },
-    Pj = e8.memo(function () {
+let PF = (0, rs.qT)({
+        createPromise: () =>
+            Promise.all([
+                n.e("17094"),
+                n.e("758"),
+                n.e("25610"),
+                n.e("6720"),
+                n.e("93019"),
+                n.e("34530"),
+                n.e("43039"),
+                n.e("48804"),
+                n.e("53729"),
+                n.e("72535"),
+                n.e("96123"),
+                n.e("31390"),
+                n.e("45421"),
+                n.e("21435"),
+                n.e("87079"),
+                n.e("3458"),
+                n.e("32823"),
+                n.e("95752"),
+                n.e("25486"),
+                n.e("97073"),
+                n.e("83420"),
+                n.e("58216"),
+                n.e("82178"),
+                n.e("6809"),
+                n.e("24240"),
+                n.e("62213"),
+                n.e("25241"),
+                n.e("61924"),
+                n.e("24553"),
+                n.e("24927"),
+            ]).then(n.bind(n, 710637)),
+        webpackId: 710637,
+    }),
+    PV = { transform: "scale(0.7)", opacity: 0 },
+    PB = { transform: "scale(1)", opacity: 1 },
+    PH = e8.memo(function () {
         let e = (0, e6.yK)([i2.A, nZ.A, iI.Ay], () =>
                 i2.A.getIncomingCalls().filter((e) => {
                     let { channel: t } = e,
@@ -34453,7 +34455,9 @@ let PF = () =>
             );
         return (
             e8.useEffect(() => {
-                PF();
+                (0, r_.t)(() => {
+                    PF.preload();
+                });
             }, []),
             e8.useEffect(
                 () => () => {
@@ -34470,18 +34474,18 @@ let PF = () =>
             }, [n, i, t, a]),
             (0, Pk.p)(e, {
                 keys: (e) => e.channel?.id,
-                enter: { from: PB, to: PH },
-                leave: PB,
+                enter: { from: PV, to: PB },
+                leave: PV,
                 config: { mass: 1, tension: 500, friction: 18, clamp: !0 },
-            })((e, t) => (0, k.jsx)(PV, { ...t, animatedStyle: e }))
+            })((e, t) => (0, k.jsx)(PF, { ...t, animatedStyle: e }))
         );
     }),
-    PY = e8.createContext(void 0);
-function PW(e) {
+    Pj = e8.createContext(void 0);
+function PY(e) {
     let { children: t } = e,
         [n, i] = e8.useState(null),
         r = e8.useMemo(() => ({ setComponentToSnapshot: i }), [i]);
-    return (0, k.jsxs)(PY.Provider, {
+    return (0, k.jsxs)(Pj.Provider, {
         value: r,
         children: [
             t,
@@ -34494,11 +34498,11 @@ function PW(e) {
         ],
     });
 }
-var PK = n(681582),
-    Pz = n(172272),
-    P$ = n(538064),
-    Pq = n(265059);
-let PZ = (0, ny.Fe)({
+var PW = n(681582),
+    PK = n(172272),
+    Pz = n(538064),
+    P$ = n(265059);
+let Pq = (0, ny.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("18934"),
@@ -34565,7 +34569,7 @@ let PZ = (0, ny.Fe)({
             n.e("92702"),
             n.e("1271"),
             n.e("78220"),
-            n.e("5877"),
+            n.e("86695"),
             n.e("57006"),
             n.e("25610"),
             n.e("6720"),
@@ -35391,13 +35395,13 @@ let PZ = (0, ny.Fe)({
         ]).then(n.bind(n, 902592)),
     webpackId: 902592,
 });
-function PX(e) {
+function PZ(e) {
     let { mobile: t } = e,
         n = (0, e6.bG)([sJ.A], () => sJ.A.isDeveloper),
-        i = (0, e6.bG)([Pq.A], () => Pq.A.displayTools),
+        i = (0, e6.bG)([P$.A], () => P$.A.displayTools),
         r = (0, e6.bG)([sj.A], () => sj.A.getWindowOpen(eL.MLl.DEVTOOLS_POPOUT)),
         s = e8.useCallback((e) => {
-            ((0, ek.isMac)() ? e.metaKey : e.ctrlKey) && e.altKey && "KeyO" === e.code && (0, P$.pf)();
+            ((0, ek.isMac)() ? e.metaKey : e.ctrlKey) && e.altKey && "KeyO" === e.code && (0, Pz.pf)();
         }, []);
     return (e8.useLayoutEffect(
         () => (
@@ -35409,15 +35413,15 @@ function PX(e) {
         [s],
     ),
     (t ? n : i) && !r)
-        ? (0, k.jsx)(PZ, { mobile: t })
+        ? (0, k.jsx)(Pq, { mobile: t })
         : null;
 }
-var PQ = n(670735),
-    PJ = n(981133),
-    P0 = n(469177),
-    P1 = n(133171),
-    P2 = n(801964);
-function P3() {
+var PX = n(670735),
+    PQ = n(981133),
+    PJ = n(469177),
+    P0 = n(133171),
+    P1 = n(801964);
+function P2() {
     let e = (0, e6.bG)([tD.Ay], () => tD.Ay.get("idle_status_indicator")),
         t = (0, e6.bG)([tT.default], () => tT.default.getCurrentUser()?.isStaff() ?? !1),
         [n, i] = (0, e6.yK)([wL.A], () => [wL.A.isIdle(), wL.A.isAFK()]),
@@ -35429,18 +35433,18 @@ function P3() {
         t && e
             ? (0, k.jsx)(PL.Ay, {
                   children: (0, k.jsxs)("div", {
-                      className: P2.kL,
+                      className: P1.kL,
                       children: [
                           (0, k.jsxs)("div", {
-                              className: P2.h5,
+                              className: P1.h5,
                               children: [
-                                  (0, k.jsx)(P1.nW, {
+                                  (0, k.jsx)(P0.nW, {
                                       status: r.includes("ACTIVE") ? RZ.cl.ONLINE : RZ.cl.IDLE,
-                                      className: P2.UX,
+                                      className: P1.UX,
                                   }),
                                   (0, k.jsx)(sw.E, { variant: "text-md/normal", children: "IDLE STATUS:" }),
                                   (0, k.jsx)("div", {
-                                      className: P2.qS,
+                                      className: P1.qS,
                                       children: (0, k.jsx)(sw.E, { variant: "text-md/bold", children: r.join(" + ") }),
                                   }),
                               ],
@@ -35467,7 +35471,8 @@ function P3() {
             : null
     );
 }
-var P6 = n(164942),
+var P3 = n(639735),
+    P6 = n(164942),
     P4 = n(189213);
 let P5 = () => {
     let e = (0, e6.bG)([tI.Ay], () => tI.Ay.isInteractionRequired(), []),
@@ -36184,8 +36189,8 @@ n(939857),
         webpackId: 461624,
     });
 let x6 = (0, rs.Fe)({
-        createPromise: () => Promise.all([n.e("13040"), n.e("98254"), n.e("99063")]).then(n.bind(n, 154056)),
-        webpackId: 154056,
+        createPromise: () => Promise.all([n.e("13040"), n.e("98254"), n.e("99063")]).then(n.bind(n, 1464)),
+        webpackId: 1464,
     }),
     x4 = e8.memo(function () {
         let e = (0, e6.bG)([rk.A], () => rk.A.hasLayers()),
@@ -36207,96 +36212,95 @@ let x6 = (0, rs.Fe)({
             e8.useEffect(() => {
                 if (n)
                     return (
-                        P0.uG(t),
+                        PJ.uG(t),
                         () => {
-                            P0.qr(t);
+                            PJ.qr(t);
                         }
                     );
             }, [t, n]);
-        let c = (0, PJ.sK)("AppSkeleton");
-        return (
-            e8.useEffect(() => {
-                c ? tA.w.set(PJ.AL, !0) : tA.w.remove(PJ.AL);
-            }, [c]),
-            (0, k.jsx)(
-                P6.e,
-                {
-                    children: (0, k.jsxs)(Pb.A, {
-                        children: [
-                            (0, k.jsx)(xf.A, { skipsSettingDefaultPageTitle: r }),
-                            (0, k.jsx)(PO.N, {
-                                children: (0, k.jsx)(PQ.A, {
-                                    children: (0, k.jsxs)(e5.xp, {
-                                        containerRef: l,
-                                        children: [
-                                            (0, k.jsx)(x2.Al, {}),
-                                            (0, k.jsx)(x1.Ay, {}),
-                                            (0, k.jsx)(PT.Ut, {}),
-                                            (0, k.jsx)(t7.Wr, {
-                                                appContext: eL.BRT.APP,
-                                                renderWindow: window,
-                                                children: (0, k.jsxs)(PL.Yf, {
-                                                    children: [
-                                                        null != s ? (0, k.jsx)(x4, {}) : null,
-                                                        (0, k.jsxs)("div", {
-                                                            className: t2()(x3.XX, a && x3.Xq),
-                                                            children: [
-                                                                (0, k.jsx)(Pz.C1, {}),
-                                                                (0, k.jsx)("div", {
-                                                                    className: x3.x$,
-                                                                    "data-app-not-dev-tools": !0,
-                                                                    children: (0, k.jsx)(PK.l, {
-                                                                        children: (0, k.jsx)(we.ks, {
-                                                                            children: (0, k.jsx)(PD.A.Provider, {
-                                                                                value: o3.A,
-                                                                                children: (0, k.jsxs)(PW, {
-                                                                                    children: [
-                                                                                        (0, k.jsx)("div", {
-                                                                                            className: t2()(
-                                                                                                a ? x3.C$ : x3.yA,
-                                                                                            ),
-                                                                                            children: i,
-                                                                                        }),
-                                                                                        (0, k.jsx)(PC.A, {}),
-                                                                                        (0, k.jsx)(Px.A, {}),
-                                                                                        (0, k.jsx)(Pv.A, {}),
-                                                                                        (0, k.jsx)(PN.b, {}),
-                                                                                        (0, k.jsx)(x_, {}),
-                                                                                        (0, k.jsx)(CF.up, {}),
-                                                                                        (0, k.jsx)(PI.P, {}),
-                                                                                        (0, k.jsx)(PL.C8, {}),
-                                                                                        (0, k.jsx)(we.ok, {}),
-                                                                                        (0, k.jsx)(Py.N, {
-                                                                                            appContext: eL.BRT.APP,
-                                                                                        }),
-                                                                                        (0, k.jsx)(PP, {}),
-                                                                                        (0, k.jsx)(P3, {}),
-                                                                                        (0, k.jsx)(x6, {}),
-                                                                                    ],
-                                                                                }),
+        let c = (0, PQ.sK)("AppSkeleton");
+        e8.useEffect(() => {
+            c ? tA.w.set(PQ.AL, !0) : tA.w.remove(PQ.AL);
+        }, [c]);
+        let d = (0, e6.bG)([P3.A], () => P3.A.canPlayWowMoment);
+        return (0, k.jsx)(
+            P6.e,
+            {
+                children: (0, k.jsxs)(Pb.A, {
+                    children: [
+                        (0, k.jsx)(xf.A, { skipsSettingDefaultPageTitle: r }),
+                        (0, k.jsx)(PO.N, {
+                            children: (0, k.jsx)(PX.A, {
+                                children: (0, k.jsxs)(e5.xp, {
+                                    containerRef: l,
+                                    children: [
+                                        (0, k.jsx)(x2.Al, {}),
+                                        (0, k.jsx)(x1.Ay, {}),
+                                        (0, k.jsx)(PT.Ut, {}),
+                                        (0, k.jsx)(t7.Wr, {
+                                            appContext: eL.BRT.APP,
+                                            renderWindow: window,
+                                            children: (0, k.jsxs)(PL.Yf, {
+                                                children: [
+                                                    null != s ? (0, k.jsx)(x4, {}) : null,
+                                                    (0, k.jsxs)("div", {
+                                                        className: t2()(x3.XX, a && x3.Xq),
+                                                        children: [
+                                                            (0, k.jsx)(PK.C1, {}),
+                                                            (0, k.jsx)("div", {
+                                                                className: x3.x$,
+                                                                "data-app-not-dev-tools": !0,
+                                                                children: (0, k.jsx)(PW.l, {
+                                                                    children: (0, k.jsx)(we.ks, {
+                                                                        children: (0, k.jsx)(PD.A.Provider, {
+                                                                            value: o3.A,
+                                                                            children: (0, k.jsxs)(PY, {
+                                                                                children: [
+                                                                                    (0, k.jsx)("div", {
+                                                                                        className: t2()(
+                                                                                            a ? x3.C$ : x3.yA,
+                                                                                        ),
+                                                                                        children: i,
+                                                                                    }),
+                                                                                    (0, k.jsx)(PC.A, {}),
+                                                                                    (0, k.jsx)(Px.A, {}),
+                                                                                    (0, k.jsx)(Pv.A, {}),
+                                                                                    (0, k.jsx)(PN.b, {}),
+                                                                                    (0, k.jsx)(x_, {}),
+                                                                                    (0, k.jsx)(CF.up, {}),
+                                                                                    (0, k.jsx)(PI.P, {}),
+                                                                                    (0, k.jsx)(PL.C8, {}),
+                                                                                    (0, k.jsx)(we.ok, {}),
+                                                                                    (0, k.jsx)(Py.N, {
+                                                                                        appContext: eL.BRT.APP,
+                                                                                    }),
+                                                                                    (0, k.jsx)(PP, {}),
+                                                                                    (0, k.jsx)(P2, {}),
+                                                                                    d && (0, k.jsx)(x6, {}),
+                                                                                ],
                                                                             }),
                                                                         }),
                                                                     }),
                                                                 }),
-                                                                (0, k.jsx)(Pj, {}),
-                                                                (0, k.jsx)(x0, { mobile: a }),
-                                                                (0, k.jsx)(PX, { mobile: a }),
-                                                            ],
-                                                        }),
-                                                        !1,
-                                                    ],
-                                                }),
+                                                            }),
+                                                            (0, k.jsx)(PH, {}),
+                                                            (0, k.jsx)(x0, { mobile: a }),
+                                                            (0, k.jsx)(PZ, { mobile: a }),
+                                                        ],
+                                                    }),
+                                                    !1,
+                                                ],
                                             }),
-                                            (0, k.jsx)(PT.Ut, {}),
-                                        ],
-                                    }),
+                                        }),
+                                        (0, k.jsx)(PT.Ut, {}),
+                                    ],
                                 }),
                             }),
-                        ],
-                    }),
-                },
-                u,
-            )
+                        }),
+                    ],
+                }),
+            },
+            u,
         );
     };
 var x7 =
@@ -36748,7 +36752,7 @@ let Ul = (0, rs.Fe)({
                 n.e("92702"),
                 n.e("1271"),
                 n.e("78220"),
-                n.e("5877"),
+                n.e("86695"),
                 n.e("33957"),
                 n.e("55719"),
                 n.e("57006"),

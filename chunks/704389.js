@@ -7347,7 +7347,7 @@ let rh = {
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("94864"),
-                    a.e("5877"),
+                    a.e("86695"),
                     a.e("7017"),
                     a.e("54747"),
                     a.e("44135"),
@@ -16864,7 +16864,7 @@ function hj() {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
-                                children: (0, r.jsx)(mZ.A, {
+                                children: (0, r.jsx)(mZ.Ay, {
                                     quest: t,
                                     className: m3.d,
                                     questContent: mW.uF.QUEST_HOME_DESKTOP,

@@ -10,7 +10,7 @@ let a = function () {
 };
 function o(e) {
     let { createPromise: t, webpackId: n, renderLoader: o, name: l, memo: u = !1 } = e,
-        c = r.lazy(() => (0, s.sq)({ createPromise: t, webpackId: n })),
+        c = r.lazy(() => (0, s.sq)({ createPromise: t, webpackId: n, name: l })),
         d = (e) => (0, i.jsx)(r.Suspense, { fallback: null != o ? o() : a()(), children: (0, i.jsx)(c, { ...e }) });
     return u && (d = r.memo(d)), (d.displayName = `Suspense(${l || "Unknown"})`), d;
 }
