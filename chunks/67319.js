@@ -896,7 +896,7 @@ var tv = n(844222),
     tw = n(616356),
     tM = n(977997),
     tk = n(312006),
-    tG = n(51760),
+    tG = n(235058),
     tD = n(636359);
 function tV(e) {
     let { aspectRatio: t, className: n, children: l, width: s, ...a } = e,

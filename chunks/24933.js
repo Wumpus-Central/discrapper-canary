@@ -1,38 +1,38 @@
-n.d(e, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
-var s = n(17928),
-    l = n(477782),
+var l = n(17928),
+    s = n(477782),
     r = n(827343),
-    a = n(51760),
-    u = n(533488),
-    o = n(509381),
-    c = n(985018);
-function d(t) {
-    let { enabledInputProfiles: e } = (0, u.d)({ location: "useInputProfileItems" }),
+    a = n(235058),
+    o = n(533488),
+    u = n(509381),
+    d = n(375708);
+function c(e) {
+    let { enabledInputProfiles: t } = (0, o.d)({ location: "useInputProfileItems" }),
         n = {
-            [o.m.VOICE_ISOLATION]: c.intl.string(c.t.cjPbpT),
-            [o.m.STUDIO]: c.intl.string(c.t.VZPR0R),
-            [o.m.CUSTOM]: c.intl.string(c.t["N/PQjv"]),
+            [u.m.VOICE_ISOLATION]: d.intl.string(d.t.cjPbpT),
+            [u.m.STUDIO]: d.intl.string(d.t.VZPR0R),
+            [u.m.CUSTOM]: d.intl.string(d.t["N/PQjv"]),
         },
-        d = (0, s.bG)([a.Ay], () => a.Ay.getActiveInputProfile()),
-        m = e.map((e) =>
+        c = (0, l.bG)([a.Ay], () => a.Ay.getActiveInputProfile()),
+        h = t.map((t) =>
             (0, i.jsx)(
-                l.iD,
+                s.iD,
                 {
-                    id: e,
+                    id: t,
                     group: "input-profiles",
-                    label: n[e],
-                    checked: e === (d ?? o.m.CUSTOM),
-                    action: () => r.A.setActiveInputProfile(e, { analyticsLocations: t }),
+                    label: n[t],
+                    checked: t === (c ?? u.m.CUSTOM),
+                    action: () => r.A.setActiveInputProfile(t, { analyticsLocations: e }),
                 },
-                e,
+                t,
             ),
         );
-    return (0, i.jsx)(l.Dr, {
+    return (0, i.jsx)(s.Dr, {
         id: "input-profiles",
-        label: c.intl.string(c.t.LM3U3k),
-        subtext: n[d ?? o.m.CUSTOM],
-        children: m,
+        label: d.intl.string(d.t.LM3U3k),
+        subtext: n[c ?? u.m.CUSTOM],
+        children: h,
     });
 }

@@ -4,7 +4,7 @@ var i = n(665260),
     r = n(17928),
     s = n(228366),
     a = n(77729),
-    o = n(328153),
+    o = n(952818),
     l = n(652896),
     u = n(495544);
 n(741394);
@@ -96,7 +96,7 @@ class k extends r.Ay.DeviceSettingsStore {
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: M.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => {
-            let t = n(51760).Ay.getHardwareEncoding();
+            let t = n(235058).Ay.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {

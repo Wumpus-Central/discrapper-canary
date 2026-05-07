@@ -1,71 +1,71 @@
 "use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => D });
 var i = n(735438),
     r = n.n(i),
     s = n(947320),
     a = n(873298),
     o = n(506774),
     l = n(439372),
-    _ = n(108713),
-    d = n(643501),
-    u = n(209932),
-    c = n(495544),
-    E = n(51760),
+    u = n(469802),
+    c = n(643501),
+    d = n(209932),
+    _ = n(495544),
+    f = n(235058),
     h = n(935208),
-    m = n(879172),
-    f = n(409826),
-    g = n(594061),
-    I = n(731854);
+    p = n(879172),
+    E = n(409826),
+    m = n(594061),
+    g = n(731854);
 let A = (e) => `AudioContextSettingsMigrated:${e}`,
-    p = (e) => (e === I.x.STREAM ? s.i.STREAM : s.i.USER);
+    I = (e) => (e === g.x.STREAM ? s.i.STREAM : s.i.USER);
 function T() {
-    o.w.get(A(c.default.getId())) ||
-        g.wc.updateAsync(
+    o.w.get(A(_.default.getId())) ||
+        m.wc.updateAsync(
             "audioContextSettings",
             (e) => {
                 let t = !1;
-                for (let [n, i] of Object.entries(E.Ay.getState().settingsByContext)) {
-                    let r = (0, f.o)(n);
+                for (let [n, i] of Object.entries(f.Ay.getState().settingsByContext)) {
+                    let r = (0, E.o)(n);
                     if (null == r) continue;
                     let s = e[r],
                         a = String(Date.now()),
                         o = {};
                     for (let [e, t] of Object.entries(i.localMutes))
-                        o[e] = { muted: t, volume: p(n), modifiedAt: a, soundboardMuted: !1 };
+                        o[e] = { muted: t, volume: I(n), modifiedAt: a, soundboardMuted: !1 };
                     for (let [e, t] of Object.entries(i.localVolumes))
-                        o[e] = { muted: !1, modifiedAt: a, ...o[e], volume: (0, f.z)(t, n) };
+                        o[e] = { muted: !1, modifiedAt: a, ...o[e], volume: (0, E.z)(t, n) };
                     let l = Object.keys(s).length;
                     for (let [e, [n, i]] of Object.entries(o).entries()) {
                         if (300 - l - (e + 1) <= 0) break;
                         null == s[n] && ((t = !0), (s[n] = i));
                     }
                 }
-                return o.w.set(A(c.default.getId()), !0), t;
+                return o.w.set(A(_.default.getId()), !0), t;
             },
-            g.Sb.AUTOMATED,
+            m.Sb.AUTOMATED,
         );
 }
 let S = r().debounce(() => {
-        O();
+        y();
     }, 2e3),
-    N = r().debounce(_.VR, 500, { maxWait: 500 });
-function O() {
-    g.wc.updateAsync(
+    N = r().debounce(u.VR, 500, { maxWait: 500 });
+function y() {
+    m.wc.updateAsync(
         "audioContextSettings",
         (e) => {
             let t = !1;
             return (
-                (0, m.rQ)((n, i, r) => {
+                (0, p.rQ)((n, i, r) => {
                     let s = (function (e, t, n, i) {
                         let r = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
-                            s = (0, f.o)(n);
+                            s = (0, E.o)(n);
                         if (null == s) return !1;
                         let o = e[s];
                         return (
-                            (o[t] = o[t] ?? a.oP.create({ muted: !1, volume: p(n) })),
+                            (o[t] = o[t] ?? a.oP.create({ muted: !1, volume: I(n) })),
                             i(o[t]),
                             (o[t].modifiedAt = String(Date.now())),
-                            r && (o[t].volume !== p(n) || o[t].muted || o[t].soundboardMuted || delete o[t]),
+                            r && (o[t].volume !== I(n) || o[t].muted || o[t].soundboardMuted || delete o[t]),
                             !(function (e) {
                                 let t = h.default.entries(e),
                                     n = t.length;
@@ -91,46 +91,46 @@ function O() {
                 t
             );
         },
-        g.Sb.INFREQUENT_USER_ACTION,
+        m.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function R(e) {
-    let { context: t, userId: n, volume: i } = e;
-    if (n === c.default.getId()) return;
-    let r = d.default.getRemoteSessionId();
-    null != r && N(r, n, t, { muted: E.Ay.isLocalMute(n, t), volume: i }), (0, m.gq)(t, n, { volume: i }), S();
-}
 function C(e) {
+    let { context: t, userId: n, volume: i } = e;
+    if (n === _.default.getId()) return;
+    let r = c.default.getRemoteSessionId();
+    null != r && N(r, n, t, { muted: f.Ay.isLocalMute(n, t), volume: i }), (0, p.gq)(t, n, { volume: i }), S();
+}
+function v(e) {
     let { context: t, userId: n } = e;
-    if (n !== c.default.getId()) {
+    if (n !== _.default.getId()) {
         var i;
-        (i = E.Ay.isLocalMute(n, t)), (0, m.gq)(t, n, { muted: i }), S.cancel(), O();
+        (i = f.Ay.isLocalMute(n, t)), (0, p.gq)(t, n, { muted: i }), S.cancel(), y();
     }
 }
-function y(e) {
+function O(e) {
     let { context: t, userId: n } = e;
-    if (n !== c.default.getId()) {
+    if (n !== _.default.getId()) {
         var i;
-        (i = u.A.isLocalSoundboardMuted(n)), (0, m.gq)(t, n, { soundboardMuted: i }), S.cancel(), O();
+        (i = d.A.isLocalSoundboardMuted(n)), (0, p.gq)(t, n, { soundboardMuted: i }), S.cancel(), y();
     }
 }
-function D(e) {
+function R(e) {
     let {} = e;
-    g.wc.updateAsync(
+    m.wc.updateAsync(
         "audioContextSettings",
         (e) => {
             (e.user = {}), (e.stream = {});
         },
-        g.Sb.INFREQUENT_USER_ACTION,
+        m.Sb.INFREQUENT_USER_ACTION,
     );
 }
-class L extends l.A {
+class b extends l.A {
     actions = {
         POST_CONNECTION_OPEN: T,
-        AUDIO_SET_LOCAL_VOLUME: R,
-        AUDIO_TOGGLE_LOCAL_MUTE: C,
-        AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: y,
-        MEDIA_ENGINE_RESET_SETTINGS: D,
+        AUDIO_SET_LOCAL_VOLUME: C,
+        AUDIO_TOGGLE_LOCAL_MUTE: v,
+        AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: O,
+        MEDIA_ENGINE_RESET_SETTINGS: R,
     };
 }
-let v = new L();
+let D = new b();

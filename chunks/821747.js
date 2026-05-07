@@ -1,45 +1,45 @@
-n.d(t, { A: () => h });
-var l = n(627968);
-n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(17928),
-    r = n(827343),
-    o = n(384059),
-    c = n(20504),
-    u = n(51760),
-    d = n(824744),
-    A = n(723702),
-    E = n(447404),
-    m = n(329333);
-function h(e) {
+t.d(n, { A: () => C });
+var l = t(627968);
+t(64700);
+var i = t(503698),
+    s = t.n(i),
+    a = t(17928),
+    r = t(827343),
+    o = t(384059),
+    c = t(20504),
+    u = t(235058),
+    d = t(824744),
+    A = t(723702),
+    h = t(447404),
+    m = t(329333);
+function C(e) {
     let {
-            className: t,
-            iconClassName: n,
+            className: n,
+            iconClassName: t,
             sliderClassName: i,
-            userId: h,
-            context: C,
-            currentWindow: g = window,
-            location: I,
+            userId: C,
+            context: E,
+            currentWindow: p = window,
+            location: g,
         } = e,
-        { currentVolume: p, muted: x } = (0, a.cf)([u.Ay], () => ({
-            currentVolume: u.Ay.getLocalVolume(h, C),
-            muted: u.Ay.isLocalMute(h, C),
+        { currentVolume: x, muted: I } = (0, a.cf)([u.Ay], () => ({
+            currentVolume: u.Ay.getLocalVolume(C, E),
+            muted: u.Ay.isLocalMute(C, E),
         }));
-    return (0, l.jsx)(E.A, {
+    return (0, l.jsx)(h.A, {
         children: (0, l.jsx)(c.A, {
-            currentWindow: g,
-            iconClassName: s()(n, m.pd),
+            currentWindow: p,
+            iconClassName: s()(t, m.pd),
             sliderClassName: i,
-            className: t,
-            value: (0, d.M)(p),
-            muted: x,
+            className: n,
+            value: (0, d.M)(x),
+            muted: I,
             maxValue: A.isPlatformEmbedded ? 200 : 100,
             onValueChange: (e) => {
-                e > 0 && x && r.A.toggleLocalMute(h, C), r.A.setLocalVolume(h, (0, d.w)(e), C);
+                e > 0 && I && r.A.toggleLocalMute(C, E), r.A.setLocalVolume(C, (0, d.w)(e), E);
             },
             onToggleMute: () => {
-                null != I && (0, o.X)(I, o.O.VOLUME, x), r.A.toggleLocalMute(h, C);
+                null != g && (0, o.X)(g, o.O.VOLUME, I), r.A.toggleLocalMute(C, E);
             },
         }),
     });

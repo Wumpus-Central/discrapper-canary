@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { id: () => d, jY: () => _ });
-var i = n(205693),
+n.d(t, { id: () => c, jY: () => u });
+var i = n(459838),
     r = n(652896),
-    s = n(51760),
+    s = n(235058),
     a = n(763827),
     o = n(309010),
     l = n(116956);
-function _() {
+function u() {
     return {
         channelId: o.A.getVoiceChannelId() ?? void 0,
         mediaSessionId: a.A.getMediaSessionId() ?? void 0,
         rtcConnectionId: a.A.getRTCConnectionId(),
         mediaContext: i.x.DEFAULT,
-        ...u(),
+        ...d(),
     };
 }
-function d(e) {
+function c(e) {
     let { channelId: t, ownerId: n } = (0, r.Iy)(e),
         s = l.A.getRTCConnection(e);
     return {
@@ -25,10 +25,10 @@ function d(e) {
         mediaContext: i.x.STREAM,
         streamKey: e,
         userId: n,
-        ...u(),
+        ...d(),
     };
 }
-function u() {
+function d() {
     return {
         videoDeviceName: s.Ay.getVideoDevices()[s.Ay.getVideoDeviceId()]?.name,
         audioInputDeviceName: s.Ay.getInputDevices()[s.Ay.getInputDeviceId()]?.name,

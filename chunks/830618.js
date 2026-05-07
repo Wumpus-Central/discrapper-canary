@@ -26,7 +26,7 @@ var i = n(627968),
     v = n(233545),
     O = n(229659),
     R = n(885386),
-    b = n(51760),
+    b = n(235058),
     D = n(174459),
     L = n(957565),
     w = n(975571),
@@ -195,7 +195,7 @@ var V = n(834730),
     B = n(814278),
     H = n(998759),
     j = n(289873),
-    Y = n(277639);
+    Y = n(500020);
 function W(e) {
     let { chunks: t, columns: n, className: s } = e,
         o = r.useMemo(() => ({ "--secure-frames-columns": n }), [n]);

@@ -11,9 +11,9 @@ var n = i(627968),
     A = i(880144),
     f = i(560595),
     y = i(929921),
-    m = i(734057),
-    p = i(71393),
-    I = i(51760),
+    p = i(734057),
+    m = i(71393),
+    I = i(235058),
     E = i(576705),
     g = i(309010),
     _ = i(287809),
@@ -30,10 +30,10 @@ function C(t) {
             appContext: o,
         } = t,
         u = (0, a.bG)([g.A], () => g.A.getVoiceChannelId()),
-        c = (0, a.bG)([m.A], () => m.A.getChannel(u), [u]),
+        c = (0, a.bG)([p.A], () => p.A.getChannel(u), [u]),
         f = (0, a.bG)([_.default], () => _.default.getCurrentUser()),
         y = (0, a.bG)([I.Ay], () => (0, A.A)(I.Ay)),
-        N = (0, a.bG)([p.A, E.A], () => null != c && (0, d.vz)(c, p.A, E.A));
+        N = (0, a.bG)([m.A, E.A], () => null != c && (0, d.vz)(c, m.A, E.A));
     return l.useCallback(async () => {
         await v({
             pid: e,
@@ -59,9 +59,9 @@ async function h(t) {
             appContext: r,
         } = t,
         s = g.A.getVoiceChannelId(),
-        o = m.A.getChannel(s),
+        o = p.A.getChannel(s),
         u = _.default.getCurrentUser(),
-        c = null != o && (0, d.vz)(o, p.A, E.A),
+        c = null != o && (0, d.vz)(o, m.A, E.A),
         f = (0, A.A)(I.Ay);
     await v({
         pid: e,
@@ -83,13 +83,13 @@ async function v(t) {
         user: a,
         canGoLive: d,
         canStream: A,
-        allowOneClickGoLive: m,
-        onBeforeShowModal: p,
+        allowOneClickGoLive: p,
+        onBeforeShowModal: m,
         onOneClickGoLive: I,
         appContext: E,
     } = t;
     if (d && A) {
-        if (m && null !== l) {
+        if (p && null !== l) {
             let t = y.A.getState().preset;
             if (t === S.jQ.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: e } = (0, c.eO)({ location: "overlay _goLive" });
@@ -100,7 +100,7 @@ async function v(t) {
         }
         if (null == a)
             return void (0, r.P0)((0, s.o)(T.intl.string(T.t.OKnWyb), o.Ck.FAILURE, { appContext: N.BRT.OVERLAY }));
-        p?.(),
+        m?.(),
             (0, u.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
