@@ -15,7 +15,7 @@ var l = t(627968),
     j = t(734057),
     f = t(71393),
     v = t(174459),
-    A = t(645034),
+    A = t(422653),
     I = t(285059),
     N = t(698441),
     y = t(485394),
@@ -430,8 +430,9 @@ function eR(e) {
                       onContextMenu: function (e, n) {
                           (0, o.L3)(e, async () => {
                               let { default: e } = await Promise.all([
-                                  t.e("90466"),
-                                  t.e("981"),
+                                  t.e("73109"),
+                                  t.e("70652"),
+                                  t.e("57750"),
                                   t.e("26132"),
                                   t.e("46652"),
                                   t.e("93190"),

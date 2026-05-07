@@ -1,9 +1,9 @@
-i.d(t, { p: () => V });
+i.d(t, { p: () => k });
 var n = i(627968),
     l = i(64700),
     s = i(503698),
     a = i.n(s),
-    r = i(785651),
+    r = i(873174),
     d = i(562708),
     o = i(17928),
     u = i(990078),
@@ -17,9 +17,9 @@ var n = i(627968),
     x = i(320448),
     v = i(964486),
     f = i(793574),
-    _ = i(688810),
-    E = i(139286),
-    N = i(713517),
+    E = i(688810),
+    N = i(139286),
+    _ = i(713517),
     S = i(71393),
     y = i(576705),
     C = i(174459),
@@ -29,28 +29,28 @@ i(281405);
 var T = i(375708),
     O = i(89682),
     G = i(80442);
-let k = (e) => 1 - Math.pow(1 - e, 4);
-function V(e) {
+let V = (e) => 1 - Math.pow(1 - e, 4);
+function k(e) {
     let { channel: t, onClose: s } = e,
-        V = l.useRef(null),
-        w = l.useRef(null),
-        [R, U] = l.useState(!1),
-        P = l.useRef(null),
+        k = l.useRef(null),
+        R = l.useRef(null),
+        [w, P] = l.useState(!1),
+        U = l.useRef(null),
         D = l.useRef(null),
-        [M, H] = l.useState(0),
-        { analyticsLocations: L } = (0, _.Ay)(f.A.VOICE_INVITE_SUGGESTIONS);
-    (0, E.A)({
+        [M, L] = l.useState(0),
+        { analyticsLocations: H } = (0, E.Ay)(f.A.VOICE_INVITE_SUGGESTIONS);
+    (0, N.A)({
         name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
         type: d.ImpressionTypes.VIEW,
-        properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: L },
+        properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: H },
     });
     let F = (0, o.bG)([y.A], () => y.A.can(b.xBc.CREATE_INSTANT_INVITE, t), [t]),
         z = (0, o.bG)([S.A], () => S.A.getGuild(t.guild_id)),
-        [q, K] = l.useState(!1),
-        Y = l.useRef(null),
-        { isHoveringOrFocusing: B } = (0, N.A)(F ? V : Y),
+        [K, Y] = l.useState(!1),
+        q = l.useRef(null),
+        { isHoveringOrFocusing: B } = (0, _.A)(F ? k : q),
         [W, $] = l.useState(!1),
-        { isFocusing: Z } = (0, N.A)(w),
+        { isFocusing: Z } = (0, _.A)(R),
         J = B || W,
         X = l.useCallback(
             function () {
@@ -59,19 +59,19 @@ function V(e) {
                     reason: e,
                     channel_id: t.id,
                     guild_id: t.guild_id,
-                    location_stack: L,
+                    location_stack: H,
                 }),
-                    U(!1),
+                    P(!1),
                     s?.();
             },
-            [t, s, L],
+            [t, s, H],
         ),
         Q = l.useCallback(() => {
             null != z &&
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         i.e("7017"),
-                        i.e("981"),
+                        i.e("57750"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -83,21 +83,21 @@ function V(e) {
         [ee, et] = (0, m.z)(() => ({
             from: { height: "0px" },
             to: { height: "32px" },
-            config: { duration: 200, easing: k, clamp: !0 },
+            config: { duration: 200, easing: V, clamp: !0 },
         })),
         ei = l.useCallback(
             (e) => {
-                K(!0), et({ to: { height: "0px" }, onRest: () => X(e) });
+                Y(!0), et({ to: { height: "0px" }, onRest: () => X(e) });
             },
             [et, X],
         ),
         en = l.useCallback(
             () => (
-                null != P.current && clearTimeout(P.current),
-                (P.current = setTimeout(() => ei("timeout"), 1e4)),
-                H((e) => e + 1),
+                null != U.current && clearTimeout(U.current),
+                (U.current = setTimeout(() => ei("timeout"), 1e4)),
+                L((e) => e + 1),
                 () => {
-                    null != P.current && clearTimeout(P.current);
+                    null != U.current && clearTimeout(U.current);
                 }
             ),
             [ei],
@@ -106,7 +106,7 @@ function V(e) {
             () => (
                 null != D.current && clearTimeout(D.current),
                 (D.current = setTimeout(() => {
-                    U(!1);
+                    P(!1);
                 }, 150)),
                 () => {
                     null != D.current && clearTimeout(D.current);
@@ -120,18 +120,18 @@ function V(e) {
                 en(), el();
                 return;
             }
-            null != P.current && clearTimeout(P.current), null != D.current && clearTimeout(D.current), U(!0);
+            null != U.current && clearTimeout(U.current), null != D.current && clearTimeout(D.current), P(!0);
         }, [J, en, el]);
     let es = l.useCallback(() => {
-            U(!0);
+            P(!0);
         }, []),
         ea = l.useCallback(() => {
-            U(!1), $(!1);
+            P(!1), $(!1);
         }, []);
     return F
         ? (0, n.jsx)(h.Y, {
-              targetElementRef: V,
-              shouldShow: R,
+              targetElementRef: k,
+              shouldShow: w,
               position: "right",
               align: "top",
               spacing: 17,
@@ -145,9 +145,9 @@ function V(e) {
                       className: O.lY,
                       style: ee,
                       children: (0, n.jsx)(g.D, {
-                          innerRef: V,
-                          className: a()({ [O.vk]: !q }, G.q7, G.L9, G.vk),
-                          "aria-disabled": q,
+                          innerRef: k,
+                          className: a()({ [O.vk]: !K }, G.q7, G.L9, G.vk),
+                          "aria-disabled": K,
                           "aria-label": T.intl.string(T.t.F3qiJr),
                           onClick: Q,
                           ignoreKeyPress: Z,
@@ -192,7 +192,7 @@ function V(e) {
                                       }),
                                   }),
                                   (0, n.jsx)("div", {
-                                      ref: w,
+                                      ref: R,
                                       children: B
                                           ? (0, n.jsx)(g.D, {
                                                 className: O.VN,

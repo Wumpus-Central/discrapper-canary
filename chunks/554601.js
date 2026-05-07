@@ -551,12 +551,12 @@ function eJ(e) {
                                                         n.e("49476"),
                                                         n.e("45650"),
                                                         n.e("94461"),
-                                                        n.e("981"),
+                                                        n.e("57750"),
                                                         n.e("54718"),
                                                         n.e("55990"),
                                                         n.e("9712"),
                                                         n.e("333"),
-                                                        n.e("90466"),
+                                                        n.e("73109"),
                                                         n.e("79705"),
                                                         n.e("23924"),
                                                         n.e("71470"),
@@ -829,10 +829,10 @@ function e8(e) {
 var e4 = n(34188),
     e7 = n(700623),
     e3 = n(177953),
-    e9 = n(825484),
-    e2 = n(512950),
-    e6 = n(900797),
-    e5 = n(847374),
+    e2 = n(825484),
+    e9 = n(512950),
+    e5 = n(900797),
+    e6 = n(847374),
     te = n(10716),
     tt = n(702841),
     tn = n(150934),
@@ -1204,7 +1204,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, j.$B)(n) && (0, j.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e9.e, {
+            ? (0, r.jsxs)(e2.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tj, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1214,9 +1214,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, j.Ag)(n)
-              ? (0, r.jsx)(e2.p, {
+              ? (0, r.jsx)(e9.p, {
                     className: ty.ai,
-                    messageType: e2.Y.WARNING,
+                    messageType: e9.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1279,8 +1279,8 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e6.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e6.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1391,13 +1391,13 @@ var tQ = n(111042),
     t4 = n(168186),
     t7 = n(594061),
     t3 = n(935208),
-    t9 = n(630248),
-    t2 = n(355097);
-function t6(e, t) {
+    t2 = n(630248),
+    t9 = n(355097);
+function t5(e, t) {
     o.useEffect(() => {
-        t7.bW.loadIfUncached(t2.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t7.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t9.A], () => t9.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t2.A], () => t2.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -1437,7 +1437,7 @@ function t6(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t5 = n(546183),
+var t6 = n(546183),
     ne = n(228366);
 let nt = 10 * Y.A.Millis.MINUTE,
     nn = { lastUsedCommandId: null, lastUsedTimeMs: null };
@@ -2104,8 +2104,8 @@ function n8(e, t) {
     ).slice(0, i);
 }
 function n4(e, t) {
-    let n = t9.A.getScoreWithoutLoadingLatest(e.id);
-    return t9.A.getScoreWithoutLoadingLatest(t.id) - n;
+    let n = t2.A.getScoreWithoutLoadingLatest(e.id);
+    return t2.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
 function n7(e, t) {
     let n = (0, j.lq)(e),
@@ -2116,18 +2116,18 @@ function n3(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
-var n9 = n(562708),
-    n2 = n(139286),
-    n6 = n(520117);
-function n5(e) {
+var n2 = n(562708),
+    n9 = n(139286),
+    n5 = n(520117);
+function n6(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
         s = (0, A.bG)([p.A], () => p.A.entrypoint());
     return {
-        trackSearchResultsItemImpressionRef: (0, n6.A)({
+        trackSearchResultsItemImpressionRef: (0, n5.A)({
             onVisible: () => {
-                (0, n2.x)({
-                    type: n9.ImpressionTypes.VIEW,
-                    name: n9.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                (0, n9.x)({
+                    type: n2.ImpressionTypes.VIEW,
+                    name: n2.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
                 });
             },
@@ -2152,7 +2152,7 @@ function lt(e) {
             let e = t?.displayDescription ?? u;
             return null == e ? null : (0, K.SD)(e, void 0);
         }, [u, t?.displayDescription]),
-        { trackSearchResultsItemImpressionRef: p } = n5({
+        { trackSearchResultsItemImpressionRef: p } = n6({
             applicationId: n.id,
             commandId: t?.id,
             query: i,
@@ -2770,7 +2770,7 @@ function ld(e) {
     });
 }
 function lu(e) {
-    let { trackSearchResultsItemImpressionRef: t } = n5({
+    let { trackSearchResultsItemImpressionRef: t } = n6({
         applicationId: e.application.id,
         query: e.query,
         searchResultsPosition: e.resultsPosition,
@@ -3014,13 +3014,13 @@ function lj(e) {
                             onlyActivityApps: l,
                             includeAuthorizedAppsAndFetch: i,
                         } = e,
-                        s = (0, A.bG)([t5.default], () => t5.default.getFetchState());
+                        s = (0, A.bG)([t6.default], () => t6.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t5.FetchState.NOT_FETCHED && t8.A.fetch();
+                        i && s === t6.FetchState.NOT_FETCHED && t8.A.fetch();
                     }, [i, s]);
-                    let a = (0, A.yK)([t5.default], () =>
+                    let a = (0, A.yK)([t6.default], () =>
                             i
-                                ? t5.default
+                                ? t6.default
                                       .getNewestTokens()
                                       .filter((e) => e.scopes.includes(t1.F.APPLICATIONS_COMMANDS))
                                 : [],
@@ -3031,7 +3031,7 @@ function lj(e) {
                             let e = [];
                             return c && e.push(ni.gq), e;
                         }, [c]),
-                        u = t6(r, a);
+                        u = t5(r, a);
                     return o.useMemo(
                         () =>
                             l
@@ -3206,7 +3206,7 @@ function lv(e) {
                         }, new Set()),
                     [i],
                 ),
-                r = t6(
+                r = t5(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

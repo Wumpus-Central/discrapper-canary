@@ -17,9 +17,9 @@ var n = i(627968),
     x = i(778712),
     v = i(97808),
     f = i(863610),
-    _ = i(283973),
-    E = i(376728),
-    N = i(774300),
+    E = i(283973),
+    N = i(376728),
+    _ = i(774300),
     S = i(566903),
     y = i(714114),
     C = i(864436),
@@ -28,29 +28,29 @@ var n = i(627968),
     T = i(688810),
     O = i(139286),
     G = i(47167),
-    k = i(713517),
-    V = i(854627),
-    w = i(10862),
-    R = i(164891),
-    U = i(135635),
-    P = i(696451),
+    V = i(713517),
+    k = i(854627),
+    R = i(10862),
+    w = i(164891),
+    P = i(135635),
+    U = i(696451),
     D = i(71393),
     M = i(958590),
-    H = i(576705),
-    L = i(290863),
+    L = i(576705),
+    H = i(290863),
     F = i(427262),
     z = i(582904),
-    q = i(375708),
-    K = i(176277),
-    Y = i(824078),
+    K = i(375708),
+    Y = i(176277),
+    q = i(824078),
     B = i(518229);
 let W = "VoiceInviteSuggestionsPopover";
 function $(e) {
     let { channel: t, onHoverOrFocus: s, setPopoutRef: r, closePopout: u } = e,
         c = l.useRef(null),
-        p = (0, k.A)(c),
+        p = (0, V.A)(c),
         x = (0, z.kt)({ channel: t }),
-        { enabled: v } = R.A.useExperiment({ guildId: t.guild_id, location: "VoiceInviteSuggestionsPopover" }),
+        { enabled: v } = w.A.useExperiment({ guildId: t.guild_id, location: "VoiceInviteSuggestionsPopover" }),
         { analyticsLocations: f } = (0, T.Ay)(b.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
     (0, O.A)({
         name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
@@ -63,13 +63,13 @@ function $(e) {
         l.useEffect(() => {
             s?.(p.isHoveringOrFocusing);
         }, [s, p]);
-    let _ = l.useCallback(() => {
+    let E = l.useCallback(() => {
         let e = D.A.getGuild(t.guild_id);
         d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, m.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
                     i.e("7017"),
-                    i.e("981"),
+                    i.e("57750"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -81,36 +81,36 @@ function $(e) {
     }, [t, u]);
     return (0, n.jsx)("div", {
         ref: c,
-        "aria-label": q.intl.string(q.t.o53CL2),
-        className: a()(Y.popover, K.oO),
+        "aria-label": K.intl.string(K.t.o53CL2),
+        className: a()(q.popover, Y.oO),
         children: (0, n.jsxs)("div", {
-            className: K.vW,
+            className: Y.vW,
             children: [
                 v &&
                     (0, n.jsx)(h.E, {
                         variant: "text-sm/medium",
                         color: "text-muted",
-                        className: K.DD,
-                        children: q.intl.string(q.t["EE+P0H"]),
+                        className: Y.DD,
+                        children: K.intl.string(K.t["EE+P0H"]),
                     }),
                 (0, n.jsxs)("ul", {
-                    className: K.p_,
+                    className: Y.p_,
                     children: [
                         x.map((e) => (0, n.jsx)(Z, { channel: t, user: e, ringingEnabled: v }, e.id)),
                         (0, n.jsxs)(g.D, {
                             tag: "li",
-                            onClick: _,
-                            className: a()(K.nM, K.vk),
+                            onClick: E,
+                            className: a()(Y.nM, Y.vk),
                             children: [
                                 (0, n.jsx)("div", {
-                                    className: K.R4,
-                                    children: (0, n.jsx)(A.n, { size: "custom", className: K.Kk }),
+                                    className: Y.R4,
+                                    children: (0, n.jsx)(A.n, { size: "custom", className: Y.Kk }),
                                 }),
                                 (0, n.jsx)(h.E, {
                                     variant: "text-sm/medium",
-                                    className: K.UU,
+                                    className: Y.UU,
                                     lineClamp: 1,
-                                    children: q.intl.string(q.t.NOP3Ry),
+                                    children: K.intl.string(K.t.NOP3Ry),
                                 }),
                             ],
                         }),
@@ -124,27 +124,27 @@ function Z(e) {
     let { channel: t, user: i, ringingEnabled: s } = e,
         r = t.guild_id,
         d = l.useRef(null),
-        o = (0, u.bG)([P.Ay], () => P.Ay.getMember(r, i.id), [r, i.id]),
-        { isHoveringOrFocusing: m } = (0, k.A)(d),
+        o = (0, u.bG)([U.Ay], () => U.Ay.getMember(r, i.id), [r, i.id]),
+        { isHoveringOrFocusing: m } = (0, V.A)(d),
         [A, b] = l.useState(null),
         {
             icon: T,
             iconColor: O,
-            tooltipText: R,
+            tooltipText: w,
             disabled: D,
             shouldHideButton: z,
-            onClick: Y,
-        } = (0, U.A)({ user: i, channel: t, location: W }),
+            onClick: q,
+        } = (0, P.A)({ user: i, channel: t, location: W }),
         {
             status: $,
             isMobileOnline: Z,
             activities: J,
         } = (0, u.cf)(
-            [L.A],
+            [H.A],
             () => ({
-                status: L.A.getStatus(i.id, r),
-                isMobileOnline: L.A.isMobileOnline(i.id),
-                activities: L.A.getActivities(i.id, r),
+                status: H.A.getStatus(i.id, r),
+                isMobileOnline: H.A.isMobileOnline(i.id),
+                activities: H.A.getActivities(i.id, r),
             }),
             [i.id, r],
         ),
@@ -158,18 +158,18 @@ function Z(e) {
         en = "success" === A || "sending" === A,
         el = l.useCallback(
             (e) => {
-                e.stopPropagation(), D || Y();
+                e.stopPropagation(), D || q();
             },
-            [Y, D],
+            [q, D],
         ),
         es = l.useCallback(async () => {
             if (en) return;
             async function e() {
                 let e = M.A.getInvite(t.id, {}) ?? null;
                 if (null == e) {
-                    if (!H.A.can(I.xBc.CREATE_INSTANT_INVITE, t)) return null;
+                    if (!L.A.can(I.xBc.CREATE_INSTANT_INVITE, t)) return null;
                     try {
-                        await E.Ay.createInvite(t.id, {}, W);
+                        await N.Ay.createInvite(t.id, {}, W);
                     } catch (e) {
                         return null;
                     }
@@ -181,9 +181,9 @@ function Z(e) {
             let n = await e();
             null == n
                 ? b(null)
-                : N.A.enqueue(
+                : _.A.enqueue(
                       {
-                          type: N.F.USER,
+                          type: _.F.USER,
                           user: i,
                           inviteKey: n,
                           location: W,
@@ -198,23 +198,23 @@ function Z(e) {
             avatarDecorationSrc: ea,
             avatarSrc: er,
             eventHandlers: ed,
-        } = (0, V.A)({ userId: i.id, size: x._3.SIZE_24, animateOnHover: !m, guildId: r });
+        } = (0, k.A)({ userId: i.id, size: x._3.SIZE_24, animateOnHover: !m, guildId: r });
     if (null == o) return null;
     let eo = F.Ay.getName(i),
-        eu = q.intl.string(q.t.jYnGPG),
+        eu = K.intl.string(K.t.jYnGPG),
         ec = $ !== I.clD.OFFLINE ? $ : void 0,
         em = null != X.text,
         eh = null != ee && null != et;
     return (0, n.jsxs)(g.D, {
         innerRef: d,
         tag: "li",
-        className: a()(K.nM, { [K.vk]: !en }),
+        className: a()(Y.nM, { [Y.vk]: !en }),
         "aria-disabled": en,
         onClick: es,
         "aria-label": eu,
         children: [
             (0, n.jsx)(v.eu, {
-                className: K.my,
+                className: Y.my,
                 "aria-label": eo,
                 size: x._3.SIZE_24,
                 src: er,
@@ -224,17 +224,17 @@ function Z(e) {
                 ...ed,
             }),
             (0, n.jsxs)("div", {
-                className: K.VW,
+                className: Y.VW,
                 children: [
-                    (0, n.jsx)(h.E, { variant: "text-sm/medium", className: K.UU, lineClamp: 1, children: eo }),
+                    (0, n.jsx)(h.E, { variant: "text-sm/medium", className: Y.UU, lineClamp: 1, children: eo }),
                     (eh || em) &&
                         (0, n.jsxs)("div", {
-                            className: K.J2,
+                            className: Y.J2,
                             children: [
                                 eh
-                                    ? (0, n.jsx)(w.A, { size: "custom", color: ei, channel: ee, className: K.RI })
+                                    ? (0, n.jsx)(R.A, { size: "custom", color: ei, channel: ee, className: Y.RI })
                                     : null != Q
-                                      ? (0, n.jsx)(C.A, { icon: Q, className: K.RI })
+                                      ? (0, n.jsx)(C.A, { icon: Q, className: Y.RI })
                                       : null,
                                 (0, n.jsx)(h.E, {
                                     variant: "text-xs/medium",
@@ -247,30 +247,30 @@ function Z(e) {
                 ],
             }),
             "sending" === A &&
-                (0, n.jsx)("div", { className: K.r$, children: (0, n.jsx)(f.n, { dotRadius: 2, themed: !0 }) }),
+                (0, n.jsx)("div", { className: Y.r$, children: (0, n.jsx)(f.n, { dotRadius: 2, themed: !0 }) }),
             "success" === A &&
                 (0, n.jsx)(h.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: K.h5,
+                    className: Y.h5,
                     lineClamp: 1,
-                    children: q.intl.string(q.t["8BEiNn"]),
+                    children: K.intl.string(K.t["8BEiNn"]),
                 }),
             null == A &&
                 !s &&
                 (0, n.jsx)("div", {
-                    className: K.SB,
-                    children: (0, n.jsx)(_.R, { color: "currentColor", size: "sm", className: K.Kk }),
+                    className: Y.SB,
+                    children: (0, n.jsx)(E.R, { color: "currentColor", size: "sm", className: Y.Kk }),
                 }),
             s &&
                 !z &&
                 (0, n.jsx)(c.m, {
-                    text: R,
+                    text: w,
                     children: (0, n.jsx)(g.D, {
-                        className: a()(K.D9, B.button, B.secondary, { [K.r9]: D }),
+                        className: a()(Y.D9, B.button, B.secondary, { [Y.r9]: D }),
                         onClick: el,
                         "aria-disabled": D,
-                        children: (0, n.jsx)(T, { size: "xxs", color: O, className: K.Kk }),
+                        children: (0, n.jsx)(T, { size: "xxs", color: O, className: Y.Kk }),
                     }),
                 }),
         ],

@@ -44,7 +44,7 @@ var o = n(192308),
     y = n(340124),
     C = n(859703),
     v = n(405670),
-    O = n(245853),
+    O = n(192444),
     R = n(859387),
     b = n(561844),
     D = n(590202),
@@ -89,7 +89,7 @@ function W(e) {
     let { quest: t, sourceQuestContent: r } = e;
     (0, o.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("981"),
+            n.e("57750"),
             n.e("24195"),
             n.e("11260"),
             n.e("8103"),
@@ -564,7 +564,7 @@ function er(e) {
             n.e("8103"),
             n.e("75222"),
             n.e("95429"),
-            n.e("60413"),
+            n.e("98189"),
             n.e("48370"),
             n.e("46485"),
         ]).then(n.bind(n, 518420));

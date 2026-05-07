@@ -2321,8 +2321,7 @@
     position: relative
 }
 
-.inner__02fc8 {
-    background-color: transparent;
+button.inner__02fc8 {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 28px 28px;
@@ -2332,15 +2331,21 @@
     width: 44px
 }
 
-.inner__02fc8:hover {
+button.inner__02fc8:hover {
     background-color: #99aab54d;
     border-color: transparent;
     cursor: pointer
 }
 
-.inner__02fc8:disabled {
+button.inner__02fc8:disabled {
     opacity: .3;
     pointer-events: none
+}
+
+.applicationIcon__02fc8 {
+    border-radius: 28px;
+    display: flex;
+    margin: auto
 }
 
 .ellipsis__02fc8 {
@@ -6229,20 +6234,6 @@ div.profileThemedContainer__656be {
     color: inherit
 }
 
-.subtext_a90f4d {
-    align-items: center;
-    display: flex;
-    gap: 4px
-}
-
-.channelIcon_a90f4d {
-    flex-shrink: 0
-}
-
-.channelIcon_a90f4d path {
-    fill: var(--text-muted) !important
-}
-
 .inactiveSelects__7b422 {
     display: flex;
     flex-direction: row;
@@ -6773,6 +6764,12 @@ div.profileThemedContainer__656be {
     background: linear-gradient(180deg, rgba(15, 16, 17, 0), rgba(15, 16, 17, .1))
 }
 
+.riveHoverTarget__438ba {
+    height: 100%;
+    pointer-events: auto;
+    width: 100%
+}
+
 .container_fb64c9 {
     background: var(--background-gradient-lower, var(--background-base-lower))
 }
@@ -7258,6 +7255,10 @@ div.profileThemedContainer__656be {
 .searchBox_d9c882 {
     background-color: var(--background-base-lower);
     margin-inline-end: 16px
+}
+
+.browser__9a792 {
+    overflow: hidden
 }
 
 .icon_d98031 {

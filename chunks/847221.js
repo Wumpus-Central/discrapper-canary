@@ -17,10 +17,10 @@ var n = i(627968),
     x = i(769022),
     v = i(287809),
     f = i(562153),
-    _ = i(850457);
+    E = i(850457);
 i(281405);
-var E = i(375708),
-    N = i(601884);
+var N = i(375708),
+    _ = i(601884);
 function S(e) {
     let { channel: t } = e,
         [s, S] = l.useState(!1),
@@ -45,9 +45,8 @@ function S(e) {
                     (0, A.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                             i.e("49476"),
-                            i.e("23491"),
-                            i.e("12697"),
-                            i.e("981"),
+                            i.e("98042"),
+                            i.e("70652"),
                             i.e("26132"),
                             i.e("46652"),
                             i.e("93190"),
@@ -94,10 +93,10 @@ function S(e) {
                         return (i) => (0, n.jsx)(e, { ...i, user: j, guildId: t.guild_id, channel: t });
                     });
         },
-        k = () => {
+        V = () => {
             clearTimeout(C.current), (C.current = setTimeout(() => S(!0), 100));
         },
-        V = () => {
+        k = () => {
             clearTimeout(C.current), (C.current = setTimeout(() => S(!1), 100));
         };
     return null == j
@@ -106,25 +105,25 @@ function S(e) {
               targetElementRef: y,
               position: "right",
               shouldShow: s,
-              onRequestOpen: k,
-              onRequestClose: V,
+              onRequestOpen: V,
+              onRequestClose: k,
               useMouseEnter: !0,
               spacing: 17,
               renderPopout: () =>
-                  (0, n.jsx)(_.A, { channel: t, source: "ghost_user", onMouseEnter: k, onMouseLeave: V }),
+                  (0, n.jsx)(E.A, { channel: t, source: "ghost_user", onMouseEnter: V, onMouseLeave: k }),
               children: (e) => {
                   let { onClick: i, ...l } = e;
                   return (0, n.jsxs)(o.D, {
                       innerRef: y,
-                      className: N.nM,
+                      className: _.nM,
                       "aria-haspopup": "dialog",
-                      onClick: k,
+                      onClick: V,
                       onContextMenu: G,
                       ...l,
-                      onMouseLeave: V,
+                      onMouseLeave: k,
                       children: [
                           (0, n.jsxs)("div", {
-                              className: N.R3,
+                              className: _.R3,
                               children: [
                                   (0, n.jsx)(u.eu, {
                                       src: j.getAvatarURL(t.guild_id, 24),
@@ -133,20 +132,20 @@ function S(e) {
                                       status: m.clD.INVISIBLE,
                                       statusColor: "currentColor",
                                   }),
-                                  (0, n.jsx)(h.O, { className: N.SM }),
+                                  (0, n.jsx)(h.O, { className: _.SM }),
                               ],
                           }),
                           (0, n.jsx)(g.E, {
                               variant: "text-sm/normal",
-                              className: N.Pf,
-                              children: E.intl.format(E.t.TlVwqn, {
+                              className: _.Pf,
+                              children: N.intl.format(N.t.TlVwqn, {
                                   user: b,
                                   userHook: (e, t) =>
                                       (0, n.jsx)(
                                           g.E,
                                           {
                                               variant: "text-sm/semibold",
-                                              className: a()(N.Xh, O),
+                                              className: a()(_.Xh, O),
                                               color: "text-muted",
                                               children: e,
                                           },
@@ -157,7 +156,7 @@ function S(e) {
                                           g.E,
                                           {
                                               variant: "text-sm/normal",
-                                              className: N.cp,
+                                              className: _.cp,
                                               color: "text-muted",
                                               children: e,
                                           },

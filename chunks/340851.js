@@ -1,4 +1,4 @@
-i.d(t, { Ay: () => D, LR: () => U, aI: () => P });
+i.d(t, { Ay: () => D, LR: () => P, aI: () => U });
 var n = i(627968),
     l = i(64700),
     s = i(503698),
@@ -17,9 +17,9 @@ var n = i(627968),
     x = i(47167),
     v = i(643501),
     f = i(916641),
-    _ = i(652896),
-    E = i(279250),
-    N = i(346846),
+    E = i(652896),
+    N = i(279250),
+    _ = i(346846),
     S = i(342296),
     y = i(481947),
     C = i(495544),
@@ -29,26 +29,26 @@ var n = i(627968),
     O = i(977997),
     G = i(772800);
 i(281405);
-var k = i(544105),
-    V = i(325278),
-    w = i(375708),
-    R = i(976358);
-function U(e) {
+var V = i(544105),
+    k = i(325278),
+    R = i(375708),
+    w = i(976358);
+function P(e) {
     let { numUsers: t } = e;
     return (0, n.jsx)("div", {
-        className: R.BN,
+        className: w.BN,
         children: (0, n.jsxs)(d.E, { color: "text-muted", variant: "text-sm/medium", children: ["+", t] }),
     });
 }
-function P(e) {
+function U(e) {
     let { numAudience: t, collapsed: i } = e,
-        l = i ? t : w.intl.formatToPlainString(w.t["+v2pN2"], { count: t });
+        l = i ? t : R.intl.formatToPlainString(R.t["+v2pN2"], { count: t });
     return (0, n.jsxs)("div", {
-        className: a()(R.yJ, { [R.Nr]: i }),
+        className: a()(w.yJ, { [w.Nr]: i }),
         children: [
             (0, n.jsx)("div", {
-                className: R.$L,
-                children: (0, n.jsx)(o.L, { size: "md", color: "currentColor", className: R.wG }),
+                className: w.$L,
+                children: (0, n.jsx)(o.L, { size: "md", color: "currentColor", className: w.wG }),
             }),
             (0, n.jsx)(d.E, { color: "text-muted", variant: "text-sm/medium", children: l }),
         ],
@@ -61,17 +61,17 @@ let D = (0, A.J)(function (e) {
             channel: d,
             mute: o,
             localMute: A,
-            localVideoDisabled: U,
-            deaf: P,
+            localVideoDisabled: P,
+            deaf: U,
             video: D,
             embeddedApplication: M,
-            serverMute: H,
-            serverDeaf: L,
+            serverMute: L,
+            serverDeaf: H,
             nick: F,
             ringing: z,
-            speaking: q,
-            disconnected: K,
-            connectUserDragSource: Y,
+            speaking: K,
+            disconnected: Y,
+            connectUserDragSource: q,
             canDrag: B,
             isStreaming: W,
             isWatching: $,
@@ -107,19 +107,18 @@ let D = (0, A.J)(function (e) {
         [],
     );
     let eA = () => {
-            if (!W || !(0, E.eo)(d, O.A, j.A, b.A, v.default)[0]) return;
-            let e = { streamType: V.U4.GUILD, ownerId: s.id, channelId: d.id, guildId: d.guild_id };
+            if (!W || !(0, N.eo)(d, O.A, j.A, b.A, v.default)[0]) return;
+            let e = { streamType: k.U4.GUILD, ownerId: s.id, channelId: d.id, guildId: d.guild_id };
             C.default.getId() !== s.id && h.default.selectVoiceChannel(d.id),
-                $ ? ((0, N.A)(e), c.A.selectParticipant(e.channelId, (0, _._z)(e))) : (0, g.Nl)(e),
+                $ ? ((0, _.A)(e), c.A.selectParticipant(e.channelId, (0, E._z)(e))) : (0, g.Nl)(e),
                 Q?.(s.id);
         },
         ep = (e) => {
             (0, m.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     i.e("49476"),
-                    i.e("23491"),
-                    i.e("12697"),
-                    i.e("981"),
+                    i.e("98042"),
+                    i.e("70652"),
                     i.e("26132"),
                     i.e("46652"),
                     i.e("93190"),
@@ -176,7 +175,7 @@ let D = (0, A.J)(function (e) {
             });
         },
         eI = (0, n.jsx)("div", {
-            className: R.kZ,
+            className: w.kZ,
             "data-dnd-name": er,
             onMouseEnter: en
                 ? void 0
@@ -196,30 +195,30 @@ let D = (0, A.J)(function (e) {
                 children: (e) => {
                     let i, l;
                     return (
-                        (i = k.hv.has(et ?? "")),
+                        (i = V.hv.has(et ?? "")),
                         (l = {
                             user: s,
-                            speaking: q,
-                            disconnected: K,
+                            speaking: K,
+                            disconnected: Y,
                             mute: o,
                             localMute: A,
-                            localVideoDisabled: U,
+                            localVideoDisabled: P,
                             isStreaming: W,
                             isGuest: Z,
                             video: D,
                             priority: J,
                             ringing: z,
-                            deaf: P,
+                            deaf: U,
                             nick: F,
                             collapsed: t,
                             overlap: t,
-                            serverMute: H,
-                            serverDeaf: L,
+                            serverMute: L,
+                            serverDeaf: H,
                             tabIndex: el,
                             otherClientSessionType: et,
                             voicePlatform: ei,
                             embeddedApplication: M,
-                            avatarContainerClass: a()({ [R.dj]: !0 }),
+                            avatarContainerClass: a()({ [w.dj]: !0 }),
                             disabled: en && !i,
                             selected: eo,
                             onClick: i ? void 0 : em,
@@ -232,7 +231,7 @@ let D = (0, A.J)(function (e) {
                         }),
                         en
                             ? (0, n.jsx)(r.m, {
-                                  text: (0, f.A)(et) ?? w.intl.string(w.t.IyYqqY),
+                                  text: (0, f.A)(et) ?? R.intl.string(R.t.IyYqqY),
                                   children: (0, n.jsx)(y.Ay, { ref: ed, ...l }),
                               })
                             : (0, n.jsx)(u.Y, {
@@ -260,5 +259,5 @@ let D = (0, A.J)(function (e) {
                 },
             }),
         });
-    return B ? Y(eI) : eI;
+    return B ? q(eI) : eI;
 });
