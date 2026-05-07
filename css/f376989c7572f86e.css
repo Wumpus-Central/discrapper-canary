@@ -3483,6 +3483,8 @@
     --card-gradient-bg: rgba(0, 0, 0, .4);
     --card-gradient-pressed-bg: rgba(0, 0, 0, .5);
     --card-primary-pressed-bg: #29292e;
+    --card-secondary-background-active: #29292e;
+    --card-secondary-background-default: hsla(240, 4%, 61%, .08);
     --card-secondary-bg: hsla(240, 4%, 61%, .08);
     --card-secondary-pressed-bg: #29292e;
     --channel-background-default: #333338;
@@ -4101,6 +4103,8 @@
     --card-gradient-bg: hsla(0, 0%, 100%, .7);
     --card-gradient-pressed-bg: hsla(0, 0%, 100%, .5);
     --card-primary-pressed-bg: #ebedf0;
+    --card-secondary-background-active: #ebedf0;
+    --card-secondary-background-default: hsla(240, 4%, 61%, .12);
     --card-secondary-bg: hsla(240, 4%, 61%, .12);
     --card-secondary-pressed-bg: #ebedf0;
     --channel-background-default: #fafafa;
@@ -4719,6 +4723,8 @@
     --card-gradient-bg: rgba(0, 0, 0, .4);
     --card-gradient-pressed-bg: rgba(0, 0, 0, .5);
     --card-primary-pressed-bg: #0c0c10;
+    --card-secondary-background-active: #08080b;
+    --card-secondary-background-default: hsla(240, 4%, 61%, .12);
     --card-secondary-bg: hsla(240, 4%, 61%, .12);
     --card-secondary-pressed-bg: #08080b;
     --channel-background-default: #070709;
@@ -5337,6 +5343,8 @@
     --card-gradient-bg: rgba(0, 0, 0, .4);
     --card-gradient-pressed-bg: rgba(0, 0, 0, .5);
     --card-primary-pressed-bg: #212129;
+    --card-secondary-background-active: #18191f;
+    --card-secondary-background-default: hsla(240, 4%, 61%, .08);
     --card-secondary-bg: hsla(240, 4%, 61%, .08);
     --card-secondary-pressed-bg: #18191f;
     --channel-background-default: #1a1a1f;
