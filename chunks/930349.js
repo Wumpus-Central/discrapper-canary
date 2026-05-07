@@ -1,16 +1,16 @@
-n.d(l, { NW: () => x, Yt: () => m, kL: () => C });
+n.d(l, { NW: () => A, Yt: () => m, kL: () => C });
 var i = n(627968);
 n(64700);
 var a = n(503698),
     t = n.n(a),
-    s = n(408278),
-    r = n(241326),
+    r = n(408278),
+    s = n(241326),
     d = n(417270),
     u = n(939249),
     c = n(245604),
     o = n(661531),
     v = n(990078),
-    g = n(985018),
+    g = n(375708),
     b = n(889536);
 function h() {
     return (0, i.jsx)("div", { className: b.overlay });
@@ -21,9 +21,9 @@ function f(e) {
     return (0, i.jsx)(v.m, {
         text: t,
         ariaHidden: !0,
-        children: (0, i.jsx)(s.K, {
+        children: (0, i.jsx)(r.K, {
             "aria-label": a,
-            icon: "remove" === n ? r.u : d.m,
+            icon: "remove" === n ? s.u : d.m,
             size: "sm",
             variant: "overlay-secondary",
             onClick: l,
@@ -31,16 +31,16 @@ function f(e) {
     });
 }
 function m(e) {
-    let { variant: l, disabled: n = !1, children: a, innerRef: s } = e;
-    return (0, i.jsx)("div", { ref: s, className: t()(b.tile, b[l], { [b.disabled]: n }), children: a });
+    let { variant: l, disabled: n = !1, children: a, innerRef: r } = e;
+    return (0, i.jsx)("div", { ref: r, className: t()(b.tile, b[l], { [b.disabled]: n }), children: a });
 }
 function k(e) {
     let {
         variant: l,
         onClick: n,
         accessibleLabel: a,
-        children: s,
-        showOverlayOnHover: r = !1,
+        children: r,
+        showOverlayOnHover: s = !1,
         overlayIcon: d,
         overlayControls: c,
         disabled: o = !1,
@@ -61,12 +61,12 @@ function k(e) {
                 tabIndex: o ? -1 : 0,
                 ...f,
                 children: [
-                    (0, i.jsx)("div", { className: t()(b.content, { [b.dimmed]: v }), children: s }),
-                    r && !o && (0, i.jsx)(h, {}),
+                    (0, i.jsx)("div", { className: t()(b.content, { [b.dimmed]: v }), children: r }),
+                    s && !o && (0, i.jsx)(h, {}),
                     null != d &&
                         (0, i.jsx)("div", {
                             className: t()(b.iconContainer, {
-                                [b.iconAlignCenter]: "square" === l,
+                                [b.iconAlignCenter]: "square" === l || "full-height-bar" === l,
                                 [b.iconAlignRight]: "bar" === l,
                             }),
                             children: d,
@@ -88,7 +88,7 @@ function C(e) {
         }),
     });
 }
-function x(e) {
+function A(e) {
     let { deleteButtonConfig: l, ...n } = e;
     return (0, i.jsx)(k, {
         ...n,

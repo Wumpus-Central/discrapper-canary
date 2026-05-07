@@ -6995,22 +6995,6 @@ input::-webkit-outer-spin-button {
     z-index: 1
 }
 
-.balanceCounterMargin__98f64 {
-    margin-inline-start: 2px
-}
-
-.balanceCounterText__98f64 {
-    color: var(--text-strong);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    text-align: end
-}
-
-.full-motion .balanceCounterText__98f64 {
-    transition: all .4s ease-out, opacity .4s ease-in
-}
-
 .container__44ee9 {
     position: relative
 }

@@ -3182,8 +3182,9 @@ function n_(e) {
 function nG(e) {
     let { gameId: t, analyticsLocations: l } = e,
         n = (0, O.h)(t),
-        i = (0, R.A)({ application: n, analyticsLocations: l });
-    return { onCloudPlayClick: i, isCloudPlayButtonShown: !(0, w.L)(t) && null != i };
+        i = (0, R.A)({ application: n, analyticsLocations: l }),
+        [s] = (0, w.L)(t);
+    return { onCloudPlayClick: i, isCloudPlayButtonShown: !s && null != i };
 }
 function nP(e) {
     let { game: t, onSetInvite: l, invite: n, trackAction: a, onClose: c, analyticsLocations: o } = e,

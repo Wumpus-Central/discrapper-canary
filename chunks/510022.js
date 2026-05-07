@@ -10,7 +10,6 @@ let o = (e) => {
         async () => {
             let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await Promise.all([
                 n.e("78753"),
-                n.e("79332"),
                 n.e("72963"),
                 n.e("72877"),
                 n.e("20310"),

@@ -1,47 +1,44 @@
 "use strict";
-n.d(t, { A: () => l }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => u }), n(323874), n(14289), n(35956);
 var i = n(64700),
     r = n(975807),
     s = n(738533);
 let a = "steam",
     o = /^\/app\/(\d+)(?:\/)?/;
-function l(e) {
-    let t = (function (e) {
-        let [t, n] = i.useState(!1);
-        return (
-            i.useEffect(() => {
-                s.A.isProtocolRegistered(e).then(n);
-            }, [e]),
-            t
-        );
-    })(a);
+async function l(e) {
+    if ("store.steampowered.com" === e.hostname && (await s.A.isProtocolRegistered(a))) {
+        let t = e.pathname.match(o)?.[1];
+        if (null != t) return `${a}://store/${t}`;
+    }
+    return null;
+}
+function u(e) {
+    let [t, n] = i.useState(!1);
     return i.useCallback(
-        (n) => {
-            let i;
-            if (null != n) {
-                try {
-                    i = new URL(n);
-                } catch {
-                    return;
-                }
-                if ("store.steampowered.com" === i.hostname && t) {
-                    let t = i.pathname.match(o)?.[1];
-                    if (null != t) {
-                        let n = `${a}://store/${t}`;
-                        if (null != e) return void e(n);
-                        i.searchParams.set("utm_source", "discord");
-                        let s = i.toString(),
-                            o = setTimeout(() => {
-                                (0, r.A)(s);
-                            }, 2500);
-                        return (
-                            window.addEventListener("blur", () => clearTimeout(o), { once: !0 }),
-                            void (window.location.href = n)
-                        );
-                    }
-                }
-                i.searchParams.set("utm_source", "discord"), (n = i.toString()), null != e ? e(n) : (0, r.A)(n);
+        async (i) => {
+            let s;
+            if (null == i) return;
+            try {
+                s = new URL(i);
+            } catch {
+                return;
             }
+            let a = await l(s);
+            if (
+                (null != a && t && (a = null),
+                s.searchParams.set("utm_source", "discord"),
+                (i = s.toString()),
+                null != e)
+            )
+                e(i);
+            else if (null != a) {
+                var o;
+                let e;
+                (o = a),
+                    (e = setTimeout(() => n(!0), 5e3)),
+                    window.addEventListener("blur", () => clearTimeout(e), { once: !0 }),
+                    (0, r.A)(o);
+            } else (0, r.A)(i);
         },
         [e, t],
     );
