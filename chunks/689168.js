@@ -22,7 +22,7 @@ function _(e, t, n) {
     let s = u[i] ?? {};
     (s[t] = { state: e, remotePartyId: r }),
         (u[i] = s),
-        __OVERLAY__ || e !== l.eAD.FAILED ? e === l.eAD.LOADING && null != r && d(i, t, 15e3) : d(i, t, 12e4);
+        __OVERLAY__ || e !== l.eAD.FAILED ? e === l.eAD.LOADING && d(i, t, null != r ? 15e3 : 12e4) : d(i, t, 12e4);
 }
 function f(e) {
     return _(l.eAD.COMPLETE, l.xL.JOIN, e);

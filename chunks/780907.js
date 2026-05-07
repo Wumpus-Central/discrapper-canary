@@ -104,7 +104,13 @@ function F(e) {
                             });
                         })
                         .catch(() => {}),
-                C.A.waitConnected(t).then(() => C.A.waitSubscribed(t, L.ZE4.ACTIVITY_JOIN))
+                u.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: t }),
+                C.A.waitConnected(t).then(
+                    () => (
+                        u.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: t }),
+                        C.A.waitSubscribed(t, L.ZE4.ACTIVITY_JOIN)
+                    ),
+                )
             );
         })
         .then(() => {
