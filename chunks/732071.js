@@ -1,13 +1,17 @@
 "use strict";
-n.d(t, { A: () => c, K: () => u }), n(321073);
-var r,
-    i = n(635377),
-    s = n.n(i),
+n.d(t, { A: () => d, K: () => u }), n(321073);
+var i,
+    r = n(635377),
+    s = n.n(r),
     a = n(439372),
-    o = n(954571),
+    o = n(174459),
     l = n(652215),
-    u = (((r = {}).ANNOUNCEMENT = "announcement"), (r.APP_EMBED = "app_embed"), r);
-class d extends a.A {
+    u =
+        (((i = {}).ANNOUNCEMENT = "announcement"),
+        (i.APP_EMBED = "app_embed"),
+        (i.OFFICIAL_MESSAGE = "official_message"),
+        i);
+class c extends a.A {
     currentlyVisibleMessageTimers = {};
     viewsInCurrentChannel = new Set();
     recentViewTimes = new (s())({ max: 500, maxAge: 6e4 });
@@ -16,22 +20,22 @@ class d extends a.A {
     actions = { CHANNEL_SELECT: () => this.handleChannelSelect() };
     handleMessageBecameVisible(e) {
         let { type: t, messageId: n } = e,
-            r = `${n}-${t}`;
-        if (null != this.currentlyVisibleMessageTimers[r] || this.viewsInCurrentChannel.has(r)) return;
-        let i = this.recentViewTimes.get(r);
-        if (null != i && Date.now() - i < 6e4) return;
+            i = `${n}-${t}`;
+        if (null != this.currentlyVisibleMessageTimers[i] || this.viewsInCurrentChannel.has(i)) return;
+        let r = this.recentViewTimes.get(i);
+        if (null != r && Date.now() - r < 6e4) return;
         let s = setTimeout(() => {
-            delete this.currentlyVisibleMessageTimers[r],
-                this.viewsInCurrentChannel.add(r),
-                this.recentViewTimes.set(r, Date.now()),
+            delete this.currentlyVisibleMessageTimers[i],
+                this.viewsInCurrentChannel.add(i),
+                this.recentViewTimes.set(i, Date.now()),
                 this.bufferViewTrack(e);
         }, 1e3);
-        this.currentlyVisibleMessageTimers[r] = s;
+        this.currentlyVisibleMessageTimers[i] = s;
     }
     handleMessageLostVisibility(e, t) {
         let n = `${e}-${t}`,
-            r = this.currentlyVisibleMessageTimers[n];
-        null != r && (clearTimeout(r), delete this.currentlyVisibleMessageTimers[n]);
+            i = this.currentlyVisibleMessageTimers[n];
+        null != i && (clearTimeout(i), delete this.currentlyVisibleMessageTimers[n]);
     }
     handleMessageListVisibilityChange(e) {
         for (let t of e) this.handleMessageBecameVisible(t);
@@ -71,6 +75,11 @@ class d extends a.A {
                             guild_id: e.guildId,
                         },
                     };
+                if ("official_message" === e.type)
+                    return {
+                        event: l.HAw.OFFICIAL_MESSAGE_VIEWED,
+                        properties: { message_id: e.messageId, channel_id: e.channelId, guild_id: e.guildId },
+                    };
                 throw Error("Invalid message type for message view tracking");
             })(e);
             o.default.track(t.event, t.properties);
@@ -84,4 +93,4 @@ class d extends a.A {
             null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3));
     }
 }
-let c = new d();
+let d = new c();

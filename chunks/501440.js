@@ -313,7 +313,7 @@ let tn = function (e, t, n) {
 };
 var tl = n(754459),
     ti = n(375199),
-    ts = n(522871),
+    ts = n(824556),
     ta = n(699352),
     tr = n(877413),
     to = n.n(tr),
@@ -1503,14 +1503,14 @@ let nG = o.memo(function (e) {
         er = (0, eJ.fF)(i, f),
         ec = (0, eJ.ZD)(i),
         eu = (0, m.bG)([eG.A], () => eG.A.getMessage(s), [s]),
-        em = (0, ts.A)({ message: i, channel: a }),
-        eA = o.useRef(window),
-        eg = null != eu,
-        ep = (0, eV.bW)(a.guild_id, "ChatMessage");
+        em = (0, eV.bW)(a.guild_id, "ChatMessage"),
+        eA = (0, ts.A)({ message: i, channel: a, officialMessagesEnabled: em }),
+        eg = o.useRef(window),
+        ep = null != eu;
     (n =
         i.type === eh.lAJ.CUSTOM_GIFT
             ? ""
-            : !H && eg
+            : !H && ep
               ? (function (e, t) {
                     let { message: n, compact: l } = e;
                     return (0, r.jsx)(tS, { message: n, content: t, compact: l ?? !1 });
@@ -1544,13 +1544,13 @@ let nG = o.memo(function (e) {
                         [nh.mK]: i.mentioned,
                         [nh.M1]: (0, ed.ec)(i),
                         [nh.SH]: i.type === eh.lAJ.NITRO_NOTIFICATION,
-                        [nh.Sg]: i.hasFlag(eh.pr7.IS_GUILD_OFFICIAL) && ep,
+                        [nh.Sg]: i.hasFlag(eh.pr7.IS_GUILD_OFFICIAL) && em,
                         [nh.H4]: (0, eK.A)(i),
                         [nh._A]: !C && (ef || i.type === eh.lAJ.REPLY),
                         [nh.wH]: K,
                         [nh.$n]: en?.message.id === i.id,
                         [nh.$w]: i.isCommandType() && i.state === eh.cmJ.SENDING,
-                        [nh.DX]: eg,
+                        [nh.DX]: ep,
                     }),
                     zalgo: !H,
                     childrenRepliedMessage:
@@ -1588,7 +1588,7 @@ let nG = o.memo(function (e) {
                         hasBailedAst: Q,
                         handleContextMenu: M,
                         isInteracting: z,
-                        isAutomodBlockedMessage: eg,
+                        isAutomodBlockedMessage: ep,
                         forceAddReactions: i.type === eh.lAJ.EMOJI_ADDED,
                     }),
                     childrenButtons:
@@ -1626,7 +1626,7 @@ let nG = o.memo(function (e) {
                                   setPopout: b,
                                   messagePopouts: y,
                                   isFocused: P || k,
-                                  messageWindow: eA.current,
+                                  messageWindow: eg.current,
                               })
                             : void 0,
                     childrenSystemMessage: (0, nL.A)(e),
@@ -1637,7 +1637,7 @@ let nG = o.memo(function (e) {
                     isSystemMessage: (0, eK.A)(i),
                     hasReply: i.type === eh.lAJ.REPLY,
                     messageRef: (e) => {
-                        (em.current = e), (eA.current = e?.ownerDocument?.defaultView ?? window);
+                        (eA.current = e), (eg.current = e?.ownerDocument?.defaultView ?? window);
                     },
                     author: et,
                 }),

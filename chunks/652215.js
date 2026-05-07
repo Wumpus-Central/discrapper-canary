@@ -4951,6 +4951,7 @@ var rD =
         (ex.VOICE_PANEL_LAYOUT_DESYNC = "voice_panel_layout_desync"),
         (ex.ANNOUNCEMENT_MESSAGE_LINK_CLICKED = "announcement_message_link_clicked"),
         (ex.ANNOUNCEMENT_MESSAGE_VIEWED = "announcement_message_viewed"),
+        (ex.OFFICIAL_MESSAGE_VIEWED = "official_message_viewed"),
         (ex.REDESIGN_NAV_BAR_CLICKED = "redesign_nav_bar_clicked"),
         (ex.REDESIGN_NAV_BAR_RENDERED = "redesign_nav_bar_rendered"),
         (ex.CHANNEL_BACK_NAVIGATED = "channel_back_navigated"),
