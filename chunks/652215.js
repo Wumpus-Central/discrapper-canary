@@ -1985,6 +1985,7 @@ var nF =
         (Z[(Z.EMBEDDED = 256)] = "EMBEDDED"),
         (Z[(Z.CONTEXTLESS = 512)] = "CONTEXTLESS"),
         (Z[(Z.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN = 1024)] = "SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN"),
+        (Z[(Z.SUPPORTS_JOIN_URL = 2048)] = "SUPPORTS_JOIN_URL"),
         Z),
     nV =
         (((X = {})[(X.ALL_MESSAGES = 0)] = "ALL_MESSAGES"),
