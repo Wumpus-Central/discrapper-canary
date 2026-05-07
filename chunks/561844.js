@@ -119,8 +119,7 @@ async function O(e) {
             sourceQuestContent: u,
         } = e,
         c = h.A.getQuest(t),
-        d = (0, p.yI)(n, t),
-        _ = (0, p.Gp)(n, t);
+        d = (0, p.Gp)(n, t);
     N({
         questId: t,
         event: A.HAw.QUEST_CONTENT_CLICKED,
@@ -134,8 +133,7 @@ async function O(e) {
                 clickId: o,
             })),
             quest_status: null != c ? (0, g.NI)(c) : null,
-            traffic_metadata_raw: d ?? null,
-            traffic_metadata_sealed: _ ?? null,
+            traffic_metadata_sealed: d ?? null,
         },
         trackGuildAndChannelMetadata: l,
         shouldExtendSession: (0, p.xn)(n),

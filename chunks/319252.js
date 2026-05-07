@@ -313,7 +313,6 @@ function E(e) {
         config: h(e.config),
         userStatus: null == e.user_status ? null : p(e.user_status),
         targetedContent: e.targeted_content,
-        trafficMetadataRaw: e.traffic_metadata_raw,
         trafficMetadataSealed: e.traffic_metadata_sealed,
     };
 }

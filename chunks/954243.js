@@ -178,7 +178,6 @@ class L {
                             ...n,
                             ...this.commonProperties(o),
                             metadata_sealed: r ?? null,
-                            traffic_metadata_raw: (0, E.yI)(this.questContent, o?.id) ?? null,
                             traffic_metadata_sealed: (0, E.Gp)(this.questContent, o?.id) ?? null,
                         },
                     });
@@ -306,7 +305,6 @@ class L {
                             ...t,
                             metadata_sealed: r ?? null,
                             ...this.commonProperties(s),
-                            traffic_metadata_raw: (0, E.yI)(this.questContent, s?.id) ?? null,
                             traffic_metadata_sealed: (0, E.Gp)(this.questContent, s?.id) ?? null,
                         },
                     });

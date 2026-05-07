@@ -1,23 +1,22 @@
 "use strict";
 n.d(t, {
-    Gp: () => R,
+    Gp: () => O,
     HN: () => T,
     Ic: () => E,
     Kc: () => C,
     L4: () => v,
     Oh: () => _,
-    RF: () => D,
+    RF: () => b,
     ZG: () => A,
     gO: () => p,
     if: () => m,
-    r$: () => L,
+    r$: () => D,
     t6: () => I,
     v1: () => g,
-    vZ: () => b,
+    vZ: () => R,
     vc: () => f,
     vy: () => h,
     xn: () => S,
-    yI: () => O,
 });
 var i = n(665260),
     r = n(773669),
@@ -95,7 +94,6 @@ function N(e) {
         adDecisionData: e.adDecisionData,
         adContext: e.adContext,
         metadataSealed: e.metadataSealed,
-        trafficMetadataRaw: e.trafficMetadataRaw,
         trafficMetadataSealed: e.trafficMetadataSealed,
     };
 }
@@ -120,7 +118,6 @@ function y(e, t) {
                   adDecisionData: t.adDecisionData,
                   adContext: t.adContext,
                   metadataSealed: t.metadataSealed,
-                  trafficMetadataRaw: t.trafficMetadataRaw,
                   trafficMetadataSealed: t.trafficMetadataSealed,
               };
     }
@@ -138,17 +135,6 @@ function v(e, t) {
 function O(e, t, n) {
     let i = T(e);
     if (null != i) {
-        let { trafficMetadataRaw: e, questId: r } = y(i, n) ?? {};
-        if (null != e && (null != n || r === t)) return e;
-    }
-    if (null != t) {
-        let e = o.A.getQuest(t);
-        return e?.trafficMetadataRaw;
-    }
-}
-function R(e, t, n) {
-    let i = T(e);
-    if (null != i) {
         let { trafficMetadataSealed: e, questId: r } = y(i, n) ?? {};
         if (null != e && (null != n || r === t)) return e;
     }
@@ -157,13 +143,13 @@ function R(e, t, n) {
         return e?.trafficMetadataSealed;
     }
 }
-function b(e, t) {
+function R(e, t) {
     let n = T(e);
     if (null != n) return y(n, t)?.adContext;
 }
-function D(e, t) {
+function b(e, t) {
     s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }
-function L() {
+function D() {
     return window.location.pathname.startsWith(d.BVt.QUEST_HOME_DEPRECATED);
 }
