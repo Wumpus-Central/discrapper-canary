@@ -21,6 +21,7 @@ function f(e) {
               dmSpamDetectedAt: e.dm_spam_detected_at,
               dmsDisabledUntil: e.dms_disabled_until,
               invitesDisabledUntil: e.invites_disabled_until,
+              lockdownDurationHours: e.lockdown_duration_hours,
           }
         : null;
 }

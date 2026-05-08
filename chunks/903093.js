@@ -3,12 +3,13 @@ n.d(t, {
     $5: () => _,
     P$: () => c,
     Qm: () => d,
+    Z7: () => g,
     _J: () => p,
     di: () => E,
     fi: () => h,
     k$: () => u,
     mR: () => f,
-    ql: () => g,
+    ql: () => A,
     r2: () => m,
     yc: () => l,
 }),
@@ -54,7 +55,11 @@ function E(e) {
 function m(e) {
     return e?.invitesDisabledUntil != null && new Date(e.invitesDisabledUntil) > new Date();
 }
-function g(e, t) {
+function g(e) {
+    let t = e?.lockdownDurationHours;
+    return null != t && (0, a.aE)().some((e) => e.value === t) ? t : a.f7;
+}
+function A(e, t) {
     let n = e.dmsDisabledUntil ?? e.invitesDisabledUntil;
     if (null == n) return "";
     let i = null != e.dmsDisabledUntil,
