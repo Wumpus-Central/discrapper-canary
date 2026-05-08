@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 541160, Version Hash: b4016f28428478b0d686529da56f04bea93504df`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 541223, Version Hash: c362cddcb48fa0e1b9e8126122729f8a5c4a7d9e`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -17750,27 +17750,29 @@ let T1 = Math.ceil(Math.sqrt(115200)),
                 return { shouldShowPopover: a, shouldShowGradientAndBadge: t && !o, dismissOnboardingContent: s };
             })(),
             { shouldShowQuestHomeHeroContent: o, dismissQuestHomeHeroContent: l, questHomeHero: u } = (0, TZ.I)(),
-            c = e8.useCallback(() => {
-                T$.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }), o && l();
-            }, [o, l]),
-            [{ glowSpring: d }, _] = (0, TK.z)(() => ({
+            c = (0, Tq.cR)({ questHomeHero: u, shouldShowQuestHomeHeroContent: o }),
+            d = e8.useCallback(() => {
+                T$.A.getState().setUtmCurrentContext({ utmContentCurrent: "PRIMARY_QUEST_HOME" }),
+                    o && l(),
+                    c.handleEntrypointClick();
+            }, [o, l, c]),
+            [{ glowSpring: _ }, f] = (0, TK.z)(() => ({
                 from: { glowSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 240, friction: 12 },
             })),
-            [{ shineSpring: f }, h] = (0, TK.z)(() => ({
+            [{ shineSpring: h }, p] = (0, TK.z)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
-            p = (0, Tq.cR)({ questHomeHero: u, shouldShowQuestHomeHeroContent: o }),
             E = e8.useCallback(() => {
-                h({ shineSpring: 1 }), _({ glowSpring: 1, delay: 200 }), p.handleMouseEnter();
-            }, [h, _, p]),
+                p({ shineSpring: 1 }), f({ glowSpring: 1, delay: 200 }), c.handleMouseEnter();
+            }, [p, f, c]),
             m = e8.useCallback(() => {
-                h({ shineSpring: 0, immediate: !0 }), _({ glowSpring: 0, delay: 0 }), p.handleMouseLeave();
-            }, [h, _, p]),
+                p({ shineSpring: 0, immediate: !0 }), f({ glowSpring: 0, delay: 0 }), c.handleMouseLeave();
+            }, [p, f, c]),
             g = e8.useCallback(() => {
-                h({ shineSpring: 1, delay: 500 }), _({ glowSpring: 1, delay: 700 }), p.handleOnboardingPopoutRender();
-            }, [h, _, p]),
+                p({ shineSpring: 1, delay: 500 }), f({ glowSpring: 1, delay: 700 }), c.handleOnboardingPopoutRender();
+            }, [p, f, c]),
             [A, I] = e8.useState(-1),
             T = e8.useCallback((e) => {
                 I(e.contentRect.width);
@@ -17811,7 +17813,7 @@ let T1 = Math.ceil(Math.sqrt(115200)),
                     className: t2()({ [T0.VU]: N || O, [T0.jR]: N, [T0.XO]: o }),
                     icon: sL.r,
                     listItemRef: i,
-                    onClick: c,
+                    onClick: d,
                     route: eL.BVt.QUEST_HOME,
                     selected: t,
                     text: na.intl.string(na.t.JALI2K),
@@ -17841,7 +17843,7 @@ let T1 = Math.ceil(Math.sqrt(115200)),
                                     (0, k.jsx)(TW.animated.div, {
                                         className: T0.q2,
                                         style: {
-                                            transform: f.to(
+                                            transform: h.to(
                                                 (e) =>
                                                     `translateX(calc(${e * A}px + ${e * T1}px)) translateY(-50%) rotate(45deg)`,
                                             ),
@@ -17849,7 +17851,7 @@ let T1 = Math.ceil(Math.sqrt(115200)),
                                     }),
                                     (0, k.jsx)(TW.animated.div, {
                                         className: T0.ys,
-                                        style: { opacity: (0, TJ.a)(d.to({ range: [0, 1], output: [0, 0.5] })) },
+                                        style: { opacity: (0, TJ.a)(_.to({ range: [0, 1], output: [0, 0.5] })) },
                                     }),
                                     (0, k.jsx)(oi.Lp, {
                                         className: T0.qS,
@@ -17882,7 +17884,7 @@ let T1 = Math.ceil(Math.sqrt(115200)),
                           children: R,
                       })
                     : R,
-                y && (0, k.jsx)(TQ, { targetElementRef: i, onNavigateToQuestHome: c, onRender: g, onRequestClose: a }),
+                y && (0, k.jsx)(TQ, { targetElementRef: i, onNavigateToQuestHome: d, onRender: g, onRequestClose: a }),
             ],
         });
     };
@@ -18355,7 +18357,7 @@ let Sb = "isHideDevBanner",
                     className: t2()(SR.Wz, SR.mr),
                     children: [
                         (0, k.jsx)(SO, { className: SR.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "541160" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "541223" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
