@@ -2926,9 +2926,9 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
