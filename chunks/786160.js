@@ -740,6 +740,7 @@ function te() {
                                                         children: (0, l.jsx)(el.A, {
                                                             variantOverride: "secondary",
                                                             size: "md",
+                                                            subscriptionTier: eI.pe.TIER_2,
                                                         }),
                                                     }),
                                                 ],
