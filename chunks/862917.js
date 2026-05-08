@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 541278, Version Hash: c6c5780506d11986211bc1008a4e32894073044f`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 541392, Version Hash: f560ebadfd9e62b9c186ab43c6e1e851ea75d62c`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -3334,7 +3334,7 @@ var rY = n(338854),
     rW = n(43105),
     rK = n(150616),
     rz = n(372684),
-    r$ = n(948138),
+    r$ = n(607814),
     rq = n(665039);
 function rZ(e) {
     let { onOpenClipsGallery: t, canShowReminder: n } = e,
@@ -18357,7 +18357,7 @@ let Sb = "isHideDevBanner",
                     className: t2()(SR.Wz, SR.mr),
                     children: [
                         (0, k.jsx)(SO, { className: SR.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "541278" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "541392" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -30524,6 +30524,7 @@ let Lt = {
                             null != i.sort && e.set(ov.L1.SORT, i.sort),
                                 null != i.filter && e.set(ov.L1.FILTER, i.filter),
                                 null != i.tab && e.set(ov.L1.TAB, i.tab),
+                                null != i.adCreativeIds && e.set(ov.L1.AD_CREATIVE_IDS, i.adCreativeIds),
                                 (0, uF.pX)(eL.BVt.QUEST_HOME, { hash: i.questId, search: `?${e.toString()}` }),
                                 Le(i, (0, yD.OE)(t));
                         } else (0, uF.pX)(eL.BVt.QUEST_HOME);

@@ -228,7 +228,13 @@ function eh(e, t, n) {
     return e.localeCompare(t) * (0 === n ? -1 : 1);
 }
 var ep = (((r = {}).ALL = "all"), (r.CLAIMED = "claimed"), (r.PREVIEW_TOOL = "preview_tool"), r),
-    eE = (((s = {}).TAB = "tab"), (s.QUEST_ID = "quest_id"), (s.SORT = "sort"), (s.FILTER = "filter"), s);
+    eE =
+        (((s = {}).TAB = "tab"),
+        (s.QUEST_ID = "quest_id"),
+        (s.SORT = "sort"),
+        (s.FILTER = "filter"),
+        (s.AD_CREATIVE_IDS = "ad_creative_ids"),
+        s);
 function em(e) {
     let t,
         n,
