@@ -294,7 +294,7 @@ function ek(e) {
         { themeType: l } = (0, L.E)(),
         u = (0, M.bG)([K.default], () => K.default.getId() === t.id),
         c = (0, V.J)(a),
-        d = (0, J.o)(n?.application_id ?? a?.id),
+        d = (0, J.o)(n?.application_id ?? a?.id) || (0, P.A)(n, eT.jUm.SUPPORTS_JOIN_URL),
         { analyticsLocations: f } = (0, E.Ay)(p.A.USER_PROFILE_ACTIVITY_BUTTONS),
         m = (0, F.A)("user_profile_activity_buttons", n?.application_id),
         { fetched: g, canStartAuthorization: A, hasAlreadyLinked: I, startAuthorization: T } = (0, Q.RD)(a),

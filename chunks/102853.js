@@ -68,6 +68,7 @@ function B(e) {
             [O.A, N.A, x.A, y.A],
             () =>
                 X ||
+                (0, m.A)(n, G.jUm.SUPPORTS_JOIN_URL) ||
                 (null != Z &&
                     (0, k.A)({
                         LibraryApplicationStore: O.A,
