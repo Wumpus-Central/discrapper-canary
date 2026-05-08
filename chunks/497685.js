@@ -170,7 +170,11 @@ function F(e) {
         "favoriteGifs",
         (t) => {
             let n = r().max(Object.values(t.gifs).map((e) => e.order)) ?? 0,
-                i = G(e) && null != e.gifSrc ? e.gifSrc : e.src,
+                i =
+                    (/\.(mp4|webm)(\?|$)/i.test(e.src) && null != e.gifSrc && "" !== e.gifSrc && e.gifSrc !== e.src) ||
+                    (G(e) && null != e.gifSrc)
+                        ? e.gifSrc
+                        : e.src,
                 s =
                     G(e) &&
                     (function (e) {
