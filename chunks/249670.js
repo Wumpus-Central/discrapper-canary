@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 541472, Version Hash: 2967b5338637a52b12a5fd3bc6ecca4963768fa5`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 541532, Version Hash: 5f852668972f31545f2f10ae13fa390cfff0c6f4`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -4482,7 +4482,7 @@ let s3 = (0, rs.Fe)({
                 n.e("54658"),
                 n.e("31828"),
                 n.e("77298"),
-                n.e("62577"),
+                n.e("53171"),
                 n.e("96975"),
                 n.e("4787"),
                 n.e("30373"),
@@ -7246,14 +7246,9 @@ var uT = n(210714),
     uN = n(189812),
     uy = n(573725),
     uC = n(717398),
-    uv = n(953051);
-let uO = (0, eM.mj)({
-    kind: "user",
-    name: "2026-03-friend-request-message",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
-var uR = n(395422),
+    uv = n(953051),
+    uO = n(189883),
+    uR = n(395422),
     ub = n(650583),
     uD = n(235351),
     uL = n(818050);
@@ -7280,7 +7275,7 @@ function uG(e) {
         i = e8.useRef(null),
         [r, s] = e8.useReducer(uk, uM),
         { canSend: a, hint: o, error: l, success: u } = r,
-        { enabled: c } = uO.useConfig({ location: "AddFriendInput" }),
+        { enabled: c } = uO.A.useConfig({ location: "AddFriendInput" }),
         [d, _] = e8.useState("");
     return (
         e8.useEffect(() => {
@@ -18357,7 +18352,7 @@ let Sb = "isHideDevBanner",
                     className: t2()(SR.Wz, SR.mr),
                     children: [
                         (0, k.jsx)(SO, { className: SR.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "541472" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "541532" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -35951,7 +35946,7 @@ let xi = (0, ny.Fe)({
             n.e("71790"),
             n.e("81754"),
             n.e("77298"),
-            n.e("62577"),
+            n.e("53171"),
             n.e("70383"),
             n.e("19148"),
             n.e("96975"),
@@ -36019,7 +36014,7 @@ let xi = (0, ny.Fe)({
             n.e("23707"),
             n.e("86381"),
             n.e("26993"),
-            n.e("5682"),
+            n.e("56228"),
             n.e("10385"),
             n.e("54187"),
             n.e("56750"),
