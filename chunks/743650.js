@@ -1,4 +1,4 @@
-s.r(t), s.d(t, { default: () => s3 }), s(323874), s(14289), s(35956);
+s.r(t), s.d(t, { default: () => s6 }), s(323874), s(14289), s(35956);
 var l,
     n = s(627968),
     r = s(64700),
@@ -368,7 +368,7 @@ let eU = function (e) {
         }),
     });
 };
-var eF = s(59350);
+var eF = s(961974);
 let eD = (e) => {
     let { quest: t } = e;
     return (0, n.jsx)("div", {
@@ -611,7 +611,7 @@ function e1(e) {
 function e8(e) {
     return new URLSearchParams(e).get(J.L1.QUEST_ID);
 }
-let e3 = function (e) {
+let e6 = function (e) {
     let { questId: t } = e,
         { questId: s, setQuestId: l } = (function (e) {
             let t = (0, o.W6)(),
@@ -669,7 +669,7 @@ let e3 = function (e) {
         children: i?.id != null ? (0, n.jsx)(eX, { questId: i?.id, selectedSections: c }) : null,
     });
 };
-var e6 = s(617986),
+var e3 = s(617986),
     e7 = s(203879),
     e2 = s(403362),
     e4 = s(167417),
@@ -1373,8 +1373,8 @@ let t8 = [
     { type: "quests", identifier: "orb", title: eu.t["0Uc94A"] },
     { type: "quests", identifier: "discovered", title: eu.t["u9Ug++"] },
 ];
-var t3 = s(548636);
-function t6(e) {
+var t6 = s(548636);
+function t3(e) {
     let { questIds: t, rowIndex: s, sectionIdentifier: l } = e,
         { targetQuestId: a, highlightCount: i, highlightAnimationProgress: o } = r.useContext(tz),
         c = null != a;
@@ -1387,7 +1387,7 @@ function t6(e) {
                 "--custom-min-quest-tile-width": "390.6666666666667px",
                 "--custom-extra-spacing-placeholder-size": "5px",
             },
-            className: t3.FO,
+            className: t6.FO,
             children: [
                 t.map((e, t) => {
                     let r = a === e,
@@ -1396,17 +1396,17 @@ function t6(e) {
                         tu.animated.div,
                         {
                             [tZ]: "",
-                            className: r ? t3.XB : void 0,
+                            className: r ? t6.XB : void 0,
                             style: tE(r, u, o),
                             children: [
-                                r && (0, n.jsx)("div", { className: t3.E4 }, i),
+                                r && (0, n.jsx)("div", { className: t6.E4 }, i),
                                 (0, n.jsx)(eq.Ay, {
                                     questId: e,
                                     isInFeaturedSection: l === t1.FEATURED,
                                     questContent: z.uF.QUEST_HOME_DESKTOP,
                                     contentPosition: t,
                                     rowIndex: s,
-                                    className: t3.d,
+                                    className: t6.d,
                                     sourceQuestContent: z.uF.QUEST_HOME_DESKTOP,
                                 }),
                             ],
@@ -1414,7 +1414,7 @@ function t6(e) {
                         `animated-wrapper-${e}`,
                     );
                 }),
-                (0, n.jsx)("div", { className: t3.fu }),
+                (0, n.jsx)("div", { className: t6.fu }),
             ],
         }),
     });
@@ -1557,7 +1557,7 @@ let se = 4 * th.A.Millis.SECOND,
                             className: t9.p,
                             children: [
                                 (0, n.jsx)(g.D, { variant: "heading-lg/medium", children: eu.intl.string(r) }),
-                                (0, n.jsx)(t6, { questIds: l, rowIndex: t, sectionIdentifier: s }),
+                                (0, n.jsx)(t3, { questIds: l, rowIndex: t, sectionIdentifier: s }),
                             ],
                         },
                         s,
@@ -2286,7 +2286,7 @@ function s8(e) {
         ],
     });
 }
-let s3 = function (e) {
+let s6 = function (e) {
     let { topLevelRoute: t } = e,
         s = (0, o.zy)(),
         l = (0, o.W6)(),
@@ -2397,7 +2397,7 @@ let s3 = function (e) {
             t && (0, R.Dr)(m.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
         }, [t]);
     let es = r.useCallback(() => {
-            (0, e6.navigateToQuestHome)({ fromContent: z.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
+            (0, e3.navigateToQuestHome)({ fromContent: z.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
                 B.default.track(ej.HAw.QUEST_CONTENT_CLICKED, {
                     cta_name: Z.Cy.VIEW_QUESTS,
                     click_id: (0, c.A)(),
@@ -2474,7 +2474,7 @@ let s3 = function (e) {
                               f === J.NC.CLAIMED
                                   ? (0, n.jsx)(tW, { onSelectTab: el })
                                   : f === J.NC.PREVIEW_TOOL
-                                    ? (0, n.jsx)(e3, {})
+                                    ? (0, n.jsx)(e6, {})
                                     : V
                                       ? (0, n.jsx)(st, { ref: G, deepLinkedQuestId: ee })
                                       : (0, n.jsx)(tA, { ref: G }),

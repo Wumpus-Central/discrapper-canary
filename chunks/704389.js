@@ -17,7 +17,7 @@ var n,
     j = a(243721),
     b = a(274372),
     f = a(372684),
-    y = a(948138),
+    y = a(607814),
     _ = a(871421);
 function C() {
     let { mlPipelinesEnabled: e } = (0, d.cf)([b.A], () => ({
@@ -7347,14 +7347,14 @@ let rh = {
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("94864"),
-                    a.e("86695"),
+                    a.e("27681"),
                     a.e("7017"),
                     a.e("54747"),
                     a.e("44135"),
                     a.e("76822"),
                     a.e("25907"),
                     a.e("59007"),
-                    a.e("40110"),
+                    a.e("27107"),
                     a.e("87845"),
                     a.e("95780"),
                     a.e("18934"),
@@ -7787,7 +7787,7 @@ let rL = {
         return (t) => (0, r.jsx)(e, { ...t, entryPoint: a2.q1.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL });
     },
     ExistingUserAgeGatePrompt: async () => {
-        let { default: e } = await Promise.all([a.e("99646"), a.e("82758"), a.e("80022"), a.e("10136")]).then(
+        let { default: e } = await Promise.all([a.e("27681"), a.e("82758"), a.e("80022"), a.e("10136")]).then(
             a.bind(a, 776971),
         );
         return (t) => (0, r.jsx)(e, { ...t, source: rM.w_.NSFW_SERVER });
@@ -7798,7 +7798,7 @@ let rL = {
     },
     NewUserAgeGate: async () => {
         let { default: e } = await Promise.all([
-            a.e("99646"),
+            a.e("27681"),
             a.e("19623"),
             a.e("82758"),
             a.e("80022"),
@@ -16035,7 +16035,7 @@ var mM = a(284009),
     mK = a(241124),
     mY = a(28082),
     mq = a(717695),
-    mJ = a(59350),
+    mJ = a(961974),
     mQ = a(127219),
     mX = a(262514),
     mZ = a(291922),
@@ -17940,7 +17940,7 @@ function xo() {
     });
 }
 var xd = a(963935),
-    xc = a(602934),
+    xc = a(116456),
     xu = a(53181);
 function xm(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,
