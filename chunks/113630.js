@@ -355,7 +355,7 @@ var eW = n(990078),
     e3 = n(350535),
     e6 = n(372684),
     e4 = n(572164),
-    e5 = n(948138),
+    e5 = n(607814),
     e7 = n(890856),
     e8 = n(713517),
     e9 = n(609174),
@@ -381,8 +381,7 @@ let to = r.memo(function (e) {
             onClick: c,
             className: a()(ta.Z1, o),
             children: (0, i.jsxs)(tr.d, {
-                isPlaying: !1,
-                preload: "metadata",
+                isStatic: !0,
                 children: [
                     n && (0, i.jsx)(ex.Lp, { className: ta.Ad, text: ep.intl.string(ep.t.y2b7CA) }),
                     (0, i.jsxs)(ts.h, {
@@ -2905,7 +2904,7 @@ class rI extends r.PureComponent {
                     n.e("31828"),
                     n.e("71790"),
                     n.e("81754"),
-                    n.e("62577"),
+                    n.e("53171"),
                     n.e("33049"),
                     n.e("36474"),
                     n.e("28638"),
