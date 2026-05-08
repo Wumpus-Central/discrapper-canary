@@ -2,8 +2,8 @@ n.d(e, { n: () => y, t: () => h });
 var l = n(627968),
     i = n(64700),
     s = n(123292),
-    o = n(460890),
-    a = n(224640),
+    a = n(460890),
+    o = n(224640),
     r = n(696208),
     u = n(430993),
     c = n(20742),
@@ -17,7 +17,7 @@ function y() {
 function h(t) {
     let e,
         { steps: n, currentStepKey: y, numberedSteps: h, onStepChange: x, onComplete: C, ...b } = t,
-        { i18n: k } = (0, o.G9)(),
+        { i18n: k } = (0, a.G9)(),
         v = b.onClose,
         [g, P] = i.useState(!1),
         [f, m] = i.useState(null),
@@ -76,8 +76,9 @@ function h(t) {
         H && (e = N ? { percent: 100 } : { stepCount: h.length, stepNumber: U }),
         (0, l.jsx)(p.Provider, {
             value: R,
-            children: (0, l.jsxs)(a.d, {
+            children: (0, l.jsxs)(o.d, {
                 ...b,
+                "aria-label": b["aria-label"] ?? z.title,
                 paddingSize: null != F ? "lg" : "sm",
                 children: [
                     null != F

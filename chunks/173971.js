@@ -29,8 +29,8 @@ var a = i(627968),
     j = i(738533),
     O = i(45938),
     M = i(403362),
-    D = i(427262),
-    b = i(690493),
+    b = i(427262),
+    D = i(690493),
     v = i(987723),
     G = i(383089),
     U = i(41032),
@@ -177,6 +177,7 @@ let K = (t) => {
         (0, a.jsxs)(s.d, {
             transitionState: n,
             onClose: u,
+            "aria-label": e,
             children: [
                 (0, a.jsx)(l.rQ, { title: e, alignCenter: !0 }),
                 (0, a.jsx)(o.c, {
@@ -269,10 +270,10 @@ function z(t) {
             soundId: x,
         } = t,
         [g, k] = (0, I.L)(u?.id),
-        E = (0, b.J)(u),
+        E = (0, D.J)(u),
         [L, h] = n.useState(null),
         R = (0, p.bG)([T.default], () => T.default.getUser(f.userId)),
-        N = D.Ay.getName(R),
+        N = b.Ay.getName(R),
         O = n.useRef({
             analyticsLocations: A,
             skuId: l.id,

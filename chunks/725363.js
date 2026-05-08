@@ -593,6 +593,7 @@ function es(e) {
     return (0, s.jsxs)(r.d, {
         ...e,
         size: "lg",
+        "aria-label": c,
         children: [
             (0, s.jsx)(i.rQ, { title: c, subtitle: u }),
             n &&

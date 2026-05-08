@@ -1,52 +1,53 @@
-s.d(e, { default: () => E });
-var n = s(627968),
-    i = s(64700),
-    a = s(503698),
-    l = s.n(a),
+s.d(e, { default: () => T });
+var i = s(627968),
+    a = s(64700),
+    l = s(503698),
+    n = s.n(l),
     r = s(390544),
     d = s(224640),
     c = s(20742),
-    f = s(17928),
+    u = s(17928),
     o = s(116833),
-    u = s(289873),
+    m = s(289873),
     p = s(834730),
-    m = s(821609),
-    x = s(624479),
-    _ = s(793574),
-    h = s(46054),
-    g = s(208039),
-    A = s(665171),
-    N = s(522055),
-    j = s(500897),
-    v = s(117265),
-    I = s(576709),
-    S = s(985018),
+    x = s(821609),
+    h = s(624479),
+    g = s(793574),
+    A = s(46054),
+    j = s(208039),
+    N = s(396748),
+    S = s(522055),
+    E = s(500897),
+    f = s(117265),
+    v = s(576709),
+    I = s(375708),
     C = s(360452);
-function E(t) {
-    let { guildId: e, instance: s, onClose: a, transitionState: E } = t,
-        T = (0, f.bG)([N.A], () => N.A.getStateForGuild(e)?.instructions[s.planId]);
-    i.useEffect(() => {
-        null == T && (0, A.tT)(e, s.planId);
-    }, [e, s.planId, T]);
-    let M = (0, v.A)(s),
-        { handleCopyServerIp: b, animateCopyIcon: k } = (0, j.A)(e, s.id, _.A.GAME_SERVER_INSTRUCTIONS_MODAL, M ?? ""),
-        G = i.useMemo(() => {
+function T(t) {
+    let { guildId: e, instance: s, onClose: l, transitionState: T } = t,
+        _ = (0, u.bG)([S.A], () => S.A.getStateForGuild(e)?.instructions[s.planId]);
+    a.useEffect(() => {
+        null == _ && (0, N.tT)(e, s.planId);
+    }, [e, s.planId, _]);
+    let b = (0, f.A)(s),
+        { handleCopyServerIp: M, animateCopyIcon: k } = (0, E.A)(e, s.id, g.A.GAME_SERVER_INSTRUCTIONS_MODAL, b ?? ""),
+        G = a.useMemo(() => {
             switch (s.status) {
                 case r.M.STARTING:
-                    return S.intl.string(I.default.ud4hxY);
+                    return I.intl.string(v.default.ud4hxY);
                 case r.M.OFFLINE:
-                    return S.intl.string(I.default.ABAm7x);
+                    return I.intl.string(v.default.ABAm7x);
                 default:
                     return;
             }
         }, [s.status]);
-    return (0, n.jsxs)(d.d, {
+    return (0, i.jsxs)(d.d, {
         size: "lg",
         paddingSize: "lg",
-        transitionState: E,
-        onClose: a,
+        transitionState: T,
+        onClose: l,
+        "aria-label": s.name,
         children: [
-            (0, n.jsx)(c.rQ, {
+            (0, i.jsx)(c.rQ, {
                 gradientColor: "purple",
                 graphic: {
                     type: "dynamic",
@@ -55,36 +56,36 @@ function E(t) {
                 },
                 alignCenter: !0,
                 title: s.name,
-                subtitle: S.intl.string(I.default["4HqfaU"]),
+                subtitle: I.intl.string(v.default["4HqfaU"]),
             }),
-            null == T
-                ? (0, n.jsx)(u.y, {})
-                : (0, n.jsxs)("div", {
+            null == _
+                ? (0, i.jsx)(m.y, {})
+                : (0, i.jsxs)("div", {
                       className: C.Qs,
                       children: [
-                          null != G && (0, n.jsx)(g.A, { className: C.et, children: G }),
-                          (0, n.jsx)("div", {
+                          null != G && (0, i.jsx)(j.A, { className: C.et, children: G }),
+                          (0, i.jsx)("div", {
                               className: C.$6,
-                              children: T.map((t, e) =>
-                                  (0, n.jsxs)(
+                              children: _.map((t, e) =>
+                                  (0, i.jsxs)(
                                       "div",
                                       {
                                           className: C.PM,
                                           children: [
-                                              (0, n.jsx)("div", {
+                                              (0, i.jsx)("div", {
                                                   className: C.CD,
-                                                  children: (0, n.jsx)(p.E, {
+                                                  children: (0, i.jsx)(p.E, {
                                                       variant: "text-xs/semibold",
                                                       color: "text-subtle",
-                                                      children: S.intl.formatToPlainString(I.default.oSU1fF, {
+                                                      children: I.intl.formatToPlainString(v.default.oSU1fF, {
                                                           step: e + 1,
                                                       }),
                                                   }),
                                               }),
-                                              (0, n.jsx)(p.E, {
+                                              (0, i.jsx)(p.E, {
                                                   variant: "text-sm/normal",
                                                   color: "text-subtle",
-                                                  children: h.A.parse(t, !1, { allowLinks: !0 }),
+                                                  children: A.A.parse(t, !1, { allowLinks: !0 }),
                                               }),
                                           ],
                                       },
@@ -92,23 +93,23 @@ function E(t) {
                                   ),
                               ),
                           }),
-                          null != M &&
-                              (0, n.jsxs)("div", {
+                          null != b &&
+                              (0, i.jsxs)("div", {
                                   className: C.i7,
                                   children: [
-                                      (0, n.jsx)("div", {
-                                          className: l()(C.Nk, k && C.i0),
-                                          children: (0, n.jsx)(p.E, {
+                                      (0, i.jsx)("div", {
+                                          className: n()(C.Nk, k && C.i0),
+                                          children: (0, i.jsx)(p.E, {
                                               variant: "text-md/medium",
                                               color: "text-strong",
-                                              children: M,
+                                              children: b,
                                           }),
                                       }),
-                                      (0, n.jsx)(m.$, {
+                                      (0, i.jsx)(x.$, {
                                           variant: k ? "active" : "primary",
-                                          text: k ? S.intl.string(S.t.t5VZ88) : S.intl.string(S.t.OpuAlK),
-                                          onClick: b,
-                                          icon: x.T,
+                                          text: k ? I.intl.string(I.t.t5VZ88) : I.intl.string(I.t.OpuAlK),
+                                          onClick: M,
+                                          icon: h.T,
                                       }),
                                   ],
                               }),

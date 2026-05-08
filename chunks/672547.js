@@ -1,8 +1,8 @@
-a.d(t, { default: () => b }), a(323874), a(14289), a(35956);
+a.d(t, { default: () => N }), a(323874), a(14289), a(35956);
 var n = a(627968),
     i = a(64700),
-    o = a(503698),
-    l = a.n(o),
+    l = a(503698),
+    o = a.n(l),
     s = a(224640),
     r = a(20742),
     p = a(373495),
@@ -13,7 +13,7 @@ var n = a(627968),
     d = a(622142),
     A = a(702211),
     f = a(699576),
-    w = a(954571),
+    w = a(174459),
     _ = a(925895),
     g = a(652215);
 let $ = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/,
@@ -22,10 +22,10 @@ let $ = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/,
     E = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com"]),
     j = new Set(["static.klipy.com"]);
 var x = a(339984),
-    I = a(985018),
-    N = a(877774);
-function b(e) {
-    let { transitionState: t, onClose: o, onComplete: b, uploadType: S, showUpsellHeader: T, analyticsPage: L } = e,
+    b = a(375708),
+    I = a(877774);
+function N(e) {
+    let { transitionState: t, onClose: l, onComplete: N, uploadType: S, showUpsellHeader: T, analyticsPage: L } = e,
         [C, G] = i.useState(!1),
         P = (0, p.k)(),
         { analyticsLocations: F } = (0, m.Ay)(u.A.GIF_PICKER);
@@ -34,7 +34,7 @@ function b(e) {
             { gifSrc: i } = e;
         if (null == i || C) return;
         G(!0);
-        let l = (function (e) {
+        let o = (function (e) {
                 let t = new URL(`${window.location.protocol}${e}`),
                     { ASSET_ENDPOINT: a } = window.GLOBAL_ENV;
                 if (E.has(t.hostname)) {
@@ -59,7 +59,7 @@ function b(e) {
                 }
                 return `https://${t.hostname}${t.pathname}${t.search}`;
             })(i),
-            s = await fetch(l),
+            s = await fetch(o),
             r = await s.blob(),
             p =
                 "" !== r.type
@@ -78,14 +78,14 @@ function b(e) {
                               case "jpeg":
                                   return "image/jpeg";
                           }
-                      })(l),
+                      })(o),
             h = "jpeg" === (t = p.split("/")[1]) ? ".jpg" : null != t && "" !== t ? `.${t}` : ".gif",
             u = `selected${h}`;
-        o(),
+        l(),
             (0, c.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        a.e("43662"),
+                        a.e("95780"),
                         a.e("48804"),
                         a.e("50342"),
                         a.e("7406"),
@@ -95,9 +95,9 @@ function b(e) {
                     ]).then(a.bind(a, 142630));
                     return (t) =>
                         (0, n.jsx)(e, {
-                            imageUri: l,
+                            imageUri: o,
                             file: new File([r], u, { type: p }),
-                            onCrop: b,
+                            onCrop: N,
                             uploadType: S,
                             showUpsellHeader: T,
                             ...t,
@@ -114,18 +114,20 @@ function b(e) {
         });
     }, [F, L]);
     let H = S === x.HL.AVATAR || S === x.HL.BANNER,
-        O = (0, A.b)(!H);
+        O = (0, A.b)(!H),
+        U = b.intl.string(b.t["xsC+/y"]);
     return (0, n.jsx)(m.f5, {
         value: F,
         children: (0, n.jsxs)(s.d, {
-            onClose: o,
+            onClose: l,
             transitionState: t,
+            "aria-label": U,
             children: [
-                (0, n.jsx)(r.rQ, { title: I.intl.string(I.t["xsC+/y"]) }),
+                (0, n.jsx)(r.rQ, { title: U }),
                 T &&
                     !O &&
                     (0, n.jsx)("div", {
-                        className: N.It,
+                        className: I.It,
                         children: (0, n.jsx)(_.A, {
                             type: S,
                             analyticsPage: L,
@@ -134,16 +136,16 @@ function b(e) {
                         }),
                     }),
                 (0, n.jsxs)("div", {
-                    className: N.SD,
+                    className: I.SD,
                     children: [
                         (0, n.jsx)(d.A, {
-                            className: l()(N.XC, { [N.bX]: C }),
+                            className: o()(I.XC, { [I.bX]: C }),
                             onSelectGIF: k,
                             headingColor: "text-subtle",
                             hideFavorites: !0,
                         }),
-                        C && (0, n.jsx)(h.y, { className: N.u1 }),
-                        T && O && (0, n.jsx)(f.A, { uploadType: S, showUpsell: !0, className: N.Kt }),
+                        C && (0, n.jsx)(h.y, { className: I.u1 }),
+                        T && O && (0, n.jsx)(f.A, { uploadType: S, showUpsell: !0, className: I.Kt }),
                     ],
                 }),
             ],

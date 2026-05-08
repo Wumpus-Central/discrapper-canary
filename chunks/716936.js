@@ -10,8 +10,8 @@ var s = t(627968),
     u = t(780645),
     m = t(396478),
     h = t(761508),
-    g = t(834730),
-    x = t(778712),
+    x = t(834730),
+    g = t(778712),
     j = t(289873),
     f = t(364522),
     p = t(297413),
@@ -27,26 +27,26 @@ var s = t(627968),
     y = t(562153),
     M = t(841549),
     E = t(969632),
-    k = t(951727),
+    k = t(555034),
     V = t(812729),
     R = t.n(V),
     U = t(956703),
     G = t(652215),
-    H = t(985018),
-    P = t(736618);
-let T = "/assets/64a47ba893401c1c.svg",
-    W = b.v.VOTE;
-function q() {
+    q = t(375708),
+    H = t(736618);
+let P = "/assets/64a47ba893401c1c.svg",
+    T = b.v.VOTE;
+function W() {
     let e = (0, N.Ay)();
     return (0, s.jsxs)(m.pp, {
         theme: e,
         children: [
-            (0, s.jsx)(m.G8, { darkSrc: T, lightSrc: T, width: 106, height: 100, style: { marginBottom: 10 } }),
+            (0, s.jsx)(m.G8, { darkSrc: P, lightSrc: P, width: 106, height: 100, style: { marginBottom: 10 } }),
             (0, s.jsx)(m.SG, {
-                note: H.intl.string(H.t.bwytdh),
-                noteClassName: P.BI,
-                className: P._U,
-                children: H.intl.string(H.t.vhQK3o),
+                note: q.intl.string(q.t.bwytdh),
+                noteClassName: H.BI,
+                className: H._U,
+                children: q.intl.string(q.t.vhQK3o),
             }),
         ],
     });
@@ -63,21 +63,21 @@ function B(e) {
     return (0, s.jsx)(h.V, {
         look: "custom",
         orientation: "vertical",
-        "aria-label": H.intl.string(H.t["qbir+4"]),
+        "aria-label": q.intl.string(q.t["qbir+4"]),
         selectedItem: a,
         onItemSelect: n,
         children: l.answers.map((e) => {
             let l = String(e.answer_id),
                 n = t[l] ?? 0,
                 { emoji: r, text: o } = e.poll_media,
-                d = H.intl.formatToPlainString(H.t.wqBc7A, { numVotes: n, option: o }),
+                d = q.intl.formatToPlainString(q.t.wqBc7A, { numVotes: n, option: o }),
                 c = a === l;
             return (0, s.jsxs)(
                 h.V.Item,
                 {
                     id: l,
                     disableItemStyles: !0,
-                    className: i()({ [P.Ym]: !c, [P.yw]: c }),
+                    className: i()({ [H.Ym]: !c, [H.yw]: c }),
                     "aria-label": d,
                     selectedItem: a,
                     children: [
@@ -85,21 +85,21 @@ function B(e) {
                             ? (0, s.jsx)(z, {
                                   emoji: r,
                                   emojiSize: 16,
-                                  imageClassNames: P.Zg,
-                                  textClassNames: i()(P.Zg, P.at),
+                                  imageClassNames: H.Zg,
+                                  textClassNames: i()(H.Zg, H.at),
                                   "aria-hidden": !0,
                               })
                             : null,
-                        (0, s.jsx)(g.E, {
+                        (0, s.jsx)(x.E, {
                             variant: "text-md/semibold",
                             color: "text-default",
                             lineClamp: 1,
                             children: (0, s.jsx)(u.A, { position: "left", "aria-hidden": !0, children: o }),
                         }),
-                        (0, s.jsxs)(g.E, {
+                        (0, s.jsxs)(x.E, {
                             variant: "text-md/semibold",
                             color: "text-default",
-                            className: P.Oo,
+                            className: H.Oo,
                             children: ["(", n.toLocaleString(), ")"],
                         }),
                     ],
@@ -114,27 +114,27 @@ function O(e) {
         a = (0, c.bG)([A.default], () => A.default.getUser(l.id), [l]),
         n = y.Ay.useName(t.guild_id, t.id, l);
     return (0, s.jsxs)("div", {
-        className: P.Mg,
+        className: H.Mg,
         onContextMenu: (e) => (0, M.wQ)(e, l, t),
         children: [
             (0, s.jsx)("div", {
-                className: P.x$,
-                children: (0, s.jsx)(v.A, { user: a ?? l, size: x._3.SIZE_32, "aria-hidden": !0, guildId: t.guild_id }),
+                className: H.x$,
+                children: (0, s.jsx)(v.A, { user: a ?? l, size: g._3.SIZE_32, "aria-hidden": !0, guildId: t.guild_id }),
             }),
             (0, s.jsxs)("div", {
-                className: P.v3,
+                className: H.v3,
                 children: [
-                    (0, s.jsx)(g.E, {
+                    (0, s.jsx)(x.E, {
                         variant: "text-md/normal",
-                        className: P.UU,
+                        className: H.UU,
                         "aria-label": n,
-                        children: (0, s.jsx)("span", { className: P.Ci, children: n }),
+                        children: (0, s.jsx)("span", { className: H.Ci, children: n }),
                     }),
                     (0, s.jsx)(p.A, {
                         user: l,
-                        className: P.rW,
-                        usernameClass: i()(P.Xh, P.Ci),
-                        discriminatorClass: P.D2,
+                        className: H.rW,
+                        usernameClass: i()(H.Xh, H.Ci),
+                        discriminatorClass: H.D2,
                         forceUsername: !0,
                     }),
                 ],
@@ -160,21 +160,21 @@ function L(e) {
         d = a.useRef(null),
         u = a.useRef(null),
         [m, h] = a.useState(!1),
-        g = a.useCallback(async () => {
+        x = a.useCallback(async () => {
             let e = u.current;
             h(!0);
-            let s = await C.ao({ channelId: n.id, messageId: l.id, emoji: t.emoji, limit: G.WxW, after: e, type: W });
+            let s = await C.ao({ channelId: n.id, messageId: l.id, emoji: t.emoji, limit: G.WxW, after: e, type: T });
             (u.current = s[s.length - 1].id), h(!1);
         }, [n.id, l.id, t.emoji]);
     (0, w.Ay)(() => {
-        g();
+        x();
     });
-    let x = a.useCallback(() => {
+    let g = a.useCallback(() => {
             let { current: e } = d;
             if (null == e) return;
             let l = e.getScrollerState();
-            l.scrollTop + l.offsetHeight >= l.scrollHeight - 52 && o && !m && g();
-        }, [d, o, m, g]),
+            l.scrollTop + l.offsetHeight >= l.scrollHeight - 52 && o && !m && x();
+        }, [d, o, m, x]),
         f = a.useCallback(
             (e, l) => (1 === e ? 52 * (0 === l) : 52 * (0 === e && ((0 === l && 0 === i.length) || null != i[l]))),
             [i],
@@ -185,10 +185,10 @@ function L(e) {
                     a = i[t];
                 return 1 === l
                     ? 0 === t
-                        ? (0, s.jsx)(j.y, { className: P.u1 }, "hasMore")
+                        ? (0, s.jsx)(j.y, { className: H.u1 }, "hasMore")
                         : null
                     : 0 === i.length && m
-                      ? (0, s.jsx)(j.y, { className: P.u1 }, "loadingMore")
+                      ? (0, s.jsx)(j.y, { className: H.u1 }, "loadingMore")
                       : null != a && (0, s.jsx)(O, { channel: n, user: a }, a.id);
             },
             [n, m, i],
@@ -198,24 +198,24 @@ function L(e) {
             return 0 === i.length && m ? e.push(1) : (e.push(i.length), o && e.push(1)), e;
         }, [o, m, i.length]);
     return (0, s.jsx)(r.Ei, {
-        className: P.Ov,
+        className: H.Ov,
         fade: !0,
         ref: d,
         sections: v,
         sectionHeight: 0,
         rowHeight: f,
         renderRow: p,
-        onScroll: o ? x : void 0,
+        onScroll: o ? g : void 0,
     });
 }
 function Q(e) {
     let { message: l, initialAnswerId: t, onClose: n, transitionState: i } = e,
         r = (0, c.bG)([S.A], () => S.A.getChannel(l.getChannelId())),
         [u, m] = a.useState(t),
-        g = a.useMemo(() => {
+        x = a.useMemo(() => {
             if (null != l.reactions) return (0, k.Ej)(l.reactions, u);
         }, [l.reactions, u]),
-        x = a.useMemo(() => (0, E.aw)(l.reactions), [l.reactions]),
+        g = a.useMemo(() => (0, E.aw)(l.reactions), [l.reactions]),
         j = a.useMemo(
             () =>
                 (function (e) {
@@ -239,21 +239,22 @@ function Q(e) {
                 e
             );
         }, [l.poll?.answers]),
-        w = H.intl.formatToPlainString(H.t.wqBc7A, { numVotes: p, option: v[u] });
+        w = q.intl.formatToPlainString(q.t.wqBc7A, { numVotes: p, option: v[u] });
     if (null == r) throw Error("PollVotesModal.render: Message does not have a channelId");
     if (null == l.poll) throw Error("PollVotesModal.render: Message does not have a poll");
     return (0, s.jsxs)(o.d, {
         transitionState: i,
         onClose: n,
         size: "lg",
+        "aria-label": l.poll.question.text,
         children: [
-            (0, s.jsx)(d.rQ, { title: l.poll.question.text, subtitle: H.intl.format(H.t.XRkuof, { count: x }) }),
-            (0, s.jsx)("div", { className: P.jH }),
+            (0, s.jsx)(d.rQ, { title: l.poll.question.text, subtitle: q.intl.format(q.t.XRkuof, { count: g }) }),
+            (0, s.jsx)("div", { className: H.jH }),
             (0, s.jsxs)("div", {
-                className: P.rf,
+                className: H.rf,
                 children: [
                     (0, s.jsx)(f.Ip, {
-                        className: P.XG,
+                        className: H.XG,
                         fade: !0,
                         children: (0, s.jsx)(B, {
                             poll: l.poll,
@@ -265,11 +266,11 @@ function Q(e) {
                     (0, s.jsx)(h.V.Panel, {
                         id: u,
                         "aria-label": w,
-                        className: P.nd,
+                        className: H.nd,
                         children:
-                            null != g && p > 0
-                                ? (0, s.jsx)(L, { message: l, reaction: g, channel: r })
-                                : (0, s.jsx)(q, {}),
+                            null != x && p > 0
+                                ? (0, s.jsx)(L, { message: l, reaction: x, channel: r })
+                                : (0, s.jsx)(W, {}),
                     }),
                 ],
             }),

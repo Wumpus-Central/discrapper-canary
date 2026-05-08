@@ -208,6 +208,7 @@ let J = (t) => {
         transitionState: e,
         onClose: l,
         size: "sm",
+        "aria-label": i,
         children: [
             (0, n.jsx)(N.rQ, { title: i }),
             (0, n.jsx)(E.c, {

@@ -11,22 +11,24 @@ function l(e) {
         size: t = "md",
         gradientColor: n = "purple",
         graphic: l,
-        badge: _,
-        title: d,
-        subtitle: u,
-        actionBarInput: c,
-        actions: E,
+        badge: u,
+        title: c,
+        subtitle: d,
+        actionBarInput: _,
+        actions: f,
         children: h,
-        ...m
+        "aria-label": p,
+        ...E
     } = e;
     return (0, i.jsxs)(r.d, {
-        ...m,
+        ...E,
+        "aria-label": p ?? c,
         size: t,
         paddingSize: "lg",
         children: [
-            (0, i.jsx)(o.V6, { gradientColor: n, graphic: l, badge: _, title: d, subtitle: u }),
+            (0, i.jsx)(o.V6, { gradientColor: n, graphic: l, badge: u, title: c, subtitle: d }),
             (0, i.jsx)(a.c, { children: h }),
-            (0, i.jsx)(s.H, { leading: c, actions: E, actionsFullWidth: null == c }),
+            (0, i.jsx)(s.H, { leading: _, actions: f, actionsFullWidth: null == _ }),
         ],
     });
 }

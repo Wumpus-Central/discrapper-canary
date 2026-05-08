@@ -1,10 +1,10 @@
 n.d(e, { default: () => T }), n(323874), n(14289), n(35956);
-var i = n(627968),
-    a = n(64700),
+var a = n(627968),
+    i = n(64700),
     c = n(224640),
     s = n(20742),
-    o = n(430993),
-    l = n(696208),
+    l = n(430993),
+    o = n(696208),
     r = n(17928),
     u = n(192308),
     d = n(104510),
@@ -31,24 +31,24 @@ function T(t) {
         j = (0, r.bG)([f.A], () => (null != e ? f.A.getGuild(e) : null)),
         D = (0, r.bG)([U.default], () => U.default.locale),
         m = (function (t) {
-            let [e, n] = a.useState(void 0);
+            let [e, n] = i.useState(void 0);
             return (
-                a.useEffect(() => {
+                i.useEffect(() => {
                     let e;
                     if (t.startsWith("en")) return;
-                    let i = `https://${window.GLOBAL_ENV.CDN_HOST}/assets/boosting/marketing/captions/boosting_marketing_video_captions_${t}.vtt`,
-                        a = !1;
+                    let a = `https://${window.GLOBAL_ENV.CDN_HOST}/assets/boosting/marketing/captions/boosting_marketing_video_captions_${t}.vtt`,
+                        i = !1;
                     return (
-                        fetch(i)
+                        fetch(a)
                             .then((t) => {
                                 if (t.ok) return t.text();
                             })
                             .then((t) => {
-                                a || null == t || n((e = URL.createObjectURL(new Blob([t], { type: "text/vtt" }))));
+                                i || null == t || n((e = URL.createObjectURL(new Blob([t], { type: "text/vtt" }))));
                             })
                             .catch(() => {}),
                         () => {
-                            (a = !0), null != e && URL.revokeObjectURL(e), n(void 0);
+                            (i = !0), null != e && URL.revokeObjectURL(e), n(void 0);
                         }
                     );
                 }, [t]),
@@ -56,10 +56,10 @@ function T(t) {
             );
         })(D),
         { analyticsLocations: G } = (0, p.Ay)(I, _.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
-        [h, x] = a.useState(!1),
-        C = a.useRef(!1),
-        S = a.useRef(null),
-        P = a.useMemo(
+        [h, x] = i.useState(!1),
+        C = i.useRef(!1),
+        S = i.useRef(null),
+        P = i.useMemo(
             () => ({
                 ...(null != e ? { guild_id: e } : {}),
                 type: y.liQ.PREMIUM_GUILD_USER_MODAL,
@@ -70,7 +70,7 @@ function T(t) {
             }),
             [g.object, g.section, G, e, k],
         ),
-        v = a.useCallback(
+        v = i.useCallback(
             (t) => {
                 let e = t.currentTarget.duration;
                 C.current ||
@@ -82,7 +82,7 @@ function T(t) {
             },
             [P],
         ),
-        N = a.useCallback(
+        N = i.useCallback(
             (t) => {
                 let e = t.currentTarget.currentTime,
                     n = t.currentTarget.duration;
@@ -116,7 +116,7 @@ function T(t) {
             await (0, u.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([n.e("758"), n.e("18710")]).then(n.bind(n, 770101));
                 return (e) =>
-                    (0, i.jsx)(t, {
+                    (0, a.jsx)(t, {
                         ...e,
                         onSelectGuild: (t) => {
                             e.onClose(),
@@ -135,14 +135,16 @@ function T(t) {
                     });
             });
     }
-    return (0, i.jsxs)(c.d, {
+    let H = E.intl.string(E.t["0f1VCH"]);
+    return (0, a.jsxs)(c.d, {
         size: "xxl",
         transitionState: T,
         onClose: R,
+        "aria-label": H,
         children: [
-            (0, i.jsx)(s.rQ, { title: E.intl.string(E.t["0f1VCH"]) }),
-            (0, i.jsx)(o.c, {
-                children: (0, i.jsx)(b.A, {
+            (0, a.jsx)(s.rQ, { title: H }),
+            (0, a.jsx)(l.c, {
+                children: (0, a.jsx)(b.A, {
                     ref: S,
                     className: M.K,
                     src: "https://cdn.discordapp.com/assets/content/f0b9a61f96ee69dc341c22c04fe6458660d9317caae3d381c05cf8348fca5b95.mp4",
@@ -153,10 +155,10 @@ function T(t) {
                     onPlay: v,
                     onEnded: N,
                     disablePictureInPicture: !0,
-                    children: null != m && (0, i.jsx)("track", { src: m, kind: "captions", srcLang: D, default: !0 }),
+                    children: null != m && (0, a.jsx)("track", { src: m, kind: "captions", srcLang: D, default: !0 }),
                 }),
             }),
-            (0, i.jsx)(l.H, {
+            (0, a.jsx)(o.H, {
                 actions: [
                     null != j
                         ? {

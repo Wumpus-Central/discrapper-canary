@@ -1,45 +1,45 @@
-n.d(a, { default: () => O }), n(321073);
-var e = n(627968),
-    s = n(64700),
-    i = n(224640),
-    r = n(20742),
-    l = n(430993),
-    c = n(696208),
-    o = n(17928),
-    d = n(192308),
-    m = n(761508),
-    g = n(821609),
-    u = n(509434),
-    x = n(71393),
-    h = n(576705),
-    v = n(853742),
-    j = n(834730),
-    N = n(534514),
-    p = n(534890),
-    f = n(782603),
-    S = n(375708);
+e.d(a, { default: () => O }), e(321073);
+var n = e(627968),
+    s = e(64700),
+    i = e(224640),
+    r = e(20742),
+    l = e(430993),
+    c = e(696208),
+    o = e(17928),
+    d = e(192308),
+    m = e(761508),
+    g = e(821609),
+    u = e(509434),
+    x = e(71393),
+    h = e(576705),
+    v = e(853742),
+    j = e(834730),
+    N = e(534514),
+    p = e(534890),
+    f = e(782603),
+    S = e(375708);
 let C = "/assets/8b9e0ddc76afa526.png",
     P = "/assets/16b25e0cf166698d.png",
-    y = "/assets/6011f35d14cdcf7f.png",
-    b = "/assets/52a68ae4cbfadd1b.png";
-var k = n(414438);
+    b = "/assets/6011f35d14cdcf7f.png",
+    y = "/assets/52a68ae4cbfadd1b.png";
+var k = e(414438);
 function I(t) {
-    let { user: a, tagId: n, title: s, messageCount: i, reactionCount: r, activeAgo: l, tags: c, attachment: o } = t,
+    let { user: a, tagId: e, title: s, messageCount: i, reactionCount: r, activeAgo: l, tags: c, attachment: o } = t,
         { name: d, avatarSrc: m } = a;
-    return (0, e.jsxs)("div", {
+    return (0, n.jsxs)("div", {
         className: k.bE,
         children: [
-            (0, e.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 children: [
-                    (0, e.jsxs)("div", {
+                    (0, n.jsxs)("div", {
                         className: k.mG,
                         children: [
-                            (0, e.jsxs)(j.E, {
+                            (0, n.jsxs)(j.E, {
                                 color: "text-strong",
                                 variant: "text-xs/medium",
                                 className: k.mG,
                                 children: [
-                                    (0, e.jsx)("img", {
+                                    (0, n.jsx)("img", {
                                         src: m,
                                         alt: S.intl.string(S.t.lqaIxI),
                                         width: 16,
@@ -48,45 +48,45 @@ function I(t) {
                                     d,
                                 ],
                             }),
-                            null != n &&
-                                (0, e.jsxs)(e.Fragment, {
+                            null != e &&
+                                (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, e.jsx)("span", { className: k.xE, children: "\u2022" }),
-                                        (0, e.jsx)(j.E, {
+                                        (0, n.jsx)("span", { className: k.xE, children: "\u2022" }),
+                                        (0, n.jsx)(j.E, {
                                             color: "text-strong",
                                             variant: "text-xxs/medium",
                                             className: k.qo,
-                                            children: c[n],
+                                            children: c[e],
                                         }),
                                     ],
                                 }),
                         ],
                     }),
-                    (0, e.jsx)(N.D, {
+                    (0, n.jsx)(N.D, {
                         color: "text-strong",
                         variant: "heading-md/semibold",
                         className: k.W0,
                         children: s,
                     }),
-                    (0, e.jsxs)("div", {
+                    (0, n.jsxs)("div", {
                         className: k.mG,
                         children: [
-                            (0, e.jsxs)(j.E, {
+                            (0, n.jsxs)(j.E, {
                                 color: "text-default",
                                 variant: "text-xs/medium",
                                 className: k.Hu,
-                                children: [(0, e.jsx)(p.o, { size: "xs", color: "currentColor", className: k.Kk }), i],
+                                children: [(0, n.jsx)(p.o, { size: "xs", color: "currentColor", className: k.Kk }), i],
                             }),
                             r > 0 &&
-                                (0, e.jsxs)(e.Fragment, {
+                                (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, e.jsx)("span", { className: k.xE, children: "\u2022" }),
-                                        (0, e.jsxs)(j.E, {
+                                        (0, n.jsx)("span", { className: k.xE, children: "\u2022" }),
+                                        (0, n.jsxs)(j.E, {
                                             color: "text-default",
                                             variant: "text-xs/medium",
                                             className: k.Hu,
                                             children: [
-                                                (0, e.jsx)("span", {
+                                                (0, n.jsx)("span", {
                                                     role: "img",
                                                     "aria-label": S.intl.string(S.t.gHp0C4),
                                                     className: k.Kk,
@@ -97,14 +97,14 @@ function I(t) {
                                         }),
                                     ],
                                 }),
-                            (0, e.jsx)("span", { className: k.xE, children: "\u2022" }),
-                            (0, e.jsx)(j.E, { color: "text-default", variant: "text-xs/medium", children: l }),
+                            (0, n.jsx)("span", { className: k.xE, children: "\u2022" }),
+                            (0, n.jsx)(j.E, { color: "text-default", variant: "text-xs/medium", children: l }),
                         ],
                     }),
                 ],
             }),
             null != o &&
-                (0, e.jsx)("img", {
+                (0, n.jsx)("img", {
                     src: o,
                     alt: S.intl.formatToPlainString(S.t.MJHFt9, { name: s }),
                     className: k.oh,
@@ -113,57 +113,57 @@ function I(t) {
     });
 }
 function A(t) {
-    let { author: a, content: n } = t,
+    let { author: a, content: e } = t,
         { name: s, isOP: i, avatarSrc: r } = a;
-    return (0, e.jsxs)("div", {
+    return (0, n.jsxs)("div", {
         className: k.iU,
         children: [
-            (0, e.jsx)("img", { src: r, alt: S.intl.string(S.t.lqaIxI), width: 40, height: 40 }),
-            (0, e.jsxs)("div", {
+            (0, n.jsx)("img", { src: r, alt: S.intl.string(S.t.lqaIxI), width: 40, height: 40 }),
+            (0, n.jsxs)("div", {
                 children: [
-                    (0, e.jsxs)("div", {
+                    (0, n.jsxs)("div", {
                         className: k.mG,
                         children: [
-                            (0, e.jsx)(j.E, { color: "text-strong", variant: "text-sm/semibold", children: s }),
-                            i && (0, e.jsx)("span", { className: k.aj, children: S.intl.string(S.t.fyE8sH) }),
+                            (0, n.jsx)(j.E, { color: "text-strong", variant: "text-sm/semibold", children: s }),
+                            i && (0, n.jsx)("span", { className: k.aj, children: S.intl.string(S.t.fyE8sH) }),
                         ],
                     }),
-                    (0, e.jsx)(j.E, { color: "text-default", variant: "text-sm/normal", children: n }),
+                    (0, n.jsx)(j.E, { color: "text-default", variant: "text-sm/normal", children: e }),
                 ],
             }),
         ],
     });
 }
 function E(t) {
-    let { title: a, messages: n, maxHeight: s } = t;
-    return (0, e.jsx)("div", {
+    let { title: a, messages: e, maxHeight: s } = t;
+    return (0, n.jsx)("div", {
         className: k.i1,
         style: { maxHeight: s },
         "aria-hidden": !0,
-        children: (0, e.jsxs)("div", {
+        children: (0, n.jsxs)("div", {
             className: k.VH,
             children: [
-                (0, e.jsx)(p.o, { size: "md", color: "currentColor", className: k.DD }),
-                (0, e.jsx)(N.D, { color: "text-strong", variant: "heading-lg/semibold", className: k.wx, children: a }),
-                (0, e.jsx)("div", {
+                (0, n.jsx)(p.o, { size: "md", color: "currentColor", className: k.DD }),
+                (0, n.jsx)(N.D, { color: "text-strong", variant: "heading-lg/semibold", className: k.wx, children: a }),
+                (0, n.jsx)("div", {
                     className: k.zC,
-                    children: n.map((t, a) =>
-                        (0, e.jsxs)(e.Fragment, {
+                    children: e.map((t, a) =>
+                        (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, e.jsx)(A, { ...t }, a),
+                                (0, n.jsx)(A, { ...t }, a),
                                 0 === a &&
-                                    (0, e.jsxs)("div", {
+                                    (0, n.jsxs)("div", {
                                         children: [
-                                            (0, e.jsx)("hr", { className: k.lL }),
-                                            (0, e.jsxs)("div", {
+                                            (0, n.jsx)("hr", { className: k.lL }),
+                                            (0, n.jsxs)("div", {
                                                 className: k.KY,
                                                 children: [
-                                                    (0, e.jsxs)(j.E, {
+                                                    (0, n.jsxs)(j.E, {
                                                         color: "text-brand",
                                                         variant: "text-xs/medium",
                                                         className: k.QJ,
                                                         children: [
-                                                            (0, e.jsx)("span", {
+                                                            (0, n.jsx)("span", {
                                                                 role: "img",
                                                                 "aria-label": S.intl.string(S.t.gHp0C4),
                                                                 className: k.Kk,
@@ -172,27 +172,27 @@ function E(t) {
                                                             "17",
                                                         ],
                                                     }),
-                                                    (0, e.jsxs)(j.E, {
+                                                    (0, n.jsxs)(j.E, {
                                                         color: "text-muted",
                                                         variant: "text-xs/medium",
                                                         className: k.CQ,
                                                         children: [
-                                                            (0, e.jsx)(f.X, { size: "xs", color: "currentColor" }),
+                                                            (0, n.jsx)(f.X, { size: "xs", color: "currentColor" }),
                                                             S.intl.string(S.t["3aOv+h"]),
                                                         ],
                                                     }),
                                                 ],
                                             }),
-                                            (0, e.jsx)("hr", { className: k.N }),
+                                            (0, n.jsx)("hr", { className: k.N }),
                                         ],
                                     }),
                             ],
                         }),
                     ),
                 }),
-                (0, e.jsx)("div", {
+                (0, n.jsx)("div", {
                     className: k.RW,
-                    children: (0, e.jsx)(j.E, {
+                    children: (0, n.jsx)(j.E, {
                         color: "text-muted",
                         variant: "text-sm/normal",
                         children: S.intl.string(S.t.YzpScd),
@@ -204,7 +204,7 @@ function E(t) {
 }
 function T(t) {
     let { id: a } = t,
-        [n, i] = s.useState(0),
+        [e, i] = s.useState(0),
         r = s.useRef(null),
         {
             tags: l,
@@ -233,7 +233,7 @@ function T(t) {
                         activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 24 }),
                     },
                     {
-                        user: { name: "ladydaisy", avatarSrc: y },
+                        user: { name: "ladydaisy", avatarSrc: b },
                         tagId: 2,
                         title: S.intl.string(S.t["2LpQS8"]),
                         messageCount: 18,
@@ -241,7 +241,7 @@ function T(t) {
                         activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 40 }),
                     },
                     {
-                        user: { name: "kittyx", avatarSrc: b },
+                        user: { name: "kittyx", avatarSrc: y },
                         tagId: 0,
                         title: S.intl.string(S.t.gFI7Lw),
                         messageCount: 2,
@@ -261,7 +261,7 @@ function T(t) {
                             author: { name: "pocketman", avatarSrc: P, isOP: !1 },
                             content: S.intl.string(S.t["+XGMDs"]),
                         },
-                        { author: { name: "ladydaisy", avatarSrc: y, isOP: !1 }, content: S.intl.string(S.t.z0qmHN) },
+                        { author: { name: "ladydaisy", avatarSrc: b, isOP: !1 }, content: S.intl.string(S.t.z0qmHN) },
                     ],
                 },
                 ariaLabel: S.intl.string(S.t.TDOyPg),
@@ -270,7 +270,7 @@ function T(t) {
                 tags: [S.intl.string(S.t.ogyxel), S.intl.string(S.t.S97ZXx), S.intl.string(S.t.d6GdP4)],
                 posts: [
                     {
-                        user: { name: "ladydaisy", avatarSrc: y },
+                        user: { name: "ladydaisy", avatarSrc: b },
                         tagId: 0,
                         title: S.intl.string(S.t.aOyKZ9),
                         messageCount: 8,
@@ -295,7 +295,7 @@ function T(t) {
                         activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 40 }),
                     },
                     {
-                        user: { name: "kittyx", avatarSrc: b },
+                        user: { name: "kittyx", avatarSrc: y },
                         tagId: 2,
                         title: S.intl.string(S.t.lCjd1A),
                         messageCount: 2,
@@ -312,7 +312,7 @@ function T(t) {
                             content: S.intl.string(S.t.VeQaUn),
                         },
                         { author: { name: "pocketman", avatarSrc: P, isOP: !1 }, content: S.intl.string(S.t.lwjElH) },
-                        { author: { name: "ladydaisy", avatarSrc: y, isOP: !1 }, content: S.intl.string(S.t.RNqQmI) },
+                        { author: { name: "ladydaisy", avatarSrc: b, isOP: !1 }, content: S.intl.string(S.t.RNqQmI) },
                     ],
                 },
                 ariaLabel: S.intl.string(S.t.iLeWrd),
@@ -338,7 +338,7 @@ function T(t) {
                         activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 24 }),
                     },
                     {
-                        user: { name: "ladydaisy", avatarSrc: y },
+                        user: { name: "ladydaisy", avatarSrc: b },
                         tagId: 0,
                         title: S.intl.string(S.t["XL/bba"]),
                         messageCount: 18,
@@ -346,7 +346,7 @@ function T(t) {
                         activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 40 }),
                     },
                     {
-                        user: { name: "kittyx", avatarSrc: b },
+                        user: { name: "kittyx", avatarSrc: y },
                         tagId: null,
                         title: S.intl.string(S.t.XSYHP3),
                         messageCount: 2,
@@ -363,7 +363,7 @@ function T(t) {
                             content: S.intl.string(S.t["6DyhGl"]),
                         },
                         { author: { name: "pocketman", avatarSrc: P, isOP: !1 }, content: S.intl.string(S.t.BLiuYI) },
-                        { author: { name: "ladydaisy", avatarSrc: y, isOP: !1 }, content: S.intl.string(S.t.PYLKhH) },
+                        { author: { name: "ladydaisy", avatarSrc: b, isOP: !1 }, content: S.intl.string(S.t.PYLKhH) },
                     ],
                 },
                 ariaLabel: S.intl.string(S.t.kEMWrG),
@@ -374,43 +374,43 @@ function T(t) {
             i(0);
         }, [a]),
         s.useEffect(() => {
-            0 === n && r?.current?.clientHeight != null && i(r.current.clientHeight - 40);
-        }, [n]),
-        (0, e.jsxs)("div", {
+            0 === e && r?.current?.clientHeight != null && i(r.current.clientHeight - 40);
+        }, [e]),
+        (0, n.jsxs)("div", {
             className: k.kL,
             role: "image",
             "aria-label": d,
             children: [
-                (0, e.jsxs)("div", {
+                (0, n.jsxs)("div", {
                     ref: r,
                     className: k.T,
                     "aria-hidden": !0,
                     children: [
-                        (0, e.jsx)("div", {
+                        (0, n.jsx)("div", {
                             className: k._A,
                             children: l.map((t, a) =>
-                                (0, e.jsx)(
+                                (0, n.jsx)(
                                     j.E,
                                     { color: "text-strong", variant: "text-xs/medium", className: k.Tc, children: t },
                                     a,
                                 ),
                             ),
                         }),
-                        (0, e.jsx)("div", {
+                        (0, n.jsx)("div", {
                             className: k.Yl,
-                            children: c.map((t, a) => (0, e.jsx)(I, { ...t, tags: l }, a)),
+                            children: c.map((t, a) => (0, n.jsx)(I, { ...t, tags: l }, a)),
                         }),
                     ],
                 }),
-                (0, e.jsx)(E, { ...o, maxHeight: n }),
+                (0, n.jsx)(E, { ...o, maxHeight: e }),
             ],
         })
     );
 }
-var H = n(253913),
-    M = n(652215),
-    L = n(49999),
-    G = n(789051);
+var H = e(253913),
+    M = e(652215),
+    L = e(49999),
+    G = e(789051);
 function O(t) {
     let { guildId: a, shouldUpsellCreation: j, transitionState: N, onClose: p } = t,
         f = (0, o.bG)([x.A], () => x.A.getGuild(a), [a]),
@@ -420,7 +420,7 @@ function O(t) {
             { id: 1, name: S.intl.string(S.t["IHjjY/"]) },
             { id: 2, name: S.intl.string(S.t.x3drh1) },
         ],
-        [y, b] = s.useState(0),
+        [b, y] = s.useState(0),
         k = [
             {
                 variant: j ? "secondary" : "primary",
@@ -428,72 +428,72 @@ function O(t) {
                 onClick: () => p(L.i.SECONDARY),
             },
         ];
-    return (
-        j &&
-            k.push({
-                variant: "primary",
-                text: S.intl.string(S.t["1X8SK/"]),
-                onClick: () => {
-                    (0, d.openModalLazy)(async () => {
-                        let { default: t } = await Promise.all([
-                            n.e("758"),
-                            n.e("11585"),
-                            n.e("3589"),
-                            n.e("89916"),
-                            n.e("60773"),
-                            n.e("8018"),
-                            n.e("20379"),
-                            n.e("19193"),
-                            n.e("7775"),
-                            n.e("58608"),
-                            n.e("9431"),
-                        ]).then(n.bind(n, 113194));
-                        return (n) =>
-                            (0, e.jsx)(t, {
-                                ...n,
-                                channelType: M.rbe.GUILD_FORUM,
-                                guildId: a,
-                                prefillChannelName: j ? S.intl.string(S.t["5z1Xat"]) : void 0,
-                            });
-                    }),
-                        p(L.i.PRIMARY);
-                },
-            }),
-        (0, e.jsxs)(i.d, {
-            transitionState: N,
-            size: "xxl",
-            onClose: async () => await p(),
-            children: [
-                (0, e.jsx)(r.rQ, { title: S.intl.string(S.t["6S6WCQ"]), subtitle: S.intl.string(S.t.I2BA8K) }),
-                (0, e.jsxs)(l.c, {
-                    children: [
-                        (0, e.jsx)(m.V, {
-                            selectedItem: y,
-                            type: "top",
-                            onItemSelect: (t) => {
-                                b(t), (0, v.Bd)({ forumDemoId: t });
-                            },
-                            className: G._,
-                            children: P.map((t, a) => (0, e.jsx)(m.V.Item, { id: a, children: t.name }, a)),
-                        }),
-                        (0, e.jsx)(T, { id: y }),
-                    ],
+    j &&
+        k.push({
+            variant: "primary",
+            text: S.intl.string(S.t["1X8SK/"]),
+            onClick: () => {
+                (0, d.openModalLazy)(async () => {
+                    let { default: t } = await Promise.all([
+                        e.e("758"),
+                        e.e("11585"),
+                        e.e("3589"),
+                        e.e("89916"),
+                        e.e("60773"),
+                        e.e("8018"),
+                        e.e("20379"),
+                        e.e("19193"),
+                        e.e("7775"),
+                        e.e("58608"),
+                        e.e("9431"),
+                    ]).then(e.bind(e, 113194));
+                    return (e) =>
+                        (0, n.jsx)(t, {
+                            ...e,
+                            channelType: M.rbe.GUILD_FORUM,
+                            guildId: a,
+                            prefillChannelName: j ? S.intl.string(S.t["5z1Xat"]) : void 0,
+                        });
                 }),
-                C &&
-                    (0, e.jsx)(c.H, {
-                        leading: (0, e.jsx)(g.$, {
-                            variant: "secondary",
-                            text: S.intl.string(S.t.hvVgAZ),
-                            icon: u.I,
-                            iconPosition: "end",
-                            role: "link",
-                            onClick: () => {
-                                open(H.X_);
-                            },
-                        }),
-                        actions: k,
+                    p(L.i.PRIMARY);
+            },
+        });
+    let I = S.intl.string(S.t["6S6WCQ"]);
+    return (0, n.jsxs)(i.d, {
+        transitionState: N,
+        size: "xxl",
+        onClose: async () => await p(),
+        "aria-label": I,
+        children: [
+            (0, n.jsx)(r.rQ, { title: I, subtitle: S.intl.string(S.t.I2BA8K) }),
+            (0, n.jsxs)(l.c, {
+                children: [
+                    (0, n.jsx)(m.V, {
+                        selectedItem: b,
+                        type: "top",
+                        onItemSelect: (t) => {
+                            y(t), (0, v.Bd)({ forumDemoId: t });
+                        },
+                        className: G._,
+                        children: P.map((t, a) => (0, n.jsx)(m.V.Item, { id: a, children: t.name }, a)),
                     }),
-            ],
-        })
-    );
+                    (0, n.jsx)(T, { id: b }),
+                ],
+            }),
+            C &&
+                (0, n.jsx)(c.H, {
+                    leading: (0, n.jsx)(g.$, {
+                        variant: "secondary",
+                        text: S.intl.string(S.t.hvVgAZ),
+                        icon: u.I,
+                        iconPosition: "end",
+                        role: "link",
+                        onClick: () => {
+                            open(H.X_);
+                        },
+                    }),
+                    actions: k,
+                }),
+        ],
+    });
 }

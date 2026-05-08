@@ -9,14 +9,14 @@ var i = n(627968),
     u = n(460890);
 let c = r.createContext({ firstFocusableItemProps: void 0 });
 function d(e) {
-    let { children: t, ref: n, ...r } = e;
+    let { children: t, ref: n, role: r = "dialog", ...s } = e;
     return (0, i.jsx)(c.Provider, {
         value: { firstFocusableItemProps: void 0 },
         children: (0, i.jsx)("div", {
-            ...r,
+            ...s,
             ref: n,
             "data-dialog": "modal",
-            role: "dialog",
+            role: r,
             "aria-modal": !0,
             tabIndex: -1,
             children: (0, i.jsx)(l.F, { forceLevel: 1, children: (0, i.jsx)(o.xp, { containerRef: n, children: t }) }),
@@ -24,12 +24,12 @@ function d(e) {
     });
 }
 function _(e) {
-    let { children: t, ...n } = e;
+    let { children: t, role: n = "dialog", ...r } = e;
     return (0, i.jsx)(s.sk, {
         children: (e) =>
             (0, i.jsx)(c.Provider, {
                 value: { firstFocusableItemProps: e },
-                children: (0, i.jsx)("div", { ...n, "data-dialog": "non-modal", role: "dialog", children: t }),
+                children: (0, i.jsx)("div", { ...r, "data-dialog": "non-modal", role: n, children: t }),
             }),
     });
 }
