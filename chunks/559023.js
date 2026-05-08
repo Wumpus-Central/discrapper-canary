@@ -110,10 +110,10 @@ class p {
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "540902",
-            built_at: "1778182802975",
+            build_number: "541529",
+            built_at: "1778268213496",
             release_channel: n.y ?? "unknown",
-            meticulous_perf_version: 4,
+            meticulous_perf_version: 5,
             tags: this.getTags(),
             metrics: {
                 report_time_memory: null != t ? o(t) : void 0,
@@ -211,7 +211,7 @@ class p {
     }
 }
 var S = s(474570);
-let _ = +l.A.Millis.MINUTE;
+let _ = 15 * l.A.Millis.SECOND;
 class y {
     mode = null;
     sampleIntervalId = null;
@@ -263,10 +263,10 @@ class y {
                 branch_name: e.branchName,
                 commit_date: e.commitDate,
                 timestamp: i,
-                build_number: "540902",
-                built_at: "1778182802975",
+                build_number: "541529",
+                built_at: "1778268213496",
                 release_channel: n.y ?? "unknown",
-                meticulous_perf_version: 4,
+                meticulous_perf_version: 5,
                 tags: { platform: (0, a.getNativePlatform)(), release_channel: n.y ?? "unknown", uptime_bucket: m(o) },
                 metrics: {
                     js_heap_size_limit: t.jsHeapSizeLimit,
