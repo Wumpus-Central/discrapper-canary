@@ -57,6 +57,7 @@ var i,
         (i[(i.CloudPlay = 35)] = "CloudPlay"),
         (i[(i.ClickTrailer = 36)] = "ClickTrailer"),
         (i[(i.Feedback = 37)] = "Feedback"),
+        (i[(i.XboxGamePassStoreLink = 38)] = "XboxGamePassStoreLink"),
         i),
     _ =
         (((r = {}).ActivityCard = "activity_card"),

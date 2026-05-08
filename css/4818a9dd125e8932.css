@@ -5,6 +5,12 @@
     width: 246px
 }
 
+.storeLinksContainer__4177a {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
 .platforms__93ebb {
     margin-top: 8px
 }
