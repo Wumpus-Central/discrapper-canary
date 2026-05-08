@@ -37,14 +37,17 @@ class c extends a.A {
             i = this.currentlyVisibleMessageTimers[n];
         null != i && (clearTimeout(i), delete this.currentlyVisibleMessageTimers[n]);
     }
-    handleMessageListVisibilityChange(e) {
+    handleMessageListVisibilityChange(e, t) {
         for (let t of e) this.handleMessageBecameVisible(t);
-        let t = new Set(e.map((e) => `${e.messageId}-${e.type}`));
-        for (let e of Object.keys(this.currentlyVisibleMessageTimers))
-            if (!t.has(e)) {
-                let [t, n] = e.split("-");
-                this.handleMessageLostVisibility(t, n);
-            }
+        let n = Object.keys(this.currentlyVisibleMessageTimers);
+        if (n.length > 0) {
+            let i = new Set(e.map((e) => `${e.messageId}-${e.type}`));
+            for (let e of n)
+                if (e.endsWith(`-${t}`) && !i.has(e)) {
+                    let n = e.slice(0, e.lastIndexOf("-"));
+                    this.handleMessageLostVisibility(n, t);
+                }
+        }
     }
     handleChannelSelect() {
         for (let e of Object.values(this.currentlyVisibleMessageTimers)) clearTimeout(e);
