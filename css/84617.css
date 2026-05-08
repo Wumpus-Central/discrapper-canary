@@ -20,7 +20,7 @@
     width: 1lh
 }
 
-.root__6fee0 {
+.root__4063d {
     align-items: center;
     display: flex;
     min-width: 0
@@ -36,7 +36,7 @@
     mask: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .013) 4.7%, rgba(0, 0, 0, .049) 9.2%, rgba(0, 0, 0, .104) 13.6%, rgba(0, 0, 0, .175) 18%, rgba(0, 0, 0, .259) 22.6%, rgba(0, 0, 0, .352) 27.4%, rgba(0, 0, 0, .45) 32.6%, rgba(0, 0, 0, .55) 38.3%, rgba(0, 0, 0, .648) 44.5%, rgba(0, 0, 0, .741) 51.4%, rgba(0, 0, 0, .825) 59.1%, rgba(0, 0, 0, .896) 67.7%, rgba(0, 0, 0, .951) 77.3%, rgba(0, 0, 0, .987) 88%, #000)
 }
 
-.container__425a9 {
+.container_ac54d1 {
     display: grid;
     gap: 16px;
     grid-template-columns: 3fr 2fr;
@@ -44,38 +44,38 @@
     width: 100%
 }
 
-.container__425a9.sizeSmall__425a9 {
+.container_ac54d1.sizeSmall_ac54d1 {
     gap: 4px;
     height: 99px
 }
 
-.content__425a9 {
+.content_ac54d1 {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 16px
 }
 
-.sizeSmall__425a9 .content__425a9 {
+.sizeSmall_ac54d1 .content_ac54d1 {
     gap: 8px
 }
 
-.header__425a9 {
+.header_ac54d1 {
     background: var(--background-mod-subtle);
     border-radius: var(--radius-sm);
     height: 20px;
     width: 50%
 }
 
-.sizeSmall__425a9 .header__425a9 {
+.sizeSmall_ac54d1 .header_ac54d1 {
     height: 12px
 }
 
-.divider__425a9 {
+.divider_ac54d1 {
     border-top: 1px solid var(--background-mod-subtle)
 }
 
-.stats__425a9 {
+.stats_ac54d1 {
     display: grid;
     flex: 1;
     gap: 8px 18px;
@@ -83,39 +83,39 @@
     grid-template-rows: 1fr 1fr
 }
 
-.sizeSmall__425a9 .stats__425a9 {
+.sizeSmall_ac54d1 .stats_ac54d1 {
     gap: 8px
 }
 
-.stat__425a9 {
+.stat_ac54d1 {
     background: var(--background-mod-subtle);
     border-radius: var(--radius-md)
 }
 
-.imageContainer__425a9 {
+.imageContainer_ac54d1 {
     overflow: hidden;
     position: relative
 }
 
-.heroImage__425a9 {
+.heroImage_ac54d1 {
     inset: 0;
     position: absolute
 }
 
-.heroImageSkeleton__425a9 {
+.heroImageSkeleton_ac54d1 {
     background: var(--background-mod-subtle);
     inset: var(--space-16);
     position: absolute
 }
 
-.root__1dd73 {
+.root_e26f69 {
     display: grid;
     gap: var(--space-4);
     grid-template-columns: 7fr 3fr;
     line-height: 1
 }
 
-.body__1dd73 {
+.body_e26f69 {
     display: flex;
     flex-direction: column;
     gap: var(--space-8);
@@ -123,21 +123,21 @@
     padding: var(--space-8)
 }
 
-.content__1dd73 {
+.content_e26f69 {
     padding-block: 2px
 }
 
-.heroImageContainer__1dd73 {
+.heroImageContainer_e26f69 {
     overflow: hidden;
     position: relative
 }
 
-.heroImage__1dd73 {
+.heroImage_e26f69 {
     inset: 0;
     position: absolute
 }
 
-.heroImageSkeleton__1dd73 {
+.heroImageSkeleton_e26f69 {
     aspect-ratio: 1;
     margin: var(--space-8)
 }
@@ -153,7 +153,7 @@
     vertical-align: bottom
 }
 
-.statsGrid_ac69b7 {
+.statsGrid_a0dddb {
     display: grid;
     gap: var(--space-24);
     grid-template-columns: repeat(3, 1fr);
@@ -161,52 +161,52 @@
     padding: var(--space-24) var(--space-16) var(--space-16)
 }
 
-.root__60f8b {
+.root__01fb0 {
     display: grid;
     gap: var(--space-4);
     grid-template-columns: 6fr 5fr
 }
 
-.title__60f8b {
+.title__01fb0 {
     margin-bottom: var(--space-4)
 }
 
-.title__60f8b :not(:last-child) {
+.title__01fb0 :not(:last-child) {
     margin-bottom: var(--space-8)
 }
 
-.contentContainer__60f8b {
+.contentContainer__01fb0 {
     padding-block-start: var(--space-12);
     padding-inline-start: var(--space-16)
 }
 
-.content__60f8b,
-.contentContainer__60f8b {
+.content__01fb0,
+.contentContainer__01fb0 {
     display: flex;
     flex-direction: column
 }
 
-.content__60f8b {
+.content__01fb0 {
     gap: 2px;
     justify-content: center;
     padding-block: var(--space-32)
 }
 
-.imageSkeleton__60f8b {
+.imageSkeleton__01fb0 {
     aspect-ratio: 1;
     justify-self: end;
     margin: var(--space-8);
     min-height: 85px
 }
 
-.imageContainer__60f8b {
+.imageContainer__01fb0 {
     margin-top: calc(var(--space-8)*-1);
     overflow: hidden;
     position: relative;
     width: 100%
 }
 
-.imageContainer__60f8b>img {
+.imageContainer__01fb0>img {
     position: absolute;
     right: 0;
     top: 0;
