@@ -2201,6 +2201,9 @@ class er extends l.A {
     setClipsV3Enabled(e) {
         (0, b.lE)().setClipsV3Enabled?.(e);
     }
+    setClipsUIActive(e) {
+        (0, b.lE)().setClipsUIActive?.(e);
+    }
     setClipsV3MLEnabled(e) {
         (0, b.lE)().setClipsV3MLEnabled?.(e);
     }

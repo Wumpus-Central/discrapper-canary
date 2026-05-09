@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 541634, Version Hash: aa400568d238080ca2f4c3879e6091df65b78ee4`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 541783, Version Hash: 02caf6ebf890fbceebc9bdea688f28a6ea15ec4d`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -4114,7 +4114,7 @@ let s3 = (0, rs.Fe)({
                 n.e("13554"),
                 n.e("94678"),
                 n.e("1856"),
-                n.e("23964"),
+                n.e("14414"),
                 n.e("28367"),
                 n.e("10471"),
                 n.e("35429"),
@@ -18335,7 +18335,7 @@ let SR = "isHideDevBanner",
                     className: t2()(SO.Wz, SO.mr),
                     children: [
                         (0, k.jsx)(Sv, { className: SO.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "541634" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "541783" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -34650,7 +34650,7 @@ let PM = [
                             n.e("33957"),
                             n.e("94193"),
                             n.e("73840"),
-                            n.e("29394"),
+                            n.e("56540"),
                             n.e("23924"),
                             n.e("71470"),
                             n.e("28367"),
@@ -34721,8 +34721,8 @@ let PM = [
                             n.e("29624"),
                             n.e("99976"),
                             n.e("38672"),
-                            n.e("47696"),
-                        ]).then(n.bind(n, 926419));
+                            n.e("91715"),
+                        ]).then(n.bind(n, 976526));
                         return (t) => (0, k.jsx)(e, { gameId: i, source: li.Ob.Deeplink, ...t });
                     });
                 }),
@@ -35252,7 +35252,7 @@ let xn = (0, ny.Fe)({
             n.e("1856"),
             n.e("41567"),
             n.e("73924"),
-            n.e("23964"),
+            n.e("14414"),
             n.e("66544"),
             n.e("65658"),
             n.e("28367"),
@@ -35959,6 +35959,7 @@ let xn = (0, ny.Fe)({
             n.e("44414"),
             n.e("4727"),
             n.e("9763"),
+            n.e("95008"),
             n.e("77663"),
             n.e("55663"),
             n.e("17583"),
