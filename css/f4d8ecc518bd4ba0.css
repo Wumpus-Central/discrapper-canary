@@ -1,0 +1,36 @@
+.getXboxApp__03af1 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    margin-top: 24px;
+    padding: 16px
+}
+
+.getXboxAppBody__03af1 {
+    text-align: start
+}
+
+.getXboxAppHeading__03af1 {
+    display: flex
+}
+
+.getXboxAppQR__03af1 {
+    margin-inline-start: 16px
+}
+
+.xboxLogoBox__03af1 {
+    align-items: center;
+    background-color: var(--platform-xbox);
+    border-radius: var(--radius-xs);
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    margin-inline-end: 10px;
+    width: 24px
+}
+
+.xboxLogoBox__03af1 img {
+    height: 20px;
+    width: 20px
+}

@@ -1,0 +1,17 @@
+e.exports = {
+    qD: "keybindMessage_f82450",
+    AS: "item_f82450",
+    ZW: "switch_f82450",
+    d9: "removeKeybind_f82450",
+    YI: "keybindGroup_f82450",
+    PO: "keybindGroupContent_f82450",
+    jh: "defaultKeybindGroup_f82450",
+    yZ: "defaultKeybind_f82450",
+    DM: "defaultKeybindShortcutGroup_f82450",
+    LE: "shortcut_f82450",
+    Ly: "browserNotice_f82450",
+    Qo: "systemServiceUpsell_f82450",
+    OQ: "ctaContainer_f82450",
+    $e: "warning_f82450",
+    c9: "addButton_f82450",
+};

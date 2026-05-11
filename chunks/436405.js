@@ -3234,7 +3234,7 @@ class sZ extends a.PureComponent {
         let { context: e, channel: t, title: i } = this.props;
         (0, ez.openModalLazy)(async () => {
             let { default: s } = await Promise.all([
-                n.e("78401"),
+                n.e("3633"),
                 n.e("758"),
                 n.e("97162"),
                 n.e("46327"),

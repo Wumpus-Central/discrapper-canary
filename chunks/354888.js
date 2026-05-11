@@ -1,0 +1,18 @@
+e.exports = {
+    iE: "wrapper__3470e",
+    Qs: "content__3470e",
+    Yq: "headerWithoutSpecialHeader__3470e",
+    wx: "header__3470e",
+    gg: "headerHeading__3470e",
+    RW: "headerContentPrimary__3470e",
+    PS: "headerBoostGems__3470e",
+    YA: "headerBoostGem__3470e",
+    nw: "headerLearnMoreLink__3470e",
+    LU: "unappliedBoostSlots__3470e",
+    Hp: "unappliedGuildBoostSlot__3470e",
+    YL: "unappliedGuildBoostSlotContentPrimary__3470e",
+    E7: "unappliedGuildBoostSlotContentSecondary__3470e",
+    W6: "unappliedGuildBoostSlotIcon__3470e",
+    LB: "unappliedGuildBoostSlotCta__3470e",
+    di: "headerContentSecondary__3470e",
+};

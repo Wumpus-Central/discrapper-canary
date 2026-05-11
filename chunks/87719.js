@@ -6,14 +6,14 @@ var i = n(398590),
     a = n(652215);
 let o = () => {
         {
-            let { openUserSettings: e } = n(858897);
+            let { openUserSettings: e } = n(766075);
             e(s.X.NITRO_PANEL);
         }
     },
     l = (e) => {
         e?.(), (0, i.jH)();
         {
-            let { default: e } = n(2114);
+            let { default: e } = n(830543);
             e();
         }
         (0, r.pX)(a.BVt.APPLICATION_STORE);

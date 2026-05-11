@@ -9,7 +9,7 @@ var n = a(627968),
     d = a(450510),
     h = a(350535),
     u = a(317084),
-    k = a(985018),
+    k = a(375708),
     p = a(999267);
 function x(t) {
     let { guildId: e, channel: x, keybind: m, transitionState: y, onClose: C } = t,
@@ -20,7 +20,7 @@ function x(t) {
             await j(),
                 (0, l.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        a.e("78401"),
+                        a.e("3633"),
                         a.e("72425"),
                         a.e("46327"),
                         a.e("12618"),

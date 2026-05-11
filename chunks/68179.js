@@ -1,0 +1,15 @@
+e.exports = {
+    Nr: "card__7ea60",
+    MY: "cardHeader__7ea60",
+    _L: "cardHeaderInfo__7ea60",
+    MD: "gemIconWrapper__7ea60",
+    F8: "gemIcon__7ea60",
+    qS: "badge__7ea60",
+    Vv: "badgeText__7ea60",
+    Qp: "cardHeaderDetails__7ea60",
+    iq: "boostRow__7ea60",
+    Mt: "boostRowLast__7ea60",
+    kd: "boostRowInfo__7ea60",
+    bB: "rowThumbnail__7ea60",
+    Mj: "moreButton__7ea60",
+};

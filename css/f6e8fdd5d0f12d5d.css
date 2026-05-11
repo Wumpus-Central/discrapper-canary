@@ -1,0 +1,22 @@
+.description__39ae6 {
+    margin-top: 8px
+}
+
+.description__39ae6,
+.tooltip__39ae6 {
+    color: var(--text-default);
+    text-align: center
+}
+
+.tooltip__39ae6 {
+    background: var(--background-mod-subtle);
+    border: 1px solid hsla(0, 0%, 100%, .04);
+    border-radius: 8px;
+    box-shadow: var(--elevation-low);
+    margin-top: 16px;
+    padding: 12px
+}
+
+.help__39ae6 {
+    margin-top: 8px
+}

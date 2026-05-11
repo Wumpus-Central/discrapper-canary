@@ -2379,7 +2379,7 @@ let nz = c.memo(function (e) {
                         if (t.isDM() && null != s)
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("25907"),
+                                    n.e("34195"),
                                     n.e("19960"),
                                     n.e("26132"),
                                     n.e("46652"),
@@ -3156,7 +3156,7 @@ let iu = c.memo(function (e) {
                         (0, r.jsx)(n9.CS, {
                             onClick: (e) => {
                                 (0, l.L3)(e, async () => {
-                                    let { default: e } = await n.e("51607").then(n.bind(n, 320490));
+                                    let { default: e } = await n.e("51607").then(n.bind(n, 98109));
                                     return (t) => (0, r.jsx)(e, { ...t });
                                 });
                             },

@@ -1,0 +1,443 @@
+.loading__9ed46 {
+    margin-top: 48px
+}
+
+.maybeLaterButton__9ed46 {
+    color: var(--text-strong);
+    margin-inline-end: 8px
+}
+
+.maybeLaterButton__9ed46:hover {
+    text-decoration: underline
+}
+
+.bodyText__9ed46 {
+    display: flex;
+    justify-content: center
+}
+
+.formDivider__9ed46 {
+    margin: 16px 0
+}
+
+.formSection__9ed46 {
+    margin-bottom: 16px
+}
+
+.confirmationText__9ed46 {
+    margin-top: 8px
+}
+
+.headerContainer__9ed46 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: calc(var(--custom-outbound-promotion-redemption-modal-art-height)/-1) auto auto;
+    padding: 0;
+    width: 90%
+}
+
+.art__9ed46 {
+    background-image: url(/assets/1ab7d1a0b0204a75.svg);
+    height: var(--custom-outbound-promotion-redemption-modal-art-height);
+    margin-bottom: 16px;
+    width: 240px
+}
+
+.errorBody__9ed46,
+.errorHeader__9ed46 {
+    display: flex;
+    flex-direction: column
+}
+
+.errorBody__9ed46 {
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto;
+    max-width: 90%
+}
+
+.errorArt__9ed46 {
+    background-image: url(/assets/26eafe176b5b3454.svg);
+    height: 99px;
+    margin: 0 auto 32px;
+    width: 141px
+}
+
+.card_fedacc {
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--text-strong);
+    cursor: default;
+    overflow: hidden;
+    transform: translateZ(0)
+}
+
+.header_fedacc {
+    padding: 20px;
+    position: relative
+}
+
+.headerButtonColor_fedacc {
+    background: var(--primary-500);
+    color: var(--white)
+}
+
+.coverArtPosition_fedacc {
+    background-position-x: 50%;
+    background-position-y: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    bottom: 0;
+    inset-inline-start: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translateZ(0)
+}
+
+.splashArt_fedacc {
+    filter: grayscale(100%);
+    -webkit-mask: radial-gradient(100% 100% at top left, hsla(0, 0%, 100%, .6) 0, hsla(0, 0%, 100%, 0) 100%);
+    mask: radial-gradient(100% 100% at top left, hsla(0, 0%, 100%, .6) 0, hsla(0, 0%, 100%, 0) 100%);
+    opacity: .3;
+    width: 300px
+}
+
+.body_fedacc {
+    background-color: var(--background-mod-normal)
+}
+
+.header_fedacc {
+    background-color: var(--background-base-lowest);
+    color: var(--text-strong)
+}
+
+.header_fedacc:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.card_a6af18 {
+    cursor: pointer
+}
+
+.subText_a6af18 {
+    font-size: 12px;
+    line-height: 16px
+}
+
+.subTextRow_a6af18 {
+    color: var(--primary-300)
+}
+
+.subtitleHeader_a6af18 {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: row;
+    font-weight: var(--font-weight-semibold);
+    gap: 4px
+}
+
+.applicationSubtitleHeader_a6af18 {
+    margin-top: 2px
+}
+
+.applicationSubtitleIcon_a6af18 {
+    border-radius: 6px;
+    height: 20px;
+    width: 20px
+}
+
+.codeText_a6af18 {
+    margin-bottom: 8px
+}
+
+.headerText_a6af18 {
+    margin-inline-start: 20px
+}
+
+.cardHeader_a6af18 {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between
+}
+
+.giftCodeRow_a6af18 {
+    border-bottom: 1px solid transparent;
+    margin: 0 20px;
+    padding: 20px 0 19px
+}
+
+.giftCodeRow_a6af18:last-child {
+    border-bottom: none
+}
+
+.generateCodeRow_a6af18 {
+    padding: 22px 0
+}
+
+.gameName_a6af18 {
+    line-height: 19px
+}
+
+.expandIcon_a6af18 {
+    cursor: pointer;
+    margin-inline-start: 8px
+}
+
+.spinner_a6af18 {
+    padding: 20px
+}
+
+.theme-dark .giftCodeRow_a6af18 {
+    border-color: hsl(var(--primary-500-hsl)/.6)
+}
+
+.theme-dark .bodyButtonColor_a6af18 {
+    color: var(--white)
+}
+
+.theme-dark .bodyButtonColor_a6af18:hover {
+    background: var(--primary-500)
+}
+
+.theme-dark .bodyButtonColor_a6af18:active {
+    background: var(--primary-400)
+}
+
+.theme-light .bodyButtonColor_a6af18:hover {
+    background: var(--primary-200)
+}
+
+.theme-light .bodyButtonColor_a6af18:active {
+    background: var(--primary-300)
+}
+
+.giftIcon_a6af18 {
+    height: 40px;
+    width: 40px
+}
+
+.bodyButtonColor_a6af18 {
+    background: var(--background-base-lower)
+}
+
+.marginContainer_f5f9ed {
+    margin-top: 20px
+}
+
+.gradientContainer_f5f9ed {
+    border: 1px solid transparent
+}
+
+.promoHeaderContainer_f5f9ed {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.promoDescription_f5f9ed {
+    margin-top: var(--space-4)
+}
+
+.promoNitroButton_f5f9ed {
+    margin-inline-start: auto
+}
+
+.skuCard_f5f9ed {
+    margin-top: 24px
+}
+
+.emptyState_f5f9ed {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.emptyStateHeader_f5f9ed {
+    color: var(--text-default);
+    font-size: 24px;
+    line-height: 1.17;
+    margin-top: 20px
+}
+
+.emptyStateSubtext_f5f9ed {
+    color: var(--text-muted);
+    line-height: 1.25;
+    margin-top: 8px
+}
+
+.emptyStateImage_f5f9ed {
+    height: 202px;
+    margin-top: 120px;
+    width: 404px
+}
+
+.loading_f5f9ed {
+    margin-top: 40px
+}
+
+.promotionCardDescriptionWithCode_f5f9ed {
+    cursor: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.dropsHeaderContainer_f5f9ed {
+    align-items: center;
+    display: flex
+}
+
+.betaTagIcon_f5f9ed {
+    margin-inline-start: 8px
+}
+
+.divider_f5f9ed {
+    margin: 8px 0 24px
+}
+
+.promotionCard_f5f9ed {
+    align-items: flex-start;
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    display: flex;
+    flex-direction: column;
+    padding: 20px
+}
+
+.mainPromotionCardContainer_f5f9ed {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.promotionCardLeftContainer_f5f9ed {
+    display: flex
+}
+
+.redeemTooltipContent_f5f9ed {
+    text-align: center
+}
+
+.promotionIcon_f5f9ed {
+    align-items: center;
+    align-self: flex-start;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-xs);
+    display: flex;
+    flex-shrink: 0;
+    height: 40px;
+    justify-content: center;
+    margin-inline-end: 10px;
+    width: 40px
+}
+
+.promotionIconImage_f5f9ed {
+    max-height: 36px;
+    max-width: 36px
+}
+
+.dropRewardImage_f5f9ed {
+    border-radius: var(--radius-xs);
+    width: 100%
+}
+
+.dropCriteriaText_f5f9ed {
+    margin: 16px 0
+}
+
+.dropCriteriaText_f5f9ed>p {
+    margin-bottom: 2px;
+    margin-top: 2px
+}
+
+.dropLearnMore_f5f9ed {
+    margin-bottom: 16px
+}
+
+.promotionLegalese_f5f9ed {
+    border-top: 1px solid var(--border-subtle);
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+    margin-inline-start: 52px;
+    margin-bottom: 0;
+    padding-top: 8px
+}
+
+.promotionLegalese_f5f9ed em {
+    font-style: italic
+}
+
+.dropContainer_f5f9ed {
+    border-radius: var(--radius-xs);
+    margin-bottom: 20px;
+    overflow: hidden
+}
+
+.availableUntil_f5f9ed {
+    padding-top: 4px
+}
+
+.dropCard_f5f9ed {
+    align-items: flex-start;
+    background-color: var(--background-base-lowest);
+    display: flex;
+    flex-direction: column;
+    padding: 20px
+}
+
+.dropCriteria_f5f9ed {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    padding: 16px 16px 8px
+}
+
+.feedback_f5f9ed {
+    background: var(--background-base-lowest);
+    padding: 8px
+}
+
+.dropsHelpText_f5f9ed,
+.feedback_f5f9ed {
+    border-radius: var(--radius-xs);
+    color: var(--interactive-text-active);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 20px;
+    margin-top: -12px
+}
+
+.dropsHelpText_f5f9ed {
+    background: var(--background-base-lower);
+    line-height: 18px;
+    padding: 3px;
+    padding-inline: 18px
+}
+
+.theme-dark .emptyStateImage_f5f9ed {
+    background: url(/assets/b584f76d3ff86700.svg)
+}
+
+.theme-light .emptyStateImage_f5f9ed {
+    background: url(/assets/28fe27f3657e23ee.svg)
+}
+
+.premiumIcon_f5f9ed {
+    height: 24px;
+    margin-inline-end: 6px;
+    position: relative;
+    top: 2px;
+    width: 24px
+}
+
+.tier2Gradient_f5f9ed {
+    color: var(--premium-tier-2-pink)
+}

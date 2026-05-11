@@ -22,8 +22,8 @@ let a = (e) => {
         async () => {
             if (t.skuId === s.Dp.FRACTIONAL_PREMIUM || t.skuId === s.Dp.ORB_PROFILE_BADGE) {
                 let { default: e } = await Promise.all([
-                    n.e("25907"),
-                    n.e("4592"),
+                    n.e("34195"),
+                    n.e("27870"),
                     n.e("64827"),
                     n.e("92789"),
                     n.e("84569"),
@@ -58,8 +58,8 @@ let a = (e) => {
                     });
             }
             let { default: e } = await Promise.all([
-                n.e("25907"),
-                n.e("4592"),
+                n.e("34195"),
+                n.e("27870"),
                 n.e("64827"),
                 n.e("84569"),
                 n.e("18573"),

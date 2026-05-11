@@ -68,8 +68,8 @@ function $(e) {
         d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, m.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
-                    i.e("7017"),
-                    i.e("57750"),
+                    i.e("44729"),
+                    i.e("34195"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),

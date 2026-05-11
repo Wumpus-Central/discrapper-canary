@@ -1,64 +1,64 @@
-r.d(e, { default: () => m });
-var s = r(627968);
-r(64700);
-var i = r(189213),
-    n = r(214947),
-    l = r(534890),
-    o = r(26137),
-    c = r(625903),
-    a = r(834730),
-    d = r(866903),
-    A = r(975571),
-    _ = r(652215),
-    h = r(436620),
-    u = r(985018),
-    x = r(643833);
-function m(t) {
-    let { transitionState: e, onClose: r } = t;
-    return (0, s.jsx)(i.Modal, {
-        transitionState: e,
-        title: u.intl.string(u.t.pWLGnF),
-        subtitle: u.intl.string(u.t.WKxo8n),
+e.d(r, { default: () => j });
+var i = e(627968);
+e(64700);
+var s = e(189213),
+    n = e(214947),
+    l = e(534890),
+    o = e(26137),
+    c = e(625903),
+    a = e(834730),
+    d = e(230837),
+    m = e(975571),
+    x = e(652215),
+    u = e(99206),
+    h = e(375708),
+    C = e(643833);
+function j(t) {
+    let { transitionState: r, onClose: e } = t;
+    return (0, i.jsx)(s.Modal, {
+        transitionState: r,
+        title: h.intl.string(h.t.pWLGnF),
+        subtitle: h.intl.string(h.t.WKxo8n),
         actions: [],
-        onClose: r,
-        children: (0, s.jsx)(C, { onClose: r }),
+        onClose: e,
+        children: (0, i.jsx)(v, { onClose: e }),
     });
 }
-function C(t) {
-    let { onClose: e } = t,
-        r = [
-            { icon: (0, s.jsx)(n.$, { size: "refresh_sm", color: "currentColor" }), text: u.intl.string(u.t.vXBrdg) },
+function v(t) {
+    let { onClose: r } = t,
+        e = [
+            { icon: (0, i.jsx)(n.$, { size: "refresh_sm", color: "currentColor" }), text: h.intl.string(h.t.vXBrdg) },
             {
-                icon: (0, s.jsx)(l.o, { size: "refresh_sm", color: "currentColor" }),
-                text: u.intl.string(u.t["i7/QHN"]),
+                icon: (0, i.jsx)(l.o, { size: "refresh_sm", color: "currentColor" }),
+                text: h.intl.string(h.t["i7/QHN"]),
             },
-            { icon: (0, s.jsx)(o.r, { size: "refresh_sm", color: "currentColor" }), text: u.intl.string(u.t.ZmBfKJ) },
+            { icon: (0, i.jsx)(o.r, { size: "refresh_sm", color: "currentColor" }), text: h.intl.string(h.t.ZmBfKJ) },
             {
-                icon: (0, s.jsx)(c.Z, { size: "refresh_sm", color: "currentColor" }),
-                text: u.intl.format(u.t.wBlJCr, {
-                    recentActivityURL: A.A.getArticleURL(_.MVz.MEMBER_LIST_ACTIVITY_FEED),
+                icon: (0, i.jsx)(c.Z, { size: "refresh_sm", color: "currentColor" }),
+                text: h.intl.format(h.t.wBlJCr, {
+                    recentActivityURL: m.A.getArticleURL(x.MVz.MEMBER_LIST_ACTIVITY_FEED),
                     handleActivityPrivacyClick: () => {
-                        e(), (0, d.A)(h.J.ACTIVITY_PRIVACY);
+                        r(), (0, d.A)(u.J.ACTIVITY_PRIVACY);
                     },
                 }),
             },
         ];
-    return (0, s.jsxs)("div", {
-        className: x.Q2,
+    return (0, i.jsxs)("div", {
+        className: C.Q2,
         children: [
-            (0, s.jsx)(a.E, { variant: "text-sm/semibold", children: u.intl.string(u.t.YjqBbg) }),
-            r.map((t, e) => {
-                let { icon: r, text: i } = t;
-                return (0, s.jsxs)(
+            (0, i.jsx)(a.E, { variant: "text-sm/semibold", children: h.intl.string(h.t.YjqBbg) }),
+            e.map((t, r) => {
+                let { icon: e, text: s } = t;
+                return (0, i.jsxs)(
                     "div",
                     {
-                        className: x.Gc,
+                        className: C.Gc,
                         children: [
-                            (0, s.jsx)("div", { className: x.qS, children: r }),
-                            (0, s.jsx)(a.E, { variant: "text-sm/medium", color: "text-muted", children: i }),
+                            (0, i.jsx)("div", { className: C.qS, children: e }),
+                            (0, i.jsx)(a.E, { variant: "text-sm/medium", color: "text-muted", children: s }),
                         ],
                     },
-                    `memberlist-learn-more-note-${e}`,
+                    `memberlist-learn-more-note-${r}`,
                 );
             }),
         ],

@@ -1,0 +1,17 @@
+e.exports = {
+    Nr: "card_a6af18",
+    Sv: "subText_a6af18",
+    KB: "subTextRow_a6af18 subText_a6af18",
+    Oc: "subtitleHeader_a6af18 subText_a6af18",
+    ic: "applicationSubtitleHeader_a6af18",
+    _u: "applicationSubtitleIcon_a6af18",
+    ph: "codeText_a6af18",
+    TK: "headerText_a6af18",
+    MY: "cardHeader_a6af18",
+    Gj: "giftCodeRow_a6af18",
+    pe: "generateCodeRow_a6af18 giftCodeRow_a6af18",
+    mO: "gameName_a6af18",
+    eO: "expandIcon_a6af18",
+    u1: "spinner_a6af18",
+    ez: "giftIcon_a6af18",
+};

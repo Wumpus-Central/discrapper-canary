@@ -70,8 +70,8 @@ function k(e) {
             null != z &&
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("7017"),
-                        i.e("57750"),
+                        i.e("44729"),
+                        i.e("34195"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
