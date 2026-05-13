@@ -204,9 +204,8 @@ let eG = function (e) {
                                 e,
                                 async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("63240"),
-                                        n.e("71070"),
-                                        n.e("72200"),
+                                        n.e("63044"),
+                                        n.e("75036"),
                                         n.e("26132"),
                                         n.e("46652"),
                                         n.e("93190"),
@@ -270,10 +269,10 @@ var eD = n(707539),
     e0 = n(302031),
     e7 = n(885386),
     e6 = n(576705),
-    e2 = n(652215),
-    e9 = n(838541),
-    e8 = n(571882),
-    e4 = n(992595);
+    e9 = n(652215),
+    e2 = n(838541),
+    e4 = n(571882),
+    e8 = n(992595);
 let e3 = s.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: a, message: r } = (0, eq.I)(t),
@@ -285,7 +284,7 @@ let e3 = s.memo(function (e) {
             }),
             [r],
         ),
-        d = (0, o.bG)([e6.A], () => e6.A.can(e2.xBc.MANAGE_MESSAGES, t)),
+        d = (0, o.bG)([e6.A], () => e6.A.can(e9.xBc.MANAGE_MESSAGES, t)),
         h = e7.gs.useSetting(),
         { content: A } = s.useMemo(
             () =>
@@ -297,7 +296,7 @@ let e3 = s.memo(function (e) {
         m = null;
     if (a)
         m = (0, l.jsx)(g.E, {
-            className: e8.G4,
+            className: e4.G4,
             variant: "text-sm/normal",
             color: "text-muted",
             children: q.intl.string(q.t.BZHld2),
@@ -305,37 +304,37 @@ let e3 = s.memo(function (e) {
     else if (n)
         if (null != r && c)
             m = (0, l.jsx)(g.E, {
-                className: e8.G4,
+                className: e4.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: q.intl.string(q.t["WPe+xL"]),
             });
         else if (null != r && u)
             m = (0, l.jsx)(g.E, {
-                className: e8.G4,
+                className: e4.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: q.intl.string(q.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e$.o)(r, A, c, u, i()(e8.BK, e4.tZ), {
-                leadingIconClass: e8.AF,
-                trailingIconClass: e8.AF,
-                iconSize: e9.eJ,
+            let { contentPlaceholder: e, renderedContent: t } = (0, e$.o)(r, A, c, u, i()(e4.BK, e8.tZ), {
+                leadingIconClass: e4.AF,
+                trailingIconClass: e4.AF,
+                iconSize: e2.eJ,
             });
             m =
                 null != t
-                    ? (0, l.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", className: e8.BK, children: t })
+                    ? (0, l.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", className: e4.BK, children: t })
                     : (0, l.jsx)(g.E, {
                           tag: "span",
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          className: e8.G4,
+                          className: e4.G4,
                           children: e,
                       });
         } else
             m = (0, l.jsx)(g.E, {
-                className: e8.G4,
+                className: e4.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: q.intl.string(q.t["0KfDxM"]),
@@ -343,7 +342,7 @@ let e3 = s.memo(function (e) {
     else m = null;
     return (0, l.jsx)(e0.Bs.Provider, {
         value: (0, eJ.A)(h, d),
-        children: (0, l.jsx)(eX.M, { className: e8.JY, children: m }),
+        children: (0, l.jsx)(eX.M, { className: e4.JY, children: m }),
     });
 });
 var e1 = n(746345);
@@ -523,13 +522,13 @@ function ts(e) {
         onClick: (e) => {
             e.stopPropagation(),
                 L.A.openPrivateChannelAsSidebar({ channelId: s.id, baseChannelId: O.fe, hasSingleMessageRequest: i }),
-                eo.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                eo.default.track(e9.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
                     channel_id: s.id,
                     other_user_id: a.id,
                 }),
                 setTimeout(() => {
-                    eI._.dispatch(e2.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
+                    eI._.dispatch(e9.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
                 }, 0);
         },
         children: (e) => (0, l.jsx)(tl, { active: e, user: a, channel: s }),
@@ -612,13 +611,13 @@ function tu(e) {
         onClick: (e) => {
             e.stopPropagation(),
                 L.A.openPrivateChannelAsSidebar({ channelId: s.id, baseChannelId: O.fe, hasSingleMessageRequest: i }),
-                eo.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                eo.default.track(e9.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !0,
                     channel_id: s.id,
                     other_user_id: a.id,
                 }),
                 setTimeout(() => {
-                    eI._.dispatch(e2.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
+                    eI._.dispatch(e9.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: s.id });
                 }, 0);
         },
         children: (e) => (0, l.jsx)(to, { active: e, user: a, channel: s }),
@@ -664,7 +663,7 @@ function th() {
             b(u.map((e) => e.channel.id));
         }, [u, b]);
     (0, _.Ay)(() => {
-        eo.default.track(e2.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: d }),
+        eo.default.track(e9.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: d }),
             et.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let R = s.useCallback(
@@ -885,7 +884,7 @@ function tx(e) {
         s = (0, o.bG)([O.Ay], () => O.Ay.getSidebarState(O.fe)),
         a = (0, o.bG)([er.A], () => er.A.getChannel(s?.channelId));
     if (null == s || s.type !== en.PE.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate()) return null;
-    let i = t - e2.ItT;
+    let i = t - e9.ItT;
     return (0, l.jsx)(v.A, {
         sidebarType: v.X.MessageRequestSidebar,
         maxWidth: i,
@@ -961,9 +960,9 @@ let tj = (0, b.A)(function (e) {
     let { width: t } = e,
         n = (0, U.W)();
     (0, _.Ay)(() => {
-        C.I(e2.BVt.MESSAGE_REQUESTS),
+        C.I(e9.BVt.MESSAGE_REQUESTS),
             (0, el.d)("message-requests"),
-            eo.default.track(e2.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
+            eo.default.track(e9.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             et.A.increment({ name: c.K.MESSAGE_REQUEST_VIEW });
     });
     let a = (0, o.bG)([es.A], () => es.A.theme),

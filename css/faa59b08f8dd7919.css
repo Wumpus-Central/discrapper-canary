@@ -1,0 +1,46 @@
+.mainContainer_c38e9f {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.pauseContainer_c38e9f {
+    align-items: flex-start;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    justify-content: space-between;
+    padding: var(--space-12)
+}
+
+.pauseContainer_c38e9f,
+.pauseText_c38e9f {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.pauseText_c38e9f {
+    flex-direction: column
+}
+
+.toggle_c38e9f {
+    flex-shrink: 0
+}
+
+.noScroll_e81c2b {
+    overflow: visible !important
+}
+
+.settingsContent_e81c2b {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1
+}
+
+.switch_e81c2b {
+    margin: 0
+}
+
+.selectedIcon_e81c2b {
+    background-color: var(--background-base-lower)
+}

@@ -42,7 +42,7 @@ class A extends a.A {
             let e = f.h.getNewMemberActions(o)?.length ?? 0;
             if (0 === e) return;
             (0, s.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("6913"), n.e("34934"), n.e("41678"), n.e("63893")]).then(
+                let { default: t } = await Promise.all([n.e("55998"), n.e("34934"), n.e("41678"), n.e("63893")]).then(
                     n.bind(n, 455796),
                 );
                 return (n) => (0, i.jsx)(t, { ...n, initialPercent: (e - 1) / e, numActions: e });

@@ -1,0 +1,265 @@
+.themeSection_f7cedc,
+.themeSelector_f7cedc {
+    align-items: flex-start;
+    display: flex
+}
+
+.themeSelector_f7cedc {
+    flex-direction: row;
+    gap: var(--space-md)
+}
+
+.themeOption_f7cedc {
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: 0;
+    transition: opacity .2s
+}
+
+.themeOption_f7cedc:hover {
+    opacity: .8
+}
+
+.themeCircle_f7cedc {
+    border: 2px solid var(--border-normal);
+    border-radius: 50%;
+    height: 32px;
+    transition: border-color .2s;
+    width: 32px
+}
+
+.themeCircleSelected_f7cedc {
+    border-color: var(--brand-500)
+}
+
+.themeLabel_f7cedc {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 500
+}
+
+.controlBar__04a02 {
+    flex-direction: column;
+    width: 100%
+}
+
+.controlBar__04a02,
+.questInput__04a02 {
+    display: flex;
+    gap: var(--space-sm)
+}
+
+.questInput__04a02 {
+    align-items: flex-start;
+    flex: 1;
+    flex-direction: row;
+    min-width: 600px
+}
+
+.currentQuestInfo__04a02 {
+    flex: 1;
+    gap: var(--space-xs);
+    justify-content: flex-end
+}
+
+.currentQuestInfo__04a02,
+.questName__04a02 {
+    align-items: center;
+    display: flex
+}
+
+.questName__04a02 {
+    border: 1px solid var(--interactive-background-selected);
+    border-radius: var(--radius-sm);
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-sm)
+}
+
+.questLabel__04a02 {
+    color: var(--interactive-text-default);
+    font-weight: 500
+}
+
+.questTitle__04a02 {
+    color: var(--interactive-text-active);
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.divider__04a02 {
+    background: var(--interactive-background-selected);
+    height: 1px;
+    margin-block: var(--space-sm) var(--space-sm);
+    margin-inline: 0;
+    width: 100%
+}
+
+.controlsSection__04a02 {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.controlsHeading__04a02 {
+    color: var(--text-strong);
+    margin: 0
+}
+
+.controlButtons__04a02 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    justify-content: center
+}
+
+.questSelectorContainer__04a02 {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-sm);
+    justify-content: flex-end
+}
+
+.questSelectorWrapper__04a02 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.copyInput__04a02 {
+    width: 100%
+}
+
+.sharePopover__04a02 {
+    background: var(--background-surface-high);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-high);
+    padding: var(--space-sm);
+    width: 400px
+}
+
+.divider__3b806 {
+    background: var(--interactive-background-selected);
+    height: 1px;
+    margin-block: var(--space-sm) var(--space-sm);
+    margin-inline: 0;
+    width: 100%
+}
+
+.previewPage__8d6f9 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+    place-content: center
+}
+
+.errorIcon__8d6f9,
+.questsIcon__8d6f9 {
+    color: var(--text-strong);
+    height: 24px;
+    width: 24px
+}
+
+.messageWrapper__8d6f9 {
+    margin-bottom: 12px;
+    padding: 12px
+}
+
+.message__8d6f9 {
+    color: var(--text-default);
+    text-align: start;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.previewCard__8d6f9 {
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    width: 450px
+}
+
+.previewBackground__8d6f9,
+.previewCard__8d6f9 {
+    display: flex;
+    flex-direction: column
+}
+
+.previewBackground__8d6f9 {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-md);
+    justify-content: center;
+    padding-bottom: var(--space-md);
+    padding-top: var(--space-md);
+    width: 100%
+}
+
+.heading__8d6f9 {
+    grid-row: 1/span 1
+}
+
+.heading__8d6f9,
+.questTile__8d6f9 {
+    grid-column: 2/span 1
+}
+
+.questTile__8d6f9 {
+    grid-row: 2/span 1
+}
+
+.questChannelCallHeaderWrapper__8d6f9>div {
+    inset-inline-start: auto;
+    margin-inline-start: 0;
+    position: relative;
+    top: auto
+}
+
+.embedCard__8d6f9 {
+    align-self: flex-start;
+    min-width: 100%;
+    padding: 32px;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.barCard_d8a230 {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    position: relative;
+    z-index: 10
+}
+
+.barHeading_d8a230 {
+    margin-bottom: var(--space-8)
+}
+
+.fixedBarContainer_d8a230 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    z-index: 10
+}
+
+.fixedBarWrapper_d8a230 {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-md);
+    height: 275px;
+    position: relative;
+    width: var(--custom-guild-sidebar-width);
+    z-index: 10
+}

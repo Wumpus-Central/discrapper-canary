@@ -1,0 +1,87 @@
+.container__848c3 {
+    padding: 0 20px
+}
+
+.row__848c3 {
+    color: var(--text-strong);
+    font-size: 16px;
+    height: 62px;
+    line-height: 20px;
+    position: relative
+}
+
+.row__848c3:hover .revokeInvite__848c3 {
+    opacity: 1
+}
+
+.row__848c3:after {
+    bottom: -1px;
+    content: "";
+    height: 1px;
+    inset-inline: -18px;
+    position: absolute;
+    z-index: -1
+}
+
+.boostZIndex__848c3 {
+    z-index: 2
+}
+
+.userColumn__848c3 {
+    width: 280px
+}
+
+.code__848c3 {
+    font-family: var(--font-code);
+    opacity: .6;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.code__848c3,
+.username__848c3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.username__848c3 {
+    font-weight: var(--font-weight-medium);
+    margin-inline-start: 8px
+}
+
+.avatar__848c3 {
+    flex: 0 0 auto;
+    height: 20px !important;
+    width: 20px !important
+}
+
+.discrimClass__848c3 {
+    opacity: .6
+}
+
+.revokeInvite__848c3 {
+    inset-inline-end: -31px;
+    opacity: 0;
+    position: absolute;
+    top: -12px;
+    transition: opacity .1s ease;
+    z-index: 2
+}
+
+.alignRight__848c3 {
+    text-align: end
+}
+
+.countdown__848c3 {
+    font-family: var(--font-code)
+}
+
+.theme-dark .row__848c3:after {
+    background-color: var(--opacity-white-4)
+}
+
+.theme-light .row__848c3:after {
+    background-color: hsl(var(--primary-500-hsl)/.04)
+}
