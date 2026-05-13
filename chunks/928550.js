@@ -30,5 +30,5 @@ function _(e) {
         n = (0, i.bG)([o.A], () => (null != t ? (o.A.getOfficialGame(t) ?? o.A.getGameByApplication(t)) : null), [t]),
         [s] = d(e),
         [a] = d(n?.id);
-    return null != n && a ? n.id : s ? (e ?? null) : null;
+    return null != e && s ? e : null != n && a ? n.id : null;
 }
