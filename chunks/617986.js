@@ -104,7 +104,7 @@ function W(e) {
             n.e("13498"),
             n.e("93010"),
             n.e("89203"),
-            n.e("74675"),
+            n.e("78211"),
             n.e("68885"),
             n.e("45667"),
             n.e("53306"),
@@ -366,7 +366,7 @@ function J() {
         n.e("3302"),
         n.e("68885"),
         n.e("45667"),
-        n.e("74675"),
+        n.e("78211"),
         n.e("57174"),
         n.e("92868"),
         n.e("25693"),
@@ -494,7 +494,7 @@ function en(e) {
 }
 function ei(e, t) {
     (0, o.openModalLazy)(async () => {
-        let { default: r } = await Promise.all([n.e("11843"), n.e("99513"), n.e("62101")]).then(n.bind(n, 50292));
+        let { default: r } = await Promise.all([n.e("99513"), n.e("62101")]).then(n.bind(n, 50292));
         return (n) => (0, i.jsx)(r, { ...n, multiplier: e, eligibleToReceivePremiumRewards: t });
     });
 }

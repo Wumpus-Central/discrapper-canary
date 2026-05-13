@@ -1,42 +1,39 @@
-r.d(i, { default: () => v });
-var n = r(627968),
-    e = r(122720),
-    a = r(772707),
-    l = r(403581),
-    o = r(793574),
-    s = r(688810),
-    p = r(31502),
-    c = r(532794),
-    u = r(976860),
-    _ = r(975571),
-    b = r(652215),
-    d = r(788868),
-    k = r(375708);
-function v(t) {
-    let { onClose: i, multiplier: r, eligibleToReceivePremiumRewards: v, ...C } = t,
-        { analyticsLocations: M } = (0, s.Ay)(o.A.QUEST_ORB_MULTIPLIER_INFO_MODAL),
-        R = (0, p.l)("QuestOrbMultiplierInfoModal"),
-        O = v
-            ? k.intl.format(k.t.NpUfej, { bonusOrbMultiplier: r })
-            : k.intl.format(k.t["G5k+lZ"], { bonusOrbMultiplier: r });
-    return (0, n.jsx)(a.k, {
-        ...C,
+n.d(i, { default: () => R });
+var r = n(627968),
+    e = n(122720),
+    l = n(772707),
+    o = n(403581),
+    s = n(793574),
+    a = n(688810),
+    p = n(532794),
+    c = n(976860),
+    _ = n(975571),
+    u = n(652215),
+    k = n(788868),
+    C = n(375708);
+function R(t) {
+    let { onClose: i, multiplier: n, eligibleToReceivePremiumRewards: R, ...b } = t,
+        { analyticsLocations: d } = (0, a.Ay)(s.A.QUEST_ORB_MULTIPLIER_INFO_MODAL),
+        M = R
+            ? C.intl.format(C.t.NpUfej, { bonusOrbMultiplier: n })
+            : C.intl.format(C.t["G5k+lZ"], { bonusOrbMultiplier: n });
+    return (0, r.jsx)(l.k, {
+        ...b,
         onClose: i,
-        badge: R ? void 0 : { type: "beta", variant: "expressive" },
         gradientColor: "nitro-pink",
-        title: k.intl.string(k.t.F2MShO),
-        subtitle: O,
+        title: C.intl.string(C.t.F2MShO),
+        subtitle: M,
         graphic: { type: "rive", rive: e.E, props: { artboard: "Torbs_Multiply" } },
-        actions: v
+        actions: R
             ? [
-                  { text: k.intl.string(k.t.cpT0Cq), variant: "secondary", onClick: i },
+                  { text: C.intl.string(C.t.cpT0Cq), variant: "secondary", onClick: i },
                   {
-                      text: k.intl.string(k.t.hvVgAZ),
+                      text: C.intl.string(C.t.hvVgAZ),
                       variant: "primary",
                       onClick: () => {
                           i(),
                               window.open(
-                                  _.A.getArticleURL(b.MVz.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE),
+                                  _.A.getArticleURL(u.MVz.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE),
                                   "_blank",
                               );
                       },
@@ -44,18 +41,18 @@ function v(t) {
               ]
             : [
                   {
-                      text: k.intl.string(k.t.PcTCB7),
+                      text: C.intl.string(C.t.PcTCB7),
                       variant: "secondary",
                       onClick: () => {
-                          i(), (0, u.pX)(b.BVt.NITRO_HOME);
+                          i(), (0, c.pX)(u.BVt.NITRO_HOME);
                       },
                   },
                   {
-                      text: k.intl.string(k.t.pj0XBN),
+                      text: C.intl.string(C.t.pj0XBN),
                       variant: "expressive",
-                      icon: l.t,
+                      icon: o.t,
                       onClick: () => {
-                          i(), (0, c.A)({ subscriptionTier: d.pe.TIER_2, analyticsLocations: M });
+                          i(), (0, p.A)({ subscriptionTier: k.pe.TIER_2, analyticsLocations: d });
                       },
                   },
               ],

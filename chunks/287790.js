@@ -1448,7 +1448,6 @@ function np() {
                           id: V.QUEST_ORB_MULTIPLIER_CARD_ID,
                           title: $.intl.string($.t.F2MShO),
                           description: $.intl.format($.t.NpUfej, { bonusOrbMultiplier: C }),
-                          pillText: v ? void 0 : $.intl.string($.t.oW0eUd),
                           primaryAsset:
                               "https://cdn.discordapp.com/assets/content/6a45cf480a4894d29a155fbc23df4dca701a69e7f09227ef964a61bdb6e5833a.png",
                           ctaText: $.intl.string($.t.jVcuVY),
