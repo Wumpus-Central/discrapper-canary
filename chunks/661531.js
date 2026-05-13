@@ -7810,12 +7810,19 @@ let { Themes: c } = u.zv,
                         return 48;
                     },
                 },
-                EMOJI_ROW_EMOJI_CONTAINER_SIZE: { resolve: () => 48 },
+                EMOJI_ROW_EMOJI_CONTAINER_SIZE: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 48;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 40;
+                        return 48;
+                    },
+                },
                 EMOJI_ROW_EMOJI_FONT_SIZE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 28;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 30;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 18;
                         return 28;
                     },
                 },
@@ -7823,7 +7830,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 33;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 36;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 24;
                         return 33;
                     },
                 },
@@ -7839,7 +7846,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 28;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 32;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 20;
                         return 28;
                     },
                 },
