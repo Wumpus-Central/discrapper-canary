@@ -1,4 +1,4 @@
-l.d(t, { Ay: () => A, F2: () => u, Qs: () => g, Z_: () => E });
+l.d(t, { Ay: () => f, F2: () => u, Qs: () => g, Z_: () => E });
 var r = l(627968),
     n = l(64700),
     a = l(835245),
@@ -10,18 +10,19 @@ function o(e, t) {
     return e.children.map((e) =>
         (function e(t, l) {
             if ("string" == typeof t) return t;
-            let { block: n, ...i } = t,
-                c = l[n];
-            if (null == c) return null;
-            let d = (() => {
+            let n = "Any" === t.block && "string" == typeof t.tag ? `Any:${t.tag}` : t.block,
+                { block: i, ...c } = t,
+                d = l[n] ?? l[i];
+            if (null == d) return null;
+            let o = (() => {
                     if ("children" in t) {
                         if (!Array.isArray(t.children) && null != t.children) return e(t.children, l);
                         if (null != t.children && t.children.length > 0) return t.children.map((t) => e(t, l));
                     }
                     return null;
                 })(),
-                o = s.E.has(n) ? { ...i, componentMap: l } : i;
-            return (0, r.jsx)(c, { ...o, children: d }, (0, a.A)());
+                u = s.E.has(i) ? { ...c, componentMap: l } : c;
+            return (0, r.jsx)(d, { ...u, children: o }, (0, a.A)());
         })(e, t),
     );
 }
@@ -79,4 +80,4 @@ let h = (e) => {
             ? null
             : (0, r.jsx)(p, { layout: o, overrides: a, onError: s, onEmptyLayout: i });
     },
-    A = p;
+    f = p;
