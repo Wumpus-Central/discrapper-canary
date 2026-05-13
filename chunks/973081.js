@@ -6,5 +6,9 @@ e.exports = {
     Bc: "friend_bbd192",
     YW: "match_bbd192",
     xK: "discordTag_bbd192",
+    dj: "subtitleLine_bbd192",
+    a6: "subtitleDot_bbd192",
+    gP: "mutualGuildStack_bbd192",
+    tz: "mutualGuildCount_bbd192",
     oz: "friendSelected_bbd192",
 };

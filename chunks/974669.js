@@ -1,0 +1,16 @@
+e.exports = {
+    PY: "coverContainer__2f300",
+    tu: "centerArt__2f300",
+    $h: "mainIsland__2f300",
+    Sb: "balloonDog__2f300",
+    vV: "leftArt__2f300",
+    yi: "grillingIsland__2f300",
+    M8: "rightArt__2f300",
+    D8: "waffleIsland__2f300",
+    fV: "float__2f300",
+    KP: "altFloat__2f300",
+    Fo: "centerContent__2f300",
+    rD: "coverContent__2f300",
+    CH: "coverTitle__2f300",
+    D3: "guildImage__2f300",
+};
