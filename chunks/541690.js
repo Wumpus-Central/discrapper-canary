@@ -22,7 +22,7 @@ n.d(t, {
     gQ: () => g,
     T7: () => D,
     Pm: () => B,
-    RM: () => Z,
+    RM: () => X,
     _w: () => G,
     zL: () => L,
     x: () => F,
@@ -186,9 +186,10 @@ let B = new m(s.INCREASED_GUILD_LIMIT),
             W,
         ]),
     }),
-    z = [w, M, W],
-    $ = [],
-    q = new Map([
+    z = [w, M],
+    $ = [W],
+    q = [],
+    Z = new Map([
         [g, a.bb.ANIMATED_EMOJIS],
         [A, a.bb.EMOJIS_EVERYWHERE],
         [I, a.bb.STICKERS_EVERYWHERE],
@@ -214,9 +215,14 @@ let B = new m(s.INCREASED_GUILD_LIMIT),
         [G, a.bb.INSTALL_PREMIUM_APPLICATIONS],
         [j, a.bb.INCREASED_VIDEO_UPLOAD_QUALITY],
     ]);
-function Z(e, t, n) {
-    if ((null != t && t.isPremiumWithFractionalPremiumOnly() && z.includes(e)) || (n && $.includes(e))) return !1;
-    let i = q.get(e);
+function X(e, t, n) {
+    if (
+        (null != t && t.isPremiumWithFractionalPremiumOnly() && z.includes(e)) ||
+        (null != t && t.isFractionalPremium() && $.includes(e)) ||
+        (n && q.includes(e))
+    )
+        return !1;
+    let i = Z.get(e);
     if (null != i && t?.perks != null) {
         let n = f.getConfig({ location: "product_catalog_can_user_use" });
         if (n !== _.CONTROL) {

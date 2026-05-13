@@ -382,7 +382,7 @@ function eI(e, t) {
         let i = (0, X.ks)(e.config),
             r = (0, X.KK)(e.config),
             s = O.default.getCurrentUser(),
-            a = !(0, x.YE)(s, ei.PremiumTypes.TIER_2) || (0, T.RM)(T.G5, s);
+            a = !s?.isFractionalPremium() && (!(0, x.YE)(s, ei.PremiumTypes.TIER_2) || (0, T.RM)(T.G5, s));
         return null != t && (a = t !== et.INELIGIBLE), !n && i && r && a;
     }, [n, e.config, t]);
 }

@@ -247,6 +247,9 @@ class A extends a.A {
             this.premiumState.premiumSubscriptionType !== s.jK.TIER_2
         );
     }
+    isFractionalPremium() {
+        return (0, p.ki)(this, g.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === s.fE.FRACTIONAL_NITRO;
+    }
     hasUrgentMessages() {
         return this.hasFlag(m.nhx.HAS_UNREAD_URGENT_MESSAGES);
     }
