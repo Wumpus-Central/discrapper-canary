@@ -30,14 +30,7 @@ var g = n(652215),
     I = n(375708),
     T = n(75662);
 let S = {
-        Logitech30P: { title: A.default.jkdhZq, titleParams: { discountPercent: E.aW }, body: A.default.Yl5ww1 },
-        "Logitech G": { title: A.default.jkdhZq, titleParams: { discountPercent: E.aW }, body: A.default.Yl5ww1 },
-        Logitech5PNI: {
-            title: A.default.zeBjoX,
-            titleParams: { discountPercent: E.y$ },
-            body: A.default.fC4abC,
-            bodyParams: { months: 6 },
-        },
+        "Logitech G": { title: A.default.jkdhZq, titleParams: { discountPercent: E.aW }, body: A.default.mH30Yx },
         "Logitech 5%": {
             title: A.default.zeBjoX,
             titleParams: { discountPercent: E.y$ },

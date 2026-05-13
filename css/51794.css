@@ -140,8 +140,10 @@
 }
 
 .embedAuthorName__623de {
+    flex: 1;
     font-size: .875rem;
-    font-weight: var(--font-weight-semibold)
+    font-weight: var(--font-weight-semibold);
+    min-width: 0
 }
 
 @media (-webkit-max-device-pixel-ratio:1) {
@@ -158,6 +160,7 @@
 
 .embedAuthorIcon__623de {
     border-radius: 50%;
+    flex: none;
     height: 24px;
     margin-inline-end: 8px;
     -o-object-fit: contain;
