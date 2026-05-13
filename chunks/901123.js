@@ -1,14 +1,15 @@
 "use strict";
-n.d(t, { BV: () => d, Cr: () => u, ME: () => s, YY: () => a, c$: () => l, gN: () => o });
-var i = n(323125);
+n.d(t, { BV: () => _, Cr: () => c, ME: () => a, YY: () => o, c$: () => u, gN: () => l });
+var i = n(323125),
+    r = n(758836);
 n(436317);
-var r = n(435220);
-let s = "@me",
-    a = "@favorites",
-    o = "@inbox",
-    l = "@guilds-empty-nux",
-    u = [s, a, l, o, "@guild-upsell-list"],
-    c = Object.freeze({
+var s = n(435220);
+let a = "@me",
+    o = "@favorites",
+    l = "@inbox",
+    u = "@guilds-empty-nux",
+    c = [a, o, u, l, "@guild-upsell-list"],
+    d = Object.freeze({
         INDEX: "/",
         APP: "/app",
         APP_WITH_INVITE_AND_GUILD_ONBOARDING: (e) => `/app/invite-with-guild-onboarding/${e}`,
@@ -39,7 +40,7 @@ let s = "@me",
         ME: "/channels/@me",
         MESSAGE_REQUESTS: "/message-requests",
         CHANNEL: (e, t, n) => {
-            let i = null == t ? `/channels/${e || s}` : `/channels/${e || s}/${t}`;
+            let i = null == t ? `/channels/${e || a}` : `/channels/${e || a}/${t}`;
             return null == n ? i : `${i}/${n}`;
         },
         CHANNEL_THREAD_VIEW: (e, t, n, i) => {
@@ -63,7 +64,7 @@ let s = "@me",
         GUILD_TEMPLATE_LOGIN: (e) => `/template/${e}/login`,
         GIFT_CODE: (e) => `/gifts/${e}`,
         GIFT_CODE_LOGIN: (e) => `/gifts/${e}/login`,
-        WELCOME: (e, t) => (null != t ? `/welcome/${e ?? s}/${t}` : `/welcome/${e ?? s}`),
+        WELCOME: (e, t) => (null != t ? `/welcome/${e ?? a}/${t}` : `/welcome/${e ?? a}`),
         VERIFY: "/verify",
         VERIFY_REQUEST: "/verify-request",
         RESET: "/reset",
@@ -114,7 +115,7 @@ let s = "@me",
         GLOBAL_DISCOVERY_APPS_PROFILE: (e) => `/discovery/applications/${e}`,
         GLOBAL_DISCOVERY_APPS_PROFILE_SECTION: (e, t) => `/discovery/applications/${e}/${t}`,
         GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU: (e, t) =>
-            `/discovery/applications/${e}/${r.GlobalDiscoveryAppsSections.STORE}/${t}`,
+            `/discovery/applications/${e}/${s.GlobalDiscoveryAppsSections.STORE}/${t}`,
         GLOBAL_DISCOVERY_APPS_SEARCH: "/discovery/applications/search",
         GUILD_MEMBER_VERIFICATION: (e) => `/member-verification/${e}`,
         GUILD_MEMBER_VERIFICATION_FOR_HUB: (e, t) => `/member-verification-for-hub/${e}${null != t ? `/${t}` : ""}`,
@@ -150,7 +151,7 @@ let s = "@me",
         APPLICATION_DIRECTORY_PROFILE: (e) => `/application-directory/${e}`,
         APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => `/application-directory/${e}/${t}`,
         APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) =>
-            `/application-directory/${e}/${r.ApplicationDirectoryProfileSections.STORE}/${t}`,
+            `/application-directory/${e}/${s.ApplicationDirectoryProfileSections.STORE}/${t}`,
         APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
         FAMILY_CENTER: "/family-center",
         SERVER_SHOP: (e) => `/channels/${e}/shop`,
@@ -166,6 +167,7 @@ let s = "@me",
         REPORT: "/report",
         REPORT_SECOND_LOOK: "/report-review",
         COLLECTIBLES_SHOP: "/shop",
+        COLLECTIBLES_SHOP_GAME_SHOP: (e) => `/shop?tab=${r.G2.GAME_SHOPS}&applicationId=${e}`,
         COLLECTIBLES_SHOP_WITH_TAB: (e) => `/shop?tab=${e}`,
         COLLECTIBLES_SHOP_COLLECTION_DETAIL: (e) => `/shop/collection/${e}`,
         COLLECTIBLES_SHOP_PRODUCT_DETAIL: (e) => `/shop/product/${e}`,
@@ -185,4 +187,4 @@ let s = "@me",
         QUEST_PREVIEW_TOOL_2: (e) => `/quest-home?tab=preview_tool&quest_id=${e}`,
         ICYMI: "/icymi",
     }),
-    d = (0, i.dN)(c, [":", "?", "@"]);
+    _ = (0, i.dN)(d, [":", "?", "@"]);

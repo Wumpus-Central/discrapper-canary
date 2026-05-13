@@ -1,4 +1,4 @@
-t.r(l), t.d(l, { default: () => eE });
+t.r(l), t.d(l, { SocialLayerStorefrontInnerWrapper: () => em, default: () => eE });
 var s = t(627968),
     n = t(64700),
     a = t(503698),
@@ -10,23 +10,23 @@ var s = t(627968),
     u = t(793574),
     g = t(688810),
     _ = t(976860),
-    f = t(530868),
-    p = t(561794),
+    p = t(530868),
+    f = t(561794),
     x = t(495544),
-    A = t(696451),
-    h = t(71393),
-    I = t(67480),
+    I = t(696451),
+    A = t(71393),
+    h = t(67480),
     E = t(449054),
     m = t(733391),
     S = t(439303),
     j = t(35826),
-    R = t(429635),
-    k = t(317560),
+    k = t(429635),
+    R = t(317560),
     N = t(939249),
     v = t(366010),
     b = t(834730),
-    C = t(926268),
-    L = t(736653),
+    L = t(926268),
+    C = t(736653),
     M = t(742589),
     O = t(975732),
     y = t(287809),
@@ -51,15 +51,15 @@ function F(e) {
 }
 function V(e) {
     let { guildId: l, storefront: t, selectedPageIndex: a } = e,
-        r = (0, v.M)((0, L.Ay)()),
+        r = (0, v.M)((0, C.Ay)()),
         c = (0, o.bG)([y.default], () => y.default.getCurrentUser()),
         d = (0, S.jM)(),
         { analyticsLocations: _ } = (0, g.Ay)(),
-        f = (function (e) {
+        p = (function (e) {
             let { location: l } = e;
             return G.useConfig({ location: l }).enabled;
         })({ location: "slayer_storefront_header" }),
-        p = n.useCallback(() => {
+        f = n.useCallback(() => {
             c?.id != null &&
                 (0, O.openUserProfileModal)({
                     userId: c.id,
@@ -73,15 +73,15 @@ function V(e) {
                 cta_type: w.ST.LEARN_MORE,
                 location_stack: _,
             });
-            let e = f ? Y.MVz.SOCIAL_LAYER_STOREFRONT_UPDATED : Y.MVz.SOCIAL_LAYER_STOREFRONT;
+            let e = p ? Y.MVz.SOCIAL_LAYER_STOREFRONT_UPDATED : Y.MVz.SOCIAL_LAYER_STOREFRONT;
             window.open(D.A.getArticleURL(e));
-        }, [d, _, f]);
+        }, [d, _, p]);
     if (null == t) return null;
-    let A = null != t.logoAssetId ? (0, P.YE)(t.applicationId, t.logoAssetId, 128) : null,
-        h = null != t.lightThemeLogoAssetId ? (0, P.YE)(t.applicationId, t.lightThemeLogoAssetId, 128) : null,
-        I = null;
+    let I = null != t.logoAssetId ? (0, P.YE)(t.applicationId, t.logoAssetId, 128) : null,
+        A = null != t.lightThemeLogoAssetId ? (0, P.YE)(t.applicationId, t.lightThemeLogoAssetId, 128) : null,
+        h = null;
     return (
-        (I = r ? (A ?? h) : (h ?? A)),
+        (h = r ? (I ?? A) : (A ?? I)),
         (0, s.jsxs)(M.A, {
             disableDoubleClick: !0,
             className: $.N1,
@@ -92,7 +92,7 @@ function V(e) {
                     },
                     className: $.gn,
                     children: [
-                        null != I && (0, s.jsx)("img", { className: $.wm, src: I, alt: t.title }),
+                        null != h && (0, s.jsx)("img", { className: $.wm, src: h, alt: t.title }),
                         (0, s.jsx)(M.A.Title, { children: t.title }),
                     ],
                 }),
@@ -118,8 +118,8 @@ function V(e) {
                     className: $.sZ,
                     children: [
                         (0, s.jsx)(F, {
-                            content: (0, s.jsx)(C.C, { size: "xs", color: "currentColor" }),
-                            onClick: p,
+                            content: (0, s.jsx)(L.C, { size: "xs", color: "currentColor" }),
+                            onClick: f,
                             ariaLabel: B.intl.string(B.t["7lZ31J"]),
                             className: $.ij,
                         }),
@@ -273,8 +273,8 @@ function e_(e) {
               }),
           });
 }
-var ef = t(59520);
-function ep(e, l, t, s) {
+var ep = t(59520);
+function ef(e, l, t, s) {
     let { scrollTop: n = 0, scrollOffset: a = 0, scrollHeight: i = 0, scrollWidth: r = 0 } = s;
     if (i > 0) {
         let s = (n + a) / i;
@@ -303,7 +303,7 @@ function ep(e, l, t, s) {
     }
 }
 var ex = t(384274);
-function eA(e) {
+function eI(e) {
     let l,
         t,
         { applicationId: a, page: i } = e,
@@ -316,7 +316,7 @@ function eA(e) {
             n.useEffect(() => {
                 l.current = c;
             }, [c]),
-            (t = (0, ef.I)(ep, 5e3, [], { trailing: !0 })),
+            (t = (0, ep.I)(ef, 5e3, [], { trailing: !0 })),
             {
                 handleScroll: n.useCallback(() => {
                     if (null != u.current) {
@@ -332,7 +332,7 @@ function eA(e) {
                     }
                 }, [t, d, u]),
             }),
-        [f, p] = n.useMemo(() => {
+        [p, f] = n.useMemo(() => {
             if (i?.skuIds == null || 0 === i.skuIds.length) return [[], []];
             let e = Math.round(o ?? 0);
             return i?.leaderboard == null || null == e || e < 564
@@ -343,7 +343,7 @@ function eA(e) {
                       : [i.skuIds.slice(0, 1), i.skuIds.slice(1)]
                   : [i.skuIds.slice(0, 2), i.skuIds.slice(2)];
         }, [i, o]),
-        x = 1 === f.length && null != o && o >= 834;
+        x = 1 === p.length && null != o && o >= 834;
     return (n.useEffect(() => {
         let { sessionId: e, guildId: l, pageIndex: t, pageTitle: s, isUserGuildMember: n, pageHasLeaderboard: a } = c;
         T.default.track(Y.HAw.SLAYER_STOREFRONT_PAGE_VIEWED, {
@@ -374,15 +374,15 @@ function eA(e) {
                           (0, s.jsx)(ei, {
                               analyticsSectionId: "leaderboard",
                               leaderboard: i.leaderboard,
-                              skuId: x ? f[0] : void 0,
+                              skuId: x ? p[0] : void 0,
                               analyticsLocations: d,
                           }),
                           (0, s.jsx)(e_, {
                               analyticsSectionId: "featured-top-section",
-                              skuIds: x ? void 0 : f,
+                              skuIds: x ? void 0 : p,
                               variant: es.s.MEDIUM,
                           }),
-                          (0, s.jsx)(e_, { analyticsSectionId: "non-featured-top-section", skuIds: p }),
+                          (0, s.jsx)(e_, { analyticsSectionId: "non-featured-top-section", skuIds: f }),
                           i.sections?.map((e, l) =>
                               (0, s.jsx)(
                                   e_,
@@ -399,8 +399,8 @@ function eA(e) {
               ],
           });
 }
-var eh = t(253004);
-function eI(e) {
+var eA = t(253004);
+function eh(e) {
     let { storefront: l, guildId: t, selectedPageIndex: a, selectedSku: i } = e,
         r = (0, S.jM)(),
         o = n.useRef(r);
@@ -412,7 +412,7 @@ function eI(e) {
         n.useEffect(() => {
             if (null != c)
                 return (
-                    (0, k.R)({
+                    (0, R.R)({
                         skuId: c,
                         applicationId: l.applicationId,
                         isStorefront: !0,
@@ -424,64 +424,68 @@ function eI(e) {
                         },
                     }),
                     () => {
-                        (0, k.j)();
+                        (0, R.j)();
                     }
                 );
         }, [t, a, c, l.applicationId]),
         (0, s.jsxs)("div", {
-            className: eh.k,
+            className: eA.k,
             children: [
                 (0, s.jsx)(V, { guildId: t, storefront: l, selectedPageIndex: a }),
-                (0, s.jsx)(eA, { applicationId: l.applicationId, page: l.pages[a] }),
+                (0, s.jsx)(eI, { applicationId: l.applicationId, page: l.pages[a] }),
             ],
         })
     );
 }
 function eE(e) {
     let { match: l } = e,
-        { guildId: t, gameShopPageIndex: a, gameShopSkuId: _ } = l.params,
-        { analyticsLocations: j } = (0, g.Ay)(u.A.SOCIAL_LAYER_STOREFRONT),
-        k = (0, R.A)({ guildId: t }),
-        N = (0, o.bG)([x.default], () => x.default.getSessionId(), []),
-        v = (0, o.bG)([I.A], () => I.A.get(_), [_]);
-    (0, p.pE)(), (0, f.x)({ applicationId: k?.storefront?.applicationId, location: "SocialLayerStorefront" });
-    let b = (0, d.A)((0, r.A)()),
-        C = (0, o.bG)([A.Ay, x.default], () => A.Ay.isMember(t, x.default.getId())),
-        L = n.useMemo(() => {
-            if (null == a) return 0;
-            let e = parseInt(a, 10);
-            return isNaN(e) || (null != k && null != k.storefront && e >= k.storefront.pages.length) ? 0 : e;
-        }, [a, k]),
-        M = k?.storefront?.pages[L]?.title ?? null,
-        O = k?.storefront?.pages[L]?.leaderboard != null,
-        y = n.useMemo(
+        { guildId: t, gameShopPageIndex: n, gameShopSkuId: a } = l.params;
+    return (0, s.jsx)(em, { guildId: t, skuId: a, pageIndex: null != n ? parseInt(n, 10) : void 0 });
+}
+function em(e) {
+    let { guildId: l, skuId: t, pageIndex: a = 0 } = e,
+        { analyticsLocations: _ } = (0, g.Ay)(u.A.SOCIAL_LAYER_STOREFRONT),
+        j = (0, k.A)({ guildId: l }),
+        R = (0, o.bG)([x.default], () => x.default.getSessionId(), []),
+        N = (0, o.bG)([h.A], () => h.A.get(t), [t]);
+    (0, f.pE)(), (0, p.x)({ applicationId: j?.storefront?.applicationId, location: "SocialLayerStorefront" });
+    let v = (0, d.A)((0, r.A)()),
+        b = (0, o.bG)([I.Ay, x.default], () => I.Ay.isMember(l, x.default.getId())),
+        L = n.useMemo(
+            () =>
+                null == a || isNaN(a) || (null != j && null != j.storefront && a >= j.storefront.pages.length) ? 0 : a,
+            [a, j],
+        ),
+        C = j?.storefront?.pages[L]?.title ?? null,
+        M = j?.storefront?.pages[L]?.leaderboard != null,
+        O = n.useMemo(
             () => ({
-                sessionId: b,
-                guildId: t,
+                sessionId: v,
+                guildId: l,
                 pageIndex: L,
-                pageTitle: M,
-                isUserGuildMember: C,
-                pageHasLeaderboard: O,
+                pageTitle: C,
+                isUserGuildMember: b,
+                pageHasLeaderboard: M,
             }),
-            [b, t, L, M, C, O],
+            [v, l, L, C, b, M],
         );
     return (n.useEffect(() => {
-        null != t && (0, m.SP)(t, L, null != _ ? _ : null);
-    }, [t, L, _]),
+        null != l && (0, m.SP)(l, L, null != t ? t : null);
+    }, [l, L, t]),
     n.useEffect(() => {
-        null == t || null == N || (null == h.A.getGuild(t) && (0, E.Z2)(t, {}, { shouldNavigate: !1 }));
-    }, [t, N]),
-    null == t || k?.storefront == null)
-        ? (0, s.jsx)("div", { className: i()(eh.u, eh.k), children: (0, s.jsx)(c.y, {}) })
+        null == l || null == R || (null == A.A.getGuild(l) && (0, E.Z2)(l, {}, { shouldNavigate: !1 }));
+    }, [l, R]),
+    null == l || j?.storefront == null)
+        ? (0, s.jsx)("div", { className: i()(eA.u, eA.k), children: (0, s.jsx)(c.y, {}) })
         : (0, s.jsx)(g.f5, {
-              value: j,
+              value: _,
               children: (0, s.jsx)(S.E9, {
-                  newValue: y,
-                  children: (0, s.jsx)(eI, {
-                      storefront: k.storefront,
-                      guildId: t,
+                  newValue: O,
+                  children: (0, s.jsx)(eh, {
+                      storefront: j.storefront,
+                      guildId: l,
                       selectedPageIndex: L,
-                      selectedSku: v,
+                      selectedSku: N,
                   }),
               }),
           });

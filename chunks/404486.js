@@ -227,8 +227,8 @@ var E = a(503698),
     D = a(331322),
     I = a(811893),
     T = a(534514),
-    R = a(538064),
-    O = a(265059),
+    O = a(538064),
+    R = a(265059),
     w = a(902592),
     M = a(869146);
 a(323874), a(14289), a(35956);
@@ -590,8 +590,8 @@ var ex = a(835245),
     eD = a(661531),
     eI = a(231723),
     eT = a(900686),
-    eR = a(986687),
-    eO = a(903586),
+    eO = a(986687),
+    eR = a(903586),
     ew = a(735438),
     eM = a.n(ew),
     eL = a(219220),
@@ -775,13 +775,13 @@ let eF =
                         }
                     });
             }, [t.stillFrames]);
-        let R = { profileEffect: t, upsertProfileEffect: a },
-            O = o.useRef(R);
+        let O = { profileEffect: t, upsertProfileEffect: a },
+            R = o.useRef(O);
         return (o.useEffect(() => {
-            O.current = R;
+            R.current = O;
         }),
         o.useEffect(() => {
-            let { profileEffect: e, upsertProfileEffect: t } = O.current;
+            let { profileEffect: e, upsertProfileEffect: t } = R.current;
             e.readonly || t({ skuId: e.skuId, name: _, effects: v, stillFrames: b });
         }, [v, b, _]),
         o.useEffect(
@@ -900,7 +900,7 @@ let eF =
                                       m
                                           ? (0, r.jsx)("div", {
                                                 className: eG.jq,
-                                                children: (0, r.jsx)(eO.A, {
+                                                children: (0, r.jsx)(eR.A, {
                                                     user: n,
                                                     currentUser: n,
                                                     transitionState: eI.ip.ENTERED,
@@ -930,7 +930,7 @@ let eF =
                                           className: S()(eG.f5, eG.VH),
                                           style: { borderRadius: p },
                                           children: [
-                                              (0, r.jsx)(eR.A, {
+                                              (0, r.jsx)(eO.A, {
                                                   user: n,
                                                   pendingAvatar: void 0,
                                                   pendingProfileEffect: null,
@@ -1878,12 +1878,12 @@ let tv = { profile_effects: 1, nameplates: 2, profile_frames: 3, product_preview
     },
     tb = () => {
         let [e, t] = o.useState(() => {
-            let e = O.A.lastOpenSubTabId;
+            let e = R.A.lastOpenSubTabId;
             return null != e && e in tv ? tv[e] : 0;
         });
         return (
             o.useEffect(() => {
-                null != O.A.lastOpenSubTabId && (0, R.Jt)({ lastOpenSubTabId: null });
+                null != R.A.lastOpenSubTabId && (0, O.Jt)({ lastOpenSubTabId: null });
             }, []),
             (0, r.jsxs)(c.Ip, {
                 className: tg.iE,
@@ -1990,8 +1990,8 @@ function tk(e) {
 var tD = a(409626),
     tI = a(692969),
     tT = a(760751),
-    tR = a(403362),
-    tO = a(435738),
+    tO = a(403362),
+    tR = a(435738),
     tw = a(99753),
     tM = a(975732),
     tL = a(574520),
@@ -2020,7 +2020,7 @@ function tV() {
             for (let a of e?.entries ?? []) t[(0, tL.$)(a.content)] = tL.A.canRenderContent(a.content);
             return t;
         }, [e]),
-        n = (0, d.bG)([tO.A], () => tO.A.getImpressionCappedItemIds());
+        n = (0, d.bG)([tR.A], () => tR.A.getImpressionCappedItemIds());
     if (null == t) return null;
     let l = e?.entries?.flatMap((e) => {
         let { content: l } = e;
@@ -2124,7 +2124,7 @@ function tq() {
     let t,
         a = (0, d.bG)([tw.A], () => tw.A.getFeed(tG.X1.GLOBAL_FEED)),
         n = (0, d.bG)([tw.A], () => tw.A.getDebugImpressionCappingDisabled()),
-        l = (0, d.bG)([tO.A], () => tO.A.getDebugFastImpressionCappingEnabled()),
+        l = (0, d.bG)([tR.A], () => tR.A.getDebugFastImpressionCappingEnabled()),
         s =
             ((e = a?.entries?.map((e) => e.content)),
             Object.keys((t = eM().groupBy(e, (e) => e.content_type))).map((e) => {
@@ -2148,7 +2148,7 @@ function tq() {
                 let [t] = e;
                 return t;
             }),
-        j = (0, tS.A)(v).filter(tR.Vq);
+        j = (0, tS.A)(v).filter(tO.Vq);
     return (0, r.jsx)("div", {
         className: tA.nd,
         children: (0, r.jsxs)(c.Ip, {
@@ -2617,6 +2617,9 @@ function av() {
             [_],
         ),
         E = o.useCallback(() => {
+            (0, as.pX)(H.BVt.COLLECTIBLES_SHOP_GAME_SHOP(n));
+        }, [n]),
+        N = o.useCallback(() => {
             (0, ah.openSocialLayerStorefrontAnnouncementModal)();
         }, []);
     return (0, r.jsx)("div", {
@@ -2630,7 +2633,8 @@ function av() {
                 (0, r.jsx)(j.d, { label: "Show own voice activity (bypass self check)", checked: m, onChange: h }),
                 (0, r.jsx)(j.d, { label: "Enable application test mode", checked: f, onChange: y }),
                 (0, r.jsx)(x.$, { text: "Open Game Profile Modal", onClick: C }),
-                (0, r.jsx)(x.$, { text: "Open Announcement Modal", onClick: E }),
+                (0, r.jsx)(x.$, { text: "Open Announcement Modal", onClick: N }),
+                (0, r.jsx)(x.$, { text: "Navigate to App Game Shop", onClick: E }),
                 (0, r.jsx)(T.D, { variant: "heading-lg/normal", children: "Wishlists" }),
                 (0, r.jsx)(g.k, {
                     label: "Recommendation application IDs",
@@ -2700,7 +2704,7 @@ function aT(e) {
         });
     return (0, r.jsx)("div", { onPointerDown: l, className: aI.Di });
 }
-function aR(e) {
+function aO(e) {
     let { children: t, className: a, initialHeight: n, minHeight: l } = e,
         s = o.useRef(null),
         [i, d] = o.useState(n);
@@ -2714,8 +2718,8 @@ function aR(e) {
         ],
     });
 }
-var aO = a(231643);
-a(895017), aO.fu.NONE, aO.fu.NONE;
+var aR = a(231643);
+a(895017), aR.fu.NONE, aR.fu.NONE;
 var aw = a(824552),
     aM = a(688810),
     aL = a(975460),
@@ -3220,7 +3224,7 @@ let nS = new Set(["client_performance_cpu", "client_performance_memory"]),
         {
             id: "details",
             name: "Details",
-            group: aO.fu.NONE,
+            group: aR.fu.NONE,
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: a, timestamp: n, fingerprint: l },
@@ -3394,7 +3398,7 @@ function nD() {
         }),
         [h, x] = o.useState(void 0),
         p = m.find((e) => e.key === h),
-        { TabBar: g, renderSelectedTab: v } = (0, aO.Ay)({ tabs: nN }, []);
+        { TabBar: g, renderSelectedTab: v } = (0, aR.Ay)({ tabs: nN }, []);
     return (0, r.jsxs)("div", {
         ref: e,
         className: S()(tA.nd, ny.nd),
@@ -3406,7 +3410,7 @@ function nD() {
                         className: ny.Q$,
                         look: a9.$n.Looks.BLANK,
                         size: a9.$n.Sizes.ICON,
-                        onClick: R.eY,
+                        onClick: O.eY,
                         children: (0, r.jsx)("span", {
                             title: aK.intl.string(aK.t.VkKicb),
                             children: (0, r.jsx)(nt.u, {
@@ -3448,7 +3452,7 @@ function nD() {
             }),
             (0, r.jsx)(tk, { columns: n_, data: m, selectedRowKey: h, onClickRow: (e) => x(e.key) }),
             null != p &&
-                (0, r.jsxs)(aR, {
+                (0, r.jsxs)(aO, {
                     className: ny.rf,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
@@ -3459,14 +3463,14 @@ function nD() {
 }
 var nI = a(382483),
     nT = a(385113),
-    nR = a(315117);
-function nO(e) {
+    nO = a(315117);
+function nR(e) {
     let { config: t } = e,
         a = Object.entries(t.surfaces ?? {});
     return (0, r.jsxs)(D.B, {
         gap: 8,
         padding: 8,
-        className: nR.lt,
+        className: nO.lt,
         children: [
             (0, r.jsx)(A.E, { variant: "text-sm/semibold", color: "text-strong", children: t.display_name }),
             (0, r.jsxs)(A.E, {
@@ -3511,7 +3515,7 @@ function nO(e) {
                           {
                               gap: 4,
                               padding: 4,
-                              className: nR.YL,
+                              className: nO.YL,
                               children: [
                                   (0, r.jsx)(A.E, { variant: "text-xs/semibold", color: "text-default", children: t }),
                                   (0, r.jsxs)(A.E, {
@@ -3534,10 +3538,10 @@ function nw(e) {
         align: "center",
         gap: 8,
         padding: 8,
-        className: a ? nR.FM : nR.gt,
+        className: a ? nO.FM : nO.gt,
         children: [
             (0, r.jsx)(N.D, {
-                className: nR.Av,
+                className: nO.Av,
                 onClick: n,
                 children: (0, r.jsxs)(D.B, {
                     gap: 4,
@@ -3634,7 +3638,7 @@ function nP() {
                 (0, r.jsxs)(A.E, { variant: "text-xs/normal", color: "text-muted", children: ["Status: ", a] }),
             null != n &&
                 n.length > 0 &&
-                (0, r.jsx)(D.B, { gap: 4, children: n.map((e) => (0, r.jsx)(nO, { config: e }, e.config_id)) }),
+                (0, r.jsx)(D.B, { gap: 4, children: n.map((e) => (0, r.jsx)(nR, { config: e }, e.config_id)) }),
         ],
     });
 }
@@ -3674,7 +3678,7 @@ function nG(e) {
                 gap: 8,
                 children: [
                     (0, r.jsx)(A.E, { variant: "text-md/semibold", color: "text-strong", children: "Config Details" }),
-                    (0, r.jsx)(nO, { config: t }),
+                    (0, r.jsx)(nR, { config: t }),
                 ],
             }),
         ],
@@ -3688,7 +3692,7 @@ function nB() {
         children: (0, r.jsxs)(D.B, {
             gap: 16,
             padding: 8,
-            className: nR.zr,
+            className: nO.zr,
             children: [
                 (0, r.jsx)(T.D, {
                     variant: "heading-lg/semibold",
@@ -4275,15 +4279,15 @@ function lT() {
         ],
     });
 }
-function lR() {
+function lO() {
     return (0, r.jsx)("div", {
         className: lI.n,
         children: (0, r.jsx)(D.B, { direction: "vertical", gap: 16, children: (0, r.jsx)(lT, {}) }),
     });
 }
 a(172879);
-var lO = a(985623),
-    lw = a.n(lO),
+var lR = a(985623),
+    lw = a.n(lR),
     lM = a(990078),
     lL = a(874804),
     lP = a(782134),
@@ -4320,7 +4324,7 @@ let lW = [
     {
         id: "action",
         name: "Action",
-        group: aO.fu.NONE,
+        group: aR.fu.NONE,
         render(e) {
             let { actionLog: t } = e,
                 a = a5()(t.createdAt);
@@ -4348,7 +4352,7 @@ let lW = [
     {
         id: "traces",
         name: "Store Handlers",
-        group: aO.fu.NONE,
+        group: aR.fu.NONE,
         render(e) {
             let { actionLog: t } = e;
             return (0, r.jsx)(l$, { actionLog: t });
@@ -4367,7 +4371,7 @@ function lz(e) {
                               name: (0, r.jsxs)(r.Fragment, {
                                   children: [(0, r.jsx)(lG.A, { className: lB.ik }), "Error"],
                               }),
-                              group: aO.fu.NONE,
+                              group: aR.fu.NONE,
                               render(e) {
                                   let { actionLog: t } = e;
                                   return (0, r.jsxs)(r.Fragment, {
@@ -4396,8 +4400,8 @@ function lz(e) {
                     : lW,
             [t],
         ),
-        { TabBar: l, renderSelectedTab: s } = (0, aO.Ay)({ tabs: n }, [n]);
-    return (0, r.jsxs)(aR, {
+        { TabBar: l, renderSelectedTab: s } = (0, aR.Ay)({ tabs: n }, [n]);
+    return (0, r.jsxs)(aO, {
         className: lB.rf,
         minHeight: 100,
         initialHeight: a,
@@ -5128,8 +5132,8 @@ var sb = a(950305),
     sD = a(420854),
     sI = a(373846),
     sT = a(657044),
-    sR = a(141060),
-    sO = a(608599),
+    sO = a(141060),
+    sR = a(608599),
     sw = a(685761),
     sM = a(157225),
     sL = a(362704),
@@ -5239,8 +5243,8 @@ let s1 = [
         sD.E,
         sI.C,
         sT._,
-        sR.i,
-        sO.L,
+        sO.i,
+        sR.L,
         sw.f,
         sM.N,
         sL.Y,
@@ -5957,7 +5961,7 @@ function iT(e) {
         ],
     });
 }
-function iR(e) {
+function iO(e) {
     let { allResolvedStops: t } = e,
         a = o.useMemo(
             () =>
@@ -5996,7 +6000,7 @@ codegen:
         ],
     });
 }
-function iO(e, t, a) {
+function iR(e, t, a) {
     let {
             r: n,
             g: l,
@@ -6040,14 +6044,14 @@ function iw(e, t, a) {
         s = (e) => {
             e < l && (l = e);
         };
-    for (let a of n) s(e.contrast(iO(t, n, a.position), "WCAG21"));
+    for (let a of n) s(e.contrast(iR(t, n, a.position), "WCAG21"));
     for (let a = 0; a < n.length - 1; a++) {
         let { contrast: l } = (function (e, t, a, n, l) {
             let s = 1 / 0,
                 i = n;
             for (let r = 0; r <= 100; r++) {
                 let o = n + (r / 100) * (l - n),
-                    d = a.contrast(iO(e, t, o), "WCAG21");
+                    d = a.contrast(iR(e, t, o), "WCAG21");
                 d < s && ((s = d), (i = o));
             }
             return { contrast: s, position: i };
@@ -6553,7 +6557,7 @@ function iU() {
                             }),
                         ],
                     }),
-                (0, r.jsx)(iR, { allResolvedStops: b }),
+                (0, r.jsx)(iO, { allResolvedStops: b }),
             ],
         }),
     });
@@ -7758,8 +7762,8 @@ function rk() {
 var rD = a(459838),
     rI = a(772707),
     rT = a(150934),
-    rR = a(598653),
-    rO = a(166403),
+    rO = a(598653),
+    rR = a(166403),
     rw = a(625494),
     rM = a(204925);
 let rL = {
@@ -8669,7 +8673,7 @@ let rL = {
     },
     PremiumGroupFriendsSelectorModal: async () => {
         let { default: e } = await Promise.all([a.e("44616"), a.e("85579")]).then(a.bind(a, 785606)),
-            t = rO.A.getPremiumGroupSubscription();
+            t = rR.A.getPremiumGroupSubscription();
         return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, subscription: t });
     },
     PremiumGroupAcceptInviteModal: async () => {
@@ -8834,7 +8838,7 @@ function rP() {
                                 variant: "primary",
                                 text: "Open",
                                 onClick: () => {
-                                    (0, rR.o)(!0), rw._.dispatch(H.jej.PREMIUM_SUBSCRIPTION_CREATED);
+                                    (0, rO.o)(!0), rw._.dispatch(H.jej.PREMIUM_SUBSCRIPTION_CREATED);
                                 },
                             }),
                         }),
@@ -10008,7 +10012,7 @@ let oA = o.memo(function (e) {
             })
         );
     }),
-    oR = o.memo(function () {
+    oO = o.memo(function () {
         let e = (0, d.cf)([ol.default], () => ol.default.getTrackedGames()),
             t = (0, d.bG)([aG.Ay], () => aG.Ay.getRunningGames()).filter((t) => null == e[t.pid]);
         return (0, r.jsxs)(r.Fragment, {
@@ -10067,7 +10071,7 @@ let oA = o.memo(function (e) {
             ],
         });
     }),
-    oO = o.memo(function () {
+    oR = o.memo(function () {
         let e = (0, d.bG)([ol.default], () => ol.default.getForcedRenderMode()),
             [t, a] = o.useState(e),
             n = [
@@ -10244,7 +10248,7 @@ let oB = ["__webpack_require__", "fn"],
         {
             id: "details",
             name: "Details",
-            group: aO.fu.NONE,
+            group: aR.fu.NONE,
             render: (e) => {
                 let { breadcrumb: t, onClose: a } = e,
                     { name: n, type: l, logType: s, nativeId: i, stack: o, data: d, timestamp: u, pid: m } = t,
@@ -10413,9 +10417,9 @@ function oW() {
         T = o.useCallback((e) => {
             E(e);
         }, []),
-        { renderSelectedTab: R } = (0, aO.Ay)({ tabs: oV }, []);
+        { renderSelectedTab: O } = (0, aR.Ay)({ tabs: oV }, []);
     (0, ns.RT)(f, _, T, o$, [j]);
-    let O = o.useCallback((e) => {
+    let R = o.useCallback((e) => {
             l(e), r9.A.setModuleLogging(e);
         }, []),
         [w, M] = o.useState(!1),
@@ -10467,7 +10471,7 @@ function oW() {
                             (0, r.jsx)("div", {
                                 title: "Toggles the Polling of Native",
                                 className: ov.iR,
-                                children: (0, r.jsx)(rT.S, { label: "Poll Native", checked: n, onChange: (e) => O(e) }),
+                                children: (0, r.jsx)(rT.S, { label: "Poll Native", checked: n, onChange: (e) => R(e) }),
                             }),
                             (0, r.jsx)("div", {
                                 title: "Only show breadcrumbs for active games",
@@ -10545,11 +10549,11 @@ function oW() {
                 }),
             }),
             null != I &&
-                (0, r.jsx)(aR, {
+                (0, r.jsx)(aO, {
                     className: S()(ov.st, ov.rf),
                     minHeight: 100,
                     initialHeight: null != t ? t / 3 : 300,
-                    children: R({ breadcrumb: I, onClose: () => D(null) }),
+                    children: O({ breadcrumb: I, onClose: () => D(null) }),
                 }),
         ],
     });
@@ -10614,8 +10618,8 @@ function oK() {
             className: S()(tA.nd, ov.rf),
             children: [
                 (0, r.jsx)(oT, {}),
-                (0, r.jsx)(oO, {}),
                 (0, r.jsx)(oR, {}),
+                (0, r.jsx)(oO, {}),
                 (0, r.jsx)(oD, {}),
                 (0, r.jsx)(oN, {}),
                 (0, r.jsx)(ok, {}),
@@ -10782,7 +10786,7 @@ let di = function () {
     let [e, t] = o.useState(l7.pe.TIER_2),
         [a, n] = o.useState(null),
         l = (0, d.yK)([a$.A], () => a$.A.getGuildsArray()),
-        [s] = (0, d.yK)([rO.A], () => [rO.A.getPremiumSubscription()]),
+        [s] = (0, d.yK)([rR.A], () => [rR.A.getPremiumSubscription()]),
         i = l.map((e) => ({ id: e.id, value: e, label: e.name })),
         [u, h] = o.useState(i.length > 0 ? i[0].value : null),
         [j, b] = o.useState(""),
@@ -10792,7 +10796,7 @@ let di = function () {
         { analyticsLocations: S } = (0, aM.Ay)(to.A.PAYMENT_FLOW_TEST_PAGE),
         [N, k] = o.useState(""),
         [I, T] = o.useState(H.dJq),
-        { balance: R, isFetching: O, error: w } = (0, da.W)(),
+        { balance: O, isFetching: R, error: w } = (0, da.W)(),
         { isSubmitting: M, responseMessage: L, redeemVirtualCurrency: P } = (0, da.Q)(),
         [U, G] = o.useState(H.dJq),
         [B, F] = o.useState(""),
@@ -10970,7 +10974,7 @@ let di = function () {
                                         variant: "text-sm/normal",
                                         children: "Virtual Currency Balance:",
                                     }),
-                                    O
+                                    R
                                         ? (0, r.jsx)("div", {
                                               className: dl.wG,
                                               children: (0, r.jsx)(eZ.y, { type: eZ.t.SPINNING_CIRCLE }),
@@ -10987,7 +10991,7 @@ let di = function () {
                                                           ],
                                                       }),
                                                   (0, r.jsx)(dn.Gy, {
-                                                      balance: R ?? 0,
+                                                      balance: O ?? 0,
                                                       balanceWidgetMode: dn.k7.SELECTED,
                                                   }),
                                               ],
@@ -12111,7 +12115,7 @@ function dC() {
                         variant: "text-lg/bold",
                         children: "Generate Gift Card PIN",
                     }),
-                    (0, r.jsx)(dR, {}),
+                    (0, r.jsx)(dO, {}),
                     (0, r.jsx)(A.E, {
                         style: { marginTop: "24px", marginBottom: "16px" },
                         variant: "text-lg/bold",
@@ -12123,7 +12127,7 @@ function dC() {
                         variant: "text-lg/bold",
                         children: "Existing Payment Sources",
                     }),
-                    b.map((e) => (0, r.jsx)(dO, { paymentSource: e }, e.id)),
+                    b.map((e) => (0, r.jsx)(dR, { paymentSource: e }, e.id)),
                 ],
             }),
         })
@@ -12184,7 +12188,7 @@ let dI = [
         { id: "DE", value: "DE", label: "Germany (EUR)" },
     ],
     dT = { US: "usd", CA: "cad", FR: "eur", GB: "gbp", DE: "eur" };
-function dR() {
+function dO() {
     let [e, t] = o.useState("US"),
         [a, n] = o.useState("500"),
         [l, s] = o.useState(null),
@@ -12265,7 +12269,7 @@ function dR() {
         ],
     });
 }
-function dO(e) {
+function dR(e) {
     let { paymentSource: t } = e,
         a = async () => {
             await nF.Bo.patch({ url: H.Rsh.BILLING_PAYMENT_SOURCE(t.id), body: { default: !0 }, rejectWithError: !1 }),
@@ -13239,8 +13243,8 @@ function cT(e) {
         t,
     );
 }
-var cR = a(290136),
-    cO = a(106236),
+var cO = a(290136),
+    cR = a(106236),
     cw = a(629584),
     cM = a(600239),
     cL = a(940622),
@@ -13317,7 +13321,7 @@ let cB = () => {
                                             variant: "text-sm/normal",
                                             children: [
                                                 "Click",
-                                                (0, r.jsx)(cR.c, {
+                                                (0, r.jsx)(cO.c, {
                                                     className: cG.q4,
                                                     size: "xs",
                                                     color: eD.A.colors.TEXT_DEFAULT,
@@ -13444,7 +13448,7 @@ let c8 = o.createContext({ setDropHandler: () => {} }),
                             variant: "icon-only",
                             size: "sm",
                             onClick: c9,
-                            icon: cR.c,
+                            icon: cO.c,
                             "aria-label": "Open PFX preview instructions",
                         }),
                     ],
@@ -13519,7 +13523,7 @@ let c8 = o.createContext({ setDropHandler: () => {} }),
                                                   className: c2.Me,
                                                   children: "Logo size",
                                               }),
-                                              (0, r.jsx)(cO.A, {
+                                              (0, r.jsx)(cR.A, {
                                                   className: c2.TQ,
                                                   minValue: 90,
                                                   maxValue: 200,
@@ -13882,7 +13886,7 @@ let c8 = o.createContext({ setDropHandler: () => {} }),
                                 variant: "icon-only",
                                 size: "sm",
                                 onClick: c5,
-                                icon: cR.c,
+                                icon: cO.c,
                                 "aria-label": "Open preview instructions",
                             }),
                         ],
@@ -14189,7 +14193,7 @@ function uk(e) {
                     {
                         id: "local",
                         name: "Local Variables",
-                        group: aO.fu.NONE,
+                        group: aR.fu.NONE,
                         render(e) {
                             let { store: t } = e;
                             return null == t.__getLocalVars
@@ -14207,7 +14211,7 @@ function uk(e) {
                     {
                         id: "instance",
                         name: "Store Instance",
-                        group: aO.fu.NONE,
+                        group: aR.fu.NONE,
                         render(e) {
                             let { store: t } = e;
                             return (0, r.jsx)(uS, { store: t, dataGetter: (e) => e });
@@ -14218,7 +14222,7 @@ function uk(e) {
                     e.push({
                         id: "edit-local",
                         name: "Edit Local Variables",
-                        group: aO.fu.NONE,
+                        group: aR.fu.NONE,
                         render(e) {
                             let { store: t } = e;
                             return null == t.__getLocalVarsEditConfig
@@ -14236,8 +14240,8 @@ function uk(e) {
                 e
             );
         }, [t]),
-        { TabBar: l, renderSelectedTab: s } = (0, aO.Ay)({ tabs: n }, []);
-    return (0, r.jsxs)(aR, {
+        { TabBar: l, renderSelectedTab: s } = (0, aR.Ay)({ tabs: n }, []);
+    return (0, r.jsxs)(aO, {
         className: uC.rf,
         minHeight: 100,
         initialHeight: a,
@@ -14291,7 +14295,7 @@ function uD() {
 }
 var uI = a(91871),
     uT = a.n(uI);
-let uR = [
+let uO = [
         {
             key: "id",
             cellClassName: ny.Hz,
@@ -14317,11 +14321,11 @@ let uR = [
             },
         },
     ],
-    uO = [
+    uR = [
         {
             id: "details",
             name: "Details",
-            group: aO.fu.NONE,
+            group: aR.fu.NONE,
             render: (e) => {
                 let {
                         loggedTrigger: {
@@ -14396,7 +14400,7 @@ function uw() {
         ),
         [s, i] = o.useState(void 0),
         c = l.find((e) => e.key === s),
-        { TabBar: u, renderSelectedTab: m } = (0, aO.Ay)({ tabs: uO }, []),
+        { TabBar: u, renderSelectedTab: m } = (0, aR.Ay)({ tabs: uR }, []),
         h = (0, d.bG)([ng], () => ng.trackTriggers),
         x = o.useCallback((e) => {
             tC.h.dispatch({ type: "SET_TRACK_TRIGGERS", enabled: e });
@@ -14431,13 +14435,13 @@ function uw() {
                         variant: "icon-only",
                         "aria-label": aK.intl.string(aK.t.VkKicb),
                         icon: nt.u,
-                        onClick: R.eY,
+                        onClick: O.eY,
                     }),
                 ],
             }),
-            (0, r.jsx)(tk, { columns: uR, data: l, selectedRowKey: s, onClickRow: (e) => i(e.key) }),
+            (0, r.jsx)(tk, { columns: uO, data: l, selectedRowKey: s, onClickRow: (e) => i(e.key) }),
             null != c &&
-                (0, r.jsxs)(aR, {
+                (0, r.jsxs)(aO, {
                     className: ny.rf,
                     minHeight: 100,
                     initialHeight: null != a.current ? a.current.clientHeight / 2 : 300,
@@ -14772,7 +14776,7 @@ function u4() {
             noiseSuppressionSupported: k,
             noiseCancellationSupported: I,
             noiseCancellationEnableStats: T,
-            vadDuringPreProcess: R,
+            vadDuringPreProcess: O,
         } = (0, d.cf)([uB.Ay], () => ({
             krispModels: uB.Ay.getKrispModels(),
             krispModelOverride: uB.Ay.getKrispModelOverride(),
@@ -14788,7 +14792,7 @@ function u4() {
             noiseCancellationEnableStats: uB.Ay.getKrispEnableStats(),
             vadDuringPreProcess: uB.Ay.getModeOptions().vadDuringPreProcess,
         })),
-        O = S ? "KRISP" : N ? "STANDARD" : "NONE",
+        R = S ? "KRISP" : N ? "STANDARD" : "NONE",
         w = (0, u2.v)(),
         M = o.useCallback(() => {
             m.current?.stop(), (m.current = null), u(null);
@@ -14833,7 +14837,7 @@ function u4() {
                     }),
                     (0, r.jsx)(p.l, {
                         label: "Noise Cancellation",
-                        value: O,
+                        value: R,
                         onSelectionChange: (e) => {
                             u0.A.setNoiseCancellation("KRISP" === e), u0.A.setNoiseSuppression("STANDARD" === e);
                         },
@@ -14841,10 +14845,10 @@ function u4() {
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
-                    "KRISP" === O &&
+                    "KRISP" === R &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(cO.A, {
+                                (0, r.jsx)(cR.A, {
                                     label: "Krisp Suppression Level",
                                     initialValue: s,
                                     onValueChange: u0.A.setKrispSuppressionLevel,
@@ -14886,7 +14890,7 @@ function u4() {
                                                 onChange: (e) => u0.A.setMode(uF.TB.VOICE_ACTIVITY, { vadUseKrisp: e }),
                                             }),
                                             C &&
-                                                (0, r.jsx)(cO.A, {
+                                                (0, r.jsx)(cR.A, {
                                                     label: "Krisp VAD Activation Threshold",
                                                     initialValue: E,
                                                     onValueChange: (e) =>
@@ -14900,7 +14904,7 @@ function u4() {
                                     }),
                                 (0, r.jsx)(j.d, {
                                     label: "Run Before Processing",
-                                    checked: R ?? !1,
+                                    checked: O ?? !1,
                                     onChange: (e) => u0.A.setMode(uF.TB.VOICE_ACTIVITY, { vadDuringPreProcess: e }),
                                 }),
                             ],
@@ -14941,7 +14945,7 @@ function u4() {
                                                           inputName: e,
                                                           audioBuffer: r,
                                                           createdAt: Date.now(),
-                                                          suppression: O,
+                                                          suppression: R,
                                                           echoCancellation: y,
                                                           krispSuppressionLevel: s,
                                                       },
@@ -14952,7 +14956,7 @@ function u4() {
                             }),
                         ],
                     }),
-                    (0, r.jsx)(cO.A, {
+                    (0, r.jsx)(cR.A, {
                         label: "Volume",
                         initialValue: x,
                         asValueChanges: function (e) {
@@ -15313,7 +15317,7 @@ function mx() {
                         }),
                         (0, r.jsx)(v.c, { className: ml.yF }),
                         (0, r.jsx)(u7.z, { className: ml.Pf, children: "Spatial Blend" }),
-                        (0, r.jsx)(cO.A, {
+                        (0, r.jsx)(cR.A, {
                             className: ml.aw,
                             initialValue: e.spatialBlend,
                             minValue: 0,
@@ -15322,7 +15326,7 @@ function mx() {
                             onValueRender: (e) => e.toFixed(2),
                         }),
                         (0, r.jsx)(u7.z, { className: ml.Pf, children: "Room Size (m\xb2)" }),
-                        (0, r.jsx)(cO.A, {
+                        (0, r.jsx)(cR.A, {
                             className: ml.aw,
                             initialValue: e.roomSize ?? 25,
                             minValue: 10,
@@ -15334,7 +15338,7 @@ function mx() {
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(u7.z, { className: ml.Pf, children: "Distance" }),
-                                    (0, r.jsx)(cO.A, {
+                                    (0, r.jsx)(cR.A, {
                                         className: ml.aw,
                                         initialValue: e.distance,
                                         minValue: 1,
@@ -15348,7 +15352,7 @@ function mx() {
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(u7.z, { className: ml.Pf, children: "Spread" }),
-                                    (0, r.jsx)(cO.A, {
+                                    (0, r.jsx)(cR.A, {
                                         className: ml.aw,
                                         initialValue: e.spread,
                                         minValue: 0,
@@ -15362,7 +15366,7 @@ function mx() {
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(u7.z, { className: ml.Pf, children: "Arc Angle" }),
-                                    (0, r.jsx)(cO.A, {
+                                    (0, r.jsx)(cR.A, {
                                         className: ml.aw,
                                         initialValue: e.arcAngle ?? 180,
                                         minValue: 0,
@@ -15376,7 +15380,7 @@ function mx() {
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(u7.z, { className: ml.Pf, children: "Columns" }),
-                                    (0, r.jsx)(cO.A, {
+                                    (0, r.jsx)(cR.A, {
                                         className: ml.aw,
                                         initialValue: e.gridColumns ?? 3,
                                         minValue: 2,
@@ -15386,7 +15390,7 @@ function mx() {
                                         onValueRender: (e) => e.toFixed(0),
                                     }),
                                     (0, r.jsx)(u7.z, { className: ml.Pf, children: "Spacing (m)" }),
-                                    (0, r.jsx)(cO.A, {
+                                    (0, r.jsx)(cR.A, {
                                         className: ml.aw,
                                         initialValue: e.gridSpacing ?? 1.5,
                                         minValue: 0.5,
@@ -15424,7 +15428,7 @@ function m_() {
     let [e, t] = o.useState(!1),
         a = (0, d.bG)([V.default], () => V.default.getCurrentUser()),
         n = (0, mf.Lh)(),
-        l = (0, d.bG)([rO.A], () => rO.A.getPremiumTypeSubscription()),
+        l = (0, d.bG)([rR.A], () => rR.A.getPremiumTypeSubscription()),
         s = null != n ? (l7.VD[n]?.tenureReqNumMonths ?? 0) : 0,
         i = o.useCallback(
             async (e) => {
@@ -15600,7 +15604,7 @@ function mT(e) {
         }),
     });
 }
-function mR(e) {
+function mO(e) {
     var t;
     let a,
         { subscription: n, onUpdated: l } = e,
@@ -15645,11 +15649,11 @@ function mR(e) {
                 isDisabled: !1,
             },
         ],
-        R = n.hasActiveTrial,
-        O = n.metadata?.active_discount_id != null;
+        O = n.hasActiveTrial,
+        R = n.metadata?.active_discount_id != null;
     return (
-        R && T.push({ id: "trial", label: "Has Trial", isDisabled: !1 }),
-        O && T.push({ id: "active-discount", label: "Has Active Discount", isDisabled: !1 }),
+        O && T.push({ id: "trial", label: "Has Trial", isDisabled: !1 }),
+        R && T.push({ id: "active-discount", label: "Has Active Discount", isDisabled: !1 }),
         n.status !== H.Dmq.ACTIVE &&
             T.push({
                 id: "dates",
@@ -15675,7 +15679,7 @@ function mR(e) {
                         selectionBehavior: "replace",
                         disabledKeys: new Set(),
                     }),
-                    R &&
+                    O &&
                         (0, r.jsxs)("div", {
                             className: mA.VK,
                             children: [
@@ -15723,7 +15727,7 @@ function mR(e) {
                                     }),
                             ],
                         }),
-                    O &&
+                    R &&
                         (0, r.jsxs)("div", {
                             className: mA.VK,
                             children: [
@@ -15911,7 +15915,7 @@ function mR(e) {
         })
     );
 }
-let mO = async () =>
+let mR = async () =>
         (
             await nF.Bo.get({
                 url: H.Rsh.BILLING_SUBSCRIPTIONS,
@@ -15931,14 +15935,14 @@ let mO = async () =>
         { id: "nitro-squad-monthly", label: "Nitro Squad Monthly", value: l7.gD.PREMIUM_GROUP_MONTH },
     ];
 function mM() {
-    let e = (0, d.bG)([rO.A], () => rO.A.getPremiumTypeSubscription()),
+    let e = (0, d.bG)([rR.A], () => rR.A.getPremiumTypeSubscription()),
         t = (0, d.bG)([V.default], () => V.default.getCurrentUser()),
         [a, n] = o.useState("511651880837840896"),
         [l, s] = o.useState([]),
         [i, u] = o.useState(!1),
         m = o.useCallback(async () => {
             try {
-                u(!0), await (0, o1.hP)(), await (0, mp.eO)(t.id), s(await mO());
+                u(!0), await (0, o1.hP)(), await (0, mp.eO)(t.id), s(await mR());
             } finally {
                 u(!1);
             }
@@ -16000,7 +16004,7 @@ function mM() {
                             ],
                         }),
                 }),
-                null != e && (0, r.jsx)(mR, { subscription: e, onUpdated: m }),
+                null != e && (0, r.jsx)(mO, { subscription: e, onUpdated: m }),
                 (0, r.jsx)(T.D, { variant: "heading-lg/semibold", className: tA.wx, children: "Bulk Actions" }),
                 (0, r.jsx)("section", {
                     className: S()([si.uW, si.Uo]),
@@ -16019,7 +16023,7 @@ function mM() {
                                 className: tA.wx,
                                 children: "Previous Subscriptions",
                             }),
-                            h.map((e) => (0, r.jsx)(mR, { subscription: e, onUpdated: m }, e.id)),
+                            h.map((e) => (0, r.jsx)(mO, { subscription: e, onUpdated: m }, e.id)),
                         ],
                     }),
             ],
@@ -17022,82 +17026,82 @@ var hy = a(845584),
     hD = a(696451),
     hI = a(860689),
     hT = a(926140);
-let hR = new hS.A("SearchDebugUtils");
-function hO() {
-    hR.info("--------------------------");
+let hO = new hS.A("SearchDebugUtils");
+function hR() {
+    hO.info("--------------------------");
 }
 function hw() {
     let e = hN.A.getProps();
-    hR.info("START Quick Switcher State"),
-        hR.info(`Query: ${e.query}`),
+    hO.info("START Quick Switcher State"),
+        hO.info(`Query: ${e.query}`),
         e.results.forEach((e) => {
-            switch ((hR.info(`Result Type: ${e.type}`), e.type)) {
+            switch ((hO.info(`Result Type: ${e.type}`), e.type)) {
                 case hT.rD.GUILD:
-                    hR.info(`guild id: ${e.record.id}`);
+                    hO.info(`guild id: ${e.record.id}`);
                     break;
                 case hT.rD.TEXT_CHANNEL:
                 case hT.rD.VOICE_CHANNEL:
-                    hR.info(`channel type: ${e.record.type}`),
-                        hR.info(`channel id: ${e.record.id}`),
-                        hR.info(`name: ${e.record.name}`);
+                    hO.info(`channel type: ${e.record.type}`),
+                        hO.info(`channel id: ${e.record.id}`),
+                        hO.info(`name: ${e.record.name}`);
                     break;
                 case hT.rD.DM:
-                    hR.info(`channel type: ${e.record.type}`),
-                        hR.info(`channel id: ${e.record.id}`),
+                    hO.info(`channel type: ${e.record.type}`),
+                        hO.info(`channel id: ${e.record.id}`),
                         e.record.isDM() &&
-                            (hR.info(`recipient id: ${e.record.getRecipientId()}`),
+                            (hO.info(`recipient id: ${e.record.getRecipientId()}`),
                             e.record.recipients.forEach((e) => {
                                 let t = V.default.getUser(e);
                                 null != t &&
-                                    (hR.info(`recipient username: ${t.username}`),
-                                    hR.info(`recipient global name: ${Y.Ay.getGlobalName(t)}`),
-                                    hR.info(`recipient nickname: ${t4.A.getNickname(t.id)}`));
+                                    (hO.info(`recipient username: ${t.username}`),
+                                    hO.info(`recipient global name: ${Y.Ay.getGlobalName(t)}`),
+                                    hO.info(`recipient nickname: ${t4.A.getNickname(t.id)}`));
                             }));
                     break;
                 case hT.rD.GROUP_DM:
-                    hR.info(`channel type: ${e.record.type}`),
-                        hR.info(`channel id: ${e.record.id}`),
-                        hR.info(`name: ${(0, t5.m1)(e.record, V.default, t4.A)}`),
+                    hO.info(`channel type: ${e.record.type}`),
+                        hO.info(`channel id: ${e.record.id}`),
+                        hO.info(`name: ${(0, t5.m1)(e.record, V.default, t4.A)}`),
                         e.record.isGroupDM() &&
-                            (hR.info(`default name: ${(0, t5.ks)(e.record, V.default, t4.A)}`),
-                            hR.info(`recipient id: ${e.record.recipients}`),
+                            (hO.info(`default name: ${(0, t5.ks)(e.record, V.default, t4.A)}`),
+                            hO.info(`recipient id: ${e.record.recipients}`),
                             e.record.recipients.forEach((e) => {
                                 let t = V.default.getUser(e);
                                 null != t &&
-                                    (hR.info(`recipient username: ${t.username}`),
-                                    hR.info(`recipient global name: ${Y.Ay.getGlobalName(t)}`),
-                                    hR.info(`recipient nickname: ${t4.A.getNickname(t.id)}`));
+                                    (hO.info(`recipient username: ${t.username}`),
+                                    hO.info(`recipient global name: ${Y.Ay.getGlobalName(t)}`),
+                                    hO.info(`recipient nickname: ${t4.A.getNickname(t.id)}`));
                             }));
                     break;
                 case hT.rD.USER:
-                    hR.info(`user id: ${e.record.id}`),
-                        hR.info(`username: ${e.record.username}`),
-                        hR.info(`global name: ${Y.Ay.getGlobalName(e.record)}`),
-                        hR.info(`nickname: ${t4.A.getNickname(e.record.id)}`),
-                        hR.info(`guild nicknames: ${hD.Ay.getNicknames(e.record.id)}`);
+                    hO.info(`user id: ${e.record.id}`),
+                        hO.info(`username: ${e.record.username}`),
+                        hO.info(`global name: ${Y.Ay.getGlobalName(e.record)}`),
+                        hO.info(`nickname: ${t4.A.getNickname(e.record.id)}`),
+                        hO.info(`guild nicknames: ${hD.Ay.getNicknames(e.record.id)}`);
             }
-            hR.info(`frecency score: ${hA.A.getScoreWithoutFetchingLatest(e.record.id)}`), hO();
+            hO.info(`frecency score: ${hA.A.getScoreWithoutFetchingLatest(e.record.id)}`), hR();
         }),
-        hR.info("END Quick Switcher State\n");
+        hO.info("END Quick Switcher State\n");
 }
 async function hM() {
-    hR.info("START User Search Worker State");
+    hO.info("START User Search Worker State");
     let e = await hE.A.requestDebugState();
     null == e
-        ? hR.info("Unable to get debug state from User Search Worker")
+        ? hO.info("Unable to get debug state from User Search Worker")
         : (Object.entries(JSON.parse(e.users)).forEach((e) => {
               let [t, a] = e;
-              hR.info(`id: ${t}`),
-                  hR.info(`username: ${a.username}`),
-                  hR.info(`global name: ${a.globalName}`),
-                  hR.info(`nickname: ${a.friendNickname}`),
+              hO.info(`id: ${t}`),
+                  hO.info(`username: ${a.username}`),
+                  hO.info(`global name: ${a.globalName}`),
+                  hO.info(`nickname: ${a.friendNickname}`),
                   Object.entries(a.nicknames).forEach((e) => {
                       let [t, a] = e;
-                      hR.info(`guild id: ${t}`), hR.info(`guild nickname: ${a}`);
+                      hO.info(`guild id: ${t}`), hO.info(`guild nickname: ${a}`);
                   }),
-                  hO();
+                  hR();
           }),
-          hR.info("END User Search Worker State\n"));
+          hO.info("END User Search Worker State\n"));
 }
 async function hL() {
     let e = await hE.A.requestDebugState();
@@ -17192,7 +17196,7 @@ function hF() {
                     hB.setState({ isUploading: !0, errorMessage: null, isSuccess: !1 }),
                         t &&
                             ((i = t4.A.getFriendIDs()),
-                            hR.info("START Discord Friends"),
+                            hO.info("START Discord Friends"),
                             i.forEach((e) => {
                                 let t = V.default.getUser(e);
                                 if (null == t) return;
@@ -17200,13 +17204,13 @@ function hF() {
                                     n = Y.Ay.getGlobalName(t),
                                     l = t4.A.getNickname(t.id),
                                     s = hD.Ay.getNicknames(t.id);
-                                hR.info(`username: ${a}`),
-                                    hR.info(`global name: ${n}`),
-                                    hR.info(`nickname: ${l}`),
-                                    hR.info(`guild nicknames: ${s}`),
-                                    hO();
+                                hO.info(`username: ${a}`),
+                                    hO.info(`global name: ${n}`),
+                                    hO.info(`nickname: ${l}`),
+                                    hO.info(`guild nicknames: ${s}`),
+                                    hR();
                             }),
-                            hR.info("END Discord Friends\n")),
+                            hO.info("END Discord Friends\n")),
                         a &&
                             ((r = t9.A.getMutablePrivateChannels()),
                             (o = []),
@@ -17214,14 +17218,14 @@ function hF() {
                             Object.values(r).forEach((e) => {
                                 e.isGroupDM() && o.push(e), e.isDM() && d.push(e);
                             }),
-                            hR.info("START Logging Group DM Channels"),
+                            hO.info("START Logging Group DM Channels"),
                             o.forEach((e) => {
                                 let t = (0, t5.m1)(e, V.default, t4.A),
                                     a = (0, t5.ks)(e, V.default, t4.A);
-                                hR.info(`id: ${e.id}`),
-                                    hR.info(`name: ${t}`),
-                                    hR.info(`default name: ${a}`),
-                                    hR.info(`recipients ids: ${e.recipients}`),
+                                hO.info(`id: ${e.id}`),
+                                    hO.info(`name: ${t}`),
+                                    hO.info(`default name: ${a}`),
+                                    hO.info(`recipients ids: ${e.recipients}`),
                                     e.recipients.forEach((e) => {
                                         let t = V.default.getUser(e);
                                         if (null == t) return;
@@ -17229,30 +17233,30 @@ function hF() {
                                             n = Y.Ay.getGlobalName(t),
                                             l = t4.A.getNickname(t.id),
                                             s = hD.Ay.getNicknames(t.id);
-                                        hR.info(`username: ${a}`),
-                                            hR.info(`global name: ${n}`),
-                                            hR.info(`nickname: ${l}`),
-                                            hR.info(`guild nicknames: ${s}`),
-                                            hO();
+                                        hO.info(`username: ${a}`),
+                                            hO.info(`global name: ${n}`),
+                                            hO.info(`nickname: ${l}`),
+                                            hO.info(`guild nicknames: ${s}`),
+                                            hR();
                                     });
                             }),
-                            hR.info("END Logging Group DM Channels\n"),
-                            hR.info("START Logging DM Channels"),
+                            hO.info("END Logging Group DM Channels\n"),
+                            hO.info("START Logging DM Channels"),
                             d.forEach((e) => {
                                 let t = (0, t5.m1)(e, V.default, t4.A);
-                                hR.info(`id: ${e.id}`), hR.info(`name: ${t}`);
+                                hO.info(`id: ${e.id}`), hO.info(`name: ${t}`);
                                 let a = e.getRecipientId(),
                                     n = V.default.getUser(a);
                                 if (null == n) return;
                                 let l = n.username,
                                     s = Y.Ay.getGlobalName(n),
                                     i = t4.A.getNickname(n.id);
-                                hR.info(`username: ${l}`),
-                                    hR.info(`global name: ${s}`),
-                                    hR.info(`nickname: ${i}`),
-                                    hO();
+                                hO.info(`username: ${l}`),
+                                    hO.info(`global name: ${s}`),
+                                    hO.info(`nickname: ${i}`),
+                                    hR();
                             }),
-                            hR.info("END Logging DM Channels\n")),
+                            hO.info("END Logging DM Channels\n")),
                         n &&
                             ((c = t9.A.getMutablePrivateChannels()),
                             (u = []),
@@ -17260,14 +17264,14 @@ function hF() {
                             Object.values(c).forEach((e) => {
                                 e.isGroupDM() && u.push(e), e.isDM() && m.push(e);
                             }),
-                            hR.info("START Logging Group DM Channels"),
+                            hO.info("START Logging Group DM Channels"),
                             u.forEach((e) => {
                                 let t = (0, t5.m1)(e, V.default, t4.A),
                                     a = (0, t5.ks)(e, V.default, t4.A);
-                                hR.info(`id: ${e.id}`),
-                                    hR.info(`name: ${t}`),
-                                    hR.info(`default name: ${a}`),
-                                    hR.info(`recipients ids: ${e.recipients}`),
+                                hO.info(`id: ${e.id}`),
+                                    hO.info(`name: ${t}`),
+                                    hO.info(`default name: ${a}`),
+                                    hO.info(`recipients ids: ${e.recipients}`),
                                     e.recipients.forEach((e) => {
                                         let t = V.default.getUser(e);
                                         if (null == t) return;
@@ -17275,30 +17279,30 @@ function hF() {
                                             n = Y.Ay.getGlobalName(t),
                                             l = t4.A.getNickname(t.id),
                                             s = hD.Ay.getNicknames(t.id);
-                                        hR.info(`username: ${a}`),
-                                            hR.info(`global name: ${n}`),
-                                            hR.info(`nickname: ${l}`),
-                                            hR.info(`guild nicknames: ${s}`),
-                                            hO();
+                                        hO.info(`username: ${a}`),
+                                            hO.info(`global name: ${n}`),
+                                            hO.info(`nickname: ${l}`),
+                                            hO.info(`guild nicknames: ${s}`),
+                                            hR();
                                     });
                             }),
-                            hR.info("END Logging Group DM Channels\n"),
-                            hR.info("START Logging DM Channels"),
+                            hO.info("END Logging Group DM Channels\n"),
+                            hO.info("START Logging DM Channels"),
                             m.forEach((e) => {
                                 let t = (0, t5.m1)(e, V.default, t4.A);
-                                hR.info(`id: ${e.id}`), hR.info(`name: ${t}`);
+                                hO.info(`id: ${e.id}`), hO.info(`name: ${t}`);
                                 let a = e.getRecipientId(),
                                     n = V.default.getUser(a);
                                 if (null == n) return;
                                 let l = n.username,
                                     s = Y.Ay.getGlobalName(n),
                                     i = t4.A.getNickname(n.id);
-                                hR.info(`username: ${l}`),
-                                    hR.info(`global name: ${s}`),
-                                    hR.info(`nickname: ${i}`),
-                                    hO();
+                                hO.info(`username: ${l}`),
+                                    hO.info(`global name: ${s}`),
+                                    hO.info(`nickname: ${i}`),
+                                    hR();
                             }),
-                            hR.info("END Logging DM Channels\n")),
+                            hO.info("END Logging DM Channels\n")),
                         e &&
                             ((h = hA.A.getFrequentlyWithoutFetchingLatest()),
                             (x = []),
@@ -17314,34 +17318,34 @@ function hF() {
                                         ? v.push(e)
                                         : p.push(e);
                             }),
-                            hR.info("START Frecency"),
-                            hR.info("Guilds"),
+                            hO.info("START Frecency"),
+                            hO.info("Guilds"),
                             x.forEach((e) => {
                                 let t = hA.A.getScoreWithoutFetchingLatest(e.id);
-                                hR.info(`id: ${e.id} - name: ${e.name} - Frecency Score: ${t}`);
+                                hO.info(`id: ${e.id} - name: ${e.name} - Frecency Score: ${t}`);
                             }),
-                            hO(),
-                            hR.info("DM Channels"),
+                            hR(),
+                            hO.info("DM Channels"),
                             g.forEach((e) => {
                                 let t = hA.A.getScoreWithoutFetchingLatest(e.id);
-                                hR.info(`id: ${e.id} - Frecency Score: ${t}`);
+                                hO.info(`id: ${e.id} - Frecency Score: ${t}`);
                             }),
-                            hO(),
-                            hR.info("Group DM Channels"),
+                            hR(),
+                            hO.info("Group DM Channels"),
                             v.forEach((e) => {
                                 let t = hA.A.getScoreWithoutFetchingLatest(e.id);
-                                hR.info(`id: ${e.id} - Frecency Score: ${t}`),
-                                    hR.info(`default name: ${(0, t5.ks)(e, V.default, t4.A)}`),
-                                    hR.info(`name: ${(0, t5.m1)(e, V.default, t4.A)}`);
+                                hO.info(`id: ${e.id} - Frecency Score: ${t}`),
+                                    hO.info(`default name: ${(0, t5.ks)(e, V.default, t4.A)}`),
+                                    hO.info(`name: ${(0, t5.m1)(e, V.default, t4.A)}`);
                             }),
-                            hO(),
-                            hR.info("Guild Channels"),
+                            hR(),
+                            hO.info("Guild Channels"),
                             p.forEach((e) => {
                                 let t = hA.A.getScoreWithoutFetchingLatest(e.id);
-                                hR.info(`id: ${e.id} - Frecency Score: ${t}`);
+                                hO.info(`id: ${e.id} - Frecency Score: ${t}`);
                             }),
-                            hO(),
-                            hR.info("END Frecency\n")),
+                            hR(),
+                            hO.info("END Frecency\n")),
                         l && hw(),
                         s && hM(),
                         await (0, hC.a)(H.Umv.WEB_APP),
@@ -18036,215 +18040,215 @@ function xj() {
             {
                 id: "analytics",
                 name: "Analytics",
-                group: aO.fu.EXPERIMENTS,
+                group: aR.fu.EXPERIMENTS,
                 tags: ["events", "impressions", "tracking"],
                 render: () => (0, r.jsx)(nD, {}),
             },
             {
                 id: "triggers",
                 name: "Triggers",
-                group: aO.fu.EXPERIMENTS,
+                group: aR.fu.EXPERIMENTS,
                 tags: ["experiments", "exposure", "buckets"],
                 render: () => (0, r.jsx)(uw, {}),
             },
             {
                 id: "stores",
                 name: "Stores",
-                group: aO.fu.EVENTS,
+                group: aR.fu.EVENTS,
                 tags: ["flux", "state"],
                 render: () => (0, r.jsx)(uD, {}),
             },
             {
                 id: "dispatcher",
                 name: "Dispatcher",
-                group: aO.fu.EVENTS,
+                group: aR.fu.EVENTS,
                 tags: ["flux", "actions"],
                 render: () => (0, r.jsx)(lY, {}),
             },
         ];
         return (
             aj.A.isDeveloper &&
-                (e.push({ id: "shop", name: "Shop Overrides", group: aO.fu.SHOP, render: () => (0, r.jsx)(ub, {}) }),
+                (e.push({ id: "shop", name: "Shop Overrides", group: aR.fu.SHOP, render: () => (0, r.jsx)(ub, {}) }),
                 e.push({
                     id: "payment_flow_modals",
                     name: "Payment Flow Modals",
-                    group: aO.fu.BILLING,
+                    group: aR.fu.BILLING,
                     tags: ["gifts", "nitro", "boost", "sku", "collectibles"],
                     render: () => (0, r.jsx)(di, {}),
                 }),
                 e.push({
                     id: "shop_collectibles",
                     name: "Collectibles Preview",
-                    group: aO.fu.SHOP,
+                    group: aR.fu.SHOP,
                     render: () => (0, r.jsx)(tb, {}),
                 }),
                 e.push({
                     id: "quick_actions",
                     name: "Quick Actions",
-                    group: aO.fu.DEVELOPMENT,
+                    group: aR.fu.DEVELOPMENT,
                     tags: ["captcha", "safety", "vibe", "vibing", "override", "premium type"],
                     render: () => (0, r.jsx)(cE, {}),
                 }),
                 e.push({
                     id: "end_to_end_encryption",
                     name: "E2EE",
-                    group: aO.fu.DEVELOPMENT,
+                    group: aR.fu.DEVELOPMENT,
                     tags: ["secure frames", "encryption"],
                     render: () => (0, r.jsx)(lQ, {}),
                 }),
                 e.push({
                     id: "performance",
                     name: "Performance",
-                    group: aO.fu.DEVELOPMENT,
+                    group: aR.fu.DEVELOPMENT,
                     tags: ["fps", "frames", "gateway", "telemetry"],
                     render: () => (0, r.jsx)(dw.Ay, {}),
                 }),
                 e.push({
                     id: "age_verification",
                     name: "Age Verification",
-                    group: aO.fu.DEVELOPMENT,
+                    group: aR.fu.DEVELOPMENT,
                     render: () => (0, r.jsx)(a6, {}),
                 }),
                 e.push({
                     id: "feedback",
                     name: "Feedback",
-                    group: aO.fu.USERS,
+                    group: aR.fu.USERS,
                     tags: ["surveys"],
                     render: () => (0, r.jsx)(l6, {}),
                 }),
-                e.push({ id: "overlay", name: "Overlay v3", group: aO.fu.GAMES, render: () => (0, r.jsx)(oX, {}) }),
+                e.push({ id: "overlay", name: "Overlay v3", group: aR.fu.GAMES, render: () => (0, r.jsx)(oX, {}) }),
                 e.push({
                     id: "generated_test_user",
                     name: "Generated Test Users",
-                    group: aO.fu.DEVELOPMENT,
+                    group: aR.fu.DEVELOPMENT,
                     render: () => (0, r.jsx)(s3, {}),
                 }),
                 e.push({
                     id: "detected_games",
                     name: "Detected Games",
-                    group: aO.fu.GAMES,
+                    group: aR.fu.GAMES,
                     render: () => (0, r.jsx)(lk, {}),
                 }),
-                e.push({ id: "slayer_sdk", name: "Slayer SDK", group: aO.fu.GAMES, render: () => (0, r.jsx)(uy, {}) }),
+                e.push({ id: "slayer_sdk", name: "Slayer SDK", group: aR.fu.GAMES, render: () => (0, r.jsx)(uy, {}) }),
                 e.push({
                     id: "account_linking",
                     name: "Account Linking",
-                    group: aO.fu.GAMES,
+                    group: aR.fu.GAMES,
                     render: () => (0, r.jsx)(aJ, {}),
                 }),
                 e.push({
                     id: "slayer_storefront",
                     name: "Slayer Storefront",
-                    group: aO.fu.GAMES,
+                    group: aR.fu.GAMES,
                     render: () => (0, r.jsx)(av, {}),
                 }),
                 e.push({
                     id: "game_profile",
                     name: "Game Profile",
-                    group: aO.fu.GAMES,
+                    group: aR.fu.GAMES,
                     render: () => (0, r.jsx)(t6, {}),
                 }),
                 e.push({
                     id: "quick_switcher",
                     name: "Quick Switcher",
-                    group: aO.fu.USERS,
+                    group: aR.fu.USERS,
                     render: () => (0, r.jsx)(hX, {}),
                 }),
-                e.push({ id: "clips", name: "Clips", group: aO.fu.AUDIO_VIDEO, render: () => (0, r.jsx)(C, {}) })),
+                e.push({ id: "clips", name: "Clips", group: aR.fu.AUDIO_VIDEO, render: () => (0, r.jsx)(C, {}) })),
             e.push({
                 id: "rive",
                 name: "Rive",
-                group: aO.fu.UI,
+                group: aR.fu.UI,
                 tags: ["animation"],
                 render: () => (0, r.jsx)(ck, {}),
             }),
             e.push({
                 id: "gradient-contrast",
                 name: "Tab Hover Gradient",
-                group: aO.fu.UI,
+                group: aR.fu.UI,
                 tags: ["accessibility", "contrast", "gradient", "wcag"],
                 render: () => (0, r.jsx)(iU, {}),
             }),
             e.push({
                 id: "lottie",
                 name: "Lottie",
-                group: aO.fu.UI,
+                group: aR.fu.UI,
                 tags: ["animation"],
                 render: () => (0, r.jsx)(rc, {}),
             }),
             e.push({
                 id: "intl",
                 name: "Intl",
-                group: aO.fu.UI,
+                group: aR.fu.UI,
                 tags: ["i18n", "localization", "messages"],
                 render: () => (0, r.jsx)(i9, {}),
             }),
             e.push({
                 id: "colors",
                 name: "Colors",
-                group: aO.fu.UI,
+                group: aR.fu.UI,
                 tags: ["tokens", "themes", "palette"],
                 render: () => (0, r.jsx)(n1, {}),
             }),
-            e.push({ id: "design_toggles", name: "Design Toggles", group: aO.fu.UI, render: () => (0, r.jsx)(lf, {}) }),
+            e.push({ id: "design_toggles", name: "Design Toggles", group: aR.fu.UI, render: () => (0, r.jsx)(lf, {}) }),
             e.push({
                 id: "appearance_randomizer",
                 name: "Appearance Randomizer",
-                group: aO.fu.UI,
+                group: aR.fu.UI,
                 render: () => (0, r.jsx)(d7, {}),
             }),
             e.push({
                 id: "overlays",
                 name: "Dev Overlays",
-                group: aO.fu.DEVELOPMENT,
+                group: aR.fu.DEVELOPMENT,
                 render: () => (0, r.jsx)(sj, { devSettingsCategory: ab.xW.OVERLAYS }),
             }),
             e.push({
                 id: "messaging",
                 name: "Messaging",
-                group: aO.fu.USERS,
+                group: aR.fu.USERS,
                 tags: ["dm", "nux", "system dm"],
                 render: () => (0, r.jsx)(rk, {}),
             }),
             e.push({
                 id: "reporting",
                 name: "Reporting",
-                group: aO.fu.EXPERIMENTS,
+                group: aR.fu.EXPERIMENTS,
                 render: () => (0, r.jsx)(sj, { devSettingsCategory: ab.xW.REPORTING }),
             }),
-            e.push({ id: "permissions", name: "Permissions", group: aO.fu.USERS, render: () => (0, r.jsx)(dH, {}) }),
+            e.push({ id: "permissions", name: "Permissions", group: aR.fu.USERS, render: () => (0, r.jsx)(dH, {}) }),
             e.push({
                 id: "modals",
                 name: "Modals",
-                group: aO.fu.UI,
+                group: aR.fu.UI,
                 tags: ["dialogs", "popups"],
                 render: () => (0, r.jsx)(rP, {}),
             }),
             e.push({
                 id: "menus",
                 name: "Menus",
-                group: aO.fu.UI,
+                group: aR.fu.UI,
                 tags: ["contextmenus", "popout"],
                 render: () => (0, r.jsx)(rp, {}),
             }),
             e.push({
                 id: "layers",
                 name: "Layers",
-                group: aO.fu.UI,
+                group: aR.fu.UI,
                 tags: ["verification", "safety flow"],
                 render: () => (0, r.jsx)(rs, {}),
             }),
             e.push({
                 id: "affinity",
                 name: "Affinity",
-                group: aO.fu.USERS,
+                group: aR.fu.USERS,
                 tags: ["friends"],
                 render: () => (0, r.jsx)(a0, {}),
             }),
             e.push({
                 id: "channel_affinity",
                 name: "Channel Affinity",
-                group: aO.fu.USERS,
+                group: aR.fu.USERS,
                 tags: ["channels"],
                 render: () => (0, r.jsx)(n0, {}),
             }),
@@ -18252,28 +18256,28 @@ function xj() {
                 (e.push({
                     id: "content_inventory",
                     name: "Content Inventory",
-                    group: aO.fu.USERS,
+                    group: aR.fu.USERS,
                     render: () => (0, r.jsx)(tq, {}),
                 }),
                 e.push({
                     id: "notifications_inbox",
                     name: "Notifications Inbox",
-                    group: aO.fu.USERS,
+                    group: aR.fu.USERS,
                     render: () => (0, r.jsx)(al, {}),
                 })),
-            e.push({ id: "dcf_overrides", name: "DCF Overrides", group: aO.fu.DCF, render: () => (0, r.jsx)(lg, {}) }),
-            e.push({ id: "dcf_events", name: "DCF Events", group: aO.fu.DCF, render: () => (0, r.jsx)(n7, {}) }),
+            e.push({ id: "dcf_overrides", name: "DCF Overrides", group: aR.fu.DCF, render: () => (0, r.jsx)(lg, {}) }),
+            e.push({ id: "dcf_events", name: "DCF Events", group: aR.fu.DCF, render: () => (0, r.jsx)(n7, {}) }),
             e.push({
                 id: "hotspots",
                 name: "Hotspots",
-                group: aO.fu.EXPERIMENTS,
+                group: aR.fu.EXPERIMENTS,
                 tags: ["coachmarks", "nux", "onboarding"],
                 render: () => (0, r.jsx)(i2, {}),
             }),
             e.push({
                 id: "perks",
                 name: "Perks",
-                group: aO.fu.PREMIUM,
+                group: aR.fu.PREMIUM,
                 tags: ["nitro", "tenure", "badges", "level up"],
                 render: () => (0, r.jsx)(dP, {}),
             }),
@@ -18281,128 +18285,128 @@ function xj() {
                 (e.push({
                     id: "offers",
                     name: "Offers",
-                    group: aO.fu.PREMIUM,
+                    group: aR.fu.PREMIUM,
                     tags: ["discounts", "trials", "reverse trials", "churn"],
                     render: () => (0, r.jsx)(rX, {}),
                 }),
                 e.push({
                     id: "payments",
                     name: "Payments",
-                    group: aO.fu.BILLING,
+                    group: aR.fu.BILLING,
                     tags: ["stripe", "cards", "test cards"],
                     render: () => (0, r.jsx)(dC, {}),
                 }),
                 e.push({
                     id: "subscriptions",
                     name: "Subscriptions",
-                    group: aO.fu.PREMIUM,
+                    group: aR.fu.PREMIUM,
                     tags: ["nitro", "reverse trial"],
                     render: () => (0, r.jsx)(mM, {}),
                 }),
                 e.push({
                     id: "fractional_nitro",
                     name: "Fractional Nitro",
-                    group: aO.fu.PREMIUM,
+                    group: aR.fu.PREMIUM,
                     tags: ["entitlements", "quests"],
                     render: () => (0, r.jsx)(sc, {}),
                 })),
             e.push({
                 id: "gifting_intent",
                 name: "Gifting Intent",
-                group: aO.fu.PREMIUM,
+                group: aR.fu.PREMIUM,
                 tags: ["friends", "anniversary"],
                 render: () => (0, r.jsx)(it, {}),
             }),
             e.push({
                 id: "spatial_audio",
                 name: "Spatial Audio",
-                group: aO.fu.AUDIO_VIDEO,
+                group: aR.fu.AUDIO_VIDEO,
                 tags: ["spatial", "hrtf", "steam audio", "3d"],
                 render: () => (0, r.jsx)(mh, {}),
             }),
             e.push({
                 id: "krisp_tester",
                 name: "Krisp Tester",
-                group: aO.fu.AUDIO_VIDEO,
+                group: aR.fu.AUDIO_VIDEO,
                 tags: ["noise cancellation", "audio", "vad"],
                 render: () => (0, r.jsx)(u4, {}),
             }),
             e.push({
                 id: "av_overrides",
                 name: "Overrides",
-                group: aO.fu.AUDIO_VIDEO,
+                group: aR.fu.AUDIO_VIDEO,
                 tags: ["video", "capture", "encoder", "golive"],
                 render: () => (0, r.jsx)(uK, {}),
             }),
             e.push({
                 id: "batch_audio_processor",
                 name: "Batch Audio Processor",
-                group: aO.fu.AUDIO_VIDEO,
+                group: aR.fu.AUDIO_VIDEO,
                 tags: ["krisp", "noise cancellation", "wav", "batch", "audio processing", "ingest"],
                 render: () => (0, r.jsx)(uJ, {}),
             }),
             e.push({
                 id: "skill_trees",
                 name: "Skill Trees",
-                group: aO.fu.BOOSTING,
+                group: aR.fu.BOOSTING,
                 tags: ["boosting", "powerups", "server tag"],
                 render: () => (0, r.jsx)(iX, {}),
             }),
-            e.push({ id: "game_server", name: "Game Server", group: aO.fu.BOOSTING, render: () => (0, r.jsx)(sp, {}) }),
+            e.push({ id: "game_server", name: "Game Server", group: aR.fu.BOOSTING, render: () => (0, r.jsx)(sp, {}) }),
             e.push({
                 id: "language",
                 name: "Language",
-                group: aO.fu.UI,
+                group: aR.fu.UI,
                 tags: ["locale"],
                 render: () => (0, r.jsx)(i7, {}),
             }),
             e.push({
                 id: "user_settings",
                 name: "User Settings",
-                group: aO.fu.DEVELOPMENT,
+                group: aR.fu.DEVELOPMENT,
                 render: () => (0, r.jsx)(xv, {}),
             }),
             e.push({
                 id: "quest_minor_reward_capping_config",
                 name: "Minor Reward Capping",
-                group: aO.fu.QUESTS,
+                group: aR.fu.QUESTS,
                 render: () => (0, r.jsx)(ao, {}),
             }),
             e.push({
                 id: "virtual_currency_config",
                 name: "Virtual Currency Config",
-                group: aO.fu.QUESTS,
+                group: aR.fu.QUESTS,
                 render: () => (0, r.jsx)(uU, {}),
             }),
             e.push({
                 id: "Revenue Storybook",
                 name: "Revenue Storybook",
-                group: aO.fu.BILLING,
+                group: aR.fu.BILLING,
                 render: () => (0, r.jsx)(xe, {}),
             }),
             e.push({
                 id: "quest_preview",
                 name: "Quest Preview",
-                group: aO.fu.QUESTS,
+                group: aR.fu.QUESTS,
                 render: () => (0, r.jsx)(hf, {}),
             }),
             e.push({
                 id: "profile_theme_override",
                 name: "Profile Theme Override",
-                group: aO.fu.USERS,
+                group: aR.fu.USERS,
                 render: () => (0, r.jsx)(ci, {}),
             }),
             e.push({
                 id: "application_widget",
                 name: "Application Widget",
-                group: aO.fu.USERS,
+                group: aR.fu.USERS,
                 render: () => (0, r.jsx)(nB, {}),
             }),
             e.push({
                 id: "developer_portal",
                 name: "Developer Portal",
-                group: aO.fu.DEVELOPMENT,
-                render: () => (0, r.jsx)(lR, {}),
+                group: aR.fu.DEVELOPMENT,
+                render: () => (0, r.jsx)(lO, {}),
             }),
             e
         );
