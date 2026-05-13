@@ -205,7 +205,7 @@ function ec(e, t) {
         case en.Pc.VIDEO:
             return (0, Q.vv)(e);
         case en.Pc.PLAY:
-            return (0, Q.t)({ quest: e }) || (0, Q.fE)({ quest: e }) || (0, Q.vl)(e);
+            return (0, Q.t)({ quest: e }) || (0, Q.fE)({ quest: e }) || (0, Q.vl)(e) || (0, Q.g5)(e) || (0, Q.Cr)(e);
         default:
             return !1;
     }
