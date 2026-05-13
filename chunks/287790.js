@@ -255,7 +255,7 @@ function ed() {
                 ? {
                       id: V.LOGITECH_3PP_CARD_ID,
                       title: $.intl.string(ec.default.OlObRa),
-                      description: $.intl.format(ec.default["/UNTlE"], {
+                      description: $.intl.format(ec.default.ZGOJ8R, {
                           discountPercent: ea.aW,
                           termsUrl: er.A.getArticleURL(W.MVz.LOGITECH_PROMOTION),
                       }),

@@ -44,7 +44,11 @@ let S = {
             body: A.default.fC4abC,
             bodyParams: { months: 6 },
         },
-        Logitech5PGS: { title: A.default.ogcfac, titleParams: { discountPercent: E.K2 } },
+        "Logitech PRO Series Sim": {
+            title: A.default.pSBCjv,
+            titleParams: { discountPercent: E.K2 },
+            body: A.default.lsRjfl,
+        },
     },
     N = {
         logitech: {
