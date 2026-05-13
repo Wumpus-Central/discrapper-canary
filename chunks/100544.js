@@ -54,7 +54,6 @@ var i,
         (r.BOOST_MARKETING = "boost-marketing"),
         (r.BOOST_SETTINGS = "boost-settings"),
         (r.QUEST_PREVIEW_TOOL = "quest-preview-tool"),
-        (r.QUEST_HOME_PREVIEW = "quest-home-preview"),
         (r.SUBSCRIPTION_SETTINGS = "subscription-settings"),
         (r.GAME_UPDATE = "game-update"),
         r);
