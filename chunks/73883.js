@@ -4,7 +4,7 @@ n(64700);
 var i = n(702841),
     a = n(192308),
     r = n(477782),
-    A = n(773952),
+    A = n(968309),
     o = n(17928),
     s = n(71393),
     d = n(576705),
@@ -16,7 +16,7 @@ var i = n(702841),
     y = n.n(p),
     h = n(827343),
     T = n(730852),
-    I = n(235058),
+    I = n(51760),
     S = n(469802),
     b = n(350701),
     G = n(857253),
@@ -97,7 +97,7 @@ function w(e) {
                               : i.type === P.fg2.XBOX
                                 ? (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("17094"),
+                                          n.e("86522"),
                                           n.e("76962"),
                                           n.e("95429"),
                                           n.e("98189"),
@@ -109,9 +109,9 @@ function w(e) {
                                 : (i.type === P.fg2.PLAYSTATION || i.type === P.fg2.PLAYSTATION_STAGING) &&
                                   (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("40110"),
+                                          n.e("66323"),
                                           n.e("25861"),
-                                          n.e("91007"),
+                                          n.e("71210"),
                                           n.e("38035"),
                                       ]).then(n.bind(n, 14860));
                                       return (n) => (0, l.jsx)(t, { ...n, platform: i.type, channel: e });

@@ -521,9 +521,6 @@ class H extends T.A {
     numFastUdpReconnects = 0;
     lastPreparedTransitionId = -1;
     lastExecutedTransitionId = -1;
-    currentVideoCodec = null;
-    av1CodecBitrateFunc = () => N.lo;
-    lastDesktopEncodingOptions = null;
     logger;
     constructor(e, t, n) {
         super(e, t),
@@ -775,11 +772,6 @@ class H extends T.A {
             super.destroy();
     }
     setCodecs(e, t, n) {
-        let i = this.currentVideoCodec !== t;
-        if (((this.currentVideoCodec = t), i && null != this.lastDesktopEncodingOptions)) {
-            let { width: e, height: t, framerate: n } = this.lastDesktopEncodingOptions;
-            this.setDesktopEncodingOptions(e, t, n, this.currentVideoCodec);
-        }
         this.conn.setTransportOptions(this.getCodecOptions(e, t, n)),
             this.videoEncoderFallbackPending && (this.videoEncoderFallbackPending = !1);
     }
@@ -1118,7 +1110,7 @@ class H extends T.A {
                   (r = `${e.cameraDescription.videoDeviceGuid}:${e.cameraDescription.audioDeviceGuid}`),
             this.goLiveSourceIdentifier === r)
         ) {
-            if ((this.setDesktopEncodingOptions(i, t, n, this.currentVideoCodec), null != e.desktopDescription)) {
+            if ((this.setDesktopEncodingOptions(i, t, n), null != e.desktopDescription)) {
                 let { soundshareId: t, useLoopback: n } = e.desktopDescription;
                 this.soundshareId !== t && this.setSoundshareSource(t, n);
             }
@@ -1153,7 +1145,7 @@ class H extends T.A {
                     : this.logger.info("capturing desktop (type: <stop>)."),
                     null != this.conn.setDesktopSourceWithOptions
                         ? null != r
-                            ? (this.setDesktopEncodingOptions(i, t, n, this.currentVideoCodec),
+                            ? (this.setDesktopEncodingOptions(i, t, n),
                               this.conn.setDesktopSourceWithOptions({
                                   type: I,
                                   sourceId: T,
@@ -1177,7 +1169,7 @@ class H extends T.A {
                 let { videoDeviceGuid: t, audioDeviceGuid: n } = e.cameraDescription;
                 this.conn.setGoLiveDevices({ videoInputDeviceId: t, audioInputDeviceId: n });
             }
-            this.setDesktopEncodingOptions(i, t, n, this.currentVideoCodec);
+            this.setDesktopEncodingOptions(i, t, n);
         }
     }
     clearGoLiveDevices() {
@@ -1195,33 +1187,31 @@ class H extends T.A {
     hasDesktopSource() {
         return null != this.goLiveSourceIdentifier;
     }
-    setDesktopEncodingOptions(e, t, n, i) {
-        if (this.destroyed || ((this.lastDesktopEncodingOptions = { width: e, height: t, framerate: n }), null == i))
-            return;
-        let r = null;
-        r = (0 === t && n >= 10) || t > 720 || n > 30 ? N.oL : "AV1" === i ? this.av1CodecBitrateFunc() : N.lo;
-        let s = { width: e, height: t, framerate: n },
-            a = this.videoQualityManager.getQuality(),
-            o = !S.Xb.equals(s, a.capture) || a.bitrateMax !== r,
-            l = this.videoStreamParameters.findIndex((e) => e.quality === N.Y4);
-        -1 === l && (l = 0),
-            o &&
-                (this.videoQualityManager.setGoliveQuality({ capture: s, encode: s, bitrateMax: r }),
-                this.videoStreamParameters.length > l &&
-                    ((this.videoStreamParameters[l].maxResolution = {
+    setDesktopEncodingOptions(e, t, n) {
+        if (this.destroyed) return;
+        let i = (0 === t && n >= 10) || t > 720 || n > 30 ? N.oL : N.lo,
+            r = { width: e, height: t, framerate: n },
+            s = this.videoQualityManager.getQuality(),
+            a = !S.Xb.equals(r, s.capture) || s.bitrateMax !== i,
+            o = this.videoStreamParameters.findIndex((e) => e.quality === N.Y4);
+        -1 === o && (o = 0),
+            a &&
+                (this.videoQualityManager.setGoliveQuality({ capture: r, encode: r, bitrateMax: i }),
+                this.videoStreamParameters.length > o &&
+                    ((this.videoStreamParameters[o].maxResolution = {
                         type: 0 === e && 0 === t ? N.ei.SOURCE : N.ei.FIXED,
                         width: e,
                         height: t,
                     }),
-                    (this.videoStreamParameters[l].maxFrameRate = n),
-                    (this.videoStreamParameters[l].maxBitrate = r)),
+                    (this.videoStreamParameters[o].maxFrameRate = n),
+                    (this.videoStreamParameters[o].maxBitrate = i)),
                 this.emit(
                     c.yq.Video,
                     this.userId,
                     null,
                     this.audioSSRC,
-                    this.videoStreamParameters[l].ssrc,
-                    B(this.videoStreamParameters[l].ssrc),
+                    this.videoStreamParameters[o].ssrc,
+                    B(this.videoStreamParameters[o].ssrc),
                     this.videoStreamParameters,
                 ),
                 this.conn.setTransportOptions(this.applyQualityConstraints().constraints));
@@ -1645,16 +1635,6 @@ class H extends T.A {
     };
     mergeUsers(e) {
         this.conn.mergeUsers(e), this.emit(c.yq.UsersMerged, e);
-    }
-    setAv1CodecBitrateFunc(e) {
-        let t = this.av1CodecBitrateFunc !== e;
-        if (
-            ((this.av1CodecBitrateFunc = e),
-            t && "AV1" === this.currentVideoCodec && null != this.lastDesktopEncodingOptions)
-        ) {
-            let { width: e, height: t, framerate: n } = this.lastDesktopEncodingOptions;
-            this.setDesktopEncodingOptions(e, t, n, this.currentVideoCodec);
-        }
     }
 }
 function j(e, t) {

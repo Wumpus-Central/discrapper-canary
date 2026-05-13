@@ -2,7 +2,7 @@
 n.d(t, { A: () => o });
 var i = n(17928),
     r = n(495544),
-    s = n(235058),
+    s = n(51760),
     a = n(977997);
 function o(e) {
     return (0, i.cf)(
