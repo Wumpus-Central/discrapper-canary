@@ -32,13 +32,8 @@ function s() {
     }
 }
 function a() {
-    let e = (function () {
-            let e = document.querySelectorAll("canvas"),
-                t = 0;
-            for (let n of e) t += n.width * n.height * 4;
-            return { count: e.length, estimatedBytes: t };
-        })(),
-        t = (function () {
+    return {
+        wasm_memory_bytes: (function () {
             let e = 0;
             for (let t = i.length - 1; t >= 0; t--) {
                 let n = i[t].deref();
@@ -46,6 +41,5 @@ function a() {
             }
             return e;
         })(),
-        n = document.querySelectorAll("*").length;
-    return { wasm_memory_bytes: t, canvas_count: e.count, canvas_estimated_bytes: e.estimatedBytes, dom_node_count: n };
+    };
 }
