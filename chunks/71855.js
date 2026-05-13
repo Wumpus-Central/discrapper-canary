@@ -58,6 +58,7 @@ function T(e) {
     return (0, i.jsxs)("div", {
         className: a()(E.M0, l),
         onDoubleClick: c,
+        "data-window-chrome": "true",
         children: [
             (0, i.jsx)("div", { className: E.R4, onDoubleClick: A, children: t }),
             (0, i.jsx)("div", { className: E.DD, children: n }),
