@@ -5389,11 +5389,6 @@
     overflow-y: visible
 }
 
-.reactButtons__34c2c.loading__34c2c {
-    height: 26px;
-    overflow-y: hidden
-}
-
 .reportedMessageActions__34c2c {
     align-items: center;
     display: flex;
@@ -6956,6 +6951,10 @@
 
 .reverseTrialContextMarginBottom__945b8 {
     margin-bottom: 8px
+}
+
+.errorText__38262 {
+    margin-top: var(--space-4)
 }
 
 .formContent__30f2d {
