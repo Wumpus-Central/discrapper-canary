@@ -98,6 +98,10 @@
     grid-template-columns: 1fr 1fr 1fr
 }
 
+.platformsDesktop__4a98c:has(li:nth-child(4)) {
+    grid-template-columns: 1fr 1fr 1fr 1fr
+}
+
 .platformsMobile__4a98c {
     grid-template-columns: 1fr 1fr
 }
@@ -201,6 +205,11 @@
 .icon__4a98c.ios__4a98c {
     -webkit-mask-image: url(/assets/81672d3df281d7de.svg);
     mask-image: url(/assets/81672d3df281d7de.svg)
+}
+
+.icon__4a98c.metaQuest__4a98c {
+    -webkit-mask-image: url(/assets/de5e17f06fbd2235.svg);
+    mask-image: url(/assets/de5e17f06fbd2235.svg)
 }
 
 .downloadButton__4a98c {

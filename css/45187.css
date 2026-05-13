@@ -2109,11 +2109,11 @@
 .background_eff18d {
     align-items: center;
     animation: fadeIn_eff18d 3s cubic-bezier(.24, .27, .58, 1) forwards;
-    background-color: #000328;
     display: flex;
     flex-direction: column;
     height: 100vh;
     inset-inline-start: 0;
+    isolation: isolate;
     justify-content: center;
     position: fixed;
     top: 0;
@@ -2121,30 +2121,38 @@
     z-index: 1000
 }
 
+.backgroundFill_eff18d {
+    background-color: #000328;
+    inset: 0;
+    position: absolute;
+    z-index: 0
+}
+
+.assetLayers_eff18d {
+    inset: 0;
+    z-index: 1
+}
+
+.assetLayers_eff18d,
+.sunbeamGradient_eff18d {
+    pointer-events: none;
+    position: absolute
+}
+
 .sunbeamGradient_eff18d {
     animation: fadeIn_eff18d 1.5s linear 1.5s forwards;
     background: url(/assets/52432522457760d7.webp) 100% 0/cover no-repeat;
+    height: 100%;
     inset-inline-start: 0;
     opacity: 0;
+    top: 0;
     width: 100%
-}
-
-.gradientRive_eff18d,
-.sunbeamGradient_eff18d {
-    height: 100%;
-    pointer-events: none;
-    position: absolute;
-    top: 0
-}
-
-.gradientRive_eff18d {
-    inset-inline-end: 0;
-    width: 50%
 }
 
 .container_eff18d {
     position: relative;
-    text-align: center
+    text-align: center;
+    z-index: 2
 }
 
 .fadeInContent_eff18d {
@@ -2172,5 +2180,6 @@
 
 .footer_eff18d {
     bottom: var(--space-32);
-    position: absolute
+    position: absolute;
+    z-index: 2
 }

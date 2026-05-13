@@ -21,7 +21,7 @@
 
 .user-profile-modal-v2 :where(.avatar__75742) {
     inset-block-start: calc(var(--custom-user-profile-banner-height) - var(--custom-user-profile-avatar-size)/2);
-    inset-inline-start: var(--custom-modal-profile-card-padding)
+    inset-inline-start: var(--custom-modal-v2-profile-card-padding)
 }
 
 .user-profile-sidebar :where(.avatar__75742) {
