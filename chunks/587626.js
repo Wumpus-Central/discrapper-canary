@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => nV });
+n.d(t, { A: () => nF });
 var i,
     r,
     s,
@@ -2932,26 +2932,25 @@ let tZ = (0, eM.mj)({
 var tX = n(756377),
     tQ = n(736130),
     tJ = n(761821),
-    t0 = n(95701),
-    t1 = n(545934),
-    t2 = n(889227),
-    t3 = n(696451),
-    t6 = n(186111),
-    t4 = n(628965),
-    t5 = n(977997),
-    t7 = n(97352),
-    t8 = n(166403),
-    t9 = n(107351),
-    ne = n(531743),
-    nt = n(45773);
-let nn = null,
-    ni = {};
-function nr(e, t, n) {
-    return null == nn || nn.identifyTime !== e || (null != t && t.some((e) => e.id === nn.guild.id))
+    t0 = n(843010),
+    t1 = n(95701),
+    t2 = n(545934),
+    t3 = n(889227),
+    t6 = n(696451),
+    t4 = n(977997),
+    t5 = n(97352),
+    t7 = n(166403),
+    t8 = n(107351),
+    t9 = n(531743),
+    ne = n(45773);
+let nt = null,
+    nn = {};
+function ni(e, t, n) {
+    return null == nt || nt.identifyTime !== e || (null != t && t.some((e) => e.id === nt.guild.id))
         ? null
-        : n(nn.guild);
+        : n(nt.guild);
 }
-function ns(e, t) {
+function nr(e, t) {
     let n = [];
     return (
         t?.forEach((t) => {
@@ -2964,7 +2963,7 @@ function ns(e, t) {
         n
     );
 }
-function na(e) {
+function ns(e) {
     return "partial" !== e.data_mode
         ? {
               id: e.id,
@@ -2981,9 +2980,9 @@ function na(e) {
               roles: { op: "full_sync", items: e.roles },
               stage_instances: e.stage_instances,
               stickers: { op: "full_sync", items: e.stickers },
-              threads: e.threads?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
-              threadMessages: nl(e.threads),
-              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, t0.UE)(t, e.id))) },
+              threads: e.threads?.map((t) => (0, t1.UE)(t, e.id)) ?? [],
+              threadMessages: no(e.threads),
+              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, t1.UE)(t, e.id))) },
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           }
@@ -2992,7 +2991,7 @@ function na(e) {
               dataMode: e.data_mode,
               channels: {
                   op: "update",
-                  writes: e.partial_updates.channels?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
+                  writes: e.partial_updates.channels?.map((t) => (0, t1.UE)(t, e.id)) ?? [],
                   deletes: e.partial_updates.deleted_channel_ids ?? [],
               },
               channelTimestampUpdates: e.channel_updates,
@@ -3021,86 +3020,86 @@ function na(e) {
                   deletes: e.partial_updates.deleted_sticker_ids ?? [],
               },
               unableToSyncDeletes: e.unable_to_sync_deletes,
-              threads: e.threads?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
-              threadMessages: nl(e.threads),
+              threads: e.threads?.map((t) => (0, t1.UE)(t, e.id)) ?? [],
+              threadMessages: no(e.threads),
+              version: e.version,
+              hasThreadsSubscription: e.has_threads_subscription,
+          };
+}
+function na(e) {
+    return "partial" !== e.data_mode
+        ? {
+              id: e.id,
+              guild_scheduled_events: e.guild_scheduled_events,
+              experiments: e.experiments,
+              joined_at: e.joined_at,
+              lastMessages: e.last_messages,
+              member_count: e.member_count,
+              members: e.members,
+              premium_subscription_count: e.premium_subscription_count,
+              properties: e.properties,
+              roles: { op: "full_sync", items: e.roles },
+              stage_instances: e.stage_instances,
+              threads: e.threads?.map((t) => (0, t1.UE)(t, e.id)) ?? [],
+              threadMessages: no(e.threads),
+              presences: e.presences,
+              activity_instances: e.activity_instances,
+              voice_states: e.voice_states,
+              version: e.version,
+              hasThreadsSubscription: e.has_threads_subscription,
+              emojis: { op: "full_sync", items: e.emojis },
+              stickers: { op: "full_sync", items: e.stickers },
+              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, t1.UE)(t, e.id))) },
+          }
+        : {
+              id: e.id,
+              channels: {
+                  op: "update",
+                  writes: e.partial_updates.channels?.map((t) => (0, t1.UE)(t, e.id)) ?? [],
+                  deletes: e.partial_updates.deleted_channel_ids ?? [],
+              },
+              channelTimestampUpdates: e.channel_updates,
+              activity_instances: e.activity_instances,
+              emojis: {
+                  op: "update",
+                  writes: e.partial_updates.emojis ?? [],
+                  deletes: e.partial_updates.deleted_emoji_ids ?? [],
+              },
+              guild_scheduled_events: e.guild_scheduled_events,
+              experiments: e.experiments,
+              joined_at: e.joined_at,
+              lastMessages: e.last_messages,
+              member_count: e.member_count,
+              members: e.members,
+              premium_subscription_count: e.premium_subscription_count,
+              presences: e.presences,
+              properties: e.properties ?? null,
+              roles: {
+                  op: "update",
+                  writes: e.partial_updates.roles ?? [],
+                  deletes: e.partial_updates.deleted_role_ids ?? [],
+              },
+              stage_instances: e.stage_instances,
+              stickers: {
+                  op: "update",
+                  writes: e.partial_updates.stickers ?? [],
+                  deletes: e.partial_updates.deleted_sticker_ids ?? [],
+              },
+              unableToSyncDeletes: e.unable_to_sync_deletes,
+              threads: e.threads?.map((t) => (0, t1.UE)(t, e.id)) ?? [],
+              threadMessages: no(e.threads),
+              voice_states: e.voice_states,
               version: e.version,
               hasThreadsSubscription: e.has_threads_subscription,
           };
 }
 function no(e) {
-    return "partial" !== e.data_mode
-        ? {
-              id: e.id,
-              guild_scheduled_events: e.guild_scheduled_events,
-              experiments: e.experiments,
-              joined_at: e.joined_at,
-              lastMessages: e.last_messages,
-              member_count: e.member_count,
-              members: e.members,
-              premium_subscription_count: e.premium_subscription_count,
-              properties: e.properties,
-              roles: { op: "full_sync", items: e.roles },
-              stage_instances: e.stage_instances,
-              threads: e.threads?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
-              threadMessages: nl(e.threads),
-              presences: e.presences,
-              activity_instances: e.activity_instances,
-              voice_states: e.voice_states,
-              version: e.version,
-              hasThreadsSubscription: e.has_threads_subscription,
-              emojis: { op: "full_sync", items: e.emojis },
-              stickers: { op: "full_sync", items: e.stickers },
-              channels: { op: "full_sync", items: e.channels.map((t) => ((t.guild_id = e.id), (0, t0.UE)(t, e.id))) },
-          }
-        : {
-              id: e.id,
-              channels: {
-                  op: "update",
-                  writes: e.partial_updates.channels?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
-                  deletes: e.partial_updates.deleted_channel_ids ?? [],
-              },
-              channelTimestampUpdates: e.channel_updates,
-              activity_instances: e.activity_instances,
-              emojis: {
-                  op: "update",
-                  writes: e.partial_updates.emojis ?? [],
-                  deletes: e.partial_updates.deleted_emoji_ids ?? [],
-              },
-              guild_scheduled_events: e.guild_scheduled_events,
-              experiments: e.experiments,
-              joined_at: e.joined_at,
-              lastMessages: e.last_messages,
-              member_count: e.member_count,
-              members: e.members,
-              premium_subscription_count: e.premium_subscription_count,
-              presences: e.presences,
-              properties: e.properties ?? null,
-              roles: {
-                  op: "update",
-                  writes: e.partial_updates.roles ?? [],
-                  deletes: e.partial_updates.deleted_role_ids ?? [],
-              },
-              stage_instances: e.stage_instances,
-              stickers: {
-                  op: "update",
-                  writes: e.partial_updates.stickers ?? [],
-                  deletes: e.partial_updates.deleted_sticker_ids ?? [],
-              },
-              unableToSyncDeletes: e.unable_to_sync_deletes,
-              threads: e.threads?.map((t) => (0, t0.UE)(t, e.id)) ?? [],
-              threadMessages: nl(e.threads),
-              voice_states: e.voice_states,
-              version: e.version,
-              hasThreadsSubscription: e.has_threads_subscription,
-          };
-}
-function nl(e) {
     let t = [];
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
     return t;
 }
-let nu = new h.A("ConnectionStore");
-function nc(e) {
+let nl = new h.A("ConnectionStore");
+function nu(e) {
     return e.map((e) => {
         let t = e.timestamps?.end,
             n = e.created_at;
@@ -3109,18 +3108,18 @@ function nc(e) {
             : e;
     });
 }
-let nd = new eK(
+let nc = new eK(
         tk,
         (e, t) => {
             e = e ?? { type: "CHANNEL_UPDATES", channels: [] };
-            let n = (0, t0.UE)(t),
+            let n = (0, t1.UE)(t),
                 i = I.A.getChannel(t.id),
                 r = i?.merge({ ...n, recipients: i.recipients, bitrate: n.bitrate ?? i.bitrate });
             return e.channels.push(r ?? n), e;
         },
         (e) => "CHANNEL_UPDATE" !== e,
     ),
-    n_ = new eK(
+    nd = new eK(
         tk,
         (e, t) => (
             (e = null == e ? { type: "SOUNDBOARD_SOUNDS_RECEIVED", updates: [] } : e).updates.push({
@@ -3140,27 +3139,27 @@ let nd = new eK(
         ),
         (e) => "SOUNDBOARD_SOUNDS" !== e,
     ),
-    nf = new eK(
+    n_ = new eK(
         tk,
         (e, t) => ((e = e ?? { type: "GUILD_MEMBERS_CHUNK_BATCH", chunks: [] }).chunks.push(t), e),
         (e) => "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    nh = new eK(
+    nf = new eK(
         tk,
         (e, t) => ((e = null == e ? { type: "PRESENCE_UPDATES", updates: [] } : e).updates.push(t), e),
         (e) => "PRESENCE_UPDATE" !== e && "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    np = {};
-function nE(e, t) {
-    for (let n of e) np[n] = { preload: () => null, dispatch: t };
+    nh = {};
+function np(e, t) {
+    for (let n of e) nh[n] = { preload: () => null, dispatch: t };
 }
-function nm(e, t, n) {
-    for (let i of e) np[i] = { preload: t, dispatch: n };
+function nE(e, t, n) {
+    for (let i of e) nh[i] = { preload: t, dispatch: n };
 }
-function ng(e) {
+function nm(e) {
     let t = [];
     for (let n of e)
-        null != n.member && nI(n.guild_id, n.member.user, n.member),
+        null != n.member && nA(n.guild_id, n.member.user, n.member),
             t.push({
                 userId: n.user_id,
                 guildId: n.guild_id,
@@ -3175,18 +3174,18 @@ function ng(e) {
                 selfStream: n.self_stream || !1,
                 requestToSpeakTimestamp: n.request_to_speak_timestamp ?? null,
                 discoverable: n.discoverable ?? !0,
-                oldChannelId: t5.A.getUserVoiceChannelId(n.guild_id, n.user_id),
+                oldChannelId: t4.A.getUserVoiceChannelId(n.guild_id, n.user_id),
                 connectedAt: n.connected_at,
             });
-    nA({ type: "VOICE_STATE_UPDATES", voiceStates: t });
+    ng({ type: "VOICE_STATE_UPDATES", voiceStates: t });
 }
-function nA(e) {
+function ng(e) {
     _.h.dispatch(e).catch((t) => {
-        nu.error(`dispatchOrResetSocket error during ${e.type}:`, t),
+        nl.error(`dispatchOrResetSocket error during ${e.type}:`, t),
             tk.resetSocketOnDispatchError({ error: t, action: e.type });
     });
 }
-function nI(e, t, n) {
+function nA(e, t, n) {
     let {
             roles: i,
             nick: r,
@@ -3201,7 +3200,7 @@ function nI(e, t, n) {
             collectibles: h,
             display_name_styles: p,
         } = n,
-        E = t3.Ay.getMember(e, t.id),
+        E = t6.Ay.getMember(e, t.id),
         m = (0, tj.t)(h),
         g = (0, tY.mT)(p);
     (null != E &&
@@ -3217,7 +3216,7 @@ function nI(e, t, n) {
         (E.unusualDMActivityUntil ?? null) === (f ?? null) &&
         u().isEqual(E.collectibles ?? null, m ?? null) &&
         u().isEqual(E.displayNameStyles ?? null, g ?? null)) ||
-        nA({
+        ng({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
             user: t,
@@ -3235,32 +3234,32 @@ function nI(e, t, n) {
             displayNameStyles: g,
         });
 }
-function nT(e) {
+function nI(e) {
     let { member: t, mentions: n, author: i, guild_id: r } = e;
-    null != t && null != r && nI(r, i, t),
+    null != t && null != r && nA(r, i, t),
         null != n &&
             n.forEach((e) => {
                 if (null != e.member && null != r) {
                     let { member: t } = e;
-                    delete e.member, nI(r, e, t);
+                    delete e.member, nA(r, e, t);
                 }
             });
 }
-function nS(e) {
+function nT(e) {
     return e.map((e) => ({
         sessionId: e.session_id,
         lastModified: e.last_modified,
         status: e.status,
-        activities: nc(e.activities ?? []),
+        activities: nu(e.activities ?? []),
         hiddenActivities: e.hidden_activities ?? [],
         active: !!e.active,
         clientInfo: e.client_info,
     }));
 }
-function nN(e, t) {
-    return e.map((e) => ny(e, t));
+function nS(e, t) {
+    return e.map((e) => nN(e, t));
 }
-function ny(e, t) {
+function nN(e, t) {
     let n = (function (e, t) {
         let { enabled: n } = tZ.getConfig({ location: "presence_filtering" });
         if (!n) return { activities: e, hiddenActivities: t };
@@ -3284,16 +3283,16 @@ function ny(e, t) {
         user: e.user,
         status: e.status,
         clientStatus: e.client_status,
-        activities: nc(n.activities),
+        activities: nu(n.activities),
         hiddenActivities: n.hiddenActivities,
         guildId: t,
         processedAtTimestamp: e.processed_at_timestamp,
     };
 }
-function nC(e) {
-    nh.add(e);
+function ny(e) {
+    nf.add(e);
 }
-nm(
+nE(
     ["INITIAL_GUILD"],
     (e) => ("full" === e.data_mode ? null : I.D.loadGuildIds([e.id])),
     (e) => {
@@ -3301,10 +3300,10 @@ nm(
             c.Ay.Emitter.batched(() => {
                 var t;
                 let n,
-                    i = ((t = tk.identifyStartTime), (n = no(e)), (nn = { guild: e, identifyTime: t }), n);
+                    i = ((t = tk.identifyStartTime), (n = na(e)), (nt = { guild: e, identifyTime: t }), n);
                 null != eH.default.getCurrentUser() &&
-                    (nA({ type: "GUILD_CREATE", guild: i }),
-                    nA({
+                    (ng({ type: "GUILD_CREATE", guild: i }),
+                    ng({
                         type: "VOICE_STATE_UPDATES",
                         voiceStates: i.voice_states.map((e) => ({
                             userId: e.user_id,
@@ -3323,25 +3322,25 @@ nm(
                             connectedAt: e.connected_at,
                         })),
                     }),
-                    nu.log(`Dispatched INITIAL_GUILD ${e.id}`));
+                    nl.log(`Dispatched INITIAL_GUILD ${e.id}`));
             });
         });
     },
 ),
-    nE(["READY_SUPPLEMENTAL"], (e) => {
+    np(["READY_SUPPLEMENTAL"], (e) => {
         X.A.readySupplemental.measure(() => {
             c.Ay.Emitter.batched(() => {
                 let t = (e = X.A.hydrateReadySupplemental.measure(() =>
                     (function (e, t) {
                         let { guilds: n, merged_members: i, merged_presences: r, ...s } = e,
-                            a = ns(ni, r?.friends),
+                            a = nr(nn, r?.friends),
                             o =
                                 n?.map((e, t) => {
-                                    let n = ns(ni, r?.guilds[t]),
-                                        s = ns(ni, i?.[t]);
+                                    let n = nr(nn, r?.guilds[t]),
+                                        s = nr(nn, i?.[t]);
                                     return { ...e, unavailable: void 0 === e.voice_states, presences: n, members: s };
                                 }) ?? [],
-                            l = nr(t, n, (e) => ({
+                            l = ni(t, n, (e) => ({
                                 id: e.id,
                                 members: e.members,
                                 presences: e.presences,
@@ -3349,16 +3348,16 @@ nm(
                                 voice_states: e.voice_states,
                                 unavailable: !1,
                             }));
-                        return null != l && o.push(l), (ni = {}), { ...s, presences: a, guilds: o };
+                        return null != l && o.push(l), (nn = {}), { ...s, presences: a, guilds: o };
                     })(e, tk.identifyStartTime),
                 )).guilds.filter((e) => !0 !== e.unavailable);
                 t.forEach((e) => {
-                    e.presences = nN(e.presences || [], e.id);
+                    e.presences = nS(e.presences || [], e.id);
                 });
-                let n = nN(e.presences ?? [], void 0),
-                    i = (e.lazy_private_channels ?? []).map((e) => (0, t0.UE)(e));
+                let n = nS(e.presences ?? [], void 0),
+                    i = (e.lazy_private_channels ?? []).map((e) => (0, t1.UE)(e));
                 X.A.dispatchReadySupplemental.measure(() => {
-                    nA({ type: "CONNECTION_OPEN_SUPPLEMENTAL", guilds: t, presences: n, lazyPrivateChannels: i });
+                    ng({ type: "CONNECTION_OPEN_SUPPLEMENTAL", guilds: t, presences: n, lazyPrivateChannels: i });
                 });
                 let r = [];
                 t.forEach((e) => {
@@ -3381,13 +3380,13 @@ nm(
                         });
                     });
                 }),
-                    nA({ type: "VOICE_STATE_UPDATES", voiceStates: r, initial: !0 }),
+                    ng({ type: "VOICE_STATE_UPDATES", voiceStates: r, initial: !0 }),
                     tF.update();
             });
         }),
-            setTimeout(() => nA({ type: "POST_CONNECTION_OPEN" }), 2e3);
+            setTimeout(() => ng({ type: "POST_CONNECTION_OPEN" }), 2e3);
     }),
-    nm(
+    nE(
         ["READY"],
         (e) => {
             let t,
@@ -3397,7 +3396,7 @@ nm(
                     (n = (0, q.O)() ? K.getCommittedVersions() : Promise.resolve({})),
                     Promise.all([
                         n,
-                        (0, q.O)() ? ne.A.getGuildIds() : Promise.resolve(new Set()),
+                        (0, q.O)() ? t9.A.getGuildIds() : Promise.resolve(new Set()),
                         null != t ? z.A.okAsync(t) : Promise.resolve(!1),
                     ]).then((e) => {
                         let [t, n, i] = e;
@@ -3420,7 +3419,7 @@ nm(
         },
         (e, t, n) => {
             e.user.bot
-                ? nA({ type: "LOGOUT" })
+                ? ng({ type: "LOGOUT" })
                 : X.A.ready.measure(() => {
                       c.Ay.Emitter.batched(() => {
                           let t = (e = X.A.hydrateReady.measure(() =>
@@ -3428,33 +3427,33 @@ nm(
                                       let { users: i, private_channels: r, merged_members: s, guilds: a, ...o } = e;
                                       null != j.A.database() &&
                                           !1 === n.databaseOk &&
-                                          nt.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
-                                          (ni = u().keyBy(i, (e) => e.id)),
+                                          ne.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
+                                          (nn = u().keyBy(i, (e) => e.id)),
                                           r?.forEach((e) => {
                                               let t = e.recipient_ids;
                                               null != t &&
                                                   (e.recipients = t.map(
                                                       (e) => (
                                                           P()(
-                                                              null != ni[e],
+                                                              null != nn[e],
                                                               "Missing user in compressed ready payload",
                                                           ),
-                                                          ni[e]
+                                                          nn[e]
                                                       ),
                                                   )),
                                                   delete e.recipient_ids;
                                           });
                                       let l =
                                               a?.map((e, t) =>
-                                                  !0 === e.unavailable ? e : ((e.members = ns(ni, s?.[t])), na(e)),
+                                                  !0 === e.unavailable ? e : ((e.members = nr(nn, s?.[t])), ns(e)),
                                               ) ?? [],
-                                          c = nr(t, a, (e) => na(e));
+                                          c = ni(t, a, (e) => ns(e));
                                       return (
                                           null != c && l.push(c),
                                           { ...o, users: i, presences: [], guilds: l, private_channels: r ?? [] }
                                       );
                                   })(e, tk.identifyStartTime, n),
-                              )).private_channels.map((e) => (0, t0.UE)(e)),
+                              )).private_channels.map((e) => (0, t1.UE)(e)),
                               i = e.guilds
                                   .filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted)
                                   .map((e) => e.id),
@@ -3462,7 +3461,7 @@ nm(
                               s = e.guilds.filter((e) => !0 === e.geo_restricted),
                               a = null == e.user_settings_proto ? void 0 : (0, tJ.Gd)(e.user_settings_proto);
                           X.A.dispatchReady.measure(() => {
-                              nA({
+                              ng({
                                   type: "CONNECTION_OPEN",
                                   sessionId: e.session_id,
                                   authSessionIdHash: e.auth_session_id_hash,
@@ -3485,7 +3484,7 @@ nm(
                                   apexExperiments: e.apex_experiments ?? void 0,
                                   requiredAction: e.required_action,
                                   consents: e.consents,
-                                  sessions: nS(e.sessions ?? []),
+                                  sessions: nT(e.sessions ?? []),
                                   pendingPayments: e.pending_payments,
                                   countryCode: e.country_code ?? void 0,
                                   guildJoinRequests: e.guild_join_requests ?? [],
@@ -3501,9 +3500,9 @@ nm(
                               });
                           }),
                               null != e.auth_token &&
-                                  nA({ type: "UPDATE_TOKEN", token: e.auth_token, userId: e.user.id }),
+                                  ng({ type: "UPDATE_TOKEN", token: e.auth_token, userId: e.user.id }),
                               null != e.ad_personalization_toggles_disabled &&
-                                  nA({
+                                  ng({
                                       type: "AD_PERSONALIZATION_TOGGLES_RESTRICTED",
                                       disabled: e.ad_personalization_toggles_disabled,
                                   }),
@@ -3513,37 +3512,37 @@ nm(
                   });
         },
     ),
-    nE(["STATE_UPDATE"], (e) => {
-        nA({ type: "CONNECTION_OPEN_STATE_UPDATE", apexExperiments: e.apex_experiments ?? void 0 });
+    np(["STATE_UPDATE"], (e) => {
+        ng({ type: "CONNECTION_OPEN_STATE_UPDATE", apexExperiments: e.apex_experiments ?? void 0 });
     }),
-    nE(["EXPERIMENT_SESSION_OVERRIDE_CREATE"], (e) => {
+    np(["EXPERIMENT_SESSION_OVERRIDE_CREATE"], (e) => {
         _.h.dispatch({
             type: "APEX_EXPERIMENT_SESSION_OVERRIDE_CREATE",
             experimentName: e.experiment_name,
             variantId: e.variant_id,
         });
     }),
-    nE(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (e) => {
+    np(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (e) => {
         _.h.dispatch({ type: "APEX_EXPERIMENT_SESSION_OVERRIDE_DELETE", experimentName: e.experiment_name });
     }),
-    nE(["RESUMED"], () => {
-        tG.forceUpdate(), tF.forceUpdate(), nA({ type: "CONNECTION_RESUMED" });
+    np(["RESUMED"], () => {
+        tG.forceUpdate(), tF.forceUpdate(), ng({ type: "CONNECTION_RESUMED" });
     }),
-    nE(["TYPING_START"], (e) => {
-        null != e.member && nI(e.guild_id, e.member.user, e.member),
-            nA({ type: "TYPING_START", channelId: e.channel_id, userId: e.user_id });
+    np(["TYPING_START"], (e) => {
+        null != e.member && nA(e.guild_id, e.member.user, e.member),
+            ng({ type: "TYPING_START", channelId: e.channel_id, userId: e.user_id });
     }),
-    nE(["GUILD_RING_START"], (e) => {
-        nA({ type: "GUILD_RING_START", ongoingRings: e.ongoing_rings, channelId: e.channel_id, guildId: e.guild_id });
+    np(["GUILD_RING_START"], (e) => {
+        ng({ type: "GUILD_RING_START", ongoingRings: e.ongoing_rings, channelId: e.channel_id, guildId: e.guild_id });
     }),
-    nE(["GUILD_RING_STOP"], (e) => {
-        nA({ type: "GUILD_RING_STOP", ringing: e.ringing, channelId: e.channel_id, guildId: e.guild_id });
+    np(["GUILD_RING_STOP"], (e) => {
+        ng({ type: "GUILD_RING_STOP", ringing: e.ringing, channelId: e.channel_id, guildId: e.guild_id });
     }),
-    nE(["ACTIVITY_START"], (e) => {
-        nA({ type: "ACTIVITY_START", userId: e.user_id, activity: e.activity });
+    np(["ACTIVITY_START"], (e) => {
+        ng({ type: "ACTIVITY_START", userId: e.user_id, activity: e.activity });
     }),
-    nE(["ACTIVITY_USER_ACTION"], (e) => {
-        nA({
+    np(["ACTIVITY_USER_ACTION"], (e) => {
+        ng({
             type: "ACTIVITY_USER_ACTION",
             actionType: e.action_type,
             user: e.user,
@@ -3552,13 +3551,13 @@ nm(
             messageId: e.message_id,
         });
     }),
-    nm(
+    nE(
         ["MESSAGE_CREATE"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nT(e),
+            nI(e),
                 null != e.author &&
-                    nA({
+                    ng({
                         type: "MESSAGE_CREATE",
                         guildId: e.guild_id,
                         channelId: e.channel_id,
@@ -3568,32 +3567,32 @@ nm(
                     });
         },
     ),
-    nm(
+    nE(
         ["MESSAGE_UPDATE"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nT(e), nA({ type: "MESSAGE_UPDATE", guildId: e.guild_id, message: e });
+            nI(e), ng({ type: "MESSAGE_UPDATE", guildId: e.guild_id, message: e });
         },
     ),
-    nm(
+    nE(
         ["MESSAGE_DELETE"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nA({ type: "MESSAGE_DELETE", guildId: e.guild_id, id: e.id, channelId: e.channel_id });
+            ng({ type: "MESSAGE_DELETE", guildId: e.guild_id, id: e.id, channelId: e.channel_id });
         },
     ),
-    nm(
+    nE(
         ["MESSAGE_DELETE_BULK"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nA({ type: "MESSAGE_DELETE_BULK", guildId: e.guild_id, ids: e.ids, channelId: e.channel_id });
+            ng({ type: "MESSAGE_DELETE_BULK", guildId: e.guild_id, ids: e.ids, channelId: e.channel_id });
         },
     ),
-    nm(
+    nE(
         ["MESSAGE_ACK"],
         (e) => I.D.loadGuildFromChannelId(e.channel_id),
         (e) => {
-            nA({
+            ng({
                 type: "MESSAGE_ACK",
                 channelId: e.channel_id,
                 messageId: e.message_id,
@@ -3603,74 +3602,74 @@ nm(
             });
         },
     ),
-    nE(["GUILD_FEATURE_ACK"], (e) => {
-        nA({ type: "GUILD_FEATURE_ACK", id: e.resource_id, ackType: e.ack_type, ackedId: e.entity_id });
+    np(["GUILD_FEATURE_ACK"], (e) => {
+        ng({ type: "GUILD_FEATURE_ACK", id: e.resource_id, ackType: e.ack_type, ackedId: e.entity_id });
     }),
-    nE(["USER_NON_CHANNEL_ACK"], (e) => {
-        nA({ type: "USER_NON_CHANNEL_ACK", ackType: e.ack_type, ackedId: e.entity_id });
+    np(["USER_NON_CHANNEL_ACK"], (e) => {
+        ng({ type: "USER_NON_CHANNEL_ACK", ackType: e.ack_type, ackedId: e.entity_id });
     }),
-    nm(
+    nE(
         ["CHANNEL_PINS_ACK"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nA({ type: "CHANNEL_PINS_ACK", channelId: e.channel_id, timestamp: e.timestamp, version: e.version });
+            ng({ type: "CHANNEL_PINS_ACK", channelId: e.channel_id, timestamp: e.timestamp, version: e.version });
         },
     ),
-    nm(
+    nE(
         ["CHANNEL_PINS_UPDATE"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nA({ type: "CHANNEL_PINS_UPDATE", channelId: e.channel_id, lastPinTimestamp: e.last_pin_timestamp });
+            ng({ type: "CHANNEL_PINS_UPDATE", channelId: e.channel_id, lastPinTimestamp: e.last_pin_timestamp });
         },
     ),
-    nm(
+    nE(
         ["CHANNEL_CREATE", "CHANNEL_DELETE"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e, t) => {
-            nA({ type: t, channel: (0, t0.UE)(e) });
+            ng({ type: t, channel: (0, t1.UE)(e) });
         },
     ),
-    nE(["VOICE_CHANNEL_STATUS_UPDATE"], (e, t) => {
-        nA({ type: t, id: e.id, guildId: e.guild_id, status: e.status });
+    np(["VOICE_CHANNEL_STATUS_UPDATE"], (e, t) => {
+        ng({ type: t, id: e.id, guildId: e.guild_id, status: e.status });
     }),
-    nE(["VOICE_CHANNEL_START_TIME_UPDATE"], (e, t) => {
-        nA({ type: t, id: e.id, guildId: e.guild_id, voiceStartTime: e.voice_start_time ?? void 0 });
+    np(["VOICE_CHANNEL_START_TIME_UPDATE"], (e, t) => {
+        ng({ type: t, id: e.id, guildId: e.guild_id, voiceStartTime: e.voice_start_time ?? void 0 });
     }),
-    nE(["CHANNEL_INFO"], (e, t) => {
-        nA({
+    np(["CHANNEL_INFO"], (e, t) => {
+        ng({
             type: t,
             guildId: e.guild_id,
             channels: e.channels.map((e) => ({ id: e.id, status: e.status, voiceStartTime: e.voice_start_time })),
         });
     }),
-    nE(["CHANNEL_MEMBER_COUNT_UPDATE"], (e, t) => {
-        nA({ type: t, guildId: e.guild_id, channelId: e.channel_id, online: e.presence_count, total: e.member_count });
+    np(["CHANNEL_MEMBER_COUNT_UPDATE"], (e, t) => {
+        ng({ type: t, guildId: e.guild_id, channelId: e.channel_id, online: e.presence_count, total: e.member_count });
     }),
-    nm(
+    nE(
         ["CHANNEL_UPDATE"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nd.add(e);
+            nc.add(e);
         },
     ),
-    nm(
+    nE(
         ["THREAD_CREATE", "THREAD_UPDATE", "THREAD_DELETE"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n, ...i } = e;
-            nA({ type: t, isNewlyCreated: n, channel: (0, t0.UE)(i) });
+            ng({ type: t, isNewlyCreated: n, channel: (0, t1.UE)(i) });
         },
     ),
-    nm(
+    nE(
         ["THREAD_LIST_SYNC"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nA({
+            ng({
                 type: "THREAD_LIST_SYNC",
                 guildId: e.guild_id,
                 threads: e.threads.map((e) => {
                     let t = I.A.getChannel(e.parent_id);
-                    return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, t0.UE)(e);
+                    return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, t1.UE)(e);
                 }),
                 mostRecentMessages: e.most_recent_messages,
                 members: e.members ? u().map(e.members, tQ.A) : void 0,
@@ -3678,8 +3677,8 @@ nm(
             });
         },
     ),
-    nE(["THREAD_MEMBER_UPDATE"], (e) => {
-        nA({
+    np(["THREAD_MEMBER_UPDATE"], (e) => {
+        ng({
             type: "THREAD_MEMBER_UPDATE",
             id: e.id,
             guildId: e.guild_id,
@@ -3690,8 +3689,8 @@ nm(
             joinTimestamp: e.join_timestamp,
         });
     }),
-    nE(["THREAD_MEMBERS_UPDATE"], (e) => {
-        nA({
+    np(["THREAD_MEMBERS_UPDATE"], (e) => {
+        ng({
             type: "THREAD_MEMBERS_UPDATE",
             id: e.id,
             guildId: e.guild_id,
@@ -3707,30 +3706,30 @@ nm(
             memberIdsPreview: e.member_ids_preview,
         });
     }),
-    nE(["FORUM_UNREADS"], (e) => {
+    np(["FORUM_UNREADS"], (e) => {
         e.permission_denied ||
-            nA({
+            ng({
                 type: "FORUM_UNREADS",
                 channelId: e.channel_id,
                 threads: e.threads.map((e) => ({ threadId: e.thread_id, missing: e.missing, count: e.count })),
             });
     }),
-    nE(["SOUNDBOARD_SOUNDS"], (e) => {
-        n_.add(e);
+    np(["SOUNDBOARD_SOUNDS"], (e) => {
+        nd.add(e);
     }),
-    nE(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
+    np(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
         let n = I.A.getBasicChannel(e.channel_id);
-        nA({ type: t, channelId: e.channel_id, user: e.user, nick: e.nick, isMember: null != n });
+        ng({ type: t, channelId: e.channel_id, user: e.user, nick: e.nick, isMember: null != n });
     }),
-    nm(
+    nE(
         ["GUILD_CREATE"],
         (e) => ("full" === e.data_mode ? null : I.D.loadGuildIds([e.id])),
         (e) => {
-            if (e.unavailable) nA({ type: "GUILD_UNAVAILABLE", guildId: e.id });
+            if (e.unavailable) ng({ type: "GUILD_UNAVAILABLE", guildId: e.id });
             else {
-                let t = no(e);
-                nA({ type: "GUILD_CREATE", guild: t }),
-                    nA({
+                let t = na(e);
+                ng({ type: "GUILD_CREATE", guild: t }),
+                    ng({
                         type: "VOICE_STATE_UPDATES",
                         voiceStates: t.voice_states.map((e) => ({
                             userId: e.user_id,
@@ -3752,11 +3751,11 @@ nm(
             }
         },
     ),
-    nE(["GUILD_UPDATE"], (e) => {
-        nA({ type: "GUILD_UPDATE", guild: e }), e.unavailable && nA({ type: "GUILD_UNAVAILABLE", guildId: e.id });
+    np(["GUILD_UPDATE"], (e) => {
+        ng({ type: "GUILD_UPDATE", guild: e }), e.unavailable && ng({ type: "GUILD_UNAVAILABLE", guildId: e.id });
     }),
-    nE(["GUILD_PRUNE_UPDATE"], (e) => {
-        nA({
+    np(["GUILD_PRUNE_UPDATE"], (e) => {
+        ng({
             type: "GUILD_PRUNE_UPDATE",
             guildId: e.guild_id,
             prune: {
@@ -3768,37 +3767,37 @@ nm(
             },
         });
     }),
-    nE(["GUILD_BULK_BAN_UPDATE"], (e) => {
-        nA({
+    np(["GUILD_BULK_BAN_UPDATE"], (e) => {
+        ng({
             type: "GUILD_BULK_BAN_UPDATE",
             guildId: e.guild_id,
             bulkBan: { bannedUsers: e.bulk_ban?.banned_users ?? [], failedUsers: e.bulk_ban?.failed_users ?? [] },
         });
     }),
-    nE(["GUILD_DELETE"], (e) => {
-        nA({ type: "GUILD_DELETE", guild: e }),
+    np(["GUILD_DELETE"], (e) => {
+        ng({ type: "GUILD_DELETE", guild: e }),
             e.geo_restricted
-                ? nA({ type: "GUILD_GEO_RESTRICTED", guildId: e.id, icon: e.icon, name: e.name })
-                : e.unavailable && nA({ type: "GUILD_UNAVAILABLE", guildId: e.id });
+                ? ng({ type: "GUILD_GEO_RESTRICTED", guildId: e.id, icon: e.icon, name: e.name })
+                : e.unavailable && ng({ type: "GUILD_UNAVAILABLE", guildId: e.id });
     }),
-    nE(["GUILD_MEMBERS_CHUNK"], (e) => {
+    np(["GUILD_MEMBERS_CHUNK"], (e) => {
         c.Ay.Emitter.batched(() => {
-            nf.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
-                null != e.presences && nN(e.presences, e.guild_id).forEach(nC),
+            n_.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
+                null != e.presences && nS(e.presences, e.guild_id).forEach(ny),
                 eK.flush("GUILD_MEMBERS_CHUNK");
         });
     }),
-    nE(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
+    np(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
         c.Ay.Emitter.batched(() => {
-            nA({ type: "THREAD_MEMBER_LIST_UPDATE", guildId: e.guild_id, threadId: e.thread_id, members: e.members }),
-                null != e.presences && nN(e.presences, e.guild_id).forEach(nC),
+            ng({ type: "THREAD_MEMBER_LIST_UPDATE", guildId: e.guild_id, threadId: e.thread_id, members: e.members }),
+                null != e.presences && nS(e.presences, e.guild_id).forEach(ny),
                 eK.flush();
         });
     }),
-    nE(
+    np(
         ["GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "GUILD_MEMBER_ADD", "GUILD_MEMBER_UPDATE", "GUILD_MEMBER_REMOVE"],
         (e, t) => {
-            nA({
+            ng({
                 type: t,
                 guildId: e.guild_id,
                 user: e.user,
@@ -3817,39 +3816,39 @@ nm(
             });
         },
     ),
-    nm(
+    nE(
         ["GUILD_ROLE_CREATE", "GUILD_ROLE_UPDATE"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e, t) => {
-            nA({ type: t, guildId: e.guild_id, role: e.role });
+            ng({ type: t, guildId: e.guild_id, role: e.role });
         },
     ),
-    nm(
+    nE(
         ["GUILD_ROLE_DELETE"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nA({ type: "GUILD_ROLE_DELETE", guildId: e.guild_id, roleId: e.role_id, version: e.version });
+            ng({ type: "GUILD_ROLE_DELETE", guildId: e.guild_id, roleId: e.role_id, version: e.version });
         },
     ),
-    nE(["GUILD_EMOJIS_UPDATE"], (e) => {
-        nA({ type: "GUILD_EMOJIS_UPDATE", guildId: e.guild_id, emojis: e.emojis });
+    np(["GUILD_EMOJIS_UPDATE"], (e) => {
+        ng({ type: "GUILD_EMOJIS_UPDATE", guildId: e.guild_id, emojis: e.emojis });
     }),
-    nE(["GUILD_STICKERS_UPDATE"], (e) => {
-        nA({ type: "GUILD_STICKERS_UPDATE", guildId: e.guild_id, stickers: e.stickers });
+    np(["GUILD_STICKERS_UPDATE"], (e) => {
+        ng({ type: "GUILD_STICKERS_UPDATE", guildId: e.guild_id, stickers: e.stickers });
     }),
-    nE(["GUILD_INTEGRATIONS_UPDATE"], (e) => {
-        nA({ type: "GUILD_INTEGRATIONS_UPDATE", guildId: e.guild_id });
+    np(["GUILD_INTEGRATIONS_UPDATE"], (e) => {
+        ng({ type: "GUILD_INTEGRATIONS_UPDATE", guildId: e.guild_id });
     }),
-    nE(["INTEGRATION_CREATE"], (e) => {
-        nA({ type: "INTEGRATION_CREATE", application: e.application, guildId: e.guild_id });
+    np(["INTEGRATION_CREATE"], (e) => {
+        ng({ type: "INTEGRATION_CREATE", application: e.application, guildId: e.guild_id });
     }),
-    nE(["INTEGRATION_DELETE"], (e) => {
-        nA({ type: "INTEGRATION_DELETE", applicationId: e.application_id, guildId: e.guild_id });
+    np(["INTEGRATION_DELETE"], (e) => {
+        ng({ type: "INTEGRATION_DELETE", applicationId: e.application_id, guildId: e.guild_id });
     }),
-    nE(["USER_UPDATE"], (e) => {
-        nA({ type: "CURRENT_USER_UPDATE", user: e });
+    np(["USER_UPDATE"], (e) => {
+        ng({ type: "CURRENT_USER_UPDATE", user: e });
     }),
-    nE(["USER_SETTINGS_PROTO_UPDATE"], (e) => {
+    np(["USER_SETTINGS_PROTO_UPDATE"], (e) => {
         let t = (0, tJ.Y5)(e.settings.type, e.settings.proto);
         if (null != t) {
             if ("string" == typeof t)
@@ -3858,27 +3857,27 @@ nm(
                     console.error({ parsed: t, wire: e.settings.proto, type: e.settings.type }),
                     Error("UserSettingsProto must not be a string"))
                 );
-            nA({
+            ng({
                 type: "USER_SETTINGS_PROTO_UPDATE",
                 settings: { proto: t, type: e.settings.type },
                 partial: e.partial,
             });
         }
     }),
-    nE(["USER_GUILD_SETTINGS_UPDATE"], (e) => {
-        nA({ type: "USER_GUILD_SETTINGS_FULL_UPDATE", userGuildSettings: [e] });
+    np(["USER_GUILD_SETTINGS_UPDATE"], (e) => {
+        ng({ type: "USER_GUILD_SETTINGS_FULL_UPDATE", userGuildSettings: [e] });
     }),
-    nE(["USER_CONNECTIONS_UPDATE"], () => {
-        nA({ type: "USER_CONNECTIONS_UPDATE" });
+    np(["USER_CONNECTIONS_UPDATE"], () => {
+        ng({ type: "USER_CONNECTIONS_UPDATE" });
     }),
-    nE(["USER_REQUIRED_ACTION_UPDATE"], (e) => {
-        nA({ type: "USER_REQUIRED_ACTION_UPDATE", requiredAction: e.required_action });
+    np(["USER_REQUIRED_ACTION_UPDATE"], (e) => {
+        ng({ type: "USER_REQUIRED_ACTION_UPDATE", requiredAction: e.required_action });
     }),
-    nE(["USER_NOTE_UPDATE"], (e) => {
-        nA({ type: "USER_NOTE_UPDATE", ...e });
+    np(["USER_NOTE_UPDATE"], (e) => {
+        ng({ type: "USER_NOTE_UPDATE", ...e });
     }),
-    nE(["RELATIONSHIP_ADD"], (e) => {
-        nA({
+    np(["RELATIONSHIP_ADD"], (e) => {
+        ng({
             type: "RELATIONSHIP_ADD",
             relationship: {
                 id: e.id,
@@ -3895,11 +3894,11 @@ nm(
             shouldNotify: !0 === e.should_notify,
         });
     }),
-    nE(["RELATIONSHIP_REMOVE"], (e) => {
-        nA({ type: "RELATIONSHIP_REMOVE", relationship: e });
+    np(["RELATIONSHIP_REMOVE"], (e) => {
+        ng({ type: "RELATIONSHIP_REMOVE", relationship: e });
     }),
-    nE(["RELATIONSHIP_UPDATE"], (e) => {
-        nA({
+    np(["RELATIONSHIP_UPDATE"], (e) => {
+        ng({
             type: "RELATIONSHIP_UPDATE",
             relationship: {
                 id: e.id,
@@ -3915,8 +3914,8 @@ nm(
             },
         });
     }),
-    nE(["GAME_RELATIONSHIP_ADD"], (e) => {
-        nA({
+    np(["GAME_RELATIONSHIP_ADD"], (e) => {
+        ng({
             type: "GAME_RELATIONSHIP_ADD",
             gameRelationship: {
                 id: e.id,
@@ -3928,26 +3927,26 @@ nm(
             },
         });
     }),
-    nE(["GAME_RELATIONSHIP_REMOVE"], (e) => {
-        nA({ type: "GAME_RELATIONSHIP_REMOVE", userId: e.id, applicationId: e.application_id });
+    np(["GAME_RELATIONSHIP_REMOVE"], (e) => {
+        ng({ type: "GAME_RELATIONSHIP_REMOVE", userId: e.id, applicationId: e.application_id });
     }),
-    nE(["PRESENCE_UPDATE"], (e) => {
-        nC(ny(e, e.guild_id));
+    np(["PRESENCE_UPDATE"], (e) => {
+        ny(nN(e, e.guild_id));
     }),
-    nE(["PRESENCES_REPLACE"], (e) => {
-        nA({ type: "PRESENCES_REPLACE", presences: nN(e, void 0) });
+    np(["PRESENCES_REPLACE"], (e) => {
+        ng({ type: "PRESENCES_REPLACE", presences: nS(e, void 0) });
     }),
-    nE(["SESSIONS_REPLACE"], (e) => {
-        nA({ type: "SESSIONS_REPLACE", sessions: nS(e) });
+    np(["SESSIONS_REPLACE"], (e) => {
+        ng({ type: "SESSIONS_REPLACE", sessions: nT(e) });
     }),
-    nE(["VOICE_STATE_UPDATE"], (e) => {
-        ng([e]);
+    np(["VOICE_STATE_UPDATE"], (e) => {
+        nm([e]);
     }),
-    nE(["VOICE_STATE_UPDATE_BATCH"], (e) => {
-        ng(e.voice_states);
+    np(["VOICE_STATE_UPDATE_BATCH"], (e) => {
+        nm(e.voice_states);
     }),
-    nE(["VOICE_SERVER_UPDATE"], (e) => {
-        nA({
+    np(["VOICE_SERVER_UPDATE"], (e) => {
+        ng({
             type: "VOICE_SERVER_UPDATE",
             guildId: e.guild_id,
             channelId: e.channel_id,
@@ -3955,8 +3954,8 @@ nm(
             token: e.token,
         });
     }),
-    nE(["CALL_CREATE"], (e) => {
-        nA({
+    np(["CALL_CREATE"], (e) => {
+        ng({
             type: "CALL_CREATE",
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -3965,7 +3964,7 @@ nm(
         });
         let t = e.voice_states;
         null != t &&
-            nA({
+            ng({
                 type: "VOICE_STATE_UPDATES",
                 voiceStates: t.map((e) => ({
                     userId: e.user_id,
@@ -3985,8 +3984,8 @@ nm(
                 })),
             });
     }),
-    nE(["CALL_UPDATE"], (e) => {
-        nA({
+    np(["CALL_UPDATE"], (e) => {
+        ng({
             type: "CALL_UPDATE",
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -3994,38 +3993,38 @@ nm(
             ongoingRings: e.ongoing_rings,
         });
     }),
-    nE(["CALL_DELETE"], (e) => {
-        nA({ type: "CALL_DELETE", channelId: e.channel_id, unavailable: e.unavailable });
+    np(["CALL_DELETE"], (e) => {
+        ng({ type: "CALL_DELETE", channelId: e.channel_id, unavailable: e.unavailable });
     }),
-    nE(["OAUTH2_TOKEN_CREATE"], (e) => {
-        nA({ type: "OAUTH2_TOKEN_CREATE", id: e.id, scopes: e.scopes, application: e.application });
+    np(["OAUTH2_TOKEN_CREATE"], (e) => {
+        ng({ type: "OAUTH2_TOKEN_CREATE", id: e.id, scopes: e.scopes, application: e.application });
     }),
-    nE(["OAUTH2_TOKEN_DELETE"], (e) => {
-        nA({ type: "OAUTH2_TOKEN_DELETE", id: e.id, applicationId: e.application_id });
+    np(["OAUTH2_TOKEN_DELETE"], (e) => {
+        ng({ type: "OAUTH2_TOKEN_DELETE", id: e.id, applicationId: e.application_id });
     }),
-    nE(["OAUTH2_TOKEN_REVOKE"], (e) => {
-        nA({ type: "OAUTH2_TOKEN_REVOKE", accessToken: e.access_token });
+    np(["OAUTH2_TOKEN_REVOKE"], (e) => {
+        ng({ type: "OAUTH2_TOKEN_REVOKE", accessToken: e.access_token });
     }),
-    nE(["RECENT_MENTION_DELETE"], (e) => {
-        nA({ type: "RECENT_MENTION_DELETE", id: e.message_id });
+    np(["RECENT_MENTION_DELETE"], (e) => {
+        ng({ type: "RECENT_MENTION_DELETE", id: e.message_id });
     }),
-    nE(["SAVED_MESSAGE_CREATE"], (e) => {
-        nA({ type: "SAVED_MESSAGE_CREATE", savedMessage: (0, tX.iz)(e) });
+    np(["SAVED_MESSAGE_CREATE"], (e) => {
+        ng({ type: "SAVED_MESSAGE_CREATE", savedMessage: (0, tX.iz)(e) });
     }),
-    nE(["SAVED_MESSAGE_DELETE"], (e) => {
-        nA({ type: "SAVED_MESSAGE_DELETE", savedMessageData: (0, tX.x6)(e) });
+    np(["SAVED_MESSAGE_DELETE"], (e) => {
+        ng({ type: "SAVED_MESSAGE_DELETE", savedMessageData: (0, tX.x6)(e) });
     }),
-    nE(["FRIEND_SUGGESTION_CREATE"], (e) => {
-        nA({ type: "FRIEND_SUGGESTION_CREATE", suggestion: e });
+    np(["FRIEND_SUGGESTION_CREATE"], (e) => {
+        ng({ type: "FRIEND_SUGGESTION_CREATE", suggestion: e });
     }),
-    nE(["FRIEND_SUGGESTION_DELETE"], (e) => {
-        nA({ type: "FRIEND_SUGGESTION_DELETE", suggestedUserId: e.suggested_user_id });
+    np(["FRIEND_SUGGESTION_DELETE"], (e) => {
+        ng({ type: "FRIEND_SUGGESTION_DELETE", suggestedUserId: e.suggested_user_id });
     }),
-    nE(["WEBHOOKS_UPDATE"], (e) => {
-        nA({ type: "WEBHOOKS_UPDATE", guildId: e.guild_id, channelId: e.channel_id });
+    np(["WEBHOOKS_UPDATE"], (e) => {
+        ng({ type: "WEBHOOKS_UPDATE", guildId: e.guild_id, channelId: e.channel_id });
     }),
-    nE(["MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE"], (e, t) => {
-        nA({
+    np(["MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE"], (e, t) => {
+        ng({
             type: t,
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -4036,8 +4035,8 @@ nm(
             messageAuthorId: e.message_author_id,
         });
     }),
-    nE(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (e, t) => {
-        nA({
+    np(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (e, t) => {
+        ng({
             type: "MESSAGE_POLL_VOTE_ADD" === t ? "MESSAGE_REACTION_ADD" : "MESSAGE_REACTION_REMOVE",
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -4046,60 +4045,60 @@ nm(
             reactionType: tz.v.VOTE,
         });
     }),
-    nE(["MESSAGE_POLL_VOTE_ADD_MANY"], (e) => {
-        nA({
+    np(["MESSAGE_POLL_VOTE_ADD_MANY"], (e) => {
+        ng({
             type: "MESSAGE_REACTION_ADD_MANY",
             channelId: e.channel_id,
             messageId: e.message_id,
             reactions: e.votes.map((e) => ({ ...e, emoji: { id: e.answer_id, name: "" }, reactionType: tz.v.VOTE })),
         });
     }),
-    nE(["MESSAGE_REACTION_REMOVE_ALL"], (e) => {
-        nA({ type: "MESSAGE_REACTION_REMOVE_ALL", channelId: e.channel_id, messageId: e.message_id });
+    np(["MESSAGE_REACTION_REMOVE_ALL"], (e) => {
+        ng({ type: "MESSAGE_REACTION_REMOVE_ALL", channelId: e.channel_id, messageId: e.message_id });
     }),
-    nE(["MESSAGE_REACTION_REMOVE_EMOJI"], (e) => {
-        nA({ type: "MESSAGE_REACTION_REMOVE_EMOJI", channelId: e.channel_id, messageId: e.message_id, emoji: e.emoji });
+    np(["MESSAGE_REACTION_REMOVE_EMOJI"], (e) => {
+        ng({ type: "MESSAGE_REACTION_REMOVE_EMOJI", channelId: e.channel_id, messageId: e.message_id, emoji: e.emoji });
     }),
-    nE(["MESSAGE_REACTION_ADD_MANY"], (e) => {
-        nA({
+    np(["MESSAGE_REACTION_ADD_MANY"], (e) => {
+        ng({
             type: "MESSAGE_REACTION_ADD_MANY",
             channelId: e.channel_id,
             messageId: e.message_id,
             reactions: e.reactions,
         });
     }),
-    nE(["PAYMENT_UPDATE"], (e) => {
-        nA({ type: "PAYMENT_UPDATE", payment: e });
+    np(["PAYMENT_UPDATE"], (e) => {
+        ng({ type: "PAYMENT_UPDATE", payment: e });
     }),
-    nE(["ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE"], (e, t) => {
-        nA({ type: t, entitlement: e });
+    np(["ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE"], (e, t) => {
+        ng({ type: t, entitlement: e });
     }),
-    nE(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        (t6.A.hasLayers() || null != t4.A.getSection()) && (n(753390).$o(), tV.jv(t7.A.getFetchedSKUIDs()));
+    np(["USER_PAYMENT_SOURCES_UPDATE"], () => {
+        (0, t0.f)() && (n(753390).$o(), tV.jv(t5.A.getFetchedSKUIDs()));
     }),
-    nE(["USER_SUBSCRIPTIONS_UPDATE"], () => {
-        tB.rQ(), (t6.A.hasLayers() || null != t4.A.getSection()) && n(753390).hP();
+    np(["USER_SUBSCRIPTIONS_UPDATE"], () => {
+        tB.rQ(), (0, t0.f)() && n(753390).hP();
     }),
-    nE(["WISHLIST_ITEM_PURCHASED"], (e) => {
-        nA({ type: "WISHLIST_ITEM_PURCHASED", recipientId: e.recipient_id, skuId: e.sku_id });
+    np(["WISHLIST_ITEM_PURCHASED"], (e) => {
+        ng({ type: "WISHLIST_ITEM_PURCHASED", recipientId: e.recipient_id, skuId: e.sku_id });
     }),
-    nE(["USER_BADGE_STATE_UPDATE"], (e) => {
+    np(["USER_BADGE_STATE_UPDATE"], (e) => {
         n(682618).o(e.badge_id);
     }),
-    nE(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (e) => {
-        nA({
+    np(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (e) => {
+        ng({
             type: "GUILD_BOOST_SLOT_CREATE",
-            guildBoostSlot: t1.A.createFromServer(e, t8.A.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: t2.A.createFromServer(e, t7.A.getSubscriptionById(e.subscription_id)),
         });
     }),
-    nE(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], (e) => {
-        nA({
+    np(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], (e) => {
+        ng({
             type: "GUILD_BOOST_SLOT_UPDATE",
-            guildBoostSlot: t1.A.createFromServer(e, t8.A.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: t2.A.createFromServer(e, t7.A.getSubscriptionById(e.subscription_id)),
         });
     }),
-    nE(["BILLING_POPUP_BRIDGE_CALLBACK"], (e) => {
-        nA({
+    np(["BILLING_POPUP_BRIDGE_CALLBACK"], (e) => {
+        ng({
             type: "BILLING_POPUP_BRIDGE_CALLBACK",
             paymentSourceType: e.payment_source_type,
             state: e.state,
@@ -4107,28 +4106,28 @@ nm(
             query: e.query,
         });
     }),
-    nE(["USER_PAYMENT_BROWSER_CHECKOUT_DONE"], (e) => {
-        nA({
+    np(["USER_PAYMENT_BROWSER_CHECKOUT_DONE"], (e) => {
+        ng({
             type: "USER_PAYMENT_BROWSER_CHECKOUT_DONE",
             loadId: e.load_id,
             skuId: e.sku_id,
             skuSubscriptionPlanId: e.sku_subscription_plan_id,
         });
     }),
-    nE(["USER_PAYMENT_CLIENT_ADD"], (e) => {
-        (0, t9.D)().then((t) => {
+    np(["USER_PAYMENT_CLIENT_ADD"], (e) => {
+        (0, t8.D)().then((t) => {
             let n = e.purchase_token_hash;
-            n === t && nA({ type: "USER_PAYMENT_CLIENT_ADD", purchaseTokenHash: n, expiresAt: e.expires_at });
+            n === t && ng({ type: "USER_PAYMENT_CLIENT_ADD", purchaseTokenHash: n, expiresAt: e.expires_at });
         });
     }),
-    nE(["GUILD_MEMBER_LIST_UPDATE"], (e) => {
+    np(["GUILD_MEMBER_LIST_UPDATE"], (e) => {
         c.Ay.Emitter.batched(() => {
             let t = (t) => {
                 if (null == t.member) return;
                 let { member: n } = t;
-                if ((nI(e.guild_id, n.user, n), null == n.presence)) return;
+                if ((nA(e.guild_id, n.user, n), null == n.presence)) return;
                 let { presence: i } = n;
-                nC(ny(i, e.guild_id));
+                ny(nN(i, e.guild_id));
             };
             e.ops.forEach((e) => {
                 let { op: n, items: i, item: r } = e;
@@ -4142,7 +4141,7 @@ nm(
                 }
             }),
                 eK.flush(),
-                nA({
+                ng({
                     type: "GUILD_MEMBER_LIST_UPDATE",
                     guildId: e.guild_id,
                     id: e.id,
@@ -4153,17 +4152,17 @@ nm(
                 });
         });
     }),
-    nE(["GIFT_CODE_UPDATE"], (e) => {
-        nA({ type: "GIFT_CODE_UPDATE", uses: e.uses, code: e.code });
+    np(["GIFT_CODE_UPDATE"], (e) => {
+        ng({ type: "GIFT_CODE_UPDATE", uses: e.uses, code: e.code });
     }),
-    nE(["GIFT_CODE_CREATE"], (e) => {
-        nA({ type: "GIFT_CODE_CREATE", giftCode: e });
+    np(["GIFT_CODE_CREATE"], (e) => {
+        ng({ type: "GIFT_CODE_CREATE", giftCode: e });
     }),
-    nE(["LIBRARY_APPLICATION_UPDATE"], (e) => {
-        nA({ type: "LIBRARY_APPLICATION_UPDATE", libraryApplication: e });
+    np(["LIBRARY_APPLICATION_UPDATE"], (e) => {
+        ng({ type: "LIBRARY_APPLICATION_UPDATE", libraryApplication: e });
     }),
-    nE(["STREAM_CREATE"], (e) => {
-        nA({
+    np(["STREAM_CREATE"], (e) => {
+        ng({
             type: "STREAM_CREATE",
             streamKey: e.stream_key,
             region: e.region,
@@ -4173,11 +4172,11 @@ nm(
             paused: e.paused,
         });
     }),
-    nE(["STREAM_SERVER_UPDATE"], (e) => {
-        nA({ type: "STREAM_SERVER_UPDATE", streamKey: e.stream_key, endpoint: e.endpoint, token: e.token });
+    np(["STREAM_SERVER_UPDATE"], (e) => {
+        ng({ type: "STREAM_SERVER_UPDATE", streamKey: e.stream_key, endpoint: e.endpoint, token: e.token });
     }),
-    nE(["STREAM_UPDATE"], (e) => {
-        nA({
+    np(["STREAM_UPDATE"], (e) => {
+        ng({
             type: "STREAM_UPDATE",
             streamKey: e.stream_key,
             region: e.region,
@@ -4185,11 +4184,11 @@ nm(
             paused: e.paused,
         });
     }),
-    nE(["STREAM_DELETE"], (e) => {
-        nA({ type: "STREAM_DELETE", streamKey: e.stream_key, unavailable: e.unavailable, reason: e.reason });
+    np(["STREAM_DELETE"], (e) => {
+        ng({ type: "STREAM_DELETE", streamKey: e.stream_key, unavailable: e.unavailable, reason: e.reason });
     }),
-    nE(["GENERIC_PUSH_NOTIFICATION_SENT"], (e) => {
-        nA({
+    np(["GENERIC_PUSH_NOTIFICATION_SENT"], (e) => {
+        ng({
             type: "GENERIC_PUSH_NOTIFICATION_SENT",
             title: e.title,
             body: e.body,
@@ -4199,8 +4198,8 @@ nm(
             tag: e.tag,
         });
     }),
-    nE(["REACTION_NOTIFICATION_SENT"], (e) => {
-        nA({
+    np(["REACTION_NOTIFICATION_SENT"], (e) => {
+        ng({
             type: "REACTION_NOTIFICATION_SENT",
             route: e.route,
             message: e.message,
@@ -4212,56 +4211,56 @@ nm(
             icon: e.icon,
         });
     }),
-    nE(["NOTIFICATION_CENTER_ITEM_CREATE"], (e) => {
-        nA({ type: "NOTIFICATION_CENTER_ITEM_CREATE", item: e });
+    np(["NOTIFICATION_CENTER_ITEM_CREATE"], (e) => {
+        ng({ type: "NOTIFICATION_CENTER_ITEM_CREATE", item: e });
     }),
-    nE(["NOTIFICATION_CENTER_ITEM_DELETE"], (e) => {
-        nA({ type: "NOTIFICATION_CENTER_ITEM_DELETE", id: e.id });
+    np(["NOTIFICATION_CENTER_ITEM_DELETE"], (e) => {
+        ng({ type: "NOTIFICATION_CENTER_ITEM_DELETE", id: e.id });
     }),
-    nE(["NOTIFICATION_CENTER_ITEMS_ACK"], (e) => {
-        nA({ type: "NOTIFICATION_CENTER_ITEMS_ACK", ids: [e.id], optimistic: !1 });
+    np(["NOTIFICATION_CENTER_ITEMS_ACK"], (e) => {
+        ng({ type: "NOTIFICATION_CENTER_ITEMS_ACK", ids: [e.id], optimistic: !1 });
     }),
-    nE(["NOTIFICATION_CENTER_ITEM_COMPLETED"], (e) => {
-        nA({ type: "NOTIFICATION_CENTER_ITEM_COMPLETED", item_enum: e.item_enum });
+    np(["NOTIFICATION_CENTER_ITEM_COMPLETED"], (e) => {
+        ng({ type: "NOTIFICATION_CENTER_ITEM_COMPLETED", item_enum: e.item_enum });
     }),
-    nE(["QUESTS_USER_STATUS_UPDATE"], (e) => {
-        nA({ type: "QUESTS_USER_STATUS_UPDATE", user_status: e.user_status });
+    np(["QUESTS_USER_STATUS_UPDATE"], (e) => {
+        ng({ type: "QUESTS_USER_STATUS_UPDATE", user_status: e.user_status });
     }),
-    nE(["QUESTS_USER_COMPLETION_UPDATE"], (e) => {
-        nA({ type: "QUESTS_USER_COMPLETION_UPDATE", quest_enrollment_blocked_until: e.quest_enrollment_blocked_until });
+    np(["QUESTS_USER_COMPLETION_UPDATE"], (e) => {
+        ng({ type: "QUESTS_USER_COMPLETION_UPDATE", quest_enrollment_blocked_until: e.quest_enrollment_blocked_until });
     }),
-    nE(["QUEST_PREVIEW_UPDATE"], (e) => {
-        nA({ type: "QUEST_PREVIEW_UPDATE", quest_id: e.quest_id });
+    np(["QUEST_PREVIEW_UPDATE"], (e) => {
+        ng({ type: "QUEST_PREVIEW_UPDATE", quest_id: e.quest_id });
     }),
-    nE(["APPLICATION_COMMAND_PERMISSIONS_UPDATE"], (e, t) => {
-        nA({ type: t, guildId: e.guild_id });
+    np(["APPLICATION_COMMAND_PERMISSIONS_UPDATE"], (e, t) => {
+        ng({ type: t, guildId: e.guild_id });
     }),
-    nE(["GUILD_APPLICATION_COMMAND_INDEX_UPDATE"], (e) => {
-        nA({ type: "GUILD_APPLICATION_COMMAND_INDEX_UPDATE", guildId: e.guild_id, version: e.version });
+    np(["GUILD_APPLICATION_COMMAND_INDEX_UPDATE"], (e) => {
+        ng({ type: "GUILD_APPLICATION_COMMAND_INDEX_UPDATE", guildId: e.guild_id, version: e.version });
     }),
-    nE(["GUILD_JOIN_REQUEST_CREATE"], (e) => {
-        nA({ type: "GUILD_JOIN_REQUEST_CREATE", request: e.request, status: e.status, guildId: e.guild_id });
+    np(["GUILD_JOIN_REQUEST_CREATE"], (e) => {
+        ng({ type: "GUILD_JOIN_REQUEST_CREATE", request: e.request, status: e.status, guildId: e.guild_id });
     }),
-    nE(["GUILD_JOIN_REQUEST_UPDATE"], (e) => {
-        nA({ type: "GUILD_JOIN_REQUEST_UPDATE", request: e.request, status: e.status, guildId: e.guild_id });
+    np(["GUILD_JOIN_REQUEST_UPDATE"], (e) => {
+        ng({ type: "GUILD_JOIN_REQUEST_UPDATE", request: e.request, status: e.status, guildId: e.guild_id });
     }),
-    nE(["GUILD_JOIN_REQUEST_DELETE"], (e) => {
-        nA({ type: "GUILD_JOIN_REQUEST_DELETE", id: e.id, userId: e.user_id, guildId: e.guild_id });
+    np(["GUILD_JOIN_REQUEST_DELETE"], (e) => {
+        ng({ type: "GUILD_JOIN_REQUEST_DELETE", id: e.id, userId: e.user_id, guildId: e.guild_id });
     }),
-    nE(["INTERACTION_CREATE"], (e) => {
-        nA({ type: "INTERACTION_CREATE", interactionId: e.id, nonce: e.nonce });
+    np(["INTERACTION_CREATE"], (e) => {
+        ng({ type: "INTERACTION_CREATE", interactionId: e.id, nonce: e.nonce });
     }),
-    nE(["INTERACTION_SUCCESS"], (e) => {
-        nA({ type: "INTERACTION_SUCCESS", interactionId: e.id, nonce: e.nonce });
+    np(["INTERACTION_SUCCESS"], (e) => {
+        ng({ type: "INTERACTION_SUCCESS", interactionId: e.id, nonce: e.nonce });
     }),
-    nE(["INTERACTION_FAILURE"], (e) => {
-        nA({ type: "INTERACTION_FAILURE", interactionId: e.id, nonce: e.nonce, reasonCode: e.reason_code });
+    np(["INTERACTION_FAILURE"], (e) => {
+        ng({ type: "INTERACTION_FAILURE", interactionId: e.id, nonce: e.nonce, reasonCode: e.reason_code });
     }),
-    nE(["APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE"], (e) => {
-        nA({ type: "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE", choices: e.choices, nonce: e.nonce });
+    np(["APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE"], (e) => {
+        ng({ type: "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE", choices: e.choices, nonce: e.nonce });
     }),
-    nE(["INTERACTION_MODAL_CREATE"], (e) => {
-        nA({
+    np(["INTERACTION_MODAL_CREATE"], (e) => {
+        ng({
             type: "INTERACTION_MODAL_CREATE",
             id: e.id,
             channelId: e.channel_id,
@@ -4273,8 +4272,8 @@ nm(
             resolved: e.resolved,
         });
     }),
-    nE(["INTERACTION_IFRAME_MODAL_CREATE"], (e) => {
-        nA({
+    np(["INTERACTION_IFRAME_MODAL_CREATE"], (e) => {
+        ng({
             type: "INTERACTION_IFRAME_MODAL_CREATE",
             id: e.id,
             channelId: e.channel_id,
@@ -4286,38 +4285,38 @@ nm(
             nonce: e.nonce,
         });
     }),
-    nE(["STAGE_INSTANCE_CREATE"], (e) => {
-        nA({ type: "STAGE_INSTANCE_CREATE", instance: e });
+    np(["STAGE_INSTANCE_CREATE"], (e) => {
+        ng({ type: "STAGE_INSTANCE_CREATE", instance: e });
     }),
-    nE(["STAGE_INSTANCE_UPDATE"], (e) => {
-        nA({ type: "STAGE_INSTANCE_UPDATE", instance: e });
+    np(["STAGE_INSTANCE_UPDATE"], (e) => {
+        ng({ type: "STAGE_INSTANCE_UPDATE", instance: e });
     }),
-    nE(["STAGE_INSTANCE_DELETE"], (e) => {
-        nA({ type: "STAGE_INSTANCE_DELETE", instance: e });
+    np(["STAGE_INSTANCE_DELETE"], (e) => {
+        ng({ type: "STAGE_INSTANCE_DELETE", instance: e });
     }),
-    nE(["GUILD_SCHEDULED_EVENT_CREATE"], (e) => {
-        nA({ type: "GUILD_SCHEDULED_EVENT_CREATE", guildScheduledEvent: e });
+    np(["GUILD_SCHEDULED_EVENT_CREATE"], (e) => {
+        ng({ type: "GUILD_SCHEDULED_EVENT_CREATE", guildScheduledEvent: e });
     }),
-    nE(["GUILD_SCHEDULED_EVENT_UPDATE"], (e) => {
-        nA({ type: "GUILD_SCHEDULED_EVENT_UPDATE", guildScheduledEvent: e });
+    np(["GUILD_SCHEDULED_EVENT_UPDATE"], (e) => {
+        ng({ type: "GUILD_SCHEDULED_EVENT_UPDATE", guildScheduledEvent: e });
     }),
-    nE(["GUILD_SCHEDULED_EVENT_DELETE"], (e) => {
-        nA({ type: "GUILD_SCHEDULED_EVENT_DELETE", guildScheduledEvent: e });
+    np(["GUILD_SCHEDULED_EVENT_DELETE"], (e) => {
+        ng({ type: "GUILD_SCHEDULED_EVENT_DELETE", guildScheduledEvent: e });
     }),
-    nE(["GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE"], (e) => {
-        nA({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE", eventException: e });
+    np(["GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE"], (e) => {
+        ng({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE", eventException: e });
     }),
-    nE(["GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE"], (e) => {
-        nA({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE", eventException: e });
+    np(["GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE"], (e) => {
+        ng({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE", eventException: e });
     }),
-    nE(["GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE"], (e) => {
-        nA({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE", eventException: e });
+    np(["GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE"], (e) => {
+        ng({ type: "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE", eventException: e });
     }),
-    nE(["GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE"], (e) => {
-        nA({ type: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE", eventId: e.event_id });
+    np(["GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE"], (e) => {
+        ng({ type: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE", eventId: e.event_id });
     }),
-    nE(["GUILD_SCHEDULED_EVENT_USER_ADD"], (e) => {
-        nA({
+    np(["GUILD_SCHEDULED_EVENT_USER_ADD"], (e) => {
+        ng({
             type: "GUILD_SCHEDULED_EVENT_USER_ADD",
             userId: e.user_id,
             guildId: e.guild_id,
@@ -4326,8 +4325,8 @@ nm(
             response: e.response,
         });
     }),
-    nE(["GUILD_SCHEDULED_EVENT_USER_REMOVE"], (e) => {
-        nA({
+    np(["GUILD_SCHEDULED_EVENT_USER_REMOVE"], (e) => {
+        ng({
             type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
             userId: e.user_id,
             guildId: e.guild_id,
@@ -4336,25 +4335,25 @@ nm(
             response: e.response,
         });
     }),
-    nE(["GUILD_DIRECTORY_ENTRY_CREATE"], (e) => {
-        nA({ type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: e.directory_channel_id, entry: e });
+    np(["GUILD_DIRECTORY_ENTRY_CREATE"], (e) => {
+        ng({ type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: e.directory_channel_id, entry: e });
     }),
-    nE(["GUILD_DIRECTORY_ENTRY_UPDATE"], (e) => {
-        nA({ type: "GUILD_DIRECTORY_ENTRY_UPDATE", channelId: e.directory_channel_id, entry: e });
+    np(["GUILD_DIRECTORY_ENTRY_UPDATE"], (e) => {
+        ng({ type: "GUILD_DIRECTORY_ENTRY_UPDATE", channelId: e.directory_channel_id, entry: e });
     }),
-    nE(["GUILD_DIRECTORY_ENTRY_DELETE"], (e) => {
-        nA({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId: e.directory_channel_id, guildId: e.entity_id });
+    np(["GUILD_DIRECTORY_ENTRY_DELETE"], (e) => {
+        ng({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId: e.directory_channel_id, guildId: e.entity_id });
     }),
-    nE(["AUTO_MODERATION_MENTION_RAID_DETECTION"], (e) => {
-        nA({
+    np(["AUTO_MODERATION_MENTION_RAID_DETECTION"], (e) => {
+        ng({
             type: "AUTO_MODERATION_MENTION_RAID_DETECTION",
             guildId: e.guild_id,
             decisionId: e.decision_id,
             suspiciousMentionActivityUntil: e.suspicious_mention_activity_until,
         });
     }),
-    nE(["VOICE_CHANNEL_EFFECT_SEND"], (e) => {
-        nA({
+    np(["VOICE_CHANNEL_EFFECT_SEND"], (e) => {
+        ng({
             type: "VOICE_CHANNEL_EFFECT_SEND",
             emoji: e.emoji,
             channelId: e.channel_id,
@@ -4365,8 +4364,8 @@ nm(
             soundVolume: e.sound_volume,
         });
     }),
-    nE(["CLIPS_REMOTE_TRIGGER"], (e) => {
-        nA({
+    np(["CLIPS_REMOTE_TRIGGER"], (e) => {
+        ng({
             type: "CLIPS_REMOTE_TRIGGER",
             userId: e.user_id,
             applicationId: e.application_id,
@@ -4374,14 +4373,14 @@ nm(
             remoteClipId: e.remote_clip_id,
         });
     }),
-    nE(["GUILD_SOUNDBOARD_SOUND_CREATE"], (e) => {
-        nA({
+    np(["GUILD_SOUNDBOARD_SOUND_CREATE"], (e) => {
+        ng({
             type: "GUILD_SOUNDBOARD_SOUND_CREATE",
             sound: {
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new t2.A(e.user),
+                user: new t3.A(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -4390,14 +4389,14 @@ nm(
             },
         });
     }),
-    nE(["GUILD_SOUNDBOARD_SOUND_UPDATE"], (e) => {
-        nA({
+    np(["GUILD_SOUNDBOARD_SOUND_UPDATE"], (e) => {
+        ng({
             type: "GUILD_SOUNDBOARD_SOUND_UPDATE",
             sound: {
                 guildId: e.guild_id,
                 name: e.name,
                 soundId: e.sound_id,
-                user: new t2.A(e.user),
+                user: new t3.A(e.user),
                 userId: e.user_id,
                 volume: e.volume,
                 emojiId: e.emoji_id,
@@ -4406,11 +4405,11 @@ nm(
             },
         });
     }),
-    nE(["GUILD_SOUNDBOARD_SOUND_DELETE"], (e) => {
-        nA({ type: "GUILD_SOUNDBOARD_SOUND_DELETE", guildId: e.guild_id, soundId: e.sound_id });
+    np(["GUILD_SOUNDBOARD_SOUND_DELETE"], (e) => {
+        ng({ type: "GUILD_SOUNDBOARD_SOUND_DELETE", guildId: e.guild_id, soundId: e.sound_id });
     }),
-    nE(["GUILD_SOUNDBOARD_SOUNDS_UPDATE"], (e) => {
-        nA({
+    np(["GUILD_SOUNDBOARD_SOUNDS_UPDATE"], (e) => {
+        ng({
             type: "GUILD_SOUNDBOARD_SOUNDS_UPDATE",
             guildId: e.guild_id,
             soundboardSounds: e.soundboard_sounds.map((t) => ({
@@ -4425,11 +4424,11 @@ nm(
             })),
         });
     }),
-    nm(
+    nE(
         ["EMBEDDED_ACTIVITY_UPDATE_V2"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nA({
+            ng({
                 type: "EMBEDDED_ACTIVITY_UPDATE_V2",
                 applicationId: e.application_id,
                 launchId: e.launch_id,
@@ -4439,19 +4438,19 @@ nm(
             });
         },
     ),
-    nE(["AUTH_SESSION_CHANGE"], (e) => {
-        nA({ type: "AUTH_SESSION_CHANGE", authSessionIdHash: e.auth_session_id_hash });
+    np(["AUTH_SESSION_CHANGE"], (e) => {
+        ng({ type: "AUTH_SESSION_CHANGE", authSessionIdHash: e.auth_session_id_hash });
     }),
-    nE(["USER_CONNECTIONS_LINK_CALLBACK"], (e) => {
-        nA({
+    np(["USER_CONNECTIONS_LINK_CALLBACK"], (e) => {
+        ng({
             type: "USER_CONNECTIONS_LINK_CALLBACK",
             provider: e.provider,
             callbackCode: e.callback_code,
             callbackState: e.callback_state,
         });
     }),
-    nE(["USER_CONNECTIONS_CALLBACK"], (e) => {
-        nA({
+    np(["USER_CONNECTIONS_CALLBACK"], (e) => {
+        ng({
             type: "USER_CONNECTIONS_CALLBACK",
             provider: e.provider,
             code: e.code,
@@ -4459,17 +4458,17 @@ nm(
             openid_params: e.openid_params,
         });
     }),
-    nE(["DELETED_ENTITY_IDS"], (e) => {
-        nA({ type: "DELETED_ENTITY_IDS", ...e });
+    np(["DELETED_ENTITY_IDS"], (e) => {
+        ng({ type: "DELETED_ENTITY_IDS", ...e });
     }),
-    nm(
+    nE(
         ["CHANNEL_SYNC"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
             e.channels.forEach((e) => {
-                nd.add(e);
+                nc.add(e);
             }),
-                nA({
+                ng({
                     type: "CHANNEL_SYNC",
                     guild_id: e.guild_id,
                     channels: e.channels,
@@ -4477,14 +4476,14 @@ nm(
                 });
         },
     ),
-    nE(["CONSOLE_COMMAND_UPDATE"], (e) => {
-        nA({ type: "CONSOLE_COMMAND_UPDATE", id: e.id, result: e.result, error: e.error });
+    np(["CONSOLE_COMMAND_UPDATE"], (e) => {
+        ng({ type: "CONSOLE_COMMAND_UPDATE", id: e.id, result: e.result, error: e.error });
     }),
-    nm(
+    nE(
         ["PASSIVE_UPDATE_V2"],
         (e) => I.D.loadGuildIds([e.guild_id]),
         (e) => {
-            nA({
+            ng({
                 type: "PASSIVE_UPDATE_V2",
                 guildId: e.guild_id,
                 members: e.updated_members,
@@ -4512,78 +4511,78 @@ nm(
             });
         },
     ),
-    nE(["CREATOR_MONETIZATION_RESTRICTIONS_UPDATE"], (e) => {
-        nA({
+    np(["CREATOR_MONETIZATION_RESTRICTIONS_UPDATE"], (e) => {
+        ng({
             type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS",
             guildId: e.guild_id,
             restrictions: e.restrictions,
         });
     }),
-    nE(["BILLING_REFERRAL_TRIAL_OFFER_UPDATE"], (e) => {
-        nA({
+    np(["BILLING_REFERRAL_TRIAL_OFFER_UPDATE"], (e) => {
+        ng({
             type: "BILLING_REFERRAL_TRIAL_OFFER_UPDATE",
             userTrialOfferId: e.user_trial_offer_id,
             recipientId: e.recipient_id,
         });
     }),
-    nE(["LAST_MESSAGES"], (e) => {
-        nA({ type: "MESSAGE_PREVIEWS_LOADED", guildId: e.guild_id, messages: e.messages });
+    np(["LAST_MESSAGES"], (e) => {
+        ng({ type: "MESSAGE_PREVIEWS_LOADED", guildId: e.guild_id, messages: e.messages });
     }),
-    nE(["AUTHENTICATOR_UPDATE"], (e) => {
-        nA({ type: "AUTHENTICATOR_UPDATE", credential: e });
+    np(["AUTHENTICATOR_UPDATE"], (e) => {
+        ng({ type: "AUTHENTICATOR_UPDATE", credential: e });
     }),
-    nE(["AUTHENTICATOR_CREATE"], (e) => {
-        nA({ type: "AUTHENTICATOR_CREATE", credential: e });
+    np(["AUTHENTICATOR_CREATE"], (e) => {
+        ng({ type: "AUTHENTICATOR_CREATE", credential: e });
     }),
-    nE(["AUTHENTICATOR_DELETE"], (e) => {
-        nA({ type: "AUTHENTICATOR_DELETE", credential: e });
+    np(["AUTHENTICATOR_DELETE"], (e) => {
+        ng({ type: "AUTHENTICATOR_DELETE", credential: e });
     }),
-    nE(["NOTIFICATION_SETTINGS_UPDATE"], (e) => {
-        nA({ type: "NOTIFICATION_SETTINGS_UPDATE", settings: { flags: e.flags } });
+    np(["NOTIFICATION_SETTINGS_UPDATE"], (e) => {
+        ng({ type: "NOTIFICATION_SETTINGS_UPDATE", settings: { flags: e.flags } });
     }),
-    nE(["CONVERSATION_SUMMARY_UPDATE"], (e) => {
-        nA({ type: "CONVERSATION_SUMMARY_UPDATE", ...e });
+    np(["CONVERSATION_SUMMARY_UPDATE"], (e) => {
+        ng({ type: "CONVERSATION_SUMMARY_UPDATE", ...e });
     }),
-    nE(["PREMIUM_MARKETING_PREVIEW"], (e) => {
-        nA({ type: "PREMIUM_MARKETING_PREVIEW", data: e });
+    np(["PREMIUM_MARKETING_PREVIEW"], (e) => {
+        ng({ type: "PREMIUM_MARKETING_PREVIEW", data: e });
     }),
-    nE(["USER_APPLICATION_UPDATE"], (e) => {
-        nA({ type: "USER_APPLICATION_UPDATE", applicationId: e.application_id });
+    np(["USER_APPLICATION_UPDATE"], (e) => {
+        ng({ type: "USER_APPLICATION_UPDATE", applicationId: e.application_id });
     }),
-    nE(["USER_APPLICATION_REMOVE"], (e) => {
-        nA({ type: "USER_APPLICATION_REMOVE", applicationId: e.application_id });
+    np(["USER_APPLICATION_REMOVE"], (e) => {
+        ng({ type: "USER_APPLICATION_REMOVE", applicationId: e.application_id });
     }),
-    nE(["DM_SETTINGS_UPSELL_SHOW"], (e) => {
-        nA({ type: "DM_SETTINGS_UPSELL_SHOW", guildId: e.guild_id });
+    np(["DM_SETTINGS_UPSELL_SHOW"], (e) => {
+        ng({ type: "DM_SETTINGS_UPSELL_SHOW", guildId: e.guild_id });
     }),
-    nE(["CONTENT_INVENTORY_INBOX_STALE"], (e) => {
-        nA({ type: "CONTENT_INVENTORY_INBOX_STALE", refreshAfterMs: e.refresh_after_ms });
+    np(["CONTENT_INVENTORY_INBOX_STALE"], (e) => {
+        ng({ type: "CONTENT_INVENTORY_INBOX_STALE", refreshAfterMs: e.refresh_after_ms });
     }),
-    nE(["VIRTUAL_CURRENCY_BALANCE_UPDATE"], (e) => {
-        nA({ type: "VIRTUAL_CURRENCY_BALANCE_UPDATE", balance: e.balance });
+    np(["VIRTUAL_CURRENCY_BALANCE_UPDATE"], (e) => {
+        ng({ type: "VIRTUAL_CURRENCY_BALANCE_UPDATE", balance: e.balance });
     }),
-    nE(["WALLET_BALANCE_UPDATE"], (e) => {
-        nA({
+    np(["WALLET_BALANCE_UPDATE"], (e) => {
+        ng({
             type: "WALLET_BALANCE_UPDATE",
             paymentSourceId: e.payment_source_id,
             balance: e.balance,
             currency: e.currency,
         });
     }),
-    nE(["GUILD_POWERUP_ENTITLEMENTS_CREATE", "GUILD_POWERUP_ENTITLEMENTS_DELETE"], (e, t) => {
-        nA({ type: t, guildId: e.guild_id, entitlements: e.entitlements });
+    np(["GUILD_POWERUP_ENTITLEMENTS_CREATE", "GUILD_POWERUP_ENTITLEMENTS_DELETE"], (e, t) => {
+        ng({ type: t, guildId: e.guild_id, entitlements: e.entitlements });
     }),
-    nE(["GAME_SERVER_CREATE", "GAME_SERVER_UPDATE"], (e, t) => {
-        nA({ type: t, guildId: e.guild_id, gameServer: e.game_server });
+    np(["GAME_SERVER_CREATE", "GAME_SERVER_UPDATE"], (e, t) => {
+        ng({ type: t, guildId: e.guild_id, gameServer: e.game_server });
     }),
-    nE(["GAME_SERVER_DELETE"], (e, t) => {
-        nA({ type: t, guildId: e.guild_id, gameServerId: e.game_server_id });
+    np(["GAME_SERVER_DELETE"], (e, t) => {
+        ng({ type: t, guildId: e.guild_id, gameServerId: e.game_server_id });
     }),
-    nE(["GUILD_APPLIED_BOOSTS_UPDATE"], (e, t) => {
-        nA({ type: t, guildId: e.guild_id });
+    np(["GUILD_APPLIED_BOOSTS_UPDATE"], (e, t) => {
+        ng({ type: t, guildId: e.guild_id });
     }),
-    nE(["USER_APPLICATION_IDENTITY_UPDATE"], (e, t) => {
-        nA({
+    np(["USER_APPLICATION_IDENTITY_UPDATE"], (e, t) => {
+        ng({
             type: t,
             user_id: e.user_id,
             application_id: e.application_id,
@@ -4592,11 +4591,11 @@ nm(
             metadata: e.metadata,
         });
     }),
-    nE(["USER_APPLICATION_IDENTITY_REMOVE"], (e, t) => {
-        nA({ type: t, user_id: e.user_id, application_id: e.application_id });
+    np(["USER_APPLICATION_IDENTITY_REMOVE"], (e, t) => {
+        ng({ type: t, user_id: e.user_id, application_id: e.application_id });
     }),
-    nE(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (e) => {
-        nA({
+    np(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (e) => {
+        ng({
             type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE",
             interactionId: e.interaction_id,
             applicationId: e.application_id,
@@ -4606,31 +4605,31 @@ nm(
             ineligibleReason: e.ineligible_reason,
         });
     }),
-    nE(["HAVEN_CONNECT"], (e, t) => {
-        nA({ type: t, room: (0, tW.xf)(e) });
+    np(["HAVEN_CONNECT"], (e, t) => {
+        ng({ type: t, room: (0, tW.xf)(e) });
     }),
-    nE(["HAVEN_DISCONNECT"], (e, t) => {
-        nA({ type: t, userId: e.user_id, roomId: e.room_id });
+    np(["HAVEN_DISCONNECT"], (e, t) => {
+        ng({ type: t, userId: e.user_id, roomId: e.room_id });
     }),
-    nE(["HAVEN_UPDATE"], (e, t) => {
-        nA({ type: t, room: (0, tW.xf)(e) });
+    np(["HAVEN_UPDATE"], (e, t) => {
+        ng({ type: t, room: (0, tW.xf)(e) });
     }),
-    nE(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (e, t) => {
-        nA({ type: t, gameApplicationIds: e.game_application_ids, guildId: e.guild_id });
+    np(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (e, t) => {
+        ng({ type: t, gameApplicationIds: e.game_application_ids, guildId: e.guild_id });
     });
-var nv = n(355097);
-let nO = window.DiscordNative;
+var nC = n(355097);
+let nv = window.DiscordNative;
 tk.dispatcher.getDispatchHandler = function (e) {
-    return np[e];
+    return nh[e];
 };
-let nR = new h.A("ConnectionStore"),
-    nb = 0,
-    nD = null,
-    nL = !0,
-    nw = null,
-    nM = null;
-async function nP(e) {
-    (nb = Date.now()), (nD = e.sessionId), tG.handleConnectionOpen();
+let nO = new h.A("ConnectionStore"),
+    nR = 0,
+    nb = null,
+    nD = !0,
+    nL = null,
+    nw = null;
+async function nM(e) {
+    (nR = Date.now()), (nb = e.sessionId), tG.handleConnectionOpen();
     let t = {},
         n = y.A.getVoiceChannelId();
     if (null != n) {
@@ -4640,33 +4639,33 @@ async function nP(e) {
             (d.w.remove("discord_watchdog_restart_timestamp"),
             window?.performance?.getEntriesByType?.("navigation")?.[0]?.type === "reload" ||
                 i ||
-                (await nO?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
-                !nL)
+                (await nv?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
+                !nD)
         ) {
             let e = I.A.getChannel(n);
             null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, E.CX)(n));
         } else S.A.setLastSessionVoiceChannelId(null != n ? n : null), f.default.selectVoiceChannel(null);
     }
-    tF.update(t, !0), (nL = !1), (nM = null);
+    tF.update(t, !0), (nD = !1), (nw = null);
 }
-function nx() {
+function nP() {
     tF.update();
 }
-function nU() {
+function nx() {
     return tF.update(), !1;
 }
-function nk() {
+function nU() {
     return tG.update(), !1;
 }
-function nG(e) {
+function nk(e) {
     tk.isSessionEstablished() && tk.streamDelete(e);
 }
-class nF extends c.Ay.Store {
+class nG extends c.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
         this.waitFor(g.default, A.A, I.A, T.Ay, S.A, N.A, y.A, C.A, v.A, m.A),
-            this.syncWith([T.Ay], nU),
-            this.syncWith([C.A], nk);
+            this.syncWith([T.Ay], nx),
+            this.syncWith([C.A], nU);
     }
     getSocket() {
         return tk;
@@ -4681,35 +4680,35 @@ class nF extends c.Ay.Store {
         return tk.isSessionEstablished() || __OVERLAY__;
     }
     lastTimeConnectedChanged() {
-        return nb;
+        return nR;
     }
 }
-let nV = new nF(_.h, {
+let nF = new nG(_.h, {
     START_SESSION: function () {
         return tk.isClosed()
-            ? (nR.verbose("Socket is reconnecting because of starting new session"), tk.connect())
-            : (nR.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
+            ? (nO.verbose("Socket is reconnecting because of starting new session"), tk.connect())
+            : (nO.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
     },
     LOGIN_SUCCESS: function () {
         return (
-            nR.verbose("session refresh dispatched", { isEstablished: tk.isSessionEstablished() }),
+            nO.verbose("session refresh dispatched", { isEstablished: tk.isSessionEstablished() }),
             !!tk.isSessionEstablished() && (tk.close(), tk.connect())
         );
     },
     LOGOUT: function (e) {
-        e.isSwitchingAccount && tG.handleAccountSwitch(), nR.verbose("Closing socket because of logout"), tk.close();
+        e.isSwitchingAccount && tG.handleAccountSwitch(), nO.verbose("Closing socket because of logout"), tk.close();
     },
     CLEAR_CACHES: function (e) {
         return e.resetSocket && (tk.close(), tk.dispatcher.clear(), tk.connect()), !1;
     },
     CONNECTION_OPEN: (e) => {
-        nP(e);
+        nM(e);
     },
     CONNECTION_RESUMED: function () {
-        nM = null;
+        nw = null;
     },
     CONNECTION_CLOSED: function () {
-        nR.verbose("connection closed dispatched"), (nb = Date.now());
+        nO.verbose("connection closed dispatched"), (nR = Date.now());
     },
     RTC_CONNECTION_STATE: function (e) {
         if (e.state !== ej.S7L.DISCONNECTED) return !1;
@@ -4718,9 +4717,9 @@ let nV = new nF(_.h, {
     VOICE_CHANNEL_SELECT: function (e) {
         return (
             tF.update({ guildId: e.guildId, channelId: e.channelId }),
-            (nM = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
+            (nw = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
             (0, O.isIOS)() &&
-                nw === ej.g6G.BACKGROUND &&
+                nL === ej.g6G.BACKGROUND &&
                 (null == e.channelId ? tk.close(!0) : tk.isClosed() && ((th = !1), tk.connect())),
             !1
         );
@@ -4729,9 +4728,9 @@ let nV = new nF(_.h, {
         let { voiceStates: t } = e;
         return t.reduce((e, t) => {
             if (g.default.getId() !== t.userId) return e;
-            if (t.sessionId === nD) {
-                if (null != nM)
-                    return nR.verbose("Ignoring voice state for own session due to VSU lock on channel:", nM), e;
+            if (t.sessionId === nb) {
+                if (null != nw)
+                    return nO.verbose("Ignoring voice state for own session due to VSU lock on channel:", nw), e;
                 tF.setState({ guildId: t.guildId, channelId: t.channelId });
             } else {
                 if (t.guildId !== tF.guildId) return e;
@@ -4750,7 +4749,7 @@ let nV = new nF(_.h, {
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
         if (t === tF.channelId) {
-            if (nM === t) return !1;
+            if (nw === t) return !1;
             tF.setState({ guildId: null, channelId: null });
         }
     },
@@ -4758,13 +4757,13 @@ let nV = new nF(_.h, {
         return (
             (0, O.isIOS)()
                 ? (g.default.isAuthenticated() &&
-                      (nw === ej.g6G.INACTIVE && e.state === ej.g6G.BACKGROUND && null == tF.channelId
+                      (nL === ej.g6G.INACTIVE && e.state === ej.g6G.BACKGROUND && null == tF.channelId
                           ? tk.close(!0)
-                          : nw === ej.g6G.BACKGROUND &&
+                          : nL === ej.g6G.BACKGROUND &&
                             e.state === ej.g6G.ACTIVE &&
                             tk.isClosed() &&
                             ((th = !1), tk.connect())),
-                  (nw = e.state))
+                  (nL = e.state))
                 : e.state === ej.g6G.ACTIVE &&
                   ((th = !1), g.default.isAuthenticated() && tk.resetBackoff("App state is active")),
             !1
@@ -4805,7 +4804,7 @@ let nV = new nF(_.h, {
             !1
         );
     },
-    STREAM_CREATE: nx,
+    STREAM_CREATE: nP,
     STREAM_START: function (e) {
         let { streamType: t, guildId: n, channelId: i } = e;
         if (tk.isSessionEstablished()) {
@@ -4823,7 +4822,7 @@ let nV = new nF(_.h, {
                 (e = v.A.getAllActiveStreamKeys().find((e) => (0, p.Iy)(e).ownerId === g.default.getId())),
                     v.A.getAllActiveStreamKeys()
                         .filter((t) => t !== e)
-                        .forEach((e) => nG(e));
+                        .forEach((e) => nk(e));
             }
             tk.streamWatch(t);
         }
@@ -4831,7 +4830,7 @@ let nV = new nF(_.h, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return nG(t), nx(), !1;
+        return nk(t), nP(), !1;
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;
@@ -4855,11 +4854,11 @@ let nV = new nF(_.h, {
     RESET_SOCKET: function (e) {
         tk.connectionState !== R.WILL_RECONNECT && tk.resetSocketAndClearCacheOnError(e.args);
     },
-    CLIPS_SETTINGS_UPDATE: nx,
-    RUNNING_GAMES_CHANGE: nx,
+    CLIPS_SETTINGS_UPDATE: nP,
+    RUNNING_GAMES_CHANGE: nP,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
-        e.settings.type === nv.oD.PRELOADED_USER_SETTINGS &&
+        e.settings.type === nC.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
-            nx();
+            nP();
     },
 });

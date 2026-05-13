@@ -7,23 +7,24 @@ var i = n(627968),
     o = n(790284),
     l = n(272053),
     u = n(495544),
-    c = n(402651),
-    d = n(748391),
+    c = n(843010),
+    d = n(402651),
     _ = n(355097);
 let f = "USER_SETTINGS_MODAL_MODAL_KEY";
 async function h(e) {
     let {
             path: t,
             stackingBehavior: h = "replaceAll",
-            ...p
+            searchParams: p,
+            analyticsLocations: E,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        E = arguments.length > 2 ? arguments[2] : void 0;
+        m = arguments.length > 2 ? arguments[2] : void 0;
     if (u.default.isAuthenticated()) {
         if (
             (null != t && t === _.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && o.A.setState({ subsection: _.nR }),
-            c.A.setState({ source: p.searchParams?.source, analyticsLocations: p.analyticsLocations ?? [] }),
-            a.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN", ...p }),
-            (0, d.f)())
+            d.A.setState({ source: p?.source, analyticsLocations: E ?? [] }),
+            a.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN" }),
+            (0, c.f)())
         ) {
             if (null == e) return;
             l.A.navigate(e);
@@ -85,7 +86,7 @@ async function h(e) {
                         n.e("76032"),
                         n.e("78220"),
                         n.e("33957"),
-                        n.e("18995"),
+                        n.e("75871"),
                         n.e("1639"),
                         n.e("42743"),
                         n.e("74748"),
@@ -95,7 +96,7 @@ async function h(e) {
                         n.e("31227"),
                         n.e("55498"),
                         n.e("54531"),
-                        n.e("14399"),
+                        n.e("31607"),
                         n.e("90324"),
                         n.e("38847"),
                         n.e("88826"),
@@ -797,6 +798,6 @@ async function h(e) {
                     },
                 },
             );
-        E?.();
+        m?.();
     }
 }

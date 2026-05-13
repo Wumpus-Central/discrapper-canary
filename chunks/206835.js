@@ -27,9 +27,9 @@ function c() {
         null != e && (0, r.V2)(e.id),
             l.A.setState({ subsection: null != e ? u.Eq.GUILD : u.Eq.USER_PROFILE, scrollPosition: t });
         {
-            let { openUserSettings: e } = n(858897);
+            let { openUserSettings: e } = n(766075);
             e(a.X.PROFILE_PANEL, { analyticsLocations: c });
         }
     }, [e, t, c, d]);
 }
-n(836602), n(628965);
+n(836602);
