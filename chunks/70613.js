@@ -7,8 +7,8 @@ let s = (e) => {
         c = n.useMemo(() => {
             if (t.length > 1) return `linear-gradient(${l}deg, ${t.join(", ")})`;
             if (t.length > 0) {
-                let e = [t[0], t[0]];
-                return `linear-gradient(${l}deg, ${e})`;
+                let e = t[0];
+                return `linear-gradient(${l}deg, ${e}, ${e})`;
             }
         }, [t, l]);
     return (0, r.jsx)("div", { className: a.k, style: { backgroundImage: c, padding: s }, children: i });
