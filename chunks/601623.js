@@ -703,15 +703,35 @@ function tT() {
     let e = (0, tA.c)(eu.C.NAGBAR),
         t = e?.properties.properties.oneofKind === "nagbar" ? e.properties.properties.nagbar : null,
         n = e?.promotionId,
-        s = r.useCallback(() => {
-            null != n &&
-                (0, tf.qr)(V.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, n, { dismissAction: en.i.USER_DISMISS });
-        }, [n]),
+        s = r.useCallback(
+            (e) => {
+                null != n &&
+                    (0, tf.qr)(V.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, n, { dismissAction: e, forceTrack: !0 });
+            },
+            [n],
+        ),
         a = r.useCallback(() => {
-            ee.default.track(ei.HAw.APP_NOTICE_CLOSED, { notice_type: ei.kqX.PREMIUM_MARKETING_NAGBAR }), s();
-        }, [s]);
-    if (null == t) return null;
-    let o = (0, tI.h)({ buttonAction: t.ctaAction, deeplinkSection: t.deeplinkSection, onClose: s });
+            ee.default.track(ei.HAw.APP_NOTICE_CLOSED, { notice_type: ei.kqX.PREMIUM_MARKETING_NAGBAR }),
+                s(en.i.USER_DISMISS);
+        }, [s]),
+        o = r.useRef(null);
+    if (
+        (r.useEffect(() => {
+            null == t ||
+                null == n ||
+                (o.current !== n &&
+                    ((o.current = n), (0, tf.Wx)(V.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, { snowflakeId: n })));
+        }, [t, n]),
+        null == t)
+    )
+        return null;
+    let l = (0, tI.h)({
+        buttonAction: t.ctaAction,
+        deeplinkSection: t.deeplinkSection,
+        onClose: () => {
+            s(en.i.TAKE_ACTION);
+        },
+    });
     return (0, i.jsxs)(th.T0, {
         onClick: a,
         children: [
@@ -723,7 +743,7 @@ function tT() {
                         ee.default.track(ei.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                             notice_type: ei.kqX.PREMIUM_MARKETING_NAGBAR,
                         }),
-                            o();
+                            l();
                     },
                 }),
         ],
