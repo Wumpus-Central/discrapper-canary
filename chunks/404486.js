@@ -7350,20 +7350,18 @@ let rh = {
         },
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
-                    a.e("28149"),
-                    a.e("11095"),
-                    a.e("91079"),
-                    a.e("86695"),
+                    a.e("94864"),
+                    a.e("27681"),
                     a.e("55567"),
                     a.e("21185"),
                     a.e("44135"),
                     a.e("80798"),
                     a.e("71070"),
                     a.e("42754"),
-                    a.e("72200"),
+                    a.e("1639"),
                     a.e("87845"),
                     a.e("46719"),
-                    a.e("66575"),
+                    a.e("77122"),
                     a.e("45970"),
                     a.e("56574"),
                     a.e("20980"),
@@ -7797,7 +7795,7 @@ let rL = {
         return (t) => (0, r.jsx)(e, { ...t, entryPoint: a2.q1.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL });
     },
     ExistingUserAgeGatePrompt: async () => {
-        let { default: e } = await Promise.all([a.e("8319"), a.e("82758"), a.e("80022"), a.e("10136")]).then(
+        let { default: e } = await Promise.all([a.e("27681"), a.e("82758"), a.e("80022"), a.e("10136")]).then(
             a.bind(a, 776971),
         );
         return (t) => (0, r.jsx)(e, { ...t, source: rM.w_.NSFW_SERVER });
@@ -7808,7 +7806,7 @@ let rL = {
     },
     NewUserAgeGate: async () => {
         let { default: e } = await Promise.all([
-            a.e("8319"),
+            a.e("27681"),
             a.e("19623"),
             a.e("82758"),
             a.e("80022"),
@@ -8749,14 +8747,14 @@ let rL = {
         return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
     },
     OtherFriendRequestsModal: async () => {
-        let { default: e } = await Promise.all([a.e("95491"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
+        let { default: e } = await Promise.all([a.e("48757"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
             a.bind(a, 516259),
         );
         return (t) => (0, r.jsx)(e, { ...t });
     },
     AcceptInviteModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("66575"),
+            a.e("77122"),
             a.e("35316"),
             a.e("74275"),
             a.e("91643"),
@@ -16961,7 +16959,7 @@ function hb() {
                                         let e = performance.now();
                                         (0, ek.openModalLazy)(async () => {
                                             let { default: n } = await Promise.all([
-                                                a.e("68885"),
+                                                a.e("31870"),
                                                 a.e("92868"),
                                                 a.e("63408"),
                                                 a.e("77375"),
