@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { k5: () => m, ar: () => E, k0: () => S, f9: () => I, nf: () => g, Bv: () => T, g5: () => A });
+n.d(t, { Bv: () => T, ar: () => E, f9: () => I, g5: () => A, k0: () => S, k5: () => m, nf: () => g });
 var i = n(64700),
     r = n(989349),
     s = n.n(r),
@@ -8,14 +8,9 @@ var i = n(64700),
     l = n(166403),
     u = n(89366),
     c = n(881489),
-    d = n(694080);
-let _ = (0, n(945810).mj)({
-    name: "2026-04-trial-continuation-discount",
-    kind: "user",
-    defaultConfig: !1,
-    variations: { 0: !1, 1: !0 },
-});
-var f = n(422936),
+    d = n(694080),
+    _ = n(504836),
+    f = n(422936),
     h = n(234419),
     p = n(788868);
 function E() {
@@ -78,10 +73,7 @@ let m = () => {
     I = () => {
         let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = m(),
-            n = (function (e) {
-                let { location: t } = e;
-                return _.useConfig({ location: t });
-            })({ location: "churn_offer" }),
+            n = (0, _.Z)({ location: "churn_offer" }),
             i = null !== e && e.hasPremiumNitroMonthly,
             r = !!e?.hasActiveTrial;
         return i && !t && (!r || n);
