@@ -456,6 +456,7 @@ var G =
         (r.ASYNC_VIDEO_INPUT_DEVICE_INIT = "async_video_input_device_init"),
         (r.PORT_AWARE_LATENCY_TESTING = "port_aware_latency_testing"),
         (r.SPATIAL_AUDIO = "spatial_audio"),
+        (r.KRISP_NATIVE_ERROR = "krisp_native_error"),
         r),
     F =
         (((s = {})[(s.Started = 0)] = "Started"),
@@ -1558,25 +1559,27 @@ class H extends T.A {
                                     ? s.noiseCancellerFrames - a.noiseCancellerFrames
                                     : 0
                                 : e;
-                    if (
-                        this.noiseCancellation &&
-                        t > 50 &&
-                        null != s.noiseCancellerProcessTime &&
-                        null != a.noiseCancellerProcessTime
-                    ) {
-                        let e = s.noiseCancellerProcessTime - a.noiseCancellerProcessTime;
-                        e / t > 8
-                            ? this.emit(c.yq.NoiseCancellationError, N.CO.CPU_OVERUSE)
-                            : 0 === e && this.emit(c.yq.NoiseCancellationError, N.CO.FAILED);
+                    if (!(0, b.$b)(G.KRISP_NATIVE_ERROR)) {
+                        if (
+                            this.noiseCancellation &&
+                            t > 50 &&
+                            null != s.noiseCancellerProcessTime &&
+                            null != a.noiseCancellerProcessTime
+                        ) {
+                            let e = s.noiseCancellerProcessTime - a.noiseCancellerProcessTime;
+                            e / t > 8
+                                ? this.emit(c.yq.NoiseCancellationError, N.CO.KRISP_CPU_OVERUSE)
+                                : 0 === e && this.emit(c.yq.NoiseCancellationError, N.CO.KRISP_FAILED);
+                        }
+                        this.inputMode === N.TB.VOICE_ACTIVITY &&
+                            this.vadAutoThreshold &&
+                            this.vadUseKrisp &&
+                            e > 50 &&
+                            null != s.voiceActivityDetectorProcessTime &&
+                            null != a.voiceActivityDetectorProcessTime &&
+                            (s.voiceActivityDetectorProcessTime - a.voiceActivityDetectorProcessTime) / e > 4 &&
+                            this.emit(c.yq.VoiceActivityDetectorError, N.CO.KRISP_VAD_CPU_OVERUSE);
                     }
-                    this.inputMode === N.TB.VOICE_ACTIVITY &&
-                        this.vadAutoThreshold &&
-                        this.vadUseKrisp &&
-                        e > 50 &&
-                        null != s.voiceActivityDetectorProcessTime &&
-                        null != a.voiceActivityDetectorProcessTime &&
-                        (s.voiceActivityDetectorProcessTime - a.voiceActivityDetectorProcessTime) / e > 4 &&
-                        this.emit(c.yq.VoiceActivityDetectorError, N.CO.VAD_CPU_OVERUSE);
                 }
             }
             this.stats = e;
@@ -1841,6 +1844,7 @@ class er extends l.A {
                 this.handleNativeScreenSharePickerError,
             ),
             e.setVideoCodecErrorCallback?.(this.handleVideoCodecErrorCallback),
+            e.setVoiceProcessingErrorCallback?.(this.handleVoiceProcessingErrorCallback),
             e.setSystemMicrophoneModeChangeCallback?.(this.handleSystemMicrophoneModeChangeCallback),
             this.on("removeListener", this.handleRemoveListener),
             this.on("newListener", this.handleNewListener),
@@ -1961,6 +1965,8 @@ class er extends l.A {
                 return (0, b.$b)(G.PORT_AWARE_LATENCY_TESTING);
             case N.O5.SPATIAL_AUDIO:
                 return (0, b.$b)(G.SPATIAL_AUDIO);
+            case N.O5.KRISP_NATIVE_ERROR:
+                return (0, b.$b)(G.KRISP_NATIVE_ERROR);
             case N.O5.DIAGNOSTICS:
             case N.O5.NATIVE_PING:
             case N.O5.AUTOMATIC_VAD:
@@ -2566,6 +2572,9 @@ class er extends l.A {
     };
     handleVideoCodecErrorCallback = (e) => {
         this.emit(c.bg.VideoCodecError, e);
+    };
+    handleVoiceProcessingErrorCallback = (e) => {
+        this.emit(c.bg.VoiceProcessingError, e);
     };
     handleSystemMicrophoneModeChangeCallback = (e) => {
         this.emit(c.bg.SystemMicrophoneModeChange, e);

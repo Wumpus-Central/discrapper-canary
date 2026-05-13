@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { B1: () => u, B6: () => d, QW: () => _, iy: () => o });
+n.d(t, { B1: () => d, B6: () => u, QW: () => c, iy: () => o });
 var i,
     r,
     s = n(228366);
@@ -84,18 +84,28 @@ let l = {
     "screenshare-os-error": { errorCode: 3004, severity: "critical", category: "devices", isErrorOutbound: !0 },
     "debug-log-upload-failed": { errorCode: 4001, severity: "info", category: "debug", isErrorOutbound: !0 },
 };
-var d =
+var u =
     (((r = {}).Unknown = "Unknown"),
     (r.UploadErrorGeneral = "UploadErrorCodes.GENERAL"),
     (r.UploadErrorNoFile = "UploadErrorCodes.NO_FILE"),
     (r.UploadErrorProgress = "UploadErrorCodes.PROGRESS"),
     (r.UploadErrorUpload = "UploadErrorCodes.UPLOAD"),
     (r.UploadErrorRead = "UploadErrorCodes.READ"),
-    (r.NoiseCancellerCpuOveruse = "NoiseCancellerError.CPU_OVERUSE"),
-    (r.NoiseCancellerFailed = "NoiseCancellerError.FAILED"),
-    (r.NoiseCancellerVadCpuOveruse = "NoiseCancellerError.VAD_CPU_OVERUSE"),
+    (r.KrispCpuOveruse = "NoiseCancellerError.CPU_OVERUSE"),
+    (r.KrispFailed = "NoiseCancellerError.FAILED"),
+    (r.KrispVadCpuOveruse = "NoiseCancellerError.VAD_CPU_OVERUSE"),
+    (r.KrispInitError = "NoiseCancellerError.INIT_ERROR"),
+    (r.KrispInitErrorNative = "NoiseCancellerError.INIT_ERROR_NATIVE"),
+    (r.KrispInitErrorSse4NotSupported = "NoiseCancellerError.KRISP_INIT_ERROR_SSE4_NOT_SUPPORTED"),
+    (r.KrispInitErrorAvx2NotSupported = "NoiseCancellerError.KRISP_INIT_ERROR_AVX2_NOT_SUPPORTED"),
+    (r.KrispInitErrorUnsigned = "NoiseCancellerError.KRISP_INIT_ERROR_UNSIGNED"),
+    (r.KrispInitErrorGlobalInit = "NoiseCancellerError.KRISP_INIT_ERROR_GLOBAL_INIT"),
+    (r.KrispInitErrorWeight8k = "NoiseCancellerError.KRISP_INIT_ERROR_WEIGHT_8K"),
+    (r.KrispInitErrorWeight16k = "NoiseCancellerError.KRISP_INIT_ERROR_WEIGHT_16K"),
+    (r.KrispInitErrorWeight32k = "NoiseCancellerError.KRISP_INIT_ERROR_WEIGHT_32K"),
+    (r.KrispInitErrorWeightVad = "NoiseCancellerError.KRISP_INIT_ERROR_WEIGHT_VAD"),
     r);
-function _(e) {
+function c(e) {
     let { type: t, ...n } = e;
     a.error(`AV error reported: ${t} ${JSON.stringify(n)}`);
     let i = l[t];
@@ -108,13 +118,13 @@ function _(e) {
         context: e,
     });
 }
-function u(e) {
+function d(e) {
     return l[e];
 }
-let c = Object.values(l).map((e) => e.errorCode),
-    E = new Set(c);
-if (c.length !== E.size) {
-    let e = c.filter((e, t) => c.indexOf(e) !== t),
+let _ = Object.values(l).map((e) => e.errorCode),
+    f = new Set(_);
+if (_.length !== f.size) {
+    let e = _.filter((e, t) => _.indexOf(e) !== t),
         t = Object.entries(l)
             .filter((t) => {
                 let [n, i] = t;
