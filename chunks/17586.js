@@ -1,0 +1,18 @@
+e.exports = {
+    kL: "container__0ab2c",
+    aN: "sidebarHeader__0ab2c",
+    uA: "layoutStyle__0ab2c",
+    mG: "inline__0ab2c",
+    bE: "xsmallAvatar__0ab2c",
+    $M: "sidebarHeaderDefault__0ab2c sidebarHeader__0ab2c",
+    Xh: "username__0ab2c",
+    RJ: "userRowAvatar__0ab2c",
+    F0: "userRowText__0ab2c",
+    BP: "userRowSubText__0ab2c",
+    PX: "userRowSubAvatar__0ab2c",
+    p2: "permissionsForm__0ab2c",
+    Nd: "createOverwritePopout__0ab2c",
+    xf: "roleRow__0ab2c",
+    S3: "roleName__0ab2c",
+    ON: "searchBar__0ab2c",
+};

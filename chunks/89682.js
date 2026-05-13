@@ -1,0 +1,15 @@
+e.exports = {
+    lY: "animation_f2170c",
+    vk: "clickable_f2170c",
+    Kk: "icon_f2170c",
+    Hk: "userIcon_f2170c",
+    Pf: "label_f2170c",
+    Qs: "content_f2170c",
+    VN: "close_f2170c",
+    R4: "leading_f2170c",
+    O1: "timer_f2170c",
+    qB: "progress_f2170c",
+    hN: "ring_f2170c",
+    rL: "custom-voice-invite-suggestions-timer_f2170c",
+    Ft: "paused_f2170c",
+};
