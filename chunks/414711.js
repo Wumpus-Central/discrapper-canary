@@ -112,7 +112,7 @@ class p extends r.PureComponent {
                                 onClick: d ?? void 0,
                                 style: { height: e, opacity: t },
                                 ...l,
-                                children: s(n || _ || r),
+                                children: s(n || _ || r, l.tabIndex),
                             }),
                         }),
                 }),
