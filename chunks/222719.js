@@ -10,7 +10,7 @@ var n = r(503698),
     d = r(287809),
     u = r(166403),
     m = r(927578),
-    g = r(367319),
+    g = r(526292),
     x = r(422936),
     p = r(234419),
     T = r(511484),
@@ -23,7 +23,7 @@ function A(e) {
         a = (0, T.N1)(r);
     return (0, i.jsx)(i.Fragment, {
         children: f.intl.format(f.t.sJTwHQ, {
-            numMonths: n.discount.user_usage_limit ?? I.OJ,
+            numMonths: n.discount.userUsageLimit ?? I.OJ,
             discountedPrice: a,
             regularPrice: t,
         }),

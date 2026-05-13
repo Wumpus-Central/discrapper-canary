@@ -821,8 +821,8 @@ let tp = (e) => {
                               children: [
                                   (0, r.jsx)(ts, { containerVisibilityPercentage: L }),
                                   _ &&
-                                      h?.expires_at != null &&
-                                      (0, r.jsx)(e8, { expiresAt: h.expires_at, className: th.IZ }),
+                                      h?.expiresAt != null &&
+                                      (0, r.jsx)(e8, { expiresAt: h.expiresAt.toISOString(), className: th.IZ }),
                                   (0, r.jsx)(to, {
                                       children:
                                           _ && null != h
@@ -838,8 +838,8 @@ let tp = (e) => {
                                           color: "text-strong",
                                           children: $.intl.format($.t["3Q4wCy"], {
                                               discountedPrice: m,
-                                              billingPeriod: (0, eD.Ke)(h.discount.user_usage_limit_interval),
-                                              numMonths: h.discount.user_usage_limit,
+                                              billingPeriod: (0, eD.Ke)(h.discount.userUsageLimitInterval),
+                                              numMonths: h.discount.userUsageLimit,
                                           }),
                                       }),
                               ],
@@ -1013,9 +1013,9 @@ let ty = function (e) {
                             variant: "text-sm/medium",
                             color: "text-default",
                             children: $.intl.format($.t["3Q4wCy"], {
-                                numMonths: s.discount.user_usage_limit,
+                                numMonths: s.discount.userUsageLimit,
                                 discountedPrice: a,
-                                billingPeriod: (0, eD.Ke)(s.discount.user_usage_limit_interval),
+                                billingPeriod: (0, eD.Ke)(s.discount.userUsageLimitInterval),
                             }),
                         }),
                     ],

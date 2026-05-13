@@ -106,7 +106,7 @@ let I = (e) => {
                 [L],
             ),
             V = a.useMemo(() => {
-                let e = null != G && G.discount.user_usage_limit_interval === T.Ff.MONTH;
+                let e = null != G && G.discount.userUsageLimitInterval === T.Ff.MONTH;
                 return r.map((t) => {
                     let { isCurrentPlan: n, disabled: l } = (0, h.cD)(O, t),
                         a = (0, S.Rs)(O, {

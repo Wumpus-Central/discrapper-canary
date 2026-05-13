@@ -58,7 +58,7 @@ function _(e, t) {
           : u.intl.formatToPlainString(u.t["2rh7rw"], { minutes: Math.max(e.minutes, 1), discountPercentage: n });
 }
 let f = (e) => {
-    let t = e.expires_at,
-        n = (0, i.A)(null != t ? Date.parse(t) : 0, 1e3);
+    let t = e.expiresAt,
+        n = (0, i.A)(null != t ? t.getTime() : 0, 1e3);
     return null == t ? null : _(n, Number(e.discount.amount));
 };

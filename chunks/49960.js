@@ -379,7 +379,7 @@ function e_(e) {
         tN = (0, x.V)(eN ?? void 0),
         ty = !tS && !eh && null != tN && null != eG && eo.TP[tN.trial_id].skus.includes(eG),
         tC = (0, P.O)(),
-        tv = tC?.discount?.plan_ids.some((e) => eo.hd[e].skuId === eG),
+        tv = tC?.discount?.planIds.some((e) => eo.hd[e].skuId === eG),
         tO = !!(!tS && !eh && null != tC && null != eG && tv),
         tR = null != ew && null != eD[ew] ? eD[ew]?.type : null,
         tb = r.useMemo(

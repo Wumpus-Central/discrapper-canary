@@ -251,7 +251,7 @@ let U = (e) => {
         Y = a.useCallback((e) => k(e), [k]);
     r()(null != y, "Expected plan to be selected: flow=%s, planId=%s, hasFetchedPlans=%s, skuId=%s", N, P, x, S);
     let G = a.useMemo(() => {
-            let e = D?.discount?.plan_ids;
+            let e = D?.discount?.planIds;
             return w && null != D && null != e && null != y && e.includes(y.id);
         }, [w, D, y]),
         F = a.useMemo(() => U || (null != E && null != m), [U, E, m]),

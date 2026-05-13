@@ -65,7 +65,7 @@ function I(e) {
     return (0, i.jsx)(T, {
         isTabSelected: t,
         badgeCopy: r ? s : E.intl.string(E.t["/DTtr6"]),
-        offerExpiresAt: n.expires_at,
+        offerExpiresAt: n.expiresAt?.toISOString() ?? null,
         tooltipTextOverride: a,
         tooltipPosition: "right",
     });

@@ -208,7 +208,7 @@ function en(e) {
                 continue_session_initial_step: eS,
                 custom_checkout_flow: eY,
                 has_saved_payment_source: eO,
-                discount_id: null != e3 ? e3.discount_id : e5,
+                discount_id: null != e3 ? e3.discountId : e5,
             });
         }),
         a.useEffect(() => {

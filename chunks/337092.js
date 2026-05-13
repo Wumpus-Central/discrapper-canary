@@ -196,7 +196,7 @@ let el = () => {
             ),
             H = n ?? A;
         r()(null != H, "Price option has to be set");
-        let K = P?.discount?.plan_ids,
+        let K = P?.discount?.planIds,
             Z = null != P && l.some((e) => K?.includes(e)) && null != P.discount,
             q = l.includes(X.gD.PREMIUM_MONTH_TIER_2) ? (0, U.y8)(X.gD.PREMIUM_MONTH_TIER_2, !1, S, H) : void 0,
             z = F?.id != null && l.includes(F.id);
@@ -563,7 +563,7 @@ function em(e) {
                                         variant: "text-sm/normal",
                                         className: ee.Tz,
                                         children: I.intl.format(I.t["nG7g/E"], {
-                                            numMonths: N?.discount.user_usage_limit ?? "",
+                                            numMonths: N?.discount.userUsageLimit ?? "",
                                             discountedPrice: (0, k.$g)(v.amount - L, v.currency),
                                             regularPrice: (0, k.$g)(v.amount, v.currency),
                                         }),

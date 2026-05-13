@@ -88,13 +88,13 @@ let g = (e) => {
                 });
             if (null != D && eu) {
                 let e = D.discount;
-                if (e.user_usage_limit_interval === x.Ff.MONTH)
+                if (e.userUsageLimitInterval === x.Ff.MONTH)
                     return (0, l.jsx)(r.J, {
                         gradientColor: "nitro-pink",
                         Icon: i.t,
                         text: N.intl.format(I.default.wCkwJf, {
                             percentOff: e.amount,
-                            intervalCount: e.user_usage_limit_interval_count,
+                            intervalCount: e.userUsageLimitIntervalCount,
                         }),
                     });
             }

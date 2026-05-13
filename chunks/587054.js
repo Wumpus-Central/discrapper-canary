@@ -16,12 +16,12 @@ var i = n(627968),
     E = n(429913),
     m = n(826673),
     g = n(780964),
-    A = n(858897),
+    A = n(766075),
     I = n(30370),
     T = n(46225),
     S = n(652215),
     N = n(49999),
-    y = n(452832),
+    y = n(230451),
     C = n(375708),
     v = n(448759);
 let O = (e) => {
@@ -92,10 +92,10 @@ let k = function (e) {
     let { dismissCurrentNotice: t, subscriptionTier: n } = e,
         { analyticsLocations: r } = (0, p.Ay)(h.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
         s = (0, M.O)(),
-        a = (0, D.A)(null != s && null != s.expires_at ? Date.parse(s.expires_at) : 0);
+        a = (0, D.A)(null != s && null != s.expiresAt ? s.expiresAt.getTime() : 0);
     return null == s ||
-        s.discount?.plan_ids.some((e) => U.hd[e].skuId !== n) ||
-        null == s.expires_at ||
+        s.discount?.planIds.some((e) => U.hd[e].skuId !== n) ||
+        null == s.expiresAt ||
         Object.values(a).every((e) => 0 === e)
         ? null
         : (0, i.jsxs)(P.T0, {

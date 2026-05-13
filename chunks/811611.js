@@ -49,7 +49,7 @@ function G(e) {
 }
 function F(e) {
     let { className: t, children: n, withBottomMargin: r, discountOffer: s, trialOffer: o } = e,
-        l = o?.expires_at ?? s?.expires_at,
+        l = o?.expires_at ?? s?.expiresAt?.toISOString(),
         u = o?.subscription_trial,
         c = e.subscriptionTier ?? u?.sku_id ?? M.pe.TIER_2;
     return (0, i.jsxs)("div", {
