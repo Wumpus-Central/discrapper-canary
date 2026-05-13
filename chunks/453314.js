@@ -247,7 +247,7 @@ class J extends r.PureComponent {
             case T.rD.GUILD:
                 return (0, g.L3)(e, async () => {
                     let { default: e } = await Promise.all([
-                        n.e("3099"),
+                        n.e("77827"),
                         n.e("60060"),
                         n.e("94864"),
                         n.e("6772"),
@@ -259,7 +259,7 @@ class J extends r.PureComponent {
                         n.e("86522"),
                         n.e("3210"),
                         n.e("46654"),
-                        n.e("96221"),
+                        n.e("79343"),
                         n.e("34195"),
                         n.e("99961"),
                         n.e("31688"),

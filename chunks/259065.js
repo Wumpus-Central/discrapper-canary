@@ -11,7 +11,7 @@ let o = "display-name-styles-modal",
         (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("96221"),
+                    n.e("79343"),
                     n.e("34354"),
                     n.e("35291"),
                     n.e("758"),
@@ -25,7 +25,7 @@ let o = "display-name-styles-modal",
                     n.e("46461"),
                     n.e("15612"),
                     n.e("6026"),
-                    n.e("3099"),
+                    n.e("77827"),
                     n.e("45650"),
                     n.e("46654"),
                     n.e("83419"),
