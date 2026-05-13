@@ -343,9 +343,8 @@ class eY extends l.PureComponent {
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
-                                        n.e("3210"),
+                                        n.e("19960"),
                                         n.e("34195"),
-                                        n.e("12697"),
                                         n.e("26132"),
                                         n.e("46652"),
                                         n.e("93190"),
@@ -400,9 +399,9 @@ class eY extends l.PureComponent {
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
-                                        n.e("3210"),
+                                        n.e("19960"),
                                         n.e("34195"),
-                                        n.e("12697"),
+                                        n.e("1639"),
                                         n.e("26132"),
                                         n.e("46652"),
                                         n.e("93190"),
@@ -454,8 +453,7 @@ class eY extends l.PureComponent {
                                     t,
                                     async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("12697"),
-                                            n.e("3210"),
+                                            n.e("19960"),
                                             n.e("26132"),
                                             n.e("46652"),
                                             n.e("93190"),

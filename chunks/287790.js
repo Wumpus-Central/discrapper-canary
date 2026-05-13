@@ -392,61 +392,63 @@ var eT = n(502572),
     eP = n(422936),
     ex = n(234419),
     eU = n(549996),
-    ek = n(371764),
-    eG = n(949964),
-    eF = n(103411),
-    eV = n(778712),
-    eB = n(97808),
-    eH = n(590251),
-    ej = n(144165),
-    eY = n(854627),
-    eW = n(427262),
-    eK = n(326084),
-    ez = n(851746),
-    e$ = n(664654),
-    eq = n(212737),
-    eZ = n(849812);
-let eX = (e) => {
+    ek = n(810660),
+    eG = n(175569),
+    eF = n(371764),
+    eV = n(949964),
+    eB = n(103411),
+    eH = n(778712),
+    ej = n(97808),
+    eY = n(590251),
+    eW = n(144165),
+    eK = n(854627),
+    ez = n(427262),
+    e$ = n(326084),
+    eq = n(851746),
+    eZ = n(664654),
+    eX = n(212737),
+    eQ = n(849812);
+let eJ = (e) => {
         let { user: t } = e,
-            { avatarSrc: n, eventHandlers: i } = (0, eY.A)({ userId: t.id, size: eV._3.SIZE_24 });
+            { avatarSrc: n, eventHandlers: i } = (0, eK.A)({ userId: t.id, size: eH._3.SIZE_24 });
         return (0, r.jsx)(
-            eB.eu,
-            { className: eZ.bj, src: n, "aria-label": (0, eW.mG)(t), size: eV._3.SIZE_24, ...i },
+            ej.eu,
+            { className: eQ.bj, src: n, "aria-label": (0, ez.mG)(t), size: eH._3.SIZE_24, ...i },
             t.id,
         );
     },
-    eQ = (e) => {
+    e0 = (e) => {
         let { slotIndex: t } = e;
-        return (0, r.jsx)("div", { className: eZ.p, children: t });
+        return (0, r.jsx)("div", { className: eQ.p, children: t });
     },
-    eJ = (e) => {
+    e1 = (e) => {
         let { referralSentUsers: t } = e;
         return (0, r.jsx)("div", {
-            className: eZ.L$,
+            className: eQ.L$,
             children: (() => {
                 let e = [];
-                for (let n = 0; n < e$.Z; n++)
+                for (let n = 0; n < eZ.Z; n++)
                     if (t?.[n] !== void 0) {
-                        let i = (0, r.jsx)(eX, { user: t[n] }, t[n].id);
+                        let i = (0, r.jsx)(eJ, { user: t[n] }, t[n].id);
                         e.push(i);
                     } else {
-                        let t = (0, r.jsx)(eQ, { slotIndex: n + 1 }, n);
+                        let t = (0, r.jsx)(e0, { slotIndex: n + 1 }, n);
                         e.push(t);
                     }
                 return e;
             })(),
         });
     },
-    e0 = (e) => {
+    e2 = (e) => {
         let { nReferralsSent: t } = e;
-        return (0, r.jsx)(eH.a, {
+        return (0, r.jsx)(eY.a, {
             percent: 33.3 * t,
             colorOverride: "#53ac66",
-            background: eZ.cq,
+            background: eQ.cq,
             strokeSize: 0.8,
-            ringColorOverrideClassName: eZ.e0,
-            overlayClassName: t === e$.Z ? eZ.ys : void 0,
-            children: (0, r.jsx)(ej._, {
+            ringColorOverrideClassName: eQ.e0,
+            overlayClassName: t === eZ.Z ? eQ.ys : void 0,
+            children: (0, r.jsx)(eW._, {
                 src: "https://cdn.discordapp.com/assets/content/f55a25cc26b81c0d72e110bb7fd978e6aff78e847f53b34011ba4600be592975.svg",
                 height: 93,
                 width: 93,
@@ -454,23 +456,23 @@ let eX = (e) => {
             }),
         });
     },
-    e1 = (e) => {
+    e3 = (e) => {
         let { className: t } = e,
-            { referralSentUsers: i } = (0, e$.J)(),
-            s = (0, u.bG)([ez.A], () => ez.A.getRecipientStatus()),
-            a = (0, u.bG)([ez.A], () => ez.A.getHasEligibleFriends()),
-            l = s.size === e$.Z && [...s.values()].every((e) => e === eK.aK.REDEEMED),
-            c = s.size === e$.Z;
+            { referralSentUsers: i } = (0, eZ.J)(),
+            s = (0, u.bG)([eq.A], () => eq.A.getRecipientStatus()),
+            a = (0, u.bG)([eq.A], () => eq.A.getHasEligibleFriends()),
+            l = s.size === eZ.Z && [...s.values()].every((e) => e === e$.aK.REDEEMED),
+            c = s.size === eZ.Z;
         return (0, r.jsxs)("div", {
-            className: o()(eZ.kL, t),
+            className: o()(eQ.kL, t),
             children: [
-                (0, r.jsx)("div", { className: eZ.G3, children: (0, r.jsx)(e0, { nReferralsSent: s.size }) }),
+                (0, r.jsx)("div", { className: eQ.G3, children: (0, r.jsx)(e2, { nReferralsSent: s.size }) }),
                 (0, r.jsxs)("div", {
-                    className: eZ.IH,
+                    className: eQ.IH,
                     children: [
-                        (0, r.jsx)(eJ, { referralSentUsers: i }),
+                        (0, r.jsx)(e1, { referralSentUsers: i }),
                         (0, r.jsxs)("div", {
-                            className: eZ.n4,
+                            className: eQ.n4,
                             children: [
                                 (0, r.jsx)(b.D, {
                                     variant: "heading-lg/semibold",
@@ -485,7 +487,7 @@ let eX = (e) => {
                                             ? $.intl.format($.t["zWhX/Q"], {
                                                   helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
                                               })
-                                            : i.length === e$.Z
+                                            : i.length === eZ.Z
                                               ? !0 === l
                                                   ? $.intl.format($.t["1aEjsH"], {
                                                         helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
@@ -514,7 +516,7 @@ let eX = (e) => {
                                             return (n) => (0, r.jsx)(e, { ...n, startingScreen: t });
                                         });
                                 })({
-                                    startingScreen: eq.SelectFriendsModalScreens.SELECT_FRIENDS,
+                                    startingScreen: eX.SelectFriendsModalScreens.SELECT_FRIENDS,
                                     analyticsLocations: [],
                                 }),
                         }),
@@ -523,13 +525,13 @@ let eX = (e) => {
             ],
         });
     };
-var e2 = n(989349),
-    e3 = n.n(e2),
-    e6 = n(496431),
-    e4 = n(116689);
-let e5 = (e) => {
+var e6 = n(989349),
+    e4 = n.n(e6),
+    e5 = n(496431),
+    e7 = n(116689);
+let e8 = (e) => {
     let { expiresAt: t, className: n } = e,
-        i = (0, e6.A)(e3()(t).toDate(), 1e3);
+        i = (0, e5.A)(e4()(t).toDate(), 1e3);
     if (null == i) return null;
     let { days: s, hours: a, minutes: l, seconds: u } = i,
         c = [
@@ -539,7 +541,7 @@ let e5 = (e) => {
             { unitValue: u, unitType: "seconds" },
         ];
     return (0, r.jsxs)("div", {
-        className: o()(e4.Xl, n),
+        className: o()(e7.Xl, n),
         children: [
             (0, r.jsx)(x.E, {
                 variant: "text-sm/semibold",
@@ -547,7 +549,7 @@ let e5 = (e) => {
                 children: $.intl.string($.t["/ARFVE"]),
             }),
             (0, r.jsx)("div", {
-                className: e4.$R,
+                className: e7.$R,
                 children: c.map((e, t) =>
                     (function (e, t) {
                         let n,
@@ -557,13 +559,13 @@ let e5 = (e) => {
                                 (0, r.jsxs)(
                                     "div",
                                     {
-                                        className: e4.bh,
+                                        className: e7.bh,
                                         children: [
                                             (0, r.jsxs)("div", {
-                                                className: e4.kB,
+                                                className: e7.kB,
                                                 children: [
                                                     (0, r.jsx)("div", {
-                                                        className: e4.B2,
+                                                        className: e7.B2,
                                                         children: (0, r.jsx)(x.E, {
                                                             variant: "text-md/medium",
                                                             color: "text-strong",
@@ -571,7 +573,7 @@ let e5 = (e) => {
                                                         }),
                                                     }),
                                                     (0, r.jsx)("div", {
-                                                        className: e4.B2,
+                                                        className: e7.B2,
                                                         children: (0, r.jsx)(x.E, {
                                                             variant: "text-md/medium",
                                                             color: "text-strong",
@@ -604,7 +606,7 @@ let e5 = (e) => {
                                 ),
                                 !t &&
                                     (0, r.jsx)(x.E, {
-                                        className: e4.cV,
+                                        className: e7.cV,
                                         variant: "text-lg/normal",
                                         color: "text-strong",
                                         children: ":",
@@ -617,12 +619,10 @@ let e5 = (e) => {
         ],
     });
 };
-var e7 = n(473702),
-    e8 = n(505559),
-    e9 = n(103733),
+var e9 = n(473702),
     te = n(702841),
-    tt = n(608416),
-    tn = n(384601),
+    tt = n(652533),
+    tn = n(20458),
     ti = n(447764),
     tr = n(180894);
 let ts = (e) => {
@@ -729,7 +729,7 @@ let tp = (e) => {
                         align: "start",
                         gap: 32,
                         children: [
-                            (0, r.jsx)(e8.A, { text: $.intl.string($.t.yhldRB) }),
+                            (0, r.jsx)(eG.A, { text: $.intl.string($.t.yhldRB) }),
                             (0, r.jsxs)(eS.B, {
                                 align: "start",
                                 gap: 12,
@@ -788,15 +788,15 @@ let tp = (e) => {
             I = (0, eU.c)(eg.C.MARKETING_PAGE_BANNER),
             T = null;
         null != I && "marketingPageBanner" === I.properties.properties.oneofKind
-            ? (T = (0, r.jsx)(ek.x, {
+            ? (T = (0, r.jsx)(eF.x, {
                   componentId: I.id,
                   promotionBannerMarketingComponentFields: I.properties.properties.marketingPageBanner,
               }))
             : i
-              ? (T = (0, r.jsx)(eG.A, { variant: eG.c.SUBSCRIBER_HOME }))
+              ? (T = (0, r.jsx)(eV.A, { variant: eV.c.SUBSCRIBER_HOME }))
               : s
                 ? (T = (0, r.jsx)(td, {}))
-                : a && (T = (0, r.jsx)(e1, {}));
+                : a && (T = (0, r.jsx)(e3, {}));
         let S = (0, ex.V)(),
             N = (0, eP.O)(),
             y = (0, R.U9)(N, K.pe.TIER_2) ? K.pe.TIER_2 : void 0,
@@ -804,7 +804,7 @@ let tp = (e) => {
             v = (0, ev.A)(),
             O = v.isFractionalPremiumActive && !C && null == T && !_,
             b = (0, u.bG)([ey.A], () => ey.A.useReducedMotion),
-            { visibilityPercentageRef: D, visibilityPercentage: L } = (0, e9.U)(!b);
+            { visibilityPercentageRef: D, visibilityPercentage: L } = (0, ek.U)(!b);
         return s
             ? (0, r.jsx)(tp, { fpEndsAt: v.currentEntitlementEndsAt, className: t, buttonVisibilityRef: g })
             : (0, r.jsx)("div", {
@@ -822,7 +822,7 @@ let tp = (e) => {
                                   (0, r.jsx)(ts, { containerVisibilityPercentage: L }),
                                   _ &&
                                       h?.expires_at != null &&
-                                      (0, r.jsx)(e5, { expiresAt: h.expires_at, className: th.IZ }),
+                                      (0, r.jsx)(e8, { expiresAt: h.expires_at, className: th.IZ }),
                                   (0, r.jsx)(to, {
                                       children:
                                           _ && null != h
@@ -863,15 +863,15 @@ let tp = (e) => {
                                           onClick: () => {
                                               var e;
                                               return (
-                                                  (e = e7.g.CONFIRM_DISCOUNT),
+                                                  (e = e9.g.CONFIRM_DISCOUNT),
                                                   void (0, w.openModalLazy)(async () => {
                                                       let { PremiumBrandRefreshSubscriptionCancellationModal: t } =
                                                           await Promise.all([
                                                               n.e("34218"),
-                                                              n.e("79343"),
+                                                              n.e("23812"),
                                                               n.e("27870"),
                                                               n.e("77827"),
-                                                              n.e("46654"),
+                                                              n.e("27681"),
                                                               n.e("26105"),
                                                               n.e("46461"),
                                                               n.e("60060"),
@@ -936,12 +936,12 @@ let tp = (e) => {
             f = null != d && d.status === W.Dmq.CANCELED && null != i,
             h = c && !(f && _),
             m = $.intl.string($.t.qYKftX),
-            g = (0, eF.m)(),
+            g = (0, eB.m)(),
             A = $.intl.string($.t.ifwQZb),
             { fractionalState: I, endsAt: T } = (0, ev.A)(),
             S = (0, eC.Ay)(T, eC.yE.CREDITS_ENDS_IN),
             y = null;
-        if (I === K.xc.NONE || o) y = (0, r.jsx)(e8.A, { text: m });
+        if (I === K.xc.NONE || o) y = (0, r.jsx)(eG.A, { text: m });
         else {
             h = !0;
             let e = $.intl.format($.t["yR+oDD"], {
@@ -956,7 +956,7 @@ let tp = (e) => {
                     (0, r.jsx)("div", {
                         ...e,
                         className: th.V_,
-                        children: (0, r.jsx)("div", { className: th.eL, children: (0, r.jsx)(e8.A, { text: S }) }),
+                        children: (0, r.jsx)("div", { className: th.eL, children: (0, r.jsx)(eG.A, { text: S }) }),
                     }),
             });
         }
@@ -1029,10 +1029,10 @@ let ty = function (e) {
                         void (0, w.openModalLazy)(async () => {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
                                 n.e("34218"),
-                                n.e("79343"),
+                                n.e("23812"),
                                 n.e("27870"),
                                 n.e("77827"),
-                                n.e("46654"),
+                                n.e("27681"),
                                 n.e("26105"),
                                 n.e("46461"),
                                 n.e("60060"),
@@ -1067,7 +1067,7 @@ let ty = function (e) {
                                     ...t,
                                     premiumSubscription: i,
                                     analyticsLocations: l,
-                                    initialStep: e7.g.CONFIRM_DISCOUNT,
+                                    initialStep: e9.g.CONFIRM_DISCOUNT,
                                 });
                         }),
                 }),
@@ -1369,8 +1369,8 @@ function np() {
                         t = (0, ne.P)(),
                         n = (0, tq.Xb)();
                     if (null == e || null == t || null == n) return null;
-                    let i = e3()(),
-                        r = e3()(n),
+                    let i = e4()(),
+                        r = e4()(n),
                         s = e.status === tq.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
                         a = t.tenureReqNumMonths,
                         o = r.clone().add(s, "months"),

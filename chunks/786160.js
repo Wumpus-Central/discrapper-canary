@@ -522,8 +522,8 @@ let eD = (e) => {
         });
     };
 var eU = s(702841),
-    eB = s(608416),
-    eF = s(384601),
+    eB = s(652533),
+    eF = s(20458),
     eH = s(80933),
     ez = s(180894);
 let eV = () => {
@@ -752,7 +752,7 @@ function te() {
                                         children: (0, l.jsx)(em.E, {
                                             variant: "text-xs/medium",
                                             color: "text-link",
-                                            children: eb.intl.format(eM.default.KDKdWi, { termsLink: (0, e4.Wi)() }),
+                                            children: eb.intl.format(eM.default.KDKdWi, { termsLink: (0, e4.xA)() }),
                                         }),
                                     }),
                                 ],
@@ -839,29 +839,30 @@ let tn = n.memo(function (e) {
         return (0, l.jsx)(tl, { boxLayout: t, title: eb.intl.string(eb.t.EnzW2H), startLeftAligned: !0, ...e });
     });
 var tr = s(877624),
-    tc = s(367319),
+    tc = s(526292),
     to = s(236834),
     td = s(549996),
-    tu = s(371764),
-    tm = s(97808),
-    tx = s(854627),
-    tp = s(778712),
-    th = s(45861);
-function tg(e) {
+    tu = s(810660),
+    tm = s(371764),
+    tx = s(97808),
+    tp = s(854627),
+    th = s(778712),
+    tg = s(45861);
+function tj(e) {
     let { referrer: t } = e,
-        { avatarSrc: s, eventHandlers: i } = (0, tx.A)({ userId: t?.id, size: tp._3.SIZE_24, animateOnHover: !0 });
+        { avatarSrc: s, eventHandlers: i } = (0, tp.A)({ userId: t?.id, size: th._3.SIZE_24, animateOnHover: !0 });
     return (0, l.jsx)("div", {
-        className: th.$6,
+        className: tg.$6,
         children: (0, l.jsxs)("div", {
-            className: th.sc,
+            className: tg.sc,
             children: [
                 (0, l.jsx)("div", {
-                    className: th.kR,
-                    children: (0, l.jsx)(tm.eu, { src: s, "aria-label": t.username, size: tp._3.SIZE_32, ...i }),
+                    className: tg.kR,
+                    children: (0, l.jsx)(tx.eu, { src: s, "aria-label": t.username, size: th._3.SIZE_32, ...i }),
                 }),
                 (0, l.jsx)(ex.D, {
                     variant: "heading-sm/normal",
-                    className: th.FS,
+                    className: tg.FS,
                     color: "text-strong",
                     children: eb.intl.format(eb.t.IqxblS, {
                         username: null != t.globalName ? t.globalName : t.username,
@@ -871,14 +872,13 @@ function tg(e) {
         }),
     });
 }
-var tj = s(224850),
-    tf = s(818415),
-    tN = s(505559);
+var tf = s(175569),
+    tN = s(369805);
 let tA = () => {
-    let e = (0, tf.A)();
-    return null == e ? null : (0, l.jsx)(tN.A, { text: e });
+    let e = (0, tN.A)();
+    return null == e ? null : (0, l.jsx)(tf.A, { text: e });
 };
-var t_ = s(103733),
+var t_ = s(579245),
     tC = s(97352);
 function tE() {
     let e = (0, o.bG)([tC.A], () => tC.A.getForSkuAndInterval((0, V.mH)(eI.pe.TIER_0), eI.WT.MONTH));
@@ -977,7 +977,7 @@ let ty = n.memo(
                 d = (0, to.A)(),
                 u = null != d,
                 m = (0, o.bG)([B.A], () => B.A.useReducedMotion),
-                { visibilityPercentageRef: x, visibilityPercentage: p } = (0, t_.U)(!m),
+                { visibilityPercentageRef: x, visibilityPercentage: p } = (0, tu.U)(!m),
                 j = (0, D.b)(),
                 f = !u && j.length > 0,
                 N = (0, td.c)(tr.C.MARKETING_PAGE_BANNER),
@@ -1011,12 +1011,12 @@ let ty = n.memo(
                                         u &&
                                             (0, l.jsx)("div", {
                                                 className: tM.eZ,
-                                                children: (0, l.jsx)(tg, { referrer: d }),
+                                                children: (0, l.jsx)(tj, { referrer: d }),
                                             }),
                                         f &&
                                             (0, l.jsx)("div", {
                                                 className: tM.Qn,
-                                                children: (0, l.jsx)(tj.A, {
+                                                children: (0, l.jsx)(t_.A, {
                                                     textColor: "text-strong",
                                                     smallerText: !1,
                                                     isApplicationHome: !0,
@@ -1046,7 +1046,7 @@ let ty = n.memo(
                                         }),
                                         null != N &&
                                             "marketingPageBanner" === N.properties.properties.oneofKind &&
-                                            (0, l.jsx)(tu.x, {
+                                            (0, l.jsx)(tm.x, {
                                                 componentId: N.id,
                                                 promotionBannerMarketingComponentFields:
                                                     N.properties.properties.marketingPageBanner,
@@ -1342,7 +1342,7 @@ let tZ = n.forwardRef((e, t) => {
                         m
                             ? (0, l.jsx)("div", {
                                   className: tV.DF,
-                                  children: (0, l.jsx)(tj.A, { textColor: "always-white", smallerText: !d }),
+                                  children: (0, l.jsx)(t_.A, { textColor: "always-white", smallerText: !d }),
                               })
                             : (0, l.jsx)(tY, {}),
                         u || o
@@ -1370,7 +1370,7 @@ var tQ = s(374200),
     tq = s(359778),
     t$ = s(695366),
     t0 = s(780964),
-    t1 = s(858897),
+    t1 = s(766075),
     t2 = s(824888);
 let t3 = (e) => {
     let t,
@@ -1579,7 +1579,7 @@ let su = (e) => {
                                     : eb.intl.formatToPlainString(eb.t.d2oYS8, { onTryItOutClick: () => {} });
                             let t = () => {
                                 {
-                                    let { openUserSettings: t } = s(858897);
+                                    let { openUserSettings: t } = s(766075);
                                     st.A.setState({ scrollPosition: sl._F.TRY_IT_OUT }),
                                         t(t0.X.PROFILE_PANEL, { analyticsLocations: e });
                                 }
@@ -1710,7 +1710,7 @@ let su = (e) => {
             ],
         });
     };
-var sp = s(179468),
+var sp = s(701413),
     sh = s(111932),
     sg = s(88822),
     sj = s(288894);

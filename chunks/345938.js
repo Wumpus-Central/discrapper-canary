@@ -8,8 +8,8 @@ let a = (t) => {
         async () => {
             let { default: t } = await Promise.all([
                 i.e("24092"),
-                i.e("30708"),
-                i.e("25907"),
+                i.e("8766"),
+                i.e("34195"),
                 i.e("21530"),
                 i.e("758"),
                 i.e("52703"),

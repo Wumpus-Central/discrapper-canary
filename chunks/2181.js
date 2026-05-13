@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => M });
+n.d(t, { A: () => L });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -20,22 +20,22 @@ var l = n(627968),
     E = n(927578),
     I = n(802705),
     y = n(234419),
-    S = n(39423),
-    v = n(632150),
-    N = n(792656),
-    _ = n(818415),
+    S = n(369805),
+    v = n(39423),
+    N = n(632150),
+    _ = n(792656),
     T = n(788868),
     j = n(652215),
     b = n(466919),
     R = n(375708),
     O = n(311779),
-    L = n(967744);
-function M(e) {
+    M = n(967744);
+function L(e) {
     let t,
         {
             title: n,
             description: s,
-            analyticsLocationSection: M,
+            analyticsLocationSection: L,
             upsellViewedTrackingData: w,
             onClose: k,
             onDisplay: P,
@@ -47,9 +47,9 @@ function M(e) {
     }, [P, w]);
     let G = (0, y.V)(),
         V = i.useCallback(() => (0, E.LE)(G, T.pe.TIER_2) ?? R.intl.string(R.t.pj0XBN), [G]),
-        F = (0, _.A)(T.pe.TIER_2),
+        F = (0, S.A)(T.pe.TIER_2),
         H = (0, I.M)({ location: "premium_upsell_picker_overlay" }),
-        W = (0, S.O9)();
+        B = (0, v.O9)();
     return (
         (t = U
             ? (0, C.TM)()
@@ -73,7 +73,7 @@ function M(e) {
                                     className: O.hQ,
                                     children: [
                                         (0, l.jsx)("div", {
-                                            className: L.headerGraphic,
+                                            className: M.headerGraphic,
                                             children: (0, l.jsx)(d.v, { type: "video", src: t, loop: !0, loopAt: 5 }),
                                         }),
                                         null != F && (0, l.jsx)(a.E, { type: { text: F }, variant: "brand" }),
@@ -93,10 +93,10 @@ function M(e) {
                                 }),
                                 U &&
                                     H &&
-                                    W &&
+                                    B &&
                                     (0, l.jsx)("div", {
                                         className: O.Zr,
-                                        children: (0, l.jsx)(v.A, { subtitle: R.intl.string(b.default.BkJYQ5) }),
+                                        children: (0, l.jsx)(N.A, { subtitle: R.intl.string(b.default.BkJYQ5) }),
                                     }),
                             ],
                         }),
@@ -109,7 +109,7 @@ function M(e) {
                                         variant: "secondary",
                                         onClick: () => {
                                             A.default.track(j.HAw.PREMIUM_PROMOTION_OPENED, {
-                                                location_section: M,
+                                                location_section: L,
                                                 location_object: j.ZSU.NAVIGATION_LINK,
                                             }),
                                                 D?.(),
@@ -121,8 +121,8 @@ function M(e) {
                                         text: R.intl.string(R.t.ZnqyZ2),
                                         fullWidth: !0,
                                     }),
-                                    (0, l.jsx)(N.A, {
-                                        premiumModalAnalyticsLocation: { section: M, object: j.ZSU.BUTTON_CTA },
+                                    (0, l.jsx)(_.A, {
+                                        premiumModalAnalyticsLocation: { section: L, object: j.ZSU.BUTTON_CTA },
                                         subscriptionTier: T.pe.TIER_2,
                                         onClick: () => {
                                             k(), D?.();

@@ -252,9 +252,9 @@ let X = (t) => {
                 onClick: () => {
                     (0, G.openModalLazy)(async () => {
                         let { default: t } = await Promise.all([
-                            s.e("57750"),
+                            s.e("34195"),
                             s.e("99961"),
-                            s.e("30708"),
+                            s.e("8766"),
                             s.e("57006"),
                             s.e("57352"),
                             s.e("76602"),
