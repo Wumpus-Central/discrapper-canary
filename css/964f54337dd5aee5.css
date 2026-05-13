@@ -1,9 +1,10 @@
-.root_fdf9c0 {
-    border: none;
-    border-radius: var(--radius-lg);
-    max-height: unset;
+.themeContainer_fdf9c0 {
+    --custom-modal-v2-min-height: 400px;
+    height: var(--custom-modal-v2-height);
+    max-width: var(--custom-modal-v2-max-width);
+    min-height: var(--custom-modal-v2-min-height);
     overflow: hidden;
-    position: relative
+    width: var(--custom-modal-v2-width)
 }
 
 .background_fdf9c0 {
@@ -37,8 +38,10 @@
 }
 
 .content_fdf9c0 {
+    box-sizing: border-box;
     gap: var(--space-16);
-    padding-bottom: var(--space-16);
+    margin-top: var(--custom-modal-v2-system-bar-padding);
+    padding-inline: var(--space-16);
     position: relative;
     width: 100%
 }
@@ -58,6 +61,7 @@
 .safetyTable_fdf9c0 {
     background-color: var(--background-mod-subtle);
     border-radius: var(--space-16);
+    max-width: 100%;
     width: 376px
 }
 
