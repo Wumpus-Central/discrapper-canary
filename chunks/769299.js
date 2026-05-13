@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 542332, Version Hash: 3dad802882012de6455c1f3fce283549f9815ba8`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 542334, Version Hash: f0e7d30e40983d9bdcaabafad050c1714e21b56b`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18325,7 +18325,7 @@ let SR = "isHideDevBanner",
                     className: t2()(SO.Wz, SO.mr),
                     children: [
                         (0, k.jsx)(Sv, { className: SO.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "542332" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "542334" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -29957,7 +29957,6 @@ let D$ =
                         prompt: _,
                         disableGuildSelect: "boolean" == typeof f ? f : "true" === f,
                         integrationType: p,
-                        cancelCompletesFlow: !0,
                     }),
                 {
                     modalKey: g,
