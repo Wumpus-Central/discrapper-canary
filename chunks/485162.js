@@ -121,7 +121,7 @@ class U extends g.A {
             let { gpuModels: e, classification: t } = await (async () => {
                 let e = await (0, T.w)();
                 if (e?.gpus != null) {
-                    let t = e.gpus.map((e) => e.brand),
+                    let t = e.gpus.map((e) => e.brand).filter((e) => null != e && "" !== e),
                         n = this.classifyHardware(t);
                     return { gpuModels: t, classification: n };
                 }
