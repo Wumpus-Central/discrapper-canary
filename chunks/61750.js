@@ -20,10 +20,10 @@ let a = (e) => {
     } = e;
     (0, r.openModalLazy)(
         async () => {
-            if (t.skuId === s.Dp.FRACTIONAL_PREMIUM || t.skuId === s.Dp.ORB_PROFILE_BADGE) {
+            if ((0, s.EZ)(t.skuId) || t.skuId === s.Dp.ORB_PROFILE_BADGE) {
                 let { default: e } = await Promise.all([
                     n.e("71070"),
-                    n.e("29911"),
+                    n.e("43798"),
                     n.e("64827"),
                     n.e("92789"),
                     n.e("84569"),

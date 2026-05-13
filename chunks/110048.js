@@ -12,8 +12,8 @@ var i = n(627968),
     C = n(64700),
     p = n(20742),
     m = n(688810),
-    _ = n(937008),
-    E = n(49960),
+    E = n(937008),
+    _ = n(49960),
     T = n(862241),
     A = n(503698),
     h = n.n(A),
@@ -35,9 +35,9 @@ let N = { sliderBodyClassName: P.Bz },
         });
     };
 var v = n(284009),
-    R = n.n(v),
-    L = n(702841),
-    k = n(775602),
+    L = n.n(v),
+    k = n(702841),
+    R = n(775602),
     j = n(427675),
     M = n(94420),
     U = n(590180),
@@ -54,21 +54,21 @@ function V(e) {
     let { handleClose: t, analyticsLocations: n } = e,
         l = (0, M.t4)((e) => e.selectedSkuId),
         r = (0, M.t4)((e) => e.appliedUserDiscounts),
-        { application: s, paymentError: a, purchaseError: o, purchasePreviewError: u } = (0, E.P5)(),
+        { application: s, paymentError: a, purchaseError: o, purchasePreviewError: u } = (0, _.P5)(),
         c = (0, j.gU)(),
-        d = (0, L.bG)([U.A], () => U.A.getProduct(l)),
+        d = (0, k.bG)([U.A], () => U.A.getProduct(l)),
         p = C.useRef(!1);
-    R()(null != l, "Expected selectedSkuId"), R()(null != s, "Expected application");
+    L()(null != l, "Expected selectedSkuId"), L()(null != s, "Expected application");
     let m = c[l];
-    R()(null != m, "Expected sku");
-    let _ = null != a || null != o || null != u,
+    L()(null != m, "Expected sku");
+    let E = null != a || null != o || null != u,
         T =
             r.length > 0
                 ? W.intl.formatToPlainString(W.t.VuV3Td, { discountOfferAmount: r[0].discount.amount })
                 : void 0;
     return (C.useEffect(() => {
         null == d ||
-            _ ||
+            E ||
             p.current ||
             ((p.current = !0),
             (0, D.A)({
@@ -78,8 +78,8 @@ function V(e) {
                 onCloseCallback: t,
                 purchaseType: g.gs.FIAT,
             }));
-    }, [d, n, t, _, T]),
-    _)
+    }, [d, n, t, E, T]),
+    E)
         ? (0, i.jsx)(G.dZ, { children: (0, i.jsx)(K.A, {}) })
         : null;
 }
@@ -93,12 +93,12 @@ function Y(e) {
             giftMessageError: a,
             isSendingMessage: o,
             giftingOrigin: u,
-        } = (0, _.Pv)(),
-        c = (0, L.bG)([k.A], () => k.A.useReducedMotion),
+        } = (0, E.Pv)(),
+        c = (0, k.bG)([R.A], () => R.A.useReducedMotion),
         d = C.useRef(null),
         p = (0, M.t4)((e) => e.selectedSkuId),
-        m = (0, L.bG)([U.A], () => U.A.getProduct(p)),
-        { confettiColors: E } = (0, F.A)(m?.styles);
+        m = (0, k.bG)([U.A], () => U.A.getProduct(p)),
+        { confettiColors: _ } = (0, F.A)(m?.styles);
     return (
         C.useEffect(() => {
             t &&
@@ -126,7 +126,7 @@ function Y(e) {
                               confettiTarget: d.current,
                               confettiCanvas: e.confettiCanvas,
                               sprites: (0, w.rA)(m?.categorySkuId),
-                              colors: E?.map((e) => e.toHexString()),
+                              colors: _?.map((e) => e.toHexString()),
                           }),
                   ],
               })
@@ -155,8 +155,8 @@ var Z = n(17928),
     eC = n(203632),
     ep = n(892118),
     em = n(536572),
-    e_ = n(14702),
-    eE = n(219103),
+    eE = n(14702),
+    e_ = n(219103),
     eT = n(525723),
     eA = n(780651);
 function eh(e) {
@@ -168,12 +168,12 @@ function eh(e) {
             previewHeaderClassName: s,
             hideProfilePreview: a,
         } = e,
-        { giftRecipient: o, giftRecipientError: u } = (0, _.Pv)(),
+        { giftRecipient: o, giftRecipientError: u } = (0, E.Pv)(),
         c = (0, Z.bG)([eo.default], () => eo.default.getCurrentUser()),
         d = eu.Ay.canUseCollectibles(c),
         p = (0, es.Ay)(o?.id),
         m = C.useRef(null),
-        [E, T] = C.useState(!1),
+        [_, T] = C.useState(!1),
         { product: A } = (0, ec.q)(t, !0),
         O = C.useMemo(() => (0, Q.fT)(A, d), [A, d]),
         S = (0, eT.V_)(A);
@@ -195,7 +195,7 @@ function eh(e) {
                             {
                                 targetElementRef: m,
                                 align: "center",
-                                shouldShow: E,
+                                shouldShow: _,
                                 onRequestClose: () => T(!1),
                                 preload: () => (0, ea.A)(o.id, o.getAvatarURL(null, 80)),
                                 renderPopout: (e) =>
@@ -220,7 +220,7 @@ function eh(e) {
                                             T((e) => !e), t?.(e);
                                         },
                                         onMouseDown: (e) => {
-                                            E ? e.stopPropagation() : n?.(e);
+                                            _ ? e.stopPropagation() : n?.(e);
                                         },
                                         children: (0, i.jsx)(el.E, {
                                             variant: "text-xs/medium",
@@ -240,7 +240,7 @@ function eh(e) {
                     (0, i.jsxs)("div", {
                         className: eA.Ug,
                         children: [
-                            (0, i.jsx)(e_.O, { product: A }),
+                            (0, i.jsx)(eE.O, { product: A }),
                             (0, i.jsxs)("div", {
                                 className: eA.JZ,
                                 children: [
@@ -263,7 +263,7 @@ function eh(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(eE.x, {
+                            (0, i.jsx)(e_.x, {
                                 priceAmount: n,
                                 priceCurrency: l,
                                 discount: O,
@@ -310,25 +310,25 @@ function ey(e) {
     });
 }
 var ev = n(818348);
-let eR = (0, C.createContext)({
+let eL = (0, C.createContext)({
         setCustomConfettiVisible: () => {},
         confettiCanvas: null,
         hideConfirmStepConfetti: !1,
         skuIDs: [],
         analyticsLocations: [],
     }),
-    eL = (e) => {
-        let { analyticsLocations: t, hideConfirmStepConfetti: n, confettiCanvas: l } = (0, C.useContext)(eR);
+    ek = (e) => {
+        let { analyticsLocations: t, hideConfirmStepConfetti: n, confettiCanvas: l } = (0, C.useContext)(eL);
         return (0, i.jsx)(Y, { analyticsLocations: t, hideConfetti: n, confettiCanvas: l, ...e });
     },
-    ek = {
+    eR = {
         [a.pn.GIFT_CUSTOMIZATION]: () => W.intl.string(W.t["JCFN/y"]),
         [a.pn.AWAITING_PURCHASE_TOKEN_AUTH]: () => W.intl.string(W.t.lDbi6H),
         [a.pn.CONFIRM]: () => "",
     },
     ej = (e) => {
         let { step: t } = e,
-            n = ek[t];
+            n = eR[t];
         return null == n ? null : (0, i.jsx)(p.rQ, { title: n(), titleTextVariant: "heading-lg/semibold" });
     },
     eM = {
@@ -352,12 +352,12 @@ let eR = (0, C.createContext)({
                                 giftRecipient: u,
                                 giftingOrigin: c,
                                 setValidatingGiftRecipient: C,
-                            } = (0, _.Pv)(),
+                            } = (0, E.Pv)(),
                             { selectedSkuId: p, checkoutInvoicePreview: m } = (0, M.t4)((e) => ({
                                 selectedSkuId: e.selectedSkuId,
                                 checkoutInvoicePreview: e.checkoutInvoicePreview,
                             })),
-                            E = (0, j.gU)(),
+                            _ = (0, j.gU)(),
                             T = (0, Z.bG)([eo.default], () => eo.default.getCurrentUser()),
                             A = (0, eS.A)(),
                             h = async (e, t) => {
@@ -386,7 +386,7 @@ let eR = (0, C.createContext)({
                             renderLeftColumn: () =>
                                 (0, i.jsx)("div", { className: eN.qL, children: (0, i.jsx)(ef.t, { isShopGift: !0 }) }),
                             renderRightColumn: () => {
-                                let e = (0, Q.pA)({ invoicePreview: m, selectedSkuId: p, skusById: E });
+                                let e = (0, Q.pA)({ invoicePreview: m, selectedSkuId: p, skusById: _ });
                                 return c === B.vQ.USER_PROFILE_WISHLIST || c === B.vQ.DM_CHANNEL_WISHLIST
                                     ? (0, i.jsxs)("div", {
                                           children: [
@@ -462,7 +462,7 @@ let eR = (0, C.createContext)({
                         setConfettiCanvas: c,
                         customConfettiVisible: d,
                         setCustomConfettiVisible: p,
-                        customConfettiDisplayOptions: _,
+                        customConfettiDisplayOptions: E,
                         hideConfirmStepConfetti: T,
                     } = ((e) => {
                         let { skuId: t } = e,
@@ -503,7 +503,7 @@ let eR = (0, C.createContext)({
                     {
                         paymentModalSkuId: N,
                         paymentModalOnClose: v,
-                        paymentModalOnComplete: R,
+                        paymentModalOnComplete: L,
                     } = ((e) => {
                         let { skuIDs: t, onClose: n, onComplete: l, setCustomConfettiVisible: i } = e,
                             r = t[0] ?? null,
@@ -531,21 +531,21 @@ let eR = (0, C.createContext)({
                         skuIDs: h,
                         setCustomConfettiVisible: p,
                     }),
-                    L = null != r ? r.onStepChange : void 0,
-                    k = (0, C.useMemo)(
+                    k = null != r ? r.onStepChange : void 0,
+                    R = (0, C.useMemo)(
                         () => ({
                             skuId: N,
                             onClose: v,
-                            onComplete: R,
+                            onComplete: L,
                             applicationId: eP.FYj,
                             initialPlanId: null,
                             analyticsLocations: A,
-                            onStepChange: L,
+                            onStepChange: k,
                             hideShadow: !0,
                             transitionState: l.transitionState,
                             returnRef: l.returnRef,
                         }),
-                        [N, v, R, A, l.transitionState, l.returnRef, L],
+                        [N, v, L, A, l.transitionState, l.returnRef, k],
                     );
                 return (0, i.jsxs)(m.f5, {
                     value: A,
@@ -553,19 +553,19 @@ let eR = (0, C.createContext)({
                         (0, i.jsx)(y, {
                             environment: o,
                             setConfettiCanvas: c,
-                            customConfettiDisplayOptions: _,
+                            customConfettiDisplayOptions: E,
                             customConfettiVisible: d,
                         }),
-                        (0, i.jsx)(E.PaymentContextProvider, {
+                        (0, i.jsx)(_.PaymentContextProvider, {
                             ...a,
                             skuIDs: h,
                             stepConfigs: a.stepConfigs,
                             activeSubscription: null,
                             purchaseType: ev.VV.ONE_TIME,
                             excludeSubscriptionPlansBySKU: !0,
-                            children: (0, i.jsx)(eR.Provider, {
+                            children: (0, i.jsx)(eL.Provider, {
                                 value: f,
-                                children: (0, i.jsx)(tV.g, { customPaymentModalProps: k, children: s }),
+                                children: (0, i.jsx)(tV.g, { customPaymentModalProps: R, children: s }),
                             }),
                         }),
                     ],
@@ -574,10 +574,10 @@ let eR = (0, C.createContext)({
         },
         CustomHeaderComponent: (e) => {
             let { step: t } = e,
-                { isGift: n } = (0, _.Pv)();
+                { isGift: n } = (0, E.Pv)();
             return n ? (0, i.jsx)(ej, { step: t }) : null;
         },
-        CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, i.jsx)(eL, { ...e }), options: N },
+        CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, i.jsx)(ek, { ...e }), options: N },
     };
 var eU = n(429913),
     eF = n(67480),
@@ -597,12 +597,12 @@ function eY(e) {
             selectedSkuId: e.selectedSkuId,
             entitlementsGranted: e.entitlementsGranted,
         })),
-        { application: s } = (0, E.P5)(),
+        { application: s } = (0, _.P5)(),
         a = (0, j.gU)(),
-        { isGift: o, giftRecipient: u } = (0, _.Pv)();
-    R()(null != l, "Expected selectedSkuId"), R()(null != s, "Expected application");
+        { isGift: o, giftRecipient: u } = (0, E.Pv)();
+    L()(null != l, "Expected selectedSkuId"), L()(null != s, "Expected application");
     let c = a[l];
-    R()(null != c, "Expected sku");
+    L()(null != c, "Expected sku");
     let d = r.find((e) => e.sku_id === l),
         p = d?.metadata?.orbs_reward;
     if (
@@ -715,9 +715,9 @@ let tr = {
                             setSoundEffect: T,
                             giftingOrigin: A,
                             additionalUserIds: h,
-                        } = (0, _.Pv)(),
+                        } = (0, E.Pv)(),
                         O = (0, M.t4)((e) => e.selectedSkuId),
-                        { application: S } = (0, E.P5)(),
+                        { application: S } = (0, _.P5)(),
                         I = (0, Z.bG)([eo.default], () => eo.default.getCurrentUser()),
                         f =
                             ((t = I?.id),
@@ -778,11 +778,11 @@ let tr = {
                                 n ? s : null
                             );
                         })(x, { shouldFetchIfMissing: !0 }),
-                        R = async (e, t) => {},
-                        L = (e) => {
+                        L = async (e, t) => {},
+                        k = (e) => {
                             null != T && T(null == e ? void 0 : e);
                         },
-                        k = () =>
+                        R = () =>
                             (0, i.jsxs)("div", {
                                 className: tl.mT,
                                 children: [
@@ -797,7 +797,7 @@ let tr = {
                                     (0, i.jsxs)("div", {
                                         className: tl._T,
                                         children: [
-                                            (0, i.jsx)(e7.A, { sound: p, onSelect: L }),
+                                            (0, i.jsx)(e7.A, { sound: p, onSelect: k }),
                                             (0, i.jsx)(e0.A, {
                                                 setEmojiConfetti: m,
                                                 emojiConfetti: null == d ? void 0 : d,
@@ -815,7 +815,7 @@ let tr = {
                                         ? (0, i.jsx)(ex.Z, { giftRecipient: c })
                                         : (0, i.jsx)(eO.A, {
                                               selectedSkuId: O,
-                                              validateSelectedGift: R,
+                                              validateSelectedGift: L,
                                               recipients: f,
                                           }),
                                     (0, i.jsx)(eI.A, {
@@ -883,8 +883,8 @@ let tr = {
                             });
                         };
                     return {
-                        renderStepBody: () => (0, i.jsxs)("div", { className: tl.Du, children: [k(), j()] }),
-                        getLeftColumnComponent: k,
+                        renderStepBody: () => (0, i.jsxs)("div", { className: tl.Du, children: [R(), j()] }),
+                        getLeftColumnComponent: R,
                         getRightColumnComponent: j,
                         onStepChange: s,
                         onBackClick: a,
@@ -917,7 +917,7 @@ let tr = {
                     onClose: c,
                     onComplete: d,
                     analyticsSourceLocation: p,
-                    ..._
+                    ...E
                 } = e,
                 { analyticsLocations: T } = ((e) => {
                     let { applicationId: t, skuId: n, analyticsLocations: l } = e,
@@ -956,14 +956,14 @@ let tr = {
                 );
             return (0, i.jsx)(m.f5, {
                 value: T,
-                children: (0, i.jsx)(E.PaymentContextProvider, {
+                children: (0, i.jsx)(_.PaymentContextProvider, {
                     loadId: l,
                     discoverySessionId: n,
                     applicationId: r,
                     skuIDs: [a],
                     purchaseType: ev.VV.ONE_TIME,
                     isGift: s,
-                    ..._,
+                    ...E,
                     activeSubscription: null,
                     children: (0, i.jsx)(tV.g, { customPaymentModalProps: O, children: t }),
                 }),
@@ -980,7 +980,7 @@ let tr = {
         return null == n ? null : (0, i.jsx)(p.rQ, { title: n, titleTextVariant: "heading-lg/semibold" });
     },
 };
-var ts = n(164928),
+var ts = n(717925),
     ta = n(169797),
     to = n(474367),
     tu = n(977445),
@@ -990,8 +990,8 @@ var ts = n(164928),
     tp = n(715054);
 (0, r.A)();
 var tm = n(136857),
-    t_ = n(566980),
-    tE = n(855104),
+    tE = n(566980),
+    t_ = n(855104),
     tT = n(120700),
     tA = n(742810);
 n(322076);
@@ -1009,10 +1009,7 @@ let tN = (e) => {
             s = (0, tf.oO)(l);
         r ? (s = W.intl.string(tg.default.qwSlCO)) : (0, td.Ab)(l) && (s = W.intl.string(W.t["0TmQRG"]));
         let a = (0, tf.dL)(t),
-            o =
-                t.id === g.Dp.FRACTIONAL_PREMIUM
-                    ? tS.m[g.Dp.FRACTIONAL_PREMIUM].render({ className: tP.$ })
-                    : (0, i.jsx)(tO.WH, { sku: t, product: l });
+            o = (0, g.EZ)(t.id) ? tS.m[t.id].render({ className: tP.$ }) : (0, i.jsx)(tO.WH, { sku: t, product: l });
         return (0, i.jsx)(tO.f7, {
             label: a,
             description: s,
@@ -1024,7 +1021,7 @@ let tN = (e) => {
     ty = (e) => {
         let { skuId: t, orbPriceAmount: n } = e;
         (0, tI.A)({ applicationId: (0, c.P)(t), skuIDs: [t] });
-        let l = (0, L.bG)([eF.A], () => eF.A.get(t), [t]);
+        let l = (0, k.bG)([eF.A], () => eF.A.get(t), [t]);
         return null == l
             ? (0, i.jsx)(th.y, { type: th.y.Type.PULSING_ELLIPSIS })
             : (0, i.jsx)(tN, { sku: l, orbPriceAmount: n });
@@ -1033,17 +1030,17 @@ let tN = (e) => {
         let { orbBalance: t } = e;
         return (0, i.jsx)(to.vW, { label: W.intl.string(W.t.y0WGqP), value: null != t ? `${t}` : "", Icon: eH.C });
     },
-    tR = () => W.intl.string(W.t.wmcDyu);
-function tL() {
+    tL = () => W.intl.string(W.t.wmcDyu);
+function tk() {
     let { immediateDelivery: e } = (0, tc.U)(),
-        t = tR();
+        t = tL();
     return (0, i.jsx)(to._P, {
         variant: { type: to.I0.OrbsRedemption, purchaseButtonText: t },
         paymentSourceType: null,
         immediateDelivery: e,
     });
 }
-let tk = (0, C.createContext)({
+let tR = (0, C.createContext)({
         isRedeeming: !1,
         orbRedemptionError: null,
         orbProductContext: null,
@@ -1065,8 +1062,8 @@ let tk = (0, C.createContext)({
                         skuId: o,
                         analyticsLocations: u,
                         analyticsSourceLocation: p,
-                    } = (0, C.useContext)(tk),
-                    { primaryButtonProps: m, ..._ } = ((e) => {
+                    } = (0, C.useContext)(tR),
+                    { primaryButtonProps: m, ...E } = ((e) => {
                         let {
                                 skuId: t,
                                 analyticsSourceLocation: n,
@@ -1079,7 +1076,7 @@ let tk = (0, C.createContext)({
                             } = e,
                             {
                                 isStepLoading: m,
-                                orbPriceAmount: _,
+                                orbPriceAmount: E,
                                 orbBalanceToDisplay: T,
                                 onClickCheckout: A,
                                 showCollectiblesDiscountWarning: h,
@@ -1098,8 +1095,8 @@ let tk = (0, C.createContext)({
                                         selectedSkuId: e.selectedSkuId,
                                         setPurchaseState: e.setPurchaseState,
                                     })),
-                                    m = (0, tE.gN)(),
-                                    _ = (0, C.useRef)(m),
+                                    m = (0, t_.gN)(),
+                                    E = (0, C.useRef)(m),
                                     { emitOrbCheckoutPaymentFlowEvent: T } = ((e) => {
                                         let {
                                                 skuId: t,
@@ -1107,7 +1104,7 @@ let tk = (0, C.createContext)({
                                                 analyticsLocations: l,
                                                 analyticsSourceLocation: i,
                                             } = e,
-                                            { activitySessionId: r, hasPaymentSources: s } = (0, E.P5)(),
+                                            { activitySessionId: r, hasPaymentSources: s } = (0, _.P5)(),
                                             {
                                                 loadId: o,
                                                 startTime: u,
@@ -1203,18 +1200,18 @@ let tk = (0, C.createContext)({
                                 }),
                                     (0, C.useEffect)(() => {
                                         null != l &&
-                                            null !== _.current &&
-                                            (T(eP.HAw.PAYMENT_FLOW_FAILED, l), (_.current = null));
+                                            null !== E.current &&
+                                            (T(eP.HAw.PAYMENT_FLOW_FAILED, l), (E.current = null));
                                     }, [l, T]);
                                 let A = (0, C.useCallback)(() => {
-                                        (_.current = m),
+                                        (E.current = m),
                                             T(eP.HAw.PAYMENT_FLOW_COMPLETED),
                                             n((e) => {
-                                                p(t_.h.COMPLETED),
+                                                p(tE.h.COMPLETED),
                                                     o(a.pn.CONFIRM, { fulfillment: { entitlements: e } });
                                             });
                                     }, [n, p, m, T, o]),
-                                    h = _.current ?? m,
+                                    h = E.current ?? m,
                                     O = null != i ? i.orbPriceAmount : null;
                                 return {
                                     isStepLoading: null == i,
@@ -1261,8 +1258,8 @@ let tk = (0, C.createContext)({
                                                   : { disabled: !1, tooltipText: null },
                                         [n, t, l],
                                     );
-                                return { disabled: i, tooltipText: r, text: tR() };
-                            })({ orbBalance: T, orbPriceAmount: _, isInTestMode: I }),
+                                return { disabled: i, tooltipText: r, text: tL() };
+                            })({ orbBalance: T, orbPriceAmount: E, isInTestMode: I }),
                             P = (0, C.useMemo)(
                                 () => ({ onClick: A, loading: s, text: g, disabled: f, tooltipText: x }),
                                 [A, s, g, f, x],
@@ -1286,9 +1283,9 @@ let tk = (0, C.createContext)({
                                 }
                                 return null;
                             }, [y, N, O]),
-                            purchaseItemContent: (0, i.jsx)(ty, { skuId: t, orbPriceAmount: _ }),
+                            purchaseItemContent: (0, i.jsx)(ty, { skuId: t, orbPriceAmount: E }),
                             paymentSelectContent: (0, i.jsx)(tv, { orbBalance: T }),
-                            legalContent: (0, i.jsx)(tL, {}),
+                            legalContent: (0, i.jsx)(tk, {}),
                             primaryButtonProps: P,
                             invoiceSummaryContent: null,
                             invoiceTotalDueLabel: null,
@@ -1306,7 +1303,7 @@ let tk = (0, C.createContext)({
                     });
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(G.dZ, { children: (0, i.jsx)(ts.T, { ..._ }) }),
+                        (0, i.jsx)(G.dZ, { children: (0, i.jsx)(ts.T, { ...E }) }),
                         (0, i.jsx)(G.UX, { children: (0, i.jsx)(ta.lo, { primaryButtonProps: m }) }),
                     ],
                 });
@@ -1385,7 +1382,7 @@ let tk = (0, C.createContext)({
                             skipConfirm: !0,
                         };
                     })({ onClose: s.onClose, orbProductContext: u, overrideAnalyticParams: a }),
-                    _ = (0, C.useMemo)(
+                    E = (0, C.useMemo)(
                         () => ({
                             orbProductContext: u,
                             isRedeeming: c,
@@ -1397,8 +1394,8 @@ let tk = (0, C.createContext)({
                         }),
                         [u, c, d, p, t, n, r],
                     );
-                return (0, i.jsx)(tk.Provider, {
-                    value: _,
+                return (0, i.jsx)(tR.Provider, {
+                    value: E,
                     children: (0, i.jsx)(tV.g, { customPaymentModalProps: m, children: o }),
                 });
             },
@@ -1453,7 +1450,7 @@ var tw = n(545075);
 let tD = (e) => {
         let { paymentModalStepProps: t, defaultStep: n } = e,
             l = (0, C.useRef)(!1),
-            { blockedPayments: r } = (0, E.P5)(),
+            { blockedPayments: r } = (0, _.P5)(),
             { handleStepChange: s } = t;
         return ((0, C.useEffect)(() => {
             r || l.current || (s(n), (l.current = !0));
@@ -1603,8 +1600,8 @@ class tG {
                 discoverySessionId: C,
                 applicationId: p,
                 analyticsSourceLocation: m,
-                analyticsLocations: _,
-                analyticsObject: E,
+                analyticsLocations: E,
+                analyticsObject: _,
             } = e,
             T = (0, r.A)(),
             { modalKey: A } = t,
@@ -1631,7 +1628,7 @@ class tG {
                         loadId: T,
                         discoverySessionId: C,
                         applicationId: O,
-                        analyticsLocations: _,
+                        analyticsLocations: E,
                         analyticsSourceLocation: m,
                         renderModalProps: n,
                         giftContextProps: a,
@@ -1651,8 +1648,8 @@ class tG {
                             skuProductLine: d,
                             applicationId: O,
                             discoverySessionId: C,
-                            analyticsLocations: _,
-                            analyticsObject: E,
+                            analyticsLocations: E,
+                            analyticsObject: _,
                             analyticsSourceLocation: m,
                             isGift: S,
                         }),
@@ -1676,10 +1673,10 @@ let tW = (e) => {
             primaryCTAButtonProps: u,
             onBackClick: c,
         } = e,
-        { hasPaymentSources: d } = (0, E.P5)(),
+        { hasPaymentSources: d } = (0, _.P5)(),
         p = d ? a.pn.REVIEW : a.pn.ADD_PAYMENT_STEPS,
         m = C.useCallback(() => t(p), [t, p]),
-        _ = C.useMemo(
+        E = C.useMemo(
             () =>
                 n === l.X.CUSTOM_STEP_BODY
                     ? r()
@@ -1691,7 +1688,7 @@ let tW = (e) => {
         T = C.useMemo(() => ({ ...u, onClick: m, text: W.intl.string(W.t.XiOHRX) }), [u, m]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(G.dZ, { children: _ }),
+            (0, i.jsx)(G.dZ, { children: E }),
             (0, i.jsx)(G.UX, { children: (0, i.jsx)(tK.cy, { onBackClick: c, primaryCTAButtonProps: T }) }),
         ],
     });
