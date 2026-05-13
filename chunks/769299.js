@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 542410, Version Hash: 2fd1550f37728d8866d8be5733706a435ec17ffe`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 542413, Version Hash: 782558f431698c4806bfa81a8a7f5f256e78e7d6`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18325,7 +18325,7 @@ let SR = "isHideDevBanner",
                     className: t2()(SO.Wz, SO.mr),
                     children: [
                         (0, k.jsx)(Sv, { className: SO.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "542410" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "542413" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -27640,7 +27640,7 @@ let bm = {
                     o = rD.A.getApplication(r);
                 if (!(0, bc.n)(o, eL.gfo.EMBEDDED_FIRST_PARTY))
                     throw new bd.A({ errorCode: eL.Lw6.INVALID_COMMAND }, "This application cannot access this API");
-                let l = (0, bh.D)(r),
+                let l = (0, bh.DV)(r),
                     u = {
                         activity_application_id: r,
                         activity_channel_type: s?.type,

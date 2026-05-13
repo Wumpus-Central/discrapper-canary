@@ -1,18 +1,19 @@
 "use strict";
-n.d(t, { Q: () => a });
+n.d(t, { Q: () => o });
 var i = n(308528),
     r = n(956549),
-    s = n(859007);
-async function a(e) {
-    let { appId: t, botId: n, analyticsLocations: a, customId: o, referrerId: l, commandOrigin: u } = e;
-    if ((0, s.y)({ applicationId: t })) return Promise.resolve(!0);
-    let c = await i.A.openPrivateChannel({ recipientIds: n });
+    s = n(400115),
+    a = n(859007);
+async function o(e) {
+    let { appId: t, botId: n, analyticsLocations: o, customId: l, referrerId: u, commandOrigin: c } = e;
+    if ((0, a.y)({ applicationId: t })) return (0, s.j$)(t, { isStart: !0 }), Promise.resolve(!0);
+    let d = await i.A.openPrivateChannel({ recipientIds: n });
     return await (0, r.A)({
         targetApplicationId: t,
-        channelId: c,
-        analyticsLocations: a,
-        customId: o,
-        referrerId: l,
-        commandOrigin: u,
+        channelId: d,
+        analyticsLocations: o,
+        customId: l,
+        referrerId: u,
+        commandOrigin: c,
     });
 }

@@ -783,7 +783,10 @@ let r = {
         inlineRequire: () => n(835438).A,
         hasStoreChangeListeners: !0,
     },
-    FramesWebManager: { actions: ["RPC_APP_DISCONNECTED"], inlineRequire: () => n(809871).A },
+    FramesWebManager: {
+        actions: ["RPC_APP_DISCONNECTED", "FRAME_LAUNCH", "FRAME_LAUNCH_FAIL", "FRAME_STOP"],
+        inlineRequire: () => n(809871).A,
+    },
     NotificationsInboxAutoLoadManager: {
         inlineRequire: () => n(226459).A,
         neverLoadBeforeConnectionOpen: !0,
