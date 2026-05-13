@@ -1054,9 +1054,8 @@ function np(e) {
                 ],
             }),
             (0, i.jsx)(p.F, {
-                children: (0, i.jsxs)(u.Ip, {
+                children: (0, i.jsxs)(u.d_, {
                     className: ns.XG,
-                    fade: !0,
                     children: [
                         (0, i.jsx)(nm, {
                             heading: eD.intl.string(eD.t.x5CoXR),
