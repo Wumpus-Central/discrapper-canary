@@ -54,6 +54,9 @@ function m(e) {
     }
     return (0, i.jsxs)(o.animated.div, {
         style: { ...b, visibility: O ? "visible" : "hidden" },
+        onKeyDown: (e) => {
+            ("Enter" === e.key || " " === e.key) && e.stopPropagation();
+        },
         className: a()(E.Zj, N && E.ww, D && E.u8, { [E.tO]: "floating" === T, [E.Kx]: "inline" === T }, A),
         children: [
             D &&
