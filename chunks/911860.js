@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 542205, Version Hash: 928b50a347a93c12748ddb82631541ad42772a1a`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 542248, Version Hash: 83588884a6c3d77182d3a7b5e7a53e0acfdd81cc`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18062,21 +18062,7 @@ let Sn = (e) => {
               })
             : i > 0
               ? (0, k.jsx)("div", { className: t2()(St.lL, St.iL), children: (0, k.jsx)(oi.hV, { count: i }) })
-              : (0, k.jsx)("div", {
-                    className: St.lL,
-                    children: (0, k.jsx)(rx.Ay, {
-                        contentTypes: [rM.M.FAMILY_CENTER_NEW_BADGE],
-                        children: (e) => {
-                            let { visibleContent: t } = e;
-                            return t === rM.M.FAMILY_CENTER_NEW_BADGE
-                                ? (0, k.jsx)(oi.Lp, {
-                                      text: na.intl.string(na.t.y2b7CA),
-                                      color: r9.A.colors.BACKGROUND_BRAND.css,
-                                  })
-                                : null;
-                        },
-                    }),
-                });
+              : (0, k.jsx)("div", { className: St.lL });
     },
     Su = () => (0, T3.WU)("DM_SEARCH");
 function Sc(e) {
@@ -18346,7 +18332,7 @@ let SR = "isHideDevBanner",
                     className: t2()(SO.Wz, SO.mr),
                     children: [
                         (0, k.jsx)(Sv, { className: SO.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "542205" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "542248" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
