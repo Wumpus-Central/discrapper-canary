@@ -1,21 +1,11 @@
 "use strict";
 n.d(t, { A: () => u });
 var i = n(77729),
-    r = n(626584);
-class s {
-    cpuCoreCount;
-    getSystemMetrics() {
-        return Promise.resolve(null);
-    }
-    setShouldCollectHermesInstrumentedStats(e) {}
-    getCurrentHermesInstrumentedStatsSummary() {}
-    getCPUCoreCount() {
-        return this.cpuCoreCount;
-    }
-}
-var a = n(19575);
+    r = n(626584),
+    s = n(832213),
+    a = n(19575);
 let o = new r.A("ProcessUtilsElectron");
-class l extends s {
+class l extends s.D {
     lastMemoryUsageKB = void 0;
     constructor() {
         super(), (this.cpuCoreCount = i.A?.processUtils?.getCPUCoreCount?.()), this.setupReportingTimer();

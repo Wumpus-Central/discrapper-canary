@@ -1047,5 +1047,11 @@ let W = {
         setUseRequireModuleCache(e) {
             O = e;
         },
+        async GetSystemGpuStats(e) {
+            if (!E.isPlatformEmbedded) return [];
+            await this.ensureModule("discord_media");
+            let t = this.requireModule("discord_media");
+            return t?.getGpuStats == null ? [] : t.getGpuStats(e).catch(() => []);
+        },
     },
     K = W;

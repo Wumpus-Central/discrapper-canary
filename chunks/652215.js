@@ -6085,6 +6085,7 @@ var sL =
         (tE.CHANNEL_POPOUT = "DISCORD_CHANNEL_POPOUT"),
         (tE.ACTIVITY_POPOUT = "DISCORD_ACTIVITY_POPOUT"),
         (tE.DEVTOOLS_POPOUT = "DISCORD_DEVTOOLS_POPOUT"),
+        (tE.STATS_POPOUT = "DISCORD_STATS_POPOUT"),
         tE),
     sw = (((tm = {}).LOADED = "loaded"), (tm.UNLOADED = "unloaded"), tm),
     sM =
