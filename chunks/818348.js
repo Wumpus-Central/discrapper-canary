@@ -213,7 +213,7 @@ let q = new Map([
     J = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17, 19]),
     ee = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
     et = new Set([6]);
-var en = (((u = {})[(u.NEW = 1)] = "NEW"), u),
+var en = (((u = {})[(u.NEW = 1)] = "NEW"), (u[(u.FAILED_ADDRESS = 16)] = "FAILED_ADDRESS"), u),
     ei =
         (((c = {})[(c.PENDING = 0)] = "PENDING"),
         (c[(c.COMPLETED = 1)] = "COMPLETED"),
