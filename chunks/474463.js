@@ -829,7 +829,7 @@ function tc(e) {
     if (!l || null == s) return null;
     let A = () => {
         (0, eK.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("21185"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+            let { default: e } = await Promise.all([n.e("3099"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                 n.bind(n, 719847),
             );
             return (n) =>
@@ -892,7 +892,7 @@ function tu(e) {
         E = !!f && (0, e4.bg)(o.flags),
         C = () => {
             (0, eK.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("21185"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+                let { default: e } = await Promise.all([n.e("3099"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                     n.bind(n, 719847),
                 );
                 return (t) =>
@@ -8229,7 +8229,7 @@ function cn(e) {
     (0, ce.C)(t.id);
     let l = a.useCallback(() => {
         (0, eK.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("21185"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+            let { default: e } = await Promise.all([n.e("3099"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                 n.bind(n, 719847),
             );
             return (n) => (0, r.jsx)(e, { appId: t.id, guildId: i, ...n });

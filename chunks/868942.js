@@ -20,11 +20,11 @@ var s = i(503698),
     p = i(532794),
     f = i(832946),
     N = i(97352),
-    _ = i(953727);
-function C(e) {
+    C = i(953727);
+function _(e) {
     let { width: t = 106, height: i = 43, color: s = "currentColor", foreground: l, ...r } = e;
     return (0, n.jsx)("svg", {
-        ...(0, _.A)(r),
+        ...(0, C.A)(r),
         width: t,
         height: i,
         viewBox: "0 0 106 43",
@@ -216,7 +216,7 @@ let q = function (e) {
             currentInvoicePreview: s,
             renewalInvoicePreview: r,
             paymentSource: T,
-            busy: _,
+            busy: C,
             analyticsLocation: G,
         } = e,
         { analyticsLocations: Z } = (0, E.Ay)(h.A.SUBSCRIPTION_HEADER),
@@ -238,7 +238,7 @@ let q = function (e) {
             (0, d.openModalLazy)(async () => {
                 let { PremiumBrandRefreshSubscriptionCancellationModal: s } = await Promise.all([
                     i.e("34218"),
-                    i.e("79343"),
+                    i.e("6913"),
                     i.e("9045"),
                     i.e("94161"),
                     i.e("84820"),
@@ -281,7 +281,7 @@ let q = function (e) {
                             async () => {
                                 let { PremiumResubscribeModal: e } = await Promise.all([
                                     i.e("66898"),
-                                    i.e("79343"),
+                                    i.e("6913"),
                                     i.e("92443"),
                                     i.e("9045"),
                                     i.e("94161"),
@@ -377,7 +377,7 @@ let q = function (e) {
             eh = (0, n.jsx)(W, {});
             break;
         case V.PremiumTypes.TIER_2:
-            eh = (0, n.jsx)(C, { className: B.V6, "aria-label": F.intl.string(F.t.lpNrPu) });
+            eh = (0, n.jsx)(_, { className: B.V6, "aria-label": F.intl.string(F.t.lpNrPu) });
     }
     let eE = X.includes(t.status) && !J ? K : H;
     return (0, n.jsx)(eE, {
@@ -407,7 +407,7 @@ let q = function (e) {
                     children: (0, n.jsx)(g.$, {
                         variant: "overlay-primary",
                         size: "sm",
-                        loading: _,
+                        loading: C,
                         text: F.intl.string(F.t.obRG6Y).toLocaleUpperCase(),
                     }),
                 });
@@ -423,7 +423,7 @@ let q = function (e) {
                             children: (0, n.jsx)(m.Q, {
                                 variant: "always-white",
                                 onClick: es,
-                                disabled: _,
+                                disabled: C,
                                 size: "sm",
                                 text: F.intl.string(F.t["ETE/oC"]),
                             }),
@@ -456,7 +456,7 @@ let q = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         text: F.intl.string(F.t.iIvF2z),
-                        loading: _,
+                        loading: C,
                         onClick: ea,
                     }),
                 });
@@ -466,7 +466,7 @@ let q = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         onClick: el,
-                        loading: _,
+                        loading: C,
                         text: F.intl.string(F.t["ETE/oC"]),
                     });
                 case k.Dmq.PAUSE_PENDING:
@@ -477,7 +477,7 @@ let q = function (e) {
                                 className: B.Nn,
                                 children: (0, n.jsx)(m.Q, {
                                     variant: "always-white",
-                                    disabled: _,
+                                    disabled: C,
                                     onClick: es,
                                     size: "sm",
                                     text: F.intl.string(F.t.cM1H0K),
@@ -490,7 +490,7 @@ let q = function (e) {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     text: F.intl.string(F.t.TgV5Qf),
-                                    loading: _,
+                                    loading: C,
                                     onClick: eo,
                                 }),
                             }),
@@ -509,14 +509,14 @@ let q = function (e) {
                                         ? (0, n.jsx)(m.Q, {
                                               variant: "always-white",
                                               onClick: eu,
-                                              disabled: _,
+                                              disabled: C,
                                               size: "sm",
                                               text: F.intl.string(F.t.jNHWt6),
                                           })
                                         : (0, n.jsx)(m.Q, {
                                               variant: "always-white",
                                               onClick: ed,
-                                              disabled: _,
+                                              disabled: C,
                                               size: "sm",
                                               text: F.intl.string(F.t.cM1H0K),
                                           }),
@@ -528,7 +528,7 @@ let q = function (e) {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     text: F.intl.string(F.t.zpi5pg),
-                                    loading: _,
+                                    loading: C,
                                     onClick: eo,
                                 }),
                             }),

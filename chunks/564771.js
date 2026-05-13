@@ -86,7 +86,9 @@ function y(e) {
                             }),
                             (0, i.jsx)("div", {
                                 className: S.L$,
-                                children: f ? T.intl.string(T.t.jfKTes) : (0, i.jsx)(c.z, { percent: n.progress }),
+                                children: f
+                                    ? T.intl.string(T.t.jfKTes)
+                                    : (0, i.jsx)(c.z, { value: n.progress, "aria-label": a }),
                             }),
                         ],
                     }),

@@ -341,7 +341,7 @@ function e5(e) {
 var e8 = n(834730),
     e4 = n(821609),
     e2 = n(383470);
-function e7(e) {
+function e9(e) {
     let { markAsDismissed: t } = e;
     return (0, l.jsxs)("div", {
         className: e2.kL,
@@ -359,7 +359,7 @@ function e7(e) {
         ],
     });
 }
-var e9 = n(166978);
+var e7 = n(166978);
 function te(e) {
     let { guild: t, markAsDismissed: n, targetElementRef: i } = e;
     return (0, l.jsx)(A.A, {
@@ -405,24 +405,24 @@ let tn = a.memo(function (e) {
                 case u.M.GUILD_POWERUP_PERKS_COACHMARK:
                     return (0, l.jsx)(tt, {
                         renderPopout: (e) =>
-                            (0, l.jsx)(e9.UB, { guildId: n.id, markAsDismissed: r, channelRowRef: e, ...o }),
+                            (0, l.jsx)(e7.UB, { guildId: n.id, markAsDismissed: r, channelRowRef: e, ...o }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GAME_SERVER_NEW_GAMES_COACHMARK:
                     return (0, l.jsx)(tt, {
                         renderPopout: (e) =>
-                            (0, l.jsx)(e9.YX, { guildId: n.id, markAsDismissed: r, channelRowRef: e, ...o }),
+                            (0, l.jsx)(e7.YX, { guildId: n.id, markAsDismissed: r, channelRowRef: e, ...o }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK:
                     return (0, l.jsx)(tt, {
                         renderPopout: (e) =>
-                            (0, l.jsx)(e9.Ns, { guildId: n.id, markAsDismissed: r, channelRowRef: e, ...o }),
+                            (0, l.jsx)(e7.Ns, { guildId: n.id, markAsDismissed: r, channelRowRef: e, ...o }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK:
                     return (0, l.jsx)(tt, {
-                        renderPopout: (e) => (0, l.jsx)(e9.K8, { guildId: n.id, markAsDismissed: r, channelRowRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e7.K8, { guildId: n.id, markAsDismissed: r, channelRowRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.BOOST_TO_UNLOCK_COACHMARK: {
@@ -430,7 +430,7 @@ let tn = a.memo(function (e) {
                     if (null == e) return i();
                     return (0, l.jsx)(tt, {
                         renderPopout: (t) =>
-                            (0, l.jsx)(e9.Gw, {
+                            (0, l.jsx)(e7.Gw, {
                                 type: eD.o.BOOST_TO_UNLOCK,
                                 guildId: n.id,
                                 powerup: e,
@@ -446,7 +446,7 @@ let tn = a.memo(function (e) {
                     if (null == e) return i();
                     return (0, l.jsx)(tt, {
                         renderPopout: (t) =>
-                            (0, l.jsx)(e9.Mr, {
+                            (0, l.jsx)(e7.Mr, {
                                 type: eD.o.EXPIRING_PERK,
                                 guildId: n.id,
                                 featuredExpiringPowerup: e,
@@ -469,7 +469,7 @@ let tn = a.memo(function (e) {
                     });
                 case u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
                     return (0, l.jsx)(tt, {
-                        renderPopout: (0, l.jsx)(e7, { markAsDismissed: r }),
+                        renderPopout: (0, l.jsx)(e9, { markAsDismissed: r }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
@@ -765,8 +765,8 @@ var tW = n(503698),
     t8 = n(110618),
     t4 = n(495544),
     t2 = n(309010),
-    t7 = n(312006),
-    t9 = n(403362),
+    t9 = n(312006),
+    t7 = n(403362),
     ne = n(707592),
     nt = n(698441),
     nn = n(935159),
@@ -1064,9 +1064,9 @@ function nC(e) {
         u = (0, d.bG)([R.A], () => R.A.can(H.xBc.CONNECT, n)),
         c =
             ((t = n.id),
-            (0, d.bG)([t4.default, t2.A, t7.Ay], () => {
+            (0, d.bG)([t4.default, t2.A, t9.Ay], () => {
                 let e = t4.default.getId();
-                return t2.A.getVoiceChannelId() === t ? t7.Ay.getPermissionsForUser(e, t) : null;
+                return t2.A.getVoiceChannelId() === t ? t9.Ay.getPermissionsForUser(e, t) : null;
             }, [t])),
         A = e0.intl.string(e0.t.VJlc0S);
     switch (s) {
@@ -1081,7 +1081,7 @@ function nC(e) {
             A = e0.intl.string(e0.t.wBoE6L);
             break;
         default:
-            (0, t9.xb)(s);
+            (0, t7.xb)(s);
     }
     return null == r
         ? null
@@ -1441,13 +1441,13 @@ let n1 = new n0(I.h),
         { type: H.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: u.M.LINKED_ROLE_ADMIN_GUILD },
         { type: H.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
     ],
-    n5 = n3.map((e) => e.store).filter(t9.Vq),
+    n5 = n3.map((e) => e.store).filter(t7.Vq),
     n8 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
 function n4(e) {
     e.stopPropagation();
 }
 let n2 = [];
-function n7(e) {
+function n9(e) {
     var t, n;
     let i,
         s,
@@ -1513,7 +1513,7 @@ function n7(e) {
         })();
     return null == T ? null : (0, l.jsx)("div", { onContextMenu: n4, children: T });
 }
-let n9 = (e) => {
+let n7 = (e) => {
     let { guild: t } = e;
     switch (ee(t)) {
         case J.ENABLE_PUBLIC_GUILD:
@@ -1531,7 +1531,7 @@ let n9 = (e) => {
         case J.HUB_STUDY_ROOM:
             return (0, l.jsx)(nx, { guild: t });
     }
-    return nH.P.isDisallowPopupsSet() ? null : (0, l.jsx)(n7, { guild: e.guild });
+    return nH.P.isDisallowPopupsSet() ? null : (0, l.jsx)(n9, { guild: e.guild });
 };
 var ie = n(532233);
 function it(e) {
@@ -1542,7 +1542,7 @@ function it(e) {
             let e = i.current;
             null != e && n(e.childNodes.length > 0);
         }),
-        (0, l.jsx)("div", { className: ie.k, ref: i, children: (0, l.jsx)(n9, { guild: t }) })
+        (0, l.jsx)("div", { className: ie.k, ref: i, children: (0, l.jsx)(n7, { guild: t }) })
     );
 }
 var ii = n(66933),
@@ -1620,7 +1620,7 @@ class io extends a.PureComponent {
             if ((0, el.ai)(t.id)) return void this.props.onFavoriteGuildContextMenu(e);
             (0, N.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("21185"),
+                    n.e("3099"),
                     n.e("11095"),
                     n.e("28149"),
                     n.e("80797"),
@@ -1633,7 +1633,7 @@ class io extends a.PureComponent {
                     n.e("86522"),
                     n.e("66575"),
                     n.e("8319"),
-                    n.e("75871"),
+                    n.e("6913"),
                     n.e("71070"),
                     n.e("99961"),
                     n.e("31688"),
@@ -1650,7 +1650,7 @@ class io extends a.PureComponent {
                     n.e("32245"),
                     n.e("76032"),
                     n.e("33957"),
-                    n.e("74675"),
+                    n.e("78211"),
                     n.e("68885"),
                     n.e("57006"),
                     n.e("44135"),
@@ -1664,8 +1664,7 @@ class io extends a.PureComponent {
                     n.e("56574"),
                     n.e("20980"),
                     n.e("79785"),
-                    n.e("98689"),
-                    n.e("4974"),
+                    n.e("46757"),
                     n.e("80186"),
                     n.e("17566"),
                     n.e("23924"),
@@ -2267,9 +2266,9 @@ function id(e) {
         e8 = e0 && !e1 && e5 && !1 === eJ,
         e4 = (0, eH.A)(),
         e2 = (0, eb.A)(L),
-        e7 = !1 === eJ && e4 && null != e2,
-        e9 = (0, eP.A)(L),
-        te = !1 === eJ && e4 && null != e9,
+        e9 = !1 === eJ && e4 && null != e2,
+        e7 = (0, eP.A)(L),
+        te = !1 === eJ && e4 && null != e7,
         tt = [];
     ep && tt.push(u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
         eT && tt.push(u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
@@ -2281,7 +2280,7 @@ function id(e) {
     let [tn, ti] = (0, ei.kn)(tt, eE.m.GUILD_HEADER_TOOLTIPS),
         [ts, tl] = (0, eU.vB)(e3 && e0 && !1 === eJ && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),
         [ta, tr] = (0, ei.D8)(
-            e7 ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
+            e9 ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
             L,
             { cooldownDurationMs: eD.bW, numTimesToRecur: 5 },
             eE.m.GUILD_HEADER_TOOLTIPS,
@@ -2300,10 +2299,10 @@ function id(e) {
                       ? { contentType: ts, data: null, markAsDismissed: tl }
                       : ta === u.M.BOOST_TO_UNLOCK_COACHMARK && null != e2
                         ? { contentType: ta, data: { featuredPowerup: e2 }, markAsDismissed: tr }
-                        : to === u.M.EXPIRING_POWERUP_COACHMARK && null != e9
-                          ? { contentType: to, data: { featuredExpiringPowerup: e9 }, markAsDismissed: td }
+                        : to === u.M.EXPIRING_POWERUP_COACHMARK && null != e7
+                          ? { contentType: to, data: { featuredExpiringPowerup: e7 }, markAsDismissed: td }
                           : null,
-            [tn, ts, ta, to, e2, e9, ti, tl, tr, td],
+            [tn, ts, ta, to, e2, e7, ti, tl, tr, td],
         );
     return (0, l.jsx)(io, {
         guildId: L,
