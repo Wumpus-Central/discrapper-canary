@@ -232,6 +232,9 @@ class A extends a.A {
     isPremiumWithPremiumGroup() {
         return (0, p.ki)(this, g.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === s.fE.SUBSCRIPTION_GROUP;
     }
+    hasPaidTier2Subscription() {
+        return (0, p.ki)(this, g.PremiumTypes.TIER_2) && this.premiumState?.premiumSubscriptionType === s.jK.TIER_2;
+    }
     isPremiumWithFractionalPremiumOnly() {
         return (
             (0, p.ki)(this, g.PremiumTypes.TIER_2) &&
