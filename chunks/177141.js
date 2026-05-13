@@ -805,7 +805,7 @@ let tr = {
     },
     [eh.kqX.RIOT_MIGRATION]: {
         predicate: () => {
-            if (!f.A.getConfig({ location: "NoticeStore" }).enabled) return !1;
+            if (!(0, f.getIsRiotSocialSDKMigrationEnabled)({ location: "NoticeStore" })) return !1;
             let e = null != ea.A.getAccount(null, eh.fg2.RIOT_GAMES),
                 t = null != ea.A.getAccount(null, eh.fg2.LEAGUE_OF_LEGENDS);
             if (tn(eh.kqX.RIOT_MIGRATION) || (0, m.k8)(l.M.RIOT_CONNECTION_DEPRECATION_DISABLE) || (!e && !t))
@@ -819,7 +819,7 @@ let tr = {
         predicate: (e) => {
             let { currentUser: t, selectedGuildId: n } = e;
             if (
-                !f.A.getConfig({ location: "NoticeStore" }).enabled ||
+                !(0, f.getIsRiotSocialSDKMigrationEnabled)({ location: "NoticeStore" }) ||
                 tn(eh.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN) ||
                 (0, m.k8)(l.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE)
             )

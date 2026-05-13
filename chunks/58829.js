@@ -24,8 +24,8 @@ function g(n) {
             includedPlatformTypes: i,
             includeApplicationConnections: s = !0,
         } = n,
-        a = p.A.useConfig({ location: "User Settings Connections" }),
-        c = (0, x.A)(s && a.enabled ? f.tX.filter((n) => !e?.has(n) && (null == i || i.has(n))) : []),
+        a = (0, p.useIsRiotSocialSDKMigrationEnabled)({ location: "User Settings Connections" }),
+        c = (0, x.A)(s && a ? f.tX.filter((n) => !e?.has(n) && (null == i || i.has(n))) : []),
         r = (0, j.gn)();
     return (0, t.jsxs)("div", {
         className: N.lA,

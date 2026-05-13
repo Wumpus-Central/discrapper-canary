@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { kJ: () => m, lg: () => h, Ay: () => f }), n(938796);
+n.d(t, { kJ: () => p, lg: () => h, Ay: () => E }), n(938796);
 var i,
     r = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.OUT_OF_PROCESS = 1)] = "OUT_OF_PROCESS"), i),
     s = n(136722),
     a = n(315069),
     o = n(486020),
     l = n(935208);
-class d extends a.A {
+class u extends a.A {
     id;
     name;
     static createFromServer(e) {
-        return new d(e);
+        return new u(e);
     }
     constructor(e) {
         super(), (this.id = e.id), (this.name = e.name);
     }
 }
-var _ = n(889227),
-    u = n(360469),
-    c = n(705751);
-let E = { [u.I4]: 7, [u.qA]: 12 };
+var c = n(889227),
+    d = n(360469),
+    _ = n(705751);
+let f = { [d.I4]: 7, [d.qA]: 12 };
 function h(e) {
     let t = { os: e.os, name: e.name };
     return (
         null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t
     );
 }
-class m extends a.A {
+class p extends a.A {
     id;
     name;
     icon;
@@ -43,11 +43,11 @@ class m extends a.A {
     parentId;
     _connectionEntrypointUrl;
     static createFromServer(e) {
-        return new m({
+        return new p({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
-            bot: null != e.bot ? new _.A(e.bot) : null,
+            bot: null != e.bot ? new c.A(e.bot) : null,
             thirdPartySkus: e.third_party_skus,
             roleConnectionsVerificationUrl: e.role_connections_verification_url,
             parentId: e.parent_id,
@@ -74,7 +74,7 @@ class m extends a.A {
             (this._connectionEntrypointUrl = e.connection_entrypoint_url ?? e._connectionEntrypointUrl);
     }
     get connectionEntrypointUrl() {
-        let e = n(941314).A,
+        let { getIsRiotSocialSDKMigrationEnabled: e } = n(941314),
             t = n(159276).A;
         if (!["1443349464290168976", "1443350165678198935", "1443033465766281327"].includes(this.id))
             return this._connectionEntrypointUrl;
@@ -82,8 +82,9 @@ class m extends a.A {
             let { enabled: e } = t.getConfig({ location: "ApplicationRecord" });
             if (!e) return this._connectionEntrypointUrl;
         }
-        let { enabled: i } = e.getConfig({ location: "ApplicationRecord" });
-        return i ? "https://aes.sgp.pvp.net/providers/discord/link/v1" : this._connectionEntrypointUrl;
+        return e({ location: "ApplicationRecord" })
+            ? "https://aes.sgp.pvp.net/providers/discord/link/v1"
+            : this._connectionEntrypointUrl;
     }
     getIconURL(e, t) {
         return null != this.icon ? o.Ay.getGameAssetURL({ id: this.id, hash: this.icon, size: e, format: t }) : null;
@@ -102,7 +103,7 @@ class m extends a.A {
             : null;
     }
 }
-class f extends m {
+class E extends p {
     overlay;
     overlayWarn;
     overlayCompatibilityHook;
@@ -136,11 +137,11 @@ class f extends m {
     deepLinkUri;
     applicationAccountLinkBenefitConfig;
     static createFromServer(e) {
-        return new f({
+        return new E({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
-            bot: null != e.bot ? new _.A(e.bot) : null,
+            bot: null != e.bot ? new c.A(e.bot) : null,
             thirdPartySkus: e.third_party_skus,
             roleConnectionsVerificationUrl: e.role_connections_verification_url,
             overlayWarn: e.overlay_warn,
@@ -150,8 +151,8 @@ class f extends m {
             storeListingSkuId: e.store_listing_sku_id,
             guildId: e.guild_id,
             guild: e.guild,
-            publishers: null != e.publishers ? e.publishers.map(d.createFromServer) : [],
-            developers: null != e.developers ? e.developers.map(d.createFromServer) : [],
+            publishers: null != e.publishers ? e.publishers.map(u.createFromServer) : [],
+            developers: null != e.developers ? e.developers.map(u.createFromServer) : [],
             eulaId: e.eula_id,
             slug: e.slug,
             flags: s.iu(e.flags_new ?? e.flags ?? 0),
@@ -174,7 +175,7 @@ class f extends m {
             categories: e.categories,
             linkedGames: e.linked_games?.map((e) => ({
                 ...e,
-                application: null != e.application ? f.createFromServer(e.application) : void 0,
+                application: null != e.application ? E.createFromServer(e.application) : void 0,
             })),
             deepLinkUri: e.deeplink_uri,
             applicationAccountLinkBenefitConfig: e.application_account_link_benefit_config,
@@ -214,19 +215,19 @@ class f extends m {
             (this.linkedGames =
                 e.linked_games?.map((e) => ({
                     ...e,
-                    application: null != e.application ? f.createFromServer(e.application) : void 0,
+                    application: null != e.application ? E.createFromServer(e.application) : void 0,
                 })) ?? e.linkedGames),
             (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri),
             (this.applicationAccountLinkBenefitConfig =
                 e.applicationAccountLinkBenefitConfig ?? e.application_account_link_benefit_config);
     }
     getCanonicalGameId() {
-        return this.type === c.S7.GAME
+        return this.type === _.S7.GAME
             ? l.default.cast(this.id)
-            : (this.linkedGames?.find((e) => e.application?.type === c.S7.GAME)?.id ?? null);
+            : (this.linkedGames?.find((e) => e.application?.type === _.S7.GAME)?.id ?? null);
     }
     mergeFromApplicationUpdate(e) {
-        return new f({
+        return new E({
             id: e.id ?? this.id,
             name: e.name ?? this.name,
             icon: e.icon ?? this.icon,
@@ -279,7 +280,7 @@ class f extends m {
         });
     }
     getMaxParticipants() {
-        return this.maxParticipants ?? E[this.id] ?? 0;
+        return this.maxParticipants ?? f[this.id] ?? 0;
     }
     supportsIntegrationTypes() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -290,7 +291,7 @@ class f extends m {
         return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId;
     }
     get supportsOutOfProcessOverlay() {
-        return f.supportsOutOfProcessOverlay(this.overlayMethods);
+        return E.supportsOutOfProcessOverlay(this.overlayMethods);
     }
     static supportsOutOfProcessOverlay(e) {
         let t = r.OUT_OF_PROCESS;

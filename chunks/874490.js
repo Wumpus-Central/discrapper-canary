@@ -24,13 +24,11 @@ function g(e) {
     let { forUserProfile: t } = e,
         n = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
         i = u.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging,
-        r = l.A.useConfig({ location: "usePlatformAllowed" });
+        r = (0, l.useIsRiotSocialSDKMigrationEnabled)({ location: "usePlatformAllowed" });
     return (e) =>
         e.type === f.fg2.PLAYSTATION_STAGING
             ? i
-            : !!(void 0 !== n && p[e.type]?.includes(n.id)) ||
-              !!t ||
-              ((null == e.replacedBy || !r.enabled) && e.enabled);
+            : !!(void 0 !== n && p[e.type]?.includes(n.id)) || !!t || ((null == e.replacedBy || !r) && e.enabled);
 }
 function A() {
     let e = (0, a.bG)([c.A], () => c.A.getAccounts()),

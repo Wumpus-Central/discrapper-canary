@@ -1139,7 +1139,7 @@ function ni(e) {
             accountLinkButtonRef: _,
         } = e,
         f = e9.useConfig({ location: "ActivityPanelGameCard" }),
-        { defaultBody: E } = ed.A.useConfig({ location: "ActivityPanelGameCard" }),
+        E = (0, ed.useRiotSocialSDKMigrationDefaultBody)({ location: "ActivityPanelGameCard" }),
         m = a ? o : i,
         g = null == m;
     if (
@@ -1294,7 +1294,7 @@ function na(e) {
         } = e,
         { isEligible: I, displayedApp: T } = (function (e) {
             let { connectionApp: t } = e,
-                { enabled: n } = ed.A.useConfig({ location: "ActivityPanelGameCard" }),
+                n = (0, ed.useIsRiotSocialSDKMigrationEnabled)({ location: "ActivityPanelGameCard" }),
                 { data: i } = (0, ef.YY)(t?.parentId ?? t?.id);
             return { isEligible: n && null != t && tY.YJ.has(t.id), displayedApp: i };
         })({ connectionApp: a }),
