@@ -1,30 +1,30 @@
 "use strict";
-n.d(t, { QU: () => d, kX: () => u });
-var r = n(988506),
-    i = n(315069);
+n.d(t, { QU: () => c, bV: () => s, kX: () => u });
+var i = n(441574),
+    r = n(315069);
 let s = Object.freeze({
-        0: r.ob.SUNDAY,
-        1: r.ob.MONDAY,
-        2: r.ob.TUESDAY,
-        3: r.ob.WEDNESDAY,
-        4: r.ob.THURSDAY,
-        5: r.ob.FRIDAY,
-        6: r.ob.SATURDAY,
+        0: i.ob.SUNDAY,
+        1: i.ob.MONDAY,
+        2: i.ob.TUESDAY,
+        3: i.ob.WEDNESDAY,
+        4: i.ob.THURSDAY,
+        5: i.ob.FRIDAY,
+        6: i.ob.SATURDAY,
     }),
     a = Object.freeze({
-        [r.ob.DAY_OF_WEEK_UNSPECIFIED]: 0,
-        [r.ob.MONDAY]: 1,
-        [r.ob.TUESDAY]: 2,
-        [r.ob.WEDNESDAY]: 3,
-        [r.ob.THURSDAY]: 4,
-        [r.ob.FRIDAY]: 5,
-        [r.ob.SATURDAY]: 6,
-        [r.ob.SUNDAY]: 0,
+        [i.ob.DAY_OF_WEEK_UNSPECIFIED]: 0,
+        [i.ob.MONDAY]: 1,
+        [i.ob.TUESDAY]: 2,
+        [i.ob.WEDNESDAY]: 3,
+        [i.ob.THURSDAY]: 4,
+        [i.ob.FRIDAY]: 5,
+        [i.ob.SATURDAY]: 6,
+        [i.ob.SUNDAY]: 0,
     });
 function o(e) {
     return 60 * e.hours + e.minutes;
 }
-class l extends i.A {
+class l extends r.A {
     ruleId;
     label;
     startTime;
@@ -56,16 +56,16 @@ class l extends i.A {
     isActiveAt(e, t) {
         if (null == this.startTime || null == this.endTime || 0 === this.days.length || !this.enabled) return !1;
         let n = o(this.startTime),
-            i = o(this.endTime),
-            s = n > i;
+            r = o(this.endTime),
+            s = n > r;
         if (this.days.includes(e)) {
             if (s) {
                 if (t >= n) return !0;
-            } else if (t >= n && t < i) return !0;
+            } else if (t >= n && t < r) return !0;
         }
         if (s) {
-            let n = e === r.ob.MONDAY ? r.ob.SUNDAY : e - 1;
-            if (this.days.includes(n) && t < i) return !0;
+            let n = e === i.ob.MONDAY ? i.ob.SUNDAY : e - 1;
+            if (this.days.includes(n) && t < r) return !0;
         }
         return !1;
     }
@@ -76,7 +76,7 @@ class l extends i.A {
         return null == this.startTime ? null : o(this.startTime);
     }
 }
-class u extends i.A {
+class u extends r.A {
     rules;
     static fromServer(e) {
         return null == e ? null : new u({ rules: e.rules.map(l.fromServer) });
@@ -99,38 +99,38 @@ class u extends i.A {
         if (0 === this.rules.length || this.isInRestrictedHours(e)) return null;
         let t = e.getDay(),
             n = 60 * e.getHours() + e.getMinutes(),
-            r = null;
+            i = null;
         for (let e of this.rules.filter((e) => e.enabled)) {
-            let i = e.getStartMinutes();
-            if (null != i && 0 !== e.days.length)
+            let r = e.getStartMinutes();
+            if (null != r && 0 !== e.days.length)
                 for (let s of e.days) {
                     let o = (a[s] - t + 7) % 7;
-                    0 === o && i <= n && (o = 7);
-                    let l = 24 * o * 60 - n + i;
-                    (null == r || l < r.minutesUntil) && (r = { minutesUntil: l, rule: e });
+                    0 === o && r <= n && (o = 7);
+                    let l = 24 * o * 60 - n + r;
+                    (null == i || l < i.minutesUntil) && (i = { minutesUntil: l, rule: e });
                 }
         }
-        return r;
+        return i;
     }
     getNextEndTime() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Date();
         if (0 === this.rules.length) return null;
         let t = s[e.getDay()],
             n = 60 * e.getHours() + e.getMinutes();
-        for (let r of this.rules.filter((e) => e.isActiveAt(t, n))) {
-            let t = r.getEndMinutes(),
-                i = r.getStartMinutes();
-            if (null == t || null == i) continue;
-            let s = i > t,
+        for (let i of this.rules.filter((e) => e.isActiveAt(t, n))) {
+            let t = i.getEndMinutes(),
+                r = i.getStartMinutes();
+            if (null == t || null == r) continue;
+            let s = r > t,
                 a = new Date(e),
                 o = Math.floor(t / 60),
                 l = t % 60;
-            return s && n >= i && a.setDate(a.getDate() + 1), a.setHours(o, l, 0, 0), a;
+            return s && n >= r && a.setDate(a.getDate() + 1), a.setHours(o, l, 0, 0), a;
         }
         return null;
     }
 }
-function d(e) {
+function c(e) {
     return null == e
         ? null
         : e instanceof u
