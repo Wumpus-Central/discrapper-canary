@@ -1,93 +1,98 @@
 "use strict";
-n.d(t, { d: () => E });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(785651),
-    o = n(717421),
-    l = n(834730),
-    u = n(565645);
-let c = (0, n(945810).mj)({
+n.d(t, { d: () => m });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(873174),
+    l = n(717421),
+    u = n(834730),
+    c = n(565645);
+let d = (0, n(945810).mj)({
     name: "2026-03-soundboard-sound-preview",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var d = n(71393),
-    _ = n(465794),
-    f = n(788868),
-    h = n(375708),
-    p = n(379378);
-function E(e) {
+var _ = n(71393),
+    f = n(465794),
+    h = n(788868),
+    p = n(375708),
+    E = n(379378);
+function m(e) {
     let {
             showUpsell: t,
             text: n,
-            textVariant: r,
-            button: E,
-            buttonAnalyticsObject: m,
-            className: g,
-            onSubscribeModalClose: A,
-            position: I = "floating",
-            hoveredNitroLockedSound: T,
-            useUpdatedStyling: S = !1,
-            subscribeButtonVariantOverride: N,
-            leadingAction: y,
+            textVariant: s,
+            button: m,
+            buttonAnalyticsObject: g,
+            className: A,
+            onSubscribeModalClose: I,
+            position: T = "floating",
+            hoveredNitroLockedSound: S,
+            useUpdatedStyling: N = !1,
+            subscribeButtonVariantOverride: y,
+            leadingAction: C,
         } = e,
-        { enabled: C } = c.useConfig({ location: "PremiumFloatingPickerUpsell" }),
-        v = (0, o.z)({
+        { enabled: v } = d.useConfig({ location: "PremiumFloatingPickerUpsell" }),
+        [O, R] = r.useState(t);
+    t && !O && R(!0);
+    let b = (0, l.z)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
             config: { tension: 120, friction: 14 },
+            onRest: () => {
+                t || R(!1);
+            },
         }),
-        O = C && null != T,
-        R = T?.emojiId != null || T?.emojiName != null,
-        b = n;
-    if (O) {
-        let e = d.A.getGuild(T.guildId);
-        b = h.intl.format(h.t.eku049, { serverName: e?.name ?? h.intl.string(h.t.DmIUGK) });
+        D = v && null != S,
+        L = S?.emojiId != null || S?.emojiName != null,
+        w = n;
+    if (D) {
+        let e = _.A.getGuild(S.guildId);
+        w = p.intl.format(p.t.eku049, { serverName: e?.name ?? p.intl.string(p.t.DmIUGK) });
     }
-    return (0, i.jsxs)(a.animated.div, {
-        style: { ...v },
-        className: s()(p.Zj, S && p.ww, O && p.u8, { [p.tO]: "floating" === I, [p.Kx]: "inline" === I }, g),
+    return (0, i.jsxs)(o.animated.div, {
+        style: { ...b, visibility: O ? "visible" : "hidden" },
+        className: a()(E.Zj, N && E.ww, D && E.u8, { [E.tO]: "floating" === T, [E.Kx]: "inline" === T }, A),
         children: [
-            O &&
+            D &&
                 (0, i.jsxs)("div", {
-                    className: p.Ed,
+                    className: E.Ed,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: p.vg,
+                            className: E.vg,
                             children: [
-                                R && (0, i.jsx)(u.A, { emojiId: T.emojiId, emojiName: T.emojiName }),
-                                (0, i.jsx)(l.E, {
+                                L && (0, i.jsx)(c.A, { emojiId: S.emojiId, emojiName: S.emojiName }),
+                                (0, i.jsx)(u.E, {
                                     variant: "text-sm/semibold",
                                     color: "text-strong",
-                                    children: T.name,
+                                    children: S.name,
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(l.E, {
+                        (0, i.jsx)(u.E, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            className: p.Fr,
-                            children: b ?? n,
+                            className: E.Fr,
+                            children: w ?? n,
                         }),
                     ],
                 }),
-            !O &&
-                (0, i.jsx)(l.E, { variant: r ?? "text-sm/medium", color: "text-strong", className: p.tD, children: n }),
-            null != y && (0, i.jsx)("div", { className: p.Zv, children: y }),
-            "string" == typeof E
-                ? (0, i.jsx)(_.A, {
+            !D &&
+                (0, i.jsx)(u.E, { variant: s ?? "text-sm/medium", color: "text-strong", className: E.tD, children: n }),
+            null != C && (0, i.jsx)("div", { className: E.Zv, children: C }),
+            "string" == typeof m
+                ? (0, i.jsx)(f.A, {
                       size: "sm",
-                      subscriptionTier: f.pe.TIER_2,
-                      buttonTextOverride: E,
-                      premiumModalAnalyticsLocation: m,
+                      subscriptionTier: h.pe.TIER_2,
+                      buttonTextOverride: m,
+                      premiumModalAnalyticsLocation: g,
                       tabIndex: t ? 0 : -1,
-                      onSubscribeModalClose: A,
-                      variantOverride: N,
+                      onSubscribeModalClose: I,
+                      variantOverride: y,
                   })
-                : E,
+                : m,
         ],
     });
 }
