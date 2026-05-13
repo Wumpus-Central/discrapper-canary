@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { L5: () => u, TA: () => _, dU: () => l, fY: () => o, q$: () => d });
+n.d(t, { L5: () => d, TA: () => c, dU: () => l, fY: () => o, q$: () => u });
 var i = n(636537),
     r = n(228366),
     s = n(181658),
@@ -14,18 +14,22 @@ let o = async (e, t) =>
                 rejectWithError: !1,
             })
         ).body,
-    d = async (e) => (await i.Bo.get({ url: a.Rsh.SUBSCRIPTION_PLAN_GROUP_LISTING(e), rejectWithError: !1 })).body;
-function _(e, t) {
+    u = async (e) => (await i.Bo.get({ url: a.Rsh.SUBSCRIPTION_PLAN_GROUP_LISTING(e), rejectWithError: !1 })).body;
+function c(e, t) {
     return (
         r.h.dispatch({ type: "APPLICATION_FETCH", applicationId: e }),
         i.Bo.get({ url: a.Rsh.APPLICATION_PUBLIC(e), signal: t, rejectWithError: !1 })
-            .then((e) => (r.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e.body }), e.body))
+            .then(
+                (e) => (
+                    r.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e.body, isHydrated: !0 }), e.body
+                ),
+            )
             .catch(
                 (t) => (r.h.dispatch({ type: "APPLICATION_FETCH_FAIL", applicationId: e }), Promise.reject(new s.A(t))),
             )
     );
 }
-async function u(e, t) {
+async function d(e, t) {
     return (
         await i.Bo.get({
             url: a.Rsh.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
