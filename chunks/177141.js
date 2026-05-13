@@ -60,14 +60,9 @@ var F = n(380619),
     B = n(39423),
     H = n(264779),
     j = n(374200),
-    Y = n(852218);
-let W = (0, n(945810).mj)({
-    name: "2026-02-android-app-upsell-banner",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
-var K = n(859703),
+    Y = n(852218),
+    W = n(160394),
+    K = n(859703),
     z = n(39634),
     $ = n(655116),
     q = n(105530),
@@ -478,7 +473,7 @@ let tr = {
     [eh.kqX.DOWNLOAD_NAG]: { predicate: () => !eH.isPlatformEmbedded && !tn(eh.kqX.DOWNLOAD_NAG) },
     [eh.kqX.QUEST_APP_UPSELL]: {
         predicate: () =>
-            (0, eH.isOculusWeb)() && !tn(eh.kqX.QUEST_APP_UPSELL) && W.getConfig({ location: "NoticeStore" }).enabled,
+            (0, eH.isOculusWeb)() && !tn(eh.kqX.QUEST_APP_UPSELL) && W.A.getConfig({ location: "NoticeStore" }).enabled,
     },
     [eh.kqX.SCHEDULED_MAINTENANCE]: {
         predicate: () => null != ew.A.getScheduledMaintenance(),

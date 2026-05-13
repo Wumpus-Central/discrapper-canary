@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     kL: "container__4a98c",
     FG: "contentWrapper__4a98c",
     wx: "header__4a98c",
@@ -16,5 +16,6 @@ e.exports = {
     KF: "windows__4a98c",
     pS: "linux__4a98c",
     s4: "ios__4a98c",
+    yX: "metaQuest__4a98c",
     l6: "downloadButton__4a98c",
 };

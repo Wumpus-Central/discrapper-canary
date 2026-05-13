@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 542644, Version Hash: 4f37d5e2fcfa30e99c224f0ecef492bdbd44a4fa`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 542673, Version Hash: 20f22e33bf957b6ac47cf558159100d068f67343`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18315,7 +18315,7 @@ var Sh = n(892340),
     SA = n(718446),
     SI = n(650048),
     ST = n(696451),
-    SS = n(487490),
+    SS = n(177141),
     SN = n(935208),
     Sy = n(521502),
     SC = n(380610);
@@ -18359,7 +18359,7 @@ let SR = "isHideDevBanner",
                     className: t2()(SO.Wz, SO.mr),
                     children: [
                         (0, k.jsx)(Sv, { className: SO.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "542644" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "542673" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -35843,6 +35843,7 @@ let xr = (0, ny.Fe)({
             n.e("84794"),
             n.e("64926"),
             n.e("50541"),
+            n.e("15799"),
             n.e("47339"),
             n.e("47999"),
             n.e("69167"),
@@ -35966,6 +35967,7 @@ let xr = (0, ny.Fe)({
             n.e("9763"),
             n.e("95008"),
             n.e("77663"),
+            n.e("44602"),
             n.e("55663"),
             n.e("17583"),
             n.e("10741"),
@@ -35996,7 +35998,6 @@ let xr = (0, ny.Fe)({
             n.e("73746"),
             n.e("10622"),
             n.e("86823"),
-            n.e("44602"),
             n.e("63309"),
             n.e("20516"),
             n.e("88379"),
@@ -37026,7 +37027,8 @@ let UO = (0, rs.Fe)({
         name: "UnsupportedBrowser",
     }),
     UR = (0, rs.Fe)({
-        createPromise: () => Promise.all([n.e("81013"), n.e("44602"), n.e("25280")]).then(n.bind(n, 987482)),
+        createPromise: () =>
+            Promise.all([n.e("81013"), n.e("15799"), n.e("44602"), n.e("25280")]).then(n.bind(n, 987482)),
         webpackId: 987482,
         name: "DownloadApps",
     }),
