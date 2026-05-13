@@ -1,5 +1,4 @@
 e.exports = {
-    Op: "expandTabSlideIn_b08638",
     eg: "tabButton_b08638",
     nd: "panel_b08638",
     VU: "withGradient_b08638",

@@ -219,6 +219,7 @@ function V(e, t) {
                 shown_duration: a,
                 version: t?.version,
                 num_times_dismissed: o,
+                snowflake_id: t?.snowflakeId,
             });
         })(e, t),
         (0, _.Xw)(e, t.guildId ?? void 0);
@@ -246,7 +247,7 @@ async function W(e, t, n) {
 }
 async function K(e, t, n) {
     let i = Y(e, n);
-    V(e, n), await y(e, t, i), B(e, n);
+    V(e, { ...n, snowflakeId: t }), await y(e, t, i), B(e, n);
 }
 async function z(e, t) {
     let n = Y(e, t);
@@ -262,5 +263,6 @@ function $(e, t) {
         bypass_fatigue: d.C.has(e),
         guild_id: t?.guildId,
         version: t?.version,
+        snowflake_id: t?.snowflakeId,
     });
 }

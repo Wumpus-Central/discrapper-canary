@@ -19,35 +19,36 @@ var f = n(617617),
     g = n(199773),
     A = n(558845),
     I = n(826673),
-    T = n(281678),
+    T = n(367727),
     S = n(757792),
     N = n(652215),
     y = n(355097);
-function C(e, t, n, o) {
-    let l = (0, A.Ay)((t) => null != e && t.currentlyShown.has(e)),
-        h = (0, s.bG)([_.default, u.default, c.default], () => {
+function C(e, t, n, o, l) {
+    let h = (0, A.Ay)((t) => null != e && t.currentlyShown.has(e)),
+        E = (0, s.bG)([_.default, u.default, c.default], () => {
             if (__OVERLAY__) return c.default.isInstanceLocked();
             let e = _.default.getOverlayRenderingTrackedGames();
             return 0 !== e.length && e.some((e) => e.overlayMethod !== d.Ue.Disabled && u.default.isInputLocked(e.pid));
         }),
-        E = (0, s.bG)(null != i ? [i] : [], () => i?.getFocusedPID()),
-        m = (0, s.bG)([g.A], () => null != e && g.A.hasUserHitDCCap(e, t)),
-        I = r.useRef(t);
+        m = (0, s.bG)(null != i ? [i] : [], () => i?.getFocusedPID()),
+        I = (0, s.bG)([g.A], () => null != e && g.A.hasUserHitDCCap(e, t)),
+        S = r.useRef(t);
     return (
-        (I.current = t),
+        (S.current = t),
         r.useEffect(() => {
             if (null != e) {
                 var t;
                 return (
                     f.A.hasLoaded(y.oD.PRELOADED_USER_SETTINGS) ||
-                        ((t = I.current),
+                        ((t = S.current),
                         p.default.track(N.HAw.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
                             content_type: a.M[e],
                             group_name: n ?? null,
                             latest_version: o ?? null,
                             guild_id: t ?? null,
+                            snowflake_id: l ?? null,
                         })),
-                    (0, T.Vh)(e, { groupName: n, guildId: I.current, version: o }, h, E),
+                    (0, T.Vh)(e, { groupName: n, guildId: S.current, version: o, snowflakeId: l }, E, m),
                     () => {
                         if (null == e) return;
                         let t = !g.A.hasUserHitDCCap();
@@ -55,8 +56,8 @@ function C(e, t, n, o) {
                     }
                 );
             }
-        }, [e, n, m, h, o, E]),
-        l && null != e ? e : null
+        }, [e, n, I, E, o, m, l]),
+        h && null != e ? e : null
     );
 }
 function v(e, t) {
@@ -135,7 +136,7 @@ function L(e, t, n) {
             : null != i && (o = n && 1 === E.default.compare(t, i) ? e : null);
     }
     return [
-        C(o, a, n),
+        C(o, a, n, void 0, t),
         r.useCallback(
             (e, i) => {
                 null != o && (0, T.qr)(o, t, { dismissAction: e, groupName: n, guildId: a, forceTrack: i });
@@ -156,7 +157,7 @@ function w(e, t, n, i) {
             : null != l && (u = n && 1 === E.default.compare(t, l) ? e : null);
     }
     return [
-        C(u, n, i),
+        C(u, n, i, void 0, t),
         r.useCallback(
             (e, r) => {
                 null != u && (0, I.in)(u, t, n, { dismissAction: e, groupName: i, guildId: n, forceTrack: r });
@@ -171,7 +172,7 @@ function M(e, t, n, i) {
     return (
         null == e || (0, T.j6)(e, n, t) || (o = e),
         [
-            C(o, a, i),
+            C(o, a, i, void 0, n),
             r.useCallback(
                 (e, t) => {
                     null != o && (0, T.qr)(o, n, { dismissAction: e, groupName: i, guildId: a, forceTrack: t });

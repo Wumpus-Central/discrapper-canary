@@ -16,7 +16,7 @@ var i = n(627968),
     E = n(232582),
     m = n(821609),
     g = n(349288),
-    A = n(281678),
+    A = n(367727),
     I = n(174459),
     T = n(637706),
     S = n(498470),
@@ -164,7 +164,7 @@ function Z(e) {
             [m, l.type],
         ),
         r.useEffect(() => {
-            (0, A.Vh)(a.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL);
+            (0, A.Vh)(a.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, { snowflakeId: n });
             let e = Date.now();
             return (
                 I.default.track(N.HAw.CHANGE_LOG_OPENED, { change_log_id: m }),

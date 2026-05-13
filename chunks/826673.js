@@ -8,7 +8,7 @@ var i = n(17928),
     l = n(935208),
     u = n(460288),
     c = n(256787),
-    d = n(281678),
+    d = n(367727),
     _ = n(757792);
 function f(e) {
     let {
@@ -51,5 +51,5 @@ async function g(e, t, n) {
 }
 async function A(e, t, n, i) {
     let r = (0, d.Sx)(e, n);
-    (0, d.YV)(e, i), await (0, d.G4)(e, t, n, r), (0, d.X0)(e, i);
+    (0, d.YV)(e, { ...i, snowflakeId: t }), await (0, d.G4)(e, t, n, r), (0, d.X0)(e, i);
 }

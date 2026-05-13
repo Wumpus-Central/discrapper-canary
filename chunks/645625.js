@@ -1,4 +1,4 @@
-t.r(
+a.r(
     (e.exports = {
         layoutContainer: "layoutContainer__9c3be",
         editingPanelEnabled: "editingPanelEnabled__9c3be",
@@ -11,6 +11,7 @@ t.r(
         editingPanel: "editingPanel__9c3be",
         isExpanded: "isExpanded__9c3be",
         editingPanelExpandButtonCompact: "editingPanelExpandButtonCompact__9c3be",
+        anchorTabButtonDuringPanelCollapse: "anchorTabButtonDuringPanelCollapse__9c3be",
         editingPanelExpandButtonDefaultContainer: "editingPanelExpandButtonDefaultContainer__9c3be",
         editingPanelExpandButtonDefault: "editingPanelExpandButtonDefault__9c3be",
         pendingChangesToolbar: "pendingChangesToolbar__9c3be",
