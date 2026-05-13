@@ -157,38 +157,38 @@ let ev = (e) => {
             }
         }, [l]);
     },
-    eI = (e, l) => {
-        let t = ed.intl.string(ed.t["DT39A+"]),
-            s = ed.intl.formatToPlainString(ed.t.QWGvxA, { applicationName: e.name }),
-            i = null;
+    eI = (e, l, t) => {
+        let s = ed.intl.string(ed.t["DT39A+"]),
+            i = ed.intl.formatToPlainString(ed.t.QWGvxA, { applicationName: e.name }),
+            r = null;
         return (
-            (0, O.A)(e) &&
-                ((t = ed.intl.formatToPlainString(ed.t["paC+US"], { applicationName: e.name })),
-                (s = ed.intl.formatToPlainString(ed.t.inM1Yt, { applicationName: e.name })),
-                (i = (0, n.jsx)(ee.A, { look: ee.k.WARNING, children: ed.intl.string(ed.t.LY35Zy) }))),
+            (0, O.O)(e, l) &&
+                ((s = ed.intl.formatToPlainString(ed.t["paC+US"], { applicationName: e.name })),
+                (i = ed.intl.formatToPlainString(ed.t.inM1Yt, { applicationName: e.name })),
+                (r = (0, n.jsx)(ee.A, { look: ee.k.WARNING, children: ed.intl.string(ed.t.LY35Zy) }))),
             et(e.id) &&
-                (i = (0, n.jsxs)(n.Fragment, {
+                (r = (0, n.jsxs)(n.Fragment, {
                     children: [
-                        i,
+                        r,
                         (0, n.jsx)(ee.A, { children: ed.intl.format(ed.t.KRnERi, { applicationName: e.name }) }),
                     ],
                 })),
             (0, g.openModal)((e) =>
                 (0, n.jsx)(u.Modal, {
-                    title: t,
-                    subtitle: s,
+                    title: s,
+                    subtitle: i,
                     actions: [
                         { text: ed.intl.string(ed.t["ETE/oC"]), onClick: e.onClose, variant: "secondary" },
                         {
                             text: ed.intl.string(ed.t.xUqheM),
                             onClick: () => {
-                                l(), e.onClose();
+                                t(), e.onClose();
                             },
                             variant: "critical-primary",
                         },
                     ],
                     ...e,
-                    children: (0, n.jsx)("div", { className: eh.rO, children: i }),
+                    children: (0, n.jsx)("div", { className: eh.rO, children: r }),
                 }),
             )
         );
@@ -463,7 +463,7 @@ let ev = (e) => {
                                         variant: "critical-secondary",
                                         size: "sm",
                                         text: ed.intl.string(ed.t.xUqheM),
-                                        onClick: () => eI(u, x),
+                                        onClick: () => eI(u, c, x),
                                     }),
                                 }),
                             ],

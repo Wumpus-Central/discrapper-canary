@@ -18946,7 +18946,7 @@ function Nz(e) {
                               (0, p.jsx)(M.D, {
                                   className: Nw.uH,
                                   onClick: () =>
-                                      (0, fU.d1)(i, () => {
+                                      (0, fU.d1)(i, t.scopes, () => {
                                           fG.A.delete(t.id);
                                       }),
                                   "aria-label": g.intl.string(g.t.ppppRJ),
