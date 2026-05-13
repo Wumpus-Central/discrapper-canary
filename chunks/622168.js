@@ -285,7 +285,7 @@ var eL = n(285406),
     eJ = n(468689),
     e0 = n(375708),
     e1 = n(330766);
-function e3(e) {
+function e6(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
         s = (0, e$.bG)([X.A, eN.default], () => {
             let e = eN.default.getCurrentUser(),
@@ -318,10 +318,10 @@ function e3(e) {
         })
     );
 }
-var e6 = n(338854);
+var e3 = n(338854);
 function e5(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e;
-    return (0, l.jsx)(e6.H, {
+    return (0, l.jsx)(e3.H, {
         targetElementRef: i,
         title: e0.intl.string(e0.t.gCgirr),
         body: e0.intl.string(e0.t.fLMZFw),
@@ -459,7 +459,7 @@ let tn = a.memo(function (e) {
                 }
                 case u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
                     return (0, l.jsx)(tt, {
-                        renderPopout: (e) => (0, l.jsx)(e3, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e6, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
@@ -759,8 +759,8 @@ var tK = n(503698),
     tJ = n(104171),
     t0 = n(47167),
     t1 = n(713654),
-    t3 = n(976860),
-    t6 = n(790535),
+    t6 = n(976860),
+    t3 = n(790535),
     t5 = n(110618),
     t8 = n(495544),
     t4 = n(309010),
@@ -1018,7 +1018,7 @@ function n_(e) {
             text: n,
             fullWidth: !0,
             onClick: () => {
-                null != t && null != t.getGuildId() && ((0, t6.av)(t), (0, t3.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t3.av)(t), (0, t6.uh)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -1173,7 +1173,7 @@ let np = (e) => {
         },
         onClick: () => {
             (0, nT.sF)(nT._2.HUB_STUDY_ROOM_NOTICE),
-                null != t && null != t.getGuildId() && ((0, t6.av)(t), (0, t3.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t3.av)(t), (0, t6.uh)(t.getGuildId(), t.id));
         },
         title: e0.intl.string(e0.t["4Y2AS7"]),
         message: e0.intl.string(e0.t.wTsxTS),
@@ -1426,7 +1426,7 @@ class nJ extends d.Ay.Store {
 }
 let n0 = new nJ(I.h),
     n1 = "lastHiddenChannelNotice",
-    n3 = [
+    n6 = [
         { type: H.n5X.CLAN_ADMIN_UPSELL, dismissibleContentType: u.M.CHANNEL_LIST_CLAN_ADMIN_UPSELL },
         {
             type: H.n5X.GUILD_BOOSTING,
@@ -1440,7 +1440,7 @@ let n0 = new nJ(I.h),
         { type: H.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: u.M.LINKED_ROLE_ADMIN_GUILD },
         { type: H.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
     ],
-    n6 = n3.map((e) => e.store).filter(t9.Vq),
+    n3 = n6.map((e) => e.store).filter(t9.Vq),
     n5 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
 function n8(e) {
     e.stopPropagation();
@@ -1471,11 +1471,11 @@ function n2(e) {
         [E, h] = (0, ei.ww)(A, r.id, eE.m.CHANNEL_NOTICES, !0),
         _ = null != E,
         g = (0, d.yK)(
-            n6,
+            n3,
             () =>
                 _
                     ? []
-                    : n3
+                    : n6
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
                               return !0 === n?.channelNoticePredicate(r, o) && !n5.has(t);
@@ -1624,12 +1624,13 @@ class ir extends a.PureComponent {
                     n.e("94864"),
                     n.e("6772"),
                     n.e("758"),
-                    n.e("27681"),
-                    n.e("65397"),
+                    n.e("86695"),
+                    n.e("66323"),
                     n.e("68563"),
                     n.e("78220"),
                     n.e("86522"),
                     n.e("18549"),
+                    n.e("46654"),
                     n.e("3680"),
                     n.e("34195"),
                     n.e("99961"),
@@ -1662,7 +1663,8 @@ class ir extends a.PureComponent {
                     n.e("80186"),
                     n.e("34354"),
                     n.e("23924"),
-                    n.e("71470"),
+                    n.e("42205"),
+                    n.e("71091"),
                     n.e("19402"),
                     n.e("49681"),
                     n.e("96382"),
@@ -2171,7 +2173,7 @@ function io(e) {
     }, [L, z, K]);
     let [q, $] = (0, et.Ay)(
             (e) => [
-                n3.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
+                n6.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
                 e.currentlyShownGroup.has(eE.m.GUILD_HEADER_TOOLTIPS),
             ],
             o.x,
@@ -2253,8 +2255,8 @@ function io(e) {
     it.A.useConfig({ guildId: L, location: "guild_sidebar" });
     let e0 = (0, ex.C$)(L, "GuildSidebar"),
         e1 = (0, d.bG)([X.A], () => X.A.getGuild(L)?.features.has(H.GuildFeatures.GAME_SERVERS) ?? !1, [L]),
-        e3 = e0 && !e1 && !1 === eJ,
-        e6 = (0, eG.J)("GuildSidebar"),
+        e6 = e0 && !e1 && !1 === eJ,
+        e3 = (0, eG.J)("GuildSidebar"),
         e5 = (0, ef.S)(L, "GuildSidebar"),
         e8 = e0 && !e1 && e5 && !1 === eJ,
         e4 = (0, eH.A)(),
@@ -2267,11 +2269,11 @@ function io(e) {
         eT && tt.push(u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
         eM && tt.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === eJ && tt.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
-        e3 && tt.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        e6 && tt.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         e8 && tt.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         eq && tt.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [tn, ti] = (0, ei.kn)(tt, eE.m.GUILD_HEADER_TOOLTIPS),
-        [ts, tl] = (0, eU.vB)(e6 && e0 && !1 === eJ && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),
+        [ts, tl] = (0, eU.vB)(e3 && e0 && !1 === eJ && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),
         [ta, tr] = (0, ei.D8)(
             e9 ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
             L,

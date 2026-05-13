@@ -3324,6 +3324,12 @@ input::-webkit-outer-spin-button {
     overflow-y: auto
 }
 
+.forumPost__02068 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    pointer-events: none
+}
+
 .uploadInput__94439 {
     align-items: center;
     background-color: var(--background-mod-normal);
@@ -6098,13 +6104,36 @@ input::-webkit-outer-spin-button {
     margin: 40px 0 31px
 }
 
-.advancedTitle__4914c {
+.trigger__4914c {
+    all: unset;
     cursor: pointer
+}
+
+.advancedTitle__4914c {
+    align-items: center;
+    display: inline-flex
 }
 
 .titleCaret__4914c {
     margin-inline-start: 14px;
-    vertical-align: bottom
+    transform: rotate(-90deg)
+}
+
+.full-motion .titleCaret__4914c {
+    transition: transform .2s ease
+}
+
+[data-expanded] .titleCaret__4914c {
+    transform: rotate(0)
+}
+
+.panel__4914c {
+    height: var(--disclosure-panel-height);
+    overflow: clip
+}
+
+.full-motion .panel__4914c {
+    transition: height .2s ease-in-out
 }
 
 .cardContent_f62fce {
@@ -7179,6 +7208,16 @@ input::-webkit-outer-spin-button {
     transition: opacity .2s ease
 }
 
+.text__76132 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.image__76132 {
+    width: 85px
+}
+
 .forumPost__7d15e {
     background-color: var(--background-base-low);
     border-radius: 8px;
@@ -7192,51 +7231,4 @@ input::-webkit-outer-spin-button {
 
 .container__7d15e .forumPost__7d15e:last-of-type {
     margin-bottom: 0
-}
-
-.confirmModal__1b38b {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px
-}
-
-.discordTag__1b38b {
-    display: inline-grid;
-    grid-auto-flow: column
-}
-
-.avatarIcon__1b38b {
-    margin-inline-end: 3px
-}
-
-.username__1b38b {
-    color: var(--text-strong);
-    display: flex
-}
-
-.discriminator__1b38b {
-    color: var(--text-default)
-}
-
-.fromToWrapper__1b38b {
-    background: no-repeat 50% 0;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px
-}
-
-.from__1b38b,
-.to__1b38b {
-    border-radius: 50%
-}
-
-.from__1b38b {
-    margin-inline-end: -27px;
-    opacity: .3
-}
-
-.to__1b38b {
-    position: relative;
-    z-index: 1
 }

@@ -1,3 +1,50 @@
+.confirmModal__1b38b {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px
+}
+
+.discordTag__1b38b {
+    display: inline-grid;
+    grid-auto-flow: column
+}
+
+.avatarIcon__1b38b {
+    margin-inline-end: 3px
+}
+
+.username__1b38b {
+    color: var(--text-strong);
+    display: flex
+}
+
+.discriminator__1b38b {
+    color: var(--text-default)
+}
+
+.fromToWrapper__1b38b {
+    background: no-repeat 50% 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px
+}
+
+.from__1b38b,
+.to__1b38b {
+    border-radius: 50%
+}
+
+.from__1b38b {
+    margin-inline-end: -27px;
+    opacity: .3
+}
+
+.to__1b38b {
+    position: relative;
+    z-index: 1
+}
+
 @keyframes outgoing-call-pulse__3751b {
     0% {
         opacity: .2
