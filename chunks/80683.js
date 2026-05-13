@@ -201,7 +201,7 @@ class ep extends i.PureComponent {
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("86522"),
-                    n.e("3680"),
+                    n.e("96221"),
                     n.e("89545"),
                     n.e("84704"),
                     n.e("86197"),

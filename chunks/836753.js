@@ -30,7 +30,7 @@ class f extends a.A {
                     let { default: e } = await Promise.all([
                         n.e("58858"),
                         n.e("6772"),
-                        n.e("3680"),
+                        n.e("96221"),
                         n.e("74275"),
                         n.e("18549"),
                         n.e("60060"),

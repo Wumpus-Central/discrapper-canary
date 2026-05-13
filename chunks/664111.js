@@ -52,8 +52,8 @@ let I = { tension: 250, friction: 5, clamp: !0 },
                 onPlayerStateChange: X,
                 onFullscreenChange: z,
                 onVolumeChange: W,
-                onMutedChange: V,
-                initialVolume: H = 0.3,
+                onMutedChange: H,
+                initialVolume: V = 0.3,
                 initialMuted: Z = !1,
                 onLoadStart: J,
                 onLoadEnd: q,
@@ -100,8 +100,8 @@ let I = { tension: 250, friction: 5, clamp: !0 },
             ez = l.useCallback((e) => {
                 eX(null), e$(e);
             }, []),
-            [eW, eV] = l.useState(!1),
-            eH = l.useRef(null),
+            [eW, eH] = l.useState(!1),
+            eV = l.useRef(null),
             [eZ, eJ] = l.useState(o.h$.LOADING),
             eq = l.useRef(!1),
             e0 = l.useRef(null),
@@ -115,7 +115,7 @@ let I = { tension: 250, friction: 5, clamp: !0 },
             tt = l.useRef(!0),
             tn = l.useRef(null),
             tr = l.useRef(null),
-            [tl, ta] = l.useState(H),
+            [tl, ta] = l.useState(V),
             [ti, tu] = l.useState(Z),
             [ts, to] = l.useState(!1),
             [tc, td] = l.useState(!1),
@@ -218,7 +218,7 @@ let I = { tension: 250, friction: 5, clamp: !0 },
         }, [eF, tK]),
             l.useEffect(
                 () => () => {
-                    null != eH.current && clearTimeout(eH.current);
+                    null != eV.current && clearTimeout(eV.current);
                 },
                 [],
             );
@@ -231,13 +231,13 @@ let I = { tension: 250, friction: 5, clamp: !0 },
             }, []),
             tz = () => {
                 null == th.current ||
-                    (tV(Math.max((e0.current ?? th.current.currentTime) - 10, 0)),
+                    (tH(Math.max((e0.current ?? th.current.currentTime) - 10, 0)),
                     eF === o.Q6.ENDED && tF(o.Q6.PAUSED, o.KB.SEEK));
             },
             tW = () => {
                 if (null == th.current) return;
                 let e = Math.min((e0.current ?? th.current.currentTime) + 10, tj);
-                tV(e), eF !== o.Q6.ENDED && e >= th.current.duration && tF(o.Q6.ENDED, o.KB.SEEK);
+                tH(e), eF !== o.Q6.ENDED && e >= th.current.duration && tF(o.Q6.ENDED, o.KB.SEEK);
             };
         l.useEffect(() => {
             let e = th.current;
@@ -246,17 +246,17 @@ let I = { tension: 250, friction: 5, clamp: !0 },
                 null != t && t.removeEventListener(y.Wb, tX);
             };
         }, [tX]);
-        let tV = l.useCallback(
+        let tH = l.useCallback(
                 function (e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                     if (null == th.current) return;
                     let n = th.current.currentTime;
                     (e0.current = e),
                         eX((e / (th.current.duration ?? 1)) * 100),
-                        eV(!0),
-                        null != eH.current && clearTimeout(eH.current),
-                        (eH.current = setTimeout(() => {
-                            eV(!1), (eH.current = null);
+                        eH(!0),
+                        null != eV.current && clearTimeout(eV.current),
+                        (eV.current = setTimeout(() => {
+                            eH(!1), (eV.current = null);
                         }, 100)),
                         (eq.current = !0),
                         (th.current.currentTime = e),
@@ -264,11 +264,11 @@ let I = { tension: 250, friction: 5, clamp: !0 },
                 },
                 [ea],
             ),
-            tH = () => {
+            tV = () => {
                 if (null != th.current)
                     switch (eF) {
                         case o.Q6.ENDED:
-                            tV(0), tF(o.Q6.PLAYING, o.KB.USER);
+                            tH(0), tF(o.Q6.PLAYING, o.KB.USER);
                             break;
                         case o.Q6.PLAYING:
                             tb(o.KB.USER), tF(o.Q6.PAUSED, o.KB.USER);
@@ -315,7 +315,7 @@ let I = { tension: 250, friction: 5, clamp: !0 },
                 }
             },
             t1 = (e) => {
-                if ((tV(e), eF === o.Q6.ENDED && !e8.current)) {
+                if ((tH(e), eF === o.Q6.ENDED && !e8.current)) {
                     let t = th.current?.duration;
                     (null == t || Number.isNaN(t) || e < t) && tF(o.Q6.PLAYING, o.KB.USER);
                 }
@@ -326,8 +326,8 @@ let I = { tension: 250, friction: 5, clamp: !0 },
                 onStart: () => {
                     te(!1);
                 },
-                onRest: (e) => {
-                    1 === e.value && te(!0);
+                onRest: () => {
+                    te(!0);
                 },
             })),
             t4 = (0, l.useRef)(null),
@@ -354,9 +354,9 @@ let I = { tension: 250, friction: 5, clamp: !0 },
             t3 = l.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.KB.USER;
-                    null != th.current && (tV(0), tF(o.Q6.PLAYING, e));
+                    null != th.current && (tH(0), tF(o.Q6.PLAYING, e));
                 },
-                [tV, tF],
+                [tH, tF],
             ),
             t5 = l.useRef(null),
             ne = l.useCallback(
@@ -416,7 +416,7 @@ let I = { tension: 250, friction: 5, clamp: !0 },
                         },
                         onLoadedMetadata: (e) => {
                             if (null == th.current) return;
-                            G > 0 && !tC && tV(G, !1), ti ? (th.current.volume = 0) : (th.current.volume = tl);
+                            G > 0 && !tC && tH(G, !1), ti ? (th.current.volume = 0) : (th.current.volume = tl);
                             let t = th.current.duration;
                             t > 0 && isFinite(t) && tD(t), tM(!0);
                         },
@@ -452,7 +452,7 @@ let I = { tension: 250, friction: 5, clamp: !0 },
                         onEmptied: () => tS(o.SB.EMPTIED),
                         onStalled: () => tS(o.SB.STALLED),
                         onClick: (e) => {
-                            null != ec ? ec(e) : tH();
+                            null != ec ? ec(e) : tV();
                         },
                         crossOrigin: eA ?? void 0,
                         children: [
@@ -663,7 +663,7 @@ let I = { tension: 250, friction: 5, clamp: !0 },
                                     transcriptEnabled: ts,
                                     captionEnabled: tc,
                                     fullScreenEnabled: tm,
-                                    handlePlaybackBtnClick: tH,
+                                    handlePlaybackBtnClick: tV,
                                     handleTranscriptBtnClick: () => {
                                         to(!ts);
                                     },
@@ -688,7 +688,7 @@ let I = { tension: 250, friction: 5, clamp: !0 },
                                         ta(e), W?.(e);
                                     },
                                     onMutedChange: (e) => {
-                                        tu(e), V?.(e);
+                                        tu(e), H?.(e);
                                     },
                                 }),
                             }),

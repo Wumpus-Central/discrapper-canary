@@ -1236,7 +1236,7 @@ function ni(e, t, s, a, o) {
                         (0, h.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("60060"),
-                                n.e("3680"),
+                                n.e("96221"),
                                 n.e("758"),
                                 n.e("30708"),
                                 n.e("34195"),

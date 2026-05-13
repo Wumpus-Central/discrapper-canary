@@ -7,7 +7,7 @@ e.exports = {
     f5: "defaultProgressToPlayheadTheme__68788",
     Zn: "bufferedBar__68788",
     YK: "seekableBar__68788",
-    Ey: "timeDisplay__68788",
+    Hz: "timelineTooltip__68788",
     lG: "playhead__68788",
     Td: "segmentContainer__68788",
     MI: "segmentMask__68788",
