@@ -84,7 +84,7 @@ let p = (0, o.mj)({
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
 function A(e) {
-    let t = (0, a.bG)([l.default], () => l.default.getCurrentUser()?.isFractionalPremium() === !0),
+    let t = (0, a.bG)([l.default], () => l.default.getCurrentUser()?.isPremiumWithFractionalPremiumOnly() === !0),
         { enabled: n } = g.useConfig({ location: e }),
         i = (function (e) {
             let { location: t } = e,
