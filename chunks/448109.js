@@ -13,17 +13,17 @@ var n = i(627968),
     x = i(617986),
     g = i(731355),
     C = i(366010),
-    N = i(534514),
-    h = i(825484),
+    h = i(534514),
+    N = i(825484),
     j = i(408278),
     A = i(173936),
     p = i(821609),
     T = i(743368),
-    E = i(990078),
+    v = i(990078),
     I = i(736653),
     _ = i(859387),
-    v = i(590202),
-    y = i(971649),
+    y = i(590202),
+    E = i(971649),
     O = i(651892),
     R = i(901406),
     L = i(814793),
@@ -31,16 +31,16 @@ var n = i(627968),
     D = i(918338),
     M = i(371912),
     b = i(17928),
-    W = i(793574),
-    w = i(532794),
-    P = i(976860),
+    P = i(793574),
+    W = i(532794),
+    w = i(976860),
     q = i(287809),
     S = i(975571),
     H = i(474090),
-    Y = i(561844),
-    z = i(190107),
-    G = i(652215),
-    Q = i(788868),
+    z = i(561844),
+    G = i(190107),
+    Q = i(652215),
+    Y = i(788868),
     V = i(375708),
     F = i(237146),
     K = i(818348),
@@ -49,13 +49,13 @@ function Z(t) {
     let { quest: e, sourceQuestContent: i, onLoadComplete: a, preCtaClick: r } = t,
         c = (0, I.Ay)(),
         o = (0, C.M)(c) ? K.NJ.DARK : K.NJ.LIGHT,
-        u = (0, y.go)(),
+        u = (0, E.go)(),
         d = (0, L.E0)(e.config),
         f = async () => {
             await r?.(),
                 (0, R.pu)(e, {
                     content: m.uF.REWARD_MODAL,
-                    ctaContent: v.Cy.OPEN_GAME_LINK,
+                    ctaContent: y.Cy.OPEN_GAME_LINK,
                     impressionId: u,
                     sourceQuestContent: i,
                 });
@@ -65,44 +65,44 @@ function Z(t) {
             return null != t
                 ? t
                 : (0, L.pv)(e.config) !== g.Z.GAMEPLAY ||
-                    e.config.features.includes(z.Li.NON_GAMING_PLAY_QUEST) ||
+                    e.config.features.includes(G.Li.NON_GAMING_PLAY_QUEST) ||
                     (0, L.ui)(e)
                   ? V.intl.string(V.t.y8Xf3k)
                   : V.intl.string(V.t["wirwN+"]);
         }, [e]),
         Z = (function (t, e, i) {
-            let n = t.config.features.some((t) => z.Tz.has(t)),
+            let n = t.config.features.some((t) => G.Tz.has(t)),
                 a = (0, b.bG)([q.default], () => q.default.getCurrentUser()),
-                r = (0, H.YE)(a, Q.PremiumTypes.TIER_2),
-                l = (0, H.ki)(a),
+                r = a?.hasPaidTier2Subscription(),
+                l = (0, H.ki)(a) && !a?.isPremiumWithFractionalPremiumOnly(),
                 c = s.useCallback(async () => {
                     n &&
                         (r
-                            ? ((0, Y.Y5)({
+                            ? ((0, z.Y5)({
                                   questId: t.id,
                                   questContent: m.uF.REWARD_MODAL,
-                                  questContentCTA: v.Cy.OPEN_NITRO_HOME,
+                                  questContentCTA: y.Cy.OPEN_NITRO_HOME,
                                   impressionId: e.impressionId,
                                   sourceQuestContent: e.sourceQuestContent,
                               }),
                               await i?.(),
-                              (0, P.pX)(G.BVt.NITRO_HOME))
-                            : ((0, Y.Y5)({
+                              (0, w.pX)(Q.BVt.NITRO_HOME))
+                            : ((0, z.Y5)({
                                   questId: t.id,
                                   questContent: m.uF.REWARD_MODAL,
-                                  questContentCTA: v.Cy.OPEN_NITRO_CHECKOUT,
+                                  questContentCTA: y.Cy.OPEN_NITRO_CHECKOUT,
                                   impressionId: e.impressionId,
                                   sourceQuestContent: e.sourceQuestContent,
                               }),
                               await i?.(),
-                              await (0, w.A)({
-                                  subscriptionTier: Q.pe.TIER_2,
-                                  analyticsLocations: [W.A.QUEST_REWARD_MODAL],
+                              await (0, W.A)({
+                                  subscriptionTier: Y.pe.TIER_2,
+                                  analyticsLocations: [P.A.QUEST_REWARD_MODAL],
                               })));
                 }, [n, r, t.id, e.impressionId, e.sourceQuestContent, i]);
             if (!n) return null;
-            if (t.config.features.includes(z.Li.NITRO_2_POINT_0_CTA)) {
-                let t = S.A.getArticleURL(G.MVz.NITRO_2_POINT_0);
+            if (t.config.features.includes(G.Li.NITRO_2_POINT_0_CTA)) {
+                let t = S.A.getArticleURL(Q.MVz.NITRO_2_POINT_0);
                 return r
                     ? {
                           title: V.intl.string(F.default.LIc2xy),
@@ -146,7 +146,7 @@ function Z(t) {
         trackingCtx: s.useMemo(
             () => ({
                 content: m.uF.REWARD_MODAL,
-                ctaContent: v.Cy.REWARD_MODAL_COPY_LINK,
+                ctaContent: y.Cy.REWARD_MODAL_COPY_LINK,
                 impressionId: u,
                 sourceQuestContent: i,
             }),
@@ -186,7 +186,7 @@ function Z(t) {
                     (0, n.jsxs)("div", {
                         className: U.Ly,
                         children: [
-                            (0, n.jsx)(N.D, {
+                            (0, n.jsx)(h.D, {
                                 variant: "heading-md/semibold",
                                 color: "text-strong",
                                 className: U.fx,
@@ -209,14 +209,14 @@ function Z(t) {
             }),
             (0, n.jsx)("div", {
                 className: U.tu,
-                children: (0, n.jsxs)(h.e, {
+                children: (0, n.jsxs)(N.e, {
                     size: "sm",
                     direction: "horizontal",
                     fullWidth: !0,
                     fullWidthContainer: !0,
                     children: [
                         d &&
-                            (0, n.jsx)(E.m, {
+                            (0, n.jsx)(v.m, {
                                 text: V.intl.string(V.t.WmfZHZ),
                                 children: (0, n.jsx)(j.K, {
                                     icon: A.q,
@@ -267,20 +267,20 @@ function $(t) {
             onClose: l,
             rewardContent: g,
             isRewardContentLoading: C,
-            rewardContentHasError: N,
-            location: h,
+            rewardContentHasError: h,
+            location: N,
         } = t,
         j = m.uF.REWARD_MODAL,
         [A, p] = s.useState(!0),
-        T = e.config.features.some((t) => z.Tz.has(t)),
-        E = s.useCallback(async () => {
+        T = e.config.features.some((t) => G.Tz.has(t)),
+        v = s.useCallback(async () => {
             if (T) {
                 l(), (0, c.closeAllModals)();
                 return;
             }
             (await (0, x.f7)(e.config.ctaConfig?.link)) && (l(), (0, c.closeAllModals)());
         }, [e.config.ctaConfig?.link, l, T]);
-    if (N) return (0, n.jsx)(B, { onClose: l, transitionState: a });
+    if (h) return (0, n.jsx)(B, { onClose: l, transitionState: a });
     let I = C || A;
     return (0, n.jsx)(f.R, {
         questOrQuests: e,
@@ -314,8 +314,8 @@ function $(t) {
                                                 quest: e,
                                                 sourceQuestContent: i,
                                                 onLoadComplete: () => p(!1),
-                                                preCtaClick: E,
-                                                location: h,
+                                                preCtaClick: v,
+                                                location: N,
                                             }),
                                         }),
                                     ],
