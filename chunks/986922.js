@@ -619,7 +619,7 @@ let e4 = () => {
             s = (0, D.v4)(i);
         return null === e ? null : t && 1 !== l.length ? (0, n.jsx)(e4, {}) : (0, n.jsx)(e8, { userId: e, subText: s });
     },
-    e7 = () => {
+    e6 = () => {
         let e = (0, Q.Mo)(),
             t = (0, d.bG)([C.A], () => Object.values(b.NV).some((e) => C.A.getTotalForDisplayType(e) > 0)),
             l = (0, Q.jp)(),
@@ -667,7 +667,7 @@ let e4 = () => {
             ],
         });
     };
-var e6 = l(336541);
+var e7 = l(336541);
 let te = () => {
         let e = (0, D.vx)(),
             t = (0, z.y3)(),
@@ -680,7 +680,7 @@ let te = () => {
         return 0 === e.length
             ? null
             : (0, n.jsx)("div", {
-                  className: a()(e6.Gq, { [e6.wS]: e.length > 1 }),
+                  className: a()(e7.Gq, { [e7.wS]: e.length > 1 }),
                   children:
                       e.length > 1
                           ? (0, n.jsx)(U.Pw, {
@@ -709,7 +709,7 @@ let te = () => {
             gap: 32,
             children: [
                 (0, n.jsxs)(P.D, {
-                    className: e6.Gv,
+                    className: e7.Gv,
                     onClick: l,
                     "aria-label": ej.intl.string(ej.t.ybUZql),
                     children: [
@@ -728,7 +728,7 @@ let te = () => {
                     children: [
                         (0, n.jsxs)(c.B, {
                             gap: 4,
-                            className: e6.gn,
+                            className: e7.gn,
                             children: [
                                 (0, n.jsx)(F.E, {
                                     variant: "text-sm/medium",
@@ -1190,8 +1190,8 @@ var tK = l(847374),
     t8 = l(477782),
     t4 = l(943255),
     t5 = l(922016),
-    t7 = l(408278),
-    t6 = l(365199),
+    t6 = l(408278),
+    t7 = l(365199),
     le = l(243721),
     lt = l(95396),
     ll = l(624411);
@@ -1228,7 +1228,6 @@ function li(e) {
         direction: "horizontal",
         align: "center",
         gap: 12,
-        padding: { top: 8, bottom: 8 },
         children: [
             (0, n.jsx)("div", { className: ll.X, children: (0, n.jsx)(t4.Z, { size: "md" }) }),
             (0, n.jsxs)(c.B, {
@@ -1255,10 +1254,10 @@ function li(e) {
                             animation: t5.Y.Animation.NONE,
                             children: (e) => {
                                 let { onClick: t } = e;
-                                return (0, n.jsx)(t7.K, {
+                                return (0, n.jsx)(t6.K, {
                                     buttonRef: r,
                                     size: "sm",
-                                    icon: t6.j,
+                                    icon: t7.j,
                                     variant: "icon-only",
                                     "aria-label": ej.intl.string(ej.t["UKOtz+"]),
                                     "aria-haspopup": "menu",
@@ -1367,9 +1366,16 @@ let la = (e) => {
                       u &&
                           (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  d.map((e) => (0, n.jsx)(li, { rule: e, teenId: t, readOnly: s }, e.ruleId)),
                                   (0, n.jsx)(c.B, {
-                                      className: `${ls.Dp} ${s ? ls.nh : ""}`,
+                                      direction: "vertical",
+                                      gap: 16,
+                                      padding: { top: 24, bottom: 24 },
+                                      children: d.map((e) =>
+                                          (0, n.jsx)(li, { rule: e, teenId: t, readOnly: s }, e.ruleId),
+                                      ),
+                                  }),
+                                  (0, n.jsx)("div", {
+                                      className: s ? ls.nh : void 0,
                                       children: (0, n.jsx)(tG.$, {
                                           text: ej.intl.string(em.default.OwFF4o),
                                           onClick: x,
@@ -1529,7 +1535,7 @@ let lx = () => {
                                 }),
                             ],
                         }),
-                  e ? (0, n.jsx)(e7, {}) : (0, n.jsx)(tY, {}),
+                  e ? (0, n.jsx)(e6, {}) : (0, n.jsx)(tY, {}),
                   (0, n.jsx)(lu, {}),
               ],
           });
@@ -2031,8 +2037,8 @@ let l8 = () => {
 };
 var l4 = l(731738),
     l5 = l(964486),
-    l7 = l(612200),
-    l6 = l(807393),
+    l6 = l(612200),
+    l7 = l(807393),
     ne = l(210714),
     nt = l(33666),
     nl = l(204925);
@@ -2068,11 +2074,11 @@ function nn(e) {
                     initial_page: b.zu[n],
                     source: b.iN[t],
                 }),
-                    l6.A.increment({ name: l4.K.FAMILY_CENTER_VIEW });
+                    l7.A.increment({ name: l4.K.FAMILY_CENTER_VIEW });
             }
         }, [a, h, t]),
         i.useEffect(() => {
-            m && (0, l7.yO)(nl.w_.FAMILY_CENTER);
+            m && (0, l6.yO)(nl.w_.FAMILY_CENTER);
         }, [m]),
         { isLoading: r, selectedTab: u, handleTabChange: o, showAgeGateModal: m }
     );

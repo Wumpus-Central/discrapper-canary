@@ -1,29 +1,29 @@
 "use strict";
-n.d(t, { openRestrictedHoursModal: () => N, k: () => C });
+n.d(t, { openRestrictedHoursModal: () => N, k: () => y });
 var i = n(627968),
     r = n(64700),
-    s = n(361158),
+    s = n(663066),
     a = n(80556),
     o = n(632679),
     l = n(331322),
-    d = n(834730),
-    _ = n(17928),
-    u = n(349288),
-    c = n(830215),
-    E = n(287809),
-    h = n(985018),
-    m = n(695515),
-    f = n(425116),
-    g = n(602339),
-    p = n(88438);
+    u = n(834730),
+    c = n(17928),
+    d = n(349288),
+    _ = n(830215),
+    f = n(287809),
+    h = n(375708),
+    p = n(695515),
+    E = n(425116),
+    m = n(602339),
+    g = n(88438);
 function A() {
-    c.A.logout("restricted_hours");
+    _.A.logout("restricted_hours");
 }
 function I(e) {
     let { onClose: t } = e,
-        n = (0, _.bG)([E.default, m.A], f.$),
-        s = (0, _.bG)([E.default], () => {
-            let e = E.default.getCurrentUser()?.restrictedSchedule?.getNextEndTime();
+        n = (0, c.bG)([f.default, p.A], E.$),
+        s = (0, c.bG)([f.default], () => {
+            let e = f.default.getCurrentUser()?.restrictedSchedule?.getNextEndTime();
             return null == e
                 ? null
                 : new Intl.DateTimeFormat(h.intl.currentLocale, {
@@ -32,38 +32,43 @@ function I(e) {
                       weekday: "long",
                   }).format(e);
         }),
-        a = (0, _.bG)([E.default], () => E.default.getCurrentUser()?.username ?? "");
+        a = (0, c.bG)([f.default], () => f.default.getCurrentUser()?.username ?? "");
     r.useEffect(() => {
         n || t();
     }, [n, t]);
-    let c = null != s ? h.intl.format(g.default.VfqJvY, { endTime: s }) : h.intl.string(g.default.abikhN);
+    let _ = null != s ? h.intl.format(m.default.VfqJvY, { endTime: s }) : h.intl.string(m.default.abikhN);
     return (0, i.jsxs)("div", {
-        className: p.Tp,
+        className: g.Tp,
         children: [
-            (0, i.jsx)("div", { className: p.cU }),
-            (0, i.jsx)(o.w, { artboard: "Gradient Horizontal", className: p.DL }),
+            (0, i.jsx)("div", { className: g.gh, "aria-hidden": !0 }),
+            (0, i.jsx)("div", { className: g.zX, "aria-hidden": !0, children: (0, i.jsx)("div", { className: g.cU }) }),
             (0, i.jsxs)(l.B, {
                 direction: "vertical",
                 align: "center",
                 gap: 16,
-                className: `${p.kL} ${p.vx}`,
+                className: `${g.kL} ${g.vx}`,
                 children: [
                     (0, i.jsx)(o.w, {
                         artboard: "Teen Screen Time Illo",
                         stateMachine: "State Machine 1",
-                        className: p.jw,
+                        className: g.jw,
                     }),
-                    (0, i.jsx)(d.E, { variant: "text-lg/medium", color: "text-muted", className: p.h_, children: c }),
+                    (0, i.jsx)(u.E, {
+                        variant: "text-lg/medium",
+                        color: "text-overlay-light",
+                        className: g.h_,
+                        children: _,
+                    }),
                 ],
             }),
             (0, i.jsx)("div", {
-                className: `${p.qr} ${p.vx}`,
-                children: (0, i.jsx)(d.E, {
-                    variant: "text-sm/normal",
-                    color: "text-muted",
-                    children: h.intl.format(g.default.iqeKDz, {
+                className: `${g.qr} ${g.vx}`,
+                children: (0, i.jsx)(u.E, {
+                    variant: "text-sm/medium",
+                    color: "text-subtle",
+                    children: h.intl.format(m.default.iqeKDz, {
                         username: a,
-                        loginHook: (e, t) => (0, i.jsx)(u.Anchor, { onClick: A, children: e }, t),
+                        loginHook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: A, children: e }, t),
                     }),
                 }),
             }),
@@ -73,8 +78,8 @@ function I(e) {
 var T = n(191627);
 let S = !1;
 function N() {
-    S || ((S = !0), (0, s.B8)(() => (0, i.jsx)(I, { onClose: () => C() }), { layerKey: T.Uy, Layer: a.Ay }));
+    S || ((S = !0), (0, s.B8)(() => (0, i.jsx)(I, { onClose: () => y() }), { layerKey: T.Uy, Layer: a.Ay }));
 }
-function C() {
+function y() {
     (S = !1), (0, s.dF)(T.Uy);
 }

@@ -6,6 +6,5 @@ e.exports = {
     WB: "timeControlsHeaderLeft__9c880",
     ai: "chevron__9c880",
     hg: "chevronExpanded__9c880",
-    Dp: "addScheduleButton__9c880",
     nh: "addScheduleButtonDisabled__9c880",
 };
