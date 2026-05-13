@@ -45,7 +45,7 @@ let _ = [
     "websocket_message_received",
 ];
 var f = n(111162),
-    h = n(451314),
+    h = n(321034),
     p = n(38405),
     E = n(652215),
     m = n(53298),
@@ -109,6 +109,14 @@ let v = {
     },
     [E.HAw.ACTIVITY_HANDSHAKE]: { throttlePeriod: 864e5, throttleKeys: (e) => [e.application_id] },
     [E.HAw.CHANNEL_BANNER_VIEWED]: { throttlePeriod: 864e5, throttleKeys: (e) => [e.banner_type, e.channel_id] },
+    [a.ImpressionNames.GUILD_HANGOUT_WINDOW]: {
+        throttlePeriod: 864e5,
+        throttleKeys: (e) => [e.channel_id, e.banner_hash],
+    },
+    [a.ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: {
+        throttlePeriod: 864e5,
+        throttleKeys: (e) => [e.channel_id, e.media_session_id],
+    },
     [E.HAw.PREMIUM_UPSELL_VIEWED]: { throttlePeriod: 6e4, throttleKeys: (e) => [e.type] },
     [E.HAw.FORUM_CHANNEL_SEARCHED]: { throttlePeriod: 6e4, throttleKeys: (e) => [e.guild_id, e.channel_id] },
     [E.HAw.FORUM_CHANNEL_SCROLLED]: { throttlePeriod: 9e5, throttleKeys: (e) => [e.guild_id, e.channel_id] },

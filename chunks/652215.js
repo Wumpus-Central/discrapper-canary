@@ -4991,6 +4991,7 @@ var rD =
         (ex.HANGOUT_WINDOW_CLICKED = "hangout_window_clicked"),
         (ex.HANGOUT_WINDOW_CONTENT_CLEARED = "hangout_window_content_cleared"),
         (ex.HANGOUT_WINDOW_CONTENT_SET = "hangout_window_content_set"),
+        (ex.HANGOUT_WINDOW_GIF_CATEGORY_CLICKED = "hangout_window_gif_category_clicked"),
         (ex.MEMBER_VERIFICATION_APPLICATION_VIEWED = "member_verification_application_viewed"),
         (ex.GUILD_MEMBER_APPLICATION_REPORTED = "guild_member_application_reported"),
         (ex.GUILD_APPLICATION_ABANDONED = "guild_application_abandoned"),
