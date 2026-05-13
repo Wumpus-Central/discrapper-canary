@@ -1,3 +1,180 @@
+@keyframes ripple_c6367b {
+    0% {
+        opacity: 1;
+        transform: scale(.8)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.6)
+    }
+}
+
+.row_c6367b {
+    display: grid;
+    margin-bottom: var(--custom-stickers-constants-sticker-picker-preview-margin);
+    overflow: hidden
+}
+
+.row_c6367b,
+.sticker_c6367b {
+    position: relative
+}
+
+.sticker_c6367b {
+    border-radius: var(--custom-stickers-constants-sticker-picker-preview-border-radius)
+}
+
+.sticker_c6367b:after {
+    border: 3px solid var(--yellow-300);
+    border-radius: 100%;
+    box-sizing: border-box;
+    content: "";
+    height: 100%;
+    inset-inline-start: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform-origin: center;
+    width: 100%;
+    z-index: 5
+}
+
+.full-motion .sticker_c6367b:after {
+    transition: all .15s ease-in-out
+}
+
+.sticker_c6367b.showPulse_c6367b:after {
+    animation: ripple_c6367b .25s ease-out 1
+}
+
+.createSticker_c6367b {
+    align-items: center;
+    background-color: var(--background-base-low);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    font-weight: var(--font-weight-medium);
+    justify-content: space-evenly;
+    position: relative
+}
+
+.createInspected_c6367b {
+    background-color: var(--background-mod-normal)
+}
+
+.uploadCard_c6367b {
+    cursor: pointer
+}
+
+.iconWrapper_c6367b {
+    align-items: center;
+    background-image: linear-gradient(90deg, var(--guild-boosting-blue), var(--guild-boosting-purple));
+    border-radius: 36px;
+    color: var(--white);
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    width: 36px
+}
+
+.icon_c6367b {
+    height: 18px;
+    width: 18px
+}
+
+.inspectedIndicator_c6367b {
+    height: 100%;
+    inset-inline-start: 0;
+    -webkit-mask: url(/assets/34378a8df8efb149.svg) 0 0/100% 100%;
+    mask: url(/assets/34378a8df8efb149.svg) 0 0/100% 100%;
+    position: absolute;
+    top: 0;
+    transition: background-color .08s ease-out, color .08s ease-out;
+    width: 100%;
+    z-index: -1
+}
+
+.stickerInspected_c6367b .inspectedIndicator_c6367b {
+    background-color: var(--interactive-background-selected)
+}
+
+.stickerPlaceholder_c6367b {
+    cursor: default
+}
+
+.viewAll_c6367b {
+    inset-inline-end: 0;
+    position: absolute;
+    top: 0
+}
+
+.viewAll_c6367b:hover .viewAllButton_c6367b,
+.viewAllInspected_c6367b .viewAllButton_c6367b {
+    background-color: var(--background-base-lowest);
+    color: var(--interactive-text-hover)
+}
+
+.viewAllButton_c6367b {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    box-sizing: border-box;
+    color: var(--interactive-text-default);
+    display: grid;
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    height: 100%;
+    line-height: 20px;
+    text-align: center;
+    white-space: pre-line;
+    width: 100%
+}
+
+.stickerNode_c6367b {
+    transition: opacity .25s
+}
+
+.stickerNodeDimmed_c6367b {
+    opacity: .3
+}
+
+.stickerNodeHidden_c6367b {
+    visibility: hidden
+}
+
+.stickerUnsendable_c6367b {
+    filter: grayscale(100%)
+}
+
+.keyboard-mode .stickerInspected_c6367b {
+    position: relative
+}
+
+.keyboard-mode .stickerInspected_c6367b:before {
+    border-radius: 12px;
+    bottom: 0;
+    content: "";
+    display: block;
+    inset-inline: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    --__adaptive-focus-color: var(--interactive-text-hover);
+    border: 2px solid var(--__adaptive-focus-color);
+    z-index: 1
+}
+
+.enable-forced-colors .stickerInspected_c6367b {
+    background-color: HighlightText;
+    outline: 1px solid Highlight;
+    outline-offset: -1px
+}
+
+.enable-forced-colors .stickerInspected_c6367b:before {
+    border-color: Highlight
+}
+
 .wrapper_e94b8c {
     display: grid;
     grid-template-rows: 1fr auto;
