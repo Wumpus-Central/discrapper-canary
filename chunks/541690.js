@@ -218,7 +218,7 @@ let B = new m(s.INCREASED_GUILD_LIMIT),
 function X(e, t, n) {
     if (
         (null != t && t.isPremiumWithFractionalPremiumOnly() && z.includes(e)) ||
-        (null != t && t.isFractionalPremium() && $.includes(e)) ||
+        (null != t && t.isFractionalPremiumWithNoStandardSub() && $.includes(e)) ||
         (n && q.includes(e))
     )
         return !1;
