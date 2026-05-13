@@ -1,34 +1,34 @@
 "use strict";
 n.d(t, {
     AO: () => S,
-    CW: () => N,
+    CW: () => y,
     Eq: () => A,
     MW: () => _.iL,
     P0: () => f,
     Rj: () => m,
-    UV: () => O,
+    UV: () => C,
     X: () => T,
     bO: () => I,
     fs: () => g,
-    h0: () => h,
-    j6: () => y,
-    u0: () => E,
-    uf: () => p,
+    h0: () => p,
+    j6: () => N,
+    u0: () => h,
+    uf: () => E,
 });
-var r,
-    i,
+var i,
+    r,
     s,
     a,
     o,
     l,
     u,
-    d,
     c,
+    d,
     _ = n(873298),
-    f = (((r = {}).BAD = "bad"), (r.NEUTRAL = "neutral"), (r.GOOD = "good"), r);
-let E = 1024;
-var h = (((i = {}).AV = "AV"), (i.SOCIAL = "SOCIAL"), (i.SEARCH = "SEARCH"), (i.SAFETY = "SAFETY"), i);
-let p = [
+    f = (((i = {}).BAD = "bad"), (i.NEUTRAL = "neutral"), (i.GOOD = "good"), i);
+let h = 1024;
+var p = (((r = {}).AV = "AV"), (r.SOCIAL = "SOCIAL"), (r.SEARCH = "SEARCH"), (r.SAFETY = "SAFETY"), r);
+let E = [
         _.iL.VIDEO_BACKGROUND,
         _.iL.STREAM,
         _.iL.ACTIVITY,
@@ -36,7 +36,6 @@ let p = [
         _.iL.IN_APP_REPORTS,
         _.iL.BLOCK_USER,
         _.iL.SEARCH_RESULTS,
-        _.iL.AGE_VERIFICATION,
     ].reduce((e, t, n) => ({ ...e, [t]: n }), {}),
     m = ["bad", "neutral", "good"],
     g = 864e13;
@@ -84,7 +83,7 @@ var A =
         (l.UNABLE_TO_ENABLE_DEVICE = "UNABLE_TO_ENABLE_DEVICE"),
         (l.DESYNC = "DESYNC"),
         l),
-    y =
+    N =
         (((u = {}).FREEFORM = "FREEFORM"),
         (u.COULD_NOT_LOAD = "COULD_NOT_LOAD"),
         (u.BLACK_SCREEN = "BLACK_SCREEN"),
@@ -97,5 +96,5 @@ var A =
         (u.DESYNC = "DESYNC"),
         (u.NO_GAME_AUDIO = "NO_GAME_AUDIO"),
         u),
-    N = (((d = {}).FREEFORM = "FREEFORM"), (d.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), d),
-    O = (((c = {}).UNSPECIFIED = "UNSPECIFIED"), (c.SELF = "SELF"), (c.SOMEONE = "SOMEONE"), (c.OTHERS = "OTHERS"), c);
+    y = (((c = {}).FREEFORM = "FREEFORM"), (c.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), c),
+    C = (((d = {}).UNSPECIFIED = "UNSPECIFIED"), (d.SELF = "SELF"), (d.SOMEONE = "SOMEONE"), (d.OTHERS = "OTHERS"), d);

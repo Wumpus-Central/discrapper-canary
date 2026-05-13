@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { A: () => g, u: () => E });
-var r = n(735438),
-    i = n(506774),
+n.d(t, { A: () => g, u: () => h });
+var i = n(735438),
+    r = n(506774),
     s = n(439372),
     a = n(450510),
     o = n(891540),
     l = n(868974),
-    u = n(253932),
-    d = n(383501),
-    c = n(881520),
+    u = n(885386),
+    c = n(763827),
+    d = n(881520),
     _ = n(670455);
 let f = { chance: 0.2, cooldown: 864e5 },
-    E = {
+    h = {
         [_.MW.VOICE]: {
             ...f,
             group: _.h0.AV,
@@ -20,7 +20,7 @@ let f = { chance: 0.2, cooldown: 864e5 },
             feedbackType: _.MW.VOICE,
             eligibilityChecks: [
                 function (e) {
-                    return !d.A.getWasEverRtcConnected() || d.A.getWasEverMultiParticipant();
+                    return !c.A.getWasEverRtcConnected() || c.A.getWasEverMultiParticipant();
                 },
             ],
         },
@@ -74,31 +74,23 @@ let f = { chance: 0.2, cooldown: 864e5 },
                 },
             ],
         },
-        [_.MW.AGE_VERIFICATION]: {
-            cooldown: 0,
-            chance: 1,
-            group: _.h0.SAFETY,
-            hotspot: a._2.AGE_VERIFICATION_FEEDBACK,
-            storageKey: "ageVerificationFeedback",
-            feedbackType: _.MW.AGE_VERIFICATION,
-        },
     };
-function h(e) {
+function p(e) {
     let t = u.Yt.getSetting()[e.feedbackType]?.optOutExpiryTime,
         n = null != t && !Number.isNaN(t) && Date.now() < t,
-        r = !o.A.hasHotspot(e.hotspot);
+        i = !o.A.hasHotspot(e.hotspot);
     return (
-        r &&
+        i &&
             !n &&
             u.Yt.updateSetting((t) => ({ ...t, [e.feedbackType]: { ...t[e.feedbackType], optOutExpiryTime: _.fs } })),
-        !n && !r
+        !n && !i
     );
 }
-function p(e) {
+function E(e) {
     return Math.random() < e.chance;
 }
 function m(e) {
-    for (let t of Object.values(E).filter((t) => {
+    for (let t of Object.values(h).filter((t) => {
         let { group: n } = t;
         return n === e.group;
     }))
@@ -109,13 +101,13 @@ function m(e) {
                 return (
                     (null == s || Number.isNaN(s)) &&
                         null != t.storageKey &&
-                        (null == (n = i.w.get(t.storageKey) ?? void 0) ||
+                        (null == (n = r.w.get(t.storageKey) ?? void 0) ||
                             Number.isNaN(n) ||
                             u.Yt.updateSetting((e) => ({
                                 ...e,
                                 [t.feedbackType]: { ...e[t.feedbackType], lastImpressionTime: n },
                             }))),
-                    ((0, r.max)([s, n]) ?? 0) + e.cooldown < Date.now()
+                    ((0, i.max)([s, n]) ?? 0) + e.cooldown < Date.now()
                 );
             })(e, t)
         )
@@ -127,15 +119,15 @@ class g extends s.A {
     possiblyShowFeedbackModal(e, t, n) {
         !(function (e) {
             if (__OVERLAY__) return !1;
-            let t = c.A.getFeedbackConfig(e) ?? E[e],
+            let t = d.A.getFeedbackConfig(e) ?? h[e],
                 n = t.eligibilityChecks ?? [];
-            return [p, h, m].every((e) => e(t)) && n.every((e) => e(t));
+            return [E, p, m].every((e) => e(t)) && n.every((e) => e(t));
         })(e) ||
         (null != this.feedbackTypeToShow && _.uf[this.feedbackTypeToShow] < _.uf[e])
             ? n?.()
             : ((this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t, n));
     }
-    showFeedbackModalDebounced = (0, r.debounce)((e, t) => {
+    showFeedbackModalDebounced = (0, i.debounce)((e, t) => {
         if (null != this.feedbackTypeToShow) {
             var n;
             (n = this.feedbackTypeToShow),

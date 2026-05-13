@@ -4691,7 +4691,6 @@ var rD =
         (ex.IAR_REMOVE_APP_BUTTON_CLICKED = "iar_remove_app_button_clicked"),
         (ex.BLOCK_USER_FEEDBACK_SUBMITTED = "block_user_feedback_submitted"),
         (ex.IGNORE_USER_FEEDBACK_SUBMITTED = "ignore_user_feedback_submitted"),
-        (ex.AGE_VERIFICATION_FEEDBACK_SUBMITTED = "age_verification_feedback_submitted"),
         (ex.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED = "emoji_upload_file_size_limit_exceeded"),
         (ex.EMOJI_UPLOAD_STARTED = "emoji_upload_started"),
         (ex.EMOJI_UPLOAD_COMPLETED = "emoji_upload_completed"),

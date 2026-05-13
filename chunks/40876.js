@@ -139,7 +139,6 @@ let r = {
             "VIDEO_BACKGROUND_SHOW_FEEDBACK",
             "IN_APP_REPORTS_SHOW_FEEDBACK",
             "BLOCK_USER_SHOW_FEEDBACK",
-            "AGE_VERIFICATION_SHOW_FEEDBACK",
         ],
         inlineRequire: () => n(651649).A,
     },

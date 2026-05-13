@@ -25,14 +25,13 @@ class A extends E.A {
         EMBEDDED_ACTIVITY_CLOSE: (e) => this.handleActivityClose(e),
         IN_APP_REPORTS_SHOW_FEEDBACK: (e) => this.handleInAppReportsFeedback(e),
         BLOCK_USER_SHOW_FEEDBACK: () => this.handleBlockUserFeedback(),
-        AGE_VERIFICATION_SHOW_FEEDBACK: (e) => this.handleAgeVerificationFeedback(e),
     };
     handleVoiceChannelFeedback = (e) => {
         let { analyticsData: t } = e;
         this.possiblyShowFeedbackModal(m.MW.VOICE, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("44729"),
+                    n.e("55567"),
                     n.e("94864"),
                     n.e("56030"),
                     n.e("67829"),
@@ -66,7 +65,7 @@ class A extends E.A {
             this.possiblyShowFeedbackModal(m.MW.STREAM, () => {
                 (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("44729"),
+                        n.e("55567"),
                         n.e("94864"),
                         n.e("56030"),
                         n.e("67829"),
@@ -96,7 +95,7 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.VIDEO_BACKGROUND, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("44729"),
+                    n.e("55567"),
                     n.e("94864"),
                     n.e("56030"),
                     n.e("61379"),
@@ -125,7 +124,7 @@ class A extends E.A {
                 (0, r.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("44729"),
+                            n.e("55567"),
                             n.e("94864"),
                             n.e("56030"),
                             n.e("61379"),
@@ -155,7 +154,7 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.IN_APP_REPORTS, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("44729"),
+                    n.e("55567"),
                     n.e("94864"),
                     n.e("56030"),
                     n.e("61379"),
@@ -175,7 +174,7 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.BLOCK_USER, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("44729"),
+                    n.e("55567"),
                     n.e("94864"),
                     n.e("56030"),
                     n.e("61379"),
@@ -184,33 +183,11 @@ class A extends E.A {
                     n.e("22255"),
                     n.e("55925"),
                     n.e("85033"),
+                    n.e("37388"),
                     n.e("26484"),
-                    n.e("59791"),
                     n.e("9163"),
                 ]).then(n.bind(n, 307750));
                 return (t) => (0, i.jsx)(e, { ...t });
-            });
-        });
-    };
-    handleAgeVerificationFeedback = (e) => {
-        let { dismissibleContent: t } = e;
-        this.possiblyShowFeedbackModal(m.MW.AGE_VERIFICATION, () => {
-            (0, r.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([
-                    n.e("44729"),
-                    n.e("94864"),
-                    n.e("56030"),
-                    n.e("61379"),
-                    n.e("8891"),
-                    n.e("18413"),
-                    n.e("22255"),
-                    n.e("55925"),
-                    n.e("85033"),
-                    n.e("26484"),
-                    n.e("59791"),
-                    n.e("22493"),
-                ]).then(n.bind(n, 949004));
-                return (n) => (0, i.jsx)(e, { dismissibleContent: t, ...n });
             });
         });
     };

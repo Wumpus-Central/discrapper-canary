@@ -15,7 +15,7 @@ function a(e) {
     (t.brewer = a(r(27707))),
     (t.bright = a(r(378172))),
     (t.chalk = a(r(278021))),
-    (t.codeschool = a(r(281806))),
+    (t.codeschool = a(r(59425))),
     (t.colors = a(r(450872))),
     (t.default = a(r(818939))),
     (t.eighties = a(r(35978))),
