@@ -1,95 +1,96 @@
-i.d(t, { Py: () => f, d: () => A, tR: () => U, x5: () => p });
-var n = i(64700),
-    c = i(735438),
-    r = i(17928),
-    s = i(444927),
-    d = i(475743),
-    g = i(51760),
-    u = i(403362),
-    o = i(723702),
-    D = i(835498),
-    I = i(731854),
-    v = i(375708);
-function l(e) {
+"use strict";
+n.d(t, { Py: () => I, d: () => E, tR: () => A, x5: () => g });
+var i = n(64700),
+    r = n(735438),
+    s = n(17928),
+    a = n(444927),
+    o = n(475743),
+    l = n(51760),
+    u = n(403362),
+    c = n(723702),
+    d = n(835498),
+    _ = n(731854),
+    f = n(375708);
+function h(e) {
     return {
-        [I.oh.AUDIO_INPUT]: {
+        [_.oh.AUDIO_INPUT]: {
             getRawDevices: (e) => e.getInputDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(I.oh.AUDIO_INPUT),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(_.oh.AUDIO_INPUT),
             getCurrentDeviceId: (e) => e.getInputDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().inputDeviceId,
-            getNoDevicesMessage: () => v.intl.string(v.t["/QIjDA"]),
+            getNoDevicesMessage: () => f.intl.string(f.t["/QIjDA"]),
         },
-        [I.oh.AUDIO_OUTPUT]: {
+        [_.oh.AUDIO_OUTPUT]: {
             getRawDevices: (e) => e.getOutputDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(I.oh.AUDIO_OUTPUT),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(_.oh.AUDIO_OUTPUT),
             getCurrentDeviceId: (e) => e.getOutputDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().outputDeviceId,
-            getNoDevicesMessage: () => v.intl.string(v.t.xlUg0v),
+            getNoDevicesMessage: () => f.intl.string(f.t.xlUg0v),
         },
-        [I.oh.VIDEO_INPUT]: {
+        [_.oh.VIDEO_INPUT]: {
             getRawDevices: (e) => e.getVideoDevices(),
-            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(I.oh.VIDEO_INPUT),
+            getAllDeviceIdsSortedByFrecency: (e) => e.getDeviceIdsSortedByFrecency(_.oh.VIDEO_INPUT),
             getCurrentDeviceId: (e) => e.getVideoDeviceId(),
             getSelectedDeviceId: (e) => e.getSettings().videoDeviceId,
-            getNoDevicesMessage: () => v.intl.string(v.t.WKWARY),
+            getNoDevicesMessage: () => f.intl.string(f.t.WKWARY),
         },
     }[e];
 }
-function y() {
-    return (0, o.isWindows)()
-        ? v.intl.string(v.t.n4dQ2c)
-        : (0, o.isMac)()
-          ? v.intl.string(v.t.aYrsiB)
-          : v.intl.string(v.t.Q3YKwS);
+function p() {
+    return (0, c.isWindows)()
+        ? f.intl.string(f.t.n4dQ2c)
+        : (0, c.isMac)()
+          ? f.intl.string(f.t.aYrsiB)
+          : f.intl.string(f.t.Q3YKwS);
 }
-function A(e) {
-    let t = RegExp(`^(?<prefix>${y()}) \\((?<subName>.+)\\)$`);
+function E(e) {
+    let t = RegExp(`^(?<prefix>${p()}) \\((?<subName>.+)\\)$`);
     return t.exec(e)?.groups;
 }
-function a(e) {
-    let { getRawDevices: t } = l(e),
-        i = (0, r.bG)([g.Ay], () => t(g.Ay));
-    return (0, n.useMemo)(() => {
-        let t = { ...i },
-            n = t[I.dx];
+function m(e) {
+    let { getRawDevices: t } = h(e),
+        n = (0, s.bG)([l.Ay], () => t(l.Ay));
+    return (0, i.useMemo)(() => {
+        let t = { ...n },
+            i = t[_.dx];
         return (
-            null != n &&
-                (t[I.dx] = {
-                    ...n,
+            null != i &&
+                (t[_.dx] = {
+                    ...i,
                     name: (function (e, t) {
-                        let { getNoDevicesMessage: i } = l(e);
-                        return t.disabled ? i() : t.name.replace(I.vt, y());
-                    })(e, n),
+                        let { getNoDevicesMessage: n } = h(e);
+                        return t.disabled ? n() : t.name.replace(_.vt, p());
+                    })(e, i),
                 }),
             t
         );
-    }, [e, i]);
+    }, [e, n]);
 }
-function p(e) {
-    let t = a(e),
-        { getCurrentDeviceId: i } = l(e);
-    return t[(0, r.bG)([g.Ay], () => i(g.Ay))];
+function g(e) {
+    let t = m(e),
+        { getCurrentDeviceId: n } = h(e);
+    return t[(0, s.bG)([l.Ay], () => n(l.Ay))];
 }
-function U(e) {
-    let t = a(e),
-        { getAllDeviceIdsSortedByFrecency: i } = l(e),
-        r = (0, s.A)(() => i(D.A));
-    return (0, n.useMemo)(() => {
-        let i = Object.keys(t),
-            n = e !== I.oh.VIDEO_INPUT ? [I.dx] : [],
-            s = (0, c.intersection)(r, i),
-            d = (0, c.difference)(i, r);
-        return (0, c.union)(n, s, d)
+function A(e) {
+    let t = m(e),
+        { getAllDeviceIdsSortedByFrecency: n } = h(e),
+        s = (0, a.A)(() => n(d.A));
+    return (0, i.useMemo)(() => {
+        let n = Object.keys(t),
+            i = e !== _.oh.VIDEO_INPUT ? [_.dx] : [],
+            a = (0, r.intersection)(s, n),
+            o = (0, r.difference)(n, s);
+        return (0, r.union)(i, a, o)
             .map((e) => t[e])
             .filter(u.Vq);
-    }, [t, e, r]);
+    }, [t, e, s]);
 }
-function f(e) {
-    let { getCurrentDeviceId: t, getSelectedDeviceId: i } = l(e),
-        { resolvedId: n, selectedId: c } = (0, r.cf)([g.Ay], () => ({ resolvedId: t(g.Ay), selectedId: i(g.Ay) })),
-        s = (0, d.A)(n) ?? n,
-        u = n !== s,
-        o = (0, d.A)(c) ?? c,
-        D = c !== o;
-    return u && !D;
+function I(e) {
+    let { getCurrentDeviceId: t, getSelectedDeviceId: n } = h(e),
+        { resolvedId: i, selectedId: r } = (0, s.cf)([l.Ay], () => ({ resolvedId: t(l.Ay), selectedId: n(l.Ay) })),
+        a = (0, o.A)(i) ?? i,
+        u = i !== a,
+        c = (0, o.A)(r) ?? r,
+        d = r !== c;
+    return u && !d;
 }

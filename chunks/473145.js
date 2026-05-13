@@ -2,9 +2,9 @@
 n.d(t, {
     Cp: () => C,
     D$: () => M,
-    I5: () => B,
+    I5: () => H,
     Nc: () => P,
-    Os: () => V,
+    Os: () => B,
     P7: () => L,
     Qu: () => R,
     Ry: () => v,
@@ -12,14 +12,15 @@ n.d(t, {
     Ys: () => b,
     aG: () => y,
     ax: () => N,
-    fA: () => G,
+    fA: () => F,
     fi: () => S,
     gb: () => O,
     k1: () => D,
-    kN: () => H,
-    sN: () => F,
-    tO: () => k,
-    yA: () => U,
+    kN: () => j,
+    os: () => x,
+    sN: () => V,
+    tO: () => G,
+    yA: () => k,
     yS: () => w,
 });
 var i,
@@ -59,7 +60,7 @@ var I =
     i);
 let T = [h.TVA.NONE, h.TVA.TIER_1, h.TVA.TIER_2, h.TVA.TIER_3],
     S = T.slice().reverse(),
-    N = (e) => (e === h.TVA.NONE ? h.TVA.TIER_1 : x.find((t) => t.tier === e)?.nextTier),
+    N = (e) => (e === h.TVA.NONE ? h.TVA.TIER_1 : U.find((t) => t.tier === e)?.nextTier),
     y = (e, t) =>
         null != t && t.features.has(h.GuildFeatures.MORE_STICKERS) && e === h.TVA.TIER_3
             ? a.K.MAX_STICKER_SLOTS
@@ -142,7 +143,7 @@ function P(e) {
     if (i?.isPremiumGroupMember())
         return g.intl.formatToPlainString(A.default["5xN/C1"], { premiumGroupProductName: (0, m.DP)() });
     let { numAvailableGuildBoostSlots: l, numCanceledGuildBoostSlots: u } = Object.values(d.A.boostSlots).reduce(
-        (e, t) => (B(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
+        (e, t) => (H(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
         { numAvailableGuildBoostSlots: 0, numCanceledGuildBoostSlots: 0 },
     );
     if (null == n || l > 0) return null;
@@ -153,12 +154,15 @@ function P(e) {
     let p = f.bx(n.renewalMutations.additionalPlans);
     return f.bx(n.additionalPlans) > p ? g.intl.string(g.t.x25mZR) : g.intl.string(g.t["W/bb8f"]);
 }
-let x = [
+function x(e) {
+    return !e.ended && (null == e.endsAt || e.endsAt.getTime() > Date.now());
+}
+let U = [
     { tier: h.TVA.TIER_3, amount: h.M2T[h.TVA.TIER_3], nextTier: null },
     { tier: h.TVA.TIER_2, amount: h.M2T[h.TVA.TIER_2], nextTier: h.TVA.TIER_3 },
     { tier: h.TVA.TIER_1, amount: h.M2T[h.TVA.TIER_1], nextTier: h.TVA.TIER_2 },
 ];
-function U(e, t) {
+function k(e, t) {
     let n = C(t),
         i = T.indexOf(t);
     if (-1 === i) return 0;
@@ -167,25 +171,25 @@ function U(e, t) {
         a = y(t);
     return Math.max(0, n - e.slice(s, a).length);
 }
-function k(e, t, n) {
-    return -1 === T.indexOf(n) ? 0 : Math.max(0, G(e) - t.length);
+function G(e, t, n) {
+    return -1 === T.indexOf(n) ? 0 : Math.max(0, F(e) - t.length);
 }
-function G(e) {
+function F(e) {
     let t = E.OW + (e.premiumFeatures?.additionalSoundSlots ?? 0);
     return Math.max(e.features.has(h.GuildFeatures.MORE_SOUNDBOARD) ? E.xs : E.OW, t);
 }
-function F(e) {
+function V(e) {
     let t = p.DEFAULT_EMOJI_SLOTS + (e.premiumFeatures?.additionalEmojiSlots ?? 0);
     return Math.max(e.features.has(h.GuildFeatures.MORE_EMOJI) ? p.EMOJI_MAX_SLOTS_MORE : p.DEFAULT_EMOJI_SLOTS, t);
 }
-function V(e, t) {
+function B(e, t) {
     let n = (0, l.Z)(e.id).available;
     return Math.max(0, h.M2T[t] - n);
 }
-function B(e) {
+function H(e) {
     return e.subscription?.status === h.Dmq.CANCELED || e.canceled;
 }
-function H(e) {
+function j(e) {
     return S.find((t) => e >= h.M2T[t]) ?? h.TVA.NONE;
 }
 h.TVA.NONE, h.TVA.TIER_1, h.TVA.TIER_2, h.TVA.TIER_3;
