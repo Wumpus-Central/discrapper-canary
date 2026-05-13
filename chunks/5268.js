@@ -558,7 +558,7 @@ var eU = n(284009),
     eH = n(877062);
 h.Ay.initialize();
 var eK = n(842241),
-    eq = n(785651),
+    eq = n(873174),
     eY = n(280513),
     eX = n(717421),
     e$ = n(661531),
@@ -576,7 +576,7 @@ function e1(e) {
                 className: e0.Nr,
                 type: eJ.Z.Types.CUSTOM,
                 children: [
-                    (0, a.jsx)("img", { alt: "", className: e0.q8, src: n(133531) }),
+                    (0, a.jsx)("img", { alt: "", className: e0.q8, src: n(355912) }),
                     (0, a.jsx)("img", { alt: "", className: e0.dw, src: n(610925) }),
                     (0, a.jsxs)(eZ.A, {
                         className: e0.p_,
@@ -609,8 +609,8 @@ function e2(e) {
 var e3 = n(765671),
     e8 = n(9994),
     e7 = n(71393),
-    e6 = n(299091),
-    e4 = n(486020),
+    e4 = n(299091),
+    e6 = n(486020),
     e5 = n(403362),
     e9 = n(778712),
     te = n(47167),
@@ -670,9 +670,9 @@ function tf(e) {
                 n
                     ? null
                     : to(t) && null != t.target_user
-                      ? e4.Ay.getUserAvatarURL(t.target_user)
+                      ? e6.Ay.getUserAvatarURL(t.target_user)
                       : th(t) && null != t.inviter
-                        ? e4.Ay.getUserAvatarURL(t.inviter)
+                        ? e6.Ay.getUserAvatarURL(t.inviter)
                         : null,
             [t, n],
         ),
@@ -1080,7 +1080,7 @@ function tH(e) {
         r = null != t ? (0, e8.oO)(t) : null,
         o = null != i && tU(r) && null != t && !tm(t);
     if (i?.splash != null) {
-        let e = e4.Ay.getGuildSplashURL({ id: i.id, splash: i.splash });
+        let e = e6.Ay.getGuildSplashURL({ id: i.id, splash: i.splash });
         null != e && ((l.backgroundImage = `url(${e})`), (l.backgroundSize = "cover"));
     } else s && o && ((l.backgroundImage = `url(${tV})`), (l.backgroundSize = "cover"));
     return (0, a.jsxs)(k.Ay, {
@@ -1221,12 +1221,12 @@ var t0 = n(463347),
     t3 = n(347704),
     t8 = n(803306),
     t7 = n(17372),
-    t6 = n(369053),
-    t4 = n(975571),
+    t4 = n(369053),
+    t6 = n(975571),
     t5 = n(928658);
 async function t9(e, t) {
     try {
-        await (0, t6.TP)(e, t);
+        await (0, t4.TP)(e, t);
     } catch (e) {
         if (null != e && "object" == typeof e && 429 === e.status)
             throw { status: 429, body: { message: Q.intl.string(Q.t.Z2hIUf) } };
@@ -1244,7 +1244,7 @@ function ne(e, t) {
                     i = !1;
                 }, 0);
             let r = () => t9(e, s),
-                o = async (t) => await (0, t6.G_)(e, s, t),
+                o = async (t) => await (0, t4.G_)(e, s, t),
                 c = (n) => {
                     (i = !0),
                         setTimeout(() => {
@@ -1474,7 +1474,7 @@ let ng = (e) => {
             u = (0, h.bG)([eQ.default], () => eQ.default.isAuthenticated()),
             m = (0, h.bG)([eN.A], () => eN.A.hasLoadedExperiments),
             g = o.useCallback(() => {
-                (0, t6.OY)()
+                (0, t4.OY)()
                     .then((e) => {
                         let {
                             body: { capabilities: t },
@@ -1535,7 +1535,7 @@ let ng = (e) => {
                 return (0, a.jsx)(t1.Modal, {
                     title: Q.intl.string(Q.t.Z11w18),
                     subtitle: Q.intl.format(Q.t["532l+q"], {
-                        supportURL: t4.A.getArticleURL(R.MVz.COPYRIGHT_AND_IP_POLICY),
+                        supportURL: t6.A.getArticleURL(R.MVz.COPYRIGHT_AND_IP_POLICY),
                     }),
                     actions: [],
                     transitionState: t,
@@ -1560,7 +1560,7 @@ let ng = (e) => {
                 modalProps: {
                     title: Q.intl.string(Q.t.Z11w18),
                     subtitle: Q.intl.format(Q.t["532l+q"], {
-                        supportURL: t4.A.getArticleURL(R.MVz.COPYRIGHT_AND_IP_POLICY),
+                        supportURL: t6.A.getArticleURL(R.MVz.COPYRIGHT_AND_IP_POLICY),
                     }),
                 },
                 body: (0, a.jsx)(nr, { dsaCapabilities: f, onReopen: j }),
@@ -1953,17 +1953,17 @@ function n8(e) {
     });
 }
 var n7 = n(504394),
-    n6 = n(275538),
-    n4 = n(431870);
+    n4 = n(275538),
+    n6 = n(431870);
 function n5(e) {
     let { children: t, className: n, ...i } = e,
         l = t();
     return (0, a.jsx)(k.Ay, {
         ...i,
-        className: U()(n, n4.kL),
-        contentClassName: n4.Qs,
+        className: U()(n, n6.kL),
+        contentClassName: n6.Qs,
         children: l.map((e, t) =>
-            (0, a.jsx)("div", { className: n4.fi, style: { flexBasis: `${100 / l.length}%` }, children: e }, t),
+            (0, a.jsx)("div", { className: n6.fi, style: { flexBasis: `${100 / l.length}%` }, children: e }, t),
         ),
     });
 }
@@ -2395,7 +2395,7 @@ function ij(e) {
                               gap: 64,
                               children: [
                                   V,
-                                  (0, a.jsx)(n6.A, {
+                                  (0, a.jsx)(n4.A, {
                                       onAuthenticateSuccess: b,
                                       conditionalMediationAbortController: p,
                                   }),
@@ -2827,7 +2827,7 @@ let iB = () =>
                 (0, a.jsx)(M.$, {
                     icon: iw.I,
                     text: Q.intl.string(Q.t.hvVgAZ),
-                    onClick: () => window.open(t4.A.getArticleURL(R.MVz.AGE_GATE), "_blank"),
+                    onClick: () => window.open(t6.A.getArticleURL(R.MVz.AGE_GATE), "_blank"),
                     iconPosition: "end",
                 }),
             ],
@@ -2978,11 +2978,11 @@ function i7() {
           })
         : null;
 }
-let i6 = /\.$/,
-    i4 = (e) =>
+let i4 = /\.$/,
+    i6 = (e) =>
         Array.isArray(e)
             ? e
-                  .map((e) => e.replace(i6, ""))
+                  .map((e) => e.replace(i4, ""))
                   .join(". ")
                   .trim()
             : e;
@@ -3185,7 +3185,7 @@ function lr(e) {
                         onChange: (e) => {
                             C(e), r?.(e), es(0 === e.length ? Q.intl.string(Q.t.EkokLy) : null);
                         },
-                        error: el ?? i4(Z),
+                        error: el ?? i6(Z),
                         type: "email",
                         autoComplete: "username",
                         setRef: j,
@@ -3199,7 +3199,7 @@ function lr(e) {
                         name: "global_name",
                         value: b,
                         onChange: y,
-                        error: i4(et),
+                        error: i6(et),
                         maxLength: 32,
                         autoComplete: "off",
                         setRef: T,
@@ -3235,7 +3235,7 @@ function lr(e) {
                                 onChange: (e) => {
                                     O(e.toLocaleLowerCase()), ea(0 === e.length ? Q.intl.string(Q.t.EkokLy) : null);
                                 },
-                                error: er ?? i4(ee),
+                                error: er ?? i6(ee),
                                 autoComplete: "off",
                                 setRef: N,
                                 required: !0,
@@ -3260,7 +3260,7 @@ function lr(e) {
                         onChange: (e) => {
                             G(e), ec(0 === e.length ? Q.intl.string(Q.t.EkokLy) : null);
                         },
-                        error: eo ?? i4(en),
+                        error: eo ?? i6(en),
                         type: "password",
                         autoComplete: "new-password",
                         setRef: I,
@@ -3275,7 +3275,7 @@ function lr(e) {
                         onChange: (e) => {
                             V(e), null != e && em(null);
                         },
-                        error: eu ?? i4(ei),
+                        error: eu ?? i6(ei),
                         value: D,
                         required: !0,
                         onFocus: A,
@@ -3525,7 +3525,7 @@ function lA(e) {
                                       (0, a.jsx)(la.k, {
                                           helperText: Q.intl.string(Q.t["330TCc"]),
                                           label: Q.intl.string(Q.t["9AjdkD"]),
-                                          error: y ?? i4(I ?? T),
+                                          error: y ?? i6(I ?? T),
                                           autoFocus: !0,
                                           name: "global_name",
                                           value: m,
@@ -3545,7 +3545,7 @@ function lA(e) {
                                           onChange: (e) => {
                                               f(e), null != e && P(null);
                                           },
-                                          error: O ?? i4(v),
+                                          error: O ?? i6(v),
                                           value: x,
                                       }),
                                       (0, a.jsx)(lt, { consent: A, consentRequired: c, onConsentChange: p }),
@@ -3823,7 +3823,7 @@ class lN extends o.PureComponent {
                 (0, a.jsx)(ed.Q, {
                     text: Q.intl.string(Q.t["/CjuXF"]),
                     textVariant: "text-sm/normal",
-                    onClick: () => window.open(t4.A.getArticleURL(R.MVz.GIFTING), "_blank"),
+                    onClick: () => window.open(t6.A.getArticleURL(R.MVz.GIFTING), "_blank"),
                 }),
             ],
         });
@@ -4233,7 +4233,7 @@ function lq(e) {
                     size: "sm",
                     textVariant: "text-sm/medium",
                     text: Q.intl.string(Q.t.urIwn4),
-                    onClick: () => window.open(t4.A.getArticleURL(R.MVz.INVALID_INVITES), "_blank"),
+                    onClick: () => window.open(t6.A.getArticleURL(R.MVz.INVALID_INVITES), "_blank"),
                 }),
             }),
         ],
@@ -4308,7 +4308,7 @@ let l1 = ny(iO),
     }),
     l3 = ny(function (e) {
         let { inviteKey: t, location: n, transitionTo: i, login: l } = e,
-            s = (0, h.bG)([e6.A], () => e6.A.getInvite(t)),
+            s = (0, h.bG)([e4.A], () => e4.A.getInvite(t)),
             r = (0, h.bG)([nM.A], () => nM.A.getState(t)),
             c = (0, h.bG)([eQ.default], () => eQ.default.isAuthenticated()),
             d = (0, h.bG)([eu.A], () => eu.A.defaultRoute),
@@ -4494,9 +4494,9 @@ let l1 = ny(iO),
         return (0, a.jsx)(lL, { ...e, ...t });
     }),
     l7 = ny(lT),
-    l6 = ny(function (e) {
+    l4 = ny(function (e) {
         let { inviteKey: t, transitionTo: n } = e,
-            i = (0, h.bG)([e6.A], () => e6.A.getInvite(t));
+            i = (0, h.bG)([e4.A], () => e4.A.getInvite(t));
         return (
             o.useEffect(() => {
                 let e = eQ.default.getAnalyticsToken();
@@ -4528,7 +4528,7 @@ let l1 = ny(iO),
             })
         );
     }),
-    l4 = ny(lj),
+    l6 = ny(lj),
     l5 = ny(function (e) {
         let { location: t, transitionTo: i = P.pX } = e,
             [l, s] = o.useState("submitting");
@@ -4880,7 +4880,7 @@ let l1 = ny(iO),
             o.useEffect(() => {
                 let e = async (e) => {
                     try {
-                        let t = null != e ? await (0, t6.q)(e) : void 0;
+                        let t = null != e ? await (0, t4.q)(e) : void 0;
                         null != t ? d(Q.intl.string(Q.t.e6mZMt)) : g(t.body?.code);
                     } catch (e) {
                         g(e.body?.code);
@@ -5034,7 +5034,7 @@ class sm extends o.PureComponent {
                 ? null != l && (r = (0, nA.uD)(t.id, l, 1024))
                 : null != e &&
                   "string" == typeof e.splash &&
-                  (r = e4.Ay.getGuildSplashURL({ id: e.id, splash: e.splash }));
+                  (r = e6.Ay.getGuildSplashURL({ id: e.id, splash: e.splash }));
         }
         return { redirectTo: s, splash: r };
     }
@@ -5074,7 +5074,7 @@ class sm extends o.PureComponent {
     async resolveInvite() {
         let { inviteKey: e } = this.props;
         if (null == e) return;
-        let { invite: t } = await A.Ay.resolveInvite(e, R.S3d.INVITE);
+        let { invite: t } = await A.Ay.resolveInvite(e, R.S3d.INVITE, { withGames: !0 });
         null != t && (ei(t), null != t.type && tl.uR.has(t.type) && A.Ay.openNativeAppModal(e));
     }
     resolveGuildTemplate() {
@@ -5111,7 +5111,7 @@ class sm extends o.PureComponent {
                 (0, a.jsx)(en.A, {
                     impressionName: d.ImpressionNames.USER_REGISTRATION,
                     path: R.BVt.REGISTER,
-                    render: (e) => (0, a.jsx)(l4, { ...e, redirectTo: t }),
+                    render: (e) => (0, a.jsx)(l6, { ...e, redirectTo: t }),
                 }),
                 (0, a.jsx)(en.A, {
                     path: R.BVt.GIFT_CODE_LOGIN(":giftCode"),
@@ -5131,7 +5131,7 @@ class sm extends o.PureComponent {
                             } = e,
                             s = (0, eK.fB)(t, i.search);
                         return u.Fr || u.v1
-                            ? (0, a.jsx)(l6, { inviteKey: s, transitionTo: l }, s)
+                            ? (0, a.jsx)(l4, { inviteKey: s, transitionTo: l }, s)
                             : (0, a.jsx)(
                                   l3,
                                   {
@@ -5206,7 +5206,7 @@ class sm extends o.PureComponent {
         });
     }
 }
-let sh = h.Ay.connectStores([eQ.default, e6.A, nf.A, eN.A, eT.A], (e) => {
+let sh = h.Ay.connectStores([eQ.default, e4.A, nf.A, eN.A, eT.A], (e) => {
     let { match: t, location: n } = e,
         i = t?.params?.inviteCode,
         l = null != i ? (0, eK.fB)(i, n.search) : void 0,
@@ -5218,7 +5218,7 @@ let sh = h.Ay.connectStores([eQ.default, e6.A, nf.A, eN.A, eT.A], (e) => {
         giftCode: s,
         guildTemplateCode: r,
         gift: null != s ? nf.A.get(s) : null,
-        invite: null != l ? e6.A.getInvite(l) : null,
+        invite: null != l ? e4.A.getInvite(l) : null,
         guildTemplate: null != r ? eT.A.getGuildTemplate(r) : null,
         hasLoadedExperiments: eN.A.hasLoadedExperiments,
     };

@@ -45,6 +45,7 @@ function l(e) {
                       let [n, i] = t;
                       return (e[n] = { level: i.activity_level, score: i.activity_score }), e;
                   }, {}),
+        games: e.games,
         features: e.features ?? [],
         tag: e.tag,
         badge: e.badge,

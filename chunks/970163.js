@@ -41,6 +41,7 @@ function p(e, t, n) {
             with_expiration: !0,
             guild_scheduled_event_id: s.guildScheduledEventId,
             with_permissions: !0,
+            with_games: !!n?.withGames || void 0,
         },
         p = u.A.get({
             url: _.Rsh.INVITE(s.baseCode),

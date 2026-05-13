@@ -1,27 +1,42 @@
-s.d(t, { A: () => c });
-var l = s(64700),
-    a = s(17928),
-    i = s(311043),
-    n = s(569926),
-    r = s(403362);
-function c(e) {
-    let t = e.gameActivity,
-        s =
-            ((0, n.x)(e.gameApplicationIds),
-            (0, a.yK)([i.A], () => e.gameApplicationIds.map((e) => i.A.getGame(e)).filter(r.Vq))),
-        c = l.useMemo(
+l.d(t, { A: () => m });
+var s = l(64700),
+    a = l(17928),
+    i = l(997013),
+    n = l(311043),
+    r = l(569926),
+    c = l(495544),
+    d = l(403362);
+function m(e) {
+    let t,
+        l,
+        m,
+        o,
+        u = e.gameActivity,
+        x =
+            ((t = e.games),
+            (l = (0, a.bG)([c.default], () => c.default.isAuthenticated())),
+            (m = null != t && !l),
+            (0, r.x)(m ? [] : e.gameApplicationIds),
+            (o = s.useMemo(() => {
+                let e = new Map();
+                if (null == t) return e;
+                for (let l of t) e.set(l.id, new i.A(l));
+                return e;
+            }, [t])),
+            (0, a.yK)([n.A], () => e.gameApplicationIds.map((e) => n.A.getGame(e) ?? o.get(e)).filter(d.Vq))),
+        h = s.useMemo(
             () =>
-                [...s].sort((e, s) => {
-                    let l = t[e.id]?.score ?? 0,
-                        a = t[s.id]?.score ?? 0;
-                    return l !== a ? a - l : 0;
+                [...x].sort((e, t) => {
+                    let l = u[e.id]?.score ?? 0,
+                        s = u[t.id]?.score ?? 0;
+                    return l !== s ? s - l : 0;
                 }),
-            [s, t],
+            [x, u],
         ),
-        d = l.useMemo(() => c.slice(0, 5), [c]);
+        v = s.useMemo(() => h.slice(0, 5), [h]);
     return {
-        gamesToDisplay: d,
-        lastGameToDisplay: l.useMemo(() => c[5] ?? null, [c]),
-        remainingGames: l.useMemo(() => c.slice(5), [c]),
+        gamesToDisplay: v,
+        lastGameToDisplay: s.useMemo(() => h[5] ?? null, [h]),
+        remainingGames: s.useMemo(() => h.slice(5), [h]),
     };
 }
