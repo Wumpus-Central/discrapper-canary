@@ -1342,7 +1342,7 @@ let t8 = r.memo(function () {
                                     n.e("34195"),
                                     n.e("83419"),
                                     n.e("333"),
-                                    n.e("62486"),
+                                    n.e("77122"),
                                     n.e("79705"),
                                     n.e("23924"),
                                     n.e("42205"),
@@ -1851,15 +1851,6 @@ let t8 = r.memo(function () {
             return (0, i.jsx)(tg, { premiumSubscription: s.metadata.premiumSubscription });
         case ei.kqX.SYSTEM_SERVICE_WARNING:
             return (0, i.jsx)(tB, {});
-        case ei.kqX.RESTRICTED_HOURS_WARNING: {
-            let e = s.metadata?.title,
-                t = s.metadata?.subtitle,
-                n = null != e && null != t ? `${e} \xb7 ${t}` : (e ?? t);
-            return (0, i.jsxs)(h.$T, {
-                color: h.Hv.WARNING,
-                children: [(0, i.jsx)(h.PM, { onClick: () => t7(), noticeType: s.type }), n],
-            });
-        }
         default:
             return null;
     }
