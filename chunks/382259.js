@@ -130,6 +130,7 @@ let L = (e) => {
                             code: n[e.id] ?? null,
                             ...s,
                             title: D.intl.formatToPlainString(s.title, s.titleParams ?? {}),
+                            outboundTitle: e.outboundTitle,
                             body: D.intl.formatToPlainString(s.body, s.bodyParams ?? {}),
                         };
                         r[t].push(a);

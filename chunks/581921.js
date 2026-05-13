@@ -59,6 +59,7 @@ let S = {
             id: e.id,
             partnerId: e.partnerId ?? "",
             title: null != n ? I.intl.formatToPlainString(n.title, n.titleParams ?? {}) : "",
+            outboundTitle: e.outboundTitle,
             body: null != n && null != n.body ? I.intl.formatToPlainString(n.body, n.bodyParams ?? {}) : "",
             startDate: e.startDate,
             endDate: e.endDate,
