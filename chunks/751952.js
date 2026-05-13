@@ -18545,8 +18545,9 @@ let ND = (e) => {
     };
 var NM = i(783419),
     NV = i(534952),
-    Nk = i(781471);
-let Nw = (e) => {
+    Nk = i(230451),
+    Nw = i(781471);
+let NF = (e) => {
     let t,
         { integration: i } = e,
         {
@@ -18575,14 +18576,14 @@ let Nw = (e) => {
                 text: n ? g.intl.string(g.t.RXvQQu) : g.intl.string(g.t.XpeFYr),
             })),
         (0, p.jsxs)("div", {
-            className: Nk.iA,
+            className: Nw.iA,
             children: [
                 (0, p.jsxs)("div", {
-                    className: Nk.XX,
+                    className: Nw.XX,
                     children: [
-                        (0, p.jsx)(gu.Ay, { size: gu.Ay.Sizes.SMALL, guild: i.guild, className: Nk.$f }),
+                        (0, p.jsx)(gu.Ay, { size: gu.Ay.Sizes.SMALL, guild: i.guild, className: Nw.$f }),
                         (0, p.jsxs)("div", {
-                            className: Nk.Vn,
+                            className: Nw.Vn,
                             children: [
                                 (0, p.jsx)(V.E, {
                                     variant: "text-md/semibold",
@@ -18606,14 +18607,14 @@ let Nw = (e) => {
                     (0, p.jsx)(V.E, {
                         variant: "text-xs/normal",
                         color: "text-feedback-critical",
-                        className: Nk.R,
+                        className: Nw.R,
                         children: s,
                     }),
             ],
         })
     );
 };
-function NF(e) {
+function NB(e) {
     let t,
         i,
         n,
@@ -18621,42 +18622,44 @@ function NF(e) {
         l,
         r,
         a,
-        { onDisconnect: o, account: u, theme: d, locale: c } = e,
-        [m, A] = f.useState(u.friendSync),
-        [h, E] = f.useState(u.visibility),
-        [x, T] = f.useState(u.metadataVisibility),
-        [S, N] = f.useState(u.showActivity),
-        [C, I] = f.useState(null),
-        [b, v] = f.useState(null),
-        [j, y] = f.useState(!1),
-        [O, R] = f.useState([]),
-        D = (0, NE.ML)(u.type),
-        P = NA.A.get(D);
+        o,
+        { onDisconnect: u, account: d, theme: c, locale: m } = e,
+        [A, h] = f.useState(d.friendSync),
+        [E, x] = f.useState(d.visibility),
+        [T, S] = f.useState(d.metadataVisibility),
+        [N, C] = f.useState(d.showActivity),
+        [I, b] = f.useState(null),
+        [v, j] = f.useState(null),
+        [y, O] = f.useState(!1),
+        [R, D] = f.useState([]),
+        P = (0, NE.ML)(d.type),
+        G = NA.A.get(P);
     f.useEffect(() => {
-        A(u.friendSync), E(u.visibility), T(u.metadataVisibility), N(u.showActivity);
-    }, [u]);
-    let G = { inProgressVisibility: C, inProgressMetadataVisibility: b },
-        U = f.useRef(G);
+        h(d.friendSync), x(d.visibility), S(d.metadataVisibility), C(d.showActivity);
+    }, [d]);
+    let U = { inProgressVisibility: I, inProgressMetadataVisibility: v },
+        k = f.useRef(U);
     return (
         f.useEffect(() => {
-            U.current = G;
+            k.current = U;
         }),
         f.useEffect(() => {
-            if (!1 === u.verified) return;
-            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = U.current;
-            null != e && (E(e), Ng.A.setVisibility(u.type, u.id, e), I(null)),
-                null != t && (T(t), Ng.A.setMetadataVisibility(u.type, u.id, t), v(null));
-        }, [u]),
+            if (!1 === d.verified) return;
+            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = k.current;
+            null != e && (x(e), Ng.A.setVisibility(d.type, d.id, e), b(null)),
+                null != t && (S(t), Ng.A.setMetadataVisibility(d.type, d.id, t), j(null));
+        }, [d]),
         (0, p.jsxs)("div", {
-            className: Nk.FI,
+            className: Nw.FI,
             children: [
-                ((t = NA.A.get(u.type)),
-                (i = NA.A.get(D)),
-                (n = "1" === (u.metadata ?? {})[NM.pK.TWITTER_VERIFIED]),
-                (s = null),
+                ((t = NA.A.get(d.type)),
+                (i = NA.A.get(P)),
+                (n = "1" === (d.metadata ?? {})[NM.pK.TWITTER_VERIFIED]),
+                (s = Nh.A.useConfig({ location: "User Settings Connections" }).enabled),
+                (l = null),
                 t.type === q.fg2.TWITTER &&
                     n &&
-                    (s = (0, p.jsx)(e0.m, {
+                    (l = (0, p.jsx)(e0.m, {
                         text: g.intl.string(g.t.Jebrww),
                         children: (0, p.jsx)(e8.A, {
                             color: w.A.unsafe_rawColors.PLATFORM_TWITTER.css,
@@ -18664,39 +18667,42 @@ function NF(e) {
                         }),
                     })),
                 (0, p.jsxs)("div", {
-                    className: Nk.Il,
+                    className: Nw.Il,
                     children: [
                         (0, p.jsx)("img", {
                             alt: i.name,
-                            className: Nk.gj,
-                            src: (0, cH.M)(d) ? i.icon.darkSVG : i.icon.lightSVG,
+                            className: Nw.gj,
+                            src: (0, cH.M)(c) ? i.icon.darkSVG : i.icon.lightSVG,
                         }),
                         (0, p.jsxs)("div", {
                             children: [
                                 (0, p.jsxs)("div", {
-                                    className: Nk.$p,
+                                    className: Nw.$p,
                                     children: [
                                         (0, p.jsx)(V.E, {
                                             color: "text-strong",
                                             variant: "text-md/semibold",
-                                            className: Nk.RW,
-                                            children: u.name,
+                                            className: Nw.RW,
+                                            children: d.name,
                                         }),
-                                        null != s && (0, p.jsx)("div", { className: Nk.cG, children: s }),
+                                        null != l && (0, p.jsx)("div", { className: Nw.cG, children: l }),
                                     ],
                                 }),
                                 (0, p.jsx)(V.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    className: Nk.Au,
-                                    children: i.name,
+                                    className: Nw.Au,
+                                    children:
+                                        null != i.replacedBy && s
+                                            ? g.intl.format(Nk.default.Glhokn, { platformName: i.name })
+                                            : i.name,
                                 }),
                             ],
                         }),
                         (0, p.jsx)(M.D, {
-                            className: Nk.uH,
+                            className: Nw.uH,
                             onClick: function () {
-                                let e = NA.A.get(u.type);
+                                let e = NA.A.get(d.type);
                                 (0, _.openModal)((t) =>
                                     (0, p.jsx)(ly.Modal, {
                                         title: g.intl.formatToPlainString(g.t.U5x12f, { name: e.name }),
@@ -18710,15 +18716,15 @@ function NF(e) {
                                             {
                                                 text: g.intl.string(g.t.bsbMVz),
                                                 onClick: () => {
-                                                    o(), t.onClose();
+                                                    u(), t.onClose();
                                                 },
                                                 variant: "primary",
                                             },
                                         ],
                                         ...t,
                                         children:
-                                            NS.has(u.type) &&
-                                            u.twoWayLink &&
+                                            NS.has(d.type) &&
+                                            d.twoWayLink &&
                                             (0, p.jsx)(si.A, {
                                                 children: g.intl.format(g.t.COW3Xn, { platformName: e.name }),
                                             }),
@@ -18731,37 +18737,37 @@ function NF(e) {
                         }),
                     ],
                 })),
-                u.twoWayLink
+                d.twoWayLink
                     ? null
-                    : u.type === q.fg2.XBOX
+                    : d.type === q.fg2.XBOX
                       ? (0, p.jsx)(NU, {})
-                      : u.type === q.fg2.PLAYSTATION
+                      : d.type === q.fg2.PLAYSTATION
                         ? (0, p.jsx)(NG, {})
                         : null,
                 (function (e) {
                     let t = e.metadata ?? {},
                         i = null,
-                        n = (0, Nx.An)(t[NM.pK.CREATED_AT], c);
+                        n = (0, Nx.An)(t[NM.pK.CREATED_AT], m);
                     switch (e.type) {
                         case q.fg2.REDDIT:
-                            i = (0, Np.xE)(t, Nk.Nz);
+                            i = (0, Np.xE)(t, Nw.Nz);
                             break;
                         case q.fg2.STEAM:
-                            i = (0, Np.dy)(t, Nk.Nz);
+                            i = (0, Np.dy)(t, Nw.Nz);
                             break;
                         case q.fg2.BLUESKY:
                         case q.fg2.TWITTER:
                         case q.fg2.MASTODON:
-                            i = (0, Np.ED)(t, Nk.Nz);
+                            i = (0, Np.ED)(t, Nw.Nz);
                             break;
                         case q.fg2.EBAY:
-                            i = (0, Np.ub)(t, Nk.Nz);
+                            i = (0, Np.ub)(t, Nw.Nz);
                             break;
                         case q.fg2.PAYPAL:
-                            i = (0, Np.gZ)(t, Nk.Nz);
+                            i = (0, Np.gZ)(t, Nw.Nz);
                             break;
                         case q.fg2.TIKTOK:
-                            i = (0, Np.HU)(t, Nk.Nz);
+                            i = (0, Np.HU)(t, Nw.Nz);
                     }
                     null !== n &&
                         (null == i && (i = []),
@@ -18771,24 +18777,24 @@ function NF(e) {
                                 {
                                     variant: "text-xs/normal",
                                     color: "text-subtle",
-                                    className: Nk.M4,
+                                    className: Nw.M4,
                                     children: g.intl.format(g.t["9rfonh"], { date: n }),
                                 },
                                 "member-since",
                             ),
                         ));
-                    let s = O.includes(e.id),
+                    let s = R.includes(e.id),
                         l = g.intl.string(g.t.wzzjk9);
                     if (null == i || 0 === i.length)
                         if (!0 !== NA.A.get(e.type).hasMetadata) return null;
                         else
                             (i = [
-                                (0, p.jsx)(n8.Lp, { className: Nk.Z3, text: g.intl.string(g.t.y2b7CA) }, "badge"),
+                                (0, p.jsx)(n8.Lp, { className: Nw.Z3, text: g.intl.string(g.t.y2b7CA) }, "badge"),
                                 (0, p.jsx)(
                                     V.E,
                                     {
                                         variant: "text-xs/normal",
-                                        className: Nk.vt,
+                                        className: Nw.vt,
                                         children: g.intl.format(g.t.Up2ni7, {
                                             helpdeskUrl: ta.A.getArticleURL(q.MVz.CONNECTION_DETAILS),
                                         }),
@@ -18803,21 +18809,21 @@ function NF(e) {
                             (0, p.jsx)(
                                 "div",
                                 {
-                                    className: Nk.jy,
+                                    className: Nw.jy,
                                     children: (0, p.jsx)(eh.$, {
                                         text: l,
                                         variant: "secondary",
                                         size: "sm",
-                                        loading: j,
+                                        loading: y,
                                         disabled: s,
                                         "aria-label": g.intl.string(g.t.sCkLYH),
                                         onClick: s
                                             ? void 0
                                             : () => {
-                                                  y(!0),
+                                                  O(!0),
                                                       Ng.A.refresh(e.type, e.id).finally(() => {
                                                           setTimeout(() => {
-                                                              O.push(e.id), R(O), y(!1);
+                                                              R.push(e.id), D(R), O(!1);
                                                           }, 2e3);
                                                       });
                                               },
@@ -18826,77 +18832,77 @@ function NF(e) {
                                 "refresh-button",
                             ),
                         ),
-                        (0, p.jsx)("div", { className: Nk.tJ, children: i })
+                        (0, p.jsx)("div", { className: Nw.tJ, children: i })
                     );
-                })(u),
-                (q.txh.has(u.type) &&
-                    (l = (0, p.jsx)(L.d, {
-                        label: g.intl.string(g.t["+KCMSi"]),
-                        checked: m,
-                        onChange: function (e) {
-                            A(e), Ng.A.setFriendSync(u.type, u.id, e);
-                        },
-                    })),
-                q.ewM.has(u.type) &&
+                })(d),
+                (q.txh.has(d.type) &&
                     (r = (0, p.jsx)(L.d, {
-                        label: g.intl.format(g.t["6u6J0q"], { platform: P.name }),
-                        checked: S,
+                        label: g.intl.string(g.t["+KCMSi"]),
+                        checked: A,
                         onChange: function (e) {
-                            N(e), Ng.A.setShowActivity(u.type, u.id, e);
+                            h(e), Ng.A.setFriendSync(d.type, d.id, e);
                         },
                     })),
-                NA.A.get(u.type)?.hasMetadata === !0 &&
+                q.ewM.has(d.type) &&
                     (a = (0, p.jsx)(L.d, {
-                        label: g.intl.string(g.t.FYKGsL),
-                        checked: 1 === x,
+                        label: g.intl.format(g.t["6u6J0q"], { platform: G.name }),
+                        checked: N,
                         onChange: function (e) {
-                            let { verified: t } = u,
+                            C(e), Ng.A.setShowActivity(d.type, d.id, e);
+                        },
+                    })),
+                NA.A.get(d.type)?.hasMetadata === !0 &&
+                    (o = (0, p.jsx)(L.d, {
+                        label: g.intl.string(g.t.FYKGsL),
+                        checked: 1 === T,
+                        onChange: function (e) {
+                            let { verified: t } = d,
                                 i = +!!e;
                             if (e && !t) {
-                                v(i), (0, NT.A)({ platformType: u.type, location: "User Settings" });
+                                j(i), (0, NT.A)({ platformType: d.type, location: "User Settings" });
                                 return;
                             }
-                            T(i), Ng.A.setMetadataVisibility(u.type, u.id, i);
+                            S(i), Ng.A.setMetadataVisibility(d.type, d.id, i);
                         },
-                        disabled: 1 !== h || null == u.metadata,
+                        disabled: 1 !== E || null == d.metadata,
                     })),
                 (0, p.jsxs)("div", {
-                    className: Nk.HZ,
+                    className: Nw.HZ,
                     children: [
                         (0, p.jsx)(L.d, {
                             label: g.intl.string(g.t.f7yOAX),
-                            checked: 1 === h,
+                            checked: 1 === E,
                             onChange: function (e) {
-                                let { verified: t } = u,
+                                let { verified: t } = d,
                                     i = +!!e;
                                 if (e && !t) {
-                                    I(i), (0, NT.A)({ platformType: u.type, location: "User Settings" });
+                                    b(i), (0, NT.A)({ platformType: d.type, location: "User Settings" });
                                     return;
                                 }
-                                E(i), Ng.A.setVisibility(u.type, u.id, i);
+                                x(i), Ng.A.setVisibility(d.type, d.id, i);
                             },
                         }),
+                        o,
                         a,
                         r,
-                        l,
                     ],
                 })),
                 (function () {
-                    if (u.revoked || u.integrations.length > 0) return (0, p.jsx)(eE.c, {});
+                    if (d.revoked || d.integrations.length > 0) return (0, p.jsx)(eE.c, {});
                 })(),
-                u.revoked
+                d.revoked
                     ? (0, p.jsx)(tr.p, {
                           messageType: tr.Y.INFO,
                           children: g.intl.format(g.t["6C4lgA"], {
                               onReconnect: function () {
-                                  (0, NT.A)({ platformType: u.type, location: "User Settings" });
+                                  (0, NT.A)({ platformType: d.type, location: "User Settings" });
                               },
                           }),
                       })
-                    : u.integrations.length > 0
+                    : d.integrations.length > 0
                       ? (0, p.jsx)(sy.D, {
                             label: g.intl.string(g.t.fOe3fZ),
-                            children: u.integrations.map((e) => (0, p.jsx)(Nw, { integration: e }, e.id)),
+                            children: d.integrations.map((e) => (0, p.jsx)(NF, { integration: e }, e.id)),
                         })
                       : void 0,
                 null,
@@ -18904,41 +18910,41 @@ function NF(e) {
         })
     );
 }
-function NB(e) {
+function Nz(e) {
     let { appIdentity: t, oauth2Token: i } = e;
     return null == i
         ? null
         : (0, p.jsxs)("div", {
-              className: Nk.FI,
+              className: Nw.FI,
               children: [
                   (function (e, t) {
                       let { application: i } = t,
                           n = i$.Ay.getApplicationIconURL({ id: i.id, icon: i.icon });
                       return (0, p.jsxs)("div", {
-                          className: Nk.Il,
+                          className: Nw.Il,
                           children: [
-                              (0, p.jsx)("img", { alt: i.name, className: ew()(Nk.gj, Nk.sN), src: n }),
+                              (0, p.jsx)("img", { alt: i.name, className: ew()(Nw.gj, Nw.sN), src: n }),
                               (0, p.jsxs)("div", {
                                   children: [
                                       (0, p.jsx)("div", {
-                                          className: Nk.$p,
+                                          className: Nw.$p,
                                           children: (0, p.jsx)(V.E, {
                                               color: "text-strong",
                                               variant: "text-md/semibold",
-                                              className: Nk.RW,
+                                              className: Nw.RW,
                                               children: e.profile.username,
                                           }),
                                       }),
                                       (0, p.jsx)(V.E, {
                                           variant: "text-xs/normal",
                                           color: "text-strong",
-                                          className: Nk.Au,
+                                          className: Nw.Au,
                                           children: i.name,
                                       }),
                                   ],
                               }),
                               (0, p.jsx)(M.D, {
-                                  className: Nk.uH,
+                                  className: Nw.uH,
                                   onClick: () =>
                                       (0, fU.d1)(i, () => {
                                           fG.A.delete(t.id);
@@ -18951,7 +18957,7 @@ function NB(e) {
                       });
                   })(t, i),
                   (0, p.jsx)("div", {
-                      className: Nk.HZ,
+                      className: Nw.HZ,
                       children: (0, p.jsx)(L.d, {
                           label: g.intl.string(g.t.f7yOAX),
                           checked: t.profile?.connection_visible ?? !1,
@@ -18965,7 +18971,7 @@ function NB(e) {
               ],
           });
 }
-function Nz(e) {
+function NY(e) {
     let t = NA.A.get(e);
     (0, NT.A)({ platformType: t.type }),
         Y.default.track(q.HAw.ACCOUNT_LINK_STEP, {
@@ -18974,19 +18980,19 @@ function Nz(e) {
             platform_type: t.type,
         });
 }
-function NY() {
+function NX() {
     let e = (0, NE.gn)(),
         t = Nh.A.useConfig({ location: "User Settings Connections" }),
         i = (0, eZ.A)(t.enabled ? NV.tX : []);
     return (0, p.jsxs)("div", {
-        className: Nk.lA,
+        className: Nw.lA,
         children: [
             i.map(
                 (e) =>
                     null != e &&
                     (0, p.jsx)(
                         Ny.A,
-                        { application: e, className: Nk.__invalid_accountButton, innerClassName: Nk.U$ },
+                        { application: e, className: Nw.__invalid_accountButton, innerClassName: Nw.U$ },
                         e.id,
                     ),
             ),
@@ -18995,20 +19001,20 @@ function NY() {
                 .map((e) =>
                     (0, p.jsx)(
                         Nm.A,
-                        { type: e.type, className: Nk.__invalid_accountButton, innerClassName: Nk.U$ },
+                        { type: e.type, className: Nw.__invalid_accountButton, innerClassName: Nw.U$ },
                         e.type,
                     ),
                 ),
             (0, p.jsx)(e0.m, {
                 text: g.intl.string(g.t.QqTz8b),
                 children: (0, p.jsx)("div", {
-                    className: ew()(Nk.ej, Nk.__invalid_accountButton),
+                    className: ew()(Nw.ej, Nw.__invalid_accountButton),
                     children: (0, p.jsx)(Nc.vN, {
                         children: (0, p.jsx)("button", {
-                            className: ew()(Nk.R8, Nk.U$),
+                            className: ew()(Nw.R8, Nw.U$),
                             type: "button",
                             onClick: function () {
-                                n6.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_SHOW", onComplete: Nz });
+                                n6.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_SHOW", onComplete: NY });
                             },
                             "aria-label": g.intl.string(g.t.Zhcj9X),
                             children: (0, p.jsx)(th._, {
@@ -19023,7 +19029,7 @@ function NY() {
         ],
     });
 }
-function NX(e) {
+function NH(e) {
     let t,
         { fetching: i, accounts: n, appIdentities: s, authorizedApps: l, theme: r, locale: a } = e;
     return (
@@ -19041,7 +19047,7 @@ function NX(e) {
                     children: [
                         s.map((e, t) =>
                             (0, p.jsx)(
-                                NB,
+                                Nz,
                                 { appIdentity: e, oauth2Token: l.find((t) => t.application.id === e.application_id) },
                                 `app-${t}`,
                             ),
@@ -19050,7 +19056,7 @@ function NX(e) {
                             .filter((e) => NA.A.isSupported(e.type))
                             .map((e, t) =>
                                 (0, p.jsx)(
-                                    NF,
+                                    NB,
                                     {
                                         theme: r,
                                         account: e,
@@ -19066,15 +19072,15 @@ function NX(e) {
                             ),
                     ],
                 })),
-        (0, p.jsx)("div", { className: Nk.V, children: t })
+        (0, p.jsx)("div", { className: Nw.V, children: t })
     );
 }
-let NH = (0, o.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
+let NK = (0, o.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
         Component: function () {
             return (0, p.jsx)(sy.D, {
                 label: g.intl.string(g.t.ZeDrUf),
                 description: g.intl.format(g.t["oYc+Gz"], { privacyPolicyUrl: q.X7G.PRIVACY }),
-                children: (0, p.jsx)(NY, {}),
+                children: (0, p.jsx)(NX, {}),
             });
         },
         useSearchTerms: () => [
@@ -19088,7 +19094,7 @@ let NH = (0, o.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
             g.intl.string(g.t["+KCMSi"]),
         ],
     }),
-    NK = (0, o.E2)(u.X.CONNECTIONS_CONNECTED_ACCOUNTS_SETTING, {
+    NW = (0, o.E2)(u.X.CONNECTIONS_CONNECTED_ACCOUNTS_SETTING, {
         Component: function () {
             let e = (0, O.bG)([e_.A], () => e_.A.hidePersonalInformation),
                 t = (0, O.bG)([Nf.A], () => Nf.A.isFetching()),
@@ -19110,7 +19116,7 @@ let NH = (0, o.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
                 : (0, p.jsxs)(p.Fragment, {
                       children: [
                           (0, p.jsx)(Nb, {}),
-                          (0, p.jsx)(NX, {
+                          (0, p.jsx)(NH, {
                               fetching: t || l || (r.length > 0 && n !== NO.FetchState.FETCHED),
                               accounts: i,
                               appIdentities: r,
@@ -19132,17 +19138,16 @@ let NH = (0, o.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
             g.intl.string(g.t["+KCMSi"]),
         ],
     });
-var NW = i(46225),
-    NZ = i(230451);
+var NZ = i(46225);
 let Nq = [q.fg2.LEAGUE_OF_LEGENDS, q.fg2.RIOT_GAMES],
     NQ = (0, o.zZ)(u.X.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, {
-        buildLayout: () => [NH],
+        buildLayout: () => [NK],
         useInlineNotice: function () {
             let e = (0, O.bG)([Nf.A], () => Nf.A.getAccounts().find((e) => Nq.includes(e.type))?.type),
                 t = null != e ? NA.A.get(e) : null,
                 i = (0, eZ.h)(t?.replacedBy),
-                { canStartAuthorization: n, hasAlreadyLinked: s, fetched: l } = (0, NW.RD)(i),
-                r = g.intl.string(NZ.default["1S6oAo"]),
+                { canStartAuthorization: n, hasAlreadyLinked: s, fetched: l } = (0, NZ.RD)(i),
+                r = g.intl.string(Nk.default["1S6oAo"]),
                 a = Nh.A.useConfig({ location: "RiotDeprecationInlineNotice" }).enabled;
             return f.useMemo(
                 () =>
@@ -19151,7 +19156,7 @@ let Nq = [q.fg2.LEAGUE_OF_LEGENDS, q.fg2.RIOT_GAMES],
                               type: eN.lT.INLINE_NOTICE,
                               noticeType: "info",
                               useText: () =>
-                                  g.intl.format(NZ.default.DeOsIl, {
+                                  g.intl.format(Nk.default.DeOsIl, {
                                       connectionName: t.name,
                                       applicationName: r,
                                       connectionEntrypointUrl: i.connectionEntrypointUrl,
@@ -19162,7 +19167,7 @@ let Nq = [q.fg2.LEAGUE_OF_LEGENDS, q.fg2.RIOT_GAMES],
             );
         },
     }),
-    NJ = (0, o.zZ)(u.X.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [NK] }),
+    NJ = (0, o.zZ)(u.X.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [NW] }),
     N$ = (0, o.t_)(u.X.CONNECTIONS_PANEL, {
         useTitle: () => g.intl.string(g.t["3fe7U5"]),
         useObscuredNotice: uz.L,
