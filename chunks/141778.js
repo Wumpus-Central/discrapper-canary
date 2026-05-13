@@ -87,7 +87,7 @@ var A = n(71393),
     v = n(19311),
     E = n(482132),
     N = n(376747);
-function y(e) {
+function k(e) {
     let { handleStepChange: t, handleClose: n } = e,
         { subscriptionMetadataRequest: a, selectedStoreListing: s, application: m } = (0, C.P5)(),
         x = (0, d.S3)(),
@@ -134,7 +134,7 @@ function y(e) {
         ],
     });
 }
-var k = n(775602),
+var y = n(775602),
     T = n(21161),
     I = n(534479),
     P = n(921925);
@@ -145,7 +145,7 @@ function _(e) {
         { updatedSubscription: m, readySlideId: x, selectedStoreListing: f, application: h } = (0, C.P5)(),
         b = (0, d.S3)(),
         A = (0, c.A)(N.Y),
-        { createMultipleConfettiAt: y } = l.useContext(T.x),
+        { createMultipleConfettiAt: k } = l.useContext(T.x),
         _ = b?.name ?? "",
         R = () => {
             s(), o?.();
@@ -190,8 +190,8 @@ function _(e) {
                   ? (0, i.jsx)(j, { tierName: _, onConfirm: R, subscription: m })
                   : (0, i.jsx)(p.XG, { tierName: _, onConfirm: R, subscription: m })),
         l.useEffect(() => {
-            k.A.useReducedMotion && B && y(window.innerWidth / 2, window.innerHeight / 2);
-        }, [y, B]),
+            y.A.useReducedMotion && B && k(window.innerWidth / 2, window.innerHeight / 2);
+        }, [k, B]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(E.dZ, { children: [(0, i.jsx)(P.A, {}), t] }),
@@ -289,11 +289,11 @@ function X(e) {
             priceOptions: A,
             purchaseError: v,
             setCurrency: N,
-            subscriptionMetadataRequest: y,
+            subscriptionMetadataRequest: k,
         } = (0, C.P5)(),
-        k = (0, W.A)(),
+        y = (0, W.A)(),
         T = (0, d.S3)();
-    H()(null != k, "Expected plan to be selected");
+    H()(null != y, "Expected plan to be selected");
     let P = l.useRef(null),
         [_, R] = (0, L.A)(!1, 500),
         w = (0, G.mx)(),
@@ -319,21 +319,19 @@ function X(e) {
                       children:
                           null == g
                               ? (0, i.jsx)(V._, {
-                                    selectedPlanId: k.id,
+                                    selectedPlanId: y.id,
                                     planGroup: s,
                                     paymentSources: j,
                                     priceOptions: A,
-                                    currencies: S,
-                                    onCurrencyChange: (e) => N(e),
                                     handlePaymentSourceAdd: M,
-                                    metadata: F ? void 0 : y,
+                                    metadata: F ? void 0 : k,
                                 })
                               : (0, i.jsx)(Y.A, {
                                     premiumSubscription: g,
                                     paymentSources: j,
                                     priceOptions: A,
                                     handlePaymentSourceAdd: M,
-                                    planId: k.id,
+                                    planId: y.id,
                                     setHasAcceptedTerms: x,
                                     legalTermsNodeRef: U,
                                     hasLegalTermsFlash: _,
@@ -358,10 +356,10 @@ function X(e) {
                           flowStartTime: h.startTime,
                           planGroup: s,
                           openInvoiceId: o,
-                          metadata: F ? void 0 : y,
+                          metadata: F ? void 0 : k,
                           backButtonEligible: t,
                           invoiceError: w,
-                          disablePurchase: y?.guild_id == null && !F,
+                          disablePurchase: k?.guild_id == null && !F,
                           onPaymentSourceAdd: M,
                       }),
                   }),
@@ -377,7 +375,7 @@ function z(e) {
         },
         {
             key: r.pn.BENEFITS,
-            renderStep: (e) => (0, i.jsx)(y, { ...e }),
+            renderStep: (e) => (0, i.jsx)(k, { ...e }),
             options: { useBreadcrumbLabel: () => g.intl.string(g.t["5LD2+B"]) },
         },
         {

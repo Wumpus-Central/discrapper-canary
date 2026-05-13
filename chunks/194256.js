@@ -6,42 +6,42 @@ var l = n(627968),
     s = n(262427),
     o = n(61572),
     u = n(725836),
-    c = n(164928),
-    d = n(474367),
-    p = n(848584),
-    m = n(241989),
-    h = n(993408),
-    C = n(287809),
-    A = n(486020),
-    E = n(927578),
-    y = n(580630),
-    P = n(49960),
-    S = n(284009),
-    _ = n.n(S),
-    T = n(997101),
-    f = n(318254),
-    x = n(821891),
-    N = n(953689),
-    I = n(10716),
-    g = n(46225),
-    v = n(20015),
-    M = n(364995),
-    j = n(427675),
-    b = n(94420),
-    R = n(977445),
-    L = n(778307),
-    O = n(218075),
-    D = n(987723),
-    w = n(615405),
-    U = n(45938),
-    k = n(937008),
-    Y = n(566980),
+    c = n(717925),
+    d = n(848584),
+    p = n(241989),
+    m = n(993408),
+    h = n(287809),
+    C = n(486020),
+    A = n(927578),
+    E = n(580630),
+    y = n(284009),
+    P = n.n(y),
+    S = n(997101),
+    _ = n(318254),
+    T = n(821891),
+    f = n(953689),
+    x = n(10716),
+    N = n(46225),
+    I = n(20015),
+    g = n(364995),
+    v = n(427675),
+    M = n(94420),
+    j = n(977445),
+    b = n(778307),
+    R = n(218075),
+    L = n(987723),
+    O = n(615405),
+    D = n(45938),
+    w = n(937008),
+    U = n(49960),
+    k = n(566980),
+    Y = n(944355),
     G = n(367921),
     F = n(908419),
     B = n(652215);
 function W(e) {
     let { paymentSourceType: t } = e,
-        { isGift: n } = (0, k.Pv)(),
+        { isGift: n } = (0, w.Pv)(),
         { immediateDelivery: a } = (0, F.U)(),
         i = (0, G.Ro)({
             purchaseType: B.VVm.ONE_TIME,
@@ -51,8 +51,8 @@ function W(e) {
             planGroup: [],
             isPrepaidPaymentSource: !1,
         });
-    return (0, l.jsx)(d._P, {
-        variant: n ? { type: d.I0.GiftShop, purchaseButtonText: i } : { type: d.I0.Shop, purchaseButtonText: i },
+    return (0, l.jsx)(Y._P, {
+        variant: n ? { type: Y.I0.GiftShop, purchaseButtonText: i } : { type: Y.I0.Shop, purchaseButtonText: i },
         paymentSourceType: t,
         immediateDelivery: a,
     });
@@ -82,11 +82,11 @@ let q = (e) => e.name,
                 sku: n,
                 invoicePreview: i,
                 paymentSelectContent: o,
-                legalContent: d,
+                legalContent: y,
                 isGift: P,
                 giftRecipient: S,
-                upperInlineNoticeProps: _,
-                footerInlineNoticeProps: T,
+                upperInlineNoticeProps: T,
+                footerInlineNoticeProps: f,
             } = e,
             { product: x, isSocialLayerGameItem: N } = (0, K.AO)({ sku: n }),
             { unifiedInvoiceSummaryProps: I, priceText: g } = a.useMemo(
@@ -111,7 +111,7 @@ let q = (e) => e.name,
                                         label: V.intl.string(Z.default.eoXh7B),
                                         currency: n.currency,
                                     },
-                                    priceText: (0, y.$g)(a, n.currency),
+                                    priceText: (0, E.$g)(a, n.currency),
                                     discount: e,
                                 }
                             );
@@ -120,7 +120,7 @@ let q = (e) => e.name,
                     })({ sku: n, invoicePreview: i }),
                 [n, i],
             ),
-            v = a.useMemo(() => (null != I ? (0, l.jsx)(p.Vm, { ...I }) : null), [I]),
+            v = a.useMemo(() => (null != I ? (0, l.jsx)(d.Vm, { ...I }) : null), [I]),
             M = a.useMemo(
                 () =>
                     ((e) => {
@@ -134,22 +134,22 @@ let q = (e) => e.name,
                         let u = i
                                 ? {
                                       header: a.name,
-                                      headerIconSrc: A.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 16 }),
+                                      headerIconSrc: C.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 16 }),
                                   }
                                 : {},
-                            c = (0, l.jsx)(m.WH, { sku: t, product: n }),
+                            c = (0, l.jsx)(p.WH, { sku: t, product: n }),
                             d = {};
                         return (
                             null != n &&
                                 (d = ((e) => {
-                                    let t = C.default.getCurrentUser(),
-                                        n = E.Ay.canUseShopDiscounts(t),
-                                        l = (0, h.xM)(t),
-                                        a = (0, h.WD)(e, { hasShopDiscount: n, discount: (0, h.fT)(e, n) });
+                                    let t = h.default.getCurrentUser(),
+                                        n = A.Ay.canUseShopDiscounts(t),
+                                        l = (0, m.xM)(t),
+                                        a = (0, m.WD)(e, { hasShopDiscount: n, discount: (0, m.fT)(e, n) });
                                     if (null != a && !a.showDefaultPriceOnly && a.showDiscountPrice) {
-                                        if (l === h.D0.NITRO)
+                                        if (l === m.D0.NITRO)
                                             return { PriceIcon: r.t, priceTooltip: V.intl.string(Z.default.YUNJJa) };
-                                        h.D0.THIRDPARTY;
+                                        m.D0.THIRDPARTY;
                                     }
                                     return {};
                                 })(n)),
@@ -166,7 +166,7 @@ let q = (e) => e.name,
                 [n, x, t, N, S],
             ),
             [j, b] = a.useMemo(
-                () => [V.intl.string(Z.default.Zxav97), null != i ? (0, y.$g)(i.total, i.currency) : void 0],
+                () => [V.intl.string(Z.default.Zxav97), null != i ? (0, E.$g)(i.total, i.currency) : void 0],
                 [i],
             ),
             R = a.useMemo(() => {
@@ -176,7 +176,7 @@ let q = (e) => e.name,
                     let l = e.orbsReward;
                     if (null != l && l > 0) {
                         let e = n ? V.t["ZV+aS9"] : V.t["0StwHe"];
-                        return { Icon: f.C, text: V.intl.format(e, { orbCount: l }) };
+                        return { Icon: _.C, text: V.intl.format(e, { orbCount: l }) };
                     }
                 })(i, { isGift: P });
                 return null != e ? (0, l.jsx)(s.J, { ...e }) : null;
@@ -188,13 +188,13 @@ let q = (e) => e.name,
             }, [R, L, O]),
             (0, l.jsx)(c.T, {
                 shouldShowGlobalNotices: !0,
-                purchaseItemContent: (0, l.jsx)(m.f7, { ...M, price: g }),
+                purchaseItemContent: (0, l.jsx)(p.f7, { ...M, price: g }),
                 invoiceSummaryContent: v,
                 paymentSelectContent: o,
-                legalContent: d,
+                legalContent: y,
                 promotionalNoticeContent: R,
-                upperInlineNoticeProps: _,
-                footerInlineNoticeProps: T,
+                upperInlineNoticeProps: T,
+                footerInlineNoticeProps: f,
                 invoiceTotalDueLabel: j,
                 invoiceTotalDueValue: b,
             })
@@ -206,13 +206,13 @@ function X(e) {
             sku: r,
             application: s,
             invoicePreview: u,
-            isGift: p,
-            eligiblePaymentGateways: m,
-            purchaseTermsAndLegalContent: h,
-            isStepLoading: C,
-            giftRecipient: A,
-            warningAndErrorMessages: E,
-            disabled: y,
+            isGift: d,
+            eligiblePaymentGateways: p,
+            purchaseTermsAndLegalContent: m,
+            isStepLoading: h,
+            giftRecipient: C,
+            warningAndErrorMessages: A,
+            disabled: E,
         } = ((e) => {
             let { hasLegalTermsFlash: t, legalTermsNodeRef: n } = e,
                 {
@@ -220,7 +220,7 @@ function X(e) {
                     setHasAcceptedTerms: r,
                     purchaseState: s,
                     checkoutInvoicePreview: o,
-                } = (0, b.t4)((e) => ({
+                } = (0, M.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
                     setHasAcceptedTerms: e.setHasAcceptedTerms,
                     purchaseState: e.purchaseState,
@@ -234,42 +234,42 @@ function X(e) {
                     devShelfFetchState: m,
                     hasPaymentSources: h,
                     purchasePreviewError: C,
-                } = (0, P.P5)(),
-                { checkoutPaymentSources: A, hasInvoiceOrderContextLoaded: E } = (0, M.t)(),
-                y = (0, j.gU)(),
-                { isGift: S, giftRecipient: f } = (0, k.Pv)(),
-                G = S && (0, U.Ik)(f),
-                { fetched: F, hasAlreadyLinked: K } = (0, g.RD)(u);
-            _()(null != i, "Expected selectedSkuId");
+                } = (0, U.P5)(),
+                { checkoutPaymentSources: A, hasInvoiceOrderContextLoaded: E } = (0, g.t)(),
+                y = (0, v.gU)(),
+                { isGift: _, giftRecipient: Y } = (0, w.Pv)(),
+                G = _ && (0, D.Ik)(Y),
+                { fetched: F, hasAlreadyLinked: K } = (0, N.RD)(u);
+            P()(null != i, "Expected selectedSkuId");
             let Z = y[i],
                 q = Z?.eligiblePaymentGateways;
-            _()(null != Z, "SKU must exist and be fetched."), _()(null != u, "Application must exist.");
-            let z = (0, R.u)(u.id),
-                $ = T.M.EEA_COUNTRIES.has(w.A.ipCountryCodeWithFallback),
-                J = s === Y.h.PURCHASING || s === Y.h.COMPLETED,
+            P()(null != Z, "SKU must exist and be fetched."), P()(null != u, "Application must exist.");
+            let z = (0, j.u)(u.id),
+                $ = S.M.EEA_COUNTRIES.has(O.A.ipCountryCodeWithFallback),
+                J = s === k.h.PURCHASING || s === k.h.COMPLETED,
                 X = A.find((e) => e.id === c) ?? null,
                 Q = null != X ? X.type : null,
-                ee = null != q && q.length > 0 && (null == c || null === Q) && h ? O.fU.SELECT_PAYMENT_METHOD : void 0,
+                ee = null != q && q.length > 0 && (null == c || null === Q) && h ? R.fU.SELECT_PAYMENT_METHOD : void 0,
                 et = Z.productLine === B.EZt.SOCIAL_LAYER_GAME_ITEM,
                 en = G && !et,
                 el = a.useMemo(
                     () => ({
                         testModeWarning: z ? V.intl.string(V.t.OvMyMd) : null,
                         devShelfError:
-                            (0, v.n)(u, B.gfo.EMBEDDED) && m === I.$.ERROR ? V.intl.string(V.t.tAmECt) : null,
+                            (0, I.n)(u, B.gfo.EMBEDDED) && m === x.$.ERROR ? V.intl.string(V.t.tAmECt) : null,
                         socialLayerGameItemDisclaimer:
-                            et && F && !K && !S ? (0, D.k3)(u, { location: "OneTimePurchaseReviewState" }) : null,
+                            et && F && !K && !_ ? (0, L.k3)(u, { location: "OneTimePurchaseReviewState" }) : null,
                     }),
-                    [z, u, m, et, F, K, S],
+                    [z, u, m, et, F, K, _],
                 ),
                 ea = a.useMemo(
                     () =>
                         Z.productLine === B.EZt.COLLECTIBLES
                             ? (0, l.jsx)(W, { paymentSourceType: Q })
-                            : (0, l.jsx)(L.A, {
+                            : (0, l.jsx)(b.A, {
                                   isActive: t,
                                   ref: n,
-                                  children: (0, l.jsx)(N.A, {
+                                  children: (0, l.jsx)(f.A, {
                                       onChange: r,
                                       forceShow: !0,
                                       showWithdrawalWaiver: $,
@@ -277,26 +277,26 @@ function X(e) {
                                       subscriptionPlan: null,
                                       finePrintClassname: H.i,
                                       purchaseType: p,
-                                      isGift: S,
-                                      finePrint: (0, l.jsx)(x.A, {
+                                      isGift: _,
+                                      finePrint: (0, l.jsx)(T.A, {
                                           paymentSourceType: Q,
                                           isEmbeddedIAP: d,
                                           purchaseType: p,
                                           productLine: Z.productLine,
-                                          isGift: S,
+                                          isGift: _,
                                           applicationName: u.name,
                                           applicationId: u.id,
                                           hasAlreadyLinked: !F || K,
                                       }),
                                   }),
                               }),
-                    [t, n, r, $, J, p, S, Q, d, Z.productLine, u.name, u.id, F, K],
+                    [t, n, r, $, J, p, _, Q, d, Z.productLine, u.name, u.id, F, K],
                 );
             return {
                 sku: Z,
                 application: u,
-                giftRecipient: f,
-                isGift: S,
+                giftRecipient: Y,
+                isGift: _,
                 invoicePreview: o,
                 isEmbeddedIAP: d,
                 shouldShowPurchaseReviewImage: en,
@@ -310,63 +310,47 @@ function X(e) {
                 disabled: J,
             };
         })({ hasLegalTermsFlash: t, legalTermsNodeRef: n }),
-        { currencies: S, displayCurrency: f, setCurrency: G, priceOptions: F } = (0, P.P5)(),
-        K = a.useMemo(
-            () =>
-                (0, l.jsx)(d.qX, {
-                    label: V.intl.string(V.t["/AAR02"]),
-                    selectedCurrency: F.currency ?? f,
-                    currencies: S,
-                    onChange: G,
-                }),
-            [F.currency, f, S, G],
-        ),
-        Z = a.useMemo(() => ({ paymentGatewayRestrictions: m, shouldUseUnifiedCheckoutUI: !0 }), [m]),
-        q = (0, l.jsxs)(l.Fragment, {
-            children: [
-                (0, l.jsx)(o.N, {
-                    label: V.intl.string(V.t["u+Cw58"]),
-                    location: "OneTimeUnifiedCheckoutPurchaseReview",
-                    onPaymentSourceAdd: i,
-                    additionalPaymentSourceDropdownProps: Z,
-                    disabled: y,
-                }),
-                K,
-            ],
+        y = a.useMemo(() => ({ paymentGatewayRestrictions: p, shouldUseUnifiedCheckoutUI: !0 }), [p]),
+        _ = (0, l.jsx)(o.N, {
+            label: V.intl.string(V.t["u+Cw58"]),
+            location: "OneTimeUnifiedCheckoutPurchaseReview",
+            onPaymentSourceAdd: i,
+            additionalPaymentSourceDropdownProps: y,
+            disabled: E,
         }),
-        z = a.useMemo(() => {
+        Y = a.useMemo(() => {
             let e = [];
             return (
-                null != E.testModeWarning &&
-                    e.push({ type: "warning", message: E.testModeWarning, key: "test-mode-warning-notice" }),
-                null != E.devShelfError &&
-                    e.push({ type: "critical", message: E.devShelfError, key: "dev-shelf-error-notice" }),
+                null != A.testModeWarning &&
+                    e.push({ type: "warning", message: A.testModeWarning, key: "test-mode-warning-notice" }),
+                null != A.devShelfError &&
+                    e.push({ type: "critical", message: A.devShelfError, key: "dev-shelf-error-notice" }),
                 e.length > 0 ? e : null
             );
-        }, [E.testModeWarning, E.devShelfError]),
-        $ = a.useMemo(() => {
+        }, [A.testModeWarning, A.devShelfError]),
+        G = a.useMemo(() => {
             let e = [];
             return (
-                null != E.socialLayerGameItemDisclaimer &&
+                null != A.socialLayerGameItemDisclaimer &&
                     e.push({
                         type: "info",
-                        message: E.socialLayerGameItemDisclaimer,
+                        message: A.socialLayerGameItemDisclaimer,
                         key: "social-layer-game-item-disclaimer-notice",
                     }),
                 e.length > 0 ? e : null
             );
-        }, [E.socialLayerGameItemDisclaimer]);
-    return C
+        }, [A.socialLayerGameItemDisclaimer]);
+    return h
         ? (0, l.jsx)(c.E, {})
         : (0, l.jsx)(J, {
               application: s,
-              giftRecipient: A,
-              isGift: p,
+              giftRecipient: C,
+              isGift: d,
               sku: r,
               invoicePreview: u,
-              paymentSelectContent: q,
-              legalContent: h,
-              upperInlineNoticeProps: z,
-              footerInlineNoticeProps: $,
+              paymentSelectContent: _,
+              legalContent: m,
+              upperInlineNoticeProps: Y,
+              footerInlineNoticeProps: G,
           });
 }

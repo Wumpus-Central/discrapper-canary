@@ -1,46 +1,39 @@
-n.d(t, { K: () => o });
+n.d(t, { K: () => s });
 var l = n(627968),
     a = n(64700),
     i = n(61572),
-    r = n(474367),
-    s = n(375708);
-let o = (e) => {
+    r = n(375708);
+let s = (e) => {
     let {
             handlePaymentSourceAdd: t,
             isTrial: n,
-            isDiscount: o,
-            disabled: u,
-            hasEntitlements: c,
-            eligiblePaymentGateways: d,
-            currencyDropdownProps: p,
-            label: m = s.intl.string(s.t["u+Cw58"]),
-            shouldUseUnifiedCheckoutUI: h,
-            paymentSourceDropdownClassName: C,
-            paymentSourceDropdownPrependOption: A,
-            location: E = "PremiumSubscriptionReview",
+            isDiscount: s,
+            disabled: o,
+            hasEntitlements: u,
+            eligiblePaymentGateways: c,
+            label: d = r.intl.string(r.t["u+Cw58"]),
+            shouldUseUnifiedCheckoutUI: p,
+            paymentSourceDropdownClassName: m,
+            paymentSourceDropdownPrependOption: h,
+            location: C = "PremiumSubscriptionReview",
         } = e,
-        y = a.useMemo(() => (o || null == p ? null : (0, l.jsx)(r.qX, { ...p })), [o, p]),
-        P = a.useMemo(
+        A = a.useMemo(
             () => ({
-                newPaymentMethodOptionLabel: c && !n ? s.intl.string(s.t.IGU7El) : null,
+                newPaymentMethodOptionLabel: u && !n ? r.intl.string(r.t.IGU7El) : null,
                 isTrial: n,
-                paymentGatewayRestrictions: d,
-                shouldUseUnifiedCheckoutUI: h,
-                className: C,
-                prependOption: A,
+                paymentGatewayRestrictions: c,
+                shouldUseUnifiedCheckoutUI: p,
+                className: m,
+                prependOption: h,
             }),
-            [c, n, d, h, C, A],
+            [u, n, c, p, m, h],
         );
-    return (0, l.jsxs)(l.Fragment, {
-        children: [
-            (0, l.jsx)(i.N, {
-                label: m,
-                disabled: u,
-                onPaymentSourceAdd: t,
-                additionalPaymentSourceDropdownProps: P,
-                location: E,
-            }),
-            y,
-        ],
+    return (0, l.jsx)(i.N, {
+        label: d,
+        disabled: o,
+        onPaymentSourceAdd: t,
+        additionalPaymentSourceDropdownProps: A,
+        location: C,
+        hideCurrencySelect: s,
     });
 };

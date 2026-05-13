@@ -1,4 +1,4 @@
-n.d(t, { N: () => p });
+n.d(t, { N: () => m });
 var l = n(627968),
     a = n(64700),
     i = n(17928),
@@ -6,23 +6,25 @@ var l = n(627968),
     s = n(49960),
     o = n(351906),
     u = n(364995),
-    c = n(474367);
-let d = (e) => {
+    c = n(944355),
+    d = n(375708);
+let p = (e) => {
         let {
                 label: t,
                 additionalPaymentSourceDropdownProps: n,
-                disabled: s,
-                setPaymentSourceId: d,
-                location: p,
-                subscriptionPaymentSourceId: m,
-                onPaymentSourceAdd: h,
-                paymentSourceId: C,
+                disabled: p,
+                setPaymentSourceId: m,
+                location: h,
+                subscriptionPaymentSourceId: C,
+                onPaymentSourceAdd: A,
+                paymentSourceId: E,
+                hideCurrencySelect: y,
             } = e,
             {
-                giftCardsEnabled: A,
-                giftCardCheckboxProps: E,
-                walletCoversSubtotal: y,
-                basePaymentSourceDropdownProps: P,
+                giftCardsEnabled: P,
+                giftCardCheckboxProps: S,
+                walletCoversSubtotal: _,
+                basePaymentSourceDropdownProps: T,
             } = ((e) => {
                 let { paymentSourceId: t, setPaymentSourceId: n, location: l, subscriptionPaymentSourceId: s } = e,
                     { hasInvoiceOrderContextLoaded: c, checkoutPaymentSources: d } = (0, u.t)(),
@@ -61,22 +63,34 @@ let d = (e) => {
                         [h, p, y, P, C],
                     ),
                 };
-            })({ paymentSourceId: C, setPaymentSourceId: d, subscriptionPaymentSourceId: m, location: p }),
-            S = a.useMemo(() => ({ ...P, ...n, onPaymentSourceAdd: h }), [P, h, n]);
+            })({ paymentSourceId: E, setPaymentSourceId: m, subscriptionPaymentSourceId: C, location: h }),
+            { priceOptions: f, currencies: x, displayCurrency: N, setCurrency: I } = (0, s.P5)(),
+            g = a.useMemo(() => {
+                if (!y)
+                    return {
+                        label: d.intl.string(d.t["/AAR02"]),
+                        selectedCurrency: f.currency ?? N,
+                        currencies: x,
+                        onChange: I,
+                        disabled: p,
+                    };
+            }, [y, f.currency, N, x, I, p]),
+            v = a.useMemo(() => ({ ...T, ...n, onPaymentSourceAdd: A }), [T, A, n]);
         return (0, l.jsx)(c.nL, {
             label: t,
-            giftCardsEnabled: A,
-            giftCardCheckboxProps: E,
-            paymentSourceDropdownProps: S,
-            showCheckboxAboveDropdown: y,
-            disabled: s,
+            giftCardsEnabled: P,
+            giftCardCheckboxProps: S,
+            paymentSourceDropdownProps: v,
+            showCheckboxAboveDropdown: _,
+            disabled: p,
+            currencySelectProps: g,
         });
     },
-    p = (e) => {
+    m = (e) => {
         let { setPaymentSourceId: t, paymentSourceId: n } = (0, s.P5)(),
             { setPaymentSourceId: i, paymentSourceId: r } = a.useMemo(
                 () => ({ setPaymentSourceId: e.setPaymentSourceId ?? t, paymentSourceId: e.paymentSourceId ?? n }),
                 [e.setPaymentSourceId, e.paymentSourceId, t, n],
             );
-        return (0, l.jsx)(d, { ...e, setPaymentSourceId: i, paymentSourceId: r });
+        return (0, l.jsx)(p, { ...e, setPaymentSourceId: i, paymentSourceId: r });
     };
