@@ -88,7 +88,8 @@ let ec = es.Ay.getEnableHardwareAcceleration(),
                     null != h &&
                         (0, I.L3)(e, async () => {
                             let { default: e } = await Promise.all([
-                                t.e("19960"),
+                                t.e("18549"),
+                                t.e("79842"),
                                 t.e("26132"),
                                 t.e("46652"),
                                 t.e("93190"),
@@ -1196,7 +1197,7 @@ let nH = (e) => {
         a = s.useCallback(() => {
             (0, m.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("44729"),
+                    t.e("18549"),
                     t.e("34195"),
                     t.e("59957"),
                     t.e("28136"),
@@ -2792,8 +2793,9 @@ function iD(e) {
         m = (e) => {
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("19960"),
+                    t.e("18549"),
                     t.e("65397"),
+                    t.e("79842"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),
@@ -4857,7 +4859,7 @@ let rq = () => (0, i.jsx)("div", { className: rz.wG, children: (0, i.jsx)(x.y, {
                 t.e("65397"),
                 t.e("11394"),
                 t.e("37082"),
-                t.e("92812"),
+                t.e("18549"),
                 t.e("35184"),
                 t.e("63982"),
                 t.e("49681"),
@@ -4878,7 +4880,7 @@ let rq = () => (0, i.jsx)("div", { className: rz.wG, children: (0, i.jsx)(x.y, {
     r0 = (0, nL.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("92812"),
+                t.e("18549"),
                 t.e("80798"),
                 t.e("35184"),
                 t.e("56574"),
@@ -4993,7 +4995,8 @@ class r1 extends s.PureComponent {
         o()(null != l, "Missing user in Channel.openDMContextMenu"),
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("19960"),
+                    t.e("18549"),
+                    t.e("79842"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),

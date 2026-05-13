@@ -1,11 +1,11 @@
 l.r(t),
     l.d(t, {
-        nitroCollection: () => l6,
-        virtualCurrencyCollection: () => l2,
-        playgroundConfig: () => l9,
-        identityCollection: () => l3,
-        RevenuePlaygroundCollectionId: () => lZ,
-        paymentsCollection: () => l1,
+        nitroCollection: () => l3,
+        virtualCurrencyCollection: () => l6,
+        playgroundConfig: () => l8,
+        identityCollection: () => l9,
+        RevenuePlaygroundCollectionId: () => l0,
+        paymentsCollection: () => l2,
     });
 var a,
     n = l(700623),
@@ -1291,8 +1291,8 @@ let e6 = {
         ],
     };
 var e9 = l(687021),
-    e4 = l(487233),
-    e8 = l(120386),
+    e8 = l(487233),
+    e4 = l(120386),
     e7 = l(473219);
 let e5 = { value: "", label: "No Guild (main profile)" };
 var te = l(99696),
@@ -2346,14 +2346,14 @@ function t6(e) {
 }
 var t3 = l(150934),
     t9 = l(36167),
-    t4 = l(26279);
-let t8 = [
+    t8 = l(26279);
+let t4 = [
         { id: "tier_2", value: eC.gD.PREMIUM_MONTH_TIER_2, label: "Nitro (Monthly)" },
         { id: "tier_1", value: eC.gD.PREMIUM_MONTH_TIER_1, label: "Nitro Classic (Monthly)" },
         { id: "tier_0", value: eC.gD.PREMIUM_MONTH_TIER_0, label: "Nitro Basic (Monthly)" },
     ],
     t7 = [
-        { id: "meta_quest", value: t4.uH.META_QUEST_WEB_REDIRECT_CHECKOUT, label: "Meta Quest Web Redirect Checkout" },
+        { id: "meta_quest", value: t8.uH.META_QUEST_WEB_REDIRECT_CHECKOUT, label: "Meta Quest Web Redirect Checkout" },
     ];
 function t5() {
     let [e, t] = u.useState(null);
@@ -2390,7 +2390,7 @@ function le(e) {
                     (0, s.jsx)(et.l, {
                         label: "Plan",
                         value: l,
-                        options: t8,
+                        options: t4,
                         onSelectionChange: a,
                         selectionMode: "single",
                         fullWidth: !0,
@@ -2632,7 +2632,7 @@ let lp = {
             id: "standalone-redirect",
             component: function () {
                 let [e, t] = u.useState(!1),
-                    [l, a] = u.useState(t4.uH.META_QUEST_WEB_REDIRECT_CHECKOUT),
+                    [l, a] = u.useState(t8.uH.META_QUEST_WEB_REDIRECT_CHECKOUT),
                     n = u.useCallback((e) => {
                         t(e);
                     }, []),
@@ -2865,21 +2865,30 @@ let lj = (e) => {
         });
     },
     lT = (e) => {
-        let { children: t, stepConfigs: l } = e;
-        return (0, s.jsxs)(j.PaymentContextProvider, {
+        let { children: t, stepConfigs: l, bodyClassName: a } = e;
+        return (0, s.jsx)(j.PaymentContextProvider, {
             stepConfigs: l,
             skuIDs: [],
             activeSubscription: null,
-            children: [(0, s.jsx)(eb.dZ, { children: t }), (0, s.jsx)(eb.Ay, { header: null })],
+            children: (0, s.jsx)("div", { className: a, children: t }),
         });
     };
 var lP = l(935377);
 let lA = new lg.A("PaymentElement.web.stories"),
-    lI = () => {
+    lI = {
+        key: m.pn.ADD_PAYMENT_STEPS,
+        renderStep: () => (0, s.jsx)("div", {}),
+        options: { renderHeader: !1, hideDefaultModalBody: !0 },
+    },
+    l_ = () => {
         let { elementsAppearanceOptions: e } = (0, lx.E)();
         return (0, s.jsxs)("div", {
             children: [
-                (0, s.jsx)(tt.D, { variant: "heading-lg/semibold", className: U.tm, children: "Default Options" }),
+                (0, s.jsx)(tt.D, {
+                    variant: "heading-lg/semibold",
+                    className: U.tm,
+                    children: "Defaults for Current Theme",
+                }),
                 (0, s.jsx)("div", {
                     children: Object.entries(e).map((e) => {
                         let [t, l] = e;
@@ -2889,17 +2898,18 @@ let lA = new lg.A("PaymentElement.web.stories"),
             ],
         });
     },
-    l_ = (e) => {
+    lk = (e) => {
         let {
                 theme: t,
                 colorText: l,
                 colorBackground: a,
                 inputBackgroundColor: n,
                 tabBackgroundColor: i,
-                storyType: r,
+                tabSelectedBackgroundColor: r,
+                storyType: o,
             } = e,
-            o = (0, lf.A)(),
-            { stripePaymentElementProps: u, stripeAddressElementProps: d } = (0, ly.wD)({
+            u = (0, lf.A)(),
+            { stripePaymentElementProps: d, stripeAddressElementProps: c } = (0, ly.wD)({
                 step: m.pn.PAYMENT_ELEMENT,
                 handleStepChange: M.tEg,
                 onBillingAddressChange: M.tEg,
@@ -2909,10 +2919,10 @@ let lA = new lg.A("PaymentElement.web.stories"),
                 continueSessionToInitialStep: void 0,
             }),
             {
-                elementsOptions: c,
-                isLoading: p,
-                setupError: h,
-                customPaymentMethodIdsToSourceTypes: b,
+                elementsOptions: p,
+                isLoading: h,
+                setupError: b,
+                customPaymentMethodIdsToSourceTypes: x,
             } = (0, lx.p)({
                 onSetupError: (e) => {
                     lA.info("Stripe Payment Element options setup error: ", e);
@@ -2923,9 +2933,10 @@ let lA = new lg.A("PaymentElement.web.stories"),
                     colorBackground: a,
                     inputBackgroundColor: n,
                     tabBackgroundColor: i,
+                    tabSelectedBackgroundColor: r,
                 },
             });
-        return p || null != h || null == o
+        return h || null != b || null == u
             ? (0, s.jsx)(ly.eR, {})
             : (0, s.jsxs)("div", {
                   children: [
@@ -2940,41 +2951,33 @@ let lA = new lg.A("PaymentElement.web.stories"),
                       (0, s.jsxs)("div", {
                           className: lP.ny,
                           children: [
+                              (0, s.jsx)(l_, {}),
                               (0, s.jsx)(lT, {
-                                  stepConfigs: [
-                                      {
-                                          key: m.pn.ADD_PAYMENT_STEPS,
-                                          renderStep: () => (0, s.jsx)("div", {}),
-                                          options: {
-                                              renderHeader: !1,
-                                              bodyClassName: "joined-payment-address-elements" === r ? lP.fF : lP.u1,
-                                          },
-                                      },
-                                  ],
+                                  stepConfigs: [lI],
                                   children: (0, s.jsx)("div", {
-                                      className: lh()(lP.o6, { [lP.X1]: "joined-payment-address-elements" === r }),
+                                      className: lh()(lP.o6, "joined-payment-address-elements" === o ? lP.fF : lP.u1),
                                       children: (0, s.jsxs)(la.Elements, {
-                                          stripe: o,
-                                          options: { ...c },
+                                          stripe: u,
+                                          options: { ...p },
                                           children: [
-                                              "stripe-address-element" === r
+                                              "stripe-address-element" === o
                                                   ? (0, s.jsx)("div", {
                                                         className: U.R,
                                                         children: (0, s.jsx)(ly.Wf, {
-                                                            ...u,
-                                                            customPaymentMethodIdsToSourceTypes: b,
+                                                            ...d,
+                                                            customPaymentMethodIdsToSourceTypes: x,
                                                             step: m.pn.PAYMENT_ELEMENT,
                                                         }),
                                                     })
                                                   : (0, s.jsx)(ly.Wf, {
-                                                        ...u,
-                                                        customPaymentMethodIdsToSourceTypes: b,
+                                                        ...d,
+                                                        customPaymentMethodIdsToSourceTypes: x,
                                                         step: m.pn.PAYMENT_ELEMENT,
                                                     }),
-                                              ("joined-payment-address-elements" === r ||
-                                                  "stripe-address-element" === r) &&
+                                              ("joined-payment-address-elements" === o ||
+                                                  "stripe-address-element" === o) &&
                                                   (0, s.jsx)(ly.KS, {
-                                                      ...d,
+                                                      ...c,
                                                       billingAddressInfo: {
                                                           email: "",
                                                           name: "",
@@ -2990,13 +2993,12 @@ let lA = new lg.A("PaymentElement.web.stories"),
                                       }),
                                   }),
                               }),
-                              (0, s.jsx)(lI, {}),
                           ],
                       }),
                   ],
               });
     },
-    lk = {
+    lR = {
         theme: {
             label: "Theme",
             type: "select",
@@ -3007,38 +3009,39 @@ let lA = new lg.A("PaymentElement.web.stories"),
         colorBackground: { label: "Color Background", type: "text", defaultValue: "#ffffff" },
         inputBackgroundColor: { label: "Input Background Color", type: "text", defaultValue: "#00000014" },
         tabBackgroundColor: { label: "Tab Background Color", type: "text", defaultValue: "#00000014" },
-    },
-    lR = {
-        name: "Joined Payment + Address",
-        id: "joined-payment-address-elements",
-        component: (e) => (0, s.jsx)(l_, { ...e, storyType: "joined-payment-address-elements" }),
-        controls: { ...lk },
+        tabSelectedBackgroundColor: { label: "Tab Selected Background Color", type: "text", defaultValue: "#5865f2" },
     },
     lN = {
-        name: "Stripe Payment Element",
-        id: "stripe-payment-element",
-        component: (e) => (0, s.jsx)(l_, { ...e, storyType: "stripe-payment-element" }),
-        controls: { ...lk },
+        name: "Joined Payment + Address",
+        id: "joined-payment-address-elements",
+        component: (e) => (0, s.jsx)(lk, { ...e, storyType: "joined-payment-address-elements" }),
+        controls: { ...lR },
     },
     lM = {
+        name: "Stripe Payment Element",
+        id: "stripe-payment-element",
+        component: (e) => (0, s.jsx)(lk, { ...e, storyType: "stripe-payment-element" }),
+        controls: { ...lR },
+    },
+    lD = {
         name: "Stripe Address Element",
         id: "stripe-address-element",
-        component: (e) => (0, s.jsx)(l_, { ...e, storyType: "stripe-address-element" }),
-        controls: { ...lk },
+        component: (e) => (0, s.jsx)(lk, { ...e, storyType: "stripe-address-element" }),
+        controls: { ...lR },
     };
 l(321073);
-var lD = l(735438),
-    lO = l(96337),
-    lL = l(997101),
-    lw = l(597770),
-    lV = l(278416),
-    lB = l(606267),
-    lU = l(169797),
-    lG = l(474367),
-    lH = l(460495),
-    l$ = l(826469),
-    lW = l(812745);
-let lF = {
+var lO = l(735438),
+    lL = l(96337),
+    lw = l(997101),
+    lV = l(597770),
+    lB = l(278416),
+    lU = l(606267),
+    lG = l(169797),
+    lH = l(474367),
+    l$ = l(460495),
+    lW = l(826469),
+    lF = l(812745);
+let lz = {
     name: "Primitive: Nitro Plan Select",
     id: "unified-checkout-nitro-plan-select",
     component: (e) => {
@@ -3059,23 +3062,23 @@ let lF = {
         return (0, s.jsxs)("div", {
             className: U.Cd,
             children: [
-                (0, s.jsx)(lG.q7, {
+                (0, s.jsx)(lH.q7, {
                     selection: h,
                     onChange: b,
                     planOptions: [
                         {
                             id: 0,
-                            title: (0, s.jsx)(lG.ec, { size: "sm", color: "text-strong", premiumType: t }),
+                            title: (0, s.jsx)(lH.ec, { size: "sm", color: "text-strong", premiumType: t }),
                             titleDescriber: l,
                             primaryText: a,
-                            subtext: i ? (0, s.jsx)(lG.Lo, { strikethrough: r, price: n }) : void 0,
+                            subtext: i ? (0, s.jsx)(lH.Lo, { strikethrough: r, price: n }) : void 0,
                         },
                         {
                             id: 1,
-                            title: (0, s.jsx)(lG.ec, { size: "sm", color: "text-strong", premiumType: t }),
+                            title: (0, s.jsx)(lH.ec, { size: "sm", color: "text-strong", premiumType: t }),
                             titleDescriber: o,
                             primaryText: d,
-                            subtext: p ? (0, s.jsx)(lG.Lo, { strikethrough: m, price: c }) : void 0,
+                            subtext: p ? (0, s.jsx)(lH.Lo, { strikethrough: m, price: c }) : void 0,
                         },
                     ],
                 }),
@@ -3105,21 +3108,21 @@ let lF = {
         rightSubtextStrikethrough: { label: "Right Card - Subtext Strikethrough", type: "boolean", defaultValue: !1 },
     },
 };
-function lz(e) {
+function lY(e) {
     let { label: t, giftCardsEnabled: l, disabled: a, hidePersonalInformation: n } = e,
         i = (0, x.bG)([tz.A], () => Object.values(tz.A.paymentSources)),
         [r, o] = u.useState(void 0);
     u.useEffect(() => {
         (0, eo.$o)();
     }, []);
-    let d = u.useMemo(() => i.map((e) => new l$.A(e, !0, [])), [i]),
+    let d = u.useMemo(() => i.map((e) => new lW.A(e, !0, [])), [i]),
         {
             dropdownPaymentSources: c,
             dropdownPaymentSourceId: p,
             handleDropdownPaymentSourceChange: m,
             giftCardCheckboxProps: h,
             walletCoversSubtotal: b,
-        } = (0, lB.Y0)({
+        } = (0, lU.Y0)({
             checkoutPaymentSources: d,
             paymentSourceId: r,
             setPaymentSourceId: o,
@@ -3127,7 +3130,7 @@ function lz(e) {
         });
     return (0, s.jsxs)("div", {
         children: [
-            (0, s.jsx)(lG.nL, {
+            (0, s.jsx)(lH.nL, {
                 label: t,
                 giftCardsEnabled: l,
                 giftCardCheckboxProps: h,
@@ -3144,14 +3147,14 @@ function lz(e) {
         ],
     });
 }
-let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
-    lq = lO.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
-    lK = {
+let lq = { "nitro-wheel": r.t, gift: lV.o, orbs: i.C },
+    lK = lL.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    lX = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
             let { primaryButtonText: t, primaryButtonIcon: l, headerBadgeHasIcon: a, ...n } = e,
-                i = a ? lV.g : void 0;
+                i = a ? lB.g : void 0;
             return (0, s.jsxs)(ee.B, {
                 gap: 16,
                 align: "center",
@@ -3166,7 +3169,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                         onClick: () =>
                             (0, er.openModal)(
                                 (e) =>
-                                    (0, s.jsx)(lU.oH, {
+                                    (0, s.jsx)(lG.oH, {
                                         ...e,
                                         ...n,
                                         title: n.title,
@@ -3174,7 +3177,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                                         primaryButtonProps: {
                                             onClick: e.onClose,
                                             text: t,
-                                            icon: "none" !== l ? lY[l] : void 0,
+                                            icon: "none" !== l ? lq[l] : void 0,
                                         },
                                         onBackClick: e.onClose,
                                         children: (0, s.jsx)(ee.B, {
@@ -3205,7 +3208,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: lL.d.US, options: lq },
+            countryCode: { label: "Country Code", type: "select", defaultValue: lw.d.US, options: lK },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -3222,7 +3225,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
     },
-    lX = {
+    lJ = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
@@ -3231,23 +3234,23 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
         intervalCount: 1,
         startDate: new Date(),
     },
-    lJ = {
-        [lG.I0.Subscription]: { type: lG.I0.Subscription, ...lX },
-        [lG.I0.SubscriptionTrial]: { type: lG.I0.SubscriptionTrial, ...lX },
-        [lG.I0.OrbsRedemption]: { type: lG.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
-        [lG.I0.Shop]: { type: lG.I0.Shop, purchaseButtonText: "Purchase" },
-        [lG.I0.GiftNitro]: { type: lG.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
-        [lG.I0.GiftShop]: { type: lG.I0.GiftShop, purchaseButtonText: "Buy Gift" },
-        [lG.I0.GiftGameShop]: {
-            type: lG.I0.GiftGameShop,
+    lQ = {
+        [lH.I0.Subscription]: { type: lH.I0.Subscription, ...lJ },
+        [lH.I0.SubscriptionTrial]: { type: lH.I0.SubscriptionTrial, ...lJ },
+        [lH.I0.OrbsRedemption]: { type: lH.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
+        [lH.I0.Shop]: { type: lH.I0.Shop, purchaseButtonText: "Purchase" },
+        [lH.I0.GiftNitro]: { type: lH.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
+        [lH.I0.GiftShop]: { type: lH.I0.GiftShop, purchaseButtonText: "Buy Gift" },
+        [lH.I0.GiftGameShop]: {
+            type: lH.I0.GiftGameShop,
             purchaseButtonText: "Buy Gift",
             applicationName: "Marvel Rivals",
         },
     },
-    lQ = {
+    lZ = {
         title: "Unified Checkout",
         stories: [
-            lK,
+            lX,
             {
                 name: "Primitive: Order Summary Accordion",
                 id: "unified-checkout-order-summary",
@@ -3263,7 +3266,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                         l && a && n.push({ id: 3, label: "Discount Applied", amount: -100 }),
                         (0, s.jsx)("div", {
                             className: U.SG,
-                            children: (0, s.jsx)(lG.Vm, { label: t, lineItems: n, currency: M.Yri.USD }),
+                            children: (0, s.jsx)(lH.Vm, { label: t, lineItems: n, currency: M.Yri.USD }),
                         })
                     );
                 },
@@ -3273,7 +3276,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                     hasLineItems: { label: "Has Line Items", type: "boolean", defaultValue: !0 },
                 },
             },
-            lF,
+            lz,
             {
                 name: "Primitive: Subscription Details Accordion",
                 id: "unified-checkout-subscription-details",
@@ -3293,7 +3296,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                             : [];
                     return (0, s.jsx)("div", {
                         className: U.SG,
-                        children: (0, s.jsx)(lG._D, {
+                        children: (0, s.jsx)(lH._D, {
                             label: t,
                             lineItems: a,
                             intervalType: eC.WT.MONTH,
@@ -3325,7 +3328,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                     function p(e, p) {
                         let m = eK.default.getCurrentUser(),
                             h = eE.A.getGuildsArray()[0];
-                        return (0, s.jsx)(lG.f7, {
+                        return (0, s.jsx)(lH.f7, {
                             header: l ? t : void 0,
                             headerIconSrc: "https://cdn.discordapp.com/embed/avatars/1.png",
                             label: `${a} ${p}`,
@@ -3346,11 +3349,11 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                     return (0, s.jsxs)("div", {
                         className: U.SG,
                         children: [
-                            p(lG.JW, "Nitro"),
-                            p(lG.DH, "Nitro Basic"),
-                            p(lG.a6, "Boost"),
-                            p(lG.jw, "App"),
-                            p(lG.oo, "Nitro Credit"),
+                            p(lH.JW, "Nitro"),
+                            p(lH.DH, "Nitro Basic"),
+                            p(lH.a6, "Boost"),
+                            p(lH.jw, "App"),
+                            p(lH.oo, "Nitro Credit"),
                         ],
                     });
                 },
@@ -3381,19 +3384,19 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                 component: (e) => {
                     let { disabled: t, error: l, errorMessage: a } = e,
                         n = [
-                            { id: "visa-1234", label: "Visa ending in 1234", icon: lW.Be.VISA },
-                            { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: lW.Be.MASTERCARD },
-                            { id: "paypal", label: "user@example.com", icon: lW.Be.PAYPAL },
-                            { id: "amex-9012", label: "Amex ending in 9012", icon: lW.Be.AMEX },
+                            { id: "visa-1234", label: "Visa ending in 1234", icon: lF.Be.VISA },
+                            { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: lF.Be.MASTERCARD },
+                            { id: "paypal", label: "user@example.com", icon: lF.Be.PAYPAL },
+                            { id: "amex-9012", label: "Amex ending in 9012", icon: lF.Be.AMEX },
                         ],
                         [i, r] = u.useState(n[0].id);
                     return (0, s.jsxs)("div", {
                         children: [
-                            (0, s.jsx)(lG.v7, {
+                            (0, s.jsx)(lH.v7, {
                                 value: i,
                                 options: n,
                                 onChange: r,
-                                onNew: lD.noop,
+                                onNew: lO.noop,
                                 disabled: t,
                                 error: l ? a : void 0,
                             }),
@@ -3420,7 +3423,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                 component: (e) =>
                     (0, s.jsx)(ex.mz, {
                         stepConfigs: [],
-                        children: (0, s.jsx)(lH.P, { children: (0, s.jsx)(lz, { ...e }) }),
+                        children: (0, s.jsx)(l$.P, { children: (0, s.jsx)(lY, { ...e }) }),
                     }),
                 controls: {
                     label: { label: "Label", type: "text", defaultValue: "Payment Method" },
@@ -3435,8 +3438,8 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                 component: function (e) {
                     let { type: t, immediateDelivery: l, paysafecard: a } = e,
                         [n, i] = u.useState(!1);
-                    return (0, s.jsx)(lG._P, {
-                        variant: lJ[t],
+                    return (0, s.jsx)(lH._P, {
+                        variant: lQ[t],
                         immediateDelivery: l ? { value: n, onChange: i } : void 0,
                         paymentSourceType: a ? M.hes.PAYSAFE_CARD : M.hes.CARD,
                     });
@@ -3445,15 +3448,15 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                     type: {
                         label: "Type",
                         type: "select",
-                        defaultValue: lG.I0.Subscription,
+                        defaultValue: lH.I0.Subscription,
                         options: [
-                            { label: "Subscription", value: lG.I0.Subscription },
-                            { label: "Subscription Trial", value: lG.I0.SubscriptionTrial },
-                            { label: "Orbs Redemption", value: lG.I0.OrbsRedemption },
-                            { label: "Shop", value: lG.I0.Shop },
-                            { label: "Nitro Gift", value: lG.I0.GiftNitro },
-                            { label: "Shop Gift", value: lG.I0.GiftShop },
-                            { label: "Game Shop Gift", value: lG.I0.GiftGameShop },
+                            { label: "Subscription", value: lH.I0.Subscription },
+                            { label: "Subscription Trial", value: lH.I0.SubscriptionTrial },
+                            { label: "Orbs Redemption", value: lH.I0.OrbsRedemption },
+                            { label: "Shop", value: lH.I0.Shop },
+                            { label: "Nitro Gift", value: lH.I0.GiftNitro },
+                            { label: "Shop Gift", value: lH.I0.GiftShop },
+                            { label: "Game Shop Gift", value: lH.I0.GiftGameShop },
                         ],
                     },
                     immediateDelivery: { label: "Immediate Delivery", type: "boolean", defaultValue: !1 },
@@ -3467,10 +3470,10 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                     return (0, s.jsxs)("div", {
                         children: [
                             (0, s.jsx)(y.E, { variant: "text-sm/normal", children: "Stateless Component:" }),
-                            (0, s.jsx)(lG.y, { onClick: M.tEg }),
+                            (0, s.jsx)(lH.y, { onClick: M.tEg }),
                             (0, s.jsx)("br", {}),
                             (0, s.jsx)(y.E, { variant: "text-sm/normal", children: "Link with Modal:" }),
-                            (0, s.jsx)(lG.Z4, { onComplete: M.tEg }),
+                            (0, s.jsx)(lH.Z4, { onComplete: M.tEg }),
                         ],
                     });
                 },
@@ -3481,8 +3484,8 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                 component: function () {
                     let [e, t] = u.useState("yearly");
                     return (0, s.jsx)("div", {
-                        children: (0, s.jsx)(lG.me, {
-                            headingComponent: (0, s.jsx)(lG.ec, {
+                        children: (0, s.jsx)(lH.me, {
+                            headingComponent: (0, s.jsx)(lH.ec, {
                                 size: "sm",
                                 color: "text-strong",
                                 premiumType: eC.PremiumTypes.TIER_2,
@@ -3502,10 +3505,10 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                 id: "checkout-store-country-row",
                 component: (e) => {
                     let { storeCountry: t } = e;
-                    return (0, s.jsx)(lG.s7, { storeCountry: t });
+                    return (0, s.jsx)(lH.s7, { storeCountry: t });
                 },
                 controls: {
-                    storeCountry: { label: "Store Country", type: "select", defaultValue: lL.d.US, options: lq },
+                    storeCountry: { label: "Store Country", type: "select", defaultValue: lw.d.US, options: lK },
                 },
             },
             {
@@ -3513,7 +3516,7 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                 id: "checkout-store-relocation-notice",
                 component: (e) => {
                     let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: a } = e;
-                    return (0, s.jsx)(lG.ch, {
+                    return (0, s.jsx)(lH.ch, {
                         relocationCountry: t,
                         relocationCurrencyCode: l,
                         willForfeitGiftCardBalance: a,
@@ -3523,8 +3526,8 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
                     relocationCountry: {
                         label: "Relocation Country",
                         type: "select",
-                        defaultValue: lL.d.US,
-                        options: lq,
+                        defaultValue: lw.d.US,
+                        options: lK,
                     },
                     relocationCurrencyCode: { label: "Relocation Currency Code", type: "text", defaultValue: "USD" },
                     willForfeitGiftCardBalance: {
@@ -3536,19 +3539,19 @@ let lY = { "nitro-wheel": r.t, gift: lw.o, orbs: i.C },
             },
         ],
     };
-var lZ =
+var l0 =
     (((a = {}).PAYMENTS = "payments"),
     (a.VIRTUAL_CURRENCY = "virtual-currency"),
     (a.NITRO = "nitro"),
     (a.IDENTITY = "identity"),
     a);
-let l0 = ["Revenue Storybook", "Revenue Playground"],
-    l1 = {
+let l1 = ["Revenue Storybook", "Revenue Playground"],
+    l2 = {
         id: "payments",
         name: "Payments",
         groups: [
             e_,
-            lQ,
+            lZ,
             {
                 title: "Gift Card",
                 stories: [
@@ -3606,15 +3609,15 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
             },
-            { title: "Payment Elements", stories: [lN, lM, lR] },
+            { title: "Payment Elements", stories: [lM, lD, lN] },
             O,
             { title: "Checkout Review Step", stories: [eB, eU] },
             lp,
         ],
-        tags: l0,
+        tags: l1,
         IconComponent: n.d,
     },
-    l2 = {
+    l6 = {
         id: "virtual-currency",
         name: "Virtual Currency",
         groups: [
@@ -3670,10 +3673,10 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: l0,
+        tags: l1,
         IconComponent: i.C,
     },
-    l6 = {
+    l3 = {
         id: "nitro",
         name: "Nitro",
         groups: [
@@ -4059,10 +4062,10 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
             },
             { title: "Clips", stories: [eZ] },
         ],
-        tags: l0,
+        tags: l1,
         IconComponent: r.t,
     },
-    l3 = {
+    l9 = {
         id: "identity",
         name: "Identity",
         groups: [
@@ -4092,7 +4095,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                               },
                                               globalOption: e5,
                                           }),
-                                          (0, s.jsx)(e4.A, { user: a, guildId: "" === t ? null : t }),
+                                          (0, s.jsx)(e8.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
                                   });
                         },
@@ -4120,7 +4123,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                                               },
                                               globalOption: e5,
                                           }),
-                                          (0, s.jsx)(e8.A, { user: a, guildId: "" === t ? null : t }),
+                                          (0, s.jsx)(e4.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
                                   });
                         },
@@ -4157,7 +4160,7 @@ let l0 = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: l0,
+        tags: l1,
         IconComponent: o.n,
     },
-    l9 = { playgroundBaseUrl: "revenue", collections: [l1, l2, l6, l3] };
+    l8 = { playgroundBaseUrl: "revenue", collections: [l2, l6, l3, l9] };

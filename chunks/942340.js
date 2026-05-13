@@ -1,4 +1,4 @@
-n.d(t, { E: () => h, p: () => A }), n(321073);
+n.d(t, { E: () => h, p: () => C }), n(321073);
 var l = n(64700),
     a = n(602853),
     i = n(661531),
@@ -19,15 +19,20 @@ let m = new s.A("useStripePaymentElementOptions"),
             o = e.colorText ?? n.hex(),
             u = e.colorBackground ?? t.hex(),
             c = e.inputBackgroundColor ?? r.hex(),
-            d = e.tabBackgroundColor ?? r.hex();
+            d = e.tabBackgroundColor ?? r.hex(),
+            p = e.tabSelectedBackgroundColor ?? null;
         return {
             elementsAppearance: l.useMemo(
                 () => ({
                     theme: s,
                     variables: { colorText: o, colorBackground: u },
-                    rules: { ".Input": { backgroundColor: c }, ".Tab": { backgroundColor: d } },
+                    rules: {
+                        ".Input": { backgroundColor: c },
+                        ".Tab": { backgroundColor: d },
+                        ...(null != p ? { ".Tab--selected": { backgroundColor: p } } : {}),
+                    },
                 }),
-                [s, o, u, c, d],
+                [s, o, u, c, d, p],
             ),
             elementsAppearanceOptions: {
                 theme: s,
@@ -38,64 +43,64 @@ let m = new s.A("useStripePaymentElementOptions"),
             },
         };
     },
-    A = (e) => {
+    C = (e) => {
         let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
             [a, i] = l.useState(void 0),
-            [s, A] = l.useState(null),
-            [C, _] = l.useState(!0),
-            [E, y] = l.useState([]),
-            f = l.useMemo(() => {
+            [s, C] = l.useState(null),
+            [A, E] = l.useState(!0),
+            [y, P] = l.useState([]),
+            S = l.useMemo(() => {
                 let e = ["card"],
-                    t = E.find((e) => e.payment_source_type === p.he.PAYPAL);
+                    t = y.find((e) => e.payment_source_type === p.he.PAYPAL);
                 return null != t && e.push(t.custom_payment_method_id), e;
-            }, [E]),
-            { customPaymentMethods: P, customPaymentMethodIdsToSourceTypes: S } = l.useMemo(
+            }, [y]),
+            { customPaymentMethods: _, customPaymentMethodIdsToSourceTypes: T } = l.useMemo(
                 () => ({
-                    customPaymentMethods: (0, d.Dd)(E),
-                    customPaymentMethodIdsToSourceTypes: E.reduce(
+                    customPaymentMethods: (0, d.Dd)(y),
+                    customPaymentMethodIdsToSourceTypes: y.reduce(
                         (e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e),
                         {},
                     ),
                 }),
-                [E],
+                [y],
             ),
-            T = l.useCallback(async () => {
+            f = l.useCallback(async () => {
                 try {
                     let { client_secret: e, custom_payment_methods: t } = await (0, c.w)();
-                    y(t), i(e);
+                    P(t), i(e);
                 } catch (e) {
-                    A(e),
+                    C(e),
                         null != t && t(e),
                         m.error("there was an error on setup for Payment Elements: ", e),
                         (0, o.pM)(e, { tags: { source: "payment_elements" } });
                 }
-                _(!1);
+                E(!1);
             }, [t]);
         (0, r.Ay)(() => {
-            T();
+            f();
         });
         let { elementsAppearance: x, elementsAppearanceOptions: N } = h(n),
-            g = (0, u.PU)();
+            I = (0, u.PU)();
         return {
             setupError: s,
             elementsOptions: l.useMemo(
                 () =>
-                    C
+                    A
                         ? null
                         : {
                               clientSecret: a,
                               appearance: x,
-                              locale: g,
-                              customPaymentMethods: P,
+                              locale: I,
+                              customPaymentMethods: _,
                               paymentMethodCreation: "manual",
                           },
-                [x, g, a, P, C],
+                [x, I, a, _, A],
             ),
             setupIntentSecret: a,
-            customPaymentMethods: P,
-            customPaymentMethodIdsToSourceTypes: S,
-            paymentMethodOrder: f,
-            isLoading: C,
+            customPaymentMethods: _,
+            customPaymentMethodIdsToSourceTypes: T,
+            paymentMethodOrder: S,
+            isLoading: A,
             elementsAppearanceOptions: N,
         };
     };
