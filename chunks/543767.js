@@ -150,14 +150,19 @@ function m(e, t, n) {
     );
 }
 function g(e) {
-    let t = (0, i.useRef)(e);
+    let t = (0, i.useRef)(e),
+        n = (0, i.useRef)(!1);
     (0, i.useEffect)(() => {
         t.current = e;
     });
-    let n = JSON.stringify(e);
+    let r = JSON.stringify(e);
     return m(
         e,
-        (0, i.useCallback)(() => p(t.current), [n]),
+        (0, i.useCallback)(() => {
+            let e = t.current,
+                i = n.current ? e : { ...e, paymentSourceId: null };
+            return (n.current = !0), p(i);
+        }, [r]),
     );
 }
 function A(e) {
@@ -165,16 +170,18 @@ function A(e) {
         let { subscriptionId: t, ...n } = e;
         e = n;
     }
-    let t = (0, i.useRef)(e);
+    let t = (0, i.useRef)(e),
+        n = (0, i.useRef)(!1);
     (0, i.useEffect)(() => {
         t.current = e;
     });
-    let n = JSON.stringify(e),
-        r = (0, i.useCallback)(() => {
-            let { current: e } = t;
-            return "subscriptionId" in e ? h(e) : "items" in e ? f(e) : null;
-        }, [n]);
-    return m(e, r);
+    let r = JSON.stringify(e),
+        s = (0, i.useCallback)(() => {
+            let e = t.current,
+                i = n.current ? e : { ...e, paymentSourceId: null };
+            return "subscriptionId" in i ? ((n.current = !0), h(i)) : "items" in i ? ((n.current = !0), f(i)) : null;
+        }, [r]);
+    return m(e, s);
 }
 function I(e) {
     let t = (0, i.useRef)(e);
