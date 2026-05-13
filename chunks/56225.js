@@ -267,7 +267,8 @@ let G = () => {
                             I.default.track(w.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                 partner: t.partnerId,
                                 cta_type: "copy code",
-                                promotion: t.title,
+                                promotion: t.outboundTitle,
+                                promotion_id: t.id,
                                 location_stack: n,
                             });
                     },
@@ -299,7 +300,8 @@ let G = () => {
                                     I.default.track(w.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                         partner: t.partnerId,
                                         cta_type: "visit store",
-                                        promotion: t.title,
+                                        promotion: t.outboundTitle,
+                                        promotion_id: t.id,
                                         url: t.redemptionURL,
                                         location_stack: n,
                                     });
@@ -341,7 +343,7 @@ let G = () => {
                           onClick: () => {
                               (0, v.kd)({
                                   promotionId: t.id,
-                                  promotionTitle: t.title,
+                                  promotionTitle: t.outboundTitle,
                                   partnerId: t.partnerId,
                                   analyticsLocations: l,
                               })
