@@ -141,7 +141,9 @@ let D = [],
                 },
                 [t],
             ),
-            B = (0, r.yK)([j.A], () => {
+            B = (0, r.bG)([C.A], () => C.A.can(R.xBc.MOVE_MEMBERS, s)),
+            W = i && B,
+            $ = (0, r.yK)([j.A], () => {
                 if (u) return [];
                 let e = new Set();
                 return (
@@ -154,55 +156,55 @@ let D = [],
                     Array.from(e)
                 );
             });
-        (0, m.A)(B);
-        let W = (() => {
+        (0, m.A)($);
+        let Z = (() => {
             if (null == w || 0 === w.length) return null;
             let e = u && w.length > c + 1 ? w.slice(0, c) : w,
                 t = h.A.getGuildRingingUsers(s.id),
-                l = e.map((e) => {
-                    let { user: l, nick: a, voiceState: r } = e,
-                        d = t.has(l.id);
+                i = e.map((e) => {
+                    let { user: i, nick: l, voiceState: a } = e,
+                        r = t.has(i.id);
                     return (0, n.jsx)(
                         U,
                         {
-                            user: l,
-                            nick: a,
-                            isSelfOnOtherClient: S.default.getId() === l.id && r.sessionId !== S.default.getSessionId(),
-                            mute: r.isVoiceMuted(),
-                            deaf: r.isVoiceDeafened(),
-                            video: r.selfVideo,
-                            serverMute: r.mute,
-                            serverDeaf: r.deaf,
-                            sessionId: r.sessionId ?? "",
+                            user: i,
+                            nick: l,
+                            isSelfOnOtherClient: S.default.getId() === i.id && a.sessionId !== S.default.getSessionId(),
+                            mute: a.isVoiceMuted(),
+                            deaf: a.isVoiceDeafened(),
+                            video: a.selfVideo,
+                            serverMute: a.mute,
+                            serverDeaf: a.deaf,
+                            sessionId: a.sessionId ?? "",
                             channel: s,
                             collapsed: u,
-                            canDrag: i && C.A.can(R.xBc.MOVE_MEMBERS, s),
+                            canDrag: W,
                             showPreview: Y,
                             hidePreview: q,
-                            shouldShowHoverPopout: T === l.id,
+                            shouldShowHoverPopout: T === i.id,
                             tabIndex: g,
                         },
-                        `voice-user-${l.id}-${d}`,
+                        `voice-user-${i.id}-${r}`,
                     );
                 });
             return (
                 null != x && x > 0
-                    ? l.push((0, n.jsx)(k.aI, { collapsed: u, numAudience: x }))
-                    : u && w.length > c + 1 && l.push((0, n.jsx)(k.LR, { numUsers: w.length - c })),
-                M && !u && s.type === R.rbe.GUILD_VOICE && l.push((0, n.jsx)(V.A, { channel: s }, "ghost-user")),
+                    ? i.push((0, n.jsx)(k.aI, { collapsed: u, numAudience: x }, "audience"))
+                    : u && w.length > c + 1 && i.push((0, n.jsx)(k.LR, { numUsers: w.length - c }, "collapsed-users")),
+                M && !u && s.type === R.rbe.GUILD_VOICE && i.push((0, n.jsx)(V.A, { channel: s }, "ghost-user")),
                 L && "bottom" === F
-                    ? l.push((0, n.jsx)(p.p, { channel: s, onClose: H }, "voice-invite-suggestions-button"))
+                    ? i.push((0, n.jsx)(p.p, { channel: s, onClose: H }, "voice-invite-suggestions-button"))
                     : L &&
                       "top" === F &&
-                      l.unshift((0, n.jsx)(p.p, { channel: s, onClose: H }, "voice-invite-suggestions-button")),
-                l
+                      i.unshift((0, n.jsx)(p.p, { channel: s, onClose: H }, "voice-invite-suggestions-button")),
+                i
             );
         })();
-        return null == W && null == y
+        return null == Z && null == y
             ? null
             : (0, n.jsxs)(E.Wr, {
                   className: a()(_, P.p_, { [P.yZ]: u, [P.lY]: v, [P.fT]: b }),
                   collapsed: u,
-                  children: [W, y],
+                  children: [Z, y],
               });
     };
