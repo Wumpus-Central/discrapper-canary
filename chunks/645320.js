@@ -1,95 +1,118 @@
-let n, l;
-t.d(r, { default: () => D });
-var i = t(627968),
-    a = t(64700),
-    o = t(503698),
-    c = t.n(o),
+let n, i;
+t.d(r, { default: () => V });
+var l = t(627968),
+    o = t(64700),
+    a = t(503698),
+    c = t.n(a),
     u = t(772707),
     s = t(231723),
     d = t(289873),
-    f = t(954571),
-    p = t(625494),
-    h = t(964486),
+    f = t(174459),
+    h = t(625494),
+    p = t(964486),
     E = t(888548),
     C = t(652215);
 t(321073);
-var w = t(411722),
-    y = t(3745),
-    k = t(132500);
-let m = "turnstile-script",
+var k = t(411722),
+    m = t(3745),
+    y = t(835245);
+let w = {
+        110100: "invalid-sitekey",
+        110110: "sitekey-not-found",
+        110200: "domain-not-authorized",
+        110600: "challenge-timeout",
+        110620: "interaction-timeout",
+        200100: "clock-or-cache-problem",
+        200500: "iframe-load-error",
+        400020: "invalid-sitekey",
+        400070: "sitekey-disabled",
+    },
+    b = "turnstile-script",
     A = "turnstileOnLoad",
-    b = "unloaded",
-    v = _();
+    v = "unloaded",
+    g = _();
 function _() {
     return new Promise((e, r) => {
-        (n = e), (l = r);
+        (n = e), (i = r);
     });
 }
 function x() {
     Reflect.deleteProperty(window, A);
 }
 function R() {
-    "ready" !== b && null != window.turnstile && ((b = "ready"), x(), n?.());
+    "ready" !== v && null != window.turnstile && ((v = "ready"), x(), n?.());
 }
-let g = {
+let T = {
     normal: { width: 300, height: 65 },
     compact: { width: 150, height: 140 },
     invisible: { width: 0, height: 0, overflow: "hidden" },
 };
-function T(e) {
-    let { sitekey: r, theme: t, size: n, onLoad: o, onVerify: c, onError: u, onExpire: s } = e,
-        d = a.useRef(null),
-        f = a.useRef(null),
-        p = a.useRef({ onLoad: o, onVerify: c, onError: u, onExpire: s });
-    (p.current = { onLoad: o, onVerify: c, onError: u, onExpire: s }),
-        a.useEffect(() => {
+function P(e) {
+    let { sitekey: r, theme: t, size: n, onLoad: a, onVerify: c, onError: u, onExpire: s } = e,
+        d = o.useRef(null),
+        f = o.useRef(null),
+        h = o.useRef({ onLoad: a, onVerify: c, onError: u, onExpire: s });
+    (h.current = { onLoad: a, onVerify: c, onError: u, onExpire: s }),
+        o.useEffect(() => {
             let e = !1,
-                i = 0;
+                l = 0;
             return (
                 (function () {
-                    if (null != window.turnstile) return R(), v;
+                    if (null != window.turnstile) return R(), g;
                     if (
-                        ("unloaded" === b &&
-                            ((b = "loading"),
+                        ("unloaded" === v &&
+                            ((v = "loading"),
                             Object.assign(window, {
                                 [A]() {
                                     R();
                                 },
                             })),
-                        null == document.getElementById(m))
+                        null == document.getElementById(b))
                     ) {
                         let e = document.createElement("script");
                         (e.src = `https://challenges.cloudflare.com/turnstile/v0/api.js?onload=${A}&render=explicit`),
-                            (e.id = m),
+                            (e.id = b),
                             (e.async = !0),
                             (e.defer = !0),
                             (e.onerror = () => {
                                 !(function (e) {
-                                    if ("ready" === b) return;
-                                    (b = "unloaded"), x(), document.getElementById(m)?.remove();
-                                    let r = l;
-                                    (v = _()), r?.(e ?? Error("Turnstile script failed to load"));
+                                    if ("ready" === v) return;
+                                    (v = "unloaded"), x(), document.getElementById(b)?.remove();
+                                    let r = i;
+                                    (g = _()), r?.(e ?? Error("Turnstile script failed to load"));
                                 })(Error("Turnstile script failed to load"));
                             }),
                             document.body.appendChild(e);
                     }
-                    return v;
+                    return g;
                 })()
                     .then(() => {
                         if (e || null == d.current || null == window.turnstile) return;
-                        let l = "invisible" === n ? "normal" : (n ?? "normal");
+                        let i = "invisible" === n ? "normal" : (n ?? "normal");
                         (f.current = window.turnstile.render(d.current, {
                             sitekey: r,
                             theme: t ?? "auto",
-                            size: l,
+                            size: i,
                             retry: "never",
                             callback: (e) => {
-                                p.current.onVerify(e);
+                                h.current.onVerify(e);
                             },
-                            "error-callback": () => (
-                                p.current.onError?.(),
-                                i >= 3 ||
-                                    (i++,
+                            "error-callback": (r) => (
+                                h.current.onError?.(
+                                    (function (e) {
+                                        if (null == e) return "unknown";
+                                        let r = e.trim();
+                                        return "" === r
+                                            ? "unknown"
+                                            : null != w[r]
+                                              ? w[r]
+                                              : r.startsWith("300") || r.startsWith("600")
+                                                ? "generic-challenge-error"
+                                                : "unknown";
+                                    })(r),
+                                ),
+                                l >= 3 ||
+                                    (l++,
                                     setTimeout(() => {
                                         e ||
                                             null == f.current ||
@@ -99,13 +122,13 @@ function T(e) {
                                     !0)
                             ),
                             "expired-callback": () => {
-                                p.current.onExpire?.();
+                                h.current.onExpire?.();
                             },
                         })),
-                            p.current.onLoad?.();
+                            h.current.onLoad?.();
                     })
                     .catch(() => {
-                        e || p.current.onError?.();
+                        e || h.current.onError?.("script-error");
                     }),
                 () => {
                     (e = !0),
@@ -115,14 +138,14 @@ function T(e) {
                 }
             );
         }, [r, t, n]);
-    let h = g[n ?? "normal"];
-    return (0, i.jsx)("div", { ref: d, style: h });
+    let p = T[n ?? "normal"];
+    return (0, l.jsx)("div", { ref: d, style: p });
 }
-var P = t(731738),
-    S = t(319400),
-    j = t(831062),
-    H = t(700525);
-let L = new Set([
+var S = t(731738),
+    j = t(319400),
+    H = t(807393),
+    L = t(700525);
+let N = new Set([
         "rate-limited",
         "network-error",
         "invalid-data",
@@ -133,134 +156,143 @@ let L = new Set([
         "invalid-captcha-id",
         "internal-error",
         "script-error",
+        "invalid-sitekey",
+        "sitekey-not-found",
+        "sitekey-disabled",
+        "domain-not-authorized",
+        "challenge-timeout",
+        "interaction-timeout",
+        "clock-or-cache-problem",
+        "iframe-load-error",
+        "generic-challenge-error",
     ]),
-    N = (e) => {
+    M = (e) => {
         let {
-                captchaService: r = S.MS.RECAPTCHA,
+                captchaService: r = j.MS.RECAPTCHA,
                 sitekey: t,
                 rqdata: n,
-                onRender: l,
-                onVerify: o,
+                onRender: i,
+                onVerify: a,
                 onError: c,
                 onOpen: u,
                 onClose: s,
                 onChalExpired: d,
-                size: p,
-                userflow: h,
-                ...m
+                size: h,
+                userflow: p,
+                ...w
             } = e,
-            A = a.useRef(null),
-            b = (0, k.A)(),
-            [v, _] = a.useState(!1),
-            x = a.useCallback(
+            b = o.useRef(null),
+            A = (0, y.A)(),
+            [v, g] = o.useState(!1),
+            _ = o.useCallback(
                 (e) => {
                     f.default.track(C.HAw.CAPTCHA_EVENT, {
                         captcha_event_name: e,
                         captcha_service: r,
                         sitekey: t,
-                        captcha_flow_key: b,
+                        captcha_flow_key: A,
                     });
                 },
-                [b, r, t],
+                [A, r, t],
             ),
-            R = a.useCallback(
+            x = o.useCallback(
                 (e, t) => {
                     let n = [`event_name:${e}`, `captcha_service:${r}`];
-                    null != t && n.push(`error_code:${t}`), j.A.increment({ name: P.K.CAPTCHA_EVENT, tags: n });
+                    null != t && n.push(`error_code:${t}`), H.A.increment({ name: S.K.CAPTCHA_EVENT, tags: n });
                 },
                 [r],
             ),
-            g = a.useCallback(() => {
-                r === S.MS.HCAPTCHA &&
-                    (null != n && "" !== n && null != A.current && A.current?.setData({ rqdata: n }),
-                    "invisible" === p && null != A.current && A.current?.execute());
-            }, [n, A, p, r]),
-            N = a.useCallback(() => {
-                v || (x("initial-load"), R("initial-load"), _(!0)), g();
-            }, [R, v, x, g]);
-        a.useEffect(() => {
-            g();
-        }, [g]),
-            a.useEffect(() => {
-                N();
-            }, [N]);
-        let M = a.useCallback(
+            R = o.useCallback(() => {
+                r === j.MS.HCAPTCHA &&
+                    (null != n && "" !== n && null != b.current && b.current?.setData({ rqdata: n }),
+                    "invisible" === h && null != b.current && b.current?.execute());
+            }, [n, b, h, r]),
+            T = o.useCallback(() => {
+                v || (_("initial-load"), x("initial-load"), g(!0)), R();
+            }, [x, v, _, R]);
+        o.useEffect(() => {
+            R();
+        }, [R]),
+            o.useEffect(() => {
+                T();
+            }, [T]);
+        let M = o.useCallback(
                 (e) => {
-                    x("error"), R("error", null != e && L.has(e) ? e : "unknown"), g(), c?.();
+                    _("error"), x("error", null != e && N.has(e) ? e : "unknown"), R(), c?.();
                 },
-                [x, R, g, c],
+                [_, x, R, c],
             ),
-            I = a.useCallback(
+            I = o.useCallback(
                 (e) => {
-                    x("verify"), R("verify"), o(e);
+                    _("verify"), x("verify"), a(e);
                 },
-                [R, o, x],
+                [x, a, _],
             ),
-            O = a.useCallback(() => {
-                x("render"), (0, E.emitCaptchaDistributionMetric)(h), l?.();
-            }, [l, x, h]),
-            D = a.useCallback(() => {
-                x("open"), R("open"), (0, E.emitCaptchaDistributionMetric)(h), u?.();
-            }, [R, u, x, h]),
-            V = a.useCallback(() => {
-                x("close"), R("cancel"), s?.(), g();
-            }, [s, x, R, g]),
-            z = a.useCallback(() => {
-                x("chal-expire"), R("chal-expire"), d?.();
-            }, [d, x, R]);
-        return ((null == t || "" === t) && (t = C._Ak), r === S.MS.RECAPTCHA)
-            ? (0, i.jsx)(y.A, { ...m, onLoad: N, onRender: O, onVerify: I, onError: M, sitekey: t })
-            : r === S.MS.RECAPTCHA_ENTERPRISE
-              ? (0, i.jsx)(H.d, { ...m, onLoad: N, onRender: O, onVerify: I, onError: M, sitekey: t, action: h })
-              : r === S.MS.HCAPTCHA
-                ? (0, i.jsx)(w.A, {
-                      ref: A,
-                      ...m,
+            O = o.useCallback(() => {
+                _("render"), (0, E.emitCaptchaDistributionMetric)(p), i?.();
+            }, [i, _, p]),
+            D = o.useCallback(() => {
+                _("open"), x("open"), (0, E.emitCaptchaDistributionMetric)(p), u?.();
+            }, [x, u, _, p]),
+            V = o.useCallback(() => {
+                _("close"), x("cancel"), s?.(), R();
+            }, [s, _, x, R]),
+            z = o.useCallback(() => {
+                _("chal-expire"), x("chal-expire"), d?.();
+            }, [d, _, x]);
+        return ((null == t || "" === t) && (t = C._Ak), r === j.MS.RECAPTCHA)
+            ? (0, l.jsx)(m.A, { ...w, onLoad: T, onRender: O, onVerify: I, onError: M, sitekey: t })
+            : r === j.MS.RECAPTCHA_ENTERPRISE
+              ? (0, l.jsx)(L.d, { ...w, onLoad: T, onRender: O, onVerify: I, onError: M, sitekey: t, action: p })
+              : r === j.MS.HCAPTCHA
+                ? (0, l.jsx)(k.A, {
+                      ref: b,
+                      ...w,
                       sitekey: t,
-                      onLoad: N,
+                      onLoad: T,
                       onError: M,
                       onVerify: I,
                       onChalExpired: z,
                       onOpen: D,
                       onClose: V,
-                      size: p,
+                      size: h,
                       reCaptchaCompat: !1,
                   })
-                : r === S.MS.TURNSTILE
-                  ? (0, i.jsx)(T, {
+                : r === j.MS.TURNSTILE
+                  ? (0, l.jsx)(P, {
                         sitekey: t,
-                        theme: m.theme,
-                        size: p,
-                        onLoad: N,
+                        theme: w.theme,
+                        size: h,
+                        onLoad: T,
                         onVerify: I,
                         onError: M,
                         onExpire: z,
                     })
-                  : (0, i.jsx)(y.A, { ...m, sitekey: t, onLoad: N, onRender: O, onVerify: I, onError: M });
+                  : (0, l.jsx)(m.A, { ...w, sitekey: t, onLoad: T, onRender: O, onVerify: I, onError: M });
     };
-var M = t(985018),
-    I = t(846762);
-let O = new Set([s.ip.ENTERING, s.ip.ENTERED]);
-function D(e) {
+var I = t(375708),
+    O = t(846762);
+let D = new Set([s.ip.ENTERING, s.ip.ENTERED]);
+function V(e) {
     let {
             onClose: r,
             onCaptchaVerify: t,
             onReject: n,
-            transitionState: l,
-            headerText: o,
+            transitionState: i,
+            headerText: a,
             bodyText: s,
-            rqtoken: w,
-            serveInvisible: y,
-            ...k
+            rqtoken: k,
+            serveInvisible: m,
+            ...y
         } = e,
-        m = (function (e) {
+        w = (function (e) {
             let { onReject: r, analyticsType: t = "Guild Join Captcha" } = e,
-                n = a.useRef(!0);
+                n = o.useRef(!0);
             return (
-                (0, h.Ay)(() => () => {
+                (0, p.Ay)(() => () => {
                     n.current && r?.(E.CaptchaError.CANCEL);
                 }),
-                a.useEffect(
+                o.useEffect(
                     () => (
                         f.default.track(C.HAw.OPEN_MODAL, { type: t }),
                         () => {
@@ -275,37 +307,37 @@ function D(e) {
             );
         })({ onReject: n });
     if (
-        (a.useEffect(() => {
-            p._.subscribe(C.jej.LAYER_POP_ESCAPE_KEY, r);
+        (o.useEffect(() => {
+            h._.subscribe(C.jej.LAYER_POP_ESCAPE_KEY, r);
         }, [r]),
-        a.useEffect(() => {
+        o.useEffect(() => {
             f.default.track(C.HAw.OPEN_MODAL, { type: "Captcha Modal" });
         }, []),
-        null == l || !O.has(l))
+        null == i || !D.has(i))
     )
         return null;
-    let A = (0, i.jsxs)("div", {
-        className: c()(I.GC, I.P),
+    let b = (0, l.jsxs)("div", {
+        className: c()(O.GC, O.P),
         children: [
-            y && (0, i.jsx)(d.y, { type: d.y.Type.SPINNING_CIRCLE }),
-            (0, i.jsx)(N, {
-                size: y ? "invisible" : void 0,
+            m && (0, l.jsx)(d.y, { type: d.y.Type.SPINNING_CIRCLE }),
+            (0, l.jsx)(M, {
+                size: m ? "invisible" : void 0,
                 onVerify: (e) => {
-                    m(), t(e, w), r();
+                    w(), t(e, k), r();
                 },
-                onClose: y ? r : void 0,
-                ...k,
+                onClose: m ? r : void 0,
+                ...y,
             }),
         ],
     });
-    return (0, i.jsx)(u.k, {
-        transitionState: l,
+    return (0, l.jsx)(u.k, {
+        transitionState: i,
         onClose: r,
         size: "sm",
         gradientColor: "blue",
         graphic: { type: "image", src: "/assets/a1c385fb82c39bab.svg" },
-        title: o ?? M.intl.string(M.t.FpoiHe),
-        subtitle: s ?? M.intl.string(M.t["/CidxO"]),
-        children: A,
+        title: a ?? I.intl.string(I.t.FpoiHe),
+        subtitle: s ?? I.intl.string(I.t["/CidxO"]),
+        children: b,
     });
 }
