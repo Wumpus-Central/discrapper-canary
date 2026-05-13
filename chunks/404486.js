@@ -1546,8 +1546,8 @@ var eQ = a(935399),
     e6 = a(207803),
     e3 = a(84540),
     e5 = a(836602),
-    e4 = a(999291),
-    e9 = a(903209),
+    e9 = a(999291),
+    e4 = a(903209),
     e7 = a(841702),
     te = a(892118),
     tt = a(744808),
@@ -1570,9 +1570,9 @@ function ts() {
 }
 function ti() {
     let e = (0, d.bG)([V.default], () => V.default.getCurrentUser()),
-        t = (0, e4.Ay)(e?.id);
+        t = (0, e9.Ay)(e?.id);
     o.useEffect(() => {
-        e?.id != null && (0, e9.A)(e.id);
+        e?.id != null && (0, e4.A)(e.id);
     }, [e?.id]);
     let { purchases: a, isFetchingPurchases: n } = (0, e7.Bf)(),
         l = o.useMemo(() => (0, ev.MG)(a, new Map()), [a]),
@@ -2372,8 +2372,8 @@ function t6() {
 }
 var t3 = a(696986),
     t5 = a(47167),
-    t4 = a(734057),
-    t9 = a(994500),
+    t9 = a(734057),
+    t4 = a(994500),
     t7 = a(310031),
     ae = a(394953),
     at = a(732421);
@@ -2438,20 +2438,20 @@ function al() {
         })),
         o = (0, tr.bG)([t7.A], () => t7.A.currentRequestAnalyticsPayload),
         d = (0, tr.cf)([t7.A], () => t7.A.getChannelInfoMap()),
-        u = (0, tr.cf)([t4.A], () => {
+        u = (0, tr.cf)([t9.A], () => {
             let e = {};
             return (
                 Object.entries(d).forEach((t) => {
                     let [a] = t,
-                        n = t4.A.getChannel(a);
+                        n = t9.A.getChannel(a);
                     e[a] = n ?? null;
                 }),
                 e
             );
         }),
-        m = (0, tr.cf)([t4.A], () =>
+        m = (0, tr.cf)([t9.A], () =>
             t.reduce((e, t) => {
-                let a = t4.A.getChannel(t);
+                let a = t9.A.getChannel(t);
                 return (e[t] = a ?? null), e;
             }, {}),
         ),
@@ -2496,7 +2496,7 @@ function al() {
                                 return {
                                     key: t,
                                     channelId: t,
-                                    channelName: null != a ? (0, t5.m1)(a, V.default, t9.A) : "",
+                                    channelName: null != a ? (0, t5.m1)(a, V.default, t4.A) : "",
                                 };
                             }),
                         }),
@@ -2525,7 +2525,7 @@ function al() {
                                 return {
                                     key: a,
                                     channelId: a,
-                                    channelName: null != (t = u[a]) ? (0, t5.m1)(t, V.default, t9.A) : "",
+                                    channelName: null != (t = u[a]) ? (0, t5.m1)(t, V.default, t4.A) : "",
                                     loadState: n.loadState,
                                 };
                             }),
@@ -3046,8 +3046,8 @@ function a6() {
 }
 var a3 = a(989349),
     a5 = a.n(a3),
-    a4 = a(862482),
-    a9 = a(624479),
+    a9 = a(862482),
+    a4 = a(624479),
     a7 = a(555704),
     ne = a(285796),
     nt = a(241326),
@@ -3152,7 +3152,7 @@ let nb = (e) => {
                                   onClick: () => (0, ni.C)(n, () => s(!0)),
                                   children: l
                                       ? (0, r.jsx)(e0.U, { color: "currentColor", size: "sm" })
-                                      : (0, r.jsx)(a9.T, { color: "currentColor", size: "sm" }),
+                                      : (0, r.jsx)(a4.T, { color: "currentColor", size: "sm" }),
                               })
                             : null,
                     ],
@@ -3209,7 +3209,7 @@ function nE(e) {
                     onClick: () => (0, ni.C)(JSON.stringify(n), () => s(!0)),
                     children: l
                         ? (0, r.jsx)(e0.U, { color: "currentColor", size: "sm" })
-                        : (0, r.jsx)(a9.T, { color: "currentColor", size: "sm" }),
+                        : (0, r.jsx)(a4.T, { color: "currentColor", size: "sm" }),
                 }),
             ],
         })
@@ -3244,12 +3244,12 @@ let nS = new Set(["client_performance_cpu", "client_performance_memory"]),
                                             tag: "span",
                                             className: ny.KE,
                                             onClick: () => (0, ni.C)(t),
-                                            children: (0, r.jsx)(a9.T, { color: "currentColor", size: "sm" }),
+                                            children: (0, r.jsx)(a4.T, { color: "currentColor", size: "sm" }),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)(af.Ay.Icon, {
-                                    icon: a9.T,
+                                    icon: a4.T,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
                                         (0, ni.C)(
@@ -3402,10 +3402,10 @@ function nD() {
             (0, r.jsxs)("div", {
                 className: ny.rh,
                 children: [
-                    (0, r.jsx)(a4.$n, {
+                    (0, r.jsx)(a9.$n, {
                         className: ny.Q$,
-                        look: a4.$n.Looks.BLANK,
-                        size: a4.$n.Sizes.ICON,
+                        look: a9.$n.Looks.BLANK,
+                        size: a9.$n.Sizes.ICON,
                         onClick: R.eY,
                         children: (0, r.jsx)("span", {
                             title: aK.intl.string(aK.t.VkKicb),
@@ -3810,12 +3810,12 @@ function n0() {
                 : Promise.resolve();
         })();
     }, []);
-    let e = (0, d.yK)([nQ, t4.A], () =>
+    let e = (0, d.yK)([nQ, t9.A], () =>
         nQ
             .getChannelAffinities()
             .map((e) => {
                 let { channelId: t, score: a } = e;
-                return { key: t, channelName: t4.A.getChannel(t)?.name ?? t, score: a };
+                return { key: t, channelName: t9.A.getChannel(t)?.name ?? t, score: a };
             })
             .sort((e, t) => t.score - e.score),
     );
@@ -3847,7 +3847,7 @@ let n5 = (e) => {
                 return "UNKNOWN TYPE:";
         }
     },
-    n4 = [
+    n9 = [
         {
             key: "events",
             render(e) {
@@ -3856,7 +3856,7 @@ let n5 = (e) => {
             },
         },
     ],
-    n9 = [
+    n4 = [
         {
             key: "candidates",
             render(e) {
@@ -3885,10 +3885,10 @@ function n7() {
             (0, r.jsx)("br", {}),
             (0, r.jsx)("div", {
                 className: n3.uI,
-                children: (0, r.jsx)(tk, { className: n3.Th, columns: n9, data: i }),
+                children: (0, r.jsx)(tk, { className: n3.Th, columns: n4, data: i }),
             }),
             (0, r.jsx)("br", {}),
-            (0, r.jsx)(tk, { columns: n4, data: s }),
+            (0, r.jsx)(tk, { columns: n9, data: s }),
         ],
     });
 }
@@ -4376,9 +4376,9 @@ function lz(e) {
                                               className: S()(lB.u4, tA.KE),
                                               children: (0, r.jsx)("div", {
                                                   className: tA.R5,
-                                                  children: (0, r.jsx)(a4.$n, {
+                                                  children: (0, r.jsx)(a9.$n, {
                                                       className: tA.Q$,
-                                                      size: a4.$n.Sizes.MIN,
+                                                      size: a9.$n.Sizes.MIN,
                                                       onClick: () => console.error(t.error),
                                                       children: "Log to Console",
                                                   }),
@@ -4413,7 +4413,7 @@ function lz(e) {
                         children: t.name,
                     }),
                     (0, r.jsx)(af.Ay.Icon, {
-                        icon: a9.T,
+                        icon: a4.T,
                         tooltip: "Copy event data",
                         onClick: () => {
                             var e;
@@ -4724,8 +4724,8 @@ function l6() {
 }
 var l3 = a(334279),
     l5 = a(663417),
-    l4 = a(147925),
-    l9 = a(557009),
+    l9 = a(147925),
+    l4 = a(557009),
     l7 = a(788868);
 let se = async () =>
         (
@@ -4735,7 +4735,7 @@ let se = async () =>
                 query: { exclude_consumed: !0, exclude_ended: !0 },
                 rejectWithError: !0,
             })
-        ).body.map((e) => l9.A.createFromServer(e)),
+        ).body.map((e) => l4.A.createFromServer(e)),
     st = async (e) => {
         await nF.Bo.post({
             url: "/debug/entitlements/fractional-premium",
@@ -4825,11 +4825,11 @@ let sr = {
                 }),
                 n &&
                     null != l &&
-                    (0, r.jsx)(a4.$n, {
+                    (0, r.jsx)(a9.$n, {
                         className: ss.RW,
-                        size: a4.$n.Sizes.TINY,
-                        color: a4.$n.Colors.RED,
-                        look: a4.$n.Looks.OUTLINED,
+                        size: a9.$n.Sizes.TINY,
+                        color: a9.$n.Colors.RED,
+                        look: a9.$n.Looks.OUTLINED,
                         onClick: l,
                         children: "Delete",
                     }),
@@ -4882,7 +4882,7 @@ function sc() {
                                     (0, r.jsx)("div", {
                                         children: (0, r.jsx)(A.E, { variant: "text-md/normal", children: "Info" }),
                                     }),
-                                    (0, r.jsx)(l4.A, { direction: e ? l4.A.Directions.UP : l4.A.Directions.DOWN }),
+                                    (0, r.jsx)(l9.A, { direction: e ? l9.A.Directions.UP : l9.A.Directions.DOWN }),
                                 ],
                             }),
                         ],
@@ -4942,26 +4942,26 @@ function sc() {
                                     (0, r.jsxs)("div", {
                                         className: ss.GC,
                                         children: [
-                                            (0, r.jsx)(a4.$n, {
+                                            (0, r.jsx)(a9.$n, {
                                                 disabled: j,
-                                                size: a4.$n.Sizes.TINY,
-                                                color: a4.$n.Colors.PRIMARY,
-                                                look: a4.$n.Looks.OUTLINED,
+                                                size: a9.$n.Sizes.TINY,
+                                                color: a9.$n.Colors.PRIMARY,
+                                                look: a9.$n.Looks.OUTLINED,
                                                 onClick: () => g(),
                                                 children: "Run fulfillment",
                                             }),
-                                            (0, r.jsx)(a4.$n, {
+                                            (0, r.jsx)(a9.$n, {
                                                 disabled: j,
-                                                size: a4.$n.Sizes.TINY,
-                                                color: a4.$n.Colors.RED,
-                                                look: a4.$n.Looks.OUTLINED,
+                                                size: a9.$n.Sizes.TINY,
+                                                color: a9.$n.Colors.RED,
+                                                look: a9.$n.Looks.OUTLINED,
                                                 onClick: () => h(),
                                                 children: "Delete all",
                                             }),
-                                            (0, r.jsx)(a4.$n, {
+                                            (0, r.jsx)(a9.$n, {
                                                 disabled: j,
-                                                look: a4.$n.Looks.BLANK,
-                                                size: a4.$n.Sizes.ICON,
+                                                look: a9.$n.Looks.BLANK,
+                                                size: a9.$n.Sizes.ICON,
                                                 onClick: u,
                                                 children: (0, r.jsx)("span", {
                                                     title: "Refresh",
@@ -5482,8 +5482,8 @@ function s3() {
     });
 }
 var s5 = a(582306),
-    s4 = a(528153),
-    s9 = a(275759),
+    s9 = a(528153),
+    s4 = a(275759),
     s7 = a(888429);
 function ie(e) {
     let t = new Date(e);
@@ -5494,13 +5494,13 @@ function ie(e) {
     );
 }
 function it() {
-    let e = (0, d.bG)([s9.Ay], () => s9.Ay.getDevToolTotalFriendAnniversaries()),
-        t = (0, d.bG)([s9.Ay], () => s9.Ay.getDevToolCurrentDate()),
-        a = (0, d.bG)([s9.Ay], () => s9.Ay.getGiftUnreadNotificationLastDismissedTimes()),
-        n = (0, d.bG)([s9.Ay], () => s9.Ay.getMessageGiftIntentLastShownMap()),
-        l = (0, d.bG)([s9.Ay], () => s9.Ay.getHighestAffinityFriendAnniversaries()),
-        s = (0, d.bG)([s9.Ay], () => s9.Ay.getHighAffinityFriendAnniversaries()),
-        i = (0, d.bG)([s9.Ay], () => s9.Ay.getProfilePopoutGiftIntentsDismissMap()),
+    let e = (0, d.bG)([s4.Ay], () => s4.Ay.getDevToolTotalFriendAnniversaries()),
+        t = (0, d.bG)([s4.Ay], () => s4.Ay.getDevToolCurrentDate()),
+        a = (0, d.bG)([s4.Ay], () => s4.Ay.getGiftUnreadNotificationLastDismissedTimes()),
+        n = (0, d.bG)([s4.Ay], () => s4.Ay.getMessageGiftIntentLastShownMap()),
+        l = (0, d.bG)([s4.Ay], () => s4.Ay.getHighestAffinityFriendAnniversaries()),
+        s = (0, d.bG)([s4.Ay], () => s4.Ay.getHighAffinityFriendAnniversaries()),
+        i = (0, d.bG)([s4.Ay], () => s4.Ay.getProfilePopoutGiftIntentsDismissMap()),
         o = (0, d.bG)([lr.A], () => {
             let e =
                 lr.A.settings.userContent?.recurringDismissibleContentStates[n2.M.GIFT_INTENT_MESSAGE]
@@ -5773,7 +5773,7 @@ function it() {
                             size: "sm",
                             text: "Send",
                             onClick: () => {
-                                s4.A.sendGiftingNotificationIfEligible();
+                                s9.A.sendGiftingNotificationIfEligible();
                             },
                         }),
                     ],
@@ -5945,7 +5945,7 @@ function iT(e) {
                 children: [
                     (0, r.jsx)(A.E, { variant: "text-md/semibold", children: a }),
                     (0, r.jsx)(eS.K, {
-                        icon: a9.T,
+                        icon: a4.T,
                         "aria-label": `Copy ${a} YAML`,
                         onClick: n,
                         variant: "secondary",
@@ -6806,7 +6806,7 @@ var i8 = a(919523),
     i6 = a(855522),
     i3 = a(37646),
     i5 = a(773669);
-function i4() {
+function i9() {
     let e = (0, d.bG)([i5.default], () => i5.default.locale),
         [t, a] = o.useState(),
         n = (0, i8.runtimeHashMessageKey)(t ?? ""),
@@ -6858,9 +6858,9 @@ function i4() {
         ],
     });
 }
-var i9 = a(434404);
+var i4 = a(434404);
 function i7() {
-    let { node: e } = (0, B.Ay)(i9.F, "");
+    let { node: e } = (0, B.Ay)(i4.F, "");
     return (0, r.jsx)(c.Ip, {
         className: tA.nd,
         children: (0, r.jsx)("div", {
@@ -7349,7 +7349,7 @@ let rh = {
                     a.e("94864"),
                     a.e("27681"),
                     a.e("55567"),
-                    a.e("77827"),
+                    a.e("21185"),
                     a.e("44135"),
                     a.e("80798"),
                     a.e("71070"),
@@ -7362,7 +7362,8 @@ let rh = {
                     a.e("56574"),
                     a.e("20980"),
                     a.e("79785"),
-                    a.e("46757"),
+                    a.e("98689"),
+                    a.e("4974"),
                     a.e("80186"),
                     a.e("17566"),
                     a.e("49681"),
@@ -7548,8 +7549,8 @@ let rh = {
                 t = a$.A.getGuilds(),
                 n = null;
             for (let e of Object.values(t)) {
-                for (let t of Object.values(t4.A.getMutableGuildChannelsForGuild(e.id))) {
-                    let e = t4.A.getAllThreadsForParent(t.id);
+                for (let t of Object.values(t9.A.getMutableGuildChannelsForGuild(e.id))) {
+                    let e = t9.A.getAllThreadsForParent(t.id);
                     if (e.length > 0) {
                         n = e[0];
                         break;
@@ -7567,7 +7568,7 @@ let rh = {
             return null == t ? () => null : () => (0, r.jsx)(e, { guildId: t.id, onClose: ru.Z_ });
         },
         MembersTableJoinTypeContextMenu: async () => {
-            let { default: e } = await Promise.all([a.e("46757"), a.e("71719"), a.e("14878"), a.e("66016")]).then(
+            let { default: e } = await Promise.all([a.e("4974"), a.e("71719"), a.e("14878"), a.e("66016")]).then(
                     a.bind(a, 316173),
                 ),
                 t = Object.values(a$.A.getGuilds())[0];
@@ -7690,14 +7691,14 @@ var rg = a(253506),
 function rN() {
     let e = (0, d.yK)([rC.default], () => rC.default.getSortedChannels()[1]),
         [t, a] = o.useState(e.length > 0 ? e[0].channelId : void 0),
-        { selectedChannel: n, options: l } = (0, d.cf)([t4.A, V.default, t9.A], () => ({
-            selectedChannel: t4.A.getChannel(t),
+        { selectedChannel: n, options: l } = (0, d.cf)([t9.A, V.default, t4.A], () => ({
+            selectedChannel: t9.A.getChannel(t),
             options: e.map((e) => {
-                let t = t4.A.getChannel(e.channelId);
+                let t = t9.A.getChannel(e.channelId);
                 return {
                     id: e.channelId,
                     value: e.channelId,
-                    label: null != t ? (0, t5.m1)(t, V.default, t9.A) : e.channelId,
+                    label: null != t ? (0, t5.m1)(t, V.default, t4.A) : e.channelId,
                     leading:
                         null != t
                             ? (0, r.jsx)(rj.eu, { src: (0, ry.Y)(t), "aria-hidden": !0, size: rb._3.SIZE_16 })
@@ -8973,7 +8974,7 @@ function rJ(e) {
                         (0, r.jsxs)(A.E, { variant: "eyebrow", color: "always-white", children: ["Offer: ", x] }),
                         l
                             ? (0, r.jsx)(rU.A, { size: "md", color: "currentColor", className: si.Kk })
-                            : (0, r.jsx)(a9.T, { size: "xs", color: "currentColor", className: si.Kk }),
+                            : (0, r.jsx)(a4.T, { size: "xs", color: "currentColor", className: si.Kk }),
                     ],
                 }),
                 (0, r.jsxs)(N.D, {
@@ -8985,7 +8986,7 @@ function rJ(e) {
                         (0, r.jsxs)(A.E, { variant: "eyebrow", color: "always-white", children: ["Trial: ", v] }),
                         i
                             ? (0, r.jsx)(rU.A, { size: "md", color: "currentColor", className: si.Kk })
-                            : (0, r.jsx)(a9.T, { size: "xs", color: "currentColor", className: si.Kk }),
+                            : (0, r.jsx)(a4.T, { size: "xs", color: "currentColor", className: si.Kk }),
                     ],
                 }),
                 (0, r.jsx)("div", {
@@ -9144,7 +9145,7 @@ function rQ(e) {
                         (0, r.jsxs)(A.E, { variant: "eyebrow", color: "text-default", children: ["Offer: ", x] }),
                         l
                             ? (0, r.jsx)(rU.A, { size: "md", color: "currentColor", className: S()(si.Kk, si.mK) })
-                            : (0, r.jsx)(a9.T, { size: "xs", color: "currentColor", className: si.Kk }),
+                            : (0, r.jsx)(a4.T, { size: "xs", color: "currentColor", className: si.Kk }),
                     ],
                 }),
                 (0, r.jsxs)(N.D, {
@@ -9156,7 +9157,7 @@ function rQ(e) {
                         (0, r.jsxs)(A.E, { variant: "eyebrow", color: "text-default", children: ["Discount: ", g] }),
                         i
                             ? (0, r.jsx)(rU.A, { size: "md", color: "currentColor", className: S()(si.Kk, si.mK) })
-                            : (0, r.jsx)(a9.T, { size: "xs", color: "currentColor", className: si.Kk }),
+                            : (0, r.jsx)(a4.T, { size: "xs", color: "currentColor", className: si.Kk }),
                     ],
                 }),
                 v?.amount != null &&
@@ -9420,8 +9421,8 @@ var rZ = a(935462),
     r6 = a(31300),
     r3 = a(500060),
     r5 = a(391973),
-    r4 = a(684013),
-    r9 = a(765671),
+    r9 = a(684013),
+    r4 = a(765671),
     r7 = a(235986),
     oe = a(742589),
     ot = a(41984),
@@ -9478,10 +9479,10 @@ function of(e) {
                 }
             );
         }, [a]),
-        (0, r.jsxs)(a4.$n, {
-            look: a4.$n.Looks.LINK,
-            color: a4.$n.Colors.LINK,
-            size: a4.$n.Sizes.MIN,
+        (0, r.jsxs)(a9.$n, {
+            look: a9.$n.Looks.LINK,
+            color: a9.$n.Colors.LINK,
+            size: a9.$n.Sizes.MIN,
             onClick: function () {
                 (0, ni.C)(t, () => n(!0));
             },
@@ -9720,7 +9721,7 @@ function oN() {
                     (0, r.jsx)(j.d, {
                         checked: e,
                         onChange: () =>
-                            void r4.A.setRenderDebugMode(
+                            void r9.A.setRenderDebugMode(
                                 !or.A.hasRenderDebugMode(ot.x7.TrackFocusPIDs),
                                 ot.x7.TrackFocusPIDs,
                             ),
@@ -9728,7 +9729,7 @@ function oN() {
                     }),
                     (0, r.jsx)(N.D, {
                         className: ov.LL,
-                        onClick: () => r4.A.clearTrackedPids(),
+                        onClick: () => r9.A.clearTrackedPids(),
                         children: (0, r.jsx)(nt.u, { size: "md", color: "currentColor" }),
                     }),
                 ],
@@ -9995,7 +9996,7 @@ let oA = o.memo(function (e) {
                                     s.mode === ot.x7.ClickZones && t(),
                                         s.mode === ot.x7.WidgetAreas && n(),
                                         (e = s.mode),
-                                        r4.A.setRenderDebugMode(!a, e);
+                                        r9.A.setRenderDebugMode(!a, e);
                                 },
                                 label: i,
                                 description: s.tooltip,
@@ -10084,7 +10085,7 @@ let oA = o.memo(function (e) {
             value: t,
             options: n,
             onSelectionChange: (e) => {
-                a(e), r4.A.forceRenderMode(e);
+                a(e), r9.A.forceRenderMode(e);
             },
             selectionMode: "single",
             fullWidth: !0,
@@ -10271,12 +10272,12 @@ let oB = ["__webpack_require__", "fn"],
                                             tag: "span",
                                             className: ov.KE,
                                             onClick: () => (0, ni.C)(n),
-                                            children: (0, r.jsx)(a9.T, { color: "currentColor", size: "sm" }),
+                                            children: (0, r.jsx)(a4.T, { color: "currentColor", size: "sm" }),
                                         }),
                                     ],
                                 }),
                                 (0, r.jsx)(oe.A.Icon, {
-                                    icon: a9.T,
+                                    icon: a4.T,
                                     tooltip: "Copy all properties",
                                     onClick: () => {
                                         (0, ni.C)(oG(t));
@@ -10375,7 +10376,7 @@ let oB = ["__webpack_require__", "fn"],
         throttleMs: 100,
     };
 function oW() {
-    let { ref: e, height: t } = (0, r9.Ay)(),
+    let { ref: e, height: t } = (0, r4.Ay)(),
         a = (0, d.bG)([or.A], () => or.A.isModuleLoggingEnabled()),
         [n, l] = o.useState(a),
         [s, i] = o.useState(!1),
@@ -10415,7 +10416,7 @@ function oW() {
         { renderSelectedTab: R } = (0, aO.Ay)({ tabs: oV }, []);
     (0, ns.RT)(f, _, T, o$, [j]);
     let O = o.useCallback((e) => {
-            l(e), r4.A.setModuleLogging(e);
+            l(e), r9.A.setModuleLogging(e);
         }, []),
         [w, M] = o.useState(!1),
         L = o.useRef(null),
@@ -10488,7 +10489,7 @@ function oW() {
                                     }),
                                     w
                                         ? (0, r.jsx)(rU.A, { size: "sm", color: eD.A.unsafe_rawColors.GREEN_330.css })
-                                        : (0, r.jsx)(a9.T, { color: "currentColor", size: "sm" }),
+                                        : (0, r.jsx)(a4.T, { color: "currentColor", size: "sm" }),
                                 ],
                             }),
                             (0, r.jsx)(N.D, {
@@ -10580,9 +10581,9 @@ let oz = o.memo(function () {
         return (
             o.useEffect(
                 () => (
-                    r4.A.setStateDebugging(!0),
+                    r9.A.setStateDebugging(!0),
                     () => {
-                        r4.A.setStateDebugging(!1);
+                        r9.A.setStateDebugging(!1);
                     }
                 ),
                 [],
@@ -10594,7 +10595,7 @@ let oz = o.memo(function () {
                         className: ov.Iv,
                         children: (0, r.jsx)(j.d, {
                             checked: e,
-                            onChange: () => r4.A.setStateDebugging(!e),
+                            onChange: () => r9.A.setStateDebugging(!e),
                             label: "Poll Native Module State",
                         }),
                     }),
@@ -10758,8 +10759,8 @@ var oZ = a(488428),
     o6 = a(300233),
     o3 = a(599941),
     o5 = a(817649),
-    o4 = a(4630),
-    o9 = a(44120),
+    o9 = a(4630),
+    o4 = a(44120),
     o7 = a(532794),
     de = a(216678),
     dt = a(194509),
@@ -10826,8 +10827,8 @@ let di = function () {
                             (0, r.jsx)(dt.A, {
                                 subscriptionTier: e,
                                 premiumModalAnalyticsLocation: {},
-                                color: a4.XD.PRIMARY,
-                                look: a4.pR.FILLED,
+                                color: a9.XD.PRIMARY,
+                                look: a9.pR.FILLED,
                             }),
                         ],
                     }),
@@ -11052,7 +11053,7 @@ let di = function () {
                                 variant: "primary",
                                 text: "Open App Subs Modal for Activity",
                                 onClick: () =>
-                                    (0, o4.openIAPPurchaseModal)({
+                                    (0, o9.openIAPPurchaseModal)({
                                         applicationId: N,
                                         skuId: I,
                                         openPremiumPaymentModal: () => !0,
@@ -11118,7 +11119,7 @@ let di = function () {
                             (0, r.jsx)(x.$, {
                                 variant: "primary",
                                 text: "Open Collectibles Payment Modal for SKU",
-                                onClick: () => (0, o9.A)({ skuId: W, analyticsLocations: S }),
+                                onClick: () => (0, o4.A)({ skuId: W, analyticsLocations: S }),
                             }),
                         ],
                     }),
@@ -12337,7 +12338,7 @@ function dz(e) {
 function dH() {
     let e = (0, d.bG)([dF.A], () => dF.A.getChannelId()),
         t = (0, d.bG)([aW.A], () => aW.A.getGuildId()),
-        a = (0, d.bG)([t4.A], () => t4.A.getChannel(e)),
+        a = (0, d.bG)([t9.A], () => t9.A.getChannel(e)),
         n = (0, d.bG)([a$.A], () => a$.A.getGuild(t)),
         l = (0, d.bG)([dB.A], () => dB.A.computePermissions(a)),
         s = (0, d.bG)([dB.A], () => dB.A.computePermissions(n)),
@@ -12426,7 +12427,7 @@ async function d5() {
         }
     } catch (e) {}
 }
-async function d4() {
+async function d9() {
     let e = tc.A.purchases,
         t = (0, ev.x9)(e),
         a = (0, ev.$W)(e),
@@ -12441,7 +12442,7 @@ async function d4() {
             await (0, dQ._L)(i).finally(dQ.pZ);
         } catch (e) {}
 }
-function d9() {
+function d4() {
     try {
         let e = d3(H.hH7.FONT_SIZES);
         (0, dZ.XS)(e);
@@ -12517,13 +12518,13 @@ function d7() {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Collectibles",
-                            onClick: d4,
+                            onClick: d9,
                         }),
                         (0, r.jsx)(x.$, {
                             variant: "primary",
                             size: "sm",
                             text: "Randomize Appearance Settings",
-                            onClick: d9,
+                            onClick: d4,
                         }),
                     ],
                 }),
@@ -13416,7 +13417,7 @@ let c8 = o.createContext({ setDropHandler: () => {} }),
                   { modalKey: cM.k, onCloseRequest: () => (0, ek.closeModal)(cM.k) },
               );
     },
-    c4 = () => {
+    c9 = () => {
         (0, ek.hasModalOpen)(cM.g)
             ? (0, ek.closeModal)(cM.g)
             : (0, ek.openModalLazy)(
@@ -13427,7 +13428,7 @@ let c8 = o.createContext({ setDropHandler: () => {} }),
                   { modalKey: cM.g, onCloseRequest: () => (0, ek.closeModal)(cM.g) },
               );
     },
-    c9 = () => {
+    c4 = () => {
         let e = (0, ef.pF)(),
             { previewProfileEffectSkuId: t, setPreviewProfileEffectSkuId: a } = (0, cL.JE)(),
             n = o.useMemo(() => [c3, ...e.map((e) => ({ id: e.skuId, label: e.name, value: e.skuId }))], [e]);
@@ -13442,7 +13443,7 @@ let c8 = o.createContext({ setDropHandler: () => {} }),
                         (0, r.jsx)(eS.K, {
                             variant: "icon-only",
                             size: "sm",
-                            onClick: c4,
+                            onClick: c9,
                             icon: cR.c,
                             "aria-label": "Open PFX preview instructions",
                         }),
@@ -13886,7 +13887,7 @@ let c8 = o.createContext({ setDropHandler: () => {} }),
                             }),
                         ],
                     }),
-                    (0, r.jsx)(c9, {}),
+                    (0, r.jsx)(c4, {}),
                     (0, r.jsx)(c7, {}),
                     (0, r.jsx)(ut, { clearAssets: l, clearIgnoredFiles: s }),
                     (0, r.jsx)(ua, { ignoredFiles: n, handleClearIgnoredFiles: s }),
@@ -14709,7 +14710,7 @@ function u5(e) {
         ],
     });
 }
-function u4(e) {
+function u9(e) {
     let { recording: t, playing: a, onPlay: n, onStop: l } = e;
     return (0, r.jsx)(ct.N, {
         collapsibleContent: (0, r.jsx)(u5, { recording: t }),
@@ -14749,7 +14750,7 @@ function u4(e) {
         },
     });
 }
-function u9() {
+function u4() {
     let { name: e } = (0, u6.x5)(uF.oh.AUDIO_INPUT),
         [t, a] = o.useState(!1),
         [n, l] = o.useState([]),
@@ -14913,8 +14914,8 @@ function u9() {
                         gap: 4,
                         children: [
                             (0, r.jsx)(A.E, { variant: "text-sm/semibold", children: "Recorder" }),
-                            (0, r.jsx)(a4.$n, {
-                                color: t ? a4.$n.Colors.RED : a4.$n.Colors.BRAND,
+                            (0, r.jsx)(a9.$n, {
+                                color: t ? a9.$n.Colors.RED : a9.$n.Colors.BRAND,
                                 onClick: t
                                     ? L
                                     : function () {
@@ -14965,7 +14966,7 @@ function u9() {
                         children: [
                             (0, r.jsx)(A.E, { variant: "text-sm/semibold", children: "Recordings" }),
                             n.map((e, t) =>
-                                (0, r.jsx)(u4, { recording: e, playing: e === i, onPlay: P, onStop: M }, t),
+                                (0, r.jsx)(u9, { recording: e, playing: e === i, onPlay: P, onStop: M }, t),
                             ),
                         ],
                     }),
@@ -15191,9 +15192,9 @@ function mh() {
 function mx() {
     let e = (0, d.bG)([uB.Ay], () => uB.Ay.getAudioMixerSettings()),
         t = rD.x.DEFAULT,
-        a = (0, d.bG)([ma.A, t4.A], () => {
+        a = (0, d.bG)([ma.A, t9.A], () => {
             let e = ma.A.getChannelId();
-            return null != e ? t4.A.getChannel(e) : null;
+            return null != e ? t9.A.getChannel(e) : null;
         }),
         n = nd.default.getId(),
         l = a?.id,
@@ -15690,7 +15691,7 @@ function mR(e) {
                                                 children: "Trial Info",
                                             }),
                                         }),
-                                        (0, r.jsx)(l4.A, { direction: u ? l4.A.Directions.UP : l4.A.Directions.DOWN }),
+                                        (0, r.jsx)(l9.A, { direction: u ? l9.A.Directions.UP : l9.A.Directions.DOWN }),
                                     ],
                                 }),
                                 u &&
@@ -15738,7 +15739,7 @@ function mR(e) {
                                                 children: "Active Discount Info",
                                             }),
                                         }),
-                                        (0, r.jsx)(l4.A, { direction: g ? l4.A.Directions.UP : l4.A.Directions.DOWN }),
+                                        (0, r.jsx)(l9.A, { direction: g ? l9.A.Directions.UP : l9.A.Directions.DOWN }),
                                     ],
                                 }),
                                 g &&
@@ -15795,7 +15796,7 @@ function mR(e) {
                                                 children: "Metadata",
                                             }),
                                         }),
-                                        (0, r.jsx)(l4.A, { direction: s ? l4.A.Directions.UP : l4.A.Directions.DOWN }),
+                                        (0, r.jsx)(l9.A, { direction: s ? l9.A.Directions.UP : l9.A.Directions.DOWN }),
                                     ],
                                 }),
                                 s &&
@@ -15832,7 +15833,7 @@ function mR(e) {
                                             children: "Modifications",
                                         }),
                                     }),
-                                    (0, r.jsx)(l4.A, { direction: d ? l4.A.Directions.UP : l4.A.Directions.DOWN }),
+                                    (0, r.jsx)(l9.A, { direction: d ? l9.A.Directions.UP : l9.A.Directions.DOWN }),
                                 ],
                             }),
                             d &&
@@ -16071,10 +16072,10 @@ let m5 = function (e) {
         }),
     });
 };
-var m4 = a(247928);
-let m9 = function (e) {
+var m9 = a(247928);
+let m4 = function (e) {
     let { allowClicks: t = !1, children: a, withBorder: n = !1 } = e;
-    return (0, r.jsx)(m4.M, {
+    return (0, r.jsx)(m9.M, {
         children: (0, r.jsx)(mW.Z, {
             className: S()(m3.Rx, { [m3.aK]: n }),
             outline: n,
@@ -16836,7 +16837,7 @@ function hb() {
             (0, r.jsxs)("div", {
                 className: m3.$$,
                 children: [
-                    (0, r.jsxs)(m9, {
+                    (0, r.jsxs)(m4, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(T.D, { variant: "heading-sm/semibold", children: "Quest Bar" }),
@@ -16862,7 +16863,7 @@ function hb() {
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(m9, {
+                    (0, r.jsxs)(m4, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(T.D, { variant: "heading-sm/semibold", children: "Quest Home Card" }),
@@ -16881,7 +16882,7 @@ function hb() {
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(m9, {
+                    (0, r.jsxs)(m4, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(T.D, { variant: "heading-sm/semibold", children: "Channel Call Header" }),
@@ -16920,7 +16921,7 @@ function hb() {
                             },
                         }),
                     }),
-                    (0, r.jsxs)(m9, {
+                    (0, r.jsxs)(m4, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(T.D, { variant: "heading-sm/semibold", children: "Quest Card Embed" }),
@@ -16942,7 +16943,7 @@ function hb() {
                         children: (0, r.jsx)(j.d, { label: "Invalid Quests Embed:", checked: m, onChange: h }),
                     }),
                     N &&
-                        (0, r.jsxs)(m9, {
+                        (0, r.jsxs)(m4, {
                             withBorder: !0,
                             allowClicks: !0,
                             children: [
@@ -16954,7 +16955,7 @@ function hb() {
                                         let e = performance.now();
                                         (0, ek.openModalLazy)(async () => {
                                             let { default: n } = await Promise.all([
-                                                a.e("93343"),
+                                                a.e("31870"),
                                                 a.e("92868"),
                                                 a.e("63408"),
                                                 a.e("77375"),
@@ -17050,29 +17051,29 @@ function hw() {
                                 null != t &&
                                     (hR.info(`recipient username: ${t.username}`),
                                     hR.info(`recipient global name: ${Y.Ay.getGlobalName(t)}`),
-                                    hR.info(`recipient nickname: ${t9.A.getNickname(t.id)}`));
+                                    hR.info(`recipient nickname: ${t4.A.getNickname(t.id)}`));
                             }));
                     break;
                 case hT.rD.GROUP_DM:
                     hR.info(`channel type: ${e.record.type}`),
                         hR.info(`channel id: ${e.record.id}`),
-                        hR.info(`name: ${(0, t5.m1)(e.record, V.default, t9.A)}`),
+                        hR.info(`name: ${(0, t5.m1)(e.record, V.default, t4.A)}`),
                         e.record.isGroupDM() &&
-                            (hR.info(`default name: ${(0, t5.ks)(e.record, V.default, t9.A)}`),
+                            (hR.info(`default name: ${(0, t5.ks)(e.record, V.default, t4.A)}`),
                             hR.info(`recipient id: ${e.record.recipients}`),
                             e.record.recipients.forEach((e) => {
                                 let t = V.default.getUser(e);
                                 null != t &&
                                     (hR.info(`recipient username: ${t.username}`),
                                     hR.info(`recipient global name: ${Y.Ay.getGlobalName(t)}`),
-                                    hR.info(`recipient nickname: ${t9.A.getNickname(t.id)}`));
+                                    hR.info(`recipient nickname: ${t4.A.getNickname(t.id)}`));
                             }));
                     break;
                 case hT.rD.USER:
                     hR.info(`user id: ${e.record.id}`),
                         hR.info(`username: ${e.record.username}`),
                         hR.info(`global name: ${Y.Ay.getGlobalName(e.record)}`),
-                        hR.info(`nickname: ${t9.A.getNickname(e.record.id)}`),
+                        hR.info(`nickname: ${t4.A.getNickname(e.record.id)}`),
                         hR.info(`guild nicknames: ${hD.Ay.getNicknames(e.record.id)}`);
             }
             hR.info(`frecency score: ${hA.A.getScoreWithoutFetchingLatest(e.record.id)}`), hO();
@@ -17190,14 +17191,14 @@ function hF() {
                     let i, r, o, d, c, u, m, h, x, p, g, v;
                     hB.setState({ isUploading: !0, errorMessage: null, isSuccess: !1 }),
                         t &&
-                            ((i = t9.A.getFriendIDs()),
+                            ((i = t4.A.getFriendIDs()),
                             hR.info("START Discord Friends"),
                             i.forEach((e) => {
                                 let t = V.default.getUser(e);
                                 if (null == t) return;
                                 let a = t.username,
                                     n = Y.Ay.getGlobalName(t),
-                                    l = t9.A.getNickname(t.id),
+                                    l = t4.A.getNickname(t.id),
                                     s = hD.Ay.getNicknames(t.id);
                                 hR.info(`username: ${a}`),
                                     hR.info(`global name: ${n}`),
@@ -17207,7 +17208,7 @@ function hF() {
                             }),
                             hR.info("END Discord Friends\n")),
                         a &&
-                            ((r = t4.A.getMutablePrivateChannels()),
+                            ((r = t9.A.getMutablePrivateChannels()),
                             (o = []),
                             (d = []),
                             Object.values(r).forEach((e) => {
@@ -17215,8 +17216,8 @@ function hF() {
                             }),
                             hR.info("START Logging Group DM Channels"),
                             o.forEach((e) => {
-                                let t = (0, t5.m1)(e, V.default, t9.A),
-                                    a = (0, t5.ks)(e, V.default, t9.A);
+                                let t = (0, t5.m1)(e, V.default, t4.A),
+                                    a = (0, t5.ks)(e, V.default, t4.A);
                                 hR.info(`id: ${e.id}`),
                                     hR.info(`name: ${t}`),
                                     hR.info(`default name: ${a}`),
@@ -17226,7 +17227,7 @@ function hF() {
                                         if (null == t) return;
                                         let a = t.username,
                                             n = Y.Ay.getGlobalName(t),
-                                            l = t9.A.getNickname(t.id),
+                                            l = t4.A.getNickname(t.id),
                                             s = hD.Ay.getNicknames(t.id);
                                         hR.info(`username: ${a}`),
                                             hR.info(`global name: ${n}`),
@@ -17238,14 +17239,14 @@ function hF() {
                             hR.info("END Logging Group DM Channels\n"),
                             hR.info("START Logging DM Channels"),
                             d.forEach((e) => {
-                                let t = (0, t5.m1)(e, V.default, t9.A);
+                                let t = (0, t5.m1)(e, V.default, t4.A);
                                 hR.info(`id: ${e.id}`), hR.info(`name: ${t}`);
                                 let a = e.getRecipientId(),
                                     n = V.default.getUser(a);
                                 if (null == n) return;
                                 let l = n.username,
                                     s = Y.Ay.getGlobalName(n),
-                                    i = t9.A.getNickname(n.id);
+                                    i = t4.A.getNickname(n.id);
                                 hR.info(`username: ${l}`),
                                     hR.info(`global name: ${s}`),
                                     hR.info(`nickname: ${i}`),
@@ -17253,7 +17254,7 @@ function hF() {
                             }),
                             hR.info("END Logging DM Channels\n")),
                         n &&
-                            ((c = t4.A.getMutablePrivateChannels()),
+                            ((c = t9.A.getMutablePrivateChannels()),
                             (u = []),
                             (m = []),
                             Object.values(c).forEach((e) => {
@@ -17261,8 +17262,8 @@ function hF() {
                             }),
                             hR.info("START Logging Group DM Channels"),
                             u.forEach((e) => {
-                                let t = (0, t5.m1)(e, V.default, t9.A),
-                                    a = (0, t5.ks)(e, V.default, t9.A);
+                                let t = (0, t5.m1)(e, V.default, t4.A),
+                                    a = (0, t5.ks)(e, V.default, t4.A);
                                 hR.info(`id: ${e.id}`),
                                     hR.info(`name: ${t}`),
                                     hR.info(`default name: ${a}`),
@@ -17272,7 +17273,7 @@ function hF() {
                                         if (null == t) return;
                                         let a = t.username,
                                             n = Y.Ay.getGlobalName(t),
-                                            l = t9.A.getNickname(t.id),
+                                            l = t4.A.getNickname(t.id),
                                             s = hD.Ay.getNicknames(t.id);
                                         hR.info(`username: ${a}`),
                                             hR.info(`global name: ${n}`),
@@ -17284,14 +17285,14 @@ function hF() {
                             hR.info("END Logging Group DM Channels\n"),
                             hR.info("START Logging DM Channels"),
                             m.forEach((e) => {
-                                let t = (0, t5.m1)(e, V.default, t9.A);
+                                let t = (0, t5.m1)(e, V.default, t4.A);
                                 hR.info(`id: ${e.id}`), hR.info(`name: ${t}`);
                                 let a = e.getRecipientId(),
                                     n = V.default.getUser(a);
                                 if (null == n) return;
                                 let l = n.username,
                                     s = Y.Ay.getGlobalName(n),
-                                    i = t9.A.getNickname(n.id);
+                                    i = t4.A.getNickname(n.id);
                                 hR.info(`username: ${l}`),
                                     hR.info(`global name: ${s}`),
                                     hR.info(`nickname: ${i}`),
@@ -17330,8 +17331,8 @@ function hF() {
                             v.forEach((e) => {
                                 let t = hA.A.getScoreWithoutFetchingLatest(e.id);
                                 hR.info(`id: ${e.id} - Frecency Score: ${t}`),
-                                    hR.info(`default name: ${(0, t5.ks)(e, V.default, t9.A)}`),
-                                    hR.info(`name: ${(0, t5.m1)(e, V.default, t9.A)}`);
+                                    hR.info(`default name: ${(0, t5.ks)(e, V.default, t4.A)}`),
+                                    hR.info(`name: ${(0, t5.m1)(e, V.default, t4.A)}`);
                             }),
                             hO(),
                             hR.info("Guild Channels"),
@@ -17651,7 +17652,7 @@ function hq(e) {
                                 Object.entries(n.nicknames).map((e) => {
                                     let [t, a] = e,
                                         n = a$.A.getGuild(t),
-                                        l = t4.A.getChannel(t);
+                                        l = t9.A.getChannel(t);
                                     return (0, r.jsxs)(
                                         "div",
                                         {
@@ -17664,7 +17665,7 @@ function hq(e) {
                                                     null != l &&
                                                     (0, r.jsx)(A.E, {
                                                         variant: "text-sm/normal",
-                                                        children: (0, t5.m1)(l, V.default, t9.A),
+                                                        children: (0, t5.m1)(l, V.default, t4.A),
                                                     }),
                                                 (0, r.jsx)(A.E, { variant: "text-sm/normal", children: ` (${t})` }),
                                                 null != a &&
@@ -17804,8 +17805,8 @@ var hZ = a(761508),
     h6 = a(848281),
     h3 = a(467680),
     h5 = a(52822),
-    h4 = a(642153);
-let h9 = [
+    h9 = a(642153);
+let h4 = [
         { id: "virtual-currency", name: "Virtual Current (Orb) Components" },
         { id: "nitro", name: "Nitro Components" },
     ],
@@ -17842,18 +17843,18 @@ function xe() {
     let [e, t] = o.useState("virtual-currency"),
         a = o.useMemo(() => h7[e], [e]);
     return (0, r.jsxs)("div", {
-        className: S()(tA.nd, h4.kL),
+        className: S()(tA.nd, h9.kL),
         children: [
             (0, r.jsx)(hZ.V, {
-                className: h4.$H,
+                className: h9.$H,
                 selectedItem: e,
                 onItemSelect: t,
                 look: "brand",
                 type: "top",
                 orientation: "horizontal",
-                children: h9.map((e) => (0, r.jsx)(hZ.V.Item, { id: e.id, children: e.name }, e.id)),
+                children: h4.map((e) => (0, r.jsx)(hZ.V.Item, { id: e.id, children: e.name }, e.id)),
             }),
-            (0, r.jsx)(c.Ar, { children: (0, r.jsx)("div", { className: h4.Qs, children: (0, r.jsx)(a, {}) }) }),
+            (0, r.jsx)(c.Ar, { children: (0, r.jsx)("div", { className: h9.Qs, children: (0, r.jsx)(a, {}) }) }),
         ],
     });
 }
@@ -17966,8 +17967,8 @@ function xh(e) {
                       onClick: d,
                       children: [
                           u("text-md/bold"),
-                          (0, r.jsx)(l4.A, {
-                              direction: s ? l4.A.Directions.DOWN : l4.A.Directions.RIGHT,
+                          (0, r.jsx)(l9.A, {
+                              direction: s ? l9.A.Directions.DOWN : l9.A.Directions.RIGHT,
                               className: xm.D,
                           }),
                       ],
@@ -18176,7 +18177,7 @@ function xj() {
                 name: "Intl",
                 group: aO.fu.UI,
                 tags: ["i18n", "localization", "messages"],
-                render: () => (0, r.jsx)(i4, {}),
+                render: () => (0, r.jsx)(i9, {}),
             }),
             e.push({
                 id: "colors",
@@ -18324,7 +18325,7 @@ function xj() {
                 name: "Krisp Tester",
                 group: aO.fu.AUDIO_VIDEO,
                 tags: ["noise cancellation", "audio", "vad"],
-                render: () => (0, r.jsx)(u9, {}),
+                render: () => (0, r.jsx)(u4, {}),
             }),
             e.push({
                 id: "av_overrides",

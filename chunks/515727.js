@@ -6,9 +6,9 @@ let s = (e) => {
     let { analyticsLocations: a, guild: s, initialSelectedProfileFrame: d } = e;
     (0, l.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            i.e("27870"),
+            i.e("29911"),
             i.e("758"),
-            i.e("34195"),
+            i.e("71070"),
             i.e("60060"),
             i.e("86522"),
             i.e("60571"),
@@ -19,10 +19,8 @@ let s = (e) => {
             i.e("13498"),
             i.e("94864"),
             i.e("89203"),
-            i.e("55719"),
-            i.e("93343"),
-            i.e("23812"),
-            i.e("45667"),
+            i.e("91435"),
+            i.e("31870"),
             i.e("71934"),
             i.e("9131"),
             i.e("52196"),
@@ -36,7 +34,7 @@ let s = (e) => {
             i.e("76283"),
             i.e("18125"),
             i.e("333"),
-            i.e("62486"),
+            i.e("77122"),
             i.e("24199"),
             i.e("207"),
             i.e("57036"),
