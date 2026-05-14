@@ -36,7 +36,7 @@ var i = n(627968),
     U = n(874546),
     k = n(141639),
     G = n(61330),
-    F = n(205390),
+    F = n(154483),
     V = n(737393),
     B = n(540185),
     H = n(289173),
@@ -87,7 +87,7 @@ var X = n(601007),
     ee = n(790381),
     et = n(266080),
     en = n(729937),
-    ei = n(76843),
+    ei = n(123917),
     er = n(998218),
     es = n(996988),
     ea = n(514566);
@@ -224,7 +224,7 @@ function eS(e) {
         : null;
 }
 var eN = n(573648),
-    ey = n(773952),
+    ey = n(968309),
     eC = n(30370);
 function ev(e) {
     let { platformType: t, icon: n, onAction: r } = e,
@@ -335,7 +335,7 @@ function ek(e) {
             }
             return (0, h.A)(n)
                 ? (0, i.jsx)(ex, { activity: n, onAction: r })
-                : (0, U._C)(n)
+                : (0, U.Ay)(n)
                   ? (0, i.jsx)(em, { user: t, activity: n, onAction: r, onClose: s })
                   : (0, P.A)(n, eT.jUm.INSTANCE)
                     ? (0, i.jsx)(eS, { user: t, activity: n, onAction: r })

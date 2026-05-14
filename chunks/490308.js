@@ -12,7 +12,6 @@ d.exports = {
     pW: "badgeSlotIcon__6db38",
     SV: "detailPanel__6db38",
     b: "closeButton__6db38",
-    ju: "badgeGraphicContainer__6db38",
     y2: "badgeGraphic__6db38",
     OU: "badgeInfo__6db38",
     cQ: "badgeIdentity__6db38",

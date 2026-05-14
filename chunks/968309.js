@@ -4,7 +4,7 @@ var i = n(627968);
 n(64700);
 var r = n(192308),
     s = n(573648),
-    a = n(76843),
+    a = n(123917),
     o = n(738104),
     l = n(652215);
 function u(e) {
@@ -61,7 +61,7 @@ function u(e) {
             : _ === l.fg2.DOMAIN
               ? (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("34195"),
+                        n.e("75036"),
                         n.e("97893"),
                         n.e("37687"),
                         n.e("94048"),

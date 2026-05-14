@@ -21,7 +21,7 @@ var i = l(503698),
     j = l(559256),
     N = l(783198),
     T = l(375708);
-function S(e) {
+function I(e) {
     let { userId: t, channel: l, onAction: i, variant: s = "primary" } = e,
         a = (0, j.u)(t, l),
         r = (0, c.bG)([v.A], () => v.A.getVoiceChannelId() === l.id, [l.id]);
@@ -40,15 +40,15 @@ function S(e) {
         ? o
         : (0, n.jsx)(f.m, { position: "top", text: T.intl.string(N.default.qRXats), asContainer: !0, children: o });
 }
-var I = l(82149),
+var S = l(82149),
     C = l(734057),
     _ = l(287809),
     E = l(874546),
     P = l(90644),
     b = l(61330),
-    L = l(205390),
+    L = l(154483),
     O = l(50820),
-    G = l(773952),
+    G = l(968309),
     k = l(30370);
 function z(e) {
     let { platform: t, variant: l = "secondary", size: i = "sm", onAction: s, icon: a, ...r } = e;
@@ -67,7 +67,7 @@ function z(e) {
           });
 }
 var D = l(729937),
-    M = l(76843),
+    M = l(123917),
     V = l(998218);
 function U(e) {
     let { activity: t, user: l, variant: i = "secondary", onAction: s, ...a } = e;
@@ -338,8 +338,8 @@ let eg = (0, m.A)((e) => {
                     l = (0, n.jsx)(q, { activity: t, user: i, source: v, onAction: T });
                 return (0, n.jsxs)(u.e, { size: "sm", fullWidth: !0, children: [l, e] });
             }
-            if ((0, I.Cy)(t)) {
-                let e = (0, I.UW)(t);
+            if ((0, S.Cy)(t)) {
+                let e = (0, S.UW)(t);
                 return null == e
                     ? null
                     : (0, n.jsx)($, { guildId: e.guildId, channelId: e.channelId, variant: j, onAction: T });
@@ -360,7 +360,7 @@ let eg = (0, m.A)((e) => {
                   })
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          w && (0, n.jsx)(S, { userId: i.id, channel: V, onAction: T }),
+                          w && (0, n.jsx)(I, { userId: i.id, channel: V, onAction: T }),
                           (0, n.jsx)(ei.A, { activity: t, variant: w ? "secondary" : j, onAction: T }),
                           (0, n.jsx)(W.A, {
                               activity: t,

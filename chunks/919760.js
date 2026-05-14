@@ -717,13 +717,13 @@ var eq = l(619517),
     e0 = l(615300),
     e1 = l(456412),
     e7 = l(133296),
-    e3 = l(848752),
-    e8 = l(452282),
-    e9 = l(821209),
+    e9 = l(848752),
+    e3 = l(452282),
+    e8 = l(821209),
     e6 = l(795574);
 let e2 = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${O.NzX}`,
-    e4 = { width: 640, height: 360, margin: 15 },
-    e5 = { width: 880, height: 495, margin: 20 },
+    e5 = { width: 640, height: 360, margin: 15 },
+    e4 = { width: 880, height: 495, margin: 20 },
     te = { width: 1920, height: 1080 },
     tt = { width: 1280, height: 720 },
     tl = (e) => (0, eJ.$o)({ ...e, className: e6.tN, mediaPlayerClassName: e6.yf }),
@@ -780,7 +780,7 @@ let e2 = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${O.NzX}`,
     ta = () =>
         (0, i.jsx)("div", {
             className: e6.eM,
-            children: (0, i.jsx)(e9.A, { inactive: !0, className: e6.J6, renderLinkComponent: eJ.bU }),
+            children: (0, i.jsx)(e8.A, { inactive: !0, className: e6.J6, renderLinkComponent: eJ.bU }),
         });
 class tn extends a.PureComponent {
     static defaultProps = { autoplayInterval: 8e3, paused: !1 };
@@ -803,8 +803,8 @@ class tn extends a.PureComponent {
     }
     getItemSize = () => {
         let { width: e } = this.props,
-            t = e5;
-        return null != e && e < t.width && (t = e4), t;
+            t = e4;
+        return null != e && e < t.width && (t = e5), t;
     };
     getStyle(e, t) {
         let l = t.interpolate({ inputRange: [0, 1], outputRange: [1, 0], extrapolate: e0.A.Extrapolate.CLAMP });
@@ -818,8 +818,8 @@ class tn extends a.PureComponent {
                 props: { items: l, onIntentionalChange: s },
                 state: { currentIndex: i },
             } = this,
-            a = (0, e8.U3)(i, l.length),
-            n = (0, e8.U3)(e, l.length),
+            a = (0, e3.U3)(i, l.length),
+            n = (0, e3.U3)(e, l.length),
             r = 1 === Math.abs(e - a) || (e === l.length - 1 && 0 === a) || (0 === e && a === l.length - 1);
         this.setState({ playingVideo: !1, currentIndex: n, animate: r, hasInteracted: t }),
             t && null != s && s(l[n], a, n);
@@ -871,7 +871,7 @@ class tn extends a.PureComponent {
               });
     renderItem = (e, t, l) => {
         let { currentIndex: s, volume: a, isMuted: n } = this.state,
-            o = t === (0, e8.U3)(s, this.props.items.length);
+            o = t === (0, e3.U3)(s, this.props.items.length);
         return (0, i.jsx)(e0.A.div, {
             className: r()(e6.AS, { [e6.Xt]: o }),
             style: null != l ? this.getStyle(t, l) : null,
@@ -897,7 +897,7 @@ class tn extends a.PureComponent {
     renderCarousel() {
         let { items: e } = this.props,
             { currentIndex: t, animate: l, hoveringPreviousItem: s, hoveringNextItem: a } = this.state,
-            n = (0, i.jsx)(e8.Ay, {
+            n = (0, i.jsx)(e3.Ay, {
                 items: e,
                 itemSize: this.getItemSize(),
                 renderItem: this.renderItem,
@@ -911,8 +911,8 @@ class tn extends a.PureComponent {
                   className: e6.HY,
                   children: [
                       n,
-                      (0, i.jsx)(e3.Q8, { onClick: this.manualPrevious, className: r()(e6.UE, { [e6.h_]: s }) }),
-                      (0, i.jsx)(e3.Oj, { onClick: this.manualNext, className: r()(e6.UE, { [e6.h_]: a }) }),
+                      (0, i.jsx)(e9.Q8, { onClick: this.manualPrevious, className: r()(e6.UE, { [e6.h_]: s }) }),
+                      (0, i.jsx)(e9.Oj, { onClick: this.manualNext, className: r()(e6.UE, { [e6.h_]: a }) }),
                   ],
               });
     }
@@ -959,14 +959,14 @@ class tn extends a.PureComponent {
                 this.renderCarousel(),
                 (0, i.jsx)("div", {
                     className: e6.X$,
-                    children: (0, i.jsx)(e3.Ay, {
+                    children: (0, i.jsx)(e9.Ay, {
                         renderItem: this.renderPaginationItem,
                         scrollToPadding: 85,
                         items: e,
                         selectedIndex: a,
                         onSetItem: (e) => this.setItem(e, !0),
                         paginationContainerClass: e6.XG,
-                        align: e.length < 6 ? e3.Ay.Align.LEFT : e3.Ay.Align.CENTER,
+                        align: e.length < 6 ? e9.Ay.Align.LEFT : e9.Ay.Align.CENTER,
                     }),
                 }),
             ],
@@ -1015,7 +1015,7 @@ let to = (e) => {
                 thumbnail: t,
                 video: l,
                 provider: s,
-                maxHeight: e4.height,
+                maxHeight: e5.height,
                 maxWidth: "small",
                 onPlay: n,
                 playable: !0,
@@ -1255,7 +1255,7 @@ var tI = l(534890),
     tN = l(177953),
     tS = l(203363),
     tf = l(975571),
-    ty = l(76843),
+    ty = l(123917),
     tb = l(169795);
 let tR = tf.A.getArticleURL(O.MVz.BOT_DATA_ACCESS);
 function tP(e) {
@@ -1576,21 +1576,21 @@ function t7(e) {
         children: d,
     });
 }
-var t3 = l(449054),
-    t8 = l(781696),
-    t9 = l(950305),
+var t9 = l(449054),
+    t3 = l(781696),
+    t8 = l(950305),
     t6 = l(548118),
     t2 = l(714991),
-    t4 = l(776231),
-    t5 = l(860689),
+    t5 = l(776231),
+    t4 = l(860689),
     le = l(728968),
     lt = l(937495),
     ll = l(517061);
 function ls(e) {
     let { guild: t, className: l, onClick: s } = e,
         a = (0, tq.Ay)(),
-        n = (0, t5.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
-        o = eo.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, t4.mZ)() }),
+        n = (0, t4.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
+        o = eo.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, t5.mZ)() }),
         c =
             null != o
                 ? o
@@ -1637,7 +1637,7 @@ function ls(e) {
                     (0, i.jsxs)("div", {
                         className: le.Y_,
                         children: [
-                            (0, i.jsx)(t2.A, { className: le.n2, guild: t, tooltipColor: t8.ST.Colors.PRIMARY }),
+                            (0, i.jsx)(t2.A, { className: le.n2, guild: t, tooltipColor: t3.ST.Colors.PRIMARY }),
                             (0, i.jsx)(m.D, { variant: "heading-md/semibold", className: le.J5, children: t.name }),
                         ],
                     }),
@@ -1653,7 +1653,7 @@ function ls(e) {
                         children: (0, i.jsxs)("div", {
                             className: le.FG,
                             children: [
-                                (0, i.jsx)(t9.n, { color: "currentColor", className: le.NP, size: "xs" }),
+                                (0, i.jsx)(t8.n, { color: "currentColor", className: le.NP, size: "xs" }),
                                 (0, i.jsx)(x.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
@@ -1684,7 +1684,7 @@ function la(e) {
                     if (null != e) {
                         k(O.HAw.APP_DIRECTORY_SUPPORT_SERVER_JOINED, { application_id: t.id, support_guild_id: e });
                         let l = { page: O.liQ.APPLICATION_DIRECTORY };
-                        await (0, t3.Z2)(e, l);
+                        await (0, t9.Z2)(e, l);
                     }
                 } catch {}
             }, [t])),
@@ -2024,12 +2024,12 @@ var lM = l(607399),
     l0 = l(375802),
     l1 = l(928658),
     l7 = l(395671),
-    l3 = l(957565),
-    l8 = l(692848),
-    l9 = l(440970);
+    l9 = l(957565),
+    l3 = l(692848),
+    l8 = l(440970);
 let l6 = "start_application_install",
     l2 = "launch_activity";
-function l4(e) {
+function l5(e) {
     let { renderDropdown: t, size: l } = e,
         s = a.useRef(null);
     return (0, i.jsx)(lY.Y, {
@@ -2052,7 +2052,7 @@ function l4(e) {
             }),
     });
 }
-function l5(e) {
+function l4(e) {
     var t;
     let l,
         s,
@@ -2062,7 +2062,7 @@ function l5(e) {
             (l = G()),
             (s = a.useCallback(() => {
                 let e = D.h.getField("guildId") ?? void 0;
-                (0, l8.o)({
+                (0, l3.o)({
                     applicationId: t.id,
                     customInstallUrl: t.custom_install_url,
                     installParams: t.install_params,
@@ -2085,7 +2085,7 @@ function l5(e) {
                         (k(O.HAw.APP_DIRECTORY_INSTALL_CLICKED, { application_id: t.id }),
                         (lM.Fr || lM.v1) && null == t.custom_install_url)
                     ) {
-                        let e = (0, l8.Z)({
+                        let e = (0, l3.Z)({
                             applicationId: t.id,
                             customInstallUrl: t.custom_install_url,
                             installParams: t.install_params,
@@ -2152,7 +2152,7 @@ let st = a.forwardRef(function (e, t) {
         o = a.useCallback(() => {
             let e;
             k(O.HAw.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: l.id }),
-                (0, l3.C)(
+                (0, l9.C)(
                     ((e = l.id), `${location.protocol}//${location.host}${O.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(e)}`),
                     () => (0, lU.P0)((0, lw.o)(w.intl.string(w.t["L/PwZf"]), lV.Ck.SUCCESS)),
                 );
@@ -2239,11 +2239,11 @@ let st = a.forwardRef(function (e, t) {
         ref: t,
         children: [
             (0, i.jsxs)("div", {
-                className: r()(l9.Ik, l9.U),
+                className: r()(l8.Ik, l8.U),
                 children: [
                     g && (0, i.jsx)(se, { size: s, contentWidth: "normal", onClick: m, isSubmitting: p }),
-                    (0, i.jsx)(l5, { application: l, size: s, contentWidth: "normal", variant: x }),
-                    l3.p5
+                    (0, i.jsx)(l4, { application: l, size: s, contentWidth: "normal", variant: x }),
+                    l9.p5
                         ? (0, i.jsx)(ew.K, {
                               variant: "secondary",
                               size: s,
@@ -2252,23 +2252,23 @@ let st = a.forwardRef(function (e, t) {
                               "aria-label": w.intl.string(w.t.z4sP5J),
                           })
                         : null,
-                    (0, i.jsx)(l4, { renderDropdown: (e) => h(!1, e), size: s }),
+                    (0, i.jsx)(l5, { renderDropdown: (e) => h(!1, e), size: s }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: r()(l9.Ik, l9.EX),
+                className: r()(l8.Ik, l8.EX),
                 children: [
                     g && (0, i.jsx)(se, { size: s, contentWidth: "small", onClick: m, isSubmitting: p }),
-                    (0, i.jsx)(l5, { application: l, size: s, contentWidth: "small", variant: x }),
-                    (0, i.jsx)(l4, { renderDropdown: (e) => h(l3.p5, e), size: s }),
+                    (0, i.jsx)(l4, { application: l, size: s, contentWidth: "small", variant: x }),
+                    (0, i.jsx)(l5, { renderDropdown: (e) => h(l9.p5, e), size: s }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: r()(l9.Ik, l9.nU),
+                className: r()(l8.Ik, l8.nU),
                 children: [
                     g && (0, i.jsx)(se, { size: s, contentWidth: "icon", onClick: m, isSubmitting: p }),
-                    (0, i.jsx)(l5, { application: l, size: s, contentWidth: "icon", variant: x }),
-                    (0, i.jsx)(l4, { renderDropdown: (e) => h(l3.p5, e), size: s }),
+                    (0, i.jsx)(l4, { application: l, size: s, contentWidth: "icon", variant: x }),
+                    (0, i.jsx)(l5, { renderDropdown: (e) => h(l9.p5, e), size: s }),
                 ],
             }),
         ],
@@ -2572,7 +2572,7 @@ function sj(e) {
                     return void (0, sc.openModalLazy)(
                         async () => {
                             let { ItemDetailsModal: e } = await Promise.all([
-                                l.e("63202"),
+                                l.e("65159"),
                                 l.e("53917"),
                                 l.e("15186"),
                                 l.e("80830"),
@@ -2600,7 +2600,7 @@ function sj(e) {
                         void (0, sc.openModalLazy)(
                             async () => {
                                 let { SubscriptionDetailsModal: a } = await Promise.all([
-                                    l.e("63202"),
+                                    l.e("65159"),
                                     l.e("53917"),
                                     l.e("15186"),
                                     l.e("80830"),

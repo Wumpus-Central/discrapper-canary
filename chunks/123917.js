@@ -17,13 +17,9 @@ var d = n(192308);
 let _ = {
     show(e) {
         (0, d.openModalLazy)(async () => {
-            let { default: t } = await Promise.all([
-                n.e("83307"),
-                n.e("20577"),
-                n.e("58062"),
-                n.e("46598"),
-                n.e("18469"),
-            ]).then(n.bind(n, 534340));
+            let { default: t } = await Promise.all([n.e("83307"), n.e("20577"), n.e("58062"), n.e("20723")]).then(
+                n.bind(n, 667934),
+            );
             return (n) => (0, c.jsx)(t, { ...n, url: e });
         });
     },

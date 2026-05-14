@@ -334,15 +334,15 @@ function e2(e) {
                         ],
                     });
 }
-var e8 = n(463156),
-    e3 = n(990078),
+var e3 = n(463156),
+    e8 = n(990078),
     e9 = n(349288),
     e5 = n(509434),
     e6 = n(95561),
     e4 = n(874490),
     le = n(370480),
     ll = n(486020),
-    ln = n(76843),
+    ln = n(123917),
     lt = n(783419);
 function li(e) {
     let { account: l, locale: n, userId: i } = e,
@@ -353,7 +353,7 @@ function li(e) {
         renderAccountName: () => {
             let e = s?.getPlatformUserUrl?.(l);
             return null == e
-                ? (0, t.jsx)(e3.m, {
+                ? (0, t.jsx)(e8.m, {
                       overflowOnly: !0,
                       text: l.name,
                       children: (0, t.jsx)(eE.E, { variant: "text-sm/normal", className: ew.GW, children: l.name }),
@@ -373,7 +373,7 @@ function li(e) {
                       children: (0, t.jsxs)("div", {
                           className: ew.vi,
                           children: [
-                              (0, t.jsx)(e3.m, {
+                              (0, t.jsx)(e8.m, {
                                   overflowOnly: !0,
                                   text: l.name,
                                   children: (0, t.jsx)(eE.E, {
@@ -413,7 +413,7 @@ function lr(e) {
     let r = ll.Ay.getApplicationIconURL({ id: i.id, icon: i.icon });
     return (0, t.jsx)(la, {
         renderAccountName: () =>
-            (0, t.jsx)(e3.m, {
+            (0, t.jsx)(e8.m, {
                 overflowOnly: !0,
                 text: n.profile.username,
                 children: (0, t.jsx)(eE.E, {
@@ -441,7 +441,7 @@ function la(e) {
     return (0, t.jsxs)("li", {
         className: ew.FI,
         children: [
-            (0, t.jsx)(e3.m, {
+            (0, t.jsx)(e8.m, {
                 __unsupportedReactNodeAsText: i,
                 children: (0, t.jsx)("div", {
                     className: ew.k_,
@@ -770,7 +770,7 @@ function l2(e) {
         },
     });
 }
-function l8(e) {
+function l3(e) {
     let {
             primaryColor: l,
             secondaryColor: n,
@@ -797,7 +797,7 @@ function l8(e) {
         }),
     });
 }
-function l3(e) {
+function l8(e) {
     let { user: l, guildId: n, disabled: r = !1 } = e,
         a = (0, F.Ay)(l.id, n),
         { pendingThemeColors: o, pendingAvatar: d } = (0, s.cf)([Q.A], () => {
@@ -824,7 +824,7 @@ function l3(e) {
         );
     return null == c || null == g
         ? null
-        : (0, t.jsx)(l8, {
+        : (0, t.jsx)(l3, {
               primaryColor: c,
               secondaryColor: g,
               onSelectPrimaryColor: (e) => {
@@ -1279,7 +1279,7 @@ function ny(e) {
                         children: l,
                     }),
                     r &&
-                        (0, t.jsx)(e3.m, {
+                        (0, t.jsx)(e8.m, {
                             text: eL.intl.string(eL.t.BNg1ir),
                             shouldShow: !i,
                             ariaHidden: !0,
@@ -1357,7 +1357,7 @@ function nE(e) {
                                         disabled: r || v,
                                         showNitroIcon: !0,
                                         children: [
-                                            (0, t.jsx)(l3, { user: g, guildId: l, disabled: r || !h }),
+                                            (0, t.jsx)(l8, { user: g, guildId: l, disabled: r || !h }),
                                             (0, t.jsx)(lG, { userId: g.id, guildId: l, disabled: r || !h }),
                                         ],
                                     })
@@ -1524,7 +1524,7 @@ var nJ = n(297413),
     n1 = n(219869),
     n7 = n(292666),
     n2 = n(539396);
-function n8(e, l) {
+function n3(e, l) {
     let [n, t] = i.useState("idle"),
         [r, a] = i.useState(e),
         o = "editing" === n,
@@ -1590,7 +1590,7 @@ function n8(e, l) {
         },
     };
 }
-function n3(e) {
+function n8(e) {
     let { text: l, htmlFor: n } = e;
     return (0, t.jsx)(m.A, { tag: "label", htmlFor: n, children: l });
 }
@@ -1618,7 +1618,7 @@ function n9(e) {
         );
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, t.jsx)(n3, { text: r, htmlFor: l }),
+            (0, t.jsx)(n8, { text: r, htmlFor: l }),
             (0, t.jsx)(n7.k, {
                 id: l,
                 inputRef: n,
@@ -1639,7 +1639,7 @@ function n5(e) {
             className: n2.L7,
             children: (0, t.jsx)(n1.T, { ...n, size: "sm", variant: "input-accessory" }),
         });
-    return null == l ? i : (0, t.jsx)(e3.m, { text: l, ariaHidden: !0, children: i });
+    return null == l ? i : (0, t.jsx)(e8.m, { text: l, ariaHidden: !0, children: i });
 }
 function n6(e) {
     let {
@@ -1740,7 +1740,7 @@ function te(e) {
                 [n, f?.guildId],
             ),
         }),
-        { isEditing: C, previewProps: N, inputProps: y, handleCommit: E } = n8(A, I),
+        { isEditing: C, previewProps: N, inputProps: y, handleCommit: E } = n3(A, I),
         P = (0, s.bG)([Q.A], () => Q.A.getPendingChanges(h ?? null).pendingDisplayNameStyles),
         k = eL.intl.string(x ? eL.t.mq6Cg9 : eL.t.XuZU7A),
         R = x ? (m.globalName ?? m.username) : m.username,
@@ -1810,7 +1810,7 @@ function tn(e) {
                 [u?.guildId],
             ),
         }),
-        { previewProps: f, inputProps: p, isEditing: x } = n8(c, m),
+        { previewProps: f, inputProps: p, isEditing: x } = n3(c, m),
         h = null != g && g.length > 0;
     return (0, t.jsx)(n6, {
         ...f,
@@ -2759,7 +2759,7 @@ function tw(e) {
                                                 (0, t.jsxs)("div", {
                                                     className: tk.Oo,
                                                     children: [
-                                                        (0, t.jsx)(e8.A, { isCurrentUser: B, onClose: S }),
+                                                        (0, t.jsx)(e3.A, { isCurrentUser: B, onClose: S }),
                                                         (0, t.jsx)(m.A, {
                                                             children: (0, t.jsx)(f.H, { id: eS, children: eD }),
                                                         }),
