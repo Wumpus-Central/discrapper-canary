@@ -34,7 +34,6 @@ let E = [
         _.iL.ACTIVITY,
         _.iL.VOICE,
         _.iL.IN_APP_REPORTS,
-        _.iL.BLOCK_USER,
         _.iL.SEARCH_RESULTS,
     ].reduce((e, t, n) => ({ ...e, [t]: n }), {}),
     m = ["bad", "neutral", "good"],

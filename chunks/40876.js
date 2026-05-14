@@ -138,7 +138,6 @@ let r = {
             "EMBEDDED_ACTIVITY_CLOSE",
             "VIDEO_BACKGROUND_SHOW_FEEDBACK",
             "IN_APP_REPORTS_SHOW_FEEDBACK",
-            "BLOCK_USER_SHOW_FEEDBACK",
         ],
         inlineRequire: () => n(651649).A,
     },

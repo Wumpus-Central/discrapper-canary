@@ -62,6 +62,7 @@ let I = r.memo(function (e) {
                         isHighlighted: n,
                         showPlaceholderUser: !n,
                         pendingAvatarDecoration: S,
+                        hideDecorators: !0,
                     }),
                 }),
             null != S &&

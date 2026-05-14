@@ -1,21 +1,21 @@
 r.r(t), r.d(t, { default: () => k });
 var s = r(627968),
     a = r(64700),
-    i = r(925747),
+    i = r(873174),
     l = r(575593),
     n = r(334279),
     d = r(702841),
     c = r(778712),
     u = r(717421),
     o = r(287809),
-    m = r(344346),
-    h = r(139136),
+    h = r(344346),
+    m = r(139136),
     g = r(395744),
     f = r(846957),
     j = r(929283),
     x = r(245068),
-    p = r(158216),
-    y = r(985018),
+    p = r(966971),
+    y = r(375708),
     v = r(416408),
     E = r(743102),
     N = r(241988);
@@ -32,7 +32,7 @@ let R = (e) => {
             case l.R.PROFILE_EFFECT:
                 return (0, s.jsx)("div", {
                     className: v.NM,
-                    children: (0, s.jsx)(h.A, {
+                    children: (0, s.jsx)(m.A, {
                         skuId: u.skuId,
                         delayProfileEffectIntro: a,
                         withScaleAnimation: a,
@@ -46,11 +46,12 @@ let R = (e) => {
             case l.R.NAMEPLATE:
                 return (0, s.jsx)("div", {
                     className: v.qF,
-                    children: (0, s.jsx)(m.A, {
+                    children: (0, s.jsx)(h.A, {
                         nameplate: u,
                         user: i,
                         nameplatePreviewSize: "large",
                         isHighlighted: !0,
+                        hideDecorators: !0,
                     }),
                 });
             case l.R.BUNDLE:

@@ -24,14 +24,13 @@ class A extends E.A {
         VIDEO_BACKGROUND_SHOW_FEEDBACK: (e) => this.handleVideoBackgroundShowFeedback(e),
         EMBEDDED_ACTIVITY_CLOSE: (e) => this.handleActivityClose(e),
         IN_APP_REPORTS_SHOW_FEEDBACK: (e) => this.handleInAppReportsFeedback(e),
-        BLOCK_USER_SHOW_FEEDBACK: () => this.handleBlockUserFeedback(),
     };
     handleVoiceChannelFeedback = (e) => {
         let { analyticsData: t } = e;
         this.possiblyShowFeedbackModal(m.MW.VOICE, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("55567"),
+                    n.e("44629"),
                     n.e("94864"),
                     n.e("56030"),
                     n.e("67829"),
@@ -65,7 +64,7 @@ class A extends E.A {
             this.possiblyShowFeedbackModal(m.MW.STREAM, () => {
                 (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("55567"),
+                        n.e("44629"),
                         n.e("94864"),
                         n.e("56030"),
                         n.e("67829"),
@@ -95,7 +94,7 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.VIDEO_BACKGROUND, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("55567"),
+                    n.e("44629"),
                     n.e("94864"),
                     n.e("56030"),
                     n.e("61379"),
@@ -124,7 +123,7 @@ class A extends E.A {
                 (0, r.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("55567"),
+                            n.e("44629"),
                             n.e("94864"),
                             n.e("56030"),
                             n.e("61379"),
@@ -154,7 +153,7 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.IN_APP_REPORTS, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("55567"),
+                    n.e("44629"),
                     n.e("94864"),
                     n.e("56030"),
                     n.e("61379"),
@@ -167,27 +166,6 @@ class A extends E.A {
                     n.e("66897"),
                 ]).then(n.bind(n, 707688));
                 return (n) => (0, i.jsx)(e, { ...n, reportId: t, reportType: s });
-            });
-        });
-    };
-    handleBlockUserFeedback = () => {
-        this.possiblyShowFeedbackModal(m.MW.BLOCK_USER, () => {
-            (0, r.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([
-                    n.e("55567"),
-                    n.e("94864"),
-                    n.e("56030"),
-                    n.e("61379"),
-                    n.e("8891"),
-                    n.e("18413"),
-                    n.e("22255"),
-                    n.e("55925"),
-                    n.e("85033"),
-                    n.e("37388"),
-                    n.e("26484"),
-                    n.e("9163"),
-                ]).then(n.bind(n, 307750));
-                return (t) => (0, i.jsx)(e, { ...t });
             });
         });
     };

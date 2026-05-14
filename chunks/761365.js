@@ -24,6 +24,7 @@ let l = r.memo(function (e) {
                     showPlaceholderUser: !r,
                     showStatus: !0,
                     nameplatePreviewSize: "small" === l ? "small" : "default",
+                    hideDecorators: !0,
                 }),
                 (0, i.jsx)(s._, { showStatus: !0, width: c, opacity: 0.85, size: l }),
                 (0, i.jsx)(s._, { showStatus: !0, width: u, opacity: 0.7, size: l }),

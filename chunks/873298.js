@@ -230,7 +230,6 @@ var i,
         (v[(v.VIDEO_BACKGROUND = 2)] = "VIDEO_BACKGROUND"),
         (v[(v.ACTIVITY = 3)] = "ACTIVITY"),
         (v[(v.IN_APP_REPORTS = 4)] = "IN_APP_REPORTS"),
-        (v[(v.BLOCK_USER = 6)] = "BLOCK_USER"),
         (v[(v.SEARCH_RESULTS = 8)] = "SEARCH_RESULTS"),
         v);
 class er extends D.G {
