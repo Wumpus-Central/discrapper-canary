@@ -1,24 +1,30 @@
 .prompt_fe70ca {
     background-color: var(--modal-background);
     border-radius: 12px;
-    height: 640px;
-    max-height: 640px;
+    height: min(640px, 90vh);
+    max-width: 800px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 800px;
+    width: min(800px, 90vw);
     z-index: 1
 }
 
+.prompt_fe70ca,
 .promptContent_fe70ca {
     display: flex;
-    flex-direction: column;
+    flex-direction: column
+}
+
+.promptContent_fe70ca {
     height: 100%;
     position: relative
 }
 
 .scrollerContent_fe70ca {
-    padding: 80px 100px 40px
+    flex: 1;
+    min-height: 0;
+    padding: clamp(24px, 8vh, 80px) clamp(24px, 10vw, 100px) clamp(16px, 5vh, 40px)
 }
 
 .questionHeader_fe70ca {
@@ -81,6 +87,8 @@
     border-end-end-radius: 12px;
     border-end-start-radius: 12px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
     justify-content: space-between;
     padding: 20px
 }

@@ -996,7 +996,7 @@ let tZ = s.forwardRef(function (e, t) {
             } = e,
             S = (0, d.Vd)(n),
             [N, y] = s.useState(!1),
-            C = "string" == typeof c && null == m ? c : m;
+            C = m ?? ("string" == typeof c ? c : void 0);
         return (0, r.jsxs)(K.c, {
             children: [
                 p ? (0, r.jsx)(W.A, { overlay: !0, hovered: N, selected: u }) : null,
@@ -3435,6 +3435,7 @@ function rm(e) {
                             ...x,
                             ...U,
                             role: "tree",
+                            "aria-multiselectable": !1,
                             className: rc.B2,
                             children: (0, r.jsxs)("div", {
                                 className: rc.qD,
