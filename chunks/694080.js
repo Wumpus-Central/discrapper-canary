@@ -37,11 +37,10 @@ async function f(e) {
                     retries: null != f ? f.retries : void 0,
                 }),
                 A = g.body.user_trial_offer ?? null,
-                I = g.body.user_discount ?? null,
-                T = g.body.user_discount_offer ?? null;
-            if (null != p && null != T && T.discount_id !== p) {
+                I = g.body.user_discount_offer ?? null;
+            if (null != p && null != I && I.discount_id !== p) {
                 let e = Error("Returned user discount offer does not match offer ID request parameter");
-                throw (d.A.captureException(e, { extra: { offer_id: p, user_discount_offer: T }, ...h }), e);
+                throw (d.A.captureException(e, { extra: { offer_id: p, user_discount_offer: I }, ...h }), e);
             }
             return (
                 null == A &&
@@ -50,8 +49,7 @@ async function f(e) {
                 s.h.dispatch({
                     type: "BILLING_USER_OFFER_FETCH_SUCCESS",
                     userTrialOffer: A,
-                    userDiscount: null != I ? o.A.createFromServer(I) : null,
-                    userDiscountOffer: null != T ? o.A.createFromServer(T) : null,
+                    userDiscountOffer: null != I ? o.A.createFromServer(I) : null,
                 }),
                 !0
             );

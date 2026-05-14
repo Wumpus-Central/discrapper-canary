@@ -17,7 +17,7 @@ function l(e) {
 var u = n(669316),
     c = n(287809),
     d = n(469778),
-    _ = n(927578),
+    _ = n(428262),
     f = n(166403),
     h = n(788868);
 let p = {
@@ -239,13 +239,11 @@ let y = new N(r.h, {
             (E.userOffersLastFetchedAtDate = Date.now());
     },
     BILLING_USER_OFFER_FETCH_SUCCESS: function (e) {
-        let { userTrialOffer: t, userDiscount: n, userDiscountOffer: i } = e;
-        null == t && null == n && null == i && m(),
+        let { userTrialOffer: t, userDiscountOffer: n } = e;
+        null == t && null == n && m(),
             null != t
                 ? ((E.userTrialOffers[t.trial_id] = t), (E.userDiscountOffers = {}))
-                : null != n
-                  ? ((E.userDiscountOffers[n.discountId] = n), (E.userTrialOffers = {}))
-                  : null != i && ((E.userDiscountOffers[i.discountId] = i), (E.userTrialOffers = {})),
+                : null != n && ((E.userDiscountOffers[n.discountId] = n), (E.userTrialOffers = {})),
             (E.userOffersLastFetchedAtDate = Date.now()),
             (E.isFetching = !1),
             (E.lastFetchSuccessful = !0);
