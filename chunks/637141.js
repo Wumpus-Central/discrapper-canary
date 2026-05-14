@@ -1,12 +1,12 @@
-l.d(t, { A: () => V });
+l.d(t, { A: () => U });
 var n = l(627968),
     r = l(64700),
     a = l(503698),
     i = l.n(a),
     s = l(702841),
     u = l(661531),
-    o = l(843282),
-    c = l(990078),
+    c = l(843282),
+    o = l(990078),
     d = l(821609),
     m = l(289873),
     x = l(695366),
@@ -84,14 +84,14 @@ function R(e) {
     let { paymentSource: t, selectOption: l, hidePersonalInformation: r } = e,
         a = null != t ? G(t) : null,
         u = a?.type === E.hes.TDS_WALLET,
-        o = (0, s.bG)([C.A], () => {
+        c = (0, s.bG)([C.A], () => {
             if (!u) return null;
             let e = C.A.getBalance(a.id);
             return null != e ? (0, N.$g)(e.amount, e.currency) : null;
         }, [u, a]);
     if (l.value === v.a) return (0, n.jsx)("div", { className: I.wC, children: l.label });
     if (null != a) {
-        let { brand: e, label: t } = O(a, r, o);
+        let { brand: e, label: t } = O(a, r, c);
         return (0, n.jsxs)("div", {
             className: I.IF,
             children: [
@@ -110,8 +110,8 @@ let D = (e) => {
                 handleChange: i,
                 paymentSourceOptions: s,
                 selectedPaymentSourceId: u,
-                newPaymentMethodOptionLabel: o,
-                noticeMessage: c,
+                newPaymentMethodOptionLabel: c,
+                noticeMessage: o,
             } = e,
             d = r.useMemo(
                 () =>
@@ -128,17 +128,17 @@ let D = (e) => {
                     onChange: i,
                     onNew: null != t ? t : () => {},
                     disabled: a || l,
-                    newPaymentMethodOptionLabel: o,
+                    newPaymentMethodOptionLabel: c,
                 }),
-                [u, d, i, t, a, l, o],
+                [u, d, i, t, a, l, c],
             );
-        return (0, n.jsx)(v.v, { ...m, noticeMessage: c });
+        return (0, n.jsx)(v.v, { ...m, noticeMessage: o });
     },
     B = (e) => {
         let { onClick: t } = e;
         return (0, n.jsx)(d.$, { variant: "primary", fullWidth: !0, onClick: t, text: S.intl.string(S.t.eQ2bLp) });
     };
-function V(e) {
+function U(e) {
     let {
             selectedPaymentSourceId: t,
             paymentSources: l,
@@ -150,17 +150,17 @@ function V(e) {
             disabled: L = !1,
             className: P,
             optionClassName: M,
-            dropdownLoading: V,
-            paymentGatewayRestrictions: F,
-            shouldUseUnifiedCheckoutUI: U,
+            dropdownLoading: U,
+            paymentGatewayRestrictions: V,
+            shouldUseUnifiedCheckoutUI: F,
             newPaymentMethodOptionLabel: W,
             defaultPaymentSourceId: Y,
             tooltipText: Z,
         } = e,
         {
             hasNoPaymentSources: H,
-            handleChange: $,
-            paymentSource: z,
+            handleChange: z,
+            paymentSource: $,
             paymentSourceOptions: K,
             selectedPaymentSourceId: Q,
             isStoreCountryEnabled: q,
@@ -172,8 +172,8 @@ function V(e) {
                     hidePersonalInformation: a,
                     onChange: i,
                     onPaymentSourceAdd: u,
-                    paymentGatewayRestrictions: o,
-                    includeNewPaymentSourceOption: c,
+                    paymentGatewayRestrictions: c,
+                    includeNewPaymentSourceOption: o,
                 } = e,
                 d = (0, g.vg)("PaymentSourceDropdown"),
                 m = r.useMemo(() => l.find((e) => G(e) instanceof A.LQ)?.id ?? null, [l]);
@@ -187,7 +187,7 @@ function V(e) {
                 }, [m]),
                 f = 0 === l.length,
                 h = null != n ? [n] : [],
-                y = [...h, ...l, ...(c ? [k] : [])].map((e, t) => {
+                y = [...h, ...l, ...(o ? [k] : [])].map((e, t) => {
                     if (e instanceof b.A) {
                         let t,
                             { brand: l, label: n } = O(e.source, a, x);
@@ -203,18 +203,24 @@ function V(e) {
                         let t,
                             { brand: l, label: n } = O(e, a, x);
                         return (
-                            (t = e === k || null == o || !(o.length > 0) || o.includes(e.paymentGateway)),
+                            (t = e === k || null == c || !(c.length > 0) || c.includes(e.paymentGateway)),
                             { value: e.id, label: n, brand: l, disabled: !t }
                         );
                     }
                     return { key: t, value: e.value, label: e.label };
                 }),
-                j = r.useMemo(() => l.find((e) => e.id === t), [l, t]),
-                T = t;
-            if (null == T && null != o && o.length > 0) {
-                let e = l.filter((e) => o.includes(e.paymentGateway));
-                T = 0 === e.length ? v.a : e[0].id;
-            }
+                j = r.useMemo(() => {
+                    let e = t;
+                    if (null == e && null != c && c.length > 0) {
+                        let t = l.filter((e) => c.includes(e.paymentGateway));
+                        e = 0 === t.length ? v.a : t[0].id;
+                    }
+                    if (d) {
+                        let t = l.filter((e) => e instanceof b.A);
+                        t.length > 0 && t.every((e) => !e.enabled) && (e = v.a);
+                    }
+                    return e;
+                }, [t, c, l, d]);
             return {
                 hasNoPaymentSources: f,
                 handleChange: (e) => {
@@ -227,8 +233,8 @@ function V(e) {
                 },
                 prependOptions: h,
                 paymentSourceOptions: y,
-                paymentSource: j,
-                selectedPaymentSourceId: T,
+                paymentSource: r.useMemo(() => l.find((e) => e.id === j), [l, j]),
+                selectedPaymentSourceId: j,
                 isStoreCountryEnabled: d,
             };
         })({
@@ -238,8 +244,8 @@ function V(e) {
             hidePersonalInformation: i,
             onChange: d,
             onPaymentSourceAdd: h,
-            paymentGatewayRestrictions: F,
-            includeNewPaymentSourceOption: !U,
+            paymentGatewayRestrictions: V,
+            includeNewPaymentSourceOption: !F,
         }),
         J = r.useMemo(() => new Map(l.map((e) => [e.id, e])), [l]),
         X = (function (e) {
@@ -261,11 +267,7 @@ function V(e) {
             let s = n.filter((e) => e instanceof b.A);
             if (s.length > 0) {
                 if (!s.some((e) => e.enabled))
-                    return a
-                        ? S.intl.formatToMarkdownString(w.default["3kMstB"], {
-                              learnMoreUrl: "https://support.discord.com/hc/articles/39799791912087",
-                          })
-                        : S.intl.string(S.t.OqbMBV);
+                    return a ? S.intl.string(w.default["3kMstB"]) : S.intl.string(S.t.OqbMBV);
                 if (null != r) {
                     let e = s.find((e) => e.id === r),
                         t = null != e && !e.enabled,
@@ -276,27 +278,27 @@ function V(e) {
             return null;
         })({
             isTrial: j,
-            selectedPaymentSource: z,
+            selectedPaymentSource: $,
             paymentSources: l,
             defaultPaymentSourceId: Y,
             isStoreCountryEnabled: q,
         });
-    if (V) return (0, n.jsx)("div", { className: I.hN, children: (0, n.jsx)(m.y, { type: m.y.Type.WANDERING_CUBES }) });
+    if (U) return (0, n.jsx)("div", { className: I.hN, children: (0, n.jsx)(m.y, { type: m.y.Type.WANDERING_CUBES }) });
     if (H) return (0, n.jsx)(B, { onClick: h });
-    let ee = U
+    let ee = F
             ? (0, n.jsx)(D, {
                   onPaymentSourceAdd: h,
                   disabled: L,
-                  handleChange: $,
+                  handleChange: z,
                   paymentSourceOptions: K,
                   selectedPaymentSourceId: Q,
                   newPaymentMethodOptionLabel: W,
                   noticeMessage: X,
               })
-            : (0, n.jsx)(o.Te, {
+            : (0, n.jsx)(c.Te, {
                   options: K,
                   value: Q,
-                  onChange: $,
+                  onChange: z,
                   isDisabled: L,
                   className: P,
                   optionClassName: M,
@@ -312,11 +314,11 @@ function V(e) {
                   },
                   "data-migration-pending": !0,
               }),
-        et = null != Z ? (0, n.jsx)(c.m, { asContainer: !0, text: Z, children: ee }) : ee;
+        et = null != Z ? (0, n.jsx)(o.m, { asContainer: !0, text: Z, children: ee }) : ee;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             et,
-            null == X || U
+            null == X || F
                 ? null
                 : (0, n.jsxs)("div", {
                       className: I.ot,
