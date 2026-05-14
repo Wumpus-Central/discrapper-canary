@@ -83,22 +83,22 @@ function j(e) {
     });
 }
 var A = n(71393),
-    C = n(834252),
-    v = n(19311),
-    y = n(482132),
-    E = n(376747);
+    E = n(834252),
+    C = n(19311),
+    v = n(482132),
+    y = n(376747);
 function N(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { subscriptionMetadataRequest: a, selectedStoreListing: s, application: m } = (0, C.P5)(),
+        { subscriptionMetadataRequest: a, selectedStoreListing: s, application: m } = (0, E.P5)(),
         x = (0, c.S3)(),
-        f = (0, d.A)(E.Y),
+        f = (0, d.A)(y.Y),
         h = (0, o.bG)([A.A], () => A.A.getGuild(a?.guild_id)),
         b = l.useCallback(() => t(r.pn.REVIEW), [t]);
     if (null == x) return null;
     let j = (0, u.bg)(x.flags);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(y.dZ, {
+            (0, i.jsx)(v.dZ, {
                 children: f
                     ? (0, i.jsx)(g, {
                           confirmCta: S.intl.string(S.t.PBHFSq),
@@ -122,12 +122,12 @@ function N(e) {
                       }),
             }),
             !f &&
-                (0, i.jsx)(y.UX, {
-                    children: (0, i.jsx)(v.Ay, {
+                (0, i.jsx)(v.UX, {
+                    children: (0, i.jsx)(C.Ay, {
                         onBack: n,
                         backText: S.intl.string(S.t.TQBY1J),
                         onPrimary: b,
-                        primaryCTA: v.ti.CONTINUE,
+                        primaryCTA: C.ti.CONTINUE,
                         primaryText: S.intl.string(S.t["gZhF+3"]),
                     }),
                 }),
@@ -143,13 +143,13 @@ function R(e) {
     let t,
         n,
         { showBenefits: a, handleClose: s, onSubscriptionConfirmation: o } = e,
-        { selectedStoreListing: m, application: x } = (0, C.P5)(),
+        { selectedStoreListing: m, application: x } = (0, E.P5)(),
         { readySlideId: f, updatedSubscription: h } = (0, k.t4)((e) => ({
             readySlideId: e.readySlideId,
             updatedSubscription: e.updatedSubscription,
         })),
         b = (0, c.S3)(),
-        A = (0, d.A)(E.Y),
+        A = (0, d.A)(y.Y),
         { createMultipleConfettiAt: N } = l.useContext(T.x),
         R = b?.name ?? "",
         B = () => {
@@ -186,9 +186,9 @@ function R(e) {
                                     : S.intl.format(S.t.vHkMF4, { tier: R }),
                             })
                           : (0, i.jsx)(P.A, {})),
-                  (n = (0, i.jsx)(v.Ay, {
+                  (n = (0, i.jsx)(C.Ay, {
                       onPrimary: B,
-                      primaryCTA: v.ti.CONTINUE,
+                      primaryCTA: C.ti.CONTINUE,
                       primaryText: S.intl.string(S.t["JtWl+a"]),
                   })))
             : (t = A
@@ -199,8 +199,8 @@ function R(e) {
         }, [N, w]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(y.dZ, { children: [(0, i.jsx)(_.A, {}), t] }),
-                null != n && (0, i.jsx)(y.UX, { children: n }),
+                (0, i.jsxs)(v.dZ, { children: [(0, i.jsx)(_.A, {}), t] }),
+                null != n && (0, i.jsx)(v.UX, { children: n }),
             ],
         })
     );
@@ -229,7 +229,7 @@ function M(e) {
             priceOptions: x,
             setSubscriptionMetadataRequest: f,
             displayCurrency: h,
-        } = (0, C.P5)(),
+        } = (0, E.P5)(),
         S = (0, D.l)(),
         { isGift: b } = (0, F.Pv)(),
         [g, j] = l.useState(!u || !p || m);
@@ -280,22 +280,23 @@ function X(e) {
             setHasAcceptedTerms: x,
             purchaseState: f,
             contextMetadata: h,
-            setUpdatedSubscription: S,
+            purchaseError: S,
+            setUpdatedSubscription: b,
         } = (0, k.t4)((e) => ({
             setHasAcceptedTerms: e.setHasAcceptedTerms,
             purchaseState: e.purchaseState,
             contextMetadata: e.contextMetadata,
+            purchaseError: e.purchaseError,
             setUpdatedSubscription: e.setUpdatedSubscription,
         })),
         {
-            activeSubscription: b,
-            currencies: g,
-            paymentSources: j,
-            priceOptions: A,
-            purchaseError: v,
-            setCurrency: E,
+            activeSubscription: g,
+            currencies: j,
+            paymentSources: A,
+            priceOptions: C,
+            setCurrency: y,
             subscriptionMetadataRequest: N,
-        } = (0, C.P5)(),
+        } = (0, E.P5)(),
         I = (0, W.A)(),
         T = (0, c.S3)();
     H()(null != I, "Expected plan to be selected");
@@ -304,13 +305,13 @@ function X(e) {
         w = (0, G.mx)(),
         U = (0, u.bg)(T?.flags ?? 0);
     l.useEffect(() => {
-        null != v && null != _.current && _.current.scrollIntoView({ behavior: "smooth" });
-    }, [v]);
+        null != S && null != _.current && _.current.scrollIntoView({ behavior: "smooth" });
+    }, [S]);
     let F = l.useCallback(
             (e) => {
-                S(e ?? null), a(r.pn.CONFIRM);
+                b(e ?? null), a(r.pn.CONFIRM);
             },
-            [a, S],
+            [a, b],
         ),
         D = l.useRef(null),
         M = l.useCallback(() => {
@@ -320,38 +321,38 @@ function X(e) {
         ? (0, i.jsx)(P.A, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(y.dZ, {
+                  (0, i.jsx)(v.dZ, {
                       children:
-                          null == b
+                          null == g
                               ? (0, i.jsx)(V._, {
                                     selectedPlanId: I.id,
                                     planGroup: s,
-                                    paymentSources: j,
-                                    priceOptions: A,
+                                    paymentSources: A,
+                                    priceOptions: C,
                                     handlePaymentSourceAdd: M,
                                     metadata: U ? void 0 : N,
                                 })
                               : (0, i.jsx)(Y.A, {
-                                    premiumSubscription: b,
-                                    paymentSources: j,
-                                    priceOptions: A,
+                                    premiumSubscription: g,
+                                    paymentSources: A,
+                                    priceOptions: C,
                                     handlePaymentSourceAdd: M,
                                     planId: I.id,
                                     setHasAcceptedTerms: x,
                                     legalTermsNodeRef: D,
                                     hasLegalTermsFlash: R,
                                     planGroup: s,
-                                    currencies: g,
-                                    onCurrencyChange: (e) => E(e),
+                                    currencies: j,
+                                    onCurrencyChange: (e) => y(e),
                                     hasOpenInvoice: null != o,
                                     purchaseState: f,
                                     handleClose: m,
                                     shouldUseUnifiedCheckoutUI: !0,
                                 }),
                   }),
-                  (0, i.jsx)(y.UX, {
+                  (0, i.jsx)(v.UX, {
                       children: (0, i.jsx)(Q.A, {
-                          premiumSubscription: b ?? null,
+                          premiumSubscription: g ?? null,
                           onBack: () => null != n && a(n),
                           onNext: F,
                           legalTermsNodeRef: D,

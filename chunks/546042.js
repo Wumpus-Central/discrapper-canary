@@ -127,6 +127,7 @@ function en(e) {
             purchaseState: eI,
             setPurchaseState: ex,
             contextMetadata: eg,
+            setPurchaseError: ev,
         } = (0, _.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedSkuId: e.setSelectedSkuId,
@@ -134,10 +135,10 @@ function en(e) {
             purchaseState: e.purchaseState,
             setPurchaseState: e.setPurchaseState,
             contextMetadata: e.contextMetadata,
+            setPurchaseError: e.setPurchaseError,
         })),
         {
-            activitySessionId: ev,
-            setPurchaseError: eM,
+            activitySessionId: eM,
             paymentAuthenticationState: eb,
             purchaseTokenAuthState: eR,
             activeSubscription: ej,
@@ -179,7 +180,7 @@ function en(e) {
             application_id: ec,
             guild_id: ed,
             payment_modal_version: e_,
-            activity_session_id: ev,
+            activity_session_id: eM,
             eligible_for_discount: e1,
             sku_product_line: eV?.productLine,
             checkout_design: e2 ? A.rS.UNIFIED : A.rS.LEGACY,
@@ -239,7 +240,7 @@ function en(e) {
                     { trackedFromStep: n, analyticsDataOverride: l, fulfillment: a, emitPaymentFlowLoadedEvent: i } = t,
                     r = Date.now();
                 if (e === G.pn.CONFIRM && (e8(), S?.(a), eP)) return void e9();
-                eX(e), eh?.(e), eM(null), e === G.pn.ADD_PAYMENT_STEPS && (o.h.wait(c.ET), o.h.wait(d.T3));
+                eX(e), eh?.(e), ev(null), e === G.pn.ADD_PAYMENT_STEPS && (o.h.wait(c.ET), o.h.wait(d.T3));
                 let s = null != n ? n : eJ;
                 null === s || i
                     ? D.default.track($.HAw.PAYMENT_FLOW_LOADED, {
@@ -257,7 +258,7 @@ function en(e) {
                           flow_duration_ms: r - eg.startTime,
                       });
             },
-            [eX, eh, eM, eJ, eS, e4, te, eg.startTime, e8, S, eP, e9, eO],
+            [eX, eh, ev, eJ, eS, e4, te, eg.startTime, e8, S, eP, e9, eO],
         );
     (0, b.b)(eJ, eb, tt, ex), (0, R.Q)(eJ, eR, tt), (0, f.A)(e9), (0, j.s)(ej, () => H(!1), eK), (0, b.QR)(eb);
     let tn = (0, Z.L)({ renderHeader: eu, handleClose: e9 });

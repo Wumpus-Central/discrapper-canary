@@ -197,23 +197,18 @@ function G(e) {
             setHasAcceptedTerms: $,
             setPurchaseState: J,
             contextMetadata: X,
-            order: Q,
+            setPurchaseError: Q,
+            order: ee,
         } = (0, E.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             invoicePreview: e.checkoutInvoicePreview,
             setHasAcceptedTerms: e.setHasAcceptedTerms,
             setPurchaseState: e.setPurchaseState,
             contextMetadata: e.contextMetadata,
+            setPurchaseError: e.setPurchaseError,
             order: e.order,
         })),
-        {
-            priceOptions: ee,
-            setPurchaseError: et,
-            purchaseType: en,
-            paymentSourceId: el,
-            paymentSources: ea,
-            referralCode: ei,
-        } = (0, g.P5)(),
+        { priceOptions: et, purchaseType: en, paymentSourceId: el, paymentSources: ea, referralCode: ei } = (0, g.P5)(),
         er = (0, h.A)(),
         es = (0, C.gU)(),
         {
@@ -243,7 +238,7 @@ function G(e) {
         [e_, eT] = a.useState(!1),
         [ef, eN] = a.useState(!1),
         { hasEntitlements: eI } = (0, _.X)(ey, eo),
-        ex = (0, I.J$)(ee.paymentSourceId),
+        ex = (0, I.J$)(et.paymentSourceId),
         eg = (0, P.l)(),
         ev = null;
     en === j.VVm.ONE_TIME &&
@@ -255,7 +250,7 @@ function G(e) {
                 $(!0),
                 eT(!0),
                 c.h.wait(d.ET),
-                et(null),
+                Q(null),
                 f.default.track(j.HAw.PAYMENT_FLOW_COMPLETED, {
                     ...b,
                     subtotal: z?.subtotal,
@@ -264,11 +259,11 @@ function G(e) {
                     expected_currency: z?.currency,
                     duration_ms: Date.now() - R,
                 });
-        }, [J, $, et, b, R, z]),
+        }, [J, $, Q, b, R, z]),
         eb = a.useCallback(
             (e) => {
                 J(D.h.FAIL),
-                    et(e),
+                    Q(e),
                     f.default.track(j.HAw.PAYMENT_FLOW_FAILED, {
                         ...b,
                         payment_error_code: e?.code,
@@ -277,7 +272,7 @@ function G(e) {
                         duration_ms: Date.now() - R,
                     });
             },
-            [J, et, b, R, eS],
+            [J, Q, b, R, eS],
         ),
         eR = a.useCallback(
             (e) =>
@@ -302,7 +297,7 @@ function G(e) {
                 subscriptionPlan: er,
                 planGroup: G,
                 trialId: L,
-                priceOptions: ee,
+                priceOptions: et,
                 paymentSource: eS,
                 isPrepaidPaymentPastDue: eg,
                 openInvoiceId: B,
@@ -315,7 +310,7 @@ function G(e) {
                 loadId: X.loadId,
                 giftInfoOptions: eE,
                 invoicePreview: z,
-                order: Q,
+                order: ee,
             });
         },
         eO = (0, m.D7)({ location: "PaymentModalReviewStepFooter" }),

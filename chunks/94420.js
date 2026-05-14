@@ -38,6 +38,8 @@ function u(e) {
             setPurchaseState: (t) => e({ purchaseState: t }),
             appliedUserDiscounts: [],
             setAppliedUserDiscounts: (t) => e({ appliedUserDiscounts: t }),
+            purchaseError: null,
+            setPurchaseError: (t) => e({ purchaseError: t ?? null }),
             updatedSubscription: null,
             setUpdatedSubscription: (t) => e({ updatedSubscription: t }),
             readySlideId: null,

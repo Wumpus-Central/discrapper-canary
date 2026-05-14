@@ -48,16 +48,17 @@ function b(e) {
             setAppliedUserDiscounts: B,
             contextMetadata: W,
             setUpdatedSubscription: V,
+            purchaseError: H,
         } = (0, v.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setEntitlementsGranted: e.setEntitlementsGranted,
             setAppliedUserDiscounts: e.setAppliedUserDiscounts,
             contextMetadata: e.contextMetadata,
+            purchaseError: e.purchaseError,
             setUpdatedSubscription: e.setUpdatedSubscription,
         })),
         {
-            activeSubscription: H,
-            purchaseError: K,
+            activeSubscription: K,
             setCurrency: Z,
             isPremium: q,
             purchaseType: z,
@@ -105,8 +106,8 @@ function b(e) {
         ed = null != ee ? ee.id : void 0,
         ep = a.useMemo(() => ({ user_trial_offer_id: ed }), [ed]);
     a.useEffect(() => {
-        null != K && null != es.current && es.current.scrollIntoView({ behavior: "smooth" });
-    }, [K]);
+        null != H && null != es.current && es.current.scrollIntoView({ behavior: "smooth" });
+    }, [H]);
     let em = a.useCallback(
             (e, t, n) => {
                 let l = e ?? null;
@@ -159,7 +160,7 @@ function b(e) {
             [t, ex, eN, Y, eI],
         ),
         ev = (0, l.jsx)(h.A, {
-            premiumSubscription: H ?? null,
+            premiumSubscription: K ?? null,
             invoiceError: eC,
             onBack: eT,
             onNext: em,

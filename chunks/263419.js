@@ -96,7 +96,7 @@ let R = (e) => {
                 disablePurchases: b,
                 paymentContextOverrides: x,
             } = e,
-            y = h ? { purchasePreviewError: null, purchaseError: null, ...x } : { ...x };
+            y = h ? { purchasePreviewError: null, ...x } : { ...x };
         b && (y.disablePurchasesForStorybook = !0);
         let g = `${a}-${n}-${c}`;
         return (0, s.jsx)(
