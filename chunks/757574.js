@@ -1,7 +1,12 @@
 "use strict";
 n.d(t, { Uq: () => o, gD: () => l, lz: () => u }), n(321073);
-var i = n(734066),
-    r = n(372684),
+let i = (0, n(945810).mj)({
+    kind: "user",
+    name: "2026-05-clips-timeline",
+    defaultConfig: { enableTimelineUpload: !1 },
+    variations: { 1: { enableTimelineUpload: !0 } },
+});
+var r = n(372684),
     s = n(696016),
     a = n(731854);
 function o(e) {
@@ -11,7 +16,7 @@ function l(e) {
     return e.slice(0, s.GU);
 }
 function u(e) {
-    let { enableSpeakingIndicators: t } = i.L_.getConfig({ location: "getClipEventsTimeline" });
+    let { enableTimelineUpload: t } = i.getConfig({ location: "getClipEventsTimeline" });
     if (!t || (e.timeline?.length ?? 0) === 0 || e.decision?.timestamp == null) return;
     let n = e.editMetadata ?? { start: 0, end: e.length / 1e3 },
         s = e.decision.timestamp - e.length,
