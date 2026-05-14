@@ -73,12 +73,12 @@
     background-color: var(--modal-background);
     border-radius: 12px;
     flex-direction: column;
-    height: 640px;
-    max-height: 640px;
+    height: min(640px, 90vh);
+    max-width: 800px;
     padding: 0 24px;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 800px
+    width: min(800px, 90vw)
 }
 
 .bottomCenterContent_c08b38,
