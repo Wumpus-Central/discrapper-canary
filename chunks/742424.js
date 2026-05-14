@@ -594,7 +594,7 @@ let tY = (0, eQ.Fe)({
                 n.e("24059"),
                 n.e("86624"),
                 n.e("85484"),
-                n.e("26472"),
+                n.e("67537"),
                 n.e("37813"),
                 n.e("55990"),
                 n.e("78720"),
@@ -2655,6 +2655,7 @@ let n3 = (e) => {
                             return (0, i.jsx)(d.D, {
                                 ...e,
                                 ...S,
+                                role: "button",
                                 innerRef: p,
                                 focusProps: { offset: { top: 4, bottom: 4, left: 4, right: 4 } },
                                 onClick: () => {
