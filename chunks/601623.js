@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { w: () => t7, A: () => t9 });
+n.d(t, { w: () => t8, A: () => ne });
 var i = n(627968),
     r = n(64700),
     s = n(989349),
@@ -697,8 +697,9 @@ function tg(e) {
     });
 }
 var tA = n(549996),
-    tI = n(498470);
-function tT() {
+    tI = n(498470),
+    tT = n(637706);
+function tS() {
     let e = (0, tA.c)(eu.C.NAGBAR),
         t = e?.properties.properties.oneofKind === "nagbar" ? e.properties.properties.nagbar : null,
         n = e?.promotionId,
@@ -725,16 +726,25 @@ function tT() {
     )
         return null;
     let l = (0, tI.h)({
-        buttonAction: t.ctaAction,
-        deeplinkSection: t.deeplinkSection,
-        onClose: () => {
-            s(en.i.TAKE_ACTION);
-        },
-    });
+            buttonAction: t.ctaAction,
+            deeplinkSection: t.deeplinkSection,
+            onClose: () => {
+                s(en.i.TAKE_ACTION);
+            },
+        }),
+        u = (0, tT.C)(t.helpArticle, "");
     return (0, i.jsxs)(th.T0, {
         onClick: a,
         children: [
-            (0, i.jsx)(th.In, { children: t.body }),
+            (0, i.jsxs)(th.In, {
+                children: [
+                    t.body,
+                    null != u &&
+                        (0, i.jsxs)(i.Fragment, {
+                            children: ["\xa0", (0, i.jsx)(p.Anchor, { href: u.url, children: u.linkText })],
+                        }),
+                ],
+            }),
             "" !== t.ctaLabel &&
                 (0, i.jsx)(th.fY, {
                     text: t.ctaLabel,
@@ -748,11 +758,11 @@ function tT() {
         ],
     });
 }
-var tS = n(378974),
-    tN = n(340124),
-    ty = n(14594);
-function tC() {
-    let [e, t] = (0, ed.Wl)(V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: ty.aH });
+var tN = n(378974),
+    ty = n(340124),
+    tC = n(14594);
+function tv() {
+    let [e, t] = (0, ed.Wl)(V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tC.aH });
     return e !== V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
         ? null
         : (0, i.jsxs)(h.$T, {
@@ -782,66 +792,66 @@ function tC() {
               ],
           });
 }
-var tv = n(825484),
-    tO = n(139716),
-    tR = n(847599),
-    tb = n(734057),
-    tD = n(849736),
-    tL = n(354583),
-    tw = n(366098),
-    tM = n(418208),
-    tP = n(992262);
-function tx(e) {
-    if (!e && (0, tM.Cf)())
-        return void tO.A.showAgeVerificationGetStartedModal({ entryPoint: tR.q1.STAGE_CHANNEL_RAISE_HAND });
+var tO = n(825484),
+    tR = n(139716),
+    tb = n(847599),
+    tD = n(734057),
+    tL = n(849736),
+    tw = n(354583),
+    tM = n(366098),
+    tP = n(418208),
+    tx = n(992262);
+function tU(e) {
+    if (!e && (0, tP.Cf)())
+        return void tR.A.showAgeVerificationGetStartedModal({ entryPoint: tb.q1.STAGE_CHANNEL_RAISE_HAND });
     let t = eD.A.getVoiceChannelId();
     if (null == t) return;
-    let n = tb.A.getChannel(t);
-    null != n && (0, tD.e7)(n, e);
+    let n = tD.A.getChannel(t);
+    null != n && (0, tL.e7)(n, e);
 }
-function tU(e) {
+function tk(e) {
     let { channelId: t } = e,
-        n = (0, tw.D3)(t) ?? 0,
-        r = (0, tw.Xk)(t) ?? 0;
+        n = (0, tM.D3)(t) ?? 0,
+        r = (0, tM.Xk)(t) ?? 0;
     return n > 0 && r > 0
         ? (0, i.jsx)("div", {
-              className: tP.Z5,
-              children: (0, i.jsx)("div", { className: eX()(tP.qQ, tP.lN), children: ea.intl.string(ea.t.xlJRfv) }),
+              className: tx.Z5,
+              children: (0, i.jsx)("div", { className: eX()(tx.qQ, tx.lN), children: ea.intl.string(ea.t.xlJRfv) }),
           })
         : n > 0
           ? (0, i.jsx)("div", {
-                className: tP.Z5,
-                children: (0, i.jsx)("div", { className: eX()(tP.qQ, tP.lN), children: ea.intl.string(ea.t.WYad9Z) }),
+                className: tx.Z5,
+                children: (0, i.jsx)("div", { className: eX()(tx.qQ, tx.lN), children: ea.intl.string(ea.t.WYad9Z) }),
             })
           : r > 0
             ? (0, i.jsx)("div", {
-                  className: tP.Z5,
-                  children: (0, i.jsx)("div", { className: eX()(tP.qQ, tP.lN), children: ea.intl.string(ea.t.eHq2OF) }),
+                  className: tx.Z5,
+                  children: (0, i.jsx)("div", { className: eX()(tx.qQ, tx.lN), children: ea.intl.string(ea.t.eHq2OF) }),
               })
             : null;
 }
-function tk() {
-    let e = (0, tL.A)();
+function tG() {
+    let e = (0, tw.A)();
     return null == e
         ? null
         : (0, i.jsxs)(h.$T, {
-              className: tP.kL,
+              className: tx.kL,
               color: h.Hv.DEFAULT,
               children: [
                   ea.intl.string(ea.t.Ul1RJQ),
-                  (0, i.jsx)(tU, { channelId: e.id }),
-                  (0, i.jsxs)(tv.e, {
+                  (0, i.jsx)(tk, { channelId: e.id }),
+                  (0, i.jsxs)(tO.e, {
                       size: "sm",
-                      className: tP.GC,
+                      className: tx.GC,
                       children: [
                           (0, i.jsx)(e0.$, {
                               variant: "overlay-primary",
                               text: ea.intl.string(ea.t.MpO0px),
-                              onClick: () => tx(!1),
+                              onClick: () => tU(!1),
                           }),
                           (0, i.jsx)(e0.$, {
                               variant: "secondary",
-                              onClick: () => tx(!0),
+                              onClick: () => tU(!0),
                               text: ea.intl.string(ea.t["1YDv7a"]),
                           }),
                       ],
@@ -849,28 +859,28 @@ function tk() {
               ],
           });
 }
-var tG = n(952818),
-    tF = n(935671);
-function tV() {
-    (0, tF.sL)("nagbar");
-}
+var tF = n(952818),
+    tV = n(935671);
 function tB() {
-    return null == (0, c.bG)([tG.Ay], () => tG.Ay.getVisibleGame())
+    (0, tV.sL)("nagbar");
+}
+function tH() {
+    return null == (0, c.bG)([tF.Ay], () => tF.Ay.getVisibleGame())
         ? null
         : (0, i.jsxs)(h.$T, {
               color: h.Hv.DANGER,
               children: [
-                  (0, i.jsx)(h.PM, { noticeType: ei.kqX.SYSTEM_SERVICE_WARNING, onClick: () => t7() }),
+                  (0, i.jsx)(h.PM, { noticeType: ei.kqX.SYSTEM_SERVICE_WARNING, onClick: () => t8() }),
                   ea.intl.string(ea.t["5rPt+j"]),
                   (0, i.jsx)(h.Z_, {
-                      onClick: tV,
+                      onClick: tB,
                       noticeType: ei.kqX.SYSTEM_SERVICE_WARNING,
                       children: ea.intl.string(ea.t["1iI46O"]),
                   }),
               ],
           });
 }
-function tH() {
+function tj() {
     return (0, i.jsxs)(h.$T, {
         color: h.Hv.DANGER,
         children: [
@@ -885,11 +895,11 @@ function tH() {
         ],
     });
 }
-var tj = n(189213),
-    tY = n(150934);
-function tW(e) {
+var tY = n(189213),
+    tW = n(150934);
+function tK(e) {
     let [t, n] = r.useState(!1);
-    return (0, i.jsx)(tj.Modal, {
+    return (0, i.jsx)(tY.Modal, {
         size: "md",
         title: ea.intl.string(ea.t["zQ1+Jw"]),
         subtitle: ea.intl.string(ea.t.K1gWXn),
@@ -902,7 +912,7 @@ function tW(e) {
                 variant: "primary",
             },
         ],
-        actionBarInput: (0, i.jsx)(tY.S, {
+        actionBarInput: (0, i.jsx)(tW.S, {
             checked: t,
             onChange: (e) => n(e),
             label: ea.intl.string(ea.t.XAiAgD),
@@ -911,18 +921,18 @@ function tW(e) {
         ...e,
     });
 }
-var tK = n(51760),
-    tz = n(763827),
-    t$ = n(67480),
-    tq = n(147964),
-    tZ = n(177141),
-    tX = n(975571),
-    tQ = n(723702),
-    tJ = n(325278),
-    t0 = n(831502),
-    t1 = n(731854);
-let t2 = new F.A("Notice"),
-    t3 = (e) => {
+var tz = n(51760),
+    t$ = n(763827),
+    tq = n(67480),
+    tZ = n(147964),
+    tX = n(177141),
+    tQ = n(975571),
+    tJ = n(723702),
+    t0 = n(325278),
+    t1 = n(831502),
+    t2 = n(731854);
+let t3 = new F.A("Notice"),
+    t6 = (e) => {
         let { error: t, allowClick: n = !1 } = e,
             r = (0, eS.B1)(t)?.errorCode,
             s = ea.intl.formatToPlainString(ea.t.ejOT95, { errorCode: r }),
@@ -938,12 +948,12 @@ let t2 = new F.A("Notice"),
             ? (0, i.jsx)(f.D, {
                   tag: "span",
                   className: eo.wz,
-                  onClick: () => open(tX.A.getArticleURL(ei.MVz.AV_ERROR_CODES)),
+                  onClick: () => open(tQ.A.getArticleURL(ei.MVz.AV_ERROR_CODES)),
                   children: a,
               })
             : a;
     },
-    t6 = (e) => {
+    t4 = (e) => {
         let { noticeType: t } = e;
         return (0, i.jsxs)(h.$T, {
             color: h.Hv.DANGER,
@@ -951,43 +961,43 @@ let t2 = new F.A("Notice"),
                 (0, i.jsx)(h.PM, {
                     noticeType: t,
                     onClick: () => {
-                        t7();
+                        t8();
                     },
                 }),
                 ea.intl.string(ea.t.o3zuYz),
-                (0, i.jsx)(t3, { error: eS.iy.NO_INPUT_DEVICES }),
+                (0, i.jsx)(t6, { error: eS.iy.NO_INPUT_DEVICES }),
                 (0, i.jsx)(h.eC, {
-                    href: tX.A.getArticleURL(ei.MVz.NO_INPUT_DETECTED),
+                    href: tQ.A.getArticleURL(ei.MVz.NO_INPUT_DETECTED),
                     noticeType: t,
                     children: ea.intl.string(ea.t.RYKKox),
                 }),
             ],
         });
     };
-function t4(e) {
-    return (0, tQ.isWindows)() && u().satisfies(w.A?.os.release, tJ.PH)
+function t5(e) {
+    return (0, tJ.isWindows)() && u().satisfies(w.A?.os.release, t0.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
 }
-function t5(e) {
+function t7(e) {
     let t,
         n,
         { noticeType: r } = e,
-        s = (0, tc.x5)(t1.oh.AUDIO_INPUT),
+        s = (0, tc.x5)(t2.oh.AUDIO_INPUT),
         a = s?.guid ?? "",
-        { inputDeviceOSMuted: o, inputDeviceOSVolume: l } = (0, c.cf)([tK.Ay], () => ({
-            inputDeviceOSMuted: tK.Ay.getInputDeviceOSMuted(),
-            inputDeviceOSVolume: tK.Ay.getInputDeviceOSVolume(),
+        { inputDeviceOSMuted: o, inputDeviceOSVolume: l } = (0, c.cf)([tz.Ay], () => ({
+            inputDeviceOSMuted: tz.Ay.getInputDeviceOSMuted(),
+            inputDeviceOSVolume: tz.Ay.getInputDeviceOSVolume(),
         })),
         u = !1;
     return (
         !0 === o
             ? ((t = ea.intl.string(ea.t.ppW3ri)),
-              (n = (0, i.jsx)(h.eC, { href: t4(a), noticeType: r, children: ea.intl.string(ea.t.QghSIq) })))
+              (n = (0, i.jsx)(h.eC, { href: t5(a), noticeType: r, children: ea.intl.string(ea.t.QghSIq) })))
             : 0 === l
               ? ((t = ea.intl.string(ea.t.j4gGA4)),
-                (n = (0, i.jsx)(h.eC, { href: t4(a), noticeType: r, children: ea.intl.string(ea.t.QghSIq) })))
-              : tK.Ay.supports(t1.O5.LOOPBACK)
+                (n = (0, i.jsx)(h.eC, { href: t5(a), noticeType: r, children: ea.intl.string(ea.t.QghSIq) })))
+              : tz.Ay.supports(t2.O5.LOOPBACK)
                 ? ((t = ea.intl.string(ea.t.dNAJ18)),
                   (u = !0),
                   (n = (0, i.jsx)(h.zr, {
@@ -998,7 +1008,7 @@ function t5(e) {
                   })))
                 : ((t = ea.intl.string(ea.t.nCO9bI)),
                   (n = (0, i.jsx)(h.eC, {
-                      href: tX.A.getArticleURL(ei.MVz.NO_INPUT_DETECTED),
+                      href: tQ.A.getArticleURL(ei.MVz.NO_INPUT_DETECTED),
                       noticeType: r,
                       children: ea.intl.string(ea.t.RYKKox),
                   }))),
@@ -1008,23 +1018,23 @@ function t5(e) {
                 (0, i.jsx)(h.PM, {
                     noticeType: r,
                     onClick: () => {
-                        t7(), (0, m.openModal)((e) => (0, i.jsx)(tW, { ...e }));
+                        t8(), (0, m.openModal)((e) => (0, i.jsx)(tK, { ...e }));
                     },
                 }),
                 t,
-                (0, i.jsx)(t3, { allowClick: u, error: eS.iy.NO_AUDIO_INPUT_DETECTED }),
+                (0, i.jsx)(t6, { allowClick: u, error: eS.iy.NO_AUDIO_INPUT_DETECTED }),
                 n,
             ],
         })
     );
 }
-function t7(e) {
+function t8(e) {
     y.A.dismiss(null != e ? { untilAtLeast: a()(e) } : void 0);
 }
-let t8 = r.memo(function () {
+let t9 = r.memo(function () {
     let e = (0, c.bG)([em.default], () => em.default.getCurrentUser()),
         t = (0, c.bG)([eL.A], () => eL.A.getGuildId()),
-        s = (0, c.bG)([tZ.Ay], () => tZ.Ay.getNotice()),
+        s = (0, c.bG)([tX.Ay], () => tX.Ay.getNotice()),
         { analyticsLocations: a } = (0, x.Ay)(),
         l = (0, L.Ay)(),
         u = (0, eq.H)(t),
@@ -1058,10 +1068,10 @@ let t8 = r.memo(function () {
         null == s)
     )
         return null;
-    let f = null != s.type ? tZ.Re[s.type] : null,
-        S = null != s.type ? tZ.rV[s.type] : null,
-        y = null != s.type ? tZ.f7[s.type] : null,
-        w = tZ.pe[s.type];
+    let f = null != s.type ? tX.Re[s.type] : null,
+        S = null != s.type ? tX.rV[s.type] : null,
+        y = null != s.type ? tX.f7[s.type] : null,
+        w = tX.pe[s.type];
     if (null != f) return (0, i.jsx)(eT.$, { dismissibleContent: f, noticeType: s.type });
     if (null != S) return (0, i.jsx)(eh, { dismissibleContent: S });
     if (null != y) return (0, i.jsx)(eI, { dismissibleContent: y });
@@ -1069,23 +1079,23 @@ let t8 = r.memo(function () {
     let P = s.metadata?.premiumType;
     switch (s.type) {
         case ei.kqX.PTT_NO_KEYBIND_WARNING:
-            return (0, i.jsx)(tH, {});
+            return (0, i.jsx)(tj, {});
         case ei.kqX.LURKING_GUILD:
             return (0, i.jsx)(tl, {});
         case ei.kqX.PENDING_MEMBER:
             return (0, i.jsx)(e8, {});
         case ei.kqX.INVITED_TO_SPEAK:
-            return (0, i.jsx)(tk, {});
+            return (0, i.jsx)(tG, {});
         case ei.kqX.GUILD_RAID_NOTIFICATION:
             let { dismissUntil: F } = s.metadata;
-            return (0, i.jsx)(ek, { onDismiss: () => t7(F) });
+            return (0, i.jsx)(ek, { onDismiss: () => t8(F) });
         case ei.kqX.WIN32_DEPRECATED_MESSAGE:
             let { dismissUntil: V } = s.metadata;
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(V), noticeType: s.type }),
-                    ea.intl.format(ea.t["08KQ1P"], { helpCenterLink: tX.A.getArticleURL(ei.MVz.WIN32_DEPRECATE) }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(V), noticeType: s.type }),
+                    ea.intl.format(ea.t["08KQ1P"], { helpCenterLink: tQ.A.getArticleURL(ei.MVz.WIN32_DEPRECATE) }),
                 ],
             });
         case ei.kqX.WIN7_8_DEPRECATED_MESSAGE:
@@ -1093,8 +1103,8 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(B), noticeType: s.type }),
-                    ea.intl.format(ea.t["8Je+dX"], { helpCenterLink: tX.A.getArticleURL(ei.MVz.WIN7_8_DEPRECATE) }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(B), noticeType: s.type }),
+                    ea.intl.format(ea.t["8Je+dX"], { helpCenterLink: tQ.A.getArticleURL(ei.MVz.WIN7_8_DEPRECATE) }),
                 ],
             });
         case ei.kqX.WIN_COMPAT_MODE_MESSAGE:
@@ -1102,7 +1112,7 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(H), noticeType: s.type }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(H), noticeType: s.type }),
                     ea.intl.string(ea.t["9DJgOg"]),
                 ],
             });
@@ -1111,8 +1121,8 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(j), noticeType: s.type }),
-                    ea.intl.format(ea.t.q8VPLo, { helpCenterLink: tX.A.getArticleURL(ei.MVz.MACOS_19_DEPRECATE) }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(j), noticeType: s.type }),
+                    ea.intl.format(ea.t.q8VPLo, { helpCenterLink: tQ.A.getArticleURL(ei.MVz.MACOS_19_DEPRECATE) }),
                 ],
             });
         case ei.kqX.E2EE_UPDATE_REQUIRED:
@@ -1120,9 +1130,9 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(Y), noticeType: s.type }),
-                    ea.intl.format(tQ.isPlatformEmbedded ? ea.t.J232TI : ea.t.vceuiL, {
-                        helpCenterLink: tX.A.getArticleURL(ei.MVz.END_TO_END_ENCRYPTION),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(Y), noticeType: s.type }),
+                    ea.intl.format(tJ.isPlatformEmbedded ? ea.t.J232TI : ea.t.vceuiL, {
+                        helpCenterLink: tQ.A.getArticleURL(ei.MVz.END_TO_END_ENCRYPTION),
                     }),
                 ],
             });
@@ -1130,10 +1140,10 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(), noticeType: s.type }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(), noticeType: s.type }),
                     ea.intl.string(ea.t.iW0fcQ),
                     (0, i.jsx)(h.eC, {
-                        href: tX.A.getArticleURL(ei.MVz.WINDOWS_MEDIA_PACK),
+                        href: tQ.A.getArticleURL(ei.MVz.WINDOWS_MEDIA_PACK),
                         target: "_blank",
                         noticeType: s.type,
                         children: ea.intl.string(ea.t.LQG5j6),
@@ -1144,7 +1154,7 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.DEFAULT,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(), noticeType: s.type }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(), noticeType: s.type }),
                     s.message,
                     null != s.buttonText
                         ? (0, i.jsx)(h.Z_, { onClick: s.callback, noticeType: s.type, children: s.buttonText })
@@ -1155,7 +1165,7 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.DANGER,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(), noticeType: s.type }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(), noticeType: s.type }),
                     s.message,
                     null != s.buttonText
                         ? (0, i.jsx)(h.Z_, { onClick: s.callback, noticeType: s.type, children: s.buttonText })
@@ -1168,15 +1178,15 @@ let t8 = r.memo(function () {
                 children: [
                     (0, i.jsx)(h.PM, {
                         onClick: () => {
-                            C.clearRemoteDisconnectVoiceChannelId(), t7();
+                            C.clearRemoteDisconnectVoiceChannelId(), t8();
                         },
                         noticeType: s.type,
                     }),
                     ea.intl.string(ea.t.bOQ3jV),
                     (0, i.jsx)(h.Z_, {
                         onClick: () => {
-                            let e = tz.A.getRemoteDisconnectVoiceChannelId();
-                            null != e && null != tb.A.getChannel(e) && v.default.selectVoiceChannel(e);
+                            let e = t$.A.getRemoteDisconnectVoiceChannelId();
+                            null != e && null != tD.A.getChannel(e) && v.default.selectVoiceChannel(e);
                         },
                         noticeType: s.type,
                         children: ea.intl.string(ea.t.vD60Pv),
@@ -1189,15 +1199,15 @@ let t8 = r.memo(function () {
                 children: [
                     (0, i.jsx)(h.PM, {
                         onClick: () => {
-                            C.clearLastSessionVoiceChannelId(), t7();
+                            C.clearLastSessionVoiceChannelId(), t8();
                         },
                         noticeType: s.type,
                     }),
                     ea.intl.string(ea.t.jY2lUA),
                     (0, i.jsx)(h.Z_, {
                         onClick: () => {
-                            let e = tz.A.getLastSessionVoiceChannelId();
-                            null != e && null != tb.A.getChannel(e) && v.default.selectVoiceChannel(e);
+                            let e = t$.A.getLastSessionVoiceChannelId();
+                            null != e && null != tD.A.getChannel(e) && v.default.selectVoiceChannel(e);
                         },
                         noticeType: s.type,
                         children: ea.intl.string(ea.t.vD60Pv),
@@ -1209,7 +1219,7 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.DANGER,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(), noticeType: s.type }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(), noticeType: s.type }),
                     (0, i.jsx)("img", {
                         alt: "",
                         className: eo.tV,
@@ -1223,7 +1233,7 @@ let t8 = r.memo(function () {
                     }),
                     (0, i.jsx)(p.Anchor, {
                         className: eo.uD,
-                        href: tX.A.getArticleURL(ei.MVz.SPOTIFY_AUTO_PAUSED),
+                        href: tQ.A.getArticleURL(ei.MVz.SPOTIFY_AUTO_PAUSED),
                         target: "_blank",
                         children: ea.intl.string(ea.t.CiqAIU),
                     }),
@@ -1276,9 +1286,9 @@ let t8 = r.memo(function () {
                 ],
             });
         case ei.kqX.NO_INPUT_DETECTED:
-            return (0, i.jsx)(t5, { noticeType: s.type });
+            return (0, i.jsx)(t7, { noticeType: s.type });
         case ei.kqX.NO_INPUT_DEVICES_DETECTED:
-            return (0, i.jsx)(t6, { noticeType: s.type });
+            return (0, i.jsx)(t4, { noticeType: s.type });
         case ei.kqX.HARDWARE_MUTE:
             if (null != s.metadata) {
                 let { vendor: e, model: t } = s.metadata;
@@ -1289,7 +1299,7 @@ let t8 = r.memo(function () {
                         (0, i.jsx)(h.PM, {
                             noticeType: s.type,
                             onClick: () => {
-                                I.A.setEnableHardwareMuteNotice(!1), t7();
+                                I.A.setEnableHardwareMuteNotice(!1), t8();
                             },
                         }),
                         (0, i.jsx)(h.eC, {
@@ -1310,7 +1320,7 @@ let t8 = r.memo(function () {
                         (0, i.jsx)(h.PM, {
                             noticeType: s.type,
                             onClick: () => {
-                                I.A.setEnableHardwareMuteNotice(!1), t7();
+                                I.A.setEnableHardwareMuteNotice(!1), t8();
                             },
                         }),
                     ],
@@ -1320,7 +1330,7 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.STREAMER_MODE,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(), noticeType: ei.kqX.STREAMER_MODE }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(), noticeType: ei.kqX.STREAMER_MODE }),
                     ea.intl.string(ea.t.iEgBXp),
                     (0, i.jsx)(h.Z_, {
                         onClick: () => R.A.setEnabled(!1),
@@ -1332,7 +1342,7 @@ let t8 = r.memo(function () {
         case ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
             if (null == s.metadata) return null;
             let { skuId: K, applicationId: $ } = s.metadata,
-                q = t$.A.get(K),
+                q = tq.A.get(K),
                 X = U.A.getApplication($);
             if (null == q || null == X) return null;
             let J = { page: ei.liQ.IN_APP };
@@ -1433,7 +1443,7 @@ let t8 = r.memo(function () {
                                 }),
                                     N(q.id);
                             } catch (e) {
-                                null != e && t2.error("Failed to open off-platform premium perk modal", e);
+                                null != e && t3.error("Failed to open off-platform premium perk modal", e);
                             }
                         },
                         children: ea.intl.string(ea.t.KEwPYx),
@@ -1443,21 +1453,21 @@ let t8 = r.memo(function () {
         case ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
             if (null == s.metadata) return null;
             let { skuId: e, applicationId: t } = s.metadata,
-                n = t$.A.get(e),
+                n = tq.A.get(e),
                 r = U.A.getApplication(t);
             if (null == n || null == r) return null;
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.PREMIUM_TIER_1,
                 children: [
                     (0, i.jsx)(h.PM, {
-                        onClick: () => t7(),
+                        onClick: () => t8(),
                         noticeType: ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL,
                     }),
                     (0, i.jsx)(E.t, { size: "md", color: "currentColor", className: eo.PC }),
                     ea.intl.format(ea.t.LquIKC, { applicationName: r.name, skuName: n.name }),
                     (0, i.jsx)(h.zr, {
                         children: (0, i.jsx)(o.N_, {
-                            onClick: () => t7(),
+                            onClick: () => t8(),
                             to: {
                                 pathname: ei.BVt.APPLICATION_STORE_LISTING_SKU(n.id),
                                 state: { scrollRestoration: !1 },
@@ -1485,7 +1495,7 @@ let t8 = r.memo(function () {
                     (0, i.jsx)(h.Z_, {
                         noticeType: ei.kqX.SURVEY,
                         onClick: () => {
-                            o ? (0, tS.K)(l) : window.open(a, "_blank"), (0, b.pX)(t, !1);
+                            o ? (0, tN.K)(l) : window.open(a, "_blank"), (0, b.pX)(t, !1);
                         },
                         children: r,
                     }),
@@ -1498,7 +1508,7 @@ let t8 = r.memo(function () {
                 children: [
                     ea.intl.string(ea.t["ugxmk/"]),
                     (0, i.jsx)(h.eC, {
-                        href: tX.A.getArticleURL(ei.MVz.CORRUPT_INSTALLATION),
+                        href: tQ.A.getArticleURL(ei.MVz.CORRUPT_INSTALLATION),
                         target: "_blank",
                         noticeType: s.type,
                         children: ea.intl.string(ea.t["6ik4Xk"]),
@@ -1509,7 +1519,7 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(), noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(), noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER }),
                     ea.intl.string(ea.t.wVjKGi),
                     (0, i.jsx)(h.Z_, {
                         noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER,
@@ -1531,7 +1541,7 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.DANGER,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(), noticeType: ei.kqX.DISPATCH_ERROR }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(), noticeType: ei.kqX.DISPATCH_ERROR }),
                     et?.displayMessage,
                     (0, i.jsx)(h.Z_, {
                         noticeType: ei.kqX.DISPATCH_ERROR,
@@ -1552,7 +1562,7 @@ let t8 = r.memo(function () {
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.DEFAULT,
                 children: [
-                    (0, i.jsx)(h.PM, { onClick: () => t7(), noticeType: ei.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS }),
+                    (0, i.jsx)(h.PM, { onClick: () => t8(), noticeType: ei.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS }),
                     (0, i.jsxs)(G.A, {
                         justify: G.A.Justify.CENTER,
                         children: [
@@ -1570,7 +1580,7 @@ let t8 = r.memo(function () {
             });
         case ei.kqX.APPLICATION_TEST_MODE:
             if (null == s.metadata) return null;
-            if (null != tq.A.testModeEmbeddedApplicationId)
+            if (null != tZ.A.testModeEmbeddedApplicationId)
                 return (0, i.jsx)(h.$T, {
                     color: h.Hv.WARNING,
                     children: (0, i.jsxs)(G.A, {
@@ -1613,7 +1623,7 @@ let t8 = r.memo(function () {
                     (0, i.jsx)(h.PM, {
                         noticeType: ei.kqX.PREMIUM_UNCANCEL,
                         onClick: () => {
-                            t7(s.metadata?.premiumSubscription?.currentPeriodEnd);
+                            t8(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     (0, i.jsx)(E.t, { size: "md", color: "currentColor", className: eo.PC }),
@@ -1625,7 +1635,7 @@ let t8 = r.memo(function () {
                     (0, i.jsx)(h.Z_, {
                         noticeType: ei.kqX.PREMIUM_UNCANCEL,
                         onClick: () => {
-                            t7(s.metadata?.premiumSubscription?.currentPeriodEnd),
+                            t8(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, m.openModalLazy)(async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("59786"),
@@ -1676,14 +1686,14 @@ let t8 = r.memo(function () {
                     (0, i.jsx)(h.PM, {
                         noticeType: s.type,
                         onClick: () => {
-                            t7(ed);
+                            t8(ed);
                         },
                     }),
                     ea.intl.format(ea.t.zxU0Kp, { daysPastDue: ec }),
                     (0, i.jsx)(h.Z_, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                         onClick: () => {
-                            t7(ed), (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
+                            t8(ed), (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: ea.intl.string(ea.t.q8rxeS),
                     }),
@@ -1696,14 +1706,14 @@ let t8 = r.memo(function () {
                     (0, i.jsx)(h.PM, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                         onClick: () => {
-                            t7(s.metadata?.premiumSubscription?.currentPeriodEnd);
+                            t8(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     ea.intl.string(ea.t.LlZaoX),
                     (0, i.jsx)(h.Z_, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                         onClick: () => {
-                            t7(s.metadata?.premiumSubscription?.currentPeriodEnd),
+                            t8(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: ea.intl.string(ea.t["Zpd+Yq"]),
@@ -1717,14 +1727,14 @@ let t8 = r.memo(function () {
                     (0, i.jsx)(h.PM, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                         onClick: () => {
-                            t7(s.metadata?.premiumSubscription?.currentPeriodEnd);
+                            t8(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     ea.intl.string(ea.t["30YfCr"]),
                     (0, i.jsx)(h.Z_, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                         onClick: () => {
-                            t7(s.metadata?.premiumSubscription?.currentPeriodEnd),
+                            t8(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: ea.intl.string(ea.t.U5pKWA),
@@ -1738,7 +1748,7 @@ let t8 = r.memo(function () {
                     (0, i.jsx)(h.PM, {
                         noticeType: ei.kqX.PREMIUM_MISSING_PAYMENT,
                         onClick: () => {
-                            t7(s.metadata?.premiumSubscription?.currentPeriodEnd);
+                            t8(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     P === er.PremiumTypes.TIER_1
@@ -1749,7 +1759,7 @@ let t8 = r.memo(function () {
                     (0, i.jsx)(h.Z_, {
                         noticeType: ei.kqX.PREMIUM_MISSING_PAYMENT,
                         onClick: () => {
-                            t7(s.metadata?.premiumSubscription?.currentPeriodEnd),
+                            t8(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
                         },
                         children:
@@ -1765,7 +1775,7 @@ let t8 = r.memo(function () {
             return (0, i.jsx)(tt, {
                 buttonText: s.buttonText ?? ea.intl.string(ea.t["/g10LC"]),
                 onGoBack: s.callback,
-                onDismiss: () => t7(),
+                onDismiss: () => t8(),
                 showCloseButton: !0,
             });
         case ei.kqX.AUTOMOD_QUARANTINED_USER_PROFILE:
@@ -1776,13 +1786,13 @@ let t8 = r.memo(function () {
                 children: [
                     ea.intl.string(ea.t.DVFJYf),
                     (0, i.jsx)(h.eC, {
-                        href: t0.q,
+                        href: t1.q,
                         target: "_blank",
                         noticeType: s.type,
                         children: ea.intl.string(ea.t.kvHdFN),
                     }),
                     (0, i.jsx)(p.Anchor, {
-                        href: tX.A.getArticleURL(ei.MVz.QUARANTINE),
+                        href: tQ.A.getArticleURL(ei.MVz.QUARANTINE),
                         target: "_blank",
                         className: eo.yw,
                         children: ea.intl.string(ea.t.hvVgAZ),
@@ -1797,7 +1807,7 @@ let t8 = r.memo(function () {
                     (0, i.jsx)(h.PM, {
                         noticeType: ei.kqX.AUTO_MODERATION_MENTION_RAID_DETECTION,
                         onClick: () => {
-                            null != t && (0, eG.wu)(t), t7(e_);
+                            null != t && (0, eG.wu)(t), t8(e_);
                         },
                     }),
                     ea.intl.string(ea.t.B8ruyY),
@@ -1805,7 +1815,7 @@ let t8 = r.memo(function () {
                         onClick: () => {
                             null != t &&
                                 (0, eG.W5)(t, ef, () => {
-                                    t7(e_), (0, eG.wu)(t);
+                                    t8(e_), (0, eG.wu)(t);
                                 });
                         },
                         children: ea.intl.string(ea.t.oX14El),
@@ -1825,7 +1835,7 @@ let t8 = r.memo(function () {
                     (0, i.jsx)(h.PM, {
                         noticeType: ei.kqX.QUESTS_PROGRESS_INTERRUPTION,
                         onClick: () => {
-                            s.metadata?.streamKey != null && (0, tN.lk)(s.metadata.streamKey);
+                            s.metadata?.streamKey != null && (0, ty.lk)(s.metadata.streamKey);
                         },
                     }),
                     ea.intl.string(ea.t.rOx44m),
@@ -1837,7 +1847,7 @@ let t8 = r.memo(function () {
                 children: [
                     (0, i.jsx)(h.PM, {
                         onClick: () => {
-                            t7(s.metadata?.dismissUntil);
+                            t8(s.metadata?.dismissUntil);
                         },
                         noticeType: ei.kqX.BLOCK_USER_FEEDBACK_NAGBAR,
                     }),
@@ -1856,7 +1866,7 @@ let t8 = r.memo(function () {
                                 ]).then(n.bind(n, 307750));
                                 return (t) => (0, i.jsx)(e, { ...t });
                             }),
-                                t7(s.metadata?.dismissUntil);
+                                t8(s.metadata?.dismissUntil);
                         },
                         noticeType: ei.kqX.BLOCK_USER_FEEDBACK_NAGBAR,
                         children: ea.intl.string(ea.t.e4y2VM),
@@ -1864,18 +1874,18 @@ let t8 = r.memo(function () {
                 ],
             });
         case ei.kqX.IGNORE_USER_FEEDBACK_NAGBAR:
-            return (0, i.jsx)(tC, {});
+            return (0, i.jsx)(tv, {});
         case ei.kqX.PREMIUM_MARKETING_NAGBAR:
-            return (0, i.jsx)(tT, {});
+            return (0, i.jsx)(tS, {});
         case ei.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR:
             return (0, i.jsx)(tg, { premiumSubscription: s.metadata.premiumSubscription });
         case ei.kqX.SYSTEM_SERVICE_WARNING:
-            return (0, i.jsx)(tB, {});
+            return (0, i.jsx)(tH, {});
         default:
             return null;
     }
 });
-function t9() {
+function ne() {
     let { analyticsLocations: e } = (0, x.Ay)(P.A.NOTICE);
-    return (0, i.jsx)(x.f5, { value: e, children: (0, i.jsx)(t8, {}) });
+    return (0, i.jsx)(x.f5, { value: e, children: (0, i.jsx)(t9, {}) });
 }
