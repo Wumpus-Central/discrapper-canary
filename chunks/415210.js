@@ -114,8 +114,8 @@ var L = n(794905),
     K = n(625494),
     z = n(723702),
     W = n(518960),
-    q = n(767089),
-    $ = n(554146),
+    $ = n(767089),
+    q = n(554146),
     J = n(477782),
     Z = n(177953),
     Y = n(950305),
@@ -189,7 +189,7 @@ function eM(e) {
         A();
     }
     function S() {
-        (0, et.Dr)($.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: eN.i.TAKE_ACTION }),
+        (0, et.Dr)(q.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: eN.i.TAKE_ACTION }),
             (0, c.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("83644"), n.e("42322")]).then(n.bind(n, 143657));
@@ -437,7 +437,7 @@ let eD = s.memo(function (e) {
         b = (0, o.bG)([f.A], () => f.A.getLastClipsSession()),
         M = (0, o.yK)([f.A], () => f.A.getNewClipIds()),
         R = (0, o.bG)([w.Ay], () => null == w.Ay.getCurrentSidebarChannelId(l.id)),
-        $ = (0, o.yK)(
+        q = (0, o.yK)(
             [F.A],
             () => (l.type === eT.rbe.DM ? N.filter((e) => !F.A.getParty(e.party?.id)?.has(l.getRecipientId())) : N),
             [N, l],
@@ -458,10 +458,11 @@ let eD = s.memo(function (e) {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("78211"),
+                    n.e("14078"),
                     n.e("71104"),
-                    n.e("89555"),
-                    n.e("13922"),
+                    n.e("79450"),
+                    n.e("81394"),
+                    n.e("67245"),
                     n.e("83952"),
                     n.e("81202"),
                     n.e("30920"),
@@ -589,7 +590,7 @@ let eD = s.memo(function (e) {
             hasClips: ei,
             canUseApplicationCommands: !_,
             channel: l,
-            activities: $,
+            activities: q,
             newClipsCount: M?.length ?? 0,
             canPostPolls: eb,
             appContext: I,
@@ -632,7 +633,7 @@ let eD = s.memo(function (e) {
                 }
             },
             children: (e) =>
-                (0, i.jsx)(q.A, {
+                (0, i.jsx)($.A, {
                     ref: y,
                     className: r()(eR.g$, t),
                     childClassName: eR.wh,

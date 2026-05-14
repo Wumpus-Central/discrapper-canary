@@ -15,16 +15,16 @@ var s = i(503698),
     h = i(793574),
     E = i(688810),
     T = i(531260),
-    x = i(626584),
-    S = i(811656),
+    S = i(626584),
+    x = i(811656),
     p = i(532794),
     f = i(832946),
     N = i(97352),
-    C = i(953727);
-function _(e) {
+    _ = i(953727);
+function C(e) {
     let { width: t = 106, height: i = 43, color: s = "currentColor", foreground: l, ...r } = e;
     return (0, n.jsx)("svg", {
-        ...(0, C.A)(r),
+        ...(0, _.A)(r),
         width: t,
         height: i,
         viewBox: "0 0 106 43",
@@ -83,7 +83,7 @@ function _(e) {
 var I = i(85563),
     b = i(739508),
     v = i(625494),
-    j = i(927578),
+    j = i(428262),
     y = i(83617),
     O = i(615396),
     R = i(526292),
@@ -98,7 +98,7 @@ var I = i(85563),
     w = i(601107),
     F = i(375708),
     B = i(640692);
-let z = new x.A("SubscriptionHeader.tsx"),
+let z = new S.A("SubscriptionHeader.tsx"),
     Y = { page: k.liQ.USER_SETTINGS, section: k.JJy.SETTINGS_PREMIUM, object: k.ZSU.CARD },
     X = [k.Dmq.PAUSED, k.Dmq.PAUSE_PENDING, k.Dmq.BILLING_RETRY];
 function H(e) {
@@ -215,8 +215,8 @@ let q = function (e) {
             subscription: t,
             currentInvoicePreview: s,
             renewalInvoicePreview: r,
-            paymentSource: x,
-            busy: C,
+            paymentSource: S,
+            busy: _,
             analyticsLocation: G,
         } = e,
         { analyticsLocations: Z } = (0, E.Ay)(h.A.SUBSCRIPTION_HEADER),
@@ -237,8 +237,7 @@ let q = function (e) {
         er = (e) => {
             (0, d.openModalLazy)(async () => {
                 let { PremiumBrandRefreshSubscriptionCancellationModal: s } = await Promise.all([
-                    i.e("34218"),
-                    i.e("55998"),
+                    i.e("71670"),
                     i.e("16581"),
                     i.e("9045"),
                     i.e("94161"),
@@ -261,10 +260,10 @@ let q = function (e) {
             if (null != t && null != t.premiumPlanIdFromItems) {
                 let e = N.A.get(t.premiumPlanIdFromItems);
                 if (null == e) return void z.info(`Plan not fetched for plan id: ${t.premiumPlanIdFromItems}`);
-                let l = (0, y._w)(e, x?.id, !1),
+                let l = (0, y._w)(e, S?.id, !1),
                     u = l.length > 0 ? l[0] : t.currency,
                     c = !0;
-                if ((1 === l.length && x?.id === t.paymentSourceId && (0, y.jJ)(e.id, u, x?.id) && (c = !1), c))
+                if ((1 === l.length && S?.id === t.paymentSourceId && (0, y.jJ)(e.id, u, S?.id) && (c = !1), c))
                     (0, p.A)({
                         initialPlanId: t.premiumPlanIdFromItems,
                         analyticsLocations: Z,
@@ -281,8 +280,8 @@ let q = function (e) {
                         (0, d.openModalLazy)(
                             async () => {
                                 let { PremiumResubscribeModal: e } = await Promise.all([
-                                    i.e("66898"),
-                                    i.e("55998"),
+                                    i.e("27721"),
+                                    i.e("71670"),
                                     i.e("92443"),
                                     i.e("9045"),
                                     i.e("94161"),
@@ -306,7 +305,7 @@ let q = function (e) {
                                                 D.A.isDisplayingWowMomentConfirmation && D.A.isAnimated
                                                     ? setTimeout(() => {
                                                           i.onClose();
-                                                      }, S.K)
+                                                      }, x.K)
                                                     : await i.onClose());
                                         },
                                     });
@@ -319,7 +318,7 @@ let q = function (e) {
                                         D.A.isDisplayingWowMomentConfirmation && D.A.isAnimated
                                             ? setTimeout(() => {
                                                   (0, d.closeModal)(e);
-                                              }, S.K)
+                                              }, x.K)
                                             : (0, d.closeModal)(e));
                                 },
                                 modalKey: e,
@@ -378,7 +377,7 @@ let q = function (e) {
             eh = (0, n.jsx)(W, {});
             break;
         case V.PremiumTypes.TIER_2:
-            eh = (0, n.jsx)(_, { className: B.V6, "aria-label": F.intl.string(F.t.lpNrPu) });
+            eh = (0, n.jsx)(C, { className: B.V6, "aria-label": F.intl.string(F.t.lpNrPu) });
     }
     let eE = X.includes(t.status) && !J ? K : H;
     return (0, n.jsx)(eE, {
@@ -408,7 +407,7 @@ let q = function (e) {
                     children: (0, n.jsx)(g.$, {
                         variant: "overlay-primary",
                         size: "sm",
-                        loading: C,
+                        loading: _,
                         text: F.intl.string(F.t.obRG6Y).toLocaleUpperCase(),
                     }),
                 });
@@ -424,7 +423,7 @@ let q = function (e) {
                             children: (0, n.jsx)(m.Q, {
                                 variant: "always-white",
                                 onClick: es,
-                                disabled: C,
+                                disabled: _,
                                 size: "sm",
                                 text: F.intl.string(F.t["ETE/oC"]),
                             }),
@@ -457,7 +456,7 @@ let q = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         text: F.intl.string(F.t.iIvF2z),
-                        loading: C,
+                        loading: _,
                         onClick: ea,
                     }),
                 });
@@ -467,7 +466,7 @@ let q = function (e) {
                         variant: "overlay-primary",
                         size: "sm",
                         onClick: el,
-                        loading: C,
+                        loading: _,
                         text: F.intl.string(F.t["ETE/oC"]),
                     });
                 case k.Dmq.PAUSE_PENDING:
@@ -478,7 +477,7 @@ let q = function (e) {
                                 className: B.Nn,
                                 children: (0, n.jsx)(m.Q, {
                                     variant: "always-white",
-                                    disabled: C,
+                                    disabled: _,
                                     onClick: es,
                                     size: "sm",
                                     text: F.intl.string(F.t.cM1H0K),
@@ -491,7 +490,7 @@ let q = function (e) {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     text: F.intl.string(F.t.TgV5Qf),
-                                    loading: C,
+                                    loading: _,
                                     onClick: eo,
                                 }),
                             }),
@@ -510,14 +509,14 @@ let q = function (e) {
                                         ? (0, n.jsx)(m.Q, {
                                               variant: "always-white",
                                               onClick: eu,
-                                              disabled: C,
+                                              disabled: _,
                                               size: "sm",
                                               text: F.intl.string(F.t.jNHWt6),
                                           })
                                         : (0, n.jsx)(m.Q, {
                                               variant: "always-white",
                                               onClick: ed,
-                                              disabled: C,
+                                              disabled: _,
                                               size: "sm",
                                               text: F.intl.string(F.t.cM1H0K),
                                           }),
@@ -529,7 +528,7 @@ let q = function (e) {
                                     variant: "overlay-primary",
                                     size: "sm",
                                     text: F.intl.string(F.t.zpi5pg),
-                                    loading: C,
+                                    loading: _,
                                     onClick: eo,
                                 }),
                             }),

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => g, Ke: () => N, Ro: () => f, X1: () => I });
+n.d(t, { Ay: () => g, Ke: () => I, Ro: () => f, X1: () => x });
 var l = n(627968);
 n(64700);
 var a = n(284009),
@@ -13,8 +13,8 @@ var a = n(284009),
     m = n(364995),
     h = n(558620),
     C = n(94420),
-    A = n(49960),
-    E = n(927578),
+    A = n(834252),
+    E = n(428262),
     y = n(615396),
     P = n(652215),
     S = n(818348),
@@ -51,10 +51,10 @@ function f(e) {
               : (0, E.ff)(null, n);
     return _.intl.string(_.t.YScQSF);
 }
-function x(e, t) {
+function N(e, t) {
     null != e.current && (e.current.scrollIntoView({ behavior: "smooth" }), t());
 }
-let N = (e) => {
+let I = (e) => {
         let { premiumSubscription: t, isGift: n, planGroup: l, isPrepaid: a } = e,
             { checkoutPaymentSources: i } = (0, m.t)(),
             r = (0, C.t4)((e) => e.hasAcceptedTerms),
@@ -94,7 +94,7 @@ let N = (e) => {
             hasPaymentSources: y,
         };
     },
-    I = (e, t) => {
+    x = (e, t) => {
         let {
                 invoiceError: n,
                 planError: a,
@@ -140,7 +140,7 @@ let N = (e) => {
             return {
                 variant: "expressive",
                 text: A,
-                onClick: E ? p : () => x(m, h),
+                onClick: E ? p : () => N(m, h),
                 loading: C,
                 iconPosition: "start",
                 icon: () => (0, l.jsx)(s.t, { color: "currentColor" }),
@@ -152,7 +152,7 @@ let N = (e) => {
                 variant: "active",
                 text: A,
                 type: "submit",
-                onClick: () => x(m, h),
+                onClick: () => N(m, h),
                 dataTestId: "submitButton",
             };
         else return { variant: "active", text: A, dataTestId: "purchase", onClick: p, loading: C };
@@ -168,12 +168,12 @@ function g(e) {
             activeSubscription: m,
             devShelfFetchState: h,
             hasPaymentSources: C,
-        } = N({ premiumSubscription: t, isGift: n, planGroup: a, isPrepaid: i }),
+        } = I({ premiumSubscription: t, isGift: n, planGroup: a, isPrepaid: i }),
         {
             tooltipText: A,
             dataTestId: E,
             ...y
-        } = I(e, {
+        } = x(e, {
             buttonLabel: s,
             analyticsLocations: u,
             hasAcceptedTerms: c,

@@ -1,34 +1,34 @@
-n.d(t, { N: () => c, p: () => A });
+n.d(t, { N: () => d, p: () => A });
 var l = n(627968),
     r = n(284009),
-    i = n.n(r),
-    a = n(534514),
-    u = n(49960),
+    u = n.n(r),
+    i = n(534514),
+    a = n(834252),
     s = n(615310),
     o = n(632638),
-    d = n(375708);
-let c = (e) => {
+    c = n(375708);
+let d = (e) => {
     let { className: t } = e;
     return (0, l.jsx)("div", {
         className: t,
-        children: (0, l.jsx)(a.D, { variant: "heading-md/semibold", children: d.intl.string(d.t.eALkIR) }),
+        children: (0, l.jsx)(i.D, { variant: "heading-md/semibold", children: c.intl.string(c.t.eALkIR) }),
     });
 };
 function A(e) {
-    let { steps: t, currentStep: n, paymentError: r, className: a } = e,
-        { steps: d, step: A } = (0, s.Ay)(),
-        { paymentError: E } = (0, u.P5)();
+    let { steps: t, currentStep: n, paymentError: r, className: i } = e,
+        { steps: c, step: A } = (0, s.Ay)(),
+        { paymentError: E } = (0, a.P5)();
     return (
-        (t = t ?? d),
+        (t = t ?? c),
         null == n && null != A && (n = A),
-        i()(n, "step should be set"),
-        i()(t, "step should be set"),
+        u()(n, "step should be set"),
+        u()(t, "step should be set"),
         (r = r ?? E),
         (0, l.jsx)(o.A, {
             steps: t,
             currentStep: n,
             paymentError: r,
-            body: (0, l.jsx)(c, { className: a }),
+            body: (0, l.jsx)(d, { className: i }),
             footer: null,
         })
     );

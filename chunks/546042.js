@@ -16,26 +16,26 @@ var l = n(627968),
     E = n(666646),
     y = n(558620),
     P = n(427675),
-    S = n(169797),
+    S = n(480642),
     _ = n(94420),
     T = n(357669),
     f = n(319437),
-    x = n(70730),
-    N = n(45787),
-    I = n(51501),
+    N = n(70730),
+    I = n(45787),
+    x = n(51501),
     g = n(422936),
     v = n(39423),
     M = n(511484),
-    j = n(251913),
-    b = n(869573),
-    R = n(344159),
+    b = n(251913),
+    R = n(869573),
+    j = n(344159),
     L = n(97352),
     O = n(469778),
     D = n(174459),
     w = n(45938),
-    U = n(927578),
+    U = n(428262),
     k = n(937008),
-    Y = n(49960),
+    Y = n(834252),
     G = n(166532),
     F = n(566980),
     B = n(379174),
@@ -122,9 +122,9 @@ function en(e) {
         {
             selectedSkuId: eT,
             setSelectedSkuId: ef,
-            setSelectedPlanId: ex,
-            purchaseState: eN,
-            setPurchaseState: eI,
+            setSelectedPlanId: eN,
+            purchaseState: eI,
+            setPurchaseState: ex,
             contextMetadata: eg,
         } = (0, _.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
@@ -137,9 +137,9 @@ function en(e) {
         {
             activitySessionId: ev,
             setPurchaseError: eM,
-            paymentAuthenticationState: ej,
-            purchaseTokenAuthState: eb,
-            activeSubscription: eR,
+            paymentAuthenticationState: eb,
+            purchaseTokenAuthState: eR,
+            activeSubscription: ej,
             priceOptions: eL,
             hasPaymentSources: eO,
             paymentSourceId: eD,
@@ -212,9 +212,9 @@ function en(e) {
             });
         }),
         a.useEffect(() => {
-            null == eW && (null != ek && null != eS ? ex(ek) : ex(O)),
+            null == eW && (null != ek && null != eS ? eN(ek) : eN(O)),
                 null != em ? ef(em) : null != O && ef(L.A.get(O)?.skuId);
-        }, [ex, eW, ef, O, em, ek, eS]);
+        }, [eN, eW, ef, O, em, ek, eS]);
     let e8 = a.useCallback(() => {
             let e = (0, w.lo)(eZ) === w.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
@@ -227,10 +227,10 @@ function en(e) {
                 duration_ms: t - eg.startTime,
                 payment_source_type: e6?.type,
             });
-            let { enabled: n } = x.u.getConfig({ location: "PaymentModal emitPaymentFlowSuccess" });
-            eK && null != eZ && null != r && n && (0, I.W)(r) && (0, N.Yd)(eZ.id);
+            let { enabled: n } = N.u.getConfig({ location: "PaymentModal emitPaymentFlowSuccess" });
+            eK && null != eZ && null != r && n && (0, x.W)(r) && (0, I.Yd)(eZ.id);
         }, [e4, ez, eq, eZ, eK, e$, eg.startTime, e6, r]),
-        e9 = a.useMemo(() => () => H?.(eN === F.h.COMPLETED, eT), [H, eN, eT]),
+        e9 = a.useMemo(() => () => H?.(eI === F.h.COMPLETED, eT), [H, eI, eT]),
         te = (0, i.A)(() => Date.now(), [eJ]),
         tt = a.useCallback(
             function (e) {
@@ -258,12 +258,12 @@ function en(e) {
             },
             [eX, eh, eM, eJ, eS, e4, te, eg.startTime, e8, S, eP, e9, eO],
         );
-    (0, j.b)(eJ, ej, tt, eI), (0, b.Q)(eJ, eb, tt), (0, f.A)(e9), (0, R.s)(eR, () => H(!1), eK), (0, j.QR)(ej);
+    (0, b.b)(eJ, eb, tt, ex), (0, R.Q)(eJ, eR, tt), (0, f.A)(e9), (0, j.s)(ej, () => H(!1), eK), (0, b.QR)(eb);
     let tn = (0, Z.L)({ renderHeader: eu, handleClose: e9 });
     return (0, l.jsx)(C.e0, {
         children: (0, l.jsx)(s.b, {
             className: Q.Xn,
-            isShaking: eC && eN === F.h.PURCHASING,
+            isShaking: eC && eI === F.h.PURCHASING,
             intensity: 2,
             children: (0, l.jsx)(et, {
                 step: eJ,
@@ -323,23 +323,23 @@ function el(e) {
             hasPaymentSources: T,
         } = (0, Y.P5)(),
         { isGift: f } = (0, k.Pv)(),
-        x = S.current,
-        N = (0, H.A)({ isGift: f, skuId: c, referralTrialOfferId: s }),
-        [I, g] = a.useState(!0),
+        N = S.current,
+        I = (0, H.A)({ isGift: f, skuId: c, referralTrialOfferId: s }),
+        [x, g] = a.useState(!0),
         v = (0, r.bG)([O.A], () => O.A.applicationIdsFetched.has(J.tv));
     return (a.useEffect(() => {
         g(!A || !E || y);
     }, [y, E, A]),
     (0, p.A)(
         "Payment Modal",
-        I,
+        x,
         5,
         { hasFetchedSubscriptions: A, hasFetchedSubscriptionPlans: E, currencyLoading: y },
         { tags: { app_context: "billing" } },
     ),
     a.useEffect(() => {
-        if ((v || (0, u.LM)(J.tv), I || C)) return;
-        let e = (0, V.vT)({ isTrial: N, isGift: f, selectedSkuId: c, startedPaymentFlowWithPaymentSources: x });
+        if ((v || (0, u.LM)(J.tv), x || C)) return;
+        let e = (0, V.vT)({ isTrial: I, isGift: f, selectedSkuId: c, startedPaymentFlowWithPaymentSources: N });
         null != o
             ? i(G.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: o })
             : null != n
@@ -351,8 +351,8 @@ function el(e) {
                 : null != t
                   ? i(G.pn.PLAN_SELECT)
                   : i(G.pn.SKU_SELECT);
-    }, [o, m, C, v, n, I, i, t, c, d, N, P, f, x, T]),
-    I)
+    }, [o, m, C, v, n, x, i, t, c, d, I, P, f, N, T]),
+    x)
         ? (0, l.jsx)(q.A, {})
         : C
           ? (0, l.jsx)(h.oO, {})

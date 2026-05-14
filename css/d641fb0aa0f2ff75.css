@@ -1,0 +1,32 @@
+.cardImage__3f7b1 {
+    aspect-ratio: 1;
+    margin-bottom: var(--space-8);
+    margin-top: var(--space-8);
+    max-width: 140px;
+    width: 100%
+}
+
+.dynamicGraphicWrapper__3f7b1 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    width: 100%
+}
+
+.withOverlay__3f7b1 {
+    transform: scale(.75)
+}
+
+.overlayImage__3f7b1 {
+    height: 100%;
+    inset-inline-start: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2
+}

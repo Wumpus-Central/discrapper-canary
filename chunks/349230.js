@@ -2379,8 +2379,8 @@ let nz = c.memo(function (e) {
                         if (t.isDM() && null != s)
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("97217"),
-                                    n.e("15925"),
+                                    n.e("79450"),
+                                    n.e("11397"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -2434,7 +2434,7 @@ let nz = c.memo(function (e) {
                             if (null == i) return;
                             (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("74844"),
+                                    n.e("26472"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("38730"),
@@ -2721,7 +2721,8 @@ let n1 = c.memo(function (e) {
                     (0, F.YX)(em.uss.VIDEO, { type: F.Z5.CAMERA, value: F.IP.SETTINGS_OPENED, userId: s?.id }),
                         (0, l.L3)(i, async () => {
                             let { default: e } = await Promise.all([
-                                n.e("15925"),
+                                n.e("11397"),
+                                n.e("79450"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),

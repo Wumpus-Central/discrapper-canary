@@ -11,8 +11,8 @@ var l = n(627968),
     p = n(815545),
     m = n(209030),
     h = n(299301),
-    C = n(927578),
-    A = n(49960),
+    C = n(428262),
+    A = n(834252),
     E = n(222707),
     y = n(421094),
     P = n(340034),
@@ -20,9 +20,9 @@ var l = n(627968),
     _ = n(134638),
     T = n(888751),
     f = n(906234),
-    x = n(788868),
-    N = n(375708),
-    I = n(327105);
+    N = n(788868),
+    I = n(375708),
+    x = n(327105);
 let g = (e) => {
     let {
             referralTrialOfferId: t,
@@ -30,13 +30,13 @@ let g = (e) => {
             priceOptions: g,
             handlePaymentSourceAdd: v,
             isTrial: M,
-            planGroup: j,
-            isDiscount: b,
-            metadata: R,
+            planGroup: b,
+            isDiscount: R,
+            metadata: j,
         } = e,
         L = (0, m.L)(e),
         { isEligibleForTrial: O, discountOffer: D, selectedStoreListing: w } = (0, A.P5)(),
-        U = R?.guild_id ?? void 0,
+        U = j?.guild_id ?? void 0,
         {
             isGift: k,
             giftRecipient: Y,
@@ -58,10 +58,10 @@ let g = (e) => {
             paymentSourceOptionalWarningCopy: et,
         } = L,
         en = (0, l.jsx)(y.K, {
-            label: N.intl.string(N.t["u+Cw58"]),
+            label: I.intl.string(I.t["u+Cw58"]),
             handlePaymentSourceAdd: v,
             isTrial: M,
-            isDiscount: b,
+            isDiscount: R,
             disabled: Q,
             hasEntitlements: q,
             eligiblePaymentGateways: $,
@@ -72,7 +72,7 @@ let g = (e) => {
         es = (0, E.pt)({
             fractionalPremiumInfo: X,
             selectedPlanId: n,
-            planGroup: j,
+            planGroup: b,
             premiumSubscription: J,
             isGift: k,
         }),
@@ -82,15 +82,15 @@ let g = (e) => {
                 return (0, l.jsx)(r.J, {
                     gradientColor: "nitro-pink",
                     Icon: i.t,
-                    text: N.intl.format(I.default.IAsfR5, { daysCount: ei }),
+                    text: I.intl.format(x.default.IAsfR5, { daysCount: ei }),
                 });
             if (null != D && eo) {
                 let e = D.discount;
-                if (e.userUsageLimitInterval === x.Ff.MONTH)
+                if (e.userUsageLimitInterval === N.Ff.MONTH)
                     return (0, l.jsx)(r.J, {
                         gradientColor: "nitro-pink",
                         Icon: i.t,
-                        text: N.intl.format(I.default.wCkwJf, {
+                        text: I.intl.format(x.default.wCkwJf, {
                             percentOff: e.amount,
                             intervalCount: e.userUsageLimitIntervalCount,
                         }),
@@ -175,7 +175,7 @@ let g = (e) => {
                   guildId: U,
               }),
         eS = (0, l.jsx)(P.PI, {
-            planGroup: j,
+            planGroup: b,
             activeSubscription: J,
             isTrial: M,
             plan: W,
@@ -196,6 +196,6 @@ let g = (e) => {
         invoiceSummaryContent: eE,
         legalContent: eS,
         invoiceTotalDueValue: e_,
-        invoiceTotalDueLabel: N.intl.string(I.default.R0cZsM),
+        invoiceTotalDueLabel: I.intl.string(x.default.R0cZsM),
     });
 };

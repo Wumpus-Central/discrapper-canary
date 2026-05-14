@@ -2,7 +2,7 @@
 n.d(t, { D7: () => h, W2: () => l, _$: () => c, q1: () => p, rS: () => o });
 var i,
     r = n(945810),
-    s = n(49960),
+    s = n(834252),
     a = n(120700),
     o = (((i = {}).LEGACY = "legacy"), (i.UNIFIED = "unified"), i);
 let l = (0, r.mj)({

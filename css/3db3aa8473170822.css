@@ -1,0 +1,81 @@
+.wrapper_f50859 {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    padding: 30px 18px;
+    position: relative
+}
+
+.icon_f50859 {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px
+}
+
+.info_f50859 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 16px
+}
+
+.wrapper__6b2f3 {
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px
+}
+
+.copy__6b2f3,
+.wrapper__6b2f3 {
+    align-items: center;
+    display: flex
+}
+
+.cta__6b2f3 {
+    color: var(--text-link) !important;
+    display: inline;
+    height: auto;
+    margin-inline-start: 4px;
+    min-height: auto;
+    min-width: auto;
+    padding: 0
+}
+
+.boostIcon__6b2f3 {
+    color: var(--guild-boosting-pink);
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.wrapper_de1b16 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 50px
+}
+
+.header_de1b16 {
+    margin-bottom: 20px;
+    margin-top: 30px
+}
+
+.recommendedServerCard_de1b16 {
+    border-radius: var(--radius-sm);
+    position: relative
+}
+
+.wrapper__5a3a3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 0 70px;
+    text-align: center
+}
+
+.subtitle__5a3a3 {
+    margin-bottom: 6px
+}

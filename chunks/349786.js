@@ -4,7 +4,7 @@ var l = n(627968),
     i = n(546605),
     r = n(935899),
     s = n(900730),
-    o = n(49960),
+    o = n(834252),
     u = n(209143);
 function c() {
     let e = (0, i.vg)("StatefulCheckoutStoreRelocationNotice"),

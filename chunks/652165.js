@@ -1,57 +1,54 @@
-t.d(o, { B4: () => h, o6: () => s });
-var a = t(192308),
-    p = t(228366),
-    c = t(110048),
-    d = t(301518);
-let l = "orb-checkout-payment-modal-key",
-    s = () => (0, a.useHasModalOpen)(l),
-    h = (e) => {
-        let {
-                skuId: o,
-                onComplete: t,
-                analyticsLocations: a = [],
-                analyticsSourceLocation: p,
-                discoverySessionId: c,
-                applicationId: l,
-                onCloseCallback: s,
-            } = e,
-            h = !1;
-        return n({
-            discoverySessionId: c,
-            skuId: o,
-            onComplete: (e) => {
-                h || t(e), (h = !0);
-            },
-            applicationId: l,
-            analyticsLocations: a,
-            analyticsSourceLocation: p,
-            onCloseCallback: () => {
-                (0, d.S)({ checkoutSucceeded: h }), s?.();
-            },
-        });
-    },
+o.d(t, { B4: () => n, o6: () => h });
+var p = o(192308),
+    a = o(228366),
+    d = o(622207);
+let s = "orb-checkout-payment-modal-key",
+    h = () => (0, p.useHasModalOpen)(s),
     n = (e) => {
         let {
-            discoverySessionId: o,
+                skuId: t,
+                onComplete: o,
+                analyticsLocations: p = [],
+                analyticsSourceLocation: a,
+                discoverySessionId: d,
+                applicationId: s,
+                onCloseCallback: h,
+            } = e,
+            n = !1;
+        return c({
+            discoverySessionId: d,
             skuId: t,
-            onComplete: a,
-            analyticsLocations: d = [],
-            analyticsSourceLocation: s,
-            applicationId: h,
-            onCloseCallback: n,
+            onComplete: (e) => {
+                n || o(e), (n = !0);
+            },
+            applicationId: s,
+            analyticsLocations: p,
+            analyticsSourceLocation: a,
+            onCloseCallback: h,
+        });
+    },
+    c = (e) => {
+        let {
+            discoverySessionId: t,
+            skuId: o,
+            onComplete: p,
+            analyticsLocations: h = [],
+            analyticsSourceLocation: n,
+            applicationId: c,
+            onCloseCallback: l,
         } = e;
         return (
-            p.h.wait(() => {
-                p.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
+            a.h.wait(() => {
+                a.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
             }),
-            (0, c.Tt)().openCheckoutModal({
-                discoverySessionId: o,
-                skuId: t,
-                applicationId: h,
-                analyticsLocations: d,
-                analyticsSourceLocation: s,
-                onComplete: a,
-                openModalOptions: { onCloseCallback: n, modalKey: l },
+            (0, d.Tt)().openCheckoutModal({
+                discoverySessionId: t,
+                skuId: o,
+                applicationId: c,
+                analyticsLocations: h,
+                analyticsSourceLocation: n,
+                onComplete: p,
+                openModalOptions: { onCloseCallback: l, modalKey: s },
             })
         );
     };

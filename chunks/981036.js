@@ -1,35 +1,36 @@
-n.d(t, { cy: () => A, p: () => h });
-var l = n(627968),
-    a = n(64700),
-    i = n(503698),
-    r = n.n(i),
-    s = n(990078),
-    o = n(821609),
+"use strict";
+n.d(t, { cy: () => p, p: () => h });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(990078),
+    l = n(821609),
     u = n(696208),
     c = n(364840),
     d = n(999784),
-    p = n(683433),
-    m = n(978793);
+    _ = n(683433),
+    f = n(978793);
 let h = (e) => {
-        let { onClick: t, loading: n, disabled: a, text: i, tooltipText: r, ...u } = e,
-            c = { text: i, ...u },
-            d = (0, l.jsx)(o.$, { ...c, onClick: t, loading: n, disabled: a, text: i });
-        return null != r ? (0, l.jsx)(s.m, { text: r, asContainer: !0, children: d }) : d;
+        let { onClick: t, loading: n, disabled: r, text: s, tooltipText: a, ...u } = e,
+            c = { text: s, ...u },
+            d = (0, i.jsx)(l.$, { ...c, onClick: t, loading: n, disabled: r, text: s });
+        return null != a ? (0, i.jsx)(o.m, { text: a, asContainer: !0, children: d }) : d;
     },
-    A = (e) => {
-        let { primaryCTAButtonProps: t, showLockIcon: n, onBackClick: i } = e,
-            s = a.useMemo(() => [t], [t]),
-            o = a.useMemo(() => (null != i ? (0, l.jsx)(p.A, { onClick: i }) : void 0), [i]);
+    p = (e) => {
+        let { primaryCTAButtonProps: t, showLockIcon: n, onBackClick: s } = e,
+            o = r.useMemo(() => [t], [t]),
+            l = r.useMemo(() => (null != s ? (0, i.jsx)(_.A, { onClick: s }) : void 0), [s]);
         return null != t.tooltipText || n
-            ? (0, l.jsx)(c.j, {
-                  children: (0, l.jsxs)("div", {
-                      className: r()(m.wm, null != i ? m.LT : m.Ub),
+            ? (0, i.jsx)(c.j, {
+                  children: (0, i.jsxs)("div", {
+                      className: a()(f.wm, null != s ? f.LT : f.Ub),
                       children: [
-                          null != i ? (0, l.jsx)(p.A, { onClick: i }) : null,
-                          n && (0, l.jsx)(d.A, {}),
-                          (0, l.jsx)(h, { ...t }),
+                          null != s ? (0, i.jsx)(_.A, { onClick: s }) : null,
+                          n && (0, i.jsx)(d.A, {}),
+                          (0, i.jsx)(h, { ...t }),
                       ],
                   }),
               })
-            : (0, l.jsx)(u.H, { leading: o, actions: s });
+            : (0, i.jsx)(u.H, { leading: l, actions: o });
     };

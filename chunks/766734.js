@@ -7,19 +7,19 @@ var l = n(627968),
     o = n(94420),
     u = n(590180),
     c = n(937008),
-    d = n(49960),
+    d = n(834252),
     C = n(166532),
     p = n(20742),
     m = n(430993),
-    _ = n(315949),
-    E = n(599062),
+    E = n(315949),
+    _ = n(599062),
     T = n(375708);
 function A() {
-    let { refreshCategories: e } = (0, _.A)();
+    let { refreshCategories: e } = (0, E.A)();
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(p.rQ, { title: T.intl.string(T.t["p8+qtU"]) }),
-            (0, l.jsx)(m.c, { children: (0, l.jsx)(E.h, { onRetry: e, errorOrigin: E.A.GIFT_MODAL }) }),
+            (0, l.jsx)(m.c, { children: (0, l.jsx)(_.h, { onRetry: e, errorOrigin: _.A.GIFT_MODAL }) }),
         ],
     });
 }
@@ -28,16 +28,16 @@ var h = n(534479),
 function S(e) {
     let { handleStepChange: t } = e,
         n = (0, o.t4)((e) => e.selectedSkuId),
-        { blockedPayments: p, paymentSources: m, hasFetchedPaymentSources: _, application: E } = (0, d.P5)(),
+        { blockedPayments: p, paymentSources: m, hasFetchedPaymentSources: E, application: _ } = (0, d.P5)(),
         T = (0, a.gU)(),
         S = (0, a.Hu)(),
         { isGift: I } = (0, c.Pv)(),
         [f, x] = i.useState(!0),
         [g, P] = (0, r.yK)([u.A], () => [u.A.isFetchingCategories, u.A.error]);
     return (i.useEffect(() => {
-        let e = null != E;
-        S && _ && e && x(g);
-    }, [S, _, E, g]),
+        let e = null != _;
+        S && E && e && x(g);
+    }, [S, E, _, g]),
     i.useEffect(() => {
         if (f || p || null == n) return;
         let e = T[n];

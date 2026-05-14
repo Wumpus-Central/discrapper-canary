@@ -3,7 +3,7 @@ var l = n(627968),
     a = n(64700),
     i = n(17928),
     r = n(606267),
-    s = n(49960),
+    s = n(834252),
     o = n(351906),
     u = n(364995),
     c = n(944355),
@@ -64,17 +64,17 @@ let p = (e) => {
                     ),
                 };
             })({ paymentSourceId: E, setPaymentSourceId: m, subscriptionPaymentSourceId: C, location: h }),
-            { priceOptions: f, currencies: x, displayCurrency: N, setCurrency: I } = (0, s.P5)(),
+            { priceOptions: f, currencies: N, displayCurrency: I, setCurrency: x } = (0, s.P5)(),
             g = a.useMemo(() => {
                 if (!y)
                     return {
                         label: d.intl.string(d.t["/AAR02"]),
-                        selectedCurrency: f.currency ?? N,
-                        currencies: x,
-                        onChange: I,
+                        selectedCurrency: f.currency ?? I,
+                        currencies: N,
+                        onChange: x,
                         disabled: p,
                     };
-            }, [y, f.currency, N, x, I, p]),
+            }, [y, f.currency, I, N, x, p]),
             v = a.useMemo(() => ({ ...T, ...n, onPaymentSourceAdd: A }), [T, A, n]);
         return (0, l.jsx)(c.nL, {
             label: t,

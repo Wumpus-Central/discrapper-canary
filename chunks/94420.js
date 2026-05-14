@@ -9,10 +9,12 @@ function l(e) {
     return o()(e, t);
 }
 function u(e) {
-    let { contextMetadata: t } = e;
+    let { contextMetadata: t, order: n } = e;
     return (0, r.h)(
         (e) => ({
             contextMetadata: t,
+            order: n,
+            setOrder: (t) => e({ order: t }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
             setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),
