@@ -42,6 +42,7 @@ class p extends a.A {
     roleConnectionsVerificationUrl;
     parentId;
     _connectionEntrypointUrl;
+    contentClassification;
     static createFromServer(e) {
         return new p({
             ...e,
@@ -52,6 +53,7 @@ class p extends a.A {
             roleConnectionsVerificationUrl: e.role_connections_verification_url,
             parentId: e.parent_id,
             _connectionEntrypointUrl: e.connection_entrypoint_url,
+            contentClassification: e.content_classification,
         });
     }
     constructor(e) {
@@ -71,7 +73,8 @@ class p extends a.A {
             (this.roleConnectionsVerificationUrl =
                 e.role_connections_verification_url ?? e.roleConnectionsVerificationUrl),
             (this.parentId = e.parent_id ?? e.parentId),
-            (this._connectionEntrypointUrl = e.connection_entrypoint_url ?? e._connectionEntrypointUrl);
+            (this._connectionEntrypointUrl = e.connection_entrypoint_url ?? e._connectionEntrypointUrl),
+            (this.contentClassification = e.content_classification ?? e.contentClassification);
     }
     get connectionEntrypointUrl() {
         let { getIsRiotSocialSDKMigrationEnabled: e } = n(941314),
@@ -277,6 +280,7 @@ class E extends p {
             deepLinkUri: e.deepLinkUri ?? this.deepLinkUri,
             applicationAccountLinkBenefitConfig:
                 e.applicationAccountLinkBenefitConfig ?? this.applicationAccountLinkBenefitConfig,
+            contentClassification: e.contentClassification ?? this.contentClassification,
         });
     }
     getMaxParticipants() {
