@@ -895,7 +895,7 @@ var eK = n(495544),
     e_ = n(287809),
     eO = n(152056),
     eB = n(780964),
-    eL = n(838153),
+    eL = n(93832),
     eP = n(980707),
     eD = n(477782),
     eF = n(349288),
@@ -915,8 +915,8 @@ var eK = n(495544),
 function e0() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "543470",
-        l = "f9e6b569fda250706cd66a93b16bd26353847858".substring(0, 7),
+        n = "543652",
+        l = "e3a24094d977dde6a34810805c7b9c2c5de82a93".substring(0, 7),
         s = e$.A?.app.getVersion(),
         i = e$.A?.app.getBuildNumber(),
         u = e$.A?.app.getAppArch(),
@@ -1087,9 +1087,9 @@ function e9() {
 var e2 = n(402651),
     e5 = n(669067),
     e3 = n(830543),
-    e6 = n(466745);
-let e8 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
-    e4 = new Map([
+    e8 = n(466745);
+let e4 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
+    e6 = new Map([
         [eB.X.CONNECTIONS_PANEL, s.ImpressionNames.USER_SETTINGS_CONNECTIONS],
         [eB.X.SESSIONS_PANEL, s.ImpressionNames.USER_SETTINGS_SESSIONS],
     ]);
@@ -1119,8 +1119,8 @@ function te(e) {
               emptyState: tn,
               sidebarFooter: e9,
               onViewChange: (e) => {
-                  e8.has(e) || (0, e5._)(e);
-                  let t = e4.get(e);
+                  e4.has(e) || (0, e5._)(e);
+                  let t = e6.get(e);
                   null != t &&
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
@@ -1158,14 +1158,14 @@ function tt() {
             [],
         ),
         (0, r.jsx)("div", {
-            className: e6.P,
+            className: e8.P,
             children: (0, r.jsx)(i.I, { size: "md", query: e, onFocus: n, onBlur: s, onChange: t, onClear: a }),
         })
     );
 }
 function tn() {
     return (0, r.jsxs)("div", {
-        className: e6.t,
+        className: e8.t,
         children: [
             (0, r.jsx)(a.E, { variant: "text-sm/semibold", color: "text-strong", children: z.intl.string(z.t.zihbmv) }),
             (0, r.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: z.intl.string(z.t.XclvsB) }),

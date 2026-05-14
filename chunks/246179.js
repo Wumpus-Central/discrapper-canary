@@ -6,30 +6,30 @@ var l = t(627968),
     a = t.n(s),
     c = t(942381),
     o = t(894858),
-    u = t(396535);
-function d(e) {
+    d = t(396535);
+function u(e) {
     let { node: n, children: t } = e,
         [i, s] = r.useState(!1),
-        d = r.useRef(null);
+        u = r.useRef(null);
     return (
         r.useEffect(() => {
             let e = o.A.subscribe(
                 (e) => e.requestFlashKey,
                 (e) => {
                     e === n.key &&
-                        (clearTimeout(d.current),
+                        (clearTimeout(u.current),
                         s(!0),
-                        (d.current = setTimeout(() => {
+                        (u.current = setTimeout(() => {
                             s(!1), o.A.setState({ requestFlashKey: void 0 });
                         }, 100)));
                 },
                 { equalityFn: c.x, fireImmediately: !0 },
             );
             return () => {
-                clearTimeout(d.current), e();
+                clearTimeout(u.current), e();
             };
         }, [n.key, n.type]),
-        (0, l.jsx)("div", { tabIndex: -1, "data-nav-anchor-key": n.key, className: a()(u.k, i && u.j), children: t })
+        (0, l.jsx)("div", { tabIndex: -1, "data-nav-anchor-key": n.key, className: a()(d.k, i && d.j), children: t })
     );
 }
 var x = t(331322),
@@ -40,8 +40,8 @@ function h(e) {
 }
 var m = t(834730),
     p = t(452027),
-    f = t(821609),
-    g = t(933297),
+    g = t(821609),
+    f = t(933297),
     y = t(174459),
     v = t(89381),
     b = t(652215);
@@ -70,9 +70,9 @@ function E(e) {
 function T(e) {
     let { trailingContent: n } = e;
     switch (n.type) {
-        case g._1.TEXT:
+        case f._1.TEXT:
             return (0, l.jsx)(E, { trailingContent: n });
-        case g._1.STRONGLY_DISCOURAGED_CUSTOM:
+        case f._1.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, l.jsx)(k, { trailingContent: n });
     }
 }
@@ -85,12 +85,12 @@ function S(e) {
             useSubtitle: a,
             useVariant: c,
             useDisabled: o,
-            useLoading: u,
-            useTrailingContent: d,
+            useLoading: d,
+            useTrailingContent: u,
             onClick: j,
         } = n,
         m = N(n),
-        g = u?.() ?? !1,
+        f = d?.() ?? !1,
         [y, v] = r.useState(!1),
         b = i(),
         k = a?.(),
@@ -98,7 +98,7 @@ function S(e) {
         S = s?.(),
         A = c?.(),
         C = o?.(),
-        I = d?.();
+        I = u?.();
     return (0, l.jsx)(h, {
         children: (0, l.jsx)(p.D, {
             label: b,
@@ -112,7 +112,7 @@ function S(e) {
                 gap: "md",
                 children: [
                     null != I && (0, l.jsx)(T, { trailingContent: I }),
-                    (0, l.jsx)(f.$, {
+                    (0, l.jsx)(g.$, {
                         onClick: () => {
                             m();
                             let e = j();
@@ -122,7 +122,7 @@ function S(e) {
                         "aria-label": S,
                         variant: A,
                         disabled: C,
-                        loading: y || g,
+                        loading: y || f,
                     }),
                 ],
             }),
@@ -133,7 +133,7 @@ var A = t(881636),
     C = t(272053),
     I = t(176524),
     O = t(199966);
-function R(e) {
+function B(e) {
     let { accessibleDirectory: n } = (0, O._)(),
         t = n.entry(e);
     return {
@@ -141,7 +141,7 @@ function R(e) {
         parentSidebarItemNode: t?.parentSidebarItemKey != null ? n.get(t.parentSidebarItemKey) : void 0,
     };
 }
-var B = t(534514),
+var R = t(534514),
     _ = t(890856),
     w = t(349902);
 function D(e) {
@@ -153,13 +153,13 @@ function D(e) {
             description: s,
             "aria-label": c,
             role: o,
-            onClick: u,
-            style: d,
+            onClick: d,
+            style: u,
         } = e,
         x = (0, l.jsxs)("div", {
-            className: a()(w.EA, null != u && w.vk),
+            className: a()(w.EA, null != d && w.vk),
             ref: n,
-            style: d,
+            style: u,
             children: [
                 null != t && (0, l.jsx)("div", { className: w._y, children: t }),
                 (0, l.jsxs)("div", {
@@ -167,7 +167,7 @@ function D(e) {
                     children: [
                         (0, l.jsx)("div", {
                             className: w.eg,
-                            children: (0, l.jsx)(B.D, {
+                            children: (0, l.jsx)(R.D, {
                                 variant: "heading-md/medium",
                                 color: "text-strong",
                                 children: i,
@@ -179,8 +179,8 @@ function D(e) {
                 null != r && (0, l.jsx)("div", { className: w.EY, children: r }),
             ],
         });
-    return null != u
-        ? (0, l.jsx)(_.s, { onClick: u, "aria-label": c, buttonProps: null != o ? { role: o } : void 0, children: x })
+    return null != d
+        ? (0, l.jsx)(_.s, { onClick: d, "aria-label": c, buttonProps: null != o ? { role: o } : void 0, children: x })
         : x;
 }
 var Z = t(573435),
@@ -208,7 +208,7 @@ function F(e) {
     let { icon: n, sizePx: t, positionClassName: i } = e,
         s = r.useMemo(() => ({ width: `${t}px`, height: `${t}px` }), [t]);
     switch (n.shape) {
-        case g.NF.SQUIRCLE:
+        case f.NF.SQUIRCLE:
             return (0, l.jsxs)("div", {
                 className: a()(P.Gt, i),
                 style: s,
@@ -222,7 +222,7 @@ function F(e) {
                     (0, l.jsx)(L, { sizePx: t }),
                 ],
             });
-        case g.NF.ROUNDED:
+        case f.NF.ROUNDED:
             return (0, l.jsx)("div", { className: a()(P.Gt, i, P.Nb), style: s, children: n.icon });
     }
 }
@@ -242,21 +242,21 @@ function G(e) {
 }
 function U(e) {
     let { decoration: n } = e;
-    if (n.type === g.wF.STACKED_ICONS) return (0, l.jsx)(G, { decoration: n });
+    if (n.type === f.wF.STACKED_ICONS) return (0, l.jsx)(G, { decoration: n });
 }
 var V = t(869376);
-function K(e) {
+function z(e) {
     let { node: n } = e,
         { destinationKey: t, useTrailingDecoration: r, useTitle: i, useSubtitle: s } = n,
         a = r?.(),
         c = s?.(),
-        { parentPanelNode: o, parentSidebarItemNode: u } = R(t),
-        d = i?.(),
+        { parentPanelNode: o, parentSidebarItemNode: d } = B(t),
+        u = i?.(),
         x = o?.useTitle?.(),
-        j = d ?? x,
+        j = u ?? x,
         h = N(n);
     if (null == o || null == j) return null;
-    let m = null != u ? u.icon : void 0;
+    let m = null != d ? d.icon : void 0;
     return (0, l.jsx)(D, {
         role: "link",
         "aria-label": x,
@@ -272,7 +272,7 @@ function K(e) {
         },
     });
 }
-var z = t(773812);
+var K = t(773812);
 t(321073);
 var M = t(558845);
 function $(e) {
@@ -281,14 +281,14 @@ function $(e) {
         let { persistentBadgeType: n, dismissibleBadgeType: t } = e;
         return "beta" === n ? "beta" : (t ?? n);
     })({
-        persistentBadgeType: n?.badgeType === g.Xi.BETA ? "beta" : void 0,
+        persistentBadgeType: n?.badgeType === f.Xi.BETA ? "beta" : void 0,
         dismissibleBadgeType: (function (e) {
             let n = r.useMemo(() => {
                 let n = [];
                 return (
                     e?.forEach((e) => {
                         let { badgeType: t, dismissibleContent: l } = e;
-                        t === g.Xi.NEW && n.push(l);
+                        t === f.Xi.NEW && n.push(l);
                     }),
                     n
                 );
@@ -308,16 +308,16 @@ function W(e) {
             usePersistentBadge: c,
             getDismissibleBadges: o,
         } = n,
-        u = i(),
-        d = s?.(),
+        d = i(),
+        u = s?.(),
         x = t(),
         j = a(),
         m = $({ persistentBadge: c?.(), dismissibleBadges: o?.() }),
         p = N(n);
     return (0, l.jsx)(h, {
-        children: (0, l.jsx)(z.z, {
-            label: u,
-            description: d,
+        children: (0, l.jsx)(K.z, {
+            label: d,
+            description: u,
             options: j,
             value: x,
             badge: m,
@@ -337,15 +337,15 @@ function q(e) {
             setValue: a,
             useOptions: c,
             clearable: o,
-            closeOnSelect: u,
-            wrapTags: d,
+            closeOnSelect: d,
+            wrapTags: u,
             selectionMode: x,
             usePersistentBadge: j,
             getDismissibleBadges: m,
         } = n,
         p = t(),
-        f = i?.(),
-        g = s(),
+        g = i?.(),
+        f = s(),
         y = c(),
         v = $({ persistentBadge: j?.(), dismissibleBadges: m?.() }),
         b = N(n),
@@ -353,7 +353,7 @@ function q(e) {
             var e, n;
             return {
                 selectionMode: x,
-                value: g,
+                value: f,
                 onSelectionChange:
                     ((e = a),
                     (n = b),
@@ -361,15 +361,15 @@ function q(e) {
                         n(), e(t);
                     }),
             };
-        }, [x, g, a, b]);
+        }, [x, f, a, b]);
     return (0, l.jsx)(h, {
         children: (0, l.jsx)(X.l, {
             ...k,
             label: p,
-            description: f,
+            description: g,
             options: y,
-            wrapTags: d,
-            closeOnSelect: u,
+            wrapTags: u,
+            closeOnSelect: d,
             clearable: o,
             layout: "horizontal-responsive",
             fullWidth: !0,
@@ -387,13 +387,13 @@ function H(e) {
             maxValue: a,
             useDefaultValue: c,
             useTitle: o,
-            useSubtitle: u,
-            useHintText: d,
+            useSubtitle: d,
+            useHintText: u,
             useDisabled: x,
             useExternalValue: j,
             onValueRender: p,
-            asValueChanges: f,
-            markers: g,
+            asValueChanges: g,
+            markers: f,
             onMarkerRender: y,
             stickToMarkers: v,
             fieldLayout: b,
@@ -403,11 +403,11 @@ function H(e) {
         [T] = r.useState(() => i()),
         S = j?.(),
         A = o(),
-        C = u?.(),
-        I = d?.(),
+        C = d?.(),
+        I = u?.(),
         O = x?.(),
-        R = c?.(),
-        B = $({ persistentBadge: k?.(), dismissibleBadges: E?.() }),
+        B = c?.(),
+        R = $({ persistentBadge: k?.(), dismissibleBadges: E?.() }),
         _ = N(n);
     return (0, l.jsxs)(h, {
         children: [
@@ -419,18 +419,18 @@ function H(e) {
                 value: S,
                 minValue: s,
                 maxValue: a,
-                defaultValue: R,
+                defaultValue: B,
                 onValueRender: p,
-                asValueChanges: f,
+                asValueChanges: g,
                 onValueChange: (e) => {
                     _(), t?.(e);
                 },
                 orientation: "horizontal",
-                markers: g,
+                markers: f,
                 onMarkerRender: y,
                 stickToMarkers: v,
                 layout: b,
-                badge: B,
+                badge: R,
             }),
             null != I && (0, l.jsx)(m.E, { variant: "text-xs/normal", color: "text-muted", children: I }),
         ],
@@ -455,42 +455,42 @@ function en(e) {
             useDisabled: a,
             useDisabledMessage: c,
             usePersistentBadge: o,
-            hasIcon: u,
-            getDismissibleBadges: d,
+            hasIcon: d,
+            getDismissibleBadges: u,
         } = n,
         x = i(),
         j = s?.(),
         m = t(),
         p = a?.() ?? !1,
-        f = c?.(),
-        g = $({ persistentBadge: o?.(), dismissibleBadges: d?.() }),
+        g = c?.(),
+        f = $({ persistentBadge: o?.(), dismissibleBadges: u?.() }),
         y = N(n);
     return (0, l.jsxs)(h, {
         children: [
             (0, l.jsx)(J.d, {
                 label: x,
                 description: j,
-                badge: g,
+                badge: f,
                 checked: m,
-                hasIcon: u,
+                hasIcon: d,
                 onChange: (e) => {
                     y(), r(e);
                 },
                 disabled: p,
             }),
-            p && null != f ? (0, l.jsx)(ee.p, { messageType: ee.Y.WARNING, children: f }) : null,
+            p && null != g ? (0, l.jsx)(ee.p, { messageType: ee.Y.WARNING, children: g }) : null,
         ],
     });
 }
 var et = t(735438),
     el = t(770178),
     er = t(353068),
-    ei = t(197867),
+    ei = t(650682),
     es = t(138017),
     ea = t(661531),
     ec = t(187322),
     eo = t(523880);
-function eu(e) {
+function ed(e) {
     let {
             ref: n,
             title: t,
@@ -498,14 +498,14 @@ function eu(e) {
             isExpanded: s,
             onExpandedChange: c,
             children: o,
-            animate: u = !0,
+            animate: d = !0,
         } = e,
-        d = r.useRef(null),
+        u = r.useRef(null),
         [j, h] = r.useState(null),
         m = s && null != j;
     return (
         r.useLayoutEffect(() => {
-            null != d.current && null == j && h(d.current.clientHeight);
+            null != u.current && null == j && h(u.current.clientHeight);
         }, [j]),
         (0, l.jsxs)(er.EN, {
             ref: n,
@@ -513,7 +513,7 @@ function eu(e) {
             onExpandedChange: c,
             children: [
                 (0, l.jsx)(D, {
-                    ref: d,
+                    ref: u,
                     style: null != j ? { minHeight: j } : void 0,
                     title: t,
                     "aria-label": t,
@@ -531,38 +531,38 @@ function eu(e) {
                     onClick: () => c(!s),
                 }),
                 (0, l.jsx)(er.kS, {
-                    className: a()(eo.nd, { [eo.t5]: !u }),
+                    className: a()(eo.nd, { [eo.t5]: !d }),
                     children: (0, l.jsx)(x.B, { gap: 16, padding: { top: 16 }, children: o }),
                 }),
             ],
         })
     );
 }
-function ed(e) {
+function eu(e) {
     return o.A.getField("requestAccordionOpenKey") === e.key;
 }
 let ex = r.memo(function (e) {
     let { node: n } = e,
         { useTitle: t, layout: i, useCollapsedSubtitle: s } = n,
         [a, c] = r.useState(!0),
-        [u, d] = r.useState(() => ed(n)),
-        x = r.useRef(u),
-        j = r.useRef(ed(n) ? "navigation" : null);
+        [d, u] = r.useState(() => eu(n)),
+        x = r.useRef(d),
+        j = r.useRef(eu(n) ? "navigation" : null);
     r.useEffect(
         () =>
             o.A.subscribe(
                 (e) => e.requestAccordionOpenKey,
                 (e) => {
                     e === n.key &&
-                        (x.current ? C.A.notifyAccordionExpanded(n.key) : ((j.current = "navigation"), c(!1), d(!0)));
+                        (x.current ? C.A.notifyAccordionExpanded(n.key) : ((j.current = "navigation"), c(!1), u(!0)));
                 },
                 { equalityFn: (e, n) => e === n, fireImmediately: !0 },
             ),
-        [n.key, u],
+        [n.key, d],
     );
     let h = r.useCallback(
             (e) => {
-                if (null != e.target && u !== x.current && ((x.current = u), x.current))
+                if (null != e.target && d !== x.current && ((x.current = d), x.current))
                     switch (j.current) {
                         case "navigation":
                             c(!0), C.A.notifyAccordionExpanded(n.key);
@@ -571,20 +571,20 @@ let ex = r.memo(function (e) {
                             C.A.navigate(n.key, { animatePanelScroll: !0, panelScrollBlock: "nearest" });
                     }
             },
-            [u, n.key],
+            [d, n.key],
         ),
         m = r.useMemo(() => (0, et.debounce)(h, 50), [h]),
         p = (0, el.w)(m),
-        f = t?.(u),
-        g = s?.(),
+        g = t?.(d),
+        f = s?.(),
         y = N(n);
-    return (0, l.jsx)(eu, {
+    return (0, l.jsx)(ed, {
         ref: p,
-        title: f,
-        collapsedSubtitle: g,
-        isExpanded: u,
+        title: g,
+        collapsedSubtitle: f,
+        isExpanded: d,
         onExpandedChange: (e) => {
-            (j.current = "user"), y(), d(e);
+            (j.current = "user"), y(), u(e);
         },
         animate: a,
         children: i.map((e) => (0, l.jsx)(e2, { node: e }, e.key)),
@@ -593,7 +593,7 @@ let ex = r.memo(function (e) {
 function ej(e) {
     let { decoration: n } = e,
         { type: t, id: r, ...i } = n;
-    return (0, l.jsx)(f.$, { variant: "secondary", ...i });
+    return (0, l.jsx)(g.$, { variant: "secondary", ...i });
 }
 function eh(e) {
     let { decoration: n } = e,
@@ -608,9 +608,9 @@ function em(e) {
         fullWidth: !1,
         children: n.buttons.map((e) => {
             switch (e.type) {
-                case g.UV.BUTTON:
+                case f.UV.BUTTON:
                     return (0, l.jsx)(ej, { decoration: e }, e.id);
-                case g.UV.STRONGLY_DISCOURAGED_CUSTOM:
+                case f.UV.STRONGLY_DISCOURAGED_CUSTOM:
                     return (0, l.jsx)(eh, { decoration: e }, e.id);
             }
         }),
@@ -618,10 +618,10 @@ function em(e) {
 }
 function ep(e) {
     let { decoration: n } = e;
-    return null == n ? null : n.type === g.WX.BUTTON_GROUP ? (0, l.jsx)(em, { decoration: n }) : void 0;
+    return null == n ? null : n.type === f.WX.BUTTON_GROUP ? (0, l.jsx)(em, { decoration: n }) : void 0;
 }
-function ef(e) {
-    let { title: n, icon: t, subtitle: r, decoration: i } = e;
+function eg(e) {
+    let { title: n, icon: t, subtitle: r, subtitleTrailing: i, decoration: s } = e;
     return (0, l.jsxs)(x.B, {
         direction: "horizontal",
         align: "center",
@@ -636,18 +636,27 @@ function ef(e) {
                         direction: "horizontal",
                         gap: 8,
                         children: [
-                            (0, l.jsx)(B.D, { variant: "heading-xl/normal", color: "text-strong", children: n }),
+                            (0, l.jsx)(R.D, { variant: "heading-xl/normal", color: "text-strong", children: n }),
                             null != t && (0, l.jsx)(t, { color: ea.A.colors.INTERACTIVE_ICON_DEFAULT, size: "md" }),
                         ],
                     }),
-                    null != r && (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-subtle", children: r }),
+                    null != r &&
+                        (0, l.jsxs)(x.B, {
+                            direction: "horizontal",
+                            align: "center",
+                            gap: 4,
+                            children: [
+                                (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-subtle", children: r }),
+                                i,
+                            ],
+                        }),
                 ],
             }),
-            (0, l.jsx)(ep, { decoration: i }),
+            (0, l.jsx)(ep, { decoration: s }),
         ],
     });
 }
-var eg = t(683071),
+var ef = t(683071),
     ey = t(964486),
     ev = t(562248);
 function eb(e) {
@@ -662,7 +671,7 @@ function eb(e) {
                 i(!1);
             }
         };
-    return (0, l.jsx)(f.$, { variant: "secondary", text: s, onClick: a, loading: t, disabled: t });
+    return (0, l.jsx)(g.$, { variant: "secondary", text: s, onClick: a, loading: t, disabled: t });
 }
 function eN(e) {
     let { notice: n } = e,
@@ -676,11 +685,11 @@ function eN(e) {
         direction: "vertical",
         gap: "xs",
         children: [
-            null != a && (0, l.jsx)(B.D, { variant: "heading-md/medium", children: a }),
+            null != a && (0, l.jsx)(R.D, { variant: "heading-md/medium", children: a }),
             (0, l.jsx)("span", { children: c }),
         ],
     });
-    return (0, l.jsx)(eg.w, {
+    return (0, l.jsx)(ef.w, {
         type: t,
         children: (0, l.jsxs)(x.B, {
             direction: "horizontal",
@@ -699,9 +708,9 @@ function ek(e) {
 function eE(e) {
     let { notice: n } = e;
     switch (n.type) {
-        case g.lT.INLINE_NOTICE:
+        case f.lT.INLINE_NOTICE:
             return (0, l.jsx)(eN, { notice: n });
-        case g.lT.STRONGLY_DISCOURAGED_CUSTOM:
+        case f.lT.STRONGLY_DISCOURAGED_CUSTOM:
             return (0, l.jsx)(ek, { notice: n });
     }
 }
@@ -719,24 +728,26 @@ let eS = r.memo(function (e) {
             layout: a,
             useInlineNotice: c,
             useHeaderDecoration: o,
+            useSubtitleTrailing: d,
         } = n,
         u = t?.(),
-        d = s?.(),
-        j = c?.(),
-        h = o?.(),
-        m = null != t || null != i;
+        j = s?.(),
+        h = c?.(),
+        m = o?.(),
+        p = d?.(),
+        g = null != t || null != i;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            null != u && (0, l.jsx)(ef, { title: u, icon: r, subtitle: d, decoration: h }),
+            null != u && (0, l.jsx)(eg, { title: u, icon: r, subtitle: j, subtitleTrailing: p, decoration: m }),
             (0, l.jsx)("div", {
-                "data-settings-category-key": m ? n.key : void 0,
+                "data-settings-category-key": g ? n.key : void 0,
                 "aria-hidden": !0,
                 style: { height: 1 },
             }),
             (0, l.jsxs)(x.B, {
                 gap: "xs",
                 children: [
-                    null != j && (0, l.jsx)(eT, { notice: j }),
+                    null != h && (0, l.jsx)(eT, { notice: h }),
                     a.map((e) => (0, l.jsx)(e2, { node: e }, e.key)),
                 ],
             }),
@@ -763,10 +774,10 @@ let eO = r.memo(function (e) {
     let { node: n } = e,
         { useTitle: t, useSubtitle: i, layout: s, variant: a = "default", isTitleHiddenVisually: c } = n,
         o = t(),
-        u = i?.(),
-        d = r.useId(),
+        d = i?.(),
+        u = r.useId(),
         j = null != o && "" !== o,
-        h = null != u && "" !== u,
+        h = null != d && "" !== d,
         p = (function (e) {
             switch (e) {
                 case "default":
@@ -776,10 +787,10 @@ let eO = r.memo(function (e) {
             }
         })(a);
     return (0, l.jsxs)("fieldset", {
-        "aria-describedby": h ? d : void 0,
+        "aria-describedby": h ? u : void 0,
         children: [
-            (0, l.jsx)(eI, { title: o, subtitle: u, isHiddenVisually: c }),
-            h ? (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-default", id: d, children: u }) : null,
+            (0, l.jsx)(eI, { title: o, subtitle: d, isHiddenVisually: c }),
+            h ? (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-default", id: u, children: d }) : null,
             (0, l.jsx)(x.B, {
                 gap: p,
                 padding: { top: j && !c ? 16 : 0 },
@@ -788,30 +799,30 @@ let eO = r.memo(function (e) {
         ],
     });
 });
-var eR = t(404778),
-    eB = t(375708),
+var eB = t(404778),
+    eR = t(375708),
     e_ = t(339102);
 function ew(e) {
     let n,
         { node: t } = e,
         [i, s] = r.useState(!1),
-        { layout: a, collapseAfter: c, useCollapsibleTitle: o, useCollapsedSubtitle: u } = t,
-        d = null != c ? a.slice(0, c) : a,
+        { layout: a, collapseAfter: c, useCollapsibleTitle: o, useCollapsedSubtitle: d } = t,
+        u = null != c ? a.slice(0, c) : a,
         j = null != c ? a.slice(c) : [],
         h =
             o?.(i, j.length) ??
             ((n = j.length),
             i
-                ? eB.intl.formatToPlainString(eB.t["3SHL+d"], { count: n })
-                : eB.intl.formatToPlainString(eB.t["8JRFyZ"], { count: n })),
-        m = u?.();
+                ? eR.intl.formatToPlainString(eR.t["3SHL+d"], { count: n })
+                : eR.intl.formatToPlainString(eR.t["8JRFyZ"], { count: n })),
+        m = d?.();
     return (0, l.jsxs)(x.B, {
         gap: 8,
         children: [
-            d.map((e, n) =>
+            u.map((e, n) =>
                 (0, l.jsxs)(
                     r.Fragment,
-                    { children: [(0, l.jsx)(e2, { node: e }), n !== d.length - 1 && (0, l.jsx)(eR.c, {})] },
+                    { children: [(0, l.jsx)(e2, { node: e }), n !== u.length - 1 && (0, l.jsx)(eB.c, {})] },
                     e.key,
                 ),
             ),
@@ -819,8 +830,8 @@ function ew(e) {
                 (0, l.jsxs)("div", {
                     className: e_.CT,
                     children: [
-                        (0, l.jsx)(eR.c, { className: e_.mn }),
-                        (0, l.jsx)(eu, {
+                        (0, l.jsx)(eB.c, { className: e_.mn }),
+                        (0, l.jsx)(ed, {
                             title: h,
                             collapsedSubtitle: m,
                             isExpanded: i,
@@ -833,7 +844,7 @@ function ew(e) {
                                         {
                                             children: [
                                                 (0, l.jsx)(e2, { node: e }),
-                                                n !== j.length - 1 && (0, l.jsx)(eR.c, {}),
+                                                n !== j.length - 1 && (0, l.jsx)(eB.c, {}),
                                             ],
                                         },
                                         e.key,
@@ -848,7 +859,7 @@ function ew(e) {
 }
 function eD(e) {
     let { decoration: n } = e;
-    if (n.type === g.Xy.ICON)
+    if (n.type === f.Xy.ICON)
         return (0, l.jsx)(I.A, { Icon: n.icon, color: n.color, backgroundColor: n.backgroundColor });
 }
 function eZ(e) {
@@ -858,7 +869,7 @@ function eZ(e) {
 }
 function eP(e) {
     let { decoration: n } = e;
-    if (n.type === g.xn.TEXT) return (0, l.jsx)(eZ, { decoration: n });
+    if (n.type === f.xn.TEXT) return (0, l.jsx)(eZ, { decoration: n });
 }
 function eL(e) {
     let { node: n } = e,
@@ -866,9 +877,9 @@ function eL(e) {
         a = t?.(),
         c = r?.(),
         o = i?.(),
-        u = s?.(),
-        d = n.layout[0].key,
-        { parentPanelNode: j } = R(d),
+        d = s?.(),
+        u = n.layout[0].key,
+        { parentPanelNode: j } = B(u),
         h = j?.useTitle?.(),
         m = a ?? h;
     return null == j || null == m
@@ -884,22 +895,22 @@ function eL(e) {
                   align: "center",
                   justify: "end",
                   gap: "sm",
-                  children: [null != u && (0, l.jsx)(eP, { decoration: u }), (0, l.jsx)(A.u, {})],
+                  children: [null != d && (0, l.jsx)(eP, { decoration: d }), (0, l.jsx)(A.u, {})],
               }),
-              onClick: () => C.A.navigate(d),
+              onClick: () => C.A.navigate(u),
           });
 }
 var eF = t(17928),
     eG = t(868285),
     eU = t(871682),
     eV = t(689175),
-    eK = t(761508),
-    ez = t(823092),
+    ez = t(761508),
+    eK = t(823092),
     eM = t(397274),
     e$ = t(707182);
 function eW(e) {
     let { notice: n, children: t } = e,
-        { showNotice: i, handleStoreUpdate: s } = (0, ez.L_)(),
+        { showNotice: i, handleStoreUpdate: s } = (0, eK.L_)(),
         a = n?.stores;
     r.useEffect(() => {
         if (null != a) {
@@ -967,7 +978,7 @@ function eY(e) {
                     {
                         children: [
                             (0, l.jsx)(e2, { node: e }),
-                            t !== n.length - 1 && (0, l.jsx)(eR.c, { className: e$.yF }),
+                            t !== n.length - 1 && (0, l.jsx)(eB.c, { className: e$.yF }),
                         ],
                     },
                     e.key,
@@ -989,14 +1000,14 @@ function eH(e) {
         let l = new Map(e);
         l.set(n, t[0].key), o.A.setState({ currentTabKeys: l });
     }, [t, n]);
-    let u = t.find((e) => e.key === c) ?? t[0];
+    let d = t.find((e) => e.key === c) ?? t[0];
     return (0, l.jsxs)(
         eq,
         {
             notice: i,
             useObscuredNotice: a,
             children: [
-                (0, l.jsx)(eK.V, {
+                (0, l.jsx)(ez.V, {
                     className: e$.$H,
                     selectedItem: c,
                     onItemSelect: (e) => {
@@ -1012,10 +1023,10 @@ function eH(e) {
                     look: "brand",
                     children: t.map((e) => {
                         let { key: n, getTitle: t } = e;
-                        return (0, l.jsx)(eK.V.Item, { id: n, children: t() }, n);
+                        return (0, l.jsx)(ez.V.Item, { id: n, children: t() }, n);
                     }),
                 }),
-                (0, l.jsx)(eK.V.Panel, { id: c, children: (0, l.jsx)(eY, { layout: u.layout, decoration: s }) }),
+                (0, l.jsx)(ez.V.Panel, { id: c, children: (0, l.jsx)(eY, { layout: d.layout, decoration: s }) }),
             ],
         },
         n,
@@ -1051,26 +1062,26 @@ function eJ(e) {
     throw Error("Panels must have a list of categories or a list of tabs");
 }
 var e0 = t(722899);
-function e1(e) {
+function e6(e) {
     let { node: n } = e;
     return (0, l.jsxs)(x.B, {
         gap: 8,
         padding: { top: 8 },
         children: [
-            (0, l.jsx)(B.D, {
+            (0, l.jsx)(R.D, {
                 variant: "heading-md/semibold",
                 color: "text-muted",
                 className: e0.D,
-                children: eB.intl.string(eB.t.rPREPG),
+                children: eR.intl.string(eR.t.rPREPG),
             }),
             n.layout.map((e) => (0, l.jsx)(e2, { node: e }, e.key)),
         ],
     });
 }
-var e6 = t(626396);
+var e1 = t(626396);
 let e8 = r.memo(function (e) {
     let { node: n } = e;
-    return (0, l.jsx)("div", { className: e6.l, children: n.layout.map((e) => (0, l.jsx)(e2, { node: e }, e.key)) });
+    return (0, l.jsx)("div", { className: e1.l, children: n.layout.map((e) => (0, l.jsx)(e2, { node: e }, e.key)) });
 });
 function e3(e) {
     var n;
@@ -1097,7 +1108,7 @@ function e3(e) {
         case i.Z6.FIELD_SET:
             return (0, l.jsx)(eO, { node: t });
         case i.Z6.RELATED:
-            return (0, l.jsx)(e1, { node: t });
+            return (0, l.jsx)(e6, { node: t });
         case i.Z6.CATEGORY:
             return (0, l.jsx)(eS, { node: t });
         case i.Z6.ACCORDION:
@@ -1117,7 +1128,7 @@ function e3(e) {
         case i.Z6.SLIDER:
             return (0, l.jsx)(H, { node: t });
         case i.Z6.NAVIGATOR:
-            return (0, l.jsx)(K, { node: t });
+            return (0, l.jsx)(z, { node: t });
         case i.Z6.NESTED_PANEL_NAVIGATOR:
             return (0, l.jsx)(eL, { node: t });
         case i.Z6.CUSTOM:
@@ -1128,5 +1139,5 @@ function e2(e) {
     let { node: n } = e;
     return n.type === i.Z6.PANEL
         ? (0, l.jsx)(e3, { node: n })
-        : (0, l.jsx)(d, { node: n, children: (0, l.jsx)(e3, { node: n }) });
+        : (0, l.jsx)(u, { node: n, children: (0, l.jsx)(e3, { node: n }) });
 }
