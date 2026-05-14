@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { T_: () => S, oS: () => N, Ay: () => y }), n(321073);
+n.d(t, { T_: () => A, oS: () => I, Ay: () => T }), n(321073);
 var i,
     r,
     s = n(64700),
@@ -39,22 +39,19 @@ let h = (0, n(945810).mj)({
     defaultConfig: { enabled: !1, storeLinksEnabled: !1 },
     variations: { 1: { enabled: !0, storeLinksEnabled: !1 }, 2: { enabled: !0, storeLinksEnabled: !0 } },
 });
-var p = n(429913),
-    E = n(569926),
-    m = n(227309),
-    g = n(871633),
-    A = n(652215);
-let I = function (e, t) {
+var p = n(738250),
+    E = n(652215);
+let m = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             i = arguments.length > 3 ? arguments[3] : void 0;
-        f.default.track(A.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
+        f.default.track(E.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
             game_profile_available: e,
             application_id: t,
             rejection_reason: n,
             source: i,
         });
     },
-    T = (e) => {
+    g = (e) => {
         if (null == e) return ["no match"];
         let t = [];
         return (
@@ -63,9 +60,9 @@ let I = function (e, t) {
             t
         );
     },
-    S = (e) => 0 === T(e).length,
-    N = (e) => S(_.A.getGame(e)),
-    y = (e) => {
+    A = (e) => 0 === g(e).length,
+    I = (e) => A(_.A.getGame(e)),
+    T = (e) => {
         let { applicationId: t = "", gameId: n, source: i, trackEntryPointImpression: r = !0 } = e,
             a = s.useRef(!1),
             l =
@@ -76,28 +73,14 @@ let I = function (e, t) {
                 gameId: u,
                 gameRecord: c,
                 isLoading: _,
-            } = (function (e) {
-                let { applicationId: t, gameId: n } = e,
-                    i = (0, p.h)(null == n ? t : void 0),
-                    r = (function (e) {
-                        let { applicationId: t, gameId: n } = e,
-                            i = (0, p.h)(null == n ? t : void 0),
-                            r = null == n && null != t && null == i,
-                            a = s.useMemo(() => (null != n ? n : null == i ? null : i.getCanonicalGameId()), [n, i]),
-                            { data: o, isLoading: l } = (0, E.I)(a);
-                        return { gameId: a, gameRecord: o ?? null, isLoading: r || l };
-                    })({ applicationId: t, gameId: null != i && (0, g.bB)(i) ? m.aX : n }),
-                    a = null != r.gameRecord && (0, g.Zb)(r.gameRecord),
-                    { data: o, isLoading: l } = (0, E.I)(a ? m.aX : void 0);
-                return a ? { gameId: m.aX, gameRecord: o ?? null, isLoading: l } : r;
-            })({ applicationId: l ? t : void 0, gameId: l ? n : void 0 }),
-            f = S(c);
+            } = (0, p.A)({ applicationId: l ? t : void 0, gameId: l ? n : void 0 }),
+            f = A(c);
         return (
             s.useEffect(() => {
                 if (!a.current && l && r && !_ && null != c) {
                     o()(null != i, "Cannot track a Game Profile Entry Point Impressions without a source.");
-                    let e = T(c);
-                    I(f, c.id, e, i), (a.current = !0);
+                    let e = g(c);
+                    m(f, c.id, e, i), (a.current = !0);
                 }
             }, [l, c, f, _, i, r]),
             { shouldOpenGameProfile: l && f, gameId: u }

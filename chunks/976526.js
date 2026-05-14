@@ -255,7 +255,7 @@ var eh = l(832163),
     eg = l(561794),
     ef = l(862772),
     ej = l(287809),
-    ev = l(713900),
+    ev = l(80552),
     ep = l(459746),
     eE = l(922016),
     eA = l(980707),
@@ -592,11 +592,11 @@ function e0(e) {
     });
 }
 var e1 = l(621466),
-    e4 = l(966697),
-    e8 = l(460905),
+    e8 = l(966697),
+    e4 = l(460905),
     e2 = l(449543),
-    e3 = l(46054),
-    e5 = l(58703),
+    e5 = l(46054),
+    e3 = l(58703),
     e6 = l(60465),
     e9 = l(284009),
     e7 = l.n(e9),
@@ -653,7 +653,7 @@ function tr(e) {
 var tc = l(468489),
     to = l(992595);
 function td(e, t) {
-    return e3.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
+    return e5.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
 }
 function tu(e) {
     let { variant: t, message: l, channelId: n, onCardClick: a } = e,
@@ -717,7 +717,7 @@ function tu(e) {
                                   null != g &&
                                   (0, i.jsx)("div", {
                                       className: tc.ax,
-                                      children: (0, i.jsx)(e4.y, {
+                                      children: (0, i.jsx)(e8.y, {
                                           readyState: c ? en.Rv1.READY : en.Rv1.LOADING,
                                           aspectRatio: x,
                                           placeholder: l.media.placeholder,
@@ -759,14 +759,14 @@ function tu(e) {
                                           color: "text-muted",
                                           children: [
                                               null != f.providerName ? `${f.providerName} \xb7 ` : "",
-                                              (0, e5.i$)(new Date(l.timestamp), "LL"),
+                                              (0, e3.i$)(new Date(l.timestamp), "LL"),
                                           ],
                                       }),
                                       l.reactionCount > 0 &&
                                           (0, i.jsxs)("div", {
                                               className: tc.a5,
                                               children: [
-                                                  (0, i.jsx)(e8.n, { size: "xs", color: "currentColor" }),
+                                                  (0, i.jsx)(e4.n, { size: "xs", color: "currentColor" }),
                                                   (0, i.jsx)(v.E, {
                                                       variant: "text-xs/medium",
                                                       color: "text-muted",
@@ -813,7 +813,7 @@ function tm(e) {
                 null != g &&
                 (0, i.jsx)("div", {
                     className: d ? tc._v : tc.eZ,
-                    children: (0, i.jsx)(e4.y, {
+                    children: (0, i.jsx)(e8.y, {
                         readyState: c ? en.Rv1.READY : en.Rv1.LOADING,
                         aspectRatio: x,
                         placeholder: l.media.placeholder,
@@ -849,13 +849,13 @@ function tm(e) {
                             (0, i.jsx)(v.E, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: (0, e5.i$)(new Date(l.timestamp), "LL"),
+                                children: (0, e3.i$)(new Date(l.timestamp), "LL"),
                             }),
                             l.reactionCount > 0 &&
                                 (0, i.jsxs)("div", {
                                     className: tc.a5,
                                     children: [
-                                        (0, i.jsx)(e8.n, { size: "xs", color: "currentColor" }),
+                                        (0, i.jsx)(e4.n, { size: "xs", color: "currentColor" }),
                                         (0, i.jsx)(v.E, {
                                             variant: "text-xs/medium",
                                             color: "text-muted",
@@ -1248,7 +1248,7 @@ let t0 = function (e) {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
                                       className: tQ.Gu,
-                                      children: e5.i$(new Date(d), "LL"),
+                                      children: e3.i$(new Date(d), "LL"),
                                   })
                                 : (0, i.jsx)(tq, {}),
                         ],
@@ -1326,10 +1326,10 @@ function t1(e) {
           })
         : null;
 }
-var t4 = l(714991),
-    t8 = l(552523),
+var t8 = l(714991),
+    t4 = l(552523),
     t2 = l(51531);
-function t3(e) {
+function t5(e) {
     let { game: t, trackAction: l, onInviteResolved: n, closeModal: a } = e,
         [c, o] = s.useState(),
         d = (0, h.bG)([em.A], () => c?.guild?.id != null && em.A.isMember(c?.guild?.id)),
@@ -1375,18 +1375,18 @@ function t3(e) {
                 className: r()(t_.nM, t_.mX),
                 children: [
                     (0, i.jsx)("img", {
-                        className: t8.$f,
+                        className: t4.$f,
                         src: x,
                         alt: eZ.intl.formatToPlainString(eZ.t.xm6W9D, { guildName: c.guild.name }),
                     }),
                     (0, i.jsxs)("div", {
-                        className: t8.U5,
+                        className: t4.U5,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: t8.YS,
+                                className: t4.YS,
                                 children: [
                                     (0, i.jsx)(v.E, { variant: "text-sm/semibold", children: c.guild.name }),
-                                    (0, i.jsx)(t4.A, { guild: c.guild, size: 16 }),
+                                    (0, i.jsx)(t8.A, { guild: c.guild, size: 16 }),
                                 ],
                             }),
                             null != c.approximate_member_count &&
@@ -1408,7 +1408,7 @@ function t3(e) {
         ],
     });
 }
-function t5(e) {
+function t3(e) {
     let { trackAction: t, closeModal: l } = e,
         { canStartAuthorization: n, hasAlreadyLinked: a, invite: r, isMember: c } = eM(),
         o = s.useCallback(() => {
@@ -1460,7 +1460,7 @@ function t5(e) {
                                             (0, i.jsxs)("div", {
                                                 className: t2.YS,
                                                 children: [
-                                                    (0, i.jsx)(t4.A, { guild: r.guild, size: 16 }),
+                                                    (0, i.jsx)(t8.A, { guild: r.guild, size: 16 }),
                                                     (0, i.jsx)(p.D, {
                                                         variant: "heading-md/semibold",
                                                         color: "text-default",
@@ -2565,15 +2565,15 @@ let lQ = function (e) {
 var lq = l(859040),
     l0 = l(674658),
     l1 = l(491438),
-    l4 = l(561769),
-    l8 = l(758836),
+    l8 = l(561769),
+    l4 = l(758836),
     l2 = l(804163);
-let l3 = s.createContext({ closeModal: () => {}, trackAction: () => {} }),
-    l5 = (e) => {
+let l5 = s.createContext({ closeModal: () => {}, trackAction: () => {} }),
+    l3 = (e) => {
         let { skuId: t, aspectRatio: l } = e,
             { product: n } = (0, l0.q)(t, !0),
-            a = s.useContext(l4.v3),
-            { closeModal: r, trackAction: c } = s.useContext(l3),
+            a = s.useContext(l8.v3),
+            { closeModal: r, trackAction: c } = s.useContext(l5),
             o = s.useCallback(() => {
                 c(F.Ws.DiscordCollectiblesShopItem),
                     r(),
@@ -2581,12 +2581,12 @@ let l3 = s.createContext({ closeModal: () => {}, trackAction: () => {} }),
                         analyticsLocations: [R.A.GAME_PROFILE],
                         analyticsSource: R.A.GAME_PROFILE,
                         initialProductSkuId: t,
-                        tab: l8.G2.CATALOG,
+                        tab: l4.G2.CATALOG,
                     });
             }, [c, r, t]);
         if (null == n) return null;
         let { flattenProductVariants: d, ...u } = a;
-        return (0, i.jsx)(l4.v3.Provider, {
+        return (0, i.jsx)(l8.v3.Provider, {
             value: { flattenProductVariants: d ?? !0, ...u },
             children: (0, i.jsx)(l1.A, {
                 skuId: t,
@@ -2620,18 +2620,18 @@ function l6(e) {
                 (0, lq.Cz)({
                     analyticsLocations: [R.A.GAME_PROFILE],
                     analyticsSource: R.A.GAME_PROFILE,
-                    tab: l8.G2.CATALOG,
+                    tab: l4.G2.CATALOG,
                 });
         }, [n, l]),
         c = s.useMemo(() => ({ closeModal: l, trackAction: n }), [l, n]);
     return 0 === a.length
         ? null
-        : (0, i.jsx)(l3.Provider, {
+        : (0, i.jsx)(l5.Provider, {
               value: c,
               children: (0, i.jsx)(tr, {
                   title: eZ.intl.string(eZ.t["5DYPT8"]),
                   onClickViewAll: r,
-                  children: (0, i.jsx)(e2.A, { gap: "md", children: a.map((e) => (0, i.jsx)(l5, { skuId: e }, e)) }),
+                  children: (0, i.jsx)(e2.A, { gap: "md", children: a.map((e) => (0, i.jsx)(l3, { skuId: e }, e)) }),
               }),
           });
 }
@@ -3169,7 +3169,7 @@ function nP(e) {
                 ],
             }),
             (0, i.jsx)(lo, { analyticsLocations: n, trackAction: l }),
-            (0, i.jsx)(t5, { closeModal: a, trackAction: l }),
+            (0, i.jsx)(t3, { closeModal: a, trackAction: l }),
             (0, i.jsx)(th, { gameId: t.id, trackAction: l }),
             (0, i.jsx)(nd, { trackAction: l }),
             (0, i.jsx)(l6, { game: t, closeModal: a, trackAction: l }),
@@ -3230,7 +3230,7 @@ function nV(e) {
                 className: t_.V0,
                 children: [
                     (0, i.jsx)(nk, { game: t, trackAction: a }),
-                    (0, i.jsx)(t3, { game: t, onInviteResolved: l, closeModal: d, trackAction: a }),
+                    (0, i.jsx)(t5, { game: t, onInviteResolved: l, closeModal: d, trackAction: a }),
                     (0, i.jsx)(tW, { game: t, trackAction: a }),
                     (0, i.jsx)(lV, { game: t }),
                     (0, i.jsx)(tv, { game: t, trackAction: a }),
@@ -3268,7 +3268,7 @@ function nW(e) {
                 children: [
                     (0, i.jsx)(nb, { game: t, trackAction: l }),
                     (0, i.jsx)(lo, { analyticsLocations: n, trackAction: l }),
-                    (0, i.jsx)(t5, { closeModal: s, trackAction: l }),
+                    (0, i.jsx)(t3, { closeModal: s, trackAction: l }),
                     d && (0, i.jsx)(lQ, { game: t, trackAction: l }),
                     (0, i.jsx)(t0, { game: t, trackAction: l }),
                 ],
