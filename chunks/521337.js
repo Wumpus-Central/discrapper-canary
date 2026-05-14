@@ -2593,6 +2593,7 @@ class e8 extends m.A {
     _goLiveQualityManager;
     _remoteVideoSinkWants;
     _connection;
+    _hasCodecs;
     _mediaEngineConnectionId;
     _createdTime;
     _connectStartTime;
@@ -2602,6 +2603,8 @@ class e8 extends m.A {
     _connectionSerial;
     _connected;
     _connecting;
+    _voiceConnectionSuccessTracked;
+    _mediaEngineConnectDuration;
     _encountered_socket_failure;
     _inputDetected;
     _encryptionMode;
@@ -2689,6 +2692,9 @@ class e8 extends m.A {
             (this._connectCount = 0),
             (this._connected = !1),
             (this._connecting = !1),
+            (this._voiceConnectionSuccessTracked = !1),
+            (this._hasCodecs = !1),
+            (this._mediaEngineConnectDuration = 0),
             (this._encountered_socket_failure = !1),
             (this._inputDetected = !1),
             (this._selectedExperiments = []),
@@ -2823,6 +2829,7 @@ class e8 extends m.A {
             (this._connectStartTime = (0, A.tB)()),
             this._connectCount++,
             (this._connecting = !0),
+            (this._voiceConnectionSuccessTracked = !1),
             null != r &&
                 this._socket === r &&
                 (this._trackVoiceConnectionConnecting(), (this._encountered_socket_failure = !1), r.connect());
@@ -2839,6 +2846,7 @@ class e8 extends m.A {
                 (this._trackVoiceConnectionConnecting(),
                 (this._connecting = !0),
                 (this._encountered_socket_failure = !1)),
+            (this._voiceConnectionSuccessTracked = !1),
             this._connectCount++,
             (this.reconnecting = !0),
             e.close(),
@@ -3306,7 +3314,7 @@ class e8 extends m.A {
             null != this._connection)
         ) {
             let e = this._connection;
-            (this._connection = null), e.destroy(this.reconnecting);
+            (this._connection = null), (this._hasCodecs = !1), e.destroy(this.reconnecting);
         }
         this.setState(eo.S7L.DISCONNECTED, { willReconnect: r });
     }
@@ -3334,9 +3342,9 @@ class e8 extends m.A {
                 processPriority: o,
                 threadPriorityConfiguration: l,
                 ...this.getExtraConnectionOptions(),
-            }),
-            h = (0, A.tB)() - _;
-        (0, Q.isWeb)() && !e3.PF && J.A.captureMessage("Browser does not support Unified Plan"),
+            });
+        (this._mediaEngineConnectDuration = (0, A.tB)() - _),
+            (0, Q.isWeb)() && !e3.PF && J.A.captureMessage("Browser does not support Unified Plan"),
             f.setUseElectronVideo(u.supports(k.O5.ELECTRON_VIDEO)),
             Y.Ay.supports(k.O5.IMAGE_QUALITY_MEASUREMENT) &&
                 f.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec"),
@@ -3488,70 +3496,19 @@ class e8 extends m.A {
                     case k.$I.DTLS_CONNECTING:
                         this.setState(eo.S7L.DTLS_CONNECTING);
                 }
-                if (
-                    (n === eo.S7L.RTC_CONNECTING && this.state === eo.S7L.RTC_DISCONNECTED
-                        ? this.reconnect()
-                        : this.state === eo.S7L.NO_ROUTE &&
-                          (0 === this._backoff.fails && this._handleNoRoute(), this._backoff.fail(this.reconnect)),
-                    this.state === eo.S7L.RTC_CONNECTED)
-                ) {
-                    let e = z.A.shouldIncludePreferredRegion() ? z.A.getPreferredRegion() : null;
-                    if (this._connecting) {
-                        let t = Y.Ay.getSettings(),
-                            n = this._getAnalyticsProperties();
-                        q.default.track(eo.HAw.VOICE_CONNECTION_SUCCESS, {
-                            ...n,
-                            hostname: this.hostname,
-                            port: this.port,
-                            protocol: this.protocol,
-                            cloudflare_best_region: e,
-                            connect_time: (0, A.tB)() - (this._connected ? this._connectStartTime : this._createdTime),
-                            connect_count: this._connectCount,
-                            audio_subsystem: Y.Ay.getMediaEngine().getAudioSubsystem(),
-                            audio_layer: Y.Ay.getMediaEngine().getAudioLayer(),
-                            automatic_audio_subsystem: t.automaticAudioSubsystem,
-                            media_session_id: this.getMediaSessionId(),
-                            participant_type: this.getVoiceParticipantType(),
-                            join_voice_id: this.joinVoiceId,
-                            is_camera_enabled:
-                                Y.Ay.getMediaEngine().getVideoInputDeviceId() !== k.qe && f.context === k.x.DEFAULT,
-                            ...this.stateHistory.getVoiceConnectionSuccessStats(),
-                        });
-                        let i = performance.now(),
-                            r = (e, t) => (null == e || null == t ? null : e - t);
-                        q.default.track(eo.HAw.VOICE_CONNECTION_TTC_COLLECTED, {
-                            rtc_connection_id: n.rtc_connection_id,
-                            time_1_creation_to_connect: this._connectStartTime - this._createdTime,
-                            time_2_media_engine_connect: h,
-                            time_3_media_engine_create_native_connection: f.transportInfo?.createConnectionTime,
-                            time_4_media_engine_connect_to_socket: f.transportInfo?.connectTime,
-                            time_5_scheduling_connected_callback: r(
-                                this._connection?.onConnectCallbackAt,
-                                this._connection?.transportInfo?.connectCallbackScheduledMs,
-                            ),
-                            time_6_state_connected_to_end_measure: r(i, this._connection?.onConnectCallbackAt),
-                            connect_count: this._connectCount,
-                            rtc_connecting_native_connect: r(
-                                this._connection?.onConnectCallbackAt,
-                                this._connection?.beginInitializeAt,
-                            ),
-                            rtc_connecting_native_codecs: r(
-                                this._connection?.onVideoCodecsCallbackAt,
-                                this._connection?.onConnectCallbackAt,
-                            ),
-                            rtc_connecting_native_crypto_modes: r(
-                                this._connection?.onEncryptionModesCallbackAt,
-                                this._connection?.onVideoCodecsCallbackAt,
-                            ),
-                        });
-                    }
-                    this._localMediaSinkWantsManager?.setConnection(f),
-                        this._goLiveQualityManager?.update(),
-                        (this._connectCompletedTime = (0, A.tB)()),
-                        (this._connected = !0),
-                        (this._connecting = !1),
-                        (this._encountered_socket_failure = !1);
-                } else n === eo.S7L.RTC_CONNECTED && this.stateHistory.reset(this.state);
+                n === eo.S7L.RTC_CONNECTING && this.state === eo.S7L.RTC_DISCONNECTED
+                    ? this.reconnect()
+                    : this.state === eo.S7L.NO_ROUTE &&
+                      (0 === this._backoff.fails && this._handleNoRoute(), this._backoff.fail(this.reconnect)),
+                    this.state === eo.S7L.RTC_CONNECTED
+                        ? (this._localMediaSinkWantsManager?.setConnection(f),
+                          this._goLiveQualityManager?.update(),
+                          (this._connectCompletedTime = (0, A.tB)()),
+                          (this._connected = !0),
+                          (this._connecting = !1),
+                          (this._encountered_socket_failure = !1),
+                          this._trackVoiceConnectionSuccess(f))
+                        : n === eo.S7L.RTC_CONNECTED && this.stateHistory.reset(this.state);
             }),
             f.on(g.yq.SecureFramesUpdate, (e) => {
                 (this._secureFramesState = e), this.emit(ea.q.SecureFramesUpdate);
@@ -3569,6 +3526,7 @@ class e8 extends m.A {
             f.on(g.yq.MLSFailure, this._handleMLSFailure.bind(this)),
             f.setRemoteVideoSinkWants(this._remoteVideoSinkWants),
             (this._connection = f),
+            (this._hasCodecs = !1),
             (this._mediaEngineConnectionId = f.mediaEngineConnectionId);
     }
     _handleSpeaking(e, t, n, i) {
@@ -3768,8 +3726,49 @@ class e8 extends m.A {
     _handleCodecs(e, t) {
         let n = this._connection;
         null != n && null != this.protocol
-            ? n.setCodecs(null != e && "" !== e ? e : k.UK.OPUS, null != t && "" !== t ? t : k.UK.H264, this.context)
+            ? (n.setCodecs(null != e && "" !== e ? e : k.UK.OPUS, null != t && "" !== t ? t : k.UK.H264, this.context),
+              (this._hasCodecs = !0),
+              this._trackVoiceConnectionSuccess(n))
             : this.logger.warn("Cannot set codecs on connection with protocol:", this.protocol);
+    }
+    _trackVoiceConnectionSuccess(e) {
+        if (this._voiceConnectionSuccessTracked || !this._connected || !this._hasCodecs) return;
+        this._voiceConnectionSuccessTracked = !0;
+        let t = z.A.shouldIncludePreferredRegion() ? z.A.getPreferredRegion() : null,
+            n = Y.Ay.getSettings(),
+            i = this._getAnalyticsProperties();
+        q.default.track(eo.HAw.VOICE_CONNECTION_SUCCESS, {
+            ...i,
+            hostname: this.hostname,
+            port: this.port,
+            protocol: this.protocol,
+            cloudflare_best_region: t,
+            connect_time: (0, A.tB)() - (1 === this._connectCount ? this._connectStartTime : this._createdTime),
+            connect_count: this._connectCount,
+            audio_subsystem: Y.Ay.getMediaEngine().getAudioSubsystem(),
+            audio_layer: Y.Ay.getMediaEngine().getAudioLayer(),
+            automatic_audio_subsystem: n.automaticAudioSubsystem,
+            media_session_id: this.getMediaSessionId(),
+            participant_type: this.getVoiceParticipantType(),
+            join_voice_id: this.joinVoiceId,
+            is_camera_enabled: Y.Ay.getMediaEngine().getVideoInputDeviceId() !== k.qe && e.context === k.x.DEFAULT,
+            ...this.stateHistory.getVoiceConnectionSuccessStats(),
+        });
+        let r = performance.now(),
+            s = (e, t) => (null == e || null == t ? null : e - t);
+        q.default.track(eo.HAw.VOICE_CONNECTION_TTC_COLLECTED, {
+            rtc_connection_id: i.rtc_connection_id,
+            time_1_creation_to_connect: this._connectStartTime - this._createdTime,
+            time_2_media_engine_connect: this._mediaEngineConnectDuration,
+            time_3_media_engine_create_native_connection: e.transportInfo?.createConnectionTime,
+            time_4_media_engine_connect_to_socket: e.transportInfo?.connectTime,
+            time_5_scheduling_connected_callback: s(e.onConnectCallbackAt, e.transportInfo?.connectCallbackScheduledMs),
+            time_6_state_connected_to_end_measure: s(r, e.onConnectCallbackAt),
+            connect_count: this._connectCount,
+            rtc_connecting_native_connect: s(e.onConnectCallbackAt, e.beginInitializeAt),
+            rtc_connecting_native_codecs: s(e.onVideoCodecsCallbackAt, e.onConnectCallbackAt),
+            rtc_connecting_native_crypto_modes: s(e.onEncryptionModesCallbackAt, e.onVideoCodecsCallbackAt),
+        });
     }
     _handleSDP(e) {
         let t = this._connection;
