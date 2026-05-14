@@ -4,8 +4,8 @@ var n = t(627968),
     r = t(503698),
     i = t.n(r),
     a = t(837381),
-    d = t(887129),
-    o = t(741918),
+    o = t(887129),
+    d = t(741918),
     c = t(317097),
     u = t(187322),
     h = t(939249),
@@ -17,7 +17,7 @@ var n = t(627968),
     f = t(714385),
     j = t(971745),
     C = t(652215),
-    k = t(985018),
+    k = t(375708),
     v = t(670989);
 let $ = s.lazy(() => Promise.all([t.e("63241"), t.e("22687"), t.e("20038"), t.e("87680")]).then(t.bind(t, 148259))),
     I = () => Promise.resolve();
@@ -27,8 +27,8 @@ function N(e) {
             listItemId: t,
             isDefault: s = !1,
             isCustom: r = !1,
-            isSelected: d = !1,
-            disabled: o = !1,
+            isSelected: o = !1,
+            disabled: d = !1,
             style: h = {},
             onClick: p,
             isGradient: b = !1,
@@ -47,13 +47,13 @@ function N(e) {
     let y = b ? j : l,
         A = !1;
     return (
-        r && !d ? (A = !0) : (r || d) && (A = (0, c.OK)(y ?? C.TGz) > 0.2),
+        r && !o ? (A = !0) : (r || o) && (A = (0, c.OK)(y ?? C.TGz) > 0.2),
         (0, n.jsx)(u.vN, {
             offset: -2,
             children: (0, n.jsxs)("button", {
                 type: "button",
-                className: i()(v.iH, { [v.r9]: o, [v.Ay]: s, [v.Ie]: r, [v.dw]: null == l && !b, [v.hb]: b }),
-                disabled: o,
+                className: i()(v.iH, { [v.r9]: d, [v.Ay]: s, [v.Ie]: r, [v.dw]: null == l && !b, [v.hb]: b }),
+                disabled: d,
                 onClick: () => p?.(b ? { start: j, end: k } : l),
                 style: { ...h, ...N },
                 "aria-label": f ?? (b ? `Gradient ${j}-${k}` : N.backgroundColor),
@@ -71,7 +71,7 @@ function N(e) {
                     (function () {
                         let e = 16,
                             l = 16;
-                        if (((r || s) && ((e = "38%"), (l = "auto")), d))
+                        if (((r || s) && ((e = "38%"), (l = "auto")), o))
                             return (0, n.jsx)(m.A, {
                                 size: "custom",
                                 width: e,
@@ -116,8 +116,8 @@ let H = s.memo(function (e) {
             value: t,
             eagerUpdate: r = !1,
             onChange: a,
-            onClose: d,
-            suggestedColors: o,
+            onClose: o,
+            suggestedColors: d,
             middle: u,
             footer: g,
             showEyeDropper: m,
@@ -136,19 +136,19 @@ let H = s.memo(function (e) {
             l = (0, c.tf)(N);
         S({ current: N, pending: { hex: e, hsl: l }, input: e });
     }, [N, L]),
-        s.useEffect(() => d, [d]);
-    let E = (e) => {
+        s.useEffect(() => o, [o]);
+    let T = (e) => {
             let l = "#" === e[0] ? e : `#${e}`;
             if (!(0, c.qt)(l)) return void S((e) => ({ ...e, input: l }));
             let t = (0, c.LX)(l),
                 n = (0, c.tf)(t);
             S({ current: t, pending: { hex: l, hsl: n }, input: l }), a(t);
         },
-        T = async () => {
+        E = async () => {
             if (null != I)
                 try {
                     let { sRGBHex: e } = await I.open();
-                    E(e);
+                    T(e);
                 } catch {}
         },
         w = s.useCallback(
@@ -173,24 +173,24 @@ let H = s.memo(function (e) {
                 u,
                 (0, n.jsx)(b.k, {
                     value: L.input.slice(1),
-                    onChange: E,
+                    onChange: T,
                     maxLength: 6,
                     leading: "#",
                     trailing:
-                        m && null != I ? { icon: f.d, onClick: T, "aria-label": k.intl.string(k.t["0dU9Ny"]) } : void 0,
+                        m && null != I ? { icon: f.d, onClick: E, "aria-label": k.intl.string(k.t["0dU9Ny"]) } : void 0,
                 }),
-                null != o &&
-                    o.length > 0 &&
+                null != d &&
+                    d.length > 0 &&
                     (0, n.jsx)("div", {
                         className: v.I1,
-                        children: o.map((e, l) =>
+                        children: d.map((e, l) =>
                             (0, n.jsx)(
                                 h.D,
                                 {
-                                    "aria-label": "",
+                                    "aria-label": k.intl.formatToPlainString(k.t.XFIqyk, { hex: e }),
                                     style: { backgroundColor: e },
                                     className: v.db,
-                                    onClick: () => E(e),
+                                    onClick: () => T(e),
                                 },
                                 `${e}-${l}`,
                             ),
@@ -199,8 +199,8 @@ let H = s.memo(function (e) {
                 g,
             ],
         }),
-        z = x ?? p.l;
-    return (0, n.jsx)(z, { "aria-label": k.intl.string(k.t.WTqQ5e), className: i()(v.zi, C), children: D });
+        P = x ?? p.l;
+    return (0, n.jsx)(P, { "aria-label": k.intl.string(k.t.WTqQ5e), className: i()(v.zi, C), children: D });
 });
 function L(e) {
     let {
@@ -259,10 +259,10 @@ function L(e) {
             }),
         $ = r.slice(0, r.length / 2),
         y = r.slice(r.length / 2, r.length),
-        A = (0, d.Ay)({
+        A = (0, o.Ay)({
             id: "color-picker",
             isEnabled: !0,
-            orientation: o.Gl.HORIZONTAL,
+            orientation: d.Gl.HORIZONTAL,
             scrollToStart: I,
             scrollToEnd: I,
         });
@@ -270,11 +270,11 @@ function L(e) {
         navigator: A,
         children: (0, n.jsx)(a.PR, {
             children: (e) => {
-                let { ref: a, ...d } = e;
+                let { ref: a, ...o } = e;
                 return (0, n.jsxs)("div", {
                     className: i()(v.kL, l, { [v.D7]: b }),
                     ref: a,
-                    ...d,
+                    ...o,
                     children: [
                         !b &&
                             (0, n.jsxs)(n.Fragment, {

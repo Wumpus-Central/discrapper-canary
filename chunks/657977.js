@@ -135,8 +135,8 @@ class S extends r.Component {
             } = this.props,
             C = w ? p.y : "textarea",
             R = this.hasError(),
-            E = this.props["aria-labelledby"] ?? this.context?.titleId,
-            b = this.getAriaDescribedBy();
+            b = this.props["aria-labelledby"] ?? this.context?.titleId,
+            E = this.getAriaDescribedBy();
         return (0, l.jsxs)("div", {
             className: a()(T.I6, { [x.Uu]: S }),
             children: [
@@ -147,8 +147,8 @@ class S extends r.Component {
                             children: (0, l.jsx)(C, {
                                 type: "text",
                                 className: a()(T.hF, x.Tg, y.qD, m, { [T.z3]: R, [T.r9]: t, [x.Xl]: d }),
-                                "aria-labelledby": E,
-                                "aria-describedby": b,
+                                "aria-labelledby": b,
+                                "aria-describedby": E,
                                 "aria-invalid": R,
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: g,
@@ -204,8 +204,8 @@ var w = n(922016),
     O = n(565645),
     C = n(765671),
     R = n(964486),
-    E = n(793574),
-    b = n(688810),
+    b = n(793574),
+    E = n(688810),
     P = n(375499),
     U = n(267889),
     M = n(287809),
@@ -227,13 +227,13 @@ let G = (t) => {
             ? f.intl.formatToPlainString(f.t["+3jw2j"], { time: f.intl.data.formatTime(e, { format: "short" }) })
             : f.intl.formatToPlainString(f.t["/Avy4C"], { time: f.intl.data.formatTime(e, { format: "short" }) });
     },
-    J = (t) => {
+    Q = (t) => {
         let e = Date.now() + t;
         return (0, K.ro)(new Date(), new Date(e))
             ? f.intl.data.formatTime(e, { format: "short" })
             : f.intl.formatToPlainString(f.t.DN91Jz, { time: f.intl.data.formatTime(e, { format: "short" }) });
     };
-var Q = n(685396),
+var J = n(685396),
     X = n(231723),
     Z = n(480335),
     V = n(999291),
@@ -306,9 +306,9 @@ var tu = n(307731),
 let th = "CLEAR_AFTER";
 function tc(t) {
     let { transitionState: e, onClose: n, sourceAnalyticsLocations: i = [], prompt: d = null } = t,
-        { analyticsLocations: h } = (0, b.Ay)(i, E.A.CUSTOM_STATUS_MODAL),
+        { analyticsLocations: h } = (0, E.Ay)(i, b.A.CUSTOM_STATUS_MODAL),
         m = (0, o.bG)([M.default], () => M.default.getCurrentUser() ?? null),
-        p = (0, Q.K)(),
+        p = (0, J.K)(),
         [x, T] = r.useState(p?.state ?? ""),
         [y, A] = r.useState(p?.emoji ?? null),
         [j, v] = r.useState(
@@ -346,7 +346,7 @@ function tc(t) {
         }
     }, [tt, X]),
         r.useEffect(() => {
-            _.default.track($.HAw.OPEN_MODAL, { type: E.A.CUSTOM_STATUS_MODAL, location_stack: h });
+            _.default.track($.HAw.OPEN_MODAL, { type: b.A.CUSTOM_STATUS_MODAL, location_stack: h });
         }, [h]),
         (0, R.Ay)(() => {
             I.current?.focus(), I.current?.setSelection(x.length, x.length);
@@ -457,13 +457,13 @@ function tc(t) {
                                 : (function (t) {
                                       switch (t) {
                                           case Y.yt.TODAY:
-                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 24 })} (${J(z.A.Millis.DAY)})`;
+                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 24 })} (${Q(z.A.Millis.DAY)})`;
                                           case Y.yt.HOURS_4:
-                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 4 })} (${J(4 * z.A.Millis.HOUR)})`;
+                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 4 })} (${Q(4 * z.A.Millis.HOUR)})`;
                                           case Y.yt.HOURS_1:
-                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 1 })} (${J(z.A.Millis.HOUR)})`;
+                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 1 })} (${Q(z.A.Millis.HOUR)})`;
                                           case Y.yt.MINUTES_30:
-                                              return `${f.intl.formatToPlainString(f.t.TS3eJb, { minutes: 30 })} (${J(30 * z.A.Millis.MINUTE)})`;
+                                              return `${f.intl.formatToPlainString(f.t.TS3eJb, { minutes: 30 })} (${Q(30 * z.A.Millis.MINUTE)})`;
                                           case Y.yt.DONT_CLEAR:
                                               return f.intl.string(f.t.bRn8cq);
                                           default:
@@ -545,6 +545,10 @@ function tc(t) {
                                             ...t,
                                             ref: F,
                                             active: n,
+                                            "aria-label":
+                                                null != y
+                                                    ? f.intl.formatToPlainString(f.t.UQ53sj, { emojiName: y.name })
+                                                    : void 0,
                                             className: td.Z8,
                                             spriteSize: 24,
                                             tabIndex: 0,
