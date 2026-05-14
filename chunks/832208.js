@@ -26,10 +26,19 @@ class c extends a.PureComponent {
     }
     renderFormSection = (e) => {
         let { values: t, onFieldChange: n, onFieldFocus: a, onFieldBlur: i, layout: o, ...u } = this.props,
-            { getClassNameForLayout: c, renderInput: d, title: p, name: m, id: h, placeholder: A, ...C } = e,
-            _ = {
-                ...C,
-                placeholder: A?.(),
+            {
+                getClassNameForLayout: c,
+                renderInput: d,
+                title: p,
+                name: m,
+                id: h,
+                placeholder: C,
+                helperText: A,
+                ...E
+            } = e,
+            y = {
+                ...E,
+                placeholder: C?.(),
                 error: this.getError(m),
                 value: t[m],
                 name: m,
@@ -40,7 +49,10 @@ class c extends a.PureComponent {
             };
         return (0, l.jsx)(
             "div",
-            { className: r()(c?.(o)), children: (0, l.jsx)(s.D, { id: h, label: p(), children: d(_, u, o) }) },
+            {
+                className: r()(c?.(o)),
+                children: (0, l.jsx)(s.D, { id: h, label: p(), helperText: A?.(), children: d(y, u, o) }),
+            },
             m,
         );
     };

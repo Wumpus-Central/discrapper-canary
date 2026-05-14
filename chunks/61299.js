@@ -1204,30 +1204,28 @@ let tM = (e) => {
         }
         let d = (0, tx.vg)("AddressStep"),
             p = (0, tg.z)();
-        return (
-            0 === n.country.length && null != p && p.length > 0 && (n.country = p[0]),
-            (0, i.jsxs)(r.Fragment, {
-                children: [
-                    o
-                        ? (0, i.jsx)("div", {
-                              className: ea.QK,
-                              children: (0, i.jsx)(C.w, { type: "critical", children: L.intl.string(L.t.vZ8y7l) }),
-                          })
-                        : null,
-                    (0, i.jsx)(tI.Ay, {
-                        className: ea.__invalid_formItem,
-                        onBillingAddressChange: a,
-                        error: l,
-                        layout: t,
-                        allowedBillingAddressCountries: p,
-                        ...n,
-                    }),
-                    d && null != p && p.length > 0
-                        ? (0, i.jsx)(C.w, { type: "info", children: L.intl.string(L.t.Pg2hU0) })
-                        : null,
-                ],
-            })
-        );
+        0 === n.country.length && null != p && p.length > 0 && (n.country = p[0]);
+        let m = (0, c.bG)([H.default], () => H.default.getCurrentUser()?.storeCountry?.isLocked === !0),
+            h = d && m ? L.intl.string(L.t.Pg2hU0) : null;
+        return (0, i.jsxs)(r.Fragment, {
+            children: [
+                o
+                    ? (0, i.jsx)("div", {
+                          className: ea.QK,
+                          children: (0, i.jsx)(C.w, { type: "critical", children: L.intl.string(L.t.vZ8y7l) }),
+                      })
+                    : null,
+                (0, i.jsx)(tI.Ay, {
+                    className: ea.__invalid_formItem,
+                    onBillingAddressChange: a,
+                    error: l,
+                    layout: t,
+                    allowedBillingAddressCountries: p,
+                    countryHelperText: h,
+                    ...n,
+                }),
+            ],
+        });
     },
     tb = new e_.A("AddPaymentAddressStep.tsx");
 function tR(e) {
