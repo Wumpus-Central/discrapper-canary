@@ -550,10 +550,25 @@
     --custom-scroller-mask-width-right: var(--custom-scroller-mask-width)
 }
 
+.scroller__8dd17 {
+    scroll-behavior: var(--custom-scroller-scroll-behavior);
+    scroll-padding-inline: calc(var(--custom-scroller-mask-width) + var(--custom-scroller-overflow-amount));
+    scroll-snap-type: x mandatory
+}
+
+.pageSnapAnchor__8dd17 {
+    height: 1px;
+    pointer-events: none;
+    position: absolute;
+    scroll-snap-align: center;
+    top: 0;
+    visibility: hidden;
+    width: 0
+}
+
 .scrollerOverflow__8dd17 {
     margin: calc(var(--custom-scroller-overflow-amount)*-1);
-    padding: var(--custom-scroller-overflow-amount);
-    scroll-padding-inline: var(--custom-scroller-overflow-amount)
+    padding: var(--custom-scroller-overflow-amount)
 }
 
 .maskOverflowStart__8dd17 {
@@ -627,7 +642,6 @@
     flex-shrink: 0;
     overflow: hidden;
     position: relative;
-    scroll-snap-align: end;
     width: var(--custom-min-quest-tile-width)
 }
 

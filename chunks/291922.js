@@ -1146,7 +1146,8 @@ function eF(e) {
                 ),
                 almostVisibleInViewport: s,
             };
-        })(_?.current?.getScrollerNode() ?? null, h ?? !1);
+        })(_?.current?.getScrollerNode() ?? null, h ?? !1),
+        q = i.useCallback((e) => !!e.currentTarget.contains(e.relatedTarget), []);
     return (0, n.jsxs)("div", {
         id: eH(t.id),
         ref: (e) => {
@@ -1155,8 +1156,12 @@ function eF(e) {
         className: l()(eU.k, s),
         onMouseEnter: T,
         onMouseLeave: I,
-        onFocus: T,
-        onBlur: I,
+        onFocus: (e) => {
+            q(e) || T();
+        },
+        onBlur: (e) => {
+            q(e) || I();
+        },
         children: [
             (0, n.jsx)(Z, {
                 quest: t,
