@@ -10,6 +10,31 @@
     overflow: hidden
 }
 
+.timeSelectEnd__3a865 [aria-hidden=true] .durationTrailingWrap__3a865 {
+    display: none
+}
+
+.timeSelectEnd__3a865 [role=option]>div:has(.durationTrailingWrap__3a865) {
+    -moz-column-gap: 0;
+    column-gap: 0;
+    grid-template-columns: auto auto
+}
+
+.timeSelectEnd__3a865 [role=option]>div:has(.durationTrailingWrap__3a865)>:last-child {
+    grid-column: 2;
+    justify-content: flex-start
+}
+
+.durationTrailingWrap__3a865 {
+    align-items: center;
+    display: inline-flex
+}
+
+.durationDot__3a865 {
+    flex-shrink: 0;
+    padding-inline: var(--space-6)
+}
+
 .daysRow__3a865 {
     display: flex;
     flex-wrap: wrap;
@@ -49,14 +74,6 @@
     transition: background-color .2s ease
 }
 
-.durationHint__3a865 {
-    color: var(--text-subtle)
-}
-
 .overlapWarningContent__3a865 {
     margin-top: var(--space-16)
-}
-
-[data-mana-component=select-input-field] .durationHint__3a865 {
-    display: none
 }
