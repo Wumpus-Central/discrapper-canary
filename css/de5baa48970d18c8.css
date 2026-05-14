@@ -1,3 +1,31 @@
+.container__57f3b {
+    gap: 8px;
+    justify-content: center
+}
+
+.avatarStack__57f3b,
+.container__57f3b {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.avatarStack__57f3b,
+.avatarWrapper__57f3b {
+    position: relative
+}
+
+.avatarWrapper__57f3b {
+    border: 2px solid var(--modal-background);
+    border-radius: 50%;
+    margin-inline-start: -8px;
+    overflow: hidden
+}
+
+.avatarWrapper__57f3b:first-child {
+    margin-inline-start: 0
+}
+
 .loadingContainer__9b0f4 {
     align-items: center;
     display: flex;

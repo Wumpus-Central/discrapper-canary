@@ -1,3 +1,12 @@
+.learnMore__7b2a3 {
+    cursor: pointer
+}
+
+.container_ae4343 {
+    display: flex;
+    gap: var(--space-8)
+}
+
 .container__89401 {
     align-items: center;
     height: 100%;

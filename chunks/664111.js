@@ -697,7 +697,7 @@ let I = { tension: 250, friction: 5, clamp: !0 },
                     null != eu &&
                         (0, r.jsx)("div", {
                             className: k.MU,
-                            children: eu({ playerState: eF, isControlBarExpanded: t$, videoRef: th }),
+                            children: eu({ playerState: eF, isControlBarExpanded: t$, videoRef: th, isActive: !0 }),
                         }),
                 ],
             }),
@@ -762,7 +762,7 @@ let U = l.forwardRef(function (e, t) {
                       null != E &&
                           (0, r.jsx)("div", {
                               className: k.MU,
-                              children: E({ playerState: o.Q6.PAUSED, isControlBarExpanded: !0 }),
+                              children: E({ playerState: o.Q6.PAUSED, isControlBarExpanded: !0, isActive: !1 }),
                           }),
                       (0, r.jsx)("div", {
                           className: k.mF,
