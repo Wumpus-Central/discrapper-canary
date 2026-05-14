@@ -1,9 +1,0 @@
-.buttons_bc38cd {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px
-}
-
-.buttons_bc38cd:empty {
-    display: none
-}

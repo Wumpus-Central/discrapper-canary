@@ -1,0 +1,22 @@
+.clickZone__29c87,
+.clickZoneDebugContainer__29c87 {
+    height: 100%;
+    width: 100%
+}
+
+.clickZone__29c87 {
+    align-items: center;
+    background-color: rgba(255, 0, 0, .25);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: background-color .2s ease-in-out
+}
+
+.clickBackground__29c87 {
+    background-color: hsl(var(--brand-500-hsl)/.9)
+}
+
+.clickable__29c87 {
+    padding: 12px
+}
