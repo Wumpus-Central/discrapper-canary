@@ -729,6 +729,7 @@
 
 .contentWrapperLoading__0829a {
     align-items: center;
+    background-color: var(--background-mod-subtle);
     border: none;
     justify-content: center
 }

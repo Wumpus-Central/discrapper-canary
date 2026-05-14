@@ -630,6 +630,20 @@
     stroke: var(--interactive-text-active)
 }
 
+.subtext_a90f4d {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.channelIcon_a90f4d {
+    flex-shrink: 0
+}
+
+.channelIcon_a90f4d path {
+    fill: var(--text-muted) !important
+}
+
 @keyframes pulse__3b43f {
     0% {
         opacity: .7
@@ -886,22 +900,46 @@
     padding: var(--space-16)
 }
 
+.questHomePage__1add6 {
+    background: var(--background-gradient-chat, var(--background-base-lower))
+}
+
+.questHomeScroll__1add6 {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-gutter: stable
+}
+
+.questHomeScroll__1add6::-webkit-scrollbar {
+    width: 8px
+}
+
+.questHomeContent__1add6 {
+    box-sizing: border-box;
+    margin-inline: auto;
+    max-width: 1300px;
+    padding: var(--space-24) var(--space-20);
+    width: 100%
+}
+
 .heroBanner__1add6 {
-    border-radius: var(--radius-lg);
-    height: 240px;
-    margin: var(--space-16)
+    border-radius: var(--radius-xl);
+    margin-block-end: 56px;
+    min-height: 500px
 }
 
 .questGrid__1add6 {
     display: grid;
-    gap: var(--space-16);
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    padding-block: 0 var(--space-16);
-    padding-inline: var(--space-16)
+    gap: var(--space-24);
+    grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+    margin-block-start: var(--space-24);
+    margin-inline: auto;
+    max-width: 1310px
 }
 
 .questCard__1add6 {
-    height: 200px
+    border-radius: 10px;
+    height: 316px
 }
 
 .fcHeroBanner__1add6 {
@@ -6868,33 +6906,18 @@ screen and (max-width:485px) {
     background: linear-gradient(180deg, rgba(15, 16, 17, 0), rgba(15, 16, 17, .1))
 }
 
-.container__879ae {
-    background: linear-gradient(132.74deg, var(--premium-tier-0-header-gradient-1) -4.59%, var(--premium-tier-0-header-gradient-2) 35.84%, var(--premium-tier-0-header-gradient-3) 54.06%, var(--premium-tier-0-header-gradient-4) 93.53%, var(--premium-tier-0-header-gradient-5) 102.63%);
-    border-radius: var(--radius-sm);
-    padding: var(--space-24);
-    position: relative;
-    text-align: center
-}
-
-.image__879ae {
-    margin-bottom: var(--space-16)
-}
-
-.close__879ae {
-    color: #fff;
-    inset-inline-end: var(--space-8);
-    position: absolute;
-    top: var(--space-8)
-}
-
-.riveHoverTarget__438ba {
-    height: 100%;
-    pointer-events: auto;
-    width: 100%
-}
-
 .container_b82a71 {
     color: var(--text-strong)
+}
+
+.videoPaused_afb275 {
+    align-items: center;
+    display: flex;
+    justify-content: start
+}
+
+.warningCircle_afb275 {
+    margin-inline-end: 4px
 }
 
 .footer__272c7 {

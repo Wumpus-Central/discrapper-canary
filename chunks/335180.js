@@ -108,17 +108,18 @@ function F() {
 }
 function V() {
     return (0, i.jsxs)("div", {
-        className: y.MY,
+        className: y.NO,
         role: "status",
         "aria-label": S.intl.string(S.t.JALI2K),
         children: [
             (0, i.jsx)(k, { icon: o.r, title: S.intl.string(S.t.JALI2K) }),
             (0, i.jsx)("div", {
-                className: D.MJ,
+                className: s()(y.W2, y.hv),
                 children: (0, i.jsxs)("div", {
-                    className: y.W2,
+                    className: y.Jt,
                     children: [
                         (0, i.jsx)("div", { className: s()(y.Nr, y.hV) }),
+                        (0, i.jsx)(x, { width: 145, height: 32 }),
                         (0, i.jsx)("div", {
                             className: y.Jm,
                             children: Array.from({ length: 6 }).map((e, t) =>

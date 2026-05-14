@@ -5936,16 +5936,6 @@ button.inner__02fc8:disabled {
     white-space: nowrap
 }
 
-.videoPaused_afb275 {
-    align-items: center;
-    display: flex;
-    justify-content: start
-}
-
-.warningCircle_afb275 {
-    margin-inline-end: 4px
-}
-
 .list__20827 {
     display: inline-flex;
     flex-wrap: wrap;
