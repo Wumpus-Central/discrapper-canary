@@ -118,8 +118,17 @@ function Z(e) {
                 "" !== t && s
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(f.Ay, { className: H.JB, size: 160, text: t }),
-                              (0, r.jsx)("div", { className: H.R6, children: (0, r.jsx)("img", { src: V, alt: "" }) }),
+                              (0, r.jsx)(f.Ay, {
+                                  className: H.JB,
+                                  size: 160,
+                                  text: t,
+                                  ariaLabel: B.intl.string(B.t.SzYj9v),
+                              }),
+                              (0, r.jsx)("div", {
+                                  className: H.R6,
+                                  "aria-hidden": !0,
+                                  children: (0, r.jsx)("img", { src: V, alt: "" }),
+                              }),
                           ],
                       })
                     : (0, r.jsx)("div", {

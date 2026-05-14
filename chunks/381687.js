@@ -29,9 +29,9 @@ var l,
     v = r(517381),
     C = r(822382),
     j = r(443390),
-    W = r(304578),
-    k = r(616252),
-    O = r(753806),
+    O = r(304578),
+    W = r(616252),
+    k = r(753806),
     M = r(775427),
     P = r(65600),
     D = r(145331),
@@ -85,7 +85,7 @@ function ed(e) {
         { text: n, channel: s, group: a } = r,
         i = n;
     if ((null != s && (i = (0, C.TZ)(i)), t === eu.o$q.FILTER_ALL)) {
-        let e = W.Ay[a ?? l];
+        let e = O.Ay[a ?? l];
         e?.key != null && e?.key !== "" && (i = `${e.key} ${i}`);
     }
     return i;
@@ -115,7 +115,7 @@ function eg(e) {
 }
 function eS(e) {
     let { searchTokenType: t, answer: r } = e,
-        l = W.Ay[t]?.key ?? "",
+        l = O.Ay[t]?.key ?? "",
         s = r ?? (0, C.sh)(t);
     return (0, n.jsxs)("div", {
         className: ep.Xq,
@@ -142,7 +142,7 @@ function eA(e) {
         text: eo.intl.string(eo.t.dwAvX1),
         position: "left",
         children: (0, n.jsx)(X.D, {
-            onClick: () => k.A.clearSearchHistory(t),
+            onClick: () => W.A.clearSearchHistory(t),
             className: ep.Wf,
             title: eo.intl.string(eo.t.dwAvX1),
             "aria-label": eo.intl.string(eo.t.dwAvX1),
@@ -281,31 +281,31 @@ function ev(e) {
 var eC = (((l = {}).ROW = "row"), (l.GROUP = "group"), l);
 r(667532);
 var ej = r(506774),
-    eW = r(228366);
-let ek = ef.nC,
-    eO = !1,
+    eO = r(228366);
+let eW = ef.nC,
+    ek = !1,
     eM = {};
 class eP extends h.Ay.Store {
     static displayName = ef.yQ;
     initialize() {
         var e;
-        let t = ej.w.get(ek);
+        let t = ej.w.get(eW);
         t?.history != null &&
             (Object.keys((e = t.history)).forEach((t) => {
                 Array.isArray(e[t]) && (e[t] = e[t].filter((e) => "string" == typeof e && e.trim())),
                     (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t];
             }),
             (eM = e)),
-            (eO = !!ej.w.get("tokenized"));
+            (ek = !!ej.w.get("tokenized"));
     }
     isTokenized() {
-        return eO;
+        return ek;
     }
     getHistory(e) {
         return eM[e];
     }
 }
-let eD = new eP(eW.h, {
+let eD = new eP(eO.h, {
     SEARCH_HISTORY_WEB_CLEAR_ITEMS: function (e) {
         let { id: t } = e;
         delete eM[t], ej.w.set(ef.nC, { history: eM });
@@ -384,7 +384,7 @@ let eG = s.forwardRef(function (e, t) {
             p = s.useCallback(
                 (e) => {
                     let { query: t, performSearch: r, replace: l } = e;
-                    O.A.setSearchQuery({
+                    k.A.setSearchQuery({
                         query: t,
                         performSearch: r,
                         replace: l,
@@ -464,12 +464,12 @@ let eG = s.forwardRef(function (e, t) {
                                         sublabel: (0, n.jsx)(eS, { searchTokenType: u }),
                                         onSelect: (n) => {
                                             let { selectedIndex: s, searchAutocompleteSelectAction: a } = n,
-                                                i = W.Ay[u]?.key ?? "",
+                                                i = O.Ay[u]?.key ?? "",
                                                 o = (0, C.bS)(r);
                                             (0, D.kc)({
                                                 searchContext: r,
                                                 searchQuery: P.A.getSearchResultsQuery(o),
-                                                searchQueryString: O.A.getSearchInputText(r),
+                                                searchQueryString: k.A.getSearchInputText(r),
                                                 searchTokenType: u,
                                                 searchAutocompleteGroup: u,
                                                 searchAutocompleteMode: l,
@@ -514,7 +514,7 @@ let eG = s.forwardRef(function (e, t) {
                             i = u.type,
                             o = u.filter,
                             { token: c, group: h } = s,
-                            d = null != h && (0, W.If)(h) ? h : null,
+                            d = null != h && (0, O.If)(h) ? h : null,
                             f = c ?? o ?? d,
                             p = s.channel,
                             E = f === eu.LWr.FILTER_IN && null != p && p.id === T.A.getChannelId(),
@@ -522,7 +522,7 @@ let eG = s.forwardRef(function (e, t) {
                         (0, D.kc)({
                             searchContext: r,
                             searchQuery: P.A.getSearchResultsQuery(g),
-                            searchQueryString: O.A.getSearchInputText(r),
+                            searchQueryString: k.A.getSearchInputText(r),
                             searchTokenType: f,
                             searchAutocompleteGroup: a,
                             searchAutocompleteMode: u,
@@ -555,7 +555,7 @@ let eG = s.forwardRef(function (e, t) {
                                           children: eo.intl.string(eo.t["1axf1T"]),
                                       })
                                     : void 0,
-                                onSelect: () => O.A.openSearchFiltersModal(r),
+                                onSelect: () => k.A.openSearchFiltersModal(r),
                             });
                         },
                         [r],
@@ -578,7 +578,7 @@ let eG = s.forwardRef(function (e, t) {
                                                 let { selectedChannel: t, searchAutocompleteSelectAction: l } = e;
                                                 (0, D.rE)({ searchContext: r, searchAutocompleteSelectAction: l });
                                                 let n = eu.LWr.FILTER_IN,
-                                                    s = W.Ay[n],
+                                                    s = O.Ay[n],
                                                     i = (0, C.Rt)(t);
                                                 a({
                                                     query: `${s?.key ?? n.toString()} ${i}`,
@@ -699,7 +699,7 @@ let eG = s.forwardRef(function (e, t) {
                                                               (0, n.jsx)(G.E, {
                                                                   variant: "text-sm/medium",
                                                                   color: "text-strong",
-                                                                  children: W.Ay[eu.LWr.FILTER_IN].key ?? "",
+                                                                  children: O.Ay[eu.LWr.FILTER_IN].key ?? "",
                                                               }),
                                                               em(t),
                                                           ],
@@ -945,7 +945,7 @@ let eG = s.forwardRef(function (e, t) {
                         (0, D.kc)({
                             searchContext: a,
                             searchQuery: P.A.getSearchResultsQuery(t),
-                            searchQueryString: O.A.getSearchInputText(a),
+                            searchQueryString: k.A.getSearchInputText(a),
                             searchTokenType: l.mode.filter,
                             searchAutocompleteGroup: eu.x2k.DATES,
                             searchAutocompleteMode: l.mode,
@@ -954,7 +954,7 @@ let eG = s.forwardRef(function (e, t) {
                             isSearchFilterComplete: !1,
                             searchAutocompleteSelectAction: ef.oi.CLICK,
                         }),
-                            O.A.setSearchQuery({
+                            k.A.setSearchQuery({
                                 query: e.format(eu.ump) + " ",
                                 performSearch: !0,
                                 replace: !1,
@@ -991,7 +991,7 @@ var eY = r(921242),
     eZ = r(85486);
 let eK = 512,
     eX = (0, R.Ld)(),
-    eV = c()(O.A.fetchMessages, 500);
+    eV = c()(k.A.fetchMessages, 500);
 class eJ extends s.PureComponent {
     state = { focused: !1, selectedIndex: void 0 };
     _editorRef;
@@ -1060,7 +1060,7 @@ class eJ extends s.PureComponent {
         });
     tokenize(e) {
         let t = (0, C._o)(b.pe(e)).filter((e) => e.type !== S.Ay.NON_TOKEN_TYPE);
-        return b.uD(t, e, W.Ay);
+        return b.uD(t, e, O.Ay);
     }
     search = (e) => {
         let { isSearching: t } = this.props,
@@ -1083,7 +1083,7 @@ class eJ extends s.PureComponent {
     };
     clearSearch() {
         let { searchContext: e } = this.props;
-        O.A.cleanUpSearchState(e);
+        k.A.cleanUpSearchState(e);
     }
     handleClearSearch = (e) => {
         let { editorState: t, searchContext: r } = this.props,
@@ -1111,7 +1111,7 @@ class eJ extends s.PureComponent {
                   let { _editorRef: e } = this;
                   e?.focus(),
                       this.handleSetSearchQuery({
-                          query: W.Ay[eu.LWr.FILTER_IN].key + `${s} `,
+                          query: O.Ay[eu.LWr.FILTER_IN].key + `${s} `,
                           replace: !0,
                           searchQuerySource: ef.Q_.SEARCH_TEXT_INPUT,
                       });
@@ -1133,7 +1133,7 @@ class eJ extends s.PureComponent {
     };
     onFocus = () => {
         let { searchContext: e } = this.props;
-        this.setState({ focused: !0 }), j.A.setFocused(e, !0);
+        this.setState({ focused: !0 }), j.A.setFocused(e, !0), d.O.announce(eo.intl.string(eo.t["5h0QOP"]));
     };
     handleBlur = () => {
         let { searchContext: e } = this.props;
@@ -1219,7 +1219,7 @@ class eJ extends s.PureComponent {
     }
     setEditorState = (e) => {
         let { searchContext: t } = this.props;
-        k.A.updateSearchEditorState(t, e);
+        W.A.updateSearchEditorState(t, e);
     };
     getPopoutRef = () => {
         let { current: e } = this._searchPopoutRef;
@@ -1237,7 +1237,7 @@ class eJ extends s.PureComponent {
             if ((e.stopPropagation(), e.preventDefault(), b.Im(s))) this.blurEditor();
             else {
                 let e = b.Xq(s);
-                k.A.updateSearchEditorState(a, e), this.setState({ focused: !0 });
+                W.A.updateSearchEditorState(a, e), this.setState({ focused: !0 });
             }
             return !0;
         }
@@ -1349,14 +1349,14 @@ function e0(e) {
         l = (0, C.bS)(t),
         a = (0, h.bG)([A.A], () => A.A.keyboardModeEnabled),
         i = (0, h.bG)([P.A], () => P.A.getEditorState(l)),
-        u = s.useMemo(() => (null != i ? i : b.e_(N.ys(W.Ay))), [i]);
+        u = s.useMemo(() => (null != i ? i : b.e_(N.ys(O.Ay))), [i]);
     s.useEffect(() => {
         F.A.initializeAutocomplete(t);
     }, [t]);
     let o = (0, h.bG)([P.A], () => P.A.getIsSearchTokensInitialized()),
         c = s.useRef(o);
     s.useEffect(() => {
-        o && c.current !== o && ((c.current = o), O.A.ensureSearchInputDecorators(t));
+        o && c.current !== o && ((c.current = o), k.A.ensureSearchInputDecorators(t));
     }, [o, t]),
         s.useEffect(
             () => (
@@ -1388,7 +1388,7 @@ function e0(e) {
                 let { queryString: r, query: l, searchEverywhere: n, searchQuerySource: s } = e;
                 j.A.refreshQueryId(t),
                     (0, D.fd)({ searchContext: t, query: l, queryString: r, searchQuerySource: s }),
-                    k.A.updateSearchMode(t, eu.BBH.NEWEST),
+                    W.A.updateSearchMode(t, eu.BBH.NEWEST),
                     eV({ searchContext: t, searchQueryString: r, searchEverywhere: n, offset: 0 });
             },
             [t],
