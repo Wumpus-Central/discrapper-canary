@@ -1,22 +1,22 @@
-let n, i;
-t.d(r, { default: () => V });
-var l = t(627968),
-    o = t(64700),
-    a = t(503698),
-    c = t.n(a),
-    u = t(772707),
-    s = t(231723),
-    d = t(289873),
-    f = t(174459),
-    h = t(625494),
-    p = t(964486),
-    E = t(888548),
-    C = t(652215);
-t(321073);
-var k = t(411722),
-    m = t(3745),
-    y = t(835245);
-let w = {
+let t, i;
+n.d(r, { default: () => z });
+var l = n(627968),
+    o = n(64700),
+    a = n(503698),
+    c = n.n(a),
+    u = n(772707),
+    s = n(231723),
+    d = n(289873),
+    f = n(174459),
+    h = n(625494),
+    p = n(964486),
+    E = n(888548),
+    k = n(652215);
+n(321073);
+var C = n(411722),
+    m = n(3745),
+    w = n(835245);
+let y = {
         110100: "invalid-sitekey",
         110110: "sitekey-not-found",
         110200: "domain-not-authorized",
@@ -33,38 +33,47 @@ let w = {
     g = _();
 function _() {
     return new Promise((e, r) => {
-        (n = e), (i = r);
+        (t = e), (i = r);
     });
 }
-function x() {
+function T() {
     Reflect.deleteProperty(window, A);
 }
-function R() {
-    "ready" !== v && null != window.turnstile && ((v = "ready"), x(), n?.());
+function x() {
+    "ready" !== v && null != window.turnstile && ((v = "ready"), T(), t?.());
 }
-let T = {
+let R = {
     normal: { width: 300, height: 65 },
     compact: { width: 150, height: 140 },
     invisible: { width: 0, height: 0, overflow: "hidden" },
 };
-function P(e) {
-    let { sitekey: r, theme: t, size: n, onLoad: a, onVerify: c, onError: u, onExpire: s } = e,
-        d = o.useRef(null),
+function S(e) {
+    let {
+            sitekey: r,
+            theme: n,
+            size: t,
+            onLoad: a,
+            onVerify: c,
+            onError: u,
+            onExpire: s,
+            onUnknownVendorErrorCode: d,
+        } = e,
         f = o.useRef(null),
-        h = o.useRef({ onLoad: a, onVerify: c, onError: u, onExpire: s });
-    (h.current = { onLoad: a, onVerify: c, onError: u, onExpire: s }),
+        h = o.useRef(null),
+        p = o.useRef({ onLoad: a, onVerify: c, onError: u, onExpire: s, onUnknownVendorErrorCode: d });
+    (p.current = { onLoad: a, onVerify: c, onError: u, onExpire: s, onUnknownVendorErrorCode: d }),
         o.useEffect(() => {
             let e = !1,
                 l = 0;
             return (
                 (function () {
-                    if (null != window.turnstile) return R(), g;
+                    if (null != window.turnstile) return x(), g;
                     if (
                         ("unloaded" === v &&
                             ((v = "loading"),
                             Object.assign(window, {
                                 [A]() {
-                                    R();
+                                    x();
                                 },
                             })),
                         null == document.getElementById(b))
@@ -77,7 +86,7 @@ function P(e) {
                             (e.onerror = () => {
                                 !(function (e) {
                                     if ("ready" === v) return;
-                                    (v = "unloaded"), x(), document.getElementById(b)?.remove();
+                                    (v = "unloaded"), T(), document.getElementById(b)?.remove();
                                     let r = i;
                                     (g = _()), r?.(e ?? Error("Turnstile script failed to load"));
                                 })(Error("Turnstile script failed to load"));
@@ -87,65 +96,68 @@ function P(e) {
                     return g;
                 })()
                     .then(() => {
-                        if (e || null == d.current || null == window.turnstile) return;
-                        let i = "invisible" === n ? "normal" : (n ?? "normal");
-                        (f.current = window.turnstile.render(d.current, {
+                        if (e || null == f.current || null == window.turnstile) return;
+                        let i = "invisible" === t ? "normal" : (t ?? "normal");
+                        (h.current = window.turnstile.render(f.current, {
                             sitekey: r,
-                            theme: t ?? "auto",
+                            theme: n ?? "auto",
                             size: i,
                             retry: "never",
                             callback: (e) => {
-                                h.current.onVerify(e);
+                                p.current.onVerify(e);
                             },
-                            "error-callback": (r) => (
-                                h.current.onError?.(
-                                    (function (e) {
-                                        if (null == e) return "unknown";
-                                        let r = e.trim();
-                                        return "" === r
-                                            ? "unknown"
-                                            : null != w[r]
-                                              ? w[r]
-                                              : r.startsWith("300") || r.startsWith("600")
-                                                ? "generic-challenge-error"
-                                                : "unknown";
-                                    })(r),
-                                ),
-                                l >= 3 ||
-                                    (l++,
-                                    setTimeout(() => {
-                                        e ||
-                                            null == f.current ||
-                                            null == window.turnstile ||
-                                            window.turnstile.reset(f.current);
-                                    }, 3e3),
-                                    !0)
-                            ),
+                            "error-callback": (r) => {
+                                let n = (function (e) {
+                                    if (null == e) return "unknown";
+                                    let r = e.trim();
+                                    return "" === r
+                                        ? "unknown"
+                                        : null != y[r]
+                                          ? y[r]
+                                          : r.startsWith("300") || r.startsWith("600")
+                                            ? "generic-challenge-error"
+                                            : "unknown";
+                                })(r);
+                                return (
+                                    "unknown" === n && p.current.onUnknownVendorErrorCode?.(r),
+                                    p.current.onError?.(n),
+                                    l >= 3 ||
+                                        (l++,
+                                        setTimeout(() => {
+                                            e ||
+                                                null == h.current ||
+                                                null == window.turnstile ||
+                                                window.turnstile.reset(h.current);
+                                        }, 3e3),
+                                        !0)
+                                );
+                            },
                             "expired-callback": () => {
-                                h.current.onExpire?.();
+                                p.current.onExpire?.();
                             },
                         })),
-                            h.current.onLoad?.();
+                            p.current.onLoad?.();
                     })
                     .catch(() => {
-                        e || h.current.onError?.("script-error");
+                        e || p.current.onError?.("script-error");
                     }),
                 () => {
                     (e = !0),
-                        null != f.current &&
+                        null != h.current &&
                             null != window.turnstile &&
-                            (window.turnstile.remove(f.current), (f.current = null));
+                            (window.turnstile.remove(h.current), (h.current = null));
                 }
             );
-        }, [r, t, n]);
-    let p = T[n ?? "normal"];
-    return (0, l.jsx)("div", { ref: d, style: p });
+        }, [r, n, t]);
+    let E = R[t ?? "normal"];
+    return (0, l.jsx)("div", { ref: f, style: E });
 }
-var S = t(731738),
-    j = t(319400),
-    H = t(807393),
-    L = t(700525);
-let N = new Set([
+var P = n(731738),
+    L = n(319400),
+    M = n(807393),
+    N = n(38405),
+    j = n(700525);
+let H = new Set([
         "rate-limited",
         "network-error",
         "invalid-data",
@@ -166,11 +178,11 @@ let N = new Set([
         "iframe-load-error",
         "generic-challenge-error",
     ]),
-    M = (e) => {
+    I = (e) => {
         let {
-                captchaService: r = j.MS.RECAPTCHA,
-                sitekey: t,
-                rqdata: n,
+                captchaService: r = L.MS.RECAPTCHA,
+                sitekey: n,
+                rqdata: t,
                 onRender: i,
                 onVerify: a,
                 onError: c,
@@ -179,139 +191,145 @@ let N = new Set([
                 onChalExpired: d,
                 size: h,
                 userflow: p,
-                ...w
+                ...y
             } = e,
             b = o.useRef(null),
-            A = (0, y.A)(),
+            A = (0, w.A)(),
             [v, g] = o.useState(!1),
             _ = o.useCallback(
                 (e) => {
-                    f.default.track(C.HAw.CAPTCHA_EVENT, {
+                    f.default.track(k.HAw.CAPTCHA_EVENT, {
                         captcha_event_name: e,
                         captcha_service: r,
-                        sitekey: t,
+                        sitekey: n,
                         captcha_flow_key: A,
                     });
                 },
-                [A, r, t],
+                [A, r, n],
             ),
-            x = o.useCallback(
-                (e, t) => {
-                    let n = [`event_name:${e}`, `captcha_service:${r}`];
-                    null != t && n.push(`error_code:${t}`), H.A.increment({ name: S.K.CAPTCHA_EVENT, tags: n });
+            T = o.useCallback(
+                (e, n) => {
+                    let t = [`event_name:${e}`, `captcha_service:${r}`];
+                    null != n && t.push(`error_code:${n}`), M.A.increment({ name: P.K.CAPTCHA_EVENT, tags: t });
                 },
                 [r],
             ),
-            R = o.useCallback(() => {
-                r === j.MS.HCAPTCHA &&
-                    (null != n && "" !== n && null != b.current && b.current?.setData({ rqdata: n }),
+            x = o.useCallback(() => {
+                r === L.MS.HCAPTCHA &&
+                    (null != t && "" !== t && null != b.current && b.current?.setData({ rqdata: t }),
                     "invisible" === h && null != b.current && b.current?.execute());
-            }, [n, b, h, r]),
-            T = o.useCallback(() => {
-                v || (_("initial-load"), x("initial-load"), g(!0)), R();
-            }, [x, v, _, R]);
+            }, [t, b, h, r]),
+            R = o.useCallback(() => {
+                v || (_("initial-load"), T("initial-load"), g(!0)), x();
+            }, [T, v, _, x]);
         o.useEffect(() => {
-            R();
-        }, [R]),
+            x();
+        }, [x]),
             o.useEffect(() => {
-                T();
-            }, [T]);
-        let M = o.useCallback(
+                R();
+            }, [R]);
+        let I = o.useCallback(
                 (e) => {
-                    _("error"), x("error", null != e && N.has(e) ? e : "unknown"), R(), c?.();
+                    _("error"), T("error", null != e && H.has(e) ? e : "unknown"), x(), c?.();
                 },
-                [_, x, R, c],
+                [_, T, x, c],
             ),
-            I = o.useCallback(
+            V = o.useCallback(
                 (e) => {
-                    _("verify"), x("verify"), a(e);
+                    _("verify"), T("verify"), a(e);
                 },
-                [x, a, _],
+                [T, a, _],
             ),
             O = o.useCallback(() => {
                 _("render"), (0, E.emitCaptchaDistributionMetric)(p), i?.();
             }, [i, _, p]),
             D = o.useCallback(() => {
-                _("open"), x("open"), (0, E.emitCaptchaDistributionMetric)(p), u?.();
-            }, [x, u, _, p]),
-            V = o.useCallback(() => {
-                _("close"), x("cancel"), s?.(), R();
-            }, [s, _, x, R]),
+                _("open"), T("open"), (0, E.emitCaptchaDistributionMetric)(p), u?.();
+            }, [T, u, _, p]),
             z = o.useCallback(() => {
-                _("chal-expire"), x("chal-expire"), d?.();
-            }, [d, _, x]);
-        return ((null == t || "" === t) && (t = C._Ak), r === j.MS.RECAPTCHA)
-            ? (0, l.jsx)(m.A, { ...w, onLoad: T, onRender: O, onVerify: I, onError: M, sitekey: t })
-            : r === j.MS.RECAPTCHA_ENTERPRISE
-              ? (0, l.jsx)(L.d, { ...w, onLoad: T, onRender: O, onVerify: I, onError: M, sitekey: t, action: p })
-              : r === j.MS.HCAPTCHA
-                ? (0, l.jsx)(k.A, {
+                _("close"), T("cancel"), s?.(), x();
+            }, [s, _, T, x]),
+            U = o.useCallback(() => {
+                _("chal-expire"), T("chal-expire"), d?.();
+            }, [d, _, T]),
+            $ = o.useCallback((e) => {
+                N.A.captureMessage(`Unknown Turnstile error code: ${e}`, {
+                    tags: { captcha_service: L.MS.TURNSTILE, vendor_error_code: e ?? "undefined" },
+                });
+            }, []);
+        return ((null == n || "" === n) && (n = k._Ak), r === L.MS.RECAPTCHA)
+            ? (0, l.jsx)(m.A, { ...y, onLoad: R, onRender: O, onVerify: V, onError: I, sitekey: n })
+            : r === L.MS.RECAPTCHA_ENTERPRISE
+              ? (0, l.jsx)(j.d, { ...y, onLoad: R, onRender: O, onVerify: V, onError: I, sitekey: n, action: p })
+              : r === L.MS.HCAPTCHA
+                ? (0, l.jsx)(C.A, {
                       ref: b,
-                      ...w,
-                      sitekey: t,
-                      onLoad: T,
-                      onError: M,
-                      onVerify: I,
-                      onChalExpired: z,
+                      ...y,
+                      sitekey: n,
+                      onLoad: R,
+                      onError: I,
+                      onVerify: V,
+                      onChalExpired: U,
                       onOpen: D,
-                      onClose: V,
+                      onClose: z,
                       size: h,
                       reCaptchaCompat: !1,
                   })
-                : r === j.MS.TURNSTILE
-                  ? (0, l.jsx)(P, {
-                        sitekey: t,
-                        theme: w.theme,
+                : r === L.MS.TURNSTILE
+                  ? (0, l.jsx)(S, {
+                        sitekey: n,
+                        theme: y.theme,
                         size: h,
-                        onLoad: T,
-                        onVerify: I,
-                        onError: M,
-                        onExpire: z,
+                        onLoad: R,
+                        onVerify: V,
+                        onError: I,
+                        onExpire: U,
+                        onUnknownVendorErrorCode: $,
                     })
-                  : (0, l.jsx)(m.A, { ...w, sitekey: t, onLoad: T, onRender: O, onVerify: I, onError: M });
+                  : (0, l.jsx)(m.A, { ...y, sitekey: n, onLoad: R, onRender: O, onVerify: V, onError: I });
     };
-var I = t(375708),
-    O = t(846762);
+var V = n(375708),
+    O = n(846762);
 let D = new Set([s.ip.ENTERING, s.ip.ENTERED]);
-function V(e) {
+function z(e) {
     let {
             onClose: r,
-            onCaptchaVerify: t,
-            onReject: n,
+            onCaptchaVerify: n,
+            onReject: t,
             transitionState: i,
             headerText: a,
             bodyText: s,
-            rqtoken: k,
+            rqtoken: C,
             serveInvisible: m,
-            ...y
+            ...w
         } = e,
-        w = (function (e) {
-            let { onReject: r, analyticsType: t = "Guild Join Captcha" } = e,
-                n = o.useRef(!0);
+        y = (function (e) {
+            let { onReject: r, analyticsType: n = "Guild Join Captcha" } = e,
+                t = o.useRef(!0);
             return (
                 (0, p.Ay)(() => () => {
-                    n.current && r?.(E.CaptchaError.CANCEL);
+                    t.current && r?.(E.CaptchaError.CANCEL);
                 }),
                 o.useEffect(
                     () => (
-                        f.default.track(C.HAw.OPEN_MODAL, { type: t }),
+                        f.default.track(k.HAw.OPEN_MODAL, { type: n }),
                         () => {
-                            n.current && f.default.track(C.HAw.MODAL_DISMISSED, { type: t });
+                            t.current && f.default.track(k.HAw.MODAL_DISMISSED, { type: n });
                         }
                     ),
-                    [t],
+                    [n],
                 ),
                 () => {
-                    n.current = !1;
+                    t.current = !1;
                 }
             );
-        })({ onReject: n });
+        })({ onReject: t });
     if (
         (o.useEffect(() => {
-            h._.subscribe(C.jej.LAYER_POP_ESCAPE_KEY, r);
+            h._.subscribe(k.jej.LAYER_POP_ESCAPE_KEY, r);
         }, [r]),
         o.useEffect(() => {
-            f.default.track(C.HAw.OPEN_MODAL, { type: "Captcha Modal" });
+            f.default.track(k.HAw.OPEN_MODAL, { type: "Captcha Modal" });
         }, []),
         null == i || !D.has(i))
     )
@@ -320,13 +338,13 @@ function V(e) {
         className: c()(O.GC, O.P),
         children: [
             m && (0, l.jsx)(d.y, { type: d.y.Type.SPINNING_CIRCLE }),
-            (0, l.jsx)(M, {
+            (0, l.jsx)(I, {
                 size: m ? "invisible" : void 0,
                 onVerify: (e) => {
-                    w(), t(e, k), r();
+                    y(), n(e, C), r();
                 },
                 onClose: m ? r : void 0,
-                ...y,
+                ...w,
             }),
         ],
     });
@@ -336,8 +354,8 @@ function V(e) {
         size: "sm",
         gradientColor: "blue",
         graphic: { type: "image", src: "/assets/a1c385fb82c39bab.svg" },
-        title: a ?? I.intl.string(I.t.FpoiHe),
-        subtitle: s ?? I.intl.string(I.t["/CidxO"]),
+        title: a ?? V.intl.string(V.t.FpoiHe),
+        subtitle: s ?? V.intl.string(V.t["/CidxO"]),
         children: b,
     });
 }
