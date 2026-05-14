@@ -15,8 +15,8 @@ var l = n(627968),
     h = n(164617),
     A = n(402216),
     x = n(626584),
-    E = n(525505),
-    v = n(753727),
+    v = n(525505),
+    E = n(753727),
     C = n(899e3),
     I = n(638480),
     _ = n(607407),
@@ -45,15 +45,15 @@ let D = i.memo(function (e) {
             zoomLevel: h,
             isWheeling: A,
             setIsWheeling: x,
-            isSlidering: E,
-            setVideoAspectRatio: v,
+            isSlidering: v,
+            setVideoAspectRatio: E,
             wrapperRef: C,
             doZoom: I,
             clampPanOffset: _,
         } = i.useContext(T.e9),
         [j, D] = i.useState(null),
-        [O, M] = i.useState(null),
-        [L, F] = i.useState(0),
+        [O, L] = i.useState(null),
+        [M, F] = i.useState(0),
         [V, P] = i.useState(null),
         [G, H] = i.useState(null),
         [U, z] = i.useState(!1),
@@ -63,9 +63,9 @@ let D = i.memo(function (e) {
         Y = h > c,
         Z = i.useCallback(
             (e) => {
-                e.width > 0 && e.height > 0 && v(e.width / e.height), s?.(e);
+                e.width > 0 && e.height > 0 && E(e.width / e.height), s?.(e);
             },
-            [s, v],
+            [s, E],
         ),
         K = i.useCallback(
             (e) => {
@@ -80,7 +80,7 @@ let D = i.memo(function (e) {
                 if (!Y || !k(e)) return;
                 e.preventDefault(), e.stopPropagation();
                 let t = K(e);
-                m(!0), M(t), D(t), F(Date.now()), H(t), P(p);
+                m(!0), L(t), D(t), F(Date.now()), H(t), P(p);
             },
             [K, Y, p, m],
         ),
@@ -106,11 +106,11 @@ let D = i.memo(function (e) {
                 if (Y && null != O && null != j) {
                     let { x: t, y: n } = O,
                         { x: l, y: i } = j;
-                    (Math.sqrt((l - t) ** 2 + (i - n) ** 2) > 0.01 || Date.now() - L >= 500) &&
+                    (Math.sqrt((l - t) ** 2 + (i - n) ** 2) > 0.01 || Date.now() - M >= 500) &&
                         (e.preventDefault(), e.stopPropagation());
                 }
             },
-            [Y, O, L, j],
+            [Y, O, M, j],
         ),
         ee = i.useCallback(() => {
             m(!1), H(null), P(null);
@@ -173,9 +173,9 @@ let D = i.memo(function (e) {
             "--custom-zoom-scale": h,
             "--custom-pan-x": `${e.x}px`,
             "--custom-pan-y": `${e.y}px`,
-            "--custom-zoom-transition": d || U || A || E ? "none" : "transform 0.15s ease-out",
+            "--custom-zoom-transition": d || U || A || v ? "none" : "transform 0.15s ease-out",
         };
-    }, [_, d, U, A, E, p, h]);
+    }, [_, d, U, A, v, p, h]);
     return (0, l.jsx)("div", {
         ref: C,
         className: a()(R.iE, r, { [R.rc]: u && Y, [R.d$]: d }),
@@ -195,10 +195,10 @@ let D = i.memo(function (e) {
     });
 });
 var O = n(919706),
-    M = n(616356),
-    L = n(495544),
+    L = n(616356),
+    M = n(495544),
     F = n(734057),
-    V = n(51760),
+    V = n(235058),
     P = n(531685),
     G = n(200749),
     H = n(873174),
@@ -347,7 +347,7 @@ var eu = n(275731),
 let eg = new x.A("StreamTile");
 function ef(e) {
     let { participant: t, selected: n, focused: i, idle: s, width: a, premiumIndicator: o } = e,
-        u = (0, r.bG)([M.A], () => M.A.getActiveStreamForUser(t.user.id, t.stream.guildId)),
+        u = (0, r.bG)([L.A], () => L.A.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         c = (0, ec.VE)(a);
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -377,12 +377,12 @@ function eh(e) {
             paused: N = !1,
         } = e,
         b = V.Ay.getVideoComponent(),
-        y = (0, r.bG)([L.default], () => L.default.getId()),
-        w = (0, v.A)(),
+        y = (0, r.bG)([M.default], () => M.default.getId()),
+        w = (0, E.A)(),
         { stream: T, user: R, streamId: k } = t,
         H = (0, r.bG)([F.A], () => F.A.getChannel(T.channelId)),
-        U = (0, r.bG)([M.A], () => M.A.getActiveStreamForUser(R.id, T.guildId), [R.id, T.guildId]),
-        z = (0, r.bG)([M.A], () => M.A.getAllActiveStreams().length > 0),
+        U = (0, r.bG)([L.A], () => L.A.getActiveStreamForUser(R.id, T.guildId), [R.id, T.guildId]),
+        z = (0, r.bG)([L.A], () => L.A.getAllActiveStreams().length > 0),
         W = (0, r.bG)([P.A], () => P.A.isFocused()),
         $ = (0, C.Qu)(),
         B = U?.ownerId === y,
@@ -392,7 +392,7 @@ function eh(e) {
     (0, g.Ay)(() => {
         !z && H?.isGuildStageVoice() && !B && ((0, p.A9)(T), m.A.updateStageStreamSize(T.channelId, !1));
     });
-    let Q = (0, E.u)(ep.x.STREAM, t.user.id);
+    let Q = (0, v.u)(ep.x.STREAM, t.user.id);
     if (
         (i.useEffect(() => {
             eg.info(

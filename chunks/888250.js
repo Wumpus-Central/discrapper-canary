@@ -35,7 +35,7 @@ var w = n(503698),
     S = n(616356),
     P = n(734057),
     R = n(71393),
-    G = n(51760),
+    G = n(235058),
     V = n(532624),
     U = n(184809),
     Y = n(625494),
@@ -665,7 +665,7 @@ function e8(e, t) {
         }, 200);
     });
 }
-async function e6(e, t) {
+async function e5(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1e3,
         l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 3;
     if (y.isPlatformEmbedded) {
@@ -688,7 +688,7 @@ async function e6(e, t) {
             }
     }
 }
-function e5() {
+function e6() {
     a.A.setFocusedPID(g.DEV_PID, null);
 }
 function e7() {
@@ -703,10 +703,10 @@ let e9 = r.memo(function (e) {
                 return (
                     e2 &&
                         (t.document.hasFocus() && a.A.setFocusedPID(g.DEV_PID, null),
-                        t.addEventListener("focus", e5),
+                        t.addEventListener("focus", e6),
                         t.addEventListener("blur", e7)),
                     () => {
-                        e2 && (t.removeEventListener("focus", e5), t.removeEventListener("blur", e7));
+                        e2 && (t.removeEventListener("focus", e6), t.removeEventListener("blur", e7));
                     }
                 );
         });
@@ -744,7 +744,7 @@ let e9 = r.memo(function (e) {
                             return;
                         }
                         try {
-                            if ((await e6(e, t), _.current)) return;
+                            if ((await e5(e, t), _.current)) return;
                             (0, e0.Mq)();
                         } catch (e) {
                             a.A.setOverlayCrashed(eC.A.getTargetPID(), e), e3("errorMessage", "showInactive failed");

@@ -15,14 +15,14 @@ var l = n(627968),
     h = n(164617),
     A = n(958713),
     x = n(525505),
-    E = n(550946),
-    v = n(334557),
+    v = n(550946),
+    E = n(334557),
     C = n(51092),
     I = n(869146),
     _ = n(854627),
     j = n(530804),
     S = n(495544),
-    N = n(51760),
+    N = n(235058),
     b = n(531685),
     y = n(562153),
     w = n(51082),
@@ -31,8 +31,8 @@ var l = n(627968),
     k = n(652215),
     D = n(731854),
     O = n(375708),
-    M = n(391308);
-let L = u._3.SIZE_80,
+    L = n(391308);
+let M = u._3.SIZE_80,
     F = u._3.SIZE_40;
 function V(e) {
     let { channelId: t, participant: n } = e;
@@ -41,7 +41,7 @@ function V(e) {
               text: O.intl.string(O.t.HFwRpk),
               position: "bottom",
               children: (0, l.jsx)("div", {
-                  className: M.bG,
+                  className: L.bG,
                   children: (0, l.jsx)(c.E, { color: d.A.colors.STATUS_WARNING_BACKGROUND }),
               }),
           })
@@ -71,10 +71,10 @@ function P(e) {
         K = (0, r.bG)([b.A], () => b.A.isFocused()),
         Q = (0, r.bG)([I.A], () => I.A.getWindowFocused(k.MLl.CHANNEL_CALL_POPOUT)),
         X = (0, r.bG)([N.Ay], () => null != W.id && N.Ay.isLocalVideoDisabled(W.id, (0, f.A)(t.type)), [W.id, t.type]),
-        q = (0, E.A)(n.guild_id, W.id),
+        q = (0, v.A)(n.guild_id, W.id),
         J = y.Ay.getName(n.getGuildId(), n.id, W) + (q ? ` ${O.intl.string(O.t["pFO/Ph"])}` : ""),
         ee = B && (Q || K),
-        et = o < 124 ? F : L,
+        et = o < 124 ? F : M,
         { avatarSrc: en, avatarDecorationSrc: el } = (0, _.A)({
             userId: W.id,
             guildId: n.guild_id,
@@ -100,8 +100,8 @@ function P(e) {
                   C.A,
                   {
                       onResize: j,
-                      wrapperClassName: c !== h.N.CALL_TILE ? M.tN : void 0,
-                      className: M.Qs,
+                      wrapperClassName: c !== h.N.CALL_TILE ? L.tN : void 0,
+                      className: L.Qs,
                       mirror: Y,
                       streamId: $,
                       videoComponent: U,
@@ -113,8 +113,8 @@ function P(e) {
                   $,
               )
         : (0, l.jsx)("div", {
-              className: a()(M.Qs, { [M.Kx]: R || V }),
-              children: (0, l.jsx)(v.A, {
+              className: a()(L.Qs, { [L.Kx]: R || V }),
+              children: (0, l.jsx)(E.A, {
                   "aria-label": J,
                   avatarDecoration: el,
                   backgroundSrc: W.getAvatarURL(n.guild_id, 80),

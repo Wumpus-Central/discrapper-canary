@@ -522,6 +522,9 @@ class H extends T.A {
     numFastUdpReconnects = 0;
     lastPreparedTransitionId = -1;
     lastExecutedTransitionId = -1;
+    currentVideoCodec = null;
+    av1CodecBitrateFunc = () => N.lo;
+    lastDesktopEncodingOptions = null;
     logger;
     constructor(e, t, n) {
         super(e, t),
@@ -773,6 +776,11 @@ class H extends T.A {
             super.destroy();
     }
     setCodecs(e, t, n) {
+        let i = this.currentVideoCodec !== t;
+        if (((this.currentVideoCodec = t), i && null != this.lastDesktopEncodingOptions)) {
+            let { width: e, height: t, framerate: n } = this.lastDesktopEncodingOptions;
+            this.setDesktopEncodingOptions(e, t, n);
+        }
         this.conn.setTransportOptions(this.getCodecOptions(e, t, n)),
             this.videoEncoderFallbackPending && (this.videoEncoderFallbackPending = !1);
     }
@@ -1190,8 +1198,15 @@ class H extends T.A {
     }
     setDesktopEncodingOptions(e, t, n) {
         if (this.destroyed) return;
-        let i = (0 === t && n >= 10) || t > 720 || n > 30 ? N.oL : N.lo,
-            r = { width: e, height: t, framerate: n },
+        this.lastDesktopEncodingOptions = { width: e, height: t, framerate: n };
+        let i = null;
+        i =
+            (0 === t && n >= 10) || t > 720 || n > 30
+                ? N.oL
+                : "AV1" === this.currentVideoCodec
+                  ? this.av1CodecBitrateFunc()
+                  : N.lo;
+        let r = { width: e, height: t, framerate: n },
             s = this.videoQualityManager.getQuality(),
             a = !S.Xb.equals(r, s.capture) || s.bitrateMax !== i,
             o = this.videoStreamParameters.findIndex((e) => e.quality === N.Y4);
@@ -1638,6 +1653,16 @@ class H extends T.A {
     };
     mergeUsers(e) {
         this.conn.mergeUsers(e), this.emit(c.yq.UsersMerged, e);
+    }
+    setAv1CodecBitrateFunc(e) {
+        let t = this.av1CodecBitrateFunc !== e;
+        if (
+            ((this.av1CodecBitrateFunc = e),
+            t && "AV1" === this.currentVideoCodec && null != this.lastDesktopEncodingOptions)
+        ) {
+            let { width: e, height: t, framerate: n } = this.lastDesktopEncodingOptions;
+            this.setDesktopEncodingOptions(e, t, n);
+        }
     }
 }
 function j(e, t) {

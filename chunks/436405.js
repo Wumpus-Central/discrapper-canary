@@ -599,11 +599,11 @@ var eJ = n(952818),
     e3 = n(734057),
     e6 = n(71393),
     e8 = n(38502),
-    e9 = n(51760),
+    e9 = n(235058),
     e2 = n(309010),
     e5 = n(70142),
-    e7 = n(157257),
-    e4 = n(712687),
+    e4 = n(157257),
+    e7 = n(712687),
     te = n(532624),
     tt = n(184809),
     tn = n(531685),
@@ -791,7 +791,7 @@ class t8 extends r.Ay.Store {
             tH.A,
             ei.default,
             tE.default,
-            e7.A,
+            e4.A,
             tV.A,
             tt.default,
             tW.A,
@@ -1006,7 +1006,7 @@ let t9 = new t8(
                           let i, s;
                           if ((td()(null != t.activity, "received null message activity"), n.id === tz.default.getId()))
                               return !1;
-                          let l = e7.A.getGame();
+                          let l = e4.A.getGame();
                           if (null == l) return !1;
                           switch (t.activity.type) {
                               case eE.xL.JOIN:
@@ -1203,7 +1203,7 @@ let t9 = new t8(
               ACTIVITY_USER_ACTION: function (e) {
                   let t,
                       { actionType: n, user: i, applicationId: s } = e,
-                      a = e7.A.getGame();
+                      a = e4.A.getGame();
                   return (
                       null != a &&
                       a.id === s &&
@@ -1378,7 +1378,7 @@ class t2 extends a.Component {
     }
 }
 var t5 = n(761935);
-function t7(e) {
+function t4(e) {
     let { locked: t, keybind: n } = e,
         i = a.useRef(null),
         s = (0, r.yK)([t9], () => t9.getNotifications()),
@@ -1396,12 +1396,12 @@ function t7(e) {
                 let [i, s] = e;
                 return 0 === s.length
                     ? null
-                    : (0, l.jsx)(t4, { locked: t, keybind: n, position: o, notification: s[0] }, i);
+                    : (0, l.jsx)(t7, { locked: t, keybind: n, position: o, notification: s[0] }, i);
             }),
         }),
     });
 }
-function t4(e) {
+function t7(e) {
     let { notification: t, position: n, keybind: i, locked: s } = e;
     return (0, l.jsx)("div", {
         className: t5.notificationGroup,
@@ -2102,8 +2102,8 @@ function n5(e) {
         streamerModeEnabled: c && u,
     });
 }
-var n7 = n(609360);
-let n4 = function (e) {
+var n4 = n(609360);
+let n7 = function (e) {
     let t,
         { title: n, header: i, children: s, renderSettings: o, onDragStart: r } = e,
         d = a.useRef(null);
@@ -2111,10 +2111,10 @@ let n4 = function (e) {
         (t =
             null != n
                 ? (0, l.jsxs)(e_.Bar, {
-                      className: x()(n7.wx, n7.bl),
+                      className: x()(n4.wx, n4.bl),
                       onMouseDown: r,
                       children: [
-                          (0, l.jsx)(e_.Content, { className: x()(n7.qd, n7.bl), dynamicSize: !0, children: n }),
+                          (0, l.jsx)(e_.Content, { className: x()(n4.qd, n4.bl), dynamicSize: !0, children: n }),
                           (0, l.jsx)(e_.Content, {
                               children: (0, l.jsx)(ng.Y, {
                                   targetElementRef: d,
@@ -2133,7 +2133,7 @@ let n4 = function (e) {
                       ],
                   })
                 : i),
-        (0, l.jsxs)("div", { className: n7.pz, children: [t, (0, l.jsx)("div", { className: n7.Y_, children: s })] })
+        (0, l.jsxs)("div", { className: n4.pz, children: [t, (0, l.jsx)("div", { className: n4.Y_, children: s })] })
     );
 };
 var ie = n(349828),
@@ -2198,7 +2198,7 @@ class ii extends a.PureComponent {
             { guild: n } = t,
             { controller: i, renderBanner: s, bannerVisible: a, communityInfoVisible: o } = this.state,
             r = n?.id === ie.Vc ? nS.T : nS.B;
-        return (0, l.jsxs)(n4, {
+        return (0, l.jsxs)(n7, {
             header:
                 null != n
                     ? (0, l.jsx)(nx.Ay, {
@@ -2343,7 +2343,7 @@ class ih extends a.PureComponent {
             s =
                 null != e
                     ? (0, l.jsx)(is, { guildId: e, onDragStart: this.onDragStart }, e)
-                    : (0, l.jsx)(n4, {
+                    : (0, l.jsx)(n7, {
                           title: U.intl.string(U.t.YUU0RF),
                           renderSettings: iu,
                           onDragStart: this.onDragStart,
@@ -2581,8 +2581,8 @@ function i5(e) {
         ...n,
     });
 }
-var i7 = n(381941),
-    i4 = n(650583),
+var i4 = n(381941),
+    i7 = n(650583),
     se = n(463912);
 let st = eT.Li.TOP;
 class sn extends a.Component {
@@ -2615,7 +2615,7 @@ class sn extends a.Component {
     })();
     handleTextareaKeyDown = (e) => {
         if (
-            e.key === i4.dh.ARROW_UP &&
+            e.key === i7.dh.ARROW_UP &&
             !e.shiftKey &&
             !e.altKey &&
             !e.ctrlKey &&
@@ -2653,7 +2653,7 @@ class sn extends a.Component {
                           ? (iV._.dispatch(eE.jej.EMPHASIZE_SLOWMODE_COOLDOWN), { shouldClear: !1, shouldRefocus: !0 })
                           : { shouldClear: !1, shouldRefocus: !1 };
                   let o = ig.A.getSendMessageOptionsForReply(i);
-                  return (ig.A.sendMessage(n.id, ij.Ay.parse(n, t), !0, { ...o, location: i7.Hx.OVERLAY }),
+                  return (ig.A.sendMessage(n.id, ij.Ay.parse(n, t), !0, { ...o, location: i4.Hx.OVERLAY }),
                   this.setState((0, i_.N3)()),
                   (0, ib.Jx)(n.id),
                   s)
@@ -3493,13 +3493,13 @@ function sX(e) {
             return e;
         })(),
         s = (0, r.bG)([e1.A], () => e1.A.getStreamerActiveStreamMetadata()),
-        a = (0, r.bG)([eJ.Ay, e7.A, s_.A], () => {
-            let e = (0, eq.A)(eJ.Ay, e7.A);
+        a = (0, r.bG)([eJ.Ay, e4.A, s_.A], () => {
+            let e = (0, eq.A)(eJ.Ay, e4.A);
             return null != e ? s_.A.findGame(e)?.id : null;
         }),
         o = (0, sp.h)(a),
-        d = (0, r.cf)([eJ.Ay, e7.A, e1.A, tt.default], () => {
-            let e = (0, eq.A)(eJ.Ay, e7.A),
+        d = (0, r.cf)([eJ.Ay, e4.A, e1.A, tt.default], () => {
+            let e = (0, eq.A)(eJ.Ay, e4.A),
                 t = e1.A.getCurrentUserActiveStream();
             return {
                 displayUserMode: tt.default.getDisplayUserMode(),
@@ -3702,8 +3702,8 @@ let s2 = () =>
         ],
     });
 var s5 = n(528772),
-    s7 = n(944775),
-    s4 = n(317084),
+    s4 = n(944775),
+    s7 = n(317084),
     le = n(427603),
     lt = n(980504),
     ln = n(402622);
@@ -3715,7 +3715,7 @@ function li() {
     return e && null != i
         ? (0, l.jsx)("div", {
               className: ln.H,
-              children: (0, l.jsx)(s4.A, {
+              children: (0, l.jsx)(s7.A, {
                   width: lt.ed.width,
                   height: lt.ed.height,
                   guildId: s,
@@ -3723,7 +3723,7 @@ function li() {
                   keepOpen: t,
                   onClose: function () {
                       let e = (0, le.A)();
-                      null != e && (0, s7.Lk)(e);
+                      null != e && (0, s4.Lk)(e);
                   },
                   analyticsSource: "overlay",
               }),
@@ -3774,7 +3774,7 @@ class lc extends a.Component {
         eB.A.setLayout(t ? eK.dY : eK.CJ), t && eB.A.enable();
     }
     handleLock() {
-        (0, ez.hasAnyModalOpen)() || e4.A.isOpen() || D.A.setInputLocked(!0, (0, Q.getPID)());
+        (0, ez.hasAnyModalOpen)() || e7.A.isOpen() || D.A.setInputLocked(!0, (0, Q.getPID)());
     }
     handleDeactivate() {
         D.A.deactivateAllRegions();
@@ -3939,7 +3939,7 @@ class lc extends a.Component {
                       ? null
                       : this.renderInvalidSizeMessage(),
                 (0, l.jsx)(li, {}),
-                (0, l.jsx)(t7, { locked: u, keybind: t }),
+                (0, l.jsx)(t4, { locked: u, keybind: t }),
                 (0, l.jsx)(to.A, {}),
                 (0, l.jsx)("div", { className: ls._C }),
             ],
@@ -3965,7 +3965,7 @@ function lu() {
         c = (0, r.bG)([e2.A], () => e2.A.getVoiceChannelId()),
         u = (0, r.bG)([e3.A], () => e3.A.getChannel(c)),
         h = (0, r.bG)([e6.A], () => (null != u ? e6.A.getGuild(u.guild_id) : null)),
-        p = (0, r.bG)([eJ.Ay, e7.A], () => (0, eq.A)(eJ.Ay, e7.A)),
+        p = (0, r.bG)([eJ.Ay, e4.A], () => (0, eq.A)(eJ.Ay, e4.A)),
         A = (0, r.bG)([e9.Ay], () => (0, eQ.A)(e9.Ay)),
         g = (0, r.bG)([e1.A], () => null != e1.A.getCurrentUserActiveStream()),
         { analyticsLocations: m } = (0, eZ.Ay)(eY.A.OVERLAY);

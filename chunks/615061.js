@@ -2541,6 +2541,7 @@ class e0 extends eE {
                 });
         }
     };
+    setAv1CodecBitrateFunc(e) {}
 }
 function e1(e) {
     return e.split("-")[0];
@@ -2651,6 +2652,7 @@ class e2 extends eE {
         return this.pc.getStats();
     }
     setVideoEncoderParameters(e) {}
+    setAv1CodecBitrateFunc(e) {}
 }
 let e3 = n.p + "worklet.8d84a64a97f8451a.js",
     e6 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };

@@ -23,12 +23,12 @@ var i = s(627968),
     E = s(688810),
     _ = s(952818),
     w = s(885386),
-    N = s(51760),
+    N = s(235058),
     I = s(763827),
     O = s(287809),
     R = s(157257),
     M = s(723702),
-    T = s(927578),
+    T = s(428262),
     L = s(997630),
     U = s(725792),
     G = s(905552),
@@ -1398,7 +1398,7 @@ var eq = s(843402),
     eJ = s(971276),
     eK = s(639214),
     e1 = s(495163);
-function e0(e, t, s, i) {
+function e2(e, t, s, i) {
     let l = (0, M.isWindows)() ? (0, G.A)(_.Ay, R.A) : null,
         r = _.Ay.getRunningGames(),
         n = s?.split(":")[1],
@@ -1410,7 +1410,7 @@ function e0(e, t, s, i) {
     let c = i?.[a];
     return null != c && eB.F2.has(c) ? 2 : 1;
 }
-function e2(e) {
+function e0(e) {
     let { source: t } = e;
     return t.id.startsWith(d.fS.SCREEN)
         ? (0, i.jsx)(p.k, { size: "xs" })
@@ -1450,7 +1450,7 @@ function e5(e) {
             (0, i.jsxs)("div", {
                 className: e1.Uw,
                 children: [
-                    (0, i.jsx)(e2, { source: t }),
+                    (0, i.jsx)(e0, { source: t }),
                     (0, i.jsx)(F.E, { variant: "text-sm/medium", className: e1.VZ, children: c }),
                 ],
             }),
@@ -1495,7 +1495,7 @@ function e3(e) {
                 return null;
             }, [s, t, j, n]));
     l.useEffect(() => ((0, eq.a2)(), eq.e0), []);
-    let C = l.useMemo(() => [...n].sort((e, t) => e0(t, S?.source.id, p, v) - e0(e, S?.source.id, p, v)), [S, n, p, v]);
+    let C = l.useMemo(() => [...n].sort((e, t) => e2(t, S?.source.id, p, v) - e2(e, S?.source.id, p, v)), [S, n, p, v]);
     if (h) {
         if (!1 === m) {
             let e = !1;
@@ -1614,7 +1614,7 @@ let td = (e) => {
     let { analyticsLocation: t, onClose: l } = e;
     (0, to.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            s.e("80797"),
+            s.e("43778"),
             s.e("62680"),
             s.e("21825"),
             s.e("98125"),
