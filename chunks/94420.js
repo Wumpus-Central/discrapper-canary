@@ -36,6 +36,8 @@ function u(e) {
             setPurchaseState: (t) => e({ purchaseState: t }),
             appliedUserDiscounts: [],
             setAppliedUserDiscounts: (t) => e({ appliedUserDiscounts: t }),
+            readySlideId: null,
+            setReadySlideId: (t) => e({ readySlideId: t ?? null }),
         }),
         i.x,
     );

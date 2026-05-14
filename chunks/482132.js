@@ -1,4 +1,4 @@
-n.d(l, { Ay: () => h, UX: () => f, dZ: () => S });
+n.d(l, { Ay: () => h, UX: () => C, dZ: () => f });
 var r = n(627968),
     s = n(64700),
     t = n(503698),
@@ -9,52 +9,53 @@ var r = n(627968),
     c = n(430993),
     u = n(430690),
     p = n(742810),
-    N = n(49960),
-    A = n(166532),
-    E = n(615310),
-    m = n(370353);
+    N = n(94420),
+    A = n(49960),
+    E = n(166532),
+    m = n(615310),
+    S = n(370353);
 function h(e) {
     let { header: l, stepProps: n } = (function (e) {
             let { header: l, ...n } = e;
             return { header: l, stepProps: n };
         })(e),
-        { step: t, stepConfigs: a } = (0, E.Ay)(),
+        { step: t, stepConfigs: a } = (0, m.Ay)(),
         {
             setBodyNode: o,
             setFooterNode: h,
-            setModalOverlayNode: S,
-            setReadySlideId: f,
+            setModalOverlayNode: f,
             isDisplayingWowMomentConfirmation: C,
             unifiedCheckoutFlow: x,
-        } = (0, N.P5)(),
-        P = a.find((e) => e.key === t);
+        } = (0, A.P5)(),
+        { setReadySlideId: P } = (0, N.t4)((e) => ({ setReadySlideId: e.setReadySlideId })),
+        j = a.find((e) => e.key === t);
     s.useEffect(() => {
-        S(null);
-    }, [t, S]),
-        d()(null != P, "Unknown step for current payment flow (PaymentModalStep): step=%s, flow=%s", t, x);
-    let j = P?.options?.hideSlider ?? !1,
-        _ = P?.options?.hideDefaultModalBody ?? !1,
-        y = P?.options?.sliderBodyClassName,
-        M = (0, p.D7)({ location: "PaymentModalStep" }),
-        R = s.useMemo(() => M && t === A.pn.REVIEW, [M, t]);
+        f(null);
+    }, [t, f]),
+        d()(null != j, "Unknown step for current payment flow (PaymentModalStep): step=%s, flow=%s", t, x);
+    let y = j?.options?.hideSlider ?? !1,
+        R = j?.options?.hideDefaultModalBody ?? !1,
+        I = j?.options?.sliderBodyClassName,
+        _ = (0, p.D7)({ location: "PaymentModalStep" }),
+        M = s.useMemo(() => _ && t === E.pn.REVIEW, [_, t]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (P?.options?.renderHeader ?? !0) ? l : null,
-            P.renderStep(n),
-            null == t || j
+            (j?.options?.renderHeader ?? !0) ? l : null,
+            j.renderStep(n),
+            null == t || y
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          _
+                          R
                               ? null
                               : (0, r.jsx)(c.c, {
                                     children: (0, r.jsx)(u.t, {
                                         shouldUseMediaQueriesForSizing: !0,
                                         activeSlide: t,
                                         centered: !1,
-                                        onSlideReady: (e) => f(e),
+                                        onSlideReady: (e) => P(e),
                                         width: "100%",
-                                        disableDefaultTransformStyling: R,
+                                        disableDefaultTransformStyling: M,
                                         overflow: C ? "visible" : void 0,
                                         children: a
                                             .filter((e) => null != e.key)
@@ -64,7 +65,7 @@ function h(e) {
                                                     {
                                                         id: e.key,
                                                         children: (0, r.jsx)("form", {
-                                                            className: i()(m.OO, { [m.Wq]: R }, y),
+                                                            className: i()(S.OO, { [S.Wq]: M }, I),
                                                             ref: (e) => {
                                                                 o(e);
                                                             },
@@ -79,7 +80,7 @@ function h(e) {
                           (0, r.jsx)("div", { ref: (e) => h(e) }),
                           (0, r.jsx)("div", {
                               ref: (e) => {
-                                  S(e);
+                                  f(e);
                               },
                           }),
                       ],
@@ -87,13 +88,13 @@ function h(e) {
         ],
     });
 }
-function S(e) {
-    let { children: l } = e,
-        { bodyNode: n } = (0, N.P5)();
-    return null == n ? null : o.createPortal(l, n);
-}
 function f(e) {
     let { children: l } = e,
-        { footerNode: n } = (0, N.P5)();
+        { bodyNode: n } = (0, A.P5)();
+    return null == n ? null : o.createPortal(l, n);
+}
+function C(e) {
+    let { children: l } = e,
+        { footerNode: n } = (0, A.P5)();
     return null == n ? null : o.createPortal(l, n);
 }
