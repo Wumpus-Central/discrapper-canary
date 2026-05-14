@@ -1,148 +1,145 @@
-n.d(l, { A: () => O });
-var i = n(627968),
-    a = n(64700),
-    t = n(503698),
-    s = n.n(t),
-    r = n(17928),
-    d = n(778712),
-    u = n(97808),
-    c = n(688810),
-    o = n(601255),
-    v = n(562819),
-    g = n(713517),
-    b = n(919395),
-    h = n(71393),
-    f = n(19575),
-    m = n(84540),
-    k = n(854627),
-    C = n(930349),
-    A = n(735438),
-    x = n.n(A),
-    p = n(993408),
-    y = n(841702),
-    j = n(486020),
-    I = n(515718),
-    N = n(375708),
-    L = n(209150);
-let w = d._3.SIZE_72,
-    z = f.Ay.getEnableHardwareAcceleration() ? u.Js : u.eu;
-function B(e) {
-    let { user: l, guildId: n, avatarDecorationOverride: a, decorationStyle: t, shouldAnimate: r } = e,
-        {
-            avatarDecorationSrc: d,
-            avatarSrc: u,
-            avatarPlaceholderSrc: c,
-        } = (0, k.A)({
-            userId: l.id,
-            guildId: n,
-            size: w,
-            showPending: !0,
-            avatarDecorationOverride: a,
-            animateOnHover: !r,
-        }),
-        o = "default" === t && null != d && r;
-    return (0, i.jsx)(z, {
-        className: s()({ [L.yT]: null == d, [L.m_]: "placeholder" === t }),
-        src: o ? u : c,
-        imageClassName: o ? L.WG : void 0,
-        avatarDecoration: d,
-        size: w,
-        "aria-hidden": !0,
-    });
-}
-function O(e) {
-    let { user: l, guildId: n, disabled: t } = e,
-        { analyticsLocations: s } = (0, c.Ay)(),
-        d = (0, r.bG)([h.A], () => (null != n ? h.A.getGuild(n) : null)),
-        u = null != n,
-        f = a.useRef(null),
-        { isHoveringOrFocusing: k } = (0, g.A)(f),
-        A = k && !t,
-        L = (0, b.a4)({ user: l }),
-        z = (0, b.a4)({ user: l, guildId: n ?? void 0 }),
-        { pendingAvatarDecoration: O } = (0, b.CP)(n ?? void 0),
-        R = void 0 !== O,
-        S = null === O || (!R && null == z),
-        _ = u && null != L,
-        V = S && _,
-        D = (0, o.A)((0, b.lw)({ userValue: L, guildValue: z, pendingValue: O, guildId: n })),
-        { sampleDecoration: P, refreshSample: H } = (function (e) {
-            let { size: l, disabled: n = !1 } = e,
-                { categories: i, purchases: t } = (0, y.Ay)({ stalePurchasesOK: !0 }),
-                s = a.useMemo(() => (0, p.ps)(t, i).filter((e) => null != e.asset && "" !== e.asset), [t, i]),
-                [r, d] = a.useState(null),
-                u = a.useRef([]),
-                c = a.useRef(0),
-                o = a.useCallback(
+a.d(l, { A: () => z });
+var n = a(627968),
+    i = a(64700),
+    r = a(503698),
+    t = a.n(r),
+    s = a(17928),
+    d = a(778712),
+    u = a(97808),
+    c = a(688810),
+    o = a(601255),
+    v = a(562819),
+    g = a(919395),
+    h = a(71393),
+    f = a(19575),
+    m = a(84540),
+    b = a(854627),
+    p = a(930349),
+    A = a(735438),
+    k = a.n(A),
+    C = a(993408),
+    I = a(841702),
+    x = a(486020),
+    y = a(515718),
+    j = a(375708),
+    w = a(209150);
+let N = d._3.SIZE_72,
+    P = f.Ay.getEnableHardwareAcceleration() ? u.Js : u.eu;
+function V(e) {
+    let {
+            user: l,
+            guildId: a,
+            isEmpty: r,
+            isPreviewingMainProfileFallback: s,
+            hasPendingChange: d,
+            avatarDecorationPreview: u,
+            isInteracting: c,
+            disabled: o,
+        } = e,
+        { sampleDecoration: g, refreshSample: h } = (function (e) {
+            let { size: l, disabled: a = !1 } = e,
+                { categories: n, purchases: r } = (0, I.Ay)({ stalePurchasesOK: !0 }),
+                t = i.useMemo(() => (0, C.ps)(r, n).filter((e) => null != e.asset && "" !== e.asset), [r, n]),
+                [s, d] = i.useState(null),
+                u = i.useRef([]),
+                c = i.useRef(0),
+                o = i.useCallback(
                     (e) => {
-                        let n = (0, j.F_)({
+                        let a = (0, x.F_)({
                             avatarDecoration: { asset: e.asset, skuId: e.skuId },
                             canAnimate: !0,
                             size: (0, v.Te)(l),
                         });
-                        null != n && (0, I.NN)(n).catch(() => {});
+                        null != a && (0, y.NN)(a).catch(() => {});
                     },
                     [l],
                 );
             return (
-                a.useEffect(() => {
-                    if (n || 0 === s.length || u.current.length > 0) return;
-                    let e = x().shuffle(s);
+                i.useEffect(() => {
+                    if (a || 0 === t.length || u.current.length > 0) return;
+                    let e = k().shuffle(t);
                     (u.current = e), (c.current = 0), o(e[0]);
-                }, [n, s, o]),
+                }, [a, t, o]),
                 {
-                    sampleDecoration: r,
-                    refreshSample: a.useCallback(() => {
-                        if (n) return;
+                    sampleDecoration: s,
+                    refreshSample: i.useCallback(() => {
+                        if (a) return;
                         let e = u.current;
                         if (0 === e.length) return;
                         let l = c.current % e.length,
-                            i = (l + 1) % e.length,
-                            a = e[l],
-                            t = e[i];
-                        d({ asset: a.asset, skuId: a.skuId }), (c.current = i), o(t);
-                    }, [n, o]),
+                            n = (l + 1) % e.length,
+                            i = e[l],
+                            r = e[n];
+                        d({ asset: i.asset, skuId: i.skuId }), (c.current = n), o(r);
+                    }, [a, o]),
                 }
             );
-        })({ size: w, disabled: t || !S }),
-        W = S && !V && A && null != P;
-    a.useEffect(() => {
-        k && H();
-    }, [k]);
-    let q =
-            null != D && (R ? null != O : null != z)
+        })({ size: N, disabled: o || !r }),
+        f = r && !s && c && null != g,
+        m = f ? "placeholder" : s ? "fallback" : "default";
+    i.useEffect(() => {
+        c && h();
+    }, [c]);
+    let {
+            avatarDecorationSrc: p,
+            avatarSrc: A,
+            avatarPlaceholderSrc: j,
+        } = (0, b.A)({
+            userId: l.id,
+            guildId: a,
+            size: N,
+            showPending: !0,
+            avatarDecorationOverride: f ? g : d ? u : void 0,
+            animateOnHover: !c,
+        }),
+        V = "default" === m && null != p && c;
+    return (0, n.jsx)(P, {
+        className: t()({ [w.yT]: null == p, [w.m_]: "placeholder" === m }),
+        src: V ? A : j,
+        imageClassName: V ? w.WG : void 0,
+        avatarDecoration: p,
+        size: N,
+        "aria-hidden": !0,
+    });
+}
+function z(e) {
+    let { user: l, guildId: a, disabled: i } = e,
+        { analyticsLocations: r } = (0, c.Ay)(),
+        t = (0, s.bG)([h.A], () => (null != a ? h.A.getGuild(a) : null)),
+        d = null != a,
+        u = (0, g.a4)({ user: l }),
+        f = (0, g.a4)({ user: l, guildId: a ?? void 0 }),
+        { pendingAvatarDecoration: b } = (0, g.CP)(a ?? void 0),
+        A = void 0 !== b,
+        k = null === b || (!A && null == f),
+        C = d && null != u,
+        I = k && C,
+        x = (0, o.A)((0, g.lw)({ userValue: u, guildValue: f, pendingValue: b, guildId: a })),
+        y =
+            null != x && (A ? null != b : null != f)
                 ? {
-                      onClick: () => (0, m.p)({ guildId: n ?? void 0, avatarDecoration: null }),
-                      type: _ ? "reset" : "remove",
-                      accessibleLabel: N.intl.string(_ ? N.t.pJsnPf : N.t["2U4Bga"]),
+                      onClick: () => (0, m.p)({ guildId: a ?? void 0, avatarDecoration: null }),
+                      type: C ? "reset" : "remove",
+                      accessibleLabel: j.intl.string(C ? j.t.pJsnPf : j.t["2U4Bga"]),
                   }
-                : void 0,
-        E = () => (0, v.L)({ analyticsLocations: s, guild: d ?? void 0, stackingBehavior: "stack" }),
-        G = (0, i.jsx)(B, {
-            user: l,
-            guildId: n,
-            avatarDecorationOverride: W ? P : R ? D : void 0,
-            decorationStyle: W ? "placeholder" : V ? "fallback" : "default",
-            shouldAnimate: A,
-        });
-    return (0, i.jsx)("div", {
-        ref: f,
-        children: S
-            ? (0, i.jsx)(C.kL, {
-                  variant: "square",
-                  onClick: E,
-                  accessibleLabel: N.intl.string(N.t.HykynS),
-                  disabled: t,
-                  dimContent: V,
-                  children: G,
-              })
-            : (0, i.jsx)(C.NW, {
-                  variant: "square",
-                  onClick: E,
-                  accessibleLabel: N.intl.string(N.t.HykynS),
-                  deleteButtonConfig: q,
-                  disabled: t,
-                  children: G,
-              }),
+                : void 0;
+    return (0, n.jsx)(p.V, {
+        affordance: k ? "add" : y,
+        variant: "square",
+        onClick: () => (0, v.L)({ analyticsLocations: r, guild: t ?? void 0, stackingBehavior: "stack" }),
+        accessibleLabel: j.intl.string(j.t.HykynS),
+        disabled: i,
+        dimContent: I,
+        renderPreview: (e) =>
+            (0, n.jsx)(V, {
+                user: l,
+                guildId: a,
+                isEmpty: k,
+                isPreviewingMainProfileFallback: I,
+                hasPendingChange: A,
+                avatarDecorationPreview: x,
+                isInteracting: e,
+                disabled: i,
+            }),
     });
 }

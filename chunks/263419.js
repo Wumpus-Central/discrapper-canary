@@ -1182,17 +1182,19 @@ let e6 = {
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
-                            (0, s.jsx)(e0.kL, {
+                            (0, s.jsx)(e0.V, {
+                                affordance: "add",
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: l,
-                                children: (0, s.jsx)(e1, {}),
+                                renderPreview: () => (0, s.jsx)(e1, {}),
                             }),
-                            (0, s.jsx)(e0.kL, {
+                            (0, s.jsx)(e0.V, {
+                                affordance: "add",
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: l,
-                                children: (0, s.jsx)(e2, {}),
+                                renderPreview: () => (0, s.jsx)(e2, {}),
                             }),
                         ],
                     });
@@ -1210,19 +1212,19 @@ let e6 = {
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
-                            (0, s.jsx)(e0.NW, {
+                            (0, s.jsx)(e0.V, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
                                 showOverlayOnHover: l,
-                                children: (0, s.jsx)(e1, {}),
+                                renderPreview: () => (0, s.jsx)(e1, {}),
                             }),
-                            (0, s.jsx)(e0.NW, {
+                            (0, s.jsx)(e0.V, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
                                 showOverlayOnHover: l,
-                                children: (0, s.jsx)(e2, {}),
+                                renderPreview: () => (0, s.jsx)(e2, {}),
                             }),
                         ],
                     });
@@ -1248,21 +1250,21 @@ let e6 = {
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
-                            (0, s.jsx)(e0.NW, {
+                            (0, s.jsx)(e0.V, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
                                 showOverlayOnHover: l,
-                                deleteButtonConfig: r,
-                                children: (0, s.jsx)(e1, {}),
+                                affordance: r,
+                                renderPreview: () => (0, s.jsx)(e1, {}),
                             }),
-                            (0, s.jsx)(e0.NW, {
+                            (0, s.jsx)(e0.V, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
                                 showOverlayOnHover: l,
-                                deleteButtonConfig: r,
-                                children: (0, s.jsx)(e2, {}),
+                                affordance: r,
+                                renderPreview: () => (0, s.jsx)(e2, {}),
                             }),
                         ],
                     });

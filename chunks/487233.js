@@ -1,62 +1,56 @@
-n.d(l, { A: () => C });
-var i = n(627968);
-n(64700);
-var a = n(17928),
-    t = n(778712),
-    s = n(97808),
-    r = n(688810),
-    d = n(919395),
-    u = n(252732),
-    c = n(101058),
-    o = n(696451),
-    v = n(84540),
-    g = n(836602),
-    b = n(854627),
-    h = n(930349),
-    f = n(339984),
-    m = n(985018);
-let k = t._3.SIZE_72;
-function C(e) {
-    let { user: l, guildId: n, disabled: t } = e,
-        { newestAnalyticsLocation: C } = (0, r.Ay)(),
-        x = null != n,
-        A = (0, a.bG)([o.Ay], () => (null != n ? o.Ay.getMember(n, l.id) : null)),
-        p = (0, a.bG)([g.A], () => g.A.getPendingChanges(n ?? void 0).pendingAvatar),
-        y = (0, c.V7)({ userId: l.id, image: p }),
-        { avatarSrc: j } = (0, b.A)({ userId: l.id, guildId: n, avatarOverride: y, size: k }),
+a.d(l, { A: () => k });
+var n = a(627968);
+a(64700);
+var i = a(17928),
+    r = a(778712),
+    t = a(97808),
+    s = a(688810),
+    d = a(919395),
+    u = a(252732),
+    c = a(101058),
+    o = a(696451),
+    v = a(84540),
+    g = a(836602),
+    h = a(854627),
+    f = a(930349),
+    m = a(339984),
+    b = a(375708);
+let p = r._3.SIZE_72;
+function A(e) {
+    let { userId: l, guildId: a, avatarOverride: i, shouldAnimate: r } = e,
+        { avatarSrc: s } = (0, h.A)({ userId: l, guildId: a, avatarOverride: i, size: p, animateOnHover: !r });
+    return (0, n.jsx)(t.eu, { src: s, size: p, "aria-hidden": !0 });
+}
+function k(e) {
+    let { user: l, guildId: a, disabled: r } = e,
+        { newestAnalyticsLocation: t } = (0, s.Ay)(),
+        h = null != a,
+        p = (0, i.bG)([o.Ay], () => (null != a ? o.Ay.getMember(a, l.id) : null)),
+        k = (0, i.bG)([g.A], () => g.A.getPendingChanges(a ?? void 0).pendingAvatar),
+        C = (0, c.V7)({ userId: l.id, image: k }),
         I = l.avatar,
-        N = x ? A?.avatar : I,
-        L = void 0 !== p,
-        w = null === p || (!L && null == N),
-        B = x && null != I,
-        z = (0, d.z5)(p, N)
+        x = h ? p?.avatar : I,
+        y = void 0 !== k,
+        j = null === k || (!y && null == x),
+        w = h && null != I,
+        N = (0, d.z5)(k, x)
             ? {
                   onClick: () => {
-                      (0, u.rM)(null, N, (e) => (0, v.p)({ guildId: n ?? void 0, avatar: e })),
-                          (0, d.WU)(B ? "reset" : "remove");
+                      (0, u.rM)(null, x, (e) => (0, v.p)({ guildId: a ?? void 0, avatar: e })),
+                          (0, d.WU)(w ? "reset" : "remove");
                   },
-                  type: B ? "reset" : "remove",
-                  accessibleLabel: m.intl.string(B ? m.t.Y0mxy1 : m.t.twB3fz),
+                  type: w ? "reset" : "remove",
+                  accessibleLabel: b.intl.string(w ? b.t.Y0mxy1 : b.t.twB3fz),
               }
-            : void 0,
-        O = () =>
-            (0, u.XD)({ uploadType: f.HL.AVATAR, analyticsSource: C, guildId: n ?? void 0, stackingBehavior: "stack" }),
-        R = (0, i.jsx)(s.eu, { src: j, size: k, "aria-hidden": !0 });
-    return w
-        ? (0, i.jsx)(h.kL, {
-              variant: "square",
-              onClick: O,
-              accessibleLabel: m.intl.string(m.t["4OynCD"]),
-              disabled: t,
-              dimContent: w && B,
-              children: R,
-          })
-        : (0, i.jsx)(h.NW, {
-              variant: "square",
-              onClick: O,
-              accessibleLabel: m.intl.string(m.t["4OynCD"]),
-              deleteButtonConfig: z,
-              disabled: t,
-              children: R,
-          });
+            : void 0;
+    return (0, n.jsx)(f.V, {
+        affordance: j ? "add" : N,
+        variant: "square",
+        onClick: () =>
+            (0, u.XD)({ uploadType: m.HL.AVATAR, analyticsSource: t, guildId: a ?? void 0, stackingBehavior: "stack" }),
+        accessibleLabel: b.intl.string(b.t["4OynCD"]),
+        disabled: r,
+        dimContent: j && w,
+        renderPreview: (e) => (0, n.jsx)(A, { userId: l.id, guildId: a, avatarOverride: C, shouldAnimate: e }),
+    });
 }
