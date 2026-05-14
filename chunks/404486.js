@@ -7351,24 +7351,25 @@ let rh = {
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("94864"),
-                    a.e("98571"),
+                    a.e("85399"),
+                    a.e("15925"),
                     a.e("65159"),
                     a.e("59786"),
                     a.e("58128"),
                     a.e("19543"),
-                    a.e("68490"),
+                    a.e("19756"),
                     a.e("10889"),
                     a.e("53689"),
                     a.e("87845"),
                     a.e("51794"),
-                    a.e("4081"),
-                    a.e("87767"),
+                    a.e("10859"),
+                    a.e("89555"),
                     a.e("45970"),
                     a.e("56574"),
                     a.e("79785"),
                     a.e("98689"),
                     a.e("4974"),
-                    a.e("80186"),
+                    a.e("51507"),
                     a.e("49681"),
                     a.e("96382"),
                     a.e("22687"),
@@ -7521,7 +7522,7 @@ let rh = {
         },
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([
-                    a.e("87767"),
+                    a.e("89555"),
                     a.e("53689"),
                     a.e("11810"),
                     a.e("14656"),
@@ -8517,7 +8518,7 @@ let rL = {
         return (s.displayName = "ConsentCheckBoxModalContent"), (e) => (0, r.jsx)(s, { ...e });
     },
     GuildRaidLockdownFeedbackModal: async () => {
-        let { default: e } = await Promise.all([a.e("87767"), a.e("46313")]).then(a.bind(a, 336496));
+        let { default: e } = await Promise.all([a.e("89555"), a.e("46313")]).then(a.bind(a, 336496));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
@@ -8763,7 +8764,7 @@ let rL = {
     },
     NewUserOnboarding: async () => {
         let { default: e } = await Promise.all([
-            a.e("80797"),
+            a.e("39624"),
             a.e("13754"),
             a.e("16138"),
             a.e("19580"),

@@ -1,0 +1,204 @@
+.activityItemButtonInnerClass__8a940 {
+    display: flex;
+    width: 100%
+}
+
+.activityItem__8a940 {
+    border-radius: 12px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    transition: scale .2s;
+    width: 100%
+}
+
+.activityItem_13_11__8a940 {
+    aspect-ratio: 13/11
+}
+
+.activityItem_16_9__8a940 {
+    aspect-ratio: 16/9
+}
+
+.activitySuggestionImage__8a940 {
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.iconOuterContainer__8a940 {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute
+}
+
+.iconInnerContainer__8a940 {
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    height: 20px;
+    pointer-events: none;
+    width: 20px
+}
+
+.nitroIconContainer__8a940 {
+    bottom: 4px;
+    inset-inline-end: 4px;
+    position: absolute
+}
+
+.nitroIcon__8a940 {
+    inset-inline-start: 1px;
+    position: absolute;
+    top: 2px
+}
+
+.lockBackground__8a940 {
+    background-color: rgba(0, 0, 0, .2)
+}
+
+.lockIconContainer__8a940 {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 20%
+}
+
+.lock__8a940,
+.lockIconContainer__8a940 {
+    aspect-ratio: 1;
+    height: auto
+}
+
+.lock__8a940 {
+    width: 75%
+}
+
+.activityAction__8a940 {
+    align-items: center;
+    background-color: rgba(0, 0, 0, .45);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute
+}
+
+.activityActionButton__8a940 {
+    background-color: var(--control-secondary-background-default);
+    border-radius: 12px;
+    padding: 4px 16px
+}
+
+.activityActionButtonDanger__8a940 {
+    background-color: var(--control-critical-primary-background-default)
+}
+
+.brokenImageIconWrapper__8a940 {
+    align-items: center;
+    background-color: #000;
+    display: flex;
+    justify-content: center
+}
+
+.overlayBadge__8a940 {
+    inset-inline-start: 0;
+    padding: 4px;
+    position: absolute;
+    top: 0
+}
+
+.badgeContainer__8a940 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 3px
+}
+
+.container__9fa5a {
+    align-items: flex-start;
+    background-color: var(--background-surface-high);
+    border-radius: 16px;
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    display: flex;
+    flex-direction: column;
+    min-width: 584px;
+    overflow: hidden;
+    padding: 12px
+}
+
+.titleContainer__9fa5a {
+    justify-content: space-between;
+    width: 100%
+}
+
+.titleContainer__9fa5a,
+.titleLeft__9fa5a {
+    align-items: center;
+    display: flex
+}
+
+.titleLeftIcon__9fa5a {
+    margin-inline-end: 4px
+}
+
+.titleRight__9fa5a {
+    align-items: center;
+    cursor: pointer;
+    display: flex
+}
+
+.titleRightIcon__9fa5a {
+    margin-inline-start: 4px
+}
+
+.activityContainer__9fa5a {
+    display: flex;
+    height: 88px;
+    margin-top: 16px;
+    position: relative;
+    width: 100%
+}
+
+.activityContainer__9fa5a>:not(:first-child) {
+    margin-inline-start: 16px
+}
+
+.activitySuggestion__9fa5a {
+    height: 88px
+}
+
+.poster__9fa5a {
+    border-radius: 12px;
+    height: auto;
+    margin: 16px 0;
+    width: 584px
+}
+
+.posterDivider__9fa5a {
+    background-color: var(--border-subtle);
+    height: 1px;
+    width: 100%
+}
+
+.clickableBanner__9fa5a {
+    cursor: pointer;
+    transform: scale(1)
+}
+
+.full-motion .clickableBanner__9fa5a {
+    transition: transform .25s
+}
+
+.full-motion .clickableBanner__9fa5a:focus,
+.full-motion .clickableBanner__9fa5a:hover {
+    transform: scale(1.025)
+}

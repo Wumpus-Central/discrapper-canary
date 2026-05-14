@@ -1,0 +1,184 @@
+.icon_d2b05e {
+    inset-inline-start: 8px;
+    margin: auto auto 25px;
+    top: 9px;
+    z-index: 1
+}
+
+.connectionInstructions_d2b05e {
+    margin-top: 8px;
+    text-align: center
+}
+
+.buttonIcon__4151b {
+    margin-inline-end: 8px
+}
+
+.button__4151b {
+    margin-bottom: 8px;
+    width: 200px !important
+}
+
+.button__4151b:last-child {
+    margin-bottom: 0
+}
+
+.connectionInstructions__4151b {
+    margin-top: 8px;
+    text-align: center
+}
+
+.paymentRequestIcon__4151b {
+    inset-inline-start: 8px;
+    margin: auto auto 25px;
+    top: 9px;
+    z-index: 1
+}
+
+.theme-light .appleConnectorIcon__4151b {
+    box-shadow: none
+}
+
+.buttonIcon__92b20 {
+    margin-inline-end: 8px
+}
+
+.allPaymentsToggleButton__92b20 {
+    color: var(--text-strong);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 18px;
+    margin: 20px auto 0;
+    padding: 4px 4px 0
+}
+
+.allPaymentsToggleButton__92b20:hover {
+    cursor: pointer
+}
+
+.allPaymentsSection__92b20 {
+    padding-top: 24px
+}
+
+.hidden__92b20 {
+    display: none
+}
+
+.SeparatorLower__92b20,
+.SeparatorUpper__92b20 {
+    background: var(--border-subtle);
+    border: 0;
+    height: 1px;
+    width: 100%
+}
+
+.SeparatorUpper__92b20 {
+    margin: 0 0 16px
+}
+
+.SeparatorLower__92b20 {
+    margin: 16px 0 0
+}
+
+.container__92b20 {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 1fr 1fr
+}
+
+@media (max-width:485px) {
+    .container__92b20 {
+        grid-template-columns: 1fr
+    }
+}
+
+.body__9e82b {
+    padding-bottom: 16px;
+    padding-top: 16px
+}
+
+.paymentRestrictionBannerContainer__52623 {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    min-height: 48px;
+    padding-inline: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative
+}
+
+.theme-light .paymentRestrictionBannerContainer__52623 {
+    background: linear-gradient(90deg, #475cc6 0, #6045c1)
+}
+
+.theme-dark .paymentRestrictionBannerContainer__52623 {
+    background: linear-gradient(90deg, #475cc6 0, #6045c1)
+}
+
+.paymentRestrictionBannerBackgroundImage__52623 {
+    background-image: url(/assets/bb502dc7cfcbbacc.svg);
+    background-repeat: no-repeat;
+    bottom: 0;
+    position: absolute;
+    top: 40%;
+    inset-inline: 78% 0
+}
+
+.appsIconContainer__52623 {
+    height: 28px;
+    padding-inline-end: 12px;
+    width: 28px
+}
+
+.theme-light .icon__52623 {
+    display: none
+}
+
+.theme-light .iconDark__52623 {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0/.4));
+    height: 28px;
+    width: 28px
+}
+
+.theme-dark .icon__52623 {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0/.4));
+    height: 28px;
+    width: 28px
+}
+
+.theme-dark .iconDark__52623 {
+    display: none
+}
+
+.flexColumn__9b260 {
+    display: flex;
+    flex-direction: column
+}
+
+.infoNotice__9b260 {
+    margin-bottom: 16px
+}
+
+.paymentRequestButton__9b260 {
+    display: flex;
+    flex: 1;
+    flex-direction: row
+}
+
+.paymentModalBreadcrumbs__9b260:after {
+    padding: 0
+}
+
+.paymentModalError__9b260 {
+    background-color: var(--modal-background);
+    margin-bottom: var(--space-16);
+    padding-top: 12px
+}
+
+.giftCardRedemptionLink__9b260 {
+    margin-top: 16px
+}
