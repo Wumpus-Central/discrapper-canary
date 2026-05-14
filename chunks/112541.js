@@ -3500,6 +3500,7 @@ class nt extends s.Component {
     _unsubscribe;
     _initTimeoutId = null;
     _cachedEditorWindow = null;
+    _focusRafId = null;
     constructor(e) {
         super(e),
             (this._unsubscribe = y.Y0.subscribe((e) => {
@@ -3518,7 +3519,7 @@ class nt extends s.Component {
         return this._cachedEditorWindow;
     }
     componentDidMount() {
-        this.props.focused && requestAnimationFrame(() => this.focus()),
+        this.props.focused && this.focus(),
             document.addEventListener("selectionchange", this.handleSelectionChange),
             window.addEventListener("beforeunload", this.handleBeforeUnload),
             (this._initTimeoutId = setTimeout(() => void this._getEditorWindow(), 1e3));
@@ -3538,20 +3539,26 @@ class nt extends s.Component {
             (this._focusBlurQueue = null),
             (this._unsubscribe = null),
             (this._cachedEditorWindow = null),
-            null != this._initTimeoutId && clearTimeout(this._initTimeoutId);
+            null != this._initTimeoutId && clearTimeout(this._initTimeoutId),
+            null != this._focusRafId && (cancelAnimationFrame(this._focusRafId), (this._focusRafId = null));
     }
     handleSelectionChange = () => {
         this.props.focused && this.props.onSelectionChanged(document.getSelection?.()?.toString());
     };
     focus = () => {
         this._focusBlurQueue?.then(() => {
-            this.setState({ focused: !0 }, () => {
-                let e = this.ref.current;
-                null != e && e.focus();
-            });
+            null != this._focusRafId && cancelAnimationFrame(this._focusRafId),
+                (this._focusRafId = requestAnimationFrame(() => {
+                    (this._focusRafId = null),
+                        this.setState({ focused: !0 }, () => {
+                            let e = this.ref.current;
+                            null != e && e.focus();
+                        });
+                }));
         });
     };
     blur() {
+        null != this._focusRafId && (cancelAnimationFrame(this._focusRafId), (this._focusRafId = null));
         let e = this.ref.current;
         null != e && e.blur();
     }
@@ -3759,7 +3766,9 @@ class nt extends s.Component {
     handleBlur = (e) => {
         let { onBlur: t } = this.props,
             { focused: n } = this.state;
-        t?.(e), n && this.setState({ focused: !1 });
+        null != this._focusRafId && (cancelAnimationFrame(this._focusRafId), (this._focusRafId = null)),
+            t?.(e),
+            n && this.setState({ focused: !1 });
     };
     handlePaste = (e) => {
         let t,
