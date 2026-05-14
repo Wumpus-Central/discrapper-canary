@@ -4167,20 +4167,21 @@ class sF extends nS {
                 isFavoriteSuggestion: x,
                 withGuildIcon: N,
                 hasStartTime: _,
-                shouldHighlightChannel: S,
-                shouldUseAnimatedWaveform: I,
-                voiceStates: b,
+                voiceChannelStartTime: S,
+                shouldHighlightChannel: I,
+                shouldUseAnimatedWaveform: b,
+                voiceStates: G,
             } = this.props,
-            { shouldShowGuildVerificationPopout: G } = this.state,
-            v = (0, e7.B)({ guildId: e.guild_id, location: "VoiceChannel" }),
-            R = S || I,
-            j = (0, s.jsxs)("li", {
+            { shouldShowGuildVerificationPopout: v } = this.state,
+            R = (0, e7.B)({ guildId: e.guild_id, location: "VoiceChannel" }),
+            j = I || b,
+            M = (0, s.jsxs)("li", {
                 ref: this.ref,
-                className: ef()(this.getModeClass(), { [ed.r9]: this.isDisabled(), [ed.fy]: S }),
+                className: ef()(this.getModeClass(), { [ed.r9]: this.isDisabled(), [ed.fy]: I }),
                 "data-dnd-name": (0, tq.m1)(e, lV.default, l$.A),
                 children: [
-                    v && this.getVoiceStatesCount() > 0 && (0, s.jsx)(sO, { channel: e }),
-                    S &&
+                    R && this.getVoiceStatesCount() > 0 && (0, s.jsx)(sO, { channel: e }),
+                    I &&
                         (0, s.jsxs)(s.Fragment, {
                             children: [
                                 (0, s.jsx)("div", { className: ed.UQ }),
@@ -4196,14 +4197,14 @@ class sF extends nS {
                             renderPopout: this.renderPopout,
                             onRequestClose: this.closeGuildVerificationPopout,
                             spacing: 17,
-                            shouldShow: G || ("history" === this.state.popoutToShow && !(o || d)),
+                            shouldShow: v || ("history" === this.state.popoutToShow && !(o || d)),
                             children: () =>
                                 (0, s.jsx)(Q.m, {
                                     text: this.getTooltipText(),
                                     children: (0, s.jsxs)(nI.Ay, {
                                         ref: this.channelItemRef,
                                         className: ed.Ki,
-                                        iconClassName: ef()({ [ed.Gj]: f || _ || R }),
+                                        iconClassName: ef()({ [ed.Gj]: f || _ || j }),
                                         hasActiveEvent: f,
                                         channel: e,
                                         selected: !x && t,
@@ -4225,9 +4226,10 @@ class sF extends nS {
                                             channel: e,
                                             unread: l,
                                             mentionCount: r,
-                                            voiceStates: b,
+                                            voiceStates: G,
                                             embeddedActivitiesCount: C.length,
                                             isSubscriptionGated: E,
+                                            voiceChannelStartTime: S,
                                         }),
                                         "aria-describedby": (function (e) {
                                             let { channel: t, embeddedApps: n } = e;
@@ -4268,17 +4270,17 @@ class sF extends nS {
                 ],
             });
         return (
-            m && (j = h(j)),
-            g && (j = c(u(j))),
+            m && (M = h(M)),
+            g && (M = c(u(M))),
             p &&
-                (j = (0, s.jsx)(t5.A, {
+                (M = (0, s.jsx)(t5.A, {
                     childRef: this.ref,
                     tutorialId: "voice-conversations",
                     position: "right",
                     offsetX: -20,
-                    children: j,
+                    children: M,
                 })),
-            j
+            M
         );
     }
 }
@@ -4314,7 +4316,7 @@ function sz(e) {
         g = (0, lQ.Ay)(n),
         m = (0, tq.Ay)(n),
         p = (0, tp.Qs)(n.id),
-        f = (0, u.bG)([sC.A], () => null != sC.A.getStartTime(n), [n]),
+        f = (0, u.bG)([sC.A], () => sC.A.getStartTime(n), [n]),
         { isSubscriptionGated: C, needSubscriptionToAccess: E } = (0, lj.A)(n.id),
         x = (0, sx.A)(),
         N = (0, u.bG)([tZ.Ay], () => tZ.Ay.isFavorite(t.id, n.id)),
@@ -4351,7 +4353,8 @@ function sz(e) {
         channelInfo: R,
         resolvedUnreadSetting: c,
         hasChannelInfo: null != R,
-        hasStartTime: f,
+        hasStartTime: null != f,
+        voiceChannelStartTime: f,
         shouldHighlightChannel: G,
         shouldUseAnimatedWaveform: v,
     });
