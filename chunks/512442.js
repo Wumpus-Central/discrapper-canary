@@ -17649,7 +17649,7 @@ function p2(e) {
                       ...e,
                       innerRef: s,
                       className: pZ.SI,
-                      "aria-label": g.intl.string(g.t.DEoVWZ),
+                      "aria-label": g.intl.formatToPlainString(g.t.xZtncm, { username: t.username }),
                       children: (0, p.jsx)(gW.j, { size: "md", color: "currentColor", className: pZ.D$ }),
                   }),
           })
