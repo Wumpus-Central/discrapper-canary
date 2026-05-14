@@ -2788,7 +2788,7 @@ function iv(e) {
                                               n.e("14078"),
                                               n.e("30708"),
                                               n.e("45788"),
-                                              n.e("43522"),
+                                              n.e("63915"),
                                               n.e("56402"),
                                               n.e("76602"),
                                               n.e("28229"),
@@ -3283,6 +3283,7 @@ class iz extends nS {
                                     unread: i,
                                     mentionCount: o,
                                     isSubscriptionGated: A,
+                                    embeddedActivitiesCount: f?.length,
                                 }),
                                 children: [
                                     g &&
