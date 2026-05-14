@@ -829,7 +829,7 @@ function tc(e) {
     if (!l || null == s) return null;
     let A = () => {
         (0, eK.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("63202"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+            let { default: e } = await Promise.all([n.e("20799"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                 n.bind(n, 719847),
             );
             return (n) =>
@@ -892,7 +892,7 @@ function tu(e) {
         E = !!f && (0, e4.bg)(o.flags),
         C = () => {
             (0, eK.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("63202"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+                let { default: e } = await Promise.all([n.e("20799"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                     n.bind(n, 719847),
                 );
                 return (t) =>
@@ -1831,9 +1831,10 @@ function n1(e) {
               onClick: () => {
                   (0, eK.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e("63044"),
-                          n.e("80797"),
-                          n.e("86522"),
+                          n.e("56710"),
+                          n.e("4554"),
+                          n.e("60361"),
+                          n.e("54266"),
                           n.e("99430"),
                           n.e("72465"),
                           n.e("83952"),
@@ -3168,7 +3169,7 @@ var lQ = n(68935),
     sl = n(639245),
     ss = n(87719),
     sr = n(725807),
-    sa = n(927578),
+    sa = n(428262),
     so = n(750385),
     sd = n(850992),
     sc = n(625494),
@@ -5250,7 +5251,7 @@ var ay = n(376728),
     aP = n(860689);
 let aw = (0, n(600975).C)({
     kind: "guild",
-    id: "2026-04_voice_channel_list_invite_embed",
+    id: "2026-05_voice_channel_list_invite_embed",
     label: "Voice Channel List Invite Embed",
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Enable channel-list-style voice invite embed", config: { enabled: !0 } }],
@@ -5849,7 +5850,7 @@ function a0(e) {
                                     onClick: () =>
                                         (0, eK.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                n.e("93010"),
+                                                n.e("95840"),
                                                 n.e("97804"),
                                                 n.e("7265"),
                                                 n.e("97641"),
@@ -6980,7 +6981,7 @@ function oJ(e) {
                                           ? (0, oF.A)(g.pid)
                                           : (0, eK.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e("93010"),
+                                                    n.e("95840"),
                                                     n.e("17918"),
                                                     n.e("76171"),
                                                     n.e("38601"),
@@ -8229,7 +8230,7 @@ function cn(e) {
     (0, ce.C)(t.id);
     let l = a.useCallback(() => {
         (0, eK.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("63202"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+            let { default: e } = await Promise.all([n.e("20799"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                 n.bind(n, 719847),
             );
             return (n) => (0, r.jsx)(e, { appId: t.id, guildId: i, ...n });

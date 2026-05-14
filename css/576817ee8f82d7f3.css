@@ -1,0 +1,34 @@
+.container_a54d1d {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 16px;
+    padding-bottom: 80px;
+    padding-top: 80px
+}
+
+.image_a54d1d {
+    margin-bottom: 16px;
+    max-width: 400px;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.title_a54d1d {
+    color: var(--text-strong);
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: var(--font-weight-extra-bold);
+    line-height: 24px;
+    margin-bottom: 8px;
+    text-transform: none
+}
+
+.body_a54d1d {
+    color: var(--text-default);
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 20px
+}

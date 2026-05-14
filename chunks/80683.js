@@ -89,18 +89,18 @@ let B = () =>
 var K = n(228366),
     z = n(857071);
 let W = null,
-    q = null;
-function $() {
+    $ = null;
+function q() {
     let e = z.A.mostRecentLurkedGuildId();
-    null != e ? ((W = e), (q = null)) : ((q = null != W ? W : null), (W = null));
+    null != e ? ((W = e), ($ = null)) : (($ = null != W ? W : null), (W = null));
 }
 class J extends r.Ay.Store {
     static displayName = "LurkerModePopoutStore";
     initialize() {
-        this.syncWith([z.A], $);
+        this.syncWith([z.A], q);
     }
     shouldShowPopout(e) {
-        return q === e;
+        return $ === e;
     }
 }
 let Z = new J(K.h);
@@ -200,8 +200,8 @@ class ep extends i.PureComponent {
         (0, d.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("86522"),
-                    n.e("55998"),
+                    n.e("54266"),
+                    n.e("4554"),
                     n.e("89545"),
                     n.e("84704"),
                     n.e("86197"),

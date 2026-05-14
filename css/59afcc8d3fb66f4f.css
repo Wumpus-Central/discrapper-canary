@@ -1,0 +1,331 @@
+.card_a12047 {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-muted);
+    border-radius: 16px;
+    justify-content: space-between;
+    padding: var(--space-12)
+}
+
+.card_a12047,
+.guildInfo_a12047 {
+    align-items: center;
+    display: flex
+}
+
+.guildInfo_a12047 {
+    gap: var(--space-12)
+}
+
+.guildIcon_a12047 {
+    border-radius: 12px;
+    flex-shrink: 0;
+    height: 40px;
+    width: 40px
+}
+
+.guildDetails_a12047 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+.statsRow_a12047 {
+    gap: var(--space-8)
+}
+
+.statGroup_a12047,
+.statsRow_a12047 {
+    align-items: center;
+    display: flex
+}
+
+.statGroup_a12047 {
+    gap: 2px
+}
+
+.boostGemIcon_a12047 {
+    height: 14px;
+    width: 14px
+}
+
+.dotSeparator_a12047 {
+    background-color: var(--text-muted);
+    border-radius: 100px;
+    height: 4px;
+    width: 4px
+}
+
+.cards__1bfce {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.card__1bfce {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-muted);
+    border-radius: 16px;
+    overflow: clip
+}
+
+.cardHeader__1bfce {
+    border-bottom: 1px solid var(--border-muted);
+    justify-content: space-between;
+    padding: var(--space-12)
+}
+
+.cardHeader__1bfce,
+.guildInfo__1bfce {
+    align-items: center;
+    display: flex
+}
+
+.guildInfo__1bfce {
+    gap: var(--space-12)
+}
+
+.dotSeparator__1bfce {
+    background-color: var(--text-muted);
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 4px;
+    width: 4px
+}
+
+.boostRow__1bfce {
+    align-items: center;
+    background: var(--background-base-lower);
+    border-bottom: 1px solid var(--border-muted);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-8) var(--space-12)
+}
+
+.boostRowLast__1bfce {
+    border-bottom: none
+}
+
+.boostRowInfo__1bfce {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    gap: var(--space-8);
+    min-width: 0
+}
+
+.rowThumbnail__1bfce {
+    border-radius: 8px;
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px
+}
+
+.moreButton__1bfce {
+    cursor: pointer
+}
+
+.card__7ea60 {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-muted);
+    border-radius: 16px;
+    overflow: clip
+}
+
+.cardHeader__7ea60 {
+    border-bottom: 1px solid var(--border-muted);
+    justify-content: space-between;
+    padding: var(--space-12)
+}
+
+.cardHeader__7ea60,
+.cardHeaderInfo__7ea60 {
+    align-items: center;
+    display: flex
+}
+
+.cardHeaderInfo__7ea60 {
+    gap: var(--space-12)
+}
+
+.gemIconWrapper__7ea60 {
+    flex-shrink: 0;
+    position: relative
+}
+
+.gemIcon__7ea60 {
+    border-radius: 12px;
+    height: 42px;
+    width: 42px
+}
+
+.badge__7ea60 {
+    align-items: center;
+    background: var(--white);
+    border: 2px solid var(--background-surface-high);
+    border-radius: 100px;
+    box-sizing: content-box;
+    display: flex;
+    height: 16px;
+    inset-inline-start: 27px;
+    justify-content: center;
+    position: absolute;
+    top: 27px;
+    width: 16px
+}
+
+.badgeText__7ea60 {
+    color: var(--text-invert);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px
+}
+
+.cardHeaderDetails__7ea60 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+.boostRow__7ea60 {
+    align-items: center;
+    background: var(--background-base-lower);
+    border-bottom: 1px solid var(--border-muted);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-8) var(--space-12)
+}
+
+.boostRowLast__7ea60 {
+    border-bottom: none
+}
+
+.boostRowInfo__7ea60 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.rowThumbnail__7ea60 {
+    border-radius: 8px;
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px
+}
+
+.moreButton__7ea60 {
+    cursor: pointer
+}
+
+.wrapper_b6f39a {
+    gap: var(--space-16)
+}
+
+.sectionHeader_b6f39a,
+.wrapper_b6f39a {
+    display: flex;
+    flex-direction: column
+}
+
+.sectionHeader_b6f39a {
+    gap: 2px
+}
+
+.wrapper__4b63d {
+    align-items: flex-start;
+    flex-direction: column
+}
+
+.cards__4b63d,
+.wrapper__4b63d {
+    display: flex;
+    gap: var(--space-16);
+    width: 100%
+}
+
+.cards__4b63d {
+    flex-wrap: wrap
+}
+
+.card__4b63d {
+    align-items: center;
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    box-shadow: var(--shadow-low);
+    display: flex;
+    flex: 1 1 calc(50% - var(--space-8));
+    flex-direction: column;
+    gap: var(--space-8);
+    min-width: 0;
+    overflow: clip;
+    padding: var(--space-12)
+}
+
+.icon__4b63d {
+    color: var(--icon-muted);
+    display: block;
+    height: 42px;
+    width: 42px
+}
+
+.description__4b63d {
+    text-align: center
+}
+
+.wrapper_a04c02 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.list_a04c02 {
+    width: 100%
+}
+
+.list_a04c02,
+.listItem_a04c02 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.listItem_a04c02 {
+    align-items: flex-start;
+    align-self: stretch;
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    box-shadow: var(--shadow-low);
+    cursor: pointer;
+    padding: var(--space-12)
+}
+
+.listItemExpanded_a04c02 {
+    background: var(--background-surface-highest);
+    border: 1px solid var(--border-normal)
+}
+
+.questionWrapper_a04c02 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    gap: var(--space-12)
+}
+
+.question_a04c02 {
+    flex: 1 1 auto
+}
+
+.questionIcon_a04c02 {
+    flex: 0 0 auto
+}
+
+.full-motion .questionIcon_a04c02 {
+    transition: transform .2s ease-in-out
+}
+
+.answer_a04c02 {
+    align-self: stretch;
+    padding-top: var(--space-8)
+}

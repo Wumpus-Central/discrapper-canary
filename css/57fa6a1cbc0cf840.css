@@ -1,0 +1,160 @@
+.panelHeader__6edf0 {
+    margin-bottom: 16px
+}
+
+.panelInner__6edf0 {
+    padding: var(--space-8)
+}
+
+.panelRow__6edf0 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12);
+    justify-content: flex-start;
+    margin-bottom: var(--space-16)
+}
+
+.scroller__9ff51 {
+    max-height: 100%
+}
+
+.root__9ff51 {
+    box-sizing: border-box
+}
+
+.stopsGrid__9ff51 {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: max-content repeat(4, 1fr)
+}
+
+.stopLabel__9ff51 {
+    min-width: 60px
+}
+
+.previewList__9ff51 {
+    list-style: none;
+    margin: 0;
+    padding: 16px
+}
+
+.yamlBlock__9ff51 {
+    background-color: var(--background-surface-high);
+    border-radius: 4px;
+    color: var(--text-default);
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+    overflow: auto;
+    padding: 12px;
+    white-space: pre
+}
+
+.imageUploadSlot__9ff51 {
+    position: relative
+}
+
+.colorSwatch__9ff51 {
+    border-radius: 2px;
+    display: inline-block;
+    flex-shrink: 0;
+    height: 12px;
+    width: 12px
+}
+
+.container__9b0bb {
+    padding: var(--space-24)
+}
+
+.section__9b0bb {
+    padding-bottom: var(--space-24)
+}
+
+.formSwitch__9b0bb,
+.header__9b0bb {
+    margin-bottom: var(--space-8)
+}
+
+.hotspotsSection__16e9e {
+    padding: var(--space-24)
+}
+
+.statusIcon__16e9e {
+    height: 16px;
+    width: 16px
+}
+
+.checkmark__16e9e {
+    color: var(--status-positive)
+}
+
+.checkmark__16e9e,
+.xmark__16e9e {}
+
+.xmark__16e9e {
+    color: var(--icon-feedback-critical)
+}
+
+.helpText__16e9e {
+    margin-bottom: 32px
+}
+
+.hotspotSwitch__16e9e {
+    align-items: center;
+    display: flex;
+    margin: 8px 0
+}
+
+.overrideSelect__16e9e {
+    flex: 0 0 30%
+}
+
+.localizedName__2d71b {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    line-height: 20px
+}
+
+.flag__2d71b {
+    flex: 0 0 auto;
+    margin: 0 8px
+}
+
+.flagImage__2d71b {
+    display: block;
+    filter: saturate(var(--saturation-factor, 1));
+    height: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 27px
+}
+
+.switch__9d40d {
+    margin-bottom: 0
+}
+
+.panel__9d40d {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px
+}
+
+.divider__9d40d {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: var(--space-8) 0
+}
+
+.inGameNuxContainer__9d40d {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.search__9d40d {
+    flex: 1
+}

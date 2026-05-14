@@ -1,0 +1,44 @@
+.slider__4e371 {
+    inset-inline: 0;
+    bottom: 0;
+    position: absolute
+}
+
+.premiumLabel__34642 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    position: relative;
+    z-index: 3
+}
+
+.selected__34642 {
+    color: var(--white)
+}
+
+.background__34642 {
+    border-radius: var(--radius-xs);
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.selectedBackground__34642 {
+    background-color: var(--brand-500)
+}
+
+.enable-forced-colors .selected__34642 {
+    color: Highlight
+}
+
+.enable-forced-colors .selectedIcon__34642 {
+    fill: Highlight
+}
+
+.enable-forced-colors .selectedBackground__34642 {
+    background-color: HighlightText
+}

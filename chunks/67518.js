@@ -13,14 +13,15 @@ function c(e, t) {
             (t?.(l.Ws.Feedback),
             (0, s.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
-                    n.e("55567"),
-                    n.e("93010"),
+                    n.e("74103"),
+                    n.e("95840"),
+                    n.e("40671"),
                     n.e("56600"),
                     n.e("34530"),
                     n.e("8891"),
-                    n.e("55266"),
                     n.e("33771"),
                     n.e("46039"),
+                    n.e("55266"),
                     n.e("27495"),
                 ]).then(n.bind(n, 651930));
                 return (n) => (0, i.jsx)(t, { ...n, detectedActivity: { application_id: e, name: "" } });
