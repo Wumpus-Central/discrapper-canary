@@ -1630,10 +1630,12 @@ let tk = Object.freeze({
         return (0, O.Nh)(e?.perks, d.bb.MONTHLY_ORBS);
     },
     canUseShopDiscounts: function (e) {
-        return tv(e);
+        let { getIsCrepeEnabled: t } = n(968671);
+        return (t("canUseShopDiscounts") && (0, O.Nh)(e?.perks, d.bb.SHOP_DISCOUNTS)) || tv(e);
     },
     canUseMoreQuestOrbs: function (e) {
-        return tC(e);
+        let { getIsCrepeEnabled: t } = n(968671);
+        return (t("canUseMoreQuestOrbs") && (0, O.Nh)(e?.perks, d.bb.MORE_QUEST_ORBS)) || tC(e);
     },
     formatPriceString: tO,
     StreamQuality: eb,

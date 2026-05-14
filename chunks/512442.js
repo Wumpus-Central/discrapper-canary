@@ -89,7 +89,7 @@ let I = (0, o.Qx)(u.X.ACTIVITY_PRIVACY_PER_GUILD_DEFAULT_SETTING, {
             if (null == s) return;
             let l = (0, C.Xc)(e);
             (0, _.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([i.e("92164"), i.e("67683"), i.e("62041"), i.e("41996")]).then(
+                let { default: e } = await Promise.all([i.e("92164"), i.e("36281"), i.e("62041"), i.e("41996")]).then(
                     i.bind(i, 32167),
                 );
                 return (t) =>
@@ -5889,7 +5889,7 @@ var oV = i(403581),
     oY = i(813564),
     oX = i(984813),
     oH = i(22231),
-    oK = i(927578),
+    oK = i(428262),
     oW = i(792348),
     oZ = i(674168),
     oq = i(277192),
@@ -18409,14 +18409,9 @@ var Nc = i(187322),
     NS = i(968309);
 let Nx = new Set([q.fg2.XBOX, q.fg2.PLAYSTATION, q.fg2.PLAYSTATION_STAGING, q.fg2.CRUNCHYROLL]);
 var Np = i(169869),
-    Nf = i(30370);
-let NN = (0, E.mj)({
-    name: "2026-03-crepe",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-});
-var N_ = i(674567),
+    Nf = i(30370),
+    NN = i(968671),
+    N_ = i(674567),
     NC = i(237146);
 i(594387);
 var NI = i(34934);
@@ -18427,10 +18422,7 @@ function Nb() {
         s,
         { variant: l, showFooter: r } =
             ((e = (0, N_.V)()),
-            (t = (function (e) {
-                let { enabled: t } = NN.useConfig({ location: e });
-                return t;
-            })("connectedAccountsBannerFooter")),
+            (t = (0, NN.useIsCrepeEnabled)("connectedAccountsBannerFooter")),
             (s = null != (n = (0, O.bG)([Nf.A], () => Nf.A.getAccount(null, q.fg2.XBOX))) && !n.revoked),
             e === N_.s.NONE || e === N_.s.FREE_FRACTIONAL_NITRO || (e === N_.s.NON_NITRO && 0)
                 ? { variant: N_.s.NONE, showFooter: !1 }
@@ -20686,7 +20678,7 @@ let CX = {
                 (0, _.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         i.e("92164"),
-                        i.e("67683"),
+                        i.e("36281"),
                         i.e("62041"),
                         i.e("63786"),
                     ]).then(i.bind(i, 413201));
