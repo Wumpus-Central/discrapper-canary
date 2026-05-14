@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(143236);
-class i {
-    emitter = new r.EventEmitter();
+n.d(t, { A: () => r });
+var i = n(143236);
+class r {
+    emitter = new i.EventEmitter();
     on(e, t) {
         this.emitter.on(e, t);
     }
@@ -22,11 +22,7 @@ class i {
         this.emitter.removeAllListeners();
     }
     emit(e) {
-        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
-        this.emitter.emit(e, ...n);
-    }
-    emitUnsafe(e) {
-        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
         this.emitter.emit(e, ...n);
     }
     listenerCount(e) {

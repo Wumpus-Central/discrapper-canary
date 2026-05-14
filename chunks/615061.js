@@ -1178,7 +1178,7 @@ class eE extends S.A {
             (n.volume = this.computeLocalVolume(e)),
             n.on(es.Speaking, (t) => this.emit(N.yq.Speaking, e, t, this.audioSSRC)),
             n.on(es.Video, (t) =>
-                this.emitUnsafe(
+                this.emit(
                     N.yq.Video,
                     e,
                     t,
