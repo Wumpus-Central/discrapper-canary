@@ -1,19 +1,20 @@
 "use strict";
 n.d(t, {
-    $w: () => w,
-    D1: () => k,
+    $w: () => M,
+    D1: () => G,
     Df: () => R,
     Sb: () => T.Sb,
     TG: () => b,
-    _N: () => x,
+    XW: () => D,
+    _N: () => U,
     bW: () => O,
     cE: () => y,
-    ji: () => D,
-    nT: () => U,
-    o_: () => L,
+    ji: () => L,
+    nT: () => k,
+    o_: () => w,
     wc: () => v,
-    xB: () => P,
-    xs: () => M,
+    xB: () => x,
+    xs: () => P,
 }),
     n(393431),
     n(532706),
@@ -32,7 +33,7 @@ var i = n(284009),
     c = n(228366),
     d = n(626584),
     _ = n(256787),
-    f = n(281678),
+    f = n(367727),
     h = n(174459),
     p = n(927813),
     E = n(460288),
@@ -251,10 +252,19 @@ let v = new C(l.nT, T.oD.PRELOADED_USER_SETTINGS),
 function b(e, t, n) {
     return v.updateAsync("guilds", (n) => (0, I.$o)(n, e, t), n);
 }
-function D(e, t, n, i) {
+function D(e, t) {
+    return b(
+        e,
+        (e) => {
+            e.guildThemeSourcePreference = t;
+        },
+        T.Sb.INFREQUENT_USER_ACTION,
+    );
+}
+function L(e, t, n, i) {
     return b(e, (e) => (0, I.VB)(e, t, n), i);
 }
-function L(e) {
+function w(e) {
     var t, n;
     let i;
     return (
@@ -273,7 +283,7 @@ function L(e) {
         )
     );
 }
-async function w(e, t) {
+async function M(e, t) {
     return await v.updateAsync(
         "userContent",
         (n) => {
@@ -282,7 +292,7 @@ async function w(e, t) {
         T.Sb.INFREQUENT_USER_ACTION,
     );
 }
-async function M(e, t, n) {
+async function P(e, t, n) {
     return await b(
         t,
         (t) => {
@@ -291,7 +301,7 @@ async function M(e, t, n) {
         T.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function P(e) {
+function x(e) {
     return v.updateAsync(
         "userContent",
         (t) => {
@@ -301,10 +311,10 @@ function P(e) {
         T.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function x(e) {
-    return w(e, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
+function U(e) {
+    return M(e, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 }
-function U() {
+function k() {
     return v.updateAsync(
         "userContent",
         (e) => {
@@ -313,7 +323,7 @@ function U() {
         T.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function k() {
+function G() {
     return v.updateAsync(
         "userContent",
         (e) => {
