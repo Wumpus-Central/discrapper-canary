@@ -3381,6 +3381,11 @@
     color: var(--text-strong)
 }
 
+.enable-forced-colors .itemContainer__971b5[aria-selected=true] {
+    outline: 2px solid Highlight;
+    outline-offset: -2px
+}
+
 .item__971b5 {
     align-items: center;
     display: flex;

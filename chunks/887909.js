@@ -236,17 +236,36 @@ var eC = n(285796),
     eO = n(444927),
     eR = n(415122);
 function eb(e) {
-    let { text: t, error: n, isFake: r } = e;
+    let { text: t, error: n, isFake: r } = e,
+        s = !0 === r ? ef.intl.string(ef.t.OX8EMU) : ef.intl.string(ef.t["0lpCFG"]),
+        o = `${s}: ${t}${null != n ? `. ${n}` : ""}`;
     return (0, i.jsxs)("div", {
         className: eR.z8,
+        role: "group",
+        "aria-label": o,
         children: [
-            r
-                ? (0, i.jsx)(eC.a, { size: "md", color: "currentColor", className: a()(eR.Kk, eR.RC) })
-                : (0, i.jsx)(ev.y, { size: "md", color: "currentColor", className: a()(eR.Kk, eR.sc) }),
+            !0 === r
+                ? (0, i.jsx)(eC.a, {
+                      size: "md",
+                      color: "currentColor",
+                      className: a()(eR.Kk, eR.RC),
+                      "aria-hidden": !0,
+                  })
+                : (0, i.jsx)(ev.y, {
+                      size: "md",
+                      color: "currentColor",
+                      className: a()(eR.Kk, eR.sc),
+                      "aria-hidden": !0,
+                  }),
             (0, i.jsxs)("div", {
                 className: eR.rv,
+                "aria-hidden": !0,
                 children: [
-                    (0, i.jsx)(T.E, { variant: "text-md/normal", color: r ? "text-muted" : void 0, children: t }),
+                    (0, i.jsx)(T.E, {
+                        variant: "text-md/normal",
+                        color: !0 === r ? "text-muted" : void 0,
+                        children: t,
+                    }),
                     null != n
                         ? (0, i.jsx)(T.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: n })
                         : null,
@@ -561,9 +580,9 @@ let eX = (0, F.Fe)({
             n.e("62924"),
             n.e("89092"),
             n.e("71934"),
-            n.e("43522"),
-            n.e("99512"),
-            n.e("26472"),
+            n.e("63915"),
+            n.e("72713"),
+            n.e("67537"),
             n.e("22513"),
             n.e("7053"),
             n.e("45788"),
