@@ -1,41 +1,42 @@
-l.d(t, { n: () => u });
-var s = l(627968),
-    a = l(64700),
-    n = l(503698),
-    c = l.n(n),
-    i = l(331322),
-    r = l(834730),
-    d = l(64584),
-    o = l(498990);
-function u(e) {
-    let { children: t, label: l, description: n, ...u } = e,
-        { spacing: h } = a.useContext(d.c),
-        x = a.useId(),
-        p = null != n && "" !== n;
-    return (0, s.jsxs)("fieldset", {
-        ...u,
-        className: c()(o.lI, u.className),
-        "aria-describedby": p ? x : void 0,
+a.d(t, { n: () => x });
+var l = a(627968),
+    s = a(64700),
+    n = a(503698),
+    c = a.n(n),
+    i = a(508770),
+    r = a(331322),
+    d = a(834730),
+    u = a(64584),
+    o = a(498990);
+function x(e) {
+    let { children: t, label: a, description: n, badge: x, ...h } = e,
+        { spacing: p } = s.useContext(u.c),
+        m = s.useId(),
+        g = null != n && "" !== n;
+    return (0, l.jsxs)("fieldset", {
+        ...h,
+        className: c()(o.lI, h.className),
+        "aria-describedby": g ? m : void 0,
         children: [
-            null != l
-                ? (0, s.jsx)(r.E, {
+            null != a
+                ? (0, l.jsxs)(d.E, {
                       tag: "legend",
                       variant: "text-lg/medium",
                       color: "text-strong",
                       className: o.o1,
-                      children: l,
+                      children: [a, null != x && (0, l.jsx)(i.E, { type: x, variant: "brand" })],
                   })
                 : null,
-            p
-                ? (0, s.jsx)(r.E, {
+            g
+                ? (0, l.jsx)(d.E, {
                       variant: "text-sm/normal",
                       color: "text-default",
                       className: o.h_,
-                      id: x,
+                      id: m,
                       children: n,
                   })
                 : null,
-            (0, s.jsx)(i.B, { direction: "vertical", gap: h, children: t }),
+            (0, l.jsx)(r.B, { direction: "vertical", gap: p, children: t }),
         ],
     });
 }

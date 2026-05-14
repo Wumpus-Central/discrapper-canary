@@ -1121,8 +1121,8 @@ var e0 = n(417098),
     e2 = n(351906),
     e3 = n(377802),
     e6 = n(348858),
-    e4 = n(523875),
-    e5 = n(416696),
+    e5 = n(523875),
+    e4 = n(416696),
     e8 = n(621956),
     e9 = n(446080),
     e7 = n(922016),
@@ -1219,7 +1219,7 @@ function tk(e) {
         { suppress: s, selfMute: l, mute: a } = (0, tS.A)(t),
         o = l || a || s,
         d = (0, tr.A)(l, a, s, !1),
-        { Component: u, play: h, events: m } = (0, e4.L)(o ? "unmute" : "mute");
+        { Component: u, play: h, events: m } = (0, e5.L)(o ? "unmute" : "mute");
     c.useEffect(() => () => h(), [h, o]);
     let g = tO(n),
         p = (e) => (t) => {
@@ -1442,7 +1442,7 @@ function tP(e) {
             Component: f,
             events: { onMouseEnter: A, onMouseLeave: E },
             play: S,
-        } = (0, e5.c)(g ? "disable" : "enable");
+        } = (0, e4.c)(g ? "disable" : "enable");
     c.useEffect(() => () => S(), [g, S]);
     let I = tO(i);
     return (0, r.jsx)(e7.Y, {
@@ -1779,8 +1779,8 @@ var tQ = n(459192),
     t2 = n(241541),
     t3 = n(320448),
     t6 = n(661531),
-    t4 = n(446576),
-    t5 = n(789645),
+    t5 = n(446576),
+    t4 = n(789645),
     t8 = n(387755),
     t9 = n(945830),
     t7 = n(461678),
@@ -2213,7 +2213,7 @@ function nj(e) {
                                   text: v,
                                   "aria-label": v,
                                   children: (0, r.jsx)(tJ.K, {
-                                      icon: t4.g,
+                                      icon: t5.g,
                                       "aria-label": v,
                                       size: "sm",
                                       variant: "icon-only",
@@ -2231,7 +2231,7 @@ function nj(e) {
                                   title: eg.intl.string(nf.default.ERApc4),
                                   body: eg.intl.string(nf.default.PBVXVW),
                                   children: (0, r.jsx)(tJ.K, {
-                                      icon: t5.P,
+                                      icon: t4.P,
                                       "aria-label": eg.intl.string(nf.default.ERApc4),
                                       size: "sm",
                                       variant: "icon-only",
@@ -2380,8 +2380,7 @@ let nz = c.memo(function (e) {
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("75036"),
-                                    n.e("12697"),
-                                    n.e("63044"),
+                                    n.e("94881"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -2722,7 +2721,8 @@ let n1 = c.memo(function (e) {
                     (0, F.YX)(em.uss.VIDEO, { type: F.Z5.CAMERA, value: F.IP.SETTINGS_OPENED, userId: s?.id }),
                         (0, l.L3)(i, async () => {
                             let { default: e } = await Promise.all([
-                                n.e("63044"),
+                                n.e("12739"),
+                                n.e("94881"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -2852,7 +2852,7 @@ let n1 = c.memo(function (e) {
             { maxWidth: 0.75 * r.maxX, maxHeight: 0.75 * r.maxY },
         );
     };
-function n4(e) {
+function n5(e) {
     let t = (0, y.bG)([P.A, D.A], () => D.A.getChannel(P.A.getVoiceChannelId())),
         n = 2 * e.padding + 2 * e.borderWidth,
         i = t?.id,
@@ -2927,7 +2927,7 @@ function n4(e) {
         })
     );
 }
-var n5 = n(450740),
+var n4 = n(450740),
     n8 = n(968898);
 n(321073);
 var n9 = n(518009),
@@ -2986,7 +2986,7 @@ let iu = c.memo(function (e) {
             renderWidget(e) {
                 let { widget: t, locked: n, size: i, padding: s, borderWidth: l, showEmpty: a } = e;
                 return (0, e_.cv)(t)
-                    ? (0, r.jsx)(n4, {
+                    ? (0, r.jsx)(n5, {
                           id: t.id,
                           locked: n,
                           widget: t,
@@ -3026,7 +3026,7 @@ let iu = c.memo(function (e) {
             renderWidget(e) {
                 let { widget: t, anchorLeft: n, locked: i, showEmpty: s } = e;
                 return (0, e_.ZO)(t)
-                    ? (0, r.jsx)(n5.Ay, {
+                    ? (0, r.jsx)(n4.Ay, {
                           anchorLeft: n,
                           id: t.id,
                           locked: i,
