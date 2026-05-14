@@ -7,7 +7,7 @@ var i = n(17928),
     a = n(192308),
     o = n(241541),
     d = n(652793),
-    c = n(855725),
+    c = n(771640),
     u = n(976860),
     h = n(309010),
     A = n(519480),
@@ -30,7 +30,7 @@ let E = [
             handler: (e, t) =>
                 (0, a.openModalLazy)(async () => {
                     let { default: i } = await Promise.all([
-                        n.e("80797"),
+                        n.e("37813"),
                         n.e("13754"),
                         n.e("72891"),
                         n.e("54046"),
@@ -58,7 +58,7 @@ let E = [
             handler: (e, t) =>
                 (0, a.openModalLazy)(async () => {
                     let { default: i } = await Promise.all([
-                        n.e("87767"),
+                        n.e("71670"),
                         n.e("59957"),
                         n.e("28136"),
                         n.e("16084"),
@@ -93,7 +93,7 @@ let E = [
                         text: a(),
                         selected: h,
                         onClick: null != n ? () => o(t, n) : void 0,
-                        trailing: "JOIN_SERVERS" === i && r > 0 ? (0, c.w)(r) : null,
+                        trailing: "JOIN_SERVERS" === i && r > 0 ? (0, c.wN)(r) : null,
                     },
                     A,
                 );
