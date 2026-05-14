@@ -9,7 +9,7 @@ var t,
     o = s(602853),
     c = s(817281),
     u = s(761929),
-    m = s(964404),
+    m = s(742023),
     b = s(743898),
     S = s(318974),
     R =
@@ -69,7 +69,7 @@ function x(e) {
             !f && (0, a.jsx)("div", { style: { minWidth: C } }),
             (0, a.jsx)(N, {
                 children: (0, a.jsxs)("div", {
-                    className: n()(S.PA, { [S.R]: !1 }),
+                    className: S.PA,
                     children: [
                         (0, a.jsx)("div", { className: n()(S.Uc, { [S.DU]: f, [S.iK]: !f }), style: { width: C } }),
                         !f &&
