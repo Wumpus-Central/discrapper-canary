@@ -21,6 +21,7 @@ function f(e) {
         className: a()(_.Zg, n),
         emojiId: t.id,
         emojiName: t.name,
+        alt: m,
         autoplay: !0,
         animated: !!(t.animated && p && s),
         registerInnerRef: (e) => {
