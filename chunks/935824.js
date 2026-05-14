@@ -7,6 +7,7 @@ e.exports = {
     kj: "redirectNoticeContainer__955a3",
     Jo: "contentSection__955a3",
     FG: "contentWrapper__955a3",
+    R: "hidden__955a3",
     iS: "heroWrapper__955a3",
     Tv: "heroBackground__955a3",
     nz: "heroGradient__955a3",

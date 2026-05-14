@@ -985,12 +985,12 @@ function eM(e) {
                 style: { maxHeight: I.to([0, 1], [104, (y ?? 0) + 12]) },
                 className: eR.z,
                 children: [
-                    (0, n.jsx)(K, {
-                        showPlaceholder: !d,
-                        width: 80,
-                        height: 80,
-                        children: (0, n.jsxs)("div", {
-                            className: eR.c6,
+                    (0, n.jsx)("div", {
+                        className: eR.c6,
+                        children: (0, n.jsxs)(K, {
+                            showPlaceholder: !d,
+                            width: 80,
+                            height: 80,
                             children: [
                                 !w && _ && (0, n.jsx)("div", { className: eR.Nz }),
                                 g
@@ -1103,77 +1103,78 @@ function eH(e) {
             questContent: r,
             contentPosition: o,
             rowIndex: c,
-            impressionRef: h,
-            sourceQuestContent: f,
+            eagerLoadAssets: h,
+            impressionRef: f,
+            sourceQuestContent: v,
         } = e,
-        [v, N] = i.useState(!1),
-        [g, O] = i.useState([]),
-        p = (0, u.aC)(t),
-        A = i.useMemo(() => (0, m.vv)(t), [t]),
-        y = (0, d.u0)(),
-        S = i.useCallback(() => {
-            N(!0),
-                y({
+        [N, g] = i.useState(!1),
+        [O, p] = i.useState([]),
+        A = (0, u.aC)(t),
+        y = i.useMemo(() => (0, m.vv)(t), [t]),
+        S = (0, d.u0)(),
+        T = i.useCallback(() => {
+            g(!0),
+                S({
                     questId: t.id,
                     event: G.HAw.QUEST_HOVER,
                     properties: { content_id: r, content_name: (0, x.jO)(r), content_position: o, row_index: c },
-                    sourceQuestContent: f,
+                    sourceQuestContent: v,
                 }),
-                A && (0, C.l9)();
-        }, [y, t.id, r, A, f, o, c]),
-        T = i.useCallback(() => {
-            N(!1),
-                y({
+                y && (0, C.l9)();
+        }, [S, t.id, r, y, v, o, c]),
+        I = i.useCallback(() => {
+            g(!1),
+                S({
                     questId: t.id,
                     event: G.HAw.QUEST_HOVER_OFF,
                     properties: { content_id: r, content_name: (0, x.jO)(r), content_position: o, row_index: c },
-                    sourceQuestContent: f,
+                    sourceQuestContent: v,
                 });
-        }, [y, t.id, r, f, o, c]),
-        I = i.useContext(E.X),
-        { visibilityElementRef: _, almostVisibleInViewport: w } = (function (e) {
-            let [t, s] = i.useState(!1),
-                n = i.useCallback((e) => {
-                    e.isIntersecting && s(!0);
+        }, [S, t.id, r, v, o, c]),
+        _ = i.useContext(E.X),
+        { visibilityElementRef: w, almostVisibleInViewport: Q } = (function (e, t) {
+            let [s, n] = i.useState(t),
+                a = i.useCallback((e) => {
+                    e.isIntersecting && n(!0);
                 }, []);
             return {
                 visibilityElementRef: (0, j.B)(
-                    n,
+                    a,
                     { root: e ?? null, threshold: 0, rootMargin: "900px 0px 900px 0px" },
                     !0,
                 ),
-                almostVisibleInViewport: t,
+                almostVisibleInViewport: s,
             };
-        })(I?.current?.getScrollerNode() ?? null);
+        })(_?.current?.getScrollerNode() ?? null, h ?? !1);
     return (0, n.jsxs)("div", {
         id: eU(t.id),
         ref: (e) => {
-            (h.current = e), (_.current = e);
+            (f.current = e), (w.current = e);
         },
         className: l()(eP.k, s),
-        onMouseEnter: S,
-        onMouseLeave: T,
-        onFocus: S,
-        onBlur: T,
+        onMouseEnter: T,
+        onMouseLeave: I,
+        onFocus: T,
+        onBlur: I,
         children: [
             (0, n.jsx)(Z, {
                 quest: t,
                 isInFeaturedSection: a,
-                isHovering: v,
-                errorHints: g,
-                warningHints: p,
-                isVisibleInViewport: w,
-                sourceQuestContent: f,
+                isHovering: N,
+                errorHints: O,
+                warningHints: A,
+                isVisibleInViewport: Q,
+                sourceQuestContent: v,
             }),
             (0, n.jsx)(eM, {
                 quest: t,
                 questContent: r,
-                isHovering: v,
+                isHovering: N,
                 contentPosition: o,
                 rowIndex: c,
-                onReceiveErrorHints: O,
-                isVisibleInViewport: w,
-                sourceQuestContent: f,
+                onReceiveErrorHints: p,
+                isVisibleInViewport: Q,
+                sourceQuestContent: v,
             }),
         ],
     });
