@@ -49,11 +49,12 @@ var f = n(372684),
     p = n(284009),
     E = n.n(p);
 function m(e, t) {
-    let n = [];
-    for (let i of e) {
-        E()(null != i.decision, "candidate clip missing .decision");
-        let e = i.decision.timestamp,
-            r = e - i.length,
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 3,
+        i = [];
+    for (let n of e) {
+        E()(null != n.decision, "candidate clip missing .decision");
+        let e = n.decision.timestamp,
+            r = e - n.length,
             s = [];
         for (let n in t.audioModelDataPerUser) {
             let i = (function (e, t, n) {
@@ -70,9 +71,27 @@ function m(e, t) {
         }
         let o = 1;
         for (let e of a) o *= Math.max(e, 1);
-        n.push({ clip: i, score: o });
+        i.push({ clip: n, score: o });
     }
-    return n.sort((e, t) => t.score - e.score), n;
+    i.sort((e, t) => t.score - e.score);
+    let r = [];
+    for (let e of i) {
+        E()(null != e.clip.decision, "clip missing .decision");
+        let t = e.clip.decision.timestamp,
+            i = t - e.clip.length,
+            s = !1;
+        for (let e of r) {
+            E()(null != e.clip.decision, "clip missing .decision");
+            let n = e.clip.decision.timestamp,
+                r = n - e.clip.length;
+            if (Math.min(t, n) - Math.max(i, r) >= 5e3) {
+                s = !0;
+                break;
+            }
+        }
+        if ((s || r.push(e), r.length === n)) break;
+    }
+    return { allClipsRanked: i, selected: r };
 }
 var g = n(607814);
 function A() {
@@ -260,19 +279,16 @@ class S extends s.A {
         I.nx.info("DEBUG RERUN RANKING");
         let e = await a.A.clips.debugReadStashedClipDeciderData(),
             t = m(e.clipCandidates, e.decisionSignals);
-        I.nx.info("ranked clips:", t);
-        for (let e = 0; e < Math.min(3, t.length); e++)
-            I.nx.info(`Clip ${e + 1} score ${t[e].score}, ${a.A.fileManager.basename(t[e].clip.filepath)}`);
+        I.nx.info("ranked clips:", t),
+            t.selected.forEach((e, t) => {
+                I.nx.info(`Clip ${t + 1} score ${e.score}, ${a.A.fileManager.basename(e.clip.filepath)}`);
+            });
     }
     processClipCandidates() {
         let e = d.A.getClipCandidates(),
-            t = [],
-            n = [],
-            i = m(e, this.decisionSignals);
-        I.nx.info("ranked clips:", i);
-        for (let e = 0; e < i.length; e++) e < 3 ? t.push(i[e].clip) : n.push(i[e].clip);
-        for (let e of t) (0, g.K7)(e);
-        for (let e of n) (0, g.oH)(e.filepath, e.id);
+            t = m(e, this.decisionSignals);
+        for (let n of (I.nx.info("ranked clips:", t), e))
+            null != t.selected.find((e) => e.clip.id === n.id) ? (0, g.K7)(n) : (0, g.oH)(n.filepath, n.id);
         for (let e of d.A.getPendingClipCandidates()) this.pendingCandidateDiscards.add(e.id);
         this.decisionSignals = A();
     }
