@@ -101,7 +101,12 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         return null != t && t && null == n
             ? (0, r.jsx)(l.m, {
                   __unsupportedReactNodeAsText: i ?? X.intl.string(X.t.pclUFJ),
-                  children: (0, r.jsx)(c.p, { size: "md", color: "currentColor", className: Q.Dd }),
+                  children: (0, r.jsx)(c.p, {
+                      size: "md",
+                      color: "currentColor",
+                      className: Q.Dd,
+                      "aria-label": i ?? X.intl.string(X.t.pclUFJ),
+                  }),
               })
             : null;
     }),
