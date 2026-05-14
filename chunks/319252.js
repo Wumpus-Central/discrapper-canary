@@ -231,6 +231,7 @@ function h(e) {
                                                         taskDescription: e.messages.task_description,
                                                     },
                                                     applications: e.applications,
+                                                    accountLinkInstructions: e.account_link_instructions,
                                                 };
                                             case u.n.ACHIEVEMENT_IN_ACTIVITY:
                                                 return {
