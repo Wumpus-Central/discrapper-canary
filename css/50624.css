@@ -307,7 +307,7 @@
     appearance: none;
     background-color: transparent;
     border: none;
-    color: var(--text-default);
+    color: var(--text-subtle);
     resize: none;
     white-space: normal;
     width: 100%

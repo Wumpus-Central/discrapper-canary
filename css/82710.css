@@ -5778,16 +5778,20 @@ screen and (max-width:485px) {
     gap: 4px
 }
 
-.noteSpoiler_e1ecd3,
-.noteText_e1ecd3 {
+.noteSpoiler_e1ecd3 {
     line-height: 1.25
+}
+
+.noteSpoiler_e1ecd3:hover>* {
+    text-decoration: underline
 }
 
 .noteText_e1ecd3 {
     align-items: flex-start;
     display: flex;
     font-style: italic;
-    gap: 4px
+    gap: 4px;
+    line-height: 1.25
 }
 
 .emptyStateContainer__5ec2f {
@@ -5850,12 +5854,6 @@ screen and (max-width:485px) {
 .cancelText_e1372c,
 .radioOption_e1372c {
     display: flex
-}
-
-.confettiCanvas__6c43c {
-    height: 100%;
-    position: absolute;
-    width: 100%
 }
 
 .container_cd2add {
