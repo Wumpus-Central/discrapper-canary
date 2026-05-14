@@ -1439,7 +1439,7 @@ function nE() {
                     ? {
                           id: V.NITRO_ORBS_REWARDS_CARD_ID,
                           title: $.intl.string(t8.default.hx5AFp),
-                          description: $.intl.format(t8.default["Pz+6Ix"], { orbsCount: R.reward_amount }),
+                          description: $.intl.format(t8.default.wq3CF2, { orbsCount: R.reward_amount }),
                           pillText: v ? $.intl.string($.t.y2b7CA) : $.intl.string($.t.oW0eUd),
                           primaryAsset: "/assets/8f530451dce1ccc0.svg",
                           primaryAssetClassName: o()(nd.lH, nd.yK),
