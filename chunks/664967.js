@@ -17,8 +17,9 @@ function v(e) {
             let n = { source: d.Eo.CONTEXT_MENU, alertType: (0, u.$5)(b) };
             (0, o.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
-                    i.e("98571"),
-                    i.e("87767"),
+                    i.e("68369"),
+                    i.e("95081"),
+                    i.e("20980"),
                     i.e("40258"),
                     i.e("73669"),
                     i.e("46313"),

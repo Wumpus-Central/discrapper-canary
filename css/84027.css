@@ -1,0 +1,83 @@
+.checkbox_d332d2 {
+    margin-inline-end: 8px
+}
+
+.errorMessage_d332d2 {
+    color: var(--text-feedback-critical)
+}
+
+.createAccountTemplateHeader_d332d2 {
+    color: var(--text-strong);
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold)
+}
+
+.authBlock_d332d2 {
+    margin-top: 32px
+}
+
+.horizontalAuthBox_d332d2 {
+    width: 960px
+}
+
+.flex_d332d2 {
+    flex: 1 1 auto
+}
+
+.divider_d332d2 {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    width: 100%
+}
+
+.goBackButton_d332d2 {
+    margin-bottom: 16px;
+    padding-inline-start: 0
+}
+
+.goBackButton_d332d2 .content_d332d2 {
+    align-items: center;
+    display: flex
+}
+
+.goBackButton_d332d2 .caret_d332d2 {
+    margin-block: 0 1px;
+    margin-inline: 0 4px
+}
+
+.messageNegative_d332d2 {
+    color: var(--text-feedback-critical)
+}
+
+.messagePositive_d332d2 {
+    color: var(--text-feedback-positive)
+}
+
+.inviteBirthdayInput_d332d2 {
+    margin-bottom: 32px;
+    margin-top: 20px
+}
+
+.consentBox_d332d2 {
+    margin-bottom: 8px;
+    margin-top: 8px
+}
+
+.consentSubText_d332d2 {
+    color: var(--text-subtle);
+    font-size: 14px;
+    line-height: 18px
+}
+
+.centeredButtonContainer_d332d2 {
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.birthdayInput_d332d2 {
+    margin-bottom: 20px;
+    margin-top: 20px
+}

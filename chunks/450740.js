@@ -544,8 +544,7 @@ let eT = s.memo(function (e) {
                 m ||
                     (0, U.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            n.e("11397"),
-                            n.e("79450"),
+                            n.e("66872"),
                             n.e("26132"),
                             n.e("46652"),
                             n.e("93190"),

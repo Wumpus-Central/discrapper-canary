@@ -1,0 +1,56 @@
+.shopPageContainer__4485d {
+    margin-top: 80px;
+    min-height: 300px
+}
+
+.giftModalContainer__4485d,
+.shopPageContainer__4485d {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.giftModalContainer__4485d {
+    padding: var(--space-24)
+}
+
+.heading1__4485d {
+    margin-bottom: 24px;
+    margin-top: 24px
+}
+
+.description__4485d {
+    text-align: center
+}
+
+.reload__4485d {
+    margin-top: 24px
+}
+
+.customConfetti__69c6c {
+    inset-inline-end: -75px;
+    pointer-events: none;
+    top: -120px
+}
+
+.modalOverrideSliderBody__34eac {
+    padding: 0;
+    width: 440px
+}
+
+.confettiCanvas__34eac {
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.customConfetti__34eac {
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity .5s ease-in-out
+}
+
+.customConfetti__34eac.hidden__34eac {
+    opacity: 0
+}

@@ -1,0 +1,23 @@
+.breadcrumbs__0f692 {
+    display: flex;
+    justify-content: center;
+    overflow: hidden
+}
+
+.breadcrumbWrapper__0f692 {
+    align-items: center;
+    display: flex;
+    flex-grow: 0;
+    font-weight: var(--font-weight-semibold)
+}
+
+.breadcrumbFinalWrapper__0f692 {
+    overflow: hidden
+}
+
+.breadcrumbArrow__0f692 {
+    color: var(--text-muted);
+    height: 18px;
+    margin: 0 11px;
+    width: 18px
+}

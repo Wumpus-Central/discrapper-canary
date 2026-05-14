@@ -76,8 +76,8 @@ function W(e) {
         E,
         O,
         W,
-        q,
         $,
+        q,
         J,
         Z,
         Y,
@@ -155,7 +155,8 @@ function W(e) {
                 null != Q &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("87767"),
+                            n.e("95081"),
+                            n.e("42527"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
@@ -171,14 +172,14 @@ function W(e) {
                             });
                     });
         }, [Q])),
-        (q = i.useCallback(() => {
+        ($ = i.useCallback(() => {
             C.Ay.trackWithMetadata(D.HAw.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: B.XT.CHANNEL_WELCOME,
                 action: B.AG.SEND_MESSAGE,
             }),
                 U._.dispatch(D.jej.TEXTAREA_FOCUS, { highlight: !0, channelId: D.dJq });
         }, [])),
-        ($ = i.useCallback(() => {
+        (q = i.useCallback(() => {
             C.Ay.trackWithMetadata(D.HAw.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: B.XT.CHANNEL_WELCOME,
                 action: B.AG.PERSONALIZE_SERVER,
@@ -187,15 +188,15 @@ function W(e) {
         }, [Q])),
         {
             handleInvite: W,
-            handleMessage: q,
-            handlePersonalize: $,
+            handleMessage: $,
+            handlePersonalize: q,
             handleDownload: i.useCallback(() => {
                 C.Ay.trackWithMetadata(D.HAw.SERVER_SETUP_CTA_CLICKED, {
                     setup_type: B.XT.CHANNEL_WELCOME,
                     action: B.AG.DOWNLOAD,
                 }),
                     (0, m.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("74926"), n.e("44602"), n.e("25280")]).then(
+                        let { default: e } = await Promise.all([n.e("81013"), n.e("44602"), n.e("25280")]).then(
                             n.bind(n, 987482),
                         );
                         return (t) => (0, l.jsx)(e, { source: D.JJy.CHANNEL_WELCOME_CTA, ...t });

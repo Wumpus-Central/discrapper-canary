@@ -585,9 +585,10 @@ let te = r.memo(function (e) {
                                         }),
                                         (0, f.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("79450"),
-                                                n.e("45788"),
-                                                n.e("86624"),
+                                                n.e("18927"),
+                                                n.e("95081"),
+                                                n.e("60909"),
+                                                n.e("95219"),
                                                 n.e("31232"),
                                                 n.e("8891"),
                                                 n.e("83952"),
@@ -1381,9 +1382,10 @@ let tx = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 W.default.track(e_.HAw.OPEN_MODAL, { type: e_.JJy.CREATE_STICKER_MODAL, location: c }),
                                     (0, f.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("79450"),
-                                            n.e("45788"),
-                                            n.e("86624"),
+                                            n.e("18927"),
+                                            n.e("95081"),
+                                            n.e("60909"),
+                                            n.e("95219"),
                                             n.e("31232"),
                                             n.e("8891"),
                                             n.e("83952"),
