@@ -11439,6 +11439,7 @@
   "SU+8HO": "Display role:",
   "QrxwhY": "Remove role !!{roleName}!!",
   "S40K66": "Server Members",
+  "6eGpWx": "!!{memberName}!!, Roles: !!{roleNames}!!",
   "u7V0vg": "Rules Screening",
   "OxO7j9": "By **!!{username}!!**#!!{discriminator}!! on !!{date}!!",
   "pRpZCf": "By $[]({{usernameHook}}) on !!{date}!!",
