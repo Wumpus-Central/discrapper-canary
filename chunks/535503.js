@@ -1,143 +1,141 @@
-n.d(t, { default: () => p });
-var i = n(627968);
-n(64700);
-var l = n(550079),
-    a = n(477782),
-    r = n(442433),
-    d = n(847767),
-    o = n(358367),
-    s = n(468389),
-    u = n(793574),
-    c = n(823104),
-    A = n(50268),
-    g = n(844065),
-    f = n(803664),
-    E = n(29293),
-    b = n(696582),
-    x = n(239211),
-    m = n(707378),
-    C = n(399476),
-    I = n(889460),
-    h = n(267102),
-    S = n(652215),
-    v = n(985018);
-function _(e) {
-    let { label: t, onAction: n } = e,
-        l = (0, h.aL)();
-    return (0, i.jsx)(a.Dr, {
+e.d(r, { default: () => v });
+var i = e(627968);
+e(64700);
+var l = e(980707),
+    t = e(477782),
+    s = e(442433),
+    d = e(847767),
+    c = e(358367),
+    a = e(468389),
+    A = e(793574),
+    o = e(50268),
+    u = e(844065),
+    h = e(803664),
+    j = e(29293),
+    x = e(696582),
+    X = e(239211),
+    g = e(707378),
+    E = e(399476),
+    _ = e(889460),
+    p = e(267102),
+    b = e(652215),
+    C = e(375708);
+function N(n) {
+    let { label: r, onAction: e } = n,
+        l = (0, p.aL)();
+    return (0, i.jsx)(t.Dr, {
         id: "user-profile-overlay",
-        label: t ?? v.intl.string(v.t.LYju5J),
+        label: r ?? C.intl.string(C.t.LYju5J),
         action: () => {
-            n?.(), l.dispatch(S.jej.POPOUT_CLOSE);
+            e?.(), l.dispatch(b.jej.POPOUT_CLOSE);
         },
     });
 }
-var M = n(198229),
-    D = n(972432),
-    N = n(77544);
-function j(e) {
+var U = e(198229),
+    O = e(972432),
+    T = e(77544);
+function f(n) {
     let {
-            user: t,
-            guildId: n,
+            user: r,
+            guildId: e,
             channelId: d,
-            mediaEngineContext: o,
-            onSelect: u,
-            onShowProfile: h,
-            onWatchStream: S,
-            appContext: j,
-        } = e,
-        y = _({
+            mediaEngineContext: c,
+            onSelect: A,
+            onShowProfile: p,
+            onWatchStream: b,
+            appContext: f,
+        } = n,
+        m = N({
             onAction: () => {
-                h?.();
+                p?.();
             },
         }),
-        p = (0, m.A)({ user: t, context: j }),
-        G = (0, c.D)({ userId: t.id }),
-        L = (0, E.A)({ user: t, appContext: j }),
-        T = (0, N.A)(t.id, S),
-        U = (0, D.A)(t.id),
-        O = (0, M.A)(t.id, o),
-        P = (0, I.A)({ user: t }),
-        B = (0, s.A)(null, t),
-        V = (0, f.A)({ user: t, appContext: j }),
-        R = (0, x.A)({ user: t, appContext: j }),
-        k = (0, C.A)({ user: t, appContext: j }),
-        F = (0, A.A)({ id: t.id, label: v.intl.string(v.t["/AXYnE"]) }),
-        w = (0, g.A)(t),
-        K = (0, b.A)(t, n, d),
-        X = t.isNonUserBot();
+        v = (0, g.A)({ user: r, context: f }),
+        I = (0, j.A)({ user: r, appContext: f }),
+        S = (0, T.A)(r.id, b),
+        k = (0, O.A)(r.id),
+        w = (0, U.A)(r.id, c),
+        L = (0, _.A)({ user: r }),
+        P = (0, a.A)(null, r),
+        Y = (0, h.A)({ user: r, appContext: f }),
+        J = (0, X.A)({ user: r, appContext: f }),
+        M = (0, E.A)({ user: r, appContext: f }),
+        Z = (0, o.A)({ id: r.id, label: C.intl.string(C.t["/AXYnE"]) }),
+        q = (0, u.A)(r),
+        B = (0, x.A)(r, e, d),
+        F = r.isNonUserBot();
     return (0, i.jsxs)(l.W, {
         "data-menu-migrated-auto": !0,
         navId: "user-context",
-        onClose: r.Z_,
-        "aria-label": v.intl.string(v.t.liqwPJ),
-        onSelect: u,
+        onClose: s.Z_,
+        "aria-label": C.intl.string(C.t.liqwPJ),
+        onSelect: A,
         children: [
-            !X &&
+            !F &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(a.rX, { children: w }),
-                        (0, i.jsxs)(a.rX, { children: [y, G, p, L, T] }),
-                        (0, i.jsx)(a.rX, { children: U }),
-                        (0, i.jsx)(a.rX, { children: B }),
-                        (0, i.jsxs)(a.rX, { children: [O, P, V, k, R] }),
-                        (0, i.jsx)(a.rX, { children: K }),
+                        (0, i.jsx)(t.rX, { children: q }),
+                        (0, i.jsxs)(t.rX, { children: [m, v, I, S] }),
+                        (0, i.jsx)(t.rX, { children: k }),
+                        (0, i.jsx)(t.rX, { children: P }),
+                        (0, i.jsxs)(t.rX, { children: [w, L, Y, M, J] }),
+                        (0, i.jsx)(t.rX, { children: B }),
                     ],
                 }),
-            (0, i.jsx)(a.rX, { children: F }),
+            (0, i.jsx)(t.rX, { children: Z }),
         ],
     });
 }
-function y(e) {
-    let { user: t, mediaEngineContext: n, onSelect: d, onShowProfile: o, onWatchStream: u, appContext: c } = e,
-        b = _({
+function m(n) {
+    let { user: r, mediaEngineContext: e, onSelect: d, onShowProfile: c, onWatchStream: A, appContext: x } = n,
+        p = N({
             onAction: () => {
-                o?.();
+                c?.();
             },
         }),
-        h = (0, m.A)({ user: t, context: c }),
-        S = (0, E.A)({ user: t, appContext: c }),
-        j = (0, N.A)(t.id, u),
-        y = (0, D.A)(t.id),
-        p = (0, M.A)(t.id, n),
-        G = (0, I.A)({ user: t }),
-        L = (0, s.A)(null, t),
-        T = (0, f.A)({ user: t, appContext: c }),
-        U = (0, x.A)({ user: t, appContext: c }),
-        O = (0, C.A)({ user: t, appContext: c }),
-        P = (0, A.A)({ id: t.id, label: v.intl.string(v.t["/AXYnE"]) }),
-        B = (0, g.A)(t),
-        V = t.isNonUserBot();
+        b = (0, g.A)({ user: r, context: x }),
+        f = (0, j.A)({ user: r, appContext: x }),
+        m = (0, T.A)(r.id, A),
+        v = (0, O.A)(r.id),
+        I = (0, U.A)(r.id, e),
+        S = (0, _.A)({ user: r }),
+        k = (0, a.A)(null, r),
+        w = (0, h.A)({ user: r, appContext: x }),
+        L = (0, X.A)({ user: r, appContext: x }),
+        P = (0, E.A)({ user: r, appContext: x }),
+        Y = (0, o.A)({ id: r.id, label: C.intl.string(C.t["/AXYnE"]) }),
+        J = (0, u.A)(r),
+        M = r.isNonUserBot();
     return (0, i.jsxs)(l.W, {
         "data-menu-migrated-auto": !0,
         navId: "user-context",
-        onClose: r.Z_,
-        "aria-label": v.intl.string(v.t.liqwPJ),
+        onClose: s.Z_,
+        "aria-label": C.intl.string(C.t.liqwPJ),
         onSelect: d,
         children: [
-            !V &&
+            !M &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(a.rX, { children: B }),
-                        (0, i.jsxs)(a.rX, { children: [b, h, S, j] }),
-                        (0, i.jsx)(a.rX, { children: y }),
-                        (0, i.jsx)(a.rX, { children: L }),
-                        (0, i.jsxs)(a.rX, { children: [p, G, T, O, U] }),
+                        (0, i.jsx)(t.rX, { children: J }),
+                        (0, i.jsxs)(t.rX, { children: [p, b, f, m] }),
+                        (0, i.jsx)(t.rX, { children: v }),
+                        (0, i.jsx)(t.rX, { children: k }),
+                        (0, i.jsxs)(t.rX, { children: [I, S, w, P, L] }),
                     ],
                 }),
-            (0, i.jsx)(a.rX, { children: P }),
+            (0, i.jsx)(t.rX, { children: Y }),
         ],
     });
 }
-let p = (0, o.A)(
+let v = (0, c.A)(
     (0, d.A)(
-        function (e) {
-            let { guildId: t, channelId: n, ...l } = e;
-            return null != t && null != n
-                ? (0, i.jsx)(j, { ...l, guildId: t, channelId: n })
-                : (0, i.jsx)(y, { ...l, guildId: t, channelId: n });
+        function (n) {
+            let { guildId: r, channelId: e, ...l } = n;
+            return null != r && null != e
+                ? (0, i.jsx)(f, { ...l, guildId: r, channelId: e })
+                : (0, i.jsx)(m, { ...l, guildId: r, channelId: e });
         },
-        { object: S.ZSU.CONTEXT_MENU },
+        { object: b.ZSU.CONTEXT_MENU },
     ),
-    [u.A.CONTEXT_MENU, u.A.USER_OVERLAY_CONTEXT_MENU],
+    [A.A.CONTEXT_MENU, A.A.USER_OVERLAY_CONTEXT_MENU],
 );

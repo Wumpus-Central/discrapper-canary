@@ -161,7 +161,6 @@ function O(e) {
                             e.event,
                             async () => {
                                 let { default: n } = await Promise.all([
-                                    t.e("63240"),
                                     t.e("25719"),
                                     t.e("26132"),
                                     t.e("46652"),
@@ -179,7 +178,6 @@ function O(e) {
                                     t.e("76665"),
                                     t.e("76273"),
                                     t.e("24198"),
-                                    t.e("86169"),
                                     t.e("32418"),
                                 ]).then(t.bind(t, 668569));
                                 return (t) => (0, a.jsx)(n, { ...t, user: e.user, appContext: R.BRT.APP });
@@ -198,9 +196,8 @@ function O(e) {
                         if (null == e.channel || null == e.user) return;
                         (0, h.L3)(e.event, async () => {
                             let { default: n } = await Promise.all([
-                                t.e("63240"),
                                 t.e("25719"),
-                                t.e("95840"),
+                                t.e("80203"),
                                 t.e("79937"),
                                 t.e("26132"),
                                 t.e("46652"),
@@ -226,7 +223,6 @@ function O(e) {
                                 t.e("35313"),
                                 t.e("76273"),
                                 t.e("36564"),
-                                t.e("86169"),
                                 t.e("34971"),
                                 t.e("45996"),
                                 t.e("792"),
@@ -341,7 +337,6 @@ function O(e) {
                         let n = e.guild?.id ?? null;
                         (0, h.L3)(e.event, async () => {
                             let { default: l } = await Promise.all([
-                                t.e("63240"),
                                 t.e("25719"),
                                 t.e("26132"),
                                 t.e("46652"),
@@ -359,7 +354,6 @@ function O(e) {
                                 t.e("76665"),
                                 t.e("76273"),
                                 t.e("24198"),
-                                t.e("86169"),
                                 t.e("32418"),
                             ]).then(t.bind(t, 668569));
                             return (t) =>

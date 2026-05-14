@@ -1,8 +1,8 @@
-i.d(n, { default: () => K });
+i.d(n, { default: () => V });
 var t = i(627968),
     r = i(64700),
     l = i(17928),
-    a = i(550079),
+    a = i(980707),
     d = i(477782),
     s = i(442433),
     o = i(847767),
@@ -11,180 +11,178 @@ var t = i(627968),
     c = i(468389),
     m = i(793574),
     g = i(688810),
-    T = i(823104),
-    h = i(50268),
-    x = i(346247),
-    E = i(844065),
-    b = i(164891),
-    U = i(734057),
-    C = i(309010),
-    j = i(803664),
-    M = i(29293),
-    p = i(509302),
-    N = i(497600),
-    S = i(646911),
-    _ = i(239211),
-    f = i(707378),
-    I = i(399476),
-    P = i(889460),
-    X = i(448290),
-    y = i(301541),
-    G = i(252726),
-    k = i(460597),
-    D = i(313998),
-    L = i(192308),
-    R = i(80682),
-    v = i(660273),
-    w = i(351001),
-    H = i(867455),
-    Z = i(406704),
-    q = i(71393),
-    J = i(576705),
-    O = i(287809),
-    W = i(985018),
-    z = i(243949),
-    B = i(180798),
-    F = i(77544),
-    V = i(652215);
-let K = (0, u.A)(
+    T = i(50268),
+    h = i(346247),
+    x = i(844065),
+    E = i(164891),
+    b = i(734057),
+    U = i(309010),
+    C = i(803664),
+    j = i(29293),
+    M = i(509302),
+    p = i(497600),
+    N = i(646911),
+    S = i(239211),
+    _ = i(707378),
+    f = i(399476),
+    I = i(889460),
+    P = i(448290),
+    X = i(301541),
+    y = i(252726),
+    G = i(460597),
+    k = i(313998),
+    D = i(192308),
+    L = i(80682),
+    R = i(660273),
+    v = i(351001),
+    w = i(867455),
+    H = i(406704),
+    Z = i(71393),
+    q = i(576705),
+    J = i(287809),
+    O = i(375708),
+    W = i(243949),
+    z = i(180798),
+    B = i(77544),
+    F = i(652215);
+let V = (0, u.A)(
     (0, o.A)(
         function (e) {
             let n,
                 o,
                 u,
+                V,
                 K,
                 Q,
-                Y,
-                { user: $, guildId: ee, channel: en, context: ei, onSelect: et, onHeightUpdate: er } = e,
-                el = en.id,
-                ea = (0, z.A)({ userId: $.id, guildId: ee, channelId: el }),
-                ed = (0, X.A)($, ee, ei),
-                es = (0, y.A)($.id, ei),
-                eo = (0, F.A)($.id),
-                eu = (0, f.A)({ user: $, context: ei }),
-                eA = (0, T.D)({ userId: $.id }),
-                ec = (0, l.bG)([C.A, U.A], () => {
-                    let e = C.A.getVoiceChannelId();
-                    return U.A.getChannel(e);
+                { user: Y, guildId: $, channel: ee, context: en, onSelect: ei, onHeightUpdate: et } = e,
+                er = ee.id,
+                el = (0, W.A)({ userId: Y.id, guildId: $, channelId: er }),
+                ea = (0, P.A)(Y, $, en),
+                ed = (0, X.A)(Y.id, en),
+                es = (0, B.A)(Y.id),
+                eo = (0, _.A)({ user: Y, context: en }),
+                eu = (0, l.bG)([U.A, b.A], () => {
+                    let e = U.A.getVoiceChannelId();
+                    return b.A.getChannel(e);
                 }),
-                { enabled: em } = b.A.useExperiment({ guildId: ec?.guild_id, location: "ThreadUserContextMenu" }),
-                eg = em ? ec?.id : null,
-                eT = (0, D.A)($, eg),
-                eh = (0, N.A)({ user: $, guildId: ee, channelId: el, context: ei }),
-                ex = (0, M.A)({ user: $ }),
-                { analyticsLocations: eE } = (0, g.Ay)(m.A.THREAD_USER_MENU),
-                eb = (0, x.A)({
-                    guildId: ee,
-                    userId: $.id,
+                { enabled: eA } = E.A.useExperiment({ guildId: eu?.guild_id, location: "ThreadUserContextMenu" }),
+                ec = eA ? eu?.id : null,
+                em = (0, k.A)(Y, ec),
+                eg = (0, p.A)({ user: Y, guildId: $, channelId: er, context: en }),
+                eT = (0, j.A)({ user: Y }),
+                { analyticsLocations: eh } = (0, g.Ay)(m.A.THREAD_USER_MENU),
+                ex = (0, h.A)({
+                    guildId: $,
+                    userId: Y.id,
                     analyticsLocation: {
-                        page: V.liQ.GUILD_CHANNEL,
-                        section: V.JJy.CHAT_USERNAME,
-                        object: V.ZSU.CONTEXT_MENU_ITEM,
+                        page: F.liQ.GUILD_CHANNEL,
+                        section: F.JJy.CHAT_USERNAME,
+                        object: F.ZSU.CONTEXT_MENU_ITEM,
                     },
-                    analyticsLocations: eE,
-                    context: ei,
+                    analyticsLocations: eh,
+                    context: en,
                 }),
-                eU = (0, P.A)({ user: $, guildId: ee }),
-                eC = (0, c.A)(null, $),
-                ej = (0, j.A)({ user: $ }),
-                eM = (0, p.A)({ user: $ }),
-                ep = (0, k.A)({ user: $ }),
-                eN = (0, _.A)({ user: $, guildId: ee, channelId: el, location: "ThreadUserContextMenu" }),
-                eS = (0, I.A)({ user: $, guildId: ee, channelId: el, location: "ThreadUserContextMenu" }),
-                e_ =
-                    ((n = r.useMemo(() => ({ [ee]: [$.id] }), [ee, $.id])),
-                    (0, R.Eq)(n, "useThreadAdminActionItems"),
-                    (0, l.bG)([J.A], () => J.A.getGuildVersion(ee), [ee]),
-                    (o = (0, l.bG)([U.A], () => U.A.getChannel(el))),
-                    (u = (0, l.bG)([q.A], () => q.A.getGuild(ee), [ee])),
-                    (K = (0, l.bG)([O.default], () => O.default.getCurrentUser())),
-                    (Q = (0, v.A)(o, "Context Menu")),
-                    (Y = (0, Z.qi)(o?.id)),
-                    K?.id === $.id
-                        ? [Q]
-                        : null == u || null == o || null == K
+                eE = (0, I.A)({ user: Y, guildId: $ }),
+                eb = (0, c.A)(null, Y),
+                eU = (0, C.A)({ user: Y }),
+                eC = (0, M.A)({ user: Y }),
+                ej = (0, G.A)({ user: Y }),
+                eM = (0, S.A)({ user: Y, guildId: $, channelId: er, location: "ThreadUserContextMenu" }),
+                ep = (0, f.A)({ user: Y, guildId: $, channelId: er, location: "ThreadUserContextMenu" }),
+                eN =
+                    ((n = r.useMemo(() => ({ [$]: [Y.id] }), [$, Y.id])),
+                    (0, L.Eq)(n, "useThreadAdminActionItems"),
+                    (0, l.bG)([q.A], () => q.A.getGuildVersion($), [$]),
+                    (o = (0, l.bG)([b.A], () => b.A.getChannel(er))),
+                    (u = (0, l.bG)([Z.A], () => Z.A.getGuild($), [$])),
+                    (V = (0, l.bG)([J.default], () => J.default.getCurrentUser())),
+                    (K = (0, R.A)(o, "Context Menu")),
+                    (Q = (0, H.qi)(o?.id)),
+                    V?.id === Y.id
+                        ? [K]
+                        : null == u || null == o || null == V
                           ? []
                           : [
-                                Y
+                                Q
                                     ? (0, t.jsx)(d.Dr, {
                                           id: "remove",
                                           label: o.isForumPost()
-                                              ? W.intl.formatToPlainString(W.t.v2KNNx, { user: $.username })
-                                              : W.intl.formatToPlainString(W.t["27xWaT"], { user: $.username }),
+                                              ? O.intl.formatToPlainString(O.t.v2KNNx, { user: Y.username })
+                                              : O.intl.formatToPlainString(O.t["27xWaT"], { user: Y.username }),
                                           color: "danger",
-                                          action: () => H.A.removeMember(o.id, $.id, "Context Menu"),
+                                          action: () => w.A.removeMember(o.id, Y.id, "Context Menu"),
                                       })
                                     : null,
-                                (0, w.L7)($, u)
+                                (0, v.L7)(Y, u)
                                     ? (0, t.jsx)(d.Dr, {
                                           id: "kick",
-                                          label: Y
-                                              ? W.intl.formatToPlainString(W.t["1Ie87p"], { user: $.username })
-                                              : W.intl.formatToPlainString(W.t["9l/iTS"], { user: $.username }),
+                                          label: Q
+                                              ? O.intl.formatToPlainString(O.t["1Ie87p"], { user: Y.username })
+                                              : O.intl.formatToPlainString(O.t["9l/iTS"], { user: Y.username }),
                                           color: "danger",
                                           action: () =>
-                                              (0, L.openModalLazy)(async () => {
+                                              (0, D.openModalLazy)(async () => {
                                                   let { default: e } = await Promise.all([
                                                       i.e("97660"),
                                                       i.e("40243"),
                                                   ]).then(i.bind(i, 547166));
-                                                  return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: $ });
+                                                  return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });
                                               }),
                                       })
                                     : null,
-                                (0, w.EZ)($, u)
+                                (0, v.EZ)(Y, u)
                                     ? (0, t.jsx)(d.Dr, {
                                           id: "ban",
-                                          label: Y
-                                              ? W.intl.formatToPlainString(W.t.i62APf, { user: $.username })
-                                              : W.intl.formatToPlainString(W.t.WnpUBi, { user: $.username }),
+                                          label: Q
+                                              ? O.intl.formatToPlainString(O.t.i62APf, { user: Y.username })
+                                              : O.intl.formatToPlainString(O.t.WnpUBi, { user: Y.username }),
                                           color: "danger",
                                           action: () =>
-                                              (0, L.openModalLazy)(async () => {
+                                              (0, D.openModalLazy)(async () => {
                                                   let { default: e } = await Promise.all([
                                                       i.e("33847"),
                                                       i.e("2504"),
                                                   ]).then(i.bind(i, 333179));
-                                                  return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: $ });
+                                                  return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });
                                               }),
                                       })
                                     : null,
                             ]),
-                ef = (0, B.A)($.id, ee),
-                eI = (0, G.A)($, ee),
-                eP = (0, h.A)({ id: $.id, label: W.intl.string(W.t["/AXYnE"]) }),
-                eX = (0, E.A)($),
-                ey = (0, S.A)({
+                eS = (0, z.A)(Y.id, $),
+                e_ = (0, y.A)(Y, $),
+                ef = (0, T.A)({ id: Y.id, label: O.intl.string(O.t["/AXYnE"]) }),
+                eI = (0, x.A)(Y),
+                eP = (0, N.A)({
                     commandType: A.kc.USER,
-                    commandTargetId: $.id,
-                    channel: en,
-                    guildId: ee,
-                    onHeightUpdate: er,
+                    commandTargetId: Y.id,
+                    channel: ee,
+                    guildId: $,
+                    onHeightUpdate: et,
                 }),
-                eG = $.isNonUserBot();
+                eX = Y.isNonUserBot();
             return (0, t.jsxs)(a.W, {
                 "data-menu-migrated": !0,
                 navId: "user-context",
                 onClose: s.Z_,
-                "aria-label": W.intl.string(W.t.liqwPJ),
-                onSelect: et,
+                "aria-label": O.intl.string(O.t.liqwPJ),
+                onSelect: ei,
                 children: [
-                    !eG &&
+                    !eX &&
                         (0, t.jsxs)(t.Fragment, {
                             children: [
-                                (0, t.jsx)(d.rX, { children: eX }),
-                                (0, t.jsxs)(d.rX, { children: [ea, ed, es, eA, eu, eT, eh, ex, eo] }),
-                                (0, t.jsx)(d.rX, { children: eC }),
-                                (0, t.jsxs)(d.rX, { children: [eb, ey, eU, ej, eM, ep, eS, eN] }),
-                                (0, t.jsx)(d.rX, { children: e_ }),
-                                (0, t.jsxs)(d.rX, { children: [ef, eI] }),
+                                (0, t.jsx)(d.rX, { children: eI }),
+                                (0, t.jsxs)(d.rX, { children: [el, ea, ed, eo, em, eg, eT, es] }),
+                                (0, t.jsx)(d.rX, { children: eb }),
+                                (0, t.jsxs)(d.rX, { children: [ex, eP, eE, eU, eC, ej, ep, eM] }),
+                                (0, t.jsx)(d.rX, { children: eN }),
+                                (0, t.jsxs)(d.rX, { children: [eS, e_] }),
                             ],
                         }),
-                    (0, t.jsx)(d.rX, { children: eP }),
+                    (0, t.jsx)(d.rX, { children: ef }),
                 ],
             });
         },
-        { object: V.ZSU.CONTEXT_MENU },
+        { object: F.ZSU.CONTEXT_MENU },
     ),
     [m.A.CONTEXT_MENU, m.A.THREAD_USER_MENU],
 );
