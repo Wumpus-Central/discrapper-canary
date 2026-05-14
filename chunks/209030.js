@@ -37,7 +37,7 @@ var l = n(627968),
     k = n(615405),
     Y = n(67480),
     G = n(45938),
-    F = n(927578),
+    F = n(428262),
     B = n(242874),
     W = n(735164),
     V = n(778307),
@@ -254,83 +254,81 @@ function ee(e) {
             planGroup: n,
             paymentSources: i,
             priceOptions: o,
-            currencies: E,
-            onCurrencyChange: y,
-            handlePaymentSourceAdd: P,
-            setHasAcceptedTerms: S,
-            legalTermsNodeRef: _,
-            hasLegalTermsFlash: T,
-            trialId: f,
-            trialFooterMessageOverride: x,
-            reviewWarningMessage: N,
-            metadata: I,
-            hideSubscriptionDetails: v,
-            referralTrialOfferId: M,
-            isTrial: j = !1,
-            isDiscount: b = !1,
-            handleClose: R,
+            handlePaymentSourceAdd: E,
+            setHasAcceptedTerms: y,
+            legalTermsNodeRef: P,
+            hasLegalTermsFlash: S,
+            trialId: _,
+            trialFooterMessageOverride: T,
+            reviewWarningMessage: f,
+            metadata: x,
+            hideSubscriptionDetails: N,
+            referralTrialOfferId: I,
+            isTrial: v = !1,
+            isDiscount: M = !1,
+            handleClose: j,
         } = e,
         {
-            disabled: U,
-            isEmbeddedIAP: Y,
-            paymentSourceType: G,
-            giftRecipient: q,
-            selectedGiftStyle: ee,
-            subscriptionPeriodEnd: et,
-            premiumPlanOptions: en,
-            shouldAllowPlanSelect: el,
-            hasPaymentSources: ea,
-            paymentSourceId: ei,
-            eligiblePaymentGateways: er,
-            inReverseTrial: es,
-            fractionalPremiumInfo: eo,
-            plan: eu,
-            isGift: ec,
-            invoiceSummaryTypeWithPreview: ed,
-            checkoutInvoicePreview: ep,
-            renewalInvoicePreview: em,
-            showFractionalPremiumBannerInInvoiceSummary: eh,
-            isPrepaid: eC,
-            isCustomGift: eA,
-            isPremium: eE,
-            isPremiumGroupPurchase: ey,
-            hasEntitlements: eP,
-            paymentSourceOptionalWarningCopy: eS,
-            selectedSourceRelocationCountry: e_,
-        } = Q({ selectedPlanId: t, paymentSources: i, priceOptions: o, trialId: f, metadata: I, isTrial: j }),
-        eT = a.useMemo(() => (0, F.l6)(o, ep?.checkoutContext?.available_plans), [o, ep]);
-    if (null != ed && ed.type === g.N$.LOADING)
+            disabled: b,
+            isEmbeddedIAP: R,
+            paymentSourceType: U,
+            giftRecipient: Y,
+            selectedGiftStyle: G,
+            subscriptionPeriodEnd: q,
+            premiumPlanOptions: ee,
+            shouldAllowPlanSelect: et,
+            hasPaymentSources: en,
+            paymentSourceId: el,
+            eligiblePaymentGateways: ea,
+            inReverseTrial: ei,
+            fractionalPremiumInfo: er,
+            plan: es,
+            isGift: eo,
+            invoiceSummaryTypeWithPreview: eu,
+            checkoutInvoicePreview: ec,
+            renewalInvoicePreview: ed,
+            showFractionalPremiumBannerInInvoiceSummary: ep,
+            isPrepaid: em,
+            isCustomGift: eh,
+            isPremium: eC,
+            isPremiumGroupPurchase: eA,
+            hasEntitlements: eE,
+            paymentSourceOptionalWarningCopy: ey,
+            selectedSourceRelocationCountry: eP,
+        } = Q({ selectedPlanId: t, paymentSources: i, priceOptions: o, trialId: _, metadata: x, isTrial: v }),
+        eS = a.useMemo(() => (0, F.l6)(o, ec?.checkoutContext?.available_plans), [o, ec]);
+    if (null != eu && eu.type === g.N$.LOADING)
         return (0, l.jsx)("div", { className: X.zp, children: (0, l.jsx)(c.y, {}) });
-    let ef = (0, l.jsx)(g.eb, {
-            invoiceSummaryTypeWithPreview: ed,
+    let e_ = (0, l.jsx)(g.eb, {
+            invoiceSummaryTypeWithPreview: eu,
             priceOptions: o,
-            trialFooterMessageOverride: x,
-            hideSubscriptionDetails: v,
-            referralTrialOfferId: M,
-            isTrial: j,
-            inReverseTrial: es,
-            fractionalPremiumInfo: eo,
-            plan: eu,
-            showFractionalPremiumBanner: eh,
-            isPrepaid: eC,
-            isCustomGift: eA,
-            enablePremiumBrandRefresh: eE,
+            trialFooterMessageOverride: T,
+            hideSubscriptionDetails: N,
+            referralTrialOfferId: I,
+            isTrial: v,
+            inReverseTrial: ei,
+            fractionalPremiumInfo: er,
+            plan: es,
+            showFractionalPremiumBanner: ep,
+            isPrepaid: em,
+            isCustomGift: eh,
+            enablePremiumBrandRefresh: eC,
         }),
-        ex = s.M.EEA_COUNTRIES.has(k.A.ipCountryCodeWithFallback),
-        eN = J.intl.formatToPlainString(J.t["sBpy9/"], { planName: eu.name });
-    ec && !eA
-        ? (eN = J.intl.string(J.t.J5a0eb))
-        : ec && eA
-          ? (eN = "")
-          : (0, F.ys)(eu.id) && (eN = F.Ay.getBillingReviewSubheader(null, eu));
-    let eI = null != er && er.length > 0 && (null == ei || null === G) && ea ? K.fU.SELECT_PAYMENT_METHOD : void 0;
+        eT = s.M.EEA_COUNTRIES.has(k.A.ipCountryCodeWithFallback),
+        ef = J.intl.formatToPlainString(J.t["sBpy9/"], { planName: es.name });
+    eo && !eh
+        ? (ef = J.intl.string(J.t.J5a0eb))
+        : eo && eh
+          ? (ef = "")
+          : (0, F.ys)(es.id) && (ef = F.Ay.getBillingReviewSubheader(null, es));
+    let ex = null != ea && ea.length > 0 && (null == el || null === U) && en ? K.fU.SELECT_PAYMENT_METHOD : void 0;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(L.k, { location: "PremiumSubscriptionReview", paymentSourceId: ei }),
+            (0, l.jsx)(L.k, { location: "PremiumSubscriptionReview", paymentSourceId: el }),
             (0, l.jsxs)("div", {
                 children: [
-                    (0, l.jsx)(K.je, { paymentRestrictionBannerType: eI }),
-                    null != N &&
+                    (0, l.jsx)(K.je, { paymentRestrictionBannerType: ex }),
+                    null != f &&
                         (0, l.jsxs)("div", {
                             className: X.Je,
                             children: [
@@ -340,10 +338,10 @@ function ee(e) {
                                     width: 20,
                                     height: 20,
                                 }),
-                                (0, l.jsx)(p.E, { className: X.CJ, variant: "text-sm/normal", children: N }),
+                                (0, l.jsx)(p.E, { className: X.CJ, variant: "text-sm/normal", children: f }),
                             ],
                         }),
-                    ey &&
+                    eA &&
                         (0, l.jsx)("div", {
                             className: X.Ni,
                             children: (0, l.jsx)(m.w, {
@@ -351,84 +349,84 @@ function ee(e) {
                                 children: (0, l.jsx)(p.E, { variant: "text-sm/medium", children: (0, D.Nn)() }),
                             }),
                         }),
-                    el &&
+                    et &&
                         (0, l.jsxs)("div", {
                             children: [
-                                (0, l.jsx)(O.P, { planSkuId: eu?.skuId, referralTrialOfferId: M }),
+                                (0, l.jsx)(O.P, { planSkuId: es?.skuId, referralTrialOfferId: I }),
                                 (0, l.jsx)(Z.$p, {
-                                    disabled: U,
-                                    planOptions: en,
+                                    disabled: b,
+                                    planOptions: ee,
                                     selectedPlanId: t,
                                     planGroup: n,
-                                    subscriptionPeriodEnd: et,
+                                    subscriptionPeriodEnd: q,
                                     showTotal: !1,
-                                    priceOptions: eT,
-                                    handleClose: R,
+                                    priceOptions: eS,
+                                    handleClose: j,
                                 }),
                                 (0, l.jsx)(W.pK, {}),
                             ],
                         }),
-                    !j &&
-                        "" !== eN &&
-                        (0, l.jsx)(h.D, { variant: "heading-md/semibold", className: X.wx, children: eN }),
-                    eA &&
-                        null != ee &&
+                    !v &&
+                        "" !== ef &&
+                        (0, l.jsx)(h.D, { variant: "heading-md/semibold", className: X.wx, children: ef }),
+                    eh &&
+                        null != G &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsx)(H.A, {
                                     defaultAnimationState: B.oA.LOOP,
-                                    giftStyle: ee,
+                                    giftStyle: G,
                                     shouldAnimate: !0,
                                     className: X.Os,
                                 }),
-                                (0, l.jsx)(z.Z, { giftRecipient: q }),
+                                (0, l.jsx)(z.Z, { giftRecipient: Y }),
                             ],
                         }),
-                    ef,
+                    e_,
                     (0, l.jsxs)("div", {
                         className: X.LC,
                         children: [
                             (0, l.jsx)(w.K, {
-                                label: J.intl.string(j ? J.t["YH7B+D"] : J.t["mmDvV+"]),
-                                handlePaymentSourceAdd: P,
-                                isTrial: j,
-                                isDiscount: b,
-                                disabled: U,
-                                hasEntitlements: eP,
-                                eligiblePaymentGateways: er,
+                                label: J.intl.string(v ? J.t["YH7B+D"] : J.t["mmDvV+"]),
+                                handlePaymentSourceAdd: E,
+                                isTrial: v,
+                                isDiscount: M,
+                                disabled: b,
+                                hasEntitlements: eE,
+                                eligiblePaymentGateways: ea,
                                 shouldUseUnifiedCheckoutUI: !1,
-                                paymentSourceDropdownClassName: r()({ [X.E4]: eE }),
+                                paymentSourceDropdownClassName: r()({ [X.E4]: eC }),
                                 paymentSourceDropdownPrependOption:
-                                    eP && !j ? { label: J.intl.string(J.t.IGU7El), value: null } : null,
+                                    eE && !v ? { label: J.intl.string(J.t.IGU7El), value: null } : null,
                             }),
-                            null != eS ? (0, l.jsx)("div", { className: X.QN, children: eS }) : null,
+                            null != ey ? (0, l.jsx)("div", { className: X.QN, children: ey }) : null,
                         ],
                     }),
                     (0, l.jsx)(V.A, {
-                        isActive: T,
-                        ref: _,
+                        isActive: S,
+                        ref: P,
                         children: (0, l.jsx)(A.A, {
-                            onChange: S,
+                            onChange: y,
                             forceShow: !0,
                             finePrint:
-                                x ??
+                                T ??
                                 (0, l.jsx)(C.A, {
-                                    hide: j || b,
-                                    subscriptionPlan: eu,
-                                    renewalInvoice: em,
-                                    isGift: ec,
-                                    paymentSourceType: G,
-                                    isEmbeddedIAP: Y,
-                                    basePrice: (0, F.y8)(eu.id, !1, ec, eT),
-                                    willRelocateStoreCountry: null != e_,
+                                    hide: v || M,
+                                    subscriptionPlan: es,
+                                    renewalInvoice: ed,
+                                    isGift: eo,
+                                    paymentSourceType: U,
+                                    isEmbeddedIAP: R,
+                                    basePrice: (0, F.y8)(es.id, !1, eo, eS),
+                                    willRelocateStoreCountry: null != eP,
                                 }),
-                            showPricingLink: eu.currency !== $.Yr.USD,
-                            showWithdrawalWaiver: ex,
-                            disabled: U,
-                            isTrial: j && null == x,
-                            isDiscount: b,
-                            subscriptionPlan: eu,
-                            isGift: ec,
+                            showPricingLink: es.currency !== $.Yr.USD,
+                            showWithdrawalWaiver: eT,
+                            disabled: b,
+                            isTrial: v && null == T,
+                            isDiscount: M,
+                            subscriptionPlan: es,
+                            isGift: eo,
                         }),
                     }),
                 ],

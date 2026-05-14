@@ -206,7 +206,7 @@ function j(e) {
 }
 var b = n(209030),
     R = n(427858),
-    L = n(927578),
+    L = n(428262),
     O = n(367160),
     D = n(194256),
     w = n(788868);
@@ -262,8 +262,6 @@ let U = (e) => {
             handlePaymentSourceAdd: p,
             priceOptions: L,
             planGroup: s,
-            currencies: M,
-            onCurrencyChange: Y,
             setHasAcceptedTerms: T,
             legalTermsNodeRef: u,
             hasLegalTermsFlash: o,
@@ -284,7 +282,15 @@ let U = (e) => {
         return t ? (0, l.jsx)(O._, { ...e }) : (0, l.jsx)(b.A, { ...e });
     }
     {
-        let e = { ...B, purchaseState: _, premiumSubscription: I, planId: W, hasOpenInvoice: null != n };
+        let e = {
+            ...B,
+            currencies: M,
+            onCurrencyChange: Y,
+            purchaseState: _,
+            premiumSubscription: I,
+            planId: W,
+            hasOpenInvoice: null != n,
+        };
         return (0, l.jsx)(R.A, { ...e, shouldUseUnifiedCheckoutUI: t });
     }
 };
