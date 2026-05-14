@@ -12,8 +12,11 @@
     max-width: 114px
 }
 
+.titleGroup__45458 {
+    margin-top: var(--space-16)
+}
+
 .title__45458 {
-    margin: var(--space-16) 0 0;
     text-align: center;
     word-wrap: break-word;
     width: 100%

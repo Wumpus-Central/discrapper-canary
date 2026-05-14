@@ -3846,6 +3846,7 @@ screen and (max-width:485px) {
     display: inline-flex;
     gap: var(--space-4);
     padding: 0 var(--space-8);
+    position: relative;
     text-align: center;
     text-transform: uppercase
 }
@@ -3863,6 +3864,55 @@ screen and (max-width:485px) {
 .expressive_c2b88c {
     background-color: var(--badge-expressive-background-default);
     color: var(--badge-expressive-text-default)
+}
+
+.rarity-common_c2b88c {
+    background: var(--badge-common-background);
+    border: 1px solid var(--badge-common-border);
+    color: var(--badge-common-text)
+}
+
+.rarity-epic_c2b88c,
+.rarity-mythic_c2b88c,
+.rarity-rare_c2b88c {
+    border: 1px solid transparent
+}
+
+.rarity-epic_c2b88c:before,
+.rarity-mythic_c2b88c:before,
+.rarity-rare_c2b88c:before {
+    background: linear-gradient(-78deg, var(--rarity-ring-start), var(--rarity-ring-end));
+    border-radius: inherit;
+    content: "";
+    inset: -1px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    padding: 1px;
+    pointer-events: none;
+    position: absolute
+}
+
+.rarity-rare_c2b88c {
+    --rarity-ring-start: var(--badge-rare-border-gradient-start);
+    --rarity-ring-end: var(--badge-rare-border-gradient-end);
+    background: var(--badge-rare-background);
+    color: var(--badge-rare-text)
+}
+
+.rarity-epic_c2b88c {
+    --rarity-ring-start: var(--badge-epic-border-gradient-start);
+    --rarity-ring-end: var(--badge-epic-border-gradient-end);
+    background: var(--badge-epic-background);
+    color: var(--badge-epic-text)
+}
+
+.rarity-mythic_c2b88c {
+    --rarity-ring-start: var(--badge-mythic-border-gradient-start);
+    --rarity-ring-end: var(--badge-mythic-border-gradient-end);
+    background: var(--badge-mythic-background);
+    color: var(--badge-mythic-text)
 }
 
 :where(.container_a62383) {
