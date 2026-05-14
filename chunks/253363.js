@@ -2724,9 +2724,21 @@ let i2 = s.memo(function (e) {
         ef = (0, T.r)(m.A.modules.guildbar.AVATAR_SIZE);
     if (null == u) return null;
     let eh = u.name;
-    g > 0
-        ? (eh = ej.intl.formatToPlainString(ej.t["/uzRss"], { guildName: u.name, mentions: g }))
-        : f && (eh = ej.intl.formatToPlainString(ej.t.lzqe42, { guildName: u.name }));
+    if (
+        (g > 0
+            ? (eh = ej.intl.formatToPlainString(ej.t["/uzRss"], { guildName: u.name, mentions: g }))
+            : f && (eh = ej.intl.formatToPlainString(ej.t.lzqe42, { guildName: u.name })),
+        null != h)
+    ) {
+        let e = [];
+        h.activeEvent && e.push(ej.intl.string(ej.t.dHvJ2p)),
+            h.liveStage && e.push(ej.intl.string(ej.t.OO7ndG)),
+            h.screenshare && e.push(ej.intl.string(ej.t.wsHMZ7)),
+            h.video && e.push(ej.intl.string(ej.t.BrLCS0)),
+            h.audio && e.push(ej.intl.string(ej.t.jPBhKy)),
+            h.activity && e.push(ej.intl.string(ej.t.Y3Gii5)),
+            e.length > 0 && (eh = `${eh}, ${e.join(" ")}`);
+    }
     let eE = (0, r.jsx)(iV, {
             guild: u,
             show: z,
