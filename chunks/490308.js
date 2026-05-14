@@ -15,6 +15,7 @@ d.exports = {
     y2: "badgeGraphic__6db38",
     OU: "badgeInfo__6db38",
     cQ: "badgeIdentity__6db38",
+    _r: "badgeTitle__6db38",
     tN: "uppercaseItalic__6db38",
     oA: "badgeDetails__6db38",
     sn: "rarityCard__6db38",
