@@ -5,7 +5,7 @@ var i = n(459838),
     s = n(439372),
     a = n(77729),
     o = n(608960),
-    l = n(652896),
+    l = n(952818),
     u = n(209932),
     c = n(495544),
     d = n(274372);
@@ -87,6 +87,8 @@ class S extends s.A {
     lastClipTimestamp = 0;
     pendingCandidateDiscards = new Set();
     decisionSignals = A();
+    sessionEndTimeout = new r.Ep();
+    currentSessionGamePid = null;
     constructor() {
         super(), (this.timeline = new _(d.A.getSettings().clipsLength));
     }
@@ -96,7 +98,7 @@ class S extends s.A {
         SPEAKING: (e) => this.handleSpeaking(e),
         GUILD_SOUNDBOARD_SOUND_PLAY_START: (e) => this.handleSoundboardPlayStart(e),
         GUILD_SOUNDBOARD_SOUND_PLAY_END: (e) => this.handleSoundboardPlayEnd(e),
-        STREAM_STOP: (e) => this.handleStreamStop(e),
+        RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChange(e),
         CLIPS_SAVE_CLIP: (e) => this.handleLateCandidateSave(e),
         VOICE_CHANNEL_SELECT: () => this.clear(),
         CLIPS_SETTINGS_UPDATE: () => this.handleSettingsUpdate(),
@@ -208,7 +210,12 @@ class S extends s.A {
         };
     }
     clear() {
-        this.processClipCandidates(), this.unscheduleClip(), (this.lastClipTimestamp = 0), this.timeline.clear();
+        this.sessionEndTimeout.stop(),
+            (this.currentSessionGamePid = null),
+            this.processClipCandidates(),
+            this.unscheduleClip(),
+            (this.lastClipTimestamp = 0),
+            this.timeline.clear();
     }
     unscheduleClip() {
         this.scheduledClipTimeout.stop(), (this.scheduledClipSignal = null);
@@ -229,8 +236,16 @@ class S extends s.A {
                     );
             });
     }
-    handleStreamStop(e) {
-        (0, l.Iy)(e.streamKey).ownerId === c.default.getId() && this.processClipCandidates();
+    handleRunningGamesChange(e) {
+        let t = e.games[0]?.pid ?? null;
+        if (t === this.currentSessionGamePid) return void this.sessionEndTimeout.stop();
+        if (null === this.currentSessionGamePid) {
+            this.currentSessionGamePid = t;
+            return;
+        }
+        this.sessionEndTimeout.start(1e4, () => {
+            this.processClipCandidates(), (this.currentSessionGamePid = l.Ay.getVisibleGame()?.pid ?? null);
+        });
     }
     async debugStashDeciderData() {
         if (d.A.getPendingClipCandidates().length > 0)

@@ -560,7 +560,7 @@ let r = {
             "GUILD_SOUNDBOARD_SOUND_PLAY_START",
             "GUILD_SOUNDBOARD_SOUND_PLAY_END",
             "VOICE_CHANNEL_SELECT",
-            "STREAM_STOP",
+            "RUNNING_GAMES_CHANGE",
             "CLIPS_SAVE_CLIP",
         ],
         inlineRequire: () => n(871421).Ay,
