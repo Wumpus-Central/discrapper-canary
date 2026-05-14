@@ -494,8 +494,8 @@ function en(e) {
 }
 function ei(e, t) {
     (0, o.openModalLazy)(async () => {
-        let { default: r } = await Promise.all([n.e("99513"), n.e("62101")]).then(n.bind(n, 50292));
-        return (n) => (0, i.jsx)(r, { ...n, multiplier: e, eligibleToReceivePremiumRewards: t });
+        let { default: r } = await Promise.all([n.e("8304"), n.e("99513"), n.e("62101")]).then(n.bind(n, 50292));
+        return (n) => (0, i.jsx)(r, { ...n, multiplier: e, orbMultiplierEligibility: t });
     });
 }
 function er(e) {

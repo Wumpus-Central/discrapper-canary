@@ -85,7 +85,7 @@ function B(e) {
     return (0, r.jsx)(k.A, { confettiLocation: e.confettiLocation, children: (0, r.jsx)(V, { ...e }) });
 }
 var H = n(967144),
-    j = n(124366),
+    j = n(31587),
     Y = n(198525),
     W = n(854627),
     K = n(240248),

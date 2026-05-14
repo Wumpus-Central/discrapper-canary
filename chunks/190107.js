@@ -108,6 +108,7 @@ var A =
     (r.QUEST_ACTIVITY_UNENROLLED_MODAL = "quest_activity_unenrolled_modal"),
     (r.NITRO_HOME_MARKETING = "nitro_home_marketing"),
     (r.NITRO_HOME_TAB = "nitro_home_tab"),
+    (r.QUEST_ORB_MULTIPLIER_TAB_TOOLTIP = "quest_orb_multiplier_tab_tooltip"),
     r);
 let I = new Set([f.L.NITRO_2_POINT_0_CTA]),
     T = E.A.Millis.MINUTE * h.ConsecutiveHeartbeatPeriodMinutes,

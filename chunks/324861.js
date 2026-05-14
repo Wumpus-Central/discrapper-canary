@@ -3,7 +3,7 @@ var a = l(64700),
     n = l(554146),
     i = l(228366),
     r = l(20439),
-    o = l(124366),
+    o = l(31587),
     s = l(190107);
 let u = () => {
     let e = (0, r.A)(n.M.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
