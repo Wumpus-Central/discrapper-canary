@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => r });
-class r {
+n.d(t, { A: () => i });
+class i {
     min;
     max;
     jitter;
@@ -24,10 +24,12 @@ class r {
     succeed() {
         this.cancel(), (this._fails = 0), (this._current = this.min);
     }
-    fail(e) {
+    fail(e, t) {
         this._fails += 1;
-        let t = 2 * this._current;
-        if ((this.jitter && (t *= Math.random()), (this._current = Math.min(this._current + t, this.max)), null != e)) {
+        let n = 2 * this._current;
+        this.jitter && (n *= Math.random()), (this._current = Math.min(this._current + n, this.max));
+        let i = null != t && t > this._current ? t : this._current;
+        if (null != e) {
             if (null != this._timeoutId)
                 if (this._callback !== e) throw Error("callback already pending");
                 else this.cancel();
@@ -38,9 +40,9 @@ class r {
                     } finally {
                         this.cancel();
                     }
-                }, this._current));
+                }, i));
         }
-        return this._current;
+        return i;
     }
     cancel() {
         (this._callback = null), null != this._timeoutId && (clearTimeout(this._timeoutId), (this._timeoutId = null));

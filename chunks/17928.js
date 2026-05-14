@@ -1,15 +1,15 @@
 "use strict";
 let i;
 n.d(t, {
-    My: () => x.My,
-    mk: () => m,
+    My: () => k.My,
+    mk: () => p,
     UT: () => W,
     V5: () => G,
-    Ay: () => Y,
-    il: () => R,
-    yK: () => x.yK,
-    bG: () => x.bG,
-    cf: () => x.cf,
+    Ay: () => K,
+    il: () => C,
+    yK: () => k.yK,
+    bG: () => k.bG,
+    cf: () => k.cf,
     ru: () => r.r,
 });
 var r = n(968441);
@@ -19,11 +19,11 @@ var s = n(840320),
     o = n.n(a),
     l = n(61090);
 n(423034), n.g.performance;
-var d = n(118356),
-    _ = n(390225),
-    u = n(39304),
-    c = n(294997);
-let E = new Set([
+var u = n(941426),
+    c = n(390225),
+    d = n(39304),
+    _ = n(294997);
+let f = new Set([
         "APP_STATE_UPDATE",
         "CLEAR_CACHES",
         "CONNECTION_CLOSED",
@@ -39,22 +39,22 @@ let E = new Set([
         "UPLOAD_FAIL",
         "WRITE_CACHES",
     ]),
-    h = new d.Vy("Flux");
-class m {
+    h = new u.Vy("Flux");
+class p {
     _defaultBand;
     _interceptors = [];
     _subscriptions = {};
     _waitQueue = [];
     _processingWaitQueue = !1;
     _currentDispatchActionType = null;
-    _actionHandlers = new f();
+    _actionHandlers = new E();
     _sentryUtils = void 0;
     actionLogger;
     functionCache = {};
     constructor(e = 0, t, n) {
         (this._defaultBand = e),
             (this._sentryUtils = n),
-            null != t ? (this.actionLogger = t) : (this.actionLogger = new c.T()),
+            null != t ? (this.actionLogger = t) : (this.actionLogger = new _.T()),
             this.actionLogger.on("trace", (e, t, n) => {
                 l.A.isTracing && n >= 10 && l.A.mark("\uD83E\uDDA5", t, n);
             });
@@ -68,7 +68,7 @@ class m {
                 try {
                     null == this.functionCache[e.type] &&
                         ((this.functionCache[e.type] = (e) => this._dispatchWithDevtools(e)),
-                        g(this.functionCache[e.type], "dispatch_" + e.type)),
+                        m(this.functionCache[e.type], "dispatch_" + e.type)),
                         this.functionCache[e.type](e),
                         t();
                 } catch (e) {
@@ -89,11 +89,11 @@ class m {
     flushWaitQueue() {
         if (!this._processingWaitQueue)
             try {
-                (this._processingWaitQueue = !0), (_.A.isDispatching = !0);
+                (this._processingWaitQueue = !0), (c.A.isDispatching = !0);
                 let e = 0;
                 for (; this._waitQueue.length > 0; ) {
                     if (++e > 100) {
-                        let e = u.lK();
+                        let e = d.lK();
                         throw (
                             (h.error("LastFewActions", e),
                             this._sentryUtils?.addBreadcrumb({
@@ -104,10 +104,10 @@ class m {
                         );
                     }
                     for (; this._waitQueue.length > 0; ) this._waitQueue.shift()();
-                    _.A.emit();
+                    c.A.emit();
                 }
             } finally {
-                (this._processingWaitQueue = !1), (_.A.isDispatching = !1);
+                (this._processingWaitQueue = !1), (c.A.isDispatching = !1);
             }
     }
     _dispatchWithDevtools(e) {
@@ -119,9 +119,9 @@ class m {
             `Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ${e.type} Already dispatching: ${this._currentDispatchActionType}`,
         ),
             o()(e.type, "Dispatch.dispatch(...) called without an action type"),
-            E.has(e.type) && h.log(`Dispatching ${e.type}`),
+            f.has(e.type) && h.log(`Dispatching ${e.type}`),
             e.type,
-            u.WQ(e.type);
+            d.WQ(e.type);
         let t = this.actionLogger.log(e, (t) => {
             try {
                 (this._currentDispatchActionType = e.type), this._dispatch(e, t);
@@ -171,7 +171,7 @@ class m {
         this._actionHandlers.addDependencies(e, t);
     }
 }
-class f {
+class E {
     _orderedActionHandlers = {};
     _orderedCallbackTokens = null;
     _lastID = 1;
@@ -186,7 +186,7 @@ class f {
         for (let n in t) {
             let i = t[n],
                 r = (e) => i(e);
-            g(r, `${e}_${n}`), (s[n] = r);
+            m(r, `${e}_${n}`), (s[n] = r);
         }
         return (
             this._dependencyGraph.addNode(r, { name: e, band: i, actionHandler: s, storeDidChange: n }),
@@ -242,11 +242,11 @@ class f {
         }
     }
 }
-function g(e, t) {
+function m(e, t) {
     Object.defineProperty(e, "name", { value: t });
 }
-var p = n(879378),
-    A = n.n(p),
+var g = n(879378),
+    A = n.n(g),
     I = n(506774);
 n(142703);
 class T {
@@ -280,12 +280,12 @@ class T {
 }
 let S = [],
     N = !1,
-    C = new Promise((e) => {
+    y = new Promise((e) => {
         i = () => {
             e(), (i = null);
         };
     });
-class R {
+class C {
     _changeCallbacks = new T();
     _reactChangeCallbacks = new T();
     _syncWiths = [];
@@ -297,9 +297,9 @@ class R {
     static initialize() {
         (N = !0), S.forEach((e) => e.initializeIfNeeded()), null != i && i();
     }
-    static initialized = C;
+    static initialized = y;
     static destroy() {
-        (S.length = 0), _.A.destroy();
+        (S.length = 0), c.A.destroy();
     }
     static getAll() {
         return S;
@@ -313,8 +313,8 @@ class R {
     }
     doEmitChanges = (e) => {
         (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) &&
-            (_.A.markChanged(this),
-            _.A.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && _.A.resume(!1));
+            (c.A.markChanged(this),
+            c.A.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && c.A.resume(!1));
     };
     registerActionHandlers(e, t) {
         this._dispatcher.register(this.getName(), e, this.doEmitChanges, t, this._dispatchToken);
@@ -337,7 +337,7 @@ class R {
             let s,
                 a = 0,
                 o = () => {
-                    a !== _.A.getChangeSentinel() && ((a = _.A.getChangeSentinel()), !1 !== t() && this.emitChange());
+                    a !== c.A.getChangeSentinel() && ((a = c.A.getChangeSentinel()), !1 !== t() && this.emitChange());
                 };
             (i = n ?? 0),
                 (r = o),
@@ -378,7 +378,7 @@ class R {
         );
     }
     emitChange() {
-        _.A.markChanged(this);
+        c.A.markChanged(this);
     }
     addChangeListener = this._changeCallbacks.add;
     addConditionalChangeListener = this._changeCallbacks.addConditional;
@@ -393,9 +393,9 @@ class R {
         this._mustEmitChanges = e;
     }
 }
-let O = { _state: void 0, _version: void 0 },
-    y = null;
-class v extends R {
+let v = { _state: void 0, _version: void 0 },
+    O = null;
+class R extends C {
     static allPersistKeys = new Set();
     static userAgnosticPersistKeys = new Set();
     static _writePromises = new Map();
@@ -412,58 +412,58 @@ class v extends R {
     _version = null == this.getClass().migrations ? 0 : this.getClass().migrations.length;
     static clearAll(e) {
         return (
-            (y = e),
-            null == v._clearAllPromise &&
-                (v._clearAllPromise = new Promise((t) => {
+            (O = e),
+            null == R._clearAllPromise &&
+                (R._clearAllPromise = new Promise((t) => {
                     requestIdleCallback(
                         () => {
-                            v.clearPersistQueue(e),
-                                v.allPersistKeys.forEach((t) => {
-                                    v.shouldClear(e, t) && I.w.remove(t);
+                            R.clearPersistQueue(e),
+                                R.allPersistKeys.forEach((t) => {
+                                    R.shouldClear(e, t) && I.w.remove(t);
                                 }),
-                                R.getAll().forEach((t) => {
-                                    t instanceof v &&
-                                        v.shouldClear(e, t.getClass().persistKey) &&
+                                C.getAll().forEach((t) => {
+                                    t instanceof R &&
+                                        R.shouldClear(e, t.getClass().persistKey) &&
                                         ((t._isInitialized = !1), t.initializeIfNeeded());
                                 }),
-                                (v._clearAllPromise = null),
+                                (R._clearAllPromise = null),
                                 t();
                         },
                         { timeout: 500 },
                     );
                 })),
-            v._clearAllPromise
+            R._clearAllPromise
         );
     }
     static shouldClear(e, t) {
         return (
             !e.omit?.includes(t) &&
-            ("all" === e.type || ("user-data-only" === e.type && !v.userAgnosticPersistKeys.has(t)))
+            ("all" === e.type || ("user-data-only" === e.type && !R.userAgnosticPersistKeys.has(t)))
         );
     }
     static clearPersistQueue(e) {
-        v._writeResolvers.forEach((t, n) => {
+        R._writeResolvers.forEach((t, n) => {
             let [i, r] = t;
-            v.shouldClear(e, n) &&
-                (v._writePromises.delete(n), v._writeResolvers.delete(n), cancelIdleCallback(r), i(!1));
+            R.shouldClear(e, n) &&
+                (R._writePromises.delete(n), R._writeResolvers.delete(n), cancelIdleCallback(r), i(!1));
         }),
-            v._writePromises.clear(),
-            v._writeResolvers.clear();
+            R._writePromises.clear(),
+            R._writeResolvers.clear();
     }
     static getAllStates() {
-        return Promise.all(Array.from(v._writePromises.values())).then(() => {
+        return Promise.all(Array.from(R._writePromises.values())).then(() => {
             let e = {};
             return (
-                v.allPersistKeys.forEach((t) => {
-                    e[t] = (I.w.get(t) ?? O)._state;
+                R.allPersistKeys.forEach((t) => {
+                    e[t] = (I.w.get(t) ?? v)._state;
                 }),
                 e
             );
         });
     }
     static initializeAll(e) {
-        R.getAll().forEach((t) => {
-            if (t instanceof v) {
+        C.getAll().forEach((t) => {
+            if (t instanceof R) {
                 let n = t.getClass().persistKey;
                 e.hasOwnProperty(n) && t.initializeFromState(e[n]);
             }
@@ -473,14 +473,14 @@ class v extends R {
         this.initialize(e) && this.asyncPersist(),
             this._isInitialized
                 ? this.emitChange()
-                : (v.allPersistKeys.add(this.getClass().persistKey), (this._isInitialized = !0));
+                : (R.allPersistKeys.add(this.getClass().persistKey), (this._isInitialized = !0));
     }
     static destroy() {
-        (y = null),
-            R.destroy(),
-            v.clearPersistQueue({ type: "all" }),
-            v.allPersistKeys.clear(),
-            v.userAgnosticPersistKeys.clear();
+        (O = null),
+            C.destroy(),
+            R.clearPersistQueue({ type: "all" }),
+            R.allPersistKeys.clear(),
+            R.userAgnosticPersistKeys.clear();
     }
     constructor(e, t, n) {
         if ((super(e, t, n), "string" != typeof this.getClass().persistKey))
@@ -500,8 +500,8 @@ class v extends R {
     initializeIfNeeded() {
         if (!this._isInitialized) {
             let e = Date.now();
-            v.allPersistKeys.add(this.getClass().persistKey);
-            let { state: t, requiresPersist: n } = v.migrateAndReadStoreState(
+            R.allPersistKeys.add(this.getClass().persistKey);
+            let { state: t, requiresPersist: n } = R.migrateAndReadStoreState(
                 this.getClass().persistKey,
                 this.getClass().migrations,
             );
@@ -511,8 +511,8 @@ class v extends R {
         }
     }
     static migrateAndReadStoreState(e, t) {
-        if (null != y && v.shouldClear(y, e)) return I.w.remove(e), { state: void 0, requiresPersist: !1 };
-        let { _state: n, _version: i, ...r } = (null != v._clearAllPromise ? null : I.w.get(e)) ?? O,
+        if (null != O && R.shouldClear(O, e)) return I.w.remove(e), { state: void 0, requiresPersist: !1 };
+        let { _state: n, _version: i, ...r } = (null != R._clearAllPromise ? null : I.w.get(e)) ?? v,
             s = null == t ? 0 : t.length;
         if (0 !== s && i !== s && null != t) {
             let e = i ?? 0,
@@ -524,20 +524,20 @@ class v extends R {
     }
     callback = (e) => {
         let { persistKey: t } = this.getClass();
-        this.persist(), v._writePromises.delete(t), v._writeResolvers.delete(t), e();
+        this.persist(), R._writePromises.delete(t), R._writeResolvers.delete(t), e();
     };
     throttledCallback = A()((e) => this.callback(e), this.getClass().throttleDelay, { leading: !1 });
     asyncPersist() {
         let { persistKey: e, disableWrite: t, throttleDelay: n } = this.getClass();
-        if (v.disableWrites || t) return Promise.resolve(!1);
-        let i = v._writePromises.get(e);
+        if (R.disableWrites || t) return Promise.resolve(!1);
+        let i = R._writePromises.get(e);
         return (
             null != i ||
                 ((i = new Promise((t) => {
                     let i = n > 0 ? () => this.throttledCallback(t) : () => this.callback(t);
-                    v._writeResolvers.set(e, [t, requestIdleCallback(i, { timeout: 500 })]);
+                    R._writeResolvers.set(e, [t, requestIdleCallback(i, { timeout: 500 })]);
                 })),
-                v._writePromises.set(e, i)),
+                R._writePromises.set(e, i)),
             i
         );
     }
@@ -552,24 +552,24 @@ class v extends R {
         I.w.remove(e);
     }
 }
-class D extends v {
+class b extends R {
     initializeFromState(e) {
-        return v.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeFromState(e);
+        return R.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeFromState(e);
     }
     initializeIfNeeded() {
-        return v.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeIfNeeded();
+        return R.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeIfNeeded();
     }
     getState() {
         return this.getUserAgnosticState();
     }
 }
-var L = n(627968),
-    b = n(64700),
+var D = n(627968),
+    L = n(64700),
     w = n(52133);
-function P(e) {
+function M(e) {
     return e.displayName ?? e.name ?? "<Unknown>";
 }
-function k(e) {
+function P(e) {
     let t = null,
         n = null,
         i = (e) =>
@@ -590,27 +590,34 @@ function k(e) {
         r
     );
 }
-var M = n(353640),
+var x = n(353640),
     U = n(158390),
-    x = n(702841);
+    k = n(702841);
 let G = Symbol("NO_DATA");
-class V extends Error {
+class F extends Error {
     name = "HTTPResponseError";
     status = 0;
+    retryAfter;
     setStatus(e) {
         this.status = e;
     }
+    setRetryAfter(e) {
+        this.retryAfter = e;
+    }
 }
-function F(e, t) {
+function V(e) {
+    if ("number" == typeof e && Number.isFinite(e) && !(e <= 0)) return e;
+}
+function B(e, t) {
     return Array.isArray(e) && Array.isArray(t) ? (0, w.v)(e, t) : Object.is(e, t);
 }
-function B(e) {
-    return e instanceof V && (e.status >= 500 || 429 === e.status);
+function H(e) {
+    return e instanceof F && (e.status >= 500 || 429 === e.status);
 }
-function H() {
+function j() {
     return new U.A();
 }
-let j = (0, M.v)(() => ({ isLoading: !1, error: null, backoff: new U.A() }));
+let Y = (0, x.v)(() => ({ isLoading: !1, error: null, backoff: new U.A(), lastSuccessAt: null }));
 function W(e, t) {
     let {
             getQueryId: n,
@@ -618,34 +625,53 @@ function W(e, t) {
             load: r,
             getIsLoading: s,
             getError: a,
-            retryConfig: { maxRetries: o = 5, backoff: l = H, retryableErrors: d = B } = {},
+            retryConfig: { maxRetries: o = 5, backoff: l = j, retryableErrors: u = H } = {},
+            staleAfter: c,
         } = t,
-        _ = new Map();
-    function u(e) {
-        if (null == e) return j;
-        let t = _.get(e);
-        return null == t && ((t = (0, M.v)(() => ({ isLoading: !1, error: null, backoff: l() }))), _.set(e, t)), t;
+        d = new Map();
+    function _(e) {
+        if (null == e) return Y;
+        let t = d.get(e);
+        return (
+            null == t &&
+                ((t = (0, x.v)(() => ({ isLoading: !1, error: null, backoff: l(), lastSuccessAt: null }))),
+                d.set(e, t)),
+            t
+        );
     }
-    async function c(e) {
-        let { queryId: t, args: n, refetch: a = !1, useStoreState: l = u(t) } = e,
-            _ = l.getState().backoff,
-            E = s?.(...n) ?? l.getState().isLoading;
-        if (null != t && !E) {
+    async function f(e) {
+        let { queryId: t, args: n, refetch: a = !1, useStoreState: l = _(t) } = e,
+            d = l.getState().backoff,
+            h = s?.(...n) ?? l.getState().isLoading;
+        if (null != t && !h) {
             if (!a) {
                 let e = i(...n);
-                if (e === G || null != e) return;
+                if (
+                    e === G ||
+                    (null != e &&
+                        !(function (e, t) {
+                            if (null == t) return !1;
+                            let { lastSuccessAt: n } = e.getState();
+                            return null == n || Date.now() - n > 1e3 * t;
+                        })(l, c))
+                )
+                    return;
             }
             try {
-                l.setState({ isLoading: !0 }), await r(...n), _.succeed(), l.setState({ error: null, isLoading: !1 });
+                l.setState({ isLoading: !0 }),
+                    await r(...n),
+                    d.succeed(),
+                    l.setState({ error: null, isLoading: !1, lastSuccessAt: Date.now() });
             } catch (i) {
                 let e = (function (e) {
                     if (e instanceof Error) return e;
                     if ("object" == typeof e && null != e && "status" in e && "number" == typeof e.status) {
+                        let t = V(e.retryAfter);
                         if ("body" in e && null != e.body && "object" == typeof e.body && "message" in e.body) {
-                            let t = new V(String(e.body.message));
-                            return t.setStatus(e.status), t;
+                            let n = new F(String(e.body.message));
+                            return n.setStatus(e.status), n.setRetryAfter(t), n;
                         }
-                        let t = new V(
+                        let n = new F(
                             Object.entries(e)
                                 .map((e) => {
                                     let [t, n] = e;
@@ -653,92 +679,96 @@ function W(e, t) {
                                 })
                                 .join(","),
                         );
-                        return t.setStatus(e.status), t;
+                        return n.setStatus(e.status), n.setRetryAfter(t), n;
                     }
                     return Error(String(e));
                 })(i);
                 l.setState({ error: e, isLoading: !1 }),
-                    d(e) &&
-                        o > _.fails &&
-                        (await new Promise((e, i) => {
-                            _.fail(() => {
-                                c({ queryId: t, args: n, useStoreState: l, refetch: a }).then(e, i);
-                            });
+                    u(e) &&
+                        o > d.fails &&
+                        (await new Promise((i, r) => {
+                            let s;
+                            d.fail(
+                                () => {
+                                    f({ queryId: t, args: n, useStoreState: l, refetch: a }).then(i, r);
+                                },
+                                null == (s = V(e.retryAfter)) ? 0 : 1e3 * s,
+                            );
                         }));
             }
         }
     }
-    function E() {
+    function h() {
         for (var t = arguments.length, r = Array(t), o = 0; o < t; o++) r[o] = arguments[o];
         let l = (function (e) {
-                let [t, n] = (0, b.useState)(e);
+                let [t, n] = (0, L.useState)(e);
                 return e === t || (0, w.v)(e, t) || n(e), t;
             })(r),
-            d = Array.isArray(e) ? e : [e],
-            _ = n(...l),
-            E = u(_),
-            h = (0, x.bG)(d, () => s?.(...l), [l]),
-            m = E((e) => null == s && e.isLoading),
-            f = (0, x.bG)(d, () => a?.(...l), [l]),
-            g = E((e) => (null == a ? e.error : null)),
-            p = (0, x.bG)(d, () => i(...l), [l], F);
+            u = Array.isArray(e) ? e : [e],
+            c = n(...l),
+            d = _(c),
+            h = (0, k.bG)(u, () => s?.(...l), [l]),
+            p = d((e) => null == s && e.isLoading),
+            E = (0, k.bG)(u, () => a?.(...l), [l]),
+            m = d((e) => (null == a ? e.error : null)),
+            g = (0, k.bG)(u, () => i(...l), [l], B);
         return (
-            (0, b.useEffect)(() => {
-                c({ queryId: _, args: l, useStoreState: E });
-            }, [_, l, E]),
+            (0, L.useEffect)(() => {
+                f({ queryId: c, args: l, useStoreState: d });
+            }, [c, l, d]),
             {
-                data: p === G ? null : p,
-                error: f ?? g,
-                isLoading: h ?? m,
-                refetch: (0, b.useCallback)(() => {
-                    c({ queryId: _, args: l, useStoreState: E, refetch: !0 });
-                }, [_, l, E]),
+                data: g === G ? null : g,
+                error: E ?? m,
+                isLoading: h ?? p,
+                refetch: (0, L.useCallback)(() => {
+                    f({ queryId: c, args: l, useStoreState: d, refetch: !0 });
+                }, [c, l, d]),
             }
         );
     }
     return (
-        (E.refetch = async function () {
+        (h.refetch = async function () {
             for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
             let r = n(...t),
-                s = u(r);
-            s.getState().backoff.succeed(), await c({ queryId: r, args: t, useStoreState: s, refetch: !0 });
+                s = _(r);
+            s.getState().backoff.succeed(), await f({ queryId: r, args: t, useStoreState: s, refetch: !0 });
         }),
-        (E.fetchMany = async function () {
+        (h.fetchMany = async function () {
             for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
             await Promise.all(
                 t.map((e) => {
                     let t = n(...e);
-                    return c({ queryId: t, args: e, useStoreState: u(t) });
+                    return f({ queryId: t, args: e, useStoreState: _(t) });
                 }),
             );
         }),
-        (E.refetchMany = async function () {
+        (h.refetchMany = async function () {
             for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
             await Promise.all(
                 t.map((e) => {
                     let t = n(...e),
-                        i = u(t);
-                    return i.getState().backoff.succeed(), c({ queryId: t, args: e, useStoreState: i, refetch: !0 });
+                        i = _(t);
+                    return i.getState().backoff.succeed(), f({ queryId: t, args: e, useStoreState: i, refetch: !0 });
                 }),
             );
         }),
-        E
+        h
     );
 }
-let Y = {
-    Emitter: _.A,
-    Store: R,
-    PersistedStore: v,
-    DeviceSettingsStore: class extends D {},
-    OfflineCacheStore: class extends D {},
+let K = {
+    Emitter: c.A,
+    Store: C,
+    PersistedStore: R,
+    DeviceSettingsStore: class extends b {},
+    OfflineCacheStore: class extends b {},
     connectStores: function (e, t, n) {
         return null != n && n.forwardRef
             ? (function (e, t) {
                   return (n) => {
-                      let i = `FluxContainer(${P(n)})`;
-                      class s extends b.Component {
+                      let i = `FluxContainer(${M(n)})`;
+                      class s extends L.Component {
                           static displayName = i;
-                          memoizedGetStateFromStores = k(t);
+                          memoizedGetStateFromStores = P(t);
                           listener = new r.r(e, () => {
                               let e = this.memoizedGetStateFromStores.getCachedResult(this.props.childProps);
                               (null != e &&
@@ -755,19 +785,19 @@ let Y = {
                           render() {
                               let { forwardedConnectStoresRef: e, childProps: t } = this.props,
                                   i = this.memoizedGetStateFromStores(t);
-                              return (0, L.jsx)(n, { ref: e, ...t, ...i });
+                              return (0, D.jsx)(n, { ref: e, ...t, ...i });
                           }
                       }
-                      let a = b.forwardRef((e, t) => (0, L.jsx)(s, { childProps: e, forwardedConnectStoresRef: t }));
+                      let a = L.forwardRef((e, t) => (0, D.jsx)(s, { childProps: e, forwardedConnectStoresRef: t }));
                       return (a.displayName = `ForwardRef(${i})`), a;
                   };
               })(e, t)
             : (function (e, t) {
                   return (n) => {
-                      let i = `FluxContainer(${P(n)})`;
-                      class s extends b.Component {
+                      let i = `FluxContainer(${M(n)})`;
+                      class s extends L.Component {
                           static displayName = i;
-                          memoizedGetStateFromStores = k(t);
+                          memoizedGetStateFromStores = P(t);
                           listener = new r.r(e, () => {
                               let e = this.memoizedGetStateFromStores.getCachedResult(this.props);
                               (null != e &&
@@ -783,7 +813,7 @@ let Y = {
                           }
                           render() {
                               let e = this.memoizedGetStateFromStores(this.props);
-                              return (0, L.jsx)(n, { ...this.props, ...e });
+                              return (0, D.jsx)(n, { ...this.props, ...e });
                           }
                       }
                       return s;
@@ -791,9 +821,9 @@ let Y = {
               })(e, t);
     },
     initialize: function () {
-        R.initialize();
+        C.initialize();
     },
     get initialized() {
-        return R.initialized;
+        return C.initialized;
     },
 };
