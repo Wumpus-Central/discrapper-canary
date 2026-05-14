@@ -20866,14 +20866,9 @@ let jS = (e) => {
 };
 var j_ = n(820739),
     jT = n(297413),
-    jb = n(645619);
-let jy = (0, n(240921).Ay)({
-    name: "2026-05-expiring-boosts",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-});
-var jR = n(459192),
+    jb = n(645619),
+    jy = n(323472),
+    jR = n(459192),
     jL = n(805901),
     jG = n(351406);
 let jO = (0, iz.xI)(iD.A.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
@@ -21217,7 +21212,7 @@ let jz = L.Ay.connectStores([tD.A, jb.A, D.A, jw.A, Q.default, jF.Ay], () => {
         t = tD.A.getGuild(e)?.premiumTier ?? ei.TVA.NONE,
         n = (0, jj.G)(e),
         i = null != e ? jw.A.getAppliedGuildBoostsForGuild(e) : null,
-        l = jy.getConfig({ location: "GuildSettingsPremiumTierStatus" }).enabled,
+        l = jy.A.getConfig({ location: "GuildSettingsPremiumTierStatus" }).enabled,
         s = null != i ? i : [],
         r = l ? s.filter(aW.os) : s,
         a = U()(r).uniqBy((e) => e.userId),
