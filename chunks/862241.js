@@ -47,15 +47,16 @@ function j(e) {
             setEntitlementsGranted: F,
             setAppliedUserDiscounts: B,
             contextMetadata: W,
+            setUpdatedSubscription: V,
         } = (0, v.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setEntitlementsGranted: e.setEntitlementsGranted,
             setAppliedUserDiscounts: e.setAppliedUserDiscounts,
             contextMetadata: e.contextMetadata,
+            setUpdatedSubscription: e.setUpdatedSubscription,
         })),
         {
-            activeSubscription: V,
-            setUpdatedSubscription: H,
+            activeSubscription: H,
             purchaseError: K,
             setCurrency: Z,
             isPremium: q,
@@ -108,12 +109,13 @@ function j(e) {
     }, [K]);
     let em = a.useCallback(
             (e, t, n) => {
-                H(e),
+                let l = e ?? null;
+                V(l),
                     null != t && F(t),
                     null != n && B(n),
-                    i(p.pn.CONFIRM, { fulfillment: { subscription: e, entitlements: t } });
+                    i(p.pn.CONFIRM, { fulfillment: { subscription: l, entitlements: t } });
             },
-            [i, H, F, B],
+            [i, V, F, B],
         ),
         eh = a.useRef(null),
         eC = (0, I.mx)(),
@@ -157,7 +159,7 @@ function j(e) {
             [t, eI, ex, Y, eN],
         ),
         ev = (0, l.jsx)(h.A, {
-            premiumSubscription: V ?? null,
+            premiumSubscription: H ?? null,
             invoiceError: eC,
             onBack: eT,
             onNext: em,

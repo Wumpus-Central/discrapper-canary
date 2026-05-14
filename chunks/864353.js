@@ -163,12 +163,14 @@ function eI(e) {
             followupSKUInfo: m,
             continueSessionToInitialStep: S,
         } = e,
-        I = (0, p.t4)((e) => e.selectedSkuId),
+        { selectedSkuId: I, updatedSubscription: _ } = (0, p.t4)((e) => ({
+            selectedSkuId: e.selectedSkuId,
+            updatedSubscription: e.updatedSubscription,
+        })),
         {
-            activeSubscription: _,
-            paymentSources: A,
-            paymentSourceId: P,
-            updatedSubscription: g,
+            activeSubscription: A,
+            paymentSources: P,
+            paymentSourceId: g,
             startingPremiumSubscriptionPlanIdRef: T,
             startingFractionalPremiumEndsAtRef: j,
             isPremiumGroupPurchase: M,
@@ -196,7 +198,7 @@ function eI(e) {
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         }),
-        er = (0, ep.g)(A, P),
+        er = (0, ep.g)(P, g),
         es = b && null != $ && null != en && et;
     v()(null != R, "Expected plan to selected"),
         v()(null != I, "Expected selectedSkuId"),
@@ -207,23 +209,23 @@ function eI(e) {
     (0, G.Ay)(() => {
         M &&
             z.default.track(eE.HAw.PREMIUM_GROUP_PURCHASE_CONFIRMATION_VIEWED, {
-                has_updated_subscription: null != g,
-                has_any_premium_group: g?.hasAnyPremiumGroup ?? !1,
-                subscription_id: g?.id,
+                has_updated_subscription: null != _,
+                has_any_premium_group: _?.hasAnyPremiumGroup ?? !1,
+                subscription_id: _?.id,
             });
     }),
         i.useEffect(() => {
             function e() {
                 if (M)
-                    if (null != g && g.hasAnyPremiumGroup) {
+                    if (null != _ && _.hasAnyPremiumGroup) {
                         z.default.track(eE.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_OPENED, {
-                            subscription_id: g.id,
+                            subscription_id: _.id,
                         });
                         let e = (0, U.uniqueId)("premium-group-purchase-flow-modal");
                         (0, w.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("44729"),
+                                    n.e("44629"),
                                     n.e("44616"),
                                     n.e("96680"),
                                     n.e("85579"),
@@ -231,7 +233,7 @@ function eI(e) {
                                 return (t) =>
                                     (0, l.jsx)(e, {
                                         ...t,
-                                        subscription: g,
+                                        subscription: _,
                                         isFromPurchaseFlow: !0,
                                         onClose: async () => {
                                             V._.dispatch(eE.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED),
@@ -248,8 +250,8 @@ function eI(e) {
                         );
                     } else
                         z.default.track(eE.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_SKIPPED, {
-                            has_updated_subscription: null != g,
-                            has_any_premium_group: g?.hasAnyPremiumGroup ?? !1,
+                            has_updated_subscription: null != _,
+                            has_any_premium_group: _?.hasAnyPremiumGroup ?? !1,
                         }),
                             V._.dispatch(eE.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED);
             }
@@ -259,7 +261,7 @@ function eI(e) {
                     V._.unsubscribe(eE.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
                 }
             );
-        }, [M, g]),
+        }, [M, _]),
         i.useEffect(() => {
             !b || null == N || null == y || O || Z || (0, K.Ik)(N) || X({ onSubscriptionConfirmation: u });
         }, [X, b, N, y, O, Z, u]),
@@ -270,7 +272,7 @@ function eI(e) {
                 (0, H.qr)(L.M.GIFTING_PROMOTION_REMINDER, el, { dismissAction: eS.i.INDIRECT_ACTION });
         }, [ei, el, ee]);
     let eu = null != S ? W.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != o) t = o(R, ea, g);
+    if (null != o) t = o(R, ea, _);
     else if (b) t = (0, l.jsx)(W.fw, { planId: R.id, onClose: ea });
     else {
         let e =
@@ -279,7 +281,7 @@ function eI(e) {
                 : {
                       followupSKUInfo: m,
                       startingPremiumSubscriptionPlanId: T.current,
-                      isDowngrade: null != _ && (0, q.vT)(_, R.id, a),
+                      isDowngrade: null != A && (0, q.vT)(A, R.id, a),
                   };
         t = (0, l.jsx)(W.Ay, {
             planId: R.id,
@@ -522,7 +524,7 @@ var eH = n(800471),
     eB = n(702841),
     eW = n(683071),
     ez = n(428644),
-    eV = n(164928),
+    eV = n(717925),
     eK = n(742810),
     eq = n(699595),
     eY = n(543767),
@@ -576,11 +578,11 @@ var eJ = n(337092),
     e4 = n(927578),
     e1 = n(69494),
     e6 = n(534479),
-    e8 = n(340034),
+    e7 = n(340034),
     e2 = n(50956),
-    e7 = n(71867),
-    e3 = n(249872);
-function e5(e) {
+    e8 = n(71867),
+    e5 = n(249872);
+function e3(e) {
     let { handleStepChange: t, initialPlanId: n, planGroup: r, subscriptionTier: s, trialId: a, handleClose: u } = e,
         o = (0, p.t4)((e) => e.selectedSkuId),
         {
@@ -643,11 +645,11 @@ function e5(e) {
         }),
         [w, j?.id, r, V?.subscriptionPeriodEnd, U, u],
     );
-    if ($) return J ? (0, l.jsx)(eV.E, { className: e3.QW }) : (0, l.jsx)(e6.A, {});
+    if ($) return J ? (0, l.jsx)(eV.E, { className: e5.QW }) : (0, l.jsx)(e6.A, {});
     v()(null != M, "Step should be set"), v()(w.length > 0, "Premium plan options should be set");
     let et =
         J && !R
-            ? (0, l.jsx)(e8.XH, { ...ee, isInPlanSelectStep: !0, showPlanStatusSubText: !0 })
+            ? (0, l.jsx)(e7.XH, { ...ee, isInPlanSelectStep: !0, showPlanStatusSubText: !0 })
             : (0, l.jsx)(eJ.$p, { ...ee });
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -655,14 +657,14 @@ function e5(e) {
             !(R && (0, K.Ik)(C)) && (0, l.jsx)(e1.A, { isEligibleForTrial: A }),
             (0, l.jsxs)(Y.dZ, {
                 children: [
-                    !J && X && (0, l.jsx)("hr", { className: e3.T4 }),
-                    (0, l.jsx)(e7.P, { className: e3.ZB, planSkuId: F?.skuId, referralTrialOfferId: f }),
+                    !J && X && (0, l.jsx)("hr", { className: e5.T4 }),
+                    (0, l.jsx)(e8.P, { className: e5.ZB, planSkuId: F?.skuId, referralTrialOfferId: f }),
                     (0, l.jsx)(em.A, {}),
                     Q ? (0, l.jsx)(eW.w, { type: "critical", children: Z }) : et,
                     X &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)("hr", { className: eh()(e3.IM, { [e3.Go]: J }) }),
+                                (0, l.jsx)("hr", { className: eh()(e5.IM, { [e5.Go]: J }) }),
                                 (0, l.jsx)(eC.E, {
                                     variant: "text-xs/normal",
                                     children: eo.intl.format(eo.t.BHtnqA, {
@@ -953,7 +955,7 @@ let tp = function () {
             },
             {
                 key: T.pn.PLAN_SELECT,
-                renderStep: (e) => (0, l.jsx)(e5, { ...e }),
+                renderStep: (e) => (0, l.jsx)(e3, { ...e }),
                 options: {
                     renderHeader: !0,
                     useBreadcrumbLabel: (e) => ((0, eH.lp)(e) ? null : eo.intl.string(eo.t["r+SebU"])),
