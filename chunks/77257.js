@@ -10,13 +10,15 @@ class s {
         return r().ArrayBuffer.hash(e);
     }
     static fromDataURI(e) {
-        let t = /^data:[^;]*;base64,(.*)$/.exec(e);
-        if (null == t) return null;
-        let n = atob(t[1]),
-            i = new ArrayBuffer(n.length),
-            s = new Uint8Array(i);
-        for (let e = 0; e < n.length; e++) s[e] = n.charCodeAt(e);
-        return r().ArrayBuffer.hash(i);
+        return Promise.resolve().then(() => {
+            let t = /^data:[^;]*;base64,(.*)$/.exec(e);
+            if (null == t) throw Error("Not a base64 data URI");
+            let n = atob(t[1]),
+                i = new ArrayBuffer(n.length),
+                s = new Uint8Array(i);
+            for (let e = 0; e < n.length; e++) s[e] = n.charCodeAt(e);
+            return r().ArrayBuffer.hash(i);
+        });
     }
 }
 class a {
