@@ -811,8 +811,15 @@ function eV(e) {
             );
         })({ memberStoreProps: l, channelId: t.id, guildId: t.guild_id }),
         E = r.useRef(null),
-        g = (0, m.W)("lg") + (0, m.W)("xxs"),
-        A = r.useCallback(
+        g = r.useRef(null);
+    r.useEffect(() => {
+        "u" < typeof document ||
+            (null != document.activeElement &&
+                document.activeElement !== document.body &&
+                g.current?.focus({ preventScroll: !0 }));
+    }, []);
+    let A = (0, m.W)("lg") + (0, m.W)("xxs"),
+        I = r.useCallback(
             (e, t) => {
                 let n = E.current;
                 if (null == n) return;
@@ -829,7 +836,7 @@ function eV(e) {
             },
             [42],
         ),
-        I = r.useCallback(
+        T = r.useCallback(
             () =>
                 new Promise((e) => {
                     let t = E.current;
@@ -838,7 +845,7 @@ function eV(e) {
                 }),
             [],
         ),
-        T = r.useCallback(
+        y = r.useCallback(
             () =>
                 new Promise((e) => {
                     let t = E.current;
@@ -851,13 +858,15 @@ function eV(e) {
                 }),
             [],
         ),
-        y = (0, c.Ay)({ id: `members-${t.id}`, setFocus: A, isEnabled: o, scrollToStart: I, scrollToEnd: T });
+        O = (0, c.Ay)({ id: `members-${t.id}`, setFocus: I, isEnabled: o, scrollToStart: T, scrollToEnd: y });
     return (0, i.jsx)(C.f5, {
         value: s,
         children: (0, i.jsx)("div", {
+            ref: g,
+            tabIndex: -1,
             className: a()(B.kL, n),
             children: (0, i.jsx)(u.hD, {
-                navigator: y,
+                navigator: O,
                 children: (0, i.jsx)(eF, {
                     ...e,
                     ...l,
@@ -866,7 +875,7 @@ function eV(e) {
                     rows: d,
                     listRef: E,
                     updateMaxContentFeedRowSeen: p,
-                    sectionHeight: 18 + g,
+                    sectionHeight: 18 + A,
                     rowHeight: 42,
                 }),
             }),
