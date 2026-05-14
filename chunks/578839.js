@@ -14,13 +14,13 @@ var s = n(627968),
     g = n(140735),
     A = n(312138),
     j = n(689175),
-    f = n(241524),
-    N = n(95561),
-    v = n(104510),
-    b = n(750943),
-    I = n(821609),
-    C = n(192308),
-    p = n(707554),
+    f = n(707554),
+    N = n(241524),
+    v = n(95561),
+    b = n(104510),
+    I = n(750943),
+    C = n(821609),
+    p = n(192308),
     E = n(534514),
     _ = n(781696),
     y = n(736653),
@@ -41,11 +41,11 @@ function T(e) {
             icon: i,
             text: a,
         } = l.features.has(S.GuildFeatures.BANNER)
-            ? { variant: "overlay-secondary", icon: b.X, text: V.intl.string(V.t.b0y3DL) }
-            : { variant: "expressive", icon: v._, text: V.intl.string(V.t["+7XY31"]) };
+            ? { variant: "overlay-secondary", icon: I.X, text: V.intl.string(V.t.b0y3DL) }
+            : { variant: "expressive", icon: b._, text: V.intl.string(V.t["+7XY31"]) };
     return (0, s.jsx)("div", {
         className: k.SY,
-        children: (0, s.jsx)(I.$, {
+        children: (0, s.jsx)(C.$, {
             variant: n,
             icon: i,
             text: a,
@@ -90,41 +90,39 @@ let U = i.memo(function (e) {
                     className: d,
                     children: [
                         (0, s.jsx)(G.Ay, { className: k.nr, guild: t, size: G.Ay.Sizes.XLARGE, active: !0 }),
-                        (0, s.jsx)(p.F, {
-                            children: (0, s.jsxs)("div", {
-                                className: k.Bv,
-                                children: [
-                                    (0, s.jsx)(E.D, { className: k.Bv, variant: "heading-xxl/bold", children: t.name }),
-                                    (0, s.jsx)(D.A, {
-                                        size: 24,
-                                        guild: t,
-                                        tooltipPosition: "bottom",
-                                        tooltipColor: _.ST.Colors.PRIMARY,
-                                    }),
-                                    o &&
-                                        (0, s.jsx)("div", {
-                                            "data-button-hoisted-classname-wrapper": !0,
-                                            className: k.ak,
-                                            children: (0, s.jsx)(I.$, {
-                                                variant: "secondary",
-                                                text: V.intl.string(V.t.VINpSK),
-                                                onClick: () =>
-                                                    (0, C.openModalLazy)(async () => {
-                                                        let { default: e } = await Promise.all([
-                                                            n.e("87767"),
-                                                            n.e("59957"),
-                                                            n.e("28136"),
-                                                            n.e("16084"),
-                                                            n.e("87317"),
-                                                            n.e("22547"),
-                                                        ]).then(n.bind(n, 1310));
-                                                        return (l) =>
-                                                            (0, s.jsx)(e, { ...l, guild: t, source: S.PE1.GUILD_HOME });
-                                                    }),
-                                            }),
+                        (0, s.jsxs)("div", {
+                            className: k.Bv,
+                            children: [
+                                (0, s.jsx)(E.D, { className: k.Bv, variant: "heading-xxl/bold", children: t.name }),
+                                (0, s.jsx)(D.A, {
+                                    size: 24,
+                                    guild: t,
+                                    tooltipPosition: "bottom",
+                                    tooltipColor: _.ST.Colors.PRIMARY,
+                                }),
+                                o &&
+                                    (0, s.jsx)("div", {
+                                        "data-button-hoisted-classname-wrapper": !0,
+                                        className: k.ak,
+                                        children: (0, s.jsx)(C.$, {
+                                            variant: "secondary",
+                                            text: V.intl.string(V.t.VINpSK),
+                                            onClick: () =>
+                                                (0, p.openModalLazy)(async () => {
+                                                    let { default: e } = await Promise.all([
+                                                        n.e("71670"),
+                                                        n.e("59957"),
+                                                        n.e("28136"),
+                                                        n.e("16084"),
+                                                        n.e("87317"),
+                                                        n.e("22547"),
+                                                    ]).then(n.bind(n, 1310));
+                                                    return (l) =>
+                                                        (0, s.jsx)(e, { ...l, guild: t, source: S.PE1.GUILD_HOME });
+                                                }),
                                         }),
-                                ],
-                            }),
+                                    }),
+                            ],
                         }),
                     ],
                 }),
@@ -413,7 +411,7 @@ function eG(e) {
                       (0, s.jsx)("img", { className: ep.QT, src: "/assets/159a09aadfe4a53d.svg", alt: "" }),
                       (0, s.jsx)("div", {
                           className: ep.nM,
-                          children: (0, s.jsx)(I.$, {
+                          children: (0, s.jsx)(C.$, {
                               size: "md",
                               variant: "primary",
                               onClick: () => {
@@ -462,18 +460,18 @@ let eH = (0, d.A)(function (e) {
             o = a === S.YvQ.SIDEBAR_CHAT,
             x = (0, A.R7)(),
             g = (0, m.bG)([F.h], () => F.h.getSettings(l.id)),
-            v = g?.welcomeMessage,
-            b = (0, P.A)(l.id),
-            I = !b && (g?.resourceChannels?.length ?? 0) === 0,
-            C = (0, f.A)("(max-width: 1300px)"),
-            p = n - S.MdR - c,
-            E = (o && p < 1020) || C || I;
+            b = g?.welcomeMessage,
+            I = (0, P.A)(l.id),
+            C = !I && (g?.resourceChannels?.length ?? 0) === 0,
+            p = (0, N.A)("(max-width: 1300px)"),
+            E = n - S.MdR - c,
+            _ = (o && E < 1020) || p || C;
         return (i.useEffect(() => {
             g === F.A
                 ? (0, $.ag)(l.id)
                 : null != g &&
                   K.default.track(S.HAw.SERVER_GUIDE_VIEWED, {
-                      ...(0, N.H$)(l.id),
+                      ...(0, v.H$)(l.id),
                       num_member_actions: g.newMemberActions?.length ?? 0,
                       num_member_actions_completed: Object.keys(W.A.getCompletedActions(l.id) ?? {}).length,
                       num_resource_channels: g.resourceChannels?.length ?? 0,
@@ -486,9 +484,9 @@ let eH = (0, d.A)(function (e) {
             [],
         ),
         i.useEffect(() => {
-            I && g !== F.A && t.A.escapeToDefaultChannel(l.id);
-        }, [l.id, I, g]),
-        I)
+            C && g !== F.A && t.A.escapeToDefaultChannel(l.id);
+        }, [l.id, C, g]),
+        C)
             ? null
             : (0, s.jsxs)(s.Fragment, {
                   children: [
@@ -498,28 +496,28 @@ let eH = (0, d.A)(function (e) {
                               (0, s.jsx)(eR, { guild: l }),
                               (0, s.jsx)(j.Gt, {
                                   ...x,
-                                  children: (0, s.jsxs)("div", {
-                                      className: h()(ec.$d, { [ec.Mk]: E }),
-                                      children: [
-                                          (0, s.jsx)("div", {
+                                  children: (0, s.jsx)("div", {
+                                      className: h()(ec.$d, { [ec.Mk]: _ }),
+                                      children: (0, s.jsx)(f.F, {
+                                          component: (0, s.jsx)("div", {
                                               className: ec.QI,
-                                              children: (0, s.jsx)(U, { guild: l, titleClassName: C ? ec.H2 : void 0 }),
+                                              children: (0, s.jsx)(U, { guild: l, titleClassName: p ? ec.H2 : void 0 }),
                                           }),
-                                          (0, s.jsxs)("div", {
+                                          children: (0, s.jsxs)("div", {
                                               className: h()(ec.xr, ec.QI),
                                               children: [
                                                   (0, s.jsxs)("div", {
                                                       className: ec.rb,
                                                       children: [
-                                                          b && (0, s.jsx)(eD.A, { guildId: l.id, welcomeMessage: v }),
-                                                          b && (0, s.jsx)(ex.A, { guildId: l.id }),
-                                                          !b || E ? (0, s.jsx)(eG, { guild: l, isNewMember: b }) : null,
+                                                          I && (0, s.jsx)(eD.A, { guildId: l.id, welcomeMessage: b }),
+                                                          I && (0, s.jsx)(ex.A, { guildId: l.id }),
+                                                          !I || _ ? (0, s.jsx)(eG, { guild: l, isNewMember: I }) : null,
                                                       ],
                                                   }),
-                                                  E ? null : (0, s.jsx)(em, { guild: l, isNewMember: b }),
+                                                  _ ? null : (0, s.jsx)(em, { guild: l, isNewMember: I }),
                                               ],
                                           }),
-                                      ],
+                                      }),
                                   }),
                               }),
                           ],
