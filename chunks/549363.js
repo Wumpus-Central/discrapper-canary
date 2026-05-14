@@ -1,4 +1,4 @@
-i.d(t, { A: () => e4 });
+i.d(t, { A: () => e7 });
 var n = i(627968),
     s = i(64700),
     l = i(503698),
@@ -9,48 +9,50 @@ var n = i(627968),
     d = i(17928),
     c = i(689175),
     g = i(359778),
-    m = i(228366),
-    A = i(661439),
-    h = i(73825),
-    E = i(928039),
-    T = i(753390),
-    x = i(235986),
-    S = i(408278),
-    p = i(921853),
-    N = i(834730),
-    f = i(320448),
-    _ = i(375708),
-    C = i(632787);
-let I = s.forwardRef(function (e, t) {
+    m = i(289873),
+    A = i(683071),
+    h = i(228366),
+    E = i(661439),
+    T = i(73825),
+    S = i(928039),
+    x = i(753390),
+    p = i(235986),
+    f = i(408278),
+    N = i(921853),
+    _ = i(834730),
+    C = i(320448),
+    I = i(375708),
+    b = i(632787);
+let v = s.forwardRef(function (e, t) {
     let { currentPageIndex: i, numPages: s, onChangePage: l, children: r, showPageCount: a = !0, ...o } = e,
         u = i >= s - 1,
         d = a
-            ? _.intl.format(_.t.MtpIwg, { currentPage: i + 1, numPages: s })
-            : _.intl.format(_.t.bKI77c, { currentPage: i + 1 });
+            ? I.intl.format(I.t.MtpIwg, { currentPage: i + 1, numPages: s })
+            : I.intl.format(I.t.bKI77c, { currentPage: i + 1 });
     return (0, n.jsxs)("div", {
         ref: t,
         ...o,
         children: [
             r,
             (0, n.jsx)("div", {
-                className: C.v,
+                className: b.v,
                 children: (0, n.jsxs)("div", {
-                    className: C.U,
+                    className: b.U,
                     children: [
-                        (0, n.jsx)(S.K, {
+                        (0, n.jsx)(f.K, {
                             variant: "icon-only",
-                            icon: p.n,
+                            icon: N.n,
                             disabled: i <= 0,
                             onClick: () => l(i - 1),
-                            "aria-label": _.intl.string(_.t.vgfxaA),
+                            "aria-label": I.intl.string(I.t.vgfxaA),
                         }),
-                        (0, n.jsx)(N.E, { variant: "text-sm/medium", children: d }),
-                        (0, n.jsx)(S.K, {
+                        (0, n.jsx)(_.E, { variant: "text-sm/medium", children: d }),
+                        (0, n.jsx)(f.K, {
                             variant: "icon-only",
-                            icon: f._,
+                            icon: C._,
                             disabled: u,
                             onClick: () => l(i + 1),
-                            "aria-label": _.intl.string(_.t.XiOHRX),
+                            "aria-label": I.intl.string(I.t.XiOHRX),
                         }),
                     ],
                 }),
@@ -59,16 +61,16 @@ let I = s.forwardRef(function (e, t) {
     });
 });
 i(321073), i(938796);
-var b = i(122817),
-    v = i(665260),
-    j = i(315069),
-    y = i(32731),
-    O = i(557009),
-    R = i(202613),
-    L = i(243217),
-    D = i(652215),
-    P = i(788868);
-class G extends j.A {
+var j = i(122817),
+    y = i(665260),
+    O = i(315069),
+    R = i(32731),
+    L = i(557009),
+    D = i(202613),
+    P = i(243217),
+    G = i(652215),
+    U = i(788868);
+class M extends O.A {
     id;
     createdAt;
     currency;
@@ -92,10 +94,10 @@ class G extends j.A {
     premiumRefundDisqualificationReasons;
     entitlements;
     static createFromServer(e) {
-        let t = null != e.payment_source ? R.Ay.createFromServer(e.payment_source) : null,
-            i = null != e.sku ? y.A.createFromServer(e.sku) : null,
-            n = null != e.subscription ? L.A.createFromServer(e.subscription) : null;
-        return new G({
+        let t = null != e.payment_source ? D.Ay.createFromServer(e.payment_source) : null,
+            i = null != e.sku ? R.A.createFromServer(e.sku) : null,
+            n = null != e.subscription ? P.A.createFromServer(e.subscription) : null;
+        return new M({
             id: e.id,
             createdAt: new Date(e.created_at),
             currency: e.currency,
@@ -118,7 +120,7 @@ class G extends j.A {
             hasInvoiceURL: e.has_invoice_url,
             hasRefundInvoiceURLs: e.has_refund_invoice_urls,
             premiumRefundDisqualificationReasons: e.premium_refund_disqualification_reasons,
-            entitlements: null != e.entitlements ? e.entitlements.map((e) => O.A.createFromServer(e)) : void 0,
+            entitlements: null != e.entitlements ? e.entitlements.map((e) => L.A.createFromServer(e)) : void 0,
         });
     }
     constructor(e) {
@@ -147,10 +149,10 @@ class G extends j.A {
             (this.entitlements = e.entitlements);
     }
     get isPurchasedViaApple() {
-        return this.paymentGateway === D.kM_.APPLE;
+        return this.paymentGateway === G.kM_.APPLE;
     }
     get isPurchasedViaGoogle() {
-        return this.paymentGateway === D.kM_.GOOGLE;
+        return this.paymentGateway === G.kM_.GOOGLE;
     }
     get isPurchasedExternally() {
         return this.isPurchasedViaApple || this.isPurchasedViaGoogle;
@@ -159,7 +161,7 @@ class G extends j.A {
         return null != this.subscription;
     }
     get isPremiumSubscription() {
-        return null != this.subscription && P.JM.has(this.subscription.planId);
+        return null != this.subscription && U.JM.has(this.subscription.planId);
     }
     get isPremiumGuildSubscription() {
         return (
@@ -167,99 +169,104 @@ class G extends j.A {
             null !=
                 this.subscription.additionalPlans.find((e) => {
                     let { planId: t } = e;
-                    return P.pW.has(t);
+                    return U.pW.has(t);
                 })
         );
     }
     get isGift() {
-        return v.Lt(this.flags, 1);
+        return y.Lt(this.flags, 1);
     }
     get isPremiumGift() {
-        return this.isGift && Object.values(P.pe).includes(this.skuId);
+        return this.isGift && Object.values(U.pe).includes(this.skuId);
     }
     get isGuildProductPurchase() {
         return (
             null != this.sku &&
-            (this.sku.productLine === D.EZt.GUILD_PRODUCT || v.Lt(this.sku.flags, b.d.GUILD_PRODUCT))
+            (this.sku.productLine === G.EZt.GUILD_PRODUCT || y.Lt(this.sku.flags, j.d.GUILD_PRODUCT))
         );
     }
     get isSoftDeletedProduct() {
         return this.sku?.deleted === !0;
     }
     get isCollectible() {
-        return null != this.sku && this.sku.productLine === D.EZt.COLLECTIBLES;
+        return null != this.sku && this.sku.productLine === G.EZt.COLLECTIBLES;
     }
 }
-let U = [];
-function M(e) {
+let V = [],
+    k = !1;
+function w(e) {
     let { payment: t } = e,
-        i = G.createFromServer(t),
-        n = U.findIndex((e) => e.id === t.id);
-    -1 === n ? (U.push(i), U.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (U[n] = i), (U = [...U]);
+        i = M.createFromServer(t),
+        n = V.findIndex((e) => e.id === t.id);
+    -1 === n ? (V.push(i), V.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (V[n] = i), (V = [...V]);
 }
-class V extends d.Ay.Store {
+class F extends d.Ay.Store {
     static displayName = "PaymentStore";
     getPayment(e) {
-        return U.find((t) => t.id === e);
+        return V.find((t) => t.id === e);
     }
     getPayments() {
-        return U;
+        return V;
+    }
+    get hasFetchedPayments() {
+        return k;
     }
 }
-let k = new V(m.h, {
+let B = new F(h.h, {
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
         let { payments: t } = e;
-        for (let e of t) {
-            let t = G.createFromServer(e),
-                i = U.findIndex((t) => t.id === e.id);
-            -1 !== i ? (U[i] = t) : U.push(t);
+        for (let e of ((k = !0), t)) {
+            let t = M.createFromServer(e),
+                i = V.findIndex((t) => t.id === e.id);
+            -1 !== i ? (V[i] = t) : V.push(t);
         }
-        U.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (U = [...U]);
+        V.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (V = [...V]);
     },
-    PAYMENT_UPDATE: M,
-    BILLING_PAYMENT_FETCH_SUCCESS: M,
+    BILLING_PAYMENTS_FETCH_FAIL: function () {
+        k = !0;
+    },
+    PAYMENT_UPDATE: w,
+    BILLING_PAYMENT_FETCH_SUCCESS: w,
     LOGOUT: function () {
-        U = [];
+        (V = []), (k = !1);
     },
 });
-var w = i(97352),
-    F = i(166403),
-    B = i(927578),
-    z = i(989349),
-    Y = i.n(z),
-    X = i(990078),
-    H = i(821609),
-    K = i(939249),
-    W = i(289873),
-    Z = i(707554),
-    q = i(789645),
-    Q = i(933832),
-    J = i(349288),
-    $ = i(34188),
-    ee = i(403581),
-    et = i(597770),
-    ei = i(512950),
-    en = i(975807),
-    es = i(793574),
-    el = i(688810),
-    er = i(46225),
-    ea = i(587895),
-    eo = i(636537),
-    eu = i(683071),
-    ed = i(192308);
-let ec = function (e, t) {
-    (0, ed.openModalLazy)(async () => {
+var z = i(97352),
+    Y = i(166403),
+    X = i(428262),
+    H = i(989349),
+    K = i.n(H),
+    W = i(990078),
+    Z = i(821609),
+    q = i(939249),
+    Q = i(707554),
+    J = i(789645),
+    $ = i(933832),
+    ee = i(349288),
+    et = i(34188),
+    ei = i(403581),
+    en = i(597770),
+    es = i(512950),
+    el = i(975807),
+    er = i(793574),
+    ea = i(688810),
+    eo = i(46225),
+    eu = i(587895),
+    ed = i(636537),
+    ec = i(192308);
+let eg = function (e, t) {
+    (0, ec.openModalLazy)(async () => {
         let { default: s } = await Promise.all([i.e("7755"), i.e("34138")]).then(i.bind(i, 206049));
         return (i) => (0, n.jsx)(s, { payment: e, paymentSource: t, ...i });
     });
 };
-var eg = i(818348),
-    em = i(12762);
-async function eA(e) {
+var em = i(818348),
+    eA = i(12762);
+async function eh(e) {
     try {
         return (
-            await eo.Bo.get({
-                url: D.Rsh.BILLING_INVOICE_BREAKDOWN,
+            await ed.Bo.get({
+                url: G.Rsh.BILLING_INVOICE_BREAKDOWN,
                 query: { payment_id: e },
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -269,13 +276,13 @@ async function eA(e) {
         throw e;
     }
 }
-function eh(e) {
+function eE(e) {
     let { payment: t } = e,
         [i, l] = s.useState(null),
         [r, a] = s.useState(null),
         o = async (e) => {
             try {
-                let i = await eA(t.id);
+                let i = await eh(t.id);
                 l(i);
                 let n = e ? i.refundInvoiceLinks[0] : i.invoiceLink;
                 window.open(n, "_blank"), a(null);
@@ -283,108 +290,108 @@ function eh(e) {
                 a(e.body?.message);
             }
         },
-        u = null != t.paymentSource && t.status === eg.__.COMPLETED,
+        u = null != t.paymentSource && t.status === em.__.COMPLETED,
         d = i?.invoiceLink,
         c = i?.refundInvoiceLinks;
     return t.hasInvoiceURL && null == i
         ? (0, n.jsxs)("div", {
-              className: em.It,
+              className: eA.It,
               children: [
-                  (0, n.jsx)(J.Anchor, { onClick: () => o(!1), children: _.intl.formatToPlainString(_.t.R0xzCN, {}) }),
+                  (0, n.jsx)(ee.Anchor, { onClick: () => o(!1), children: I.intl.formatToPlainString(I.t.R0xzCN, {}) }),
                   t.hasRefundInvoiceURLs
-                      ? (0, n.jsx)(J.Anchor, {
-                            className: em.oe,
+                      ? (0, n.jsx)(ee.Anchor, {
+                            className: eA.oe,
                             onClick: () => o(!0),
-                            children: _.intl.formatToPlainString(_.t["3x6NGw"], {}),
+                            children: I.intl.formatToPlainString(I.t["3x6NGw"], {}),
                         })
                       : null,
-                  null != r && "" !== r && (0, n.jsx)(eu.w, { type: "critical", children: r }),
+                  null != r && "" !== r && (0, n.jsx)(A.w, { type: "critical", children: r }),
               ],
           })
         : t.hasInvoiceURL && null != i
           ? (0, n.jsxs)("div", {
-                className: em.It,
+                className: eA.It,
                 children: [
-                    (0, n.jsx)(J.Anchor, { href: d, children: _.intl.formatToPlainString(_.t.R0xzCN, {}) }),
+                    (0, n.jsx)(ee.Anchor, { href: d, children: I.intl.formatToPlainString(I.t.R0xzCN, {}) }),
                     null != c
                         ? c.map((e, t) =>
                               (0, n.jsx)(
-                                  J.Anchor,
+                                  ee.Anchor,
                                   {
-                                      className: em.oe,
+                                      className: eA.oe,
                                       href: e,
-                                      children: _.intl.formatToPlainString(_.t["3x6NGw"], {}),
+                                      children: I.intl.formatToPlainString(I.t["3x6NGw"], {}),
                                   },
                                   t,
                               ),
                           )
                         : null,
-                    null != r && "" !== r && (0, n.jsx)(eu.w, { type: "critical", children: r }),
+                    null != r && "" !== r && (0, n.jsx)(A.w, { type: "critical", children: r }),
                 ],
             })
           : u
             ? (0, n.jsx)("div", {
-                  className: em.It,
-                  children: (0, n.jsx)(J.Anchor, {
+                  className: eA.It,
+                  children: (0, n.jsx)(ee.Anchor, {
                       onClick: () => {
                           var e;
-                          (e = t.paymentSource), ec(t, e);
+                          (e = t.paymentSource), eg(t, e);
                       },
-                      children: _.intl.formatToPlainString(_.t.onRIxS, {}),
+                      children: I.intl.formatToPlainString(I.t.onRIxS, {}),
                   }),
               })
             : null;
 }
-var eE = i(137177),
-    eT = i(250627),
+var eT = i(137177),
+    eS = i(250627),
     ex = i(871109),
-    eS = i(571654),
-    ep = i(411342),
+    ep = i(571654),
+    ef = i(411342),
     eN = i(179499),
-    ef = i(741231),
-    e_ = i(95035),
-    eC = i(337095),
-    eI = i(871123),
-    eb = i(510022),
-    ev = i(68935),
-    ej = i(148355),
-    ey = i(780964),
-    eO = i(830543),
-    eR = i(766075),
-    eL = i(317525),
-    eD = i(71393),
-    eP = i(287809),
-    eG = i(295405),
-    eU = i(90165),
-    eM = i(147925),
-    eV = i(174459),
-    ek = i(957565),
-    ew = i(58703),
-    eF = i(580630),
-    eB = i(427262),
-    ez = i(219887);
-let eY = (e) => `https://${D.XlF}/hc/${e.toLowerCase()}/requests/new?ticket_form_id=360000118612`,
-    eX = [D.Puh.DURABLE_PRIMARY, D.Puh.DURABLE, D.Puh.CONSUMABLE],
-    eH = [D.__0.FAILED, D.__0.REVERSED, D.__0.CANCELED],
-    eK = [eg.kM.APPLE],
-    eW = (e) => {
+    e_ = i(741231),
+    eC = i(95035),
+    eI = i(337095),
+    eb = i(871123),
+    ev = i(510022),
+    ej = i(68935),
+    ey = i(148355),
+    eO = i(780964),
+    eR = i(830543),
+    eL = i(766075),
+    eD = i(317525),
+    eP = i(71393),
+    eG = i(287809),
+    eU = i(295405),
+    eM = i(90165),
+    eV = i(147925),
+    ek = i(174459),
+    ew = i(957565),
+    eF = i(58703),
+    eB = i(580630),
+    ez = i(427262),
+    eY = i(219887);
+let eX = (e) => `https://${G.XlF}/hc/${e.toLowerCase()}/requests/new?ticket_form_id=360000118612`,
+    eH = [G.Puh.DURABLE_PRIMARY, G.Puh.DURABLE, G.Puh.CONSUMABLE],
+    eK = [G.__0.FAILED, G.__0.REVERSED, G.__0.CANCELED],
+    eW = [em.kM.APPLE],
+    eZ = (e) => {
         let { description: t, cost: i } = e;
         return (0, n.jsx)("li", {
-            className: em.mg,
-            children: (0, n.jsxs)(x.A, {
-                justify: x.A.Justify.BETWEEN,
+            className: eA.mg,
+            children: (0, n.jsxs)(p.A, {
+                justify: p.A.Justify.BETWEEN,
                 children: [(0, n.jsx)("div", { children: t }), (0, n.jsx)("div", { children: i })],
             }),
         });
     };
-function eZ(e) {
+function eq(e) {
     let { value: t, copyText: i, copyFeedbackText: l } = e,
         [r, a] = s.useState(!1),
         [o, u] = s.useState(!1);
-    return (0, n.jsx)(X.m, {
+    return (0, n.jsx)(W.m, {
         forceOpen: o,
         text: r ? l : i,
-        children: (0, n.jsx)(K.D, {
+        children: (0, n.jsx)(q.D, {
             onMouseEnter: () => {
                 r && a(!1);
             },
@@ -392,92 +399,92 @@ function eZ(e) {
                 u(!1);
             },
             onClick: () => {
-                (0, ek.C)(t, () => {
+                (0, ew.C)(t, () => {
                     u(!0), a(!0);
                 });
             },
-            children: (0, n.jsx)("div", { className: em.l9, children: t }),
+            children: (0, n.jsx)("div", { className: eA.l9, children: t }),
         }),
     });
 }
-let eq = (e) => {
+let eQ = (e) => {
     let { description: t, detail: i } = e;
     return (0, n.jsx)("li", {
-        className: em.Iu,
-        children: (0, n.jsxs)(x.A, {
-            justify: x.A.Justify.BETWEEN,
+        className: eA.Iu,
+        children: (0, n.jsxs)(p.A, {
+            justify: p.A.Justify.BETWEEN,
             children: [(0, n.jsx)("div", { children: t }), (0, n.jsx)("div", { children: i })],
         }),
     });
 };
-function eQ(e) {
+function eJ(e) {
     let { guildId: t, guildProductListingId: i } = e,
-        l = (0, eT.Qi)(t, i, { requireCurrentGuild: !1 }),
-        r = (0, eS.z)(l),
-        a = (0, d.bG)([eD.A], () => eD.A.getGuild(t)),
-        o = l?.role_id != null && l?.attachments_count === 0 ? _.intl.string(_.t.H11qcT) : r,
+        l = (0, eS.Qi)(t, i, { requireCurrentGuild: !1 }),
+        r = (0, ep.z)(l),
+        a = (0, d.bG)([eP.A], () => eP.A.getGuild(t)),
+        o = l?.role_id != null && l?.attachments_count === 0 ? I.intl.string(I.t.H11qcT) : r,
         u = s.useCallback(async () => {
-            a?.features.has(D.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)
-                ? await (0, ef.A)(D.BVt.GUILD_PRODUCT(t, i))
-                : await (0, ef.A)(D.BVt.CHANNEL(t)),
-                (0, eO.default)();
+            a?.features.has(G.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)
+                ? await (0, e_.A)(G.BVt.GUILD_PRODUCT(t, i))
+                : await (0, e_.A)(G.BVt.CHANNEL(t)),
+                (0, eR.default)();
         }, [a, t, i]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            null != o && (0, n.jsx)(eq, { description: _.intl.string(_.t.lXPbJb), detail: o }),
+            null != o && (0, n.jsx)(eQ, { description: I.intl.string(I.t.lXPbJb), detail: o }),
             null != a &&
-                (0, n.jsx)(eq, {
-                    description: _.intl.string(_.t.Wpn8z8),
-                    detail: (0, n.jsx)(e_.A, { onClick: u, children: a.name }),
+                (0, n.jsx)(eQ, {
+                    description: I.intl.string(I.t.Wpn8z8),
+                    detail: (0, n.jsx)(eC.A, { onClick: u, children: a.name }),
                 }),
         ],
     });
 }
-function eJ(e) {
+function e$(e) {
     let { guildId: t, guildProductListingId: i } = e,
-        s = (0, eT.Qi)(t, i, { requireCurrentGuild: !1 }),
+        s = (0, eS.Qi)(t, i, { requireCurrentGuild: !1 }),
         l = (0, d.bG)([ex.A], () => ex.A.getGuildProductFetchState(i) === ex.e.FETCHING),
         r = s?.role_id,
-        a = (0, d.bG)([eL.A], () => (null != r ? eL.A.getRole(t, r) : void 0), [t, r]),
+        a = (0, d.bG)([eD.A], () => (null != r ? eD.A.getRole(t, r) : void 0), [t, r]),
         o = (0, eN.A)({ guildId: t, productId: i }),
         u = (s?.attachments?.length ?? 0) > 0,
         c = null != a;
     return l
-        ? (0, n.jsx)("div", { className: em.hT, children: (0, n.jsx)(W.y, {}) })
+        ? (0, n.jsx)("div", { className: eA.hT, children: (0, n.jsx)(m.y, {}) })
         : null != s && (u || c)
           ? (0, n.jsxs)("div", {
-                className: em.hT,
+                className: eA.hT,
                 children: [
                     u &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, n.jsx)(N.E, {
+                                (0, n.jsx)(_.E, {
                                     variant: "text-xs/semibold",
                                     color: "text-default",
-                                    className: em.yE,
-                                    children: _.intl.string(_.t.hxawoy),
+                                    className: eA.yE,
+                                    children: I.intl.string(I.t.hxawoy),
                                 }),
-                                (0, n.jsx)(H.$, { ...o }),
+                                (0, n.jsx)(Z.$, { ...o }),
                             ],
                         }),
                     c &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
-                                u && (0, n.jsx)("div", { className: em.yF }),
-                                (0, n.jsx)(N.E, {
+                                u && (0, n.jsx)("div", { className: eA.yF }),
+                                (0, n.jsx)(_.E, {
                                     variant: "text-xs/semibold",
                                     color: "text-default",
-                                    className: em.yE,
-                                    children: _.intl.string(_.t.gWBNet),
+                                    className: eA.yE,
+                                    children: I.intl.string(I.t.gWBNet),
                                 }),
-                                (0, n.jsx)(ep.A, { role: a }),
+                                (0, n.jsx)(ef.A, { role: a }),
                             ],
                         }),
                 ],
             })
           : null;
 }
-class e$ extends s.PureComponent {
+class e0 extends s.PureComponent {
     static defaultProps = { compactMode: !1 };
     state = { expanded: !1 };
     refundRules = [
@@ -493,7 +500,7 @@ class e$ extends s.PureComponent {
             rule: "SKU_TYPE",
             canRefund: () => {
                 let { payment: e } = this.props;
-                return null == e.sku || e.sku.type !== D.Puh.CONSUMABLE;
+                return null == e.sku || e.sku.type !== G.Puh.CONSUMABLE;
             },
         },
         {
@@ -507,35 +514,35 @@ class e$ extends s.PureComponent {
             rule: "PAYMENT_STATUS",
             canRefund: () => {
                 let { payment: e } = this.props;
-                return !eH.includes(e.status);
+                return !eK.includes(e.status);
             },
         },
         {
             rule: "PAYMENT_GATEWAY",
             canRefund: () => {
                 let { payment: e } = this.props;
-                return null == e.paymentGateway || !eK.includes(e.paymentGateway);
+                return null == e.paymentGateway || !eW.includes(e.paymentGateway);
             },
         },
         {
             rule: "SKU_STICKER_PACK",
             canRefund: () => {
                 let { payment: e } = this.props;
-                return null == e.sku || !(0, v.Lt)(e.sku.flags, D.d68.STICKER);
+                return null == e.sku || !(0, y.Lt)(e.sku.flags, G.d68.STICKER);
             },
         },
         {
             rule: "SUBSCRIPTION_TYPE",
             canRefund: () => {
                 let { payment: e } = this.props;
-                return e.subscription?.type !== D.rzx.GUILD && e.subscription?.type !== D.rzx.APPLICATION;
+                return e.subscription?.type !== G.rzx.GUILD && e.subscription?.type !== G.rzx.APPLICATION;
             },
         },
         {
             rule: "GUILD_PRODUCT",
             canRefund: () => {
                 let { payment: e } = this.props;
-                return null == e.sku || !(0, v.Lt)(e.sku.flags, b.d.GUILD_PRODUCT);
+                return null == e.sku || !(0, y.Lt)(e.sku.flags, j.d.GUILD_PRODUCT);
             },
         },
         {
@@ -550,7 +557,7 @@ class e$ extends s.PureComponent {
         let { payment: e } = this.props,
             t = null != e.sku ? e.sku.releaseDate : null,
             i = null != t && t.isAfter(e.createdAt) ? t : e.createdAt;
-        return Y()().diff(i, "days");
+        return K()().diff(i, "days");
     }
     get isPremium() {
         let { payment: e } = this.props;
@@ -573,34 +580,34 @@ class e$ extends s.PureComponent {
     renderDefaultStatus() {
         let { payment: e } = this.props;
         switch (e.status) {
-            case D.__0.PENDING:
-                return (0, n.jsx)("span", { className: em.Xg, children: _.intl.string(_.t.y7F0Re) });
-            case D.__0.FAILED:
-                return (0, n.jsx)("span", { className: em.ob, children: _.intl.string(_.t.Yo4ru6) });
-            case D.__0.REFUNDED:
+            case G.__0.PENDING:
+                return (0, n.jsx)("span", { className: eA.Xg, children: I.intl.string(I.t.y7F0Re) });
+            case G.__0.FAILED:
+                return (0, n.jsx)("span", { className: eA.ob, children: I.intl.string(I.t.Yo4ru6) });
+            case G.__0.REFUNDED:
                 if (e.amountRefunded !== e.amount)
-                    return (0, n.jsx)("span", { className: em.gD, children: _.intl.string(_.t.lYbZzz) });
-                return (0, n.jsx)("span", { className: em.gD, children: _.intl.string(_.t.ZBb6NK) });
-            case D.__0.REVERSED:
-                return (0, n.jsx)("span", { className: em.ob, children: _.intl.string(_.t.YQv9Li) });
-            case D.__0.CANCELED:
-                return (0, n.jsx)("span", { className: em.ob, children: _.intl.string(_.t.ttkBhy) });
+                    return (0, n.jsx)("span", { className: eA.gD, children: I.intl.string(I.t.lYbZzz) });
+                return (0, n.jsx)("span", { className: eA.gD, children: I.intl.string(I.t.ZBb6NK) });
+            case G.__0.REVERSED:
+                return (0, n.jsx)("span", { className: eA.ob, children: I.intl.string(I.t.YQv9Li) });
+            case G.__0.CANCELED:
+                return (0, n.jsx)("span", { className: eA.ob, children: I.intl.string(I.t.ttkBhy) });
             default:
                 return null;
         }
     }
     renderTenantStatusOverride() {
         let { payment: e, hasLinkedToApplication: t } = this.props;
-        return (0, eI.bF)(e.sku) && e.status === D.__0.COMPLETED
+        return (0, eb.bF)(e.sku) && e.status === G.__0.COMPLETED
             ? null != e.entitlements && e.entitlements.some((e) => e.isFulfilled())
-                ? (0, n.jsx)("span", { className: em.gD, children: _.intl.string(_.t.Osji1u) })
+                ? (0, n.jsx)("span", { className: eA.gD, children: I.intl.string(I.t.Osji1u) })
                 : e.isGift
                   ? null != e.entitlements && e.entitlements.some((e) => null != e.gifterId)
-                      ? (0, n.jsx)("span", { className: em.gD, children: _.intl.string(_.t.lIsIFo) })
-                      : (0, n.jsx)("span", { className: em.Tf, children: _.intl.string(_.t["+tqSi3"]) })
+                      ? (0, n.jsx)("span", { className: eA.gD, children: I.intl.string(I.t.lIsIFo) })
+                      : (0, n.jsx)("span", { className: eA.Tf, children: I.intl.string(I.t["+tqSi3"]) })
                   : t
-                    ? (0, n.jsx)("span", { className: em.Tf, children: _.intl.string(_.t.y7F0Re) })
-                    : (0, n.jsx)("span", { className: em.Tf, children: _.intl.string(_.t.HHC5Z4) })
+                    ? (0, n.jsx)("span", { className: eA.Tf, children: I.intl.string(I.t.y7F0Re) })
+                    : (0, n.jsx)("span", { className: eA.Tf, children: I.intl.string(I.t.HHC5Z4) })
             : null;
     }
     renderStatus() {
@@ -609,20 +616,20 @@ class e$ extends s.PureComponent {
     renderPrice() {
         let { payment: e } = this.props,
             t = e.amount - e.amountRefunded;
-        return (0, n.jsx)("span", { className: em.q9, children: (0, eF.$g)(t, e.currency) });
+        return (0, n.jsx)("span", { className: eA.q9, children: (0, eB.$g)(t, e.currency) });
     }
     renderPaymentIdField() {
         let { payment: e } = this.props;
         return (0, n.jsx)("li", {
-            className: em.mg,
+            className: eA.mg,
             children: (0, n.jsxs)("div", {
-                className: em.bx,
+                className: eA.bx,
                 children: [
-                    (0, n.jsx)("div", { children: _.intl.string(_.t["UQim+r"]) }),
-                    (0, n.jsx)(eZ, {
+                    (0, n.jsx)("div", { children: I.intl.string(I.t["UQim+r"]) }),
+                    (0, n.jsx)(eq, {
                         value: e.id,
-                        copyText: _.intl.string(_.t["Mdk9+A"]),
-                        copyFeedbackText: _.intl.string(_.t["7eIrA2"]),
+                        copyText: I.intl.string(I.t["Mdk9+A"]),
+                        copyFeedbackText: I.intl.string(I.t["7eIrA2"]),
                     }),
                 ],
             }),
@@ -633,21 +640,21 @@ class e$ extends s.PureComponent {
             { taxInclusive: l, tax: a, amount: o, amountRefunded: u, currency: d } = e,
             c = i?.guildId;
         return (0, n.jsxs)("div", {
-            className: r()(em.iL, em.W),
+            className: r()(eA.iL, eA.W),
             children: [
                 null != e.paymentSource
-                    ? (0, n.jsx)(ez.A, {
+                    ? (0, n.jsx)(eY.A, {
                           paymentSource: e.paymentSource,
                           locale: t,
-                          descriptionClassName: em.iL,
+                          descriptionClassName: eA.iL,
                           showLabels: !0,
                           showPaymentSourceIcon: !0,
                       })
-                    : e.paymentGateway === eg.kM.APPLE_PARTNER
-                      ? (0, n.jsx)(ez.A, {
-                            paymentSource: new R.Pw({}),
+                    : e.paymentGateway === em.kM.APPLE_PARTNER
+                      ? (0, n.jsx)(eY.A, {
+                            paymentSource: new D.Pw({}),
                             locale: t,
-                            descriptionClassName: em.iL,
+                            descriptionClassName: eA.iL,
                             showLabels: !0,
                             showPaymentSourceIcon: !0,
                         })
@@ -658,29 +665,29 @@ class e$ extends s.PureComponent {
                         !l && a > 0
                             ? (0, n.jsxs)(s.Fragment, {
                                   children: [
-                                      (0, n.jsx)(eW, { description: e.description, cost: (0, eF.$g)(o - a, d) }),
-                                      (0, n.jsx)(eW, {
-                                          description: _.intl.string(_.t.QgWXht),
-                                          cost: (0, eF.$g)(a, d),
+                                      (0, n.jsx)(eZ, { description: e.description, cost: (0, eB.$g)(o - a, d) }),
+                                      (0, n.jsx)(eZ, {
+                                          description: I.intl.string(I.t.QgWXht),
+                                          cost: (0, eB.$g)(a, d),
                                       }),
                                   ],
                               })
                             : null,
-                        (0, n.jsx)(eW, { description: _.intl.string(_.t.txajQG), cost: (0, eF.$g)(o, d) }),
+                        (0, n.jsx)(eZ, { description: I.intl.string(I.t.txajQG), cost: (0, eB.$g)(o, d) }),
                         e.isGuildProductPurchase &&
                             null != c &&
                             null != e.sku &&
-                            (0, n.jsx)(eQ, { guildId: c, guildProductListingId: e.sku.id }),
+                            (0, n.jsx)(eJ, { guildId: c, guildProductListingId: e.sku.id }),
                         u > 0 &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    (0, n.jsx)(eW, {
-                                        description: _.intl.string(_.t["A+I0AP"]),
-                                        cost: (0, eF.$g)(u, d),
+                                    (0, n.jsx)(eZ, {
+                                        description: I.intl.string(I.t["A+I0AP"]),
+                                        cost: (0, eB.$g)(u, d),
                                     }),
-                                    (0, n.jsx)(eW, {
-                                        description: _.intl.string(_.t.xER6Wi),
-                                        cost: (0, eF.$g)(o - u, d),
+                                    (0, n.jsx)(eZ, {
+                                        description: I.intl.string(I.t.xER6Wi),
+                                        cost: (0, eB.$g)(o - u, d),
                                     }),
                                 ],
                             }),
@@ -691,7 +698,7 @@ class e$ extends s.PureComponent {
     }
     renderInvoiceDownload() {
         let { payment: e } = this.props;
-        return (0, n.jsx)(eh, { payment: e });
+        return (0, n.jsx)(eE, { payment: e });
     }
     renderAdditionalGameItemDetails() {
         let {
@@ -703,37 +710,37 @@ class e$ extends s.PureComponent {
                 analyticsLocations: a,
             } = this.props,
             o = t.entitlements?.some((e) => e.isFulfilled());
-        return t.status === D.__0.REFUNDED
+        return t.status === G.__0.REFUNDED
             ? (0, n.jsxs)(s.Fragment, {
                   children: [
-                      (0, n.jsx)(Z.H, { className: em.mW, children: _.intl.string(_.t["gIGB/A"]) }),
+                      (0, n.jsx)(Q.H, { className: eA.mW, children: I.intl.string(I.t["gIGB/A"]) }),
                       (0, n.jsx)("div", {
-                          className: em.iL,
+                          className: eA.iL,
                           children:
                               null != e
-                                  ? _.intl.format(_.t.Q1K9eg, { username: eB.Ay.getName(e) })
-                                  : _.intl.format(_.t.IBtGwC, { applicationName: l?.name }),
+                                  ? I.intl.format(I.t.Q1K9eg, { username: ez.Ay.getName(e) })
+                                  : I.intl.format(I.t.IBtGwC, { applicationName: l?.name }),
                       }),
                   ],
               })
             : t.isGift
               ? (0, n.jsxs)(s.Fragment, {
                     children: [
-                        (0, n.jsx)(Z.H, { className: em.mW, children: _.intl.string(_.t["gIGB/A"]) }),
+                        (0, n.jsx)(Q.H, { className: eA.mW, children: I.intl.string(I.t["gIGB/A"]) }),
                         (0, n.jsx)("div", {
-                            className: em.iL,
+                            className: eA.iL,
                             children:
                                 null != e
-                                    ? _.intl.format(_.t.vfUW65, { username: eB.Ay.getName(e) })
-                                    : _.intl.string(_.t["18wIqp"]),
+                                    ? I.intl.format(I.t.vfUW65, { username: ez.Ay.getName(e) })
+                                    : I.intl.string(I.t["18wIqp"]),
                         }),
                         null == e &&
                             (0, n.jsx)("div", {
-                                className: em.TP,
-                                children: (0, n.jsx)(H.$, {
+                                className: eA.TP,
+                                children: (0, n.jsx)(Z.$, {
                                     variant: "primary",
-                                    text: _.intl.string(_.t["jcSP+g"]),
-                                    onClick: () => (0, eR.openUserSettings)(ey.X.GIFT_PANEL),
+                                    text: I.intl.string(I.t["jcSP+g"]),
+                                    onClick: () => (0, eL.openUserSettings)(eO.X.GIFT_PANEL),
                                 }),
                             }),
                     ],
@@ -742,32 +749,32 @@ class e$ extends s.PureComponent {
                 ? null
                 : (0, n.jsxs)(s.Fragment, {
                       children: [
-                          (0, n.jsx)(Z.H, { className: em.mW, children: _.intl.string(_.t["gIGB/A"]) }),
+                          (0, n.jsx)(Q.H, { className: eA.mW, children: I.intl.string(I.t["gIGB/A"]) }),
                           (0, n.jsx)("div", {
-                              className: em.iL,
+                              className: eA.iL,
                               children: i
-                                  ? _.intl.format(_.t.DQQCAw, { applicationName: l?.name, skuName: t.sku?.name })
-                                  : _.intl.format(_.t.ED2BqF, { applicationName: l?.name, skuName: t.sku?.name }),
+                                  ? I.intl.format(I.t.DQQCAw, { applicationName: l?.name, skuName: t.sku?.name })
+                                  : I.intl.format(I.t.ED2BqF, { applicationName: l?.name, skuName: t.sku?.name }),
                           }),
                           (0, n.jsx)("div", {
-                              className: em.TP,
+                              className: eA.TP,
                               children: i
-                                  ? (0, n.jsx)(H.$, {
+                                  ? (0, n.jsx)(Z.$, {
                                         variant: "primary",
-                                        text: _.intl.string(_.t.zoztQA),
-                                        onClick: () => (0, en.A)(eY(r)),
+                                        text: I.intl.string(I.t.zoztQA),
+                                        onClick: () => (0, el.A)(eX(r)),
                                     })
-                                  : (0, n.jsx)(H.$, {
+                                  : (0, n.jsx)(Z.$, {
                                         variant: "primary",
-                                        text: _.intl.string(_.t["jCqvk/"]),
+                                        text: I.intl.string(I.t["jCqvk/"]),
                                         onClick: () => {
                                             null != t.sku &&
                                                 null != l &&
-                                                (eV.default.track(
-                                                    D.HAw.PAYMENT_HISTORY_CONNECT_ACCOUNT_BUTTON_CLICKED,
+                                                (ek.default.track(
+                                                    G.HAw.PAYMENT_HISTORY_CONNECT_ACCOUNT_BUTTON_CLICKED,
                                                     { sku_id: t.sku.id, application_id: l.id, location_stack: a },
                                                 ),
-                                                (0, eb.n)({ sku: t.sku, application: l, analyticsLocations: a }));
+                                                (0, ev.n)({ sku: t.sku, application: l, analyticsLocations: a }));
                                         },
                                     }),
                           }),
@@ -776,7 +783,7 @@ class e$ extends s.PureComponent {
     }
     renderAdditionalTenantInfo() {
         let { payment: e } = this.props;
-        if ((0, eI.bF)(e.sku)) return this.renderAdditionalGameItemDetails();
+        if ((0, eb.bF)(e.sku)) return this.renderAdditionalGameItemDetails();
     }
     renderRefundDetails() {
         let e,
@@ -792,29 +799,29 @@ class e$ extends s.PureComponent {
         )
             return null;
         let r = 0 === l.length,
-            a = eY(t),
+            a = eX(t),
             o = this.isPremium ? 5 : 14;
         return (
             (e = l.includes("SKU_TYPE")
-                ? _.intl.format(_.t["5lvoVS"], { supportURL: a })
+                ? I.intl.format(I.t["5lvoVS"], { supportURL: a })
                 : r
                   ? i.isPremiumSubscription || i.isPremiumGuildSubscription
-                      ? _.intl.format(_.t.EPYteX, { dateLimit: o, supportURL: a })
+                      ? I.intl.format(I.t.EPYteX, { dateLimit: o, supportURL: a })
                       : i.isGift
-                        ? _.intl.format(_.t["16eP/L"], { dateLimit: o, supportURL: a })
-                        : _.intl.format(_.t["1LDI4J"], { dateLimit: o, playtimeLimit: 2, supportURL: a })
+                        ? I.intl.format(I.t["16eP/L"], { dateLimit: o, supportURL: a })
+                        : I.intl.format(I.t["1LDI4J"], { dateLimit: o, playtimeLimit: 2, supportURL: a })
                   : i.isCollectible
-                    ? _.intl.string(_.t.s9TZM1)
+                    ? I.intl.string(I.t.s9TZM1)
                     : i.isGift
-                      ? _.intl.formatToPlainString(_.t.owlOWc, { dateLimit: o })
+                      ? I.intl.formatToPlainString(I.t.owlOWc, { dateLimit: o })
                       : i.isPremiumSubscription || i.isPremiumGuildSubscription
-                        ? _.intl.formatToPlainString(_.t.dk7vyL, { dateLimit: o })
-                        : _.intl.formatToPlainString(_.t.s4Kk0C, { dateLimit: o, playtimeLimit: 2 })),
+                        ? I.intl.formatToPlainString(I.t.dk7vyL, { dateLimit: o })
+                        : I.intl.formatToPlainString(I.t.s4Kk0C, { dateLimit: o, playtimeLimit: 2 })),
             (0, n.jsxs)(s.Fragment, {
                 children: [
-                    (0, n.jsx)(Z.H, { className: em.mW, children: _.intl.string(_.t["n/27pr"]) }),
+                    (0, n.jsx)(Q.H, { className: eA.mW, children: I.intl.string(I.t["n/27pr"]) }),
                     (0, n.jsxs)("div", {
-                        className: em.iL,
+                        className: eA.iL,
                         children: [(0, n.jsx)("div", { children: e }), this.renderRefundActions(l)],
                     }),
                 ],
@@ -825,13 +832,13 @@ class e$ extends s.PureComponent {
         return (0, n.jsxs)(
             "div",
             {
-                className: em._Z,
+                className: eA._Z,
                 children: [
-                    (0, n.jsx)(Z.H, { className: em.ud, children: e }),
+                    (0, n.jsx)(Q.H, { className: eA.ud, children: e }),
                     (0, n.jsxs)("div", {
-                        className: em.z9,
+                        className: eA.z9,
                         children: [
-                            (0, n.jsx)(t, { className: em.xb, color: "currentColor" }),
+                            (0, n.jsx)(t, { className: eA.xb, color: "currentColor" }),
                             null != i && (0, n.jsx)("div", { children: i }),
                         ],
                     }),
@@ -843,21 +850,21 @@ class e$ extends s.PureComponent {
     renderRefundActions(e) {
         let { locale: t, payment: i } = this.props;
         if (e.includes("SKU_TYPE")) return null;
-        let s = e.includes("PURCHASE_DATE") ? q.P : Q.A;
+        let s = e.includes("PURCHASE_DATE") ? J.P : $.A;
         return (0, n.jsxs)("div", {
-            className: em.My,
+            className: eA.My,
             children: [
                 (0, n.jsx)("div", {
-                    className: em.Kf,
+                    className: eA.Kf,
                     children:
                         !i.isCollectible &&
                         this.renderRefundCriteria(
-                            _.intl.string(_.t.H0RNz4),
+                            I.intl.string(I.t.H0RNz4),
                             s,
-                            _.intl.formatToPlainString(_.t["7dtXa/"], { daysSincePurchase: this.daysSincePurchase }),
+                            I.intl.formatToPlainString(I.t["7dtXa/"], { daysSincePurchase: this.daysSincePurchase }),
                         ),
                 }),
-                (0, n.jsx)(J.Anchor, { href: eY(t), children: _.intl.string(_.t.re5nOB) }),
+                (0, n.jsx)(ee.Anchor, { href: eX(t), children: I.intl.string(I.t.re5nOB) }),
             ],
         });
     }
@@ -868,87 +875,87 @@ class e$ extends s.PureComponent {
             { expanded: d } = this.state,
             c = l.sku,
             g = l.subscription,
-            m = null != l.paymentSource && D.AD1.has(l.paymentSource.type);
+            m = null != l.paymentSource && G.AD1.has(l.paymentSource.type);
         if (null != g && 0 !== g.items.length) {
             let i = [],
                 s = null;
-            if (g.type === D.rzx.PREMIUM)
+            if (g.type === G.rzx.PREMIUM)
                 g.items.forEach((e) => {
                     let { planId: t, quantity: n } = e;
-                    (0, B.xq)(t)
-                        ? (i.push(B.Ay.getDisplayName(t, !1, m)), (s = (0, B.mH)(P.hd[t].skuId)))
-                        : (i.push(`${n > 1 ? `${n}x ` : ""}${B.Ay.getDisplayName(t, !1, m)}`),
-                          null == s && (s = (0, B.mH)(P.hd[t].skuId)));
+                    (0, X.xq)(t)
+                        ? (i.push(X.Ay.getDisplayName(t, !1, m)), (s = (0, X.mH)(U.hd[t].skuId)))
+                        : (i.push(`${n > 1 ? `${n}x ` : ""}${X.Ay.getDisplayName(t, !1, m)}`),
+                          null == s && (s = (0, X.mH)(U.hd[t].skuId)));
                 });
-            else if (g.type === D.rzx.GUILD) {
+            else if (g.type === G.rzx.GUILD) {
                 if (null != u) {
-                    let e = u.interval === P.WT.YEAR ? _.t.V6UFQM : _.t["6oq128"];
-                    i.push(_.intl.format(e, { planName: u.name })), (s = u.skuId);
+                    let e = u.interval === U.WT.YEAR ? I.t.V6UFQM : I.t["6oq128"];
+                    i.push(I.intl.format(e, { planName: u.name })), (s = u.skuId);
                 }
             } else
-                g.type === D.rzx.APPLICATION &&
+                g.type === G.rzx.APPLICATION &&
                     (null != u && (s = u.skuId),
                     null != r
-                        ? i.push(_.intl.formatToPlainString(_.t["0wL/VI"], { tier: c?.name }))
-                        : i.push(_.intl.string(_.t["9czSYu"])));
+                        ? i.push(I.intl.formatToPlainString(I.t["0wL/VI"], { tier: c?.name }))
+                        : i.push(I.intl.string(I.t["9czSYu"])));
             (t = 0 !== i.length ? i.join(", ") : l.description),
-                (e = (0, n.jsx)(eE.A, {
-                    className: em.Sy,
-                    guildClassName: em.zA,
+                (e = (0, n.jsx)(eT.A, {
+                    className: eA.Sy,
+                    guildClassName: eA.zA,
                     game: r,
                     guild: a,
-                    size: eE.M.XSMALL,
+                    size: eT.M.XSMALL,
                     skuId: s ?? c?.id,
                 }));
         } else if (null != c)
             if (
-                ((t = l.isGuildProductPurchase && l.isSoftDeletedProduct ? _.intl.string(_.t.O7uLmw) : c.name),
+                ((t = l.isGuildProductPurchase && l.isSoftDeletedProduct ? I.intl.string(I.t.O7uLmw) : c.name),
                 null != o)
             ) {
-                let t = (0, ev.Id)(o);
-                e = (0, n.jsx)(ej.A, {
+                let t = (0, ej.Id)(o);
+                e = (0, n.jsx)(ey.A, {
                     disableAnimation: !d,
                     isInteracting: d,
                     sticker: t,
-                    className: em.Sy,
+                    className: eA.Sy,
                     size: 24,
                 });
             } else
                 e =
-                    l.sku?.productLine === D.EZt.COLLECTIBLES
-                        ? (0, n.jsx)($.U, {
+                    l.sku?.productLine === G.EZt.COLLECTIBLES
+                        ? (0, n.jsx)(et.U, {
                               size: "custom",
                               width: 23,
                               height: 23,
                               color: "currentColor",
-                              className: em.sV,
+                              className: eA.sV,
                           })
-                        : (0, n.jsx)(eE.A, {
-                              className: em.Sy,
-                              guildClassName: em.zA,
+                        : (0, n.jsx)(eT.A, {
+                              className: eA.Sy,
+                              guildClassName: eA.zA,
                               game: r,
                               guild: a,
-                              size: eE.M.XSMALL,
+                              size: eT.M.XSMALL,
                               skuId: c.id,
                           });
-        else (e = (0, n.jsx)(ee.t, { size: "md", color: "currentColor", className: em.Sy })), (t = l.description);
-        let A = (0, n.jsx)(N.E, {
+        else (e = (0, n.jsx)(ei.t, { size: "md", color: "currentColor", className: eA.Sy })), (t = l.description);
+        let A = (0, n.jsx)(_.E, {
                 variant: "text-sm/normal",
-                className: em.p6,
-                children: (0, ew.i$)(Y()(l.createdAt), "MM/DD/YYYY"),
+                className: eA.p6,
+                children: (0, eF.i$)(K()(l.createdAt), "MM/DD/YYYY"),
             }),
             h = l.isGift
-                ? (0, n.jsx)(X.m, {
-                      text: _.intl.string(_.t.QddTpm),
-                      children: (0, n.jsx)(et.o, { size: "md", color: "currentColor", className: em.ez }),
+                ? (0, n.jsx)(W.m, {
+                      text: I.intl.string(I.t.QddTpm),
+                      children: (0, n.jsx)(en.o, { size: "md", color: "currentColor", className: eA.ez }),
                   })
                 : null;
         return i
-            ? (0, n.jsxs)("div", { className: em.h_, children: [e, (0, n.jsxs)("div", { children: [t, A] }), h] })
+            ? (0, n.jsxs)("div", { className: eA.h_, children: [e, (0, n.jsxs)("div", { children: [t, A] }), h] })
             : (0, n.jsxs)(s.Fragment, {
                   children: [
                       A,
-                      (0, n.jsxs)("div", { className: em.h_, children: [e, (0, n.jsx)("div", { children: t }), h] }),
+                      (0, n.jsxs)("div", { className: eA.h_, children: [e, (0, n.jsx)("div", { children: t }), h] }),
                   ],
               });
     }
@@ -958,31 +965,31 @@ class e$ extends s.PureComponent {
         return e.isGuildProductPurchase
             ? (0, n.jsxs)(n.Fragment, {
                   children: [
-                      (0, n.jsx)("div", { className: em.ts }),
+                      (0, n.jsx)("div", { className: eA.ts }),
                       e.isSoftDeletedProduct
-                          ? (0, n.jsx)(ei.p, {
-                                messageType: ei.Y.WARNING,
-                                action: (0, n.jsx)(H.$, {
+                          ? (0, n.jsx)(es.p, {
+                                messageType: es.Y.WARNING,
+                                action: (0, n.jsx)(Z.$, {
                                     variant: "overlay-secondary",
-                                    text: _.intl.string(_.t.zoztQA),
-                                    onClick: () => (0, en.A)(eY(i)),
+                                    text: I.intl.string(I.t.zoztQA),
+                                    onClick: () => (0, el.A)(eX(i)),
                                 }),
-                                children: _.intl.string(_.t["3AvulN"]),
+                                children: I.intl.string(I.t["3AvulN"]),
                             })
                           : null != s &&
                             null != e.sku &&
-                            (0, n.jsx)(eJ, { guildId: s, guildProductListingId: e.sku.id }),
+                            (0, n.jsx)(e$, { guildId: s, guildProductListingId: e.sku.id }),
                   ],
               })
             : null;
     }
     renderExpandedSection() {
-        return (0, n.jsx)(K.D, {
+        return (0, n.jsx)(q.D, {
             onClick: (e) => e.stopPropagation(),
             children: (0, n.jsxs)("div", {
-                className: em.WI,
+                className: eA.WI,
                 children: [
-                    (0, n.jsx)(Z.H, { className: em.mW, children: _.intl.string(_.t.nyzoFb) }),
+                    (0, n.jsx)(Q.H, { className: eA.mW, children: I.intl.string(I.t.nyzoFb) }),
                     this.renderPaymentBreakdown(),
                     this.renderGuildProductBenefits(),
                     this.renderInvoiceDownload(),
@@ -998,26 +1005,26 @@ class e$ extends s.PureComponent {
         return (0, n.jsx)(u.tG, {
             id: e.id,
             children: (e) =>
-                (0, n.jsxs)(K.D, {
+                (0, n.jsxs)(q.D, {
                     onClick: this.handleExpandInfo,
                     "data-expanded": s,
-                    className: r()(em.Ji, t, { [em.oE]: i }),
+                    className: r()(eA.Ji, t, { [eA.oE]: i }),
                     focusProps: { offset: 4 },
                     ...e,
                     children: [
-                        (0, n.jsxs)(x.A, {
-                            className: em.J7,
-                            align: x.A.Align.CENTER,
+                        (0, n.jsxs)(p.A, {
+                            className: eA.J7,
+                            align: p.A.Align.CENTER,
                             "data-expanded": s,
                             children: [
                                 this.renderDescription(),
                                 (0, n.jsxs)("div", {
-                                    className: em.vj,
+                                    className: eA.vj,
                                     children: [this.renderStatus(), this.renderPrice()],
                                 }),
-                                (0, n.jsx)(eM.A, {
-                                    className: em.fT,
-                                    direction: s ? eM.A.Directions.UP : eM.A.Directions.DOWN,
+                                (0, n.jsx)(eV.A, {
+                                    className: eA.fT,
+                                    direction: s ? eV.A.Directions.UP : eV.A.Directions.DOWN,
                                 }),
                             ],
                         }),
@@ -1027,39 +1034,39 @@ class e$ extends s.PureComponent {
         });
     }
 }
-function e0(e) {
+function e1(e) {
     let { payment: t, locale: i, compactMode: l, className: r } = e,
-        a = null != t.sku && eX.includes(t.sku.type),
+        a = null != t.sku && eH.includes(t.sku.type),
         o = null != t.sku && a ? t.sku.applicationId : null,
         u = t.sku?.applicationId,
-        c = t.subscription?.type === D.rzx.APPLICATION,
+        c = t.subscription?.type === G.rzx.APPLICATION,
         {
             applicationStatistics: g,
             gameApplication: m,
             paymentSources: A,
-        } = (0, d.cf)([eG.A, eU.A, ea.A], () => ({
-            applicationStatistics: null != o ? eU.A.getCurrentUserStatisticsForApplication(o) : null,
-            gameApplication: ea.A.getApplication(o ?? "") ?? t.sku?.application,
-            paymentSources: eG.A.paymentSources,
+        } = (0, d.cf)([eU.A, eM.A, eu.A], () => ({
+            applicationStatistics: null != o ? eM.A.getCurrentUserStatisticsForApplication(o) : null,
+            gameApplication: eu.A.getApplication(o ?? "") ?? t.sku?.application,
+            paymentSources: eU.A.paymentSources,
         })),
-        { hasAlreadyLinked: h } = (0, er.RD)((0, eI.bF)(t.sku) ? m : void 0),
-        E = (0, d.bG)([ea.A], () => (null != u ? ea.A.getApplication(u) : null));
+        { hasAlreadyLinked: h } = (0, eo.RD)((0, eb.bF)(t.sku) ? m : void 0),
+        E = (0, d.bG)([eu.A], () => (null != u ? eu.A.getApplication(u) : null));
     s.useEffect(() => {
-        c && null != u && (0, eC.TA)(u);
+        c && null != u && (0, eI.TA)(u);
     }, [u, c]);
-    let T = (0, d.bG)([eD.A], () => eD.A.getGuild(m?.guildId)),
-        x = a ? m : void 0,
-        S = t.subscription,
-        p = (0, d.bG)([w.A], () => (null != S && S.type !== D.rzx.PREMIUM ? w.A.get(S.items[0].planId) : null)),
-        N = (0, d.bG)([eP.default], () => {
+    let T = (0, d.bG)([eP.A], () => eP.A.getGuild(m?.guildId)),
+        S = a ? m : void 0,
+        x = t.subscription,
+        p = (0, d.bG)([z.A], () => (null != x && x.type !== G.rzx.PREMIUM ? z.A.get(x.items[0].planId) : null)),
+        f = (0, d.bG)([eG.default], () => {
             let e = t.isGift ? t.entitlements?.find((e) => e.user?.id != null && null != e.gifterId) : null;
-            return null == e ? null : (eP.default.getUser(e.user?.id ?? null) ?? e?.user);
+            return null == e ? null : (eG.default.getUser(e.user?.id ?? null) ?? e?.user);
         }, [t]),
-        { analyticsLocations: f } = (0, el.Ay)(es.A.BILLING_SETTINGS_BILLING);
-    return (0, n.jsx)(e$, {
+        { analyticsLocations: N } = (0, ea.Ay)(er.A.BILLING_SETTINGS_BILLING);
+    return (0, n.jsx)(e0, {
         applicationStatistics: g,
-        application: c ? E : x,
-        analyticsLocations: f,
+        application: c ? E : S,
+        analyticsLocations: N,
         guild: T,
         stickerPack: null,
         paymentSources: A,
@@ -1068,12 +1075,12 @@ function e0(e) {
         className: r,
         payment: t,
         plan: p,
-        claimedGiftUser: N,
+        claimedGiftUser: f,
         hasLinkedToApplication: h,
     });
 }
-var e1 = i(687788);
-function e2(e) {
+var e2 = i(687788);
+function e3(e) {
     let { payments: t, locale: i, compactMode: l, numPages: a } = e,
         o = s.useRef(null),
         [d, g] = s.useState(0),
@@ -1082,34 +1089,34 @@ function e2(e) {
     s.useEffect(() => {
         o.current?.scrollTo({ to: 0 });
     }, [d]);
-    let x = s.useCallback(
+    let E = s.useCallback(
             (e) => {
                 g(e);
                 let i = t[t.length - 1].id;
-                e >= a - 2 && m !== i && ((0, T.CK)(10, i), A(i));
+                e >= a - 2 && m !== i && ((0, x.CK)(10, i), A(i));
             },
             [t, a, m],
         ),
-        S = (0, E.A)("billing-history", o);
+        T = (0, S.A)("billing-history", o);
     return (0, n.jsx)(u.hD, {
-        navigator: S,
+        navigator: T,
         children: (0, n.jsx)(u.PR, {
             children: (e) => {
                 let { ref: t, ...s } = e;
-                return (0, n.jsx)(I, {
-                    className: e1.GD,
+                return (0, n.jsx)(v, {
+                    className: e2.GD,
                     currentPageIndex: d,
-                    onChangePage: x,
+                    onChangePage: E,
                     numPages: a,
                     showPageCount: !1,
                     ref: t,
                     ...s,
                     children: (0, n.jsx)(c.Ch, {
-                        className: e1.Bd,
+                        className: e2.Bd,
                         ref: o,
                         overflow: "auto",
                         children: h.map((e, t) =>
-                            (0, n.jsx)(e0, { className: r()(e1.Nj, e1.Bd), payment: e, locale: i, compactMode: l }, t),
+                            (0, n.jsx)(e1, { className: r()(e2.Nj, e2.Bd), payment: e, locale: i, compactMode: l }, t),
                         ),
                     }),
                 });
@@ -1117,32 +1124,32 @@ function e2(e) {
         }),
     });
 }
-class e3 extends s.PureComponent {
+class e6 extends s.PureComponent {
     static defaultProps = { compactMode: !1 };
     scrollerRef = s.createRef();
     get numPages() {
         return Math.max(Math.ceil(this.props.payments.length / 10), 1);
     }
     componentDidMount() {
-        m.h.wait(() => {
-            (0, A.X)(), (0, T.CK)(30);
+        h.h.wait(() => {
+            (0, E.X)(), (0, x.CK)(30);
         });
     }
     renderPremiumExternalSubscription(e) {
         return (
             o()(null != e.paymentGateway, "Expected payment gateway when rendering for external subscription"),
             (0, n.jsxs)(g.Z, {
-                className: e1.K1,
+                className: e2.K1,
                 children: [
                     (0, n.jsx)("div", {
-                        className: e1.BF,
-                        children: _.intl.format(_.t["6mIX6s"], { paymentGatewayName: eg.qm[e.paymentGateway] }),
+                        className: e2.BF,
+                        children: I.intl.format(I.t["6mIX6s"], { paymentGatewayName: em.qm[e.paymentGateway] }),
                     }),
                     (0, n.jsx)("div", {
-                        className: e1.Q2,
-                        children: _.intl.format(_.t.eG0uZB, {
-                            paymentGatewayName: eg.qm[e.paymentGateway],
-                            billingHistoryLink: (0, B.tW)(e.paymentGateway, "BILLING_HISTORY"),
+                        className: e2.Q2,
+                        children: I.intl.format(I.t.eG0uZB, {
+                            paymentGatewayName: em.qm[e.paymentGateway],
+                            billingHistoryLink: (0, X.tW)(e.paymentGateway, "BILLING_HISTORY"),
                         }),
                     }),
                 ],
@@ -1150,60 +1157,62 @@ class e3 extends s.PureComponent {
         );
     }
     render() {
-        let { compactMode: e, payments: t, subscription: i, locale: s } = this.props,
-            l = null != i && i.isPurchasedExternally;
-        return 0 !== t.length || l
+        let { compactMode: e, payments: t, subscription: i, locale: s, hasFetchedPayments: l } = this.props,
+            a = null != i && i.isPurchasedExternally;
+        return l
             ? (0, n.jsxs)("div", {
-                  className: e1.GD,
+                  className: e2.GD,
                   children: [
-                      null != i && l ? this.renderPremiumExternalSubscription(i) : null,
+                      null != i && a ? this.renderPremiumExternalSubscription(i) : null,
                       t.length > 0
                           ? (0, n.jsxs)("div", {
-                                className: r()(e1.PQ, e1.GD),
+                                className: r()(e2.PQ, e2.GD),
                                 children: [
                                     e
                                         ? null
                                         : (0, n.jsx)("div", {
-                                              className: r()(e1.Nj, e1.Bd),
-                                              children: (0, n.jsxs)(x.A, {
-                                                  className: e1.Yi,
+                                              className: r()(e2.Nj, e2.Bd),
+                                              children: (0, n.jsxs)(p.A, {
+                                                  className: e2.Yi,
                                                   children: [
                                                       (0, n.jsx)("div", {
-                                                          className: em.p6,
-                                                          children: _.intl.string(_.t["5t11BV"]),
+                                                          className: eA.p6,
+                                                          children: I.intl.string(I.t["5t11BV"]),
                                                       }),
                                                       (0, n.jsx)("div", {
-                                                          className: e1.Ir,
-                                                          children: _.intl.string(_.t.yAAPb2),
+                                                          className: e2.Ir,
+                                                          children: I.intl.string(I.t.yAAPb2),
                                                       }),
                                                       (0, n.jsx)("div", {
-                                                          className: em.vj,
-                                                          children: _.intl.string(_.t["6MqHXV"]),
+                                                          className: eA.vj,
+                                                          children: I.intl.string(I.t["6MqHXV"]),
                                                       }),
                                                   ],
                                               }),
                                           }),
-                                    (0, n.jsx)(e2, { compactMode: e, locale: s, payments: t, numPages: this.numPages }),
+                                    (0, n.jsx)(e3, { compactMode: e, locale: s, payments: t, numPages: this.numPages }),
                                 ],
                             })
-                          : null,
+                          : a
+                            ? null
+                            : (0, n.jsx)(A.w, { type: "info", children: I.intl.string(I.t.GqvDkk) }),
                   ],
               })
-            : null;
+            : (0, n.jsx)(m.y, {});
     }
 }
-function e6(e) {
+function e4(e) {
     let t = e.skuId,
         i = e.subscription?.items[0].planId;
-    return !(null == t || null == i || Object.values(P.pe).includes(t) || (0, B.ys)(i));
+    return !(null == t || null == i || Object.values(U.pe).includes(t) || (0, X.ys)(i));
 }
-function e4(e) {
-    let t = (0, d.bG)([k], () => k.getPayments()),
-        i = (0, d.bG)([F.A], () => F.A.getPremiumTypeSubscription()),
+function e7(e) {
+    let t = (0, d.bG)([B], () => B.getPayments()),
+        i = (0, d.bG)([Y.A], () => Y.A.getPremiumTypeSubscription()),
         l = s.useMemo(
             () =>
                 new Set(
-                    t.filter(e6).map((e) => {
+                    t.filter(e4).map((e) => {
                         let { subscription: t } = e;
                         return t?.items[0].planId;
                     }),
@@ -1213,23 +1222,22 @@ function e4(e) {
         r = s.useMemo(
             () =>
                 new Set(
-                    t.filter(e6).map((e) => {
+                    t.filter(e4).map((e) => {
                         let { skuId: t } = e;
                         return t;
                     }),
                 ),
             [t],
         ),
-        a = (0, d.yK)([w.A], () => w.A.getPlanIdsForSkus(Array.from(r))),
+        a = (0, d.yK)([z.A], () => z.A.getPlanIdsForSkus(Array.from(r))),
         o = s.useCallback(() => a.length === l.size, [a, l]),
-        u = s.useMemo(() => t.filter((e) => e.currency !== D.Yri.DISCORD_ORB), [t]);
-    return (
-        s.useEffect(() => {
-            o() ||
-                m.h.wait(() => {
-                    r.forEach((e) => (0, h.ur)(e, void 0, void 0, !0, void 0));
-                });
-        }, [o, r]),
-        (0, n.jsx)(e3, { ...e, payments: u, subscription: i })
-    );
+        u = s.useMemo(() => t.filter((e) => e.currency !== G.Yri.DISCORD_ORB), [t]);
+    s.useEffect(() => {
+        o() ||
+            h.h.wait(() => {
+                r.forEach((e) => (0, T.ur)(e, void 0, void 0, !0, void 0));
+            });
+    }, [o, r]);
+    let c = (0, d.bG)([B], () => B.hasFetchedPayments);
+    return (0, n.jsx)(e6, { ...e, payments: u, subscription: i, hasFetchedPayments: c });
 }
