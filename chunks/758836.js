@@ -63,12 +63,11 @@ var N =
         (s.BUNDLES = "bundles"),
         (s.LAYOUT = "layout"),
         (s.COLLECTION_INDEX = "collection-index"),
-        (s.RIVALS = "rivals"),
         (s.GAME_SHOPS = "game-shops"),
         s);
 let C = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"],
     v = (e) => C.includes(e),
-    O = (e) => null != e && "home" !== e && "catalog" !== e && "rivals" !== e && "game-shops" !== e,
+    O = (e) => null != e && "home" !== e && "catalog" !== e && "game-shops" !== e,
     R = 800,
     b = [
         "1212569433839636530",

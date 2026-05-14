@@ -23,8 +23,8 @@ var l,
     v = s(287809),
     j = s(440938),
     b = s(590180),
-    I = s(161918),
-    O = s(17928),
+    O = s(161918),
+    I = s(17928),
     N = s(793574),
     y = s(174459),
     k = s(428262),
@@ -33,7 +33,7 @@ var l,
     B = s(652215),
     M = s(788868);
 let P = (e) => {
-    let { analyticsSource: t, analyticsLocations: s } = (0, O.cf)([T.A], () => T.A.getAnalytics()),
+    let { analyticsSource: t, analyticsLocations: s } = (0, I.cf)([T.A], () => T.A.getAnalytics()),
         l = ((e) => {
             switch (e) {
                 case R.G2.ORBS:
@@ -54,7 +54,6 @@ let P = (e) => {
                 case R.G2.COLLECTION_INDEX:
                 case R.G2.LAYOUT:
                     return N.A.COLLECTIBLES_SHOP;
-                case R.G2.RIVALS:
                 case R.G2.GAME_SHOPS:
                     return N.A.SLAYER_STOREFRONT_SHOP_TAB;
             }
@@ -210,14 +209,14 @@ var eL = s(100057),
     ev = s(653887),
     ej = s(607470),
     eb = s(531685),
-    eI = s(203312),
-    eO = s(212407),
+    eO = s(203312),
+    eI = s(212407),
     eN = s(215688);
 function ey(e) {
     let { category: t } = e,
         s = (0, h.bG)([Y.A], () => Y.A.useReducedMotion),
         l = (0, h.bG)([eb.A], () => eb.A.isFocused()),
-        { catalogBannerStatic: n, catalogBannerAnimated: a, catalogBannerRive: r } = (0, eO.MV)(t),
+        { catalogBannerStatic: n, catalogBannerAnimated: a, catalogBannerRive: r } = (0, eI.MV)(t),
         i = u.useRef(null),
         o = null != r;
     return (0, c.jsxs)("div", {
@@ -242,7 +241,7 @@ function ey(e) {
                               (0, c.jsx)(ej.A, { src: a, className: eN.tr, autoPlay: !0, loop: !0 }),
                       ],
                   }),
-            (0, c.jsx)(eI.A, { category: t, className: eN.v0, daysRemainingText: w.t["8gsP5M"] }),
+            (0, c.jsx)(eO.A, { category: t, className: eN.v0, daysRemainingText: w.t["8gsP5M"] }),
         ],
     });
 }
@@ -822,7 +821,7 @@ function tS(e) {
             });
     }, [a, i, r, t, l]);
     let L = u.useRef(null),
-        { setQueryPageSize: I, setQueryPageOffset: O, queryPageSize: N } = (0, W.v)(),
+        { setQueryPageSize: O, setQueryPageOffset: I, queryPageSize: N } = (0, W.v)(),
         [k, T] = u.useState(!1),
         R = t || p || null == d;
     u.useEffect(() => {
@@ -831,10 +830,10 @@ function tS(e) {
     let M = N > 0 && !R && 0 === A.length;
     u.useEffect(() => {
         let e = new ResizeObserver(() => {
-            null == L.current || I(Math.floor(5 * getComputedStyle(L.current).gridTemplateColumns.split(/\s+/).length));
+            null == L.current || O(Math.floor(5 * getComputedStyle(L.current).gridTemplateColumns.split(/\s+/).length));
         });
         if (null != L.current) return e.observe(L.current), () => e.disconnect();
-    }, [I]);
+    }, [O]);
     let P = u.useCallback(
         (e) => {
             y.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
@@ -846,9 +845,9 @@ function tS(e) {
                 cta_name: `filter results page ${e}`,
                 page_type: "catalog",
             }),
-                O((e - 1) * N);
+                I((e - 1) * N);
         },
-        [n, N, O],
+        [n, N, I],
     );
     return (0, c.jsxs)(eH.v3.Provider, {
         value: tf,
@@ -1104,12 +1103,12 @@ let tL = (e) => {
 var tv = s(599062),
     tj = s(651162),
     tb = s(554146),
-    tI = s(367727);
-let tO = u.createContext(null);
+    tO = s(367727);
+let tI = u.createContext(null);
 function tN(e) {
     let { blockType: t, children: s } = e,
         l = u.useMemo(() => ({ blockType: t }), [t]);
-    return (0, c.jsx)(tO.Provider, { value: l, children: s });
+    return (0, c.jsx)(tI.Provider, { value: l, children: s });
 }
 var ty = s(755172),
     tk = s(325595),
@@ -1175,7 +1174,7 @@ let tK = (e) => {
         null != l && (t = b.A.getCategoryByStoreListingId(l?.categoryStoreListingId)?.skuId);
         let i = t ?? s?.skuId ?? "",
             { handleCardVisibilityChange: o } = (0, tV.Z)(i, "home", "marketing featured block"),
-            d = (0, eO.s4)(s, l, a),
+            d = (0, eI.s4)(s, l, a),
             g = u.useRef(null),
             m = l?.bodyText,
             h = (0, j.uM)();
@@ -1361,7 +1360,7 @@ var tJ = s(735438),
     t1 = s(155999),
     t2 = s.n(t1);
 function t4() {
-    let e = (0, O.bG)([b.A], () => b.A.products);
+    let e = (0, I.bG)([b.A], () => b.A.products);
     return (0, u.useCallback)(
         (t) =>
             t2()(
@@ -1414,7 +1413,7 @@ let t6 = (e) => {
                 buttonContainerClassName: i,
                 orbsSupportedOnly: o,
             } = e,
-            d = (0, O.bG)([v.default], () => v.default.getCurrentUser()),
+            d = (0, I.bG)([v.default], () => v.default.getCurrentUser()),
             m = k.Ay.canUseShopDiscounts(d),
             h = (0, eh.W)("FeedBlock"),
             E = (0, e$.yB)("FeedBlock"),
@@ -1427,14 +1426,14 @@ let t6 = (e) => {
                 showRecommendationOption: A,
             } = (function (e) {
                 let { sortedSkuIds: t, hasShopDiscount: s, prioritizeUserDiscounts: l, orbsSupportedOnly: n } = e,
-                    a = (0, O.bG)([t0.A], () => t0.A.hasConsented(B.YAq.PERSONALIZATION)),
+                    a = (0, I.bG)([t0.A], () => t0.A.hasConsented(B.YAq.PERSONALIZATION)),
                     r = u.useMemo(() => t?.[tQ.RECOMMENDED] ?? [], [t]),
                     i = u.useMemo(() => t?.[tQ.POPULAR] ?? [], [t]),
                     o = r.length > 0 && a,
                     [c, d] = u.useState(o ? tQ.RECOMMENDED : tQ.POPULAR),
-                    g = (0, O.bG)([b.A], () => b.A.productsWithVariantsAsGroup),
+                    g = (0, I.bG)([b.A], () => b.A.productsWithVariantsAsGroup),
                     m = u.useMemo(() => (0, eE.CE)(g), [g]),
-                    h = (0, O.bG)([H.A], () => H.A.getUserDiscounts()),
+                    h = (0, I.bG)([H.A], () => H.A.getUserDiscounts()),
                     E = t4(),
                     x = ef(),
                     [p, C] = u.useState([]),
@@ -1475,9 +1474,9 @@ let t6 = (e) => {
                     shuffleProducts: f,
                 };
             })({ sortedSkuIds: l, hasShopDiscount: m, prioritizeUserDiscounts: a, orbsSupportedOnly: o }),
-            L = (0, O.bG)([Y.A], () => Y.A.useReducedMotion),
-            I = (0, O.bG)([eb.A], () => eb.A.isFocused()),
-            T = !L && I,
+            L = (0, I.bG)([Y.A], () => Y.A.useReducedMotion),
+            O = (0, I.bG)([eb.A], () => eb.A.isFocused()),
+            T = !L && O,
             { animationPhase: M, startAnimation: P } = (() => {
                 let [e, t] = u.useState("mounted"),
                     [s, l] = u.useState(!1),
@@ -1638,7 +1637,7 @@ var se = s(449543),
     st = s(622697);
 let ss = (e) => {
     let { block: t, handleTransition: s, tab: l } = e,
-        n = (0, O.bG)([v.default], () => v.default.getCurrentUser()),
+        n = (0, I.bG)([v.default], () => v.default.getCurrentUser()),
         a = (0, eh.W)("FramesProductShelfBlock"),
         r = t4(),
         i = eA(u.useMemo(() => r(t.rankedSkuIds), [t.rankedSkuIds, r])),
@@ -1727,8 +1726,8 @@ let sr = (e) => {
 var si = s(929955);
 let so = (e) => {
         let { bannerStatic: t, bannerAnimated: s, bannerRive: l, isResponsive: n = !1, eventTargetRef: a } = e,
-            r = (0, O.bG)([Y.A], () => Y.A.useReducedMotion),
-            i = (0, O.bG)([eb.A], () => eb.A.isFocused()),
+            r = (0, I.bG)([Y.A], () => Y.A.useReducedMotion),
+            i = (0, I.bG)([eb.A], () => eb.A.isFocused()),
             o = null != s && !r && i;
         return null != l
             ? (0, c.jsx)(ev._, { src: l, fit: "fit-width", eventTargetRef: a })
@@ -1822,7 +1821,7 @@ let so = (e) => {
             ),
             d = u.useRef(null),
             m = (0, e$.yB)("HeroBlock"),
-            h = (0, O.bG)([v.default], () => v.default.getCurrentUser()),
+            h = (0, I.bG)([v.default], () => v.default.getCurrentUser()),
             E = (0, j.uM)(),
             { analyticsLocations: x } = (0, f.Ay)(N.A.COLLECTIBLES_SHOP_HERO),
             p = u.useMemo(
@@ -1854,8 +1853,8 @@ let so = (e) => {
                 heroBannerStatic: A,
                 heroBannerAnimated: L,
                 heroBannerRive: b,
-            } = (0, eO.Kk)(p),
-            I = C?.responsive ?? !1,
+            } = (0, eI.Kk)(p),
+            O = C?.responsive ?? !1,
             k = C?.backgroundStyle,
             T = null != b,
             M = a === R.G2.ORBS,
@@ -1916,7 +1915,7 @@ let so = (e) => {
                                 })({ isCustomCursorEnabled: m, className: tW.Xt, riveEventTargetRef: d })
                               : null,
                           (0, c.jsx)("div", {
-                              className: g()(tW.vK, { [tW.cN]: T, [tW.no]: I }),
+                              className: g()(tW.vK, { [tW.cN]: T, [tW.no]: O }),
                               style: null != k ? { background: k } : void 0,
                               children:
                                   null != A &&
@@ -1924,7 +1923,7 @@ let so = (e) => {
                                       bannerStatic: A,
                                       bannerAnimated: L,
                                       bannerRive: b,
-                                      isResponsive: I,
+                                      isResponsive: O,
                                       eventTargetRef: d,
                                   }),
                           }),
@@ -1939,7 +1938,7 @@ let so = (e) => {
                                                 (0, c.jsx)(et.$, { variant: "overlay-primary", onClick: H, text: D }),
                                         })
                                       : (0, c.jsxs)("div", {
-                                            className: g()(tW.bC, { [tW.no]: I }),
+                                            className: g()(tW.bC, { [tW.no]: O }),
                                             children: [
                                                 t
                                                     ? (0, c.jsx)("div", { className: tW.Hw })
@@ -2024,7 +2023,7 @@ let sp = (e) => {
             0.33,
             null != s,
         ),
-        { bannerUrl: n, bannerAnimatedUrl: a } = (0, eO.qY)(t),
+        { bannerUrl: n, bannerAnimatedUrl: a } = (0, eI.qY)(t),
         r = null != t.textColor ? { color: t.textColor } : void 0,
         i = null != t.body && "" !== t.body,
         o = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
@@ -2082,28 +2081,28 @@ var sC = s(189213),
     sj = s(61750);
 function sb(e, t) {
     let s = u.useMemo(() => e?.products.filter((e) => e.skuId !== t).map((e) => e.skuId) ?? [], [e?.products, t]),
-        l = (0, O.bG)([q.A], () => q.A.getPurchases(s));
+        l = (0, I.bG)([q.A], () => q.A.getPurchases(s));
     return {
         readyToClaim: u.useMemo(() => l.length === s.length, [l, s]),
         collectibleProductSkuIds: s,
         collectedSkuIds: l,
     };
 }
-var sI = s(498924);
-let sO = u.memo(function (e) {
+var sO = s(498924);
+let sI = u.memo(function (e) {
         let { category: t, rewardSkuId: s } = e,
             { handleCardVisibilityChange: l } = (0, tV.Z)(s),
             n = u.useRef(null),
             { isHoveringOrFocusing: a } = (0, sA.A)(n),
             { readyToClaim: r, collectibleProductSkuIds: i, collectedSkuIds: o } = sb(t, s),
-            d = (0, O.bG)([q.A], () => q.A.isClaiming === s);
+            d = (0, I.bG)([q.A], () => q.A.isClaiming === s);
         return (0, c.jsx)(tU.L, {
             onChange: l,
             threshold: 0,
             innerRef: n,
             children: (0, c.jsx)("div", {
                 ref: n,
-                className: g()(ek.ty, sI.Q3, { [ek.yo]: a }),
+                className: g()(ek.ty, sO.Q3, { [ek.yo]: a }),
                 "aria-label": w.intl.formatToPlainString(w.t.Ez6aHE, { category: t.name }),
                 children: (0, c.jsxs)("div", {
                     className: ek.qt,
@@ -2111,24 +2110,24 @@ let sO = u.memo(function (e) {
                         (0, c.jsx)("img", {
                             alt: "Reward Bow",
                             src: "https://cdn.discordapp.com/assets/content/2551e5f1bf8d5d05bf2d631539469b38929f449547cf15c6c3df258affef1bd2.png",
-                            className: sI.L8,
+                            className: sO.L8,
                         }),
                         (0, c.jsx)("div", {
                             className: ek.N1,
                             children: (0, c.jsx)(tz.Lp, {
                                 text: w.intl.string(w.t.rykAJ9),
                                 disableColor: !0,
-                                className: sI.HZ,
+                                className: sO.HZ,
                             }),
                         }),
                         (0, c.jsxs)("div", {
                             className: ek.xQ,
                             children: [
                                 (0, c.jsxs)("div", {
-                                    className: sI.xE,
+                                    className: sO.xE,
                                     children: [
                                         (0, c.jsxs)("div", {
-                                            className: sI.cs,
+                                            className: sO.cs,
                                             children: [
                                                 (0, c.jsx)(eu.D, {
                                                     variant: "heading-md/medium",
@@ -2147,7 +2146,7 @@ let sO = u.memo(function (e) {
                                                     caretConfig: { position: "bottom", align: "end" },
                                                     position: "top",
                                                     children: (0, c.jsx)("span", {
-                                                        className: sI.ZB,
+                                                        className: sO.ZB,
                                                         children: (0, c.jsx)(sf.c, { size: "xs" }),
                                                     }),
                                                 }),
@@ -2157,7 +2156,7 @@ let sO = u.memo(function (e) {
                                             className: ek.oh,
                                             "aria-hidden": !0,
                                             children: (0, c.jsxs)("div", {
-                                                className: sI.L$,
+                                                className: sO.L$,
                                                 children: [
                                                     (0, c.jsx)(sL.Ay, {
                                                         variant: sL.qP.BLUE,
@@ -2165,7 +2164,7 @@ let sO = u.memo(function (e) {
                                                         maximum: i.length,
                                                     }),
                                                     (0, c.jsxs)("div", {
-                                                        className: g()(sI.__, { [sI.gF]: r }),
+                                                        className: g()(sO.__, { [sO.gF]: r }),
                                                         children: [
                                                             r
                                                                 ? (0, c.jsx)(sS.U, {
@@ -2260,7 +2259,7 @@ let sO = u.memo(function (e) {
             { isBlockLoading: l = !1, heroBlock: n, tab: a } = e,
             r = (0, eh.W)("RewardHeroBlockCards"),
             i = u.useMemo(() => b.A.getCategoryForProduct(n.rewardSkuId), [n.rewardSkuId]),
-            o = (0, O.bG)([q.A], () => q.A.getPurchase(n.rewardSkuId)),
+            o = (0, I.bG)([q.A], () => q.A.getPurchase(n.rewardSkuId)),
             { products: d } =
                 ((t = t4()),
                 (s = u.useMemo(
@@ -2293,7 +2292,7 @@ let sO = u.memo(function (e) {
                                   j.R9,
                                   {
                                       newValue: { tilePosition: 0, pageSection: "top 4", categoryPosition: 0 },
-                                      children: (0, c.jsx)(sO, { category: i, rewardSkuId: n.rewardSkuId }),
+                                      children: (0, c.jsx)(sI, { category: i, rewardSkuId: n.rewardSkuId }),
                                   },
                                   n.rewardSkuId,
                               ),
@@ -2342,7 +2341,7 @@ let sy = {
                 0.1,
                 null != n,
             ),
-            r = (0, O.bG)([v.default], () => v.default.getCurrentUser()),
+            r = (0, I.bG)([v.default], () => v.default.getCurrentUser()),
             { analyticsLocations: i } = (0, f.Ay)(N.A.COLLECTIBLES_SHOP_HERO),
             {
                 bannerDisplayConfig: o,
@@ -2350,7 +2349,7 @@ let sy = {
                 heroLogo: d,
                 heroBannerStatic: m,
                 heroBannerAnimated: h,
-            } = (0, eO.Kk)(s),
+            } = (0, eI.Kk)(s),
             E = o?.responsive ?? !1,
             x = o?.backgroundStyle;
         return null != r && (t || s !== sy)
@@ -2416,9 +2415,9 @@ let sy = {
     },
     sT = (e) => {
         let { shelf: t, handleTransition: s, tab: l } = e,
-            n = (0, O.bG)([v.default], () => v.default.getCurrentUser()),
+            n = (0, I.bG)([v.default], () => v.default.getCurrentUser()),
             a = (0, eh.W)("ShelfBlock"),
-            r = (0, O.bG)([b.A], () => b.A.getCategory(t.categorySkuId)),
+            r = (0, I.bG)([b.A], () => b.A.getCategory(t.categorySkuId)),
             i = t4(),
             o = eA(u.useMemo(() => i(t.rankedSkuIds), [t.rankedSkuIds, i])),
             { analyticsLocations: d } = (0, f.Ay)(N.A.COLLECTIBLES_SHOP_SHELF);
@@ -2510,7 +2509,7 @@ let sY = (e) => {
         u.useEffect(() => {
             null != p && (0, sD.Rw)(p);
         }, [p]);
-        let C = (0, O.bG)([sF.A], () => {
+        let C = (0, I.bG)([sF.A], () => {
                 let e = sF.A.getStorefrontMetadata(i);
                 return e?.logoAssetId != null ? (0, sW.YE)(i, e.logoAssetId, 256) : void 0;
             }, [i]),
@@ -2519,7 +2518,7 @@ let sY = (e) => {
                 u.useEffect(() => {
                     if (null != p) for (let e of a) (0, sD.qf)(p, e);
                 }, [a, p]),
-                (s = (0, O.bG)(
+                (s = (0, I.bG)(
                     [sV.A],
                     () => !a.some((e) => sV.A.isFetching(e)) && a.some((e) => sV.A.didFetchingSkuFail(e)),
                     [a],
@@ -2527,7 +2526,7 @@ let sY = (e) => {
                 u.useEffect(() => {
                     s && null != p && (0, sD.Rw)(p);
                 }, [s, p]),
-                (l = (0, O.yK)([sV.A, sF.A], () => {
+                (l = (0, I.yK)([sV.A, sF.A], () => {
                     if (a.some((e) => sV.A.isFetching(e))) return t.current;
                     let e = a.filter((e) => null != sV.A.get(e));
                     if (e.length >= a.length) return a;
@@ -2552,7 +2551,7 @@ let sY = (e) => {
             L = u.useRef(null),
             v = u.useRef(!1),
             b = u.useRef(null),
-            I = u.useMemo(() => ({ pageSection: m }), [m]),
+            O = u.useMemo(() => ({ pageSection: m }), [m]),
             N = u.useCallback(
                 (e, t) => {
                     y.default.track(B.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
@@ -2653,7 +2652,7 @@ let sY = (e) => {
                                           }),
                                       }),
                                       (0, c.jsx)(sH.E9, {
-                                          newValue: I,
+                                          newValue: O,
                                           children: (0, c.jsx)("div", {
                                               className: sK.$2,
                                               children: S.map((e, t) =>
@@ -2811,7 +2810,7 @@ let s5 = (e) => {
         let m = l?.skuId ?? "",
             { handleCardVisibilityChange: h } = (0, tV.Z)(m, "home", "marketing wide banner"),
             E = (0, j.uM)(),
-            { bannerURL: x } = (0, eO.w$)(t),
+            { bannerURL: x } = (0, eI.w$)(t),
             p = s === R.G2.ORBS,
             C = null != t.ctaRoute && "" !== t.ctaRoute,
             f = !0 !== t.disableCta && ((null != t.ctaText && "" !== t.ctaText) || C),
@@ -2819,7 +2818,7 @@ let s5 = (e) => {
             _ = u.useCallback(() => {
                 if ((d(!0), t.isDismissible)) {
                     let e = t.dismissibleContentVersion ?? 0;
-                    (0, tI.$l)(tb.M.COLLECTIBLES_SHOP_WIDE_BANNER, e, { dismissAction: s4.i.USER_DISMISS });
+                    (0, tO.$l)(tb.M.COLLECTIBLES_SHOP_WIDE_BANNER, e, { dismissAction: s4.i.USER_DISMISS });
                 }
             }, [t.isDismissible, t.dismissibleContentVersion]),
             A = u.useCallback(
@@ -2856,7 +2855,7 @@ let s5 = (e) => {
             );
         if (null == x || o) return null;
         let v = g()(tW.nM, tW.Tq, tW.TS, tW.YB, { [tW._1]: p, [tW.vb]: C }),
-            I = (0, c.jsxs)(c.Fragment, {
+            O = (0, c.jsxs)(c.Fragment, {
                 children: [
                     t.isDismissible &&
                         (0, c.jsx)("div", {
@@ -2928,8 +2927,8 @@ let s5 = (e) => {
                     onChange: h,
                     threshold: 0,
                     children: C
-                        ? (0, c.jsx)(e2.D, { innerRef: n, onClick: () => L(null), className: g()(e, v), children: I })
-                        : (0, c.jsx)("div", { ref: n, className: g()(e, v), children: I }),
+                        ? (0, c.jsx)(e2.D, { innerRef: n, onClick: () => L(null), className: g()(e, v), children: O })
+                        : (0, c.jsx)("div", { ref: n, className: g()(e, v), children: O }),
                 }),
         });
     },
@@ -3030,7 +3029,7 @@ let s5 = (e) => {
                                 case tj.g.WIDE_BANNER:
                                     if (e.isDismissible) {
                                         let t = e.dismissibleContentVersion ?? 0,
-                                            { isDismissed: s } = (0, tI.En)(tb.M.COLLECTIBLES_SHOP_WIDE_BANNER, t);
+                                            { isDismissed: s } = (0, tO.En)(tb.M.COLLECTIBLES_SHOP_WIDE_BANNER, t);
                                         if (s) return null;
                                     }
                                     u = (0, c.jsx)(s5, { wideBannerBlock: e, tab: n }, r);
@@ -3071,7 +3070,7 @@ let s5 = (e) => {
                                     u = (0, c.jsx)(sk, { isLoading: h, handleTransition: t, heroBlock: e, tab: n }, r);
                                     break;
                                 case tj.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER: {
-                                    let { isDismissed: t } = (0, tI.En)(
+                                    let { isDismissed: t } = (0, tO.En)(
                                         tb.M.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER,
                                     );
                                     if (t) return null;
@@ -3081,7 +3080,7 @@ let s5 = (e) => {
                                             blockType: e.type,
                                             children: (0, c.jsx)(s$, {
                                                 onDismiss: () => {
-                                                    (0, tI.d6)(
+                                                    (0, tO.d6)(
                                                         tb.M.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER,
                                                         {},
                                                     );
@@ -3220,9 +3219,9 @@ let s8 = { "Any:personalization-header": t6 },
     ll = { prioritizedCurrency: eH.Hi.ORBS },
     ln = (e) => {
         let { tab: t } = e,
-            [s, l, n] = (0, O.yK)([T.A], () => [T.A.getLayout(t), T.A.isFetchingLayout(t), T.A.getLayoutFetchError(t)]),
-            a = (0, O.bG)([s7.A], () => s7.A.get("shop_include_unpublished")),
-            r = (0, O.bG)([b.A], () => b.A.skipNumCategories),
+            [s, l, n] = (0, I.yK)([T.A], () => [T.A.getLayout(t), T.A.isFetchingLayout(t), T.A.getLayoutFetchError(t)]),
+            a = (0, I.bG)([s7.A], () => s7.A.get("shop_include_unpublished")),
+            r = (0, I.bG)([b.A], () => b.A.skipNumCategories),
             i = u.useMemo(() => {
                 let e = {};
                 return !0 === a && (e.include_unpublished = !0), null != r && r > 0 && (e.skip_num_categories = r), e;
@@ -3271,7 +3270,7 @@ let s8 = { "Any:personalization-header": t6 },
     lr = (e) => {
         let { handleTransition: t, tab: s, transitionState: l } = e,
             n = (0, j.uM)(),
-            a = (0, O.bG)([s6.A], () => s6.A.getShopLayoutUrlOverride()),
+            a = (0, I.bG)([s6.A], () => s6.A.getShopLayoutUrlOverride()),
             r = u.useRef(null),
             { handleScroll: i } = ea(r, s),
             [o, d] = u.useState(R.md),
@@ -3363,7 +3362,7 @@ function lu(e) {
         } = e,
         i = ld();
     lg(i);
-    let o = (0, O.bG)([Y.A], () => Y.A.useReducedMotion),
+    let o = (0, I.bG)([Y.A], () => Y.A.useReducedMotion),
         [d, g] = u.useState(void 0),
         [m, h] = u.useState(!0),
         E = u.useMemo(
@@ -3416,7 +3415,7 @@ function lu(e) {
                   });
 }
 let ld = () =>
-        (0, O.bG)([b.A, q.A], () =>
+        (0, I.bG)([b.A, q.A], () =>
             null != b.A.error
                 ? `shop load fetch categories error: ${b.A.error.message}`
                 : null != q.A.claimError
@@ -3426,7 +3425,7 @@ let ld = () =>
                     : void 0,
         ),
     lg = (e) => {
-        let t = (0, O.bG)([v.default], () => v.default.getCurrentUser()),
+        let t = (0, I.bG)([v.default], () => v.default.getCurrentUser()),
             { noCache: s, includeUnpublished: l } = (0, ew.A)();
         u.useEffect(() => {
             null != e &&
@@ -3439,7 +3438,7 @@ let ld = () =>
                 });
         }, [e, t, s, l]);
     };
-var lm = s(630330);
+var lm = s(956123);
 s(323874), s(14289), s(35956);
 var lh = s(873263),
     lE = s(766075),
@@ -3574,8 +3573,8 @@ let lA = (e) => {
             (0, e$.gB)();
         let { analyticsLocations: el } = P(J),
             en = (function (e, t) {
-                let s = (0, O.bG)([H.A], () => H.A.getUserDiscount(M.tU)),
-                    l = (0, O.bG)([D.default], () => D.default.locale),
+                let s = (0, I.bG)([H.A], () => H.A.getUserDiscount(M.tU)),
+                    l = (0, I.bG)([D.default], () => D.default.locale),
                     n = F.useConfig({ location: t }).enabled;
                 if (u.useMemo(() => null != s && n && e !== R.G2.ORBS, [s, n, e])) {
                     let e =
@@ -3589,7 +3588,7 @@ let lA = (e) => {
             value: el,
             children: (0, c.jsx)(j.R9, {
                 newValue: { sessionId: s, pageCategory: Y, pageSize: R.l5 },
-                children: (0, c.jsx)(I.iM, {
+                children: (0, c.jsx)(O.iM, {
                     tab: J,
                     children: (0, c.jsx)(lA, {
                         onClose: a,
