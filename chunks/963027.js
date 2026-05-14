@@ -28,14 +28,17 @@ function d(e) {
         })((0, o.A)(d));
     switch (d.type) {
         case u.rbe.DM:
-            t = _ ? c.t.F2MZsu : c.t.fYqXVY;
+            t = f > 0 ? c.t.TO8LYt : _ ? c.t.F2MZsu : c.t.fYqXVY;
             break;
-        case u.rbe.GROUP_DM:
-            n = [
-                c.intl.formatToPlainString(_ ? c.t["fxxUo/"] : c.t.lts3Ld, { channelName: I }),
-                c.intl.formatToPlainString(c.t.CxSA5N, { members: d.recipients.length + 1 }),
-            ].join(", ");
+        case u.rbe.GROUP_DM: {
+            let e;
+            (e = f > 0 ? c.t.Lo0dCa : _ ? c.t["fxxUo/"] : c.t.lts3Ld),
+                (n = [
+                    c.intl.formatToPlainString(e, { channelName: I, mentionCount: f }),
+                    c.intl.formatToPlainString(c.t.CxSA5N, { members: d.recipients.length + 1 }),
+                ].join(", "));
             break;
+        }
         case u.rbe.GUILD_STORE:
             t = c.t.Bo4msg;
             break;
