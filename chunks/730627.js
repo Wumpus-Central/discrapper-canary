@@ -1724,6 +1724,7 @@ function sF(e) {
     let { hoverSpring: c } = (0, tx.z)({ hoverSpring: +!!a, config: tm.config.gentle });
     return (0, n.jsxs)("div", {
         className: i()(sM.FW, sM.Bm),
+        [t0]: !0,
         ...o,
         children: [
             (0, n.jsx)("div", {
@@ -1826,6 +1827,7 @@ function sD(e) {
         { hoverSpring: T } = (0, tx.z)({ hoverSpring: +!!b, config: tm.config.gentle });
     return (0, n.jsxs)("div", {
         className: i()(sM.FW, sM.$R),
+        [t0]: !0,
         ...A,
         children: [
             (0, n.jsxs)(p.B, {
