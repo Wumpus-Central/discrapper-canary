@@ -15,8 +15,8 @@ var l,
     g = r(192308),
     S = r(988665),
     m = r(955572),
-    A = r(775602),
-    R = r(915089),
+    R = r(775602),
+    A = r(915089),
     I = r(138298),
     x = r(761640),
     L = r(734057),
@@ -43,8 +43,8 @@ var l,
 r(321073);
 var q = r(783977),
     G = r(834730),
-    Q = r(7689),
-    B = r(778712),
+    B = r(7689),
+    Q = r(778712),
     Y = r(351906),
     Z = r(5990),
     K = r(990078),
@@ -130,12 +130,12 @@ function em(e) {
     return (0, n.jsxs)("div", {
         className: ep.aT,
         children: [
-            (0, n.jsx)(ea.A, { channel: e, avatarSize: B._3.SIZE_16, iconClassName: ep.er, iconSize: "xs" }),
+            (0, n.jsx)(ea.A, { channel: e, avatarSize: Q._3.SIZE_16, iconClassName: ep.er, iconSize: "xs" }),
             (0, n.jsx)(G.E, { variant: "text-sm/semibold", color: "text-strong", className: ep.HA, children: t }),
         ],
     });
 }
-function eA(e) {
+function eR(e) {
     let { searchContext: t } = e;
     return (0, n.jsx)(K.m, {
         asContainer: !0,
@@ -150,7 +150,7 @@ function eA(e) {
         }),
     });
 }
-function eR(e) {
+function eA(e) {
     let { title: t, showDivider: r, children: l } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -171,7 +171,7 @@ function ex(e) {
     let { navId: t, item: r, startingIndex: l, selectedIndex: s } = e,
         a = l,
         { rows: i, title: u, trailingIcon: o } = r.data;
-    return (0, n.jsxs)(eR, {
+    return (0, n.jsxs)(eA, {
         title: u,
         showDivider: l > 0,
         children: [
@@ -195,7 +195,7 @@ function ex(e) {
 function eL(e) {
     let { size: t, user: r, className: l } = e,
         s = (0, h.bG)([el.A], () => el.A.getGuildId()),
-        a = (0, B.FT)(t);
+        a = (0, Q.FT)(t);
     return (0, n.jsx)(J.eu, { size: t, src: r.getAvatarURL(s, a), "aria-label": r.username, className: l });
 }
 function e_(e) {
@@ -567,7 +567,7 @@ let eG = s.forwardRef(function (e, t) {
                             if (null != l && (0, Z.HM)(r) && r.type === eu.I4_.DMS) {
                                 let t = em(l),
                                     s = ec(eC.ROW, {
-                                        icon: (0, n.jsx)(Q.$, { size: "sm", color: "currentColor", className: ep.Fx }),
+                                        icon: (0, n.jsx)(B.$, { size: "sm", color: "currentColor", className: ep.Fx }),
                                         label: (0, n.jsx)(eg, {
                                             label: eo.intl.format(eo.t["VGEH/0"], { channelName: t }),
                                             className: ep.YL,
@@ -595,11 +595,11 @@ let eG = s.forwardRef(function (e, t) {
                                 let t = d.map((e, t) => {
                                         let { label: l, ariaLabel: s } = eT({
                                             value: e,
-                                            avatarSize: B._3.SIZE_16,
+                                            avatarSize: Q._3.SIZE_16,
                                             iconSize: "xs",
                                         });
                                         return ec(eC.ROW, {
-                                            icon: (0, n.jsx)(Q.$, {
+                                            icon: (0, n.jsx)(B.$, {
                                                 size: "sm",
                                                 color: "currentColor",
                                                 className: ep.Fx,
@@ -619,7 +619,7 @@ let eG = s.forwardRef(function (e, t) {
                                     }),
                                     l = ec(eC.GROUP, {
                                         rows: t,
-                                        trailingIcon: (0, n.jsx)(eA, { searchContext: r }),
+                                        trailingIcon: (0, n.jsx)(eR, { searchContext: r }),
                                         title: eh(eu.x2k.HISTORY),
                                     });
                                 e.push(l);
@@ -629,9 +629,9 @@ let eG = s.forwardRef(function (e, t) {
                         [eu.o$q.FILTER_ALL]: () => {
                             let e = [];
                             if ("" !== t.query.trim()) {
-                                let { label: r } = eT({ value: t.query, avatarSize: B._3.SIZE_16, iconSize: "xs" }),
+                                let { label: r } = eT({ value: t.query, avatarSize: Q._3.SIZE_16, iconSize: "xs" }),
                                     l = ec(eC.ROW, {
-                                        icon: (0, n.jsx)(Q.$, { size: "sm", color: "currentColor", className: ep.Fx }),
+                                        icon: (0, n.jsx)(B.$, { size: "sm", color: "currentColor", className: ep.Fx }),
                                         label: (0, n.jsx)(eg, {
                                             label: eo.intl.format(eo.t.rCnaoo, { value: r }),
                                             className: ep.YL,
@@ -656,7 +656,7 @@ let eG = s.forwardRef(function (e, t) {
                                             let { result: t, group: r } = e;
                                             switch (r) {
                                                 case eu.x2k.HISTORY:
-                                                    return (0, n.jsx)(Q.$, {
+                                                    return (0, n.jsx)(B.$, {
                                                         size: "sm",
                                                         color: "currentColor",
                                                         className: ep.Fx,
@@ -711,7 +711,7 @@ let eG = s.forwardRef(function (e, t) {
                                                         label: (0, n.jsxs)("div", {
                                                             className: ep.YL,
                                                             children: [
-                                                                (0, n.jsx)(eL, { size: B._3.SIZE_16, user: r }),
+                                                                (0, n.jsx)(eL, { size: Q._3.SIZE_16, user: r }),
                                                                 (0, n.jsx)(e_, { user: r }),
                                                             ],
                                                         }),
@@ -768,12 +768,12 @@ let eG = s.forwardRef(function (e, t) {
                                             return null != l
                                                 ? (0, n.jsx)(ea.A, {
                                                       channel: l,
-                                                      avatarSize: B._3.SIZE_20,
+                                                      avatarSize: Q._3.SIZE_20,
                                                       iconClassName: ep.Fx,
                                                       iconSize: "refresh_sm",
                                                   })
                                                 : null != s
-                                                  ? (0, n.jsx)(eL, { size: B._3.SIZE_20, user: s, className: ep.Fx })
+                                                  ? (0, n.jsx)(eL, { size: Q._3.SIZE_20, user: s, className: ep.Fx })
                                                   : r === eu.LWr.FILTER_HAS
                                                     ? (0, n.jsx)(eF, { size: "sm", text: t.text, className: ep.Fx })
                                                     : r === eu.LWr.FILTER_AUTHOR_TYPE
@@ -868,9 +868,9 @@ let eG = s.forwardRef(function (e, t) {
                 let t;
                 (t = o + e) > g.length - 1 ? (t = 0) : t < 0 && (t = g.length - 1), f(t);
             },
-            A = s.useRef({ itemsData: [], selectedIndex: -1, modeType: a.mode.type, query: a.query });
+            R = s.useRef({ itemsData: [], selectedIndex: -1, modeType: a.mode.type, query: a.query });
         s.useEffect(() => {
-            let { itemsData: e, selectedIndex: t, modeType: r, query: l } = A.current,
+            let { itemsData: e, selectedIndex: t, modeType: r, query: l } = R.current,
                 n = a.mode.type,
                 s = a.query;
             if (n !== r) n === eu.o$q.FILTER ? f(0) : f(-1);
@@ -884,19 +884,19 @@ let eG = s.forwardRef(function (e, t) {
                     -1 !== e ? f(e) : t >= g.length && f(Math.max(0, g.length - 1));
                 } else t >= g.length && f(Math.max(0, g.length - 1));
             }
-            A.current = { itemsData: g, selectedIndex: o, modeType: n, query: s };
+            R.current = { itemsData: g, selectedIndex: o, modeType: n, query: s };
         }, [g, o, a.mode.type, a.query, f]);
-        let R = s.useRef(null),
+        let A = s.useRef(null),
             I = a.query;
         return (
             s.useEffect(() => {
                 if ("" === I) {
-                    R.current = null;
+                    A.current = null;
                     return;
                 }
                 let e = g.length;
-                R.current !== e &&
-                    ((R.current = e), d.O.announce(eo.intl.formatToPlainString(eo.t.ZGVL3g, { count: e }), "polite"));
+                A.current !== e &&
+                    ((A.current = e), d.O.announce(eo.intl.formatToPlainString(eo.t.ZGVL3g, { count: e }), "polite"));
             }, [g.length, I]),
             s.useImperativeHandle(t, () => ({
                 selectedIndex: o,
@@ -921,7 +921,7 @@ let eG = s.forwardRef(function (e, t) {
             })
         );
     }),
-    eQ = s.forwardRef(function (e, t) {
+    eB = s.forwardRef(function (e, t) {
         let { navId: r, resultsState: l, searchContext: a } = e;
         return (
             s.useImperativeHandle(t, () => ({
@@ -969,7 +969,7 @@ let eG = s.forwardRef(function (e, t) {
             })
         );
     }),
-    eB = s.forwardRef(function (e, t) {
+    eQ = s.forwardRef(function (e, t) {
         let { searchContext: r, navId: l, onSelectedIndexChanged: s } = e,
             [a, i] = (0, h.yK)([U.A, T.A, L.A], () => {
                 let e = U.A.getState(r),
@@ -977,7 +977,7 @@ let eG = s.forwardRef(function (e, t) {
                 return [e, L.A.getChannel(t)];
             });
         return (0, C.av)(a.mode.filter)
-            ? (0, n.jsx)(eQ, { navId: l, resultsState: a, searchContext: r })
+            ? (0, n.jsx)(eB, { navId: l, resultsState: a, searchContext: r })
             : (0, n.jsx)(eG, {
                   ref: t,
                   searchContext: r,
@@ -990,7 +990,7 @@ let eG = s.forwardRef(function (e, t) {
 var eY = r(921242),
     eZ = r(85486);
 let eK = 512,
-    eX = (0, R.Ld)(),
+    eX = (0, A.Ld)(),
     eV = c()(k.A.fetchMessages, 500);
 class eJ extends s.PureComponent {
     state = { focused: !1, selectedIndex: void 0 };
@@ -1051,12 +1051,21 @@ class eJ extends s.PureComponent {
         this._editorRef?.editor?.setAttribute("aria-activedescendant", null != e ? `${eX}-${e}` : void 0),
             this.setState({ selectedIndex: e });
     };
+    handlePopoutBlur = (e) => {
+        let t = e.relatedTarget,
+            r = document.getElementById(eX),
+            l = this._searchBarRef.current;
+        (null != t && ((null != r && r.contains(t)) || (null != l && l.contains(t)))) || this.handleBlur();
+    };
     renderPopout = () =>
-        (0, n.jsx)(eB, {
-            ref: this._searchPopoutRef,
-            searchContext: this.props.searchContext,
-            navId: eX,
-            onSelectedIndexChanged: this.handleSelectedIndexChanged,
+        (0, n.jsx)("div", {
+            onBlur: this.handlePopoutBlur,
+            children: (0, n.jsx)(eQ, {
+                ref: this._searchPopoutRef,
+                searchContext: this.props.searchContext,
+                navId: eX,
+                onSelectedIndexChanged: this.handleSelectedIndexChanged,
+            }),
         });
     tokenize(e) {
         let t = (0, C._o)(b.pe(e)).filter((e) => e.type !== S.Ay.NON_TOKEN_TYPE);
@@ -1143,7 +1152,9 @@ class eJ extends s.PureComponent {
             });
     };
     onBlur = (e) => {
-        this.handleBlur();
+        let t = e.relatedTarget,
+            r = document.getElementById(eX);
+        (null != t && null != r && r.contains(t)) || this.handleBlur();
     };
     handleOption = () => {
         let { current: e } = this._searchPopoutRef;
@@ -1347,7 +1358,7 @@ class eJ extends s.PureComponent {
 function e0(e) {
     let { searchContext: t, className: r } = e,
         l = (0, C.bS)(t),
-        a = (0, h.bG)([A.A], () => A.A.keyboardModeEnabled),
+        a = (0, h.bG)([R.A], () => R.A.keyboardModeEnabled),
         i = (0, h.bG)([P.A], () => P.A.getEditorState(l)),
         u = s.useMemo(() => (null != i ? i : b.e_(N.ys(O.Ay))), [i]);
     s.useEffect(() => {
@@ -1406,7 +1417,7 @@ function e0(e) {
             }
             return null;
         }),
-        R = s.useMemo(
+        A = s.useMemo(
             () =>
                 t.type === eu.I4_.DMS
                     ? eo.intl.string(eo.t.m7OrlR)
@@ -1423,7 +1434,7 @@ function e0(e) {
         hasResults: f,
         keyboardModeEnabled: a,
         onSearch: S,
-        placeholder: R,
+        placeholder: A,
     });
 }
 function e1(e) {
