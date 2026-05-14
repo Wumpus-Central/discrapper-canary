@@ -521,6 +521,7 @@ class j extends r.PureComponent {
                     { isShown: s } = t;
                 return (0, i.jsx)(d.D, {
                     ...e,
+                    "aria-label": k.intl.string(k.t.IyCzIF),
                     className: H.q3,
                     style: g,
                     innerRef: this.contentRef,
