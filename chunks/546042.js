@@ -77,6 +77,7 @@ let ee = { [G.pn.GIFT_CUSTOMIZATION]: "xl", [G.pn.REVIEW]: "md", [G.pn.ADD_PAYME
             transitionState: n,
             size: p,
             returnRef: u,
+            "aria-label": X.intl.string(X.t.q9EGps),
             onClose: async () => {
                 await a();
             },

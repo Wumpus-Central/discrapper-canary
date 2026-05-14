@@ -167,7 +167,15 @@ let a = "@me",
         REPORT: "/report",
         REPORT_SECOND_LOOK: "/report-review",
         COLLECTIBLES_SHOP: "/shop",
-        COLLECTIBLES_SHOP_GAME_SHOP: (e) => `/shop?tab=${r.G2.GAME_SHOPS}&applicationId=${e}`,
+        COLLECTIBLES_SHOP_GAME_SHOP: (e, t, n, i) => {
+            let s = `/shop?tab=${r.G2.GAME_SHOPS}&applicationId=${e}`;
+            return (
+                null != t && (s += `&pageIndex=${t}`),
+                null != n && (s += `&skuId=${n}`),
+                null != i && (s += `&slug=${i}`),
+                s
+            );
+        },
         COLLECTIBLES_SHOP_WITH_TAB: (e) => `/shop?tab=${e}`,
         COLLECTIBLES_SHOP_COLLECTION_DETAIL: (e) => `/shop/collection/${e}`,
         COLLECTIBLES_SHOP_PRODUCT_DETAIL: (e) => `/shop/product/${e}`,
