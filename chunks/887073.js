@@ -1,53 +1,54 @@
-s.r(l), s.d(l, { default: () => _ });
+s.r(l), s.d(l, { default: () => N });
 var t = s(627968),
     a = s(64700),
     n = s(503698),
     d = s.n(n),
-    c = s(364522),
-    r = s(785330),
-    i = s(475073),
-    u = s(611924),
-    o = s(976860),
-    p = s(594832),
-    h = s(621653),
-    x = s(983545),
-    b = s(630330),
-    C = s(146919),
-    E = s(758836),
-    I = s(652215),
+    r = s(364522),
+    c = s(475073),
+    i = s(611924),
+    u = s(356118),
+    p = s(976860),
+    o = s(561794),
+    h = s(619835),
+    C = s(621653),
+    E = s(983545),
+    I = s(630330),
+    b = s(146919),
+    x = s(758836),
+    L = s(652215),
     j = s(647685),
-    L = s(941734);
-let _ = (e) => {
+    _ = s(941734);
+let N = (e) => {
     let { collectionId: l } = e,
         s = a.useRef(null);
-    (0, u.P)(i.a), (0, h.g)();
-    let n = (0, C.yB)("CollectiblesShopIndexPage");
-    (0, C.gB)();
-    let { selectedTab: _, transitionToTab: f } = (0, x.o)(E.G2.COLLECTION_INDEX),
-        k = a.useCallback(() => {
-            (0, o.pX)(I.BVt.COLLECTIBLES_SHOP);
+    (0, i.P)(c.a), (0, C.g)();
+    let n = (0, b.yB)("CollectiblesShopIndexPage");
+    (0, b.gB)();
+    let { selectedTab: N, transitionToTab: O } = (0, E.o)(x.G2.COLLECTION_INDEX),
+        f = a.useCallback(() => {
+            (0, p.pX)(L.BVt.COLLECTIBLES_SHOP);
         }, []);
-    return ((0, p.pE)(),
+    return ((0, o.pE)(),
     a.useEffect(() => {
-        null == l && k();
-    }, [l, k]),
+        null == l && f();
+    }, [l, f]),
     null == l)
         ? null
         : (0, t.jsxs)("div", {
-              className: d()(j.bx, { [C.jP]: n }),
+              className: d()(j.bx, { [b.jP]: n }),
               ref: s,
               tabIndex: -1,
               children: [
-                  (0, t.jsx)(b.G, { handleTransition: f, selectedTab: _ }),
-                  (0, t.jsx)(c.Ip, {
+                  (0, t.jsx)(I.G, { handleTransition: O, selectedTab: N }),
+                  (0, t.jsx)(r.Ip, {
                       children: (0, t.jsx)("div", {
-                          className: d()(L.GS, L.rb),
-                          children: (0, t.jsx)(r.Z_, {
-                              tenantId: I.FYj,
-                              templateId: "collection-index",
+                          className: d()(_.GS, _.rb),
+                          children: (0, t.jsx)(u.Z_, {
+                              tenantId: L.FYj,
+                              templateId: h.b.COLLECTION_INDEX,
                               requestParams: { collection_id: l },
-                              onError: k,
-                              onEmptyLayout: k,
+                              onError: f,
+                              onEmptyLayout: f,
                           }),
                       }),
                   }),

@@ -3696,9 +3696,9 @@
     border-radius: 3px;
     color: var(--white);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-bold);
-    line-height: 29px;
+    line-height: 1.8125rem;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase
@@ -5403,11 +5403,6 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
     cursor: not-allowed;
     opacity: .3;
     pointer-events: none
-}
-
-.obscuredIcon__43090 {
-    height: 32px;
-    width: 32px
 }
 
 @value headerBarHeight 60px;
