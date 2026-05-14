@@ -541,30 +541,29 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("22104"),
-                                                        n.e("83611"),
+                                                        n.e("81156"),
+                                                        n.e("81586"),
                                                         n.e("54266"),
-                                                        n.e("26105"),
+                                                        n.e("5959"),
                                                         n.e("86028"),
-                                                        n.e("29734"),
                                                         n.e("96527"),
-                                                        n.e("32948"),
+                                                        n.e("67100"),
+                                                        n.e("18541"),
                                                         n.e("95840"),
                                                         n.e("45650"),
-                                                        n.e("32109"),
+                                                        n.e("18556"),
                                                         n.e("31837"),
                                                         n.e("27660"),
-                                                        n.e("92954"),
+                                                        n.e("55771"),
                                                         n.e("85484"),
-                                                        n.e("27402"),
+                                                        n.e("31135"),
                                                         n.e("69177"),
-                                                        n.e("46831"),
+                                                        n.e("40671"),
                                                         n.e("55990"),
-                                                        n.e("44879"),
-                                                        n.e("41229"),
-                                                        n.e("31920"),
-                                                        n.e("333"),
-                                                        n.e("81105"),
+                                                        n.e("48948"),
+                                                        n.e("25719"),
+                                                        n.e("22809"),
+                                                        n.e("74103"),
                                                         n.e("79705"),
                                                         n.e("23924"),
                                                         n.e("42205"),
@@ -834,12 +833,12 @@ function e8(e) {
     );
 }
 var e4 = n(34188),
-    e2 = n(700623),
-    e3 = n(177953),
-    e7 = n(825484),
-    e9 = n(512950),
-    e6 = n(900797),
-    e5 = n(847374),
+    e3 = n(700623),
+    e7 = n(177953),
+    e2 = n(825484),
+    e5 = n(512950),
+    e9 = n(900797),
+    e6 = n(847374),
     te = n(10716),
     tt = n(702841),
     tn = n(150934),
@@ -1107,7 +1106,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: ty.wi,
                             children: [
-                                (0, r.jsx)(e2.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e3.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1174,7 +1173,7 @@ function tR(e) {
     return (0, r.jsxs)("div", {
         className: ty.I8,
         children: [
-            (0, r.jsx)(e3.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e7.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1211,7 +1210,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, j.$B)(n) && (0, j.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e7.e, {
+            ? (0, r.jsxs)(e2.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tj, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1221,9 +1220,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, j.Ag)(n)
-              ? (0, r.jsx)(e9.p, {
+              ? (0, r.jsx)(e5.p, {
                     className: ty.ai,
-                    messageType: e9.Y.WARNING,
+                    messageType: e5.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1286,8 +1285,8 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e6.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e9.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e6.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1396,15 +1395,15 @@ var tZ = n(111042),
     t1 = n(179771),
     t8 = n(824552),
     t4 = n(168186),
-    t2 = n(594061),
-    t3 = n(935208),
-    t7 = n(630248),
-    t9 = n(355097);
-function t6(e, t) {
+    t3 = n(594061),
+    t7 = n(935208),
+    t2 = n(630248),
+    t5 = n(355097);
+function t9(e, t) {
     o.useEffect(() => {
-        t2.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t3.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t7.A], () => t7.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t2.A], () => t2.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -1415,7 +1414,7 @@ function t6(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             i?.forEach((e) => {
-                let t = t3.default.extractTimestamp(e.id);
+                let t = t7.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
@@ -1433,7 +1432,7 @@ function t6(e, t) {
     return o.useMemo(() => {
         let e, i;
         t?.forEach((t) => {
-            let n = t3.default.extractTimestamp(t.id);
+            let n = t7.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1444,7 +1443,7 @@ function t6(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t5 = n(546183),
+var t6 = n(546183),
     ne = n(228366);
 let nt = 10 * Y.A.Millis.MINUTE,
     nn = { lastUsedCommandId: null, lastUsedTimeMs: null };
@@ -1842,7 +1841,7 @@ function nw(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t3.default.extractTimestamp(n);
+                        return -t7.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2114,31 +2113,31 @@ function n4(e, t) {
         i,
     ).slice(0, i);
 }
-function n2(e, t) {
-    let n = t7.A.getScoreWithoutLoadingLatest(e.id);
-    return t7.A.getScoreWithoutLoadingLatest(t.id) - n;
-}
 function n3(e, t) {
+    let n = t2.A.getScoreWithoutLoadingLatest(e.id);
+    return t2.A.getScoreWithoutLoadingLatest(t.id) - n;
+}
+function n7(e, t) {
     let n = (0, j.lq)(e),
         l = (0, j.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n7(e, t) {
+function n2(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
-var n9 = n(562708),
-    n6 = n(139286),
-    n5 = n(520117);
+var n5 = n(562708),
+    n9 = n(139286),
+    n6 = n(520117);
 function le(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
         s = (0, A.bG)([p.A], () => p.A.entrypoint());
     return {
-        trackSearchResultsItemImpressionRef: (0, n5.A)({
+        trackSearchResultsItemImpressionRef: (0, n6.A)({
             onVisible: () => {
-                (0, n6.x)({
-                    type: n9.ImpressionTypes.VIEW,
-                    name: n9.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                (0, n9.x)({
+                    type: n5.ImpressionTypes.VIEW,
+                    name: n5.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
                 });
             },
@@ -2457,7 +2456,7 @@ function ld(e) {
                                 let n = $.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return $.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n7,
+                            n2,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -2546,7 +2545,7 @@ function ld(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n2, n3],
+                        sortComparers: [n3, n7],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3033,13 +3032,13 @@ function lI(e) {
                             onlyActivityApps: l,
                             includeAuthorizedAppsAndFetch: i,
                         } = e,
-                        s = (0, A.bG)([t5.default], () => t5.default.getFetchState());
+                        s = (0, A.bG)([t6.default], () => t6.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t5.FetchState.NOT_FETCHED && t8.A.fetch();
+                        i && s === t6.FetchState.NOT_FETCHED && t8.A.fetch();
                     }, [i, s]);
-                    let a = (0, A.yK)([t5.default], () =>
+                    let a = (0, A.yK)([t6.default], () =>
                             i
-                                ? t5.default
+                                ? t6.default
                                       .getNewestTokens()
                                       .filter((e) => e.scopes.includes(t1.F.APPLICATIONS_COMMANDS))
                                 : [],
@@ -3050,7 +3049,7 @@ function lI(e) {
                             let e = [];
                             return c && e.push(ni.gq), e;
                         }, [c]),
-                        u = t6(r, a);
+                        u = t9(r, a);
                     return o.useMemo(
                         () =>
                             l
@@ -3225,7 +3224,7 @@ function ly(e) {
                         }, new Set()),
                     [i],
                 ),
-                r = t6(
+                r = t9(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

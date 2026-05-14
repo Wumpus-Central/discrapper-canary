@@ -1,0 +1,12 @@
+.icymiMessageWrapper__7d14e {
+    padding-inline-start: 64px
+}
+
+.icymiMessageWrapper__7d14e .avatar {
+    inset-inline-start: 16px
+}
+
+.icymiMessageWrapper__7d14e .avatarDecoration {
+    inset-inline-start: 16px;
+    transform: translate(-10%, -10%)
+}

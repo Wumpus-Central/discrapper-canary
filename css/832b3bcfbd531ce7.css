@@ -1,0 +1,114 @@
+.container_d1d9f3 {
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.tabBar_d1d9f3 {
+    border-bottom: 1px solid var(--user-profile-border);
+    display: flex;
+    gap: 32px;
+    margin-top: 16px;
+    padding: 0 16px
+}
+
+.tabBar_d1d9f3 .tabBarItem_d1d9f3 {
+    border-bottom-width: 1px
+}
+
+.tabBarItem_d1d9f3 {
+    box-sizing: border-box;
+    height: 25px
+}
+
+.root__24502 {
+    border: none;
+    border-radius: var(--radius-sm);
+    max-height: unset;
+    overflow: hidden;
+    position: relative;
+    width: unset
+}
+
+.headerInner__24502 {
+    margin-inline-end: 16px;
+    min-height: 52px;
+    position: relative
+}
+
+.headerButtons__24502,
+.headerInner__24502 {
+    display: flex;
+    justify-content: flex-end
+}
+
+.headerButtons__24502 {
+    align-items: center;
+    flex: 1;
+    gap: 8px;
+    height: var(--custom-button-button-md-height);
+    padding-top: 16px
+}
+
+.headerButtons__24502:empty {
+    visibility: hidden
+}
+
+.messageTextButton__24502 {
+    display: initial
+}
+
+.messageTextButton__24502:has(+.messageIconButton__24502+button) {
+    display: none
+}
+
+.messageIconButton__24502 {
+    display: none
+}
+
+.messageIconButton__24502:has(+button) {
+    display: initial
+}
+
+.fetchError__24502 {
+    margin: 16px 16px 0
+}
+
+.body__24502 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    overflow: hidden
+}
+
+.userInfo__24502 {
+    margin: 16px 16px 0
+}
+
+.bannerContainer__24502 {
+    margin: 0 16px;
+    overflow: visible
+}
+
+.friendRequestBanner__24502 {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.backdrop__24502 {
+    background: var(--background-scrim);
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: var(--custom-user-profile-hoist-z-index)
+}
+
+.toast__24502 {
+    top: 24.5px;
+    z-index: var(--custom-user-profile-toast-z-index)
+}

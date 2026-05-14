@@ -10,7 +10,7 @@ var i = n(284009),
     u = n(157559),
     m = n(66834),
     h = n(720149),
-    g = n(845584),
+    g = n(913122),
     p = n(95561),
     A = n(857071),
     x = n(567231),
@@ -80,9 +80,7 @@ function O(e) {
     !(function (e) {
         let { message: t, initialAnswerId: i } = e;
         (0, T.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("60060"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
-                n.bind(n, 716936),
-            );
+            let { default: e } = await Promise.all([n.e("25719"), n.e("78195"), n.e("19794")]).then(n.bind(n, 716936));
             return (n) => (0, y.jsx)(e, { ...n, message: t, initialAnswerId: i });
         });
     })({ message: r, initialAnswerId: a });

@@ -873,13 +873,12 @@ let tE = (e) => {
                                                           await Promise.all([
                                                               n.e("34218"),
                                                               n.e("95840"),
-                                                              n.e("32109"),
-                                                              n.e("32948"),
+                                                              n.e("18556"),
+                                                              n.e("18541"),
                                                               n.e("96527"),
                                                               n.e("85484"),
-                                                              n.e("26105"),
+                                                              n.e("5959"),
                                                               n.e("86028"),
-                                                              n.e("29734"),
                                                               n.e("23924"),
                                                               n.e("42205"),
                                                               n.e("71091"),
@@ -1035,13 +1034,12 @@ let tC = function (e) {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
                                 n.e("34218"),
                                 n.e("95840"),
-                                n.e("32109"),
-                                n.e("32948"),
+                                n.e("18556"),
+                                n.e("18541"),
                                 n.e("96527"),
                                 n.e("85484"),
-                                n.e("26105"),
+                                n.e("5959"),
                                 n.e("86028"),
-                                n.e("29734"),
                                 n.e("23924"),
                                 n.e("42205"),
                                 n.e("71091"),
@@ -1370,7 +1368,7 @@ function nE() {
                 r = (0, tZ.Xb)(),
                 a = i?.status === tZ.Wo.UPCOMING || n,
                 l = (0, tX.N)(i?.id),
-                u = (function () {
+                c = (function () {
                     let e = (0, tZ.$F)(),
                         t = (0, nt.P)(),
                         n = (0, tZ.Xb)();
@@ -1383,48 +1381,51 @@ function nE() {
                         l = r.clone().add(a, "months").diff(o);
                     return Math.max(0, Math.min(1, (i.diff(o) - 864e5) / l));
                 })(),
-                c = (0, ni.t)(),
-                d = (0, nt.P)();
+                d = (0, u.bG)([ey.A], () => ey.A.useReducedMotion) && !a,
+                _ = (0, ni.t)(),
+                f = (0, nt.P)();
             return (0, s.useMemo)(() => {
                 let t,
-                    s = null != d ? $.intl.string(d.nameUnformattedNitro) : void 0;
+                    s = null != f ? $.intl.string(f.nameUnformattedNitro) : void 0;
+                null == i
+                    ? n && (t = (0, nn.T)(K.Ac.PREMIUM_TENURE_1_MONTH, 1) ?? void 0)
+                    : (t =
+                          i.status === tZ.Wo.UPCOMING
+                              ? $.intl.formatToPlainString($.t.a1eKDi, { days: _?.days ?? 0 })
+                              : ((function (e, t) {
+                                    if (null != e && null != t) {
+                                        if (e.days <= 30)
+                                            return $.intl.formatToPlainString($.t.NEXoaI, {
+                                                days: e.days,
+                                                nextBadgeName: t,
+                                            });
+                                        if (e.months <= 3)
+                                            return $.intl.formatToPlainString($.t.KDV8oD, {
+                                                months: e.months,
+                                                nextBadgeName: t,
+                                            });
+                                    }
+                                })(_, s) ??
+                                (0, nn.T)(i.id, i.tenureReqNumMonths) ??
+                                void 0));
+                let u = null;
                 return (
-                    null == i
-                        ? n && (t = (0, nn.T)(K.Ac.PREMIUM_TENURE_1_MONTH, 1) ?? void 0)
-                        : (t =
-                              i.status === tZ.Wo.UPCOMING
-                                  ? $.intl.formatToPlainString($.t.a1eKDi, { days: c?.days ?? 0 })
-                                  : ((function (e, t) {
-                                        if (null != e && null != t) {
-                                            if (e.days <= 30)
-                                                return $.intl.formatToPlainString($.t.NEXoaI, {
-                                                    days: e.days,
-                                                    nextBadgeName: t,
-                                                });
-                                            if (e.months <= 3)
-                                                return $.intl.formatToPlainString($.t.KDV8oD, {
-                                                    months: e.months,
-                                                    nextBadgeName: t,
-                                                });
-                                        }
-                                    })(c, s) ??
-                                    (0, nn.T)(i.id, i.tenureReqNumMonths) ??
-                                    void 0)),
+                    null != l ? (u = a || d ? l.standard : l.ambientLarge) : n && (u = na),
                     {
                         id: V.TENURE_BADGE_CARD_ID,
                         title: null != i ? $.intl.string(i.nameUnformattedNitro) : n ? $.intl.string($.t.tx9Fvw) : "",
                         pillText: $.intl.string($.t["jyYgZ+"]),
-                        primaryAsset: null != l ? (a ? l.standard : l.ambientLarge) : n ? na : null,
-                        primaryAssetClassName: o()(ns.p, { [ns.n]: a }),
+                        primaryAsset: u,
+                        primaryAssetClassName: o()(ns.pq, { [ns.n6]: a, [ns.kE]: d }),
                         caption: null != r ? $.intl.formatToPlainString($.t.Hu4jfi, { date: new Date(r) }) : void 0,
                         description: t,
                         subscriptionRequired: !0,
-                        progress: u ?? void 0,
+                        progress: c ?? void 0,
                         ctaText: $.intl.string($.t.jVcuVY),
                         onCtaClick: () => (0, nr.D)({ analyticsLocations: e }),
                     }
                 );
-            }, [i, l, a, r, u, n, c, d, e]);
+            }, [i, l, a, d, r, c, n, _, f, e]);
         })(e),
         { shouldShowBonusOrbsUX: y, multiplier: C } = (0, t3.lk)(nu.rE.NITRO_HOME_MARKETING),
         v = (0, D.l)("useWhatsNewPerkCards"),
