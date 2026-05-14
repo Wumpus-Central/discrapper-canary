@@ -3234,6 +3234,7 @@ let nS = new Set(["client_performance_cpu", "client_performance_memory"]),
                     o = V.default.getUser(l),
                     d = a5()(n);
                 return (0, r.jsxs)("div", {
+                    className: ny.sw,
                     "data-mtctest-ignore": "true",
                     children: [
                         (0, r.jsxs)(af.Ay, {
@@ -7443,7 +7444,7 @@ let rh = {
                     a.e("34409"),
                     a.e("61309"),
                     a.e("94529"),
-                    a.e("98093"),
+                    a.e("93305"),
                     a.e("21300"),
                     a.e("66016"),
                     a.e("83518"),

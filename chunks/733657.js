@@ -1,5 +1,6 @@
 e.exports = {
     nd: "panel_fb48ea",
+    sw: "detailsContent_fb48ea",
     rf: "subPanel_fb48ea",
     rh: "toolbar_fb48ea",
     Q$: "toolbarButton_fb48ea",

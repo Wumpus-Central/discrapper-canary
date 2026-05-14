@@ -1228,10 +1228,15 @@ img.messageBadge__10651 {
     overflow: auto
 }
 
+.detailsContent_fb48ea,
 .subPanel_fb48ea {
     display: flex;
-    flex-direction: column;
-    overflow: scroll
+    flex-direction: column
+}
+
+.detailsContent_fb48ea {
+    flex: 1;
+    min-height: 0
 }
 
 .toolbar_fb48ea {
