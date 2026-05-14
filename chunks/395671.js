@@ -78,14 +78,10 @@ class p extends a.A {
     }
     get connectionEntrypointUrl() {
         let { getIsRiotSocialSDKMigrationEnabled: e } = n(941314),
-            t = n(159276).A;
-        if (!["1443349464290168976", "1443350165678198935", "1443033465766281327"].includes(this.id))
-            return this._connectionEntrypointUrl;
-        if ("1443350165678198935" === this.id) {
-            let { enabled: e } = t.getConfig({ location: "ApplicationRecord" });
-            if (!e) return this._connectionEntrypointUrl;
-        }
-        return e({ location: "ApplicationRecord" })
+            { getIsValorantSocialSDKEnabled: t } = n(159276);
+        return ["1443349464290168976", "1443350165678198935", "1443033465766281327"].includes(this.id) &&
+            ("1443350165678198935" !== this.id || t({ location: "ApplicationRecord" })) &&
+            e({ location: "ApplicationRecord" })
             ? "https://aes.sgp.pvp.net/providers/discord/link/v1"
             : this._connectionEntrypointUrl;
     }
