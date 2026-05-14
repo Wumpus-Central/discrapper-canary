@@ -539,6 +539,9 @@ class ef extends ec {
     isSpoilerChannel() {
         return this.hasFlag(m.lx.IS_SPOILER_CHANNEL);
     }
+    isGameInvitesChannel() {
+        return this.hasFlag(m.lx.IS_GAME_INVITES_CHANNEL);
+    }
     get accessPermissions() {
         return el(this.type);
     }

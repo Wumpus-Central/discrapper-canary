@@ -45,6 +45,7 @@ let c = Object.freeze({
     OBFUSCATED: 131072,
     IS_MODERATOR_REPORT_CHANNEL: 524288,
     IS_SPOILER_CHANNEL: 2097152,
+    IS_GAME_INVITES_CHANNEL: 4194304,
 });
 var d =
     (((r = {}).GUILD_HOME = "home"),

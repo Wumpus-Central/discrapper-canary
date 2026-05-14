@@ -142,7 +142,9 @@ function Z(e, t) {
             if (ee) return et ? I.D : T.f;
             if (e.isSpoilerChannel()) return S.H;
             if ((0, W.A)(e)) return et ? N.c : y.Q;
-            else return et ? C.x : v.b;
+            else if (et) return C.x;
+            else if (e.isGameInvitesChannel()) return p.x;
+            else return v.b;
         case z.rbe.GUILD_MEDIA:
             if (ee) return I.D;
             if ((0, W.A)(e)) return N.c;
