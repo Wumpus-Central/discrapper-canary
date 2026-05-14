@@ -112,8 +112,8 @@ var L = n(429913),
     K = n(495544),
     z = n(72314),
     W = n(580745),
-    q = n(834942),
-    $ = n(232835),
+    $ = n(834942),
+    q = n(232835),
     J = n(576705),
     Z = n(222823),
     Y = n(399263),
@@ -191,7 +191,7 @@ var eS = n(830178),
     eK = n(143413),
     ez = n(763754),
     eW = n(33453);
-function eq(e) {
+function e$(e) {
     let { children: t, className: n, flashKey: l } = e,
         [i, s] = o.useState(!1),
         a = o.useRef(null);
@@ -211,7 +211,7 @@ function eq(e) {
         (0, r.jsx)("div", { "data-flash": i, className: d()(eW.j, n), children: t })
     );
 }
-var e$ = n(491182),
+var eq = n(491182),
     eJ = n(860227),
     eZ = n(112758),
     eY = n(516287),
@@ -241,7 +241,7 @@ let tn = function (e, t, n) {
                     a = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
                     r = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
                     o = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
-                    c = $.A.getMessage(t, e),
+                    c = q.A.getMessage(t, e),
                     d = eH.A.getChannel(t);
                 if (null == c || null == d) return;
                 let u = K.default.getId();
@@ -263,7 +263,7 @@ let tn = function (e, t, n) {
                     case "+":
                         (i || o) &&
                             (function (e) {
-                                let t = null == e.guild_id || q.A.canChatInGuild(e.guild_id),
+                                let t = null == e.guild_id || $.A.canChatInGuild(e.guild_id),
                                     n = B.jW.getSetting(),
                                     { disableReactionCreates: l } = (0, te.A)({
                                         channel: e,
@@ -444,8 +444,8 @@ var t_ = n(111956),
     tK = n(822123),
     tz = n(7584),
     tW = n(635222),
-    tq = n(969043),
-    t$ = n(427209),
+    t$ = n(969043),
+    tq = n(427209),
     tJ = n(743738),
     tZ = n(649963),
     tY = n(815807),
@@ -479,7 +479,7 @@ function t9(e) {
             (0, r.jsx)(t5.qv, { ref: a, label: tp.intl.string(tp.t.lfIHs4), icon: t6.n, onClick: l }, "add-reaction"),
     });
 }
-var ne = n(703675),
+var ne = n(720882),
     nt = n(307731),
     nn = n(237774);
 let nl = [tz.Ay.getByName("100"), tz.Ay.getByName("laughing"), tz.Ay.getByName("sparkling_heart")].filter(t4.Vq);
@@ -613,10 +613,10 @@ function nr(e) {
                 u = (0, m.bG)([K.default], () => K.default.getId()),
                 h = (0, e2.Id)(t),
                 A = (0, e2.s5)(t),
-                { firstMessage: g } = (0, m.bG)([tq.A], () => tq.A.getMessage(t.id), [t.id]),
+                { firstMessage: g } = (0, m.bG)([t$.A], () => t$.A.getMessage(t.id), [t.id]),
                 p = B.jW.useSetting(),
                 f = B.Q_.useSetting(),
-                C = (0, m.bG)([q.A], () => null == t.guild_id || q.A.canChatInGuild(t.guild_id), [t]),
+                C = (0, m.bG)([$.A], () => null == t.guild_id || $.A.canChatInGuild(t.guild_id), [t]),
                 { canManageMessages: E, canAddNewReactions: x } = (0, m.cf)(
                     [J.A],
                     () => ({
@@ -821,7 +821,7 @@ function nr(e) {
             f
                 ? (0, r.jsx)(
                       t5.qv,
-                      { label: tp.intl.string(tp.t.I3ltXO), icon: t$.A, onClick: () => (0, tt.Z4)(t, n) },
+                      { label: tp.intl.string(tp.t.I3ltXO), icon: tq.A, onClick: () => (0, tt.Z4)(t, n) },
                       "forward",
                   )
                 : null,
@@ -1291,7 +1291,7 @@ function nP(e) {
         p = (0, eJ.ZD)(n);
     return n.type === eh.lAJ.THREAD_STARTER_MESSAGE && null != o && o.state === eF.a.LOADED
         ? (0, r.jsx)(nk, { ...e, viewingChannelId: n.channel_id, message: o.message, groupId: o.message.id })
-        : (0, r.jsx)(e$.A, {
+        : (0, r.jsx)(eq.A, {
               ...a,
               id: t,
               compact: i,
@@ -1363,7 +1363,7 @@ function nk(e) {
                 "aria-label": tp.intl.string(tp.t.k5WiPf),
                 children: tp.intl.string(tp.t.k5WiPf),
             }),
-            (0, r.jsx)(e$.A, {
+            (0, r.jsx)(eq.A, {
                 ...f,
                 id: t,
                 compact: a,
@@ -1469,11 +1469,11 @@ let nG = o.memo(function (e) {
         V = (0, m.bG)([N.A], () => N.A.keyboardModeEnabled),
         K = j || H || (V && k),
         z = K || P,
-        q = (0, m.bG)(
+        $ = (0, m.bG)(
             [eH.A],
             () => i.hasFlag(eh.pr7.HAS_THREAD) && eH.A.getChannel(ei.default.castMessageIdAsChannelId(i.id)),
         ),
-        $ = i.isFirstMessageInForumPost(a),
+        q = i.isFirstMessageInForumPost(a),
         J = (0, eU.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
         Z = (0, m.bG)([eB.A], () => eB.A.isDeveloper),
         {
@@ -1483,8 +1483,8 @@ let nG = o.memo(function (e) {
         } = (0, ti.A)(i, {
             hideSimpleEmbedContent: _ && I,
             formatInline: !1,
-            allowList: $ || J,
-            allowHeading: $ || J,
+            allowList: q || J,
+            allowHeading: q || J,
             allowLinks: !0,
             allowDevLinks: Z,
             previewLinkTarget: !0,
@@ -1525,7 +1525,7 @@ let nG = o.memo(function (e) {
                 className: nh.Nt,
                 "aria-setsize": -1,
                 style: null != ea ? { backgroundColor: ea } : void 0,
-                children: (0, r.jsx)(e$.A, {
+                children: (0, r.jsx)(eq.A, {
                     ...S,
                     "aria-setsize": -1,
                     "aria-roledescription": tp.intl.string(tp.t.BAB0yK),
@@ -1633,7 +1633,7 @@ let nG = o.memo(function (e) {
                     childrenMessageContent: n,
                     onMouseMove: R,
                     onMouseLeave: D,
-                    hasThread: !C && i.hasFlag(eh.pr7.HAS_THREAD) && null != q,
+                    hasThread: !C && i.hasFlag(eh.pr7.HAS_THREAD) && null != $,
                     isSystemMessage: (0, eK.A)(i),
                     hasReply: i.type === eh.lAJ.REPLY,
                     messageRef: (e) => {
@@ -1645,7 +1645,7 @@ let nG = o.memo(function (e) {
         });
     return null != el
         ? (0, r.jsx)(
-              eq,
+              e$,
               { flashKey: el, className: d()({ [nh.bB]: !0, [nh._A]: !u && i.id === f }), children: eC },
               `bg-flash-${l}`,
           )
@@ -2255,8 +2255,8 @@ var nH = n(95561),
     nK = n(192308),
     nz = n(534514),
     nW = n(832712),
-    nq = n(807393),
-    n$ = n(381689),
+    n$ = n(807393),
+    nq = n(381689),
     nJ = n(754302),
     nZ = n(632738),
     nY = n(544231),
@@ -2330,7 +2330,7 @@ function n7(e) {
         buttons: d,
     } = e;
     o.useEffect(() => {
-        nq.A.increment({ name: nV.K.SAFETY_WARNING_VIEW });
+        n$.A.increment({ name: nV.K.SAFETY_WARNING_VIEW });
     }, []);
     let u = o.useCallback(() => {
         c?.(), (0, nQ._$)({ channelId: t, warningId: n, senderId: l, warningType: i, cta: nQ.Wm.USER_BANNER_DISMISS });
@@ -2350,7 +2350,7 @@ function n8(e) {
         }, [t, l]),
         c = (e) => {
             nW.A.updateChannelOverrideSettings(null, t, { muted: !0 }, n5.fd.Muted),
-                n$.A.showMuteSuccessToast(i, t),
+                nq.A.showMuteSuccessToast(i, t),
                 (0, nQ._$)({ channelId: t, warningId: l, senderId: i, warningType: nX._j.LIKELY_ATO, cta: e }),
                 a();
         };
@@ -2362,7 +2362,7 @@ function n8(e) {
                 senderId: i,
                 warningType: nX._j.LIKELY_ATO,
             }),
-                nq.A.increment({ name: nV.K.SAFETY_WARNING_VIEW });
+                n$.A.increment({ name: nV.K.SAFETY_WARNING_VIEW });
         }, [t, l, i]),
         (0, r.jsx)(n7, {
             channelId: t,
@@ -2514,7 +2514,7 @@ var lf = n(873185);
 function lC(e) {
     let { channel: t } = e,
         n = (0, lm.kt)(t),
-        { firstMessage: l } = (0, m.cf)([tq.A], () => tq.A.getMessage(t.id)),
+        { firstMessage: l } = (0, m.cf)([t$.A], () => t$.A.getMessage(t.id)),
         i = new Set((0, lm.zt)(t, n)),
         s = (0, lh.gU)(t) ?? lt.o,
         a = (0, P.Ay)(t);
@@ -2719,8 +2719,8 @@ function lK(e) {
 }
 var lz = n(136722),
     lW = n(342952),
-    lq = n(177953),
-    l$ = n(725570),
+    l$ = n(177953),
+    lq = n(725570),
     lJ = n(435183),
     lZ = n(685374),
     lY = n(87e3),
@@ -2833,7 +2833,7 @@ function l6(e) {
                               variant: "secondary",
                               text: tp.intl.string(tp.t.dMJ3Y6),
                               onClick: () => l(!0),
-                              icon: lq.n,
+                              icon: l$.n,
                           }),
                           (0, r.jsx)(n1.$, {
                               size: "sm",
@@ -2911,7 +2911,7 @@ function l6(e) {
                 ],
             }),
             n
-                ? (0, r.jsx)(l$.aF, {
+                ? (0, r.jsx)(lq.aF, {
                       renderModal: (e) =>
                           (0, r.jsx)(lZ.default, { ...e, onClose: () => (p(), e.onClose()), channelId: t.id }),
                       onCloseRequest: () => l(!1),
@@ -3342,7 +3342,7 @@ function iW(e) {
         ],
     });
 }
-function iq(e) {
+function i$(e) {
     let t,
         { channel: n, user: l, showingBanner: i } = e,
         s = (0, m.bG)([nS.A], () => nS.A.getRelationshipType(l.id), [l.id]);
@@ -3369,7 +3369,7 @@ function iq(e) {
         children: [t, a ? (0, r.jsx)(iB, { userId: l.id }) : null, i ? null : (0, r.jsx)(ij, { channel: n, user: l })],
     });
 }
-var i$ = n(691540),
+var iq = n(691540),
     iJ = n(857250),
     iZ = n(97483),
     iY = n(92650),
@@ -3378,7 +3378,7 @@ var i$ = n(691540),
 function i0(e) {
     let { channel: t, user: n } = e,
         l = o.useCallback(() => {
-            (0, i$.P0)((0, iJ.o)(tp.intl.string(tp.t.a2j0hv), iZ.Ck.FAILURE));
+            (0, iq.P0)((0, iJ.o)(tp.intl.string(tp.t.a2j0hv), iZ.Ck.FAILURE));
         }, []),
         i = o.useCallback(() => {
             iX.A.closeChannelSidebar(iQ.fe);
@@ -3434,7 +3434,7 @@ function i2(e) {
               ? (t = (0, r.jsx)(i0, { channel: n, user: l }))
               : d
                 ? (t = (0, r.jsx)(iv, { channel: n, user: l }))
-                : ((t = (0, r.jsx)(iq, { channel: n, user: l, showingBanner: i })),
+                : ((t = (0, r.jsx)(i$, { channel: n, user: l, showingBanner: i })),
                   o === eh.eA$.PENDING_INCOMING && (h = i1.O)),
         (0, r.jsxs)("div", {
             className: h,
@@ -3787,7 +3787,7 @@ function sH(e) {
                 let { message: t, user: n, guild: l, channel: i } = e,
                     s = (0, m.bG)([J.A], () => null != n && null != l && (0, sR.Kd)(n, l, [J.A])),
                     { messageReference: a } = t,
-                    o = (0, m.bG)([$.A], () => (null != a ? $.A.getMessage(a.channel_id, a.message_id) : null)),
+                    o = (0, m.bG)([q.A], () => (null != a ? q.A.getMessage(a.channel_id, a.message_id) : null)),
                     c = (0, m.bG)([eH.A], () => (null != o ? eH.A.getChannel(o.channel_id) : null)),
                     d = (0, m.bG)([eH.A], () => eH.A.getChannel(i.id)?.isArchivedThread() ?? !1);
                 if (!s) return null;
@@ -3850,8 +3850,8 @@ var sV = n(152007),
     sK = n(867455),
     sz = n(473503),
     sW = n(853742),
-    sq = n(189971),
-    s$ = n(347353),
+    s$ = n(189971),
+    sq = n(347353),
     sJ = n(518229);
 function sZ(e) {
     let { channel: t } = e,
@@ -3911,89 +3911,95 @@ function sY(e) {
             },
             [n],
         );
-    o.useLayoutEffect(() => {
-        let e = s.current;
-        if (null == e || !n) return;
-        let t = new IntersectionObserver(M, { threshold: 1 });
-        return (
-            t.observe(e),
-            () => {
-                t.disconnect();
-            }
-        );
-    });
-    let [v, R] = o.useState(!0);
     if (
-        (o.useEffect(() => {
-            null == a || (u(Math.floor((a - 280) / 58)), R(!1));
+        (o.useLayoutEffect(() => {
+            let e = s.current;
+            if (null == e || !n) return;
+            let t = new IntersectionObserver(M, { threshold: 1 });
+            return (
+                t.observe(e),
+                () => {
+                    t.disconnect();
+                }
+            );
+        }),
+        o.useLayoutEffect(() => {
+            null == a || u(Math.floor((a - 280) / 58));
         }, [a]),
-        null == f || null == C)
+        null == f)
     )
         return null;
-    let D = C.reactions.length > 0,
-        L = () => {
+    let v = null != C && C.reactions.length > 0,
+        R = () => {
             (0, sW.jC)({ postId: f.id, location: { section: eh.JJy.CHANNEL_HEADER } }),
                 (0, e5.C)((0, so.af)(f, N), () => p(!0));
         },
-        P = E ? i6.A : i9.X;
+        D = E ? i6.A : i9.X;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: d()(sq.kL, { [sq.wx]: h }),
+                className: d()(s$.kL, { [s$.wx]: h }),
                 ref: s,
                 children: [
                     y
-                        ? (0, r.jsx)("div", { className: sq.kX, children: (0, r.jsx)(sB, { message: C, channel: f }) })
-                        : (0, r.jsxs)("div", {
-                              className: d()(sq.hY, { [sq.Lq]: v }),
-                              children: [
-                                  !D &&
-                                      !S &&
-                                      null != j &&
-                                      (0, r.jsx)("div", {
-                                          className: s$.reactions,
-                                          children: (0, r.jsx)(s_.qT, {
+                        ? (0, r.jsx)("div", {
+                              className: s$.kX,
+                              children: null != C && (0, r.jsx)(sB, { message: C, channel: f }),
+                          })
+                        : (0, r.jsx)("div", {
+                              className: s$.hY,
+                              children:
+                                  null != C &&
+                                  (0, r.jsxs)(r.Fragment, {
+                                      children: [
+                                          !v &&
+                                              !S &&
+                                              null != j &&
+                                              (0, r.jsx)("div", {
+                                                  className: sq.reactions,
+                                                  children: (0, r.jsx)(s_.qT, {
+                                                      message: C,
+                                                      readOnly: !1,
+                                                      useChatFontScaling: !1,
+                                                      isLurking: _,
+                                                      isPendingMember: T,
+                                                      emoji: j,
+                                                      type: sA.v.NORMAL,
+                                                      hideCount: !0,
+                                                      count: 0,
+                                                      me: !1,
+                                                      burst_count: 0,
+                                                      me_burst: !1,
+                                                      emojiSize: "reaction",
+                                                  }),
+                                              }),
+                                          (0, r.jsx)(sS.A, {
                                               message: C,
-                                              readOnly: !1,
-                                              useChatFontScaling: !1,
+                                              channel: f,
+                                              disableReactionCreates: !0,
+                                              disableReactionUpdates: x,
                                               isLurking: _,
                                               isPendingMember: T,
-                                              emoji: j,
-                                              type: sA.v.NORMAL,
-                                              hideCount: !0,
-                                              count: 0,
-                                              me: !1,
-                                              burst_count: 0,
-                                              me_burst: !1,
-                                              emojiSize: "reaction",
+                                              maxReactions: c,
+                                              className: s$.Br,
+                                              useChatFontScaling: !1,
+                                              isForumToolbar: !0,
+                                              forceHideReactionCreates: !0,
                                           }),
-                                      }),
-                                  (0, r.jsx)(sS.A, {
-                                      message: C,
-                                      channel: f,
-                                      disableReactionCreates: !0,
-                                      disableReactionUpdates: x,
-                                      isLurking: _,
-                                      isPendingMember: T,
-                                      maxReactions: c,
-                                      className: sq.Br,
-                                      useChatFontScaling: !1,
-                                      isForumToolbar: !0,
-                                      forceHideReactionCreates: !0,
+                                          !S &&
+                                              (0, r.jsx)(sp.t, {
+                                                  message: C,
+                                                  channel: f,
+                                                  useChatFontScaling: !1,
+                                                  className: d()(sJ.secondary, s$.vU, { [s$.w$]: !v }),
+                                                  isForumToolbar: !0,
+                                                  children: !v && tp.intl.string(tp.t.xpOyTO),
+                                              }),
+                                      ],
                                   }),
-                                  !S &&
-                                      (0, r.jsx)(sp.t, {
-                                          message: C,
-                                          channel: f,
-                                          useChatFontScaling: !1,
-                                          className: d()(sJ.secondary, sq.vU, { [sq.w$]: !D }),
-                                          isForumToolbar: !0,
-                                          children: !D && tp.intl.string(tp.t.xpOyTO),
-                                      }),
-                              ],
                           }),
                     (0, r.jsxs)("div", {
-                        className: sq.Uo,
+                        className: s$.Uo,
                         children: [
                             y
                                 ? (0, r.jsx)(sZ, { channel: f })
@@ -4001,7 +4007,7 @@ function sY(e) {
                                   (0, r.jsx)(lG.m, {
                                       text: tp.intl.string(tp.t.F7oeDv),
                                       children: (0, r.jsx)(n1.$, {
-                                          icon: P,
+                                          icon: D,
                                           size: "sm",
                                           variant: "secondary",
                                           text: E ? tp.intl.string(tp.t["7OkUzs"]) : tp.intl.string(tp.t["3aOv+h"]),
@@ -4019,14 +4025,14 @@ function sY(e) {
                                           icon: i6.A,
                                           size: "sm",
                                           variant: "secondary",
-                                          onClick: L,
+                                          onClick: R,
                                           text: tp.intl.string(tp.t.t5VZ88),
                                       })
                                     : (0, r.jsx)(se.K, {
                                           icon: tN.q,
                                           size: "sm",
                                           variant: "secondary",
-                                          onClick: L,
+                                          onClick: R,
                                           "aria-label": tp.intl.string(tp.t.WqhZss),
                                       }),
                             }),
@@ -4072,7 +4078,7 @@ function s2(e) {
             [t, l, i],
         );
     o.useEffect(() => {
-        (0, nQ.QF)({ ...c, viewName: nQ.gN.SAFETY_WARNING_BANNER }), nq.A.increment({ name: nV.K.SAFETY_WARNING_VIEW });
+        (0, nQ.QF)({ ...c, viewName: nQ.gN.SAFETY_WARNING_BANNER }), n$.A.increment({ name: nV.K.SAFETY_WARNING_VIEW });
     }, [c]);
     let d = o.useCallback(
             (e) => {
@@ -4202,7 +4208,7 @@ function s7(e) {
             senderId: i,
             warningType: nX._j.STRANGER_DANGER,
         }),
-            nq.A.increment({ name: nV.K.SAFETY_WARNING_VIEW });
+            n$.A.increment({ name: nV.K.SAFETY_WARNING_VIEW });
     }, [t, l, i]);
     let u = () => {
             (0, nK.openModalLazy)(async () => {
@@ -4409,7 +4415,7 @@ function af(e) {
                 (0, r.jsx)(aA._, { size: "md", color: "currentColor", className: ap.TG }),
             )
             .otherwise(() => (0, r.jsx)(n2.P, { size: "md", color: "currentColor", className: ap.Q6 }));
-    return (0, r.jsx)(e$.A, {
+    return (0, r.jsx)(eq.A, {
         compact: i,
         role: "group",
         childrenMessageContent: (0, r.jsx)(ag.A, {
@@ -4502,9 +4508,9 @@ function aN(e) {
         (0, aS.zk)("847199849233514549", !0);
     }, []);
     let i = (0, m.bG)(
-            [$.A, K.default],
+            [q.A, K.default],
             () =>
-                !!ef()($.A.getMessages(t.id).toArray())
+                !!ef()(q.A.getMessages(t.id).toArray())
                     .reverse()
                     .find((e) => e.author.id !== K.default.getId() && e.state === eh.cmJ.SENT && !(0, eK.A)(e)),
         ),
@@ -4620,7 +4626,7 @@ let aD = (0, u.animated)(S),
                 F = (0, eg.I)(f, b),
                 K = f ? F : Math.round(0.87 * F),
                 W = Math.max(1, Math.round((K / 30) * 8)),
-                q = o.useMemo(
+                $ = o.useMemo(
                     () =>
                         (function (e) {
                             let {
@@ -4662,7 +4668,7 @@ let aD = (0, u.animated)(S),
                         }),
                     [f, K, W, b, a],
                 ),
-                $ = (function (e) {
+                q = (function (e) {
                     let {
                             messages: t,
                             channel: n,
@@ -4718,7 +4724,7 @@ let aD = (0, u.animated)(S),
                     compact: f,
                     hasUnreads: x,
                     focusId: S,
-                    placeholderHeight: q.totalHeight,
+                    placeholderHeight: $.totalHeight,
                     canLoadMore: null == v,
                     handleScrollToBottom: o.useCallback(() => O(!0), [O]),
                     handleScrollFromBottom: o.useCallback(() => O(!1), [O]),
@@ -4776,7 +4782,7 @@ let aD = (0, u.animated)(S),
                             [r],
                         );
                     return (0, Q.Vo)({ event: eh.jej.FOCUS_MESSAGES, handler: c }), r;
-                })({ scrollerRef: $.ref, isEditing: null != S, keyboardModeEnabled: M, hasMoreAfter: A.hasMoreAfter }),
+                })({ scrollerRef: q.ref, isEditing: null != S, keyboardModeEnabled: M, hasMoreAfter: A.hasMoreAfter }),
                 ee = (0, m.bG)([w.A], () =>
                     J.A.can(eh.xBc.READ_MESSAGE_HISTORY, u) ? null : w.A.getViewingRolesTimestamp(u.getGuildId()),
                 ),
@@ -5142,20 +5148,20 @@ let aD = (0, u.animated)(S),
                     messageDisplayCompact: f,
                     channelStream: C,
                     uploads: E,
-                    loadMore: $.loadMore,
-                    scrollManager: $,
-                    specs: q,
+                    loadMore: q.loadMore,
+                    scrollManager: q,
+                    specs: $,
                     filterAfterTimestamp: v ?? ee,
                     showingQuarantineBanner: R,
                     hideSummaries: D,
                     jumpToPresent: () => {
                         A.hasPresent()
-                            ? $.ref.current?.scrollToBottom({ animate: !N.A.useReducedMotion })
+                            ? q.ref.current?.scrollToBottom({ animate: !N.A.useReducedMotion })
                             : I.A.jumpToPresent(u.id, F);
                     },
                     jumpBarClassName: L,
                 });
-            (t = $.ref),
+            (t = q.ref),
                 (n = o.useCallback(() => t.current?.scrollToBottom(), [t])),
                 (l = o.useCallback(() => t.current?.scrollPageUp({ animate: !N.A.useReducedMotion }), [t])),
                 (i = o.useCallback(() => t.current?.scrollPageDown({ animate: !N.A.useReducedMotion }), [t])),
@@ -5165,7 +5171,7 @@ let aD = (0, u.animated)(S),
             let ec = (0, _.R7)(),
                 { ref: ed, ...eu } = (0, h.LT)(Y),
                 em = (0, y.A)((e) => {
-                    ($.ref.current = e), (ed.current = e?.getScrollerNode() ?? null);
+                    (q.ref.current = e), (ed.current = e?.getScrollerNode() ?? null);
                 }),
                 eA = (0, m.bG)([V.A], () => {
                     let e = V.A.settings.appearance?.clientThemeSettings;
@@ -5186,10 +5192,10 @@ let aD = (0, u.animated)(S),
                                 customTheme: !0,
                                 className: d()(c, aR.XG, eA ? eE : void 0),
                                 contentClassName: aR.gT,
-                                onResize: $.handleResize,
-                                onScroll: $.handleScroll,
-                                onMouseDown: $.handleMouseDown,
-                                onMouseUp: $.handleMouseUp,
+                                onResize: q.handleResize,
+                                onScroll: q.handleScroll,
+                                onMouseDown: q.handleMouseDown,
+                                onMouseUp: q.handleMouseUp,
                                 ...ec,
                                 tabIndex: -1,
                                 role: "group",
@@ -5249,7 +5255,7 @@ let aD = (0, u.animated)(S),
                 canChat: h,
             } = (function (e) {
                 let t = e.getGuildId(),
-                    n = (0, m.bG)([q.A], () => null == t || q.A.canChatInGuild(t), [t]),
+                    n = (0, m.bG)([$.A], () => null == t || $.A.canChatInGuild(t), [t]),
                     { canManageMessages: l, permissionVersion: i } = (0, m.cf)(
                         [J.A],
                         () => ({
@@ -5293,7 +5299,7 @@ let aD = (0, u.animated)(S),
             } = (function (e) {
                 var t;
                 let n,
-                    l = (0, m.bG)([$.A], () => $.A.getMessages(e.id), [e.id]),
+                    l = (0, m.bG)([q.A], () => q.A.getMessages(e.id), [e.id]),
                     i = (0, m.bG)([Z.Ay], () => Z.Ay.getOldestUnreadMessageId(e.id) ?? null, [e.id]),
                     { enabled: s } = U.A.useExperiment({ location: "41de6d_1" }, { autoTrackExposure: !1 }),
                     a = X.default.getUser(K.default.getId())?.hasFlag(eh.nhx.SPAMMER) ?? !1,

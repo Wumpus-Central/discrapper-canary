@@ -5966,7 +5966,7 @@ function ry(e) {
             null == e
                 ? (0, v.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e("93010"),
+                          n.e("94513"),
                           n.e("11585"),
                           n.e("7957"),
                           n.e("20379"),
@@ -18272,12 +18272,9 @@ function ha(e) {
                 location_section: "Members",
             }),
                 (0, v.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([
-                        n.e("93010"),
-                        n.e("30307"),
-                        n.e("20379"),
-                        n.e("78708"),
-                    ]).then(n.bind(n, 66655));
+                    let { default: e } = await Promise.all([n.e("94513"), n.e("20379"), n.e("78708")]).then(
+                        n.bind(n, 66655),
+                    );
                     return (n) => (0, A.jsx)(e, { ...n, roleId: i.id, guildId: t.id });
                 });
         };
